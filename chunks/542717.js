@@ -1,58 +1,58 @@
-e.d(n, { ParagraphFormFieldModal: () => p, TextInputFormFieldModal: () => _ });
-var r = e(627968),
-    i = e(64700),
-    a = e(292666),
-    l = e(198982),
-    o = e(513461),
-    c = e(242273),
-    s = e(260197),
-    d = e(985018);
-function u(t) {
-    let { type: n, title: e, description: o, field: u, onSave: _, onClose: p } = t,
-        [b, g] = i.useState(u?.label ?? ""),
-        [y, h] = i.useState(null),
-        x = async () => {
-            null != y && h(null);
-            let t = b.trim();
-            if ("" === t) return void h(d.intl.string(d.t["G+TI44"]));
+n.d(e, { ParagraphFormFieldModal: () => g, TextInputFormFieldModal: () => p });
+var r = n(627968),
+    i = n(64700),
+    l = n(292666),
+    s = n(913122),
+    a = n(513461),
+    o = n(242273),
+    u = n(260197),
+    c = n(375708);
+function d(t) {
+    let { type: e, title: n, description: a, field: d, onSave: p, onClose: g } = t,
+        [h, y] = i.useState(d?.label ?? ""),
+        [T, f] = i.useState(null),
+        w = async () => {
+            null != T && f(null);
+            let t = h.trim();
+            if ("" === t) return void f(c.intl.string(c.t["G+TI44"]));
             try {
-                await _({ field_type: n, label: t, required: !0 }), p();
+                await p({ field_type: e, label: t, required: !0 }), g();
             } catch (t) {
-                h(new l.LG(t).getAnyErrorMessage());
+                f(new s.LG(t).getAnyErrorMessage());
             }
         };
-    return (0, r.jsx)(c.A, {
+    return (0, r.jsx)(o.A, {
         ...t,
-        errorText: y,
-        title: e,
-        description: o,
-        onConfirm: x,
-        onCancel: p,
-        children: (0, r.jsx)(a.k, {
+        errorText: T,
+        title: n,
+        description: a,
+        onConfirm: w,
+        onCancel: g,
+        children: (0, r.jsx)(l.k, {
             onChange: (t) => {
-                null != y && h(null);
-                let n = t.replace(/(\r\n|\n|\r)/g, " ");
-                n.length > s.Ty && (n = n.slice(0, s.Ty)), g(n);
+                null != T && f(null);
+                let e = t.replace(/(\r\n|\n|\r)/g, " ");
+                e.length > u.Ty && (e = e.slice(0, u.Ty)), y(e);
             },
-            placeholder: d.intl.string(d.t.fqVmbL),
-            value: b,
-            onKeyDown: (t) => "Enter" === t.key && x(),
+            placeholder: c.intl.string(c.t.fqVmbL),
+            value: h,
+            onKeyDown: (t) => "Enter" === t.key && w(),
         }),
     });
 }
-function _(t) {
-    return (0, r.jsx)(u, {
-        title: d.intl.string(d.t.w6Q9wz),
-        description: d.intl.string(d.t["A6M+qv"]),
-        type: o.rX.TEXT_INPUT,
+function p(t) {
+    return (0, r.jsx)(d, {
+        title: c.intl.string(c.t.w6Q9wz),
+        description: c.intl.string(c.t["A6M+qv"]),
+        type: a.rX.TEXT_INPUT,
         ...t,
     });
 }
-function p(t) {
-    return (0, r.jsx)(u, {
-        title: d.intl.string(d.t.gG0JBN),
-        description: d.intl.string(d.t.SMX0ia),
-        type: o.rX.PARAGRAPH,
+function g(t) {
+    return (0, r.jsx)(d, {
+        title: c.intl.string(c.t.gG0JBN),
+        description: c.intl.string(c.t.SMX0ia),
+        type: a.rX.PARAGRAPH,
         ...t,
     });
 }

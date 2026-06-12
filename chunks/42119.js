@@ -1,13 +1,13 @@
-r.d(e, { IK: () => E, wH: () => c });
+r.d(t, { IK: () => c, wH: () => u });
 var s = r(627968),
     n = r(64700),
     i = r(947641),
     a = r(990078),
     l = r(476931);
-function d(t) {
-    let { preset: e, theme: r, className: i } = t,
+function d(e) {
+    let { preset: t, theme: r, className: i } = e,
         a = n.useId().replaceAll(":", "-"),
-        d = (0, l.oE)(e, r);
+        d = (0, l.oE)(t, r);
     return (0, s.jsxs)("svg", {
         "aria-hidden": "true",
         className: i,
@@ -17,9 +17,9 @@ function d(t) {
                 children: (0, s.jsx)("linearGradient", {
                     id: a,
                     gradientTransform: `rotate(${d.angle - 90} 0.5 0.5)`,
-                    children: d.colors.map((t) => {
-                        let { hex: r, stop: n } = t;
-                        return (0, s.jsx)("stop", { offset: `${n}%`, stopColor: r }, `${e.id}-${r}-${n}`);
+                    children: d.colors.map((e) => {
+                        let { hex: r, stop: n } = e;
+                        return (0, s.jsx)("stop", { offset: `${n}%`, stopColor: r }, `${t.id}-${r}-${n}`);
                     }),
                 }),
             }),
@@ -37,28 +37,28 @@ function d(t) {
         ],
     });
 }
-function c(t) {
-    let { className: e, testId: r } = t;
+function u(e) {
+    let { className: t, testId: r } = e;
     return (0, s.jsx)("span", {
         "aria-hidden": "true",
-        className: e,
+        className: t,
         "data-testid": r,
         children: (0, s.jsx)(i.r, { size: "xxs", color: "var(--icon-default)" }),
     });
 }
-function E(t) {
+function c(e) {
     let {
-        preset: e,
+        preset: t,
         selected: r,
         disabled: n,
         onClick: i,
         label: l,
-        theme: E,
+        theme: c,
         buttonClassName: o,
-        graphicClassName: u,
+        graphicClassName: f,
         selectedIndicatorClassName: h,
-        selectedIndicatorTestId: p,
-    } = t;
+        selectedIndicatorTestId: x,
+    } = e;
     return (0, s.jsx)(a.m, {
         text: l,
         children: (0, s.jsxs)("button", {
@@ -69,8 +69,8 @@ function E(t) {
             "aria-pressed": r,
             onClick: i,
             children: [
-                (0, s.jsx)(d, { preset: e, theme: E, className: u }),
-                r && (0, s.jsx)(c, { className: h, testId: p }),
+                (0, s.jsx)(d, { preset: t, theme: c, className: f }),
+                r && (0, s.jsx)(u, { className: h, testId: x }),
             ],
         }),
     });

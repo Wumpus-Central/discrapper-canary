@@ -1,28 +1,28 @@
-n.d(t, { A: () => g });
-var i = n(627968);
-n(64700);
-var l = n(17928),
-    a = n(477782),
-    r = n(734057),
-    d = n(71393),
-    u = n(576705),
-    s = n(287809),
-    o = n(849736),
-    c = n(312006),
-    A = n(652215),
-    E = n(985018);
-function g(e, t, n) {
-    let g = r.A.getChannel(n),
-        S = (0, l.bG)([d.A], () => d.A.getGuild(t), [t]),
-        I = (0, l.bG)([c.Ay], () => c.Ay.getPermissionsForUser(e.id, n), [n, e.id]),
-        _ = s.default.getCurrentUser()?.id === e.id,
-        f = (0, l.bG)([u.A], () => null != n && u.A.canWithPartialContext(A.xBc.MUTE_MEMBERS, { channelId: n }), [n]);
-    return null != g && null != S && (f || _) && I.speaker
-        ? (0, i.jsx)(a.Dr, {
+e.d(i, { A: () => h });
+var n = e(627968);
+e(64700);
+var r = e(17928),
+    l = e(477782),
+    s = e(734057),
+    a = e(71393),
+    u = e(576705),
+    d = e(287809),
+    c = e(849736),
+    p = e(312006),
+    A = e(652215),
+    g = e(375708);
+function h(t, i, e) {
+    let h = s.A.getChannel(e),
+        o = (0, r.bG)([a.A], () => a.A.getGuild(i), [i]),
+        b = (0, r.bG)([p.Ay], () => p.Ay.getPermissionsForUser(t.id, e), [e, t.id]),
+        C = d.default.getCurrentUser()?.id === t.id,
+        k = (0, r.bG)([u.A], () => null != e && u.A.canWithPartialContext(A.xBc.MUTE_MEMBERS, { channelId: e }), [e]);
+    return null != h && null != o && (k || C) && b.speaker
+        ? (0, n.jsx)(l.Dr, {
               id: "audience",
-              label: _ ? E.intl.string(E.t["6C6PJx"]) : E.intl.string(E.t.VK3vQy),
+              label: C ? g.intl.string(g.t["6C6PJx"]) : g.intl.string(g.t.VK3vQy),
               action: () => {
-                  _ ? (0, o.Tf)(g) : (0, o.gt)(e, g);
+                  C ? (0, c.Tf)(h) : (0, c.gt)(t, h);
               },
           })
         : null;

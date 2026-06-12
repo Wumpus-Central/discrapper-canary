@@ -13,7 +13,7 @@ e.exports = {
     hQ: "contentContainer_d9be46",
     gM: "channelTextArea_d9be46",
     SL: "channelTextAreaInner_d9be46",
-    ly: "previewTextArea_d9be46",
+    EV: "previewTextArea_d9be46",
     cr: "channelTextAreaInnerError_d9be46",
     gO: "controlsContainer_d9be46",
     ne: "controls_d9be46",

@@ -1,12 +1,12 @@
-n.d(t, { J: () => r });
-var l = n(922590),
-    i = n(652215);
-function r(e) {
-    let { userId: t } = e,
-        n = (0, l.f1)(t);
+n.d(e, { J: () => r });
+var i = n(922590),
+    l = n(652215);
+function r(t) {
+    let { userId: e } = t,
+        n = (0, i.f1)(e);
     return {
         gameFriends: n,
-        hasOutgoingPendingGameFriends: (0, l.KL)(t, i.eA$.PENDING_OUTGOING),
-        hasIncomingPendingGameFriends: (0, l.KL)(t, i.eA$.PENDING_INCOMING),
+        hasOutgoingPendingGameFriends: (0, i.KL)(e, l.eA$.PENDING_OUTGOING),
+        hasIncomingPendingGameFriends: (0, i.KL)(e, l.eA$.PENDING_INCOMING),
     };
 }

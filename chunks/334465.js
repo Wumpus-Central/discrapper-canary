@@ -1,3 +1,3 @@
 "use strict";
-n.d(t, { B: () => r.B6 });
-var r = n(873263);
+n.d(t, { B: () => i.B6 });
+var i = n(873263);

@@ -1,10 +1,10 @@
-n.d(t, { r: () => r });
-var i = n(975571),
-    l = n(652215),
-    s = n(985018);
-function r() {
-    return s.intl.format(s.t["+ALa7+"], {
-        fullTermsUrl: i.A.getArticleURL(l.MVz.CREATOR_TERMS),
-        creatorRevenuePolicyUrl: i.A.getArticleURL(l.MVz.CREATOR_POLICY),
+E.d(r, { r: () => R });
+var o = E(975571),
+    i = E(652215),
+    T = E(375708);
+function R() {
+    return T.intl.format(T.t["+ALa7+"], {
+        fullTermsUrl: o.A.getArticleURL(i.MVz.CREATOR_TERMS),
+        creatorRevenuePolicyUrl: o.A.getArticleURL(i.MVz.CREATOR_POLICY),
     });
 }

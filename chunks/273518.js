@@ -1,8 +1,8 @@
 "use strict";
-n.r(t), n.d(t, { default: () => a });
-var r = n(618027);
-function i(e) {
-    return (i =
+n.r(t), n.d(t, { default: () => s });
+var i = n(618027);
+function r(e) {
+    return (r =
         "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
             ? function (e) {
                   return typeof e;
@@ -13,9 +13,9 @@ function i(e) {
                       : typeof e;
               })(e);
 }
-function a(e) {
+function s(e) {
     return (
-        (0, r.A)(1, arguments),
-        e instanceof Date || ("object" === i(e) && "[object Date]" === Object.prototype.toString.call(e))
+        (0, i.A)(1, arguments),
+        e instanceof Date || ("object" === r(e) && "[object Date]" === Object.prototype.toString.call(e))
     );
 }

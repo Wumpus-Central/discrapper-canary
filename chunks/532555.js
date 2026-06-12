@@ -1,5 +1,5 @@
 "use strict";
-function r(e) {
+function i(e) {
     return {
         id: e.id,
         name: e.name,
@@ -19,4 +19,4 @@ function r(e) {
         gameConfig: e.game_config,
     };
 }
-n.d(t, { A: () => r });
+n.d(t, { A: () => i });

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => h, Cj: () => f, Sm: () => _, xz: () => d });
+n.d(t, { Ay: () => f, Cj: () => h, Sm: () => _, xz: () => d });
 var i,
     r,
     s = n(143236),
@@ -12,12 +12,12 @@ var i,
 function _(e) {
     return void 0 !== e.isVideo && void 0 !== e.isImage;
 }
-var f =
+var h =
     (((r = {})[(r.FILE_ATTACHMENT = 0)] = "FILE_ATTACHMENT"),
     (r[(r.IMAGE_PICKER = 1)] = "IMAGE_PICKER"),
     (r[(r.IMAGE_EDITOR = 2)] = "IMAGE_EDITOR"),
     r);
-class h extends s.EventEmitter {
+class f extends s.EventEmitter {
     id;
     uniqueId;
     filename;

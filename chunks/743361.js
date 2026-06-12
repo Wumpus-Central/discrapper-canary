@@ -1,29 +1,29 @@
 "use strict";
-n.d(t, { A: () => g });
-var r = n(735438),
-    i = n.n(r),
-    a = n(314116),
-    s = n(308528),
-    o = n(843472),
+n.d(t, { A: () => m });
+var i = n(735438),
+    r = n.n(i),
+    s = n(314116),
+    a = n(308528),
+    o = n(720149),
     l = n(155718),
     u = n(47167),
     c = n(994500),
     d = n(287809),
     _ = n(392054),
-    f = n(73510),
-    p = n(652215),
-    h = n(985018);
-function m(e) {
+    h = n(73510),
+    f = n(652215),
+    p = n(375708);
+function E(e) {
     switch (e) {
-        case p.Z86.GIF.title:
-        case p.Z86.TENOR.title:
-            return h.intl.string(h.t["0vrCgJ"]);
+        case f.Z86.GIF.title:
+        case f.Z86.TENOR.title:
+            return p.intl.string(p.t["0vrCgJ"]);
         default:
             return "";
     }
 }
-let g = [
-    ...i()(p.Z86)
+let m = [
+    ...r()(f.Z86)
         .values()
         .map((e) => ({
             id: e.commandId,
@@ -31,25 +31,25 @@ let g = [
             displayName: e.command,
             type: l.kc.CHAT,
             inputType: _.y$.BUILT_IN_INTEGRATION,
-            applicationId: f.Ik.BUILT_IN,
+            applicationId: h.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return m(e.title);
+                return E(e.title);
             },
             get displayDescription() {
-                return m(e.title);
+                return E(e.title);
             },
             options:
-                e.type === p.p_j.GIF
+                e.type === f.p_j.GIF
                     ? [
                           {
                               name: "query",
                               displayName: "query",
                               type: l.n4.STRING,
                               get description() {
-                                  return h.intl.string(h.t["+9g3Du"]);
+                                  return p.intl.string(p.t["+9g3Du"]);
                               },
                               get displayDescription() {
-                                  return h.intl.string(h.t["+9g3Du"]);
+                                  return p.intl.string(p.t["+9g3Du"]);
                               },
                               required: !0,
                           },
@@ -65,12 +65,12 @@ let g = [
         displayName: "leave",
         type: l.kc.CHAT,
         inputType: _.y$.BUILT_IN,
-        applicationId: f.Ik.BUILT_IN,
+        applicationId: h.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return h.intl.string(h.t["26C4oi"]);
+            return p.intl.string(p.t["26C4oi"]);
         },
         get displayDescription() {
-            return h.intl.string(h.t["26C4oi"]);
+            return p.intl.string(p.t["26C4oi"]);
         },
         options: [
             {
@@ -78,10 +78,10 @@ let g = [
                 displayName: "silent",
                 type: l.n4.BOOLEAN,
                 get description() {
-                    return h.intl.string(h.t.YH7PkD);
+                    return p.intl.string(p.t.YH7PkD);
                 },
                 get displayDescription() {
-                    return h.intl.string(h.t.bq3JXs);
+                    return p.intl.string(p.t.bq3JXs);
                 },
                 required: !1,
             },
@@ -93,22 +93,22 @@ let g = [
         execute: (e, t) => {
             let { channel: n } = t;
             if (null == n) return;
-            let r = (0, u.m1)(n, d.default, c.A),
-                i = h.intl.formatToPlainString(h.t.hJ5Ap4, { name: r }),
-                l = h.intl.format(h.t.SSIVOu, { name: r }),
+            let i = (0, u.m1)(n, d.default, c.A),
+                r = p.intl.formatToPlainString(p.t.hJ5Ap4, { name: i }),
+                l = p.intl.format(p.t.SSIVOu, { name: i }),
                 _ = e.find((e) => "silent" === e.name)?.value ?? !1;
-            async function f() {
+            async function h() {
                 if (null != n)
                     try {
-                        await s.A.closePrivateChannel(n.id, void 0, _);
+                        await a.A.closePrivateChannel(n.id, void 0, _);
                     } catch (e) {
-                        o.A.sendBotMessage(n.id, h.intl.string(h.t["YOsuT/"]));
+                        o.A.sendBotMessage(n.id, p.intl.string(p.t["YOsuT/"]));
                     }
             }
             n.isManaged() &&
-                ((i = h.intl.formatToPlainString(h.t.hVGjEW, { name: r })),
-                (l = h.intl.format(h.t.IK1Qvs, { name: r }))),
-                (0, a.A)({ title: i, subtitle: l, confirmText: h.intl.string(h.t["26C4oi"]), onConfirm: f });
+                ((r = p.intl.formatToPlainString(p.t.hVGjEW, { name: i })),
+                (l = p.intl.format(p.t.IK1Qvs, { name: i }))),
+                (0, s.A)({ title: r, subtitle: l, confirmText: p.intl.string(p.t["26C4oi"]), onConfirm: h });
         },
     },
     {
@@ -117,12 +117,12 @@ let g = [
         displayName: "sticker",
         type: l.kc.CHAT,
         inputType: _.y$.BUILT_IN_INTEGRATION,
-        applicationId: f.Ik.BUILT_IN,
+        applicationId: h.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return h.intl.string(h.t.GUH9II);
+            return p.intl.string(p.t.GUH9II);
         },
         get displayDescription() {
-            return h.intl.string(h.t.GUH9II);
+            return p.intl.string(p.t.GUH9II);
         },
         options: [
             {
@@ -130,15 +130,15 @@ let g = [
                 displayName: "query",
                 type: l.n4.STRING,
                 get description() {
-                    return h.intl.string(h.t.hIbHm1);
+                    return p.intl.string(p.t.hIbHm1);
                 },
                 get displayDescription() {
-                    return h.intl.string(h.t.hIbHm1);
+                    return p.intl.string(p.t.hIbHm1);
                 },
                 required: !0,
             },
         ],
-        integrationType: p.p_j.STICKER,
+        integrationType: f.p_j.STICKER,
         integrationTitle: "sticker",
     },
 ];

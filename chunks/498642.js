@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366);
 let s = {},
@@ -22,7 +22,7 @@ class l extends i.Ay.Store {
         return null != e ? a[e] : null;
     }
 }
-let d = new l(r.h, {
+let u = new l(r.h, {
     CONNECTION_OPEN: function (e) {
         let { guilds: t } = e;
         (s = {}),

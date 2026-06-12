@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { U7: () => s, jZ: () => a });
-var r = n(64700);
+n.d(t, { U7: () => a, jZ: () => s });
+var i = n(64700);
 if ("u" > typeof HTMLTemplateElement) {
     let e = Object.getOwnPropertyDescriptor(Node.prototype, "firstChild").get;
     Object.defineProperty(HTMLTemplateElement.prototype, "firstChild", {
@@ -11,13 +11,13 @@ if ("u" > typeof HTMLTemplateElement) {
         },
     });
 }
-let i = (0, r.createContext)(!1);
-function a(e) {
-    if ((0, r.useContext)(i)) return r.createElement(r.Fragment, null, e.children);
-    let t = r.createElement(i.Provider, { value: !0 }, e.children);
-    return r.createElement("template", { "data-react-aria-hidden": !0 }, t);
-}
+let r = (0, i.createContext)(!1);
 function s(e) {
-    let t = (t, n) => ((0, r.useContext)(i) ? null : e(t, n));
-    return (t.displayName = e.displayName || e.name), (0, r.forwardRef)(t);
+    if ((0, i.useContext)(r)) return i.createElement(i.Fragment, null, e.children);
+    let t = i.createElement(r.Provider, { value: !0 }, e.children);
+    return i.createElement("template", { "data-react-aria-hidden": !0 }, t);
+}
+function a(e) {
+    let t = (t, n) => ((0, i.useContext)(r) ? null : e(t, n));
+    return (t.displayName = e.displayName || e.name), (0, i.forwardRef)(t);
 }

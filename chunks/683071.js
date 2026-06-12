@@ -1,21 +1,21 @@
 "use strict";
 n.d(t, { w: () => s });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(512950);
+var r = n(512950);
 function s(e) {
     let { type: t, hidden: n, children: s } = e;
-    return (0, r.jsx)(i.p, {
+    return (0, i.jsx)(r.p, {
         messageType: (function (e) {
             switch (e) {
                 case "critical":
-                    return i.Y.ERROR;
+                    return r.Y.ERROR;
                 case "warning":
-                    return i.Y.WARNING;
+                    return r.Y.WARNING;
                 case "info":
-                    return i.Y.INFO;
+                    return r.Y.INFO;
                 case "success":
-                    return i.Y.POSITIVE;
+                    return r.Y.POSITIVE;
             }
         })(t),
         hidden: n,

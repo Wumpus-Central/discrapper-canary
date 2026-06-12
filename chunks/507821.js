@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { q: () => i });
-var r,
-    i =
-        (((r = {}).State = "state"),
-        (r.Speaking = "speaking"),
-        (r.VideoSourceQualityChanged = "video-source-quality-changed"),
-        (r.Video = "video"),
-        (r.Flags = "flags"),
-        (r.Platform = "platform"),
-        (r.Ping = "ping"),
-        (r.ClientConnect = "client-connect"),
-        (r.ClientDisconnect = "client-disconnect"),
-        (r.OutboundLossRate = "outboundlossrate"),
-        (r.SecureFramesUpdate = "secure-frames-update"),
-        (r.RosterMapUpdate = "roster-map-update"),
-        (r.UsersMerged = "users-merged"),
-        r);
+n.d(t, { q: () => r });
+var i,
+    r =
+        (((i = {}).State = "state"),
+        (i.Speaking = "speaking"),
+        (i.VideoSourceQualityChanged = "video-source-quality-changed"),
+        (i.Video = "video"),
+        (i.Flags = "flags"),
+        (i.Platform = "platform"),
+        (i.Ping = "ping"),
+        (i.ClientConnect = "client-connect"),
+        (i.ClientDisconnect = "client-disconnect"),
+        (i.OutboundLossRate = "outboundlossrate"),
+        (i.SecureFramesUpdate = "secure-frames-update"),
+        (i.RosterMapUpdate = "roster-map-update"),
+        (i.UsersMerged = "users-merged"),
+        i);

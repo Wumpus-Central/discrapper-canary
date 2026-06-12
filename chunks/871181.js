@@ -1,81 +1,81 @@
 n.d(t, { A: () => S });
 var l = n(627968),
-    a = n(64700),
+    r = n(64700),
     i = n(503698),
-    r = n.n(i),
+    a = n.n(i),
     s = n(452027),
     o = n(140735),
     u = n(355622),
     c = n(408018),
-    d = n(201349),
+    d = n(138617),
     p = n(915089),
     m = n(95701),
     h = n(788868),
-    C = n(652215),
-    A = n(375708),
-    y = n(905126);
-let E = (0, m.createChannelRecord)({ id: "1", type: C.rbe.DM }),
-    P = (0, p.Ld)();
+    A = n(652215),
+    E = n(375708),
+    C = n(905126);
+let y = (0, m.createChannelRecord)({ id: "1", type: A.rbe.DM }),
+    _ = (0, p.Ld)();
 function S(e) {
     let {
-            label: t = A.intl.string(A.t.B3miE8),
+            label: t = E.intl.string(E.t.B3miE8),
             onTextChange: n,
             pendingText: i,
             currentText: p,
             className: m,
-            innerClassName: C,
+            innerClassName: A,
             disableThemedBackground: S = !1,
         } = e,
-        [_, f] = a.useState(i ?? p),
-        [T, I] = a.useState((0, c.x7)(_)),
-        x = a.useRef(!1);
-    function N(e, t, l) {
-        t !== _ && (f(t), I(l), n(t));
+        [P, I] = r.useState(i ?? p),
+        [f, T] = r.useState((0, c.x7)(P)),
+        N = r.useRef(!1);
+    function g(e, t, l) {
+        t !== P && (I(t), T(l), n(t));
     }
-    function g() {
+    function v() {
         return new Promise((e) => {
             e({ shouldClear: !1, shouldRefocus: !0 });
         });
     }
     return (
-        a.useEffect(() => {
-            x.current = !0;
+        r.useEffect(() => {
+            N.current = !0;
         }, []),
-        a.useEffect(() => {
+        r.useEffect(() => {
             if (void 0 === i) {
                 let e = (0, c.x7)(p);
-                f(p), I(e);
+                I(p), T(e);
             }
         }, [i, p]),
         (0, l.jsx)("div", {
-            className: r()(y.rf, m),
+            className: a()(C.rf, m),
             children: (0, l.jsx)(s.D, {
                 label: t,
                 children: (e) =>
                     (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(d.Ay, {
-                                "aria-describedby": `${e.describedById} ${P}`,
+                                "aria-describedby": `${e.describedById} ${_}`,
                                 "aria-labelledby": e.labelId,
-                                innerClassName: r()(y.Tg, C),
-                                editorClassName: y.OT,
+                                innerClassName: a()(C.Tg, A),
+                                editorClassName: C.OT,
                                 maxCharacterCount: h.Jo,
-                                onChange: N,
-                                channel: E,
-                                textValue: _,
-                                richValue: T,
+                                onChange: g,
+                                channel: y,
+                                textValue: P,
+                                richValue: f,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
-                                    x.current = !1;
+                                    N.current = !1;
                                 },
                                 onFocus: () => {
-                                    x.current = !0;
+                                    N.current = !0;
                                 },
-                                focused: x.current,
-                                onSubmit: g,
+                                focused: N.current,
+                                onSubmit: v,
                                 disableThemedBackground: S,
                             }),
-                            (0, l.jsx)(o.A, { id: P, children: A.intl.format(A.t["+DFxLc"], { maxLength: h.Jo }) }),
+                            (0, l.jsx)(o.A, { id: _, children: E.intl.format(E.t["+DFxLc"], { maxLength: h.Jo }) }),
                         ],
                     }),
             }),

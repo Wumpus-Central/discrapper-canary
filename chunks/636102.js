@@ -1,36 +1,36 @@
-var n =
+var i =
         (this && this.__createBinding) ||
         (Object.create
-            ? function (e, t, i, n) {
-                  void 0 === n && (n = i);
-                  var r = Object.getOwnPropertyDescriptor(t, i);
+            ? function (e, t, n, i) {
+                  void 0 === i && (i = n);
+                  var r = Object.getOwnPropertyDescriptor(t, n);
                   (!r || ("get" in r ? !t.__esModule : r.writable || r.configurable)) &&
                       (r = {
                           enumerable: !0,
                           get: function () {
-                              return t[i];
+                              return t[n];
                           },
                       }),
-                      Object.defineProperty(e, n, r);
+                      Object.defineProperty(e, i, r);
               }
-            : function (e, t, i, n) {
-                  void 0 === n && (n = i), (e[n] = t[i]);
+            : function (e, t, n, i) {
+                  void 0 === i && (i = n), (e[i] = t[n]);
               }),
     r =
         (this && this.__exportStar) ||
         function (e, t) {
-            for (var i in e) "default" === i || Object.prototype.hasOwnProperty.call(t, i) || n(t, e, i);
+            for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || i(t, e, n);
         };
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.validateFileType = void 0);
-let o = i(835986),
-    a = i(817762);
-r(i(524016), t),
-    r(i(330821), t),
-    r(i(549195), t),
-    r(i(650624), t),
-    r(i(212749), t),
-    (t.validateFileType = function (e, t, i) {
-        var n, r;
+let o = n(835986),
+    a = n(817762);
+r(n(524016), t),
+    r(n(330821), t),
+    r(n(549195), t),
+    r(n(650624), t),
+    r(n(212749), t),
+    (t.validateFileType = function (e, t, n) {
+        var i, r;
         let s = [];
         for (let e of [
             ...new Set(
@@ -47,12 +47,12 @@ r(i(524016), t),
             s.push(e);
         }
         if (
-            i &&
-            Object.prototype.hasOwnProperty.call(i, "chunkSize") &&
-            (null != (n = null == i ? void 0 : i.chunkSize) ? n : 0) <= 0
+            n &&
+            Object.prototype.hasOwnProperty.call(n, "chunkSize") &&
+            (null != (i = null == n ? void 0 : n.chunkSize) ? i : 0) <= 0
         )
             throw RangeError("chunkSize must be bigger than zero");
-        if (!i || !(null == i ? void 0 : i.excludeSimilarTypes)) {
+        if (!n || !(null == n ? void 0 : n.excludeSimilarTypes)) {
             let e = (r = s).some((e) => "MP4" === e) ? ["M4V"] : r.some((e) => "AAC" === e) ? ["M4A"] : [];
             e.length > 0 && (s = s.concat(e));
         }
@@ -64,11 +64,11 @@ r(i(524016), t),
                 o.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK.includes(e.toLowerCase()) &&
                     u.push(o.FileTypes.getInfoByName(e));
         }
-        let c = (0, a.getFileChunk)(e, (null == i ? void 0 : i.chunkSize) || 64),
-            d = o.FileTypes.detectSignature(c, l);
-        if (!d) return !1;
+        let c = (0, a.getFileChunk)(e, (null == n ? void 0 : n.chunkSize) || 64),
+            p = o.FileTypes.detectSignature(c, l);
+        if (!p) return !1;
         if (u.length > 0) {
-            let e = u.filter((e) => e.signatures.includes(d));
+            let e = u.filter((e) => e.signatures.includes(p));
             if (e.length > 0) {
                 let t = o.FileTypes.detectTypeByAdditionalCheck(c, e);
                 return !!t && s.some((e) => e.toLowerCase() === t);

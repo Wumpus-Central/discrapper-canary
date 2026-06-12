@@ -1,20 +1,20 @@
-var r = n(300823),
-    i = n(221637),
-    a = n(615861),
-    s = n(509185),
+var i = n(300823),
+    r = n(221637),
+    s = n(615861),
+    a = n(509185),
     o = n(983249);
 e.exports = function (e, t, n, l) {
-    if (!s(e)) return e;
-    t = i(t, e);
-    for (var c = -1, u = t.length, d = u - 1, f = e; null != f && ++c < u; ) {
-        var p = o(t[c]),
-            _ = n;
-        if ("__proto__" === p || "constructor" === p || "prototype" === p) break;
-        if (c != d) {
-            var h = f[p];
-            void 0 === (_ = l ? l(h, p, f) : void 0) && (_ = s(h) ? h : a(t[c + 1]) ? [] : {});
+    if (!a(e)) return e;
+    t = r(t, e);
+    for (var u = -1, c = t.length, d = c - 1, _ = e; null != _ && ++u < c; ) {
+        var h = o(t[u]),
+            f = n;
+        if ("__proto__" === h || "constructor" === h || "prototype" === h) break;
+        if (u != d) {
+            var p = _[h];
+            void 0 === (f = l ? l(p, h, _) : void 0) && (f = a(p) ? p : s(t[u + 1]) ? [] : {});
         }
-        r(f, p, _), (f = f[p]);
+        i(_, h, f), (_ = _[h]);
     }
     return e;
 };

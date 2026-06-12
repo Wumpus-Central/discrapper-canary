@@ -1,7 +1,7 @@
 !(function (e) {
     "use strict";
-    function t(e, t, n, r) {
-        var i = {
+    function t(e, t, n, i) {
+        var r = {
             m: ["eine Minute", "einer Minute"],
             h: ["eine Stunde", "einer Stunde"],
             d: ["ein Tag", "einem Tag"],
@@ -11,7 +11,7 @@
             y: ["ein Jahr", "einem Jahr"],
             yy: [e + " Jahre", e + " Jahren"],
         };
-        return t ? i[n][0] : i[n][1];
+        return t ? r[n][0] : r[n][1];
     }
     e.defineLocale("de-ch", {
         months: "Januar_Februar_M\xe4rz_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember".split("_"),

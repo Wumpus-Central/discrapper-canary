@@ -1,23 +1,23 @@
 "use strict";
-function r(...e) {
+function i(...e) {
     return 1 === e.length && e[0]
         ? e[0]
         : (t) => {
               let n = !1,
-                  r = e.map((e) => {
-                      let r = i(e, t);
-                      return n || (n = "function" == typeof r), r;
+                  i = e.map((e) => {
+                      let i = r(e, t);
+                      return n || (n = "function" == typeof i), i;
                   });
               if (n)
                   return () => {
-                      r.forEach((t, n) => {
-                          "function" == typeof t ? t() : i(e[n], null);
+                      i.forEach((t, n) => {
+                          "function" == typeof t ? t() : r(e[n], null);
                       });
                   };
           };
 }
-function i(e, t) {
+function r(e, t) {
     if ("function" == typeof e) return e(t);
     null != e && (e.current = t);
 }
-n.d(t, { P: () => r });
+n.d(t, { P: () => i });

@@ -1,30 +1,30 @@
-n.d(t, { A: () => o });
-var i = n(64700),
-    l = n(17928),
-    s = n(845584),
-    a = n(627363),
-    r = n(587895);
-function o(e, t) {
-    let n = (0, l.bG)([r.A], () => r.A.getGuildApplication(e, t)),
-        [o, d] = i.useState(null == n),
-        [c, u] = i.useState(),
-        [m, g] = i.useState(!1),
-        h = i.useCallback(async () => {
-            if (null == n && null != e) {
-                g(!0), d(!0);
+a.d(e, { A: () => s });
+var u = a(64700),
+    i = a(17928),
+    l = a(913122),
+    c = a(627363),
+    n = a(587895);
+function s(t, e) {
+    let a = (0, i.bG)([n.A], () => n.A.getGuildApplication(t, e)),
+        [s, p] = u.useState(null == a),
+        [d, r] = u.useState(),
+        [h, o] = u.useState(!1),
+        A = u.useCallback(async () => {
+            if (null == a && null != t) {
+                o(!0), p(!0);
                 try {
-                    await a.Ay.getApplicationsForGuild(e, { type: t, includeTeam: !0 });
-                } catch (e) {
-                    u(new s.LG(e));
+                    await c.Ay.getApplicationsForGuild(t, { type: e, includeTeam: !0 });
+                } catch (t) {
+                    r(new l.LG(t));
                 } finally {
-                    d(!1);
+                    p(!1);
                 }
             }
-        }, [n, t, e]);
+        }, [a, e, t]);
     return (
-        i.useEffect(() => {
-            m || h();
-        }, [m, h]),
-        { application: n, error: c, loading: o }
+        u.useEffect(() => {
+            h || A();
+        }, [h, A]),
+        { application: a, error: d, loading: s }
     );
 }

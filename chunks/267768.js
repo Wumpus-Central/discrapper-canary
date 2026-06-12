@@ -1,9 +1,9 @@
 "use strict";
-var r = n(706124);
-if (r)
+var i = n(706124);
+if (i)
     try {
-        r([], "length");
+        i([], "length");
     } catch (e) {
-        r = null;
+        i = null;
     }
-e.exports = r;
+e.exports = i;

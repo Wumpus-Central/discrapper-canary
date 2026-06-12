@@ -1,8 +1,8 @@
 i.d(n, { default: () => l });
 var a = i(627968);
 i(64700);
-var e = i(158954),
-    r = i(985018);
+var e = i(732159),
+    r = i(375708);
 function l(t) {
     let { onConfirmUninstall: n, game: i, ...l } = t;
     return (0, a.jsx)(e.ConfirmModal, {

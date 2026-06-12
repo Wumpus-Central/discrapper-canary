@@ -1,66 +1,66 @@
 "use strict";
-r.r(t),
-    r.d(t, {
-        assign: () => h,
-        batchedUpdates: () => f,
-        colorNames: () => c,
-        createStringInterpolator: () => n,
-        frameLoop: () => i,
-        now: () => u,
+n.r(t),
+    n.d(t, {
+        assign: () => f,
+        batchedUpdates: () => _,
+        colorNames: () => u,
+        createStringInterpolator: () => i,
+        frameLoop: () => o,
+        now: () => l,
         requestAnimationFrame: () => d,
-        skipAnimation: () => l,
-        to: () => s,
-        willAdvance: () => p,
+        skipAnimation: () => c,
+        to: () => r,
+        willAdvance: () => h,
     });
-var n,
-    s,
-    a = r(572377),
-    o = r(132803),
-    i = new a.c(),
-    u = function () {
+var i,
+    r,
+    s = n(572377),
+    a = n(132803),
+    o = new s.c(),
+    l = function () {
         return performance.now();
     },
-    c = null,
-    l = !1,
+    u = null,
+    c = !1,
     d =
         "u" > typeof window
             ? window.requestAnimationFrame
             : function () {
                   return -1;
               },
-    f = function (e) {
+    _ = function (e) {
         return e();
     },
-    p = o.lQ,
-    h = function (e) {
+    h = a.lQ,
+    f = function (e) {
         var t;
         return (
-            (s = (t = Object.assign(
+            (r = (t = Object.assign(
                 {
-                    to: s,
-                    now: u,
-                    frameLoop: i,
-                    colorNames: c,
-                    skipAnimation: l,
-                    createStringInterpolator: n,
+                    to: r,
+                    now: l,
+                    frameLoop: o,
+                    colorNames: u,
+                    skipAnimation: c,
+                    createStringInterpolator: i,
                     requestAnimationFrame: d,
-                    batchedUpdates: f,
-                    willAdvance: p,
+                    batchedUpdates: _,
+                    willAdvance: h,
                 },
                 (function (e) {
                     var t = {};
-                    for (var r in e) void 0 !== e[r] && (t[r] = e[r]);
+                    for (var n in e) void 0 !== e[n] && (t[n] = e[n]);
                     return t;
                 })(e),
             )).to),
-            (u = t.now),
-            (i = t.frameLoop),
-            (c = t.colorNames),
-            (l = t.skipAnimation),
-            (n = t.createStringInterpolator),
+            (l = t.now),
+            (o = t.frameLoop),
+            (u = t.colorNames),
+            (c = t.skipAnimation),
+            (i = t.createStringInterpolator),
             (d = t.requestAnimationFrame),
-            (f = t.batchedUpdates),
-            (p = t.willAdvance),
+            (_ = t.batchedUpdates),
+            (h = t.willAdvance),
             t
         );
     };

@@ -5,8 +5,8 @@ var l = n(627968),
     a = n(793574),
     r = n(688810),
     o = n(359800),
-    c = n(46225),
-    d = n(137177),
+    d = n(46225),
+    c = n(137177),
     u = n(774418),
     m = n(375708),
     h = n(27549);
@@ -14,7 +14,7 @@ function x(e) {
     let t,
         { application: n, size: x = "md" } = e,
         { analyticsLocations: g } = (0, r.Ay)(a.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER),
-        { canStartAuthorization: f, hasAlreadyLinked: j, startAuthorization: p, fetched: v } = (0, c.RD)(n),
+        { canStartAuthorization: f, hasAlreadyLinked: j, startAuthorization: p, fetched: v } = (0, d.RD)(n),
         A = (0, o.z)(p, j);
     if (!v || !f || j) return null;
     let C = !1;
@@ -25,7 +25,7 @@ function x(e) {
         (0, l.jsxs)("div", {
             className: h._,
             children: [
-                (0, l.jsx)(d.A, { game: n, size: d.M.MEDIUM }),
+                (0, l.jsx)(c.A, { game: n, size: c.M.MEDIUM }),
                 (0, l.jsx)(s.E, { variant: "text-sm/medium", color: "text-default", className: h.d, children: t }),
                 C
                     ? (0, l.jsx)(i.Q, {

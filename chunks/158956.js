@@ -1,25 +1,25 @@
-l.d(e, { default: () => C });
-var n = l(627968),
-    i = l(64700),
-    r = l(189213),
-    a = l(17928),
-    s = l(783878),
-    c = l(331322),
-    A = l(834730),
-    u = l(47167),
-    d = l(734057),
-    o = l(808728),
-    h = l(994500),
-    E = l(287809),
-    N = l(239705),
-    g = l(985018);
-let _ = (t) => {
-    let { guildId: e, channel: l, onSelectChannel: i } = t,
-        r = (0, a.yK)(
-            [o.Ay],
+n.d(e, { default: () => k });
+var l = n(627968),
+    i = n(64700),
+    a = n(189213),
+    r = n(17928),
+    s = n(783878),
+    d = n(331322),
+    o = n(834730),
+    c = n(47167),
+    u = n(734057),
+    h = n(808728),
+    g = n(994500),
+    p = n(287809),
+    x = n(239705),
+    C = n(375708);
+let m = (t) => {
+    let { guildId: e, channel: n, onSelectChannel: i } = t,
+        a = (0, r.yK)(
+            [h.Ay],
             () =>
-                o.Ay.getChannels(e)
-                    [o.I6].filter((t) => {
+                h.Ay.getChannels(e)
+                    [h.I6].filter((t) => {
                         let { channel: e } = t;
                         return !e.isGuildVocal() && !e.isThread() && !e.isForumLikeChannel();
                     })
@@ -29,62 +29,62 @@ let _ = (t) => {
                     }),
             [e],
         );
-    return (0, n.jsx)(s.Z, {
+    return (0, l.jsx)(s.Z, {
         required: !0,
-        value: l?.id,
-        options: r.map((t) => ({ id: t.id, value: t.id, label: (0, u.m1)(t, E.default, h.A, !0) })),
+        value: n?.id,
+        options: a.map((t) => ({ id: t.id, value: t.id, label: (0, c.m1)(t, p.default, g.A, !0) })),
         onSelectionChange: (t) => {
-            i(r.find((e) => e.id === t) ?? void 0);
+            i(a.find((e) => e.id === t) ?? void 0);
         },
-        placeholder: g.intl.string(g.t["N+T69y"]),
+        placeholder: C.intl.string(C.t["N+T69y"]),
         selectionMode: "single",
     });
 };
-function C(t) {
-    let { action: e, triggerType: l, guildId: s, isEdit: u, onEditChannel: o, onClose: h, transitionState: E } = t,
-        [C, S] = i.useState(e.metadata.channelId),
-        [I, L] = i.useState(null),
-        f = (0, a.bG)([d.A], () => d.A.getChannel(C), [C]),
-        x = (0, N.x)(e.type, e, l);
-    if (null == x) return null;
-    let { headerText: H } = x;
-    return (0, n.jsx)(r.Modal, {
-        onClose: h,
-        transitionState: E,
-        title: H,
-        subtitle: g.intl.string(g.t["z/ZF2i"]),
+function k(t) {
+    let { action: e, triggerType: n, guildId: s, isEdit: c, onEditChannel: h, onClose: g, transitionState: p } = t,
+        [k, v] = i.useState(e.metadata.channelId),
+        [b, f] = i.useState(null),
+        j = (0, r.bG)([u.A], () => u.A.getChannel(k), [k]),
+        y = (0, x.x)(e.type, e, n);
+    if (null == y) return null;
+    let { headerText: A } = y;
+    return (0, l.jsx)(a.Modal, {
+        onClose: g,
+        transitionState: p,
+        title: A,
+        subtitle: C.intl.string(C.t["z/ZF2i"]),
         actions: [
             {
-                text: g.intl.string(g.t["ETE/oC"]),
+                text: C.intl.string(C.t["ETE/oC"]),
                 onClick: () => {
-                    h();
+                    g();
                 },
                 variant: "secondary",
             },
             {
-                text: u ? g.intl.string(g.t.bt75uw) : g.intl.string(g.t["R3BPH+"]),
+                text: c ? C.intl.string(C.t.bt75uw) : C.intl.string(C.t["R3BPH+"]),
                 onClick: () => {
-                    null == C ? L(g.intl.string(g.t.lM1NLh)) : o(C);
+                    null == k ? f(C.intl.string(C.t.lM1NLh)) : h(k);
                 },
             },
         ],
-        children: (0, n.jsxs)(c.B, {
+        children: (0, l.jsxs)(d.B, {
             gap: 8,
             direction: "vertical",
             children: [
-                (0, n.jsx)(_, {
+                (0, l.jsx)(m, {
                     guildId: s,
-                    channel: f,
+                    channel: j,
                     onSelectChannel: (t) => {
-                        null != t && S(t.id);
+                        null != t && v(t.id);
                     },
                 }),
-                null != I
-                    ? (0, n.jsx)(A.E, { color: "text-feedback-critical", variant: "text-sm/normal", children: I })
-                    : (0, n.jsx)(A.E, {
+                null != b
+                    ? (0, l.jsx)(o.E, { color: "text-feedback-critical", variant: "text-sm/normal", children: b })
+                    : (0, l.jsx)(o.E, {
                           color: "text-muted",
                           variant: "text-sm/normal",
-                          children: g.intl.string(g.t["ric+5q"]),
+                          children: C.intl.string(C.t["ric+5q"]),
                       }),
             ],
         }),

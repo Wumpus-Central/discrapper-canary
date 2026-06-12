@@ -3,12 +3,12 @@ n.r(t),
     n.d(t, {
         international: () => A,
         initialLocale: () => S,
-        intl: () => N,
+        intl: () => y,
         getSystemLocale: () => I,
-        useSyncMessages: () => y,
-        t: () => f,
+        useSyncMessages: () => N,
+        t: () => h,
         getLanguages: () => p,
-        getAvailableLocales: () => h,
+        getAvailableLocales: () => f,
         systemLocale: () => T,
     });
 var i = n(627968),
@@ -21,8 +21,8 @@ let { createLoader: u } = n(919523),
     c = u({ "en-US": () => n.e("16423").then(n.bind(n, 342778)) }, "en-US"),
     { makeMessagesProxy: d } = n(919523),
     _ = d(c),
-    f = (0, s.chainMessagesObjects)(l.A, _);
-function h() {
+    h = (0, s.chainMessagesObjects)(l.A, _);
+function f() {
     let e = n(692914).A;
     return p()
         .filter((e) => {
@@ -74,7 +74,7 @@ let T = I("en-US"),
               ? (n.find((e) => "zh-TW" === e) ?? t)
               : (n.find((e) => e.split("-")[0] === i[0]) ?? t);
     })(T, "en-US"),
-    N = new s.IntlManager({ initialLocale: S, defaultLocale: "en-US" }).withFormatters({
+    y = new s.IntlManager({ initialLocale: S, defaultLocale: "en-US" }).withFormatters({
         format: (0, s.makeReactFormatter)({
             $i: (e, t) => (0, i.jsx)("em", { children: e }, t),
             $b: (e, t) => (0, i.jsx)("strong", { children: e }, t),
@@ -104,9 +104,9 @@ let T = I("en-US"),
         formatToMarkdownString: s.markdownFormatter,
         formatToParts: s.astFormatter,
     }),
-    y = (e) => {
+    N = (e) => {
         r.useSyncExternalStore(
             (t) => e.onChange(t),
-            () => e.isLocaleLoaded(N.currentLocale),
+            () => e.isLocaleLoaded(y.currentLocale),
         );
     };

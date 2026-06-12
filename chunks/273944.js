@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     jE: "modalContent__19a29",
     CE: "tabBarWrapper__19a29",
     XG: "scroller__19a29",

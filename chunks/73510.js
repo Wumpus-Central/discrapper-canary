@@ -1,51 +1,51 @@
 "use strict";
 n.d(t, {
-    $r: () => p,
-    Hi: () => d,
+    $r: () => E,
+    Hi: () => c,
     Ik: () => u,
     NH: () => a,
-    Ob: () => c,
+    Ob: () => d,
     Ss: () => l,
-    YC: () => h,
-    iW: () => f,
+    YC: () => p,
+    iW: () => h,
     oW: () => o,
     tE: () => m,
-    uA: () => E,
+    uA: () => f,
     v4: () => _,
 });
-var r,
-    i = n(155718),
-    s = n(985018);
+var i,
+    r = n(155718),
+    s = n(375708);
 let a = "True",
     o = "False",
     l = [
         { name: a, displayName: a, value: "true" },
         { name: o, displayName: o, value: "false" },
     ];
-var u = (((r = {}).BUILT_IN = "-1"), (r.FRECENCY = "-2"), r);
-let d = 10,
-    c = 5,
+var u = (((i = {}).BUILT_IN = "-1"), (i.FRECENCY = "-2"), i);
+let c = 10,
+    d = 5,
     _ = "\0",
-    f = 100,
-    E = 3,
-    h = 10,
-    p = 500;
+    h = 100,
+    f = 3,
+    p = 10,
+    E = 500;
 function m(e) {
     if (null != e.choices) return s.intl.string(s.t.xi5aah);
     switch (e.type) {
-        case i.n4.BOOLEAN:
+        case r.n4.BOOLEAN:
             return s.intl.string(s.t.ATIx6O);
-        case i.n4.CHANNEL:
+        case r.n4.CHANNEL:
             return s.intl.string(s.t.Q0z2Gx);
-        case i.n4.INTEGER:
+        case r.n4.INTEGER:
             return s.intl.string(s.t["d/9Rk4"]);
-        case i.n4.NUMBER:
+        case r.n4.NUMBER:
             return s.intl.string(s.t["FDyk/V"]);
-        case i.n4.ROLE:
+        case r.n4.ROLE:
             return s.intl.string(s.t.vrRQn0);
-        case i.n4.USER:
+        case r.n4.USER:
             return s.intl.string(s.t.i2r7j5);
-        case i.n4.MENTIONABLE:
+        case r.n4.MENTIONABLE:
             return s.intl.string(s.t.I7imec);
         default:
             return s.intl.string(s.t.EkDo1i);

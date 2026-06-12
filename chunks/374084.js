@@ -2,25 +2,25 @@
 n.d(t, {
     CW: () => m,
     Fi: () => u,
-    Fn: () => y,
-    Ic: () => v,
+    Fn: () => N,
+    Ic: () => C,
     K5: () => b,
     Mu: () => E,
     NewMemberActionTypes: () => g,
     RR: () => I,
-    Rc: () => R,
-    SM: () => h,
+    Rc: () => O,
+    SM: () => f,
     Xu: () => T,
     Y4: () => S,
-    Yt: () => O,
-    _7: () => f,
+    Yt: () => R,
+    _7: () => h,
     dl: () => c,
-    jJ: () => C,
+    jJ: () => v,
     kh: () => _,
     kk: () => A,
     oW: () => p,
     oc: () => d,
-    xr: () => N,
+    xr: () => y,
 });
 var i,
     r,
@@ -32,8 +32,8 @@ let u = 7,
     c = 300,
     d = 7,
     _ = 60,
-    f = 5,
-    h = 1,
+    h = 5,
+    f = 1,
     p = 30,
     E = 200,
     m = 7;
@@ -105,29 +105,29 @@ function S(e, t) {
         enabled: o,
     };
 }
-let N = (e) => {
+let y = (e) => {
     if (null == e) return null;
     let t = {};
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
 };
-function y(e) {
+function N(e) {
     return (
         null == e ||
         ((null == e.message || !(e.message.length > 0)) && (null == e.authorIds || !(e.authorIds.length > 0)))
     );
 }
-function C(e) {
+function v(e) {
     return (
         null == e ||
-        (!!y(e.welcomeMessage) &&
+        (!!N(e.welcomeMessage) &&
             (null == e.newMemberActions || !(e.newMemberActions.length > 0)) &&
             (null == e.resourceChannels || !(e.resourceChannels.length > 0)))
     );
 }
-function v(e) {
+function C(e) {
     if (null == e) return !1;
-    if (C(e)) return !0;
+    if (v(e)) return !0;
     if (
         e.welcomeMessage?.message == null ||
         e.welcomeMessage.message.length < u ||
@@ -144,10 +144,10 @@ function v(e) {
         }
     return !0;
 }
-function O(e) {
+function R(e) {
     return e.type === l.rbe.GUILD_TEXT && !o.MJ(l.xBc.SEND_MESSAGES, e) && o.MJ(l.xBc.VIEW_CHANNEL, e);
 }
-function R(e) {
+function O(e) {
     switch (e.type) {
         case l.rbe.GUILD_TEXT:
         case l.rbe.GUILD_ANNOUNCEMENT:

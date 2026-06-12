@@ -9,7 +9,7 @@ var i = n(257943),
     c = Object.getOwnPropertyDescriptor,
     d = "enumerable",
     _ = "configurable",
-    f = "writable";
+    h = "writable";
 t.f = i
     ? s
         ? function (e, t, n) {
@@ -17,11 +17,11 @@ t.f = i
                   (a(e),
                   (t = o(t)),
                   a(n),
-                  "function" == typeof e && "prototype" === t && "value" in n && f in n && !n[f])
+                  "function" == typeof e && "prototype" === t && "value" in n && h in n && !n[h])
               ) {
                   var i = c(e, t);
                   i &&
-                      i[f] &&
+                      i[h] &&
                       ((e[t] = n.value),
                       (n = { configurable: _ in n ? n[_] : i[_], enumerable: d in n ? n[d] : i[d], writable: !1 }));
               }

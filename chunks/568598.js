@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => R, KU: () => v, Qt: () => C, r4: () => O }), n(321073);
+n.d(t, { Ay: () => O, KU: () => C, Qt: () => v, r4: () => R }), n(321073);
 var i,
     r = n(735438),
     s = n(713402),
@@ -10,8 +10,8 @@ var i,
     c = n(616356),
     d = n(495544),
     _ = n(470710),
-    f = n(734057),
-    h = n(235058),
+    h = n(734057),
+    f = n(890063),
     p = n(485296),
     E = n(287809),
     m = n(803301),
@@ -20,13 +20,13 @@ var i,
     I = n(90575),
     T = n(806931),
     S = n(652215),
-    N = n(731854);
-let y = "__EMBEDDED_ACTIVITIES__";
-function C(e) {
+    y = n(731854);
+let N = "__EMBEDDED_ACTIVITIES__";
+function v(e) {
     let { applicationId: t, instanceId: n } = e;
     return null != n ? `activity-${t}-${n}` : `activity-${t}`;
 }
-function v(e) {
+function C(e) {
     switch (e.type) {
         case T.lp.ACTIVITY:
             return `\x01${e.sortKey}`;
@@ -41,7 +41,7 @@ function v(e) {
             );
     }
 }
-var O =
+var R =
     (((i = {}).VIDEO = "VIDEO"),
     (i.STREAM = "STREAM"),
     (i.FILTERED = "FILTERED"),
@@ -49,7 +49,7 @@ var O =
     (i.ACTIVITY = "ACTIVITY"),
     (i.NOT_POPPED_OUT = "NOT_POPPED_OUT"),
     i);
-class R {
+class O {
     channelId;
     call;
     participants = {};
@@ -69,7 +69,7 @@ class R {
             ("isPoppedOut" in e && e.isPoppedOut) || t.push("NOT_POPPED_OUT"),
             t
         );
-    }, v);
+    }, C);
     constructor(e) {
         this.channelId = e;
     }
@@ -83,7 +83,7 @@ class R {
         return this.participantByIndex.values(e, !0);
     }
     rebuild() {
-        let e = f.A.getChannel(this.channelId);
+        let e = h.A.getChannel(this.channelId);
         if (
             null == e ||
             e.type === S.rbe.GUILD_TEXT ||
@@ -109,14 +109,14 @@ class R {
         return this.participantByIndex.get(e) ?? null;
     }
     updateEmbeddedActivities() {
-        return this.updateParticipant(y);
+        return this.updateParticipant(N);
     }
     hasEmbeddedActivity() {
         return this.size("ACTIVITY") > 0;
     }
     updateParticipant(e) {
         let t = this.participants[e],
-            n = e === y ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
+            n = e === N ? this._getParticipantsForEmbeddedActivities() : this._getParticipantsForUser(e);
         return (
             (null != t || 0 !== n.length) &&
             (t?.forEach((e) => {
@@ -176,12 +176,12 @@ class R {
     _getParticipantsForEmbeddedActivities() {
         return this._getEmbeddedActivities().map((e, t) => ({
             type: T.lp.ACTIVITY,
-            id: C({ applicationId: e.applicationId, instanceId: e.compositeInstanceId }),
+            id: v({ applicationId: e.applicationId, instanceId: e.compositeInstanceId }),
             applicationId: e.applicationId,
             activityType: S.$pd.PLAYING,
             activityUrl: e.url,
             participants: [...(e.participants ?? [])],
-            guildId: f.A.getChannel(this.channelId)?.getGuildId() ?? null,
+            guildId: h.A.getChannel(this.channelId)?.getGuildId() ?? null,
             sortKey: t.toString(),
         }));
     }
@@ -193,7 +193,7 @@ class R {
         if (null == r) return i;
         let s = g.A.getVoiceStateForChannel(this.channelId, e),
             o = g.A.getVoicePlatformForChannel(this.channelId, e),
-            _ = f.A.getChannel(this.channelId),
+            _ = h.A.getChannel(this.channelId),
             I = _?.getGuildId(),
             S = (this.call?.ringing?.includes(e) || this.guildRingingUsers.has(e)) ?? !1;
         (null != s || S) &&
@@ -210,15 +210,15 @@ class R {
                 ringing: S,
                 userNick: A.Ay.getName(I, this.channelId, r),
                 userAvatarDecoration: (0, l.U)(r, I),
-                localVideoDisabled: h.Ay.isLocalVideoDisabled(r.id),
+                localVideoDisabled: f.Ay.isLocalVideoDisabled(r.id),
                 isPoppedOut: this.poppedOutParticipants.has(r.id),
             }),
             i.push(t));
-        let y = c.A.getStreamForUser(e, I) ?? c.A.getActiveStreamForUser(e, I);
-        if (null != y && y.channelId === this.channelId) {
-            let t = (0, u._z)(y),
+        let N = c.A.getStreamForUser(e, I) ?? c.A.getActiveStreamForUser(e, I);
+        if (null != N && N.channelId === this.channelId) {
+            let t = (0, u._z)(N),
                 a = this.getParticipant(t),
-                o = y.ownerId === d.default.getId() && c.A.isSelfStreamHidden(this.channelId),
+                o = N.ownerId === d.default.getId() && c.A.isSelfStreamHidden(this.channelId),
                 l =
                     a?.type === T.lp.STREAM
                         ? {
@@ -227,14 +227,14 @@ class R {
                           }
                         : null;
             (n = {
-                ...m.A.getUserStreamData(e, I, N.x.STREAM),
+                ...m.A.getUserStreamData(e, I, y.x.STREAM),
                 ...l,
                 type: o ? T.lp.HIDDEN_STREAM : T.lp.STREAM,
                 id: t,
                 userVideo: s?.selfVideo ?? !1,
                 user: r,
                 userNick: A.Ay.getName(I, this.channelId, r),
-                stream: y,
+                stream: N,
                 isPoppedOut: this.poppedOutParticipants.has(t),
             }),
                 i.push(n);

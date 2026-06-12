@@ -1,8 +1,8 @@
-let r = n(864886);
-e.exports = (e, t, n, i, s) => {
-    "string" == typeof n && ((s = i), (i = n), (n = void 0));
+let i = n(864886);
+e.exports = (e, t, n, r, s) => {
+    "string" == typeof n && ((s = r), (r = n), (n = void 0));
     try {
-        return new r(e instanceof r ? e.version : e, n).inc(t, i, s).version;
+        return new i(e instanceof i ? e.version : e, n).inc(t, r, s).version;
     } catch (e) {
         return null;
     }

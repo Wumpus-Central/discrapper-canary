@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     jv: "categoryList_a1e0e0",
     HZ: "expressionPickerCategoryList_a1e0e0",
     L1: "category_a1e0e0",

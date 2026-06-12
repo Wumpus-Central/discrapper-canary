@@ -5,19 +5,19 @@ var i = n(17928),
     s = n(793943),
     a = n(287809),
     o = n(174459),
-    l = n(927578),
+    l = n(428262),
     u = n(350972),
     c = n(652215),
     d = n(49999),
     _ = n(788868);
-let f = { client: { desktop: u.LW.DEFAULT, coachmarkImpressions: 0 } },
-    h = !0,
+let h = { client: { desktop: u.LW.DEFAULT, coachmarkImpressions: 0 } },
+    f = !0,
     p = () => {
-        (h = !l.Ay.canUsePremiumAppIcons(a.default.getCurrentUser())) && E(u.LW.DEFAULT);
+        (f = !l.Ay.canUsePremiumAppIcons(a.default.getCurrentUser())) && E(u.LW.DEFAULT);
     },
     E = (e) => {
-        (f.client.desktop = e),
-            h ||
+        (h.client.desktop = e),
+            f ||
                 o.default.track(c.HAw.APP_ICON_UPDATED, {
                     icon_id: e,
                     user_premium_tier: a.default.getCurrentUser()?.premiumType,
@@ -25,22 +25,22 @@ let f = { client: { desktop: u.LW.DEFAULT, coachmarkImpressions: 0 } },
                 });
     };
 function m() {
-    h && (f.client = { desktop: u.LW.DEFAULT, coachmarkImpressions: 2 });
+    f && (h.client = { desktop: u.LW.DEFAULT, coachmarkImpressions: 2 });
 }
 class g extends i.Ay.PersistedStore {
     static displayName = "AppIconPersistedStoreState";
     static persistKey = "AppIconPersistedStoreState";
     initialize(e) {
-        null != e && (f = e), this.waitFor(a.default), this.syncWith([a.default], p);
+        null != e && (h = e), this.waitFor(a.default), this.syncWith([a.default], p);
     }
     get isUpsellPreview() {
-        return h;
-    }
-    getState() {
         return f;
     }
+    getState() {
+        return h;
+    }
     getCurrentDesktopIcon() {
-        return f?.client?.desktop;
+        return h?.client?.desktop;
     }
 }
 let A = new g(r.h, {
@@ -51,8 +51,8 @@ let A = new g(r.h, {
     APP_ICON_EDITOR_RESET: m,
     APP_ICON_TRACK_IMPRESSION: function (e) {
         let { markAsDismissed: t } = e;
-        (f.client.coachmarkImpressions += 1),
-            f.client.coachmarkImpressions >= 2 && (t?.(d.i.UNKNOWN), m(), (0, s.Jp)());
+        (h.client.coachmarkImpressions += 1),
+            h.client.coachmarkImpressions >= 2 && (t?.(d.i.UNKNOWN), m(), (0, s.Jp)());
     },
     LOGOUT: m,
 });

@@ -59,7 +59,7 @@ var i = l(627968),
     ea = l(706787),
     ed = l(495544),
     er = l(111162),
-    ec = l(555975),
+    ec = l(890063),
     eo = l(290863),
     ep = l(485296),
     eu = l(977997),
@@ -73,7 +73,7 @@ var i = l(627968),
     ey = l(804980),
     eI = l(272812),
     eN = l(304047),
-    ef = l(434087),
+    ef = l(816578),
     eT = l(83982),
     eS = l(345812),
     eE = l(110234),
@@ -259,14 +259,14 @@ let eU = [eC.lp.ACTIVITY],
         }
         let e0 = s.useRef(null),
             e1 = (0, o.bG)([ep.A], () => (p.type === eC.lp.USER ? ep.A.getVoiceVolume(p.id) : -1 / 0)),
-            e5 = (0, H.v)({ isSpeaking: eR, voiceDb: e1, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
-            e2 = (0, eC.Ay)(p) ? m.k : eV ? A.n : h.E,
-            e7 = p.type === eC.lp.STREAM && M;
+            e2 = (0, H.v)({ isSpeaking: eR, voiceDb: e1, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
+            e5 = (0, eC.Ay)(p) ? m.k : eV ? A.n : h.E,
+            e6 = p.type === eC.lp.STREAM && M;
         return (0, i.jsx)(R.A, {
             section: eb.JJy.VOICE_CHANNEL_TILE,
             children: (0, i.jsx)(J.Ay, {
                 streamKey: p.id,
-                enableZoom: e7,
+                enableZoom: e6,
                 children: (0, i.jsx)("div", {
                     className: a()(eM.iE, { [eM.DF]: eP }, N),
                     style: T,
@@ -323,7 +323,7 @@ let eU = [eC.lp.ACTIVITY],
                                         O
                                             ? (0, i.jsx)("div", {
                                                   className: eM._Q,
-                                                  children: (0, i.jsx)(e2, {
+                                                  children: (0, i.jsx)(e5, {
                                                       size: "md",
                                                       color: "currentColor",
                                                       className: eM.Dt,
@@ -362,7 +362,7 @@ let eU = [eC.lp.ACTIVITY],
                                         C && !_
                                             ? (0, i.jsx)("div", {
                                                   className: a()(eM.PQ, { [eM.pU]: !M && (eL || null != eW) }),
-                                                  style: M || eL ? void 0 : e5,
+                                                  style: M || eL ? void 0 : e2,
                                               })
                                             : null,
                                     ],

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h }), n(938796);
+n.d(t, { A: () => f }), n(938796);
 var i = n(17928),
     r = n(228366),
     s = n(842241),
@@ -20,7 +20,7 @@ function _(e) {
         t.state = "banned" in e && e.banned ? a.elq.BANNED : a.elq.EXPIRED;
     });
 }
-class f extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "InviteStore";
     getInvite(e) {
         return o.get(e);
@@ -38,7 +38,7 @@ class f extends i.Ay.Store {
         return c.get(e);
     }
 }
-let h = new f(r.h, {
+let f = new h(r.h, {
     INVITE_RESOLVE: function (e) {
         let { code: t } = e,
             n = (0, s.y$)(t);

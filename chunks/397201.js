@@ -1,10 +1,10 @@
 "use strict";
-n.r(t), n.d(t, { default: () => a });
-var r = n(29583),
-    i = n(618027);
-function a(e, t) {
-    (0, i.A)(2, arguments);
-    var n = (0, r.default)(e),
-        a = (0, r.default)(t);
-    return n.getFullYear() === a.getFullYear();
+n.r(t), n.d(t, { default: () => s });
+var i = n(29583),
+    r = n(618027);
+function s(e, t) {
+    (0, r.A)(2, arguments);
+    var n = (0, i.default)(e),
+        s = (0, i.default)(t);
+    return n.getFullYear() === s.getFullYear();
 }

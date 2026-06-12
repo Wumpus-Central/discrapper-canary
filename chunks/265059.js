@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d, q: () => a });
+n.d(t, { A: () => u, q: () => a });
 var i = n(17928),
     r = n(228366),
     s = n(540999);
@@ -44,7 +44,7 @@ class l extends i.Ay.DeviceSettingsStore {
         return o.sortedScreenKeys;
     }
 }
-let d = new l(r.h, {
+let u = new l(r.h, {
     DEV_TOOLS_SETTINGS_UPDATE: function (e) {
         s.A.isDeveloper && (o = { ...o, ...e.settings });
     },

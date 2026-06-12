@@ -1,38 +1,38 @@
-t.d(e, { default: () => b });
-var l = t(627968);
-t(64700);
-var a = t(861672),
-    r = t(477782),
-    i = t(442433),
-    c = t(358367),
-    d = t(793574),
-    o = t(50268),
-    A = t(533957),
-    s = t(477190),
-    u = t(307623),
-    E = t(317910),
-    _ = t(475777),
-    h = t(985018);
-let b = (0, c.A)(
-    function (n) {
-        let { channel: e, guild: t, onSelect: c } = n,
-            d = (0, E.A)(e),
-            b = (0, _.A)(e, t),
-            x = (0, A.A)(e, t),
-            D = (0, s.A)(e, t),
-            g = (0, u.A)(e),
-            p = (0, o.A)({ id: e.id, label: h.intl.string(h.t.gFHI3k) });
-        return (0, l.jsxs)(a.W, {
+r.d(n, { default: () => C });
+var t = r(627968);
+r(64700);
+var i = r(980707),
+    a = r(477782),
+    l = r(442433),
+    s = r(358367),
+    d = r(793574),
+    c = r(50268),
+    h = r(533957),
+    A = r(477190),
+    u = r(307623),
+    _ = r(317910),
+    o = r(475777),
+    p = r(375708);
+let C = (0, s.A)(
+    function (e) {
+        let { channel: n, guild: r, onSelect: s } = e,
+            d = (0, _.A)(n),
+            C = (0, o.A)(n, r),
+            E = (0, h.A)(n, r),
+            x = (0, A.A)(n, r),
+            X = (0, u.A)(n),
+            j = (0, c.A)({ id: n.id, label: p.intl.string(p.t.gFHI3k) });
+        return (0, t.jsxs)(i.W, {
             "data-menu-migrated": !0,
             navId: "channel-context",
-            onClose: i.Z_,
-            "aria-label": h.intl.string(h.t.Xm41aV),
-            onSelect: c,
+            onClose: l.Z_,
+            "aria-label": p.intl.string(p.t.Xm41aV),
+            onSelect: s,
             children: [
-                (0, l.jsx)(r.rX, { children: d }),
-                (0, l.jsxs)(r.rX, { children: [b, x, D] }),
-                (0, l.jsx)(r.rX, { children: g }),
-                (0, l.jsx)(r.rX, { children: p }),
+                (0, t.jsx)(a.rX, { children: d }),
+                (0, t.jsxs)(a.rX, { children: [C, E, x] }),
+                (0, t.jsx)(a.rX, { children: X }),
+                (0, t.jsx)(a.rX, { children: j }),
             ],
         });
     },

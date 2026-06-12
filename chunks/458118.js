@@ -1,11 +1,11 @@
-var r = n(964598),
-    i = n(876666),
-    a = n(89582),
-    s = Math.max,
+var i = n(964598),
+    r = n(876666),
+    s = n(89582),
+    a = Math.max,
     o = Math.min;
 e.exports = function (e, t, n) {
     var l = null == e ? 0 : e.length;
     if (!l) return -1;
-    var c = l - 1;
-    return void 0 !== n && ((c = a(n)), (c = n < 0 ? s(l + c, 0) : o(c, l - 1))), r(e, i(t, 3), c, !0);
+    var u = l - 1;
+    return void 0 !== n && ((u = s(n)), (u = n < 0 ? a(l + u, 0) : o(u, l - 1))), i(e, r(t, 3), u, !0);
 };

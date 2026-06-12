@@ -14,8 +14,8 @@ function _(e) {
     for (let n of Object.keys(e)) t[d()(n)] = e[n];
     return t;
 }
-let f = _(a.Fit),
-    h = _(a.Alignment);
+let h = _(a.Fit),
+    f = _(a.Alignment);
 function p(e) {
     let {
             buffer: t,
@@ -32,61 +32,61 @@ function p(e) {
             dataBinding: I,
             onDataBindingChange: T,
             touchScrollEnabled: S = !0,
-            dynamicDataBinding: N,
-            listenOnDocumentBody: y,
-            eventCapture: C,
-            assetLoader: v,
-            onLoad: O,
-            stateMachine: R,
+            dynamicDataBinding: y,
+            listenOnDocumentBody: N,
+            eventCapture: v,
+            assetLoader: C,
+            onLoad: R,
+            stateMachine: O,
         } = e,
         b = r.useContext(l.C),
         D = (0, o.R)(),
         L = (0, u.G9)().isWindowFocused?.() ?? D,
         [w, M] = (0, o.X)(3e4),
         [P, x] = r.useState(void 0),
-        U = r.useRef(null),
-        { rive: k, RiveComponent: G } = (0, a.useRive)({
+        k = r.useRef(null),
+        { rive: U, RiveComponent: G } = (0, a.useRive)({
             eventTarget: p?.current,
             buffer: t,
             autoplay: n,
-            stateMachines: null != R ? [R] : P,
+            stateMachines: null != O ? [O] : P,
             artboard: E,
             useOffscreenRenderer: !0,
             layout: new a.Layout({
-                fit: null != c ? f[c] : a.Fit.Cover,
-                alignment: null != d ? h[d] : a.Alignment.Center,
+                fit: null != c ? h[c] : a.Fit.Cover,
+                alignment: null != d ? f[d] : a.Alignment.Center,
             }),
             isTouchScrollEnabled: S,
-            listenOnDocumentBody: y,
-            eventCapture: C,
-            assetLoader: v,
-            onLoad: O,
+            listenOnDocumentBody: N,
+            eventCapture: v,
+            assetLoader: C,
+            onLoad: R,
         });
     r.useImperativeHandle(
         g,
         () => ({
-            play: () => k?.play(),
-            pause: () => k?.pause(),
-            stop: () => k?.stop(),
+            play: () => U?.play(),
+            pause: () => U?.pause(),
+            stop: () => U?.stop(),
             getProperties: () =>
-                k?.viewModelInstance?.properties.reduce(
+                U?.viewModelInstance?.properties.reduce(
                     (e, t) => (
                         "viewModel" === t.type &&
-                            k?.viewModelInstance?.viewModel(t.name)?.properties.forEach((n) => {
+                            U?.viewModelInstance?.viewModel(t.name)?.properties.forEach((n) => {
                                 e[t.name + "/" + n.name] = {
                                     type: n.type,
-                                    value: k?.viewModelInstance?.[n.type]?.(`${t.name}/${n.name}`)?.value,
+                                    value: U?.viewModelInstance?.[n.type]?.(`${t.name}/${n.name}`)?.value,
                                 };
                             }),
-                        (e[t.name] = { type: t.type, value: k?.viewModelInstance?.[t.type]?.(t.name)?.value }),
+                        (e[t.name] = { type: t.type, value: U?.viewModelInstance?.[t.type]?.(t.name)?.value }),
                         e
                     ),
                     {},
                 ) ?? {},
             getArtboards: () => {
-                if (null == k) return [];
+                if (null == U) return [];
                 let e = new Set(),
-                    t = k.riveFile.getInstance();
+                    t = U.riveFile.getInstance();
                 for (let n = 0; n < t.artboardCount(); n++) {
                     let i = t.artboardByIndex(n);
                     e.add(i.name);
@@ -94,7 +94,7 @@ function p(e) {
                 return Array.from(e);
             },
         }),
-        [k],
+        [U],
     ),
         (function (e) {
             let t,
@@ -107,9 +107,9 @@ function p(e) {
                     onDataBindingChange: d,
                 } = e,
                 _ = c ?? o,
-                f = (0, a.useViewModel)(n);
-            (0, a.useViewModelInstance)(f);
-            let { theme: h, saturation: p } = (0, u.G9)(),
+                h = (0, a.useViewModel)(n);
+            (0, a.useViewModelInstance)(h);
+            let { theme: f, saturation: p } = (0, u.G9)(),
                 { highContrastModeEnabled: E } = r.useContext(l.C),
                 m = r.useRef({}),
                 g =
@@ -184,7 +184,7 @@ function p(e) {
                                         } else if ("object" == typeof l)
                                             if ("resolve" in l) {
                                                 let [e, t, i, s] = l
-                                                    .resolve({ theme: h, saturation: p, highContrastModeEnabled: E })
+                                                    .resolve({ theme: f, saturation: p, highContrastModeEnabled: E })
                                                     .rgba();
                                                 n.viewModelInstance?.color(r)?.rgba(e, t, i, 255 * s);
                                             } else n.viewModelInstance?.color(r)?.rgba(l.r, l.g, l.b, (l.a ?? 1) * 255);
@@ -203,8 +203,8 @@ function p(e) {
                                         d && _ !== l && n.viewModelInstance?.trigger(r)?.trigger(), (m.current[r] = l);
                                         break;
                                     case "string":
-                                        let f = n.viewModelInstance?.string(r);
-                                        null != f && (f.value = l);
+                                        let h = n.viewModelInstance?.string(r);
+                                        null != h && (h.value = l);
                                         break;
                                     case "image":
                                         if (null != l) {
@@ -230,98 +230,98 @@ function p(e) {
                             e.abort("New data binding applied - aborting previous image fetches.");
                         }
                     );
-                }, [A, _, n, i, s, h, n?.viewModelInstance, p, E, g]);
+                }, [A, _, n, i, s, f, n?.viewModelInstance, p, E, g]);
         })({
-            rive: k,
+            rive: U,
             artboard: E,
             artboardProperties: A,
             dataBinding: I,
-            dynamicDataBinding: N,
+            dynamicDataBinding: y,
             onDataBindingChange: T,
         }),
         r.useEffect(() => {
-            if (null != k && "short-loop" === m && b.reducedMotion.enabled) {
+            if (null != U && "short-loop" === m && b.reducedMotion.enabled) {
                 let e = () => {
-                        k.isPlaying &&
-                            (U.current = setTimeout(() => {
-                                k.pause();
+                        U.isPlaying &&
+                            (k.current = setTimeout(() => {
+                                U.pause();
                             }, 5e3));
                     },
                     t = () => {
-                        clearTimeout(U.current);
+                        clearTimeout(k.current);
                     };
                 return (
-                    k.on(a.EventType.Play, e),
-                    k.on(a.EventType.Pause, t),
-                    k.on(a.EventType.Stop, t),
+                    U.on(a.EventType.Play, e),
+                    U.on(a.EventType.Pause, t),
+                    U.on(a.EventType.Stop, t),
                     () => {
-                        k.off(a.EventType.Play, e), k.off(a.EventType.Pause, t), k.off(a.EventType.Stop, t);
+                        U.off(a.EventType.Play, e), U.off(a.EventType.Pause, t), U.off(a.EventType.Stop, t);
                     }
                 );
             }
-        }, [k, m, b.reducedMotion.enabled]),
+        }, [U, m, b.reducedMotion.enabled]),
         r.useLayoutEffect(() => {
-            if (null != k) {
-                "layout" === c && k.resizeDrawingSurfaceToCanvas();
+            if (null != U) {
+                "layout" === c && U.resizeDrawingSurfaceToCanvas();
                 let e = setTimeout(() => {
-                    null != k.canvas && k.resizeDrawingSurfaceToCanvas();
+                    null != U.canvas && U.resizeDrawingSurfaceToCanvas();
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [k, c]),
+        }, [U, c]),
         r.useEffect(() => {
-            if (null == k || !b.reducedMotion.enabled) return;
-            let e = k.canvas;
+            if (null == U || !b.reducedMotion.enabled) return;
+            let e = U.canvas;
             if (null == e) return;
             let t = new ResizeObserver(() => {
-                k.resizeDrawingSurfaceToCanvas();
+                U.resizeDrawingSurfaceToCanvas();
             });
             return t.observe(e), () => t.disconnect();
-        }, [k, b.reducedMotion.enabled]),
+        }, [U, b.reducedMotion.enabled]),
         r.useEffect(() => {
-            null != k &&
+            null != U &&
                 null == P &&
-                null == R &&
-                (x(k.stateMachineNames),
-                k.reset({ stateMachines: k.stateMachineNames, autoplay: n, artboard: E, autoBind: !0 }),
-                k.setupRiveListeners());
-        }, [k, n, P, E, R]);
+                null == O &&
+                (x(U.stateMachineNames),
+                U.reset({ stateMachines: U.stateMachineNames, autoplay: n, artboard: E, autoBind: !0 }),
+                U.setupRiveListeners());
+        }, [U, n, P, E, O]);
     let F = r.useRef(0);
     r.useEffect(() => {
-        if (null == k) return;
+        if (null == U) return;
         let e = (t) => {
             null != t.data &&
                 "number" == typeof t.data &&
                 ((F.current = t.data),
                 t.data > 0 &&
-                    ("halt" === m && b.reducedMotion.enabled && k.isPlaying && k.pause(),
-                    k.off(a.EventType.Advance, e)));
+                    ("halt" === m && b.reducedMotion.enabled && U.isPlaying && U.pause(),
+                    U.off(a.EventType.Advance, e)));
         };
         return (
-            k.on(a.EventType.Advance, e),
-            n && k.play(),
+            U.on(a.EventType.Advance, e),
+            n && U.play(),
             () => {
-                k.off(a.EventType.Advance, e);
+                U.off(a.EventType.Advance, e);
             }
         );
-    }, [k, b.reducedMotion.enabled, m, n]),
+    }, [U, b.reducedMotion.enabled, m, n]),
         r.useEffect(() => {
             M();
-        }, [M, E, c, d, I, N, A]);
+        }, [M, E, c, d, I, y, A]);
     let V = L && !w,
         B = r.useRef(!1);
     return (
         r.useEffect(() => {
-            if (null != k)
+            if (null != U)
                 return (
-                    !V && B.current && k.isPlaying && F.current > 0
-                        ? k.pause()
-                        : V && !k.isPlaying && B.current && k.play(),
+                    !V && B.current && U.isPlaying && F.current > 0
+                        ? U.pause()
+                        : V && !U.isPlaying && B.current && U.play(),
                     () => {
-                        null != k && V && (B.current = null != k.frameRequestId);
+                        null != U && V && (B.current = null != U.frameRequestId);
                     }
                 );
-        }, [k, V]),
+        }, [U, V]),
         (0, i.jsx)(G, { className: s, style: _ })
     );
 }

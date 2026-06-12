@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { M: () => i });
-var r,
-    i =
-        (((r = {}).INBOX = "inbox"),
-        (r.GAME_PROFILE = "game_profile"),
-        (r.RECENT_ACTIVITY = "recent_activity"),
-        (r.OVERLAY_INVITES = "overlay_invites"),
-        (r.ADMIN = "admin"),
-        r);
+n.d(t, { M: () => r });
+var i,
+    r =
+        (((i = {}).INBOX = "inbox"),
+        (i.GAME_PROFILE = "game_profile"),
+        (i.RECENT_ACTIVITY = "recent_activity"),
+        (i.OVERLAY_INVITES = "overlay_invites"),
+        (i.ADMIN = "admin"),
+        i);

@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { EG: () => u, N9: () => a, au: () => s, j5: () => l });
-var r = n(408713),
-    i = n(723906);
-function a(e) {
-    return (0, r.lg)() ? e.altKey : e.ctrlKey;
+n.d(t, { EG: () => u, N9: () => s, au: () => a, j5: () => l });
+var i = n(408713),
+    r = n(985620);
+function s(e) {
+    return (0, i.lg)() ? e.altKey : e.ctrlKey;
 }
-function s(e, t) {
-    var n, r;
-    let i = `[data-key="${CSS.escape(String(t))}"]`,
-        a = null == (n = e.current) ? void 0 : n.dataset.collection;
-    return a && (i = `[data-collection="${CSS.escape(a)}"]${i}`), null == (r = e.current) ? void 0 : r.querySelector(i);
+function a(e, t) {
+    var n, i;
+    let r = `[data-key="${CSS.escape(String(t))}"]`,
+        s = null == (n = e.current) ? void 0 : n.dataset.collection;
+    return s && (r = `[data-collection="${CSS.escape(s)}"]${r}`), null == (i = e.current) ? void 0 : i.querySelector(r);
 }
 let o = new WeakMap();
 function l(e) {
-    let t = (0, i.Bi)();
+    let t = (0, r.Bi)();
     return o.set(e, t), t;
 }
 function u(e) {

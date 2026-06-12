@@ -1,32 +1,32 @@
 "use strict";
 n.d(t, {
-    Dk: () => h,
+    Dk: () => p,
     IP: () => A,
-    OverlayToggledClientSettingType: () => f,
-    Q3: () => E,
-    Y: () => p,
+    OverlayToggledClientSettingType: () => h,
+    Q3: () => f,
+    Y: () => E,
     YX: () => I,
     Z5: () => g,
     xp: () => m,
 });
-var r,
-    i,
+var i,
+    r,
     s,
     a = n(64700),
     o = n(77729),
     l = n(760751),
-    u = n(383501),
-    d = n(954571),
-    c = n(41984),
+    u = n(763827),
+    c = n(174459),
+    d = n(41984),
     _ = n(652215),
-    f = (((r = {}).OOP = "oop"), (r.OOP_GAME = "oop game"), (r.LEGACY = "legacy"), (r.LEGACY_GAME = "legacy game"), r);
-async function E(e, t, r) {
-    let i = null != r ? l.A.getDetectableGame(r) : null,
-        { default: s } = n(833551),
+    h = (((i = {}).OOP = "oop"), (i.OOP_GAME = "oop game"), (i.LEGACY = "legacy"), (i.LEGACY_GAME = "legacy game"), i);
+async function f(e, t, i) {
+    let r = null != i ? l.A.getDetectableGame(i) : null,
+        { default: s } = n(296027),
         a = s?.getMostRecentOverlayRenderMethod() ?? void 0,
-        u = null != a ? c.Ue[a] : void 0;
-    __OVERLAY__ && (u = c.Ue[c.Ue.Hook]),
-        d.default.track(_.HAw.OVERLAY_TOGGLED, {
+        u = null != a ? d.Ue[a] : void 0;
+    __OVERLAY__ && (u = d.Ue[d.Ue.Hook]),
+        c.default.track(_.HAw.OVERLAY_TOGGLED, {
             enabled: e,
             setting_type: (function (e) {
                 switch (e) {
@@ -40,22 +40,22 @@ async function E(e, t, r) {
                 }
             })(t),
             client_setting_type: t,
-            application_id: i?.id ?? void 0,
-            application_name: i?.name ?? void 0,
+            application_id: r?.id ?? void 0,
+            application_name: r?.name ?? void 0,
             most_recent_overlay_render_method: u,
             hardware_display_count: (await o.A?.hardware?.getDisplayCount?.()) ?? null,
         });
 }
-function h(e, t) {
-    let [n, r] = a.useState(e()),
-        i = a.useRef(e);
+function p(e, t) {
+    let [n, i] = a.useState(e()),
+        r = a.useRef(e);
     return (
         a.useEffect(() => {
-            i.current = e;
+            r.current = e;
         }, [e]),
         a.useEffect(() => {
-            r((e) => {
-                let t = i.current();
+            i((e) => {
+                let t = r.current();
                 if (e.size > t.size || e.size < t.size) return t;
                 for (let n of e) if (!t.has(n)) return t;
                 for (let n of t) if (!e.has(n)) return t;
@@ -65,41 +65,41 @@ function h(e, t) {
         n
     );
 }
-function p(e, t) {
-    let { locked: n, shownUserIds: r, liveUserIds: i, contentInventoryIds: s } = t;
-    ((r?.length ?? 0) !== 0 || (i?.length ?? 0) !== 0 || (s?.length ?? 0) !== 0) &&
-        d.default.track(_.HAw.WIDGET_CONTENT_SHOWN, {
+function E(e, t) {
+    let { locked: n, shownUserIds: i, liveUserIds: r, contentInventoryIds: s } = t;
+    ((i?.length ?? 0) !== 0 || (r?.length ?? 0) !== 0 || (s?.length ?? 0) !== 0) &&
+        c.default.track(_.HAw.WIDGET_CONTENT_SHOWN, {
             overlay_locked: n,
             widget_type: e,
-            shown_user_ids: r,
-            live_user_ids: i,
+            shown_user_ids: i,
+            live_user_ids: r,
             content_inventory_ids: s,
             media_session_id: u.A.getMediaSessionId(),
         });
 }
 function m(e, t) {
-    let { pinned: n, opacity: r } = t;
-    d.default.track(_.HAw.WIDGET_SETTING_UPDATED, { widget_type: e, pinned: n, opacity: r });
+    let { pinned: n, opacity: i } = t;
+    c.default.track(_.HAw.WIDGET_SETTING_UPDATED, { widget_type: e, pinned: n, opacity: i });
 }
 var g =
-        (((i = {}).SCREEN_SHARE = "screen share"),
-        (i.CAMERA = "camera"),
-        (i.MICROPHONE = "microphone"),
-        (i.AUDIO = "audio"),
-        (i.VOICE = "voice"),
-        (i.CALL_BUTTON = "call button"),
-        (i.SOUNDBOARD = "soundboard"),
-        (i.GO_LIVE = "go live"),
-        (i.INVITE = "invite"),
-        (i.REDIRECT = "redirect"),
-        (i.FRIEND_LIST = "friend list"),
-        (i.FRIEND_REQUEST = "friend request"),
-        (i.KEYBIND_HINT = "keybind hint"),
-        (i.TEXT_CHAT = "text chat"),
-        (i.FAVORITE = "favorite"),
-        (i.GROUP_MANAGED = "group managed"),
-        (i.TAB_SELECTED = "tab selected"),
-        i),
+        (((r = {}).SCREEN_SHARE = "screen share"),
+        (r.CAMERA = "camera"),
+        (r.MICROPHONE = "microphone"),
+        (r.AUDIO = "audio"),
+        (r.VOICE = "voice"),
+        (r.CALL_BUTTON = "call button"),
+        (r.SOUNDBOARD = "soundboard"),
+        (r.GO_LIVE = "go live"),
+        (r.INVITE = "invite"),
+        (r.REDIRECT = "redirect"),
+        (r.FRIEND_LIST = "friend list"),
+        (r.FRIEND_REQUEST = "friend request"),
+        (r.KEYBIND_HINT = "keybind hint"),
+        (r.TEXT_CHAT = "text chat"),
+        (r.FAVORITE = "favorite"),
+        (r.GROUP_MANAGED = "group managed"),
+        (r.TAB_SELECTED = "tab selected"),
+        r),
     A =
         (((s = {}).UNKNOWN = "unknown"),
         (s.ENABLED = "enabled"),
@@ -129,13 +129,13 @@ var g =
         (s.MESSAGES_TAB_SELECTED = "messages tab selected"),
         s);
 function I(e, t) {
-    let { type: n, value: r, userId: i, secondaryValue: s } = t;
-    d.default.track(_.HAw.WIDGET_INTERACTED, {
+    let { type: n, value: i, userId: r, secondaryValue: s } = t;
+    c.default.track(_.HAw.WIDGET_INTERACTED, {
         widget_type: e,
         interaction_type: n,
-        interaction_value: r,
+        interaction_value: i,
         interaction_secondary_value: s,
-        target_user_id: i,
+        target_user_id: r,
         media_session_id: u.A.getMediaSessionId(),
     });
 }

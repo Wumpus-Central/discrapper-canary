@@ -3,8 +3,8 @@ n.d(t, {
     Kv: () => A,
     M9: () => E,
     MC: () => m,
-    Ot: () => f,
-    UW: () => h,
+    Ot: () => h,
+    UW: () => f,
     Ub: () => p,
     Wl: () => I,
     YP: () => T,
@@ -16,7 +16,7 @@ var i = n(835245),
     r = n(773669),
     s = n(174459),
     a = n(403362),
-    o = n(449054);
+    o = n(385648);
 n(688713), n(351022);
 var l = n(324580),
     u = n(652215),
@@ -59,7 +59,7 @@ function _(e) {
             throw Error(`[getGlobalDiscoveryServerTabTitle] Unsupported tab: ${e}`);
     }
 }
-function f(e) {
+function h(e) {
     switch (e) {
         case l.o.FEATURED:
             return c.intl.string(c.t.SdMhrk);
@@ -79,7 +79,7 @@ function f(e) {
             throw Error(`[getGlobalDiscoveryServerTabTitle] Unsupported tab: ${e}`);
     }
 }
-function h(e) {
+function f(e) {
     switch (e) {
         case l.o.FEATURED:
             return c.intl.string(c.t.crt84X);

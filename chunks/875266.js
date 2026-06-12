@@ -3,11 +3,11 @@ e.exports = function (e) {
             className: "built_in",
             begin: "\\b(void|bool|int8|int16|int32|int64|int|uint8|uint16|uint32|uint64|uint|string|ref|array|double|float|auto|dictionary)",
         },
-        a = { className: "symbol", begin: "[a-zA-Z0-9_]{1,149}@" },
-        n = { className: "keyword", begin: "<", end: ">", contains: [t, a] };
+        n = { className: "symbol", begin: "[a-zA-Z0-9_]{1,149}@" },
+        i = { className: "keyword", begin: "<", end: ">", contains: [t, n] };
     return (
-        (t.contains = [n]),
-        (a.contains = [n]),
+        (t.contains = [i]),
+        (n.contains = [i]),
         {
             name: "AngelScript",
             aliases: ["asc"],
@@ -102,7 +102,7 @@ e.exports = function (e) {
                     ],
                 },
                 t,
-                a,
+                n,
                 { className: "literal", begin: "\\b(null|true|false)" },
                 {
                     className: "number",

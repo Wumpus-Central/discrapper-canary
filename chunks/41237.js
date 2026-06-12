@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f }), n(321073);
+n.d(t, { A: () => h }), n(321073);
 var i = n(810531),
     r = n(7584),
     s = n(892842),
@@ -86,7 +86,7 @@ function _(e, t, n) {
         }
     }
 }
-let f = new d(
+let h = new d(
     {
         LOGOUT: (e, t) => t.clear(),
         BACKGROUND_SYNC: (e, t) => t.clear(),

@@ -21,15 +21,15 @@ function l(e) {
         _ = () => (
             null == c && (c = (0, s.sq)({ createPromise: t, webpackId: n }).then((e) => ((d = e.default), e))), c
         ),
-        f = r.lazy(_),
-        h = (e) => {
+        h = r.lazy(_),
+        f = (e) => {
             let [t] = r.useState(() => d);
             return null != t
                 ? (0, i.jsx)(t, { ...e })
-                : (0, i.jsx)(r.Suspense, { fallback: null != o ? o() : a()(), children: (0, i.jsx)(f, { ...e }) });
+                : (0, i.jsx)(r.Suspense, { fallback: null != o ? o() : a()(), children: (0, i.jsx)(h, { ...e }) });
         };
-    u && (h = r.memo(h)), (h.displayName = `Suspense(${l || "Unknown"})`);
-    let p = h;
+    u && (f = r.memo(f)), (f.displayName = `Suspense(${l || "Unknown"})`);
+    let p = f;
     return (
         (p.preload = () => {
             _();

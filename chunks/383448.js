@@ -1,33 +1,33 @@
-n.d(e, { A: () => f });
+n.d(e, { A: () => E });
 var i = n(627968);
 n(64700);
 var l = n(503698),
     r = n.n(l),
     a = n(834730),
-    o = n(17928),
-    s = n(349288),
+    s = n(17928),
+    o = n(349288),
     c = n(717398),
     u = n(994500),
     d = n(946356),
     m = n(652215),
     x = n(375708),
-    E = n(365887);
-function f(t) {
+    f = n(365887);
+function E(t) {
     let { user: e, className: n } = t,
         {
             isPendingIncoming: l,
-            isBlocked: f,
+            isBlocked: E,
             isIgnored: g,
-        } = (0, o.cf)([u.A], () => ({
+        } = (0, s.cf)([u.A], () => ({
             isPendingIncoming: u.A.getRelationshipType(e.id) === m.eA$.PENDING_INCOMING,
             isBlocked: u.A.isBlocked(e.id),
             isIgnored: u.A.isIgnored(e.id),
         }));
-    return f || (g && !l)
+    return E || (g && !l)
         ? (0, i.jsxs)(d.A.Overlay, {
-              className: r()(E.k, n),
+              className: r()(f.k, n),
               children: [
-                  f &&
+                  E &&
                       (0, i.jsx)(a.E, {
                           variant: "text-sm/semibold",
                           color: "text-default",
@@ -54,7 +54,7 @@ function f(t) {
                                           children: x.intl.format(x.t.PrtAqy, {
                                               unignoreHook: (t, n) =>
                                                   (0, i.jsx)(
-                                                      s.Anchor,
+                                                      o.Anchor,
                                                       {
                                                           onClick: () =>
                                                               c.A.unignoreUser(e.id, "UserProfileRemediatedNotice"),

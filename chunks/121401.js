@@ -1,11 +1,11 @@
 "use strict";
-function r(e, t) {
+function i(e, t) {
     return `${e}:${t}`;
 }
-function i(e) {
+function r(e) {
     let t = e.split(":");
     if (2 !== t.length) return null;
-    let [n, r] = t;
-    return { applicationId: n, skuId: r };
+    let [n, i] = t;
+    return { applicationId: n, skuId: i };
 }
-n.d(t, { L: () => r, u: () => i });
+n.d(t, { L: () => i, u: () => r });

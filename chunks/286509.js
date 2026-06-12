@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { A: () => u });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { A: () => c });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(939249),
-    o = n(847374),
-    c = n(602624);
-let u = i.memo(function (e) {
-    let { children: t, trailing: n, className: i, icon: s, isCollapsed: u, onClick: d, "aria-label": h } = e;
-    return (0, l.jsxs)("div", {
-        className: a()(c.iE, i),
+    o = n(939249),
+    l = n(847374),
+    u = n(602624);
+let c = r.memo(function (e) {
+    let { children: t, trailing: n, className: r, icon: s, isCollapsed: c, onClick: d, "aria-label": _ } = e;
+    return (0, i.jsxs)("div", {
+        className: a()(u.iE, r),
         children: [
-            (0, l.jsxs)(r.D, {
+            (0, i.jsxs)(o.D, {
                 onClick: d,
                 onKeyDown: (e) => e.stopPropagation(),
-                className: a()(c.wx, { [c.bG]: null != u }),
-                "aria-expanded": null != u ? !u : void 0,
-                "aria-label": h,
+                className: a()(u.wx, { [u.bG]: null != c }),
+                "aria-expanded": null != c ? !c : void 0,
+                "aria-label": _,
                 children: [
-                    null != s && (0, l.jsx)("div", { "aria-hidden": !0, className: c.nr, children: s }),
-                    (0, l.jsx)("span", { className: c.Gp, children: t }),
-                    null != u
-                        ? (0, l.jsx)(o.a, {
+                    null != s && (0, i.jsx)("div", { "aria-hidden": !0, className: u.nr, children: s }),
+                    (0, i.jsx)("span", { className: u.Gp, children: t }),
+                    null != c
+                        ? (0, i.jsx)(l.a, {
                               size: "custom",
                               color: "currentColor",
-                              className: a()(c.Cj, { [c.Tu]: u }),
+                              className: a()(u.Cj, { [u.Tu]: c }),
                               height: 16,
                               width: 16,
                           })

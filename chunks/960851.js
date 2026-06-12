@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { cg: () => O, nq: () => R, hb: () => b });
+n.d(t, { cg: () => R, nq: () => O, hb: () => b });
 var i = n(989349),
     r = n.n(i),
     s = n(607399),
@@ -10,8 +10,8 @@ var i = n(989349),
     c = n(166403),
     d = n(354670),
     _ = n(469778),
-    f = n(723702),
-    h = n(927578),
+    h = n(723702),
+    f = n(428262),
     p = n(478097),
     E = n(196042),
     m = n(422936),
@@ -20,32 +20,32 @@ var i = n(989349),
     I = n(27867),
     T = n(962644),
     S = n(35587),
-    N = n(374200),
-    y = n(788868),
-    C = n(652215);
-function v(e) {
+    y = n(374200),
+    N = n(788868),
+    v = n(652215);
+function C(e) {
     let { experimentEnabled: t, premiumSubscription: n, mostRecentSubscription: i, previousPremiumSubscription: a } = e;
     if (!t) return !1;
-    if (null != i && i.status === C.Dmq.ENDED) {
+    if (null != i && i.status === v.Dmq.ENDED) {
         let e = i.endedAt,
-            t = i.hasPremiumAtLeast(y.PremiumTypes.TIER_2);
+            t = i.hasPremiumAtLeast(N.PremiumTypes.TIER_2);
         if (null != e && t && r()().subtract(10, "days").isBefore(e)) return !1;
     }
-    if (null != a && a.status === C.Dmq.ENDED) {
+    if (null != a && a.status === v.Dmq.ENDED) {
         let e = a.endedAt,
-            t = a.hasPremiumAtLeast(y.PremiumTypes.TIER_2);
+            t = a.hasPremiumAtLeast(N.PremiumTypes.TIER_2);
         if (null != e && t && r()().subtract(10, "days").isBefore(e)) return !1;
     }
     if (null != n) {
-        let e = n.hasPremiumAtLeast(y.PremiumTypes.TIER_2),
+        let e = n.hasPremiumAtLeast(N.PremiumTypes.TIER_2),
             t = u.default.getCurrentUser(),
-            i = !!n?.hasActiveTrial && h.Ay.isPremiumExactly(t, y.PremiumTypes.TIER_0),
-            r = (0, f.isAndroid)() && n.paymentGateway !== C.kM_.GOOGLE;
+            i = !!n?.hasActiveTrial && f.Ay.isPremiumExactly(t, N.PremiumTypes.TIER_0),
+            r = (0, h.isAndroid)() && n.paymentGateway !== v.kM_.GOOGLE;
         if (e || i || r) return !1;
     }
     return !(s.Fr && _.A.isFractionalPremiumActive());
 }
-function O() {
+function R() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = (0, l.dw)(),
         { promotion: n } = (0, S.Eu)(),
@@ -61,9 +61,9 @@ function O() {
         })),
         d = (0, g.V)(),
         _ = (0, m.O)(),
-        h = new Date(n?.endDate ?? 0).valueOf(),
+        f = new Date(n?.endDate ?? 0).valueOf(),
         T = Date.now(),
-        N = T > h;
+        y = T > f;
     !(function (e) {
         let { delay: t, disable: n = !1 } = e,
             i = (0, I.A)();
@@ -74,26 +74,26 @@ function O() {
             }, t);
             return () => clearTimeout(e);
         }, [t, n, i]);
-    })({ delay: N ? -1 : h - T });
-    let y = !s.Fr || (0, f.isAndroid)(),
-        C = v({
+    })({ delay: y ? -1 : f - T });
+    let N = !s.Fr || (0, h.isAndroid)(),
+        v = C({
             experimentEnabled: i,
             premiumSubscription: o,
             mostRecentSubscription: r,
             previousPremiumSubscription: u,
         }),
-        O = y && C && null == d && null != n && !t && null == _,
-        R = (0, p.GU)("bogo marketing eligibility hook");
-    return !N && (e ? R : O);
+        R = N && v && null == d && null != n && !t && null == _,
+        O = (0, p.GU)("bogo marketing eligibility hook");
+    return !y && (e ? O : R);
 }
-async function R() {
+async function O() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = u.default.getCurrentUser(),
         n = !t?.isClaimed(),
         i = (0, l.cx)(),
         r = (0, E.RK)("bogo eligibility async check"),
         a = (0, p.BI)("bogo marketing eligibility async check"),
-        _ = !s.Fr || (0, f.isAndroid)();
+        _ = !s.Fr || (0, h.isAndroid)();
     if (
         n ||
         i ||
@@ -104,19 +104,19 @@ async function R() {
     )
         return !1;
     !c.A.hasFetchedMostRecentPremiumTypeSubscription() &&
-        u.default.getCurrentUser()?.hasPurchasedFlag(y.lA.PREMIUM_TIER_2) &&
+        u.default.getCurrentUser()?.hasPurchasedFlag(N.lA.PREMIUM_TIER_2) &&
         (await (0, o.I8)()),
         c.A.hasFetchedSubscriptions() || (await (0, o.hP)());
-    let h = c.A.getMostRecentPremiumTypeSubscription();
-    return v({
+    let f = c.A.getMostRecentPremiumTypeSubscription();
+    return C({
         experimentEnabled: r,
         premiumSubscription: c.A.getPremiumTypeSubscription(),
-        mostRecentSubscription: h,
+        mostRecentSubscription: f,
         previousPremiumSubscription: c.A.getPreviousPremiumTypeSubscription(),
     });
 }
 async function b() {
-    if (!(await R(!1))) return;
-    let e = N.A.bogoPromotion;
+    if (!(await O(!1))) return;
+    let e = y.A.bogoPromotion;
     (null != e && new Date(e.endDate).valueOf() >= Date.now()) || (await (0, T.hS)());
 }

@@ -1,46 +1,46 @@
-n.d(t, { A: () => u, U: () => o });
-var i = n(735438),
-    s = n.n(i),
-    l = n(17928),
-    r = n(228366),
-    a = n(513461);
-let o = { version: "", description: "", formFields: [] },
+t.d(i, { A: () => f, U: () => d });
+var n = t(735438),
+    r = t.n(n),
+    l = t(17928),
+    s = t(228366),
+    o = t(513461);
+let d = { version: "", description: "", formFields: [] },
     c = {};
-class d extends l.Ay.Store {
+class u extends l.Ay.Store {
     static displayName = "MemberVerificationFormStore";
     get(e) {
         if (null != e) return c[e];
     }
     getRulesPrompt(e) {
-        return s().find(c[e]?.formFields, a.i7);
+        return r().find(c[e]?.formFields, o.i7);
     }
 }
-let u = new d(r.h, {
+let f = new u(s.h, {
     INVITE_ACCEPT_SUCCESS: function (e) {
-        let { invite: t } = e,
-            { member_verification_form: n } = t,
-            { guild: i } = t;
+        let { invite: i } = e,
+            { member_verification_form: t } = i,
+            { guild: n } = i;
         return (
-            null != i &&
             null != n &&
-            ((c[i.id] = { version: n.version, description: n.description ?? "", formFields: n.form_fields, guild: i }),
+            null != t &&
+            ((c[n.id] = { version: t.version, description: t.description ?? "", formFields: t.form_fields, guild: n }),
             !0)
         );
     },
     MEMBER_VERIFICATION_FORM_UPDATE: function (e) {
-        let { form: t, guildId: n } = e;
-        if (null == t) c[n] = o;
+        let { form: i, guildId: t } = e;
+        if (null == i) c[t] = d;
         else {
-            let e = c[n] ?? o;
-            c[n] = { ...e, ...t };
+            let e = c[t] ?? d;
+            c[t] = { ...e, ...i };
         }
     },
     MEMBER_VERIFICATION_FORM_FETCH_FAIL: function (e) {
-        let { guildId: t } = e;
-        c[t] = c[t] ?? o;
+        let { guildId: i } = e;
+        c[i] = c[i] ?? d;
     },
     GUILD_DELETE: function (e) {
-        let { guild: t } = e;
-        delete c[t?.id];
+        let { guild: i } = e;
+        delete c[i?.id];
     },
 });

@@ -1,7 +1,7 @@
-l.d(t, { Y: () => r });
-var a = l(954571),
-    n = l(652215);
-function r(e) {
-    let { pageType: t, sectionType: l, ctaObject: r } = e;
-    a.default.track(n.HAw.ORBS_ENTRYPOINT_CLICKED, { location_page: t, location_section: l, location_object: r });
+a.d(c, { Y: () => e });
+var o = a(174459),
+    i = a(652215);
+function e(t) {
+    let { pageType: c, sectionType: a, ctaObject: e } = t;
+    o.default.track(i.HAw.ORBS_ENTRYPOINT_CLICKED, { location_page: c, location_section: a, location_object: e });
 }

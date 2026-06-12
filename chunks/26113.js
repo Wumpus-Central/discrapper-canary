@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(47167),
     d = n(28390),
     _ = n(461782),
-    f = n(447404),
-    h = n(271195),
+    h = n(447404),
+    f = n(271195),
     p = n(994500),
     E = n(287809),
     m = n(732777),
@@ -23,37 +23,37 @@ let S = (e) => {
     let { channel: t, width: n } = e,
         s = (0, o.bG)([u.A], () => u.A.getFilteredParticipants(t.id)),
         S = (0, m.A)(t.id),
-        N = r.useMemo(() => (0, c.m1)(t, E.default, p.A), [t]),
-        y = (0, d.A)(t),
-        C = n * (g.i.height / g.i.width),
-        [v, O] = r.useState(0.65),
-        [R, b] = r.useState({ x: 0, y: 0 }),
+        y = r.useMemo(() => (0, c.m1)(t, E.default, p.A), [t]),
+        N = (0, d.A)(t),
+        v = n * (g.i.height / g.i.width),
+        [C, R] = r.useState(0.65),
+        [O, b] = r.useState({ x: 0, y: 0 }),
         D = (0, l.w)((e) => {
             let { contentRect: t } = e,
                 n = Math.max((t.width / g.i.width) * 1.5, (t.height / g.i.height) * 1.5),
                 i = t.width / 2 - 1156 * n,
                 r = t.height / 2 - 1050 * n;
-            O(n), b({ x: i, y: r });
+            R(n), b({ x: i, y: r });
         });
     return (0, i.jsx)(_.Ay, {
         timeout: 2e3,
         children: (e) =>
-            (0, i.jsx)(h.A, {
-                title: N,
+            (0, i.jsx)(f.A, {
+                title: y,
                 backgroundKey: t.id,
                 screenMessage: null,
-                onJumpToChannel: y,
-                preventIdleComponent: f.A,
+                onJumpToChannel: N,
+                preventIdleComponent: h.A,
                 width: n,
                 className: T.a8,
                 ...e,
                 children: (0, i.jsx)("div", {
                     ref: D,
                     className: I.n,
-                    style: { width: n, height: C },
+                    style: { width: n, height: v },
                     children: (0, i.jsx)("div", {
                         className: a()(A.VT, A.rh),
-                        style: { transform: `translate(${R.x}px, ${R.y}px) scale(${v})` },
+                        style: { transform: `translate(${O.x}px, ${O.y}px) scale(${C})` },
                         children: (0, i.jsx)(g.A, {
                             roomSeats: S.seats,
                             roomParticipants: S.participants,

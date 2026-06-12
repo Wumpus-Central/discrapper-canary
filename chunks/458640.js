@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => a });
-var r = n(235079);
-let i = {
-    [r.i.CLASSIC]: {
+n.d(t, { A: () => s });
+var i = n(235079);
+let r = {
+    [i.i.CLASSIC]: {
         discodo: "discodo",
         message1: "message1",
         deafen: "deafen",
@@ -28,13 +28,13 @@ let i = {
         camera_off: "camera_off",
         camera_on: "camera_on",
     },
-    [r.i.RETRO]: { message1: "bit_message1" },
-    [r.i.BUBBLE]: { message1: "bop_message1" },
-    [r.i.DUCKY]: { message1: "ducky_message1" },
-    [r.i.LOFI]: { message1: "lofi_message1" },
-    [r.i.ASMR]: { message1: "asmr_message1" },
-    [r.i.DISCODO]: { message1: "discodo" },
-    [r.i.HALLOWEEN]: {
+    [i.i.RETRO]: { message1: "bit_message1" },
+    [i.i.BUBBLE]: { message1: "bop_message1" },
+    [i.i.DUCKY]: { message1: "ducky_message1" },
+    [i.i.LOFI]: { message1: "lofi_message1" },
+    [i.i.ASMR]: { message1: "asmr_message1" },
+    [i.i.DISCODO]: { message1: "discodo" },
+    [i.i.HALLOWEEN]: {
         call_calling: "halloween_call_calling",
         call_ringing: "halloween_call_ringing",
         message1: "halloween_message1",
@@ -46,7 +46,7 @@ let i = {
         user_join: "halloween_user_join",
         user_leave: "halloween_user_leave",
     },
-    [r.i.WINTER_HOLIDAY]: {
+    [i.i.WINTER_HOLIDAY]: {
         call_calling: "winter_call_calling",
         call_ringing: "winter_call_ringing",
         deafen: "winter_deafen",
@@ -58,6 +58,6 @@ let i = {
         user_leave: "winter_user_leave",
     },
 };
-function a(e) {
-    return i[e];
+function s(e) {
+    return r[e];
 }

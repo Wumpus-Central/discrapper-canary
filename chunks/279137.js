@@ -1,6 +1,6 @@
-var r = n(777209),
-    i = n(274581),
-    l = n(829689);
-e.exports = function (e) {
-    return i(e) ? l(e) : r(e);
+var r = e(777209),
+    t = e(274581),
+    n = e(829689);
+u.exports = function (u) {
+    return t(u) ? n(u) : r(u);
 };

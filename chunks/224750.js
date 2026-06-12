@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { Yx: () => l, vG: () => o, wI: () => u, yW: () => i.mo });
-var r = n(562465),
-    i = n(257474),
-    a = n(652215),
-    s = n(985018);
+n.d(t, { Yx: () => l, vG: () => o, wI: () => u, yW: () => r.mo });
+var i = n(636537),
+    r = n(257474),
+    s = n(652215),
+    a = n(375708);
 async function o(e) {
-    let t = a.Rsh.APPLICATION_DISCLOSURES(e),
-        n = await r.Bo.get({ url: t, retries: 3, rejectWithError: !1 }),
-        i = n.body.disclosures;
-    return { disclosures: i, ackedDisclosures: n.body.acked_disclosures, allAcked: n.body.all_acked };
+    let t = s.Rsh.APPLICATION_DISCLOSURES(e),
+        n = await i.Bo.get({ url: t, retries: 3, rejectWithError: !1 }),
+        r = n.body.disclosures;
+    return { disclosures: r, ackedDisclosures: n.body.acked_disclosures, allAcked: n.body.all_acked };
 }
 async function l(e, t) {
-    let n = a.Rsh.APPLICATION_DISCLOSURES(e);
-    await r.Bo.post({ url: n, body: { disclosures: t }, rejectWithError: !1 });
+    let n = s.Rsh.APPLICATION_DISCLOSURES(e);
+    await i.Bo.post({ url: n, body: { disclosures: t }, rejectWithError: !1 });
 }
 function u(e) {
     switch (e) {
-        case i.mo.IP_LOCATION:
-            return s.intl.string(s.t["6wPmjo"]);
-        case i.mo.DISPLAYS_ADVERTISEMENTS:
-            return s.intl.string(s.t["/uOMKZ"]);
+        case r.mo.IP_LOCATION:
+            return a.intl.string(a.t["6wPmjo"]);
+        case r.mo.DISPLAYS_ADVERTISEMENTS:
+            return a.intl.string(a.t["/uOMKZ"]);
         default:
             return null;
     }

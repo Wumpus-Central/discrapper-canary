@@ -1,38 +1,38 @@
 "use strict";
-var r = n(64700),
-    i = n(524519),
+var i = n(64700),
+    r = n(524519),
     s =
         "function" == typeof Object.is
             ? Object.is
             : function (e, t) {
                   return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
               },
-    a = i.useSyncExternalStore,
-    o = r.useRef,
-    l = r.useEffect,
-    u = r.useMemo,
-    d = r.useDebugValue;
-t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
-    var c = o(null);
-    if (null === c.current) {
+    a = r.useSyncExternalStore,
+    o = i.useRef,
+    l = i.useEffect,
+    u = i.useMemo,
+    c = i.useDebugValue;
+t.useSyncExternalStoreWithSelector = function (e, t, n, i, r) {
+    var d = o(null);
+    if (null === d.current) {
         var _ = { hasValue: !1, value: null };
-        c.current = _;
-    } else _ = c.current;
-    var f = a(
+        d.current = _;
+    } else _ = d.current;
+    var h = a(
         e,
-        (c = u(
+        (d = u(
             function () {
                 function e(e) {
                     if (!l) {
-                        if (((l = !0), (a = e), (e = r(e)), void 0 !== i && _.hasValue)) {
+                        if (((l = !0), (a = e), (e = i(e)), void 0 !== r && _.hasValue)) {
                             var t = _.value;
-                            if (i(t, e)) return (o = t);
+                            if (r(t, e)) return (o = t);
                         }
                         return (o = e);
                     }
                     if (((t = o), s(a, e))) return t;
-                    var n = r(e);
-                    return void 0 !== i && i(t, n) ? ((a = e), t) : ((a = e), (o = n));
+                    var n = i(e);
+                    return void 0 !== r && r(t, n) ? ((a = e), t) : ((a = e), (o = n));
                 }
                 var a,
                     o,
@@ -49,18 +49,18 @@ t.useSyncExternalStoreWithSelector = function (e, t, n, r, i) {
                           },
                 ];
             },
-            [t, n, r, i],
+            [t, n, i, r],
         ))[0],
-        c[1],
+        d[1],
     );
     return (
         l(
             function () {
-                (_.hasValue = !0), (_.value = f);
+                (_.hasValue = !0), (_.value = h);
             },
-            [f],
+            [h],
         ),
-        d(f),
-        f
+        c(h),
+        h
     );
 };

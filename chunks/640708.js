@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => a });
-var r = n(627968);
+n.d(t, { A: () => s });
+var i = n(627968);
 n(64700);
-var i = n(953727);
-function a(e) {
-    let { width: t = 24, height: n = 24, color: a = "currentColor", ...s } = e;
-    return (0, r.jsx)("svg", {
-        ...(0, i.A)(s),
+var r = n(953727);
+function s(e) {
+    let { width: t = 24, height: n = 24, color: s = "currentColor", ...a } = e;
+    return (0, i.jsx)("svg", {
+        ...(0, r.A)(a),
         width: t,
         height: n,
         viewBox: "0 0 4 4",
-        children: (0, r.jsx)("circle", { cx: "2", cy: "2", r: "2", fill: a }),
+        children: (0, i.jsx)("circle", { cx: "2", cy: "2", r: "2", fill: s }),
     });
 }

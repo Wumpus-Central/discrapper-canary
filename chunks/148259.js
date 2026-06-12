@@ -1,16 +1,16 @@
-a.r(s), a.d(s, { default: () => h });
-var i = a(627968),
-    r = a(64700),
-    d = a(868062),
-    t = a(247366),
-    c = a(582464);
-let l = (0, d.kl)((e) =>
-        (0, i.jsxs)("div", {
-            className: c.iE,
+a.r(i), a.d(i, { default: () => h });
+var e = a(627968),
+    d = a(64700),
+    c = a(781641),
+    r = a(247366),
+    l = a(930896);
+let t = (0, c.kl)((s) =>
+        (0, e.jsxs)("div", {
+            className: l.iE,
             children: [
-                (0, i.jsx)("div", { className: c.Lr, children: (0, i.jsx)(t.Saturation, { ...e }) }),
-                (0, i.jsx)("div", { className: c.lG, children: (0, i.jsx)(t.Hue, { ...e, direction: "horizontal" }) }),
+                (0, e.jsx)("div", { className: l.Lr, children: (0, e.jsx)(r.Saturation, { ...s }) }),
+                (0, e.jsx)("div", { className: l.lG, children: (0, e.jsx)(r.Hue, { ...s, direction: "horizontal" }) }),
             ],
         }),
     ),
-    h = r.memo(l);
+    h = d.memo(t);

@@ -1,10 +1,10 @@
 "use strict";
-function r(e) {
+function i(e) {
     let t = document.createElement("a");
     return (t.href = e), t.hostname;
 }
-function i(e) {
+function r(e) {
     let t = document.createElement("a");
     return (t.href = e), t.protocol;
 }
-n.d(t, { E: () => r, J: () => i });
+n.d(t, { E: () => i, J: () => r });

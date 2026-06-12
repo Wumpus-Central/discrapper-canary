@@ -15,15 +15,15 @@ let _ = (e) => {
             children: n,
             className: s,
             color: _,
-            roleColors: f,
-            iconType: h,
+            roleColors: h,
+            iconType: f,
             onMouseEnter: p,
             onMouseLeave: E,
             ...m
         } = e,
         [g, A] = r.useState(!1),
         { gradientStyle: I, gradientClassname: T } = (0, l.v5)({
-            colorStrings: f ?? null,
+            colorStrings: h ?? null,
             roleStyle: "username",
             animateGradient: g,
         }),
@@ -33,28 +33,28 @@ let _ = (e) => {
             },
             [A, p],
         ),
-        N = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 A(!1), E?.(e);
             },
             [A, E],
         ),
-        y = {};
+        N = {};
     return (
-        null != _ && (y = { color: (0, o.Hl)(_), backgroundColor: g ? (0, o.gq)(_, 0.3) : (0, o.gq)(_, 0.1) }),
+        null != _ && (N = { color: (0, o.Hl)(_), backgroundColor: g ? (0, o.gq)(_, 0.3) : (0, o.gq)(_, 0.1) }),
         (0, i.jsx)(u.D, {
             ...m,
             innerRef: t,
             tag: "span",
             className: a()(s, { [d.i]: !0, interactive: m.onClick }),
             onMouseEnter: S,
-            onMouseLeave: N,
-            style: y,
+            onMouseLeave: y,
+            style: N,
             tabIndex: null != m.onClick ? 0 : -1,
             children:
-                null != h
-                    ? (0, i.jsx)(c.A, { iconType: h, children: n })
-                    : null != f
+                null != f
+                    ? (0, i.jsx)(c.A, { iconType: f, children: n })
+                    : null != h
                       ? (0, i.jsx)("span", { style: { ...I }, className: T, children: n })
                       : n,
         })

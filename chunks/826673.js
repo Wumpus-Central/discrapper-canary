@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Dr: () => p, JZ: () => h, KO: () => g, dX: () => m, in: () => A, k8: () => f, u$: () => E });
+n.d(t, { Dr: () => p, JZ: () => f, KO: () => g, dX: () => m, in: () => A, k8: () => h, u$: () => E });
 var i = n(17928),
     r = n(594061),
     s = n(617617),
@@ -10,7 +10,7 @@ var i = n(17928),
     c = n(256787),
     d = n(367727),
     _ = n(757792);
-function f(e) {
+function h(e) {
     let {
         bypassNewUserCheck: t = !1,
         cooldownDurationMs: n = o.A.Millis.WEEK,
@@ -28,13 +28,13 @@ function f(e) {
         return null != t && (0, u.c0)(t, e);
     }
 }
-function h(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return (0, i.bG)([s.A, a.A], () => f(e, t));
+    return (0, i.bG)([s.A, a.A], () => h(e, t));
 }
 async function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    f(e, { bypassNewUserCheck: !0 }) || ((0, d.YV)(e, t), await (0, r.o_)(e), (0, d.X0)(e, t));
+    h(e, { bypassNewUserCheck: !0 }) || ((0, d.YV)(e, t), await (0, r.o_)(e), (0, d.X0)(e, t));
 }
 function E(e, t) {
     if ((0, _.P3)(e)) return { isDismissed: !0, lastDismissedSnowflakeId: null };

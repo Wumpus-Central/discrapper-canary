@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { o: () => h });
+n.d(t, { o: () => f });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,14 +10,14 @@ var i = n(627968),
     c = n(235986),
     d = n(652215),
     _ = n(507252);
-let f = {
+let h = {
     [d.DUB.NORMAL]: _.qb,
     [d.DUB.MINIMUM]: _.Bp,
     [d.DUB.NO_CHAT]: _.Oo,
     [d.DUB.FULL_SCREEN]: _.iy,
     [d.DUB.HAVEN]: _.VT,
 };
-class h extends r.PureComponent {
+class f extends r.PureComponent {
     constructor(e) {
         super(e), (this.state = { animation: new o.A.Value(0) });
     }
@@ -73,13 +73,13 @@ class p extends r.PureComponent {
     renderBackground() {
         let { background: e, backgroundKey: t, layout: n } = this.props,
             r = `${n}-${t ?? ""}`;
-        return (0, i.jsx)(u.F, { className: _.yG, component: "div", children: (0, i.jsx)(h, { children: e }, r) });
+        return (0, i.jsx)(u.F, { className: _.yG, component: "div", children: (0, i.jsx)(f, { children: e }, r) });
     }
     renderContents() {
         let { top: e, center: t, bottom: n, layout: r, focused: s } = this.props,
             { idle: o } = this.state;
         return (0, i.jsx)(c.A, {
-            className: a()(_.Ki, f[r], { [_.N7]: o }),
+            className: a()(_.Ki, h[r], { [_.N7]: o }),
             direction: c.A.Direction.VERTICAL,
             justify: c.A.Justify.CENTER,
             children: (0, i.jsxs)(c.A, {
@@ -103,6 +103,6 @@ class p extends r.PureComponent {
     }
     render() {
         let { layout: e, className: t, animated: n } = this.props;
-        return (0, i.jsx)("div", { className: a()(_.hP, f[e], t, { [_.CS]: n }), children: this.renderContents() });
+        return (0, i.jsx)("div", { className: a()(_.hP, h[e], t, { [_.CS]: n }), children: this.renderContents() });
     }
 }

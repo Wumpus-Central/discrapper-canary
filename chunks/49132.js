@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { CC: () => E, CZ: () => g, J8: () => f, DK: () => p });
+n.d(t, { CC: () => E, CZ: () => g, J8: () => h, DK: () => p });
 var i = n(29583),
     r = n(618027),
     s = n(968671),
@@ -10,7 +10,7 @@ var i = n(29583),
     c = n(440005),
     d = n(212739),
     _ = n(788868);
-function f(e) {
+function h(e) {
     if (null == e) return !0;
     let t = e.next_reward_date;
     return (
@@ -21,7 +21,7 @@ function f(e) {
         })(new Date(t))
     );
 }
-function h(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "ProgramRewardsUtils",
         { enabled: n } = (0, o.m)({ location: t });
     switch (e) {
@@ -52,13 +52,13 @@ function p(e) {
 function E() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "ProgramRewardsUtils";
-    return h(c.W.NITRO, t) && ((e = void 0 ?? l.default.getCurrentUser()), (0, u.YE)(e, _.PremiumTypes.TIER_2));
+    return f(c.W.NITRO, t) && ((e = void 0 ?? l.default.getCurrentUser()), (0, u.YE)(e, _.PremiumTypes.TIER_2));
 }
 let m = {
     [c.W.NITRO]: E,
     [c.W.XBOX]: function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "ProgramRewardsUtils";
-        return h(c.W.XBOX, e) && (0, d.H)(l.default.getCurrentUser());
+        return f(c.W.XBOX, e) && (0, d.H)(l.default.getCurrentUser());
     },
 };
 function g() {

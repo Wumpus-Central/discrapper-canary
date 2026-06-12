@@ -1,45 +1,45 @@
-n.d(t, { a: () => E });
-var i = n(503698),
-    l = n.n(i),
-    s = n(933832),
-    r = n(460905),
-    a = n(597601),
-    o = n(391242),
-    d = n(477262),
-    c = n(95635),
-    u = n(27232),
-    m = n(183623),
-    g = n(797285),
-    h = n(179866),
-    x = n(451394),
-    _ = n(7807),
-    p = n(473145),
-    A = n(915143);
-function E(e, t) {
-    if (t) return { Icon: s.A, className: A.YR };
-    switch (e) {
-        case p.TP.EMOJI:
-            return { Icon: r.n, className: l()(A.Kk, A.Zg) };
-        case p.TP.AUDIO:
-            return { Icon: a.L, className: l()(A.Kk, A.z7) };
-        case p.TP.ANIMATED:
-            return { Icon: o.O, className: l()(A.Kk, A.CS) };
-        case p.TP.CUSTOMIZATION:
-            return { Icon: d.s, className: l()(A.Kk, A.wk) };
-        case p.TP.UPLOAD:
-            return { Icon: c.J, className: l()(A.Kk, A.Se) };
-        case p.TP.VANITY:
-            return { Icon: u.G, className: l()(A.Kk, A.w4) };
-        case p.TP.STREAM:
-            return { Icon: m.F, className: l()(A.Kk, A.Td) };
-        case p.TP.STICKER:
-            return { Icon: g.t, className: l()(A.Kk, A.yI) };
-        case p.TP.CUSTOM_ROLE_ICON:
-            return { Icon: h.i, className: l()(A.Kk, A.ru) };
-        case p.TP.STAGE_VIDEO:
-            return { Icon: x.q, className: l()(A.Kk, A.dw) };
-        case p.TP.SOUNDBOARD:
-            return { Icon: _.J, className: l()(A.Kk, A.CC) };
+e.d(s, { a: () => A });
+var a = e(503698),
+    r = e.n(a),
+    n = e(933832),
+    I = e(460905),
+    t = e(597601),
+    T = e(391242),
+    o = e(477262),
+    u = e(95635),
+    k = e(27232),
+    N = e(183623),
+    l = e(797285),
+    m = e(957485),
+    K = e(451394),
+    O = e(7807),
+    P = e(473145),
+    i = e(915143);
+function A(c, s) {
+    if (s) return { Icon: n.A, className: i.YR };
+    switch (c) {
+        case P.TP.EMOJI:
+            return { Icon: I.n, className: r()(i.Kk, i.Zg) };
+        case P.TP.AUDIO:
+            return { Icon: t.L, className: r()(i.Kk, i.z7) };
+        case P.TP.ANIMATED:
+            return { Icon: T.O, className: r()(i.Kk, i.CS) };
+        case P.TP.CUSTOMIZATION:
+            return { Icon: o.s, className: r()(i.Kk, i.wk) };
+        case P.TP.UPLOAD:
+            return { Icon: u.J, className: r()(i.Kk, i.Se) };
+        case P.TP.VANITY:
+            return { Icon: k.G, className: r()(i.Kk, i.w4) };
+        case P.TP.STREAM:
+            return { Icon: N.F, className: r()(i.Kk, i.Td) };
+        case P.TP.STICKER:
+            return { Icon: l.t, className: r()(i.Kk, i.yI) };
+        case P.TP.CUSTOM_ROLE_ICON:
+            return { Icon: m.i, className: r()(i.Kk, i.ru) };
+        case P.TP.STAGE_VIDEO:
+            return { Icon: K.q, className: r()(i.Kk, i.dw) };
+        case P.TP.SOUNDBOARD:
+            return { Icon: O.J, className: r()(i.Kk, i.CC) };
     }
-    throw Error(`Unexpected perk icon ${e}`);
+    throw Error(`Unexpected perk icon ${c}`);
 }

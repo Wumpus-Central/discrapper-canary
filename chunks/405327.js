@@ -1,11 +1,11 @@
 e.exports = function (e) {
     let t = { className: "subst", variants: [{ begin: "\\$[A-Za-z0-9_]+" }] },
-        a = {
+        n = {
             className: "subst",
             variants: [{ begin: /\$\{/, end: /\}/ }],
             keywords: "true false null this is new super",
         },
-        n = {
+        i = {
             className: "number",
             relevance: 0,
             variants: [
@@ -20,14 +20,14 @@ e.exports = function (e) {
                 { begin: 'r"""', end: '"""' },
                 { begin: "r'", end: "'", illegal: "\\n" },
                 { begin: 'r"', end: '"', illegal: "\\n" },
-                { begin: "'''", end: "'''", contains: [e.BACKSLASH_ESCAPE, t, a] },
-                { begin: '"""', end: '"""', contains: [e.BACKSLASH_ESCAPE, t, a] },
-                { begin: "'", end: "'", illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, t, a] },
-                { begin: '"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, t, a] },
+                { begin: "'''", end: "'''", contains: [e.BACKSLASH_ESCAPE, t, n] },
+                { begin: '"""', end: '"""', contains: [e.BACKSLASH_ESCAPE, t, n] },
+                { begin: "'", end: "'", illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, t, n] },
+                { begin: '"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, t, n] },
             ],
         };
-    a.contains = [n, r];
-    let i = [
+    n.contains = [i, r];
+    let s = [
             "Comparable",
             "DateTime",
             "Duration",
@@ -55,7 +55,7 @@ e.exports = function (e) {
             "Element",
             "ElementList",
         ],
-        o = i.map((e) => `${e}?`);
+        a = s.map((e) => `${e}?`);
     return {
         name: "Dart",
         keywords: {
@@ -127,8 +127,8 @@ e.exports = function (e) {
                 "with",
                 "yield",
             ],
-            built_in: i
-                .concat(o)
+            built_in: s
+                .concat(a)
                 .concat([
                     "Never",
                     "Null",
@@ -154,7 +154,7 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 contains: [{ beginKeywords: "extends implements" }, e.UNDERSCORE_TITLE_MODE],
             },
-            n,
+            i,
             { className: "meta", begin: "@[A-Za-z]+" },
             { begin: "=>" },
         ],

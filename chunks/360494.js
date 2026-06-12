@@ -3,7 +3,7 @@ var a = n(627968);
 n(64700);
 var r = n(189213),
     s = n(683071),
-    e = n(985018);
+    e = n(375708);
 function l(t) {
     let { roleName: i, onConfirmDelete: n, ...l } = t;
     return (0, a.jsx)(r.Modal, {

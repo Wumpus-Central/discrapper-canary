@@ -124,8 +124,8 @@ e.exports = function (e) {
             ],
             literal: ["default", "false", "null", "true"],
         },
-        a = e.inherit(e.TITLE_MODE, { begin: "[a-zA-Z](\\.?\\w){0,149}" }),
-        n = {
+        n = e.inherit(e.TITLE_MODE, { begin: "[a-zA-Z](\\.?\\w){0,149}" }),
+        i = {
             className: "number",
             variants: [
                 { begin: "\\b(0b[01']+)" },
@@ -135,46 +135,46 @@ e.exports = function (e) {
             relevance: 0,
         },
         r = { className: "string", begin: '@"', end: '"', contains: [{ begin: '""' }] },
-        i = e.inherit(r, { illegal: /\n/ }),
-        o = { className: "subst", begin: /\{/, end: /\}/, keywords: t },
-        s = e.inherit(o, { illegal: /\n/ }),
+        s = e.inherit(r, { illegal: /\n/ }),
+        a = { className: "subst", begin: /\{/, end: /\}/, keywords: t },
+        o = e.inherit(a, { illegal: /\n/ }),
         l = {
             className: "string",
             begin: /\$"/,
             end: '"',
             illegal: /\n/,
-            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, e.BACKSLASH_ESCAPE, s],
+            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, e.BACKSLASH_ESCAPE, o],
         },
-        c = {
+        u = {
             className: "string",
             begin: /\$@"/,
             end: '"',
-            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, o],
+            contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, a],
         },
-        _ = e.inherit(c, { illegal: /\n/, contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, s] });
-    (o.contains = [c, l, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, n, e.C_BLOCK_COMMENT_MODE]),
-        (s.contains = [
-            _,
+        c = e.inherit(u, { illegal: /\n/, contains: [{ begin: /\{\{/ }, { begin: /\}\}/ }, { begin: '""' }, o] });
+    (a.contains = [u, l, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, i, e.C_BLOCK_COMMENT_MODE]),
+        (o.contains = [
+            c,
             l,
-            i,
+            s,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            n,
+            i,
             e.inherit(e.C_BLOCK_COMMENT_MODE, { illegal: /\n/ }),
         ]);
     let d = {
             variants: [
                 { className: "string", begin: /"""("*)(?!")(.|\n)*?"""\1/, relevance: 1 },
-                c,
+                u,
                 l,
                 r,
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE,
             ],
         },
-        m = { begin: "<", end: ">", contains: [{ beginKeywords: "in out" }, a] },
-        p = e.IDENT_RE + "(<" + e.IDENT_RE + "(\\s*,\\s*" + e.IDENT_RE + ")*>)?(\\[\\])?",
-        u = { begin: "@" + e.IDENT_RE, relevance: 0 };
+        _ = { begin: "<", end: ">", contains: [{ beginKeywords: "in out" }, n] },
+        h = e.IDENT_RE + "(<" + e.IDENT_RE + "(\\s*,\\s*" + e.IDENT_RE + ")*>)?(\\[\\])?",
+        f = { begin: "@" + e.IDENT_RE, relevance: 0 };
     return {
         name: "C#",
         aliases: ["cs", "c#"],
@@ -205,27 +205,27 @@ e.exports = function (e) {
                 },
             },
             d,
-            n,
+            i,
             {
                 beginKeywords: "class interface",
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:,]/,
-                contains: [{ beginKeywords: "where class" }, a, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                contains: [{ beginKeywords: "where class" }, n, _, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
             },
             {
                 beginKeywords: "namespace",
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [a, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                contains: [n, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
             },
             {
                 beginKeywords: "record",
                 relevance: 0,
                 end: /[{;=]/,
                 illegal: /[^\s:]/,
-                contains: [a, m, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
+                contains: [n, _, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
             },
             {
                 className: "meta",
@@ -238,7 +238,7 @@ e.exports = function (e) {
             { beginKeywords: "new return throw await else", relevance: 0 },
             {
                 className: "function",
-                begin: "(" + p + "\\s+){1,12}" + e.IDENT_RE + "\\s*(<[^=]+>\\s*)?\\(",
+                begin: "(" + h + "\\s+){1,12}" + e.IDENT_RE + "\\s*(<[^=]+>\\s*)?\\(",
                 returnBegin: !0,
                 end: /\s*[{;=]/,
                 excludeEnd: !0,
@@ -252,7 +252,7 @@ e.exports = function (e) {
                     {
                         begin: e.IDENT_RE + "\\s*(<[^=]+>\\s*)?\\(",
                         returnBegin: !0,
-                        contains: [e.TITLE_MODE, m],
+                        contains: [e.TITLE_MODE, _],
                         relevance: 0,
                     },
                     { match: /\(\)/ },
@@ -264,13 +264,13 @@ e.exports = function (e) {
                         excludeEnd: !0,
                         keywords: t,
                         relevance: 0,
-                        contains: [d, n, e.C_BLOCK_COMMENT_MODE],
+                        contains: [d, i, e.C_BLOCK_COMMENT_MODE],
                     },
                     e.C_LINE_COMMENT_MODE,
                     e.C_BLOCK_COMMENT_MODE,
                 ],
             },
-            u,
+            f,
         ],
     };
 };

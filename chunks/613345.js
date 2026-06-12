@@ -1,5 +1,5 @@
 "use strict";
-function r() {
+function i() {
     return "u" > typeof globalThis
         ? globalThis
         : "u" > typeof window
@@ -10,4 +10,4 @@ function r() {
               ? self
               : Object.create(null);
 }
-n.d(t, { V: () => r });
+n.d(t, { V: () => i });

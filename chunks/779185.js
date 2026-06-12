@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { AZ: () => N, Ay: () => R, Qn: () => y, cR: () => C }), n(321073);
+n.d(t, { AZ: () => y, Ay: () => O, Qn: () => N, cR: () => v }), n(321073);
 var i,
     r = n(284009),
     s = n.n(r),
@@ -10,25 +10,25 @@ var i,
     c = n(865116),
     d = n(322683),
     _ = n(607399),
-    f = n(652215);
-function h() {
+    h = n(652215);
+function f() {
     if (_.Fr) return null;
     let { default: e } = n(773371),
         { default: t } = n(184809),
         { DEV_PID: i, getPID: r } = n(9302),
         s = e.isFocusedPidOutOfProcess() || e.isCurrentPidOutOfProcess(),
-        a = t.isPinned(f.uss.TEXT);
+        a = t.isPinned(h.uss.TEXT);
     switch (!0) {
         case __OVERLAY__ && t.isInstanceLocked():
-            return f.Xmn.OVERLAY_LOCKED_ACTIVATED;
+            return h.Xmn.OVERLAY_LOCKED_ACTIVATED;
         case __OVERLAY__ && a:
-            return f.Xmn.OVERLAY_UNLOCKED_PINNED;
+            return h.Xmn.OVERLAY_UNLOCKED_PINNED;
         case __OVERLAY__ && !t.isInstanceLocked():
-            return f.Xmn.OVERLAY_UNLOCKED;
+            return h.Xmn.OVERLAY_UNLOCKED;
         case s && e.isFocusedPidInputLocked():
-            return f.Xmn.OVERLAY_LOCKED_ACTIVATED;
+            return h.Xmn.OVERLAY_LOCKED_ACTIVATED;
         case s && !e.isFocusedPidInputLocked():
-            return f.Xmn.OVERLAY_UNLOCKED;
+            return h.Xmn.OVERLAY_UNLOCKED;
         default:
             return null;
     }
@@ -41,16 +41,16 @@ var p = n(495544),
     I = n(292348),
     T = n(417325),
     S = n(381941),
-    N =
+    y =
         (((i = {})[(i.SEND = 0)] = "SEND"),
         (i[(i.EDIT = 1)] = "EDIT"),
         (i[(i.COMMAND = 2)] = "COMMAND"),
         (i[(i.SEND_ANNOUNCEMENT = 3)] = "SEND_ANNOUNCEMENT"),
         i);
-let y = (e) => 1 === e.type,
-    C = (e) => (0 === e.type || 3 === e.type ? e.message.nonce : y(e) ? e.message.messageId : e.message.data.id),
-    v = [+m.A.Millis.MINUTE, 5 * m.A.Millis.MINUTE];
-class O extends A.A {
+let N = (e) => 1 === e.type,
+    v = (e) => (0 === e.type || 3 === e.type ? e.message.nonce : N(e) ? e.message.messageId : e.message.data.id),
+    C = [+m.A.Millis.MINUTE, 5 * m.A.Millis.MINUTE];
+class R extends A.A {
     maxSize;
     requests = new Map();
     analyticsTimeouts = new Map();
@@ -98,9 +98,9 @@ class O extends A.A {
             super.clear();
     }
     startQueueMetricTimers(e) {
-        let t = v.map((e) =>
+        let t = C.map((e) =>
             setTimeout(() => {
-                (0, l.zV)(f.HAw.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
+                (0, l.zV)(h.HAw.SEND_MESSAGE_QUEUED, { queued_duration_ms: e });
             }, e),
         );
         this.analyticsTimeouts.set(e, t);
@@ -113,8 +113,8 @@ class O extends A.A {
             if ((null != e && (this.requests.delete(e), this.cancelQueueMetricTimers(e)), n.hasErr)) return t(null, n);
             if (
                 null != n.body &&
-                (n.body.code === f.t02.SLOWMODE_RATE_LIMITED ||
-                    n.body.code === f.t02.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)
+                (n.body.code === h.t02.SLOWMODE_RATE_LIMITED ||
+                    n.body.code === h.t02.CHANNEL_FOLLOWING_EDIT_RATE_LIMITED)
             )
                 t(null, n);
             else if (429 === n.status) {
@@ -125,7 +125,7 @@ class O extends A.A {
     }
     handleSend(e, t) {
         let { channelId: n, analyticsLocation: i, ...r } = e,
-            s = h() ?? i,
+            s = f() ?? i,
             o = (0, d.O)(),
             l = { mobile_network_type: E.A.getType(), ...r, ...(null != o && { signal_strength: o }) };
         if (c.Ay.get("send_fail_100")) {
@@ -138,7 +138,7 @@ class O extends A.A {
         this.startQueueMetricTimers(e.nonce),
             a.Bo.post(
                 {
-                    url: f.Rsh.MESSAGES(n),
+                    url: h.Rsh.MESSAGES(n),
                     body: l,
                     context: null != s ? { location: s } : void 0,
                     oldFormErrors: !0,
@@ -154,7 +154,7 @@ class O extends A.A {
     }
     handleSendAnnouncement(e, t) {
         let { channelId: n, analyticsLocation: i, ...r } = e,
-            s = h() ?? i,
+            s = f() ?? i,
             o = (0, d.O)(),
             l = { mobile_network_type: E.A.getType(), ...r, ...(null != o && { signal_strength: o }) };
         if (c.Ay.get("send_fail_100")) {
@@ -167,7 +167,7 @@ class O extends A.A {
         this.startQueueMetricTimers(e.nonce),
             a.Bo.post(
                 {
-                    url: f.Rsh.MESSAGES_ANNOUNCEMENT(n),
+                    url: h.Rsh.MESSAGES_ANNOUNCEMENT(n),
                     body: l,
                     context: null != s ? { location: s } : void 0,
                     oldFormErrors: !0,
@@ -186,7 +186,7 @@ class O extends A.A {
             o = new AbortController(),
             l = this.createResponseHandler(i, t),
             u = {
-                url: f.Rsh.MESSAGE(n, i),
+                url: h.Rsh.MESSAGE(n, i),
                 body: s,
                 retries: 1,
                 oldFormErrors: !0,
@@ -208,7 +208,7 @@ class O extends A.A {
                 attachments: c,
                 maxSizeCallback: d,
                 analytics_location: _,
-                sectionName: h,
+                sectionName: f,
                 source: E,
             } = e,
             m = {
@@ -220,7 +220,7 @@ class O extends A.A {
                 data: l,
                 nonce: u,
                 analytics_location: _,
-                section_name: h,
+                section_name: f,
                 source: E,
             };
         null != c &&
@@ -233,7 +233,7 @@ class O extends A.A {
         let A = new AbortController();
         a.Bo.post(
             {
-                url: f.Rsh.INTERACTIONS,
+                url: h.Rsh.INTERACTIONS,
                 body: m,
                 signal: A.signal,
                 rejectWithError: !0,
@@ -250,4 +250,4 @@ class O extends A.A {
         );
     }
 }
-let R = new O();
+let O = new R();

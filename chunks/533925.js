@@ -1,31 +1,31 @@
-n.d(e, { $A: () => l, XZ: () => r, Zp: () => a, pu: () => i, s0: () => c });
+n.d(t, { $A: () => r, XZ: () => i, Zp: () => l, pu: () => a, s0: () => d });
 var s = n(636537);
-let a = 8,
-    i = 11,
-    r = 6,
-    l = 6;
-async function o(t) {
-    let { ticket: e, mfaType: n, data: a } = t,
-        i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
+let l = 8,
+    a = 11,
+    i = 6,
+    r = 6;
+async function o(e) {
+    let { ticket: t, mfaType: n, data: l } = e,
+        a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 2;
     try {
         return (
             await s.Bo.post({
                 url: "/mfa/finish",
-                body: { ticket: e, mfa_type: n, data: a },
-                retries: i,
+                body: { ticket: t, mfa_type: n, data: l },
+                retries: a,
                 rejectWithError: !1,
             })
         ).body;
-    } catch (t) {
-        if (t.body?.message) throw Error(t.body.message);
-        throw t;
+    } catch (e) {
+        if (e.body?.message) throw Error(e.body.message);
+        throw e;
     }
 }
-async function c(t, e) {
-    let { token: n } = await o(t);
-    return new Promise((t, s) => {
-        e({ "X-Discord-MFA-Authorization": n }, (e) =>
-            e.body?.code === 60008 || e.body?.code === 60003 ? (s(Error(e.body.message)), !0) : (t(), !1),
+async function d(e, t) {
+    let { token: n } = await o(e);
+    return new Promise((e, s) => {
+        t({ "X-Discord-MFA-Authorization": n }, (t) =>
+            t.body?.code === 60008 || t.body?.code === 60003 ? (s(Error(t.body.message)), !0) : (e(), !1),
         );
     });
 }

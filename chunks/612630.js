@@ -1,26 +1,26 @@
-n.d(t, { A: () => u });
-var i = n(64700),
-    l = n(17928),
-    a = n(636537),
-    r = n(228366),
-    o = n(279263),
-    d = n(652215);
-function u(e) {
-    let t = (0, l.bG)([o.A], () => o.A.getNote(e));
+r.d(e, { A: () => h });
+var o = r(64700),
+    i = r(17928),
+    s = r(636537),
+    n = r(228366),
+    c = r(279263),
+    d = r(652215);
+function h(t) {
+    let e = (0, i.bG)([c.A], () => c.A.getNote(t));
     return (
-        i.useEffect(() => {
-            null == t && s(e);
-        }, [t, e]),
-        t ?? { loading: !0, note: null }
+        o.useEffect(() => {
+            null == e && a(t);
+        }, [e, t]),
+        e ?? { loading: !0, note: null }
     );
 }
-async function s(e) {
-    r.h.dispatch({ type: "USER_NOTE_LOAD_START", userId: e });
+async function a(t) {
+    n.h.dispatch({ type: "USER_NOTE_LOAD_START", userId: t });
     try {
-        let { body: t } = await a.Bo.get({ url: d.Rsh.NOTE(e), oldFormErrors: !0, rejectWithError: !0 });
-        if (t.note_user_id !== e) throw Error("Invalid response from server");
-        r.h.dispatch({ type: "USER_NOTE_UPDATE", id: e, note: t.note });
-    } catch (t) {
-        r.h.dispatch({ type: "USER_NOTE_UPDATE", id: e });
+        let { body: e } = await s.Bo.get({ url: d.Rsh.NOTE(t), oldFormErrors: !0, rejectWithError: !0 });
+        if (e.note_user_id !== t) throw Error("Invalid response from server");
+        n.h.dispatch({ type: "USER_NOTE_UPDATE", id: t, note: e.note });
+    } catch (e) {
+        n.h.dispatch({ type: "USER_NOTE_UPDATE", id: t });
     }
 }

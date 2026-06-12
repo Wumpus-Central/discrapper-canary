@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { K: () => _, z: () => f });
+n.d(t, { K: () => _, z: () => h });
 var i = n(825913),
     r = n(129844),
     s = n(290424);
@@ -12,10 +12,10 @@ var o = n(318473),
     c = n(685369),
     d = n(64700);
 let _ = (0, d.createContext)(null),
-    f = (0, d.forwardRef)(function (e, t) {
+    h = (0, d.forwardRef)(function (e, t) {
         [e, t] = (0, i.JT)(e, t, _);
-        let { value: n = 0, minValue: f = 0, maxValue: h = 100, isIndeterminate: p = !1 } = e;
-        n = a(n, f, h);
+        let { value: n = 0, minValue: h = 0, maxValue: f = 100, isIndeterminate: p = !1 } = e;
+        n = a(n, h, f);
         let [E, m] = (0, i._E)(!e["aria-label"] && !e["aria-labelledby"]),
             { progressBarProps: g, labelProps: A } = (function (e) {
                 let {
@@ -24,21 +24,21 @@ let _ = (0, d.createContext)(null),
                         maxValue: i = 100,
                         valueLabel: r,
                         isIndeterminate: _,
-                        formatOptions: f = { style: "percent" },
+                        formatOptions: h = { style: "percent" },
                     } = e,
-                    h = (0, s.$)(e, { labelable: !0 }),
+                    f = (0, s.$)(e, { labelable: !0 }),
                     { labelProps: p, fieldProps: E } = (0, l.M)({ ...e, labelElementType: "span" }),
                     m = ((t = a(t, n, i)) - n) / (i - n),
                     g = (function (e = {}) {
                         let { locale: t } = (0, u.Y)();
                         return (0, d.useMemo)(() => new (0, c.K)(t, e), [t, e]);
-                    })(f);
+                    })(h);
                 if (!_ && !r) {
-                    let e = "percent" === f.style ? m : t;
+                    let e = "percent" === h.style ? m : t;
                     r = g.format(e);
                 }
                 return {
-                    progressBarProps: (0, o.v)(h, {
+                    progressBarProps: (0, o.v)(f, {
                         ...E,
                         "aria-valuenow": _ ? void 0 : t,
                         "aria-valuemin": n,
@@ -49,7 +49,7 @@ let _ = (0, d.createContext)(null),
                     labelProps: p,
                 };
             })({ ...e, label: m }),
-            I = p ? void 0 : ((n - f) / (h - f)) * 100,
+            I = p ? void 0 : ((n - h) / (f - h)) * 100,
             T = (0, i.Sl)({
                 ...e,
                 defaultClassName: "react-aria-ProgressBar",

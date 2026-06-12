@@ -90,7 +90,7 @@ async function p() {
 }
 function E(e, t) {
     let n = null != e && null == e.expires_at ? e.id : void 0,
-        r = null != t && null == t.expiresAt ? t.id : void 0;
+        r = null == t || t.hasAcknowledged() ? void 0 : t.id;
     if (void 0 !== n || void 0 !== r)
         return i.Bo.post({
             url: _.Rsh.USER_OFFER_ACKNOWLEDGED,

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(17928),
     r = n(228366),
     s = n(572009),
@@ -26,4 +26,4 @@ class _ extends i.Ay.Store {
             : null;
     }
 }
-let f = new _(r.h, { CONNECTION_OPEN: d, OVERLAY_INITIALIZE: d, CURRENT_USER_UPDATE: d });
+let h = new _(r.h, { CONNECTION_OPEN: d, OVERLAY_INITIALIZE: d, CURRENT_USER_UPDATE: d });

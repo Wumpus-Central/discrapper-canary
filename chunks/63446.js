@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, { A: () => o });
-var r = n(439372),
-    i = n(287809),
-    a = n(38050);
-class s extends r.A {
+var i = n(439372),
+    r = n(287809),
+    s = n(38050);
+class a extends i.A {
     actions = { HAVEN_DISCONNECT: (e) => this.handleHavenDisconnect(e) };
     handleHavenDisconnect = (e) => {
-        let t = i.default.getCurrentUser();
-        e.userId === t?.id && a.n.getState().resetPlayback();
+        let t = r.default.getCurrentUser();
+        e.userId === t?.id && s.n.getState().resetPlayback();
     };
 }
-let o = new s();
+let o = new a();

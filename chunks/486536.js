@@ -1,4 +1,4 @@
-t.exports = {
+_.exports = {
     mG: "inline__99afd",
     qr: "footer__99afd",
     Qs: "content__99afd",

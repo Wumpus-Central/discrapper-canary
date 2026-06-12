@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     my: "avatar__49508",
     yF: "divider__49508",
     Ke: "channelStatusTooltipAnchor__49508",

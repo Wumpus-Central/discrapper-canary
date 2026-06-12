@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { Q: () => a, f: () => s });
-var r = n(317525),
-    i = n(985018);
-let a = (e) => {
+n.d(t, { Q: () => s, f: () => a });
+var i = n(317525),
+    r = n(375708);
+let s = (e) => {
         switch (e) {
             case "home":
             case "guide":
-                return i.intl.string(i.t.VbpLyU);
+                return r.intl.string(r.t.VbpLyU);
             case "browse":
-                return i.intl.string(i.t.et6wav);
+                return r.intl.string(r.t.et6wav);
             case "customize":
-                return i.intl.string(i.t.h9mGOP);
+                return r.intl.string(r.t.h9mGOP);
             case "linked-roles":
-                return i.intl.string(i.t.ghtnss);
+                return r.intl.string(r.t.ghtnss);
         }
         return null;
     },
-    s = (e, t, n) => {
+    a = (e, t, n) => {
         if ("linked-roles" === e) {
             if (null == n) return null;
-            let e = r.A.getRole(n, t);
+            let e = i.A.getRole(n, t);
             return null == e || e.tags?.guild_connections !== null ? null : e.name;
         }
         return null;

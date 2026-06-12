@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Cg: () => r, _m: () => a, s0: () => i });
-var r = 6e4,
-    i = 36e5,
-    a = 1e3;
+n.d(t, { Cg: () => i, _m: () => s, s0: () => r });
+var i = 6e4,
+    r = 36e5,
+    s = 1e3;

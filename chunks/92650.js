@@ -1,82 +1,82 @@
-n.d(t, { t: () => _ });
-var i = n(64700),
-    l = n(424266),
-    s = n.n(l),
-    a = n(845584),
+n.d(t, { t: () => C });
+var l = n(64700),
+    i = n(424266),
+    s = n.n(i),
+    a = n(913122),
     r = n(928658),
     o = n(841595),
-    c = n(576622),
-    d = n(253932),
-    u = n(954571),
+    c = n(903209),
+    d = n(885386),
+    u = n(174459),
     h = n(966107),
     m = n(627968),
-    p = n(192308),
-    g = n(687599),
+    g = n(192308),
+    p = n(687599),
     A = n(652215),
     f = n(166643);
-function _(e) {
-    let { user: t, onAcceptSuccess: l, onRejectSuccess: _, onError: E } = e,
-        C = (0, f.A)(),
-        [x, b] = i.useState(!1),
-        [S, I] = i.useState(!1),
-        [y, T] = i.useState(!1),
-        [v, N] = i.useState(!1),
-        [j, M] = i.useState(!1),
-        R = x || S || y,
-        L = i.useCallback(
+function C(e) {
+    let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: x } = e,
+        E = (0, f.A)(),
+        [S, _] = l.useState(!1),
+        [I, j] = l.useState(!1),
+        [y, N] = l.useState(!1),
+        [T, b] = l.useState(!1),
+        [v, M] = l.useState(!1),
+        R = S || I || y,
+        D = l.useCallback(
             async (e) => {
                 if (!R) {
-                    b(!0);
+                    _(!0);
                     try {
-                        await (0, h.RK)(e), N(!0), l?.();
+                        await (0, h.RK)(e), b(!0), i?.();
                     } catch (t) {
                         let e = new a.LG(t);
-                        E?.(e);
+                        x?.(e);
                     } finally {
-                        b(!1);
+                        _(!1);
                     }
                 }
             },
-            [R, l, E],
+            [R, i, x],
         ),
-        D = i.useCallback(
+        L = l.useCallback(
             async (e) => {
                 if (!R) {
-                    I(!0);
+                    j(!0);
                     try {
-                        await (0, h.UK)(e), M(!0), _?.();
+                        await (0, h.UK)(e), M(!0), C?.();
                     } catch (t) {
                         let e = new a.LG(t);
-                        E?.(e);
+                        x?.(e);
                     } finally {
-                        I(!1);
+                        j(!1);
                     }
                 }
             },
-            [R, _, E],
+            [R, C, x],
         ),
-        k = i.useCallback(
+        P = l.useCallback(
             async (e) => {
                 if (R) return;
-                I(!0);
+                j(!0);
                 let t = s()(e, 50);
                 try {
                     for (let e of t) await (0, h.ST)(e);
-                    M(!0), _?.();
+                    M(!0), C?.();
                 } catch (t) {
                     let e = new a.LG(t);
-                    E?.(e);
+                    x?.(e);
                 } finally {
-                    I(!1);
+                    j(!1);
                 }
             },
-            [R, _, E],
+            [R, C, x],
         ),
-        P = i.useCallback(
+        O = l.useCallback(
             async (e) => {
                 if (R) return;
                 if (null != t && null == o.A.getMutualGuilds(t.id)) {
-                    T(!0);
+                    N(!0);
                     try {
                         await (0, c.A)(t.id, t.getAvatarURL(void 0, 80), {
                             withMutualGuilds: !0,
@@ -84,33 +84,33 @@ function _(e) {
                         });
                     } catch (e) {
                     } finally {
-                        T(!1);
+                        N(!1);
                     }
                 }
-                let i = async () => {
+                let l = async () => {
                     let n = null != t ? o.A.getMutualGuilds(t.id)?.map((e) => e.guild.id) : [];
                     u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                        action: g.LD.ACCEPT_CONFIRMATION_PROMPT,
+                        action: p.LD.ACCEPT_CONFIRMATION_PROMPT,
                         channel_id: e,
                         mutual_guild_ids: n ?? [],
                         other_user_id: t?.id,
                     }),
-                        await L(e);
+                        await D(e);
                 };
                 !(function (e) {
-                    let { channelId: t, onConfirm: i, onCancel: l } = e;
-                    u.default.track(A.HAw.OPEN_MODAL, { type: g.PY, channel_id: t }),
-                        (0, p.openModalLazy)(async () => {
+                    let { channelId: t, onConfirm: l, onCancel: i } = e;
+                    u.default.track(A.HAw.OPEN_MODAL, { type: p.PY, channel_id: t }),
+                        (0, g.openModalLazy)(async () => {
                             let { default: e } = await n.e("61841").then(n.bind(n, 987176));
-                            return (t) => (0, m.jsx)(e, { onConfirm: i, onDismiss: l, ...t });
+                            return (t) => (0, m.jsx)(e, { onConfirm: l, onDismiss: i, ...t });
                         });
                 })({
                     channelId: e,
-                    onConfirm: i,
+                    onConfirm: l,
                     onCancel: () => {
                         let n = null != t ? o.A.getMutualGuilds(t.id)?.map((e) => e.guild.id) : [];
                         u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                            action: g.LD.DISMISS_CONFIRMATION_PROMPT,
+                            action: p.LD.DISMISS_CONFIRMATION_PROMPT,
                             channel_id: e,
                             mutual_guild_ids: n ?? [],
                             other_user_id: t?.id,
@@ -118,53 +118,53 @@ function _(e) {
                     },
                 });
             },
-            [L, R, t],
+            [D, R, t],
         ),
-        G = i.useCallback(
-            (e, t, i) => {
-                let l = (n, l) => {
-                        l && d.WY.updateSetting(n),
+        k = l.useCallback(
+            (e, t, l) => {
+                let i = (n, i) => {
+                        i && d.WY.updateSetting(n),
                             n && null != t && (0, r.tJ)(t),
-                            L(e.id),
+                            D(e.id),
                             u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                                action: g.LD.ACCEPT_HAM_CONFIRMATION_PROMPT,
+                                action: p.LD.ACCEPT_HAM_CONFIRMATION_PROMPT,
                                 channel_id: e.id,
-                                is_dont_show_again_checked: l,
+                                is_dont_show_again_checked: i,
                                 non_spam_retraining_opt_in: n,
                             }),
-                            null != i && i();
+                            null != l && l();
                     },
                     s = d.WY.getSetting();
                 null == s
                     ? (function (e) {
-                          let { onConfirm: t, onCancel: i } = e;
-                          (0, p.openModalLazy)(async () => {
+                          let { onConfirm: t, onCancel: l } = e;
+                          (0, g.openModalLazy)(async () => {
                               let { default: e } = await n.e("19729").then(n.bind(n, 693864));
-                              return (n) => (0, m.jsx)(e, { onConfirm: t, onDismiss: i, ...n });
+                              return (n) => (0, m.jsx)(e, { onConfirm: t, onDismiss: l, ...n });
                           });
                       })({
                           channel: e,
-                          onConfirm: l,
+                          onConfirm: i,
                           onCancel: () => {
                               u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                                  action: g.LD.DISMISS_HAM_CONFIRMATION_PROMPT,
+                                  action: p.LD.DISMISS_HAM_CONFIRMATION_PROMPT,
                                   channel_id: e.id,
                               });
                           },
                       })
-                    : l(s);
+                    : i(s);
             },
-            [L],
+            [D],
         );
     return {
-        acceptMessageRequest: C ? P : L,
-        rejectMessageRequest: D,
-        rejectAll: k,
-        markAsNotSpam: G,
-        isAcceptLoading: x,
-        isRejectLoading: S,
+        acceptMessageRequest: E ? O : D,
+        rejectMessageRequest: L,
+        rejectAll: P,
+        markAsNotSpam: k,
+        isAcceptLoading: S,
+        isRejectLoading: I,
         isUserProfileLoading: y,
-        isOptimisticAccepted: v,
-        isOptimisticRejected: j,
+        isOptimisticAccepted: T,
+        isOptimisticRejected: v,
     };
 }

@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { Xq: () => s, bS: () => a, kn: () => o, uZ: () => l });
-var r = n(735438),
-    i = n(628856);
+var i = n(735438),
+    r = n(628856);
 let s = (e) => {
         if ("object" != typeof e || null == e) return null;
-        let t = (0, i.V)(e);
+        let t = (0, r.V)(e);
         if (null == t) return null;
         let n = { skuId: t };
         return (
@@ -15,5 +15,5 @@ let s = (e) => {
         );
     },
     a = (e) => e?.expiresAt != null && 1e3 * e.expiresAt < Date.now(),
-    o = (e, t) => (null == e || null == t ? e === t : (0, r.isEqual)(s(e), s(t))),
+    o = (e, t) => (null == e || null == t ? e === t : (0, i.isEqual)(s(e), s(t))),
     l = (e, t) => null != t && !a(e?.avatarDecoration) && e?.avatarDecoration?.asset != null;

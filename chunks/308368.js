@@ -21,7 +21,7 @@ let _ = {
             exePath: u = null,
             voiceChannelId: d = null,
             sessionId: _ = null,
-            mediaSessionId: f = null,
+            mediaSessionId: h = null,
         } = e;
         r.h.wait(() => r.h.dispatch({ type: "ACTIVITY_UPDATE_START", applicationId: t, duration: o, distributor: n })),
             i.Bo.post({
@@ -36,7 +36,7 @@ let _ = {
                     exePath: u,
                     voice_channel_id: d,
                     session_id: _,
-                    media_session_id: f,
+                    media_session_id: h,
                 },
                 retries: 1,
                 oldFormErrors: !0,
@@ -60,10 +60,10 @@ let _ = {
     },
     sendActivityInvite(e) {
         let { channelId: t, type: n, activity: i, content: r, targetUserId: l, location: _ } = e,
-            f = o.A.getChannel(t);
-        if (null == f) return Promise.resolve(null);
-        let h = a.Ay.parse(f, r ?? "");
-        return u.A.sendMessage(f.id, h, !1, {
+            h = o.A.getChannel(t);
+        if (null == h) return Promise.resolve(null);
+        let f = a.Ay.parse(h, r ?? "");
+        return u.A.sendMessage(h.id, f, !1, {
             activityAction: { type: n, activity: i, targetUserId: l },
             location: d.Hx.ACTIVITY_SHARE,
         }).then(
@@ -72,11 +72,11 @@ let _ = {
                     location: _,
                     invite_type: i.type === c.$pd.LISTENING ? c.G2g.SPOTIFY : c.G2g.APPLICATION,
                     application_id: i.application_id,
-                    guild_id: f.getGuildId(),
-                    channel_id: f.id,
+                    guild_id: h.getGuildId(),
+                    channel_id: h.id,
                     message_id: null != e ? e.body.id : null,
                 }),
-                Promise.resolve(f)
+                Promise.resolve(h)
             ),
             (e) => Promise.reject(e),
         );

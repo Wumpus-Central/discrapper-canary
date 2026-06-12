@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { A: () => o });
-var r = n(118356),
-    i = n(205693),
-    a = n(731854);
-let s = new r.Vy("ConnectionEventFramerateReducer");
+var i = n(941426),
+    r = n(459838),
+    s = n(731854);
+let a = new i.Vy("ConnectionEventFramerateReducer");
 class o {
     connection;
     sinkWants;
@@ -11,16 +11,16 @@ class o {
     constructor(e, t) {
         (this.connection = e),
             (this.sinkWants = t),
-            s.enableNativeLogger(!0),
-            e.on(i.yq.Speaking, this.handleSpeaking),
-            e.on(i.yq.Mute, this.handleSelfMute),
+            a.enableNativeLogger(!0),
+            e.on(r.yq.Speaking, this.handleSpeaking),
+            e.on(r.yq.Mute, this.handleSelfMute),
             this.initialize();
     }
     initialize() {
         this.userSpeakingChange(!0);
     }
     handleSpeaking = (e, t) => {
-        e === this.connection.userId && this.userSpeakingChange(t === a.ME.NONE);
+        e === this.connection.userId && this.userSpeakingChange(t === s.ME.NONE);
     };
     handleSelfMute = (e) => {
         this.connection.hasDesktopSource() ||
@@ -34,11 +34,11 @@ class o {
             }
             this.framerateReductionTimeout = setTimeout(() => {
                 this.connection.destroyed ||
-                    (s.info(`BaseConnection.userSpeakingChange: Reduced framerate after ${a.qm} ms.`),
+                    (a.info(`BaseConnection.userSpeakingChange: Reduced framerate after ${s.qm} ms.`),
                     (this.framerateReductionTimeout = void 0),
                     (this.sinkWants.isMuted = !0),
                     this.updateRemoteWantsFramerate());
-            }, a.qm);
+            }, s.qm);
         }
     }
     destroyFramerateScaleFactorTimers() {

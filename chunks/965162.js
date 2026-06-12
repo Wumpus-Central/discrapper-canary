@@ -5,10 +5,10 @@ n.d(t, {
     Hk: () => A,
     R4: () => g,
     Uz: () => p,
-    _V: () => h,
+    _V: () => f,
     d1: () => c,
     pR: () => d,
-    wC: () => f,
+    wC: () => h,
 });
 var i = n(95561),
     r = n(734057),
@@ -26,10 +26,10 @@ function d(e) {
 function _(e) {
     return d(e) ? l.wJ.includes(e) : !!c(e) && ((0, o.VI)(e.asset) || (0, o.q6)(e.asset));
 }
-function f(e) {
+function h(e) {
     return null != e ? "Video Background" : "None";
 }
-function h(e) {
+function f(e) {
     return null == e
         ? "None"
         : c(e)
@@ -64,8 +64,8 @@ function p(e, t, n) {
         d = (0, i.JK)(o, l, !0);
     a.default.track(u.HAw.VIDEO_EFFECT_UPDATED, {
         location: t,
-        effect_type: f(e),
-        effect_detail: h(e),
+        effect_type: h(e),
+        effect_detail: f(e),
         effect_state: n,
         channel_id: l,
         channel_type: c?.type,

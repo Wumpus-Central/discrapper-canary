@@ -17,24 +17,24 @@ function u(e) {
                     let n = s(o, e),
                         c = s("user", e),
                         [d, _] = (0, r.yK)([t], () => t.getEvaluationAndAssignment(o, n, a, c), [n, c]),
-                        f = _?.variantId,
-                        h = _?.trackedVariantId ?? f,
+                        h = _?.variantId,
+                        f = _?.trackedVariantId ?? h,
                         p = _?.revision,
                         E = _?.isOverride,
                         m = _?.exposureTrackingEnabled,
                         g = _?.useAsEligibility;
                     return ((0, i.useEffect)(() => {
                         null != d &&
-                            null != h &&
+                            null != f &&
                             null != p &&
                             !1 === E &&
                             !0 === m &&
                             !0 !== g &&
-                            t.trackExperimentExposure(d, a, e.location, o, p, h, n);
-                    }, [n, d, h, p, e.location, E, m, g]),
-                    null == f || !0 === g)
+                            t.trackExperimentExposure(d, a, e.location, o, p, f, n);
+                    }, [n, d, f, p, e.location, E, m, g]),
+                    null == h || !0 === g)
                         ? u
-                        : (l[f] ?? u);
+                        : (l[h] ?? u);
                 },
                 getConfig: function (e) {
                     let i = n(o, e),
@@ -42,17 +42,17 @@ function u(e) {
                         [s, c] = t.getEvaluationAndAssignment(o, i, a, r),
                         d = c?.variantId,
                         _ = c?.trackedVariantId ?? d,
-                        f = c?.revision,
-                        h = c?.isOverride,
+                        h = c?.revision,
+                        f = c?.isOverride,
                         p = c?.exposureTrackingEnabled,
                         E = c?.useAsEligibility;
                     return (null != s &&
                         null != _ &&
-                        null != f &&
-                        !1 === h &&
+                        null != h &&
+                        !1 === f &&
                         !0 === p &&
                         !0 !== E &&
-                        t.trackExperimentExposure(s, a, e.location, o, f, _, i),
+                        t.trackExperimentExposure(s, a, e.location, o, h, _, i),
                     null == d || !0 === E)
                         ? u
                         : (l[d] ?? u);

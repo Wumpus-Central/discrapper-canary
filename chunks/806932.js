@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { m: () => b, A: () => w });
+n.d(t, { m: () => L, A: () => w });
 var i = n(627968),
     r = n(64700),
     s = n(17928),
     a = n(785007),
     o = n(534514),
     l = n(661531),
-    d = n(331322),
-    _ = n(228366),
-    u = n(915089),
-    c = n(450232),
-    E = n(526162),
-    h = n(503698),
-    m = n.n(h),
-    f = n(735438),
-    g = n.n(f),
-    p = n(990078),
+    u = n(331322),
+    c = n(228366),
+    d = n(915089),
+    _ = n(450232),
+    h = n(526162),
+    f = n(503698),
+    p = n.n(f),
+    E = n(735438),
+    m = n.n(E),
+    g = n(990078),
     A = n(939249),
     I = n(194261),
     T = n(653523),
     S = n(350972),
-    N = n(677056),
-    C = n(635917),
-    R = n(652215),
-    O = n(985018),
-    y = n(588525);
-function v(e) {
+    y = n(677056),
+    N = n(174197),
+    v = n(652215),
+    C = n(375708),
+    R = n(588525);
+function O(e) {
     let {
             id: t,
             className: n,
@@ -33,82 +33,82 @@ function v(e) {
             onSelect: a,
             isSelected: o = !1,
             tabIndex: l,
-            children: d,
-            locked: _ = !1,
-            disabled: u = !1,
+            children: u,
+            locked: c = !1,
+            disabled: d = !1,
         } = e,
-        [c, E] = r.useState((0, C.gG)(t).name),
-        h = t === S.Ic.PIRATE;
-    return (0, i.jsx)(p.m, {
-        text: c,
+        [_, h] = r.useState((0, N.gG)(t).name),
+        f = t === S.Ic.PIRATE;
+    return (0, i.jsx)(g.m, {
+        text: _,
         onTooltipShow: () =>
-            h &&
-            E(
-                g().sample([
-                    O.intl.string(O.t["EgWTY+"]),
-                    O.intl.string(O.t.umBn5f),
-                    O.intl.string(O.t.dG1wD1),
-                    O.intl.string(O.t.SesI4S),
-                    O.intl.string(O.t.RnMLvl),
-                ]) ?? O.intl.string(O.t["EgWTY+"]),
+            f &&
+            h(
+                m().sample([
+                    C.intl.string(C.t["EgWTY+"]),
+                    C.intl.string(C.t.umBn5f),
+                    C.intl.string(C.t.dG1wD1),
+                    C.intl.string(C.t.SesI4S),
+                    C.intl.string(C.t.RnMLvl),
+                ]) ?? C.intl.string(C.t["EgWTY+"]),
             ),
         children: (0, i.jsxs)("div", {
-            className: y.Co,
+            className: R.Co,
             style: s,
             children: [
                 (0, i.jsx)(A.D, {
                     role: "radio",
-                    "aria-label": c,
+                    "aria-label": _,
                     "aria-checked": o,
-                    "aria-disabled": u,
+                    "aria-disabled": d,
                     tabIndex: l ?? (o ? 0 : -1),
-                    className: m()(y.Ni, { [y.wH]: o }, n),
-                    onClick: o ? R.tEg : () => a?.(t),
-                    children: d,
+                    className: p()(R.Ni, { [R.wH]: o }, n),
+                    onClick: o ? v.tEg : () => a?.(t),
+                    children: u,
                 }),
                 o && (0, i.jsx)(T.H$, {}),
-                _ &&
+                c &&
                     (0, i.jsx)("div", {
-                        className: y.RK,
-                        children: (0, i.jsx)(I.X, { className: y.AA, color: "currentColor" }),
+                        className: R.RK,
+                        children: (0, i.jsx)(I.X, { className: R.AA, color: "currentColor" }),
                     }),
             ],
         }),
     });
 }
-function D(e) {
-    let { size: t = C.N8.SIZE_60, icon: n, isSelected: s, disabled: a, tabIndex: o, onSelect: l, locked: d } = e,
-        _ = r.useMemo(() => ({ "--custom-in-app-icon-selection-size": `${t}px` }), [t]);
-    return (0, i.jsx)(v, {
-        style: _,
+function b(e) {
+    let { size: t = N.N8.SIZE_60, icon: n, isSelected: s, disabled: a, tabIndex: o, onSelect: l, locked: u } = e,
+        c = r.useMemo(() => ({ "--custom-in-app-icon-selection-size": `${t}px` }), [t]);
+    return (0, i.jsx)(O, {
+        style: c,
         onSelect: a ? void 0 : l,
         isSelected: s,
         id: n.id,
-        className: a ? y.r9 : void 0,
+        className: a ? R.r9 : void 0,
         tabIndex: o,
-        locked: d,
+        locked: u,
         disabled: a,
-        children: (0, i.jsx)(N.A, { id: n.id, size: t }),
+        children: (0, i.jsx)(y.A, { id: n.id, size: t }),
     });
 }
-var L = n(182686);
-function b(e) {
+var D = n(182686);
+function L(e) {
     let { disabled: t, size: n } = e,
-        [r] = (0, s.yK)([E.A], () => [E.A.getCurrentDesktopIcon()]);
+        [r] = (0, s.yK)([h.A], () => [h.A.getCurrentDesktopIcon()]);
     return (0, i.jsx)(i.Fragment, {
-        children: (0, C.v8)()
+        children: (0, N.v8)()
             .filter((e) => {
                 let { isHidden: t } = e;
                 return !t;
             })
             .map((e, s) =>
                 (0, i.jsx)(
-                    D,
+                    b,
                     {
                         icon: e,
                         isSelected: r === e.id,
                         onSelect: (e) => {
-                            _.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
+                            c.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
                         },
                         disabled: t,
                         tabIndex: 0 !== s || t ? void 0 : 0,
@@ -121,50 +121,50 @@ function b(e) {
     });
 }
 function w(e) {
-    let { className: t, disabled: n, isEditor: r, renderCTAButtons: s, iconSize: _ } = e,
-        E = (0, u.GV)(),
-        { ref: h, ...m } = (0, a._u)({ orientation: "horizontal", labelledBy: E });
+    let { className: t, disabled: n, isEditor: r, renderCTAButtons: s, iconSize: c } = e,
+        h = (0, d.GV)(),
+        { ref: f, ...p } = (0, a._u)({ orientation: "horizontal", labelledBy: h });
     return (0, i.jsx)("div", {
-        ...m,
-        ref: h,
+        ...p,
+        ref: f,
         children: (0, i.jsxs)("div", {
             className: t,
             children: [
                 (0, i.jsxs)("div", {
-                    className: L.wx,
+                    className: D.wx,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: L.so,
+                            className: D.so,
                             children: [
                                 !r &&
                                     (0, i.jsxs)("div", {
-                                        className: L.DD,
+                                        className: D.DD,
                                         children: [
                                             (0, i.jsx)(o.D, {
-                                                className: L.Qw,
+                                                className: D.Qw,
                                                 variant: "heading-xl/normal",
                                                 color: "text-strong",
-                                                children: O.intl.string(O.t.NThqTw),
+                                                children: C.intl.string(C.t.NThqTw),
                                             }),
-                                            (0, i.jsx)(c.A, { color: l.A.colors.ICON_STRONG, size: "sm" }),
+                                            (0, i.jsx)(_.A, { color: l.A.colors.ICON_STRONG, size: "sm" }),
                                         ],
                                     }),
                                 (0, i.jsx)(o.D, {
                                     variant: "text-sm/normal",
-                                    className: L.W$,
-                                    children: O.intl.string(O.t.IgENJo),
+                                    className: D.W$,
+                                    children: C.intl.string(C.t.IgENJo),
                                 }),
                             ],
                         }),
                         s?.(),
                     ],
                 }),
-                (0, i.jsx)(d.B, {
+                (0, i.jsx)(u.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
                     style: { marginTop: 16 },
-                    children: (0, i.jsx)(b, { disabled: n, size: _ }),
+                    children: (0, i.jsx)(L, { disabled: n, size: c }),
                 }),
             ],
         }),

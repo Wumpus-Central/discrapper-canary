@@ -1,41 +1,41 @@
 "use strict";
-n.d(t, { $: () => u, p: () => c });
-var l = n(192308),
-    i = n(486020),
+n.d(t, { $: () => c, p: () => u });
+var i = n(192308),
+    r = n(486020),
     s = n(339143),
     a = n(80569),
-    r = n(157559),
-    o = n(985018);
-function c() {
+    o = n(157559),
+    l = n(375708);
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     if (!(0, s.W)()) {
-        (0, l.closeModal)(a.y), e.onClose?.();
+        (0, i.closeModal)(a.y), e.onClose?.();
         return;
     }
     !(function (e) {
         let { onConfirm: t } = e;
-        r.A.show({
-            title: o.intl.string(o.t.rWQr9U),
-            body: o.intl.string(o.t["7Aa3S7"]),
-            confirmText: o.intl.string(o.t["/k52hw"]),
+        o.A.show({
+            title: l.intl.string(l.t.rWQr9U),
+            body: l.intl.string(l.t["7Aa3S7"]),
+            confirmText: l.intl.string(l.t["/k52hw"]),
             confirmVariant: "critical-primary",
-            cancelText: o.intl.string(o.t["4nkxA+"]),
+            cancelText: l.intl.string(l.t["4nkxA+"]),
             onConfirm: t,
             onCancel: () => {
-                r.A.close();
+                o.A.close();
             },
         });
     })({
         onConfirm: () => {
-            (0, l.closeModal)(a.y), e.onClose?.();
+            (0, i.closeModal)(a.y), e.onClose?.();
         },
     });
 }
-async function u(e) {
-    let t = i.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: 128, forcePNG: !0 }),
+async function c(e) {
+    let t = r.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: 128, forcePNG: !0 }),
         n = await fetch(t),
-        l = await n.blob(),
-        s = l.type;
+        i = await n.blob(),
+        s = i.type;
     (null == s || "application/octet-stream" === s) &&
         (s = t.includes(".gif")
             ? "image/gif"
@@ -44,11 +44,11 @@ async function u(e) {
               : e.animated
                 ? "image/gif"
                 : "image/png");
-    let a = new File([l], `${e.name}.${s.split("/")[1]}`, { type: s });
+    let a = new File([i], `${e.name}.${s.split("/")[1]}`, { type: s });
     return {
         data: await new Promise((e, t) => {
             let n = new FileReader();
-            (n.onloadend = () => e(n.result)), (n.onerror = t), n.readAsDataURL(l);
+            (n.onloadend = () => e(n.result)), (n.onerror = t), n.readAsDataURL(i);
         }),
         file: a,
         image: null,

@@ -16,12 +16,12 @@ var a = n(627968),
     v = n(303136),
     g = n(366505),
     C = n(976860),
-    A = n(309954),
-    N = n(287809),
-    R = n(975571),
-    k = n(474090),
-    E = n(920050),
-    b = n(94264),
+    b = n(309954),
+    A = n(287809),
+    N = n(975571),
+    R = n(474090),
+    k = n(920050),
+    E = n(94264),
     p = n(549384),
     S = n(566119),
     y = n(788868),
@@ -32,28 +32,28 @@ var a = n(627968),
     _ = n(757705),
     L = n(268920),
     w = n(633217),
-    B = n(909340);
-let P = () =>
+    P = n(909340);
+let B = () =>
     (0, a.jsx)("div", { className: _.s, children: (0, a.jsx)(v.A, { src: w.A, fallbackImage: L.A, className: _.Cb }) });
 function F() {
-    (0, S.RQ)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ perk: E.NITRO_ORBS_REWARDS_CARD_ID }) });
+    (0, S.RQ)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ perk: k.NITRO_ORBS_REWARDS_CARD_ID }) });
 }
 function U() {
     (0, S.gP)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ section: p.L }) });
 }
 function I() {
-    (0, S.b)(), window.open(R.A.getArticleURL(O.MVz.ORBS_FAQ), "_blank");
+    (0, S.b)(), window.open(N.A.getArticleURL(O.MVz.ORBS_FAQ), "_blank");
 }
 function $(e) {
     let { targetElementRef: t, shouldShow: n, onRequestClose: r, ctaText: i, ctaOnClick: u } = e,
         { passesGeneralUIInvariant: o, programReward: C } = (0, g.F)({
             location: "PremiumTenureRewardsOrbsBalancePopover",
         }),
-        R = (0, d.bG)([N.default], () => N.default.getCurrentUser()),
-        { balance: E } = (0, A.W)(),
-        p = !(0, k.ki)(R),
+        N = (0, d.bG)([A.default], () => A.default.getCurrentUser()),
+        { balance: k } = (0, b.W)(),
+        p = !(0, R.ki)(N),
         S = l.useMemo(() => {
-            let e = (0, k.YE)(R, y.PremiumTypes.TIER_2);
+            let e = (0, R.YE)(N, y.PremiumTypes.TIER_2);
             if (!o || p) return null;
             if (e && null != C) {
                 let e = (0, c.default)(new Date(C.next_reward_date), new Date());
@@ -67,13 +67,13 @@ function $(e) {
                                 deepLinkToNitroOrbs: F,
                             }),
                         }),
-                        (0, a.jsx)(b.A, {}),
+                        (0, a.jsx)(E.A, {}),
                     ],
                 });
             }
             return null;
-        }, [R, p, C, o]),
-        D = (E ?? 0) >= 4100;
+        }, [N, p, C, o]),
+        D = (k ?? 0) >= 4100;
     return (0, a.jsx)(m.x, {
         targetElementRef: t,
         shouldShow: n,
@@ -88,7 +88,7 @@ function $(e) {
                 (0, a.jsxs)("div", {
                     className: s()(e, _.j),
                     children: [
-                        D && (0, a.jsx)(v.A, { src: B.A, className: _.yG }),
+                        D && (0, a.jsx)(v.A, { src: P.A, className: _.yG }),
                         (0, a.jsxs)("div", {
                             className: _.Qs,
                             children: [
@@ -96,18 +96,18 @@ function $(e) {
                                 (0, a.jsxs)("div", {
                                     className: _.hQ,
                                     children: [
-                                        (0, a.jsx)(P, {}),
+                                        (0, a.jsx)(B, {}),
                                         (0, a.jsxs)("div", {
                                             className: _.y$,
                                             children: [
-                                                (E ?? 0) > 0 &&
+                                                (k ?? 0) > 0 &&
                                                     (0, a.jsxs)("div", {
                                                         className: _.E2,
                                                         children: [
                                                             (0, a.jsx)(f.E, {
                                                                 variant: "display-lg",
                                                                 className: _.K,
-                                                                children: E ?? 0,
+                                                                children: k ?? 0,
                                                             }),
                                                             (0, a.jsx)(f.E, {
                                                                 variant: "text-xs/normal",
@@ -143,10 +143,10 @@ function $(e) {
         }),
     });
 }
-var z = n(636592),
-    K = n(26508),
-    V = n(318346),
-    W = n(305003),
+var z = n(440005),
+    W = n(49132),
+    K = n(318346),
+    V = n(305003),
     q = n(162097),
     G = n(922016);
 n(964486), n(786953);
@@ -184,71 +184,71 @@ let H = { START: Y.Vl, END: Y.Wk },
                 cardAlignment: d = H.START,
                 className: m,
             } = e,
-            { balance: x } = (0, A.W)(),
-            f = (0, K.DK)(z.W.NITRO, "BalanceWidgetMenu"),
-            [h, j] = l.useState(W.k.DEFAULT),
+            { balance: x } = (0, b.W)(),
+            f = (0, W.DK)(z.W.NITRO, "BalanceWidgetMenu"),
+            [h, j] = l.useState(V.k.DEFAULT),
             [v, g] = l.useState(!1),
-            [C, N] = l.useState(!1),
-            R = l.useRef(null);
+            [C, A] = l.useState(!1),
+            N = l.useRef(null);
         (0, u.j)(!v);
-        let k = l.useCallback(() => {
+        let R = l.useCallback(() => {
                 let e = !v;
                 e &&
                     null != c &&
-                    (0, V.Y)({
+                    (0, K.Y)({
                         pageType: c,
                         sectionType: O.JJy.ORBS_BALANCE_MENU,
                         ctaObject: O.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                     }),
-                    j(e ? W.k.SELECTED : W.k.DEFAULT),
+                    j(e ? V.k.SELECTED : V.k.DEFAULT),
                     g(e);
             }, [v, c]),
-            E = l.useCallback(() => {
-                v && k();
-            }, [v, k]),
-            b = (0, i.A)(null, E),
+            k = l.useCallback(() => {
+                v && R();
+            }, [v, R]),
+            E = (0, i.A)(null, k),
             p = l.useMemo(
                 () =>
                     (0, a.jsx)(q.b, {
                         analyticsPage: c,
                         ctaText: n,
                         ctaOnClick: () => {
-                            k(), r();
+                            R(), r();
                         },
                         linkText: o,
                     }),
-                [c, n, o, k, r],
+                [c, n, o, R, r],
             ),
             S = l.useMemo(
                 () =>
                     (0, a.jsx)($, {
-                        targetElementRef: R,
+                        targetElementRef: N,
                         shouldShow: v,
-                        onRequestClose: k,
+                        onRequestClose: R,
                         ctaText: n,
                         ctaOnClick: () => {
-                            k(), r();
+                            R(), r();
                         },
                     }),
-                [v, k, n, r],
+                [v, R, n, r],
             );
         return (0, a.jsxs)("div", {
             className: s()(Y.kL, m, { [Y.R]: C, [Y.RK]: !C }),
             children: [
                 (0, a.jsx)(X, {
-                    pillRef: R,
+                    pillRef: N,
                     balance: x,
                     balanceWidgetMode: h,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: k,
+                    onClick: R,
                     showNotificationBadge: t,
                 }),
                 f
                     ? S
                     : v &&
-                      (0, a.jsx)("div", { className: s()(Y.Ui, d, { [Y.R]: C, [Y.RK]: !C }), ref: b, children: p }),
+                      (0, a.jsx)("div", { className: s()(Y.Ui, d, { [Y.R]: C, [Y.RK]: !C }), ref: E, children: p }),
             ],
         });
     };

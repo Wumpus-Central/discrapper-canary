@@ -6,9 +6,9 @@ n.d(t, {
                 ? t
                 : t instanceof Array
                   ? t.map(e).join("")
-                  : r.isValidElement(t)
+                  : i.isValidElement(t)
                     ? e(t.props.children)
                     : void 0;
         },
 });
-var r = n(64700);
+var i = n(64700);

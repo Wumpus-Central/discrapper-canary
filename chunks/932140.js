@@ -1,48 +1,48 @@
-r.d(t, { default: () => _ });
-var l = r(627968),
-    a = r(64700),
-    o = r(192308),
-    n = r(930932),
-    i = r(612479),
-    d = r(954571),
-    s = r(652215),
-    u = r(670455),
-    c = r(985018);
-let b = ["OTHER"];
-function _(e) {
-    let { analyticsData: t, transitionState: _, onClose: g } = e;
+l.d(t, { default: () => C });
+var a = l(627968),
+    n = l(64700),
+    i = l(192308),
+    r = l(930932),
+    d = l(612479),
+    o = l(174459),
+    u = l(652215),
+    s = l(670455),
+    b = l(375708);
+let c = ["OTHER"];
+function C(e) {
+    let { analyticsData: t, transitionState: C, onClose: E } = e;
     return (
-        a.useEffect(() => {
-            d.default.track(s.HAw.OPEN_MODAL, { type: "Video Background Feedback" });
+        n.useEffect(() => {
+            o.default.track(u.HAw.OPEN_MODAL, { type: "Video Background Feedback" });
         }, []),
-        (0, l.jsx)(i.A, {
+        (0, a.jsx)(d.A, {
             modalType: "video_background",
-            header: c.intl.string(c.t.Wl8qXg),
-            body: c.intl.string(c.t.vPw6j0),
-            problemTitle: c.intl.string(c.t.UNFF85),
+            header: b.intl.string(b.t.Wl8qXg),
+            body: b.intl.string(b.t.vPw6j0),
+            problemTitle: b.intl.string(b.t.UNFF85),
             problems: [
-                { value: "BAD_OUTLINE", label: c.intl.string(c.t.pyhS3j) },
-                { value: "BACKGROUND_DETECTION_ACCURACY", label: c.intl.string(c.t.cymRTb) },
-                { value: "FLICKERING", label: c.intl.string(c.t.xZ60CB) },
-                { value: "BACKGROUND_DETECTION_LAG", label: c.intl.string(c.t.DweTcb) },
-                { value: "OTHER", label: c.intl.string(c.t.emlT91) },
+                { value: "BAD_OUTLINE", label: b.intl.string(b.t.pyhS3j) },
+                { value: "BACKGROUND_DETECTION_ACCURACY", label: b.intl.string(b.t.cymRTb) },
+                { value: "FLICKERING", label: b.intl.string(b.t.xZ60CB) },
+                { value: "BACKGROUND_DETECTION_LAG", label: b.intl.string(b.t.DweTcb) },
+                { value: "OTHER", label: b.intl.string(b.t.emlT91) },
             ],
-            freeformNeededProblems: b,
+            freeformNeededProblems: c,
             onSubmit: function (e) {
-                var a;
-                let { rating: i, problem: b, dontShowAgain: _, feedback: g } = e;
-                _ && (0, n.n3)({ feedbackType: u.MW.VIDEO_BACKGROUND, location: "VideoBackgroundFeedbackModal" }),
-                    null != i &&
-                        ((a = b?.value ?? null),
-                        d.default.track(s.HAw.VIDEO_BACKGROUND_FEEDBACK, { ...t, reason: a, rating: i, feedback: g }),
-                        null != b &&
-                            (0, o.openModalLazy)(async () => {
-                                let { default: e } = await r.e("37836").then(r.bind(r, 845671));
-                                return (t) => (0, l.jsx)(e, { body: c.intl.string(c.t.aHB11f), ...t });
+                var n;
+                let { rating: d, problem: c, dontShowAgain: C, feedback: E } = e;
+                C && (0, r.n3)({ feedbackType: s.MW.VIDEO_BACKGROUND, location: "VideoBackgroundFeedbackModal" }),
+                    null != d &&
+                        ((n = c?.value ?? null),
+                        o.default.track(u.HAw.VIDEO_BACKGROUND_FEEDBACK, { ...t, reason: n, rating: d, feedback: E }),
+                        null != c &&
+                            (0, i.openModalLazy)(async () => {
+                                let { default: e } = await l.e("37836").then(l.bind(l, 845671));
+                                return (t) => (0, a.jsx)(e, { body: b.intl.string(b.t.aHB11f), ...t });
                             }));
             },
-            onClose: g,
-            transitionState: _,
+            onClose: E,
+            transitionState: C,
             otherKey: "OTHER",
         })
     );

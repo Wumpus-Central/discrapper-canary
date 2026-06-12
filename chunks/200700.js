@@ -1,26 +1,26 @@
 "use strict";
 n.d(t, {
     DisableCommunicationDuration: () => o,
-    MO: () => d,
+    MO: () => c,
     Rv: () => _,
-    aZ: () => f,
+    aZ: () => h,
     getFriendlyDurationString: () => l,
-    hl: () => E,
-    hs: () => c,
+    hl: () => f,
+    hs: () => d,
     ny: () => u,
 });
-var r,
-    i = n(975571),
+var i,
+    r = n(975571),
     s = n(652215),
-    a = n(985018),
+    a = n(375708),
     o =
-        (((r = {})[(r.DURATION_60_SEC = 60)] = "DURATION_60_SEC"),
-        (r[(r.DURATION_5_MIN = 300)] = "DURATION_5_MIN"),
-        (r[(r.DURATION_10_MIN = 600)] = "DURATION_10_MIN"),
-        (r[(r.DURATION_1_HOUR = 3600)] = "DURATION_1_HOUR"),
-        (r[(r.DURATION_1_DAY = 86400)] = "DURATION_1_DAY"),
-        (r[(r.DURATION_1_WEEK = 604800)] = "DURATION_1_WEEK"),
-        r);
+        (((i = {})[(i.DURATION_60_SEC = 60)] = "DURATION_60_SEC"),
+        (i[(i.DURATION_5_MIN = 300)] = "DURATION_5_MIN"),
+        (i[(i.DURATION_10_MIN = 600)] = "DURATION_10_MIN"),
+        (i[(i.DURATION_1_HOUR = 3600)] = "DURATION_1_HOUR"),
+        (i[(i.DURATION_1_DAY = 86400)] = "DURATION_1_DAY"),
+        (i[(i.DURATION_1_WEEK = 604800)] = "DURATION_1_WEEK"),
+        i);
 function l(e) {
     switch (e) {
         case 60:
@@ -46,8 +46,8 @@ let u = () =>
                 let t = l(o[e]) ?? "";
                 return { id: e, label: t, value: o[e] };
             }),
-    d = i.A.getArticleURL(s.MVz.DISABLE_GUILD_COMMUNICATION),
-    c = "GuildCommunicationDisabledDismissedGuilds",
+    c = r.A.getArticleURL(s.MVz.DISABLE_GUILD_COMMUNICATION),
+    d = "GuildCommunicationDisabledDismissedGuilds",
     _ = "Set Communication Disabled Modal",
-    f = "Clear Communication Disabled Modal",
-    E = 512;
+    h = "Clear Communication Disabled Modal",
+    f = 512;

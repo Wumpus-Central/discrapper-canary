@@ -1,4 +1,4 @@
-t.d(s, { A: () => I });
+t.d(s, { A: () => E });
 var i = t(627968),
     a = t(64700),
     l = t(17928),
@@ -19,17 +19,17 @@ var i = t(627968),
     A = t(788868),
     v = t(375708),
     b = t(50596);
-let I = l.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser() }))((e) => {
+let E = l.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser() }))((e) => {
     let { user: s } = e,
         t = (0, l.bG)([N.default], () => N.default.isAuthenticated()),
         j = (0, p.TW)(s, A.PremiumTypes.TIER_2),
-        I = (0, o.Ay)(),
+        E = (0, o.Ay)(),
         C = (0, h.Gh)("nitro_home_header"),
-        E = a.useRef(null);
+        I = a.useRef(null);
     return (0, i.jsx)(c.A, {
         section: f.JJy.NAVIGATION,
         children: (0, i.jsx)(n.N, {
-            theme: I,
+            theme: E,
             children: (e) =>
                 (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -41,7 +41,7 @@ let I = l.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser(
                                       className: b.fI,
                                       children: [
                                           (0, i.jsx)(g.l, {
-                                              ref: E,
+                                              ref: I,
                                               size: "sm",
                                               variant: "secondary",
                                               location: d.A.PREMIUM_WISHLIST_NITRO_MEMBER_HUB,
@@ -56,7 +56,7 @@ let I = l.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser(
                                 (0, i.jsx)(m.A.Title, { children: v.intl.string(v.t.Ipxkog) }),
                             ],
                         }),
-                        C && j && (0, i.jsx)(u.O, { targetElementRef: E, body: v.intl.string(v.t.EqUw7K) }),
+                        C && j && (0, i.jsx)(u.O, { targetElementRef: I, body: v.intl.string(v.t.EqUw7K) }),
                     ],
                 }),
         }),

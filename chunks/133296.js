@@ -1,8 +1,8 @@
-n.d(t, { A: () => s });
-var i = n(627968),
-    l = n(64700),
-    a = n(451988);
-class r extends l.Component {
+s.d(t, { A: () => o });
+var i = s(627968),
+    r = s(64700),
+    a = s(451988);
+class h extends r.Component {
     timer = new a.IX();
     state = { hovered: !1 };
     static defaultProps = { disable: !1, pauseOnHover: !1 };
@@ -11,22 +11,22 @@ class r extends l.Component {
     }
     componentDidMount() {
         let { pauseOnHover: e, disable: t } = this.props,
-            n = this.state.hovered && e;
-        t || n || this.startTimer();
+            s = this.state.hovered && e;
+        t || s || this.startTimer();
     }
     componentWillUnmount() {
         this.stopTimer();
     }
     componentDidUpdate(e, t) {
-        let { props: n } = this,
+        let { props: s } = this,
             i = (e, t) => !e.disable && !(t.hovered && e.pauseOnHover),
-            l = i(n, this.state),
+            r = i(s, this.state),
             a = i(e, t);
-        (l && !a) || e.interval !== n.interval ? this.startTimer() : !l && a && this.stopTimer();
+        (r && !a) || e.interval !== s.interval ? this.startTimer() : !r && a && this.stopTimer();
     }
     startTimer() {
-        let { interval: e, onInterval: t, disable: n } = this.props;
-        n ||
+        let { interval: e, onInterval: t, disable: s } = this.props;
+        s ||
             this.timer.start(e, () => {
                 t();
             });
@@ -41,8 +41,8 @@ class r extends l.Component {
         this.setState({ hovered: !1 });
     };
     render() {
-        let { children: e, className: t, disable: n } = this.props,
-            l = n
+        let { children: e, className: t, disable: s } = this.props,
+            r = s
                 ? null
                 : {
                       onMouseEnter: this.handlePause,
@@ -50,7 +50,7 @@ class r extends l.Component {
                       onMouseLeave: this.handleResume,
                       onBlur: this.handleResume,
                   };
-        return (0, i.jsx)("div", { ...l, className: t, children: e });
+        return (0, i.jsx)("div", { ...r, className: t, children: e });
     }
 }
-let s = r;
+let o = h;

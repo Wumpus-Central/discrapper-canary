@@ -1,7 +1,7 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = /[\p{XID_Start}_]\p{XID_Continue}*/u,
-        n = [
+        n = /[\p{XID_Start}_]\p{XID_Continue}*/u,
+        i = [
             "and",
             "as",
             "assert",
@@ -39,7 +39,7 @@ e.exports = function (e) {
         ],
         r = {
             $pattern: /[A-Za-z]\w+|__\w+__/,
-            keyword: n,
+            keyword: i,
             built_in: [
                 "__import__",
                 "abs",
@@ -128,9 +128,9 @@ e.exports = function (e) {
                 "Union",
             ],
         },
-        i = { className: "meta", begin: /^(>>>|\.\.\.) / },
-        o = { className: "subst", begin: /\{/, end: /\}/, keywords: r, illegal: /#/ },
-        s = { begin: /\{\{/, relevance: 0 },
+        s = { className: "meta", begin: /^(>>>|\.\.\.) / },
+        a = { className: "subst", begin: /\{/, end: /\}/, keywords: r, illegal: /#/ },
+        o = { begin: /\{\{/, relevance: 0 },
         l = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE],
@@ -138,51 +138,51 @@ e.exports = function (e) {
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?'''/,
                     end: /'''/,
-                    contains: [e.BACKSLASH_ESCAPE, i],
+                    contains: [e.BACKSLASH_ESCAPE, s],
                     relevance: 10,
                 },
                 {
                     begin: /([uU]|[bB]|[rR]|[bB][rR]|[rR][bB])?"""/,
                     end: /"""/,
-                    contains: [e.BACKSLASH_ESCAPE, i],
+                    contains: [e.BACKSLASH_ESCAPE, s],
                     relevance: 10,
                 },
-                { begin: /([fF][rR]|[rR][fF]|[fF])'''/, end: /'''/, contains: [e.BACKSLASH_ESCAPE, i, s, o] },
-                { begin: /([fF][rR]|[rR][fF]|[fF])"""/, end: /"""/, contains: [e.BACKSLASH_ESCAPE, i, s, o] },
+                { begin: /([fF][rR]|[rR][fF]|[fF])'''/, end: /'''/, contains: [e.BACKSLASH_ESCAPE, s, o, a] },
+                { begin: /([fF][rR]|[rR][fF]|[fF])"""/, end: /"""/, contains: [e.BACKSLASH_ESCAPE, s, o, a] },
                 { begin: /([uU]|[rR])'/, end: /'/, relevance: 10 },
                 { begin: /([uU]|[rR])"/, end: /"/, relevance: 10 },
                 { begin: /([bB]|[bB][rR]|[rR][bB])'/, end: /'/ },
                 { begin: /([bB]|[bB][rR]|[rR][bB])"/, end: /"/ },
-                { begin: /([fF][rR]|[rR][fF]|[fF])'/, end: /'/, contains: [e.BACKSLASH_ESCAPE, s, o] },
-                { begin: /([fF][rR]|[rR][fF]|[fF])"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, s, o] },
+                { begin: /([fF][rR]|[rR][fF]|[fF])'/, end: /'/, contains: [e.BACKSLASH_ESCAPE, o, a] },
+                { begin: /([fF][rR]|[rR][fF]|[fF])"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, o, a] },
                 e.APOS_STRING_MODE,
                 e.QUOTE_STRING_MODE,
             ],
         },
-        c = "[0-9](_?[0-9])*",
-        _ = `(\\b(${c}))?\\.(${c})|\\b(${c})\\.`,
-        d = `\\b|${n.join("|")}`,
-        m = {
+        u = "[0-9](_?[0-9])*",
+        c = `(\\b(${u}))?\\.(${u})|\\b(${u})\\.`,
+        d = `\\b|${i.join("|")}`,
+        _ = {
             className: "number",
             relevance: 0,
             variants: [
-                { begin: `(\\b(${c})|(${_}))[eE][+-]?(${c})[jJ]?(?=${d})` },
-                { begin: `(${_})[jJ]?` },
+                { begin: `(\\b(${u})|(${c}))[eE][+-]?(${u})[jJ]?(?=${d})` },
+                { begin: `(${c})[jJ]?` },
                 { begin: `\\b([1-9](_?[0-9])*|0+(_?0)*)[lLjJ]?(?=${d})` },
                 { begin: `\\b0[bB](_?[01])+[lL]?(?=${d})` },
                 { begin: `\\b0[oO](_?[0-7])+[lL]?(?=${d})` },
                 { begin: `\\b0[xX](_?[0-9a-fA-F])+[lL]?(?=${d})` },
-                { begin: `\\b(${c})[jJ](?=${d})` },
+                { begin: `\\b(${u})[jJ](?=${d})` },
             ],
         },
-        p = {
+        h = {
             className: "comment",
             begin: t.lookahead(/# type:/),
             end: /$/,
             keywords: r,
             contains: [{ begin: /# type:/ }, { begin: /#/, end: /\b\B/, endsWithParent: !0 }],
         },
-        u = {
+        f = {
             className: "params",
             variants: [
                 { className: "", begin: /\(\s*\)/, skip: !0 },
@@ -192,12 +192,12 @@ e.exports = function (e) {
                     excludeBegin: !0,
                     excludeEnd: !0,
                     keywords: r,
-                    contains: ["self", i, m, l, e.HASH_COMMENT_MODE],
+                    contains: ["self", s, _, l, e.HASH_COMMENT_MODE],
                 },
             ],
         };
     return (
-        (o.contains = [l, m, i]),
+        (a.contains = [l, _, s]),
         {
             name: "Python",
             aliases: ["py", "gyp", "ipython"],
@@ -205,23 +205,23 @@ e.exports = function (e) {
             keywords: r,
             illegal: /(<\/|\?)|=>/,
             contains: [
-                i,
-                m,
+                s,
+                _,
                 { scope: "variable.language", match: /\bself\b/ },
                 { beginKeywords: "if", relevance: 0 },
                 { match: /\bor\b/, scope: "keyword" },
                 l,
-                p,
+                h,
                 e.HASH_COMMENT_MODE,
-                { match: [/\bdef/, /\s+/, a], scope: { 1: "keyword", 3: "title.function" }, contains: [u] },
+                { match: [/\bdef/, /\s+/, n], scope: { 1: "keyword", 3: "title.function" }, contains: [f] },
                 {
                     variants: [
-                        { match: [/\bclass/, /\s+/, a, /\s*/, /\(\s*/, a, /\s*\)/] },
-                        { match: [/\bclass/, /\s+/, a] },
+                        { match: [/\bclass/, /\s+/, n, /\s*/, /\(\s*/, n, /\s*\)/] },
+                        { match: [/\bclass/, /\s+/, n] },
                     ],
                     scope: { 1: "keyword", 3: "title.class", 6: "title.class.inherited" },
                 },
-                { className: "meta", begin: /^[\t ]*@/, end: /(?=#)|$/, contains: [m, u, l] },
+                { className: "meta", begin: /^[\t ]*@/, end: /(?=#)|$/, contains: [_, f, l] },
             ],
         }
     );

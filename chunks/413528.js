@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => m });
-var r = n(439372),
-    i = n(400492),
+n.d(t, { A: () => E });
+var i = n(439372),
+    r = n(400492),
     s = n(312671),
     a = n(470710),
     o = n(734057),
@@ -10,9 +10,9 @@ var r = n(439372),
     c = n(351906),
     d = n(977997),
     _ = n(607567),
-    f = n(313961);
-let p = (0, i.aN)("call_calling", s.A.getSoundpack());
-class h extends r.A {
+    h = n(313961);
+let f = (0, r.aN)("call_calling", s.A.getSoundpack());
+class p extends i.A {
     #e = new Set();
     _initialize() {
         this.stores = new Map()
@@ -20,7 +20,7 @@ class h extends r.A {
             .set(l.A, this.handleRingUpdate)
             .set(c.A, this.handleRingUpdate)
             .set(d.A, this.handleRingUpdate)
-            .set(f.A, this.handleChannelRTCStoreChange)
+            .set(h.A, this.handleChannelRTCStoreChange)
             .set(s.A, this.handleSoundpackUpdate);
     }
     actions = {
@@ -29,11 +29,11 @@ class h extends r.A {
     };
     _handleRing = (e, t) => {
         let n = d.A.getCurrentClientVoiceChannelId(t),
-            r = null != n && _.Ay.countVoiceStatesForChannel(n) >= 2;
-        null == n || r || !e || l.A.isSoundDisabled("call_calling") || c.A.disableSounds ? p.stop() : p.loop();
+            i = null != n && _.Ay.countVoiceStatesForChannel(n) >= 2;
+        null == n || i || !e || l.A.isSoundDisabled("call_calling") || c.A.disableSounds ? f.stop() : f.loop();
     };
     handleSoundpackUpdate = () => {
-        p.stop(), (p = (0, i.aN)("call_calling", s.A.getSoundpack()));
+        f.stop(), (f = (0, r.aN)("call_calling", s.A.getSoundpack()));
     };
     handleRingUpdate = () => {
         let e = u.A.getVoiceChannelId(),
@@ -65,7 +65,7 @@ class h extends r.A {
             return;
         }
         if (null == e) return;
-        let t = f.A.getGuildRingingUsers(e),
+        let t = h.A.getGuildRingingUsers(e),
             n = new Set([...this.#e].filter((e) => !t.has(e)));
         n.size > 0 &&
             (n.forEach((e) => {
@@ -74,4 +74,4 @@ class h extends r.A {
             this._handleRing(this.#e.size > 0, null));
     };
 }
-let m = new h();
+let E = new p();

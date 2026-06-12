@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => u, j: () => _ }), n(938796);
+n.d(t, { A: () => d, j: () => c }), n(938796);
 var i = n(665260),
     r = n(17928),
     s = n(164956),
     a = n(696451),
     o = n(927813),
     l = n(340837);
-function d(e, t, n) {
+function u(e, t, n) {
     if (n.isFullServerPreview(e)) return !0;
     let r = t.getSelfMember(e);
     if (null == r) return !1;
@@ -16,9 +16,9 @@ function d(e, t, n) {
         Date.now() - s.getTime() < o.A.Millis.WEEK
     );
 }
-function _(e) {
-    return d(e, a.Ay, s.A);
+function c(e) {
+    return u(e, a.Ay, s.A);
 }
-function u(e) {
-    return (0, r.bG)([a.Ay, s.A], () => d(e, a.Ay, s.A));
+function d(e) {
+    return (0, r.bG)([a.Ay, s.A], () => u(e, a.Ay, s.A));
 }

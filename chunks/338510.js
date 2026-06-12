@@ -1,13 +1,13 @@
-n.d(t, { u: () => a });
-var i = n(617641),
-    l = n(168447),
-    s = n(546140);
-function a(e) {
-    let t = (0, i.Lc)({ location: "safety-tools-button" }),
-        n = (0, s.L)(),
-        a = (0, l.Y)(e);
-    if (!t || !n) return;
-    let r = a.filter((e) => null != e.dismiss_timestamp);
-    if (0 !== r.length)
-        return r.sort((e, t) => (e.type > t.type || e.dismiss_timestamp < t.dismiss_timestamp ? 1 : -1))[0];
+e.d(i, { u: () => r });
+var s = e(617641),
+    n = e(168447),
+    l = e(546140);
+function r(t) {
+    let i = (0, s.Lc)({ location: "safety-tools-button" }),
+        e = (0, l.L)(),
+        r = (0, n.Y)(t);
+    if (!i || !e) return;
+    let m = r.filter((t) => null != t.dismiss_timestamp);
+    if (0 !== m.length)
+        return m.sort((t, i) => (t.type > i.type || t.dismiss_timestamp < i.dismiss_timestamp ? 1 : -1))[0];
 }

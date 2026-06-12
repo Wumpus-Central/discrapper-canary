@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { y: () => d });
+n.d(t, { y: () => u });
 var i = n(636537),
     r = n(228366),
     s = n(71393),
     a = n(958340),
     o = n(652215);
 let l = new Set();
-async function d(e) {
+async function u(e) {
     if (null == s.A.getGuild(e) && null == a.A.getGuildOrStatus(e) && !l.has(e)) {
         r.h.dispatch({ type: "BASIC_GUILD_FETCH", guildId: e }), l.add(e);
         try {

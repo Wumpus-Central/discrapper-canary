@@ -1,9 +1,9 @@
-function t(e, a = {}) {
-    return (a.variants = e), a;
+function t(e, n = {}) {
+    return (n.variants = e), n;
 }
 e.exports = function (e) {
-    let a = e.regex,
-        n = "[A-Za-z0-9_$]+",
+    let n = e.regex,
+        i = "[A-Za-z0-9_$]+",
         r = t([
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
@@ -15,9 +15,9 @@ e.exports = function (e) {
                 ],
             }),
         ]),
-        i = { className: "regexp", begin: /~?\/[^\/\n]+\//, contains: [e.BACKSLASH_ESCAPE] },
-        o = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
-        s = t(
+        s = { className: "regexp", begin: /~?\/[^\/\n]+\//, contains: [e.BACKSLASH_ESCAPE] },
+        a = t([e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE]),
+        o = t(
             [
                 { begin: /"""/, end: /"""/ },
                 { begin: /'''/, end: /'''/ },
@@ -82,18 +82,18 @@ e.exports = function (e) {
         contains: [
             e.SHEBANG({ binary: "groovy", relevance: 10 }),
             r,
-            s,
-            i,
             o,
+            s,
+            a,
             l,
             { className: "meta", begin: "@[A-Za-z]+", relevance: 0 },
-            { className: "attr", begin: n + "[ 	]*:", relevance: 0 },
-            { begin: /\?/, end: /:/, relevance: 0, contains: [r, s, i, o, "self"] },
+            { className: "attr", begin: i + "[ 	]*:", relevance: 0 },
+            { begin: /\?/, end: /:/, relevance: 0, contains: [r, o, s, a, "self"] },
             {
                 className: "symbol",
-                begin: "^[ 	]*" + a.lookahead(n + ":"),
+                begin: "^[ 	]*" + n.lookahead(i + ":"),
                 excludeBegin: !0,
-                end: n + ":",
+                end: i + ":",
                 relevance: 0,
             },
         ],

@@ -12,7 +12,7 @@ var l = i(17928),
     c = i(47167),
     _ = i(652215),
     m = i(355097),
-    o = i(985018);
+    o = i(375708);
 let p = () => [
     { value: m.Xx.MINUTES_15, label: o.intl.string(o.t["8ot6gv"]) },
     { value: m.Xx.HOURS_1, label: o.intl.string(o.t.UMWBZr) },

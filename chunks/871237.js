@@ -1,18 +1,18 @@
 "use strict";
 n.d(t, {
     Jz: () => D,
-    we: () => O,
-    DJ: () => k,
+    we: () => R,
+    DJ: () => U,
     n: () => x,
     fK: () => L,
     Pd: () => b,
     QG: () => M,
-    n3: () => v,
-    IP: () => R,
+    n3: () => C,
+    IP: () => O,
     vJ: () => P,
-    af: () => U,
+    af: () => k,
     Jg: () => w,
-    CG: () => C,
+    CG: () => v,
     an: () => s,
 }),
     n(321073);
@@ -32,8 +32,8 @@ var a = n(669715),
     c = n(734057),
     d = n(808728),
     _ = n(576705),
-    f = n(309010),
-    h = n(607567),
+    h = n(309010),
+    f = n(607567),
     p = n(488926),
     E = n(935208);
 n(427262);
@@ -41,18 +41,18 @@ var m = n(652215),
     g = n(788868),
     A = n(375708);
 let { GUILD_VOICE: I, GUILD_CATEGORY: T, GUILD_STAGE_VOICE: S } = m.rbe;
-function N(e, t) {
+function y(e, t) {
     return e === t || e === T;
 }
-function y(e, t, n) {
+function N(e, t, n) {
     let r = p.x3;
     return (
         ((0, u.tr)(t) || t === T) && (r = i.WQ(r, m.xBc.VIEW_CHANNEL)),
-        (N(t, I) || N(t, S)) && ((r = i.WQ(r, m.xBc.VIEW_CHANNEL)), (r = i.WQ(r, m.xBc.CONNECT))),
+        (y(t, I) || y(t, S)) && ((r = i.WQ(r, m.xBc.VIEW_CHANNEL)), (r = i.WQ(r, m.xBc.CONNECT))),
         { id: e, type: n, deny: p.x3, allow: r }
     );
 }
-function C(e, t, n) {
+function v(e, t, n) {
     var s;
     let a,
         o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
@@ -63,22 +63,22 @@ function C(e, t, n) {
                 ((s = r.r2.ROLE),
                 (a = p.x3),
                 ((0, u.tr)(t) || t === T) && (a = i.WQ(a, m.xBc.VIEW_CHANNEL)),
-                N(t, I) && ((a = i.WQ(a, m.xBc.VIEW_CHANNEL)), (a = i.WQ(a, m.xBc.CONNECT))),
+                y(t, I) && ((a = i.WQ(a, m.xBc.VIEW_CHANNEL)), (a = i.WQ(a, m.xBc.CONNECT))),
                 { id: e, type: s, allow: p.x3, deny: a }),
             ),
         n.forEach((e) => {
-            l.push(y(e, t, r.r2.ROLE));
+            l.push(N(e, t, r.r2.ROLE));
         }),
         l
     );
 }
-function v(e, t) {
-    return y(e, t, r.r2.MEMBER);
+function C(e, t) {
+    return N(e, t, r.r2.MEMBER);
 }
-function O(e, t) {
-    return y(e, t, r.r2.ROLE);
+function R(e, t) {
+    return N(e, t, r.r2.ROLE);
 }
-function R(e) {
+function O(e) {
     return [{ id: e, type: r.r2.ROLE, deny: m.xBc.SEND_MESSAGES, allow: p.x3 }];
 }
 function b(e, t, n) {
@@ -86,16 +86,16 @@ function b(e, t, n) {
         r = n.getGuild(i),
         s = r?.maxVideoChannelUsers ?? -1,
         o = r?.maxStageVideoChannelUsers ?? -1,
-        l = h.Ay.countVoiceStatesForChannel(e.id),
-        u = h.Ay.getVoiceStatesForChannel(e),
+        l = f.Ay.countVoiceStatesForChannel(e.id),
+        u = f.Ay.getVoiceStatesForChannel(e),
         c = _.A.can(m.xBc.MOVE_MEMBERS, e) && _.A.can(m.xBc.CONNECT, e),
         d = !1;
     d =
         e.type === S
             ? null != i && (t.hasVideo(e.id) || (0, a.t)(u)) && o > 0 && l >= o
             : null != i && t.hasVideo(e.id) && s > 0 && l >= s + +!!c;
-    let f = e.userLimit > 0 && l >= e.userLimit;
-    return d || (f && !c);
+    let h = e.userLimit > 0 && l >= e.userLimit;
+    return d || (h && !c);
 }
 function D(e, t) {
     return t.isGuildStageVoice()
@@ -166,7 +166,7 @@ function M(e) {
 }
 function P(e) {
     let t,
-        n = c.A.getChannel(f.A.getLastSelectedChannelId());
+        n = c.A.getChannel(h.A.getLastSelectedChannelId());
     if (null != n && n.getGuildId() === e && n.type === m.rbe.GUILD_TEXT) t = n.id;
     else {
         let n = d.Ay.getDefaultChannel(e);
@@ -178,7 +178,7 @@ function x(e, t, n, i) {
     let r = null == i ? "" : `?summaryId=${i}`;
     return `${location.protocol}//${location.host}${m.BVt.CHANNEL(e, t, n)}${r}`;
 }
-function U(e, t, n, i) {
+function k(e, t, n, i) {
     let r,
         s = e.getGuildId(),
         a = (0, o.$m)(s, t);
@@ -194,7 +194,7 @@ function U(e, t, n, i) {
     } else r = i ?? x(s, e.id, n);
     return r;
 }
-function k(e) {
+function U(e) {
     if (null == e) return null;
     switch (e.type) {
         case m.rbe.GUILD_ANNOUNCEMENT:

@@ -3,8 +3,8 @@ var r = n(627968);
 n(64700);
 var i = n(17928),
     l = n(289873),
-    a = n(97808),
-    s = n(778712),
+    s = n(97808),
+    a = n(778712),
     c = n(775602),
     o = n(912140),
     u = n(674658),
@@ -21,22 +21,22 @@ function I(e) {
     if (h || null == p) return (0, r.jsx)(l.y, { type: l.t.PULSING_ELLIPSIS });
     let f = p.items[0];
     if (null == f || !(0, m.T)(f)) return null;
-    let E = (0, o.A)({ legacyAssetId: f.asset, skuId: f.skuId, size: n, canAnimate: !I });
-    return (0, r.jsx)(a.Js, {
+    let j = (0, o.A)({ legacyAssetId: f.asset, skuId: f.skuId, size: n, canAnimate: !I });
+    return (0, r.jsx)(s.Js, {
         "aria-label": T?.username,
         size: n,
         className: x,
-        src: g ?? T?.getAvatarURL(void 0, (0, s.FT)(n), !I),
-        avatarDecoration: E,
+        src: g ?? T?.getAvatarURL(void 0, (0, a.FT)(n), !I),
+        avatarDecoration: j,
     });
 }
 function p(e) {
-    let { maxRewardImageSrc: t, claimableRewards: n, size: l, imageScaling: a = 1.5 } = e,
+    let { maxRewardImageSrc: t, claimableRewards: n, size: l, imageScaling: s = 1.5 } = e,
         o = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
         u = (0, i.bG)([c.Ay], () => c.Ay.useReducedMotion),
-        m = (0, s.FT)(l);
+        m = (0, a.FT)(l);
     return n.length > 0
-        ? (0, r.jsx)("img", { alt: "", src: t, style: { height: m * a } })
+        ? (0, r.jsx)("img", { alt: "", src: t, style: { height: m * s } })
         : (0, r.jsxs)("div", {
               className: g.kL,
               children: [
@@ -45,7 +45,7 @@ function p(e) {
                           skuId: n[0],
                           size: l,
                           className: g.M8,
-                          src: 1 === n.length ? o?.getAvatarURL(void 0, (0, s.FT)(l), !u) : T,
+                          src: 1 === n.length ? o?.getAvatarURL(void 0, (0, a.FT)(l), !u) : T,
                       }),
                   2 === n.length &&
                       (0, r.jsx)("div", {

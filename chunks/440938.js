@@ -1,13 +1,13 @@
-n.d(t, { R9: () => r, uM: () => s });
-var i = n(627968),
-    l = n(64700);
-let a = l.createContext(null);
-function s() {
-    return l.useContext(a);
+r.d(t, { R9: () => u, uM: () => o });
+var i = r(627968),
+    n = r(64700);
+let l = n.createContext(null);
+function o() {
+    return n.useContext(l);
 }
-function r(e) {
-    let { newValue: t, children: n } = e,
-        r = s(),
-        o = l.useMemo(() => ({ ...r, ...t }), [r, t]);
-    return (0, i.jsx)(a.Provider, { value: o, children: n });
+function u(e) {
+    let { newValue: t, children: r } = e,
+        u = o(),
+        s = n.useMemo(() => ({ ...u, ...t }), [u, t]);
+    return (0, i.jsx)(l.Provider, { value: s, children: r });
 }

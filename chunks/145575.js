@@ -10,8 +10,8 @@ var n = "function" == typeof Symbol && Symbol.for,
     c = n ? Symbol.for("react.async_mode") : 60111,
     d = n ? Symbol.for("react.concurrent_mode") : 60111,
     _ = n ? Symbol.for("react.forward_ref") : 60112,
-    f = n ? Symbol.for("react.suspense") : 60113,
-    h = n ? Symbol.for("react.suspense_list") : 60120,
+    h = n ? Symbol.for("react.suspense") : 60113,
+    f = n ? Symbol.for("react.suspense_list") : 60120,
     p = n ? Symbol.for("react.memo") : 60115,
     E = n ? Symbol.for("react.lazy") : 60116,
     m = n ? Symbol.for("react.block") : 60121,
@@ -29,7 +29,7 @@ function T(e) {
                     case s:
                     case o:
                     case a:
-                    case f:
+                    case h:
                         return e;
                     default:
                         switch ((e = e && e.$$typeof)) {
@@ -63,7 +63,7 @@ function S(e) {
     (t.Portal = r),
     (t.Profiler = o),
     (t.StrictMode = a),
-    (t.Suspense = f),
+    (t.Suspense = h),
     (t.isAsyncMode = function (e) {
         return S(e) || T(e) === c;
     }),
@@ -99,7 +99,7 @@ function S(e) {
         return T(e) === a;
     }),
     (t.isSuspense = function (e) {
-        return T(e) === f;
+        return T(e) === h;
     }),
     (t.isValidElementType = function (e) {
         return (
@@ -109,8 +109,8 @@ function S(e) {
             e === d ||
             e === o ||
             e === a ||
-            e === f ||
             e === h ||
+            e === f ||
             ("object" == typeof e &&
                 null !== e &&
                 (e.$$typeof === E ||

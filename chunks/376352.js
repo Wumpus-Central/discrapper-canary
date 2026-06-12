@@ -14,10 +14,10 @@ var i = n(627968),
     A = n(834730),
     x = n(508770),
     g = n(46225),
-    C = n(294323),
-    f = n(429913),
-    E = n(853735),
-    y = n(131607),
+    f = n(294323),
+    C = n(429913),
+    y = n(853735),
+    E = n(131607),
     N = n(834757),
     j = n(548118),
     v = n(832163),
@@ -28,24 +28,24 @@ var i = n(627968),
     S = n(375708),
     P = n(474143);
 function O(e) {
-    let [t, n] = (0, y.RF)(e, (0, E.c)(e), void 0, !0);
+    let [t, n] = (0, E.RF)(e, (0, y.c)(e), void 0, !0);
     return [t === e, n];
 }
 function b(e) {
     let t,
-        { user: n, stream: a, channel: E } = e,
-        [y, b] = l.useState(!1),
+        { user: n, stream: a, channel: y } = e,
+        [E, b] = l.useState(!1),
         L = (0, N.AO)(a),
         M = (0, r.bG)([v.A], () => v.A.getDetectableIdsToApplicationIds()),
         D = L?.id,
         U = null != D ? M[D] : null,
-        w = (0, f.h)(U),
+        w = (0, C.h)(U),
         {
             isLoading: V,
             applicationWidgetConfig: B,
             profileApplicationWidget: k,
             userApplicationIdentity: H,
-        } = (0, C.A)(n.id, U, "social_layer_commerce_stream_header"),
+        } = (0, f.A)(n.id, U, "social_layer_commerce_stream_header"),
         F = (0, r.bG)([T.default], () => T.default.getId()),
         G = l.useRef(null),
         [z, W] = O(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
@@ -90,7 +90,7 @@ function b(e) {
                         (0, i.jsx)(I.V, {
                             className: e,
                             userId: n.id,
-                            channel: E,
+                            channel: y,
                             applicationId: U,
                             onClose: $,
                             canShowCTA: Y,
@@ -108,10 +108,10 @@ function b(e) {
                 icon: e,
                 text: t,
                 renderPopout: (e) =>
-                    (0, i.jsx)(I.Z, { className: e, userId: n.id, channel: E, applicationId: U, onClose: $ }),
+                    (0, i.jsx)(I.Z, { className: e, userId: n.id, channel: y, applicationId: U, onClose: $ }),
                 positionKey: "feature-card-version",
             };
-        }, [w, U, ee, et, F, n.id, E, $, Y, J, en, ei]);
+        }, [w, U, ee, et, F, n.id, y, $, Y, J, en, ei]);
     return V || Q || null == er
         ? null
         : (0, i.jsx)(h.N, {
@@ -119,7 +119,7 @@ function b(e) {
               children: (e) =>
                   (0, i.jsx)(p.Y, {
                       targetElementRef: G,
-                      shouldShow: y,
+                      shouldShow: E,
                       animation: p.Y.Animation.FADE,
                       position: "bottom",
                       positionKey: eo,
@@ -137,7 +137,7 @@ function b(e) {
                                       onClick: () => {
                                           W(_.i.TAKE_ACTION), b((e) => !e);
                                       },
-                                      "aria-expanded": y,
+                                      "aria-expanded": E,
                                       "aria-haspopup": "dialog",
                                       children: [
                                           null != ea &&

@@ -1,20 +1,20 @@
 "use strict";
 n.d(t, { R: () => a, X: () => s });
-var r = n(64700);
-let i = ["mousemove", "mousedown", "keydown", "scroll", "touchstart", "pointerdown"];
+var i = n(64700);
+let r = ["mousemove", "mousedown", "keydown", "scroll", "touchstart", "pointerdown"];
 function s(e) {
-    let [t, n] = r.useState(!1),
-        s = r.useRef(null),
-        a = r.useCallback(() => {
+    let [t, n] = i.useState(!1),
+        s = i.useRef(null),
+        a = i.useCallback(() => {
             n(!1), null != s.current && clearTimeout(s.current), (s.current = setTimeout(() => n(!0), e));
         }, [e]);
     return (
-        r.useEffect(() => {
-            for (let e of i) window.addEventListener(e, a, { passive: !0, capture: !0 });
+        i.useEffect(() => {
+            for (let e of r) window.addEventListener(e, a, { passive: !0, capture: !0 });
             return (
                 (s.current = setTimeout(() => n(!0), e)),
                 () => {
-                    for (let e of i) window.removeEventListener(e, a, { capture: !0 });
+                    for (let e of r) window.removeEventListener(e, a, { capture: !0 });
                     null != s.current && clearTimeout(s.current);
                 }
             );
@@ -24,16 +24,16 @@ function s(e) {
 }
 function a() {
     let e = window,
-        [t, n] = r.useState(e.document.hasFocus());
+        [t, n] = i.useState(e.document.hasFocus());
     return (
-        r.useEffect(() => {
+        i.useEffect(() => {
             let t = () => n(!0),
-                r = () => n(!1);
+                i = () => n(!1);
             return (
                 e.addEventListener("focus", t),
-                e.addEventListener("blur", r),
+                e.addEventListener("blur", i),
                 () => {
-                    e.removeEventListener("focus", t), e.removeEventListener("blur", r);
+                    e.removeEventListener("focus", t), e.removeEventListener("blur", i);
                 }
             );
         }, [e]),

@@ -1,10 +1,10 @@
-a.d(t, { i: () => i, o: () => o });
-var n = a(284009),
-    r = a.n(n),
-    s = a(17928),
-    l = a(287809);
+e.d(a, { i: () => i, o: () => o });
+var n = e(284009),
+    r = e.n(n),
+    s = e(17928),
+    l = e(287809);
 let i = () => {
-        let e = (0, s.bG)([l.default], () => l.default.getCurrentUser());
-        return r()(null != e, "user has to be signed in before accessing shop"), e;
+        let t = (0, s.bG)([l.default], () => l.default.getCurrentUser());
+        return r()(null != t, "user has to be signed in before accessing shop"), t;
     },
     o = () => (0, s.bG)([l.default], () => l.default.getCurrentUser());

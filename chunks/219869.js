@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { T: () => a });
-var r = n(627968);
+n.d(t, { T: () => s });
+var i = n(627968);
 n(64700);
-var i = n(657718);
-function a(e) {
-    return (0, r.jsx)(i.S, { ...e, text: void 0, fullWidth: !1 });
+var r = n(657718);
+function s(e) {
+    return (0, i.jsx)(r.S, { ...e, text: void 0, fullWidth: !1 });
 }

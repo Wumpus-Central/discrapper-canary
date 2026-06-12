@@ -1,34 +1,34 @@
 "use strict";
 n.d(t, { F: () => o });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
+var r = n(503698),
+    s = n.n(r),
     a = n(676344);
 function o(e) {
     let {
             as: t,
             readOnly: n,
-            disabled: i,
+            disabled: r,
             fullWidth: o = !1,
             children: l,
             validation: u,
-            className: d,
-            ref: c,
+            className: c,
+            ref: d,
             containerClassName: _,
-            ...f
+            ...h
         } = e,
-        E = u?.hasError;
-    return (0, r.jsx)(t ?? "div", {
-        ref: c,
+        f = u?.hasError;
+    return (0, i.jsx)(t ?? "div", {
+        ref: d,
         className: s()(a.kL, _),
         "data-full-width": o,
-        ...f,
-        children: (0, r.jsx)("div", {
-            className: s()(a.iE, d),
-            "data-error": E,
+        ...h,
+        children: (0, i.jsx)("div", {
+            className: s()(a.iE, c),
+            "data-error": f,
             "data-read-only": n,
-            "data-disabled": i,
+            "data-disabled": r,
             children: l,
         }),
     });

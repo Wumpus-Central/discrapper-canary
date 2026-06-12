@@ -1,23 +1,23 @@
-n.d(t, { V: () => r });
-var i = n(636537),
-    l = n(228366),
-    a = n(652215);
-function r(e) {
+r.d(e, { V: () => n });
+var s = r(636537),
+    o = r(228366),
+    i = r(652215);
+function n(t) {
     return (
-        l.h.dispatch({ type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING", applicationId: e }),
-        i.Bo.get({ url: a.Rsh.STORE_LAYOUT(e), rejectWithError: !0 })
+        o.h.dispatch({ type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCHING", applicationId: t }),
+        s.Bo.get({ url: i.Rsh.STORE_LAYOUT(t), rejectWithError: !0 })
             .then(
-                (t) => (
-                    l.h.dispatch({
+                (e) => (
+                    o.h.dispatch({
                         type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_SUCCESS",
-                        applicationId: e,
-                        layout: t.body,
+                        applicationId: t,
+                        layout: e.body,
                     }),
-                    t.body
+                    e.body
                 ),
             )
             .catch(() => {
-                l.h.dispatch({ type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED", applicationId: e });
+                o.h.dispatch({ type: "APPLICATION_STORE_DIRECTORY_LAYOUT_FETCH_FAILED", applicationId: t });
             })
     );
 }

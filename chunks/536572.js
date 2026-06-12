@@ -1,38 +1,38 @@
-r.d(t, { Sw: () => i, VG: () => s, s7: () => o });
-var a = r(575593),
-    n = r(623373),
-    l = r(985018);
-let s = (e) => {
-        if (null == e) return "";
-        let t = l.intl.string(l.t.z7y5vF);
-        return "baseVariantName" in e && null != e.baseVariantName && e.variantLabel !== t
-            ? l.intl.formatToPlainString(l.t.BZN5k2, {
-                  baseVariantName: e.baseVariantName,
-                  variantLabel: e.variantLabel,
+n.d(t, { Sw: () => s, VG: () => l, s7: () => u });
+var r = n(575593),
+    i = n(623373),
+    e = n(375708);
+let l = (a) => {
+        if (null == a) return "";
+        let t = e.intl.string(e.t.z7y5vF);
+        return "baseVariantName" in a && null != a.baseVariantName && a.variantLabel !== t
+            ? e.intl.formatToPlainString(e.t.BZN5k2, {
+                  baseVariantName: a.baseVariantName,
+                  variantLabel: a.variantLabel,
               })
-            : e.name;
+            : a.name;
     },
-    i = (e) => {
-        if (null == e) return "";
-        let t = l.intl.string(l.t.z7y5vF);
-        return null != e.baseVariantName && e.variantLabel !== t
-            ? l.intl.formatToPlainString(l.t.BZN5k2, {
-                  baseVariantName: e.baseVariantName,
-                  variantLabel: e.variantLabel,
+    s = (a) => {
+        if (null == a) return "";
+        let t = e.intl.string(e.t.z7y5vF);
+        return null != a.baseVariantName && a.variantLabel !== t
+            ? e.intl.formatToPlainString(e.t.BZN5k2, {
+                  baseVariantName: a.baseVariantName,
+                  variantLabel: a.variantLabel,
               })
-            : e.name;
+            : a.name;
     },
-    o = (e) => {
-        let t = s(e);
-        switch ((0, n.YW)(e)) {
-            case a.R.AVATAR_DECORATION:
-                return l.intl.formatToPlainString(l.t.lvBzLi, { product: t });
-            case a.R.PROFILE_EFFECT:
-                return l.intl.formatToPlainString(l.t.eR7moP, { product: t });
-            case a.R.NAMEPLATE:
-                return l.intl.formatToPlainString(l.t.YFOwHj, { product: t });
-            case a.R.PROFILE_FRAME:
-                return l.intl.formatToPlainString(l.t.vov8LX, { product: t });
+    u = (a) => {
+        let t = l(a);
+        switch ((0, i.YW)(a)) {
+            case r.R.AVATAR_DECORATION:
+                return e.intl.formatToPlainString(e.t.lvBzLi, { product: t });
+            case r.R.PROFILE_EFFECT:
+                return e.intl.formatToPlainString(e.t.eR7moP, { product: t });
+            case r.R.NAMEPLATE:
+                return e.intl.formatToPlainString(e.t.YFOwHj, { product: t });
+            case r.R.PROFILE_FRAME:
+                return e.intl.formatToPlainString(e.t.vov8LX, { product: t });
             default:
                 return t;
         }

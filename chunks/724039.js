@@ -1,23 +1,23 @@
 "use strict";
 var t = Object.getOwnPropertySymbols,
     n = Object.prototype.hasOwnProperty,
-    r = Object.prototype.propertyIsEnumerable;
+    i = Object.prototype.propertyIsEnumerable;
 e.exports = !(function () {
     try {
         if (!Object.assign) return !1;
         var e = new String("abc");
         if (((e[5] = "de"), "5" === Object.getOwnPropertyNames(e)[0])) return !1;
         for (var t = {}, n = 0; n < 10; n++) t["_" + String.fromCharCode(n)] = n;
-        var r = Object.getOwnPropertyNames(t).map(function (e) {
+        var i = Object.getOwnPropertyNames(t).map(function (e) {
             return t[e];
         });
-        if ("0123456789" !== r.join("")) return !1;
-        var i = {};
+        if ("0123456789" !== i.join("")) return !1;
+        var r = {};
         if (
             ("abcdefghijklmnopqrst".split("").forEach(function (e) {
-                i[e] = e;
+                r[e] = e;
             }),
-            "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, i)).join(""))
+            "abcdefghijklmnopqrst" !== Object.keys(Object.assign({}, r)).join(""))
         )
             return !1;
         return !0;
@@ -25,7 +25,7 @@ e.exports = !(function () {
         return !1;
     }
 })()
-    ? function (e, i) {
+    ? function (e, r) {
           for (
               var s,
                   a,
@@ -40,7 +40,7 @@ e.exports = !(function () {
               for (var u in (s = Object(arguments[l]))) n.call(s, u) && (o[u] = s[u]);
               if (t) {
                   a = t(s);
-                  for (var d = 0; d < a.length; d++) r.call(s, a[d]) && (o[a[d]] = s[a[d]]);
+                  for (var c = 0; c < a.length; c++) i.call(s, a[c]) && (o[a[c]] = s[a[c]]);
               }
           }
           return o;

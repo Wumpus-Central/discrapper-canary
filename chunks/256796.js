@@ -18,8 +18,8 @@ let d = {
                 trackExactTotalHits: u,
                 getId: d,
                 getLimit: _,
-                onFetchStart: f,
-                onFetchSuccess: h,
+                onFetchStart: h,
+                onFetchSuccess: f,
                 searchMode: p,
             } = e,
             E = (0, l._o)(i),
@@ -42,7 +42,7 @@ let d = {
             pagination: o,
             trackExactTotalHits: u,
         });
-        f?.({ searchContext: t, searchQueryString: i, searchQuery: A });
+        h?.({ searchContext: t, searchQueryString: i, searchQuery: A });
         let S = n.map((e) => d(e));
         return (
             s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: S }),
@@ -71,7 +71,7 @@ let d = {
                             };
                         }),
                     }),
-                        h?.({ searchContext: t, tabEntries: i });
+                        f?.({ searchContext: t, tabEntries: i });
                 },
                 () => {
                     s.h.dispatch({ type: "SEARCH_MESSAGES_INDEXING", ids: S });
@@ -94,13 +94,13 @@ let d = {
             } = e,
             d = (0, l._o)(n),
             _ = (0, l.Zf)(d),
-            f = (0, l.nm)(r),
-            h = { ..._, ...f, offset: i.offset },
+            h = (0, l.nm)(r),
+            f = { ..._, ...h, offset: i.offset },
             p = (0, l.mt)(t);
-        null != p && (0, l.L5)(h, p), o && (h.search_everywhere = !0);
+        null != p && (0, l.L5)(f, p), o && (f.search_everywhere = !0);
         let E = (0, l.bS)(t),
-            m = u.A.create({ id: E, searchType: t.type, searchQuery: h });
-        c?.({ searchContext: t, searchQueryString: n, searchQuery: h }),
+            m = u.A.create({ id: E, searchType: t.type, searchQuery: f });
+        c?.({ searchContext: t, searchQueryString: n, searchQuery: f }),
             s.h.dispatch({ type: "SEARCH_MESSAGES_START", ids: [E] }),
             m.fetch(
                 (e) => {

@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { A: () => o });
-var r = n(976860),
-    i = n(71393),
-    a = n(379610),
-    s = n(652215);
+var i = n(976860),
+    r = n(71393),
+    s = n(379610),
+    a = n(652215);
 let o = {
     onOpenHubInvite(e) {
         let { guild: t } = e;
-        null != t && (null != i.A.getGuild(t.id) ? (0, r.pX)(s.BVt.CHANNEL(t.id)) : (0, a.A)(e.code));
+        null != t && (null != r.A.getGuild(t.id) ? (0, i.pX)(a.BVt.CHANNEL(t.id)) : (0, s.A)(e.code));
     },
 };

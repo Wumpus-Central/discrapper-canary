@@ -1,28 +1,28 @@
 "use strict";
-n.d(t, { A: () => h });
-var l = n(627968);
+n.d(t, { A: () => _ });
+var i = n(627968);
 n(64700);
-var i = n(192308),
+var r = n(192308),
     s = n(442433),
     a = n(332173),
-    r = n(37632),
-    o = n(734057),
-    c = n(706083),
-    u = n(365526),
+    o = n(37632),
+    l = n(734057),
+    u = n(706083),
+    c = n(143145),
     d = n(652215);
-function h(e) {
+function _(e) {
     return {
-        react(t, h, m) {
-            let p = o.A.getChannel(t.channelId),
-                f = m.noStyleAndInteraction
+        react(t, _, h) {
+            let f = l.A.getChannel(t.channelId),
+                p = h.noStyleAndInteraction
                     ? void 0
                     : (n) => {
                           e.shouldStopPropagation && n?.stopPropagation(),
-                              (0, c.o)(t.guildId, t.channelId, t.messageId),
-                              e.shouldCloseDefaultModals && (0, i.closeAllModals)();
+                              (0, u.o)(t.guildId, t.channelId, t.messageId),
+                              e.shouldCloseDefaultModals && (0, r.closeAllModals)();
                       },
-                g =
-                    m.noStyleAndInteraction || null == t.channelId || (null == p && null == t.originalLink)
+                E =
+                    h.noStyleAndInteraction || null == t.channelId || (null == f && null == t.originalLink)
                         ? d.tEg
                         : (e) => {
                               (0, s.L3)(e, async () => {
@@ -30,29 +30,29 @@ function h(e) {
                                       n.bind(n, 254106),
                                   );
                                   return (n) =>
-                                      (0, l.jsx)(e, {
+                                      (0, i.jsx)(e, {
                                           ...n,
-                                          channel: p,
-                                          channelId: p?.id ?? t.channelId,
+                                          channel: f,
+                                          channelId: f?.id ?? t.channelId,
                                           originalLink: t.originalLink,
                                           messageId: t.messageId,
                                       });
                               });
                           };
-            return (0, l.jsxs)(
+            return (0, i.jsxs)(
                 a.A,
                 {
                     role: "link",
-                    onClick: f,
-                    onContextMenu: g,
+                    onClick: p,
+                    onContextMenu: E,
                     className: "channelMention",
                     children: [
-                        null != t.inContent ? h(t.inContent, m) : null,
-                        null != t.inContent ? (0, l.jsx)(r.A, {}) : null,
-                        (0, u.t)(t, h, m),
+                        null != t.inContent ? _(t.inContent, h) : null,
+                        null != t.inContent ? (0, i.jsx)(o.A, {}) : null,
+                        (0, c.t)(t, _, h),
                     ],
                 },
-                m.key,
+                h.key,
             );
         },
     };

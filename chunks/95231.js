@@ -1,4 +1,4 @@
-e.exports = {
+c.exports = {
     pc: "navItem__4ccc5",
     St: "navItemIconBadgeContainer__4ccc5",
     vT: "animatedHalfPillContainer__4ccc5",

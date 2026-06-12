@@ -1,40 +1,40 @@
-l.d(t, { A: () => u });
-var n = l(627968),
-    i = l(64700),
-    a = l(189213),
-    r = l(834730),
-    s = l(985018),
-    o = l(201015);
-function u(e) {
-    let { errorText: t, title: l, description: u, transitionState: c, onCancel: d, onConfirm: x, children: p } = e,
-        [g, _] = i.useState(!1),
-        h = i.useCallback(async () => {
-            _(!0);
+i.d(a, { A: () => o });
+var n = i(627968),
+    e = i(64700),
+    l = i(189213),
+    s = i(834730),
+    r = i(375708),
+    c = i(423396);
+function o(t) {
+    let { errorText: a, title: i, description: o, transitionState: d, onCancel: u, onConfirm: h, children: k } = t,
+        [p, x] = e.useState(!1),
+        C = e.useCallback(async () => {
+            x(!0);
             try {
-                await x();
-            } catch (e) {
-                throw e;
+                await h();
+            } catch (t) {
+                throw t;
             } finally {
-                _(!1);
+                x(!1);
             }
-        }, [x]);
-    return (0, n.jsxs)(a.Modal, {
-        transitionState: c,
-        onClose: d,
-        title: l,
-        subtitle: u,
+        }, [h]);
+    return (0, n.jsxs)(l.Modal, {
+        transitionState: d,
+        onClose: u,
+        title: i,
+        subtitle: o,
         actions: [
-            { text: s.intl.string(s.t["ETE/oC"]), variant: "secondary", onClick: d },
-            { text: s.intl.string(s.t["R3BPH+"]), onClick: h, variant: "primary", loading: g },
+            { text: r.intl.string(r.t["ETE/oC"]), variant: "secondary", onClick: u },
+            { text: r.intl.string(r.t["R3BPH+"]), onClick: C, variant: "primary", loading: p },
         ],
         children: [
-            p,
-            null != t && "" !== t
-                ? (0, n.jsx)(r.E, {
-                      className: o.kc,
+            k,
+            null != a && "" !== a
+                ? (0, n.jsx)(s.E, {
+                      className: c.kc,
                       variant: "text-xs/normal",
                       color: "text-feedback-critical",
-                      children: t,
+                      children: a,
                   })
                 : null,
         ],

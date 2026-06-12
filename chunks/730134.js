@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { A: () => o });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { A: () => l });
+var i = n(627968),
+    r = n(64700),
     s = n(778712),
     a = n(97808),
-    r = n(386467);
-let o = i.memo(function (e) {
+    o = n(386467);
+let l = r.memo(function (e) {
     var t;
-    let { user: n, size: o = s._3.SIZE_32, animate: c = !1, "aria-hidden": u = !1, ...d } = e,
-        h = i.useContext(r.A);
-    return (0, l.jsx)(a.eu, {
-        src: ((t = (0, s.FT)(o)), n.getAvatarURL(h, t, c)),
-        size: o,
-        "aria-label": u ? void 0 : n.username,
-        "aria-hidden": u,
+    let { user: n, size: l = s._3.SIZE_32, animate: u = !1, "aria-hidden": c = !1, ...d } = e,
+        _ = r.useContext(o.A);
+    return (0, i.jsx)(a.eu, {
+        src: ((t = (0, s.FT)(l)), n.getAvatarURL(_, t, u)),
+        size: l,
+        "aria-label": c ? void 0 : n.username,
+        "aria-hidden": c,
         ...d,
     });
 });

@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { A: () => N }), n(938796);
+n.d(t, { A: () => y }), n(938796);
 var i = n(17928),
     r = n(228366),
     s = n(124838),
     a = n(488926),
     o = n(734057),
-    l = n(235058),
+    l = n(890063),
     u = n(763827),
     c = n(309010),
     d = n(652215),
     _ = n(731854);
-let f = new Map(),
-    h = null,
+let h = new Map(),
+    f = null,
     p = null,
     E = null,
     m = !1;
 function g(e, t) {
-    let n = f.get(e);
+    let n = h.get(e);
     if (null == n) return !1;
     let i = n.delete(t);
-    return 0 === n.size && f.delete(e), i;
+    return 0 === n.size && h.delete(e), i;
 }
 function A(e, t, n) {
-    return ((f.get(e)?.get(t)?.flags ?? _.ME.NONE) & n) === n;
+    return ((h.get(e)?.get(t)?.flags ?? _.ME.NONE) & n) === n;
 }
 function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = f.get(e);
+        i = h.get(e);
     if (null == i) return !1;
-    for (let [e, { flags: r }] of i) if ((!n || e !== h) && (r & t) === t) return !0;
+    for (let [e, { flags: r }] of i) if ((!n || e !== f) && (r & t) === t) return !0;
     return !1;
 }
 function T(e) {
     let { user: t, sessionId: n } = e;
-    (h = t.id), (p = n), (E = null);
+    (f = t.id), (p = n), (E = null);
 }
 class S extends i.Ay.Store {
     static displayName = "SpeakingStore";
@@ -43,12 +43,12 @@ class S extends i.Ay.Store {
     }
     getSpeakingDuration(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.x.DEFAULT,
-            i = f.get(n)?.get(e)?.since;
+            i = h.get(n)?.get(e)?.since;
         return null != i ? t - i : 0;
     }
     getSpeakers() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
-        return Array.from(f.get(e)?.keys() ?? []).filter((t) => A(e, t, _.ME.VOICE));
+        return Array.from(h.get(e)?.keys() ?? []).filter((t) => A(e, t, _.ME.VOICE));
     }
     isSpeaking(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.x.DEFAULT;
@@ -68,7 +68,7 @@ class S extends i.Ay.Store {
     }
     isCurrentUserSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
-        return null != h && this.isSpeaking(h, e);
+        return null != f && this.isSpeaking(f, e);
     }
     isCurrentUserPTTActive() {
         return m;
@@ -79,19 +79,19 @@ class S extends i.Ay.Store {
     }
     isCurrentUserPrioritySpeaker() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
-        return null != h && this.isPrioritySpeaker(h, e);
+        return null != f && this.isPrioritySpeaker(f, e);
     }
     isCurrentUserPrioritySpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
-        return null != h && this.isPrioritySpeaker(h, e) && this.isSpeaking(h, e);
+        return null != f && this.isPrioritySpeaker(f, e) && this.isSpeaking(f, e);
     }
     getVoiceVolume(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.x.DEFAULT,
             n = s.A.getConfig({ location: "SpeakingStore" });
-        return n.enabled && !n.disableUI ? (f.get(t)?.get(e)?.voiceDb ?? -1 / 0) : -1 / 0;
+        return n.enabled && !n.disableUI ? (h.get(t)?.get(e)?.voiceDb ?? -1 / 0) : -1 / 0;
     }
 }
-let N = new S(r.h, {
+let y = new S(r.h, {
     CONNECTION_OPEN: T,
     OVERLAY_INITIALIZE: T,
     SPEAKING: function (e) {
@@ -108,13 +108,13 @@ let N = new S(r.h, {
                 let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : -1 / 0,
                     r = (function () {
                         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT,
-                            t = f.get(e);
-                        return null == t && ((t = new Map()), f.set(e, t)), t;
+                            t = h.get(e);
+                        return null == t && ((t = new Map()), h.set(e, t)), t;
                     })(e),
                     s = r.get(t),
                     a = s?.flags ?? 0;
                 if (0 === a && 0 === n) return !1;
-                if (0 === n) r.delete(t), 0 === r.size && f.delete(e);
+                if (0 === n) r.delete(t), 0 === r.size && h.delete(e);
                 else {
                     let e = s?.since ?? null,
                         o = (a & _.ME.VOICE) === _.ME.VOICE,
@@ -132,13 +132,13 @@ let N = new S(r.h, {
                 s = !1,
                 a = E;
             return (
-                n === h && r === p && (E = i ?? null),
-                a !== E && (s = f.delete(_.x.DEFAULT) || s),
+                n === f && r === p && (E = i ?? null),
+                a !== E && (s = h.delete(_.x.DEFAULT) || s),
                 null == i
-                    ? (s = n === h && r === p ? f.delete(_.x.DEFAULT) || s : g(_.x.DEFAULT, n) || s)
-                    : n === h && r !== p
-                      ? (s = f.delete(_.x.DEFAULT) || s)
-                      : n !== h && i !== u.A.getChannelId() && (s = g(_.x.DEFAULT, n) || s),
+                    ? (s = n === f && r === p ? h.delete(_.x.DEFAULT) || s : g(_.x.DEFAULT, n) || s)
+                    : n === f && r !== p
+                      ? (s = h.delete(_.x.DEFAULT) || s)
+                      : n !== f && i !== u.A.getChannelId() && (s = g(_.x.DEFAULT, n) || s),
                 s || e
             );
         }, !1);

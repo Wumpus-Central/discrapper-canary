@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(913290),
     r = n(315069),
     s = n(32731),
-    a = n(927578),
+    a = n(428262),
     o = n(889227),
     l = n(652215);
-class d extends r.A {
+class u extends r.A {
     id;
     skuId;
     applicationId;
@@ -28,7 +28,7 @@ class d extends r.A {
     sourceType;
     fulfillmentStatus;
     static createFromServer(e) {
-        return new d({
+        return new u({
             id: e.id,
             skuId: e.sku_id,
             applicationId: e.application_id,

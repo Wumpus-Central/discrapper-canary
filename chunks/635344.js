@@ -1,5 +1,5 @@
-n.d(t, { n: () => i });
-let i = {
+L.d(E, { n: () => _ });
+let _ = {
     LEAGUE_OF_LEGENDS: "1402418696126992445",
     VALORANT: "700136079562375258",
     PEAK: "1384276457596911676",
@@ -11,4 +11,4 @@ let i = {
     BATTLEFIELD_6: "1402692356343599254",
     SILKSONG: "1413176957381771337",
 };
-Object.values(i);
+Object.values(_);

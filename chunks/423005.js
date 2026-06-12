@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     KE: "panelContainer_a83780",
     xt: "locked_a83780",
     qi: "buttonSection_a83780",

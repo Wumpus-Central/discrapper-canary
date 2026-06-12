@@ -1,62 +1,62 @@
-n.d(e, { default: () => f });
+n.d(t, { default: () => A });
 var i = n(627968),
-    a = n(64700),
-    l = n(189213),
-    r = n(17928),
-    s = n(834730),
-    o = n(696451),
-    c = n(71393),
-    d = n(287809),
-    u = n(624458),
+    l = n(64700),
+    a = n(189213),
+    s = n(17928),
+    r = n(834730),
+    c = n(696451),
+    u = n(71393),
+    o = n(287809),
+    d = n(624458),
     g = n(202384),
-    p = n(212455),
+    h = n(212455),
     m = n(976860),
-    _ = n(652215),
-    h = n(985018),
-    b = n(146983);
-let f = function (t) {
-    let { guildId: e, transitionState: n, onClose: f } = t,
-        j = (0, r.bG)([p.A], () => p.A.getRequest(e), [e]),
-        k = (0, r.bG)([c.A], () => c.A.getGuild(e), [e]),
-        x = (0, r.bG)([d.default], () => d.default.getCurrentUser()?.id),
-        C = (0, r.bG)([o.Ay], () => (null != x ? o.Ay.getMember(e, x) : null), [x, e]),
-        A = a.useCallback(() => {
-            let t;
-            f(), null == C && ((t = (0, m.JK)()).length > 0 ? t.goBack() : (0, m.pX)(_.BVt.ME));
-        }, [C, f]),
-        R = a.useCallback(async () => {
+    p = n(652215),
+    k = n(375708),
+    b = n(369364);
+let A = function (e) {
+    let { guildId: t, transitionState: n, onClose: A } = e,
+        f = (0, s.bG)([h.A], () => h.A.getRequest(t), [t]),
+        j = (0, s.bG)([u.A], () => u.A.getGuild(t), [t]),
+        x = (0, s.bG)([o.default], () => o.default.getCurrentUser()?.id),
+        C = (0, s.bG)([c.Ay], () => (null != x ? c.Ay.getMember(t, x) : null), [x, t]),
+        G = l.useCallback(() => {
+            let e;
+            A(), null == C && ((e = (0, m.JK)()).length > 0 ? e.goBack() : (0, m.pX)(p.BVt.ME));
+        }, [C, A]),
+        R = l.useCallback(async () => {
             if (C?.isPending) {
                 try {
-                    await u.A.removeGuildJoinRequest(e);
-                } catch (t) {
-                    throw t;
+                    await d.A.removeGuildJoinRequest(t);
+                } catch (e) {
+                    throw e;
                 }
-                f(), (0, g.Ze)(e);
-            } else u.A.resetGuildJoinRequest(e);
-        }, [e, C?.isPending, f]),
-        G = a.useMemo(
+                A(), (0, g.Ze)(t);
+            } else d.A.resetGuildJoinRequest(t);
+        }, [t, C?.isPending, A]),
+        y = l.useMemo(
             () => [
-                { text: h.intl.string(h.t.I1LYVk), variant: "secondary", onClick: R },
-                { text: h.intl.string(h.t.BddRzS), variant: "critical-primary", onClick: A },
+                { text: k.intl.string(k.t.I1LYVk), variant: "secondary", onClick: R },
+                { text: k.intl.string(k.t.BddRzS), variant: "critical-primary", onClick: G },
             ],
-            [R, A],
+            [R, G],
         );
-    return (0, i.jsx)(l.Modal, {
+    return (0, i.jsx)(a.Modal, {
         transitionState: n,
-        onClose: f,
+        onClose: A,
         title:
-            k?.name != null
-                ? h.intl.formatToPlainString(h.t["P+/gzA"], { guildName: k.name })
-                : h.intl.string(h.t.gBPcuP),
-        actions: G,
+            j?.name != null
+                ? k.intl.formatToPlainString(k.t["P+/gzA"], { guildName: j.name })
+                : k.intl.string(k.t.gBPcuP),
+        actions: y,
         children:
-            j?.rejectionReason != null && j?.rejectionReason !== ""
-                ? (0, i.jsxs)(s.E, {
+            f?.rejectionReason != null && f?.rejectionReason !== ""
+                ? (0, i.jsxs)(r.E, {
                       variant: "text-md/medium",
                       color: "text-default",
                       children: [
-                          (0, i.jsx)("span", { className: b.Wj, children: h.intl.string(h.t.cf1psW) }),
-                          (0, i.jsx)("span", { children: j?.rejectionReason }),
+                          (0, i.jsx)("span", { className: b.Wj, children: k.intl.string(k.t.cf1psW) }),
+                          (0, i.jsx)("span", { children: f?.rejectionReason }),
                       ],
                   })
                 : null,

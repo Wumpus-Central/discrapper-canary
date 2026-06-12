@@ -1,7 +1,7 @@
-n.d(t, { A: () => l });
-var r = n(64700),
-    i = n(181940);
-function l(e, t) {
-    let { isLoading: n, error: l, onToggle: s } = (0, i.A)(e, t);
-    return { isLoading: n, error: l, onDeactivate: r.useCallback(() => s(!1), [s]) };
+c.d(t, { A: () => i });
+var e = c(64700),
+    s = c(181940);
+function i(a, t) {
+    let { isLoading: c, error: i, onToggle: p } = (0, s.A)(a, t);
+    return { isLoading: c, error: i, onDeactivate: e.useCallback(() => p(!1), [p]) };
 }

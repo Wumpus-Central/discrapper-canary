@@ -1,5 +1,5 @@
-var r = n(659671),
-    i = n(585825);
-e.exports = function (e) {
-    return i(r(e).toLowerCase());
+var r = e(659671),
+    t = e(585825);
+u.exports = function (u) {
+    return t(r(u).toLowerCase());
 };

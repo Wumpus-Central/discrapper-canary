@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(155718);
-function i(e) {
+n.d(t, { A: () => r });
+var i = n(155718);
+function r(e) {
     switch (e) {
         case "android":
-            return r.Yl.ANDROID;
+            return i.Yl.ANDROID;
         case "ios":
-            return r.Yl.IOS;
+            return i.Yl.IOS;
         default:
-            return r.Yl.WEB;
+            return i.Yl.WEB;
     }
 }

@@ -1,16 +1,16 @@
-a.d(t, { A: () => u });
+n.d(t, { A: () => h });
 var i,
-    n = a(627968);
-a(64700);
-var s = a(503698),
-    l = a.n(s),
-    r = a(847374),
-    o = a(709562),
-    c = a(850481),
+    l = n(627968);
+n(64700);
+var a = n(503698),
+    s = n.n(a),
+    r = n(847374),
+    o = n(204651),
+    c = n(850481),
     d = (((i = d || {})[(i.UP = 0)] = "UP"), (i[(i.DOWN = 1)] = "DOWN"), i);
-function _(e) {
-    let { direction: t, className: a, themeable: i, ...s } = e;
-    return (0, n.jsx)(o.A, { className: l()(a, c.U, { [c.up]: 0 === t }), iconComponent: r.a, themeable: i, ...s });
+function u(e) {
+    let { direction: t, className: n, themeable: i, ...a } = e;
+    return (0, l.jsx)(o.A, { className: s()(n, c.U, { [c.up]: 0 === t }), iconComponent: r.a, themeable: i, ...a });
 }
-_.Directions = d;
-let u = _;
+u.Directions = d;
+let h = u;

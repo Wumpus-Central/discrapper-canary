@@ -1,10 +1,10 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
-        n = { className: "params", begin: /\(/, end: /\)/, contains: ["self", e.C_NUMBER_MODE, a] },
+        n = e.inherit(e.QUOTE_STRING_MODE, { illegal: null }),
+        i = { className: "params", begin: /\(/, end: /\)/, contains: ["self", e.C_NUMBER_MODE, n] },
         r = e.COMMENT(/--/, /$/),
-        i = e.COMMENT(/\(\*/, /\*\)/, { contains: ["self", r] }),
-        o = [r, i, e.HASH_COMMENT_MODE];
+        s = e.COMMENT(/\(\*/, /\*\)/, { contains: ["self", r] }),
+        a = [r, s, e.HASH_COMMENT_MODE];
     return {
         name: "AppleScript",
         aliases: ["osascript"],
@@ -16,7 +16,7 @@ e.exports = function (e) {
                 "alias application boolean class constant date file integer list number real record string text activate beep count delay launch log offset read round run say summarize write character characters contents day frontmost id item length month name|0 paragraph paragraphs rest reverse running time version weekday word words year",
         },
         contains: [
-            a,
+            n,
             e.C_NUMBER_MODE,
             {
                 className: "built_in",
@@ -74,8 +74,8 @@ e.exports = function (e) {
                     /\b/,
                 ),
             },
-            { beginKeywords: "on", illegal: /[${=;\n]/, contains: [e.UNDERSCORE_TITLE_MODE, n] },
-            ...o,
+            { beginKeywords: "on", illegal: /[${=;\n]/, contains: [e.UNDERSCORE_TITLE_MODE, i] },
+            ...a,
         ],
         illegal: /\/\/|->|=>|\[\[/,
     };

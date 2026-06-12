@@ -1,10 +1,10 @@
 e.exports = function (e) {
     let t = e.COMMENT("%", "$"),
-        a = e.inherit(e.APOS_STRING_MODE, { relevance: 0 }),
-        n = e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 });
+        n = e.inherit(e.APOS_STRING_MODE, { relevance: 0 }),
+        i = e.inherit(e.QUOTE_STRING_MODE, { relevance: 0 });
     return (
-        (n.contains = n.contains.slice()),
-        n.contains.push({
+        (i.contains = i.contains.slice()),
+        i.contains.push({
             className: "subst",
             begin: "\\\\[abfnrtv]\\|\\\\x[0-9a-fA-F]*\\\\\\|%[-+# *.0-9]*[dioxXucsfeEgGp]",
             relevance: 0,
@@ -35,8 +35,8 @@ e.exports = function (e) {
                 e.C_BLOCK_COMMENT_MODE,
                 { className: "number", begin: "0'.\\|0[box][0-9a-fA-F]*" },
                 e.NUMBER_MODE,
-                a,
                 n,
+                i,
                 { begin: /:-/ },
                 { begin: /\.$/ },
             ],

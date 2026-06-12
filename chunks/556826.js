@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     u1: "spinner_bcd779",
     yl: "modal_bcd779",
     Hc: "modalHeader_bcd779",

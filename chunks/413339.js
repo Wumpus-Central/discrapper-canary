@@ -17,8 +17,8 @@ var i = n(284009),
     c = n(912630),
     d = n(965162),
     _ = n(498559),
-    f = n(463951),
-    h = n(577718),
+    h = n(463951),
+    f = n(577718),
     p = n(652215);
 async function E(e) {
     let t = await fetch(e),
@@ -39,7 +39,7 @@ async function g(e, t, n) {
     } else {
         let e = n.asset;
         (a = (0, o.VI)(e) || (0, o.q6)(e)),
-            (i = (0, o.Bo)({ userId: n.user_id, assetId: n.id, assetHash: e, size: h.Im.width }));
+            (i = (0, o.Bo)({ userId: n.user_id, assetId: n.id, assetHash: e, size: f.Im.width }));
     }
     if (null != i)
         try {
@@ -52,12 +52,12 @@ async function g(e, t, n) {
                           (n.crossOrigin = "anonymous"),
                               (n.onload = () => {
                                   let t = document.createElement("canvas");
-                                  (t.width = h.Im.width), (t.height = h.Im.height);
+                                  (t.width = f.Im.width), (t.height = f.Im.height);
                                   let i = t.getContext("2d");
                                   r()(null != i, "Canvas context is missing");
                                   let s = n.height / n.width,
-                                      a = h.Im.height,
-                                      o = h.Im.height / s,
+                                      a = f.Im.height,
+                                      o = f.Im.height / s,
                                       l = (t.width - o) / 2,
                                       u = (t.height - a) / 2;
                                   i.drawImage(n, l, u, o, a);
@@ -87,5 +87,5 @@ function T() {
     let e = a.default.getCurrentUser();
     if (null == e) return;
     let t = (0, l.i)(e);
-    (0, f.A)() && !c.A.hasBeenApplied && null != t && A(t, { track: !1 }).catch(p.tEg);
+    (0, h.A)() && !c.A.hasBeenApplied && null != t && A(t, { track: !1 }).catch(p.tEg);
 }

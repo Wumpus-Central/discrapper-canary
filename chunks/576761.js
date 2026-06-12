@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { B9: () => _, Et: () => c, MA: () => u, _z: () => f });
+n.d(t, { B9: () => _, Et: () => c, MA: () => u, _z: () => h });
 var i,
     r,
     s = n(441574),
@@ -12,7 +12,7 @@ let d = ["CREPE", "NITRO"];
 function _(e) {
     return d.includes(e);
 }
-function f(e) {
+function h(e) {
     if (!l.Ay.canUseMoreQuestOrbs(e)) return null;
     if (l.Ay.canUseQuestOrbMultiplier(e)) return "nitro";
     let t = (0, o.kQ)(e?.perks, s.bb.MORE_QUEST_ORBS);

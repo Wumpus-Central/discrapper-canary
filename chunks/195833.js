@@ -22,9 +22,9 @@ var l = (t.hover = function (e) {
         throw TypeError("Super expression must either be null or a function, not " + typeof r);
     function n() {
         if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
-        for (var r, l, s, u = arguments.length, c = Array(u), p = 0; p < u; p++) c[p] = arguments[p];
+        for (var r, l, s, u = arguments.length, p = Array(u), c = 0; c < u; c++) p[c] = arguments[c];
         return (
-            (l = s = i(this, (r = n.__proto__ || Object.getPrototypeOf(n)).call.apply(r, [this].concat(c)))),
+            (l = s = i(this, (r = n.__proto__ || Object.getPrototypeOf(n)).call.apply(r, [this].concat(p)))),
             (s.state = { hover: !1 }),
             (s.handleMouseOver = function () {
                 return s.setState({ hover: !0 });

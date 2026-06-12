@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { DH: () => f, lj: () => d, AU: () => _, xb: () => h });
+n.d(t, { DH: () => h, lj: () => d, AU: () => _, xb: () => f });
 var i = n(319060),
     r = n(155718);
 n(323874), n(14289), n(35956);
@@ -12,7 +12,7 @@ let d = 0;
 function _() {
     return { id: d, name: c.intl.string(c.t.E407b7) };
 }
-function f(e) {
+function h(e) {
     let { itemId: t, hash: n, containerWidth: r = parseFloat(i.A.APPLICATION_DIRECTORY_CONTENT_MAX_WIDTH) } = e;
     return (function (e) {
         let { itemId: t, hash: n, containerWidth: i = 1024 } = e,
@@ -23,7 +23,7 @@ function f(e) {
             : `${location.protocol}${l}${o.Rsh.APPLICATION_DIRECTORY_COLLECTION_ITEM_IMAGE(t, n, c)}?${r}`;
     })({ itemId: t, hash: n, containerWidth: r });
 }
-function h(e) {
+function f(e) {
     switch (e.type) {
         case r.LZ.MEDIA_PROXY:
             let t = e.proxy_url ?? e.url;

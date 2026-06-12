@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { T: () => i });
-var r,
-    i =
-        (((r = {}).GUILD_CHANNEL = "gc"),
-        (r.GUILD_CHANNEL_MESSAGE = "gcm"),
-        (r.PRIVATE_CHANNEL = "pc"),
-        (r.PRIVATE_CHANNEL_MESSAGE = "pcm"),
-        (r.PARTY = "party"),
-        r);
+n.d(t, { T: () => r });
+var i,
+    r =
+        (((i = {}).GUILD_CHANNEL = "gc"),
+        (i.GUILD_CHANNEL_MESSAGE = "gcm"),
+        (i.PRIVATE_CHANNEL = "pc"),
+        (i.PRIVATE_CHANNEL_MESSAGE = "pcm"),
+        (i.PARTY = "party"),
+        i);

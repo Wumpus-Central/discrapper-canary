@@ -1,21 +1,21 @@
-n.d(t, { A: () => d });
-var i = n(627968),
-    l = n(17928),
-    s = n(123292),
-    r = n(253932),
-    a = n(994500),
-    o = n(985018);
-function d(e) {
-    let { userId: t, onClick: n } = e;
-    return (0, l.bG)([a.A], () => a.A.isIgnored(t))
-        ? (0, i.jsx)(s.Q, {
+s.d(i, { A: () => u });
+var a = s(627968),
+    e = s(17928),
+    r = s(123292),
+    n = s(885386),
+    c = s(994500),
+    l = s(375708);
+function u(t) {
+    let { userId: i, onClick: s } = t;
+    return (0, e.bG)([c.A], () => c.A.isIgnored(i))
+        ? (0, a.jsx)(r.Q, {
               onClick: () => {
-                  r.j0.updateSetting(!0), n();
+                  n.j0.updateSetting(!0), s();
               },
               variant: "primary",
               size: "sm",
               textVariant: "text-sm/medium",
-              text: o.intl.string(o.t.QbcRCJ),
+              text: l.intl.string(l.t.QbcRCJ),
           })
         : null;
 }

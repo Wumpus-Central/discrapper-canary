@@ -25,16 +25,16 @@ function _(e) {
         interviewChannelId: e.interview_channel_id,
     };
 }
-function f(e) {
+function h(e) {
     delete u[e], l === e && (l = null);
 }
-function h(e) {
+function f(e) {
     let { guildId: t, request: n } = e;
     if (null == n) return;
     let i = _(n),
         r = s.default.getCurrentUser();
     if (null != r && i.userId !== r.id) return !1;
-    (0, o.NK)(i) ? f(t) : (u[t] = i);
+    (0, o.NK)(i) ? h(t) : (u[t] = i);
 }
 class p extends i.Ay.Store {
     initialize() {
@@ -70,21 +70,21 @@ let E = new p(r.h, {
                 null != t && (u[t] = _(e));
             });
     },
-    GUILD_JOIN_REQUEST_UPDATE: h,
-    GUILD_JOIN_REQUEST_CREATE: h,
+    GUILD_JOIN_REQUEST_UPDATE: f,
+    GUILD_JOIN_REQUEST_CREATE: f,
     GUILD_JOIN_REQUEST_DELETE: function (e) {
         let { guildId: t } = e;
-        f(t);
+        h(t);
     },
     USER_GUILD_JOIN_REQUEST_UPDATE: function (e) {
         let { request: t, guildId: n } = e;
-        if (null == t) return void f(n);
+        if (null == t) return void h(n);
         let i = _(t);
-        (0, o.NK)(i) ? f(n) : (u[n] = i);
+        (0, o.NK)(i) ? h(n) : (u[n] = i);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        f(t.id);
+        h(t.id);
     },
     USER_JOIN_REQUEST_GUILDS_FETCH: function (e) {
         let { guilds: t } = e;
@@ -113,7 +113,7 @@ let E = new p(r.h, {
     },
     ACK_APPROVED_GUILD_JOIN_REQUEST: function (e) {
         let { guildId: t } = e;
-        f(t);
+        h(t);
     },
     USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW: function (e) {
         let { guildId: t } = e;

@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, { V: () => l, e: () => o });
-var r = n(852015),
-    i = n(82180),
-    a = n(679314);
-let s = { readUnknownField: !0, readerFactory: (e) => new l(e) };
+var i = n(852015),
+    r = n(82180),
+    s = n(679314);
+let a = { readUnknownField: !0, readerFactory: (e) => new l(e) };
 function o(e) {
-    return e ? Object.assign(Object.assign({}, s), e) : s;
+    return e ? Object.assign(Object.assign({}, a), e) : a;
 }
 class l {
     constructor(e, t) {
-        (this.varint64 = a.ls),
-            (this.uint32 = a.Gn),
+        (this.varint64 = s.ls),
+            (this.uint32 = s.Gn),
             (this.buf = e),
             (this.len = e.length),
             (this.pos = 0),
@@ -27,21 +27,21 @@ class l {
     skip(e) {
         let t = this.pos;
         switch (e) {
-            case r.O0.Varint:
+            case i.O0.Varint:
                 for (; 128 & this.buf[this.pos++]; );
                 break;
-            case r.O0.Bit64:
+            case i.O0.Bit64:
                 this.pos += 4;
-            case r.O0.Bit32:
+            case i.O0.Bit32:
                 this.pos += 4;
                 break;
-            case r.O0.LengthDelimited:
+            case i.O0.LengthDelimited:
                 let n = this.uint32();
                 this.pos += n;
                 break;
-            case r.O0.StartGroup:
-                let i;
-                for (; (i = this.tag()[1]) !== r.O0.EndGroup; ) this.skip(i);
+            case i.O0.StartGroup:
+                let r;
+                for (; (r = this.tag()[1]) !== i.O0.EndGroup; ) this.skip(r);
                 break;
             default:
                 throw Error("cant skip wire type " + e);
@@ -59,15 +59,15 @@ class l {
         return (e >>> 1) ^ -(1 & e);
     }
     int64() {
-        return new i.h(...this.varint64());
+        return new r.h(...this.varint64());
     }
     uint64() {
-        return new i.e(...this.varint64());
+        return new r.e(...this.varint64());
     }
     sint64() {
         let [e, t] = this.varint64(),
             n = -(1 & e);
-        return (e = ((e >>> 1) | ((1 & t) << 31)) ^ n), (t = (t >>> 1) ^ n), new i.h(e, t);
+        return (e = ((e >>> 1) | ((1 & t) << 31)) ^ n), (t = (t >>> 1) ^ n), new r.h(e, t);
     }
     bool() {
         let [e, t] = this.varint64();
@@ -80,10 +80,10 @@ class l {
         return this.view.getInt32((this.pos += 4) - 4, !0);
     }
     fixed64() {
-        return new i.e(this.sfixed32(), this.sfixed32());
+        return new r.e(this.sfixed32(), this.sfixed32());
     }
     sfixed64() {
-        return new i.h(this.sfixed32(), this.sfixed32());
+        return new r.h(this.sfixed32(), this.sfixed32());
     }
     float() {
         return this.view.getFloat32((this.pos += 4) - 4, !0);

@@ -1,9 +1,9 @@
-var r = n(412998),
-    i = n(161301),
-    a = Object.prototype.hasOwnProperty;
+var i = n(412998),
+    r = n(383682),
+    s = Object.prototype.hasOwnProperty;
 e.exports = function (e) {
-    if (!r(e)) return i(e);
+    if (!i(e)) return r(e);
     var t = [];
-    for (var n in Object(e)) a.call(e, n) && "constructor" != n && t.push(n);
+    for (var n in Object(e)) s.call(e, n) && "constructor" != n && t.push(n);
     return t;
 };

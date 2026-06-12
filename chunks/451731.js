@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { l2: () => o, mz: () => d, uV: () => l });
+n.d(t, { l2: () => o, mz: () => u, uV: () => l });
 var i = n(636537),
     r = n(228366),
     s = n(463347),
@@ -23,6 +23,6 @@ function l(e, t) {
     r.h.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_UPDATED" }),
         null != e && null != t && r.h.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_PENDING", guildId: e, emojiId: t });
 }
-function d(e, t) {
+function u(e, t) {
     null != e && null != t && r.h.dispatch({ type: "NEWLY_ADDED_EMOJI_SEEN_ACKNOWLEDGED", guildId: e, emojiId: t });
 }

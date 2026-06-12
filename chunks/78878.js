@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, { A: () => a }), n(321073);
-var r = n(439372),
-    i = n(635731);
-class s extends r.A {
-    _recentActions = new i.A(1e3);
+var i = n(439372),
+    r = n(635731);
+class s extends i.A {
+    _recentActions = new r.A(1e3);
     trackAction = (e) => {
         let { type: t } = e;
         this._recentActions.push(t);
     };
     getRecentActions = (e) => this._recentActions.slice(-e).reverse();
     handlePostConnectionOpen = () => {
-        this._recentActions = new i.A(1e3);
+        this._recentActions = new r.A(1e3);
     };
     handleTrackAction = (e) => {
         this.trackAction(e);

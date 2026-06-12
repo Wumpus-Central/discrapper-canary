@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     pU: "iframe__49094",
     iE: "wrapper__49094",
     Ig: "resizable__49094",

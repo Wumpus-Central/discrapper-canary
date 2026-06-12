@@ -1,71 +1,71 @@
 "use strict";
 n.d(t, { A: () => d });
-var l = n(627968),
-    i = n(64700),
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(962125),
-    o = n(151271),
-    c = n(652215),
-    u = n(654360);
+    o = n(962125),
+    l = n(151271),
+    u = n(652215),
+    c = n(654360);
 let d = function (e) {
     let {
             categoryListRef: t,
             expressionsListRef: n,
             categories: s,
             store: d,
-            children: h,
-            className: m,
-            listPadding: p,
-            rowCount: f,
-            getScrollOffsetForIndex: g,
-            categoryHeight: _,
-            onScroll: x,
-            renderCategoryListItem: C,
-            rowCountBySection: A,
-            renderSection: E,
+            children: _,
+            className: h,
+            listPadding: f,
+            rowCount: p,
+            getScrollOffsetForIndex: E,
+            categoryHeight: m,
+            onScroll: g,
+            renderCategoryListItem: A,
+            rowCountBySection: I,
+            renderSection: T,
         } = e,
-        I = d.useStore((e) => e.activeCategoryIndex);
+        S = d.useStore((e) => e.activeCategoryIndex);
     ((e) => {
-        let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: l } = e,
-            s = i.useRef(c.An1),
-            a = i.useRef(t);
-        return i.useEffect(() => {
+        let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
+            s = r.useRef(u.An1),
+            a = r.useRef(t);
+        return r.useEffect(() => {
             null != t &&
                 t !== a.current &&
-                (s.current !== c.An1 && window.cancelAnimationFrame(s.current),
+                (s.current !== u.An1 && window.cancelAnimationFrame(s.current),
                 (s.current = window.requestAnimationFrame(() => {
                     if (null == n.current) return;
                     let e = t > (a.current ?? -1),
-                        i = null != l ? l(t, e) : 0;
-                    n.current.scrollRowIntoView(t, { animate: !0, offset: i }), (s.current = c.An1), (a.current = t);
+                        r = null != i ? i(t, e) : 0;
+                    n.current.scrollRowIntoView(t, { animate: !0, offset: r }), (s.current = u.An1), (a.current = t);
                 })));
-        }, [t, n, l]);
-    })({ activeIndex: I, categoryListRef: t, getScrollOffsetForIndex: g });
-    let v = i.useCallback(
+        }, [t, n, i]);
+    })({ activeIndex: S, categoryListRef: t, getScrollOffsetForIndex: E });
+    let y = r.useCallback(
             (e) => {
-                let { searchQuery: t } = o.RQ.getState();
-                d.setActiveCategoryIndex(e), "" !== t ? (0, o.Ri)("") : n.current?.scrollToSectionTop(e);
+                let { searchQuery: t } = l.RQ.getState();
+                d.setActiveCategoryIndex(e), "" !== t ? (0, l.Ri)("") : n.current?.scrollToSectionTop(e);
             },
             [n, d],
         ),
-        y = i.useCallback((e) => C(s[e], e, () => v(e), I === e), [I, s, v, C]),
-        b = i.useMemo(() => ("function" == typeof _ ? (e) => _(s[e], e) : _), [s, _]);
-    return (0, l.jsxs)("div", {
-        className: a()(u.i, m),
+        N = r.useCallback((e) => A(s[e], e, () => y(e), S === e), [S, s, y, A]),
+        v = r.useMemo(() => ("function" == typeof m ? (e) => m(s[e], e) : m), [s, m]);
+    return (0, i.jsxs)("div", {
+        className: a()(c.i, h),
         children: [
-            (0, l.jsx)(r.A, {
-                listPadding: p,
-                onScroll: x,
+            (0, i.jsx)(o.A, {
+                listPadding: f,
+                onScroll: g,
                 ref: t,
-                renderRow: y,
-                rowCount: f,
-                rowHeight: b,
+                renderRow: N,
+                rowCount: p,
+                rowHeight: v,
                 hideScrollbar: !0,
-                rowCountBySection: A,
-                renderSection: E,
+                rowCountBySection: I,
+                renderSection: T,
             }),
-            h?.(v),
+            _?.(y),
         ],
     });
 };

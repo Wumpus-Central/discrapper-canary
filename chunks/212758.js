@@ -1,51 +1,51 @@
-s.d(e, { A: () => d });
-var a = s(627968),
-    A = s(64700),
-    i = s(503698),
-    l = s.n(i),
-    r = s(772707),
-    n = s(834730),
-    _ = s(922529),
-    I = s(529505),
-    h = s(117816);
-function d(t) {
+s.d(t, { A: () => u });
+var r = s(627968),
+    a = s(64700),
+    n = s(503698),
+    i = s.n(n),
+    o = s(772707),
+    l = s(834730),
+    m = s(922529),
+    c = s(529505),
+    d = s(117816);
+function u(e) {
     let {
-        headerText: e,
+        headerText: t,
         descriptionText: s,
-        infoRows: i,
-        onDismissAndStay: d,
-        onDismissAndLeave: E,
-        leaveButtonText: u,
-        stayButtonText: o,
-        transitionState: L,
-        impression: c,
-    } = t;
-    return (0, a.jsx)(r.k, {
-        transitionState: L,
-        onClose: () => (d(), Promise.resolve()),
-        trackingProps: { impression: c },
-        graphic: { type: "image", src: h.A },
-        title: e,
+        infoRows: n,
+        onDismissAndStay: u,
+        onDismissAndLeave: h,
+        leaveButtonText: k,
+        stayButtonText: x,
+        transitionState: p,
+        impression: g,
+    } = e;
+    return (0, r.jsx)(o.k, {
+        transitionState: p,
+        onClose: () => (u(), Promise.resolve()),
+        trackingProps: { impression: g },
+        graphic: { type: "image", src: d.A },
+        title: t,
         subtitle: s ?? void 0,
         actions: [
-            { text: o, onClick: d, variant: "secondary" },
-            { text: u, onClick: E },
+            { text: x, onClick: u, variant: "secondary" },
+            { text: k, onClick: h },
         ],
-        children: (0, a.jsx)("div", {
-            className: I.Cu,
-            children: i.map((t, e) =>
-                (0, a.jsxs)(
-                    A.Fragment,
+        children: (0, r.jsx)("div", {
+            className: c.Cu,
+            children: n.map((e, t) =>
+                (0, r.jsxs)(
+                    a.Fragment,
                     {
                         children: [
-                            (0, a.jsxs)("div", {
-                                className: l()(I.lj, t.className),
-                                children: [t.icon, (0, a.jsx)(n.E, { variant: "text-md/medium", children: t.text })],
+                            (0, r.jsxs)("div", {
+                                className: i()(c.lj, e.className),
+                                children: [e.icon, (0, r.jsx)(l.E, { variant: "text-md/medium", children: e.text })],
                             }),
-                            e < i.length - 1 && (0, a.jsx)(_.A, {}),
+                            t < n.length - 1 && (0, r.jsx)(m.A, {}),
                         ],
                     },
-                    e,
+                    t,
                 ),
             ),
         }),

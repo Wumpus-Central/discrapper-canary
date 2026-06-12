@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => h });
-var r = n(734057),
-    i = n(536802);
+n.d(t, { A: () => p });
+var i = n(734057),
+    r = n(536802);
 let s = new Set(),
     a = new Set(),
     o = !1;
@@ -17,16 +17,16 @@ function l(e) {
 function u() {
     s.clear(),
         a.clear(),
-        Object.values(r.A.getMutablePrivateChannels()).forEach((e) => {
+        Object.values(i.A.getMutablePrivateChannels()).forEach((e) => {
             l(e);
         }),
         (o = !0);
 }
-function d(e) {
+function c(e) {
     let { channelId: t } = e;
     a.add(t);
 }
-function c(e) {
+function d(e) {
     let { channel: t } = e;
     return l(t);
 }
@@ -34,12 +34,12 @@ function _(e) {
     let { channels: t } = e;
     for (let e of t) l(e);
 }
-function f(e) {
+function h(e) {
     let { channel: t } = e,
         n = !1;
     return s.has(t.id) && (s.delete(t.id), (n = !0)), n;
 }
-class E extends i.A {
+class f extends r.A {
     static displayName = "SpamMessageRequestStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
@@ -47,21 +47,21 @@ class E extends i.A {
             CONNECTION_OPEN: u,
             CONNECTION_OPEN_SUPPLEMENTAL: u,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_CREATE: c,
+            CHANNEL_CREATE: d,
             CHANNEL_UPDATES: _,
-            CHANNEL_DELETE: f,
-            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: d,
+            CHANNEL_DELETE: h,
+            MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: c,
         });
     }
     initialize() {
-        this.waitFor(r.A);
+        this.waitFor(i.A);
     }
     loadCache() {
-        let e = this.readSnapshot(E.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(f.LATEST_SNAPSHOT_VERSION);
         null != e && (s = new Set(e));
     }
     takeSnapshot() {
-        return { version: E.LATEST_SNAPSHOT_VERSION, data: Array.from(s) };
+        return { version: f.LATEST_SNAPSHOT_VERSION, data: Array.from(s) };
     }
     getSpamChannelIds() {
         return s;
@@ -79,4 +79,4 @@ class E extends i.A {
         return o;
     }
 }
-let h = new E();
+let p = new f();

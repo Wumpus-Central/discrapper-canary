@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => Y });
+n.d(t, { Ay: () => W });
 var l = n(627968),
     r = n(64700),
     a = n(503698),
@@ -18,8 +18,8 @@ var l = n(627968),
     G = n(66834),
     O = n(966327),
     S = n(429913),
-    D = n(47167),
-    R = n(137177),
+    R = n(47167),
+    D = n(137177),
     m = n(967144),
     L = n(903209),
     h = n(734057),
@@ -152,7 +152,7 @@ function B(e) {
 }
 function y(e) {
     let { channel: t, className: n } = e,
-        r = (0, D.Ay)(t, !0);
+        r = (0, R.Ay)(t, !0);
     return (0, l.jsx)("div", {
         className: i()(j.kp, n),
         children: (0, l.jsx)(u.E, {
@@ -164,7 +164,7 @@ function y(e) {
 function V(e) {
     let { children: t, hasTooltip: n, guildId: a, inviterUser: i, joinSourceType: u, joinSourceChannelId: _ } = e,
         c = (0, s.bG)([h.A], () => h.A.getChannel(_)),
-        o = (0, D.Ay)(c, !0),
+        o = (0, R.Ay)(c, !0),
         A = !!n && (u === P.UP.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL || null != i),
         d = r.useMemo(
             () =>
@@ -206,7 +206,7 @@ function w(e) {
         N = n === P.UP.INTEGRATION && null != E,
         G = (0, S.h)(a),
         O = (0, s.bG)([h.A], () => h.A.getChannel(_)),
-        D = r.useCallback(
+        R = r.useCallback(
             (e) => {
                 switch ((e.stopPropagation(), e.preventDefault(), !0)) {
                     case null == t && null == n:
@@ -238,7 +238,7 @@ function w(e) {
                 "aria-label": (0, P.v8)(E),
                 role: "button",
                 tabIndex: 0,
-                onClick: D,
+                onClick: R,
                 children: [
                     (0, l.jsx)(H, { type: E }),
                     (0, l.jsx)(u.E, { variant: "text-sm/medium", children: (0, P.v8)(E) }),
@@ -254,9 +254,9 @@ function w(e) {
                         "aria-label": I?.getJoinTypeLabel(t ?? void 0),
                         role: "button",
                         tabIndex: 0,
-                        onClick: D,
+                        onClick: R,
                         children: [
-                            (0, l.jsx)(R.A, { game: G, size: R.M.XXSMALL }),
+                            (0, l.jsx)(D.A, { game: G, size: D.M.XXSMALL }),
                             (0, l.jsx)(u.E, { variant: "text-sm/medium", className: j.YL, children: G.name }),
                         ],
                     }),
@@ -273,7 +273,7 @@ function w(e) {
                         "aria-label": I?.getJoinTypeLabel(t ?? void 0),
                         role: "button",
                         tabIndex: 0,
-                        onClick: D,
+                        onClick: R,
                         children: [
                             I?.icon,
                             (0, l.jsx)(u.E, { variant: "text-sm/medium", children: I?.getJoinTypeLabel(t ?? void 0) }),
@@ -293,7 +293,7 @@ function w(e) {
             return (0, l.jsx)(v, { ...T });
     }
 }
-let Y = r.memo(function (e) {
+let W = r.memo(function (e) {
     let { userId: t, guildId: n, showJoinMethodContextAsFooter: a, onClickInviter: i } = e,
         E = (0, s.bG)([p.A], () => p.A.getEnhancedMember(n, t), [n, t]),
         u = E?.inviterId ?? null,

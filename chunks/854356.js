@@ -1,32 +1,32 @@
 n.d(t, { A: () => d });
 var r = n(64700),
-    s = n(412703);
+    l = n(412703);
 n(531443);
-var a = n(118356);
-n(141711), n(497329), new a.Vy("MobileCustomMuxIntegration"), new a.Vy("MobileMuxWrapper"), n(740644);
-var i = n(829097),
-    l = n(613373),
-    u = n(859387),
+var s = n(941426);
+n(141711), n(497329), new s.Vy("MobileCustomMuxIntegration"), new s.Vy("MobileMuxWrapper"), n(740644);
+var a = n(829097),
+    i = n(613373),
+    u = n(551875),
     o = n(795068),
-    c = n(654487);
+    c = n(190107);
 function d(e) {
-    let { videoAssetUrl: t, videoRef: n, hlsRef: a, videoAssetType: d } = e,
+    let { videoAssetUrl: t, videoRef: n, hlsRef: s, videoAssetType: d } = e,
         { questConfig: E } = r.useContext(o.l),
-        m = (0, i._)({ location: c.rE.VIDEO_MODAL }).externalAnalyticsEnabled && null != t,
+        _ = (0, a._)({ location: c.rE.VIDEO_MODAL }).externalAnalyticsEnabled && null != t,
         f = d === u.fY.VIDEO_PLAYER_VIDEO_HLS,
-        _ = r.useMemo(
+        m = r.useMemo(
             () =>
-                m && null != t
+                _ && null != t
                     ? {
                           contentId: t,
                           videoStreamType: f ? "hls" : "mp4",
                           contentType: "quests",
-                          title: E.taskConfigV2.tasks[s.n.WATCH_VIDEO]?.messages.videoTitle,
+                          title: E.taskConfigV2.tasks[l.n.WATCH_VIDEO]?.messages.videoTitle,
                           questId: E.id,
                           gameName: E.messages.gameTitle,
                       }
                     : void 0,
-            [m, t, f, E],
+            [_, t, f, E],
         );
-    (0, l.P8)({ videoRef: n, hlsRef: a, contentMetadata: _, isHls: f });
+    (0, i.P8)({ videoRef: n, hlsRef: s, contentMetadata: m, isHls: f });
 }

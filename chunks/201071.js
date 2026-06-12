@@ -68,13 +68,13 @@ function f(e, r, t) {
     return a ? l(e, r) : l(e.toLowerCase(), r.toLowerCase());
 }
 var h = t(379078);
-function c(e) {
+function p(e) {
     return e
         .split(",")
         .map((e) => e.trim())
         .filter((e) => "" !== e);
 }
-function p(e) {
+function c(e) {
     return "string" == typeof e ? [e.trim()] : e.map((e) => e.trim());
 }
 self.addEventListener("message", (e) => {
@@ -92,13 +92,13 @@ self.addEventListener("message", (e) => {
             },
         } = e,
         b = [];
-    for (let e of c(l))
+    for (let e of p(l))
         switch (s) {
             case h.n.REGEX:
                 b.push(
                     ...(function (e, r) {
                         let t = RegExp(e, "i");
-                        return r.reduce((e, r, a) => (p(r).some((e) => t.test(e)) ? [...e, a] : e), []);
+                        return r.reduce((e, r, a) => (c(r).some((e) => t.test(e)) ? [...e, a] : e), []);
                     })(e, i),
                 );
                 break;
@@ -107,7 +107,7 @@ self.addEventListener("message", (e) => {
                     ...(function (e, r) {
                         return r.reduce(
                             (r, t, a) =>
-                                p(t).some((r) => {
+                                c(t).some((r) => {
                                     let t, a;
                                     return (t = o(e)), (a = o(r)), n()(e, r) || n()(t, r) || n()(t, a);
                                 })
@@ -121,7 +121,7 @@ self.addEventListener("message", (e) => {
             case h.n.JARO_WINKLER:
                 b.push(
                     ...(function (e, r, t) {
-                        return r.reduce((r, a, n) => (Math.max(...p(a).map((r) => f(e, r))) >= t ? [...r, n] : r), []);
+                        return r.reduce((r, a, n) => (Math.max(...c(a).map((r) => f(e, r))) >= t ? [...r, n] : r), []);
                     })(e, i, m),
                 );
                 break;
@@ -130,7 +130,7 @@ self.addEventListener("message", (e) => {
                     ...(function (e, r) {
                         return r.reduce(
                             (r, t, a) =>
-                                p(t).some((r) => r.toLocaleLowerCase() === e.toLocaleLowerCase()) ? [...r, a] : r,
+                                c(t).some((r) => r.toLocaleLowerCase() === e.toLocaleLowerCase()) ? [...r, a] : r,
                             [],
                         );
                     })(e, i),
@@ -139,10 +139,10 @@ self.addEventListener("message", (e) => {
     let g = [...new Set(b)];
     u === h.r.JARO_WINKLER &&
         ((r = g),
-        (t = c(l)),
+        (t = p(l)),
         (g = r
             .map((e) => {
-                let r = p(i[e]);
+                let r = c(i[e]);
                 return { index: e, rank: Math.max(...t.flatMap((e) => r.map((r) => f(e, r)))) };
             })
             .sort((e, r) => r.rank - e.rank)

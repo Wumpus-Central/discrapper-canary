@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { X_: () => s, gn: () => i, hH: () => a });
-var l = n(676608);
-function i(e, t, n) {
-    let i = (0, l.Ay)(e, t),
+n.d(t, { X_: () => s, gn: () => r, hH: () => a });
+var i = n(676608);
+function r(e, t, n) {
+    let r = (0, i.Ay)(e, t),
         s = null != n && null != n.primaryColor && null != n.secondaryColor;
-    return i && s ? n : null;
+    return r && s ? n : null;
 }
 function s(e, t, n) {
-    let i = (0, l.jV)(e, t),
+    let r = (0, i.jV)(e, t),
         s = null != n && null != n.primaryColor && null != n.secondaryColor;
-    return i && s ? n : null;
+    return r && s ? n : null;
 }
 function a(e, t, n) {
-    let i = (0, l.aF)(e, t),
+    let r = (0, i.aF)(e, t),
         s = null != n && null != n.primaryColor && null != n.secondaryColor;
-    return i && s ? n : null;
+    return r && s ? n : null;
 }

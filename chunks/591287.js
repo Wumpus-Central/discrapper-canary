@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = [
+        n = [
             "absolute_url",
             "asset|0",
             "asset_version",
@@ -41,7 +41,7 @@ e.exports = function (e) {
             "template_from_string",
             "url|0",
         ],
-        n = [
+        i = [
             "apply",
             "autoescape",
             "block",
@@ -69,7 +69,7 @@ e.exports = function (e) {
             "verbatim",
             "with",
         ];
-    n = n.concat(n.map((e) => `end${e}`));
+    i = i.concat(i.map((e) => `end${e}`));
     let r = {
             scope: "string",
             variants: [
@@ -77,14 +77,14 @@ e.exports = function (e) {
                 { begin: /"/, end: /"/ },
             ],
         },
-        i = { scope: "number", match: /\d+/ },
-        o = {
-            beginKeywords: a.join(" "),
-            keywords: { name: a },
+        s = { scope: "number", match: /\d+/ },
+        a = {
+            beginKeywords: n.join(" "),
+            keywords: { name: n },
             relevance: 0,
-            contains: [{ begin: /\(/, end: /\)/, excludeBegin: !0, excludeEnd: !0, contains: [r, i] }],
+            contains: [{ begin: /\(/, end: /\)/, excludeBegin: !0, excludeEnd: !0, contains: [r, s] }],
         },
-        s = {
+        o = {
             match: /\|(?=[A-Za-z_]+:?)/,
             beginScope: "punctuation",
             relevance: 0,
@@ -165,17 +165,17 @@ e.exports = function (e) {
                 },
             ],
         },
-        l = (e, { relevance: a }) => ({
+        l = (e, { relevance: n }) => ({
             beginScope: { 1: "template-tag", 3: "name" },
-            relevance: a || 2,
+            relevance: n || 2,
             endScope: "template-tag",
             begin: [/\{%/, /\s*/, t.either(...e)],
             end: /%\}/,
             keywords: "in",
-            contains: [s, o, r, i],
+            contains: [o, a, r, s],
         }),
-        c = l(n, { relevance: 2 }),
-        _ = l([/[a-z_]+/], { relevance: 1 });
+        u = l(i, { relevance: 2 }),
+        c = l([/[a-z_]+/], { relevance: 1 });
     return {
         name: "Twig",
         aliases: ["craftcms"],
@@ -183,9 +183,9 @@ e.exports = function (e) {
         subLanguage: "xml",
         contains: [
             e.COMMENT(/\{#/, /#\}/),
+            u,
             c,
-            _,
-            { className: "template-variable", begin: /\{\{/, end: /\}\}/, contains: ["self", s, o, r, i] },
+            { className: "template-variable", begin: /\{\{/, end: /\}\}/, contains: ["self", o, a, r, s] },
         ],
     };
 };

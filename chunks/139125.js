@@ -16,14 +16,14 @@ var r = n(834647),
     v = [],
     g = a(v.sort),
     b = a(v.push),
-    A = u(function () {
+    _ = u(function () {
         v.sort(void 0);
     }),
-    _ = u(function () {
+    k = u(function () {
         v.sort(null);
     }),
-    k = p("sort"),
-    C = !u(function () {
+    C = p("sort"),
+    w = !u(function () {
         if (m) return m < 70;
         if (!h || !(h > 3)) {
             if (f) return !0;
@@ -63,14 +63,14 @@ var r = n(834647),
         }
     });
 r(
-    { target: "Array", proto: !0, forced: A || !_ || !k || !C },
+    { target: "Array", proto: !0, forced: _ || !k || !C || !w },
     {
         sort: function (e) {
             void 0 !== e && o(e);
             var t,
                 n,
                 r = i(this);
-            if (C) return void 0 === e ? g(r) : g(r, e);
+            if (w) return void 0 === e ? g(r) : g(r, e);
             var a = [],
                 u = s(r);
             for (n = 0; n < u; n++) n in r && b(a, r[n]);

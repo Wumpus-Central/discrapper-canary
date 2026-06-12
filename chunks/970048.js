@@ -10,22 +10,22 @@ var i = n(228366),
     c = n(735438),
     d = n.n(c),
     _ = n(166929),
-    f = n(276208),
-    h = n(973522),
+    h = n(276208),
+    f = n(973522),
     p = n(652896),
     E = n(624694),
     m = n(967347),
     g = n(929921),
     A = n(734057),
-    I = n(235058),
+    I = n(890063),
     T = n(763827),
     S = n(873985),
-    N = n(116956),
-    y = n(174459),
-    C = n(353835),
-    v = n(321034),
-    O = n(652215),
-    R = n(731854);
+    y = n(116956),
+    N = n(174459),
+    v = n(353835),
+    C = n(321034),
+    R = n(652215),
+    O = n(731854);
 function b(e) {
     let t = E.A.getConnectionStats(e);
     return null == t ? null : (t.stats.rtp.outbound.find((e) => "video" === e.type) ?? null);
@@ -44,10 +44,10 @@ var w = n(161518),
     M = n(927813),
     P = n(601900);
 let x = 10 * M.A.Millis.SECOND;
-var U = n(495544);
-let k = 10 * M.A.Millis.SECOND;
+var k = n(495544);
+let U = 10 * M.A.Millis.SECOND;
 function G() {
-    return f.X.isIncomingVideoEnabled() && performance.now() - f.X.lastIncomingVideoEnabledChangeTime() > k;
+    return h.X.isIncomingVideoEnabled() && performance.now() - h.X.lastIncomingVideoEnabledChangeTime() > U;
 }
 function F(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 15,
@@ -65,11 +65,11 @@ let j = BigInt(-3821);
 var Y = n(403362),
     W = n(313961),
     K = n(650338);
-let z = 20 * M.A.Millis.SECOND;
-var $ = n(877717);
+let $ = 20 * M.A.Millis.SECOND;
+var z = n(877717);
 n(321073);
 var q = n(803301);
-let Z = {
+let X = {
         [u.iy.NO_AUDIO_INPUT_DETECTED]: {
             getActiveErrors: (e) => {
                 let { voiceChannelId: t, voiceState: n } = e,
@@ -80,8 +80,8 @@ let Z = {
                     null != i &&
                     null != s &&
                     !I.Ay.getInputDetectedThisConnection() &&
-                    T.A.getState() === O.S7L.RTC_CONNECTED &&
-                    I.Ay.getSettings().mode === O.TBI.VOICE_ACTIVITY &&
+                    T.A.getState() === R.S7L.RTC_CONNECTED &&
+                    I.Ay.getSettings().mode === R.TBI.VOICE_ACTIVITY &&
                     I.Ay.getSettings().silenceWarning &&
                     !1 === I.Ay.getInputDetected() &&
                     !r &&
@@ -106,8 +106,8 @@ let Z = {
             getActiveErrors: () =>
                 G()
                     ? a.A.getAllActiveStreams().reduce((e, t) => {
-                          let n = N.A.getRTCConnection((0, p._z)(t))?.getMediaEngineConnectionId();
-                          if (null == n || t.ownerId === U.default.getId() || t.state === O.XYD.PAUSED) return e;
+                          let n = y.A.getRTCConnection((0, p._z)(t))?.getMediaEngineConnectionId();
+                          if (null == n || t.ownerId === k.default.getId() || t.state === R.XYD.PAUSED) return e;
                           let i = F(n, t.ownerId);
                           if (null == i) return e;
                           let r = W.A.getParticipant(t.channelId, (0, p._z)(t));
@@ -127,8 +127,8 @@ let Z = {
             getActiveErrors: () =>
                 G()
                     ? a.A.getAllActiveStreams().reduce((e, t) => {
-                          let n = N.A.getRTCConnection((0, p._z)(t))?.getMediaEngineConnectionId();
-                          if (null == n || t.ownerId === U.default.getId()) return e;
+                          let n = y.A.getRTCConnection((0, p._z)(t))?.getMediaEngineConnectionId();
+                          if (null == n || t.ownerId === k.default.getId()) return e;
                           let i = F(n, t.ownerId);
                           return (
                               null == i ||
@@ -144,7 +144,7 @@ let Z = {
             getActiveErrors: () => {
                 let e = a.A.getCurrentUserActiveStream();
                 if (null == e || 0 === a.A.getViewerIds(e).length) return null;
-                let t = N.A.getRTCConnection((0, p._z)(e))?.getMediaEngineConnectionId();
+                let t = y.A.getRTCConnection((0, p._z)(e))?.getMediaEngineConnectionId();
                 if (null == t) return null;
                 let n = F(t, e.ownerId);
                 return null == n
@@ -158,14 +158,14 @@ let Z = {
         [u.iy.STREAM_SEND_LOW_FPS]: {
             getActiveErrors: () => {
                 let e = a.A.getCurrentUserActiveStream();
-                if (null == e || e.state === O.XYD.PAUSED || 0 === a.A.getViewerIds(e).length) return null;
+                if (null == e || e.state === R.XYD.PAUSED || 0 === a.A.getViewerIds(e).length) return null;
                 let t = (0, p._z)(e),
-                    n = N.A.getRTCConnection(t);
+                    n = y.A.getRTCConnection(t);
                 if (null == n) return null;
                 let i = n.getMediaEngineConnectionId();
                 if (null == i) return null;
-                let r = N.A.getLastNonZeroRemoteVideoSinkWantsTime(t);
-                if ((null != r && performance.now() - r < z) || !n.hasActiveRemoteWants()) return null;
+                let r = y.A.getLastNonZeroRemoteVideoSinkWantsTime(t);
+                if ((null != r && performance.now() - r < $) || !n.hasActiveRemoteWants()) return null;
                 let s = W.A.getParticipant(e.channelId, (0, p._z)(e));
                 if (null == s) return null;
                 let o = F(i, e.ownerId);
@@ -181,9 +181,9 @@ let Z = {
         },
         [u.iy.STREAM_BAD_NETWORK_QUALITY]: {
             getActiveErrors: () =>
-                N.A.getAllActiveStreamKeys()
+                y.A.getAllActiveStreamKeys()
                     .map((e) =>
-                        N.A.getQuality(e) === O.bFR.BAD
+                        y.A.getQuality(e) === R.bFR.BAD
                             ? { type: u.iy.STREAM_BAD_NETWORK_QUALITY, ...(0, P.id)(e) }
                             : null,
                     )
@@ -193,7 +193,7 @@ let Z = {
         [u.iy.STREAM_SOUNDSHARE_FAILED]: {
             getActiveErrors: () => {
                 let e = a.A.getCurrentUserActiveStream();
-                return null != e && null != $.A.getHookError(O.LU7.SOUND)
+                return null != e && null != z.A.getHookError(R.LU7.SOUND)
                     ? [{ type: u.iy.STREAM_SOUNDSHARE_FAILED, ...(0, P.id)((0, p._z)(e)) }]
                     : void 0;
             },
@@ -203,7 +203,7 @@ let Z = {
             getActiveErrors: (e) => {
                 let { activeStreams: t } = e;
                 return t
-                    .filter((e) => e.state === O.XYD.FAILED && null == e.errorCode)
+                    .filter((e) => e.state === R.XYD.FAILED && null == e.errorCode)
                     .map((e) => ({ type: u.iy.STREAM_FAILED_TO_START, ...(0, P.id)((0, p._z)(e)) }));
             },
             makeErrorContextKey: (e) => `${e.streamKey}:${e.mediaSessionId}`,
@@ -212,7 +212,7 @@ let Z = {
             getActiveErrors: (e) => {
                 let { activeStreams: t } = e;
                 return t
-                    .filter((e) => e.state === O.XYD.RECONNECTING)
+                    .filter((e) => e.state === R.XYD.RECONNECTING)
                     .map((e) => ({ type: u.iy.STREAM_RECONNECTING, ...(0, P.id)((0, p._z)(e)) }));
             },
             makeErrorContextKey: (e) => `${e.streamKey}:${e.mediaSessionId}`,
@@ -262,7 +262,7 @@ let Z = {
                 Object.values(q.A.getTimedoutVideos())
                     .filter((e) => {
                         let { userId: t, videoStreamId: n } = e;
-                        return U.default.getId() === t && null != n;
+                        return k.default.getId() === t && null != n;
                     })
                     .map((e) => ({ type: u.iy.VIDEO_STREAM_SENDER_READY_TIMEOUT, ...e })),
             makeErrorContextKey: (e) => `${e.mediaContext}:${e.userId}`,
@@ -272,7 +272,7 @@ let Z = {
                 Object.values(q.A.getTimedoutVideos())
                     .filter((e) => {
                         let { userId: t, videoStreamId: n } = e;
-                        return U.default.getId() !== t && null != n;
+                        return k.default.getId() !== t && null != n;
                     })
                     .map((e) => ({ type: u.iy.VIDEO_STREAM_RECEIVER_READY_TIMEOUT, ...e })),
             makeErrorContextKey: (e) => `${e.mediaContext}:${e.userId}`,
@@ -282,7 +282,7 @@ let Z = {
                 Object.values(q.A.getTimedoutVideos())
                     .filter((e) => {
                         let { userId: t, videoStreamId: n } = e;
-                        return U.default.getId() === t && null == n;
+                        return k.default.getId() === t && null == n;
                     })
                     .map((e) => ({ type: u.iy.VIDEO_STREAM_SENDER_READY_TIMEOUT_NO_STREAM, ...e })),
             makeErrorContextKey: (e) => `${e.mediaContext}:${e.userId}`,
@@ -292,7 +292,7 @@ let Z = {
                 Object.values(q.A.getTimedoutVideos())
                     .filter((e) => {
                         let { userId: t, videoStreamId: n } = e;
-                        return U.default.getId() !== t && null == n;
+                        return k.default.getId() !== t && null == n;
                     })
                     .map((e) => ({ type: u.iy.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM, ...e })),
             makeErrorContextKey: (e) => `${e.mediaContext}:${e.userId}`,
@@ -305,17 +305,17 @@ let Z = {
                 if (null == t || !I.Ay.isVideoEnabled()) return null;
                 let n = T.A.getLastNonZeroRemoteVideoSinkWantsTime();
                 if ((null != n && performance.now() - n < B) || !e.hasActiveRemoteWants()) return null;
-                let i = F(t, U.default.getId());
+                let i = F(t, k.default.getId());
                 return null == i
                     ? null
                     : i.short.frameRate < 10 || i.long.frameRate < 10
-                      ? [{ type: u.iy.CAMERA_SEND_LOW_FPS, userId: U.default.getId(), ...(0, P.jY)() }]
+                      ? [{ type: u.iy.CAMERA_SEND_LOW_FPS, userId: k.default.getId(), ...(0, P.jY)() }]
                       : void 0;
             },
             makeErrorContextKey: (e) => `${e.mediaSessionId}`,
         },
     },
-    X = new s.A("AVErrorManager");
+    Z = new s.A("AVErrorManager");
 function Q(e, t) {
     let n = new Set();
     for (let i of e) t.has(i) || n.add(i);
@@ -354,13 +354,13 @@ class J extends r.A {
             t = null != e ? (l.A.getVoiceStateForChannel(e) ?? null) : null,
             n = a.A.getAllActiveStreams(),
             r = new Map();
-        for (let i of Object.values(Z)) {
+        for (let i of Object.values(X)) {
             let s = i.getActiveErrors({ voiceChannelId: e, voiceState: t, activeStreams: n });
             if (null != s)
                 for (let e of s)
                     r.set(
                         (function (e) {
-                            let t = Z[e.type];
+                            let t = X[e.type];
                             return `${e.type}:${t?.makeErrorContextKey(e)}`;
                         })(e),
                         e,
@@ -368,7 +368,7 @@ class J extends r.A {
         }
         let s = w.A.getActiveErrors();
         if (!(s instanceof Map))
-            return void X.error(`existingErrors is not a Map: ${s} type: ${Object.prototype.toString.call(s)}`);
+            return void Z.error(`existingErrors is not a Map: ${s} type: ${Object.prototype.toString.call(s)}`);
         if (0 === r.size && 0 === s.size) return;
         let c = new Set(r.keys()),
             d = new Set(s.keys());
@@ -382,7 +382,7 @@ class J extends r.A {
                 let t = s.get(e);
                 if (null != t) {
                     let { type: e, ...n } = t;
-                    X.info(`Error resolved: ${e} ${JSON.stringify(n)}`);
+                    Z.info(`Error resolved: ${e} ${JSON.stringify(n)}`);
                 }
             }
         i.h.dispatch({ type: "ACTIVE_AV_ERRORS_CHANGED", activeErrors: r });
@@ -402,8 +402,8 @@ class J extends r.A {
                     M = "errorMessage" in t ? t.errorMessage : void 0,
                     P = "mediaSessionId" in t ? t.mediaSessionId : void 0,
                     x = "rtcConnectionId" in t ? t.rtcConnectionId : void 0,
-                    U = "videoCodec" in t ? t.videoCodec : void 0,
-                    k = "videoEncoder" in t ? t.videoEncoder : void 0,
+                    k = "videoCodec" in t ? t.videoCodec : void 0,
+                    U = "videoEncoder" in t ? t.videoEncoder : void 0,
                     G = "videoDecoder" in t ? t.videoDecoder : void 0,
                     F = "audioCaptureSampleRateMismatchPercent" in t ? t.audioCaptureSampleRateMismatchPercent : void 0,
                     V = "audioInputDeviceName" in t ? t.audioInputDeviceName : void 0,
@@ -411,20 +411,20 @@ class J extends r.A {
                     H = "videoDeviceName" in t ? t.videoDeviceName : void 0,
                     j = "userId" in t ? t.userId : void 0,
                     Y = null != l ? (0, p.Iy)(l) : null,
-                    W = null != l ? N.A.getRTCConnection(l) : null,
+                    W = null != l ? y.A.getRTCConnection(l) : null,
                     K = null != l ? W : T.A.getRTCConnection(),
-                    z = null != l ? W?.analyticsContext?.streamApplication : null,
-                    { resolution: $, fps: q } = g.A.getState(),
-                    { gameName: Z, gameId: X, exe: Q, distributor: J } = (0, h.wH)(z),
+                    $ = null != l ? W?.analyticsContext?.streamApplication : null,
+                    { resolution: z, fps: q } = g.A.getState(),
+                    { gameName: X, gameId: Z, exe: Q, distributor: J } = (0, f.wH)($),
                     ee = r.isErrorOutbound,
-                    et = c ?? R.x.DEFAULT,
+                    et = c ?? O.x.DEFAULT,
                     en = null != Y ? Y.ownerId : j,
                     ei = null != W ? W?.getVoiceParticipantType() : ee ? "sender" : "receiver",
                     er = K?.getMediaEngineConnectionId() ?? null;
                 (n =
                     null != l && null != Y
                         ? ee
-                            ? K?.getOutboundStats()?.find((e) => e.quality === R.Y4)
+                            ? K?.getOutboundStats()?.find((e) => e.quality === O.Y4)
                             : K?.getInboundStats(Y.ownerId)
                         : ee
                           ? (d().maxBy(K?.getOutboundStats() ?? [], (e) => e.num_frames) ?? null)
@@ -456,20 +456,20 @@ class J extends r.A {
                             num_packets: n?.num_packets ?? 0,
                             num_bytes: n?.num_bytes ?? 0,
                             num_packets_lost: L(ee, er, en)?.packetsLost ?? 0,
-                            video_codec: U ?? (0, _.aV)(L(ee, er, en)?.codec.name) ?? null,
-                            video_encoder: k ?? (0, _.kZ)(b(er)?.encoderImplementationName) ?? null,
+                            video_codec: k ?? (0, _.aV)(L(ee, er, en)?.codec.name) ?? null,
+                            video_encoder: U ?? (0, _.kZ)(b(er)?.encoderImplementationName) ?? null,
                             video_decoder: G ?? (0, _.s7)(D(er, en)?.decoderImplementationName) ?? null,
                             audio_capture_sample_rate_mismatch_percent: F ?? null,
-                            incoming_video_stopped_for_occlusion: !f.X.isIncomingVideoEnabled(),
+                            incoming_video_stopped_for_occlusion: !h.X.isIncomingVideoEnabled(),
                             bitrate: L(ee, er, en)?.bitrate ?? null,
                             target_bitrate: ee ? (b(er)?.bitrateTarget ?? null) : null,
                             fps: (ee ? (b(et)?.frameRateEncode ?? null) : (D(et, en)?.frameRateDecode ?? null)) ?? null,
-                            target_fps: et === R.x.STREAM && ee ? q : null,
+                            target_fps: et === O.x.STREAM && ee ? q : null,
                             sender_user_id: Y?.ownerId ?? null,
                             stream_region: W?.getRegion() ?? null,
                             stream_source_type: ee ? (W?.analyticsContext?.streamSourceType ?? null) : null,
                             num_stream_viewers: W?.analyticsContext?.numViewers ?? null,
-                            video_input_resolution_height: ee ? ($ ?? null) : null,
+                            video_input_resolution_height: ee ? (z ?? null) : null,
                             video_input_frame_rate: ee ? (q ?? null) : null,
                             screenshare_capture_method: (function (e) {
                                 let t = E.A.getConnectionStats(e),
@@ -496,8 +496,8 @@ class J extends r.A {
                                 for (let [e, t] of Object.entries(i)) t > r && ((r = t), (s = e));
                                 return r > 0 ? s : null;
                             })(er),
-                            share_application_name: Z ?? null,
-                            share_application_id: X ?? null,
+                            share_application_name: X ?? null,
+                            share_application_id: Z ?? null,
                             share_application_executable: Q ?? null,
                             share_application_distributor: J ?? null,
                             cpu_brand: t?.cpu_brand ?? null,
@@ -511,8 +511,8 @@ class J extends r.A {
                             gpu_device_sub_sys_id: t?.gpu_device_sub_sys_id ?? null,
                             gpu_device_revision: t?.gpu_device_revision ?? null,
                             gpu_driver_version: t?.gpu_driver_version ?? null,
-                            cpu_usage: v.A.getCurrentCPUUsagePercent() ?? null,
-                            memory_usage: v.A.getCurrentMemoryUsageKB() ?? null,
+                            cpu_usage: C.A.getCurrentCPUUsagePercent() ?? null,
+                            memory_usage: C.A.getCurrentMemoryUsageKB() ?? null,
                             outbound_bitrate_estimate:
                                 E.A.getConnectionStats(er)?.stats.transport.outboundBitrateEstimate ?? null,
                             inbound_bitrate_estimate:
@@ -536,11 +536,11 @@ class J extends r.A {
                             output_volume: I.Ay.getOutputVolume(),
                             audio_input_device_count: Object.keys(I.Ay.getInputDevices()).length,
                             audio_output_device_count: Object.keys(I.Ay.getOutputDevices()).length,
-                            app_hardware_acceleration_enabled: C.A.getAppHardwareAccelerationEnabled(),
+                            app_hardware_acceleration_enabled: v.A.getAppHardwareAccelerationEnabled(),
                             input_device_os_muted: I.Ay.getInputDeviceOSMuted() ?? null,
                             input_device_os_volume: I.Ay.getInputDeviceOSVolume() ?? null,
                         };
-                        y.default.track(O.HAw.AV_ERROR_REPORTED, i);
+                        N.default.track(R.HAw.AV_ERROR_REPORTED, i);
                     });
             })(t, n);
     }

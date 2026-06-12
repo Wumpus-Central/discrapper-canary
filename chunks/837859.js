@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { Ay: () => l });
-var i = n(250105),
+var i = n(240921),
     r = n(753070);
 let s = { videoPresetResolutionMax: r.on.RESOLUTION_1440 },
     a = (0, i.Ay)({

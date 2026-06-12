@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { K: () => a });
-var r = n(627968);
+n.d(t, { K: () => s });
+var i = n(627968);
 n(64700);
-var i = n(219869);
-function a(e) {
-    return (0, r.jsx)(i.T, { ...e });
+var r = n(219869);
+function s(e) {
+    return (0, i.jsx)(r.T, { ...e });
 }

@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     kL: "container__1dc40",
     iT: "thumbnailContainer__1dc40",
     xn: "thumbnail__1dc40",

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { SD: () => d, Vm: () => l, eE: () => c, g$: () => _, u5: () => u, uJ: () => f });
+n.d(t, { SD: () => d, Vm: () => l, eE: () => c, g$: () => _, u5: () => u, uJ: () => h });
 var i = n(265690),
     r = n(562708),
     s = n(121894);
@@ -30,6 +30,6 @@ function _() {
         e
     );
 }
-function f() {
+function h() {
     return o.getState().impressions;
 }

@@ -1,9 +1,9 @@
-var r = n(971886);
-e.exports = function (e, t, n, i) {
+var u = t(971886);
+r.exports = function (r, n, t, o) {
     return (
-        r(e, function (e, r, a) {
-            t(i, e, n(e), a);
+        u(r, function (r, u, e) {
+            n(o, r, t(r), e);
         }),
-        i
+        o
     );
 };

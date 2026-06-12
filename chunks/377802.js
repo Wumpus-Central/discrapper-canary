@@ -1,23 +1,23 @@
 "use strict";
 n.d(t, { O: () => o });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    r = n(64700),
     s = n(744682);
 let a = { all: { name: "all", start: 0, duration: 90 } },
     o = () => {
-        let e = i.useRef(null),
-            t = i.useCallback(() => {
+        let e = r.useRef(null),
+            t = r.useCallback(() => {
                 null != e.current && e.current.play("all");
             }, []),
-            o = i.useCallback(() => {
+            o = r.useCallback(() => {
                 null != e.current && e.current.play("all");
             }, []),
-            l = i.useCallback(() => {
+            l = r.useCallback(() => {
                 null != e.current && e.current.stopIfPlaying("all");
             }, []),
-            u = i.useCallback(
+            u = r.useCallback(
                 (t) =>
-                    (0, r.jsx)(s.P, {
+                    (0, i.jsx)(s.P, {
                         ...t,
                         src: () => n.e("70552").then(n.t.bind(n, 772203, 19)),
                         ref: e,
@@ -28,8 +28,8 @@ let a = { all: { name: "all", start: 0, duration: 90 } },
         return {
             events: { onMouseEnter: o, onMouseLeave: l },
             play: t,
-            getDuration: i.useCallback(() => e.current?.getDuration(), []),
-            getCurrentFrame: i.useCallback(() => e.current?.getCurrentFrame() ?? null, []),
+            getDuration: r.useCallback(() => e.current?.getDuration(), []),
+            getCurrentFrame: r.useCallback(() => e.current?.getCurrentFrame() ?? null, []),
             Component: u,
         };
     };

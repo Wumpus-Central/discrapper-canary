@@ -1,9 +1,9 @@
-n.d(t, { A: () => x }), n(321073);
+n.d(t, { A: () => h }), n(321073);
 var i = n(64700),
     l = n(975807),
-    s = n(985018),
-    a = n(975571),
-    r = n(627968),
+    s = n(375708),
+    r = n(975571),
+    a = n(627968),
     o = n(95035),
     d = n(702841),
     c = n(555337),
@@ -14,32 +14,32 @@ function g() {
         t = (0, d.bG)([c.A], () => c.A.getProps().mfaLevel);
     return { isUserMFAEnabled: e?.mfaEnabled === !0, isModerationMFAEnabled: t === m.EkJ.ELEVATED };
 }
-function h(e) {
+function x(e) {
     return e;
 }
-function x(e) {
+function h(e) {
     let {
             onEligibilityBecameStale: t,
             actions: n,
             sortedByIneligible: d,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { isUserMFAEnabled: c, isModerationMFAEnabled: u } = g(),
-        x = i.useCallback(async () => {
+        h = i.useCallback(async () => {
             c ? u || (await n?.onRequireModeratorMFAClick?.()) : await n?.onEnableMFAClick?.(), t?.();
         }, [c, u, t, n]),
-        _ = (function (e) {
+        E = (function (e) {
             let { onEnableMFAClick: t, onMFAEnabled: n } = e,
                 { isUserMFAEnabled: l, isModerationMFAEnabled: s } = g(),
-                a = i.useCallback(async () => {
+                r = i.useCallback(async () => {
                     await t(), n?.();
                 }, [t, n]),
-                d = i.useCallback((e) => (0, r.jsx)(o.A, { onClick: a, children: e }), [a]);
-            return l && s ? h : d;
-        })({ onEnableMFAClick: x });
+                d = i.useCallback((e) => (0, a.jsx)(o.A, { onClick: r, children: e }), [r]);
+            return l && s ? x : d;
+        })({ onEnableMFAClick: h });
     return i.useMemo(() => {
         var t;
         if (null == e) return null;
-        let { minimumOwnerAgeInYears: i, minimumSize: r } = e,
+        let { minimumOwnerAgeInYears: i, minimumSize: a } = e,
             o = !e.noRecentViolations,
             g = [
                 {
@@ -47,11 +47,11 @@ function x(e) {
                     checkedLabel: s.intl.string(s.t["1lGNPZ"]),
                     uncheckedLabel: s.intl.string(s.t["D+gTJt"]),
                     description: s.intl.format(s.t.HFY0m6, {
-                        communityGuidelinesUrl: a.A.getArticleURL(m.MVz.PUBLIC_GUILD_GUILDLINES),
+                        communityGuidelinesUrl: r.A.getArticleURL(m.MVz.PUBLIC_GUILD_GUILDLINES),
                     }),
                     checked: e.noRecentViolations,
                     actionLabel: o ? s.intl.string(s.t["xU2fl+"]) : void 0,
-                    actionHandler: o ? () => (0, l.A)(a.A.getSubmitRequestURL()) : void 0,
+                    actionHandler: o ? () => (0, l.A)(r.A.getSubmitRequestURL()) : void 0,
                 },
             ];
         if (
@@ -64,13 +64,13 @@ function x(e) {
                     description: s.intl.formatToPlainString(s.t.DW1Vae, { minimumOwnerAgeInYears: i }),
                     checked: e.meetsOwnerAgeRequirement,
                 }),
-            null != r &&
+            null != a &&
                 null != e.hasSufficientMembers &&
                 g.push({
                     key: "member_count_requirement",
                     checkedLabel: s.intl.string(s.t.j7wXWo),
                     uncheckedLabel: s.intl.string(s.t.W0suNz),
-                    description: s.intl.formatToPlainString(s.t.up53zR, { minimumSize: r }),
+                    description: s.intl.formatToPlainString(s.t.up53zR, { minimumSize: a }),
                     checked: e.hasSufficientMembers,
                 }),
             null != e.minimumAgeInDays &&
@@ -119,12 +119,12 @@ function x(e) {
                 key: "2fa_requirement",
                 checkedLabel: s.intl.string(s.t.NqVyFk),
                 uncheckedLabel: s.intl.string(s.t.VcDNIV),
-                description: s.intl.format(s.t["7NzkfV"], { enableMFAHook: _ }),
+                description: s.intl.format(s.t["7NzkfV"], { enableMFAHook: E }),
                 checked: e.hasEnabled2FA,
                 actionLabel: l ? s.intl.string(s.t.BU4Diu) : void 0,
-                actionHandler: l ? x : void 0,
+                actionHandler: l ? h : void 0,
             });
         }
         return !0 === d && g.sort((e) => (e.checked ? 0 : -1)), g;
-    }, [e, d, c, n, u, _, x]);
+    }, [e, d, c, n, u, E, h]);
 }

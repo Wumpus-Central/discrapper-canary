@@ -1,10 +1,10 @@
 t.d(n, { default: () => c });
 var i = t(627968);
 t(64700);
-var r = t(861672),
+var r = t(980707),
     l = t(477782),
     a = t(442433),
-    o = t(985018);
+    o = t(375708);
 function c(e) {
     let { roleId: n, onLeaveRole: t, onSelect: c } = e;
     return (0, i.jsx)(

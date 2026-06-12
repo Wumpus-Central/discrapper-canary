@@ -1,8 +1,8 @@
-t.d(s, { HN: () => _, _x: () => k, _W: () => L });
-var n = t(627968),
-    a = t(64700),
-    l = t(503698),
-    i = t.n(l),
+t.d(s, { HN: () => S, _x: () => L, _W: () => f });
+var l = t(627968),
+    n = t(64700),
+    a = t(503698),
+    i = t.n(a),
     r = t(460905),
     o = t(990078),
     c = t(939249),
@@ -10,41 +10,41 @@ var n = t(627968),
     u = t(565645),
     d = t(763754),
     h = t(930101),
-    g = t(516287),
-    x = t(888675),
-    N = t(649963),
+    x = t(516287),
+    N = t(888675),
+    j = t(649963),
     C = t(486020),
-    j = t(625494),
-    A = t(17928),
+    A = t(625494),
+    g = t(17928),
     p = t(159273);
 let E = /^<(a?):(\w+):(\d+)>/;
 function I(e) {
-    let s = a.useMemo(() => E.exec(e)?.[3], [e]);
-    return (0, A.bG)([p.Ay], () => (null == s ? null : p.Ay.getCustomEmojiById(s)));
+    let s = n.useMemo(() => E.exec(e)?.[3], [e]);
+    return (0, g.bG)([p.Ay], () => (null == s ? null : p.Ay.getCustomEmojiById(s)));
 }
 var v = t(652215),
     M = t(375708),
-    S = t(93072);
-function _(e) {
+    _ = t(93072);
+function S(e) {
     let { message: s, rendered: t } = e;
     return null == I(s.content)
         ? M.intl.format(M.t.k6Jc9Y, { username: null, usernameHook: () => null })
         : M.intl.format(M.t.IihHB0, { emojiPreview: t, emojiName: null, username: null, usernameHook: () => null });
 }
-function k(e) {
+function L(e) {
     let { message: s, className: t } = e,
-        [l, r] = a.useState(!1),
+        [a, r] = n.useState(!1),
         d = s.getChannelId(),
         h = I(s.content),
-        g = a.useCallback(() => {
-            null != h && (0, N.BB)(d, s.id, { id: h.id, name: h.name }, N.qN.MESSAGE);
+        x = n.useCallback(() => {
+            null != h && (0, j.BB)(d, s.id, { id: h.id, name: h.name }, j.qN.MESSAGE);
         }, [d, h, s.id]);
     return null == h
         ? null
-        : (0, n.jsx)(o.m, {
+        : (0, l.jsx)(o.m, {
               asContainer: !0,
               "aria-label": !1,
-              __unsupportedReactNodeAsText: (0, n.jsx)(u.A, {
+              __unsupportedReactNodeAsText: (0, l.jsx)(u.A, {
                   emojiName: h.name,
                   size: "jumbo",
                   emojiId: h.id,
@@ -53,47 +53,47 @@ function k(e) {
                   channelId: d,
                   messageId: s.id,
               }),
-              children: (0, n.jsx)(c.D, {
-                  className: i()(t, S.qx),
-                  onClick: g,
+              children: (0, l.jsx)(c.D, {
+                  className: i()(t, _.qx),
+                  onClick: x,
                   onMouseEnter: () => {
                       r(!0);
                   },
                   onMouseLeave: () => {
                       r(!1);
                   },
-                  children: (0, n.jsx)(m.E, {
+                  children: (0, l.jsx)(m.E, {
                       variant: "text-sm/semibold",
                       color: "text-subtle",
-                      className: S.Ic,
+                      className: _.Ic,
                       children: M.intl.format(M.t.z5Rnl8, {
-                          renderedEmoji: (0, n.jsx)(u.A, {
+                          renderedEmoji: (0, l.jsx)(u.A, {
                               emojiName: h.name,
                               size: "default",
                               emojiId: h.id,
                               animated: h.animated,
-                              isInteracting: l,
+                              isInteracting: a,
                               channelId: d,
                               messageId: s.id,
-                              className: S.ti,
+                              className: _.ti,
                           }),
                       }),
                   }),
               }),
           });
 }
-function L(e) {
-    let { message: s, compact: t, usernameHook: l } = e,
+function f(e) {
+    let { message: s, compact: t, usernameHook: a } = e,
         i = s.content,
-        [o, u] = a.useState(!1),
-        N = (0, d.Ay)(s),
-        A = l(N),
+        [o, u] = n.useState(!1),
+        j = (0, d.Ay)(s),
+        g = a(j),
         p = I(i),
-        E = a.useCallback(() => {
+        E = n.useCallback(() => {
             null != p &&
-                j._.dispatchToLastSubscribed(v.jej.INSERT_TEXT, { plainText: `:${p.name}:`, rawText: i, addSpace: !0 });
+                A._.dispatchToLastSubscribed(v.jej.INSERT_TEXT, { plainText: `:${p.name}:`, rawText: i, addSpace: !0 });
         }, [p, i]),
-        _ = a.useMemo(
+        S = n.useMemo(
             () =>
                 null == p
                     ? null
@@ -105,29 +105,29 @@ function L(e) {
                       },
             [p],
         );
-    return (0, n.jsx)(g.x, {
+    return (0, l.jsx)(x.x, {
         value: o,
-        children: (0, n.jsx)(x.A, {
-            iconNode: (0, n.jsx)(r.n, { size: "refresh_sm", color: "currentColor" }),
-            iconContainerClassName: S.zc,
+        children: (0, l.jsx)(N.A, {
+            iconNode: (0, l.jsx)(r.n, { size: "refresh_sm", color: "currentColor" }),
+            iconContainerClassName: _.zc,
             timestamp: s.timestamp,
             compact: t,
-            contentClassName: S.Qs,
-            children: (0, n.jsx)("span", {
+            contentClassName: _.Qs,
+            children: (0, l.jsx)("span", {
                 children:
-                    null == p || null == _
-                        ? M.intl.format(M.t.k6Jc9Y, { username: N.nick, usernameHook: A })
+                    null == p || null == S
+                        ? M.intl.format(M.t.k6Jc9Y, { username: j.nick, usernameHook: g })
                         : M.intl.format(M.t.IihHB0, {
-                              username: N.nick,
-                              usernameHook: A,
-                              emojiPreview: (0, n.jsx)(h.X, { node: _ }),
-                              emojiName: (0, n.jsx)(c.D, {
-                                  className: S.hX,
+                              username: j.nick,
+                              usernameHook: g,
+                              emojiPreview: (0, l.jsx)(h.X, { node: S }),
+                              emojiName: (0, l.jsx)(c.D, {
+                                  className: _.hX,
                                   tag: "span",
                                   onClick: E,
                                   onMouseEnter: () => u(!0),
                                   onMouseLeave: () => u(!1),
-                                  children: (0, n.jsx)(m.E, {
+                                  children: (0, l.jsx)(m.E, {
                                       tag: "span",
                                       variant: "text-md/medium",
                                       color: "text-strong",

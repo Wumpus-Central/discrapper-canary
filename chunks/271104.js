@@ -1,6 +1,6 @@
 "use strict";
-r.r(t), r.d(t, { default: () => n });
-let n = {
+n.r(t), n.d(t, { default: () => i });
+let i = {
     transparent: 0,
     aliceblue: 0xf0f8ffff,
     antiquewhite: 0xfaebd7ff,

@@ -8,7 +8,7 @@ n.d(t, {
     r1: () => E,
     AE: () => m,
     XA: () => g,
-    L8: () => f,
+    L8: () => h,
 });
 var i = n(723702);
 let r = (e, t) => {
@@ -32,10 +32,10 @@ let r = (e, t) => {
         : (0, i.isAndroid)()
           ? /\.(mp3|m4a|wav|ogg|opus|flac)$/i
           : /\.(mp3|m4a|wav|aif|aiff|ogg|opus|flac)$/i,
-    f = (e) => null != e && _.test(e),
-    h = /\.(riv)$/i,
+    h = (e) => null != e && _.test(e),
+    f = /\.(riv)$/i,
     p = (0, i.isIOS)() ? /\.(mp4|mov|qt)$/i : ((0, i.isAndroid)(), /\.(mp4|webm|mov|qt)$/i),
     E = (e) => r(e, p) || !1,
     m = (e) => null != e && (p.test(e) || (null != e && !1)),
-    g = (e) => null != e && h.test(e),
+    g = (e) => null != e && f.test(e),
     A = (e) => s(e, "video");

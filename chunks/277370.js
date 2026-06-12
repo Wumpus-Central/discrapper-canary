@@ -292,7 +292,7 @@ function eB(e) {
         alignmentStrategy: "edge",
         align: "center",
         badge: "new",
-        title: en.intl.string(en.t["//DXrW"]),
+        title: en.intl.string(en.t["Ur/4dI"]),
         body: en.intl.string(en.t.AVPtNF),
         actions: [{ text: en.intl.string(en.t["NX+WJN"]), onClick: s }],
         onRequestClose: s,

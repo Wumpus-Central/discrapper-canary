@@ -1,23 +1,23 @@
-function t(e, t, n, r, i, s, a) {
+function t(e, t, n, i, r, s, a) {
     try {
         var o = e[s](a),
             l = o.value;
     } catch (e) {
         return void n(e);
     }
-    o.done ? t(l) : Promise.resolve(l).then(r, i);
+    o.done ? t(l) : Promise.resolve(l).then(i, r);
 }
 (e.exports = function (e) {
     return function () {
         var n = this,
-            r = arguments;
-        return new Promise(function (i, s) {
-            var a = e.apply(n, r);
+            i = arguments;
+        return new Promise(function (r, s) {
+            var a = e.apply(n, i);
             function o(e) {
-                t(a, i, s, o, l, "next", e);
+                t(a, r, s, o, l, "next", e);
             }
             function l(e) {
-                t(a, i, s, o, l, "throw", e);
+                t(a, r, s, o, l, "throw", e);
             }
             o(void 0);
         });

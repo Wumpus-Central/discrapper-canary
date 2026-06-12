@@ -1,19 +1,19 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = /\d{1,2}\/\d{1,2}\/\d{4}/,
-        n = /\d{4}-\d{1,2}-\d{1,2}/,
+        n = /\d{1,2}\/\d{1,2}\/\d{4}/,
+        i = /\d{4}-\d{1,2}-\d{1,2}/,
         r = /(\d|1[012])(:\d+){0,2} *(AM|PM)/,
-        i = /\d{1,2}(:\d{1,2}){1,2}/,
-        o = {
+        s = /\d{1,2}(:\d{1,2}){1,2}/,
+        a = {
             className: "literal",
             variants: [
-                { begin: t.concat(/# */, t.either(n, a), / *#/) },
-                { begin: t.concat(/# */, i, / *#/) },
+                { begin: t.concat(/# */, t.either(i, n), / *#/) },
+                { begin: t.concat(/# */, s, / *#/) },
                 { begin: t.concat(/# */, r, / *#/) },
-                { begin: t.concat(/# */, t.either(n, a), / +/, t.either(r, i), / *#/) },
+                { begin: t.concat(/# */, t.either(i, n), / +/, t.either(r, s), / *#/) },
             ],
         },
-        s = e.COMMENT(/'''/, /$/, { contains: [{ className: "doctag", begin: /<\/?/, end: />/ }] }),
+        o = e.COMMENT(/'''/, /$/, { contains: [{ className: "doctag", begin: /<\/?/, end: />/ }] }),
         l = e.COMMENT(null, /$/, { variants: [{ begin: /'/ }, { begin: /([\t ]|^)REM(?=\s)/ }] });
     return {
         name: "Visual Basic .NET",
@@ -32,7 +32,7 @@ e.exports = function (e) {
         contains: [
             { className: "string", begin: /"(""|[^/n])"C\b/ },
             { className: "string", begin: /"/, end: /"/, illegal: /\n/, contains: [{ begin: /""/ }] },
-            o,
+            a,
             {
                 className: "number",
                 relevance: 0,
@@ -45,7 +45,7 @@ e.exports = function (e) {
                 ],
             },
             { className: "label", begin: /^\w+:/ },
-            s,
+            o,
             l,
             {
                 className: "meta",

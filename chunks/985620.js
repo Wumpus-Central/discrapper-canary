@@ -1,32 +1,32 @@
 "use strict";
-let n;
-r.d(t, { X1: () => f, Tw: () => d, Bi: () => c });
-var a = r(3388),
-    s = r(959462),
-    i = r(64700),
-    o = r(341221);
+let i;
+n.d(t, { X1: () => _, Tw: () => d, Bi: () => c });
+var r = n(3388),
+    s = n(959462),
+    a = n(64700),
+    o = n(341221);
 let l = !!("u" > typeof window && window.document && window.document.createElement),
     u = new Map();
 function c(e) {
-    let [t, r] = (0, i.useState)(e),
-        s = (0, i.useRef)(null),
+    let [t, n] = (0, a.useState)(e),
+        s = (0, a.useRef)(null),
         c = (0, o.Cc)(t),
-        d = (0, i.useRef)(null);
-    if ((n && n.register(d, c), l)) {
+        d = (0, a.useRef)(null);
+    if ((i && i.register(d, c), l)) {
         let e = u.get(c);
         e && !e.includes(s) ? e.push(s) : u.set(c, [s]);
     }
     return (
-        (0, a.N)(
+        (0, r.N)(
             () => () => {
-                n && n.unregister(d), u.delete(c);
+                i && i.unregister(d), u.delete(c);
             },
             [c],
         ),
-        (0, i.useEffect)(() => {
+        (0, a.useEffect)(() => {
             let e = s.current;
             return (
-                e && r(e),
+                e && n(e),
                 () => {
                     e && (s.current = null);
                 }
@@ -37,41 +37,41 @@ function c(e) {
 }
 function d(e, t) {
     if (e === t) return e;
-    let r = u.get(e);
-    if (r) return r.forEach((e) => (e.current = t)), t;
-    let n = u.get(t);
-    return n ? (n.forEach((t) => (t.current = e)), e) : t;
+    let n = u.get(e);
+    if (n) return n.forEach((e) => (e.current = t)), t;
+    let i = u.get(t);
+    return i ? (i.forEach((t) => (t.current = e)), e) : t;
 }
-function f(e = []) {
+function _(e = []) {
     let t = c(),
-        [r, n] = (function (e) {
-            let [t, r] = (0, i.useState)(e),
-                n = (0, i.useRef)(null),
+        [n, i] = (function (e) {
+            let [t, n] = (0, a.useState)(e),
+                i = (0, a.useRef)(null),
                 o = (0, s.J)(() => {
-                    if (!n.current) return;
-                    let e = n.current.next();
+                    if (!i.current) return;
+                    let e = i.current.next();
                     if (e.done) {
-                        n.current = null;
+                        i.current = null;
                         return;
                     }
-                    t === e.value ? o() : r(e.value);
+                    t === e.value ? o() : n(e.value);
                 });
-            (0, a.N)(() => {
-                n.current && o();
+            (0, r.N)(() => {
+                i.current && o();
             });
             let l = (0, s.J)((e) => {
-                (n.current = e(t)), o();
+                (i.current = e(t)), o();
             });
             return [t, l];
         })(t),
-        o = (0, i.useCallback)(() => {
-            n(function* () {
+        o = (0, a.useCallback)(() => {
+            i(function* () {
                 yield t, yield document.getElementById(t) ? t : void 0;
             });
-        }, [t, n]);
-    return (0, a.N)(o, [t, o, ...e]), r;
+        }, [t, i]);
+    return (0, r.N)(o, [t, o, ...e]), n;
 }
 "u" > typeof FinalizationRegistry &&
-    (n = new FinalizationRegistry((e) => {
+    (i = new FinalizationRegistry((e) => {
         u.delete(e);
     }));

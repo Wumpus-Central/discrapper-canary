@@ -4,7 +4,7 @@ var o = n(627968),
     r = n(837381),
     s = n(17928),
     l = n(661531),
-    u = n(777666),
+    u = n(812993),
     c = n(912592),
     d = n(782603),
     a = n(862328),
@@ -20,7 +20,7 @@ var o = n(627968),
     E = n(355216),
     j = n(625864),
     N = n(990078),
-    U = n(985018);
+    U = n(375708);
 function B(e) {
     let { children: t } = e,
         { notificationCenterVariant: n } = (0, I.X8)({ location: "NotificationsInboxTooltip" }),

@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { n: () => d, A: () => _ });
+n.d(t, { n: () => u, A: () => c });
 var i,
     r = n(554146),
     s = n(235079),
-    a = n(985018);
+    a = n(375708);
 let o = n.p + "85107ed86878e061.webm",
     l = n.p + "6451a3d0dbc5185e.webm";
-var d = (((i = {})[(i.THROW_EMOJI = 0)] = "THROW_EMOJI"), (i[(i.SNOW = 1)] = "SNOW"), i);
-let _ = {
+var u = (((i = {})[(i.THROW_EMOJI = 0)] = "THROW_EMOJI"), (i[(i.SNOW = 1)] = "SNOW"), i);
+let c = {
     experiment: null,
     useIsExperimentEligible: () => !1,
     getIsExperimentEligible: () => !1,

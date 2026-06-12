@@ -14,9 +14,9 @@ function d() {
 function _(e) {
     let { relationship: t } = e,
         n = a.A.getVoiceStateForUser(t.id);
-    return null != n && null != n.channelId && f(n.channelId, t.id);
+    return null != n && null != n.channelId && h(n.channelId, t.id);
 }
-function f(e, t) {
+function h(e, t) {
     let n = !1,
         i = !1,
         r = new Set(l[e]),
@@ -32,7 +32,7 @@ function f(e, t) {
         n
     );
 }
-class h extends i.Ay.Store {
+class f extends i.Ay.Store {
     initialize() {
         this.waitFor(s.A, a.A);
     }
@@ -43,7 +43,7 @@ class h extends i.Ay.Store {
         return u[e] ?? c;
     }
 }
-let p = new h(r.h, {
+let p = new f(r.h, {
     CONNECTION_OPEN: d,
     LOGOUT: d,
     OVERLAY_INITIALIZE: function () {
@@ -51,7 +51,7 @@ let p = new h(r.h, {
         let e = a.A.getAllVoiceStates(),
             t = !1;
         for (let n of Object.values(e))
-            for (let e of Object.values(n)) null != e.channelId && (t = f(e.channelId, e.userId) || t);
+            for (let e of Object.values(n)) null != e.channelId && (t = h(e.channelId, e.userId) || t);
         return t;
     },
     VOICE_STATE_UPDATES: function (e) {
@@ -62,7 +62,7 @@ let p = new h(r.h, {
                 null != e.oldChannelId &&
                     (null != l[e.oldChannelId] && (l[e.oldChannelId]?.delete(e.userId), (n = !0)),
                     null != u[e.oldChannelId] && (u[e.oldChannelId]?.delete(e.userId), (n = !0))),
-                    null != e.channelId && (n = f(e.channelId, e.userId) || n);
+                    null != e.channelId && (n = h(e.channelId, e.userId) || n);
             }),
             n
         );

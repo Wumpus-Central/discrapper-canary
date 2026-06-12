@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { Ay: () => N, C3: () => S, sw: () => T, tM: () => I, wW: () => p, xc: () => A });
-var r = n(353640),
-    i = n(118356),
+n.d(t, { Ay: () => N, C3: () => S, sw: () => T, tM: () => I, wW: () => E, xc: () => A });
+var i = n(353640),
+    r = n(941426),
     s = n(554146),
     a = n(506774),
     o = n(97260),
     l = n(439372),
     u = n(826673),
-    d = n(532624),
-    c = n(350535),
+    c = n(532624),
+    d = n(350535),
     _ = n(589051),
-    f = n(652215);
-let E = "overlayKeybindExperimentPreviousKeybindSettings",
-    h = new i.Vy("OverlayKeybindExperimentManager"),
-    p = (0, r.v)(() => a.w.get(E, {}));
+    h = n(652215);
+let f = "overlayKeybindExperimentPreviousKeybindSettings",
+    p = new r.Vy("OverlayKeybindExperimentManager"),
+    E = (0, i.v)(() => a.w.get(f, {}));
 function m() {
-    return p.getState();
+    return E.getState();
 }
 function g(e) {
-    p.setState((t) => ({ ...t, ...e }), !0), a.w.set(E, p.getState());
+    E.setState((t) => ({ ...t, ...e }), !0), a.w.set(f, E.getState());
 }
 let A = () => {
         g({ isNewOverlayUser: void 0 });
@@ -37,13 +37,13 @@ class y extends l.A {
     _isProcessing = !1;
     initializeKeybind = () => {
         if (null != m().previousKeybind) return;
-        let e = d.Ay.getOverlayKeybind();
-        g({ previousKeybind: (0, c.dI)(e.shortcut) });
+        let e = c.Ay.getOverlayKeybind();
+        g({ previousKeybind: (0, d.dI)(e.shortcut) });
     };
     dispatchSetKeybind = (e) => {
         if (null == e) return;
-        let t = d.Ay.getOverlayKeybind();
-        return o.A.setKeybind({ ...t, shortcut: (0, c.OH)(e) });
+        let t = c.Ay.getOverlayKeybind();
+        return o.A.setKeybind({ ...t, shortcut: (0, d.OH)(e) });
     };
     restoreKeybind = async () => {
         let e = m().previousKeybind;
@@ -64,7 +64,7 @@ class y extends l.A {
             try {
                 await this.processKeybindExperiment();
             } catch (e) {
-                h.error("Experiments processing failed", { error: e });
+                p.error("Experiments processing failed", { error: e });
             } finally {
                 this._isProcessing = !1;
             }
@@ -73,9 +73,9 @@ class y extends l.A {
     maybeInitExperiment = async () => {
         this._hasInitialized ||
             ((this._hasInitialized = !0),
-            h.info("Experiments initializing..."),
+            p.info("Experiments initializing..."),
             await this.processExperiment(),
-            h.info("Experiments initialized"));
+            p.info("Experiments initialized"));
     };
     isNewOverlayUser = () =>
         (null == m().isNewOverlayUser &&
@@ -90,10 +90,10 @@ class y extends l.A {
         (null == m().isUsingDefaultOverlayKeybind &&
             g({
                 isUsingDefaultOverlayKeybind: (function () {
-                    let e = d.Ay.getKeybindForAction(f.hCu.TOGGLE_OVERLAY_INPUT_LOCK, !0);
+                    let e = c.Ay.getKeybindForAction(h.hCu.TOGGLE_OVERLAY_INPUT_LOCK, !0);
                     if (null == e) return !0;
-                    let t = (0, d.aS)();
-                    return (0, c.Xt)(e.shortcut, t.shortcut);
+                    let t = (0, c.aS)();
+                    return (0, d.Xt)(e.shortcut, t.shortcut);
                 })(),
             }),
         null != m().overrideIsUsingDefaultOverlayKeybind)
@@ -113,13 +113,13 @@ class y extends l.A {
     handleExperimentOverrideBucket = async (e) => {
         __OVERLAY__ ||
             this._isProcessing ||
-            (h.info("Experiments processing...", { action: e }), await this.processExperiment());
+            (p.info("Experiments processing...", { action: e }), await this.processExperiment());
     };
     handleKeybindSet = (e) => {
         __OVERLAY__ ||
             this._isProcessing ||
-            (e.keybind.action === f.hCu.TOGGLE_OVERLAY_INPUT_LOCK &&
-                g({ previousKeybind: (0, c.dI)(e.keybind.shortcut) }));
+            (e.keybind.action === h.hCu.TOGGLE_OVERLAY_INPUT_LOCK &&
+                g({ previousKeybind: (0, d.dI)(e.keybind.shortcut) }));
     };
     handleOverlayReady = () => {
         __OVERLAY__ || (this.isEligibleForExperiment() && (0, _.sq)("OverlayKeybindExperimentManager"));

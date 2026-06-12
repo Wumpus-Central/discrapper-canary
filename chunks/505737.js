@@ -48,7 +48,7 @@ Object.keys(t).forEach(function (e) {
         t[n + e.charAt(0).toUpperCase() + e.substring(1)] = t[e];
     });
 });
-var r = {
+var i = {
         background: {
             backgroundAttachment: !0,
             backgroundColor: !0,
@@ -66,13 +66,13 @@ var r = {
         font: { fontStyle: !0, fontVariant: !0, fontWeight: !0, fontSize: !0, lineHeight: !0, fontFamily: !0 },
         outline: { outlineWidth: !0, outlineStyle: !0, outlineColor: !0 },
     },
-    i = !!("u" > typeof window && window.document && window.document.createElement),
+    r = !!("u" > typeof window && window.document && window.document.createElement),
     s = {
-        canUseDOM: i,
+        canUseDOM: r,
         canUseWorkers: "u" > typeof Worker,
-        canUseEventListeners: i && !!(window.addEventListener || window.attachEvent),
-        canUseViewport: i && !!window.screen,
-        isInWorker: !i,
+        canUseEventListeners: r && !!(window.addEventListener || window.attachEvent),
+        canUseViewport: r && !!window.screen,
+        isInWorker: !r,
     };
 function a(e) {
     return function () {
@@ -101,26 +101,26 @@ if (s.canUseDOM) {
 }
 e.exports = {
     createDangerousStringForStyles: function (e) {},
-    setValueForStyles: function (e, n, i) {
+    setValueForStyles: function (e, n, r) {
         var s = e.style;
         for (var a in n)
             if (n.hasOwnProperty(a)) {
                 var o,
                     u,
-                    d = 0 === a.indexOf("--"),
-                    c =
+                    c = 0 === a.indexOf("--"),
+                    d =
                         ((o = a),
                         (u = n[a]),
                         null == u || "boolean" == typeof u || "" === u
                             ? ""
-                            : d || "number" != typeof u || 0 === u || (t.hasOwnProperty(o) && t[o])
+                            : c || "number" != typeof u || 0 === u || (t.hasOwnProperty(o) && t[o])
                               ? ("" + u).trim()
                               : u + "px");
-                if (("float" === a && (a = "cssFloat"), d)) s.setProperty(a, c);
-                else if (c) s[a] = c;
+                if (("float" === a && (a = "cssFloat"), c)) s.setProperty(a, d);
+                else if (d) s[a] = d;
                 else {
-                    var _ = l && r[a];
-                    if (_) for (var f in _) s[f] = "";
+                    var _ = l && i[a];
+                    if (_) for (var h in _) s[h] = "";
                     else s[a] = "";
                 }
             }

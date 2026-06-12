@@ -1,6 +1,6 @@
 e.exports = {
     g9: "creatorGuildCarousel__2485e",
-    w_: "guildCard__2485e " + _(356028).Nr,
+    w_: "guildCard__2485e " + a(356028).Nr,
     hz: "guildCardHeader__2485e",
     al: "guildCardHeaderAvatar__2485e",
     PY: "guildCardHeaderTitle__2485e",

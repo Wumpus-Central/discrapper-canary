@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p, i: () => h });
+n.d(t, { A: () => p, i: () => f });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -11,14 +11,14 @@ var r = n(503698),
     c = n(577632),
     d = n(451772),
     _ = n(822768),
-    f = n(683807);
-let h = { width: 2180, height: 1536 },
+    h = n(683807);
+let f = { width: 2180, height: 1536 },
     p = (e) => {
         let {
                 roomSeats: t,
                 roomParticipants: n,
                 participants: r,
-                channel: h,
+                channel: f,
                 idle: p,
                 showAmbientEffects: E = !0,
                 enableAnimations: m = !0,
@@ -30,28 +30,28 @@ let h = { width: 2180, height: 1536 },
         return null == T
             ? null
             : (0, i.jsxs)("div", {
-                  className: f.cA,
+                  className: h.cA,
                   children: [
-                      (0, i.jsx)("img", { className: f.Tp, src: T.backgrounds.sky.static, alt: "", draggable: !1 }),
+                      (0, i.jsx)("img", { className: h.Tp, src: T.backgrounds.sky.static, alt: "", draggable: !1 }),
                       E && (0, i.jsx)(_.A, {}),
                       (0, i.jsx)("img", {
-                          className: f.Tp,
+                          className: h.Tp,
                           src: T.backgrounds.mountains.static,
                           alt: "",
                           draggable: !1,
                       }),
                       E && (0, i.jsx)(u.A, {}),
-                      (0, i.jsx)("img", { className: f.Tp, src: T.backgrounds.river.static, alt: "", draggable: !1 }),
+                      (0, i.jsx)("img", { className: h.Tp, src: T.backgrounds.river.static, alt: "", draggable: !1 }),
                       E &&
                           (0, i.jsx)(a.A, {
-                              className: f.Ki,
+                              className: h.Ki,
                               style: { transform: "translate(779px, 1009px)" },
                               src: T.ambience.river.animated,
                               autoPlay: !0,
                               controls: !1,
                               loop: !0,
                           }),
-                      (0, i.jsx)("img", { className: f.Tp, src: T.backgrounds.camp.static, alt: "", draggable: !1 }),
+                      (0, i.jsx)("img", { className: h.Tp, src: T.backgrounds.camp.static, alt: "", draggable: !1 }),
                       o.dG.map((e) =>
                           (0, i.jsx)(
                               d.A,
@@ -62,16 +62,16 @@ let h = { width: 2180, height: 1536 },
                       n.map((e) =>
                           (0, i.jsx)(
                               c.A,
-                              { seats: t, participant: e, participants: r, channel: h, idle: p, enableAnimations: m },
+                              { seats: t, participant: e, participants: r, channel: f, idle: p, enableAnimations: m },
                               e.userId,
                           ),
                       ),
                       E &&
                           (0, i.jsxs)("div", {
-                              className: s()(f.cA, f.ey),
+                              className: s()(h.cA, h.ey),
                               children: [
                                   (0, i.jsx)(a.A, {
-                                      className: f.Ki,
+                                      className: h.Ki,
                                       style: { transform: "translate(1014px, 773px)" },
                                       src: T.ambience.fire.animated,
                                       autoPlay: !0,
@@ -79,14 +79,14 @@ let h = { width: 2180, height: 1536 },
                                       loop: !0,
                                   }),
                                   (0, i.jsx)(a.A, {
-                                      className: f.Ki,
+                                      className: h.Ki,
                                       src: T.ambience.fireflies.animated,
                                       autoPlay: !0,
                                       controls: !1,
                                       loop: !0,
                                   }),
                                   (0, i.jsx)(a.A, {
-                                      className: f.Ki,
+                                      className: h.Ki,
                                       style: { transform: "translate(0, 1216px)" },
                                       src: T.ambience.foliage_front.animated,
                                       autoPlay: !0,
@@ -95,7 +95,7 @@ let h = { width: 2180, height: 1536 },
                                   }),
                               ],
                           }),
-                      I && (0, i.jsx)("div", { className: f.ps }),
+                      I && (0, i.jsx)("div", { className: h.ps }),
                   ],
               });
     };

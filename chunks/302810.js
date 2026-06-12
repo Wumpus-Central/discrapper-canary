@@ -1,16 +1,16 @@
 i.d(e, { default: () => A });
 var s = i(627968),
-    a = i(64700),
-    n = i(189213),
+    n = i(64700),
+    a = i(189213),
     r = i(834730),
-    l = i(323082),
-    c = i(954571),
+    l = i(753390),
+    c = i(174459),
     h = i(580630),
     o = i(71532),
     u = i(652215),
-    p = i(985018),
+    p = i(375708),
     d = i(240465);
-class g extends a.Component {
+class g extends n.Component {
     state = { step: 0, isAwaitingAuthentication: !1 };
     componentDidMount() {
         c.default.track(u.HAw.OPEN_MODAL, { type: u.JJy.PAYMENT_AUTHENTICATION_MODAL });
@@ -88,7 +88,7 @@ class g extends a.Component {
     }
     render() {
         let { transitionState: t } = this.props;
-        return (0, s.jsxs)(n.Modal, {
+        return (0, s.jsxs)(a.Modal, {
             transitionState: t,
             "aria-label": this.getTitle(),
             title: this.getTitle(),

@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(64700);
-function i() {
-    let e = (0, r.useRef)(new Map()),
-        t = (0, r.useCallback)((t, n, r, i) => {
-            let a = (null == i ? void 0 : i.once)
+n.d(t, { A: () => r });
+var i = n(64700);
+function r() {
+    let e = (0, i.useRef)(new Map()),
+        t = (0, i.useCallback)((t, n, i, r) => {
+            let s = (null == r ? void 0 : r.once)
                 ? (...t) => {
-                      e.current.delete(r), r(...t);
+                      e.current.delete(i), i(...t);
                   }
-                : r;
-            e.current.set(r, { type: n, eventTarget: t, fn: a, options: i }), t.addEventListener(n, a, i);
+                : i;
+            e.current.set(i, { type: n, eventTarget: t, fn: s, options: r }), t.addEventListener(n, s, r);
         }, []),
-        n = (0, r.useCallback)((t, n, r, i) => {
-            var a;
-            let s = (null == (a = e.current.get(r)) ? void 0 : a.fn) || r;
-            t.removeEventListener(n, s, i), e.current.delete(r);
+        n = (0, i.useCallback)((t, n, i, r) => {
+            var s;
+            let a = (null == (s = e.current.get(i)) ? void 0 : s.fn) || i;
+            t.removeEventListener(n, a, r), e.current.delete(i);
         }, []),
-        i = (0, r.useCallback)(() => {
+        r = (0, i.useCallback)(() => {
             e.current.forEach((e, t) => {
                 n(e.eventTarget, e.type, t, e.options);
             });
         }, [n]);
     return (
-        (0, r.useEffect)(() => i, [i]), { addGlobalListener: t, removeGlobalListener: n, removeAllGlobalListeners: i }
+        (0, i.useEffect)(() => r, [r]), { addGlobalListener: t, removeGlobalListener: n, removeAllGlobalListeners: r }
     );
 }

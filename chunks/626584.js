@@ -9,7 +9,7 @@ let s = Date.now(),
     let c = Date.now(),
         d = ((c - s) / 1e3).toFixed(3),
         _ = ((c - a) / 1e3).toFixed(3),
-        f = `\u{3A3}:${d}s, \u{394}:${_}s`;
-    (a = c), r.z8({ name: e, timing: f }, n, ...l), (0, i.gZ)(e, t, n, ...l);
+        h = `\u{3A3}:${d}s, \u{394}:${_}s`;
+    (a = c), r.z8({ name: e, timing: h }, n, ...l), (0, i.gZ)(e, t, n, ...l);
 });
 let o = i.Vy;

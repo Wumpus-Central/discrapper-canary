@@ -1,83 +1,83 @@
-l.d(e, { A: () => N, s: () => r });
-var a,
-    i = l(17928),
-    s = l(228366),
-    n = l(967198),
-    A = l(977997),
-    r =
-        (((a = {}).GENTLE_AMBIENT = "GENTLE_AMBIENT"),
-        (a.GENTLE_AMBIENT_WITH_INTRO = "GENTLE_AMBIENT_WITH_INTRO"),
-        (a.HIGH_CONTRAST = "HIGH_CONTRAST"),
-        a);
-let _ = {},
-    I = {},
-    E = null;
-function h(t) {
-    null != I[t] && (clearTimeout(I[t]), delete I[t]);
+t.d(l, { A: () => C, s: () => o });
+var n,
+    i = t(17928),
+    r = t(228366),
+    s = t(967198),
+    a = t(977997),
+    o =
+        (((n = {}).GENTLE_AMBIENT = "GENTLE_AMBIENT"),
+        (n.GENTLE_AMBIENT_WITH_INTRO = "GENTLE_AMBIENT_WITH_INTRO"),
+        (n.HIGH_CONTRAST = "HIGH_CONTRAST"),
+        n);
+let c = {},
+    d = {},
+    u = null;
+function h(e) {
+    null != d[e] && (clearTimeout(d[e]), delete d[e]);
 }
-function d(t) {
-    h(t),
-        (I[t] = setTimeout(() => {
-            let e = _[t];
-            null != e && ((_[t] = { ...e, style: "GENTLE_AMBIENT" }), c.emitChange()), delete I[t];
+function T(e) {
+    h(e),
+        (d[e] = setTimeout(() => {
+            let l = c[e];
+            null != l && ((c[e] = { ...l, style: "GENTLE_AMBIENT" }), A.emitChange()), delete d[e];
         }, 2e3));
 }
-function u() {
-    for (let t of Object.keys(I)) clearTimeout(I[t]);
-    (I = {}), (_ = {});
+function E() {
+    for (let e of Object.keys(d)) clearTimeout(d[e]);
+    (d = {}), (c = {});
 }
-function o() {
-    return u(), !0;
+function N() {
+    return E(), !0;
 }
-class L extends i.Ay.Store {
+class I extends i.Ay.Store {
     static displayName = "VoiceChannelAnimationStateStore";
     initialize() {
-        this.waitFor(A.A, n.A);
+        this.waitFor(a.A, s.A);
     }
-    getAnimationStyle(t) {
-        return _[t]?.style ?? "GENTLE_AMBIENT";
+    getAnimationStyle(e) {
+        return c[e]?.style ?? "GENTLE_AMBIENT";
     }
-    getUserCount(t) {
-        return _[t]?.userCount ?? 0;
+    getUserCount(e) {
+        return c[e]?.userCount ?? 0;
     }
 }
-let c = new L(s.h, {
-        VOICE_STATE_UPDATES: function (t) {
-            let { voiceStates: e } = t,
-                l = n.A.getGuildId();
-            l !== E && null != l && (E = l);
-            let a = {};
-            for (let t of e)
-                t.guildId === l &&
-                    (null != t.oldChannelId && (a[t.oldChannelId] = (a[t.oldChannelId] ?? 0) - 1),
-                    null != t.channelId && (a[t.channelId] = (a[t.channelId] ?? 0) + 1));
+let A = new I(r.h, {
+        VOICE_STATE_UPDATES: function (e) {
+            let { voiceStates: l } = e,
+                t = s.A.getGuildId();
+            t !== u && null != t && (u = t);
+            let n = {};
+            for (let e of l)
+                e.guildId === t &&
+                    (null != e.oldChannelId && (n[e.oldChannelId] = (n[e.oldChannelId] ?? 0) - 1),
+                    null != e.channelId && (n[e.channelId] = (n[e.channelId] ?? 0) + 1));
             let i = !1;
-            for (let [t, e] of Object.entries(a))
-                (function (t, e) {
-                    let l = _[t],
-                        a = l?.userCount ?? 0,
-                        i = Math.max(0, a + e);
-                    return 0 === a && i > 0
-                        ? ((_[t] = { style: "GENTLE_AMBIENT_WITH_INTRO", userCount: i }), d(t), !0)
-                        : a > 0 && i > a
-                          ? ((_[t] = { style: "HIGH_CONTRAST", userCount: i }), d(t), !0)
+            for (let [e, l] of Object.entries(n))
+                (function (e, l) {
+                    let t = c[e],
+                        n = t?.userCount ?? 0,
+                        i = Math.max(0, n + l);
+                    return 0 === n && i > 0
+                        ? ((c[e] = { style: "GENTLE_AMBIENT_WITH_INTRO", userCount: i }), T(e), !0)
+                        : n > 0 && i > n
+                          ? ((c[e] = { style: "HIGH_CONTRAST", userCount: i }), T(e), !0)
                           : 0 === i
-                            ? (h(t), delete _[t], !0)
-                            : null != l && i !== a && ((_[t] = { ...l, userCount: i }), !0);
-                })(t, e) && (i = !0);
+                            ? (h(e), delete c[e], !0)
+                            : null != t && i !== n && ((c[e] = { ...t, userCount: i }), !0);
+                })(e, l) && (i = !0);
             return i;
         },
-        CHANNEL_SELECT: function (t) {
-            let { guildId: e } = t;
-            if (e === E || null == e) return !1;
-            (E = e), u();
-            let l = A.A.getVoiceStates(e),
-                a = {};
-            for (let t of Object.values(l)) null != t.channelId && (a[t.channelId] = (a[t.channelId] ?? 0) + 1);
-            for (let [t, e] of Object.entries(a)) e > 0 && (_[t] = { style: "GENTLE_AMBIENT", userCount: e });
+        CHANNEL_SELECT: function (e) {
+            let { guildId: l } = e;
+            if (l === u || null == l) return !1;
+            (u = l), E();
+            let t = a.A.getVoiceStates(l),
+                n = {};
+            for (let e of Object.values(t)) null != e.channelId && (n[e.channelId] = (n[e.channelId] ?? 0) + 1);
+            for (let [e, l] of Object.entries(n)) l > 0 && (c[e] = { style: "GENTLE_AMBIENT", userCount: l });
             return !0;
         },
-        CONNECTION_OPEN: o,
-        LOGOUT: o,
+        CONNECTION_OPEN: N,
+        LOGOUT: N,
     }),
-    N = c;
+    C = A;

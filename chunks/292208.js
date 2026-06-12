@@ -1,20 +1,20 @@
-i.d(n, { default: () => h });
-var l = i(627968),
-    e = i(64700),
-    a = i(189213),
-    s = i(192308),
-    r = i(691885),
-    d = i(325278),
-    o = i(985018),
-    u = i(835806),
-    p = i(726249),
-    g = i(723702);
-function c() {
+n.d(i, { default: () => h });
+var l = n(627968),
+    e = n(64700),
+    s = n(189213),
+    a = n(192308),
+    r = n(691885),
+    o = n(325278),
+    d = n(375708),
+    u = n(835806),
+    g = n(726249),
+    p = n(723702);
+function b() {
     return (
         e.useEffect(() => {
-            g.isPlatformEmbedded ||
-                (0, p.iA)({
-                    messages: [o.intl.string(o.t.KIX3cl), o.intl.string(o.t["UbO+8i"]), o.intl.string(o.t.MbySu9)],
+            p.isPlatformEmbedded ||
+                (0, g.iA)({
+                    messages: [d.intl.string(d.t.KIX3cl), d.intl.string(d.t["UbO+8i"]), d.intl.string(d.t.MbySu9)],
                     interval: 600,
                     count: 20,
                     onlyWhenBlurred: !0,
@@ -23,80 +23,80 @@ function c() {
         null
     );
 }
-class b extends e.PureComponent {
+class c extends e.PureComponent {
     state = { problem: null };
     handleChanged = (t) => {
         this.setState({ problem: t ?? null });
     };
     handleSubmit = () => {
-        let { stream: t, streamApplication: n, analyticsData: e, onClose: a } = this.props,
+        let { stream: t, streamApplication: i, analyticsData: e, onClose: s } = this.props,
             { problem: r } = this.state;
-        (0, u.A)({ problem: r, stream: t, feedback: "", streamApplication: n, analyticsData: e, location: "Stream" }),
-            a(),
-            (0, s.openModalLazy)(async () => {
-                let { default: t } = await i.e("37836").then(i.bind(i, 845671));
-                return (n) => (0, l.jsx)(t, { body: o.intl.string(o.t.mMTVnv), ...n });
+        (0, u.A)({ problem: r, stream: t, feedback: "", streamApplication: i, analyticsData: e, location: "Stream" }),
+            s(),
+            (0, a.openModalLazy)(async () => {
+                let { default: t } = await n.e("37836").then(n.bind(n, 845671));
+                return (i) => (0, l.jsx)(t, { body: d.intl.string(d.t.mMTVnv), ...i });
             });
     };
     render() {
-        let { isStreamer: t, transitionState: n, onClose: i } = this.props,
+        let { isStreamer: t, transitionState: i, onClose: n } = this.props,
             { problem: e } = this.state;
-        return (0, l.jsxs)(a.Modal, {
-            title: o.intl.string(o.t.qnJ9W3),
-            subtitle: o.intl.string(o.t["7vw0h+"]),
+        return (0, l.jsxs)(s.Modal, {
+            title: d.intl.string(d.t.qnJ9W3),
+            subtitle: d.intl.string(d.t["7vw0h+"]),
             actions: [
-                { text: o.intl.string(o.t["ETE/oC"]), variant: "secondary", onClick: i },
+                { text: d.intl.string(d.t["ETE/oC"]), variant: "secondary", onClick: n },
                 {
-                    text: o.intl.string(o.t.E48BIc),
+                    text: d.intl.string(d.t.E48BIc),
                     variant: "primary",
                     onClick: this.handleSubmit,
                     disabled: null == e,
                 },
             ],
-            onClose: i,
-            transitionState: n,
+            onClose: n,
+            transitionState: i,
             children: [
-                (0, l.jsx)(c, {}),
+                (0, l.jsx)(b, {}),
                 (0, l.jsx)(r.l, {
                     selectionMode: "single",
-                    label: o.intl.string(o.t["6Y1t5P"]),
-                    placeholder: o.intl.string(o.t.U0kGk6),
+                    label: d.intl.string(d.t["6Y1t5P"]),
+                    placeholder: d.intl.string(d.t.U0kGk6),
                     options: (function (t) {
-                        let { isEndStream: n } = t;
+                        let { isEndStream: i } = t;
                         return [
                             {
                                 id: "black-screen",
-                                value: d.pj.BLACK_SCREEN,
-                                label: n ? o.intl.string(o.t["0X5Zbq"]) : o.intl.string(o.t.fxiRNr),
+                                value: o.pj.BLACK_SCREEN,
+                                label: i ? d.intl.string(d.t["0X5Zbq"]) : d.intl.string(d.t.fxiRNr),
                             },
                             {
                                 id: "blurry",
-                                value: d.pj.BLURRY,
-                                label: n ? o.intl.string(o.t.VVPQyy) : o.intl.string(o.t.E8jTMN),
+                                value: o.pj.BLURRY,
+                                label: i ? d.intl.string(d.t.VVPQyy) : d.intl.string(d.t.E8jTMN),
                             },
                             {
                                 id: "lagging",
-                                value: d.pj.LAGGING,
-                                label: n ? o.intl.string(o.t.ObEHd4) : o.intl.string(o.t.VoSJEQ),
+                                value: o.pj.LAGGING,
+                                label: i ? d.intl.string(d.t.ObEHd4) : d.intl.string(d.t.VoSJEQ),
                             },
                             {
                                 id: "out-of-sync",
-                                value: d.pj.OUT_OF_SYNC,
-                                label: n ? o.intl.string(o.t.mYmwD3) : o.intl.string(o.t["+NluQm"]),
+                                value: o.pj.OUT_OF_SYNC,
+                                label: i ? d.intl.string(d.t.mYmwD3) : d.intl.string(d.t["+NluQm"]),
                             },
                             {
                                 id: "audio-missing",
-                                value: d.pj.AUDIO_MISSING,
-                                label: n ? o.intl.string(o.t["Xwv41+"]) : o.intl.string(o.t.G2egzT),
+                                value: o.pj.AUDIO_MISSING,
+                                label: i ? d.intl.string(d.t["Xwv41+"]) : d.intl.string(d.t.G2egzT),
                             },
                             {
                                 id: "audio-poor",
-                                value: d.pj.AUDIO_POOR,
-                                label: n ? o.intl.string(o.t["fHey+d"]) : o.intl.string(o.t.aHOfIo),
+                                value: o.pj.AUDIO_POOR,
+                                label: i ? d.intl.string(d.t["fHey+d"]) : d.intl.string(d.t.aHOfIo),
                             },
-                            { id: "stream-stopped", value: d.pj.STREAM_STOPPED, label: o.intl.string(o.t.uEoqQp) },
-                            { id: "vibes-off", value: d.pj.VIBES_OFF, label: o.intl.string(o.t["++JLL0"]) },
-                            { id: "other", value: d.pj.OTHER, label: o.intl.string(o.t.emlT91) },
+                            { id: "stream-stopped", value: o.pj.STREAM_STOPPED, label: d.intl.string(d.t.uEoqQp) },
+                            { id: "vibes-off", value: o.pj.VIBES_OFF, label: d.intl.string(d.t["++JLL0"]) },
+                            { id: "other", value: o.pj.OTHER, label: d.intl.string(d.t.emlT91) },
                         ];
                     })({ isStreamer: t, isEndStream: !1 }),
                     onSelectionChange: this.handleChanged,
@@ -107,4 +107,4 @@ class b extends e.PureComponent {
         });
     }
 }
-let h = b;
+let h = c;

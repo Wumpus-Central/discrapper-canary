@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { openRestrictedHoursModal: () => y, k: () => C });
+n.d(t, { openRestrictedHoursModal: () => N, k: () => v });
 var i = n(627968),
     r = n(64700),
     s = n(663066),
@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(17928),
     d = n(349288),
     _ = n(830215),
-    f = n(976860),
-    h = n(287809),
+    h = n(976860),
+    f = n(287809),
     p = n(375708),
     E = n(695515),
     m = n(425116),
@@ -20,9 +20,9 @@ var i = n(627968),
     I = n(88438);
 function T(e) {
     let { onClose: t } = e,
-        n = (0, c.bG)([h.default, E.A], m.$),
-        s = (0, c.bG)([h.default], () => {
-            let e = h.default.getCurrentUser()?.restrictedSchedule?.getNextEndTime();
+        n = (0, c.bG)([f.default, E.A], m.$),
+        s = (0, c.bG)([f.default], () => {
+            let e = f.default.getCurrentUser()?.restrictedSchedule?.getNextEndTime();
             return null == e
                 ? null
                 : new Intl.DateTimeFormat(p.intl.currentLocale, {
@@ -31,15 +31,15 @@ function T(e) {
                       weekday: "long",
                   }).format(e);
         }),
-        a = (0, c.bG)([h.default], () => h.default.getCurrentUser()?.username ?? ""),
+        a = (0, c.bG)([f.default], () => f.default.getCurrentUser()?.username ?? ""),
         T = r.useRef(!1),
         S = r.useCallback(() => {
-            (T.current = !0), (0, f.pX)(g.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours");
+            (T.current = !0), (0, h.pX)(g.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours");
         }, []);
     r.useEffect(() => {
         n || T.current || t();
     }, [n, t]);
-    let N = null != s ? p.intl.format(A.default.VfqJvY, { endTime: s }) : p.intl.string(A.default.abikhN);
+    let y = null != s ? p.intl.format(A.default.VfqJvY, { endTime: s }) : p.intl.string(A.default.abikhN);
     return (0, i.jsxs)("div", {
         className: I.Tp,
         children: [
@@ -60,7 +60,7 @@ function T(e) {
                         variant: "text-lg/medium",
                         color: "text-overlay-light",
                         className: I.h_,
-                        children: N,
+                        children: y,
                     }),
                 ],
             }),
@@ -79,10 +79,10 @@ function T(e) {
     });
 }
 var S = n(191627);
-let N = !1;
-function y() {
-    N || ((N = !0), (0, s.B8)(() => (0, i.jsx)(T, { onClose: () => C() }), { layerKey: S.Uy, Layer: a.Ay }));
+let y = !1;
+function N() {
+    y || ((y = !0), (0, s.B8)(() => (0, i.jsx)(T, { onClose: () => v() }), { layerKey: S.Uy, Layer: a.Ay }));
 }
-function C() {
-    (N = !1), (0, s.dF)(S.Uy);
+function v() {
+    (y = !1), (0, s.dF)(S.Uy);
 }

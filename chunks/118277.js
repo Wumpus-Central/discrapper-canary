@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -21,7 +21,7 @@ function _(e) {
         ],
     );
 }
-function f(e) {
+function h(e) {
     let { title: t, className: n, icon: s } = e,
         [o, d] = r.useState(_(t));
     return (

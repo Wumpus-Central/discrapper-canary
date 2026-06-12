@@ -3,7 +3,7 @@ var a = n(627968);
 n(64700);
 var r = n(189213),
     s = n(834730),
-    l = n(985018);
+    l = n(375708);
 function e(t) {
     let { onClose: i, onConfirmDelete: n, transitionState: e } = t;
     return (0, a.jsx)(r.Modal, {

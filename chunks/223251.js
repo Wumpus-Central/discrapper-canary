@@ -1,67 +1,67 @@
-n.d(t, { A: () => v });
-var i = n(64700),
-    s = n(136722),
-    l = n(17928),
-    a = n(58149),
-    o = n(237774),
-    r = n(885437),
-    d = n(973854),
-    c = n(815706),
-    u = n(808728),
-    h = n(696451),
-    p = n(71393),
-    _ = n(576705),
-    f = n(309010),
-    A = n(967198),
-    g = n(287809),
-    m = n(256415),
-    E = n(9302),
-    y = n(652215);
-class x extends i.Component {
+l.d(n, { A: () => L });
+var t = l(64700),
+    d = l(136722),
+    s = l(17928),
+    i = l(95561),
+    r = l(837152),
+    u = l(885437),
+    a = l(973854),
+    A = l(815706),
+    c = l(808728),
+    p = l(696451),
+    E = l(71393),
+    h = l(576705),
+    g = l(309010),
+    o = l(967198),
+    _ = l(287809),
+    I = l(184809),
+    C = l(9302),
+    k = l(652215);
+class D extends t.Component {
     componentDidUpdate(e) {
         if (this.props.locked) return null;
         let {
-            selectedGuild: t,
-            selectedChannel: n,
-            isMemberPending: i,
-            hasPreviewEnabled: s,
-            postableChannelCount: l,
+            selectedGuild: n,
+            selectedChannel: l,
+            isMemberPending: t,
+            hasPreviewEnabled: d,
+            postableChannelCount: s,
         } = this.props;
-        null != t &&
-            (t !== e.selectedGuild || (i && !e.isMemberPending)) &&
-            ((0, c.z)(y.HAw.GUILD_VIEWED, {
-                ...(i ? { is_pending: i, preview_enabled: s } : {}),
-                postable_channels: l,
+        null != n &&
+            (n !== e.selectedGuild || (t && !e.isMemberPending)) &&
+            ((0, A.z)(k.HAw.GUILD_VIEWED, {
+                ...(t ? { is_pending: t, preview_enabled: d } : {}),
+                postable_channels: s,
             }),
-            (0, o.k)(y.HAw.GUILD_VIEWED_CLICKSTREAM, { guild_id: t })),
-            null != n &&
-                n !== e.selectedChannel &&
-                ((0, c.z)(y.HAw.CHANNEL_OPENED, { ...(0, r.p)(n), ...(0, a.qL)(n) }), (0, d.A)({ channelId: n }));
+            (0, r.k)(k.HAw.GUILD_VIEWED_CLICKSTREAM, { guild_id: n })),
+            null != l &&
+                l !== e.selectedChannel &&
+                ((0, A.z)(k.HAw.CHANNEL_OPENED, { ...(0, u.p)(l), ...(0, i.qL)(l) }), (0, a.A)({ channelId: l }));
     }
     render() {
         return null;
     }
 }
-let v = l.Ay.connectStores([A.A, f.A, p.A, g.default, m.default, u.Ay, _.A, h.Ay], () => {
-    let e = A.A.getGuildId(),
-        t = f.A.getChannelId(e),
-        n = p.A.getGuild(e),
-        i = g.default.getCurrentUser(),
-        l = u.Ay.getChannels(n?.id)[u.I6] ?? [],
-        a =
-            l.length > 0
-                ? l.filter((e) => {
-                      let { channel: t } = e;
-                      return _.A.can(s.kg(y.xBc.SEND_MESSAGES, y.xBc.VIEW_CHANNEL), t);
+let L = s.Ay.connectStores([o.A, g.A, E.A, _.default, I.default, c.Ay, h.A, p.Ay], () => {
+    let e = o.A.getGuildId(),
+        n = g.A.getChannelId(e),
+        l = E.A.getGuild(e),
+        t = _.default.getCurrentUser(),
+        s = c.Ay.getChannels(l?.id)[c.I6] ?? [],
+        i =
+            s.length > 0
+                ? s.filter((e) => {
+                      let { channel: n } = e;
+                      return h.A.can(d.kg(k.xBc.SEND_MESSAGES, k.xBc.VIEW_CHANNEL), n);
                   }).length
                 : 0,
-        o = null != i && null != e && (h.Ay.getMember(e, i.id)?.isPending ?? !1);
+        r = null != t && null != e && (p.Ay.getMember(e, t.id)?.isPending ?? !1);
     return {
         selectedGuild: e,
-        selectedChannel: t,
-        locked: m.default.isLocked((0, E.getPID)()),
-        hasPreviewEnabled: n?.features.has(y.GuildFeatures.PREVIEW_ENABLED),
-        isMemberPending: o,
-        postableChannelCount: a,
+        selectedChannel: n,
+        locked: I.default.isLocked((0, C.getPID)()),
+        hasPreviewEnabled: l?.features.has(k.GuildFeatures.PREVIEW_ENABLED),
+        isMemberPending: r,
+        postableChannelCount: i,
     };
-})(x);
+})(D);

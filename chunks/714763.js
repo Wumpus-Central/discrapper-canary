@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d }), n(321073);
+n.d(t, { A: () => u }), n(321073);
 var i = n(17928),
     r = n(228366);
 let s = [],
@@ -21,7 +21,7 @@ class l extends i.Ay.PersistedStore {
         return o;
     }
 }
-let d = new l(r.h, {
+let u = new l(r.h, {
     SECURE_FRAMES_SETTINGS_UPDATE: function (e) {
         a = e.persistentCodesEnabled;
     },

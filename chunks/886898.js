@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     wx: "header__7560f",
     Ry: "customGiftHeader__7560f",
     Dv: "backSplash__7560f",

@@ -1,22 +1,22 @@
 "use strict";
 n.d(t, { A: () => o });
-var r = n(506774),
-    i = n(439372);
-let a = "formGuidelinesStorageKey";
-class s extends i.A {
+var i = n(506774),
+    r = n(439372);
+let s = "formGuidelinesStorageKey";
+class a extends r.A {
     seenForumGuidelines = new Set();
     _initialize() {
-        let e = r.w.get(a);
+        let e = i.w.get(s);
         null != e && (this.seenForumGuidelines = new Set(e));
     }
     _terminate() {
-        r.w.set(a, this.seenForumGuidelines);
+        i.w.set(s, this.seenForumGuidelines);
     }
     markAsSeen(e) {
-        this.seenForumGuidelines.add(e), r.w.set(a, this.seenForumGuidelines);
+        this.seenForumGuidelines.add(e), i.w.set(s, this.seenForumGuidelines);
     }
     hasSeen(e) {
         return this.seenForumGuidelines.has(e);
     }
 }
-let o = new s();
+let o = new a();

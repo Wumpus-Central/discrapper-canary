@@ -1,72 +1,72 @@
-s.d(t, { default: () => G });
-var a = s(627968),
-    i = s(64700),
+s.d(e, { default: () => P });
+var i = s(627968),
+    n = s(64700),
     l = s(284009),
-    n = s.n(l),
-    r = s(110259),
-    o = s(189213),
+    a = s.n(l),
+    r = s(562708),
+    d = s(189213),
     c = s(17928),
-    d = s(834730),
-    x = s(696986),
-    m = s(534514),
-    h = s(793574),
-    u = s(139286),
-    _ = s(839656),
-    f = s(303612),
-    j = s(71393),
-    g = s(871109),
-    A = s(571654),
-    p = s(939249),
-    v = s(317525),
-    N = s(147925),
-    b = s(59375),
-    D = s(391442),
+    o = s(834730),
+    m = s(696986),
+    x = s(534514),
+    u = s(793574),
+    h = s(139286),
+    g = s(839656),
+    j = s(303612),
+    A = s(71393),
+    p = s(871109),
+    _ = s(571654),
+    N = s(939249),
+    D = s(317525),
+    b = s(147925),
+    O = s(59375),
+    v = s(391442),
     I = s(411342),
-    O = s(652215),
-    z = s(985018),
-    E = s(441231);
-let L = "expanded-area";
-function C(e) {
-    let { attachments: t, role: s, roleLocked: l } = e,
-        [n, r] = i.useState(!1);
-    return (0, a.jsxs)(a.Fragment, {
+    L = s(652215),
+    k = s(375708),
+    G = s(441231);
+let f = "expanded-area";
+function z(t) {
+    let { attachments: e, role: s, roleLocked: l } = t,
+        [a, r] = n.useState(!1);
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, a.jsxs)(p.D, {
-                className: E.YA,
+            (0, i.jsxs)(N.D, {
+                className: G.YA,
                 onClick: () => {
-                    r((e) => !e);
+                    r((t) => !t);
                 },
-                "aria-expanded": n,
-                "aria-controls": L,
+                "aria-expanded": a,
+                "aria-controls": f,
                 children: [
-                    (0, a.jsx)(d.E, {
+                    (0, i.jsx)(o.E, {
                         variant: "text-sm/medium",
                         color: "text-default",
-                        children: n ? z.intl.string(z.t.DKNxgB) : z.intl.string(z.t.ESEKua),
+                        children: a ? k.intl.string(k.t.DKNxgB) : k.intl.string(k.t.ESEKua),
                     }),
-                    (0, a.jsx)(N.A, { className: E.Rq, direction: n ? N.A.Directions.UP : N.A.Directions.DOWN }),
+                    (0, i.jsx)(b.A, { className: G.Rq, direction: a ? b.A.Directions.UP : b.A.Directions.DOWN }),
                 ],
             }),
-            (0, a.jsx)(x.h, { size: 12 }),
-            n &&
-                (0, a.jsxs)("ul", {
-                    className: E.cu,
-                    id: L,
+            (0, i.jsx)(m.h, { size: 12 }),
+            a &&
+                (0, i.jsxs)("ul", {
+                    className: G.cu,
+                    id: f,
                     children: [
-                        (0, a.jsx)(D.A, {
-                            label: z.intl.string(z.t.DWYJua),
-                            children: (0, a.jsx)("ul", {
-                                className: E.yO,
-                                children: t.map((e) => (0, a.jsx)(b.A, { attachment: e }, e.id)),
+                        (0, i.jsx)(v.A, {
+                            label: k.intl.string(k.t.DWYJua),
+                            children: (0, i.jsx)("ul", {
+                                className: G.yO,
+                                children: e.map((t) => (0, i.jsx)(O.A, { attachment: t }, t.id)),
                             }),
                         }),
                         null != s &&
-                            (0, a.jsxs)(a.Fragment, {
+                            (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, a.jsx)("div", { className: E.me }),
-                                    (0, a.jsx)(D.A, {
-                                        label: z.intl.string(z.t.o9xphc),
-                                        children: (0, a.jsx)(I.A, {
+                                    (0, i.jsx)("div", { className: G.me }),
+                                    (0, i.jsx)(v.A, {
+                                        label: k.intl.string(k.t.o9xphc),
+                                        children: (0, i.jsx)(I.A, {
                                             role: s,
                                             textVariant: "text-md/medium",
                                             locked: l,
@@ -79,66 +79,66 @@ function C(e) {
         ],
     });
 }
-function R(e) {
-    let { listing: t } = e,
-        s = t.attachments ?? [],
-        i = (0, c.bG)([v.A], () => v.A.getRole(t.guild_id, t.role_id ?? O.dJq)),
-        l = !t.has_entitlement;
-    return 0 === s.length && null == i
+function C(t) {
+    let { listing: e } = t,
+        s = e.attachments ?? [],
+        n = (0, c.bG)([D.A], () => D.A.getRole(e.guild_id, e.role_id ?? L.dJq)),
+        l = !e.has_entitlement;
+    return 0 === s.length && null == n
         ? null
-        : 0 === s.length && null != i
-          ? (0, a.jsx)(I.A, { role: i, textVariant: "text-md/medium", locked: l })
-          : (0, a.jsx)(C, { attachments: s, role: i, roleLocked: l });
+        : 0 === s.length && null != n
+          ? (0, i.jsx)(I.A, { role: n, textVariant: "text-md/medium", locked: l })
+          : (0, i.jsx)(z, { attachments: s, role: n, roleLocked: l });
 }
-var M = s(703543),
-    k = s(511869);
-function G(e) {
-    let { transitionState: t, guildProductListingId: s, analyticsLocation: i, guildId: l, onClose: p } = e,
-        v = (0, c.bG)([g.A], () => g.A.getGuildProduct(s));
-    n()(null != v, "guildProductListing cannot be null"),
-        (0, u.A)({
+var y = s(703543),
+    F = s(511869);
+function P(t) {
+    let { transitionState: e, guildProductListingId: s, analyticsLocation: n, guildId: l, onClose: N } = t,
+        D = (0, c.bG)([p.A], () => p.A.getGuildProduct(s));
+    a()(null != D, "guildProductListing cannot be null"),
+        (0, h.A)({
             type: r.ImpressionTypes.MODAL,
             name: r.ImpressionNames.GUILD_PRODUCT_LISTING_INFO_MODAL,
-            properties: { guild_product_listing_id: s, has_entitlement: !0 === v.has_entitlement, location: i },
+            properties: { guild_product_listing_id: s, has_entitlement: !0 === D.has_entitlement, location: n },
         });
-    let N = (0, A.z)(v) ?? "",
-        b = (0, A.X)(v),
-        D = (0, c.bG)([j.A], () => j.A.getGuild(l)),
-        I = (0, M.A)({ guildId: l, guildProductListingId: s, sourceAnalyticsLocations: h.A.GUILD_PRODUCT_INFO_MODAL });
-    return (0, a.jsxs)(o.Modal, {
-        title: v.name,
-        subtitle: z.intl.format(z.t.xImSei, { productType: N, personName: D?.name ?? "" }),
+    let b = (0, _.z)(D) ?? "",
+        O = (0, _.X)(D),
+        v = (0, c.bG)([A.A], () => A.A.getGuild(l)),
+        I = (0, y.A)({ guildId: l, guildProductListingId: s, sourceAnalyticsLocations: u.A.GUILD_PRODUCT_INFO_MODAL });
+    return (0, i.jsxs)(d.Modal, {
+        title: D.name,
+        subtitle: k.intl.format(k.t.xImSei, { productType: b, personName: v?.name ?? "" }),
         size: "md",
-        transitionState: t,
-        onClose: p,
-        "aria-label": v.name,
+        transitionState: e,
+        onClose: N,
+        "aria-label": D.name,
         actions: [I],
-        actionBarInput: (0, a.jsx)(d.E, {
+        actionBarInput: (0, i.jsx)(o.E, {
             tag: "div",
             variant: "heading-xl/semibold",
             color: "text-strong",
-            children: b,
+            children: O,
         }),
         children: [
-            (0, a.jsx)(f.y, { height: 267, listing: v, className: k.F0, alt: "" }),
-            (0, a.jsxs)("div", {
-                className: k.rf,
+            (0, i.jsx)(j.y, { height: 267, listing: D, className: F.F0, alt: "" }),
+            (0, i.jsxs)("div", {
+                className: F.rf,
                 children: [
-                    (0, a.jsx)(R, { listing: v }),
-                    (0, a.jsx)(x.h, { size: 16 }),
-                    (0, a.jsx)("div", { className: k.OO }),
-                    (0, a.jsx)(x.h, { size: 16 }),
-                    (0, a.jsx)(m.D, {
+                    (0, i.jsx)(C, { listing: D }),
+                    (0, i.jsx)(m.h, { size: 16 }),
+                    (0, i.jsx)("div", { className: F.OO }),
+                    (0, i.jsx)(m.h, { size: 16 }),
+                    (0, i.jsx)(x.D, {
                         variant: "heading-lg/medium",
                         color: "text-strong",
-                        children: z.intl.string(z.t.TNnDJs),
+                        children: k.intl.string(k.t.TNnDJs),
                     }),
-                    (0, a.jsx)(x.h, { size: 12 }),
-                    (0, a.jsx)(_.A, {
-                        className: k.h_,
+                    (0, i.jsx)(m.h, { size: 12 }),
+                    (0, i.jsx)(g.A, {
+                        className: F.h_,
                         variant: "text-md/normal",
                         color: "text-muted",
-                        text: v.description,
+                        text: D.description,
                     }),
                 ],
             }),

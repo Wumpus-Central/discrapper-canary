@@ -1,23 +1,23 @@
-n.d(t, { d: () => a });
+n.d(e, { d: () => a });
 var i = n(64700),
-    l = n(198982);
-function a(e) {
-    let { onError: t, onSuccess: n, report: a } = e,
-        [r, s] = i.useState(!1);
+    l = n(913122);
+function a(t) {
+    let { onError: e, onSuccess: n, report: a } = t,
+        [s, r] = i.useState(!1);
     return {
         reportFalsePositive: i.useCallback(async () => {
-            if (!r) {
-                s(!0);
+            if (!s) {
+                r(!0);
                 try {
                     await a(), n?.();
                 } catch (n) {
-                    let e = new l.LG(n);
-                    t?.(e);
+                    let t = new l.LG(n);
+                    e?.(t);
                 } finally {
-                    s(!1);
+                    r(!1);
                 }
             }
-        }, [r, t, n, a]),
-        isReportFalsePositiveLoading: r,
+        }, [s, e, n, a]),
+        isReportFalsePositiveLoading: s,
     };
 }

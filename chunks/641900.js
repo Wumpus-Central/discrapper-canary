@@ -1,29 +1,29 @@
 "use strict";
-e.exports = function (e, t, r, i, s, a) {
+e.exports = function (e, t, i, r, s, a) {
     var o,
         l,
         u,
-        d,
-        c = [],
-        _ = r.type;
+        c,
+        d = [],
+        _ = i.type;
     if (
         ("keypress" !== _ ||
-            (r.code && "Arrow" === r.code.slice(0, 5)) ||
+            (i.code && "Arrow" === i.code.slice(0, 5)) ||
             (this.callbacks["any-character"] || []).forEach(function (e) {
-                c.push(e);
+                d.push(e);
             }),
         !this.callbacks[e])
     )
-        return c;
+        return d;
     for (u = n(921194), "keyup" === _ && u(e) && (t = [e]), o = 0; o < this.callbacks[e].length; ++o)
         if (
-            ((l = this.callbacks[e][o]), i || !l.seq || this.sequenceLevels[l.seq] === l.level) &&
+            ((l = this.callbacks[e][o]), r || !l.seq || this.sequenceLevels[l.seq] === l.level) &&
             _ === l.action &&
-            ((d = n(135926)), ("keypress" === _ && !r.metaKey && !r.ctrlKey) || d(t, l.modifiers))
+            ((c = n(135926)), ("keypress" === _ && !i.metaKey && !i.ctrlKey) || c(t, l.modifiers))
         ) {
-            var f = !i && l.combo === s,
-                E = i && l.seq === i && l.level === a;
-            (f || E) && this.callbacks[e].splice(o, 1), c.push(l);
+            var h = !r && l.combo === s,
+                f = r && l.seq === r && l.level === a;
+            (h || f) && this.callbacks[e].splice(o, 1), d.push(l);
         }
-    return c;
+    return d;
 };

@@ -1,15 +1,15 @@
-n.d(t, { M: () => s });
-var i = n(627968);
-n(64700);
-var l = n(700129);
-function s(e) {
-    let { alt: t, ariaLabel: n, ariaHidden: s, role: a, width: r = 288, height: o = 162 } = e;
-    return (0, i.jsx)("img", {
-        style: { width: r, height: o },
-        src: l.A,
-        alt: t,
-        "aria-label": n,
-        "aria-hidden": s,
-        role: a ?? "img",
+r.d(i, { M: () => t });
+var s = r(627968);
+r(64700);
+var e = r(700129);
+function t(a) {
+    let { alt: i, ariaLabel: r, ariaHidden: t, role: c, width: d = 288, height: p = 162 } = a;
+    return (0, s.jsx)("img", {
+        style: { width: d, height: p },
+        src: e.A,
+        alt: i,
+        "aria-label": r,
+        "aria-hidden": t,
+        role: c ?? "img",
     });
 }

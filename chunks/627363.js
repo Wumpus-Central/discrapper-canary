@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => d, NP: () => f, TA: () => c, YY: () => _ }), n(323874), n(14289), n(35956);
+n.d(t, { Ay: () => d, NP: () => h, TA: () => c, YY: () => _ }), n(323874), n(14289), n(35956);
 var i = n(17928),
     r = n(636537),
     s = n(228366),
@@ -102,7 +102,7 @@ let d = {
         load: (e) => (null != e ? c(e, !1).then(u.tEg) : Promise.resolve()),
         getIsLoading: (e) => null != e && l.A.isFetchingApplication(e),
     });
-function f(e) {
+function h(e) {
     let { data: t, isLoading: n, error: r } = _(e);
     return {
         app: (0, i.bG)([a.A], () => {

@@ -1,36 +1,36 @@
 "use strict";
-var n, r;
-function i(e) {
+var n, i;
+function r(e) {
     for (let t = 0; t < e.length; t++) e[t] = s(e[t]);
     return !0;
 }
 function s(e) {
     if ("string" == typeof e) return { type: 0, value: e };
-    let [r] = e;
-    switch (r) {
+    let [i] = e;
+    switch (i) {
         case n.Argument:
-            return { type: r, value: e[1] };
+            return { type: i, value: e[1] };
         case n.Number:
         case n.Date:
         case n.Time:
-            return { type: r, value: e[1], style: e[2] };
+            return { type: i, value: e[1], style: e[2] };
         case n.Select:
         case n.Plural:
             return (function (e) {
-                let [t, r, s, a, o] = e;
-                for (let e in s) i(s[e]), (s[e] = { value: s[e] });
+                let [t, i, s, a, o] = e;
+                for (let e in s) r(s[e]), (s[e] = { value: s[e] });
                 return t === n.Plural
-                    ? { type: t, value: r, options: s, offset: a, pluralType: o }
-                    : { type: t, value: r, options: s, offset: a };
+                    ? { type: t, value: i, options: s, offset: a, pluralType: o }
+                    : { type: t, value: i, options: s, offset: a };
             })(e);
         case n.Pound:
             return t.FORMAT_JS_POUND;
         case n.Tag: {
-            let [t, n, r, s] = e;
-            return i(r), null != s && i(s), { type: t, value: n, children: r, control: s };
+            let [t, n, i, s] = e;
+            return r(i), null != s && r(s), { type: t, value: n, children: i, control: s };
         }
         default:
-            throw Error(`FormatJS keyless JSON encountered an unknown type: ${r}`);
+            throw Error(`FormatJS keyless JSON encountered an unknown type: ${i}`);
     }
 }
 Object.defineProperty(t, "__esModule", { value: !0 }),
@@ -39,11 +39,11 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         return "string" == typeof e
             ? s(e)
             : "string" == typeof e[0]
-              ? (i(e), e)
+              ? (r(e), e)
               : 0 === e.length
                 ? e
                 : Array.isArray(e[0])
-                  ? (i(e), e)
+                  ? (r(e), e)
                   : s(e);
     }),
     (t.compressFormatJsToAst = function e(t) {
@@ -59,12 +59,12 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
                 return [t.type, t.value, t.style];
             case n.Select: {
                 let n = {};
-                for (let [r, i] of Object.entries(t.options)) n[r] = e(i.value);
+                for (let [i, r] of Object.entries(t.options)) n[i] = e(r.value);
                 return [t.type, t.value, n];
             }
             case n.Plural: {
                 let n = {};
-                for (let [r, i] of Object.entries(t.options)) n[r] = e(i.value);
+                for (let [i, r] of Object.entries(t.options)) n[i] = e(r.value);
                 return [t.type, t.value, n, t.offset, t.pluralType];
             }
             case n.Pound:
@@ -76,13 +76,13 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isCompressedAst = function (e) {
         return "string" == typeof e || (!!Array.isArray(e) && (Array.isArray(e[0]) || "string" == typeof e[0]));
     }),
-    ((r = n || (t.FormatJsNodeType = n = {}))[(r.Literal = 0)] = "Literal"),
-    (r[(r.Argument = 1)] = "Argument"),
-    (r[(r.Number = 2)] = "Number"),
-    (r[(r.Date = 3)] = "Date"),
-    (r[(r.Time = 4)] = "Time"),
-    (r[(r.Select = 5)] = "Select"),
-    (r[(r.Plural = 6)] = "Plural"),
-    (r[(r.Pound = 7)] = "Pound"),
-    (r[(r.Tag = 8)] = "Tag"),
+    ((i = n || (t.FormatJsNodeType = n = {}))[(i.Literal = 0)] = "Literal"),
+    (i[(i.Argument = 1)] = "Argument"),
+    (i[(i.Number = 2)] = "Number"),
+    (i[(i.Date = 3)] = "Date"),
+    (i[(i.Time = 4)] = "Time"),
+    (i[(i.Select = 5)] = "Select"),
+    (i[(i.Plural = 6)] = "Plural"),
+    (i[(i.Pound = 7)] = "Pound"),
+    (i[(i.Tag = 8)] = "Tag"),
     (t.FORMAT_JS_POUND = Object.freeze({ type: 7 }));

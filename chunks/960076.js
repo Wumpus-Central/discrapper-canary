@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(360469),
-    i = n(652215);
-function a(e) {
-    return e.type === i.$pd.STREAMING && null != e.url && r.yz.test(e.url);
-}
+n.d(t, { A: () => a });
+var i = n(360469),
+    r = n(652215);
 function s(e) {
-    return null != e && (Array.isArray(e) ? e.some(a) : a(e));
+    return e.type === r.$pd.STREAMING && null != e.url && i.yz.test(e.url);
+}
+function a(e) {
+    return null != e && (Array.isArray(e) ? e.some(s) : s(e));
 }

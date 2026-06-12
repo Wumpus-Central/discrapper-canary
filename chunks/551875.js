@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { i2: () => E, tW: () => A, vm: () => T, fY: () => h, WV: () => C, Yt: () => N, UX: () => y, dv: () => I }),
+n.d(t, { i2: () => E, tW: () => A, vm: () => T, fY: () => f, WV: () => v, Yt: () => y, UX: () => N, dv: () => I }),
     n(134528),
     n(947204);
 var i,
@@ -12,8 +12,8 @@ var i,
     c = n(190107),
     d = n(652215);
 let _ = /\.([a-zA-Z0-9]+)$/,
-    f = ["video/mp4", "video/webm"];
-var h =
+    h = ["video/mp4", "video/webm"];
+var f =
     (((i = {}).HERO = "hero"),
     (i.HERO_IMAGE = "hero_image"),
     (i.HERO_VIDEO = "hero_video"),
@@ -60,33 +60,33 @@ function A(e, t, n, i, r) {
     let l,
         d,
         _,
-        h,
+        f,
         E = !1,
         A = !1;
     switch (t) {
         case "hero":
-            h = p(e.config.assets.heroVideo, e.config.assets.hero);
+            f = p(e.config.assets.heroVideo, e.config.assets.hero);
             break;
         case "hero_image":
-            h = e.config.assets.hero;
+            f = e.config.assets.hero;
             break;
         case "hero_video": {
             let t = e.config.assets.heroVideo;
             if (null == t) return null;
-            h = t;
+            f = t;
             break;
         }
         case "quest_bar_hero":
-            h = p(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
+            f = p(e.config.assets.questBarHeroVideo, e.config.assets.questBarHero);
             break;
         case "quest_bar_hero_video": {
             let t = e.config.assets.questBarHeroVideo;
             if (null == t) return null;
-            h = t;
+            f = t;
             break;
         }
         case "quest_bar_hero_image":
-            h = e.config.assets.questBarHero;
+            f = e.config.assets.questBarHero;
             break;
         case "reward": {
             let t = (0, u.sn)(e);
@@ -105,36 +105,36 @@ function A(e, t, n, i, r) {
                           isAnimated: !0,
                       };
             }
-            h = p(t.assetVideo, t.asset);
+            f = p(t.assetVideo, t.asset);
             break;
         }
         case "reward_image": {
             let t = (0, u.sn)(e);
             if (t.type === a.l.VIRTUAL_CURRENCY) return null;
-            h = t.asset;
+            f = t.asset;
             break;
         }
         case "game_tile":
             "dark" === n && null != e.config.assets.gameTileDark
-                ? (h = e.config.assets.gameTileDark)
+                ? (f = e.config.assets.gameTileDark)
                 : "light" === n && null != e.config.assets.gameTileLight
-                  ? (h = e.config.assets.gameTileLight)
-                  : ((h = e.config.assets.gameTile), (E = !0));
+                  ? (f = e.config.assets.gameTileLight)
+                  : ((f = e.config.assets.gameTile), (E = !0));
             break;
         case "logo_type":
             "dark" === n && null != e.config.assets.logotypeDark
-                ? (h = e.config.assets.logotypeDark)
+                ? (f = e.config.assets.logotypeDark)
                 : "light" === n && null != e.config.assets.logotypeLight
-                  ? (h = e.config.assets.logotypeLight)
-                  : ((h = e.config.assets.logotype), (E = !0));
+                  ? (f = e.config.assets.logotypeLight)
+                  : ((f = e.config.assets.logotype), (E = !0));
             break;
         case "cosponsor_logo_type":
             if (null == e.config.cosponsorMetadata) return null;
             "dark" === n && null != e.config.cosponsorMetadata.logotypeDark
-                ? (h = e.config.cosponsorMetadata.logotypeDark)
+                ? (f = e.config.cosponsorMetadata.logotypeDark)
                 : "light" === n && null != e.config.cosponsorMetadata.logotypeLight
-                  ? (h = e.config.cosponsorMetadata.logotypeLight)
-                  : ((h = e.config.cosponsorMetadata.logotype), (E = !0));
+                  ? (f = e.config.cosponsorMetadata.logotypeLight)
+                  : ((f = e.config.cosponsorMetadata.logotype), (E = !0));
             break;
         case "video_player_video":
         case "video_player_video_low_res":
@@ -147,7 +147,7 @@ function A(e, t, n, i, r) {
                 r = m[t],
                 a = n?.assets[r.variant]?.[r.property];
             if (null == a) return null;
-            (h = a), (A = !0);
+            (f = a), (A = !0);
         }
     }
     let I =
@@ -155,8 +155,8 @@ function A(e, t, n, i, r) {
             if (t.startsWith("blob:")) return t.split("?", 1).at(0) ?? t;
             let i = c.CI;
             return t.includes("/") ? ((i = c.GD), `${i}${t}`) : `${i}${e}${n?.theme != null ? `/${n.theme}` : ""}/${t}`;
-        })(e.id, (o = h), { theme: E ? n : void 0 })),
-        (_ = null != (d = T(o)) && f.includes(d)),
+        })(e.id, (o = f), { theme: E ? n : void 0 })),
+        (_ = null != (d = T(o)) && h.includes(d)),
         { url: l, mimetype: d, isAnimated: _ });
     return A && null == I.mimetype ? null : I;
 }
@@ -201,11 +201,11 @@ function T(e) {
 function S(e) {
     return Math.min(Math.ceil(e), d.uJv);
 }
-function N(e, t) {
+function y(e, t) {
     let n = (0, l.A)();
     return n < 3 ? { width: e, height: t } : { width: e * n, height: t * n };
 }
-function y(e) {
+function N(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (e.startsWith("blob:")) return e;
     let n = o.A.toURLSafe(e);
@@ -216,7 +216,7 @@ function y(e) {
           null != t.height && n.searchParams.set("height", `${S(t.height)}`),
           n.toString());
 }
-function C(e, t) {
+function v(e, t) {
     if (e.startsWith("blob:")) return e;
     let n = o.A.toURLSafe(e);
     return null == n

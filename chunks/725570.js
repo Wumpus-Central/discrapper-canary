@@ -1,33 +1,33 @@
 "use strict";
 n.d(t, { aF: () => u });
-var r = n(64700),
-    i = n(296489),
-    s = n.n(i),
+var i = n(64700),
+    r = n(296489),
+    s = n.n(r),
     a = n(964486),
     o = n(192308),
     l = n(638495);
 function u(e) {
-    let { renderModal: t, onCloseRequest: n, onCloseCallback: i } = e,
-        [u] = r.useState(() => s()()),
-        d = (0, l.k)();
+    let { renderModal: t, onCloseRequest: n, onCloseCallback: r } = e,
+        [u] = i.useState(() => s()()),
+        c = (0, l.k)();
     (0, a.u5)(
         () => (
-            (0, o.openModal)(t, { modalKey: u, onCloseRequest: n, onCloseCallback: i }, d),
+            (0, o.openModal)(t, { modalKey: u, onCloseRequest: n, onCloseCallback: r }, c),
             () => {
-                (0, o.closeModal)(u, d);
+                (0, o.closeModal)(u, c);
             }
         ),
     );
-    let c = r.useRef(!0),
-        _ = { contextKey: d, modalKey: u, onCloseCallback: i },
-        f = r.useRef(_);
+    let d = i.useRef(!0),
+        _ = { contextKey: c, modalKey: u, onCloseCallback: r },
+        h = i.useRef(_);
     return (
-        r.useEffect(() => {
-            f.current = _;
+        i.useEffect(() => {
+            h.current = _;
         }),
-        r.useLayoutEffect(() => {
-            let { contextKey: e, modalKey: r, onCloseCallback: i } = f.current;
-            c.current || (0, o.updateModal)(r, t, n, i, e), (c.current = !1);
+        i.useLayoutEffect(() => {
+            let { contextKey: e, modalKey: i, onCloseCallback: r } = h.current;
+            d.current || (0, o.updateModal)(i, t, n, r, e), (d.current = !1);
         }, [t, n]),
         null
     );

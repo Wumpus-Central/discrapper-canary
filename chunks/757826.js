@@ -1,7 +1,7 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = "[A-Za-z_][0-9A-Za-z_]*",
-        n = {
+        n = "[A-Za-z_][0-9A-Za-z_]*",
+        i = {
             keyword: [
                 "break",
                 "case",
@@ -292,36 +292,36 @@ e.exports = function (e) {
                     "view",
                 ),
         },
-        i = {
+        s = {
             className: "number",
             variants: [{ begin: "\\b(0[bB][01]+)" }, { begin: "\\b(0[oO][0-7]+)" }, { begin: e.C_NUMBER_RE }],
             relevance: 0,
         },
-        o = { className: "subst", begin: "\\$\\{", end: "\\}", keywords: n, contains: [] },
-        s = { className: "string", begin: "`", end: "`", contains: [e.BACKSLASH_ESCAPE, o] };
-    o.contains = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, s, i, e.REGEXP_MODE];
-    let l = o.contains.concat([e.C_BLOCK_COMMENT_MODE, e.C_LINE_COMMENT_MODE]);
+        a = { className: "subst", begin: "\\$\\{", end: "\\}", keywords: i, contains: [] },
+        o = { className: "string", begin: "`", end: "`", contains: [e.BACKSLASH_ESCAPE, a] };
+    a.contains = [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, o, s, e.REGEXP_MODE];
+    let l = a.contains.concat([e.C_BLOCK_COMMENT_MODE, e.C_LINE_COMMENT_MODE]);
     return {
         name: "ArcGIS Arcade",
         case_insensitive: !0,
-        keywords: n,
+        keywords: i,
         contains: [
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            s,
+            o,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             r,
-            i,
+            s,
             {
                 begin: /[{,]\s*/,
                 relevance: 0,
                 contains: [
                     {
-                        begin: a + "\\s*:",
+                        begin: n + "\\s*:",
                         returnBegin: !0,
                         relevance: 0,
-                        contains: [{ className: "attr", begin: a, relevance: 0 }],
+                        contains: [{ className: "attr", begin: n, relevance: 0 }],
                     },
                 ],
             },
@@ -334,21 +334,21 @@ e.exports = function (e) {
                     e.REGEXP_MODE,
                     {
                         className: "function",
-                        begin: "(\\(.*?\\)|" + a + ")\\s*=>",
+                        begin: "(\\(.*?\\)|" + n + ")\\s*=>",
                         returnBegin: !0,
                         end: "\\s*=>",
                         contains: [
                             {
                                 className: "params",
                                 variants: [
-                                    { begin: a },
+                                    { begin: n },
                                     { begin: /\(\s*\)/ },
                                     {
                                         begin: /\(/,
                                         end: /\)/,
                                         excludeBegin: !0,
                                         excludeEnd: !0,
-                                        keywords: n,
+                                        keywords: i,
                                         contains: l,
                                     },
                                 ],
@@ -363,7 +363,7 @@ e.exports = function (e) {
                 end: /\{/,
                 excludeEnd: !0,
                 contains: [
-                    e.inherit(e.TITLE_MODE, { className: "title.function", begin: a }),
+                    e.inherit(e.TITLE_MODE, { className: "title.function", begin: n }),
                     { className: "params", begin: /\(/, end: /\)/, excludeBegin: !0, excludeEnd: !0, contains: l },
                 ],
                 illegal: /\[|%/,

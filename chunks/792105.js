@@ -1,25 +1,25 @@
-n.d(t, { A: () => v });
-var i = n(627968),
-    l = n(64700),
-    r = n(503698),
-    o = n.n(r),
-    a = n(17928),
-    s = n(43990),
-    u = n(201275),
-    c = n(320095),
-    d = n(963852),
-    m = n(20851),
-    f = n(287809),
-    g = n(562153),
-    p = n(652215),
-    A = n(375708),
-    _ = n(547886);
+i.d(t, { A: () => v });
+var n = i(627968),
+    l = i(64700),
+    r = i(503698),
+    o = i.n(r),
+    s = i(17928),
+    a = i(43990),
+    u = i(201275),
+    c = i(320095),
+    d = i(963852),
+    m = i(20851),
+    f = i(287809),
+    g = i(562153),
+    p = i(652215),
+    _ = i(375708),
+    S = i(547886);
 function v(e) {
-    let { guildId: t, role: n, theme: r, content: v = A.intl.string(A.t["6OSasb"]), className: S } = e,
-        y = (0, a.bG)([f.default], () => f.default.getCurrentUser()),
+    let { guildId: t, role: i, theme: r, content: v = _.intl.string(_.t["6OSasb"]), className: A } = e,
+        y = (0, s.bG)([f.default], () => f.default.getCurrentUser()),
         E = g.Ay.useName(t, null, y),
-        b = (0, u.ox)(n),
-        h = l.useMemo(
+        b = (0, u.ox)(i),
+        C = l.useMemo(
             () =>
                 (0, c.rh)({
                     ...(0, d.Ay)({
@@ -36,17 +36,17 @@ function v(e) {
                 }),
             [y, v],
         ),
-        C = { nick: E, colorString: n.colorString, colorStrings: n.colorStrings };
-    return (0, i.jsx)(s.N, {
+        h = { nick: E, colorString: i.colorString, colorStrings: i.colorStrings };
+    return (0, n.jsx)(a.N, {
         theme: r,
         children: (e) =>
-            (0, i.jsx)("div", {
-                className: o()(e, _.k, S),
-                children: (0, i.jsx)(m.A, {
+            (0, n.jsx)("div", {
+                className: o()(e, S.k, A),
+                children: (0, n.jsx)(m.A, {
                     hideTimestamp: !0,
-                    author: C,
+                    author: h,
                     roleIcon: b,
-                    message: h,
+                    message: C,
                     isGroupStart: !0,
                     disableInteraction: !0,
                 }),

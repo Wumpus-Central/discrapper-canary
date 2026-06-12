@@ -1,74 +1,74 @@
-n.d(t, { default: () => C });
-var s = n(627968),
-    i = n(64700),
-    r = n(189213),
-    l = n(17928),
-    o = n(512950),
-    a = n(534514),
-    d = n(834730),
-    c = n(349288),
-    h = n(97260),
-    u = n(635242),
-    p = n(775121),
-    m = n(532624),
-    _ = n(350535);
+n.d(e, { default: () => C });
+var a = n(627968),
+    s = n(64700),
+    l = n(189213),
+    i = n(17928),
+    r = n(512950),
+    c = n(534514),
+    o = n(834730),
+    d = n(349288),
+    u = n(97260),
+    h = n(635242),
+    x = n(775121),
+    A = n(532624),
+    b = n(350535);
 n(980504);
-var g = n(652215),
-    b = n(985018),
-    f = n(690320);
-function C(e) {
-    let { transitionState: t, onClose: n } = e,
-        C = (0, l.bG)([m.Ay], () => m.Ay.getKeybindForAction(g.hCu.SOUNDBOARD_HOLD)),
-        [R, E] = i.useState(C?.shortcut ?? []),
-        D = i.useCallback(() => {
-            if (0 === R.length) return null != C && h.A.deleteKeybind(C.id), n();
+var m = n(652215),
+    g = n(375708),
+    p = n(690320);
+function C(t) {
+    let { transitionState: e, onClose: n } = t,
+        C = (0, i.bG)([A.Ay], () => A.Ay.getKeybindForAction(m.hCu.SOUNDBOARD_HOLD)),
+        [y, N] = s.useState(C?.shortcut ?? []),
+        f = s.useCallback(() => {
+            if (0 === y.length) return null != C && u.A.deleteKeybind(C.id), n();
             null == C
-                ? h.A.addKeybind({ action: g.hCu.SOUNDBOARD_HOLD, shortcut: R, enabled: !0, params: {} })
-                : h.A.setKeybind({ ...C, shortcut: R }),
+                ? u.A.addKeybind({ action: m.hCu.SOUNDBOARD_HOLD, shortcut: y, enabled: !0, params: {} })
+                : u.A.setKeybind({ ...C, shortcut: y }),
                 n();
-        }, [C, n, R]);
-    i.useEffect(
+        }, [C, n, y]);
+    s.useEffect(
         () => (
-            p.A.disable(),
+            x.A.disable(),
             () => {
-                p.A.enable();
+                x.A.enable();
             }
         ),
         [],
     );
-    let v = i.useMemo(
+    let v = s.useMemo(
         () => [
-            { text: b.intl.string(b.t["ETE/oC"]), onClick: n, variant: "secondary" },
-            { text: b.intl.string(b.t["R3BPH+"]), onClick: D, variant: "primary" },
+            { text: g.intl.string(g.t["ETE/oC"]), onClick: n, variant: "secondary" },
+            { text: g.intl.string(g.t["R3BPH+"]), onClick: f, variant: "primary" },
         ],
-        [n, D],
+        [n, f],
     );
-    return (0, s.jsxs)(r.Modal, {
-        transitionState: t,
-        title: b.intl.string(b.t["0Osu3x"]),
+    return (0, a.jsxs)(l.Modal, {
+        transitionState: e,
+        title: g.intl.string(g.t["0Osu3x"]),
         actions: v,
         onClose: n,
         children: [
-            (0, s.jsx)(o.p, { className: f.$e, messageType: o.Y.WARNING, children: b.intl.string(b.t["O2v/eP"]) }),
-            (0, s.jsx)(a.D, {
-                className: f._5,
+            (0, a.jsx)(r.p, { className: p.$e, messageType: r.Y.WARNING, children: g.intl.string(g.t["O2v/eP"]) }),
+            (0, a.jsx)(c.D, {
+                className: p._5,
                 variant: "eyebrow",
                 color: "text-default",
-                children: b.intl.string(b.t.UUpAD6),
+                children: g.intl.string(g.t.UUpAD6),
             }),
-            (0, s.jsx)(d.E, { className: f.XI, variant: "text-md/normal", children: b.intl.string(b.t["1xFbP/"]) }),
-            (0, s.jsx)(d.E, { className: f.lf, variant: "text-sm/normal", children: b.intl.string(b.t.laNlTl) }),
-            (0, s.jsx)(a.D, {
-                className: f._5,
+            (0, a.jsx)(o.E, { className: p.XI, variant: "text-md/normal", children: g.intl.string(g.t["1xFbP/"]) }),
+            (0, a.jsx)(o.E, { className: p.lf, variant: "text-sm/normal", children: g.intl.string(g.t.laNlTl) }),
+            (0, a.jsx)(c.D, {
+                className: p._5,
                 variant: "eyebrow",
                 color: "text-default",
-                children: b.intl.string(b.t["1La4tC"]),
+                children: g.intl.string(g.t["1La4tC"]),
             }),
-            (0, s.jsx)(u.A, { defaultValue: R, onChange: E }),
-            (0, s.jsx)(c.Anchor, {
-                className: f.WA,
-                onClick: () => E((0, _.OH)("ctrl+`")),
-                children: b.intl.string(b.t["s7+2rQ"]),
+            (0, a.jsx)(h.A, { defaultValue: y, onChange: N }),
+            (0, a.jsx)(d.Anchor, {
+                className: p.WA,
+                onClick: () => N((0, b.OH)("ctrl+`")),
+                children: g.intl.string(g.t["s7+2rQ"]),
             }),
         ],
     });

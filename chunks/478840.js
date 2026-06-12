@@ -1,60 +1,60 @@
-i.d(t, { V: () => d });
-var n = i(310784),
-    l = i.n(n),
-    a = i(325335),
-    s = i(998304),
-    o = i(350593);
-let r = "#ffffff",
+n.d(t, { V: () => c });
+var i = n(310784),
+    l = n.n(i),
+    a = n(325335),
+    r = n(998304),
+    o = n(350593);
+let s = "#ffffff",
     u = "#36393e",
-    d = (e, t, i) => {
+    c = (e, t, n) => {
         if (null == e || e.length < 1) return null;
-        let n = ((e) => {
-                let { colors: t, saturationFactor: i = 1, shouldProcessMobileColors: n = !1 } = e,
-                    d = ((e) => {
-                        let { colors: t, saturationFactor: i = 1 } = e;
+        let i = ((e) => {
+                let { colors: t, saturationFactor: n = 1, shouldProcessMobileColors: i = !1 } = e,
+                    c = ((e) => {
+                        let { colors: t, saturationFactor: n = 1 } = e;
                         if (null == t || t.length < 1) return null;
-                        let n = (0, s.h6)(t),
-                            o = a.A.parseString(n);
+                        let i = (0, r.h6)(t),
+                            o = a.A.parseString(i);
                         if (null == o) return null;
-                        let d = (0, s.IB)(o.red, o.blue, o.green),
-                            c =
-                                (0, s.lZ)({
-                                    foreground: l()((0, s.fE)(o, 0.6, !0).toHexString()),
-                                    background: l()(r),
+                        let c = (0, r.IB)(o.red, o.blue, o.green),
+                            d =
+                                (0, r.lZ)({
+                                    foreground: l()((0, r.fE)(o, 0.6, !0).toHexString()),
+                                    background: l()(s),
                                     ratio: 3,
-                                    saturationFactor: i,
+                                    saturationFactor: n,
                                 }) ?? o,
-                            h =
-                                (0, s.lZ)({
-                                    foreground: l()((0, s.fE)(o, 0.6, !1).toHexString()),
+                            m =
+                                (0, r.lZ)({
+                                    foreground: l()((0, r.fE)(o, 0.6, !1).toHexString()),
                                     background: l()(u),
                                     ratio: 5,
-                                    saturationFactor: i,
+                                    saturationFactor: n,
                                 }) ?? o,
-                            m = (0, s.lZ)({ foreground: l()(n), background: l()(r), ratio: 7, saturationFactor: i }),
-                            p = (0, s.lZ)({ foreground: l()(n), background: l()(u), ratio: 7, saturationFactor: i });
+                            h = (0, r.lZ)({ foreground: l()(i), background: l()(s), ratio: 7, saturationFactor: n }),
+                            g = (0, r.lZ)({ foreground: l()(i), background: l()(u), ratio: 7, saturationFactor: n });
                         return {
                             LIGHT: {
-                                accentColor: m?.hex(),
-                                backgroundColor: (0, s.WN)({ colorRGB: c, saturationFactor: i }),
+                                accentColor: h?.hex(),
+                                backgroundColor: (0, r.WN)({ colorRGB: d, saturationFactor: n }),
                                 highlightColor: o?.toHexString(),
-                                opacity: d?.saturation < 0.1 ? 0.35 : 0.1,
+                                opacity: c?.saturation < 0.1 ? 0.35 : 0.1,
                             },
                             DARK: {
-                                accentColor: p?.hex(),
-                                backgroundColor: (0, s.WN)({ colorRGB: h, saturationFactor: i }),
+                                accentColor: g?.hex(),
+                                backgroundColor: (0, r.WN)({ colorRGB: m, saturationFactor: n }),
                                 highlightColor: o?.toHexString(),
-                                opacity: d?.saturation < 0.1 ? 0.5 : 0.2,
+                                opacity: c?.saturation < 0.1 ? 0.5 : 0.2,
                             },
                         };
-                    })({ colors: t, saturationFactor: i });
-                return o.A.applyPlatformToThemedEmojiColorPalette({ palette: d, shouldProcessMobileColors: n });
+                    })({ colors: t, saturationFactor: n });
+                return o.A.applyPlatformToThemedEmojiColorPalette({ palette: c, shouldProcessMobileColors: i });
             })({ colors: e, saturationFactor: t }),
-            d = i ? n?.DARK : n?.LIGHT;
+            c = n ? i?.DARK : i?.LIGHT;
         return {
-            backgroundColor: d?.backgroundColor,
-            accentColor: d?.accentColor,
-            highlightColor: d?.highlightColor,
-            opacity: d?.opacity ?? 0.15,
+            backgroundColor: c?.backgroundColor,
+            accentColor: c?.accentColor,
+            highlightColor: c?.highlightColor,
+            opacity: c?.opacity ?? 0.15,
         };
     };

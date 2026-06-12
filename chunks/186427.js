@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => _ });
 var i = n(439372),
     r = n(710195),
     s = n(723702);
@@ -18,30 +18,30 @@ function o(e) {
     return a.getConfig({ location: t });
 }
 let l = !1,
-    _ = null;
-function d() {
-    (0, s.isWindows)() && (_ = o({ location: "updateSwitch" }));
+    u = null;
+function c() {
+    (0, s.isWindows)() && (u = o({ location: "updateSwitch" }));
 }
-class u extends i.A {
+class d extends i.A {
     stores = new Map().set(r.A, () => {
         if (l) {
             let e = o({ location: "experimentStoreUpdate" });
-            _ !== e && d();
+            u !== e && c();
         }
     });
     actions = {
         POST_CONNECTION_OPEN: async () => {
-            l || ((0, s.isWindows)() && ((l = !0), await d()));
+            l || ((0, s.isWindows)() && ((l = !0), await c()));
         },
         LOGOUT: () => {
-            (l = !1), (_ = null);
+            (l = !1), (u = null);
         },
     };
     getOverlayFPSLimit() {
-        return _?.overlayFPSLimit;
+        return u?.overlayFPSLimit;
     }
     getMainWindowFPSLimit() {
-        return _?.mainWindowFPSLimit;
+        return u?.mainWindowFPSLimit;
     }
 }
-let c = new u();
+let _ = new d();

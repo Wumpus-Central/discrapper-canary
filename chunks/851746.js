@@ -10,8 +10,8 @@ let u = null,
     c = new Set(),
     d = new Map(),
     _ = !1,
-    f = new Set(),
     h = new Set(),
+    f = new Set(),
     p = new Map(),
     E = 0,
     m = null,
@@ -20,22 +20,22 @@ let u = null,
     I = 0,
     T = !1,
     S = !1,
-    N = null,
     y = null,
-    C = () => !0;
-function v(e) {
+    N = null,
+    v = () => !0;
+function C(e) {
     let { messages: t } = e;
-    t.forEach((e) => O(e));
+    t.forEach((e) => R(e));
 }
-function O(e) {
+function R(e) {
     let t = e.type === i.l.PREMIUM_REFERRAL ? e.content : null;
     if (null == t) return !1;
-    !h.has(t) && !f.has(t) && (f.add(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
+    !f.has(t) && !h.has(t) && (h.add(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
 }
-class R extends r.Ay.Store {
+class O extends r.Ay.Store {
     static displayName = "ReferralTrialStore";
     initialize() {
-        this.waitFor(a.default), this.syncWith([a.default], C);
+        this.waitFor(a.default), this.syncWith([a.default], v);
     }
     checkAndFetchReferralsRemaining() {
         null == u && !_ && E < 6 && (null == m || m < Date.now()) && (0, o.xM)();
@@ -54,7 +54,7 @@ class R extends r.Ay.Store {
         return p.get(e);
     }
     isResolving(e) {
-        return f.has(e);
+        return h.has(e);
     }
     getEligibleUsers() {
         return g;
@@ -72,7 +72,7 @@ class R extends r.Ay.Store {
         return S;
     }
     getRefreshAt() {
-        return N;
+        return y;
     }
     getAllRelevantReferralTrialOffers() {
         return Array.from(p.values());
@@ -81,17 +81,17 @@ class R extends r.Ay.Store {
         return d;
     }
     getReminderStateId() {
-        return y;
+        return N;
     }
 }
-let b = new R(s.h, {
+let b = new O(s.h, {
     BILLING_REFERRAL_TRIAL_OFFER_UPDATE: function (e) {
         let { userTrialOfferId: t } = e;
-        (_ || (0, o.xM)(), !f.has(t)) && (f.add(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
+        (_ || (0, o.xM)(), !h.has(t)) && (h.add(t), s.h.wait(() => (0, o.kZ)(t).catch(l.FXj)));
     },
     BILLING_REFERRALS_REMAINING_FETCH_START: function (e) {
         let {} = e;
-        (N = null), (_ = !0);
+        (y = null), (_ = !0);
     },
     BILLING_REFERRALS_REMAINING_FETCH_SUCCESS: function (e) {
         let {
@@ -102,11 +102,11 @@ let b = new R(s.h, {
             has_eligible_friends: s,
             reminder_state_id: a,
         } = e;
-        (T = !0), (S = s), (_ = !1), (u = t), (c = new Set(n)), (N = i), (d = r), (y = a), (E = 0), (m = null);
+        (T = !0), (S = s), (_ = !1), (u = t), (c = new Set(n)), (y = i), (d = r), (N = a), (E = 0), (m = null);
     },
     BILLING_REFERRALS_REMAINING_FETCH_FAIL: function (e) {
         let {} = e;
-        (T = !1), (S = !1), (N = null), (_ = !1);
+        (T = !1), (S = !1), (y = null), (_ = !1);
         let t = (E += 1) <= 3 ? 1e3 * Math.pow(2, E) : 8e3 * Math.pow(4, E - 3);
         m = Date.now() + Math.min(3e5, t);
     },
@@ -120,11 +120,11 @@ let b = new R(s.h, {
     },
     BILLING_REFERRAL_RESOLVE_SUCCESS: function (e) {
         let { userTrialOffer: t } = e;
-        null != t && (f.delete(t.id), h.add(t.id), p.set(t.id, t));
+        null != t && (h.delete(t.id), f.add(t.id), p.set(t.id, t));
     },
     BILLING_REFERRAL_RESOLVE_FAIL: function (e) {
         let { userTrialOfferId: t } = e;
-        f.delete(t), h.add(t);
+        h.delete(t), f.add(t);
     },
     REFERRALS_FETCH_ELIGIBLE_USER_START: function () {
         A = !0;
@@ -136,18 +136,18 @@ let b = new R(s.h, {
     REFERRALS_FETCH_ELIGIBLE_USER_FAIL: function () {
         A = !1;
     },
-    LOAD_MESSAGES_SUCCESS: v,
+    LOAD_MESSAGES_SUCCESS: C,
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
-        O(t);
+        R(t);
     },
-    LOAD_MESSAGES_AROUND_SUCCESS: v,
+    LOAD_MESSAGES_AROUND_SUCCESS: C,
     LOGOUT: function () {
         (u = null),
             (c = new Set()),
             (_ = !1),
-            (f = new Set()),
             (h = new Set()),
+            (f = new Set()),
             (p = new Map()),
             (E = 0),
             (m = null),
@@ -156,8 +156,8 @@ let b = new R(s.h, {
             (I = 0),
             (T = !1),
             (S = !1),
-            (N = null),
+            (y = null),
             (d = new Map()),
-            (y = null);
+            (N = null);
     },
 });

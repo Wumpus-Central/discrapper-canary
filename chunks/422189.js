@@ -1,39 +1,39 @@
-n.d(l, { default: () => p });
-var t = n(627968);
-n(64700);
-var r = n(861672),
-    i = n(477782),
-    o = n(442433),
-    d = n(820284),
-    s = n(358367),
-    c = n(793574),
-    a = n(50268),
-    u = n(301541),
-    A = n(243949),
-    g = n(180798),
-    f = n(652215),
-    h = n(985018);
-let p = (0, s.A)(
+t.d(i, { default: () => x });
+var n = t(627968);
+t(64700);
+var r = t(980707),
+    s = t(477782),
+    d = t(442433),
+    l = t(820284),
+    a = t(358367),
+    c = t(793574),
+    o = t(50268),
+    h = t(301541),
+    u = t(243949),
+    A = t(180798),
+    _ = t(652215),
+    p = t(375708);
+let x = (0, a.A)(
     function (e) {
-        let { user: l, guildId: n, analyticsContext: s, onSelect: c } = e,
-            p = (0, A.A)({ userId: l.id, guildId: n }),
-            x = (0, g.A)(l.id, n),
-            b = (0, a.A)({ id: l.id, label: h.intl.string(h.t["/AXYnE"]) }),
-            v = (0, u.A)(l.id),
-            j = l.isNonUserBot();
-        return (0, t.jsx)(d.A, {
-            context: s,
-            object: f.ZSU.CONTEXT_MENU,
-            children: (0, t.jsxs)(r.W, {
+        let { user: i, guildId: t, analyticsContext: a, onSelect: c } = e,
+            x = (0, u.A)({ userId: i.id, guildId: t }),
+            E = (0, A.A)(i.id, t),
+            U = (0, o.A)({ id: i.id, label: p.intl.string(p.t["/AXYnE"]) }),
+            j = (0, h.A)(i.id),
+            N = i.isNonUserBot();
+        return (0, n.jsx)(l.A, {
+            context: a,
+            object: _.ZSU.CONTEXT_MENU,
+            children: (0, n.jsxs)(r.W, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
-                onClose: o.Z_,
-                "aria-label": h.intl.string(h.t.liqwPJ),
+                onClose: d.Z_,
+                "aria-label": p.intl.string(p.t.liqwPJ),
                 onSelect: c,
                 children: [
-                    (0, t.jsxs)(i.rX, { children: [!j && p, !j && v] }),
-                    (0, t.jsx)(i.rX, { children: !j && x }),
-                    (0, t.jsx)(i.rX, { children: b }),
+                    (0, n.jsxs)(s.rX, { children: [!N && x, !N && j] }),
+                    (0, n.jsx)(s.rX, { children: !N && E }),
+                    (0, n.jsx)(s.rX, { children: U }),
                 ],
             }),
         });

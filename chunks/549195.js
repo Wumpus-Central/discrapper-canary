@@ -15,65 +15,65 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.isBMP =
         t.isAVIF =
             void 0);
-let n = i(835986),
-    r = i(817762);
+let i = n(835986),
+    r = n(817762);
 (t.isAVIF = function (e) {
     let t = (0, r.getFileChunk)(e);
-    return !!n.FileTypes.checkByFileType(t, "avif") && (0, r.isAvifStringIncluded)(t);
+    return !!i.FileTypes.checkByFileType(t, "avif") && (0, r.isAvifStringIncluded)(t);
 }),
     (t.isBMP = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "bmp");
+        return i.FileTypes.checkByFileType(t, "bmp");
     }),
     (t.isBPG = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "bpg");
+        return i.FileTypes.checkByFileType(t, "bpg");
     }),
     (t.isCR2 = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "cr2");
+        return i.FileTypes.checkByFileType(t, "cr2");
     }),
     (t.isEXR = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "exr");
+        return i.FileTypes.checkByFileType(t, "exr");
     }),
     (t.isGIF = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "gif");
+        return i.FileTypes.checkByFileType(t, "gif");
     }),
     (t.isHEIC = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return !!n.FileTypes.checkByFileType(t, "avif") && (0, r.isHeicSignatureIncluded)(t);
+        return !!i.FileTypes.checkByFileType(t, "avif") && (0, r.isHeicSignatureIncluded)(t);
     }),
     (t.isICO = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "ico");
+        return i.FileTypes.checkByFileType(t, "ico");
     }),
     (t.isJPEG = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "jpeg");
+        return i.FileTypes.checkByFileType(t, "jpeg");
     }),
     (t.isPBM = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "pbm");
+        return i.FileTypes.checkByFileType(t, "pbm");
     }),
     (t.isPGM = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "pgm");
+        return i.FileTypes.checkByFileType(t, "pgm");
     }),
     (t.isPNG = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "png");
+        return i.FileTypes.checkByFileType(t, "png");
     }),
     (t.isPPM = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "ppm");
+        return i.FileTypes.checkByFileType(t, "ppm");
     }),
     (t.isPSD = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "psd");
+        return i.FileTypes.checkByFileType(t, "psd");
     }),
     (t.isWEBP = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "webp");
+        return i.FileTypes.checkByFileType(t, "webp");
     });

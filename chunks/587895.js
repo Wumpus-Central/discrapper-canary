@@ -10,8 +10,8 @@ let a = [],
     c = new Map(),
     d = new Map(),
     _ = new Set(),
-    f = { botUserIdToAppUsage: {} };
-function h(e) {
+    h = { botUserIdToAppUsage: {} };
+function f(e) {
     let t = o.get(e.id);
     c.set(e.id, Date.now());
     let n = e;
@@ -23,7 +23,7 @@ function h(e) {
     if (null != e.linkedGames)
         for (let t of e.linkedGames)
             null != t.application &&
-                h(t.application instanceof s.Ay ? t.application : s.Ay.createFromServer(t.application));
+                f(t.application instanceof s.Ay ? t.application : s.Ay.createFromServer(t.application));
     d.delete(e.id);
 }
 function p(e) {
@@ -31,30 +31,30 @@ function p(e) {
         wishlistData: { applications: t },
     } = e;
     if (null == t || 0 === t.length) return !1;
-    for (let e of t) h(e);
+    for (let e of t) f(e);
 }
 function E(e) {
-    h(s.Ay.createFromServer(e));
+    f(s.Ay.createFromServer(e));
 }
 function m(e) {
     let { userId: t, applicationId: n } = e,
-        i = f.botUserIdToAppUsage[t];
+        i = h.botUserIdToAppUsage[t];
     null == i
-        ? (f.botUserIdToAppUsage[t] = { applicationId: n, lastUsedMs: Date.now() })
-        : (f.botUserIdToAppUsage[t] = { applicationId: n, lastUsedMs: i.lastUsedMs });
+        ? (h.botUserIdToAppUsage[t] = { applicationId: n, lastUsedMs: Date.now() })
+        : (h.botUserIdToAppUsage[t] = { applicationId: n, lastUsedMs: i.lastUsedMs });
     let r = new Map();
-    for (let [e, t] of Object.entries(f.botUserIdToAppUsage)) r.set(e, t);
+    for (let [e, t] of Object.entries(h.botUserIdToAppUsage)) r.set(e, t);
     let s = Array.from(r.entries()).sort((e, t) => t[1].lastUsedMs - e[1].lastUsedMs);
     for (let e = 0; e < s.length; e++)
         if (e >= 10) {
             let t = s[e][0];
-            delete f.botUserIdToAppUsage[t];
+            delete h.botUserIdToAppUsage[t];
         }
 }
 function g(e) {
     let { entitlements: t } = e,
         n = !1;
-    for (let { sku: e } of t) e?.application != null && (h(s.Ay.createFromServer(e.application)), (n = !0));
+    for (let { sku: e } of t) e?.application != null && (f(s.Ay.createFromServer(e.application)), (n = !0));
     return n;
 }
 class A extends i.Ay.PersistedStore {
@@ -70,11 +70,11 @@ class A extends i.Ay.PersistedStore {
                     i.length > 0 &&
                     "number" == typeof r &&
                     r > 0 &&
-                    (f.botUserIdToAppUsage[t] = { applicationId: i, lastUsedMs: r });
+                    (h.botUserIdToAppUsage[t] = { applicationId: i, lastUsedMs: r });
             }
     }
     getState() {
-        return f;
+        return h;
     }
     _getAllApplications() {
         return Array.from(o.values());
@@ -111,7 +111,7 @@ class A extends i.Ay.PersistedStore {
         return Array.from(d.keys());
     }
     getAppIdForBotUserId(e) {
-        if (null != e) return f.botUserIdToAppUsage[e]?.applicationId;
+        if (null != e) return h.botUserIdToAppUsage[e]?.applicationId;
     }
 }
 let I = new A(r.h, {
@@ -120,7 +120,7 @@ let I = new A(r.h, {
     },
     OVERLAY_INITIALIZE: function (e) {
         let { applications: t } = e;
-        for (let e of t) h(new s.Ay(e));
+        for (let e of t) f(new s.Ay(e));
     },
     APPLICATION_FETCH: function (e) {
         let { applicationId: t } = e,
@@ -147,7 +147,7 @@ let I = new A(r.h, {
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { applications: t, isHydrated: n } = e;
-        for (let e of t) !0 === n && _.add(e.id), h(s.Ay.createFromServer(e));
+        for (let e of t) !0 === n && _.add(e.id), f(s.Ay.createFromServer(e));
     },
     APPLICATIONS_FETCH_FAIL: function (e) {
         let { applicationIds: t } = e,
@@ -168,7 +168,7 @@ let I = new A(r.h, {
     GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { guildId: t, applications: n } = e,
             i = [];
-        for (let e of n) i.push(e.id), h(s.Ay.createFromServer(e));
+        for (let e of n) i.push(e.id), f(s.Ay.createFromServer(e));
         l.set(t, i);
     },
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
@@ -176,33 +176,33 @@ let I = new A(r.h, {
             n = new Set();
         for (let e of t) {
             let t = e.sku?.application;
-            null == t || n.has(t.id) || h(s.Ay.createFromServer(t));
+            null == t || n.has(t.id) || f(s.Ay.createFromServer(t));
         }
         return n.size > 0;
     },
     PAYMENT_UPDATE: function (e) {
         let { payment: t } = e;
         if (t.sku?.application == null) return !1;
-        h(s.Ay.createFromServer(t.sku.application));
+        f(s.Ay.createFromServer(t.sku.application));
     },
     INVITE_RESOLVE_SUCCESS: function (e) {
         let { invite: t } = e;
         if (null == t.target_application) return !1;
-        h(s.Ay.createFromServer(t.target_application));
+        f(s.Ay.createFromServer(t.target_application));
     },
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
         let { giftCode: t } = e;
         if (t.store_listing?.sku.application == null) return !1;
-        h(s.Ay.createFromServer(t.store_listing.sku.application));
+        f(s.Ay.createFromServer(t.store_listing.sku.application));
     },
     LIBRARY_FETCH_SUCCESS: function (e) {
         let { libraryApplications: t } = e;
-        for (let e of t) h(s.Ay.createFromServer(e.application));
+        for (let e of t) f(s.Ay.createFromServer(e.application));
     },
     STORE_LISTING_FETCH_SUCCESS: function (e) {
         let { storeListing: t } = e;
         if (null == t.sku.application) return !1;
-        h(s.Ay.createFromServer(t.sku.application));
+        f(s.Ay.createFromServer(t.sku.application));
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
         let { messages: t } = e;
@@ -211,7 +211,7 @@ let I = new A(r.h, {
             return (
                 (t = e),
                 void t.attachments?.forEach((e) => {
-                    null != e.application && h(s.Ay.createFromServer(e.application));
+                    null != e.application && f(s.Ay.createFromServer(e.application));
                 })
             );
         });
@@ -223,25 +223,25 @@ let I = new A(r.h, {
     },
     APP_DM_OPEN: function (e) {
         let { botUserId: t } = e,
-            n = f.botUserIdToAppUsage[t];
-        null != n && (f.botUserIdToAppUsage[t] = { ...n, lastUsedMs: Date.now() });
+            n = h.botUserIdToAppUsage[t];
+        null != n && (h.botUserIdToAppUsage[t] = { ...n, lastUsedMs: Date.now() });
     },
     USER_AUTHORIZED_APPS_UPDATE: function (e) {
         for (let t of Object.values(e.tokens)) {
             if (null == t) continue;
-            h(s.Ay.createFromServer(t.application));
+            f(s.Ay.createFromServer(t.application));
             let e = t.application.bot;
             null != e && m({ userId: e.id, applicationId: t.application.id });
         }
     },
     LOAD_NOTIFICATION_CENTER_ITEMS_SUCCESS: function (e) {
         e.items.forEach((e) => {
-            null != e.application && h(s.Ay.createFromServer(e.application));
+            null != e.application && f(s.Ay.createFromServer(e.application));
         });
     },
     OAUTH2_TOKEN_CREATE: function (e) {
         let { application: t } = e;
-        h(s.Ay.createFromServer(t));
+        f(s.Ay.createFromServer(t));
     },
     WISHLIST_FETCH_SUCCESS: p,
     WISHLIST_ADD_SKU_SUCCESS: p,
@@ -251,13 +251,13 @@ let I = new A(r.h, {
             storefront: { application: t },
         } = e;
         if (null == t) return !1;
-        h(t);
+        f(t);
     },
     WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS: function (e) {
         let {
             data: { applications: t },
         } = e;
         if (null == t || 0 === t.length) return !1;
-        for (let e of t) h(e);
+        for (let e of t) f(e);
     },
 });

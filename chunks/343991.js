@@ -1,15 +1,15 @@
-n.d(t, { D: () => i, default: () => l });
-var a = n(627968);
-n(64700);
-var s = n(158954);
-let i = "UPLOAD_ERROR_MODAL_KEY",
-    l = (e) => {
-        let { title: t, help: n, transitionState: i, onClose: l } = e;
-        return (0, a.jsx)(s.Modal, {
+a.d(t, { D: () => s, default: () => i });
+var n = a(627968);
+a(64700);
+var l = a(189213);
+let s = "UPLOAD_ERROR_MODAL_KEY",
+    i = (e) => {
+        let { title: t, help: a, transitionState: s, onClose: i } = e;
+        return (0, n.jsx)(l.Modal, {
             title: t,
-            subtitle: n,
-            transitionState: i,
-            actions: [{ variant: "critical-secondary", text: "Close", onClick: l }],
-            onClose: l,
+            subtitle: a,
+            transitionState: s,
+            actions: [{ variant: "critical-secondary", text: "Close", onClick: i }],
+            onClose: i,
         });
     };

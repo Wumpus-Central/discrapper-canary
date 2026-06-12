@@ -1,29 +1,29 @@
 "use strict";
-n.d(t, { Q: () => a });
-var r = n(652215),
-    i = n(985018);
-function a(e) {
+n.d(t, { Q: () => s });
+var i = n(652215),
+    r = n(375708);
+function s(e) {
     let {
             enabled: t,
             join: n,
-            channel: a,
-            cameraUnavailable: s,
+            channel: s,
+            cameraUnavailable: a,
             hasPermission: o,
             channelLimit: l = -1,
             channelLimitReached: u = !1,
         } = e,
-        c = t ? i.intl.string(i.t["4xAQ5w"]) : i.intl.string(i.t.kgIe9a);
+        c = t ? r.intl.string(r.t["4xAQ5w"]) : r.intl.string(r.t.kgIe9a);
     return (
-        n && (c = a?.isManaged() || !a?.isPrivate() ? i.intl.string(i.t.clqrYm) : i.intl.string(i.t.W68MhH)),
-        s && (c = i.intl.string(i.t["8jSzSe"])),
-        o || (c = i.intl.string(i.t.uQn9B8)),
+        n && (c = s?.isManaged() || !s?.isPrivate() ? r.intl.string(r.t.clqrYm) : r.intl.string(r.t.W68MhH)),
+        a && (c = r.intl.string(r.t["8jSzSe"])),
+        o || (c = r.intl.string(r.t.uQn9B8)),
         u &&
             !t &&
-            (c = a?.isGuildStageVoice()
-                ? l >= r.uaN
-                    ? i.intl.string(i.t["j6h0/8"])
-                    : i.intl.string(i.t["jlZ+0h"])
-                : i.intl.formatToPlainString(i.t.x9mtl4, { limit: l })),
+            (c = s?.isGuildStageVoice()
+                ? l >= i.uaN
+                    ? r.intl.string(r.t["j6h0/8"])
+                    : r.intl.string(r.t["jlZ+0h"])
+                : r.intl.formatToPlainString(r.t.x9mtl4, { limit: l })),
         c
     );
 }

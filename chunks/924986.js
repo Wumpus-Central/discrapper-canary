@@ -1,29 +1,29 @@
-var r = n(544664),
-    i = n(446928),
+var i = n(544664),
+    r = n(446928),
     s = n(412184),
     a = n(314220),
     o = n(383972),
     l = n(762760);
 e.exports = function (e, t, n) {
     var u = -1,
-        d = i,
-        c = e.length,
+        c = r,
+        d = e.length,
         _ = !0,
-        f = [],
-        E = f;
-    if (n) (_ = !1), (d = s);
-    else if (c >= 200) {
-        var h = t ? null : o(e);
-        if (h) return l(h);
-        (_ = !1), (d = a), (E = new r());
-    } else E = t ? [] : f;
-    n: for (; ++u < c; ) {
-        var p = e[u],
-            m = t ? t(p) : p;
-        if (((p = n || 0 !== p ? p : 0), _ && m == m)) {
-            for (var g = E.length; g--; ) if (E[g] === m) continue n;
-            t && E.push(m), f.push(p);
-        } else d(E, m, n) || (E !== f && E.push(m), f.push(p));
+        h = [],
+        f = h;
+    if (n) (_ = !1), (c = s);
+    else if (d >= 200) {
+        var p = t ? null : o(e);
+        if (p) return l(p);
+        (_ = !1), (c = a), (f = new i());
+    } else f = t ? [] : h;
+    n: for (; ++u < d; ) {
+        var E = e[u],
+            m = t ? t(E) : E;
+        if (((E = n || 0 !== E ? E : 0), _ && m == m)) {
+            for (var g = f.length; g--; ) if (f[g] === m) continue n;
+            t && f.push(m), h.push(E);
+        } else c(f, m, n) || (f !== h && f.push(m), h.push(E));
     }
-    return f;
+    return h;
 };

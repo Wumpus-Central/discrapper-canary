@@ -2,10 +2,10 @@ i.d(n, { default: () => o });
 var a = i(627968);
 i(64700);
 var r = i(189213),
-    s = i(98919),
-    e = i(954571),
+    s = i(77138),
+    e = i(174459),
     l = i(652215),
-    c = i(985018);
+    c = i(375708);
 function o(t) {
     let { onClose: n, transitionState: i, mediaSessionId: o, rtcConnectionId: d } = t;
     return (0, a.jsx)(r.Modal, {

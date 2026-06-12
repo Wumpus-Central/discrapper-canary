@@ -14,9 +14,9 @@ let o = (e) => {
                 responsive: c,
                 mediaLayoutType: d,
                 useReducedMotion: _,
-                ...f
+                ...h
             } = e,
-            h = !_ && !l && o,
+            f = !_ && !l && o,
             p = r.useRef(null);
         function E() {
             l &&
@@ -55,11 +55,11 @@ let o = (e) => {
                 ),
                 [n, p],
             );
-        let g = f.tabIndex ?? (!0 === f.controls ? 0 : -1);
+        let g = h.tabIndex ?? (!0 === h.controls ? 0 : -1);
         return (0, i.jsx)("video", {
             "aria-label": t,
             ref: p,
-            autoPlay: h,
+            autoPlay: f,
             onMouseEnter: E,
             onMouseLeave: m,
             onFocus: E,
@@ -68,10 +68,10 @@ let o = (e) => {
                 d === s.d.MOSAIC
                     ? { width: "100%", height: "100%", maxHeight: "inherit", objectFit: "contain" }
                     : c
-                      ? { maxWidth: f.width, maxHeight: f.height, width: "100%", height: "100%" }
+                      ? { maxWidth: h.width, maxHeight: h.height, width: "100%", height: "100%" }
                       : {},
             tabIndex: g,
-            ...f,
+            ...h,
         });
     },
     l = r.forwardRef((e, t) => (0, i.jsx)(o, { ...e, externalRef: t }));

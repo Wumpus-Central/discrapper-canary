@@ -391,9 +391,9 @@ class c extends o {
         let a = this.offscreenCanvasCache.getImage(e.toString(), i, this.getFilterString());
         if (null == a) return s.uS.Failure;
         let { x: o, y: l, w: u, h: c } = t,
-            { x: d, y: _, w: f, h: h } = n;
+            { x: d, y: _, w: h, h: f } = n;
         return (
-            this.context.drawImage(this.offscreenCanvasCache.canvas, a.x + o, a.y + l, u, c, d, _, f, h), s.uS.Success
+            this.context.drawImage(this.offscreenCanvasCache.canvas, a.x + o, a.y + l, u, c, d, _, h, f), s.uS.Success
         );
     }
     drawPath(e, t) {

@@ -16,8 +16,8 @@ function l(e) {
         formatOptions: c,
         size: d = "lg",
         animate: _ = !0,
-        className: f,
-        "aria-label": h,
+        className: h,
+        "aria-label": f,
         "aria-labelledby": p,
     } = e;
     return (0, i.jsx)(a.z, {
@@ -27,9 +27,9 @@ function l(e) {
         isIndeterminate: l,
         valueLabel: u,
         formatOptions: c,
-        "aria-label": h,
+        "aria-label": f,
         "aria-labelledby": p,
-        className: s()(o.track, o[d], f),
+        className: s()(o.track, o[d], h),
         children: (e) => {
             let { percentage: t } = e;
             return l

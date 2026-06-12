@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => C });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -14,22 +14,22 @@ var i = n(627968),
     A = n(806931),
     x = n(566555),
     g = n(604949);
-let C = "CameraPreviewPosition";
-function f(e) {
-    let { width: t, onContextMenuParticipant: n, height: a, channel: f, participants: E, onSelectParticipant: y } = e,
+let f = "CameraPreviewPosition";
+function C(e) {
+    let { width: t, onContextMenuParticipant: n, height: a, channel: C, participants: y, onSelectParticipant: E } = e,
         [N, j] = (function () {
-            let [e, t] = l.useState(() => o.w.get(C, m.CUs.BOTTOM_RIGHT));
+            let [e, t] = l.useState(() => o.w.get(f, m.CUs.BOTTOM_RIGHT));
             return [
                 e,
                 l.useCallback((e) => {
-                    o.w.set(C, e), t(e);
+                    o.w.set(f, e), t(e);
                 }, []),
             ];
         })(),
         v = l.useRef(null),
-        I = null == f.getGuildId() ? 70 : 50,
+        I = null == C.getGuildId() ? 70 : 50,
         T = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
-        _ = E.length,
+        _ = y.length,
         R = T * _ + 8 * (_ - 1),
         S = l.useMemo(
             () => ({
@@ -40,7 +40,7 @@ function f(e) {
         );
     l.useLayoutEffect(() => {
         v.current?.ensureIsInPosition();
-    }, [E.length]);
+    }, [y.length]);
     let P = l.useCallback(
             (e) => {
                 let t = 0 === _ ? e : (e - 8 * (_ - 1)) / _;
@@ -72,19 +72,19 @@ function f(e) {
             resizeConfig: S,
             children: (0, i.jsx)("div", {
                 className: x.iA,
-                children: E.map((e) =>
+                children: y.map((e) =>
                     (0, i.jsx)(
                         p.Ay,
                         {
                             participant: e,
-                            channel: f,
+                            channel: C,
                             onContextMenu: n,
                             className: s()(x.Vs, g.a8),
                             fit: p.Yl.COVER,
                             inCall: !0,
                             popoutType: d.N.NO_POPOUT,
                             width: 160,
-                            onClick: y,
+                            onClick: E,
                         },
                         e.id,
                     ),

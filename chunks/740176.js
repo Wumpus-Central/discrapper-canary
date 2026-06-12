@@ -1,14 +1,14 @@
 !(function (e) {
     "use strict";
-    function t(e, t, n, r) {
-        var i = {
+    function t(e, t, n, i) {
+        var r = {
             m: ["eng Minutt", "enger Minutt"],
             h: ["eng Stonn", "enger Stonn"],
             d: ["een Dag", "engem Dag"],
             M: ["ee Mount", "engem Mount"],
             y: ["ee Joer", "engem Joer"],
         };
-        return t ? i[n][0] : i[n][1];
+        return t ? r[n][0] : r[n][1];
     }
     function n(e) {
         if (isNaN((e = parseInt(e, 10)))) return !1;
@@ -16,8 +16,8 @@
         if (e < 10) return !!(4 <= e) && !!(e <= 7);
         if (e < 100) {
             var t = e % 10,
-                r = e / 10;
-            return 0 === t ? n(r) : n(t);
+                i = e / 10;
+            return 0 === t ? n(i) : n(t);
         }
         if (!(e < 1e4)) return n((e /= 1e3));
         for (; e >= 10; ) e /= 10;

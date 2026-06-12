@@ -2,9 +2,9 @@
 let i;
 n.r(t),
     n.d(t, {
-        DEV_PID: () => h,
+        DEV_PID: () => f,
         OVERLAY_DEFAULT_RESOLUTION: () => d,
-        OVERLAY_LAYOUT_ID: () => f,
+        OVERLAY_LAYOUT_ID: () => h,
         OVERLAY_MIN_RESOLUTION: () => _,
         OVERLAY_VERSION: () => c,
         UNSET_PID: () => p,
@@ -12,10 +12,10 @@ n.r(t),
         getRPCAuthToken: () => I,
         isValidGamePID: () => A,
         log: () => T,
-        setOutOfProcessSupport: () => N,
+        setOutOfProcessSupport: () => y,
         setPID: () => g,
-        supportsLegacy: () => C,
-        supportsOutOfProcess: () => y,
+        supportsLegacy: () => v,
+        supportsOutOfProcess: () => N,
         validResolution: () => S,
     }),
     n(323874),
@@ -30,8 +30,8 @@ var r = n(719129),
 let c = 2,
     d = { width: 3840, height: 2160 },
     _ = { width: 768, height: 432 },
-    f = "overlay_default",
-    h = -2,
+    h = "overlay_default",
+    f = -2,
     p = -1,
     E = !1;
 function m() {
@@ -54,13 +54,13 @@ function T(e) {
 function S(e) {
     return !o.isPlatformEmbedded || (e.width >= _.width && e.height >= _.height);
 }
-function N(e) {
+function y(e) {
     E = e;
 }
-function y() {
+function N() {
     return E;
 }
-function C() {
+function v() {
     let e = (0, o.isWindows)() && "arm64" === l.Ay.architecture;
     return a.O && !e && !(0, r.Zi)();
 }

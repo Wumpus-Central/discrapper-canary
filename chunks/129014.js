@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { default: () => g });
-var r = n(143236),
-    i = n(481613),
-    a = n.n(i),
-    s = n(488428),
+n.d(t, { default: () => m });
+var i = n(143236),
+    r = n(481613),
+    s = n.n(r),
+    a = n(488428),
     o = n(835245),
-    l = n(562465),
+    l = n(636537),
     u = n(636401),
     c = n(652215);
 let d = c.xEi + c.sJq - 1;
@@ -13,30 +13,30 @@ function _(e, t) {
     if (null == e || null == t) throw Error("cmd and name required");
     return `${e}:${t}`;
 }
-let f = s.parse(location.search.slice(1)),
-    p = parseInt(null != f.rpc && "" !== f.rpc ? f.rpc : c.xEi, 10),
-    h = null;
-class m extends r.EventEmitter {
+let h = a.parse(location.search.slice(1)),
+    f = parseInt(null != h.rpc && "" !== h.rpc ? h.rpc : c.xEi, 10),
+    p = null;
+class E extends i.EventEmitter {
     get port() {
-        return p;
+        return f;
     }
     get connected() {
-        return null != h && h.readyState === WebSocket.OPEN;
+        return null != p && p.readyState === WebSocket.OPEN;
     }
     connect() {
-        if (null == h) {
-            if (p > d) {
-                (p = c.xEi), this.emit("disconnected");
+        if (null == p) {
+            if (f > d) {
+                (f = c.xEi), this.emit("disconnected");
                 return;
             }
             try {
-                h = new WebSocket(`ws://127.0.0.1:${this.port}/?v=${c.dL4}`);
+                p = new WebSocket(`ws://127.0.0.1:${this.port}/?v=${c.dL4}`);
             } catch (e) {
                 this.disconnect({ code: c.YI$.CLOSE_ABNORMAL });
                 return;
             }
-            null != h &&
-                ((h.onmessage = (e) => {
+            null != p &&
+                ((p.onmessage = (e) => {
                     let t;
                     try {
                         if ("string" == typeof e.data) t = JSON.parse(e.data);
@@ -45,28 +45,28 @@ class m extends r.EventEmitter {
                         this.emit("error", e), this.disconnect();
                         return;
                     }
-                    let { cmd: n, evt: r, nonce: i, data: a } = t;
+                    let { cmd: n, evt: i, nonce: r, data: s } = t;
                     if (n === c.e$_.DISPATCH) {
-                        if (r === c.ZE4.READY) return void this.emit("connected");
-                        if (r === c.ZE4.ERROR) {
-                            this.emit("error", new u.A({ errorCode: a.code }, a.message)), this.disconnect();
+                        if (i === c.ZE4.READY) return void this.emit("connected");
+                        if (i === c.ZE4.ERROR) {
+                            this.emit("error", new u.A({ errorCode: s.code }, s.message)), this.disconnect();
                             return;
                         }
-                        return void this.emit(_(n, r), a);
+                        return void this.emit(_(n, i), s);
                     }
-                    let s = null;
-                    r === c.ZE4.ERROR && ((s = new u.A({ errorCode: a.code }, a.message)), (a = null)),
-                        this.emit(_(n, i), s, a);
+                    let a = null;
+                    i === c.ZE4.ERROR && ((a = new u.A({ errorCode: s.code }, s.message)), (s = null)),
+                        this.emit(_(n, r), a, s);
                 }),
-                (h.onclose = h.onerror = (e) => this.disconnect(e)));
+                (p.onclose = p.onerror = (e) => this.disconnect(e)));
         }
     }
     disconnect(e) {
         if (null != e && "code" in e && [c.YI$.CLOSE_ABNORMAL, c.YI$.INVALID_CLIENTID].includes(e.code)) {
-            p++, (h = null), this.connect();
+            f++, (p = null), this.connect();
             return;
         }
-        null != h && (this.emit("disconnected"), h.close(), (h = null));
+        null != p && (this.emit("disconnected"), p.close(), (p = null));
     }
     subscribe(e, t, n) {
         return this.on(_(c.e$_.DISPATCH, e), n), this.request(c.e$_.SUBSCRIBE, t, e);
@@ -75,20 +75,20 @@ class m extends r.EventEmitter {
         return this.removeListener(_(c.e$_.DISPATCH, e), n), this.request(c.e$_.UNSUBSCRIBE, t, e);
     }
     request(e, t, n) {
-        return new Promise((r, i) => {
+        return new Promise((i, r) => {
             if (!this.connected) {
                 this.once("connected", () => {
-                    this.removeAllListeners("disconnected"), r(this.request(e, t, n));
+                    this.removeAllListeners("disconnected"), i(this.request(e, t, n));
                 }),
                     this.once("disconnected", () => {
-                        this.removeAllListeners("connected"), i(Error("disconnected during request"));
+                        this.removeAllListeners("connected"), r(Error("disconnected during request"));
                     }),
                     this.connect();
                 return;
             }
-            let a = (0, o.A)(),
-                s = JSON.stringify({ cmd: e, args: t, evt: n, nonce: a });
-            this.once(_(e, a), (e, t) => (null != e ? i(e) : r(t))), h?.send(s);
+            let s = (0, o.A)(),
+                a = JSON.stringify({ cmd: e, args: t, evt: n, nonce: s });
+            this.once(_(e, s), (e, t) => (null != e ? r(e) : i(t))), p?.send(a);
         });
     }
     requestOnce(e, t, n) {
@@ -105,13 +105,13 @@ class m extends r.EventEmitter {
         });
     }
     requestRedirect(e, t, n) {
-        if ("Chrome" === a().name && parseInt(a().version, 10) >= 58) return this.requestOnce(e, t, n);
-        let r = encodeURIComponent(JSON.stringify({ cmd: e, args: t, evt: n, nonce: (0, o.A)() })),
-            i = encodeURIComponent(`${location.protocol}//${location.host}${location.pathname}?done=true`);
+        if ("Chrome" === s().name && parseInt(s().version, 10) >= 58) return this.requestOnce(e, t, n);
+        let i = encodeURIComponent(JSON.stringify({ cmd: e, args: t, evt: n, nonce: (0, o.A)() })),
+            r = encodeURIComponent(`${location.protocol}//${location.host}${location.pathname}?done=true`);
         return (
-            window.open(`http://127.0.0.1:${this.port}/rpc?v=${c.dL4}&payload=${r}&callback=${i}`, "_self"),
+            window.open(`http://127.0.0.1:${this.port}/rpc?v=${c.dL4}&payload=${i}&callback=${r}`, "_self"),
             new Promise(() => null)
         );
     }
 }
-let g = new m();
+let m = new E();

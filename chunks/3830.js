@@ -5,10 +5,10 @@ var l = a(627968),
     s = a(801966);
 let d = (e) => {
     let { href: t, ctaText: a, variant: d = "secondary" } = e,
-        i = (0, s.W)(a);
+        o = (0, s.W)(a);
     return (0, l.jsx)(n.$, {
         variant: d,
-        text: i,
+        text: o,
         onClick: () => {
             (0, r.pX)(t);
         },

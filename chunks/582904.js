@@ -6,18 +6,18 @@ var n = t(64700),
     r = t(696451),
     d = t(576705),
     u = t(287809),
-    o = t(607567),
-    c = t(488926),
+    c = t(607567),
+    o = t(488926),
     m = t(605431),
     A = t(366251),
     g = t(652215);
 function h(e) {
     let { channel: i } = e,
         t = i?.guild_id;
-    return (0, l.yK)([s.A, o.Ay, r.Ay, u.default], () => {
+    return (0, l.yK)([s.A, c.Ay, r.Ay, u.default], () => {
         if (null == i) return [];
         let e = s.A.getUserAffinitiesMap(),
-            n = null != i ? o.Ay.getVoiceStatesForChannel(i) : [],
+            n = null != i ? c.Ay.getVoiceStatesForChannel(i) : [],
             l = new Set();
         n.forEach((e) => l.add(e.user.id));
         let d = [];
@@ -26,7 +26,7 @@ function h(e) {
             let t = u.default.getUser(e.userId);
             if (null == t) continue;
             let n = (0, a.TA)(i.type);
-            (0, c.$3)({ permission: n, user: t, context: i }) && d.push(t);
+            (0, o.$3)({ permission: n, user: t, context: i }) && d.push(t);
         }
         let m = (i) => e.get(i)?.vcProbability ?? 0;
         return d.sort((e, i) => m(i.id) - m(e.id)).slice(0, 5);

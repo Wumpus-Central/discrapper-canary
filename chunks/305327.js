@@ -1,5 +1,5 @@
-var n = r(514119),
-    i = r(436815);
+var i = n(514119),
+    r = n(436815);
 e.exports = function (e) {
-    return "symbol" == typeof e || (i(e) && "[object Symbol]" == n(e));
+    return "symbol" == typeof e || (r(e) && "[object Symbol]" == i(e));
 };

@@ -16,14 +16,14 @@ var i,
     x = n(834730),
     f = n(687966),
     E = n(825860),
-    C = n(141628),
-    I = n(308368),
+    I = n(141628),
+    C = n(308368),
     v = n(780907),
     _ = n(729937),
     j = n(572211),
     N = n(354287),
     T = n(693879),
-    y = n(832384),
+    y = n(751765),
     S = n(207371),
     b = n(205184),
     L = n(689168),
@@ -303,8 +303,8 @@ function $(e) {
             return !(!(0, G.A)(l) || (0, V.U)(l));
         })(T, t, n, d),
         eE = (0, D.w)(R, T),
-        eC = null != T && (0, U.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
-        eI = (0, u.bG)(
+        eI = null != T && (0, U.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
+        eC = (0, u.bG)(
             [L.A],
             () => null != T && null != T.application_id && L.A.getState(T.application_id, H.xL.JOIN) === H.eAD.LOADING,
         ),
@@ -333,7 +333,7 @@ function $(e) {
                     ? (e = {
                           label: F.intl.string(F.t.VJlc0S),
                           trackingArea: N.kY.JOIN,
-                          submitting: eI,
+                          submitting: eC,
                           onClick: () => {
                               v.Ay.join({
                                   userId: t.author.id,
@@ -360,7 +360,7 @@ function $(e) {
                                   });
                           },
                       })
-                    : eC && ei
+                    : eI && ei
                       ? ((e = {
                             label: F.intl.string(F.t.lw71Nf),
                             trackingArea: N.kY.CONNECT_ACCOUNT,
@@ -384,7 +384,7 @@ function $(e) {
                                 trackingArea: N.kY.INVITE,
                                 onClick: () => {
                                     null != T &&
-                                        I.A.sendActivityInvite({
+                                        C.A.sendActivityInvite({
                                             type: H.xL.JOIN,
                                             channelId: r.id,
                                             activity: T,
@@ -414,14 +414,14 @@ function $(e) {
                             onClick: () => {
                                 el({ analyticsLocations: $ });
                             },
-                            icon: C.A,
+                            icon: I.A,
                             iconButton: !0,
                             buttonRef: es,
                         }),
                         (i = !0))),
                 { actions: l, hasAccountLinkButton: i }
             );
-        }, [ep, et, en, ex, ef, eE, h, t.author.id, t.id, T, r.id, r.guild_id, $, eA, d, eI, ee, el, es, ei, eC]),
+        }, [ep, et, en, ex, ef, eE, h, t.author.id, t.id, T, r.id, r.guild_id, $, eA, d, eC, ee, el, es, ei, eI]),
         ej = ev.some((e) => e.trackingArea === N.kY.CLOUD_PLAY);
     (0, J.A)(ej, $);
     let eN = s.useMemo(

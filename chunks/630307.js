@@ -1,7 +1,7 @@
 "use strict";
-var r = n(14665);
+var i = n(14665);
 e.exports = function (e, t) {
     return (
-        r(t) && "[[Enumerable]]" in t && "[[Configurable]]" in t && (e.IsAccessorDescriptor(t) || e.IsDataDescriptor(t))
+        i(t) && "[[Enumerable]]" in t && "[[Configurable]]" in t && (e.IsAccessorDescriptor(t) || e.IsDataDescriptor(t))
     );
 };

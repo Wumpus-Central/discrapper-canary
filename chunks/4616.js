@@ -1,26 +1,26 @@
-n.d(t, { A: () => d });
-var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    r = n.n(l),
-    s = n(397086);
-class o extends a.PureComponent {
+e.d(s, { A: () => h });
+var i = e(627968),
+    n = e(64700),
+    a = e(503698),
+    o = e.n(a),
+    r = e(379638);
+class d extends n.PureComponent {
     unmounting = !1;
     state = { loaded: !1 };
     static defaultProps = { width: 0, height: 0, alt: "" };
-    constructor(e) {
-        super(e), this.initialize();
+    constructor(t) {
+        super(t), this.initialize();
     }
-    componentDidUpdate(e) {
-        e.src !== this.props.src && this.setState({ loaded: !1 }, () => this.initialize());
+    componentDidUpdate(t) {
+        t.src !== this.props.src && this.setState({ loaded: !1 }, () => this.initialize());
     }
     initialize() {
-        let e;
-        ((e = this.props.src),
-        new Promise((t, n) => {
-            null == e && n(Error("No image src passed"));
+        let t;
+        ((t = this.props.src),
+        new Promise((s, e) => {
+            null == t && e(Error("No image src passed"));
             let i = new Image();
-            (i.src = e), (i.onload = () => t(i)), (i.onerror = (e) => n(e));
+            (i.src = t), (i.onload = () => s(i)), (i.onerror = (t) => e(t));
         })).then(() => {
             this.unmounting || this.setState({ loaded: !0 });
         });
@@ -29,20 +29,20 @@ class o extends a.PureComponent {
         this.unmounting = !0;
     }
     render() {
-        let { className: e, src: t, alt: n, width: a, height: l, onLoad: o, style: d, imageClassName: c } = this.props,
-            { loaded: u } = this.state;
+        let { className: t, src: s, alt: e, width: n, height: a, onLoad: d, style: h, imageClassName: l } = this.props,
+            { loaded: c } = this.state;
         return (0, i.jsx)("div", {
-            className: e,
-            style: { ...d, width: a, height: l },
+            className: t,
+            style: { ...h, width: n, height: a },
             children: (0, i.jsx)("img", {
-                className: r()(s.S, c, { [s.K]: u }),
-                width: a,
-                height: l,
-                src: t,
-                alt: n,
-                onLoad: o,
+                className: o()(r.S, l, { [r.K]: c }),
+                width: n,
+                height: a,
+                src: s,
+                alt: e,
+                onLoad: d,
             }),
         });
     }
 }
-let d = o;
+let h = d;

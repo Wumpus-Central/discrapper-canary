@@ -1,26 +1,26 @@
-n.d(t, { EF: () => N, K5: () => f, L9: () => A, SB: () => E, Vh: () => C, cG: () => j, gz: () => p, uc: () => _ }),
+n.d(t, { EF: () => f, K5: () => p, L9: () => I, SB: () => N, Vh: () => S, cG: () => A, gz: () => j, uc: () => E }),
     n(321073);
 var i = n(64700),
     l = n(91871),
     s = n.n(l),
-    a = n(17928),
-    r = n(696451),
+    r = n(17928),
+    a = n(696451),
     o = n(287809),
-    d = n(954571),
+    d = n(174459),
     c = n(403362),
     u = n(695184),
     m = n(427262),
     g = n(545868),
-    h = n(927573),
-    x = n(652215);
-let _ = 50,
-    p = 1e3;
-function E(e, t) {
-    let n = (0, a.yK)([r.Ay], () => {
-            let n = r.Ay.getMembers(e);
+    x = n(927573),
+    h = n(652215);
+let E = 50,
+    j = 1e3;
+function N(e, t) {
+    let n = (0, r.yK)([a.Ay], () => {
+            let n = a.Ay.getMembers(e);
             return null == t ? n : n.filter(t);
         }, [e, t]),
-        l = (0, a.cf)(
+        l = (0, r.cf)(
             [o.default],
             () =>
                 n.reduce((e, t) => {
@@ -50,7 +50,7 @@ function E(e, t) {
         return t;
     }, [n, l, e]);
 }
-function f(e, t, n) {
+function p(e, t, n) {
     let l = i.useRef(n);
     return (
         i.useEffect(() => {
@@ -59,39 +59,39 @@ function f(e, t, n) {
         i.useEffect(() => {
             (0, g.a)(e, t).catch(l.current);
         }, [e, t]),
-        E(
+        N(
             e,
             i.useCallback((e) => e.roles.includes(t), [t]),
         )
     );
 }
-function j(e, t) {
+function A(e, t) {
     let n = i.useRef(!1);
     i.useEffect(() => {
         u.A.requestMembers(e, t, 200),
             "" === t ||
                 n.current ||
-                (d.default.track(x.HAw.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0));
+                (d.default.track(h.HAw.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0));
     }, [e, t]);
 }
-function N(e, t) {
+function f(e, t) {
     let n = e.trim().toLowerCase();
     return t.id === n || s()(n, t.name.toLowerCase()) || s()(n, t.userTag.toLowerCase());
 }
-function A(e) {
+function I(e) {
     switch (e) {
-        case h.T$.MEMBERS:
+        case x.T$.MEMBERS:
             return "Members";
-        case h.T$.PERMISSIONS:
+        case x.T$.PERMISSIONS:
             return "Permissions";
-        case h.T$.DISPLAY:
+        case x.T$.DISPLAY:
             return "Role Settings";
-        case h.T$.VERIFICATIONS:
+        case x.T$.VERIFICATIONS:
             return "Connections";
         default:
             (0, c.xb)(e);
     }
 }
-function C(e, t) {
+function S(e, t) {
     return "" === t || e.name.toLowerCase().includes(t.toLowerCase());
 }

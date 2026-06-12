@@ -16,8 +16,8 @@ let l = (e, t) => `${t}-${e}`,
         },
         (e) => `${e.since}`,
     ),
-    f = 0,
     h = 0,
+    f = 0,
     p = 0;
 function E() {
     let e = 0,
@@ -32,8 +32,8 @@ function E() {
             e += 1;
         }
     }),
-        (f = e),
-        (h = t),
+        (h = e),
+        (f = t),
         (p = n);
 }
 function m(e) {
@@ -48,10 +48,10 @@ class A extends i.Ay.Store {
         this.waitFor(a.A);
     }
     getPendingIncomingCount() {
-        return f;
+        return h;
     }
     getPendingOutgoingCount() {
-        return h;
+        return f;
     }
     getGameFriendCount() {
         return p;

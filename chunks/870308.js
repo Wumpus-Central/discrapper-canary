@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(64700),
     r = n(379197),
     s = n(488430),
@@ -10,11 +10,11 @@ var i = n(64700),
     c = n(457421),
     d = n(212407),
     _ = n(966971),
-    f = n(49999);
-let h = () => {
+    h = n(49999);
+let f = () => {
     let e = (0, a.bG)([c.A], () => c.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
         t = !(0, l.hasAnyModalOpen)(),
-        [n, h] = (0, u.RF)(t ? o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
+        [n, f] = (0, u.RF)(t ? o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
         p = (0, d.bv)(e),
         E =
             null != n
@@ -72,7 +72,7 @@ let h = () => {
                   })(p, e)
                 : null,
         m = i.useCallback(() => {
-            null != E && h(f.i.AUTO);
-        }, [E, h]);
+            null != E && f(h.i.AUTO);
+        }, [E, f]);
     return { shopButtonDisplayOptions: E, dismissShopButtonDC: m };
 };

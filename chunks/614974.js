@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = [
+        n = [
             "bernoulli",
             "bernoulli_logit",
             "bernoulli_logit_glm",
@@ -72,14 +72,14 @@ e.exports = function (e) {
             "wishart",
             "wishart_cholesky",
         ],
-        n = e.COMMENT(/\/\*/, /\*\//, { relevance: 0, contains: [{ scope: "doctag", match: /@(return|param)/ }] }),
+        i = e.COMMENT(/\/\*/, /\*\//, { relevance: 0, contains: [{ scope: "doctag", match: /@(return|param)/ }] }),
         r = {
             scope: "meta",
             begin: /#include\b/,
             end: /$/,
             contains: [{ match: /[a-z][a-z-._]+/, scope: "string" }, e.C_LINE_COMMENT_MODE],
         },
-        i = ["lower", "upper", "offset", "multiplier"];
+        s = ["lower", "upper", "offset", "multiplier"];
     return {
         name: "Stan",
         aliases: ["stanfuncs"],
@@ -367,23 +367,23 @@ e.exports = function (e) {
             e.C_LINE_COMMENT_MODE,
             r,
             e.HASH_COMMENT_MODE,
-            n,
+            i,
             { scope: "built_in", match: /\s(pi|e|sqrt2|log2|log10)(?=\()/, relevance: 0 },
-            { match: t.concat(/[<,]\s*/, t.either(...i), /\s*=/), keywords: i },
+            { match: t.concat(/[<,]\s*/, t.either(...s), /\s*=/), keywords: s },
             { scope: "keyword", match: /\btarget(?=\s*\+=)/ },
-            { match: [/~\s*/, t.either(...a), /(?:\(\))/, /\s*T(?=\s*\[)/], scope: { 2: "built_in", 4: "keyword" } },
+            { match: [/~\s*/, t.either(...n), /(?:\(\))/, /\s*T(?=\s*\[)/], scope: { 2: "built_in", 4: "keyword" } },
             {
                 scope: "built_in",
-                keywords: a,
+                keywords: n,
                 begin: t.concat(
                     /\w{0,149}/,
-                    t.either(...a),
+                    t.either(...n),
                     /(_lpdf|_lupdf|_lpmf|_cdf|_lcdf|_lccdf|_qf)(?=\s*[\(.*\)])/,
                 ),
             },
-            { begin: [/~/, /\s*/, t.concat(t.either(...a), /(?=\s*[\(.*\)])/)], scope: { 3: "built_in" } },
+            { begin: [/~/, /\s*/, t.concat(t.either(...n), /(?=\s*[\(.*\)])/)], scope: { 3: "built_in" } },
             {
-                begin: [/~/, /\s*\w+(?=\s*[\(.*\)])/, "(?!.*/\b(" + t.either(...a) + ")\b)"],
+                begin: [/~/, /\s*\w+(?=\s*[\(.*\)])/, "(?!.*/\b(" + t.either(...n) + ")\b)"],
                 scope: { 2: "title.function" },
             },
             { scope: "title.function", begin: /\w{0,149}(_lpdf|_lupdf|_lpmf|_cdf|_lcdf|_lccdf|_qf)(?=\s*[\(.*\)])/ },

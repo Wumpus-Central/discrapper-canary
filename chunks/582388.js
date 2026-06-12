@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(17928),
     r = n(228366),
     s = n(526218),
@@ -33,19 +33,19 @@ class l {
               : void 0;
     }
 }
-let d = {};
-class _ extends i.Ay.Store {
+let u = {};
+class c extends i.Ay.Store {
     static displayName = "CustomActivityLinksStore";
     getOne(e, t) {
-        if (null != d[e]) return d[e][t];
+        if (null != u[e]) return u[e][t];
     }
 }
-let u = new _(r.h, {
+let d = new c(r.h, {
     CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: function (e) {
         let { applicationId: t, link: n } = e;
-        null == d[t] && (d[t] = Object.create(null)), (d[t][n.link_id] = new l(n));
+        null == u[t] && (u[t] = Object.create(null)), (u[t][n.link_id] = new l(n));
     },
     LOGOUT: function () {
-        d = {};
+        u = {};
     },
 });

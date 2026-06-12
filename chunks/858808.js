@@ -1,34 +1,34 @@
-n.d(t, { A: () => m });
-var i = n(627968);
-n(64700);
-var a = n(503698),
-    l = n.n(a),
-    s = n(990078),
-    r = n(765178),
-    o = n(939249),
-    c = n(241326),
-    d = n(827734),
-    u = n(183555),
-    _ = n(735321),
-    g = n(985018),
-    f = n(448295);
-function m(e) {
-    let { game: t, widgetType: n, iconSize: a = "refresh_sm", className: m, buttonRef: x, onRemove: p } = e,
-        { trackUserProfileEditAction: I } = (0, u.NJ)();
-    return (0, i.jsx)(s.m, {
-        text: g.intl.string(g.t.HUvyDc),
+i.d(t, { A: () => x });
+var n = i(627968);
+i(64700);
+var l = i(503698),
+    s = i.n(l),
+    a = i(990078),
+    r = i(765178),
+    c = i(939249),
+    u = i(241326),
+    o = i(661531),
+    d = i(183555),
+    g = i(735321),
+    m = i(375708),
+    f = i(448295);
+function x(e) {
+    let { game: t, widgetType: i, iconSize: l = "refresh_sm", className: x, buttonRef: p, onRemove: I } = e,
+        { trackUserProfileEditAction: A } = (0, d.NJ)();
+    return (0, n.jsx)(a.m, {
+        text: m.intl.string(m.t.HUvyDc),
         ariaHidden: !0,
-        children: (0, i.jsx)(o.D, {
-            innerRef: x,
+        children: (0, n.jsx)(c.D, {
+            innerRef: p,
             onClick: () => {
-                (0, _.ef)(n, t.applicationId),
-                    r.O.announce(g.intl.string(g.t["08HmMj"])),
-                    I({ action: "GAME_REMOVED", gameId: t.applicationId, widgetEdited: n }),
-                    p?.();
+                (0, g.ef)(i, t.applicationId),
+                    r.O.announce(m.intl.string(m.t["08HmMj"])),
+                    A({ action: "GAME_REMOVED", gameId: t.applicationId, widgetEdited: i }),
+                    I?.();
             },
-            "aria-label": g.intl.string(g.t.HUvyDc),
-            className: l()(m, f.v),
-            children: (0, i.jsx)(c.u, { size: a, className: f.K, color: d.A.colors.ICON_FEEDBACK_CRITICAL }),
+            "aria-label": m.intl.string(m.t.HUvyDc),
+            className: s()(x, f.v),
+            children: (0, n.jsx)(u.u, { size: l, className: f.K, color: o.A.colors.ICON_FEEDBACK_CRITICAL }),
         }),
     });
 }

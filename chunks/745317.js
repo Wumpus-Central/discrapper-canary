@@ -13,7 +13,7 @@ var n = s(627968),
     p = s(74848),
     g = s(885386),
     A = s(382003),
-    j = s(235058),
+    j = s(890063),
     f = s(174459),
     N = s(204050),
     _ = s(652215),
@@ -48,12 +48,12 @@ function v(e) {
             onSelectBackgroundOption: I,
             renderCamera: v,
             hidePreviewToggle: C = !1,
-            onCancelPreview: k,
+            onCancelPreview: b,
         } = e,
-        { analyticsLocations: S } = (0, m.Ay)(),
+        { analyticsLocations: k } = (0, m.Ay)(),
         { id: y } = (0, p.x5)(h.oh.VIDEO_INPUT),
-        T = (0, i.bG)([j.Ay], () => j.Ay.isVideoAvailable()),
-        b = g.bm.useSetting();
+        S = (0, i.bG)([j.Ay], () => j.Ay.isVideoAvailable()),
+        T = g.bm.useSetting();
     return (0, n.jsxs)(r.B, {
         gap: 20,
         children: [
@@ -71,7 +71,7 @@ function v(e) {
                 : (0, n.jsx)(d.d, {
                       label: E.intl.string(E.t["3Ppr1h"]),
                       description: E.intl.string(E.t.WNbX4O),
-                      checked: b,
+                      checked: T,
                       onChange: (e) => {
                           g.bm.updateSetting(e),
                               f.default.track(_.HAw.UPDATE_USER_SETTINGS_LOCAL, { always_preview_video: e });
@@ -84,15 +84,15 @@ function v(e) {
                         !l && (0, N.p)()
                             ? E.intl.format(E.t.aJYgRt, {
                                   onCameraSettingsClick: () => {
-                                      k?.(),
+                                      b?.(),
                                           window.open((0, N.i)(y)),
-                                          f.default.track(_.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: S });
+                                          f.default.track(_.HAw.SYSTEM_CAMERA_SETTINGS_OPENED, { location_stack: k });
                                   },
                               })
                             : void 0,
                     deviceType: h.oh.VIDEO_INPUT,
                     location: "CameraSettings",
-                    isDisabled: !T,
+                    isDisabled: !S,
                 }),
             (0, n.jsx)(A.A, {
                 className: O.Jp,

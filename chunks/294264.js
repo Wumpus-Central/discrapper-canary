@@ -1,58 +1,58 @@
-r.d(t, { default: () => E });
-var a = r(627968),
-    n = r(64700),
-    l = r(17928),
-    s = r(289873),
-    i = r(935462),
-    d = r(534514),
-    o = r(636537),
-    c = r(228366),
-    u = r(652215);
-async function h(e) {
-    let t = await o.Bo.get({ url: u.Rsh.STORE_EULA(e), oldFormErrors: !0, rejectWithError: !1 });
-    c.h.dispatch({ type: "EULA_FETCH_SUCCESS", eula: t.body });
+n.d(e, { default: () => j });
+var a = n(627968),
+    i = n(64700),
+    r = n(17928),
+    s = n(289873),
+    d = n(935462),
+    l = n(534514),
+    c = n(636537),
+    o = n(228366),
+    E = n(652215);
+async function u(t) {
+    let e = await c.Bo.get({ url: E.Rsh.STORE_EULA(t), oldFormErrors: !0, rejectWithError: !1 });
+    o.h.dispatch({ type: "EULA_FETCH_SUCCESS", eula: e.body });
 }
-var g = r(235986),
-    p = r(558179);
-let m = {};
-class f extends l.Ay.Store {
+var h = n(235986),
+    p = n(558179);
+let g = {};
+class m extends r.Ay.Store {
     static displayName = "EULAStore";
-    getEULA(e) {
-        return m[e];
+    getEULA(t) {
+        return g[t];
     }
 }
-let k = new f(c.h, {
-    EULA_FETCH_SUCCESS: function (e) {
-        let { eula: t } = e;
-        m[t.id] = t;
+let A = new m(o.h, {
+    EULA_FETCH_SUCCESS: function (t) {
+        let { eula: e } = t;
+        g[e.id] = e;
     },
 });
-var x = r(985018),
-    j = r(191315);
-function E(e) {
-    let { eulaId: t, transitionState: r, onClose: o } = e,
-        c = (0, l.bG)([k], () => k.getEULA(t));
-    n.useEffect(() => {
-        h(t);
-    }, [t]);
-    let u = c?.name ?? x.intl.string(x.t.ZTNur7),
-        m = null != c ? (0, a.jsx)(p.A, { children: c.content, className: j.w }) : (0, a.jsx)(s.y, { className: j.u });
-    return (0, a.jsxs)(i.EO, {
+var S = n(375708),
+    C = n(191315);
+function j(t) {
+    let { eulaId: e, transitionState: n, onClose: c } = t,
+        o = (0, r.bG)([A], () => A.getEULA(e));
+    i.useEffect(() => {
+        u(e);
+    }, [e]);
+    let E = o?.name ?? S.intl.string(S.t.ZTNur7),
+        g = null != o ? (0, a.jsx)(p.A, { children: o.content, className: C.w }) : (0, a.jsx)(s.y, { className: C.u });
+    return (0, a.jsxs)(d.EO, {
         "data-migration-pending": !0,
-        transitionState: r,
-        size: i.rI.SMALL,
-        "aria-label": u,
+        transitionState: n,
+        size: d.rI.SMALL,
+        "aria-label": E,
         parentComponent: "EULA",
         children: [
-            (0, a.jsxs)(i.rQ, {
+            (0, a.jsxs)(d.rQ, {
                 "data-migration-pending": !0,
-                justify: g.A.Justify.BETWEEN,
+                justify: h.A.Justify.BETWEEN,
                 children: [
-                    (0, a.jsx)(d.D, { variant: "heading-lg/semibold", children: u }),
-                    (0, a.jsx)(i.s_, { "data-migration-pending": !0, onClick: o }),
+                    (0, a.jsx)(l.D, { variant: "heading-lg/semibold", children: E }),
+                    (0, a.jsx)(d.s_, { "data-migration-pending": !0, onClick: c }),
                 ],
             }),
-            (0, a.jsx)(i.$m, { "data-migration-pending": !0, children: m }),
+            (0, a.jsx)(d.$m, { "data-migration-pending": !0, children: g }),
         ],
     });
 }

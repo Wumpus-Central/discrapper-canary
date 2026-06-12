@@ -1,13 +1,13 @@
-var r = n(13347),
-    i = n(813206),
-    a = Object.prototype.propertyIsEnumerable,
-    s = Object.getOwnPropertySymbols;
-e.exports = s
+var i = n(13347),
+    r = n(813206),
+    s = Object.prototype.propertyIsEnumerable,
+    a = Object.getOwnPropertySymbols;
+e.exports = a
     ? function (e) {
           return null == e
               ? []
-              : r(s((e = Object(e))), function (t) {
-                    return a.call(e, t);
+              : i(a((e = Object(e))), function (t) {
+                    return s.call(e, t);
                 });
       }
-    : i;
+    : r;

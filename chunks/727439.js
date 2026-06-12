@@ -39,8 +39,8 @@ let t = [
         "extends",
         "using",
     ],
-    a = ["true", "false", "null", "undefined", "NaN", "Infinity"],
-    n = [].concat(
+    n = ["true", "false", "null", "undefined", "NaN", "Infinity"],
+    i = [].concat(
         [
             "setInterval",
             "setTimeout",
@@ -136,14 +136,14 @@ e.exports = function (e) {
                 "__bind",
                 "__indexOf",
             ]),
-            literal: a.concat(["yes", "no", "on", "off", "it", "that", "void"]),
-            built_in: n.concat(["npm", "print"]),
+            literal: n.concat(["yes", "no", "on", "off", "it", "that", "void"]),
+            built_in: i.concat(["npm", "print"]),
         },
-        i = "[A-Za-z$_](?:-[0-9A-Za-z$_]|[0-9A-Za-z$_]){0,149}",
-        o = e.inherit(e.TITLE_MODE, { begin: i }),
-        s = { className: "subst", begin: /#\{/, end: /\}/, keywords: r },
+        s = "[A-Za-z$_](?:-[0-9A-Za-z$_]|[0-9A-Za-z$_]){0,149}",
+        a = e.inherit(e.TITLE_MODE, { begin: s }),
+        o = { className: "subst", begin: /#\{/, end: /\}/, keywords: r },
         l = { className: "subst", begin: /#[A-Za-z$_]/, end: /(?:-[0-9A-Za-z$_]|[0-9A-Za-z$_])*/, keywords: r },
-        c = [
+        u = [
             e.BINARY_NUMBER_MODE,
             {
                 className: "number",
@@ -156,56 +156,56 @@ e.exports = function (e) {
                 variants: [
                     { begin: /'''/, end: /'''/, contains: [e.BACKSLASH_ESCAPE] },
                     { begin: /'/, end: /'/, contains: [e.BACKSLASH_ESCAPE] },
-                    { begin: /"""/, end: /"""/, contains: [e.BACKSLASH_ESCAPE, s, l] },
-                    { begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, s, l] },
+                    { begin: /"""/, end: /"""/, contains: [e.BACKSLASH_ESCAPE, o, l] },
+                    { begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, o, l] },
                     { begin: /\\/, end: /(\s|$)/, excludeEnd: !0 },
                 ],
             },
             {
                 className: "regexp",
                 variants: [
-                    { begin: "//", end: "//[gim]*", contains: [s, e.HASH_COMMENT_MODE] },
+                    { begin: "//", end: "//[gim]*", contains: [o, e.HASH_COMMENT_MODE] },
                     { begin: /\/(?![ *])(\\.|[^\\\n])*?\/[gim]*(?=\W)/ },
                 ],
             },
-            { begin: "@" + i },
+            { begin: "@" + s },
             { begin: "``", end: "``", excludeBegin: !0, excludeEnd: !0, subLanguage: "javascript" },
         ];
-    s.contains = c;
-    let _ = {
+    o.contains = u;
+    let c = {
         className: "params",
         begin: "\\(",
         returnBegin: !0,
-        contains: [{ begin: /\(/, end: /\)/, keywords: r, contains: ["self"].concat(c) }],
+        contains: [{ begin: /\(/, end: /\)/, keywords: r, contains: ["self"].concat(u) }],
     };
     return {
         name: "LiveScript",
         aliases: ["ls"],
         keywords: r,
         illegal: /\/\*/,
-        contains: c.concat([
+        contains: u.concat([
             e.COMMENT("\\/\\*", "\\*\\/"),
             e.HASH_COMMENT_MODE,
             { begin: "(#=>|=>|\\|>>|-?->|!->)" },
             {
                 className: "function",
-                contains: [o, _],
+                contains: [a, c],
                 returnBegin: !0,
                 variants: [
-                    { begin: "(" + i + "\\s*(?:=|:=)\\s*)?(\\(.*\\)\\s*)?\\B->\\*?", end: "->\\*?" },
-                    { begin: "(" + i + "\\s*(?:=|:=)\\s*)?!?(\\(.*\\)\\s*)?\\B[-~]{1,2}>\\*?", end: "[-~]{1,2}>\\*?" },
+                    { begin: "(" + s + "\\s*(?:=|:=)\\s*)?(\\(.*\\)\\s*)?\\B->\\*?", end: "->\\*?" },
+                    { begin: "(" + s + "\\s*(?:=|:=)\\s*)?!?(\\(.*\\)\\s*)?\\B[-~]{1,2}>\\*?", end: "[-~]{1,2}>\\*?" },
                     {
-                        begin: "(" + i + "\\s*(?:=|:=)\\s*)?(\\(.*\\)\\s*)?\\B!?[-~]{1,2}>\\*?",
+                        begin: "(" + s + "\\s*(?:=|:=)\\s*)?(\\(.*\\)\\s*)?\\B!?[-~]{1,2}>\\*?",
                         end: "!?[-~]{1,2}>\\*?",
                     },
                 ],
             },
             {
-                variants: [{ match: [/class\s+/, i, /\s+extends\s+/, i] }, { match: [/class\s+/, i] }],
+                variants: [{ match: [/class\s+/, s, /\s+extends\s+/, s] }, { match: [/class\s+/, s] }],
                 scope: { 2: "title.class", 4: "title.class.inherited" },
                 keywords: r,
             },
-            { begin: i + ":", end: ":", returnBegin: !0, returnEnd: !0, relevance: 0 },
+            { begin: s + ":", end: ":", returnBegin: !0, returnEnd: !0, relevance: 0 },
         ]),
     };
 };

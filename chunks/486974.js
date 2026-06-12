@@ -1,9 +1,9 @@
-n.d(t, { g: () => l, n: () => r });
-var i,
-    l =
-        (((i = {})[(i.UNKNOWN = 0)] = "UNKNOWN"),
-        (i[(i.INFO = 1)] = "INFO"),
-        (i[(i.MESSAGE_HISTORY = 2)] = "MESSAGE_HISTORY"),
-        (i[(i.PERMISSIONS = 3)] = "PERMISSIONS"),
-        i);
-let r = { 0: "UNKNOWN", 1: "INFO", 2: "MESSAGE_HISTORY", 3: "PERMISSIONS" };
+l.d(t, { g: () => r, n: () => u });
+var n,
+    r =
+        (((n = {})[(n.UNKNOWN = 0)] = "UNKNOWN"),
+        (n[(n.INFO = 1)] = "INFO"),
+        (n[(n.MESSAGE_HISTORY = 2)] = "MESSAGE_HISTORY"),
+        (n[(n.PERMISSIONS = 3)] = "PERMISSIONS"),
+        n);
+let u = { 0: "UNKNOWN", 1: "INFO", 2: "MESSAGE_HISTORY", 3: "PERMISSIONS" };

@@ -1,23 +1,23 @@
 n.d(t, { OD: () => o, my: () => u, xq: () => s }), n(323874), n(14289), n(35956);
-var l = n(132500),
-    a = n(636537),
+var l = n(835245),
+    r = n(636537),
     i = n(998218),
-    r = n(652215);
+    a = n(652215);
 function s(e, t, n) {
-    let s = new URL(i.A.makeUrl(r.BVt.BILLING_LOGIN_HANDOFF, !1)),
+    let s = new URL(i.A.makeUrl(a.BVt.BILLING_LOGIN_HANDOFF, !1)),
         o = (0, l.A)();
     return (
         s.searchParams.append("handoff_key", o),
         s.searchParams.append("redirect_to", e),
-        a.Bo.post({ url: r.Rsh.HANDOFF, body: { key: o }, oldFormErrors: !0, rejectWithError: !1 }).then(
+        r.Bo.post({ url: a.Rsh.HANDOFF, body: { key: o }, oldFormErrors: !0, rejectWithError: !1 }).then(
             (e) => t(e, s),
             (t) => n(t, e),
         )
     );
 }
 function o(e, t, n) {
-    let { planId: l, isGift: a, loadId: i, paymentMethodType: o, deepLinkType: u, usePresetOffer: c, flowType: d } = e;
-    return s(r.BVt.BILLING_STANDALONE_CHECKOUT_PAGE(l, a, i, o, u, c, d), t, n);
+    let { planId: l, isGift: r, loadId: i, paymentMethodType: o, deepLinkType: u, usePresetOffer: c, flowType: d } = e;
+    return s(a.BVt.BILLING_STANDALONE_CHECKOUT_PAGE(l, r, i, o, u, c, d), t, n);
 }
 function u(e, t) {
     return o(

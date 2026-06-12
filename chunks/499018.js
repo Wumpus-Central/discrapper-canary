@@ -1,6 +1,6 @@
 "use strict";
-var r = n(624462),
-    i = n(854970);
+var i = n(624462),
+    r = n(854970);
 e.exports = function (e) {
-    return i(e), r(e);
+    return r(e), i(e);
 };

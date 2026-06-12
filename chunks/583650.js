@@ -1,27 +1,27 @@
 "use strict";
 n.d(t, { V: () => l });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    r = n(64700),
     s = n(900283),
     a = n(892547),
-    o = n(985018);
-let l = i.forwardRef(function (e, t) {
+    o = n(375708);
+let l = r.forwardRef(function (e, t) {
     let {
             query: n,
             onChange: l,
             disabled: u = !1,
-            placeholder: d = o.intl.string(o.t["5h0QOP"]),
-            "aria-label": c,
+            placeholder: c = o.intl.string(o.t["5h0QOP"]),
+            "aria-label": d,
             onInteraction: _,
         } = e,
-        f = i.useRef(null);
+        h = r.useRef(null);
     return (
-        i.useImperativeHandle(
+        r.useImperativeHandle(
             t,
-            () => ({ focus: () => f.current?.focus(), blur: () => f.current?.blur(), activate: () => !1 }),
+            () => ({ focus: () => h.current?.focus(), blur: () => h.current?.blur(), activate: () => !1 }),
             [],
         ),
-        (0, r.jsx)(a.I, {
+        (0, i.jsx)(a.I, {
             size: "sm",
             disabled: u,
             onChange: (e) => {
@@ -31,10 +31,10 @@ let l = i.forwardRef(function (e, t) {
                 l(""), _?.(s.Q.SEARCH);
             },
             query: n,
-            placeholder: d,
+            placeholder: c,
             autoFocus: !1,
-            "aria-label": c,
-            ref: f,
+            "aria-label": d,
+            ref: h,
         })
     );
 });

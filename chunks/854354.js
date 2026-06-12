@@ -1,6 +1,6 @@
 n.d(t, { Nc: () => c, YR: () => o, kw: () => m, lp: () => d }), n(321073);
-var r = n(252424),
-    a = n(927578),
+var a = n(252424),
+    r = n(428262),
     l = n(580630),
     i = n(788868),
     s = n(327105),
@@ -22,20 +22,20 @@ let c = (e) => {
         let {
             subscriptionPlan: t,
             userLocale: n,
-            discountOffer: a,
+            discountOffer: r,
             yearlyPercentSavings: l,
             shouldHideYearlySavingsBadge: o,
         } = e;
         if (null != l && t.interval === i.WT.YEAR && !o)
-            return u.intl.formatToPlainString(s.default.nsG1jw, { savingsText: (0, r.l9)(n, l / 100) });
-        let c = null != a ? a.discount.amount : null;
-        return null != a && a.discount.planIds.includes(t.id) && null != c
-            ? u.intl.formatToPlainString(s.default.MSB4E4, { amountOrPercentOffText: (0, r.l9)(n, parseInt(c) / 100) })
+            return u.intl.formatToPlainString(s.default.nsG1jw, { savingsText: (0, a.l9)(n, l / 100) });
+        let c = null != r ? r.discount.amount : null;
+        return null != r && r.discount.planIds.includes(t.id) && null != c
+            ? u.intl.formatToPlainString(s.default.MSB4E4, { amountOrPercentOffText: (0, a.l9)(n, parseInt(c) / 100) })
             : null;
     },
     d = function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeTaxLineItem: !0 },
-            { manualLineItems: n, includeTaxLineItem: r } = t,
+            { manualLineItems: n, includeTaxLineItem: a } = t,
             l = [];
         return (
             (l =
@@ -43,10 +43,10 @@ let c = (e) => {
                     ? [...n]
                     : e.invoiceItems.map((e) => ({
                           id: e.id,
-                          label: (0, a.Mn)(e.subscriptionPlanId),
+                          label: (0, r.Mn)(e.subscriptionPlanId),
                           amount: e.amount * e.quantity,
                       }))),
-            !1 !== r && l.push({ id: "tax", label: u.intl.string(u.t.jiRvC7), amount: e.tax }),
+            !1 !== a && l.push({ id: "tax", label: u.intl.string(u.t.jiRvC7), amount: e.tax }),
             l
         );
     },

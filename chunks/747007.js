@@ -1,38 +1,38 @@
-l.d(t, { I: () => S, p: () => T }), l(938796);
-var n = l(627968),
-    i = l(64700),
-    s = l(821418),
-    a = l(665260),
-    r = l(17928),
-    d = l(862482),
-    o = l(331322),
-    c = l(243721),
-    u = l(834730),
-    x = l(349288),
-    h = l(416052),
-    m = l(967198),
-    g = l(351906),
-    v = l(954571),
-    j = l(735547),
-    E = l(939249),
-    A = l(181658),
-    p = l(997509),
-    N = l(576705),
-    f = l(652215),
-    C = l(985018),
-    y = l(640852);
-function b(e) {
-    let { guild: t, error: l, onClose: s } = e,
-        a = t.id,
-        r = i.useCallback(() => {
-            s(), p.A.open(a, f.BEX.INVITES);
-        }, [a, s]),
-        d = i.useCallback(
+n.d(t, { I: () => m, p: () => P }), n(938796);
+var l = n(627968),
+    a = n(64700),
+    s = n(821418),
+    i = n(665260),
+    r = n(17928),
+    c = n(862482),
+    o = n(331322),
+    d = n(243721),
+    u = n(834730),
+    x = n(349288),
+    h = n(416052),
+    A = n(967198),
+    g = n(351906),
+    I = n(174459),
+    p = n(735547),
+    N = n(939249),
+    _ = n(181658),
+    C = n(468689),
+    k = n(576705),
+    b = n(652215),
+    j = n(375708),
+    E = n(640852);
+function v(e) {
+    let { guild: t, error: n, onClose: s } = e,
+        i = t.id,
+        r = a.useCallback(() => {
+            s(), C.A.open(i, b.BEX.INVITES);
+        }, [i, s]),
+        c = a.useCallback(
             (e) =>
-                (0, n.jsx)(E.D, {
-                    className: y.P5,
+                (0, l.jsx)(N.D, {
+                    className: E.P5,
                     onClick: r,
-                    children: (0, n.jsx)(u.E, {
+                    children: (0, l.jsx)(u.E, {
                         variant: "text-xs/normal",
                         color: "text-link",
                         tag: "span",
@@ -41,12 +41,12 @@ function b(e) {
                 }),
             [r],
         ),
-        o = i.useCallback(
+        o = a.useCallback(
             (e) =>
-                (0, n.jsx)(x.Anchor, {
-                    href: f.X7G.INVITES_HELP,
+                (0, l.jsx)(x.Anchor, {
+                    href: b.X7G.INVITES_HELP,
                     target: "_blank",
-                    children: (0, n.jsx)(u.E, {
+                    children: (0, l.jsx)(u.E, {
                         variant: "text-xs/normal",
                         color: "text-link",
                         tag: "span",
@@ -55,101 +55,101 @@ function b(e) {
                 }),
             [],
         ),
-        c =
-            l instanceof A.A
-                ? l.code !== f.t02.TOO_MANY_INVITES
-                    ? l.getAnyErrorMessage()
-                    : N.A.can(f.xBc.MANAGE_GUILD, t)
-                      ? C.intl.format(C.t["H/RUY1"], { inviteListHook: d, inviteHelpHook: o })
-                      : C.intl.string(C.t["/FxH6G"])
-                : "message" in l
-                  ? l.message
-                  : C.intl.string(C.t.eAn6z2);
-    return (0, n.jsx)(u.E, {
-        className: y.gJ,
+        d =
+            n instanceof _.A
+                ? n.code !== b.t02.TOO_MANY_INVITES
+                    ? n.getAnyErrorMessage()
+                    : k.A.can(b.xBc.MANAGE_GUILD, t)
+                      ? j.intl.format(j.t["H/RUY1"], { inviteListHook: c, inviteHelpHook: o })
+                      : j.intl.string(j.t["/FxH6G"])
+                : "message" in n
+                  ? n.message
+                  : j.intl.string(j.t.eAn6z2);
+    return (0, l.jsx)(u.E, {
+        className: E.gJ,
         variant: "text-xs/normal",
         color: "text-feedback-critical",
-        children: c,
+        children: d,
     });
 }
-var I = l(172799);
-let S = r.Ay.connectStores([g.A], () => ({ hideValue: g.A.hideInstantInvites }))((e) => {
-        let { value: t, autoFocus: l, hideValue: i, onCopy: s, disabled: a } = e;
-        return (0, n.jsx)(h.A, {
+var S = n(172799);
+let m = r.Ay.connectStores([g.A], () => ({ hideValue: g.A.hideInstantInvites }))((e) => {
+        let { value: t, autoFocus: n, hideValue: a, onCopy: s, disabled: i } = e;
+        return (0, l.jsx)(h.A, {
             value: t,
-            hideMessage: i ? C.intl.string(C.t["6HzNgZ"]) : null,
-            buttonColor: d.$n.Colors.BRAND,
+            hideMessage: a ? j.intl.string(j.t["6HzNgZ"]) : null,
+            buttonColor: c.$n.Colors.BRAND,
             onCopy: s,
-            autoFocus: l,
-            disabled: a,
+            autoFocus: n,
+            disabled: i,
         });
     }),
-    T = (e) => {
+    P = (e) => {
         let {
                 guild: t,
-                noInvitesAvailable: l,
+                noInvitesAvailable: n,
                 showFriends: r,
-                onClose: d,
+                onClose: c,
                 modalState: h,
                 isApplicationBypassToggleEnabled: g,
-                setInviteFlags: E,
-                copyValue: A,
-                changePage: p,
-                inviteChannel: N,
-                source: T,
-                code: R,
-                guildScheduledEvent: _,
-                disabled: D,
-                application: G,
+                setInviteFlags: N,
+                copyValue: _,
+                changePage: C,
+                inviteChannel: k,
+                source: P,
+                code: T,
+                guildScheduledEvent: B,
+                disabled: f,
+                application: y,
             } = e,
-            { maxAge: k, maxUses: L, networkError: M, showVanityURL: P, flags: U } = h,
-            z = i.useCallback(() => {
-                v.default.track(f.HAw.COPY_INSTANT_INVITE, {
-                    server: m.A.getGuildId(),
-                    channel: N?.id,
-                    channel_type: N?.type,
-                    location: T,
-                    code: R,
-                    guild_scheduled_event_id: _?.id,
-                    application_id: G?.id,
+            { maxAge: G, maxUses: L, networkError: V, showVanityURL: H, flags: M } = h,
+            O = a.useCallback(() => {
+                I.default.track(b.HAw.COPY_INSTANT_INVITE, {
+                    server: A.A.getGuildId(),
+                    channel: k?.id,
+                    channel_type: k?.type,
+                    location: P,
+                    code: T,
+                    guild_scheduled_event_id: B?.id,
+                    application_id: y?.id,
                 });
-            }, [G?.id, N, T, R, _]);
-        return (0, n.jsxs)(o.B, {
+            }, [y?.id, k, P, T, B]);
+        return (0, l.jsxs)(o.B, {
             gap: 16,
             children: [
-                (0, n.jsx)(S, { value: A, autoFocus: r, onCopy: z, disabled: D }),
+                (0, l.jsx)(m, { value: _, autoFocus: r, onCopy: O, disabled: f }),
                 g &&
-                    (0, n.jsx)(c.d, {
-                        checked: (0, a.Lt)(U, s.Q.IS_APPLICATION_BYPASS),
-                        onChange: (e) => E((0, a.lA)(U, s.Q.IS_APPLICATION_BYPASS, e)),
-                        disabled: D,
-                        label: C.intl.string(C.t["1i1bUl"]),
-                        description: C.intl.string(C.t["jvd/LF"]),
+                    (0, l.jsx)(d.d, {
+                        checked: (0, i.Lt)(M, s.Q.IS_APPLICATION_BYPASS),
+                        onChange: (e) => N((0, i.lA)(M, s.Q.IS_APPLICATION_BYPASS, e)),
+                        disabled: f,
+                        label: j.intl.string(j.t["1i1bUl"]),
+                        description: j.intl.string(j.t["jvd/LF"]),
                     }),
-                l || P
+                n || H
                     ? null
-                    : (0, n.jsxs)(u.E, {
+                    : (0, l.jsxs)(u.E, {
                           variant: "text-xs/normal",
-                          className: y.PJ,
+                          className: E.PJ,
                           children: [
-                              (0, j.Be)(k, L),
+                              (0, p.Be)(G, L),
                               " ",
                               r
-                                  ? (0, n.jsx)(x.Anchor, {
-                                        onClick: () => p(I.QR.SETTINGS),
-                                        children: C.intl.string(C.t["VNe8P/"]),
+                                  ? (0, l.jsx)(x.Anchor, {
+                                        onClick: () => C(S.QR.SETTINGS),
+                                        children: j.intl.string(j.t["VNe8P/"]),
                                     })
                                   : null,
                           ],
                       }),
-                !l && r && P
-                    ? (0, n.jsxs)(u.E, {
+                !n && r && H
+                    ? (0, l.jsxs)(u.E, {
                           variant: "text-xs/normal",
-                          className: y.PJ,
-                          children: [C.intl.string(C.t["0M2U95"]), " "],
+                          className: E.PJ,
+                          children: [j.intl.string(j.t["0M2U95"]), " "],
                       })
                     : null,
-                null != M ? (0, n.jsx)(b, { guild: t, error: M, onClose: d }) : null,
+                null != V ? (0, l.jsx)(v, { guild: t, error: V, onClose: c }) : null,
             ],
         });
     };

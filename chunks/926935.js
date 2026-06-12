@@ -1,17 +1,17 @@
 "use strict";
 n.d(t, { A: () => u });
-var r = n(439372),
-    i = n(77729),
-    a = n(351906);
-let s = !1;
+var i = n(439372),
+    r = n(77729),
+    s = n(351906);
+let a = !1;
 function o() {
-    let e = i.A?.window?.setContentProtection;
+    let e = r.A?.window?.setContentProtection;
     if (null == e) return;
-    let t = a.A.enableContentProtection;
-    t !== s && (e(t), (s = t));
+    let t = s.A.enableContentProtection;
+    t !== a && (e(t), (a = t));
 }
-class l extends r.A {
-    stores = new Map().set(a.A, o);
+class l extends i.A {
+    stores = new Map().set(s.A, o);
     constructor() {
         o(), super();
     }

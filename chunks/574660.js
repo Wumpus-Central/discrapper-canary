@@ -1,4 +1,4 @@
-n.d(t, { F: () => C, t: () => I });
+n.d(t, { F: () => I, t: () => C });
 var i = n(64700),
     l = n(17928),
     s = n(735991),
@@ -35,7 +35,7 @@ function E(e) {
         selectedGuildId: o,
     };
 }
-function C(e, t) {
+function I(e, t) {
     let {
         canViewApp: n,
         canOpenAppLauncher: l,
@@ -73,9 +73,9 @@ function C(e, t) {
         [e.id, l, n, d, c, u, s, t, m],
     );
 }
-function I(e) {
+function C(e) {
     let { canViewApp: t, isInstallable: n } = E(e),
-        l = C(e);
+        l = I(e);
     return i.useMemo(
         () =>
             t && null != l

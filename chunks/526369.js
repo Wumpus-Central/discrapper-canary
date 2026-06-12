@@ -12,12 +12,12 @@ var i = n(627968),
     p = n(826673),
     m = n(855687),
     A = n(267102),
-    x = n(733586),
+    x = n(511205),
     g = n(530804),
-    C = n(71393),
-    f = n(576705),
-    E = n(686502),
-    y = n(175203),
+    f = n(71393),
+    C = n(576705),
+    y = n(686502),
+    E = n(175203),
     N = n(263854),
     j = n(652215),
     v = n(526610);
@@ -34,7 +34,7 @@ function I(e) {
             popoutType: O,
         } = e,
         b = (0, A.Us)() === j.BRT.POPOUT,
-        L = (0, r.bG)([C.A], () => C.A.getGuild(_.guild_id), [_.guild_id]),
+        L = (0, r.bG)([f.A], () => f.A.getGuild(_.guild_id), [_.guild_id]),
         { dismissedActivityEntryPointTileChannel: M } = (0, N.P)(),
         D = (0, r.bG)([h.A], () => h.A.getUserParticipantCount(_.id), [_]),
         U = (0, g.vp)(_.id, t),
@@ -50,7 +50,7 @@ function I(e) {
                 N.P.setState({ dismissedActivityEntryPointTileChannel: null });
             });
     }, [_.id, M]);
-    let V = (0, r.bG)([f.A], () => _.isPrivate() || (0, m.K)(f.A, L, _), [L, _]),
+    let V = (0, r.bG)([C.A], () => _.isPrivate() || (0, m.K)(C.A, L, _), [L, _]),
         B = L?.afkChannelId === _.id,
         k = _.userLimit <= 0 || _.userLimit > 1,
         H = (0, r.bG)([c.Ay], () => c.Ay.getEmbeddedActivitiesForChannel(_.id).length <= 0),
@@ -60,7 +60,7 @@ function I(e) {
         W = U.map(
             (e) => (t) =>
                 (0, i.jsx)(
-                    y.Ay,
+                    E.Ay,
                     {
                         participant: e,
                         channel: _,
@@ -89,7 +89,7 @@ function I(e) {
         !B &&
         (D >= 2 && Y && !F && !z
             ? W.push((e) =>
-                  (0, i.jsx)(E.y, {
+                  (0, i.jsx)(y.y, {
                       channel: _,
                       guild: L,
                       width: e,
@@ -102,7 +102,7 @@ function I(e) {
               1 === D &&
               V &&
               W.push((e) =>
-                  (0, i.jsx)(E.y, {
+                  (0, i.jsx)(y.y, {
                       channel: _,
                       guild: L,
                       width: e,

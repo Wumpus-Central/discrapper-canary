@@ -1,5 +1,5 @@
 "use strict";
-let r;
-n.d(t, { Ze: () => i });
-let i = (r = n(415951).A).openMemberVerificationModal;
-r.closeMemberVerificationModal;
+let i;
+n.d(t, { Ze: () => r });
+let r = (i = n(415951).A).openMemberVerificationModal;
+i.closeMemberVerificationModal;

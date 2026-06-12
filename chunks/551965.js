@@ -1,7 +1,7 @@
 "use strict";
-function r(e) {
+function i(e) {
     let t = {};
     for (let n of e) for (let e in n) e in t ? (t[e] = { ...t[e], ...n[e] }) : (t[e] = { ...n[e] });
     return t;
 }
-n.d(t, { A: () => r });
+n.d(t, { A: () => i });

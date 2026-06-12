@@ -1,12 +1,12 @@
-s.r(t), s.d(t, { default: () => p });
-var i = s(627968),
-    r = s(64700),
-    l = s(661531),
-    a = s(834730),
-    n = s(825484),
-    c = s(821609),
-    o = s(538064);
-let d = (0, s(600975).C)({
+i.r(t), i.d(t, { default: () => b });
+var n = i(627968),
+    r = i(64700),
+    s = i(661531),
+    l = i(834730),
+    c = i(825484),
+    a = i(821609),
+    o = i(538064);
+let d = (0, i(600975).C)({
     kind: "user",
     id: "2021-10_runtime_accessibility_system",
     label: "Runtime Accessibility System",
@@ -16,51 +16,51 @@ let d = (0, s(600975).C)({
         { id: 2, label: "Enabled and reporting", config: { enabled: !0, reporting: !0 } },
     ],
 });
-var u = s(670812),
-    h = s(772958);
-function p() {
+var u = i(670812),
+    p = i(772958);
+function b() {
     let [e, t] = r.useState(!1),
-        s = (0, h.vX)(),
-        { reporting: p } = d.useExperiment({ location: "be7a1c_1" }, { autoTrackExposure: !1 });
+        i = (0, p.vX)(),
+        { reporting: b } = d.useExperiment({ location: "be7a1c_1" }, { autoTrackExposure: !1 });
     return (r.useEffect(() => {
-        if (p && e && null != s)
+        if (b && e && null != i)
             return (
-                s.forEach((e) => {
+                i.forEach((e) => {
                     e.elements.forEach((e) => {
                         e.setAttribute(u.nY, "");
                     });
                 }),
                 () => {
-                    s.forEach((e) => {
+                    i.forEach((e) => {
                         e.elements.forEach((e) => {
                             e.removeAttribute(u.nY);
                         });
                     });
                 }
             );
-    }, [s, p, e]),
-    p && null != s && 0 !== s.length)
-        ? (0, i.jsxs)("div", {
+    }, [i, b, e]),
+    b && null != i && 0 !== i.length)
+        ? (0, n.jsxs)("div", {
               style: {
-                  backgroundColor: l.A.colors.BACKGROUND_FEEDBACK_CRITICAL.css,
-                  color: l.A.colors.TEXT_FEEDBACK_CRITICAL.css,
+                  backgroundColor: s.A.colors.BACKGROUND_FEEDBACK_CRITICAL.css,
+                  color: s.A.colors.TEXT_FEEDBACK_CRITICAL.css,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "space-between",
                   padding: "8px 12px",
               },
               children: [
-                  (0, i.jsx)(a.E, {
+                  (0, n.jsx)(l.E, {
                       variant: "text-sm/semibold",
                       color: "text-feedback-critical",
                       children: "Accessibility compliance issue(s) detected, check in-app DevTools",
                   }),
-                  (0, i.jsxs)(n.e, {
+                  (0, n.jsxs)(c.e, {
                       direction: "horizontal",
                       size: "sm",
                       children: [
-                          (0, i.jsx)(c.$, { text: "Open DevTools", onClick: o.pf, variant: "critical-secondary" }),
-                          (0, i.jsx)(c.$, {
+                          (0, n.jsx)(a.$, { text: "Open DevTools", onClick: o.pf, variant: "critical-secondary" }),
+                          (0, n.jsx)(a.$, {
                               onClick: () => t(!e),
                               text: `${e ? "Hide" : "Show"} Overlays`,
                               variant: "critical-primary",

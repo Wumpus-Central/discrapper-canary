@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { V: () => r });
+n.d(t, { V: () => a });
 var l = n(627968),
     i = n(64700),
     s = n(744682);
-let a = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hover", start: 90, duration: 40 } },
-    r = () => {
+let r = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hover", start: 90, duration: 40 } },
+    a = () => {
         let e = i.useRef(null),
             t = i.useCallback(() => {
                 null != e.current && e.current.play("click");
             }, []),
-            r = i.useCallback(() => {
+            a = i.useCallback(() => {
                 null != e.current && e.current.play("hover");
             }, []),
             o = i.useCallback(() => {
@@ -21,12 +21,12 @@ let a = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hove
                         ...t,
                         src: () => n.e("78205").then(n.t.bind(n, 582636, 19)),
                         ref: e,
-                        markers: a,
+                        markers: r,
                     }),
                 [],
             );
         return {
-            events: { onMouseEnter: r, onMouseLeave: o },
+            events: { onMouseEnter: a, onMouseLeave: o },
             play: t,
             getDuration: i.useCallback(() => e.current?.getDuration(), []),
             getCurrentFrame: i.useCallback(() => e.current?.getCurrentFrame() ?? null, []),

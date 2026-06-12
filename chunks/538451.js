@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => E });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { A: () => f });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(939249),
     l = n(97808),
     u = n(778712),
-    d = n(834730),
-    c = n(297413),
+    c = n(834730),
+    d = n(297413),
     _ = n(342296),
-    f = n(193370);
-function E(e) {
+    h = n(193370);
+function f(e) {
     let {
             user: t,
             guildId: n,
             channelId: s,
-            nick: E,
-            className: h,
-            textClassName: p,
+            nick: f,
+            className: p,
+            textClassName: E,
             disablePopout: m,
             ignoreModalClicks: g,
             onClick: A,
@@ -26,8 +26,8 @@ function E(e) {
             onPopoutRequestOpen: T,
             onPopoutRequestClose: S,
         } = e,
-        y = i.useRef(null);
-    return (0, r.jsx)(_.A, {
+        y = r.useRef(null);
+    return (0, i.jsx)(_.A, {
         targetElementRef: y,
         user: t,
         guildId: n,
@@ -38,26 +38,26 @@ function E(e) {
         onRequestClose: S,
         ignoreModalClicks: g,
         children: (e) => {
-            let { onClick: i, ...s } = e;
-            return (0, r.jsxs)(o.D, {
+            let { onClick: r, ...s } = e;
+            return (0, i.jsxs)(o.D, {
                 ...s,
                 innerRef: y,
-                className: a()(f.DV, h, { [f.YR]: m }),
+                className: a()(h.DV, p, { [h.YR]: m }),
                 onContextMenu: I,
                 onClick: (e) => {
-                    i(e), A?.(e);
+                    r(e), A?.(e);
                 },
                 children: [
-                    (0, r.jsx)(l.eu, {
+                    (0, i.jsx)(l.eu, {
                         src: t.getAvatarURL(n, (0, u.FT)(u._3.SIZE_24)),
-                        className: f.my,
+                        className: h.my,
                         "aria-label": t.username,
                         size: u._3.SIZE_24,
                     }),
-                    (0, r.jsx)(d.E, {
-                        className: a()(f.Ft, p),
+                    (0, i.jsx)(c.E, {
+                        className: a()(h.Ft, E),
                         variant: "text-sm/normal",
-                        children: (0, r.jsx)(c.A, { user: t, nick: E, usernameClass: f.Xh, hideDiscriminator: !0 }),
+                        children: (0, i.jsx)(d.A, { user: t, nick: f, usernameClass: h.Xh, hideDiscriminator: !0 }),
                     }),
                 ],
             });

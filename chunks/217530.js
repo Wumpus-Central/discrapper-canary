@@ -1,71 +1,71 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    r = n.n(s),
-    a = n(607399),
-    o = n(689175),
-    d = n(834730),
-    c = n(985018),
-    u = n(883154);
-function h(e) {
-    let { text: t, hasScrolled: n } = e;
-    return (0, i.jsxs)("div", {
-        className: r()(u.kL, { [u.sz]: n }),
+t.d(l, { A: () => x });
+var s = t(627968),
+    a = t(64700),
+    n = t(503698),
+    r = t.n(n),
+    i = t(607399),
+    c = t(689175),
+    d = t(834730),
+    o = t(375708),
+    h = t(883154);
+function u(e) {
+    let { text: l, hasScrolled: t } = e;
+    return (0, s.jsxs)("div", {
+        className: r()(h.kL, { [h.sz]: t }),
         children: [
-            (0, i.jsx)("div", {
-                className: u.lm,
-                children: (0, i.jsx)(d.E, {
-                    className: u.__invalid_label,
+            (0, s.jsx)("div", {
+                className: h.lm,
+                children: (0, s.jsx)(d.E, {
+                    className: h.__invalid_label,
                     variant: "text-md/medium",
                     color: "text-strong",
-                    children: t,
+                    children: l,
                 }),
             }),
-            (0, i.jsx)("div", { className: u._p }),
+            (0, s.jsx)("div", { className: h._p }),
         ],
     });
 }
-var A = n(760967);
-function _(e) {
-    let { children: t, className: n } = e,
+var m = t(760967);
+function x(e) {
+    let { children: l, className: t } = e,
         {
-            horizontalScrollNotice: s,
+            horizontalScrollNotice: n,
             handleScroll: d,
-            handleSetScrollerRef: u,
-            handleSetContainerRef: _,
+            handleSetScrollerRef: h,
+            handleSetContainerRef: x,
         } = (function () {
-            let [e, t] = l.useState(),
-                [n, s] = l.useState(),
-                [r, a] = l.useState(!1),
-                [o, d] = l.useState(!1);
+            let [e, l] = a.useState(),
+                [t, n] = a.useState(),
+                [r, i] = a.useState(!1),
+                [c, d] = a.useState(!1);
             return (
-                l.useEffect(() => {
-                    null == e || null == n ? a(!1) : a(e < n);
-                }, [e, n]),
+                a.useEffect(() => {
+                    null == e || null == t ? i(!1) : i(e < t);
+                }, [e, t]),
                 {
-                    horizontalScrollNotice: l.useMemo(
-                        () => (r ? (0, i.jsx)(h, { text: c.intl.string(c.t.RfAAH9), hasScrolled: o }) : null),
-                        [r, o],
+                    horizontalScrollNotice: a.useMemo(
+                        () => (r ? (0, s.jsx)(u, { text: o.intl.string(o.t.RfAAH9), hasScrolled: c }) : null),
+                        [r, c],
                     ),
                     handleScroll: () => d(!0),
-                    handleSetScrollerRef: (e) => s(e?.getScrollerState()?.scrollWidth),
-                    handleSetContainerRef: (e) => t(e?.clientWidth),
+                    handleSetScrollerRef: (e) => n(e?.getScrollerState()?.scrollWidth),
+                    handleSetContainerRef: (e) => l(e?.clientWidth),
                 }
             );
         })(),
-        g = (0, i.jsx)("div", {
-            className: A.vi,
-            children: (0, i.jsx)("div", { className: r()(A._s, n), children: t }),
+        S = (0, s.jsx)("div", {
+            className: m.vi,
+            children: (0, s.jsx)("div", { className: r()(m._s, t), children: l }),
         });
     return (
-        a.Fr ||
-            (g = (0, i.jsxs)(i.Fragment, {
+        i.Fr ||
+            (S = (0, s.jsxs)(s.Fragment, {
                 children: [
-                    s,
-                    (0, i.jsx)(o.Ch, { className: A.XG, orientation: "horizontal", ref: u, onScroll: d, children: g }),
+                    n,
+                    (0, s.jsx)(c.Ch, { className: m.XG, orientation: "horizontal", ref: h, onScroll: d, children: S }),
                 ],
             })),
-        (0, i.jsx)("div", { className: A.Rc, ref: _, children: g })
+        (0, s.jsx)("div", { className: m.Rc, ref: x, children: S })
     );
 }

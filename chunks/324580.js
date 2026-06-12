@@ -3,16 +3,16 @@ n.d(t, {
     FZ: () => T,
     I9: () => E,
     Iq: () => c,
-    J8: () => f,
+    J8: () => h,
     O3: () => g,
     OR: () => m,
-    R0: () => h,
+    R0: () => f,
     Us: () => d,
     VX: () => p,
     WV: () => A,
     ig: () => l,
     o: () => _,
-    tO: () => N,
+    tO: () => y,
     v: () => u,
     wz: () => I,
 });
@@ -34,7 +34,7 @@ var _ =
         (i.EDUCATION = "education"),
         (i.HUBS = "hubs"),
         i),
-    f =
+    h =
         (((r = {}).UNKNOWN = "unknown"),
         (r.GUILDS_BAR = "guilds_bar"),
         (r.RTC_PANEL = "rtc_panel"),
@@ -42,7 +42,7 @@ var _ =
         (r.GAME_LINK = "game_link"),
         (r.EMBED = "embed"),
         r);
-let h = new Set(["hubs"]),
+let f = new Set(["hubs"]),
     p = [],
     E = "q",
     m = "c",
@@ -60,7 +60,7 @@ var I =
     s);
 let T = [1, 2, 3, 5, 6],
     S = ["en-GB"];
-function N() {
+function y() {
     return (0, o.getLanguages)()
         .filter((e) => !S.includes(e.code))
         .map((e) => ("en-US" === e.code ? { ...e, name: o.intl.string(o.t.LQLMGP) } : e));

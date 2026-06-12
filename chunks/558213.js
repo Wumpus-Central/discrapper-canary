@@ -16,12 +16,12 @@ I.r(e),
         INVITE_OPTIONS_7_DAYS: () => d,
         INVITE_OPTIONS_8_HOURS: () => P,
         INVITE_OPTIONS_FOREVER: () => D,
-        INVITE_OPTIONS_ONCE: () => l,
-        INVITE_OPTIONS_UNLIMITED: () => _,
+        INVITE_OPTIONS_ONCE: () => _,
+        INVITE_OPTIONS_UNLIMITED: () => l,
         MAX_AGE_OPTIONS: () => A,
         MAX_USES_OPTIONS: () => a,
     });
-var n = I(985018);
+var n = I(375708);
 function i(t, e) {
     return {
         value: t,
@@ -30,14 +30,14 @@ function i(t, e) {
         },
     };
 }
-let _ = i(0, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 0 })),
-    l = i(1, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 1 })),
+let l = i(0, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 0 })),
+    _ = i(1, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 1 })),
     T = i(5, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 5 })),
     u = i(10, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 10 })),
     O = i(25, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 25 })),
     N = i(50, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 50 })),
     r = i(100, () => n.intl.formatToPlainString(n.t["r/IcuP"], { maxUses: 100 })),
-    a = [_, l, T, u, O, N, r],
+    a = [l, _, T, u, O, N, r],
     S = i(1800, () => n.intl.formatToPlainString(n.t.iXLF9W, { minutes: 30 })),
     s = i(3600, () => n.intl.formatToPlainString(n.t.xCjYxK, { hours: 1 })),
     E = i(21600, () => n.intl.formatToPlainString(n.t.xCjYxK, { hours: 6 })),

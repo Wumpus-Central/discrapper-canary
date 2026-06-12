@@ -1,7 +1,7 @@
-i.r(a), i.d(a, { default: () => s });
-var f = i(627968),
-    r = i(168363);
-function s(e) {
-    let { asset: a } = e;
-    return (0, f.jsx)("div", { className: r.ZS, children: a });
+c.r(a), c.d(a, { default: () => i });
+var d = c(627968),
+    e = c(945915);
+function i(s) {
+    let { asset: a } = s;
+    return (0, d.jsx)("div", { className: e.ZS, children: a });
 }

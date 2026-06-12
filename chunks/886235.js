@@ -14,8 +14,8 @@ var i = n(627968),
     x = n(990078),
     A = n(778712),
     p = n(834730),
-    f = n(885574),
-    b = n(192308),
+    b = n(885574),
+    f = n(192308),
     j = n(534514),
     N = n(821609),
     E = n(695366),
@@ -33,8 +33,8 @@ var i = n(627968),
     M = n(47167),
     _ = n(576470),
     P = n(235986),
-    G = n(137177),
-    W = n(834409),
+    W = n(137177),
+    G = n(834409),
     D = n(671576),
     U = n(1310),
     B = n(939249),
@@ -84,8 +84,8 @@ var Y = n(526132),
     Z = n(734057),
     Q = n(317525),
     J = n(994500),
-    $ = n(287809),
-    X = n(347951),
+    X = n(287809),
+    $ = n(347951),
     ee = n(825484),
     et = n(770178),
     en = n(280362);
@@ -170,7 +170,7 @@ function eo(e) {
                                 (0, i.jsx)(p.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: (0, M.m1)(s, $.default, J.A, !0),
+                                    children: (0, M.m1)(s, X.default, J.A, !0),
                                 }),
                         ],
                     }),
@@ -240,7 +240,7 @@ function ec(e) {
                           }),
                           (0, i.jsx)(x.m, {
                               text: V.intl.string(V.t["jvd/LF"]),
-                              children: (0, i.jsx)(f.m, { size: "xxs", color: "currentColor", className: es.G }),
+                              children: (0, i.jsx)(b.m, { size: "xxs", color: "currentColor", className: es.G }),
                           }),
                       ],
                   })
@@ -257,7 +257,7 @@ function ec(e) {
 function ed(e) {
     let { applicationId: t, channel: l, showChannel: s = !1, inviteDisabled: a = !1 } = e,
         r = (0, R.h)(t),
-        o = (0, g.bG)([$.default], () => $.default.getUser(l.linkedLobby?.linked_by)),
+        o = (0, g.bG)([X.default], () => X.default.getUser(l.linkedLobby?.linked_by)),
         c = (0, Y.e)(l);
     return (0, i.jsx)(eo, {
         isDisabled: a,
@@ -267,7 +267,7 @@ function ed(e) {
         inviteSource: (0, i.jsxs)("div", {
             className: es._z,
             children: [
-                (0, i.jsx)(G.A, { game: r, size: G.M.XXSMALL }),
+                (0, i.jsx)(W.A, { game: r, size: W.M.XXSMALL }),
                 (0, i.jsx)(p.E, { className: es.PD, variant: "text-sm/normal", children: r?.name }),
             ],
         }),
@@ -277,7 +277,7 @@ function ed(e) {
         guildId: l.guild_id,
         onRevokeInvite: () => {
             c && null != r
-                ? (0, b.openModalLazy)(async () => {
+                ? (0, f.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([n.e("10527"), n.e("73380")]).then(n.bind(n, 106895));
                       return (t) => (0, i.jsx)(e, { ...t, channel: l, application: r });
                   })
@@ -298,8 +298,8 @@ function eu(e) {
     } = e;
     o()(null != s, "guild is required");
     let A = (0, w.Ay)(),
-        f = (0, X.Fi)(s),
-        I = (0, X.Wr)(s),
+        b = (0, $.Fi)(s),
+        I = (0, $.Wr)(s),
         S = l.useMemo(
             () =>
                 null == t || x
@@ -318,15 +318,15 @@ function eu(e) {
             [S, y, x],
         ),
         L = () => {
-            (0, b.openModalLazy)(
+            (0, f.openModalLazy)(
                 async () => (e) =>
                     (0, i.jsx)(U.default, { ...e, channel: u, guild: s, source: el.PE1.SETTINGS_INVITE }),
             );
         },
         [R, M] = l.useState(62),
         _ = () => {
-            let e = { source: W.Eo.GUILD_SETTINGS };
-            (0, b.openModalLazy)(async () => (t) => (0, i.jsx)(D.default, { ...t, guildId: s.id, analyticsData: e }));
+            let e = { source: G.Eo.GUILD_SETTINGS };
+            (0, f.openModalLazy)(async () => (t) => (0, i.jsx)(D.default, { ...t, guildId: s.id, analyticsData: e }));
         };
     return (0, i.jsx)(k.ic, {
         sections: [1, +!c, +!!c, Math.max(1, O.length)],
@@ -438,7 +438,7 @@ function eu(e) {
                                     variant: I ? "primary" : "critical-primary",
                                     text: I ? V.intl.string(V.t["/dbw3H"]) : V.intl.string(V.t.Uwsjn6),
                                     onClick: _,
-                                    disabled: !f,
+                                    disabled: !b,
                                 }),
                                 I &&
                                     (0, i.jsxs)("div", {
@@ -469,7 +469,7 @@ function eu(e) {
                         setHeight: M,
                         onShowDisableInvites: _,
                         onShowInviteModal: L,
-                        hasInviteDisabledPermission: f,
+                        hasInviteDisabledPermission: b,
                         invitesDisabled: I,
                         canCreateInvites: r,
                     },

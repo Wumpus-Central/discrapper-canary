@@ -1,20 +1,20 @@
 "use strict";
-var r = (function () {
+var i = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
-            var r = t[n];
-            (r.enumerable = r.enumerable || !1),
-                (r.configurable = !0),
-                "value" in r && (r.writable = !0),
-                Object.defineProperty(e, r.key, r);
+            var i = t[n];
+            (i.enumerable = i.enumerable || !1),
+                (i.configurable = !0),
+                "value" in i && (i.writable = !0),
+                Object.defineProperty(e, i.key, i);
         }
     }
-    return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+    return function (t, n, i) {
+        return n && e(t.prototype, n), i && e(t, i), t;
     };
 })();
 n(313319);
-var i = n(958554),
+var r = n(958554),
     s = n(698380),
     a = n(284009),
     o = n(972535);
@@ -27,16 +27,16 @@ e.exports = (function (e) {
                 if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
                 return t && ("object" == typeof t || "function" == typeof t) ? t : e;
             })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this)),
-            r = e || { x: 0, y: 0 };
+            i = e || { x: 0, y: 0 };
         return (
-            "number" == typeof r.x && "number" == typeof r.y
-                ? ((n.x = new i(r.x)), (n.y = new i(r.y)))
+            "number" == typeof i.x && "number" == typeof i.y
+                ? ((n.x = new r(i.x)), (n.y = new r(i.y)))
                 : (a(
-                      r.x instanceof i && r.y instanceof i,
+                      i.x instanceof r && i.y instanceof r,
                       "AnimatedValueXY must be initalized with an object of numbers or AnimatedValues.",
                   ),
-                  (n.x = r.x),
-                  (n.y = r.y)),
+                  (n.x = i.x),
+                  (n.y = i.y)),
             (n._listeners = {}),
             n
         );
@@ -46,7 +46,7 @@ e.exports = (function (e) {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        i(t, [
             {
                 key: "setValue",
                 value: function (e) {
@@ -82,10 +82,10 @@ e.exports = (function (e) {
                 value: function (e) {
                     var t = this,
                         n = o(),
-                        r = function (n) {
+                        i = function (n) {
                             n.value, e(t.__getValue());
                         };
-                    return (this._listeners[n] = { x: this.x.addListener(r), y: this.y.addListener(r) }), n;
+                    return (this._listeners[n] = { x: this.x.addListener(i), y: this.y.addListener(i) }), n;
                 },
             },
             {

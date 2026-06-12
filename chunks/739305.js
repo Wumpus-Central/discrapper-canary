@@ -9,8 +9,8 @@ var i,
     c = n(598349),
     d = n(210140),
     _ = n(324988),
-    f = n(406208),
-    h = n(706938),
+    h = n(406208),
+    f = n(706938),
     p = n(693655),
     E = n(485155),
     m = n(524152),
@@ -19,21 +19,21 @@ var i,
     I = n(380744),
     T = n(753891),
     S = n(883972),
-    N = S.enforce,
-    y = S.get,
-    C = l.Int8Array,
-    v = C && C.prototype,
-    O = l.Uint8ClampedArray,
-    R = O && O.prototype,
-    b = C && g(C),
-    D = v && g(v),
+    y = S.enforce,
+    N = S.get,
+    v = l.Int8Array,
+    C = v && v.prototype,
+    R = l.Uint8ClampedArray,
+    O = R && R.prototype,
+    b = v && g(v),
+    D = C && g(C),
     L = Object.prototype,
     w = l.TypeError,
     M = I("toStringTag"),
     P = T("TYPED_ARRAY_TAG"),
     x = "TypedArrayConstructor",
-    U = a && !!A && "Opera" !== _(l.opera),
-    k = !1,
+    k = a && !!A && "Opera" !== _(l.opera),
+    U = !1,
     G = {
         Int8Array: 1,
         Uint8Array: 1,
@@ -49,7 +49,7 @@ var i,
     V = function (e) {
         var t = g(e);
         if (c(t)) {
-            var n = y(t);
+            var n = N(t);
             return n && d(n, x) ? n[x] : V(t);
         }
     },
@@ -58,19 +58,19 @@ var i,
         var t = _(e);
         return d(G, t) || d(F, t);
     };
-for (i in G) (s = (r = l[i]) && r.prototype) ? (N(s)[x] = r) : (U = !1);
-for (i in F) (s = (r = l[i]) && r.prototype) && (N(s)[x] = r);
+for (i in G) (s = (r = l[i]) && r.prototype) ? (y(s)[x] = r) : (k = !1);
+for (i in F) (s = (r = l[i]) && r.prototype) && (y(s)[x] = r);
 if (
-    (!U || !u(b) || b === Function.prototype) &&
+    (!k || !u(b) || b === Function.prototype) &&
     ((b = function () {
         throw new w("Incorrect invocation");
     }),
-    U)
+    k)
 )
     for (i in G) l[i] && A(l[i], b);
-if ((!U || !D || D === L) && ((D = b.prototype), U)) for (i in G) l[i] && A(l[i].prototype, D);
-if ((U && g(R) !== D && A(R, D), o && !d(D, M)))
-    for (i in ((k = !0),
+if ((!k || !D || D === L) && ((D = b.prototype), k)) for (i in G) l[i] && A(l[i].prototype, D);
+if ((k && g(O) !== D && A(O, D), o && !d(D, M)))
+    for (i in ((U = !0),
     E(D, M, {
         configurable: !0,
         get: function () {
@@ -78,17 +78,17 @@ if ((U && g(R) !== D && A(R, D), o && !d(D, M)))
         },
     }),
     G))
-        l[i] && h(l[i], P, i);
+        l[i] && f(l[i], P, i);
 e.exports = {
-    NATIVE_ARRAY_BUFFER_VIEWS: U,
-    TYPED_ARRAY_TAG: k && P,
+    NATIVE_ARRAY_BUFFER_VIEWS: k,
+    TYPED_ARRAY_TAG: U && P,
     aTypedArray: function (e) {
         if (B(e)) return e;
         throw new w("Target is not a typed array");
     },
     aTypedArrayConstructor: function (e) {
         if (u(e) && (!A || m(b, e))) return e;
-        throw new w(f(e) + " is not a typed array constructor");
+        throw new w(h(e) + " is not a typed array constructor");
     },
     exportTypedArrayMethod: function (e, t, n, i) {
         if (o) {
@@ -104,7 +104,7 @@ e.exports = {
                             } catch (e) {}
                         }
                 }
-            (!D[e] || n) && p(D, e, n ? t : (U && v[e]) || t, i);
+            (!D[e] || n) && p(D, e, n ? t : (k && C[e]) || t, i);
         }
     },
     exportTypedArrayStaticMethod: function (e, t, n) {
@@ -120,7 +120,7 @@ e.exports = {
                 }
                 if (b[e] && !n) return;
                 try {
-                    return p(b, e, n ? t : (U && b[e]) || t);
+                    return p(b, e, n ? t : (k && b[e]) || t);
                 } catch (e) {}
             }
             for (i in G) (r = l[i]) && (!r[e] || n) && p(r, e, t);

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => _ });
-var r = n(735438),
-    i = n.n(r),
+var i = n(735438),
+    r = n.n(i),
     s = n(374994),
     a = n(998218),
     o = n(652215),
@@ -149,8 +149,8 @@ let u = [
             name: "Reddit",
             color: (0, s.dE)("PLATFORM_REDDIT"),
             icon: {
-                lightPNG: n(393027),
-                darkPNG: n(393027),
+                lightPNG: n(615408),
+                darkPNG: n(615408),
                 whitePNG: n(60662),
                 lightSVG: n(605023),
                 darkSVG: n(605023),
@@ -498,13 +498,13 @@ let u = [
                 darkPNG: n(544427),
                 whitePNG: n(788504),
                 lightSVG: n(731556),
-                darkSVG: n(983724),
-                whiteSVG: n(736023),
+                darkSVG: n(343901),
+                whiteSVG: n(343901),
             },
             enabled: !1,
         },
     ],
-    c = i().keyBy(u, "type"),
+    c = r().keyBy(u, "type"),
     d = {};
 u.forEach((e) => {
     e.domains?.forEach((t) => {
@@ -526,8 +526,8 @@ let _ = {
         return (
             t.sort((e, t) => {
                 let { name: n } = e,
-                    { name: r } = t;
-                return n.localeCompare(r);
+                    { name: i } = t;
+                return n.localeCompare(i);
             }),
             t
         );

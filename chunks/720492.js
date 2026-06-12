@@ -1,5 +1,5 @@
-var r = n(775078),
-    i = n(69204),
+var i = n(775078),
+    r = n(69204),
     s = n(42344),
     a = n(322345),
     o = n(745196);
@@ -7,12 +7,12 @@ e.exports = function (e, t, n) {
     var l = e.constructor;
     switch (t) {
         case "[object ArrayBuffer]":
-            return r(e);
+            return i(e);
         case "[object Boolean]":
         case "[object Date]":
             return new l(+e);
         case "[object DataView]":
-            return i(e, n);
+            return r(e, n);
         case "[object Float32Array]":
         case "[object Float64Array]":
         case "[object Int8Array]":

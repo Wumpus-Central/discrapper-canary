@@ -1,8 +1,8 @@
 e.exports = function (e) {
     let t = "\\[=*\\[",
-        a = "\\]=*\\]",
-        n = { begin: t, end: a, contains: ["self"] },
-        r = [e.COMMENT("--(?!" + t + ")", "$"), e.COMMENT("--" + t, a, { contains: [n], relevance: 10 })];
+        n = "\\]=*\\]",
+        i = { begin: t, end: n, contains: ["self"] },
+        r = [e.COMMENT("--(?!" + t + ")", "$"), e.COMMENT("--" + t, n, { contains: [i], relevance: 10 })];
     return {
         name: "Lua",
         aliases: ["pluto"],
@@ -26,7 +26,7 @@ e.exports = function (e) {
             e.C_NUMBER_MODE,
             e.APOS_STRING_MODE,
             e.QUOTE_STRING_MODE,
-            { className: "string", begin: t, end: a, contains: [n], relevance: 5 },
+            { className: "string", begin: t, end: n, contains: [i], relevance: 5 },
         ]),
     };
 };

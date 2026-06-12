@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, { D: () => c });
-var r = n(852015),
-    i = n(144367),
-    a = n(428420),
-    s = n(467276),
+var i = n(852015),
+    r = n(144367),
+    s = n(428420),
+    a = n(467276),
     o = n(82180),
-    l = n(324281);
+    l = n(535384);
 class u extends l.G {
     constructor() {
         super("google.protobuf.Timestamp", [
@@ -33,73 +33,73 @@ class u extends l.G {
                 "Unable to encode Timestamp to JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.",
             );
         if (e.nanos < 0) throw Error("Unable to encode invalid Timestamp to JSON. Nanos must not be negative.");
-        let r = "Z";
+        let i = "Z";
         if (e.nanos > 0) {
             let t = (e.nanos + 1e9).toString().substring(1);
-            r =
+            i =
                 "000000" === t.substring(3)
                     ? "." + t.substring(0, 3) + "Z"
                     : "000" === t.substring(6)
                       ? "." + t.substring(0, 6) + "Z"
                       : "." + t + "Z";
         }
-        return new Date(n).toISOString().replace(".000Z", r);
+        return new Date(n).toISOString().replace(".000Z", i);
     }
     internalJsonRead(e, t, n) {
-        if ("string" != typeof e) throw Error("Unable to parse Timestamp from JSON " + (0, s.V)(e) + ".");
-        let r = e.match(
+        if ("string" != typeof e) throw Error("Unable to parse Timestamp from JSON " + (0, a.V)(e) + ".");
+        let i = e.match(
             /^([0-9]{4})-([0-9]{2})-([0-9]{2})T([0-9]{2}):([0-9]{2}):([0-9]{2})(?:Z|\.([0-9]{3,9})Z|([+-][0-9][0-9]:[0-9][0-9]))$/,
         );
-        if (!r) throw Error("Unable to parse Timestamp from JSON. Invalid format.");
-        let i = Date.parse(r[1] + "-" + r[2] + "-" + r[3] + "T" + r[4] + ":" + r[5] + ":" + r[6] + (r[8] ? r[8] : "Z"));
-        if (Number.isNaN(i)) throw Error("Unable to parse Timestamp from JSON. Invalid value.");
-        if (i < Date.parse("0001-01-01T00:00:00Z") || i > Date.parse("9999-12-31T23:59:59Z"))
+        if (!i) throw Error("Unable to parse Timestamp from JSON. Invalid format.");
+        let r = Date.parse(i[1] + "-" + i[2] + "-" + i[3] + "T" + i[4] + ":" + i[5] + ":" + i[6] + (i[8] ? i[8] : "Z"));
+        if (Number.isNaN(r)) throw Error("Unable to parse Timestamp from JSON. Invalid value.");
+        if (r < Date.parse("0001-01-01T00:00:00Z") || r > Date.parse("9999-12-31T23:59:59Z"))
             throw new globalThis.Error(
                 "Unable to parse Timestamp from JSON. Must be from 0001-01-01T00:00:00Z to 9999-12-31T23:59:59Z inclusive.",
             );
         return (
             n || (n = this.create()),
-            (n.seconds = o.h.from(i / 1e3).toString()),
+            (n.seconds = o.h.from(r / 1e3).toString()),
             (n.nanos = 0),
-            r[7] && (n.nanos = parseInt("1" + r[7] + "0".repeat(9 - r[7].length)) - 1e9),
+            i[7] && (n.nanos = parseInt("1" + i[7] + "0".repeat(9 - i[7].length)) - 1e9),
             n
         );
     }
     create(e) {
         let t = { seconds: "0", nanos: 0 };
         return (
-            globalThis.Object.defineProperty(t, a.$, { enumerable: !1, value: this }),
-            void 0 !== e && (0, i.x)(this, t, e),
+            globalThis.Object.defineProperty(t, s.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, r.x)(this, t, e),
             t
         );
     }
-    internalBinaryRead(e, t, n, i) {
-        let a = i ?? this.create(),
-            s = e.pos + t;
-        for (; e.pos < s; ) {
-            let [t, i] = e.tag();
+    internalBinaryRead(e, t, n, r) {
+        let s = r ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a; ) {
+            let [t, r] = e.tag();
             switch (t) {
                 case 1:
-                    a.seconds = e.int64().toString();
+                    s.seconds = e.int64().toString();
                     break;
                 case 2:
-                    a.nanos = e.int32();
+                    s.nanos = e.int32();
                     break;
                 default:
-                    let s = n.readUnknownField;
-                    if ("throw" === s)
-                        throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
-                    let o = e.skip(i);
-                    !1 !== s && (!0 === s ? r.f$.onRead : s)(this.typeName, a, t, i, o);
+                    let a = n.readUnknownField;
+                    if ("throw" === a)
+                        throw new globalThis.Error(`Unknown field ${t} (wire type ${r}) for ${this.typeName}`);
+                    let o = e.skip(r);
+                    !1 !== a && (!0 === a ? i.f$.onRead : a)(this.typeName, s, t, r, o);
             }
         }
-        return a;
+        return s;
     }
     internalBinaryWrite(e, t, n) {
-        "0" !== e.seconds && t.tag(1, r.O0.Varint).int64(e.seconds),
-            0 !== e.nanos && t.tag(2, r.O0.Varint).int32(e.nanos);
-        let i = n.writeUnknownFields;
-        return !1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t;
+        "0" !== e.seconds && t.tag(1, i.O0.Varint).int64(e.seconds),
+            0 !== e.nanos && t.tag(2, i.O0.Varint).int32(e.nanos);
+        let r = n.writeUnknownFields;
+        return !1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t;
     }
 }
 let c = new u();

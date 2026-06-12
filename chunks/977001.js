@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { Ay: () => p, _E: () => h, ac: () => _ });
+n.d(t, { Ay: () => p, _E: () => f, ac: () => _ });
 var i = n(627968),
     r = n(64700),
     s = n(56121),
     a = n(939341),
     o = n(263577),
-    l = n(832384),
+    l = n(751765),
     u = n(506326),
     c = n(868065),
     d = n(352760);
 let _ = [u.Xr],
-    f = [s.j.WEEK];
-function h(e) {
-    return null != e && f.includes(e);
+    h = [s.j.WEEK];
+function f(e) {
+    return null != e && h.includes(e);
 }
 let p = r.memo((e) => {
     let { entry: t, channel: n, selected: r } = e,
@@ -21,8 +21,8 @@ let p = r.memo((e) => {
             showCoverImage: !1,
             trackingSource: "memberlist_top_game_content_row",
         }),
-        f = (0, l.TQ)(t);
-    return null != f && h(f)
+        h = (0, l.TQ)(t);
+    return null != h && f(h)
         ? (0, i.jsxs)(c.Zp, {
               selected: r,
               children: [

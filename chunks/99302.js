@@ -1,8 +1,8 @@
-var r = n(338036),
-    i = n(509185);
+var i = n(338036),
+    r = n(509185);
 e.exports = function (e) {
-    if (!i(e)) return !1;
-    var t = r(e);
+    if (!r(e)) return !1;
+    var t = i(e);
     return (
         "[object Function]" == t ||
         "[object GeneratorFunction]" == t ||

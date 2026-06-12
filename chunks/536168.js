@@ -1,13 +1,13 @@
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.CompressedTypes = void 0);
-class i {}
-(t.CompressedTypes = i),
-    (i._7Z = {
+class n {}
+(t.CompressedTypes = n),
+    (n._7Z = {
         extension: "7z",
         mimeType: "application/x-7z-compressed",
         description: "7-Zip compressed file",
         signatures: [{ sequence: [55, 122, 188, 175, 39, 28] }],
     }),
-    (i.LZH = {
+    (n.LZH = {
         extension: "lzh",
         mimeType: "application/x-lzh-compressed",
         description: "Compressed file using Lempel-Ziv and Haruyasu (LZH) compression algorithm",
@@ -24,7 +24,7 @@ class i {}
             },
         ],
     }),
-    (i.RAR = {
+    (n.RAR = {
         extension: "rar",
         mimeType: "application/x-rar-compressed",
         description: "Roshal ARchive compressed archive file",
@@ -33,7 +33,7 @@ class i {}
             { sequence: [82, 97, 114, 33, 26, 7, 1, 0], description: "Compressed archive v1.50 onwards" },
         ],
     }),
-    (i.ZIP = {
+    (n.ZIP = {
         extension: "zip",
         mimeType: "application/zip",
         description: "Compressed archive file",

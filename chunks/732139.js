@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    AA: () => h,
+    AA: () => f,
     Do: () => _,
     Ec: () => I,
     N6: () => p,
@@ -8,7 +8,7 @@ n.d(t, {
     W3: () => m,
     as: () => d,
     g9: () => A,
-    k1: () => f,
+    k1: () => h,
     lq: () => l,
     ni: () => g,
     pE: () => E,
@@ -52,8 +52,8 @@ var u =
     c = (((s = {}).NONE = ""), (s.TOP_GUILD_EMOJI = "top_server"), (s.NEWLY_ADDED_EMOJI = "newly_added"), s),
     d = (((a = {})[(a.MEDIUM = 40)] = "MEDIUM"), (a[(a.LARGE = 48)] = "LARGE"), a);
 let _ = "emoji-picker-tab-panel",
-    f = "emoji-picker-tab",
-    h = "soundboard-picker-tab-panel",
+    h = "emoji-picker-tab",
+    f = "soundboard-picker-tab-panel",
     p = "soundboard-picker-tab",
     E = "kaomoji-picker-tab-panel",
     m = "kaomoji-picker-tab",

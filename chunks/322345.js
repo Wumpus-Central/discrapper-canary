@@ -1,6 +1,6 @@
-var r = n(574366),
-    i = r ? r.prototype : void 0,
-    a = i ? i.valueOf : void 0;
+var i = n(574366),
+    r = i ? i.prototype : void 0,
+    s = r ? r.valueOf : void 0;
 e.exports = function (e) {
-    return a ? Object(a.call(e)) : {};
+    return s ? Object(s.call(e)) : {};
 };

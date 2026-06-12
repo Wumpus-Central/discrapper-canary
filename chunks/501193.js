@@ -1,12 +1,12 @@
-n.d(t, { A: () => s });
-var l = n(627968),
-    i = n(834730),
-    r = n(985018),
+n.d(e, { A: () => s });
+var i = n(627968),
+    l = n(834730),
+    r = n(375708),
     a = n(604818);
-function s(e) {
-    let { username: t } = e;
-    return (0, l.jsx)("div", {
+function s(t) {
+    let { username: e } = t;
+    return (0, i.jsx)("div", {
         className: a.v,
-        children: (0, l.jsx)(i.E, { variant: "text-sm/normal", children: r.intl.format(r.t.P8ij6Z, { username: t }) }),
+        children: (0, i.jsx)(l.E, { variant: "text-sm/normal", children: r.intl.format(r.t.P8ij6Z, { username: e }) }),
     });
 }

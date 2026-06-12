@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
-    $r: () => O,
-    Lg: () => R,
+    $r: () => R,
+    Lg: () => O,
     P0: () => L,
-    Rh: () => v,
+    Rh: () => C,
     Vq: () => I,
-    Wu: () => N,
+    Wu: () => y,
     YM: () => b,
-    _x: () => C,
+    _x: () => v,
     be: () => P,
-    kx: () => y,
+    kx: () => N,
     n$: () => T,
     px: () => M,
     tI: () => D,
@@ -29,8 +29,8 @@ var a = n(698441),
 n(232835);
 var d = n(222823),
     _ = n(935208),
-    f = n(4106),
-    h = n(519059),
+    h = n(4106),
+    f = n(519059),
     p = n(800319),
     E = n(557740),
     m = n(596720),
@@ -50,14 +50,14 @@ var T =
 function S(e) {
     return e.type === m.Mm.MESSAGE || e.type === m.Mm.GUILD_EVENT;
 }
-function N(e) {
+function y(e) {
     return e < -1.5 ? 4 : e < 0 ? 3 : e > 0 ? 2 : 1;
 }
-async function y(e, t, n) {
+async function N(e, t, n) {
     let i = E.A.getHydratedItems(),
         r = e.slice(t, n);
     if (0 === r.length) return;
-    f.A.loadHydratedAttempt(I(t, n));
+    h.A.loadHydratedAttempt(I(t, n));
     let s = r.filter((e) => null == i[e.id]),
         a = s
             .filter((e) => e.type === m.Mm.MESSAGE)
@@ -92,27 +92,27 @@ async function y(e, t, n) {
         l = s
             .filter((e) => e.type === m.Mm.ACTIVITY)
             .map((e) => ({ user_id: e.data.user_id, content_id: e.data.content_id }));
-    await f.A.fetchHydrated(t, n, { messageItems: [...a, ...o], activityItems: l });
+    await h.A.fetchHydrated(t, n, { messageItems: [...a, ...o], activityItems: l });
 }
-async function C() {
+async function v() {
     let e = E.A.getUnreadDisplayItems(),
         t = E.A.getReadDisplayItems(),
         n = E.A.getNextIndexToHydrate();
-    await y([...e, ...t], n, n + m.w5);
+    await N([...e, ...t], n, n + m.w5);
 }
-function v(e, t) {
+function C(e, t) {
     return {
         ...t,
         message: (0, o.rh)(e.message),
         threadChannel: null != e.thread_channel ? l.Lt.fromServer(e.thread_channel, e.guild_id) : void 0,
     };
 }
-function O(e, t) {
+function R(e, t) {
     let n = d.Ay.getTrackedAckMessageId(e);
     return null == n || _.default.extractTimestamp(t) > _.default.extractTimestamp(n);
 }
-function R(e) {
-    return (0, h.HF)(e);
+function O(e) {
+    return (0, f.HF)(e);
 }
 function b(e) {
     return {
@@ -221,9 +221,9 @@ async function P(e) {
                 _.default.atPreviousMillisecond(n.data.message_id),
             );
     }),
-        await f.A.clearReadStates(),
-        await f.A.fetchDehydrated({ isReloading: !0, forceRefresh: !0 }),
-        await f.A.reloadICYMITab(),
-        await f.A.getGuildChannelScores(),
-        f.A.getRecommendedGuilds();
+        await h.A.clearReadStates(),
+        await h.A.fetchDehydrated({ isReloading: !0, forceRefresh: !0 }),
+        await h.A.reloadICYMITab(),
+        await h.A.getGuildChannelScores(),
+        h.A.getRecommendedGuilds();
 }

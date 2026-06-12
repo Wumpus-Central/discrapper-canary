@@ -1,6 +1,6 @@
-i.d(t, { m: () => r });
+i.d(t, { m: () => s });
 var l,
-    r =
+    s =
         (((l = {}).VIEW_SETTINGS_PAGE = "view_settings_page"),
         (l.SELECT_GUILD = "select_guild"),
         (l.DIRECT_MESSAGES_TOGGLE = "direct_messages_toggle"),

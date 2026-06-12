@@ -1,9 +1,9 @@
 a.d(i, { ActivityAgeGateModal: () => o });
 var n = a(627968),
     e = a(64700),
-    l = a(158954),
+    l = a(189213),
     s = a(847599),
-    r = a(985018);
+    r = a(375708);
 function o(t) {
     let { application: i, onAgree: a, onClose: o, onDisagree: c, channelId: E, transitionState: A } = t;
     e.useEffect(() => {

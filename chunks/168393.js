@@ -1,79 +1,79 @@
-l.r(t), l.d(t, { SubscriptionDetailsModal: () => j });
-var n = l(627968),
-    s = l(64700),
-    i = l(885996),
-    r = l(423090),
-    a = l(715641),
-    o = l(272859),
-    c = l(955440),
-    d = l(3432),
-    u = l(185438),
-    x = l(371794),
-    _ = l(998218),
-    m = l(550732),
-    h = l(376374),
-    p = l(888781);
-function j(e) {
+e.r(t), e.d(t, { SubscriptionDetailsModal: () => f });
+var n = e(627968),
+    s = e(64700),
+    o = e(885996),
+    a = e(423090),
+    d = e(715641),
+    l = e(272859),
+    r = e(955440),
+    c = e(3432),
+    p = e(185438),
+    u = e(371794),
+    b = e(998218),
+    m = e(550732),
+    h = e(376374),
+    k = e(888781);
+function f(i) {
     let {
             appId: t,
-            subscriptionType: l,
-            onClose: j,
-            skuId: v,
-            guildId: E,
-            transitionState: S,
-            onHeaderTitleClick: A,
-        } = e,
-        { data: f } = (0, c.A)(v),
-        g = f?.[0],
-        { data: T } = (0, o.d)(v),
-        I = s.useMemo(
-            () => (T?.thumbnail != null ? (_.A.toURLSafe((0, x.YE)(t, T.thumbnail, 256)) ?? void 0) : void 0),
-            [t, T?.thumbnail],
+            subscriptionType: e,
+            onClose: f,
+            skuId: I,
+            guildId: v,
+            transitionState: C,
+            onHeaderTitleClick: j,
+        } = i,
+        { data: x } = (0, r.A)(I),
+        S = x?.[0],
+        { data: M } = (0, l.d)(I),
+        g = s.useMemo(
+            () => (M?.thumbnail != null ? (b.A.toURLSafe((0, u.YE)(t, M.thumbnail, 256)) ?? void 0) : void 0),
+            [t, M?.thumbnail],
         ),
-        C = s.useMemo(() => {
-            let e = T?.benefits;
-            if (null != e && 0 !== e.length)
-                return e.map((e) => ({
-                    id: e.id,
-                    title: e.name,
-                    description: e.description,
-                    icon: (0, d.N)(t, e.icon),
+        y = s.useMemo(() => {
+            let i = M?.benefits;
+            if (null != i && 0 !== i.length)
+                return i.map((i) => ({
+                    id: i.id,
+                    title: i.name,
+                    description: i.description,
+                    icon: (0, c.N)(t, i.icon),
                 }));
-        }, [t, T?.benefits]),
-        { openModal: b, subscriptionPurchaseButtonState: N } = (0, u.A)({
-            skuId: v,
-            initialSubscribeForGuild: E ?? void 0,
+        }, [t, M?.benefits]),
+        { openModal: A, subscriptionPurchaseButtonState: F } = (0, p.A)({
+            skuId: I,
+            initialSubscribeForGuild: v ?? void 0,
         });
-    return null == T
+    return null == M
         ? null
         : (0, n.jsx)(m.C, {
               appId: t,
-              skuId: v,
-              transitionState: S,
-              onHeaderTitleClick: A ?? j,
-              onClose: j,
+              skuId: I,
+              transitionState: C,
+              onHeaderTitleClick: j ?? f,
+              onClose: f,
               footer: (0, n.jsx)(h.rc, {
-                  onClick: b,
+                  onClick: A,
                   appId: t,
-                  subscriptionType: l,
-                  skuId: v,
-                  subscriptionPlan: g,
-                  state: N,
+                  subscriptionType: e,
+                  skuId: I,
+                  subscriptionPlan: S,
+                  state: F,
               }),
-              children: (0, n.jsx)(p.D, {
+              children: (0, n.jsx)(k.D, {
                   appId: t,
-                  skuId: v,
+                  skuId: I,
                   benefits:
-                      null != C
-                          ? C.map((e) =>
-                                (0, n.jsx)(i.FY, { header: e.title, icon: e.icon, description: e.description }, e.id),
+                      null != y
+                          ? y.map((i) =>
+                                (0, n.jsx)(o.FY, { header: i.title, icon: i.icon, description: i.description }, i.id),
                             )
                           : void 0,
-                  description: T.description ?? void 0,
-                  imgSrc: I,
-                  title: g?.name ?? T.summary,
-                  tag: (0, n.jsx)(r.M, { type: l }),
-                  FallbackIcon: a.b,
+                  description: M.description ?? void 0,
+                  imgSrc: g,
+                  title: S?.name ?? M.summary,
+                  tag: (0, n.jsx)(a.M, { type: e }),
+                  FallbackIcon: d.b,
               }),
           });
 }

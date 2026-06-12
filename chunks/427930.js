@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => i, m: () => a });
-var r = n(652215);
-function i(e) {
-    return e.messageReference?.type === r.SH7.FORWARD;
+n.d(t, { A: () => r, m: () => s });
+var i = n(652215);
+function r(e) {
+    return e.messageReference?.type === i.SH7.FORWARD;
 }
-function a(e) {
-    return e.message_reference?.type === r.SH7.FORWARD;
+function s(e) {
+    return e.message_reference?.type === i.SH7.FORWARD;
 }

@@ -44,7 +44,7 @@ e.exports = function (e) {
             "exists",
             "nonempty",
         ],
-        a = {
+        n = {
             className: "subst",
             excludeBegin: !0,
             excludeEnd: !0,
@@ -53,9 +53,9 @@ e.exports = function (e) {
             keywords: t,
             relevance: 10,
         },
-        n = [
+        i = [
             { className: "string", begin: '"""', end: '"""', relevance: 10 },
-            { className: "string", begin: '"', end: '"', contains: [a] },
+            { className: "string", begin: '"', end: '"', contains: [n] },
             { className: "string", begin: "'", end: "'" },
             {
                 className: "number",
@@ -64,7 +64,7 @@ e.exports = function (e) {
             },
         ];
     return (
-        (a.contains = n),
+        (n.contains = i),
         {
             name: "Ceylon",
             keywords: {
@@ -91,7 +91,7 @@ e.exports = function (e) {
                 e.C_LINE_COMMENT_MODE,
                 e.COMMENT("/\\*", "\\*/", { contains: ["self"] }),
                 { className: "meta", begin: '@[a-z]\\w*(?::"[^"]*")?' },
-            ].concat(n),
+            ].concat(i),
         }
     );
 };

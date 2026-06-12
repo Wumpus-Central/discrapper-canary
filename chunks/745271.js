@@ -1,6 +1,6 @@
-let r = n(864886);
+let i = n(864886);
 e.exports = (e, t, n) => {
-    let i = new r(e, n),
-        a = new r(t, n);
-    return i.compare(a) || i.compareBuild(a);
+    let r = new i(e, n),
+        s = new i(t, n);
+    return r.compare(s) || r.compareBuild(s);
 };

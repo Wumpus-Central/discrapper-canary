@@ -16,14 +16,14 @@ var c = e(17928),
 function y(n, i) {
     let e = (0, c.bG)([A.default], () => A.default.getCurrentUser()),
         y = (0, l.Id)(i),
-        f = (0, c.bG)([d.A], () => d.A.can(E.xBc.MANAGE_MESSAGES, i), [i]),
-        { firstMessage: D } = (0, c.bG)([s.A], () => s.A.getMessage(i.id), [i.id]),
-        S = f || (null != e && n.canDeleteOwnMessage(e.id));
+        D = (0, c.bG)([d.A], () => d.A.can(E.xBc.MANAGE_MESSAGES, i), [i]),
+        { firstMessage: f } = (0, c.bG)([s.A], () => s.A.getMessage(i.id), [i.id]),
+        M = D || (null != e && n.canDeleteOwnMessage(e.id));
     return n.state === E.cmJ.SENDING ||
-        !S ||
+        !M ||
         E.MRS.UNDELETABLE.has(n.type) ||
         !y ||
-        (i.isModeratorReportChannel() && (n.id === D?.id || (0, u.A)(n)))
+        (i.isModeratorReportChannel() && (n.id === f?.id || (0, u.A)(n)))
         ? null
         : (0, t.jsx)(r.Dr, {
               id: "delete",

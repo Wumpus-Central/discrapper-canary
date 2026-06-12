@@ -14,10 +14,10 @@ var i = n(627968),
     A = n(834730),
     x = n(517461),
     g = n(770178),
-    C = n(418126),
-    f = n(266626),
-    E = n(998740),
-    y = n(732777),
+    f = n(418126),
+    C = n(266626),
+    y = n(998740),
+    E = n(732777),
     N = n(709382),
     j = n(287245),
     v = n(615658),
@@ -28,11 +28,11 @@ var i = n(627968),
     S = n(683807);
 let P = (e) => {
         let { channel: t, idle: n, className: a, participants: r } = e,
-            f = (0, y.A)(t.id),
-            [E, P] = l.useState(!1),
+            C = (0, E.A)(t.id),
+            [y, P] = l.useState(!1),
             O = l.useCallback(
                 (e) => {
-                    C.Ay.update(t.id, { seat: e });
+                    f.Ay.update(t.id, { seat: e });
                 },
                 [t.id],
             ),
@@ -119,7 +119,7 @@ let P = (e) => {
                             let n = Date.now(),
                                 i = et.current.getBoundingClientRect(),
                                 l = { x: (e.pageX - i.x - k.x) / U, y: (e.pageY - i.y - k.y) / U };
-                            !1 !== F && n - F > 250 && C.Ay.update(t.id, { position: l });
+                            !1 !== F && n - F > 250 && f.Ay.update(t.id, { position: l });
                         }
                         G(!1);
                     }
@@ -135,12 +135,12 @@ let P = (e) => {
                         className: S.VT,
                         style: { transform: `translate(${k.x}px, ${k.y}px) scale(${U}) ` },
                         children: (0, i.jsx)(N.A, {
-                            roomSeats: f.seats,
-                            roomParticipants: f.participants,
+                            roomSeats: C.seats,
+                            roomParticipants: C.participants,
                             participants: r,
                             channel: t,
                             idle: n,
-                            skipNewUserEducation: !E,
+                            skipNewUserEducation: !y,
                             onSeatClick: O,
                         }),
                     }),
@@ -208,7 +208,7 @@ let P = (e) => {
                     }),
                     (0, i.jsx)(v.A, {}),
                     (0, i.jsx)("div", {
-                        className: s()(S.Lw, { [S.FD]: E }),
+                        className: s()(S.Lw, { [S.FD]: y }),
                         children: (0, i.jsx)("div", {
                             className: S.dH,
                             children: (0, i.jsx)(A.E, { variant: "display-lg", children: "Welcome to Haven" }),
@@ -219,10 +219,10 @@ let P = (e) => {
         });
     },
     O = (e) => {
-        let t = f.s.useConfig({ location: "Haven" }).enabled,
-            n = (0, r.bG)([E.A], () => E.A.isUserConnected(e.channel.id));
+        let t = C.s.useConfig({ location: "Haven" }).enabled,
+            n = (0, r.bG)([y.A], () => y.A.isUserConnected(e.channel.id));
         return (l.useEffect(() => {
-            !t || n || C.Ay.connect(e.channel.id);
+            !t || n || f.Ay.connect(e.channel.id);
         }, [e.channel.id, n, t]),
         t)
             ? (0, i.jsx)(P, { ...e })

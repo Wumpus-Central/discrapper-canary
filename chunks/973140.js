@@ -1,28 +1,28 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = {};
-    Object.assign(a, {
+        n = {};
+    Object.assign(n, {
         className: "variable",
         variants: [
             { begin: t.concat(/\$[\w\d#@][\w\d_]*/, "(?![\\w\\d])(?![$])") },
-            { begin: /\$\{/, end: /\}/, contains: ["self", { begin: /:-/, contains: [a] }] },
+            { begin: /\$\{/, end: /\}/, contains: ["self", { begin: /:-/, contains: [n] }] },
         ],
     });
-    let n = { className: "subst", begin: /\$\(/, end: /\)/, contains: [e.BACKSLASH_ESCAPE] },
+    let i = { className: "subst", begin: /\$\(/, end: /\)/, contains: [e.BACKSLASH_ESCAPE] },
         r = e.inherit(e.COMMENT(), { match: [/(^|\s)/, /#.*$/], scope: { 2: "comment" } }),
-        i = {
+        s = {
             begin: /<<-?\s*(?=\w+)/,
             starts: { contains: [e.END_SAME_AS_BEGIN({ begin: /(\w+)/, end: /(\w+)/, className: "string" })] },
         },
-        o = { className: "string", begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, a, n] };
-    n.contains.push(o);
-    let s = {
+        a = { className: "string", begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, n, i] };
+    i.contains.push(a);
+    let o = {
             begin: /\$?\(\(/,
             end: /\)\)/,
-            contains: [{ begin: /\d+#[0-9a-f]+/, className: "number" }, e.NUMBER_MODE, a],
+            contains: [{ begin: /\d+#[0-9a-f]+/, className: "number" }, e.NUMBER_MODE, n],
         },
         l = e.SHEBANG({ binary: "(fish|bash|zsh|sh|csh|ksh|tcsh|dash|scsh)", relevance: 10 }),
-        c = {
+        u = {
             className: "function",
             begin: /\w[\w\d_]*\s*\(\s*\)\s*\{/,
             returnBegin: !0,
@@ -271,16 +271,16 @@ e.exports = function (e) {
         contains: [
             l,
             e.SHEBANG(),
-            c,
-            s,
-            r,
-            i,
-            { match: /(\/[a-z._-]+)+/ },
+            u,
             o,
+            r,
+            s,
+            { match: /(\/[a-z._-]+)+/ },
+            a,
             { match: /\\"/ },
             { className: "string", begin: /'/, end: /'/ },
             { match: /\\'/ },
-            a,
+            n,
         ],
     };
 };

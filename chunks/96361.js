@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     kL: "container_a154bf",
     Qs: "content_a154bf",
     j0: "splashImage_a154bf",

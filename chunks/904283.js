@@ -1,12 +1,12 @@
 "use strict";
-var r = n(439619),
-    i = r("%Object.preventExtensions%", !0),
-    a = r("%Object.isExtensible%", !0),
-    s = n(858156);
-e.exports = i
+var i = n(439619),
+    r = i("%Object.preventExtensions%", !0),
+    s = i("%Object.isExtensible%", !0),
+    a = n(858156);
+e.exports = r
     ? function (e) {
-          return !s(e) && a(e);
+          return !a(e) && s(e);
       }
     : function (e) {
-          return !s(e);
+          return !a(e);
       };

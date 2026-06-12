@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366),
     s = n(652215);
@@ -55,7 +55,7 @@ class l extends i.Ay.Store {
         return n;
     }
 }
-let d = new l(r.h, {
+let u = new l(r.h, {
     USER_ACTIVITY_STATISTICS_FETCH_SUCCESS: function (e) {
         let { statistics: t } = e;
         t.forEach((e) => {
@@ -68,11 +68,11 @@ let d = new l(r.h, {
             r = a[n],
             o = new Date().toISOString(),
             l = 0,
-            d = 0;
-        null != r && ((l = r.total_duration), (d = r.total_discord_sku_duration ?? 0)),
+            u = 0;
+        null != r && ((l = r.total_duration), (u = r.total_discord_sku_duration ?? 0)),
             (l += t),
-            i === s.d3x.DISCORD && (d += t),
-            (a[n] = { application_id: n, total_duration: l, last_played_at: o, total_discord_sku_duration: d });
+            i === s.d3x.DISCORD && (u += t),
+            (a[n] = { application_id: n, total_duration: l, last_played_at: o, total_discord_sku_duration: u });
     },
     LOGOUT: function () {
         (a = {}), (o = null);

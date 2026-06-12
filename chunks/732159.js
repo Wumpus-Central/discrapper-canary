@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { ConfirmModal: () => l });
-var r = n(627968),
-    i = n(64700),
-    a = n(460890),
-    s = n(189213),
+var i = n(627968),
+    r = n(64700),
+    s = n(460890),
+    a = n(189213),
     o = n(696208);
 function l(e) {
     let {
@@ -14,55 +14,55 @@ function l(e) {
             onCancel: c,
             onCloseCallback: d,
             variant: _ = "critical",
-            children: f,
-            ...p
+            children: h,
+            ...f
         } = e,
-        { i18n: h } = (0, a.G9)(),
-        m = h.CANCEL,
-        g = h.INLINE_NOTICE_GENERIC_ERROR,
-        [E, A] = i.useState(!1),
-        I = i.useRef(d);
-    i.useLayoutEffect(() => {
+        { i18n: p } = (0, s.G9)(),
+        E = p.CANCEL,
+        m = p.INLINE_NOTICE_GENERIC_ERROR,
+        [g, A] = r.useState(!1),
+        I = r.useRef(d);
+    r.useLayoutEffect(() => {
         I.current = d;
     }),
-        i.useLayoutEffect(
+        r.useLayoutEffect(
             () => () => {
                 I.current?.();
             },
             [],
         );
-    let [T, y] = i.useState(void 0),
-        S = (e) => {
-            y(e);
+    let [T, S] = r.useState(void 0),
+        y = (e) => {
+            S(e);
         };
-    return (0, r.jsx)(s.Modal, {
+    return (0, i.jsx)(a.Modal, {
         actions: [
             {
-                text: n ?? m,
+                text: n ?? E,
                 variant: "secondary",
                 onClick: () => {
-                    c?.(), p.onClose();
+                    c?.(), f.onClose();
                 },
             },
             {
                 text: t,
                 variant: "critical" === _ ? "critical-primary" : _,
                 onClick: async () => {
-                    y(void 0), A(!0);
+                    S(void 0), A(!0);
                     try {
-                        await u?.(S), p.onClose();
+                        await u?.(y), f.onClose();
                     } catch (e) {
-                        throw (A(!1), y((e) => e ?? g), e);
+                        throw (A(!1), S((e) => e ?? m), e);
                     }
                 },
-                disabled: E,
-                loading: E,
+                disabled: g,
+                loading: g,
             },
         ],
-        actionBarInput: null != l ? (0, r.jsx)(o.e, { ...l }) : void 0,
+        actionBarInput: null != l ? (0, i.jsx)(o.e, { ...l }) : void 0,
         role: "alertdialog",
         notice: null != T ? { message: T, type: "critical" } : void 0,
-        ...p,
-        children: f,
+        ...f,
+        children: h,
     });
 }

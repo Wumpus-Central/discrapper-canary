@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = [
+        n = [
             { className: "strong", begin: /\*{2}([^\n]+?)\*{2}/ },
             {
                 className: "strong",
@@ -10,7 +10,7 @@ e.exports = function (e) {
             { className: "strong", begin: /\B\*(\S|\S[^\n]*?\S)\*(?!\w)/ },
             { className: "strong", begin: /\*[^\s]([^\n]+\n)+([^\n]+)\*/ },
         ],
-        n = [
+        i = [
             { className: "emphasis", begin: /_{2}([^\n]+?)_{2}/ },
             {
                 className: "emphasis",
@@ -60,8 +60,8 @@ e.exports = function (e) {
             { begin: /\\\\_{2}[^\n]*_{2}/ },
             { begin: /\\\\`{2}[^\n]*`{2}/ },
             { begin: /[:;}][*_`](?![*_`])/ },
-            ...a,
             ...n,
+            ...i,
             { className: "string", variants: [{ begin: "``.+?''" }, { begin: "`.+?'" }] },
             { className: "code", begin: /`{2}/, end: /(\n{2}|`{2})/ },
             { className: "code", begin: "(`.+?`|\\+.+?\\+)", relevance: 0 },

@@ -1,33 +1,33 @@
-t.d(e, { q: () => o });
-var a = t(391048),
-    n = t(636099),
-    l = t(407001);
-function o(i) {
-    let e = l.UnifiedCheckoutFlowManagerSingletons[l.CL.PREMIUM_APPS_OTP_CHECKOUT].get(),
+a.d(t, { q: () => l });
+var e = a(391048),
+    n = a(636099),
+    o = a(529427);
+function l(i) {
+    let t = o.UnifiedCheckoutFlowManagerSingletons[o.CL.PREMIUM_APPS_OTP_CHECKOUT].get(),
         {
-            applicationId: t,
-            skuId: o,
+            applicationId: a,
+            skuId: l,
             onClose: s,
-            onComplete: c,
-            analyticsLocations: d,
+            onComplete: d,
+            analyticsLocations: c,
             analyticsLocationObject: r,
             contextKey: u,
             isGift: p = !1,
         } = i;
-    return e.openCheckoutModal({
+    return t.openCheckoutModal({
         modalAPIOptions: {
             modalKey: "premium-apps-otp-checkout-modal",
             contextKey: u,
             onCloseCallback() {
-                (0, a.ET)(), (0, n.z)();
+                (0, e.ET)(), (0, n.z)();
             },
         },
-        applicationId: t,
-        skuId: o,
-        analyticsLocations: d,
+        applicationId: a,
+        skuId: l,
+        analyticsLocations: c,
         analyticsObject: r,
         onClose: s,
-        onComplete: c,
+        onComplete: d,
         giftContextProps: { isGift: p },
     });
 }

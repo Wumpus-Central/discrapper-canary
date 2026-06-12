@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => _ });
 var i = n(17928),
     r = n(506774),
     s = n(228366),
     a = n(617617);
 let o = {},
     l = {};
-function d() {
+function u() {
     let e = a.A.settings;
     return {
         gifAutoPlay: e.textAndImages?.gifAutoPlay?.value,
@@ -14,10 +14,10 @@ function d() {
         animateStickers: e.textAndImages?.animateStickers?.value,
     };
 }
-function _() {
-    return (l = d()), !1;
+function c() {
+    return (l = u()), !1;
 }
-class u extends i.Ay.PersistedStore {
+class d extends i.Ay.PersistedStore {
     static displayName = "UserSettingsOverridesStore";
     static persistKey = "UserSettingsOverridesStore";
     static migrations = [
@@ -27,7 +27,7 @@ class u extends i.Ay.PersistedStore {
         },
     ];
     initialize(e) {
-        (o = e ?? {}), this.syncWith([a.A], _);
+        (o = e ?? {}), this.syncWith([a.A], c);
     }
     getState() {
         return o;
@@ -39,9 +39,9 @@ class u extends i.Ay.PersistedStore {
         return o[e];
     }
 }
-let c = new u(s.h, {
+let _ = new d(s.h, {
     USER_SETTINGS_PROTO_UPDATE: function () {
-        let e = d(),
+        let e = u(),
             t = !1;
         for (let n in e) e[n] !== l[n] && (delete o[n], (t = !0));
         return t;

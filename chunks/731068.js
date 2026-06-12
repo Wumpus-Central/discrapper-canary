@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, {
-    FE: () => h,
+    FE: () => f,
     IS: () => c,
     Rr: () => p,
     Uv: () => _,
-    aG: () => f,
+    aG: () => h,
     e5: () => d,
     fj: () => g,
     oU: () => E,
@@ -43,7 +43,7 @@ function _(e) {
         flags: e.flags ?? 0,
     };
 }
-function f(e) {
+function h(e) {
     let t = 0;
     (0, s.Lt)(e.flags ?? 0, u.sbO.CONTAINS_EXPLICIT_MEDIA) && (t |= 1);
     let n = 0;
@@ -65,7 +65,7 @@ function f(e) {
         }
     );
 }
-function h(e) {
+function f(e) {
     return (0, o.tT)(e.contentType)
         ? "IMAGE"
         : (0, o.XB)(e.contentType) && null != e.proxyUrl && null != l.A.toURLSafe(e.proxyUrl)
@@ -74,7 +74,7 @@ function h(e) {
 }
 function p(e, t) {
     return {
-        ...f(e),
+        ...h(e),
         type: (0, o.u)(e.filename) ? "IMAGE" : (0, o.AE)(e.filename) ? "VIDEO" : "INVALID",
         alt: e.description,
         sourceMetadata: {

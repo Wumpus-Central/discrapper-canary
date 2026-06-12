@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { tp: () => h, Yn: () => f, _g: () => E, rO: () => p, Rd: () => A, Dv: () => T, s2: () => _, S: () => g }),
+n.d(t, { tp: () => f, Yn: () => h, _g: () => E, rO: () => p, Rd: () => A, Dv: () => T, s2: () => _, S: () => g }),
     n(801541);
 var i = n(889137),
     r = n(440703),
@@ -113,7 +113,7 @@ function _(e) {
         return console.error(`Unknown config version '${e?.config?.config_version}'`, t), !1;
     }
 }
-function f(e) {
+function h(e) {
     return (0, i.YW)(e)
         .with({ config_version: 2 }, (e) => {
             var t;
@@ -267,7 +267,7 @@ function f(e) {
         })
         .exhaustive();
 }
-function h(e) {
+function f(e) {
     return {
         userId: e.user_id,
         questId: e.quest_id,
@@ -300,8 +300,8 @@ function p(e) {
     return {
         id: e.id,
         preview: e.preview,
-        config: f(e.config),
-        userStatus: null == e.user_status ? null : h(e.user_status),
+        config: h(e.config),
+        userStatus: null == e.user_status ? null : f(e.user_status),
         targetedContent: e.targeted_content,
         trafficMetadataSealed: e.traffic_metadata_sealed,
     };
@@ -359,7 +359,7 @@ function g(e) {
             rewards: t.rewards.map(m),
             cosponsorMetadata: d(t.cosponsor_metadata),
         },
-        userStatus: null == e.user_status ? null : h(e.user_status),
+        userStatus: null == e.user_status ? null : f(e.user_status),
     };
 }
 function A(e) {

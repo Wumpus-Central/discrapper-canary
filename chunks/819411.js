@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     yV: "sectionDescription__8d742",
     Nr: "card__8d742",
     RI: "handImage__8d742",

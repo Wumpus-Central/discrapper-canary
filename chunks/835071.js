@@ -1,23 +1,23 @@
-n.d(t, { K: () => o, default: () => d });
-var i = n(627968);
+n.d(e, { K: () => o, default: () => d });
+var s = n(627968);
 n(64700);
-var l = n(192308),
-    s = n(87719),
-    a = n(831318),
-    r = n(985018);
-function o(e) {
-    let { onSubscribeFinish: t, stackingBehavior: s } = e;
-    (0, l.openModalLazy)(
+var i = n(192308),
+    a = n(87719),
+    c = n(831318),
+    r = n(375708);
+function o(t) {
+    let { onSubscribeFinish: e, stackingBehavior: a } = t;
+    (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.resolve().then(n.bind(n, 835071));
-            return (n) => (0, i.jsx)(e, { onSubscribeFinish: t, ...n });
+            let { default: t } = await Promise.resolve().then(n.bind(n, 835071));
+            return (n) => (0, s.jsx)(t, { onSubscribeFinish: e, ...n });
         },
-        { stackingBehavior: s },
+        { stackingBehavior: a },
     );
 }
-function d(e) {
-    let { onClose: t, ...n } = e;
-    return (0, i.jsx)(a.A, {
+function d(t) {
+    let { onClose: e, ...n } = t;
+    return (0, s.jsx)(c.A, {
         title: r.intl.string(r.t.reVc0M),
         subtitle: r.intl.string(r.t.KckEj7),
         graphic: {
@@ -25,10 +25,10 @@ function d(e) {
             type: "image",
         },
         onSecondaryClick: () => {
-            (0, s.x)(t);
+            (0, a.x)(e);
         },
         secondaryCTA: r.intl.string(r.t.PcTCB7),
-        onClose: t,
+        onClose: e,
         ...n,
     });
 }

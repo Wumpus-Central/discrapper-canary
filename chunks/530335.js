@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Qs: "content__38377",
     wm: "logo__38377",
     DD: "title__38377",

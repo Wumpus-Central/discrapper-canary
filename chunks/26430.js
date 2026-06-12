@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { _: () => r });
+n.d(t, { _: () => a });
 var l = n(627968);
 n(64700);
 var i = n(661531),
     s = n(996682),
-    a = n(27989);
-let r = (e) => {
+    r = n(27989);
+let a = (e) => {
     let {
             size: t = "md",
             width: n,
-            height: r,
+            height: a,
             color: o = i.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: c = "",
             ...u
         } = e,
-        d = (0, a.J)(t),
+        d = (0, r.J)(t),
         h = d?.width ?? n,
-        m = d?.height ?? r;
+        m = d?.height ?? a;
     return (0, l.jsx)("svg", {
         ...(0, s.A)(u),
         xmlns: "http://www.w3.org/2000/svg",

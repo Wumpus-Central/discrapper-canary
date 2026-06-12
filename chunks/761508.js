@@ -10,24 +10,24 @@ var i = n(627968),
     c = n(939249),
     d = n(834730),
     _ = n(650583),
-    f = n(549107);
-let h = { side: f.Cf, top: f.Mn, "top-pill": f.vO },
+    h = n(549107);
+let f = { side: h.Cf, top: h.Mn, "top-pill": h.vO },
     p = r.forwardRef(function (e, t) {
         let { className: n, onClick: r, children: s, "aria-expanded": o, "aria-controls": l } = e;
         return (0, i.jsx)(c.D, {
             innerRef: t,
             tabIndex: null == r ? -1 : 0,
-            className: a()(f.wx, n),
+            className: a()(h.wx, n),
             onClick: r,
             "aria-expanded": o,
             "aria-controls": l,
             focusProps: { offset: { top: -6 } },
-            children: (0, i.jsx)(d.E, { variant: "eyebrow", color: "none", className: f.TK, children: s }),
+            children: (0, i.jsx)(d.E, { variant: "eyebrow", color: "none", className: h.TK, children: s }),
         });
     });
 function E(e) {
     let { style: t } = e;
-    return (0, i.jsx)("div", { className: f.me, style: t });
+    return (0, i.jsx)("div", { className: h.me, style: t });
 }
 let m = r.forwardRef(function (e, t) {
     let { children: n, id: r, ...s } = e;
@@ -92,7 +92,7 @@ class I extends r.Component {
                 onContextMenu: u,
                 clickableRef: d,
                 clickableInnerRef: _,
-                look: h,
+                look: f,
                 disableItemStyles: p,
                 role: E = "tab",
             } = this.props,
@@ -101,12 +101,12 @@ class I extends r.Component {
             I = "button" === E;
         return (0, i.jsx)(c.D, {
             className: a()(t, {
-                [f.AS]: !p,
-                [f.wk]: "brand" === h,
-                [f.wH]: null == s && A,
-                [f.Sp]: "grey" === h,
-                [f.r9]: null == s && l,
-                [f.RD]: "destructive" === o,
+                [h.AS]: !p,
+                [h.wk]: "brand" === f,
+                [h.wH]: null == s && A,
+                [h.Sp]: "grey" === f,
+                [h.r9]: null == s && l,
+                [h.RD]: "destructive" === o,
             }),
             style: this.getStyle(),
             role: E,
@@ -177,7 +177,7 @@ class T extends r.Component {
         } = this.props;
         return (0, i.jsx)("div", {
             ref: this.tabBarRef,
-            className: a()(e, h[n]),
+            className: a()(e, f[n]),
             style: s,
             role: "tablist",
             "aria-orientation": l,

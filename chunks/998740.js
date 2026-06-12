@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var r = n(17928),
     s = n(228366),
     a = n(287809);
@@ -26,7 +26,7 @@ class l extends r.Ay.Store {
         return i?.genres[e]?.songs;
     }
 }
-let d = new l(s.h, {
+let u = new l(s.h, {
     HAVEN_CONNECT: (e) => {
         console.log("HAVEN_CONNECT", e), (o[e.room.roomId] = e.room);
     },

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Bn: () => E, R4: () => m, ev: () => _, h: () => p, sW: () => h, tS: () => f }), n(323874), n(14289), n(35956);
+n.d(t, { Bn: () => E, R4: () => m, ev: () => _, h: () => p, sW: () => f, tS: () => h }), n(323874), n(14289), n(35956);
 var i,
     r,
     s = n(839214),
@@ -15,8 +15,8 @@ var i,
         (i.APPLICATION = "application"),
         (i.CATEGORY = "category"),
         i);
-let f = (0, s.D)(() => ({}));
-var h =
+let h = (0, s.D)(() => ({}));
+var f =
     (((r = {}).EXTERNAL = "External"),
     (r.KEYBOARD_SHORTCUT = "Keyboard Shortcut"),
     (r.APPLICATION_DIRECTORY_URL = "Application Directory URL"),
@@ -63,14 +63,14 @@ function m() {
             ],
             exact: !0,
         }),
-        { applicationId: s, section: _, skuId: f } = r?.params ?? {};
+        { applicationId: s, section: _, skuId: h } = r?.params ?? {};
     if (null != r && null != s) {
         let e = l.A.getApplication(s)?.name;
         return {
             type: "application",
             applicationId: s,
             applicationName: e,
-            section: _ ?? (null != f ? c.GlobalDiscoveryAppsSections.STORE : c.GlobalDiscoveryAppsSections.ABOUT),
+            section: _ ?? (null != h ? c.GlobalDiscoveryAppsSections.STORE : c.GlobalDiscoveryAppsSections.ABOUT),
         };
     }
 }

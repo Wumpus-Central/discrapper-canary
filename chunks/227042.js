@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(652215);
-function i(e) {
+n.d(t, { A: () => r });
+var i = n(652215);
+function r(e) {
     let { LayerStore: t, PopoutWindowStore: n } = e,
-        i = t.hasLayers(),
-        a = n.getWindowOpen(r.MLl.CHANNEL_CALL_POPOUT) || n.getWindowOpen(r.MLl.ACTIVITY_POPOUT);
-    return i && !a;
+        r = t.hasLayers(),
+        s = n.getWindowOpen(i.MLl.CHANNEL_CALL_POPOUT) || n.getWindowOpen(i.MLl.ACTIVITY_POPOUT);
+    return r && !s;
 }

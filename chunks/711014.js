@@ -1,19 +1,19 @@
 "use strict";
-let r;
-n.d(t, { Ay: () => F }), n(321073);
-var i = n(812729),
-    s = n.n(i),
+let i;
+n.d(t, { Ay: () => V }), n(321073);
+var r = n(812729),
+    s = n.n(r),
     a = n(284009),
     o = n.n(a),
     l = n(212455),
     u = n(263715),
-    d = n(857071),
-    c = n(617617),
+    c = n(857071),
+    d = n(617617),
     _ = n(583613),
-    f = n(403362),
-    E = n(383394),
-    h = n(919638),
-    p = n(696451),
+    h = n(403362),
+    f = n(383394),
+    p = n(919638),
+    E = n(696451),
     m = n(71393),
     g = n(536802),
     A = n(543465),
@@ -43,91 +43,91 @@ function y(e, t) {
             if (0 !== t.guildIds.length)
                 if (null == t.folderId) T.addNode((0, u.EL)(t.guildIds[0]));
                 else {
-                    let e = (0, u.xW)(t, void 0, E.A.isFolderExpanded(t.folderId));
+                    let e = (0, u.xW)(t, void 0, f.A.isFolderExpanded(t.folderId));
                     for (let n of (T.addNode(e), t.guildIds)) T.addNode((0, u.EL)(n), e);
                 }
     for (let e of T.allNodes())
         e.type === u.PJ.GUILD &&
-            (d.A.isLurking(e.id) ||
-                p.Ay.isCurrentUserGuest(e.id) ||
-                (null == m.A.getGuild(e.id) && !h.A.isUnavailable(e.id))) &&
+            (c.A.isLurking(e.id) ||
+                E.Ay.isCurrentUserGuest(e.id) ||
+                (null == m.A.getGuild(e.id) && !p.A.isUnavailable(e.id))) &&
             T.removeNode(e);
     for (let e of Object.values(T.nodes)) e.type === u.PJ.FOLDER && 0 === e.children.length && T.removeNode(e);
     for (let e of m.A.getGuildIds()) {
         let t, n;
         (t = e),
             null != T.nodes[t] ||
-                d.A.isLurking(e) ||
-                p.Ay.isCurrentUserGuest(e) ||
+                c.A.isLurking(e) ||
+                E.Ay.isCurrentUserGuest(e) ||
                 ((n = e), T.addNode((0, u.EL)(n), T.root, !1));
     }
     T.version = n.version;
-    let r = s()(n, T);
-    return r ? (T = n) : (T.version = n.version + 1), !r;
+    let i = s()(n, T);
+    return i ? (T = n) : (T.version = n.version + 1), !i;
 }
 function N() {
-    return y(c.A.getGuildFolders() ?? [], c.A.settings.guildFolders?.guildPositions ?? []);
+    return y(d.A.getGuildFolders() ?? [], d.A.settings.guildFolders?.guildPositions ?? []);
 }
-function O() {
-    let e = c.A.getGuildFolders();
-    return !(null != r && s()(r, e)) && y((r = e) ?? [], c.A.settings.guildFolders?.guildPositions ?? []);
+function v() {
+    let e = d.A.getGuildFolders();
+    return !(null != i && s()(i, e)) && y((i = e) ?? [], d.A.settings.guildFolders?.guildPositions ?? []);
 }
-function R(e) {
-    let { sourceId: t, targetId: n, moveToBelow: r, combine: i } = e,
+function C(e) {
+    let { sourceId: t, targetId: n, moveToBelow: i, combine: r } = e,
         s = T.getNode(t),
         a = T.getNode(n);
     if (null == s || null == a) return !1;
     if (
         (o()(
-            !(i && s.type === u.PJ.FOLDER),
+            !(r && s.type === u.PJ.FOLDER),
             `[SORTED GUILDS] Can't combine a folder ${s.id} with another guilds list item`,
         ),
         o()(
-            !(i && null != a.parentId),
+            !(r && null != a.parentId),
             `[SORTED GUILDS] Can't combine with a guild ${a.id} that's already inside of a folder`,
         ),
         o()(
             s.type !== u.PJ.FOLDER || null == a.parentId,
             `[SORTED GUILDS] Can't move a folder ${s.id} to inside of another folder ${a.parentId}`,
         ),
-        i)
+        r)
     ) {
         let e = a.type !== u.PJ.FOLDER ? T.convertToFolder(a) : a;
-        T.moveInto(s, e, r);
-    } else T.moveNextTo(s, a, r);
+        T.moveInto(s, e, i);
+    } else T.moveNextTo(s, a, i);
 }
-function v(e) {
+function R(e) {
     let { sourceIds: t, name: n } = e,
-        r = t.shift();
-    if (null == r) return !1;
-    let i = T.getNode(r);
+        i = t.shift();
     if (null == i) return !1;
-    let s = T.convertToFolder(i);
+    let r = T.getNode(i);
+    if (null == r) return !1;
+    let s = T.convertToFolder(r);
     (s.name = n),
         t.forEach((e) => {
             let t = T.getNode(e);
             null != t && T.moveInto(t, s, !0);
         });
 }
-function C(e) {
-    let { targetId: t, sourceIds: n, ...r } = e,
-        i = T.getNode(t);
-    if (null == i || i.type !== u.PJ.FOLDER) return !1;
-    let s = "" === r.name ? void 0 : r.name;
-    if (s !== i.name) {
-        let e = T.cloneNode(i);
-        o()(e.id === i.id, "[SORTED GUILDS] Replacement folder node must have same id."),
+function O(e) {
+    let { targetId: t, sourceIds: n, ...i } = e,
+        r = T.getNode(t);
+    if (null == r || r.type !== u.PJ.FOLDER) return !1;
+    let s = "" === i.name ? void 0 : i.name;
+    if (s !== r.name) {
+        let e = T.cloneNode(r);
+        o()(e.id === r.id, "[SORTED GUILDS] Replacement folder node must have same id."),
             (e.name = s),
-            T.replaceNode(i, e);
+            T.replaceNode(r, e);
     }
     let a = T.getNode(t);
     if (null == a) return !1;
-    let l = a.children.map((e) => e.id).filter(f.Vq),
-        d = new Set(l),
-        c = new Set(n),
-        _ = new Set([...l].filter((e) => !c.has(e)));
+    let l = a.children.map((e) => e.id).filter(h.Vq),
+        c = new Set(l),
+        d = new Set(n),
+        _ = new Set([...l].filter((e) => !d.has(e)));
     n
-        .filter((e) => !d.has(e))
+        .filter((e) => !c.has(e))
         .forEach((e) => {
             let t = T.getNode(e);
             null != t && T.moveInto(t, a, !0);
@@ -143,32 +143,32 @@ function b(e) {
     if (null == n || n.type !== u.PJ.FOLDER) return !1;
     n.children
         .map((e) => e.id)
-        .filter(f.Vq)
+        .filter(h.Vq)
         .forEach((e) => {
             let t = T.getNode(e);
             null != t && T.moveNextTo(t, n, !0);
         });
 }
 function D(e) {
-    let { guildId: t, joinedAt: n, user: r } = e,
-        i = I.default.getCurrentUser(),
+    let { guildId: t, joinedAt: n, user: i } = e,
+        r = I.default.getCurrentUser(),
         s = m.A.getGuild(t);
-    if (i?.id !== r.id || null == s) return !1;
+    if (r?.id !== i.id || null == s) return !1;
     let a = "string" == typeof n ? new Date(n) : n;
     return a !== s.joinedAt && null != a && N();
 }
 function L(e) {
     let { folderId: t } = e,
         n = T.getNode(t),
-        r = E.A.isFolderExpanded(t);
-    if (null == n || n.type !== u.PJ.FOLDER || n.expanded === r) return !1;
-    P(n, r);
+        i = f.A.isFolderExpanded(t);
+    if (null == n || n.type !== u.PJ.FOLDER || n.expanded === i) return !1;
+    P(n, i);
 }
 function w(e) {
     let { folderId: t, expanded: n } = e,
-        r = T.getNode(t);
-    if (null == r || r.type !== u.PJ.FOLDER || r.expanded === n) return !1;
-    P(r, n);
+        i = T.getNode(t);
+    if (null == i || i.type !== u.PJ.FOLDER || i.expanded === n) return !1;
+    P(i, n);
 }
 function M() {
     for (let e of T.allNodes()) e.type === u.PJ.FOLDER && e.expanded && P(e, !1);
@@ -179,9 +179,9 @@ function P(e, t) {
         (n.expanded = t),
         T.replaceNode(e, n);
 }
-let U = (0, _.L_)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
+let x = (0, _.L_)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
     k = (0, _.L_)((e, t) => e.getRoots().map(S)),
-    x = (0, _.L_)((e, t) => {
+    U = (0, _.L_)((e, t) => {
         let n = [];
         return (
             !(function e(t) {
@@ -196,7 +196,7 @@ let U = (0, _.L_)((e, t) => e.sortedGuildNodes().map((e) => e.id)),
         );
     }),
     G = (0, _.L_)((e, t) => e.root.children.map(S));
-class V extends g.A {
+class F extends g.A {
     static displayName = "SortedGuildStore";
     static LATEST_SNAPSHOT_VERSION = 2;
     constructor() {
@@ -207,10 +207,10 @@ class V extends g.A {
             GUILD_CREATE: N,
             GUILD_DELETE: N,
             GUILD_MEMBER_ADD: D,
-            USER_SETTINGS_PROTO_UPDATE: O,
-            GUILD_MOVE_BY_ID: R,
-            GUILD_FOLDER_CREATE_LOCAL: v,
-            GUILD_FOLDER_EDIT_LOCAL: C,
+            USER_SETTINGS_PROTO_UPDATE: v,
+            GUILD_MOVE_BY_ID: C,
+            GUILD_FOLDER_CREATE_LOCAL: R,
+            GUILD_FOLDER_EDIT_LOCAL: O,
             GUILD_FOLDER_DELETE_LOCAL: b,
             TOGGLE_GUILD_FOLDER_EXPAND: L,
             SET_GUILD_FOLDER_EXPANDED: w,
@@ -218,7 +218,7 @@ class V extends g.A {
         });
     }
     initialize() {
-        this.waitFor(m.A, A.Ay, c.A, h.A, d.A, E.A, l.A);
+        this.waitFor(m.A, A.Ay, d.A, p.A, c.A, f.A, l.A);
     }
     getGuildsTree() {
         return T;
@@ -230,10 +230,10 @@ class V extends g.A {
         return this.getGuildFolders().find((t) => t.folderId === e);
     }
     getFlattenedGuildIds() {
-        return U(T, T.version);
+        return x(T, T.version);
     }
     getFlattenedGuildFolderList() {
-        return x(T, T.version);
+        return U(T, T.version);
     }
     getCompatibleGuildFolders() {
         return G(T, T.version);
@@ -242,14 +242,14 @@ class V extends g.A {
         return T.getRoots();
     }
     loadCache = () => {
-        let e = this.readSnapshot(V.LATEST_SNAPSHOT_VERSION),
+        let e = this.readSnapshot(F.LATEST_SNAPSHOT_VERSION),
             t = e?.tree;
         if (null != t)
             for (let e of ((T = new u.zF()).loadSnapshot(t), T.allNodes()))
-                e.type === u.PJ.FOLDER && (e.expanded = E.A.isFolderExpanded(e.id));
+                e.type === u.PJ.FOLDER && (e.expanded = f.A.isFolderExpanded(e.id));
     };
     takeSnapshot() {
-        return { version: V.LATEST_SNAPSHOT_VERSION, data: { tree: T.getSnapshot() } };
+        return { version: F.LATEST_SNAPSHOT_VERSION, data: { tree: T.getSnapshot() } };
     }
 }
-let F = new V();
+let V = new F();

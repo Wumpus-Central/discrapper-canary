@@ -1,15 +1,15 @@
-n.d(t, { A: () => l });
-var i = n(64700),
-    r = n(228366);
-function l(e) {
-    let t = (0, i.useRef)(e);
-    (0, i.useEffect)(() => {
-        t.current = e;
+c.d(u, { A: () => t });
+var s = c(64700),
+    r = c(228366);
+function t(e) {
+    let u = (0, s.useRef)(e);
+    (0, s.useEffect)(() => {
+        u.current = e;
     }, [e]),
-        (0, i.useEffect)(() => {
+        (0, s.useEffect)(() => {
             if (__OVERLAY__) {
                 function e(e) {
-                    e.locked && t.current();
+                    e.locked && u.current();
                 }
                 return (
                     r.h.subscribe("OVERLAY_SET_INPUT_LOCKED", e),

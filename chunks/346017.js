@@ -1,4 +1,4 @@
-a.d(s, { Hx: () => x, NB: () => c, Xj: () => d, wX: () => o, yW: () => N });
+a.d(s, { Hx: () => x, NB: () => c, Xj: () => d, wX: () => o, yW: () => m });
 var t,
     i,
     n = a(64700),
@@ -8,7 +8,7 @@ let c = "xbox",
     d = "xbox_perks_modal";
 var o = (((t = {}).CONNECTION_FOOTER = "xbox_perks_connection_footer"), t),
     x = (((i = {}).CONNECT = "connect"), i);
-function N(e) {
+function m(e) {
     return n.useCallback(
         (s) => {
             l.default.track(r.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, { partner: c, cta_type: s, location_stack: e });

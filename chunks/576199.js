@@ -1,46 +1,46 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => C });
 var r = n(627968),
-    s = n(64700),
-    a = n(990078),
-    l = n(691540),
+    l = n(64700),
+    s = n(990078),
+    a = n(691540),
     i = n(857250),
     u = n(97483),
     o = n(408278),
     c = n(173936),
-    d = n(341915),
+    d = n(507107),
     E = n(590202),
-    m = n(971649),
+    _ = n(971649),
     f = n(651892),
-    _ = n(814793),
-    S = n(795068),
-    p = n(985018);
-function v(e) {
+    m = n(814793),
+    p = n(795068),
+    S = n(375708);
+function C(e) {
     let { floatRight: t } = e,
-        { quest: n, sourceQuestContent: v } = s.useContext(S.a),
-        g = (0, m.go)(),
-        h = (0, _.E0)(n.config),
-        A = s.useCallback(() => {
-            h &&
+        { quest: n, sourceQuestContent: C } = l.useContext(p.a),
+        v = (0, _.go)(),
+        A = (0, m.E0)(n.config),
+        g = l.useCallback(() => {
+            A &&
                 ((0, f.Xm)(n.id, {
                     content: d.uF.VIDEO_MODAL,
                     ctaContent: E.Cy.COPY_QUEST_URL,
-                    impressionId: g,
-                    sourceQuestContent: v,
+                    impressionId: v,
+                    sourceQuestContent: C,
                 }),
-                (0, l.P0)((0, i.o)(p.intl.string(p.t["+5kSoW"]), u.Ck.SUCCESS)));
-        }, [g, h, n.id, v]);
-    return h
+                (0, a.P0)((0, i.o)(S.intl.string(S.t["+5kSoW"]), u.Ck.SUCCESS)));
+        }, [v, A, n.id, C]);
+    return A
         ? (0, r.jsx)("div", {
               "data-testid": "video-quest-share-btn",
               "data-quest-id": n.id,
               style: { marginLeft: t ? "auto" : void 0, pointerEvents: "auto" },
-              children: (0, r.jsx)(a.m, {
-                  text: p.intl.string(p.t.WmfZHZ),
+              children: (0, r.jsx)(s.m, {
+                  text: S.intl.string(S.t.WmfZHZ),
                   children: (0, r.jsx)(o.K, {
                       variant: "overlay-secondary",
                       icon: c.q,
-                      "aria-label": p.intl.string(p.t.RDE0Sc),
-                      onClick: A,
+                      "aria-label": S.intl.string(S.t.RDE0Sc),
+                      onClick: g,
                   }),
               }),
           })

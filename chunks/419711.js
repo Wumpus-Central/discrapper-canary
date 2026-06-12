@@ -1,20 +1,20 @@
 "use strict";
-r.d(t, { A: () => c, t: () => u });
-var n = r(297987);
-let a = "u" > typeof Element && "checkVisibility" in Element.prototype;
+n.d(t, { A: () => c, t: () => u });
+var i = n(297987);
+let r = "u" > typeof Element && "checkVisibility" in Element.prototype;
 function s(e, t) {
-    return a
+    return r
         ? e.checkVisibility({ visibilityProperty: !0 }) && !e.closest("[data-react-aria-prevent-focus]")
         : "#comment" !== e.nodeName &&
               (function (e) {
-                  let t = (0, n.mD)(e);
+                  let t = (0, i.mD)(e);
                   if (!(e instanceof t.HTMLElement) && !(e instanceof t.SVGElement)) return !1;
-                  let { display: r, visibility: a } = e.style,
-                      s = "none" !== r && "hidden" !== a && "collapse" !== a;
+                  let { display: n, visibility: r } = e.style,
+                      s = "none" !== n && "hidden" !== r && "collapse" !== r;
                   if (s) {
                       let { getComputedStyle: t } = e.ownerDocument.defaultView,
-                          { display: r, visibility: n } = t(e);
-                      s = "none" !== r && "hidden" !== n && "collapse" !== n;
+                          { display: n, visibility: i } = t(e);
+                      s = "none" !== n && "hidden" !== i && "collapse" !== i;
                   }
                   return s;
               })(e) &&
@@ -23,7 +23,7 @@ function s(e, t) {
               ("DETAILS" !== e.nodeName || !t || "SUMMARY" === t.nodeName || e.hasAttribute("open")) &&
               (!e.parentElement || s(e.parentElement, e));
 }
-let i = [
+let a = [
         "input:not([disabled]):not([type=hidden])",
         "select:not([disabled])",
         "textarea:not([disabled])",
@@ -39,9 +39,9 @@ let i = [
         '[contenteditable]:not([contenteditable^="false"])',
         "permission",
     ],
-    o = i.join(":not([hidden]),") + ",[tabindex]:not([disabled]):not([hidden])";
-i.push('[tabindex]:not([tabindex="-1"]):not([disabled])');
-let l = i.join(':not([hidden]):not([tabindex="-1"]),');
+    o = a.join(":not([hidden]),") + ",[tabindex]:not([disabled]):not([hidden])";
+a.push('[tabindex]:not([tabindex="-1"]):not([disabled])');
+let l = a.join(':not([hidden]):not([tabindex="-1"]),');
 function u(e) {
     return e.matches(o) && s(e) && !d(e);
 }

@@ -1,25 +1,25 @@
-l.d(t, { A: () => r }), l(321073);
-var n = l(17928),
-    i = l(233993),
-    s = l(808728),
-    a = l(576705);
-function r(e) {
-    let t = e?.id ?? null;
-    return (0, n.yK)(
-        [s.Ay, a.A],
+t.d(n, { A: () => l }), t(321073);
+var i = t(17928),
+    u = t(233993),
+    c = t(808728),
+    a = t(576705);
+function l(e) {
+    let n = e?.id ?? null;
+    return (0, i.yK)(
+        [c.Ay, a.A],
         () =>
-            s.Ay.getChannels(t)[s.vM].reduce((e, t) => {
-                let l = t.channel;
+            c.Ay.getChannels(n)[c.vM].reduce((e, n) => {
+                let t = n.channel;
                 return (
-                    l.isGuildStageVoice() &&
+                    t.isGuildStageVoice() &&
                         (function (e) {
-                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.A;
-                            return !!e.isGuildStageVoice() && t.can(i.QY, e);
-                        })(t.channel, a.A) &&
-                        e.push(l),
+                            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.A;
+                            return !!e.isGuildStageVoice() && n.can(u.QY, e);
+                        })(n.channel, a.A) &&
+                        e.push(t),
                     e
                 );
             }, []),
-        [t],
+        [n],
     );
 }

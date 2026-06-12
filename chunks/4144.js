@@ -1,7 +1,7 @@
-let r = n(74509);
+let i = n(74509);
 e.exports = (e, t, n) => {
     try {
-        t = new r(t, n);
+        t = new i(t, n);
     } catch (e) {
         return !1;
     }

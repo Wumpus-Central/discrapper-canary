@@ -1,14 +1,14 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = /([-a-zA-Z$._][\w$.-]*)/,
-        n = { className: "variable", variants: [{ begin: t.concat(/%/, a) }, { begin: /%\d+/ }, { begin: /#\d+/ }] },
+        n = /([-a-zA-Z$._][\w$.-]*)/,
+        i = { className: "variable", variants: [{ begin: t.concat(/%/, n) }, { begin: /%\d+/ }, { begin: /#\d+/ }] },
         r = {
             className: "title",
             variants: [
-                { begin: t.concat(/@/, a) },
+                { begin: t.concat(/@/, n) },
                 { begin: /@\d+/ },
-                { begin: t.concat(/!/, a) },
-                { begin: t.concat(/!\d+/, a) },
+                { begin: t.concat(/!/, n) },
+                { begin: t.concat(/!\d+/, n) },
                 { begin: /!\d+/ },
             ],
         };
@@ -27,7 +27,7 @@ e.exports = function (e) {
             r,
             { className: "punctuation", relevance: 0, begin: /,/ },
             { className: "operator", relevance: 0, begin: /=/ },
-            n,
+            i,
             { className: "symbol", variants: [{ begin: /^\s*[a-z]+:/ }], relevance: 0 },
             {
                 className: "number",

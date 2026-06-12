@@ -1,11 +1,11 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = e.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] }),
-        n = "decltype\\(auto\\)",
+        n = e.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] }),
+        i = "decltype\\(auto\\)",
         r = "[a-zA-Z_]\\w{0,149}::",
-        i = "(?!struct)(" + n + "|" + t.optional(r) + "[a-zA-Z_]\\w{0,149}" + t.optional("<[^<>]+>") + ")",
-        o = { className: "type", begin: "\\b[a-z\\d_]{0,149}_t\\b" },
-        s = {
+        s = "(?!struct)(" + i + "|" + t.optional(r) + "[a-zA-Z_]\\w{0,149}" + t.optional("<[^<>]+>") + ")",
+        a = { className: "type", begin: "\\b[a-z\\d_]{0,149}_t\\b" },
+        o = {
             className: "string",
             variants: [
                 { begin: '(u8?|U|L)?"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE] },
@@ -29,7 +29,7 @@ e.exports = function (e) {
             ],
             relevance: 0,
         },
-        c = {
+        u = {
             className: "meta",
             begin: /#\s*[a-z]+\b/,
             end: /$/,
@@ -38,15 +38,15 @@ e.exports = function (e) {
             },
             contains: [
                 { begin: /\\\n/, relevance: 0 },
-                e.inherit(s, { className: "string" }),
+                e.inherit(o, { className: "string" }),
                 { className: "string", begin: /<.*?>/ },
-                a,
+                n,
                 e.C_BLOCK_COMMENT_MODE,
             ],
         },
-        _ = { className: "title", begin: t.optional(r) + e.IDENT_RE, relevance: 0 },
+        c = { className: "title", begin: t.optional(r) + e.IDENT_RE, relevance: 0 },
         d = t.optional(r) + e.IDENT_RE + "\\s*\\(",
-        m = {
+        _ = {
             type: [
                 "bool",
                 "char",
@@ -216,7 +216,7 @@ e.exports = function (e) {
                 "wstring_view",
             ],
         },
-        p = {
+        h = {
             className: "function.dispatch",
             relevance: 0,
             keywords: {
@@ -334,73 +334,73 @@ e.exports = function (e) {
                 t.lookahead(/(<[^<>]+>|)\s*\(/),
             ),
         },
-        u = [p, c, o, a, e.C_BLOCK_COMMENT_MODE, l, s],
-        g = {
+        f = [h, u, a, n, e.C_BLOCK_COMMENT_MODE, l, o],
+        p = {
             variants: [
                 { begin: /=/, end: /;/ },
                 { begin: /\(/, end: /\)/ },
                 { beginKeywords: "new throw return else", end: /;/ },
             ],
-            keywords: m,
-            contains: u.concat([{ begin: /\(/, end: /\)/, keywords: m, contains: u.concat(["self"]), relevance: 0 }]),
+            keywords: _,
+            contains: f.concat([{ begin: /\(/, end: /\)/, keywords: _, contains: f.concat(["self"]), relevance: 0 }]),
             relevance: 0,
         },
         E = {
             className: "function",
-            begin: "(" + i + "[\\*&\\s]+){1,12}" + d,
+            begin: "(" + s + "[\\*&\\s]+){1,12}" + d,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: m,
+            keywords: _,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
-                { begin: n, keywords: m, relevance: 0 },
-                { begin: d, returnBegin: !0, contains: [_], relevance: 0 },
+                { begin: i, keywords: _, relevance: 0 },
+                { begin: d, returnBegin: !0, contains: [c], relevance: 0 },
                 { begin: /::/, relevance: 0 },
-                { begin: /:/, endsWithParent: !0, contains: [s, l] },
+                { begin: /:/, endsWithParent: !0, contains: [o, l] },
                 { relevance: 0, match: /,/ },
                 {
                     className: "params",
                     begin: /\(/,
                     end: /\)/,
-                    keywords: m,
+                    keywords: _,
                     relevance: 0,
                     contains: [
-                        a,
+                        n,
                         e.C_BLOCK_COMMENT_MODE,
-                        s,
-                        l,
                         o,
+                        l,
+                        a,
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: m,
+                            keywords: _,
                             relevance: 0,
-                            contains: ["self", a, e.C_BLOCK_COMMENT_MODE, s, l, o],
+                            contains: ["self", n, e.C_BLOCK_COMMENT_MODE, o, l, a],
                         },
                     ],
                 },
-                o,
                 a,
+                n,
                 e.C_BLOCK_COMMENT_MODE,
-                c,
+                u,
             ],
         };
     return {
         name: "C++",
         aliases: ["cc", "c++", "h++", "hpp", "hh", "hxx", "cxx"],
-        keywords: m,
+        keywords: _,
         illegal: "</",
         classNameAliases: { "function.dispatch": "built_in" },
-        contains: [].concat(g, E, p, u, [
-            c,
+        contains: [].concat(p, E, h, f, [
+            u,
             {
                 begin: "\\b(deque|list|queue|priority_queue|pair|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array|tuple|optional|variant|function|flat_map|flat_set)\\s*<(?!<)",
                 end: ">",
-                keywords: m,
-                contains: ["self", o],
+                keywords: _,
+                contains: ["self", a],
             },
-            { begin: e.IDENT_RE + "::", keywords: m },
+            { begin: e.IDENT_RE + "::", keywords: _ },
             {
                 match: [/\b(?:enum(?:\s+(?:class|struct))?|class|struct|union)/, /\s+/, /\w+/],
                 className: { 1: "keyword", 3: "title.class" },

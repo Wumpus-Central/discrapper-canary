@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { DISCORD_EPOCH: () => o, default: () => u, SnowflakeSequence: () => _ });
+n.r(t), n.d(t, { DISCORD_EPOCH: () => o, default: () => d, SnowflakeSequence: () => c });
 var i = n(735438),
     r = n.n(i),
     s = n(824120),
@@ -8,11 +8,11 @@ let o = 14200704e5;
 function l(e) {
     return Math.floor(Number(e) / 4194304) + o;
 }
-function d(e) {
+function u(e) {
     let t = e - o;
     return t <= 0 ? "0" : a()(t).shiftLeft(22).toString();
 }
-class _ {
+class c {
     seq;
     constructor() {
         this.seq = 0;
@@ -28,7 +28,7 @@ class _ {
         this.seq = 0;
     }
 }
-let u = {
+let d = {
     age: function (e) {
         return Date.now() - l(e);
     },
@@ -51,13 +51,13 @@ let u = {
                       : -1;
     },
     atPreviousMillisecond: function (e) {
-        return d(l(e) - 1);
+        return u(l(e) - 1);
     },
     atNextMillisecond: function (e) {
-        return d(l(e) + 1);
+        return u(l(e) + 1);
     },
     fromTimestamp: function (e) {
-        return d(e);
+        return u(e);
     },
     fromTimestampWithSequence: function (e, t) {
         let n;

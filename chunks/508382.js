@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $Y: () => m, IP: () => _, Ow: () => p, Pv: () => E, jQ: () => f }), n(321073);
+n.d(t, { $Y: () => m, IP: () => _, Ow: () => p, Pv: () => E, jQ: () => h }), n(321073);
 var i = n(627968),
     r = n(64700),
     s = n(879821),
@@ -10,13 +10,13 @@ var i = n(627968),
     c = n(337836),
     d = n(625767);
 let _ = "data-popover-layer",
-    f = r.createContext(null);
-function h(e) {
+    h = r.createContext(null);
+function f(e) {
     let t,
         {
             focus: n = "none",
             returnFocusElement: l,
-            ownerDocument: h = document,
+            ownerDocument: f = document,
             open: p,
             onOpenChange: E,
             id: m,
@@ -25,12 +25,12 @@ function h(e) {
             overrideTargetRect: I,
             placement: T = "bottom",
             spacing: S = 8,
-            autoFlip: N = !0,
-            crossAccessFlip: y = !0,
-            autoShift: C = !0,
-            strategy: v = "fixed",
-            portal: O = !0,
-            blockPointerEvents: R = !1,
+            autoFlip: y = !0,
+            crossAccessFlip: N = !0,
+            autoShift: v = !0,
+            strategy: C = "fixed",
+            portal: R = !0,
+            blockPointerEvents: O = !1,
             children: b,
             renderLayer: D,
             viewportPadding: L = 8,
@@ -39,21 +39,21 @@ function h(e) {
             hoverDelay: P = 100,
             autoUpdate: x = !1,
         } = e,
-        U = r.useRef(l ?? null);
+        k = r.useRef(l ?? null);
     r.useLayoutEffect(() => {
-        U.current = l ?? null;
+        k.current = l ?? null;
     }, [l]);
-    let k = r.useMemo(() => {
+    let U = r.useMemo(() => {
             let e = [(0, s.cY)(S)];
             return (
-                N && e.push((0, s.UU)({ crossAxis: y, padding: L, boundary: h.body })),
-                C && e.push((0, s.BN)({ padding: L, limiter: (0, s.ER)(), boundary: h.body })),
+                y && e.push((0, s.UU)({ crossAxis: N, padding: L, boundary: f.body })),
+                v && e.push((0, s.BN)({ padding: L, limiter: (0, s.ER)(), boundary: f.body })),
                 e.push((0, s.jD)({ strategy: "referenceHidden" })),
                 null != w &&
                     e.push(
                         (0, s.Ej)({
                             padding: L,
-                            boundary: h.body,
+                            boundary: f.body,
                             apply(e) {
                                 let { availableHeight: t, elements: n } = e,
                                     i = Math.min(w, t);
@@ -63,7 +63,7 @@ function h(e) {
                     ),
                 e
             );
-        }, [S, N, C, L, y, h, w]),
+        }, [S, y, v, L, N, f, w]),
         G = (0, a.fI)(),
         {
             refs: F,
@@ -77,8 +77,8 @@ function h(e) {
             placement: T,
             open: p,
             onOpenChange: E,
-            strategy: v,
-            middleware: k,
+            strategy: C,
+            middleware: U,
             whileElementsMounted: x
                 ? (e, t, n) =>
                       (0, o.ll)(e, t, n, {
@@ -93,36 +93,36 @@ function h(e) {
     }, [F, I, A]);
     let W = (0, a.s9)(Y),
         K = (0, a.Mk)(Y, { restMs: P, delay: { open: P, close: 0 }, enabled: "hover" === M, handleClose: (0, a.iB)() }),
-        { getReferenceProps: z, getFloatingProps: $ } = (0, a.bv)([W, K]),
+        { getReferenceProps: $, getFloatingProps: z } = (0, a.bv)([W, K]),
         q = H.hide?.referenceHidden ? "hidden" : "visible",
-        Z = O ? c.sM : r.Fragment,
-        X = r.useMemo(() => ({ focus: n }), [n]);
+        X = R ? c.sM : r.Fragment,
+        Z = r.useMemo(() => ({ focus: n }), [n]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            b({ ref: F.setReference, props: z() }),
+            b({ ref: F.setReference, props: $() }),
             (0, i.jsx)(a.$c, {
                 id: G,
                 children:
                     p &&
-                    (0, i.jsxs)(Z, {
-                        ownerDocument: h,
+                    (0, i.jsxs)(X, {
+                        ownerDocument: f,
                         children: [
-                            R ? (0, i.jsx)(a.zR, { lockScroll: !0 }) : null,
+                            O ? (0, i.jsx)(a.zR, { lockScroll: !0 }) : null,
                             ((t = (0, i.jsx)("div", {
                                 id: m,
                                 className: u()(g, d.q),
                                 [_]: !0,
                                 style: { ...V, visibility: q },
                                 ref: F.setFloating,
-                                ...$(),
-                                children: (0, i.jsx)(f.Provider, {
-                                    value: X,
+                                ...z(),
+                                children: (0, i.jsx)(h.Provider, {
+                                    value: Z,
                                     children: D({ placement: B, update: j, hidden: "hidden" === q, shift: H.shift }),
                                 }),
                             })),
                             "none" === n
                                 ? t
-                                : (0, i.jsx)(a.s3, { context: Y, modal: "modal" === n, returnFocus: U, children: t })),
+                                : (0, i.jsx)(a.s3, { context: Y, modal: "modal" === n, returnFocus: k, children: t })),
                         ],
                     }),
             }),
@@ -130,7 +130,7 @@ function h(e) {
     });
 }
 function p(e) {
-    return null == (0, a.R1)() ? (0, i.jsx)(a.P6, { children: (0, i.jsx)(h, { ...e }) }) : (0, i.jsx)(h, { ...e });
+    return null == (0, a.R1)() ? (0, i.jsx)(a.P6, { children: (0, i.jsx)(f, { ...e }) }) : (0, i.jsx)(f, { ...e });
 }
 function E(e, t) {
     switch (e) {

@@ -10,7 +10,7 @@ var i,
     c = n(576705),
     d = (((i = {})[(i.SendMessage = 0)] = "SendMessage"), (i[(i.CreateThread = 1)] = "CreateThread"), i);
 let _ = { 0: {}, 1: {} };
-function f(e, t, n) {
+function h(e, t, n) {
     var i, r;
     if (((i = e), null != _[(r = t)][i.id] && (_[r][i.id].timer.stop(), delete _[r][i.id]), (0, o.F3)(e, t) || n <= 0))
         return;
@@ -29,15 +29,15 @@ function f(e, t, n) {
             !0,
         );
 }
-function h(e, t) {
+function f(e, t) {
     let n = u.A.getChannel(e);
     if (null == n) return !1;
-    f(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * l.A.Millis.SECOND + 100);
+    h(n, t, 0 === n.rateLimitPerUser ? 0 : n.rateLimitPerUser * l.A.Millis.SECOND + 100);
 }
 function p(e) {
     let { channelId: t } = e,
         n = u.A.getChannel(t);
-    return null != n && f(n, 0, 0);
+    return null != n && h(n, 0, 0);
 }
 class E extends r.Ay.Store {
     static displayName = "SlowmodeStore";
@@ -55,17 +55,17 @@ class E extends r.Ay.Store {
 let m = new E(a.h, {
     SLOWMODE_RESET_COOLDOWN: function (e) {
         let { channelId: t, slowmodeType: n } = e;
-        return h(t, n);
+        return f(t, n);
     },
     SLOWMODE_SET_COOLDOWN: function (e) {
         let { channelId: t, slowmodeType: n, cooldownMs: i } = e,
             r = u.A.getChannel(t);
         if (null == r) return !1;
-        f(r, n, 0 === i ? 0 : i + 100);
+        h(r, n, 0 === i ? 0 : i + 100);
     },
     UPLOAD_START: function (e) {
         let { channelId: t } = e;
-        return h(t, 0);
+        return f(t, 0);
     },
     UPLOAD_FAIL: p,
     UPLOAD_CANCEL_REQUEST: p,
@@ -75,7 +75,7 @@ let m = new E(a.h, {
             for (let n of t) {
                 let t = _[e][n.id],
                     i = n.rateLimitPerUser;
-                null != t && t.rateLimitPerUser !== i && f(n, e, Math.min(t?.cooldownMs ?? 0, i * l.A.Millis.SECOND));
+                null != t && t.rateLimitPerUser !== i && h(n, e, Math.min(t?.cooldownMs ?? 0, i * l.A.Millis.SECOND));
             }
         });
     },

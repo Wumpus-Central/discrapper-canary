@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, { A: () => N });
-var r = n(687123),
-    i = n(508602),
-    s = n(843472),
+var i = n(687123),
+    r = n(508602),
+    s = n(720149),
     a = n(155718),
     o = n(439372),
-    l = n(128265),
+    l = n(292446),
     u = n(626584),
-    d = n(473503),
-    c = n(207560),
-    _ = n(662502),
-    f = n(734057),
-    E = n(320501),
-    h = n(309010),
-    p = n(287809),
+    c = n(473503),
+    d = n(207560),
+    _ = n(381689),
+    h = n(734057),
+    f = n(232835),
+    p = n(309010),
+    E = n(287809),
     m = n(847599),
     g = n(36149),
     A = n(652215),
@@ -21,9 +21,9 @@ var r = n(687123),
 let T = new u.A("AgeVerificationManager");
 function S(e) {
     let { channelId: t, message: n } = e,
-        r = E.A.getMessage(t, n.id);
-    if (r?.embeds?.[0]?.type === i.A.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
-        let e = r.embeds[0].fields?.find((e) => e.rawName === g.uN.CONTENT_TYPE);
+        i = f.A.getMessage(t, n.id);
+    if (i?.embeds?.[0]?.type === r.A.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
+        let e = i.embeds[0].fields?.find((e) => e.rawName === g.uN.CONTENT_TYPE);
         e?.rawValue === g.Wv.ERROR
             ? (_.A.showFailedToast(I.OB.TIGGER_PAWTECT_ERROR), (0, m.Vh)(m.oQ.ERROR))
             : e?.rawValue === g.Wv.VERIFIED_ADULT
@@ -35,31 +35,31 @@ function S(e) {
 class y extends o.A {
     _previousAgeVerificationStatus = null;
     handlePostConnectionOpen = () => {
-        this._previousAgeVerificationStatus = p.default.getCurrentUser()?.ageVerificationStatus ?? null;
+        this._previousAgeVerificationStatus = E.default.getCurrentUser()?.ageVerificationStatus ?? null;
     };
     handleCurrentUserUpdate = (e) => {
         let { user: t } = e,
-            n = (0, p.transformUser)(t).ageVerificationStatus ?? null,
-            i =
+            n = (0, E.transformUser)(t).ageVerificationStatus ?? null,
+            r =
                 this._previousAgeVerificationStatus !== n &&
                 n === a.Tk.VERIFIED_ADULT &&
-                (0, c.d6)(r.t.AGE_GATED_SPACES);
+                (0, d.d6)(i.t.AGE_GATED_SPACES);
         try {
-            if (i) {
-                let e = h.A.getChannelId(),
+            if (r) {
+                let e = p.A.getChannelId(),
                     t = !1;
                 if (
                     (l.A.forEach((n) => {
-                        let { channelId: r } = n,
-                            i = f.A.getChannel(r);
-                        i?.nsfw && (l.A.clear(r), r === e && (t = !0));
+                        let { channelId: i } = n,
+                            r = h.A.getChannel(i);
+                        r?.nsfw && (l.A.clear(i), i === e && (t = !0));
                     }),
                     t && null != e)
                 ) {
                     let t;
                     s.A.fetchMessages({ channelId: e, limit: A.EMb }),
-                        (t = f.A.getChannel(e)),
-                        (t?.type === A.rbe.GUILD_FORUM || t?.type === A.rbe.GUILD_MEDIA) && (0, d.kB)(t);
+                        (t = h.A.getChannel(e)),
+                        (t?.type === A.rbe.GUILD_FORUM || t?.type === A.rbe.GUILD_MEDIA) && (0, c.kB)(t);
                 }
             }
         } catch (e) {

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     nd: "panel__3932d",
     $H: "tabBar__3932d",
     V3: "tabItem__3932d",

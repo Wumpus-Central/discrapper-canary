@@ -1,46 +1,46 @@
-t.d(n, { A: () => v });
-var l = t(627968),
-    i = t(64700),
-    r = t(17928),
-    a = t(22231),
-    s = t(922016),
-    o = t(550079),
-    d = t(477782),
-    u = t(474397),
-    c = t(206835),
-    g = t(495544),
-    m = t(71393),
-    f = t(207803),
-    p = t(183555),
-    x = t(61881),
-    A = t(993401),
-    h = t(985018);
-function v(e) {
-    let { user: n, guildId: t, fullWidth: v, appContext: j, onClose: I } = e,
-        b = (0, r.bG)([g.default], () => g.default.getId() === n.id),
-        C = (0, r.bG)([m.A], () => (null != t ? m.A.getGuild(t) : null)),
-        N = (0, r.bG)([x.A], () => x.A.hasUnsavedChanges()),
-        y = (0, c.A)({ guild: C }),
-        E = (0, c.A)({}),
-        { trackUserProfileAction: P } = (0, p.NJ)(),
-        R = i.useRef(null);
-    return b
-        ? null == C
-            ? (0, l.jsx)(A.FD, {
+i.d(n, { A: () => x });
+var l = i(627968),
+    e = i(64700),
+    r = i(17928),
+    a = i(22231),
+    s = i(922016),
+    o = i(980707),
+    u = i(477782),
+    d = i(474397),
+    c = i(206835),
+    p = i(495544),
+    g = i(71393),
+    f = i(207803),
+    v = i(183555),
+    A = i(61881),
+    b = i(993401),
+    h = i(375708);
+function x(t) {
+    let { user: n, guildId: i, fullWidth: x, appContext: I, onClose: E } = t,
+        F = (0, r.bG)([p.default], () => p.default.getId() === n.id),
+        R = (0, r.bG)([g.A], () => (null != i ? g.A.getGuild(i) : null)),
+        j = (0, r.bG)([A.A], () => A.A.hasUnsavedChanges()),
+        k = (0, c.A)({ guild: R }),
+        m = (0, c.A)({}),
+        { trackUserProfileAction: D } = (0, v.NJ)(),
+        C = e.useRef(null);
+    return F
+        ? null == R
+            ? (0, l.jsx)(b.FD, {
                   action: "EDIT_PROFILE",
                   text: h.intl.string(h.t.s5vZlQ),
                   icon: a.R,
                   autoFocus: !0,
-                  fullWidth: v,
+                  fullWidth: x,
                   variant: "primary",
                   onClick: () => {
-                      N ? (0, f.VQ)() : (I?.(), E(), (0, u.A)(j));
+                      j ? (0, f.VQ)() : (E?.(), m(), (0, d.A)(I));
                   },
               })
             : (0, l.jsx)(s.Y, {
-                  targetElementRef: R,
-                  renderPopout: (e) => {
-                      let { closePopout: n } = e;
+                  targetElementRef: C,
+                  renderPopout: (t) => {
+                      let { closePopout: n } = t;
                       return (0, l.jsxs)(o.W, {
                           "data-menu-needs-review": !0,
                           onSelect: void 0,
@@ -48,38 +48,38 @@ function v(e) {
                           onClose: n,
                           "aria-label": h.intl.string(h.t.AXIHpV),
                           children: [
-                              (0, l.jsx)(d.Dr, {
+                              (0, l.jsx)(u.Dr, {
                                   id: "edit-server-profile",
                                   label: h.intl.string(h.t["PKQB/H"]),
                                   subtext: h.intl.string(h.t.VYHWKJ),
                                   action: () => {
-                                      P({ action: "EDIT_GUILD_PROFILE" }), I?.(), y(), (0, u.A)(j);
+                                      D({ action: "EDIT_GUILD_PROFILE" }), E?.(), k(), (0, d.A)(I);
                                   },
                               }),
-                              (0, l.jsx)(d.Dr, {
+                              (0, l.jsx)(u.Dr, {
                                   id: "edit-main-profile",
                                   label: h.intl.string(h.t.HmFaFB),
                                   subtext: h.intl.string(h.t["+EERMk"]),
                                   action: () => {
-                                      P({ action: "EDIT_PROFILE" }), I?.(), E(), (0, u.A)(j);
+                                      D({ action: "EDIT_PROFILE" }), E?.(), m(), (0, d.A)(I);
                                   },
                               }),
                           ],
                       });
                   },
-                  children: (e) => {
-                      let { onClick: n, ...t } = e;
-                      return (0, l.jsx)(A.FD, {
-                          buttonRef: R,
+                  children: (t) => {
+                      let { onClick: n, ...i } = t;
+                      return (0, l.jsx)(b.FD, {
+                          buttonRef: C,
                           text: h.intl.string(h.t.s5vZlQ),
                           icon: a.R,
                           autoFocus: !0,
-                          fullWidth: v,
+                          fullWidth: x,
                           variant: "primary",
                           onClick: () => {
-                              N ? (0, f.VQ)() : n?.();
+                              j ? (0, f.VQ)() : n?.();
                           },
-                          ...t,
+                          ...i,
                       });
                   },
               })

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { dx: () => c, UF: () => d, Sc: () => _, Lg: () => f }), n(938796);
+n.d(t, { dx: () => c, UF: () => d, Sc: () => _, Lg: () => h }), n(938796);
 var i = n(665260),
     r = n(17928),
     s = n(626584),
@@ -23,7 +23,7 @@ function _() {
         t = l.useConfig({ location: "useCanUseScheduledMessages" });
     return e || t;
 }
-function f(e) {
+function h(e) {
     var t;
     return {
         userId: e.user_id,

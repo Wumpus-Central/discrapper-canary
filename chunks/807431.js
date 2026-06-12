@@ -1,35 +1,35 @@
-n.d(t, { default: () => g });
-var i = n(627968);
-n(64700);
-var r = n(861672),
-    l = n(477782),
-    a = n(442433),
-    s = n(961973),
-    d = n(997509),
-    u = n(36942),
-    o = n(652215),
-    c = n(985018);
-function g(e) {
-    let { guild: t, onSelect: n } = e,
-        g = (0, u.A)(t.id),
-        h = (0, s.rs)(t.id);
-    return (0, i.jsx)(r.W, {
+e.d(n, { default: () => h });
+var i = e(627968);
+e(64700);
+var s = e(980707),
+    a = e(477782),
+    r = e(442433),
+    d = e(961973),
+    l = e(468689),
+    o = e(36942),
+    c = e(652215),
+    u = e(375708);
+function h(t) {
+    let { guild: n, onSelect: e } = t,
+        h = (0, o.A)(n.id),
+        p = (0, d.rs)(n.id);
+    return (0, i.jsx)(s.W, {
         "data-menu-migrated-auto": !0,
-        onSelect: n,
+        onSelect: e,
         navId: "guild-browse-channels-context-menu",
-        "aria-label": c.intl.string(c.t.ogxXGq),
-        onClose: a.Z_,
-        children: (0, i.jsxs)(l.rX, {
+        "aria-label": u.intl.string(u.t.ogxXGq),
+        onClose: r.Z_,
+        children: (0, i.jsxs)(a.rX, {
             children: [
-                h &&
-                    (0, i.jsx)(l.Dr, {
+                p &&
+                    (0, i.jsx)(a.Dr, {
                         id: "go-to-settings",
-                        label: c.intl.string(c.t.X70lV6),
+                        label: u.intl.string(u.t.X70lV6),
                         action: () => {
-                            d.A.open(t.id, o.BEX.ONBOARDING);
+                            l.A.open(n.id, c.BEX.ONBOARDING);
                         },
                     }),
-                g,
+                h,
             ],
         }),
     });

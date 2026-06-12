@@ -1,20 +1,20 @@
-var n =
+var i =
         (this && this.__createBinding) ||
         (Object.create
-            ? function (e, t, i, n) {
-                  void 0 === n && (n = i);
-                  var r = Object.getOwnPropertyDescriptor(t, i);
+            ? function (e, t, n, i) {
+                  void 0 === i && (i = n);
+                  var r = Object.getOwnPropertyDescriptor(t, n);
                   (!r || ("get" in r ? !t.__esModule : r.writable || r.configurable)) &&
                       (r = {
                           enumerable: !0,
                           get: function () {
-                              return t[i];
+                              return t[n];
                           },
                       }),
-                      Object.defineProperty(e, n, r);
+                      Object.defineProperty(e, i, r);
               }
-            : function (e, t, i, n) {
-                  void 0 === n && (n = i), (e[n] = t[i]);
+            : function (e, t, n, i) {
+                  void 0 === i && (i = n), (e[i] = t[n]);
               }),
     r =
         (this && this.__setModuleDefault) ||
@@ -30,9 +30,9 @@ var n =
         function (e) {
             if (e && e.__esModule) return e;
             var t = {};
-            if (null != e) for (var i in e) "default" !== i && Object.prototype.hasOwnProperty.call(e, i) && n(t, e, i);
+            if (null != e) for (var n in e) "default" !== n && Object.prototype.hasOwnProperty.call(e, n) && i(t, e, n);
             return r(t, e), t;
         };
-let a = o(i(794268)),
-    s = o(i(636102));
+let a = o(n(794268)),
+    s = o(n(636102));
 e.exports = Object.assign(Object.assign({}, a), s);

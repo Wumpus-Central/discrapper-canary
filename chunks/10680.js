@@ -1,10 +1,10 @@
 e.d(a, { default: () => c });
 var i = e(627968),
-    n = e(861672),
+    n = e(980707),
     r = e(477782),
     s = e(442433),
     d = e(50268),
-    l = e(985018);
+    l = e(375708);
 function c(t) {
     let { skuId: a } = t;
     return (0, i.jsx)(n.W, {

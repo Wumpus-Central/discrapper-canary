@@ -12,16 +12,16 @@ self.addEventListener("message", (e) => {
                         animationId: i,
                         assetUrl: l,
                         assetData: n,
-                        isVisible: p,
-                        shouldAnimate: c,
+                        isVisible: d,
+                        shouldAnimate: p,
                     } = e,
-                    d = new s.default({
+                    f = new s.default({
                         canvas: r,
                         id: i,
                         assetUrl: l,
                         assetData: n,
-                        isVisible: p,
-                        shouldAnimate: c,
+                        isVisible: d,
+                        shouldAnimate: p,
                         onInitialDraw: () => {
                             self.postMessage({ type: a.l.FIRST_DRAW, canvasId: t });
                         },
@@ -29,7 +29,7 @@ self.addEventListener("message", (e) => {
                             self.postMessage({ type: a.l.ERROR, canvasId: t });
                         },
                     });
-                o.set(t, d);
+                o.set(t, f);
             })(r);
             break;
         case a.l.DROP:

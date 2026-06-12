@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { r: () => i });
-var r = n(390225);
-class i {
+n.d(t, { r: () => r });
+var i = n(390225);
+class r {
     stores;
     changeCallback;
     storeVersionHandled;
@@ -19,7 +19,7 @@ class i {
         });
     }
     handleStoreChange = () => {
-        let e = r.A.getChangeSentinel();
+        let e = i.A.getChangeSentinel();
         this.storeVersionHandled !== e && (this.changeCallback(), (this.storeVersionHandled = e));
     };
     detach() {

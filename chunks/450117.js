@@ -8,13 +8,13 @@ var r = l(627968),
     d = l(891167),
     o = l(829028);
 let u = (e) => {
-    let { backgroundImage: t, logoSrc: l, supplementalImage: u, href: m, ctaText: h } = e,
-        p = null != m;
+    let { backgroundImage: t, logoSrc: l, supplementalImage: u, href: h, ctaText: m } = e,
+        p = null != h;
     return (0, r.jsxs)(n.D, {
         className: o.rJ,
         onClick: p
             ? (e) => {
-                  e.preventDefault(), (0, a.pX)(m);
+                  e.preventDefault(), (0, a.pX)(h);
               }
             : void 0,
         children: [
@@ -32,7 +32,7 @@ let u = (e) => {
                                 (0, r.jsx)("div", {}),
                                 null != l &&
                                     (0, r.jsx)("div", { className: o.wm, children: (0, r.jsx)(d.A, { src: l }) }),
-                                null != h && (0, r.jsx)(c.aF, { ctaText: h, variant: "overlay-primary", href: m }),
+                                null != m && (0, r.jsx)(c.aF, { ctaText: m, variant: "overlay-primary", href: h }),
                             ],
                         }),
                     }),

@@ -9,8 +9,8 @@ var i,
     c = n(210140),
     d = n(121536),
     _ = n(583178),
-    f = n(239586),
-    h = "Object already initialized",
+    h = n(239586),
+    f = "Object already initialized",
     p = o.TypeError,
     E = o.WeakMap;
 if (a || d.state) {
@@ -19,7 +19,7 @@ if (a || d.state) {
         (m.has = m.has),
         (m.set = m.set),
         (i = function (e, t) {
-            if (m.has(e)) throw new p(h);
+            if (m.has(e)) throw new p(f);
             return (t.facade = e), m.set(e, t), t;
         }),
         (r = function (e) {
@@ -30,9 +30,9 @@ if (a || d.state) {
         });
 } else {
     var g = _("state");
-    (f[g] = !0),
+    (h[g] = !0),
         (i = function (e, t) {
-            if (c(e, g)) throw new p(h);
+            if (c(e, g)) throw new p(f);
             return (t.facade = e), u(e, g, t), t;
         }),
         (r = function (e) {

@@ -1,14 +1,14 @@
-n.d(t, { A: () => r });
-var l = n(627968),
-    i = n(64700),
-    a = n(891694),
-    s = n(609848);
-function r(e) {
-    let { imageBackground: t, applicationName: n, imageClassName: r, imageNotFoundClassName: o } = e,
-        [c, d] = i.useState(!1);
-    return "not-found" === t.state || c
-        ? (0, l.jsx)("div", { className: o, children: (0, l.jsx)(a.A, { className: s.i }) })
+i.d(t, { A: () => s });
+var l = i(627968),
+    n = i(64700),
+    a = i(891694),
+    r = i(609848);
+function s(e) {
+    let { imageBackground: t, applicationName: i, imageClassName: s, imageNotFoundClassName: o } = e,
+        [d, p] = n.useState(!1);
+    return "not-found" === t.state || d
+        ? (0, l.jsx)("div", { className: o, children: (0, l.jsx)(a.A, { className: r.i }) })
         : "loading" === t.state
           ? null
-          : (0, l.jsx)("img", { alt: n, className: r, src: t.url, onError: () => d(!0) });
+          : (0, l.jsx)("img", { alt: i, className: s, src: t.url, onError: () => p(!0) });
 }

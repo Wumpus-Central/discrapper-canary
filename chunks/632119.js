@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { Bb: () => d, C$: () => m, Jz: () => g, Ys: () => f, fu: () => _ });
+n.d(t, { Bb: () => d, C$: () => m, Jz: () => g, Ys: () => h, fu: () => _ });
 var i = n(923457),
     r = n(873298),
     s = n(207560),
     a = n(885386),
     o = n(287809);
 n(975214);
-var l = n(656402);
+var l = n(750714);
 let u = {
         [l.Je.DISABLED.valueOf()]: r.TO.SHOW,
         [l.Je.NON_FRIENDS.valueOf()]: r.TO.SHOW,
@@ -27,7 +27,7 @@ let u = {
         [l.Je.NON_FRIENDS.valueOf()]: r.TO.BLOCK,
         [l.Je.FRIENDS_AND_NON_FRIENDS.valueOf()]: r.TO.BLOCK,
     },
-    f = (e) => {
+    h = (e) => {
         let { setting: t, isDm: n = !1, isFriend: a = !1 } = e;
         if (null != t && t !== r.TO.UNSET_EXPLICIT_CONTENT_REDACTION) return t;
         let l = o.default.getCurrentUser();
@@ -35,9 +35,9 @@ let u = {
             ? E({ isDm: n, isFriend: a })
             : l?.nsfwAllowed === !1
               ? p({ isDm: n, isFriend: a })
-              : h({ isDm: n, isFriend: a });
+              : f({ isDm: n, isFriend: a });
     },
-    h = (e) => {
+    f = (e) => {
         let { isDm: t = !1, isFriend: n = !1 } = e;
         if (!t) return r.TO.SHOW;
         let i = a.cj.getSetting();
@@ -56,9 +56,9 @@ let u = {
     m = (e) => {
         let t = e ?? a.Vd.getSetting();
         return {
-            explicitContentGuilds: f({ setting: t?.explicitContentGuilds }),
-            explicitContentNonFriendDm: f({ setting: t?.explicitContentNonFriendDm, isDm: !0 }),
-            explicitContentFriendDm: f({ setting: t?.explicitContentFriendDm, isDm: !0, isFriend: !0 }),
+            explicitContentGuilds: h({ setting: t?.explicitContentGuilds }),
+            explicitContentNonFriendDm: h({ setting: t?.explicitContentNonFriendDm, isDm: !0 }),
+            explicitContentFriendDm: h({ setting: t?.explicitContentFriendDm, isDm: !0, isFriend: !0 }),
         };
     },
     g = (e) => {

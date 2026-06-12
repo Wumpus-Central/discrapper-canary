@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     vK: "banner__04bb4",
     nw: "bannerInfo__04bb4",
     MD: "gemIconWrapper__04bb4",

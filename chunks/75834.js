@@ -9,9 +9,9 @@ var i = n(627968),
     c = n(493540),
     u = n(980406),
     m = n(130771),
-    p = n(652215),
-    h = n(269927),
-    g = n(985018),
+    h = n(652215),
+    p = n(269927),
+    g = n(375708),
     x = n(979277);
 function E(t) {
     let { selectedTeamId: e, onSetSelectedTeamId: n, teamOptions: l } = t;
@@ -39,26 +39,26 @@ function f(t) {
         [f, j] = l.useState(),
         [v, C] = l.useState(!1),
         { teams: b } = (0, m.A)(),
-        S = b.filter((t) => t.payout_account_status === h.y.ACTIVE),
-        y = l.useMemo(() => S.map((t) => ({ label: t.name, value: t.id })), [S]),
-        _ = () => {
+        y = b.filter((t) => t.payout_account_status === p.y.ACTIVE),
+        S = l.useMemo(() => y.map((t) => ({ label: t.name, value: t.id })), [y]),
+        k = () => {
             C((t) => !t);
         },
-        k = () => {
+        A = () => {
             r(), (0, c.im)(e, f);
         },
-        A = l.useCallback(() => {
-            (0, d.A)(p.X7G.DEVELOPER_PORTAL_TEAMS);
+        O = l.useCallback(() => {
+            (0, d.A)(h.X7G.DEVELOPER_PORTAL_TEAMS);
         }, []);
     if (!n)
         return (0, i.jsx)(a.Modal, {
             title: g.intl.string(g.t.GfObDE),
-            actions: [{ variant: "primary", text: g.intl.string(g.t.geKm7t), onClick: k, disabled: !v }],
+            actions: [{ variant: "primary", text: g.intl.string(g.t.geKm7t), onClick: A, disabled: !v }],
             onClose: r,
             transitionState: x,
             size: "md",
             children: (0, i.jsx)(s.Kj, {
-                onChange: _,
+                onChange: k,
                 size: 20,
                 type: s.Or.INVERTED,
                 value: v,
@@ -66,7 +66,7 @@ function f(t) {
             }),
         });
     {
-        let t = 0 === y.length;
+        let t = 0 === S.length;
         return (0, i.jsxs)(a.Modal, {
             title: g.intl.string(g.t.inJKQv),
             subtitle: t ? g.intl.format(g.t.Jyy4pV, {}) : g.intl.string(g.t.U1Vz24),
@@ -74,16 +74,16 @@ function f(t) {
                 {
                     variant: "primary",
                     text: t ? g.intl.string(g.t.JddVgE) : g.intl.string(g.t.geKm7t),
-                    onClick: t ? A : k,
+                    onClick: t ? O : A,
                 },
             ],
             onClose: r,
             transitionState: x,
             size: "md",
             children: [
-                !t && (0, i.jsx)(E, { selectedTeamId: f, onSetSelectedTeamId: j, teamOptions: y }),
+                !t && (0, i.jsx)(E, { selectedTeamId: f, onSetSelectedTeamId: j, teamOptions: S }),
                 (0, i.jsx)(s.Kj, {
-                    onChange: _,
+                    onChange: k,
                     size: 20,
                     type: s.Or.INVERTED,
                     value: v,

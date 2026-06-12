@@ -1,7 +1,7 @@
 "use strict";
-function r(e, t) {
+function i(e, t) {
     if (null == t) return !1;
-    let [n, r] = e.split(":");
-    return "window" === n && r === t;
+    let [n, i] = e.split(":");
+    return "window" === n && i === t;
 }
-n.d(t, { A: () => r });
+n.d(t, { A: () => i });

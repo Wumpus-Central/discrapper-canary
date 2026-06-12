@@ -6,8 +6,8 @@ n.d(t, {
     kk: () => l,
     t7: () => c,
     tR: () => o,
-    uU: () => h,
-    uc: () => f,
+    uU: () => f,
+    uc: () => h,
     xd: () => r.x,
     xy: () => _,
 });
@@ -35,7 +35,7 @@ function d() {
 function _(e) {
     return (0, i.Ay)().generateLaunchSignature(e);
 }
-function f() {
+function h() {
     if (null != s) return s;
     try {
         return (s = new ((0, i.Ay)().FluxApi)());
@@ -43,6 +43,6 @@ function f() {
         return null;
     }
 }
-function h() {
+function f() {
     return null;
 }

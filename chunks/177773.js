@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(401755);
-function i(e) {
+n.d(t, { A: () => r });
+var i = n(401755);
+function r(e) {
     return {
         code: e.code,
-        state: r.QB.RESOLVED,
+        state: i.QB.RESOLVED,
         name: e.name,
         description: e.description ?? "",
         creatorId: e.creator_id,

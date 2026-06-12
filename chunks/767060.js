@@ -1,13 +1,13 @@
-t.r(_), t.d(_, { default: () => d });
-var r = t(627968);
-t(64700);
-var a = t(873263),
-    o = t(718446),
-    n = t(33666),
-    i = t(793998),
-    c = t(355097);
-function d() {
-    return "teen" === (0, n.A)()
-        ? (0, r.jsx)(a.rd, { to: (0, o.settingsPathToRoute)(c.od.FAMILY_CENTER) })
+e.r(s), e.d(s, { default: () => o });
+var r = e(627968);
+e(64700);
+var a = e(873263),
+    d = e(718446),
+    u = e(33666),
+    i = e(718697),
+    n = e(355097);
+function o() {
+    return "teen" === (0, u.A)()
+        ? (0, r.jsx)(a.rd, { to: (0, d.settingsPathToRoute)(n.od.FAMILY_CENTER) })
         : (0, r.jsx)(i.A, {});
 }

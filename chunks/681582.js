@@ -11,16 +11,16 @@ var i = n(627968),
 function d(e) {
     let { children: t } = e,
         [n, d] = r.useState(null),
-        [_, f] = r.useState(null),
-        h = r.useRef(new Set()),
+        [_, h] = r.useState(null),
+        f = r.useRef(new Set()),
         [p, E] = r.useState(!1),
         m = (0, a.bG)([o.A], () => o.A.getCurrentlySelectedChannelId()),
         g = r.useCallback((e) => {
-            h.current.delete(e), E(h.current.size > 0);
+            f.current.delete(e), E(f.current.size > 0);
         }, []),
-        A = r.useCallback((e) => (h.current.add(e), E(!0), () => g(e)), [g]),
+        A = r.useCallback((e) => (f.current.add(e), E(!0), () => g(e)), [g]),
         I = r.useCallback((e, t) => {
-            for (let n of h.current) n(e, t);
+            for (let n of f.current) n(e, t);
         }, []);
     return (
         r.useEffect(() => {
@@ -36,7 +36,7 @@ function d(e) {
                     removeClickListener: g,
                     children: t,
                 }),
-                (0, i.jsx)(s.Fk, { ref: f, className: c.J, environment: u.XA, onClick: p ? I : void 0 }),
+                (0, i.jsx)(s.Fk, { ref: h, className: c.J, environment: u.XA, onClick: p ? I : void 0 }),
                 (0, i.jsx)(s.K_, { ref: d, colors: u._t, sprites: u.uI, spriteWidth: u.wn, spriteHeight: u.wn }),
             ],
         })

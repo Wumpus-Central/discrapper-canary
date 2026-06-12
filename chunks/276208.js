@@ -1,40 +1,40 @@
 "use strict";
-n.d(t, { X: () => g, N: () => m });
+n.d(t, { X: () => m, N: () => p });
 var i,
     r = n(972347),
     s = n(451988),
     a = n(228366),
     o = n(626584),
     l = n(6494),
-    d = n(927813),
-    _ = n(869146),
-    u = n(531685),
-    c = n(652215),
-    E = n(392164);
-function h() {
+    u = n(927813),
+    c = n(869146),
+    d = n(531685),
+    _ = n(652215),
+    h = n(392164);
+function f() {
     return (
-        u.A.isVisible() ||
-        _.A.getWindowVisible(c.MLl.CHANNEL_CALL_POPOUT) ||
-        _.A.getWindowVisible(c.MLl.ACTIVITY_POPOUT) ||
-        _.A.getWindowVisible(E.f) ||
+        d.A.isVisible() ||
+        c.A.getWindowVisible(_.MLl.CHANNEL_CALL_POPOUT) ||
+        c.A.getWindowVisible(_.MLl.ACTIVITY_POPOUT) ||
+        c.A.getWindowVisible(h.f) ||
         (function () {
-            for (let e of _.A.getWindowKeys())
-                if (e.startsWith(c.MLl.CALL_TILE_POPOUT) && _.A.getWindowVisible(e)) return !0;
+            for (let e of c.A.getWindowKeys())
+                if (e.startsWith(_.MLl.CALL_TILE_POPOUT) && c.A.getWindowVisible(e)) return !0;
             return !1;
         })()
     );
 }
-var m =
+var p =
     (((i = {}).WindowVisibilityChanged = "window-visibility-changed"),
     (i.IncomingVideoEnabledChanged = "incoming-video-enabled-changed"),
     i);
-class f extends r.A {
+class E extends r.A {
     disableVideoTimer = new s.Ep();
     discordVisible = !0;
     incomingVideoEnabled = !0;
     lastEnabledChange = performance.now();
     logger = new o.A("WindowVisibilityVideoManager");
-    HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * d.A.Millis.SECOND;
+    HIDDEN_WINDOW_DISABLE_VIDEO_DURATION_MS = 30 * u.A.Millis.SECOND;
     constructor() {
         super(),
             a.h.subscribe("WINDOW_VISIBILITY_CHANGE", this.update),
@@ -48,8 +48,8 @@ class f extends r.A {
         return this.lastEnabledChange;
     }
     update = () => {
-        this.discordVisible !== h() &&
-            ((this.discordVisible = h()),
+        this.discordVisible !== f() &&
+            ((this.discordVisible = f()),
             this.emit("window-visibility-changed", this.discordVisible),
             this.discordVisible
                 ? (this.disableVideoTimer.stop(), this.setIncomingVideoEnabled(!0))
@@ -68,4 +68,4 @@ class f extends r.A {
                 this.emit("incoming-video-enabled-changed", this.incomingVideoEnabled));
     }
 }
-let g = new f();
+let m = new E();

@@ -1,6 +1,6 @@
-e.exports = function (e, t, n) {
-    if ("function" != typeof e) throw TypeError("Expected a function");
+t.exports = function (t, n, o) {
+    if ("function" != typeof t) throw TypeError("Expected a function");
     return setTimeout(function () {
-        e.apply(void 0, n);
-    }, t);
+        t.apply(void 0, o);
+    }, n);
 };

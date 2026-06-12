@@ -1,5 +1,5 @@
 "use strict";
-function r() {
+function i() {
     return document.hasFocus();
 }
-n.d(t, { R: () => r });
+n.d(t, { R: () => i });

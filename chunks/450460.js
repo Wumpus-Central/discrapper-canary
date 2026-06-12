@@ -1,25 +1,25 @@
 "use strict";
-var r = n(839036)("%Reflect.construct%", !0),
-    i = n(173081);
+var i = n(839036)("%Reflect.construct%", !0),
+    r = n(173081);
 try {
-    i({}, "", { "[[Get]]": function () {} });
+    r({}, "", { "[[Get]]": function () {} });
 } catch (e) {
-    i = null;
+    r = null;
 }
-if (i && r) {
-    var a = {},
-        s = {};
-    i(s, "length", {
+if (r && i) {
+    var s = {},
+        a = {};
+    r(a, "length", {
         "[[Get]]": function () {
-            throw a;
+            throw s;
         },
         "[[Enumerable]]": !0,
     }),
         (e.exports = function (e) {
             try {
-                r(e, s);
+                i(e, a);
             } catch (e) {
-                return e === a;
+                return e === s;
             }
         });
 } else

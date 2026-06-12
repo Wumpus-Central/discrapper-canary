@@ -1,13 +1,13 @@
 n.d(t, { Z: () => m });
 var l = n(627968),
-    a = n(503698),
-    i = n.n(a),
-    r = n(452027),
+    r = n(503698),
+    i = n.n(r),
+    a = n(452027),
     s = n(778712),
     o = n(834730),
     u = n(966327),
     c = n(427262),
-    d = n(985018),
+    d = n(375708),
     p = n(81902);
 let m = (e) => {
     let { className: t, giftRecipient: n } = e;
@@ -15,7 +15,7 @@ let m = (e) => {
         ? null
         : (0, l.jsx)("div", {
               className: i()(p.Qs, t),
-              children: (0, l.jsx)(r.D, {
+              children: (0, l.jsx)(a.D, {
                   label: d.intl.string(d.t.xFn72s),
                   children: (0, l.jsxs)("div", {
                       className: p.Ui,

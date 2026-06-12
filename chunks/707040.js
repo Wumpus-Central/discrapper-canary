@@ -4,21 +4,21 @@ e.exports = function e(t, n) {
     if (t && n && "object" == typeof t && "object" == typeof n) {
         if (t.constructor !== n.constructor) return !1;
         if (Array.isArray(t)) {
-            if ((r = t.length) != n.length) return !1;
-            for (i = r; 0 != i--; ) if (!e(t[i], n[i])) return !1;
+            if ((i = t.length) != n.length) return !1;
+            for (r = i; 0 != r--; ) if (!e(t[r], n[r])) return !1;
             return !0;
         }
         if (t.constructor === RegExp) return t.source === n.source && t.flags === n.flags;
         if (t.valueOf !== Object.prototype.valueOf) return t.valueOf() === n.valueOf();
         if (t.toString !== Object.prototype.toString) return t.toString() === n.toString();
-        if ((r = (a = Object.keys(t)).length) !== Object.keys(n).length) return !1;
-        for (i = r; 0 != i--; ) if (!Object.prototype.hasOwnProperty.call(n, a[i])) return !1;
-        for (i = r; 0 != i--; ) {
-            var r,
-                i,
-                a,
-                s = a[i];
-            if (!e(t[s], n[s])) return !1;
+        if ((i = (s = Object.keys(t)).length) !== Object.keys(n).length) return !1;
+        for (r = i; 0 != r--; ) if (!Object.prototype.hasOwnProperty.call(n, s[r])) return !1;
+        for (r = i; 0 != r--; ) {
+            var i,
+                r,
+                s,
+                a = s[r];
+            if (!e(t[a], n[a])) return !1;
         }
         return !0;
     }

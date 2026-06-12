@@ -5,23 +5,23 @@ var r = l(627968),
     a = l.n(n),
     u = l(289873),
     c = l(364522),
-    d = l(409013),
-    i = l(785330),
-    o = l(856535),
-    h = l(475073),
-    j = l(611924),
-    p = l(594832),
+    d = l(475073),
+    i = l(611924),
+    o = l(851245),
+    h = l(356118),
+    j = l(790219),
+    p = l(561794),
     x = l(621653),
     b = l(983545),
     f = l(599062),
-    y = l(630330),
+    y = l(956123),
     g = l(146919),
     A = l(758836),
     k = l(652215),
     v = l(647685);
 let P = (e) => {
     let { layoutId: s } = e;
-    (0, j.P)(h.a), (0, x.g)(), (0, p.pE)();
+    (0, i.P)(d.a), (0, x.g)(), (0, p.pE)();
     let l = t.useRef(null);
     t.useEffect(() => {
         l.current?.focus();
@@ -29,7 +29,7 @@ let P = (e) => {
     let n = (0, g.yB)("CollectiblesShopLayout");
     (0, g.gB)();
     let { selectedTab: P, transitionToTab: m } = (0, b.o)(A.G2.LAYOUT),
-        { layout: C, loading: E, error: G } = (0, o.A)(k.FYj, s);
+        { layout: C, loading: E, error: G } = (0, j.A)(k.FYj, s);
     return (0, r.jsxs)("div", {
         className: a()(v.bx, { [g.jP]: n }),
         ref: l,
@@ -47,11 +47,11 @@ let P = (e) => {
                                     errorMessage: G.message,
                                     errorOrigin: f.A.SHOP_PAGE,
                                     onRetry: () => {
-                                        (0, d.v)({ tenantId: k.FYj, layoutId: s });
+                                        (0, o.v)({ tenantId: k.FYj, layoutId: s });
                                     },
                                 })
                               : null != C
-                                ? (0, r.jsx)(i.Ay, { layout: C })
+                                ? (0, r.jsx)(h.Ay, { layout: C })
                                 : null,
                 }),
             }),

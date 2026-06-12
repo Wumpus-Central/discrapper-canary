@@ -10,45 +10,45 @@ function o(e) {
             offset: n = 4,
             placement: o,
             matchReferenceWidth: l = !0,
-            setHeight: d,
-            setWidth: _,
-            transform: u,
+            setHeight: u,
+            setWidth: c,
+            transform: d,
         } = e,
-        [c, E] = i.useState(t ?? !1),
-        h = i.useRef(d);
+        [_, h] = i.useState(t ?? !1),
+        f = i.useRef(u);
     i.useEffect(() => {
-        h.current = d;
-    }, [d]);
-    let m = i.useRef(_);
+        f.current = u;
+    }, [u]);
+    let p = i.useRef(c);
     i.useEffect(() => {
-        m.current = _;
-    }, [_]);
-    let f = i.useRef(l);
+        p.current = c;
+    }, [c]);
+    let E = i.useRef(l);
     i.useEffect(() => {
-        f.current = l;
+        E.current = l;
     }, [l]);
     let {
-            refs: g,
-            floatingStyles: p,
+            refs: m,
+            floatingStyles: g,
             context: A,
         } = (0, r.we)({
-            open: c,
-            onOpenChange: E,
-            transform: u,
+            open: _,
+            onOpenChange: h,
+            transform: d,
             middleware: [
                 null == o ? (0, s.RK)() : void 0,
                 (0, s.Ej)({
                     apply(e) {
                         let { rects: t, elements: n } = e;
-                        f.current &&
+                        E.current &&
                             Object.assign(n.floating.style, {
                                 minWidth: `${t.reference.width}px`,
                                 width: `${t.reference.width}px`,
                             }),
-                            null != m.current &&
-                                Object.assign(n.floating.style, { width: `${m.current(t.reference)}px` }),
-                            null != h.current &&
-                                Object.assign(n.floating.style, { maxHeight: `${h.current(t.reference)}px` });
+                            null != p.current &&
+                                Object.assign(n.floating.style, { width: `${p.current(t.reference)}px` }),
+                            null != f.current &&
+                                Object.assign(n.floating.style, { maxHeight: `${f.current(t.reference)}px` });
                     },
                 }),
                 (0, s.UU)(),
@@ -62,10 +62,10 @@ function o(e) {
         I = (0, r.s9)(A, { bubbles: { escapeKey: !1 } }),
         { getReferenceProps: T, getFloatingProps: S } = (0, r.bv)([I]);
     return {
-        isOpen: c,
-        setIsOpen: E,
-        refs: g,
-        floatingStyles: p,
+        isOpen: _,
+        setIsOpen: h,
+        refs: m,
+        floatingStyles: g,
         context: A,
         getReferenceProps: T,
         getFloatingProps: S,

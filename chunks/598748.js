@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { m: () => i });
-var l,
-    i =
-        (((l = {}).WIDGET_TOP = "widget_top"),
-        (l.WIDGET_BOTTOM = "widget_bottom"),
-        (l.ADD_WIDGET_PREVIEW = "add_widget_preview"),
-        (l.MINI_PROFILE = "mini_profile"),
-        (l.ACTIVITY_ACCESSORY = "activity_accessory"),
-        l);
+n.d(t, { m: () => r });
+var i,
+    r =
+        (((i = {}).WIDGET_TOP = "widget_top"),
+        (i.WIDGET_BOTTOM = "widget_bottom"),
+        (i.ADD_WIDGET_PREVIEW = "add_widget_preview"),
+        (i.MINI_PROFILE = "mini_profile"),
+        (i.ACTIVITY_ACCESSORY = "activity_accessory"),
+        i);

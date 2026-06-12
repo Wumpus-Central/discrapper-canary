@@ -1,19 +1,19 @@
 "use strict";
-var r = (function () {
+var i = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+                var i = t[n];
+                (i.enumerable = i.enumerable || !1),
+                    (i.configurable = !0),
+                    "value" in i && (i.writable = !0),
+                    Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
-    i = n(698380),
+    r = n(698380),
     s = n(87805),
     a = n(731841),
     o = n(82322);
@@ -36,7 +36,7 @@ e.exports = (function (e) {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        i(t, [
             {
                 key: "__detach",
                 value: function () {
@@ -105,9 +105,9 @@ e.exports = (function (e) {
                 key: "animate",
                 value: function (e, t) {
                     var n = this,
-                        r = null;
-                    e.__isInteraction && (r = s.current.createInteractionHandle());
-                    var i = this._animation;
+                        i = null;
+                    e.__isInteraction && (i = s.current.createInteractionHandle());
+                    var r = this._animation;
                     this._animation && this._animation.stop(),
                         (this._animation = e),
                         e.start(
@@ -116,9 +116,9 @@ e.exports = (function (e) {
                                 n._updateValue(e);
                             },
                             function (e) {
-                                (n._animation = null), null !== r && s.current.clearInteractionHandle(r), t && t(e);
+                                (n._animation = null), null !== i && s.current.clearInteractionHandle(i), t && t(e);
                             },
-                            i,
+                            r,
                         );
                 },
             },
@@ -138,7 +138,7 @@ e.exports = (function (e) {
                 key: "_updateValue",
                 value: function (e) {
                     var t, n;
-                    for (var r in ((this._value = e),
+                    for (var i in ((this._value = e),
                     (t = this),
                     (n = new u()),
                     !(function e(t) {
@@ -148,10 +148,10 @@ e.exports = (function (e) {
                         return e.update();
                     }),
                     this._listeners))
-                        this._listeners[r]({ value: this.__getValue() });
+                        this._listeners[i]({ value: this.__getValue() });
                 },
             },
         ]),
         t
     );
-})(i);
+})(r);

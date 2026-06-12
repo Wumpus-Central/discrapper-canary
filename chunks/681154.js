@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { ContentInventoryEntryType: () => i });
-var r,
-    i =
-        (((r = {})[(r.CONTENT_TYPE_UNSPECIFIED = 0)] = "CONTENT_TYPE_UNSPECIFIED"),
-        (r[(r.PLAYED_GAME = 1)] = "PLAYED_GAME"),
-        (r[(r.WATCHED_MEDIA = 2)] = "WATCHED_MEDIA"),
-        (r[(r.TOP_GAME = 3)] = "TOP_GAME"),
-        (r[(r.LISTENED_MEDIA = 4)] = "LISTENED_MEDIA"),
-        (r[(r.LISTENED_SESSION = 5)] = "LISTENED_SESSION"),
-        (r[(r.TOP_ARTIST = 6)] = "TOP_ARTIST"),
-        (r[(r.CUSTOM_STATUS = 7)] = "CUSTOM_STATUS"),
-        (r[(r.LAUNCHED_ACTIVITY = 8)] = "LAUNCHED_ACTIVITY"),
-        (r[(r.LEADERBOARD = 9)] = "LEADERBOARD"),
-        r);
+n.d(t, { ContentInventoryEntryType: () => r });
+var i,
+    r =
+        (((i = {})[(i.CONTENT_TYPE_UNSPECIFIED = 0)] = "CONTENT_TYPE_UNSPECIFIED"),
+        (i[(i.PLAYED_GAME = 1)] = "PLAYED_GAME"),
+        (i[(i.WATCHED_MEDIA = 2)] = "WATCHED_MEDIA"),
+        (i[(i.TOP_GAME = 3)] = "TOP_GAME"),
+        (i[(i.LISTENED_MEDIA = 4)] = "LISTENED_MEDIA"),
+        (i[(i.LISTENED_SESSION = 5)] = "LISTENED_SESSION"),
+        (i[(i.TOP_ARTIST = 6)] = "TOP_ARTIST"),
+        (i[(i.CUSTOM_STATUS = 7)] = "CUSTOM_STATUS"),
+        (i[(i.LAUNCHED_ACTIVITY = 8)] = "LAUNCHED_ACTIVITY"),
+        (i[(i.LEADERBOARD = 9)] = "LEADERBOARD"),
+        i);

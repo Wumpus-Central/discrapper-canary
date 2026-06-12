@@ -1,26 +1,26 @@
 "use strict";
-var r =
+var i =
         (this && this.__createBinding) ||
         (Object.create
-            ? function (e, t, n, r) {
-                  void 0 === r && (r = n);
-                  var i = Object.getOwnPropertyDescriptor(t, n);
-                  (!i || ("get" in i ? !t.__esModule : i.writable || i.configurable)) &&
-                      (i = {
+            ? function (e, t, n, i) {
+                  void 0 === i && (i = n);
+                  var r = Object.getOwnPropertyDescriptor(t, n);
+                  (!r || ("get" in r ? !t.__esModule : r.writable || r.configurable)) &&
+                      (r = {
                           enumerable: !0,
                           get: function () {
                               return t[n];
                           },
                       }),
-                      Object.defineProperty(e, r, i);
+                      Object.defineProperty(e, i, r);
               }
-            : function (e, t, n, r) {
-                  void 0 === r && (r = n), (e[r] = t[n]);
+            : function (e, t, n, i) {
+                  void 0 === i && (i = n), (e[i] = t[n]);
               }),
-    i =
+    r =
         (this && this.__exportStar) ||
         function (e, t) {
-            for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || r(t, e, n);
+            for (var n in e) "default" === n || Object.prototype.hasOwnProperty.call(t, n) || i(t, e, n);
         };
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.makeMessagesProxy =
@@ -65,7 +65,7 @@ Object.defineProperty(t, "FormatBuilder", {
             return o.bindFormatValues;
         },
     }),
-    i(n(711347), t);
+    r(n(711347), t);
 var l = n(503103);
 Object.defineProperty(t, "runtimeHashMessageKey", {
     enumerable: !0,

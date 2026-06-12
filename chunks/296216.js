@@ -6,11 +6,11 @@ var n = t(913247),
     r = t(576705),
     d = t(977997),
     u = t(607567),
-    o = t(652215);
-let c = "DRAGGABLE_USER";
+    c = t(652215);
+let o = "DRAGGABLE_USER";
 function m(e) {
     return (0, n.T)(
-        c,
+        o,
         {
             canDrop(e) {
                 let { channel: i } = e,
@@ -18,7 +18,7 @@ function m(e) {
                     n = a.A.getGuild(t)?.maxVideoChannelUsers ?? -1,
                     l = u.Ay.countVoiceStatesForChannel(i.id),
                     s = null != t && d.A.hasVideo(i.id) && n > 0 && l >= n + 1;
-                return r.A.can(o.xBc.MOVE_MEMBERS, i) && r.A.can(o.xBc.CONNECT, i) && !s;
+                return r.A.can(c.xBc.MOVE_MEMBERS, i) && r.A.can(c.xBc.CONNECT, i) && !s;
             },
             drop(e, i) {
                 let { channel: t } = e,
@@ -31,7 +31,7 @@ function m(e) {
 }
 function A(e) {
     return (0, l.I)(
-        c,
+        o,
         {
             canDrag(e) {
                 let { user: i, canDrag: t } = e;

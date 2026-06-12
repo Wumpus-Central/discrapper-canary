@@ -1,5 +1,5 @@
 "use strict";
-function r(e) {
+function i(e) {
     return {
         id: e.id,
         userId: e.user_id,
@@ -9,4 +9,4 @@ function r(e) {
         joinTimestamp: e.join_timestamp,
     };
 }
-n.d(t, { A: () => r }), n(938796);
+n.d(t, { A: () => i }), n(938796);

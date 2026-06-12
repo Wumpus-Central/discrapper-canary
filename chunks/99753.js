@@ -1,17 +1,17 @@
 "use strict";
 let i;
-n.d(t, { A: () => E });
+n.d(t, { A: () => h });
 var r = n(17928),
     s = n(228366),
     a = n(83971);
 let o = new Map(),
     l = new Map(),
-    d = new Map(),
-    _ = !1;
-function u(e) {
+    u = new Map(),
+    c = !1;
+function d(e) {
     e(o), (o = new Map(o));
 }
-class c extends r.Ay.Store {
+class _ extends r.Ay.Store {
     static displayName = "ContentInventoryStore";
     getFeeds() {
         return o;
@@ -23,7 +23,7 @@ class c extends r.Ay.Store {
         return l.get(e);
     }
     getLastFeedFetchDate(e) {
-        return d.get(e);
+        return u.get(e);
     }
     getFilters() {
         return i;
@@ -32,7 +32,7 @@ class c extends r.Ay.Store {
         return this.getFeed(e)?.request_id;
     }
     getDebugImpressionCappingDisabled() {
-        return _;
+        return c;
     }
     getMatchingInboxEntry(e) {
         let { activity: t, userId: n, feedId: i } = e,
@@ -42,13 +42,13 @@ class c extends r.Ay.Store {
         return (0, a.nU)(s, t);
     }
 }
-let E = new c(s.h, {
+let h = new _(s.h, {
     CONNECTION_OPEN: function () {
         o = new Map();
     },
     CONTENT_INVENTORY_SET_FEED: function (e) {
         let { feedId: t, feed: n } = e;
-        u((e) => e.set(t, n)), d.set(t, new Date());
+        d((e) => e.set(t, n)), u.set(t, new Date());
     },
     CONTENT_INVENTORY_SET_FEED_STATE: function (e) {
         let { feedId: t, state: n } = e;
@@ -61,9 +61,9 @@ let E = new c(s.h, {
     CONTENT_INVENTORY_CLEAR_FEED: function (e) {
         let { feedId: t } = e;
         if (!o.has(t)) return !1;
-        u((e) => e.delete(t));
+        d((e) => e.delete(t));
     },
     CONTENT_INVENTORY_DEBUG_TOGGLE_IMPRESSION_CAPPING: function () {
-        _ = !_;
+        c = !c;
     },
 });

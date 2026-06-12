@@ -33,10 +33,10 @@ function _(e) {
             startedPaymentFlowWithPaymentSources: e.startedPaymentFlowWithPaymentSources,
         })),
         { hasPaymentSources: _ } = (0, a.jm)(),
-        { isGift: S, claimableRewards: I } = (0, p.Pv)(),
-        T = S && null != I && I.length > 0,
-        f = (0, o.V)(n);
-    return (0, l.jsx)(P, {
+        { isGift: P, claimableRewards: I } = (0, p.Pv)(),
+        f = P && null != I && I.length > 0,
+        T = (0, o.V)(n);
+    return (0, l.jsx)(S, {
         selectSku: (e) =>
             (function (e) {
                 let {
@@ -63,8 +63,8 @@ function _(e) {
                 newSkuId: e,
                 setSelectedSkuId: r,
                 handleStepChange: t,
-                isGift: S,
-                userTrialOffer: f,
+                isGift: P,
+                userTrialOffer: T,
                 startedPaymentFlowWithPaymentSources: y,
                 setSelectedPlanId: i,
                 defaultPlanId: C,
@@ -76,12 +76,12 @@ function _(e) {
                     t(E.gD.PREMIUM_GROUP_MONTH),
                     n(l ? m.pn.REVIEW : m.pn.ADD_PAYMENT_STEPS, { analyticsDataOverride: { sku_id: E.pe.TIER_2 } });
             })({ setSelectedPlanId: i, handleStepChange: t, hasPaymentSources: _, setSelectedSkuId: r }),
-        isGift: S,
+        isGift: P,
         priceOptions: u,
-        showPromotionalGiftBanner: T,
+        showPromotionalGiftBanner: f,
     });
 }
-function P(e) {
+function S(e) {
     let { selectSku: t, isGift: n, priceOptions: a, showPromotionalGiftBanner: s, onSelectPremiumGroup: o } = e,
         p = (0, u.FY)({ isGift: n });
     return (0, l.jsxs)(l.Fragment, {

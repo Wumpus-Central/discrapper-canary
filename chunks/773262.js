@@ -1,60 +1,60 @@
-s.r(t), s.d(t, { default: () => f });
-var r = s(627968),
-    l = s(64700),
-    n = s(189213),
-    a = s(17928),
-    c = s(534514),
-    i = s(661531),
-    o = s(834730),
-    d = s(116956),
-    u = s(798286),
-    h = s(814278),
-    x = s(998759),
-    m = s(75811),
-    _ = s(930840);
-s(603266);
-var p = s(985018),
-    j = s(751005);
-let f = function (e) {
-    let { transitionState: t, streamKey: s, channelId: f, onClose: v } = e,
-        g = (0, a.bG)([d.A], () => d.A.getSecureFramesState(s)?.epochAuthenticator),
-        E = (0, x.z)({ fingerprintBase64: g, chunkSize: 5, desiredLength: 30 }),
-        T = l.useCallback(() => {
-            (0, u.y5)({ channelId: f });
-        }, [f]),
-        k = { transitionState: t, title: p.intl.string(p.t.QogHld), subtitle: p.intl.string(p.t.qODBkW) },
-        A = (0, r.jsxs)(r.Fragment, {
+e.r(s), e.d(s, { default: () => j });
+var l = e(627968),
+    n = e(64700),
+    r = e(189213),
+    a = e(17928),
+    c = e(534514),
+    i = e(661531),
+    o = e(834730),
+    d = e(116956),
+    h = e(798286),
+    u = e(814278),
+    m = e(998759),
+    x = e(75811),
+    p = e(930840);
+e(603266);
+var g = e(375708),
+    k = e(751005);
+let j = function (t) {
+    let { transitionState: s, streamKey: e, channelId: j, onClose: v } = t,
+        A = (0, a.bG)([d.A], () => d.A.getSecureFramesState(e)?.epochAuthenticator),
+        b = (0, m.z)({ fingerprintBase64: A, chunkSize: 5, desiredLength: 30 }),
+        C = n.useCallback(() => {
+            (0, h.y5)({ channelId: j });
+        }, [j]),
+        N = { transitionState: s, title: g.intl.string(g.t.QogHld), subtitle: g.intl.string(g.t.qODBkW) },
+        T = (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, r.jsxs)("div", {
-                    className: j.Ot,
+                (0, l.jsxs)("div", {
+                    className: k.Ot,
                     children: [
-                        (0, r.jsxs)("div", {
-                            className: j.wx,
+                        (0, l.jsxs)("div", {
+                            className: k.wx,
                             children: [
-                                (0, r.jsx)(c.D, {
+                                (0, l.jsx)(c.D, {
                                     variant: "text-sm/bold",
                                     color: "text-strong",
-                                    children: p.intl.string(p.t.cgBTyO),
+                                    children: g.intl.string(g.t.cgBTyO),
                                 }),
-                                null != E &&
-                                    (0, r.jsx)(_.c, {
-                                        className: j.nJ,
-                                        chunks: E,
+                                null != b &&
+                                    (0, l.jsx)(p.c, {
+                                        className: k.nJ,
+                                        chunks: b,
                                         color: i.A.colors.INTERACTIVE_TEXT_DEFAULT,
-                                        onCopy: T,
+                                        onCopy: C,
                                     }),
                             ],
                         }),
-                        (0, r.jsx)(m.j, { className: j.aY, chunks: E, columns: 3 }),
+                        (0, l.jsx)(x.j, { className: k.aY, chunks: b, columns: 3 }),
                     ],
                 }),
-                (0, r.jsx)(o.E, {
-                    className: j.qr,
+                (0, l.jsx)(o.E, {
+                    className: k.qr,
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    children: p.intl.format(p.t["H3+ktv"], { helpArticle: (0, h.aW)() }),
+                    children: g.intl.format(g.t["H3+ktv"], { helpArticle: (0, u.aW)() }),
                 }),
             ],
         });
-    return (0, r.jsx)(n.Modal, { ...k, onClose: v, actions: [], children: A });
+    return (0, l.jsx)(r.Modal, { ...N, onClose: v, actions: [], children: T });
 };

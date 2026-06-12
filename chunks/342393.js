@@ -3,32 +3,32 @@
     function n(e, t) {
         var n = Object.keys(e);
         if (Object.getOwnPropertySymbols) {
-            var r = Object.getOwnPropertySymbols(e);
+            var i = Object.getOwnPropertySymbols(e);
             t &&
-                (r = r.filter(function (t) {
+                (i = i.filter(function (t) {
                     return Object.getOwnPropertyDescriptor(e, t).enumerable;
                 })),
-                n.push.apply(n, r);
+                n.push.apply(n, i);
         }
         return n;
     }
-    function r(e) {
+    function i(e) {
         for (var t = 1; t < arguments.length; t++) {
-            var r = null != arguments[t] ? arguments[t] : {};
+            var i = null != arguments[t] ? arguments[t] : {};
             t % 2
-                ? n(Object(r), !0).forEach(function (t) {
-                      s(e, t, r[t]);
+                ? n(Object(i), !0).forEach(function (t) {
+                      s(e, t, i[t]);
                   })
                 : Object.getOwnPropertyDescriptors
-                  ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-                  : n(Object(r)).forEach(function (t) {
-                        Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(r, t));
+                  ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
+                  : n(Object(i)).forEach(function (t) {
+                        Object.defineProperty(e, t, Object.getOwnPropertyDescriptor(i, t));
                     });
         }
         return e;
     }
-    function i(e) {
-        return (i =
+    function r(e) {
+        return (r =
             "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
                 ? function (e) {
                       return typeof e;
@@ -50,22 +50,22 @@
     function a(e, t) {
         if (null == e) return {};
         var n,
-            r,
-            i = (function (e, t) {
+            i,
+            r = (function (e, t) {
                 if (null == e) return {};
                 var n,
-                    r,
-                    i = {},
+                    i,
+                    r = {},
                     s = Object.keys(e);
-                for (r = 0; r < s.length; r++) (n = s[r]), t.indexOf(n) >= 0 || (i[n] = e[n]);
-                return i;
+                for (i = 0; i < s.length; i++) (n = s[i]), t.indexOf(n) >= 0 || (r[n] = e[n]);
+                return r;
             })(e, t);
         if (Object.getOwnPropertySymbols) {
             var s = Object.getOwnPropertySymbols(e);
-            for (r = 0; r < s.length; r++)
-                (n = s[r]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (i[n] = e[n]);
+            for (i = 0; i < s.length; i++)
+                (n = s[i]), !(t.indexOf(n) >= 0) && Object.prototype.propertyIsEnumerable.call(e, n) && (r[n] = e[n]);
         }
-        return i;
+        return r;
     }
     function o(e, t) {
         return (
@@ -74,25 +74,25 @@
             })(e) ||
             (function (e, t) {
                 var n,
-                    r,
-                    i = e && (("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"]);
-                if (null != i) {
+                    i,
+                    r = e && (("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"]);
+                if (null != r) {
                     var s = [],
                         a = !0,
                         o = !1;
                     try {
                         for (
-                            i = i.call(e);
-                            !(a = (n = i.next()).done) && (s.push(n.value), !t || s.length !== t);
+                            r = r.call(e);
+                            !(a = (n = r.next()).done) && (s.push(n.value), !t || s.length !== t);
                             a = !0
                         );
                     } catch (e) {
-                        (o = !0), (r = e);
+                        (o = !0), (i = e);
                     } finally {
                         try {
-                            a || null == i.return || i.return();
+                            a || null == r.return || r.return();
                         } finally {
-                            if (o) throw r;
+                            if (o) throw i;
                         }
                     }
                     return s;
@@ -116,25 +116,25 @@
     }
     function l(e, t) {
         (null == t || t > e.length) && (t = e.length);
-        for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-        return r;
+        for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
+        return i;
     }
     var u,
-        d,
         c,
+        d,
         _,
-        f,
-        E = { exports: {} };
-    E.exports = (function () {
-        if (f) return _;
-        f = 1;
-        var e = c ? d : ((c = 1), (d = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"));
+        h,
+        f = { exports: {} };
+    f.exports = (function () {
+        if (h) return _;
+        h = 1;
+        var e = d ? c : ((d = 1), (c = "SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED"));
         function t() {}
         function n() {}
         return (
             (n.resetWarningCache = t),
             (_ = function () {
-                function r(t, n, r, i, s, a) {
+                function i(t, n, i, r, s, a) {
                     if (a !== e) {
                         var o = Error(
                             "Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types",
@@ -142,29 +142,29 @@
                         throw ((o.name = "Invariant Violation"), o);
                     }
                 }
-                function i() {
-                    return r;
+                function r() {
+                    return i;
                 }
-                r.isRequired = r;
+                i.isRequired = i;
                 var s = {
-                    array: r,
-                    bool: r,
-                    func: r,
-                    number: r,
-                    object: r,
-                    string: r,
-                    symbol: r,
-                    any: r,
-                    arrayOf: i,
-                    element: r,
-                    elementType: r,
-                    instanceOf: i,
-                    node: r,
-                    objectOf: i,
-                    oneOf: i,
-                    oneOfType: i,
-                    shape: i,
-                    exact: i,
+                    array: i,
+                    bool: i,
+                    func: i,
+                    number: i,
+                    object: i,
+                    string: i,
+                    symbol: i,
+                    any: i,
+                    arrayOf: r,
+                    element: i,
+                    elementType: i,
+                    instanceOf: r,
+                    node: i,
+                    objectOf: r,
+                    oneOf: r,
+                    oneOfType: r,
+                    shape: r,
+                    exact: r,
                     checkPropTypes: n,
                     resetWarningCache: t,
                 };
@@ -172,19 +172,19 @@
             })
         );
     })()();
-    var h = (u = E.exports) && u.__esModule && Object.prototype.hasOwnProperty.call(u, "default") ? u.default : u,
-        p = function (e, n, r) {
-            var i = !!r,
-                s = t.useRef(r);
+    var p = (u = f.exports) && u.__esModule && Object.prototype.hasOwnProperty.call(u, "default") ? u.default : u,
+        E = function (e, n, i) {
+            var r = !!i,
+                s = t.useRef(i);
             t.useEffect(
                 function () {
-                    s.current = r;
+                    s.current = i;
                 },
-                [r],
+                [i],
             ),
                 t.useEffect(
                     function () {
-                        if (!i || !e) return function () {};
+                        if (!r || !e) return function () {};
                         var t = function () {
                             s.current && s.current.apply(s, arguments);
                         };
@@ -195,7 +195,7 @@
                             }
                         );
                     },
-                    [i, n, e, s],
+                    [r, n, e, s],
                 );
         },
         m = function (e) {
@@ -211,42 +211,42 @@
             );
         },
         g = function (e) {
-            return null !== e && "object" === i(e);
+            return null !== e && "object" === r(e);
         },
         A = "[object Object]",
         I = function e(t, n) {
             if (!g(t) || !g(n)) return t === n;
-            var r = Array.isArray(t);
-            if (r !== Array.isArray(n)) return !1;
-            var i = Object.prototype.toString.call(t) === A;
-            if (i !== (Object.prototype.toString.call(n) === A)) return !1;
-            if (!i && !r) return t === n;
+            var i = Array.isArray(t);
+            if (i !== Array.isArray(n)) return !1;
+            var r = Object.prototype.toString.call(t) === A;
+            if (r !== (Object.prototype.toString.call(n) === A)) return !1;
+            if (!r && !i) return t === n;
             var s = Object.keys(t),
                 a = Object.keys(n);
             if (s.length !== a.length) return !1;
             for (var o = {}, l = 0; l < s.length; l += 1) o[s[l]] = !0;
             for (var u = 0; u < a.length; u += 1) o[a[u]] = !0;
-            var d = Object.keys(o);
+            var c = Object.keys(o);
             return (
-                d.length === s.length &&
-                d.every(function (r) {
-                    return e(t[r], n[r]);
+                c.length === s.length &&
+                c.every(function (i) {
+                    return e(t[i], n[i]);
                 })
             );
         },
         T = function (e, t, n) {
             return g(e)
-                ? Object.keys(e).reduce(function (i, a) {
+                ? Object.keys(e).reduce(function (r, a) {
                       var o = !g(t) || !I(e[a], t[a]);
                       return n.includes(a)
                           ? (o &&
                                 console.warn(
                                     "Unsupported prop change: options.".concat(a, " is not a mutable property."),
                                 ),
-                            i)
+                            r)
                           : o
-                            ? r(r({}, i || {}), {}, s({}, a, e[a]))
-                            : i;
+                            ? i(i({}, r || {}), {}, s({}, a, e[a]))
+                            : r;
                   }, null)
                 : null;
         },
@@ -277,7 +277,7 @@
             var n = y(e, t);
             return null === n ? { tag: "empty" } : { tag: "sync", stripe: n };
         },
-        O = function (e) {
+        v = function (e) {
             e &&
                 e._registerWrapper &&
                 e.registerAppInfo &&
@@ -288,9 +288,9 @@
                     url: "https://stripe.com/docs/stripe-js/react",
                 }));
         },
-        R = t.createContext(null);
-    R.displayName = "ElementsContext";
-    var v = function (e, t) {
+        C = t.createContext(null);
+    C.displayName = "ElementsContext";
+    var R = function (e, t) {
             if (!e)
                 throw Error(
                     "Could not find Elements context; You need to wrap the part of your app that ".concat(
@@ -300,10 +300,10 @@
                 );
             return e;
         },
-        C = function (e) {
+        O = function (e) {
             var n = e.stripe,
-                r = e.options,
-                i = e.children,
+                i = e.options,
+                r = e.children,
                 s = t.useMemo(
                     function () {
                         return N(n);
@@ -314,7 +314,7 @@
                     t.useState(function () {
                         return {
                             stripe: "sync" === s.tag ? s.stripe : null,
-                            elements: "sync" === s.tag ? s.stripe.elements(r) : null,
+                            elements: "sync" === s.tag ? s.stripe.elements(i) : null,
                         };
                     }),
                     2,
@@ -326,7 +326,7 @@
                     var e = !0,
                         t = function (e) {
                             u(function (t) {
-                                return t.stripe ? t : { stripe: e, elements: e.elements(r) };
+                                return t.stripe ? t : { stripe: e, elements: e.elements(i) };
                             });
                         };
                     return (
@@ -340,47 +340,47 @@
                         }
                     );
                 },
-                [s, l, r],
+                [s, l, i],
             );
-            var d = m(n);
+            var c = m(n);
             t.useEffect(
                 function () {
-                    null !== d &&
-                        d !== n &&
+                    null !== c &&
+                        c !== n &&
                         console.warn(
                             "Unsupported prop change on Elements: You cannot change the `stripe` prop after setting it.",
                         );
                 },
-                [d, n],
+                [c, n],
             );
-            var c = m(r);
+            var d = m(i);
             return (
                 t.useEffect(
                     function () {
                         if (l.elements) {
-                            var e = T(r, c, ["clientSecret", "fonts"]);
+                            var e = T(i, d, ["clientSecret", "fonts"]);
                             e && l.elements.update(e);
                         }
                     },
-                    [r, c, l.elements],
+                    [i, d, l.elements],
                 ),
                 t.useEffect(
                     function () {
-                        O(l.stripe);
+                        v(l.stripe);
                     },
                     [l.stripe],
                 ),
-                t.createElement(R.Provider, { value: l }, i)
+                t.createElement(C.Provider, { value: l }, r)
             );
         };
-    C.propTypes = { stripe: h.any, options: h.object };
+    O.propTypes = { stripe: p.any, options: p.object };
     var b = function (e) {
-            return v(t.useContext(R), e);
+            return R(t.useContext(C), e);
         },
         D = function (e) {
             return (0, e.children)(b("mounts <ElementsConsumer>"));
         };
-    D.propTypes = { children: h.func.isRequired };
+    D.propTypes = { children: p.func.isRequired };
     var L = ["on", "session"],
         w = t.createContext(null);
     w.displayName = "CheckoutSdkContext";
@@ -396,7 +396,7 @@
         },
         P = t.createContext(null);
     P.displayName = "CheckoutContext";
-    var U = function (e, t) {
+    var x = function (e, t) {
             if (!e) return null;
             e.on, e.session;
             var n = a(e, L);
@@ -404,8 +404,8 @@
         },
         k = function (e) {
             var n = e.stripe,
-                r = e.options,
-                i = e.children,
+                i = e.options,
+                r = e.children,
                 s = t.useMemo(
                     function () {
                         return N(
@@ -418,39 +418,39 @@
                 a = o(t.useState(null), 2),
                 l = a[0],
                 u = a[1],
-                d = o(
+                c = o(
                     t.useState(function () {
                         return { stripe: "sync" === s.tag ? s.stripe : null, checkoutSdk: null };
                     }),
                     2,
                 ),
-                c = d[0],
-                _ = d[1],
-                f = function (e, t) {
+                d = c[0],
+                _ = c[1],
+                h = function (e, t) {
                     _(function (n) {
                         return n.stripe && n.checkoutSdk ? n : { stripe: e, checkoutSdk: t };
                     });
                 },
-                E = t.useRef(!1);
+                f = t.useRef(!1);
             t.useEffect(
                 function () {
                     var e = !0;
                     return (
-                        "async" !== s.tag || c.stripe
+                        "async" !== s.tag || d.stripe
                             ? "sync" === s.tag &&
                               s.stripe &&
-                              !E.current &&
-                              ((E.current = !0),
-                              s.stripe.initCheckout(r).then(function (e) {
-                                  e && (f(s.stripe, e), e.on("change", u));
+                              !f.current &&
+                              ((f.current = !0),
+                              s.stripe.initCheckout(i).then(function (e) {
+                                  e && (h(s.stripe, e), e.on("change", u));
                               }))
                             : s.stripePromise.then(function (t) {
                                   t &&
                                       e &&
-                                      !E.current &&
-                                      ((E.current = !0),
-                                      t.initCheckout(r).then(function (e) {
-                                          e && (f(t, e), e.on("change", u));
+                                      !f.current &&
+                                      ((f.current = !0),
+                                      t.initCheckout(i).then(function (e) {
+                                          e && (h(t, e), e.on("change", u));
                                       }));
                               }),
                         function () {
@@ -458,140 +458,140 @@
                         }
                     );
                 },
-                [s, c, r, u],
+                [s, d, i, u],
             );
-            var h = m(n);
+            var p = m(n);
             t.useEffect(
                 function () {
-                    null !== h &&
-                        h !== n &&
+                    null !== p &&
+                        p !== n &&
                         console.warn(
                             "Unsupported prop change on CheckoutProvider: You cannot change the `stripe` prop after setting it.",
                         );
                 },
-                [h, n],
+                [p, n],
             );
-            var p = m(r),
-                g = m(c.checkoutSdk);
+            var E = m(i),
+                g = m(d.checkoutSdk);
             t.useEffect(
                 function () {
-                    if (c.checkoutSdk) {
+                    if (d.checkoutSdk) {
                         var e,
                             t,
-                            n = null == p || null == (e = p.elementsOptions) ? void 0 : e.appearance,
-                            i = null == r || null == (t = r.elementsOptions) ? void 0 : t.appearance,
-                            s = !I(i, n),
-                            a = !g && c.checkoutSdk;
-                        i && (s || a) && c.checkoutSdk.changeAppearance(i);
+                            n = null == E || null == (e = E.elementsOptions) ? void 0 : e.appearance,
+                            r = null == i || null == (t = i.elementsOptions) ? void 0 : t.appearance,
+                            s = !I(r, n),
+                            a = !g && d.checkoutSdk;
+                        r && (s || a) && d.checkoutSdk.changeAppearance(r);
                     }
                 },
-                [r, p, c.checkoutSdk, g],
+                [i, E, d.checkoutSdk, g],
             ),
                 t.useEffect(
                     function () {
-                        O(c.stripe);
+                        v(d.stripe);
                     },
-                    [c.stripe],
+                    [d.stripe],
                 );
             var A = t.useMemo(
                 function () {
-                    return U(c.checkoutSdk, l);
+                    return x(d.checkoutSdk, l);
                 },
-                [c.checkoutSdk, l],
+                [d.checkoutSdk, l],
             );
-            return c.checkoutSdk
-                ? t.createElement(w.Provider, { value: c }, t.createElement(P.Provider, { value: A }, i))
+            return d.checkoutSdk
+                ? t.createElement(w.Provider, { value: d }, t.createElement(P.Provider, { value: A }, r))
                 : null;
         };
     k.propTypes = {
-        stripe: h.any,
-        options: h.shape({ fetchClientSecret: h.func.isRequired, elementsOptions: h.object }).isRequired,
+        stripe: p.any,
+        options: p.shape({ fetchClientSecret: p.func.isRequired, elementsOptions: p.object }).isRequired,
     };
-    var x = function (e) {
+    var U = function (e) {
             var n = t.useContext(w),
-                r = t.useContext(R);
-            if (n && r)
+                i = t.useContext(C);
+            if (n && i)
                 throw Error(
                     "You cannot wrap the part of your app that ".concat(
                         e,
                         " in both <CheckoutProvider> and <Elements> providers.",
                     ),
                 );
-            return n ? M(n, e) : v(r, e);
+            return n ? M(n, e) : R(i, e);
         },
         G = ["mode"],
-        V = function (e, n) {
-            var r = "".concat(e.charAt(0).toUpperCase() + e.slice(1), "Element"),
-                i = n
+        F = function (e, n) {
+            var i = "".concat(e.charAt(0).toUpperCase() + e.slice(1), "Element"),
+                r = n
                     ? function (e) {
-                          x("mounts <".concat(r, ">"));
+                          U("mounts <".concat(i, ">"));
                           var n = e.id,
-                              i = e.className;
-                          return t.createElement("div", { id: n, className: i });
+                              r = e.className;
+                          return t.createElement("div", { id: n, className: r });
                       }
                     : function (n) {
-                          var i,
+                          var r,
                               s = n.id,
                               l = n.className,
                               u = n.options,
-                              d = void 0 === u ? {} : u,
-                              c = n.onBlur,
+                              c = void 0 === u ? {} : u,
+                              d = n.onBlur,
                               _ = n.onFocus,
-                              f = n.onReady,
-                              E = n.onChange,
-                              h = n.onEscape,
+                              h = n.onReady,
+                              f = n.onChange,
+                              p = n.onEscape,
                               g = n.onClick,
                               A = n.onLoadError,
                               I = n.onLoaderStart,
                               S = n.onNetworksChange,
                               y = n.onConfirm,
                               N = n.onCancel,
-                              O = n.onShippingAddressChange,
-                              R = n.onShippingRateChange,
-                              v = x("mounts <".concat(r, ">")),
-                              C = "elements" in v ? v.elements : null,
-                              b = "checkoutSdk" in v ? v.checkoutSdk : null,
+                              v = n.onShippingAddressChange,
+                              C = n.onShippingRateChange,
+                              R = U("mounts <".concat(i, ">")),
+                              O = "elements" in R ? R.elements : null,
+                              b = "checkoutSdk" in R ? R.checkoutSdk : null,
                               D = o(t.useState(null), 2),
                               L = D[0],
                               w = D[1],
                               M = t.useRef(null),
                               P = t.useRef(null);
-                          p(L, "blur", c),
-                              p(L, "focus", _),
-                              p(L, "escape", h),
-                              p(L, "click", g),
-                              p(L, "loaderror", A),
-                              p(L, "loaderstart", I),
-                              p(L, "networkschange", S),
-                              p(L, "confirm", y),
-                              p(L, "cancel", N),
-                              p(L, "shippingaddresschange", O),
-                              p(L, "shippingratechange", R),
-                              p(L, "change", E),
-                              f &&
-                                  (i =
+                          E(L, "blur", d),
+                              E(L, "focus", _),
+                              E(L, "escape", p),
+                              E(L, "click", g),
+                              E(L, "loaderror", A),
+                              E(L, "loaderstart", I),
+                              E(L, "networkschange", S),
+                              E(L, "confirm", y),
+                              E(L, "cancel", N),
+                              E(L, "shippingaddresschange", v),
+                              E(L, "shippingratechange", C),
+                              E(L, "change", f),
+                              h &&
+                                  (r =
                                       "expressCheckout" === e
-                                          ? f
+                                          ? h
                                           : function () {
-                                                f(L);
+                                                h(L);
                                             }),
-                              p(L, "ready", i),
+                              E(L, "ready", r),
                               t.useLayoutEffect(
                                   function () {
-                                      if (null === M.current && null !== P.current && (C || b)) {
+                                      if (null === M.current && null !== P.current && (O || b)) {
                                           var t = null;
                                           if (b)
                                               switch (e) {
                                                   case "payment":
-                                                      t = b.createPaymentElement(d);
+                                                      t = b.createPaymentElement(c);
                                                       break;
                                                   case "address":
-                                                      if ("mode" in d) {
-                                                          var n = d.mode,
-                                                              i = a(d, G);
-                                                          if ("shipping" === n) t = b.createShippingAddressElement(i);
+                                                      if ("mode" in c) {
+                                                          var n = c.mode,
+                                                              r = a(c, G);
+                                                          if ("shipping" === n) t = b.createShippingAddressElement(r);
                                                           else if ("billing" === n)
-                                                              t = b.createBillingAddressElement(i);
+                                                              t = b.createBillingAddressElement(r);
                                                           else
                                                               throw Error(
                                                                   "Invalid options.mode. mode must be 'billing' or 'shipping'.",
@@ -602,7 +602,7 @@
                                                           );
                                                       break;
                                                   case "expressCheckout":
-                                                      t = b.createExpressCheckoutElement(d);
+                                                      t = b.createExpressCheckoutElement(c);
                                                       break;
                                                   case "currencySelector":
                                                       t = b.createCurrencySelectorElement();
@@ -610,27 +610,27 @@
                                                   default:
                                                       throw Error(
                                                           "Invalid Element type ".concat(
-                                                              r,
+                                                              i,
                                                               ". You must use either the <PaymentElement />, <AddressElement options={{mode: 'shipping'}} />, <AddressElement options={{mode: 'billing'}} />, or <ExpressCheckoutElement />.",
                                                           ),
                                                       );
                                               }
-                                          else C && (t = C.create(e, d));
+                                          else O && (t = O.create(e, c));
                                           (M.current = t), w(t), t && t.mount(P.current);
                                       }
                                   },
-                                  [C, b, d],
+                                  [O, b, c],
                               );
-                          var U = m(d);
+                          var x = m(c);
                           return (
                               t.useEffect(
                                   function () {
                                       if (M.current) {
-                                          var e = T(d, U, ["paymentRequest"]);
+                                          var e = T(c, x, ["paymentRequest"]);
                                           e && "update" in M.current && M.current.update(e);
                                       }
                                   },
-                                  [d, U],
+                                  [c, x],
                               ),
                               t.useLayoutEffect(function () {
                                   return function () {
@@ -644,30 +644,30 @@
                           );
                       };
             return (
-                (i.propTypes = {
-                    id: h.string,
-                    className: h.string,
-                    onChange: h.func,
-                    onBlur: h.func,
-                    onFocus: h.func,
-                    onReady: h.func,
-                    onEscape: h.func,
-                    onClick: h.func,
-                    onLoadError: h.func,
-                    onLoaderStart: h.func,
-                    onNetworksChange: h.func,
-                    onConfirm: h.func,
-                    onCancel: h.func,
-                    onShippingAddressChange: h.func,
-                    onShippingRateChange: h.func,
-                    options: h.object,
+                (r.propTypes = {
+                    id: p.string,
+                    className: p.string,
+                    onChange: p.func,
+                    onBlur: p.func,
+                    onFocus: p.func,
+                    onReady: p.func,
+                    onEscape: p.func,
+                    onClick: p.func,
+                    onLoadError: p.func,
+                    onLoaderStart: p.func,
+                    onNetworksChange: p.func,
+                    onConfirm: p.func,
+                    onCancel: p.func,
+                    onShippingAddressChange: p.func,
+                    onShippingRateChange: p.func,
+                    options: p.object,
                 }),
-                (i.displayName = r),
-                (i.__elementType = e),
-                i
+                (r.displayName = i),
+                (r.__elementType = e),
+                r
             );
         },
-        F = "u" < typeof window,
+        V = "u" < typeof window,
         B = t.createContext(null);
     B.displayName = "EmbeddedCheckoutProviderContext";
     var H = function () {
@@ -675,73 +675,73 @@
             if (!e) throw Error("<EmbeddedCheckout> must be used within <EmbeddedCheckoutProvider>");
             return e;
         },
-        Y = F
+        j = V
             ? function (e) {
                   var n = e.id,
-                      r = e.className;
-                  return H(), t.createElement("div", { id: n, className: r });
+                      i = e.className;
+                  return H(), t.createElement("div", { id: n, className: i });
               }
             : function (e) {
                   var n = e.id,
-                      r = e.className,
-                      i = H().embeddedCheckout,
+                      i = e.className,
+                      r = H().embeddedCheckout,
                       s = t.useRef(!1),
                       a = t.useRef(null);
                   return (
                       t.useLayoutEffect(
                           function () {
                               return (
-                                  !s.current && i && null !== a.current && (i.mount(a.current), (s.current = !0)),
+                                  !s.current && r && null !== a.current && (r.mount(a.current), (s.current = !0)),
                                   function () {
-                                      if (s.current && i)
+                                      if (s.current && r)
                                           try {
-                                              i.unmount(), (s.current = !1);
+                                              r.unmount(), (s.current = !1);
                                           } catch (e) {}
                                   }
                               );
                           },
-                          [i],
+                          [r],
                       ),
-                      t.createElement("div", { ref: a, id: n, className: r })
+                      t.createElement("div", { ref: a, id: n, className: i })
                   );
               },
-        W = V("auBankAccount", F),
-        j = V("card", F),
-        K = V("cardNumber", F),
-        $ = V("cardExpiry", F),
-        z = V("cardCvc", F),
-        q = V("fpxBank", F),
-        X = V("iban", F),
-        Q = V("idealBank", F),
-        J = V("p24Bank", F),
-        Z = V("epsBank", F),
-        ee = V("payment", F),
-        et = V("expressCheckout", F),
-        en = V("currencySelector", F),
-        er = V("paymentRequestButton", F),
-        ei = V("linkAuthentication", F),
-        es = V("address", F),
-        ea = V("shippingAddress", F),
-        eo = V("paymentMethodMessaging", F),
-        el = V("affirmMessage", F),
-        eu = V("afterpayClearpayMessage", F);
+        Y = F("auBankAccount", V),
+        W = F("card", V),
+        K = F("cardNumber", V),
+        $ = F("cardExpiry", V),
+        z = F("cardCvc", V),
+        q = F("fpxBank", V),
+        X = F("iban", V),
+        Z = F("idealBank", V),
+        Q = F("p24Bank", V),
+        J = F("epsBank", V),
+        ee = F("payment", V),
+        et = F("expressCheckout", V),
+        en = F("currencySelector", V),
+        ei = F("paymentRequestButton", V),
+        er = F("linkAuthentication", V),
+        es = F("address", V),
+        ea = F("shippingAddress", V),
+        eo = F("paymentMethodMessaging", V),
+        el = F("affirmMessage", V),
+        eu = F("afterpayClearpayMessage", V);
     (e.AddressElement = es),
         (e.AffirmMessageElement = el),
         (e.AfterpayClearpayMessageElement = eu),
-        (e.AuBankAccountElement = W),
+        (e.AuBankAccountElement = Y),
         (e.CardCvcElement = z),
-        (e.CardElement = j),
+        (e.CardElement = W),
         (e.CardExpiryElement = $),
         (e.CardNumberElement = K),
         (e.CheckoutProvider = k),
         (e.CurrencySelectorElement = en),
-        (e.Elements = C),
+        (e.Elements = O),
         (e.ElementsConsumer = D),
-        (e.EmbeddedCheckout = Y),
+        (e.EmbeddedCheckout = j),
         (e.EmbeddedCheckoutProvider = function (e) {
             var n = e.stripe,
-                r = e.options,
-                i = e.children,
+                i = e.options,
+                r = e.children,
                 s = t.useMemo(
                     function () {
                         return N(
@@ -754,8 +754,8 @@
                 a = t.useRef(null),
                 l = t.useRef(null),
                 u = o(t.useState({ embeddedCheckout: null }), 2),
-                d = u[0],
-                c = u[1];
+                c = u[0],
+                d = u[1];
             t.useEffect(
                 function () {
                     if (!l.current && !a.current) {
@@ -763,35 +763,35 @@
                             l.current ||
                                 a.current ||
                                 ((l.current = e),
-                                (a.current = l.current.initEmbeddedCheckout(r).then(function (e) {
-                                    c({ embeddedCheckout: e });
+                                (a.current = l.current.initEmbeddedCheckout(i).then(function (e) {
+                                    d({ embeddedCheckout: e });
                                 })));
                         };
-                        "async" === s.tag && !l.current && (r.clientSecret || r.fetchClientSecret)
+                        "async" === s.tag && !l.current && (i.clientSecret || i.fetchClientSecret)
                             ? s.stripePromise.then(function (t) {
                                   t && e(t);
                               })
-                            : "sync" === s.tag && !l.current && (r.clientSecret || r.fetchClientSecret) && e(s.stripe);
+                            : "sync" === s.tag && !l.current && (i.clientSecret || i.fetchClientSecret) && e(s.stripe);
                     }
                 },
-                [s, r, d, l],
+                [s, i, c, l],
             ),
                 t.useEffect(
                     function () {
                         return function () {
-                            d.embeddedCheckout
-                                ? ((a.current = null), d.embeddedCheckout.destroy())
+                            c.embeddedCheckout
+                                ? ((a.current = null), c.embeddedCheckout.destroy())
                                 : a.current &&
                                   a.current.then(function () {
-                                      (a.current = null), d.embeddedCheckout && d.embeddedCheckout.destroy();
+                                      (a.current = null), c.embeddedCheckout && c.embeddedCheckout.destroy();
                                   });
                         };
                     },
-                    [d.embeddedCheckout],
+                    [c.embeddedCheckout],
                 ),
                 t.useEffect(
                     function () {
-                        O(l);
+                        v(l);
                     },
                     [l],
                 );
@@ -806,62 +806,62 @@
                 },
                 [_, n],
             );
-            var f = m(r);
+            var h = m(i);
             return (
                 t.useEffect(
                     function () {
-                        if (null != f) {
-                            if (null == r)
+                        if (null != h) {
+                            if (null == i)
                                 return void console.warn(
                                     "Unsupported prop change on EmbeddedCheckoutProvider: You cannot unset options after setting them.",
                                 );
-                            void 0 === r.clientSecret &&
-                                void 0 === r.fetchClientSecret &&
+                            void 0 === i.clientSecret &&
+                                void 0 === i.fetchClientSecret &&
                                 console.warn(
                                     "Invalid props passed to EmbeddedCheckoutProvider: You must provide one of either `options.fetchClientSecret` or `options.clientSecret`.",
                                 ),
-                                null != f.clientSecret &&
-                                    r.clientSecret !== f.clientSecret &&
+                                null != h.clientSecret &&
+                                    i.clientSecret !== h.clientSecret &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the client secret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.",
                                     ),
-                                null != f.fetchClientSecret &&
-                                    r.fetchClientSecret !== f.fetchClientSecret &&
+                                null != h.fetchClientSecret &&
+                                    i.fetchClientSecret !== h.fetchClientSecret &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change fetchClientSecret after setting it. Unmount and create a new instance of EmbeddedCheckoutProvider instead.",
                                     ),
-                                null != f.onComplete &&
-                                    r.onComplete !== f.onComplete &&
+                                null != h.onComplete &&
+                                    i.onComplete !== h.onComplete &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onComplete option after setting it.",
                                     ),
-                                null != f.onShippingDetailsChange &&
-                                    r.onShippingDetailsChange !== f.onShippingDetailsChange &&
+                                null != h.onShippingDetailsChange &&
+                                    i.onShippingDetailsChange !== h.onShippingDetailsChange &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onShippingDetailsChange option after setting it.",
                                     ),
-                                null != f.onLineItemsChange &&
-                                    r.onLineItemsChange !== f.onLineItemsChange &&
+                                null != h.onLineItemsChange &&
+                                    i.onLineItemsChange !== h.onLineItemsChange &&
                                     console.warn(
                                         "Unsupported prop change on EmbeddedCheckoutProvider: You cannot change the onLineItemsChange option after setting it.",
                                     );
                         }
                     },
-                    [f, r],
+                    [h, i],
                 ),
-                t.createElement(B.Provider, { value: d }, i)
+                t.createElement(B.Provider, { value: c }, r)
             );
         }),
-        (e.EpsBankElement = Z),
+        (e.EpsBankElement = J),
         (e.ExpressCheckoutElement = et),
         (e.FpxBankElement = q),
         (e.IbanElement = X),
-        (e.IdealBankElement = Q),
-        (e.LinkAuthenticationElement = ei),
-        (e.P24BankElement = J),
+        (e.IdealBankElement = Z),
+        (e.LinkAuthenticationElement = er),
+        (e.P24BankElement = Q),
         (e.PaymentElement = ee),
         (e.PaymentMethodMessagingElement = eo),
-        (e.PaymentRequestButtonElement = er),
+        (e.PaymentRequestButtonElement = ei),
         (e.ShippingAddressElement = ea),
         (e.useCheckout = function () {
             M(t.useContext(w), "calls useCheckout()");
@@ -876,6 +876,6 @@
             return b("calls useElements()").elements;
         }),
         (e.useStripe = function () {
-            return x("calls useStripe()").stripe;
+            return U("calls useStripe()").stripe;
         });
 })(t, n(64700));

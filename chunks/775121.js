@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, { A: () => S }), n(321073);
-var r = n(507392),
-    i = n.n(r),
+var i = n(507392),
+    r = n.n(i),
     s = n(64460),
     a = n(626584),
     o = n(549205),
-    l = n(954571),
+    l = n(174459),
     u = n(723702),
-    d = n(649334),
-    c = n(652215);
+    c = n(649334),
+    d = n(652215);
 let _ = {},
-    f = [],
-    E = !1,
-    h = (0, o.I)(window),
-    p = [
+    h = [],
+    f = !1,
+    p = (0, o.I)(window),
+    E = [
         ...s.J.binds,
         "mod+shift+[",
         "mod+shift+]",
@@ -30,75 +30,75 @@ let _ = {},
         "mod+minus",
         "mod+0",
         "cmd+shift+/",
-    ].map((e) => e.replace("mod", d.Mu)),
+    ].map((e) => e.replace("mod", c.Mu)),
     m = () => [],
     g = [];
 function A(e) {
     let t = [];
     for (let n of Object.values(e)) null != n && t.push(...n.binds);
-    return t.map((e) => e.replace("mod", d.Mu));
+    return t.map((e) => e.replace("mod", c.Mu));
 }
 function I(e, t) {
-    return (n, r) => (l.default.track(c.HAw.KEYBOARD_SHORTCUT_USED, { shortcut_name: e, shortcut_combo: r }), t(n, r));
+    return (n, i) => (l.default.track(d.HAw.KEYBOARD_SHORTCUT_USED, { shortcut_name: e, shortcut_combo: i }), t(n, i));
 }
 function T(e) {
     for (let [t, n] of Object.entries(e)) {
         if (null == n) continue;
         let e = m();
-        u.isPlatformEmbedded || (e = e.concat(p));
-        let r = n.binds.filter((t) => ((t = t.replace("mod", d.Mu)), 0 > e.indexOf(t)));
-        if (0 === r.length) continue;
-        let i = n.comboKeysBindGlobal ? h.bindGlobal : h.bind;
+        u.isPlatformEmbedded || (e = e.concat(E));
+        let i = n.binds.filter((t) => ((t = t.replace("mod", c.Mu)), 0 > e.indexOf(t)));
+        if (0 === i.length) continue;
+        let r = n.comboKeysBindGlobal ? p.bindGlobal : p.bind;
         if (
-            (null != n.action && i.call(h, r, I(t, n.action)),
-            null != n.keyup && i.call(h, r, I(t, n.keyup), "keyup"),
+            (null != n.action && r.call(p, i, I(t, n.action)),
+            null != n.keyup && r.call(p, i, I(t, n.keyup), "keyup"),
             null != n.keydown)
         ) {
-            let e = r.indexOf("any-character");
+            let e = i.indexOf("any-character");
             -1 !== e &&
                 (!(function (e, t) {
                     let n = (e) => t(e, e.key);
                     document.addEventListener(e, n), g.push(() => document.removeEventListener(e, n));
                 })("keydown", n.keydown),
-                r.splice(e, 1)),
-                r.length > 0 && i.call(h, r, I(t, n.keydown), "keydown");
+                i.splice(e, 1)),
+                i.length > 0 && r.call(p, i, I(t, n.keydown), "keydown");
         }
-        null != n.keypress && i.call(h, r, I(t, n.keypress), "keypress");
+        null != n.keypress && r.call(p, i, I(t, n.keypress), "keypress");
     }
 }
-(0, u.isDesktop)() && new (i())(document.documentElement).bind("backspace", (e) => e.preventDefault());
+(0, u.isDesktop)() && new (r())(document.documentElement).bind("backspace", (e) => e.preventDefault());
 let S = {
-    combokeys: h,
-    modKey: d.Mu,
-    altKey: d.Pe,
-    returnKey: d.wY,
+    combokeys: p,
+    modKey: c.Mu,
+    altKey: c.Pe,
+    returnKey: c.wY,
     setGetKeybindList(e) {
         m = e;
     },
     checkDupes(e) {
         let t = new Set(),
             n = [];
-        for (let r of A(e)) t.has(r) && n.push(r), t.add(r);
+        for (let i of A(e)) t.has(i) && n.push(i), t.add(i);
         n.length > 0 && new a.A("Keybinds").warn("Duplicate keyboard shortcuts defined:", n);
     },
     setLayout(e) {
         _ = e;
     },
     enable() {
-        E || ((E = !0), this.checkDupes(_), T(_));
+        f || ((f = !0), this.checkDupes(_), T(_));
     },
     enableTemp(e) {
-        f.push(_), (_ = e), T(e), (E = !0);
+        h.push(_), (_ = e), T(e), (f = !0);
     },
     disableTemp() {
-        let e = f.pop();
+        let e = h.pop();
         null != e && (_ = e), this.disable(), this.enable();
     },
     disable() {
-        E && ((E = !1), g.forEach((e) => e()), (g = []), h.reset());
+        f && ((f = !1), g.forEach((e) => e()), (g = []), p.reset());
     },
     validateKeybind(e) {
-        E && this.hasBind(e) && h.unbind(e);
+        f && this.hasBind(e) && p.unbind(e);
     },
     hasBind(e) {
         let t = A(_);

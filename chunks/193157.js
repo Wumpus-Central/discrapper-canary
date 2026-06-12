@@ -1,34 +1,34 @@
-r.d(t, { A: () => d });
-var a = r(627968);
-r(64700);
-var s = r(503698),
-    n = r.n(s),
-    o = r(834730),
-    i = r(309326),
-    l = r(337322),
-    c = r(482460);
-function d(e) {
-    let { powerup: t } = e,
-        r = (0, l.A)(t);
+s.d(e, { A: () => u });
+var a = s(627968);
+s(64700);
+var o = s(503698),
+    i = s.n(o),
+    r = s(834730),
+    n = s(309326),
+    l = s(337322),
+    d = s(482460);
+function u(t) {
+    let { powerup: e } = t,
+        s = (0, l.A)(e);
     return (0, a.jsx)("div", {
-        className: c.I1,
-        children: r.map((e) => {
-            let { Icon: t, className: r } = (0, i.a)(e.perkIcon, !1);
+        className: d.I1,
+        children: s.map((t) => {
+            let { Icon: e, className: s } = (0, n.a)(t.perkIcon, !1);
             return (0, a.jsxs)(
                 "div",
                 {
-                    className: c.Ab,
+                    className: d.Ab,
                     children: [
-                        (0, a.jsx)(t, { color: "currentColor", className: n()(c.kf, r) }),
-                        (0, a.jsx)(o.E, {
-                            className: c.uL,
+                        (0, a.jsx)(e, { color: "currentColor", className: i()(d.kf, s) }),
+                        (0, a.jsx)(r.E, {
+                            className: d.uL,
                             color: "text-default",
                             variant: "text-sm/medium",
-                            children: e.description,
+                            children: t.description,
                         }),
                     ],
                 },
-                `perk-${e.perkIcon}`,
+                `perk-${t.perkIcon}`,
             );
         }),
     });

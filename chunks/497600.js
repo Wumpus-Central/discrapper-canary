@@ -1,37 +1,37 @@
-l.d(n, { A: () => g });
-var t = l(627968);
-l(64700);
-var i = l(477782),
-    r = l(688810),
-    a = l(612630),
-    d = l(657331),
-    s = l(961350),
-    o = l(351906),
-    u = l(652215),
-    c = l(518477),
-    A = l(985018);
-function g(e) {
-    let { user: n, guildId: l, channelId: g, context: b } = e,
-        { id: m } = n,
-        { loading: x, note: f } = (0, a.A)(m),
-        h = !x && null != f && f.length > 0,
-        E = b === u.BRT.POPOUT || b === u.BRT.OVERLAY,
-        { analyticsLocations: C } = (0, r.Ay)();
-    return m === s.default.getId() || o.A.hidePersonalInformation || E
+i.d(n, { A: () => g });
+var r = i(627968);
+i(64700);
+var s = i(477782),
+    e = i(688810),
+    l = i(612630),
+    a = i(975732),
+    o = i(495544),
+    d = i(351906),
+    c = i(652215),
+    u = i(518477),
+    p = i(375708);
+function g(t) {
+    let { user: n, guildId: i, channelId: g, context: h } = t,
+        { id: O } = n,
+        { loading: b, note: A } = (0, l.A)(O),
+        f = !b && null != A && A.length > 0,
+        k = h === c.BRT.POPOUT || h === c.BRT.OVERLAY,
+        { analyticsLocations: x } = (0, e.Ay)();
+    return O === o.default.getId() || d.A.hidePersonalInformation || k
         ? null
-        : (0, t.jsx)(i.Dr, {
+        : (0, r.jsx)(s.Dr, {
               id: "note",
-              label: x ? A.intl.string(A.t["WLKx/9"]) : h ? A.intl.string(A.t.sHHsOM) : A.intl.string(A.t.Dglxrf),
-              subtext: A.intl.string(A.t.r1BOdd),
+              label: b ? p.intl.string(p.t["WLKx/9"]) : f ? p.intl.string(p.t.sHHsOM) : p.intl.string(p.t.Dglxrf),
+              subtext: p.intl.string(p.t.r1BOdd),
               action: () => {
-                  (0, d.openUserProfileModal)({
+                  (0, a.openUserProfileModal)({
                       userId: n.id,
-                      tabSection: c.RP.USER_INFO,
-                      scrollTarget: c.bk.NOTE,
-                      guildId: l,
+                      tabSection: u.RP.USER_INFO,
+                      scrollTarget: u.bk.NOTE,
+                      guildId: i,
                       channelId: g,
-                      sourceAnalyticsLocations: C,
-                      appContext: b,
+                      sourceAnalyticsLocations: x,
+                      appContext: h,
                   });
               },
           });

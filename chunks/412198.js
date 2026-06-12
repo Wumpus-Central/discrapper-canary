@@ -4,10 +4,10 @@ n.d(t, {
     iW: () => D,
     Be: () => w,
     AR: () => P,
-    Wm: () => v,
+    Wm: () => C,
     z9: () => c,
     hh: () => d,
-    uh: () => R,
+    uh: () => O,
     CV: () => l,
 });
 let i = new (class {
@@ -64,16 +64,16 @@ function _(e, t) {
     if (n.length >= 1 && n.length <= 5) return n;
     throw Error(`combination results in an invalid key that has ${n.length} elements: ${JSON.stringify(n)}`);
 }
-function f(e, t) {
+function h(e, t) {
     let n = Array.isArray(t) ? [...e, ...t] : [...e, t];
     if (n.length <= 5) return n;
     throw Error(`combination results in an invalid prefix key that has ${n.length} elements: ${JSON.stringify(n)}`);
 }
-function h(e, t) {
+function f(e, t) {
     return 0 === t.length ? e : { key: _(t, e.key), data: e.data, generation: e.generation };
 }
 function p(e, t) {
-    return 0 === t.length ? e : e.map((e) => h(e, t));
+    return 0 === t.length ? e : e.map((e) => f(e, t));
 }
 class E {
     prefix;
@@ -96,7 +96,7 @@ class E {
             {
                 type: "kv.get_many",
                 table: this.tableId,
-                key: f(this.prefix, e),
+                key: h(this.prefix, e),
                 ordering: t?.ordering,
                 limit: t?.limit,
             },
@@ -114,21 +114,21 @@ class E {
     getKvEntries() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         return this.database.execute(
-            { type: "kv.get_kv_entries", table: this.tableId, key: f(this.prefix, e) },
+            { type: "kv.get_kv_entries", table: this.tableId, key: h(this.prefix, e) },
             this.defaultDebugTag,
         );
     }
     getMapEntries() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         return this.database.execute(
-            { type: "kv.get_map_entries", table: this.tableId, key: f(this.prefix, e) },
+            { type: "kv.get_map_entries", table: this.tableId, key: h(this.prefix, e) },
             this.defaultDebugTag,
         );
     }
     getChildIds() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         return this.database.execute(
-            { type: "kv.get_child_ids", table: this.tableId, key: f(this.prefix, e) },
+            { type: "kv.get_child_ids", table: this.tableId, key: h(this.prefix, e) },
             this.defaultDebugTag,
         );
     }
@@ -142,7 +142,7 @@ class E {
     put(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Replace;
         return this.database.execute(
-            { type: "kv.put_one", table: this.tableId, cell: h(e, this.prefix), overwrite: t === d.Replace },
+            { type: "kv.put_one", table: this.tableId, cell: f(e, this.prefix), overwrite: t === d.Replace },
             this.defaultDebugTag,
         );
     }
@@ -161,7 +161,7 @@ class E {
     delete() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
         return this.database.execute(
-            { type: "kv.delete_many", table: this.tableId, key: f(this.prefix, e) },
+            { type: "kv.delete_many", table: this.tableId, key: h(this.prefix, e) },
             this.defaultDebugTag,
         );
     }
@@ -178,7 +178,7 @@ class E {
             t = arguments.length > 1 ? arguments[1] : void 0,
             n = arguments.length > 2 ? arguments[2] : void 0;
         return this.database.execute(
-            { type: "kv.delete_generation", table: this.tableId, key: f(this.prefix, e), generation: n, comparer: t },
+            { type: "kv.delete_generation", table: this.tableId, key: h(this.prefix, e), generation: n, comparer: t },
             this.defaultDebugTag,
         );
     }
@@ -201,14 +201,14 @@ class E {
         return this.database.executeSync({
             type: "kv.get_many",
             table: this.tableId,
-            key: f(this.prefix, e),
+            key: h(this.prefix, e),
             ordering: t?.ordering,
             limit: t?.limit,
         });
     }
     getMapEntriesSyncUnsafe() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        return this.database.executeSync({ type: "kv.get_map_entries", table: this.tableId, key: f(this.prefix, e) });
+        return this.database.executeSync({ type: "kv.get_map_entries", table: this.tableId, key: h(this.prefix, e) });
     }
 }
 class m {
@@ -226,7 +226,7 @@ class m {
         this.transaction.add({
             type: "kv.put_one",
             table: this.tableId,
-            cell: h(e, this.prefix),
+            cell: f(e, this.prefix),
             overwrite: t === d.Replace,
         });
     }
@@ -241,7 +241,7 @@ class m {
     }
     delete() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [];
-        this.transaction.add({ type: "kv.delete_many", table: this.tableId, key: f(this.prefix, e) });
+        this.transaction.add({ type: "kv.delete_many", table: this.tableId, key: h(this.prefix, e) });
     }
     deleteRange(e, t) {
         let n = _(this.prefix, e),
@@ -251,7 +251,7 @@ class m {
     deleteAllExcept() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
             t = arguments.length > 1 ? arguments[1] : void 0;
-        this.transaction.add({ type: "kv.delete_all_except", table: this.tableId, key: f(this.prefix, e), retain: t });
+        this.transaction.add({ type: "kv.delete_all_except", table: this.tableId, key: h(this.prefix, e), retain: t });
     }
     deleteGeneration() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
@@ -260,7 +260,7 @@ class m {
         this.transaction.add({
             type: "kv.delete_generation",
             table: this.tableId,
-            key: f(this.prefix, e),
+            key: h(this.prefix, e),
             generation: n,
             comparer: t,
         });
@@ -381,8 +381,8 @@ n(321073);
 var I = n(61090),
     T = n(941426);
 let S = "1" === n(72290).env.KV_STORAGE_LOGGING,
-    N = new T.Vy("Runtime");
-class y {
+    y = new T.Vy("Runtime");
+class N {
     static counter = 0;
     static pending = new Map();
     static initialized = !1;
@@ -452,15 +452,15 @@ class y {
                 (this.addCompletionCallback((e) => {
                     let t = e.ok ? "completed" : "failed",
                         n = `${e.timings.execution.toFixed(3)}ms execution, ${e.timings.materialization.toFixed(3)}ms js materialization, ${e.timings.ccTotal.toFixed(3)}ms cc completion, ${e.timings.jsTotal.toFixed(3)}ms js reception`;
-                    N.info(`${e.tag} (#${e.id}) ${t} in ${e.timings.ccTotal.toFixed(3)}ms (${n}).`);
+                    y.info(`${e.tag} (#${e.id}) ${t} in ${e.timings.ccTotal.toFixed(3)}ms (${n}).`);
                 }),
-                this.addDatabaseStateCallback((e, t) => N.info(`${e} (state: ${t})`))),
+                this.addDatabaseStateCallback((e, t) => y.info(`${e} (state: ${t})`))),
             (this.initialized = !0));
     }
 }
-class C {
+class v {
     static open(e, t) {
-        return y.executeAsync("database_open", (n) =>
+        return N.executeAsync("database_open", (n) =>
             i.databaseOpen(n, { database: e, invalidateDisabledHandles: t?.invalidateDisabledHandles ?? !1 }),
         );
     }
@@ -472,39 +472,39 @@ class C {
         );
     }
     static delete(e) {
-        return y.executeAsync("database_delete", (t) => i.databaseDelete(t, { database: e }));
+        return N.executeAsync("database_delete", (t) => i.databaseDelete(t, { database: e }));
     }
     static async list() {
-        return (await y.executeAsync("database_list", (e) => i.databaseList(e))).map((e) => e.data);
+        return (await N.executeAsync("database_list", (e) => i.databaseList(e))).map((e) => e.data);
     }
     static optimize(e) {
-        return y.executeAsync("database_optimize", (t) => i.databaseOptimize(t, { aggressive: e }));
+        return N.executeAsync("database_optimize", (t) => i.databaseOptimize(t, { aggressive: e }));
     }
     static raise(e) {
         i.raise(e);
     }
 }
-class v {
+class C {
     name;
     handle;
     raw;
     lastState;
     databaseStateCallback;
     static async open(e, t) {
-        return new v(await C.open(e, t));
+        return new C(await v.open(e, t));
     }
     static openSyncUnsafe(e, t) {
-        return new v(C.openSyncUnsafe(e, t));
+        return new C(v.openSyncUnsafe(e, t));
     }
     static delete(e) {
-        return C.delete(e);
+        return v.delete(e);
     }
     constructor(e) {
         (this.raw = e),
             (this.name = e.name),
             (this.lastState = c.Open),
             (this.handle = e.handle),
-            (this.databaseStateCallback = y.addDatabaseStateCallback((e, t) => {
+            (this.databaseStateCallback = N.addDatabaseStateCallback((e, t) => {
                 this.handle === e && (this.lastState = t);
             }));
     }
@@ -512,7 +512,7 @@ class v {
         (this.lastState = c.Closed),
             this.raw?.close(),
             (this.raw = null),
-            y.removeCompletionCallback(this.databaseStateCallback);
+            N.removeCompletionCallback(this.databaseStateCallback);
     }
     disable(e) {
         return null == this.raw
@@ -523,7 +523,7 @@ class v {
         if (null == this.raw) throw Error(`database is no longer open (database: ${this}`);
         let n = "key" in e ? e.key[0] : e.table,
             i = () =>
-                y.executeAsync(t ?? e.type, (t) => {
+                N.executeAsync(t ?? e.type, (t) => {
                     this.raw.execute(t, { ...e, handle: 0 });
                 });
         return null === t ? i() : I.A.timeAsync("\uD83D\uDCBE", `${t ?? e.type} ${n ?? ""}`, i);
@@ -554,7 +554,7 @@ class v {
         return this.lastState;
     }
     transaction(e, t) {
-        let n = new O(this);
+        let n = new R(this);
         return Promise.resolve(e(n)).then(() =>
             n.operations.length > 0
                 ? this.execute({ type: "db.transaction", operations: n.complete() }, t)
@@ -562,7 +562,7 @@ class v {
         );
     }
 }
-class O {
+class R {
     database;
     operations;
     constructor(e) {
@@ -579,7 +579,7 @@ class O {
         return `[DatabaseTransaction ${this.database.handle}: ${this.operations.length} ops]`;
     }
 }
-class R {
+class O {
     originalPrefix;
     table;
     get prefix() {
@@ -589,7 +589,7 @@ class R {
         (this.originalPrefix = e), (this.table = new E([e], t, n, i));
     }
     withoutLogging() {
-        return new R(this.originalPrefix, this.table.tableId, this.table.database, !1);
+        return new O(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e) {
         return this.table.get([e]);
@@ -652,12 +652,12 @@ class b {
     }
     put(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Replace;
-        return this.transaction.put(R.cell(e, null), t);
+        return this.transaction.put(O.cell(e, null), t);
     }
     putAll(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.Replace;
         return this.transaction.putAll(
-            e.map((e) => R.cell(e, null)),
+            e.map((e) => O.cell(e, null)),
             t,
         );
     }
@@ -898,24 +898,24 @@ class P {
         return new P(this.originalPrefix, this.table.tableId, this.table.database, !1);
     }
     get(e, t, n) {
-        return this.table.get([e, t, k(n)]);
+        return this.table.get([e, t, U(n)]);
     }
     getLatest(e, t, n) {
         return this.table.getMany([e, t], { ordering: u.Descending, limit: n });
     }
     getRange(e, t, n, i, r) {
-        return this.table.getRange([e, t, k(n)], [e, t, k(i)], r);
+        return this.table.getRange([e, t, U(n)], [e, t, U(i)], r);
     }
     getMostRecents(e) {
         return this.table.messages.getLatest(e);
     }
     put(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.Replace;
-        return this.table.put(U(e, t, n), i);
+        return this.table.put(k(e, t, n), i);
     }
     putAll(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.Replace,
-            r = n.map((n) => U(e, t, n));
+            r = n.map((n) => k(e, t, n));
         return this.table.putAll(r, i);
     }
     deleteAll() {
@@ -928,7 +928,7 @@ class P {
         return this.table.delete([e, t]);
     }
     deleteMessage(e, t, n) {
-        return this.table.delete([e, t, k(n)]);
+        return this.table.delete([e, t, U(n)]);
     }
     transaction(e, t) {
         return this.table.transaction((t) => e(new x(t)), t);
@@ -950,11 +950,11 @@ class x {
     }
     put(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.Replace;
-        this.transaction.put(U(e, t, n), i);
+        this.transaction.put(k(e, t, n), i);
     }
     putAll(e, t, n) {
         let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : d.Replace,
-            r = n.map((n) => U(e, t, n));
+            r = n.map((n) => k(e, t, n));
         this.transaction.putAll(r, i);
     }
     replaceChannel(e, t, n) {
@@ -970,7 +970,7 @@ class x {
         this.transaction.delete([e, t]);
     }
     deleteMessage(e, t, n) {
-        this.transaction.delete([e, t, k(n)]);
+        this.transaction.delete([e, t, U(n)]);
     }
     trimOrphans(e) {
         this.transaction.messages.trimOrphans(e);
@@ -985,10 +985,10 @@ class x {
         this.transaction.messages.trimChannelsNotIn(e, t);
     }
 }
-function U(e, t, n) {
-    let i = k(n.id);
+function k(e, t, n) {
+    let i = U(n.id);
     return { key: [e, t, i], data: n, generation: i };
 }
-function k(e) {
+function U(e) {
     return e.padStart(19, "0");
 }

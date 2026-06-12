@@ -1,6 +1,6 @@
 r.d(t, { u: () => a });
 var n = r(374372),
-    s = r(579926);
+    s = r(638676);
 class a {
     parsers;
     refiners;
@@ -46,17 +46,17 @@ class a {
                 (i = a.substring(o.index + 1)), (o = s.exec(i));
                 continue;
             }
-            let d = null;
+            let m = null;
             u instanceof n.s4
-                ? (d = u)
+                ? (m = u)
                 : u instanceof n.BP
-                  ? ((d = e.createParsingResult(o.index, o[0])).start = u)
-                  : (d = e.createParsingResult(o.index, o[0], u));
-            let m = d.index,
-                c = d.text;
-            e.debug(() => console.log(`${t.constructor.name} extracted (at index=${m}) '${c}'`)),
-                r.push(d),
-                (i = a.substring(m + c.length)),
+                  ? ((m = e.createParsingResult(o.index, o[0])).start = u)
+                  : (m = e.createParsingResult(o.index, o[0], u));
+            let d = m.index,
+                c = m.text;
+            e.debug(() => console.log(`${t.constructor.name} extracted (at index=${d}) '${c}'`)),
+                r.push(m),
+                (i = a.substring(d + c.length)),
                 (o = s.exec(i));
         }
         return r;

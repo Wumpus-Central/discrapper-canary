@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(17928),
     r = n(228366),
     s = n(736056),
@@ -13,7 +13,7 @@ let c = [o.t4],
 function _() {
     d.trigger();
 }
-class f extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "ExperimentTriggerPointStore";
     constructor() {
         super(r.h, { CONNECTION_OPEN: _ }, r.A.Early);
@@ -22,4 +22,4 @@ class f extends i.Ay.Store {
         this.waitFor(s.A, a.A);
     }
 }
-let h = new f();
+let f = new h();

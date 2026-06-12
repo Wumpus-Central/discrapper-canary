@@ -3,17 +3,17 @@ var l = n(627968);
 n(64700);
 var r = n(503698),
     i = n.n(r),
-    s = n(990078),
-    a = n(403581),
+    a = n(990078),
+    s = n(403581),
     o = n(278416),
     u = n(140735),
     c = n(834730),
     d = n(318254),
     C = n(580630),
     p = n(993408),
-    _ = n(818348),
-    E = n(375708),
-    m = n(594387),
+    m = n(818348),
+    _ = n(375708),
+    E = n(594387),
     T = n(751070);
 let I = (e) => {
         let {
@@ -21,32 +21,32 @@ let I = (e) => {
             priceCurrency: n,
             discountIconConfig: r,
             className: i,
-            discountOfferAmount: s,
-            discount: a = p.rr,
+            discountOfferAmount: a,
+            discount: s = p.rr,
             variant: o = "text-md/semibold",
         } = e;
-        return n === _.Yr.DISCORD_ORB
-            ? (0, l.jsx)(S, { orbAmount: t, className: i, variant: o })
-            : (0, l.jsx)(A, {
+        return n === m.Yr.DISCORD_ORB
+            ? (0, l.jsx)(A, { orbAmount: t, className: i, variant: o })
+            : (0, l.jsx)(h, {
                   priceAmount: t,
                   priceCurrency: n,
                   discountIconConfig: r,
                   className: i,
-                  discountOfferAmount: s,
-                  discount: a,
+                  discountOfferAmount: a,
+                  discount: s,
                   variant: o,
               });
     },
-    O = (e) => {
+    S = (e) => {
         let { config: t } = e,
             n = t.size ?? "md";
         switch (t.source) {
             case p.D0.NITRO: {
-                let e = (0, l.jsx)(a.t, { size: n, color: "currentColor", className: T.Kk });
+                let e = (0, l.jsx)(s.t, { size: n, color: "currentColor", className: T.Kk });
                 if ("tooltip" === t.displayMode)
-                    return (0, l.jsx)(s.m, {
-                        text: E.intl.string(E.t.MPFyJ5),
-                        "aria-label": E.intl.string(E.t.X3Ekj8),
+                    return (0, l.jsx)(a.m, {
+                        text: _.intl.string(_.t.MPFyJ5),
+                        "aria-label": _.intl.string(_.t.X3Ekj8),
                         children: e,
                     });
                 return e;
@@ -54,36 +54,36 @@ let I = (e) => {
             case p.D0.THIRDPARTY: {
                 let e = (0, l.jsx)(o.g, { size: n, color: "currentColor", className: T.Kk });
                 if ("tooltip" === t.displayMode)
-                    return (0, l.jsx)(s.m, { text: E.intl.string(m.default.DePOcS), children: e });
+                    return (0, l.jsx)(a.m, { text: _.intl.string(E.default.DePOcS), children: e });
                 return e;
             }
             default:
                 return t.source, null;
         }
     },
-    A = (e) => {
+    h = (e) => {
         let {
                 priceAmount: t,
                 priceCurrency: n,
                 discountIconConfig: r,
-                className: s,
-                discountOfferAmount: a,
+                className: a,
+                discountOfferAmount: s,
                 discount: o = p.rr,
                 variant: d = "heading-md/semibold",
             } = e,
-            _ = null != a,
-            m = (0, C.RS)(t, n),
+            m = null != s,
+            E = (0, C.RS)(t, n),
             I =
-                o !== p.rr && o.discountPercentage >= 5 && !_
+                o !== p.rr && o.discountPercentage >= 5 && !m
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
                               (0, l.jsx)(u.A, {
-                                  children: E.intl.format(E.t.niC6DK, {
-                                      price: m,
+                                  children: _.intl.format(_.t.niC6DK, {
+                                      price: E,
                                       discountPercentage: o.discountPercentage,
                                   }),
                               }),
-                              (0, l.jsx)("span", { "aria-hidden": !0, children: m }),
+                              (0, l.jsx)("span", { "aria-hidden": !0, children: E }),
                               (0, l.jsx)("span", {
                                   className: T.id,
                                   "aria-hidden": !0,
@@ -93,32 +93,32 @@ let I = (e) => {
                       })
                     : (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(u.A, { children: E.intl.format(E.t["6C36MF"], { price: m }) }),
-                              (0, l.jsx)("span", { "aria-hidden": !0, className: i()({ [T.rN]: _ }, s), children: m }),
+                              (0, l.jsx)(u.A, { children: _.intl.format(_.t["6C36MF"], { price: E }) }),
+                              (0, l.jsx)("span", { "aria-hidden": !0, className: i()({ [T.rN]: m }, a), children: E }),
                           ],
                       });
         return (0, l.jsxs)("div", {
-            className: i()({ [T.nn]: _ }, T.kL, s),
+            className: i()({ [T.nn]: m }, T.kL, a),
             children: [
-                null != r ? (0, l.jsx)(O, { config: r }) : null,
+                null != r ? (0, l.jsx)(S, { config: r }) : null,
                 (0, l.jsx)(c.E, { variant: d, color: "currentColor", lineClamp: 1, children: I }),
-                _ &&
+                m &&
                     (0, l.jsxs)(c.E, {
                         variant: d,
                         className: T.NM,
                         lineClamp: 1,
                         children: [
-                            (0, l.jsx)(u.A, { children: E.intl.format(E.t.rItDbx, { discountOfferAmount: a }) }),
+                            (0, l.jsx)(u.A, { children: _.intl.format(_.t.rItDbx, { discountOfferAmount: s }) }),
                             (0, l.jsx)("span", {
                                 "aria-hidden": !0,
-                                children: E.intl.formatToPlainString(E.t.AYcXGW, { discountOfferAmount: a }),
+                                children: _.intl.formatToPlainString(_.t.AYcXGW, { discountOfferAmount: s }),
                             }),
                         ],
                     }),
             ],
         });
     },
-    S = (e) => {
+    A = (e) => {
         let { orbAmount: t, className: n, variant: r = "text-md/semibold" } = e;
         return (0, l.jsxs)("div", {
             className: i()(T.kL, n),
@@ -129,7 +129,7 @@ let I = (e) => {
                     color: "currentColor",
                     lineClamp: 1,
                     children: [
-                        (0, l.jsx)(u.A, { children: E.intl.format(E.t["a/Y8PK"], { orbAmount: t }) }),
+                        (0, l.jsx)(u.A, { children: _.intl.format(_.t["a/Y8PK"], { orbAmount: t }) }),
                         (0, l.jsx)("span", { "aria-hidden": !0, children: t }),
                     ],
                 }),

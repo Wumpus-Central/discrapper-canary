@@ -1,76 +1,76 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(17928),
     l = n(990078),
-    d = n(862482),
-    _ = n(930861),
-    u = n(403581),
-    c = n(531685),
-    E = n(783420),
-    h = n(245383),
-    m = n(788868),
-    f = n(497566);
-let g = function (e) {
+    u = n(862482),
+    c = n(930861),
+    d = n(403581),
+    _ = n(531685),
+    h = n(783420),
+    f = n(245383),
+    p = n(788868),
+    E = n(497566);
+let m = function (e) {
     let {
             subscriptionTier: t,
             onClick: n,
             size: s,
-            className: g,
-            textOptions: p,
+            className: m,
+            textOptions: g,
             iconClassName: A,
             postSuccessGuild: I,
             onSubscribeModalClose: T,
             premiumModalAnalyticsLocation: S,
-            showIcon: N = !0,
-            disableShine: C,
-            applicationId: R,
-            shinyButtonClassName: O,
-            showGradient: y = !1,
-            confirmationFooter: v,
-            color: D,
-            iconColor: L = "currentColor",
-            ...b
+            showIcon: y = !0,
+            disableShine: N,
+            applicationId: v,
+            shinyButtonClassName: C,
+            showGradient: R = !1,
+            confirmationFooter: O,
+            color: b,
+            iconColor: D = "currentColor",
+            ...L
         } = e,
-        w = (0, o.bG)([c.A], () => c.A.isFocused()),
-        P = (0, h.A)({
+        w = (0, o.bG)([_.A], () => _.A.isFocused()),
+        M = (0, f.A)({
             subscriptionTier: t,
-            buttonTextOverride: p?.textOverride,
-            defaultTextOverride: p?.subscribeText,
+            buttonTextOverride: g?.textOverride,
+            defaultTextOverride: g?.subscribeText,
         }),
-        k = D ?? (t === m.pe.TIER_1 ? d.$n.Colors.PRIMARY : d.$n.Colors.GREEN),
-        M = (0, i.jsxs)(_.wL, {
+        P = b ?? (t === p.pe.TIER_1 ? u.$n.Colors.PRIMARY : u.$n.Colors.GREEN),
+        x = (0, i.jsxs)(c.wL, {
             "data-migration-pending": !0,
-            disabled: P.disabled,
-            innerClassName: f.UO,
-            color: k,
+            disabled: M.disabled,
+            innerClassName: E.UO,
+            color: P,
             size: s,
-            className: O,
-            wrapperClassName: a()({ [f.PJ]: y && t === m.pe.TIER_2, [f.Up]: y && t === m.pe.TIER_1 }, g),
+            className: C,
+            wrapperClassName: a()({ [E.PJ]: R && t === p.pe.TIER_2, [E.Up]: R && t === p.pe.TIER_1 }, m),
             buttonShineClassName:
-                "buttonShineClassName" in b ? b.buttonShineClassName : k === d.XD.BRAND_INVERTED ? f.nz : void 0,
-            pauseAnimation: !w || C,
-            ...b,
+                "buttonShineClassName" in L ? L.buttonShineClassName : P === u.XD.BRAND_INVERTED ? E.nz : void 0,
+            pauseAnimation: !w || N,
+            ...L,
             children: [
-                N && (0, i.jsx)(u.t, { size: "md", color: L, className: a()(f.PC, A) }),
-                (0, i.jsx)("span", { className: a()(f._d, p?.textClassName), children: P.buttonText }),
+                y && (0, i.jsx)(d.t, { size: "md", color: D, className: a()(E.PC, A) }),
+                (0, i.jsx)("span", { className: a()(E._d, g?.textClassName), children: M.buttonText }),
             ],
         });
-    return (0, i.jsx)(E.A, {
+    return (0, i.jsx)(h.A, {
         onClick: n,
         subscriptionTier: t,
         postSuccessGuild: I,
         onSubscribeModalClose: T,
         premiumModalAnalyticsLocation: S,
-        applicationId: R,
-        confirmationFooter: v,
+        applicationId: v,
+        confirmationFooter: O,
         children: (e) => {
             let { onClick: t } = e,
-                n = r.cloneElement(M, { onClick: t });
-            return null != P.buttonTooltipText ? (0, i.jsx)(l.m, { text: P.buttonTooltipText, children: n }) : n;
+                n = r.cloneElement(x, { onClick: t });
+            return null != M.buttonTooltipText ? (0, i.jsx)(l.m, { text: M.buttonTooltipText, children: n }) : n;
         },
     });
 };

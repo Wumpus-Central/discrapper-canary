@@ -1,7 +1,7 @@
 !(function (e) {
     "use strict";
-    function t(e, t, n, r) {
-        var i = {
+    function t(e, t, n, i) {
+        var r = {
             s: ["m\xf5ne sekundi", "m\xf5ni sekund", "paar sekundit"],
             ss: [e + "sekundi", e + "sekundit"],
             m: ["\xfche minuti", "\xfcks minut"],
@@ -14,7 +14,7 @@
             y: ["\xfche aasta", "aasta", "\xfcks aasta"],
             yy: [e + " aasta", e + " aastat"],
         };
-        return t ? (i[n][2] ? i[n][2] : i[n][1]) : r ? i[n][0] : i[n][1];
+        return t ? (r[n][2] ? r[n][2] : r[n][1]) : i ? r[n][0] : r[n][1];
     }
     e.defineLocale("et", {
         months: "jaanuar_veebruar_m\xe4rts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember".split(

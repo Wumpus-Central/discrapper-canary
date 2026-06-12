@@ -1,14 +1,14 @@
-n.d(t, { A: () => a });
-var i = n(627968);
-n(64700);
-var l = n(827734),
-    s = n(953727);
-function a(e) {
-    let { width: t = 24, height: n = 24, ...a } = e;
+L.d(s, { A: () => r });
+var i = L(627968);
+L(64700);
+var t = L(661531),
+    e = L(953727);
+function r(C) {
+    let { width: s = 24, height: L = 24, ...r } = C;
     return (0, i.jsxs)("svg", {
-        ...(0, s.A)(a),
-        width: t,
-        height: n,
+        ...(0, e.A)(r),
+        width: s,
+        height: L,
         viewBox: "0 0 24 24",
         children: [
             (0, i.jsx)("path", {
@@ -28,10 +28,10 @@ function a(e) {
                     y2: "1.98749",
                     gradientUnits: "userSpaceOnUse",
                     children: [
-                        (0, i.jsx)("stop", { stopColor: l.A.colors.CREATOR_REVENUE_ICON_GRADIENT_START.css }),
+                        (0, i.jsx)("stop", { stopColor: t.A.colors.CREATOR_REVENUE_ICON_GRADIENT_START.css }),
                         (0, i.jsx)("stop", {
                             offset: "1",
-                            stopColor: l.A.colors.CREATOR_REVENUE_ICON_GRADIENT_END.css,
+                            stopColor: t.A.colors.CREATOR_REVENUE_ICON_GRADIENT_END.css,
                         }),
                     ],
                 }),

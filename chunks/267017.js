@@ -1,25 +1,25 @@
 "use strict";
-var r =
+var i =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    i = (function () {
+    r = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+                var i = t[n];
+                (i.enumerable = i.enumerable || !1),
+                    (i.configurable = !0),
+                    "value" in i && (i.writable = !0),
+                    Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
     s = n(313319),
@@ -29,18 +29,18 @@ e.exports = (function (e) {
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e, n) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        var i = (function (e, t) {
+        var r = (function (e, t) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return e.style && (e = r({}, e, { style: new a(e.style) })), (i._props = e), (i._callback = n), i.__attach(), i;
+        return e.style && (e = i({}, e, { style: new a(e.style) })), (r._props = e), (r._callback = n), r.__attach(), r;
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        i(t, [
+        r(t, [
             {
                 key: "__getValue",
                 value: function () {

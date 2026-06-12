@@ -1,15 +1,15 @@
-n.d(t, { A: () => o });
-var l = n(627968),
-    i = n(194261),
+n.d(e, { A: () => o });
+var i = n(627968),
+    l = n(194261),
     r = n(834730),
-    a = n(985018),
+    a = n(375708),
     s = n(809890);
 function o() {
-    return (0, l.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: s.v,
         children: [
-            (0, l.jsx)(i.X, { size: "xs", color: "currentColor" }),
-            (0, l.jsx)(r.E, { variant: "text-sm/semibold", className: s.Q, children: a.intl.string(a.t.KPnd2O) }),
+            (0, i.jsx)(l.X, { size: "xs", color: "currentColor" }),
+            (0, i.jsx)(r.E, { variant: "text-sm/semibold", className: s.Q, children: a.intl.string(a.t.KPnd2O) }),
         ],
     });
 }

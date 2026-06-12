@@ -1,1 +1,1 @@
-e.exports = { $T: "termsApplyAnchor__95fb7" };
+a.exports = { $T: "termsApplyAnchor__95fb7" };

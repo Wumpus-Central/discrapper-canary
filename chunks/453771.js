@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, {
-    Aw: () => y,
+    Aw: () => N,
     GD: () => A,
     Hb: () => I,
-    Iu: () => v,
-    SH: () => N,
+    Iu: () => C,
+    SH: () => y,
     TX: () => g,
     VE: () => E,
-    bB: () => C,
+    bB: () => v,
     o2: () => S,
     ww: () => p,
 });
@@ -21,8 +21,8 @@ var i = n(796873),
     c = n(255438),
     d = n(428262),
     _ = n(652215),
-    f = n(788868),
-    h = n(375708);
+    h = n(788868),
+    f = n(375708);
 function p(e, t) {
     return e instanceof File ? e : E(e.data.buffer, e.filename, t ?? "text/plain");
 }
@@ -62,9 +62,9 @@ function I(e) {
     return r().filesize(e);
 }
 let T = [
-    [_.GuildFeatures.MAX_FILE_SIZE_250_MB, f.q9],
-    [_.GuildFeatures.MAX_FILE_SIZE_100_MB, f.w6],
-    [_.GuildFeatures.MAX_FILE_SIZE_50_MB, f.eZ],
+    [_.GuildFeatures.MAX_FILE_SIZE_250_MB, h.q9],
+    [_.GuildFeatures.MAX_FILE_SIZE_100_MB, h.w6],
+    [_.GuildFeatures.MAX_FILE_SIZE_50_MB, h.eZ],
 ];
 function S(e) {
     let t = u.default.getCurrentUser(),
@@ -84,26 +84,26 @@ function S(e) {
         n,
     );
 }
-function N(e, t) {
+function y(e, t) {
     let n = S(t);
     return Array.from(e).some((e) => e.size > n);
 }
-function y(e) {
+function N(e) {
     return (
         (function (e) {
             let t = 0;
             for (let n of e) t += n.size;
             return t;
-        })(e) > C()
+        })(e) > v()
     );
 }
-function C() {
+function v() {
     let e = u.default.getCurrentUser();
     return null != e && e.isStaff(), 524288e3;
 }
-function v(e) {
+function C(e) {
     let { guildId: t, onClick: n, maxSize: i } = e,
         r = (0, c.Xq)((i ?? S(t)) / 1024, { useKibibytes: !0 }),
-        s = (0, c.Xq)(f.f3 / 1024, { useKibibytes: !0 });
-    return h.intl.format(h.t.tRuxk9, { maxSize: r, premiumMaxSize: s, onClick: n });
+        s = (0, c.Xq)(h.f3 / 1024, { useKibibytes: !0 });
+    return f.intl.format(f.t.tRuxk9, { maxSize: r, premiumMaxSize: s, onClick: n });
 }

@@ -1,7 +1,7 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
-        n = t.concat(a, t.concat("(\\.", a, ")*"));
+        n = /[a-zA-Z_$][a-zA-Z0-9_$]*/,
+        i = t.concat(n, t.concat("(\\.", n, ")*"));
     return {
         name: "ActionScript",
         aliases: ["as"],
@@ -66,9 +66,9 @@ e.exports = function (e) {
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.C_NUMBER_MODE,
-            { match: [/\bpackage/, /\s+/, n], className: { 1: "keyword", 3: "title.class" } },
+            { match: [/\bpackage/, /\s+/, i], className: { 1: "keyword", 3: "title.class" } },
             {
-                match: [/\b(?:class|interface|extends|implements)/, /\s+/, a],
+                match: [/\b(?:class|interface|extends|implements)/, /\s+/, n],
                 className: { 1: "keyword", 3: "title.class" },
             },
             { className: "meta", beginKeywords: "import include", end: /;/, keywords: { keyword: "import include" } },
@@ -88,7 +88,7 @@ e.exports = function (e) {
                             e.QUOTE_STRING_MODE,
                             e.C_LINE_COMMENT_MODE,
                             e.C_BLOCK_COMMENT_MODE,
-                            { className: "rest_arg", begin: /[.]{3}/, end: a, relevance: 10 },
+                            { className: "rest_arg", begin: /[.]{3}/, end: n, relevance: 10 },
                         ],
                     },
                     { begin: t.concat(/:\s*/, /([*]|[a-zA-Z_$][a-zA-Z0-9_$]*)/) },

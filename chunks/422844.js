@@ -1,65 +1,65 @@
-n.d(t, { R: () => p, p: () => f });
-var i = n(284009),
-    l = n.n(i),
-    s = n(353640),
-    r = n(371444),
-    a = n(392421),
-    o = n(602137),
-    d = n(121894),
-    c = n(17928),
-    u = n(734057),
-    h = n(679804);
-let A = new Set(),
-    _ = { layoutType: r.C.LIST, sortOrder: o.T.CREATION_DATE, tagFilter: A, tagSetting: a.n.MATCH_SOME };
-class g {
+a.d(e, { R: () => p, p: () => A });
+var n = a(284009),
+    s = a.n(n),
+    l = a(353640),
+    r = a(371444),
+    h = a(392421),
+    g = a(602137),
+    i = a(121894),
+    S = a(17928),
+    u = a(734057),
+    o = a(679804);
+let C = new Set(),
+    T = { layoutType: r.C.LIST, sortOrder: g.T.CREATION_DATE, tagFilter: C, tagSetting: h.n.MATCH_SOME };
+class d {
     set;
     get;
     channelStates = {};
-    constructor(e, t) {
-        (this.set = e), (this.get = t);
+    constructor(t, e) {
+        (this.set = t), (this.get = e);
     }
-    setChannelState = (e, t) => {
-        let n = this.get(),
-            i = this.getChannelState(e),
-            l = { ...n.channelStates };
-        (l[e] = { ...i, ...t }), (0, d.r)(() => this.set({ channelStates: l }));
+    setChannelState = (t, e) => {
+        let a = this.get(),
+            n = this.getChannelState(t),
+            s = { ...a.channelStates };
+        (s[t] = { ...n, ...e }), (0, i.r)(() => this.set({ channelStates: s }));
     };
-    getChannelState = (e) => {
-        if (null == e) return _;
-        let { channelStates: t } = this.get(),
-            n = t[e];
-        if (null == n) {
-            let t = u.A.getChannel(e);
-            l()(null != t, "[Forum Channel Store] The channel should not be missing."),
-                (n = {
-                    layoutType: t.getDefaultLayout(),
-                    sortOrder: t.getDefaultSortOrder(),
-                    tagFilter: A,
-                    tagSetting: t.getDefaultTagSetting(),
+    getChannelState = (t) => {
+        if (null == t) return T;
+        let { channelStates: e } = this.get(),
+            a = e[t];
+        if (null == a) {
+            let e = u.A.getChannel(t);
+            s()(null != e, "[Forum Channel Store] The channel should not be missing."),
+                (a = {
+                    layoutType: e.getDefaultLayout(),
+                    sortOrder: e.getDefaultSortOrder(),
+                    tagFilter: C,
+                    tagSetting: e.getDefaultTagSetting(),
                 });
         }
-        return n;
+        return a;
     };
-    toggleTagFilter = (e, t) => {
-        let n = new Set(this.getChannelState(e).tagFilter);
-        n.has(t) ? n.delete(t) : n.add(t), this.setTagFilter(e, n);
+    toggleTagFilter = (t, e) => {
+        let a = new Set(this.getChannelState(t).tagFilter);
+        a.has(e) ? a.delete(e) : a.add(e), this.setTagFilter(t, a);
     };
-    setTagFilter = (e, t) => {
-        this.setChannelState(e, { tagFilter: t }), h.A.setFilterTagIds(t);
+    setTagFilter = (t, e) => {
+        this.setChannelState(t, { tagFilter: e }), o.A.setFilterTagIds(e);
     };
-    setSortOrder = (e, t) => {
-        this.setChannelState(e, { sortOrder: t }), h.A.setSortOrder(t);
+    setSortOrder = (t, e) => {
+        this.setChannelState(t, { sortOrder: e }), o.A.setSortOrder(e);
     };
-    setLayoutType = (e, t) => {
-        this.setChannelState(e, { layoutType: t }), h.A.setLayout(t);
+    setLayoutType = (t, e) => {
+        this.setChannelState(t, { layoutType: e }), o.A.setLayout(e);
     };
-    setTagSetting = (e, t) => {
-        this.setChannelState(e, { tagSetting: t }), h.A.setTagSetting(t);
+    setTagSetting = (t, e) => {
+        this.setChannelState(t, { tagSetting: e }), o.A.setTagSetting(e);
     };
 }
-let m = (0, s.v)((e, t) => new g(e, t)),
-    p = (e) => {
-        let t = m();
-        return null == (0, c.bG)([u.A], () => u.A.getChannel(e)) ? _ : t.getChannelState(e);
+let c = (0, l.v)((t, e) => new d(t, e)),
+    p = (t) => {
+        let e = c();
+        return null == (0, S.bG)([u.A], () => u.A.getChannel(t)) ? T : e.getChannelState(t);
     },
-    f = () => m;
+    A = () => c;

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Qs: "content_f70348",
     HA: "channelName_f70348",
     Kk: "icon_f70348",

@@ -2,7 +2,7 @@
 n.d(t, { A: () => o });
 var i = n(64700),
     r = n(17928),
-    s = n(253932),
+    s = n(885386),
     a = n(994500);
 function o(e) {
     let t = s.j0.useSetting(),
@@ -10,13 +10,13 @@ function o(e) {
             isBlocked: a.A.isBlocked(e),
             isIgnored: a.A.isIgnored(e),
         })),
-        [l, d] = (0, i.useState)(n || o);
+        [l, u] = (0, i.useState)(n || o);
     return (
-        (0, i.useEffect)(() => d(n || o), [n, o]),
+        (0, i.useEffect)(() => u(n || o), [n, o]),
         [
             l && !(o && t),
             (0, i.useCallback)(() => {
-                d(!1);
+                u(!1);
             }, []),
         ]
     );

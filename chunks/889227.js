@@ -10,8 +10,8 @@ var i = n(136722),
     c = n(47537),
     d = n(244284),
     _ = n(349871),
-    f = n(392737),
-    h = n(486020),
+    h = n(392737),
+    f = n(486020),
     p = n(474090),
     E = n(935208),
     m = n(652215),
@@ -85,7 +85,7 @@ class A extends a.A {
             (this.primaryGuild = (0, c.j)(e.primary_guild ?? e.primaryGuild ?? null)),
             (this.collectibles = e.collectibles),
             (this.displayNameStyles = e.displayNameStyles ?? (0, u.mT)(e.display_name_styles)),
-            (this.premiumState = e.premiumState ?? (0, f.f)(e.premium_state)),
+            (this.premiumState = e.premiumState ?? (0, h.f)(e.premium_state)),
             (this.perks = e.perks?.activePerksBitmask != null ? e.perks : (0, _.c$)(e.perks)),
             (this.restrictedSchedule = (0, d.QU)(e.restricted_schedule ?? e.restrictedSchedule)),
             (this.appTransactionIds = e.appTransactionIds ?? e.app_transaction_ids ?? null),
@@ -138,10 +138,10 @@ class A extends a.A {
     }
     getAvatarURL(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.QB,
+            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.QB,
             r = null != e ? this.guildMemberAvatars[e] : void 0;
         return null != r && null != e
-            ? h.Ay.getGuildMemberAvatarURLSimple({
+            ? f.Ay.getGuildMemberAvatarURLSimple({
                   guildId: e,
                   avatar: r,
                   userId: this.id,
@@ -149,7 +149,7 @@ class A extends a.A {
                   size: t,
                   canWebP: i,
               })
-            : h.Ay.getUserAvatarURL(this, n, t, null, i);
+            : f.Ay.getUserAvatarURL(this, n, t, null, i);
     }
     addGuildAvatarHash(e, t) {
         if (this.guildMemberAvatars[e] === t) return this;
@@ -167,9 +167,9 @@ class A extends a.A {
         if (null != e) {
             let i = this.guildMemberAvatars[e];
             if (null != i)
-                return h.Ay.getAnimatableSourceWithFallback(t, (t) =>
-                    h.Ay.makeSource(
-                        h.Ay.getGuildMemberAvatarURLSimple({
+                return f.Ay.getAnimatableSourceWithFallback(t, (t) =>
+                    f.Ay.makeSource(
+                        f.Ay.getGuildMemberAvatarURLSimple({
                             guildId: e,
                             avatar: i,
                             userId: this.id,
@@ -179,7 +179,7 @@ class A extends a.A {
                     ),
                 );
         }
-        return h.Ay.getAnimatableSourceWithFallback(t, (e) => h.Ay.getUserAvatarSource(this, e, n));
+        return f.Ay.getAnimatableSourceWithFallback(t, (e) => f.Ay.getUserAvatarSource(this, e, n));
     }
     isClaimed() {
         return null != this.email || null != this.phone;

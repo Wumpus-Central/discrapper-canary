@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var r = n(111956),
     s = n.n(r),
     a = n(17928),
@@ -10,8 +10,8 @@ var r = n(111956),
     c = n(885386),
     d = n(927813),
     _ = n(723702),
-    f = n(495544),
-    h = n(652215),
+    h = n(495544),
+    f = n(652215),
     p = n(731854);
 let E = Date.now(),
     m = !1,
@@ -22,17 +22,17 @@ let E = Date.now(),
 function S() {
     return A || I || ((0, _.isAndroid)() && T);
 }
-function N() {
+function y() {
     let e;
-    Date.now() - E > h.sdF || S()
+    Date.now() - E > f.sdF || S()
         ? m || o.h.dispatch({ type: "IDLE", idle: !0, idleSince: E })
         : m && o.h.dispatch({ type: "IDLE", idle: !1 }),
-        0 === (e = c.cU.getSetting()) || null != i || Date.now() - E > Math.min(e * d.A.Millis.SECOND, h.sdF) || S()
+        0 === (e = c.cU.getSetting()) || null != i || Date.now() - E > Math.min(e * d.A.Millis.SECOND, f.sdF) || S()
             ? g || o.h.dispatch({ type: "AFK", afk: !0 })
             : g && o.h.dispatch({ type: "AFK", afk: !1 });
 }
-function y(e) {
-    e && (i = Date.now()), N();
+function N(e) {
+    e && (i = Date.now()), y();
 }
 if (!__OVERLAY__) {
     _.isPlatformEmbedded && u.A?.powerMonitor != null
@@ -40,7 +40,7 @@ if (!__OVERLAY__) {
               let t = (t) => {
                   let n = Date.now() - t;
                   (null == i || n > i) && ((E = Math.max(n, E)), (i = null)),
-                      N(),
+                      y(),
                       setTimeout(e, 10 * d.A.Millis.SECOND);
               };
               if (u.A?.powerMonitor?.getSystemIdleTimeMs != null) {
@@ -49,24 +49,24 @@ if (!__OVERLAY__) {
               }
           })(),
           u.A.powerMonitor.on("resume", () => {
-              (A = !1), y(!1);
+              (A = !1), N(!1);
           }),
           u.A.powerMonitor.on("suspend", () => {
-              (A = !0), y(!0), l.default.disconnect();
+              (A = !0), N(!0), l.default.disconnect();
           }),
           u.A.powerMonitor.on("lock-screen", () => {
-              (I = !0), y(!0);
+              (I = !0), N(!0);
           }),
           u.A.powerMonitor.on("unlock-screen", () => {
-              (I = !1), y(!1);
+              (I = !1), N(!1);
           }))
-        : setInterval(N, 30 * d.A.Millis.SECOND);
+        : setInterval(y, 30 * d.A.Millis.SECOND);
     let e = s()(() => {
-        C({});
+        v({});
     }, 500);
     window.addEventListener("mouseup", e), window.addEventListener("wheel", e), window.addEventListener("keypress", e);
 }
-function C(e) {
+function v(e) {
     let { timestamp: t, type: n, bypassIdleUpdate: r } = e,
         s = "OVERLAY_SET_NOT_IDLE" === n && null != t;
     return (
@@ -74,13 +74,13 @@ function C(e) {
         !r &&
         ((i = null),
         (E = s ? t : Date.now()),
-        __OVERLAY__ ? o.h.dispatch({ type: "OVERLAY_SET_NOT_IDLE", timestamp: E }) : N(),
+        __OVERLAY__ ? o.h.dispatch({ type: "OVERLAY_SET_NOT_IDLE", timestamp: E }) : y(),
         !1)
     );
 }
-class v extends a.Ay.Store {
+class C extends a.Ay.Store {
     initialize() {
-        this.waitFor(f.default);
+        this.waitFor(h.default);
     }
     static displayName = "IdleStore";
     isIdle() {
@@ -99,7 +99,7 @@ class v extends a.Ay.Store {
         return I;
     }
 }
-let O = new v(o.h, {
+let R = new C(o.h, {
     IDLE: function (e) {
         m = e.idle;
     },
@@ -108,16 +108,16 @@ let O = new v(o.h, {
     },
     SPEAKING: function (e) {
         let { userId: t, speakingFlags: n } = e;
-        return n !== p.ME.NONE && t === f.default.getId() && C({}), !1;
+        return n !== p.ME.NONE && t === h.default.getId() && v({}), !1;
     },
     APP_STATE_UPDATE: function (e) {
         let { state: t } = e;
-        return (T = t === h.g6G.BACKGROUND), (i = null), (E = Date.now()), N(), !1;
+        return (T = t === f.g6G.BACKGROUND), (i = null), (E = Date.now()), y(), !1;
     },
-    OVERLAY_SET_NOT_IDLE: C,
-    CHANNEL_SELECT: C,
-    VOICE_CHANNEL_SELECT: C,
-    WINDOW_FOCUS: C,
-    OVERLAY_INITIALIZE: C,
-    OVERLAY_SET_INPUT_LOCKED: C,
+    OVERLAY_SET_NOT_IDLE: v,
+    CHANNEL_SELECT: v,
+    VOICE_CHANNEL_SELECT: v,
+    WINDOW_FOCUS: v,
+    OVERLAY_INITIALIZE: v,
+    OVERLAY_SET_INPUT_LOCKED: v,
 });

@@ -1,9 +1,9 @@
 "use strict";
-var r = n(72290);
-let i = n(159093),
-    a = n(17101),
-    s = a.isObject,
-    o = a.hasOwn;
+var i = n(72290);
+let r = n(159093),
+    s = n(17101),
+    a = s.isObject,
+    o = s.hasOwn;
 function l() {}
 (e.exports = l),
     (l.prototype.clearTimeout = function () {
@@ -112,8 +112,8 @@ let u = new Set([
                             (e.url = this.url),
                             n(e);
                     }),
-                        e.end((e, r) => {
-                            e ? n(e) : t(r);
+                        e.end((e, i) => {
+                            e ? n(e) : t(i);
                         });
                 }));
         }
@@ -137,7 +137,7 @@ let u = new Set([
     }),
     (l.prototype.getHeader = l.prototype.get),
     (l.prototype.set = function (e, t) {
-        if (s(e)) {
+        if (a(e)) {
             for (let t in e) o(e, t) && this.set(t, e[t]);
             return this;
         }
@@ -152,7 +152,7 @@ let u = new Set([
             throw Error(
                 ".field() can't be used if .send() is used. Please use only .send() or only .field() & .attach()",
             );
-        if (s(e)) {
+        if (a(e)) {
             for (let t in e) o(e, t) && this.field(t, e[t]);
             return this;
         }
@@ -170,16 +170,16 @@ let u = new Set([
     (l.prototype.abort = function () {
         if (this._aborted) return this;
         if (((this._aborted = !0), this.xhr && this.xhr.abort(), this.req)) {
-            if (i.gte(r.version, "v13.0.0") && i.lt(r.version, "v14.0.0"))
+            if (r.gte(i.version, "v13.0.0") && r.lt(i.version, "v14.0.0"))
                 throw Error("Superagent does not work in v13 properly with abort() due to Node.js core changes");
             this.req.abort();
         }
         return this.clearTimeout(), this.emit("abort"), this;
     }),
-    (l.prototype._auth = function (e, t, n, r) {
+    (l.prototype._auth = function (e, t, n, i) {
         switch (n.type) {
             case "basic":
-                this.set("Authorization", `Basic ${r(`${e}:${t}`)}`);
+                this.set("Authorization", `Basic ${i(`${e}:${t}`)}`);
                 break;
             case "auto":
                 (this.username = e), (this.password = t);
@@ -203,7 +203,7 @@ let u = new Set([
         return { method: this.method, url: this.url, data: this._data, headers: this._header };
     }),
     (l.prototype.send = function (e) {
-        let t = s(e),
+        let t = a(e),
             n = this._header["content-type"];
         if (this._formData)
             throw Error(
@@ -211,7 +211,7 @@ let u = new Set([
             );
         if (t && !this._data) Array.isArray(e) ? (this._data = []) : this._isHost(e) || (this._data = {});
         else if (e && this._data && this._isHost(this._data)) throw Error("Can't merge these send calls");
-        if (t && s(this._data))
+        if (t && a(this._data))
             for (let t in e) {
                 if ("bigint" == typeof e[t] && !e[t].toJSON) throw Error("Cannot serialize BigInt value to json");
                 o(e, t) && (this._data[t] = e[t]);
@@ -246,14 +246,14 @@ let u = new Set([
     }),
     (l.prototype._timeoutError = function (e, t, n) {
         if (this._aborted) return;
-        let r = Error(`${e + t}ms exceeded`);
-        (r.timeout = t),
-            (r.code = "ECONNABORTED"),
-            (r.errno = n),
+        let i = Error(`${e + t}ms exceeded`);
+        (i.timeout = t),
+            (i.code = "ECONNABORTED"),
+            (i.errno = n),
             (this.timedout = !0),
-            (this.timedoutError = r),
+            (this.timedoutError = i),
             this.abort(),
-            this.callback(r);
+            this.callback(i);
     }),
     (l.prototype._setTimeouts = function () {
         let e = this;

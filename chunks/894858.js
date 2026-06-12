@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => r });
-let r = (0, n(839214).D)(() => ({
+n.d(t, { A: () => i });
+let i = (0, n(839214).D)(() => ({
     currentPanelKey: void 0,
     currentTabKeys: new Map(),
     currentCategoryKey: void 0,

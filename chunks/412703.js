@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { n: () => i, o: () => s });
-var r,
-    i =
-        (((r = {}).STREAM_ON_DESKTOP = "STREAM_ON_DESKTOP"),
-        (r.PLAY_ON_DESKTOP = "PLAY_ON_DESKTOP"),
-        (r.PLAY_ON_XBOX = "PLAY_ON_XBOX"),
-        (r.PLAY_ON_PLAYSTATION = "PLAY_ON_PLAYSTATION"),
-        (r.WATCH_VIDEO = "WATCH_VIDEO"),
-        (r.WATCH_VIDEO_ON_MOBILE = "WATCH_VIDEO_ON_MOBILE"),
-        (r.PLAY_ACTIVITY = "PLAY_ACTIVITY"),
-        (r.ACHIEVEMENT_IN_GAME = "ACHIEVEMENT_IN_GAME"),
-        (r.ACHIEVEMENT_IN_ACTIVITY = "ACHIEVEMENT_IN_ACTIVITY"),
-        r);
+n.d(t, { n: () => r, o: () => s });
+var i,
+    r =
+        (((i = {}).STREAM_ON_DESKTOP = "STREAM_ON_DESKTOP"),
+        (i.PLAY_ON_DESKTOP = "PLAY_ON_DESKTOP"),
+        (i.PLAY_ON_XBOX = "PLAY_ON_XBOX"),
+        (i.PLAY_ON_PLAYSTATION = "PLAY_ON_PLAYSTATION"),
+        (i.WATCH_VIDEO = "WATCH_VIDEO"),
+        (i.WATCH_VIDEO_ON_MOBILE = "WATCH_VIDEO_ON_MOBILE"),
+        (i.PLAY_ACTIVITY = "PLAY_ACTIVITY"),
+        (i.ACHIEVEMENT_IN_GAME = "ACHIEVEMENT_IN_GAME"),
+        (i.ACHIEVEMENT_IN_ACTIVITY = "ACHIEVEMENT_IN_ACTIVITY"),
+        i);
 let s = {
     ALL: new Set([
         "PLAY_ACTIVITY",

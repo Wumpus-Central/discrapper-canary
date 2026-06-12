@@ -10,14 +10,14 @@ var i = n(627968),
 function c(e) {
     let { color: t, colors: n, className: s, background: o = !0, hoverOverride: c } = e,
         [d, _] = r.useState(!1),
-        f = n?.primaryColor ?? t,
+        h = n?.primaryColor ?? t,
         {
-            hasGradient: h,
+            hasGradient: f,
             stops: p,
             gradientId: E,
             animatedGradientId: m,
-        } = (0, l.RM)(f, n?.secondaryColor, n?.tertiaryColor);
-    return null == f
+        } = (0, l.RM)(h, n?.secondaryColor, n?.tertiaryColor);
+    return null == h
         ? null
         : (0, i.jsxs)("svg", {
               className: a()(u.JW, s),
@@ -30,7 +30,7 @@ function c(e) {
                   _(!1);
               },
               children: [
-                  h &&
+                  f &&
                       (0, i.jsxs)("defs", {
                           children: [
                               (0, i.jsx)("linearGradient", {
@@ -75,13 +75,13 @@ function c(e) {
                           d: "M0 4C0 1.79086 1.79086 0 4 0H16C18.2091 0 20 1.79086 20 4V16C20 18.2091 18.2091 20 16 20H4C1.79086 20 0 18.2091 0 16V4Z",
                       }),
                   (0, i.jsx)("circle", { className: u.tH, cx: "10", cy: "10", r: "6" }),
-                  (0, i.jsx)("circle", { className: u.NA, cx: "10", cy: "10", r: "6", fill: h ? `url(#${E})` : f }),
+                  (0, i.jsx)("circle", { className: u.NA, cx: "10", cy: "10", r: "6", fill: f ? `url(#${E})` : h }),
                   (0, i.jsx)("circle", {
                       className: u.Om,
                       cx: "10",
                       cy: "10",
                       r: "5",
-                      fill: h ? `url(#${c || d ? m : E})` : f,
+                      fill: f ? `url(#${c || d ? m : E})` : h,
                   }),
               ],
           });

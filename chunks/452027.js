@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { D: () => h, n: () => f }), n(321073);
+n.d(t, { D: () => f, n: () => h }), n(321073);
 var i = n(627968),
     r = n(64700),
     s = n(661531),
@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(834730),
     d = n(15626),
     _ = n(714304);
-function f(e) {
+function h(e) {
     let {
         label: t,
         hideLabel: n,
@@ -24,8 +24,8 @@ function f(e) {
         errorMessage: c,
         successMessage: d,
         layout: _,
-        layoutConfig: f,
-        ...h
+        layoutConfig: h,
+        ...f
     } = e;
     return {
         fieldProps: {
@@ -41,20 +41,20 @@ function f(e) {
             errorMessage: c,
             successMessage: d,
             layout: _,
-            layoutConfig: f,
+            layoutConfig: h,
         },
-        props: h,
+        props: f,
     };
 }
-function h(e) {
+function f(e) {
     let {
             label: t,
             hideLabel: n = !1,
             required: s,
             disabled: l,
             description: u,
-            helperText: f,
-            children: h,
+            helperText: h,
+            children: f,
             errorMessage: E,
             successMessage: m,
             role: g,
@@ -62,12 +62,12 @@ function h(e) {
             layoutConfig: I,
             badge: T,
             icon: S = null,
-            interactiveLabel: N = !1,
-            auxiliaryContentPosition: y = "under-control",
-            trailingAuxiliaryContent: C,
-            ref: v,
+            interactiveLabel: y = !1,
+            auxiliaryContentPosition: N = "under-control",
+            trailingAuxiliaryContent: v,
+            ref: C,
         } = e,
-        O = (function (e) {
+        R = (function (e) {
             let { id: t, errorMessage: n, helperText: i, successMessage: s, description: a } = e,
                 { hasTrailingAuxiliaryContent: o } =
                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -75,41 +75,41 @@ function h(e) {
                 c = r.useId(),
                 d = r.useId(),
                 _ = r.useId(),
-                f = r.useId(),
                 h = r.useId(),
+                f = r.useId(),
                 p = r.useId(),
                 E = null != a && "" !== a,
                 m = (null != i && "" !== i) || (null != s && "" !== s),
                 g = [];
-            E && g.push(f), m && g.push(_), o && g.push(p);
+            E && g.push(h), m && g.push(_), o && g.push(p);
             let A = g.length > 0 ? g.join(" ") : void 0;
             return r.useMemo(
                 () => ({
                     labelId: c,
                     controlId: t ?? d,
                     describedById: A,
-                    errorMessageId: null != n && "" !== n ? h : void 0,
+                    errorMessageId: null != n && "" !== n ? f : void 0,
                     helperTextId: m ? _ : void 0,
-                    descriptionId: E ? f : void 0,
+                    descriptionId: E ? h : void 0,
                     trailingAuxiliaryContentId: o ? p : void 0,
                     isLabelHovered: l,
                     setIsLabelHovered: u,
                 }),
-                [c, t, d, A, n, h, m, _, E, f, o, p, l, u],
+                [c, t, d, A, n, f, m, _, E, h, o, p, l, u],
             );
-        })(e, { hasTrailingAuxiliaryContent: null != C }),
-        { labelId: R, controlId: b, errorMessageId: D, describedById: L, helperTextId: w, descriptionId: M } = O,
+        })(e, { hasTrailingAuxiliaryContent: null != v }),
+        { labelId: O, controlId: b, errorMessageId: D, describedById: L, helperTextId: w, descriptionId: M } = R,
         P = I?.horizontalControlColumnWidth,
         x = "group" === g || "radiogroup" === g,
-        U = x ? "fieldset" : "div",
-        k = x ? (0, i.jsx)("legend", { id: R, children: (0, i.jsx)(o.A, { children: t }) }) : null,
+        k = x ? "fieldset" : "div",
+        U = x ? (0, i.jsx)("legend", { id: O, children: (0, i.jsx)(o.A, { children: t }) }) : null,
         G = null != t && "" !== t,
         F = null != u && "" !== u,
         V = G
             ? (0, i.jsxs)(c.E, {
                   "aria-hidden": x,
-                  "data-interactive": N,
-                  id: R,
+                  "data-interactive": y,
+                  id: O,
                   tag: x ? "span" : "label",
                   variant: "text-md/medium",
                   color: "text-strong",
@@ -138,16 +138,16 @@ function h(e) {
         B = (0, i.jsx)(p, {
             successMessage: m,
             errorMessage: E,
-            helperText: f,
-            trailing: C,
+            helperText: h,
+            trailing: v,
             helperTextId: w,
             errorMessageId: D,
         });
     return (0, i.jsx)(d._.Provider, {
-        value: O,
-        children: (0, i.jsxs)(U, {
+        value: R,
+        children: (0, i.jsxs)(k, {
             role: g,
-            ref: v,
+            ref: C,
             className: _.kL,
             "data-layout": A,
             "data-has-description": F || void 0,
@@ -157,7 +157,7 @@ function h(e) {
             "aria-required": (!!x && !!s) || void 0,
             disabled: x ? l : void 0,
             children: [
-                k,
+                U,
                 G && n ? (0, i.jsx)(o.A, { children: V }) : null,
                 (G && !n) || F
                     ? (0, i.jsxs)("div", {
@@ -172,13 +172,13 @@ function h(e) {
                                       id: M,
                                       children: u,
                                   }),
-                              "under-label" === y ? B : null,
+                              "under-label" === N ? B : null,
                           ],
                       })
                     : null,
                 (0, i.jsxs)("div", {
                     className: _.A4,
-                    children: ["function" == typeof h ? h(O) : h, "under-control" === y ? B : null],
+                    children: ["function" == typeof f ? f(R) : f, "under-control" === N ? B : null],
                 }),
             ],
         }),
@@ -186,11 +186,11 @@ function h(e) {
 }
 function p(e) {
     let { successMessage: t, errorMessage: n, helperText: r, trailing: a, helperTextId: o, errorMessageId: d } = e,
-        f = (0, i.jsx)("div", {}),
-        h = null != a;
+        h = (0, i.jsx)("div", {}),
+        f = null != a;
     return (null != n && "" !== n
-        ? ((h = !0),
-          (f = (0, i.jsxs)("div", {
+        ? ((f = !0),
+          (h = (0, i.jsxs)("div", {
               className: _.lI,
               role: "alert",
               children: [
@@ -199,8 +199,8 @@ function p(e) {
               ],
           })))
         : null != t && "" !== t
-          ? ((h = !0),
-            (f = (0, i.jsxs)("div", {
+          ? ((f = !0),
+            (h = (0, i.jsxs)("div", {
                 className: _.lI,
                 children: [
                     (0, i.jsx)(l.y, { size: "xs", color: s.A.colors.TEXT_FEEDBACK_POSITIVE }),
@@ -208,8 +208,8 @@ function p(e) {
                 ],
             })))
           : null != r &&
-            ((h = !0), (f = (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-subtle", id: o, children: r }))),
-    h)
-        ? (0, i.jsxs)("div", { className: _.JA, children: [f, a] })
+            ((f = !0), (h = (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-subtle", id: o, children: r }))),
+    f)
+        ? (0, i.jsxs)("div", { className: _.JA, children: [h, a] })
         : null;
 }

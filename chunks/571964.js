@@ -1,54 +1,54 @@
-n.d(t, { A: () => A }), n(321073);
-var r = n(627968);
-n(64700);
-var i = n(17928),
-    l = n(477782),
-    a = n(192308),
-    d = n(545059),
-    s = n(870391),
-    u = n(994500),
-    o = n(589051),
-    c = n(985018);
-function A(e) {
-    let { user: t, onAction: A, groupId: g } = e,
-        { hasFriendList: f } = (0, o.M8)("useManageFriendGroupsItems"),
-        h = t.id,
-        [E, I] = (0, i.yK)([u.A, s.A], () => [u.A.isFriend(h), s.A.getGroups()], [h]);
-    if (!f || !E) return null;
-    let _ = [];
+l.d(n, { A: () => p }), l(321073);
+var r = l(627968);
+l(64700);
+var a = l(17928),
+    t = l(477782),
+    i = l(192308),
+    o = l(545059),
+    u = l(870391),
+    d = l(994500),
+    s = l(589051),
+    c = l(375708);
+function p(e) {
+    let { user: n, onAction: p, groupId: h } = e,
+        { hasFriendList: g } = (0, s.M8)("useManageFriendGroupsItems"),
+        A = n.id,
+        [f, m] = (0, a.yK)([d.A, u.A], () => [d.A.isFriend(A), u.A.getGroups()], [A]);
+    if (!g || !f) return null;
+    let v = [];
     return (
-        I.length > 0
-            ? _.push(
+        m.length > 0
+            ? v.push(
                   (0, r.jsxs)(
-                      l.Dr,
+                      t.Dr,
                       {
                           id: "add-to-group",
                           label: "Add to Group",
                           children: [
-                              I.map((e) =>
+                              m.map((e) =>
                                   (0, r.jsx)(
-                                      l.Dr,
+                                      t.Dr,
                                       {
                                           id: `add-${e.id}`,
                                           label: e.name,
                                           action: () => {
-                                              A?.(), d.A.addUsersToGroup(e.id, h);
+                                              p?.(), o.A.addUsersToGroup(e.id, A);
                                           },
                                       },
                                       e.id,
                                   ),
                               ),
-                              (0, r.jsx)(l.bX, {}, "add-to-group-separator"),
+                              (0, r.jsx)(t.bX, {}, "add-to-group-separator"),
                               (0, r.jsx)(
-                                  l.Dr,
+                                  t.Dr,
                                   {
                                       id: "create-new-group",
                                       label: c.intl.string(c.t["3hF1W4"]),
                                       action: () => {
-                                          A?.(),
-                                              (0, a.openModalLazy)(async () => {
-                                                  let { default: e } = await n.e("51080").then(n.bind(n, 297147));
-                                                  return (t) => (0, r.jsx)(e, { ...t, initialUserIds: [h] });
+                                          p?.(),
+                                              (0, i.openModalLazy)(async () => {
+                                                  let { default: e } = await l.e("51080").then(l.bind(l, 297147));
+                                                  return (n) => (0, r.jsx)(e, { ...n, initialUserIds: [A] });
                                               });
                                       },
                                   },
@@ -59,38 +59,38 @@ function A(e) {
                       "add-to-group",
                   ),
               )
-            : 0 === I.length &&
-              _.push(
+            : 0 === m.length &&
+              v.push(
                   (0, r.jsx)(
-                      l.Dr,
+                      t.Dr,
                       {
                           id: "create-new-group",
                           label: c.intl.string(c.t["3hF1W4"]),
                           action: () => {
-                              A?.(),
-                                  (0, a.openModalLazy)(async () => {
-                                      let { default: e } = await n.e("51080").then(n.bind(n, 297147));
-                                      return (t) => (0, r.jsx)(e, { ...t, initialUserIds: [h] });
+                              p?.(),
+                                  (0, i.openModalLazy)(async () => {
+                                      let { default: e } = await l.e("51080").then(l.bind(l, 297147));
+                                      return (n) => (0, r.jsx)(e, { ...n, initialUserIds: [A] });
                                   });
                           },
                       },
                       "create-new-group",
                   ),
               ),
-        null != g &&
-            _.push(
+        null != h &&
+            v.push(
                 (0, r.jsx)(
-                    l.Dr,
+                    t.Dr,
                     {
                         id: "remove-from-group",
                         label: "Remove from Group",
                         action: () => {
-                            A?.(), d.A.removeUsersFromGroup(g, h);
+                            p?.(), o.A.removeUsersFromGroup(h, A);
                         },
                     },
                     "remove-from-group",
                 ),
             ),
-        _
+        v
     );
 }

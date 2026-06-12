@@ -1,49 +1,49 @@
-n.d(t, { h: () => o });
-var l = n(627968),
-    i = n(64700),
-    s = n(416696),
-    a = n(709562),
-    r = n(985018);
+t.d(n, { h: () => o });
+var l = t(627968),
+    i = t(64700),
+    s = t(416696),
+    a = t(204651),
+    r = t(375708);
 function o(e) {
-    let t,
-        n,
+    let n,
+        t,
         {
             hasPermission: o,
             streamActive: c,
             isSelfStream: u,
             centerButton: d,
             onMouseEnter: A,
-            onMouseLeave: E,
+            onMouseLeave: h,
             renderNUXHighlight: m,
-            buttonRef: h,
-            ...C
+            buttonRef: C,
+            ...E
         } = e,
-        g = d ? a.l : a.A;
-    n = c
+        p = d ? a.l : a.A;
+    t = c
         ? u
             ? r.intl.string(r.t.S5anIc)
             : r.intl.string(r.t.q3O3J8)
         : o
           ? r.intl.string(r.t.fjBNo1)
           : r.intl.string(r.t.uQn9B8);
-    let { Component: I, events: p, play: x } = (0, s.c)(c ? "disable" : "enable");
+    let { Component: g, events: x, play: I } = (0, s.c)(c ? "disable" : "enable");
     return (
-        i.useEffect(() => () => x(), [c, x]),
-        (0, l.jsx)(g, {
-            buttonRef: h,
+        i.useEffect(() => () => I(), [c, I]),
+        (0, l.jsx)(p, {
+            buttonRef: C,
             isTrayButton: !0,
-            label: n,
+            label: t,
             disabled: !o,
-            iconComponent: I,
+            iconComponent: g,
             isActive: c,
-            color: (m ? (t = "premiumGradient") : c && (t = "green"), t),
+            color: (m ? (n = "premiumGradient") : c && (n = "green"), n),
             onMouseEnter: (e) => {
-                A?.(e), p.onMouseEnter();
+                A?.(e), x.onMouseEnter();
             },
             onMouseLeave: (e) => {
-                E?.(e), p.onMouseLeave();
+                h?.(e), x.onMouseLeave();
             },
-            ...C,
+            ...E,
         })
     );
 }

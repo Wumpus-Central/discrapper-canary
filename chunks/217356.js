@@ -1,44 +1,44 @@
-a.r(n), a.d(n, { default: () => u });
-var t = a(627968),
-    i = a(64700),
-    l = a(503698),
-    s = a.n(l),
-    r = a(770178),
-    _ = a(765548),
-    d = a(685073),
-    c = a(534400),
-    o = a(329157);
-let u = i.memo(function (e) {
-    let { children: n, isOverlay: a, contextGuildId: l, ...u } = e,
-        [g, m] = i.useState({ maskImage: "none" }),
-        h = i.useRef(null),
-        p = (0, _.A)(() => {
-            let e = b.current?.getBoundingClientRect() ?? null,
-                n = h.current?.getBoundingClientRect() ?? null;
-            if (a || null == e || null == n) return void m({ maskImage: "none" });
-            let t = n.right - e.right,
-                i = n.width - t;
-            i > n.width
-                ? m({ maskImage: "none" })
-                : m({ maskImage: `linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ${i}px)` });
+n.r(s), n.d(s, { default: () => g });
+var a = n(627968),
+    l = n(64700),
+    t = n(503698),
+    i = n.n(t),
+    r = n(770178),
+    d = n(765548),
+    u = n(685073),
+    c = n(534400),
+    m = n(329157);
+let g = l.memo(function (e) {
+    let { children: s, isOverlay: n, contextGuildId: t, ...g } = e,
+        [h, o] = l.useState({ maskImage: "none" }),
+        p = l.useRef(null),
+        k = (0, d.A)(() => {
+            let e = f.current?.getBoundingClientRect() ?? null,
+                s = p.current?.getBoundingClientRect() ?? null;
+            if (n || null == e || null == s) return void o({ maskImage: "none" });
+            let a = s.right - e.right,
+                l = s.width - a;
+            l > s.width
+                ? o({ maskImage: "none" })
+                : o({ maskImage: `linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 0) ${l}px)` });
         }),
-        b = (0, r.w)(p),
-        x = (0, d.Wb)(u.userId, l);
-    return (0, t.jsxs)("div", {
-        className: s()(o.kL, a && o.ur),
-        ref: b,
+        f = (0, r.w)(k),
+        x = (0, u.Wb)(g.userId, t);
+    return (0, a.jsxs)("div", {
+        className: i()(m.kL, n && m.ur),
+        ref: f,
         children: [
-            (0, t.jsx)("div", { className: o.QV, children: n }),
-            (0, t.jsx)("div", {
-                className: o.Qz,
-                children: (0, t.jsx)("span", {
-                    className: s()(o.Tm, !x && a && o.pN),
-                    ref: h,
-                    style: g,
-                    children: (0, t.jsx)(c.Ay, {
-                        ...u,
-                        contextGuildId: l,
-                        className: s()(u.className, a && o.ZW),
+            (0, a.jsx)("div", { className: m.QV, children: s }),
+            (0, a.jsx)("div", {
+                className: m.Qz,
+                children: (0, a.jsx)("span", {
+                    className: i()(m.Tm, !x && n && m.pN),
+                    ref: p,
+                    style: h,
+                    children: (0, a.jsx)(c.Ay, {
+                        ...g,
+                        contextGuildId: t,
+                        className: i()(g.className, n && m.ZW),
                         disableGuildProfile: !0,
                     }),
                 }),

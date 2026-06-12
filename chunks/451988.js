@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { BK: () => a, Ep: () => r, IX: () => s, J_: () => i, OC: () => o });
-class r {
+n.d(t, { BK: () => a, Ep: () => i, IX: () => s, J_: () => r, OC: () => o });
+class i {
     _ref;
     start(e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
@@ -17,12 +17,12 @@ class r {
         return null != this._ref;
     }
 }
-class i {
+class r {
     _timeout;
     _delay;
     _handler;
     constructor(e, t) {
-        (this._delay = e), (this._handler = t), (this._timeout = new r());
+        (this._delay = e), (this._handler = t), (this._timeout = new i());
     }
     set(e) {
         return (this._delay = e), this;
@@ -66,7 +66,7 @@ class o {
         (this.invoke = e),
             (this.predicate = t),
             (this.delay = n),
-            (this._flushHandler = new i(this.delay, () => this._flush()));
+            (this._flushHandler = new r(this.delay, () => this._flush()));
     }
     queue(e) {
         for (let t of Array.isArray(e) ? e : [e]) this.predicate(t) && this._pending.add(t);

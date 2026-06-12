@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => a });
-var r = n(64700);
-let i = Object.freeze({
+n.d(t, { A: () => s });
+var i = n(64700);
+let r = Object.freeze({
     scrollTop: 0,
     scrollLeft: 0,
     scrollHeight: 0,
@@ -10,31 +10,31 @@ let i = Object.freeze({
     offsetWidth: 0,
     dirty: 2,
 });
-function a() {
-    let e = (0, r.useRef)(null),
-        t = (0, r.useRef)(i),
-        n = (0, r.useCallback)(() => {
+function s() {
+    let e = (0, i.useRef)(null),
+        t = (0, i.useRef)(r),
+        n = (0, i.useCallback)(() => {
             let { current: n } = e,
-                { dirty: r } = t.current;
-            if (null == n || 0 === r) return t.current;
-            if (1 === r) {
-                let { scrollTop: e, scrollLeft: r } = n;
-                t.current = { ...t.current, scrollTop: e, scrollLeft: r, dirty: 0 };
+                { dirty: i } = t.current;
+            if (null == n || 0 === i) return t.current;
+            if (1 === i) {
+                let { scrollTop: e, scrollLeft: i } = n;
+                t.current = { ...t.current, scrollTop: e, scrollLeft: i, dirty: 0 };
             } else {
                 let {
                     scrollTop: e,
-                    scrollLeft: r,
-                    scrollHeight: i,
-                    scrollWidth: a,
-                    offsetHeight: s,
+                    scrollLeft: i,
+                    scrollHeight: r,
+                    scrollWidth: s,
+                    offsetHeight: a,
                     offsetWidth: o,
                 } = n;
                 t.current = {
                     scrollTop: e,
-                    scrollLeft: r,
-                    scrollHeight: i,
-                    scrollWidth: a,
-                    offsetHeight: s,
+                    scrollLeft: i,
+                    scrollHeight: r,
+                    scrollWidth: s,
+                    offsetHeight: a,
                     offsetWidth: o,
                     dirty: 0,
                 };

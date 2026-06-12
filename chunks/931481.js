@@ -50,8 +50,8 @@ function A(t) {
               ],
           });
 }
-var h = n(562153),
-    j = n(183555),
+var j = n(562153),
+    h = n(183555),
     b = n(939496),
     I = n(996988),
     v = n(581196);
@@ -59,8 +59,8 @@ function _(t) {
     let { user: e, guildId: n, channelId: r, applicationId: x, isGameRelationship: f = !1, className: E } = t,
         { themeType: g } = (0, b.E)(),
         p = g === I.d.MODAL_V2,
-        N = h.Ay.getName(n, r, e),
-        { trackUserProfileAction: _ } = (0, j.NJ)(),
+        N = j.Ay.getName(n, r, e),
+        { trackUserProfileAction: _ } = (0, h.NJ)(),
         { newestAnalyticsLocation: C } = (0, c.Ay)(),
         { acceptFriendRequest: y, cancelFriendRequest: T } = (0, m.I)({
             userId: e.id,

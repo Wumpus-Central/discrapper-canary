@@ -1,85 +1,85 @@
-l.d(t, { A: () => w, V: () => y });
+r.d(t, { A: () => _, V: () => M });
 var n,
-    a = l(627968);
-l(64700);
-var r = l(349288),
-    i = l(683071),
-    s = l(331322),
-    o = l(885574),
-    c = l(738188),
-    d = l(834730),
-    u = l(404778),
-    h = l(975807),
-    g = l(935649),
-    x = l(847599),
-    m = l(36149),
-    f = l(975571),
-    p = l(418208),
-    v = l(652215),
-    _ = l(985018);
-function j() {
-    return (0, m.yM)()
-        ? _.intl.format(_.t.iWGjcg, {
+    i = r(627968);
+r(64700);
+var s = r(349288),
+    l = r(683071),
+    a = r(331322),
+    o = r(885574),
+    c = r(738188),
+    d = r(834730),
+    u = r(404778),
+    h = r(975807),
+    x = r(139716),
+    j = r(847599),
+    f = r(36149),
+    p = r(975571),
+    A = r(418208),
+    v = r(652215),
+    T = r(375708);
+function m() {
+    return (0, f.yM)()
+        ? T.intl.format(T.t.iWGjcg, {
               hook: (e) =>
-                  (0, a.jsx)(r.Anchor, {
+                  (0, i.jsx)(s.Anchor, {
                       onClick: (e) => {
                           e.preventDefault(),
                               e.stopPropagation(),
-                              (0, h.A)(f.A.getArticleURL(v.MVz.TIGGER_PAWTECT_LEARN_MORE));
+                              (0, h.A)(p.A.getArticleURL(v.MVz.TIGGER_PAWTECT_LEARN_MORE));
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
                   }),
           })
-        : _.intl.format(_.t.edpbxy, {
+        : T.intl.format(T.t.edpbxy, {
               hook: (e) =>
-                  (0, a.jsx)(r.Anchor, {
+                  (0, i.jsx)(s.Anchor, {
                       onClick: (e) => {
                           e.preventDefault(),
                               e.stopPropagation(),
-                              g.A.showAgeVerificationGetStartedModal({ entryPoint: x.q1.START_STAGE_PROMPT });
+                              x.A.showAgeVerificationGetStartedModal({ entryPoint: j.q1.START_STAGE_PROMPT });
                       },
                       useDefaultUnderlineStyles: !1,
                       children: e.join(""),
                   }),
           });
 }
-function A(e) {
+function g(e) {
     let { className: t } = e,
-        l = (0, m.yM)();
-    return (0, a.jsx)("div", {
+        r = (0, f.yM)();
+    return (0, i.jsx)("div", {
         className: t,
-        children: (0, a.jsx)(i.w, { type: l ? "info" : "warning", children: (0, a.jsx)(j, {}) }),
+        children: (0, i.jsx)(l.w, { type: r ? "info" : "warning", children: (0, i.jsx)(m, {}) }),
     });
 }
-function b(e) {
+function y(e) {
     let { className: t } = e,
-        l = (0, m.yM)();
-    return (0, a.jsx)("div", {
+        r = (0, f.yM)();
+    return (0, i.jsx)("div", {
         className: t,
-        children: (0, a.jsxs)(s.B, {
+        children: (0, i.jsxs)(a.B, {
             direction: "horizontal",
             gap: 4,
             align: "center",
             children: [
-                l
-                    ? (0, a.jsx)(o.m, { size: "refresh_sm", color: "var(--text-default)" })
-                    : (0, a.jsx)(c.i, { size: "refresh_sm", color: "var(--text-default)" }),
-                (0, a.jsx)(d.E, { color: "text-default", variant: "text-sm/medium", children: (0, a.jsx)(j, {}) }),
+                r
+                    ? (0, i.jsx)(o.m, { size: "refresh_sm", color: "var(--text-default)" })
+                    : (0, i.jsx)(c.i, { size: "refresh_sm", color: "var(--text-default)" }),
+                (0, i.jsx)(d.E, { color: "text-default", variant: "text-sm/medium", children: (0, i.jsx)(m, {}) }),
             ],
         }),
     });
 }
-var y = (((n = {})[(n.TOP = 0)] = "TOP"), (n[(n.BOTTOM = 1)] = "BOTTOM"), n);
-function w(e) {
-    let { className: t, noBackground: l, divider: n, channelId: r } = e;
-    if (!(0, p.Vv)(r ?? void 0)) return null;
-    let i = Array.isArray(n) ? n : null != n ? [n] : [];
-    return (0, a.jsxs)(a.Fragment, {
+var M = (((n = {})[(n.TOP = 0)] = "TOP"), (n[(n.BOTTOM = 1)] = "BOTTOM"), n);
+function _(e) {
+    let { className: t, noBackground: r, divider: n, channelId: s } = e;
+    if (!(0, A.Vv)(s ?? void 0)) return null;
+    let l = Array.isArray(n) ? n : null != n ? [n] : [];
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            i.includes(0) && (0, a.jsx)(u.c, { gap: 16 }),
-            (0, a.jsx)("div", { className: t, children: l ? (0, a.jsx)(b, {}) : (0, a.jsx)(A, {}) }),
-            i?.includes(1) && (0, a.jsx)(u.c, { gap: 16 }),
+            l.includes(0) && (0, i.jsx)(u.c, { gap: 16 }),
+            (0, i.jsx)("div", { className: t, children: r ? (0, i.jsx)(y, {}) : (0, i.jsx)(g, {}) }),
+            l?.includes(1) && (0, i.jsx)(u.c, { gap: 16 }),
         ],
     });
 }

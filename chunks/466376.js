@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, { Cx: () => s, Xb: () => o, k7: () => l });
-var r = n(4511),
-    i = n(731854);
-let s = Object.freeze({ [i.K3.AUTO]: {}, [i.K3.FULL]: { encode: { width: 1280, height: 720 } } });
+var i = n(4511),
+    r = n(731854);
+let s = Object.freeze({ [r.K3.AUTO]: {}, [r.K3.FULL]: { encode: { width: 1280, height: 720 } } });
 class a {
     capture;
     encode;
@@ -41,8 +41,8 @@ class o {
         if (null == e) return t;
         if (null == t) return e;
         let n = t?.width ?? e?.width ?? 0,
-            r = t?.height ?? e?.height ?? 0;
-        return { width: n, height: r, framerate: t?.framerate ?? e?.framerate, pixelCount: n * r };
+            i = t?.height ?? e?.height ?? 0;
+        return { width: n, height: i, framerate: t?.framerate ?? e?.framerate, pixelCount: n * i };
     }
 }
 class l {
@@ -55,12 +55,12 @@ class l {
     isStreamContext;
     ladder;
     lastGoLivePixelCount;
-    constructor(e, t, n = i.eQ) {
+    constructor(e, t, n = r.eQ) {
         (this.contextType = e),
             (this.connection = t),
             (this.options = n),
-            (this.isStreamContext = this.contextType === i.x.STREAM),
-            (this.ladder = new r.r(n)),
+            (this.isStreamContext = this.contextType === r.x.STREAM),
+            (this.ladder = new i.r(n)),
             (this.goliveMaxQuality = this.getDefaultGoliveQuality()),
             (this.lastGoLivePixelCount = {});
     }
@@ -70,22 +70,22 @@ class l {
         if (null != e) {
             let t = this.connection.getRemoteVideoSinkPixelCount(e);
             if (null != this.lastGoLivePixelCount[e] && this.lastGoLivePixelCount[e] > 0) {
-                let r = t / this.lastGoLivePixelCount[e];
-                n = r > 1.05 || r < 0.95 ? t : this.lastGoLivePixelCount[e];
+                let i = t / this.lastGoLivePixelCount[e];
+                n = i > 1.05 || i < 0.95 ? t : this.lastGoLivePixelCount[e];
             } else n = t;
             this.lastGoLivePixelCount[e] = n;
         }
-        let r = this.isStreamContext ? this.getGoliveQuality(t, n) : this.getVideoQuality(t);
+        let i = this.isStreamContext ? this.getGoliveQuality(t, n) : this.getVideoQuality(t);
         return null != this.qualityOverwrite
             ? new a({
-                  encode: o.extend(r.encode, this.qualityOverwrite.encode),
-                  capture: o.extend(r.capture, this.qualityOverwrite.capture),
-                  bitrateMin: this.qualityOverwrite.bitrateMin ?? r.bitrateMin,
-                  bitrateMax: this.qualityOverwrite.bitrateMax ?? r.bitrateMax,
-                  bitrateTarget: this.qualityOverwrite.bitrateTarget ?? r.bitrateTarget,
-                  localWant: r.localWant,
+                  encode: o.extend(i.encode, this.qualityOverwrite.encode),
+                  capture: o.extend(i.capture, this.qualityOverwrite.capture),
+                  bitrateMin: this.qualityOverwrite.bitrateMin ?? i.bitrateMin,
+                  bitrateMax: this.qualityOverwrite.bitrateMax ?? i.bitrateMax,
+                  bitrateTarget: this.qualityOverwrite.bitrateTarget ?? i.bitrateTarget,
+                  localWant: i.localWant,
               })
-            : r;
+            : i;
     }
     applyQualityConstraints(e, t) {
         let n = this.getQuality(t);
@@ -125,17 +125,17 @@ class l {
     getVideoQuality(e) {
         let t = this.ladder.getResolution(e),
             n = this.options.videoBitrate.min * t.budgetPortion,
-            r = this.options.videoBitrate.max * t.budgetPortion,
-            i = this.isMuted ? t.mutedFramerate : t.framerate;
+            i = this.options.videoBitrate.max * t.budgetPortion,
+            r = this.isMuted ? t.mutedFramerate : t.framerate;
         return new a({
-            encode: { ...t, framerate: i },
+            encode: { ...t, framerate: r },
             capture: {
                 width: this.options.videoCapture.width,
                 height: this.options.videoCapture.height,
                 framerate: this.options.videoCapture.framerate,
             },
             bitrateMin: Math.max(n, this.options.videoBitrateFloor),
-            bitrateMax: Math.max(r, this.options.videoBitrateFloor),
+            bitrateMax: Math.max(i, this.options.videoBitrateFloor),
             localWant: e,
         });
     }
@@ -150,10 +150,10 @@ class l {
         )
             return this.goliveMaxQuality;
         let n = Math.min(
-                i.YU * this.goliveMaxQuality.encode.pixelCount * this.goliveMaxQuality.encode.framerate,
+                r.YU * this.goliveMaxQuality.encode.pixelCount * this.goliveMaxQuality.encode.framerate,
                 this.goliveMaxQuality.bitrateMax,
             ),
-            r = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMin),
+            i = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMin),
             s = this.scaleLinearly(t, this.goliveMaxQuality.encode.pixelCount, this.goliveMaxQuality.bitrateMax),
             o =
                 null != this.goliveMaxQuality.bitrateTarget
@@ -166,7 +166,7 @@ class l {
         return new a({
             encode: this.goliveMaxQuality.encode,
             capture: this.goliveMaxQuality.capture,
-            bitrateMin: Math.max(Math.ceil(r), this.options.videoBitrateFloor),
+            bitrateMin: Math.max(Math.ceil(i), this.options.videoBitrateFloor),
             bitrateMax: Math.max(Math.ceil(s), n),
             bitrateTarget: null != o ? Math.max(Math.ceil(o), this.options.videoBitrateFloor) : void 0,
             localWant: e,
@@ -174,8 +174,8 @@ class l {
     }
     getDefaultGoliveQuality() {
         return new a({
-            capture: { width: 1280, height: 720, framerate: i.sG },
-            encode: { width: 1280, height: 720, framerate: i.sG, pixelCount: 921600 },
+            capture: { width: 1280, height: 720, framerate: r.sG },
+            encode: { width: 1280, height: 720, framerate: r.sG, pixelCount: 921600 },
             bitrateMin: this.options.desktopBitrate.min,
             bitrateMax: this.options.desktopBitrate.max,
             bitrateTarget: this.options.desktopBitrate.target,

@@ -8,24 +8,24 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.RichTextNodeType =
         t.astFormatter =
             void 0);
-var r = n(193779);
+var i = n(193779);
 Object.defineProperty(t, "astFormatter", {
     enumerable: !0,
     get: function () {
-        return r.astFormatter;
+        return i.astFormatter;
     },
 }),
     Object.defineProperty(t, "RichTextNodeType", {
         enumerable: !0,
         get: function () {
-            return r.RichTextNodeType;
+            return i.RichTextNodeType;
         },
     });
-var i = n(742834);
+var r = n(742834);
 Object.defineProperty(t, "markdownFormatter", {
     enumerable: !0,
     get: function () {
-        return i.markdownFormatter;
+        return r.markdownFormatter;
     },
 });
 var s = n(950196);

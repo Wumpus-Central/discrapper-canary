@@ -10,8 +10,8 @@ var i = n(665260),
     c = n(71393),
     d = n(287809),
     _ = n(652215),
-    f = n(340837);
-let h = {
+    h = n(340837);
+let f = {
         notClaimed: !1,
         notEmailVerified: !1,
         notPhoneVerified: !1,
@@ -27,21 +27,21 @@ function m(e) {
     g(e), p.add(e);
     let r = c.A.getGuild(e),
         o = d.default.getCurrentUser(),
-        h = null != r && r.verificationLevel !== _.PvD.NONE,
+        f = null != r && r.verificationLevel !== _.PvD.NONE,
         m = null != r && null != r.verificationRoleId;
-    if (null == r || null == o || (!h && !m) || (0, a.bM)(r, o)) return;
+    if (null == r || null == o || (!f && !m) || (0, a.bM)(r, o)) return;
     let A = l.Ay.getMember(r.id, o.id);
-    if (null != A && (0, i.Lt)(A.flags ?? 0, f.D.BYPASSES_VERIFICATION)) return;
+    if (null != A && (0, i.Lt)(A.flags ?? 0, h.D.BYPASSES_VERIFICATION)) return;
     let I = !1;
     m && null != A && (I = !A.roles.includes(r.verificationRoleId)) && (t = u.A.getRole(r.id, r.verificationRoleId));
     let T = !1,
         S = !1,
-        N = !1,
         y = !1,
-        C = !1,
-        v = 0,
-        O = 0;
-    if (h && !o.isPhoneVerified()) {
+        N = !1,
+        v = !1,
+        C = 0,
+        R = 0;
+    if (f && !o.isPhoneVerified()) {
         let e = !1;
         if (null != A) {
             let t = new Set();
@@ -55,31 +55,31 @@ function m(e) {
             m || s || !(t.size > 0) || (e = !0);
         }
         !e &&
-            ((v = +o.createdAt + 6e4 * _.$8o.ACCOUNT_AGE - Date.now()),
-            (O = +r.joinedAt + 6e4 * _.$8o.MEMBER_AGE - Date.now()),
+            ((C = +o.createdAt + 6e4 * _.$8o.ACCOUNT_AGE - Date.now()),
+            (R = +r.joinedAt + 6e4 * _.$8o.MEMBER_AGE - Date.now()),
             (T = r.verificationLevel >= _.PvD.LOW && !o.isClaimed()),
             o.isStaff() ||
                 ((S = r.verificationLevel >= _.PvD.LOW && !o.verified),
-                (N = r.verificationLevel >= _.PvD.VERY_HIGH),
-                (y = r.verificationLevel >= _.PvD.MEDIUM && v > 0),
-                (C = r.verificationLevel >= _.PvD.HIGH && O > 0)));
+                (y = r.verificationLevel >= _.PvD.VERY_HIGH),
+                (N = r.verificationLevel >= _.PvD.MEDIUM && C > 0),
+                (v = r.verificationLevel >= _.PvD.HIGH && R > 0)));
     }
-    let R = [];
-    C && R.push(O),
-        y && R.push(v),
-        R.length > 0 &&
-            (n = setTimeout(() => s.h.dispatch({ type: "GUILD_VERIFICATION_CHECK", guildId: e }), Math.max(...R))),
+    let O = [];
+    v && O.push(R),
+        N && O.push(C),
+        O.length > 0 &&
+            (n = setTimeout(() => s.h.dispatch({ type: "GUILD_VERIFICATION_CHECK", guildId: e }), Math.max(...O))),
         (E[e] = {
             notClaimed: T,
             notEmailVerified: S,
-            notPhoneVerified: N,
-            newAccount: y,
-            newMember: C,
+            notPhoneVerified: y,
+            newAccount: N,
+            newMember: v,
             missingVerificationRole: I,
             verificationRole: t,
-            canChat: !(T || S || N || y || C || I),
-            accountDeadline: new Date(Date.now() + v),
-            memberDeadline: new Date(Date.now() + O),
+            canChat: !(T || S || y || N || v || I),
+            accountDeadline: new Date(Date.now() + C),
+            memberDeadline: new Date(Date.now() + R),
             timeoutRef: n,
         });
 }
@@ -96,7 +96,7 @@ class I extends r.Ay.Store {
         this.waitFor(l.Ay, u.A, c.A, d.default);
     }
     getCheck(e) {
-        return null == e ? h : (p.has(e) || m(e), E[e] ?? h);
+        return null == e ? f : (p.has(e) || m(e), E[e] ?? f);
     }
     canChatInGuild(e) {
         return this.getCheck(e).canChat;

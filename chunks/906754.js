@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => c });
-var l = n(627968);
+n.d(t, { A: () => u });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
+var r = n(503698),
+    s = n.n(r),
     a = n(548118),
-    r = n(936755),
-    o = n(499413);
-let c = function (e) {
+    o = n(936755),
+    l = n(499413);
+let u = function (e) {
     let { guild: t, children: n } = e,
-        i =
+        r =
             null != t
-                ? (0, l.jsx)(a.Ay, {
+                ? (0, i.jsx)(a.Ay, {
                       guild: t,
                       size: a.Ay.Sizes.MEDIUM,
-                      className: s()(o.Kk, null == t.icon ? o.HO : o.FP),
+                      className: s()(l.Kk, null == t.icon ? l.HO : l.FP),
                       active: !0,
                   })
                 : null;
-    return (0, l.jsxs)("span", {
-        children: [(0, l.jsx)(r.A, { children: i }), (0, l.jsx)("span", { className: o.UU, children: n })],
+    return (0, i.jsxs)("span", {
+        children: [(0, i.jsx)(o.A, { children: r }), (0, i.jsx)("span", { className: l.UU, children: n })],
     });
 };

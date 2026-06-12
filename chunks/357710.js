@@ -1,86 +1,86 @@
 "use strict";
 n.d(t, { D: () => u, e: () => c });
-var r = n(825913),
-    i = n(340287),
-    a = n(64700),
-    s = n(3388),
+var i = n(825913),
+    r = n(340287),
+    s = n(64700),
+    a = n(3388),
     o = n(533715);
-let l = (0, a.createContext)(null);
+let l = (0, s.createContext)(null);
 function u(e) {
-    let t = (0, a.useRef)({});
-    return a.createElement(l.Provider, { value: t }, e.children);
+    let t = (0, s.useRef)({});
+    return s.createElement(l.Provider, { value: t }, e.children);
 }
-let c = (0, a.forwardRef)(function (e, t) {
-    let { name: n, isVisible: u = !0, children: c, className: d, style: _, ...f } = e,
-        [p, h] = (0, a.useState)(u ? "visible" : "hidden"),
-        m = (0, a.useContext)(l);
-    if (!m) throw Error("<SharedElement> must be rendered inside a <SharedElementTransition>");
-    u && "hidden" === p && h("visible"),
+let c = (0, s.forwardRef)(function (e, t) {
+    let { name: n, isVisible: u = !0, children: c, className: d, style: _, ...h } = e,
+        [f, p] = (0, s.useState)(u ? "visible" : "hidden"),
+        E = (0, s.useContext)(l);
+    if (!E) throw Error("<SharedElement> must be rendered inside a <SharedElementTransition>");
+    u && "hidden" === f && p("visible"),
         (t = (0, o.U)(t)),
-        (0, s.N)(() => {
+        (0, a.N)(() => {
             let e = t.current,
-                r = m.current,
-                a = r[n],
-                s = null;
-            if (e && u && a) {
-                h("visible");
+                i = E.current,
+                s = i[n],
+                a = null;
+            if (e && u && s) {
+                p("visible");
                 let t = e.getAnimations(),
-                    i = a.style.map(([t, n]) => {
-                        let r = e.style[t];
+                    r = s.style.map(([t, n]) => {
+                        let i = e.style[t];
                         if ("translate" === t) {
-                            let t = a.rect,
+                            let t = s.rect,
                                 n = e.getBoundingClientRect(),
-                                r = t.left - (null == n ? void 0 : n.left),
-                                i = t.top - (null == n ? void 0 : n.top);
-                            e.style.translate = `${r}px ${i}px`;
+                                i = t.left - (null == n ? void 0 : n.left),
+                                r = t.top - (null == n ? void 0 : n.top);
+                            e.style.translate = `${i}px ${r}px`;
                         } else e.style[t] = n;
-                        return [t, r];
+                        return [t, i];
                     });
                 for (let n of e.getAnimations()) t.includes(n) || n.cancel();
-                (s = requestAnimationFrame(() => {
-                    for (let [t, n] of ((s = null), i)) e.style[t] = n;
+                (a = requestAnimationFrame(() => {
+                    for (let [t, n] of ((a = null), r)) e.style[t] = n;
                 })),
-                    delete r[n];
+                    delete i[n];
             } else
-                e && u && !a
-                    ? (queueMicrotask(() => (0, i.flushSync)(() => h("entering"))),
-                      (s = requestAnimationFrame(() => {
-                          (s = null), h("visible");
+                e && u && !s
+                    ? (queueMicrotask(() => (0, r.flushSync)(() => p("entering"))),
+                      (a = requestAnimationFrame(() => {
+                          (a = null), p("visible");
                       })))
                     : e &&
                       !u &&
                       queueMicrotask(() => {
-                          r[n]
-                              ? (delete r[n],
-                                (0, i.flushSync)(() => h("exiting")),
+                          i[n]
+                              ? (delete i[n],
+                                (0, r.flushSync)(() => p("exiting")),
                                 Promise.all(e.getAnimations().map((e) => e.finished))
-                                    .then(() => h("hidden"))
+                                    .then(() => p("hidden"))
                                     .catch(() => {}))
-                              : h("hidden");
+                              : p("hidden");
                       });
             return () => {
-                if ((null != s && cancelAnimationFrame(s), e && e.isConnected && !e.hasAttribute("data-exiting"))) {
+                if ((null != a && cancelAnimationFrame(a), e && e.isConnected && !e.hasAttribute("data-exiting"))) {
                     let t = window.getComputedStyle(e);
                     if ("none" !== t.transitionProperty) {
-                        let i = t.transitionProperty.split(/\s*,\s*/);
-                        r[n] = { rect: e.getBoundingClientRect(), style: i.map((e) => [e, t[e]]) };
+                        let r = t.transitionProperty.split(/\s*,\s*/);
+                        i[n] = { rect: e.getBoundingClientRect(), style: r.map((e) => [e, t[e]]) };
                     }
                 }
             };
-        }, [t, m, n, u]);
-    let g = (0, r.Sl)({
+        }, [t, E, n, u]);
+    let m = (0, i.Sl)({
         children: c,
         className: d,
         style: _,
-        values: { isEntering: "entering" === p, isExiting: "exiting" === p },
+        values: { isEntering: "entering" === f, isExiting: "exiting" === f },
     });
-    return "hidden" === p
+    return "hidden" === f
         ? null
-        : a.createElement("div", {
-              ...f,
-              ...g,
+        : s.createElement("div", {
+              ...h,
+              ...m,
               ref: t,
-              "data-entering": "entering" === p || void 0,
-              "data-exiting": "exiting" === p || void 0,
+              "data-entering": "entering" === f || void 0,
+              "data-exiting": "exiting" === f || void 0,
           });
 });

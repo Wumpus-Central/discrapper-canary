@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { $r: () => I, AN: () => S, BX: () => E, fr: () => f, w6: () => h });
-var r = n(562465),
-    i = n(927813),
+n.d(t, { $r: () => I, AN: () => S, BX: () => f, fr: () => h, w6: () => p });
+var i = n(636537),
+    r = n(927813),
     s = n(998218),
     a = n(652215);
 let o = (e) => e?.split(":")[0],
     l = new Set(["/attachments/", "/ephemeral-attachments/"]),
     u = new Set(["/external/"]),
-    d = +i.A.Millis.HOUR,
-    c = new Set(
+    c = +r.A.Millis.HOUR,
+    d = new Set(
         [window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT?.substring(2)].map(o).filter(Boolean),
     ),
     _ = new Set(
@@ -17,35 +17,35 @@ let o = (e) => e?.split(":")[0],
             .map(o)
             .filter(Boolean),
     );
-function f(e) {
-    let t = c.has(e.hostname),
+function h(e) {
+    let t = d.has(e.hostname),
         n = Array.from(l).some((t) => e.pathname.startsWith(t));
     return (t || !1) && n;
 }
-function E(e) {
+function f(e) {
     let t = _.has(e.hostname),
         n = Array.from(u).some((t) => e.pathname.startsWith(t));
     return (t || !1) && n;
 }
-function h(e) {
+function p(e) {
     let t = s.A.toURLSafe(e);
     if (null == t) return e;
     for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
     return t;
 }
-function p(e) {
+function E(e) {
     let t,
-        n = isNaN((t = parseInt(e.searchParams.get("ex") ?? "", 16))) ? void 0 : t * i.A.Millis.SECOND;
-    return null == n || n <= Date.now() + d;
+        n = isNaN((t = parseInt(e.searchParams.get("ex") ?? "", 16))) ? void 0 : t * r.A.Millis.SECOND;
+    return null == n || n <= Date.now() + c;
 }
 function m(e) {
     let t = s.A.toURLSafe(e.url);
-    return null != t && p(t);
+    return null != t && E(t);
 }
 function g(e) {
     if (null == e) return !1;
     let t = s.A.toURLSafe(e.url);
-    return null != t && !!f(t) && p(t);
+    return null != t && !!h(t) && E(t);
 }
 function A(e) {
     return g(e.image) || e.images?.some(g) || g(e.video);
@@ -54,7 +54,7 @@ function I(e) {
     return e.attachments.some(m) || e.embeds.some(A);
 }
 async function T(e) {
-    let t = await r.Bo.post({
+    let t = await i.Bo.post({
         url: a.Rsh.ATTACHMENTS_REFRESH_URLS,
         body: { attachment_urls: [e] },
         rejectWithError: !1,
@@ -63,5 +63,5 @@ async function T(e) {
 }
 async function S(e) {
     let t = s.A.toURLSafe(e);
-    return null != t && p(t) ? ((await T(e)) ?? e) : e;
+    return null != t && E(t) ? ((await T(e)) ?? e) : e;
 }

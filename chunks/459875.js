@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     om: "block__8dcfb",
     vk: "clickable__8dcfb",
     wx: "header__8dcfb",

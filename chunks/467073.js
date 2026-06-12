@@ -1,23 +1,23 @@
-n.d(t, { A: () => _ });
-var a = n(17928),
-    i = n(229527),
-    l = n(870136),
-    r = n(857071),
-    s = n(406704),
-    o = n(696451),
-    c = n(834942),
-    d = n(576705),
-    u = n(707985),
-    m = n(652215);
-function _(e) {
+i.d(t, { A: () => p });
+var n = i(17928),
+    l = i(229527),
+    s = i(870136),
+    a = i(857071),
+    r = i(406704),
+    d = i(696451),
+    o = i(834942),
+    u = i(576705),
+    c = i(707985),
+    h = i(652215);
+function p(e) {
     let t = e?.guild_id,
-        n = (0, a.bG)([c.A], () => null == t || c.A.canChatInGuild(t), [t]),
-        _ = (0, a.bG)([r.A], () => null != t && r.A.isLurking(t), [t]),
-        h = (0, a.bG)([o.Ay], () => null != t && o.Ay.isCurrentUserGuest(t), [t]),
-        p = (0, a.bG)([d.A], () => n && d.A.can(m.xBc.ADD_REACTIONS, e), [n, e]),
-        g = (0, i.ix)(t),
-        [, f] = (0, l.c)(t),
-        A = (0, s.Id)(e);
+        i = (0, n.bG)([o.A], () => null == t || o.A.canChatInGuild(t), [t]),
+        p = (0, n.bG)([a.A], () => null != t && a.A.isLurking(t), [t]),
+        m = (0, n.bG)([d.Ay], () => null != t && d.Ay.isCurrentUserGuest(t), [t]),
+        A = (0, n.bG)([u.A], () => i && u.A.can(h.xBc.ADD_REACTIONS, e), [i, e]),
+        I = (0, l.ix)(t),
+        [, g] = (0, s.c)(t),
+        f = (0, r.Id)(e);
     return null == e
         ? {
               disableReactionReads: !0,
@@ -28,18 +28,18 @@ function _(e) {
               isPendingMember: !1,
           }
         : {
-              ...(0, u.A)({
+              ...(0, c.A)({
                   channel: e,
-                  canChat: n,
+                  canChat: i,
                   renderReactions: !0,
-                  canAddNewReactions: p,
-                  isLurking: _,
-                  communicationDisabled: f,
-                  isActiveChannelOrUnarchivableThread: A,
-                  isAutomodQuarantined: g,
+                  canAddNewReactions: A,
+                  isLurking: p,
+                  communicationDisabled: g,
+                  isActiveChannelOrUnarchivableThread: f,
+                  isAutomodQuarantined: I,
               }),
-              isLurking: _,
-              isGuest: h,
+              isLurking: p,
+              isGuest: m,
               isPendingMember: !1,
           };
 }

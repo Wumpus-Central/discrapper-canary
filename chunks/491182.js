@@ -1,92 +1,92 @@
-n.d(l, { A: () => v });
+n.d(l, { A: () => A });
 var t = n(627968),
-    a = n(64700),
-    i = n(503698),
-    s = n.n(i),
+    i = n(64700),
+    a = n(503698),
+    s = n.n(a),
     r = n(17928),
     o = n(473193),
-    u = n(187322),
-    d = n(247928),
-    c = n(824994),
-    g = n(176201),
+    c = n(187322),
+    d = n(346055),
+    u = n(824994),
+    m = n(176201),
     h = n(676608),
-    m = n(317525),
-    A = n(334211);
-let v = function (e) {
+    g = n(317525),
+    x = n(334211);
+let A = function (e) {
     let {
             className: l,
             compact: n = !1,
-            contentOnly: i = !1,
-            zalgo: v = !0,
-            preview: f = !1,
-            disableInteraction: x = !1,
-            childrenRepliedMessage: p,
-            childrenExecutedCommand: j,
-            childrenHeader: C,
-            childrenSystemMessage: N,
+            contentOnly: a = !1,
+            zalgo: A = !0,
+            preview: p = !1,
+            disableInteraction: j = !1,
+            childrenRepliedMessage: v,
+            childrenExecutedCommand: N,
+            childrenHeader: f,
+            childrenSystemMessage: C,
             childrenButtons: I,
-            childrenMessageContent: _,
-            childrenAccessories: E,
-            messageRef: b,
-            focusProps: M = { offset: { left: 4, right: 4 } },
-            hasThread: S,
-            isSystemMessage: y,
+            childrenMessageContent: b,
+            childrenAccessories: y,
+            messageRef: E,
+            focusProps: _ = { offset: { left: 4, right: 4 } },
+            hasThread: M,
+            isSystemMessage: R,
             hasReply: w,
-            author: T,
-            onMouseEnter: R,
-            onMouseLeave: O,
-            ...G
+            author: S,
+            onMouseEnter: T,
+            onMouseLeave: G,
+            ...O
         } = e,
-        D = (0, r.bG)([m.A], () =>
-            T?.guildId == null || T?.colorRoleId == null ? null : m.A.getRole(T.guildId, T.colorRoleId),
+        P = (0, r.bG)([g.A], () =>
+            S?.guildId == null || S?.colorRoleId == null ? null : g.A.getRole(S.guildId, S.colorRoleId),
         ),
-        L = (0, h.jV)(T?.guildId, D) && (0, g.kz)(T),
-        [P, V] = a.useState(!1),
-        U = a.useCallback(
+        k = (0, h.jV)(S?.guildId, P) && (0, m.kz)(S),
+        [D, L] = i.useState(!1),
+        V = i.useCallback(
             (e) => {
-                V(!0), R?.(e);
+                L(!0), T?.(e);
             },
-            [R],
+            [T],
         ),
-        B = a.useCallback(
+        U = i.useCallback(
             (e) => {
-                V(!1), O?.(e);
+                L(!1), G?.(e);
             },
-            [O],
+            [G],
         ),
-        k = (0, c.W)({ location: "BaseMessage" }),
-        H = (0, t.jsx)(o.C.Provider, {
-            value: { animate: P, setAnimate: V },
-            children: (0, t.jsx)(u.vN, {
-                ...M,
+        H = (0, u.W)({ location: "BaseMessage" }),
+        $ = (0, t.jsx)(o.C.Provider, {
+            value: { animate: D, setAnimate: L },
+            children: (0, t.jsx)(c.vN, {
+                ..._,
                 children: (0, t.jsxs)("div", {
                     className: s()(l, {
-                        [A.D7]: L,
-                        [A.e8]: k && T?.displayNameStyles != null && T?.guildId == null,
-                        [A.iE]: !0,
-                        [A.kl]: i,
-                        [A.oE]: n,
-                        [A.VH]: f,
-                        [A.E]: !n,
-                        [A.GZ]: v,
-                        [A.pR]: S,
-                        [A.X4]: y,
-                        [A.h8]: w,
+                        [x.D7]: k,
+                        [x.e8]: H && S?.displayNameStyles != null && S?.guildId == null,
+                        [x.iE]: !0,
+                        [x.kl]: a,
+                        [x.oE]: n,
+                        [x.VH]: p,
+                        [x.E]: !n,
+                        [x.GZ]: A,
+                        [x.pR]: M,
+                        [x.X4]: R,
+                        [x.h8]: w,
                     }),
-                    ref: b,
-                    ...G,
+                    ref: E,
+                    ...O,
                     role: "article",
-                    onMouseEnter: U,
-                    onMouseLeave: B,
+                    onMouseEnter: V,
+                    onMouseLeave: U,
                     children: [
-                        p,
-                        j,
-                        (0, t.jsxs)("div", { className: A.PG, children: [N, C, null == N && _] }),
-                        E,
-                        null != I ? (0, t.jsx)("div", { className: A.UD, children: I }) : null,
+                        v,
+                        N,
+                        (0, t.jsxs)("div", { className: x.PG, children: [C, f, null == C && b] }),
+                        y,
+                        null != I ? (0, t.jsx)("div", { className: x.UD, children: I }) : null,
                     ],
                 }),
             }),
         });
-    return x ? (0, t.jsx)(d.M, { children: H }) : H;
+    return j ? (0, t.jsx)(d.M, { children: $ }) : $;
 };

@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { Hf: () => u, Oh: () => _, RA: () => c, gK: () => f, iw: () => E, y$: () => d });
-var r,
-    i,
+n.d(t, { Hf: () => u, Oh: () => _, RA: () => d, gK: () => h, iw: () => f, y$: () => c });
+var i,
+    r,
     s,
     a,
     o,
     l,
-    u = (((r = {})[(r.BUILT_IN = 0)] = "BUILT_IN"), (r[(r.APPLICATION = 1)] = "APPLICATION"), r),
-    d =
-        (((i = {})[(i.BUILT_IN = 0)] = "BUILT_IN"),
-        (i[(i.BUILT_IN_TEXT = 1)] = "BUILT_IN_TEXT"),
-        (i[(i.BUILT_IN_INTEGRATION = 2)] = "BUILT_IN_INTEGRATION"),
-        (i[(i.BOT = 3)] = "BOT"),
-        (i[(i.PLACEHOLDER = 4)] = "PLACEHOLDER"),
-        i),
-    c = (((s = {})[(s.ROLE = 1)] = "ROLE"), (s[(s.USER = 2)] = "USER"), (s[(s.CHANNEL = 3)] = "CHANNEL"), s),
+    u = (((i = {})[(i.BUILT_IN = 0)] = "BUILT_IN"), (i[(i.APPLICATION = 1)] = "APPLICATION"), i),
+    c =
+        (((r = {})[(r.BUILT_IN = 0)] = "BUILT_IN"),
+        (r[(r.BUILT_IN_TEXT = 1)] = "BUILT_IN_TEXT"),
+        (r[(r.BUILT_IN_INTEGRATION = 2)] = "BUILT_IN_INTEGRATION"),
+        (r[(r.BOT = 3)] = "BOT"),
+        (r[(r.PLACEHOLDER = 4)] = "PLACEHOLDER"),
+        r),
+    d = (((s = {})[(s.ROLE = 1)] = "ROLE"), (s[(s.USER = 2)] = "USER"), (s[(s.CHANNEL = 3)] = "CHANNEL"), s),
     _ =
         (((a = {}).DISCOVERY = "discovery"),
         (a.SUGGESTION = "suggestion"),
@@ -42,8 +42,8 @@ var r,
         (a.VC_TILE_ACTIVITY_SUGGESTION = "vc_tile_activity_suggestion"),
         (a.APP_DMS_ENTRY_POINT_COMMAND_BUTTON = "app_dms_entry_point_command_button"),
         a),
-    f = (((o = {})[(o.BUILT_IN = 1)] = "BUILT_IN"), (o[(o.FRECENCY = 2)] = "FRECENCY"), (o[(o.APP = 3)] = "APP"), o),
-    E =
+    h = (((o = {})[(o.BUILT_IN = 1)] = "BUILT_IN"), (o[(o.FRECENCY = 2)] = "FRECENCY"), (o[(o.APP = 3)] = "APP"), o),
+    f =
         (((l = {})[(l.CHAT = 0)] = "CHAT"),
         (l[(l.APPLICATION_LAUNCHER = 1)] = "APPLICATION_LAUNCHER"),
         (l[(l.APP_LAUNCHER_APPLICATION_VIEW = 2)] = "APP_LAUNCHER_APPLICATION_VIEW"),

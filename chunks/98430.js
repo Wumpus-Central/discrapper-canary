@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { q: () => i });
-var r = {};
-function i() {
-    return r;
+n.d(t, { q: () => r });
+var i = {};
+function r() {
+    return i;
 }

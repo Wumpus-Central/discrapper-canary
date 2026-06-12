@@ -35,7 +35,7 @@ var n =
 function u(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var c = (t.ColorWrap = function (e) {
+var p = (t.ColorWrap = function (e) {
     var t = (function (t) {
         if ("function" != typeof t && null !== t)
             throw TypeError("Super expression must either be null or a function, not " + typeof t);
@@ -107,4 +107,4 @@ var c = (t.ColorWrap = function (e) {
         t
     );
 });
-t.default = c;
+t.default = p;

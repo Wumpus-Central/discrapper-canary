@@ -1,160 +1,160 @@
 "use strict";
 var t = {
-    linear: function (e, t, n, r) {
-        return ((n - t) * e) / r + t;
+    linear: function (e, t, n, i) {
+        return ((n - t) * e) / i + t;
     },
-    easeInQuad: function (e, t, n, r) {
-        return (n - t) * (e /= r) * e + t;
+    easeInQuad: function (e, t, n, i) {
+        return (n - t) * (e /= i) * e + t;
     },
-    easeOutQuad: function (e, t, n, r) {
-        return -(n - t) * (e /= r) * (e - 2) + t;
+    easeOutQuad: function (e, t, n, i) {
+        return -(n - t) * (e /= i) * (e - 2) + t;
     },
-    easeInOutQuad: function (e, t, n, r) {
-        var i = n - t;
-        return (e /= r / 2) < 1 ? (i / 2) * e * e + t : (-i / 2) * (--e * (e - 2) - 1) + t;
+    easeInOutQuad: function (e, t, n, i) {
+        var r = n - t;
+        return (e /= i / 2) < 1 ? (r / 2) * e * e + t : (-r / 2) * (--e * (e - 2) - 1) + t;
     },
-    easeInCubic: function (e, t, n, r) {
-        return (n - t) * (e /= r) * e * e + t;
+    easeInCubic: function (e, t, n, i) {
+        return (n - t) * (e /= i) * e * e + t;
     },
-    easeOutCubic: function (e, t, n, r) {
-        return (n - t) * ((e = e / r - 1) * e * e + 1) + t;
+    easeOutCubic: function (e, t, n, i) {
+        return (n - t) * ((e = e / i - 1) * e * e + 1) + t;
     },
-    easeInOutCubic: function (e, t, n, r) {
-        var i = n - t;
-        return (e /= r / 2) < 1 ? (i / 2) * e * e * e + t : (i / 2) * ((e -= 2) * e * e + 2) + t;
+    easeInOutCubic: function (e, t, n, i) {
+        var r = n - t;
+        return (e /= i / 2) < 1 ? (r / 2) * e * e * e + t : (r / 2) * ((e -= 2) * e * e + 2) + t;
     },
-    easeInQuart: function (e, t, n, r) {
-        return (n - t) * (e /= r) * e * e * e + t;
+    easeInQuart: function (e, t, n, i) {
+        return (n - t) * (e /= i) * e * e * e + t;
     },
-    easeOutQuart: function (e, t, n, r) {
-        return -(n - t) * ((e = e / r - 1) * e * e * e - 1) + t;
+    easeOutQuart: function (e, t, n, i) {
+        return -(n - t) * ((e = e / i - 1) * e * e * e - 1) + t;
     },
-    easeInOutQuart: function (e, t, n, r) {
-        var i = n - t;
-        return (e /= r / 2) < 1 ? (i / 2) * e * e * e * e + t : (-i / 2) * ((e -= 2) * e * e * e - 2) + t;
+    easeInOutQuart: function (e, t, n, i) {
+        var r = n - t;
+        return (e /= i / 2) < 1 ? (r / 2) * e * e * e * e + t : (-r / 2) * ((e -= 2) * e * e * e - 2) + t;
     },
-    easeInQuint: function (e, t, n, r) {
-        return (n - t) * (e /= r) * e * e * e * e + t;
+    easeInQuint: function (e, t, n, i) {
+        return (n - t) * (e /= i) * e * e * e * e + t;
     },
-    easeOutQuint: function (e, t, n, r) {
-        return (n - t) * ((e = e / r - 1) * e * e * e * e + 1) + t;
+    easeOutQuint: function (e, t, n, i) {
+        return (n - t) * ((e = e / i - 1) * e * e * e * e + 1) + t;
     },
-    easeInOutQuint: function (e, t, n, r) {
-        var i = n - t;
-        return (e /= r / 2) < 1 ? (i / 2) * e * e * e * e * e + t : (i / 2) * ((e -= 2) * e * e * e * e + 2) + t;
+    easeInOutQuint: function (e, t, n, i) {
+        var r = n - t;
+        return (e /= i / 2) < 1 ? (r / 2) * e * e * e * e * e + t : (r / 2) * ((e -= 2) * e * e * e * e + 2) + t;
     },
-    easeInSine: function (e, t, n, r) {
-        var i = n - t;
-        return -i * Math.cos((e / r) * (Math.PI / 2)) + i + t;
+    easeInSine: function (e, t, n, i) {
+        var r = n - t;
+        return -r * Math.cos((e / i) * (Math.PI / 2)) + r + t;
     },
-    easeOutSine: function (e, t, n, r) {
-        return (n - t) * Math.sin((e / r) * (Math.PI / 2)) + t;
+    easeOutSine: function (e, t, n, i) {
+        return (n - t) * Math.sin((e / i) * (Math.PI / 2)) + t;
     },
-    easeInOutSine: function (e, t, n, r) {
-        return (-(n - t) / 2) * (Math.cos((Math.PI * e) / r) - 1) + t;
+    easeInOutSine: function (e, t, n, i) {
+        return (-(n - t) / 2) * (Math.cos((Math.PI * e) / i) - 1) + t;
     },
-    easeInExpo: function (e, t, n, r) {
-        return 0 == e ? t : (n - t) * Math.pow(2, 10 * (e / r - 1)) + t;
+    easeInExpo: function (e, t, n, i) {
+        return 0 == e ? t : (n - t) * Math.pow(2, 10 * (e / i - 1)) + t;
     },
-    easeOutExpo: function (e, t, n, r) {
-        var i = n - t;
-        return e == r ? t + i : i * (-Math.pow(2, (-10 * e) / r) + 1) + t;
+    easeOutExpo: function (e, t, n, i) {
+        var r = n - t;
+        return e == i ? t + r : r * (-Math.pow(2, (-10 * e) / i) + 1) + t;
     },
-    easeInOutExpo: function (e, t, n, r) {
-        var i = n - t;
+    easeInOutExpo: function (e, t, n, i) {
+        var r = n - t;
         return 0 === e
             ? t
-            : e === r
-              ? t + i
-              : (e /= r / 2) < 1
-                ? (i / 2) * Math.pow(2, 10 * (e - 1)) + t
-                : (i / 2) * (-Math.pow(2, -10 * --e) + 2) + t;
+            : e === i
+              ? t + r
+              : (e /= i / 2) < 1
+                ? (r / 2) * Math.pow(2, 10 * (e - 1)) + t
+                : (r / 2) * (-Math.pow(2, -10 * --e) + 2) + t;
     },
-    easeInCirc: function (e, t, n, r) {
-        return -(n - t) * (Math.sqrt(1 - (e /= r) * e) - 1) + t;
+    easeInCirc: function (e, t, n, i) {
+        return -(n - t) * (Math.sqrt(1 - (e /= i) * e) - 1) + t;
     },
-    easeOutCirc: function (e, t, n, r) {
-        return (n - t) * Math.sqrt(1 - (e = e / r - 1) * e) + t;
+    easeOutCirc: function (e, t, n, i) {
+        return (n - t) * Math.sqrt(1 - (e = e / i - 1) * e) + t;
     },
-    easeInOutCirc: function (e, t, n, r) {
-        var i = n - t;
-        return (e /= r / 2) < 1
-            ? (-i / 2) * (Math.sqrt(1 - e * e) - 1) + t
-            : (i / 2) * (Math.sqrt(1 - (e -= 2) * e) + 1) + t;
+    easeInOutCirc: function (e, t, n, i) {
+        var r = n - t;
+        return (e /= i / 2) < 1
+            ? (-r / 2) * (Math.sqrt(1 - e * e) - 1) + t
+            : (r / 2) * (Math.sqrt(1 - (e -= 2) * e) + 1) + t;
     },
-    easeInElastic: function (e, t, n, r) {
-        var i,
+    easeInElastic: function (e, t, n, i) {
+        var r,
+            s,
             a,
-            u,
             o = n - t;
-        return ((u = 1.70158), (a = 0), (i = o), 0 === e)
+        return ((a = 1.70158), (s = 0), (r = o), 0 === e)
             ? t
-            : 1 == (e /= r)
+            : 1 == (e /= i)
               ? t + o
-              : (a || (a = 0.3 * r),
-                i < Math.abs(o) ? ((i = o), (u = a / 4)) : (u = (a / (2 * Math.PI)) * Math.asin(o / i)),
-                -(i * Math.pow(2, 10 * (e -= 1)) * Math.sin((2 * Math.PI * (e * r - u)) / a)) + t);
+              : (s || (s = 0.3 * i),
+                r < Math.abs(o) ? ((r = o), (a = s / 4)) : (a = (s / (2 * Math.PI)) * Math.asin(o / r)),
+                -(r * Math.pow(2, 10 * (e -= 1)) * Math.sin((2 * Math.PI * (e * i - a)) / s)) + t);
     },
-    easeOutElastic: function (e, t, n, r) {
-        var i,
+    easeOutElastic: function (e, t, n, i) {
+        var r,
+            s,
             a,
-            u,
             o = n - t;
-        return ((u = 1.70158), (a = 0), (i = o), 0 === e)
+        return ((a = 1.70158), (s = 0), (r = o), 0 === e)
             ? t
-            : 1 == (e /= r)
+            : 1 == (e /= i)
               ? t + o
-              : (a || (a = 0.3 * r),
-                i < Math.abs(o) ? ((i = o), (u = a / 4)) : (u = (a / (2 * Math.PI)) * Math.asin(o / i)),
-                i * Math.pow(2, -10 * e) * Math.sin((2 * Math.PI * (e * r - u)) / a) + o + t);
+              : (s || (s = 0.3 * i),
+                r < Math.abs(o) ? ((r = o), (a = s / 4)) : (a = (s / (2 * Math.PI)) * Math.asin(o / r)),
+                r * Math.pow(2, -10 * e) * Math.sin((2 * Math.PI * (e * i - a)) / s) + o + t);
     },
-    easeInOutElastic: function (e, t, n, r) {
-        var i,
+    easeInOutElastic: function (e, t, n, i) {
+        var r,
+            s,
             a,
-            u,
             o = n - t;
-        return ((u = 1.70158), (a = 0), (i = o), 0 === e)
+        return ((a = 1.70158), (s = 0), (r = o), 0 === e)
             ? t
-            : 2 == (e /= r / 2)
+            : 2 == (e /= i / 2)
               ? t + o
-              : (a || (a = 0.3 * 1.5 * r),
-                  i < Math.abs(o) ? ((i = o), (u = a / 4)) : (u = (a / (2 * Math.PI)) * Math.asin(o / i)),
+              : (s || (s = 0.3 * 1.5 * i),
+                  r < Math.abs(o) ? ((r = o), (a = s / 4)) : (a = (s / (2 * Math.PI)) * Math.asin(o / r)),
                   e < 1)
-                ? -0.5 * (i * Math.pow(2, 10 * (e -= 1)) * Math.sin((2 * Math.PI * (e * r - u)) / a)) + t
-                : i * Math.pow(2, -10 * (e -= 1)) * Math.sin((2 * Math.PI * (e * r - u)) / a) * 0.5 + o + t;
+                ? -0.5 * (r * Math.pow(2, 10 * (e -= 1)) * Math.sin((2 * Math.PI * (e * i - a)) / s)) + t
+                : r * Math.pow(2, -10 * (e -= 1)) * Math.sin((2 * Math.PI * (e * i - a)) / s) * 0.5 + o + t;
     },
-    easeInBack: function (e, t, n, r, i) {
-        return void 0 === i && (i = 1.70158), (n - t) * (e /= r) * e * ((i + 1) * e - i) + t;
+    easeInBack: function (e, t, n, i, r) {
+        return void 0 === r && (r = 1.70158), (n - t) * (e /= i) * e * ((r + 1) * e - r) + t;
     },
-    easeOutBack: function (e, t, n, r, i) {
-        return void 0 === i && (i = 1.70158), (n - t) * ((e = e / r - 1) * e * ((i + 1) * e + i) + 1) + t;
+    easeOutBack: function (e, t, n, i, r) {
+        return void 0 === r && (r = 1.70158), (n - t) * ((e = e / i - 1) * e * ((r + 1) * e + r) + 1) + t;
     },
-    easeInOutBack: function (e, t, n, r, i) {
-        var a = n - t;
-        return (void 0 === i && (i = 1.70158), (e /= r / 2) < 1)
-            ? (a / 2) * (e * e * (((i *= 1.525) + 1) * e - i)) + t
-            : (a / 2) * ((e -= 2) * e * (((i *= 1.525) + 1) * e + i) + 2) + t;
+    easeInOutBack: function (e, t, n, i, r) {
+        var s = n - t;
+        return (void 0 === r && (r = 1.70158), (e /= i / 2) < 1)
+            ? (s / 2) * (e * e * (((r *= 1.525) + 1) * e - r)) + t
+            : (s / 2) * ((e -= 2) * e * (((r *= 1.525) + 1) * e + r) + 2) + t;
     },
-    easeInBounce: function (e, n, r, i) {
-        var a,
-            u = r - n;
-        return (a = t.easeOutBounce(i - e, 0, u, i)), u - a + n;
+    easeInBounce: function (e, n, i, r) {
+        var s,
+            a = i - n;
+        return (s = t.easeOutBounce(r - e, 0, a, r)), a - s + n;
     },
-    easeOutBounce: function (e, t, n, r) {
-        var i = n - t;
-        return (e /= r) < 1 / 2.75
-            ? 7.5625 * e * e * i + t
+    easeOutBounce: function (e, t, n, i) {
+        var r = n - t;
+        return (e /= i) < 1 / 2.75
+            ? 7.5625 * e * e * r + t
             : e < 2 / 2.75
-              ? i * (7.5625 * (e -= 1.5 / 2.75) * e + 0.75) + t
+              ? r * (7.5625 * (e -= 1.5 / 2.75) * e + 0.75) + t
               : e < 2.5 / 2.75
-                ? i * (7.5625 * (e -= 2.25 / 2.75) * e + 0.9375) + t
-                : i * (7.5625 * (e -= 2.625 / 2.75) * e + 0.984375) + t;
+                ? r * (7.5625 * (e -= 2.25 / 2.75) * e + 0.9375) + t
+                : r * (7.5625 * (e -= 2.625 / 2.75) * e + 0.984375) + t;
     },
-    easeInOutBounce: function (e, n, r, i) {
-        var a = r - n;
-        return e < i / 2
-            ? 0.5 * t.easeInBounce(2 * e, 0, a, i) + n
-            : 0.5 * t.easeOutBounce(2 * e - i, 0, a, i) + 0.5 * a + n;
+    easeInOutBounce: function (e, n, i, r) {
+        var s = i - n;
+        return e < r / 2
+            ? 0.5 * t.easeInBounce(2 * e, 0, s, r) + n
+            : 0.5 * t.easeOutBounce(2 * e - r, 0, s, r) + 0.5 * s + n;
     },
 };
 e.exports = t;

@@ -1,5 +1,5 @@
 "use strict";
-function r() {
+function i() {
     return window.devicePixelRatio ?? 1;
 }
-n.d(t, { A: () => r });
+n.d(t, { A: () => i });

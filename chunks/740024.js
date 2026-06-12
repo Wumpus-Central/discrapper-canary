@@ -1,12 +1,12 @@
 n.d(a, { default: () => d });
 var i = n(627968);
 n(64700);
-var e = n(861672),
+var e = n(980707),
     l = n(477782),
     c = n(442433),
     r = n(202803),
     s = n(957565),
-    o = n(985018);
+    o = n(375708);
 function d(t) {
     let { attachmentUrl: a, attachmentName: n, onSelect: d } = t;
     return (0, i.jsx)(e.W, {

@@ -1,6 +1,6 @@
 n.d(t, {
     GJ: () => N,
-    LF: () => p,
+    LF: () => L,
     NW: () => g,
     RR: () => h,
     RV: () => S,
@@ -11,7 +11,7 @@ n.d(t, {
     b8: () => A,
     bM: () => G,
     dy: () => v,
-    jJ: () => L,
+    jJ: () => p,
     nQ: () => D,
     pb: () => T,
     r3: () => f,
@@ -19,10 +19,10 @@ n.d(t, {
     tJ: () => R,
     uA: () => I,
 });
-var i = n(58149),
+var i = n(95561),
     a = n(446600),
     _ = n(383233),
-    r = n(427157),
+    r = n(889227),
     d = n(860689),
     l = n(17372),
     o = n(369053),
@@ -113,14 +113,14 @@ function G(e, t) {
             { onClose: t, isEligibleForFeedback: !1, isAuthenticated: !1, emailToken: e },
         );
 }
-async function p(e, t, n) {
+async function L(e, t, n) {
     try {
         await (0, o.gP)({ name: l.t0.MESSAGE, record: e }, { variant: "safety_alerts_headless_v1" }), t?.();
     } catch {
         n?.();
     }
 }
-function L(e, t) {
+function p(e, t) {
     y(l.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),
         (0, u.T)({ name: l.t0.MESSAGE, record: e }, { variant: "safety_alerts_v1" }, { onSubmit: t });
 }

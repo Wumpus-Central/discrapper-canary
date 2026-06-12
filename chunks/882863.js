@@ -1,30 +1,30 @@
-n.d(t, { A: () => c });
-var i = n(64700),
-    l = n(157559),
-    a = n(845584),
-    r = n(306522),
-    s = n(975807),
-    o = n(985018);
-function c(e, t) {
-    let [n, c] = i.useState(!1);
+r.d(e, { A: () => l });
+var n = r(64700),
+    a = r(157559),
+    i = r(913122),
+    c = r(306522),
+    o = r(975807),
+    s = r(375708);
+function l(t, e) {
+    let [r, l] = n.useState(!1);
     return {
-        isLoading: n,
-        downloadAttachment: i.useCallback(
-            async (n) => {
-                if (null != e && null != t) {
-                    c(!0);
+        isLoading: r,
+        downloadAttachment: n.useCallback(
+            async (r) => {
+                if (null != t && null != e) {
+                    l(!0);
                     try {
-                        let { url: i } = await r.P0({ guildId: e, productId: t, attachmentId: n });
-                        await (0, s.A)(i);
-                    } catch (t) {
-                        let e = t instanceof a.LG ? t.getAnyErrorMessage() : void 0;
-                        l.A.show({ title: o.intl.string(o.t.R0RpRX), body: e ?? o.intl.string(o.t.eAn6z2) });
+                        let { url: n } = await c.P0({ guildId: t, productId: e, attachmentId: r });
+                        await (0, o.A)(n);
+                    } catch (e) {
+                        let t = e instanceof i.LG ? e.getAnyErrorMessage() : void 0;
+                        a.A.show({ title: s.intl.string(s.t.R0RpRX), body: t ?? s.intl.string(s.t.eAn6z2) });
                     } finally {
-                        c(!1);
+                        l(!1);
                     }
                 }
             },
-            [e, t],
+            [t, e],
         ),
     };
 }

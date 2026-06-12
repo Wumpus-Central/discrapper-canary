@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { dD: () => N, oF: () => v, Ay: () => D, uW: () => C, oo: () => T, pd: () => S, Tc: () => R, mB: () => y }),
+n.d(t, { dD: () => y, oF: () => C, Ay: () => D, uW: () => v, oo: () => T, pd: () => S, Tc: () => O, mB: () => N }),
     n(667532);
 var i = n(265690),
     r = n(121894),
@@ -34,8 +34,8 @@ let c = new (class {
         postConnectionOpen: !1,
     }),
     _ = (0, i.h)(d),
-    f = !1,
-    h = (e) => ({
+    h = !1,
+    f = (e) => ({
         ...e,
         candidates: new Map(e.candidates),
         currentlyShown: new Set(e.currentlyShown),
@@ -88,7 +88,7 @@ let c = new (class {
                     (0, r.r)(() => {
                         _.setState((e) => {
                             let t,
-                                n = h(e);
+                                n = f(e);
                             return g(
                                 n,
                                 ((t = [...n.candidates.keys()]),
@@ -112,27 +112,27 @@ let c = new (class {
         let t = u.C.has(e.content);
         (0, r.r)(() => {
             _.setState((n) => {
-                let i = h(n);
-                return f ? i : t ? E(i, e) : A((i.candidates.set(e.content, e), i));
+                let i = f(n);
+                return h ? i : t ? E(i, e) : A((i.candidates.set(e.content, e), i));
             });
         });
     },
     S = (e, t) => {
         (0, r.r)(() => {
             _.setState((n) => {
-                let i = h(n);
+                let i = f(n);
                 return t ? A(p(m(i, e), e)) : p(m(i, e), e);
             });
         });
     },
-    N = (e) => _.getState().currentlyShown.has(e),
-    y = (e) => _((t) => t.currentlyShown.has(e)),
-    C = (e) => _((t) => e.some((e) => t.currentlyShown.has(e))),
-    v = () => {
+    y = (e) => _.getState().currentlyShown.has(e),
+    N = (e) => _((t) => t.currentlyShown.has(e)),
+    v = (e) => _((t) => e.some((e) => t.currentlyShown.has(e))),
+    C = () => {
         let e = [..._.getState().currentlyShown].filter((e) => !u.C.has(e)).length;
         return [_.getState().currentlyShown.size, e];
     },
-    O = () => {
+    R = () => {
         (0, r.r)(() => {
             _.setState(() => {
                 let e = d();
@@ -141,14 +141,14 @@ let c = new (class {
         }),
             c.unschedule();
     },
-    R = () => _.getState().postConnectionOpen;
+    O = () => _.getState().postConnectionOpen;
 class b extends s.Ay.Store {
     static displayName = "DismissibleContentShownStateStore";
     initialize() {
         this.waitFor(o.A, l.A), this.syncWith([o.A, l.A], () => this.setHasRequiredAction());
     }
     setHasRequiredAction() {
-        f = (function () {
+        h = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.A,
                 t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A;
             return null != t.getAction() || Object.keys(e.getState()).length > 0;
@@ -158,4 +158,4 @@ class b extends s.Ay.Store {
 function D(e, t) {
     return _(e, t);
 }
-new b(a.h, { CONNECTION_OPEN: () => O(), LOGOUT: () => O() });
+new b(a.h, { CONNECTION_OPEN: () => R(), LOGOUT: () => R() });

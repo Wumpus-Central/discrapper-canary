@@ -1,33 +1,33 @@
-i.d(a, { default: () => u });
-var n = i(627968),
-    t = i(64700),
-    l = i(284009),
-    r = i.n(l),
-    s = i(17928),
-    d = i(287809),
-    m = i(927578),
-    c = i(885377),
-    g = i(985018);
-class o extends t.Component {
+n.d(e, { default: () => m });
+var i = n(627968),
+    r = n(64700),
+    l = n(284009),
+    s = n.n(l),
+    a = n(17928),
+    u = n(287809),
+    p = n(428262),
+    o = n(885377),
+    c = n(375708);
+class d extends r.Component {
     render() {
-        let { user: e, transitionState: a, onClose: i } = this.props;
-        return (0, n.jsx)(c.A, {
-            transitionState: a,
+        let { user: t, transitionState: e, onClose: n } = this.props;
+        return (0, i.jsx)(o.A, {
+            transitionState: e,
             onClose: async () => {
-                await i(!1);
+                await n(!1);
             },
-            "aria-label": g.intl.string(g.t.BNg1ir),
-            title: g.intl.string(g.t.BNg1ir),
-            premiumModalType: c.A.Types.UPGRADE,
-            primary: { onClick: () => i(!0), label: g.intl.string(g.t.P3etAv) },
+            "aria-label": c.intl.string(c.t.BNg1ir),
+            title: c.intl.string(c.t.BNg1ir),
+            premiumModalType: o.A.Types.UPGRADE,
+            primary: { onClick: () => n(!0), label: c.intl.string(c.t.P3etAv) },
             children:
-                m.Ay.isPremium(e) && !m.Ay.canInstallPremiumApplications(e)
-                    ? g.intl.string(g.t.mKA9OJ)
-                    : g.intl.string(g.t.sqSlm4),
+                p.Ay.isPremium(t) && !p.Ay.canInstallPremiumApplications(t)
+                    ? c.intl.string(c.t.mKA9OJ)
+                    : c.intl.string(c.t.sqSlm4),
         });
     }
 }
-let u = s.Ay.connectStores([d.default], () => {
-    let e = d.default.getCurrentUser();
-    return r()(null != e, "PremiumRequiredModal: user cannot be null"), { user: e };
-})(o);
+let m = a.Ay.connectStores([u.default], () => {
+    let t = u.default.getCurrentUser();
+    return s()(null != t, "PremiumRequiredModal: user cannot be null"), { user: t };
+})(d);

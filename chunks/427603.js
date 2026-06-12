@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(242286);
-function i() {
-    let e = r.default.getFocusedPID();
-    return null != e && (r.default.isReady(e) || r.default.isCrashed(e)) ? e : null;
+n.d(t, { A: () => r });
+var i = n(773371);
+function r() {
+    let e = i.default.getFocusedPID();
+    return null != e && (i.default.isReady(e) || i.default.isCrashed(e)) ? e : null;
 }

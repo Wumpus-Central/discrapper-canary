@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { U1: () => h, fS: () => _ }), n(321073);
+n.d(t, { U1: () => f, fS: () => _ }), n(321073);
 var i,
     r,
     s =
@@ -49,12 +49,12 @@ let c = Object.freeze({
         ),
     });
 var _ = (((r = {}).FULL = "full"), (r.MINIMAL = "minimal"), r);
-let f = { source: s.NO_CLASSIFICATION, status: a.Y.EVERYONE };
-function h(e) {
+let h = { source: s.NO_CLASSIFICATION, status: a.Y.EVERYONE };
+function f(e) {
     return (function (e) {
         var t, n;
         let i, r;
-        if (null == e) return f;
+        if (null == e) return h;
         let u = [],
             { type: c, data: d } = e;
         return (
@@ -87,7 +87,7 @@ function h(e) {
                     }
                     (n = r.status), (i = t.status), a.R.indexOf(n) - a.R.indexOf(i) > 0 && (t = r);
                 }
-                return t ?? f;
+                return t ?? h;
             })(u)
         );
     })(e).status;

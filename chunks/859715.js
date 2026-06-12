@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     Um: "productCard__79d38",
     Wi: "solidBackground__79d38",
     sG: "opaqueBackground__79d38",

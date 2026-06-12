@@ -1,56 +1,56 @@
-n.d(t, { i: () => E });
-var i = n(64700),
-    s = n(735438),
-    r = n(702841),
-    a = n(493527),
-    o = n(544395);
-n(801541);
-var l = n(889137),
-    u = n(546727),
-    g = n(985018);
-let d = function (e) {
+i.d(t, { i: () => d });
+var n = i(64700),
+    s = i(735438),
+    r = i(702841),
+    a = i(493527),
+    o = i(544395);
+i(801541);
+var u = i(889137),
+    l = i(546727),
+    g = i(375708);
+let E = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            d = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            E = (0, r.bG)([o.A], () => o.A.validate(e), [e]),
-            m = (0, r.bG)([o.A], () => o.A.isRateLimited()),
-            c = i.useMemo(
-                () => (0, s.debounce)((e) => a.A.attemptUsername(e, n ? "registration" : "modal", n, d), 800),
-                [n, d],
+            i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            E = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            d = (0, r.bG)([o.A], () => o.A.validate(e), [e]),
+            S = (0, r.bG)([o.A], () => o.A.isRateLimited()),
+            m = n.useMemo(
+                () => (0, s.debounce)((e) => a.A.attemptUsername(e, i ? "registration" : "modal", i, E), 800),
+                [i, E],
             );
         return (
-            i.useEffect(() => {
-                t && !m && null == E && "" !== e && c(e);
-            }, [t, m, E, e, c]),
-            i.useMemo(
+            n.useEffect(() => {
+                t && !S && null == d && "" !== e && m(e);
+            }, [t, S, d, e, m]),
+            n.useMemo(
                 () =>
-                    null != E
-                        ? (0, l.YW)(E)
+                    null != d
+                        ? (0, u.YW)(d)
                               .with({ rateLimited: !0 }, () => ({
-                                  type: u.q.RATE_LIMIT,
+                                  type: l.q.RATE_LIMIT,
                                   message: g.intl.string(g.t.T15lqn),
                               }))
-                              .with({ error: l.P.not(l.P.nullish) }, (e) => {
+                              .with({ error: u.P.not(u.P.nullish) }, (e) => {
                                   let { error: t } = e;
-                                  return { type: u.q.ERROR, message: t };
+                                  return { type: l.q.ERROR, message: t };
                               })
-                              .with({ taken: !1 }, () => ({ type: u.q.AVAILABLE, message: g.intl.string(g.t.PgfBSx) }))
-                              .with({ taken: !0 }, () => ({ type: u.q.ERROR, message: g.intl.string(g.t.mCrAUb) }))
-                              .with({ error: l.P.nullish }, () => ({ type: u.q.INTERNAL_ERROR, message: "" }))
+                              .with({ taken: !1 }, () => ({ type: l.q.AVAILABLE, message: g.intl.string(g.t.PgfBSx) }))
+                              .with({ taken: !0 }, () => ({ type: l.q.ERROR, message: g.intl.string(g.t.mCrAUb) }))
+                              .with({ error: u.P.nullish }, () => ({ type: l.q.INTERNAL_ERROR, message: "" }))
                               .otherwise(() => void 0)
                         : void 0,
-                [E],
+                [d],
             )
         );
     },
-    E = function (e) {
+    d = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : void 0,
-            r = d(e, t, n),
-            [a, o] = i.useState(void 0);
+            r = E(e, t, i),
+            [a, o] = n.useState(void 0);
         return (
-            i.useEffect(() => {
+            n.useEffect(() => {
                 "" === e || e === s ? o(void 0) : null != r && o(r);
             }, [r, e, s]),
             a

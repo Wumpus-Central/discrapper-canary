@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Oh: () => f, l8: () => _, vz: () => h });
+n.d(t, { Oh: () => h, l8: () => _, vz: () => f });
 var i = n(17928),
     r = n(936555),
     s = n(465932),
@@ -19,14 +19,14 @@ function d(e) {
 function _(e, t) {
     return !!d(e) || (0, u.I)(e, t);
 }
-function f(e) {
+function h(e) {
     let t = (0, u.A)(e),
         n = (0, i.bG)([l.A, o.A], () => d(e, [l.A, o.A]), [e]),
         { shouldHideGuildPurchaseEntryPoints: r } = (0, s.MH)(e);
     return !r && (n || t);
 }
-function h(e) {
-    let t = f(e),
+function f(e) {
+    let t = h(e),
         n = (0, a.w)(e);
     return t && !n;
 }

@@ -1,40 +1,40 @@
 "use strict";
 let i, r;
-n.d(t, { A: () => p });
+n.d(t, { A: () => g });
 var s = n(17928),
     a = n(228366),
     o = n(758836),
     l = n(788868);
-let d = [],
-    _ = new Map(),
-    u = new Map(),
+let u = [],
     c = new Map(),
-    E = new Map(),
+    d = new Map(),
+    _ = new Map(),
     h = new Map(),
-    m = new Map(),
-    f = new Map();
-class g extends s.Ay.Store {
+    f = new Map(),
+    p = new Map(),
+    E = new Map();
+class m extends s.Ay.Store {
     static displayName = "CollectiblesShopHomesStore";
     getLastSuccessfulFetch(e) {
-        return _.get(e);
-    }
-    getLastErrorTimestamp(e) {
-        return u.get(e);
-    }
-    getLastFetchOptions(e) {
         return c.get(e);
     }
-    getFetchShopHomeError(e) {
-        return E.get(e);
+    getLastErrorTimestamp(e) {
+        return d.get(e);
     }
-    getIsFetchingShopHome(e) {
+    getLastFetchOptions(e) {
+        return _.get(e);
+    }
+    getFetchShopHomeError(e) {
         return h.get(e);
     }
+    getIsFetchingShopHome(e) {
+        return f.get(e);
+    }
     getShopBlocks(e) {
-        return f.get(e) ?? d;
+        return E.get(e) ?? u;
     }
     getHasKnownStaleData(e) {
-        return m.get(e);
+        return p.get(e);
     }
     getShopHomeConfigOverride() {
         return i;
@@ -43,25 +43,25 @@ class g extends s.Ay.Store {
         return r;
     }
 }
-let p = new g(a.h, {
+let g = new m(a.h, {
     COLLECTIBLES_SHOP_HOME_FETCH: (e) => {
-        h.set(e.tab, !0),
-            E.set(e.tab, void 0),
-            c.set(e.tab, e.options),
-            c.set(e.tab, e.options),
-            u.set(e.tab, void 0),
-            m.set(e.tab, !1);
+        f.set(e.tab, !0),
+            h.set(e.tab, void 0),
+            _.set(e.tab, e.options),
+            _.set(e.tab, e.options),
+            d.set(e.tab, void 0),
+            p.set(e.tab, !1);
     },
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: (e) => {
-        f.set(e.tab, e.shopHome.shopBlocks),
-            _.set(e.tab, Date.now()),
-            h.set(e.tab, !1),
-            E.set(e.tab, void 0),
-            u.set(e.tab, void 0),
-            m.set(e.tab, !1);
+        E.set(e.tab, e.shopHome.shopBlocks),
+            c.set(e.tab, Date.now()),
+            f.set(e.tab, !1),
+            h.set(e.tab, void 0),
+            d.set(e.tab, void 0),
+            p.set(e.tab, !1);
     },
     COLLECTIBLES_SHOP_HOME_FETCH_FAILURE: (e) => {
-        f.set(e.tab, d), h.set(e.tab, !1), E.set(e.tab, e.error), u.set(e.tab, Date.now()), m.set(e.tab, !0);
+        E.set(e.tab, u), f.set(e.tab, !1), h.set(e.tab, e.error), d.set(e.tab, Date.now()), p.set(e.tab, !0);
     },
     COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE: (e) => {
         i = e.shopHomeConfigOverride;
@@ -74,9 +74,9 @@ let p = new g(a.h, {
             e.appliedUserDiscounts.some(
                 (e) => e.discount.id === l.eR || e.discount.id === l.Qz || e.discount.id === l.tU,
             ) &&
-            m.set(o.G2.HOME, !0);
+            p.set(o.G2.HOME, !0);
     },
     LOGOUT: () => {
-        f.clear(), c.clear(), E.clear(), h.clear(), _.clear(), u.clear(), m.clear(), (i = void 0), (r = void 0);
+        E.clear(), _.clear(), h.clear(), f.clear(), c.clear(), d.clear(), p.clear(), (i = void 0), (r = void 0);
     },
 });

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { jZ: () => p, VU: () => d, VA: () => h, CD: () => f, Ey: () => m, tO: () => _, HJ: () => E });
+n.d(t, { jZ: () => p, VU: () => d, VA: () => f, CD: () => h, Ey: () => m, tO: () => _, HJ: () => E });
 var i = n(636537),
     r = n(228366),
     s = n(913122),
@@ -58,14 +58,14 @@ async function _() {
         ).body.map((e) => o.createFromServer(e));
     return r.h.dispatch({ type: "USER_APPLIED_BOOSTS_FETCH_SUCCESS", appliedGuildBoosts: t }), t;
 }
-async function f() {
+async function h() {
     r.h.dispatch({ type: "GUILD_BOOST_SLOTS_FETCH" });
     let e = (await i.Bo.get({ url: c.Rsh.USER_GUILD_BOOST_SLOTS, oldFormErrors: !0, rejectWithError: !1 })).body.map(
         (e) => l.A.createFromServer(e, u.A.getSubscriptionById(e.subscription_id)),
     );
     return r.h.dispatch({ type: "GUILD_BOOST_SLOTS_FETCH_SUCCESS", guildBoostSlots: e }), e;
 }
-async function h(e, t) {
+async function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     r.h.dispatch({ type: "GUILD_APPLY_BOOST_START" });
     try {
@@ -76,7 +76,7 @@ async function h(e, t) {
                 rejectWithError: !1,
             }),
             a = Array.isArray(s.body) ? s.body.map(o.createFromServer) : [o.createFromServer(s.body)];
-        return r.h.dispatch({ type: "GUILD_APPLY_BOOST_SUCCESS", appliedGuildBoost: a }), f(), a;
+        return r.h.dispatch({ type: "GUILD_APPLY_BOOST_SUCCESS", appliedGuildBoost: a }), h(), a;
     } catch (t) {
         let e = new s.ex(t);
         throw (r.h.dispatch({ type: "GUILD_APPLY_BOOST_FAIL", error: e }), e);
@@ -85,7 +85,7 @@ async function h(e, t) {
 async function p(e, t) {
     r.h.dispatch({ type: "GUILD_UNAPPLY_BOOST_START" });
     try {
-        await i.Bo.del({ url: c.Rsh.APPLIED_GUILD_BOOST(e, t), oldFormErrors: !0, rejectWithError: !1 }), f();
+        await i.Bo.del({ url: c.Rsh.APPLIED_GUILD_BOOST(e, t), oldFormErrors: !0, rejectWithError: !1 }), h();
     } catch (t) {
         let e = new s.ex(t);
         throw (r.h.dispatch({ type: "GUILD_UNAPPLY_BOOST_FAIL", error: e }), e);

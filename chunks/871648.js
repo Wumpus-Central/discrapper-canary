@@ -1,31 +1,31 @@
-i.d(e, { A: () => A });
-var n = i(627968),
-    a = i(64700),
-    l = i(735438),
+i.d(a, { A: () => d });
+var e = i(627968),
+    l = i(64700),
+    o = i(735438),
     r = i(477782),
-    o = i(964355),
-    d = i(391973),
+    n = i(964355),
+    p = i(391973),
     s = i(810412),
-    u = i(985018);
-let c = (0, l.throttle)((t, e) => {
-    (0, s.xp)(t.type, { opacity: e });
+    c = i(375708);
+let u = (0, o.throttle)((t, a) => {
+    (0, s.xp)(t.type, { opacity: a });
 }, 1e3);
-function A(t) {
-    let e = a.useCallback((e) => c(t, e), [t]);
-    return (0, n.jsx)(r.aK, {
+function d(t) {
+    let a = l.useCallback((a) => u(t, a), [t]);
+    return (0, e.jsx)(r.aK, {
         id: "opacity",
         "aria-haspopup": !0,
-        label: u.intl.string(u.t.OVovCb),
-        control: (i, a) =>
-            (0, n.jsx)(o.i, {
+        label: c.intl.string(c.t.OVovCb),
+        control: (i, l) =>
+            (0, e.jsx)(n.i, {
                 ...i,
-                ref: a,
+                ref: l,
                 value: 100 * t.opacity,
                 maxValue: 100,
                 onChange: (i) => {
-                    (0, d.Ju)({ widgetId: t.id, opacity: i / 100 }), e(Math.floor(i));
+                    (0, p.Ju)({ widgetId: t.id, opacity: i / 100 }), a(Math.floor(i));
                 },
-                "aria-label": u.intl.string(u.t.kbFsAD),
+                "aria-label": c.intl.string(c.t.kbFsAD),
             }),
     });
 }

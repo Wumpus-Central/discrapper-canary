@@ -1,26 +1,26 @@
-n.d(t, { V: () => s, W: () => l }), n(323874), n(14289), n(35956);
-var i = n(652215);
-function l(e) {
-    let { applicationId: t, customId: n, referrerId: l, linkId: s } = e,
-        a = new URL(i.BVt.ACTIVITY_DETAILS(t), `${location.protocol}//${location.host}`),
-        r = a.searchParams;
+n.d(l, { V: () => s, W: () => o }), n(323874), n(14289), n(35956);
+var e = n(652215);
+function o(t) {
+    let { applicationId: l, customId: n, referrerId: o, linkId: s } = t,
+        i = new URL(e.BVt.ACTIVITY_DETAILS(l), `${location.protocol}//${location.host}`),
+        r = i.searchParams;
     return (
         null != s && r.set("link_id", s),
-        null != l && r.set("referrer_id", l),
+        null != o && r.set("referrer_id", o),
         null != n && r.set("custom_id", n),
-        a.toString()
+        i.toString()
     );
 }
-function s(e) {
-    let { id: t, customInstallUrl: n, installParams: l, integrationTypesConfig: s } = e;
+function s(t) {
+    let { id: l, customInstallUrl: n, installParams: o, integrationTypesConfig: s } = t;
     if (null != n) return n;
-    let a = new URLSearchParams();
-    a.set("client_id", t);
+    let i = new URLSearchParams();
+    i.set("client_id", l);
     let r =
-        null != s && Object.values(s).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null);
-    if (null != l && !r) {
-        let { permissions: e, scopes: t } = l;
-        null != e && a.set("permissions", e), null != t && a.set("scope", t.join(" "));
+        null != s && Object.values(s).some((t) => t?.oauth2_install_params != null || t?.oauth2InstallParams != null);
+    if (null != o && !r) {
+        let { permissions: t, scopes: l } = o;
+        null != t && i.set("permissions", t), null != l && i.set("scope", l.join(" "));
     }
-    return `${location.protocol}//${location.host}${i.BVt.OAUTH2_AUTHORIZE}?${a.toString()}`;
+    return `${location.protocol}//${location.host}${e.BVt.OAUTH2_AUTHORIZE}?${i.toString()}`;
 }

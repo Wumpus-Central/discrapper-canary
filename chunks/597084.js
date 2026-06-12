@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 });
-let r = n(152772);
+let i = n(152772);
 t.default = class {
     constructor() {
         this._queue = [];
@@ -8,8 +8,8 @@ t.default = class {
     enqueue(e, t) {
         let n = { priority: (t = Object.assign({ priority: 0 }, t)).priority, run: e };
         if (this.size && this._queue[this.size - 1].priority >= t.priority) return void this._queue.push(n);
-        let i = r.default(this._queue, n, (e, t) => t.priority - e.priority);
-        this._queue.splice(i, 0, n);
+        let r = i.default(this._queue, n, (e, t) => t.priority - e.priority);
+        this._queue.splice(r, 0, n);
     }
     dequeue() {
         let e = this._queue.shift();

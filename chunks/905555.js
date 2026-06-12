@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { H: () => _, N: () => u });
-var i = n(118356),
+n.d(t, { H: () => c, N: () => d });
+var i = n(941426),
     r = n(499979),
     s = n(228366),
     a = n(567249),
-    o = n(680243),
+    o = n(614455),
     l = n(392164);
-let d = new i.Vy("OverlayV3NativeModuleUtils");
-async function _() {
+let u = new i.Vy("OverlayV3NativeModuleUtils");
+async function c() {
     let e;
     if (null == a.A.getWindow(l.f)) return;
-    d.warn("Waiting for previous overlay popout to be destroyed.");
+    u.warn("Waiting for previous overlay popout to be destroyed.");
     let t = new Promise((e) => {
         setTimeout(() => {
             e();
@@ -27,9 +27,9 @@ async function _() {
     } finally {
         a.A.removeChangeListener(n);
     }
-    null != a.A.getWindow(l.f) && d.error("Previous overlay popout was not destroyed after 5 seconds!");
+    null != a.A.getWindow(l.f) && u.error("Previous overlay popout was not destroyed after 5 seconds!");
 }
-async function u() {
+async function d() {
     let e,
         t = o.A.isModuleLoaded,
         n = o.A.getNativeModule();

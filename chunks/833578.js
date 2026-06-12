@@ -1,9 +1,9 @@
 e.exports = {
     _$: "creatorBenefitsContainer__02e4c",
-    Ku: "creatorBenefitCard__02e4c " + _(356028).Nr,
-    w2: "earningBenefitCard__02e4c creatorBenefitCard__02e4c " + _(356028).Nr,
-    Og: "followerBenefitCard__02e4c creatorBenefitCard__02e4c " + _(356028).Nr,
-    FN: "revenueShareBenefitCard__02e4c creatorBenefitCard__02e4c " + _(356028).Nr,
+    Ku: "creatorBenefitCard__02e4c " + a(356028).Nr,
+    w2: "earningBenefitCard__02e4c creatorBenefitCard__02e4c " + a(356028).Nr,
+    Og: "followerBenefitCard__02e4c creatorBenefitCard__02e4c " + a(356028).Nr,
+    FN: "revenueShareBenefitCard__02e4c creatorBenefitCard__02e4c " + a(356028).Nr,
     fr: "earningsPreviewContainer__02e4c",
     ZL: "avatarGridContainer__02e4c",
     g0: "avatarCard__02e4c",

@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => s });
-var l = n(335033);
-let i = window.GLOBAL_ENV.PUBLIC_PATH;
-null != i && i.endsWith("/") && (i = i.substring(0, i.length - 1)), (l.OGVLoader.base = i);
-let s = l;
+var i = n(335033);
+let r = window.GLOBAL_ENV.PUBLIC_PATH;
+null != r && r.endsWith("/") && (r = r.substring(0, r.length - 1)), (i.OGVLoader.base = r);
+let s = i;

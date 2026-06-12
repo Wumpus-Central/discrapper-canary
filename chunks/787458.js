@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { m: () => u, B: () => c });
+n.d(t, { m: () => d, B: () => _ });
 var i,
     r = n(535736),
     s = n(292348),
@@ -25,8 +25,8 @@ class o {
     }
 }
 var l = n(734057),
-    d = n(453771);
-class _ {
+    u = n(453771);
+class c {
     getCreateAttachmentURL(e) {
         return a.Rsh.MESSAGE_CREATE_ATTACHMENT_UPLOAD(e);
     }
@@ -35,7 +35,7 @@ class _ {
     }
     getMaxFileSize(e) {
         let t = l.A.getBasicChannel(e);
-        return d.o2(t?.guild_id);
+        return u.o2(t?.guild_id);
     }
     getMaxAttachmentsCount() {
         return a.XgB;
@@ -47,18 +47,18 @@ class _ {
         return !0;
     }
 }
-var u =
+var d =
     (((i = {})[(i.MESSAGE_ATTACHMENT = 0)] = "MESSAGE_ATTACHMENT"),
     (i[(i.GUILD_PRODUCT_ATTACHMENT = 1)] = "GUILD_PRODUCT_ATTACHMENT"),
     (i[(i.GRAVITY_ATTACHMENT = 2)] = "GRAVITY_ATTACHMENT"),
     i);
-function c(e) {
+function _(e) {
     switch (e) {
         case 1:
             return new r.A();
         case 2:
             return new o();
         default:
-            return new _();
+            return new c();
     }
 }

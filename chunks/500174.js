@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     kL: "container__24a95",
     qq: "emojiContainer__24a95",
     UU: "name__24a95",

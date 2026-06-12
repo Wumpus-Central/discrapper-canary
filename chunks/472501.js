@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(985018);
-function i(e) {
-    let t = r.intl.currentLocale.toLowerCase();
+n.d(t, { A: () => r });
+var i = n(375708);
+function r(e) {
+    let t = i.intl.currentLocale.toLowerCase();
     return t in e ? e[t] : e.default;
 }

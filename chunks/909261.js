@@ -1,53 +1,53 @@
-l.d(t, { DevToolsLinkEmbed: () => v });
-var s = l(627968),
-    i = l(64700),
-    r = l(331322),
-    a = l(346411),
-    n = l(834730),
-    c = l(821609),
-    o = l(17928),
-    d = l(287809),
-    h = l(538064),
-    u = l(333421),
-    p = l(507230);
+t.d(l, { DevToolsLinkEmbed: () => m });
+var i = t(627968),
+    n = t(64700),
+    s = t(331322),
+    r = t(346411),
+    a = t(834730),
+    u = t(821609),
+    c = t(17928),
+    d = t(287809),
+    o = t(538064),
+    p = t(333421),
+    h = t(507230);
 function x(e) {
     return e
         .split(/[_-]/)
         .map((e) => e.charAt(0).toUpperCase() + e.slice(1))
         .join(" ");
 }
-function v(e) {
-    let { url: t } = e,
-        l = i.useMemo(() => (0, u.AG)(t), [t]),
-        v = i.useMemo(() => (0, u.uJ)(t), [t]),
-        m = (0, o.bG)([d.default], () => {
+function m(e) {
+    let { url: l } = e,
+        t = n.useMemo(() => (0, p.AG)(l), [l]),
+        m = n.useMemo(() => (0, p.uJ)(l), [l]),
+        f = (0, c.bG)([d.default], () => {
             let e = d.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         }),
-        f = i.useCallback(() => {
-            null != l && (0, h.Ft)(l, v ?? void 0);
-        }, [l, v]);
-    if (!m || null == l) return null;
-    let g = x(l),
-        j = null != v ? x(v) : null,
-        w = null != j ? `${g} > ${j}` : g;
-    return (0, s.jsxs)("div", {
-        className: p.z,
+        v = n.useCallback(() => {
+            null != t && (0, o.Ft)(t, m ?? void 0);
+        }, [t, m]);
+    if (!f || null == t) return null;
+    let j = x(t),
+        k = null != m ? x(m) : null,
+        b = null != k ? `${j} > ${k}` : j;
+    return (0, i.jsxs)("div", {
+        className: h.z,
         children: [
-            (0, s.jsx)("div", {
-                className: p.w,
-                children: (0, s.jsxs)(r.B, {
+            (0, i.jsx)("div", {
+                className: h.w,
+                children: (0, i.jsxs)(s.B, {
                     direction: "horizontal",
                     align: "center",
                     gap: 8,
                     children: [
-                        (0, s.jsx)(a.P, { size: "lg" }),
-                        (0, s.jsxs)(r.B, {
+                        (0, i.jsx)(r.P, { size: "lg" }),
+                        (0, i.jsxs)(s.B, {
                             direction: "vertical",
                             gap: 0,
                             children: [
-                                (0, s.jsx)(n.E, { variant: "text-md/semibold", children: w }),
-                                (0, s.jsx)(n.E, {
+                                (0, i.jsx)(a.E, { variant: "text-md/semibold", children: b }),
+                                (0, i.jsx)(a.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: "DevTools",
@@ -57,7 +57,7 @@ function v(e) {
                     ],
                 }),
             }),
-            (0, s.jsx)(c.$, { fullWidth: !0, variant: "primary", text: `Open ${w}`, onClick: f }),
+            (0, i.jsx)(u.$, { fullWidth: !0, variant: "primary", text: `Open ${b}`, onClick: v }),
         ],
     });
 }

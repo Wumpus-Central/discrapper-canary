@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(157559),
     r = n(723702),
     s = n(19575),
@@ -52,4 +52,4 @@ class l extends a.V {
         i.A.show({ title: t, body: n, onConfirm: r, cancelText: s, confirmText: a });
     }
 }
-let d = new l();
+let u = new l();

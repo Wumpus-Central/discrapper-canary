@@ -1,27 +1,27 @@
-d.d(e, { default: () => o });
-var s = d(627968);
-d(64700);
-var i = d(772707),
-    n = d(956793),
-    c = d(734057),
-    a = d(716371),
-    l = d(985018),
-    r = d(31008);
+i.d(e, { default: () => o });
+var n = i(627968);
+i(64700);
+var l = i(772707),
+    r = i(730852),
+    s = i(734057),
+    a = i(716371),
+    c = i(375708),
+    d = i(31008);
 function o(t) {
-    let { transitionState: e, onClose: d } = t;
-    return (0, s.jsx)(i.k, {
+    let { transitionState: e, onClose: i } = t;
+    return (0, n.jsx)(l.k, {
         transitionState: e,
-        onClose: d,
-        graphic: { src: r.A, type: "image" },
+        onClose: i,
+        graphic: { src: d.A, type: "image" },
         gradientColor: "blue",
-        title: l.intl.string(l.t.bAhz9l),
-        subtitle: l.intl.string(l.t["7KjxW3"]),
+        title: c.intl.string(c.t.bAhz9l),
+        subtitle: c.intl.string(c.t["7KjxW3"]),
         actions: [
             {
-                text: l.intl.string(l.t.BddRzS),
+                text: c.intl.string(c.t.BddRzS),
                 onClick: () => {
                     let t;
-                    null != (t = c.A.getDMFromUserId(a.K)) && n.default.selectPrivateChannel(t), d();
+                    null != (t = s.A.getDMFromUserId(a.K)) && r.default.selectPrivateChannel(t), i();
                 },
             },
         ],

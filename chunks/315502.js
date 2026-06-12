@@ -1,11 +1,11 @@
-n.d(t, { A: () => o });
-var r = n(627968);
-n(64700);
-var s = n(503698),
-    i = n.n(s),
-    a = n(834730),
-    l = n(720689);
-function o(e) {
-    let { hasMentions: t, truncatedCount: n, className: s } = e;
-    return (0, r.jsx)(a.E, { className: i()(l.T, s, { [l.l]: t }), variant: "text-xs/normal", children: n });
+r.d(e, { A: () => c });
+var t = r(627968);
+r(64700);
+var l = r(503698),
+    a = r.n(l),
+    n = r(834730),
+    i = r(720689);
+function c(s) {
+    let { hasMentions: e, truncatedCount: r, className: l } = s;
+    return (0, t.jsx)(n.E, { className: a()(i.T, l, { [i.l]: e }), variant: "text-xs/normal", children: r });
 }

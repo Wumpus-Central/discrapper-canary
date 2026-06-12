@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { R: () => i });
-var r,
-    i =
-        (((r = {})[(r.NONE = 100)] = "NONE"),
-        (r[(r.AVATAR_DECORATION = 0)] = "AVATAR_DECORATION"),
-        (r[(r.PROFILE_EFFECT = 1)] = "PROFILE_EFFECT"),
-        (r[(r.NAMEPLATE = 2)] = "NAMEPLATE"),
-        (r[(r.PROFILE_FRAME = 3)] = "PROFILE_FRAME"),
-        (r[(r.BUNDLE = 1e3)] = "BUNDLE"),
-        (r[(r.VARIANTS_GROUP = 2e3)] = "VARIANTS_GROUP"),
-        (r[(r.EXTERNAL_SKU = 3e3)] = "EXTERNAL_SKU"),
-        r);
+n.d(t, { R: () => r });
+var i,
+    r =
+        (((i = {})[(i.NONE = 100)] = "NONE"),
+        (i[(i.AVATAR_DECORATION = 0)] = "AVATAR_DECORATION"),
+        (i[(i.PROFILE_EFFECT = 1)] = "PROFILE_EFFECT"),
+        (i[(i.NAMEPLATE = 2)] = "NAMEPLATE"),
+        (i[(i.PROFILE_FRAME = 3)] = "PROFILE_FRAME"),
+        (i[(i.BUNDLE = 1e3)] = "BUNDLE"),
+        (i[(i.VARIANTS_GROUP = 2e3)] = "VARIANTS_GROUP"),
+        (i[(i.EXTERNAL_SKU = 3e3)] = "EXTERNAL_SKU"),
+        i);

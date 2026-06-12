@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Hz: () => l, It: () => s, LU: () => f, PF: () => c, VP: () => o, fA: () => _, g7: () => u, zU: () => d });
+n.d(t, { Hz: () => l, It: () => s, LU: () => h, PF: () => c, VP: () => o, fA: () => _, g7: () => u, zU: () => d });
 var i = n(214958),
     r = n.n(i);
 let s = parseInt(r().version ?? "0", 10),
@@ -37,7 +37,7 @@ let s = parseInt(r().version ?? "0", 10),
         ("Chrome" === r().name && s >= 58) ||
         ("Safari" === r().name && s >= 15) ||
         ("Firefox" === r().name && s >= 108),
-    f =
+    h =
         ("Chrome" === r().name && s >= 72) ||
         ("Safari" === r().name && s >= 11) ||
         ("Opera" === r().name && s >= 60) ||

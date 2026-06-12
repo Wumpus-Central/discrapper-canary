@@ -10,8 +10,8 @@ var i = n(417325),
     c = n(787458),
     d = n(972711),
     _ = n(652215),
-    f = n(381941);
-let h = new o.A("UploaderBase.tsx");
+    h = n(381941);
+let f = new o.A("UploaderBase.tsx");
 class p extends r.EventEmitter {
     id;
     _file;
@@ -45,14 +45,14 @@ class p extends r.EventEmitter {
     async compressAndCheckFileSize() {
         let e = (0, c.B)(this.files[0]?.item?.target);
         return this.files.length > e.getMaxAttachmentsCount()
-            ? (h.log(`Too many attachments for ${this.id}`),
+            ? (f.log(`Too many attachments for ${this.id}`),
               this._handleError({ code: _.t02.TOO_MANY_ATTACHMENTS }),
               !1)
             : ((0, l.R8)({ location: "UploaderBase.compressAndCheckFileSize" }),
               !(this._fileSize() > e.getMaxTotalAttachmentSize()) ||
                   (this._handleError({
                       code: _.t02.ENTITY_TOO_LARGE,
-                      reason: { type: f.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
+                      reason: { type: h.ty.POSTCOMPRESSION_SUM_TOO_LARGE },
                   }),
                   !1));
     }
@@ -60,7 +60,7 @@ class p extends r.EventEmitter {
         let e = this.files.some((e) => e.isImage),
             t = this.files.some((e) => e.isVideo),
             n = this._fileSize();
-        h.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
+        f.log(`setUploadingTextForUI - total content: ${n} bytes and ${this.files.length} attachments for ${this.id}`),
             (this._file = {
                 ...this._file,
                 totalPostCompressionSize: n,
@@ -111,7 +111,7 @@ class p extends r.EventEmitter {
             this.emit("progress", this._file);
     };
     _handleException = (e) => {
-        this._handleError({ reason: { type: f.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
+        this._handleError({ reason: { type: h.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
     };
     _handleAborted = () => {
         this.clearProcessingMessageInterval();
@@ -121,13 +121,13 @@ class p extends r.EventEmitter {
         this.clearProcessingMessageInterval(),
             this._aborted ||
                 ((this._errored = !0),
-                h.log(`_handleError: ${t} (${JSON.stringify(n)}) for ${this.id}`),
+                f.log(`_handleError: ${t} (${JSON.stringify(n)}) for ${this.id}`),
                 this.emit("error", this._file, t, i, n),
                 this.removeAllListeners());
     };
     _handleComplete = (e) => {
         this.clearProcessingMessageInterval(),
-            h.log(`_handleComplete for ${this.id}`),
+            f.log(`_handleComplete for ${this.id}`),
             this.emit("complete", this._file, e),
             this.removeAllListeners();
     };
@@ -136,12 +136,12 @@ class p extends r.EventEmitter {
             (clearInterval(this.processingMessageChangeInterval), (this.processingMessageChangeInterval = void 0));
     }
     cancel() {
-        h.log(`cancel() for ${this.id}`),
+        f.log(`cancel() for ${this.id}`),
             this._aborted ||
                 ((this._aborted = !0), this._cancel?.(), this.files.forEach((e) => e.cancel()), this._handleComplete());
     }
     async cancelItem(e) {
-        h.log(`Cancel called for ${this.id} for item ${e}`);
+        f.log(`Cancel called for ${this.id} for item ${e}`);
         let t = this.files.find((t) => t.id === e);
         if (null == t || t.isCancelled()) return;
         let n = this.files.indexOf(t);
@@ -194,7 +194,7 @@ class m extends p {
             let e = this.files.find((e) => e.status === i.jP.ERROR),
                 t = e?.error,
                 n = s instanceof Error ? s.message : String(s),
-                r = { type: f.ty.ERROR_SOURCE_UNKNOWN, msg: n };
+                r = { type: h.ty.ERROR_SOURCE_UNKNOWN, msg: n };
             throw (this._handleError({ code: t, reason: r }), { file: this._file, code: t, reason: r });
         }
         return this._handleComplete(), this.files;

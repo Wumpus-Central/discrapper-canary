@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, {
-    AF: () => h,
+    AF: () => f,
     JQ: () => c,
     Ud: () => l,
     YS: () => u,
     c6: () => _,
     fR: () => d,
-    startRegisterWebAuthnCredential: () => f,
+    startRegisterWebAuthnCredential: () => h,
 });
 var i = n(239947),
     r = n(636537),
@@ -54,13 +54,13 @@ async function _(e, t) {
         s.h.dispatch({ type: "AUTHENTICATOR_UPDATE", credential: i });
     }
 }
-async function f() {
+async function h() {
     let {
         body: { ticket: e, challenge: t },
     } = await r.Bo.post({ url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS, body: {}, rejectWithError: !1 });
     return { ticket: e, challenge: t };
 }
-async function h(e, t, n) {
+async function f(e, t, n) {
     let r = await a.A.post({
         url: o.Rsh.MFA_WEBAUTHN_CREDENTIALS,
         body: { name: e, ticket: t, credential: n },

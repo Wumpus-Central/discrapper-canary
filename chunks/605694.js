@@ -15,8 +15,8 @@ var i = n(627968),
     x = n(821609),
     f = n(331322),
     E = n(534514),
-    T = n(477782),
-    y = n(687966),
+    y = n(477782),
+    T = n(687966),
     j = n(404778),
     v = n(155718),
     I = n(793574),
@@ -63,24 +63,24 @@ function q(e) {
             sourceUserId: n.id,
             trackEntryPointImpression: !0,
         }),
-        { fetched: f, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: y, token: j } = (0, _.RD)(c),
+        { fetched: f, hasAlreadyLinked: E, canStartAuthorization: y, startAuthorization: T, token: j } = (0, _.RD)(c),
         { analyticsLocations: v } = (0, A.Ay)(I.A.USER_PROFILE_APPLICATION_WIDGET),
         R = l.useCallback(() => {
-            T &&
+            y &&
                 (t({
                     action: E
                         ? "PRESS_APPLICATION_WIDGET_LINKED_RECONNECT"
                         : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                     applicationId: a.applicationId,
                 }),
-                y({ analyticsLocations: v }));
-        }, [T, E, y, t, a.applicationId, v]),
-        D = null == s && f && !E && T,
+                T({ analyticsLocations: v }));
+        }, [y, E, T, t, a.applicationId, v]),
+        D = null == s && f && !E && y,
         N =
             null == s &&
             f &&
             E &&
-            T &&
+            y &&
             null != j &&
             !Array.from(d._.APPLICATION_IDENTITIES_SCOPES).some((e) => j.scopes.includes(e)) &&
             !j.scopes.includes(d.F.SDK_SOCIAL_LAYER) &&
@@ -567,10 +567,10 @@ function em(e) {
               headerClassName: B.wx,
               additionalManageWidgetMenuItems:
                   null != j.game
-                      ? (0, i.jsx)(T.Dr, {
+                      ? (0, i.jsx)(y.Dr, {
                             id: "view-game-profile",
                             label: "View Game Profile",
-                            icon: y._,
+                            icon: T._,
                             action: j.openGameProfileModal,
                         })
                       : null,
@@ -605,10 +605,10 @@ function ep(e) {
               headerClassName: B.vX,
               additionalManageWidgetMenuItems:
                   null != u.game
-                      ? (0, i.jsx)(T.Dr, {
+                      ? (0, i.jsx)(y.Dr, {
                             id: "view-game-profile",
                             label: "View Game Profile",
-                            icon: y._,
+                            icon: T._,
                             action: u.openGameProfileModal,
                         })
                       : null,

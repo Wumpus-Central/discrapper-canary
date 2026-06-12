@@ -1,25 +1,25 @@
-n.d(e, { default: () => u });
-var i = n(627968);
-n(64700);
-var a = n(861672),
-    l = n(477782),
-    r = n(442433),
-    s = n(723702),
-    o = n(115184),
-    c = n(777933),
-    d = n(985018);
-function u(t) {
-    let { src: e, onSelect: n } = t,
-        u = (0, o.A)(e),
-        h = (0, c.A)(e, null);
+a.d(n, { default: () => u });
+var l = a(627968);
+a(64700);
+var t = a(980707),
+    i = a(477782),
+    r = a(442433),
+    s = a(723702),
+    d = a(115184),
+    c = a(777933),
+    o = a(375708);
+function u(e) {
+    let { src: n, onSelect: a } = e,
+        u = (0, d.A)(n),
+        h = (0, c.A)(n, null);
     return s.isPlatformEmbedded
-        ? (0, i.jsxs)(a.W, {
+        ? (0, l.jsxs)(t.W, {
               "data-menu-all-icons-auto": !0,
               navId: "image-context",
               onClose: r.Z_,
-              "aria-label": d.intl.string(d.t.Zow2V5),
-              onSelect: n,
-              children: [(0, i.jsx)(l.rX, { children: u }), (0, i.jsx)(l.rX, { children: h })],
+              "aria-label": o.intl.string(o.t.Zow2V5),
+              onSelect: a,
+              children: [(0, l.jsx)(i.rX, { children: u }), (0, l.jsx)(i.rX, { children: h })],
           })
         : null;
 }

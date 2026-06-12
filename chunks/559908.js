@@ -10,8 +10,8 @@ var i = n(17928),
     c = n(3137),
     d = n(103640),
     _ = n(31408),
-    f = n(652215);
-let h = new Set(),
+    h = n(652215);
+let f = new Set(),
     p = new r.J(
         function (e) {
             let { userId: t, channelId: n } = e;
@@ -117,7 +117,7 @@ let I = new A(a.h, {
             } = e;
             if (!c.A.isEnabled()) return !1;
             let s = o.default.getId();
-            if (!g(i?.id, s, r, h)) return !1;
+            if (!g(i?.id, s, r, f)) return !1;
             let a = p.get(m({ userId: i?.id ?? "???", channelId: t }));
             if (
                 c.A.screenshakeEnabled &&
@@ -126,7 +126,7 @@ let I = new A(a.h, {
                 null != n.find((e) => e.id === s)
             ) {
                 let e = null != a ? ((0, d.U$)(a, _.fZ.LEVEL_4) ?? 0.001) : 4 * Math.random();
-                return u._.dispatch(f.jej.SHAKE_APP, { duration: 1e3, intensity: e }), !0;
+                return u._.dispatch(h.jej.SHAKE_APP, { duration: 1e3, intensity: e }), !0;
             }
             return !1;
         },

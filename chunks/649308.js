@@ -1,24 +1,24 @@
-n.d(e, { A: () => p });
-var l = n(627968),
-    t = n(477782),
-    a = n(72152),
-    d = n(976860),
-    s = n(967198),
-    o = n(422258),
-    r = n(313281),
-    c = n(5180),
-    u = n(652215),
-    g = n(335993),
-    y = n(985018);
-function p() {
-    let { hasAccess: i } = (0, r.TW)("useHideServerItem");
-    return (0, l.jsx)(t.Dr, {
+i.d(e, { A: () => h });
+var n = i(627968),
+    r = i(477782),
+    d = i(72152),
+    s = i(976860),
+    a = i(967198),
+    u = i(422258),
+    l = i(313281),
+    o = i(5180),
+    c = i(652215),
+    p = i(335993),
+    f = i(375708);
+function h() {
+    let { hasAccess: t } = (0, l.TW)("useHideServerItem");
+    return (0, n.jsx)(r.Dr, {
         id: "hide-favorites",
-        label: i ? y.intl.string(g.default["8FO0y9"]) : y.intl.string(y.t.ojM1xJ),
-        subtext: i ? y.intl.string(g.default.FaHxWl) : void 0,
-        color: i ? "danger" : "default",
+        label: t ? f.intl.string(p.default["8FO0y9"]) : f.intl.string(f.t.ojM1xJ),
+        subtext: t ? f.intl.string(p.default.FaHxWl) : void 0,
+        color: t ? "danger" : "default",
         action: function () {
-            (0, a.Z)(!1), i && (0, o.tV)(!1, "server_context_menu"), (0, c.ai)(s.A.getGuildId()) && (0, d.pX)(u.BVt.ME);
+            (0, d.Z)(!1), t && (0, u.tV)(!1, "server_context_menu"), (0, o.ai)(a.A.getGuildId()) && (0, s.pX)(c.BVt.ME);
         },
     });
 }

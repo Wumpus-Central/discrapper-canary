@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Ay: () => r, FM: () => o });
-var l = n(17928),
-    i = n(228366);
-class s extends l.il {
+n.d(t, { Ay: () => o, FM: () => l });
+var i = n(17928),
+    r = n(228366);
+class s extends i.il {
     videoStatsEnabled = new Map();
     isVideoStatsEnabled(e) {
         return this.videoStatsEnabled.get(e) ?? !1;
@@ -34,8 +34,8 @@ class s extends l.il {
         this.videoStatsEnabled.delete(e) && this.emitChange();
     }
 }
-let a = new s(i.h, {}),
-    r = a;
-function o(e) {
+let a = new s(r.h, {}),
+    o = a;
+function l(e) {
     a.toggleVideoStats(e);
 }

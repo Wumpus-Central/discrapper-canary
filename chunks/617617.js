@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => C });
 var i = n(284009),
     r = n.n(i),
     s = n(735438),
@@ -10,8 +10,8 @@ var i = n(284009),
     c = n(335871),
     d = n(228366),
     _ = n(350503),
-    f = n(405892),
-    h = n(761821),
+    h = n(405892),
+    f = n(761821),
     p = n(355097);
 let E = { ProtoClass: u.nT, proto: u.nT.create(), lazyLoaded: !1, editInfo: (0, p.O9)() },
     m = { ProtoClass: l.aw, proto: l.aw.create(), lazyLoaded: !0, editInfo: (0, p.O9)() },
@@ -33,7 +33,7 @@ function T() {
 function S(e) {
     null != e.editInfo.timeout && clearTimeout(e.editInfo.timeout), (e.editInfo = (0, p.O9)());
 }
-function N(e) {
+function y(e) {
     let {
         settings: { proto: t, type: n },
         partial: i,
@@ -44,44 +44,44 @@ function N(e) {
     let o = g[n];
     s && S(o),
         i
-            ? ((o.proto = (0, h.RK)(o.ProtoClass, o.proto, t)),
+            ? ((o.proto = (0, f.RK)(o.ProtoClass, o.proto, t)),
               r()("string" != typeof o.proto, "UserSettingsProto cannot be a string"))
             : ((o.proto = t),
               r()("string" != typeof o.proto, "UserSettingsProto cannot be a string"),
               (o.editInfo.loaded = !0),
               (o.editInfo.loading = !1));
 }
-function y(e) {
+function N(e) {
     null != e &&
         a().forEach(g, (t, n) => {
             let i = e[Number(n)];
             if (null == i) return;
             let s = i?.proto ?? "",
-                a = (0, h.ii)(t.ProtoClass, s);
+                a = (0, f.ii)(t.ProtoClass, s);
             if (null == a) return;
             (t.proto = a), r()("string" != typeof t.proto, "UserSettingsProto cannot be a string");
             let o = i?.protoToSave ?? null;
             if (null == o || null == i.offlineEditDataVersion) return;
-            let l = (0, h.ii)(t.ProtoClass, o);
+            let l = (0, f.ii)(t.ProtoClass, o);
             null != l && ((t.editInfo.protoToSave = l), (t.editInfo.offlineEditDataVersion = i.offlineEditDataVersion));
         });
 }
-class C extends o.Ay.PersistedStore {
+class v extends o.Ay.PersistedStore {
     static displayName = "UserSettingsProtoStore";
     static persistKey = "UserSettingsProtoStore-Cache";
     initialize(e) {
-        y(e);
+        N(e);
     }
     getState() {
         return this.computeState();
     }
     computeState() {
         return a().mapValues(g, (e) => {
-            let t = { proto: (0, h.ob)(e.ProtoClass, e.proto) };
+            let t = { proto: (0, f.ob)(e.ProtoClass, e.proto) };
             return (
                 null != e.editInfo.offlineEditDataVersion &&
                     null != e.editInfo.protoToSave &&
-                    ((t.protoToSave = (0, h.ob)(e.ProtoClass, e.editInfo.protoToSave)),
+                    ((t.protoToSave = (0, f.ob)(e.ProtoClass, e.editInfo.protoToSave)),
                     (t.offlineEditDataVersion = e.editInfo.offlineEditDataVersion)),
                 t
             );
@@ -143,13 +143,13 @@ class C extends o.Ay.PersistedStore {
         return (0, _.p)(this.getGuildThemeSourcePreferenceOverride(e), this.getDefaultGuildThemePreference());
     }
 }
-let v = new C(d.h, {
+let C = new v(d.h, {
     CACHE_LOADED: function (e) {
         let { userSettings: t } = e;
-        y(t);
+        N(t);
     },
-    USER_SETTINGS_PROTO_UPDATE: N,
-    USER_SETTINGS_PROTO_ENQUEUE_UPDATE: N,
+    USER_SETTINGS_PROTO_UPDATE: y,
+    USER_SETTINGS_PROTO_ENQUEUE_UPDATE: y,
     USER_SETTINGS_PROTO_UPDATE_EDIT_INFO: function (e) {
         let {
             settings: { type: t, changes: n },
@@ -161,7 +161,7 @@ let v = new C(d.h, {
     CONNECTION_OPEN: function (e) {
         let { userSettingsProto: t } = e;
         null != t && ((E.proto = t), r()("string" != typeof E.proto, "UserSettingsProto cannot be a string"));
-        let { proto: n, isDirty: i, cleanupFuncs: s } = (0, h.vI)(E.proto, f.A[p.oD.PRELOADED_USER_SETTINGS]);
+        let { proto: n, isDirty: i, cleanupFuncs: s } = (0, f.vI)(E.proto, h.A[p.oD.PRELOADED_USER_SETTINGS]);
         i && S(E),
             (E.proto = n),
             r()("string" != typeof E.proto, "UserSettingsProto cannot be a string"),
@@ -177,7 +177,7 @@ let v = new C(d.h, {
     CONNECTION_RESUMED: I,
     OVERLAY_INITIALIZE: function (e) {
         let { userSettingsProto: t } = e;
-        (E.proto = (0, h.Gd)(t)), r()("string" != typeof E.proto, "UserSettingsProto cannot be a string");
+        (E.proto = (0, f.Gd)(t)), r()("string" != typeof E.proto, "UserSettingsProto cannot be a string");
     },
     LOGOUT: function () {
         T(),

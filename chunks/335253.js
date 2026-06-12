@@ -1,64 +1,64 @@
-n.d(t, { default: () => M });
-var i = n(627968);
-n(64700);
-var l = n(861672),
-    r = n(477782),
-    a = n(442433),
-    d = n(847767),
-    u = n(358367),
-    s = n(793574),
-    o = n(50268),
-    A = n(235052),
-    c = n(222311),
-    E = n(237749),
-    g = n(961350),
-    S = n(661455),
-    I = n(291247),
-    _ = n(652215),
-    f = n(985018);
-let M = (0, u.A)(
-    (0, d.A)(
-        function (e) {
-            let { user: t, channel: n, guildId: d, onSelect: u, onInteraction: s, context: _ } = e,
-                M = n.id,
-                C = t.isNonUserBot(),
-                b = t.id === g.default.getId(),
-                m = (0, c.A)(t),
-                h = (0, E.A)(t, d, M),
-                N = (0, S.n)({ isOwnSettings: b, userId: t.id, channelId: M, guildId: d, context: _ }),
-                [G, x] = (0, S.O)(t, M, d),
-                O = (0, I.A)(t, d, M),
-                v = (0, o.A)({ id: t.id, label: f.intl.string(f.t["/AXYnE"]) }),
-                D = (0, A.A)(t.id, n);
-            return (0, i.jsx)(l.W, {
+t.d(e, { default: () => C });
+var n = t(627968);
+t(64700);
+var r = t(980707),
+    d = t(477782),
+    s = t(442433),
+    l = t(847767),
+    a = t(358367),
+    c = t(793574),
+    o = t(50268),
+    h = t(309858),
+    u = t(844065),
+    x = t(237749),
+    A = t(495544),
+    j = t(661455),
+    p = t(696582),
+    g = t(652215),
+    b = t(375708);
+let C = (0, a.A)(
+    (0, l.A)(
+        function (i) {
+            let { user: e, channel: t, guildId: l, onSelect: a, onInteraction: c, context: g } = i,
+                C = t.id,
+                X = e.isNonUserBot(),
+                E = e.id === A.default.getId(),
+                I = (0, u.A)(e),
+                _ = (0, x.A)(e, l, C),
+                f = (0, j.n)({ isOwnSettings: E, userId: e.id, channelId: C, guildId: l, context: g }),
+                [k, m] = (0, j.O)(e, C, l),
+                v = (0, p.A)(e, l, C),
+                U = (0, o.A)({ id: e.id, label: b.intl.string(b.t["/AXYnE"]) }),
+                w = (0, h.A)(e.id, t);
+            return (0, n.jsx)(r.W, {
                 "data-menu-migrated-auto": !0,
                 navId: "user-context",
-                onClose: a.Z_,
-                "aria-label": f.intl.string(f.t.liqwPJ),
-                onSelect: u,
-                onInteraction: s,
+                onClose: s.Z_,
+                "aria-label": b.intl.string(b.t.liqwPJ),
+                onSelect: a,
+                onInteraction: c,
                 variant: "fixed",
                 children:
-                    !C &&
-                    (0, i.jsxs)(i.Fragment, {
+                    !X &&
+                    (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, i.jsxs)(r.rX, { children: [m, h] }),
-                            D,
-                            N,
-                            !b &&
-                                (0, i.jsx)(r.rX, {
-                                    children: (0, i.jsxs)(r.Dr, {
+                            (0, n.jsxs)(d.rX, { children: [I, _] }),
+                            w,
+                            f,
+                            !E &&
+                                (0, n.jsx)(d.rX, {
+                                    children: (0, n.jsxs)(d.Dr, {
                                         id: "more-options",
-                                        label: f.intl.string(f.t.PdRCRg),
-                                        children: [G, (0, i.jsx)(r.rX, { children: O }), x],
+                                        label: b.intl.string(b.t.PdRCRg),
+                                        children: [k, (0, n.jsx)(d.rX, { children: v }), m],
                                     }),
                                 }),
-                            b && (0, i.jsx)(r.rX, { children: v }),
+                            E && (0, n.jsx)(d.rX, { children: U }),
                         ],
                     }),
             });
         },
-        { object: _.ZSU.CONTEXT_MENU },
+        { object: g.ZSU.CONTEXT_MENU },
     ),
-    [s.A.VOICE_USER],
+    [c.A.VOICE_USER],
 );

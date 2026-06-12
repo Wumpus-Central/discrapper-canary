@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g, u: () => h });
+n.d(t, { A: () => g, u: () => f });
 var i = n(735438),
     r = n(506774),
     s = n(439372),
@@ -10,10 +10,10 @@ var i = n(735438),
     c = n(763827),
     d = n(881520),
     _ = n(670455);
-let f = { chance: 0.2, cooldown: 864e5 },
-    h = {
+let h = { chance: 0.2, cooldown: 864e5 },
+    f = {
         [_.MW.VOICE]: {
-            ...f,
+            ...h,
             group: _.h0.AV,
             hotspot: a._2.VOICE_CALL_FEEDBACK,
             storageKey: "lastVoiceFeedback",
@@ -25,14 +25,14 @@ let f = { chance: 0.2, cooldown: 864e5 },
             ],
         },
         [_.MW.STREAM]: {
-            ...f,
+            ...h,
             group: _.h0.AV,
             hotspot: a._2.REPORT_PROBLEM_POST_STREAM,
             storageKey: "lastStreamFeedback",
             feedbackType: _.MW.STREAM,
         },
         [_.MW.VIDEO_BACKGROUND]: {
-            ...f,
+            ...h,
             group: _.h0.AV,
             hotspot: a._2.VIDEO_BACKGROUND_FEEDBACK,
             storageKey: "lastVideoBackgroundFeedback",
@@ -55,7 +55,7 @@ let f = { chance: 0.2, cooldown: 864e5 },
             feedbackType: _.MW.IN_APP_REPORTS,
         },
         [_.MW.SEARCH_RESULTS]: {
-            ...f,
+            ...h,
             group: _.h0.SEARCH,
             hotspot: a._2.SEARCH_RESULTS_FEEDBACK,
             storageKey: "searchResultsFeedback",
@@ -82,7 +82,7 @@ function E(e) {
     return Math.random() < e.chance;
 }
 function m(e) {
-    for (let t of Object.values(h).filter((t) => {
+    for (let t of Object.values(f).filter((t) => {
         let { group: n } = t;
         return n === e.group;
     }))
@@ -111,7 +111,7 @@ class g extends s.A {
     possiblyShowFeedbackModal(e, t, n) {
         !(function (e) {
             if (__OVERLAY__) return !1;
-            let t = d.A.getFeedbackConfig(e) ?? h[e],
+            let t = d.A.getFeedbackConfig(e) ?? f[e],
                 n = t.eligibilityChecks ?? [];
             return [E, p, m].every((e) => e(t)) && n.every((e) => e(t));
         })(e) ||

@@ -1,23 +1,23 @@
-function n(e, t, n, r) {
+function n(e, t, n, i) {
     var s = [],
         a = {},
         o = {},
         l = {};
-    return function u(d) {
-        (a[d] = !0), s.push(d), (l[d] = !0);
-        for (let t = 0; t < e[d].length; t++) {
-            let n = e[d][t];
+    return function u(c) {
+        (a[c] = !0), s.push(c), (l[c] = !0);
+        for (let t = 0; t < e[c].length; t++) {
+            let n = e[c][t];
             if (a[n]) {
-                if (l[n] && (s.push(n), !r)) throw new i(s);
+                if (l[n] && (s.push(n), !i)) throw new r(s);
             } else u(n);
         }
-        s.pop(), delete l[d], (t && 0 !== e[d].length) || o[d] || (n.push(d), (o[d] = !0));
+        s.pop(), delete l[c], (t && 0 !== e[c].length) || o[c] || (n.push(c), (o[c] = !0));
     };
 }
-var r = (t.DepGraph = function (e) {
+var i = (t.DepGraph = function (e) {
     (this.nodes = {}), (this.outgoingEdges = {}), (this.incomingEdges = {}), (this.circular = e && !!e.circular);
 });
-r.prototype = {
+i.prototype = {
     size: function () {
         return Object.keys(this.nodes).length;
     },
@@ -34,8 +34,8 @@ r.prototype = {
             delete this.incomingEdges[e],
             [this.incomingEdges, this.outgoingEdges].forEach(function (t) {
                 Object.keys(t).forEach(function (n) {
-                    var r = t[n].indexOf(e);
-                    r >= 0 && t[n].splice(r, 1);
+                    var i = t[n].indexOf(e);
+                    i >= 0 && t[n].splice(i, 1);
                 }, this);
             }));
     },
@@ -66,7 +66,7 @@ r.prototype = {
     },
     clone: function () {
         var e = this,
-            t = new r();
+            t = new i();
         return (
             Object.keys(e.nodes).forEach(function (n) {
                 (t.nodes[n] = e.nodes[n]),
@@ -78,54 +78,54 @@ r.prototype = {
     },
     dependenciesOf: function (e, t) {
         if (this.hasNode(e)) {
-            var r = [];
-            n(this.outgoingEdges, t, r, this.circular)(e);
-            var i = r.indexOf(e);
-            return i >= 0 && r.splice(i, 1), r;
+            var i = [];
+            n(this.outgoingEdges, t, i, this.circular)(e);
+            var r = i.indexOf(e);
+            return r >= 0 && i.splice(r, 1), i;
         }
         throw Error("Node does not exist: " + e);
     },
     dependantsOf: function (e, t) {
         if (this.hasNode(e)) {
-            var r = [];
-            n(this.incomingEdges, t, r, this.circular)(e);
-            var i = r.indexOf(e);
-            return i >= 0 && r.splice(i, 1), r;
+            var i = [];
+            n(this.incomingEdges, t, i, this.circular)(e);
+            var r = i.indexOf(e);
+            return r >= 0 && i.splice(r, 1), i;
         }
         throw Error("Node does not exist: " + e);
     },
     overallOrder: function (e) {
         var t = this,
-            r = [],
-            i = Object.keys(this.nodes);
-        if (0 === i.length) return r;
+            i = [],
+            r = Object.keys(this.nodes);
+        if (0 === r.length) return i;
         var s = n(this.outgoingEdges, !1, [], this.circular);
-        i.forEach(function (e) {
+        r.forEach(function (e) {
             s(e);
         });
-        var a = n(this.outgoingEdges, e, r, this.circular);
+        var a = n(this.outgoingEdges, e, i, this.circular);
         return (
-            i
+            r
                 .filter(function (e) {
                     return 0 === t.incomingEdges[e].length;
                 })
                 .forEach(function (e) {
                     a(e);
                 }),
-            r
+            i
         );
     },
 };
-var i = function (e) {
+var r = function (e) {
     var t = Error("Dependency Cycle Found: " + e.join(" -> "));
     return (
         (t.cyclePath = e),
         Object.setPrototypeOf(t, Object.getPrototypeOf(this)),
-        Error.captureStackTrace && Error.captureStackTrace(t, i),
+        Error.captureStackTrace && Error.captureStackTrace(t, r),
         t
     );
 };
-(i.prototype = Object.create(Error.prototype, {
+(r.prototype = Object.create(Error.prototype, {
     constructor: { value: Error, enumerable: !1, writable: !0, configurable: !0 },
 })),
-    Object.setPrototypeOf(i, Error);
+    Object.setPrototypeOf(r, Error);

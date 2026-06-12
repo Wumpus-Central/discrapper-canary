@@ -1,25 +1,25 @@
 "use strict";
-var r =
+var i =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
                 var n = arguments[t];
-                for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+                for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
             }
             return e;
         },
-    i = (function () {
+    r = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+                var i = t[n];
+                (i.enumerable = i.enumerable || !1),
+                    (i.configurable = !0),
+                    "value" in i && (i.writable = !0),
+                    Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
     s = n(64700),
@@ -40,7 +40,7 @@ e.exports = function (e) {
                 constructor: { value: n, enumerable: !1, writable: !0, configurable: !0 },
             })),
             t && (Object.setPrototypeOf ? Object.setPrototypeOf(n, t) : (n.__proto__ = t)),
-            i(n, [
+            r(n, [
                 {
                     key: "componentWillUnmount",
                     value: function () {
@@ -82,17 +82,17 @@ e.exports = function (e) {
                     value: function () {
                         var t = this,
                             n = this._propsAnimated.__getValue(),
-                            i = n.style,
+                            r = n.style,
                             a = (function (e, t) {
                                 var n = {};
-                                for (var r in e)
-                                    !(t.indexOf(r) >= 0) && Object.prototype.hasOwnProperty.call(e, r) && (n[r] = e[r]);
+                                for (var i in e)
+                                    !(t.indexOf(i) >= 0) && Object.prototype.hasOwnProperty.call(e, i) && (n[i] = e[i]);
                                 return n;
                             })(n, ["style"]);
                         return s.createElement(
                             e,
-                            r({}, a, {
-                                style: o.transformStyles(i),
+                            i({}, a, {
+                                style: o.transformStyles(r),
                                 ref: function (e) {
                                     t.componentRef = e;
                                 },
@@ -113,7 +113,7 @@ e.exports = function (e) {
     })(s.Component);
     return (
         (t.propTypes = {
-            style: function (t, n, r) {
+            style: function (t, n, i) {
                 if (!e.propTypes) return;
             },
         }),

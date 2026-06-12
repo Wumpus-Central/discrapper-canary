@@ -1,15 +1,15 @@
-n.d(t, { A: () => a });
-var l = n(627968);
-n(64700);
-var i = n(820284);
-function a(e, t) {
-    return function (n) {
-        return (0, l.jsx)(i.A, {
-            page: t.page,
-            section: t.section,
-            object: t.object,
-            objectType: t.objectType,
-            children: (0, l.jsx)(e, { ...n }),
+t.d(c, { A: () => s });
+var n = t(627968);
+t(64700);
+var p = t(820284);
+function s(e, c) {
+    return function (t) {
+        return (0, n.jsx)(p.A, {
+            page: c.page,
+            section: c.section,
+            object: c.object,
+            objectType: c.objectType,
+            children: (0, n.jsx)(e, { ...t }),
         });
     };
 }

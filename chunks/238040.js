@@ -1,23 +1,23 @@
 "use strict";
-n.d(t, { $v: () => u, JE: () => d, NQ: () => o, wB: () => l });
-var r = n(121894);
-let i = new WeakMap(),
+n.d(t, { $v: () => u, JE: () => c, NQ: () => o, wB: () => l });
+var i = n(121894);
+let r = new WeakMap(),
     s = new Map(),
     a = new WeakMap();
 function o(e, t, n) {
-    i.set(t, e), s.set(e, n);
+    r.set(t, e), s.set(e, n);
     let o = t.ownerDocument?.defaultView ?? window,
         l = a.get(o);
     return (
         null == l &&
             ((l = new o.ResizeObserver((e) => {
-                (0, r.r)(() => {
+                (0, i.r)(() => {
                     for (let t of e) {
                         let e = t.target,
-                            n = i.get(e);
+                            n = r.get(e);
                         if (null == n) continue;
-                        let r = s.get(n);
-                        null != r && r(t);
+                        let i = s.get(n);
+                        null != i && i(t);
                     }
                 });
             })),
@@ -31,6 +31,6 @@ function l(e, t) {
 function u(e, t) {
     e.unobserve(t);
 }
-function d(e, t) {
-    s.delete(e), null != t && i.delete(t);
+function c(e, t) {
+    s.delete(e), null != t && r.delete(t);
 }

@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { D3: () => y, EW: () => m, ZV: () => v, cu: () => S, eW: () => N, j8: () => T, s$: () => A, v7: () => I }),
+n.d(t, { D3: () => N, EW: () => m, ZV: () => C, cu: () => S, eW: () => y, j8: () => T, s$: () => A, v7: () => I }),
     n(321073);
 var i = n(64700),
     r = n(17928),
     s = n(155718),
     a = n(71393),
     o = n(403362),
-    l = n(827785),
+    l = n(917012),
     u = n(264322),
     c = n(210978),
     d = n(392054),
     _ = n(168186),
-    f = n(240591),
-    h = n(46477),
+    h = n(240591),
+    f = n(46477),
     p = n(73510),
     E = n(652215);
 function m(e, t, n) {
@@ -61,15 +61,15 @@ function S(e) {
     let { context: t, filters: n, options: s, allowFetch: o } = e,
         c = "channel" === t.type ? t.channel.guild_id : null,
         d = (0, r.bG)([a.A], () => a.A.getGuild(c), [c]),
-        { descriptors: _, commands: f, sectionedCommands: h, loading: m } = (0, u.XC)(t, d, n, { ...s, allowFetch: o }),
+        { descriptors: _, commands: h, sectionedCommands: f, loading: m } = (0, u.XC)(t, d, n, { ...s, allowFetch: o }),
         [g, A] = i.useState(null),
-        I = i.useMemo(() => R(s.placeholderCount ?? 0, n.commandTypes[0]), [n.commandTypes, s.placeholderCount]);
+        I = i.useMemo(() => O(s.placeholderCount ?? 0, n.commandTypes[0]), [n.commandTypes, s.placeholderCount]);
     return i.useMemo(() => {
         let e = {
             loading: m,
-            commands: f,
+            commands: h,
             activeSections: _,
-            commandsByActiveSection: h,
+            commandsByActiveSection: f,
             filteredSectionId: g,
             hasMoreAfter: !1,
             placeholders: m ? I : [],
@@ -80,27 +80,27 @@ function S(e) {
             scrollDown: E.tEg,
         };
         if (null != g) {
-            let t = h.find((e) => e.section.id === g);
+            let t = f.find((e) => e.section.id === g);
             (e.activeSections = null != t ? [t.section] : []), (e.commandsByActiveSection = null != t ? [t] : []);
         }
         if (m) {
-            let t = h[0];
-            if (null != t) e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...I] }, ...h.slice(1)];
+            let t = f[0];
+            if (null != t) e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...I] }, ...f.slice(1)];
             else {
                 let t = l.gZ[p.Ik.BUILT_IN];
                 (e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: I }]);
             }
-            e.commands = [...f, ...I];
+            e.commands = [...h, ...I];
         }
         return e;
-    }, [m, f, _, h, g, I]);
+    }, [m, h, _, f, g, I]);
 }
-function N(e, t, n) {
+function y(e, t, n) {
     let { descriptors: i, commands: r, loading: s } = u.Ay.query(e, t, n),
-        a = R(s ? (n.placeholderCount ?? 0) : 0, t.commandTypes[0]);
+        a = O(s ? (n.placeholderCount ?? 0) : 0, t.commandTypes[0]);
     return { commands: s ? [...r, ...a] : r, sections: s && 0 === i.length ? [l.gZ[p.Ik.BUILT_IN]] : i };
 }
-function y(e, t) {
+function N(e, t) {
     let n = (0, u.A4)(!0, !0),
         r = (0, u.SD)(e, !0, !0);
     return i.useMemo(() => {
@@ -112,8 +112,8 @@ function y(e, t) {
         return { command: void 0, application: void 0 };
     }, [r.result, n.result, t]);
 }
-let C = [s.kc.CHAT];
-function v(e, t, n) {
+let v = [s.kc.CHAT];
+function C(e, t, n) {
     var r;
     let s,
         a,
@@ -149,31 +149,31 @@ function v(e, t, n) {
                 isUserInstalled: e,
             };
         }, [s?.result, a?.result, t, n])),
-        m = (0, f.MW)(e, C);
+        m = (0, h.MW)(e, v);
     return {
         application: c,
         commands: i.useMemo(() => {
             if (null == l) return;
             let t =
                     null != e.guild_id && d?.permissions != null
-                        ? h.we(d.permissions, e.guild_id, m.userId, m.roleIds, m.isImpersonating)
+                        ? f.we(d.permissions, e.guild_id, m.userId, m.roleIds, m.isImpersonating)
                         : null,
-                n = null != e.guild_id && d?.permissions != null ? h._W(d.permissions, e, e.guild_id) : null;
+                n = null != e.guild_id && d?.permissions != null ? f._W(d.permissions, e, e.guild_id) : null;
             return l.filter(
                 (e) =>
-                    h.zl(e, m, {
+                    f.zl(e, m, {
                         applicationAllowedForUser: t,
                         applicationAllowedForChannel: n,
                         isGuildInstalled: p,
                         isUserInstalled: E,
                         commandBotId: d?.botId,
-                    }) === h.CA.ALLOWED,
+                    }) === f.CA.ALLOWED,
             );
         }, [l, m, d, p, E, e]),
     };
 }
-let O = { id: "placeholder-section", type: d.Hf.APPLICATION, name: "" };
-function R(e, t) {
+let R = { id: "placeholder-section", type: d.Hf.APPLICATION, name: "" };
+function O(e, t) {
     let n = [];
     for (let r = 0; r < e; r++) {
         var i;
@@ -188,7 +188,7 @@ function R(e, t) {
                 untranslatedDescription: "",
                 displayDescription: "",
                 applicationId: "",
-                section: O,
+                section: R,
             }),
         );
     }

@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(303527);
-let i = {
+n.d(t, { A: () => r });
+var i = n(303527);
+let r = {
     ordinalNumber: (0, n(722023).A)({
         matchPattern: /^(\d+)(th|st|nd|rd)?/i,
         parsePattern: /\d+/i,
@@ -9,7 +9,7 @@ let i = {
             return parseInt(e, 10);
         },
     }),
-    era: (0, r.A)({
+    era: (0, i.A)({
         matchPatterns: {
             narrow: /^(b|a)/i,
             abbreviated: /^(b\.?\s?c\.?|b\.?\s?c\.?\s?e\.?|a\.?\s?d\.?|c\.?\s?e\.?)/i,
@@ -19,7 +19,7 @@ let i = {
         parsePatterns: { any: [/^b/i, /^(a|c)/i] },
         defaultParseWidth: "any",
     }),
-    quarter: (0, r.A)({
+    quarter: (0, i.A)({
         matchPatterns: { narrow: /^[1234]/i, abbreviated: /^q[1234]/i, wide: /^[1234](th|st|nd|rd)? quarter/i },
         defaultMatchWidth: "wide",
         parsePatterns: { any: [/1/i, /2/i, /3/i, /4/i] },
@@ -28,7 +28,7 @@ let i = {
             return e + 1;
         },
     }),
-    month: (0, r.A)({
+    month: (0, i.A)({
         matchPatterns: {
             narrow: /^[jfmasond]/i,
             abbreviated: /^(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/i,
@@ -41,7 +41,7 @@ let i = {
         },
         defaultParseWidth: "any",
     }),
-    day: (0, r.A)({
+    day: (0, i.A)({
         matchPatterns: {
             narrow: /^[smtwf]/i,
             short: /^(su|mo|tu|we|th|fr|sa)/i,
@@ -55,7 +55,7 @@ let i = {
         },
         defaultParseWidth: "any",
     }),
-    dayPeriod: (0, r.A)({
+    dayPeriod: (0, i.A)({
         matchPatterns: {
             narrow: /^(a|p|mi|n|(in the|at) (morning|afternoon|evening|night))/i,
             any: /^([ap]\.?\s?m\.?|midnight|noon|(in the|at) (morning|afternoon|evening|night))/i,

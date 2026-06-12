@@ -1,183 +1,183 @@
-t.d(a, { A: () => T });
-var l = t(627968),
-    n = t(64700),
-    i = t(503698),
-    r = t.n(i),
-    d = t(735438),
-    s = t.n(d),
-    u = t(66455),
-    E = t(935462),
-    O = t(534514),
-    b = t(834730),
-    v = t(452027),
-    c = t(260598),
-    o = t(150934),
-    f = t(825484),
-    N = t(821609),
-    U = t(964486),
-    g = t(475743),
-    h = t(235986),
-    S = t(915089),
-    A = t(124480),
-    _ = t(954571),
-    m = t(975571),
-    R = t(930932),
-    L = t(321563),
-    j = t(670455),
-    D = t(652215),
-    I = t(985018),
-    C = t(519560);
-function T(e) {
+t.d(n, { A: () => F });
+var i = t(627968),
+    a = t(64700),
+    l = t(503698),
+    r = t.n(l),
+    s = t(735438),
+    c = t.n(s),
+    d = t(66455),
+    o = t(935462),
+    u = t(534514),
+    h = t(834730),
+    g = t(452027),
+    m = t(260598),
+    p = t(150934),
+    x = t(825484),
+    R = t(821609),
+    A = t(964486),
+    O = t(475743),
+    j = t(235986),
+    E = t(915089),
+    b = t(124480),
+    k = t(174459),
+    N = t(975571),
+    v = t(930932),
+    f = t(321563),
+    C = t(670455),
+    L = t(652215),
+    M = t(375708),
+    S = t(519560);
+function F(e) {
     let {
-            modalType: a,
+            modalType: n,
             header: t,
-            body: i,
-            problemTitle: d,
-            problems: T,
-            transitionState: V,
-            ratingOptions: p,
-            ratingEmojiKind: x,
-            ratingTextLabels: F,
-            freeformNeededProblems: M = [],
-            otherKey: P,
-            hideDontShowAgainCheckbox: G,
-            startRating: H = null,
-            hideHelpDeskLink: k = !1,
-            onSubmit: B,
-            onClose: y,
-            impression: X,
-            freeformDescription: K,
+            body: l,
+            problemTitle: s,
+            problems: F,
+            transitionState: y,
+            ratingOptions: D,
+            ratingEmojiKind: P,
+            ratingTextLabels: T,
+            freeformNeededProblems: B = [],
+            otherKey: G,
+            hideDontShowAgainCheckbox: _,
+            startRating: I = null,
+            hideHelpDeskLink: q = !1,
+            onSubmit: w,
+            onClose: $,
+            impression: z,
+            freeformDescription: H,
         } = e,
-        Y = (0, g.A)(T),
-        [q, w] = n.useState(!1),
-        [z, Q] = n.useState(H),
-        [Z, W] = n.useState(null),
-        [J, $] = n.useState(s().shuffle(T)),
-        [ee, ea] = n.useState(""),
-        et = (0, S.GV)(),
-        el = (0, u.A)(z),
-        en = (0, u.A)(q),
-        ei = (0, u.A)(Z),
-        er = (0, u.A)(B),
-        ed = (0, u.A)(ee),
-        es = null;
+        K = (0, O.A)(F),
+        [U, Z] = a.useState(!1),
+        [Q, V] = a.useState(I),
+        [X, J] = a.useState(null),
+        [W, Y] = a.useState(c().shuffle(F)),
+        [ee, en] = a.useState(""),
+        et = (0, E.GV)(),
+        ei = (0, d.A)(Q),
+        ea = (0, d.A)(U),
+        el = (0, d.A)(X),
+        er = (0, d.A)(w),
+        es = (0, d.A)(ee),
+        ec = null;
     return (
-        null == z
-            ? (es = "RATING")
-            : z !== j.P0.GOOD && null == Z
-              ? (es = "PROBLEM")
-              : null != Z && M.includes(Z.value) && (es = "FREEFORM"),
-        n.useEffect(() => {
-            s().isEqual(Y, T) || $((0, R.ed)(T, P));
-        }, [T, Y, P]),
-        (0, U.Ay)(
+        null == Q
+            ? (ec = "RATING")
+            : Q !== C.P0.GOOD && null == X
+              ? (ec = "PROBLEM")
+              : null != X && B.includes(X.value) && (ec = "FREEFORM"),
+        a.useEffect(() => {
+            c().isEqual(K, F) || Y((0, v.ed)(F, G));
+        }, [F, K, G]),
+        (0, A.Ay)(
             () => (
-                _.default.track(D.HAw.OPEN_MODAL, { type: a, source: "Feedback Modal" }),
+                k.default.track(L.HAw.OPEN_MODAL, { type: n, source: "Feedback Modal" }),
                 () => {
                     er.current({
-                        rating: el.current,
-                        problem: ei.current,
-                        dontShowAgain: en.current,
-                        feedback: ed.current,
+                        rating: ei.current,
+                        problem: el.current,
+                        dontShowAgain: ea.current,
+                        feedback: es.current,
                     });
                 }
             ),
         ),
-        (0, l.jsxs)(E.EO, {
+        (0, i.jsxs)(o.EO, {
             "data-migration-pending": !0,
-            impression: X,
-            transitionState: V,
-            className: C.CR,
+            impression: z,
+            transitionState: y,
+            className: S.CR,
             "aria-labelledby": et,
             parentComponent: "FeedbackModal",
             children: [
-                (0, l.jsxs)(E.rQ, {
+                (0, i.jsxs)(o.rQ, {
                     "data-migration-pending": !0,
                     separator: !1,
-                    className: C.N1,
+                    className: S.N1,
                     children: [
-                        (0, l.jsx)(O.D, { id: et, variant: "heading-xl/extrabold", color: "none", children: t }),
-                        (0, l.jsx)(b.E, { variant: "text-md/normal", color: "none", className: C.sB, children: i }),
+                        (0, i.jsx)(u.D, { id: et, variant: "heading-xl/extrabold", color: "none", children: t }),
+                        (0, i.jsx)(h.E, { variant: "text-md/normal", color: "none", className: S.sB, children: l }),
                     ],
                 }),
-                ("RATING" === es || ("PROBLEM" === es && null == F)) &&
-                    (0, l.jsx)("div", {
-                        className: r()(C.OS, C.Ko),
-                        children: (0, l.jsx)(L.A, {
-                            ratingOptions: p,
-                            emojiKind: x,
-                            textLabels: F,
-                            selectedRating: z,
+                ("RATING" === ec || ("PROBLEM" === ec && null == T)) &&
+                    (0, i.jsx)("div", {
+                        className: r()(S.OS, S.Ko),
+                        children: (0, i.jsx)(f.A, {
+                            ratingOptions: D,
+                            emojiKind: P,
+                            textLabels: T,
+                            selectedRating: Q,
                             onChangeRating: function (e) {
-                                Q(e), e === j.P0.GOOD && y();
+                                V(e), e === C.P0.GOOD && $();
                             },
                         }),
                     }),
-                "PROBLEM" === es &&
-                    (0, l.jsx)(E.$m, {
+                "PROBLEM" === ec &&
+                    (0, i.jsx)(o.$m, {
                         "data-migration-pending": !0,
-                        children: (0, l.jsx)(v.D, {
-                            label: d,
-                            children: (0, l.jsx)(A.A, {
-                                options: J,
+                        children: (0, i.jsx)(g.D, {
+                            label: s,
+                            children: (0, i.jsx)(b.A, {
+                                options: W,
                                 onClick: function (e) {
-                                    W(e), M.includes(e.value) || y();
+                                    J(e), B.includes(e.value) || $();
                                 },
                                 hideCaret: (e) => {
-                                    let { value: a } = e;
-                                    return !M.includes(a);
+                                    let { value: n } = e;
+                                    return !B.includes(n);
                                 },
                             }),
                         }),
                     }),
-                "FREEFORM" === es &&
-                    (0, l.jsx)(E.$m, {
+                "FREEFORM" === ec &&
+                    (0, i.jsx)(o.$m, {
                         "data-migration-pending": !0,
-                        className: C.__invalid_content,
-                        children: (0, l.jsx)(c.f, {
-                            label: K?.(Z) ?? I.intl.string(I.t.h95hcn),
-                            helperText: k
+                        className: S.__invalid_content,
+                        children: (0, i.jsx)(m.f, {
+                            label: H?.(X) ?? M.intl.string(M.t.h95hcn),
+                            helperText: q
                                 ? void 0
-                                : I.intl.format(I.t.ybi2tD, { helpdeskURL: m.A.getSubmitRequestURL() }),
+                                : M.intl.format(M.t.ybi2tD, { helpdeskURL: N.A.getSubmitRequestURL() }),
                             value: ee,
-                            maxLength: j.u0,
-                            onChange: ea,
+                            maxLength: C.u0,
+                            onChange: en,
                         }),
                     }),
-                "RATING" === es &&
-                    !G &&
-                    (0, l.jsx)(E.jl, {
+                "RATING" === ec &&
+                    !_ &&
+                    (0, i.jsx)(o.jl, {
                         "data-migration-pending": !0,
-                        className: C.qr,
-                        direction: h.A.Direction.HORIZONTAL,
-                        children: (0, l.jsx)(o.S, {
-                            checked: q,
-                            onChange: () => w(!q),
-                            label: I.intl.string(I.t["5E9SB9"]),
+                        className: S.qr,
+                        direction: j.A.Direction.HORIZONTAL,
+                        children: (0, i.jsx)(p.S, {
+                            checked: U,
+                            onChange: () => Z(!U),
+                            label: M.intl.string(M.t["5E9SB9"]),
                             labelType: "secondary",
                         }),
                     }),
-                ("FREEFORM" === es || ("PROBLEM" === es && null != F)) &&
-                    (0, l.jsx)(E.jl, {
+                ("FREEFORM" === ec || ("PROBLEM" === ec && null != T)) &&
+                    (0, i.jsx)(o.jl, {
                         "data-migration-pending": !0,
-                        className: C.qr,
-                        direction: h.A.Direction.HORIZONTAL,
-                        children: (0, l.jsxs)(f.e, {
+                        className: S.qr,
+                        direction: j.A.Direction.HORIZONTAL,
+                        children: (0, i.jsxs)(x.e, {
                             direction: "horizontal-reverse",
                             children: [
-                                (0, l.jsx)(N.$, {
+                                (0, i.jsx)(R.$, {
                                     variant: "secondary",
                                     size: "sm",
-                                    text: I.intl.string(I.t["13/7kX"]),
+                                    text: M.intl.string(M.t["13/7kX"]),
                                     onClick: () => {
-                                        "FREEFORM" === es ? (W(null), ea("")) : Q(null);
+                                        "FREEFORM" === ec ? (J(null), en("")) : V(null);
                                     },
                                 }),
-                                (0, l.jsx)(N.$, {
+                                (0, i.jsx)(R.$, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: I.intl.string(I.t.geKm7t),
-                                    onClick: y,
+                                    text: M.intl.string(M.t.geKm7t),
+                                    onClick: $,
                                 }),
                             ],
                         }),

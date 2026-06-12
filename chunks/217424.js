@@ -12,12 +12,12 @@ var i = n(627968),
     x = n(939249),
     h = n(323384),
     g = n(320448),
-    A = n(155718),
-    f = n(811024),
-    _ = n(795816),
+    _ = n(155718),
+    A = n(811024),
+    f = n(795816),
     E = n(793574),
-    p = n(688810),
-    C = n(735991),
+    C = n(688810),
+    p = n(735991),
     I = n(975412),
     N = n(168186),
     j = n(597929),
@@ -29,24 +29,24 @@ var i = n(627968),
     M = n(58703),
     L = n(763754),
     y = n(635071),
-    U = n(834730),
-    D = n(289873),
+    D = n(834730),
+    U = n(289873),
     k = n(47167),
     b = n(842209),
     P = n(706727),
     G = n(332173),
-    w = n(975732),
-    H = n(734057),
+    H = n(975732),
+    w = n(734057),
     F = n(317525),
     V = n(71393),
     B = n(994500);
 n(827669);
-var J = n(985018),
+var J = n(375708),
     z = n(993560);
 let Z = { tag: "span", variant: "text-md/normal", color: "text-default" },
-    X = { className: a()("mention", z.lE) };
-function K(e) {
-    return (0, i.jsx)(U.E, { ...Z, color: "text-strong", children: e });
+    K = { className: a()("mention", z.lE) };
+function X(e) {
+    return (0, i.jsx)(D.E, { ...Z, color: "text-strong", children: e });
 }
 let W = s.memo(function (e) {
     var t;
@@ -54,7 +54,7 @@ let W = s.memo(function (e) {
         l,
         a,
         { channel: r, messageId: o, interactionData: c } = e,
-        { analyticsLocations: d } = (0, p.Ay)(),
+        { analyticsLocations: d } = (0, C.Ay)(),
         { onCopy: m, copyRef: x } =
             ((t = c?.application_command?.id),
             (n = s.useRef(null)),
@@ -68,11 +68,11 @@ let W = s.memo(function (e) {
         h = (0, u.bG)([V.A], () => V.A.getGuild(r.guild_id), [r.guild_id]);
     if (
         (s.useEffect(() => {
-            (null == c || (c.type === A.kc.CHAT && void 0 === c.application_command)) && P.S7(r.id, o);
+            (null == c || (c.type === _.kc.CHAT && void 0 === c.application_command)) && P.S7(r.id, o);
         }, [r.id, o, c]),
         null == c)
     )
-        a = (0, i.jsx)(D.y, { type: D.y.Type.SPINNING_CIRCLE, className: z.u1 });
+        a = (0, i.jsx)(U.y, { type: U.y.Type.SPINNING_CIRCLE, className: z.u1 });
     else {
         let e = [],
             t = Object.fromEntries((c.application_command?.options ?? []).map((e) => [e.name, e]));
@@ -90,14 +90,14 @@ let W = s.memo(function (e) {
                             sourceAnalyticsLocations: u,
                         } = t,
                         m = null != c ? c + " " + l.name : l.name;
-                    if (l.type === A.n4.SUB_COMMAND || l.type === A.n4.SUB_COMMAND_GROUP) {
+                    if (l.type === _.n4.SUB_COMMAND || l.type === _.n4.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, i.jsxs)(
                                     s.Fragment,
                                     {
                                         children: [
                                             " ",
-                                            (0, i.jsx)(U.E, { ...Z, children: d?.name_localized ?? l.name }),
+                                            (0, i.jsx)(D.E, { ...Z, children: d?.name_localized ?? l.name }),
                                         ],
                                     },
                                     m,
@@ -121,15 +121,15 @@ let W = s.memo(function (e) {
                     let x = l.value;
                     if (null != l.value)
                         switch (l.type) {
-                            case A.n4.USER: {
+                            case _.n4.USER: {
                                 let e = l.value.toString(),
                                     t = S.default.getUser(e);
                                 if (null != t) {
                                     let e = (0, L.FT)(t, a);
                                     n = (0, i.jsxs)(G.A, {
-                                        ...X,
+                                        ...K,
                                         onClick: () =>
-                                            (0, w.openUserProfileModal)({
+                                            (0, H.openUserProfileModal)({
                                                 userId: t.id,
                                                 guildId: a.guild_id,
                                                 channelId: a.id,
@@ -141,20 +141,20 @@ let W = s.memo(function (e) {
                                 }
                                 break;
                             }
-                            case A.n4.CHANNEL: {
+                            case _.n4.CHANNEL: {
                                 let e = l.value.toString(),
-                                    t = H.A.getChannel(e);
+                                    t = w.A.getChannel(e);
                                 null != t &&
-                                    (n = (0, i.jsxs)(G.A, { ...X, children: ["#", (0, k.m1)(t, S.default, B.A)] }));
+                                    (n = (0, i.jsxs)(G.A, { ...K, children: ["#", (0, k.m1)(t, S.default, B.A)] }));
                                 break;
                             }
-                            case A.n4.ROLE: {
+                            case _.n4.ROLE: {
                                 let e = l.value.toString(),
                                     t = null != r ? F.A.getRole(r.id, e) : void 0;
-                                null != t && (n = (0, i.jsxs)(G.A, { ...X, children: ["@", t.name] }));
+                                null != t && (n = (0, i.jsxs)(G.A, { ...K, children: ["@", t.name] }));
                                 break;
                             }
-                            case A.n4.MENTIONABLE: {
+                            case _.n4.MENTIONABLE: {
                                 let e = l.value.toString(),
                                     t = null != r ? F.A.getRole(r.id, e) : void 0;
                                 if (null != t) n = (0, i.jsxs)(G.A, { children: ["@", t.name] });
@@ -163,9 +163,9 @@ let W = s.memo(function (e) {
                                     if (null != t) {
                                         let e = (0, L.FT)(t, a);
                                         n = (0, i.jsxs)(G.A, {
-                                            ...X,
+                                            ...K,
                                             onClick: () =>
-                                                (0, w.openUserProfileModal)({
+                                                (0, H.openUserProfileModal)({
                                                     userId: t.id,
                                                     guildId: a.guild_id,
                                                     sourceAnalyticsLocations: u,
@@ -176,8 +176,8 @@ let W = s.memo(function (e) {
                                 }
                                 break;
                             }
-                            case A.n4.ATTACHMENT:
-                                n = K(J.intl.string(J.t.nONJVc));
+                            case _.n4.ATTACHMENT:
+                                n = X(J.intl.string(J.t.nONJVc));
                                 break;
                             default: {
                                 let e = d?.choices?.find((e) => e.value === l.value);
@@ -185,13 +185,13 @@ let W = s.memo(function (e) {
                             }
                         }
                     return (
-                        null == n && (n = K(x?.toString())),
+                        null == n && (n = X(x?.toString())),
                         [
                             (0, i.jsxs)(
                                 s.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsxs)(U.E, { ...Z, children: [" ", d?.name_localized ?? l.name, ": "] }),
+                                        (0, i.jsxs)(D.E, { ...Z, children: [" ", d?.name_localized ?? l.name, ": "] }),
                                         n,
                                     ],
                                 },
@@ -210,7 +210,7 @@ let W = s.memo(function (e) {
                 }),
             );
         a = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsxs)(U.E, { ...Z, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
+            children: [(0, i.jsxs)(D.E, { ...Z, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
         });
     }
     return (0, i.jsxs)("div", {
@@ -250,16 +250,16 @@ function ee(e, t, n, s, l, r) {
         isInteractionUserIgnored: x,
         showAvatarPopout: h,
         showTargetAvatarPopout: g,
-        onClickAvatar: A,
-        onUserContextMenu: f,
-        onClickTargetAvatar: _,
+        onClickAvatar: _,
+        onUserContextMenu: A,
+        onClickTargetAvatar: f,
         onTargetUserContextMenu: E,
-        onPopoutRequestClose: p,
+        onPopoutRequestClose: C,
     } = e;
     if (c && 1 === n) return null;
     if ((c && null == o.activityInstance) || u || x)
         return (0, i.jsx)("div", { className: q.Cz, children: (0, i.jsx)($, { className: q.Jx }) });
-    let C =
+    let p =
             O.Ay.getGuildMemberAvatarURL({
                 avatar: s.guildMemberAvatar ?? void 0,
                 userId: t.id,
@@ -280,9 +280,9 @@ function ee(e, t, n, s, l, r) {
             })({
                 user: t,
                 guildId: d.guild_id,
-                guildAvatar: C,
-                onClick: 1 === n ? _ : A,
-                onContextMenu: 1 === n ? E : f,
+                guildAvatar: p,
+                onClick: 1 === n ? f : _,
+                onContextMenu: 1 === n ? E : A,
                 ref: r,
             }),
         N = 1 === n ? g : h;
@@ -292,7 +292,7 @@ function ee(e, t, n, s, l, r) {
               renderPopout: l,
               shouldShow: N,
               position: "right",
-              onRequestClose: p,
+              onRequestClose: C,
               children: I,
           })
         : I();
@@ -327,11 +327,11 @@ let en = () => (0, i.jsx)(g._, { size: "xxs", color: "currentColor", className: 
 function ei(e) {
     let t,
         { message: n, channel: l } = e,
-        { analyticsLocations: r, newestAnalyticsLocation: c } = (0, p.Ay)(E.A.EXECUTED_COMMAND),
+        { analyticsLocations: r, newestAnalyticsLocation: c } = (0, C.Ay)(E.A.EXECUTED_COMMAND),
         g = (0, u.bG)([S.default], () => S.default.getCurrentUser()),
         O = s.useRef(null),
         y = s.useRef(null),
-        U = s.useMemo(
+        D = s.useMemo(
             () => (e, t, s) => (
                 o()(null != t, "ExecutedCommand: user cannot be undefined"),
                 o()(null != g, "ExecutedCommand: currentUser cannot be undefined"),
@@ -348,7 +348,7 @@ function ei(e) {
             ),
             [g, l, n.id],
         ),
-        D = s.useMemo(
+        U = s.useMemo(
             () => (e) => (
                 o()(null != l, "ExecutedCommand: channel cannot be null"),
                 (0, i.jsx)(W, { ...e, channel: l, messageId: n.id, interactionData: n.interactionData })
@@ -356,17 +356,17 @@ function ei(e) {
             [l, n.id, n.interactionData],
         ),
         k = (0, N.Am)(n),
-        b = k?.type === A.G4.APPLICATION_COMMAND && null != k.target_user ? new v.A(k.target_user) : null,
-        P = k?.type === A.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
+        b = k?.type === _.G4.APPLICATION_COMMAND && null != k.target_user ? new v.A(k.target_user) : null,
+        P = k?.type === _.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
         G = (0, L.d8)(n.interaction?.user, l),
-        w = (0, L.d8)(b, l),
-        H = s.useMemo(() => (e.compact ? (0, Q.A)((0, M.i$)(d()(), "LT")) : null), [e.compact]),
-        F = (0, f.Gp)(l.id),
+        H = (0, L.d8)(b, l),
+        w = s.useMemo(() => (e.compact ? (0, Q.A)((0, M.i$)(d()(), "LT")) : null), [e.compact]),
+        F = (0, A.Gp)(l.id),
         V = n.interaction;
     if (null == V || null == G) return null;
     let B = () => {
-        let t = ee(e, V.user, 0, G, (e) => U(e, V.user, [E.A.AVATAR]), O),
-            n = et(e, V.user, 0, G, (e) => U(e, V.user));
+        let t = ee(e, V.user, 0, G, (e) => D(e, V.user, [E.A.AVATAR]), O),
+            n = et(e, V.user, 0, G, (e) => D(e, V.user));
         return (0, i.jsxs)(s.Fragment, { children: [t, n] }, "user");
     };
     if (n?.activityInstance === null || (0, j.V)(n))
@@ -409,7 +409,7 @@ function ei(e) {
                                 });
                             if (!(0, j.V)(l)) return (0, i.jsx)("div", { className: q.p6, ref: n, children: c });
                             {
-                                let e = (0, C.kF)(c);
+                                let e = (0, p.kF)(c);
                                 return (0, i.jsx)(x.D, {
                                     ...s,
                                     tag: "span",
@@ -436,7 +436,7 @@ function ei(e) {
                             }
                         },
                     });
-                })(e, D, y);
+                })(e, U, y);
                 return (0, i.jsx)(s.Fragment, { children: t }, "command");
             },
         })),
@@ -449,8 +449,8 @@ function ei(e) {
                           (0, i.jsx)(en, {}),
                           (0, i.jsx)(() => {
                               if (null == b) return null;
-                              let t = ee(e, b, 1, w, (e) => U(e, b, [E.A.AVATAR]), O),
-                                  n = et(e, b, 1, w, (e) => U(e, b));
+                              let t = ee(e, b, 1, H, (e) => D(e, b, [E.A.AVATAR]), O),
+                                  n = et(e, b, 1, H, (e) => D(e, b));
                               return (0, i.jsxs)(s.Fragment, { children: [t, n] }, "target");
                           }, {}),
                       ],
@@ -462,7 +462,7 @@ function ei(e) {
                 openInPopout: !1,
                 analyticsLocation: c,
             }),
-                (0, _.LV)({ guildId: l.guild_id });
+                (0, f.LV)({ guildId: l.guild_id });
         };
         t = F
             ? J.intl.format(J.t.kfV8WM, {
@@ -479,8 +479,8 @@ function ei(e) {
               })
             : J.intl.format(J.t["6FeSyT"], { userHook: B });
     }
-    return (0, i.jsx)(p.f5, {
+    return (0, i.jsx)(C.f5, {
         value: r,
-        children: (0, i.jsx)("div", { className: a()(q.JZ, q.NB, q.JE, H), "aria-hidden": !e.compact, children: t }),
+        children: (0, i.jsx)("div", { className: a()(q.JZ, q.NB, q.JE, w), "aria-hidden": !e.compact, children: t }),
     });
 }

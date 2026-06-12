@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.default = function (e, t, n) {
-        let r = 0,
-            i = e.length;
-        for (; i > 0; ) {
-            let a = (i / 2) | 0,
-                s = r + a;
-            0 >= n(e[s], t) ? ((r = ++s), (i -= a + 1)) : (i = a);
+        let i = 0,
+            r = e.length;
+        for (; r > 0; ) {
+            let s = (r / 2) | 0,
+                a = i + s;
+            0 >= n(e[a], t) ? ((i = ++a), (r -= s + 1)) : (r = s);
         }
-        return r;
+        return i;
     });

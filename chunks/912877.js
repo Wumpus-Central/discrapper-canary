@@ -1,12 +1,12 @@
 "use strict";
-var r = "u" > typeof Symbol && Symbol,
-    i = n(640847);
+var i = "u" > typeof Symbol && Symbol,
+    r = n(640847);
 e.exports = function () {
     return (
-        "function" == typeof r &&
+        "function" == typeof i &&
         "function" == typeof Symbol &&
-        "symbol" == typeof r("foo") &&
+        "symbol" == typeof i("foo") &&
         "symbol" == typeof Symbol("bar") &&
-        i()
+        r()
     );
 };

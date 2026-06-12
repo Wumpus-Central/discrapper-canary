@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { J$: () => g, WM: () => l.WM, cZ: () => E, eG: () => f, vd: () => m, vm: () => p, zh: () => h, zv: () => _ });
+n.d(t, { J$: () => g, WM: () => l.WM, cZ: () => E, eG: () => h, vd: () => m, vm: () => p, zh: () => f, zv: () => _ });
 var i = n(544180),
     r = n(340124),
     s = n(859703),
@@ -13,11 +13,11 @@ function _(e, t) {
     (0, u.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, r.uI)(e.id, t);
 }
 n(375708);
-function f(e) {
+function h(e) {
     let t = e.assets.video;
     return null == t || null == t.width || null == t.height || t.width > t.height ? "landscape" : "portrait";
 }
-function h(e, t) {
+function f(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
 function p(e) {
@@ -27,7 +27,7 @@ function p(e) {
     if (null == l) return;
     let u = s.A.getQuest(t);
     null != u && u.userStatus?.enrolledAt != null && u.userStatus?.completedAt == null && _(u, l.maxTimestampSec);
-    let c = h(l.maxTimestampSec, l.duration);
+    let c = f(l.maxTimestampSec, l.duration);
     (0, o.av)({
         questId: t,
         event: d.HAw.QUEST_VIDEO_PROGRESSED,

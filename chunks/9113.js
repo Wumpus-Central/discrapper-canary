@@ -1,14 +1,14 @@
-n.d(t, { A: () => r });
-var i = n(64700),
-    s = n(256311);
-function r(e) {
-    i.useEffect(() => {
-        if (null != e)
+u.d(n, { A: () => a });
+var e = u(64700),
+    s = u(256311);
+function a(c) {
+    e.useEffect(() => {
+        if (null != c)
             return (
-                s.A.lockChangeLog(e),
+                s.A.lockChangeLog(c),
                 () => {
-                    s.A.unlockChangeLog(e);
+                    s.A.unlockChangeLog(c);
                 }
             );
-    }, [e]);
+    }, [c]);
 }

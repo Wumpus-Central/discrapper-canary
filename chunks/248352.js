@@ -1,21 +1,21 @@
 n.d(t, { A: () => u });
 var l = n(17928),
-    a = n(228366);
+    r = n(228366);
 let i = [],
-    r = i,
+    a = i,
     s = (e) => {
-        r = null != e && e.length > 0 ? e : i;
+        a = null != e && e.length > 0 ? e : i;
     };
 class o extends l.Ay.Store {
     static displayName = "CollectiblesUserDiscountStore";
     getUserDiscounts() {
-        return r;
+        return a;
     }
     getUserDiscount(e) {
-        return r.find((t) => t.discountId === e);
+        return a.find((t) => t.discountId === e);
     }
 }
-let u = new o(a.h, {
+let u = new o(r.h, {
     COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: (e) => {
         s(e.shopHome.userDiscounts);
     },
@@ -25,16 +25,16 @@ let u = new o(a.h, {
     SKU_PURCHASE_SUCCESS: (e) => {
         let t = e.appliedUserDiscounts;
         if (null != t && t.length > 0) {
-            let e = r.filter((e) => !t.some((t) => t.discount.id === e.discountId));
-            if (e.length !== r.length) return (r = e), !0;
+            let e = a.filter((e) => !t.some((t) => t.discount.id === e.discountId));
+            if (e.length !== a.length) return (a = e), !0;
         }
         return !1;
     },
     COLLECTIBLES_USER_DISCOUNTS_EXPIRED: (e) => {
         let t = e.discountIds;
         if (t.length > 0) {
-            let e = r.filter((e) => !t.includes(e.discountId));
-            if (e.length !== r.length) return (r = e), !0;
+            let e = a.filter((e) => !t.includes(e.discountId));
+            if (e.length !== a.length) return (a = e), !0;
         }
         return !1;
     },
@@ -43,6 +43,6 @@ let u = new o(a.h, {
         s(t);
     },
     LOGOUT: () => {
-        r = i;
+        a = i;
     },
 });

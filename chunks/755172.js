@@ -11,8 +11,8 @@ var i = n(64700),
     d = n(652215);
 function _(e, t, n) {
     let _ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        f = (0, s.bG)([a.A], () => a.A.hasLoadedExperiments),
-        h = (0, s.bG)([l.A], () => l.A.skipNumCategories),
+        h = (0, s.bG)([a.A], () => a.A.hasLoadedExperiments),
+        f = (0, s.bG)([l.A], () => l.A.skipNumCategories),
         [p, E, m, g, A, I, T, S] = (0, s.yK)([u.A], () => [
             u.A.getShopBlocks(e),
             u.A.getLastSuccessfulFetch(e) ?? 0,
@@ -23,19 +23,19 @@ function _(e, t, n) {
             u.A.getHasKnownStaleData(e),
             u.A.getShopHomeConfigOverride(),
         ]),
-        N = (0, i.useMemo)(
+        y = (0, i.useMemo)(
             () => ({
                 ...t,
                 variantsReturnStyle: r.g.VARIANTS_GROUP,
                 includeBundles: !0,
                 includeDynamicBlocks: !0,
                 shopHomeConfig: S,
-                skipNumCategories: h,
+                skipNumCategories: f,
             }),
-            [t, S, h],
+            [t, S, f],
         ),
-        y = (0, i.useMemo)(() => !(0, o.gn)(g, N), [g, N]),
-        C = ((e, t, n) => {
+        N = (0, i.useMemo)(() => !(0, o.gn)(g, y), [g, y]),
+        v = ((e, t, n) => {
             let [r, s] = (0, i.useState)(!1);
             return (
                 (0, i.useEffect)(() => {
@@ -65,20 +65,20 @@ function _(e, t, n) {
                 r
             );
         })(p, I ?? !1, _),
-        v = (0, i.useMemo)(() => !C && Date.now() - E < 6e5, [E, C]);
+        C = (0, i.useMemo)(() => !v && Date.now() - E < 6e5, [E, v]);
     return (
         (0, i.useEffect)(() => {
-            if (!f || I) return;
+            if (!h || I) return;
             let t = Date.now() - m < 6e5;
-            (null != A && t) || ((y || !v || T) && (0, o.h$)(e, N, n));
-        }, [f, I, A, m, v, T, y, N, e, n]),
+            (null != A && t) || ((N || !C || T) && (0, o.h$)(e, y, n));
+        }, [h, I, A, m, C, T, N, y, e, n]),
         {
             isFetchingShopHome: I,
             fetchShopHomeError: A,
             shopBlocks: p,
             refreshShopHome: (0, i.useCallback)(() => {
-                (0, o.h$)(e, N, n);
-            }, [e, N, n]),
+                (0, o.h$)(e, y, n);
+            }, [e, y, n]),
         }
     );
 }

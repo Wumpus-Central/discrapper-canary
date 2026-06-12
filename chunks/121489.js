@@ -1,23 +1,23 @@
-n.d(t, { _O: () => s, dP: () => r, wQ: () => a });
-var i = n(954571),
-    l = n(652215);
-function a(e, t, n, a) {
-    i.default.track(l.HAw.VOICE_MESSAGE_PLAYBACK_STARTED, {
-        message_id: e,
-        total_duration_secs: t,
-        start_duration_secs: Math.min(t ?? n, n),
-        sender_user_id: a,
+e.d(_, { _O: () => n, dP: () => i, wQ: () => d });
+var t = e(174459),
+    a = e(652215);
+function d(s, _, e, d) {
+    t.default.track(a.HAw.VOICE_MESSAGE_PLAYBACK_STARTED, {
+        message_id: s,
+        total_duration_secs: _,
+        start_duration_secs: Math.min(_ ?? e, e),
+        sender_user_id: d,
     });
 }
-function r(e, t, n, a, r) {
-    i.default.track(l.HAw.VOICE_MESSAGE_PLAYBACK_ENDED, {
-        message_id: e,
-        total_duration_secs: t,
-        end_duration_secs: Math.min(t ?? n, n),
-        sender_user_id: a,
-        duration_listening_secs: r,
+function i(s, _, e, d, i) {
+    t.default.track(a.HAw.VOICE_MESSAGE_PLAYBACK_ENDED, {
+        message_id: s,
+        total_duration_secs: _,
+        end_duration_secs: Math.min(_ ?? e, e),
+        sender_user_id: d,
+        duration_listening_secs: i,
     });
 }
-function s(e, t) {
-    i.default.track(l.HAw.VOICE_MESSAGE_PLAYBACK_FAILED, { message_id: e, error_message: t });
+function n(s, _) {
+    t.default.track(a.HAw.VOICE_MESSAGE_PLAYBACK_FAILED, { message_id: s, error_message: _ });
 }

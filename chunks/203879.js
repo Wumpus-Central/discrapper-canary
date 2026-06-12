@@ -1,42 +1,42 @@
-n.d(t, { B: () => r, p: () => o });
-var a = n(64700),
-    s = n(66455),
-    i = n(206692);
+s.d(e, { B: () => r, p: () => o });
+var n = s(64700),
+    i = s(66455),
+    a = s(206692);
 let l = {};
-function r(e, t) {
-    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        r = (0, a.useRef)(null),
-        o = (0, s.A)(t ?? l),
-        d = (0, a.useRef)(null),
-        c = (0, a.useRef)(e);
+function r(t, e) {
+    let s = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        r = (0, n.useRef)(null),
+        o = (0, i.A)(e ?? l),
+        c = (0, n.useRef)(null),
+        u = (0, n.useRef)(t);
     return (
-        (0, a.useEffect)(() => {
-            c.current = e;
-        }, [e]),
-        (0, a.useEffect)(() => {
-            if (!n) return;
-            null == d.current && (d.current = (0, i.e)(o.current));
-            let e = r.current,
-                t = d.current;
-            if (null != e && null != t)
+        (0, n.useEffect)(() => {
+            u.current = t;
+        }, [t]),
+        (0, n.useEffect)(() => {
+            if (!s) return;
+            null == c.current && (c.current = (0, a.e)(o.current));
+            let t = r.current,
+                e = c.current;
+            if (null != t && null != e)
                 return (
-                    (0, i.wB)(t, e, c.current),
+                    (0, a.wB)(e, t, u.current),
                     () => {
-                        (0, i.$v)(t, e);
+                        (0, a.$v)(e, t);
                     }
                 );
-        }, [n, o]),
+        }, [s, o]),
         r
     );
 }
 function o() {
-    let [e, t] = (0, a.useState)(!1);
+    let [t, e] = (0, n.useState)(!1);
     return {
         ref: r(
-            (0, a.useCallback)((e) => {
-                t(e.isIntersecting);
+            (0, n.useCallback)((t) => {
+                e(t.isIntersecting);
             }, []),
         ),
-        inViewport: e,
+        inViewport: t,
     };
 }

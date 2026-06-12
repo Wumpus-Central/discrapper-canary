@@ -1,17 +1,17 @@
 "use strict";
 var t = Object.prototype.toString,
     n = Math.max,
-    r = function (e, t) {
-        for (var n = [], r = 0; r < e.length; r += 1) n[r] = e[r];
-        for (var i = 0; i < t.length; i += 1) n[i + e.length] = t[i];
+    i = function (e, t) {
+        for (var n = [], i = 0; i < e.length; i += 1) n[i] = e[i];
+        for (var r = 0; r < t.length; r += 1) n[r + e.length] = t[r];
         return n;
     },
-    i = function (e, t) {
-        for (var n = [], r = t || 0, i = 0; r < e.length; r += 1, i += 1) n[i] = e[r];
+    r = function (e, t) {
+        for (var n = [], i = t || 0, r = 0; i < e.length; i += 1, r += 1) n[r] = e[i];
         return n;
     },
     s = function (e, t) {
-        for (var n = "", r = 0; r < e.length; r += 1) (n += e[r]), r + 1 < e.length && (n += t);
+        for (var n = "", i = 0; i < e.length; i += 1) (n += e[i]), i + 1 < e.length && (n += t);
         return n;
     };
 e.exports = function (e) {
@@ -19,17 +19,17 @@ e.exports = function (e) {
         o = this;
     if ("function" != typeof o || "[object Function]" !== t.apply(o))
         throw TypeError("Function.prototype.bind called on incompatible " + o);
-    for (var l = i(arguments, 1), u = n(0, o.length - l.length), d = [], c = 0; c < u; c++) d[c] = "$" + c;
+    for (var l = r(arguments, 1), u = n(0, o.length - l.length), c = [], d = 0; d < u; d++) c[d] = "$" + d;
     if (
         ((a = Function(
             "binder",
-            "return function (" + s(d, ",") + "){ return binder.apply(this,arguments); }",
+            "return function (" + s(c, ",") + "){ return binder.apply(this,arguments); }",
         )(function () {
             if (this instanceof a) {
-                var t = o.apply(this, r(l, arguments));
+                var t = o.apply(this, i(l, arguments));
                 return Object(t) === t ? t : this;
             }
-            return o.apply(e, r(l, arguments));
+            return o.apply(e, i(l, arguments));
         })),
         o.prototype)
     ) {

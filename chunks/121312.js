@@ -1,4 +1,4 @@
-var r = {
+var i = {
     "./bg.json": "467196",
     "./cs.json": "555069",
     "./da.json": "846876",
@@ -32,19 +32,19 @@ var r = {
     "./zh-CN.json": "593221",
     "./zh-TW.json": "567721",
 };
-function i(e) {
-    return n(a(e));
+function r(e) {
+    return n(s(e));
 }
-function a(e) {
-    if (!n.o(r, e)) {
+function s(e) {
+    if (!n.o(i, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
     }
-    return r[e];
+    return i[e];
 }
-(i.keys = function () {
-    return Object.keys(r);
+(r.keys = function () {
+    return Object.keys(i);
 }),
-    (i.resolve = a),
-    (e.exports = i),
-    (i.id = 121312);
+    (r.resolve = s),
+    (e.exports = r),
+    (r.id = 121312);

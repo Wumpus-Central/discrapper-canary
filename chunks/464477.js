@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { K7: () => o, Os: () => c, V3: () => u, cC: () => _, d4: () => l, tn: () => d }),
+n.d(t, { K7: () => o, Os: () => _, V3: () => d, cC: () => c, d4: () => l, tn: () => u }),
     n(393431),
     n(532706),
     n(42231),
@@ -13,7 +13,7 @@ let s = window?.crypto ?? window?.msCrypto,
     a = "Uint8Array" in window,
     o = null != s && "getRandomValues" in s && a,
     l = "PublicKeyCredential" in window && a;
-function d() {
+function u() {
     var e;
     return (
         (e = s.getRandomValues(new Uint8Array(20))),
@@ -26,15 +26,15 @@ function d() {
             .trim()
     );
 }
-function _(e) {
+function c(e) {
     return e.replace(/[\s._-]+/g, "").toUpperCase();
 }
-function u(e, t) {
+function d(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "Discord";
     return `otpauth://totp/${encodeURI(n)}:${encodeURI(e)}\
-?secret=${_(t)}\
+?secret=${c(t)}\
 &issuer=${encodeURIComponent(n)}`;
 }
-function c(e, t) {
+function _(e, t) {
     r.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "webauthn" } });
 }

@@ -1,5 +1,5 @@
 r.d(t, {
-    AV: () => m,
+    AV: () => d,
     A_: () => c,
     Bm: () => p,
     Ec: () => o,
@@ -9,7 +9,7 @@ r.d(t, {
     ZB: () => x,
     jI: () => l,
     tB: () => i,
-    ti: () => d,
+    ti: () => m,
     uf: () => u,
     zW: () => w,
     zr: () => g,
@@ -34,15 +34,15 @@ function o(e) {
     return (0, s.Pl)(r, t), (0, s.A4)(r, t), r.delete("meridiem"), r.addTag("casualReference/today"), r;
 }
 function l(e) {
-    return d(e, 1).addTag("casualReference/yesterday");
+    return m(e, 1).addTag("casualReference/yesterday");
 }
 function u(e) {
-    return m(e, 1).addTag("casualReference/tomorrow");
-}
-function d(e, t) {
-    return m(e, -t);
+    return d(e, 1).addTag("casualReference/tomorrow");
 }
 function m(e, t) {
+    return d(e, -t);
+}
+function d(e, t) {
     let r = e.getDateWithAdjustedTimezone(),
         a = new n.BP(e, {}),
         i = new Date(r.getTime());

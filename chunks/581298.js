@@ -1,29 +1,29 @@
-n.d(t, { KA: () => A, Ay: () => p, jL: () => h });
-var i = n(64700),
-    l = n(839214),
-    s = n(419954),
-    a = n(284009),
-    r = n.n(a),
-    o = n(963935);
-class d {
+i.d(t, { KA: () => E, Ay: () => S, jL: () => h });
+var n = i(64700),
+    s = i(839214),
+    l = i(419954),
+    r = i(284009),
+    a = i.n(r),
+    o = i(963935);
+class u {
     map = new Map();
     defaultPanel;
     register(e) {
         let {
             node: t,
-            parentSidebarItemKey: n,
-            parentPanelKey: i,
-            parentTabKey: l,
-            parentCategoryKey: s,
-            parentAccordionKey: a,
+            parentSidebarItemKey: i,
+            parentPanelKey: n,
+            parentTabKey: s,
+            parentCategoryKey: l,
+            parentAccordionKey: r,
         } = e;
         this.map.set(t.key, {
             node: t,
-            parentSidebarItemKey: n,
-            parentPanelKey: i,
-            parentTabKey: l,
-            parentCategoryKey: s,
-            parentAccordionKey: a,
+            parentSidebarItemKey: i,
+            parentPanelKey: n,
+            parentTabKey: s,
+            parentCategoryKey: l,
+            parentAccordionKey: r,
         });
     }
     entry(e) {
@@ -40,116 +40,116 @@ class d {
     }
     getPanelOrThrow(e) {
         let t = this.get(e);
-        return r()(t?.type === o.Z6.PANEL, `[SettingsDirectory] key is not for a panel: ${e}`), t;
+        return a()(t?.type === o.Z6.PANEL, `[SettingsDirectory] key is not for a panel: ${e}`), t;
     }
 }
-function u(e, t, n) {
-    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function d(e, t, i) {
+    let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (!t.has(e.key)) return null;
     if (!(0, o.nW)(e)) {
-        let { usePredicate: t, ...l } = e;
+        let { usePredicate: t, ...s } = e;
         return (
-            n.register({
-                node: l,
-                parentSidebarItemKey: i.sidebarItem,
-                parentPanelKey: i.panel?.key,
-                parentTabKey: i.tab?.key,
-                parentCategoryKey: i.category?.key,
-                parentAccordionKey: i.accordion?.key,
+            i.register({
+                node: s,
+                parentSidebarItemKey: n.sidebarItem,
+                parentPanelKey: n.panel?.key,
+                parentTabKey: n.tab?.key,
+                parentCategoryKey: n.category?.key,
+                parentAccordionKey: n.accordion?.key,
             }),
-            l
+            s
         );
     }
-    let l = i;
-    e.type === o.Z6.SIDEBAR_ITEM && (l = { sidebarItem: e.key, panel: e.layout[0] }),
-        e.type === o.Z6.PANEL && (l = { sidebarItem: i.sidebarItem, panel: e }),
-        e.type === o.Z6.NESTED_PANEL_NAVIGATOR && (l = { ...i, panel: e.layout[0] }),
-        e.type === o.Z6.CATEGORY && (l = { ...i, category: e }),
-        e.type === o.Z6.ACCORDION && (l = { ...i, accordion: e }),
-        e.type === o.Z6.TAB_ITEM && (l = { ...i, tab: e });
-    let s = e.layout.map((e) => u(e, t, n, l)).filter((e) => null != e);
+    let s = n;
+    e.type === o.Z6.SIDEBAR_ITEM && (s = { sidebarItem: e.key, panel: e.layout[0] }),
+        e.type === o.Z6.PANEL && (s = { sidebarItem: n.sidebarItem, panel: e }),
+        e.type === o.Z6.NESTED_PANEL_NAVIGATOR && (s = { ...n, panel: e.layout[0] }),
+        e.type === o.Z6.CATEGORY && (s = { ...n, category: e }),
+        e.type === o.Z6.ACCORDION && (s = { ...n, accordion: e }),
+        e.type === o.Z6.TAB_ITEM && (s = { ...n, tab: e });
+    let l = e.layout.map((e) => d(e, t, i, s)).filter((e) => null != e);
     if (
-        0 === s.length &&
+        0 === l.length &&
         !1 !== e.collapseOnEmpty &&
         !("StronglyDiscouragedCustomComponent" in e || (e.type === o.Z6.SIDEBAR_ITEM && "onClick" in e))
     )
         return null;
-    let { usePredicate: a, ...r } = e,
-        d = { ...r, layout: s };
+    let { usePredicate: r, ...a } = e,
+        u = { ...a, layout: l };
     return (
-        n.register({
-            node: d,
-            parentSidebarItemKey: l.sidebarItem,
-            parentPanelKey: l.panel?.key,
-            parentTabKey: l.tab?.key,
-            parentCategoryKey: l.category?.key,
-            parentAccordionKey: l.accordion?.key,
+        i.register({
+            node: u,
+            parentSidebarItemKey: s.sidebarItem,
+            parentPanelKey: s.panel?.key,
+            parentTabKey: s.tab?.key,
+            parentCategoryKey: s.category?.key,
+            parentAccordionKey: s.accordion?.key,
         }),
-        d
+        u
     );
 }
-var c = n(91871),
-    g = n.n(c),
-    _ = n(614820);
-let m = (0, l.D)(() => ({ enabled: !1 }));
+var c = i(91871),
+    g = i.n(c),
+    m = i(614820);
+let A = (0, s.D)(() => ({ enabled: !1 }));
 function h(e) {
-    m.setState({ enabled: e });
+    A.setState({ enabled: e });
 }
-function A() {
-    return m.useField("enabled");
+function E() {
+    return A.useField("enabled");
 }
-function p(e, t) {
-    let n = i.useMemo(() => (0, s.hl)(e), [e]),
-        l = E(n, t ?? ""),
-        a = E(n, "");
-    return i.useMemo(() => {
-        let e = new d(),
-            t = new d();
-        return u(n, a, t), { node: u(n, l, e) ?? { ...n, layout: [] }, visibleDirectory: e, accessibleDirectory: t };
-    }, [l, a, n]);
+function S(e, t) {
+    let i = n.useMemo(() => (0, l.hl)(e), [e]),
+        s = T(i, t ?? ""),
+        r = T(i, "");
+    return n.useMemo(() => {
+        let e = new u(),
+            t = new u();
+        return d(i, r, t), { node: d(i, s, e) ?? { ...i, layout: [] }, visibleDirectory: e, accessibleDirectory: t };
+    }, [s, r, i]);
 }
-function E(e, t) {
-    let n = (function (e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                i = new Set(),
-                l = function (e) {
-                    let s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                        a = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                        r = (e.usePredicate?.() === !1 && !n) || s,
-                        d =
-                            (function (e, t, n) {
+function T(e, t) {
+    let i = (function (e, t) {
+            let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                n = new Set(),
+                s = function (e) {
+                    let l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+                        r = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                        a = (e.usePredicate?.() === !1 && !i) || l,
+                        u =
+                            (function (e, t, i) {
                                 if (e.type === o.Z6.SECTION && e.hoisted) return !0;
                                 if (e.type === o.Z6.TAB_ITEM) return !1;
-                                let i = "useTitle" in e ? e.useTitle?.(!1) : void 0,
-                                    l = "useSearchTerms" in e ? e.useSearchTerms?.() : void 0;
-                                if (n || (null == i && null == l)) return !1;
+                                let n = "useTitle" in e ? e.useTitle?.(!1) : void 0,
+                                    s = "useSearchTerms" in e ? e.useSearchTerms?.() : void 0;
+                                if (i || (null == n && null == s)) return !1;
                                 if ("" === t) return !0;
                                 if (e.type === o.Z6.STATIC) return !1;
-                                let s = t.toLowerCase();
-                                for (let e of l ?? []) if (g()(s, e.toLowerCase())) return !0;
-                                let a = !1;
-                                if (null != i) {
-                                    let e = (0, _.O)(i)?.toLowerCase();
-                                    null != e && (a = g()(s, e));
+                                let l = t.toLowerCase();
+                                for (let e of s ?? []) if (g()(l, e.toLowerCase())) return !0;
+                                let r = !1;
+                                if (null != n) {
+                                    let e = (0, m.O)(n)?.toLowerCase();
+                                    null != e && (r = g()(l, e));
                                 }
-                                return a;
-                            })(e, t, r) || a,
-                        u = !1;
-                    if ((0, o.nW)(e)) for (let t of e.layout) u = l(t, r, d) || u;
-                    return !r && (d || u) && i.add(e.key), d || u;
+                                return r;
+                            })(e, t, a) || r,
+                        d = !1;
+                    if ((0, o.nW)(e)) for (let t of e.layout) d = s(t, a, u) || d;
+                    return !a && (u || d) && n.add(e.key), u || d;
                 };
-            return l(e), i;
-        })(e, t, A()),
-        [l, s] = i.useState(n),
-        a = (function (e, t) {
+            return s(e), n;
+        })(e, t, E()),
+        [s, l] = n.useState(i),
+        r = (function (e, t) {
             if (e.size !== t.size) return !0;
-            for (let n of e) if (!t.has(n)) return !0;
+            for (let i of e) if (!t.has(i)) return !0;
             return !1;
-        })(l, n);
+        })(s, i);
     return (
-        i.useEffect(() => {
-            a && s(n);
-        }, [a, n]),
-        l
+        n.useEffect(() => {
+            r && l(i);
+        }, [r, i]),
+        s
     );
 }

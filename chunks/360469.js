@@ -1,30 +1,30 @@
 "use strict";
 n.d(t, {
-    $W: () => f,
+    $W: () => h,
     AM: () => A,
-    CS: () => C,
-    D4: () => h,
+    CS: () => v,
+    D4: () => f,
     DY: () => I,
     Gl: () => w,
     H5: () => P,
     I4: () => m,
     Ig: () => d,
-    M1: () => U,
-    N7: () => R,
-    W9: () => v,
+    M1: () => k,
+    N7: () => O,
+    W9: () => C,
     _J: () => b,
     bN: () => D,
-    dm: () => k,
+    dm: () => U,
     eK: () => g,
     gq: () => E,
     i6: () => x,
     iu: () => T,
     lk: () => M,
-    mO: () => y,
+    mO: () => N,
     qA: () => p,
     qG: () => S,
-    vu: () => O,
-    xW: () => N,
+    vu: () => R,
+    xW: () => y,
     yz: () => _,
 });
 var i,
@@ -37,8 +37,8 @@ var i,
     c = n(652215);
 let d = 160,
     _ = /^https?:\/\/(?:www\.)?(twitch\.tv\/(.+)|youtube.com\/watch\?v=)/,
-    f = "438122941302046720",
-    h = "1417273808645259344",
+    h = "438122941302046720",
+    f = "1417273808645259344",
     p = "773336526917861400",
     E = "880218394199220334",
     m = "755827207812677713",
@@ -47,7 +47,7 @@ let d = 160,
     I = "https://discord.com/blog/server-activities-games-voice-watch-together",
     T = { SMALL: 64, LARGE: 160 },
     S = ["in_development", "activities_team", "employee_release"],
-    N = [
+    y = [
         "1037680572660727838",
         "235088799074484224",
         "1007373802981822582",
@@ -60,8 +60,8 @@ let d = 160,
         "1235205910863806484",
         "1227719606223765687",
     ],
-    y = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
-var C =
+    N = ["1247266306231898122", "1257458870390099989", "1276239071764680926"];
+var v =
         (((i = {}).ADS = "ADS"),
         (i.FAILED_LOAD = "FAILED_LOAD"),
         (i.LAGGING = "LAGGING"),
@@ -69,9 +69,9 @@ var C =
         (i.NOT_FUN = "NOT_FUN"),
         (i.OTHER = "OTHER"),
         i),
-    v = (((r = {})[(r.PLAY = 0)] = "PLAY"), (r[(r.SPECTATE = 1)] = "SPECTATE"), r),
-    O = (((s = {}).DESKTOP = "desktop"), (s.MOBILE = "mobile"), s),
-    R =
+    C = (((r = {})[(r.PLAY = 0)] = "PLAY"), (r[(r.SPECTATE = 1)] = "SPECTATE"), r),
+    R = (((s = {}).DESKTOP = "desktop"), (s.MOBILE = "mobile"), s),
+    O =
         (((a = {})[(a.UNLOCKED = 1)] = "UNLOCKED"),
         (a[(a.PORTRAIT = 2)] = "PORTRAIT"),
         (a[(a.LANDSCAPE = 3)] = "LANDSCAPE"),
@@ -95,5 +95,5 @@ let L = { label_type: u.Hr.NONE, release_phase: "", label_from: null, label_unti
     M = [c.rbe.GUILD_TEXT, c.rbe.DM, c.rbe.GROUP_DM],
     P = [...M, c.rbe.GUILD_VOICE],
     x = "https://support-dev.discord.com/hc/en-us/articles/21692628851351-Private-Activity-Safety";
-var U = (((l = {}).NORMAL = "normal"), (l.FULL_SCREEN = "full-screen"), l);
-let k = 216e5;
+var k = (((l = {}).NORMAL = "normal"), (l.FULL_SCREEN = "full-screen"), l);
+let U = 216e5;

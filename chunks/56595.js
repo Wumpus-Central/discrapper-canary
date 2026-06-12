@@ -1,5 +1,5 @@
 "use strict";
-function r(e) {
+function i(e) {
     return e.moderatorReporting?.moderatorReportingEnabled ?? !1;
 }
-n.d(t, { A: () => r });
+n.d(t, { A: () => i });

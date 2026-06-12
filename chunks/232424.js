@@ -9,12 +9,12 @@ var i = n(860511),
     c = i.RangeError,
     d = i.Int8Array,
     _ = d && d.prototype,
-    f = _ && _.set,
-    h = s.aTypedArray,
+    h = _ && _.set,
+    f = s.aTypedArray,
     p = s.exportTypedArrayMethod,
     E = !u(function () {
         var e = new Uint8ClampedArray(2);
-        return r(f, e, { length: 1, 0: 3 }, 1), 3 !== e[1];
+        return r(h, e, { length: 1, 0: 3 }, 1), 3 !== e[1];
     }),
     m =
         E &&
@@ -26,10 +26,10 @@ var i = n(860511),
 p(
     "set",
     function (e) {
-        h(this);
+        f(this);
         var t = o(arguments.length > 1 ? arguments[1] : void 0, 1),
             n = l(e);
-        if (E) return r(f, this, n, t);
+        if (E) return r(h, this, n, t);
         var i = this.length,
             s = a(n),
             u = 0;

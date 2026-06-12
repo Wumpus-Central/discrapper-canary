@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { o: () => f });
+n.d(t, { o: () => h });
 var i = n(730852),
     r = n(235393),
     s = n(376943),
@@ -7,7 +7,7 @@ var i = n(730852),
     o = n(734057),
     l = n(696451),
     u = n(71393),
-    c = n(449054);
+    c = n(385648);
 let d = (0, n(945810).mj)({
     name: "2026-02-voice-channel-link-click",
     kind: "user",
@@ -15,7 +15,7 @@ let d = (0, n(945810).mj)({
     variations: { 1: { navigateOnly: !0 } },
 });
 var _ = n(652215);
-async function f(e, t, n) {
+async function h(e, t, n) {
     if (null == t) return;
     if (
         (r.A.trackDiscordLinkClicked({ guildId: e, channelId: t, messageId: n }),
@@ -28,10 +28,10 @@ async function f(e, t, n) {
                 return;
             } catch {}
     }
-    let f = o.A.getChannel(t);
-    if (null != f && null == n && f.isGuildVocal() && (0, s.nc)(f)) {
+    let h = o.A.getChannel(t);
+    if (null != h && null == n && h.isGuildVocal() && (0, s.nc)(h)) {
         let { navigateOnly: e } = d.getConfig({ location: "channel_mention" });
-        if (!e) return void i.default.selectVoiceChannel(f.id);
+        if (!e) return void i.default.selectVoiceChannel(h.id);
     }
     (0, a.A)(_.BVt.CHANNEL(e, t, n));
 }

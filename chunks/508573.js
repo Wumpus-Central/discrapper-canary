@@ -1,6 +1,6 @@
-e.exports = n(400095)(
-    function (e, t, n) {
-        e[+!n].push(t);
+p.exports = s(400095)(
+    function (p, n, s) {
+        p[+!s].push(n);
     },
     function () {
         return [[], []];

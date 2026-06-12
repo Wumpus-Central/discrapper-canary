@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => y, o: () => S });
+n.d(t, { $: () => N, o: () => S });
 var i = n(627968),
     r = n(64700),
     s = n(985623),
@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(621466),
     d = n(707554),
     _ = n(83379),
-    f = n(623646),
-    h = n(451988),
+    h = n(623646),
+    f = n(451988),
     p = n(192308),
     E = n(750506),
     m = n(267102),
@@ -20,8 +20,8 @@ var i = n(627968),
     I = n(292036),
     T = n(652215);
 let S = Symbol("POPOUT_PREVENT_CLOSE"),
-    N = new Set(["Spacebar", " ", "Enter"]);
-class y extends r.Component {
+    y = new Set(["Spacebar", " ", "Enter"]);
+class N extends r.Component {
     static defaultProps = {
         autoInvert: !1,
         nudgeAlignIntoViewport: !1,
@@ -34,8 +34,8 @@ class y extends r.Component {
     popoutRef = r.createRef();
     resizeObserver;
     popoutId = `popout_${l()()}`;
-    loadingTimeout = new h.Ep();
-    validClickTimeout = new h.Ep();
+    loadingTimeout = new f.Ep();
+    validClickTimeout = new f.Ep();
     isValidClickStart = !1;
     static contextType = m.Ay;
     state = {
@@ -147,15 +147,15 @@ class y extends r.Component {
                 fixed: u,
                 positionKey: c,
                 disablePointerEvents: d,
-                layerContext: h,
+                layerContext: f,
                 clickTrap: p = !1,
             } = this.props,
             { resizeKey: m, isLoading: g, shouldShowLoadingState: A } = this.state;
         return g && !A
             ? null
             : (0, i.jsx)(_.Wd, {
-                  layerContext: h ?? E.uY,
-                  children: (0, i.jsx)(f.Q, {
+                  layerContext: f ?? E.uY,
+                  children: (0, i.jsx)(h.Q, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
                       onUnmount: this.handlePopoutHide,
@@ -238,7 +238,7 @@ class y extends r.Component {
         }
     };
     handleKeyboardPreload = (e) => {
-        N.has(e.key) && this.handlePreload();
+        y.has(e.key) && this.handlePreload();
     };
     handleDocumentMouseDown = (e) => {
         let { ignoreModalClicks: t, closeOnClickOutside: n } = this.props;
@@ -246,7 +246,7 @@ class y extends r.Component {
         let i = e.target,
             r = this.domElementRef.current;
         if (null != r) {
-            if ((0, f.H)(r, i) || g.A.isOpen() || (t && (0, p.hasAnyModalOpen)())) return;
+            if ((0, h.H)(r, i) || g.A.isOpen() || (t && (0, p.hasAnyModalOpen)())) return;
             this.isValidClickStart = !0;
         }
     };
@@ -268,11 +268,11 @@ class y extends r.Component {
             let e = this.popoutRef.current;
             null == e ||
                 (this.shouldShowPopout(this.props, this.state) &&
-                    (C(e) || this.close(void 0, "system:viewport_exit"), this.layerRef.current?.updatePosition()));
+                    (v(e) || this.close(void 0, "system:viewport_exit"), this.layerRef.current?.updatePosition()));
         });
     }, 1e3 / 60);
 }
-let C = (e) => {
+let v = (e) => {
     let t = e.getBoundingClientRect(),
         n = e.ownerDocument?.defaultView?.innerHeight ?? 0,
         i = e.ownerDocument?.defaultView?.innerWidth ?? 0;

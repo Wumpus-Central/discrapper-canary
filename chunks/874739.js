@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => E });
 var i = n(627968),
     l = n(64700),
     a = n(17928),
@@ -14,15 +14,15 @@ var i = n(627968),
     A = n(526369),
     x = n(699707),
     g = n(713397),
-    C = n(652215),
-    f = n(806931),
-    E = n(349488);
-let y = (0, s.A)((e) => {
+    f = n(652215),
+    C = n(806931),
+    y = n(349488);
+let E = (0, s.A)((e) => {
     let {
         participants: t,
         filteredParticipants: n,
         selectedParticipant: s,
-        participantsVersion: y,
+        participantsVersion: E,
         layout: N,
         onSelectParticipant: j,
         onContextMenuParticipant: v,
@@ -41,31 +41,31 @@ let y = (0, s.A)((e) => {
         callContainerDimensions: w,
     } = e;
     l.useEffect(() => {
-        h._.dispatch(C.jej.REMEASURE_TARGET);
+        h._.dispatch(f.jej.REMEASURE_TARGET);
     }, [O, b, w.width, w.height]);
     let V = l.useMemo(
-            () => n.filter((e) => e.type !== f.lp.ACTIVITY || !e.participants.some((e) => (0, r.S)(e))),
-            [n, y],
+            () => n.filter((e) => e.type !== C.lp.ACTIVITY || !e.participants.some((e) => (0, r.S)(e))),
+            [n, E],
         ),
         B = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(T.id), [T.id]);
     if (U?.channelId === T.id) return (0, i.jsx)(m.A, { height: b });
     if (T?.isGuildVocalOrThread() && !S)
         return (0, i.jsx)(p.A, { channel: T, participants: t, hasConnectPermission: _ });
-    if (((n = S ? n : t), N === C.DUB.HAVEN)) return (0, i.jsx)(u.A, { participants: n, channel: T, idle: L });
-    if (M === C._Of.VOICE)
-        return (0, i.jsx)(c.A, { guildId: T.guild_id, width: O, className: E.Er, participants: t, onContextMenu: v });
+    if (((n = S ? n : t), N === f.DUB.HAVEN)) return (0, i.jsx)(u.A, { participants: n, channel: T, idle: L });
+    if (M === f._Of.VOICE)
+        return (0, i.jsx)(c.A, { guildId: T.guild_id, width: O, className: y.Er, participants: t, onContextMenu: v });
     if (null == s) {
         if (0 === n.length) {
             let e = t.length > 0 && !B;
             return (0, i.jsx)(g.A, { channelId: T.id, allPoppedOut: e });
         }
         return (0, i.jsx)(d.A, {
-            className: E.HA,
+            className: y.HA,
             justify: d.A.Justify.CENTER,
             align: d.A.Align.CENTER,
             children: (0, i.jsx)(A.A, {
                 channel: T,
-                className: E.g9,
+                className: y.g9,
                 participants: V,
                 totalNumberOfParticipants: t.length,
                 onClick: j,

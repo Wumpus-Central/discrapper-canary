@@ -1,37 +1,37 @@
 "use strict";
-n.d(t, { O9: () => f, iq: () => A, Nu: () => p, oG: () => g });
+n.d(t, { O9: () => E, iq: () => A, Nu: () => g, oG: () => m });
 var i = n(228366),
     r = n(495544),
     s = n(3137),
     a = n(559908),
     o = n(735438),
     l = n.n(o),
-    d = n(954571),
-    _ = n(31408),
-    u = n(652215);
-function c(e) {
+    u = n(174459),
+    c = n(31408),
+    d = n(652215);
+function _(e) {
     switch (e) {
-        case _.uD.CHAT_INPUT:
+        case c.uD.CHAT_INPUT:
             return "chat_input";
-        case _.uD.MENTION:
+        case c.uD.MENTION:
             return "mention";
-        case _.uD.VOICE_USER:
+        case c.uD.VOICE_USER:
             return "voice_user";
     }
 }
-function E(e) {
+function h(e) {
     switch (e) {
-        case _.k.CHAT_INPUT:
+        case c.k.CHAT_INPUT:
             return "chat_input";
-        case _.k.MEMBER_USER:
+        case c.k.MEMBER_USER:
             return "member_user";
-        case _.k.REACTION:
+        case c.k.REACTION:
             return "reaction";
-        case _.k.CALL_TILE:
+        case c.k.CALL_TILE:
             return "call_tile";
     }
 }
-function h(e, t) {
+function f(e, t) {
     return Object.entries(e)
         .filter((e) => {
             let [t, n] = e;
@@ -42,7 +42,7 @@ function h(e, t) {
             return t(Number.parseInt(n));
         });
 }
-let m = l().throttle((e) => {
+let p = l().throttle((e) => {
     let {
         enabled: t,
         combosEnabled: n,
@@ -52,29 +52,29 @@ let m = l().throttle((e) => {
         screenshakeEnabledLocations: a,
         confettiEnabled: o,
         confettiSize: l,
-        confettiCount: _,
-        confettiEnabledLocations: m,
+        confettiCount: c,
+        confettiEnabledLocations: p,
     } = e;
-    d.default.track(u.HAw.POGGERMODE_SETTINGS_UPDATED, {
+    u.default.track(d.HAw.POGGERMODE_SETTINGS_UPDATED, {
         enabled: t,
         combos_enabled: n,
         combos_required_count: i,
         screenshake_enabled: r,
         shake_intensity: s,
-        screenshake_enabled_locations: h(a, c),
+        screenshake_enabled_locations: f(a, _),
         confetti_enabled: o,
         confetti_size: l,
-        confetti_count: _,
-        confetti_enabled_locations: h(m, E),
+        confetti_count: c,
+        confetti_enabled_locations: f(p, h),
     });
 }, 5e3);
-function f(e) {
-    i.h.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings: e }), m({ ...s.A.getState(), ...e });
+function E(e) {
+    i.h.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings: e }), p({ ...s.A.getState(), ...e });
 }
-function g(e) {
+function m(e) {
     i.h.dispatch({ type: "POGGERMODE_UPDATE_COMBO", ...e });
 }
-function p(e) {
+function g(e) {
     i.h.dispatch({ type: "POGGERMODE_UPDATE_MESSAGE_COMBO", comboMessage: { ...e, displayed: !0 } });
 }
 function A(e, t) {

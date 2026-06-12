@@ -1,64 +1,64 @@
-n.d(e, { A: () => G, m: () => T });
-var i = n(627968),
-    a = n(64700),
-    r = n(17928),
-    s = n(862482),
-    l = n(821609),
-    d = n(935462),
-    c = n(834730),
-    o = n(534514),
-    m = n(292666),
-    g = n(308528),
-    p = n(845584),
-    C = n(235986),
-    _ = n(915089),
-    L = n(548118),
-    u = n(808728),
-    x = n(71393),
-    E = n(985018),
-    b = n(940480);
-function T(t) {
-    let { createdGuildId: e, hasFooter: n = !0, onClose: T, onChannelPromptCompleted: G, isSlideReady: I } = t,
-        [D, h] = a.useState(""),
-        [A, U] = a.useState(null),
-        [y, v] = a.useState(!1),
-        N = (0, _.GV)(),
-        j = (0, r.bG)([x.A], () => x.A.getGuild(e), [e]),
-        f = a.useRef(null);
+e.d(n, { A: () => L, m: () => D });
+var i = e(627968),
+    a = e(64700),
+    r = e(17928),
+    l = e(862482),
+    s = e(821609),
+    d = e(935462),
+    p = e(834730),
+    c = e(534514),
+    m = e(292666),
+    _ = e(308528),
+    g = e(913122),
+    o = e(235986),
+    E = e(915089),
+    C = e(548118),
+    T = e(808728),
+    I = e(71393),
+    G = e(375708),
+    b = e(940480);
+function D(t) {
+    let { createdGuildId: n, hasFooter: e = !0, onClose: D, onChannelPromptCompleted: L, isSlideReady: u } = t,
+        [U, A] = a.useState(""),
+        [x, y] = a.useState(null),
+        [O, S] = a.useState(!1),
+        N = (0, E.GV)(),
+        h = (0, r.bG)([I.A], () => I.A.getGuild(n), [n]),
+        v = a.useRef(null);
     a.useEffect(() => {
-        I && f.current?.focus();
-    }, [I]);
-    let S = a.useCallback(
+        u && v.current?.focus();
+    }, [u]);
+    let R = a.useCallback(
             async (t) => {
-                if ((t.preventDefault(), null == j)) return;
-                v(!0), U(null);
-                let e = u.Ay.getDefaultChannel(j.id);
+                if ((t.preventDefault(), null == h)) return;
+                S(!0), y(null);
+                let n = T.Ay.getDefaultChannel(h.id);
                 try {
-                    let t = E.intl.formatToPlainString(E.t.V4lepJ, { topic: D });
-                    await g.A.createTextChannel(j.id, D, e?.parent_id, t), G();
+                    let t = G.intl.formatToPlainString(G.t.V4lepJ, { topic: U });
+                    await _.A.createTextChannel(h.id, U, n?.parent_id, t), L();
                 } catch (t) {
-                    U(new p.Wl(t));
+                    y(new g.Wl(t));
                 }
-                v(!1);
+                S(!1);
             },
-            [j, D, G],
+            [h, U, L],
         ),
-        M = (0, i.jsxs)(i.Fragment, {
+        j = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(l.$, {
+                (0, i.jsx)(s.$, {
                     variant: "primary",
-                    text: E.intl.string(E.t.i4jeWR),
-                    onClick: S,
-                    disabled: 0 === D.length,
-                    loading: y,
+                    text: G.intl.string(G.t.i4jeWR),
+                    onClick: R,
+                    disabled: 0 === U.length,
+                    loading: O,
                 }),
-                (0, i.jsx)(s.$n, {
+                (0, i.jsx)(l.$n, {
                     "data-migration-pending": !0,
                     className: b.SZ,
-                    look: s.$n.Looks.BLANK,
-                    size: s.$n.Sizes.MIN,
-                    onClick: G,
-                    children: E.intl.string(E.t["5Wxrcd"]),
+                    look: l.$n.Looks.BLANK,
+                    size: l.$n.Sizes.MIN,
+                    onClick: L,
+                    children: G.intl.string(G.t["5Wxrcd"]),
                 }),
             ],
         });
@@ -68,28 +68,28 @@ function T(t) {
                 (0, i.jsxs)(d.rQ, {
                     "data-migration-pending": !0,
                     className: b.wx,
-                    direction: C.A.Direction.VERTICAL,
+                    direction: o.A.Direction.VERTICAL,
                     separator: !1,
                     children: [
-                        null != j && (0, i.jsx)(L.Ay, { guild: j }),
-                        (0, i.jsx)(c.E, {
+                        null != h && (0, i.jsx)(C.Ay, { guild: h }),
+                        (0, i.jsx)(p.E, {
                             className: b.J5,
                             color: "text-strong",
                             variant: "text-sm/semibold",
-                            children: j?.name,
+                            children: h?.name,
                         }),
-                        (0, i.jsx)(o.D, {
+                        (0, i.jsx)(c.D, {
                             className: b.DD,
                             variant: "heading-sm/semibold",
-                            children: E.intl.string(E.t["8VRa7d"]),
+                            children: G.intl.string(G.t["8VRa7d"]),
                         }),
-                        (0, i.jsx)(c.E, {
+                        (0, i.jsx)(p.E, {
                             className: b.VA,
                             color: "text-default",
                             variant: "text-md/normal",
-                            children: E.intl.string(E.t["+855Pm"]),
+                            children: G.intl.string(G.t["+855Pm"]),
                         }),
-                        null != T && (0, i.jsx)(d.s_, { "data-migration-pending": !0, className: b.b, onClick: T }),
+                        null != D && (0, i.jsx)(d.s_, { "data-migration-pending": !0, className: b.b, onClick: D }),
                     ],
                 }),
                 (0, i.jsxs)(d.$m, {
@@ -97,34 +97,34 @@ function T(t) {
                     className: b.Q6,
                     children: [
                         (0, i.jsx)("form", {
-                            onSubmit: S,
+                            onSubmit: R,
                             children: (0, i.jsx)(m.k, {
-                                label: E.intl.string(E.t.bY20tU),
-                                error: A?.getFieldMessage("name"),
+                                label: G.intl.string(G.t.bY20tU),
+                                error: x?.getFieldMessage("name"),
                                 type: "text",
-                                value: D,
+                                value: U,
                                 id: N,
-                                onChange: h,
-                                placeholder: E.intl.string(E.t.xGOYA8),
-                                inputRef: f,
+                                onChange: A,
+                                placeholder: G.intl.string(G.t.xGOYA8),
+                                inputRef: v,
                             }),
                         }),
-                        null != A &&
-                            0 === Object.keys(A.fields).length &&
-                            (0, i.jsx)(c.E, {
+                        null != x &&
+                            0 === Object.keys(x.fields).length &&
+                            (0, i.jsx)(p.E, {
                                 variant: "text-xs/normal",
                                 color: "text-feedback-critical",
-                                children: A.message,
+                                children: x.message,
                             }),
                     ],
                 }),
-                n && (0, i.jsx)(d.jl, { "data-migration-pending": !0, children: M }),
+                e && (0, i.jsx)(d.jl, { "data-migration-pending": !0, children: j }),
             ],
         }),
-        footer: M,
+        footer: j,
     };
 }
-function G(t) {
-    let { content: e } = T(t);
-    return e;
+function L(t) {
+    let { content: n } = D(t);
+    return n;
 }

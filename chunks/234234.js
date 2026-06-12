@@ -129,8 +129,8 @@ e.exports = function (e) {
                 "Charts",
             ]),
         },
-        a = { className: "string", begin: '"', end: '"', illegal: "\\n" },
-        n = {
+        n = { className: "string", begin: '"', end: '"', illegal: "\\n" },
+        i = {
             className: "function",
             begin: /[a-z][^\n]*->/,
             returnBegin: !0,
@@ -144,11 +144,11 @@ e.exports = function (e) {
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            a,
+            n,
             { className: "string", begin: "'", end: "'", illegal: "\\n" },
             { className: "string", begin: "<<", end: ">>" },
-            n,
-            { beginKeywords: "import", end: "$", keywords: t, contains: [a] },
+            i,
+            { beginKeywords: "import", end: "$", keywords: t, contains: [n] },
             { className: "number", begin: "[0-9]+#[0-9A-Z_]+(\\.[0-9-A-Z_]+)?#?([Ee][+-]?[0-9]+)?" },
             e.NUMBER_MODE,
         ],

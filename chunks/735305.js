@@ -1,4 +1,4 @@
-n.d(t, { x: () => _ });
+n.d(t, { x: () => P });
 var l = n(284009),
     r = n.n(l),
     i = n(976634),
@@ -7,30 +7,30 @@ var l = n(284009),
     o = n(211083),
     u = n(463376),
     c = n(738909),
-    d = n(571878),
+    d = n(211159),
     p = n(61299),
     m = n(174459),
     h = n(723702),
     A = n(937008),
-    C = n(166532),
-    E = n(566980),
+    E = n(166532),
+    C = n(566980),
     y = n(615310),
-    P = n(652215),
+    _ = n(652215),
     S = n(788868);
-function _(e) {
+function P(e) {
     let {
             analyticsData: t,
             initialPlanId: n,
             breadcrumbSteps: l,
-            handleStepChange: _,
-            onReturn: f,
-            continueSessionToInitialStep: I,
+            handleStepChange: P,
+            onReturn: I,
+            continueSessionToInitialStep: f,
         } = e,
         { paymentSources: T } = (0, s.jm)(),
         {
             selectedSkuId: N,
-            setPurchaseState: v,
-            contextMetadata: g,
+            setPurchaseState: g,
+            contextMetadata: v,
             paymentSourceId: x,
             setPaymentSourceId: R,
             purchaseError: M,
@@ -46,68 +46,68 @@ function _(e) {
             setPurchaseError: e.setPurchaseError,
             activeSubscription: e.activeSubscription,
         })),
-        { purchaseErrorBlockRef: j } = (0, c.Gm)(),
-        { paymentAuthenticationState: O } = (0, o.o)(),
+        { purchaseErrorBlockRef: O } = (0, c.Gm)(),
+        { paymentAuthenticationState: j } = (0, o.o)(),
         { enabled: w } = (0, a.Y)({ location: "PaymentModalAddPaymentStep" }),
         { isPremiumGroupPurchase: D, isEligibleForTrial: U } = (0, u.i)(),
         { step: k, previousStep: G } = (0, y.Ay)(),
-        { isGift: Y } = (0, A.Pv)(),
-        F = {
+        { isGift: F } = (0, A.Pv)(),
+        Y = {
             ...(0, p._V)(),
             paymentSources: T,
             paymentSourceId: x,
             setPaymentSourceId: R,
             purchaseError: M,
             setPurchaseError: b,
-            purchaseErrorBlockRef: j,
-            paymentAuthenticationState: O,
+            purchaseErrorBlockRef: O,
+            paymentAuthenticationState: j,
             selectedSkuId: N,
-            isGift: Y,
+            isGift: F,
         },
         B =
-            f ??
+            I ??
             (() => {
-                _(Object.values(T).length < 1 && null == n ? C.pn.PLAN_SELECT : C.pn.REVIEW, {
-                    trackedFromStep: w ? C.pn.PAYMENT_ELEMENT : C.pn.PAYMENT_TYPE,
+                P(Object.values(T).length < 1 && null == n ? E.pn.PLAN_SELECT : E.pn.REVIEW, {
+                    trackedFromStep: w ? E.pn.PAYMENT_ELEMENT : E.pn.PAYMENT_TYPE,
                 });
             });
     r()(k, "Step should be set here");
     let W = (0, i.A)(() => Date.now(), [k]),
         H = (0, i.A)(
             () =>
-                null != I && null == G ? (w ? C.pn.PAYMENT_ELEMENT : I) : w ? C.pn.PAYMENT_ELEMENT : C.pn.PAYMENT_TYPE,
-            [I, G, w],
+                null != f && null == G ? (w ? E.pn.PAYMENT_ELEMENT : f) : w ? E.pn.PAYMENT_ELEMENT : E.pn.PAYMENT_TYPE,
+            [f, G, w],
         );
     return (0, p.Y)({
-        paymentModalArgs: F,
+        paymentModalArgs: Y,
         initialStep: H,
-        prependSteps: [C.pn.PROMOTION_INFO],
-        appendSteps: [C.pn.REVIEW, C.pn.CONFIRM],
+        prependSteps: [E.pn.PROMOTION_INFO],
+        appendSteps: [E.pn.REVIEW, E.pn.CONFIRM],
         breadcrumpSteps: l,
         currentBreadcrumpStep: k,
         usePaymentModalStep: !0,
         analyticsData: t,
         onReturn: D ? void 0 : B,
         onComplete: (e) => {
-            C.l_.has(e)
-                ? (v(E.h.COMPLETED), _(C.pn.CONFIRM, { trackedFromStep: e }))
-                : _(C.pn.REVIEW, { trackedFromStep: e });
+            E.l_.has(e)
+                ? (g(C.h.COMPLETED), P(E.pn.CONFIRM, { trackedFromStep: e }))
+                : P(E.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: l } = e,
                 r = Date.now();
-            m.default.track(P.HAw.PAYMENT_FLOW_STEP, {
+            m.default.track(_.HAw.PAYMENT_FLOW_STEP, {
                 ...t,
                 from_step: n,
                 to_step: l,
                 step_duration_ms: r - W,
-                flow_duration_ms: r - g.startTime,
+                flow_duration_ms: r - v.startTime,
             });
         },
         isEligibleForTrial: U,
         allowDesktopRedirectPurchase:
-            (0, h.isDesktop)() && null != N && [S.pe.TIER_0, S.pe.TIER_2].includes(N) && !Y && null == L,
-        continueSessionToInitialStep: I,
+            (0, h.isDesktop)() && null != N && [S.pe.TIER_0, S.pe.TIER_2].includes(N) && !F && null == L,
+        continueSessionToInitialStep: f,
         shouldUseManaModal: !0,
     });
 }

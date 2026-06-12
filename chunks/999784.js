@@ -1,19 +1,19 @@
-r.d(t, { A: () => d });
-var n = r(627968);
-r(64700);
-var a = r(503698),
-    l = r.n(a),
-    i = r(194261),
-    u = r(834730),
-    s = r(375708),
-    o = r(49673),
-    c = r(653307);
-function d() {
-    return (0, n.jsxs)("div", {
-        className: l()(o.iG, c.Uu, c.Hu),
+n.d(t, { A: () => u });
+var l = n(627968);
+n(64700);
+var r = n(503698),
+    a = n.n(r),
+    s = n(194261),
+    i = n(834730),
+    c = n(375708),
+    d = n(49673),
+    o = n(653307);
+function u() {
+    return (0, l.jsxs)("div", {
+        className: a()(d.iG, o.Uu, o.Hu),
         children: [
-            (0, n.jsx)(i.X, { size: "sm", color: "currentColor", className: o.hz }),
-            (0, n.jsx)(u.E, { variant: "text-sm/medium", className: o.aK, children: s.intl.string(s.t.Kv6Z4I) }),
+            (0, l.jsx)(s.X, { size: "sm", color: "currentColor", className: d.hz }),
+            (0, l.jsx)(i.E, { variant: "text-sm/medium", className: d.aK, children: c.intl.string(c.t.Kv6Z4I) }),
         ],
     });
 }

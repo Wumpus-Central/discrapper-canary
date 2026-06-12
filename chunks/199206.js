@@ -1,22 +1,22 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = { className: "subst", variants: [{ begin: "\\$[A-Za-z0-9_]+" }, { begin: /\$\{/, end: /\}/ }] },
-        n = {
+        n = { className: "subst", variants: [{ begin: "\\$[A-Za-z0-9_]+" }, { begin: /\$\{/, end: /\}/ }] },
+        i = {
             className: "string",
             variants: [
                 { begin: '"""', end: '"""' },
                 { begin: '"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE] },
-                { begin: '[a-z]{1,50}"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, a] },
-                { className: "string", begin: '[a-z]{1,50}"""', end: '"""', contains: [a], relevance: 10 },
+                { begin: '[a-z]{1,50}"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE, n] },
+                { className: "string", begin: '[a-z]{1,50}"""', end: '"""', contains: [n], relevance: 10 },
             ],
         },
         r = { className: "type", begin: "\\b[A-Z][A-Za-z0-9_]*", relevance: 0 },
-        i = {
+        s = {
             className: "title",
             begin: /[^0-9\n\t "'(),.`{}\[\]:;][^\n\t "'(),.`{}\[\]:;]+|[^0-9\n\t "'(),.`{}\[\]:;=]/,
             relevance: 0,
         },
-        o = {
+        a = {
             className: "class",
             beginKeywords: "class object trait type",
             end: /[:={\[\n;]/,
@@ -42,10 +42,10 @@ e.exports = function (e) {
                     relevance: 0,
                     contains: [r, e.C_LINE_COMMENT_MODE, e.C_BLOCK_COMMENT_MODE],
                 },
-                i,
+                s,
             ],
         },
-        s = { className: "function", beginKeywords: "def", end: t.lookahead(/[:={\[(\n;]/), contains: [i] };
+        o = { className: "function", beginKeywords: "def", end: t.lookahead(/[:={\[(\n;]/), contains: [s] };
     return {
         name: "Scala",
         keywords: {
@@ -62,10 +62,10 @@ e.exports = function (e) {
             },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            n,
+            i,
             r,
-            s,
             o,
+            a,
             e.C_NUMBER_MODE,
             { begin: [/^\s*/, "extension", /\s+(?=[[(])/], beginScope: { 2: "keyword" } },
             { begin: [/^\s*/, /end/, /\s+/, /(extension\b)?/], beginScope: { 2: "keyword", 4: "keyword" } },

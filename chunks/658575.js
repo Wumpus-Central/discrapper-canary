@@ -1,16 +1,16 @@
-n.d(t, { G: () => r });
-var i = n(17928),
-    l = n(587895),
-    a = n(212534),
-    s = n(841595);
-function r(e) {
-    return (0, i.bG)(
-        [l.A, s.A, a.A],
+i.d(t, { G: () => n });
+var e = i(17928),
+    r = i(587895),
+    o = i(212534),
+    p = i(841595);
+function n(a) {
+    return (0, e.bG)(
+        [r.A, p.A, o.A],
         () =>
-            l.A.getApplication(e)?.storefront_available ??
-            s.A.getUserProfile(e)?.application?.storefront_available ??
-            a.A.getApplication(e)?.storefront_available ??
+            r.A.getApplication(a)?.storefront_available ??
+            p.A.getUserProfile(a)?.application?.storefront_available ??
+            o.A.getApplication(a)?.storefront_available ??
             !1,
-        [e],
+        [a],
     );
 }

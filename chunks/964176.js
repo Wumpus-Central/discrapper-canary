@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(574381),
     r = n(439372),
     s = n(710195),
@@ -21,4 +21,4 @@ class l extends r.A {
     stores = new Map().set(s.A, this.handleExperimentChange);
     actions = {};
 }
-let d = new l();
+let u = new l();

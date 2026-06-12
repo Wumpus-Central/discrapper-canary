@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { D: () => a });
-var r = n(812729),
-    i = n.n(r);
-function a(e, t) {
-    let [n, r] = e,
-        [a, s] = t;
-    return r === s && i()(n, a);
+n.d(t, { D: () => s });
+var i = n(812729),
+    r = n.n(i);
+function s(e, t) {
+    let [n, i] = e,
+        [s, a] = t;
+    return i === a && r()(n, s);
 }

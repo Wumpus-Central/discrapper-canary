@@ -1,7 +1,7 @@
 "use strict";
-r.d(t, { C: () => g, Y: () => v });
-let n = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm", "Rohg", "Hebr"]),
-    a = new Set([
+n.d(t, { C: () => m, Y: () => g });
+let i = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm", "Rohg", "Hebr"]),
+    r = new Set([
         "ae",
         "ar",
         "arc",
@@ -25,15 +25,15 @@ let n = new Set(["Arab", "Syrc", "Samr", "Mand", "Thaa", "Mend", "Nkoo", "Adlm",
 function s(e) {
     if (Intl.Locale) {
         let t = new Intl.Locale(e).maximize(),
-            r = "function" == typeof t.getTextInfo ? t.getTextInfo() : t.textInfo;
-        if (r) return "rtl" === r.direction;
-        if (t.script) return n.has(t.script);
+            n = "function" == typeof t.getTextInfo ? t.getTextInfo() : t.textInfo;
+        if (n) return "rtl" === n.direction;
+        if (t.script) return i.has(t.script);
     }
     let t = e.split("-")[0];
-    return a.has(t);
+    return r.has(t);
 }
-var i = r(64700),
-    o = r(341221);
+var a = n(64700),
+    o = n(341221);
 let l = Symbol.for("react-aria.i18n.locale");
 function u() {
     let e =
@@ -49,18 +49,18 @@ function u() {
 }
 let c = u(),
     d = new Set();
-function f() {
+function _() {
     for (let e of ((c = u()), d)) e(c);
 }
-function p() {
+function h() {
     let e = (0, o.wR)(),
-        [t, r] = (0, i.useState)(c);
-    return ((0, i.useEffect)(
+        [t, n] = (0, a.useState)(c);
+    return ((0, a.useEffect)(
         () => (
-            0 === d.size && window.addEventListener("languagechange", f),
-            d.add(r),
+            0 === d.size && window.addEventListener("languagechange", _),
+            d.add(n),
             () => {
-                d.delete(r), 0 === d.size && window.removeEventListener("languagechange", f);
+                d.delete(n), 0 === d.size && window.removeEventListener("languagechange", _);
             }
         ),
         [],
@@ -69,22 +69,22 @@ function p() {
         ? { locale: "en-US", direction: "ltr" }
         : t;
 }
-let h = i.createContext(null);
-function m(e) {
-    let { locale: t, children: r } = e,
-        n = i.useMemo(() => ({ locale: t, direction: s(t) ? "rtl" : "ltr" }), [t]);
-    return i.createElement(h.Provider, { value: n }, r);
+let f = a.createContext(null);
+function p(e) {
+    let { locale: t, children: n } = e,
+        i = a.useMemo(() => ({ locale: t, direction: s(t) ? "rtl" : "ltr" }), [t]);
+    return a.createElement(f.Provider, { value: i }, n);
 }
-function _(e) {
+function E(e) {
     let { children: t } = e,
-        r = p();
-    return i.createElement(h.Provider, { value: r }, t);
+        n = h();
+    return a.createElement(f.Provider, { value: n }, t);
 }
-function g(e) {
-    let { locale: t, children: r } = e;
-    return t ? i.createElement(m, { locale: t, children: r }) : i.createElement(_, { children: r });
+function m(e) {
+    let { locale: t, children: n } = e;
+    return t ? a.createElement(p, { locale: t, children: n }) : a.createElement(E, { children: n });
 }
-function v() {
-    let e = p();
-    return (0, i.useContext)(h) || e;
+function g() {
+    let e = h();
+    return (0, a.useContext)(f) || e;
 }

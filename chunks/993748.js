@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $P: () => v, An: () => O, xZ: () => C, Di: () => N, bW: () => y, eP: () => S, wD: () => R });
+n.d(t, { $P: () => C, An: () => R, xZ: () => v, Di: () => y, bW: () => N, eP: () => S, wD: () => O });
 var i,
     r = n(158390),
     s = n(724002),
@@ -11,8 +11,8 @@ var i,
 n(865116);
 var d = n(773669),
     _ = n(111162),
-    f = n(723702),
-    h = n(212534),
+    h = n(723702),
+    f = n(212534),
     p = n(38181),
     E = n(111042),
     m = n(651753),
@@ -23,7 +23,7 @@ let T = new Map();
 async function S(e) {
     let t = Date.now(),
         n = T.get(e) ?? 0;
-    if (h.A.getApplicationFetchState(e) === h.e.FETCHING || h.A.isInvalidApplication(e) || t < n + 6e5) return;
+    if (f.A.getApplicationFetchState(e) === f.e.FETCHING || f.A.isInvalidApplication(e) || t < n + 6e5) return;
     T.set(e, t), c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: e });
     let i = new r.A(1e3, 5e3),
         s = (e, t) =>
@@ -52,13 +52,13 @@ async function S(e) {
         });
     }
 }
-async function N(e) {
+async function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = Date.now(),
-        i = h.A.getApplicationFetchState(e),
-        r = h.A.getApplicationLastFetchTime(e),
+        i = f.A.getApplicationFetchState(e),
+        r = f.A.getApplicationLastFetchTime(e),
         { dontRefetchMs: s, noCache: a } = t;
-    if (i !== h.e.FETCHING && !(null != r && r + (s ?? 6e5) > n)) {
+    if (i !== f.e.FETCHING && !(null != r && r + (s ?? 6e5) > n)) {
         c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: e });
         try {
             let t = await u.Bo.get({
@@ -76,7 +76,7 @@ async function N(e) {
         }
     }
 }
-async function y() {
+async function N() {
     let e = Date.now(),
         t = p.A.getLastFetchTimeMs();
     if (null != t && t + 6e5 > e) return;
@@ -87,7 +87,7 @@ async function y() {
     });
     c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_CATEGORIES_SUCCESS", categories: n.body });
 }
-async function C(e) {
+async function v(e) {
     let { applicationId: t, guildId: n, options: i } = e,
         { page: r } = i ?? {},
         s = Date.now(),
@@ -125,15 +125,15 @@ async function C(e) {
         }
     }
 }
-async function v(e) {
+async function C(e) {
     let { query: t, guildId: n, options: i, onSuccessCallback: r } = e,
         {
             page: s,
             pageSize: a,
             categoryId: o,
             integrationType: _,
-            minUserInstallCommandCount: f,
-            excludeAppsWithCustomInstallUrl: h,
+            minUserInstallCommandCount: h,
+            excludeAppsWithCustomInstallUrl: f,
             excludeNonEmbeddedApps: p,
             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
             source: g = l.V.APP_DIRECTORY,
@@ -152,8 +152,8 @@ async function v(e) {
             pageSize: a,
             categoryId: o,
             integrationType: _,
-            minUserInstallCommandCount: f,
-            excludeAppsWithCustomInstallUrl: h,
+            minUserInstallCommandCount: h,
+            excludeAppsWithCustomInstallUrl: f,
             excludeNonEmbeddedApps: p,
             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
             source: g,
@@ -169,8 +169,8 @@ async function v(e) {
                     category_id: o,
                     locale: d.default.locale,
                     integration_type: _,
-                    min_user_install_command_count: f,
-                    exclude_apps_with_custom_install_url: h,
+                    min_user_install_command_count: h,
+                    exclude_apps_with_custom_install_url: f,
                     exclude_non_embedded_apps: p,
                     exclude_embedded_apps_without_primary_entry_point_app_command: E,
                     source: g,
@@ -193,8 +193,8 @@ async function v(e) {
                     type: e.body.type,
                     loadId: e.body.load_id,
                 },
-                minUserInstallCommandCount: f,
-                excludeAppsWithCustomInstallUrl: h,
+                minUserInstallCommandCount: h,
+                excludeAppsWithCustomInstallUrl: f,
                 excludeNonEmbeddedApps: p,
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
                 source: g,
@@ -209,8 +209,8 @@ async function v(e) {
                 pageSize: a,
                 categoryId: o,
                 integrationType: _,
-                minUserInstallCommandCount: f,
-                excludeAppsWithCustomInstallUrl: h,
+                minUserInstallCommandCount: h,
+                excludeAppsWithCustomInstallUrl: f,
                 excludeNonEmbeddedApps: p,
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: E,
                 source: g,
@@ -218,7 +218,7 @@ async function v(e) {
         }
     }
 }
-async function O() {
+async function R() {
     let { surface: e = o.K.APPLICATION_DIRECTORY, activeState: t = s.W.ACTIVE } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = _.default.disableAppCollectionsCache,
@@ -226,8 +226,8 @@ async function O() {
         r = E.A.getFetchState({ surface: e, activeState: t }),
         l = E.A.getLastFetchTimeMs({ surface: e, activeState: t });
     if (r === E.e.FETCHING) return;
-    let h = !n && t === s.W.ACTIVE;
-    if (!h || null == l || !(l + 6e5 > i)) {
+    let f = !n && t === s.W.ACTIVE;
+    if (!f || null == l || !(l + 6e5 > i)) {
         c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS", surface: e, activeState: t });
         try {
             let n = await u.Bo.get({
@@ -235,9 +235,9 @@ async function O() {
                 query: {
                     surface: e,
                     active_state: t,
-                    platform: (0, f.isAndroid)() ? a.ANDROID : (0, f.isIOS)() ? a.IOS : a.WEB,
+                    platform: (0, h.isAndroid)() ? a.ANDROID : (0, h.isIOS)() ? a.IOS : a.WEB,
                     locale: d.default.locale,
-                    cache: h,
+                    cache: f,
                 },
                 rejectWithError: !0,
             });
@@ -252,7 +252,7 @@ async function O() {
         }
     }
 }
-async function R() {
+async function O() {
     let e = Date.now(),
         t = A.A.getFetchState(),
         n = A.A.getLastFetchTimeMs(),

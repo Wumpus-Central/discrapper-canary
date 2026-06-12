@@ -1,6 +1,6 @@
-n.d(t, { j: () => s, o: () => r });
-var l = n(375708);
-let a = new Map([
+n.d(t, { j: () => s, o: () => l });
+var a = n(375708);
+let r = new Map([
     ["abn_amro", "ABN AMRO"],
     ["asn_bank", "ASN Bank"],
     ["bunq", "Bunq"],
@@ -17,8 +17,8 @@ let a = new Map([
     ["yoursafe", "Yoursafe"],
     ["handelsbanken", "Handelsbanken"],
 ]);
-function r(e) {
-    return void 0 !== e && a.has(e) ? a.get(e) : l.intl.string(l.t.jdPblk);
+function l(e) {
+    return void 0 !== e && r.has(e) ? r.get(e) : a.intl.string(a.t.jdPblk);
 }
 let i = new Map([
     ["arzte_und_apotheker_bank", "\xc4rzte- und Apothekerbank"],
@@ -50,5 +50,5 @@ let i = new Map([
     ["vr_bank_braunau", "VR-Bank Braunau"],
 ]);
 function s(e) {
-    return void 0 !== e && i.has(e) ? i.get(e) : l.intl.string(l.t.jdPblk);
+    return void 0 !== e && i.has(e) ? i.get(e) : a.intl.string(a.t.jdPblk);
 }

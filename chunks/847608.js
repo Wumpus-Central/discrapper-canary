@@ -19,10 +19,10 @@ let s = {
     d = [],
     o = new Map(),
     u = new Map(),
-    m = (e, t) => {
+    h = (e, t) => {
         if (null != e) return (0, n.isString)(e) ? e : "light" === t ? e.light : e.dark;
     },
-    h = (e) => {
+    m = (e) => {
         try {
             let t = new URL(e).pathname;
             return s[t.split(".").pop()?.toLowerCase() ?? ""];
@@ -40,11 +40,11 @@ let s = {
                       l.flatMap((e) => {
                           if (null == e) return [];
                           if ("object" == typeof e && "src" in e) {
-                              let l = m(e.src, t);
-                              return null == l ? [] : [{ src: l, alt: e.alt, mimeType: h(l) }];
+                              let l = h(e.src, t);
+                              return null == l ? [] : [{ src: l, alt: e.alt, mimeType: m(l) }];
                           }
-                          let l = m(e, t);
-                          return null != l ? [{ src: l, mimeType: h(l) }] : [];
+                          let l = h(e, t);
+                          return null != l ? [{ src: l, mimeType: m(l) }] : [];
                       }));
             }, [e, t]),
             [n, s] = r.useState({}),

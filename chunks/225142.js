@@ -10,14 +10,14 @@ var i = n(636537),
     c = n(174459),
     d = n(935208),
     _ = n(701785),
-    f = n(374084),
-    h = n(65995),
+    h = n(374084),
+    f = n(65995),
     p = n(652215);
 let E = async (e) => {
         r.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_START", guildId: e });
         try {
             let t = await i.Bo.get({ url: p.Rsh.GUILD_HOME_SETTINGS(e), oldFormErrors: !0, rejectWithError: !0 }),
-                n = (0, f.Xu)(t.body);
+                n = (0, h.Xu)(t.body);
             return r.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_SUCCESS", guildId: e, homeSettings: n }), n;
         } catch (t) {
             r.h.dispatch({ type: "GUILD_HOME_SETTINGS_FETCH_FAIL", guildId: e });
@@ -28,7 +28,7 @@ let E = async (e) => {
             r.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_START", guildId: e });
             try {
                 let t = await i.Bo.get({ url: p.Rsh.GUILD_MEMBER_ACTIONS(e), oldFormErrors: !0, rejectWithError: !0 }),
-                    n = (0, f.xr)(t.body);
+                    n = (0, h.xr)(t.body);
                 return (
                     r.h.dispatch({ type: "GUILD_NEW_MEMBER_ACTIONS_FETCH_SUCCESS", guildId: e, memberActions: n }), n
                 );
@@ -83,7 +83,7 @@ let E = async (e) => {
         let n = u.A.getChannel(t),
             s = _.h.getActionForChannel(e, t);
         if (null != n && null != s) {
-            let t = d.default.keys(h.A.getCompletedActions(e) ?? {}),
+            let t = d.default.keys(f.A.getCompletedActions(e) ?? {}),
                 i = _.h.getNewMemberActions(e) ?? [];
             c.default.track(p.HAw.SERVER_GUIDE_ACTION_COMPLETED, {
                 guild_id: n.guild_id,

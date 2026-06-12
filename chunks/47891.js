@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(607470),
     d = n(652215);
 let _ = n.p + "c65e4b474b02f994.mov",
-    f = n.p + "7c5b005481eed9fc.mp4",
-    h = n.p + "7ba7fcf2c4710bb7.webm",
+    h = n.p + "7c5b005481eed9fc.mp4",
+    f = n.p + "7ba7fcf2c4710bb7.webm",
     p = n.p + "835e7a49b01c6d4c.mov",
     E = n.p + "c52c1a4c0861d954.mp4",
     m = n.p + "46b40a1f870acc70.webm";
@@ -19,11 +19,11 @@ function g(e) {
     let {
             movDark: t = _,
             movLight: n = p,
-            mp4Dark: r = f,
+            mp4Dark: r = h,
             mp4Light: s = E,
             pngDark: a = "/assets/209a4acf5023c4c3.png",
             pngLight: o = "/assets/6f7ec9558f0b4ff5.png",
-            webmDark: l = h,
+            webmDark: l = f,
             webmLight: c = m,
         } = e,
         g = (0, u.Z5)(),
@@ -44,23 +44,23 @@ let A = l.A.getAppSpinnerSources(),
     T = g({}),
     S = (e) => {
         let { loop: t = !0, autoPlay: n = !0, setRef: l, className: u, onReady: _ } = e,
-            { theme: f } = (0, a.wR)(),
-            { reducedMotion: h } = r.useContext(o.C),
+            { theme: h } = (0, a.wR)(),
+            { reducedMotion: f } = r.useContext(o.C),
             p = T;
         null != I && (p = I);
-        let E = p[(0, s.M)(f) ? d.NJ8.DARK : d.NJ8.LIGHT] ?? p[d.NJ8.DARK];
+        let E = p[(0, s.M)(h) ? d.NJ8.DARK : d.NJ8.LIGHT] ?? p[d.NJ8.DARK];
         return (0, i.jsx)(
             c.A,
             {
                 ref: l,
                 onLoadedData: _,
                 className: u,
-                loop: !h.enabled && t,
-                autoPlay: !h.enabled && n,
+                loop: !f.enabled && t,
+                autoPlay: !f.enabled && n,
                 playsInline: !0,
                 "data-testid": "app-spinner",
                 children: E,
             },
-            f,
+            h,
         );
     };

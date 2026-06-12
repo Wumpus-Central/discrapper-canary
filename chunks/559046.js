@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     Um: "productCard__8d9f6",
     gc: "productCardClickable__8d9f6",
     K_: "productThumbnail__8d9f6",

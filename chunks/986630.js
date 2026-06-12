@@ -46,8 +46,8 @@ class c extends o.A {
             category_sku_id: i,
             prices: o,
             bundled_products: _,
-            preview_assets: f,
-            variants: h,
+            preview_assets: h,
+            variants: f,
             badge_override: p,
             hide_badge: E,
             ...m
@@ -65,15 +65,15 @@ class c extends o.A {
             items: (0, a.K)(m.items),
             bundledProducts: _?.map(s.A.fromServer),
             previewAssets:
-                null != f
+                null != h
                     ? {
-                          fgStatic: f.fg_static,
-                          fgAnimated: f.fg_animated,
-                          bgStatic: f.bg_static,
-                          bgAnimated: f.bg_animated,
+                          fgStatic: h.fg_static,
+                          fgAnimated: h.fg_animated,
+                          bgStatic: h.bg_static,
+                          bgAnimated: h.bg_animated,
                       }
                     : void 0,
-            variants: h?.map(d.fromServer),
+            variants: f?.map(d.fromServer),
             googleSkuIds: m.google_sku_ids,
             eligibleOffers: m.eligible_offers,
             badgeOverride: p,

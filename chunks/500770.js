@@ -8,7 +8,7 @@ var l = n(503698),
     o = n(935286),
     d = n(939249),
     c = n(534514),
-    u = n(247928),
+    u = n(346055),
     m = n(696986),
     h = n(890856),
     g = n(915089),
@@ -17,7 +17,7 @@ var l = n(503698),
     x = n(411342),
     f = n(375708),
     E = n(859715);
-function C(e) {
+function I(e) {
     let { hidePurchaseToUnlockBadge: t, showDraftBadge: n, className: l, children: o } = e;
     return (0, i.jsxs)("div", {
         className: s()(E.v0, l),
@@ -40,7 +40,7 @@ function C(e) {
         ],
     });
 }
-function I(e) {
+function C(e) {
     let { onShowFullDescription: t, variant: n } = e,
         l = (0, i.jsxs)(i.Fragment, {
             children: [
@@ -76,19 +76,19 @@ function v(e) {
             onTapCard: j,
             actionMenu: N,
             showOpaqueBackground: T = !1,
-            hideRoleTag: S = !1,
-            lineClamp: y = 1,
+            hideRoleTag: y = !1,
+            lineClamp: S = 1,
             cardWidth: b = 332,
             cardHeight: L,
             thumbnailHeight: R = 187,
-            descriptionTextVariant: M = "text-sm/normal",
-            isDraft: P = !1,
+            descriptionTextVariant: k = "text-sm/normal",
+            isDraft: M = !1,
         } = e,
-        k = (0, g.Ld)(),
-        w = (0, i.jsxs)(i.Fragment, {
+        P = (0, g.Ld)(),
+        D = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(C, {
-                    showDraftBadge: P,
+                (0, i.jsx)(I, {
+                    showDraftBadge: M,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: R } }),
                 }),
@@ -102,19 +102,19 @@ function v(e) {
                                     variant: "text-md/medium",
                                     color: "text-strong",
                                     className: E.tZ,
-                                    id: k,
+                                    id: P,
                                     children: n,
                                 }),
                                 (0, i.jsx)(u.M, {
                                     children: (0, i.jsx)(p.A, {
-                                        variant: M,
+                                        variant: k,
                                         color: "text-muted",
-                                        lineClamp: y,
+                                        lineClamp: S,
                                         text: l,
                                     }),
                                 }),
-                                A && (0, i.jsx)(I, { onShowFullDescription: v, variant: M }),
-                                S || null == o || "" === o.name
+                                A && (0, i.jsx)(C, { onShowFullDescription: v, variant: k }),
+                                y || null == o || "" === o.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [(0, i.jsx)(m.h, { size: 16 }), (0, i.jsx)(x.A, { role: o })],
@@ -151,7 +151,7 @@ function v(e) {
             ],
         });
     return null == j
-        ? (0, i.jsx)("article", { className: s()(E.Um, T ? E.sG : E.Wi), "aria-labelledby": k, children: w })
+        ? (0, i.jsx)("article", { className: s()(E.Um, T ? E.sG : E.Wi), "aria-labelledby": P, children: D })
         : (0, i.jsx)("div", {
               style: { width: b, height: L },
               children: (0, i.jsx)(h.s, {
@@ -159,7 +159,7 @@ function v(e) {
                   "aria-label": f.intl.formatToPlainString(f.t["e+TmJa"], { productName: n }),
                   className: s()(E.Um, T ? E.sG : E.Wi, E.GA),
                   onClick: j,
-                  children: w,
+                  children: D,
               }),
           });
 }

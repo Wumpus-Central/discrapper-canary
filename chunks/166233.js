@@ -1,22 +1,22 @@
 "use strict";
-n.d(t, { Ob: () => s, Oe: () => a });
-var r = n(11541);
-let i = {};
-function a(e) {
-    return null == i[e] && (i[e] = {}), i[e];
+n.d(t, { Ob: () => a, Oe: () => s });
+var i = n(11541);
+let r = {};
+function s(e) {
+    return null == r[e] && (r[e] = {}), r[e];
 }
-function s(e, t) {
+function a(e, t) {
     if (0 === t.length) return !1;
-    let n = a(e);
+    let n = s(e);
     return (
         t.forEach((e) => {
             let t = n[e.userId],
-                i = e.joinSourceType ?? t?.joinSourceType ?? null;
-            (null == i || i === r.UP.UNSPECIFIED) && null != e.sourceInviteCode && (i = r.UP.INVITE),
+                r = e.joinSourceType ?? t?.joinSourceType ?? null;
+            (null == r || r === i.UP.UNSPECIFIED) && null != e.sourceInviteCode && (r = i.UP.INVITE),
                 (n[e.userId] = {
                     userId: e.userId,
                     sourceInviteCode: e.sourceInviteCode ?? t?.sourceInviteCode ?? null,
-                    joinSourceType: i,
+                    joinSourceType: r,
                     inviterId: e.inviterId ?? t?.inviterId ?? null,
                     integrationType: e.integrationType ?? t?.integrationType ?? null,
                     joinSourceApplicationId: e.joinSourceApplicationId ?? t?.joinSourceApplicationId ?? null,

@@ -17,13 +17,13 @@ let h = (e) => {
             giftRecipient: n,
             selectedGiftStyle: r,
             emojiConfetti: h,
-            soundEffect: C,
-            setEmojiConfetti: A,
-            setSoundEffect: y,
+            soundEffect: A,
+            setEmojiConfetti: E,
+            setSoundEffect: C,
         } = (0, s.Pv)(),
-        E = (0, u.lo)(n, t),
-        P = E === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        S = E !== u.tB.DEFAULT;
+        y = (0, u.lo)(n, t),
+        _ = y === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        S = y !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
             S &&
@@ -44,17 +44,17 @@ let h = (e) => {
                                       })
                                     : (0, l.jsx)(a.y, { className: m.u1 }),
                         }),
-                        P &&
+                        _ &&
                             (0, l.jsxs)("div", {
                                 className: i()(m.b7, m.Ow),
                                 children: [
                                     (0, l.jsx)(o.A, {
-                                        sound: C,
+                                        sound: A,
                                         onSelect: (e) => {
-                                            null != y && y(null == e ? void 0 : e);
+                                            null != C && C(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(p.A, { setEmojiConfetti: A, emojiConfetti: null == h ? void 0 : h }),
+                                    (0, l.jsx)(p.A, { setEmojiConfetti: E, emojiConfetti: null == h ? void 0 : h }),
                                 ],
                             }),
                     ],

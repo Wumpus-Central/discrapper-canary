@@ -47,9 +47,9 @@ function h(e, r) {
     let { query: n, limit: t, filters: l, blacklist: i, whitelist: o, boosters: p, boosterFallback: d } = r,
         m = null != l && l.strict ? (l.guild ?? null) : null,
         h = RegExp(`^${n.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&")}`, "i"),
-        b = RegExp(n.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&"), "i"),
-        v = [];
-    if ("" === n) return g(n, v, e);
+        v = RegExp(n.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&"), "i"),
+        b = [];
+    if ("" === n) return g(n, b, e);
     let E = n.toLocaleLowerCase(),
         k = c(E);
     f.forEach((e, r) => {
@@ -87,7 +87,7 @@ function h(e, r) {
                     m = s(e.toLocaleLowerCase());
                 h.test(e)
                     ? (f = { comparator: e, score: ((n = p[r]), 10 * (n ?? d)) })
-                    : b.test(e)
+                    : v.test(e)
                       ? (f = { comparator: e, score: ((l = p[r]), 5 * (l ?? d)) })
                       : a()(E, m)
                         ? (f = { comparator: e, score: ((i = p[r]), +(i ?? d)) })
@@ -95,11 +95,11 @@ function h(e, r) {
                     null != f && (null == t || t.score < f.score) && (t = { ...f, id: r, username: u });
             });
         }
-        null != t && v.push(t);
+        null != t && b.push(t);
     }),
-        v.sort(u),
-        v.length > t && (v.length = t),
-        g(n, v, e);
+        b.sort(u),
+        b.length > t && (b.length = t),
+        g(n, b, e);
 }
 function g(e, r, n) {
     self.postMessage({ type: "USER_RESULTS", uuid: n, payload: { query: e, results: r } });

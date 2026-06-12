@@ -27,10 +27,10 @@ async function u(e, t) {
     let _ = async (t) =>
             c >= 3
                 ? (d.push(1002),
-                  h({ error: !0 }),
+                  f({ error: !0 }),
                   r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target: e }))
-                : (await new Promise((e) => setTimeout(e, t)), f()),
-        f = () =>
+                : (await new Promise((e) => setTimeout(e, t)), h()),
+        h = () =>
             i.Bo.get({
                 url: n,
                 retries: 3 - c - 1,
@@ -41,21 +41,21 @@ async function u(e, t) {
                 (t) =>
                     202 === t.status
                         ? (d.push(202), _(5e3))
-                        : (h({ error: !1 }),
+                        : (f({ error: !1 }),
                           r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_SUCCESS", target: e, index: t.body })),
                 (n) => {
                     if (t.signal.aborted) {
-                        d.push(1001), h({ error: !0 });
+                        d.push(1001), f({ error: !0 });
                         return;
                     }
                     return 429 === n.status
                         ? (d.push(429), _(n.body.retry_after * a.A.Millis.SECOND))
                         : (d.push(n.status ?? 1e3),
-                          h({ error: !0 }),
+                          f({ error: !0 }),
                           r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target: e }));
                 },
             ),
-        h = (i) => {
+        f = (i) => {
             let { error: r } = i,
                 a = performance.now() - u;
             s.default.track(l.HAw.APPLICATION_COMMAND_PERFORMANCE, {
@@ -85,7 +85,7 @@ async function u(e, t) {
                 failure_statuses: d,
             });
         };
-    await f();
+    await h();
 }
 function c(e) {
     r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_REQUEST", target: e });

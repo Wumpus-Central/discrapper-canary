@@ -2,7 +2,7 @@ n.d(t, { i: () => o });
 var l = n(64700),
     r = n(422936),
     i = n(234419),
-    a = n(722847),
+    a = n(211159),
     s = n(788868);
 function o() {
     let {
@@ -32,7 +32,7 @@ function o() {
             null != m.discount.planIds &&
             m.discount.planIds.some((t) => s.hd[t].skuId === e),
         A = !!(d && null != m && h),
-        C = (0, r.p)();
+        E = (0, r.p)();
     return l.useMemo(
         () => ({
             isPremium: t,
@@ -41,8 +41,8 @@ function o() {
             isEligibleForDiscount: A,
             userTrialOffer: c,
             discountOffer: m,
-            premiumGroupDiscountOffer: n ? C : null,
+            premiumGroupDiscountOffer: n ? E : null,
         }),
-        [t, n, p, A, c, m, C],
+        [t, n, p, A, c, m, E],
     );
 }

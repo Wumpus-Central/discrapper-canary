@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     am: "seat__68e91",
     Sf: "claimed__68e91",
     LU: "seatWrapper__68e91",

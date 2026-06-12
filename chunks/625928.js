@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(403581),
     d = n(834730),
     _ = n(140735),
-    f = n(793574),
-    h = n(688810),
+    h = n(793574),
+    f = n(688810),
     p = n(135621),
     E = n(287809),
     m = n(428262),
@@ -20,49 +20,49 @@ var i = n(627968),
     I = n(404374),
     T = n(734057),
     S = n(309010),
-    N = n(174459),
-    y = n(652215),
-    C = n(375708),
-    v = n(341867);
-function O() {
+    y = n(174459),
+    N = n(652215),
+    v = n(375708),
+    C = n(341867);
+function R() {
     (0, g.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("35257"), n.e("66920")]).then(n.bind(n, 220763));
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function R(e) {
+function O(e) {
     let { className: t, iconOnly: n } = e,
         s = (0, l.bG)([S.A, T.A], () => {
             let e = T.A.getChannel(S.A.getChannelId());
-            return e?.isPrivate() ? y.liQ.DM_CHANNEL : y.liQ.GUILD_CHANNEL;
+            return e?.isPrivate() ? N.liQ.DM_CHANNEL : N.liQ.GUILD_CHANNEL;
         }),
-        { analyticsLocations: o } = (0, h.Ay)(f.A.PREMIUM_UPSELL);
+        { analyticsLocations: o } = (0, f.Ay)(h.A.PREMIUM_UPSELL);
     return (
         r.useEffect(() => {
-            N.default.track(y.HAw.PREMIUM_UPSELL_VIEWED, {
+            y.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
-                location: { location_page: s, location_section: y.JJy.CHANNEL_TEXT_AREA },
+                location: { location_page: s, location_section: N.JJy.CHANNEL_TEXT_AREA },
                 location_stack: o,
             });
         }, [s, o]),
         n
             ? (0, i.jsx)(A.D, {
-                  className: v.e7,
-                  onClick: () => O(),
+                  className: C.e7,
+                  onClick: () => R(),
                   children: (0, i.jsx)(u.m, {
-                      text: C.intl.string(C.t["+eFIjX"]),
+                      text: v.intl.string(v.t["+eFIjX"]),
                       position: "top",
-                      children: (0, i.jsx)(c.t, { size: "md", color: "currentColor", className: v.M2 }),
+                      children: (0, i.jsx)(c.t, { size: "md", color: "currentColor", className: C.M2 }),
                   }),
               })
             : (0, i.jsxs)("div", {
-                  className: a()(v.zr, t),
+                  className: a()(C.zr, t),
                   children: [
-                      (0, i.jsx)(c.t, { size: "md", className: v.M2, color: I.k0.PREMIUM_TIER_2 }),
+                      (0, i.jsx)(c.t, { size: "md", className: C.M2, color: I.k0.PREMIUM_TIER_2 }),
                       (0, i.jsx)(d.E, {
-                          className: v.Qq,
+                          className: C.Qq,
                           variant: "text-sm/normal",
-                          children: C.intl.format(C.t.BNAIBU, { onLearnMore: O }),
+                          children: v.intl.format(v.t.BNAIBU, { onLearnMore: R }),
                       }),
                   ],
               })
@@ -75,22 +75,22 @@ function D(e) {
         I = (0, p.A)(),
         T = r ?? I,
         S = s ?? r ?? I / 10,
-        N = n.length,
-        v = null != t.upsellLongMessages && (N ?? 0) > y.uvi && A,
-        O = null != t.upsellLongMessages && !A,
-        D = T - N,
+        y = n.length,
+        C = null != t.upsellLongMessages && (y ?? 0) > N.uvi && A,
+        R = null != t.upsellLongMessages && !A,
+        D = T - y,
         L = D > S;
-    (0, o.$)({ currentLength: N, maxLength: T, message: C.intl.string(C.t.c2Jqed) });
+    (0, o.$)({ currentLength: y, maxLength: T, message: v.intl.string(v.t.c2Jqed) });
     let w =
             0 === D
-                ? C.intl.string(C.t.tU6YQ7)
+                ? v.intl.string(v.t.tU6YQ7)
                 : D > 0
-                  ? C.intl.formatToPlainString(C.t.qH8uFW, { count: D })
-                  : C.intl.string(C.t.YSRIqa),
-        { analyticsLocations: M } = (0, h.Ay)(f.A.CHARACTER_COUNT);
-    if (!((v && D >= 0) || !L || (O && !L))) return null;
+                  ? v.intl.formatToPlainString(v.t.qH8uFW, { count: D })
+                  : v.intl.string(v.t.YSRIqa),
+        { analyticsLocations: M } = (0, f.Ay)(h.A.CHARACTER_COUNT);
+    if (!((C && D >= 0) || !L || (R && !L))) return null;
     let P = D >= 0;
-    return (0, i.jsx)(h.f5, {
+    return (0, i.jsx)(f.f5, {
         value: M,
         children: (0, i.jsxs)("div", {
             className: a()(g, b.Dq),
@@ -98,9 +98,9 @@ function D(e) {
                 (0, i.jsxs)("div", {
                     className: b.SW,
                     children: [
-                        v && P
+                        C && P
                             ? (0, i.jsx)(u.m, {
-                                  text: C.intl.formatToPlainString(C.t.vcvHa0, { maxLength: T }),
+                                  text: v.intl.formatToPlainString(v.t.vcvHa0, { maxLength: T }),
                                   position: "top",
                                   children: (0, i.jsx)(c.t, { size: "md", color: "currentColor", className: b.y }),
                               })
@@ -120,9 +120,9 @@ function D(e) {
                               }),
                     ],
                 }),
-                (0, i.jsx)(_.A, { "aria-live": "polite", children: C.intl.format(C.t.qH8uFW, { count: D }) }),
-                O && !L
-                    ? (0, i.jsx)(R, { className: b.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: D })
+                (0, i.jsx)(_.A, { "aria-live": "polite", children: v.intl.format(v.t.qH8uFW, { count: D }) }),
+                R && !L
+                    ? (0, i.jsx)(O, { className: b.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: D })
                     : null,
             ],
         }),

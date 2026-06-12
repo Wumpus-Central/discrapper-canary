@@ -1,26 +1,26 @@
-n.d(t, { Ay: () => j, BA: () => A });
+n.d(t, { Ay: () => j, BA: () => f });
 var s = n(627968);
 n(64700);
 var l = n(503698),
     a = n.n(l),
-    i = n(827734),
+    i = n(661531),
     r = n(990078),
-    c = n(777666),
+    c = n(812993),
     o = n(366605),
-    u = n(200463),
-    d = n(435470),
-    h = n(376310),
-    m = n(746080),
-    g = n(985018),
-    x = n(330070),
-    f = n(280530);
-function A(e) {
+    d = n(422844),
+    u = n(691060),
+    m = n(376310),
+    h = n(746080),
+    x = n(375708),
+    g = n(330070),
+    A = n(280530);
+function f(e) {
     let { channel: t, isNew: n } = e,
-        s = (0, d.kt)(t),
+        s = (0, u.kt)(t),
         l = s.slice(void 0, 3),
         a = s.slice(3),
         i = s.length > 3 ? s.length - 3 : 0,
-        r = t.hasFlag(m.lx.PINNED),
+        r = t.hasFlag(h.lx.PINNED),
         c = l.length > 0 || r || n;
     return {
         shownTags: l,
@@ -32,42 +32,42 @@ function A(e) {
     };
 }
 function j(e) {
-    let { channel: t, isNew: n, tagsClassName: l, className: d } = e,
+    let { channel: t, isNew: n, tagsClassName: l, className: u } = e,
         {
-            shownTags: m,
+            shownTags: h,
             remainingTags: j,
             moreTagsCount: v,
-            isPinned: p,
-            shouldRenderTagsRow: N,
-        } = A({ channel: t, isNew: n }),
-        { tagFilter: C } = (0, u.R)(t.id);
-    return N
+            isPinned: N,
+            shouldRenderTagsRow: p,
+        } = f({ channel: t, isNew: n }),
+        { tagFilter: C } = (0, d.R)(t.id);
+    return p
         ? (0, s.jsxs)("div", {
-              className: a()(f._A, d),
+              className: a()(A._A, u),
               children: [
                   n
                       ? (0, s.jsx)(c.Lp, {
-                            className: a()(x.Ad, x.PP),
+                            className: a()(g.Ad, g.PP),
                             color: i.A.unsafe_rawColors.BRAND_260.css,
-                            text: g.intl.string(g.t.y2b7CA),
+                            text: x.intl.string(x.t.y2b7CA),
                         })
                       : null,
-                  p &&
+                  N &&
                       (0, s.jsx)("div", {
-                          className: f.Ne,
+                          className: A.Ne,
                           children: (0, s.jsx)(r.m, {
-                              text: g.intl.string(g.t["1QLRYb"]),
+                              text: x.intl.string(x.t["1QLRYb"]),
                               children: (0, s.jsx)(o.t, { size: "custom", width: 16, height: 16, color: "white" }),
                           }),
                       }),
-                  m.map((e) =>
+                  h.map((e) =>
                       (0, s.jsx)(
-                          h.A,
-                          { tag: e, size: h.A.Sizes.SMALL, className: a()(l, { [f.At]: C.has(e.id) }) },
+                          m.A,
+                          { tag: e, size: m.A.Sizes.SMALL, className: a()(l, { [A.At]: C.has(e.id) }) },
                           e.id,
                       ),
                   ),
-                  v > 0 ? (0, s.jsx)(h.q, { tags: j, count: v, size: h.A.Sizes.SMALL }) : null,
+                  v > 0 ? (0, s.jsx)(m.q, { tags: j, count: v, size: m.A.Sizes.SMALL }) : null,
               ],
           })
         : null;

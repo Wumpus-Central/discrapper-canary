@@ -33,16 +33,16 @@ function l(e) {
                     })(l))
         )
             return !1;
-        function n(e) {
+        function i(e) {
             let t = e.getBoundingClientRect();
             return (
                 (t.height > 0 && t.width > 0) ||
                 ("hidden" != r.getComputedStyle(e).overflow &&
-                    Array.from(e.childNodes).some((e) => 3 === e.nodeType || (a(e) && n(e))))
+                    Array.from(e.childNodes).some((e) => 3 === e.nodeType || (a(e) && i(e))))
             );
         }
         return (
-            (!!t || !!n(l)) &&
+            (!!t || !!i(l)) &&
             !(
                 !t &&
                 (function e(t) {
@@ -53,8 +53,8 @@ function l(e) {
                                     l = t.getBoundingClientRect(),
                                     o = t.ownerDocument,
                                     s = o.documentElement,
-                                    n = o.body,
-                                    i = r.getComputedStyle(s).overflow;
+                                    i = o.body,
+                                    n = r.getComputedStyle(s).overflow;
                                 function u(e) {
                                     let t = r.getComputedStyle(e).position;
                                     if ("fixed" == t) return (a = !0), e == s ? null : s;
@@ -86,9 +86,9 @@ function l(e) {
                                 for (let o = u(t); o; o = u(o)) {
                                     let t = (function (e) {
                                         let t = e;
-                                        if ("visible" == i) {
-                                            if (e == s && n) t = n;
-                                            else if (e == n) return { x: "visible", y: "visible" };
+                                        if ("visible" == n) {
+                                            if (e == s && i) t = i;
+                                            else if (e == i) return { x: "visible", y: "visible" };
                                         }
                                         let a = {
                                             x: r.getComputedStyle(t).overflowX,
@@ -129,7 +129,7 @@ function l(e) {
                                 return "none";
                             })(t) &&
                         Array.from(t.childNodes).every(function (r) {
-                            return !a(r) || e(r) || !n(r);
+                            return !a(r) || e(r) || !i(r);
                         })
                     );
                 })(l)

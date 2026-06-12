@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { $8: () => o, ON: () => s, QJ: () => a, Vx: () => l, tn: () => d });
-var r,
-    i,
+n.d(t, { $8: () => o, ON: () => s, QJ: () => a, Vx: () => l, tn: () => c });
+var i,
+    r,
     s =
-        (((r = {}).NativeOOP = "native_oop"),
-        (r.NativeLegacy = "native_legacy"),
-        (r.OOPModule = "oop_module"),
-        (r.LegacyModule = "legacy_module"),
-        (r.Flux = "flux"),
-        (r.Renderer = "renderer"),
-        r),
-    a = (((i = {}).Info = "info"), (i.Error = "error"), (i.Warning = "warn"), i);
+        (((i = {}).NativeOOP = "native_oop"),
+        (i.NativeLegacy = "native_legacy"),
+        (i.OOPModule = "oop_module"),
+        (i.LegacyModule = "legacy_module"),
+        (i.Flux = "flux"),
+        (i.Renderer = "renderer"),
+        i),
+    a = (((r = {}).Info = "info"), (r.Error = "error"), (r.Warning = "warn"), r);
 function o(e, t) {
     return e.name === t;
 }
@@ -20,13 +20,13 @@ function l(e) {
 function u(e) {
     return { timestamp: e.timestamp, name: e.name, data: e.data, type: e.type, pid: e.pid };
 }
-function d(e, t) {
+function c(e, t) {
     let n = e.map(u),
-        r = null != t ? n.filter(t) : n,
-        i = {};
-    for (let e of r) {
+        i = null != t ? n.filter(t) : n,
+        r = {};
+    for (let e of i) {
         let t = `${e.type}-${e.pid}-${e.name}`;
-        i[t] = (function (e, t) {
+        r[t] = (function (e, t) {
             let n = e.reduce((e, t) => ((e[t.timestamp] = t.data), e), {});
             return {
                 type: t?.type ?? e[0].type,
@@ -34,7 +34,7 @@ function d(e, t) {
                 name: t?.name ?? e[0].name,
                 batchedData: { ...(t?.batchedData ?? {}), ...n },
             };
-        })([e], i[t]);
+        })([e], r[t]);
     }
-    return Object.values(i);
+    return Object.values(r);
 }

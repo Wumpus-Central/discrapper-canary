@@ -2,7 +2,7 @@
 n.d(t, { A: () => A }), n(321073);
 var i = n(17928),
     r = n(228366),
-    s = n(845584),
+    s = n(913122),
     a = n(320095),
     o = n(815807),
     l = n(495544),
@@ -62,12 +62,12 @@ class c {
 }
 let d = new Map(),
     _ = new Map(),
-    f = new Map();
-function h(e) {
+    h = new Map();
+function f(e) {
     return d.get(e) ?? new c();
 }
 function p(e) {
-    let t = h(e);
+    let t = f(e);
     return d.set(e, t), t;
 }
 function E(e, t) {
@@ -94,34 +94,34 @@ class g extends i.Ay.Store {
         return _.get(e);
     }
     getTotalCount(e) {
-        return h(e).totalResults;
+        return f(e).totalResults;
     }
     getIsInitialFetchComplete(e) {
-        return h(e).isInitialFetchComplete;
+        return f(e).isInitialFetchComplete;
     }
     getIsIndexing(e) {
-        return h(e).isIndexing;
+        return f(e).isIndexing;
     }
     getIsHistoricalIndexing(e) {
-        return h(e).isHistoricalIndexing;
+        return f(e).isHistoricalIndexing;
     }
     getDocumentsIndexed(e) {
-        return h(e).documentsIndexed;
+        return f(e).documentsIndexed;
     }
     getIsFetching(e) {
-        return h(e).isFetching;
+        return f(e).isFetching;
     }
     getError(e) {
-        return h(e).error;
+        return f(e).error;
     }
     getMessages(e) {
-        return h(e).messages;
+        return f(e).messages;
     }
     getCursor(e) {
-        return h(e).cursor;
+        return f(e).cursor;
     }
     getAnalyticsId(e) {
-        return h(e).analyticsId;
+        return f(e).analyticsId;
     }
     hasSearchState(e) {
         return d.has(e);
@@ -142,8 +142,8 @@ let A = new g(r.h, {
                 });
             t.handleSearchSuccess(e, n).forEach((e) => {
                 _.set(e.id, e);
-                let t = f.get(e.id) ?? 0;
-                f.set(e.id, t + 1);
+                let t = h.get(e.id) ?? 0;
+                h.set(e.id, t + 1);
             });
         });
     },
@@ -161,13 +161,13 @@ let A = new g(r.h, {
         let t = d.get(e.id);
         if (null == t) return !1;
         t.messageIds.forEach((e) => {
-            let t = f.get(e) ?? 0;
-            t <= 1 ? (_.delete(e), f.delete(e)) : f.set(e, t - 1);
+            let t = h.get(e) ?? 0;
+            t <= 1 ? (_.delete(e), h.delete(e)) : h.set(e, t - 1);
         }),
             d.delete(e.id);
     },
     SEARCH_MESSAGES_CLEAR_ALL: function (e) {
-        (d = new Map()), (_ = new Map()), (f = new Map());
+        (d = new Map()), (_ = new Map()), (h = new Map());
     },
     MESSAGE_UPDATE: function (e) {
         let t = e.message.id;
@@ -193,6 +193,6 @@ let A = new g(r.h, {
         return E(t, (e) => e.removeReactionsForEmoji(n));
     },
     CONNECTION_OPEN: function () {
-        (d = new Map()), (_ = new Map()), (f = new Map());
+        (d = new Map()), (_ = new Map()), (h = new Map());
     },
 });

@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { M: () => c });
-var r = n(114099),
-    i = n(297987),
+n.d(t, { M: () => d });
+var i = n(114099),
+    r = n(297987),
     s = n(241827),
     a = n(64700);
 let o = !1,
@@ -13,7 +13,7 @@ function u(e) {
             o = !1;
         }, 50));
 }
-function d() {
+function c() {
     if ("u" > typeof document)
         return (
             0 === l && "u" > typeof PointerEvent && document.addEventListener("pointerup", u),
@@ -23,47 +23,47 @@ function d() {
             }
         );
 }
-function c(e) {
+function d(e) {
     let { onHoverStart: t, onHoverChange: n, onHoverEnd: l, isDisabled: u } = e,
-        [c, _] = (0, a.useState)(!1),
-        f = (0, a.useRef)({ isHovered: !1, ignoreEmulatedMouseEvents: !1, pointerType: "", target: null }).current;
-    (0, a.useEffect)(d, []);
-    let { addGlobalListener: E, removeAllGlobalListeners: h } = (0, r.A)(),
-        { hoverProps: p, triggerHoverEnd: m } = (0, a.useMemo)(() => {
+        [d, _] = (0, a.useState)(!1),
+        h = (0, a.useRef)({ isHovered: !1, ignoreEmulatedMouseEvents: !1, pointerType: "", target: null }).current;
+    (0, a.useEffect)(c, []);
+    let { addGlobalListener: f, removeAllGlobalListeners: p } = (0, i.A)(),
+        { hoverProps: E, triggerHoverEnd: m } = (0, a.useMemo)(() => {
             let e = (e, t) => {
-                    let r = f.target;
-                    (f.pointerType = ""),
-                        (f.target = null),
+                    let i = h.target;
+                    (h.pointerType = ""),
+                        (h.target = null),
                         "touch" !== t &&
-                            f.isHovered &&
-                            r &&
-                            ((f.isHovered = !1),
-                            h(),
-                            l && l({ type: "hoverend", target: r, pointerType: t }),
+                            h.isHovered &&
+                            i &&
+                            ((h.isHovered = !1),
+                            p(),
+                            l && l({ type: "hoverend", target: i, pointerType: t }),
                             n && n(!1),
                             _(!1));
                 },
-                r = {};
+                i = {};
             return (
                 "u" > typeof PointerEvent &&
-                    ((r.onPointerEnter = (r) => {
-                        (o && "mouse" === r.pointerType) ||
-                            ((r, a) => {
+                    ((i.onPointerEnter = (i) => {
+                        (o && "mouse" === i.pointerType) ||
+                            ((i, a) => {
                                 if (
-                                    ((f.pointerType = a),
-                                    u || "touch" === a || f.isHovered || !r.currentTarget.contains(r.target))
+                                    ((h.pointerType = a),
+                                    u || "touch" === a || h.isHovered || !i.currentTarget.contains(i.target))
                                 )
                                     return;
-                                f.isHovered = !0;
-                                let o = r.currentTarget;
-                                (f.target = o),
-                                    E(
-                                        (0, i.TW)(r.target),
+                                h.isHovered = !0;
+                                let o = i.currentTarget;
+                                (h.target = o),
+                                    f(
+                                        (0, r.TW)(i.target),
                                         "pointerover",
                                         (t) => {
-                                            f.isHovered &&
-                                                f.target &&
-                                                !(0, s.sD)(f.target, t.target) &&
+                                            h.isHovered &&
+                                                h.target &&
+                                                !(0, s.sD)(h.target, t.target) &&
                                                 e(t, t.pointerType);
                                         },
                                         { capture: !0 },
@@ -71,18 +71,18 @@ function c(e) {
                                     t && t({ type: "hoverstart", target: o, pointerType: a }),
                                     n && n(!0),
                                     _(!0);
-                            })(r, r.pointerType);
+                            })(i, i.pointerType);
                     }),
-                    (r.onPointerLeave = (t) => {
+                    (i.onPointerLeave = (t) => {
                         !u && t.currentTarget.contains(t.target) && e(t, t.pointerType);
                     })),
-                { hoverProps: r, triggerHoverEnd: e }
+                { hoverProps: i, triggerHoverEnd: e }
             );
-        }, [t, n, l, u, f, E, h]);
+        }, [t, n, l, u, h, f, p]);
     return (
         (0, a.useEffect)(() => {
-            u && m({ currentTarget: f.target }, f.pointerType);
+            u && m({ currentTarget: h.target }, h.pointerType);
         }, [u]),
-        { hoverProps: p, isHovered: c }
+        { hoverProps: E, isHovered: d }
     );
 }

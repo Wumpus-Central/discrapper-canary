@@ -1,8 +1,8 @@
-var r = n(850714),
-    i = n(934503),
-    a = n(240820);
-e.exports = i
+var i = n(850714),
+    r = n(934503),
+    s = n(240820);
+e.exports = r
     ? function (e, t) {
-          return i(e, "toString", { configurable: !0, enumerable: !1, value: r(t), writable: !0 });
+          return r(e, "toString", { configurable: !0, enumerable: !1, value: i(t), writable: !0 });
       }
-    : a;
+    : s;

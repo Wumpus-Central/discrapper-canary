@@ -10,17 +10,17 @@ var i = n(627968),
     c = n(364840),
     d = n(696208),
     _ = n(17928),
-    f = n(43990),
-    h = n(726249),
+    h = n(43990),
+    f = n(726249),
     p = n(540999),
     E = n(652215),
     m = n(375708),
     g = n(966258);
 function A(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: r } = e;
-    (0, h.HU)({ location: m.intl.string(m.t["3S2494"]) });
+    (0, f.HU)({ location: m.intl.string(m.t["3S2494"]) });
     let s = (0, _.bG)([p.A], () => p.A.isDeveloper) ? "92px" : void 0;
-    return (0, i.jsx)(f.N, {
+    return (0, i.jsx)(h.N, {
         theme: E.NJ8.DARK,
         children: (e) =>
             (0, i.jsx)("div", {

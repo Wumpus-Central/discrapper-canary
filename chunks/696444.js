@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(935816);
-class i {
+n.d(t, { A: () => r });
+var i = n(384726);
+class r {
     prices;
     type;
     premiumType;
@@ -17,7 +17,7 @@ class i {
             (this.summary = e.summary);
     }
     static fromServer(e) {
-        let { prices: t, type: n, premium_type: a, name: s, sku_id: o, summary: l } = e;
-        return new i({ prices: (0, r.m)(t), type: n, premiumType: a, name: s, skuId: o, summary: l });
+        let { prices: t, type: n, premium_type: s, name: a, sku_id: o, summary: l } = e;
+        return new r({ prices: (0, i.A)(t), type: n, premiumType: s, name: a, skuId: o, summary: l });
     }
 }

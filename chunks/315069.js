@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => r });
-class r {
+n.d(t, { A: () => i });
+class i {
     toJS() {
         return { ...this };
     }
@@ -16,20 +16,20 @@ class r {
         let t = null;
         for (let n in e) {
             if (!e.hasOwnProperty(n)) continue;
-            let r = this[n],
-                i = e[n];
-            (i instanceof Date && r instanceof Date && i.getTime() === r.getTime()) ||
-                (r !== i && (null == t && (t = { ...this }), (t[n] = e[n])));
+            let i = this[n],
+                r = e[n];
+            (r instanceof Date && i instanceof Date && r.getTime() === i.getTime()) ||
+                (i !== r && (null == t && (t = { ...this }), (t[n] = e[n])));
         }
         return null != t ? new this.constructor(t) : this;
     }
     update(e, t, n) {
         null == n && ((n = t), (t = void 0));
-        let i = this[e];
+        let r = this[e];
         return (
-            i instanceof r || (i instanceof Array ? (i = [...i]) : i instanceof Object && (i = { ...i })),
-            void 0 === i && (i = t),
-            this.set(e, n(i))
+            r instanceof i || (r instanceof Array ? (r = [...r]) : r instanceof Object && (r = { ...r })),
+            void 0 === r && (r = t),
+            this.set(e, n(r))
         );
     }
 }

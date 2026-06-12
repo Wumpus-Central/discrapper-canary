@@ -1,64 +1,64 @@
-e.d(t, { default: () => b });
-var i = e(627968);
-e(64700);
-var l = e(17928),
-    r = e(477782),
-    o = e(811893),
-    a = e(550079),
-    d = e(442433),
-    c = e(886393),
-    u = e(475777),
-    s = e(567249),
-    A = e(574172),
-    E = e(253932),
-    p = e(235661),
-    v = e(71393),
-    g = e(652215),
-    D = e(985018);
-function b(n) {
-    var t;
-    let e,
-        b,
-        h,
-        I,
-        { channel: L, onSelect: _, onInteraction: x } = n,
-        G = (0, p.A)(),
-        P = E.vL.useSetting(),
-        j =
-            ((t = L ?? void 0),
-            (e = (0, l.bG)([s.A], () => s.A.getWindow(g.MLl.CHANNEL_CALL_POPOUT))),
-            null == t || null != e
+t.d(n, { default: () => C });
+var i = t(627968);
+t(64700);
+var e = t(17928),
+    a = t(477782),
+    o = t(811893),
+    s = t(980707),
+    c = t(442433),
+    u = t(886393),
+    d = t(475777),
+    r = t(567249),
+    p = t(574172),
+    h = t(885386),
+    g = t(922795),
+    v = t(71393),
+    A = t(652215),
+    b = t(375708);
+function C(l) {
+    var n;
+    let t,
+        C,
+        L,
+        k,
+        { channel: x, onSelect: _, onInteraction: j } = l,
+        G = (0, g.A)(),
+        w = h.vL.useSetting(),
+        S =
+            ((n = x ?? void 0),
+            (t = (0, e.bG)([r.A], () => r.A.getWindow(A.MLl.CHANNEL_CALL_POPOUT))),
+            null == n || null != t
                 ? null
-                : (0, i.jsx)(r.Dr, {
+                : (0, i.jsx)(a.Dr, {
                       id: "popout-call",
-                      label: D.intl.string(D.t.JzWezz),
+                      label: b.intl.string(b.t.JzWezz),
                       icon: o.t,
                       trailingIndicator: { type: "icon", icon: o.t },
-                      action: () => A.openChannelCallPopout(t),
+                      action: () => p.openChannelCallPopout(n),
                   })),
-        y =
-            ((b = (0, l.bG)([v.A], () => v.A.getGuild(L?.guild_id))),
-            (h = (0, u.A)(L ?? null, b ?? null)),
-            (I = (0, c.A)(L ?? null)),
-            null != L && L.isGuildVocal() ? (0, i.jsxs)(r.rX, { children: [h, I] }) : null);
-    return (0, i.jsxs)(a.W, {
+        z =
+            ((C = (0, e.bG)([v.A], () => v.A.getGuild(x?.guild_id))),
+            (L = (0, d.A)(x ?? null, C ?? null)),
+            (k = (0, u.A)(x ?? null)),
+            null != x && x.isGuildVocal() ? (0, i.jsxs)(a.rX, { children: [L, k] }) : null);
+    return (0, i.jsxs)(s.W, {
         "data-menu-migrated-auto": !0,
         navId: "rtc-channel",
-        "aria-label": D.intl.string(D.t.ogxXGq),
-        onClose: d.Z_,
+        "aria-label": b.intl.string(b.t.ogxXGq),
+        onClose: c.Z_,
         onSelect: _,
-        onInteraction: x,
+        onInteraction: j,
         children: [
             G,
-            y,
-            (0, i.jsxs)(r.rX, {
+            z,
+            (0, i.jsxs)(a.rX, {
                 children: [
-                    j,
-                    (0, i.jsx)(r.sL, {
+                    S,
+                    (0, i.jsx)(a.sL, {
                         id: "show-voice-states",
-                        checked: P,
-                        action: () => E.vL.updateSetting(!P),
-                        label: D.intl.string(D.t.vkbSB0),
+                        checked: w,
+                        action: () => h.vL.updateSetting(!w),
+                        label: b.intl.string(b.t.vkbSB0),
                     }),
                 ],
             }),

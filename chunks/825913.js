@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { CC: () => d, JT: () => _, Kq: () => u, P_: () => l, SK: () => p, Sl: () => c, _E: () => f });
-var r = n(533715),
-    i = n(561514),
-    a = n(803082),
-    s = n(3388),
+n.d(t, { CC: () => d, JT: () => _, Kq: () => u, P_: () => l, SK: () => f, Sl: () => c, _E: () => h });
+var i = n(533715),
+    r = n(561514),
+    s = n(318473),
+    a = n(3388),
     o = n(64700);
 let l = Symbol("default");
 function u({ values: e, children: t }) {
-    for (let [n, r] of e) t = o.createElement(n.Provider, { value: r }, t);
+    for (let [n, i] of e) t = o.createElement(n.Provider, { value: i }, t);
     return t;
 }
 function c(e) {
     let {
         className: t,
         style: n,
-        children: r,
-        defaultClassName: i,
-        defaultChildren: a,
-        defaultStyle: s,
+        children: i,
+        defaultClassName: r,
+        defaultChildren: s,
+        defaultStyle: a,
         values: l,
     } = e;
     return (0, o.useMemo)(() => {
         let e, o, u;
         return (
-            (e = "function" == typeof t ? t({ ...l, defaultClassName: i }) : t),
-            (o = "function" == typeof n ? n({ ...l, defaultStyle: s || {} }) : n),
-            (u = "function" == typeof r ? r({ ...l, defaultChildren: a }) : null == r ? a : r),
+            (e = "function" == typeof t ? t({ ...l, defaultClassName: r }) : t),
+            (o = "function" == typeof n ? n({ ...l, defaultStyle: a || {} }) : n),
+            (u = "function" == typeof i ? i({ ...l, defaultChildren: s }) : null == i ? s : i),
             {
-                className: null != e ? e : i,
-                style: o || s ? { ...s, ...o } : void 0,
-                children: null != u ? u : a,
+                className: null != e ? e : r,
+                style: o || a ? { ...a, ...o } : void 0,
+                children: null != u ? u : s,
                 "data-rac": "",
             }
         );
-    }, [t, n, r, i, a, s, l]);
+    }, [t, n, i, r, s, a, l]);
 }
 function d(e, t) {
     let n = (0, o.useContext)(e);
@@ -42,17 +42,17 @@ function d(e, t) {
         let e = t || l;
         if (!n.slots[e]) {
             let e = new Intl.ListFormat().format(Object.keys(n.slots).map((e) => `"${e}"`)),
-                r = t ? `Invalid slot "${t}".` : "A slot prop is required.";
-            throw Error(`${r} Valid slot names are ${e}.`);
+                i = t ? `Invalid slot "${t}".` : "A slot prop is required.";
+            throw Error(`${i} Valid slot names are ${e}.`);
         }
         return n.slots[e];
     }
     return n;
 }
 function _(e, t, n) {
-    let { ref: s, ...l } = d(n, e.slot) || {},
-        u = (0, r.U)((0, o.useMemo)(() => (0, i.P)(t, s), [t, s])),
-        c = (0, a.v)(l, e);
+    let { ref: a, ...l } = d(n, e.slot) || {},
+        u = (0, i.U)((0, o.useMemo)(() => (0, r.P)(t, a), [t, a])),
+        c = (0, s.v)(l, e);
     return (
         "style" in l &&
             l.style &&
@@ -61,30 +61,30 @@ function _(e, t, n) {
             ("function" == typeof l.style || "function" == typeof e.style
                 ? (c.style = (t) => {
                       let n = "function" == typeof l.style ? l.style(t) : l.style,
-                          r = { ...t.defaultStyle, ...n },
-                          i = "function" == typeof e.style ? e.style({ ...t, defaultStyle: r }) : e.style;
-                      return { ...r, ...i };
+                          i = { ...t.defaultStyle, ...n },
+                          r = "function" == typeof e.style ? e.style({ ...t, defaultStyle: i }) : e.style;
+                      return { ...i, ...r };
                   })
                 : (c.style = { ...l.style, ...e.style })),
         [c, u]
     );
 }
-function f(e = !0) {
+function h(e = !0) {
     let [t, n] = (0, o.useState)(e),
-        r = (0, o.useRef)(!1),
-        i = (0, o.useCallback)((e) => {
-            (r.current = !0), n(!!e);
+        i = (0, o.useRef)(!1),
+        r = (0, o.useCallback)((e) => {
+            (i.current = !0), n(!!e);
         }, []);
     return (
-        (0, s.N)(() => {
-            r.current || n(!1);
+        (0, a.N)(() => {
+            i.current || n(!1);
         }, []),
-        [i, t]
+        [r, t]
     );
 }
-function p(e) {
+function f(e) {
     let t = /^(data-.*)$/,
         n = {};
-    for (let r in e) t.test(r) || (n[r] = e[r]);
+    for (let i in e) t.test(i) || (n[i] = e[i]);
     return n;
 }

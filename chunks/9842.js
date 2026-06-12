@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => b, a: () => h }), n(321073);
+n.d(t, { A: () => b, a: () => f }), n(321073);
 var i,
     r = n(635377),
     s = n.n(r),
@@ -10,8 +10,8 @@ var i,
     c = n(320095),
     d = n(734057),
     _ = n(232835),
-    f = n(652215),
-    h =
+    h = n(652215),
+    f =
         (((i = {})[(i.LOADED = 0)] = "LOADED"),
         (i[(i.NOT_LOADED = 1)] = "NOT_LOADED"),
         (i[(i.DELETED = 2)] = "DELETED"),
@@ -76,7 +76,7 @@ class g {
 let A = new g();
 function I(e) {
     let t = !1;
-    if ((A.updateExistingMessageIfCached(e) && (t = !0), f.sl8.has(e.type))) {
+    if ((A.updateExistingMessageIfCached(e) && (t = !0), h.sl8.has(e.type))) {
         let n = e.message_reference;
         if (null == n) return t;
         let i = n.message_id;
@@ -85,7 +85,7 @@ function I(e) {
             let t = e.referenced_message;
             null != t
                 ? (A.set(t.channel_id, t.id, { state: 0, message: (0, c.rh)(t) }),
-                  e.type === f.lAJ.THREAD_STARTER_MESSAGE && I(t))
+                  e.type === h.lAJ.THREAD_STARTER_MESSAGE && I(t))
                 : A.set(e.channel_id, i, { state: 2 });
         } else {
             let e = _.A.getMessage(n.channel_id, i) ?? l.A.getMessage(n.channel_id, i);
@@ -104,28 +104,28 @@ function S(e) {
     let { messages: t } = e;
     return T(t, (e) => I(e));
 }
-function N(e) {
+function y(e) {
     let { data: t } = e;
     return T(t, (e) => {
         let { messages: t } = e;
         return T(t, (e) => T(e, (e) => I(e)));
     });
 }
-function y(e) {
+function N(e) {
     return A.deleteChannelCache(e.channel.id);
 }
-function C(e, t) {
+function v(e, t) {
     if (!A.has(e, t)) return !1;
     A.set(e, t, { state: 2 });
 }
-function v() {
+function C() {
     A.clear();
 }
-function O(e) {
+function R(e) {
     let { firstMessages: t } = e;
     return null != t && T(t, (e) => I(e));
 }
-class R extends a.Ay.Store {
+class O extends a.Ay.Store {
     static displayName = "ReferencedMessageStore";
     initialize() {
         this.waitFor(_.A, d.A, l.A);
@@ -142,7 +142,7 @@ class R extends a.Ay.Store {
         return null != e && (t = A.getCachedMessageIdsForChannel(e)), t ?? E;
     }
 }
-let b = new R(o.h, {
+let b = new O(o.h, {
     CACHE_LOADED: function (e) {
         let { messages: t } = e;
         return T(Object.values(t), (e) => T(Object.values(e), (e) => I(e)));
@@ -150,14 +150,14 @@ let b = new R(o.h, {
     LOCAL_MESSAGES_LOADED: S,
     LOAD_MESSAGES_SUCCESS: S,
     LOAD_MESSAGES_AROUND_SUCCESS: S,
-    SEARCH_MESSAGES_SUCCESS: N,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
+    SEARCH_MESSAGES_SUCCESS: y,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: y,
     CONVERSATION_FETCH_SUCCESS: function (e) {
         let { messages: t } = e;
         return T(t, (e) => I(e));
     },
-    LOAD_THREADS_SUCCESS: O,
-    LOAD_ARCHIVED_THREADS_SUCCESS: O,
+    LOAD_THREADS_SUCCESS: R,
+    LOAD_ARCHIVED_THREADS_SUCCESS: R,
     MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
         let { messageId: t, channelId: n } = e;
         if (!A.has(n, t)) return !1;
@@ -187,21 +187,21 @@ let b = new R(o.h, {
     },
     MESSAGE_DELETE: function (e) {
         let { id: t, channelId: n } = e;
-        return C(n, t);
+        return v(n, t);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t, channelId: n } = e;
-        return T(t, (e) => C(n, e));
+        return T(t, (e) => v(n, e));
     },
     CREATE_PENDING_REPLY: function (e) {
         let { message: t } = e;
         A.set(t.channel_id, t.id, { state: 0, message: t });
     },
-    CHANNEL_DELETE: y,
-    THREAD_DELETE: y,
+    CHANNEL_DELETE: N,
+    THREAD_DELETE: N,
     GUILD_DELETE: function () {
         if (0 === A.retainWhere((e) => null != d.A.getChannel(e))) return !1;
     },
-    CONNECTION_OPEN: v,
-    LOGOUT: v,
+    CONNECTION_OPEN: C,
+    LOGOUT: C,
 });

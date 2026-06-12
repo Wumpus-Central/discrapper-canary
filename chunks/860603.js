@@ -22,7 +22,7 @@ var i,
     C = n(192308),
     v = n(406810),
     T = n(950305),
-    I = n(359778),
+    I = n(993077),
     S = n(834730),
     y = n(404778),
     O = n(430392),
@@ -993,12 +993,12 @@ function e3(e) {
         ],
     });
 }
-var e7 = n(573648);
+var e1 = n(573648);
 n(323874), n(14289), n(35956);
-var e1 = n(989349),
-    e8 = n.n(e1),
-    e6 = n(788373),
-    e4 =
+var e7 = n(989349),
+    e8 = n.n(e7),
+    e4 = n(788373),
+    e6 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
         (i[(i.SEVEN_DAYS = 7)] = "SEVEN_DAYS"),
@@ -1034,9 +1034,9 @@ function to(e) {
         }, [i, g]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (f || i.expire_behavior !== e6.F.KICK) {
+                if (f || i.expire_behavior !== e4.F.KICK) {
                     let e =
-                        i.expire_behavior === e6.F.REMOVE_ROLE
+                        i.expire_behavior === e4.F.REMOVE_ROLE
                             ? X.intl.string(X.t["6kpw4i"])
                             : X.intl.string(X.t.fQUQIJ);
                     (0, eR.A)({
@@ -1065,7 +1065,7 @@ function to(e) {
             syncLabel: w,
             subscribersText: M,
         } = s.useMemo(() => {
-            let e = e7.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
+            let e = e1.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
             switch (i.type) {
                 case e5.s.YOUTUBE:
                     return {
@@ -1094,7 +1094,7 @@ function to(e) {
         { roleLink: W, syncDescriptionText: G } = s.useMemo(() => {
             let e;
             e = null != _ ? (0, l.jsx)(ti.Anchor, { onClick: C, children: _.name }) : X.intl.string(X.t.PoWNfe);
-            let t = e7.A.get(i.type);
+            let t = e1.A.get(i.type);
             return {
                 roleLink: e,
                 syncDescriptionText:
@@ -1280,12 +1280,12 @@ function to(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e6.F.REMOVE_ROLE.toString(),
+                                                value: e4.F.REMOVE_ROLE.toString(),
                                                 label: X.intl.string(X.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e6.F.KICK.toString(),
+                                                value: e4.F.KICK.toString(),
                                                 label: X.intl.string(X.t.fQUQIJ),
                                             },
                                         ],
@@ -1301,7 +1301,7 @@ function to(e) {
                                         placeholder: X.intl.string(X.t.uiXMow),
                                         maxOptionsVisible: 5,
                                         value: `${t.expire_grace_period}`,
-                                        options: Object.values(e4)
+                                        options: Object.values(e6)
                                             .filter(Number.isInteger)
                                             .map((e) => ({
                                                 id: `${e}`,
@@ -1325,7 +1325,7 @@ function to(e) {
                         },
                     }),
                     !f &&
-                        a.expire_behavior === e6.F.KICK &&
+                        a.expire_behavior === e4.F.KICK &&
                         (0, l.jsx)(S.E, {
                             className: ta.Ce,
                             color: "text-feedback-critical",
@@ -1425,7 +1425,7 @@ function td(e) {
             errors: d,
             canNavigate: m,
         } = e,
-        g = e7.A.get(a),
+        g = e1.A.get(a),
         h = s.useCallback(
             async (e) => {
                 m() && (await R.A.enableIntegration(i.id, e.type, e.id), u.A.startEditingIntegration(e.id));
@@ -2052,7 +2052,7 @@ function t$(e) {
         ),
         el &&
             eE.push(
-                ((x = e7.A.get(eD.fg2.TWITCH)),
+                ((x = e1.A.get(eD.fg2.TWITCH)),
                 ee > 0
                     ? ((m = (0, l.jsx)(tG.u, { size: "xs" })),
                       (d = X.intl.formatToPlainString(X.t.FFpnT8, { count: en })),
@@ -2078,7 +2078,7 @@ function t$(e) {
             ),
         es &&
             eE.push(
-                ((E = e7.A.get(eD.fg2.YOUTUBE)),
+                ((E = e1.A.get(eD.fg2.YOUTUBE)),
                 et > 0
                     ? ((N = (0, l.jsx)(tG.u, { size: "xs" })),
                       (p = X.intl.formatToPlainString(X.t.b2g5vC, { count: ei })),
@@ -2251,8 +2251,8 @@ function t3(e) {
         ],
     });
 }
-var t7 = n(458203);
-function t1(e, t) {
+var t1 = n(458203);
+function t7(e, t) {
     switch (e) {
         case eD.wLn.APPLICATION:
             return t?.application.name ?? "";
@@ -2481,20 +2481,20 @@ let t8 = s.memo(function (e) {
         children: [
             (0, l.jsx)(h.A, {
                 align: h.A.Align.CENTER,
-                className: t7.jD,
+                className: t1.jD,
                 children:
                     t === eD.wLn.OVERVIEW
-                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t1(eD.wLn.OVERVIEW) })
+                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t7(eD.wLn.OVERVIEW) })
                         : (0, l.jsx)(d.A, {
                               activeId: t.toString(),
-                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t1(e, D[M]) })),
+                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t7(e, D[M]) })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && G(parseInt(e.id));
                               },
                               renderCustomBreadcrumb: (e, t) =>
                                   (0, l.jsx)(c.D, {
                                       variant: "heading-lg/semibold",
-                                      className: t ? t7.q3 : t7.fd,
+                                      className: t ? t1.q3 : t1.fd,
                                       children: e.label,
                                   }),
                           }),

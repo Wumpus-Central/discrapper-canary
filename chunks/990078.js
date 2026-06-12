@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { m: () => h });
+n.d(t, { m: () => f });
 var i = n(627968),
     r = n(64700),
     s = n(140735),
@@ -10,12 +10,12 @@ var i = n(627968),
     c = n(348275),
     d = n(505679),
     _ = n(521754),
-    f = n(310855);
-function h(e) {
+    h = n(310855);
+function f(e) {
     let {
             children: t,
             text: n,
-            keyboardShortcut: h,
+            keyboardShortcut: f,
             __unsupportedReactNodeAsText: p,
             asContainer: E = !1,
             tag: m = "span",
@@ -24,80 +24,80 @@ function h(e) {
             spacing: I,
             layerContext: T,
             targetElementRef: S,
-            anchorRef: N,
-            caretConfig: y,
-            positionKey: C,
-            ariaHidden: v = !1,
-            ...O
+            anchorRef: y,
+            caretConfig: N,
+            positionKey: v,
+            ariaHidden: C = !1,
+            ...R
         } = e,
-        [R, b] = r.useState(null);
+        [O, b] = r.useState(null);
     r.useLayoutEffect(() => {
-        null != N && b(N.current);
-    }, [N]);
+        null != y && b(y.current);
+    }, [y]);
     let D = r.useCallback(
             (e) => {
-                null == N && b(e), (0, c.cZ)(S, e);
+                null == y && b(e), (0, c.cZ)(S, e);
             },
-            [S, N],
+            [S, y],
         ),
         {
             tooltipId: L,
             isVisible: w,
             targetElementRef: M,
             trigger: P,
-        } = (0, _.D)({ children: t, targetElementRef: D, asContainer: E, containerTag: m, ariaHidden: v, ...O }),
-        [x, U] = r.useState(!1),
-        { defaultLayerContext: k } = (0, a.G9)(),
+        } = (0, _.D)({ children: t, targetElementRef: D, asContainer: E, containerTag: m, ariaHidden: C, ...R }),
+        [x, k] = r.useState(!1),
+        { defaultLayerContext: U } = (0, a.G9)(),
         G = r.useMemo(
             () =>
                 null != p
                     ? p
                     : null == n || "" === n
                       ? null
-                      : null != h && "" !== h
+                      : null != f && "" !== f
                         ? (0, i.jsxs)("div", {
-                              className: f.Cl,
+                              className: h.Cl,
                               children: [
                                   (0, i.jsx)(o.E, { variant: "text-sm/medium", children: n }),
-                                  (0, i.jsx)(l.e, { shortcut: h }),
+                                  (0, i.jsx)(l.e, { shortcut: f }),
                               ],
                           })
                         : n,
-            [n, h, p],
+            [n, f, p],
         ),
         F = null != G && ("string" != typeof G || "" !== G),
         V = w || x;
     r.useEffect(() => {
-        w && F ? U(!0) : F || U(!1);
+        w && F ? k(!0) : F || k(!1);
     }, [w, F]);
     let B = r.useCallback(() => {
-            U(!1);
+            k(!1);
         }, []),
         H = (0, d.j)({ shouldShow: w, onExitComplete: B });
     if (!F && (w || !x)) return t;
     if (null == t || (!E && !r.isValidElement(t))) return null;
-    let j = C ?? (0, c.Xj)(n),
+    let j = v ?? (0, c.Xj)(n),
         Y = H((e, t) =>
             t
                 ? (0, i.jsx)(u.R, {
                       isVisible: w,
                       isRendered: V,
                       targetElementRef: M,
-                      targetElement: R,
-                      anchorRef: N,
+                      targetElement: O,
+                      anchorRef: y,
                       id: L,
                       content: G,
                       position: g,
                       align: A,
                       spacing: I,
-                      caretConfig: y,
-                      layerContext: T ?? k,
+                      caretConfig: N,
+                      layerContext: T ?? U,
                       animationStyle: e,
                       positionKey: j,
                   })
                 : null,
         );
     return (0, i.jsxs)(i.Fragment, {
-        children: [P, v || null == G || "" === G ? null : (0, i.jsx)(s.A, { id: L, children: G }), Y],
+        children: [P, C || null == G || "" === G ? null : (0, i.jsx)(s.A, { id: L, children: G }), Y],
     });
 }

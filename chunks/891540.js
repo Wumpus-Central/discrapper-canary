@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366),
     s = n(536194);
@@ -30,7 +30,7 @@ class l extends i.Ay.PersistedStore {
         return { hiddenHotspots: a, hotspotOverrides: o };
     }
 }
-let d = new l(r.h, {
+let u = new l(r.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { hiddenHotspots: t } = e;
         a = new Set(t);

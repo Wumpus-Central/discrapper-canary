@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { c: () => r });
-class r {
+n.d(t, { c: () => i });
+class i {
     searchFetchers = new Map();
     cleanUp(e) {
         this.cancel(e), this.delete(e);

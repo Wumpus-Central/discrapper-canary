@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     N1: "headerContainer__4dd8e",
     TP: "headerEmpty__4dd8e",
     G3: "closeContainer__4dd8e",

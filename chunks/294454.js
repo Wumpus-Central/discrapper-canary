@@ -20,10 +20,10 @@ function o(e) {
                 let { ForwardModal: e } = await Promise.all([
                     n.e("49589"),
                     n.e("59913"),
-                    n.e("51143"),
-                    n.e("52844"),
+                    n.e("42657"),
+                    n.e("44667"),
                     n.e("99149"),
-                    n.e("72688"),
+                    n.e("84570"),
                     n.e("46776"),
                     n.e("93924"),
                     n.e("76602"),
@@ -66,7 +66,7 @@ function u(e) {
     let { message: t, failedDestinations: s, forwardOptions: a } = e;
     (0, r.openModalLazy)(async () => {
         let { ForwardFailedAlertModal: e } = await Promise.all([
-            n.e("72688"),
+            n.e("84570"),
             n.e("46776"),
             n.e("40556"),
             n.e("77084"),

@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => o });
-var r = n(734057),
-    i = n(237774),
+var i = n(734057),
+    r = n(837152),
     s = n(652215),
     a = n(746080);
 function o(e) {
@@ -19,8 +19,8 @@ function o(e) {
         case a.VV.GUILD_BOOSTS:
             return;
     }
-    (0, i.k)(s.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+    (0, r.k)(s.HAw.CHANNEL_OPENED_CLICKSTREAM, {
         channel_id: t,
-        channel_type: r.A.getChannel(t)?.type ?? s.rbe.UNKNOWN,
+        channel_type: i.A.getChannel(t)?.type ?? s.rbe.UNKNOWN,
     });
 }

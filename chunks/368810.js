@@ -24,30 +24,30 @@ var n =
         };
     })(),
     a = r(64700),
-    i = c(a),
-    l = c(r(205662)),
+    i = p(a),
+    l = p(r(205662)),
     s = (function (e) {
         if (e && e.__esModule) return e;
         var t = {};
         if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
         return (t.default = e), t;
     })(r(738331)),
-    u = c(r(896132));
-function c(e) {
+    u = p(r(896132));
+function p(e) {
     return e && e.__esModule ? e : { default: e };
 }
-function p(e, t) {
+function c(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-var d = (t.Alpha = (function (e) {
+var f = (t.Alpha = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t() {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
         for (var e, r, n, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
         return (
-            (r = n = p(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
+            (r = n = c(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
             (n.handleChange = function (e) {
                 var t = s.calculateChange(e, n.props.hsl, n.props.direction, n.props.a, n.container);
                 t && "function" == typeof n.props.onChange && n.props.onChange(t, e);
@@ -64,7 +64,7 @@ var d = (t.Alpha = (function (e) {
                 window.removeEventListener("mousemove", n.handleChange),
                     window.removeEventListener("mouseup", n.handleMouseUp);
             }),
-            p(n, r)
+            c(n, r)
         );
     }
     return (
@@ -182,4 +182,4 @@ var d = (t.Alpha = (function (e) {
         t
     );
 })(a.PureComponent || a.Component));
-t.default = d;
+t.default = f;

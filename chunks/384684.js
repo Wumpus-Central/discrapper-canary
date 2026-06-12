@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => N });
 var i = n(17928),
     r = n(228366),
     s = n(260509),
@@ -10,8 +10,8 @@ var i = n(17928),
     c = n(287809),
     d = n(98318),
     _ = n(652215);
-let f = new Set(),
-    h = new Map(),
+let h = new Set(),
+    f = new Map(),
     p = new Map(),
     E = new Map(),
     m = new Map(),
@@ -22,18 +22,18 @@ function A(e) {
     if (null == n || null == t) return !1;
     let i = new Set(),
         r = new Set(),
-        f = new Set();
+        h = new Set();
     if ((m.set(e, (0, s.bM)(n, t)), n.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED))) {
         let s = o.Ay.getMember(e, t.id),
             u = new Set(s?.roles ?? []);
         for (let t of l.A.getSortedRoles(n.id))
-            (0, d.U)(t) && (i.add(t.id), (0, d.X)(t) && (r.add(t.id), u.has(t.id) && f.add(t.id))),
+            (0, d.U)(t) && (i.add(t.id), (0, d.X)(t) && (r.add(t.id), u.has(t.id) && h.add(t.id))),
                 u.has(t.id) && (0, a._m)(t, _.xBc.ADMINISTRATOR) && m.set(e, !0);
     }
-    return h.set(e, i), E.set(e, f), p.set(e, r), !0;
+    return f.set(e, i), E.set(e, h), p.set(e, r), !0;
 }
 function I() {
-    h.clear(), E.clear(), p.clear(), m.clear(), (g = null);
+    f.clear(), E.clear(), p.clear(), m.clear(), (g = null);
 }
 function T(e) {
     let {
@@ -55,9 +55,9 @@ function T(e) {
 }
 function S(e) {
     let { guildId: t } = e;
-    return !!h.has(t) && A(t);
+    return !!f.has(t) && A(t);
 }
-class N extends i.Ay.Store {
+class y extends i.Ay.Store {
     static displayName = "SubscriptionRoleStore";
     initialize() {
         this.waitFor(u.A, l.A, c.default, o.Ay);
@@ -70,22 +70,22 @@ class N extends i.Ay.Store {
         return (g = t), t;
     }
     buildRoles(e) {
-        h.has(e) || A(e);
+        f.has(e) || A(e);
     }
     getSubscriptionRoles(e) {
-        return this.buildRoles(e), h.get(e) ?? f;
+        return this.buildRoles(e), f.get(e) ?? h;
     }
     getPurchasableSubscriptionRoles(e) {
-        return this.buildRoles(e), p.get(e) ?? f;
+        return this.buildRoles(e), p.get(e) ?? h;
     }
     getUserSubscriptionRoles(e) {
-        return this.buildRoles(e), E.get(e) ?? f;
+        return this.buildRoles(e), E.get(e) ?? h;
     }
     getUserIsAdmin(e) {
         return this.buildRoles(e), m.get(e) ?? !1;
     }
 }
-let y = new N(r.h, {
+let N = new y(r.h, {
     CONNECTION_OPEN: I,
     LOGOUT: I,
     GUILD_CREATE: T,
@@ -104,6 +104,6 @@ let y = new N(r.h, {
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e,
             i = c.default.getCurrentUser();
-        return !!(n.id === i?.id && h.has(t)) && A(t);
+        return !!(n.id === i?.id && f.has(t)) && A(t);
     },
 });

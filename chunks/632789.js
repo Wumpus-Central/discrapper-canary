@@ -142,11 +142,11 @@ class d {
     }
 }
 var _ = n(652215);
-function f(e) {
+function h(e) {
     let t = r.A.getMemberCount(e?.guild_id) ?? 0;
     return null != e && e.type !== _.rbe.DM && e.type !== _.rbe.GROUP_DM && t >= 1e4;
 }
-var h = n(552618),
+var f = n(552618),
     p = n(711014);
 function E(e, t) {
     for (let [n, i] of t.allEntries()) e.put(n, i);
@@ -163,13 +163,13 @@ class T extends s.A {
         super({
             CACHE_LOADED_LAZY_NO_CACHE: L,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            CHANNEL_DELETE: v,
-            CHANNEL_UPDATES: C,
-            CONNECTION_OPEN_SUPPLEMENTAL: N,
+            CHANNEL_DELETE: C,
+            CHANNEL_UPDATES: v,
+            CONNECTION_OPEN_SUPPLEMENTAL: y,
             GUILD_DELETE: b,
             LOGIN_SUCCESS: D,
-            THREAD_DELETE: R,
-            THREAD_UPDATE: O,
+            THREAD_DELETE: O,
+            THREAD_UPDATE: R,
         });
     }
     initialize() {
@@ -212,9 +212,9 @@ class T extends s.A {
     }
     static recordChannel(e) {
         let t = i.A.getBasicChannel(e);
-        if (null != t && (0, h.c)(t)) {
+        if (null != t && (0, f.c)(t)) {
             let n = { guildId: t.guild_id ?? null, channelId: e, channelType: t.type };
-            (m = n), g.put(e, n), f(t) && null != A.put(e, null) && g.delete(e);
+            (m = n), g.put(e, n), h(t) && null != A.put(e, null) && g.delete(e);
         }
     }
     static deleteChannel(e) {
@@ -226,11 +226,11 @@ class T extends s.A {
     static dropUnreachableChannels() {
         for (let e of g.keys()) {
             let t = i.A.getBasicChannel(e);
-            (0, h.c)(t) || T.deleteChannel(e);
+            (0, f.c)(t) || T.deleteChannel(e);
         }
     }
     static deleteUnreadableGuildChannels(e) {
-        for (let t of g.values()) e !== t.guildId || (0, h.J)(t.channelId) || T.deleteChannel(t.channelId);
+        for (let t of g.values()) e !== t.guildId || (0, f.J)(t.channelId) || T.deleteChannel(t.channelId);
     }
     static replaceLru(e) {
         g = e;
@@ -240,7 +240,7 @@ function S() {
     let e = a.A.getChannelId();
     null != e && T.recordChannel(e);
 }
-function N() {
+function y() {
     T.dropUnreachableChannels(),
         T.replaceLru(
             (function (e) {
@@ -255,8 +255,8 @@ function N() {
                                 (((r = l).type === _.rbe.DM ||
                                     r.type === _.rbe.GROUP_DM ||
                                     r.type === _.rbe.GUILD_TEXT) &&
-                                    (0, h.c)(l) &&
-                                    !f(l) &&
+                                    (0, f.c)(l) &&
+                                    !h(l) &&
                                     ((s = u),
                                     (a = l),
                                     (o = t).hasExtended(a.id) ||
@@ -274,22 +274,22 @@ function N() {
             })(g),
         );
 }
-function y(e) {
+function N(e) {
     let t = e.id,
-        n = (0, h.c)(e),
+        n = (0, f.c)(e),
         i = a.A.getChannelId();
     n && t === i && T.recordChannel(t), n || T.deleteChannel(t);
 }
-function C(e) {
-    for (let t of e.channels) y(t);
-}
 function v(e) {
+    for (let t of e.channels) N(t);
+}
+function C(e) {
     T.deleteChannel(e.channel.id);
 }
-function O(e) {
-    y(e.channel);
-}
 function R(e) {
+    N(e.channel);
+}
+function O(e) {
     T.deleteChannel(e.channel.id);
 }
 function b(e) {

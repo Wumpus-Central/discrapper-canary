@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { G9: () => _, Im: () => d, ZQ: () => a, sl: () => l, wJ: () => o, yZ: () => s });
+n.d(t, { G9: () => c, Im: () => u, ZQ: () => a, sl: () => l, wJ: () => o, yZ: () => s });
 var i,
     r,
     s = (((i = {})[(i.BACKGROUND = 0)] = "BACKGROUND"), i),
@@ -15,5 +15,5 @@ var i,
         r);
 let o = [7, 8, 9, 10],
     l = [7, 8, 9, 10, 0, 1, 2, 3].reduce((e, t, n) => ({ ...e, [t]: n }), {}),
-    d = { width: 1280, height: 720 },
-    _ = 0xa00000;
+    u = { width: 1280, height: 720 },
+    c = 0xa00000;

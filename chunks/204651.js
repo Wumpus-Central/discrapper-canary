@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { l: () => O, A: () => y });
+n.d(t, { l: () => R, A: () => N });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(862482),
     d = n(939249),
     _ = n(241524),
-    f = n(147925),
-    h = n(461782),
+    h = n(147925),
+    f = n(461782),
     p = n(447404),
     E = n(17928),
     m = n(462887),
@@ -20,8 +20,8 @@ var i = n(627968),
     I = n(309010),
     T = n(652215),
     S = n(375708),
-    N = n(329333);
-function y(e) {
+    y = n(329333);
+function N(e) {
     let {
             label: t,
             onClick: n,
@@ -29,8 +29,8 @@ function y(e) {
             onMouseEnter: s,
             onMouseLeave: d,
             onContextMenu: _,
-            className: f,
-            wrapperClassName: h,
+            className: h,
+            wrapperClassName: f,
             iconClassName: E,
             iconColor: m = "currentColor",
             iconComponent: g,
@@ -38,11 +38,11 @@ function y(e) {
             disabled: I = !1,
             isActive: T = !1,
             tooltipPosition: S = "top",
-            shouldShowTooltip: y = !0,
-            forceTooltipOpen: C = !1,
-            buttonRef: v,
-            grow: O,
-            "aria-label": R,
+            shouldShowTooltip: N = !0,
+            forceTooltipOpen: v = !1,
+            buttonRef: C,
+            grow: R,
+            "aria-label": O,
             look: b,
             buttonText: D,
             size: L,
@@ -54,8 +54,8 @@ function y(e) {
             position: S,
             __unsupportedReactNodeAsText: t,
             ariaHidden: !0,
-            shouldShow: y,
-            forceOpen: C,
+            shouldShow: N,
+            forceOpen: v,
             children: (0, i.jsxs)(c.$n, {
                 "data-migration-pending": !0,
                 look: b ?? c.$n.Looks.BLANK,
@@ -76,16 +76,16 @@ function y(e) {
                 },
                 onBlur: d,
                 disabled: I,
-                innerClassName: a()(N.NL, { [N.eq]: null != D }),
-                className: a()({ [N.vu]: T }, f),
-                wrapperClassName: h,
-                buttonRef: v,
-                grow: O,
-                "aria-label": R ?? M,
+                innerClassName: a()(y.NL, { [y.eq]: null != D }),
+                className: a()({ [y.vu]: T }, h),
+                wrapperClassName: f,
+                buttonRef: C,
+                grow: R,
+                "aria-label": O ?? M,
                 children: [
                     (0, i.jsx)(g, {
                         size: o.E.md,
-                        className: a()(E, { [N.pd]: null == D, [N.IW]: A, [N.vu]: T }),
+                        className: a()(E, { [y.pd]: null == D, [y.IW]: A, [y.vu]: T }),
                         color: m,
                     }),
                     D,
@@ -94,31 +94,31 @@ function y(e) {
         }),
     });
 }
-let C = {
-        disconnect: N.Zf,
-        join: N.fj,
-        red: N.wv,
-        white: N.ON,
-        green: N.wL,
-        yellow: N.D9,
-        primaryDark: N.Zq,
-        primaryLight: N.Zq,
-        activeLight: N.H3,
-        premiumGradient: N.ck,
+let v = {
+        disconnect: y.Zf,
+        join: y.fj,
+        red: y.wv,
+        white: y.ON,
+        green: y.wL,
+        yellow: y.D9,
+        primaryDark: y.Zq,
+        primaryLight: y.Zq,
+        activeLight: y.H3,
+        premiumGradient: y.ck,
     },
-    v = {
-        disconnect: N.Zf,
-        join: N.fj,
-        red: N.Xr,
-        white: N.ON,
-        green: N.Vu,
-        yellow: N.D9,
-        primaryDark: N.Zq,
-        primaryLight: N.Zq,
-        activeLight: N.H3,
-        premiumGradient: N.ck,
+    C = {
+        disconnect: y.Zf,
+        join: y.fj,
+        red: y.Xr,
+        white: y.ON,
+        green: y.Vu,
+        yellow: y.D9,
+        primaryDark: y.Zq,
+        primaryLight: y.Zq,
+        activeLight: y.H3,
+        premiumGradient: y.ck,
     };
-function O(e) {
+function R(e) {
     let t,
         n,
         s,
@@ -127,8 +127,8 @@ function O(e) {
             color: l,
             caretColor: u,
             caretAriaLabel: c,
-            isActive: O = !1,
-            className: R,
+            isActive: R = !1,
+            className: O,
             iconClassName: b,
             onPopoutClick: D,
             popoutOpen: L = !1,
@@ -137,40 +137,40 @@ function O(e) {
             applyStyles: P = !1,
             ...x
         } = e,
-        U =
+        k =
             ((t = (0, E.bG)([I.A], () => I.A.getVoiceChannelId())),
             (n = (0, E.bG)([A.A], () => (null != t ? A.A.getMode(t) : null))),
             (s = (0, g.Ay)()),
             null != l
                 ? l
                 : n === T._Of.VOICE && (0, m.q)(s)
-                  ? O
+                  ? R
                       ? "activeLight"
                       : "primaryLight"
-                  : O
+                  : R
                     ? "white"
                     : "primaryDark"),
-        k = (0, _.A)("(max-width: 456px)"),
+        U = (0, _.A)("(max-width: 456px)"),
         G = r.useRef(null),
-        F = r.useContext(h.vG);
+        F = r.useContext(f.vG);
     r.useEffect(() => {
         null != G.current && (F ? G.current.pause() : G.current.play());
     }, [F]);
     let V = x.onContextMenu ?? D,
         B = null == D && !M,
         H = null != D && !M,
-        j = (0, i.jsx)(y, {
+        j = (0, i.jsx)(N, {
             ...x,
             grow: !1,
             onContextMenu: V,
-            iconClassName: a()(b, N.LF, B && N.Ns),
-            className: a()(k || P ? R : null, O && N.vu, N.wh, v[U], B && N.Sy, M && null != D && !k && N.hA),
+            iconClassName: a()(b, y.LF, B && y.Ns),
+            className: a()(U || P ? O : null, R && y.vu, y.wh, C[k], B && y.Sy, M && null != D && !U && y.hA),
         });
-    return k
+    return U
         ? j
         : (0, i.jsxs)("div", {
               ref: o,
-              className: a()(N.re, L && N.q6, R, H && [N.TD, C[U]]),
+              className: a()(y.re, L && y.q6, O, H && [y.TD, v[k]]),
               children: [
                   j,
                   null != D
@@ -178,8 +178,8 @@ function O(e) {
                             children: (0, i.jsx)(d.D, {
                                 "aria-label": c ?? S.intl.string(S.t.PdRCRg),
                                 onClick: w ? void 0 : D,
-                                className: a()(N.cd, M && N.Ml, v[u ?? U], L && [N.q6, N.vu], w && N.r9),
-                                children: (0, i.jsx)(f.A, { className: a()(N.gG, L && N.ho, w && N.r9) }),
+                                className: a()(y.cd, M && y.Ml, C[u ?? k], L && [y.q6, y.vu], w && y.r9),
+                                children: (0, i.jsx)(h.A, { className: a()(y.gG, L && y.ho, w && y.r9) }),
                             }),
                         })
                       : null,

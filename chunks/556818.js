@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     wx: "header__7f9c0",
     vK: "banner__7f9c0",
     tB: "backdrop__7f9c0",

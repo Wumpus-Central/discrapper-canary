@@ -1,22 +1,22 @@
-n.d(i, { default: () => c });
-var e = n(627968);
-n(64700);
-var s = n(417597),
-    r = n(994288),
-    l = n(287809),
-    a = n(954571),
-    o = n(652215);
+a.d(e, { default: () => c });
+var u = a(627968);
+a(64700);
+var n = a(702841),
+    s = a(262797),
+    l = a(287809),
+    r = a(174459),
+    d = a(652215);
 function c(t) {
-    let { transitionState: i, onClose: n, userId: c, onCancel: d, confirmBlock: u } = t,
-        x = (0, s.bG)([l.default], () => l.default.getUser(c));
-    if (null != x)
-        return (0, e.jsx)(r.default, {
-            transitionState: i,
-            user: x,
+    let { transitionState: e, onClose: a, userId: c, onCancel: i, confirmBlock: o } = t,
+        f = (0, n.bG)([l.default], () => l.default.getUser(c));
+    if (null != f)
+        return (0, u.jsx)(s.default, {
+            transitionState: e,
+            user: f,
             onBlock: () => {
-                u(), a.default.track(o.HAw.BLOCK_USER_CONFIRMED);
+                o(), r.default.track(d.HAw.BLOCK_USER_CONFIRMED);
             },
-            onClose: n,
-            onCancel: d,
+            onClose: a,
+            onCancel: i,
         });
 }

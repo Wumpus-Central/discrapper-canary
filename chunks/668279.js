@@ -1,5 +1,5 @@
 "use strict";
-function r(e) {
+function i(e) {
     window.DiscordSentry?.addBreadcrumb({
         type: "default",
         level: "info",
@@ -9,4 +9,4 @@ function r(e) {
         timestamp: Date.now(),
     });
 }
-n.d(t, { A: () => r });
+n.d(t, { A: () => i });

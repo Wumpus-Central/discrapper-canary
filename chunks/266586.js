@@ -1,13 +1,13 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = /(_[a-z_\d]+)?/,
-        n = /([de][+-]?\d+)?/,
+        n = /(_[a-z_\d]+)?/,
+        i = /([de][+-]?\d+)?/,
         r = {
             className: "number",
             variants: [
-                { begin: t.concat(/\b\d+/, /\.(\d*)/, n, a) },
-                { begin: t.concat(/\b\d+/, n, a) },
-                { begin: t.concat(/\.\d+/, n, a) },
+                { begin: t.concat(/\b\d+/, /\.(\d*)/, i, n) },
+                { begin: t.concat(/\b\d+/, i, n) },
+                { begin: t.concat(/\.\d+/, i, n) },
             ],
             relevance: 0,
         };

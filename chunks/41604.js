@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     HA: "channelName__7c7a6",
     Xh: "username__7c7a6",
     l5: "kvContainer__7c7a6",

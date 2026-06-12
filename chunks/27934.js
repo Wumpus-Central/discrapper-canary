@@ -1,19 +1,19 @@
-var r = n(833605),
-    i = n(842741),
-    a = n(547132),
-    s = n(952504),
+var i = n(833605),
+    r = n(842741),
+    s = n(547132),
+    a = n(952504),
     o = n(505336);
 function l(e) {
     var t = -1,
         n = null == e ? 0 : e.length;
     for (this.clear(); ++t < n; ) {
-        var r = e[t];
-        this.set(r[0], r[1]);
+        var i = e[t];
+        this.set(i[0], i[1]);
     }
 }
-(l.prototype.clear = r),
-    (l.prototype.delete = i),
-    (l.prototype.get = a),
-    (l.prototype.has = s),
+(l.prototype.clear = i),
+    (l.prototype.delete = r),
+    (l.prototype.get = s),
+    (l.prototype.has = a),
     (l.prototype.set = o),
     (e.exports = l);

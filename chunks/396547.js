@@ -2,19 +2,19 @@ IntlMessageFormat.__addLocaleData({
     locale: "en",
     pluralRuleFunction: function (e, t) {
         var n = String(e).split("."),
-            r = !n[1],
-            i = Number(n[0]) == e,
-            a = i && n[0].slice(-1),
-            s = i && n[0].slice(-2);
+            i = !n[1],
+            r = Number(n[0]) == e,
+            s = r && n[0].slice(-1),
+            a = r && n[0].slice(-2);
         return t
-            ? 1 == a && 11 != s
+            ? 1 == s && 11 != a
                 ? "one"
-                : 2 == a && 12 != s
+                : 2 == s && 12 != a
                   ? "two"
-                  : 3 == a && 13 != s
+                  : 3 == s && 13 != a
                     ? "few"
                     : "other"
-            : 1 == e && r
+            : 1 == e && i
               ? "one"
               : "other";
     },

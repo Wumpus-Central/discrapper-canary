@@ -1,12 +1,12 @@
-var r = n(384332),
-    i = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
-    a = /\\(\\)?/g;
-e.exports = r(function (e) {
+var i = n(384332),
+    r = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
+    s = /\\(\\)?/g;
+e.exports = i(function (e) {
     var t = [];
     return (
         46 === e.charCodeAt(0) && t.push(""),
-        e.replace(i, function (e, n, r, i) {
-            t.push(r ? i.replace(a, "$1") : n || e);
+        e.replace(r, function (e, n, i, r) {
+            t.push(i ? r.replace(s, "$1") : n || e);
         }),
         t
     );

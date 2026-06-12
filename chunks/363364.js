@@ -1,9 +1,9 @@
 "use strict";
-var r = n(315646),
-    i = n(741623),
+var i = n(315646),
+    r = n(741623),
     s = function (e, t, n) {
-        for (var r, i = e; null != (r = i.next); i = r)
-            if (r.key === t) return (i.next = r.next), n || ((r.next = e.next), (e.next = r)), r;
+        for (var i, r = e; null != (i = r.next); r = i)
+            if (i.key === t) return (r.next = i.next), n || ((i.next = e.next), (e.next = i)), i;
     },
     a = function (e, t) {
         if (e) {
@@ -12,8 +12,8 @@ var r = n(315646),
         }
     },
     o = function (e, t, n) {
-        var r = s(e, t);
-        r ? (r.value = n) : (e.next = { key: t, next: e.next, value: n });
+        var i = s(e, t);
+        i ? (i.value = n) : (e.next = { key: t, next: e.next, value: n });
     },
     l = function (e, t) {
         if (e) return s(e, t, !0);
@@ -22,12 +22,12 @@ e.exports = function () {
     var e,
         t = {
             assert: function (e) {
-                if (!t.has(e)) throw new i("Side channel does not contain " + r(e));
+                if (!t.has(e)) throw new r("Side channel does not contain " + i(e));
             },
             delete: function (t) {
                 var n = e && e.next,
-                    r = l(e, t);
-                return r && n && n === r && (e = void 0), !!r;
+                    i = l(e, t);
+                return i && n && n === i && (e = void 0), !!i;
             },
             get: function (t) {
                 return a(e, t);

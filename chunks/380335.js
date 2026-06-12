@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => E });
-var r = n(734057),
-    i = n(536802);
+n.d(t, { A: () => m });
+var i = n(734057),
+    r = n(536802);
 let s = new Set(),
     a = new Set(),
     o = !1;
@@ -20,7 +20,7 @@ function u(e) {
 function c(e) {
     s.clear(),
         a.clear(),
-        Object.values(r.A.getMutablePrivateChannels()).forEach((e) => {
+        Object.values(i.A.getMutablePrivateChannels()).forEach((e) => {
             u(e);
         }),
         (o = !0);
@@ -33,19 +33,19 @@ function _(e) {
     let { channel: t } = e;
     return u(t);
 }
-function f(e) {
+function h(e) {
     let { channels: t } = e;
     for (let e of t) u(e);
 }
-function p(e) {
+function f(e) {
     let { channel: t } = e;
     return !!s.has(t.id) && (s.delete(t.id), !0);
 }
-function h(e) {
+function p(e) {
     let { messageRequestChannelIds: t } = e;
     t.forEach((e) => s.add(e));
 }
-class m extends i.A {
+class E extends r.A {
     static displayName = "MessageRequestStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
@@ -53,22 +53,22 @@ class m extends i.A {
             CONNECTION_OPEN: c,
             CONNECTION_OPEN_SUPPLEMENTAL: c,
             CACHE_LOADED_LAZY: () => this.loadCache(),
-            OVERLAY_INITIALIZE: h,
+            OVERLAY_INITIALIZE: p,
             CHANNEL_CREATE: _,
-            CHANNEL_UPDATES: f,
-            CHANNEL_DELETE: p,
+            CHANNEL_UPDATES: h,
+            CHANNEL_DELETE: f,
             MESSAGE_REQUEST_ACCEPT_OPTIMISTIC: d,
         });
     }
     initialize() {
-        this.waitFor(r.A);
+        this.waitFor(i.A);
     }
     loadCache() {
-        let e = this.readSnapshot(m.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(E.LATEST_SNAPSHOT_VERSION);
         null != e && (s = new Set(e));
     }
     takeSnapshot() {
-        return { version: m.LATEST_SNAPSHOT_VERSION, data: Array.from(s) };
+        return { version: E.LATEST_SNAPSHOT_VERSION, data: Array.from(s) };
     }
     getMessageRequestChannelIds() {
         return s;
@@ -86,4 +86,4 @@ class m extends i.A {
         return o;
     }
 }
-let E = new m();
+let m = new E();

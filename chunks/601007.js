@@ -10,13 +10,13 @@ var i,
     c = n(900797),
     d = n(847374),
     _ = n(964486),
-    f = n(37948),
-    h = n(174459),
+    h = n(37948),
+    f = n(174459),
     p = n(652215),
     E = (((i = {}).PRIMARY = "primary"), (i.SECONDARY = "secondary"), i);
 function m(e) {
     let { analyticsLocations: t, distributor: n, gameId: i, level: r } = e;
-    h.default.track(p.HAw.PLAY_CTA_IMPRESSION, { location_stack: t, distributor: n, game_id: i, level: r });
+    f.default.track(p.HAw.PLAY_CTA_IMPRESSION, { location_stack: t, distributor: n, game_id: i, level: r });
 }
 var g = n(375708);
 function A(e) {
@@ -28,17 +28,17 @@ function A(e) {
             fullWidth: I = !0,
             stopPropagation: T = !1,
             onAction: S,
-            onClose: N,
+            onClose: y,
         } = e,
-        y = (0, f.A)(),
-        C = s.useRef(null),
-        [v, O] = s.useState(!1);
+        N = (0, h.A)(),
+        v = s.useRef(null),
+        [C, R] = s.useState(!1);
     if (
         ((0, _.Ay)(() => {
             0 !== t.length &&
                 (!(function (e) {
                     let { analyticsLocations: t, gameId: n, distributors: i } = e;
-                    h.default.track(p.HAw.PLAY_CTA_DISPLAYED, { location_stack: t, game_id: n, distributors: i });
+                    f.default.track(p.HAw.PLAY_CTA_DISPLAYED, { location_stack: t, game_id: n, distributors: i });
                 })({
                     analyticsLocations: i,
                     gameId: n,
@@ -53,14 +53,14 @@ function A(e) {
         0 === t.length)
     )
         return null;
-    let R = (e, t, r, s) => {
+    let O = (e, t, r, s) => {
         !(function (e) {
             let { analyticsLocations: t, distributor: n, gameId: i, level: r } = e;
-            h.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: i, level: r });
+            f.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: i, level: r });
         })({ analyticsLocations: i, distributor: t, gameId: n, level: s }),
             S?.({ action: r }),
-            N?.(),
-            y(e);
+            y?.(),
+            N(e);
     };
     if (1 === t.length) {
         let { ctaConfig: e, skuId: n } = t[0];
@@ -71,7 +71,7 @@ function A(e) {
             text: e.getLabel(),
             fullWidth: I,
             onClick: (t) => {
-                T && t.stopPropagation(), R(e.getStoreUrl(n), e.distributor, e.analyticsAction, E.PRIMARY);
+                T && t.stopPropagation(), O(e.getStoreUrl(n), e.distributor, e.analyticsAction, E.PRIMARY);
             },
         });
     }
@@ -88,7 +88,7 @@ function A(e) {
                         label: n.getStoreName(),
                         iconLeft: n.icon,
                         leadingAccessory: { type: "icon", icon: n.icon },
-                        action: () => R(n.getStoreUrl(i), n.distributor, n.analyticsAction, E.SECONDARY),
+                        action: () => O(n.getStoreUrl(i), n.distributor, n.analyticsAction, E.SECONDARY),
                     },
                     n.distributor,
                 ),
@@ -97,18 +97,18 @@ function A(e) {
         );
     });
     return (0, r.jsx)(l.Y, {
-        targetElementRef: C,
+        targetElementRef: v,
         position: "bottom",
         onRequestOpen: () => {
-            for (let { ctaConfig: e } of (O(!0), t))
+            for (let { ctaConfig: e } of (R(!0), t))
                 m({ analyticsLocations: i, distributor: e.distributor, gameId: n, level: E.SECONDARY });
         },
-        onRequestClose: () => O(!1),
+        onRequestClose: () => R(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, r.jsx)("div", {
                 onClick: (e) => e.stopPropagation(),
-                style: { width: "fit-content", minWidth: C.current?.offsetWidth },
+                style: { width: "fit-content", minWidth: v.current?.offsetWidth },
                 children: (0, r.jsx)(u.W, {
                     "data-menu-migrated": !0,
                     navId: "play-on-distributor-menu",
@@ -121,10 +121,10 @@ function A(e) {
         },
         children: (e) =>
             (0, r.jsx)(a.$, {
-                buttonRef: C,
+                buttonRef: v,
                 variant: A,
                 size: "sm",
-                icon: v ? c.t : d.a,
+                icon: C ? c.t : d.a,
                 iconPosition: "end",
                 text: g.intl.string(g.t.nSHoxC),
                 fullWidth: I,

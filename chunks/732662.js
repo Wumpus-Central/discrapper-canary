@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = [
+        n = [
             "begin_keywords",
             "celldefine",
             "default_nettype",
@@ -501,7 +501,7 @@ e.exports = function (e) {
             },
             { scope: "variable", variants: [{ begin: "#\\((?!parameter).+\\)" }, { begin: "\\.\\w+", relevance: 0 }] },
             { scope: "variable.constant", match: t.concat(/`/, t.either("__FILE__", "__LINE__")) },
-            { scope: "meta", begin: t.concat(/`/, t.either(...a)), end: /$|\/\/|\/\*/, returnEnd: !0, keywords: a },
+            { scope: "meta", begin: t.concat(/`/, t.either(...n)), end: /$|\/\/|\/\*/, returnEnd: !0, keywords: n },
         ],
     };
 };

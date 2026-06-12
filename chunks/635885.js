@@ -1,37 +1,37 @@
-n.d(t, { V: () => d });
-var i = n(64700),
-    l = n(17928),
-    a = n(290863),
+n.d(t, { V: () => u });
+var l = n(64700),
+    i = n(17928),
+    s = n(290863),
     r = n(240248),
-    s = n(832163),
+    a = n(832163),
     o = n(533562);
-function d(e) {
+function u(e) {
     var t;
     let n,
-        d,
-        u =
-            ((t = i.useMemo(() => (null != e ? [e] : []), [e])),
+        u,
+        d =
+            ((t = l.useMemo(() => (null != e ? [e] : []), [e])),
             (n = (0, o.W)()),
-            (d = (0, l.bG)([s.A], () => s.A.getDetectableIdsToApplicationIds())),
-            (0, l.bG)(
-                [a.A],
+            (u = (0, i.bG)([a.A], () => a.A.getDetectableIdsToApplicationIds())),
+            (0, i.bG)(
+                [s.A],
                 () =>
                     null != n
                         ? t.reduce((e, t) => ({ ...e, [t]: n }), {})
                         : t.reduce((e, t) => {
-                              for (let n of a.A.getActivities(t)) {
-                                  let i = n.application_id;
-                                  if (null != i && !(0, r.uJ)(d[i])) return { ...e, [t]: d[i] };
+                              for (let n of s.A.getActivities(t)) {
+                                  let l = n.application_id;
+                                  if (null != l && !(0, r.uJ)(u[l])) return { ...e, [t]: u[l] };
                               }
                               return e;
                           }, {}),
-                [t, d, n],
+                [t, u, n],
                 c,
             ));
-    return null != e ? (u[e] ?? null) : null;
+    return null != e ? (d[e] ?? null) : null;
 }
 function c(e, t) {
     let n = Object.keys(e),
-        i = Object.keys(t);
-    return n.length === i.length && n.every((n) => e[n] === t[n]);
+        l = Object.keys(t);
+    return n.length === l.length && n.every((n) => e[n] === t[n]);
 }

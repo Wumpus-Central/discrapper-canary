@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => c });
 var i = n(17928),
     r = n(228366),
     s = n(439372),
     a = n(919577),
     o = n(495544),
     l = n(734057);
-class d extends s.A {
+class u extends s.A {
     actions = {
         CHANNEL_DELETE: this.handleChannelDelete,
         MESSAGE_CREATE: this.handleMessageCreate,
@@ -39,4 +39,4 @@ class d extends s.A {
             });
     }
 }
-let _ = new d();
+let c = new u();

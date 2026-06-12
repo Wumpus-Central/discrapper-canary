@@ -1,10 +1,10 @@
-n.d(t, { O: () => l, u: () => r });
-var a = n(228366);
-let r = (e, t) => {
-    a.h.wait(() => {
-        a.h.dispatch({ type: "APPLIED_GUILD_BOOST_COUNT_UPDATE", guildId: e, premiumCount: t });
+h.d(t, { O: () => s, u: () => i });
+var _ = h(228366);
+let i = (p, t) => {
+    _.h.wait(() => {
+        _.h.dispatch({ type: "APPLIED_GUILD_BOOST_COUNT_UPDATE", guildId: p, premiumCount: t });
     });
 };
-function l() {
-    a.h.dispatch({ type: "APPLIED_GUILD_BOOST_COUNT_RESET" });
+function s() {
+    _.h.dispatch({ type: "APPLIED_GUILD_BOOST_COUNT_RESET" });
 }

@@ -3,9 +3,9 @@ var n = r(64700),
     a = r(353640),
     l = r(121894),
     i = r(562519),
-    o = r(954571),
-    u = r(972049),
-    s = r(652215);
+    u = r(174459),
+    s = r(670812),
+    o = r(652215);
 let c = new i.A("a11y_violations"),
     d = (0, a.v)(() => ({ check: null }));
 function f(e) {
@@ -19,11 +19,11 @@ function f(e) {
                         else {
                             c.add(e);
                             let a = { rule_id: t, trace: r.join("\n"), hash: n };
-                            o.default.track(s.HAw.A11Y_RUNTIME_VIOLATION, a);
+                            u.default.track(o.HAw.A11Y_RUNTIME_VIOLATION, a);
                         }
                     }
     }, []);
-    (0, u.dL)(e, t);
+    (0, s.dL)(e, t);
 }
 function h() {
     var e = d((e) => e.check?.violations ?? null);

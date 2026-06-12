@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Gf: () => f, H2: () => p, WL: () => g, _y: () => E, e0: () => h, yL: () => m });
+n.d(t, { Gf: () => h, H2: () => p, WL: () => g, _y: () => E, e0: () => f, yL: () => m });
 var i = n(284009),
     r = n.n(i),
     s = n(636537),
@@ -10,7 +10,7 @@ var i = n(284009),
     c = n(166862),
     d = n(392054),
     _ = n(652215);
-function f(e) {
+function h(e) {
     let {
         channelId: t,
         command: n,
@@ -21,8 +21,8 @@ function f(e) {
         queryLength: u,
         sectionName: c,
         query: _,
-        searchResultsPosition: f,
-        source: h,
+        searchResultsPosition: h,
+        source: f,
         commandOrigin: p,
     } = e;
     null != n && r()(n.inputType !== d.y$.PLACEHOLDER, "command should not be placeholder"),
@@ -37,12 +37,12 @@ function f(e) {
             queryLength: u,
             sectionName: c,
             query: _,
-            searchResultsPosition: f,
-            source: h,
+            searchResultsPosition: h,
+            source: f,
             commandOrigin: p,
         });
 }
-function h(e, t) {
+function f(e, t) {
     a.h.dispatch({ type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", channelId: e, commandId: t });
 }
 function p(e, t) {
@@ -69,11 +69,11 @@ function m(e, t, n, i) {
 function g(e, t, n) {
     r()(null != t.autocomplete, "Missing autocomplete context");
     let { query: i, name: d } = t.autocomplete,
-        f = u.default.fromTimestamp(Date.now());
+        h = u.default.fromTimestamp(Date.now());
     null == t.channel ||
         (a.h.dispatch({
             type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
-            nonce: f,
+            nonce: h,
             channelId: t.channel.id,
             query: i,
             name: d,
@@ -88,11 +88,11 @@ function g(e, t, n) {
                     channel_id: t.channel.id,
                     session_id: l.default.getSessionId(),
                     data: n,
-                    nonce: f,
+                    nonce: h,
                 },
                 timeout: 3e3,
                 rejectWithError: !0,
             }).catch(() => {
-                a.h.dispatch({ type: "INTERACTION_FAILURE", nonce: f });
+                a.h.dispatch({ type: "INTERACTION_FAILURE", nonce: h });
             }));
 }

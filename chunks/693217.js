@@ -1,1 +1,1 @@
-e.exports = { t: "hoverCard_fdda30" };
+_.exports = { t: "hoverCard_fdda30" };

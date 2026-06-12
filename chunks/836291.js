@@ -119,7 +119,7 @@ function z(t) {
                                         (0, i.jsx)(p.E, {
                                             variant: "text-sm/medium",
                                             color: "text-subtle",
-                                            children: D.intl.format(S.default.FO4faL, { termsLink: (0, O.Wi)() }),
+                                            children: D.intl.format(S.default.FO4faL, { termsLink: (0, O.xA)() }),
                                         }),
                                     ],
                                 }),

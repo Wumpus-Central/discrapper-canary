@@ -6,16 +6,16 @@ var i = n(587895),
     a = n(287809),
     o = n(811024),
     l = n(646865),
-    d = n(795816),
-    _ = n(933958),
-    u = n(799061),
-    c = n(969151),
-    E = n(817636),
-    h = n(574152),
-    m = n(108959),
-    f = n(90804),
-    g = n(748975),
-    p = n(360469);
+    u = n(795816),
+    c = n(933958),
+    d = n(799061),
+    _ = n(969151),
+    h = n(817636),
+    f = n(574152),
+    p = n(108959),
+    E = n(90804),
+    m = n(748975),
+    g = n(360469);
 function A(e) {
     return (0, l.w)((0, l.f)(), () => I(e));
 }
@@ -28,61 +28,61 @@ async function I(e) {
             analyticsLocations: I,
             componentId: T,
             sectionName: S,
-            source: N,
-            inviterUserId: C,
-            customId: R,
-            referrerId: O,
+            source: y,
+            inviterUserId: N,
+            customId: v,
+            referrerId: C,
         } = e,
-        y = (0, h.A)(),
-        v = r.A.getChannel(l),
-        D = v?.getGuildId(),
-        L = null == D || "" === D,
-        b = a.default.getCurrentUser();
-    if (null == b) return !1;
-    if (null == v || (L && !v.isPrivate()) || null == l) return Promise.resolve(!1);
-    let w = _.Ay.getCurrentEmbeddedActivity();
+        R = (0, f.A)(),
+        O = r.A.getChannel(l),
+        b = O?.getGuildId(),
+        D = null == b || "" === b,
+        L = a.default.getCurrentUser();
+    if (null == L) return !1;
+    if (null == O || (D && !O.isPrivate()) || null == l) return Promise.resolve(!1);
+    let w = c.Ay.getCurrentEmbeddedActivity();
     if (
         (w?.applicationId != null && (t = i.A.getApplication(w?.applicationId)),
         s.A.getVoiceChannelId() === l &&
             null != w &&
             w.applicationId === n &&
-            (0, c.H)(w.location) === s.A.getVoiceChannelId())
+            (0, _.H)(w.location) === s.A.getVoiceChannelId())
     )
-        return (0, g.A)(D, w.location), Promise.resolve(!0);
-    let P = await (0, E.A)(n, l);
+        return (0, m.A)(b, w.location), Promise.resolve(!0);
+    let M = await (0, h.A)(n, l);
     if (
-        !(await (0, u.O)({
+        !(await (0, d.O)({
             applicationId: n,
-            application: P,
-            channel: v,
+            application: M,
+            channel: O,
             currentEmbeddedApplication: t,
-            embeddedActivitiesManager: y,
-            user: b,
+            embeddedActivitiesManager: R,
+            user: L,
         }))
     )
         return !1;
-    if (null != v) {
-        let e = (0, m.A)(v.id),
-            n = p.lk.includes(v.type);
+    if (null != O) {
+        let e = (0, p.A)(O.id),
+            n = g.lk.includes(O.type);
         if (e) {
-            if (!(await (0, f.A)({ channelId: v.id, bypassChangeModal: null != t }))) return !1;
-        } else if (!(0, o.pE)(v) || !n) return !1;
-    } else if (null == v) return !1;
+            if (!(await (0, E.A)({ channelId: O.id, bypassChangeModal: null != t }))) return !1;
+        } else if (!(0, o.pE)(O) || !n) return !1;
+    } else if (null == O) return !1;
     return (
-        null != w && (0, d.rW)(w.location),
-        await (0, d.su)({
+        null != w && (0, u.rW)(w.location),
+        await (0, u.su)({
             channelId: l,
             applicationId: n,
             isStart: !1,
-            embeddedActivitiesManager: y,
+            embeddedActivitiesManager: R,
             analyticsLocations: I,
             locationObject: A,
             componentId: T,
             sectionName: S,
-            source: N,
-            inviterUserId: C,
-            customId: R,
-            referrerId: O,
+            source: y,
+            inviterUserId: N,
+            customId: v,
+            referrerId: C,
         })
     );
 }

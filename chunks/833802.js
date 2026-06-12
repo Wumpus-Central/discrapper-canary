@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     kL: "container__333b3",
     bV: "sectionHeader__333b3",
     Ce: "avatarList__333b3",

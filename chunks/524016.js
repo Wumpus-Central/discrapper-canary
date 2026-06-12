@@ -1,29 +1,29 @@
 Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.isWAV = t.isMP3 = t.isM4A = t.isFLAC = t.isAMR = t.isAAC = void 0);
-let n = i(835986),
-    r = i(817762);
+let i = n(835986),
+    r = n(817762);
 function o(e) {
     let t = (0, r.getFileChunk)(e);
-    return n.FileTypes.checkByFileType(t, "m4a");
+    return i.FileTypes.checkByFileType(t, "m4a");
 }
 (t.isAAC = function (e, t) {
-    let i = (0, r.getFileChunk)(e);
-    return !!n.FileTypes.checkByFileType(i, "aac") || ((null == t || !t.excludeSimilarTypes) && o(i));
+    let n = (0, r.getFileChunk)(e);
+    return !!i.FileTypes.checkByFileType(n, "aac") || ((null == t || !t.excludeSimilarTypes) && o(n));
 }),
     (t.isAMR = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "amr");
+        return i.FileTypes.checkByFileType(t, "amr");
     }),
     (t.isFLAC = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "flac");
+        return i.FileTypes.checkByFileType(t, "flac");
     }),
     (t.isM4A = o),
     (t.isMP3 = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "mp3");
+        return i.FileTypes.checkByFileType(t, "mp3");
     }),
     (t.isWAV = function (e) {
         let t = (0, r.getFileChunk)(e);
-        return n.FileTypes.checkByFileType(t, "wav");
+        return i.FileTypes.checkByFileType(t, "wav");
     });

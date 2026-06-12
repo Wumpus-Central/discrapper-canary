@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { F: () => _, K: () => u });
+n.d(t, { F: () => c, K: () => d });
 var i = n(64700),
     r = n(17928),
     s = n(159273),
     a = n(7584),
-    o = n(253932),
+    o = n(885386),
     l = n(652215);
-function d(e, t) {
+function u(e, t) {
     let n = null;
     if (null != t) n = { id: t.id, name: t.name, animated: t.animated };
     else if (null != e.emojiName && "" !== e.emojiName) {
@@ -25,13 +25,13 @@ function d(e, t) {
         metadata: { label: r },
     };
 }
-function _(e) {
+function c(e) {
     let { emojiId: t } = e;
-    return d(e, null != t && "0" !== t ? s.Ay.getUsableCustomEmojiById(t) : null);
+    return u(e, null != t && "0" !== t ? s.Ay.getUsableCustomEmojiById(t) : null);
 }
-function u() {
+function d() {
     let e = o.G2.useSetting(),
         t = e?.emojiId,
         n = (0, r.bG)([s.Ay], () => (null != t && "0" !== t ? s.Ay.getUsableCustomEmojiById(t) : null), [t]);
-    return (0, i.useMemo)(() => (null != e ? d(e, n) : null), [e, n]);
+    return (0, i.useMemo)(() => (null != e ? u(e, n) : null), [e, n]);
 }

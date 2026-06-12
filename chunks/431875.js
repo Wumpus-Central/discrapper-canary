@@ -1,5 +1,5 @@
-var r = n(261010),
-    i = n(436815);
+var i = n(261010),
+    r = n(436815);
 e.exports = function (e) {
-    return i(e) && "[object Set]" == r(e);
+    return r(e) && "[object Set]" == i(e);
 };

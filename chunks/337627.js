@@ -1,19 +1,19 @@
 "use strict";
-var r = (function () {
+var i = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+                var i = t[n];
+                (i.enumerable = i.enumerable || !1),
+                    (i.configurable = !0),
+                    "value" in i && (i.writable = !0),
+                    Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
-    i = n(313319);
+    r = n(313319);
 e.exports = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
@@ -30,15 +30,15 @@ e.exports = (function (e) {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        i(t, [
             {
                 key: "__getValue",
                 value: function () {
                     return this._transforms.map(function (e) {
                         var t = {};
                         for (var n in e) {
-                            var r = e[n];
-                            r instanceof i ? (t[n] = r.__getValue()) : (t[n] = r);
+                            var i = e[n];
+                            i instanceof r ? (t[n] = i.__getValue()) : (t[n] = i);
                         }
                         return t;
                     });
@@ -50,8 +50,8 @@ e.exports = (function (e) {
                     return this._transforms.map(function (e) {
                         var t = {};
                         for (var n in e) {
-                            var r = e[n];
-                            r instanceof i ? (t[n] = r.__getAnimatedValue()) : (t[n] = r);
+                            var i = e[n];
+                            i instanceof r ? (t[n] = i.__getAnimatedValue()) : (t[n] = i);
                         }
                         return t;
                     });
@@ -63,8 +63,8 @@ e.exports = (function (e) {
                     var e = this;
                     this._transforms.forEach(function (t) {
                         for (var n in t) {
-                            var r = t[n];
-                            r instanceof i && r.__addChild(e);
+                            var i = t[n];
+                            i instanceof r && i.__addChild(e);
                         }
                     });
                 },
@@ -75,8 +75,8 @@ e.exports = (function (e) {
                     var e = this;
                     this._transforms.forEach(function (t) {
                         for (var n in t) {
-                            var r = t[n];
-                            r instanceof i && r.__removeChild(e);
+                            var i = t[n];
+                            i instanceof r && i.__removeChild(e);
                         }
                     });
                 },

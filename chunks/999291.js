@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { Ay: () => h, AP: () => f }), n(64700);
+n.d(t, { Ay: () => f, AP: () => E }), n(64700);
 var i = n(17928),
     r = n(287809),
     s = n(583613),
     a = n(919395),
     o = n(486020),
-    l = n(927578),
-    _ = n(289173),
-    d = n(788868);
-function u(e, t) {
+    l = n(428262),
+    u = n(289173),
+    c = n(788868);
+function d(e, t) {
     return null == t || "" === t ? e : t;
 }
-class c {
+class _ {
     userId;
     guildId;
     banner;
@@ -30,8 +30,8 @@ class c {
         (this.userId = e.userId),
             (this.guildId = t?.guildId),
             (this.banner = t?.banner ?? e.banner),
-            (this.bio = u(e.bio, t?.bio)),
-            (this.pronouns = u(e.pronouns, t?.pronouns)),
+            (this.bio = d(e.bio, t?.bio)),
+            (this.pronouns = d(e.pronouns, t?.pronouns)),
             (this.accentColor = e.accentColor),
             (this.themeColors = t?.themeColors ?? e.themeColors),
             (this.profileEffect = t?.profileEffect ?? e.profileEffect),
@@ -58,13 +58,13 @@ class c {
         return this._userProfile.widgets;
     }
     get gameWidgets() {
-        return this._userProfile.widgets?.filter(_.fu);
+        return this._userProfile.widgets?.filter(u.fu);
     }
     get primaryColor() {
         return this.themeColors?.[0] ?? this.accentColor;
     }
     get canUsePremiumProfileCustomization() {
-        return l.Ay.isPremiumAtLeast(this.premiumType, d.PremiumTypes.TIER_2);
+        return l.Ay.isPremiumAtLeast(this.premiumType, c.PremiumTypes.TIER_2);
     }
     get canEditThemes() {
         return this.canUsePremiumProfileCustomization;
@@ -138,17 +138,17 @@ class c {
         return this._userProfile.legacyUsername;
     }
 }
-var E = n(841595);
-function h(e, t) {
-    return (0, i.bG)([r.default, E.A], () => (null == e ? null : f(e, t, [r.default, E.A])));
-}
-n(576622);
-let m = (0, s.L_)((e, t) => new c(e, t));
+var h = n(841595);
 function f(e, t) {
-    let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.default, E.A];
+    return (0, i.bG)([r.default, h.A], () => (null == e ? null : E(e, t, [r.default, h.A])));
+}
+n(903209);
+let p = (0, s.L_)((e, t) => new _(e, t));
+function E(e, t) {
+    let [n, i] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [r.default, h.A];
     if (null === e) return null;
     let s = n.getUser(e),
         a = i.getUserProfile(e),
         o = i.getGuildMemberProfile(e, t);
-    return null == s || null == a ? null : m(a, o);
+    return null == s || null == a ? null : p(a, o);
 }

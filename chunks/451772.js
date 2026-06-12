@@ -15,8 +15,8 @@ let c = (e) => {
             y: c,
             assetKey: d,
             onClick: _,
-            skipNewUserEducation: f = !1,
-            shadowPosition: h,
+            skipNewUserEducation: h = !1,
+            shadowPosition: f,
         } = e,
         p = (0, l.A)(),
         E = r.useMemo(() => p?.seats[d], [p, d]),
@@ -36,17 +36,17 @@ let c = (e) => {
             className: u.LU,
             children: [
                 null != g &&
-                    null != h &&
+                    null != f &&
                     (0, i.jsx)("img", {
                         className: a()(u.Sl, u.r7),
-                        style: { transform: `translate(${h.x}px, ${h.y}px)` },
+                        style: { transform: `translate(${f.x}px, ${f.y}px)` },
                         src: E?.shadow,
                         alt: "",
                     }),
                 null != m &&
                     (0, i.jsx)("img", {
                         onDragStart: (e) => e.preventDefault(),
-                        className: a()(u.Sl, { [u.Sf]: null != n, [u.cb]: f }),
+                        className: a()(u.Sl, { [u.Sf]: null != n, [u.cb]: h }),
                         style: { animationDelay: `${5500 + 150 * t}ms` },
                         src: E?.seat,
                         alt: "",

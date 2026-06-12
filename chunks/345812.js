@@ -1,10 +1,10 @@
-function i(e) {
+function l(e) {
     return e <= 220;
 }
-function l(e) {
+function i(e) {
     return e <= 124;
 }
-function a(e) {
+function s(e) {
     return e <= 160;
 }
-n.d(t, { DO: () => a, VE: () => i, Yb: () => l });
+n.d(t, { DO: () => s, VE: () => l, Yb: () => i });

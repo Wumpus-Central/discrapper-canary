@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => a });
-let r = [
+n.d(t, { A: () => s });
+let i = [
         ["position", "absolute"],
         ["top", "-100px"],
         ["left", "-100px"],
@@ -8,17 +8,17 @@ let r = [
         ["height", "100px"],
         ["overflow", "scroll"],
     ],
-    i = [
+    r = [
         ["width", "200px"],
         ["height", "200px"],
     ];
-function a() {
+function s() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
         t = document.createElement("div"),
         n = document.createElement("div");
-    for (let [e, n] of r) t.style[e] = n;
-    for (let [e, t] of i) n.style[e] = t;
+    for (let [e, n] of i) t.style[e] = n;
+    for (let [e, t] of r) n.style[e] = t;
     t.appendChild(n), document.body.appendChild(t), (t.className = e);
-    let a = { width: t.offsetWidth - t.clientWidth, height: t.offsetHeight - t.clientHeight };
-    return document.body.removeChild(t), a;
+    let s = { width: t.offsetWidth - t.clientWidth, height: t.offsetHeight - t.clientHeight };
+    return document.body.removeChild(t), s;
 }

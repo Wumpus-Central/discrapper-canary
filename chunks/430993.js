@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { c: () => p, y: () => h });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { c: () => E, y: () => p });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(879378),
     l = n.n(o),
     u = n(612324),
-    d = n(707554),
-    c = n(475825),
-    _ = n(599319),
-    f = n(834730),
-    E = n(967744);
-function h(e) {
-    return i.Children.toArray(e).filter(Boolean).length > 0;
-}
+    c = n(707554),
+    d = n(475825),
+    _ = n(689175),
+    h = n(834730),
+    f = n(967744);
 function p(e) {
-    let { controls: t, children: n, listProps: i, onScroll: s, scrollerRef: a } = e;
-    if (!h(n) && null == t && null == i) return null;
+    return r.Children.toArray(e).filter(Boolean).length > 0;
+}
+function E(e) {
+    let { controls: t, children: n, listProps: r, onScroll: s, scrollerRef: a } = e;
+    if (!p(n) && null == t && null == r) return null;
     let o =
-        "string" == typeof n ? (0, r.jsx)(f.E, { variant: "text-md/normal", color: "text-subtle", children: n }) : n;
-    return (0, r.jsx)(m, { controls: t, children: o, listProps: i, onScroll: s, scrollerRef: a });
+        "string" == typeof n ? (0, i.jsx)(h.E, { variant: "text-md/normal", color: "text-subtle", children: n }) : n;
+    return (0, i.jsx)(m, { controls: t, children: o, listProps: r, onScroll: s, scrollerRef: a });
 }
 function m(e) {
-    let { controls: t, children: n, listProps: s, onScroll: o, scrollerRef: f } = e,
-        [h, p] = i.useState(!1),
-        [m, g] = i.useState(null != s),
-        A = i.useRef(null),
-        I = (0, u.A)(A, s?.ref, f),
-        T = i.useRef(null),
-        S = i.useRef(void 0);
-    i.useEffect(
+    let { controls: t, children: n, listProps: s, onScroll: o, scrollerRef: h } = e,
+        [p, E] = r.useState(!1),
+        [m, g] = r.useState(null != s),
+        A = r.useRef(null),
+        I = (0, u.A)(A, s?.ref, h),
+        T = r.useRef(null),
+        S = r.useRef(void 0);
+    r.useEffect(
         () => (
             (S.current = l()(() => {
-                A?.current != null && null != t && p(A.current?.getDistanceFromTop() > 12);
+                A?.current != null && null != t && E(A.current?.getDistanceFromTop() > 12);
             }, 200)),
             () => {
                 S.current?.cancel();
@@ -41,12 +41,12 @@ function m(e) {
         ),
         [t],
     );
-    let y = i.useCallback(() => {
+    let y = r.useCallback(() => {
             null != S.current && S.current(), null != o && o();
         }, [S, o]),
         N = null != s;
     return (
-        i.useLayoutEffect(() => {
+        r.useLayoutEffect(() => {
             let e = new ResizeObserver(() => {
                     if (N) return void g(!0);
                     let e = A?.current?.getScrollerNode() ?? null;
@@ -57,18 +57,18 @@ function m(e) {
                 t = A?.current?.getScrollerNode() ?? null;
             return null != t && e.observe(t), T?.current != null && e.observe(T.current), () => e.disconnect();
         }, [N]),
-        (0, r.jsxs)(d.F, {
+        (0, i.jsxs)(c.F, {
             children: [
-                (0, r.jsx)("div", { className: a()(E.bodySpacerTop, { [E.bodySpacerTopBorder]: m && null == t }) }),
+                (0, i.jsx)("div", { className: a()(f.bodySpacerTop, { [f.bodySpacerTopBorder]: m && null == t }) }),
                 null != t &&
-                    (0, r.jsx)("header", {
-                        className: a()(E.bodyControls, { [E.bodyControlsWithFade]: h }),
+                    (0, i.jsx)("header", {
+                        className: a()(f.bodyControls, { [f.bodyControlsWithFade]: p }),
                         children: t,
                     }),
                 null != s
-                    ? (0, r.jsx)(c.Ei, {
+                    ? (0, i.jsx)(d.Ei, {
                           ...s,
-                          className: E.bodyList,
+                          className: f.bodyList,
                           innerAriaOrientation: s.innerAriaOrientation ?? "vertical",
                           innerRole: s.innerRole ?? "listbox",
                           ref: I,
@@ -76,18 +76,18 @@ function m(e) {
                               y(), s.onScroll?.(e);
                           },
                       })
-                    : (0, r.jsx)(_.Gt, {
+                    : (0, i.jsx)(_.Gt, {
                           ref: I,
-                          className: E.body,
+                          className: f.body,
                           onScroll: y,
                           disableFocusRingScope: !0,
-                          children: (0, r.jsx)("main", {
+                          children: (0, i.jsx)("main", {
                               ref: T,
-                              className: a()(E.bodyInner, { [E.bodyInnerShouldScroll]: m }),
+                              className: a()(f.bodyInner, { [f.bodyInnerShouldScroll]: m }),
                               children: n,
                           }),
                       }),
-                (0, r.jsx)("div", { className: a()(E.bodySpacerBottom, { [E.bodySpacerBottomBorder]: m }) }),
+                (0, i.jsx)("div", { className: a()(f.bodySpacerBottom, { [f.bodySpacerBottomBorder]: m }) }),
             ],
         })
     );

@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { a: () => C });
+n.d(t, { a: () => v });
 var i = n(636537),
     r = n(306173),
     s = n(913122),
     a = n(626584),
-    o = n(235058),
+    o = n(890063),
     l = n(453771),
     u = n(77729),
     c = n(652215);
@@ -28,7 +28,7 @@ async function _(e, t) {
                 file: new Blob([JSON.stringify(a, void 0, 2)]),
             },
         ],
-        f = new Set();
+        h = new Set();
     try {
         n = await i.Bo.post({
             url: c.Rsh.DEBUG_LOGS(c.Umv.RTC),
@@ -42,7 +42,7 @@ async function _(e, t) {
                             a = 1;
                         for (; e.has(s); ) (s = `${r}_${a}.${i}`), (a += 1);
                         return e.add(s), s;
-                    })(f, e.name);
+                    })(h, e.name);
                     return { name: t, file: e.file, filename: t };
                 }),
             ],
@@ -68,9 +68,9 @@ async function _(e, t) {
             new s._(s.ct.GENERAL))
         );
 }
-var f = n(487329);
+var h = n(487329);
 n(627968), n(64700);
-let h = {};
+let f = {};
 function p(e, t) {
     let n = e.length > t ? t : e.length;
     return e.substring(0, n).padEnd(t, " ");
@@ -90,11 +90,11 @@ function S(e) {
         t
     );
 }
-var N = n(506774);
-let y = new a.A("DebugUploadManager");
-async function C(e, t) {
+var y = n(506774);
+let N = new a.A("DebugUploadManager");
+async function v(e, t) {
     try {
-        await v(e), await _(0xe00000, t);
+        await C(e), await _(0xe00000, t);
     } catch (t) {
         let e;
         throw (
@@ -102,25 +102,25 @@ async function C(e, t) {
                 (e = (function (e) {
                     switch (e.code) {
                         case s.ct.GENERAL:
-                            return f.B6.UploadErrorGeneral;
+                            return h.B6.UploadErrorGeneral;
                         case s.ct.NO_FILE:
-                            return f.B6.UploadErrorNoFile;
+                            return h.B6.UploadErrorNoFile;
                         case s.ct.PROGRESS:
-                            return f.B6.UploadErrorProgress;
+                            return h.B6.UploadErrorProgress;
                         case s.ct.UPLOAD:
-                            return f.B6.UploadErrorUpload;
+                            return h.B6.UploadErrorUpload;
                         case s.ct.READ:
-                            return f.B6.UploadErrorRead;
+                            return h.B6.UploadErrorRead;
                         default:
                             return;
                     }
                 })(t)),
-            (0, f.QW)({ type: f.iy.DEBUG_LOG_UPLOAD_FAILED, underlyingError: e, errorMessage: t.message }),
+            (0, h.QW)({ type: h.iy.DEBUG_LOG_UPLOAD_FAILED, underlyingError: e, errorMessage: t.message }),
             t)
         );
     }
 }
-async function v(e) {
+async function C(e) {
     try {
         let t, n, s, a;
         try {
@@ -137,8 +137,8 @@ async function v(e) {
             s = await Promise.resolve([]).then((e) =>
                 (function (e, t) {
                     if (0 === e.length) return "No logs";
-                    let n = N.w.get(c.Xlh),
-                        i = N.w.get(c.Ahp),
+                    let n = y.w.get(c.Xlh),
+                        i = y.w.get(c.Ahp),
                         r = null != n ? `Device Token: ${n}` : "",
                         s = null != i ? `Device Voip Token: ${i}` : "",
                         a = e
@@ -180,16 +180,16 @@ ${a}`;
                 let c,
                     d,
                     _,
-                    f,
                     h,
+                    f,
                     p,
                     E,
-                    { index: m, timestamp: g, logs: I, nativeLogs: N, serverTrace: y } = i,
-                    C = 0 === m ? (A().find(I, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : g,
-                    v =
+                    { index: m, timestamp: g, logs: I, nativeLogs: y, serverTrace: N } = i,
+                    v = 0 === m ? (A().find(I, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : g,
+                    C =
                         ((l =
                             ((r = I),
-                            (s = N),
+                            (s = y),
                             (a = t),
                             (o = n),
                             (r = r.slice()),
@@ -239,14 +239,14 @@ ${a}`;
                                 })(r, l),
                                     s && ((d += "| "), _.push(l));
                             }),
-                            (f = !1),
+                            (h = !1),
                             r.filter(
                                 (e) =>
-                                    !(f && e.log.includes("\u21AA")) &&
-                                    !(f = (!o && e.emoji === `\u{1F3A8}`) || !1 === e.shouldKeep),
+                                    !(h && e.log.includes("\u21AA")) &&
+                                    !(h = (!o && e.emoji === `\u{1F3A8}`) || !1 === e.shouldKeep),
                             ))),
-                        (u = C),
-                        (h = (function (e) {
+                        (u = v),
+                        (f = (function (e) {
                             let t = [];
                             for (let n = 0; n < e.length; n++) {
                                 let i = e[n],
@@ -262,28 +262,28 @@ ${a}`;
                             log: `${e.emoji.length > 0 ? `${e.emoji} ` : ""}${e.prefix}${e.log}
 `,
                         }))),
-                        (p = A().max(h.map((e) => e.totalTime.length)) ?? 0),
-                        (E = A().max(h.map((e) => e.deltaTime.length)) ?? 0),
-                        h
+                        (p = A().max(f.map((e) => e.totalTime.length)) ?? 0),
+                        (E = A().max(f.map((e) => e.deltaTime.length)) ?? 0),
+                        f
                             .map((e) => {
                                 let { totalTime: t, deltaTime: n, log: i } = e;
                                 return `${A().padStart(t, p)} ${A().padStart(n, E)} ${i}`;
                             })
                             .join("")),
-                    O = `Trace #${m + 1} started ${(0, T.aK)(g)}
-${v}`;
+                    R = `Trace #${m + 1} started ${(0, T.aK)(g)}
+${C}`;
                 return (
-                    null != y &&
-                        (O += `
- Server trace for trace #${m + 1}${y}`),
-                    O
+                    null != N &&
+                        (R += `
+ Server trace for trace #${m + 1}${N}`),
+                    R
                 );
             })
             .join("\n\n");
     })(null)}
 
     ${(function () {
-        if (0 === Object.keys(h).length) return "";
+        if (0 === Object.keys(f).length) return "";
         let e = `Component Render Stats (microseconds):
 `,
             t = `|${p("id", 20)}|${p("Mounts", 8)}|${p("Mount Mean", 20)}|${p("Updates", 8)}|${p("Update Mean", 20)}|${p("Nested", 8)}|${p("Nested Mean", 20)}|
@@ -291,7 +291,7 @@ ${v}`;
         return (
             e +
             t +
-            Object.entries(h).map((e) => {
+            Object.entries(f).map((e) => {
                 let [t, n] = e;
                 return `|${p(t, 20)}|${p(n.mount.count.toString(), 8)}|${p(n.mount.mean.toString(), 20)}|${p(n.update.count.toString(), 8)}|${p(n.update.mean.toString(), 20)}|${p(n.nestedUpdate.count.toString(), 8)}|${p(n.nestedUpdate.mean.toString(), 20)}|
 `;
@@ -300,7 +300,7 @@ ${v}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "544572", versionHash: "36b5954180f0973d867ab66d7c765d52d064d5f5" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "562146", versionHash: "618e1a0d94bdf950f65ca0052441902501c96239" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(E.A.getDebugInfo(), void 0, 2)}
@@ -328,6 +328,6 @@ ${v}`;
             rejectWithError: !1,
         });
     } catch (e) {
-        y.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
+        N.error(`uploadAppLogFiles: upload app log files error ${e.message}`);
     }
 }

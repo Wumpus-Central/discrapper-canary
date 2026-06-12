@@ -20,8 +20,8 @@ let o =
         var e,
             o,
             a,
-            i,
             s,
+            i,
             u,
             l,
             d,
@@ -36,8 +36,8 @@ let o =
             w,
             E,
             b,
-            k,
             _,
+            k,
             $,
             P,
             T,
@@ -48,22 +48,22 @@ let o =
             }),
             D = Object.assign({}, r),
             S = "./this.program",
-            x = "";
-        "u" > typeof document && document.currentScript && (x = document.currentScript.src),
-            n && (x = n),
-            (x = x.startsWith("blob:") ? "" : x.substr(0, x.replace(/[?#].*/, "").lastIndexOf("/") + 1)),
+            j = "";
+        "u" > typeof document && document.currentScript && (j = document.currentScript.src),
+            n && (j = n),
+            (j = j.startsWith("blob:") ? "" : j.substr(0, j.replace(/[?#].*/, "").lastIndexOf("/") + 1)),
             (a = async (r) => {
                 var e = await fetch(r, { credentials: "same-origin" });
                 if (e.ok) return e.arrayBuffer();
                 throw Error(e.status + " : " + e.url);
             });
-        var j = r.print || console.log.bind(console),
+        var x = r.print || console.log.bind(console),
             O = r.printErr || console.error.bind(console);
         Object.assign(r, D), (D = null), r.arguments && r.arguments, r.thisProgram && (S = r.thisProgram);
         var M = r.wasmBinary,
-            R = !1;
+            W = !1;
         function N() {
-            var e = s.buffer;
+            var e = i.buffer;
             (r.HEAP8 = u = new Int8Array(e)),
                 (r.HEAP16 = d = new Int16Array(e)),
                 (r.HEAPU8 = l = new Uint8Array(e)),
@@ -75,22 +75,22 @@ let o =
                 (r.HEAP64 = m = new BigInt64Array(e)),
                 (r.HEAPU64 = v = new BigUint64Array(e));
         }
-        var W = [],
-            U = [],
+        var R = [],
             B = [],
+            U = [],
             z = 0,
             I = null;
-        function L(e) {
+        function V(e) {
             z++, r.monitorRunDependencies?.(z);
         }
-        function V(e) {
+        function L(e) {
             if ((z--, r.monitorRunDependencies?.(z), 0 == z && I)) {
                 var t = I;
                 (I = null), t();
             }
         }
         function H(e) {
-            r.onAbort?.(e), O((e = "Aborted(" + e + ")")), (R = !0), (e += ". Build with -sASSERTIONS for more info.");
+            r.onAbort?.(e), O((e = "Aborted(" + e + ")")), (W = !0), (e += ". Build with -sASSERTIONS for more info.");
             var t = new WebAssembly.RuntimeError(e);
             throw (o(t), t);
         }
@@ -101,7 +101,7 @@ let o =
                     return new Uint8Array(e);
                 } catch {}
             if (r == g && M) return new Uint8Array(M);
-            if (i) return i(r);
+            if (s) return s(r);
             throw "both async and sync fetching of the wasm failed";
         }
         async function G(r, e) {
@@ -130,9 +130,9 @@ let o =
         async function Y() {
             function e(r, e) {
                 var t;
-                return (s = (P = r.exports)._), N(), (_ = P.ba), (t = P.$), U.unshift(t), V("wasm-instantiate"), P;
+                return (i = (P = r.exports)._), N(), (k = P.ba), (t = P.$), B.unshift(t), L("wasm-instantiate"), P;
             }
-            L("wasm-instantiate");
+            V("wasm-instantiate");
             var n = { a: e$ };
             if (r.instantiateWasm)
                 try {
@@ -146,8 +146,8 @@ let o =
                     return e.startsWith("data:application/octet-stream;base64,")
                         ? e
                         : r.locateFile
-                          ? r.locateFile(e, x)
-                          : x + e;
+                          ? r.locateFile(e, j)
+                          : j + e;
                 }
                 return new URL(t(264219), t.b).href;
             })();
@@ -262,10 +262,10 @@ let o =
                 resolve: function () {
                     for (var r = arguments.length, e = Array(r), t = 0; t < r; t++) e[t] = arguments[t];
                     for (var n = "", o = !1, a = e.length - 1; a >= -1 && !o; a--) {
-                        var i = a >= 0 ? e[a] : ry.cwd();
-                        if ("string" != typeof i) throw TypeError("Arguments to path.resolve must be strings");
-                        if (!i) return "";
-                        (n = i + "/" + n), (o = rt.isAbs(i));
+                        var s = a >= 0 ? e[a] : ry.cwd();
+                        if ("string" != typeof s) throw TypeError("Arguments to path.resolve must be strings");
+                        if (!s) return "";
+                        (n = s + "/" + n), (o = rt.isAbs(s));
                     }
                     return (
                         (n = rt
@@ -285,51 +285,51 @@ let o =
                     }
                     (r = ro.resolve(r).substr(1)), (e = ro.resolve(e).substr(1));
                     for (
-                        var n = t(r.split("/")), o = t(e.split("/")), a = Math.min(n.length, o.length), i = a, s = 0;
-                        s < a;
-                        s++
+                        var n = t(r.split("/")), o = t(e.split("/")), a = Math.min(n.length, o.length), s = a, i = 0;
+                        i < a;
+                        i++
                     )
-                        if (n[s] !== o[s]) {
-                            i = s;
+                        if (n[i] !== o[i]) {
+                            s = i;
                             break;
                         }
-                    for (var u = [], s = i; s < n.length; s++) u.push("..");
-                    return (u = u.concat(o.slice(i))).join("/");
+                    for (var u = [], i = s; i < n.length; i++) u.push("..");
+                    return (u = u.concat(o.slice(s))).join("/");
                 },
             },
             ra = "u" > typeof TextDecoder ? new TextDecoder() : void 0,
-            ri = function (r) {
+            rs = function (r) {
                 let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
                     t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : NaN;
                 for (var n = e + t, o = e; r[o] && !(o >= n); ) ++o;
                 if (o - e > 16 && r.buffer && ra) return ra.decode(r.subarray(e, o));
                 for (var a = ""; e < o; ) {
-                    var i = r[e++];
-                    if (!(128 & i)) {
-                        a += String.fromCharCode(i);
+                    var s = r[e++];
+                    if (!(128 & s)) {
+                        a += String.fromCharCode(s);
                         continue;
                     }
-                    var s = 63 & r[e++];
-                    if ((224 & i) == 192) {
-                        a += String.fromCharCode(((31 & i) << 6) | s);
+                    var i = 63 & r[e++];
+                    if ((224 & s) == 192) {
+                        a += String.fromCharCode(((31 & s) << 6) | i);
                         continue;
                     }
                     var u = 63 & r[e++];
                     if (
-                        (i =
-                            (240 & i) == 224
-                                ? ((15 & i) << 12) | (s << 6) | u
-                                : ((7 & i) << 18) | (s << 12) | (u << 6) | (63 & r[e++])) < 65536
+                        (s =
+                            (240 & s) == 224
+                                ? ((15 & s) << 12) | (i << 6) | u
+                                : ((7 & s) << 18) | (i << 12) | (u << 6) | (63 & r[e++])) < 65536
                     )
-                        a += String.fromCharCode(i);
+                        a += String.fromCharCode(s);
                     else {
-                        var l = i - 65536;
+                        var l = s - 65536;
                         a += String.fromCharCode(55296 | (l >> 10), 56320 | (1023 & l));
                     }
                 }
                 return a;
             },
-            rs = [],
+            ri = [],
             ru = (r) => {
                 for (var e = 0, t = 0; t < r.length; ++t) {
                     var n = r.charCodeAt(t);
@@ -339,26 +339,26 @@ let o =
             },
             rl = (r, e, t, n) => {
                 if (!(n > 0)) return 0;
-                for (var o = t, a = t + n - 1, i = 0; i < r.length; ++i) {
-                    var s = r.charCodeAt(i);
+                for (var o = t, a = t + n - 1, s = 0; s < r.length; ++s) {
+                    var i = r.charCodeAt(s);
                     if (
-                        (s >= 55296 && s <= 57343 && (s = (65536 + ((1023 & s) << 10)) | (1023 & r.charCodeAt(++i))),
-                        s <= 127)
+                        (i >= 55296 && i <= 57343 && (i = (65536 + ((1023 & i) << 10)) | (1023 & r.charCodeAt(++s))),
+                        i <= 127)
                     ) {
                         if (t >= a) break;
-                        e[t++] = s;
-                    } else if (s <= 2047) {
+                        e[t++] = i;
+                    } else if (i <= 2047) {
                         if (t + 1 >= a) break;
-                        (e[t++] = 192 | (s >> 6)), (e[t++] = 128 | (63 & s));
-                    } else if (s <= 65535) {
+                        (e[t++] = 192 | (i >> 6)), (e[t++] = 128 | (63 & i));
+                    } else if (i <= 65535) {
                         if (t + 2 >= a) break;
-                        (e[t++] = 224 | (s >> 12)), (e[t++] = 128 | ((s >> 6) & 63)), (e[t++] = 128 | (63 & s));
+                        (e[t++] = 224 | (i >> 12)), (e[t++] = 128 | ((i >> 6) & 63)), (e[t++] = 128 | (63 & i));
                     } else {
                         if (t + 3 >= a) break;
-                        (e[t++] = 240 | (s >> 18)),
-                            (e[t++] = 128 | ((s >> 12) & 63)),
-                            (e[t++] = 128 | ((s >> 6) & 63)),
-                            (e[t++] = 128 | (63 & s));
+                        (e[t++] = 240 | (i >> 18)),
+                            (e[t++] = 128 | ((i >> 12) & 63)),
+                            (e[t++] = 128 | ((i >> 6) & 63)),
+                            (e[t++] = 128 | (63 & i));
                     }
                 }
                 return (e[t] = 0), t - o;
@@ -384,17 +384,17 @@ let o =
                     },
                     read(r, e, t, n, o) {
                         if (!r.tty || !r.tty.ops.get_char) throw new ry.ErrnoError(60);
-                        for (var a, i = 0, s = 0; s < n; s++) {
+                        for (var a, s = 0, i = 0; i < n; i++) {
                             try {
                                 a = r.tty.ops.get_char(r.tty);
                             } catch (r) {
                                 throw new ry.ErrnoError(29);
                             }
-                            if (void 0 === a && 0 === i) throw new ry.ErrnoError(6);
+                            if (void 0 === a && 0 === s) throw new ry.ErrnoError(6);
                             if (null == a) break;
-                            i++, (e[t + s] = a);
+                            s++, (e[t + i] = a);
                         }
-                        return i && (r.node.atime = Date.now()), i;
+                        return s && (r.node.atime = Date.now()), s;
                     },
                     write(r, e, t, n, o) {
                         if (!r.tty || !r.tty.ops.put_char) throw new ry.ErrnoError(60);
@@ -409,7 +409,7 @@ let o =
                 default_tty_ops: {
                     get_char: (r) =>
                         (() => {
-                            if (!rs.length) {
+                            if (!ri.length) {
                                 var r,
                                     e,
                                     t,
@@ -428,15 +428,15 @@ let o =
                                     (t = Array(ru(r) + 1)),
                                     (n = rl(r, t, 0, t.length)),
                                     e && (t.length = n),
-                                    (rs = t);
+                                    (ri = t);
                             }
-                            return rs.shift();
+                            return ri.shift();
                         })(),
                     put_char(r, e) {
-                        null === e || 10 === e ? (j(ri(r.output)), (r.output = [])) : 0 != e && r.output.push(e);
+                        null === e || 10 === e ? (x(rs(r.output)), (r.output = [])) : 0 != e && r.output.push(e);
                     },
                     fsync(r) {
-                        r.output && r.output.length > 0 && (j(ri(r.output)), (r.output = []));
+                        r.output && r.output.length > 0 && (x(rs(r.output)), (r.output = []));
                     },
                     ioctl_tcgets: (r) => ({
                         c_iflag: 25856,
@@ -453,10 +453,10 @@ let o =
                 },
                 default_tty1_ops: {
                     put_char(r, e) {
-                        null === e || 10 === e ? (O(ri(r.output)), (r.output = [])) : 0 != e && r.output.push(e);
+                        null === e || 10 === e ? (O(rs(r.output)), (r.output = [])) : 0 != e && r.output.push(e);
                     },
                     fsync(r) {
-                        r.output && r.output.length > 0 && (O(ri(r.output)), (r.output = []));
+                        r.output && r.output.length > 0 && (O(rs(r.output)), (r.output = []));
                     },
                 },
             },
@@ -627,24 +627,24 @@ let o =
                     read(r, e, t, n, o) {
                         var a = r.node.contents;
                         if (o >= r.node.usedBytes) return 0;
-                        var i = Math.min(r.node.usedBytes - o, n);
-                        if (i > 8 && a.subarray) e.set(a.subarray(o, o + i), t);
-                        else for (var s = 0; s < i; s++) e[t + s] = a[o + s];
-                        return i;
+                        var s = Math.min(r.node.usedBytes - o, n);
+                        if (s > 8 && a.subarray) e.set(a.subarray(o, o + s), t);
+                        else for (var i = 0; i < s; i++) e[t + i] = a[o + i];
+                        return s;
                     },
                     write(r, e, t, n, o, a) {
                         if ((e.buffer === u.buffer && (a = !1), !n)) return 0;
-                        var i = r.node;
-                        if (((i.mtime = i.ctime = Date.now()), e.subarray && (!i.contents || i.contents.subarray))) {
-                            if (a) return (i.contents = e.subarray(t, t + n)), (i.usedBytes = n), n;
-                            else if (0 === i.usedBytes && 0 === o)
-                                return (i.contents = e.slice(t, t + n)), (i.usedBytes = n), n;
-                            else if (o + n <= i.usedBytes) return i.contents.set(e.subarray(t, t + n), o), n;
+                        var s = r.node;
+                        if (((s.mtime = s.ctime = Date.now()), e.subarray && (!s.contents || s.contents.subarray))) {
+                            if (a) return (s.contents = e.subarray(t, t + n)), (s.usedBytes = n), n;
+                            else if (0 === s.usedBytes && 0 === o)
+                                return (s.contents = e.slice(t, t + n)), (s.usedBytes = n), n;
+                            else if (o + n <= s.usedBytes) return s.contents.set(e.subarray(t, t + n), o), n;
                         }
-                        if ((rh.expandFileStorage(i, o + n), i.contents.subarray && e.subarray))
-                            i.contents.set(e.subarray(t, t + n), o);
-                        else for (var s = 0; s < n; s++) i.contents[o + s] = e[t + s];
-                        return (i.usedBytes = Math.max(i.usedBytes, o + n)), n;
+                        if ((rh.expandFileStorage(s, o + n), s.contents.subarray && e.subarray))
+                            s.contents.set(e.subarray(t, t + n), o);
+                        else for (var i = 0; i < n; i++) s.contents[o + i] = e[t + i];
+                        return (s.usedBytes = Math.max(s.usedBytes, o + n)), n;
                     },
                     llseek(r, e, t) {
                         var n = e;
@@ -661,17 +661,17 @@ let o =
                     mmap(r, e, t, n, o) {
                         if (!ry.isFile(r.node.mode)) throw new ry.ErrnoError(43);
                         var a,
-                            i,
-                            s = r.node.contents;
-                        if (!(2 & o) && s && s.buffer === u.buffer) (i = !1), (a = s.byteOffset);
+                            s,
+                            i = r.node.contents;
+                        if (!(2 & o) && i && i.buffer === u.buffer) (s = !1), (a = i.byteOffset);
                         else {
-                            if (((i = !0), !(a = rf(e)))) throw new ry.ErrnoError(48);
-                            s &&
-                                ((t > 0 || t + e < s.length) &&
-                                    (s = s.subarray ? s.subarray(t, t + e) : Array.prototype.slice.call(s, t, t + e)),
-                                u.set(s, a));
+                            if (((s = !0), !(a = rf(e)))) throw new ry.ErrnoError(48);
+                            i &&
+                                ((t > 0 || t + e < i.length) &&
+                                    (i = i.subarray ? i.subarray(t, t + e) : Array.prototype.slice.call(i, t, t + e)),
+                                u.set(i, a));
                         }
-                        return { ptr: a, allocated: i };
+                        return { ptr: a, allocated: s };
                     },
                     msync: (r, e, t, n, o) => (rh.stream_ops.write(r, e, 0, n, t, !1), 0),
                 },
@@ -772,30 +772,30 @@ let o =
                     (e.follow_mount ??= !0), rt.isAbs(r) || (r = ry.cwd() + "/" + r);
                     r: for (var t = 0; t < 40; t++) {
                         for (
-                            var n = r.split("/").filter((r) => !!r && "." !== r), o = ry.root, a = "/", i = 0;
-                            i < n.length;
-                            i++
+                            var n = r.split("/").filter((r) => !!r && "." !== r), o = ry.root, a = "/", s = 0;
+                            s < n.length;
+                            s++
                         ) {
-                            var s = i === n.length - 1;
-                            if (s && e.parent) break;
-                            if (".." === n[i]) {
+                            var i = s === n.length - 1;
+                            if (i && e.parent) break;
+                            if (".." === n[s]) {
                                 (a = rt.dirname(a)), (o = o.parent);
                                 continue;
                             }
-                            a = rt.join2(a, n[i]);
+                            a = rt.join2(a, n[s]);
                             try {
-                                o = ry.lookupNode(o, n[i]);
+                                o = ry.lookupNode(o, n[s]);
                             } catch (r) {
-                                if (r?.errno === 44 && s && e.noent_okay) return { path: a };
+                                if (r?.errno === 44 && i && e.noent_okay) return { path: a };
                                 throw r;
                             }
                             if (
-                                (ry.isMountpoint(o) && (!s || e.follow_mount) && (o = o.mounted.root),
-                                ry.isLink(o.mode) && (!s || e.follow))
+                                (ry.isMountpoint(o) && (!i || e.follow_mount) && (o = o.mounted.root),
+                                ry.isLink(o.mode) && (!i || e.follow))
                             ) {
                                 if (!o.node_ops.readlink) throw new ry.ErrnoError(52);
                                 var u = o.node_ops.readlink(o);
-                                rt.isAbs(u) || (u = rt.dirname(a) + "/" + u), (r = u + "/" + n.slice(i + 1).join("/"));
+                                rt.isAbs(u) || (u = rt.dirname(a) + "/" + u), (r = u + "/" + n.slice(s + 1).join("/"));
                                 continue r;
                             }
                         }
@@ -984,16 +984,16 @@ let o =
                         a = !t;
                     if (o && ry.root) throw new ry.ErrnoError(10);
                     if (!o && !a) {
-                        var i = ry.lookupPath(t, { follow_mount: !1 });
-                        if (((t = i.path), (n = i.node), ry.isMountpoint(n))) throw new ry.ErrnoError(10);
+                        var s = ry.lookupPath(t, { follow_mount: !1 });
+                        if (((t = s.path), (n = s.node), ry.isMountpoint(n))) throw new ry.ErrnoError(10);
                         if (!ry.isDir(n.mode)) throw new ry.ErrnoError(54);
                     }
-                    var s = { type: r, opts: e, mountpoint: t, mounts: [] },
-                        u = r.mount(s);
+                    var i = { type: r, opts: e, mountpoint: t, mounts: [] },
+                        u = r.mount(i);
                     return (
-                        (u.mount = s),
-                        (s.root = u),
-                        o ? (ry.root = u) : n && ((n.mounted = s), n.mount && n.mount.mounts.push(s)),
+                        (u.mount = i),
+                        (i.root = u),
+                        o ? (ry.root = u) : n && ((n.mounted = i), n.mount && n.mount.mounts.push(i)),
                         u
                     );
                 },
@@ -1074,8 +1074,8 @@ let o =
                         n,
                         o,
                         a = rt.dirname(r),
-                        i = rt.dirname(e),
-                        s = rt.basename(r),
+                        s = rt.dirname(e),
+                        i = rt.basename(r),
                         u = rt.basename(e);
                     if (
                         ((t = ry.lookupPath(r, { parent: !0 }).node),
@@ -1084,8 +1084,8 @@ let o =
                     )
                         throw new ry.ErrnoError(44);
                     if (t.mount !== n.mount) throw new ry.ErrnoError(75);
-                    var l = ry.lookupNode(t, s),
-                        d = ro.relative(r, i);
+                    var l = ry.lookupNode(t, i),
+                        d = ro.relative(r, s);
                     if ("." !== d.charAt(0)) throw new ry.ErrnoError(28);
                     if ("." !== (d = ro.relative(e, a)).charAt(0)) throw new ry.ErrnoError(55);
                     try {
@@ -1093,7 +1093,7 @@ let o =
                     } catch (r) {}
                     if (l !== o) {
                         var c = ry.isDir(l.mode),
-                            f = ry.mayDelete(t, s, c);
+                            f = ry.mayDelete(t, i, c);
                         if (f || (f = o ? ry.mayDelete(n, u, c) : ry.mayCreate(n, u))) throw new ry.ErrnoError(f);
                         if (!t.node_ops.rename) throw new ry.ErrnoError(63);
                         if (ry.isMountpoint(l) || (o && ry.isMountpoint(o))) throw new ry.ErrnoError(10);
@@ -1219,19 +1219,19 @@ let o =
                             a = ry.lookupPath(e, { follow: !(131072 & t), noent_okay: !0 });
                         (o = a.node), (e = a.path);
                     }
-                    var i = !1;
+                    var s = !1;
                     if (64 & t)
                         if (o) {
                             if (128 & t) throw new ry.ErrnoError(20);
-                        } else (o = ry.mknod(e, n, 0)), (i = !0);
+                        } else (o = ry.mknod(e, n, 0)), (s = !0);
                     if (!o) throw new ry.ErrnoError(44);
                     if ((ry.isChrdev(o.mode) && (t &= -513), 65536 & t && !ry.isDir(o.mode)))
                         throw new ry.ErrnoError(54);
-                    if (!i) {
-                        var s = ry.mayOpen(o, t);
-                        if (s) throw new ry.ErrnoError(s);
+                    if (!s) {
+                        var i = ry.mayOpen(o, t);
+                        if (i) throw new ry.ErrnoError(i);
                     }
-                    512 & t && !i && ry.truncate(o, 0), (t &= -131713);
+                    512 & t && !s && ry.truncate(o, 0), (t &= -131713);
                     var u = ry.createStream({
                         node: o,
                         path: ry.getPath(o),
@@ -1276,8 +1276,8 @@ let o =
                     if (a) {
                         if (!r.seekable) throw new ry.ErrnoError(70);
                     } else o = r.position;
-                    var i = r.stream_ops.read(r, e, t, n, o);
-                    return a || (r.position += i), i;
+                    var s = r.stream_ops.read(r, e, t, n, o);
+                    return a || (r.position += s), s;
                 },
                 write(r, e, t, n, o, a) {
                     if (n < 0 || o < 0) throw new ry.ErrnoError(28);
@@ -1285,12 +1285,12 @@ let o =
                     if (ry.isDir(r.node.mode)) throw new ry.ErrnoError(31);
                     if (!r.stream_ops.write) throw new ry.ErrnoError(28);
                     r.seekable && 1024 & r.flags && ry.llseek(r, 0, 2);
-                    var i = void 0 !== o;
-                    if (i) {
+                    var s = void 0 !== o;
+                    if (s) {
                         if (!r.seekable) throw new ry.ErrnoError(70);
                     } else o = r.position;
-                    var s = r.stream_ops.write(r, e, t, n, o, a);
-                    return i || (r.position += s), s;
+                    var i = r.stream_ops.write(r, e, t, n, o, a);
+                    return s || (r.position += i), i;
                 },
                 allocate(r, e, t) {
                     if (ry.isClosed(r)) throw new ry.ErrnoError(8);
@@ -1326,7 +1326,7 @@ let o =
                         a = new Uint8Array(o);
                     return (
                         ry.read(n, a, 0, o, 0),
-                        "utf8" === e.encoding ? (t = ri(a)) : "binary" === e.encoding && (t = a),
+                        "utf8" === e.encoding ? (t = rs(a)) : "binary" === e.encoding && (t = a),
                         ry.close(n),
                         t
                     );
@@ -1488,42 +1488,42 @@ let o =
                     for (var o = e.split("/").reverse(); o.length; ) {
                         var a = o.pop();
                         if (a) {
-                            var i = rt.join2(r, a);
+                            var s = rt.join2(r, a);
                             try {
-                                ry.mkdir(i);
+                                ry.mkdir(s);
                             } catch (r) {}
-                            r = i;
+                            r = s;
                         }
                     }
-                    return i;
+                    return s;
                 },
                 createFile(r, e, t, n, o) {
                     var a = rt.join2("string" == typeof r ? r : ry.getPath(r), e),
-                        i = rv(n, o);
-                    return ry.create(a, i);
+                        s = rv(n, o);
+                    return ry.create(a, s);
                 },
                 createDataFile(r, e, t, n, o, a) {
-                    var i = e;
-                    r && ((r = "string" == typeof r ? r : ry.getPath(r)), (i = e ? rt.join2(r, e) : r));
-                    var s = rv(n, o),
-                        u = ry.create(i, s);
+                    var s = e;
+                    r && ((r = "string" == typeof r ? r : ry.getPath(r)), (s = e ? rt.join2(r, e) : r));
+                    var i = rv(n, o),
+                        u = ry.create(s, i);
                     if (t) {
                         if ("string" == typeof t) {
                             for (var l = Array(t.length), d = 0, c = t.length; d < c; ++d) l[d] = t.charCodeAt(d);
                             t = l;
                         }
-                        ry.chmod(u, 146 | s);
+                        ry.chmod(u, 146 | i);
                         var f = ry.open(u, 577);
-                        ry.write(f, t, 0, t.length, 0, a), ry.close(f), ry.chmod(u, s);
+                        ry.write(f, t, 0, t.length, 0, a), ry.close(f), ry.chmod(u, i);
                     }
                 },
                 createDevice(r, e, t, n) {
                     var o = rt.join2("string" == typeof r ? r : ry.getPath(r), e),
                         a = rv(!!t, !!n);
                     ry.createDevice.major ??= 64;
-                    var i = ry.makedev(ry.createDevice.major++, 0);
+                    var s = ry.makedev(ry.createDevice.major++, 0);
                     return (
-                        ry.registerDevice(i, {
+                        ry.registerDevice(s, {
                             open(r) {
                                 r.seekable = !1;
                             },
@@ -1531,29 +1531,29 @@ let o =
                                 n?.buffer?.length && n(10);
                             },
                             read(r, e, n, o, a) {
-                                for (var i, s = 0, u = 0; u < o; u++) {
+                                for (var s, i = 0, u = 0; u < o; u++) {
                                     try {
-                                        i = t();
+                                        s = t();
                                     } catch (r) {
                                         throw new ry.ErrnoError(29);
                                     }
-                                    if (void 0 === i && 0 === s) throw new ry.ErrnoError(6);
-                                    if (null == i) break;
-                                    s++, (e[n + u] = i);
+                                    if (void 0 === s && 0 === i) throw new ry.ErrnoError(6);
+                                    if (null == s) break;
+                                    i++, (e[n + u] = s);
                                 }
-                                return s && (r.node.atime = Date.now()), s;
+                                return i && (r.node.atime = Date.now()), i;
                             },
                             write(r, e, t, o, a) {
-                                for (var i = 0; i < o; i++)
+                                for (var s = 0; s < o; s++)
                                     try {
-                                        n(e[t + i]);
+                                        n(e[t + s]);
                                     } catch (r) {
                                         throw new ry.ErrnoError(29);
                                     }
-                                return o && (r.node.mtime = r.node.ctime = Date.now()), i;
+                                return o && (r.node.mtime = r.node.ctime = Date.now()), s;
                             },
                         }),
-                        ry.mkdev(o, a, i)
+                        ry.mkdev(o, a, s)
                     );
                 },
                 forceLoadFile(r) {
@@ -1563,7 +1563,7 @@ let o =
                             "Lazy loading should have been performed (contents set) in createLazyFile, but it was not. Lazy loading only works in web workers. Use --embed-file or --preload-file in emcc on the main thread.",
                         );
                     try {
-                        (r.contents = i(r.url)), (r.usedBytes = r.contents.length);
+                        (r.contents = s(r.url)), (r.usedBytes = r.contents.length);
                     } catch (r) {
                         throw new ry.ErrnoError(29);
                     }
@@ -1574,45 +1574,45 @@ let o =
                         throw "Cannot do synchronous binary XHRs outside webworkers in modern browsers. Use --embed-file or --preload-file in emcc";
                     }
                     var a = { isDevice: !1, url: t },
-                        i = ry.createFile(r, e, a, n, o);
-                    a.contents ? (i.contents = a.contents) : a.url && ((i.contents = null), (i.url = a.url)),
-                        Object.defineProperties(i, {
+                        s = ry.createFile(r, e, a, n, o);
+                    a.contents ? (s.contents = a.contents) : a.url && ((s.contents = null), (s.url = a.url)),
+                        Object.defineProperties(s, {
                             usedBytes: {
                                 get: function () {
                                     return this.contents.length;
                                 },
                             },
                         });
-                    var s = {};
+                    var i = {};
                     function l(r, e, t, n, o) {
                         var a = r.node.contents;
                         if (o >= a.length) return 0;
-                        var i = Math.min(a.length - o, n);
-                        if (a.slice) for (var s = 0; s < i; s++) e[t + s] = a[o + s];
-                        else for (var s = 0; s < i; s++) e[t + s] = a.get(o + s);
-                        return i;
+                        var s = Math.min(a.length - o, n);
+                        if (a.slice) for (var i = 0; i < s; i++) e[t + i] = a[o + i];
+                        else for (var i = 0; i < s; i++) e[t + i] = a.get(o + i);
+                        return s;
                     }
                     return (
-                        Object.keys(i.stream_ops).forEach((r) => {
-                            var e = i.stream_ops[r];
-                            s[r] = function () {
+                        Object.keys(s.stream_ops).forEach((r) => {
+                            var e = s.stream_ops[r];
+                            i[r] = function () {
                                 for (var r = arguments.length, t = Array(r), n = 0; n < r; n++) t[n] = arguments[n];
-                                return ry.forceLoadFile(i), e(...t);
+                                return ry.forceLoadFile(s), e(...t);
                             };
                         }),
-                        (s.read = (r, e, t, n, o) => (ry.forceLoadFile(i), l(r, e, t, n, o))),
-                        (s.mmap = (r, e, t, n, o) => {
-                            ry.forceLoadFile(i);
+                        (i.read = (r, e, t, n, o) => (ry.forceLoadFile(s), l(r, e, t, n, o))),
+                        (i.mmap = (r, e, t, n, o) => {
+                            ry.forceLoadFile(s);
                             var a = rf(e);
                             if (!a) throw new ry.ErrnoError(48);
                             return l(r, u, a, e, t), { ptr: a, allocated: !0 };
                         }),
-                        (i.stream_ops = s),
-                        i
+                        (s.stream_ops = i),
+                        s
                     );
                 },
             },
-            rg = (r, e) => (r ? ri(l, r, e) : ""),
+            rg = (r, e) => (r ? rs(l, r, e) : ""),
             rw = {
                 DEFAULT_POLLMASK: 5,
                 calculateAt(r, e, t) {
@@ -1641,14 +1641,14 @@ let o =
                         (f[(t + 36) >> 2] = n.blocks);
                     var o = n.atime.getTime(),
                         a = n.mtime.getTime(),
-                        i = n.ctime.getTime();
+                        s = n.ctime.getTime();
                     return (
                         (m[(t + 40) >> 3] = BigInt(Math.floor(o / 1e3))),
                         (h[(t + 48) >> 2] = (o % 1e3) * 1e6),
                         (m[(t + 56) >> 3] = BigInt(Math.floor(a / 1e3))),
                         (h[(t + 64) >> 2] = (a % 1e3) * 1e6),
-                        (m[(t + 72) >> 3] = BigInt(Math.floor(i / 1e3))),
-                        (h[(t + 80) >> 2] = (i % 1e3) * 1e6),
+                        (m[(t + 72) >> 3] = BigInt(Math.floor(s / 1e3))),
+                        (h[(t + 80) >> 2] = (s % 1e3) * 1e6),
                         (m[(t + 88) >> 3] = BigInt(n.ino)),
                         0
                     );
@@ -1669,11 +1669,11 @@ let o =
                 var e = typeof r;
                 return "object" === e || "array" === e || "function" === e ? r.toString() : "" + r;
             },
-            rk = (r) => {
+            r_ = (r) => {
                 for (var e = "", t = r; l[t]; ) e += w[l[t++]];
                 return e;
             },
-            r_ = {},
+            rk = {},
             r$ = {},
             rP = {},
             rT = (r) => {
@@ -1691,14 +1691,14 @@ let o =
                 r.forEach((r) => (rP[r] = e));
                 var o = Array(e.length),
                     a = [],
-                    i = 0;
+                    s = 0;
                 e.forEach((r, e) => {
                     r$.hasOwnProperty(r)
                         ? (o[e] = r$[r])
                         : (a.push(r),
-                          r_.hasOwnProperty(r) || (r_[r] = []),
-                          r_[r].push(() => {
-                              (o[e] = r$[r]), ++i === a.length && n(o);
+                          rk.hasOwnProperty(r) || (rk[r] = []),
+                          rk[r].push(() => {
+                              (o[e] = r$[r]), ++s === a.length && n(o);
                           }));
                 }),
                     0 === a.length && n(o);
@@ -1711,9 +1711,9 @@ let o =
                 if ((r || rT(`type "${n}" must have a positive integer typeid pointer`), r$.hasOwnProperty(r)))
                     if (t.ignoreDuplicateRegistrations) return;
                     else rT(`Cannot register type '${n}' twice`);
-                if (((r$[r] = e), delete rP[r], r_.hasOwnProperty(r))) {
-                    var o = r_[r];
-                    delete r_[r], o.forEach((r) => r());
+                if (((r$[r] = e), delete rP[r], rk.hasOwnProperty(r))) {
+                    var o = rk[r];
+                    delete rk[r], o.forEach((r) => r());
                 }
             })(r, e, t);
         }
@@ -1734,8 +1734,8 @@ let o =
             rS = (r) => {
                 rT(r.$$.ptrType.registeredClass.name + " instance already deleted");
             },
-            rx = !1,
-            rj = (r) => {},
+            rj = !1,
+            rx = (r) => {},
             rO = (r) => {
                 (r.count.value -= 1),
                     0 === r.count.value &&
@@ -1749,36 +1749,36 @@ let o =
                 var n = rM(r, e, t.baseClass);
                 return null === n ? null : t.downcast(n);
             },
-            rR = {},
+            rW = {},
             rN = {},
-            rW = (r, e) => (
+            rR = (r, e) => (
                 (e.ptrType && e.ptr) || rC("makeClassHandle requires ptr and ptrType"),
                 !!e.smartPtrType != !!e.smartPtr && rC("Both smartPtrType and smartPtr must be specified"),
                 (e.count = { value: 1 }),
-                rU(Object.create(r, { $$: { value: e, writable: !0 } }))
+                rB(Object.create(r, { $$: { value: e, writable: !0 } }))
             ),
-            rU = (r) =>
+            rB = (r) =>
                 "u" < typeof FinalizationRegistry
-                    ? ((rU = (r) => r), r)
-                    : ((rx = new FinalizationRegistry((r) => {
+                    ? ((rB = (r) => r), r)
+                    : ((rj = new FinalizationRegistry((r) => {
                           rO(r.$$);
                       })),
-                      (rU = (r) => {
+                      (rB = (r) => {
                           var e = r.$$;
-                          return e.smartPtr && rx.register(r, { $$: e }, r), r;
+                          return e.smartPtr && rj.register(r, { $$: e }, r), r;
                       }),
-                      (rj = (r) => rx.unregister(r)),
-                      rU(r)),
-            rB = [],
+                      (rx = (r) => rj.unregister(r)),
+                      rB(r)),
+            rU = [],
             rz = () => {
-                for (; rB.length; ) {
-                    var r = rB.pop();
+                for (; rU.length; ) {
+                    var r = rU.pop();
                     (r.$$.deleteScheduled = !1), r.delete();
                 }
             };
         function rI() {}
-        var rL = (r, e) => Object.defineProperty(e, "name", { value: r }),
-            rV = (r, e, t) => {
+        var rV = (r, e) => Object.defineProperty(e, "name", { value: r }),
+            rL = (r, e, t) => {
                 if (void 0 === r[e].overloadTable) {
                     var n = r[e];
                     (r[e] = function () {
@@ -1799,7 +1799,7 @@ let o =
                 r.hasOwnProperty(e)
                     ? ((void 0 === n || (void 0 !== r[e].overloadTable && void 0 !== r[e].overloadTable[n])) &&
                           rT(`Cannot register public name '${e}' twice`),
-                      rV(r, e, e),
+                      rL(r, e, e),
                       r[e].overloadTable.hasOwnProperty(n) &&
                           rT(
                               `Cannot register multiple overloads of a function with the same number of arguments (${n})!`,
@@ -1807,15 +1807,15 @@ let o =
                       (r[e].overloadTable[n] = t))
                     : ((r[e] = t), (r[e].argCount = n));
             };
-        function rq(r, e, t, n, o, a, i, s) {
+        function rq(r, e, t, n, o, a, s, i) {
             (this.name = r),
                 (this.constructor = e),
                 (this.instancePrototype = t),
                 (this.rawDestructor = n),
                 (this.baseClass = o),
                 (this.getActualType = a),
-                (this.upcast = i),
-                (this.downcast = s),
+                (this.upcast = s),
+                (this.downcast = i),
                 (this.pureVirtualFunctions = []);
         }
         var rG = (r, e, t) => {
@@ -1889,15 +1889,15 @@ let o =
         function rZ(r) {
             return this.fromWireType(h[r >> 2]);
         }
-        function rJ(r, e, t, n, o, a, i, s, u, l, d) {
+        function rJ(r, e, t, n, o, a, s, i, u, l, d) {
             (this.name = r),
                 (this.registeredClass = e),
                 (this.isReference = t),
                 (this.isConst = n),
                 (this.isSmartPointer = o),
                 (this.pointeeType = a),
-                (this.sharingPolicy = i),
-                (this.rawGetPointee = s),
+                (this.sharingPolicy = s),
+                (this.rawGetPointee = i),
                 (this.rawConstructor = u),
                 (this.rawShare = l),
                 (this.rawDestructor = d),
@@ -1913,14 +1913,14 @@ let o =
             },
             r0 = [],
             r1 = (r, e) => {
-                r = rk(r);
+                r = r_(r);
                 var t,
-                    n = ((t = r0[e]) || (e >= r0.length && (r0.length = e + 1), (r0[e] = t = _.get(e))), t);
+                    n = ((t = r0[e]) || (e >= r0.length && (r0.length = e + 1), (r0[e] = t = k.get(e))), t);
                 return "function" != typeof n && rT(`unknown function pointer with signature ${r}: ${e}`), n;
             },
             r2 = (r) => {
                 var e = eP(r),
-                    t = rk(e);
+                    t = r_(e);
                 return eC(e), t;
             },
             r4 = (r, e) => {
@@ -1953,37 +1953,37 @@ let o =
         function r8(r, e) {
             if (!(r instanceof Function))
                 throw TypeError(`new_ called with constructor type ${typeof r} which is not a function`);
-            var t = rL(r.name || "unknownFunctionName", function () {});
+            var t = rV(r.name || "unknownFunctionName", function () {});
             t.prototype = r.prototype;
             var n = new t(),
                 o = r.apply(n, e);
             return o instanceof Object ? o : n;
         }
         function r9(r, e, t, n, o, a) {
-            var i = e.length;
-            i < 2 && rT("argTypes array size mismatch! Must at least get return value and 'this' types!");
+            var s = e.length;
+            s < 2 && rT("argTypes array size mismatch! Must at least get return value and 'this' types!");
             for (
-                var s = null !== e[1] && null !== t,
+                var i = null !== e[1] && null !== t,
                     u = r3(e),
                     l = "void" !== e[0].name,
                     d = [r, rT, n, o, r5, e[0], e[1]],
                     c = 0;
-                c < i - 2;
+                c < s - 2;
                 ++c
             )
                 d.push(e[c + 2]);
             if (!u)
-                for (var c = s ? 1 : 2; c < e.length; ++c)
+                for (var c = i ? 1 : 2; c < e.length; ++c)
                     null !== e[c].destructorFunction && d.push(e[c].destructorFunction);
             let [f, h] = (function (r, e, t, n) {
                 var o = r3(r),
                     a = r.length - 2,
-                    i = [],
-                    s = ["fn"];
-                e && s.push("thisWired");
-                for (var u = 0; u < a; ++u) i.push(`arg${u}`), s.push(`arg${u}Wired`);
-                (i = i.join(",")), (s = s.join(","));
-                var l = `return function (${i}) {
+                    s = [],
+                    i = ["fn"];
+                e && i.push("thisWired");
+                for (var u = 0; u < a; ++u) s.push(`arg${u}`), i.push(`arg${u}Wired`);
+                (s = s.join(",")), (i = i.join(","));
+                var l = `return function (${s}) {
 `;
                 o && (l += "var destructors = [];\n");
                 var d = o ? "destructors" : "null",
@@ -1998,7 +1998,7 @@ let o =
                 if (
                     ((l +=
                         (t || n ? "var rv = " : "") +
-                        `invoker(${s});
+                        `invoker(${i});
 `),
                     o)
                 )
@@ -2012,8 +2012,8 @@ let o =
                             c.push(`${f}_dtor`));
                     }
                 return t && (l += "var ret = retType['fromWireType'](rv);\nreturn ret;\n"), [c, (l += "}\n")];
-            })(e, s, l, a);
-            return f.push(h), rL(r, r8(Function, f)(...d));
+            })(e, i, l, a);
+            return f.push(h), rV(r, r8(Function, f)(...d));
         }
         var r7 = (r) => {
                 let e = (r = r.trim()).indexOf("(");
@@ -2058,22 +2058,22 @@ let o =
                 var t = r$[r];
                 return void 0 === t && rT(`${e} has unknown type ${r2(r)}`), t;
             },
-            ei = "u" > typeof TextDecoder ? new TextDecoder("utf-16le") : void 0,
-            es = (r, e) => {
+            es = "u" > typeof TextDecoder ? new TextDecoder("utf-16le") : void 0,
+            ei = (r, e) => {
                 for (var t = r, n = t >> 1, o = n + e / 2; !(n >= o) && c[n]; ) ++n;
-                if ((t = n << 1) - r > 32 && ei) return ei.decode(l.subarray(r, t));
-                for (var a = "", i = 0; !(i >= e / 2); ++i) {
-                    var s = d[(r + 2 * i) >> 1];
-                    if (0 == s) break;
-                    a += String.fromCharCode(s);
+                if ((t = n << 1) - r > 32 && es) return es.decode(l.subarray(r, t));
+                for (var a = "", s = 0; !(s >= e / 2); ++s) {
+                    var i = d[(r + 2 * s) >> 1];
+                    if (0 == i) break;
+                    a += String.fromCharCode(i);
                 }
                 return a;
             },
             eu = (r, e, t) => {
                 if ((t ??= 0x7fffffff) < 2) return 0;
                 for (var n = e, o = (t -= 2) < 2 * r.length ? t / 2 : r.length, a = 0; a < o; ++a) {
-                    var i = r.charCodeAt(a);
-                    (d[e >> 1] = i), (e += 2);
+                    var s = r.charCodeAt(a);
+                    (d[e >> 1] = s), (e += 2);
                 }
                 return (d[e >> 1] = 0), e - n;
             },
@@ -2092,10 +2092,10 @@ let o =
             ec = (r, e, t) => {
                 if ((t ??= 0x7fffffff) < 4) return 0;
                 for (var n = e, o = n + t - 4, a = 0; a < r.length; ++a) {
-                    var i = r.charCodeAt(a);
+                    var s = r.charCodeAt(a);
                     if (
-                        (i >= 55296 && i <= 57343 && (i = (65536 + ((1023 & i) << 10)) | (1023 & r.charCodeAt(++a))),
-                        (f[e >> 2] = i),
+                        (s >= 55296 && s <= 57343 && (s = (65536 + ((1023 & s) << 10)) | (1023 & r.charCodeAt(++a))),
+                        (f[e >> 2] = s),
                         (e += 4) + 4 > o)
                     )
                         break;
@@ -2118,14 +2118,14 @@ let o =
             em = {},
             ev = (r) => {
                 var e = em[r];
-                return void 0 === e ? rk(r) : e;
+                return void 0 === e ? r_(r) : e;
             },
             ey = (r) => (r < -0x20000000000000 || r > 0x20000000000000 ? NaN : Number(r)),
             eg = () => Date.now(),
             ew = (r) => {
-                var e = ((r - s.buffer.byteLength + 65535) / 65536) | 0;
+                var e = ((r - i.buffer.byteLength + 65535) / 65536) | 0;
                 try {
-                    return s.grow(e), N(), 1;
+                    return i.grow(e), N(), 1;
                 } catch (r) {}
             },
             eE = {},
@@ -2151,16 +2151,16 @@ let o =
                 }
                 return eb.strings;
             };
-        (ry.createPreloadedFile = (r, e, t, n, o, a, i, s, u, l) => {
+        (ry.createPreloadedFile = (r, e, t, n, o, a, s, i, u, l) => {
             var d = e ? ro.resolve(rt.join2(r, e)) : r,
                 c = `cp ${d}`;
             function f(t) {
                 var f, h;
                 function p(t) {
-                    l?.(), s || ry.createDataFile(r, e, t, n, o, u), a?.(), V(c);
+                    l?.(), i || ry.createDataFile(r, e, t, n, o, u), a?.(), L(c);
                 }
                 (f = () => {
-                    i?.(), V(c);
+                    s?.(), L(c);
                 }),
                     "u" > typeof Browser && Browser.init(),
                     (h = !1),
@@ -2169,13 +2169,13 @@ let o =
                     }),
                     h || p(t);
             }
-            L(c), "string" == typeof t ? rp(t).then(f, i) : f(t);
+            V(c), "string" == typeof t ? rp(t).then(f, s) : f(t);
         }),
             ry.staticInit(),
             (rh.doesNotExistError = new ry.ErrnoError(44)),
             (rh.doesNotExistError.stack = "<generic error, no stack>");
-        for (var ek = Array(256), e_ = 0; e_ < 256; ++e_) ek[e_] = String.fromCharCode(e_);
-        (w = ek),
+        for (var e_ = Array(256), ek = 0; ek < 256; ++ek) e_[ek] = String.fromCharCode(ek);
+        (w = e_),
             (E = r.BindingError =
                 class extends Error {
                     constructor(r) {
@@ -2204,7 +2204,7 @@ let o =
                         return (this.$$.count.value += 1), this;
                     {
                         let e;
-                        var r = rU(
+                        var r = rB(
                             Object.create(Object.getPrototypeOf(this), {
                                 $$: {
                                     value: {
@@ -2227,7 +2227,7 @@ let o =
                         this.$$.deleteScheduled &&
                             !this.$$.preservePointerOnDelete &&
                             rT("Object already scheduled for deletion"),
-                        rj(this),
+                        rx(this),
                         rO(this.$$),
                         this.$$.preservePointerOnDelete || ((this.$$.smartPtr = void 0), (this.$$.ptr = void 0));
                 },
@@ -2240,8 +2240,8 @@ let o =
                         this.$$.deleteScheduled &&
                             !this.$$.preservePointerOnDelete &&
                             rT("Object already scheduled for deletion"),
-                        rB.push(this),
-                        1 === rB.length && k && k(rz),
+                        rU.push(this),
+                        1 === rU.length && _ && _(rz),
                         (this.$$.deleteScheduled = !0),
                         this
                     );
@@ -2276,32 +2276,32 @@ let o =
                         }
                     function a() {
                         return this.isSmartPointer
-                            ? rW(this.registeredClass.instancePrototype, {
+                            ? rR(this.registeredClass.instancePrototype, {
                                   ptrType: this.pointeeType,
                                   ptr: t,
                                   smartPtrType: this,
                                   smartPtr: r,
                               })
-                            : rW(this.registeredClass.instancePrototype, { ptrType: this, ptr: r });
+                            : rR(this.registeredClass.instancePrototype, { ptrType: this, ptr: r });
                     }
-                    var i = rR[this.registeredClass.getActualType(t)];
-                    if (!i) return a.call(this);
-                    e = this.isConst ? i.constPointerType : i.pointerType;
-                    var s = rM(t, this.registeredClass, e.registeredClass);
-                    return null === s
+                    var s = rW[this.registeredClass.getActualType(t)];
+                    if (!s) return a.call(this);
+                    e = this.isConst ? s.constPointerType : s.pointerType;
+                    var i = rM(t, this.registeredClass, e.registeredClass);
+                    return null === i
                         ? a.call(this)
                         : this.isSmartPointer
-                          ? rW(e.registeredClass.instancePrototype, {
+                          ? rR(e.registeredClass.instancePrototype, {
                                 ptrType: e,
-                                ptr: s,
+                                ptr: i,
                                 smartPtrType: this,
                                 smartPtr: r,
                             })
-                          : rW(e.registeredClass.instancePrototype, { ptrType: e, ptr: s });
+                          : rR(e.registeredClass.instancePrototype, { ptrType: e, ptr: i });
                 },
             }),
             (C = Error),
-            ((A = rL("UnboundTypeError", function (r) {
+            ((A = rV("UnboundTypeError", function (r) {
                 (this.name = "UnboundTypeError"), (this.message = r);
                 var e = Error(r).stack;
                 void 0 !== e && (this.stack = this.toString() + "\n" + e.replace(/^Error(:[^\n]*)?\n/, ""));
@@ -2363,10 +2363,10 @@ let o =
                     for (
                         var o = 0,
                             a = ry.llseek(n, 0, 1),
-                            i = Math.floor(a / 280),
-                            s = Math.min(n.getdents.length, i + Math.floor(t / 280)),
-                            l = i;
-                        l < s;
+                            s = Math.floor(a / 280),
+                            i = Math.min(n.getdents.length, s + Math.floor(t / 280)),
+                            l = s;
+                        l < i;
                         l++
                     ) {
                         var c,
@@ -2420,7 +2420,7 @@ let o =
                                     (f[(a + 4) >> 2] = o.c_oflag || 0),
                                     (f[(a + 8) >> 2] = o.c_cflag || 0),
                                     (f[(a + 12) >> 2] = o.c_lflag || 0);
-                                for (var i = 0; i < 32; i++) u[a + i + 17] = o.c_cc[i] || 0;
+                                for (var s = 0; s < 32; s++) u[a + s + 17] = o.c_cc[s] || 0;
                             }
                             return 0;
                         case 21506:
@@ -2430,18 +2430,18 @@ let o =
                             if (n.tty.ops.ioctl_tcsets) {
                                 for (
                                     var a = re(),
-                                        s = f[a >> 2],
+                                        i = f[a >> 2],
                                         l = f[(a + 4) >> 2],
                                         c = f[(a + 8) >> 2],
                                         h = f[(a + 12) >> 2],
                                         p = [],
-                                        i = 0;
-                                    i < 32;
-                                    i++
+                                        s = 0;
+                                    s < 32;
+                                    s++
                                 )
-                                    p.push(u[a + i + 17]);
+                                    p.push(u[a + s + 17]);
                                 return n.tty.ops.ioctl_tcsets(n.tty, e, {
-                                    c_iflag: s,
+                                    c_iflag: i,
                                     c_oflag: l,
                                     c_cflag: c,
                                     c_lflag: h,
@@ -2515,7 +2515,7 @@ let o =
             },
             R: () => H(""),
             B: (r, e, t, n, o) => {
-                var a = -1 != (e = rk(e)).indexOf("u");
+                var a = -1 != (e = r_(e)).indexOf("u");
                 rF(r, {
                     name: e,
                     fromWireType: (r) => r,
@@ -2531,7 +2531,7 @@ let o =
             },
             V: (r, e, t, n) => {
                 rF(r, {
-                    name: (e = rk(e)),
+                    name: (e = r_(e)),
                     fromWireType: function (r) {
                         return !!r;
                     },
@@ -2545,8 +2545,8 @@ let o =
                     destructorFunction: null,
                 });
             },
-            m: (r, e, t, n, o, a, i, s, u, l, d, c, f) => {
-                (d = rk(d)), (a = r1(o, a)), (s &&= r1(i, s)), (l &&= r1(u, l)), (f = r1(c, f));
+            m: (r, e, t, n, o, a, s, i, u, l, d, c, f) => {
+                (d = r_(d)), (a = r1(o, a)), (i &&= r1(s, i)), (l &&= r1(u, l)), (f = r1(c, f));
                 var h,
                     p,
                     m = (p = (h = (h = d).replace(/[^a-zA-Z0-9_]/g, "$")).charCodeAt(0)) >= 48 && p <= 57 ? `_${h}` : h;
@@ -2557,7 +2557,7 @@ let o =
                         e = e[0];
                         var t,
                             o = n ? (t = e.registeredClass).instancePrototype : rI.prototype,
-                            i = rL(d, function () {
+                            s = rV(d, function () {
                                 for (var r = arguments.length, e = Array(r), t = 0; t < r; t++) e[t] = arguments[t];
                                 if (Object.getPrototypeOf(this) !== u) throw new E("Use 'new' to construct " + d);
                                 if (void 0 === c.constructor_body) throw new E(d + " has no accessible constructor");
@@ -2568,18 +2568,18 @@ let o =
                                     );
                                 return n.apply(this, e);
                             }),
-                            u = Object.create(o, { constructor: { value: i } });
-                        i.prototype = u;
-                        var c = new rq(d, i, u, f, t, a, s, l);
+                            u = Object.create(o, { constructor: { value: s } });
+                        s.prototype = u;
+                        var c = new rq(d, s, u, f, t, a, i, l);
                         c.baseClass && ((c.baseClass.__derivedClasses ??= []), c.baseClass.__derivedClasses.push(c));
                         var h = new rJ(d, c, !0, !1, !1),
                             p = new rJ(d + "*", c, !1, !1, !1),
                             v = new rJ(d + " const*", c, !1, !0, !1);
-                        return (rR[r] = { pointerType: p, constPointerType: v }), rQ(m, i), [h, p, v];
+                        return (rW[r] = { pointerType: p, constPointerType: v }), rQ(m, s), [h, p, v];
                     });
             },
             q: (r, e, t, n, o, a) => {
-                var i = r6(e, t);
+                var s = r6(e, t);
                 (o = r1(n, o)),
                     rA([], [r], (r) => {
                         r = r[0];
@@ -2593,11 +2593,11 @@ let o =
                             );
                         return (
                             (r.registeredClass.constructor_body[e - 1] = () => {
-                                r4(`Cannot construct ${r.name} due to unbound types`, i);
+                                r4(`Cannot construct ${r.name} due to unbound types`, s);
                             }),
                             rA(
                                 [],
-                                i,
+                                s,
                                 (n) => (
                                     n.splice(1, 0, null),
                                     (r.registeredClass.constructor_body[e - 1] = r9(t, n, null, o, a)),
@@ -2608,9 +2608,9 @@ let o =
                         );
                     });
             },
-            c: (r, e, t, n, o, a, i, s, u, l) => {
+            c: (r, e, t, n, o, a, s, i, u, l) => {
                 var d = r6(t, n);
-                (e = r7((e = rk(e)))),
+                (e = r7((e = r_(e)))),
                     (a = r1(o, a)),
                     rA([], [r], (r) => {
                         r = r[0];
@@ -2619,20 +2619,20 @@ let o =
                             r4(`Cannot call ${n} due to unbound types`, d);
                         }
                         e.startsWith("@@") && (e = Symbol[e.substring(2)]),
-                            s && r.registeredClass.pureVirtualFunctions.push(e);
+                            i && r.registeredClass.pureVirtualFunctions.push(e);
                         var l = r.registeredClass.instancePrototype,
                             c = l[e];
                         return (
                             void 0 === c ||
                             (void 0 === c.overloadTable && c.className !== r.name && c.argCount === t - 2)
                                 ? ((o.argCount = t - 2), (o.className = r.name), (l[e] = o))
-                                : (rV(l, e, n), (l[e].overloadTable[t - 2] = o)),
+                                : (rL(l, e, n), (l[e].overloadTable[t - 2] = o)),
                             rA([], d, (o) => {
-                                var s = r9(n, o, r, a, i, u);
+                                var i = r9(n, o, r, a, s, u);
                                 return (
                                     void 0 === l[e].overloadTable
-                                        ? ((s.argCount = t - 2), (l[e] = s))
-                                        : (l[e].overloadTable[t - 2] = s),
+                                        ? ((i.argCount = t - 2), (l[e] = i))
+                                        : (l[e].overloadTable[t - 2] = i),
                                     []
                                 );
                             }),
@@ -2641,12 +2641,12 @@ let o =
                     });
             },
             E: (e, t, n) => {
-                (e = rk(e)), rA([], [t], (t) => ((t = t[0]), (r[e] = t.fromWireType(n)), []));
+                (e = r_(e)), rA([], [t], (t) => ((t = t[0]), (r[e] = t.fromWireType(n)), []));
             },
             T: (r) => rF(r, eo),
             D: (r, e, t, n) => {
                 function o() {}
-                (e = rk(e)),
+                (e = r_(e)),
                     (o.values = {}),
                     rF(r, {
                         name: e,
@@ -2692,17 +2692,17 @@ let o =
             },
             j: (r, e, t) => {
                 var n = ea(r, "enum");
-                e = rk(e);
+                e = r_(e);
                 var o = n.constructor,
                     a = Object.create(n.constructor.prototype, {
                         value: { value: t },
-                        constructor: { value: rL(`${n.name}_${e}`, function () {}) },
+                        constructor: { value: rV(`${n.name}_${e}`, function () {}) },
                     });
                 (o.values[t] = a), (o[e] = a);
             },
             A: (r, e, t) => {
                 rF(r, {
-                    name: (e = rk(e)),
+                    name: (e = r_(e)),
                     fromWireType: (r) => r,
                     toWireType: (r, e) => e,
                     argPackAdvance: 8,
@@ -2723,9 +2723,9 @@ let o =
                     destructorFunction: null,
                 });
             },
-            Y: (r, e, t, n, o, a, i, s) => {
+            Y: (r, e, t, n, o, a, s, i) => {
                 var u = r6(e, t);
-                (r = r7((r = rk(r)))),
+                (r = r7((r = r_(r)))),
                     (o = r1(n, o)),
                     rH(
                         r,
@@ -2736,22 +2736,22 @@ let o =
                     ),
                     rA([], u, (t) => {
                         var n = [t[0], null].concat(t.slice(1));
-                        return rQ(r, r9(r, n, null, o, a, i), e - 1), [];
+                        return rQ(r, r9(r, n, null, o, a, s), e - 1), [];
                     });
             },
             i: (r, e, t, n, o) => {
-                (e = rk(e)), -1 === o && (o = 0xffffffff);
+                (e = r_(e)), -1 === o && (o = 0xffffffff);
                 var a = (r) => r;
                 if (0 === n) {
-                    var i = 32 - 8 * t;
-                    a = (r) => (r << i) >>> i;
+                    var s = 32 - 8 * t;
+                    a = (r) => (r << s) >>> s;
                 }
-                var s = e.includes("unsigned"),
+                var i = e.includes("unsigned"),
                     u = (r, e) => {};
                 rF(r, {
                     name: e,
                     fromWireType: a,
-                    toWireType: s
+                    toWireType: i
                         ? function (r, e) {
                               return u(e, this.name), e >>> 0;
                           }
@@ -2783,28 +2783,28 @@ let o =
                 }
                 rF(
                     r,
-                    { name: (t = rk(t)), fromWireType: o, argPackAdvance: 8, readValueFromPointer: o },
+                    { name: (t = r_(t)), fromWireType: o, argPackAdvance: 8, readValueFromPointer: o },
                     { ignoreDuplicateRegistrations: !0 },
                 );
             },
-            X: (r, e, t, n, o, a, i, s, u, l, d, c) => {
-                (t = rk(t)),
+            X: (r, e, t, n, o, a, s, i, u, l, d, c) => {
+                (t = r_(t)),
                     (a = r1(o, a)),
-                    (s = r1(i, s)),
+                    (i = r1(s, i)),
                     (l = r1(u, l)),
                     (c = r1(d, c)),
-                    rA([r], [e], (r) => ((r = r[0]), [new rJ(t, r.registeredClass, !1, !1, !0, r, n, a, s, l, c)]));
+                    rA([r], [e], (r) => ((r = r[0]), [new rJ(t, r.registeredClass, !1, !1, !0, r, n, a, i, l, c)]));
             },
             U: (r, e) => {
                 rF(r, {
-                    name: (e = rk(e)),
+                    name: (e = r_(e)),
                     fromWireType(r) {
                         for (var e, t, n = h[r >> 2], o = r + 4, a = o, e = 0; e <= n; ++e) {
-                            var i = o + e;
-                            if (e == n || 0 == l[i]) {
-                                var s = i - a,
-                                    u = rg(a, s);
-                                void 0 === t ? (t = u) : ((t += "\0"), (t += u)), (a = i + 1);
+                            var s = o + e;
+                            if (e == n || 0 == l[s]) {
+                                var i = s - a,
+                                    u = rg(a, i);
+                                void 0 === t ? (t = u) : ((t += "\0"), (t += u)), (a = s + 1);
                             }
                         }
                         return eC(r), t;
@@ -2823,12 +2823,12 @@ let o =
                             a = o + 4;
                         if (((h[o >> 2] = t), n)) rE(e, a, t + 1);
                         else if (n)
-                            for (var i = 0; i < t; ++i) {
-                                var s = e.charCodeAt(i);
-                                s > 255 && (eC(a), rT("String has UTF-16 code units that do not fit in 8 bits")),
-                                    (l[a + i] = s);
+                            for (var s = 0; s < t; ++s) {
+                                var i = e.charCodeAt(s);
+                                i > 255 && (eC(a), rT("String has UTF-16 code units that do not fit in 8 bits")),
+                                    (l[a + s] = i);
                             }
-                        else for (var i = 0; i < t; ++i) l[a + i] = e[i];
+                        else for (var s = 0; s < t; ++s) l[a + s] = e[s];
                         return null !== r && r.push(eC, o), o;
                     },
                     argPackAdvance: 8,
@@ -2839,29 +2839,29 @@ let o =
                 });
             },
             t: (r, e, t) => {
-                var n, o, a, i;
-                (t = rk(t)),
+                var n, o, a, s;
+                (t = r_(t)),
                     2 === e
-                        ? ((n = es), (o = eu), (i = el), (a = (r) => c[r >> 1]))
-                        : 4 === e && ((n = ed), (o = ec), (i = ef), (a = (r) => h[r >> 2])),
+                        ? ((n = ei), (o = eu), (s = el), (a = (r) => c[r >> 1]))
+                        : 4 === e && ((n = ed), (o = ec), (s = ef), (a = (r) => h[r >> 2])),
                     rF(r, {
                         name: t,
                         fromWireType: (r) => {
-                            for (var t, o = h[r >> 2], i = r + 4, s = 0; s <= o; ++s) {
-                                var u = r + 4 + s * e;
-                                if (s == o || 0 == a(u)) {
-                                    var l = u - i,
-                                        d = n(i, l);
-                                    void 0 === t ? (t = d) : ((t += "\0"), (t += d)), (i = u + e);
+                            for (var t, o = h[r >> 2], s = r + 4, i = 0; i <= o; ++i) {
+                                var u = r + 4 + i * e;
+                                if (i == o || 0 == a(u)) {
+                                    var l = u - s,
+                                        d = n(s, l);
+                                    void 0 === t ? (t = d) : ((t += "\0"), (t += d)), (s = u + e);
                                 }
                             }
                             return eC(r), t;
                         },
                         toWireType: (r, n) => {
                             "string" != typeof n && rT(`Cannot pass non-string to C++ string type ${t}`);
-                            var a = i(n),
-                                s = eT(4 + a + e);
-                            return (h[s >> 2] = a / e), o(n, s + 4, a + e), null !== r && r.push(eC, s), s;
+                            var a = s(n),
+                                i = eT(4 + a + e);
+                            return (h[i >> 2] = a / e), o(n, i + 4, a + e), null !== r && r.push(eC, i), i;
                         },
                         argPackAdvance: 8,
                         readValueFromPointer: rZ,
@@ -2873,7 +2873,7 @@ let o =
             W: (r, e) => {
                 rF(r, {
                     isVoid: !0,
-                    name: (e = rk(e)),
+                    name: (e = r_(e)),
                     argPackAdvance: 0,
                     fromWireType: () => void 0,
                     toWireType: (r, e) => void 0,
@@ -2890,31 +2890,31 @@ let o =
                         for (var t = Array(r), n = 0; n < r; ++n) t[n] = ea(h[(e + 4 * n) >> 2], "parameter " + n);
                         return t;
                     })(r, e),
-                    i = a.shift();
+                    s = a.shift();
                 r--;
-                var s = `return function (obj, func, destructorsRef, args) {
+                var i = `return function (obj, func, destructorsRef, args) {
 `,
                     u = 0,
                     l = [];
                 0 === t && l.push("obj");
-                for (var d = ["retType"], c = [i], f = 0; f < r; ++f)
+                for (var d = ["retType"], c = [s], f = 0; f < r; ++f)
                     l.push("arg" + f),
                         d.push("argType" + f),
                         c.push(a[f]),
-                        (s += `  var arg${f} = argType${f}.readValueFromPointer(args${u ? "+" + u : ""});
+                        (i += `  var arg${f} = argType${f}.readValueFromPointer(args${u ? "+" + u : ""});
 `),
                         (u += a[f].argPackAdvance);
-                (s += `  var rv = ${1 === t ? "new func" : "func.call"}(${l.join(", ")});
+                (i += `  var rv = ${1 === t ? "new func" : "func.call"}(${l.join(", ")});
 `),
-                    i.isVoid ||
+                    s.isVoid ||
                         (d.push("emval_returnValue"),
                         c.push(eh),
-                        (s += "  return emval_returnValue(retType, destructorsRef, rv);\n")),
-                    (s += "};\n"),
-                    d.push(s);
+                        (i += "  return emval_returnValue(retType, destructorsRef, rv);\n")),
+                    (i += "};\n"),
+                    d.push(i);
                 var p = r8(Function, d)(...c);
                 return (
-                    (n = rL(`methodCaller<(${a.map((r) => r.name).join(", ")}) => ${i.name}>`, p)),
+                    (n = rV(`methodCaller<(${a.map((r) => r.name).join(", ")}) => ${s.name}>`, p)),
                     (o = ep.length),
                     ep.push(n),
                     o
@@ -2953,8 +2953,8 @@ let o =
             H: function (r, e, t, n, o, a) {
                 a = ey(a);
                 try {
-                    var i = rw.getStreamFromFD(o);
-                    2 & t && rw.doMsync(r, i, e, n, a);
+                    var s = rw.getStreamFromFD(o);
+                    2 & t && rw.doMsync(r, s, e, n, a);
                 } catch (r) {
                     if (void 0 === ry || "ErrnoError" !== r.name) throw r;
                     return -r.errno;
@@ -2963,20 +2963,20 @@ let o =
             S: (r, e, t, n) => {
                 var o = new Date().getFullYear(),
                     a = new Date(o, 0, 1),
-                    i = new Date(o, 6, 1),
-                    s = a.getTimezoneOffset(),
-                    u = i.getTimezoneOffset(),
-                    l = Math.max(s, u);
-                (h[r >> 2] = 60 * l), (f[e >> 2] = Number(s != u));
+                    s = new Date(o, 6, 1),
+                    i = a.getTimezoneOffset(),
+                    u = s.getTimezoneOffset(),
+                    l = Math.max(i, u);
+                (h[r >> 2] = 60 * l), (f[e >> 2] = Number(i != u));
                 var d = (r) => {
                         var e = Math.abs(r),
                             t = String(Math.floor(e / 60)).padStart(2, "0"),
                             n = String(e % 60).padStart(2, "0");
                         return `UTC${r >= 0 ? "-" : "+"}${t}${n}`;
                     },
-                    c = d(s),
+                    c = d(i),
                     p = d(u);
-                u < s ? (rE(c, t, 17), rE(p, n, 17)) : (rE(c, n, 17), rE(p, t, 17));
+                u < i ? (rE(c, t, 17), rE(p, n, 17)) : (rE(c, n, 17), rE(p, t, 17));
             },
             Q: function (r, e, t) {
                 if (((e = ey(e)), !(r >= 0 && r <= 3))) return 28;
@@ -3006,8 +3006,8 @@ let o =
                     eb().forEach((n, o) => {
                         var a = e + t;
                         h[(r + 4 * o) >> 2] = a;
-                        for (var i = a, s = 0; s < n.length; ++s) u[i++] = n.charCodeAt(s);
-                        (u[i] = 0), (t += n.length + 1);
+                        for (var s = a, i = 0; i < n.length; ++i) u[s++] = n.charCodeAt(i);
+                        (u[s] = 0), (t += n.length + 1);
                     }),
                     0
                 );
@@ -3032,12 +3032,12 @@ let o =
                     var o = rw.getStreamFromFD(r),
                         a = ((r, e, t, n) => {
                             for (var o = 0, a = 0; a < t; a++) {
-                                var i = h[e >> 2],
-                                    s = h[(e + 4) >> 2];
+                                var s = h[e >> 2],
+                                    i = h[(e + 4) >> 2];
                                 e += 8;
-                                var l = ry.read(r, u, i, s, n);
+                                var l = ry.read(r, u, s, i, n);
                                 if (l < 0) return -1;
-                                if (((o += l), l < s)) break;
+                                if (((o += l), l < i)) break;
                                 void 0 !== n && (n += l);
                             }
                             return o;
@@ -3069,12 +3069,12 @@ let o =
                     var o = rw.getStreamFromFD(r),
                         a = ((r, e, t, n) => {
                             for (var o = 0, a = 0; a < t; a++) {
-                                var i = h[e >> 2],
-                                    s = h[(e + 4) >> 2];
+                                var s = h[e >> 2],
+                                    i = h[(e + 4) >> 2];
                                 e += 8;
-                                var l = ry.write(r, u, i, s, n);
+                                var l = ry.write(r, u, s, i, n);
                                 if (l < 0) return -1;
-                                if (((o += l), l < s)) break;
+                                if (((o += l), l < i)) break;
                                 void 0 !== n && (n += l);
                             }
                             return o;
@@ -3094,14 +3094,14 @@ let o =
             eF = (r) => (eF = P.fa)(r),
             eD = (r) => (eD = P.ga)(r),
             eS = () => (eS = P.ha)();
-        function ex() {
+        function ej() {
             if (!(z > 0)) {
                 if (r.preRun)
                     for ("function" == typeof r.preRun && (r.preRun = [r.preRun]); r.preRun.length; ) {
                         var t;
-                        (t = r.preRun.shift()), W.unshift(t);
+                        (t = r.preRun.shift()), R.unshift(t);
                     }
-                K(W),
+                K(R),
                     z > 0 ||
                         (r.setStatus
                             ? (r.setStatus("Running..."),
@@ -3111,27 +3111,27 @@ let o =
                             : n());
             }
             function n() {
-                if (!T && ((T = !0), (r.calledRun = !0), !R)) {
+                if (!T && ((T = !0), (r.calledRun = !0), !W)) {
                     if (
                         (r.noFSInit || ry.initialized || ry.init(),
                         (ry.ignorePermissions = !1),
                         rd.init(),
-                        K(U),
+                        K(B),
                         e(r),
                         r.onRuntimeInitialized?.(),
                         r.postRun)
                     )
                         for ("function" == typeof r.postRun && (r.postRun = [r.postRun]); r.postRun.length; ) {
                             var t;
-                            (t = r.postRun.shift()), B.unshift(t);
+                            (t = r.postRun.shift()), U.unshift(t);
                         }
-                    K(B);
+                    K(U);
                 }
             }
         }
         if (
             ((r.ccall = (e, t, n, o, a) => {
-                var i = {
+                var s = {
                         string: (r) => {
                             var e,
                                 t,
@@ -3145,24 +3145,24 @@ let o =
                             return u.set(r, t), t;
                         },
                     },
-                    s = r["_" + e],
+                    i = r["_" + e],
                     l = [],
                     d = 0;
                 if (o)
                     for (var c = 0; c < o.length; c++) {
-                        var f = i[n[c]];
+                        var f = s[n[c]];
                         f ? (0 === d && (d = Z()), (l[c] = f(o[c]))) : (l[c] = o[c]);
                     }
-                var h = s(...l);
+                var h = i(...l);
                 return (function (r) {
                     return 0 !== d && eF(d), "string" === t ? rg(r) : "boolean" === t ? !!r : r;
                 })(h);
             }),
             (I = function r() {
-                T || ex(), T || (I = r);
+                T || ej(), T || (I = r);
             }),
             r.preInit)
         )
             for ("function" == typeof r.preInit && (r.preInit = [r.preInit]); r.preInit.length > 0; ) r.preInit.pop()();
-        return ex(), F;
+        return ej(), F;
     });

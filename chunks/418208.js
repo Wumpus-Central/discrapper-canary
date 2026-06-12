@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Cf: () => f, PI: () => E, Vv: () => h, o$: () => _, tp: () => p, zU: () => d });
+n.d(t, { Cf: () => h, PI: () => E, Vv: () => f, o$: () => _, tp: () => p, zU: () => d });
 var i = n(687123),
     r = n(17928),
     s = n(36149),
@@ -16,14 +16,14 @@ function _() {
     let e = (0, s.NI)();
     return (0, a.d6)(i.t.STAGE_SPEAKING) && e;
 }
-function f(e) {
+function h(e) {
     let t = (0, s.$8)(),
         n = null != e ? e : u.A.getChannelId(),
         r = null != n ? o.A.getChannel(n) : null,
         d = null != r && l.A.can(c.xB.REQUEST_TO_SPEAK, r);
     return (0, a.d6)(i.t.STAGE_SPEAKING) && !t && d;
 }
-function h(e) {
+function f(e) {
     let t = null != e ? e : u.A.getChannelId(),
         n = (0, r.bG)([l.A, o.A], () => {
             let e = null != t ? o.A.getChannel(t) : null;

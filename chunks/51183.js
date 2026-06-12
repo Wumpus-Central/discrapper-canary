@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -11,8 +11,8 @@ var i = n(627968),
     d = n(350593);
 n(851883);
 var _ = n(124704);
-function f(e) {
-    let { emoji: t, className: n, animate: s = !0, hideTooltip: f = !1, tooltipDelay: h = 150 } = e,
+function h(e) {
+    let { emoji: t, className: n, animate: s = !0, hideTooltip: h = !1, tooltipDelay: f = 150 } = e,
         p = c.Sf.useSetting(),
         E = r.useRef(null),
         m = null != t.id ? `:${t.name}:` : u.Ay.translateSurrogatesToInlineEmoji(t.name);
@@ -28,7 +28,7 @@ function f(e) {
             E.current = e;
         },
     };
-    return f
+    return h
         ? (0, i.jsx)(l.A, { ...g })
-        : (0, i.jsx)(o.m, { targetElementRef: E, text: m, delay: h, children: (0, i.jsx)(l.A, { ...g }) });
+        : (0, i.jsx)(o.m, { targetElementRef: E, text: m, delay: f, children: (0, i.jsx)(l.A, { ...g }) });
 }

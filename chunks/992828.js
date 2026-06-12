@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     Nr: "card__53b91",
     DD: "title__53b91",
     yu: "metadata__53b91",

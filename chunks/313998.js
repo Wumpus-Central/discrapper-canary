@@ -1,105 +1,105 @@
-l.d(n, { A: () => y, g: () => I }), l(321073);
-var t = l(627968);
-l(64700);
-var i = l(503698),
-    r = l.n(i),
-    a = l(110259),
-    d = l(17928),
-    s = l(554146),
-    o = l(477782),
-    u = l(834730),
-    c = l(983851),
-    A = l(387755),
-    g = l(688810),
-    b = l(139286),
-    m = l(313961),
-    x = l(325909),
-    f = l(47167),
-    h = l(932001),
-    E = l(378570),
-    C = l(164891),
-    p = l(734057),
-    _ = l(309010),
-    N = l(806931),
-    T = l(49999),
-    v = l(985018),
-    j = l(295573);
-function I(e, n) {
-    let l = (0, d.bG)([_.A], () => _.A.getVoiceChannelId()),
-        t = (0, d.bG)([p.A], () => p.A.getChannel(l)?.getGuildId() ?? void 0),
-        { enabled: i } = C.A.useExperiment({ guildId: t, location: n });
-    return i ? l : e;
+e.d(i, { A: () => j, g: () => R }), e(321073);
+var t = e(627968);
+e(64700);
+var l = e(503698),
+    s = e.n(l),
+    a = e(562708),
+    u = e(17928),
+    d = e(554146),
+    r = e(477782),
+    _ = e(834730),
+    c = e(983851),
+    g = e(387755),
+    o = e(688810),
+    A = e(139286),
+    p = e(313961),
+    m = e(325909),
+    x = e(47167),
+    h = e(131607),
+    E = e(378570),
+    N = e(164891),
+    I = e(734057),
+    b = e(309010),
+    v = e(806931),
+    C = e(49999),
+    G = e(375708),
+    T = e(295573);
+function R(n, i) {
+    let e = (0, u.bG)([b.A], () => b.A.getVoiceChannelId()),
+        t = (0, u.bG)([I.A], () => I.A.getChannel(e)?.getGuildId() ?? void 0),
+        { enabled: l } = N.A.useExperiment({ guildId: t, location: i });
+    return l ? e : n;
 }
-function y(e, n) {
-    let [l, i] = (0, d.yK)(
-            [m.A],
-            () => [null != n ? m.A.getParticipants(n) : null, null != n ? m.A.getParticipant(n, e.id) : null],
-            [n, e.id],
+function j(n, i) {
+    let [e, l] = (0, u.yK)(
+            [p.A],
+            () => [null != i ? p.A.getParticipants(i) : null, null != i ? p.A.getParticipant(i, n.id) : null],
+            [i, n.id],
         ),
-        c = (0, d.bG)([p.A], () => p.A.getChannel(n)),
-        f = (0, x.oP)(e, "context_menu", n),
-        { enabled: _ } = C.A.useExperiment({ guildId: c?.guild_id, location: "useRingHangupItem" }),
-        I = !f || l?.length === 0 || null == n,
-        y = c?.guild_id != null,
-        M = _ && y,
-        O = null == i,
-        U = null != i && i.type === N.lp.USER && i.ringing,
-        S = [];
-    M && !I && (O || U) && S.push(s.M.RING_USER_TO_VC_NEW_BADGE);
-    let [P, R] = (0, h.kn)(S),
-        D = P === s.M.RING_USER_TO_VC_NEW_BADGE,
-        { analyticsLocations: k } = (0, g.Ay)();
+        c = (0, u.bG)([I.A], () => I.A.getChannel(i)),
+        x = (0, m.oP)(n, "context_menu", i),
+        { enabled: b } = N.A.useExperiment({ guildId: c?.guild_id, location: "useRingHangupItem" }),
+        R = !x || e?.length === 0 || null == i,
+        j = c?.guild_id != null,
+        y = b && j,
+        D = null == l,
+        f = null != l && l.type === v.lp.USER && l.ringing,
+        O = [];
+    y && !R && (D || f) && O.push(d.M.RING_USER_TO_VC_NEW_BADGE);
+    let [U, w] = (0, h.kn)(O),
+        H = U === d.M.RING_USER_TO_VC_NEW_BADGE,
+        { analyticsLocations: M } = (0, o.Ay)();
     if (
-        ((0, b.A)(
+        ((0, A.A)(
             {
                 type: a.ImpressionTypes.MENU,
                 name: a.ImpressionNames.RING_TO_GUILD_VC_MENU_ITEM_SHOWN,
-                properties: { voice_channel_id: n, voice_guild_id: c?.guild_id, location_stack: k },
+                properties: { voice_channel_id: i, voice_guild_id: c?.guild_id, location_stack: M },
             },
-            { disableTrack: I || !M },
-            [e.id],
+            { disableTrack: R || !y },
+            [n.id],
         ),
-        I)
+        R)
     )
         return null;
-    if (O) {
-        let l = y ? v.intl.string(v.t["3Hv9qQ"]) : v.intl.string(v.t.RDheZm);
-        return (0, t.jsx)(o.Dr, {
+    if (D) {
+        let e = j ? G.intl.string(G.t["3Hv9qQ"]) : G.intl.string(G.t.RDheZm);
+        return (0, t.jsx)(r.Dr, {
             id: "ring",
-            label: l,
-            badge: D ? "new" : void 0,
-            subtext: M ? (0, t.jsx)(G, { channel: c }) : null,
+            label: e,
+            badge: H ? "new" : void 0,
+            subtext: y ? (0, t.jsx)(k, { channel: c }) : null,
             action: () => {
-                D && R(T.i.TAKE_ACTION), A.A.ring(n, [e.id], "user_context_menu"), M && null != n && (0, E.iN)(n);
+                H && w(C.i.TAKE_ACTION), g.A.ring(i, [n.id], "user_context_menu"), y && null != i && (0, E.iN)(i);
             },
         });
     }
-    return U
-        ? (0, t.jsx)(o.Dr, {
+    return f
+        ? (0, t.jsx)(r.Dr, {
               id: "stop-ringing",
-              label: v.intl.string(v.t.ygslb0),
-              badge: D ? "new" : void 0,
-              subtext: M
-                  ? (0, t.jsx)(u.E, {
+              label: G.intl.string(G.t.ygslb0),
+              badge: H ? "new" : void 0,
+              subtext: y
+                  ? (0, t.jsx)(_.E, {
                         variant: "text-xs/medium",
-                        className: r()(j.W$, j.DF),
-                        children: v.intl.format(v.t.dwfzZi, { channelName: (0, t.jsx)(G, { channel: c }) }),
+                        className: s()(T.W$, T.DF),
+                        children: G.intl.format(G.t.dwfzZi, { channelName: (0, t.jsx)(k, { channel: c }) }),
                     })
                   : null,
               action: () => {
-                  D && R(T.i.TAKE_ACTION), A.A.stopRinging(n, [e.id]);
+                  H && w(C.i.TAKE_ACTION), g.A.stopRinging(i, [n.id]);
               },
           })
         : null;
 }
-let G = (e) => {
-    let { channel: n } = e,
-        l = (0, f.Ay)(n);
+let k = (n) => {
+    let { channel: i } = n,
+        e = (0, x.Ay)(i);
     return (0, t.jsxs)("div", {
-        className: j.W$,
+        className: T.W$,
         children: [
             (0, t.jsx)(c.H, { size: "xs" }),
-            (0, t.jsx)(u.E, { variant: "text-xs/medium", className: j.HA, children: l }),
+            (0, t.jsx)(_.E, { variant: "text-xs/medium", className: T.HA, children: e }),
         ],
     });
 };

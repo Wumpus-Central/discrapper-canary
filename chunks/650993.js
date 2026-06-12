@@ -9,7 +9,7 @@ var r = l(627968),
     o = l(504720);
 let u = (e) => {
     let { backgroundImage: t, href: l, ctaText: u } = e,
-        m = (0, i.W)(u);
+        h = (0, i.W)(u);
     return (0, r.jsx)(d.A, {
         children: (0, r.jsx)(n.D, {
             className: o.v,
@@ -19,7 +19,7 @@ let u = (e) => {
                 backgroundPosition: "left",
                 children: (0, r.jsx)("div", {
                     className: o.j,
-                    children: (0, r.jsx)(a.E, { variant: "text-lg/bold", color: "always-white", children: m }),
+                    children: (0, r.jsx)(a.E, { variant: "text-lg/bold", color: "always-white", children: h }),
                 }),
             }),
         }),

@@ -1,7 +1,7 @@
 e.exports = function (e) {
     let t = "[ \\t\\f]*",
-        a = t + "[:=]" + t,
-        n = "[ \\t\\f]+",
+        n = t + "[:=]" + t,
+        i = "[ \\t\\f]+",
         r = "([^\\\\:= \\t\\f\\n]|\\\\.)+";
     return {
         name: ".properties",
@@ -12,10 +12,10 @@ e.exports = function (e) {
             e.COMMENT("^\\s*[!#]", "$"),
             {
                 returnBegin: !0,
-                variants: [{ begin: r + a }, { begin: r + n }],
+                variants: [{ begin: r + n }, { begin: r + i }],
                 contains: [{ className: "attr", begin: r, endsParent: !0 }],
                 starts: {
-                    end: "(" + a + "|" + n + ")",
+                    end: "(" + n + "|" + i + ")",
                     relevance: 0,
                     starts: {
                         className: "string",

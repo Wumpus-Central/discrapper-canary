@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $p: () => m, D$: () => p, Ml: () => _, S$: () => g, bB: () => f, lu: () => E });
+n.d(t, { $p: () => m, D$: () => p, Ml: () => _, S$: () => g, bB: () => h, lu: () => E });
 var i,
     r = n(228366),
     s = n(308528),
@@ -19,8 +19,8 @@ function _(e) {
         lastMessageId: s,
     });
 }
-var f = (((i = {}).CHANNEL = "CHANNEL"), (i.DM_USER = "DM_USER"), i);
-async function h(e) {
+var h = (((i = {}).CHANNEL = "CHANNEL"), (i.DM_USER = "DM_USER"), i);
+async function f(e) {
     let { userId: t, existingChannelId: n } = e,
         i = n ?? l.A.getDMFromUserId(t) ?? null;
     if (null != i) return i;
@@ -37,7 +37,7 @@ async function h(e) {
 }
 async function p(e) {
     let { target: t, source: n, widgetType: i } = e,
-        s = "CHANNEL" === t.kind ? t.channelId : await h(t);
+        s = "CHANNEL" === t.kind ? t.channelId : await f(t);
     if (null == s) return null;
     let o = "CHANNEL" === t.kind ? t.guildId : null,
         l = t.messageId ?? null,

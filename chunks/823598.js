@@ -1,24 +1,24 @@
 "use strict";
-let r, i;
+let i, r;
 function s() {
-    if (null == r) throw Error("Native dependencies have not been injected.");
+    if (null == i) throw Error("Native dependencies have not been injected.");
 }
 function a(e) {
-    r = e;
+    i = e;
 }
 function o() {
-    return s(), r.supported();
+    return s(), i.supported();
 }
 function l(e) {
-    return s(), r.supportsFeature(e);
+    return s(), i.supportsFeature(e);
 }
 function u(e) {
-    s(), r.setProcessPriority(e);
+    s(), i.setProcessPriority(e);
 }
 function c() {
-    return s(), i ?? (i = r.getVoiceEngine());
+    return s(), r ?? (r = i.getVoiceEngine());
 }
 function d() {
-    return s(), r.getOpenH264LibraryPath();
+    return s(), i.getOpenH264LibraryPath();
 }
 n.d(t, { $b: () => l, $j: () => o, WQ: () => a, XH: () => d, i0: () => u, lE: () => c });

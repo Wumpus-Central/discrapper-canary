@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { x: () => i });
-var r,
-    i =
-        (((r = {})[(r.DEFAULT = 11)] = "DEFAULT"),
-        (r[(r.BANGERS = 1)] = "BANGERS"),
-        (r[(r.BIO_RHYME = 2)] = "BIO_RHYME"),
-        (r[(r.CHERRY_BOMB = 3)] = "CHERRY_BOMB"),
-        (r[(r.CHICLE = 4)] = "CHICLE"),
-        (r[(r.COMPAGNON = 5)] = "COMPAGNON"),
-        (r[(r.MUSEO_MODERNO = 6)] = "MUSEO_MODERNO"),
-        (r[(r.NEO_CASTEL = 7)] = "NEO_CASTEL"),
-        (r[(r.PIXELIFY = 8)] = "PIXELIFY"),
-        (r[(r.RIBES = 9)] = "RIBES"),
-        (r[(r.SINISTRE = 10)] = "SINISTRE"),
-        (r[(r.ZILLA_SLAB = 12)] = "ZILLA_SLAB"),
-        r);
+n.d(t, { x: () => r });
+var i,
+    r =
+        (((i = {})[(i.DEFAULT = 11)] = "DEFAULT"),
+        (i[(i.BANGERS = 1)] = "BANGERS"),
+        (i[(i.BIO_RHYME = 2)] = "BIO_RHYME"),
+        (i[(i.CHERRY_BOMB = 3)] = "CHERRY_BOMB"),
+        (i[(i.CHICLE = 4)] = "CHICLE"),
+        (i[(i.COMPAGNON = 5)] = "COMPAGNON"),
+        (i[(i.MUSEO_MODERNO = 6)] = "MUSEO_MODERNO"),
+        (i[(i.NEO_CASTEL = 7)] = "NEO_CASTEL"),
+        (i[(i.PIXELIFY = 8)] = "PIXELIFY"),
+        (i[(i.RIBES = 9)] = "RIBES"),
+        (i[(i.SINISTRE = 10)] = "SINISTRE"),
+        (i[(i.ZILLA_SLAB = 12)] = "ZILLA_SLAB"),
+        i);

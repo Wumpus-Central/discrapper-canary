@@ -1,35 +1,35 @@
-n.d(t, { Ay: () => f, K7: () => h });
-var l = n(17928),
-    i = n(855687),
-    r = n(446600),
-    a = n(734057),
-    s = n(808728),
-    d = n(71393),
-    c = n(576705),
-    o = n(488926),
-    u = n(698441),
-    _ = n(988794),
-    g = n(652215);
-function h(e) {
-    let [t, n, l, h] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [s.Ay, a.A, d.A, r.A];
-    if ((0, u.AZ)(e)) return !1;
-    let { guild_id: f, channel_id: x } = e,
-        v = e.entity_type === _.Ps.EXTERNAL ? t.getDefaultChannel(e.guild_id) : n.getChannel(x),
-        m = l.getGuild(f),
-        p = h.getStageInstanceByChannel(x);
+t.d(e, { Ay: () => s, K7: () => g });
+var i = t(17928),
+    l = t(855687),
+    A = t(446600),
+    u = t(734057),
+    a = t(808728),
+    d = t(71393),
+    h = t(576705),
+    r = t(488926),
+    c = t(698441),
+    y = t(988794),
+    p = t(652215);
+function g(n) {
+    let [e, t, i, g] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.Ay, u.A, d.A, A.A];
+    if ((0, c.AZ)(n)) return !1;
+    let { guild_id: s, channel_id: _ } = n,
+        o = n.entity_type === y.Ps.EXTERNAL ? e.getDefaultChannel(n.guild_id) : t.getChannel(_),
+        C = i.getGuild(s),
+        f = g.getStageInstanceByChannel(_);
     return (
-        !!(0, i.K)(c.A, m, v, p) &&
-        null != v &&
-        (function (e) {
-            let [t] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [a.A],
-                { entityType: n, channelId: l } =
-                    "entity_type" in e ? { entityType: e.entity_type, channelId: e.channel_id } : e;
-            if (n === _.Ps.EXTERNAL) return !0;
-            let i = t.getChannel(l);
-            return null != i && o.MJ(g.xBc.VIEW_CHANNEL, i);
-        })(e, [n])
+        !!(0, l.K)(h.A, C, o, f) &&
+        null != o &&
+        (function (n) {
+            let [e] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [u.A],
+                { entityType: t, channelId: i } =
+                    "entity_type" in n ? { entityType: n.entity_type, channelId: n.channel_id } : n;
+            if (t === y.Ps.EXTERNAL) return !0;
+            let l = e.getChannel(i);
+            return null != l && r.MJ(p.xBc.VIEW_CHANNEL, l);
+        })(n, [t])
     );
 }
-function f(e) {
-    return (0, l.bG)([s.Ay, a.A, d.A, r.A], () => h(e, [s.Ay, a.A, d.A, r.A]), [e]);
+function s(n) {
+    return (0, i.bG)([a.Ay, u.A, d.A, A.A], () => g(n, [a.Ay, u.A, d.A, A.A]), [n]);
 }

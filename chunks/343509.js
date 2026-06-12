@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => c });
 var i = n(228366),
     r = n(439372),
     s = n(927813),
     a = n(966597),
     o = n(85109);
 let l = null;
-class d extends r.A {
+class u extends r.A {
     actions = {
         SAVED_MESSAGES_UPDATE: () => this.handleUpdates(),
         SAVED_MESSAGE_CREATE: () => this.handleUpdates(),
@@ -35,4 +35,4 @@ class d extends r.A {
         })();
     };
 }
-let _ = new d();
+let c = new u();

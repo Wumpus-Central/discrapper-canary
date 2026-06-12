@@ -13,14 +13,14 @@ function o(e) {
         }),
         o = n?.compositeInstanceId,
         l = n?.location,
-        d = (0, i.bG)([r.Ay], () => r.Ay.getCurrentEmbeddedActivity()),
-        _ = (0, s.et)(t) === s.xy.CAN_LAUNCH;
+        u = (0, i.bG)([r.Ay], () => r.Ay.getCurrentEmbeddedActivity()),
+        c = (0, s.et)(t) === s.xy.CAN_LAUNCH;
     return {
         currentChannelId: t,
         instanceId: o,
         instanceLocation: l,
-        isCurrentlyInInstance: null != o && d?.compositeInstanceId === o,
-        canLaunchInChannel: _,
+        isCurrentlyInInstance: null != o && u?.compositeInstanceId === o,
+        canLaunchInChannel: c,
     };
 }
 function l(e, t) {
@@ -36,14 +36,14 @@ function l(e, t) {
     let i = (null != n ? (0, s.J4)(n) : s.xy.NO_CHANNEL) === s.xy.CAN_LAUNCH,
         o = r.Ay.getEmbeddedActivitiesForChannel(n).filter((t) => t.applicationId === e),
         l = o.length > 0 ? o[0] : void 0,
-        d = l?.compositeInstanceId,
-        _ = l?.location,
-        u = r.Ay.getCurrentEmbeddedActivity();
+        u = l?.compositeInstanceId,
+        c = l?.location,
+        d = r.Ay.getCurrentEmbeddedActivity();
     return {
         currentChannelId: n,
-        instanceId: d,
-        instanceLocation: _,
-        isCurrentlyInInstance: null != d && u?.compositeInstanceId === d,
+        instanceId: u,
+        instanceLocation: c,
+        isCurrentlyInInstance: null != u && d?.compositeInstanceId === u,
         canLaunchInChannel: i,
     };
 }

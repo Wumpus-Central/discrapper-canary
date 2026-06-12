@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { AT: () => u, X9: () => r, rD: () => l, vB: () => o });
-class r {
+n.d(t, { AT: () => u, X9: () => i, rD: () => l, vB: () => o });
+class i {
     id;
     text;
     constructor(e) {
         (this.id = e), (this.text = e);
     }
 }
-var i,
+var r,
     s,
     a,
-    o = (((i = {}).UP = "UP"), (i.DOWN = "DOWN"), i),
+    o = (((r = {}).UP = "UP"), (r.DOWN = "DOWN"), r),
     l =
         (((s = {}).GUILD = "GUILD"),
         (s.TEXT_CHANNEL = "TEXT_CHANNEL"),

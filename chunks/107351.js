@@ -8,16 +8,16 @@ n.d(t, { D: () => u, r: () => l }),
     n(767709),
     n(65162),
     n(508300);
-var r = n(835245),
-    i = n(506774),
-    a = n(927813);
-let s = "purchase_token",
-    o = 60 * a.A.Millis.DAY;
+var i = n(835245),
+    r = n(506774),
+    s = n(927813);
+let a = "purchase_token",
+    o = 60 * s.A.Millis.DAY;
 function l() {
-    let e = i.w.get(s);
+    let e = r.w.get(a);
     if (null != e && e.expires >= Date.now()) return e.purchaseToken;
-    let t = (0, r.A)();
-    return i.w.set(s, { purchaseToken: t, expires: Date.now() + o }), t;
+    let t = (0, i.A)();
+    return r.w.set(a, { purchaseToken: t, expires: Date.now() + o }), t;
 }
 async function u() {
     let e = new Uint8Array(

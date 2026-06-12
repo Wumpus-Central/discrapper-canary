@@ -7,15 +7,15 @@ var l = t(627968),
     u = t(834730),
     d = t(781696),
     E = t(736653),
-    o = t(573435),
-    c = t(714991),
+    c = t(573435),
+    o = t(714991),
     I = t(776231),
     _ = t(486020),
     f = t(240248),
-    A = t(985018),
+    A = t(375708),
     S = t(324313),
-    T = t(937495),
-    h = t(517061);
+    h = t(937495),
+    T = t(517061);
 let g = [16, 16, 14, 14, 12, 10, 8],
     m = function (e) {
         let {
@@ -24,25 +24,25 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                 small: r,
                 loading: m = !1,
                 description: C,
-                memberCount: R,
-                presenceCount: N,
-                className: D,
+                memberCount: N,
+                presenceCount: D,
+                className: L,
             } = e,
-            L = (0, E.Ay)(),
-            [p, y] = n.useState(!1);
-        if (null == i || m) return (0, l.jsx)("div", { className: s()(D, S.Nr, S.En, { [S.ax]: r, [S.HI]: t }) });
-        let { name: v } = i,
-            G =
+            R = (0, E.Ay)(),
+            [y, p] = n.useState(!1);
+        if (null == i || m) return (0, l.jsx)("div", { className: s()(L, S.Nr, S.En, { [S.ax]: r, [S.HI]: t }) });
+        let { name: G } = i,
+            v =
                 null != i.discoverySplash && /^data:/.test(i.discoverySplash)
                     ? i.discoverySplash
                     : _.Ay.getGuildDiscoverySplashURL({ id: i.id, splash: i.discoverySplash, size: 240 * (0, I.mZ)() }),
-            F = (0, a.M)(L) ? T : h,
-            P = _.Ay.getGuildIconURL({ id: i.id, icon: i.icon, size: 40 }) ?? void 0,
-            O = null != i.description ? i.description : C,
-            V = null != R ? R : i?.memberCount,
-            M = null != N ? N : i?.presenceCount,
+            P = (0, a.M)(R) ? h : T,
+            O = _.Ay.getGuildIconURL({ id: i.id, icon: i.icon, size: 40 }) ?? void 0,
+            V = null != i.description ? i.description : C,
+            F = null != N ? N : i?.memberCount,
+            j = null != D ? D : i?.presenceCount,
             x = null;
-        if (null != P) x = (0, l.jsx)("img", { src: P, alt: "", className: S.my });
+        if (null != O) x = (0, l.jsx)("img", { src: O, alt: "", className: S.my });
         else {
             let e = (0, f.oN)(i.name);
             x = (0, l.jsx)("div", {
@@ -56,7 +56,7 @@ let g = [16, 16, 14, 14, 12, 10, 8],
             });
         }
         return (0, l.jsxs)("div", {
-            className: s()(D, S.Nr, { [S.ax]: r, [S.HI]: t, [S.TS]: p }),
+            className: s()(L, S.Nr, { [S.ax]: r, [S.HI]: t, [S.TS]: y }),
             children: [
                 (0, l.jsxs)("div", {
                     className: S.MY,
@@ -64,22 +64,22 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                         (0, l.jsx)("div", {
                             className: S.Yi,
                             children: (0, l.jsx)("img", {
-                                src: null != G ? G : F,
+                                src: null != v ? v : P,
                                 alt: "",
                                 className: S.j0,
-                                onLoad: () => y(!0),
+                                onLoad: () => p(!0),
                             }),
                         }),
                         (0, l.jsx)("div", {
                             className: S.$f,
-                            children: (0, l.jsx)(o.Ay, {
-                                mask: o.Ay.Masks.SQUIRCLE,
+                            children: (0, l.jsx)(c.Ay, {
+                                mask: c.Ay.Masks.SQUIRCLE,
                                 width: 48,
                                 height: 48,
                                 children: (0, l.jsx)("div", {
                                     className: S.SA,
-                                    children: (0, l.jsx)(o.Ay, {
-                                        mask: o.Ay.Masks.SQUIRCLE,
+                                    children: (0, l.jsx)(c.Ay, {
+                                        mask: c.Ay.Masks.SQUIRCLE,
                                         width: 40,
                                         height: 40,
                                         children: null != x ? x : null,
@@ -95,11 +95,11 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                         (0, l.jsxs)("div", {
                             className: S.DD,
                             children: [
-                                (0, l.jsx)(c.A, { className: S.w$, guild: i, tooltipColor: d.ST.Colors.PRIMARY }),
+                                (0, l.jsx)(o.A, { className: S.w$, guild: i, tooltipColor: d.ST.Colors.PRIMARY }),
                                 (0, l.jsx)(u.E, {
                                     className: S.J5,
                                     variant: "text-md/normal",
-                                    children: (0, l.jsx)("span", { children: v }),
+                                    children: (0, l.jsx)("span", { children: G }),
                                 }),
                             ],
                         }),
@@ -110,13 +110,13 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                                 className: S.h_,
                                 variant: "text-sm/normal",
                                 tag: "span",
-                                children: O,
+                                children: V,
                             }),
                         }),
                         (0, l.jsxs)("div", {
                             className: S.Fj,
                             children: [
-                                null != M &&
+                                null != j &&
                                     (0, l.jsxs)("div", {
                                         className: S.Kl,
                                         children: [
@@ -124,12 +124,12 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                                             (0, l.jsx)(u.E, {
                                                 variant: "text-xs/normal",
                                                 children: r
-                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: M })
-                                                    : A.intl.formatToPlainString(A.t["LC+S+m"], { membersOnline: M }),
+                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: j })
+                                                    : A.intl.formatToPlainString(A.t["LC+S+m"], { membersOnline: j }),
                                             }),
                                         ],
                                     }),
-                                null != V &&
+                                null != F &&
                                     (0, l.jsxs)("div", {
                                         className: S.Kl,
                                         children: [
@@ -137,8 +137,8 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                                             (0, l.jsx)(u.E, {
                                                 variant: "text-xs/normal",
                                                 children: r
-                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: V })
-                                                    : A.intl.formatToPlainString(A.t.zRl6XR, { count: V }),
+                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: F })
+                                                    : A.intl.formatToPlainString(A.t.zRl6XR, { count: F }),
                                             }),
                                         ],
                                     }),

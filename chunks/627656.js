@@ -1,14 +1,14 @@
 e.exports = function (e) {
     let t = "\\d(_|\\d)*",
-        a = "[eE][-+]?" + t,
-        n = "\\b(" + (t + "#\\w+(\\.\\w+)?#(" + a) + ")?|" + (t + "(\\." + t + ")?(") + a + ")?)",
+        n = "[eE][-+]?" + t,
+        i = "\\b(" + (t + "#\\w+(\\.\\w+)?#(" + n) + ")?|" + (t + "(\\." + t + ")?(") + n + ")?)",
         r = "[A-Za-z](_?[A-Za-z0-9.])*",
-        i = "[]\\{\\}%#'\"",
-        o = e.COMMENT("--", "$"),
-        s = {
+        s = "[]\\{\\}%#'\"",
+        a = e.COMMENT("--", "$"),
+        o = {
             begin: "\\s+:\\s+",
             end: "\\s*(:=|;|\\)|=>|$)",
-            illegal: i,
+            illegal: s,
             contains: [
                 { beginKeywords: "loop for declare others", endsParent: !0 },
                 {
@@ -98,10 +98,10 @@ e.exports = function (e) {
             literal: ["True", "False"],
         },
         contains: [
-            o,
+            a,
             { className: "string", begin: /"/, end: /"/, contains: [{ begin: /""/, relevance: 0 }] },
             { className: "string", begin: /'.'/ },
-            { className: "number", begin: n, relevance: 0 },
+            { className: "number", begin: i, relevance: 0 },
             { className: "symbol", begin: "'" + r },
             {
                 className: "title",
@@ -110,7 +110,7 @@ e.exports = function (e) {
                 keywords: "package body",
                 excludeBegin: !0,
                 excludeEnd: !0,
-                illegal: i,
+                illegal: s,
             },
             {
                 begin: "(\\b(with|overriding)\\s+)?\\b(function|procedure)\\s+",
@@ -118,16 +118,16 @@ e.exports = function (e) {
                 keywords: "overriding function procedure with is renames return",
                 returnBegin: !0,
                 contains: [
-                    o,
+                    a,
                     {
                         className: "title",
                         begin: "(\\bwith\\s+)?\\b(function|procedure)\\s+",
                         end: "(\\(|\\s+|$)",
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        illegal: i,
+                        illegal: s,
                     },
-                    s,
+                    o,
                     {
                         className: "type",
                         begin: "\\breturn\\s+",
@@ -136,7 +136,7 @@ e.exports = function (e) {
                         excludeBegin: !0,
                         excludeEnd: !0,
                         endsParent: !0,
-                        illegal: i,
+                        illegal: s,
                     },
                 ],
             },
@@ -146,9 +146,9 @@ e.exports = function (e) {
                 end: "\\s+",
                 keywords: "type",
                 excludeBegin: !0,
-                illegal: i,
+                illegal: s,
             },
-            s,
+            o,
         ],
     };
 };

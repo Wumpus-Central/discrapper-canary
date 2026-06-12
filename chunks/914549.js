@@ -1,7 +1,7 @@
-var r = n(360356),
-    i = n(659671),
-    l = /[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g,
-    s = RegExp("[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]", "g");
-e.exports = function (e) {
-    return (e = i(e)) && e.replace(l, r).replace(s, "");
+var r = e(360356),
+    t = e(659671),
+    n = /[\xc0-\xd6\xd8-\xf6\xf8-\xff\u0100-\u017f]/g,
+    o = RegExp("[\\u0300-\\u036f\\ufe20-\\ufe2f\\u20d0-\\u20ff]", "g");
+u.exports = function (u) {
+    return (u = t(u)) && u.replace(n, r).replace(o, "");
 };

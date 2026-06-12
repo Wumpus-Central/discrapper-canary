@@ -5,49 +5,49 @@ var s = n(17928),
     a = n(228366),
     o = n(720149),
     l = n(155718),
-    d = n(495544),
-    _ = n(734057),
-    u = n(927813),
-    c = n(337591);
-let E = 5 * u.A.Millis.MINUTE,
-    h = 10 * u.A.Millis.SECOND,
+    u = n(495544),
+    c = n(734057),
+    d = n(927813),
+    _ = n(337591);
+let h = 5 * d.A.Millis.MINUTE,
+    f = 10 * d.A.Millis.SECOND,
+    p = {},
+    E = {},
     m = {},
-    f = {},
-    g = {},
-    p = {};
+    g = {};
 function A(e) {
     if (null == e) return !1;
-    let t = m[e];
+    let t = p[e];
     if (null == t) return !1;
     t.onSuccess?.(), I(e);
 }
 function I(e) {
-    if (null != p[e]) return void delete p[e];
-    let t = m[e];
-    delete m[e];
-    let n = g[e];
-    null != n && delete f[n], delete g[e], (p[e] = { insertedAt: Date.now(), nonce: e, messageId: n, interaction: t });
+    if (null != g[e]) return void delete g[e];
+    let t = p[e];
+    delete p[e];
+    let n = m[e];
+    null != n && delete E[n], delete m[e], (g[e] = { insertedAt: Date.now(), nonce: e, messageId: n, interaction: t });
 }
 class T extends s.Ay.Store {
     initialize() {
-        this.waitFor(d.default, _.A);
+        this.waitFor(u.default, c.A);
     }
     static displayName = "InteractionStore";
     getInteraction(e) {
-        let t = f[e.id];
-        return null != t ? m[t] : null;
+        let t = E[e.id];
+        return null != t ? p[t] : null;
     }
     getMessageInteractionStates() {
         let e = {};
-        for (let [t, n] of Object.entries(m)) {
-            let i = g[t];
+        for (let [t, n] of Object.entries(p)) {
+            let i = m[t];
             null != i && (e[i] = n.state);
         }
         return e;
     }
     canQueueInteraction(e, t) {
-        let n = f[e];
-        return (null == n || null == m[n] || m[n].state === c.m.FAILED) && (null == m[t] || m[t].state === c.m.FAILED);
+        let n = E[e];
+        return (null == n || null == p[n] || p[n].state === _.m.FAILED) && (null == p[t] || p[t].state === _.m.FAILED);
     }
     getIFrameModalApplicationId() {
         return r;
@@ -57,34 +57,34 @@ class T extends s.Ay.Store {
     }
     getInteractionDebugContext(e) {
         if (null == e) return;
-        let t = m[e];
-        if (null != t) return { interaction: t, messageId: g[e] };
-        let n = p[e];
+        let t = p[e];
+        if (null != t) return { interaction: t, messageId: m[e] };
+        let n = g[e];
         if (null != n) return { interaction: n.interaction, messageId: n.messageId };
     }
 }
 let S = new T(a.h, {
     LOGOUT: function () {
-        (m = {}),
-            (f = {}),
+        (p = {}),
+            (E = {}),
+            (m = {}),
             (g = {}),
-            (p = {}),
             setInterval(() => {
                 let e = Date.now();
-                for (let [t, n] of Object.entries(p)) e - n.insertedAt > h && delete p[t];
-            }, E);
+                for (let [t, n] of Object.entries(g)) e - n.insertedAt > f && delete g[t];
+            }, h);
     },
     INTERACTION_QUEUE: function (e) {
         let { nonce: t, messageId: n, data: i, onCreate: r, onCancel: s, onSuccess: a, onFailure: o } = e;
-        null != n && ((f[n] = t), (g[t] = n)),
-            (m[t] = { state: c.m.QUEUED, data: i, onCreate: r, onCancel: s, onSuccess: a, onFailure: o });
+        null != n && ((E[n] = t), (m[t] = n)),
+            (p[t] = { state: _.m.QUEUED, data: i, onCreate: r, onCancel: s, onSuccess: a, onFailure: o });
     },
     INTERACTION_CREATE: function (e) {
         let { nonce: t, interactionId: n } = e;
         if (null == t) return !1;
-        let i = m[t];
-        if (null == i || i.state !== c.m.QUEUED) return !1;
-        (i.state = c.m.CREATED), i.onCreate?.(n);
+        let i = p[t];
+        if (null == i || i.state !== _.m.QUEUED) return !1;
+        (i.state = _.m.CREATED), i.onCreate?.(n);
     },
     INTERACTION_SUCCESS: function (e) {
         let { nonce: t } = e;
@@ -93,26 +93,26 @@ let S = new T(a.h, {
     INTERACTION_FAILURE: function (e) {
         let { nonce: t, errorCode: n, errorMessage: i, status: r, reasonCode: s } = e;
         if (null == t) return !1;
-        let a = m[t];
+        let a = p[t];
         if (null == a) return !1;
         a.onFailure?.(n, i, r, s),
             a.data.interactionType === l.G4.APPLICATION_COMMAND
                 ? I(t)
-                : (m[t] = { ...a, state: c.m.FAILED, errorCode: n, errorMessage: i });
+                : (p[t] = { ...a, state: _.m.FAILED, errorCode: n, errorMessage: i });
     },
     MESSAGE_CREATE: function (e) {
         let { message: t } = e;
         if (null == t.nonce) return !1;
         {
-            let e = m[t.nonce];
+            let e = p[t.nonce];
             if (null == e) return !1;
             e.onSuccess?.(), I(t.nonce);
         }
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        if (null == _.A.getChannel(t)) return !1;
-        for (let [e, t] of Object.entries(m)) t.state === c.m.FAILED && I(e);
+        if (null == c.A.getChannel(t)) return !1;
+        for (let [e, t] of Object.entries(p)) t.state === _.m.FAILED && I(e);
     },
     INTERACTION_IFRAME_MODAL_CREATE: function (e) {
         let { application: t, nonce: n } = e;
@@ -133,12 +133,12 @@ let S = new T(a.h, {
         let t,
             n,
             { participants: i } = e,
-            r = d.default.getSessionId(),
-            s = d.default.getId(),
+            r = u.default.getSessionId(),
+            s = u.default.getId(),
             a = i.find((e) => e.user_id === s && e.session_id === r);
         if (null == a || null == a.nonce) return;
-        let l = p[a.nonce];
-        null == l ? ((t = g[a.nonce]), (n = m[a.nonce])) : ((t = l.messageId), (n = l.interaction)),
+        let l = g[a.nonce];
+        null == l ? ((t = m[a.nonce]), (n = p[a.nonce])) : ((t = l.messageId), (n = l.interaction)),
             null != n &&
                 null != t &&
                 (I(a.nonce), null != t && "channelId" in n.data && o.A.deleteMessage(n.data.channelId, t, !0));

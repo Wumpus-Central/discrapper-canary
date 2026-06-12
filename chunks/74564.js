@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     YB: "centeredSection_b558e5",
     kL: "container_b558e5",
     D7: "gradient_b558e5",

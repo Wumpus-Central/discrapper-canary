@@ -1,28 +1,28 @@
 "use strict";
-n.d(t, { r: () => i }), n(321073);
-var r = n(731854);
-class i {
+n.d(t, { r: () => r }), n(321073);
+var i = n(731854);
+class r {
     pixelBudget;
     ladder;
     orderedLadder;
-    constructor(e = r.eQ) {
+    constructor(e = i.eQ) {
         const { width: t, height: n } = e.videoBudget;
         if (t <= 0 || n <= 0) throw Error("Invalid argument");
         (this.pixelBudget = t * n),
-            (this.ladder = i.calculateLadder(this.pixelBudget)),
-            (this.orderedLadder = i.calculateOrderedLadder(this.ladder));
+            (this.ladder = r.calculateLadder(this.pixelBudget)),
+            (this.orderedLadder = r.calculateOrderedLadder(this.ladder));
     }
     getMaxSinkValue(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
         if (e < 0) throw Error("getMaxSinkValue: Requested " + e);
         let n = this.orderedLadder[0].wantValue;
-        for (let { pixelCount: r, wantValue: i } of this.orderedLadder) {
-            if (t > 0 && t < r) {
-                n = i;
+        for (let { pixelCount: i, wantValue: r } of this.orderedLadder) {
+            if (t > 0 && t < i) {
+                n = r;
                 break;
             }
-            if (r * e > this.pixelBudget) break;
-            n = i;
+            if (i * e > this.pixelBudget) break;
+            n = r;
         }
         return n;
     }
@@ -42,35 +42,35 @@ class i {
     static calculateLadder(e) {
         let t = new Set([0, 4, 8, 10]),
             n = [];
-        for (let r = 1; r < 4096; ++r) {
-            let i = (16 * r) / 9;
-            if (t.has(i % 16) && t.has(r % 16)) {
-                let t = i * r;
-                n.push({ pixelCount: t, width: i, height: r, budgetPortion: t / e, wantValue: 0 });
+        for (let i = 1; i < 4096; ++i) {
+            let r = (16 * i) / 9;
+            if (t.has(r % 16) && t.has(i % 16)) {
+                let t = r * i;
+                n.push({ pixelCount: t, width: r, height: i, budgetPortion: t / e, wantValue: 0 });
             }
         }
-        let a = {},
-            s = 0,
+        let s = {},
+            a = 0,
             o = 100;
         for (let t = 1; t <= 25; ++t) {
             let l = 0,
                 u = 0,
                 c = 0;
-            for (let r of n) {
-                if (r.pixelCount * t > e) break;
-                (l = r.width), (u = r.height), (c = r.budgetPortion);
+            for (let i of n) {
+                if (i.pixelCount * t > e) break;
+                (l = i.width), (u = i.height), (c = i.budgetPortion);
             }
-            if (s !== l) {
-                let e = i.getMutedFramerate(o);
-                (a[o] = { width: l, height: u, budgetPortion: c, mutedFramerate: e, framerate: r.sG }),
+            if (a !== l) {
+                let e = r.getMutedFramerate(o);
+                (s[o] = { width: l, height: u, budgetPortion: c, mutedFramerate: e, framerate: i.sG }),
                     (o -= 10),
-                    (s = l);
+                    (a = l);
             }
         }
-        return a;
+        return s;
     }
     static getMutedFramerate(e) {
-        return e <= 20 ? r.XA : r.kc;
+        return e <= 20 ? i.XA : i.kc;
     }
     static calculateOrderedLadder(e) {
         let t = [];
@@ -78,8 +78,8 @@ class i {
             .map((e) => Number(e))
             .sort((e, t) => e - t)) {
             if (0 === n) continue;
-            let r = e[n];
-            t.push({ pixelCount: r.width * r.height, wantValue: n, ...r });
+            let i = e[n];
+            t.push({ pixelCount: i.width * i.height, wantValue: n, ...i });
         }
         return t;
     }

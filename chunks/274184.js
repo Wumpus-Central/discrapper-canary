@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => M, bh: () => N });
+n.d(t, { Ay: () => M, bh: () => y });
 var i,
     r = n(989349),
     s = n.n(r),
@@ -10,8 +10,8 @@ var i,
     c = n(246605),
     d = n(927813),
     _ = n(498642),
-    f = n(71393),
-    h = n(576705),
+    h = n(71393),
+    f = n(576705),
     p = n(967198),
     E = n(287809),
     m = n(652215);
@@ -20,10 +20,10 @@ let g = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: 
     I = {},
     T = null,
     S = !1,
-    N = d.A.Millis.DAY,
-    y = 10 * d.A.Millis.HOUR;
-var C =
-    (((i = C || {}).IS_OWNER = "is_owner"),
+    y = d.A.Millis.DAY,
+    N = 10 * d.A.Millis.HOUR;
+var v =
+    (((i = v || {}).IS_OWNER = "is_owner"),
     (i.IS_ADMIN = "is_admin"),
     (i.IS_COMMUNITY = "is_community"),
     (i.GUILD_SIZE = "guild_size"),
@@ -32,21 +32,21 @@ var C =
     (i.GUILD_PERMISSIONS = "guild_permissions"),
     (i.GUILD_SIZE_ALL = "guild_size_all"),
     i);
-let v = new Set(Object.values(C));
-function O() {
-    return null == A.lastFetched || Date.now() - A.lastFetched >= N;
-}
+let C = new Set(Object.values(v));
 function R() {
-    !S && (O() || null != A.surveyOverride) && ((S = !0), (0, c.BC)(A.surveyOverride, !0));
+    return null == A.lastFetched || Date.now() - A.lastFetched >= y;
+}
+function O() {
+    !S && (R() || null != A.surveyOverride) && ((S = !0), (0, c.BC)(A.surveyOverride, !0));
 }
 function b(e) {
     return (function (e) {
         let { guild_requirements: t = [], guild_size: n = [null, null], guild_permissions: i = [] } = e;
         if (0 === t.length) return !0;
-        for (let e of t) if (!v.has(e)) return !1;
+        for (let e of t) if (!C.has(e)) return !1;
         let r = t.includes("guild_size_all"),
             s = !0;
-        for (let o of f.A.getGuildsArray()) {
+        for (let o of h.A.getGuildsArray()) {
             if (r || t.includes("guild_size")) {
                 let e = _.A.getMemberCount(o.id);
                 if (null == e || (null != n[0] && e < n[0]) || (null != n[1] && e > n[1])) {
@@ -65,7 +65,7 @@ function b(e) {
                 for (let t of i)
                     try {
                         let n = a.iu(t);
-                        if (h.A.can(n, o)) {
+                        if (f.A.can(n, o)) {
                             e = !0;
                             break;
                         }
@@ -74,12 +74,12 @@ function b(e) {
             }
             let l = E.default.getCurrentUser(),
                 u = l?.id === o.ownerId,
-                c = h.A.can(m.xBc.ADMINISTRATOR, o);
+                c = f.A.can(m.xBc.ADMINISTRATOR, o);
             if ((t.includes("is_owner") && !u) || (t.includes("is_admin") && !c)) continue;
             null == (I = I ?? {})[e.key] && (I[e.key] = e);
             let d = p.A.getGuildId(),
-                f = null != d && d === o.id;
-            if ((!t.includes("is_viewing") || f) && !r) return !0;
+                h = null != d && d === o.id;
+            if ((!t.includes("is_viewing") || h) && !r) return !0;
         }
         return !!r && !!s;
     })(e);
@@ -122,13 +122,13 @@ class w extends o.Ay.PersistedStore {
         (e) => ({ ...e, hiddenSurveys: e.hiddenSurveys ?? {} }),
     ];
     initialize(e) {
-        this.waitFor(_.A, f.A, h.A, p.A, E.default), (A = e ?? g), this.syncWith([p.A], L);
+        this.waitFor(_.A, h.A, f.A, p.A, E.default), (A = e ?? g), this.syncWith([p.A], L);
     }
     getState() {
         return A;
     }
     getCurrentSurvey() {
-        return O() ? null : T;
+        return R() ? null : T;
     }
     getSurveyOverride() {
         return A.surveyOverride;
@@ -137,12 +137,12 @@ class w extends o.Ay.PersistedStore {
         return A.lastSeen;
     }
     shouldAllowSurveyAction() {
-        return Date.now() - (A.lastActionTriggered ?? 0) >= y;
+        return Date.now() - (A.lastActionTriggered ?? 0) >= N;
     }
 }
 let M = new w(u.h, {
-    CONNECTION_OPEN: R,
-    CONNECTION_RESUMED: R,
+    CONNECTION_OPEN: O,
+    CONNECTION_RESUMED: O,
     SURVEY_FETCHED: D,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;

@@ -15,8 +15,8 @@ let o = [],
     c = "NOT_FETCHED",
     d = [],
     _ = "NOT_FETCHED",
-    f = [];
-function h(e) {
+    h = [];
+function f(e) {
     if (0 !== Object.keys(e).length) {
         for (let [t, n] of Object.entries(e)) {
             let e = new Set(n.map((e) => e.config_id)),
@@ -50,18 +50,18 @@ class p extends r.Ay.Store {
         return d;
     }
     getDeveloperApplicationIds() {
-        return f;
+        return h;
     }
 }
 let E = new p(s.h, {
     LOGOUT: function () {
-        (l = {}), (u = {}), (c = "NOT_FETCHED"), (d = []), (_ = "NOT_FETCHED"), (f = []);
+        (l = {}), (u = {}), (c = "NOT_FETCHED"), (d = []), (_ = "NOT_FETCHED"), (h = []);
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START: function (e) {
         c = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: function (e) {
-        (c = "SUCCESS"), (d = Object.keys(e.configs)), h(e.configs);
+        (c = "SUCCESS"), (d = Object.keys(e.configs)), f(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE: function () {
         c = "FAILURE";
@@ -70,7 +70,7 @@ let E = new p(s.h, {
         _ = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: function (e) {
-        (_ = "SUCCESS"), (f = Object.keys(e.configs)), h(e.configs);
+        (_ = "SUCCESS"), (h = Object.keys(e.configs)), f(e.configs);
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE: function () {
         _ = "FAILURE";
@@ -79,7 +79,7 @@ let E = new p(s.h, {
         u = { ...u, [e.applicationId]: "FETCHING" };
     },
     APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function (e) {
-        h({ [e.applicationId]: e.configs });
+        f({ [e.applicationId]: e.configs });
     },
     APPLICATION_WIDGET_CONFIG_FETCH_FAILURE: function (e) {
         u = { ...u, [e.applicationId]: "FAILURE" };

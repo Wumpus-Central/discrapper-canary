@@ -3,21 +3,21 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     (t.reactFormatter = t.DEFAULT_REACT_RICH_TEXT_ELEMENTS = void 0),
     (t.formatReact = a),
     (t.makeReactFormatter = o);
-let r = n(64700),
-    i = n(621608),
-    s = r.createElement;
+let i = n(64700),
+    r = n(621608),
+    s = i.createElement;
 function a(e, t, n) {
     return "string" == typeof e ? e : this.bindFormatValues(n, e, t);
 }
 function o(e) {
     return {
         format: a,
-        builder: class extends i.FormatBuilder {
+        builder: class extends r.FormatBuilder {
             constructor() {
                 super(...arguments), (this._nodeKey = 0), (this.result = []);
             }
-            pushRichTextTag(t, n, r) {
-                this.result.push(e[t](n, `${this.context.keyPrefix}.tag-${this._nodeKey++}`, r));
+            pushRichTextTag(t, n, i) {
+                this.result.push(e[t](n, `${this.context.keyPrefix}.tag-${this._nodeKey++}`, i));
             }
             pushLiteralText(e) {
                 "string" == typeof this.result[this.result.length - 1]

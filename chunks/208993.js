@@ -1,57 +1,57 @@
-r.d(t, { A: () => h });
-var n = r(627968);
-r(64700);
-var s = r(935462),
-    i = r(534514),
-    l = r(834730),
-    a = r(283900),
-    c = r(475833),
-    d = r(602339),
-    o = r(985018),
-    u = r(903310);
+t.d(r, { A: () => m });
+var s = t(627968);
+t(64700);
+var n = t(935462),
+    a = t(534514),
+    l = t(834730),
+    i = t(283900),
+    d = t(475833),
+    c = t(602339),
+    o = t(375708),
+    h = t(903310);
 let x = (e) => {
-    let { children: t, className: r, ...i } = e;
-    return (0, n.jsx)(s.EO, {
+    let { children: r, className: t, ...a } = e;
+    return (0, s.jsx)(n.EO, {
         "data-migration-pending": !0,
-        className: r,
-        ...i,
+        className: t,
+        ...a,
         parentComponent: "FamilyCenterCommonModal",
-        children: t,
+        children: r,
     });
 };
 (x.ButtonFooter = (e) => {
-    let { children: t } = e;
-    return (0, n.jsx)("div", { className: u.qr, children: t });
+    let { children: r } = e;
+    return (0, s.jsx)("div", { className: h.qr, children: r });
 }),
     (x.Header = (e) => {
-        let { icon: t, currentUser: r, otherUser: s, header: l } = e;
-        return (0, n.jsxs)("div", {
-            className: u.wx,
+        let { icon: r, currentUser: t, otherUser: n, header: l } = e;
+        return (0, s.jsxs)("div", {
+            className: h.wx,
             children: [
-                (0, n.jsx)(a.A, { currentUser: r, otherUser: s, children: t }),
-                (0, n.jsxs)("div", {
-                    className: u.R_,
-                    children: [(0, n.jsx)(i.D, { variant: "text-lg/bold", children: l }), (0, n.jsx)(c.A, { user: s })],
+                (0, s.jsx)(i.A, { currentUser: t, otherUser: n, children: r }),
+                (0, s.jsxs)("div", {
+                    className: h.R_,
+                    children: [(0, s.jsx)(a.D, { variant: "text-lg/bold", children: l }), (0, s.jsx)(d.A, { user: n })],
                 }),
             ],
         });
     }),
     (x.Content = (e) => {
-        let { children: t } = e;
-        return (0, n.jsx)("div", { className: u.Qs, children: t });
+        let { children: r } = e;
+        return (0, s.jsx)("div", { className: h.Qs, children: r });
     }),
     (x.Notice = (e) => {
-        let { notice: t } = e;
-        return (0, n.jsxs)("div", {
-            className: u.lm,
+        let { notice: r } = e;
+        return (0, s.jsxs)("div", {
+            className: h.lm,
             children: [
-                (0, n.jsx)(l.E, {
+                (0, s.jsx)(l.E, {
                     variant: "eyebrow",
                     color: "text-strong",
-                    children: o.intl.string(d.default.cXgKMD),
+                    children: o.intl.string(c.default.cXgKMD),
                 }),
-                (0, n.jsx)(l.E, { variant: "text-sm/normal", color: "text-default", children: t }),
+                (0, s.jsx)(l.E, { variant: "text-sm/normal", color: "text-default", children: r }),
             ],
         });
     });
-let h = x;
+let m = x;

@@ -10,8 +10,8 @@ var i = n(367513),
     c = n(851907),
     d = n(969151),
     _ = n(108959),
-    f = n(5867),
-    h = n(652215);
+    h = n(5867),
+    f = n(652215);
 function p(e, t) {
     let n = u.Ay.getSelfEmbeddedActivityForLocation(t);
     if (null == n) return;
@@ -21,12 +21,12 @@ function p(e, t) {
     null != m
         ? (0, a.A)(m)
         : null != E &&
-          ((0, o.pX)(h.BVt.CHANNEL(e, E)),
+          ((0, o.pX)(f.BVt.CHANNEL(e, E)),
           (0, _.A)(E)
               ? (i.A.selectParticipant(
                     E,
                     (0, s.Qt)({ applicationId: n.applicationId, instanceId: n?.compositeInstanceId }),
                 ),
-                i.A.updateLayout(E, h.DUB.NO_CHAT))
-              : (0, l.gk)(f.Gd.PANEL));
+                i.A.updateLayout(E, f.DUB.NO_CHAT))
+              : (0, l.gk)(h.Gd.PANEL));
 }

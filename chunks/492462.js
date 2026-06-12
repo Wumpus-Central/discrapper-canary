@@ -1,9 +1,9 @@
 "use strict";
-var r = n(948055),
-    i = n(724039),
+var i = n(948055),
+    r = n(724039),
     s = n(389293);
 function a(e, t) {
-    return t.encode ? (t.strict ? r(e) : encodeURIComponent(e)) : e;
+    return t.encode ? (t.strict ? i(e) : encodeURIComponent(e)) : e;
 }
 (t.extract = function (e) {
     return e.split("?")[1] || "";
@@ -13,25 +13,25 @@ function a(e, t) {
                 var t;
                 switch (e.arrayFormat) {
                     case "index":
-                        return function (e, n, r) {
+                        return function (e, n, i) {
                             if (((t = /\[(\d*)\]$/.exec(e)), (e = e.replace(/\[\d*\]$/, "")), !t)) {
-                                r[e] = n;
+                                i[e] = n;
                                 return;
                             }
-                            void 0 === r[e] && (r[e] = {}), (r[e][t[1]] = n);
+                            void 0 === i[e] && (i[e] = {}), (i[e][t[1]] = n);
                         };
                     case "bracket":
-                        return function (e, n, r) {
+                        return function (e, n, i) {
                             if (((t = /(\[\])$/.exec(e)), (e = e.replace(/\[\]$/, "")), t)) {
-                                if (void 0 === r[e]) {
-                                    r[e] = [n];
+                                if (void 0 === i[e]) {
+                                    i[e] = [n];
                                     return;
                                 }
                             } else {
-                                r[e] = n;
+                                i[e] = n;
                                 return;
                             }
-                            r[e] = [].concat(r[e], n);
+                            i[e] = [].concat(i[e], n);
                         };
                     default:
                         return function (e, t, n) {
@@ -42,19 +42,19 @@ function a(e, t) {
                             n[e] = [].concat(n[e], t);
                         };
                 }
-            })((t = i({ arrayFormat: "none" }, t))),
-            r = Object.create(null);
+            })((t = r({ arrayFormat: "none" }, t))),
+            i = Object.create(null);
         return "string" == typeof e && (e = e.trim().replace(/^(\?|#|&)/, ""))
             ? (e.split("&").forEach(function (e) {
                   var t = e.replace(/\+/g, " ").split("="),
-                      i = t.shift(),
+                      r = t.shift(),
                       a = t.length > 0 ? t.join("=") : void 0;
-                  (a = void 0 === a ? null : s(a)), n(s(i), a, r);
+                  (a = void 0 === a ? null : s(a)), n(s(r), a, i);
               }),
-              Object.keys(r)
+              Object.keys(i)
                   .sort()
                   .reduce(function (e, t) {
-                      var n = r[t];
+                      var n = i[t];
                       return (
                           n && "object" == typeof n && !Array.isArray(n)
                               ? (e[t] = (function e(t) {
@@ -74,16 +74,16 @@ function a(e, t) {
                           e
                       );
                   }, Object.create(null)))
-            : r;
+            : i;
     }),
     (t.stringify = function (e, t) {
         var n = (function (e) {
             switch (e.arrayFormat) {
                 case "index":
-                    return function (t, n, r) {
+                    return function (t, n, i) {
                         return null === n
-                            ? [a(t, e), "[", r, "]"].join("")
-                            : [a(t, e), "[", a(r, e), "]=", a(n, e)].join("");
+                            ? [a(t, e), "[", i, "]"].join("")
+                            : [a(t, e), "[", a(i, e), "]=", a(n, e)].join("");
                     };
                 case "bracket":
                     return function (t, n) {
@@ -94,24 +94,24 @@ function a(e, t) {
                         return null === n ? a(t, e) : [a(t, e), "=", a(n, e)].join("");
                     };
             }
-        })((t = i({ encode: !0, strict: !0, arrayFormat: "none" }, t)));
+        })((t = r({ encode: !0, strict: !0, arrayFormat: "none" }, t)));
         return e
             ? Object.keys(e)
                   .sort()
-                  .map(function (r) {
-                      var i = e[r];
-                      if (void 0 === i) return "";
-                      if (null === i) return a(r, t);
-                      if (Array.isArray(i)) {
+                  .map(function (i) {
+                      var r = e[i];
+                      if (void 0 === r) return "";
+                      if (null === r) return a(i, t);
+                      if (Array.isArray(r)) {
                           var s = [];
                           return (
-                              i.slice().forEach(function (e) {
-                                  void 0 !== e && s.push(n(r, e, s.length));
+                              r.slice().forEach(function (e) {
+                                  void 0 !== e && s.push(n(i, e, s.length));
                               }),
                               s.join("&")
                           );
                       }
-                      return a(r, t) + "=" + a(i, t);
+                      return a(i, t) + "=" + a(r, t);
                   })
                   .filter(function (e) {
                       return e.length > 0;

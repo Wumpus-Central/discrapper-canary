@@ -14,8 +14,8 @@ n.d(t, {
     FH: () => Q,
     FP: () => em,
     Fs: () => eT,
-    GQ: () => tf,
-    GZ: () => k,
+    GQ: () => th,
+    GZ: () => U,
     Gu: () => tM,
     HB: () => e4,
     HS: () => eg,
@@ -36,19 +36,19 @@ n.d(t, {
     PJ: () => te,
     PR: () => tD,
     Ph: () => S,
-    Py: () => tU,
+    Py: () => tk,
     QH: () => ed,
     QR: () => tL,
     Qg: () => tI,
     Qn: () => tB,
-    RG: () => ek,
+    RG: () => eU,
     RK: () => eE,
     RR: () => eD,
-    RX: () => ef,
-    Rj: () => tO,
-    Ry: () => eR,
-    SJ: () => eN,
-    Sc: () => tC,
+    RX: () => eh,
+    Rj: () => tR,
+    Ry: () => eO,
+    SJ: () => ey,
+    Sc: () => tv,
     Tb: () => q,
     Tp: () => tp,
     U8: () => tx,
@@ -60,10 +60,10 @@ n.d(t, {
     YN: () => eb,
     ZA: () => j,
     ZJ: () => F,
-    _U: () => X,
+    _U: () => Z,
     _h: () => tn,
-    _i: () => Z,
-    _m: () => eZ,
+    _i: () => X,
+    _m: () => eX,
     aI: () => eM,
     bL: () => tb,
     c6: () => eL,
@@ -73,64 +73,64 @@ n.d(t, {
     dS: () => eJ,
     dz: () => ep,
     eF: () => tT,
-    eI: () => eO,
+    eI: () => eR,
     eT: () => x,
-    eW: () => ev,
+    eW: () => eC,
     fb: () => tu,
     gG: () => eI,
-    gM: () => $,
+    gM: () => z,
     gR: () => e_,
     hI: () => eF,
     he: () => eB,
     iA: () => e5,
     ii: () => to,
     j1: () => eK,
-    jn: () => ez,
+    jn: () => e$,
     ju: () => e2,
-    k2: () => eX,
+    k2: () => eZ,
     k4: () => eH,
     kK: () => td,
     l0: () => tr,
     lI: () => r,
-    n8: () => z,
-    ni: () => tN,
-    nv: () => ty,
+    n8: () => $,
+    ni: () => ty,
+    nv: () => tN,
     nx: () => M,
     o: () => eo,
     p8: () => e3,
     pD: () => eW,
     qN: () => tF,
     qv: () => tw,
-    rf: () => C,
+    rf: () => v,
     rk: () => tt,
-    rl: () => tv,
-    s5: () => eh,
+    rl: () => tC,
+    s5: () => ef,
     sQ: () => el,
-    sW: () => tk,
+    sW: () => tU,
     ss: () => ts,
-    t7: () => y,
-    tZ: () => e$,
-    uo: () => eC,
+    t7: () => N,
+    tZ: () => ez,
+    uo: () => ev,
     uw: () => e9,
     v: () => ew,
     v2: () => B,
-    vF: () => ey,
+    vF: () => eN,
     vU: () => tP,
     vV: () => ex,
-    vb: () => N,
+    vb: () => y,
     w2: () => e7,
     w6: () => tl,
     w9: () => er,
     wH: () => ei,
     wJ: () => eQ,
-    wd: () => eU,
+    wd: () => ek,
     x0: () => tc,
     x6: () => ee,
-    xV: () => th,
+    xV: () => tf,
     xy: () => T,
     yc: () => tV,
     yq: () => ej,
-    zE: () => tR,
+    zE: () => tO,
 }),
     n(393431),
     n(532706),
@@ -192,12 +192,12 @@ function _() {
         d
     );
 }
-let f = new ("u" < typeof TextDecoder ? (0, e.require)("util").TextDecoder : TextDecoder)("utf-8", {
+let h = new ("u" < typeof TextDecoder ? (0, e.require)("util").TextDecoder : TextDecoder)("utf-8", {
     ignoreBOM: !0,
     fatal: !0,
 });
-function h(e, t) {
-    return (e >>>= 0), f.decode(o().subarray(e, e + t));
+function f(e, t) {
+    return (e >>>= 0), h.decode(o().subarray(e, e + t));
 }
 function p(e) {
     let t = i.__externref_table_alloc();
@@ -214,7 +214,7 @@ function E(e, t) {
 function m(e) {
     return null == e;
 }
-f.decode();
+h.decode();
 let g =
     "u" < typeof FinalizationRegistry
         ? { register: () => {}, unregister: () => {} }
@@ -244,7 +244,7 @@ function T(e) {
     let t, n;
     try {
         let r = i.generateLaunchSignature(e);
-        return (t = r[0]), (n = r[1]), h(r[0], r[1]);
+        return (t = r[0]), (n = r[1]), f(r[0], r[1]);
     } finally {
         i.__wbindgen_free(t, n, 1);
     }
@@ -252,28 +252,28 @@ function T(e) {
 function S() {
     return i.initLibdiscore();
 }
-function N() {
+function y() {
     i.crash();
 }
-function y(e, t) {
+function N(e, t) {
     return i.rustMultiply(e, t);
 }
-function C(e, t, n, r, s) {
+function v(e, t, n, r, s) {
     i.installLogCallback(e, t, n, r, s);
 }
-function v(e, t) {
+function C(e, t) {
     i._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h075cb6f1f85a8e52(
         e,
         t,
     );
 }
-function O(e, t) {
+function R(e, t) {
     i._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hd39d17064ed9c408(
         e,
         t,
     );
 }
-function R(e, t, n) {
+function O(e, t, n) {
     i.closure736_externref_shim(e, t, n);
 }
 let b = ["bytes"],
@@ -298,7 +298,7 @@ class M {
             r = s,
             a = i.blockeddomainsstore_isBlockedDomain(n, r);
         if (a[3]) throw I(a[2]);
-        return 0 !== a[0] && ((t = h(a[0], a[1]).slice()), i.__wbindgen_free(a[0], +a[1], 1)), t;
+        return 0 !== a[0] && ((t = f(a[0], a[1]).slice()), i.__wbindgen_free(a[0], +a[1], 1)), t;
     }
     static startFetchingBlockedDomains(e) {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
@@ -338,14 +338,14 @@ class x {
         if (r[1]) throw I(r[0]);
     }
 }
-let U =
+let k =
     "u" < typeof FinalizationRegistry
         ? { register: () => {}, unregister: () => {} }
         : new FinalizationRegistry((e) => i.__wbg_fluxapi_free(e >>> 0, 1));
-class k {
+class U {
     __destroy_into_raw() {
         let e = this.__wbg_ptr;
-        return (this.__wbg_ptr = 0), U.unregister(this), e;
+        return (this.__wbg_ptr = 0), k.unregister(this), e;
     }
     free() {
         let e = this.__destroy_into_raw();
@@ -374,7 +374,7 @@ class k {
     }
     constructor() {
         const e = i.fluxapi_new();
-        return (this.__wbg_ptr = e >>> 0), U.register(this, this.__wbg_ptr, this), this;
+        return (this.__wbg_ptr = e >>> 0), k.register(this, this.__wbg_ptr, this), this;
     }
 }
 let G =
@@ -483,23 +483,23 @@ function K(e, t) {
         r = s;
     _().setInt32(e + 4, r, !0), _().setInt32(e + 0, n, !0);
 }
-function z(e, t) {
+function $(e, t) {
     e.abort(t);
 }
-function $(e) {
+function z(e) {
     e.abort();
 }
 function q() {
     return E(function (e, t, n, i, r) {
-        e.append(h(t, n), h(i, r));
+        e.append(f(t, n), f(i, r));
     }, arguments);
 }
-function Z() {
+function X() {
     return E(function (e) {
         return e.arrayBuffer();
     }, arguments);
 }
-function X(e) {
+function Z(e) {
     return e.buffer;
 }
 function Q(e) {
@@ -560,10 +560,10 @@ function ed() {
 function e_(e, t) {
     return e.fetch(t);
 }
-function ef(e) {
+function eh(e) {
     return fetch(e);
 }
-function eh() {
+function ef() {
     return E(function (e, t) {
         var n;
         globalThis.crypto.getRandomValues(((n = e >>> 0), o().subarray(n / 1, n / 1 + t)));
@@ -615,7 +615,7 @@ function eS(e) {
     }
     return t;
 }
-function eN(e) {
+function ey(e) {
     let t;
     try {
         t = e instanceof Uint8Array;
@@ -624,7 +624,7 @@ function eN(e) {
     }
     return t;
 }
-function ey(e) {
+function eN(e) {
     let t;
     try {
         t = e instanceof Window;
@@ -633,16 +633,16 @@ function ey(e) {
     }
     return t;
 }
-function eC(e) {
+function ev(e) {
     return Array.isArray(e);
 }
-function ev() {
+function eC() {
     return Symbol.iterator;
 }
-function eO(e) {
+function eR(e) {
     return e.length;
 }
-function eR(e) {
+function eO(e) {
     return e.length;
 }
 function eb(e, t) {
@@ -682,16 +682,16 @@ function eP() {
 function ex(e) {
     return new Uint8Array(e);
 }
-function eU(e, t) {
-    return Error(h(e, t));
+function ek(e, t) {
+    return Error(f(e, t));
 }
-function ek() {
+function eU() {
     return E(function () {
         return new AbortController();
     }, arguments);
 }
 function eG(e, t) {
-    return Function(h(e, t));
+    return Function(f(e, t));
 }
 function eF(e, t, n) {
     return new Uint8Array(e, t >>> 0, n >>> 0);
@@ -703,7 +703,7 @@ function eV() {
 }
 function eB() {
     return E(function (e, t, n) {
-        return new Request(h(e, t), n);
+        return new Request(f(e, t), n);
     }, arguments);
 }
 function eH() {
@@ -723,22 +723,22 @@ function eW(e) {
     return e.now();
 }
 function eK(e, t, n) {
-    return e.open(h(t, n));
+    return e.open(f(t, n));
 }
-function ez(e) {
+function e$(e) {
     let t = e.performance;
     return m(t) ? 0 : p(t);
 }
-function e$(e, t) {
+function ez(e, t) {
     return e.push(t);
 }
 function eq(e, t, n) {
     return e.put(t, n);
 }
-function eZ(e) {
+function eX(e) {
     queueMicrotask(e);
 }
-function eX(e) {
+function eZ(e) {
     return e.queueMicrotask;
 }
 function eQ(e) {
@@ -759,7 +759,7 @@ function e1() {
 }
 function e2() {
     return E(function (e, t, n, i, r) {
-        e.set(h(t, n), h(i, r));
+        e.set(f(t, n), f(i, r));
     }, arguments);
 }
 function e3(e, t, n) {
@@ -792,7 +792,7 @@ function tt(e, t) {
     e.headers = t;
 }
 function tn(e, t, n) {
-    e.method = h(t, n);
+    e.method = f(t, n);
 }
 function ti(e, t) {
     e.mode = L[t];
@@ -830,10 +830,10 @@ function t_() {
         return JSON.stringify(e);
     }, arguments);
 }
-function tf(e, t) {
+function th(e, t) {
     return e.then(t);
 }
-function th(e, t, n) {
+function tf(e, t, n) {
     return e.then(t, n);
 }
 function tp(e, t) {
@@ -849,7 +849,7 @@ function tm(e) {
     return m(t) ? 0 : p(t);
 }
 function tg(e, t) {
-    console.warn(h(e, t));
+    console.warn(f(e, t));
 }
 function tA(e) {
     return e;
@@ -864,16 +864,16 @@ function tS(e) {
     let t = e.original;
     return 1 == t.cnt-- && ((t.a = 0), !0);
 }
-function tN(e, t, n) {
-    return A(e, t, 553, v);
-}
 function ty(e, t, n) {
-    return A(e, t, 593, O);
+    return A(e, t, 553, C);
 }
-function tC(e, t, n) {
-    return A(e, t, 737, R);
+function tN(e, t, n) {
+    return A(e, t, 593, R);
 }
-function tv(e, t) {
+function tv(e, t, n) {
+    return A(e, t, 737, O);
+}
+function tC(e, t) {
     let n = c(
             (function e(t) {
                 let n,
@@ -914,10 +914,10 @@ ${t.stack}`
         r = s;
     _().setInt32(e + 4, r, !0), _().setInt32(e + 0, n, !0);
 }
-function tO(e, t) {
-    return Error(h(e, t));
-}
 function tR(e, t) {
+    return Error(f(e, t));
+}
+function tO(e, t) {
     return e in t;
 }
 function tb() {
@@ -943,10 +943,10 @@ function tP(e) {
 function tx(e, t) {
     return e == t;
 }
-function tU() {
+function tk() {
     return i.memory;
 }
-function tk(e, t) {
+function tU(e, t) {
     let n = "number" == typeof t ? t : void 0;
     _().setFloat64(e + 8, m(n) ? 0 : n, !0), _().setInt32(e + 0, !m(n), !0);
 }
@@ -960,8 +960,8 @@ function tF(e, t) {
     _().setInt32(e + 4, a, !0), _().setInt32(e + 0, r, !0);
 }
 function tV(e, t) {
-    return h(e, t);
+    return f(e, t);
 }
 function tB(e, t) {
-    throw Error(h(e, t));
+    throw Error(f(e, t));
 }

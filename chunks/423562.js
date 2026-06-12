@@ -12,8 +12,8 @@ var r = n(17928),
     d = n(375708);
 function _(e) {
     let { node: t, guestWindow: n, ..._ } = e,
-        f = (0, r.bG)([l.A, o.A], () => (0, u._U)(t, n?.document), [t, n]),
-        h = f ? d.intl.string(d.t.Z7MyNB) : d.intl.string(d.t.OIDkcp),
-        p = f ? s.z : a.T;
-    return (0, i.jsx)(c.A, { label: h, iconComponent: p, ..._ });
+        h = (0, r.bG)([l.A, o.A], () => (0, u._U)(t, n?.document), [t, n]),
+        f = h ? d.intl.string(d.t.Z7MyNB) : d.intl.string(d.t.OIDkcp),
+        p = h ? s.z : a.T;
+    return (0, i.jsx)(c.A, { label: f, iconComponent: p, ..._ });
 }

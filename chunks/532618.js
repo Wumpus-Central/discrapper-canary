@@ -1,8 +1,8 @@
-let r = n(864886);
+let i = n(864886);
 e.exports = (e, t, n = !1) => {
-    if (e instanceof r) return e;
+    if (e instanceof i) return e;
     try {
-        return new r(e, t);
+        return new i(e, t);
     } catch (e) {
         if (!n) return null;
         throw e;

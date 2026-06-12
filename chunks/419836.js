@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     kL: "container__03b47",
     Qs: "content__03b47",
     FS: "textContainer__03b47",

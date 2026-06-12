@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { Gb: () => o, TF: () => l, W_: () => d, n7: () => c, no: () => u }), n(985018);
-var r,
-    i,
+n.d(t, { Gb: () => o, TF: () => l, W_: () => c, n7: () => d, no: () => u }), n(375708);
+var i,
+    r,
     s,
     a,
     o =
-        (((r = {}).BUG = "BUG"),
-        (r.ALLOWED = "ALLOWED"),
-        (r.MENTION_RAID_REMOVE_RESTRICTION = "MENTION_RAID_REMOVE_RESTRICTION"),
-        r),
-    l = (((i = {}).JOIN_RAID = "JOIN_RAID"), (i.MENTION_RAID = "MENTION_RAID"), i),
+        (((i = {}).BUG = "BUG"),
+        (i.ALLOWED = "ALLOWED"),
+        (i.MENTION_RAID_REMOVE_RESTRICTION = "MENTION_RAID_REMOVE_RESTRICTION"),
+        i),
+    l = (((r = {}).JOIN_RAID = "JOIN_RAID"), (r.MENTION_RAID = "MENTION_RAID"), r),
     u =
         (((s = {}).LEGITIMATE_ACTIVITY = "LEGITIMATE_ACTIVITY"),
         (s.LEGITIMATE_ACCOUNTS = "LEGITIMATE_ACCOUNTS"),
@@ -18,7 +18,7 @@ var r,
         (s.JOIN_RAID = "JOIN_RAID"),
         (s.OTHER = "OTHER"),
         s);
-function d(e) {
+function c(e) {
     return e.includes("LEGITIMATE_ACTIVITY")
         ? "LEGITIMATE_ACTIVITY"
         : e.includes("DM_SPAM")
@@ -27,7 +27,7 @@ function d(e) {
             ? "JOIN_RAID"
             : "OTHER";
 }
-var c =
+var d =
     (((a = {}).DM_SPAM = "DM_SPAM"),
     (a.MENTION_SPAM = "MENTION_SPAM"),
     (a.CHANNEL_SPAM = "CHANNEL_SPAM"),

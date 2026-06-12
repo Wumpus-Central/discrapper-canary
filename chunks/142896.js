@@ -1,11 +1,11 @@
 "use strict";
-var r = n(611256),
-    i = n(969001),
-    a = n(326948),
-    s = n(700127);
+var i = n(611256),
+    r = n(969001),
+    s = n(326948),
+    a = n(700127);
 (e.exports = function (e) {
-    var t = a(arguments),
+    var t = s(arguments),
         n = e.length - (arguments.length - 1);
-    return r(t, 1 + (n > 0 ? n : 0), !0);
+    return i(t, 1 + (n > 0 ? n : 0), !0);
 }),
-    i ? i(e.exports, "apply", { value: s }) : (e.exports.apply = s);
+    r ? r(e.exports, "apply", { value: a }) : (e.exports.apply = a);

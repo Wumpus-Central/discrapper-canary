@@ -1,12 +1,12 @@
-var r = n(776892),
-    i = n(716509),
-    a = n(162537);
+var i = n(776892),
+    r = n(716509),
+    s = n(162537);
 e.exports = function (e, t) {
     var n = {};
     return (
-        (t = a(t, 3)),
-        i(e, function (e, i, a) {
-            r(n, i, t(e, i, a));
+        (t = s(t, 3)),
+        r(e, function (e, r, s) {
+            i(n, r, t(e, r, s));
         }),
         n
     );

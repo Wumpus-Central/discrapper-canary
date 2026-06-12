@@ -28,7 +28,7 @@ var f = i(235986),
     I = i(320448),
     C = i(375708),
     b = i(632787);
-let v = s.forwardRef(function (e, t) {
+let y = s.forwardRef(function (e, t) {
     let { currentPageIndex: i, numPages: s, onChangePage: l, children: r, showPageCount: a = !0, ...o } = e,
         u = i >= s - 1,
         d = a
@@ -66,12 +66,12 @@ let v = s.forwardRef(function (e, t) {
     });
 });
 i(321073), i(938796);
-var y = i(334279),
+var v = i(334279),
     j = i(122817),
     O = i(665260),
     R = i(315069),
-    L = i(32731),
-    D = i(557009),
+    D = i(32731),
+    L = i(557009),
     P = i(202613),
     G = i(243217),
     M = i(652215),
@@ -101,7 +101,7 @@ class V extends R.A {
     entitlements;
     static createFromServer(e) {
         let t = null != e.payment_source ? P.Ay.createFromServer(e.payment_source) : null,
-            i = null != e.sku ? L.A.createFromServer(e.sku) : null,
+            i = null != e.sku ? D.A.createFromServer(e.sku) : null,
             n = null != e.subscription ? G.A.createFromServer(e.subscription) : null;
         return new V({
             id: e.id,
@@ -126,7 +126,7 @@ class V extends R.A {
             hasInvoiceURL: e.has_invoice_url,
             hasRefundInvoiceURLs: e.has_refund_invoice_urls,
             premiumRefundDisqualificationReasons: e.premium_refund_disqualification_reasons,
-            entitlements: null != e.entitlements ? e.entitlements.map((e) => D.A.createFromServer(e)) : void 0,
+            entitlements: null != e.entitlements ? e.entitlements.map((e) => L.A.createFromServer(e)) : void 0,
         });
     }
     constructor(e) {
@@ -198,7 +198,7 @@ class V extends R.A {
         return null != this.sku && this.sku.productLine === M.EZt.COLLECTIBLES;
     }
     get isFractionalPremium() {
-        return null != this.skuId && y.I.ALL.has(this.skuId);
+        return null != this.skuId && v.I.ALL.has(this.skuId);
     }
     get isShopPurchase() {
         return this.isCollectible || this.isFractionalPremium;
@@ -363,13 +363,13 @@ var ex = i(137177),
     eI = i(179499),
     eC = i(741231),
     eb = i(95035),
-    ev = i(337095),
-    ey = i(871123),
+    ey = i(337095),
+    ev = i(871123),
     ej = i(510022),
     eO = i(68935),
     eR = i(148355),
-    eL = i(780964),
-    eD = i(830543),
+    eD = i(780964),
+    eL = i(830543),
     eP = i(766075),
     eG = i(106799),
     eM = i(317525),
@@ -441,7 +441,7 @@ function e1(e) {
             a?.features.has(M.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE)
                 ? await (0, eC.A)(M.BVt.GUILD_PRODUCT(t, i))
                 : await (0, eC.A)(M.BVt.CHANNEL(t)),
-                (0, eD.default)();
+                (0, eL.default)();
         }, [a, t, i]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -612,7 +612,7 @@ class e3 extends s.PureComponent {
     }
     renderTenantStatusOverride() {
         let { payment: e, hasLinkedToApplication: t } = this.props;
-        return (0, ey.bF)(e.sku) && e.status === M.__0.COMPLETED
+        return (0, ev.bF)(e.sku) && e.status === M.__0.COMPLETED
             ? null != e.entitlements && e.entitlements.some((e) => e.isFulfilled())
                 ? (0, n.jsx)("span", { className: eE.gD, children: C.intl.string(C.t.Osji1u) })
                 : e.isGift
@@ -766,7 +766,7 @@ class e3 extends s.PureComponent {
                                 children: (0, n.jsx)(q.$, {
                                     variant: "primary",
                                     text: C.intl.string(C.t["jcSP+g"]),
-                                    onClick: () => (0, eP.openUserSettings)(eL.X.GIFT_PANEL),
+                                    onClick: () => (0, eP.openUserSettings)(eD.X.GIFT_PANEL),
                                 }),
                             }),
                     ],
@@ -809,7 +809,7 @@ class e3 extends s.PureComponent {
     }
     renderAdditionalTenantInfo() {
         let { payment: e } = this.props;
-        if ((0, ey.bF)(e.sku)) return this.renderAdditionalGameItemDetails();
+        if ((0, ev.bF)(e.sku)) return this.renderAdditionalGameItemDetails();
     }
     renderRefundDetails() {
         let e,
@@ -1077,10 +1077,10 @@ function e6(e) {
             gameApplication: ed.A.getApplication(o ?? "") ?? t.sku?.application,
             paymentSources: ek.A.paymentSources,
         })),
-        { hasAlreadyLinked: h } = (0, eu.RD)((0, ey.bF)(t.sku) ? m : void 0),
+        { hasAlreadyLinked: h } = (0, eu.RD)((0, ev.bF)(t.sku) ? m : void 0),
         E = (0, d.bG)([ed.A], () => (null != u ? ed.A.getApplication(u) : null));
     s.useEffect(() => {
-        c && null != u && (0, ev.TA)(u);
+        c && null != u && (0, ey.TA)(u);
     }, [u, c]);
     let S = (0, d.bG)([eU.A], () => eU.A.getGuild(m?.guildId)),
         T = a ? m : void 0,
@@ -1131,7 +1131,7 @@ function e7(e) {
         children: (0, n.jsx)(u.PR, {
             children: (e) => {
                 let { ref: t, ...s } = e;
-                return (0, n.jsx)(v, {
+                return (0, n.jsx)(y, {
                     className: e4.GD,
                     currentPageIndex: d,
                     onChangePage: E,

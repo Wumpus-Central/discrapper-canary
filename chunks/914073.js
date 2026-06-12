@@ -7,8 +7,8 @@ e.exports = function (e) {
             literal:
                 "DB_AFTER_LAST_ROW DB_ALL_TABLES DB_BATCH_OPERATIONS DB_BEFORE_FIRST_ROW DB_BLOB DB_EVENT_NOTIFICATIONS DB_FINISH_QUERY DB_HIGH_PRECISION DB_LAST_INSERT_ID DB_LOW_PRECISION_DOUBLE DB_LOW_PRECISION_INT32 DB_LOW_PRECISION_INT64 DB_LOW_PRECISION_NUMBERS DB_MULTIPLE_RESULT_SETS DB_NAMED_PLACEHOLDERS DB_POSITIONAL_PLACEHOLDERS DB_PREPARED_QUERIES DB_QUERY_SIZE DB_SIMPLE_LOCKING DB_SYSTEM_TABLES DB_TABLES DB_TRANSACTIONS DB_UNICODE DB_VIEWS __STDIN __STDOUT __STDERR __FILE_DIR",
         },
-        a = e.COMMENT("@", "@"),
-        n = {
+        n = e.COMMENT("@", "@"),
+        i = {
             className: "meta",
             begin: "#",
             end: "$",
@@ -26,7 +26,7 @@ e.exports = function (e) {
                 },
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
-                a,
+                n,
             ],
         },
         r = {
@@ -35,7 +35,7 @@ e.exports = function (e) {
             keywords: "struct",
             contains: [{ className: "type", begin: e.UNDERSCORE_IDENT_RE, relevance: 0 }],
         },
-        i = [
+        s = [
             {
                 className: "params",
                 begin: /\(/,
@@ -44,26 +44,26 @@ e.exports = function (e) {
                 excludeEnd: !0,
                 endsWithParent: !0,
                 relevance: 0,
-                contains: [{ className: "literal", begin: /\.\.\./ }, e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, a, r],
+                contains: [{ className: "literal", begin: /\.\.\./ }, e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, n, r],
             },
         ],
-        o = { className: "title", begin: e.UNDERSCORE_IDENT_RE, relevance: 0 },
-        s = function (t, n, r) {
-            let s = e.inherit(
-                { className: "function", beginKeywords: t, end: n, excludeEnd: !0, contains: [].concat(i) },
+        a = { className: "title", begin: e.UNDERSCORE_IDENT_RE, relevance: 0 },
+        o = function (t, i, r) {
+            let o = e.inherit(
+                { className: "function", beginKeywords: t, end: i, excludeEnd: !0, contains: [].concat(s) },
                 {},
             );
             return (
-                s.contains.push(o),
-                s.contains.push(e.C_NUMBER_MODE),
-                s.contains.push(e.C_BLOCK_COMMENT_MODE),
-                s.contains.push(a),
-                s
+                o.contains.push(a),
+                o.contains.push(e.C_NUMBER_MODE),
+                o.contains.push(e.C_BLOCK_COMMENT_MODE),
+                o.contains.push(n),
+                o
             );
         },
         l = { className: "built_in", begin: "\\b(" + t.built_in.split(" ").join("|") + ")\\b" },
-        c = { className: "string", begin: '"', end: '"', contains: [e.BACKSLASH_ESCAPE], relevance: 0 },
-        _ = {
+        u = { className: "string", begin: '"', end: '"', contains: [e.BACKSLASH_ESCAPE], relevance: 0 },
+        c = {
             begin: e.UNDERSCORE_IDENT_RE + "\\s*\\(",
             returnBegin: !0,
             keywords: t,
@@ -79,10 +79,10 @@ e.exports = function (e) {
             end: /\)/,
             relevance: 0,
             keywords: { built_in: t.built_in, literal: t.literal },
-            contains: [e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, a, l, _, c, "self"],
+            contains: [e.C_NUMBER_MODE, e.C_BLOCK_COMMENT_MODE, n, l, c, u, "self"],
         };
     return (
-        _.contains.push(d),
+        c.contains.push(d),
         {
             name: "GAUSS",
             aliases: ["gss"],
@@ -93,16 +93,16 @@ e.exports = function (e) {
                 e.C_NUMBER_MODE,
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
-                a,
-                c,
                 n,
+                u,
+                i,
                 {
                     className: "keyword",
                     begin: /\bexternal (matrix|string|array|sparse matrix|struct|proc|keyword|fn)/,
                 },
-                s("proc keyword", ";"),
-                s("fn", "="),
-                { beginKeywords: "for threadfor", end: /;/, relevance: 0, contains: [e.C_BLOCK_COMMENT_MODE, a, d] },
+                o("proc keyword", ";"),
+                o("fn", "="),
+                { beginKeywords: "for threadfor", end: /;/, relevance: 0, contains: [e.C_BLOCK_COMMENT_MODE, n, d] },
                 {
                     variants: [
                         { begin: e.UNDERSCORE_IDENT_RE + "\\." + e.UNDERSCORE_IDENT_RE },
@@ -110,7 +110,7 @@ e.exports = function (e) {
                     ],
                     relevance: 0,
                 },
-                _,
+                c,
                 r,
             ],
         }

@@ -1,1 +1,1 @@
-e.exports = { oC: "slayerStorefrontProductPreview__25766" };
+r.exports = { oC: "slayerStorefrontProductPreview__25766" };

@@ -1,5 +1,5 @@
 "use strict";
-function r(e) {
+function i(e) {
     return null != e.member && null != e.member.joined_at && "" !== e.member.user.username;
 }
-n.d(t, { A: () => r });
+n.d(t, { A: () => i });

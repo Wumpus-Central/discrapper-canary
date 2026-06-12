@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { HI: () => p, HU: () => h, cu: () => E, iA: () => _, sF: () => d });
+n.d(t, { HI: () => p, HU: () => f, cu: () => E, iA: () => _, sF: () => d });
 var i = n(64700),
     r = n(942381),
     s = n(265690),
@@ -16,13 +16,13 @@ function _(e) {
     return (
         (t.count = Math.max(t.count, t.messages.length)),
         c.setState((e) => ({ flashQueue: [...e.flashQueue, t] })),
-        () => f(t.id)
+        () => h(t.id)
     );
 }
-function f(e) {
+function h(e) {
     c.setState((t) => ({ flashQueue: t.flashQueue.filter((t) => t.id !== e) }));
 }
-function h(e) {
+function f(e) {
     i.useEffect(
         () => (
             (0, a.r)(() => c.setState((t) => ({ titles: [e, ...t.titles] }))),
@@ -34,7 +34,7 @@ function h(e) {
     );
 }
 function p(e) {
-    return h(e), null;
+    return f(e), null;
 }
 function E() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -76,12 +76,12 @@ function E() {
                     return;
                 }
                 if (document.hasFocus() && t.onlyWhenBlurred) {
-                    f(t.id), s(!1);
+                    h(t.id), s(!1);
                     return;
                 }
                 let e = setInterval(() => {
                     if (a.current >= t.count) {
-                        f(t.id), s(!1);
+                        h(t.id), s(!1);
                         return;
                     }
                     s((e) => !e || ((a.current += 1), !1));

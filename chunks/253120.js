@@ -1,19 +1,19 @@
 "use strict";
-var r = (function () {
+var i = (function () {
         function e(e, t) {
             for (var n = 0; n < t.length; n++) {
-                var r = t[n];
-                (r.enumerable = r.enumerable || !1),
-                    (r.configurable = !0),
-                    "value" in r && (r.writable = !0),
-                    Object.defineProperty(e, r.key, r);
+                var i = t[n];
+                (i.enumerable = i.enumerable || !1),
+                    (i.configurable = !0),
+                    "value" in i && (i.writable = !0),
+                    Object.defineProperty(e, i.key, i);
             }
         }
-        return function (t, n, r) {
-            return n && e(t.prototype, n), r && e(t, r), t;
+        return function (t, n, i) {
+            return n && e(t.prototype, n), i && e(t, i), t;
         };
     })(),
-    i = n(336258);
+    r = n(336258);
 n(958554);
 var s = n(497387),
     a = n(259126),
@@ -42,18 +42,18 @@ e.exports = (function (e) {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        i(t, [
             {
                 key: "start",
                 value: function (e, t, n) {
-                    var r = this;
+                    var i = this;
                     (this.__active = !0), (this._fromValue = e), (this._onUpdate = t), (this.__onEnd = n);
-                    var i = function () {
-                        0 === r._duration
-                            ? (r._onUpdate(r._toValue), r.__debouncedOnEnd({ finished: !0 }))
-                            : ((r._startTime = Date.now()), (r._animationFrame = a.current(r.onUpdate.bind(r))));
+                    var r = function () {
+                        0 === i._duration
+                            ? (i._onUpdate(i._toValue), i.__debouncedOnEnd({ finished: !0 }))
+                            : ((i._startTime = Date.now()), (i._animationFrame = a.current(i.onUpdate.bind(i))));
                     };
-                    this._delay ? (this._timeout = setTimeout(i, this._delay)) : i();
+                    this._delay ? (this._timeout = setTimeout(r, this._delay)) : r();
                 },
             },
             {
@@ -86,4 +86,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(i);
+})(r);

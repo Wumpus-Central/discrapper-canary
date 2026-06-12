@@ -1,4 +1,4 @@
-i.d(e, { n: () => n });
-function n(t) {
-    return `https://cdn.discordapp.com/assets/${t}`;
+c.d(p, { n: () => t });
+function t(s) {
+    return `https://cdn.discordapp.com/assets/${s}`;
 }

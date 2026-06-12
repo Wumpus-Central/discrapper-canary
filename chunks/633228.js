@@ -1,10 +1,10 @@
 "use strict";
-var r = n(380744),
-    i = n(482779),
-    a = n(4940).f,
-    s = r("unscopables"),
+var i = n(380744),
+    r = n(482779),
+    s = n(4940).f,
+    a = i("unscopables"),
     o = Array.prototype;
-void 0 === o[s] && a(o, s, { configurable: !0, value: i(null) }),
+void 0 === o[a] && s(o, a, { configurable: !0, value: r(null) }),
     (e.exports = function (e) {
-        o[s][e] = !0;
+        o[a][e] = !0;
     });

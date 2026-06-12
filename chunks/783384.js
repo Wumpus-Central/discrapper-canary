@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(176781),
     d = n(834730),
     _ = n(939249),
-    f = n(429913),
-    h = n(409626),
+    h = n(429913),
+    f = n(409626),
     p = n(692969),
     E = n(569926),
     m = n(287809),
@@ -24,7 +24,7 @@ let S = r.lazy(() =>
             .then(n.bind(n, 680901))
             .then((e) => ({ default: e.ClipParticipantsList })),
     ),
-    N = (e) => {
+    y = (e) => {
         let { participants: t, maxVisibleParticipants: n, guildId: s } = e,
             a = r.useRef(null),
             o = (0, r.useCallback)(
@@ -52,14 +52,14 @@ let S = r.lazy(() =>
                 }),
         });
     };
-var y = n(97808),
-    C = n(778712),
-    v = n(342296),
-    O = n(812924);
-function R(e) {
+var N = n(97808),
+    v = n(778712),
+    C = n(342296),
+    R = n(812924);
+function O(e) {
     let { user: t, guildId: n } = e,
         s = r.useRef(null);
-    return (0, i.jsx)(v.A, {
+    return (0, i.jsx)(C.A, {
         targetElementRef: s,
         shouldPreload: !0,
         user: t,
@@ -69,27 +69,27 @@ function R(e) {
             (0, i.jsx)(_.D, {
                 ...e,
                 innerRef: s,
-                className: O.RB,
+                className: R.RB,
                 onClick: (t) => {
                     e.onClick(t), t.stopPropagation();
                 },
                 "aria-label": t.username,
-                children: (0, i.jsx)(y.eu, { src: t.getAvatarURL(n, 24), size: C._3.SIZE_24, "aria-hidden": !0 }),
+                children: (0, i.jsx)(N.eu, { src: t.getAvatarURL(n, 24), size: v._3.SIZE_24, "aria-hidden": !0 }),
             }),
     });
 }
 var b = n(375708);
 function D(e) {
     let { applicationId: t, separator: n } = e,
-        r = (0, f.h)(t),
+        r = (0, h.h)(t),
         { data: s } = (0, E.I)(t),
-        a = (0, p.A)({ applicationId: t, location: "ClipEmbed", source: h.Ob.ClipEmbed }),
+        a = (0, p.A)({ applicationId: t, location: "ClipEmbed", source: f.Ob.ClipEmbed }),
         o = s?.name ?? r?.name;
     return null == o
         ? null
         : null != a
           ? (0, i.jsxs)(i.Fragment, {
-                children: [(0, i.jsx)(_.D, { tag: "span", className: O.On, onClick: a, children: o }), n],
+                children: [(0, i.jsx)(_.D, { tag: "span", className: R.On, onClick: a, children: o }), n],
             })
           : (0, i.jsxs)(i.Fragment, { children: [o, n] });
 }
@@ -100,8 +100,8 @@ let L = function (e) {
             applicationId: r,
             title: s,
             guildId: _,
-            className: f,
-            playerState: h = l.Q6.PAUSED,
+            className: h,
+            playerState: f = l.Q6.PAUSED,
             isControlBarExpanded: p = !0,
             isFullScreen: E = !1,
             showTextContent: I = !0,
@@ -109,26 +109,26 @@ let L = function (e) {
         T = (0, o.yK)([m.default], () => n.map((e) => m.default.getUser(e)).filter(A.Vq) ?? []),
         S = null != t ? (0, g.Fe)(new Date(t)) : null;
     return (0, i.jsxs)("div", {
-        className: a()(O.oK, { [O.pd]: h === l.Q6.PLAYING && !p, [O.aS]: E }, f),
+        className: a()(R.oK, { [R.pd]: f === l.Q6.PLAYING && !p, [R.aS]: E }, h),
         children: [
-            (0, i.jsx)("div", { className: O.Lu }),
+            (0, i.jsx)("div", { className: R.Lu }),
             (0, i.jsxs)("div", {
-                className: O.s$,
+                className: R.s$,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: O.yR,
+                        className: R.yR,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: O.$,
+                                className: R.$,
                                 children: [
                                     (0, i.jsx)(u.m, {
                                         asContainer: !0,
                                         text: b.intl.string(b.t["/fgfWh"]),
-                                        children: (0, i.jsx)(c.x, { className: O.gr, size: "xs", color: "white" }),
+                                        children: (0, i.jsx)(c.x, { className: R.gr, size: "xs", color: "white" }),
                                     }),
                                     I &&
                                         (0, i.jsx)(d.E, {
-                                            className: O.DD,
+                                            className: R.DD,
                                             variant: "text-md/semibold",
                                             color: "always-white",
                                             children: null != s && s.length > 0 ? s : b.intl.string(b.t.Cyxddp),
@@ -138,7 +138,7 @@ let L = function (e) {
                             I &&
                                 (null != r || null != S) &&
                                 (0, i.jsxs)(d.E, {
-                                    className: O.yu,
+                                    className: R.yu,
                                     variant: "text-sm/normal",
                                     color: "always-white",
                                     children: [
@@ -150,13 +150,13 @@ let L = function (e) {
                     }),
                     T.length > 0 &&
                         (0, i.jsxs)("div", {
-                            className: O.HD,
+                            className: R.HD,
                             role: "group",
                             "aria-label": b.intl.string(b.t.WTozwe),
                             children: [
-                                T.slice(0, 4).map((e) => (0, i.jsx)(R, { user: e, guildId: _ }, e.id)),
+                                T.slice(0, 4).map((e) => (0, i.jsx)(O, { user: e, guildId: _ }, e.id)),
                                 T.length > 4 &&
-                                    (0, i.jsx)(N, { participants: T, maxVisibleParticipants: 4, guildId: _ }),
+                                    (0, i.jsx)(y, { participants: T, maxVisibleParticipants: 4, guildId: _ }),
                             ],
                         }),
                 ],

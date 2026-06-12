@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, { L: () => a });
-var r = n(626584),
-    i = n(111162),
+var i = n(626584),
+    r = n(111162),
     s = n(818348);
 function a() {
     let { quest: e, location: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        n = i.default.isLoggingQuestEvents,
+        n = r.default.isLoggingQuestEvents,
         a = e?.config.messages.questName,
         o = null != t ? `-${t}` : "",
         l = null != a ? `-${a})` : "",
         u = `QuestLogger${o}${l}`,
-        c = new r.A(u);
+        c = new i.A(u);
     return {
         log: n ? c.log : s.tE,
         warn: n ? c.warn : s.tE,

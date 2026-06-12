@@ -1,9 +1,9 @@
 n.d(t, { A: () => i });
 var l = n(64700),
-    a = n(38405);
-let i = (e, t, n, i, r) => {
+    r = n(38405);
+let i = (e, t, n, i, a) => {
     let s = (0, l.useRef)(!1),
-        o = { componentName: e, sentryErrorOptions: r, stateToCapture: i },
+        o = { componentName: e, sentryErrorOptions: a, stateToCapture: i },
         u = (0, l.useRef)(o);
     (0, l.useEffect)(() => {
         u.current = o;
@@ -14,8 +14,8 @@ let i = (e, t, n, i, r) => {
                 s.current = !0;
                 let t = setTimeout(() => {
                     let t = Error(`${e} is taking too long to load.`);
-                    a.A.setExtra({ loadingState: i, loadingTimeSeconds: n }),
-                        a.A.captureException(t, { ...l, tags: { ...l?.tags } });
+                    r.A.setExtra({ loadingState: i, loadingTimeSeconds: n }),
+                        r.A.captureException(t, { ...l, tags: { ...l?.tags } });
                 }, 1e3 * n);
                 return () => {
                     clearTimeout(t);

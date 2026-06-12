@@ -1,31 +1,31 @@
-n.d(t, { H: () => r });
-class r {
-    static mapDiscordToMuxMetadata(e, t) {
+i.d(e, { H: () => n });
+class n {
+    static mapDiscordToMuxMetadata(t, e) {
         return {
             env_key: "1qd16mdmdjasipqg3irobln4u",
-            session_id: t,
+            session_id: e,
             player_name: "discord",
             player_version: "1.0.0",
-            video_id: e.contentMetadata.contentId,
-            video_title: e.contentMetadata.title,
+            video_id: t.contentMetadata.contentId,
+            video_title: t.contentMetadata.title,
             video_duration:
-                e.contentMetadata.durationMs ??
-                (null != e.contentMetadata.durationSec ? 1e3 * e.contentMetadata.durationSec : void 0),
-            video_content_type: e.contentMetadata.contentType,
-            video_series: e.contentMetadata.questId,
-            video_producer: e.contentMetadata.gameId,
-            video_brand: e.contentMetadata.gameName ?? "Discord",
+                t.contentMetadata.durationMs ??
+                (null != t.contentMetadata.durationSec ? 1e3 * t.contentMetadata.durationSec : void 0),
+            video_content_type: t.contentMetadata.contentType,
+            video_series: t.contentMetadata.questId,
+            video_producer: t.contentMetadata.gameId,
+            video_brand: t.contentMetadata.gameName ?? "Discord",
             video_cdn: "Cloudflare",
-            video_stream_type: e.contentMetadata.videoStreamType,
+            video_stream_type: t.contentMetadata.videoStreamType,
             view_client_application_name: this.getBuildChannel(),
             view_client_application_version: this.getAppVersion(),
-            viewer_user_id: e.userContext?.userId,
-            viewer_plan: e.userContext?.userTier,
+            viewer_user_id: t.userContext?.userId,
+            viewer_plan: t.userContext?.userTier,
         };
     }
     static getAppVersion() {
         try {
-            return "535802";
+            return "562146";
         } catch {
             return "unknown";
         }

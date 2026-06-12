@@ -1,31 +1,31 @@
 e.exports = function (e) {
     let t = "[a-z'][a-zA-Z0-9_']*",
-        a = "(" + t + ":" + t + "|" + t + ")",
-        n = {
+        n = "(" + t + ":" + t + "|" + t + ")",
+        i = {
             keyword:
                 "after and andalso|10 band begin bnot bor bsl bzr bxor case catch cond div end fun if let not of orelse|10 query receive rem try when xor maybe else",
             literal: "false true",
         },
         r = e.COMMENT("%", "$"),
-        i = {
+        s = {
             className: "number",
             begin: "\\b(\\d+(_\\d+)*#[a-fA-F0-9]+(_[a-fA-F0-9]+)*|\\d+(_\\d+)*(\\.\\d+(_\\d+)*)?([eE][-+]?\\d+)?)",
             relevance: 0,
         },
-        o = { begin: "fun\\s+" + t + "/\\d+" },
-        s = {
-            begin: a + "\\(",
+        a = { begin: "fun\\s+" + t + "/\\d+" },
+        o = {
+            begin: n + "\\(",
             end: "\\)",
             returnBegin: !0,
             relevance: 0,
             contains: [
-                { begin: a, relevance: 0 },
+                { begin: n, relevance: 0 },
                 { begin: "\\(", end: "\\)", endsWithParent: !0, returnEnd: !0, relevance: 0 },
             ],
         },
         l = { begin: /\{/, end: /\}/, relevance: 0 },
-        c = { begin: "\\b_([A-Z][A-Za-z0-9_]*)?", relevance: 0 },
-        _ = { begin: "[A-Z][a-zA-Z0-9_]*", relevance: 0 },
+        u = { begin: "\\b_([A-Z][A-Za-z0-9_]*)?", relevance: 0 },
+        c = { begin: "[A-Z][a-zA-Z0-9_]*", relevance: 0 },
         d = {
             begin: "#" + e.UNDERSCORE_IDENT_RE,
             relevance: 0,
@@ -35,9 +35,9 @@ e.exports = function (e) {
                 { begin: /\{/, end: /\}/, relevance: 0 },
             ],
         },
-        m = { scope: "string", match: /\$(\\([^0-9]|[0-9]{1,3}|)|.)/ },
-        p = { scope: "string", match: /"""("*)(?!")[\s\S]*?"""\1/ },
-        u = {
+        _ = { scope: "string", match: /\$(\\([^0-9]|[0-9]{1,3}|)|.)/ },
+        h = { scope: "string", match: /"""("*)(?!")[\s\S]*?"""\1/ },
+        f = {
             scope: "string",
             contains: [e.BACKSLASH_ESCAPE],
             variants: [
@@ -54,30 +54,30 @@ e.exports = function (e) {
                 { begin: /~\w?#/, end: /#/ },
             ],
         },
-        g = { beginKeywords: "fun receive if try case maybe", end: "end", keywords: n };
-    g.contains = [
+        p = { beginKeywords: "fun receive if try case maybe", end: "end", keywords: i };
+    p.contains = [
         r,
-        o,
+        a,
         e.inherit(e.APOS_STRING_MODE, { className: "" }),
-        g,
-        s,
-        u,
         p,
+        o,
+        f,
+        h,
         e.QUOTE_STRING_MODE,
-        i,
+        s,
         l,
+        u,
         c,
-        _,
         d,
-        m,
+        _,
     ];
-    let E = [r, o, g, s, u, p, e.QUOTE_STRING_MODE, i, l, c, _, d, m];
-    (s.contains[1].contains = E), (l.contains = E), (d.contains[1].contains = E);
-    let S = { className: "params", begin: "\\(", end: "\\)", contains: E };
+    let E = [r, a, p, o, f, h, e.QUOTE_STRING_MODE, s, l, u, c, d, _];
+    (o.contains[1].contains = E), (l.contains = E), (d.contains[1].contains = E);
+    let m = { className: "params", begin: "\\(", end: "\\)", contains: E };
     return {
         name: "Erlang",
         aliases: ["erl"],
-        keywords: n,
+        keywords: i,
         illegal: "(</|\\*=|\\+=|-=|/\\*|\\*/|\\(\\*|\\*\\))",
         contains: [
             {
@@ -86,8 +86,8 @@ e.exports = function (e) {
                 end: "->",
                 returnBegin: !0,
                 illegal: "\\(|#|//|/\\*|\\\\|:|;",
-                contains: [S, e.inherit(e.TITLE_MODE, { begin: t })],
-                starts: { end: ";|\\.", keywords: n, contains: E },
+                contains: [m, e.inherit(e.TITLE_MODE, { begin: t })],
+                starts: { end: ";|\\.", keywords: i, contains: E },
             },
             r,
             {
@@ -127,17 +127,17 @@ e.exports = function (e) {
                         .map((e) => `${e}|1.5`)
                         .join(" "),
                 },
-                contains: [S, u, p, e.QUOTE_STRING_MODE],
+                contains: [m, f, h, e.QUOTE_STRING_MODE],
             },
-            i,
-            u,
-            p,
+            s,
+            f,
+            h,
             e.QUOTE_STRING_MODE,
             d,
+            u,
             c,
-            _,
             l,
-            m,
+            _,
             { begin: /\.$/ },
         ],
     };

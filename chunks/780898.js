@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { EQ: () => u, H6: () => _, Ov: () => h, WK: () => l, nI: () => f, wT: () => c }),
+n.d(t, { EQ: () => u, H6: () => _, Ov: () => f, WK: () => l, nI: () => h, wT: () => c }),
     n(393431),
     n(532706),
     n(42231),
@@ -28,7 +28,7 @@ function d(e) {
     return /^#([0-9a-fA-F]{6})$/.test(e);
 }
 let _ = (e) => a.fc[e] ?? a.Wj;
-function f(e) {
+function h(e) {
     let t = r().decode(e),
         n = r().toRGBA8(t)[0],
         i = document.createElement("canvas");
@@ -37,7 +37,7 @@ function f(e) {
         a = new ImageData(new Uint8ClampedArray(n), t.width, t.height);
     return s.putImageData(a, 0, 0), i.toDataURL("image/png");
 }
-function h() {
+function f() {
     return {
         mallow: {
             name: o.intl.string(o.t.SbKDHi),

@@ -1,5 +1,5 @@
-var n = l(876666),
-    r = l(924986);
-e.exports = function (e, t) {
-    return e && e.length ? r(e, n(t, 2)) : [];
+var r = n(876666),
+    s = n(924986);
+p.exports = function (p, h) {
+    return p && p.length ? s(p, r(h, 2)) : [];
 };

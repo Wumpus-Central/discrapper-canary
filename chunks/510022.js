@@ -1,15 +1,15 @@
 n.d(t, { n: () => o });
 var l = n(627968),
-    i = n(192308),
-    r = n(174459),
-    s = n(188275),
-    a = n(652215);
+    r = n(192308),
+    i = n(174459),
+    a = n(188275),
+    s = n(652215);
 let o = (e) => {
     let { sku: t, application: o, analyticsLocations: u, orbsReward: c } = e;
-    (0, i.openModalLazy)(
+    (0, r.openModalLazy)(
         async () => {
             let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await Promise.all([
-                n.e("27870"),
+                n.e("90860"),
                 n.e("72963"),
                 n.e("72877"),
                 n.e("20310"),
@@ -20,8 +20,8 @@ let o = (e) => {
         {
             modalKey: "social-layer-storefront-item-claimed-successfully-modal",
             onCloseCallback: () => {
-                r.default.track(a.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
-                    type: s.e2,
+                i.default.track(s.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
+                    type: a.e2,
                     sku_id: t.id,
                     application_id: o.id,
                     location_stack: u ?? [],

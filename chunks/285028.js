@@ -1,7 +1,7 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = e.COMMENT("--", "$"),
-        n = [
+        n = e.COMMENT("--", "$"),
+        i = [
             "abs",
             "acos",
             "array_agg",
@@ -463,14 +463,14 @@ e.exports = function (e) {
             "first",
             "last",
             "view",
-        ].filter((e) => !n.includes(e)),
-        i = { match: t.concat(/\b/, t.either(...n), /\s*\(/), relevance: 0, keywords: { built_in: n } };
-    function o(e) {
+        ].filter((e) => !i.includes(e)),
+        s = { match: t.concat(/\b/, t.either(...i), /\s*\(/), relevance: 0, keywords: { built_in: i } };
+    function a(e) {
         return t.concat(/\b/, t.either(...e.map((e) => e.replace(/\s+/, "\\s+"))), /\b/);
     }
-    let s = {
+    let o = {
         scope: "keyword",
-        match: o([
+        match: a([
             "create table",
             "insert into",
             "primary key",
@@ -496,8 +496,8 @@ e.exports = function (e) {
         illegal: /[{}]|<\//,
         keywords: {
             $pattern: /\b[\w\.]+/,
-            keyword: (function (e, { exceptions: t, when: a } = {}) {
-                return (t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : a(e) ? `${e}|0` : e));
+            keyword: (function (e, { exceptions: t, when: n } = {}) {
+                return (t = t || []), e.map((e) => (e.match(/\|\d+$/) || t.includes(e) ? e : n(e) ? `${e}|0` : e));
             })(r, { when: (e) => e.length < 3 }),
             literal: ["true", "false", "unknown"],
             type: [
@@ -548,15 +548,15 @@ e.exports = function (e) {
             ],
         },
         contains: [
-            { scope: "type", match: o(["double precision", "large object", "with timezone", "without timezone"]) },
+            { scope: "type", match: a(["double precision", "large object", "with timezone", "without timezone"]) },
+            o,
             s,
-            i,
             { scope: "variable", match: /@[a-z0-9][a-z0-9_]*/ },
             { scope: "string", variants: [{ begin: /'/, end: /'/, contains: [{ match: /''/ }] }] },
             { begin: /"/, end: /"/, contains: [{ match: /""/ }] },
             e.C_NUMBER_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            a,
+            n,
             { scope: "operator", match: /[-+*/=%^~]|&&?|\|\|?|!=?|<(?:=>?|<|>)?|>[>=]?/, relevance: 0 },
         ],
     };

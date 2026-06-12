@@ -1,15 +1,15 @@
 "use strict";
 function t(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-    return r;
+    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
+    return i;
 }
 function n() {
     this._defaults = [];
 }
 for (
-    var r = 0,
-        i = [
+    var i = 0,
+        r = [
             "use",
             "on",
             "once",
@@ -33,18 +33,18 @@ for (
             "cert",
             "disableTLSCerts",
         ];
-    r < i.length;
-    r++
+    i < r.length;
+    i++
 ) {
-    let e = i[r];
+    let e = r[i];
     n.prototype[e] = function () {
-        for (var t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
+        for (var t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
         return this._defaults.push({ fn: e, args: n }), this;
     };
 }
 (n.prototype._setDefaults = function (e) {
     var n,
-        r = (function (e) {
+        i = (function (e) {
             var n = ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
             if (!n) {
                 if (
@@ -64,17 +64,17 @@ for (
                     })(e))
                 ) {
                     n && (e = n);
-                    var r = 0,
-                        i = function () {};
+                    var i = 0,
+                        r = function () {};
                     return {
-                        s: i,
+                        s: r,
                         n: function () {
-                            return r >= e.length ? { done: !0 } : { done: !1, value: e[r++] };
+                            return i >= e.length ? { done: !0 } : { done: !1, value: e[i++] };
                         },
                         e: function (e) {
                             throw e;
                         },
-                        f: i,
+                        f: r,
                     };
                 }
                 throw TypeError(
@@ -105,14 +105,14 @@ for (
             };
         })(this._defaults);
     try {
-        for (r.s(); !(n = r.n()).done; ) {
+        for (i.s(); !(n = i.n()).done; ) {
             let t = n.value;
             e[t.fn](...t.args);
         }
     } catch (e) {
-        r.e(e);
+        i.e(e);
     } finally {
-        r.f();
+        i.f();
     }
 }),
     (e.exports = n);

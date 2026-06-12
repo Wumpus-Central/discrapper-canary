@@ -15,8 +15,8 @@ function c(e) {
             subtitle: c,
             input: d,
             preview: _,
-            actions: f,
-            actionBarInput: h,
+            actions: h,
+            actionBarInput: f,
             actionBarInputLayout: p = "default",
             listProps: E,
             notice: m,
@@ -26,17 +26,17 @@ function c(e) {
             "aria-label": T,
             ...S
         } = e,
-        N = null != t ? t : null != d || null != h || (0, a.y)(I) || null != E ? "md" : "sm";
+        y = null != t ? t : null != d || null != f || (0, a.y)(I) || null != E ? "md" : "sm";
     return (0, i.jsxs)(r.d, {
         ...S,
         "aria-label": T ?? n,
-        size: N,
+        size: y,
         children: [
             (0, i.jsx)(l.rQ, { title: n, subtitle: c }),
             (0, i.jsx)(u.i, { message: m?.message, type: m?.type }),
             (0, i.jsx)(a.c, { controls: d, listProps: E, onScroll: g, scrollerRef: A, children: I }),
             (0, i.jsx)(o.j, { children: _ }),
-            (0, i.jsx)(s.H, { leading: h, leadingLayout: p, actions: f, actionsFullWidth: null == h }),
+            (0, i.jsx)(s.H, { leading: f, leadingLayout: p, actions: h, actionsFullWidth: null == f }),
         ],
     });
 }

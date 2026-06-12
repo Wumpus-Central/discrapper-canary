@@ -9,9 +9,9 @@ n.d(t, {
     iu: () => c,
     jB: () => S,
     kg: () => m,
-    pG: () => N,
+    pG: () => y,
     pb: () => _,
-    vI: () => y,
+    vI: () => N,
     zy: () => g,
 });
 var i = n(824120),
@@ -143,7 +143,7 @@ let l = o
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
               return e.and(t);
           },
-    f = o
+    h = o
         ? function () {
               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
@@ -154,7 +154,7 @@ let l = o
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
               return e.or(t);
           },
-    h = o
+    f = o
         ? function () {
               let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : d,
                   t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d;
@@ -184,7 +184,7 @@ let l = o
 function m() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     let i = t[0];
-    for (let e = 1; e < t.length; e++) i = f(i, t[e]);
+    for (let e = 1; e < t.length; e++) i = h(i, t[e]);
     return i;
 }
 function g(e, t) {
@@ -194,10 +194,10 @@ function A(e, t) {
     return !E(_(e, t), d);
 }
 function I(e, t) {
-    return t === d ? e : f(e, t);
+    return t === d ? e : h(e, t);
 }
 function T(e, t) {
-    return t === d ? e : h(e, _(e, t));
+    return t === d ? e : f(e, _(e, t));
 }
 let S = o
         ? function (e) {
@@ -206,13 +206,13 @@ let S = o
         : function (e) {
               return a.fromBit(e);
           },
-    N = o
+    y = o
         ? function (e, t) {
               return Number(BigInt.asUintN(e, t));
           }
         : function (e, t) {
               return a.asUintN(e, t);
           };
-function y(e) {
+function N(e) {
     return S(e);
 }

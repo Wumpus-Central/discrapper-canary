@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => N, D: () => p }), n(321073);
+n.d(t, { A: () => y, D: () => p }), n(321073);
 var i = n(735438),
     r = n.n(i),
     s = n(17928),
@@ -10,8 +10,8 @@ var i = n(735438),
     c = n(71393),
     d = n(309010),
     _ = n(967198),
-    f = n(652215),
-    h = n(355097);
+    h = n(652215),
+    f = n(355097);
 let p = 100,
     E = new o.A({
         computeBonus: () => 100,
@@ -44,12 +44,12 @@ function A(e) {
         n !== m &&
             ((m = n ?? null),
             null != n &&
-                f.Ut1.test(n) &&
+                h.Ut1.test(n) &&
                 ((i = !0), E.track(n), T.pendingUsages.push({ key: n, timestamp: Date.now() }))),
         t !== g &&
             ((g = t ?? null),
             null != t &&
-                f.Ut1.test(t) &&
+                h.Ut1.test(t) &&
                 ((i = !0), E.track(t), T.pendingUsages.push({ key: t, timestamp: Date.now() }))),
         i
     );
@@ -68,7 +68,7 @@ class S extends s.Ay.PersistedStore {
     static persistKey = "FrecencyStore";
     initialize(e) {
         this.waitFor(u.A, c.A, d.A, _.A, l.A),
-            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && f.Ut1.test(e.key))), (T = e)),
+            null != e && ((e.pendingUsages = e.pendingUsages.filter((e) => null != e && h.Ut1.test(e.key))), (T = e)),
             this.syncWith([l.A], I);
     }
     getState() {
@@ -100,7 +100,7 @@ class S extends s.Ay.PersistedStore {
         return E.version;
     }
 }
-let N = new S(a.h, {
+let y = new S(a.h, {
     CHANNEL_SELECT: A,
     VOICE_CHANNEL_SELECT: A,
     USER_SETTINGS_PROTO_UPDATE: function (e) {
@@ -108,6 +108,6 @@ let N = new S(a.h, {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        return t === h.oD.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((T.pendingUsages = []), !0);
+        return t === f.oD.FRECENCY_AND_FAVORITES_SETTINGS && !!n && ((T.pendingUsages = []), !0);
     },
 });

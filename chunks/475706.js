@@ -10,37 +10,37 @@ var i = n(627968),
     c = n(82149),
     d = n(446600),
     _ = n(375708);
-function f(e) {
+function h(e) {
     let { activity: t } = e,
         { channelId: n } = (0, c.UW)(t) ?? {},
-        f = (0, s.bG)([d.A], () => d.A.getStageInstanceByChannel(n), [n]),
-        h = r.useRef(null),
+        h = (0, s.bG)([d.A], () => d.A.getStageInstanceByChannel(n), [n]),
+        f = r.useRef(null),
         p = r.useCallback(() => {
             let e = l.A.getChannel(n);
             null != e && u.av(e);
         }, [n]),
-        E = f?.topic ?? t.name,
+        E = h?.topic ?? t.name,
         m = _.intl.formatToPlainString(_.t["T+DNAA"], { channel: E });
     return (0, i.jsx)("div", {
-        ref: h,
+        ref: f,
         children: (0, i.jsx)(a.D, {
             onClick: p,
-            focusProps: { ringTarget: h },
+            focusProps: { ringTarget: f },
             children: (0, i.jsx)(o.D, { variant: "heading-sm/semibold", children: m }),
         }),
     });
 }
-var h = n(516607),
+var f = n(516607),
     p = n(492213);
 let E = {
-    [h.SS]: new (class {
+    [f.SS]: new (class {
         shouldShow(e) {
             return (0, c.IS)(e);
         }
         createHeader(e) {
             return { subtitle: _.intl.string(_.t["+AJFJy"]), icon: null };
         }
-        body = f;
+        body = h;
     })(),
 };
 function m(e) {

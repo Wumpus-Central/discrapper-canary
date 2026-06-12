@@ -22,7 +22,7 @@ function l(e) {
 }
 var s = [38, 40],
     u = 1,
-    c = (t.EditableInput = (function (e) {
+    p = (t.EditableInput = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
         function t(e) {
@@ -179,4 +179,4 @@ var s = [38, 40],
             t
         );
     })(o.PureComponent || o.Component));
-t.default = c;
+t.default = p;

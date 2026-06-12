@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { M: () => f, a: () => _ });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { M: () => h, a: () => _ });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(862482),
     l = n(935462),
     u = n(725570),
-    d = n(534514),
-    c = n(655923);
+    c = n(534514),
+    d = n(655923);
 function _(e) {
     let t,
         n,
@@ -16,10 +16,10 @@ function _(e) {
             header: s,
             children: u,
             confirmText: _,
-            cancelText: f,
-            className: E,
-            onConfirm: h,
-            onCancel: p,
+            cancelText: h,
+            className: f,
+            onConfirm: p,
+            onCancel: E,
             onClose: m,
             onCloseCallback: g,
             bodyClassName: A,
@@ -29,38 +29,38 @@ function _(e) {
             focusCancel: y = !1,
             impression: N,
         } = e,
-        O = i.useRef(null);
+        v = r.useRef(null);
     return (
-        i.useEffect(() => {
-            y || setTimeout(() => O.current?.focus(), 0);
+        r.useEffect(() => {
+            y || setTimeout(() => v.current?.focus(), 0);
         }, [y]),
-        i.useLayoutEffect(() => () => g?.()),
-        null != f &&
-            (t = (0, r.jsx)(o.$n, {
+        r.useLayoutEffect(() => () => g?.()),
+        null != h &&
+            (t = (0, i.jsx)(o.$n, {
                 "data-migration-pending": !0,
                 type: "button",
                 look: o.$n.Looks.FILLED,
                 color: o.$n.Colors.PRIMARY,
-                className: c.x,
+                className: d.x,
                 size: o.$n.Sizes.MEDIUM,
                 disabled: T,
                 onClick: () => {
-                    p?.(), m();
+                    E?.(), m();
                 },
                 autoFocus: y,
-                children: f,
+                children: h,
             })),
         null != _ &&
-            (n = (0, r.jsx)(o.$n, {
+            (n = (0, i.jsx)(o.$n, {
                 "data-migration-pending": !0,
-                buttonRef: O,
+                buttonRef: v,
                 type: "submit",
                 size: o.$n.Sizes.MEDIUM,
                 color: S,
                 submitting: T,
                 onClick: async () => {
                     try {
-                        await h?.(), m();
+                        await p?.(), m();
                     } catch (e) {
                         throw e;
                     }
@@ -68,29 +68,29 @@ function _(e) {
                 autoFocus: !y,
                 children: _,
             })),
-        (0, r.jsxs)(l.EO, {
+        (0, i.jsxs)(l.EO, {
             "data-migration-pending": !0,
-            className: E,
+            className: f,
             transitionState: I,
             impression: N,
             parentComponent: "ConfirmModal",
             children: [
                 null != s
-                    ? (0, r.jsx)(l.rQ, {
+                    ? (0, i.jsx)(l.rQ, {
                           "data-migration-pending": !0,
                           separator: !1,
-                          children: (0, r.jsx)(d.D, { variant: "heading-lg/semibold", children: s }),
+                          children: (0, i.jsx)(c.D, { variant: "heading-lg/semibold", children: s }),
                       })
                     : null,
-                (0, r.jsx)(l.$m, { "data-migration-pending": !0, className: a()(c.Q, A), children: u }),
-                (0, r.jsxs)(l.jl, { "data-migration-pending": !0, children: [n, t] }),
+                (0, i.jsx)(l.$m, { "data-migration-pending": !0, className: a()(d.Q, A), children: u }),
+                (0, i.jsxs)(l.jl, { "data-migration-pending": !0, children: [n, t] }),
             ],
         })
     );
 }
-function f(e) {
-    return (0, r.jsx)(u.aF, {
+function h(e) {
+    return (0, i.jsx)(u.aF, {
         onCloseRequest: e.dismissable ? e.onCancel : null,
-        renderModal: (t) => (0, r.jsx)(_, { ...t, ...e }),
+        renderModal: (t) => (0, i.jsx)(_, { ...t, ...e }),
     });
 }

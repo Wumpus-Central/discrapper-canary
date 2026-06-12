@@ -31,19 +31,19 @@ function l(e) {
             },
             [c, d, u],
         ),
-        f = r.useCallback(
+        h = r.useCallback(
             (e) => {
                 c.current.delete(e), 0 === c.current.size && d.current?.delay();
             },
             [c, d],
         ),
-        h = r.useCallback(() => {
+        f = r.useCallback(() => {
             u(!1), 0 === c.current.size && d.current?.delay();
         }, [c, d, u]),
         p = r.useCallback(() => {
             c.current.size > 0 || (d.current?.cancel(), u(!0));
         }, [d, u]),
-        E = r.useMemo(() => ({ onAllowIdle: f, onPreventIdle: _, onActive: h, onForceIdle: p }), [f, _, h, p]);
+        E = r.useMemo(() => ({ onAllowIdle: h, onPreventIdle: _, onActive: f, onForceIdle: p }), [h, _, f, p]);
     return (0, i.jsx)(o.Provider, {
         value: l,
         children: (0, i.jsx)(a.Provider, { value: E, children: t({ idle: l, ...E }) }),

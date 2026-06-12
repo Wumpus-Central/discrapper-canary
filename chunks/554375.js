@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Cp: () => v, Gf: () => y, Sw: () => D, V4: () => b, ak: () => C, dK: () => S, dZ: () => N }), n(321073);
+n.d(t, { Cp: () => C, Gf: () => N, Sw: () => D, V4: () => b, ak: () => v, dK: () => S, dZ: () => y }), n(321073);
 var i = n(735438),
     r = n.n(i),
     s = n(636537),
@@ -10,8 +10,8 @@ var i = n(735438),
     c = n(77257),
     d = n(159273),
     _ = n(7584),
-    f = n(635222),
-    h = n(587626),
+    h = n(635222),
+    f = n(617710),
     p = n(594061),
     E = n(919638),
     m = n(403362),
@@ -28,14 +28,14 @@ function S(e) {
         I.Sb.FREQUENT_USER_ACTION,
     );
 }
-function N(e) {
+function y(e) {
     l.h.dispatch({ type: "EMOJI_FETCH", guildId: e }),
         s.Bo.get({ url: A.Rsh.GUILD_EMOJIS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
             (t) => l.h.dispatch({ type: "EMOJI_FETCH_SUCCESS", guildId: e, emojis: t.body }),
             () => l.h.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e }),
         );
 }
-function y(e) {
+function N(e) {
     let { guildId: t, image: n, name: i, roles: r, analyticsLocation: a, originalMd5: o } = e;
     return (
         l.h.dispatch({ type: "EMOJI_UPLOAD_START", guildId: t }),
@@ -52,7 +52,7 @@ function y(e) {
         )
     );
 }
-function C(e, t, n) {
+function v(e, t, n) {
     return (
         l.h.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
         s.Bo.del({
@@ -65,7 +65,7 @@ function C(e, t, n) {
         })
     );
 }
-async function v(e) {
+async function C(e) {
     let { guildId: t, emojiId: n, name: i, roles: r } = e;
     try {
         return await s.Bo.patch({
@@ -78,21 +78,21 @@ async function v(e) {
         throw new u.A(e);
     }
 }
-function O(e) {
-    if (E.A.totalUnavailableGuilds > 0 || !h.A.isConnected()) return e;
-    let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? _.Ay.getByName(e)).filter(m.Vq);
-    return [...(0, f.A)(t).keys()];
-}
 function R(e) {
+    if (E.A.totalUnavailableGuilds > 0 || !f.A.isConnected()) return e;
+    let t = e.map((e) => d.Ay.getCustomEmojiById(e) ?? _.Ay.getByName(e)).filter(m.Vq);
+    return [...(0, h.A)(t).keys()];
+}
+function O(e) {
     return null == e ? null : (e.id ?? _.Ay.convertSurrogateToBase(e.surrogates)?.name ?? e.name);
 }
 function b(e) {
-    let t = R(e);
+    let t = O(e);
     null != t &&
         p.bW.updateAsync(
             "favoriteEmojis",
             (e) =>
-                ((e.emojis = O(e.emojis)), r().size(e.emojis) >= 250)
+                ((e.emojis = R(e.emojis)), r().size(e.emojis) >= 250)
                     ? (g.A.show({
                           title: T.intl.string(T.t["+XYXtZ"]),
                           body: T.intl.formatToPlainString(T.t.JaIyFi, { count: 250 }),
@@ -103,12 +103,12 @@ function b(e) {
         );
 }
 function D(e) {
-    let t = R(e);
+    let t = O(e);
     null != t &&
         p.bW.updateAsync(
             "favoriteEmojis",
             (e) => {
-                if (((e.emojis = O(e.emojis)), !e.emojis.includes(t))) return !1;
+                if (((e.emojis = R(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
             I.Sb.INFREQUENT_USER_ACTION,

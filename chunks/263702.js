@@ -1,36 +1,36 @@
-n.d(t, { default: () => P });
-var i = n(627968);
-n(64700);
-var l = n(861672),
-    d = n(477782),
-    r = n(442433),
-    a = n(820284),
-    o = n(358367),
-    s = n(793574),
-    c = n(50268),
-    u = n(301541),
-    A = n(243949),
-    f = n(652215),
-    h = n(985018);
-let P = (0, o.A)(
+i.d(t, { default: () => N });
+var n = i(627968);
+i(64700);
+var r = i(980707),
+    s = i(477782),
+    d = i(442433),
+    l = i(820284),
+    a = i(358367),
+    c = i(793574),
+    o = i(50268),
+    u = i(301541),
+    h = i(243949),
+    A = i(652215),
+    E = i(375708);
+let N = (0, a.A)(
     function (e) {
-        let { user: t, analyticsContext: n, onSelect: o } = e,
-            s = (0, A.A)({ userId: t.id }),
-            P = (0, c.A)({ id: t.id, label: h.intl.string(h.t["/AXYnE"]) }),
+        let { user: t, analyticsContext: i, onSelect: a } = e,
+            c = (0, h.A)({ userId: t.id }),
+            N = (0, o.A)({ id: t.id, label: E.intl.string(E.t["/AXYnE"]) }),
             p = (0, u.A)(t.id),
-            v = t.isNonUserBot();
-        return (0, i.jsx)(a.A, {
-            context: n,
-            object: f.ZSU.CONTEXT_MENU,
-            children: (0, i.jsxs)(l.W, {
+            _ = t.isNonUserBot();
+        return (0, n.jsx)(l.A, {
+            context: i,
+            object: A.ZSU.CONTEXT_MENU,
+            children: (0, n.jsxs)(r.W, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
-                onClose: r.Z_,
-                "aria-label": h.intl.string(h.t.liqwPJ),
-                onSelect: o,
-                children: [(0, i.jsxs)(d.rX, { children: [!v && s, !v && p] }), (0, i.jsx)(d.rX, { children: P })],
+                onClose: d.Z_,
+                "aria-label": E.intl.string(E.t.liqwPJ),
+                onSelect: a,
+                children: [(0, n.jsxs)(s.rX, { children: [!_ && c, !_ && p] }), (0, n.jsx)(s.rX, { children: N })],
             }),
         });
     },
-    [s.A.CONTEXT_MENU, s.A.BANNED_USER_MENU],
+    [c.A.CONTEXT_MENU, c.A.BANNED_USER_MENU],
 );

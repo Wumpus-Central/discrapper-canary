@@ -12,7 +12,7 @@ function l(e, t) {
 }
 function u(e) {
     let { guildId: t, roleId: n, size: u = 20, role: c, guild: d } = e,
-        { guild: _, role: f } = (0, r.cf)(
+        { guild: _, role: h } = (0, r.cf)(
             [a.A, s.A],
             () => ({
                 guild: null == d ? a.A.getGuild(t) : void 0,
@@ -20,11 +20,11 @@ function u(e) {
             }),
             [t, n, c, d],
         ),
-        h = d ?? _,
-        p = c ?? f;
+        f = d ?? _,
+        p = c ?? h;
     return i.useMemo(() => {
-        if (null != h && null != p && (0, o.fm)(h, p)) return l(p, u);
-    }, [h, p, u]);
+        if (null != f && null != p && (0, o.fm)(f, p)) return l(p, u);
+    }, [f, p, u]);
 }
 function c(e, t) {
     let n = (0, r.bG)([a.A], () => a.A.getGuild(e));

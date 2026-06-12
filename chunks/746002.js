@@ -5,16 +5,16 @@ n.r(t),
         getCollectiblesItemAssetUrl: () => l,
         parseSkuIdFromServerData: () => s.V,
     });
-var r,
-    i = n(403362),
+var i,
+    r = n(403362),
     s = n(628856),
-    a = (((r = {}).ANIMATED = "animated"), (r.STATIC = "static"), (r.VIDEO = "video"), r);
+    a = (((i = {}).ANIMATED = "animated"), (i.STATIC = "static"), (i.VIDEO = "video"), i);
 let o = "media/v1/collectibles-shop",
     l = (e) => {
-        let { skuId: t, assetFormat: n, assetId: r } = e;
+        let { skuId: t, assetFormat: n, assetId: i } = e;
         return null == t
             ? null
-            : (0, i.iT)()
-              ? `http://localhost:3000/_storage/${o}/${t}/${r ? `${r}/` : ""}${n}`
-              : `https://cdn.discordapp.com/${o}/${t}/${r ? `${r}/` : ""}${n}`;
+            : (0, r.iT)()
+              ? `http://localhost:3000/_storage/${o}/${t}/${i ? `${i}/` : ""}${n}`
+              : `https://cdn.discordapp.com/${o}/${t}/${i ? `${i}/` : ""}${n}`;
     };

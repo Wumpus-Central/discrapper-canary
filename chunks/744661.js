@@ -2,17 +2,17 @@ IntlMessageFormat.__addLocaleData({
     locale: "ru",
     pluralRuleFunction: function (e, t) {
         var n = String(e).split("."),
-            r = n[0],
-            i = !n[1],
-            a = r.slice(-1),
-            s = r.slice(-2);
+            i = n[0],
+            r = !n[1],
+            s = i.slice(-1),
+            a = i.slice(-2);
         return t
             ? "other"
-            : i && 1 == a && 11 != s
+            : r && 1 == s && 11 != a
               ? "one"
-              : i && a >= 2 && a <= 4 && (s < 12 || s > 14)
+              : r && s >= 2 && s <= 4 && (a < 12 || a > 14)
                 ? "few"
-                : (i && 0 == a) || (i && a >= 5 && a <= 9) || (i && s >= 11 && s <= 14)
+                : (r && 0 == s) || (r && s >= 5 && s <= 9) || (r && a >= 11 && a <= 14)
                   ? "many"
                   : "other";
     },

@@ -5,48 +5,48 @@
         else if (e % 10 == 1) return !1;
         return !0;
     }
-    function n(e, n, r, i) {
+    function n(e, n, i, r) {
         var s = e + " ";
-        switch (r) {
+        switch (i) {
             case "s":
-                return n || i ? "nokkrar sek\xfandur" : "nokkrum sek\xfandum";
+                return n || r ? "nokkrar sek\xfandur" : "nokkrum sek\xfandum";
             case "ss":
-                if (t(e)) return s + (n || i ? "sek\xfandur" : "sek\xfandum");
+                if (t(e)) return s + (n || r ? "sek\xfandur" : "sek\xfandum");
                 return s + "sek\xfanda";
             case "m":
                 return n ? "m\xedn\xfata" : "m\xedn\xfatu";
             case "mm":
-                if (t(e)) return s + (n || i ? "m\xedn\xfatur" : "m\xedn\xfatum");
+                if (t(e)) return s + (n || r ? "m\xedn\xfatur" : "m\xedn\xfatum");
                 if (n) return s + "m\xedn\xfata";
                 return s + "m\xedn\xfatu";
             case "hh":
-                if (t(e)) return s + (n || i ? "klukkustundir" : "klukkustundum");
+                if (t(e)) return s + (n || r ? "klukkustundir" : "klukkustundum");
                 return s + "klukkustund";
             case "d":
                 if (n) return "dagur";
-                return i ? "dag" : "degi";
+                return r ? "dag" : "degi";
             case "dd":
                 if (t(e)) {
                     if (n) return s + "dagar";
-                    return s + (i ? "daga" : "d\xf6gum");
+                    return s + (r ? "daga" : "d\xf6gum");
                 }
                 if (n) return s + "dagur";
-                return s + (i ? "dag" : "degi");
+                return s + (r ? "dag" : "degi");
             case "M":
                 if (n) return "m\xe1nu\xf0ur";
-                return i ? "m\xe1nu\xf0" : "m\xe1nu\xf0i";
+                return r ? "m\xe1nu\xf0" : "m\xe1nu\xf0i";
             case "MM":
                 if (t(e)) {
                     if (n) return s + "m\xe1nu\xf0ir";
-                    return s + (i ? "m\xe1nu\xf0i" : "m\xe1nu\xf0um");
+                    return s + (r ? "m\xe1nu\xf0i" : "m\xe1nu\xf0um");
                 }
                 if (n) return s + "m\xe1nu\xf0ur";
-                return s + (i ? "m\xe1nu\xf0" : "m\xe1nu\xf0i");
+                return s + (r ? "m\xe1nu\xf0" : "m\xe1nu\xf0i");
             case "y":
-                return n || i ? "\xe1r" : "\xe1ri";
+                return n || r ? "\xe1r" : "\xe1ri";
             case "yy":
-                if (t(e)) return s + (n || i ? "\xe1r" : "\xe1rum");
-                return s + (n || i ? "\xe1r" : "\xe1ri");
+                if (t(e)) return s + (n || r ? "\xe1r" : "\xe1rum");
+                return s + (n || r ? "\xe1r" : "\xe1ri");
         }
     }
     e.defineLocale("is", {

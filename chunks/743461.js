@@ -1,91 +1,91 @@
-n.d(e, { default: () => c });
-var i = n(627968),
-    r = n(64700),
-    l = n(189213),
-    E = n(192308),
-    a = n(975807),
-    o = n(935649),
+n.d(E, { default: () => T });
+var e = n(627968),
+    _ = n(64700),
+    i = n(189213),
+    I = n(192308),
+    r = n(975807),
+    l = n(139716),
     s = n(847599),
-    _ = n(36149),
-    I = n(945276),
-    A = n(780964),
-    d = n(858897),
-    C = n(975571),
-    u = n(390248),
-    R = n(652215),
-    L = n(985018);
-let c = (t) => {
-    let { channelId: e, messageId: c, transitionState: M, onClose: g } = t,
-        f = (0, I.A)(),
-        T = (0, _.yM)(),
-        h = (0, u._R)(),
-        P = L.intl.string(L.t["9KiIz6"]),
-        S = r.useMemo(() => T && h, [T, h]),
-        O = r.useCallback(
+    A = n(36149),
+    o = n(945276),
+    C = n(780964),
+    a = n(766075),
+    R = n(975571),
+    L = n(390248),
+    M = n(652215),
+    c = n(375708);
+let T = (t) => {
+    let { channelId: E, messageId: T, transitionState: u, onClose: N } = t,
+        d = (0, o.A)(),
+        O = (0, A.yM)(),
+        S = (0, L._R)(),
+        f = c.intl.string(c.t["9KiIz6"]),
+        g = _.useMemo(() => O && S, [O, S]),
+        D = _.useCallback(
             (t) => {
-                (0, u.hv)({ action: t, channelId: e, messageId: c });
+                (0, L.hv)({ action: t, channelId: E, messageId: T });
             },
-            [e, c],
+            [E, T],
         ),
-        p = r.useCallback(() => {
-            g(),
-                O(u.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
-                (0, E.openModalLazy)(async () => {
-                    let { default: t } = await n(652442);
-                    return (n) => (0, i.jsx)(t, { channelId: e, messageId: c, ...n });
+        P = _.useCallback(() => {
+            N(),
+                D(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_FALSE_POSITIVE),
+                (0, I.openModalLazy)(async () => {
+                    let { default: t } = await n(679276);
+                    return (n) => (0, e.jsx)(t, { channelId: E, messageId: T, ...n });
                 });
-        }, [e, c, g, O]);
+        }, [E, T, N, D]);
     return (
-        r.useEffect(() => {
-            (0, u.hv)({ action: u.rY.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId: e, messageId: c });
-        }, [e, c]),
-        (0, i.jsx)(l.Modal, {
-            title: L.intl.string(L.t.sGW77l),
+        _.useEffect(() => {
+            (0, L.hv)({ action: L.rY.EXPLICIT_MEDIA_LEARN_MORE_VIEWED, channelId: E, messageId: T });
+        }, [E, T]),
+        (0, e.jsx)(i.Modal, {
+            title: c.intl.string(c.t.sGW77l),
             subtitle: (function () {
-                if (S)
-                    return L.intl.format(L.t.KEPOlE, {
+                if (g)
+                    return c.intl.format(c.t.KEPOlE, {
                         handleOnHelpUrlHook: () => {
-                            o.A.openUrl(C.A.getArticleURL(R.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                                O(u.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
+                            l.A.openUrl(R.A.getArticleURL(M.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                                D(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_LEARN_MORE);
                         },
                     });
-                let t = L.intl.string(L.t.RUw0ZC),
-                    e = L.intl.string(L.t["E/oQYL"]);
-                return f ? t : e;
+                let t = c.intl.string(c.t.RUw0ZC),
+                    E = c.intl.string(c.t["E/oQYL"]);
+                return d ? t : E;
             })(),
             actions: [
                 (function () {
-                    if (!h && !S) return { text: L.intl.string(L.t.ZH7P2h), onClick: p, variant: "secondary" };
+                    if (!S && !g) return { text: c.intl.string(c.t.ZH7P2h), onClick: P, variant: "secondary" };
                 })(),
-                S
+                g
                     ? {
-                          text: P,
+                          text: f,
                           onClick: function () {
-                              g(),
-                                  O(u.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
-                                  o.A.showAgeVerificationGetStartedModal({
+                              N(),
+                                  D(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_AGE_VERIFY_REVERIFY),
+                                  l.A.showAgeVerificationGetStartedModal({
                                       entryPoint: s.q1.SENSITIVE_MEDIA_LEARN_MORE,
                                   });
                           },
                       }
-                    : f
+                    : d
                       ? {
-                            text: L.intl.string(L.t["9D+zGX"]),
+                            text: c.intl.string(c.t["9D+zGX"]),
                             onClick: function () {
-                                O(u.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
-                                    (0, d.openUserSettings)(A.X.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING),
-                                    g();
+                                D(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_SETTINGS),
+                                    (0, a.openUserSettings)(C.X.CONTENT_AND_SOCIAL_CONTENT_FILTERS_SETTING),
+                                    N();
                             },
                         }
                       : {
-                            text: L.intl.string(L.t.hvVgAZ),
+                            text: c.intl.string(c.t.hvVgAZ),
                             onClick: () => {
-                                (0, a.A)(C.A.getArticleURL(R.MVz.EXPLICIT_MEDIA_REDACTION));
+                                (0, r.A)(R.A.getArticleURL(M.MVz.EXPLICIT_MEDIA_REDACTION));
                             },
                         },
             ].filter((t) => void 0 !== t),
-            onClose: () => (g(), O(u.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
-            transitionState: M,
+            onClose: () => (N(), D(L.rY.EXPLICIT_MEDIA_LEARN_MORE_CLICK_DISMISS), Promise.resolve()),
+            transitionState: u,
         })
     );
 };

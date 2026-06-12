@@ -1,145 +1,145 @@
-n.d(t, { A: () => _ });
-var r = n(627968);
-n(64700);
-var i = n(17928),
-    l = n(477782),
-    a = n(349435),
-    d = n(178186),
-    s = n(617641),
-    u = n(287809),
-    o = n(452082),
-    c = n(985018),
-    A = n(636537),
-    g = n(652215),
-    f = n(486227),
-    h = n(966107),
-    E = n(544231),
-    I = n(74114);
-function _(e) {
-    let t,
-        n,
-        _,
+r.d(e, { A: () => x });
+var i = r(627968);
+r(64700);
+var n = r(17928),
+    l = r(477782),
+    s = r(349435),
+    a = r(178186),
+    u = r(617641),
+    d = r(287809),
+    c = r(452082),
+    o = r(375708),
+    g = r(636537),
+    f = r(652215),
+    _ = r(486227),
+    j = r(966107),
+    A = r(544231),
+    b = r(74114);
+function x(t) {
+    let e,
+        r,
         x,
-        b,
-        v,
-        S,
-        { channel: p } = e,
-        y = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
-        D =
-            ((t = (0, i.bG)([u.default], () => u.default.getCurrentUser())),
-            t?.isStaff() !== !0
+        R,
+        h,
+        E,
+        T,
+        { channel: m } = t,
+        p = (0, n.bG)([d.default], () => d.default.getCurrentUser()),
+        I =
+            ((e = (0, n.bG)([d.default], () => d.default.getCurrentUser())),
+            e?.isStaff() !== !0
                 ? null
-                : (0, r.jsxs)(r.Fragment, {
+                : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          !p.isMessageRequest &&
-                              (0, r.jsx)(l.Dr, {
+                          !m.isMessageRequest &&
+                              (0, i.jsx)(l.Dr, {
                                   id: "mark-as-message-request",
-                                  label: c.intl.string(c.t.L6623r),
-                                  action: () => (0, h.Sk)(p.id),
+                                  label: o.intl.string(o.t.L6623r),
+                                  action: () => (0, j.Sk)(m.id),
                               }),
-                          (0, r.jsx)(l.Dr, {
+                          (0, i.jsx)(l.Dr, {
                               id: "clear-message-request",
-                              label: c.intl.string(c.t["85YWlY"]),
-                              action: () => (0, h.JH)(p.id),
+                              label: o.intl.string(o.t["85YWlY"]),
+                              action: () => (0, j.JH)(m.id),
                           }),
                       ],
                   })),
-        N = (function (e) {
-            var t;
-            let n,
-                A,
+        C = (function (t) {
+            var e;
+            let r,
                 g,
-                f =
-                    ((t = e),
-                    (n = (0, s.Lc)({ location: "context-menu-item" })),
-                    (A = (0, i.bG)([u.default], () => u.default.getCurrentUser())),
-                    (g = (0, o.j)(t.id, "context-menu-item")),
-                    A?.isStaff() === !0 && n && t.isDM()
+                f,
+                _ =
+                    ((e = t),
+                    (r = (0, u.Lc)({ location: "context-menu-item" })),
+                    (g = (0, n.bG)([d.default], () => d.default.getCurrentUser())),
+                    (f = (0, c.j)(e.id, "context-menu-item")),
+                    g?.isStaff() === !0 && r && e.isDM()
                         ? {
-                              isTier1: g?.type === a._j.INAPPROPRIATE_CONVERSATION_TIER_1,
-                              isTier2: g?.type === a._j.INAPPROPRIATE_CONVERSATION_TIER_2,
+                              isTier1: f?.type === s._j.INAPPROPRIATE_CONVERSATION_TIER_1,
+                              isTier2: f?.type === s._j.INAPPROPRIATE_CONVERSATION_TIER_2,
                           }
                         : null),
-                h = (0, s.Lc)({ location: "inappropriate_conversation_context_menu" });
-            if (null === f || !h) return null;
-            let { isTier1: E, isTier2: I } = f;
-            return (0, r.jsxs)(r.Fragment, {
+                j = (0, u.Lc)({ location: "inappropriate_conversation_context_menu" });
+            if (null === _ || !j) return null;
+            let { isTier1: A, isTier2: b } = _;
+            return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    !E &&
-                        (0, r.jsx)(l.Dr, {
+                    !A &&
+                        (0, i.jsx)(l.Dr, {
                             id: "mark-as-tier-1-inappro",
-                            label: c.intl.string(c.t.EuzCET),
-                            action: () => (0, d.Rw)(e.id, a._j.INAPPROPRIATE_CONVERSATION_TIER_1),
+                            label: o.intl.string(o.t.EuzCET),
+                            action: () => (0, a.Rw)(t.id, s._j.INAPPROPRIATE_CONVERSATION_TIER_1),
                         }),
-                    !I &&
-                        (0, r.jsx)(l.Dr, {
+                    !b &&
+                        (0, i.jsx)(l.Dr, {
                             id: "mark-as-tier-2-inappro",
-                            label: c.intl.string(c.t["tBw/1i"]),
-                            action: () => (0, d.Rw)(e.id, a._j.INAPPROPRIATE_CONVERSATION_TIER_2),
+                            label: o.intl.string(o.t["tBw/1i"]),
+                            action: () => (0, a.Rw)(t.id, s._j.INAPPROPRIATE_CONVERSATION_TIER_2),
                         }),
                 ],
             });
-        })(p),
-        j =
-            ((n = (0, i.bG)([u.default], () => u.default.getCurrentUser())),
-            (_ = (0, I.l)(p.id)),
-            n?.isStaff() === !0 && p.isDM() && null == _
-                ? (0, r.jsx)(l.Dr, {
+        })(m),
+        D =
+            ((r = (0, n.bG)([d.default], () => d.default.getCurrentUser())),
+            (x = (0, b.l)(m.id)),
+            r?.isStaff() === !0 && m.isDM() && null == x
+                ? (0, i.jsx)(l.Dr, {
                       id: "mark-as-stranger-danger",
-                      label: c.intl.string(c.t.CgWmmT),
-                      action: () => (0, E.Ju)(p.id),
+                      label: o.intl.string(o.t.CgWmmT),
+                      action: () => (0, A.Ju)(m.id),
                   })
                 : null),
-        M =
-            ((x = (0, i.bG)([u.default], () => u.default.getCurrentUser())),
-            (b = (0, i.bG)([a.Ay], () => a.Ay.getChannelSafetyWarnings(p.id))),
-            x?.isStaff() !== !0 || null == b || 0 === b.length
+        N =
+            ((R = (0, n.bG)([d.default], () => d.default.getCurrentUser())),
+            (h = (0, n.bG)([s.Ay], () => s.Ay.getChannelSafetyWarnings(m.id))),
+            R?.isStaff() !== !0 || null == h || 0 === h.length
                 ? null
-                : (0, r.jsxs)(r.Fragment, {
+                : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, r.jsx)(l.Dr, {
+                          (0, i.jsx)(l.Dr, {
                               id: "delete-safety-warnings",
-                              label: c.intl.string(c.t.g7o9bs),
-                              action: () => (0, d.Ey)(p.id),
+                              label: o.intl.string(o.t.g7o9bs),
+                              action: () => (0, a.Ey)(m.id),
                           }),
-                          (0, r.jsx)(l.Dr, {
+                          (0, i.jsx)(l.Dr, {
                               id: "clear-safety-warnings",
-                              label: c.intl.string(c.t.VuSvGu),
-                              action: () => (0, E.WJ)(p.id),
+                              label: o.intl.string(o.t.VuSvGu),
+                              action: () => (0, A.WJ)(m.id),
                           }),
                       ],
                   })),
-        m =
-            ((v = (0, i.bG)([u.default], () => u.default.getCurrentUser())),
-            (S = (0, f.E)(p.id)),
-            v?.isStaff() === !0 && p.isDM() && null == S
-                ? (0, r.jsx)(l.Dr, {
+        S =
+            ((E = (0, n.bG)([d.default], () => d.default.getCurrentUser())),
+            (T = (0, _.E)(m.id)),
+            E?.isStaff() === !0 && m.isDM() && null == T
+                ? (0, i.jsx)(l.Dr, {
                       id: "mark-as-likely-ato",
-                      label: c.intl.string(c.t.AWKKgc),
+                      label: o.intl.string(o.t.AWKKgc),
                       action: () => {
-                          var e;
+                          var t;
                           return (
-                              (e = p.id),
-                              A.Bo.post({
-                                  url: g.Rsh.ADD_SAFETY_WARNING(e),
-                                  body: { safety_warning_type: a._j.LIKELY_ATO },
+                              (t = m.id),
+                              g.Bo.post({
+                                  url: f.Rsh.ADD_SAFETY_WARNING(t),
+                                  body: { safety_warning_type: s._j.LIKELY_ATO },
                                   rejectWithError: !1,
                               })
                           );
                       },
                   })
                 : null);
-    return y?.isStaff() !== !0
+    return p?.isStaff() !== !0
         ? null
-        : (0, r.jsxs)(l.Dr, {
+        : (0, i.jsxs)(l.Dr, {
               id: "dev tools",
               label: "Dev Tools",
               children: [
-                  (0, r.jsx)(l.rX, { children: D }),
-                  (0, r.jsx)(l.rX, { children: M }),
-                  (0, r.jsx)(l.rX, { children: j }),
-                  (0, r.jsx)(l.rX, { children: N }),
-                  (0, r.jsx)(l.rX, { children: m }),
+                  (0, i.jsx)(l.rX, { children: I }),
+                  (0, i.jsx)(l.rX, { children: N }),
+                  (0, i.jsx)(l.rX, { children: D }),
+                  (0, i.jsx)(l.rX, { children: C }),
+                  (0, i.jsx)(l.rX, { children: S }),
               ],
           });
 }

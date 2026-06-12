@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     s2: "activeFractionalPremiumBannerContainer__0687d",
     WW: "activeFractionalPremiumBannerBackgroundImage__0687d",
     Dl: "nitroIconContainer__0687d",

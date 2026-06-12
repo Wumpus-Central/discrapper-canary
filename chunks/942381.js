@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { x: () => i });
-let r = (e, t) => {
+n.d(t, { x: () => r });
+let i = (e, t) => {
     let n = e instanceof Map ? e : new Map(e.entries()),
-        r = t instanceof Map ? t : new Map(t.entries());
-    if (n.size !== r.size) return !1;
-    for (let [e, t] of n) if (!r.has(e) || !Object.is(t, r.get(e))) return !1;
+        i = t instanceof Map ? t : new Map(t.entries());
+    if (n.size !== i.size) return !1;
+    for (let [e, t] of n) if (!i.has(e) || !Object.is(t, i.get(e))) return !1;
     return !0;
 };
-function i(e, t) {
+function r(e, t) {
     if (Object.is(e, t)) return !0;
     if (
         "object" != typeof e ||
@@ -18,16 +18,16 @@ function i(e, t) {
     )
         return !1;
     if (Symbol.iterator in e && Symbol.iterator in t) {
-        if ("entries" in e && "entries" in t) return r(e, t);
+        if ("entries" in e && "entries" in t) return i(e, t);
         let n = e[Symbol.iterator](),
-            i = t[Symbol.iterator](),
+            r = t[Symbol.iterator](),
             s = n.next(),
-            a = i.next();
+            a = r.next();
         for (; !s.done && !a.done; ) {
             if (!Object.is(s.value, a.value)) return !1;
-            (s = n.next()), (a = i.next());
+            (s = n.next()), (a = r.next());
         }
         return !!s.done && !!a.done;
     }
-    return r({ entries: () => Object.entries(e) }, { entries: () => Object.entries(t) });
+    return i({ entries: () => Object.entries(e) }, { entries: () => Object.entries(t) });
 }

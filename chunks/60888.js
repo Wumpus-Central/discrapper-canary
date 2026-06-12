@@ -1,29 +1,29 @@
-n.d(t, { L: () => i, u: () => l });
-var a = n(64700),
-    s = n(155078);
-function i(e) {
-    let { protocol: t, hostname: n } = a.useMemo(() => ({ protocol: (0, s.J)(e), hostname: (0, s.E)(e) }), [e]),
-        i = "//" === e.substr(t.length, 2) ? "//" : "",
-        l = `${t}${i}${n}`;
-    return { protocol: t, authorityPrefix: i, hostname: n, theRestOfTheUrl: e.replace(l, "") };
+s.d(t, { L: () => c, u: () => l });
+var a = s(64700),
+    u = s(155078);
+function c(e) {
+    let { protocol: t, hostname: s } = a.useMemo(() => ({ protocol: (0, u.J)(e), hostname: (0, u.E)(e) }), [e]),
+        c = "//" === e.substr(t.length, 2) ? "//" : "",
+        l = `${t}${c}${s}`;
+    return { protocol: t, authorityPrefix: c, hostname: s, theRestOfTheUrl: e.replace(l, "") };
 }
 function l(e) {
-    let { url: t, trustUrl: n, onConfirm: s, onCancel: l, onClose: r } = e,
-        [o, d] = a.useState(!1),
-        { protocol: c, authorityPrefix: u, hostname: m, theRestOfTheUrl: h } = i(t),
-        x = a.useCallback(() => {
-            o && n(t), r?.(), s();
-        }, [t, o, n, s, r]);
+    let { url: t, trustUrl: s, onConfirm: u, onCancel: l, onClose: n } = e,
+        [r, h] = a.useState(!1),
+        { protocol: o, authorityPrefix: p, hostname: i, theRestOfTheUrl: d } = c(t),
+        k = a.useCallback(() => {
+            r && s(t), n?.(), u();
+        }, [t, r, s, u, n]);
     return {
-        protocol: c,
-        authorityPrefix: u,
-        hostname: m,
-        theRestOfTheUrl: h,
-        shouldTrustUrl: o,
-        setShouldTrustUrl: d,
-        handleConfirm: x,
+        protocol: o,
+        authorityPrefix: p,
+        hostname: i,
+        theRestOfTheUrl: d,
+        shouldTrustUrl: r,
+        setShouldTrustUrl: h,
+        handleConfirm: k,
         handleCancel: a.useCallback(() => {
-            r?.(), l();
-        }, [l, r]),
+            n?.(), l();
+        }, [l, n]),
     };
 }

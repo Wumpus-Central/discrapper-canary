@@ -1,8 +1,8 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i,
     l = n(627968);
 n(64700);
-var a = n(39623),
+var s = n(39623),
     r =
         (((i = {})[(i.NONE = 0)] = "NONE"),
         (i[(i.FEATURE_LIMITED = 1)] = "FEATURE_LIMITED"),
@@ -24,66 +24,66 @@ var a = n(39623),
         (i[(i.BETA_GUILD_SIZE = 17)] = "BETA_GUILD_SIZE"),
         (i[(i.CANNOT_USE_EXTERNAL_APPS = 18)] = "CANNOT_USE_EXTERNAL_APPS"),
         i),
-    s = n(985018),
+    a = n(375708),
     o = n(652215),
-    c = n(473988);
-function d(e) {
+    d = n(473988);
+function c(e) {
     let t,
-        { message: n, onDeleteMessage: i, children: d } = e,
+        { message: n, onDeleteMessage: i, children: c } = e,
         u = n.interactionMetadata?.ephemerality_reason,
-        _ = () => i(n, !0);
+        m = () => i(n, !0);
     if (null != u) {
         let e = (function (e) {
             switch (e) {
                 case r.FEATURE_LIMITED:
-                    return s.intl.string(s.t.WCvmrR);
+                    return a.intl.string(a.t.WCvmrR);
                 case r.GUILD_FEATURE_LIMITED:
-                    return s.intl.string(s.t["0QUDYf"]);
+                    return a.intl.string(a.t["0QUDYf"]);
                 case r.USER_FEATURE_LIMITED:
-                    return s.intl.string(s.t.gs1sxd);
+                    return a.intl.string(a.t.gs1sxd);
                 case r.SLOWMODE:
-                    return s.intl.string(s.t["9UAXh4"]);
+                    return a.intl.string(a.t["9UAXh4"]);
                 case r.RATE_LIMIT:
-                    return s.intl.string(s.t.zBB9xD);
+                    return a.intl.string(a.t.zBB9xD);
                 case r.CANNOT_MESSAGE_USER:
-                    return s.intl.string(s.t.w7sHnP);
+                    return a.intl.string(a.t.w7sHnP);
                 case r.USER_VERIFICATION_LEVEL:
-                    return s.intl.string(s.t.SLAkFX);
+                    return a.intl.string(a.t.SLAkFX);
                 case r.CANNOT_UNARCHIVE_THREAD:
-                    return s.intl.string(s.t.AIqS3n);
+                    return a.intl.string(a.t.AIqS3n);
                 case r.CANNOT_JOIN_THREAD:
-                    return s.intl.string(s.t.BqKxlT);
+                    return a.intl.string(a.t.BqKxlT);
                 case r.MISSING_PERMISSIONS:
-                    return s.intl.string(s.t.LLF2DJ);
+                    return a.intl.string(a.t.LLF2DJ);
                 case r.CANNOT_SEND_ATTACHMENTS:
-                    return s.intl.string(s.t.Htl7W1);
+                    return a.intl.string(a.t.Htl7W1);
                 case r.CANNOT_SEND_EMBEDS:
-                    return s.intl.string(s.t.vGgPMH);
+                    return a.intl.string(a.t.vGgPMH);
                 case r.CANNOT_SEND_STICKERS:
-                    return s.intl.string(s.t.byrr7l);
+                    return a.intl.string(a.t.byrr7l);
                 case r.AUTOMOD_BLOCKED:
-                    return s.intl.string(s.t["24PAJ+"]);
+                    return a.intl.string(a.t["24PAJ+"]);
                 case r.HARMFUL_LINK:
-                    return s.intl.string(s.t.zeqgmP);
+                    return a.intl.string(a.t.zeqgmP);
                 case r.CANNOT_USE_COMMAND:
-                    return s.intl.string(s.t.kzMhhk);
+                    return a.intl.string(a.t.kzMhhk);
                 case r.BETA_GUILD_SIZE:
-                    return s.intl.string(s.t.Af3rGY);
+                    return a.intl.string(a.t.Af3rGY);
                 case r.CANNOT_USE_EXTERNAL_APPS:
-                    return s.intl.string(s.t.Ji4l7E);
+                    return a.intl.string(a.t.Ji4l7E);
                 default:
-                    return s.intl.string(s.t["v/OAcs"]);
+                    return a.intl.string(a.t["v/OAcs"]);
             }
         })(u);
-        t = (0, l.jsx)("div", { className: c.rd, children: s.intl.format(s.t.wx1tLQ, { handleDelete: _, reason: e }) });
+        t = (0, l.jsx)("div", { className: d.rd, children: a.intl.format(a.t.wx1tLQ, { handleDelete: m, reason: e }) });
     } else
         t =
             n.type === o.lAJ.STAGE_RAISE_HAND
-                ? s.intl.format(s.t["qDAX++"], { handleDelete: _ })
-                : s.intl.format(s.t.uX3ecL, { count: 1, countMessages: 1, handleDelete: _ });
+                ? a.intl.format(a.t["qDAX++"], { handleDelete: m })
+                : a.intl.format(a.t.uX3ecL, { count: 1, countMessages: 1, handleDelete: m });
     return (0, l.jsxs)("div", {
-        className: c.XO,
+        className: d.XO,
         onClick: (e) => e.stopPropagation(),
-        children: [(0, l.jsx)(a.b, { size: "xs", color: "currentColor", className: c.Kk }), t, d],
+        children: [(0, l.jsx)(s.b, { size: "xs", color: "currentColor", className: d.Kk }), t, c],
     });
 }

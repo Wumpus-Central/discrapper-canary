@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => f });
+n.d(t, { A: () => M });
 var l = n(627968),
     r = n(64700),
     s = n(873263),
@@ -7,15 +7,15 @@ var l = n(627968),
     o = n(17928),
     d = n(707554),
     h = n(220839),
-    c = n(897479),
-    u = n(942156),
+    u = n(897479),
+    c = n(942156),
     E = n(574094),
     I = n(736056),
     B = n(976860),
     _ = n(426660),
     m = n(652215),
-    V = n(476958);
-let p = n(843020),
+    p = n(476958);
+let V = n(843020),
     A = n(545044),
     T = [
         m.BVt.LOGIN,
@@ -52,7 +52,7 @@ function L(e) {
 let R = (e) => ((i = e), e),
     N = [m.BVt.VERIFY, m.BVt.VERIFY_HUB_EMAIL],
     w = [m.BVt.GIFT_CARD_REDEEM];
-function F(e) {
+function f(e) {
     let { children: t } = e,
         n = (function () {
             let [e, t] = r.useState(!1),
@@ -68,14 +68,14 @@ function F(e) {
         })(),
         a = (0, s.zy)(),
         d = w.includes(a.pathname),
-        c = N.includes(a.pathname);
+        u = N.includes(a.pathname);
     if (d) return t;
     switch (n) {
         case "default":
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    c ? (0, l.jsx)(_.A, {}) : (0, l.jsx)("img", { className: V.xX, src: p, alt: "" }),
-                    (0, l.jsx)("img", { className: V.F, src: A, alt: "" }),
+                    u ? (0, l.jsx)(_.A, {}) : (0, l.jsx)("img", { className: p.xX, src: V, alt: "" }),
+                    (0, l.jsx)("img", { className: p.F, src: A, alt: "" }),
                     t,
                 ],
             });
@@ -84,7 +84,7 @@ function F(e) {
             return null;
     }
 }
-class M extends r.Component {
+class F extends r.Component {
     constructor(e) {
         super(e), (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
@@ -109,30 +109,30 @@ class M extends r.Component {
     }
     renderDefault() {
         let { splash: e } = this.props,
-            t = (0, l.jsx)(c.A, {
+            t = (0, l.jsx)(u.A, {
                 component: r.Fragment,
                 children: r.Children.map(this.props.children, (e) =>
                     r.cloneElement(e, { transitionTo: B.pX, replaceWith: B.bG }),
                 ),
             });
         return (0, l.jsx)("div", {
-            className: V.WA,
+            className: p.WA,
             children: (0, l.jsx)(d.F, {
                 forceLevel: 1,
                 children:
                     null != e
                         ? (0, l.jsxs)(l.Fragment, {
                               children: [
-                                  (0, l.jsx)(u.A, { show: !0, className: V.wm }),
+                                  (0, l.jsx)(c.A, { show: !0, className: p.wm }),
                                   (0, l.jsx)(E.A, { splash: e, children: t }),
                               ],
                           })
-                        : (0, l.jsx)(F, { children: t }),
+                        : (0, l.jsx)(f, { children: t }),
             }),
         });
     }
     renderMobile() {
-        return (0, l.jsx)(c.A, {
+        return (0, l.jsx)(u.A, {
             component: r.Fragment,
             children: r.Children.map(this.props.children, (e) =>
                 r.cloneElement(e, { transitionTo: this.mobileTransitionTo, replaceWith: this.mobileReplaceWith }),
@@ -145,4 +145,4 @@ class M extends r.Component {
         return e || a.Fr || a.v1 || t ? this.renderMobile() : this.renderDefault();
     }
 }
-let f = M;
+let M = F;

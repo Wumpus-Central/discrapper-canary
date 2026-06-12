@@ -3,13 +3,13 @@ var n = i(627968);
 i(64700);
 var l = i(17928),
     a = i(834730),
-    r = i(328153),
+    r = i(952818),
     s = i(523527),
     o = i(935671),
     u = i(780964),
-    c = i(858897),
+    c = i(766075),
     d = i(22802),
-    A = i(985018),
+    A = i(375708),
     f = i(566935);
 function y(t, e) {
     let {
@@ -33,16 +33,16 @@ function p(t) {
             useFlexboxLayout: p = !1,
             keybindClassName: m,
         } = t,
-        I = (0, l.bG)([r.Ay], () => {
+        g = (0, l.bG)([r.Ay], () => {
             let t = r.Ay.getVisibleGame();
             return null != t && t.elevated && r.Ay.canShowAdminWarning;
         }),
-        g = (0, o.NP)();
-    return I
+        I = (0, o.NP)();
+    return g
         ? (0, n.jsx)(a.E, {
               variant: "text-xxs/semibold",
               color: y ? "text-feedback-warning" : "text-muted",
-              children: g
+              children: I
                   ? A.intl.format(A.t.MVS9pV, {
                         onSettingsClick: (t) => {
                             t.stopPropagation(), (0, s.A)(void 0, !0), (0, c.openUserSettings)(u.X.OVERLAY_PANEL);

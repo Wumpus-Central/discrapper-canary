@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { C: () => r });
-let r = (e) => {
+n.d(t, { C: () => i });
+let i = (e) => {
     let { storeState: t, surface: n } = e,
-        r = Date.now(),
-        i = t.dateRangesForSurfaces?.[n];
-    return null != i && new Date(i.fromDate).getTime() < r && new Date(i.untilDate).getTime() > r
-        ? Math.floor(new Date(i.fromDate).getTime() / 1e3)
+        i = Date.now(),
+        r = t.dateRangesForSurfaces?.[n];
+    return null != r && new Date(r.fromDate).getTime() < i && new Date(r.untilDate).getTime() > i
+        ? Math.floor(new Date(r.fromDate).getTime() / 1e3)
         : 0;
 };

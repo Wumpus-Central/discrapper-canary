@@ -1,29 +1,29 @@
 "use strict";
-n.d(t, { Ay: () => _, Db: () => f, di: () => u, f5: () => c });
-var r = n(627968),
-    i = n(64700),
+n.d(t, { Ay: () => _, Db: () => h, di: () => u, f5: () => c });
+var i = n(627968),
+    r = n(64700),
     s = n(812729),
     a = n.n(s),
     o = n(735438),
     l = n.n(o);
-let u = i.createContext([]);
+let u = r.createContext([]);
 function c(e) {
     let { children: t, value: n } = e;
-    return (0, r.jsx)(u.Provider, { value: n, children: t });
+    return (0, i.jsx)(u.Provider, { value: n, children: t });
 }
 function d(e, t) {
     return 0 === t.length ? e : [...e, ...l().flatten(t)];
 }
 function _() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let [r, s] = i.useState(t),
-        o = i.useContext(u),
-        l = i.useMemo(() => d(o, r), [r, o]),
-        c = i.useMemo(() => d(o, r.slice(0, r.length - 1)), [r, o]);
+    let [i, s] = r.useState(t),
+        o = r.useContext(u),
+        l = r.useMemo(() => d(o, i), [i, o]),
+        c = r.useMemo(() => d(o, i.slice(0, i.length - 1)), [i, o]);
     return (
-        i.useEffect(() => {
-            a()(t, r) || s(t);
-        }, [t, r]),
+        r.useEffect(() => {
+            a()(t, i) || s(t);
+        }, [t, i]),
         {
             analyticsLocations: l,
             sourceAnalyticsLocations: c,
@@ -32,4 +32,4 @@ function _() {
         }
     );
 }
-let f = () => i.useContext(u) ?? [];
+let h = () => r.useContext(u) ?? [];

@@ -1,4 +1,4 @@
-s.d(t, { F: () => g, A: () => p });
+s.d(t, { F: () => f, A: () => E });
 var r = s(627968);
 s(64700);
 var n = s(503698),
@@ -6,75 +6,75 @@ var n = s(503698),
     l = s(478016),
     a = s(289873),
     d = s(854378),
-    c = s(496885),
-    u = s(651539),
-    C = s(401755),
-    o = s(985018),
-    L = s(754196),
-    m = s(818050);
-function h() {
-    return (0, r.jsx)(c.A, {
-        className: L.w$,
+    u = s(814925),
+    c = s(651539),
+    o = s(401755),
+    m = s(375708),
+    h = s(309434),
+    g = s(818050);
+function x() {
+    return (0, r.jsx)(u.A, {
+        className: h.w$,
         children: (0, r.jsx)("div", {
-            className: L.SN,
-            children: (0, r.jsx)(l.U, { size: "xs", color: "currentColor", className: L.HE }),
+            className: h.SN,
+            children: (0, r.jsx)(l.U, { size: "xs", color: "currentColor", className: h.HE }),
         }),
     });
 }
-function x(e) {
+function p(e) {
     let { verified: t, text: s } = e;
-    return t ? (0, r.jsxs)("div", { className: L.V, children: [(0, r.jsx)(h, {}), s] }) : s;
+    return t ? (0, r.jsxs)("div", { className: h.V, children: [(0, r.jsx)(x, {}), s] }) : s;
 }
-function g(e) {
+function f(e) {
     let { className: t, count: s, creator: n, verifiedName: l } = e;
     return (0, r.jsx)("div", {
-        className: i()(L.t5, t, L.fz),
+        className: i()(h.t5, t, h.fz),
         children:
             null != n || null != l
-                ? o.intl.format(o.t.TTcKAw, {
+                ? m.intl.format(m.t.TTcKAw, {
                       usageCount: s,
                       creator: l ?? n,
-                      creatorHook: (e, t) => (0, r.jsx)(x, { text: e, verified: null != l }, t),
+                      creatorHook: (e, t) => (0, r.jsx)(p, { text: e, verified: null != l }, t),
                   })
-                : o.intl.format(o.t.cGXXHL, { usageCount: s }),
+                : m.intl.format(m.t.cGXXHL, { usageCount: s }),
     });
 }
-function p(e) {
+function E(e) {
     var t;
-    let { guildTemplate: s, error: n, tall: l, pillClassName: c } = e;
+    let { guildTemplate: s, error: n, tall: l, pillClassName: u } = e;
     if (null != n && "" !== n)
         return (0, r.jsxs)("div", {
-            className: L.kL,
-            children: [(0, r.jsx)(d.hE, { children: o.intl.string(o.t.mDFGFj) }), (0, r.jsx)(d.tK, { children: n })],
+            className: h.kL,
+            children: [(0, r.jsx)(d.hE, { children: m.intl.string(m.t.mDFGFj) }), (0, r.jsx)(d.tK, { children: n })],
         });
-    if (s.state === C.QB.RESOLVING) return (0, r.jsx)("div", { className: L.kL, children: (0, r.jsx)(a.y, {}) });
-    let h = (0, u.A)(s.code).header;
+    if (s.state === o.QB.RESOLVING) return (0, r.jsx)("div", { className: h.kL, children: (0, r.jsx)(a.y, {}) });
+    let x = (0, c.A)(s.code).header;
     return l
         ? (0, r.jsxs)("div", {
-              className: L.kL,
+              className: h.kL,
               children: [
-                  (0, r.jsx)(d.hE, { className: L.DD, children: h }),
+                  (0, r.jsx)(d.hE, { className: h.DD, children: x }),
                   (0, r.jsx)(d.tK, {
-                      className: i()(L.VA, m.__invalid_marginTop2),
-                      children: o.intl.string(o.t["h+vyO6"]),
+                      className: i()(h.VA, g.__invalid_marginTop2),
+                      children: m.intl.string(m.t["h+vyO6"]),
                   }),
-                  (0, r.jsx)(d.hE, { className: i()(L.DD, L.fz), children: s.name }),
+                  (0, r.jsx)(d.hE, { className: i()(h.DD, h.fz), children: s.name }),
                   null != s.description &&
                       "" !== s.description &&
-                      (0, r.jsx)(d.tK, { className: i()(L.VA, L.fz, m.Ot), children: s.description }),
-                  (0, r.jsx)(g, {
-                      className: c,
+                      (0, r.jsx)(d.tK, { className: i()(h.VA, h.fz, g.Ot), children: s.description }),
+                  (0, r.jsx)(f, {
+                      className: u,
                       count: s.usageCount ?? 0,
                       creator: s.creator.username,
-                      verifiedName: ((t = s.code), (0, u.A)(t).author),
+                      verifiedName: ((t = s.code), (0, c.A)(t).author),
                   }),
               ],
           })
         : (0, r.jsxs)("div", {
-              className: L.kL,
+              className: h.kL,
               children: [
-                  (0, r.jsx)(d.hE, { className: L.DD, children: h }),
-                  (0, r.jsx)(d.tK, { className: i()(L.VA, L.fz), children: s.name }),
+                  (0, r.jsx)(d.hE, { className: h.DD, children: x }),
+                  (0, r.jsx)(d.tK, { className: i()(h.VA, h.fz), children: s.name }),
               ],
           });
 }

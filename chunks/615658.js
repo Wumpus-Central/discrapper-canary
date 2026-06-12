@@ -18,27 +18,27 @@ let p = () => {
         A = (0, c.n)((e) => e.globalMute),
         x = (0, c.n)((e) => e.playNextSong),
         g = (0, c.n)((e) => e.volumes),
-        C = l.useRef(null),
         f = l.useRef(null),
-        E = l.useRef(null),
-        y = (0, h.A)(n, p),
+        C = l.useRef(null),
+        y = l.useRef(null),
+        E = (0, h.A)(n, p),
         N = (0, a.bG)([d.A], () => d.A.assets);
     return (l.useEffect(() => {
-        let e = C.current;
+        let e = f.current;
         null != e &&
-            y?.src != null &&
+            E?.src != null &&
             (e.pause(),
-            (e.src = y.src),
+            (e.src = E.src),
             !A &&
                 m &&
                 t &&
                 e.play()?.catch((e) => {
                     o.A.captureException(e);
                 }));
-    }, [y?.src, A, m, t]),
+    }, [E?.src, A, m, t]),
     l.useEffect(() => {
-        let e = f.current,
-            n = E.current;
+        let e = C.current,
+            n = y.current;
         null != e &&
             (A || !t
                 ? e.pause()
@@ -56,18 +56,18 @@ let p = () => {
         ? (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(s.A, {
-                      ref: C,
+                      ref: f,
                       onEnded: x,
                       volume: A ? 0 : g.radio,
-                      children: (0, i.jsx)("source", { src: y?.src }),
+                      children: (0, i.jsx)("source", { src: E?.src }),
                   }),
                   (0, i.jsx)(s.A, {
-                      ref: f,
+                      ref: C,
                       volume: A ? 0 : g.environment,
                       children: (0, i.jsx)("source", { src: N?.sounds?.[u.qi.ENVIRONMENT] }),
                   }),
                   (0, i.jsx)(s.A, {
-                      ref: E,
+                      ref: y,
                       volume: A ? 0 : g.campfire,
                       children: (0, i.jsx)("source", { src: N?.sounds?.[u.qi.CAMPFIRE] }),
                   }),

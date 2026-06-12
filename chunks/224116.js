@@ -1,70 +1,70 @@
-s.r(r), s.d(r, { default: () => N });
-var t = s(627968),
-    o = s(64700),
-    i = s(503698),
-    a = s.n(i),
-    n = s(936504),
-    c = s(349288),
-    l = s(707554),
-    d = s(626584),
-    w = s(53505),
-    b = s(877062),
-    m = s(652215),
-    p = s(985018),
-    h = s(195639);
-let _ = [
-        { id: "discord", getName: () => p.intl.string(p.t.uON9Ui), url: (0, w.SU)() },
+r.r(s), r.d(s, { default: () => j });
+var t = r(627968),
+    i = r(64700),
+    n = r(503698),
+    o = r.n(n),
+    l = r(936504),
+    c = r(349288),
+    d = r(707554),
+    a = r(626584),
+    m = r(53505),
+    h = r(877062),
+    p = r(652215),
+    w = r(375708),
+    x = r(195639);
+let b = [
+        { id: "discord", getName: () => w.intl.string(w.t.uON9Ui), url: (0, m.SU)() },
         {
             id: "chrome",
-            getName: () => p.intl.string(p.t["80Ut6e"]),
+            getName: () => w.intl.string(w.t["80Ut6e"]),
             url: "https://www.google.com/chrome/browser/desktop/",
         },
         {
             id: "firefox",
-            getName: () => p.intl.string(p.t.LVbA5X),
+            getName: () => w.intl.string(w.t.LVbA5X),
             url: "https://www.mozilla.org/en-US/firefox/new/?scene=2",
         },
     ],
-    x = { discord: "browserDiscord", firefox: "browserFirefox", chrome: "browserChrome" };
-class u extends o.Component {
+    u = { discord: "browserDiscord", firefox: "browserFirefox", chrome: "browserChrome" };
+class N extends i.Component {
     render() {
         let e,
-            { id: r, getName: s, url: o } = this.props.browser;
+            { id: s, getName: r, url: i } = this.props.browser;
         return (
             (e =
-                null != o
-                    ? (0, t.jsx)(c.Anchor, { className: h.btn, href: o, children: p.intl.string(p.t["1WjMbC"]) })
-                    : (0, t.jsx)(n.N_, { className: h.btn, to: m.BVt.APPS, children: p.intl.string(p.t["1WjMbC"]) })),
+                null != i
+                    ? (0, t.jsx)(c.Anchor, { className: x.btn, href: i, children: w.intl.string(w.t["1WjMbC"]) })
+                    : (0, t.jsx)(l.N_, { className: x.btn, to: p.BVt.APPS, children: w.intl.string(w.t["1WjMbC"]) })),
             (0, t.jsxs)("li", {
-                className: h.browserItem,
+                className: x.browserItem,
                 children: [
-                    (0, t.jsx)("div", { className: a()(h.browserItemText, h.browser, h[x[r]]) }),
-                    (0, t.jsx)("div", { className: h.browserItemText, children: s() }),
+                    (0, t.jsx)("div", { className: o()(x.browserItemText, x.browser, x[u[s]]) }),
+                    (0, t.jsx)("div", { className: x.browserItemText, children: r() }),
                     e,
                 ],
             })
         );
     }
 }
-class g extends o.Component {
+class g extends i.Component {
     componentDidMount() {
-        b.A.launch("discord://" + this.props.location.pathname, (e) => {
-            new d.A("UnsupportedBrowser").log("discord://", e);
+        h.A.launch("discord://" + this.props.location.pathname, (e) => {
+            new a.A("UnsupportedBrowser").log("discord://", e);
         });
     }
     render() {
-        let e = _.map((e) => (0, t.jsx)(u, { browser: e }, e.id));
+        let e = b.map((e) => (0, t.jsx)(N, { browser: e }, e.id));
         return (0, t.jsx)("div", {
-            className: h.unsupportedBrowser,
+            className: x.unsupportedBrowser,
             children: (0, t.jsxs)("div", {
-                className: h.wrap,
+                className: x.wrap,
                 children: [
-                    (0, t.jsx)(l.H, { className: h.title, children: p.intl.string(p.t["3h+n+8"]) }),
-                    (0, t.jsx)("p", { className: h.message, children: p.intl.string(p.t.yNDLDL) }),
-                    (0, t.jsx)("ul", { className: h.browserList, children: e }),
+                    (0, t.jsx)(d.H, { className: x.title, children: w.intl.string(w.t["3h+n+8"]) }),
+                    (0, t.jsx)("p", { className: x.message, children: w.intl.string(w.t.yNDLDL) }),
+                    (0, t.jsx)("ul", { className: x.browserList, children: e }),
                 ],
             }),
         });
     }
 }
-let N = g;
+let j = g;

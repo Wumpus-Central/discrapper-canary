@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(17928),
     r = n(228366),
     s = n(589051),
@@ -21,7 +21,7 @@ let c = {
     },
     d = {},
     _ = { ...c };
-class f extends i.Ay.PersistedStore {
+class h extends i.Ay.PersistedStore {
     static displayName = "StreamerModeStore";
     static persistKey = "StreamerModeStore";
     static migrations = [
@@ -69,7 +69,7 @@ class f extends i.Ay.PersistedStore {
         return !!(0, s.zQ)("StreamerModeStore").enabled && this.enabled && _.disabledOverlayWidgets?.includes(e) === !0;
     }
 }
-let h = new f(r.h, {
+let f = new h(r.h, {
     LOGOUT: function (e) {
         e.isSwitchingAccount || (d = {});
     },

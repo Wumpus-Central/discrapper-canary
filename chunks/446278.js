@@ -1,4 +1,4 @@
-a.r(
+_.r(
     (e.exports = {
         perksContainer: "perksContainer_e6430c",
         perksTitle: "perksTitle_e6430c",

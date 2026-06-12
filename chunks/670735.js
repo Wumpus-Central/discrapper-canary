@@ -1,52 +1,52 @@
 "use strict";
-n.d(t, { A: () => D });
+n.d(t, { A: () => b });
 var i = n(627968),
     r = n(64700),
     s = n(735438),
     a = n.n(s),
     o = n(258873),
     l = n(622242),
-    d = n(731738),
-    _ = n(70298),
-    u = n(821609),
-    c = n(825484),
-    E = n(17928),
-    h = n(148810),
-    m = n(521502),
-    f = n(380610),
-    g = n(831062),
-    p = n(976860),
-    A = n(954571),
+    u = n(731738),
+    c = n(70298),
+    d = n(821609),
+    _ = n(825484),
+    h = n(17928),
+    f = n(148810),
+    p = n(521502),
+    E = n(380610),
+    m = n(807393),
+    g = n(976860),
+    A = n(174459),
     I = n(38405),
     T = n(19575),
     S = n(721668),
-    N = n(652215),
-    C = n(985018),
-    R = n(772620);
-function O() {
+    y = n(652215),
+    N = n(375708),
+    v = n(772620);
+function C() {
     let [e, t] = r.useState(!1);
-    if (null == (0, E.bG)([m.A], () => ((0, f.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null)))
+    if (null == (0, h.bG)([p.A], () => ((0, E.kK)() ? p.A.getCurrentBuildOverride().overrides?.discord_web : null)))
         return null;
     let n = async () => {
         try {
-            t(!0), await (0, h.iD)(), window.location.reload(!0);
+            t(!0), await (0, f.iD)(), window.location.reload(!0);
         } catch (e) {
             t(!1);
         }
     };
-    return (0, i.jsx)(u.$, {
+    return (0, i.jsx)(d.$, {
         variant: "primary",
         size: "md",
-        text: C.intl.string(C.t["/Nz9rY"]),
+        text: N.intl.string(N.t["/Nz9rY"]),
         onClick: n,
         loading: e,
     });
 }
-let y = a().throttle(
+let R = a().throttle(
     (e) => {
-        g.A.increment(
+        m.A.increment(
             {
-                name: d.K.APP_CRASHED,
+                name: u.K.APP_CRASHED,
                 tags: [`reason:${o.J.UNHANDLED_JS_ERROR}`, `level:${l.k.FATAL}`, `modded_client:${e}`],
             },
             !0,
@@ -55,18 +55,18 @@ let y = a().throttle(
     100,
     { trailing: !1 },
 );
-class v extends r.PureComponent {
+class O extends r.PureComponent {
     state = { error: null, info: null };
     discordErrorsSet = !1;
     componentDidCatch(e, t) {
         this.triggerSoftCrash(e, t);
     }
     triggerSoftCrash(e, t) {
-        let n = (0, p.JK)().location;
+        let n = (0, g.JK)().location;
         this.setState({ error: e, info: t });
-        let i = (0, _.b)(),
+        let i = (0, c.b)(),
             r = I.A.captureCrash(e, { extra: t });
-        A.default.track(N.HAw.APP_CRASHED, {
+        A.default.track(y.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
@@ -75,7 +75,7 @@ class v extends r.PureComponent {
             uses_client_mods: i,
             error_level: "fatal",
         }),
-            y(i),
+            R(i),
             T.Ay.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
@@ -98,29 +98,29 @@ class v extends r.PureComponent {
         if (null !== this.state.error) {
             let e = (0, i.jsxs)("div", {
                     children: [
-                        (0, i.jsx)("p", { children: C.intl.string(C.t.tx8CkI) }),
-                        (0, i.jsx)("p", { children: C.intl.string(C.t.CvQlAH) }),
+                        (0, i.jsx)("p", { children: N.intl.string(N.t.tx8CkI) }),
+                        (0, i.jsx)("p", { children: N.intl.string(N.t.CvQlAH) }),
                     ],
                 }),
-                n = (0, i.jsxs)(c.e, {
+                n = (0, i.jsxs)(_.e, {
                     children: [
-                        (0, i.jsx)(u.$, {
+                        (0, i.jsx)(d.$, {
                             variant: "primary",
                             size: "md",
-                            text: C.intl.string(C.t["+hivLW"]),
+                            text: N.intl.string(N.t["+hivLW"]),
                             onClick: this._handleSubmitReport,
                         }),
-                        (0, i.jsx)(O, {}),
+                        (0, i.jsx)(C, {}),
                     ],
                 });
             return (0, i.jsx)(S.A, {
-                title: C.intl.string(C.t["3h+n+8"]),
+                title: N.intl.string(N.t["3h+n+8"]),
                 note: null != t ? t() : e,
                 action: n,
-                className: R.W,
+                className: v.W,
             });
         }
         return e;
     }
 }
-let D = v;
+let b = O;

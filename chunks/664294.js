@@ -1,57 +1,57 @@
 (t.parse = function (e, t) {
     if ("string" != typeof e) throw TypeError("argument str must be a string");
-    var r = {},
-        s = e.split(i),
+    var i = {},
+        s = e.split(r),
         a = (t || {}).decode || n;
     return (
         s.forEach(function (e) {
             var t = e.indexOf("=");
             if (!(t < 0)) {
                 var n = e.substr(0, t).trim(),
-                    i = e.substr(++t, e.length).trim();
-                '"' == i[0] && (i = i.slice(1, -1)),
-                    void 0 == r[n] &&
-                        (r[n] = (function (e, t) {
+                    r = e.substr(++t, e.length).trim();
+                '"' == r[0] && (r = r.slice(1, -1)),
+                    void 0 == i[n] &&
+                        (i[n] = (function (e, t) {
                             try {
                                 return t(e);
                             } catch (t) {
                                 return e;
                             }
-                        })(i, a));
+                        })(r, a));
             }
         }),
-        r
+        i
     );
 }),
     (t.serialize = function (e, t, n) {
-        var i = n || {},
-            a = i.encode || r;
+        var r = n || {},
+            a = r.encode || i;
         if (!s.test(e)) throw TypeError("argument name is invalid");
         var o = a(t);
         if (o && !s.test(o)) throw TypeError("argument val is invalid");
         var l = [e + "=" + o];
-        if (null != i.maxAge) {
-            var u = i.maxAge - 0;
+        if (null != r.maxAge) {
+            var u = r.maxAge - 0;
             if (isNaN(u)) throw Error("maxAge should be a Number");
             l.push("Max-Age=" + Math.floor(u));
         }
-        if (i.domain) {
-            if (!s.test(i.domain)) throw TypeError("option domain is invalid");
-            l.push("Domain=" + i.domain);
+        if (r.domain) {
+            if (!s.test(r.domain)) throw TypeError("option domain is invalid");
+            l.push("Domain=" + r.domain);
         }
-        if (i.path) {
-            if (!s.test(i.path)) throw TypeError("option path is invalid");
-            l.push("Path=" + i.path);
+        if (r.path) {
+            if (!s.test(r.path)) throw TypeError("option path is invalid");
+            l.push("Path=" + r.path);
         }
         return (
-            i.expires && l.push("Expires=" + i.expires.toUTCString()),
-            i.httpOnly && l.push("HttpOnly"),
-            i.secure && l.push("Secure"),
-            i.firstPartyOnly && l.push("First-Party-Only"),
+            r.expires && l.push("Expires=" + r.expires.toUTCString()),
+            r.httpOnly && l.push("HttpOnly"),
+            r.secure && l.push("Secure"),
+            r.firstPartyOnly && l.push("First-Party-Only"),
             l.join("; ")
         );
     });
 var n = decodeURIComponent,
-    r = encodeURIComponent,
-    i = /; */,
+    i = encodeURIComponent,
+    r = /; */,
     s = /^[\u0009\u0020-\u007e\u0080-\u00ff]+$/;

@@ -11,13 +11,13 @@ var i = n(627968),
     h = n(720149),
     p = n(355622),
     m = n(408018),
-    A = n(201349),
+    A = n(138617),
     x = n(609425),
     g = n(922301),
-    C = n(368919),
-    f = n(451909),
-    E = n(375199),
-    y = n(854627),
+    f = n(368919),
+    C = n(451909),
+    y = n(375199),
+    E = n(854627),
     N = n(447404),
     j = n(232835),
     v = n(625494),
@@ -27,7 +27,7 @@ var i = n(627968),
     R = n(200252);
 let S = (e) => {
         let { channel: t, message: n, out: l = !1, noAnimate: a = !1 } = e,
-            d = (0, E.A)(n, {
+            d = (0, y.A)(n, {
                 hideSimpleEmbedContent: !0,
                 formatInline: !1,
                 noStyleAndInteraction: !1,
@@ -38,7 +38,7 @@ let S = (e) => {
             u = n.author,
             h = I.Ay.getName(u),
             p = (0, x.A)({ userId: u.id, guildId: t.guild_id }),
-            { avatarSrc: m, avatarDecorationSrc: A } = (0, y.A)({ userId: u.id, guildId: t.guild_id, size: 48 });
+            { avatarSrc: m, avatarDecorationSrc: A } = (0, E.A)({ userId: u.id, guildId: t.guild_id, size: 48 });
         return (0, i.jsxs)("div", {
             className: s()(R.iU, { [R.FD]: l, [R.Tf]: a }),
             children: [
@@ -51,7 +51,7 @@ let S = (e) => {
                         isTyping: !1,
                     }),
                 }),
-                (0, i.jsx)(C.A, { userName: h, displayNameStyles: p, effectDisplayType: g.G.STATIC, loop: !0 }),
+                (0, i.jsx)(f.A, { userName: h, displayNameStyles: p, effectDisplayType: g.G.STATIC, loop: !0 }),
                 (0, i.jsxs)("div", {
                     className: R.fi,
                     children: [
@@ -79,9 +79,9 @@ let S = (e) => {
             r = l.useRef(new Set()),
             [o, c] = l.useState([]),
             [x, g] = l.useState(0),
-            C = l.useRef(null),
-            E = l.useRef(!1),
-            [y, I] = l.useState(!0),
+            f = l.useRef(null),
+            y = l.useRef(!1),
+            [E, I] = l.useState(!0),
             [_, P] = l.useState(""),
             [O, b] = l.useState((0, m.x7)(_));
         l.useEffect(() => {
@@ -102,9 +102,9 @@ let S = (e) => {
                 );
             }, []),
             l.useEffect(() => {
-                let e = C.current;
+                let e = f.current;
                 null != e && e.scrollTo({ top: e.scrollHeight, behavior: "smooth" });
-            }, [C]),
+            }, [f]),
             l.useEffect(() => {
                 let e = Date.now();
                 c(
@@ -144,7 +144,7 @@ let S = (e) => {
                         L(l);
                         let e = setTimeout(() => {
                             r.current.delete(e);
-                            let t = C.current;
+                            let t = f.current;
                             null != t && t.scrollTo({ top: t.scrollHeight, behavior: "smooth" });
                         }, 10);
                         r.current.add(e);
@@ -154,8 +154,8 @@ let S = (e) => {
             }, []),
             (0, i.jsxs)("div", {
                 className: s()(R.X2, { [R.R]: !a }),
-                onMouseEnter: () => (E.current = !0),
-                onMouseLeave: () => (E.current = !1),
+                onMouseEnter: () => (y.current = !0),
+                onMouseLeave: () => (y.current = !1),
                 onWheel: (e) => {
                     e.preventDefault(), e.stopPropagation();
                 },
@@ -168,7 +168,7 @@ let S = (e) => {
                             className: s()(R.TE, { [R.N7]: n }),
                             children: (0, i.jsx)(d.Ip, {
                                 className: s()(R.b6, { [R.N7]: M && n }),
-                                ref: C,
+                                ref: f,
                                 children: o.map((e) => (0, i.jsx)(S, { channel: t, message: e, noAnimate: !0 }, e.id)),
                             }),
                         }),
@@ -183,7 +183,7 @@ let S = (e) => {
                         placeholder: "Send message",
                         onFocus: () => I(!0),
                         onBlur: () => I(!1),
-                        focused: y,
+                        focused: E,
                         disabled: !a,
                         showValueWhenDisabled: !0,
                         onChange: (e, t, n) => {
@@ -193,7 +193,7 @@ let S = (e) => {
                             let { value: n } = e,
                                 i = n.trim();
                             if (0 === i.length) return { shouldClear: !1, shouldRefocus: !1 };
-                            let l = f.Ay.parse(t, i);
+                            let l = C.Ay.parse(t, i);
                             try {
                                 return (
                                     await h.A.sendMessage(t.id, l, !0, { location: "Haven" }),

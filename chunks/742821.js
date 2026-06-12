@@ -34,8 +34,8 @@ function d(e, t) {
         let t = d[e];
         null != t && _.searchParams.set(e, t);
     }
-    let f = encodeURIComponent(_.toString()),
-        h = encodeURIComponent(`discord://app/open#${_.toString()}`),
+    let h = encodeURIComponent(_.toString()),
+        f = encodeURIComponent(`discord://app/open#${_.toString()}`),
         p = encodeURIComponent(o()),
         E = ((n = RegExp("(WebView|(iPhone|iPod|iPad)(?!.*Safari/))", "ig")),
         (i = r()?.ua?.match(n) != null),
@@ -45,6 +45,6 @@ function d(e, t) {
             : "false",
         m = null != u ? encodeURIComponent(u) : null,
         g = null != c ? encodeURIComponent(c) : null,
-        A = `${l}/Hs5r/?deep_link_value=${f}&pid=${a}&af_force_deeplink=${E}&af_og_description=${p}&af_dp=${h}`;
+        A = `${l}/Hs5r/?deep_link_value=${h}&pid=${a}&af_force_deeplink=${E}&af_og_description=${p}&af_dp=${f}`;
     return null != m && (A += `&af_android_url=${m}`), null != g && (A += `&af_ios_url=${g}`), A;
 }

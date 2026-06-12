@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(652215);
-function i(e) {
+n.d(t, { A: () => r });
+var i = n(652215);
+function r(e) {
     return !(
         __OVERLAY__ ||
         null == e ||
-        e.id === r.ME ||
-        e.id === r.YYv ||
-        !e.features.has(r.GuildFeatures.COMMUNITY) ||
-        !e.features.has(r.GuildFeatures.GUILD_SERVER_GUIDE) ||
-        !e.features.has(r.GuildFeatures.GUILD_ONBOARDING)
+        e.id === i.ME ||
+        e.id === i.YYv ||
+        !e.features.has(i.GuildFeatures.COMMUNITY) ||
+        !e.features.has(i.GuildFeatures.GUILD_SERVER_GUIDE) ||
+        !e.features.has(i.GuildFeatures.GUILD_ONBOARDING)
     );
 }

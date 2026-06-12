@@ -1,27 +1,27 @@
-s.r(e), s.d(e, { default: () => u });
-var r = s(627968);
-s(64700);
-var l = s(503698),
-    n = s.n(l),
-    c = s(366523),
-    m = s(706522);
-function u(a) {
-    let { imageUrl: e, backgroundImageUrl: s, altText: l, overlayImageUrl: u, customClassNames: d } = a;
-    return null == e
+e.r(s), e.d(s, { default: () => m });
+var l = e(627968);
+e(64700);
+var r = e(503698),
+    n = e.n(r),
+    u = e(366523),
+    c = e(161515);
+function m(a) {
+    let { imageUrl: s, backgroundImageUrl: e, altText: r, overlayImageUrl: m, customClassNames: d } = a;
+    return null == s
         ? null
-        : (0, r.jsxs)("div", {
-              className: m.LZ,
+        : (0, l.jsxs)("div", {
+              className: c.LZ,
               children: [
-                  (0, r.jsx)(c.A, {
-                      cardImage: e,
-                      cardBackgroundImage: s,
-                      altText: l,
+                  (0, l.jsx)(u.A, {
+                      cardImage: s,
+                      cardBackgroundImage: e,
+                      altText: r,
                       shape: null != d ? "custom" : "square",
-                      containerClassName: n()(d?.containerClassName ?? m.wP, null != u && m.rs),
+                      containerClassName: n()(d?.containerClassName ?? c.wP, null != m && c.rs),
                       backgroundImageClassName: d?.backgroundImageClassName,
                       foregroundImageClassName: d?.foregroundImageClassName,
                   }),
-                  null != u && (0, r.jsx)("img", { src: u, alt: "", className: m.CQ }),
+                  null != m && (0, l.jsx)("img", { src: m, alt: "", className: c.CQ }),
               ],
           });
 }

@@ -2,7 +2,7 @@
 n.d(t, { lQ: () => A, oP: () => m, pW: () => g });
 var i = n(17928),
     r = n(890615),
-    s = n(721592),
+    s = n(499211),
     a = n(164891),
     o = n(495544),
     l = n(470710),
@@ -10,8 +10,8 @@ var i = n(17928),
     c = n(696451),
     d = n(834942),
     _ = n(576705),
-    f = n(290863),
-    h = n(994500),
+    h = n(290863),
+    f = n(994500),
     p = n(977997),
     E = n(652215);
 function m(e) {
@@ -19,8 +19,8 @@ function m(e) {
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = (0, i.bG)([u.A], () => u.A.getChannel(n)),
         s = (0, i.bG)([o.default], () => o.default.getId() === e.id),
-        a = (0, i.bG)([h.A], () => h.A.isFriend(e.id)),
-        l = (0, i.bG)([f.A], () => f.A.getStatus(e.id) === E.clD.DND && r?.guild_id != null),
+        a = (0, i.bG)([f.A], () => f.A.isFriend(e.id)),
+        l = (0, i.bG)([h.A], () => h.A.getStatus(e.id) === E.clD.DND && r?.guild_id != null),
         c = r?.type,
         d = null != c && E.kvI.CALLABLE.has(c),
         _ = A(e, t, r);
@@ -52,7 +52,7 @@ function A(e) {
             return i && r;
         }),
         { needSubscriptionToAccess: u } = (0, s.A)(n?.id),
-        { enabled: f } = a.A.useExperiment({ guildId: n?.guild_id, location: t }),
-        h = n?.type === E.rbe.GUILD_VOICE;
-    return f && h && l && o && !u;
+        { enabled: h } = a.A.useExperiment({ guildId: n?.guild_id, location: t }),
+        f = n?.type === E.rbe.GUILD_VOICE;
+    return h && f && l && o && !u;
 }

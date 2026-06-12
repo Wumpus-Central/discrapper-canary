@@ -1,14 +1,14 @@
 "use strict";
-function r(e) {
+function i(e) {
     return function (t) {
         var n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            r = t.match(e.matchPattern);
-        if (!r) return null;
-        var i = r[0],
-            a = t.match(e.parsePattern);
-        if (!a) return null;
-        var s = e.valueCallback ? e.valueCallback(a[0]) : a[0];
-        return { value: (s = n.valueCallback ? n.valueCallback(s) : s), rest: t.slice(i.length) };
+            i = t.match(e.matchPattern);
+        if (!i) return null;
+        var r = i[0],
+            s = t.match(e.parsePattern);
+        if (!s) return null;
+        var a = e.valueCallback ? e.valueCallback(s[0]) : s[0];
+        return { value: (a = n.valueCallback ? n.valueCallback(a) : a), rest: t.slice(r.length) };
     };
 }
-n.d(t, { A: () => r });
+n.d(t, { A: () => i });

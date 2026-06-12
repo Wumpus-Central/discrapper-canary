@@ -1,18 +1,18 @@
-e.d(l, { ClipParticipantsList: () => c });
-var r = e(627968),
-    s = e(305866),
-    i = e(573613),
-    p = e(538451),
-    t = e(622422);
-let c = (a) => {
-    let { users: l, guildId: e, "aria-label": c, "aria-labelledby": d } = a;
-    return (0, r.jsx)(s.l, {
-        "aria-label": c,
-        "aria-labelledby": d,
-        className: t.X,
-        children: (0, r.jsx)(i.Ip, {
-            className: t.o,
-            children: l.map((a) => (0, r.jsx)(p.A, { user: a, guildId: e, onClick: (a) => a.stopPropagation() }, a.id)),
+i.d(l, { ClipParticipantsList: () => t });
+var s = i(627968),
+    e = i(305866),
+    r = i(364522),
+    p = i(538451),
+    d = i(622422);
+let t = (a) => {
+    let { users: l, guildId: i, "aria-label": t, "aria-labelledby": c } = a;
+    return (0, s.jsx)(e.l, {
+        "aria-label": t,
+        "aria-labelledby": c,
+        className: d.X,
+        children: (0, s.jsx)(r.Ip, {
+            className: d.o,
+            children: l.map((a) => (0, s.jsx)(p.A, { user: a, guildId: i, onClick: (a) => a.stopPropagation() }, a.id)),
         }),
     });
 };

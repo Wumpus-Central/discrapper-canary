@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { VT: () => i, rR: () => a });
-var r = n(827343);
-let i = {
+n.d(t, { VT: () => r, rR: () => s });
+var i = n(827343);
+let r = {
         binds: ["mod+shift+m"],
         comboKeysBindGlobal: !0,
-        action: () => (r.A.toggleSelfMute({ usedKeybind: !0, location: "Default Keybind" }), !1),
+        action: () => (i.A.toggleSelfMute({ usedKeybind: !0, location: "Default Keybind" }), !1),
     },
-    a = {
+    s = {
         binds: ["mod+shift+d"],
         comboKeysBindGlobal: !0,
-        action: () => (r.A.toggleSelfDeaf({ usedKeybind: !0, location: "Default Keybind" }), !1),
+        action: () => (i.A.toggleSelfDeaf({ usedKeybind: !0, location: "Default Keybind" }), !1),
     };

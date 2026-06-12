@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { J4: () => p, JH: () => h, dL: () => m, et: () => E, xy: () => f });
+n.d(t, { J4: () => p, JH: () => f, dL: () => m, et: () => E, xy: () => h });
 var i,
     r = n(17928),
     s = n(734057),
@@ -10,7 +10,7 @@ var i,
     c = n(360469),
     d = n(652215),
     _ = n(375708),
-    f =
+    h =
         (((i = {})[(i.CAN_LAUNCH = 0)] = "CAN_LAUNCH"),
         (i[(i.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION"),
         (i[(i.NO_CHANNEL_CONNECT_PERMISSION = 2)] = "NO_CHANNEL_CONNECT_PERMISSION"),
@@ -20,7 +20,7 @@ var i,
         (i[(i.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS = 6)] = "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS"),
         (i[(i.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL = 7)] = "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL"),
         i);
-function h(e) {
+function f(e) {
     let { channelId: t, ChannelStore: n, GuildStore: i, PermissionStore: r, VoiceStateStore: s } = e,
         a = n.getChannel(t);
     if (null == a) return 3;
@@ -39,12 +39,12 @@ function h(e) {
     return 0;
 }
 function p(e) {
-    return h({ channelId: e, ChannelStore: s.A, GuildStore: a.A, PermissionStore: o.A, VoiceStateStore: l.A });
+    return f({ channelId: e, ChannelStore: s.A, GuildStore: a.A, PermissionStore: o.A, VoiceStateStore: l.A });
 }
 function E(e) {
     return (0, r.bG)(
         [s.A, a.A, o.A, l.A],
-        () => h({ channelId: e, ChannelStore: s.A, GuildStore: a.A, PermissionStore: o.A, VoiceStateStore: l.A }),
+        () => f({ channelId: e, ChannelStore: s.A, GuildStore: a.A, PermissionStore: o.A, VoiceStateStore: l.A }),
         [e],
     );
 }

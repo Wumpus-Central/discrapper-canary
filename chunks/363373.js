@@ -16,14 +16,14 @@ var l = n(627968),
     C = n(890856),
     y = n(947641),
     _ = n(661531),
-    P = n(534514),
-    S = n(834730),
+    S = n(534514),
+    P = n(834730),
     I = n(713517),
-    T = n(674658),
-    f = n(898461),
+    f = n(674658),
+    T = n(898461),
     N = n(837015),
-    v = n(929283),
-    g = n(761365),
+    g = n(929283),
+    v = n(761365),
     x = n(375708),
     R = n(267861);
 let M = (e) => {
@@ -37,21 +37,21 @@ let M = (e) => {
         M = r.useMemo(() => ({ current: c }), [c]),
         { isHoveringOrFocusing: b } = (0, I.A)(M),
         L = !s && b,
-        { product: j } = (0, T.q)(i);
-    if (null == j) return null;
-    let O = j.items[0];
-    return null == O
+        { product: O } = (0, f.q)(i);
+    if (null == O) return null;
+    let j = O.items[0];
+    return null == j
         ? null
-        : ((0, f.T)(O)
+        : ((0, T.T)(j)
               ? ((n = h.R.AVATAR_DECORATION),
-                (t = (0, l.jsx)(v.i, { item: O, user: a, isHighlighted: L, avatarSize: A._3.SIZE_96 })))
-              : (0, N.F)(O) &&
+                (t = (0, l.jsx)(g.i, { item: j, user: a, isHighlighted: L, avatarSize: A._3.SIZE_96 })))
+              : (0, N.F)(j) &&
                 ((n = h.R.NAMEPLATE),
-                (t = (0, l.jsx)(g.A, { nameplate: O, user: a, isHighlighted: L, size: "small" }))),
+                (t = (0, l.jsx)(v.A, { nameplate: j, user: a, isHighlighted: L, size: "small" }))),
           (0, l.jsx)(E.vN, {
               children: (0, l.jsxs)(C.s, {
                   ref: p,
-                  "aria-label": j.name ?? "",
+                  "aria-label": O.name ?? "",
                   onClick: () => {
                       null == i || null == o || s || o(i);
                   },
@@ -79,8 +79,8 @@ let M = (e) => {
                       (0, l.jsxs)("div", {
                           className: R.tZ,
                           children: [
-                              (0, l.jsx)(P.D, { variant: "heading-md/extrabold", children: j.name }),
-                              (0, l.jsx)(S.E, {
+                              (0, l.jsx)(S.D, { variant: "heading-md/extrabold", children: O.name }),
+                              (0, l.jsx)(P.E, {
                                   variant: "text-sm/normal",
                                   children: s ? x.intl.string(x.t["6cfuDj"]) : x.intl.string(x.t.QQsaCc),
                               }),
@@ -92,8 +92,8 @@ let M = (e) => {
 };
 var b = n(374200),
     L = n(91053),
-    j = n(287809),
-    O = n(937008),
+    O = n(287809),
+    j = n(937008),
     w = n(166532),
     D = n(482132),
     U = n(615310),
@@ -103,37 +103,37 @@ function G(e) {
         n = (0, d.t4)((e) => e.selectedSkuId),
         p = (0, c.A)(),
         m = (0, U.bB)(),
-        { setSelectedGiftingPromotionReward: h, selectedGiftingPromotionReward: A, claimableRewards: E } = (0, O.Pv)(),
-        C = (0, i.bG)([j.default], () => j.default.getCurrentUser()),
+        { setSelectedGiftingPromotionReward: h, selectedGiftingPromotionReward: A, claimableRewards: E } = (0, j.Pv)(),
+        C = (0, i.bG)([O.default], () => O.default.getCurrentUser()),
         y = (0, i.yK)([b.A], () => b.A.getGiftPromotionRewardSkuIds()),
         _ = (function (e, t) {
             if (null != e && 0 !== e.length) return null != t && e.includes(t) ? t : e[0];
         })(E, A),
-        [P, S] = r.useState(_),
-        [I, T] = r.useState(!1);
+        [S, P] = r.useState(_),
+        [I, f] = r.useState(!1);
     r.useEffect(() => {
-        I || null != A || null == _ || (h(_), S(_));
+        I || null != A || null == _ || (h(_), P(_));
     }, [_, I, A, h]);
-    let f = { selectedPlan: p, selectedSkuId: n, step: m };
-    if (null == p) throw new u.v({ message: "Expected plan to be selected", extraSentryInformation: f });
-    if (null == n) throw new u.v({ message: "Expected selectedSkuId", extraSentryInformation: f });
-    if (null == m) throw new u.v({ message: "Step should be set", extraSentryInformation: f });
-    let N = r.useMemo(() => null != P && (E ?? []).includes(P), [P, E]),
-        v = r.useMemo(() => 0 === y.length || null == P || !N, [y, P, N]);
+    let T = { selectedPlan: p, selectedSkuId: n, step: m };
+    if (null == p) throw new u.v({ message: "Expected plan to be selected", extraSentryInformation: T });
+    if (null == n) throw new u.v({ message: "Expected selectedSkuId", extraSentryInformation: T });
+    if (null == m) throw new u.v({ message: "Step should be set", extraSentryInformation: T });
+    let N = r.useMemo(() => null != S && (E ?? []).includes(S), [S, E]),
+        g = r.useMemo(() => 0 === y.length || null == S || !N, [y, S, N]);
     r.useEffect(() => {
         if (0 === y.length) {
-            S(void 0), h(void 0);
+            P(void 0), h(void 0);
             return;
         }
-        (null != P && N && y.includes(P)) || null == P || (S(void 0), h(void 0));
-    }, [y, N, P, h]);
-    let g = (e) => {
-            h(e), S(e), T(!0);
+        (null != S && N && y.includes(S)) || null == S || (P(void 0), h(void 0));
+    }, [y, N, S, h]);
+    let v = (e) => {
+            h(e), P(e), f(!0);
         },
         R = y.map((e) =>
             (0, l.jsx)(
                 M,
-                { skuId: e, claimed: null != E && !E.includes(e), user: C, onSelect: g, selectedSkuId: P },
+                { skuId: e, claimed: null != E && !E.includes(e), user: C, onSelect: v, selectedSkuId: S },
                 e,
             ),
         ),
@@ -145,7 +145,7 @@ function G(e) {
                 showBackButton: !0,
                 planOptions: [p.id],
                 selectedPlanId: p.id,
-                isNextDisabled: v,
+                isNextDisabled: g,
             }),
         });
     return (0, l.jsxs)(l.Fragment, {

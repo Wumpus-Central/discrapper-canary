@@ -9,8 +9,8 @@ var i = n(557939),
     c = n(486724),
     d = n(862784),
     _ = n(753609),
-    f = n(949186),
-    h = n(257943),
+    h = n(949186),
+    f = n(257943),
     p = n(105712),
     E = "DOMException",
     m = s("Error"),
@@ -22,22 +22,22 @@ var i = n(557939),
             n = d(e < 2 ? void 0 : arguments[1], "Error"),
             i = new g(t, n),
             r = new m(t);
-        return (r.name = E), o(i, "stack", a(1, f(r.stack, 1))), c(i, this, A), i;
+        return (r.name = E), o(i, "stack", a(1, h(r.stack, 1))), c(i, this, A), i;
     },
     I = (A.prototype = g.prototype),
     T = "stack" in new m(E),
     S = "stack" in new g(1, 2),
-    N = g && h && Object.getOwnPropertyDescriptor(r, E),
-    y = !!N && !(N.writable && N.configurable),
-    C = T && !y && !S;
-i({ global: !0, constructor: !0, forced: p || C }, { DOMException: C ? A : g });
-var v = s(E),
-    O = v.prototype;
-if (O.constructor !== v) {
-    for (var R in (p || o(O, "constructor", a(1, v)), _))
-        if (l(_, R)) {
-            var b = _[R],
+    y = g && f && Object.getOwnPropertyDescriptor(r, E),
+    N = !!y && !(y.writable && y.configurable),
+    v = T && !N && !S;
+i({ global: !0, constructor: !0, forced: p || v }, { DOMException: v ? A : g });
+var C = s(E),
+    R = C.prototype;
+if (R.constructor !== C) {
+    for (var O in (p || o(R, "constructor", a(1, C)), _))
+        if (l(_, O)) {
+            var b = _[O],
                 D = b.s;
-            l(v, D) || o(v, D, a(6, b.c));
+            l(C, D) || o(C, D, a(6, b.c));
         }
 }

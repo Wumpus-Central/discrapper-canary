@@ -1,29 +1,29 @@
-var r = n(264572).Buffer,
-    i = [
+var i = n(264572).Buffer,
+    r = [
         255, 255, 26, 27, 28, 29, 30, 31, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
         11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255, 255, 0, 1, 2, 3, 4, 5, 6,
         7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 255, 255, 255, 255, 255,
     ];
 (t.encode = function (e) {
-    r.isBuffer(e) || (e = new r(e));
+    i.isBuffer(e) || (e = new i(e));
     for (
         var t,
             n,
-            i = 0,
+            r = 0,
             s = 0,
             a = 0,
             o = 0,
-            l = new r(8 * ((n = Math.floor((t = e).length / 5)), t.length % 5 == 0 ? n : n + 1));
-        i < e.length;
+            l = new i(8 * ((n = Math.floor((t = e).length / 5)), t.length % 5 == 0 ? n : n + 1));
+        r < e.length;
     ) {
-        var u = e[i];
+        var u = e[r];
         a > 3
-            ? ((o = ((o = u & (255 >> a)) << (a = (a + 5) % 8)) | ((i + 1 < e.length ? e[i + 1] : 0) >> (8 - a))), i++)
-            : ((o = (u >> (8 - (a + 5))) & 31), 0 == (a = (a + 5) % 8) && i++),
+            ? ((o = ((o = u & (255 >> a)) << (a = (a + 5) % 8)) | ((r + 1 < e.length ? e[r + 1] : 0) >> (8 - a))), r++)
+            : ((o = (u >> (8 - (a + 5))) & 31), 0 == (a = (a + 5) % 8) && r++),
             (l[s] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ234567".charCodeAt(o)),
             s++;
     }
-    for (i = s; i < l.length; i++) l[i] = 61;
+    for (r = s; r < l.length; r++) l[r] = 61;
     return l;
 }),
     (t.decode = function (e) {
@@ -31,11 +31,11 @@ var r = n(264572).Buffer,
             n = 0,
             s = 0,
             a = 0;
-        r.isBuffer(e) || (e = new r(e));
-        for (var o = new r(Math.ceil((5 * e.length) / 8)), l = 0; l < e.length && 61 != e[l]; l++) {
+        i.isBuffer(e) || (e = new i(e));
+        for (var o = new i(Math.ceil((5 * e.length) / 8)), l = 0; l < e.length && 61 != e[l]; l++) {
             var u = e[l] - 48;
-            if (u < i.length)
-                (s = i[u]),
+            if (u < r.length)
+                (s = r[u]),
                     n <= 3
                         ? 0 == (n = (n + 5) % 8)
                             ? ((t |= s), (o[a] = t), a++, (t = 0))

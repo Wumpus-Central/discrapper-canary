@@ -1,7 +1,7 @@
 i.d(a, { default: () => n });
 var s = i(627968);
 i(64700);
-var e = i(158954);
+var e = i(189213);
 function n(t) {
     let { transitionState: a, header: i, body: n, confirmText: r, onClose: o, onConfirm: c } = t;
     return (0, s.jsx)(e.Modal, {

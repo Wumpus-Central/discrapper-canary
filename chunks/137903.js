@@ -31,8 +31,8 @@ function d(e, t) {
 function _(e) {
     return "object" == typeof e && null !== e && !Array.isArray(e) && !(e instanceof Date) && !(e instanceof Set);
 }
-let f = new Map();
-function h(e) {
+let h = new Map();
+function f(e) {
     return null === e ? "null" : "object" != typeof e ? typeof e : Array.isArray(e) ? "array" : "object";
 }
 let p = Symbol("version"),
@@ -549,13 +549,13 @@ class S extends i.il {
                                     return console.error(
                                         "Trying to log mismatches, but no last dispatched action found",
                                     );
-                                let i = f.get(e) ?? {
+                                let i = h.get(e) ?? {
                                     mismatchesReported: 0,
                                     mismatchesByLastAction: new Map(),
                                     visitedEntries: new WeakSet(),
                                     seenMismatches: new Set(),
                                 };
-                                if ((f.set(e, i), i.mismatchesReported >= 15)) return;
+                                if ((h.set(e, i), i.mismatchesReported >= 15)) return;
                                 let r = i.mismatchesByLastAction.get(n) ?? 0;
                                 if (r >= 3) return;
                                 let s = (function (e, t) {
@@ -576,7 +576,7 @@ class S extends i.il {
                                                         case "field-missing":
                                                             n.mismatchedFields.push({
                                                                 fieldName: e,
-                                                                primaryType: h(s.primaryRecord[t.field]),
+                                                                primaryType: f(s.primaryRecord[t.field]),
                                                                 shadowType: "missing",
                                                             });
                                                             break;
@@ -605,7 +605,7 @@ class S extends i.il {
                                                                               ) {
                                                                                   i({
                                                                                       fieldName: l,
-                                                                                      primaryType: h(u),
+                                                                                      primaryType: f(u),
                                                                                       shadowType: "missing",
                                                                                   });
                                                                                   continue;
@@ -623,15 +623,15 @@ class S extends i.il {
                                                                                             (a.add(u), e(l, u, c, a))
                                                                                       : i({
                                                                                             fieldName: l,
-                                                                                            primaryType: h(u),
-                                                                                            shadowType: h(c),
+                                                                                            primaryType: f(u),
+                                                                                            shadowType: f(c),
                                                                                         }));
                                                                           }
                                                                       })(e, t.primaryValue, t.shadowValue)
                                                                 : i({
                                                                       fieldName: e,
-                                                                      primaryType: h(t.primaryValue),
-                                                                      shadowType: h(t.shadowValue),
+                                                                      primaryType: f(t.primaryValue),
+                                                                      shadowType: f(t.shadowValue),
                                                                   });
                                                     }
                                                 }

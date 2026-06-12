@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { DS: () => f, CE: () => _, m2: () => p, BW: () => c, Gy: () => h });
+n.d(t, { DS: () => h, CE: () => _, m2: () => p, BW: () => c, Gy: () => f });
 var r,
     s = n(64700),
     a = n(647307);
@@ -39,7 +39,7 @@ let d = (i = () => ({ riveAssetCache: new Map(), riveOverrideCache: {} })) ? l(i
 function _(e) {
     let t = e instanceof ArrayBuffer ? e.byteLength.toString() : e?.toString(),
         n = "object" == typeof e && e instanceof ArrayBuffer,
-        i = h(t),
+        i = f(t),
         r = d((e) => (null == t ? null : e.riveAssetCache.get(t)));
     return ((0, s.useEffect)(() => {
         if (null == t || null != i || n || d.getState().riveAssetCache.has(t)) return;
@@ -61,11 +61,11 @@ function _(e) {
           ? { status: "loaded", buffer: e }
           : (r ?? { status: "loading", buffer: null });
 }
-function f(e, t) {
+function h(e, t) {
     let n = d.getState().riveOverrideCache;
     d.setState({ riveOverrideCache: { ...n, [e]: t } });
 }
-function h(e) {
+function f(e) {
     let t = d((e) => e.riveOverrideCache);
     return null == e ? null : t[e];
 }

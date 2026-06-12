@@ -2,7 +2,7 @@
 n.d(t, { SH: () => l, qE: () => u, zQ: () => o });
 var i = n(64700),
     r = n(945810),
-    s = n(449054),
+    s = n(385648),
     a = n(652215);
 let o = (0, r.mj)({
         name: "2026-02-silp-in-app-redesign",

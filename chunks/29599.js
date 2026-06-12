@@ -1,15 +1,15 @@
-r.r(t), r.d(t, { VerifyAccountLoading: () => h, VerifyAccountDeekLink: () => R, default: () => g });
+r.r(t), r.d(t, { VerifyAccountLoading: () => h, VerifyAccountDeekLink: () => g, default: () => _ });
 var n,
-    l = r(627968),
-    a = r(64700),
-    i = r(873263),
+    i = r(627968),
+    l = r(64700),
+    a = r(873263),
     c = r(607399),
-    s =
+    o =
         (((n = {})[(n.HANDOFF_AUTHORIZED = 0)] = "HANDOFF_AUTHORIZED"),
         (n[(n.HANDOFF_ERROR = 1)] = "HANDOFF_ERROR"),
         (n[(n.HANDOFF_SUCCESS = 2)] = "HANDOFF_SUCCESS"),
         n),
-    o = r(862482),
+    s = r(862482),
     u = r(289873),
     d = r(939249),
     f = r(77468),
@@ -17,89 +17,89 @@ var n,
     p = r(458518),
     O = r(573648),
     C = r(129014),
-    m = r(998218),
-    S = r(950198),
-    _ = r(652215),
-    E = r(985018),
+    S = r(998218),
+    m = r(950198),
+    E = r(652215),
+    R = r(375708),
     y = r(225299);
 let A = null != window.opener;
-function g() {
-    let e = (0, i.W6)(),
+function _() {
+    let e = (0, a.W6)(),
         t = (0, p.o)(),
         r = t.get("code"),
         n = t.get("oauth_verifier"),
-        o = t.get("state") ?? "",
+        s = t.get("state") ?? "",
         u = t.get("loading"),
         d = t.get("iss") ?? void 0,
-        { type: C } = (0, i.g)(),
-        E = (0, S.mw)(C),
-        [y, g] = a.useState(!1),
-        [x, b] = a.useState(!1),
-        j = (0, N.A)(),
-        D = null == n ? (r ?? "") : n;
-    a.useEffect(() => {
+        { type: C } = (0, a.g)(),
+        R = (0, m.mw)(C),
+        [y, _] = l.useState(!1),
+        [x, D] = l.useState(!1),
+        H = (0, N.A)(),
+        $ = null == n ? (r ?? "") : n;
+    l.useEffect(() => {
         let r;
         if (null != u) return;
         for (let e of t.keys()) e.startsWith("openid.") && (null == r && (r = {}), (r[e] = t.get(e)));
-        let n = (0, S.mw)(C);
+        let n = (0, m.mw)(C);
         !(async function () {
             if (null == n || !O.A.isSupported(n)) return;
-            function l(r) {
-                let { status: l, body: a } = r;
+            function i(r) {
+                let { status: i, body: l } = r;
                 if (null != n) {
-                    if (a?.redirect) {
-                        window.location = a.redirect;
+                    if (l?.redirect) {
+                        window.location = l.redirect;
                         return;
                     }
-                    if ([200, 204].includes(l)) {
-                        e.replace(_.BVt.CONNECTIONS_SUCCESS(n)), A && window.close();
+                    if ([200, 204].includes(i)) {
+                        e.replace(E.BVt.CONNECTIONS_SUCCESS(n)), A && window.close();
                         return;
                     }
-                    a?.code != null && t.append("error-code", a.code),
-                        e.replace(`${_.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`);
+                    l?.code != null && t.append("error-code", l.code),
+                        e.replace(`${E.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`);
                 }
             }
-            if (await w({ platformType: n, code: D, state: o, openidParams: r, iss: d, handleCallbackResponse: l }))
+            if (await w({ platformType: n, code: $, state: s, openidParams: r, iss: d, handleCallbackResponse: i }))
                 return;
-            let a = await T(n, o, D, r, d);
-            0 === a
-                ? g(!0)
-                : 1 === a
-                  ? e.replace(`${_.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`)
-                  : 3 === a
+            let l = await F(n, s, $, r, d);
+            0 === l
+                ? _(!0)
+                : 1 === l
+                  ? e.replace(`${E.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`)
+                  : 3 === l
                     ? c.Fr
-                        ? b(!0)
-                        : e.replace(`${_.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`)
-                    : v({
+                        ? D(!0)
+                        : e.replace(`${E.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`)
+                    : T({
                           platformType: n,
-                          state: o,
-                          handleCallbackResponse: l,
+                          state: s,
+                          handleCallbackResponse: i,
                           handleCallbackError: (r) => {
                               r?.body?.code != null && t.append("error-code", r.body.code),
-                                  e.replace(`${_.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`);
+                                  e.replace(`${E.BVt.CONNECTIONS_ERROR(n)}?${t.toString()}`);
                           },
                           openidParams: r,
-                          code: D,
+                          code: $,
                           iss: d,
                       });
         })();
-    }, [D, e, u, C, t, o, d]),
-        a.useEffect(() => {
+    }, [$, e, u, C, t, s, d]),
+        l.useEffect(() => {
             let t;
             if (!y) return;
             let r = 0;
             async function n() {
-                if (null == E) return;
-                let { handoff_status: l, success_redirect: a } = (await f.A.getHandoffStatus(E, o)).body;
-                if (l === s.HANDOFF_SUCCESS)
-                    if (null == m.A.toURLSafe(a)) return e.replace(_.BVt.CONNECTIONS_SUCCESS(E));
+                if (null == R) return;
+                let { handoff_status: i, success_redirect: l } = (await f.A.getHandoffStatus(R, s)).body;
+                if (i === o.HANDOFF_SUCCESS)
+                    if (null == S.A.toURLSafe(l)) return e.replace(E.BVt.CONNECTIONS_SUCCESS(R));
                     else {
-                        window.location = a;
+                        window.location = l;
                         return;
                     }
-                if (l === s.HANDOFF_ERROR || r >= 10) return e.replace(_.BVt.CONNECTIONS_ERROR(E));
+                if (i === o.HANDOFF_ERROR || r >= 10) return e.replace(E.BVt.CONNECTIONS_ERROR(R));
                 t = setTimeout(() => {
-                    j() && ((r += 1), n());
+                    H() && ((r += 1), n());
                 }, 1e3);
             }
             return (
@@ -108,100 +108,100 @@ function g() {
                     null != t && clearTimeout(t);
                 }
             );
-        }, [j, e, E, y, o]);
-    let I = a.useMemo(() => {
-        if (null != E) return `discord://${_.BVt.CONNECTIONS(E)}/?${t.toString()}`;
-    }, [E, t]);
-    return null != E && O.A.isSupported(E)
+        }, [H, e, R, y, s]);
+    let j = l.useMemo(() => {
+        if (null != R) return `discord://${E.BVt.CONNECTIONS(R)}/?${t.toString()}`;
+    }, [R, t]);
+    return null != R && O.A.isSupported(R)
         ? x
-            ? (0, l.jsx)(R, {
-                  platformType: E,
-                  deeplink: I,
+            ? (0, i.jsx)(g, {
+                  platformType: R,
+                  deeplink: j,
                   onClick: () => {
-                      b(!1), g(!0);
+                      D(!1), _(!0);
                   },
               })
-            : (0, l.jsx)(h, { platformType: E })
+            : (0, i.jsx)(h, { platformType: R })
         : null;
 }
 function h(e) {
     let { platformType: t } = e,
         r = O.A.get(t);
-    return (0, l.jsxs)(S.mP, {
+    return (0, i.jsxs)(m.mP, {
         platformType: t,
         children: [
-            (0, l.jsx)("div", { className: y.iU, children: E.intl.format(E.t.AOKOe7, { name: r.name }) }),
-            (0, l.jsx)("div", {
+            (0, i.jsx)("div", { className: y.iU, children: R.intl.format(R.t.AOKOe7, { name: r.name }) }),
+            (0, i.jsx)("div", {
                 className: y.UD,
-                children: (0, l.jsx)(o.$n, {
+                children: (0, i.jsx)(s.$n, {
                     className: y.HM,
                     disabled: !0,
-                    children: (0, l.jsx)(u.y, { itemClassName: y.$N }),
+                    children: (0, i.jsx)(u.y, { itemClassName: y.$N }),
                 }),
             }),
         ],
     });
 }
-function R(e) {
+function g(e) {
     let { deeplink: t, onClick: r, platformType: n } = e,
-        a = O.A.get(n);
-    return (0, l.jsx)(S.mP, {
+        l = O.A.get(n);
+    return (0, i.jsx)(m.mP, {
         platformType: n,
-        children: (0, l.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             className: y.UD,
             children: [
-                (0, l.jsx)("div", {
+                (0, i.jsx)("div", {
                     className: y.iU,
-                    children: E.intl.format(E.t["6ig6i5"], { connectionName: a.name }),
+                    children: R.intl.format(R.t["6ig6i5"], { connectionName: l.name }),
                 }),
-                (0, l.jsx)(d.D, {
+                (0, i.jsx)(d.D, {
                     tag: "a",
                     href: t,
                     onClick: r,
                     target: "_self",
-                    children: (0, l.jsx)(o.$n, { className: y.HM, children: E.intl.string(E.t.flvacA) }),
+                    children: (0, i.jsx)(s.$n, { className: y.HM, children: R.intl.string(R.t.flvacA) }),
                 }),
             ],
         }),
     });
 }
 async function w(e) {
-    let { platformType: t, code: r, state: n, openidParams: l, iss: a, handleCallbackResponse: i } = e;
+    let { platformType: t, code: r, state: n, openidParams: i, iss: l, handleCallbackResponse: a } = e;
     if (c.Fr || A) return !1;
     try {
         let e = await C.default
-            .request(_.e$_.CONNECTIONS_CALLBACK, { code: r, openid_params: l, iss: a, state: n, providerType: t })
+            .request(E.e$_.CONNECTIONS_CALLBACK, { code: r, openid_params: i, iss: l, state: n, providerType: t })
             .finally(() => {
                 C.default.disconnect();
             });
-        return i(e), !0;
+        return a(e), !0;
     } catch (e) {
         return !1;
     }
 }
-async function T(e, t, r, n, l) {
+async function F(e, t, r, n, i) {
     try {
-        return await f.A.sessionHandoff(e, t, r, n, l), 0;
+        return await f.A.sessionHandoff(e, t, r, n, i), 0;
     } catch (e) {
         if (e?.body?.code === 10020) return 2;
         if (e?.body?.code === 40001) return 3;
         return 1;
     }
 }
-async function v(e) {
+async function T(e) {
     let {
         platformType: t,
         state: r,
         handleCallbackResponse: n,
-        handleCallbackError: l,
-        openidParams: a,
-        code: i,
+        handleCallbackError: i,
+        openidParams: l,
+        code: a,
         iss: c,
     } = e;
     try {
-        let e = await f.A.callback(t, { code: i, openid_params: a, state: r, iss: c }, !A);
+        let e = await f.A.callback(t, { code: a, openid_params: l, state: r, iss: c }, !A);
         return n(e), !0;
     } catch (e) {
-        return l(e), !0;
+        return i(e), !0;
     }
 }

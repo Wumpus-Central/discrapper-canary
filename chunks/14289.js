@@ -1,23 +1,23 @@
-var n = t(693655),
-    o = t(410323),
-    a = t(304880),
-    i = t(627),
-    s = URLSearchParams,
-    u = s.prototype,
-    l = o(u.getAll),
-    d = o(u.has),
-    c = new s("a=1");
-(c.has("a", 2) || !c.has("a", void 0)) &&
-    n(
-        u,
+var t = a(693655),
+    n = a(410323),
+    i = a(304880),
+    o = a(627),
+    h = URLSearchParams,
+    s = h.prototype,
+    u = n(s.getAll),
+    v = n(s.has),
+    f = new h("a=1");
+(f.has("a", 2) || !f.has("a", void 0)) &&
+    t(
+        s,
         "has",
-        function (r) {
-            var e = arguments.length,
-                t = e < 2 ? void 0 : arguments[1];
-            if (e && void 0 === t) return d(this, r);
-            var n = l(this, r);
-            i(e, 1);
-            for (var o = a(t), s = 0; s < n.length; ) if (n[s++] === o) return !0;
+        function (e) {
+            var r = arguments.length,
+                a = r < 2 ? void 0 : arguments[1];
+            if (r && void 0 === a) return v(this, e);
+            var t = u(this, e);
+            o(r, 1);
+            for (var n = i(a), h = 0; h < t.length; ) if (t[h++] === n) return !0;
             return !1;
         },
         { enumerable: !0, unsafe: !0 },

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Tr: () => d, XZ: () => h, gW: () => o, kv: () => u, r0: () => l, uA: () => c, z0: () => _, zY: () => f });
+n.d(t, { Tr: () => d, XZ: () => f, gW: () => o, kv: () => u, r0: () => l, uA: () => c, z0: () => _, zY: () => h });
 var i = n(885386),
     r = n(287809),
     s = n(67480),
@@ -29,7 +29,7 @@ function _(e) {
           ? e
           : null;
 }
-function f(e) {
+function h(e) {
     return e.reduce(
         (e, t) => {
             let n = _(t);
@@ -40,6 +40,6 @@ function f(e) {
         { total: 0, progress: 0 },
     );
 }
-function h(e) {
+function f(e) {
     return !!e.isDiscordApplication() && e.isEntitled(r.default.getCurrentUser(), s.A);
 }

@@ -10,8 +10,8 @@ var i = n(17928),
 let c = {},
     d = {},
     _ = null,
-    f = null,
     h = null,
+    f = null,
     p = "lastChangeLogDate",
     E = null,
     m = null,
@@ -41,13 +41,13 @@ class I extends i.Ay.Store {
         return d[e]?.[t] ?? u._f.NOT_LOADED;
     }
     hasLoadedConfig() {
-        return null != h;
+        return null != f;
     }
     getConfig() {
-        return h;
+        return f;
     }
     overrideId() {
-        return f;
+        return h;
     }
     lastSeenChangelogId() {
         return E;
@@ -56,7 +56,7 @@ class I extends i.Ay.Store {
         return m;
     }
     getStateForDebugging() {
-        return { changelogConfig: h, loadedChangelogs: d, lastSeenChangelogId: E, lastSeenChangelogDate: m };
+        return { changelogConfig: f, loadedChangelogs: d, lastSeenChangelogId: E, lastSeenChangelogDate: m };
     }
     isLocked() {
         return g.size > 0;
@@ -75,7 +75,7 @@ let T = new I(s.h, {
     },
     CHANGE_LOG_SET_CONFIG: function (e) {
         let { config: t, latestChangelogId: n } = e;
-        (_ = n), (h = t);
+        (_ = n), (f = t);
     },
     CHANGE_LOG_FETCH_SUCCESS: function (e) {
         let { id: t, changelog: n } = e;
@@ -98,7 +98,7 @@ let T = new I(s.h, {
     },
     CHANGE_LOG_SET_OVERRIDE: function (e) {
         let { id: t } = e;
-        f = t;
+        h = t;
     },
     CHANGE_LOG_MARK_SEEN: function (e) {
         let { changelogDate: t } = e;

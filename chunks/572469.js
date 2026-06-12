@@ -1,110 +1,110 @@
-n.d(e, { a: () => W, t: () => B, MFAModal: () => I });
+n.d(t, { a: () => $, t: () => W, MFAModal: () => X });
 var s = n(627968),
-    a = n(64700),
-    i = n(430690),
-    r = n(935462),
-    l = n(192308),
+    l = n(64700),
+    a = n(430690),
+    i = n(935462),
+    r = n(192308),
     o = n(834730),
-    c = n(821609),
-    u = n(825484),
-    d = n(534514),
+    d = n(821609),
+    c = n(825484),
+    u = n(534514),
     h = n(235986),
-    g = n(985018),
-    m = n(902626);
-let p = function (t) {
-        let { children: e, scrollbarType: n } = t;
-        return (0, s.jsx)(r.$m, { "data-migration-pending": !0, className: m.Qs, scrollbarType: n, children: e });
+    m = n(375708),
+    g = n(902626);
+let f = function (e) {
+        let { children: t, scrollbarType: n } = e;
+        return (0, s.jsx)(i.$m, { "data-migration-pending": !0, className: g.Qs, scrollbarType: n, children: t });
     },
-    f = function (t) {
-        let { error: e } = t;
-        return null == e
+    x = function (e) {
+        let { error: t } = e;
+        return null == t
             ? null
             : (0, s.jsx)(o.E, {
-                  className: m.z3,
+                  className: g.z3,
                   variant: "text-sm/normal",
                   color: "text-feedback-critical",
-                  children: e,
+                  children: t,
               });
     },
-    x = function (t) {
-        let { mfaChallenge: e, setSlide: n, trailingButton: a, showConfirm: i = !1, disabled: l, submitting: o } = t,
-            d = e.methods.length > 1;
-        return null != a || d || i
-            ? (0, s.jsx)(r.jl, {
+    p = function (e) {
+        let { mfaChallenge: t, setSlide: n, trailingButton: l, showConfirm: a = !1, disabled: r, submitting: o } = e,
+            u = t.methods.length > 1;
+        return null != l || u || a
+            ? (0, s.jsx)(i.jl, {
                   "data-migration-pending": !0,
-                  children: (0, s.jsxs)(u.e, {
+                  children: (0, s.jsxs)(c.e, {
                       fullWidth: !0,
                       children: [
-                          d &&
-                              (0, s.jsx)(c.$, {
+                          u &&
+                              (0, s.jsx)(d.$, {
                                   variant: "secondary",
-                                  text: g.intl.string(g.t.Tot4EC),
+                                  text: m.intl.string(m.t.Tot4EC),
                                   onClick: () => n("select"),
                               }),
-                          i &&
-                              (0, s.jsx)(c.$, {
+                          a &&
+                              (0, s.jsx)(d.$, {
                                   type: "submit",
                                   variant: "primary",
-                                  text: g.intl.string(g.t["cY+Oob"]),
-                                  disabled: l,
+                                  text: m.intl.string(m.t["cY+Oob"]),
+                                  disabled: r,
                                   loading: o,
                               }),
-                          a,
+                          l,
                       ],
                   }),
               })
             : null;
     },
-    b = function (t) {
-        let { subtitle: e, onClose: n, headerAlignStart: a } = t;
-        return (0, s.jsxs)(r.rQ, {
+    j = function (e) {
+        let { subtitle: t, onClose: n, headerAlignStart: l } = e;
+        return (0, s.jsxs)(i.rQ, {
             "data-migration-pending": !0,
             direction: h.A.Direction.VERTICAL,
-            className: m.wx,
+            className: g.wx,
             separator: !1,
-            align: a ? h.A.Align.START : void 0,
+            align: l ? h.A.Align.START : void 0,
             children: [
-                (0, s.jsx)(d.D, {
+                (0, s.jsx)(u.D, {
                     variant: "heading-xl/semibold",
                     color: "text-strong",
-                    children: g.intl.string(g.t.saHocI),
+                    children: m.intl.string(m.t.saHocI),
                 }),
-                null != e && (0, s.jsx)(d.D, { variant: "heading-lg/semibold", className: m.VA, children: e }),
-                (0, s.jsx)(r.s_, { className: m.b, onClick: n }),
+                null != t && (0, s.jsx)(u.D, { variant: "heading-lg/semibold", className: g.VA, children: t }),
+                (0, s.jsx)(i.s_, { className: g.b, onClick: n }),
             ],
         });
     };
-function j(t) {
-    let { setSlide: e } = t,
-        [n, i] = a.useState(10);
+function b(e) {
+    let { setSlide: t } = e,
+        [n, a] = l.useState(10);
     return (
-        a.useEffect(() => {
+        l.useEffect(() => {
             if (n > 0) {
-                let t = setTimeout(() => {
-                    i((t) => t - 1);
+                let e = setTimeout(() => {
+                    a((e) => e - 1);
                 }, 1e3);
-                return () => clearTimeout(t);
+                return () => clearTimeout(e);
             }
         }, [n]),
         (0, s.jsxs)(s.Fragment, {
             children: [
-                (0, s.jsx)(b, { ...t, subtitle: g.intl.string(g.t.c5J7O0) }),
-                (0, s.jsxs)(p, {
+                (0, s.jsx)(j, { ...e, subtitle: m.intl.string(m.t.c5J7O0) }),
+                (0, s.jsxs)(f, {
                     children: [
-                        (0, s.jsx)(o.E, { variant: "text-md/normal", children: g.intl.format(g.t.Nixbli, {}) }),
+                        (0, s.jsx)(o.E, { variant: "text-md/normal", children: m.intl.format(m.t.Nixbli, {}) }),
                         (0, s.jsx)(o.E, {
                             variant: "text-md/normal",
                             children:
-                                n > 0 ? g.intl.format(g.t.tsWkAE, { countdown: n }) : g.intl.string(g.t["GK/Qfd"]),
+                                n > 0 ? m.intl.format(m.t.tsWkAE, { countdown: n }) : m.intl.string(m.t["GK/Qfd"]),
                         }),
                     ],
                 }),
-                (0, s.jsx)(x, {
-                    ...t,
-                    trailingButton: (0, s.jsx)(c.$, {
+                (0, s.jsx)(p, {
+                    ...e,
+                    trailingButton: (0, s.jsx)(d.$, {
                         variant: "primary",
-                        text: g.intl.string(g.t.oyjspn),
-                        onClick: () => e("backup_ack"),
+                        text: m.intl.string(m.t.oyjspn),
+                        onClick: () => t("backup_ack"),
                         disabled: n > 0,
                         loading: n > 0,
                         fullWidth: !0,
@@ -116,142 +116,142 @@ function j(t) {
 }
 var y = n(533925),
     S = n(292666);
-function C(t) {
-    let { mfaChallenge: e, finish: n, setSlide: i, onClose: r, isSlideReady: l, headerAlignStart: o } = t,
-        [c, u] = a.useState(!1),
-        [d, h] = a.useState(null),
-        [m, j] = a.useState(""),
-        C = a.useRef(null),
-        A = g.intl.string(g.t["C/ZAw/"]),
-        k = g.intl.string(g.t.fZSi1D),
-        w = a.useCallback(
-            (t) => {
-                j(t), h(null);
+function C(e) {
+    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, isSlideReady: r, headerAlignStart: o } = e,
+        [d, c] = l.useState(!1),
+        [u, h] = l.useState(null),
+        [g, b] = l.useState(""),
+        C = l.useRef(null),
+        k = m.intl.string(m.t["C/ZAw/"]),
+        w = m.intl.string(m.t.fZSi1D),
+        v = l.useCallback(
+            (e) => {
+                b(e), h(null);
             },
-            [j, h],
+            [b, h],
         );
     return (
-        a.useEffect(() => {
-            l && C.current?.focus();
-        }, [l]),
+        l.useEffect(() => {
+            r && C.current?.focus();
+        }, [r]),
         (0, s.jsxs)("form", {
-            onSubmit: (t) => {
-                t.preventDefault(),
-                    u(!0),
-                    n({ mfaType: "backup", data: m.replace(/-/g, "") })
-                        .catch((t) => {
-                            h(t.body?.message ?? t.message);
+            onSubmit: (e) => {
+                e.preventDefault(),
+                    c(!0),
+                    n({ mfaType: "backup", data: g.replace(/-/g, "") })
+                        .catch((e) => {
+                            h(e.body?.message ?? e.message);
                         })
                         .finally(() => {
-                            u(!1);
+                            c(!1);
                         });
             },
             children: [
-                (0, s.jsx)(b, { onClose: r, headerAlignStart: o }),
-                (0, s.jsxs)(p, {
+                (0, s.jsx)(j, { onClose: i, headerAlignStart: o }),
+                (0, s.jsxs)(f, {
                     children: [
                         (0, s.jsx)(S.k, {
-                            label: A,
+                            label: k,
                             inputRef: C,
-                            onChange: w,
-                            placeholder: k,
+                            onChange: v,
+                            placeholder: w,
                             maxLength: y.pu,
                             minLength: y.Zp,
-                            value: m,
+                            value: g,
                             spellCheck: "false",
-                            disabled: c,
+                            disabled: d,
                         }),
-                        (0, s.jsx)(f, { error: d }),
+                        (0, s.jsx)(x, { error: u }),
                     ],
                 }),
-                (0, s.jsx)(x, { mfaChallenge: e, setSlide: i, showConfirm: !0, disabled: m.length < 8, submitting: c }),
+                (0, s.jsx)(p, { mfaChallenge: t, setSlide: a, showConfirm: !0, disabled: g.length < 8, submitting: d }),
             ],
         })
     );
 }
-function A(t) {
-    let { mfaChallenge: e, finish: n, setSlide: i, onClose: r, isSlideReady: l, headerAlignStart: o } = t,
-        [c, u] = a.useState(!1),
-        [d, h] = a.useState(null),
-        [m, j] = a.useState(""),
-        y = a.useRef(null);
+function k(e) {
+    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, isSlideReady: r, headerAlignStart: o } = e,
+        [d, c] = l.useState(!1),
+        [u, h] = l.useState(null),
+        [g, b] = l.useState(""),
+        y = l.useRef(null);
     return (
-        a.useEffect(() => {
-            l && y.current?.focus();
-        }, [l]),
+        l.useEffect(() => {
+            r && y.current?.focus();
+        }, [r]),
         (0, s.jsxs)("form", {
-            onSubmit: (t) => {
-                t.preventDefault(),
-                    u(!0),
-                    n({ mfaType: "password", data: m })
-                        .catch((t) => {
-                            h(t.body?.message ?? t.message);
+            onSubmit: (e) => {
+                e.preventDefault(),
+                    c(!0),
+                    n({ mfaType: "password", data: g })
+                        .catch((e) => {
+                            h(e.body?.message ?? e.message);
                         })
                         .finally(() => {
-                            u(!1);
+                            c(!1);
                         });
             },
             children: [
-                (0, s.jsx)(b, { onClose: r, headerAlignStart: o }),
-                (0, s.jsxs)(p, {
+                (0, s.jsx)(j, { onClose: i, headerAlignStart: o }),
+                (0, s.jsxs)(f, {
                     children: [
                         (0, s.jsx)(S.k, {
-                            label: g.intl.string(g.t["CIGa+7"]),
+                            label: m.intl.string(m.t["CIGa+7"]),
                             inputRef: y,
-                            onChange: j,
-                            value: m,
+                            onChange: b,
+                            value: g,
                             type: "password",
                             autoComplete: "password",
                             spellCheck: "false",
-                            disabled: c,
+                            disabled: d,
                         }),
-                        (0, s.jsx)(f, { error: d }),
+                        (0, s.jsx)(x, { error: u }),
                     ],
                 }),
-                (0, s.jsx)(x, {
-                    mfaChallenge: e,
-                    setSlide: i,
+                (0, s.jsx)(p, {
+                    mfaChallenge: t,
+                    setSlide: a,
                     showConfirm: !0,
-                    disabled: 0 === m.length,
-                    submitting: c,
+                    disabled: 0 === g.length,
+                    submitting: d,
                 }),
             ],
         })
     );
 }
-var k = n(939249),
-    w = n(320448),
-    v = n(611248);
-function E(t) {
-    let { mfaChallenge: e, setSlide: n, onClose: a, headerAlignStart: i } = t;
+var w = n(939249),
+    v = n(320448),
+    E = n(611248);
+function A(e) {
+    let { mfaChallenge: t, setSlide: n, onClose: l, headerAlignStart: a } = e;
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(b, { subtitle: g.intl.string(g.t["XQaT+8"]), onClose: a, headerAlignStart: i }),
-            (0, s.jsx)(p, {
-                children: e.methods.map((t) =>
+            (0, s.jsx)(j, { subtitle: m.intl.string(m.t["XQaT+8"]), onClose: l, headerAlignStart: a }),
+            (0, s.jsx)(f, {
+                children: t.methods.map((e) =>
                     (0, s.jsxs)(
-                        k.D,
+                        w.D,
                         {
-                            className: m.Ry,
+                            className: g.Ry,
                             onClick: () => {
-                                n(t.type);
+                                n(e.type);
                             },
                             children: [
                                 (0, s.jsx)(o.E, {
-                                    className: m.zx,
+                                    className: g.zx,
                                     variant: "text-md/semibold",
-                                    children: v.e[t.type],
+                                    children: E.e[e.type],
                                 }),
-                                (0, s.jsx)(w._, {
+                                (0, s.jsx)(v._, {
                                     size: "custom",
                                     color: "currentColor",
                                     width: 20,
                                     height: 20,
-                                    className: m.td,
+                                    className: g.td,
                                 }),
                             ],
                         },
-                        t.type,
+                        e.type,
                     ),
                 ),
             }),
@@ -259,236 +259,236 @@ function E(t) {
     });
 }
 var R = n(636537),
-    N = n(532446),
-    O = n(652215);
-function D(t) {
-    let { mfaChallenge: e, finish: n, setSlide: i, onClose: r, isSlideReady: l, headerAlignStart: o } = t,
-        [u, d] = a.useState(!1),
-        [h, m] = a.useState(null),
-        [j, C] = a.useState(!1),
-        [A, k] = a.useState(null),
-        [w, v] = a.useState(""),
-        E = a.useRef(null);
-    a.useEffect(() => {
-        d(!0),
-            R.Bo.post({ url: O.Rsh.LOGIN_SMS_SEND, body: { ticket: e.ticket }, oldFormErrors: !0, rejectWithError: !1 })
-                .then((t) => {
-                    m(t.body.phone);
+    T = n(532446),
+    N = n(652215);
+function _(e) {
+    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, isSlideReady: r, headerAlignStart: o } = e,
+        [c, u] = l.useState(!1),
+        [h, g] = l.useState(null),
+        [b, C] = l.useState(!1),
+        [k, w] = l.useState(null),
+        [v, E] = l.useState(""),
+        A = l.useRef(null);
+    l.useEffect(() => {
+        u(!0),
+            R.Bo.post({ url: N.Rsh.LOGIN_SMS_SEND, body: { ticket: t.ticket }, oldFormErrors: !0, rejectWithError: !1 })
+                .then((e) => {
+                    g(e.body.phone);
                 })
-                .catch((t) => {
-                    k(t.body?.message ?? t.message);
+                .catch((e) => {
+                    w(e.body?.message ?? e.message);
                 })
                 .finally(() => {
-                    d(!1);
+                    u(!1);
                 });
-    }, [e.ticket]),
-        a.useEffect(() => {
-            l && E.current?.focus();
-        }, [l]);
-    let D = null == h ? g.intl.string(g.t.LQdCQE) : g.intl.formatToPlainString(g.t["8r6h7+"], { phoneNumber: h });
+    }, [t.ticket]),
+        l.useEffect(() => {
+            r && A.current?.focus();
+        }, [r]);
+    let _ = null == h ? m.intl.string(m.t.LQdCQE) : m.intl.formatToPlainString(m.t["8r6h7+"], { phoneNumber: h });
     return (0, s.jsxs)("form", {
-        onSubmit: (t) => {
-            t.preventDefault(),
+        onSubmit: (e) => {
+            e.preventDefault(),
                 C(!0),
-                n({ mfaType: "sms", data: w })
-                    .catch((t) => {
-                        k(t.message ?? t.body?.message);
+                n({ mfaType: "sms", data: v })
+                    .catch((e) => {
+                        w(e.message ?? e.body?.message);
                     })
                     .finally(() => {
                         C(!1);
                     });
         },
         children: [
-            (0, s.jsx)(b, { subtitle: D, onClose: r, headerAlignStart: o }),
-            (0, s.jsxs)(p, {
+            (0, s.jsx)(j, { subtitle: _, onClose: i, headerAlignStart: o }),
+            (0, s.jsxs)(f, {
                 children: [
-                    (0, s.jsxs)(N.M, {
+                    (0, s.jsxs)(T.M, {
                         children: [
                             (0, s.jsx)(S.k, {
-                                label: g.intl.string(g.t.HZPBOd),
-                                inputRef: E,
-                                onChange: v,
-                                placeholder: g.intl.string(g.t.tARzgo),
+                                label: m.intl.string(m.t.HZPBOd),
+                                inputRef: A,
+                                onChange: E,
+                                placeholder: m.intl.string(m.t.tARzgo),
                                 maxLength: 10,
-                                value: w,
+                                value: v,
                                 autoComplete: "one-time-code",
                                 spellCheck: "false",
-                                disabled: j,
+                                disabled: b,
                             }),
-                            (0, s.jsx)(c.$, {
+                            (0, s.jsx)(d.$, {
                                 variant: "secondary",
-                                text: g.intl.string(g.t.ZF29L6),
-                                loading: u,
+                                text: m.intl.string(m.t.ZF29L6),
+                                loading: c,
                                 onClick: () => {
                                     R.Bo.post({
-                                        url: O.Rsh.LOGIN_SMS_SEND,
-                                        body: { ticket: e.ticket },
+                                        url: N.Rsh.LOGIN_SMS_SEND,
+                                        body: { ticket: t.ticket },
                                         oldFormErrors: !0,
                                         rejectWithError: !1,
                                     })
-                                        .then((t) => {
-                                            m(t.body.phone);
+                                        .then((e) => {
+                                            g(e.body.phone);
                                         })
-                                        .catch((t) => {
-                                            k(t.message || t.body?.message);
+                                        .catch((e) => {
+                                            w(e.message || e.body?.message);
                                         });
                                 },
                             }),
                         ],
                     }),
-                    (0, s.jsx)(f, { error: A }),
+                    (0, s.jsx)(x, { error: k }),
                 ],
             }),
-            (0, s.jsx)(x, {
-                mfaChallenge: e,
-                setSlide: i,
+            (0, s.jsx)(p, {
+                mfaChallenge: t,
+                setSlide: a,
                 showConfirm: !0,
-                disabled: w.length !== y.$A,
-                submitting: j,
+                disabled: v.length !== y.$A,
+                submitting: b,
             }),
         ],
     });
 }
-function T(t) {
-    let { mfaChallenge: e, finish: n, setSlide: i, onClose: r, isSlideReady: l, headerAlignStart: o } = t,
-        [c, u] = a.useState(!1),
-        [d, h] = a.useState(null),
-        [m, j] = a.useState(""),
-        C = a.useRef(null);
+function D(e) {
+    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, isSlideReady: r, headerAlignStart: o } = e,
+        [d, c] = l.useState(!1),
+        [u, h] = l.useState(null),
+        [g, b] = l.useState(""),
+        C = l.useRef(null);
     return (
-        a.useEffect(() => {
-            l && C.current?.focus();
-        }, [l]),
+        l.useEffect(() => {
+            r && C.current?.focus();
+        }, [r]),
         (0, s.jsxs)("form", {
-            onSubmit: (t) => {
-                t.preventDefault(),
-                    u(!0),
+            onSubmit: (e) => {
+                e.preventDefault(),
+                    c(!0),
                     h(null),
-                    n({ mfaType: "totp", data: m })
-                        .catch((t) => {
-                            h(t.body?.message ?? t.message);
+                    n({ mfaType: "totp", data: g })
+                        .catch((e) => {
+                            h(e.body?.message ?? e.message);
                         })
                         .finally(() => {
-                            u(!1);
+                            c(!1);
                         });
             },
             children: [
-                (0, s.jsx)(b, { onClose: r, headerAlignStart: o }),
-                (0, s.jsxs)(p, {
+                (0, s.jsx)(j, { onClose: i, headerAlignStart: o }),
+                (0, s.jsxs)(f, {
                     scrollbarType: "none",
                     children: [
                         (0, s.jsx)(S.k, {
-                            label: g.intl.string(g.t.HZPBOd),
+                            label: m.intl.string(m.t.HZPBOd),
                             inputRef: C,
-                            onChange: j,
-                            placeholder: g.intl.string(g.t.tARzgo),
+                            onChange: b,
+                            placeholder: m.intl.string(m.t.tARzgo),
                             maxLength: y.XZ,
                             minLength: y.XZ,
-                            value: m,
+                            value: g,
                             autoComplete: "one-time-code",
                             spellCheck: "false",
-                            disabled: c,
+                            disabled: d,
                         }),
-                        (0, s.jsx)(f, { error: d }),
+                        (0, s.jsx)(x, { error: u }),
                     ],
                 }),
-                (0, s.jsx)(x, {
-                    mfaChallenge: e,
-                    setSlide: i,
+                (0, s.jsx)(p, {
+                    mfaChallenge: t,
+                    setSlide: a,
                     showConfirm: !0,
-                    disabled: m.length !== y.XZ,
-                    submitting: c,
+                    disabled: g.length !== y.XZ,
+                    submitting: d,
                 }),
             ],
         })
     );
 }
-var _ = n(84948),
+var Z = n(84948),
     F = n(293731),
-    J = n(464477),
-    Z = n(723702),
-    K = n(19575);
-function L(t) {
-    let { mfaChallenge: e, finish: n, setSlide: i, onClose: r, headerAlignStart: l } = t,
-        [o, u] = a.useState(!1),
-        [d, h] = a.useState(null),
-        { challenge: m } = e.methods.find((t) => "webauthn" === t.type),
-        j = a.useCallback(async () => {
-            u(!0), h(null);
-            let t = Z.isPlatformEmbedded && K.Ay.supportsFeature(O.BYE.WEBAUTHN) ? K.Ay.webAuthnAuthenticate : F.J;
+    L = n(464477),
+    B = n(723702),
+    M = n(19575);
+function O(e) {
+    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, headerAlignStart: r } = e,
+        [o, c] = l.useState(!1),
+        [u, h] = l.useState(null),
+        { challenge: g } = t.methods.find((e) => "webauthn" === e.type),
+        b = l.useCallback(async () => {
+            c(!0), h(null);
+            let e = B.isPlatformEmbedded && M.Ay.supportsFeature(N.BYE.WEBAUTHN) ? M.Ay.webAuthnAuthenticate : F.J;
             try {
-                let e = await t(m);
+                let t = await e(g);
                 try {
-                    await n({ mfaType: "webauthn", data: e });
-                } catch (t) {
-                    t instanceof R.oh
-                        ? (t.status >= 400 && t.status < 500 && (await _.A.signalUnknownCredential(e)),
-                          h(g.intl.string(g.t.xSCvBf)))
-                        : ((0, J.Os)(t, {}), h(t.message));
+                    await n({ mfaType: "webauthn", data: t });
+                } catch (e) {
+                    e instanceof R.oh
+                        ? (e.status >= 400 && e.status < 500 && (await Z.A.signalUnknownCredential(t)),
+                          h(m.intl.string(m.t.xSCvBf)))
+                        : ((0, L.Os)(e, {}), h(e.message));
                 }
-            } catch (t) {
-                (0, J.Os)(t, { extra: { error_type: "webauthn_api_error" } }), h(g.intl.string(g.t.xSCvBf));
+            } catch (e) {
+                (0, L.Os)(e, { extra: { error_type: "webauthn_api_error" } }), h(m.intl.string(m.t.xSCvBf));
             } finally {
-                u(!1);
+                c(!1);
             }
-        }, [m, n]);
+        }, [g, n]);
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(b, { onClose: r, headerAlignStart: l }),
-            null != d && (0, s.jsx)(p, { children: (0, s.jsx)(f, { error: d }) }),
-            (0, s.jsx)(x, {
-                mfaChallenge: e,
-                setSlide: i,
-                trailingButton: (0, s.jsx)(c.$, {
+            (0, s.jsx)(j, { onClose: i, headerAlignStart: r }),
+            null != u && (0, s.jsx)(f, { children: (0, s.jsx)(x, { error: u }) }),
+            (0, s.jsx)(p, {
+                mfaChallenge: t,
+                setSlide: a,
+                trailingButton: (0, s.jsx)(d.$, {
                     variant: "primary",
-                    text: g.intl.string(g.t.Xr3Eks),
+                    text: m.intl.string(m.t.Xr3Eks),
                     loading: o,
-                    onClick: j,
+                    onClick: b,
                     fullWidth: !0,
                 }),
             }),
         ],
     });
 }
-function B(t) {
-    let { mfaChallenge: e, mfaFinish: n, onEarlyClose: r, onClose: l, headerAlignStart: o, width: c = 440 } = t,
-        [u, d] = a.useState(e.methods[0]?.type ?? "select"),
-        [h, g] = a.useState(u),
-        m = async (t) => {
-            let { mfaType: s, data: a } = t;
-            await n({ mfaType: s, data: a, ticket: e.ticket }), null != l && l();
+function W(e) {
+    let { mfaChallenge: t, mfaFinish: n, onEarlyClose: i, onClose: r, headerAlignStart: o, width: d = 440 } = e,
+        [c, u] = l.useState(t.methods[0]?.type ?? "select"),
+        [h, m] = l.useState(c),
+        g = async (e) => {
+            let { mfaType: s, data: l } = e;
+            await n({ mfaType: s, data: l, ticket: t.ticket }), null != r && r();
         },
-        p = { mfaChallenge: e, finish: m, setSlide: d, onClose: r, headerAlignStart: o };
-    return (0, s.jsxs)(i.t, {
-        activeSlide: u,
-        width: c,
-        onSlideReady: g,
+        f = { mfaChallenge: t, finish: g, setSlide: u, onClose: i, headerAlignStart: o };
+    return (0, s.jsxs)(a.t, {
+        activeSlide: c,
+        width: d,
+        onSlideReady: m,
         children: [
-            (0, s.jsx)(i.q, { id: "select", children: (0, s.jsx)(E, { ...p }) }),
-            (0, s.jsx)(i.q, { id: "webauthn", children: (0, s.jsx)(L, { ...p }) }),
-            (0, s.jsx)(i.q, { id: "totp", children: (0, s.jsx)(T, { ...p, isSlideReady: "totp" === h }) }),
-            (0, s.jsx)(i.q, { id: "sms", children: (0, s.jsx)(D, { ...p, isSlideReady: "sms" === h }) }),
-            (0, s.jsx)(i.q, { id: "backup", children: (0, s.jsx)(j, { ...p }) }),
-            (0, s.jsx)(i.q, { id: "backup_ack", children: (0, s.jsx)(C, { ...p, isSlideReady: "backup_ack" === h }) }),
-            (0, s.jsx)(i.q, { id: "password", children: (0, s.jsx)(A, { ...p, isSlideReady: "password" === h }) }),
+            (0, s.jsx)(a.q, { id: "select", children: (0, s.jsx)(A, { ...f }) }),
+            (0, s.jsx)(a.q, { id: "webauthn", children: (0, s.jsx)(O, { ...f }) }),
+            (0, s.jsx)(a.q, { id: "totp", children: (0, s.jsx)(D, { ...f, isSlideReady: "totp" === h }) }),
+            (0, s.jsx)(a.q, { id: "sms", children: (0, s.jsx)(_, { ...f, isSlideReady: "sms" === h }) }),
+            (0, s.jsx)(a.q, { id: "backup", children: (0, s.jsx)(b, { ...f }) }),
+            (0, s.jsx)(a.q, { id: "backup_ack", children: (0, s.jsx)(C, { ...f, isSlideReady: "backup_ack" === h }) }),
+            (0, s.jsx)(a.q, { id: "password", children: (0, s.jsx)(k, { ...f, isSlideReady: "password" === h }) }),
         ],
     });
 }
-function I(t) {
-    let { mfaChallenge: e, finish: n, transitionState: a, onClose: i } = t;
-    return (0, s.jsx)(r.EO, {
+function X(e) {
+    let { mfaChallenge: t, finish: n, transitionState: l, onClose: a } = e;
+    return (0, s.jsx)(i.EO, {
         "data-migration-pending": !0,
-        transitionState: a,
-        size: r.rI.SMALL,
-        "aria-label": g.intl.string(g.t.saHocI),
+        transitionState: l,
+        size: i.rI.SMALL,
+        "aria-label": m.intl.string(m.t.saHocI),
         parentComponent: "MFAModal",
-        children: (0, s.jsx)(B, { mfaChallenge: e, mfaFinish: n, onClose: i, onEarlyClose: i }),
+        children: (0, s.jsx)(W, { mfaChallenge: t, mfaFinish: n, onClose: a, onEarlyClose: a }),
     });
 }
-function W(t, e, n) {
-    (0, l.openModal)((n) => (0, s.jsx)(I, { finish: e, mfaChallenge: t, ...n }), {
+function $(e, t, n) {
+    (0, r.openModal)((n) => (0, s.jsx)(X, { finish: t, mfaChallenge: e, ...n }), {
         onCloseCallback: () => {
-            n(Error(g.intl.string(g.t.N2yb9a)));
+            n(Error(m.intl.string(m.t.N2yb9a)));
         },
     });
 }

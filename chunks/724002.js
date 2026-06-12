@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { W: () => i });
-var r,
-    i =
-        (((r = {})[(r.ACTIVE = 1)] = "ACTIVE"),
-        (r[(r.INACTIVE = 2)] = "INACTIVE"),
-        (r[(r.PREVIEW = 3)] = "PREVIEW"),
-        (r[(r.NON_STAFF_PREVIEW = 4)] = "NON_STAFF_PREVIEW"),
-        r);
+n.d(t, { W: () => r });
+var i,
+    r =
+        (((i = {})[(i.ACTIVE = 1)] = "ACTIVE"),
+        (i[(i.INACTIVE = 2)] = "INACTIVE"),
+        (i[(i.PREVIEW = 3)] = "PREVIEW"),
+        (i[(i.NON_STAFF_PREVIEW = 4)] = "NON_STAFF_PREVIEW"),
+        i);

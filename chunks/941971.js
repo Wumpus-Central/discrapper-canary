@@ -1,34 +1,34 @@
 "use strict";
 n.d(t, { A: () => d });
-var l = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    a = n(519244),
-    r = n(866323),
-    o = n(568858);
-let c = Object.freeze({ tension: 400, friction: 30 }),
-    u = Object.freeze({ opacity: 0, height: 8, transform: "translateX(-4px) translateZ(0)" });
+var r = n(503698),
+    s = n.n(r),
+    a = n(922139),
+    o = n(866323),
+    l = n(568858);
+let u = Object.freeze({ tension: 400, friction: 30 }),
+    c = Object.freeze({ opacity: 0, height: 8, transform: "translateX(-4px) translateZ(0)" });
 function d(e) {
-    let { selected: t = !1, hovered: n = !1, unread: i = !1, disabled: d = !1, className: h, overlay: m = !1 } = e;
-    (t = !d && t), (n = !d && n), (i = !d && i);
-    let p = { opacity: 1, height: t ? 40 : n ? 20 : 8, transform: "translateX(0) translateZ(0)" },
-        f = (0, r.p)(
-            t || n || i,
+    let { selected: t = !1, hovered: n = !1, unread: r = !1, disabled: d = !1, className: _, overlay: h = !1 } = e;
+    (t = !d && t), (n = !d && n), (r = !d && r);
+    let f = { opacity: 1, height: t ? 40 : n ? 20 : 8, transform: "translateX(0) translateZ(0)" },
+        p = (0, o.p)(
+            t || n || r,
             {
-                config: c,
+                config: u,
                 keys: (e) => (e ? "pill" : "empty"),
-                initial: t || n || i ? p : null,
-                from: u,
-                leave: u,
-                enter: p,
-                update: p,
+                initial: t || n || r ? f : null,
+                from: c,
+                leave: c,
+                enter: f,
+                update: f,
             },
             n || document.hasFocus() ? "animate-always" : "animate-never",
         );
-    return (0, l.jsx)("div", {
-        className: s()(h, o.iE, { [o.Lw]: m }),
+    return (0, i.jsx)("div", {
+        className: s()(_, l.iE, { [l.Lw]: h }),
         "aria-hidden": !0,
-        children: f((e, t) => t && (0, l.jsx)(a.animated.span, { className: o.AS, style: e })),
+        children: p((e, t) => t && (0, i.jsx)(a.animated.span, { className: l.AS, style: e })),
     });
 }

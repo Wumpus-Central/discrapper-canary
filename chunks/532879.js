@@ -1,24 +1,24 @@
-let r = n(4144),
-    i = n(481558);
+let i = n(4144),
+    r = n(481558);
 e.exports = (e, t, n) => {
-    let a = [],
-        s = null,
+    let s = [],
+        a = null,
         o = null,
-        l = e.sort((e, t) => i(e, t, n));
-    for (let e of l) r(e, t, n) ? ((o = e), s || (s = e)) : (o && a.push([s, o]), (o = null), (s = null));
-    s && a.push([s, null]);
-    let c = [];
-    for (let [e, t] of a)
+        l = e.sort((e, t) => r(e, t, n));
+    for (let e of l) i(e, t, n) ? ((o = e), a || (a = e)) : (o && s.push([a, o]), (o = null), (a = null));
+    a && s.push([a, null]);
+    let u = [];
+    for (let [e, t] of s)
         e === t
-            ? c.push(e)
+            ? u.push(e)
             : t || e !== l[0]
               ? t
                   ? e === l[0]
-                      ? c.push(`<=${t}`)
-                      : c.push(`${e} - ${t}`)
-                  : c.push(`>=${e}`)
-              : c.push("*");
-    let u = c.join(" || "),
+                      ? u.push(`<=${t}`)
+                      : u.push(`${e} - ${t}`)
+                  : u.push(`>=${e}`)
+              : u.push("*");
+    let c = u.join(" || "),
         d = "string" == typeof t.raw ? t.raw : String(t);
-    return u.length < d.length ? u : t;
+    return c.length < d.length ? c : t;
 };

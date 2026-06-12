@@ -1,11 +1,11 @@
-E.d(i, { R: () => e, Y: () => A });
-var n = E(17928),
-    S = E(71393),
-    r = E(652215);
-function A(t) {
-    let [i] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [S.A];
-    return !!i.getGuild(t)?.features.has(r.GuildFeatures.COMMUNITY);
+u.d(e, { R: () => a, Y: () => n });
+var i = u(17928),
+    r = u(71393),
+    s = u(652215);
+function n(t) {
+    let [e] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [r.A];
+    return !!e.getGuild(t)?.features.has(s.GuildFeatures.COMMUNITY);
 }
-function e(t) {
-    return (0, n.bG)([S.A], () => A(t, [S.A]), [t]);
+function a(t) {
+    return (0, i.bG)([r.A], () => n(t, [r.A]), [t]);
 }

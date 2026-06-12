@@ -10,15 +10,15 @@ var i = n(636537),
     c = n(927813),
     d = n(652215);
 let _ = 10 * c.A.Millis.MINUTE,
-    f = 10 * c.A.Millis.MINUTE,
-    h = +c.A.Millis.MINUTE,
+    h = 10 * c.A.Millis.MINUTE,
+    f = +c.A.Millis.MINUTE,
     p = {};
 async function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         c = o.default.locale;
     return (
         a.h.dispatch({ type: "APPLICATION_BUILD_FETCH_START", applicationId: e, branchId: t, locale: c }),
-        n && (await (0, r.yy)(Math.random() * h)),
+        n && (await (0, r.yy)(Math.random() * f)),
         i.Bo.get({
             url: d.Rsh.APPLICATION_LIVE_BUILD(e, t),
             query: { platform: (0, u.O)(), locale: c },
@@ -42,7 +42,7 @@ async function E(e, t) {
                 if (404 === i) a.h.dispatch({ type: "APPLICATION_BUILD_NOT_FOUND", applicationId: e, branchId: t });
                 else
                     null == p[t] && (p[t] = new s.Ep()),
-                        p[t].start(_ + Math.random() * f, () => {
+                        p[t].start(_ + Math.random() * h, () => {
                             null != l.A.getLibraryApplication(e, t) && E(e, t);
                         });
             },

@@ -1,17 +1,17 @@
-s.d(n, { f: () => l });
-var t = s(64700),
-    r = s(166532),
-    i = s(566980);
-function l(e) {
-    let { purchaseState: n, currentStep: s, initialScene: l, purchaseScene: a, errorScene: c, successScene: u } = e,
-        [d, o] = (0, t.useState)(l);
+t.d(s, { f: () => a });
+var n = t(64700),
+    i = t(166532),
+    r = t(566980);
+function a(e) {
+    let { purchaseState: s, currentStep: t, initialScene: a, purchaseScene: l, errorScene: c, successScene: u } = e,
+        [o, d] = (0, n.useState)(a);
     return (
-        (0, t.useEffect)(() => {
-            n === i.h.PURCHASING ? o(a) : n === i.h.FAIL && o(c);
-        }, [n, a, c]),
-        (0, t.useEffect)(() => {
-            s === r.pn.CONFIRM && o(u);
-        }, [s, u]),
-        [d, o]
+        (0, n.useEffect)(() => {
+            s === r.h.PURCHASING ? d(l) : s === r.h.FAIL && d(c);
+        }, [s, l, c]),
+        (0, n.useEffect)(() => {
+            t === i.pn.CONFIRM && d(u);
+        }, [t, u]),
+        [o, d]
     );
 }

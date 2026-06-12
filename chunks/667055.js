@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     iE: "wrapper__5c108",
     Td: "cardHeaderImg__5c108",
     zH: "details__5c108",

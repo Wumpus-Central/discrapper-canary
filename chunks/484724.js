@@ -16,8 +16,8 @@ var i = n(627968),
     x = n(285059),
     f = n(698441),
     E = n(496092),
-    C = n(427080),
-    I = n(652215);
+    I = n(427080),
+    C = n(652215);
 function v(e) {
     let { code: t } = e,
         [n, v, _] = t.split("-"),
@@ -44,7 +44,7 @@ function v(e) {
                 x.A.getGuildEventUserCounts(n, v, null != _ ? [_] : []),
                 x.A.getGuildEventsForCurrentUser(n);
         }, [v, n, N?.id, _]),
-        (0, i.jsx)(C.Ay, {
+        (0, i.jsx)(I.Ay, {
             guild: T,
             channel: y,
             guildScheduledEvent: N,
@@ -52,8 +52,8 @@ function v(e) {
             onAcceptInstantInvite: () => {
                 if ((0, c.g)({ guild: T, isMember: S, analyticsLocations: j }) === c.W.PROCEED) {
                     if ((0, d.V)(n)) return void (0, o.Ze)(n);
-                    r.A.joinGuild(n, { source: I.Q4z.GUILD_EVENT_EMBED }).catch((e) => {
-                        e.body?.code === I.t02.UNKNOWN_GUILD && (0, u.showInaccessibleLinkModal)({ kind: "channel" });
+                    r.A.joinGuild(n, { source: C.Q4z.GUILD_EVENT_EMBED }).catch((e) => {
+                        e.body?.code === C.t02.UNKNOWN_GUILD && (0, u.showInaccessibleLinkModal)({ kind: "channel" });
                     });
                 }
             },

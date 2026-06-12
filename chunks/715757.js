@@ -1,36 +1,36 @@
-n.d(t, { Qo: () => h, V: () => g, W1: () => m, ml: () => A, vb: () => p });
-var l = n(64700),
-    i = n(17928),
-    s = n(720149),
-    a = n(803306),
-    r = n(71393),
-    o = n(232835),
-    c = n(376708),
-    d = n(272720),
-    u = n(56595);
-function h(e) {
-    return (0, i.bG)([r.A], () => {
+u.d(n, { Qo: () => p, V: () => h, W1: () => f, ml: () => g, vb: () => m });
+var t = u(64700),
+    l = u(17928),
+    s = u(720149),
+    r = u(803306),
+    i = u(71393),
+    a = u(232835),
+    c = u(892340),
+    d = u(272720),
+    o = u(56595);
+function p(e) {
+    return (0, l.bG)([i.A], () => {
         if (null == e) return !1;
-        let t = r.A.getGuild(e);
-        return null != t && (0, u.A)(t) && null != (0, d.A)(t);
+        let n = i.A.getGuild(e);
+        return null != n && (0, o.A)(n) && null != (0, d.A)(n);
     });
 }
-function g(e) {
+function h(e) {
     return (0, c.uW)(e);
 }
-function m(e) {
+function f(e) {
     return (0, c.xJ)(e);
 }
-function A(e) {
-    let { messageReference: t } = e,
-        n = (0, i.bG)([o.A], () => (null != t ? o.A.getMessage(t.channel_id, t.message_id) : null));
-    (0, l.useEffect)(() => {
-        null == n &&
-            null != t &&
-            s.A.fetchMessages({ channelId: t.channel_id, jump: { messageId: t.message_id }, limit: 10 });
-    }, [n, t]);
+function g(e) {
+    let { messageReference: n } = e,
+        u = (0, l.bG)([a.A], () => (null != n ? a.A.getMessage(n.channel_id, n.message_id) : null));
+    (0, t.useEffect)(() => {
+        null == u &&
+            null != n &&
+            s.A.fetchMessages({ channelId: n.channel_id, jump: { messageId: n.message_id }, limit: 10 });
+    }, [u, n]);
 }
-function p(e) {
-    let t = e?.messageSnapshots[0]?.moderatorReport?.reported_user_id;
-    null != t && (0, a.wz)(t);
+function m(e) {
+    let n = e?.messageSnapshots[0]?.moderatorReport?.reported_user_id;
+    null != n && (0, r.wz)(n);
 }

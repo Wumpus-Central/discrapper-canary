@@ -1,54 +1,54 @@
 "use strict";
-let r;
-n.d(t, { Cl: () => R, K7: () => b, ME: () => O, lb: () => v, pP: () => N });
-var i = n(89494),
+let i;
+n.d(t, { Cl: () => C, K7: () => b, ME: () => v, lb: () => R, pP: () => N });
+var r = n(89494),
     s = n(408713),
     a = n(23975),
     o = n(297987),
     l = n(64700),
     u = n(341221);
-let d = null,
-    c = new Set(),
+let c = null,
+    d = new Set(),
     _ = new Map(),
+    h = !1,
     f = !1,
-    E = !1,
-    h = { Tab: !0, Escape: !0 };
-function p(e, t) {
-    for (let n of c) n(e, t);
+    p = { Tab: !0, Escape: !0 };
+function E(e, t) {
+    for (let n of d) n(e, t);
 }
 function m(e) {
-    (f = !0),
+    (h = !0),
         e.metaKey ||
             (!(0, s.cX)() && e.altKey) ||
             e.ctrlKey ||
             "Control" === e.key ||
             "Shift" === e.key ||
             "Meta" === e.key ||
-            ((d = "keyboard"), p("keyboard", e));
+            ((c = "keyboard"), E("keyboard", e));
 }
 function g(e) {
-    (d = "pointer"), ("mousedown" === e.type || "pointerdown" === e.type) && ((f = !0), p("pointer", e));
+    (c = "pointer"), ("mousedown" === e.type || "pointerdown" === e.type) && ((h = !0), E("pointer", e));
 }
 function A(e) {
-    (0, a.Y)(e) && ((f = !0), (d = "virtual"));
+    (0, a.Y)(e) && ((h = !0), (c = "virtual"));
 }
 function I(e) {
     e.target !== window &&
         e.target !== document &&
-        !i.lR &&
+        !r.lR &&
         e.isTrusted &&
-        (f || E || ((d = "virtual"), p("virtual", e)), (f = !1), (E = !1));
+        (h || f || ((c = "virtual"), E("virtual", e)), (h = !1), (f = !1));
 }
 function T() {
-    i.lR || ((f = !1), (E = !0));
+    r.lR || ((h = !1), (f = !0));
 }
 function S(e) {
     if ("u" < typeof window || "u" < typeof document || _.get((0, o.mD)(e))) return;
     let t = (0, o.mD)(e),
         n = (0, o.TW)(e),
-        r = t.HTMLElement.prototype.focus;
+        i = t.HTMLElement.prototype.focus;
     (t.HTMLElement.prototype.focus = function () {
-        (f = !0), r.apply(this, arguments);
+        (h = !0), i.apply(this, arguments);
     }),
         n.addEventListener("keydown", m, !0),
         n.addEventListener("keyup", m, !0),
@@ -66,46 +66,46 @@ function S(e) {
             },
             { once: !0 },
         ),
-        _.set(t, { focus: r });
+        _.set(t, { focus: i });
 }
 let y = (e, t) => {
     let n = (0, o.mD)(e),
-        r = (0, o.TW)(e);
-    t && r.removeEventListener("DOMContentLoaded", t),
+        i = (0, o.TW)(e);
+    t && i.removeEventListener("DOMContentLoaded", t),
         _.has(n) &&
             ((n.HTMLElement.prototype.focus = _.get(n).focus),
-            r.removeEventListener("keydown", m, !0),
-            r.removeEventListener("keyup", m, !0),
-            r.removeEventListener("click", A, !0),
+            i.removeEventListener("keydown", m, !0),
+            i.removeEventListener("keyup", m, !0),
+            i.removeEventListener("click", A, !0),
             n.removeEventListener("focus", I, !0),
             n.removeEventListener("blur", T, !1),
             "u" > typeof PointerEvent &&
-                (r.removeEventListener("pointerdown", g, !0),
-                r.removeEventListener("pointermove", g, !0),
-                r.removeEventListener("pointerup", g, !0)),
+                (i.removeEventListener("pointerdown", g, !0),
+                i.removeEventListener("pointermove", g, !0),
+                i.removeEventListener("pointerup", g, !0)),
             _.delete(n));
 };
 function N() {
-    return "pointer" !== d;
-}
-function O() {
-    return d;
-}
-function R(e) {
-    (d = e), p(e, null);
+    return "pointer" !== c;
 }
 function v() {
+    return c;
+}
+function C(e) {
+    (c = e), E(e, null);
+}
+function R() {
     S();
-    let [e, t] = (0, l.useState)(d);
+    let [e, t] = (0, l.useState)(c);
     return (
         (0, l.useEffect)(() => {
             let e = () => {
-                t(d);
+                t(c);
             };
             return (
-                c.add(e),
+                d.add(e),
                 () => {
-                    c.delete(e);
+                    d.delete(e);
                 }
             );
         }, []),
@@ -113,44 +113,44 @@ function v() {
     );
 }
 "u" > typeof document &&
-    ("loading" !== (r = (0, o.TW)(void 0)).readyState
+    ("loading" !== (i = (0, o.TW)(void 0)).readyState
         ? S(void 0)
-        : r.addEventListener("DOMContentLoaded", () => {
+        : i.addEventListener("DOMContentLoaded", () => {
               S(void 0);
           }));
-let C = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
+let O = new Set(["checkbox", "radio", "range", "color", "file", "image", "button", "submit", "reset"]);
 function b(e, t, n) {
     S(),
         (0, l.useEffect)(() => {
-            let t = (t, r) => {
-                var i;
-                let s, a, l, u, d;
-                (i = !!(null == n ? void 0 : n.isTextInput)),
-                    (s = (0, o.TW)(null == r ? void 0 : r.target)),
+            let t = (t, i) => {
+                var r;
+                let s, a, l, u, c;
+                (r = !!(null == n ? void 0 : n.isTextInput)),
+                    (s = (0, o.TW)(null == i ? void 0 : i.target)),
                     (a =
                         "u" > typeof window
-                            ? (0, o.mD)(null == r ? void 0 : r.target).HTMLInputElement
+                            ? (0, o.mD)(null == i ? void 0 : i.target).HTMLInputElement
                             : HTMLInputElement),
                     (l =
                         "u" > typeof window
-                            ? (0, o.mD)(null == r ? void 0 : r.target).HTMLTextAreaElement
+                            ? (0, o.mD)(null == i ? void 0 : i.target).HTMLTextAreaElement
                             : HTMLTextAreaElement),
-                    (u = "u" > typeof window ? (0, o.mD)(null == r ? void 0 : r.target).HTMLElement : HTMLElement),
-                    (d = "u" > typeof window ? (0, o.mD)(null == r ? void 0 : r.target).KeyboardEvent : KeyboardEvent),
-                    ((i =
-                        i ||
-                        (s.activeElement instanceof a && !C.has(s.activeElement.type)) ||
+                    (u = "u" > typeof window ? (0, o.mD)(null == i ? void 0 : i.target).HTMLElement : HTMLElement),
+                    (c = "u" > typeof window ? (0, o.mD)(null == i ? void 0 : i.target).KeyboardEvent : KeyboardEvent),
+                    ((r =
+                        r ||
+                        (s.activeElement instanceof a && !O.has(s.activeElement.type)) ||
                         s.activeElement instanceof l ||
                         (s.activeElement instanceof u && s.activeElement.isContentEditable)) &&
                         "keyboard" === t &&
-                        r instanceof d &&
-                        !h[r.key]) ||
+                        i instanceof c &&
+                        !p[i.key]) ||
                         e(N());
             };
             return (
-                c.add(t),
+                d.add(t),
                 () => {
-                    c.delete(t);
+                    d.delete(t);
                 }
             );
         }, t);

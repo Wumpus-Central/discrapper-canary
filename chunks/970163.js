@@ -10,7 +10,7 @@ var i = n(562708),
     c = n(346542),
     d = n(172799),
     _ = n(652215);
-function f(e) {
+function h(e) {
     if (null == e) return null;
     if (e.target_type === d.yV.STREAM) return _.G2g.STREAM;
     if (e.target_type === d.yV.EMBEDDED_APPLICATION) return _.G2g.APPLICATION;
@@ -26,13 +26,13 @@ function f(e) {
             return String(t);
     }
 }
-let h = new Map();
+let f = new Map();
 function p(e, t, n) {
     if (
         (o.default.track(_.HAw.INVITE_OPENED, { invite_code: e, invite_instance_id: n?.inviteInstanceId ?? null }),
-        h.has(e))
+        f.has(e))
     )
-        return h.get(e);
+        return f.get(e);
     let c = (0, u.y$)(e),
         d = {
             inputValue: n?.inputValue,
@@ -64,7 +64,7 @@ function p(e, t, n) {
                         size_total: i?.approximate_member_count,
                         size_online: i?.approximate_presence_count,
                         destination_user_id: i?.target_user?.id,
-                        invite_type: f(i),
+                        invite_type: h(i),
                         user_banned: o,
                         user_is_member: null != a.A.getGuild(i?.guild?.id),
                     });
@@ -92,7 +92,7 @@ function p(e, t, n) {
                                     size_total: r.approximate_member_count,
                                     size_online: r.approximate_presence_count,
                                     destination_user_id: null != r.target_user ? r.target_user.id : null,
-                                    invite_type: f(r),
+                                    invite_type: h(r),
                                     user_is_member: null != a.A.getGuild(r?.guild?.id),
                                     invite_instance_id: n?.inviteInstanceId ?? null,
                                 },
@@ -124,7 +124,7 @@ function p(e, t, n) {
                 },
             )
             .finally(() => {
-                h.delete(e);
+                f.delete(e);
             });
-    return h.set(e, p), p;
+    return f.set(e, p), p;
 }

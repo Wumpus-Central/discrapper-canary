@@ -2,8 +2,8 @@
 n.d(t, {
     JM: () => l,
     Js: () => c,
-    Jx: () => f,
-    Xm: () => h,
+    Jx: () => h,
+    Xm: () => f,
     YT: () => o,
     fx: () => _,
     up: () => d,
@@ -88,10 +88,10 @@ function _(e) {
             return a.intl.string(a.t.Hufmss);
     }
 }
-function f(e) {
+function h(e) {
     return e.ctaConfig.link;
 }
-let h = (e, t) => {
+let f = (e, t) => {
     (0, r.Y5)({
         questId: e,
         questContent: t.content,

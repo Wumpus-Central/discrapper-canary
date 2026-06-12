@@ -1,4 +1,4 @@
 "use strict";
-n.d(t, { i: () => i });
-var r,
-    i = (((r = {})[(r.USER = 100)] = "USER"), (r[(r.STREAM = 18)] = "STREAM"), r);
+n.d(t, { i: () => r });
+var i,
+    r = (((i = {})[(i.USER = 100)] = "USER"), (i[(i.STREAM = 18)] = "STREAM"), i);

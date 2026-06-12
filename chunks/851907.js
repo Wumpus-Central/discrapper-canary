@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { Ay: () => E, LU: () => h, xi: () => m });
+n.d(t, { Ay: () => h, LU: () => f, xi: () => p });
 var i = n(17928),
     r = n(587895),
     s = n(20015),
     a = n(567249),
     o = n(646865),
     l = n(933958),
-    _ = n(969151),
-    d = n(108959),
-    u = n(5867),
-    c = n(652215);
-function E(e) {
+    u = n(969151),
+    c = n(108959),
+    d = n(5867),
+    _ = n(652215);
+function h(e) {
     let { application: t, channelId: n } = e;
-    if (null != t && (0, s.n)(t, c.gfo.EMBEDDED)) {
-        if (a.A.getWindowOpen(c.MLl.ACTIVITY_POPOUT) && l.Ay.getActivityPanelMode() === u.Gd.ACTIVITY_POPOUT_WINDOW)
-            return c.MLl.ACTIVITY_POPOUT;
-        if (a.A.getWindowOpen(c.MLl.CHANNEL_CALL_POPOUT) && (0, d.A)(n) && !(0, o.f)())
-            return c.MLl.CHANNEL_CALL_POPOUT;
+    if (null != t && (0, s.n)(t, _.gfo.EMBEDDED)) {
+        if (a.A.getWindowOpen(_.MLl.ACTIVITY_POPOUT) && l.Ay.getActivityPanelMode() === d.Gd.ACTIVITY_POPOUT_WINDOW)
+            return _.MLl.ACTIVITY_POPOUT;
+        if (a.A.getWindowOpen(_.MLl.CHANNEL_CALL_POPOUT) && (0, c.A)(n) && !(0, o.f)())
+            return _.MLl.CHANNEL_CALL_POPOUT;
     }
 }
-function h(e) {
+function f(e) {
     let { applicationId: t } = e,
         n = l.Ay.getCurrentEmbeddedActivity();
     if (null == n || n.applicationId !== t) return;
     let i = r.A.getApplication(t);
-    if (null != i) return E({ application: i, channelId: (0, _.H)(n.location) });
+    if (null != i) return h({ application: i, channelId: (0, u.H)(n.location) });
 }
-function m(e) {
+function p(e) {
     let { channelId: t } = e;
     return (0, i.bG)([a.A, l.Ay, r.A], () => {
         let e = (function (e) {
             let { channelId: t, EmbeddedActivitiesStore: n, ApplicationStore: i } = e,
                 r = n.getSelfEmbeddedActivityForChannel(t),
                 s = i.getApplication(r?.applicationId);
-            if (null != s) return E({ application: s, channelId: t });
+            if (null != s) return h({ application: s, channelId: t });
         })({
             channelId: t ?? l.Ay.getConnectedActivityChannelId(),
             EmbeddedActivitiesStore: l.Ay,

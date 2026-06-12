@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = {
+n.d(t, { A: () => r });
+var i = {
     lessThanXSeconds: { one: "less than a second", other: "less than {{count}} seconds" },
     xSeconds: { one: "1 second", other: "{{count}} seconds" },
     halfAMinute: "half a minute",
@@ -18,14 +18,14 @@ var r = {
     overXYears: { one: "over 1 year", other: "over {{count}} years" },
     almostXYears: { one: "almost 1 year", other: "almost {{count}} years" },
 };
-let i = function (e, t, n) {
-    var i,
-        a = r[e];
+let r = function (e, t, n) {
+    var r,
+        s = i[e];
     if (
-        ((i = "string" == typeof a ? a : 1 === t ? a.one : a.other.replace("{{count}}", t.toString())),
+        ((r = "string" == typeof s ? s : 1 === t ? s.one : s.other.replace("{{count}}", t.toString())),
         null != n && n.addSuffix)
     )
-        if (n.comparison && n.comparison > 0) return "in " + i;
-        else return i + " ago";
-    return i;
+        if (n.comparison && n.comparison > 0) return "in " + r;
+        else return r + " ago";
+    return r;
 };

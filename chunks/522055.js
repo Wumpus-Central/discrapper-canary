@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(17928),
     r = n(228366),
     s = n(410212),
     a = n(532555);
 let o = {},
     l = { catalog: {}, hasFetchedCatalog: !1, catalogLastFetchedAt: void 0 };
-function _(e) {
+function u(e) {
     return null == o[e] && (o[e] = { catalog: {}, instances: {}, instructions: {}, entitlements: {} }), o[e];
 }
-function d(e, t) {
+function c(e, t) {
     return Object.values(t).reduce((e, t) => e + ((0, s.A)(t) ?? 0), 0);
 }
-function u(e) {
+function d(e) {
     let { guildId: t, gameServer: n } = e,
-        i = _(t);
+        i = u(t);
     o = { ...o, [t]: { ...i, instances: { ...i.instances, [n.id]: (0, a.A)(n) } } };
 }
-function c(e, t) {
-    let n = d(e, t.entitlements);
+function _(e, t) {
+    let n = c(e, t.entitlements);
     o = { ...o, [e]: { ...t, appliedBoosts: n } };
 }
-class E extends i.Ay.PersistedStore {
+class h extends i.Ay.PersistedStore {
     static displayName = "GameServerStore";
     static persistKey = "GameServerStore";
     initialize(e) {
@@ -64,13 +64,13 @@ class E extends i.Ay.PersistedStore {
         return null == e || e + 864e5 < Date.now();
     }
 }
-let h = new E(r.h, {
+let f = new h(r.h, {
     LOGOUT: function () {
         (o = {}), (l = { catalog: {}, hasFetchedCatalog: !1, catalogLastFetchedAt: void 0 });
     },
     GAME_SERVER_FETCH_CATALOG_SUCCESS: function (e) {
         let { guildId: t, catalog: n } = e;
-        o = { ...o, [t]: { ..._(t), catalog: n, hasFetchedCatalog: !0, catalogLastFetchedAt: Date.now() } };
+        o = { ...o, [t]: { ...u(t), catalog: n, hasFetchedCatalog: !0, catalogLastFetchedAt: Date.now() } };
     },
     GAME_SERVER_FETCH_GLOBAL_CATALOG_SUCCESS: function (e) {
         let { catalog: t } = e;
@@ -78,45 +78,45 @@ let h = new E(r.h, {
     },
     GAME_SERVER_FETCH_INSTANCES_SUCCESS: function (e) {
         let { guildId: t, instances: n } = e;
-        o = { ...o, [t]: { ..._(t), instances: n, hasFetchedInstances: !0, instancesLastFetchedAt: Date.now() } };
+        o = { ...o, [t]: { ...u(t), instances: n, hasFetchedInstances: !0, instancesLastFetchedAt: Date.now() } };
     },
     GAME_SERVER_FETCH_GAME_INSTRUCTIONS_SUCCESS: function (e) {
         let { guildId: t, skuId: n, instructions: i } = e;
-        o = { ...o, [t]: { ..._(t), instructions: { ..._(t).instructions, [n]: i } } };
+        o = { ...o, [t]: { ...u(t), instructions: { ...u(t).instructions, [n]: i } } };
     },
     GAME_SERVER_UPDATE_INSTANCE_SUCCESS: function (e) {
         let { guildId: t, instance: n } = e,
-            i = _(t);
+            i = u(t);
         o = { ...o, [t]: { ...i, instances: { ...i.instances, [n.id]: n } } };
     },
     GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, unlockedGameServers: n } = e,
-            i = d(t, n);
-        o = { ...o, [t]: { ..._(t), entitlements: n, appliedBoosts: i } };
+            i = c(t, n);
+        o = { ...o, [t]: { ...u(t), entitlements: n, appliedBoosts: i } };
     },
-    GAME_SERVER_CREATE: u,
-    GAME_SERVER_UPDATE: u,
+    GAME_SERVER_CREATE: d,
+    GAME_SERVER_UPDATE: d,
     GAME_SERVER_DELETE: function (e) {
         let { guildId: t, gameServerId: n } = e,
-            i = _(t);
+            i = u(t);
         delete i.instances[n], (o = { ...o, [t]: { ...i } });
     },
     GUILD_POWERUP_ENTITLEMENTS_CREATE: function (e) {
         let { guildId: t, entitlements: n } = e,
-            i = _(t);
+            i = u(t);
         n
             .filter((e) => e.sku?.tenant_metadata?.guild_monetization?.game_server != null)
             .forEach((e) => {
                 i.entitlements[e.id] = e;
             }),
-            c(t, i);
+            _(t, i);
     },
     GUILD_POWERUP_ENTITLEMENTS_DELETE: function (e) {
         let { guildId: t, entitlements: n } = e,
-            i = _(t);
+            i = u(t);
         n.forEach((e) => {
             delete i.entitlements[e.id];
         }),
-            c(t, i);
+            _(t, i);
     },
 });

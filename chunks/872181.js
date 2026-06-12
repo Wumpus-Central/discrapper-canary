@@ -1,31 +1,31 @@
 "use strict";
-var r,
-    i = n(860511),
+var i,
+    r = n(860511),
     s = n(985848),
     a = n(339626),
     o = n(676528),
     l = n(65978),
     u = n(192819),
-    d = n(627),
-    c = i.Function,
+    c = n(627),
+    d = r.Function,
     _ =
         /MSIE .\./.test(l) ||
         ("BUN" === o &&
-            ((r = i.Bun.version.split(".")).length < 3 ||
-                ("0" === r[0] && (r[1] < 3 || ("3" === r[1] && "0" === r[2])))));
+            ((i = r.Bun.version.split(".")).length < 3 ||
+                ("0" === i[0] && (i[1] < 3 || ("3" === i[1] && "0" === i[2])))));
 e.exports = function (e, t) {
     var n = t ? 2 : 1;
     return _
-        ? function (r, i) {
-              var o = d(arguments.length, 1) > n,
-                  l = a(r) ? r : c(r),
+        ? function (i, r) {
+              var o = c(arguments.length, 1) > n,
+                  l = a(i) ? i : d(i),
                   _ = o ? u(arguments, n) : [],
-                  f = o
+                  h = o
                       ? function () {
                             s(l, this, _);
                         }
                       : l;
-              return t ? e(f, i) : e(f);
+              return t ? e(h, r) : e(h);
           }
         : e;
 };

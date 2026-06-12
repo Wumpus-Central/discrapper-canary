@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Wd: () => p, Ay: () => E, J$: () => h });
+n.d(t, { Wd: () => p, Ay: () => E, J$: () => f });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -41,7 +41,7 @@ class _ extends r.Component {
         return (0, i.jsx)(e.Provider, { value: this.getContextValue(n), children: t });
     }
 }
-let f = (e) => {
+let h = (e) => {
     let { layerContext: t, className: n } = e,
         [, s] = r.useContext(t),
         o = r.useCallback(
@@ -52,7 +52,7 @@ let f = (e) => {
         );
     return (0, i.jsx)("div", { className: a()(d, n), ref: o });
 };
-function h(e) {
+function f(e) {
     let t = (0, l.p3)(e, c.n7);
     if ((null == t && (t = (0, l.wB)(e, u.IP)), null == t)) throw Error("Unexpected missing parent container");
     return t;
@@ -71,7 +71,7 @@ function E(e) {
     let t = r.createContext([null, () => {}]),
         n = {
             LayerProvider: (e) => (0, i.jsx)(_, { layerContext: t, ...e }),
-            LayerContainer: (e) => (0, i.jsx)(f, { layerContext: t, ...e }),
+            LayerContainer: (e) => (0, i.jsx)(h, { layerContext: t, ...e }),
             Layer: (e) => (0, i.jsx)(p, { layerContext: t, ...e }),
             layerContext: t,
         };

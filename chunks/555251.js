@@ -1,52 +1,52 @@
-e.d(a, { default: () => x });
-var i = e(627968),
-    s = e(64700),
-    n = e(189213),
-    r = e(778712),
-    l = e(834730),
-    c = e(656925),
-    o = e(985018),
-    d = e(918684);
-function x(t) {
-    let { avatarId: a, storageHash: e, avatarDescription: x, onConfirmDelete: u, onClose: h, ...f } = t,
-        [m, v] = s.useState(!1),
-        { avatarSrc: p, eventHandlers: y } = (0, c.A)({ avatarId: a, storageHash: e, size: r._3.SIZE_120 }),
-        { onMouseEnter: _, onMouseLeave: C } = y,
-        E = s.useCallback(async () => {
+s.d(i, { default: () => u });
+var e = s(627968),
+    a = s(64700),
+    n = s(189213),
+    l = s(778712),
+    r = s(834730),
+    c = s(656925),
+    o = s(375708),
+    d = s(918684);
+function u(t) {
+    let { avatarId: i, storageHash: s, avatarDescription: u, onConfirmDelete: x, onClose: h, ...m } = t,
+        [p, v] = a.useState(!1),
+        { avatarSrc: y, eventHandlers: b } = (0, c.A)({ avatarId: i, storageHash: s, size: l._3.SIZE_120 }),
+        { onMouseEnter: g, onMouseLeave: k } = b,
+        E = a.useCallback(async () => {
             v(!0);
             try {
-                await u();
+                await x();
             } catch (t) {
             } finally {
                 v(!1);
             }
             h();
-        }, [u, h]);
-    return (0, i.jsx)(n.Modal, {
+        }, [x, h]);
+    return (0, e.jsx)(n.Modal, {
         size: "sm",
         title: o.intl.string(o.t.rfaLTH),
         subtitle: o.intl.string(o.t.EKmxKc),
         actions: [
-            { text: o.intl.string(o.t["ETE/oC"]), variant: "secondary", onClick: h, disabled: m },
-            { text: o.intl.string(o.t.Lh0uyy), variant: "critical-primary", onClick: E, loading: m },
+            { text: o.intl.string(o.t["ETE/oC"]), variant: "secondary", onClick: h, disabled: p },
+            { text: o.intl.string(o.t.Lh0uyy), variant: "critical-primary", onClick: E, loading: p },
         ],
         onClose: h,
-        ...f,
-        children: (0, i.jsxs)("div", {
+        ...m,
+        children: (0, e.jsxs)("div", {
             className: d.jE,
             children: [
-                (0, i.jsx)("div", {
-                    onMouseEnter: _,
-                    onMouseLeave: C,
+                (0, e.jsx)("div", {
+                    onMouseEnter: g,
+                    onMouseLeave: k,
                     className: d.H,
-                    children: (0, i.jsx)("img", { src: p, alt: x, className: d.my }),
+                    children: (0, e.jsx)("img", { src: y, alt: u, className: d.my }),
                 }),
-                (0, i.jsx)(l.E, {
+                (0, e.jsx)(r.E, {
                     variant: "eyebrow",
                     color: "text-feedback-positive",
                     children: o.intl.string(o.t["2Ld8DM"]),
                 }),
-                (0, i.jsx)(l.E, {
+                (0, e.jsx)(r.E, {
                     variant: "text-xs/normal",
                     color: "text-subtle",
                     children: o.intl.string(o.t.Oe0xqt),

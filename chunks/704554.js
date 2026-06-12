@@ -1,106 +1,106 @@
-n.d(t, { RT: () => d }), n(323874), n(14289), n(35956);
-var a = n(64700),
-    l = n(812729),
-    i = n.n(l),
-    r = n(735438),
-    s = n(403362),
-    u = n(379078);
-let o = new Worker(new URL("/assets/" + n.u("83450"), n.b));
-function d(e, t, n, l) {
-    let d = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
-        c = a.useRef(null),
-        m = a.useRef(null),
-        g = a.useRef(n),
-        { searchStringGenerator: f } = l,
-        p = (function (e) {
+r.d(t, { RT: () => a }), r(323874), r(14289), r(35956);
+var u = r(64700),
+    n = r(812729),
+    s = r.n(n),
+    c = r(735438),
+    i = r(403362),
+    l = r(379078);
+let f = new Worker(new URL("/assets/" + r.u("85220"), r.b));
+function a(e, t, r, n) {
+    let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        d = u.useRef(null),
+        o = u.useRef(null),
+        p = u.useRef(r),
+        { searchStringGenerator: h } = n,
+        m = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                [n, l] = a.useState(e),
-                r = a.useRef(e);
+                [r, n] = u.useState(e),
+                c = u.useRef(e);
             return (
-                a.useEffect(() => {
-                    r.current = e;
+                u.useEffect(() => {
+                    c.current = e;
                 }, [e]),
-                a.useEffect(() => {
-                    l((e) => {
-                        let t = r.current;
-                        return i()(e, t) ? e : t;
+                u.useEffect(() => {
+                    n((e) => {
+                        let t = c.current;
+                        return s()(e, t) ? e : t;
                     });
                 }, t),
-                n
+                r
             );
-        })(t.map(f), [t, f, ...d]),
-        h = (function (e) {
+        })(t.map(h), [t, h, ...a]),
+        E = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
-                [n, l] = a.useState(e),
-                r = a.useRef(e);
+                [r, n] = u.useState(e),
+                c = u.useRef(e);
             return (
-                a.useEffect(() => {
-                    r.current = e;
+                u.useEffect(() => {
+                    c.current = e;
                 }, [e]),
-                a.useEffect(() => {
-                    l((e) => {
-                        let t = r.current;
-                        return i()(e, t) ? e : t;
+                u.useEffect(() => {
+                    n((e) => {
+                        let t = c.current;
+                        return s()(e, t) ? e : t;
                     });
                 }, t),
-                n
+                r
             );
         })(t, [t]);
-    a.useEffect(() => {
-        g.current = n;
-    }, [n]);
-    let v = a.useMemo(() => {
-        let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: n = !0, maxSearchResults: a = -1 } = l;
+    u.useEffect(() => {
+        p.current = r;
+    }, [r]);
+    let g = u.useMemo(() => {
+        let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: r = !0, maxSearchResults: u = -1 } = n;
         return (
-            (m.current = (0, r.throttle)(
-                async (e, t, n) => {
-                    if ("" === e.trim()) return void (a > 0 ? g.current(t.slice(0, a)) : g.current(t));
-                    c.current = (0, r.uniqueId)();
-                    let i = await (function (e, t, n, a) {
-                        let l = a.promiseUuid ?? (0, r.uniqueId)(),
+            (o.current = (0, c.throttle)(
+                async (e, t, r) => {
+                    if ("" === e.trim()) return void (u > 0 ? p.current(t.slice(0, u)) : p.current(t));
+                    d.current = (0, c.uniqueId)();
+                    let s = await (function (e, t, r, u) {
+                        let n = u.promiseUuid ?? (0, c.uniqueId)(),
                             {
-                                searchType: i = u.n.FUZZY,
-                                sortType: d = u.r.NONE,
-                                jaroWinklerSearchThreshold: c = 0.85,
-                                maxSearchResults: m = -1,
-                            } = a;
-                        return new Promise((a) => {
-                            let r = (t) => {
+                                searchType: s = l.n.FUZZY,
+                                sortType: a = l.r.NONE,
+                                jaroWinklerSearchThreshold: d = 0.85,
+                                maxSearchResults: o = -1,
+                            } = u;
+                        return new Promise((u) => {
+                            let c = (t) => {
                                 let {
-                                    data: { id: n, foundItemIndexes: i },
+                                    data: { id: r, foundItemIndexes: s },
                                 } = t;
-                                l === n && (a(i.map((t) => e[t]).filter(s.Vq)), o?.removeEventListener("message", r));
+                                n === r && (u(s.map((t) => e[t]).filter(i.Vq)), f?.removeEventListener("message", c));
                             };
-                            o?.addEventListener("message", r),
-                                o?.postMessage({
-                                    id: l,
+                            f?.addEventListener("message", c),
+                                f?.postMessage({
+                                    id: n,
                                     searchTerm: t,
-                                    searchStrings: n,
-                                    searchType: i,
-                                    sortType: d,
-                                    jaroWinklerSearchThreshold: c,
-                                    maxSearchResults: m,
+                                    searchStrings: r,
+                                    searchType: s,
+                                    sortType: a,
+                                    jaroWinklerSearchThreshold: d,
+                                    maxSearchResults: o,
                                 });
                         });
-                    })(t, e, n, { promiseUuid: c.current, ...l });
-                    null != c.current && g.current(i);
+                    })(t, e, r, { promiseUuid: d.current, ...n });
+                    null != d.current && p.current(s);
                 },
                 e,
-                { leading: t, trailing: n },
+                { leading: t, trailing: r },
             )),
-            m.current
+            o.current
         );
-    }, [l]);
+    }, [n]);
     return (
-        a.useEffect(() => {
-            v(e, h, p);
-        }, [v, e, h, p, ...d]),
-        a.useEffect(
+        u.useEffect(() => {
+            g(e, E, m);
+        }, [g, e, E, m, ...a]),
+        u.useEffect(
             () => () => {
-                null != m.current && m.current.cancel(), (m.current = null), (c.current = null);
+                null != o.current && o.current.cancel(), (o.current = null), (d.current = null);
             },
-            [p, n, l],
+            [m, r, n],
         ),
-        v
+        g
     );
 }

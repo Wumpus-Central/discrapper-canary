@@ -1,6 +1,6 @@
 var a = t(231131),
     l = t(964347),
-    o = t(855042);
+    o = t(632661);
 (e.exports = function (e) {
     if ((void 0 !== a && null != l(e)) || null != e["@@iterator"]) return o(e);
 }),

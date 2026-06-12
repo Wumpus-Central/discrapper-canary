@@ -62,16 +62,16 @@ function _() {
             })(e);
     }
 }
-function f(e, t) {
+function h(e, t) {
     (this.fun = e), (this.array = t);
 }
-function h() {}
+function f() {}
 (r.nextTick = function (e) {
     var t = Array(arguments.length - 1);
     if (arguments.length > 1) for (var n = 1; n < arguments.length; n++) t[n - 1] = arguments[n];
-    l.push(new f(e, t)), 1 !== l.length || u || o(_);
+    l.push(new h(e, t)), 1 !== l.length || u || o(_);
 }),
-    (f.prototype.run = function () {
+    (h.prototype.run = function () {
         this.fun.apply(null, this.array);
     }),
     (r.title = "browser"),
@@ -80,15 +80,15 @@ function h() {}
     (r.argv = []),
     (r.version = ""),
     (r.versions = {}),
-    (r.on = h),
-    (r.addListener = h),
-    (r.once = h),
-    (r.off = h),
-    (r.removeListener = h),
-    (r.removeAllListeners = h),
-    (r.emit = h),
-    (r.prependListener = h),
-    (r.prependOnceListener = h),
+    (r.on = f),
+    (r.addListener = f),
+    (r.once = f),
+    (r.off = f),
+    (r.removeListener = f),
+    (r.removeAllListeners = f),
+    (r.emit = f),
+    (r.prependListener = f),
+    (r.prependOnceListener = f),
     (r.listeners = function (e) {
         return [];
     }),

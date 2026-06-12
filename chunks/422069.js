@@ -1,86 +1,86 @@
-n.d(t, { A: () => g });
-var i = n(17928),
-    l = n(228366);
-let s = {},
-    a = {},
-    r = {},
-    o = {},
-    c = {},
-    d = {},
+t.d(n, { A: () => G });
+var E = t(17928),
+    _ = t(228366);
+let r = {},
+    i = {},
+    l = {},
     u = {},
-    h = {},
-    m = null;
-class p extends i.Ay.Store {
+    S = {},
+    c = {},
+    o = {},
+    R = {},
+    O = null;
+class A extends E.Ay.Store {
     static displayName = "GameProfileStore";
     getSimilarGames(e) {
-        return s[e];
-    }
-    getSimilarGamesError(e) {
-        return a[e];
-    }
-    getShopCollectionSkuIds(e) {
         return r[e];
     }
+    getSimilarGamesError(e) {
+        return i[e];
+    }
+    getShopCollectionSkuIds(e) {
+        return l[e];
+    }
     hasShopCollectionBeenFetched(e) {
-        return o[e] ?? !1;
-    }
-    isShopCollectionFetching(e) {
-        return c[e] ?? !1;
-    }
-    getAnnouncements(e) {
-        return d[e];
-    }
-    hasAnnouncementsBeenFetched(e) {
         return u[e] ?? !1;
     }
+    isShopCollectionFetching(e) {
+        return S[e] ?? !1;
+    }
+    getAnnouncements(e) {
+        return c[e];
+    }
+    hasAnnouncementsBeenFetched(e) {
+        return o[e] ?? !1;
+    }
     isAnnouncementsFetching(e) {
-        return h[e] ?? !1;
+        return R[e] ?? !1;
     }
     getPendingReturn() {
-        return m;
+        return O;
     }
 }
-let g = new p(l.h, {
+let G = new A(_.h, {
     GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
-        let { gameId: t, games: n } = e;
-        s[t] = n;
+        let { gameId: n, games: t } = e;
+        r[n] = t;
     },
     GAME_PROFILE_GET_SIMILAR_GAMES_ERROR: function (e) {
-        let { gameId: t, error: n } = e;
-        a[t] = n;
+        let { gameId: n, error: t } = e;
+        i[n] = t;
     },
     GAME_PROFILE_GET_SHOP_COLLECTION_START: function (e) {
-        let { collectionId: t } = e;
-        c[t] = !0;
+        let { collectionId: n } = e;
+        S[n] = !0;
     },
     GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS: function (e) {
-        let { collectionId: t, skuIds: n } = e;
-        (r[t] = n), (o[t] = !0), (c[t] = !1);
+        let { collectionId: n, skuIds: t } = e;
+        (l[n] = t), (u[n] = !0), (S[n] = !1);
     },
     GAME_PROFILE_GET_SHOP_COLLECTION_ERROR: function (e) {
-        let { collectionId: t } = e;
-        (o[t] = !0), (c[t] = !1);
+        let { collectionId: n } = e;
+        (u[n] = !0), (S[n] = !1);
     },
     GAME_PROFILE_GET_ANNOUNCEMENTS_START: function (e) {
-        let { gameId: t } = e;
-        h[t] = !0;
+        let { gameId: n } = e;
+        R[n] = !0;
     },
     GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS: function (e) {
-        let { gameId: t, messages: n, channelId: i, guildId: l } = e;
-        (d[t] = { messages: n, channelId: i, guildId: l }), (u[t] = !0), (h[t] = !1);
+        let { gameId: n, messages: t, channelId: E, guildId: _ } = e;
+        (c[n] = { messages: t, channelId: E, guildId: _ }), (o[n] = !0), (R[n] = !1);
     },
     GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR: function (e) {
-        let { gameId: t } = e;
-        (u[t] = !0), (h[t] = !1);
+        let { gameId: n } = e;
+        (o[n] = !0), (R[n] = !1);
     },
     GAME_PROFILE_SET_PENDING_RETURN: function (e) {
-        let { gameId: t, channelId: n, initialScrollOffset: i } = e;
-        if (m?.gameId === t && m?.channelId === n && m?.initialScrollOffset === i) return !1;
-        m = { gameId: t, channelId: n, initialScrollOffset: i };
+        let { gameId: n, channelId: t, initialScrollOffset: E } = e;
+        if (O?.gameId === n && O?.channelId === t && O?.initialScrollOffset === E) return !1;
+        O = { gameId: n, channelId: t, initialScrollOffset: E };
     },
     GAME_PROFILE_CLEAR_PENDING_RETURN: function (e) {
-        let { gameId: t } = e;
-        if (null == m || m.gameId !== t) return !1;
-        m = null;
+        let { gameId: n } = e;
+        if (null == O || O.gameId !== n) return !1;
+        O = null;
     },
 });

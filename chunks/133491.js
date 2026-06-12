@@ -1,25 +1,25 @@
 "use strict";
-var r,
-    i = n(906046),
-    a = n(429013)(/^\s*(?:function)?\*/),
-    s = n(581070)(),
+var i,
+    r = n(906046),
+    s = n(429013)(/^\s*(?:function)?\*/),
+    a = n(581070)(),
     o = n(428495),
-    l = i("Object.prototype.toString"),
-    u = i("Function.prototype.toString"),
+    l = r("Object.prototype.toString"),
+    u = r("Function.prototype.toString"),
     c = function () {
-        if (!s) return !1;
+        if (!a) return !1;
         try {
             return Function("return function*() {}")();
         } catch (e) {}
     };
 e.exports = function (e) {
     if ("function" != typeof e) return !1;
-    if (a(u(e))) return !0;
-    if (!s) return "[object GeneratorFunction]" === l(e);
+    if (s(u(e))) return !0;
+    if (!a) return "[object GeneratorFunction]" === l(e);
     if (!o) return !1;
-    if (void 0 === r) {
+    if (void 0 === i) {
         var t = c();
-        r = !!t && o(t);
+        i = !!t && o(t);
     }
-    return o(e) === r;
+    return o(e) === i;
 };

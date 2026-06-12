@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y }), n(321073);
+n.d(t, { A: () => N }), n(321073);
 var i = n(735438),
     r = n.n(i),
     s = n(17928),
@@ -10,8 +10,8 @@ var i = n(735438),
     c = n(290863),
     d = n(461213),
     _ = n(287809),
-    f = n(403362),
-    h = n(488926),
+    h = n(403362),
+    f = n(488926),
     p = n(935208),
     E = n(427262),
     m = n(652215);
@@ -111,7 +111,7 @@ class A {
             i = _.default.getUser(e),
             r = _.default.getCurrentUser(),
             s = i?.id === r?.id ? d.A.getStatus() : c.A.getStatus(e, this.guildId),
-            a = null != i && null != t && h.$3({ permission: m.xBc.VIEW_CHANNEL, user: i, context: t }),
+            a = null != i && null != t && f.$3({ permission: m.xBc.VIEW_CHANNEL, user: i, context: t }),
             o = s !== m.clD.OFFLINE && s !== m.clD.INVISIBLE ? (n?.hoistRoleId ?? "online") : "offline",
             u = n?.nick ?? E.Ay.getName(i);
         return [o, u?.toLowerCase(), a];
@@ -132,7 +132,7 @@ function S(e) {
     for (let e in g) g[e].guildId === t && (g[e].rebuild(), (n = !0));
     return n;
 }
-class N extends s.Ay.Store {
+class y extends s.Ay.Store {
     static displayName = "ThreadMemberListStore";
     initialize() {
         this.waitFor(o.A, l.Ay, u.A, c.A, d.A, _.default),
@@ -157,7 +157,7 @@ class N extends s.Ay.Store {
         return r?.canViewChannel ?? !1;
     }
 }
-let y = new N(a.h, {
+let N = new y(a.h, {
     CONNECTION_OPEN: function () {
         g = {};
     },
@@ -209,7 +209,7 @@ let y = new N(a.h, {
         let { presences: t } = e,
             n = r()(t)
                 .map((e) => e.user?.id)
-                .filter(f.Vq)
+                .filter(h.Vq)
                 .uniq()
                 .value(),
             i = !1;

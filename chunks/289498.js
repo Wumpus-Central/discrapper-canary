@@ -1,48 +1,48 @@
-n.d(t, { A: () => h });
-var i = n(627968);
-n(64700);
-var s = n(503698),
-    l = n.n(s),
-    a = n(990078),
-    r = n(462887),
-    o = n(187322),
-    d = n(736653),
-    u = n(573648),
-    c = n(681819),
-    g = n(882997),
-    m = n(954571),
-    _ = n(652215),
-    A = n(475135);
-let h = (e) => {
-    let { disabled: t = !1, type: n, className: s, innerClassName: h, onConnect: p } = e,
-        x = (0, d.Ay)(),
-        E = u.A.get((0, c.ML)(n));
-    return (0, i.jsx)(a.m, {
-        text: E.name,
+a.d(t, { A: () => v });
+var i = a(627968);
+a(64700);
+var n = a(503698),
+    s = a.n(n),
+    l = a(990078),
+    r = a(462887),
+    c = a(187322),
+    d = a(736653),
+    o = a(573648),
+    p = a(874490),
+    u = a(968309),
+    h = a(174459),
+    m = a(652215),
+    N = a(475135);
+let v = (e) => {
+    let { disabled: t = !1, type: a, className: n, innerClassName: v, onConnect: A } = e,
+        b = (0, d.Ay)(),
+        k = o.A.get((0, p.ML)(a));
+    return (0, i.jsx)(l.m, {
+        text: k.name,
         children: (0, i.jsx)("div", {
-            className: l()(A.iE, s),
-            children: (0, i.jsx)(o.vN, {
+            className: s()(N.iE, n),
+            children: (0, i.jsx)(c.vN, {
                 children: (0, i.jsx)("button", {
-                    className: l()(A.vW, h),
+                    className: s()(N.vW, v),
                     type: "button",
                     disabled: t,
-                    style: { backgroundImage: `url('${((0, r.M))(x) ? E.icon.darkSVG : E.icon.lightSVG}')` },
+                    style: { backgroundImage: `url('${((0, r.M))(b) ? k.icon.darkSVG : k.icon.lightSVG}')` },
                     onClick:
-                        null != p
-                            ? p
+                        null != A
+                            ? A
                             : () => {
                                   let e;
                                   return (
-                                      (e = u.A.get(n)),
-                                      void ((0, g.A)({ platformType: e.type, location: "Friends List" }),
-                                      m.default.track(_.HAw.ACCOUNT_LINK_STEP, {
+                                      (e = o.A.get(a)),
+                                      void ((0, u.A)({ platformType: e.type, location: "Friends List" }),
+                                      h.default.track(m.HAw.ACCOUNT_LINK_STEP, {
                                           previous_step: "desktop connections",
                                           current_step: "desktop oauth",
                                           platform_type: e.type,
                                       }))
                                   );
                               },
-                    "aria-label": E.name,
+                    "aria-label": k.name,
                 }),
             }),
         }),

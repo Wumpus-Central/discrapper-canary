@@ -1,5 +1,5 @@
-var r = n(292528),
-    i = n(461083);
+var i = n(292528),
+    r = n(461083);
 e.exports = function (e, t, n, s) {
     var a = n.length,
         o = a,
@@ -10,15 +10,15 @@ e.exports = function (e, t, n, s) {
         if (l && u[2] ? u[1] !== e[u[0]] : !(u[0] in e)) return !1;
     }
     for (; ++a < o; ) {
-        var d = (u = n[a])[0],
-            c = e[d],
+        var c = (u = n[a])[0],
+            d = e[c],
             _ = u[1];
         if (l && u[2]) {
-            if (void 0 === c && !(d in e)) return !1;
+            if (void 0 === d && !(c in e)) return !1;
         } else {
-            var f = new r();
-            if (s) var E = s(c, _, d, e, t, f);
-            if (!(void 0 === E ? i(_, c, 3, s, f) : E)) return !1;
+            var h = new i();
+            if (s) var f = s(d, _, c, e, t, h);
+            if (!(void 0 === f ? r(_, d, 3, s, h) : f)) return !1;
         }
     }
     return !0;

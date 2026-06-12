@@ -2,11 +2,11 @@
     "use strict";
     var t = "nolla yksi kaksi kolme nelj\xe4 viisi kuusi seitsem\xe4n kahdeksan yhdeks\xe4n".split(" "),
         n = ["nolla", "yhden", "kahden", "kolmen", "nelj\xe4n", "viiden", "kuuden", t[7], t[8], t[9]];
-    function r(e, r, i, s) {
+    function i(e, i, r, s) {
         var a,
             o,
             l = "";
-        switch (i) {
+        switch (r) {
             case "s":
                 return s ? "muutaman sekunnin" : "muutama sekunti";
             case "ss":
@@ -69,18 +69,18 @@
         relativeTime: {
             future: "%s p\xe4\xe4st\xe4",
             past: "%s sitten",
-            s: r,
-            ss: r,
-            m: r,
-            mm: r,
-            h: r,
-            hh: r,
-            d: r,
-            dd: r,
-            M: r,
-            MM: r,
-            y: r,
-            yy: r,
+            s: i,
+            ss: i,
+            m: i,
+            mm: i,
+            h: i,
+            hh: i,
+            d: i,
+            dd: i,
+            M: i,
+            MM: i,
+            y: i,
+            yy: i,
         },
         dayOfMonthOrdinalParse: /\d{1,2}\./,
         ordinal: "%d.",

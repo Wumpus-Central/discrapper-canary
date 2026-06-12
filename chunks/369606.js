@@ -16,12 +16,12 @@ let o = (e) => {
         } = e,
         d = (0, a.J)(t),
         _ = d?.width ?? n,
-        f = d?.height ?? o;
+        h = d?.height ?? o;
     return (0, i.jsx)("svg", {
         ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
         width: _,
-        height: f,
+        height: h,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {

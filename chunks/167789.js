@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { O: () => i });
-let r = (0, n(613345).V)();
-function i(e, t) {
-    if (void 0 !== r && null != r.requestIdleCallback && null != r.cancelIdleCallback) {
+n.d(t, { O: () => r });
+let i = (0, n(613345).V)();
+function r(e, t) {
+    if (void 0 !== i && null != i.requestIdleCallback && null != i.cancelIdleCallback) {
         let n = !1,
-            i = null,
+            r = null,
             s = () => {
-                n || ((n = !0), null != i && (r.clearTimeout(i), (i = null)), e());
+                n || ((n = !0), null != r && (i.clearTimeout(r), (r = null)), e());
             },
-            a = r.requestIdleCallback(s, t);
+            a = i.requestIdleCallback(s, t);
         return (
-            (i = r.setTimeout(() => {
-                n || r.cancelIdleCallback(a), s();
+            (r = i.setTimeout(() => {
+                n || i.cancelIdleCallback(a), s();
             }, t?.timeout ?? 1e3)),
             () => {
-                r.cancelIdleCallback(a), null != i && (r.clearTimeout(i), (i = null));
+                i.cancelIdleCallback(a), null != r && (i.clearTimeout(r), (r = null));
             }
         );
     }
     {
-        let t = r.setTimeout(e, 0);
+        let t = i.setTimeout(e, 0);
         return () => {
-            r.clearTimeout(t);
+            i.clearTimeout(t);
         };
     }
 }

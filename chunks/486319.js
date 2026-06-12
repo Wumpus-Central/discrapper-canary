@@ -1,43 +1,43 @@
 "use strict";
-n.d(t, { R: () => h });
-var l = n(64700),
-    i = n(735438),
-    s = n.n(i),
+n.d(t, { R: () => _ });
+var i = n(64700),
+    r = n(735438),
+    s = n.n(r),
     a = n(361610),
-    r = n(36124),
-    o = n(135621),
-    c = n(963307);
-let u = "@here";
+    o = n(36124),
+    l = n(135621),
+    u = n(963307);
+let c = "@here";
 function d(e) {
     return e.length > 1 || 1 !== e.length || "GROUP" !== e[0].type || "unknown" !== e[0].id;
 }
-function h(e, t, n) {
-    let i = (0, o.A)(),
-        [h, m] = l.useState(!1),
-        p = l.useMemo(
+function _(e, t, n) {
+    let r = (0, l.A)(),
+        [_, h] = i.useState(!1),
+        f = i.useMemo(
             () =>
                 s().debounce(
                     (e) => {
-                        (d(c.Ay.getProps(t, n).groups) ||
-                            (!(e.length < u.length) &&
-                                !(e.length > i) &&
-                                -1 !== e.indexOf(u) &&
-                                ((0, a.Ey)(t, n, r.LD), 1))) &&
-                            m(!0);
+                        (d(u.Ay.getProps(t, n).groups) ||
+                            (!(e.length < c.length) &&
+                                !(e.length > r) &&
+                                -1 !== e.indexOf(c) &&
+                                ((0, a.Ey)(t, n, o.LD), 1))) &&
+                            h(!0);
                     },
                     200,
                     { maxWait: 500 },
                 ),
-            [i, t, n],
+            [r, t, n],
         );
-    l.useEffect(() => {
-        let l = c.Ay.getProps(t, n).groups;
-        if (null != t && !d(l) && !h)
+    i.useEffect(() => {
+        let i = u.Ay.getProps(t, n).groups;
+        if (null != t && !d(i) && !_)
             return (
-                e.addListener("text-changed", p),
+                e.addListener("text-changed", f),
                 () => {
-                    e.removeListener("text-changed", p), p.cancel();
+                    e.removeListener("text-changed", f), f.cancel();
                 }
             );
-    }, [h, p, e, t, n]);
+    }, [_, f, e, t, n]);
 }

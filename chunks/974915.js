@@ -1,11 +1,11 @@
-var r = n(349519),
-    i = n(651211),
-    s = n(147818);
-e.exports = function (e, t, n) {
-    for (var l = -1, a = t.length, o = {}; ++l < a; ) {
-        var c = t[l],
-            u = r(e, c);
-        n(u, c) && i(o, s(c, e), u);
+var u = t(349519),
+    e = t(651211),
+    i = t(147818);
+r.exports = function (r, n, t) {
+    for (var o = -1, a = n.length, v = {}; ++o < a; ) {
+        var f = n[o],
+            p = u(r, f);
+        t(p, f) && e(v, i(f, r), p);
     }
-    return o;
+    return v;
 };

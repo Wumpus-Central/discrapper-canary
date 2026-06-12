@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     Nr: "card__02d09",
     Vl: "cardImageContainer__02d09",
     BN: "cardDark__02d09 card__02d09",

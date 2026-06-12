@@ -1,48 +1,48 @@
-l.r(e), l.d(e, { ItemDetailsModal: () => j });
-var n = l(627968);
-l(64700);
-var r = l(423090),
-    s = l(17928),
-    i = l(638916),
-    a = l(67480),
-    o = l(328968),
-    c = l(371794),
-    d = l(998218),
-    u = l(56754),
-    x = l(550732),
-    _ = l(376374),
-    h = l(888781),
-    m = l(652215),
-    v = l(985018);
-function j(t) {
-    let { onClose: e, transitionState: l, skuId: j, appId: E, onHeaderTitleClick: A } = t,
-        g = (0, s.bG)([o.A], () => o.A.getForSKU(j), [j]),
-        p = (0, s.bG)([a.A], () => a.A.get(j), [j]),
-        S = (0, u.L)(j);
-    if (null == p) return null;
-    let f = p.name ?? "",
-        I = g?.description?.trim() ?? void 0,
-        T = g?.headerBackground != null ? (d.A.toURLSafe((0, c.YE)(E, g.headerBackground, 256)) ?? void 0) : void 0,
-        C = p.type === m.Puh.DURABLE && S,
-        R = p.type === m.Puh.DURABLE ? (C ? v.intl.string(v.t.bm82mm) : v.intl.string(v.t["6gprwf"])) : void 0,
-        { price: k } = p;
-    return null == k
+e.r(i), e.d(i, { ItemDetailsModal: () => m });
+var n = e(627968);
+e(64700);
+var d = e(423090),
+    r = e(17928),
+    l = e(638916),
+    a = e(67480),
+    o = e(328968),
+    s = e(371794),
+    u = e(998218),
+    p = e(56754),
+    c = e(550732),
+    k = e(376374),
+    h = e(888781),
+    g = e(652215),
+    v = e(375708);
+function m(t) {
+    let { onClose: i, transitionState: e, skuId: m, appId: A, onHeaderTitleClick: I } = t,
+        b = (0, r.bG)([o.A], () => o.A.getForSKU(m), [m]),
+        f = (0, r.bG)([a.A], () => a.A.get(m), [m]),
+        x = (0, p.L)(m);
+    if (null == f) return null;
+    let C = f.name ?? "",
+        j = b?.description?.trim() ?? void 0,
+        B = b?.headerBackground != null ? (u.A.toURLSafe((0, s.YE)(A, b.headerBackground, 256)) ?? void 0) : void 0,
+        D = f.type === g.Puh.DURABLE && x,
+        L = f.type === g.Puh.DURABLE ? (D ? v.intl.string(v.t.bm82mm) : v.intl.string(v.t["6gprwf"])) : void 0,
+        { price: S } = f;
+    return null == S
         ? null
-        : (0, n.jsx)(x.C, {
-              appId: E,
-              skuId: p.id,
-              transitionState: l,
-              onHeaderTitleClick: A ?? e,
-              onClose: e,
-              footer: (0, n.jsx)(_.$P, { appId: E, sku: p }),
+        : (0, n.jsx)(c.C, {
+              appId: A,
+              skuId: f.id,
+              transitionState: e,
+              onHeaderTitleClick: I ?? i,
+              onClose: i,
+              footer: (0, n.jsx)(k.$P, { appId: A, sku: f }),
               children: (0, n.jsx)(h.D, {
-                  appId: E,
-                  skuId: p.id,
-                  title: f,
-                  description: I,
-                  imgSrc: T,
-                  tag: null != R ? (0, n.jsx)(r.v, { text: R }) : void 0,
-                  FallbackIcon: i.q,
+                  appId: A,
+                  skuId: f.id,
+                  title: C,
+                  description: j,
+                  imgSrc: B,
+                  tag: null != L ? (0, n.jsx)(d.v, { text: L }) : void 0,
+                  FallbackIcon: l.q,
               }),
           });
 }

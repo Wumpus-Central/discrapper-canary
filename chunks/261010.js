@@ -1,42 +1,42 @@
-var r = n(739595),
-    i = n(585022),
+var i = n(739595),
+    r = n(585022),
     s = n(546809),
     a = n(34524),
     o = n(538826),
     l = n(514119),
     u = n(731214),
-    d = "[object Map]",
-    c = "[object Promise]",
+    c = "[object Map]",
+    d = "[object Promise]",
     _ = "[object Set]",
-    f = "[object WeakMap]",
-    E = "[object DataView]",
-    h = u(r),
+    h = "[object WeakMap]",
+    f = "[object DataView]",
     p = u(i),
+    E = u(r),
     m = u(s),
     g = u(a),
     A = u(o),
     I = l;
-((r && I(new r(new ArrayBuffer(1))) != E) ||
-    (i && I(new i()) != d) ||
-    (s && I(s.resolve()) != c) ||
+((i && I(new i(new ArrayBuffer(1))) != f) ||
+    (r && I(new r()) != c) ||
+    (s && I(s.resolve()) != d) ||
     (a && I(new a()) != _) ||
-    (o && I(new o()) != f)) &&
+    (o && I(new o()) != h)) &&
     (I = function (e) {
         var t = l(e),
             n = "[object Object]" == t ? e.constructor : void 0,
-            r = n ? u(n) : "";
-        if (r)
-            switch (r) {
-                case h:
-                    return E;
+            i = n ? u(n) : "";
+        if (i)
+            switch (i) {
                 case p:
-                    return d;
-                case m:
+                    return f;
+                case E:
                     return c;
+                case m:
+                    return d;
                 case g:
                     return _;
                 case A:
-                    return f;
+                    return h;
             }
         return t;
     }),

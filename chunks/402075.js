@@ -27,7 +27,7 @@ var n = (function () {
 function u(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var c = (t.Saturation = (function (e) {
+var p = (t.Saturation = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e) {
@@ -161,4 +161,4 @@ var c = (t.Saturation = (function (e) {
         t
     );
 })(o.PureComponent || o.Component));
-t.default = c;
+t.default = p;

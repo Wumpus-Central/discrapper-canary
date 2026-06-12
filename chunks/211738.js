@@ -6,8 +6,8 @@ e.exports = function (e) {
                 { begin: /\$[@%<?\^\+\*]/ },
             ],
         },
-        a = { className: "string", begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, t] },
-        n = { begin: "^" + e.UNDERSCORE_IDENT_RE + "\\s*(?=[:+?]?=)" };
+        n = { className: "string", begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE, t] },
+        i = { begin: "^" + e.UNDERSCORE_IDENT_RE + "\\s*(?=[:+?]?=)" };
     return {
         name: "Makefile",
         aliases: ["mk", "mak", "make"],
@@ -19,7 +19,7 @@ e.exports = function (e) {
         contains: [
             e.HASH_COMMENT_MODE,
             t,
-            a,
+            n,
             {
                 className: "variable",
                 begin: /\$\([\w-]+\s/,
@@ -28,9 +28,9 @@ e.exports = function (e) {
                     built_in:
                         "subst patsubst strip findstring filter filter-out sort word wordlist firstword lastword dir notdir suffix basename addsuffix addprefix join wildcard realpath abspath error warning shell origin flavor foreach if or and call eval file value",
                 },
-                contains: [t, a],
+                contains: [t, n],
             },
-            n,
+            i,
             { className: "meta", begin: /^\.PHONY:/, end: /$/, keywords: { $pattern: /[\.\w]+/, keyword: ".PHONY" } },
             { className: "section", begin: /^[^\s]+:/, end: /$/, contains: [t] },
         ],

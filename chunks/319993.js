@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Gq: () => q, WE: () => $, qn: () => K, Ay: () => X });
+n.d(t, { Gq: () => q, WE: () => z, qn: () => K, Ay: () => X });
 var i,
     r = n(627968),
     s = n(64700),
@@ -10,8 +10,8 @@ var i,
     c = n(990078),
     d = n(939249),
     _ = n(834730),
-    f = n(106236),
-    h = n(777666),
+    h = n(106236),
+    f = n(812993),
     p = n(403581),
     E = n(7807),
     m = n(922016),
@@ -20,12 +20,12 @@ var i,
     I = n(967198),
     T = n(287809),
     S = n(824744),
-    N = n(428262),
-    y = n(926972),
-    C = n(885386),
-    v = n(862482),
-    O = n(821609),
-    R = n(66834),
+    y = n(428262),
+    N = n(926972),
+    v = n(885386),
+    C = n(862482),
+    R = n(821609),
+    O = n(66834),
     b = n(624793),
     D = n(639245),
     L = n(34337),
@@ -33,9 +33,9 @@ var i,
     M = n(807348),
     P = n(805945),
     x = n(71393),
-    U = n(725807);
+    k = n(725807);
 n(801541);
-var k = n(889137);
+var U = n(889137);
 n(980504);
 var G = n(375708),
     F =
@@ -51,22 +51,22 @@ function j(e) {
         a = s.useCallback(async () => {
             if ((n(), null != t))
                 try {
-                    await R.A.joinGuild(t), R.A.transitionToGuildSync(t);
+                    await O.A.joinGuild(t), O.A.transitionToGuildSync(t);
                 } catch {}
         }, [n, t]);
     return i === F.GET_NITRO
-        ? (0, r.jsx)(U.A, {
+        ? (0, r.jsx)(k.A, {
               fullWidth: !0,
               showGradient: !0,
               premiumModalAnalyticsLocation: { section: B.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
               subscriptionTier: V.pe.TIER_2,
-              size: v.$n.Sizes.SMALL,
-              color: v.$n.Colors.CUSTOM,
+              size: C.$n.Sizes.SMALL,
+              color: C.$n.Colors.CUSTOM,
               onClick: n,
               textOptions: { textOverride: G.intl.string(G.t.pj0XBN) },
           })
         : i === F.JOIN_GUILD
-          ? (0, r.jsx)(O.$, {
+          ? (0, r.jsx)(R.$, {
                 variant: "primary",
                 size: "sm",
                 text: G.intl.string(G.t.riu2R5),
@@ -80,35 +80,35 @@ function Y(e) {
         n,
         i,
         a,
-        { sound: o, channel: c, closePopout: d, refreshPosition: f } = e,
+        { sound: o, channel: c, closePopout: d, refreshPosition: h } = e,
         p = "0" === o.guildId,
         E = (0, l.bG)([x.A], () => x.A.getGuild(o.guildId)),
         m = !p && null != E,
         [g, A] = s.useState(),
-        I = (0, y.tj)({ location: "SoundmojiGuildInfo" }),
+        I = (0, N.tj)({ location: "SoundmojiGuildInfo" }),
         S = p || m || null != g || !I,
-        [C, v] = s.useState(!S);
+        [v, C] = s.useState(!S);
     s.useEffect(() => {
         S ||
-            (v(!0),
+            (C(!0),
             (0, w.nh)(o.soundId, o.guildId)
                 .then((e) => {
                     A(e);
                 })
                 .finally(() => {
-                    v(!1), f();
+                    C(!1), h();
                 }));
-    }, [f, S, o.guildId, o.soundId]);
-    let { buttonType: O, description: R } =
+    }, [h, S, o.guildId, o.soundId]);
+    let { buttonType: R, description: O } =
             ((t = "0" === o.guildId),
-            (n = (0, l.bG)([T.default], () => N.Ay.canUseSoundboardEverywhere(T.default.getCurrentUser()))),
-            (i = (0, y.tj)({ location: "useSoundmojiGuildInfoData" })),
+            (n = (0, l.bG)([T.default], () => y.Ay.canUseSoundboardEverywhere(T.default.getCurrentUser()))),
+            (i = (0, N.tj)({ location: "useSoundmojiGuildInfoData" })),
             (a = o.guildId !== c?.guild_id),
             {
                 buttonType: s.useMemo(() => (t || !i ? 2 : n ? (m || null == g ? 2 : 0) : 1), [t, n, i, m, g]),
                 description: s.useMemo(() => {
                     let e = null != g;
-                    return (0, k.YW)({
+                    return (0, U.YW)({
                         hasSoundmojiPermissions: n,
                         isInGuild: m,
                         isGuildDiscoverable: e,
@@ -146,8 +146,8 @@ function Y(e) {
                         .exhaustive();
                 }, [t, g, n, m, a, i]),
             }),
-        U = O === F.JOIN_GUILD,
-        V = !p && C,
+        k = R === F.JOIN_GUILD,
+        V = !p && v,
         B = s.useMemo(
             () => (m ? b.GO.createFromGuildRecord(E) : null != g ? b.GO.createFromDiscoverableGuild(g) : void 0),
             [E, m, g],
@@ -169,7 +169,7 @@ function Y(e) {
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, r.jsx)(_.E, { variant: "text-sm/normal", children: R }),
+                                  (0, r.jsx)(_.E, { variant: "text-sm/normal", children: O }),
                               ],
                           }),
                           null != B &&
@@ -187,27 +187,27 @@ function Y(e) {
                                           children: (0, r.jsx)(D.G7, {
                                               expressionSourceGuild: B,
                                               hasJoinedExpressionSourceGuild: m,
-                                              isDisplayingJoinGuildButtonInPopout: U,
+                                              isDisplayingJoinGuildButtonInPopout: k,
                                           }),
                                       }),
-                                      (0, r.jsx)(j, { buttonType: O, discoverableGuildId: g?.id, closePopout: d }),
+                                      (0, r.jsx)(j, { buttonType: R, discoverableGuildId: g?.id, closePopout: d }),
                                   ],
                               }),
                       ],
                   }),
-                  (0, r.jsx)(h.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ }),
+                  (0, r.jsx)(f.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ }),
               ],
           });
 }
 var W = n(757718);
 function K() {
     let { volume: e, onVolumeChange: t } = (function () {
-        let [e, t] = s.useState(C.HO.getSetting());
+        let [e, t] = s.useState(v.HO.getSetting());
         return {
             volume: e,
             onVolumeChange: s.useCallback((e) => {
                 let n = (0, S.w)(e);
-                t(n), C.HO.updateSetting(n);
+                t(n), v.HO.updateSetting(n);
             }, []),
         };
     })();
@@ -216,17 +216,17 @@ function K() {
         onClick: (e) => e.stopPropagation(),
         children: [
             (0, r.jsx)(_.E, { variant: "text-sm/normal", children: G.intl.string(G.t["2JbvKw"]) }),
-            (0, r.jsx)(f.A, { onValueChange: t, className: H.aw, initialValue: (0, S.M)(e), maxValue: 100 }),
+            (0, r.jsx)(h.A, { onValueChange: t, className: H.aw, initialValue: (0, S.M)(e), maxValue: 100 }),
         ],
     });
 }
-function z(e) {
+function $(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
-        i = (0, y.tj)({ location: "SoundmojiBanner" }),
-        s = (0, l.bG)([T.default], () => N.Ay.canUseSoundboardEverywhere(T.default.getCurrentUser())),
+        i = (0, N.tj)({ location: "SoundmojiBanner" }),
+        s = (0, l.bG)([T.default], () => y.Ay.canUseSoundboardEverywhere(T.default.getCurrentUser())),
         a = (0, l.bG)([I.A], () => I.A.getGuildId());
     return n || s || "0" === t.guildId || t.guildId === a || !i
-        ? (0, r.jsx)(h.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ })
+        ? (0, r.jsx)(f.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ })
         : (0, r.jsxs)("div", {
               className: H.Mq,
               children: [
@@ -241,18 +241,18 @@ function z(e) {
                               className: H.sD,
                               children: G.intl.string(G.t["BMw+7I"]),
                           }),
-                          (0, r.jsx)(h.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.KD }),
+                          (0, r.jsx)(f.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.KD }),
                       ],
                   }),
               ],
           });
 }
-function $(e) {
+function z(e) {
     let { sound: t } = e;
     return (0, r.jsxs)("div", {
         className: o()(H.op, H.kX),
         children: [
-            (0, r.jsx)(z, { sound: t }),
+            (0, r.jsx)($, { sound: t }),
             (0, r.jsxs)("div", {
                 className: H.Br,
                 children: [
@@ -275,7 +275,7 @@ function $(e) {
 function q(e) {
     let { renderPopout: t, position: n, tooltipText: i, children: a, setTooltipShowing: o, clickableClassName: l } = e,
         [u, _] = s.useState(!1),
-        [f, h] = s.useState(String(Date.now())),
+        [h, f] = s.useState(String(Date.now())),
         p = s.useCallback(
             (e) => {
                 e.stopPropagation(), _(!u);
@@ -283,7 +283,7 @@ function q(e) {
             [u],
         ),
         E = s.useCallback(() => {
-            h(String(Date.now()));
+            f(String(Date.now()));
         }, []),
         g = s.useRef(null);
     s.useEffect(() => {
@@ -304,7 +304,7 @@ function q(e) {
         shouldShow: u,
         onRequestClose: () => _(!1),
         animationPosition: "bottom",
-        positionKey: f,
+        positionKey: h,
         scrollBehavior: "close",
         children: (e) =>
             (0, r.jsx)(c.m, {

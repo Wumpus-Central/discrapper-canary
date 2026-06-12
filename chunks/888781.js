@@ -1,57 +1,57 @@
-l.d(e, { D: () => _ });
-var n = l(627968),
-    r = l(64700),
-    s = l(855522),
-    i = l(534514),
-    a = l(834730),
-    o = l(963925);
+s.d(l, { D: () => m });
+var e = s(627968),
+    i = s(64700),
+    r = s(855522),
+    n = s(534514),
+    a = s(834730),
+    o = s(963925);
 function c(t) {
-    let { benefits: e, description: l, imgSrc: r, title: c, tag: d, FallbackIcon: u } = t,
-        x = null != r ? { "--custom-background-url": `url(${r.toString()})` } : void 0;
-    return (0, n.jsxs)("div", {
+    let { benefits: l, description: s, imgSrc: i, title: c, tag: d, FallbackIcon: x } = t,
+        u = null != i ? { "--custom-background-url": `url(${i.toString()})` } : void 0;
+    return (0, e.jsxs)("div", {
         className: o.kL,
         children: [
-            (0, n.jsxs)("div", {
+            (0, e.jsxs)("div", {
                 className: o.wx,
                 children: [
-                    (0, n.jsx)("div", { className: o.y2, style: x }),
-                    (0, n.jsx)("div", {
+                    (0, e.jsx)("div", { className: o.y2, style: u }),
+                    (0, e.jsx)("div", {
                         className: o.F0,
                         children:
-                            null != r
-                                ? (0, n.jsx)("img", { src: r.toString(), alt: "" })
-                                : (0, n.jsx)(u, { size: "custom", color: "var(--text-muted)", height: 96, width: 96 }),
+                            null != i
+                                ? (0, e.jsx)("img", { src: i.toString(), alt: "" })
+                                : (0, e.jsx)(x, { size: "custom", color: "var(--text-muted)", height: 96, width: 96 }),
                     }),
                 ],
             }),
-            (0, n.jsxs)("div", {
+            (0, e.jsxs)("div", {
                 className: o.Qs,
                 children: [
-                    (0, n.jsxs)("div", {
+                    (0, e.jsxs)("div", {
                         className: o.zH,
                         children: [
-                            null != d && (0, n.jsx)("div", { children: d }),
-                            (0, n.jsx)(i.D, { color: "text-strong", variant: "heading-xl/semibold", children: c }),
-                            null != l &&
-                                "" !== l &&
-                                (0, n.jsx)(a.E, {
+                            null != d && (0, e.jsx)("div", { children: d }),
+                            (0, e.jsx)(n.D, { color: "text-strong", variant: "heading-xl/semibold", children: c }),
+                            null != s &&
+                                "" !== s &&
+                                (0, e.jsx)(a.E, {
                                     color: "text-default",
                                     variant: "text-md/normal",
                                     className: o.h_,
-                                    children: l,
+                                    children: s,
                                 }),
                         ],
                     }),
-                    null != e &&
-                        (0, n.jsxs)("div", {
+                    null != l &&
+                        (0, e.jsxs)("div", {
                             className: o.PX,
                             children: [
-                                (0, n.jsx)(a.E, {
+                                (0, e.jsx)(a.E, {
                                     color: "text-default",
                                     variant: "eyebrow",
-                                    children: s.A.Messages.STOREFRONT_BENEFITS_TITLE,
+                                    children: r.A.Messages.STOREFRONT_BENEFITS_TITLE,
                                 }),
-                                e,
+                                l,
                             ],
                         }),
                 ],
@@ -59,20 +59,20 @@ function c(t) {
         ],
     });
 }
-var d = l(688810),
-    u = l(954571),
-    x = l(652215);
-function _(t) {
-    let { appId: e, skuId: l, ...s } = t,
-        { analyticsLocations: i } = (0, d.Ay)();
+var d = s(688810),
+    x = s(174459),
+    u = s(652215);
+function m(t) {
+    let { appId: l, skuId: s, ...r } = t,
+        { analyticsLocations: n } = (0, d.Ay)();
     return (
-        r.useEffect(() => {
-            u.default.track(x.HAw.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
-                application_id: e,
-                sku_id: l,
-                location_stack: i,
+        i.useEffect(() => {
+            x.default.track(u.HAw.VIEW_PREMIUM_APP_EXPANDED_PRODUCT_CARD, {
+                application_id: l,
+                sku_id: s,
+                location_stack: n,
             });
-        }, [i, e, l]),
-        (0, n.jsx)(c, { ...s })
+        }, [n, l, s]),
+        (0, e.jsx)(c, { ...r })
     );
 }

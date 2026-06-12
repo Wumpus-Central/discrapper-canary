@@ -1,25 +1,25 @@
-n.d(t, { X: () => s, z: () => r });
-var i = n(64700),
-    l = n(580630),
-    a = n(985018);
-function r(e) {
-    return i.useMemo(() => {
-        if (null == e) return;
-        let t = null != e.role_id,
-            n = e.attachments_count > 0;
-        return t && n
-            ? a.intl.string(a.t.ih4QMU)
-            : t
-              ? a.intl.string(a.t.o9xphc)
-              : n
-                ? a.intl.string(a.t.DWYJua)
+r.d(e, { X: () => o, z: () => c });
+var n = r(64700),
+    a = r(580630),
+    i = r(375708);
+function c(t) {
+    return n.useMemo(() => {
+        if (null == t) return;
+        let e = null != t.role_id,
+            r = t.attachments_count > 0;
+        return e && r
+            ? i.intl.string(i.t.ih4QMU)
+            : e
+              ? i.intl.string(i.t.o9xphc)
+              : r
+                ? i.intl.string(i.t.DWYJua)
                 : void 0;
-    }, [e]);
+    }, [t]);
 }
-function s(e) {
-    return i.useMemo(() => {
-        if (e?.price == null) return;
-        let { amount: t, currency: n } = e.price;
-        return (0, l.$g)(t, n);
-    }, [e]);
+function o(t) {
+    return n.useMemo(() => {
+        if (t?.price == null) return;
+        let { amount: e, currency: r } = t.price;
+        return (0, a.$g)(e, r);
+    }, [t]);
 }

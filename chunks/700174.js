@@ -1,27 +1,27 @@
-n.d(t, { Zt: () => M, yo: () => G });
-var l = n(627968),
-    i = n(64700),
+n.d(e, { Zt: () => O, yo: () => U });
+var i = n(627968),
+    l = n(64700),
     r = n(365199),
     a = n(922016),
-    s = n(550079),
+    s = n(980707),
     o = n(477782),
     c = n(793574),
     u = n(688810),
     d = n(239211),
     m = n(284009),
-    f = n.n(m),
-    x = n(50268),
-    g = n(486503),
-    A = n(999291),
-    p = n(253932),
-    E = n(957565),
-    h = n(652215),
-    N = n(985018),
-    R = n(399476),
-    b = n(889460),
-    v = n(17928),
-    j = n(865116),
-    I = n(928658);
+    x = n.n(m),
+    f = n(50268),
+    E = n(486503),
+    g = n(999291),
+    p = n(885386),
+    R = n(957565),
+    N = n(652215),
+    A = n(375708),
+    j = n(399476),
+    h = n(889460),
+    b = n(17928),
+    I = n(865116),
+    v = n(928658);
 let _ = (0, n(600975).C)({
     kind: "user",
     id: "2023-09_iar_user_reporting",
@@ -29,164 +29,164 @@ let _ = (0, n(600975).C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enabled", config: { enabled: !0 } }],
 });
-var y = n(495544),
-    C = n(287809),
-    P = n(183555),
-    T = n(993401),
-    S = n(518477);
-function O(e) {
-    let { user: t, guildId: n, viewProfileItem: m, appContext: T, popoutTargetRef: O, children: M } = e,
-        { trackUserProfileAction: G } = (0, P.NJ)(),
-        { analyticsLocations: U, newestAnalyticsLocation: k } = (0, u.Ay)(c.A.USER_PROFILE_OVERFLOW_MENU),
-        D = {
-            action: S.pt.PRESS_OPTIONS,
+var C = n(495544),
+    y = n(287809),
+    T = n(183555),
+    P = n(993401),
+    G = n(518477);
+function S(t) {
+    let { user: e, guildId: n, viewProfileItem: m, appContext: P, popoutTargetRef: S, children: O } = t,
+        { trackUserProfileAction: U } = (0, T.NJ)(),
+        { analyticsLocations: M, newestAnalyticsLocation: k } = (0, u.Ay)(c.A.USER_PROFILE_OVERFLOW_MENU),
+        L = {
+            action: G.pt.PRESS_OPTIONS,
             icon: r.j,
-            tooltipText: N.intl.string(N.t["UKOtz+"]),
-            "aria-label": N.intl.string(N.t["UKOtz+"]),
+            tooltipText: A.intl.string(A.t["UKOtz+"]),
+            "aria-label": A.intl.string(A.t["UKOtz+"]),
         },
-        L = (0, b.A)({
-            user: t,
+        D = (0, h.A)({
+            user: e,
             guildId: n,
-            onAction: () => G({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: U }),
+            onAction: () => U({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: M }),
         }),
         F = (0, d.A)({
-            user: t,
+            user: e,
             guildId: n,
             location: k,
-            appContext: T,
-            onBlock: () => G({ action: "BLOCK", analyticsLocations: U }),
-            onIgnore: () => G({ action: "IGNORE", analyticsLocations: U }),
-            onUnblock: () => G({ action: "UNBLOCK", analyticsLocations: U }),
+            appContext: P,
+            onBlock: () => U({ action: "BLOCK", analyticsLocations: M }),
+            onIgnore: () => U({ action: "IGNORE", analyticsLocations: M }),
+            onUnblock: () => U({ action: "UNBLOCK", analyticsLocations: M }),
         }),
-        w = (0, R.A)({
-            user: t,
+        Q = (0, j.A)({
+            user: e,
             guildId: n,
             location: k,
-            appContext: T,
-            onBlock: () => G({ action: "BLOCK", analyticsLocations: U }),
-            onIgnore: () => G({ action: "IGNORE", analyticsLocations: U }),
-            onUnignore: () => G({ action: "UNIGNORE", analyticsLocations: U }),
+            appContext: P,
+            onBlock: () => U({ action: "BLOCK", analyticsLocations: M }),
+            onIgnore: () => U({ action: "IGNORE", analyticsLocations: M }),
+            onUnignore: () => U({ action: "UNIGNORE", analyticsLocations: M }),
         }),
-        V = (function (e) {
-            let { user: t, guildId: n, color: i, onAction: r, location: a = c.A.CONTEXT_MENU, appContext: s } = e,
+        w = (function (t) {
+            let { user: e, guildId: n, color: l, onAction: r, location: a = c.A.CONTEXT_MENU, appContext: s } = t,
                 u = _.useExperiment({ location: a }, { autoTrackExposure: !0 }).enabled,
-                d = (0, v.bG)([y.default], () => y.default.getId() === t.id);
-            return !u || d || t.isNonUserBot()
+                d = (0, b.bG)([C.default], () => C.default.getId() === e.id);
+            return !u || d || e.isNonUserBot()
                 ? null
-                : (0, l.jsx)(o.Dr, {
+                : (0, i.jsx)(o.Dr, {
                       id: "report-user",
-                      color: i,
-                      label: N.intl.string(N.t.A1MM3D),
-                      action: () => (0, I.NW)(t, n === h.ME ? void 0 : n, r, s),
+                      color: l,
+                      label: A.intl.string(A.t.A1MM3D),
+                      action: () => (0, v.NW)(e, n === N.ME ? void 0 : n, r, s),
                   });
         })({
-            user: t,
+            user: e,
             guildId: n,
             location: k,
-            appContext: T,
+            appContext: P,
             color: "danger",
-            onAction: () => G({ action: "REPORT", analyticsLocations: U }),
+            onAction: () => U({ action: "REPORT", analyticsLocations: M }),
         }),
-        X = (function (e) {
-            let { user: t, guildId: n, color: i, onAction: r, appContext: a } = e,
-                s = (0, v.bG)([j.Ay], () => j.Ay.get("iar_testing")),
-                c = (0, v.bG)([C.default], () => C.default.getCurrentUser());
-            return null != c && (t.id === c.id || t.isNonUserBot() || !c.isStaff() || !s)
+        X = (function (t) {
+            let { user: e, guildId: n, color: l, onAction: r, appContext: a } = t,
+                s = (0, b.bG)([I.Ay], () => I.Ay.get("iar_testing")),
+                c = (0, b.bG)([y.default], () => y.default.getCurrentUser());
+            return null != c && (e.id === c.id || e.isNonUserBot() || !c.isStaff() || !s)
                 ? null
-                : (0, l.jsx)(o.Dr, {
+                : (0, i.jsx)(o.Dr, {
                       id: "staff-test-report-user",
-                      color: i,
+                      color: l,
                       label: "[STAFF] Test Profile Report",
-                      action: () => (0, I.RR)(t, n === h.ME ? void 0 : n, r, a),
+                      action: () => (0, v.RR)(e, n === N.ME ? void 0 : n, r, a),
                   });
         })({
-            user: t,
+            user: e,
             guildId: n,
             location: k,
-            appContext: T,
+            appContext: P,
             color: "danger",
-            onAction: () => G({ action: "REPORT", analyticsLocations: U }),
+            onAction: () => U({ action: "REPORT", analyticsLocations: M }),
         }),
-        Q = [
-            [m, L],
-            [w, F, V, X],
+        q = [
+            [m, D],
+            [Q, F, w, X],
             [
-                (function (e) {
-                    let { user: t, guildId: n, onSuccess: r } = e,
-                        a = (0, A.Ay)(t.id, n ?? void 0),
+                (function (t) {
+                    let { user: e, guildId: n, onSuccess: r } = t,
+                        a = (0, g.Ay)(e.id, n ?? void 0),
                         s = p.Q_.useSetting(),
-                        { tidaWebformEnabled: c } = g.A.useExperiment(
+                        { tidaWebformEnabled: c } = E.A.useExperiment(
                             { location: "useCopyUserInfoItem" },
                             { autoTrackExposure: !1 },
                         ),
-                        u = (0, x.A)({ id: t.id, label: N.intl.string(N.t["/AXYnE"]), onSuccess: r }),
-                        d = i.useMemo(() => (null == a ? null : a.getBannerURL({ canAnimate: !0, size: h.XAf })), [a]),
-                        m = i.useCallback(() => {
-                            (0, E.C)(t.id), r?.();
-                        }, [t.id, r]),
-                        R = i.useCallback(() => {
-                            let e = t.getAvatarURL(n, h.XAf, !0);
-                            f()(null != e, "cannot copy null avatar URL"), (0, E.C)(e), r?.();
-                        }, [t, n, r]),
-                        b = i.useCallback(() => {
-                            f()(null != d, "cannot copy null banner URL"), (0, E.C)(d), r?.();
+                        u = (0, f.A)({ id: e.id, label: A.intl.string(A.t["/AXYnE"]), onSuccess: r }),
+                        d = l.useMemo(() => (null == a ? null : a.getBannerURL({ canAnimate: !0, size: N.XAf })), [a]),
+                        m = l.useCallback(() => {
+                            (0, R.C)(e.id), r?.();
+                        }, [e.id, r]),
+                        j = l.useCallback(() => {
+                            let t = e.getAvatarURL(n, N.XAf, !0);
+                            x()(null != t, "cannot copy null avatar URL"), (0, R.C)(t), r?.();
+                        }, [e, n, r]),
+                        h = l.useCallback(() => {
+                            x()(null != d, "cannot copy null banner URL"), (0, R.C)(d), r?.();
                         }, [d, r]);
-                    return !__OVERLAY__ && s && E.p5 && null != t.id
+                    return !__OVERLAY__ && s && R.p5 && null != e.id
                         ? c
-                            ? (0, l.jsxs)(o.Dr, {
+                            ? (0, i.jsxs)(o.Dr, {
                                   id: "copy-user-info",
-                                  label: N.intl.string(N.t.QvQeLv),
+                                  label: A.intl.string(A.t.QvQeLv),
                                   children: [
-                                      (0, l.jsx)(o.Dr, {
+                                      (0, i.jsx)(o.Dr, {
                                           id: "copy-user-id",
-                                          label: N.intl.string(N.t["/AXYnE"]),
+                                          label: A.intl.string(A.t["/AXYnE"]),
                                           action: m,
                                       }),
-                                      (null != t.avatar || t.hasAvatarForGuild(n)) &&
-                                          (0, l.jsx)(o.Dr, {
+                                      (null != e.avatar || e.hasAvatarForGuild(n)) &&
+                                          (0, i.jsx)(o.Dr, {
                                               id: "copy-user-avatar-link",
-                                              label: N.intl.string(N.t.gERDvM),
-                                              action: R,
+                                              label: A.intl.string(A.t.gERDvM),
+                                              action: j,
                                           }),
                                       null != d &&
-                                          (0, l.jsx)(o.Dr, {
+                                          (0, i.jsx)(o.Dr, {
                                               id: "copy-user-banner-link",
-                                              label: N.intl.string(N.t.hsNv0R),
-                                              action: b,
+                                              label: A.intl.string(A.t.hsNv0R),
+                                              action: h,
                                           }),
                                   ],
                               })
                             : u
                         : null;
-                })({ user: t, guildId: n, onSuccess: () => G({ action: "COPY_USER_ID", analyticsLocations: U }) }),
+                })({ user: e, guildId: n, onSuccess: () => U({ action: "COPY_USER_ID", analyticsLocations: M }) }),
             ],
         ];
-    return Q.every((e) => e.every((e) => null == e))
+    return q.every((t) => t.every((t) => null == t))
         ? null
-        : (0, l.jsx)(u.f5, {
-              value: U,
-              children: (0, l.jsx)(a.Y, {
-                  targetElementRef: O,
-                  renderPopout: (e) => {
-                      let { closePopout: t } = e;
-                      return (0, l.jsx)(s.W, {
+        : (0, i.jsx)(u.f5, {
+              value: M,
+              children: (0, i.jsx)(a.Y, {
+                  targetElementRef: S,
+                  renderPopout: (t) => {
+                      let { closePopout: e } = t;
+                      return (0, i.jsx)(s.W, {
                           "data-menu-migrated-auto": !0,
                           navId: "user-profile-overflow-menu",
                           onSelect: void 0,
-                          onClose: t,
-                          "aria-label": N.intl.string(N.t.AXIHpV),
-                          children: Q.map((e, t) => (0, l.jsx)(o.rX, { children: e.map((e) => e) }, t)),
+                          onClose: e,
+                          "aria-label": A.intl.string(A.t.AXIHpV),
+                          children: q.map((t, e) => (0, i.jsx)(o.rX, { children: t.map((t) => t) }, e)),
                       });
                   },
-                  children: (e) => M({ ...e, ...D }),
+                  children: (t) => O({ ...t, ...L }),
               }),
           });
 }
-function M(e) {
-    let t = i.useRef(null);
-    return (0, l.jsx)(O, { ...e, popoutTargetRef: t, children: (e) => (0, l.jsx)(T.q3, { buttonRef: t, ...e }) });
+function O(t) {
+    let e = l.useRef(null);
+    return (0, i.jsx)(S, { ...t, popoutTargetRef: e, children: (t) => (0, i.jsx)(P.q3, { buttonRef: e, ...t }) });
 }
-function G(e) {
-    let t = i.useRef(null);
-    return (0, l.jsx)(O, { ...e, popoutTargetRef: t, children: (e) => (0, l.jsx)(T.br, { buttonRef: t, ...e }) });
+function U(t) {
+    let e = l.useRef(null);
+    return (0, i.jsx)(S, { ...t, popoutTargetRef: e, children: (t) => (0, i.jsx)(P.br, { buttonRef: e, ...t }) });
 }

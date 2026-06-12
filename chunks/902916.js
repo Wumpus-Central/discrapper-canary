@@ -1,4 +1,4 @@
-r.d(t, { _: () => f }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
+r.d(t, { _: () => u }), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
 var a = r(64700),
     n = r(626584);
 r(323874), r(14289), r(35956), r(321073);
@@ -18,7 +18,7 @@ async function l() {
         throw ((e.cause = t), e);
     }
 }
-async function s(e) {
+async function c(e) {
     if (!(e instanceof Uint8Array)) throw Error("webpData must be a Uint8Array");
     if (0 === e.length) throw Error("webpData cannot be empty");
     let t = await l(),
@@ -48,7 +48,7 @@ async function s(e) {
             n = t.HEAPU32[(e >> 2) + 4];
         t._free(e);
         let l = [],
-            s = r * a * 4;
+            c = r * a * 4;
         for (; 0 !== t._WebPAnimDecoderHasMoreFrames(i); ) {
             let e = t._malloc(4);
             if (0 === e) throw Error("Failed to allocate 4 bytes for frame buffer pointer - out of WASM memory");
@@ -61,9 +61,9 @@ async function s(e) {
                 break;
             }
             let h = t.HEAPU32[e >> 2],
-                c = t.HEAP32[n >> 2],
-                f = new Uint8Array(t.HEAPU8.buffer, h, s).slice();
-            l.push({ data: f, timestamp: c, width: r, height: a }), t._free(e), t._free(n);
+                s = t.HEAP32[n >> 2],
+                u = new Uint8Array(t.HEAPU8.buffer, h, c).slice();
+            l.push({ data: u, timestamp: s, width: r, height: a }), t._free(e), t._free(n);
         }
         return { frames: l, width: r, height: a, frameCount: n };
     } finally {
@@ -73,42 +73,42 @@ async function s(e) {
 async function h(e) {
     if (!(e instanceof Uint8Array) || 0 === e.length) return !1;
     try {
-        let { frameCount: t } = await s(e);
+        let { frameCount: t } = await c(e);
         return t > 1;
     } catch {
         return !1;
     }
 }
-let c = new n.A("useAnimatedImageCheck");
-function f(e) {
+let s = new n.A("useAnimatedImageCheck");
+function u(e) {
     let t = "image/gif" === e.type,
         n = "image/webp" === e.type,
         [i, o] = a.useState(!1),
-        [s, f] = a.useState(null),
-        u = n && s !== e;
+        [c, u] = a.useState(null),
+        f = n && c !== e;
     a.useEffect(() => {
         let a = !1;
         return (
             t
-                ? (r.e("47580").then(r.bind(r, 844183)), o(!1), f(e))
+                ? (r.e("47580").then(r.bind(r, 844183)), o(!1), u(e))
                 : n
                   ? (async () => {
                         try {
                             let t = await e.arrayBuffer(),
                                 r = new Uint8Array(t),
                                 n = await h(r);
-                            a || (o(n), n && l(), f(e));
+                            a || (o(n), n && l(), u(e));
                         } catch (t) {
-                            a || (c.error("Error checking WebP animation", t), o(!1), f(e));
+                            a || (s.error("Error checking WebP animation", t), o(!1), u(e));
                         }
                     })()
-                  : (o(!1), f(e)),
+                  : (o(!1), u(e)),
             () => {
                 a = !0;
             }
         );
     }, [e, t, n]);
-    let A = i && s === e,
+    let A = i && c === e,
         m = t || A;
-    return { isGIF: t, isWebP: n, isAnimatedWebPFile: A, isCheckingAnimation: u, isEditableAnimatedImage: m };
+    return { isGIF: t, isWebP: n, isAnimatedWebPFile: A, isCheckingAnimation: f, isEditableAnimatedImage: m };
 }

@@ -6,7 +6,7 @@ var i = n(735438),
     a = n(499979),
     o = n(228366),
     l = n(283047),
-    u = n(235058),
+    u = n(890063),
     c = n(287809),
     d = n(731854);
 let _ = {
@@ -14,21 +14,21 @@ let _ = {
         outputDeviceFrecency: d.oh.AUDIO_OUTPUT,
         videoDeviceFrecency: d.oh.VIDEO_INPUT,
     },
-    f = {
+    h = {
         afterCompute: () => {},
         computeBonus: () => 100,
         lookupKey: (e) => e,
         maxSamples: 256,
         numFrequentlyItems: 1 / 0,
     };
-function h(e, t) {
+function f(e, t) {
     let { oldId: n } = t;
     if (!A.isSampling(e)) return !1;
     A.stopSampling(e, n), A.startSampling(e);
 }
 let p = { [d.oh.AUDIO_INPUT]: new a.W0(), [d.oh.AUDIO_OUTPUT]: new a.W0(), [d.oh.VIDEO_INPUT]: new a.W0() },
     E = { [d.oh.AUDIO_INPUT]: {}, [d.oh.AUDIO_OUTPUT]: {}, [d.oh.VIDEO_INPUT]: {} },
-    m = { [d.oh.AUDIO_INPUT]: new l.A(f), [d.oh.AUDIO_OUTPUT]: new l.A(f), [d.oh.VIDEO_INPUT]: new l.A(f) };
+    m = { [d.oh.AUDIO_INPUT]: new l.A(h), [d.oh.AUDIO_OUTPUT]: new l.A(h), [d.oh.VIDEO_INPUT]: new l.A(h) };
 class g extends s.Ay.PersistedStore {
     static displayName = "DeviceFrecencyStore";
     static persistKey = "DeviceFrecencyStore";
@@ -107,9 +107,9 @@ class g extends s.Ay.PersistedStore {
     }
 }
 let A = new g(o.h, {
-        AUDIO_SET_INPUT_DEVICE: (e) => h(d.oh.AUDIO_INPUT, e),
-        AUDIO_SET_OUTPUT_DEVICE: (e) => h(d.oh.AUDIO_OUTPUT, e),
-        MEDIA_ENGINE_SET_VIDEO_DEVICE: (e) => h(d.oh.VIDEO_INPUT, e),
+        AUDIO_SET_INPUT_DEVICE: (e) => f(d.oh.AUDIO_INPUT, e),
+        AUDIO_SET_OUTPUT_DEVICE: (e) => f(d.oh.AUDIO_OUTPUT, e),
+        MEDIA_ENGINE_SET_VIDEO_DEVICE: (e) => f(d.oh.VIDEO_INPUT, e),
         SPEAKING: function (e) {
             let { context: t, userId: n, speakingFlags: i } = e;
             if (t !== d.x.DEFAULT) return !1;

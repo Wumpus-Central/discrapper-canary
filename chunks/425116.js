@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $: () => h, A: () => C });
+n.d(t, { $: () => f, A: () => v });
 var i = n(228366),
     r = n(439372),
     s = n(803224),
@@ -10,8 +10,8 @@ var i = n(228366),
     c = n(936926),
     d = n(580296),
     _ = n(602339),
-    f = n(375708);
-function h() {
+    h = n(375708);
+function f() {
     return u.A.isCurrentUserInRestrictedHours();
 }
 let p = !1,
@@ -43,7 +43,7 @@ function A() {
                       let s, a, u;
                       (n = e.rule),
                           (r = e.startAtMs),
-                          (s = f.intl.string(_.default["0JlDg0"])),
+                          (s = h.intl.string(_.default["0JlDg0"])),
                           (a = o.bV[new Date(r).getDay()]),
                           (u = `${(0, l.n1)([a])} ${(0, l.li)(n)}`.trim()),
                           i.h.dispatch({ type: "RESTRICTED_HOURS_WARNING", title: s, subtitle: u }),
@@ -61,7 +61,7 @@ function A() {
               )));
 }
 function I() {
-    let e = h();
+    let e = f();
     e !== p &&
         ((p = e),
         i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: p }),
@@ -78,19 +78,19 @@ function T() {
 function S() {
     I(), A();
 }
-function N() {
+function y() {
     A();
 }
-class y extends r.A {
+class N extends r.A {
     stores = new Map().set(a.default, S).set(u.A, S);
     actions = {
         POST_CONNECTION_OPEN: S,
         CURRENT_USER_UPDATE: S,
-        NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: N,
+        NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: y,
         LOGOUT: T,
     };
     _initialize() {
-        (p = h()),
+        (p = f()),
             i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: p }),
             p && (0, d.openRestrictedHoursModal)(),
             (E = setInterval(I, 6e4)),
@@ -104,4 +104,4 @@ class y extends r.A {
             (p = !1);
     }
 }
-let C = new y();
+let v = new N();

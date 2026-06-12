@@ -1,8 +1,8 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = "[a-zA-Z_][a-zA-Z0-9_.]{0,149}(!|\\?)?",
-        n = {
-            $pattern: a,
+        n = "[a-zA-Z_][a-zA-Z0-9_.]{0,149}(!|\\?)?",
+        i = {
+            $pattern: n,
             keyword: [
                 "after",
                 "alias",
@@ -38,10 +38,10 @@ e.exports = function (e) {
             ],
             literal: ["false", "nil", "true"],
         },
-        r = { className: "subst", begin: /#\{/, end: /\}/, keywords: n },
-        i = { match: /\\[\s\S]/, scope: "char.escape", relevance: 0 },
-        o = "[/|([{<\"']",
-        s = [
+        r = { className: "subst", begin: /#\{/, end: /\}/, keywords: i },
+        s = { match: /\\[\s\S]/, scope: "char.escape", relevance: 0 },
+        a = "[/|([{<\"']",
+        o = [
             { begin: /"/, end: /"/ },
             { begin: /'/, end: /'/ },
             { begin: /\//, end: /\// },
@@ -52,34 +52,34 @@ e.exports = function (e) {
             { begin: /</, end: />/ },
         ],
         l = (e) => ({ scope: "char.escape", begin: t.concat(/\\/, e), relevance: 0 }),
+        u = {
+            className: "string",
+            begin: "~[a-z](?=" + a + ")",
+            contains: o.map((t) => e.inherit(t, { contains: [l(t.end), s, r] })),
+        },
         c = {
             className: "string",
-            begin: "~[a-z](?=" + o + ")",
-            contains: s.map((t) => e.inherit(t, { contains: [l(t.end), i, r] })),
-        },
-        _ = {
-            className: "string",
-            begin: "~[A-Z](?=" + o + ")",
-            contains: s.map((t) => e.inherit(t, { contains: [l(t.end)] })),
+            begin: "~[A-Z](?=" + a + ")",
+            contains: o.map((t) => e.inherit(t, { contains: [l(t.end)] })),
         },
         d = {
             className: "regex",
             variants: [
                 {
-                    begin: "~r(?=" + o + ")",
-                    contains: s.map((a) =>
-                        e.inherit(a, { end: t.concat(a.end, /[uismxfU]{0,7}/), contains: [l(a.end), i, r] }),
+                    begin: "~r(?=" + a + ")",
+                    contains: o.map((n) =>
+                        e.inherit(n, { end: t.concat(n.end, /[uismxfU]{0,7}/), contains: [l(n.end), s, r] }),
                     ),
                 },
                 {
-                    begin: "~R(?=" + o + ")",
-                    contains: s.map((a) =>
-                        e.inherit(a, { end: t.concat(a.end, /[uismxfU]{0,7}/), contains: [l(a.end)] }),
+                    begin: "~R(?=" + a + ")",
+                    contains: o.map((n) =>
+                        e.inherit(n, { end: t.concat(n.end, /[uismxfU]{0,7}/), contains: [l(n.end)] }),
                     ),
                 },
             ],
         },
-        m = {
+        _ = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE, r],
             variants: [
@@ -93,36 +93,36 @@ e.exports = function (e) {
                 { begin: /"/, end: /"/ },
             ],
         },
-        p = {
+        h = {
             className: "function",
             beginKeywords: "def defp defmacro defmacrop",
             end: /\B\b/,
-            contains: [e.inherit(e.TITLE_MODE, { begin: a, endsParent: !0 })],
+            contains: [e.inherit(e.TITLE_MODE, { begin: n, endsParent: !0 })],
         },
-        u = e.inherit(p, {
+        f = e.inherit(h, {
             className: "class",
             beginKeywords: "defimpl defmodule defprotocol defrecord",
             end: /\bdo\b|$|;/,
         }),
-        g = [
-            m,
-            d,
+        p = [
             _,
+            d,
             c,
-            e.HASH_COMMENT_MODE,
             u,
-            p,
+            e.HASH_COMMENT_MODE,
+            f,
+            h,
             { begin: "::" },
             {
                 className: "symbol",
                 begin: ":(?![\\s:])",
                 contains: [
-                    m,
+                    _,
                     { begin: "[a-zA-Z_]\\w*[!?=]?|[-+~]@|<<|>>|=~|===?|<=>|[<>]=?|\\*\\*|[-/+%^&*~`|]|\\[\\]=?" },
                 ],
                 relevance: 0,
             },
-            { className: "symbol", begin: a + ":(?!:)", relevance: 0 },
+            { className: "symbol", begin: n + ":(?!:)", relevance: 0 },
             { className: "title.class", begin: /(\b[A-Z][a-zA-Z0-9_]+)/, relevance: 0 },
             {
                 className: "number",
@@ -131,5 +131,5 @@ e.exports = function (e) {
             },
             { className: "variable", begin: "(\\$\\W)|((\\$|@@?)(\\w+))" },
         ];
-    return (r.contains = g), { name: "Elixir", aliases: ["ex", "exs"], keywords: n, contains: g };
+    return (r.contains = p), { name: "Elixir", aliases: ["ex", "exs"], keywords: i, contains: p };
 };

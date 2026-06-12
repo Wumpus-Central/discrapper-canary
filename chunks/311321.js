@@ -2,12 +2,12 @@ i.d(e, { A: () => p });
 var t = i(627968);
 i(64700);
 var l = i(665260),
-    s = i(827734),
+    s = i(661531),
     r = i(534514),
     a = i(664121),
     d = i(950305),
     u = i(652215),
-    o = i(985018),
+    o = i(375708),
     c = i(528138);
 let m = { size: "md", color: s.A.colors.INTERACTIVE_TEXT_DEFAULT };
 function p(n) {

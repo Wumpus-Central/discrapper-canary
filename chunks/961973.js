@@ -3,15 +3,15 @@ n.d(t, {
     $Y: () => S,
     A2: () => I,
     G4: () => b,
-    H_: () => U,
-    L1: () => N,
-    Lx: () => v,
-    OG: () => k,
-    VU: () => O,
-    _N: () => C,
+    H_: () => k,
+    L1: () => y,
+    Lx: () => C,
+    OG: () => U,
+    VU: () => R,
+    _N: () => v,
     a: () => P,
     rs: () => T,
-    sZ: () => R,
+    sZ: () => O,
     tb: () => M,
     ui: () => L,
     vV: () => x,
@@ -28,8 +28,8 @@ var i = n(665260),
     c = n(71393),
     d = n(576705),
     _ = n(403362),
-    f = n(488926),
-    h = n(240248),
+    h = n(488926),
+    f = n(240248),
     p = n(112389),
     E = n(539916),
     m = n(652215),
@@ -63,7 +63,7 @@ function S(e, t) {
     let n = t.flags ?? 0;
     return i.Lt(n, g.D.STARTED_ONBOARDING) && !i.Lt(n, g.D.COMPLETED_ONBOARDING);
 }
-function N(e, t) {
+function y(e, t) {
     return (
         !(
             null != e &&
@@ -72,7 +72,7 @@ function N(e, t) {
         ) && null != t
     );
 }
-function y(e, t, n) {
+function N(e, t, n) {
     let i = new Set();
     e.forEach((e) => {
         e.options.forEach((e) => {
@@ -88,8 +88,8 @@ function y(e, t, n) {
         r.filter((e) => !i.has(e.id) && !(null != e.parent_id && i.has(e.parent_id))),
     ];
 }
-function C(e, t, n) {
-    return y(
+function v(e, t, n) {
+    return N(
         t,
         n,
         u.Ay.getChannels(e)[u.I6].map((e) => {
@@ -98,8 +98,8 @@ function C(e, t, n) {
         }),
     );
 }
-function v(e, t, n) {
-    return y(
+function C(e, t, n) {
+    return N(
         t,
         n,
         (0, r.bG)([u.Ay], () => u.Ay.getChannels(e))[u.I6].map((e) => {
@@ -108,14 +108,14 @@ function v(e, t, n) {
         }),
     );
 }
-function O(e) {
-    return R(o.A.getChannel(e));
-}
 function R(e) {
+    return O(o.A.getChannel(e));
+}
+function O(e) {
     return (
         null != e &&
         !!(0, p.S)(e.guild_id, e.id) &&
-        (e.isForumChannel() ? f.MJ(m.xBc.SEND_MESSAGES_IN_THREADS, e) : f.MJ(m.xBc.SEND_MESSAGES, e))
+        (e.isForumChannel() ? h.MJ(m.xBc.SEND_MESSAGES_IN_THREADS, e) : h.MJ(m.xBc.SEND_MESSAGES, e))
     );
 }
 function b(e, t, n) {
@@ -166,7 +166,7 @@ function L(e, t) {
             let { id: t } = e;
             return t;
         })),
-        n.filter((e) => R(s[e]?.channel))),
+        n.filter((e) => O(s[e]?.channel))),
         i,
     ];
 }
@@ -185,7 +185,7 @@ function M(e, t) {
                 (0, p.S)(e.channel.guild_id, e.channel.id) &&
                     ((t.has(e.channel.id) && !e.channel.isCategory()) ||
                         (!e.channel.isThread() && null != e.channel.parent_id && t.has(e.channel.parent_id))) &&
-                    ((s[e.channel.id] = e), i.push(e.channel), R(e.channel) && r.push(e.channel.id));
+                    ((s[e.channel.id] = e), i.push(e.channel), O(e.channel) && r.push(e.channel.id));
             return [r, i];
         },
         [e, t],
@@ -208,21 +208,21 @@ function x(e) {
             .filter(_.Vq),
     );
 }
-function U(e) {
+function k(e) {
     let t = e.filter((e) => e.connection_type === E.wZ.PROVIDER_CONNECTED_ACCOUNT && e.provider_id),
         n = [],
         i = [];
     return (
         t.forEach((e) => {
             let t = e.provider_id;
-            if ((0, h.uJ)(t)) return;
+            if ((0, f.uJ)(t)) return;
             let r = l.A.getAccount(null, t);
             null == r || r.revoked ? i.push(t) : n.push(t);
         }),
         { connected: n, notConnected: i }
     );
 }
-function k(e) {
+function U(e) {
     let t = e.filter((e) => e.connection_type === E.wZ.APPLICATION && e.application_id),
         i = [],
         r = [],
@@ -231,7 +231,7 @@ function k(e) {
     return (
         t.forEach((e) => {
             let t = e.application_id;
-            if ((0, h.uJ)(t)) return;
+            if ((0, f.uJ)(t)) return;
             let n = s.getNewestTokenForApplication(t);
             s.getFetchStateForApplication(t) === a.FETCHED && null != n ? i.push(t) : r.push(t);
         }),

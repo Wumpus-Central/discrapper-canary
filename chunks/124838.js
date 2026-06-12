@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => r });
-let r = (0, n(250105).Ay)({
+n.d(t, { A: () => i });
+let i = (0, n(240921).Ay)({
     kind: "user",
     name: "2025-12-proportional-vad-indicator",
     defaultConfig: { enabled: !1 },

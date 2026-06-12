@@ -22,8 +22,8 @@ var i = n(627968),
     _ = n(661531),
     j = n(175841),
     N = n(375708),
-    y = n(871466);
-function T(e) {
+    T = n(871466);
+function y(e) {
     let {
         label: t,
         backgroundColor: n = _.A.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT.css,
@@ -31,24 +31,24 @@ function T(e) {
         iconColor: s,
     } = e;
     return (0, i.jsxs)("div", {
-        className: y.q,
+        className: T.q,
         style: { backgroundColor: n },
         children: [
             (0, i.jsx)(f.E, {
                 variant: "text-sm/normal",
                 color: "always-white",
-                className: y.__invalid_badgeText,
+                className: T.__invalid_badgeText,
                 children: t,
             }),
-            (0, i.jsx)(l, { className: y.r, color: s ?? "currentColor", "aria-hidden": !0 }),
+            (0, i.jsx)(l, { className: T.r, color: s ?? "currentColor", "aria-hidden": !0 }),
         ],
     });
 }
 function S() {
-    return (0, i.jsx)(T, { label: N.intl.string(N.t["I+02Gs"]), backgroundColor: "#207B8D", icon: j.B });
+    return (0, i.jsx)(y, { label: N.intl.string(N.t["I+02Gs"]), backgroundColor: "#207B8D", icon: j.B });
 }
 function b() {
-    return (0, i.jsx)(T, {
+    return (0, i.jsx)(y, {
         label: N.intl.string(N.t.TgsPaP),
         icon: d.R,
         iconColor: _.A.unsafe_rawColors.PRIMARY_330.css,

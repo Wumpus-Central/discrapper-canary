@@ -1,6 +1,6 @@
-n.d(t, { vd: () => i.v, Mw: () => _, UnifiedCheckoutFlowManagerSingletons: () => A, XZ: () => l.X, CL: () => l.C });
+n.d(t, { vd: () => i.v, Mw: () => m, UnifiedCheckoutFlowManagerSingletons: () => O, XZ: () => l.X, CL: () => l.C });
 var l = n(75304),
-    r = n(673227),
+    r = n(449011),
     i = n(71804);
 n(584160);
 var a = n(627968),
@@ -11,42 +11,42 @@ var a = n(627968),
     d = n(426398),
     C = n(375708),
     p = n(367644);
-let _ = (e) => {
+let m = (e) => {
         let {
                 paymentModalStepProps: { handleStepChange: t },
                 layout: n,
                 renderStepBody: r,
                 renderLeftColumn: i,
-                renderRightColumn: _,
-                primaryCTAButtonProps: m,
+                renderRightColumn: m,
+                primaryCTAButtonProps: _,
                 onBackClick: E,
             } = e,
             { hasPaymentSources: T } = (0, d.jm)(),
             I = T ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
             S = s.useCallback(() => t(I), [t, I]),
-            O = s.useMemo(
-                () => (n === l.X.CUSTOM_STEP_BODY ? r() : (0, a.jsxs)("div", { className: p.D, children: [i(), _()] })),
-                [n, r, i, _],
+            h = s.useMemo(
+                () => (n === l.X.CUSTOM_STEP_BODY ? r() : (0, a.jsxs)("div", { className: p.D, children: [i(), m()] })),
+                [n, r, i, m],
             ),
-            h = s.useMemo(() => ({ ...m, onClick: S, text: C.intl.string(C.t.XiOHRX) }), [m, S]);
+            A = s.useMemo(() => ({ ..._, onClick: S, text: C.intl.string(C.t.XiOHRX) }), [_, S]);
         return (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(u.dZ, { children: O }),
-                (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: h }) }),
+                (0, a.jsx)(u.dZ, { children: h }),
+                (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: A }) }),
             ],
         });
     },
-    m = null,
+    _ = null,
     E = null,
     T = null,
     I = null,
     S = null,
-    O = null,
     h = null,
-    A = {
+    A = null,
+    O = {
         [l.C.ORB_CHECKOUT]: {
             get: function () {
-                return null == m && (m = new r.o({ checkoutFlow: l.C.ORB_CHECKOUT })), m;
+                return null == _ && (_ = new r.o({ checkoutFlow: l.C.ORB_CHECKOUT })), _;
             },
         },
         [l.C.COLLECTIBLES_CHECKOUT]: {
@@ -71,12 +71,12 @@ let _ = (e) => {
         },
         [l.C.GUILD_ROLE_CHECKOUT]: {
             get: function () {
-                return null == O && (O = new r.o({ checkoutFlow: l.C.GUILD_ROLE_CHECKOUT })), O;
+                return null == h && (h = new r.o({ checkoutFlow: l.C.GUILD_ROLE_CHECKOUT })), h;
             },
         },
         [l.C.PREMIUM_CHECKOUT]: {
             get: function () {
-                return null == h && (h = new r.o({ checkoutFlow: l.C.PREMIUM_CHECKOUT })), h;
+                return null == A && (A = new r.o({ checkoutFlow: l.C.PREMIUM_CHECKOUT })), A;
             },
         },
     };

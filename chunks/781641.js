@@ -934,10 +934,10 @@ var e5 = "object" == typeof exports && exports && !exports.nodeType && exports,
             return e4 && e4.binding && e4.binding("util");
         } catch (e) {}
     })(),
-    e7 = e6 && e6.isTypedArray,
-    e8 = e7
+    e8 = e6 && e6.isTypedArray,
+    e7 = e8
         ? function (e) {
-              return e7(e);
+              return e8(e);
           }
         : function (e) {
               return eA(e) && eV(e.length) && !!e2[q(e)];
@@ -980,7 +980,7 @@ let tl = function (e, t) {
         var r = eG(e),
             n = !r && eX(e),
             o = !r && !n && eq(e),
-            a = !r && !n && !o && e8(e),
+            a = !r && !n && !o && e7(e),
             i = r || n || o || a,
             l = i ? tn(e.length, String) : [],
             s = l.length;
@@ -1022,7 +1022,7 @@ let tp = function (e) {
         if (c) {
             var f = eG(s),
                 d = !f && eq(s),
-                h = !f && !d && e8(s);
+                h = !f && !d && e7(s);
             ((p = s), f || d || h)
                 ? eG(l)
                     ? (p = l)
@@ -1643,7 +1643,7 @@ var t6 =
         }
         return e;
     };
-let t7 = (function (e) {
+let t8 = (function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "span",
         r = d.Component;
     if ("function" != typeof r && null !== r)
@@ -1741,7 +1741,7 @@ let t7 = (function (e) {
         )
     );
 });
-var t8 =
+var t7 =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -1769,7 +1769,7 @@ var t8 =
             { style: c.picker, className: "alpha-picker " + (void 0 === p ? "" : p) },
             d.createElement(
                 O,
-                t8({}, c.alpha, { rgb: t, hsl: r, pointer: u, renderers: s, onChange: a, direction: i }),
+                t7({}, c.alpha, { rgb: t, hsl: r, pointer: u, renderers: s, onChange: a, direction: i }),
             ),
         );
     };
@@ -2033,7 +2033,7 @@ let rA = function (e, t, r, n, o, a) {
             if (!eq(t)) return !1;
             (i = !0), (p = !1);
         }
-        if (f && !p) return a || (a = new ex()), i || e8(e) ? rn(e, t, r, n, o, a) : rs(e, t, s, r, n, o, a);
+        if (f && !p) return a || (a = new ex()), i || e7(e) ? rn(e, t, r, n, o, a) : rs(e, t, s, r, n, o, a);
         if (!(1 & r)) {
             var d = p && rz.call(e, "__wrapped__"),
                 h = c && rz.call(t, "__wrapped__");
@@ -2167,10 +2167,10 @@ let r3 = function (e) {
         var n = null == e ? void 0 : r4(e, t);
         return void 0 === n ? r : n;
     },
-    r7 = function (e, t) {
+    r8 = function (e, t) {
         return null != e && t in Object(e);
     },
-    r8 = function (e, t, r) {
+    r7 = function (e, t, r) {
         t = r2(t, e);
         for (var n = -1, o = t.length, a = !1; ++n < o; ) {
             var i = r3(t[n]);
@@ -2202,7 +2202,7 @@ let r3 = function (e) {
                       ? rX(r3(t), r)
                       : function (e) {
                             var n = r6(e, t);
-                            return void 0 === n && n === r ? null != e && r8(e, t, r7) : rH(r, n, 3);
+                            return void 0 === n && n === r ? null != e && r7(e, t, r8) : rH(r, n, 3);
                         })
                 : rG(e);
         }
@@ -2243,7 +2243,7 @@ let r3 = function (e) {
             "div",
             { style: o.swatches },
             nr(t, function (e) {
-                return d.createElement(t7, {
+                return d.createElement(t8, {
                     key: e,
                     color: e,
                     style: o.swatch,
@@ -2665,7 +2665,7 @@ var na = {
         return d.createElement(
             "div",
             { style: s.swatch },
-            d.createElement(t7, {
+            d.createElement(t8, {
                 style: s.Swatch,
                 color: t,
                 onClick: r,
@@ -3226,7 +3226,7 @@ let nF = function (e) {
                 { active: o, "color-#FFFFFF": "#FFFFFF" === t, transparent: "transparent" === t },
             );
         return d.createElement(
-            t7,
+            t8,
             {
                 style: a.color,
                 color: t,
@@ -3427,7 +3427,7 @@ let nL = (0, h.handleHover)(function (e) {
     return d.createElement(
         "div",
         { style: i.swatch },
-        d.createElement(t7, { color: r, onClick: n, onHover: o, focusStyle: a }),
+        d.createElement(t8, { color: r, onClick: n, onHover: o, focusStyle: a }),
     );
 });
 var nz = function (e) {
@@ -4257,7 +4257,7 @@ var n$ =
                     "div",
                     { key: r, style: a.swatchWrap },
                     d.createElement(
-                        t7,
+                        t8,
                         n$({}, t, {
                             style: a.swatch,
                             onClick: i,
@@ -4573,7 +4573,7 @@ let n2 = function (e) {
                 { first: o, last: a, active: i, "color-#FFFFFF": "#FFFFFF" === t, transparent: "transparent" === t },
             );
         return d.createElement(
-            t7,
+            t8,
             {
                 color: t,
                 style: l.color,
@@ -4795,7 +4795,7 @@ var n4 = function (e) {
             "div",
             { style: u.body },
             nr(o, function (e, t) {
-                return d.createElement(t7, {
+                return d.createElement(t8, {
                     key: t,
                     color: e,
                     hex: e,
@@ -4859,7 +4859,7 @@ var n6 = function (e) {
 };
 (n6.propTypes = { hsl: T().shape({ h: T().number, s: T().number, l: T().number, a: T().number }) }),
     (n6.defaultProps = { hsl: { a: 1, h: 249.94, l: 0.2, s: 0.5 } });
-var n7 = function (e) {
+var n8 = function (e) {
     var t = (0, h.default)({
         default: {
             picker: {
@@ -4874,9 +4874,9 @@ var n7 = function (e) {
     });
     return d.createElement("div", { style: t.picker });
 };
-(n7.propTypes = { hsl: T().shape({ h: T().number, s: T().number, l: T().number, a: T().number }) }),
-    (n7.defaultProps = { hsl: { a: 1, h: 249.94, l: 0.2, s: 0.5 } });
-let n8 = function (e) {
+(n8.propTypes = { hsl: T().shape({ h: T().number, s: T().number, l: T().number, a: T().number }) }),
+    (n8.defaultProps = { hsl: { a: 1, h: 249.94, l: 0.2, s: 0.5 } });
+let n7 = function (e) {
     var t = e.onChange,
         r = e.rgb,
         n = e.hsl,
@@ -5088,10 +5088,10 @@ var n9 = function (e) {
                 d.createElement(
                     "div",
                     { style: p.hue },
-                    d.createElement(B, { style: p.Hue, hsl: o, radius: "4px", pointer: n7, onChange: r }),
+                    d.createElement(B, { style: p.Hue, hsl: o, radius: "4px", pointer: n8, onChange: r }),
                 ),
             ),
-            d.createElement(n8, { rgb: n, hsl: o, hex: i, hsv: a, onChange: r }),
+            d.createElement(n7, { rgb: n, hsl: o, hex: i, hsv: a, onChange: r }),
         ),
     );
 };

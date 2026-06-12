@@ -7,7 +7,7 @@ var n = s(627968),
     o = s(452027),
     c = s(915089),
     d = s(628387),
-    u = s(873174),
+    u = s(922139),
     h = s(717421),
     p = s(922016),
     m = s(939249),
@@ -15,8 +15,8 @@ var n = s(627968),
     E = s(91871),
     y = s.n(E),
     A = s(735438),
-    f = s.n(A),
-    g = s(96337),
+    g = s.n(A),
+    f = s(96337),
     w = s(404778),
     I = s(305866),
     x = s(892547),
@@ -25,10 +25,10 @@ var n = s(627968),
     S = s(661531),
     _ = s(933832),
     j = s(235986),
-    T = s(650583),
-    b = s(330273),
+    b = s(650583),
+    T = s(330273),
     k = s(818050);
-let P = f().memoize((e) => {
+let P = g().memoize((e) => {
     let t = !1;
     if (null != e && (0, C.qt)(e)) {
         let s = (0, C.LX)(e);
@@ -49,7 +49,7 @@ class L extends r.PureComponent {
             (0, n.jsx)(v.vN, {
                 offset: { left: 4 },
                 children: (0, n.jsxs)(j.A, {
-                    className: i()(b.OR, r, { [b.wH]: t }),
+                    className: i()(T.OR, r, { [T.wH]: t }),
                     onClick: this.handleClick,
                     onKeyUp: this.handleKeyUp,
                     align: j.A.Align.CENTER,
@@ -57,7 +57,7 @@ class L extends r.PureComponent {
                     role: "button",
                     tabIndex: 0,
                     children: [
-                        (0, n.jsx)(j.A, { align: j.A.Align.CENTER, className: b.Ix, shrink: 1, children: a }),
+                        (0, n.jsx)(j.A, { align: j.A.Align.CENTER, className: T.Ix, shrink: 1, children: a }),
                         t &&
                             (0, n.jsx)(j.A, {
                                 wrap: j.A.Wrap.WRAP,
@@ -72,7 +72,7 @@ class L extends r.PureComponent {
         );
     }
     handleKeyUp = (e) => {
-        if (e.key === T.dh.ENTER || e.key === T.dh.SPACE) {
+        if (e.key === b.dh.ENTER || e.key === b.dh.SPACE) {
             let { onClick: e, ...t } = this.props;
             e(t);
         }
@@ -115,7 +115,7 @@ class B extends r.PureComponent {
     }
     renderItems() {
         let { query: e } = this.state,
-            t = g.A.flatMap((e, t) => {
+            t = f.A.flatMap((e, t) => {
                 let { alpha2: s, phoneCountryCodes: r, name: a } = e,
                     i = (0, K.Gw)(s);
                 return r.map((e) => ({
@@ -134,7 +134,7 @@ class B extends r.PureComponent {
                     }),
                 }));
             }),
-            s = f()(t)
+            s = g()(t)
                 .filter(
                     (t) =>
                         0 === e.length ||
@@ -242,8 +242,8 @@ function Q(e) {
             setRef: E,
             placeholder: y,
             autoFocus: A,
-            maxLength: f,
-            spellCheck: g,
+            maxLength: g,
+            spellCheck: f,
             autoComplete: w,
             autoCapitalize: I,
             autoCorrect: x,
@@ -252,7 +252,7 @@ function Q(e) {
         } = e,
         S = (0, c.GV)(),
         [_, j] = r.useState(!1),
-        T = (0, d.Vl)(a, N);
+        b = (0, d.Vl)(a, N);
     return (0, n.jsx)("div", {
         className: p ?? void 0,
         children: (0, n.jsx)(o.D, {
@@ -263,7 +263,7 @@ function Q(e) {
             children: (0, n.jsxs)("div", {
                 className: i()(Z.hF, V.hF, v, { [Z.z3]: null != h, [Z.in]: _ }),
                 children: [
-                    (0, n.jsx)(z, { show: T, alpha2: t, countryCode: s }),
+                    (0, n.jsx)(z, { show: b, alpha2: t, countryCode: s }),
                     (0, n.jsx)(l.p, {
                         id: S,
                         name: "email",
@@ -281,8 +281,8 @@ function Q(e) {
                         autoCapitalize: I,
                         autoCorrect: x,
                         autoFocus: A,
-                        maxLength: f,
-                        spellCheck: g,
+                        maxLength: g,
+                        spellCheck: f,
                         className: V.I6,
                         inputClassName: V.LF,
                         onFocus: () => j(!0),

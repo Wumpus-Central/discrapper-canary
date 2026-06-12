@@ -30,7 +30,7 @@ function c(e) {
     }
     let d = o(0.5 * s),
         _ = o(i, -d),
-        f = o(i + s, d);
-    for (_ > 0 && (_ = Math.max(c(0), _)), _ = Math.floor(_ / r.JM) * r.JM; _ <= f; ) _ = c(_);
+        h = o(i + s, d);
+    for (_ > 0 && (_ = Math.max(c(0), _)), _ = Math.floor(_ / r.JM) * r.JM; _ <= h; ) _ = c(_);
     u(t, n, l);
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ch: () => O, hg: () => R, dn: () => v, SD: () => C });
+n.d(t, { Ch: () => R, hg: () => O, dn: () => C, SD: () => v });
 var i = n(64700),
     r = n(735438),
     s = n.n(r),
@@ -10,8 +10,8 @@ var i = n(64700),
     c = n(869003),
     d = n(95561),
     _ = n(264322),
-    f = n(392054),
-    h = n(365347),
+    h = n(392054),
+    f = n(480084),
     p = n(29814),
     E = n(551965),
     m = n(625494),
@@ -20,12 +20,12 @@ var i = n(64700),
     I = n(500049),
     T = n(652215),
     S = n(375708);
-let N = {
+let y = {
         ...p.A.RULES.commandMention,
         parse: (e, t, n) => ({ content: p.A.RULES.commandMention.parse(e, t, n).content }),
     },
-    y = s().pick(
-        (0, E.A)([p.A.RULES, { commandMention: N }, (0, h.A)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
+    N = s().pick(
+        (0, E.A)([p.A.RULES, { commandMention: y }, (0, f.A)({ enableBuildOverrides: !1, enableEmojiClick: !1 })]),
         [
             "commandMention",
             "customEmoji",
@@ -43,22 +43,22 @@ let N = {
             "spoiler",
         ],
     ),
-    C = o.aV(y);
-function v(e) {
+    v = o.aV(N);
+function C(e) {
     let {
             context: t,
             application: n,
             location: r,
             sectionName: s,
             commandName: o,
-            autoDismissOnClick: h = !0,
+            autoDismissOnClick: f = !0,
             launchingComponentId: p,
             submitting: E = !1,
             fetchesApplication: m = !0,
-            onConfirmActivityLaunchChecksAlertOpen: N,
+            onConfirmActivityLaunchChecksAlertOpen: y,
         } = e,
-        y = (0, l.p)(),
-        C = (function (e) {
+        N = (0, l.p)(),
+        v = (function (e) {
             let [t, n] = i.useState(e);
             return (
                 i.useLayoutEffect(() => {
@@ -71,44 +71,44 @@ function v(e) {
                 t
             );
         })((0, u.Hq)({ context: t, applicationId: n.id, fetchesApplication: m })),
-        v = (0, a.bG)([A.A], () => A.A.entrypoint()),
-        O = i.useMemo(() => {
+        C = (0, a.bG)([A.A], () => A.A.entrypoint()),
+        R = i.useMemo(() => {
             if ("channel" !== t.type) return n.bot?.id ?? (0, _.Sx)(t, n.id).descriptor?.botId;
         }, [t, n.id, n.bot]),
-        R = (0, u.wK)({
+        O = (0, u.wK)({
             application: n,
-            botUserIdForAppDM: O,
+            botUserIdForAppDM: R,
             embeddedActivitiesManager: c.A,
             context: t,
-            locationObject: y.location,
+            locationObject: N.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                h && g.k(I.Se.ACTIVITY),
+                f && g.k(I.Se.ACTIVITY),
                     (0, d.zV)(T.HAw.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: r,
                         application_id: t,
                         section_name: s,
-                        action: C,
-                        source: v,
+                        action: v,
+                        source: C,
                     });
             },
             launchingComponentId: p,
-            commandOrigin: f.iw.APPLICATION_LAUNCHER,
+            commandOrigin: h.iw.APPLICATION_LAUNCHER,
             sectionName: s,
-            source: v,
+            source: C,
             fetchesApplication: m,
-            onConfirmActivityLaunchChecksAlertOpen: N,
+            onConfirmActivityLaunchChecksAlertOpen: y,
         }),
         b = "primary",
         D = o ?? S.intl.string(S.t.zKX8Nu);
     return (
-        C === u.o6.JOIN
+        v === u.o6.JOIN
             ? ((b = "active"), (D = S.intl.string(S.t.d9PsMj)))
-            : C !== u.o6.LEAVE || E || ((b = "critical-primary"), (D = S.intl.string(S.t["Hi1/aQ"]))),
-        { onActivityItemSelected: R, activityAction: C, buttonVariant: b, buttonText: D }
+            : v !== u.o6.LEAVE || E || ((b = "critical-primary"), (D = S.intl.string(S.t["Hi1/aQ"]))),
+        { onActivityItemSelected: O, activityAction: v, buttonVariant: b, buttonText: D }
     );
 }
-function O(e, t) {
+function R(e, t) {
     let n = A.A.entrypoint(),
         s = i.useMemo(
             () =>
@@ -125,6 +125,6 @@ function O(e, t) {
         null != e && s(e, n);
     }, [e, t, n, s]);
 }
-function R(e) {
+function O(e) {
     m._.dispatchToLastSubscribed(T.jej.OPEN_APP_LAUNCHER, { applicationId: e });
 }

@@ -4,7 +4,7 @@ var i = n(17928),
     r = n(459838),
     s = n(228366),
     a = n(540999),
-    o = n(235058);
+    o = n(890063);
 let l = [
         ["codecH264", "H264"],
         ["codecH265", "H265"],
@@ -51,7 +51,7 @@ let l = [
         alwaysShowCapturePreview: !1,
     },
     _ = { ...d };
-function f(e, t) {
+function h(e, t) {
     return t
         .filter((t) => {
             let [n] = t;
@@ -63,9 +63,9 @@ function f(e, t) {
         })
         .join(",");
 }
-let h = !1;
+let f = !1;
 function p() {
-    if (h) return !0;
+    if (f) return !0;
     if (!o.Ay.isEnabled()) return !1;
     try {
         let e = o.Ay.getMediaEngine();
@@ -74,9 +74,9 @@ function p() {
                 a.A.isDeveloper && E();
             }),
             e.once(r.bg.Destroy, () => {
-                h = !1;
+                f = !1;
             }),
-            (h = !0),
+            (f = !0),
             !0
         );
     } catch {
@@ -90,8 +90,8 @@ function E() {
             let t =
                 ((e = _),
                 {
-                    overrideDeniedVideoCodecs: f(e, l),
-                    overrideDeniedVideoEncoders: f(e, u),
+                    overrideDeniedVideoCodecs: h(e, l),
+                    overrideDeniedVideoEncoders: h(e, u),
                     captureOverrides: c
                         .filter((t) => {
                             let [n, , i] = t;
@@ -112,7 +112,7 @@ class m extends i.Ay.DeviceSettingsStore {
     static displayName = "AudioVideoOverridesStore";
     static persistKey = "AudioVideoOverridesStore";
     initialize(e) {
-        if ((this.waitFor(a.A), (_ = null != e ? { ...d, ...e } : { ...d }), E(), !h)) {
+        if ((this.waitFor(a.A), (_ = null != e ? { ...d, ...e } : { ...d }), E(), !f)) {
             let e = () => {
                 p() && (E(), o.Ay.removeChangeListener(e));
             };

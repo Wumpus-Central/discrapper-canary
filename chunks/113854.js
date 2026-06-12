@@ -3,7 +3,7 @@ n.d(t, { A: () => T });
 var i = {};
 n.r(i),
     n.d(i, {
-        launchFrame: () => h,
+        launchFrame: () => f,
         refreshProxyTicket: () => g,
         stopFrame: () => p,
         updateFrameLayoutMode: () => E,
@@ -18,8 +18,8 @@ var r = n(523527),
     c = n(907645),
     d = n(574152),
     _ = n(933958),
-    f = n(582776);
-async function h(e) {
+    h = n(582776);
+async function f(e) {
     let { applicationId: t } = e;
     l.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t });
     try {
@@ -28,7 +28,7 @@ async function h(e) {
         (e = _.Ay.getCurrentEmbeddedActivity()),
             null != e &&
                 (0, d.A)().leaveActivity({ location: e.location, applicationId: e.applicationId, showFeedback: !1 }),
-            (0, f.Q)(),
+            (0, h.Q)(),
             l.h.dispatch({ type: "FRAME_LAUNCH", applicationId: t, proxyTicket: n });
     } catch (i) {
         let e = (0, d.A)(),
@@ -70,7 +70,7 @@ var A = n(652215);
 async function I(e) {
     let t = (0, s.zd)();
     a.A.getWindowOpen(A.MLl.ACTIVITY_POPOUT) && (0, o.close)(A.MLl.ACTIVITY_POPOUT),
-        await h(e),
+        await f(e),
         t === A.BRT.POPOUT && (0, r.A)();
 }
 let T = { ...i, launchFrame: I };

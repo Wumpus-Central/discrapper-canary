@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     yl: "modal_f17563",
     so: "completed_f17563",
     pz: "sidebar_f17563",

@@ -1,13 +1,13 @@
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.OtherTypes = void 0);
-class i {}
-(t.OtherTypes = i),
-    (i.BLEND = {
+class n {}
+(t.OtherTypes = n),
+    (n.BLEND = {
         extension: "blend",
         mimeType: "application/x-blender",
         description: "Blender File Format",
         signatures: [{ sequence: [66, 76, 69, 78, 68, 69, 82] }],
     }),
-    (i.DOC = {
+    (n.DOC = {
         extension: "doc",
         mimeType: "application/msword",
         description: "Old Microsoft Word documents",
@@ -21,13 +21,13 @@ class i {}
             { sequence: [219, 165, 45, 0], description: "Microsoft Word 2.0 file format" },
         ],
     }),
-    (i.ELF = {
+    (n.ELF = {
         extension: "elf",
         mimeType: "application/x-executable",
         description: "Executable and Linking Format executable file (Linux/Unix)",
         signatures: [{ sequence: [127, 69, 76, 70] }],
     }),
-    (i.EXE = {
+    (n.EXE = {
         extension: "exe",
         mimeType: "application/x-msdownload",
         description: "Windows/DOS executable file and its descendants",
@@ -62,7 +62,7 @@ class i {}
             { sequence: [90, 77], description: "DOS ZM executable (rare)" },
         ],
     }),
-    (i.INDD = {
+    (n.INDD = {
         extension: "indd",
         mimeType: "application/x-indesign",
         description: "Adobe InDesign document",
@@ -73,7 +73,7 @@ class i {}
             },
         ],
     }),
-    (i.MACHO = {
+    (n.MACHO = {
         extension: "macho",
         mimeType: "application/x-mach-binary",
         description: "Apple OS X ABI Mach-O binary file",
@@ -91,49 +91,49 @@ class i {}
             { sequence: [202, 254, 186, 190], description: "Mach-O Fat Binary" },
         ],
     }),
-    (i.PDF = {
+    (n.PDF = {
         extension: "pdf",
         mimeType: "application/pdf",
         description: "Portable Document Format",
         signatures: [{ sequence: [37, 80, 68, 70, 45] }],
     }),
-    (i.ORC = {
+    (n.ORC = {
         extension: "orc",
         mimeType: "application/x-orc",
         description: "Apache ORC (Optimized Row Columnar) file format for columnar storage",
         signatures: [{ sequence: [79, 82, 67] }],
     }),
-    (i.PARQUET = {
+    (n.PARQUET = {
         extension: "parquet",
         mimeType: "application/vnd.apache.parquet",
         description: "Apache Parquet file format for columnar storage",
         signatures: [{ sequence: [80, 65, 82, 49] }],
     }),
-    (i.PS = {
+    (n.PS = {
         extension: "ps",
         mimeType: "application/postscript",
         description: "PostScript document",
         signatures: [{ sequence: [37, 33, 80, 83] }],
     }),
-    (i.RTF = {
+    (n.RTF = {
         extension: "rtf",
         mimeType: "application/rtf",
         description: "Rich Text Format word processing file",
         signatures: [{ sequence: [123, 92, 114, 116, 102, 49] }],
     }),
-    (i.SQLITE = {
+    (n.SQLITE = {
         extension: "sqlite",
         mimeType: "application/x-sqlite3",
         description: "SQLite database file",
         signatures: [{ sequence: [83, 81, 76, 105, 116, 101, 32, 102, 111, 114, 109, 97, 116, 32, 51, 0] }],
     }),
-    (i.STL = {
+    (n.STL = {
         extension: "stl",
         mimeType: "application/sla",
         description: "ASCII STL (STereoLithography) file for 3D printing",
         signatures: [{ sequence: [115, 111, 108, 105, 100] }],
     }),
-    (i.TTF = {
+    (n.TTF = {
         extension: "ttf",
         mimeType: "application/x-font-ttf",
         description: "TrueType font file",
@@ -142,7 +142,7 @@ class i {}
             { sequence: [0, 1, 0, 0, 0], compatibleExtensions: ["tte, dfont"] },
         ],
     }),
-    (i.PCAP = {
+    (n.PCAP = {
         extension: "pcap",
         mimeType: "application/vnd.tcpdump.pcap",
         description: "Libpcap File Format",

@@ -1,7 +1,7 @@
 function t(e) {
     if (e) {
         var n = e;
-        for (var r in t.prototype) n[r] = t.prototype[r];
+        for (var i in t.prototype) n[i] = t.prototype[i];
         return n;
     }
 }
@@ -28,23 +28,23 @@ function t(e) {
                 if (((this._callbacks = this._callbacks || {}), 0 == arguments.length))
                     return (this._callbacks = {}), this;
                 var n,
-                    r = this._callbacks["$" + e];
-                if (!r) return this;
+                    i = this._callbacks["$" + e];
+                if (!i) return this;
                 if (1 == arguments.length) return delete this._callbacks["$" + e], this;
-                for (var i = 0; i < r.length; i++)
-                    if ((n = r[i]) === t || n.fn === t) {
-                        r.splice(i, 1);
+                for (var r = 0; r < i.length; r++)
+                    if ((n = i[r]) === t || n.fn === t) {
+                        i.splice(r, 1);
                         break;
                     }
-                return 0 === r.length && delete this._callbacks["$" + e], this;
+                return 0 === i.length && delete this._callbacks["$" + e], this;
             }),
     (t.prototype.emit = function (e) {
         this._callbacks = this._callbacks || {};
-        for (var t = Array(arguments.length - 1), n = this._callbacks["$" + e], r = 1; r < arguments.length; r++)
-            t[r - 1] = arguments[r];
+        for (var t = Array(arguments.length - 1), n = this._callbacks["$" + e], i = 1; i < arguments.length; i++)
+            t[i - 1] = arguments[i];
         if (n) {
             n = n.slice(0);
-            for (var r = 0, i = n.length; r < i; ++r) n[r].apply(this, t);
+            for (var i = 0, r = n.length; i < r; ++i) n[i].apply(this, t);
         }
         return this;
     }),

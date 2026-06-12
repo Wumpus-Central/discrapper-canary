@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Y: () => i });
-var r,
-    i =
-        (((r = {})[(r.DESKTOP = 0)] = "DESKTOP"),
-        (r[(r.XBOX = 1)] = "XBOX"),
-        (r[(r.PLAYSTATION = 2)] = "PLAYSTATION"),
-        (r[(r.IOS = 3)] = "IOS"),
-        (r[(r.ANDROID = 4)] = "ANDROID"),
-        (r[(r.NINTENDO = 5)] = "NINTENDO"),
-        (r[(r.LINUX = 6)] = "LINUX"),
-        (r[(r.MACOS = 7)] = "MACOS"),
-        r);
+n.d(t, { Y: () => r });
+var i,
+    r =
+        (((i = {})[(i.DESKTOP = 0)] = "DESKTOP"),
+        (i[(i.XBOX = 1)] = "XBOX"),
+        (i[(i.PLAYSTATION = 2)] = "PLAYSTATION"),
+        (i[(i.IOS = 3)] = "IOS"),
+        (i[(i.ANDROID = 4)] = "ANDROID"),
+        (i[(i.NINTENDO = 5)] = "NINTENDO"),
+        (i[(i.LINUX = 6)] = "LINUX"),
+        (i[(i.MACOS = 7)] = "MACOS"),
+        i);

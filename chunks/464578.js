@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(61090);
 let r = new Set();
 function s() {
@@ -179,7 +179,7 @@ class _ {
         loadStorageEnd: new d(),
     };
 }
-class f extends _ {
+class h extends _ {
     readyProperties = {};
     didBackgroundApp = !1;
     wasEverActive = !1;
@@ -525,4 +525,4 @@ class f extends _ {
         };
     }
 }
-let h = new f();
+let f = new h();

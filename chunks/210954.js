@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -11,8 +11,8 @@ var r = n(503698),
     c = n(793574),
     d = n(688810),
     _ = n(429913),
-    f = n(869146),
-    h = n(272812),
+    h = n(869146),
+    f = n(272812),
     p = n(461782),
     E = n(334463),
     m = n(113854),
@@ -21,20 +21,20 @@ var r = n(503698),
     I = n(165610),
     T = n(652215),
     S = n(360469),
-    N = n(970682),
-    y = n(27600),
-    C = n(604949);
-function v(e) {
+    y = n(970682),
+    N = n(27600),
+    v = n(604949);
+function C(e) {
     let { isLoading: t } = e,
         n = (0, a.bG)([g.A], () => g.A.getConnectedFrame()),
         r = (0, a.bG)([g.A], () => g.A.getFrameLayoutMode()),
         c = (0, _.h)(n?.applicationId),
         d = (0, a.bG)([g.A], () => null != c && g.A.isProxyTicketRefreshing(c.id), [c]),
-        v = (0, a.bG)([f.A], () => f.A.getWindowOpen(T.MLl.ACTIVITY_POPOUT)),
-        O = (0, a.bG)([E.A], () => E.A.isFrameHidden()),
-        R = r === I.y.PIP && !O && !v,
-        b = R && null != E.A.pipVideoWindow && null != E.A.pipFrameWindow;
-    if (null == n || null == c || v) return null;
+        C = (0, a.bG)([h.A], () => h.A.getWindowOpen(T.MLl.ACTIVITY_POPOUT)),
+        R = (0, a.bG)([E.A], () => E.A.isFrameHidden()),
+        O = r === I.y.PIP && !R && !C,
+        b = O && null != E.A.pipVideoWindow && null != E.A.pipFrameWindow;
+    if (null == n || null == c || C) return null;
     let D = { instance_id: "example-cl-instance", platform: S.vu.DESKTOP };
     return (
         null != n.proxyTicket && (D.discord_proxy_ticket = n.proxyTicket),
@@ -42,22 +42,22 @@ function v(e) {
             timeout: 2e3,
             children: (e) => {
                 let { idle: r, onActive: a, onForceIdle: _ } = e;
-                return (0, i.jsxs)(h.A, {
-                    className: s()(N.zr, { [N.NW]: R, [C.a8]: R, [y.N7]: r, [N.p0]: R, [N.R]: O, [N.Gq]: b }),
-                    noBorder: !R,
+                return (0, i.jsxs)(f.A, {
+                    className: s()(y.zr, { [y.NW]: O, [v.a8]: O, [N.N7]: r, [y.p0]: O, [y.R]: R, [y.Gq]: b }),
+                    noBorder: !O,
                     children: [
                         (0, i.jsx)("div", {
                             className: "theme-dark",
                             children: (function (e) {
                                 let { onActive: t, onForceIdle: r, idle: s } = e;
-                                return R && null != n
+                                return O && null != n
                                     ? (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)("div", {
                                                   onMouseMove: t,
                                                   onMouseDown: t,
                                                   onMouseLeave: r,
-                                                  className: N.OB,
+                                                  className: y.OB,
                                               }),
                                               (0, i.jsx)(A.v, {
                                                   idle: s,
@@ -78,14 +78,14 @@ function v(e) {
                             })({ onActive: a, onForceIdle: _, idle: r }),
                         }),
                         t || d
-                            ? (0, i.jsx)(o.y, { className: s()(N.pU, { [N.p0]: R }) })
+                            ? (0, i.jsx)(o.y, { className: s()(y.pU, { [y.p0]: O }) })
                             : (0, i.jsx)(u.o, {
                                   allowPopups: (0, l.b)(c),
                                   referrerPolicy: "origin",
                                   url: n.url,
                                   queryParams: D,
-                                  className: s()(N.pU, { [N.p0]: R, [N.v8]: R }),
-                                  shouldRefocus: !R,
+                                  className: s()(y.pU, { [y.p0]: O, [y.v8]: O }),
+                                  shouldRefocus: !O,
                               }),
                     ],
                 });
@@ -93,8 +93,8 @@ function v(e) {
         })
     );
 }
-let O = () => {
+let R = () => {
     let { analyticsLocations: e } = (0, d.Ay)(c.A.FRAME_PIP),
         t = (0, a.bG)([g.A], () => g.A.isFrameActive());
-    return (0, i.jsx)(d.f5, { value: e, children: (0, i.jsx)(v, { isLoading: !t }) });
+    return (0, i.jsx)(d.f5, { value: e, children: (0, i.jsx)(C, { isLoading: !t }) });
 };

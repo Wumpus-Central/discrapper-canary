@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { F: () => a });
-var r = n(959462),
-    i = n(64700);
-function a(e, t, n) {
-    let a = (0, r.J)(() => {
+n.d(t, { F: () => s });
+var i = n(959462),
+    r = n(64700);
+function s(e, t, n) {
+    let s = (0, i.J)(() => {
         n && n(t);
     });
-    (0, i.useEffect)(() => {
+    (0, r.useEffect)(() => {
         var t;
         let n = null == e || null == (t = e.current) ? void 0 : t.form;
         return (
-            null == n || n.addEventListener("reset", a),
+            null == n || n.addEventListener("reset", s),
             () => {
-                null == n || n.removeEventListener("reset", a);
+                null == n || n.removeEventListener("reset", s);
             }
         );
-    }, [e, a]);
+    }, [e, s]);
 }

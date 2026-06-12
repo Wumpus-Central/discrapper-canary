@@ -10,8 +10,8 @@ var i = n(989349),
     c = n(543465),
     d = n(174459),
     _ = n(477427),
-    f = n(935208),
-    h = n(152007),
+    h = n(935208),
+    f = n(152007),
     p = n(469881),
     E = n(37411),
     m = n(652215);
@@ -39,10 +39,10 @@ function T(e, t) {
                   : (0, s.Lt)(e, E.CP.NO_MESSAGES)
                     ? _.Qe[m.orn.NO_MESSAGES]
                     : _.Qe[m.orn.NULL],
-        u = h.A.flags(e.id) ?? 0,
-        f = o(u),
-        p = h.A.isMuted(e.id),
-        g = (0, _.DZ)(h.A.getMuteConfig(e.id)),
+        u = f.A.flags(e.id) ?? 0,
+        h = o(u),
+        p = f.A.isMuted(e.id),
+        g = (0, _.DZ)(f.A.getMuteConfig(e.id)),
         { can_send_message: A, parent_channel_type: I, ...T } = n,
         S = {
             ...T,
@@ -52,8 +52,8 @@ function T(e, t) {
             channel_type: e.type,
             has_interacted_with_thread: (u & E.CP.HAS_INTERACTED) != 0,
             parent_is_muted: c.Ay.isGuildOrCategoryOrChannelMuted(i, r),
-            old_thread_notification_setting: f,
-            new_thread_notification_setting: null != t.flags ? o(t.flags) : f,
+            old_thread_notification_setting: h,
+            new_thread_notification_setting: null != t.flags ? o(t.flags) : h,
             parent_notification_setting: a.channel_message_notification_settings,
             old_thread_is_muted: p,
             new_thread_is_muted: t.muted ?? p,
@@ -65,8 +65,8 @@ function T(e, t) {
 n(375708);
 let S = (e) => {
     let t = (0, a.bG)([u.Ay], () => u.Ay.lastMessageId(e.id)),
-        n = null != t ? f.default.extractTimestamp(t) : null,
+        n = null != t ? h.default.extractTimestamp(t) : null,
         i = e.threadMetadata?.createTimestamp,
         s = null != i ? r()(i).valueOf() : null;
-    return n ?? s ?? f.default.extractTimestamp(e.id);
+    return n ?? s ?? h.default.extractTimestamp(e.id);
 };

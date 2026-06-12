@@ -1,4 +1,4 @@
-i.d(n, { Gk: () => r, Is: () => c, Sy: () => s });
+i.d(n, { Gk: () => r, Is: () => l, Sy: () => s });
 var a = i(228366);
 let e = Date.now();
 function s(t, n) {
@@ -8,6 +8,6 @@ function s(t, n) {
 function r(t) {
     a.h.dispatch({ type: "CUSTOM_TEXT_TRANSFORM_UPDATE", transform: t });
 }
-function c(t) {
+function l(t) {
     a.h.dispatch({ type: "CUSTOM_TEXT_TRANSFORM_DELETE", id: t });
 }

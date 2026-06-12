@@ -5,17 +5,17 @@ n.d(t, {
     Bo: () => V,
     F_: () => D,
     QB: () => I,
-    V0: () => z,
+    V0: () => $,
     VI: () => H,
-    _O: () => N,
+    _O: () => y,
     aq: () => p,
-    ku: () => v,
+    ku: () => C,
     ns: () => L,
     o4: () => Y,
     q6: () => j,
-    s7: () => O,
+    s7: () => R,
     vI: () => E,
-    xT: () => R,
+    xT: () => O,
     z: () => b,
 }),
     n(323874),
@@ -30,8 +30,8 @@ var r = n(824120),
     c = n(723702),
     d = n(935208),
     _ = n(652215),
-    f = n(190460),
-    h = n(532406);
+    h = n(190460),
+    f = n(532406);
 let p = /^data:/,
     E = (i = n(3451).A).DEFAULT_AVATARS,
     m = i.DEFAULT_AVATARS_SMALL ?? E,
@@ -52,17 +52,17 @@ function S(e) {
             canAnimate: c = !1,
             keepAspectRatio: d,
             format: _ = null,
-            canWebP: f = I,
+            canWebP: h = I,
         } = e;
     if (null == r || null == s) return;
-    let h = _ ?? (c && H(s) ? $(f) : "jpg");
-    c && j(s) && (h = "mp4");
+    let f = _ ?? (c && H(s) ? z(h) : "jpg");
+    c && j(s) && (f = "mp4");
     let p = window.GLOBAL_ENV.CDN_HOST;
     if (
         (null != p
-            ? ("jpg" === h && (h = f ? "webp" : "png"), (t = `https://${p}/${i}/${r}/${s}.${h}`))
-            : (t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(r, s, h)),
-        "mp4" === h)
+            ? ("jpg" === f && (f = h ? "webp" : "png"), (t = `https://${p}/${i}/${r}/${s}.${f}`))
+            : (t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + n(r, s, f)),
+        "mp4" === f)
     )
         return t;
     let E = {};
@@ -70,31 +70,31 @@ function S(e) {
         null != o && (E.size = (0, l.kr)(o * (0, l.mZ)())),
         null != d && (E.keep_aspect_ratio = d),
         u && (E.quality = "lossless"),
-        "webp" === h && c && H(s) && (E.animated = !0),
+        "webp" === f && c && H(s) && (E.animated = !0),
         t + `?${a.stringify(E)}`
     );
 }
-function N(e) {
+function y(e) {
     let { id: t, animated: i, size: r, forcePNG: s = !1 } = e,
         a = I ? "webp" : "png",
         o = I ? "webp" : "gif",
         u = s ? "png" : i ? o : a,
         c = I && i ? "&animated=true" : "",
         d = `size=${(0, l.kr)(r * (0, l.mZ)(), T)}`,
-        f = !1;
+        h = !1;
     try {
         let { getForceSdrEmojisStickersConfig: e } = n(796272);
-        f = e({ location: "getEmojiURL" }).enabled;
+        h = e({ location: "getEmojiURL" }).enabled;
     } catch {}
-    let h = f ? "&force_sdr=true" : "";
+    let f = h ? "&force_sdr=true" : "";
     if (null != window.GLOBAL_ENV.CDN_HOST)
-        return `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/emojis/${t}.${u}?${d}${c}${h}`;
+        return `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/emojis/${t}.${u}?${d}${c}${f}`;
     {
         let e = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + _.Rsh.EMOJI(t, u);
-        return f ? `${e}?force_sdr=true` : e;
+        return h ? `${e}?force_sdr=true` : e;
     }
 }
-function y(e, t) {
+function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 ? arguments[3] : void 0,
         r = n ? A : !n && null != i && i <= g ? m : E;
@@ -102,7 +102,7 @@ function y(e, t) {
     let a = (0, u.cG)(t, 0);
     return a > 0 ? r[a % 5] : null != e ? r[s()(e).shiftRight(22).mod(r.length).toJSNumber()] : r[0];
 }
-function C(e) {
+function v(e) {
     let { id: t, avatar: n, discriminator: r, bot: s } = e,
         a = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         o = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.eQT,
@@ -124,35 +124,35 @@ function C(e) {
         canWebP: u,
     });
 }
-function v(e) {
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.eQT,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
         r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : I;
-    return C(e, t, n, i, r) ?? y(e.id, e.discriminator, e.isProvisional, n);
+    return v(e, t, n, i, r) ?? N(e.id, e.discriminator, e.isProvisional, n);
 }
-function O(e) {
+function R(e) {
     let t,
         { guildId: n, userId: i, avatar: r, canAnimate: s = !1, size: o = _.eQT, canWebP: u = I } = e,
-        c = s && H(r) ? $(u) : "jpg",
+        c = s && H(r) ? z(u) : "jpg",
         { CDN_HOST: d } = window.GLOBAL_ENV;
     null != d
         ? ("jpg" === c && (c = u ? "webp" : "png"), (t = `https://${d}${_.Rsh.GUILD_MEMBER_AVATAR(n, i, r, c)}`))
         : (t = location.protocol + window.GLOBAL_ENV.API_ENDPOINT + _.Rsh.GUILD_MEMBER_AVATAR(n, i, r, c));
-    let f = { size: (0, l.kr)(o * (0, l.mZ)()) };
-    return "webp" === c && s && H(r) && (f.animated = !0), (t += `?${a.stringify(f)}`);
+    let h = { size: (0, l.kr)(o * (0, l.mZ)()) };
+    return "webp" === c && s && H(r) && (h.animated = !0), (t += `?${a.stringify(h)}`);
 }
-function R(e) {
+function O(e) {
     let { userId: t, avatar: n, guildId: i } = e,
         r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null == n ? null : O({ userId: t, avatar: n, guildId: i, canAnimate: r });
+    return null == n ? null : R({ userId: t, avatar: n, guildId: i, canAnimate: r });
 }
 function b(e) {
     let t,
         { id: n, banner: i, canAnimate: r, size: s } = e;
     if (null == i) return;
     let o = window.GLOBAL_ENV.CDN_HOST,
-        u = r && H(i) ? $(I) : "png";
+        u = r && H(i) ? z(I) : "png";
     t =
         null != o
             ? `https://${o}/banners/${n}/${i}.${u}`
@@ -161,7 +161,7 @@ function b(e) {
     return "webp" === u && r && H(i) && (c.animated = !0), (t += `?${a.stringify(c)}`);
 }
 function D(e) {
-    let { avatarDecoration: t, size: i = f.DX, canAnimate: r = !1 } = e;
+    let { avatarDecoration: t, size: i = h.DX, canAnimate: r = !1 } = e;
     if (null == t || (0, o.bS)(t)) return null;
     try {
         let { CollectiblesItemAssetFormat: e, getCollectiblesItemAssetUrl: i } = n(746002),
@@ -187,11 +187,11 @@ function L(e) {
         { id: n, guildId: i, banner: r, canAnimate: s, size: o } = e;
     if (null == r || null == i) return;
     let u = window.GLOBAL_ENV.CDN_HOST,
-        c = s && H(r) ? $(I) : "png",
+        c = s && H(r) ? z(I) : "png",
         d = _.Rsh.GUILD_MEMBER_BANNER(i, n, r, c);
     t = null != u ? `https://${u}${d}` : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + d;
-    let f = { size: (0, l.kr)(o * (0, l.mZ)()) };
-    return "webp" === c && s && H(r) && (f.animated = !0), (t += `?${a.stringify(f)}`);
+    let h = { size: (0, l.kr)(o * (0, l.mZ)()) };
+    return "webp" === c && s && H(r) && (h.animated = !0), (t += `?${a.stringify(h)}`);
 }
 function w(e) {
     let { id: t, splash: n, size: i } = e;
@@ -211,7 +211,7 @@ function M(e) {
     if (null == i) return null;
     let s = (0, l.kr)(360 * (0, l.mZ)()),
         o = I ? "webp" : "jpg",
-        u = r && H(i) ? $(I) : o,
+        u = r && H(i) ? z(I) : o,
         c = window.GLOBAL_ENV.CDN_HOST;
     t =
         null != c
@@ -246,7 +246,7 @@ function x(e) {
             : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + _.Rsh.GUILD_DISCOVERY_SPLASH(t, n)) + `?size=${i}`
     );
 }
-function U(e) {
+function k(e) {
     let { id: t, icon: n, size: i, canAnimate: r = !1, lossless: s = !1 } = e;
     return S({
         endpoint: _.Rsh.GUILD_ICON,
@@ -259,7 +259,7 @@ function U(e) {
         canWebP: I,
     });
 }
-function k(e) {
+function U(e) {
     let { id: t, icon: n, size: i = _.eQT, canAnimate: r = !1 } = e;
     return S({
         endpoint: _.Rsh.GUILD_TEMPLATE_ICON,
@@ -283,15 +283,15 @@ function G(e) {
         guildMember: l,
     } = e;
     if (r?.id != null && null != l && null != l.avatar) {
-        let e = O({ userId: r.id, guildId: l.guildId, avatar: l.avatar, canAnimate: !1, size: i });
+        let e = R({ userId: r.id, guildId: l.guildId, avatar: l.avatar, canAnimate: !1, size: i });
         if (null != e) return e;
     }
     if (null != r && s) {
-        let e = C(r, !1, i);
+        let e = v(r, !1, i);
         if (null != e) return e;
     }
     if (null != n)
-        return z(n)
+        return $(n)
             ? n
             : S({
                   endpoint: _.Rsh.APPLICATION_ICON,
@@ -304,10 +304,10 @@ function G(e) {
                   keepAspectRatio: o,
               });
     if (null != r) {
-        let e = C(r, !1, i);
+        let e = v(r, !1, i);
         if (null != e) return e;
     }
-    if (a) return h;
+    if (a) return f;
 }
 function F(e) {
     let { id: t, hash: n, size: i = _.eQT, keepAspectRatio: r = !1, format: s } = e;
@@ -373,13 +373,13 @@ function W(e) {
     return "number" == typeof e ? e : { uri: e ?? void 0 };
 }
 let K = {
-    getUserAvatarURL: v,
-    getDefaultAvatarURL: y,
-    getGuildMemberAvatarURL: R,
-    getGuildMemberAvatarURLSimple: O,
+    getUserAvatarURL: C,
+    getDefaultAvatarURL: N,
+    getGuildMemberAvatarURL: O,
+    getGuildMemberAvatarURLSimple: R,
     getGuildMemberAvatarSource: function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = R(e, n);
+            i = O(e, n);
         return null != i ? W(i) : t.getAvatarSource(e.guildId, n);
     },
     getGuildMemberBannerURL: L,
@@ -389,8 +389,8 @@ let K = {
         return H(e?.icon);
     },
     isAnimatedIconHash: H,
-    getUserAvatarSource: (e, t, n) => W(v(e, t, n)),
-    getGuildIconURL: U,
+    getUserAvatarSource: (e, t, n) => W(C(e, t, n)),
+    getGuildIconURL: k,
     getGuildSplashURL: w,
     getGuildSplashSource: function (e) {
         return W(w(e));
@@ -429,15 +429,15 @@ let K = {
                   canWebP: !1,
               });
     },
-    getGuildTemplateIconURL: k,
+    getGuildTemplateIconURL: U,
     getChannelIconURL: B,
-    getEmojiURL: N,
+    getEmojiURL: y,
     getApplicationIconURL: G,
     getGameAssetURL: F,
     getVideoFilterAssetURL: V,
     getGameAssetSource: (e) => W(F(e)),
-    getGuildIconSource: (e) => W(U(e)),
-    getGuildTemplateIconSource: (e) => W(k(e)),
+    getGuildIconSource: (e) => W(k(e)),
+    getGuildTemplateIconSource: (e) => W(U(e)),
     getGuildBannerSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return W(M(e, t));
@@ -455,9 +455,9 @@ let K = {
         }
     },
 };
-function z(e) {
+function $(e) {
     return null != e && p.test(e);
 }
-function $(e) {
+function z(e) {
     return e ? "webp" : "gif";
 }

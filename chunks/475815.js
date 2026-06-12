@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { Wb: () => l, _U: () => o, a3: () => u, qf: () => i, sP: () => a, tl: () => s });
-var r = n(626584);
-function i() {
+n.d(t, { Wb: () => l, _U: () => o, a3: () => u, qf: () => r, sP: () => a, tl: () => s });
+var i = n(626584);
+function r() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
     return t.find((e) => {
         var t;
@@ -26,7 +26,7 @@ function s(e) {
               ? e.mozRequestFullScreen()
               : "function" == typeof e.msRequestFullscreen
                 ? e.msRequestFullscreen()
-                : new r.A("FullScreenUtils").warn("Fullscreen API is not supported.");
+                : new i.A("FullScreenUtils").warn("Fullscreen API is not supported.");
 }
 function a(e, t) {
     let n = null != t ? t : document;
@@ -41,7 +41,7 @@ function a(e, t) {
                   ? n.mozCancelFullScreen()
                   : "function" == typeof n.msExitFullscreen
                     ? n.msExitFullscreen()
-                    : new r.A("FullScreenUtils").warn("Fullscreen API is not supported."));
+                    : new i.A("FullScreenUtils").warn("Fullscreen API is not supported."));
 }
 function o(e, t) {
     let n = null != t ? t : document;

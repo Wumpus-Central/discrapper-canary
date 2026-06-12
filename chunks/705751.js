@@ -1,24 +1,24 @@
 "use strict";
 n.d(t, { S7: () => s, TR: () => o, nu: () => a });
-var r,
-    i,
+var i,
+    r,
     s =
-        (((r = {})[(r.DEPRECATED_GAME = 1)] = "DEPRECATED_GAME"),
-        (r[(r.TICKETED_EVENTS = 3)] = "TICKETED_EVENTS"),
-        (r[(r.GUILD_ROLE_SUBSCRIPTIONS = 4)] = "GUILD_ROLE_SUBSCRIPTIONS"),
-        (r[(r.GAME = 5)] = "GAME"),
-        (r[(r.NON_GAME_DETECTABLE = 6)] = "NON_GAME_DETECTABLE"),
-        r),
+        (((i = {})[(i.DEPRECATED_GAME = 1)] = "DEPRECATED_GAME"),
+        (i[(i.TICKETED_EVENTS = 3)] = "TICKETED_EVENTS"),
+        (i[(i.GUILD_ROLE_SUBSCRIPTIONS = 4)] = "GUILD_ROLE_SUBSCRIPTIONS"),
+        (i[(i.GAME = 5)] = "GAME"),
+        (i[(i.NON_GAME_DETECTABLE = 6)] = "NON_GAME_DETECTABLE"),
+        i),
     a =
-        (((i = {})[(i.BOT = 0)] = "BOT"),
-        (i[(i.SERVER = 1)] = "SERVER"),
-        (i[(i.SYSTEM_DM = 2)] = "SYSTEM_DM"),
-        (i[(i.OFFICIAL = 3)] = "OFFICIAL"),
-        (i[(i.STAFF_ONLY_DM = 4)] = "STAFF_ONLY_DM"),
-        (i[(i.NOT_STAFF_WARNING = 5)] = "NOT_STAFF_WARNING"),
-        (i[(i.ORIGINAL_POSTER = 6)] = "ORIGINAL_POSTER"),
-        (i[(i.AI = 7)] = "AI"),
-        i);
+        (((r = {})[(r.BOT = 0)] = "BOT"),
+        (r[(r.SERVER = 1)] = "SERVER"),
+        (r[(r.SYSTEM_DM = 2)] = "SYSTEM_DM"),
+        (r[(r.OFFICIAL = 3)] = "OFFICIAL"),
+        (r[(r.STAFF_ONLY_DM = 4)] = "STAFF_ONLY_DM"),
+        (r[(r.NOT_STAFF_WARNING = 5)] = "NOT_STAFF_WARNING"),
+        (r[(r.ORIGINAL_POSTER = 6)] = "ORIGINAL_POSTER"),
+        (r[(r.AI = 7)] = "AI"),
+        r);
 let o = [
     "1102741339122188349",
     "1211781489931452447",

@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     hd: "sectionContainer__5a4b6",
     yF: "divider__5a4b6",
     bV: "sectionHeader__5a4b6",

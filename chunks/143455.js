@@ -1,10 +1,10 @@
 e.exports = function (e) {
     let t = { className: "number", relevance: 0, variants: [{ begin: "[$][a-fA-F0-9]+" }, e.NUMBER_MODE] },
-        a = {
+        n = {
             variants: [{ match: [/(function|method)/, /\s+/, e.UNDERSCORE_IDENT_RE] }],
             scope: { 1: "keyword", 3: "title.function" },
         },
-        n = {
+        i = {
             variants: [{ match: [/(class|interface|extends|implements)/, /\s+/, e.UNDERSCORE_IDENT_RE] }],
             scope: { 1: "keyword", 3: "title.class" },
         };
@@ -105,8 +105,8 @@ e.exports = function (e) {
         contains: [
             e.COMMENT("#rem", "#end"),
             e.COMMENT("'", "$", { relevance: 0 }),
-            a,
             n,
+            i,
             { className: "variable.language", begin: /\b(self|super)\b/ },
             { className: "meta", begin: /\s*#/, end: "$", keywords: { keyword: "if else elseif endif end then" } },
             { match: [/^\s*/, /strict\b/], scope: { 2: "meta" } },

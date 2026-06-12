@@ -29,21 +29,21 @@ var l = n(627968),
     S = n(793574),
     P = n(688810),
     I = n(509536),
-    T = n(663066),
-    f = n(976860),
+    f = n(663066),
+    T = n(976860),
     N = n(859040),
-    v = n(652215),
-    g = n(375708),
+    g = n(652215),
+    v = n(375708),
     x = n(456508);
 let R = (e) => {
     let { onClose: t } = e,
         { analyticsLocations: n } = (0, P.Ay)(),
         r = () => {
             t(),
-                (0, f.pX)(v.BVt.COLLECTIBLES_SHOP),
+                (0, T.pX)(g.BVt.COLLECTIBLES_SHOP),
                 (0, N.Cz)({ analyticsSource: S.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
                 (0, _.jH)(),
-                (0, T.dF)(I.Zt);
+                (0, f.dF)(I.Zt);
         };
     return (0, l.jsxs)("div", {
         className: x.kL,
@@ -54,7 +54,7 @@ let R = (e) => {
             }),
             (0, l.jsx)(d.E, {
                 variant: "text-sm/normal",
-                children: g.intl.format(g.t.twSHte, {
+                children: v.intl.format(v.t.twSHte, {
                     checkItOut: (e) => (0, l.jsx)(y.D, { className: x.nf, onClick: r, children: e }),
                 }),
             }),
@@ -92,8 +92,8 @@ function et(e, t) {
     return null != e && !n;
 }
 function en(e, t) {
-    let n = g.intl.string(g.t.BYa62u),
-        l = g.intl.string(g.t.CDa6Dq),
+    let n = v.intl.string(v.t.BYa62u),
+        l = v.intl.string(v.t.CDa6Dq),
         r = (() => {
             switch (e.interval) {
                 case J.WT.YEAR:
@@ -108,18 +108,18 @@ function en(e, t) {
         case J.pe.TIER_0:
             switch (i) {
                 case J.pe.TIER_1:
-                    return g.intl.string(g.t.q6mxDS);
+                    return v.intl.string(v.t.q6mxDS);
                 case J.pe.TIER_2:
-                    return g.intl.string(g.t.seZVS0);
+                    return v.intl.string(v.t.seZVS0);
                 default:
                     return r;
             }
         case J.pe.TIER_1:
             switch (i) {
                 case J.pe.TIER_0:
-                    return g.intl.string(g.t["7+u2zg"]);
+                    return v.intl.string(v.t["7+u2zg"]);
                 case J.pe.TIER_2:
-                    return g.intl.string(g.t.NG2qcc);
+                    return v.intl.string(v.t.NG2qcc);
                 default:
                     return r;
             }
@@ -127,10 +127,10 @@ function en(e, t) {
             switch (i) {
                 case J.pe.TIER_0:
                 case J.pe.TIER_1:
-                    return g.intl.string(g.t["eB0/w9"]);
+                    return v.intl.string(v.t["eB0/w9"]);
                 case J.pe.TIER_2:
                     return e.interval === J.WT.MONTH
-                        ? g.intl.formatToPlainString(g.t.RqUv86, { numFreeGuildSubscriptions: J.M4 })
+                        ? v.intl.formatToPlainString(v.t.RqUv86, { numFreeGuildSubscriptions: J.M4 })
                         : r;
                 default:
                     return r;
@@ -146,9 +146,9 @@ let el = () => {
                 () =>
                     t?.interval === J.WT.DAY
                         ? t?.interval_count > 7
-                            ? { daysCount: 14, copy: g.intl.string(g.t.Z1V2cs) }
-                            : { daysCount: 7, copy: g.intl.string(g.t.MI1rHs) }
-                        : { daysCount: 30, copy: g.intl.string(g.t["+S5lrV"]) },
+                            ? { daysCount: 14, copy: v.intl.string(v.t.Z1V2cs) }
+                            : { daysCount: 7, copy: v.intl.string(v.t.MI1rHs) }
+                        : { daysCount: 30, copy: v.intl.string(v.t["+S5lrV"]) },
                 [t],
             );
         return { daysCount: n, copy: l, userTrialOffer: e };
@@ -171,14 +171,14 @@ let el = () => {
             {
                 isGift: P,
                 giftRecipient: I,
-                selectedGiftStyle: T,
-                customGiftMessage: f,
+                selectedGiftStyle: f,
+                customGiftMessage: T,
                 setCustomGiftMessage: N,
-                claimableRewards: v,
-                setSelectedGiftingPromotionReward: g,
+                claimableRewards: g,
+                setSelectedGiftingPromotionReward: v,
             } = (0, M.Pv)(),
             x = (0, h.A)(),
-            R = (0, B.kz)(x, P && (0, w.Ik)(I), v),
+            R = (0, B.kz)(x, P && (0, w.Ik)(I), g),
             b = (0, O.tA)({ giftRecipient: I, isGift: P });
         a()(void 0 !== E, "should not be undefined");
         let [L, D] = (0, s.yK)([j.A], () => [null != E ? j.A.get(E.planId) : null, null != t ? j.A.get(t) : null]),
@@ -208,8 +208,8 @@ let el = () => {
             }
         }, [$, P, l, L, V, S]),
             r.useEffect(() => {
-                R && null != v && v.length > 0 && g(v[0]);
-            }, [v, g, R]);
+                R && null != g && g.length > 0 && v(g[0]);
+            }, [g, v, R]);
         let { ref: X, ...J } = (0, o._u)(),
             ee = Y?.id != null ? (0, U.y8)(Y.id, !1, P, K) : void 0,
             { ipCountryCode: et } = (0, W.A)(),
@@ -235,9 +235,9 @@ let el = () => {
             radioGroupProps: J,
             isGift: P,
             giftRecipient: I,
-            customGiftMessage: f,
+            customGiftMessage: T,
             setCustomGiftMessage: N,
-            selectedGiftStyle: T,
+            selectedGiftStyle: f,
             isEligibleForBOGOPromotion: F,
             isEligibleForTrial: y,
             userTrialOffer: C,
@@ -253,7 +253,7 @@ let el = () => {
             children: [
                 (0, l.jsx)("div", { className: ee.T }),
                 (0, l.jsx)(V.Sd, {
-                    label: g.intl.string(g.t.txajQG),
+                    label: v.intl.string(v.t.txajQG),
                     value: (0, l.jsx)(K.A, {
                         price: r.amount,
                         currency: r.currency,
@@ -290,7 +290,7 @@ let el = () => {
                         (0, l.jsx)(c.D, {
                             variant: "heading-md/semibold",
                             color: "text-strong",
-                            children: g.intl.string(g.t["3E5hXj"]),
+                            children: v.intl.string(v.t["3E5hXj"]),
                         }),
                         e,
                     ],
@@ -398,14 +398,14 @@ let el = () => {
         return null == n
             ? null
             : r
-              ? g.intl.format(g.t.nG95hA, { endDate: n })
-              : g.intl.format(g.t.s4E7kb, { trialEnd: n, trialPeriod: l });
+              ? v.intl.format(v.t.nG95hA, { endDate: n })
+              : v.intl.format(v.t.s4E7kb, { trialEnd: n, trialPeriod: l });
     },
     ed = (e) => {
         let { shouldShowHRKEuroWarning: t, selectedPlanPrice: n } = e;
         return t && null != n
             ? (0, l.jsx)(p.A, {
-                  message: g.intl.formatToPlainString(g.t["9hnZoK"], {
+                  message: v.intl.formatToPlainString(v.t["9hnZoK"], {
                       kunaPriceWithCurrency: (0, k.$g)(7.5345 * n.amount, Q.Yr.HRK),
                   }),
               })
@@ -438,8 +438,8 @@ let el = () => {
                 !a &&
                     s &&
                     (0, l.jsx)(p.A, {
-                        message: g.intl.format(g.t.Om31w8, {
-                            documentationLink: D.A.getArticleURL(v.MVz.LOCALIZED_PRICING),
+                        message: v.intl.format(v.t.Om31w8, {
+                            documentationLink: D.A.getArticleURL(g.MVz.LOCALIZED_PRICING),
                         }),
                     }),
             ],
@@ -467,10 +467,10 @@ function em(e) {
             isGift: S,
             thePriceOptions: P,
             isEligibleForTrial: I,
-            giftRecipient: T,
-            customGiftMessage: f,
+            giftRecipient: f,
+            customGiftMessage: T,
             setCustomGiftMessage: N,
-            selectedGiftStyle: v,
+            selectedGiftStyle: g,
             isPlansEligibleForDiscount: x,
             discountedPlanRegularPrice: R,
             hasSeenCollectiblesInSkuSelect: M,
@@ -516,10 +516,10 @@ function em(e) {
         });
     if (S)
         return (0, l.jsx)(ea, {
-            giftRecipient: T,
-            customGiftMessage: f,
+            giftRecipient: f,
+            customGiftMessage: T,
             setCustomGiftMessage: N,
-            selectedGiftStyle: v,
+            selectedGiftStyle: g,
             hasSeenCollectiblesInSkuSelect: M,
             isPrepaid: j,
             canContinue: B,
@@ -552,7 +552,7 @@ function em(e) {
                             variant: "heading-md/semibold",
                             color: "text-strong",
                             className: ee.VZ,
-                            children: g.intl.string(g.t.a19jpU),
+                            children: v.intl.string(v.t.a19jpU),
                         });
                     if (t)
                         return (0, l.jsxs)("div", {
@@ -575,12 +575,12 @@ function em(e) {
                                     variant: "text-sm/normal",
                                     className: ee.Tz,
                                     children: e
-                                        ? g.intl.format(g.t.ofweWu, {
+                                        ? v.intl.format(v.t.ofweWu, {
                                               numYears: K?.discount.userUsageLimit ?? "",
                                               discountedPrice: t,
                                               regularPrice: n,
                                           })
-                                        : g.intl.format(g.t["nG7g/E"], {
+                                        : v.intl.format(v.t["nG7g/E"], {
                                               numMonths: K?.discount.userUsageLimit ?? "",
                                               discountedPrice: t,
                                               regularPrice: n,

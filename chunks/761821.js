@@ -2,16 +2,16 @@
 n.d(t, {
     $o: () => I,
     Gd: () => E,
-    Mr: () => y,
+    Mr: () => N,
     RK: () => A,
     Su: () => _,
     VB: () => S,
-    Y5: () => h,
+    Y5: () => f,
     aw: () => m,
     gc: () => T,
     ii: () => p,
     ob: () => g,
-    vI: () => N,
+    vI: () => y,
 }),
     n(321073);
 var i = n(638504),
@@ -24,9 +24,9 @@ var i = n(638504),
     c = n(355097),
     d = n(652215);
 let _ = { readerFactory: (e) => new i.V(e, new TextDecoder("utf-8")) },
-    f = { [c.oD.PRELOADED_USER_SETTINGS]: l.nT, [c.oD.FRECENCY_AND_FAVORITES_SETTINGS]: o.aw };
-function h(e, t) {
-    return null != t && e in f ? p(f[e], t) : null;
+    h = { [c.oD.PRELOADED_USER_SETTINGS]: l.nT, [c.oD.FRECENCY_AND_FAVORITES_SETTINGS]: o.aw };
+function f(e, t) {
+    return null != t && e in h ? p(h[e], t) : null;
 }
 function p(e, t) {
     if (null == t) return null;
@@ -41,7 +41,7 @@ function E(e) {
     return p(l.nT, e);
 }
 function m(e, t) {
-    return g(f[e], t);
+    return g(h[e], t);
 }
 function g(e, t) {
     return (0, r.C)(e.toBinary(t));
@@ -60,7 +60,7 @@ function T(e, t, n, i) {
 function S(e, t, n) {
     return t in e.channels || (e.channels[t] = l.Ju.create()), n(e.channels[t]);
 }
-function N(e, t) {
+function y(e, t) {
     null == e.versions && (e.versions = u.u.create());
     let n = 0;
     for (let e of t) {
@@ -84,7 +84,7 @@ function N(e, t) {
     }
     return { proto: e, isDirty: r, cleanupFuncs: s };
 }
-function y(e, t) {
+function N(e, t) {
     let n = Object.entries(e);
     if (n.length > t)
         for (

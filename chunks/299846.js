@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { u: () => r });
-var l = n(17928),
-    i = n(287809),
+n.d(t, { u: () => o });
+var i = n(17928),
+    r = n(287809),
     s = n(20805),
     a = n(327098);
-function r(e) {
-    let t = (0, l.bG)([i.default], () => i.default.getUser(e.author_id)),
-        { activity: n, embeddedActivity: r } = (0, a.A)(e);
+function o(e) {
+    let t = (0, i.bG)([r.default], () => r.default.getUser(e.author_id)),
+        { activity: n, embeddedActivity: o } = (0, a.A)(e);
     if (null == n)
         return {
             isRich: !1,
@@ -18,20 +18,20 @@ function r(e) {
             details: void 0,
             party: void 0,
         };
-    let o = n.assets?.large_image != null || n.assets?.small_image != null,
-        c = n.assets?.large_text != null || n.assets?.small_text != null,
-        u = n.name ?? ("game_name" in e.extra ? e.extra.game_name : void 0),
+    let l = n.assets?.large_image != null || n.assets?.small_image != null,
+        u = n.assets?.large_text != null || n.assets?.small_text != null,
+        c = n.name ?? ("game_name" in e.extra ? e.extra.game_name : void 0),
         d = n.details,
-        h = n.state,
-        m = n.party;
+        _ = n.state,
+        h = n.party;
     return {
-        isRich: o || c || null != d || null != h || null != m,
+        isRich: l || u || null != d || null != _ || null != h,
         user: t,
         activity: n,
-        state: h,
+        state: _,
         details: d,
-        party: m,
-        appName: u,
-        embeddedActivity: r,
+        party: h,
+        appName: c,
+        embeddedActivity: o,
     };
 }

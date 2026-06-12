@@ -1,26 +1,26 @@
 "use strict";
-var r = n(439619),
-    i = n(906046),
-    a = n(315646),
-    s = n(12161),
+var i = n(439619),
+    r = n(906046),
+    s = n(315646),
+    a = n(12161),
     o = n(741623),
-    l = r("%WeakMap%", !0),
-    u = i("WeakMap.prototype.get", !0),
-    c = i("WeakMap.prototype.set", !0),
-    d = i("WeakMap.prototype.has", !0),
-    _ = i("WeakMap.prototype.delete", !0);
+    l = i("%WeakMap%", !0),
+    u = r("WeakMap.prototype.get", !0),
+    c = r("WeakMap.prototype.set", !0),
+    d = r("WeakMap.prototype.has", !0),
+    _ = r("WeakMap.prototype.delete", !0);
 e.exports = l
     ? function () {
           var e,
               t,
               n = {
                   assert: function (e) {
-                      if (!n.has(e)) throw new o("Side channel does not contain " + a(e));
+                      if (!n.has(e)) throw new o("Side channel does not contain " + s(e));
                   },
                   delete: function (n) {
                       if (l && n && ("object" == typeof n || "function" == typeof n)) {
                           if (e) return _(e, n);
-                      } else if (s && t) return t.delete(n);
+                      } else if (a && t) return t.delete(n);
                       return !1;
                   },
                   get: function (n) {
@@ -31,12 +31,12 @@ e.exports = l
                           ? d(e, n)
                           : !!t && t.has(n);
                   },
-                  set: function (n, r) {
+                  set: function (n, i) {
                       l && n && ("object" == typeof n || "function" == typeof n)
-                          ? (e || (e = new l()), c(e, n, r))
-                          : s && (t || (t = s()), t.set(n, r));
+                          ? (e || (e = new l()), c(e, n, i))
+                          : a && (t || (t = a()), t.set(n, i));
                   },
               };
           return n;
       }
-    : s;
+    : a;

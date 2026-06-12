@@ -118,7 +118,7 @@ let t = [
         "foreignObject",
         "clipPath",
     ],
-    a = [
+    n = [
         "any-hover",
         "any-pointer",
         "aspect-ratio",
@@ -155,7 +155,7 @@ let t = [
     ]
         .sort()
         .reverse(),
-    n = [
+    i = [
         "active",
         "any-link",
         "blank",
@@ -236,7 +236,7 @@ let t = [
     ]
         .sort()
         .reverse(),
-    i = [
+    s = [
         "accent-color",
         "align-content",
         "align-items",
@@ -755,7 +755,7 @@ let t = [
         .sort()
         .reverse();
 e.exports = function (e) {
-    let o = {
+    let a = {
             IMPORTANT: { scope: "meta", begin: "!important" },
             BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
             HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
@@ -776,7 +776,7 @@ e.exports = function (e) {
             },
             CSS_VARIABLE: { className: "attr", begin: /--[A-Za-z_][A-Za-z0-9_-]*/ },
         },
-        s = "@[a-z-]+",
+        o = "@[a-z-]+",
         l = { className: "variable", begin: "(\\$[a-zA-Z-][a-zA-Z0-9_-]*)\\b", relevance: 0 };
     return {
         name: "SCSS",
@@ -785,17 +785,17 @@ e.exports = function (e) {
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            o.CSS_NUMBER_MODE,
+            a.CSS_NUMBER_MODE,
             { className: "selector-id", begin: "#[A-Za-z0-9_-]+", relevance: 0 },
             { className: "selector-class", begin: "\\.[A-Za-z0-9_-]+", relevance: 0 },
-            o.ATTRIBUTE_SELECTOR_MODE,
+            a.ATTRIBUTE_SELECTOR_MODE,
             { className: "selector-tag", begin: "\\b(" + t.join("|") + ")\\b", relevance: 0 },
-            { className: "selector-pseudo", begin: ":(" + n.join("|") + ")" },
+            { className: "selector-pseudo", begin: ":(" + i.join("|") + ")" },
             { className: "selector-pseudo", begin: ":(:)?(" + r.join("|") + ")" },
             l,
-            { begin: /\(/, end: /\)/, contains: [o.CSS_NUMBER_MODE] },
-            o.CSS_VARIABLE,
-            { className: "attribute", begin: "\\b(" + i.join("|") + ")\\b" },
+            { begin: /\(/, end: /\)/, contains: [a.CSS_NUMBER_MODE] },
+            a.CSS_VARIABLE,
+            { className: "attribute", begin: "\\b(" + s.join("|") + ")\\b" },
             {
                 begin: "\\b(whitespace|wait|w-resize|visible|vertical-text|vertical-ideographic|uppercase|upper-roman|upper-alpha|underline|transparent|top|thin|thick|text|text-top|text-bottom|tb-rl|table-header-group|table-footer-group|sw-resize|super|strict|static|square|solid|small-caps|separate|se-resize|scroll|s-resize|rtl|row-resize|ridge|right|repeat|repeat-y|repeat-x|relative|progress|pointer|overline|outside|outset|oblique|nowrap|not-allowed|normal|none|nw-resize|no-repeat|no-drop|newspaper|ne-resize|n-resize|move|middle|medium|ltr|lr-tb|lowercase|lower-roman|lower-alpha|loose|list-item|line|line-through|line-edge|lighter|left|keep-all|justify|italic|inter-word|inter-ideograph|inside|inset|inline|inline-block|inherit|inactive|ideograph-space|ideograph-parenthesis|ideograph-numeric|ideograph-alpha|horizontal|hidden|help|hand|groove|fixed|ellipsis|e-resize|double|dotted|distribute|distribute-space|distribute-letter|distribute-all-lines|disc|disabled|default|decimal|dashed|crosshair|collapse|col-resize|circle|char|center|capitalize|break-word|break-all|bottom|both|bolder|bold|block|bidi-override|below|baseline|auto|always|all-scroll|absolute|table|table-cell)\\b",
             },
@@ -804,33 +804,33 @@ e.exports = function (e) {
                 end: /[;}{]/,
                 relevance: 0,
                 contains: [
-                    o.BLOCK_COMMENT,
+                    a.BLOCK_COMMENT,
                     l,
-                    o.HEXCOLOR,
-                    o.CSS_NUMBER_MODE,
+                    a.HEXCOLOR,
+                    a.CSS_NUMBER_MODE,
                     e.QUOTE_STRING_MODE,
                     e.APOS_STRING_MODE,
-                    o.IMPORTANT,
-                    o.FUNCTION_DISPATCH,
+                    a.IMPORTANT,
+                    a.FUNCTION_DISPATCH,
                 ],
             },
-            { begin: "@(page|font-face)", keywords: { $pattern: s, keyword: "@page @font-face" } },
+            { begin: "@(page|font-face)", keywords: { $pattern: o, keyword: "@page @font-face" } },
             {
                 begin: "@",
                 end: "[{;]",
                 returnBegin: !0,
-                keywords: { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: a.join(" ") },
+                keywords: { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: n.join(" ") },
                 contains: [
-                    { begin: s, className: "keyword" },
+                    { begin: o, className: "keyword" },
                     { begin: /[a-z-]{1,149}(?=:)/, className: "attribute" },
                     l,
                     e.QUOTE_STRING_MODE,
                     e.APOS_STRING_MODE,
-                    o.HEXCOLOR,
-                    o.CSS_NUMBER_MODE,
+                    a.HEXCOLOR,
+                    a.CSS_NUMBER_MODE,
                 ],
             },
-            o.FUNCTION_DISPATCH,
+            a.FUNCTION_DISPATCH,
         ],
     };
 };

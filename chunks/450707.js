@@ -1,75 +1,75 @@
 "use strict";
-n.d(t, { O: () => r, u: () => a });
-var l,
-    i = n(624793),
-    s = n(985018),
-    a = (((l = {}).GET_PREMIUM = "GET_PREMIUM"), (l.JOIN_GUILD = "JOIN_GUILD"), (l.UNAVAILABLE = "UNAVAILABLE"), l);
-let r = (e) => {
+n.d(t, { O: () => o, u: () => a });
+var i,
+    r = n(624793),
+    s = n(375708),
+    a = (((i = {}).GET_PREMIUM = "GET_PREMIUM"), (i.JOIN_GUILD = "JOIN_GUILD"), (i.UNAVAILABLE = "UNAVAILABLE"), i);
+let o = (e) => {
     let t = ((e) => {
             let {
                 sourceType: t,
                 expressionSourceApplication: n,
-                isPremium: l,
+                isPremium: i,
                 hasJoinedEmojiSourceGuild: a,
-                isUnusableRoleSubscriptionEmoji: r,
-                isDiscoverable: o,
-                emojiComesFromCurrentGuild: c,
-                userIsRoleSubscriber: u,
+                isUnusableRoleSubscriptionEmoji: o,
+                isDiscoverable: l,
+                emojiComesFromCurrentGuild: u,
+                userIsRoleSubscriber: c,
                 isRoleSubscriptionEmoji: d,
-                shouldHideRoleSubscriptionCTA: h,
-                onOpenPremiumSettings: m,
+                shouldHideRoleSubscriptionCTA: _,
+                onOpenPremiumSettings: h,
             } = e;
-            return t === i.rV.APPLICATION && null != n
+            return t === r.rV.APPLICATION && null != n
                 ? s.intl.formatToPlainString(s.t.uERlTd, { appName: n.name })
-                : l
+                : i
                   ? a
                       ? d
-                          ? h && r
+                          ? _ && o
                               ? s.intl.string(s.t.xFb68j)
-                              : r
-                                ? u
+                              : o
+                                ? c
                                     ? s.intl.string(s.t.vLklfF)
                                     : s.intl.string(s.t["g8i/bf"])
                                 : s.intl.string(s.t.Eoynp0)
-                          : c
+                          : u
                             ? s.intl.string(s.t.hU4kIe)
                             : s.intl.string(s.t.GM0xaX)
-                      : o
+                      : l
                         ? s.intl.string(s.t.xE9WGt)
                         : s.intl.string(s.t["0LMpW+"])
                   : a
-                    ? h && r
+                    ? _ && o
                         ? s.intl.string(s.t.xFb68j)
-                        : r
-                          ? u
+                        : o
+                          ? c
                               ? s.intl.string(s.t.vLklfF)
                               : s.intl.string(s.t["g8i/bf"])
-                          : c
+                          : u
                             ? s.intl.string(s.t.ICPhqa)
                             : s.intl.string(s.t.jQy3aM)
-                    : o
+                    : l
                       ? s.intl.string(s.t.FJ6Z01)
-                      : s.intl.format(s.t.U6vLcA, { openPremiumSettings: m });
+                      : s.intl.format(s.t.U6vLcA, { openPremiumSettings: h });
         })(e),
         n = ((e) => {
             let {
                     isPremium: t,
                     hasJoinedEmojiSourceGuild: n,
-                    isUnusableRoleSubscriptionEmoji: l,
-                    emojiComesFromCurrentGuild: i,
+                    isUnusableRoleSubscriptionEmoji: i,
+                    emojiComesFromCurrentGuild: r,
                     isDiscoverable: s,
                 } = e,
                 a = "Custom Emoji Popout";
             return (
                 t && !n && s
                     ? (a = "Custom Emoji Popout (Cross-Server)")
-                    : t || !n || l
+                    : t || !n || i
                       ? t ||
                         n ||
                         (a = s
                             ? "Custom Emoji Popout (Upsell Not-Joined Cross-Server)"
                             : "Custom Emoji Popout (Soft Upsell)")
-                      : (a = i
+                      : (a = r
                             ? "Custom Emoji Popout (Upsell Joined Current-Server)"
                             : "Custom Emoji Popout (Upsell Joined Cross-Server)"),
                 a
@@ -80,13 +80,13 @@ let r = (e) => {
             let {
                     isPremium: t,
                     hasJoinedEmojiSourceGuild: n,
-                    isUnusableRoleSubscriptionEmoji: l,
-                    isDiscoverable: i,
+                    isUnusableRoleSubscriptionEmoji: i,
+                    isDiscoverable: r,
                 } = e,
-                a = !n && i;
+                a = !n && r;
             return t && a
                 ? { type: "JOIN_GUILD", text: s.intl.string(s.t.riu2R5), description: null }
-                : !t && ((n && !l) || a)
+                : !t && ((n && !i) || a)
                   ? { type: "GET_PREMIUM", text: s.intl.string(s.t["gl/XHJ"]), description: null }
                   : { type: "UNAVAILABLE", text: null, description: null };
         })(e),

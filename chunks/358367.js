@@ -1,10 +1,10 @@
-n.d(t, { A: () => a });
-var l = n(627968);
-n(64700);
-var i = n(688810);
-function a(e, t) {
-    return function (n) {
-        let { analyticsLocations: a } = (0, i.Ay)(t);
-        return (0, l.jsx)(i.f5, { value: a, children: (0, l.jsx)(e, { ...n }) });
+s.d(n, { A: () => c });
+var t = s(627968);
+s(64700);
+var u = s(688810);
+function c(r, n) {
+    return function (s) {
+        let { analyticsLocations: c } = (0, u.Ay)(n);
+        return (0, t.jsx)(u.f5, { value: c, children: (0, t.jsx)(r, { ...s }) });
     };
 }

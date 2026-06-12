@@ -3,9 +3,9 @@ n.d(t, {
     C8: () => _,
     G1: () => u,
     N$: () => o.Key,
-    Nu: () => h,
+    Nu: () => f,
     RX: () => m,
-    V8: () => f,
+    V8: () => h,
     Yy: () => c,
     dh: () => E,
     g$: () => p,
@@ -154,7 +154,7 @@ let _ = Object.freeze({
         "track back": 173,
         "track skip": 171,
     }),
-    f = Object.freeze({
+    h = Object.freeze({
         a: 4,
         s: 22,
         d: 7,
@@ -269,7 +269,7 @@ let _ = Object.freeze({
         down: 81,
         up: 82,
     }),
-    h = Object.freeze({
+    f = Object.freeze({
         a: 65,
         s: 83,
         d: 68,

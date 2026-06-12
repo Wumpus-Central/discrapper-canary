@@ -5,7 +5,7 @@ var n = "u" > typeof Uint8Array && "u" > typeof Uint16Array && "u" > typeof Int3
         var n = t.shift();
         if (n) {
             if ("object" != typeof n) throw TypeError(n + "must be non-object");
-            for (var r in n) Object.prototype.hasOwnProperty.call(n, r) && (e[r] = n[r]);
+            for (var i in n) Object.prototype.hasOwnProperty.call(n, i) && (e[i] = n[i]);
         }
     }
     return e;
@@ -13,22 +13,22 @@ var n = "u" > typeof Uint8Array && "u" > typeof Uint16Array && "u" > typeof Int3
     (t.shrinkBuf = function (e, t) {
         return e.length === t ? e : e.subarray ? e.subarray(0, t) : ((e.length = t), e);
     });
-var r = {
-        arraySet: function (e, t, n, r, i) {
-            if (t.subarray && e.subarray) return void e.set(t.subarray(n, n + r), i);
-            for (var s = 0; s < r; s++) e[i + s] = t[n + s];
+var i = {
+        arraySet: function (e, t, n, i, r) {
+            if (t.subarray && e.subarray) return void e.set(t.subarray(n, n + i), r);
+            for (var s = 0; s < i; s++) e[r + s] = t[n + s];
         },
         flattenChunks: function (e) {
-            var t, n, r, i, s, a;
-            for (t = 0, r = 0, n = e.length; t < n; t++) r += e[t].length;
-            for (t = 0, a = new Uint8Array(r), i = 0, n = e.length; t < n; t++)
-                (s = e[t]), a.set(s, i), (i += s.length);
+            var t, n, i, r, s, a;
+            for (t = 0, i = 0, n = e.length; t < n; t++) i += e[t].length;
+            for (t = 0, a = new Uint8Array(i), r = 0, n = e.length; t < n; t++)
+                (s = e[t]), a.set(s, r), (r += s.length);
             return a;
         },
     },
-    i = {
-        arraySet: function (e, t, n, r, i) {
-            for (var s = 0; s < r; s++) e[i + s] = t[n + s];
+    r = {
+        arraySet: function (e, t, n, i, r) {
+            for (var s = 0; s < i; s++) e[r + s] = t[n + s];
         },
         flattenChunks: function (e) {
             return [].concat.apply([], e);
@@ -36,7 +36,7 @@ var r = {
     };
 (t.setTyped = function (e) {
     e
-        ? ((t.Buf8 = Uint8Array), (t.Buf16 = Uint16Array), (t.Buf32 = Int32Array), t.assign(t, r))
-        : ((t.Buf8 = Array), (t.Buf16 = Array), (t.Buf32 = Array), t.assign(t, i));
+        ? ((t.Buf8 = Uint8Array), (t.Buf16 = Uint16Array), (t.Buf32 = Int32Array), t.assign(t, i))
+        : ((t.Buf8 = Array), (t.Buf16 = Array), (t.Buf32 = Array), t.assign(t, r));
 }),
     t.setTyped(n);

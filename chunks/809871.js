@@ -10,8 +10,8 @@ var i = n(691540),
     c = n(439372),
     d = n(957292),
     _ = n(400115),
-    f = n(174459),
-    h = n(91242),
+    h = n(174459),
+    f = n(91242),
     p = n(652215);
 class E extends c.A {
     static displayName = "FramesManager";
@@ -36,11 +36,11 @@ class E extends c.A {
         let { reason: t, application: n } = e,
             i = n.id;
         if (null == i || null == t) return;
-        let r = h.A.getConnectedFrame();
+        let r = f.A.getConnectedFrame();
         r?.applicationId === i &&
             (this.leaveFrame({ applicationId: i }),
             t.code !== p.YI$.CLOSE_NORMAL &&
-                (f.default.track(p.HAw.ACTIVITY_CLOSED_RPC_ERROR, {
+                (h.default.track(p.HAw.ACTIVITY_CLOSED_RPC_ERROR, {
                     rpc_close_code: t.code,
                     rpc_message: t.message,
                     application_id: i,
@@ -72,14 +72,14 @@ let A = !1,
             let e = A,
                 t = l.A.getWindowOpen(p.MLl.ACTIVITY_POPOUT);
             if (e && !t && !I) {
-                let e = h.A.getConnectedFrame();
+                let e = f.A.getConnectedFrame();
                 null != e && u.A.stopFrame({ applicationId: e.applicationId });
             }
             A = t;
         };
         popInFrame = () => {
             (I = !0), o.close(p.MLl.ACTIVITY_POPOUT);
-            let e = h.A.getConnectedFrame();
+            let e = f.A.getConnectedFrame();
             null != e && u.A.updateFrameLayoutMode({ applicationId: e.applicationId, layoutMode: m.y.FOCUSED });
         };
         showRPCDisconnectErrorUI(e) {

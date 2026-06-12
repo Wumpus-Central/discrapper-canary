@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Ay: () => l, m1: () => o, n_: () => s });
-var r = n(315069),
-    i = n(788868);
-class a extends r.A {
+n.d(t, { Ay: () => l, m1: () => o, n_: () => a });
+var i = n(315069),
+    r = n(788868);
+class s extends i.A {
     id;
     name;
     interval;
@@ -18,22 +18,22 @@ class a extends r.A {
             null != e.prices &&
                 (t = Object.keys(e.prices).reduce((t, n) => {
                     if (null == e.prices) return t;
-                    let r = e.prices[n];
+                    let i = e.prices[n];
                     return (
                         (t[n] = {
                             countryPrices: {
-                                countryCode: r.country_prices.country_code,
-                                prices: r.country_prices.prices.map((t) => s(t, e.tax_inclusive)),
+                                countryCode: i.country_prices.country_code,
+                                prices: i.country_prices.prices.map((t) => a(t, e.tax_inclusive)),
                             },
-                            paymentSourcePrices: Object.entries(r.payment_source_prices).reduce((t, n) => {
-                                let [r, i] = n;
-                                return (t[r] = i.map((t) => s(t, e.tax_inclusive))), t;
+                            paymentSourcePrices: Object.entries(i.payment_source_prices).reduce((t, n) => {
+                                let [i, r] = n;
+                                return (t[i] = r.map((t) => a(t, e.tax_inclusive))), t;
                             }, {}),
                         }),
                         t
                     );
                 }, {})),
-            new a({
+            new s({
                 id: e.id,
                 name: e.name,
                 interval: e.interval,
@@ -60,13 +60,13 @@ class a extends r.A {
     }
     get premiumSubscriptionType() {
         switch (this.skuId) {
-            case i.pe.LEGACY:
-            case i.pe.TIER_2:
-                return i.PremiumTypes.TIER_2;
-            case i.pe.TIER_1:
-                return i.PremiumTypes.TIER_1;
-            case i.pe.TIER_0:
-                return i.PremiumTypes.TIER_0;
+            case r.pe.LEGACY:
+            case r.pe.TIER_2:
+                return r.PremiumTypes.TIER_2;
+            case r.pe.TIER_1:
+                return r.PremiumTypes.TIER_1;
+            case r.pe.TIER_0:
+                return r.PremiumTypes.TIER_0;
             default:
                 return null;
         }
@@ -96,10 +96,10 @@ class a extends r.A {
         );
     }
 }
-function s(e, t) {
+function a(e, t) {
     return { amount: e.amount, currency: e.currency, tax: 0, taxInclusive: t };
 }
 function o(e) {
-    return [i.gD.NONE_MONTH, i.gD.NONE_3_MONTH, i.gD.NONE_6_MONTH, i.gD.NONE_YEAR].includes(e);
+    return [r.gD.NONE_MONTH, r.gD.NONE_3_MONTH, r.gD.NONE_6_MONTH, r.gD.NONE_YEAR].includes(e);
 }
-let l = a;
+let l = s;

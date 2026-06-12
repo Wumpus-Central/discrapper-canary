@@ -1,22 +1,22 @@
 "use strict";
 n.d(t, { t: () => a, z: () => o });
-var r,
-    i = n(954571),
+var i,
+    r = n(174459),
     s = n(652215),
     a =
-        (((r = {}).SHOP_MOUNTED = "shop_mounted"),
-        (r.CATEGORIES_FETCH_STARTED = "categories_fetch_started"),
-        (r.CATEGORIES_FETCH_COMPLETED = "categories_fetch_completed"),
-        (r.SHOP_HOME_FETCH_STARTED = "shop_home_fetch_started"),
-        (r.SHOP_HOME_FETCH_COMPLETED = "shop_home_fetch_completed"),
-        (r.SHOP_RENDERED = "shop_rendered"),
-        r);
+        (((i = {}).SHOP_MOUNTED = "shop_mounted"),
+        (i.CATEGORIES_FETCH_STARTED = "categories_fetch_started"),
+        (i.CATEGORIES_FETCH_COMPLETED = "categories_fetch_completed"),
+        (i.SHOP_HOME_FETCH_STARTED = "shop_home_fetch_started"),
+        (i.SHOP_HOME_FETCH_COMPLETED = "shop_home_fetch_completed"),
+        (i.SHOP_RENDERED = "shop_rendered"),
+        i);
 let o = (e) => {
-    let { sessionId: t, checkpoint: n, tab: r, unpublishedCategoriesShown: a, cacheDisabled: o } = e;
-    i.default.track(s.HAw.COLLECTIBLES_SHOP_PERF_TRACKED, {
+    let { sessionId: t, checkpoint: n, tab: i, unpublishedCategoriesShown: a, cacheDisabled: o } = e;
+    r.default.track(s.HAw.COLLECTIBLES_SHOP_PERF_TRACKED, {
         page_session_id: t,
         checkpoint: n,
-        tab: r,
+        tab: i,
         unpublished_categories_shown: a,
         cache_disabled: o,
     });

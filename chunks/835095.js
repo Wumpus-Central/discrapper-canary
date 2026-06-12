@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { A: () => o }), n(938796);
-var r = n(665260),
-    i = n(315069),
+var i = n(665260),
+    r = n(315069),
     s = n(852218),
     a = n(788868);
-class o extends i.A {
+class o extends r.A {
     id;
     trialId;
     startDate;
@@ -90,7 +90,7 @@ class o extends i.A {
         return this.promotionType === s.pt.MARKETING_MOMENT;
     }
     hasFlag(e) {
-        return (0, r.Lt)(this.flags, e);
+        return (0, i.Lt)(this.flags, e);
     }
     isCountryRestricted(e) {
         if (this.countryListMode === s.qn.ALLOWLIST) return !this.allowedCountries.includes(e);

@@ -1,64 +1,64 @@
-n.d(t, { Y: () => E, T: () => _ });
-var i = n(627968),
-    l = n(64700),
-    s = n(834730),
-    a = n(359778),
-    r = n(534514),
-    o = n(695366),
-    c = n(102876),
-    d = n(975571),
-    u = n(17928),
-    h = n(429913),
-    m = n(800828),
-    p = n(652215),
-    g = n(985018),
-    A = n(463151);
-function f(e) {
-    return (0, i.jsx)(c.A, { application: e }, e.id);
+i.d(e, { Y: () => k, T: () => f });
+var r = i(627968),
+    n = i(64700),
+    a = i(834730),
+    l = i(993077),
+    s = i(534514),
+    c = i(695366),
+    o = i(102876),
+    d = i(975571),
+    p = i(17928),
+    u = i(429913),
+    A = i(800828),
+    x = i(652215),
+    h = i(375708),
+    m = i(463151);
+function N(t) {
+    return (0, r.jsx)(o.A, { application: t }, t.id);
 }
-function _(e) {
-    let { userId: t, variant: n = "text-xs/normal", color: a = "text-default", ...r } = e,
-        o = (function (e) {
-            let t,
-                { userId: n, renderApplicationName: i } = e,
-                s =
-                    ((t = (0, u.bG)([m.A], () => {
-                        let e = m.A.getGameRelationshipsForUser(n);
-                        if (0 !== e.length) return e[0].applicationId;
+function f(t) {
+    let { userId: e, variant: i = "text-xs/normal", color: l = "text-default", ...s } = t,
+        c = (function (t) {
+            let e,
+                { userId: i, renderApplicationName: r } = t,
+                a =
+                    ((e = (0, p.bG)([A.A], () => {
+                        let t = A.A.getGameRelationshipsForUser(i);
+                        if (0 !== t.length) return t[0].applicationId;
                     })),
-                    (0, h.h)(t));
-            return l.useMemo(
+                    (0, u.h)(e));
+            return n.useMemo(
                 () =>
-                    null != s
-                        ? g.intl.format(g.t.rSUACb, {
-                              helpdeskArticle: d.A.getArticleURL(p.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
-                              applicationName: () => i(s),
+                    null != a
+                        ? h.intl.format(h.t.rSUACb, {
+                              helpdeskArticle: d.A.getArticleURL(x.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
+                              applicationName: () => r(a),
                           })
-                        : g.intl.format(g.t["q+N8L6"], {
-                              helpdeskArticle: d.A.getArticleURL(p.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
+                        : h.intl.format(h.t["q+N8L6"], {
+                              helpdeskArticle: d.A.getArticleURL(x.MVz.SLAYER_PROVISIONAL_ACCOUNTS),
                           }),
-                [s, i],
+                [a, r],
             );
-        })({ userId: t, renderApplicationName: f });
-    return (0, i.jsx)(s.E, { variant: n, color: a, ...r, children: o });
+        })({ userId: e, renderApplicationName: N });
+    return (0, r.jsx)(a.E, { variant: i, color: l, ...s, children: c });
 }
-function E(e) {
-    let { userId: t } = e;
-    return (0, i.jsxs)(a.Z, {
-        className: A.ZO,
+function k(t) {
+    let { userId: e } = t;
+    return (0, r.jsxs)(l.Z, {
+        className: m.ZO,
         children: [
-            (0, i.jsxs)("div", {
-                className: A.wx,
+            (0, r.jsxs)("div", {
+                className: m.wx,
                 children: [
-                    (0, i.jsx)(r.D, {
+                    (0, r.jsx)(s.D, {
                         variant: "text-md/semibold",
                         color: "text-default",
-                        children: g.intl.string(g.t.Iyka0U),
+                        children: h.intl.string(h.t.Iyka0U),
                     }),
-                    (0, i.jsx)(o.E, { size: "xs", className: A.Kk }),
+                    (0, r.jsx)(c.E, { size: "xs", className: m.Kk }),
                 ],
             }),
-            (0, i.jsx)(_, { userId: t, variant: "text-md/normal" }),
+            (0, r.jsx)(f, { userId: e, variant: "text-md/normal" }),
         ],
     });
 }

@@ -1,1 +1,1 @@
-e.exports = { m: "emojiIcon_ff168a" };
+_.exports = { m: "emojiIcon_ff168a" };

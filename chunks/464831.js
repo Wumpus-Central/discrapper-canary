@@ -1,7 +1,7 @@
 "use strict";
 n.r(t), n.d(t, { default: () => o });
-var r = n(29583),
-    i = n(998280),
+var i = n(29583),
+    r = n(998280),
     s = n(618027),
     a = n(98430);
 function o(e, t) {
@@ -10,12 +10,12 @@ function o(e, t) {
         o,
         l,
         u,
-        d,
         c,
+        d,
         _,
-        f,
-        E = (0, a.q)(),
-        h = (0, i.A)(
+        h,
+        f = (0, a.q)(),
+        p = (0, r.A)(
             null !=
                 (n =
                     null !=
@@ -24,20 +24,20 @@ function o(e, t) {
                         (l =
                             null != (u = null == t ? void 0 : t.weekStartsOn)
                                 ? u
-                                : null == t || null == (d = t.locale) || null == (c = d.options)
+                                : null == t || null == (c = t.locale) || null == (d = c.options)
                                   ? void 0
-                                  : c.weekStartsOn)
+                                  : d.weekStartsOn)
                             ? l
-                            : E.weekStartsOn)
+                            : f.weekStartsOn)
                         ? o
-                        : null == (_ = E.locale) || null == (f = _.options)
+                        : null == (_ = f.locale) || null == (h = _.options)
                           ? void 0
-                          : f.weekStartsOn)
+                          : h.weekStartsOn)
                 ? n
                 : 0,
         );
-    if (!(h >= 0 && h <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
-    var p = (0, r.default)(e),
-        m = p.getDay();
-    return p.setDate(p.getDate() - (7 * (m < h) + m - h)), p.setHours(0, 0, 0, 0), p;
+    if (!(p >= 0 && p <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    var E = (0, i.default)(e),
+        m = E.getDay();
+    return E.setDate(E.getDate() - (7 * (m < p) + m - p)), E.setHours(0, 0, 0, 0), E;
 }

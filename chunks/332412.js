@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     zr: "root__00dfb",
     Cf: "carouselContainer__00dfb",
     Dk: "carousel__00dfb",

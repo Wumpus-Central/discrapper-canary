@@ -1,12 +1,12 @@
 i.d(l, { default: () => c });
 var e = i(627968),
     t = i(64700),
-    s = i(861672),
+    s = i(980707),
     r = i(477782),
     u = i(241326),
     a = i(442433),
     d = i(50268),
-    o = i(985018);
+    o = i(375708);
 function c(n) {
     let { id: l, role: i, handleDeletePermission: c } = n,
         p = (0, d.A)({ id: l, label: null == i ? o.intl.string(o.t["/AXYnE"]) : o.intl.string(o.t.sMsaLg) });

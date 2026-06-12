@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => _ });
 var i = n(439372),
     r = n(710195),
     s = n(723702);
@@ -14,27 +14,27 @@ function o(e) {
     return a.getConfig({ location: t });
 }
 let l = !1,
-    _ = null;
-async function d() {
+    u = null;
+async function c() {
     if (!(0, s.isDesktop)() || window.DiscordNative?.settings?.set == null) return;
     let { enabled: e } = o({ location: "updateSwitch" }),
         t = "DESKTOP_TTI_DNSTCP_WARMUP";
-    e !== (await window.DiscordNative.settings.get(t, !1)) && (await window.DiscordNative.settings.set(t, e)), (_ = e);
+    e !== (await window.DiscordNative.settings.get(t, !1)) && (await window.DiscordNative.settings.set(t, e)), (u = e);
 }
-class u extends i.A {
+class d extends i.A {
     stores = new Map().set(r.A, () => {
         if (l) {
             let { enabled: e } = o({ location: "experimentStoreUpdate" });
-            _ !== e && d();
+            u !== e && c();
         }
     });
     actions = {
         POST_CONNECTION_OPEN: async () => {
-            l || window.DiscordNative?.settings?.set == null || ((0, s.isDesktop)() && ((l = !0), await d()));
+            l || window.DiscordNative?.settings?.set == null || ((0, s.isDesktop)() && ((l = !0), await c()));
         },
         LOGOUT: () => {
-            (l = !1), (_ = null);
+            (l = !1), (u = null);
         },
     };
 }
-let c = new u();
+let _ = new d();

@@ -1,9 +1,9 @@
-r.d(e, { A: () => a });
+r.d(t, { A: () => a });
 var s = r(476931),
     n = r(412848),
     i = r(375708);
-function a(t) {
-    switch (t.id) {
+function a(e) {
+    switch (e.id) {
         case s.Z8.TWILIGHT:
             return i.intl.string(n.default["+k8Q/o"]);
         case s.Z8.DENIM:

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Qs: "content__57f77",
     Lq: "loading__57f77",
     MR: "textEmoji__57f77",

@@ -1,11 +1,11 @@
-i.d(e, { J: () => l });
-var n = i(17928),
-    a = i(134861),
-    s = i(461213);
-function l(t) {
-    return (0, n.bG)(
-        [s.A, a.A],
-        () => null != s.A.getApplicationActivity(t.id, !0) || null != a.A.getApplication(t.id),
+n.d(i, { J: () => a });
+var s = n(17928),
+    e = n(134861),
+    l = n(461213);
+function a(t) {
+    return (0, s.bG)(
+        [l.A, e.A],
+        () => null != l.A.getApplicationActivity(t.id, !0) || null != e.A.getApplication(t.id),
         [t.id],
     );
 }

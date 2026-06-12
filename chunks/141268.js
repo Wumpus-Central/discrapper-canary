@@ -1,77 +1,77 @@
 n.d(t, { A: () => R }), n(938796);
-var i = n(627968),
-    l = n(64700),
+var l = n(627968),
+    i = n(64700),
     s = n(665260),
     a = n(17928),
     r = n(720149),
     o = n(155718),
     c = n(355622),
-    d = n(201349),
+    d = n(138617),
     u = n(495544),
     h = n(580745),
     m = n(71393),
-    p = n(576705),
-    g = n(625494),
+    g = n(576705),
+    p = n(625494),
     A = n(806150),
     f = n(145530),
-    _ = n(291812),
-    E = n(751258),
-    C = n(451909),
-    x = n(652215),
-    b = n(650583),
-    S = n(985018),
-    I = n(818289);
+    C = n(438729),
+    x = n(751258),
+    E = n(451909),
+    S = n(652215),
+    _ = n(650583),
+    I = n(375708),
+    j = n(818289);
 function y(e) {
     e.stopPropagation();
 }
-class T extends l.PureComponent {
-    node = l.createRef();
+class N extends i.PureComponent {
+    node = i.createRef();
     onClickSave = () => {
         let { textValue: e } = this.props;
         this.onSubmit(e);
     };
     onSubmit = (e) => {
-        let { message: t, channel: n, onConfirmDelete: i, onCancel: l, saveMessage: s, validateEdit: a } = this.props;
+        let { message: t, channel: n, onConfirmDelete: l, onCancel: i, saveMessage: s, validateEdit: a } = this.props;
         return 0 === e.length
-            ? (i(n, t), l(n.id), Promise.resolve({ shouldClear: !1, shouldRefocus: !1 }))
-            : a({ value: e, channel: n }).then((i) => {
-                  let { valid: a } = i;
+            ? (l(n, t), i(n.id), Promise.resolve({ shouldClear: !1, shouldRefocus: !1 }))
+            : a({ value: e, channel: n }).then((l) => {
+                  let { valid: a } = l;
                   if (!a) return Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
-                  let r = (0, E.S)(e, { channel: n, isEdit: !0 });
+                  let r = (0, x.S)(e, { channel: n, isEdit: !0 });
                   if (
                       (r?.content != null && (e = r.content),
-                      t.hasFlag(x.pr7.IS_COMPONENTS_V2) && this.props.channel.type === x.rbe.GUILD_ANNOUNCEMENT)
+                      t.hasFlag(S.pr7.IS_COMPONENTS_V2) && this.props.channel.type === S.rbe.GUILD_ANNOUNCEMENT)
                   ) {
-                      let t = C.Ay.parse(this.props.channel, e),
+                      let t = E.Ay.parse(this.props.channel, e),
                           n = this.props.message.components.filter((e) => e.type === o.I5.TEXT_DISPLAY);
                       if (1 === n.length) {
-                          let i = n[0];
-                          e !== i.content && s(this.props.channel.id, this.props.message.id, t);
+                          let l = n[0];
+                          e !== l.content && s(this.props.channel.id, this.props.message.id, t);
                       }
                   } else {
-                      let t = C.Ay.parse(this.props.channel, e);
+                      let t = E.Ay.parse(this.props.channel, e);
                       t.content !== this.props.message.content && s(this.props.channel.id, this.props.message.id, t);
                   }
-                  return l(n.id), Promise.resolve({ shouldClear: !0, shouldRefocus: !0 });
+                  return i(n.id), Promise.resolve({ shouldClear: !0, shouldRefocus: !0 });
               });
     };
     onChange = (e, t, n) => {
-        let { channel: i, onChange: l } = this.props;
-        l(i.id, t, n);
+        let { channel: l, onChange: i } = this.props;
+        i(l.id, t, n);
     };
     onKeyDown = (e) => {
-        if (e.key === b.dh.ESCAPE && !e.shiftKey) {
+        if (e.key === _.dh.ESCAPE && !e.shiftKey) {
             let { channel: t, onCancel: n } = this.props;
             e.preventDefault(), e.stopPropagation(), n(t.id);
         }
     };
     render() {
-        let { className: e, textValue: t, richValue: n, message: l, channel: s, onCancel: a, children: r } = this.props,
-            o = (0, i.jsx)("div", {
-                className: I.z,
-                children: S.intl.format(S.t.wDsPXs, { onCancel: () => a(s.id), onSave: this.onClickSave }),
+        let { className: e, textValue: t, richValue: n, message: i, channel: s, onCancel: a, children: r } = this.props,
+            o = (0, l.jsx)("div", {
+                className: j.z,
+                children: I.intl.format(I.t.wDsPXs, { onCancel: () => a(s.id), onSave: this.onClickSave }),
             });
-        return (0, i.jsxs)("div", {
+        return (0, l.jsxs)("div", {
             className: e,
             ref: this.node,
             onContextMenu: y,
@@ -79,7 +79,7 @@ class T extends l.PureComponent {
                 r({
                     textValue: t,
                     richValue: n,
-                    message: l,
+                    message: i,
                     channel: s,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
@@ -92,24 +92,24 @@ class T extends l.PureComponent {
     }
 }
 n(294920);
-var v = n(701628);
-function N(e) {
+var T = n(701628);
+function b(e) {
     let { value: t, channel: n } = e;
     return (0, A.i)({ type: c.oU.EDIT, content: t, channel: n, restrictMentions: !1, respectCooldown: !1 });
 }
-function j(e) {
+function v(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: d } = n,
-        g = t.getGuildId(),
-        A = (0, a.bG)([m.A], () => m.A.getGuild(g), [g]),
-        _ = t.type === x.rbe.GUILD_ANNOUNCEMENT,
-        E = null != A && A.features.has(x.GuildFeatures.NEWS),
-        C = _ && E,
+        p = t.getGuildId(),
+        A = (0, a.bG)([m.A], () => m.A.getGuild(p), [p]),
+        C = t.type === S.rbe.GUILD_ANNOUNCEMENT,
+        x = null != A && A.features.has(S.GuildFeatures.NEWS),
+        E = C && x,
         {
-            editingMessage: b,
-            editingTextValue: S,
-            editingRichValue: I,
+            editingMessage: _,
+            editingTextValue: I,
+            editingRichValue: j,
         } = (0, a.cf)(
             [h.A],
             () => ({
@@ -120,14 +120,14 @@ function j(e) {
             [c],
         ),
         y = (0, a.bG)([u.default], () => u.default.getId()),
-        j = l.useCallback(
-            (e, i, l) => {
-                let { content: a } = l,
-                    c = p.A.can(x.xBc.MANAGE_MESSAGES, t),
-                    d = null != b && null != b.author ? b.author.id : null,
-                    u = C && (d === y || c),
+        v = i.useCallback(
+            (e, l, i) => {
+                let { content: a } = i,
+                    c = g.A.can(S.xBc.MANAGE_MESSAGES, t),
+                    d = null != _ && null != _.author ? _.author.id : null,
+                    u = E && (d === y || c),
                     h = { content: a, components: void 0 };
-                if (n.hasFlag(x.pr7.IS_COMPONENTS_V2)) {
+                if (n.hasFlag(S.pr7.IS_COMPONENTS_V2)) {
                     let e = n.components[0]?.type === o.I5.MEDIA_GALLERY,
                         t = n.components.filter((e) => e.type !== o.I5.TEXT_DISPLAY);
                     t.splice(+!!e, 0, { type: o.I5.TEXT_DISPLAY, content: a, id: "82744" }),
@@ -135,27 +135,27 @@ function j(e) {
                         (h.components = t);
                 }
                 return (
-                    u && null != b && (0, s.Lt)(b.flags, x.pr7.CROSSPOSTED)
-                        ? f.A.confirmEdit(e, i, h)
-                        : r.A.editMessage(e, i, h),
+                    u && null != _ && (0, s.Lt)(_.flags, S.pr7.CROSSPOSTED)
+                        ? f.A.confirmEdit(e, l, h)
+                        : r.A.editMessage(e, l, h),
                     Promise.resolve()
                 );
             },
-            [b, C, y, t, n],
+            [_, E, y, t, n],
         ),
-        R = l.useCallback((e) => (0, l.createElement)(M, { ...e, className: v.gM, key: d }), [d]);
-    return null != S && null != I
-        ? (0, i.jsx)(T, {
+        R = i.useCallback((e) => (0, i.createElement)(M, { ...e, className: T.gM, key: d }), [d]);
+    return null != I && null != j
+        ? (0, l.jsx)(N, {
               ref: void 0,
               channel: t,
               message: n,
-              textValue: S,
-              richValue: I,
+              textValue: I,
+              richValue: j,
               onCancel: r.A.endEditMessage,
               onChange: r.A.updateEditMessage,
               onConfirmDelete: f.A.confirmDelete,
-              saveMessage: j,
-              validateEdit: N,
+              saveMessage: v,
+              validateEdit: b,
               children: R,
           })
         : null;
@@ -171,24 +171,24 @@ function M(e) {
             onKeyDown: u,
             renderLeftAccessories: h,
         } = e,
-        [m, p] = l.useState(!0),
-        A = l.useCallback(() => p(!0), []),
-        f = l.useCallback(() => p(!1), []);
+        [m, g] = i.useState(!0),
+        A = i.useCallback(() => g(!0), []),
+        f = i.useCallback(() => g(!1), []);
     return (
-        l.useEffect(
+        i.useEffect(
             () => (
-                g._.subscribe(x.jej.TEXTAREA_FOCUS, A),
-                g._.subscribe(x.jej.TEXTAREA_BLUR, f),
+                p._.subscribe(S.jej.TEXTAREA_FOCUS, A),
+                p._.subscribe(S.jej.TEXTAREA_BLUR, f),
                 () => {
-                    g._.unsubscribe(x.jej.TEXTAREA_FOCUS, A), g._.unsubscribe(x.jej.TEXTAREA_BLUR, f);
+                    p._.unsubscribe(S.jej.TEXTAREA_FOCUS, A), p._.unsubscribe(S.jej.TEXTAREA_BLUR, f);
                 }
             ),
             [A, f],
         ),
-        (0, i.jsx)(
+        (0, l.jsx)(
             d.Ay,
             {
-                className: v.gM,
+                className: T.gM,
                 textValue: t,
                 richValue: n,
                 channel: a,
@@ -209,8 +209,8 @@ function M(e) {
     );
 }
 function R(e, t, n) {
-    let { message: l, channel: s, compact: a } = e;
+    let { message: i, channel: s, compact: a } = e;
     return n
-        ? (0, i.jsx)(j, { channel: s, message: l })
-        : (0, i.jsx)(_.Ay, { message: l, content: t, compact: a ?? !1 });
+        ? (0, l.jsx)(v, { channel: s, message: i })
+        : (0, l.jsx)(C.Ay, { message: i, content: t, compact: a ?? !1 });
 }

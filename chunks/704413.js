@@ -1,20 +1,20 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(64700),
     l = n(736653),
-    a = n(253932),
+    s = n(885386),
     r = n(862780),
-    s = n(21878),
-    o = n(951727),
-    c = n(708676);
-function d(e, t) {
-    let n = (0, s.M)(e),
-        d = (0, r.d$)(n.getChannelId())[n.id],
-        u = (0, c.A)(n.poll?.expiry),
-        _ = a.Sf.useSetting(),
-        m = (0, l.Ay)(),
-        h = t ?? m;
+    a = n(21878),
+    o = n(555034),
+    d = n(708676);
+function c(e, t) {
+    let n = (0, a.M)(e),
+        c = (0, r.d$)(n.getChannelId())[n.id],
+        u = (0, d.A)(n.poll?.expiry),
+        m = s.Sf.useSetting(),
+        h = (0, l.Ay)(),
+        g = t ?? h;
     return i.useMemo(
-        () => (0, o.Ay)(n, d, { animateEmoji: _, theme: h, formattedExpirationLabel: u }),
-        [_, n, d, u, h],
+        () => (0, o.Ay)(n, c, { animateEmoji: m, theme: g, formattedExpirationLabel: u }),
+        [m, n, c, u, g],
     );
 }

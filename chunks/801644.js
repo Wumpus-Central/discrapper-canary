@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => a });
-var r = n(945810);
-let i = {
+n.d(t, { A: () => s });
+var i = n(945810);
+let r = {
         resetSilenceWarningOnDeviceChange: !1,
         resetSilenceWarningAfterNMinutes: void 0,
         enableHardwareSilenceWarning: !1,
     },
-    a = (0, r.mj)({
+    s = (0, i.mj)({
         name: "2026-02-silence-warning-aggression",
         kind: "user",
-        defaultConfig: i,
+        defaultConfig: r,
         variations: {
-            1: { ...i, resetSilenceWarningOnDeviceChange: !0 },
-            2: { ...i, resetSilenceWarningAfterNMinutes: 10 },
-            3: { ...i, enableHardwareSilenceWarning: !0 },
+            1: { ...r, resetSilenceWarningOnDeviceChange: !0 },
+            2: { ...r, resetSilenceWarningAfterNMinutes: 10 },
+            3: { ...r, enableHardwareSilenceWarning: !0 },
         },
     });

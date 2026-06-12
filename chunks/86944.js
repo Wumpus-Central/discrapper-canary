@@ -1,47 +1,47 @@
-n.d(t, { K: () => m });
-var l = n(64700),
-    r = n(17928),
-    s = n(39255),
-    o = n(696451),
-    i = n(317525),
-    a = n(695184),
-    c = n(257120),
-    u = n(495273),
-    d = n(719366);
-function x(e) {
-    let t = e.trim();
-    return "@" === t[0] ? t.slice(1) : t;
+t.d(l, { K: () => R });
+var r = t(64700),
+    n = t(17928),
+    u = t(39255),
+    i = t(696451),
+    a = t(317525),
+    o = t(695184),
+    s = t(257120),
+    c = t(495273),
+    p = t(719366);
+function d(e) {
+    let l = e.trim();
+    return "@" === l[0] ? l.slice(1) : l;
 }
-function h(e, t) {
-    let n = x(e);
-    return RegExp(`${c.A.escape(n)}`, "i").test(t);
+function T(e, l) {
+    let t = d(e);
+    return RegExp(`${s.A.escape(t)}`, "i").test(l);
 }
-function m(e, t, n, c) {
-    let m = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null != t && t.isGuildStageVoice(),
-        w = (0, r.bG)([i.A], () => (null != e ? i.A.getSortedRoles(e.id) : [])),
-        g = (0, r.yK)([o.Ay], () => (null != e ? o.Ay.getMemberIds(e.id) : [])),
-        E = l.useMemo(() => {
-            if (null == e || "@" === c[0]) return [];
-            if (m) return u.M2(e, w, t ?? null, n, (e) => h(c, e));
-            let l = u.rT(e, w, t ?? null, n, (e) => h(c, e));
-            return 0 === l.length && "" === c.trim() && 1 === w.length && (l = u.Vl()), l;
-        }, [w, c, e, t, n, m]),
-        R = l.useMemo(() => (null == e ? [] : u.Lq(g, t ?? null, e, n, (e) => h(c, e))), [g, c, e, t, n]);
+function R(e, l, t, s) {
+    let R = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : null != l && l.isGuildStageVoice(),
+        g = (0, n.bG)([a.A], () => (null != e ? a.A.getSortedRoles(e.id) : [])),
+        M = (0, n.yK)([i.Ay], () => (null != e ? i.Ay.getMemberIds(e.id) : [])),
+        h = r.useMemo(() => {
+            if (null == e || "@" === s[0]) return [];
+            if (R) return c.M2(e, g, l ?? null, t, (e) => T(s, e));
+            let r = c.rT(e, g, l ?? null, t, (e) => T(s, e));
+            return 0 === r.length && "" === s.trim() && 1 === g.length && (r = c.Vl()), r;
+        }, [g, s, e, l, t, R]),
+        y = r.useMemo(() => (null == e ? [] : c.Lq(M, l ?? null, e, t, (e) => T(s, e))), [M, s, e, l, t]);
     return (
-        l.useEffect(() => {
-            null != e && a.A.requestMembers(e.id, x(c), d.$N);
-        }, [c, e]),
+        r.useEffect(() => {
+            null != e && o.A.requestMembers(e.id, d(s), p.$N);
+        }, [s, e]),
         {
-            roles: E,
-            members: R,
-            getRichTag: l.useCallback((e) => {
-                let t = null;
+            roles: h,
+            members: y,
+            getRichTag: r.useCallback((e) => {
+                let l = null;
                 return (
-                    e.rowType === d.T6.ROLE || e.rowType === d.T6.ADMINISTRATOR
-                        ? (t = { type: s._.ROLE, label: e.name, color: e.colorString })
-                        : (e.rowType === d.T6.MEMBER || e.rowType === d.T6.OWNER) &&
-                          (t = { type: s._.MEMBER, label: e.name, avatar: e.avatarURL }),
-                    t
+                    e.rowType === p.T6.ROLE || e.rowType === p.T6.ADMINISTRATOR
+                        ? (l = { type: u._.ROLE, label: e.name, color: e.colorString })
+                        : (e.rowType === p.T6.MEMBER || e.rowType === p.T6.OWNER) &&
+                          (l = { type: u._.MEMBER, label: e.name, avatar: e.avatarURL }),
+                    l
                 );
             }, []),
         }

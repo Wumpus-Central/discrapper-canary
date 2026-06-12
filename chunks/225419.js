@@ -1,21 +1,21 @@
 E.d(i, {
     BK: () => o,
-    LZ: () => _,
+    LZ: () => s,
     Nk: () => R,
-    Si: () => x,
-    eD: () => s,
+    Si: () => T,
+    eD: () => _,
     iG: () => N,
-    k6: () => g,
-    m6: () => B,
-    mL: () => l,
-    od: () => T,
+    k6: () => x,
+    m6: () => l,
+    mL: () => B,
+    od: () => g,
     qI: () => I,
     xd: () => M,
 }),
     E(321073);
 var n = E(403362),
     S = E(818348),
-    r = E(985018);
+    r = E(375708);
 function A(t) {
     let i = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (
@@ -30,7 +30,7 @@ function A(t) {
 function e(t, i) {
     return t.map((t) => i[t.toString()]);
 }
-function s(t) {
+function _(t) {
     return {
         [S.xB.VIEW_CHANNEL.toString()]: {
             title: r.intl.string(r.t.uV83yi),
@@ -288,13 +288,13 @@ function s(t) {
         },
     };
 }
-function _(t) {
+function s(t) {
     let i,
         E,
         n,
-        _,
-        l,
-        B = s(t),
+        s,
+        B,
+        l = _(t),
         o = [
             ((i = [
                 S.xB.VIEW_CHANNEL,
@@ -308,7 +308,7 @@ function _(t) {
             t.showCreatorMonetizationAnalyticsPermission && i.push(S.xB.VIEW_CREATOR_MONETIZATION_ANALYTICS),
             i.push(S.xB.MANAGE_WEBHOOKS),
             i.push(S.xB.MANAGE_GUILD),
-            A({ title: r.intl.string(r.t["mYck+B"]), permissions: e(i, B) })),
+            A({ title: r.intl.string(r.t["mYck+B"]), permissions: e(i, l) })),
             ((E = [
                 S.xB.CREATE_INSTANT_INVITE,
                 S.xB.CHANGE_NICKNAME,
@@ -317,7 +317,7 @@ function _(t) {
                 S.xB.BAN_MEMBERS,
                 S.xB.MODERATE_MEMBERS,
             ]),
-            A({ title: r.intl.string(r.t.Ny49TN), permissions: e(E, B) })),
+            A({ title: r.intl.string(r.t.Ny49TN), permissions: e(E, l) })),
             ((n = [
                 S.xB.SEND_MESSAGES,
                 S.xB.SEND_MESSAGES_IN_THREADS,
@@ -341,8 +341,8 @@ function _(t) {
                 S.xB.SEND_POLLS,
             ]),
             t.inSoundmojiExperiment || (n = n.filter((t) => t !== S.xB.USE_EXTERNAL_SOUNDS)),
-            A({ title: r.intl.string(r.t.cKobO5), permissions: e(n, B) })),
-            ((_ = [
+            A({ title: r.intl.string(r.t.cKobO5), permissions: e(n, l) })),
+            ((s = [
                 S.xB.CONNECT,
                 S.xB.SPEAK,
                 S.xB.STREAM,
@@ -355,26 +355,26 @@ function _(t) {
                 S.xB.MOVE_MEMBERS,
                 S.xB.SET_VOICE_CHANNEL_STATUS,
             ]),
-            A({ title: r.intl.string(r.t["46Ra1b"]), permissions: e(_, B) })),
-            ((l = [S.xB.USE_APPLICATION_COMMANDS, S.xB.USE_EMBEDDED_ACTIVITIES, S.xB.USE_EXTERNAL_APPS]),
-            A({ title: r.intl.string(r.t["rrh/W6"]), permissions: e(l, B) })),
+            A({ title: r.intl.string(r.t["46Ra1b"]), permissions: e(s, l) })),
+            ((B = [S.xB.USE_APPLICATION_COMMANDS, S.xB.USE_EMBEDDED_ACTIVITIES, S.xB.USE_EXTERNAL_APPS]),
+            A({ title: r.intl.string(r.t["rrh/W6"]), permissions: e(B, l) })),
         ];
     return (
         t.showStageChannelPermissions &&
             o.push(
-                A({ title: r.intl.string(r.t.yniauk), permissions: e([S.xB.REQUEST_TO_SPEAK], B) }, t.showExperimental),
+                A({ title: r.intl.string(r.t.yniauk), permissions: e([S.xB.REQUEST_TO_SPEAK], l) }, t.showExperimental),
             ),
         o.push(
             A(
-                { title: r.intl.string(r.t.b8lplT), permissions: e([S.xB.CREATE_EVENTS, S.xB.MANAGE_EVENTS], B) },
+                { title: r.intl.string(r.t.b8lplT), permissions: e([S.xB.CREATE_EVENTS, S.xB.MANAGE_EVENTS], l) },
                 t.showExperimental,
             ),
         ),
-        o.push(A({ title: r.intl.string(r.t["3uI5CX"]), permissions: e([S.xB.ADMINISTRATOR], B) })),
+        o.push(A({ title: r.intl.string(r.t["3uI5CX"]), permissions: e([S.xB.ADMINISTRATOR], l) })),
         o
     );
 }
-function l(t, i) {
+function B(t, i) {
     let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showManageWebhooks: !0 };
     return {
         title: i,
@@ -386,7 +386,7 @@ function l(t, i) {
         ),
     };
 }
-function B(t, i) {
+function l(t, i) {
     return { title: i, permissions: e([S.xB.CREATE_INSTANT_INVITE], t) };
 }
 function o(t, i, E) {
@@ -440,7 +440,7 @@ function N(t, i) {
         ),
     };
 }
-function g(t, i, E) {
+function x(t, i, E) {
     let n = [
         S.xB.SEND_MESSAGES,
         S.xB.EMBED_LINKS,
@@ -462,7 +462,7 @@ function g(t, i, E) {
         { title: i, description: E.sectionDescription, permissions: e(n, t) }
     );
 }
-function x(t, i) {
+function T(t, i) {
     let E = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : { showActivities: !0 };
     return {
         title: i,
@@ -476,7 +476,7 @@ function x(t, i) {
         ),
     };
 }
-function T(t, i, E) {
+function g(t, i, E) {
     return {
         title: i,
         permissions: e(

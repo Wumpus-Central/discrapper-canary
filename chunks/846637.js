@@ -4,7 +4,7 @@ i(64700);
 var l = i(189213),
     n = i(71393);
 let a = "https://support.discord.com/hc/en-us/articles/6461420677527-Limited-Access-FAQ";
-var r = i(985018);
+var r = i(375708);
 let d = (t) => {
     let { onClose: e, guildId: i } = t,
         d = r.intl.format(r.t.ZqkXsC, { helpdeskArticle: a }),

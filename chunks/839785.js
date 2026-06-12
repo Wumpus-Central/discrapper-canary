@@ -1,47 +1,47 @@
-i.d(e, { default: () => k });
-var n = i(627968),
-    r = i(64700),
-    s = i(189213),
+i.d(e, { default: () => R });
+var s = i(627968),
+    n = i(64700),
+    r = i(189213),
     l = i(17928),
     o = i(349288),
     a = i(285796),
-    d = i(661531),
-    c = i(834730),
+    c = i(661531),
+    d = i(834730),
     u = i(180170),
-    C = i(86070),
-    f = i(517164),
-    E = i(780964),
-    A = i(858897),
-    _ = i(495544),
-    b = i(591179),
-    g = i(975732),
-    m = i(353394),
-    p = i(754495),
-    x = i(939075),
-    y = i(985018),
-    h = i(568802);
-function k(t) {
-    let { user: e, entry: i, transitionState: k, onAction: I, onClose: R, onOpenGameSettings: S } = t,
-        [L, j] = (0, l.yK)([f.A], () => [f.A.isDeletingEntryHistory, f.A.deleteOutboxEntryError]),
-        v = (0, b.X)("UserProfileActivityDeleteHistoryModal");
+    E = i(86070),
+    C = i(517164),
+    A = i(780964),
+    h = i(766075),
+    x = i(495544),
+    _ = i(591179),
+    m = i(975732),
+    p = i(353394),
+    y = i(754495),
+    I = i(939075),
+    f = i(375708),
+    k = i(568802);
+function R(t) {
+    let { user: e, entry: i, transitionState: R, onAction: S, onClose: b, onOpenGameSettings: g } = t,
+        [L, O] = (0, l.yK)([C.A], () => [C.A.isDeletingEntryHistory, C.A.deleteOutboxEntryError]),
+        j = (0, _.X)("UserProfileActivityDeleteHistoryModal");
     return (
-        r.useEffect(() => u.fq, []),
-        (0, n.jsxs)(s.Modal, {
-            title: (0, p.W)(i),
-            subtitle: y.intl.format(y.t.KV72oe, {
+        n.useEffect(() => u.fq, []),
+        (0, s.jsxs)(r.Modal, {
+            title: (0, y.W)(i),
+            subtitle: f.intl.format(f.t.KV72oe, {
                 settingsHook: (t, e) => {
-                    let r = (0, x.y)({ entry: i, onOpenGameSettings: S });
-                    return (0, n.jsx)(
+                    let n = (0, I.y)({ entry: i, onOpenGameSettings: g });
+                    return (0, s.jsx)(
                         o.Anchor,
                         {
                             onClick: () => {
-                                I?.({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
-                                    null != r
-                                        ? r()
-                                        : v
-                                          ? (0, g.openUserProfileModal)({ userId: _.default.getId() })
-                                          : (0, A.openUserSettings)(E.X.PROFILE_PANEL),
-                                    R();
+                                S?.({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
+                                    null != n
+                                        ? n()
+                                        : j
+                                          ? (0, m.openUserProfileModal)({ userId: x.default.getId() })
+                                          : (0, h.openUserSettings)(A.X.PROFILE_PANEL),
+                                    b();
                             },
                             children: t,
                         },
@@ -51,30 +51,30 @@ function k(t) {
             }),
             size: "sm",
             actions: [
-                { text: y.intl.string(y.t["ETE/oC"]), onClick: R, variant: "secondary", size: "sm" },
+                { text: f.intl.string(f.t["ETE/oC"]), onClick: b, variant: "secondary", size: "sm" },
                 {
-                    text: null != j ? y.intl.string(y.t["5911Lb"]) : y.intl.string(y.t.VkKicb),
+                    text: null != O ? f.intl.string(f.t["5911Lb"]) : f.intl.string(f.t.VkKicb),
                     onClick: () => {
-                        I?.({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, C.FO)(i, e.id, R);
+                        S?.({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, E.FO)(i, e.id, b);
                     },
                     disabled: L,
                     variant: "critical-primary",
                     size: "sm",
                 },
             ],
-            onClose: R,
-            transitionState: k,
+            onClose: b,
+            transitionState: R,
             children: [
-                null != j
-                    ? (0, n.jsxs)("div", {
-                          className: h.z3,
+                null != O
+                    ? (0, s.jsxs)("div", {
+                          className: k.z3,
                           children: [
-                              (0, n.jsx)(a.a, { color: d.A.colors.ICON_FEEDBACK_CRITICAL }),
-                              (0, n.jsx)(c.E, { variant: "text-sm/medium", children: y.intl.string(y.t.FMbL3s) }),
+                              (0, s.jsx)(a.a, { color: c.A.colors.ICON_FEEDBACK_CRITICAL }),
+                              (0, s.jsx)(d.E, { variant: "text-sm/medium", children: f.intl.string(f.t.FMbL3s) }),
                           ],
                       })
                     : null,
-                (0, n.jsx)(m.A, { user: e, entry: i, className: h.Nr, hideContextMenu: !0 }),
+                (0, s.jsx)(p.A, { user: e, entry: i, className: k.Nr, hideContextMenu: !0 }),
             ],
         })
     );

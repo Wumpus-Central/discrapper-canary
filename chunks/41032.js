@@ -1,9 +1,9 @@
-i.d(e, { z: () => l });
-var n = i(627968);
-i(64700);
-var a = i(20742),
-    s = i(486318);
-function l(t) {
-    let { sku: e, title: i } = t;
-    return (0, n.jsx)(a.rQ, { alignCenter: !0, title: i, gradientColor: "purple", graphic: (0, s.N)(e) });
+n.d(i, { z: () => a });
+var s = n(627968);
+n(64700);
+var e = n(20742),
+    l = n(486318);
+function a(t) {
+    let { sku: i, title: n } = t;
+    return (0, s.jsx)(e.rQ, { alignCenter: !0, title: n, gradientColor: "purple", graphic: (0, l.N)(i) });
 }

@@ -11,7 +11,7 @@ function t(e) {
             : (t = o.rgb.exec(e))
               ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | 255) >>> 0
               : (t = o.rgba.exec(e))
-                ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | d(t[4])) >>> 0
+                ? ((l(t[1]) << 24) | (l(t[2]) << 16) | (l(t[3]) << 8) | c(t[4])) >>> 0
                 : (t = o.hex3.exec(e))
                   ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + "ff", 16) >>> 0
                   : (t = o.hex8.exec(e))
@@ -19,9 +19,9 @@ function t(e) {
                     : (t = o.hex4.exec(e))
                       ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0
                       : (t = o.hsl.exec(e))
-                        ? (255 | r(u(t[1]), c(t[2]), c(t[3]))) >>> 0
+                        ? (255 | i(u(t[1]), d(t[2]), d(t[3]))) >>> 0
                         : (t = o.hsla.exec(e))
-                          ? (r(u(t[1]), c(t[2]), c(t[3])) | d(t[4])) >>> 0
+                          ? (i(u(t[1]), d(t[2]), d(t[3])) | c(t[4])) >>> 0
                           : null;
 }
 function n(e, t, n) {
@@ -33,26 +33,26 @@ function n(e, t, n) {
             ? e + (t - e) * (2 / 3 - n) * 6
             : e;
 }
-function r(e, t, r) {
-    var i = r < 0.5 ? r * (1 + t) : r + t - r * t,
-        s = 2 * r - i;
+function i(e, t, i) {
+    var r = i < 0.5 ? i * (1 + t) : i + t - i * t,
+        s = 2 * i - r;
     return (
-        (Math.round(255 * n(s, i, e + 1 / 3)) << 24) |
-        (Math.round(255 * n(s, i, e)) << 16) |
-        (Math.round(255 * n(s, i, e - 1 / 3)) << 8)
+        (Math.round(255 * n(s, r, e + 1 / 3)) << 24) |
+        (Math.round(255 * n(s, r, e)) << 16) |
+        (Math.round(255 * n(s, r, e - 1 / 3)) << 8)
     );
 }
-var i = "[-+]?\\d*\\.?\\d+",
-    s = i + "%";
+var r = "[-+]?\\d*\\.?\\d+",
+    s = r + "%";
 function a() {
     var e;
     return "\\(\\s*(" + ((e = arguments), Array.prototype.slice.call(e, 0)).join(")\\s*,\\s*(") + ")\\s*\\)";
 }
 var o = {
-    rgb: RegExp("rgb" + a(i, i, i)),
-    rgba: RegExp("rgba" + a(i, i, i, i)),
-    hsl: RegExp("hsl" + a(i, s, s)),
-    hsla: RegExp("hsla" + a(i, s, s, i)),
+    rgb: RegExp("rgb" + a(r, r, r)),
+    rgba: RegExp("rgba" + a(r, r, r, r)),
+    hsl: RegExp("hsl" + a(r, s, s)),
+    hsla: RegExp("hsla" + a(r, s, s, r)),
     hex3: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex4: /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     hex6: /^#([0-9a-fA-F]{6})$/,
@@ -65,11 +65,11 @@ function l(e) {
 function u(e) {
     return (((parseFloat(e) % 360) + 360) % 360) / 360;
 }
-function d(e) {
+function c(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 1 ? 255 : Math.round(255 * t);
 }
-function c(e) {
+function d(e) {
     var t = parseFloat(e, 10);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }

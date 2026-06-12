@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { HV: () => a, WQ: () => i, lK: () => s }), n(321073);
-let r = [];
-function i(e) {
-    for (r.push(e); r.length > 10; ) r.shift();
+n.d(t, { HV: () => a, WQ: () => r, lK: () => s }), n(321073);
+let i = [];
+function r(e) {
+    for (i.push(e); i.length > 10; ) i.shift();
 }
 function s() {
-    return r.join(" -> ");
+    return i.join(" -> ");
 }
 function a() {
-    return r.length > 0 ? r[r.length - 1] : null;
+    return i.length > 0 ? i[i.length - 1] : null;
 }

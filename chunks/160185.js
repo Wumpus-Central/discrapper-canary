@@ -1,33 +1,33 @@
-s.d(t, { i: () => C });
+s.d(t, { i: () => N });
 var n = s(627968),
     i = s(64700),
     a = s(503698),
     l = s.n(a),
-    o = s(132500),
-    r = s(821609),
+    r = s(835245),
+    o = s(821609),
     c = s(534514),
-    d = s(834730),
-    u = s(954571),
+    u = s(834730),
+    d = s(174459),
     m = s(18437),
     x = s(590202),
-    h = s(545986),
-    j = s(770178),
-    g = s(765548),
-    v = s(652215),
-    f = s(985018),
-    E = s(651029);
-function N(e) {
+    h = s(617986),
+    E = s(770178),
+    j = s(765548),
+    g = s(652215),
+    f = s(375708),
+    C = s(651029);
+function v(e) {
     let { questId: t, questContent: s, fullWidth: i } = e;
     return (0, n.jsx)("div", {
-        className: E.UD,
-        children: (0, n.jsx)(r.$, {
+        className: C.UD,
+        children: (0, n.jsx)(o.$, {
             fullWidth: i,
             variant: "primary",
             onClick: () => {
                 (0, h.navigateToQuestHome)({ fromContent: s }),
-                    u.default.track(v.HAw.QUEST_CONTENT_CLICKED, {
+                    d.default.track(g.HAw.QUEST_CONTENT_CLICKED, {
                         quest_id: t,
-                        click_id: (0, o.A)(),
+                        click_id: (0, r.A)(),
                         cta_name: x.Cy.VIEW_QUESTS,
                         is_targeted: !1,
                         ...(0, x.fF)(s),
@@ -37,46 +37,46 @@ function N(e) {
         }),
     });
 }
-function C(e) {
-    let { questId: t, fallbackReason: s, bodyText: a, questContent: o } = e,
-        { containerRef: r, size: u } = (function () {
+function N(e) {
+    let { questId: t, fallbackReason: s, bodyText: a, questContent: r } = e,
+        { containerRef: o, size: d } = (function () {
             let [e, t] = i.useState("lg"),
                 [s, n] = i.useState(void 0),
-                a = (0, g.A)((e) => {
+                a = (0, j.A)((e) => {
                     let s = e.target,
                         i = e.contentRect.width;
                     return (n(s.scrollHeight), null == i || i > 460) ? t("lg") : i > 280 ? t("sm") : t("xs");
                 });
-            return { containerRef: (0, j.w)(a), size: e, height: s };
+            return { containerRef: (0, E.w)(a), size: e, height: s };
         })();
     return (
         (0, m.Ii)(s, t),
         (0, n.jsxs)("div", {
             ref: (e) => {
-                r.current = e;
+                o.current = e;
             },
-            className: l()(E.kL, { [E.U]: "lg" === u, [E.SP]: "lg" !== u }),
+            className: l()(C.kL, { [C.U]: "lg" === d, [C.SP]: "lg" !== d }),
             children: [
                 (0, n.jsxs)("div", {
-                    className: E.hQ,
+                    className: C.hQ,
                     children: [
                         (0, n.jsx)(c.D, {
-                            variant: "lg" === u ? "heading-xl/bold" : "heading-lg/bold",
+                            variant: "lg" === d ? "heading-xl/bold" : "heading-lg/bold",
                             color: "text-strong",
                             children: f.intl.string(f.t.vnP31W),
                         }),
-                        (0, n.jsx)(d.E, {
-                            variant: "lg" === u ? "text-sm/medium" : "text-xs/medium",
+                        (0, n.jsx)(u.E, {
+                            variant: "lg" === d ? "text-sm/medium" : "text-xs/medium",
                             color: "text-default",
-                            className: E.__invalid_mobileWebCopy,
+                            className: C.__invalid_mobileWebCopy,
                             children: a,
                         }),
-                        (0, n.jsx)(N, { questId: t, questContent: o, fullWidth: "lg" !== u }),
+                        (0, n.jsx)(v, { questId: t, questContent: r, fullWidth: "lg" !== d }),
                     ],
                 }),
                 (0, n.jsx)("div", {
-                    className: E.Dg,
-                    children: (0, n.jsx)("img", { src: "/assets/2431801debe6535e.svg", alt: "", className: E.Wg }),
+                    className: C.Dg,
+                    children: (0, n.jsx)("img", { src: "/assets/2431801debe6535e.svg", alt: "", className: C.Wg }),
                 }),
             ],
         })

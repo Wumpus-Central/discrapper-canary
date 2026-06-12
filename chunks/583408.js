@@ -1,4 +1,4 @@
-var r = n(578795);
+var i = n(578795);
 e.exports = function () {
-    (this.__data__ = new r()), (this.size = 0);
+    (this.__data__ = new i()), (this.size = 0);
 };

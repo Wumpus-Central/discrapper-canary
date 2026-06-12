@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { GP: () => h, R: () => l, Ts: () => f, XC: () => o, _c: () => d, t2: () => _, tV: () => c });
+n.d(t, { GP: () => f, R: () => l, Ts: () => h, XC: () => o, _c: () => d, t2: () => _, tV: () => c });
 var i = n(735438),
     r = n(228366),
     s = n(475815),
@@ -26,7 +26,7 @@ function _(e) {
     let t = (0, a.Q2)(e);
     r.h.dispatch({ type: "WINDOW_VISIBILITY_CHANGE", windowId: t, visible: "visible" === e.document.visibilityState });
 }
-function f(e) {
+function h(e) {
     let t = (0, a.Q2)(e),
         n = e.document;
     r.h.dispatch({
@@ -39,6 +39,6 @@ function f(e) {
         visible: "visible" === n.visibilityState,
     });
 }
-function h(e) {
+function f(e) {
     r.h.dispatch({ type: "WINDOW_UNLOAD", windowId: (0, a.Q2)(e) });
 }

@@ -1,14 +1,14 @@
 "use strict";
-var r = n(741623),
-    i = n(315646),
-    a = n(363364),
-    s = n(12161),
-    o = n(158056) || s || a;
+var i = n(741623),
+    r = n(315646),
+    s = n(363364),
+    a = n(12161),
+    o = n(158056) || a || s;
 e.exports = function () {
     var e,
         t = {
             assert: function (e) {
-                if (!t.has(e)) throw new r("Side channel does not contain " + i(e));
+                if (!t.has(e)) throw new i("Side channel does not contain " + r(e));
             },
             delete: function (t) {
                 return !!e && e.delete(t);

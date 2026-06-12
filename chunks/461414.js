@@ -1,4 +1,4 @@
-t.exports = {
+e.exports = {
     MT: "tryItOutSection__9d295",
     th: "tryItOutLayout__9d295",
     h_: "description__9d295",

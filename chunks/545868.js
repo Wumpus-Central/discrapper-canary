@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { L: () => d, a: () => f });
+n.d(t, { L: () => d, a: () => h });
 var i = n(635377),
     r = n.n(i),
     s = n(636537),
@@ -20,7 +20,7 @@ async function d(e) {
     l.A.shouldFetch(e) && (await c(e));
 }
 let _ = new (r())({ maxAge: 1e4 });
-function f(e, t) {
+function h(e, t) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         i = `${e}-${t}`;
     if (!n || null == _.get(i))

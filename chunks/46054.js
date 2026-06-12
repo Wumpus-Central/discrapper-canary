@@ -3,7 +3,7 @@ n.d(t, { A: () => B });
 var i = n(735438),
     r = n.n(i),
     s = n(807081),
-    a = n(365347),
+    a = n(480084),
     o = n(29814),
     l = n(551965);
 let u = null;
@@ -18,8 +18,8 @@ function d(e, t) {
     );
 }
 let _ = { enableBuildOverrides: !1, enableEmojiClick: !0 },
-    f = r().once(() => d(o.A.RULES, [(0, a.A)({ enableBuildOverrides: !0 })])),
-    h = r().once(() => r().omit(d(o.A.RULES, [(0, a.A)(_)]), "paragraph", "newline")),
+    h = r().once(() => d(o.A.RULES, [(0, a.A)({ enableBuildOverrides: !0 })])),
+    f = r().once(() => r().omit(d(o.A.RULES, [(0, a.A)(_)]), "paragraph", "newline")),
     p = r().once(() =>
         d(
             o.A.CHANNEL_TOPIC_RULES,
@@ -45,7 +45,7 @@ let _ = { enableBuildOverrides: !1, enableEmojiClick: !0 },
         return d(o.A.GUILD_EVENT_RULES, [(0, a.A)(e)], e);
     }),
     S = r().once(() => d(o.A.AUTO_MODERATION_SYSTEM_MESSAGE_RULES, [(0, a.A)(_)])),
-    N = r().once(() =>
+    y = r().once(() =>
         r().omit(
             d(o.A.RULES, [(0, a.A)(_)]),
             "paragraph",
@@ -60,20 +60,20 @@ let _ = { enableBuildOverrides: !1, enableEmojiClick: !0 },
             ...c,
         ),
     ),
-    y = { text: o.A.RULES.text },
-    C = r().once(() => s.aV(f())),
-    v = r().once(() => s.aV(p())),
-    O = r().once(() => s.aV(E())),
-    R = r().once(() => s.aV(m())),
+    N = { text: o.A.RULES.text },
+    v = r().once(() => s.aV(h())),
+    C = r().once(() => s.aV(p())),
+    R = r().once(() => s.aV(E())),
+    O = r().once(() => s.aV(m())),
     b = r().once(() => s.aV(g())),
     D = r().once(() => s.aV(A())),
     L = r().once(() => s.aV(I())),
     w = r().once(() => s.aV(T())),
     M = r().once(() => s.aV(S())),
-    P = r().once(() => s.aV(h())),
-    x = r().once(() => s.X(f())),
-    U = r().once(() => s.X(p())),
-    k = r().once(() => s.X(m())),
+    P = r().once(() => s.aV(f())),
+    x = r().once(() => s.X(h())),
+    k = r().once(() => s.X(p())),
+    U = r().once(() => s.X(m())),
     G = r().once(() => s.X(g())),
     F = r().once(() => s.X(A())),
     V = r().once(() => s.X(S())),
@@ -82,29 +82,29 @@ let _ = { enableBuildOverrides: !1, enableEmojiClick: !0 },
         createReactRules: a.A,
         defaultReactRuleOptions: _,
         get defaultRules() {
-            return f();
+            return h();
         },
         get guildEventRules() {
             return T();
         },
         get notifCenterV2MessagePreviewRules() {
-            return N();
+            return y();
         },
-        lockscreenWidgetMessageRules: y,
+        lockscreenWidgetMessageRules: N,
         astParserFor: s.X,
         reactParserFor: s.aV,
         parse: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return C()(...t);
+            return v()(...t);
         },
-        parseTopic: (e, t, n, i) => v()(e, t, { allowLinks: !0, ...n }, i),
+        parseTopic: (e, t, n, i) => C()(e, t, { allowLinks: !0, ...n }, i),
         parseVoiceChannelStatus: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return O()(...t);
+            return R()(...t);
         },
         parseEmbedTitle: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return R()(...t);
+            return O()(...t);
         },
         parseEmbedTitleWithoutLinks: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -136,11 +136,11 @@ let _ = { enableBuildOverrides: !1, enableEmojiClick: !0 },
         },
         parseTopicToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return U()(...t);
+            return k()(...t);
         },
         parseEmbedTitleToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-            return k()(...t);
+            return U()(...t);
         },
         parseEmbedTitleWithoutLinksToAST: function () {
             for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

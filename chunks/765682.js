@@ -1,23 +1,23 @@
 "use strict";
 n.d(t, { F5: () => a, hL: () => o, iL: () => l });
-var r,
-    i,
+var i,
+    r,
     s,
     a =
-        (((r = {}).AUTHORIZED = "authorized"),
-        (r.DENIED = "denied"),
-        (r.RESTRICTED = "restricted"),
-        (r.LIMITED = "limited"),
-        (r.UNDETERMINED = "undetermined"),
-        r),
-    o =
-        (((i = {}).DISMISSED = "dismissed"),
+        (((i = {}).AUTHORIZED = "authorized"),
         (i.DENIED = "denied"),
-        (i.ACCEPTED = "accepted"),
-        (i.NO_DEVICES = "no_devices"),
-        (i.ERROR = "error"),
-        (i.NONE = "none"),
+        (i.RESTRICTED = "restricted"),
+        (i.LIMITED = "limited"),
+        (i.UNDETERMINED = "undetermined"),
         i),
+    o =
+        (((r = {}).DISMISSED = "dismissed"),
+        (r.DENIED = "denied"),
+        (r.ACCEPTED = "accepted"),
+        (r.NO_DEVICES = "no_devices"),
+        (r.ERROR = "error"),
+        (r.NONE = "none"),
+        r),
     l =
         (((s = {}).AUDIO = "audio"),
         (s.CAMERA = "camera"),

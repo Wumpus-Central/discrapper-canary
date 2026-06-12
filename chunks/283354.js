@@ -3,7 +3,7 @@ var r = n(627968),
     i = n(64700),
     c = n(314116),
     a = n(192308),
-    l = n(550079),
+    l = n(980707),
     o = n(477782),
     E = n(22231),
     R = n(241326),
@@ -13,7 +13,7 @@ var r = n(627968),
     h = n(928658),
     u = n(208882),
     C = n(352123),
-    I = n(985018);
+    I = n(375708);
 function D(t) {
     let { entry: e, onSelect: D, closePopout: A, hideEditButton: y = !1 } = t,
         { isEntryAdmin: T, canEdit: p, canRemove: S } = (0, C.A)(e),
@@ -42,7 +42,7 @@ function D(t) {
                               label: I.intl.string(I.t.XnuOvN),
                               action: function () {
                                   (0, a.openModalLazy)(async () => {
-                                      let { default: t } = await Promise.all([n.e("13754"), n.e("88869")]).then(
+                                      let { default: t } = await Promise.all([n.e("25226"), n.e("88869")]).then(
                                           n.bind(n, 201700),
                                       );
                                       return (n) => (0, r.jsx)(t, { ...n, entry: e });

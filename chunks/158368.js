@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { I_: () => s, NC: () => r, Sf: () => a, xz: () => o });
-let r = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"],
-    i = null;
-function a() {
-    return i;
+n.d(t, { I_: () => a, NC: () => i, Sf: () => s, xz: () => o });
+let i = ["click", "mousedown", "mouseup", "keydown", "keyup", "keypress", "contextmenu"],
+    r = null;
+function s() {
+    return r;
 }
-function s(e) {
-    i = e;
+function a(e) {
+    r = e;
 }
 function o(e) {
-    i === e && (i = null);
+    r === e && (r = null);
 }

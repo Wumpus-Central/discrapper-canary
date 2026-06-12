@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { b: () => y, k: () => S }), n(667532), n(775443);
+n.d(t, { b: () => N, k: () => S }), n(667532), n(775443);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,14 +10,14 @@ var i = n(627968),
     c = n(462824),
     d = n(868285),
     _ = n(750506),
-    f = n(80556),
-    h = n(267102),
+    h = n(80556),
+    f = n(267102),
     p = n(625494),
     E = n(192308),
     m = n(231723),
     g = n(652215),
     A = n(195876);
-let I = [_.Ay, f.Ay];
+let I = [_.Ay, h.Ay];
 class T extends r.PureComponent {
     state = { transitionState: null };
     componentWillAppear = (e) => {
@@ -67,12 +67,12 @@ class T extends r.PureComponent {
     }
 }
 function S() {
-    return (0, E.modalContextFromAppContext)((0, h.Us)());
+    return (0, E.modalContextFromAppContext)((0, f.Us)());
 }
-let N = [];
-function y() {
+let y = [];
+function N() {
     let e = S(),
-        t = (0, E.useModalsStore)((t) => (void 0 !== t[e] ? t[e] : N)),
+        t = (0, E.useModalsStore)((t) => (void 0 !== t[e] ? t[e] : y)),
         n = r.useMemo(
             () =>
                 (function (e) {
@@ -110,13 +110,13 @@ function y() {
             let e = s.current;
             e?.dismissable !== !1 && p._.dispatch(g.jej.MODAL_CLOSE);
         }, []),
-        f = r.useCallback(
+        h = r.useCallback(
             (t) => {
                 (0, E.closeModal)(t, e);
             },
             [e],
         ),
-        h = I.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.Ay)));
+        f = I.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.Ay)));
     return (0, i.jsxs)(d.F, {
         component: r.Fragment,
         children: [
@@ -134,7 +134,7 @@ function y() {
                                       ? "experimental_blur"
                                       : "default",
                             animationVariant: r?.instant ? "instant" : "default",
-                            isVisible: h[n],
+                            isVisible: f[n],
                             onClick: o,
                         }),
                     },
@@ -151,7 +151,7 @@ function y() {
                         isVisible: l,
                         isTopModal: t === n.length - 1,
                         render: a,
-                        closeModal: f,
+                        closeModal: h,
                         instant: o,
                         dismissable: u,
                     },

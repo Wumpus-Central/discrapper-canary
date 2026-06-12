@@ -7,20 +7,20 @@ var i = n(627968),
     o = n(192308),
     l = n(968309),
     u = n(826673),
-    c = n(761853),
+    c = n(890063),
     d = n(174459),
     _ = n(17928),
-    f = n(643501),
-    h = n(37256);
+    h = n(643501),
+    f = n(37256);
 function p(e) {
     let { body: t, dismissCallback: n, errorCodeMessage: s } = e,
-        a = (0, _.bG)([f.default], () => f.default.getRemoteSessionId());
+        a = (0, _.bG)([h.default], () => h.default.getRemoteSessionId());
     return (r.useEffect(() => {
         null != a && n();
     }, [a, n]),
     null == s)
         ? t
-        : (0, i.jsxs)(i.Fragment, { children: [t, (0, i.jsx)("div", { className: h.F, children: s })] });
+        : (0, i.jsxs)(i.Fragment, { children: [t, (0, i.jsx)("div", { className: f.F, children: s })] });
 }
 var E = n(544105),
     m = n(652215),

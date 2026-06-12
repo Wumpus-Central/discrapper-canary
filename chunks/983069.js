@@ -1,4 +1,4 @@
-n.d(t, { YK: () => c, Yo: () => p, R_: () => g, JX: () => h }),
+n.d(t, { YK: () => p, Yo: () => d, R_: () => m, JX: () => g }),
     n(321073),
     n(393431),
     n(532706),
@@ -10,9 +10,9 @@ n.d(t, { YK: () => c, Yo: () => p, R_: () => g, JX: () => h }),
 var a = n(284009),
     r = n.n(a),
     i = n(602674),
-    o = n(927813),
-    l = n(796774);
-class s {
+    s = n(927813),
+    o = n(796774);
+class l {
     _buffer = new Uint8Array(4096);
     _pageSequenceNumber = 0;
     _offset = 0;
@@ -72,8 +72,8 @@ class s {
         this.appendBytes(e.segments.map((e) => e.length)),
         e.segments))
             this.appendBytes(t);
-        let o = this._buffer.subarray(a, this._offset).reduce((e, t) => ((e << 8) >>> 0) ^ u[(e >>> 24) ^ t], 0) >>> 0;
-        this._buffer.set([255 & o, (o >> 8) & 255, (o >> 16) & 255, (o >> 24) & 255], i), this._pageSequenceNumber++;
+        let s = this._buffer.subarray(a, this._offset).reduce((e, t) => ((e << 8) >>> 0) ^ u[(e >>> 24) ^ t], 0) >>> 0;
+        this._buffer.set([255 & s, (s >> 8) & 255, (s >> 16) & 255, (s >> 24) & 255], i), this._pageSequenceNumber++;
     }
     finalize(e) {
         this.addPage({ pageType: 4, granulePosition: e, segments: [] });
@@ -93,19 +93,19 @@ let u = (function () {
         }
         return e;
     })(),
-    d = null;
+    f = null;
 try {
     let e = (0, i.v)();
     if (null == e) throw Error("Failed to create media audio context");
-    d = new AudioContext({ sampleRate: Math.min(e.sampleRate, 48e3) });
+    f = new AudioContext({ sampleRate: Math.min(e.sampleRate, 48e3) });
 } catch (e) {}
-async function f(e) {
-    if (null == d) throw Error("Failed to create audio context");
+async function h(e) {
+    if (null == f) throw Error("Failed to create audio context");
     let t = await e.arrayBuffer();
     if (!(t instanceof ArrayBuffer)) throw Error("Unexpected file type");
-    return d.decodeAudioData(t);
+    return f.decodeAudioData(t);
 }
-async function c(e) {
+async function p(e) {
     var t;
     let n = await ((t = (t) => {
         t.readAsDataURL(e);
@@ -120,11 +120,11 @@ async function c(e) {
     if ("string" != typeof n) throw Error("Unexpected file type");
     return n;
 }
-async function h(e) {
-    let { readPromise: t, guildId: n, name: a, volume: r, emojiId: i, emojiName: o } = e;
-    return (0, l.lT)({ guildId: n, name: a, sound: await t, volume: r, emojiId: i, emojiName: o });
+async function g(e) {
+    let { readPromise: t, guildId: n, name: a, volume: r, emojiId: i, emojiName: s } = e;
+    return (0, o.lT)({ guildId: n, name: a, sound: await t, volume: r, emojiId: i, emojiName: s });
 }
-async function _(e) {
+async function c(e) {
     let t = [],
         n = (function (e) {
             if (1 === e.length) return e[0];
@@ -193,7 +193,7 @@ async function _(e) {
                             t.channelMappingFamily,
                         ]),
                         a = new Uint8Array([79, 112, 117, 115, 84, 97, 103, 115, 0, 0, 0, 0, 0, 0, 0, 0]),
-                        r = new s();
+                        r = new l();
                     r.addPage({ pageType: 2, granulePosition: 0, segments: [n] });
                     let i = 0;
                     for (let t of (r.addPage({ pageType: 0, granulePosition: i, segments: [a] }), e)) {
@@ -221,29 +221,29 @@ async function _(e) {
         )
     );
 }
-async function p(e, t) {
+async function d(e, t) {
     let n = (function (e, t) {
         let { startMs: n, endMs: a } = t,
-            { sampleRate: r, numberOfChannels: i, duration: l } = e,
-            s = l * o.A.Millis.SECOND,
-            u = Math.min(a, s);
-        if (0 === n && u === s) return e;
-        if (null == d) throw Error("Failed to create audio context");
-        let f = Math.floor((n / s) * e.length),
-            c = Math.floor((u / s) * e.length),
-            h = d.createBuffer(i, c - f, r);
+            { sampleRate: r, numberOfChannels: i, duration: o } = e,
+            l = o * s.A.Millis.SECOND,
+            u = Math.min(a, l);
+        if (0 === n && u === l) return e;
+        if (null == f) throw Error("Failed to create audio context");
+        let h = Math.floor((n / l) * e.length),
+            p = Math.floor((u / l) * e.length),
+            g = f.createBuffer(i, p - h, r);
         for (let t = 0; t < i; t++) {
-            let n = h.getChannelData(t),
+            let n = g.getChannelData(t),
                 a = e.getChannelData(t),
                 r = 0;
-            for (let e = f; e <= c; e++) (n[r] = a[e]), r++;
+            for (let e = h; e <= p; e++) (n[r] = a[e]), r++;
         }
-        return h;
-    })(await f(e), t);
-    return new File([await _(n)], "sound.ogg", { type: "audio/ogg" });
+        return g;
+    })(await h(e), t);
+    return new File([await c(n)], "sound.ogg", { type: "audio/ogg" });
 }
-async function g(e) {
+async function m(e) {
     let t = new File([e], "audio.mp4", { type: e.type }),
-        n = await f(t);
-    return await _(n);
+        n = await h(t);
+    return await c(n);
 }

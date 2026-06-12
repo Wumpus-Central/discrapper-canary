@@ -1,10 +1,10 @@
-i.d(s, { G: () => n });
-var a = i(366226),
-    t = i(49132),
-    l = i(212739);
-function n(e) {
+a.d(s, { G: () => l });
+var t = a(366226),
+    i = a(49132),
+    n = a(212739);
+function l(e) {
     let { location: s } = e,
-        i = (0, t.DK)(a.W.XBOX, s),
-        n = (0, l.O)();
-    return i && n;
+        a = (0, i.DK)(t.W.XBOX, s),
+        l = (0, n.O)();
+    return a && l;
 }

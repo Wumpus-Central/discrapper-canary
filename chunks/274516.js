@@ -1,4 +1,4 @@
-var r = {
+var a = {
     "./2017-11-16.mp4": "394734",
     "./channel-following.png": "611418",
     "./discovery.jpg": "59383",
@@ -8,19 +8,19 @@ var r = {
     "./special-template/update-badge.svg": "892796",
     "./store.jpg": "191686",
 };
-function i(e) {
-    return n(a(e));
+function l(e) {
+    return s(n(e));
 }
-function a(e) {
-    if (!n.o(r, e)) {
+function n(e) {
+    if (!s.o(a, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
     }
-    return r[e];
+    return a[e];
 }
-(i.keys = function () {
-    return Object.keys(r);
+(l.keys = function () {
+    return Object.keys(a);
 }),
-    (i.resolve = a),
-    (e.exports = i),
-    (i.id = 274516);
+    (l.resolve = n),
+    (e.exports = l),
+    (l.id = 274516);

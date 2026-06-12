@@ -1,64 +1,64 @@
 "use strict";
-n.d(t, { w: () => s }), n(938796);
-var r = n(627968),
-    i = n(64700),
-    a = n(38021);
-function s(e) {
+n.d(t, { w: () => a }), n(938796);
+var i = n(627968),
+    r = n(64700),
+    s = n(38021);
+function a(e) {
     let {
             children: t,
             theme: n,
-            primaryColor: s,
+            primaryColor: a,
             secondaryColor: o,
             gradient: l,
             flags: u,
             contrast: c,
             saturation: d,
             enabledExperiments: _,
-            density: f,
-            disableAdaptiveTheme: h,
+            density: h,
+            disableAdaptiveTheme: f,
             reduceAdaptiveTheme: p,
         } = e,
-        g = i.useContext(a.Dx);
-    a.PQ;
-    let E = i.useMemo(
+        E = r.useContext(s.Dx);
+    s.PQ;
+    let m = r.useMemo(
         () =>
-            (0, a.dI)({
-                theme: n ?? g.theme,
-                primaryColor: s ?? g.primaryColor,
-                secondaryColor: o ?? g.secondaryColor,
-                gradient: l ?? g.gradient,
-                flags: u ?? g.flags,
-                contrast: c ?? g.contrast,
-                saturation: d ?? g.saturation,
-                enabledExperiments: _ ?? g.enabledExperiments,
-                density: f ?? g.density,
-                disableAdaptiveTheme: h ?? g.disableAdaptiveTheme,
-                reduceAdaptiveTheme: p ?? g.reduceAdaptiveTheme,
+            (0, s.dI)({
+                theme: n ?? E.theme,
+                primaryColor: a ?? E.primaryColor,
+                secondaryColor: o ?? E.secondaryColor,
+                gradient: l ?? E.gradient,
+                flags: u ?? E.flags,
+                contrast: c ?? E.contrast,
+                saturation: d ?? E.saturation,
+                enabledExperiments: _ ?? E.enabledExperiments,
+                density: h ?? E.density,
+                disableAdaptiveTheme: f ?? E.disableAdaptiveTheme,
+                reduceAdaptiveTheme: p ?? E.reduceAdaptiveTheme,
             }),
         [
             n,
-            g.theme,
-            g.primaryColor,
-            g.secondaryColor,
-            g.gradient,
-            g.flags,
-            g.contrast,
-            g.saturation,
-            g.enabledExperiments,
-            g.density,
-            g.disableAdaptiveTheme,
-            g.reduceAdaptiveTheme,
-            s,
+            E.theme,
+            E.primaryColor,
+            E.secondaryColor,
+            E.gradient,
+            E.flags,
+            E.contrast,
+            E.saturation,
+            E.enabledExperiments,
+            E.density,
+            E.disableAdaptiveTheme,
+            E.reduceAdaptiveTheme,
+            a,
             o,
             l,
             u,
             c,
             d,
             _,
-            f,
             h,
+            f,
             p,
         ],
     );
-    return (0, r.jsx)(a.Dx.Provider, { value: E, children: t });
+    return (0, i.jsx)(s.Dx.Provider, { value: m, children: t });
 }

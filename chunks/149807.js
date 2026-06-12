@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(315069);
-class i extends r.A {
+n.d(t, { A: () => r });
+var i = n(315069);
+class r extends i.A {
     skuId;
     constructor(e) {
         super(), (this.skuId = e.skuId);
     }
     static fromServer(e) {
         let { sku_id: t, ...n } = e;
-        return new i({ ...n, skuId: t });
+        return new r({ ...n, skuId: t });
     }
 }

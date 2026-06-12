@@ -1,6 +1,6 @@
-n.d(t, { A: () => g });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => p });
+var l = n(627968),
+    i = n(64700),
     s = n(607399),
     a = n(17928),
     r = n(604121),
@@ -10,72 +10,72 @@ var i = n(627968),
     u = n(821609),
     h = n(576470),
     m = n(761640),
-    p = n(991680);
-let g = function (e) {
+    g = n(991680);
+let p = function (e) {
     let {
             message: t,
             subtitle: n,
-            countdown: g,
+            countdown: p,
             buttonText: A,
             buttonIcon: f,
-            buttonSubmitting: _,
-            onButtonClick: E,
-            imageSrc: C,
-            animationSrc: x,
-            secondaryButtonText: b,
-            onSecondaryButtonClick: S,
-            children: I,
+            buttonSubmitting: C,
+            onButtonClick: x,
+            imageSrc: E,
+            animationSrc: S,
+            secondaryButtonText: _,
+            onSecondaryButtonClick: I,
+            children: j,
             useReducedMotion: y = !1,
-            buttonVariant: T,
+            buttonVariant: N,
         } = e,
-        v = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
-    if (s.Fr && v) return null;
-    if (null == t) return (0, i.jsx)(i.Fragment, { children: l.Children.only(I) });
-    let N = null;
+        T = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
+    if (s.Fr && T) return null;
+    if (null == t) return (0, l.jsx)(l.Fragment, { children: i.Children.only(j) });
+    let b = null;
     return (
-        null != C
-            ? (N = (0, i.jsx)("img", { alt: "", src: C, className: p.Sl }))
-            : null != x && (N = (0, i.jsx)(r.a, { importData: x, shouldAnimate: !y, className: p.lY })),
-        (0, i.jsxs)("div", {
-            className: p.iE,
+        null != E
+            ? (b = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
+            : null != S && (b = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !y, className: g.lY })),
+        (0, l.jsxs)("div", {
+            className: g.iE,
             children: [
-                (0, i.jsxs)("div", {
-                    className: p.Qs,
+                (0, l.jsxs)("div", {
+                    className: g.Qs,
                     children: [
-                        N,
-                        (0, i.jsxs)("div", {
-                            className: p.Qq,
+                        b,
+                        (0, l.jsxs)("div", {
+                            className: g.Qq,
                             children: [
-                                (0, i.jsx)(o.D, { variant: "heading-md/semibold", className: p.DD, children: t }),
+                                (0, l.jsx)(o.D, { variant: "heading-md/semibold", className: g.DD, children: t }),
                                 null != n &&
-                                    (0, i.jsx)(c.E, { color: "text-muted", variant: "text-xs/normal", children: n }),
+                                    (0, l.jsx)(c.E, { color: "text-muted", variant: "text-xs/normal", children: n }),
                             ],
                         }),
                     ],
                 }),
-                (0, i.jsxs)("div", {
-                    className: p.UD,
+                (0, l.jsxs)("div", {
+                    className: g.UD,
                     children: [
-                        null != b &&
-                            (0, i.jsx)("div", {
-                                className: p.x6,
-                                children: (0, i.jsx)(d.Q, { textVariant: "text-sm/semibold", text: b, onClick: S }),
+                        null != _ &&
+                            (0, l.jsx)("div", {
+                                className: g.x6,
+                                children: (0, l.jsx)(d.Q, { textVariant: "text-sm/semibold", text: _, onClick: I }),
                             }),
                         null != A &&
-                            (0, i.jsx)("div", {
-                                className: p.x6,
-                                children: (0, i.jsx)(u.$, {
+                            (0, l.jsx)("div", {
+                                className: g.x6,
+                                children: (0, l.jsx)(u.$, {
                                     text: A,
                                     size: "sm",
-                                    variant: T ?? "secondary",
-                                    onClick: E,
-                                    loading: _,
+                                    variant: N ?? "secondary",
+                                    onClick: x,
+                                    loading: C,
                                     icon: f,
                                 }),
                             }),
                     ],
                 }),
-                null != g && (0, i.jsx)(h.A, { className: p.qW, deadline: g }),
+                null != p && (0, l.jsx)(h.A, { className: g.qW, deadline: p }),
             ],
         })
     );

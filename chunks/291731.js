@@ -1,6 +1,6 @@
 "use strict";
 let i, r, s;
-n.d(t, { A: () => R }), n(321073);
+n.d(t, { A: () => O }), n(321073);
 var a = n(735438),
     o = n.n(a),
     l = n(17928),
@@ -8,8 +8,8 @@ var a = n(735438),
     c = n(824953),
     d = n(863036),
     _ = n(71393),
-    f = n(576705),
-    h = n(718116),
+    h = n(576705),
+    f = n(718116),
     p = n(652215);
 let E = [],
     m = null,
@@ -18,30 +18,30 @@ let E = [],
     I = {},
     T = !1,
     S = null;
-function N() {
+function y() {
     if (
         ((i = null != (r = d.A.getChannel()) ? _.A.getGuild(r.guild_id) : null),
-        (E = null != r && null != i && f.A.can(p.xBc.MANAGE_WEBHOOKS, r) ? h.A.getWebhooksForChannel(i.id, r.id) : []),
+        (E = null != r && null != i && h.A.can(p.xBc.MANAGE_WEBHOOKS, r) ? f.A.getWebhooksForChannel(i.id, r.id) : []),
         null != m)
     ) {
-        let e = C(m.id);
+        let e = v(m.id);
         null != e && (m = e);
     }
     (A = p.XlH.OPEN), (I = {}), (T = !1);
 }
-let y = o().debounce(() => {
-    T && ((null == m || o().isEqual(m, C(m.id))) && (T = !1), T || O.emitChange());
+let N = o().debounce(() => {
+    T && ((null == m || o().isEqual(m, v(m.id))) && (T = !1), T || R.emitChange());
 }, 500);
-function C(e) {
+function v(e) {
     return E.find((t) => {
         let { id: n } = t;
         return n === e;
     });
 }
-class v extends l.Ay.Store {
+class C extends l.Ay.Store {
     static displayName = "ChannelSettingsIntegrationsStore";
     initialize() {
-        this.waitFor(d.A, _.A, h.A, f.A);
+        this.waitFor(d.A, _.A, f.A, h.A);
     }
     hasChanges() {
         return T;
@@ -56,7 +56,7 @@ class v extends l.Ay.Store {
         return A;
     }
     getWebhook(e) {
-        return C(e);
+        return v(e);
     }
     showNotice() {
         return this.hasChanges();
@@ -74,20 +74,20 @@ class v extends l.Ay.Store {
         };
     }
 }
-let O = new v(
+let R = new C(
         u.h,
         __OVERLAY__
             ? {}
             : {
-                  INTEGRATION_SETTINGS_INIT: N,
-                  INTEGRATION_SETTINGS_SAVE_SUCCESS: N,
+                  INTEGRATION_SETTINGS_INIT: y,
+                  INTEGRATION_SETTINGS_SAVE_SUCCESS: y,
                   CHANNEL_SETTINGS_SET_SECTION: function (e) {
                       let { section: t } = e;
                       if (t !== p.p_A.INTEGRATIONS) return !1;
                       if (((s = p.wLn.OVERVIEW), null == i)) {
                           let e = d.A.getChannel(),
                               t = e?.getGuildId();
-                          null != e && null != t && (c.A.fetchForChannel(t, e.id), (g = !0)), N();
+                          null != e && null != t && (c.A.fetchForChannel(t, e.id), (g = !0)), y();
                       }
                   },
                   INTEGRATION_SETTINGS_SET_SECTION: function (e) {
@@ -96,7 +96,7 @@ let O = new v(
                   },
                   INTEGRATION_SETTINGS_START_EDITING_WEBHOOK: function (e) {
                       let { webhookId: t } = e,
-                          n = C(t);
+                          n = v(t);
                       if (null == n) return !1;
                       (m = n), (I = {}), (T = !1);
                   },
@@ -112,7 +112,7 @@ let O = new v(
                           null != t.channelId &&
                               m.channel_id !== t.channelId &&
                               ((m.channel_id = t.channelId), (T = !0)),
-                          T && y();
+                          T && N();
                   },
                   CHANNEL_SETTINGS_CLOSE: function () {
                       (r = null), (i = null), (E = []), (m = null), (A = p.XlH.CLOSED);
@@ -141,7 +141,7 @@ let O = new v(
                                       let { id: n } = t;
                                       if (n === e.id) return !0;
                                   }) && E.push(e);
-                          (E = [...E]), y();
+                          (E = [...E]), N();
                       }
                   },
                   INTEGRATION_SETTINGS_SUBMITTING: function () {
@@ -153,4 +153,4 @@ let O = new v(
                   },
               },
     ),
-    R = O;
+    O = R;

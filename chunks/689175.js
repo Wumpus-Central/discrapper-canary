@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(536804),
     d = n(789279),
     _ = n(584648),
-    f = n(518898),
-    h = n(751591);
+    h = n(518898),
+    f = n(751591);
 function p(e, t, n) {
     let s = (0, u.A)(e);
     return r.forwardRef(function (o, u) {
@@ -23,12 +23,12 @@ function p(e, t, n) {
                 overflow: I = "scroll",
                 fade: T = !1,
                 customTheme: S = !1,
-                paddingFix: N = !0,
-                style: y,
-                gap: C,
-                experimental_useStack: v,
-                disableFocusRingScope: O = !1,
-                ...R
+                paddingFix: y = !0,
+                style: N,
+                gap: v,
+                experimental_useStack: C,
+                disableFocusRingScope: R = !1,
+                ...O
             } = o,
             { scrollerRef: b, getScrollerState: D } = (0, c.A)(),
             L = (0, d.A)(b, A);
@@ -37,24 +37,24 @@ function p(e, t, n) {
             () => ({ getScrollerNode: () => b.current, getScrollerState: D, ...(0, _.A)(b, D, L, A) }),
             [b, D, A, L],
         );
-        let w = (0, f.A)({ paddingFix: N, orientation: A, dir: g, className: m, scrollerRef: b, specs: s });
-        return v
+        let w = (0, h.A)({ paddingFix: y, orientation: A, dir: g, className: m, scrollerRef: b, specs: s });
+        return C
             ? (0, i.jsx)(l.B, {
-                  gap: C,
+                  gap: v,
                   ref: b,
                   className: a()(m, { [e]: !0, [t]: T, [n]: S }),
-                  style: (0, h.Ay)(y, A, I),
+                  style: (0, f.Ay)(N, A, I),
                   dir: g,
-                  ...R,
-                  children: (0, i.jsxs)(E, { disableFocusRingScope: O, containerRef: b, children: [p, w] }),
+                  ...O,
+                  children: (0, i.jsxs)(E, { disableFocusRingScope: R, containerRef: b, children: [p, w] }),
               })
             : (0, i.jsx)("div", {
                   ref: b,
                   className: a()(m, { [e]: !0, [t]: T, [n]: S }),
-                  style: (0, h.Ay)(y, A, I),
+                  style: (0, f.Ay)(N, A, I),
                   dir: g,
-                  ...R,
-                  children: (0, i.jsxs)(E, { disableFocusRingScope: O, containerRef: b, children: [p, w] }),
+                  ...O,
+                  children: (0, i.jsxs)(E, { disableFocusRingScope: R, containerRef: b, children: [p, w] }),
               });
     });
 }

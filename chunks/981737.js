@@ -1,17 +1,17 @@
 "use strict";
-function r(e) {
+function i(e) {
     return function (t, n) {
-        var r;
+        var i;
         if ("formatting" === (null != n && n.context ? String(n.context) : "standalone") && e.formattingValues) {
-            var i = e.defaultFormattingWidth || e.defaultWidth,
-                a = null != n && n.width ? String(n.width) : i;
-            r = e.formattingValues[a] || e.formattingValues[i];
+            var r = e.defaultFormattingWidth || e.defaultWidth,
+                s = null != n && n.width ? String(n.width) : r;
+            i = e.formattingValues[s] || e.formattingValues[r];
         } else {
-            var s = e.defaultWidth,
+            var a = e.defaultWidth,
                 o = null != n && n.width ? String(n.width) : e.defaultWidth;
-            r = e.values[o] || e.values[s];
+            i = e.values[o] || e.values[a];
         }
-        return r[e.argumentCallback ? e.argumentCallback(t) : t];
+        return i[e.argumentCallback ? e.argumentCallback(t) : t];
     };
 }
-n.d(t, { A: () => r });
+n.d(t, { A: () => i });

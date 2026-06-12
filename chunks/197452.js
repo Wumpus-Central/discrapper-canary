@@ -1,4 +1,4 @@
-_.r(
+i.r(
     (e.exports = {
         dotGrow: "dotGrow__714a9",
         dotShrink: "dotShrink__714a9",

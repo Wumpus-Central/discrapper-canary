@@ -1,5 +1,5 @@
 "use strict";
-n.r(t), n.d(t, { Anchor: () => f });
+n.r(t), n.d(t, { Anchor: () => h });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,13 +10,13 @@ var i = n(627968),
     c = n(187322),
     d = n(752239),
     _ = n(983763);
-function f(e) {
+function h(e) {
     let {
         href: t,
         onClick: n,
         className: s,
-        children: f,
-        rel: h,
+        children: h,
+        rel: f,
         target: p,
         useDefaultUnderlineStyles: E = !0,
         title: m,
@@ -27,19 +27,19 @@ function f(e) {
         ...S
     } = e;
     null != t && null == n && (n = d.V.getDefaultLinkInterceptor(t));
-    let N = r.useContext(l.g),
-        y = {
+    let y = r.useContext(l.g),
+        N = {
             className: a()(_.Y, { [_.D]: E }, s),
             href: t,
             onClick: n,
-            rel: null != h ? h : void 0,
+            rel: null != f ? f : void 0,
             target: null != p ? p : void 0,
             title: null != m ? m : void 0,
             style: null != g ? g : void 0,
         };
-    return (null == t || (0, o.e)(t) || ((y.rel = "noreferrer noopener"), (y.target = "_blank")),
-    N && delete y.href,
+    return (null == t || (0, o.e)(t) || ((N.rel = "noreferrer noopener"), (N.target = "_blank")),
+    y && delete N.href,
     null != n)
-        ? (0, i.jsx)(u.D, { tag: "a", ...S, ...y, onClick: n, focusProps: A, innerRef: I, role: "link", children: f })
-        : (0, i.jsx)(c.vN, { ...A, children: (0, i.jsx)("a", { ...S, ...y, ref: I, children: f }) });
+        ? (0, i.jsx)(u.D, { tag: "a", ...S, ...N, onClick: n, focusProps: A, innerRef: I, role: "link", children: h })
+        : (0, i.jsx)(c.vN, { ...A, children: (0, i.jsx)("a", { ...S, ...N, ref: I, children: h }) });
 }

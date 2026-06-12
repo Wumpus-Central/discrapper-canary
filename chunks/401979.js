@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => _ });
 var i = n(439372),
     r = n(710195),
     s = n(723702);
@@ -14,28 +14,28 @@ function o(e) {
     return a.getConfig({ location: t });
 }
 let l = !1,
-    d = null;
-async function _() {
+    u = null;
+async function c() {
     if ((0, s.isMac)() && window.DiscordNative?.settings?.set != null) {
         let { enabled: e } = o({ location: "updateSwitch" }),
             t = e && (window.DiscordNative.nativeModules.getUpdaterVersion?.() ?? 0) >= 3;
-        await window.DiscordNative.settings.set("USE_NEW_UPDATER", t), (d = t);
+        await window.DiscordNative.settings.set("USE_NEW_UPDATER", t), (u = t);
     }
 }
-class u extends i.A {
+class d extends i.A {
     stores = new Map().set(r.A, () => {
         if (l) {
             let { enabled: e } = o({ location: "experimentStoreUpdate" });
-            d !== e && _();
+            u !== e && c();
         }
     });
     actions = {
         POST_CONNECTION_OPEN: async () => {
-            l || window.DiscordNative?.settings?.set == null || ((0, s.isMac)() && ((l = !0), await _()));
+            l || window.DiscordNative?.settings?.set == null || ((0, s.isMac)() && ((l = !0), await c()));
         },
         LOGOUT: () => {
-            (l = !1), (d = null);
+            (l = !1), (u = null);
         },
     };
 }
-let c = new u();
+let _ = new d();

@@ -1,21 +1,21 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => I });
 var r = n(627968),
-    s = n(64700),
-    a = n(554830),
-    l = n(611051),
+    l = n(64700),
+    s = n(554830),
+    a = n(613373),
     i = n(475815),
     u = n(507107),
-    o = n(245853),
-    c = n(859387),
+    o = n(192444),
+    c = n(551875),
     d = n(590202),
     E = n(971649),
-    m = n(651892),
+    _ = n(651892),
     f = n(73473),
-    _ = n(795068),
-    S = n(503698),
-    p = n.n(S),
-    v = n(834926);
-function g(e) {
+    m = n(795068),
+    p = n(503698),
+    S = n.n(p),
+    C = n(834926);
+function v(e) {
     let { className: t, color: n } = e;
     return (0, r.jsx)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
@@ -23,63 +23,63 @@ function g(e) {
         height: "40",
         viewBox: "0 0 2 40",
         fill: "none",
-        className: p()(v.SU, t),
+        className: S()(C.SU, t),
         children: (0, r.jsx)("path", { d: "M1 0V40", stroke: n, strokeOpacity: "0.3", strokeWidth: "2" }),
     });
 }
-var h = n(781121),
-    C = n(654487),
-    A = n(985018);
-function x(e) {
-    let { videoRef: t, onTrackQuestContentClick: n, orientation: S } = e,
-        { onClose: p, sourceQuestContent: x, quest: D, isFullscreenEnabled: I } = s.useContext(_.a),
-        T = (0, E.go)(),
-        b = (0, h.H)({ quest: D, onClose: p, sourceQuestContent: x, impressionId: T }),
-        O = s.useCallback(
+var A = n(781121),
+    g = n(190107),
+    h = n(375708);
+function I(e) {
+    let { videoRef: t, onTrackQuestContentClick: n, orientation: p } = e,
+        { onClose: S, sourceQuestContent: I, quest: D, isFullscreenEnabled: T } = l.useContext(m.a),
+        R = (0, E.go)(),
+        x = (0, A.H)({ quest: D, onClose: S, sourceQuestContent: I, impressionId: R }),
+        O = l.useCallback(
             (e) => {
-                if (I) {
+                if (T) {
                     let e = (0, i.qf)(t.current?.parentNode, t.current);
                     null != e && (0, i.sP)(e);
                 }
-                n(e, d.Cy.LEARN_MORE), b(e, d.Cy.OPEN_GAME_LINK);
+                n(e, d.Cy.LEARN_MORE), x(e, d.Cy.OPEN_GAME_LINK);
             },
-            [I, t, b, n],
+            [T, t, x, n],
         ),
-        { title: L, subtitle: R } = {
-            title: (0, m.wr)(D),
-            subtitle: D.config.ctaConfig.subtitle ?? A.intl.string(A.t.mxaHfx),
+        { title: L, subtitle: P } = {
+            title: (0, _.wr)(D),
+            subtitle: D.config.ctaConfig.subtitle ?? h.intl.string(h.t.mxaHfx),
         },
-        { enabled: k } = o.uK.useConfig({ location: C.rE.VIDEO_MODAL }),
-        N = s.useMemo(() => (0, c.tW)(D, c.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1)?.url ?? null, [D]);
-    return k
+        { enabled: b } = o.uK.useConfig({ location: g.rE.VIDEO_MODAL }),
+        k = l.useMemo(() => (0, c.tW)(D, c.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1)?.url ?? null, [D]);
+    return b
         ? (0, r.jsxs)(r.Fragment, {
               children: [
-                  (0, r.jsx)(l.nY, { url: N }),
-                  (0, r.jsx)(l.KP, {}),
-                  (0, r.jsxs)(l.zj, {
-                      orientation: S,
+                  (0, r.jsx)(a.nY, { url: k }),
+                  (0, r.jsx)(a.KP, {}),
+                  (0, r.jsxs)(a.zj, {
+                      orientation: p,
                       children: [
-                          null != N &&
+                          null != k &&
                               (0, r.jsx)(f.R, {
                                   questOrQuests: D,
                                   questContent: u.uF.VIDEO_MODAL_END_CARD,
-                                  sourceQuestContent: x,
+                                  sourceQuestContent: I,
                                   children: (e) =>
-                                      (0, r.jsx)(l.Kb, {
+                                      (0, r.jsx)(a.Kb, {
                                           ref: (t) => {
                                               e.current = t;
                                           },
-                                          url: N,
-                                          orientation: S,
+                                          url: k,
+                                          orientation: p,
                                       }),
                               }),
-                          (0, r.jsx)(l.lx, {
+                          (0, r.jsx)(a.lx, {
                               title: L,
-                              subtitle: R,
+                              subtitle: P,
                               ctaBtnLabel: D.config.ctaConfig.buttonLabel,
-                              ctaIcon: a.K,
+                              ctaIcon: s.K,
                               onCTAClick: () => O(u.uF.VIDEO_MODAL),
-                              orientation: S,
+                              orientation: p,
                           }),
                       ],
                   }),
@@ -87,27 +87,27 @@ function x(e) {
           })
         : (0, r.jsxs)(r.Fragment, {
               children: [
-                  null != N &&
+                  null != k &&
                       (0, r.jsx)(f.R, {
                           questOrQuests: D,
                           questContent: u.uF.VIDEO_MODAL_END_CARD,
-                          sourceQuestContent: x,
+                          sourceQuestContent: I,
                           children: (e) =>
-                              (0, r.jsx)(l.pK, {
+                              (0, r.jsx)(a.pK, {
                                   ref: (t) => {
                                       e.current = t;
                                   },
-                                  url: N,
+                                  url: k,
                               }),
                       }),
-                  (0, r.jsx)("div", { className: v.MT, "data-testid": "discord-web-video-player-end-screen" }),
-                  (0, r.jsx)(l.OH, {
+                  (0, r.jsx)("div", { className: C.MT, "data-testid": "discord-web-video-player-end-screen" }),
+                  (0, r.jsx)(a.OH, {
                       title: L,
-                      subtitle: R,
-                      icon: a.K,
-                      className: v.mT,
+                      subtitle: P,
+                      icon: s.K,
+                      className: C.mT,
                       onClick: () => O(u.uF.VIDEO_MODAL),
-                      divider: (0, r.jsx)(g, { color: "#747783" }),
+                      divider: (0, r.jsx)(v, { color: "#747783" }),
                   }),
               ],
           });

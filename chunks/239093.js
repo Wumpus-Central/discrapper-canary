@@ -1,33 +1,33 @@
 "use strict";
 n.d(t, {
     A8: () => N,
-    AT: () => f,
-    Eb: () => C,
+    AT: () => h,
+    Eb: () => O,
     Iv: () => g,
     M8: () => T,
     Qv: () => A,
     V5: () => I,
     XN: () => m,
-    ZU: () => p,
+    ZU: () => E,
     d$: () => _,
-    g0: () => h,
+    g0: () => p,
     nY: () => S,
-    qN: () => R,
+    qN: () => C,
     ti: () => b,
-    w$: () => O,
-    wQ: () => v,
-    xw: () => E,
+    w$: () => v,
+    wQ: () => R,
+    xw: () => f,
     yN: () => y,
 });
-var r,
-    i,
+var i,
+    r,
     s,
     a,
     o,
     l,
     u,
-    d = n(110259),
-    c = n(652215);
+    c = n(562708),
+    d = n(652215);
 class _ {
     static TOS_LINK = "https://discord.com/terms";
     static COMMUNITY_GUIDELINES = "https://discord.com/guidelines";
@@ -38,12 +38,12 @@ class _ {
         "https://support.discord.com/hc/requests/new?ticket_form_id=360000029731&tf_360055270593=__dc.ticket_form-tnsv1_appeals_other_questions__";
     static LEARN_MORE_UU_APPEAL_LINK = "https://support.discord.com/hc/articles/360041820932";
 }
-class f {
+class h {
     static CLASSIFICATION_ID = "classification_id";
     static INCIDENT_TIMESTAMP = "incident_time";
 }
-var E = (((r = {}).POLICY_VIOLATION_DETAIL = "policy_violation_detail"), (r.LEARN_MORE_LINK = "learn_more_link"), r);
-class h {
+var f = (((i = {}).POLICY_VIOLATION_DETAIL = "policy_violation_detail"), (i.LEARN_MORE_LINK = "learn_more_link"), i);
+class p {
     static ICON_TYPE = "icon_type";
     static HEADER = "header";
     static BODY = "body";
@@ -54,28 +54,28 @@ class h {
     static LEARN_MORE_LINK = "learn_more_link";
     static CLASSIFICATION_ID = "classification_id";
 }
-var p =
-        (((i = {})[(i.ViewViolationDetail = 0)] = "ViewViolationDetail"),
-        (i[(i.ViewViolationsDropdown = 1)] = "ViewViolationsDropdown"),
-        (i[(i.ClickLetUsKnow = 2)] = "ClickLetUsKnow"),
-        (i[(i.ClickAgeVerificationLink = 3)] = "ClickAgeVerificationLink"),
-        (i[(i.ClickSpamWebformLink = 4)] = "ClickSpamWebformLink"),
-        (i[(i.ClickLearnMoreLink = 5)] = "ClickLearnMoreLink"),
-        (i[(i.ClickCommunityGuidelinesLink = 6)] = "ClickCommunityGuidelinesLink"),
-        (i[(i.ClickWarningSystemHelpcenterLink = 7)] = "ClickWarningSystemHelpcenterLink"),
-        i),
+var E =
+        (((r = {})[(r.ViewViolationDetail = 0)] = "ViewViolationDetail"),
+        (r[(r.ViewViolationsDropdown = 1)] = "ViewViolationsDropdown"),
+        (r[(r.ClickLetUsKnow = 2)] = "ClickLetUsKnow"),
+        (r[(r.ClickAgeVerificationLink = 3)] = "ClickAgeVerificationLink"),
+        (r[(r.ClickSpamWebformLink = 4)] = "ClickSpamWebformLink"),
+        (r[(r.ClickLearnMoreLink = 5)] = "ClickLearnMoreLink"),
+        (r[(r.ClickCommunityGuidelinesLink = 6)] = "ClickCommunityGuidelinesLink"),
+        (r[(r.ClickWarningSystemHelpcenterLink = 7)] = "ClickWarningSystemHelpcenterLink"),
+        r),
     m =
         (((s = {})[(s.SystemDM = 0)] = "SystemDM"),
         (s[(s.StandingTab = 1)] = "StandingTab"),
         (s[(s.AppealIngestion = 2)] = "AppealIngestion"),
         s);
 Object.freeze({
-    SPEED_BUMP: c.JJy.APPEAL_INGESTION_SPEED_BUMP,
-    COLLECT_SIGNAL: c.JJy.APPEAL_INGESTION_COLLECT_SIGNAL,
-    CONFIRM_SUBMISSION: c.JJy.APPEAL_INGESTION_CONFIRM_SUBMISSION,
-    REQUEST_SENT: c.JJy.APPEAL_INGESTION_REQUEST_SENT,
-    THANKS: c.JJy.APPEAL_INGESTION_THANKS,
-    SPAM: c.JJy.APPEAL_INGESTION_SPAM,
+    SPEED_BUMP: d.JJy.APPEAL_INGESTION_SPEED_BUMP,
+    COLLECT_SIGNAL: d.JJy.APPEAL_INGESTION_COLLECT_SIGNAL,
+    CONFIRM_SUBMISSION: d.JJy.APPEAL_INGESTION_CONFIRM_SUBMISSION,
+    REQUEST_SENT: d.JJy.APPEAL_INGESTION_REQUEST_SENT,
+    THANKS: d.JJy.APPEAL_INGESTION_THANKS,
+    SPAM: d.JJy.APPEAL_INGESTION_SPAM,
 });
 var g =
     (((a = {})[(a.DIDNT_VIOLATE_POLICY = 0)] = "DIDNT_VIOLATE_POLICY"),
@@ -86,7 +86,7 @@ var g =
 let A = [0, 1, 2, 3],
     I = 372,
     T = 279,
-    S = { impression_group: d.ImpressionGroups.APPEAL_INGESTION };
+    S = { impression_group: c.ImpressionGroups.APPEAL_INGESTION };
 var y =
     (((o = {}).SPEED_BUMP = "speed-bump"),
     (o.COLLECT_SIGNAL = "collect-signal"),
@@ -100,18 +100,18 @@ let N = {
     "confirm-submission": { next: "request-sent", prev: "collect-signal" },
     "request-sent": { next: null, prev: null },
 };
-var O =
+var v =
         (((l = {})[(l.USER = 1)] = "USER"),
         (l[(l.GUILD_OWNER = 2)] = "GUILD_OWNER"),
         (l[(l.GUILD_MEMBER = 3)] = "GUILD_MEMBER"),
         l),
-    R =
+    C =
         (((u = {}).LOADING = "loading"),
         (u.ERROR = "error"),
         (u.SUCCESS = "success"),
         (u.FAILURE = "failure"),
         (u.NONE = "none"),
         u);
-let v = 2e3,
-    C = 15e3,
+let R = 2e3,
+    O = 15e3,
     b = 5;

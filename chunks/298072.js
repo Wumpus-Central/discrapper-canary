@@ -1,21 +1,21 @@
-a.d(t, { Q: () => o, n: () => c });
-var r = a(942381),
-    n = a(265690),
-    l = a(312852),
-    i = a(623373);
-let s = (0, n.h)(() => ({ selectionStates: new Map() }), r.x),
-    o = (e) => {
-        let t = (0, l.K)(e),
-            a = s((t) =>
-                null != e && (0, i.B1)(e) ? t.selectionStates.get(e.storeListingId)?.selectedVariantIndex : null,
+s.d(t, { Q: () => r, n: () => c });
+var n = s(942381),
+    a = s(265690),
+    i = s(312852),
+    l = s(623373);
+let d = (0, a.h)(() => ({ selectionStates: new Map() }), n.x),
+    r = (e) => {
+        let t = (0, i.K)(e),
+            s = d((t) =>
+                null != e && (0, l.B1)(e) ? t.selectionStates.get(e.storeListingId)?.selectedVariantIndex : null,
             );
-        return null != a ? Math.max(0, a) : t;
+        return null != s ? Math.max(0, s) : t;
     },
     c = (e, t) => {
-        s.setState((a) => {
-            let r = a.selectionStates.get(e.storeListingId);
-            return r?.selectedVariantIndex === t
-                ? a
-                : { selectionStates: new Map(a.selectionStates).set(e.storeListingId, { selectedVariantIndex: t }) };
+        d.setState((s) => {
+            let n = s.selectionStates.get(e.storeListingId);
+            return n?.selectedVariantIndex === t
+                ? s
+                : { selectionStates: new Map(s.selectionStates).set(e.storeListingId, { selectedVariantIndex: t }) };
         });
     };

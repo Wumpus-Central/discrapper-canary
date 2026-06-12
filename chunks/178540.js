@@ -1,17 +1,17 @@
 "use strict";
 n.d(t, { A: () => a, O: () => s });
-var r = n(353640);
-let i = [],
-    s = (0, r.v)((e, t) => ({
+var i = n(353640);
+let r = [],
+    s = (0, i.v)((e, t) => ({
         errorHintsByQuestId: new Map(),
         setErrorHints: (t, n) => {
             e((e) => {
                 if (0 === n.length && !e.errorHintsByQuestId.has(t)) return e;
-                let r = new Map(e.errorHintsByQuestId);
-                return 0 === n.length ? r.delete(t) : r.set(t, [...n]), { errorHintsByQuestId: r };
+                let i = new Map(e.errorHintsByQuestId);
+                return 0 === n.length ? i.delete(t) : i.set(t, [...n]), { errorHintsByQuestId: i };
             });
         },
-        getErrorHints: (e) => t().errorHintsByQuestId.get(e) ?? i,
+        getErrorHints: (e) => t().errorHintsByQuestId.get(e) ?? r,
         clearErrorHints: (t) => {
             e((e) => {
                 if (!e.errorHintsByQuestId.has(t)) return e;
@@ -21,12 +21,12 @@ let i = [],
         },
         clearErrorHintsByType: (t, n) => {
             e((e) => {
-                let r = e.errorHintsByQuestId.get(t);
-                if (null == r) return e;
-                let i = r.filter((e) => e.type !== n);
-                if (i.length === r.length) return e;
+                let i = e.errorHintsByQuestId.get(t);
+                if (null == i) return e;
+                let r = i.filter((e) => e.type !== n);
+                if (r.length === i.length) return e;
                 let s = new Map(e.errorHintsByQuestId);
-                return 0 === i.length ? s.delete(t) : s.set(t, i), { errorHintsByQuestId: s };
+                return 0 === r.length ? s.delete(t) : s.set(t, r), { errorHintsByQuestId: s };
             });
         },
         reset: () => {

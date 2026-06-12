@@ -1,28 +1,28 @@
-a.d(l, { J: () => s });
-var t = a(627968);
+a.d(r, { J: () => i });
+var o = a(627968);
 a(64700);
-let o =
+let d =
     "https://cdn.discordapp.com/assets/content/f6be7075b3756dfb89ce77617b82d7a9a863a31483e03dfedb07377038197910.riv";
-var n = a(502377),
-    i = a(799226);
-let r = {
+var t = a(594639),
+    n = a(105596);
+let c = {
     "Gem L2": { reducedMotion: "boolean" },
     Sparkle: { reducedMotion: "boolean" },
     Sparkle_Tiny: { reducedMotion: "boolean" },
 };
-function s(e) {
-    let { artboard: l = "Gem L2", stateMachine: a, ...s } = e,
-        { status: d, buffer: u } = (0, i.CE)(o),
-        c = (0, i.m2)(o);
-    return d === i.BW.Loading
+function i(e) {
+    let { artboard: r = "Gem L2", stateMachine: a, ...i } = e,
+        { status: b, buffer: s } = (0, n.CE)(d),
+        l = (0, n.m2)(d);
+    return b === n.BW.Loading
         ? null
-        : (0, t.jsx)(n.w, {
-              ...(c ? { key: "override" } : {}),
-              buffer: u,
-              artboard: l,
+        : (0, o.jsx)(t.w, {
+              ...(l ? { key: "override" } : {}),
+              buffer: s,
+              artboard: r,
               stateMachine: a,
-              artboardProperties: r,
-              ...s,
+              artboardProperties: c,
+              ...i,
           });
 }
-s.riveSrc = o;
+i.riveSrc = d;

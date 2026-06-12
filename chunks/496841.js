@@ -1,32 +1,32 @@
-t.d(n, { A: () => h });
-var l = t(627968),
-    i = t(64700),
-    a = t(978940),
-    s = t(956793),
-    r = t(688810),
-    o = t(384059),
-    c = t(203982),
-    u = t(709562),
-    d = t(652215),
-    A = t(985018);
-function h(e) {
-    let { channel: n, centerButton: t = !1, onCallJoined: h, ...p } = e,
-        { parentAnalyticsLocation: m } = (0, r.Ay)(),
-        g = t ? u.l : u.A,
-        f = n.isManaged() || !n.isPrivate() ? A.intl.string(A.t.S0W8Z5) : A.intl.string(A.t["0D/6Rz"]),
-        C = i.useCallback(() => {
-            h?.(), (0, o.X)(m, o.O.JOIN_CALL), s.default.selectVoiceChannel(n.id);
-        }, [n.id, h, m]);
+e.d(t, { A: () => p });
+var i = e(627968),
+    s = e(64700),
+    c = e(978940),
+    o = e(730852),
+    r = e(688810),
+    a = e(384059),
+    l = e(625494),
+    u = e(204651),
+    C = e(652215),
+    d = e(375708);
+function p(n) {
+    let { channel: t, centerButton: e = !1, onCallJoined: p, ...A } = n,
+        { parentAnalyticsLocation: b } = (0, r.Ay)(),
+        _ = e ? u.l : u.A,
+        h = t.isManaged() || !t.isPrivate() ? d.intl.string(d.t.S0W8Z5) : d.intl.string(d.t["0D/6Rz"]),
+        j = s.useCallback(() => {
+            p?.(), (0, a.X)(b, a.O.JOIN_CALL), o.default.selectVoiceChannel(t.id);
+        }, [t.id, p, b]);
     return (
-        i.useEffect(
+        s.useEffect(
             () => (
-                c._.subscribe(d.jej.CALL_ACCEPT, C),
+                l._.subscribe(C.jej.CALL_ACCEPT, j),
                 () => {
-                    c._.unsubscribe(d.jej.CALL_ACCEPT, C);
+                    l._.unsubscribe(C.jej.CALL_ACCEPT, j);
                 }
             ),
-            [C],
+            [j],
         ),
-        (0, l.jsx)(g, { ...p, iconComponent: a._, label: f, onClick: C, isTrayButton: !1 })
+        (0, i.jsx)(_, { ...A, iconComponent: c._, label: h, onClick: j, isTrayButton: !1 })
     );
 }

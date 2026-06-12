@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => h });
 var i = n(17928),
     r = n(228366),
     s = n(83971);
 let a = new Map(),
     o = new Set(),
     l = null,
-    d = !1,
-    _ = !1;
-function u() {
-    (a = new Map()), (o = new Set()), (l = null), (d = !1);
+    u = !1,
+    c = !1;
+function d() {
+    (a = new Map()), (o = new Set()), (l = null), (u = !1);
 }
-class c extends i.Ay.Store {
+class _ extends i.Ay.Store {
     static displayName = "ContentInventoryOutboxStore";
     getMatchingOutboxEntry(e) {
         let { activity: t, userId: n } = e,
@@ -28,18 +28,18 @@ class c extends i.Ay.Store {
         return l;
     }
     get isDeletingEntryHistory() {
-        return d;
+        return u;
     }
     get hasInitialized() {
-        return _;
+        return c;
     }
 }
-let E = new c(r.h, {
+let h = new _(r.h, {
     CONNECTION_OPEN: function () {
-        u(), (_ = !0);
+        d(), (c = !0);
     },
     LOGOUT: function () {
-        u();
+        d();
     },
     CONTENT_INVENTORY_FETCH_OUTBOX_START: function (e) {
         let { userId: t } = e;
@@ -54,7 +54,7 @@ let E = new c(r.h, {
         o.delete(t);
     },
     CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_START: function () {
-        (l = null), (d = !0);
+        (l = null), (u = !0);
     },
     CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_SUCCESS: function (e) {
         let { entry: t, userId: n } = e;
@@ -62,13 +62,13 @@ let E = new c(r.h, {
         let i = a.get(n);
         if (null == i) return !1;
         let r = i.entries.filter((e) => e.id !== t.id);
-        a.set(n, { ...i, entries: r }), (d = !1);
+        a.set(n, { ...i, entries: r }), (u = !1);
     },
     CONTENT_INVENTORY_DELETE_OUTBOX_ENTRY_FAILURE: function (e) {
         let { error: t } = e;
-        (l = t), (d = !1);
+        (l = t), (u = !1);
     },
     CONTENT_INVENTORY_CLEAR_DELETE_HISTORY_ERROR: function () {
-        (l = null), (d = !1);
+        (l = null), (u = !1);
     },
 });

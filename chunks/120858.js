@@ -1,10 +1,10 @@
 "use strict";
-var r = n(439619),
-    i = n(142896),
-    a = n(870064),
-    s = r("%Promise.resolve%", !0),
-    o = s && i(s);
+var i = n(439619),
+    r = n(142896),
+    s = n(870064),
+    a = i("%Promise.resolve%", !0),
+    o = a && r(a);
 e.exports = function (e, t) {
-    if (!o) throw new a("This environment does not support Promises.");
+    if (!o) throw new s("This environment does not support Promises.");
     return o(e, t);
 };

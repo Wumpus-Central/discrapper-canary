@@ -1,22 +1,22 @@
-var r;
-(r = function () {
+var i;
+(i = function () {
     "use strict";
     var e,
         t,
-        r,
         i,
+        r,
         s,
         a,
         o,
         l,
         u = "u" > typeof window ? window : (n.g, n.g),
-        d = (u.cancelRequestAnimationFrame && u.requestAnimationFrame) || setTimeout,
-        c = u.cancelRequestAnimationFrame || clearTimeout,
+        c = (u.cancelRequestAnimationFrame && u.requestAnimationFrame) || setTimeout,
+        d = u.cancelRequestAnimationFrame || clearTimeout,
         _ = [],
-        f = 0,
-        E = !1,
-        h = 7,
-        p = 35,
+        h = 0,
+        f = !1,
+        p = 7,
+        E = 35,
         m = 125,
         g = 0,
         A = 0,
@@ -26,49 +26,49 @@ var r;
                 return !1;
             },
             timeRemaining: function () {
-                var e = h - (Date.now() - A);
+                var e = p - (Date.now() - A);
                 return e < 0 ? 0 : e;
             },
         },
         S =
             ((e = function () {
-                (h = 22), (m = 66), (p = 0);
+                (p = 22), (m = 66), (E = 0);
             }),
-            (i = function () {
-                var n = Date.now() - r;
-                n < 99 ? (t = setTimeout(i, 99 - n)) : ((t = null), e());
+            (r = function () {
+                var n = Date.now() - i;
+                n < 99 ? (t = setTimeout(r, 99 - n)) : ((t = null), e());
             }),
             function () {
-                (r = Date.now()), t || (t = setTimeout(i, 99));
+                (i = Date.now()), t || (t = setTimeout(r, 99));
             });
     function y() {
-        125 != m && ((h = 7), (m = 125), (p = 35), E && (E && (l && c(l), o && clearTimeout(o), (E = !1)), R())), S();
+        125 != m && ((p = 7), (m = 125), (E = 35), f && (f && (l && d(l), o && clearTimeout(o), (f = !1)), C())), S();
     }
     function N() {
-        (l = null), (o = setTimeout(v, 0));
-    }
-    function O() {
-        (o = null), d(N);
-    }
-    function R() {
-        E ||
-            ((a = m - (Date.now() - A)),
-            (s = Date.now()),
-            (E = !0),
-            p && a < p && (a = p),
-            a > 9 ? (o = setTimeout(O, a)) : ((a = 0), O()));
+        (l = null), (o = setTimeout(R, 0));
     }
     function v() {
+        (o = null), c(N);
+    }
+    function C() {
+        f ||
+            ((a = m - (Date.now() - A)),
+            (s = Date.now()),
+            (f = !0),
+            E && a < E && (a = E),
+            a > 9 ? (o = setTimeout(v, a)) : ((a = 0), v()));
+    }
+    function R() {
         var e,
             t,
             n,
-            r = h > 9 ? 9 : 1;
-        if (((A = Date.now()), (E = !1), (o = null), f > 2 || A - a - 50 < s))
-            for (t = 0, n = _.length; t < n && T.timeRemaining() > r; t++) (e = _.shift()), I++, e && e(T);
-        _.length ? R() : (f = 0);
+            i = p > 9 ? 9 : 1;
+        if (((A = Date.now()), (f = !1), (o = null), h > 2 || A - a - 50 < s))
+            for (t = 0, n = _.length; t < n && T.timeRemaining() > i; t++) (e = _.shift()), I++, e && e(T);
+        _.length ? C() : (h = 0);
     }
-    function C(e) {
-        return g++, _.push(e), R(), g;
+    function O(e) {
+        return g++, _.push(e), C(), g;
     }
     function b(e) {
         var t = e - 1 - I;
@@ -98,7 +98,7 @@ var r;
             })(u.requestIdleCallback);
         }
     else
-        (u.requestIdleCallback = C),
+        (u.requestIdleCallback = O),
             (u.cancelIdleCallback = b),
             u.document &&
                 document.addEventListener &&
@@ -115,10 +115,10 @@ var r;
                         subtree: !0,
                         attributes: !0,
                     }));
-    return { request: C, cancel: b };
+    return { request: O, cancel: b };
 }),
     "function" == typeof define && define.amd
-        ? define([], r)
+        ? define([], i)
         : e.exports
-          ? (e.exports = r())
-          : (window.idleCallbackShim = r());
+          ? (e.exports = i())
+          : (window.idleCallbackShim = i());

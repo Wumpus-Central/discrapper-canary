@@ -15,22 +15,22 @@ let c = function (e) {
             orientation: o = "horizontal",
         } = e,
         x = c ?? t[0],
-        [h, m] = i.useState(x ?? t[0]);
+        [m, h] = i.useState(x ?? t[0]);
     i.useEffect(() => {
-        m(x);
+        h(x);
     }, [x]);
     let j = i.useMemo(() => {
-        let e = h.component;
+        let e = m.component;
         return (0, n.jsx)(e, {});
-    }, [h]);
+    }, [m]);
     return (0, n.jsxs)("div", {
         className: a()(d.P5, { [d.Vd]: "vertical" === o }),
         children: [
             (0, n.jsx)(r.V, {
                 className: a()(d.$H, { [d.Vd]: "vertical" === o }, s),
-                selectedItem: h.id,
+                selectedItem: m.id,
                 onItemSelect: (e) => {
-                    m(t.find((t) => t.id === e) ?? t[0]), u?.(e);
+                    h(t.find((t) => t.id === e) ?? t[0]), u?.(e);
                 },
                 orientation: o,
                 type: "vertical" === o ? "side" : "top",
@@ -39,7 +39,7 @@ let c = function (e) {
                     (0, n.jsx)(
                         r.V.Item,
                         {
-                            className: a()(d.Mf, { [d.Vd]: "vertical" === o, [d.wH]: e.id === h.id }),
+                            className: a()(d.Mf, { [d.Vd]: "vertical" === o, [d.wH]: e.id === m.id }),
                             id: e.id,
                             "aria-label": e.title,
                             children: e.title,
@@ -49,8 +49,8 @@ let c = function (e) {
                 ),
             }),
             (0, n.jsx)(r.V.Panel, {
-                id: h.id,
-                "aria-labelledby": h.title,
+                id: m.id,
+                "aria-labelledby": m.title,
                 className: a()(d.NM, l, { [d.Vd]: "vertical" === o }),
                 children: j,
             }),

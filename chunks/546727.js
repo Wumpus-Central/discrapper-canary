@@ -1,8 +1,8 @@
-n.d(t, { q: () => s });
-var i,
+i.d(t, { q: () => s });
+var n,
     s =
-        (((i = {}).AVAILABLE = "AVAILABLE"),
-        (i.ERROR = "ERROR"),
-        (i.RATE_LIMIT = "RATE_LIMIT"),
-        (i.INTERNAL_ERROR = "INTERNAL_ERROR"),
-        i);
+        (((n = {}).AVAILABLE = "AVAILABLE"),
+        (n.ERROR = "ERROR"),
+        (n.RATE_LIMIT = "RATE_LIMIT"),
+        (n.INTERNAL_ERROR = "INTERNAL_ERROR"),
+        n);

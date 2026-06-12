@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { $: () => p, k: () => h });
+n.d(t, { $: () => p, k: () => f });
 var i = n(825913),
     r = n(127747),
-    s = n(217512),
+    s = n(959611),
     a = n(284054),
     o = n(498430),
     l = n(967158),
@@ -10,10 +10,10 @@ var i = n(825913),
     c = n(318473),
     d = n(564004),
     _ = n(290424),
-    f = n(64700);
-let h = (0, f.createContext)({}),
+    h = n(64700);
+let f = (0, h.createContext)({}),
     p = (0, d.U7)(function (e, t) {
-        [e, t] = (0, i.JT)(e, t, h);
+        [e, t] = (0, i.JT)(e, t, f);
         let n = e,
             { isPending: d } = n,
             { buttonProps: p, isPressed: E } = (0, a.s)(e, t);
@@ -34,28 +34,28 @@ let h = (0, f.createContext)({}),
                 isDisabled: e.isDisabled || !1,
                 isPending: null != d && d,
             },
-            N = (0, i.Sl)({ ...e, values: S, defaultClassName: "react-aria-Button" }),
-            y = (0, u.Bi)(p.id),
-            C = (0, u.Bi)(),
-            v = p["aria-labelledby"];
-        d && (v ? (v = `${v} ${C}`) : p["aria-label"] && (v = `${y} ${C}`));
-        let O = (0, f.useRef)(d);
-        (0, f.useEffect)(() => {
-            let e = { "aria-labelledby": v || y };
-            !O.current && g && d ? (0, s.iP)(e, "assertive") : O.current && g && !d && (0, s.iP)(e, "assertive"),
-                (O.current = d);
-        }, [d, g, v, y]);
-        let R = (0, _.$)(e, { global: !0 });
+            y = (0, i.Sl)({ ...e, values: S, defaultClassName: "react-aria-Button" }),
+            N = (0, u.Bi)(p.id),
+            v = (0, u.Bi)(),
+            C = p["aria-labelledby"];
+        d && (C ? (C = `${C} ${v}`) : p["aria-label"] && (C = `${N} ${v}`));
+        let R = (0, h.useRef)(d);
+        (0, h.useEffect)(() => {
+            let e = { "aria-labelledby": C || N };
+            !R.current && g && d ? (0, s.iP)(e, "assertive") : R.current && g && !d && (0, s.iP)(e, "assertive"),
+                (R.current = d);
+        }, [d, g, C, N]);
+        let O = (0, _.$)(e, { global: !0 });
         return (
-            delete R.onClick,
-            f.createElement(
+            delete O.onClick,
+            h.createElement(
                 "button",
                 {
-                    ...(0, c.v)(R, N, p, m, I),
+                    ...(0, c.v)(O, y, p, m, I),
                     type: "submit" === p.type && d ? "button" : p.type,
-                    id: y,
+                    id: N,
                     ref: t,
-                    "aria-labelledby": v,
+                    "aria-labelledby": C,
                     slot: e.slot || void 0,
                     "aria-disabled": d ? "true" : p["aria-disabled"],
                     "data-disabled": e.isDisabled || void 0,
@@ -65,7 +65,7 @@ let h = (0, f.createContext)({}),
                     "data-pending": d || void 0,
                     "data-focus-visible": A || void 0,
                 },
-                f.createElement(r.K.Provider, { value: { id: C } }, N.children),
+                h.createElement(r.K.Provider, { value: { id: v } }, y.children),
             )
         );
     });

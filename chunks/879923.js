@@ -11,11 +11,11 @@ let c = (e, t, l) => {
             i.A.isFetchingTemplate(e, t, l),
             i.A.getTemplateFetchError(e, t, l),
         ]),
-        m = null == d && null != t && c && !o && null == u;
+        h = null == d && null != t && c && !o && null == u;
     return (
         r.useEffect(() => {
-            m && (0, s.J)({ tenantId: e, templateId: t, requestParams: l }).catch(() => {});
-        }, [m, e, t, l]),
+            h && (0, s.J)({ tenantId: e, templateId: t, requestParams: l }).catch(() => {});
+        }, [h, e, t, l]),
         { layout: d, loading: o, error: u }
     );
 };

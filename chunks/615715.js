@@ -1,73 +1,73 @@
-s.d(t, { default: () => f });
-var n = s(627968),
-    l = s(64700),
-    a = s(17928),
-    o = s(181658),
-    i = s(557722),
-    r = s(914724),
-    d = s(870570),
-    h = s(287809),
-    u = s(446868),
-    c = s(662758),
-    p = s(985018);
-let f = l.forwardRef(function (e, t) {
-    let { onAddedPhone: s, onClose: f, transitionState: C, reason: g, layerContext: m } = e,
-        y = (0, a.bG)([h.default], () => h.default.getCurrentUser()),
-        b = (0, a.bG)([d.A], () => d.A.getAction()),
-        [x, k] = l.useState(null),
-        [A, v] = l.useState(null),
-        [R, S] = l.useState(null),
-        [j, P] = l.useState(!1),
-        w = l.useCallback(
+n.d(t, { default: () => A });
+var a = n(627968),
+    l = n(64700),
+    i = n(17928),
+    r = n(181658),
+    u = n(557722),
+    o = n(914724),
+    s = n(870570),
+    c = n(287809),
+    d = n(446868),
+    h = n(662758),
+    f = n(375708);
+let A = l.forwardRef(function (e, t) {
+    let { onAddedPhone: n, onClose: A, transitionState: w, reason: y, layerContext: b } = e,
+        C = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
+        P = (0, i.bG)([s.A], () => s.A.getAction()),
+        [g, k] = l.useState(null),
+        [p, v] = l.useState(null),
+        [S, R] = l.useState(null),
+        [x, j] = l.useState(!1),
+        G = l.useCallback(
             async (e) => {
-                P(!0);
+                j(!0);
                 try {
-                    u.A.isPhoneReverification(y, b)
-                        ? await i.A.beginReverifyPhone(e, g)
-                        : await i.A.beginAddPhone(e, g),
-                        S(null),
+                    d.A.isPhoneReverification(C, P)
+                        ? await u.A.beginReverifyPhone(e, y)
+                        : await u.A.beginAddPhone(e, y),
+                        R(null),
                         k(e);
                 } catch (e) {
-                    S(new o.A(e));
+                    R(new r.A(e));
                 }
-                P(!1);
+                j(!1);
             },
-            [y, g, b],
+            [C, y, P],
         ),
-        N = l.useCallback(
+        _ = l.useCallback(
             async (e) => {
-                if (null != x && null != y) {
-                    P(!0);
+                if (null != g && null != C) {
+                    j(!0);
                     try {
-                        let { token: t } = await i.A.verifyPhone(x, e);
-                        S(null), v(t);
+                        let { token: t } = await u.A.verifyPhone(g, e);
+                        R(null), v(t);
                     } catch (e) {
-                        S(new o.A(e));
+                        R(new r.A(e));
                     }
-                    P(!1);
+                    j(!1);
                 }
             },
-            [y, x],
+            [C, g],
         ),
-        B = l.useCallback(
+        m = l.useCallback(
             async (e) => {
-                null != A &&
-                    (u.A.isPhoneReverification(y, b) ? await i.A.reverifyPhone(A, e, g) : await i.A.addPhone(A, e, g),
-                    s?.(),
-                    f());
+                null != p &&
+                    (d.A.isPhoneReverification(C, P) ? await u.A.reverifyPhone(p, e, y) : await u.A.addPhone(p, e, y),
+                    n?.(),
+                    A());
             },
-            [s, f, A, g, y, b],
+            [n, A, p, y, C, P],
         );
-    return null != A
-        ? (0, n.jsx)(c.default, { onClose: f, transitionState: C, title: p.intl.string(p.t.ZtCDc2), handleSubmit: B })
-        : (0, n.jsx)(r.default, {
-              onClose: f,
-              transitionState: C,
-              error: R?.getAnyErrorMessage(),
-              working: j,
-              validPhone: null != x,
-              onAddPhone: w,
-              onVerifyPhone: N,
-              layerContext: m,
+    return null != p
+        ? (0, a.jsx)(h.default, { onClose: A, transitionState: w, title: f.intl.string(f.t.ZtCDc2), handleSubmit: m })
+        : (0, a.jsx)(o.default, {
+              onClose: A,
+              transitionState: w,
+              error: S?.getAnyErrorMessage(),
+              working: x,
+              validPhone: null != g,
+              onAddPhone: G,
+              onVerifyPhone: _,
+              layerContext: b,
           });
 });

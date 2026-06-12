@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => d });
-var r = n(954571),
-    i = n(998218),
+n.d(t, { A: () => c });
+var i = n(174459),
+    r = n(998218),
     s = n(988102),
     a = n(376943),
     o = n(652215);
 let l = [
     (e) => (s.A.isInvite(e) ? "Discord Server Invite" : null),
     (e) => {
-        let t = i.A.safeParseWithQuery(e);
+        let t = r.A.safeParseWithQuery(e);
         if (null == t) return null;
         let n = (0, a.vu)(t.path);
         return null == n ? null : u({ guildId: n.guildId, channelId: n.channelId, messageId: n.messageId });
@@ -22,14 +22,14 @@ function u(e) {
           ? "Discord Channel Link"
           : "Unknown";
 }
-let d = {
+let c = {
     trackDiscordLinkClicked: function (e) {
-        r.default.track(o.HAw.LINK_CLICKED, { is_discord_link: !0, discord_link_type: u(e) });
+        i.default.track(o.HAw.LINK_CLICKED, { is_discord_link: !0, discord_link_type: u(e) });
     },
     trackLinkClicked: function (e, t) {
         if (null == e && null == t) return;
-        let n = i.A.isDiscordUrl(e, !0) || null != t;
-        r.default.track(o.HAw.LINK_CLICKED, {
+        let n = r.A.isDiscordUrl(e, !0) || null != t;
+        i.default.track(o.HAw.LINK_CLICKED, {
             is_discord_link: n,
             discord_link_type: n
                 ? (function (e, t) {
@@ -45,11 +45,11 @@ let d = {
         });
     },
     trackAnnouncementMessageLinkClicked: function (e) {
-        let { messageId: t, channelId: n, guildId: i, sourceChannelId: s, sourceGuildId: a } = e;
-        r.default.track(o.HAw.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
+        let { messageId: t, channelId: n, guildId: r, sourceChannelId: s, sourceGuildId: a } = e;
+        i.default.track(o.HAw.ANNOUNCEMENT_MESSAGE_LINK_CLICKED, {
             message_id: t,
             channel_id: n,
-            guild_id: i,
+            guild_id: r,
             source_channel_id: s,
             source_guild_id: a,
         });

@@ -1,18 +1,18 @@
 "use strict";
 n.d(t, { A: () => u });
-var r = n(47167),
-    i = n(734057),
-    a = n(994500),
-    s = n(287809),
+var i = n(47167),
+    r = n(734057),
+    s = n(994500),
+    a = n(287809),
     o = n(926140),
     l = n(652215);
 function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.A,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.default,
-        u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : a.A,
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A,
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.default,
+        u = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : s.A,
         c = t.getChannel(e);
     if (null == c) return null;
-    let d = (0, r.m1)(c, n, u);
+    let d = (0, i.m1)(c, n, u);
     switch (c.type) {
         case l.rbe.DM: {
             let e = n.getUser(c.getRecipientId());

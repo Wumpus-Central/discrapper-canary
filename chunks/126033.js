@@ -1,4 +1,4 @@
-i.d(t, { EmojiAddModal: () => u });
+i.d(e, { EmojiAddModal: () => j });
 var a = i(627968),
     n = i(64700),
     s = i(189213),
@@ -7,11 +7,11 @@ var a = i(627968),
     d = i(331322),
     o = i(486020),
     c = i(320137),
-    m = i(985018),
+    m = i(375708),
     h = i(240640);
-function j(e) {
-    let { emoji: t, onChange: i, value: n } = e,
-        s = o.Ay.getEmojiURL({ id: t.id, animated: t.animated, size: 24 });
+function u(t) {
+    let { emoji: e, onChange: i, value: n } = t,
+        s = o.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: 24 });
     return (0, a.jsx)(l.Kj, {
         size: 20,
         className: h.nI,
@@ -23,25 +23,25 @@ function j(e) {
             className: h.H1,
             children: [
                 (0, a.jsx)("img", { className: h.mp, src: s, width: 24, height: 24, alt: "" }),
-                (0, a.jsx)(r.E, { color: "text-strong", variant: "text-md/medium", className: h.JN, children: t.name }),
+                (0, a.jsx)(r.E, { color: "text-strong", variant: "text-md/medium", className: h.JN, children: e.name }),
             ],
         }),
     });
 }
-function u(e) {
+function j(t) {
     let {
-            guildId: t,
+            guildId: e,
             initialTierEmojiIds: i,
             onSubmit: l,
             transitionToManageEmoji: o,
-            transitionState: u,
+            transitionState: j,
             onClose: x,
-        } = e,
-        p = (0, c.A)(t),
-        [v, _] = n.useState(new Set()),
-        g = v.size > 0;
+        } = t,
+        p = (0, c.A)(e),
+        [v, g] = n.useState(new Set()),
+        C = v.size > 0;
     return (0, a.jsx)(s.Modal, {
-        transitionState: u,
+        transitionState: j,
         onClose: x,
         title: m.intl.string(m.t.xC6tUv),
         actions: [
@@ -52,7 +52,7 @@ function u(e) {
                 onClick: function () {
                     l(v), x();
                 },
-                disabled: !g,
+                disabled: !C,
             },
         ],
         children: (0, a.jsxs)(d.B, {
@@ -66,26 +66,26 @@ function u(e) {
                     p.length > 0 &&
                     (0, a.jsx)("div", {
                         className: h.qq,
-                        children: p.map((e) =>
-                            null != i && i.has(e.id)
+                        children: p.map((t) =>
+                            null != i && i.has(t.id)
                                 ? null
                                 : (0, a.jsx)(
-                                      j,
+                                      u,
                                       {
-                                          emoji: e,
+                                          emoji: t,
                                           onChange: () => {
-                                              var t;
+                                              var e;
                                               return (
-                                                  (t = e.id),
-                                                  void _((e) => {
-                                                      let i = new Set(e);
-                                                      return v.has(t) ? i.delete(t) : i.add(t), i;
+                                                  (e = t.id),
+                                                  void g((t) => {
+                                                      let i = new Set(t);
+                                                      return v.has(e) ? i.delete(e) : i.add(e), i;
                                                   })
                                               );
                                           },
-                                          value: v.has(e.id),
+                                          value: v.has(t.id),
                                       },
-                                      e.id,
+                                      t.id,
                                   ),
                         ),
                     }),

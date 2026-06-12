@@ -1,182 +1,182 @@
-a.d(t, { A: () => C });
-var l = a(627968),
-    n = a(64700),
-    i = a(503698),
-    r = a.n(i),
-    d = a(735438),
-    s = a.n(d),
-    u = a(935462),
-    o = a(150934),
-    b = a(452027),
-    v = a(260598),
-    c = a(534514),
-    E = a(834730),
-    f = a(821609),
-    O = a(964486),
-    g = a(475743),
-    h = a(235986),
-    m = a(915089),
-    N = a(124480),
-    p = a(975571),
-    S = a(321563),
-    U = a(670455),
-    A = a(985018),
-    x = a(636852);
-let j = (e) =>
-    s().shuffle(
+l.d(n, { A: () => N });
+var i = l(627968),
+    t = l(64700),
+    a = l(503698),
+    r = l.n(a),
+    s = l(735438),
+    o = l.n(s),
+    d = l(935462),
+    u = l(150934),
+    c = l(452027),
+    m = l(260598),
+    h = l(534514),
+    g = l(834730),
+    f = l(821609),
+    p = l(964486),
+    x = l(475743),
+    j = l(235986),
+    v = l(915089),
+    C = l(124480),
+    b = l(975571),
+    k = l(321563),
+    A = l(670455),
+    O = l(375708),
+    y = l(636852);
+let S = (e) =>
+    o().shuffle(
         e.map((e) => ({
             ...e,
-            problemOptions: s()
+            problemOptions: o()
                 .shuffle(e.problemOptions)
                 .concat(e.freeformConfig ?? []),
         })),
     );
-function C(e) {
-    let t,
-        a,
+function N(e) {
+    let n,
+        l,
         {
-            onMount: i,
-            onSubmit: d,
-            onClose: C,
-            ratingHeader: L,
-            ratingBody: _,
-            ratingOptions: D,
-            ratingEmojiKind: V,
-            initialRating: I = null,
-            categoriesHeader: R,
-            optionsTree: T,
-            hideDontShowAgainCheckbox: y,
-            impression: P,
-            transitionState: F,
+            onMount: a,
+            onSubmit: s,
+            onClose: N,
+            ratingHeader: D,
+            ratingBody: E,
+            ratingOptions: R,
+            ratingEmojiKind: L,
+            initialRating: K = null,
+            categoriesHeader: T,
+            optionsTree: $,
+            hideDontShowAgainCheckbox: q,
+            impression: H,
+            transitionState: P,
         } = e,
-        M = (0, g.A)(T),
-        [H, k] = n.useState(j(T));
-    n.useEffect(() => {
-        s().isEqual(M, T) || k(j(T));
-    }, [T, M]);
-    let G = (0, m.GV)(),
-        [w, B] = n.useState(!1),
-        [X, z] = n.useState(I),
-        [K, Y] = n.useState(1 === H.length ? H[0] : null),
-        [q, Q] = n.useState(null),
-        [Z, $] = n.useState("");
-    (0, O.Ay)(() => i?.()),
-        (0, O.l0)(() => {
-            d({ rating: X, category: K?.value ?? null, problem: q, dontShowAgain: w, feedback: Z });
+        B = (0, x.A)($),
+        [G, U] = t.useState(S($));
+    t.useEffect(() => {
+        o().isEqual(B, $) || U(S($));
+    }, [$, B]);
+    let w = (0, v.GV)(),
+        [z, F] = t.useState(!1),
+        [I, M] = t.useState(K),
+        [V, Z] = t.useState(1 === G.length ? G[0] : null),
+        [_, Q] = t.useState(null),
+        [X, J] = t.useState("");
+    (0, p.Ay)(() => a?.()),
+        (0, p.l0)(() => {
+            s({ rating: I, category: V?.value ?? null, problem: _, dontShowAgain: z, feedback: X });
         });
     let W = !0,
-        J = !1;
+        Y = !1;
     return (
-        null == X
-            ? ((t = (0, l.jsxs)(l.Fragment, {
+        null == I
+            ? ((n = (0, i.jsxs)(i.Fragment, {
                   children: [
-                      (0, l.jsx)("div", {
-                          className: r()(x.OS, x.Ko),
-                          children: (0, l.jsx)(S.A, {
-                              ratingOptions: D,
-                              emojiKind: V,
-                              selectedRating: X,
+                      (0, i.jsx)("div", {
+                          className: r()(y.OS, y.Ko),
+                          children: (0, i.jsx)(k.A, {
+                              ratingOptions: R,
+                              emojiKind: L,
+                              selectedRating: I,
                               onChangeRating: function (e) {
-                                  z(e), e === U.P0.GOOD && C();
+                                  M(e), e === A.P0.GOOD && N();
                               },
                           }),
                       }),
-                      !y &&
-                          (0, l.jsx)(u.jl, {
+                      !q &&
+                          (0, i.jsx)(d.jl, {
                               "data-migration-pending": !0,
-                              className: x.qr,
-                              direction: h.A.Direction.HORIZONTAL,
-                              children: (0, l.jsx)(o.S, {
-                                  checked: w,
-                                  onChange: () => B(!w),
-                                  label: A.intl.string(A.t["5E9SB9"]),
+                              className: y.qr,
+                              direction: j.A.Direction.HORIZONTAL,
+                              children: (0, i.jsx)(u.S, {
+                                  checked: z,
+                                  onChange: () => F(!z),
+                                  label: O.intl.string(O.t["5E9SB9"]),
                                   labelType: "secondary",
                               }),
                           }),
                   ],
               })),
               (W = !1))
-            : X !== U.P0.GOOD && null == K
-              ? ((t = (0, l.jsx)(u.$m, {
+            : I !== A.P0.GOOD && null == V
+              ? ((n = (0, i.jsx)(d.$m, {
                     "data-migration-pending": !0,
-                    children: (0, l.jsx)(b.D, {
-                        label: R,
-                        children: (0, l.jsx)(N.A, { options: H, onClick: Y, hideCaret: () => !0 }),
+                    children: (0, i.jsx)(c.D, {
+                        label: T,
+                        children: (0, i.jsx)(C.A, { options: G, onClick: Z, hideCaret: () => !0 }),
                     }),
                 })),
-                (a = () => z(null)))
-              : null != K && null == q
-                ? ((t = (0, l.jsx)(u.$m, {
-                      children: (0, l.jsx)(b.D, {
-                          label: K.problemsHeader,
-                          children: (0, l.jsx)(N.A, {
-                              options: K.problemOptions,
+                (l = () => M(null)))
+              : null != V && null == _
+                ? ((n = (0, i.jsx)(d.$m, {
+                      children: (0, i.jsx)(c.D, {
+                          label: V.problemsHeader,
+                          children: (0, i.jsx)(C.A, {
+                              options: V.problemOptions,
                               onClick: function (e) {
-                                  Q(e), null != K && null != e && K.freeformConfig?.value !== e.value && C();
+                                  Q(e), null != V && null != e && V.freeformConfig?.value !== e.value && N();
                               },
                               hideCaret: (e) => {
-                                  let { value: t } = e;
-                                  return K.freeformConfig?.value !== t;
+                                  let { value: n } = e;
+                                  return V.freeformConfig?.value !== n;
                               },
                           }),
                       }),
                   })),
-                  (a = () => (1 === H.length ? z(null) : Y(null))))
-                : null != K &&
-                  null != q &&
-                  K.freeformConfig?.value === q.value &&
-                  ((t = (0, l.jsx)(u.$m, {
+                  (l = () => (1 === G.length ? M(null) : Z(null))))
+                : null != V &&
+                  null != _ &&
+                  V.freeformConfig?.value === _.value &&
+                  ((n = (0, i.jsx)(d.$m, {
                       "data-migration-pending": !0,
-                      children: (0, l.jsx)(v.f, {
-                          label: A.intl.string(A.t.h95hcn),
-                          helperText: K.freeformConfig.hideHelpdeskLink
+                      children: (0, i.jsx)(m.f, {
+                          label: O.intl.string(O.t.h95hcn),
+                          helperText: V.freeformConfig.hideHelpdeskLink
                               ? void 0
-                              : A.intl.format(A.t.ybi2tD, { helpdeskURL: p.A.getSubmitRequestURL() }),
-                          value: Z,
-                          maxLength: U.u0,
-                          onChange: $,
+                              : O.intl.format(O.t.ybi2tD, { helpdeskURL: b.A.getSubmitRequestURL() }),
+                          value: X,
+                          maxLength: A.u0,
+                          onChange: J,
                       }),
                   })),
-                  (a = () => {
-                      $(""), Q(null);
+                  (l = () => {
+                      J(""), Q(null);
                   }),
-                  (J = !0)),
-        (0, l.jsxs)(u.EO, {
+                  (Y = !0)),
+        (0, i.jsxs)(d.EO, {
             "data-migration-pending": !0,
-            impression: P,
-            transitionState: F,
-            className: x.CR,
-            "aria-labelledby": G,
+            impression: H,
+            transitionState: P,
+            className: y.CR,
+            "aria-labelledby": w,
             parentComponent: "FeedbackModalV2",
             children: [
-                (0, l.jsxs)(u.rQ, {
+                (0, i.jsxs)(d.rQ, {
                     "data-migration-pending": !0,
                     separator: !1,
-                    className: x.N1,
+                    className: y.N1,
                     children: [
-                        (0, l.jsx)(c.D, { id: G, variant: "heading-xl/extrabold", color: "none", children: L }),
-                        (0, l.jsx)(E.E, { variant: "text-md/normal", color: "none", className: x.sB, children: _ }),
+                        (0, i.jsx)(h.D, { id: w, variant: "heading-xl/extrabold", color: "none", children: D }),
+                        (0, i.jsx)(g.E, { variant: "text-md/normal", color: "none", className: y.sB, children: E }),
                     ],
                 }),
-                t,
+                n,
                 W &&
-                    (0, l.jsxs)(u.jl, {
+                    (0, i.jsxs)(d.jl, {
                         "data-migration-pending": !0,
-                        className: x.qr,
-                        direction: h.A.Direction.HORIZONTAL,
+                        className: y.qr,
+                        direction: j.A.Direction.HORIZONTAL,
                         children: [
-                            (0, l.jsx)(f.$, {
+                            (0, i.jsx)(f.$, {
                                 variant: "secondary",
                                 size: "sm",
-                                text: A.intl.string(A.t["13/7kX"]),
-                                onClick: a,
+                                text: O.intl.string(O.t["13/7kX"]),
+                                onClick: l,
                             }),
-                            J &&
-                                (0, l.jsx)(f.$, {
+                            Y &&
+                                (0, i.jsx)(f.$, {
                                     variant: "primary",
                                     size: "sm",
-                                    text: A.intl.string(A.t.geKm7t),
-                                    onClick: C,
+                                    text: O.intl.string(O.t.geKm7t),
+                                    onClick: N,
                                 }),
                         ],
                     }),

@@ -1,37 +1,37 @@
-i.r(t), i.d(t, { default: () => G });
-var n = i(627968),
-    a = i(64700),
-    o = i(873263),
-    r = i(17928),
-    s = i(289873),
+i.r(t), i.d(t, { default: () => h });
+var s = i(627968),
+    r = i(64700),
+    n = i(873263),
+    u = i(17928),
+    d = i(289873),
     l = i(916603),
-    d = i(448564),
-    u = i(997509),
+    o = i(448564),
+    a = i(468689),
     c = i(976860),
-    S = i(71393),
-    E = i(652215);
-function G(e) {
+    p = i(71393),
+    f = i(652215);
+function h(e) {
     let { guildId: t } = e,
-        i = (0, r.bG)([S.A], () => S.A.getGuild(t)),
-        [G, b] = a.useState(!0);
-    return (a.useEffect(() => {
+        i = (0, u.bG)([p.A], () => p.A.getGuild(t)),
+        [h, b] = r.useState(!0);
+    return (r.useEffect(() => {
         let e = setTimeout(() => {
             null == i &&
-                (0, c.pX)(E.BVt.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-onboarding"));
+                (0, c.pX)(f.BVt.PICK_GUILD_SETTINGS("role-subscriptions", void 0, "server-subscriptions-onboarding"));
         }, 3e3);
         return () => clearTimeout(e);
     }, [i]),
-    a.useEffect(() => {
+    r.useEffect(() => {
         null != i &&
-            G &&
-            (d.A.hasSeenCreatorOnboardingForGuild(i.id) || (0, l.G)(i.id),
-            u.A.open(i.id, E.BEX.ROLE_SUBSCRIPTIONS),
+            h &&
+            (o.A.hasSeenCreatorOnboardingForGuild(i.id) || (0, l.G)(i.id),
+            a.A.open(i.id, f.BEX.ROLE_SUBSCRIPTIONS),
             b(!1));
-    }, [G, i]),
-    null == i || G)
-        ? (0, n.jsx)("div", {
+    }, [h, i]),
+    null == i || h)
+        ? (0, s.jsx)("div", {
               style: { display: "flex", justifyContent: "center", width: "100%" },
-              children: (0, n.jsx)(s.y, {}),
+              children: (0, s.jsx)(d.y, {}),
           })
-        : (0, n.jsx)(o.rd, { to: E.BVt.CHANNEL(t) });
+        : (0, s.jsx)(n.rd, { to: f.BVt.CHANNEL(t) });
 }

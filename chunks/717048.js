@@ -1,43 +1,43 @@
-n.d(t, { A: () => d });
-var l = n(627968),
-    i = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    r = n(486020),
-    o = n(985018),
-    c = n(398263);
-function d(e) {
+s.d(n, { A: () => r });
+var a = s(627968),
+    t = s(64700),
+    c = s(503698),
+    l = s.n(c),
+    e = s(486020),
+    d = s(375708),
+    o = s(340791);
+function r(i) {
     let {
-            application: t,
-            src: n,
-            className: a,
-            size: d,
+            application: n,
+            src: s,
+            className: c,
+            size: r,
             botIconFirst: u,
-            fallbackAvatar: m,
-            rendersPlaceholder: p = !1,
-        } = e,
-        _ = i.useMemo(
+            fallbackAvatar: p,
+            rendersPlaceholder: h = !1,
+        } = i,
+        b = t.useMemo(
             () =>
-                null != t
-                    ? r.Ay.getApplicationIconURL({
-                          id: t.id,
-                          icon: t.icon,
-                          bot: t.bot,
-                          size: d,
+                null != n
+                    ? e.Ay.getApplicationIconURL({
+                          id: n.id,
+                          icon: n.icon,
+                          bot: n.bot,
+                          size: r,
                           botIconFirst: u,
-                          fallbackAvatar: m,
+                          fallbackAvatar: p,
                       })
-                    : n,
-            [t, n, d, u, m],
+                    : s,
+            [n, s, r, u, p],
         );
-    return null == _
-        ? p
-            ? (0, l.jsx)("div", { className: s()(c.K, c.q, a) })
+    return null == b
+        ? h
+            ? (0, a.jsx)("div", { className: l()(o.K, o.q, c) })
             : null
-        : (0, l.jsx)("img", {
-              className: s()(c.K, a),
-              alt: o.intl.string(o.t.X4IxWL),
-              src: _,
+        : (0, a.jsx)("img", {
+              className: l()(o.K, c),
+              alt: d.intl.string(d.t.X4IxWL),
+              src: b,
               "aria-hidden": !0,
               draggable: !1,
           });

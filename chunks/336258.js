@@ -2,15 +2,15 @@
 var t = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
-            var r = t[n];
-            (r.enumerable = r.enumerable || !1),
-                (r.configurable = !0),
-                "value" in r && (r.writable = !0),
-                Object.defineProperty(e, r.key, r);
+            var i = t[n];
+            (i.enumerable = i.enumerable || !1),
+                (i.configurable = !0),
+                "value" in i && (i.writable = !0),
+                Object.defineProperty(e, i.key, i);
         }
     }
-    return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+    return function (t, n, i) {
+        return n && e(t.prototype, n), i && e(t, i), t;
     };
 })();
 e.exports = (function () {
@@ -19,7 +19,7 @@ e.exports = (function () {
     }
     return (
         t(e, [
-            { key: "start", value: function (e, t, n, r) {} },
+            { key: "start", value: function (e, t, n, i) {} },
             { key: "stop", value: function () {} },
             {
                 key: "__debouncedOnEnd",

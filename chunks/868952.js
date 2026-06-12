@@ -1,179 +1,179 @@
-i.d(e, { default: () => y }), i(321073);
-var n = i(627968),
-    s = i(64700),
-    a = i(136722),
-    l = i(825484),
-    r = i(821609),
-    o = i(935462),
-    c = i(97808),
-    d = i(778712),
-    _ = i(534514),
-    h = i(834730),
-    p = i(376092),
-    E = i(260509),
-    S = i(317525),
-    m = i(486020),
-    u = i(488926),
-    x = i(636042),
-    T = i(652215),
-    I = i(124759),
-    N = i(985018),
-    L = i(626241);
-function O(t) {
-    let { guild: e } = t,
-        i = m.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 120 });
-    return (0, n.jsxs)(o.rQ, {
-        className: L.wx,
+e.d(i, { default: () => q }), e(321073);
+var n = e(627968),
+    t = e(64700),
+    l = e(136722),
+    r = e(825484),
+    a = e(821609),
+    d = e(935462),
+    c = e(97808),
+    o = e(778712),
+    x = e(534514),
+    m = e(834730),
+    u = e(376092),
+    j = e(260509),
+    h = e(317525),
+    p = e(486020),
+    g = e(488926),
+    v = e(636042),
+    N = e(652215),
+    E = e(124759),
+    f = e(375708),
+    b = e(626241);
+function C(s) {
+    let { guild: i } = s,
+        e = p.Ay.getGuildIconURL({ id: i.id, icon: i.icon, size: 120 });
+    return (0, n.jsxs)(d.rQ, {
+        className: b.wx,
         "data-migration-pending": !0,
         children: [
             (0, n.jsx)("div", {
-                className: L.O_,
+                className: b.O_,
                 children:
-                    null != i
+                    null != e
                         ? (0, n.jsx)(c.eu, {
-                              src: i,
-                              "aria-label": e.name,
-                              size: d._3.SIZE_120,
-                              className: L.__invalid_guildIcon,
+                              src: e,
+                              "aria-label": i.name,
+                              size: o._3.SIZE_120,
+                              className: b.__invalid_guildIcon,
                           })
-                        : (0, n.jsx)("div", { className: L.q9, children: (0, E.Rb)(e) }),
+                        : (0, n.jsx)("div", { className: b.q9, children: (0, j.Rb)(i) }),
             }),
             (0, n.jsxs)("div", {
-                className: L.TK,
+                className: b.TK,
                 children: [
-                    (0, n.jsx)(_.D, {
+                    (0, n.jsx)(x.D, {
                         variant: "heading-lg/extrabold",
                         color: "text-strong",
-                        children: N.intl.string(N.t.MatO7M),
+                        children: f.intl.string(f.t.MatO7M),
                     }),
-                    (0, n.jsx)(h.E, {
+                    (0, n.jsx)(m.E, {
                         variant: "text-md/normal",
                         color: "text-strong",
-                        children: N.intl.string(N.t.VyPIeu),
+                        children: f.intl.string(f.t.VyPIeu),
                     }),
                 ],
             }),
         ],
     });
 }
-let j = (t) => (t.toString() === T.xBc.MENTION_EVERYONE.toString() ? N.intl.string(N.t.yCpsQw) : (0, p.hx)(t));
-function g(t) {
-    let { permissions: e } = t;
+let _ = (s) => (s.toString() === N.xBc.MENTION_EVERYONE.toString() ? f.intl.string(f.t.yCpsQw) : (0, u.hx)(s));
+function y(s) {
+    let { permissions: i } = s;
     return (0, n.jsxs)("div", {
-        className: L.CZ,
+        className: b.CZ,
         children: [
-            (0, n.jsx)(h.E, {
-                className: L.qd,
+            (0, n.jsx)(m.E, {
+                className: b.qd,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: N.intl.string(N.t["0WZKI4"]),
+                children: f.intl.string(f.t["0WZKI4"]),
             }),
             (0, n.jsx)("div", {
-                className: L.lM,
-                children: e.map((t, e) =>
+                className: b.lM,
+                children: i.map((s, i) =>
                     (0, n.jsxs)(
                         "div",
                         {
-                            className: L.ce,
+                            className: b.ce,
                             children: [
-                                (0, n.jsx)("div", { className: L.dT }),
-                                (0, n.jsx)(h.E, { variant: "text-sm/normal", color: "text-default", children: j(t) }),
+                                (0, n.jsx)("div", { className: b.dT }),
+                                (0, n.jsx)(m.E, { variant: "text-sm/normal", color: "text-default", children: _(s) }),
                             ],
                         },
-                        e,
+                        i,
                     ),
                 ),
             }),
         ],
     });
 }
-function R(t) {
-    let { permissions: e } = t;
+function I(s) {
+    let { permissions: i } = s;
     return (0, n.jsxs)("div", {
-        className: L.CZ,
+        className: b.CZ,
         children: [
-            (0, n.jsx)(h.E, {
-                className: L.qd,
+            (0, n.jsx)(m.E, {
+                className: b.qd,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: N.intl.string(N.t.Yo5qlq),
+                children: f.intl.string(f.t.Yo5qlq),
             }),
             (0, n.jsx)("div", {
-                className: L.lM,
-                children: e.map((t, e) =>
+                className: b.lM,
+                children: i.map((s, i) =>
                     (0, n.jsxs)(
                         "div",
                         {
-                            className: L.ce,
+                            className: b.ce,
                             children: [
-                                (0, n.jsx)("div", { className: L.xE }),
-                                (0, n.jsx)(h.E, { variant: "text-sm/normal", color: "text-muted", children: j(t) }),
+                                (0, n.jsx)("div", { className: b.xE }),
+                                (0, n.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: _(s) }),
                             ],
                         },
-                        e,
+                        i,
                     ),
                 ),
             }),
         ],
     });
 }
-function G(t) {
-    let { permissions: e } = t,
-        { enabledPermissions: i, disabledPermissions: s } = e;
-    return (0, n.jsx)(o.$m, {
+function M(s) {
+    let { permissions: i } = s,
+        { enabledPermissions: e, disabledPermissions: t } = i;
+    return (0, n.jsx)(d.$m, {
         "data-migration-pending": !0,
         children: (0, n.jsxs)("div", {
-            className: L.tp,
-            children: [(0, n.jsx)(g, { permissions: i }), (0, n.jsx)(R, { permissions: s })],
+            className: b.tp,
+            children: [(0, n.jsx)(y, { permissions: e }), (0, n.jsx)(I, { permissions: t })],
         }),
     });
 }
-function f(t) {
-    let { onConfirm: e, onDismiss: i } = t;
-    return (0, n.jsx)(o.jl, {
-        className: L.qr,
+function k(s) {
+    let { onConfirm: i, onDismiss: e } = s;
+    return (0, n.jsx)(d.jl, {
+        className: b.qr,
         "data-migration-pending": !0,
-        children: (0, n.jsxs)(l.e, {
+        children: (0, n.jsxs)(r.e, {
             fullWidth: !0,
             children: [
-                (0, n.jsx)(r.$, { variant: "secondary", text: N.intl.string(N.t.gWQZvr), onClick: i }),
-                (0, n.jsx)(r.$, { text: N.intl.string(N.t.iOSdAW), onClick: e }),
+                (0, n.jsx)(a.$, { variant: "secondary", text: f.intl.string(f.t.gWQZvr), onClick: e }),
+                (0, n.jsx)(a.$, { text: f.intl.string(f.t.iOSdAW), onClick: i }),
             ],
         }),
     });
 }
-function y(t) {
-    let { guild: e, transitionState: i, onClose: l } = t,
-        r = s.useMemo(() => {
-            let t = [],
-                i = [];
+function q(s) {
+    let { guild: i, transitionState: e, onClose: r } = s,
+        a = t.useMemo(() => {
+            let s = [],
+                e = [];
             return (
-                I.dR.map((n) => {
-                    u.Ib(n, e) ? t.push(n) : i.push(n);
+                E.dR.map((n) => {
+                    g.Ib(n, i) ? s.push(n) : e.push(n);
                 }),
-                { enabledPermissions: t, disabledPermissions: i }
+                { enabledPermissions: s, disabledPermissions: e }
             );
-        }, [e]);
-    if (null == e) return null;
+        }, [i]);
+    if (null == i) return null;
     let c = async () => {
-        let t = null != e ? S.A.getEveryoneRole(e) : void 0;
-        if (null == t) return;
-        let i = a.TF(t.permissions, I.e$);
-        await (0, x.JY)(e.id, [{ ...t, permissions: i }]), l();
+        let s = null != i ? h.A.getEveryoneRole(i) : void 0;
+        if (null == s) return;
+        let e = l.TF(s.permissions, E.e$);
+        await (0, v.JY)(i.id, [{ ...s, permissions: e }]), r();
     };
-    return (0, n.jsxs)(o.EO, {
-        transitionState: i,
-        size: o.rI.SMALL,
-        className: L.yl,
+    return (0, n.jsxs)(d.EO, {
+        transitionState: e,
+        size: d.rI.SMALL,
+        className: b.yl,
         parentComponent: "DisableRiskyPermsModal",
         "data-migration-pending": !0,
         children: [
-            (0, n.jsx)(O, { guild: e }),
-            (0, n.jsx)(G, { permissions: r }),
-            (0, n.jsx)(f, {
+            (0, n.jsx)(C, { guild: i }),
+            (0, n.jsx)(M, { permissions: a }),
+            (0, n.jsx)(k, {
                 onConfirm: c,
                 onDismiss: () => {
-                    l();
+                    r();
                 },
             }),
         ],

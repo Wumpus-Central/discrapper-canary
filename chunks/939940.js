@@ -1,105 +1,105 @@
-i.d(e, { default: () => N });
-var n = i(627968),
-    l = i(64700),
-    a = i(189213),
-    o = i(825484),
-    s = i(265872),
-    r = i(821609),
-    d = i(834730),
-    c = i(435183),
-    m = i(937773),
-    u = i(235640),
-    j = i(307731),
-    x = i(985018),
-    h = i(532067);
-let N = (t) => {
-    let { channel: e, onClose: i, transitionState: N } = t,
-        [b, g] = l.useState(e.defaultReactionEmoji ?? null),
-        [p, v] = l.useState(!1),
-        [E, f] = l.useState(!1),
-        k = l.useRef(null),
-        _ = (e.defaultReactionEmoji?.emojiId ?? null) !== (b?.emojiId ?? null),
-        y = (e.defaultReactionEmoji?.emojiName ?? null) !== (b?.emojiName ?? null),
-        C = _ || y,
-        I = (t) => {
-            g(null == t ? null : t?.id != null ? { emojiId: t.id } : { emojiName: t.optionallyDiverseSequence });
+n.d(i, { default: () => x });
+var e = n(627968),
+    l = n(64700),
+    a = n(189213),
+    o = n(825484),
+    s = n(922016),
+    r = n(821609),
+    c = n(834730),
+    u = n(435183),
+    d = n(267889),
+    m = n(235640),
+    j = n(307731),
+    g = n(375708),
+    p = n(532067);
+let x = (t) => {
+    let { channel: i, onClose: n, transitionState: x } = t,
+        [E, h] = l.useState(i.defaultReactionEmoji ?? null),
+        [k, f] = l.useState(!1),
+        [C, N] = l.useState(!1),
+        R = l.useRef(null),
+        v = (i.defaultReactionEmoji?.emojiId ?? null) !== (E?.emojiId ?? null),
+        y = (i.defaultReactionEmoji?.emojiName ?? null) !== (E?.emojiName ?? null),
+        I = v || y,
+        b = (t) => {
+            h(null == t ? null : t?.id != null ? { emojiId: t.id } : { emojiName: t.optionallyDiverseSequence });
         },
-        w = async () => {
-            if (C) {
-                v(!0), f(!1);
+        S = async () => {
+            if (I) {
+                f(!0), N(!1);
                 try {
-                    await (0, c.RT)(e.id, { defaultReactionEmoji: b }), i();
+                    await (0, u.RT)(i.id, { defaultReactionEmoji: E }), n();
                 } catch (t) {
-                    f(!0);
+                    N(!0);
                 } finally {
-                    v(!1);
+                    f(!1);
                 }
             }
         };
-    return (0, n.jsxs)(a.Modal, {
-        title: x.intl.string(x.t.XlDE3k),
-        subtitle: x.intl.string(x.t.lVqhdd),
-        transitionState: N,
-        onClose: i,
+    return (0, e.jsxs)(a.Modal, {
+        title: g.intl.string(g.t.XlDE3k),
+        subtitle: g.intl.string(g.t.lVqhdd),
+        transitionState: x,
+        onClose: n,
         actions: [
-            { variant: "secondary", text: x.intl.string(x.t["ETE/oC"]), onClick: i },
+            { variant: "secondary", text: g.intl.string(g.t["ETE/oC"]), onClick: n },
             {
                 variant: "primary",
-                text: x.intl.string(x.t["R3BPH+"]),
-                loading: p,
-                disabled: !C,
-                onClick: w,
+                text: g.intl.string(g.t["R3BPH+"]),
+                loading: k,
+                disabled: !I,
+                onClick: S,
                 autoFocus: !0,
             },
         ],
         children: [
-            (0, n.jsx)(u.A, { reactionEmoji: b }),
-            (0, n.jsxs)(o.e, {
+            (0, e.jsx)(m.A, { reactionEmoji: E }),
+            (0, e.jsxs)(o.e, {
                 size: "sm",
-                className: h.v,
+                className: p.v,
                 children: [
-                    (0, n.jsx)(s.Y, {
-                        targetElementRef: k,
+                    (0, e.jsx)(s.Y, {
+                        targetElementRef: R,
                         renderPopout: (t) => {
-                            let { closePopout: i } = t;
-                            return (0, n.jsx)(m.A, {
-                                guildId: e?.guild_id,
-                                closePopout: i,
+                            let { closePopout: n } = t;
+                            return (0, e.jsx)(d.A, {
+                                guildId: i?.guild_id,
+                                closePopout: n,
                                 onSelectEmoji: (t) => {
-                                    let { emoji: e, willClose: n } = t;
-                                    I(e), n && i();
+                                    let { emoji: i, willClose: e } = t;
+                                    b(i), e && n();
                                 },
                                 pickerIntention: j.EmojiIntention.COMMUNITY_CONTENT,
-                                channel: e,
+                                channel: i,
                             });
                         },
                         position: "right",
                         animation: s.Y.Animation.NONE,
                         align: "center",
                         children: (t) =>
-                            (0, n.jsx)(r.$, {
+                            (0, e.jsx)(r.$, {
                                 ...t,
-                                buttonRef: k,
-                                text: x.intl.string(x.t["59QgaD"]),
+                                buttonRef: R,
+                                text: g.intl.string(g.t["59QgaD"]),
                                 variant: "primary",
-                                onClick: (e) => {
-                                    t.onClick?.(e);
+                                onClick: (i) => {
+                                    t.onClick?.(i);
                                 },
                             }),
                     }),
-                    null != b &&
-                        (0, n.jsx)(r.$, {
-                            text: x.intl.string(x.t.N86XcP),
+                    null != E &&
+                        (0, e.jsx)(r.$, {
+                            text: g.intl.string(g.t.N86XcP),
                             variant: "critical-secondary",
-                            onClick: () => I(null),
+                            onClick: () => b(null),
                         }),
                 ],
             }),
-            E
-                ? (0, n.jsx)(d.E, {
+            C
+                ? (0, e.jsx)(c.E, {
                       variant: "text-sm/normal",
                       color: "text-feedback-critical",
-                      children: x.intl.string(x.t.F75nNl),
+                      children: g.intl.string(g.t.F75nNl),
                   })
                 : null,
         ],

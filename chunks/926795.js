@@ -1,15 +1,15 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => C });
 var l = n(627968),
-    a = n(64700),
+    r = n(64700),
     i = n(830382),
-    r = n(696208),
+    a = n(696208),
     s = n(534514),
     o = n(834730),
     u = n(349288),
     c = n(375708),
     d = n(94204);
 let p = (e) => {
-        let { className: t, isEmailResent: n, resendEmail: a } = e;
+        let { className: t, isEmailResent: n, resendEmail: r } = e;
         return (0, l.jsx)("div", {
             className: t,
             children: (0, l.jsxs)("div", {
@@ -29,7 +29,7 @@ let p = (e) => {
                                     "\xa0",
                                     n
                                         ? c.intl.string(c.t.StGVvC)
-                                        : (0, l.jsx)(u.Anchor, { onClick: a, children: c.intl.string(c.t.Ex7sk9) }),
+                                        : (0, l.jsx)(u.Anchor, { onClick: r, children: c.intl.string(c.t.Ex7sk9) }),
                                 ],
                             }),
                         ],
@@ -39,22 +39,22 @@ let p = (e) => {
         });
     },
     m = () => {
-        let e = a.useMemo(() => [{ variant: "primary", text: c.intl.string(c.t.g8vPzy), disabled: !0 }], []);
-        return (0, l.jsx)(r.H, { actions: e });
+        let e = r.useMemo(() => [{ variant: "primary", text: c.intl.string(c.t.g8vPzy), disabled: !0 }], []);
+        return (0, l.jsx)(a.H, { actions: e });
     };
 var h = n(69494),
-    C = n(482132),
-    A = n(599961);
-function y() {
-    let [e, t] = a.useState(!1),
+    A = n(482132),
+    E = n(599961);
+function C() {
+    let [e, t] = r.useState(!1),
         n = async () => {
             t(!0), await (0, i.lo)();
         };
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(h.A, {}),
-            (0, l.jsx)(C.dZ, { children: (0, l.jsx)(p, { className: A.r, isEmailResent: e, resendEmail: n }) }),
-            (0, l.jsx)(C.UX, { children: (0, l.jsx)(m, {}) }),
+            (0, l.jsx)(A.dZ, { children: (0, l.jsx)(p, { className: E.r, isEmailResent: e, resendEmail: n }) }),
+            (0, l.jsx)(A.UX, { children: (0, l.jsx)(m, {}) }),
         ],
     });
 }

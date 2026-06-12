@@ -1,5 +1,5 @@
-var r = n(782017);
+var i = n(782017);
 e.exports = function (e, t) {
-    var n = t ? r(e.buffer) : e.buffer;
+    var n = t ? i(e.buffer) : e.buffer;
     return new e.constructor(n, e.byteOffset, e.byteLength);
 };

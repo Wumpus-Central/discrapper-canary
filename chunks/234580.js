@@ -1,4 +1,4 @@
-t.r(
+c.r(
     (e.exports = {
         carousel: "carousel__38359",
         children: "children__38359",

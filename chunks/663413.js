@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(49621),
     d = n(590703),
     _ = n(265059),
-    f = n(567249),
-    h = n(597619),
+    h = n(567249),
+    f = n(597619),
     p = n(726249),
     E = n(203480),
     m = n(652215);
@@ -24,12 +24,12 @@ let g = new Set([m.BVt.LOGIN, m.BVt.REGISTER]),
         return (0, i.jsxs)(o.mg, {
             children: [
                 (function (e) {
-                    let { lang: t, style: n, className: s } = (0, h.xb)(),
+                    let { lang: t, style: n, className: s } = (0, f.xb)(),
                         o = (0, l.zy)(),
                         c = r.useMemo(() => g.has(o.pathname), [o.pathname]);
                     (0, E.A)(window, c);
-                    let d = (0, u.bG)([_.A, f.A], () =>
-                        f.A.getWindowOpen(m.MLl.DEVTOOLS_POPOUT) ? 0 : _.A.sidebarWidth,
+                    let d = (0, u.bG)([_.A, h.A], () =>
+                        h.A.getWindowOpen(m.MLl.DEVTOOLS_POPOUT) ? 0 : _.A.sidebarWidth,
                     );
                     return (0, i.jsx)("html", {
                         lang: t,

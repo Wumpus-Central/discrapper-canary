@@ -11,8 +11,8 @@ let c = new a.Vy("ApexExperimentStore");
 "u" > typeof window && (null == window.TextEncoder || null == window.TextDecoder) && n(283346);
 let d = [l.ni.User, l.ni.Installation],
     _ = { user: {}, guild: {}, installation: {} },
-    f = {},
     h = {},
+    f = {},
     p = {},
     E = {},
     m = {},
@@ -21,31 +21,31 @@ let d = [l.ni.User, l.ni.Installation],
     I = "apexTrackedExposures",
     T = {},
     S = {};
-function N(e) {
+function y(e) {
     let t = S[e];
     return null == t && ((t = r().v3(e)), (S[e] = t)), t;
 }
-class y extends s.Ay.PersistedStore {
+class N extends s.Ay.PersistedStore {
     static displayName = "ApexExperimentStore";
     static persistKey = "ApexExperimentStore";
     track = () => Promise.resolve();
     surface = "unset";
     loadStoredState(e, t) {
         for (let n in (null != e && 3 === e.version
-            ? ((h = e.clientOverrides), (_ = e.evaluatedExperiments))
+            ? ((f = e.clientOverrides), (_ = e.evaluatedExperiments))
             : null != e &&
               2 === e.version &&
-              ((h = e.clientOverrides), (_ = { ...e.evaluatedExperiments, installation: {} })),
+              ((f = e.clientOverrides), (_ = { ...e.evaluatedExperiments, installation: {} })),
         (E = {}),
         t)) {
-            let e = N(n),
+            let e = y(n),
                 i = t[n];
             E[n] = { hashedName: e, variantId: i, isOverride: !0, exposureTrackingEnabled: !1, useAsEligibility: !1 };
         }
         T = this.loadTrackedExposures();
     }
     getState() {
-        return { version: 3, evaluatedExperiments: _, clientOverrides: h };
+        return { version: 3, evaluatedExperiments: _, clientOverrides: f };
     }
     setExperimentAssignments(e, t) {
         if (null == e && null == t) return !1;
@@ -94,15 +94,15 @@ class y extends s.Ay.PersistedStore {
         }
     }
     createOverride(e, t) {
-        (h = { ...h, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } }),
+        (f = { ...f, [e]: { hashedName: y(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } }),
             this.trackExposureSuppression(e, "client_override");
     }
     deleteOverride(e) {
-        let { [e]: t, ...n } = h;
-        h = n;
+        let { [e]: t, ...n } = f;
+        f = n;
     }
     createSessionOverride(e, t) {
-        p = { ...p, [e]: { hashedName: N(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } };
+        p = { ...p, [e]: { hashedName: y(e), variantId: t, isOverride: !0, exposureTrackingEnabled: !1 } };
     }
     deleteSessionOverride(e) {
         let { [e]: t, ...n } = p;
@@ -115,13 +115,13 @@ class y extends s.Ay.PersistedStore {
         return m;
     }
     getClientOverrides() {
-        return h;
+        return f;
     }
     getSessionOverrides() {
         return p;
     }
     getExperimentClientOverride(e) {
-        return h[e];
+        return f[e];
     }
     getExperimentSessionOverride(e) {
         return p[e];
@@ -132,17 +132,17 @@ class y extends s.Ay.PersistedStore {
             this.clearAllTrackedExposures();
     }
     registerExperiment(e) {
-        (f[e.name] = e), null != E[e.name] && this.trackExposureSuppression(e.name, "cookie_override");
+        (h[e.name] = e), null != E[e.name] && this.trackExposureSuppression(e.name, "cookie_override");
     }
     getRegisteredExperiments() {
-        return f;
+        return h;
     }
     getAssignment(e, t, n) {
         let i = this.getOverride(n);
         return null != i ? i : this.getServerAssignment(e, t, n);
     }
     getServerAssignment(e, t, n) {
-        let i = N(n),
+        let i = y(n),
             r = _[e][t];
         if (null != r) return r.assignments[i];
     }
@@ -153,7 +153,7 @@ class y extends s.Ay.PersistedStore {
         let i = this.getOverride(n);
         if (null != i) return [void 0, i];
         let r = _[e][t];
-        return null == r ? [void 0, void 0] : [r.evaluationId, r.assignments[N(n)]];
+        return null == r ? [void 0, void 0] : [r.evaluationId, r.assignments[y(n)]];
     }
     getEvaluationAndAssignment(e, t, n, i) {
         let [r, s] = this.getEvaluationAndAssignmentInner(e, t, n);
@@ -170,7 +170,7 @@ class y extends s.Ay.PersistedStore {
         }
     }
     trackExperimentExposure(e, t, n, i, r, s, a) {
-        let o = N(`${t}|${r}|${s}|${n}|${a}|1`);
+        let o = y(`${t}|${r}|${s}|${n}|${a}|1`);
         "user" === i
             ? this.withExposureTracking(o, () =>
                   this.track(
@@ -213,7 +213,7 @@ class y extends s.Ay.PersistedStore {
     }
     trackCommonTriggerPointExposures(e) {
         for (let { evaluationId: t } of this.evaluationsWithUnitIds("user")) {
-            let n = N(`${t}|${e}`);
+            let n = y(`${t}|${e}`);
             this.withExposureTracking(n, () =>
                 this.track(
                     u.sE.EXPERIMENT_USER_EVALUATION_EXPOSED,
@@ -223,7 +223,7 @@ class y extends s.Ay.PersistedStore {
             );
         }
         for (let { evaluationId: t, unitId: n } of this.evaluationsWithUnitIds("installation")) {
-            let i = N(`${t}|${e}`);
+            let i = y(`${t}|${e}`);
             this.withExposureTracking(i, () =>
                 this.track(
                     u.sE.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED,
@@ -237,7 +237,7 @@ class y extends s.Ay.PersistedStore {
         this.shouldTrackExposure(e) && (t(), (T[e] = Date.now()), this.saveTrackedExposures(T));
     }
     trackExposureSuppression(e, t) {
-        let n = f[e];
+        let n = h[e];
         if (null != n) {
             if ("user" === n.kind)
                 this.track(
@@ -319,7 +319,7 @@ class y extends s.Ay.PersistedStore {
         _ = { user: {}, guild: {}, installation: _.installation };
     }
     clearAllOverrides() {
-        (h = {}), (p = {}), (E = {});
+        (f = {}), (p = {}), (E = {});
     }
     clearSessionOverrides() {
         p = {};
@@ -328,7 +328,7 @@ class y extends s.Ay.PersistedStore {
         T = {};
     }
     getHash(e) {
-        return N(e);
+        return y(e);
     }
     handleFetchStart(e) {
         g.add(e);
@@ -346,19 +346,19 @@ class y extends s.Ay.PersistedStore {
         return A.has(e);
     }
     getOverride(e) {
-        return p[e] ?? h[e] ?? E[e];
+        return p[e] ?? f[e] ?? E[e];
     }
 }
-var C = n(228366),
-    v = n(380610),
-    O = n(495544),
-    R = n(174459),
+var v = n(228366),
+    C = n(380610),
+    R = n(495544),
+    O = n(174459),
     b = n(652215);
-let D = new (class extends y {
+let D = new (class extends N {
     lastEmittedDebugVariantId;
     constructor() {
         super(
-            C.h,
+            v.h,
             {
                 CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
                 CONNECTION_OPEN_STATE_UPDATE: (e) => this.setExperimentAssignments(e.apexExperiments),
@@ -376,20 +376,20 @@ let D = new (class extends y {
                 APEX_EXPERIMENTS_FETCH_FAILURE: (e) => this.handleFetchFailure(e.unitId),
                 LOGOUT: (e) => this.handleLogout(e.isSwitchingAccount),
             },
-            C.A.Early,
+            v.A.Early,
         ),
             (this.track = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                return R.default.track(...t);
+                return O.default.track(...t);
             }),
             (this.surface = "discord_app"),
             this.addChangeListener(() => this.maybeEmitDebugExperimentEvent());
     }
     initialize(e) {
-        this.waitFor(O.default), this.loadStoredState(e, (0, v.DI)());
+        this.waitFor(R.default), this.loadStoredState(e, (0, C.DI)());
     }
     maybeEmitDebugExperimentEvent() {
-        let e = O.default.getId(),
+        let e = R.default.getId(),
             [, t] = this.getEvaluationAndAssignment("user", e, "2026-03-debug-experiment"),
             n = t?.variantId;
         if (null == n || 0 === n) {
@@ -398,7 +398,7 @@ let D = new (class extends y {
         }
         n !== this.lastEmittedDebugVariantId &&
             ((this.lastEmittedDebugVariantId = n),
-            R.default.track(b.HAw.EXPERIMENT_APEX_DEBUGGING_EVENT, {
+            O.default.track(b.HAw.EXPERIMENT_APEX_DEBUGGING_EVENT, {
                 experiment: "2026-03-debug-experiment",
                 apex_debug_variant: n,
                 experiment_location: "apex_assignments_received",

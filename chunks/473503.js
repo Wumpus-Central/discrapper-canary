@@ -11,7 +11,7 @@ var i = n(735438),
     d = n(969043);
 n(246943);
 var _ = n(652215);
-class f {
+class h {
     _set;
     _defaultValueFunc;
     constructor(e) {
@@ -30,10 +30,10 @@ class f {
         return u.default.keys(this._set)[0];
     }
 }
-let h = new (class {
+let f = new (class {
         requested;
         constructor() {
-            this.requested = new f(() => new Set());
+            this.requested = new h(() => new Set());
         }
         request(e, t) {
             this.requested.get(e).add(t);
@@ -43,7 +43,7 @@ let h = new (class {
         }
         finishRequesting(e, t) {
             let n = this.requested.get(e);
-            t.forEach((e) => n.delete(e)), h.compact(e);
+            t.forEach((e) => n.delete(e)), f.compact(e);
         }
         getRequested(e) {
             return this.requested.get(e);
@@ -75,10 +75,10 @@ function E(e) {
             (n
                 ? m(a, [e.id])
                 : (function (e, t) {
-                      if (h.hasRequested(e.id, t)) return;
+                      if (f.hasRequested(e.id, t)) return;
                       let n = (0, c.S)(e.id),
                           i = n.findIndex((e) => e === t),
-                          r = n.slice(i, i + 5).filter((t) => !h.hasRequested(e.id, t));
+                          r = n.slice(i, i + 5).filter((t) => !f.hasRequested(e.id, t));
                       m(e, r);
                   })(a, e.id)),
         { loaded: i, firstMessage: t ? r : null }
@@ -88,7 +88,7 @@ function m(e, t) {
     let n = !1;
     t.forEach((t) => {
         let { loaded: i, firstMessage: r } = d.A.getMessage(t);
-        i || null != r || (h.request(e.id, t), (n = !0));
+        i || null != r || (f.request(e.id, t), (n = !0));
     }),
         n && null == p && (p = setTimeout(A, 0));
 }
@@ -97,13 +97,13 @@ function g(e) {
 }
 async function A() {
     try {
-        for (; h.hasNext(); ) await I(h.next());
+        for (; f.hasNext(); ) await I(f.next());
     } finally {
         p = null;
     }
 }
 async function I(e) {
-    let t = h.getNextBatch(e, 10);
+    let t = f.getNextBatch(e, 10);
     try {
         if (0 === t.length) return;
         let n = l.A.getChannel(e)?.guild_id;
@@ -114,6 +114,6 @@ async function I(e) {
         o.h.dispatch({ type: "LOAD_FORUM_POSTS", guildId: n, threads: i });
     } catch (e) {
     } finally {
-        h.finishRequesting(e, t);
+        f.finishRequesting(e, t);
     }
 }

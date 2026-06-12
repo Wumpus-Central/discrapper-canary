@@ -1,15 +1,15 @@
-a.d(e, { A: () => u });
-var p = a(64700),
+a.d(n, { A: () => i });
+var t = a(64700),
     r = a(17928),
-    i = a(733391),
-    n = a(832163);
-function u(t) {
-    let { applicationId: e } = t,
-        a = (0, r.bG)([n.A], () => (null != e ? n.A.getStorefrontDataForApplicationId(e) : void 0), [e]);
+    d = a(733391),
+    l = a(832163);
+function i(e) {
+    let { applicationId: n } = e,
+        a = (0, r.bG)([l.A], () => (null != n ? l.A.getStorefrontDataForApplicationId(n) : void 0), [n]);
     return (
-        p.useEffect(() => {
-            null != e && (0, i.ap)(e, { eager: !1 });
-        }, [e]),
+        t.useEffect(() => {
+            null != n && (0, d.ap)(n, { eager: !1 });
+        }, [n]),
         a
     );
 }

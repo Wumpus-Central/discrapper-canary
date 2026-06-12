@@ -1,33 +1,33 @@
-var r = function (e) {
+var i = function (e) {
         return String(Number(e)) === e ? Number(e) : e;
     },
-    i = function (e, t, n, i) {
-        if (i && !n) t[i] = r(e[1]);
-        else for (var a = 0; a < n.length; a += 1) null != e[a + 1] && (t[n[a]] = r(e[a + 1]));
+    r = function (e, t, n, r) {
+        if (r && !n) t[r] = i(e[1]);
+        else for (var s = 0; s < n.length; s += 1) null != e[s + 1] && (t[n[s]] = i(e[s + 1]));
     },
-    a = function (e, t, n) {
-        var r = e.name && e.names;
-        e.push && !t[e.push] ? (t[e.push] = []) : r && !t[e.name] && (t[e.name] = {});
-        var a = e.push ? {} : r ? t[e.name] : t;
-        i(n.match(e.reg), a, e.names, e.name), e.push && t[e.push].push(a);
+    s = function (e, t, n) {
+        var i = e.name && e.names;
+        e.push && !t[e.push] ? (t[e.push] = []) : i && !t[e.name] && (t[e.name] = {});
+        var s = e.push ? {} : i ? t[e.name] : t;
+        r(n.match(e.reg), s, e.names, e.name), e.push && t[e.push].push(s);
     },
-    s = n(150594),
+    a = n(150594),
     o = RegExp.prototype.test.bind(/^([a-z])=(.*)/);
 t.parse = function (e) {
     var t = {},
         n = [],
-        r = t;
+        i = t;
     return (
         e
             .split(/(\r\n|\r|\n)/)
             .filter(o)
             .forEach(function (e) {
                 var t = e[0],
-                    i = e.slice(2);
-                "m" === t && (n.push({ rtp: [], fmtp: [] }), (r = n[n.length - 1]));
-                for (var o = 0; o < (s[t] || []).length; o += 1) {
-                    var l = s[t][o];
-                    if (l.reg.test(i)) return a(l, r, i);
+                    r = e.slice(2);
+                "m" === t && (n.push({ rtp: [], fmtp: [] }), (i = n[n.length - 1]));
+                for (var o = 0; o < (a[t] || []).length; o += 1) {
+                    var l = a[t][o];
+                    if (l.reg.test(r)) return s(l, i, r);
                 }
             }),
         (t.media = n),
@@ -36,7 +36,7 @@ t.parse = function (e) {
 };
 var l = function (e, t) {
     var n = t.split(/=(.+)/, 2);
-    return 2 === n.length ? (e[n[0]] = r(n[1])) : 1 === n.length && t.length > 1 && (e[n[0]] = void 0), e;
+    return 2 === n.length ? (e[n[0]] = i(n[1])) : 1 === n.length && t.length > 1 && (e[n[0]] = void 0), e;
 };
 (t.parseParams = function (e) {
     return e.split(/;\s?/).reduce(l, {});
@@ -46,8 +46,8 @@ var l = function (e, t) {
         return e.toString().split(" ").map(Number);
     }),
     (t.parseRemoteCandidates = function (e) {
-        for (var t = [], n = e.split(" ").map(r), i = 0; i < n.length; i += 3)
-            t.push({ component: n[i], ip: n[i + 1], port: n[i + 2] });
+        for (var t = [], n = e.split(" ").map(i), r = 0; r < n.length; r += 3)
+            t.push({ component: n[r], ip: n[r + 1], port: n[r + 2] });
         return t;
     }),
     (t.parseImageAttributes = function (e) {
@@ -64,7 +64,7 @@ var l = function (e, t) {
                 var t,
                     n = !1;
                 return (
-                    "~" !== e[0] ? (t = r(e)) : ((t = r(e.substring(1, e.length))), (n = !0)), { scid: t, paused: n }
+                    "~" !== e[0] ? (t = i(e)) : ((t = i(e.substring(1, e.length))), (n = !0)), { scid: t, paused: n }
                 );
             });
         });

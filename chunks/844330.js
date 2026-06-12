@@ -1,67 +1,67 @@
-a.d(t, { A: () => u });
-var n = a(627968),
-    l = a(64700),
-    i = a(503698),
-    s = a.n(i),
-    r = a(939249),
-    o = a(834730),
-    d = a(147925),
-    c = a(214205);
-function u(e) {
+l.d(s, { A: () => x });
+var t = l(627968),
+    i = l(64700),
+    n = l(503698),
+    r = l.n(n),
+    c = l(939249),
+    a = l(834730),
+    u = l(147925),
+    d = l(214205);
+function x(e) {
     let {
-            icon: t,
-            title: a,
-            subtitle: i,
-            children: u,
-            className: m,
-            isExpanded: h,
-            onExpandedChange: p,
-            defaultExpanded: x = !1,
-            onOpen: g,
-            maxHeight: v,
+            icon: s,
+            title: l,
+            subtitle: n,
+            children: x,
+            className: h,
+            isExpanded: m,
+            onExpandedChange: o,
+            defaultExpanded: p = !1,
+            onOpen: f,
+            maxHeight: j,
         } = e,
-        [b, _] = l.useState(x),
-        f = l.useRef(null),
-        [j, A] = l.useState(null),
-        y = void 0 !== h,
-        C = y ? h : b;
-    l.useEffect(() => {
-        C && null != f.current && A(f.current.scrollHeight);
-    }, [C, u]);
-    let E = l.useCallback(() => {
-            let e = !C;
-            y || _(e), p?.(e), e && null != g && g();
-        }, [C, y, p, g]),
-        S = l.useMemo(() => {
-            if (C) {
-                if (null != v) return { maxHeight: "number" == typeof v ? `${v}px` : v };
-                if (null != j) return { maxHeight: `${j}px` };
+        [v, g] = i.useState(p),
+        k = i.useRef(null),
+        [N, b] = i.useState(null),
+        S = void 0 !== m,
+        w = S ? m : v;
+    i.useEffect(() => {
+        w && null != k.current && b(k.current.scrollHeight);
+    }, [w, x]);
+    let C = i.useCallback(() => {
+            let e = !w;
+            S || g(e), o?.(e), e && null != f && f();
+        }, [w, S, o, f]),
+        D = i.useMemo(() => {
+            if (w) {
+                if (null != j) return { maxHeight: "number" == typeof j ? `${j}px` : j };
+                if (null != N) return { maxHeight: `${N}px` };
             }
-        }, [v, C, j]);
-    return (0, n.jsxs)("div", {
-        className: s()(c.Yt, m, { [c.Sg]: C }),
+        }, [j, w, N]);
+    return (0, t.jsxs)("div", {
+        className: r()(d.Yt, h, { [d.Sg]: w }),
         children: [
-            (0, n.jsxs)(r.D, {
-                className: c.wx,
-                onClick: E,
+            (0, t.jsxs)(c.D, {
+                className: d.wx,
+                onClick: C,
                 children: [
-                    null != t && (0, n.jsx)("div", { className: c.Y5, children: t }),
-                    (0, n.jsxs)("div", {
-                        className: c.DD,
+                    null != s && (0, t.jsx)("div", { className: d.Y5, children: s }),
+                    (0, t.jsxs)("div", {
+                        className: d.DD,
                         children: [
-                            (0, n.jsx)(o.E, { variant: "text-sm/medium", color: "text-default", children: a }),
-                            null != i &&
-                                "" !== i &&
-                                (0, n.jsx)(o.E, { variant: "text-xs/medium", color: "text-subtle", children: i }),
+                            (0, t.jsx)(a.E, { variant: "text-sm/medium", color: "text-default", children: l }),
+                            null != n &&
+                                "" !== n &&
+                                (0, t.jsx)(a.E, { variant: "text-xs/medium", color: "text-subtle", children: n }),
                         ],
                     }),
-                    (0, n.jsx)("div", {
-                        className: s()(c.OW, { [c.Sg]: C }),
-                        children: (0, n.jsx)(d.A, { width: 20, height: 20, direction: d.A.Directions.RIGHT }),
+                    (0, t.jsx)("div", {
+                        className: r()(d.OW, { [d.Sg]: w }),
+                        children: (0, t.jsx)(u.A, { width: 20, height: 20, direction: u.A.Directions.RIGHT }),
                     }),
                 ],
             }),
-            (0, n.jsx)("div", { ref: f, className: s()(c.Qs, { [c.Sg]: C }), style: S, children: u }),
+            (0, t.jsx)("div", { ref: k, className: r()(d.Qs, { [d.Sg]: w }), style: D, children: x }),
         ],
     });
 }

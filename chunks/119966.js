@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { G: () => r });
-class r extends Error {
+n.d(t, { G: () => i });
+class i extends Error {
     errorCode;
     closeCode;
     code;

@@ -1,28 +1,28 @@
 "use strict";
-var r = n(557939),
-    i = n(230606),
-    a = n(503628),
-    s = n(627),
+var i = n(557939),
+    r = n(230606),
+    s = n(503628),
+    a = n(627),
     o = n(304880),
     l = n(39911),
-    u = i("URL"),
+    u = r("URL"),
     c =
         l &&
-        a(function () {
+        s(function () {
             u.canParse();
         }),
-    d = a(function () {
+    d = s(function () {
         return 1 !== u.canParse.length;
     });
-r(
+i(
     { target: "URL", stat: !0, forced: !c || d },
     {
         canParse: function (e) {
-            var t = s(arguments.length, 1),
+            var t = a(arguments.length, 1),
                 n = o(e),
-                r = t < 2 || void 0 === arguments[1] ? void 0 : o(arguments[1]);
+                i = t < 2 || void 0 === arguments[1] ? void 0 : o(arguments[1]);
             try {
-                return new u(n, r), !0;
+                return new u(n, i), !0;
             } catch (e) {
                 return !1;
             }

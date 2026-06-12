@@ -1,14 +1,14 @@
-n.d(t, { A: () => l });
-var i = n(64700),
-    s = n(172218);
-function l(e) {
-    let { wishlistId: t, onAction: n, productLines: l } = e,
-        [a, o] = (0, i.useState)(!1),
-        r = (0, i.useCallback)(
+i.d(s, { A: () => n });
+var t = i(64700),
+    a = i(172218);
+function n(e) {
+    let { wishlistId: s, onAction: i, productLines: n } = e,
+        [l, r] = (0, t.useState)(!1),
+        o = (0, t.useCallback)(
             (e) => {
-                e && null != t && (n({ action: "VIEW_WISHLIST", wishlistId: t, productLines: l ?? void 0 }), o(!0));
+                e && null != s && (i({ action: "VIEW_WISHLIST", wishlistId: s, productLines: n ?? void 0 }), r(!0));
             },
-            [t, n, l],
+            [s, i, n],
         );
-    return (0, s.K)(r, void 0, null != t && !a);
+    return (0, a.K)(o, void 0, null != s && !l);
 }

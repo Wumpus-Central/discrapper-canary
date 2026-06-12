@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     lF: "participants__4783a",
     Kk: "icon__4783a",
     iA: "buttonIcon__4783a",

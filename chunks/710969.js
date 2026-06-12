@@ -2,10 +2,10 @@
 n.d(t, {
     GR: () => I,
     Gp: () => b,
-    HN: () => N,
+    HN: () => y,
     Ic: () => m,
-    Kc: () => O,
-    L4: () => R,
+    Kc: () => R,
+    L4: () => O,
     Oh: () => _,
     RF: () => L,
     ZG: () => T,
@@ -16,9 +16,9 @@ n.d(t, {
     t6: () => S,
     v1: () => A,
     vZ: () => D,
-    vc: () => f,
-    vy: () => h,
-    xn: () => y,
+    vc: () => h,
+    vy: () => f,
+    xn: () => N,
 });
 var i = n(665260),
     r = n(773669),
@@ -32,7 +32,7 @@ var i = n(665260),
 function _(e) {
     return null != e && e.fetchedAt + e.ttlMillis >= Date.now();
 }
-function f(e, t, n) {
+function h(e, t, n) {
     let i = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
         r = Array.isArray(n) ? new Map(n.map((e) => [e.id, e])) : n,
         s = i.get(e);
@@ -40,11 +40,11 @@ function f(e, t, n) {
     let a = r.get(e)?.replacementId;
     if (null != a) return i.get(a);
 }
-function h(e) {
+function f(e) {
     return Object.keys(c.TY).includes(l.uF[e]);
 }
 function p(e, t) {
-    if (!h(t)) return !1;
+    if (!f(t)) return !1;
     let n = l.uF[t];
     return (0, i.Lt)(e.dismissedQuestContent, c.TY[n]);
 }
@@ -82,7 +82,7 @@ function S(e, t, n) {
     let r = e.get(i.quest.id);
     if (null != r && !m(r)) return r;
 }
-function N(e) {
+function y(e) {
     return {
         [l.uF.QUEST_BAR]: l.yW.DESKTOP_ACCOUNT_PANEL_AREA,
         [l.uF.QUEST_BAR_V2]: l.yW.DESKTOP_ACCOUNT_PANEL_AREA,
@@ -92,11 +92,11 @@ function N(e) {
         [l.uF.QUEST_HOME_MOBILE_CAROUSEL]: l.yW.QUEST_HOME_MOBILE_CAROUSEL,
     }[e];
 }
-function y(e) {
-    let t = N(e);
+function N(e) {
+    let t = y(e);
     return null != t && c.J6.has(t);
 }
-function C(e) {
+function v(e) {
     return {
         questId: e.questId,
         adCreativeId: e.adCreativeId,
@@ -106,17 +106,17 @@ function C(e) {
         trafficMetadataSealed: e.trafficMetadataSealed,
     };
 }
-function v(e, t) {
+function C(e, t) {
     let n = (function (e, t) {
         if (e !== l.yW.QUEST_HOME_MOBILE_CAROUSEL || null == t) return null;
         let n = a.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
-        return null != n ? C(n) : null;
+        return null != n ? v(n) : null;
     })(e, t);
     if (null != n) return n;
     let { enableNewRequestBehavior: i } = u.A.getConfig({ location: "getQuestDeliveryDataForPlacement" }),
         r = o.A.questAdDecisionByPlacement.get(e);
-    if (e === l.yW.QUEST_HOME_BANNER_DESKTOP && null != r) return C(r);
-    if (i) return null == r ? null : C(r);
+    if (e === l.yW.QUEST_HOME_BANNER_DESKTOP && null != r) return v(r);
+    if (i) return null == r ? null : v(r);
     {
         let t = o.A.questToDeliverForPlacement.get(e);
         return null == t
@@ -131,20 +131,20 @@ function v(e, t) {
               };
     }
 }
-function O(e, t) {
-    let n = N(t);
+function R(e, t) {
+    let n = y(t);
     if (null == n) return c.K3;
-    let { adDecisionData: i, questId: r, adCreativeId: s } = v(n, e) ?? {};
+    let { adDecisionData: i, questId: r, adCreativeId: s } = C(n, e) ?? {};
     return null == i ? c.K3 : r === e || s === e || i.ad_id === e ? i : c.K3;
 }
-function R(e, t) {
-    let n = N(e);
-    if (null != n) return v(n, t)?.metadataSealed;
+function O(e, t) {
+    let n = y(e);
+    if (null != n) return C(n, t)?.metadataSealed;
 }
 function b(e, t, n) {
-    let i = N(e);
+    let i = y(e);
     if (null != i) {
-        let { trafficMetadataSealed: e, questId: r } = v(i, n) ?? {};
+        let { trafficMetadataSealed: e, questId: r } = C(i, n) ?? {};
         if (null != e && (null != n || r === t)) return e;
     }
     if (null != t) {
@@ -153,8 +153,8 @@ function b(e, t, n) {
     }
 }
 function D(e, t) {
-    let n = N(e);
-    if (null != n) return v(n, t)?.adContext;
+    let n = y(e);
+    if (null != n) return C(n, t)?.adContext;
 }
 function L(e, t) {
     s.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });

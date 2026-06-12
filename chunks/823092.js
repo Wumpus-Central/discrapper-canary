@@ -1,35 +1,35 @@
-n.d(t, { L_: () => u, ms: () => c });
-var i = n(627968),
-    s = n(64700),
-    l = n(83257),
-    a = n(203982),
-    r = n(115063),
-    o = n(652215);
-let d = s.createContext(void 0);
-function c(e) {
+i.d(t, { L_: () => c, ms: () => d });
+var n = i(627968),
+    s = i(64700),
+    l = i(83257),
+    r = i(625494),
+    a = i(115063),
+    o = i(652215);
+let u = s.createContext(void 0);
+function d(e) {
     let { children: t } = e,
-        n = s.useRef(l.n3),
-        [c, u] = s.useState(!1),
-        m = s.useCallback((e) => {
-            u(e?.some((e) => e.showNotice() && !e.canCloseEarly?.()) ?? !1), (n.current = l.n3);
+        i = s.useRef(l.n3),
+        [d, c] = s.useState(!1),
+        g = s.useCallback((e) => {
+            c(e?.some((e) => e.showNotice() && !e.canCloseEarly?.()) ?? !1), (i.current = l.n3);
         }, []),
-        g = s.useCallback(
+        m = s.useCallback(
             (e) => {
-                if (c) {
-                    (0, r.fO)({ duration: 300, intensity: n.current }),
-                        (n.current = Math.min(n.current + l.pe, l.OZ)),
-                        a._.dispatch(o.jej.EMPHASIZE_NOTICE);
+                if (d) {
+                    (0, a.fO)({ duration: 300, intensity: i.current }),
+                        (i.current = Math.min(i.current + l.pe, l.OZ)),
+                        r._.dispatch(o.jej.EMPHASIZE_NOTICE);
                     return;
                 }
                 e();
             },
-            [c],
+            [d],
         ),
-        _ = s.useMemo(() => ({ navigateWithValidation: g, showNotice: c, handleStoreUpdate: m }), [g, c, m]);
-    return (0, i.jsx)(d.Provider, { value: _, children: t });
+        A = s.useMemo(() => ({ navigateWithValidation: m, showNotice: d, handleStoreUpdate: g }), [m, d, g]);
+    return (0, n.jsx)(u.Provider, { value: A, children: t });
 }
-function u() {
-    let e = s.useContext(d);
+function c() {
+    let e = s.useContext(u);
     if (null == e) throw Error("useNoticeContext must be used within a NoticeProvider");
     return e;
 }

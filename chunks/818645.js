@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => a, W: () => i });
-var r = n(64700);
-function i(e) {
-    let { topEmojis: t, newlyAddedEmojis: n, rowSize: r = 9 } = e,
-        i = t.slice(0, r - n.length);
-    return { visibleTopEmojis: i, visibleNewlyAddedEmojis: n, allEmojis: i.concat(n) };
+n.d(t, { A: () => s, W: () => r });
+var i = n(64700);
+function r(e) {
+    let { topEmojis: t, newlyAddedEmojis: n, rowSize: i = 9 } = e,
+        r = t.slice(0, i - n.length);
+    return { visibleTopEmojis: r, visibleNewlyAddedEmojis: n, allEmojis: r.concat(n) };
 }
-function a(e) {
-    return r.useMemo(() => i(e), [e]);
+function s(e) {
+    return i.useMemo(() => r(e), [e]);
 }
 n(732139);

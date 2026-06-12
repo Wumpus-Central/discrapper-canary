@@ -1,36 +1,36 @@
-t.d(e, { default: () => _ });
-var l = t(627968);
+t.d(n, { default: () => _ });
+var r = t(627968);
 t(64700);
-var i = t(861672),
-    r = t(477782),
-    a = t(442433),
-    c = t(358367),
-    o = t(793574),
-    s = t(50268),
-    A = t(307623),
-    d = t(317910),
-    E = t(475777),
-    u = t(985018);
-let _ = (0, c.A)(
-    function (n) {
-        let { channel: e, guild: t, onSelect: c } = n,
-            o = (0, d.A)(e),
-            _ = (0, E.A)(e, t),
-            N = (0, A.A)(e),
-            h = (0, s.A)({ id: e.id, label: u.intl.string(u.t.gFHI3k) });
-        return (0, l.jsxs)(i.W, {
+var i = t(980707),
+    a = t(477782),
+    l = t(442433),
+    d = t(358367),
+    s = t(793574),
+    c = t(50268),
+    h = t(307623),
+    u = t(317910),
+    A = t(475777),
+    o = t(375708);
+let _ = (0, d.A)(
+    function (e) {
+        let { channel: n, guild: t, onSelect: d } = e,
+            s = (0, u.A)(n),
+            _ = (0, A.A)(n, t),
+            p = (0, h.A)(n),
+            N = (0, c.A)({ id: n.id, label: o.intl.string(o.t.gFHI3k) });
+        return (0, r.jsxs)(i.W, {
             "data-menu-migrated-auto": !0,
             navId: "channel-context",
-            onClose: a.Z_,
-            "aria-label": u.intl.string(u.t.Xm41aV),
-            onSelect: c,
+            onClose: l.Z_,
+            "aria-label": o.intl.string(o.t.Xm41aV),
+            onSelect: d,
             children: [
-                (0, l.jsx)(r.rX, { children: o }),
-                (0, l.jsx)(r.rX, { children: _ }),
-                (0, l.jsx)(r.rX, { children: N }),
-                (0, l.jsx)(r.rX, { children: h }),
+                (0, r.jsx)(a.rX, { children: s }),
+                (0, r.jsx)(a.rX, { children: _ }),
+                (0, r.jsx)(a.rX, { children: p }),
+                (0, r.jsx)(a.rX, { children: N }),
             ],
         });
     },
-    [o.A.CONTEXT_MENU, o.A.CHANNEL_LIST_STORE_CHANNEL_MENU],
+    [s.A.CONTEXT_MENU, s.A.CHANNEL_LIST_STORE_CHANNEL_MENU],
 );

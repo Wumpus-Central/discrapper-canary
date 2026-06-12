@@ -1,43 +1,43 @@
-n.d(t, { A: () => C });
-var i = n(627968);
-n(64700);
-var l = n(17928),
-    r = n(477782),
-    a = n(192308),
-    s = n(435183),
-    d = n(532622),
-    u = n(136523),
-    o = n(345640),
-    c = n(576705),
-    A = n(882840),
-    E = n(652215),
-    g = n(985018);
-function C(e, t) {
-    let C = (0, l.bG)([c.A], () => c.A.can(E.xBc.MANAGE_CHANNELS, t)),
-        h = (0, d.Ay)(e),
-        _ = (0, o.b)(e),
-        f = (0, A.l)(e),
-        N = null != f && f.length > 0;
-    return e.isGuildVoice() && (C || h)
-        ? !_ && C && N
-            ? (0, i.jsx)(r.Dr, {
+t.d(n, { A: () => h });
+var e = t(627968);
+t(64700);
+var l = t(17928),
+    a = t(477782),
+    s = t(192308),
+    c = t(435183),
+    r = t(532622),
+    d = t(136523),
+    o = t(345640),
+    u = t(576705),
+    A = t(882840),
+    b = t(652215),
+    p = t(375708);
+function h(i, n) {
+    let h = (0, l.bG)([u.A], () => u.A.can(b.xBc.MANAGE_CHANNELS, n)),
+        C = (0, r.Ay)(i),
+        g = (0, o.b)(i),
+        j = (0, A.l)(i),
+        v = null != j && j.length > 0;
+    return i.isGuildVoice() && (h || C)
+        ? !g && h && v
+            ? (0, e.jsx)(a.Dr, {
                   id: "clear-status",
-                  label: g.intl.string(g.t["22CYiZ"]),
+                  label: p.intl.string(p.t["22CYiZ"]),
                   action: () => {
-                      s.Ay.updateVoiceChannelStatus(e.id, "");
+                      c.Ay.updateVoiceChannelStatus(i.id, "");
                   },
               })
-            : _ && h
-              ? (0, i.jsx)(r.Dr, {
+            : g && C
+              ? (0, e.jsx)(a.Dr, {
                     id: "set-status",
-                    label: g.intl.string(g.t.RBd5PW),
+                    label: p.intl.string(p.t.RBd5PW),
                     action: () => {
-                        (0, a.openModalLazy)(
+                        (0, s.openModalLazy)(
                             async () => {
-                                let { default: t } = await Promise.resolve().then(n.bind(n, 136523));
-                                return (n) => (0, i.jsx)(t, { channel: e, ...n });
+                                let { default: n } = await Promise.resolve().then(t.bind(t, 136523));
+                                return (t) => (0, e.jsx)(n, { channel: i, ...t });
                             },
-                            { modalKey: u.m },
+                            { modalKey: d.m },
                         );
                     },
                 })

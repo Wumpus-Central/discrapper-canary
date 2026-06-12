@@ -27,22 +27,22 @@ async function A(t, e, s, l) {
     }
 }
 var I = s(92077),
-    m = s(953689),
-    _ = s(587895),
-    g = s(235986),
-    T = s(137177),
-    C = s(976860),
-    P = s(293066),
-    f = s(775228),
-    S = s(255438);
+    g = s(953689),
+    m = s(587895),
+    P = s(235986),
+    C = s(137177),
+    f = s(976860),
+    S = s(293066),
+    E = s(775228),
+    b = s(255438);
 s(321073);
-var E = s(691885),
-    N = s(466472),
-    y = s(19575),
-    L = s(985018),
-    b = s(139189);
-let D = "select";
-class O extends a.PureComponent {
+var T = s(691885),
+    _ = s(466472),
+    j = s(19575),
+    v = s(375708),
+    x = s(139189);
+let y = "select";
+class L extends a.PureComponent {
     state = { newInstallationPath: null };
     fetchedMetadataPaths = new Set();
     fetchAllDirectoryMetadata() {
@@ -54,7 +54,7 @@ class O extends a.PureComponent {
             { newInstallationPath: s } = this.state;
         for (let t of (null != s && e.push(s),
         (e = e.filter((t) => !this.fetchedMetadataPaths.has(t))),
-        (0, N.UQ)(e),
+        (0, _.UQ)(e),
         e))
             this.fetchedMetadataPaths.add(t);
     }
@@ -76,7 +76,7 @@ class O extends a.PureComponent {
             });
         return (
             null != e && s.push({ id: e, value: e, label: this.renderLabel(e) }),
-            s.push({ id: D, value: D, label: L.intl.string(L.t["cL/rrq"]) }),
+            s.push({ id: y, value: y, label: v.intl.string(v.t["cL/rrq"]) }),
             s
         );
     }
@@ -91,8 +91,8 @@ class O extends a.PureComponent {
         s(t, l || !this.hasEnoughDiskSpace(t));
     }
     handleChange = (t) => {
-        t === D
-            ? y.Ay.showOpenDialog(["openDirectory"]).then((t) => {
+        t === y
+            ? j.Ay.showOpenDialog(["openDirectory"]).then((t) => {
                   if (null != t && t.length > 0) {
                       let e = t[0];
                       this.setState({
@@ -113,18 +113,18 @@ class O extends a.PureComponent {
     renderError() {
         let { value: t, installationPathsMetadata: e } = this.props;
         return null != e[t] && !1 === e[t].hasPermission
-            ? (0, l.jsx)("div", { className: b.z, children: L.intl.string(L.t.cEUT8B) })
+            ? (0, l.jsx)("div", { className: x.z, children: v.intl.string(v.t.cEUT8B) })
             : this.hasEnoughDiskSpace(t)
               ? null
-              : (0, l.jsx)("div", { className: b.z, children: L.intl.string(L.t["duXbE/"]) });
+              : (0, l.jsx)("div", { className: x.z, children: v.intl.string(v.t["duXbE/"]) });
     }
     renderLabel(t, e) {
         let { installationPathsMetadata: s } = this.props,
             l = null != e ? e : t;
         return null != s[t] && null != s[t].availableKB
-            ? L.intl.formatToPlainString(L.t["Y+M3rp"], {
+            ? v.intl.formatToPlainString(v.t["Y+M3rp"], {
                   path: l,
-                  size: (0, S.Xq)(s[t].availableKB, { useKibibytes: !0 }),
+                  size: (0, b.Xq)(s[t].availableKB, { useKibibytes: !0 }),
               })
             : l;
     }
@@ -133,8 +133,8 @@ class O extends a.PureComponent {
         return (0, l.jsxs)("div", {
             className: e,
             children: [
-                (0, l.jsx)(E.l, {
-                    label: L.intl.string(L.t.WTJuNr),
+                (0, l.jsx)(T.l, {
+                    label: v.intl.string(v.t.WTJuNr),
                     autoFocus: s,
                     options: this.getOptions(),
                     value: t,
@@ -147,12 +147,12 @@ class O extends a.PureComponent {
         });
     }
 }
-let v = n.Ay.connectStores([f.A], () => ({
-    installationPaths: f.A.installationPaths,
-    installationPathsMetadata: f.A.installationPathsMetadata,
-}))(O);
-var x = s(442348);
-class j extends a.Component {
+let B = n.Ay.connectStores([E.A], () => ({
+    installationPaths: E.A.installationPaths,
+    installationPathsMetadata: E.A.installationPathsMetadata,
+}))(L);
+var D = s(442348);
+class N extends a.Component {
     state = {
         selectedInstallationPath: this.props.defaultInstallationPath,
         hasError: !1,
@@ -193,7 +193,7 @@ class j extends a.Component {
             installationPath: this.state.selectedInstallationPath,
             analyticsLocation: a,
         }),
-            (0, C.pX)(c.BVt.APPLICATION_LIBRARY),
+            (0, f.pX)(c.BVt.APPLICATION_LIBRARY),
             this.close();
     };
     handleInstall = () => {
@@ -218,7 +218,7 @@ class j extends a.Component {
             { hasError: e, hasAcceptedNeccessaryTerms: s } = this.state;
         return (0, l.jsx)(i.$, {
             variant: "active",
-            text: L.intl.string(L.t.nL0WvC),
+            text: v.intl.string(v.t.nL0WvC),
             disabled: e || null == t || !s,
             onClick: this.handleInstall,
         });
@@ -230,52 +230,52 @@ class j extends a.Component {
         return (0, l.jsxs)(r.EO, {
             transitionState: s,
             size: r.rI.SMALL,
-            "aria-label": L.intl.string(L.t.PphjtJ),
+            "aria-label": v.intl.string(v.t.PphjtJ),
             parentComponent: "ApplicationInstallationModal",
             children: [
-                null != i ? (0, l.jsx)("div", { className: x.Yi, style: { backgroundImage: `url(${i})` } }) : null,
+                null != i ? (0, l.jsx)("div", { className: D.Yi, style: { backgroundImage: `url(${i})` } }) : null,
                 (0, l.jsxs)(r.rQ, {
-                    justify: g.A.Justify.BETWEEN,
+                    justify: P.A.Justify.BETWEEN,
                     children: [
-                        (0, l.jsx)(g.A.Child, {
+                        (0, l.jsx)(P.A.Child, {
                             grow: 1,
                             children: (0, l.jsx)(h.D, {
                                 variant: "heading-lg/semibold",
-                                children: L.intl.string(L.t.PphjtJ),
+                                children: v.intl.string(v.t.PphjtJ),
                             }),
                         }),
-                        (0, l.jsx)(g.A.Child, { grow: 0, children: (0, l.jsx)(r.s_, { onClick: this.close }) }),
+                        (0, l.jsx)(P.A.Child, { grow: 0, children: (0, l.jsx)(r.s_, { onClick: this.close }) }),
                     ],
                 }),
                 (0, l.jsxs)(r.$m, {
                     children: [
-                        (0, l.jsxs)(g.A, {
-                            align: g.A.Align.CENTER,
+                        (0, l.jsxs)(P.A, {
+                            align: P.A.Align.CENTER,
                             children: [
-                                (0, l.jsx)(T.A, { game: t, size: T.M.MEDIUM, className: x.Gt }),
-                                (0, l.jsx)("div", { className: x.mO, children: null != t && t.name }),
+                                (0, l.jsx)(C.A, { game: t, size: C.M.MEDIUM, className: D.Gt }),
+                                (0, l.jsx)("div", { className: D.mO, children: null != t && t.name }),
                                 null != e
                                     ? (0, l.jsx)("div", {
-                                          className: x.hc,
-                                          children: (0, S.Xq)(e, { useKibibytes: !0 }),
+                                          className: D.hc,
+                                          children: (0, b.Xq)(e, { useKibibytes: !0 }),
                                       })
                                     : null,
                             ],
                         }),
-                        (0, l.jsx)("div", { className: x.yF }),
-                        (0, l.jsx)(v, {
+                        (0, l.jsx)("div", { className: D.yF }),
+                        (0, l.jsx)(B, {
                             autoFocus: !0,
-                            className: x.gD,
+                            className: D.gD,
                             value: a,
                             requiredDiskKB: e,
                             onChange: this.handleChangePath,
                         }),
-                        (0, l.jsx)(m.A, {
+                        (0, l.jsx)(g.A, {
                             eulaId: t.eulaId,
                             applicationName: t.name,
                             disabled: n,
                             onChange: this.handlePurchaseTermsChange,
-                            className: x.a_,
+                            className: D.a_,
                         }),
                     ],
                 }),
@@ -284,15 +284,15 @@ class j extends a.Component {
         });
     }
 }
-let M = n.Ay.connectStores([p.A, f.A, P.A, _.A], (t) => {
+let M = n.Ay.connectStores([p.A, E.A, S.A, m.A], (t) => {
     let { applicationId: e, branchId: s } = t,
         l = p.A.getTargetBuildId(e, s);
     return {
-        application: _.A.getApplication(e),
-        defaultInstallationPath: f.A.defaultInstallationPath,
+        application: m.A.getApplication(e),
+        defaultInstallationPath: E.A.defaultInstallationPath,
         buildId: l,
         manifestIds: p.A.getTargetManifests(e, s),
         buildSizeKB: null != l ? p.A.getBuildSize(l) : null,
-        hasPreviouslyAcceptedStoreTerms: P.A.hasAcceptedStoreTerms,
+        hasPreviouslyAcceptedStoreTerms: S.A.hasAcceptedStoreTerms,
     };
-})(j);
+})(N);

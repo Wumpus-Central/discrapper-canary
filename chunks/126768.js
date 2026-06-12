@@ -1,23 +1,23 @@
-_.d(t, { default: () => b });
-var a = _(627968),
-    n = _(64700),
-    c = _(224640),
-    s = _(707539),
-    r = _(617011),
-    o = _(985018),
-    i = _(360553);
-function b(e) {
-    let { channel: t, onClose: _, transitionState: b } = e;
+s.d(e, { default: () => d });
+var a = s(627968),
+    n = s(64700),
+    i = s(224640),
+    l = s(707539),
+    c = s(702513),
+    o = s(375708),
+    r = s(360553);
+function d(t) {
+    let { channel: e, onClose: s, transitionState: d } = t;
     return (
         n.useEffect(() => {
-            (0, s.D3)();
+            (0, l.D3)();
         }, []),
-        (0, a.jsx)(c.d, {
-            transitionState: b,
+        (0, a.jsx)(i.d, {
+            transitionState: d,
             "aria-label": o.intl.string(o.t.B2panI),
             size: "lg",
-            onClose: _,
-            children: (0, a.jsx)(r.A, { className: i.T, channel: t, onClose: _, context: "modal" }),
+            onClose: s,
+            children: (0, a.jsx)(c.A, { className: r.T, channel: e, onClose: s, context: "modal" }),
         })
     );
 }

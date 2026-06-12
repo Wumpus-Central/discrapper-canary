@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     iE: "wrapper__124c8",
     lS: "titleRegion__124c8",
     G: "infoIcon__124c8",

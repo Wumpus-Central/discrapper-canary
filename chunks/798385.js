@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     nM: "detailContainer__871ff",
     hQ: "contentContainer__871ff",
     Ne: "contentTabsContainer__871ff",

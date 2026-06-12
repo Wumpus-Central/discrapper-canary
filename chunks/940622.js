@@ -208,7 +208,7 @@ let h = (0, s.v)((e) => ({
                 let r = new Image();
                 (r.src = i), (t[n.id] = r);
             }
-            return { layers: e.layers, layerData: t, css: (0, u.a)(e) };
+            return { layers: e.layers, layerData: t, css: (0, u.i)(e) };
         }, [e]);
     },
     A = () => {

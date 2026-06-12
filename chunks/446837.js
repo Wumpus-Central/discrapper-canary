@@ -1,9 +1,9 @@
 "use strict";
-r.d(t, { t: () => H });
-var n,
-    a,
+n.d(t, { t: () => j });
+var i,
+    r,
     s,
-    i = [],
+    a = [],
     o = "ResizeObserver loop completed with undelivered notifications.",
     l = function () {
         var e;
@@ -12,16 +12,16 @@ var n,
             : ((e = document.createEvent("Event")).initEvent("error", !1, !1), (e.message = o)),
             window.dispatchEvent(e);
     };
-((n = a || (a = {})).BORDER_BOX = "border-box"),
-    (n.CONTENT_BOX = "content-box"),
-    (n.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box");
+((i = r || (r = {})).BORDER_BOX = "border-box"),
+    (i.CONTENT_BOX = "content-box"),
+    (i.DEVICE_PIXEL_CONTENT_BOX = "device-pixel-content-box");
 var u = (function () {
-        function e(e, t, r, n) {
+        function e(e, t, n, i) {
             return (
                 (this.x = e),
                 (this.y = t),
-                (this.width = r),
-                (this.height = n),
+                (this.width = n),
+                (this.height = i),
                 (this.top = this.y),
                 (this.left = this.x),
                 (this.bottom = this.top + this.height),
@@ -54,20 +54,20 @@ var u = (function () {
     d = function (e) {
         if (c(e)) {
             var t = e.getBBox(),
-                r = t.width,
-                n = t.height;
-            return !r && !n;
+                n = t.width,
+                i = t.height;
+            return !n && !i;
         }
-        var a = e.offsetWidth,
+        var r = e.offsetWidth,
             s = e.offsetHeight;
-        return !(a || s || e.getClientRects().length);
+        return !(r || s || e.getClientRects().length);
     },
-    f = function (e) {
+    _ = function (e) {
         var t,
-            r = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
-        return !!(r && e instanceof r.Element);
+            n = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
+        return !!(n && e instanceof n.Element);
     },
-    p = function (e) {
+    h = function (e) {
         switch (e.tagName) {
             case "INPUT":
                 if ("image" !== e.type) break;
@@ -82,78 +82,78 @@ var u = (function () {
         }
         return !1;
     },
-    h = "u" > typeof window ? window : {},
-    m = new Map(),
-    _ = /auto|scroll/,
-    g = /^tb|vertical/,
-    v = /msie|trident/i.test(h.navigator && h.navigator.userAgent),
-    b = function (e) {
+    f = "u" > typeof window ? window : {},
+    p = new Map(),
+    E = /auto|scroll/,
+    m = /^tb|vertical/,
+    g = /msie|trident/i.test(f.navigator && f.navigator.userAgent),
+    A = function (e) {
         return parseFloat(e || "0");
     },
-    y = function (e, t, r) {
+    I = function (e, t, n) {
         return (
             void 0 === e && (e = 0),
             void 0 === t && (t = 0),
-            void 0 === r && (r = !1),
-            Object.freeze({ inlineSize: (r ? t : e) || 0, blockSize: (r ? e : t) || 0 })
+            void 0 === n && (n = !1),
+            Object.freeze({ inlineSize: (n ? t : e) || 0, blockSize: (n ? e : t) || 0 })
         );
     },
-    E = Object.freeze({
-        devicePixelContentBoxSize: y(),
-        borderBoxSize: y(),
-        contentBoxSize: y(),
+    T = Object.freeze({
+        devicePixelContentBoxSize: I(),
+        borderBoxSize: I(),
+        contentBoxSize: I(),
         contentRect: new u(0, 0, 0, 0),
     }),
     S = function (e) {
-        if (m.has(e)) return m.get(e);
-        if (d(e)) return m.set(e, E), E;
+        if (p.has(e)) return p.get(e);
+        if (d(e)) return p.set(e, T), T;
         var t = getComputedStyle(e),
-            r = c(e) && e.ownerSVGElement && e.getBBox(),
-            n = !v && "border-box" === t.boxSizing,
-            a = g.test(t.writingMode || ""),
-            s = !r && _.test(t.overflowY || ""),
-            i = !r && _.test(t.overflowX || ""),
-            o = r ? 0 : b(t.paddingTop),
-            l = r ? 0 : b(t.paddingRight),
-            f = r ? 0 : b(t.paddingBottom),
-            p = r ? 0 : b(t.paddingLeft),
-            h = r ? 0 : b(t.borderTopWidth),
-            S = r ? 0 : b(t.borderRightWidth),
-            T = r ? 0 : b(t.borderBottomWidth),
-            x = r ? 0 : b(t.borderLeftWidth),
-            w = p + l,
-            C = o + f,
-            D = x + S,
-            O = h + T,
-            A = i ? e.offsetHeight - O - e.clientHeight : 0,
-            M = s ? e.offsetWidth - D - e.clientWidth : 0,
-            R = r ? r.width : b(t.width) - (n ? w + D : 0) - M,
-            k = r ? r.height : b(t.height) - (n ? C + O : 0) - A,
-            N = R + w + M + D,
-            L = k + C + A + O,
-            I = Object.freeze({
-                devicePixelContentBoxSize: y(Math.round(R * devicePixelRatio), Math.round(k * devicePixelRatio), a),
-                borderBoxSize: y(N, L, a),
-                contentBoxSize: y(R, k, a),
-                contentRect: new u(p, o, R, k),
+            n = c(e) && e.ownerSVGElement && e.getBBox(),
+            i = !g && "border-box" === t.boxSizing,
+            r = m.test(t.writingMode || ""),
+            s = !n && E.test(t.overflowY || ""),
+            a = !n && E.test(t.overflowX || ""),
+            o = n ? 0 : A(t.paddingTop),
+            l = n ? 0 : A(t.paddingRight),
+            _ = n ? 0 : A(t.paddingBottom),
+            h = n ? 0 : A(t.paddingLeft),
+            f = n ? 0 : A(t.borderTopWidth),
+            S = n ? 0 : A(t.borderRightWidth),
+            y = n ? 0 : A(t.borderBottomWidth),
+            N = n ? 0 : A(t.borderLeftWidth),
+            v = h + l,
+            C = o + _,
+            R = N + S,
+            O = f + y,
+            b = a ? e.offsetHeight - O - e.clientHeight : 0,
+            D = s ? e.offsetWidth - R - e.clientWidth : 0,
+            L = n ? n.width : A(t.width) - (i ? v + R : 0) - D,
+            w = n ? n.height : A(t.height) - (i ? C + O : 0) - b,
+            M = L + v + D + R,
+            P = w + C + b + O,
+            x = Object.freeze({
+                devicePixelContentBoxSize: I(Math.round(L * devicePixelRatio), Math.round(w * devicePixelRatio), r),
+                borderBoxSize: I(M, P, r),
+                contentBoxSize: I(L, w, r),
+                contentRect: new u(h, o, L, w),
             });
-        return m.set(e, I), I;
+        return p.set(e, x), x;
     },
-    T = function (e, t) {
-        var r = S(e),
-            n = r.borderBoxSize,
-            s = r.contentBoxSize,
-            i = r.devicePixelContentBoxSize;
+    y = function (e, t) {
+        var n = S(e),
+            i = n.borderBoxSize,
+            s = n.contentBoxSize,
+            a = n.devicePixelContentBoxSize;
         switch (t) {
-            case a.DEVICE_PIXEL_CONTENT_BOX:
+            case r.DEVICE_PIXEL_CONTENT_BOX:
+                return a;
+            case r.BORDER_BOX:
                 return i;
-            case a.BORDER_BOX:
-                return n;
             default:
                 return s;
         }
     },
-    x = function (e) {
+    N = function (e) {
         var t = S(e);
         (this.target = e),
             (this.contentRect = t.contentRect),
@@ -161,81 +161,81 @@ var u = (function () {
             (this.contentBoxSize = [t.contentBoxSize]),
             (this.devicePixelContentBoxSize = [t.devicePixelContentBoxSize]);
     },
-    w = function (e) {
+    v = function (e) {
         if (d(e)) return 1 / 0;
-        for (var t = 0, r = e.parentNode; r; ) (t += 1), (r = r.parentNode);
+        for (var t = 0, n = e.parentNode; n; ) (t += 1), (n = n.parentNode);
         return t;
     },
     C = function () {
         var e = 1 / 0,
             t = [];
-        i.forEach(function (r) {
-            if (0 !== r.activeTargets.length) {
-                var n = [];
-                r.activeTargets.forEach(function (t) {
-                    var r = new x(t.target),
-                        a = w(t.target);
-                    n.push(r), (t.lastReportedSize = T(t.target, t.observedBox)), a < e && (e = a);
+        a.forEach(function (n) {
+            if (0 !== n.activeTargets.length) {
+                var i = [];
+                n.activeTargets.forEach(function (t) {
+                    var n = new N(t.target),
+                        r = v(t.target);
+                    i.push(n), (t.lastReportedSize = y(t.target, t.observedBox)), r < e && (e = r);
                 }),
                     t.push(function () {
-                        r.callback.call(r.observer, n, r.observer);
+                        n.callback.call(n.observer, i, n.observer);
                     }),
-                    r.activeTargets.splice(0, r.activeTargets.length);
+                    n.activeTargets.splice(0, n.activeTargets.length);
             }
         });
-        for (var r = 0; r < t.length; r++) (0, t[r])();
+        for (var n = 0; n < t.length; n++) (0, t[n])();
         return e;
     },
-    D = function (e) {
-        m.clear(),
-            i.forEach(function (t) {
+    R = function (e) {
+        p.clear(),
+            a.forEach(function (t) {
                 t.activeTargets.splice(0, t.activeTargets.length),
                     t.skippedTargets.splice(0, t.skippedTargets.length),
-                    t.observationTargets.forEach(function (r) {
-                        r.isActive() && (w(r.target) > e ? t.activeTargets.push(r) : t.skippedTargets.push(r));
+                    t.observationTargets.forEach(function (n) {
+                        n.isActive() && (v(n.target) > e ? t.activeTargets.push(n) : t.skippedTargets.push(n));
                     });
             });
     },
     O = function () {
         var e = 0;
         for (
-            D(0);
-            i.some(function (e) {
+            R(0);
+            a.some(function (e) {
                 return e.activeTargets.length > 0;
             });
         )
-            D((e = C()));
+            R((e = C()));
         return (
-            i.some(function (e) {
+            a.some(function (e) {
                 return e.skippedTargets.length > 0;
             }) && l(),
             e > 0
         );
     },
-    A = [],
-    M = function (e) {
+    b = [],
+    D = function (e) {
         if (!s) {
             var t = 0,
-                r = document.createTextNode("");
+                n = document.createTextNode("");
             new MutationObserver(function () {
-                return A.splice(0).forEach(function (e) {
+                return b.splice(0).forEach(function (e) {
                     return e();
                 });
-            }).observe(r, { characterData: !0 }),
+            }).observe(n, { characterData: !0 }),
                 (s = function () {
-                    r.textContent = "" + (t ? t-- : t++);
+                    n.textContent = "" + (t ? t-- : t++);
                 });
         }
-        A.push(e), s();
+        b.push(e), s();
     },
-    R = function (e) {
-        M(function () {
+    L = function (e) {
+        D(function () {
             requestAnimationFrame(e);
         });
     },
-    k = 0,
-    N = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
-    L = [
+    w = 0,
+    M = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
+    P = [
         "resize",
         "load",
         "transitionend",
@@ -251,8 +251,8 @@ var u = (function () {
         "blur",
         "focus",
     ],
-    I = !1,
-    P = new ((function () {
+    x = !1,
+    k = new ((function () {
         function e() {
             var e = this;
             (this.stopped = !0),
@@ -263,15 +263,15 @@ var u = (function () {
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                I ||
-                    ((I = !0),
-                    R(function () {
-                        var r = !1;
+                x ||
+                    ((x = !0),
+                    L(function () {
+                        var n = !1;
                         try {
-                            r = O();
+                            n = O();
                         } finally {
-                            if (((I = !1), !k)) return;
-                            r ? t.run(60) : e ? t.run(e - 1) : t.start();
+                            if (((x = !1), !w)) return;
+                            n ? t.run(60) : e ? t.run(e - 1) : t.start();
                         }
                     }));
             }),
@@ -281,9 +281,9 @@ var u = (function () {
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
-                        return e.observer && e.observer.observe(document.body, N);
+                        return e.observer && e.observer.observe(document.body, M);
                     };
-                document.body ? t() : h.addEventListener("DOMContentLoaded", t);
+                document.body ? t() : f.addEventListener("DOMContentLoaded", t);
             }),
             (e.prototype.start = function () {
                 var e = this;
@@ -291,38 +291,38 @@ var u = (function () {
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    L.forEach(function (t) {
-                        return h.addEventListener(t, e.listener, !0);
+                    P.forEach(function (t) {
+                        return f.addEventListener(t, e.listener, !0);
                     }));
             }),
             (e.prototype.stop = function () {
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    L.forEach(function (t) {
-                        return h.removeEventListener(t, e.listener, !0);
+                    P.forEach(function (t) {
+                        return f.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
             }),
             e
         );
     })())(),
-    F = function (e) {
-        !k && e > 0 && P.start(), (k += e) || P.stop();
+    U = function (e) {
+        !w && e > 0 && k.start(), (w += e) || k.stop();
     },
-    B = (function () {
+    G = (function () {
         function e(e, t) {
             (this.target = e),
-                (this.observedBox = t || a.CONTENT_BOX),
+                (this.observedBox = t || r.CONTENT_BOX),
                 (this.lastReportedSize = { inlineSize: 0, blockSize: 0 });
         }
         return (
             (e.prototype.isActive = function () {
                 var e,
-                    t = T(this.target, this.observedBox);
+                    t = y(this.target, this.observedBox);
                 return (
                     c((e = this.target)) ||
-                        p(e) ||
+                        h(e) ||
                         "inline" !== getComputedStyle(e).display ||
                         (this.lastReportedSize = t),
                     this.lastReportedSize.inlineSize !== t.inlineSize || this.lastReportedSize.blockSize !== t.blockSize
@@ -331,49 +331,49 @@ var u = (function () {
             e
         );
     })(),
-    Y = function (e, t) {
+    F = function (e, t) {
         (this.activeTargets = []),
             (this.skippedTargets = []),
             (this.observationTargets = []),
             (this.observer = e),
             (this.callback = t);
     },
-    U = new Map(),
-    j = function (e, t) {
-        for (var r = 0; r < e.length; r += 1) if (e[r].target === t) return r;
+    V = new Map(),
+    B = function (e, t) {
+        for (var n = 0; n < e.length; n += 1) if (e[n].target === t) return n;
         return -1;
     },
-    V = (function () {
+    H = (function () {
         function e() {}
         return (
             (e.connect = function (e, t) {
-                var r = new Y(e, t);
-                i.push(r), U.set(e, r);
+                var n = new F(e, t);
+                a.push(n), V.set(e, n);
             }),
-            (e.observe = function (e, t, r) {
-                if (U.has(e)) {
-                    var n = U.get(e);
-                    0 > j(n.observationTargets, t) &&
-                        (n.observationTargets.push(new B(t, r && r.box)), F(1), P.schedule());
+            (e.observe = function (e, t, n) {
+                if (V.has(e)) {
+                    var i = V.get(e);
+                    0 > B(i.observationTargets, t) &&
+                        (i.observationTargets.push(new G(t, n && n.box)), U(1), k.schedule());
                 }
             }),
             (e.unobserve = function (e, t) {
-                if (U.has(e)) {
-                    var r = U.get(e),
-                        n = j(r.observationTargets, t);
-                    n >= 0 && (r.observationTargets.splice(n, 1), F(-1));
+                if (V.has(e)) {
+                    var n = V.get(e),
+                        i = B(n.observationTargets, t);
+                    i >= 0 && (n.observationTargets.splice(i, 1), U(-1));
                 }
             }),
             (e.disconnect = function (e) {
-                if (U.has(e)) {
-                    var t = U.get(e);
-                    i.splice(i.indexOf(t), 1), U.delete(e), F(-t.observationTargets.length);
+                if (V.has(e)) {
+                    var t = V.get(e);
+                    a.splice(a.indexOf(t), 1), V.delete(e), U(-t.observationTargets.length);
                 }
             }),
             e
         );
     })(),
-    H = (function () {
+    j = (function () {
         function e(e) {
             if (0 == arguments.length)
                 throw TypeError("Failed to construct 'ResizeObserver': 1 argument required, but only 0 present.");
@@ -381,7 +381,7 @@ var u = (function () {
                 throw TypeError(
                     "Failed to construct 'ResizeObserver': The callback provided as parameter 1 is not a function.",
                 );
-            V.connect(this, e);
+            H.connect(this, e);
         }
         return (
             (e.prototype.observe = function (e, t) {
@@ -389,25 +389,25 @@ var u = (function () {
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!f(e))
+                if (!_(e))
                     throw TypeError(
                         "Failed to execute 'observe' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
-                V.observe(this, e, t);
+                H.observe(this, e, t);
             }),
             (e.prototype.unobserve = function (e) {
                 if (0 == arguments.length)
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': 1 argument required, but only 0 present.",
                     );
-                if (!f(e))
+                if (!_(e))
                     throw TypeError(
                         "Failed to execute 'unobserve' on 'ResizeObserver': parameter 1 is not of type 'Element",
                     );
-                V.unobserve(this, e);
+                H.unobserve(this, e);
             }),
             (e.prototype.disconnect = function () {
-                V.disconnect(this);
+                H.disconnect(this);
             }),
             (e.toString = function () {
                 return "function ResizeObserver () { [polyfill code] }";

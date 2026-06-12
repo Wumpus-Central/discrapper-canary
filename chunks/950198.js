@@ -1,30 +1,30 @@
-r.d(t, { Jq: () => d, mP: () => u, mw: () => o });
-var n = r(627968);
-r(64700);
-var l = r(503698),
-    a = r.n(l),
-    i = r(573648),
-    c = r(652215),
-    s = r(955964);
-function o(e) {
-    return null != e && Object.values(c.fg2).includes(e) ? e : null;
+n.d(e, { Jq: () => m, mP: () => d, mw: () => u });
+var a = n(627968);
+n(64700);
+var c = n(503698),
+    i = n.n(c),
+    l = n(573648),
+    r = n(652215),
+    t = n(820395);
+function u(s) {
+    return null != s && Object.values(r.fg2).includes(s) ? s : null;
 }
-function u(e) {
-    let { children: t, platformType: r } = e,
-        l = i.A.get(r);
-    return (0, n.jsx)("div", {
-        className: s.uX,
-        children: (0, n.jsxs)("div", { children: [(0, n.jsx)(d, { platform: l }), t] }),
+function d(s) {
+    let { children: e, platformType: n } = s,
+        c = l.A.get(n);
+    return (0, a.jsx)("div", {
+        className: t.uX,
+        children: (0, a.jsxs)("div", { children: [(0, a.jsx)(m, { platform: c }), e] }),
     });
 }
-function d(e) {
-    let { platform: t, className: r } = e;
-    return (0, n.jsxs)("div", {
-        className: a()(s.ry, r),
+function m(s) {
+    let { platform: e, className: n } = s;
+    return (0, a.jsxs)("div", {
+        className: i()(t.ry, n),
         children: [
-            (0, n.jsx)("div", { className: a()(s.wm, s.Sn) }),
-            (0, n.jsx)("div", { className: s.mM }),
-            (0, n.jsx)("div", { className: s.wm, style: { backgroundImage: `url("${t.icon.whiteSVG}")` } }),
+            (0, a.jsx)("div", { className: i()(t.wm, t.Sn) }),
+            (0, a.jsx)("div", { className: t.mM }),
+            (0, a.jsx)("div", { className: t.wm, style: { backgroundImage: `url("${e.icon.whiteSVG}")` } }),
         ],
     });
 }

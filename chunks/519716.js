@@ -1,32 +1,32 @@
-r.r(t), r.d(t, { default: () => _ }), r(323874), r(14289), r(35956);
-var a = r(627968);
-r(64700);
-var n = r(862482),
-    s = r(834730),
-    i = r(534514),
-    o = r(77468),
-    l = r(573648),
-    d = r(114716),
-    c = r(321987),
-    u = r(950198),
-    m = r(985018),
-    w = r(614597);
-let _ = (0, d.C)(function (e) {
+a.r(t), a.d(t, { default: () => p }), a(323874), a(14289), a(35956);
+var r = a(627968);
+a(64700);
+var i = a(862482),
+    n = a(834730),
+    s = a(534514),
+    l = a(77468),
+    o = a(573648),
+    c = a(114716),
+    d = a(321987),
+    w = a(950198),
+    m = a(375708),
+    u = a(614597);
+let p = (0, c.C)(function (e) {
     let { match: t } = e,
-        r = t.params.type,
-        d = l.A.get(r);
-    if (null == d)
-        return (0, a.jsx)(c.$, {
-            children: (0, a.jsx)(s.E, {
-                className: w.z3,
+        a = t.params.type,
+        c = o.A.get(a);
+    if (null == c)
+        return (0, r.jsx)(d.$, {
+            children: (0, r.jsx)(n.E, {
+                className: u.z3,
                 variant: "text-md/normal",
                 color: "text-feedback-warning",
                 children: m.intl.string(m.t.WLDKSb),
             }),
         });
-    async function _() {
+    async function p() {
         let e = new URLSearchParams(window.location.search),
-            { body: t } = await o.A.authorize(r, {
+            { body: t } = await l.A.authorize(a, {
                 location: "Connection Intermediate",
                 twoWayLink: null != e.get("two_way_link") ? "true" === e.get("two_way_link") : void 0,
                 twoWayLinkType: e.get("two_way_link_type") ?? void 0,
@@ -35,26 +35,26 @@ let _ = (0, d.C)(function (e) {
             });
         window.location = t.url;
     }
-    return (0, a.jsx)(c.$, {
-        wrapperClassName: w.iE,
-        children: (0, a.jsxs)("div", {
-            className: w.zr,
+    return (0, r.jsx)(d.$, {
+        wrapperClassName: u.iE,
+        children: (0, r.jsxs)("div", {
+            className: u.zr,
             children: [
-                (0, a.jsx)(u.Jq, { className: w.ry, platform: d }),
-                (0, a.jsx)(i.D, {
+                (0, r.jsx)(w.Jq, { className: u.ry, platform: c }),
+                (0, r.jsx)(s.D, {
                     variant: "text-lg/bold",
-                    className: w.wx,
-                    children: m.intl.format(m.t.Pw4vee, { provider: d.name }),
+                    className: u.wx,
+                    children: m.intl.format(m.t.Pw4vee, { provider: c.name }),
                 }),
-                (0, a.jsx)(s.E, {
+                (0, r.jsx)(n.E, {
                     variant: "text-md/normal",
-                    className: w.rf,
-                    children: m.intl.format(m.t.rHlSVB, { provider: d.name }),
+                    className: u.rf,
+                    children: m.intl.format(m.t.rHlSVB, { provider: c.name }),
                 }),
-                (0, a.jsx)(n.$n, {
-                    size: n.$n.Sizes.LARGE,
-                    color: n.$n.Colors.BRAND,
-                    onClick: _,
+                (0, r.jsx)(i.$n, {
+                    size: i.$n.Sizes.LARGE,
+                    color: i.$n.Colors.BRAND,
+                    onClick: p,
                     children: m.intl.string(m.t["+NJGEj"]),
                 }),
             ],

@@ -1,39 +1,39 @@
-n.d(t, { Ay: () => f, WK: () => g, cr: () => p, j1: () => _ });
-var i = n(627968);
+n.d(t, { Ay: () => C, WK: () => p, cr: () => A, j1: () => f });
+var l = n(627968);
 n(64700);
-var l = n(503698),
-    a = n.n(l),
-    s = n(534890),
+var i = n(503698),
+    s = n.n(i),
+    a = n(534890),
     r = n(770880),
     o = n(276293),
-    c = n(827734),
+    c = n(661531),
     d = n(534514),
     u = n(834730),
     h = n(375901),
     m = n(652215),
-    A = n(564052);
-function g(e) {
+    g = n(564052);
+function p(e) {
     let { locked: t = !1, channelType: n } = e,
-        l = n === m.rbe.GUILD_VOICE || n === m.rbe.GUILD_STAGE_VOICE ? s.o : t ? r.I : o.N;
-    return (0, i.jsx)("div", {
-        className: a()(A.qk, A.tP),
-        children: (0, i.jsx)(l, { color: c.A.colors.ICON_STRONG, size: "custom", width: 42, height: 42 }),
+        i = n === m.rbe.GUILD_VOICE || n === m.rbe.GUILD_STAGE_VOICE ? a.o : t ? r.I : o.N;
+    return (0, l.jsx)("div", {
+        className: s()(g.qk, g.tP),
+        children: (0, l.jsx)(i, { color: c.A.colors.ICON_STRONG, size: "custom", width: 42, height: 42 }),
     });
 }
-function p(e) {
+function A(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)(d.D, {
+    return (0, l.jsx)(d.D, {
         "aria-hidden": "true",
-        className: a()(n, A.wx),
+        className: s()(n, g.wx),
         variant: "heading-xxl/extrabold",
         children: t,
     });
 }
-function _(e) {
+function f(e) {
     let { children: t, className: n } = e;
-    return (0, i.jsx)(u.E, { variant: "text-md/normal", color: "none", className: a()(A.h_, n), children: t });
+    return (0, l.jsx)(u.E, { variant: "text-md/normal", color: "none", className: s()(g.h_, n), children: t });
 }
-let f = function (e) {
-    let { className: t, channelId: n, children: l, ...s } = e;
-    return (0, i.jsx)("div", { className: a()(t, A.kL), id: (0, h.j)(n, n), ...s, children: l });
+let C = function (e) {
+    let { className: t, channelId: n, children: i, ...a } = e;
+    return (0, l.jsx)("div", { className: s()(t, g.kL), id: (0, h.j)(n, n), ...a, children: i });
 };

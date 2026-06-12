@@ -1,19 +1,19 @@
 "use strict";
-var r = n(326948),
-    i = n(267768),
-    a = n(741623),
-    s = {};
+var i = n(326948),
+    r = n(267768),
+    s = n(741623),
+    a = {};
 try {
-    s.__proto__ = null;
+    a.__proto__ = null;
 } catch (e) {
     if (!e || "object" != typeof e || !("code" in e) || "ERR_PROTO_ACCESS" !== e.code) throw e;
 }
-var o = !("toString" in s),
-    l = i && i(Object.prototype, "__proto__");
+var o = !("toString" in a),
+    l = r && r(Object.prototype, "__proto__");
 e.exports =
     o &&
-    ((!!l && "function" == typeof l.set && r([l.set])) ||
+    ((!!l && "function" == typeof l.set && i([l.set])) ||
         function (e, t) {
-            if (null == e) throw new a("set Object.prototype.__proto__ called on null or undefined");
+            if (null == e) throw new s("set Object.prototype.__proto__ called on null or undefined");
             return (e.__proto__ = t), t;
         });

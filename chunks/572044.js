@@ -1,21 +1,21 @@
 "use strict";
 n.d(t, { A: () => u });
-var r = n(439372),
-    i = n(961350),
-    a = n(734057),
-    s = n(536432),
+var i = n(439372),
+    r = n(495544),
+    s = n(734057),
+    a = n(813564),
     o = n(652215);
-class l extends r.A {
+class l extends i.A {
     prevConnected = !1;
     tempMutedChannel = null;
     handleRTCConnectionState = (e) => {
         let { state: t, channelId: n } = e,
-            r = t === o.S7L.RTC_CONNECTED,
-            i = r && !this.prevConnected,
-            l = a.A.getChannel(n),
+            i = t === o.S7L.RTC_CONNECTED,
+            r = i && !this.prevConnected,
+            l = s.A.getChannel(n),
             u = l?.getGuildId(),
             c = this.tempMutedChannel === n;
-        i && null != u && (c ? (this.tempMutedChannel = null) : (0, s.fh)(u)), (this.prevConnected = r);
+        r && null != u && (c ? (this.tempMutedChannel = null) : (0, a.fh)(u)), (this.prevConnected = i);
     };
     handleMute = (e) => {
         let { channelId: t } = e;
@@ -23,11 +23,11 @@ class l extends r.A {
     };
     handleVoiceStateUpdates = (e) => {
         let { voiceStates: t } = e,
-            n = i.default.getId(),
-            r = i.default.getSessionId();
+            n = r.default.getId(),
+            i = r.default.getSessionId();
         t.forEach((e) => {
-            let { userId: t, channelId: i, sessionId: a } = e;
-            t === n && a !== r && null != i && (this.tempMutedChannel = i);
+            let { userId: t, channelId: r, sessionId: s } = e;
+            t === n && s !== i && null != r && (this.tempMutedChannel = r);
         });
     };
     actions = {

@@ -6,22 +6,22 @@ function n(e, t) {
             Array.isArray(e) ||
             (n = (function (e) {
                 if (e) {
-                    if ("string" == typeof e) return r(e, void 0);
+                    if ("string" == typeof e) return i(e, void 0);
                     var t = Object.prototype.toString.call(e).slice(8, -1);
                     if (("Object" === t && e.constructor && (t = e.constructor.name), "Map" === t || "Set" === t))
                         return Array.from(e);
-                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return r(e, void 0);
+                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return i(e, void 0);
                 }
             })(e)) ||
             (t && e && "number" == typeof e.length)
         ) {
             n && (e = n);
-            var i = 0,
+            var r = 0,
                 s = function () {};
             return {
                 s: s,
                 n: function () {
-                    return i >= e.length ? { done: !0 } : { done: !1, value: e[i++] };
+                    return r >= e.length ? { done: !0 } : { done: !1, value: e[r++] };
                 },
                 e: function (e) {
                     throw e;
@@ -56,44 +56,44 @@ function n(e, t) {
         },
     };
 }
-function r(e, t) {
+function i(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-    return r;
+    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
+    return i;
 }
 (t.type = (e) => e.split(/ *; */).shift()),
     (t.params = (e) => {
         let t = {};
-        var r,
-            i = n(e.split(/ *; */));
+        var i,
+            r = n(e.split(/ *; */));
         try {
-            for (i.s(); !(r = i.n()).done; ) {
-                let e = r.value.split(/ *= */),
+            for (r.s(); !(i = r.n()).done; ) {
+                let e = i.value.split(/ *= */),
                     n = e.shift(),
-                    i = e.shift();
-                n && i && (t[n] = i);
+                    r = e.shift();
+                n && r && (t[n] = r);
             }
         } catch (e) {
-            i.e(e);
+            r.e(e);
         } finally {
-            i.f();
+            r.f();
         }
         return t;
     }),
     (t.parseLinks = (e) => {
         let t = {};
-        var r,
-            i = n(e.split(/ *, */));
+        var i,
+            r = n(e.split(/ *, */));
         try {
-            for (i.s(); !(r = i.n()).done; ) {
-                let e = r.value.split(/ *; */),
+            for (r.s(); !(i = r.n()).done; ) {
+                let e = i.value.split(/ *; */),
                     n = e[0].slice(1, -1);
                 t[e[1].split(/ *= */)[1].slice(1, -1)] = n;
             }
         } catch (e) {
-            i.e(e);
+            r.e(e);
         } finally {
-            i.f();
+            r.f();
         }
         return t;
     }),
@@ -113,5 +113,5 @@ function r(e, t) {
             return Object.prototype.hasOwnProperty.call(Object(e), t);
         }),
     (t.mixin = (e, n) => {
-        for (let r in n) t.hasOwn(n, r) && (e[r] = n[r]);
+        for (let i in n) t.hasOwn(n, i) && (e[i] = n[i]);
     });

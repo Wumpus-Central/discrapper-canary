@@ -26,32 +26,32 @@ function C(e) {
             isNextDisabled: C = !1,
         } = e,
         { paymentSources: _ } = (0, s.jm)(),
-        P = (0, o.A)(),
-        { isGift: S, claimableRewards: I } = (0, u.Pv)();
+        S = (0, o.A)(),
+        { isGift: P, claimableRewards: I } = (0, u.Pv)();
     i = i ?? _;
     let {
-            variant: T,
-            text: f,
+            variant: f,
+            text: T,
             onClick: N,
-            disabled: v,
+            disabled: g,
         } = y({
             onStepChange: t,
-            selectedPlanId: (n = n ?? P?.id),
-            isGift: S,
+            selectedPlanId: (n = n ?? S?.id),
+            isGift: P,
             claimableRewards: I,
             paymentSources: i,
             shouldRenderUpdatedPaymentModal: m,
             isTrial: A,
             isNextDisabled: C,
         }),
-        g = r.useMemo(
+        v = r.useMemo(
             () =>
                 null != n && p.includes(n)
-                    ? [{ variant: T, text: f, onClick: N, disabled: v }]
+                    ? [{ variant: f, text: T, onClick: N, disabled: g }]
                     : [{ variant: "primary", text: E.intl.string(E.t.XqMe3N), disabled: !0 }],
-            [T, f, N, v, n, p],
+            [f, T, N, g, n, p],
         );
-    return (0, l.jsx)(a.H, { leading: d && null != c ? (0, l.jsx)(h.A, { onClick: c }) : void 0, actions: g });
+    return (0, l.jsx)(a.H, { leading: d && null != c ? (0, l.jsx)(h.A, { onClick: c }) : void 0, actions: v });
 }
 let y = (e) => {
     let {
@@ -67,13 +67,13 @@ let y = (e) => {
         C = (0, i.bG)([p.A], () => p.A.getPremiumTypeSubscription()),
         y = (0, o.A)(),
         _ = (0, d.bB)(),
-        { hasEntitlements: P } = (0, A.X)(n, l),
-        S = (null != C && null != C.paymentSourceId) || Object.keys(a).length > 0 || (P && !u);
+        { hasEntitlements: S } = (0, A.X)(n, l),
+        P = (null != C && null != C.paymentSourceId) || Object.keys(a).length > 0 || (S && !u);
     var I = s ? E.intl.string(E.t.PDTjLN) : E.intl.string(E.t.XqMe3N),
-        T = c.pn.ADD_PAYMENT_STEPS;
+        f = c.pn.ADD_PAYMENT_STEPS;
     return (
-        S && (T = c.pn.REVIEW),
-        (0, m.px)(y, l, r) && _ !== c.pn.SELECT_FREE_SKU && (T = c.pn.SELECT_FREE_SKU),
-        { variant: "primary", text: I, onClick: () => t(T), disabled: h }
+        P && (f = c.pn.REVIEW),
+        (0, m.px)(y, l, r) && _ !== c.pn.SELECT_FREE_SKU && (f = c.pn.SELECT_FREE_SKU),
+        { variant: "primary", text: I, onClick: () => t(f), disabled: h }
     );
 };

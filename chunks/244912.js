@@ -1,20 +1,20 @@
-n.d(t, { A: () => s });
-var i = n(64700),
-    l = n(500345),
-    r = n(2242),
-    o = n(788868),
-    a = n(985018);
-function s(e) {
-    return i.useMemo(() => {
+i.d(t, { A: () => a });
+var n = i(64700),
+    l = i(500345),
+    r = i(2242),
+    o = i(788868),
+    s = i(375708);
+function a(e) {
+    return n.useMemo(() => {
         let t = r.p$.map((e) => ({
                 value: e,
                 label:
                     e.interval === o.WT.DAY && 7 === e.interval_count
-                        ? a.intl.formatToPlainString(a.t.XfSsr1, { defaultLimit: (0, l.Gg)(e) })
+                        ? s.intl.formatToPlainString(s.t.XfSsr1, { defaultLimit: (0, l.Gg)(e) })
                         : (0, l.Gg)(e),
                 isDefault: e.interval === o.WT.DAY && 7 === e.interval_count,
             })),
-            n =
+            i =
                 null != e
                     ? t.find(
                           (t) =>
@@ -23,6 +23,6 @@ function s(e) {
                               t.value.interval_count === e.interval_count,
                       )?.value
                     : e;
-        return { options: t, selectedOption: n };
+        return { options: t, selectedOption: i };
     }, [e]);
 }

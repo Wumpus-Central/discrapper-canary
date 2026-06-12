@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _, r: () => a }), n(321073);
+n.d(t, { A: () => c, r: () => a }), n(321073);
 var i,
     r = n(17928),
     s = n(228366),
@@ -12,13 +12,13 @@ let o = [],
     l = (e) => {
         let { eventType: t, dismissibleContent: n } = e;
     };
-class d extends r.Ay.Store {
+class u extends r.Ay.Store {
     static displayName = "DCFEventStore";
     getDCFEvents() {
         return o;
     }
 }
-let _ = new d(s.h, {
+let c = new u(s.h, {
     LOGOUT: () => {
         o = [];
     },

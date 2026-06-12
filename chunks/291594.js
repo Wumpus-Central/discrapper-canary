@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => c });
-var l = n(627968),
-    i = n(503698),
-    s = n.n(i),
+n.d(t, { A: () => u });
+var i = n(627968),
+    r = n(503698),
+    s = n.n(r),
     a = n(939249),
-    r = n(531142),
-    o = n(392419);
-function c(e) {
-    let { className: t, onClick: n, ...i } = e,
-        c = (0, l.jsx)(a.D, { ...i, className: s()(null != n && o.v, t), onClick: n });
-    return null == n ? (0, l.jsx)(r.R, { children: c }) : c;
+    o = n(531142),
+    l = n(392419);
+function u(e) {
+    let { className: t, onClick: n, ...r } = e,
+        u = (0, i.jsx)(a.D, { ...r, className: s()(null != n && l.v, t), onClick: n });
+    return null == n ? (0, i.jsx)(o.R, { children: u }) : u;
 }

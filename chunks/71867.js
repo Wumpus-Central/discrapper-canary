@@ -2,8 +2,8 @@ n.d(t, { P: () => M });
 var l = n(627968);
 n(64700);
 var r = n(877624),
-    a = n(234419),
-    i = n(549996),
+    i = n(234419),
+    a = n(549996),
     s = n(562708),
     o = n(144165),
     u = n(262427),
@@ -16,18 +16,18 @@ let p = (e) => {
         name: s.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_type: r.C.PAYMENT_MODAL_BANNER, component_id: t },
     });
-    let a = (0, l.jsx)(o._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
-    return (0, l.jsx)(u.J, { className: d.No, customGraphic: a, text: n.body });
+    let i = (0, l.jsx)(o._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
+    return (0, l.jsx)(u.J, { className: d.No, customGraphic: i, text: n.body });
 };
 var m = n(503698),
-    A = n.n(m),
-    h = n(462887),
+    h = n.n(m),
+    A = n(462887),
     E = n(97808),
     C = n(834730),
     y = n(736653),
     _ = n(854627),
-    P = n(427262),
-    S = n(236834);
+    S = n(427262),
+    P = n(236834);
 let I = (e) => {
         let { className: t, width: n = 83, height: r = 45 } = e;
         return (0, l.jsxs)("svg", {
@@ -298,7 +298,7 @@ let I = (e) => {
             ],
         });
     },
-    T = (e) => {
+    f = (e) => {
         let { className: t, width: n = 83, height: r = 45 } = e;
         return (0, l.jsxs)("svg", {
             width: n,
@@ -568,31 +568,31 @@ let I = (e) => {
             ],
         });
     };
-var f = n(778712),
+var T = n(778712),
     N = n(375708),
-    v = n(577454);
-let g = (e) => {
+    g = n(577454);
+let v = (e) => {
     let { className: t } = e,
-        n = (0, S.A)(),
-        { avatarSrc: r, eventHandlers: a } = (0, _.A)({ userId: n?.id, size: f._3.SIZE_32, animateOnHover: !0 }),
-        i = (0, y.DP)(),
-        s = (0, h.q)(i),
-        o = P.Ay.getName(n);
+        n = (0, P.A)(),
+        { avatarSrc: r, eventHandlers: i } = (0, _.A)({ userId: n?.id, size: T._3.SIZE_32, animateOnHover: !0 }),
+        a = (0, y.DP)(),
+        s = (0, A.q)(a),
+        o = S.Ay.getName(n);
     return null == n
         ? null
         : (0, l.jsxs)("div", {
-              className: A()(v.$6, t),
+              className: h()(g.$6, t),
               children: [
                   (0, l.jsx)("div", {
-                      className: v.H,
-                      children: (0, l.jsx)(E.eu, { src: r, "aria-label": n.username, size: f._3.SIZE_32, ...a }),
+                      className: g.H,
+                      children: (0, l.jsx)(E.eu, { src: r, "aria-label": n.username, size: T._3.SIZE_32, ...i }),
                   }),
                   (0, l.jsx)(C.E, {
                       variant: "text-xs/bold",
-                      className: v.U_,
+                      className: g.U_,
                       children: N.intl.format(N.t.oxhCOl, { userName: o }),
                   }),
-                  (0, l.jsx)(s ? I : T, { className: v.q3 }),
+                  (0, l.jsx)(s ? I : f, { className: g.q3 }),
               ],
           });
 };
@@ -601,8 +601,8 @@ var x = n(937008),
 function M(e) {
     let { planSkuId: t, referralTrialOfferId: n, className: s } = e,
         { isGift: o } = (0, x.Pv)(),
-        u = (0, a.V)(n),
-        c = (0, i.c)(r.C.PAYMENT_MODAL_BANNER);
+        u = (0, i.V)(n),
+        c = (0, a.c)(r.C.PAYMENT_MODAL_BANNER);
     return o || t !== R.pe.TIER_2
         ? null
         : null != c && "paymentModalBanner" === c.properties.properties.oneofKind
@@ -611,6 +611,6 @@ function M(e) {
                 promotionBannerMarketingComponentFields: c.properties.properties.paymentModalBanner,
             })
           : u?.referrer_id != null
-            ? (0, l.jsx)(g, { className: s })
+            ? (0, l.jsx)(v, { className: s })
             : null;
 }

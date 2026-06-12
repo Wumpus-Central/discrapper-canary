@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     wx: "header__88a04",
     kX: "gameNamesHeader__88a04",
     lJ: "gameIcons__88a04",

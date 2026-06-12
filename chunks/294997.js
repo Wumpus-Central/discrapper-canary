@@ -1,10 +1,10 @@
 "use strict";
 n.d(t, { T: () => o }), n(321073);
-var r = n(143236),
-    i = n(118356),
-    a = n(547830);
-let s = new i.Vy("Flux");
-class o extends r.EventEmitter {
+var i = n(143236),
+    r = n(941426),
+    s = n(179689);
+let a = new r.Vy("Flux");
+class o extends i.EventEmitter {
     logs = [];
     persist;
     constructor({ persist: e = !1 } = {}) {
@@ -12,24 +12,24 @@ class o extends r.EventEmitter {
     }
     log(e, t) {
         let n = new u(e),
-            r = (t, r) => {
-                let i,
-                    s = { name: t, time: -1 },
-                    o = a.FO.now();
+            i = (t, i) => {
+                let r,
+                    a = { name: t, time: -1 },
+                    o = s.FO.now();
                 try {
-                    i = r();
+                    r = i();
                 } finally {
-                    (s.time = a.FO.now() - o), this.persist && n.traces.push(s), this.emit("trace", e.type, t, s.time);
+                    (a.time = s.FO.now() - o), this.persist && n.traces.push(a), this.emit("trace", e.type, t, a.time);
                 }
-                return i;
+                return r;
             };
-        n.startTime = a.FO.now();
+        n.startTime = s.FO.now();
         try {
-            t(r);
+            t(i);
         } catch (e) {
             throw ((n.error = e), e);
         } finally {
-            (n.totalTime = a.FO.now() - n.startTime),
+            (n.totalTime = s.FO.now() - n.startTime),
                 this.persist && n.totalTime > 0 && this.logs.push(n),
                 this.logs.length > 1e3 && this.logs.shift(),
                 this.emit("log", e);
@@ -38,29 +38,29 @@ class o extends r.EventEmitter {
     }
     getSlowestActions(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
-            r = [];
+            i = [];
         for (let t of this.logs)
-            if (null == e || t.name === e) for (let e of t.traces) r.push([e.name, t.name, e.time]);
-        r.sort((e, t) => t[2] - e[2]), r.length > t && (r.length = t);
-        let i = 0,
-            a = 0,
-            o = r
+            if (null == e || t.name === e) for (let e of t.traces) i.push([e.name, t.name, e.time]);
+        i.sort((e, t) => t[2] - e[2]), i.length > t && (i.length = t);
+        let r = 0,
+            s = 0,
+            o = i
                 .map((t) => {
-                    let [n, r, a] = t,
-                        s = `${n}`;
-                    return null == e && (s += `<${r}>`), (i = Math.max(s.length, i)), [s, a];
+                    let [n, i, s] = t,
+                        a = `${n}`;
+                    return null == e && (a += `<${i}>`), (r = Math.max(a.length, r)), [a, s];
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return (a += n), `${t.padEnd(i + 1, " ")} - ${n}ms`;
+                    return (s += n), `${t.padEnd(r + 1, " ")} - ${n}ms`;
                 })
                 .join("\n");
         return (
-            0 === r.length ||
-                r[0][2] < 10 ||
-                a < 20 ||
-                (s.log("Using Hermes:", void 0 !== n.g?.HermesInternal),
-                s.log(`${
+            0 === i.length ||
+                i[0][2] < 10 ||
+                s < 20 ||
+                (a.log("Using Hermes:", void 0 !== n.g?.HermesInternal),
+                a.log(`${
                     null != e
                         ? `
 
@@ -69,32 +69,32 @@ class o extends r.EventEmitter {
                 }
 ${o}
 `),
-                s.log(`Total Time: ${a}ms`)),
-            r
+                a.log(`Total Time: ${s}ms`)),
+            i
         );
     }
     getLastActionMetrics(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
-            r = {};
-        for (let e of this.logs) for (let t of e.traces) r[t.name] = [t.name, e.name, t.time];
-        let i = Object.values(r);
-        i.sort((e, t) => t[2] - e[2]), i.length > t && (i.length = t);
-        let a = 0,
+            i = {};
+        for (let e of this.logs) for (let t of e.traces) i[t.name] = [t.name, e.name, t.time];
+        let r = Object.values(i);
+        r.sort((e, t) => t[2] - e[2]), r.length > t && (r.length = t);
+        let s = 0,
             o = 0,
-            l = i
+            l = r
                 .map((e) => {
-                    let [t, n, r] = e;
-                    return (a = Math.max(t.length, a)), [t, r];
+                    let [t, n, i] = e;
+                    return (s = Math.max(t.length, s)), [t, i];
                 })
                 .map((e) => {
                     let [t, n] = e;
-                    return (o += n), `${t.padEnd(a + 1, " ")} - ${n}ms`;
+                    return (o += n), `${t.padEnd(s + 1, " ")} - ${n}ms`;
                 })
                 .join("\n");
         return (
-            0 === i.length ||
+            0 === r.length ||
                 o < 8 ||
-                s.log(
+                a.log(
                     `
 Using Hermes: ${void 0 !== n.g?.HermesInternal}`,
                     `
@@ -106,7 +106,7 @@ Total Time: ${o}ms
 
 `,
                 ),
-            i
+            r
         );
     }
 }

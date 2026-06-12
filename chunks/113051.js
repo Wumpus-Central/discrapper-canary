@@ -12,7 +12,7 @@ let d = /^<sound:(\d+):(\d+)>/;
 function _(e, t) {
     let n = e[1],
         d = e[2],
-        { guildId: _, channelId: f, messageId: h } = t,
+        { guildId: _, channelId: h, messageId: f } = t,
         p = (function (e, t, n, s, l) {
             if (!(0, a.K)({ location: "getSoundmojiASTFromString" })) return;
             let d = i.A.getSoundById(s),
@@ -26,7 +26,7 @@ function _(e, t) {
                 return e;
             }
             if (_ && null != d) return d;
-        })(_, f, h, d, t.soundboardSounds);
+        })(_, h, f, d, t.soundboardSounds);
     if (null == p) return { type: "text", content: (0, l.A)(n, d) };
     let E = p?.name ?? d;
     return {

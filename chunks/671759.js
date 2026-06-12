@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => s }), n(938796);
-var r = n(989349),
-    i = n.n(r),
-    a = n(315069);
-class s extends a.A {
+n.d(t, { A: () => a }), n(938796);
+var i = n(989349),
+    r = n.n(i),
+    s = n(315069);
+class a extends s.A {
     code;
     temporary;
     revoked;
@@ -40,11 +40,11 @@ class s extends a.A {
             (this.roles = e.roles || []);
     }
     static createFromServer(e) {
-        return new s({
+        return new a({
             ...e,
             maxUses: e.max_uses,
             maxAge: e.max_age,
-            createdAt: i()(e.created_at ?? void 0),
+            createdAt: r()(e.created_at ?? void 0),
             targetType: e.target_type,
             targetUser: e.target_user,
             targetApplication: e.target_application,
@@ -52,10 +52,10 @@ class s extends a.A {
     }
     isExpired() {
         let e = this.maxAge;
-        return !!(e > 0 && i()(this.createdAt).add(e, "seconds").isBefore(Date.now())) || !1;
+        return !!(e > 0 && r()(this.createdAt).add(e, "seconds").isBefore(Date.now())) || !1;
     }
     getExpiresAt() {
-        return this.maxAge > 0 ? i()(this.createdAt).add(this.maxAge, "seconds").toDate() : 1 / 0;
+        return this.maxAge > 0 ? r()(this.createdAt).add(this.maxAge, "seconds").toDate() : 1 / 0;
     }
     toString() {
         return this.code;

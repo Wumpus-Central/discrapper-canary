@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
-    Ay: () => h,
-    GK: () => f,
+    Ay: () => f,
+    GK: () => h,
     J7: () => _,
     PJ: () => E,
     R8: () => m,
@@ -34,13 +34,13 @@ var i,
         (a[(a.PLAYSTATION = 3)] = "PLAYSTATION"),
         (a[(a.QUEST = 4)] = "QUEST"),
         a),
-    f =
+    h =
         (((o = {}).CONTEXT_MENU = "Context Menu"),
         (o.THREE_DOT = "Three-Dot"),
         (o.CARET = "Caret"),
         (o.OTHER_BUTTON = "Other Button"),
         o);
-function h(e) {
+function f(e) {
     return e?.type === 0 || e?.type === 1;
 }
 function p(e) {

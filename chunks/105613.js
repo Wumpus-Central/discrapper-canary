@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { A: () => u, N: () => d });
+n.d(t, { A: () => d, N: () => u });
 var i = n(439372),
-    r = n(954571),
+    r = n(174459),
     s = n(723702),
     a = n(19575),
     o = n(756876),
     l = n(652215);
-async function d() {
+async function u() {
     if (!s.isPlatformEmbedded) return !1;
     let e = await o.A.hasPermission();
     return a.Ay.shouldDisplayNotifications() && e;
 }
-class _ extends i.A {
+class c extends i.A {
     actions = { POST_CONNECTION_OPEN: this.handlePostConnectionOpen };
     async handlePostConnectionOpen() {
-        let e = await d();
+        let e = await u();
         r.default.track(l.HAw.NOTIFICATION_PERMISSION_STATUS, { os_enabled: e });
     }
 }
-let u = new _();
+let d = new c();

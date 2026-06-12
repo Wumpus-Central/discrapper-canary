@@ -582,7 +582,7 @@ let r = {
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
-        inlineRequire: () => n(146623).A,
+        inlineRequire: () => n(966532).A,
     },
     DistributedClipsManager: { actions: ["CLIPS_REMOTE_TRIGGER"], inlineRequire: () => n(109624).A },
     CustomCallSoundsManager: {

@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => r });
-var l = n(17928),
-    i = n(228366);
+n.d(t, { A: () => o });
+var i = n(17928),
+    r = n(228366);
 let s = new Map();
-class a extends l.Ay.Store {
+class a extends i.Ay.Store {
     static displayName = "ThreadsAlsoSendToChannelStore";
     getAlsoSendToChannel(e) {
         return !!s.has(e) && s.get(e);
     }
 }
-let r = new a(i.h, {
+let o = new a(r.h, {
     SET_THREADS_ALSO_SEND_TO_CHANNEL: function (e) {
         let { channelId: t, enabled: n } = e;
         s.set(t, n);

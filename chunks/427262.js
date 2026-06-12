@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     $3: () => d,
-    Ay: () => N,
+    Ay: () => y,
     G2: () => m,
     Gn: () => S,
     MU: () => p,
@@ -9,7 +9,7 @@ n.d(t, {
     R1: () => T,
     mG: () => _,
     mv: () => g,
-    tx: () => f,
+    tx: () => h,
 });
 var i = n(17928),
     r = n(351906),
@@ -30,13 +30,13 @@ function _(e) {
         n = d(e);
     return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = l(n)), n;
 }
-function f(e) {
+function h(e) {
     let t = (0, i.bG)([r.A], () => r.A.hidePersonalInformation);
     if (null == e) return;
     let n = d(e);
     return t && n.toLocaleLowerCase() === e.username?.toLocaleLowerCase() && "0" === e.discriminator && (n = l(n)), n;
 }
-function h(e) {
+function f(e) {
     if (null != e)
         if (c(e.globalName)) return e.globalName;
         else if (c(e.global_name)) return e.global_name;
@@ -103,9 +103,9 @@ function S() {
     let e = s.default.getCurrentUser();
     return null != e && e.isStaff();
 }
-let N = {
+let y = {
     getName: _,
-    useName: f,
+    useName: h,
     isNameConcealed: (e) => 2 === e.length && e.endsWith("\u2026"),
     getUserTag: I,
     useUserTag: function (e, t) {
@@ -119,11 +119,11 @@ let N = {
     getFormattedName: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return "???";
-        let n = h(e),
+        let n = f(e),
             i = t ? I(e) : (e.username ?? "???");
         return n === i ? n : null != n ? `${n} (${i})` : i;
     },
-    getGlobalName: h,
+    getGlobalName: f,
     humanizeStatus: p,
     useDirectMessageRecipient: T,
 };

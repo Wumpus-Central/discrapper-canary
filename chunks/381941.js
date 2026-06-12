@@ -2,15 +2,15 @@
 n.d(t, {
     ES: () => l,
     Fd: () => c,
-    Gt: () => h,
-    Hx: () => N,
+    Gt: () => f,
+    Hx: () => y,
     N0: () => _,
     VP: () => T,
     ZG: () => S,
     _W: () => E,
     aj: () => m,
     cZ: () => g,
-    k8: () => f,
+    k8: () => h,
     mZ: () => d,
     oe: () => A,
     q4: () => p,
@@ -41,8 +41,8 @@ let o = [0, 4, 8, 16, 24],
     }),
     d = 16,
     _ = 16,
-    f = 32,
-    h = 64,
+    h = 32,
+    f = 64,
     p = "---new-messages-bar",
     E = "SPOILER_",
     m = 3447003,
@@ -59,7 +59,7 @@ var I =
     i);
 let T = 0xc800000,
     S = { timeout: 60 * a.A.Millis.SECOND, retries: 3, backoff: new s.A() };
-var N =
+var y =
     (((r = {}).PUSH_NOTIFICATION = "push_notification"),
     (r.CHAT_INPUT = "chat_input"),
     (r.SHARE_MODAL = "share_modal"),

@@ -14,10 +14,10 @@ var i = n(627968),
     A = n(231723),
     x = n(825484),
     g = n(821609),
-    C = n(283973),
-    f = n(834730),
-    E = n(789645),
-    y = n(964486),
+    f = n(283973),
+    C = n(834730),
+    y = n(789645),
+    E = n(964486),
     N = n(648027),
     j = n(855446),
     v = n(793574),
@@ -117,7 +117,7 @@ function V(e) {
             { contextKey: r ? A.KX : A.SY },
         );
     }
-    function f() {
+    function C() {
         (0, T.A)({
             context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
             openInPopout: r,
@@ -140,7 +140,7 @@ function V(e) {
                             children: [
                                 (0, i.jsx)(g.$, {
                                     variant: "secondary",
-                                    icon: C.R,
+                                    icon: f.R,
                                     text: L.intl.string(L.t["EE+P0H"]),
                                     onClick: p,
                                 }),
@@ -149,7 +149,7 @@ function V(e) {
                                         variant: "secondary",
                                         icon: u.k,
                                         text: L.intl.string(L.t.qnFavR),
-                                        onClick: f,
+                                        onClick: C,
                                     }),
                             ],
                         }),
@@ -160,7 +160,7 @@ function V(e) {
 }
 function B(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
-    (0, y.Ay)(() => {
+    (0, E.Ay)(() => {
         P.default.track(b.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
@@ -175,7 +175,7 @@ function B(e) {
             className: M.zr,
             children: [
                 o > 300
-                    ? (0, i.jsx)(f.E, {
+                    ? (0, i.jsx)(C.E, {
                           className: M.R_,
                           variant: o > 550 ? "text-md/semibold" : "text-sm/semibold",
                           children: L.intl.string(L.t["7BKMcG"]),
@@ -209,7 +209,7 @@ function B(e) {
                     },
                     children: [
                         (0, i.jsx)(S.A, {}),
-                        (0, i.jsx)(f.E, { variant: "text-sm/medium", children: L.intl.string(L.t["5E9SB9"]) }),
+                        (0, i.jsx)(C.E, { variant: "text-sm/medium", children: L.intl.string(L.t["5E9SB9"]) }),
                     ],
                 }),
                 (0, i.jsx)(d.D, {
@@ -222,7 +222,7 @@ function B(e) {
                         }),
                             a();
                     },
-                    children: (0, i.jsx)(E.P, { size: "md", color: "currentColor", className: M.b }),
+                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: M.b }),
                 }),
             ],
         }),

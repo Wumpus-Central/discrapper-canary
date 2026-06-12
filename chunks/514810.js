@@ -2,7 +2,7 @@ n.d(t, { N: () => r });
 var i = n(64700),
     l = n(17928),
     s = n(287809),
-    a = n(985018);
+    a = n(375708);
 function r(e) {
     let t = e.linkedLobby?.linked_at,
         n = (0, l.bG)([s.default], () => s.default.getUser(e.linkedLobby?.linked_by));

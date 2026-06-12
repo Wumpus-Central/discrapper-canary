@@ -1,68 +1,68 @@
-t.d(n, { A: () => h, W: () => p });
-var l = t(17928),
-    i = t(47167),
-    a = t(734057),
-    r = t(317525),
-    o = t(576705),
-    s = t(994500),
-    c = t(287809),
-    u = t(652215),
-    d = t(985018);
-function m(e, n, t) {
+n.d(t, { A: () => h, W: () => p });
+var l = n(17928),
+    i = n(47167),
+    a = n(734057),
+    r = n(317525),
+    o = n(576705),
+    s = n(994500),
+    c = n(287809),
+    d = n(652215),
+    u = n(375708);
+function m(e, t, n) {
     return 0 === e.length
         ? ""
-        : d.intl.format(t ? d.t.cJZxWf : d.t.Kj5GIT, {
+        : u.intl.format(n ? u.t.cJZxWf : u.t.Kj5GIT, {
               count: e.length,
               extraCount: Math.max(e.length - 2, 0),
               role1: e[0],
               role2: e[1],
-              itemHook: n,
+              itemHook: t,
           });
 }
 function h(e) {
-    let { guild: n, prompt: t, selectedRoleIds: h, selectedChannelIds: p, itemHook: g } = e,
-        x = n?.id,
-        A = (0, l.yK)([r.A], () => (null != x ? r.A.getManyRoles(x, h) : []), [x, h]),
+    let { guild: t, prompt: n, selectedRoleIds: h, selectedChannelIds: p, itemHook: x } = e,
+        g = t?.id,
+        A = (0, l.yK)([r.A], () => (null != g ? r.A.getManyRoles(g, h) : []), [g, h]),
         f = (0, l.yK)([a.A, c.default, s.A, o.A], () =>
             Array.from(p)
                 .map((e) => a.A.getChannel(e))
-                .filter((e) => null != e && o.A.can(u.xBc.VIEW_CHANNEL, e))
+                .filter((e) => null != e && o.A.can(d.xBc.VIEW_CHANNEL, e))
                 .map((e) => (0, i.m1)(e, c.default, s.A, !0)),
         ),
         C = A.map((e) => `@${e.name}`),
-        j = t?.singleSelect ? "" : d.intl.string(d.t.JshhEl),
+        j = n?.singleSelect ? "" : u.intl.string(u.t.JshhEl),
         v = "";
-    if (0 === f.length && C.length > 0) j = m(C, g);
+    if (0 === f.length && C.length > 0) j = m(C, x);
     else
         f.length > 0 &&
             ((j =
                 0 === f.length
                     ? ""
-                    : d.intl.format(d.t.Rj841R, {
+                    : u.intl.format(u.t.Rj841R, {
                           count: f.length,
                           extraCount: Math.max(f.length - 2, 0),
                           channel1: f[0],
                           channel2: f[1],
-                          itemHook: g,
+                          itemHook: x,
                       })),
-            C.length > 0 && (v = m(C, g, !0)));
+            C.length > 0 && (v = m(C, x, !0)));
     return { helpText: j, helpTextAdditional: v };
 }
 function p(e) {
-    let { guild: n, prompt: t, selectedRoleIds: m, selectedChannelIds: h, itemHook: p } = e,
-        g = n?.id,
-        x = (0, l.yK)([r.A], () => (null != g ? r.A.getManyRoles(g, m) : []), [g, m]),
+    let { guild: t, prompt: n, selectedRoleIds: m, selectedChannelIds: h, itemHook: p } = e,
+        x = t?.id,
+        g = (0, l.yK)([r.A], () => (null != x ? r.A.getManyRoles(x, m) : []), [x, m]),
         A = (0, l.yK)([a.A, c.default, s.A, o.A], () =>
             Array.from(h)
                 .map((e) => a.A.getChannel(e))
-                .filter((e) => null != e && o.A.can(u.xBc.VIEW_CHANNEL, e))
+                .filter((e) => null != e && o.A.can(d.xBc.VIEW_CHANNEL, e))
                 .map((e) => (0, i.m1)(e, c.default, s.A, !0)),
         ),
-        f = x.map((e) => `@${e.name}`),
-        C = t?.singleSelect ? "" : d.intl.string(d.t.JshhEl);
+        f = g.map((e) => `@${e.name}`),
+        C = n?.singleSelect ? "" : u.intl.string(u.t.JshhEl);
     return (
         0 === A.length && f.length > 0
-            ? (C = d.intl.format(d.t.vdtNYa, {
+            ? (C = u.intl.format(u.t.vdtNYa, {
                   count: f.length,
                   extraCount: Math.max(f.length - 2, 0),
                   role1: f[0],
@@ -70,7 +70,7 @@ function p(e) {
                   itemHook: p,
               }))
             : A.length > 0 && 0 === f.length
-              ? (C = d.intl.format(d.t.ZKywGU, {
+              ? (C = u.intl.format(u.t.ZKywGU, {
                     count: A.length,
                     extraCount: Math.max(A.length - 2, 0),
                     channel1: A[0],
@@ -79,7 +79,7 @@ function p(e) {
                 }))
               : A.length > 0 &&
                 f.length > 0 &&
-                (C = d.intl.format(d.t.WewRHM, {
+                (C = u.intl.format(u.t.WewRHM, {
                     channelCount: A.length,
                     extraChannelCount: Math.max(A.length - 2, 0),
                     channel1: A[0],

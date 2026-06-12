@@ -1,7 +1,7 @@
 !(function (e) {
     "use strict";
-    function t(e, t, n, r) {
-        var i = {
+    function t(e, t, n, i) {
+        var r = {
             s: ["thodde secondanim", "thodde second"],
             ss: [e + " secondanim", e + " second"],
             m: ["eka mintan", "ek minute"],
@@ -15,7 +15,7 @@
             y: ["eka vorsan", "ek voros"],
             yy: [e + " vorsanim", e + " vorsam"],
         };
-        return t ? i[n][0] : i[n][1];
+        return t ? r[n][0] : r[n][1];
     }
     e.defineLocale("gom-latn", {
         months: "Janer_Febrer_Mars_Abril_Mai_Jun_Julai_Agost_Setembr_Otubr_Novembr_Dezembr".split("_"),

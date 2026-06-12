@@ -1,5 +1,5 @@
-var t = TypeError;
-e.exports = function (e, r) {
-    if (e < r) throw new t("Not enough arguments");
+var r = TypeError;
+e.exports = function (e, a) {
+    if (e < a) throw new r("Not enough arguments");
     return e;
 };

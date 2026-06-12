@@ -1,21 +1,21 @@
-n.d(t, { AE: () => r, Mw: () => l, j_: () => s });
-var i = n(228366),
-    a = n(157257);
-function r(e) {
+i.d(n, { AE: () => c, Mw: () => l, j_: () => p });
+var d = i(228366),
+    t = i(157257);
+function c(e) {
     return (!e.isPreviewingInGame && !e.locked) || e.pinned;
 }
-function l(e, t, n) {
-    (e.locked !== t.locked || e.pinned !== t.pinned || n(e) !== n(t) || r(e) !== r(t)) && s(t, n(t));
+function l(e, n, i) {
+    (e.locked !== n.locked || e.pinned !== n.pinned || i(e) !== i(n) || c(e) !== c(n)) && p(n, i(n));
 }
-function s(e, t) {
-    let n = r(e),
-        l = a.A.getGame();
-    i.h.dispatch({
+function p(e, n) {
+    let i = c(e),
+        l = t.A.getGame();
+    d.h.dispatch({
         type: "OVERLAY_WIDGET_CHANGED",
         gameName: l?.name ?? null,
         gameId: l?.id ?? null,
         widgetType: e.widget,
-        visible: n && t,
+        visible: i && n,
         locked: e.locked,
         pinned: e.pinned,
     });

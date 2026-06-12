@@ -1,6 +1,6 @@
-n.d(t, { a: () => s, l: () => a });
+n.d(t, { a: () => l, l: () => s });
 var r = n(64700);
-let s = r.createContext({
+let l = r.createContext({
         quest: null,
         sourceQuestContent: null,
         videoSessionId: "",
@@ -12,4 +12,4 @@ let s = r.createContext({
         maxProgressSec: 0,
         targetSec: 0,
     }),
-    a = r.createContext({ questConfig: null });
+    s = r.createContext({ questConfig: null });

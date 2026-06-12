@@ -36,7 +36,7 @@ function _() {
     }
     return n;
 }
-class f extends a.Ay.PersistedStore {
+class h extends a.Ay.PersistedStore {
     static displayName = "AdContentSeenStore";
     static persistKey = "AdContentSeenStore";
     initialize(e) {
@@ -53,7 +53,7 @@ class f extends a.Ay.PersistedStore {
         return c.get(e)?.has(t) ?? !1;
     }
 }
-let h = new f(o.h, {
+let f = new h(o.h, {
     AD_CONTENT_MARK_SEEN: function (e) {
         let t = d(e.adCreativeType),
             n = !1;
@@ -82,7 +82,7 @@ function A() {
         { search: n } = (0, r.zy)(),
         o = i.useMemo(() => new URLSearchParams(n).get(E.L1.AD_CREATIVE_IDS), [n]),
         l = i.useMemo(() => null != o && null != t && o.includes(t), [o, t]),
-        u = (0, a.bG)([h], () => null != t && h.hasSeen(s.p.QUEST_HOME_HERO, t), [t]);
+        u = (0, a.bG)([f], () => null != t && f.hasSeen(s.p.QUEST_HOME_HERO, t), [t]);
     return {
         shouldShowQuestHomeHeroContent:
             (function (e) {

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => C });
 var i = n(627968);
 n(64700);
 var r = n(189213),
@@ -11,8 +11,8 @@ var r = n(189213),
     c = n(567249),
     d = n(574172),
     _ = n(378570),
-    f = n(646865),
-    h = n(795816),
+    h = n(646865),
+    f = n(795816),
     p = n(957292),
     E = n(933958),
     m = n(969151),
@@ -21,9 +21,9 @@ var r = n(189213),
     I = n(5867),
     T = n(652215),
     S = n(375708);
-let N = !1,
-    y = !1;
-class C extends p.Ay {
+let y = !1,
+    N = !1;
+class v extends p.Ay {
     _initialize() {
         super._initialize(),
             c.A.addChangeListener(this.handlePopoutWindowUpdate),
@@ -63,9 +63,9 @@ class C extends p.Ay {
     leaveActivity(e) {
         let { location: t, applicationId: n, showFeedback: i, shouldClosePopout: r = !0 } = e;
         u.h.wait(() => {
-            (0, h._H)({ location: t, applicationId: n, showFeedback: i });
+            (0, f._H)({ location: t, applicationId: n, showFeedback: i });
         }),
-            (0, f.f)() && r && (0, d.close)(T.MLl.ACTIVITY_POPOUT);
+            (0, h.f)() && r && (0, d.close)(T.MLl.ACTIVITY_POPOUT);
     }
     hidePIPEmbed(e) {
         let { location: t, applicationId: n } = e,
@@ -79,24 +79,24 @@ class C extends p.Ay {
     releaseWebView() {}
     handlePopoutWindowOpen = (e) => {
         let { key: t } = e;
-        t === T.MLl.ACTIVITY_POPOUT && (y = !1);
+        t === T.MLl.ACTIVITY_POPOUT && (N = !1);
     };
     popInActivity = () => {
-        (y = !0), d.close(T.MLl.ACTIVITY_POPOUT);
+        (N = !0), d.close(T.MLl.ACTIVITY_POPOUT);
         let e = E.Ay.getCurrentEmbeddedActivity();
         if (null != e) {
             let t = (0, m.H)(e.location);
-            null != t && (0, _.iN)(t), (0, h.gk)(I.Gd.PANEL);
+            null != t && (0, _.iN)(t), (0, f.gk)(I.Gd.PANEL);
         }
     };
     handlePopoutWindowUpdate = () => {
-        let e = N,
+        let e = y,
             t = c.A.getWindowOpen(T.MLl.ACTIVITY_POPOUT);
-        if (e && !t && !y) {
+        if (e && !t && !N) {
             let e = E.Ay.getCurrentEmbeddedActivity();
             null != e && this.leaveActivity({ location: e.location, applicationId: e.applicationId });
         }
-        N = t;
+        y = t;
     };
 }
-let v = new C();
+let C = new v();

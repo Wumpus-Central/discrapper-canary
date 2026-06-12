@@ -1,21 +1,21 @@
-l.d(t, { A: () => c });
-var i = l(627968);
-l(64700);
-var s = l(187322),
-    a = l(834730),
-    n = l(415469),
-    r = l(906471);
+s.d(t, { A: () => c });
+var a = s(627968);
+s(64700);
+var n = s(187322),
+    i = s(834730),
+    r = s(415469),
+    l = s(906471);
 function c(e) {
-    let { icon: t, message: l, onClick: c, autoFocus: d } = e;
-    return (0, i.jsx)(s.vN, {
-        children: (0, i.jsxs)("button", {
-            className: n.kL,
+    let { icon: t, message: s, onClick: c, autoFocus: d } = e;
+    return (0, a.jsx)(n.vN, {
+        children: (0, a.jsxs)("button", {
+            className: r.kL,
             onClick: c,
             autoFocus: d,
             children: [
-                (0, i.jsx)("img", { className: n.Kk, alt: "", src: t }),
-                (0, i.jsx)(a.E, { className: n.Qq, variant: "text-md/bold", children: l }),
-                (0, i.jsx)("img", { className: n.UE, alt: "", src: r }),
+                (0, a.jsx)("img", { className: r.Kk, alt: "", src: t }),
+                (0, a.jsx)(i.E, { className: r.Qq, variant: "text-md/bold", children: s }),
+                (0, a.jsx)("img", { className: r.UE, alt: "", src: l }),
             ],
         }),
     });

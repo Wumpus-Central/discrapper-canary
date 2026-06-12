@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { i: () => r });
-let r = (0, n(353640).v)((e, t) => ({
+n.d(t, { i: () => i });
+let i = (0, n(353640).v)((e, t) => ({
     responses: {},
     displayedQuestions: {},
-    setResponse: (t, n, r) => {
-        e((e) => ({ responses: { ...e.responses, [t]: { ...e.responses[t], [n]: r } } }));
+    setResponse: (t, n, i) => {
+        e((e) => ({ responses: { ...e.responses, [t]: { ...e.responses[t], [n]: i } } }));
     },
     getSurveyResponses: (e) => t().responses[e] ?? {},
     clearSurveyResponses: (t) => {
         e((e) => {
             let n = { ...e.responses };
             delete n[t];
-            let r = { ...e.displayedQuestions };
-            return delete r[t], { responses: n, displayedQuestions: r };
+            let i = { ...e.displayedQuestions };
+            return delete i[t], { responses: n, displayedQuestions: i };
         });
     },
     trackDisplayedQuestions: (t, n) => {
         e((e) => {
-            let r = new Set(e.displayedQuestions[t] ?? new Set());
-            return n.forEach((e) => r.add(e)), { displayedQuestions: { ...e.displayedQuestions, [t]: r } };
+            let i = new Set(e.displayedQuestions[t] ?? new Set());
+            return n.forEach((e) => i.add(e)), { displayedQuestions: { ...e.displayedQuestions, [t]: i } };
         });
     },
     getDisplayedQuestions: (e) => {

@@ -1,15 +1,15 @@
 "use strict";
 var t,
     n = "function" == typeof Map && Map.prototype ? Map : null,
-    r = "function" == typeof Set && Set.prototype ? Set : null;
+    i = "function" == typeof Set && Set.prototype ? Set : null;
 n ||
     (t = function (e) {
         return !1;
     });
-var i = n ? Map.prototype.has : null,
-    a = r ? Set.prototype.has : null;
+var r = n ? Map.prototype.has : null,
+    s = i ? Set.prototype.has : null;
 t ||
-    i ||
+    r ||
     (t = function (e) {
         return !1;
     }),
@@ -18,9 +18,9 @@ t ||
         function (e) {
             if (!e || "object" != typeof e) return !1;
             try {
-                if ((i.call(e), a))
+                if ((r.call(e), s))
                     try {
-                        a.call(e);
+                        s.call(e);
                     } catch (e) {
                         return !0;
                     }

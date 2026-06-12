@@ -50,8 +50,8 @@ let S = new d.Vy("LibDaveManager"),
     },
     m = new d.Vy("EncryptionWorker");
 (0, d.$o)(d.gZ);
-let h = "uninitialized",
-    b = new Map(),
+let b = "uninitialized",
+    h = new Map(),
     A = new Map(),
     w = [];
 (self.onmessage = (e) => {
@@ -62,7 +62,7 @@ let h = "uninitialized",
     });
 let O = (e) => {
         let { data: r } = e;
-        if ("initialized" !== h && r.type !== u.INITIALIZE) return void w.push(e);
+        if ("initialized" !== b && r.type !== u.INITIALIZE) return void w.push(e);
         switch (r.type) {
             case u.INITIALIZE:
                 P();
@@ -87,8 +87,8 @@ let O = (e) => {
         }
     },
     P = async () => {
-        if ("uninitialized" === h)
-            for (let e of ((h = "initializing"),
+        if ("uninitialized" === b)
+            for (let e of ((b = "initializing"),
             (n = await (null != E
                 ? E
                 : (E = new Promise((e, r) => {
@@ -108,7 +108,7 @@ let O = (e) => {
                               S.error("Failed to load DAVE module", e), r(e);
                           });
                   })))),
-            (h = "initialized"),
+            (b = "initialized"),
             w))
                 O(e);
     },
@@ -147,8 +147,8 @@ let O = (e) => {
             o = A.get(r);
         for (let e of (null == o && ((o = { audioSSRC: t, videoSSRCs: n, cryptor: null }), A.set(r, o)),
         [o.audioSSRC, ...o.videoSSRCs]))
-            a.includes(e) || b.get(e) !== r || b.delete(e);
-        for (let e of a) e > 0 && b.set(e, r);
+            a.includes(e) || h.get(e) !== r || h.delete(e);
+        for (let e of a) e > 0 && h.set(e, r);
         (o.audioSSRC = t), (o.videoSSRCs = n);
     },
     D = (e) => {
@@ -161,7 +161,7 @@ let O = (e) => {
         if (null == t) return;
         A.delete(r);
         let { audioSSRC: n, videoSSRCs: a } = t;
-        for (let e of [n, ...a]) b.get(e) === r && b.delete(e);
+        for (let e of [n, ...a]) h.get(e) === r && h.delete(e);
     },
     V = (e) => {
         postMessage({ type: f.PROTOCOL_VERSION_CHANGED, protocolVersion: e });
@@ -171,7 +171,7 @@ let O = (e) => {
             let t,
                 a = e.getMetadata().synchronizationSource;
             if (null == a) return void m.warn("no ssrc found in frame metadata");
-            let o = b.get(a);
+            let o = h.get(a);
             if (null == o) return void m.warn("no userId found for ssrc", a);
             let i = A.get(o);
             if (null == i) return void m.warn("no user found for userId", o);

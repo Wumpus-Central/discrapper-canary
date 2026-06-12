@@ -1,8 +1,8 @@
 "use strict";
-n.r(t), n.d(t, { default: () => s });
-var r = n(273518),
-    i = n(29583),
-    a = n(618027);
-function s(e) {
-    return (0, a.A)(1, arguments), (!!(0, r.default)(e) || "number" == typeof e) && !isNaN(Number((0, i.default)(e)));
+n.r(t), n.d(t, { default: () => a });
+var i = n(273518),
+    r = n(29583),
+    s = n(618027);
+function a(e) {
+    return (0, s.A)(1, arguments), (!!(0, i.default)(e) || "number" == typeof e) && !isNaN(Number((0, r.default)(e)));
 }

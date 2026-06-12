@@ -15,10 +15,10 @@ var i,
         (i.OFFICIAL_MESSAGE = "official_message"),
         (i.VOICE_INVITE_EMBED = "voice_invite_embed"),
         i);
-function f(e) {
+function h(e) {
     return "voice_invite_embed" === e.type ? `${e.messageId}-${e.inviteCode}-${e.type}` : `${e.messageId}-${e.type}`;
 }
-class h extends o.A {
+class f extends o.A {
     currentlyVisibleMessageTimers = {};
     viewsInCurrentChannel = new Set();
     recentViewTimes = new (s())({ max: 500, maxAge: 6e4 });
@@ -26,7 +26,7 @@ class h extends o.A {
     batchTimerId = null;
     actions = { CHANNEL_SELECT: () => this.handleChannelSelect() };
     handleMessageBecameVisible(e) {
-        let t = f(e);
+        let t = h(e);
         if (null != this.currentlyVisibleMessageTimers[t] || this.viewsInCurrentChannel.has(t)) return;
         let n = this.recentViewTimes.get(t);
         if (null != n && Date.now() - n < 6e4) return;
@@ -47,7 +47,7 @@ class h extends o.A {
         for (let t of e) this.handleMessageBecameVisible(t);
         let n = Object.keys(this.currentlyVisibleMessageTimers);
         if (n.length > 0) {
-            let i = new Set(e.map(f));
+            let i = new Set(e.map(h));
             for (let e of n) e.endsWith(`-${t}`) && !i.has(e) && this.clearTimer(e);
         }
     }
@@ -120,4 +120,4 @@ class h extends o.A {
             null == this.batchTimerId && (this.batchTimerId = setTimeout(() => this.drainBuffer(), 2e3));
     }
 }
-let p = new h();
+let p = new f();

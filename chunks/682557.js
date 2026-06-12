@@ -1,21 +1,21 @@
-n.d(t, { A: () => a });
-var i = n(627968);
+n.d(e, { A: () => a });
+var r = n(627968);
 n(64700);
-var l = n(265872),
-    s = n(283354);
-let a = (e) => {
-    let { entry: t, hideEditButton: n, children: a, onRequestOpen: r, onRequestClose: o, targetElementRef: d } = e;
-    return (0, i.jsx)(l.Y, {
-        targetElementRef: d,
-        onRequestOpen: r,
+var i = n(922016),
+    c = n(283354);
+let a = (t) => {
+    let { entry: e, hideEditButton: n, children: a, onRequestOpen: l, onRequestClose: o, targetElementRef: E } = t;
+    return (0, r.jsx)(i.Y, {
+        targetElementRef: E,
+        onRequestOpen: l,
         onRequestClose: o,
-        animation: l.Y.Animation.NONE,
+        animation: i.Y.Animation.NONE,
         position: "bottom",
         spacing: 4,
         align: "right",
-        renderPopout: (e) => {
-            let { closePopout: l } = e;
-            return (0, i.jsx)(s.default, { entry: t, closePopout: l, hideEditButton: n });
+        renderPopout: (t) => {
+            let { closePopout: i } = t;
+            return (0, r.jsx)(c.default, { entry: e, closePopout: i, hideEditButton: n });
         },
         children: a,
     });

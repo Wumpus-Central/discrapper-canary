@@ -30,7 +30,7 @@ function u(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-var c = (t.Hue = (function (e) {
+var p = (t.Hue = (function (e) {
     if ("function" != typeof e && null !== e)
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t() {
@@ -144,4 +144,4 @@ var c = (t.Hue = (function (e) {
         t
     );
 })(o.PureComponent || o.Component));
-t.default = c;
+t.default = p;

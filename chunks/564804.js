@@ -1,24 +1,24 @@
 "use strict";
 n.d(t, { A: () => l });
-var r = n(29583),
-    i = n(618027),
-    a = n(327922),
-    s = n(998280),
+var i = n(29583),
+    r = n(618027),
+    s = n(327922),
+    a = n(998280),
     o = n(98430);
 function l(e, t) {
-    (0, i.A)(1, arguments);
+    (0, r.A)(1, arguments);
     var n,
         l,
         u,
         c,
         d,
         _,
+        h,
         f,
-        p,
-        h = (0, r.default)(e),
-        m = h.getUTCFullYear(),
-        g = (0, o.q)(),
-        E = (0, s.A)(
+        p = (0, i.default)(e),
+        E = p.getUTCFullYear(),
+        m = (0, o.q)(),
+        g = (0, a.A)(
             null !=
                 (n =
                     null !=
@@ -31,20 +31,20 @@ function l(e, t) {
                                   ? void 0
                                   : _.firstWeekContainsDate)
                             ? u
-                            : g.firstWeekContainsDate)
+                            : m.firstWeekContainsDate)
                         ? l
-                        : null == (f = g.locale) || null == (p = f.options)
+                        : null == (h = m.locale) || null == (f = h.options)
                           ? void 0
-                          : p.firstWeekContainsDate)
+                          : f.firstWeekContainsDate)
                 ? n
                 : 1,
         );
-    if (!(E >= 1 && E <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
+    if (!(g >= 1 && g <= 7)) throw RangeError("firstWeekContainsDate must be between 1 and 7 inclusively");
     var A = new Date(0);
-    A.setUTCFullYear(m + 1, 0, E), A.setUTCHours(0, 0, 0, 0);
-    var I = (0, a.A)(A, t),
+    A.setUTCFullYear(E + 1, 0, g), A.setUTCHours(0, 0, 0, 0);
+    var I = (0, s.A)(A, t),
         T = new Date(0);
-    T.setUTCFullYear(m, 0, E), T.setUTCHours(0, 0, 0, 0);
-    var y = (0, a.A)(T, t);
-    return h.getTime() >= I.getTime() ? m + 1 : h.getTime() >= y.getTime() ? m : m - 1;
+    T.setUTCFullYear(E, 0, g), T.setUTCHours(0, 0, 0, 0);
+    var S = (0, s.A)(T, t);
+    return p.getTime() >= I.getTime() ? E + 1 : p.getTime() >= S.getTime() ? E : E - 1;
 }

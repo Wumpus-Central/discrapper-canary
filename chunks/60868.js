@@ -1,65 +1,65 @@
-n.d(t, { F: () => A, n: () => N }), n(321073);
-var l = n(136722),
-    i = n(157559),
-    r = n(997509),
-    u = n(71393),
-    a = n(817818),
-    s = n(591552),
-    d = n(961973),
-    o = n(539916),
-    E = n(652215),
-    c = n(985018);
-async function A(e, t) {
-    return null == e || (await f(e, t, { removingView: !0, removingChat: !0 }));
+t.d(e, { F: () => g, n: () => E }), t(321073);
+var i = t(136722),
+    r = t(157559),
+    o = t(468689),
+    l = t(71393),
+    a = t(817818),
+    u = t(591552),
+    s = t(961973),
+    d = t(539916),
+    c = t(652215),
+    A = t(375708);
+async function g(n, e) {
+    return null == n || (await h(n, e, { removingView: !0, removingChat: !0 }));
 }
-async function f(e, t, n) {
-    let l = u.A.getGuild(e);
+async function h(n, e, t) {
+    let i = l.A.getGuild(n);
     if (
-        null == l ||
-        !(null != l && l.features?.has(E.GuildFeatures.GUILD_ONBOARDING)) ||
-        (s.A.shouldFetchPrompts(e) && (await (0, a.jx)(e)),
-        !(function (e) {
-            let t = s.A.getDefaultChannelIds(e);
-            if (!s.A.isAdvancedMode(e)) return t;
-            let n = s.A.getOnboardingPromptsForOnboarding(e),
-                l = [];
-            for (let e of n) if (e.required) for (let t of e.options) null != t.channelIds && l.push(...t.channelIds);
-            return [...new Set([...t, ...l])];
-        })(e).includes(t) || !(n.removingChat || n.removingView))
+        null == i ||
+        !(null != i && i.features?.has(c.GuildFeatures.GUILD_ONBOARDING)) ||
+        (u.A.shouldFetchPrompts(n) && (await (0, a.jx)(n)),
+        !(function (n) {
+            let e = u.A.getDefaultChannelIds(n);
+            if (!u.A.isAdvancedMode(n)) return e;
+            let t = u.A.getOnboardingPromptsForOnboarding(n),
+                i = [];
+            for (let n of t) if (n.required) for (let e of n.options) null != e.channelIds && i.push(...e.channelIds);
+            return [...new Set([...e, ...i])];
+        })(n).includes(e) || !(t.removingChat || t.removingView))
     )
         return !0;
-    let i = s.A.getDefaultChannelIds(e),
-        r = s.A.isAdvancedMode(e) ? s.A.getOnboardingPromptsForOnboarding(e) : [];
-    return !((0, d.G4)(e, i, r, (e) => e !== t && (0, d.VU)(e)).length < o.Kd);
+    let r = u.A.getDefaultChannelIds(n),
+        o = u.A.isAdvancedMode(n) ? u.A.getOnboardingPromptsForOnboarding(n) : [];
+    return !((0, s.G4)(n, r, o, (n) => n !== e && (0, s.VU)(n)).length < d.Kd);
 }
-async function N(e, t, n) {
-    let u = e.getGuildId();
-    if (null == u) return !0;
-    null != n && (t = l.pb(t, l.B8(n)));
-    let a = e.permissionOverwrites[u],
-        d = null != a ? l.pb(a.deny, l.B8(a.allow)) : l.iu(0),
-        o = { removingView: l.zy(t, E.xBc.VIEW_CHANNEL) && !l.zy(d, E.xBc.VIEW_CHANNEL), removingChat: !1 };
+async function E(n, e, t) {
+    let l = n.getGuildId();
+    if (null == l) return !0;
+    null != t && (e = i.pb(e, i.B8(t)));
+    let a = n.permissionOverwrites[l],
+        s = null != a ? i.pb(a.deny, i.B8(a.allow)) : i.iu(0),
+        d = { removingView: i.zy(e, c.xBc.VIEW_CHANNEL) && !i.zy(s, c.xBc.VIEW_CHANNEL), removingChat: !1 };
     if (
-        (e.isForumLikeChannel()
-            ? (o.removingChat = l.zy(t, E.xBc.SEND_MESSAGES_IN_THREADS) && !l.zy(d, E.xBc.SEND_MESSAGES_IN_THREADS))
-            : (o.removingChat = l.zy(t, E.xBc.SEND_MESSAGES) && !l.zy(d, E.xBc.SEND_MESSAGES)),
-        !o.removingChat && !o.removingView)
+        (n.isForumLikeChannel()
+            ? (d.removingChat = i.zy(e, c.xBc.SEND_MESSAGES_IN_THREADS) && !i.zy(s, c.xBc.SEND_MESSAGES_IN_THREADS))
+            : (d.removingChat = i.zy(e, c.xBc.SEND_MESSAGES) && !i.zy(s, c.xBc.SEND_MESSAGES)),
+        !d.removingChat && !d.removingView)
     )
         return !0;
-    let A = s.A.isAdvancedMode(u);
+    let g = u.A.isAdvancedMode(l);
     return (
-        !!(await f(u, e.id, o)) ||
-        (i.A.show({
-            title: c.intl.string(c.t.ut7sq0),
-            body: A
-                ? c.intl.format(c.t.r0UjOO, {
+        !!(await h(l, n.id, d)) ||
+        (r.A.show({
+            title: A.intl.string(A.t.ut7sq0),
+            body: g
+                ? A.intl.format(A.t.r0UjOO, {
                       onClick: () => {
-                          i.A.close(), r.A.open(u, E.BEX.ONBOARDING);
+                          r.A.close(), o.A.open(l, c.BEX.ONBOARDING);
                       },
                   })
-                : c.intl.format(c.t["Zaz+un"], {
+                : A.intl.format(A.t["Zaz+un"], {
                       onClick: () => {
-                          i.A.close(), r.A.open(u, E.BEX.ONBOARDING);
+                          r.A.close(), o.A.open(l, c.BEX.ONBOARDING);
                       },
                   }),
         }),

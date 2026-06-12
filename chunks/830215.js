@@ -1,17 +1,17 @@
 "use strict";
 let i;
-n.d(t, { A: () => b, W: () => v }), n(142703);
+n.d(t, { A: () => b, W: () => C }), n(142703);
 var r,
     s = n(562708),
     a = n(247775),
     o = n(636537),
     l = n(506774),
     u = n(228366),
-    c = n(845584),
+    c = n(913122),
     d = n(934337),
     _ = n(626584),
-    f = n(250953),
-    h = n(976860),
+    h = n(250953),
+    f = n(976860),
     p = n(84948),
     E = n(917136),
     m = n(495544),
@@ -20,22 +20,22 @@ var r,
     I = n(499785),
     T = n(982168),
     S = n(652215),
-    N = n(516780);
-let y = new _.A("AuthenticationActionCreators"),
-    C = null;
-var v = (((r = {}).MFA = "MFA"), (r.SUCCESS = "SUCCESS"), r);
-function O(e) {
+    y = n(516780);
+let N = new _.A("AuthenticationActionCreators"),
+    v = null;
+var C = (((r = {}).MFA = "MFA"), (r.SUCCESS = "SUCCESS"), r);
+function R(e) {
     A.A.clearNavigationHistory();
     let t = { type: "LOGOUT", ...e };
     u.h.dispatch(t).catch((e) => {
-        throw (y.error("Error while dispatching LOGOUT", e), window.DiscordErrors?.softCrash(e), e);
+        throw (N.error("Error while dispatching LOGOUT", e), window.DiscordErrors?.softCrash(e), e);
     });
 }
-function R(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
-    if ((O(), null == t)) return;
-    let n = (0, f.Y)();
-    null == n ? (0, h.pX)(t, { source: e }) : (T.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
+    if ((R(), null == t)) return;
+    let n = (0, h.Y)();
+    null == n ? (0, f.pX)(t, { source: e }) : (T.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
 }
 let b = {
     startSession(e) {
@@ -243,37 +243,37 @@ let b = {
         u.h.dispatch({ type: "LOGIN_STATUS_RESET" });
     },
     logoutInternal(e) {
-        O(e);
+        R(e);
     },
     logout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT,
             n = arguments.length > 2 ? arguments[2] : void 0;
         return I.A.post({
             url: S.Rsh.LOGOUT,
-            body: { provider: (0, N.oH)(), token: l.w.get(S.Xlh), voip_provider: N.vz, voip_token: l.w.get(S.Ahp) },
+            body: { provider: (0, y.oH)(), token: l.w.get(S.Xlh), voip_provider: y.vz, voip_token: l.w.get(S.Ahp) },
             oldFormErrors: !0,
             trackedActionData: { event: s.NetworkActionNames.USER_LOGOUT, properties: { logout_source: e } },
             ...(null != n && { headers: { authorization: a.getToken(n) ?? "" } }),
             rejectWithError: !1,
         }).finally(() => {
-            (null == n || n === m.default.getId()) && R(e, t);
+            (null == n || n === m.default.getId()) && O(e, t);
         });
     },
     switchAccountToken(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = m.default.getToken();
         return (
-            y.log("Switching accounts", { wasLoggedIn: null != n, tokenHasChanged: e !== n }),
-            O({ isSwitchingAccount: !0, goHomeAfterSwitching: t }),
+            N.log("Switching accounts", { wasLoggedIn: null != n, tokenHasChanged: e !== n }),
+            R({ isSwitchingAccount: !0, goHomeAfterSwitching: t }),
             this.loginToken(e, !0).then(() => {
                 let t = e === m.default.getToken();
-                return y.log("Switched accounts finished", { isCorrectToken: t }), t;
+                return N.log("Switched accounts finished", { isCorrectToken: t }), t;
             })
         );
     },
     verifySSOToken(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
-        return o.Bo.get({ url: S.Rsh.ME, oldFormErrors: !0, rejectWithError: !0 }).catch(() => R(e, t));
+        return o.Bo.get({ url: S.Rsh.ME, oldFormErrors: !0, rejectWithError: !0 }).catch(() => O(e, t));
     },
     async verify(e) {
         let t = await I.A.post({
@@ -309,10 +309,10 @@ let b = {
         u.h.dispatch({ type: "LOGIN" });
         let i = { token: e, password: t, source: n },
             r = l.w.get(S.Xlh),
-            a = (0, N.oH)();
+            a = (0, y.oH)();
         null != a && null != r && ((i.push_provider = a), (i.push_token = r));
         let o = l.w.get(S.Ahp);
-        null != N.vz && null != o && ((i.push_voip_provider = N.vz), (i.push_voip_token = o));
+        null != y.vz && null != o && ((i.push_voip_provider = y.vz), (i.push_voip_token = o));
         try {
             let {
                 body: { mfa: e, sms: t, webauthn: n, ticket: r, token: a, backup: o, totp: l },
@@ -371,13 +371,13 @@ let b = {
         u.h.dispatch({ type: "EXPERIMENTS_FETCH", withGuildExperiments: e });
     },
     getLocationMetadata: () =>
-        null != C
-            ? C
+        null != v
+            ? v
             : (clearTimeout(i),
               (i = setTimeout(() => {
                   u.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 });
               }, 5e3)),
-              (C = o.Bo.get({
+              (v = o.Bo.get({
                   url: S.Rsh.AUTH_LOCATION_METADATA,
                   retries: 2,
                   oldFormErrors: !0,
@@ -393,7 +393,7 @@ let b = {
                               type: "SET_LOCATION_METADATA",
                               countryCode: e?.body?.country_code ?? void 0,
                           }),
-                          (C = null),
+                          (v = null),
                           e?.body?.promotional_email_opt_in != null)
                       ) {
                           let t = e.body.promotional_email_opt_in;
@@ -401,7 +401,7 @@ let b = {
                       }
                   },
                   () => {
-                      clearTimeout(i), u.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 }), (C = null);
+                      clearTimeout(i), u.h.dispatch({ type: "SET_CONSENT_REQUIRED", consentRequired: !0 }), (v = null);
                   },
               ))),
     closeSuspendedUser() {

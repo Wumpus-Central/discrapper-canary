@@ -10,7 +10,7 @@ let s = 3 * n(927813).A.Millis.DAY,
     c = 0,
     d = !1,
     _ = !1;
-function f() {
+function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     if (!e && Date.now() < c) return;
     let t = 0,
@@ -25,12 +25,12 @@ function f() {
     let i = _ ? 1e3 : s,
         r = new Set(),
         a = new Set(),
-        f = Date.now() - i,
-        h = null;
-    for (let [e, t] of o.itemImpressions) t < f ? r.add(e) : null == h && (h = t + i), a.add(e);
-    (l = r), (u = a), (c = h ?? 1 / 0), (d = !0);
+        h = Date.now() - i,
+        f = null;
+    for (let [e, t] of o.itemImpressions) t < h ? r.add(e) : null == f && (f = t + i), a.add(e);
+    (l = r), (u = a), (c = f ?? 1 / 0), (d = !0);
 }
-class h extends i.Ay.PersistedStore {
+class f extends i.Ay.PersistedStore {
     static displayName = "ContentInventoryPersistedStore";
     static persistKey = "ContentInventoryPersistedStore";
     initialize(e) {
@@ -40,7 +40,7 @@ class h extends i.Ay.PersistedStore {
         return o;
     }
     getImpressionCappedItemIds() {
-        return f(), l;
+        return h(), l;
     }
     getDebugFastImpressionCappingEnabled() {
         return _;
@@ -52,17 +52,17 @@ class h extends i.Ay.PersistedStore {
         o = a();
     }
 }
-let p = new h(r.h, {
+let p = new f(r.h, {
     CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS: function (e) {
         let { itemIds: t } = e;
-        d || f();
+        d || h();
         let n = Date.now(),
             i = !1;
         for (let e of t) u.has(e) || (o.itemImpressions.push([e, n]), (i = !0));
-        return f(i), i;
+        return h(i), i;
     },
     CONTENT_INVENTORY_DEBUG_CLEAR_IMPRESSIONS: function () {
-        (o.itemImpressions = []), f(!0);
+        (o.itemImpressions = []), h(!0);
     },
     CONTENT_INVENTORY_DEBUG_LOG_IMPRESSIONS: function () {
         return console.log("Item impressions:", o.itemImpressions), !1;

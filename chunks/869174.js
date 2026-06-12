@@ -1,7 +1,7 @@
 !(function (e) {
     "use strict";
-    function t(e, t, n, r) {
-        var i = {
+    function t(e, t, n, i) {
+        var r = {
             s: ["viensas secunds", "'iensas secunds"],
             ss: [e + " secunds", "" + e + " secunds"],
             m: ["'n m\xedut", "'iens m\xedut"],
@@ -15,7 +15,7 @@
             y: ["'n ar", "'iens ar"],
             yy: [e + " ars", "" + e + " ars"],
         };
-        return r || t ? i[n][0] : i[n][1];
+        return i || t ? r[n][0] : r[n][1];
     }
     e.defineLocale("tzl", {
         months: "Januar_Fevraglh_Mar\xe7_Avr\xefu_Mai_G\xfcn_Julia_Guscht_Setemvar_Listop\xe4ts_Noemvar_Zecemvar".split(

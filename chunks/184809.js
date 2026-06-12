@@ -11,8 +11,8 @@ var u = n(941426),
     c = n(92277),
     d = n(9302),
     _ = n(635731),
-    f = n(41984),
-    h = n(127242);
+    h = n(41984),
+    f = n(127242);
 let p = new u.Vy("LegacyOverlayClient"),
     E = "Heartbeat",
     m = new _.A(1e3),
@@ -31,7 +31,7 @@ function I() {
 class T extends i.Ay.Store {
     static displayName = "OverlayRPCLogStore";
     initialize() {
-        this.waitFor(h.A), h.A.hasRenderDebugMode(f.x7.LegacyOverlayLogging) && I();
+        this.waitFor(f.A), f.A.hasRenderDebugMode(h.x7.LegacyOverlayLogging) && I();
     }
     getAllLogs() {
         return m;
@@ -46,7 +46,7 @@ class T extends i.Ay.Store {
 new T(s.h, {
     OVERLAY_RENDER_DEBUG_MODE: function (e) {
         let { enabled: t, mode: n } = e;
-        return n === f.x7.LegacyOverlayLogging && (t ? I() : null != A && (clearInterval(A), (A = null))), !1;
+        return n === h.x7.LegacyOverlayLogging && (t ? I() : null != A && (clearInterval(A), (A = null))), !1;
     },
     OVERLAY_ADD_LOGS_BATCH: function (e) {
         let { logs: t } = e;
@@ -54,7 +54,7 @@ new T(s.h, {
             t.forEach((e) =>
                 (function (e) {
                     let { level: t, message: n, timestamp: i, context: r } = e;
-                    if (!h.A.hasRenderDebugMode(f.x7.LegacyOverlayLogging) || __OVERLAY__) return !1;
+                    if (!f.A.hasRenderDebugMode(h.x7.LegacyOverlayLogging) || __OVERLAY__) return !1;
                     if (
                         (m.push({ level: t, message: n, timestamp: i, context: r }),
                         n === E && (g = Date.now()),
@@ -82,20 +82,20 @@ new T(s.h, {
     },
 });
 var S = n(652215);
-let N = new u.Vy("LegacyOverlayLogger"),
-    y = null,
-    C = !1,
-    v = null,
-    O = {
+let y = new u.Vy("LegacyOverlayLogger"),
+    N = null,
+    v = !1,
+    C = null,
+    R = {
         log: console.log.bind(console),
         info: console.info.bind(console),
         warn: console.warn.bind(console),
         error: console.error.bind(console),
     },
-    R = 0;
+    O = 0;
 async function b(e, t) {
-    if (!__OVERLAY__) return void N.warn("sendLegacyOverlayLog called from main app context, logging locally instead");
-    if (R > 10) return;
+    if (!__OVERLAY__) return void y.warn("sendLegacyOverlayLog called from main app context, logging locally instead");
+    if (O > 10) return;
     let { level: n, message: i, context: r } = e,
         s = null;
     if (null != r)
@@ -115,11 +115,11 @@ async function b(e, t) {
         payload: { level: n, message: i, timestamp: Date.now(), context: s },
     };
     try {
-        await o.tN(a), (R = 0);
+        await o.tN(a), (O = 0);
     } catch (e) {
-        ++R <= 3 &&
-            (N.error(`Failed to send log to main app (failure ${R}):`, e),
-            3 === R && N.error("Too many RPC send failures, suppressing further error logs"));
+        ++O <= 3 &&
+            (y.error(`Failed to send log to main app (failure ${O}):`, e),
+            3 === O && y.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
 function D(e) {
@@ -168,8 +168,8 @@ var w = n(761821),
     M = n(95701),
     P = n(495544),
     x = n(734057),
-    U = n(808728),
-    k = n(38502),
+    k = n(808728),
+    U = n(38502),
     G = n(967198),
     F = n(531685),
     V = n(672396);
@@ -193,20 +193,20 @@ let B = Object.freeze({
     Y = null,
     W = new Set(),
     K = !1,
-    z = !1,
     $ = !1,
+    z = !1,
     q = new Set(),
-    Z = !1;
-function X(e) {
+    X = !1;
+function Z(e) {
     let t = j[e];
     return null == t && (t = j[e] = { ...B }), t;
 }
 __OVERLAY__ &&
     (function (e) {
         if (__OVERLAY__) {
-            if (C) return O.warn("Overlay logger already set up, skipping duplicate setup");
-            (C = !0),
-                (y = {
+            if (v) return R.warn("Overlay logger already set up, skipping duplicate setup");
+            (v = !0),
+                (N = {
                     log: (t, n) => b({ level: "log", message: t, context: n }, e),
                     info: (t, n) => b({ level: "info", message: t, context: n }, e),
                     warn: (t, n) => b({ level: "warn", message: t, context: n }, e),
@@ -215,65 +215,65 @@ __OVERLAY__ &&
                 }).info("Overlay logger initialized"),
                 (console.log = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((O.log(...t), null != y))
+                    if ((R.log(...t), null != N))
                         try {
                             let e = D(t)
                                 .map((e) => L(e))
                                 .join(" ");
-                            y.log(e);
+                            N.log(e);
                         } catch (e) {
-                            O.error("[Logger Error]", e);
+                            R.error("[Logger Error]", e);
                         }
                 }),
                 (console.info = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((O.info(...t), null != y))
+                    if ((R.info(...t), null != N))
                         try {
                             let e = D(t)
                                 .map((e) => L(e))
                                 .join(" ");
-                            y.info(e);
+                            N.info(e);
                         } catch (e) {
-                            O.error("[Logger Error]", e);
+                            R.error("[Logger Error]", e);
                         }
                 }),
                 (console.warn = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((O.warn(...t), null != y))
+                    if ((R.warn(...t), null != N))
                         try {
                             let e = D(t)
                                 .map((e) => L(e))
                                 .join(" ");
-                            y.warn(e);
+                            N.warn(e);
                         } catch (e) {
-                            O.error("[Logger Error]", e);
+                            R.error("[Logger Error]", e);
                         }
                 }),
                 (console.error = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((O.error(...t), null != y))
+                    if ((R.error(...t), null != N))
                         try {
                             let e = D(t)
                                 .map((e) => L(e))
                                 .join(" ");
-                            y.error(e);
+                            N.error(e);
                         } catch (e) {}
                 }),
                 window.addEventListener(
                     "error",
                     (e) => {
-                        if (null != y)
+                        if (null != N)
                             try {
                                 if (null != e.target && e.target !== window) {
                                     let t = e.target;
-                                    y.error(`Resource failed to load: ${t.src || t.href || "unknown"}`, {
+                                    N.error(`Resource failed to load: ${t.src || t.href || "unknown"}`, {
                                         type: "resource_error",
                                         tagName: t.tagName,
                                         src: t.src,
                                         href: t.href,
                                     });
                                 } else
-                                    y.crash(`Uncaught error: ${e.message}`, {
+                                    N.crash(`Uncaught error: ${e.message}`, {
                                         message: e.message,
                                         filename: e.filename,
                                         lineno: e.lineno,
@@ -283,13 +283,13 @@ __OVERLAY__ &&
                                             : null,
                                     });
                             } catch (t) {
-                                O.error("[Failed to log error]", t, e);
+                                R.error("[Failed to log error]", t, e);
                             }
                     },
                     !0,
                 ),
                 window.addEventListener("unhandledrejection", (e) => {
-                    if (null != y)
+                    if (null != N)
                         try {
                             let t = "Unhandled promise rejection",
                                 n = {};
@@ -298,15 +298,15 @@ __OVERLAY__ &&
                                   (n = { name: e.reason.name, message: e.reason.message, stack: e.reason.stack }))
                                 : ("string" == typeof e.reason && (t = `Unhandled promise rejection: ${e.reason}`),
                                   (n = { reason: e.reason })),
-                                y.crash(t, n);
+                                N.crash(t, n);
                         } catch (t) {
-                            O.error("[Failed to log rejection]", t, e);
+                            R.error("[Failed to log rejection]", t, e);
                         }
                 }),
                 window.addEventListener("securitypolicyviolation", (e) => {
-                    if (null != y)
+                    if (null != N)
                         try {
-                            y.error("Security policy violation", {
+                            N.error("Security policy violation", {
                                 violatedDirective: e.violatedDirective,
                                 effectiveDirective: e.effectiveDirective,
                                 blockedURI: e.blockedURI,
@@ -315,16 +315,16 @@ __OVERLAY__ &&
                                 columnNumber: e.columnNumber,
                             });
                         } catch (t) {
-                            O.error("[Failed to log security violation]", t, e);
+                            R.error("[Failed to log security violation]", t, e);
                         }
                 }),
                 window.addEventListener("beforeunload", () => {
-                    null != y && y.info("Overlay unloading"), null != v && clearInterval(v);
+                    null != N && N.info("Overlay unloading"), null != C && clearInterval(C);
                 }),
-                (v = window.setInterval(() => {
-                    if (null != y)
+                (C = window.setInterval(() => {
+                    if (null != N)
                         try {
-                            y.log(E, {
+                            N.log(E, {
                                 timestamp: Date.now(),
                                 memory: performance.memory
                                     ? {
@@ -334,10 +334,10 @@ __OVERLAY__ &&
                                     : void 0,
                             });
                         } catch (e) {
-                            O.error("[Heartbeat Error]", e);
+                            R.error("[Heartbeat Error]", e);
                         }
                 }, 1e4)),
-                O.log("Overlay error handlers and console interception set up");
+                R.log("Overlay error handlers and console interception set up");
         }
     })((0, d.getRPCAuthToken)());
 let Q = { ...B },
@@ -452,7 +452,7 @@ function ei(e) {
                 break;
             case S.kGV.DISPATCH:
                 null != e.payloads &&
-                    ((z = !0),
+                    (($ = !0),
                     e.payloads.forEach((e) =>
                         (function (e) {
                             if (
@@ -460,8 +460,8 @@ function ei(e) {
                                     ((null == e.version && 1 === d.OVERLAY_VERSION) ||
                                         e.version === d.OVERLAY_VERSION ||
                                         (s.h.dispatch({ type: "OVERLAY_INCOMPATIBLE_APP" }), (0, o.Zf)(), 0)) &&
-                                    ($ = !0),
-                                $)
+                                    (z = !0),
+                                z)
                             )
                                 switch (e.type) {
                                     case "CHANNEL_CREATE":
@@ -520,7 +520,7 @@ function ei(e) {
                                 }
                         })(e),
                     ),
-                    (z = !1));
+                    ($ = !1));
         }
 }
 let er = new Map();
@@ -539,10 +539,10 @@ class es extends i.Ay.PersistedStore {
     ];
     initialize(e) {
         if (
-            (this.waitFor(P.default, x.A, U.Ay, k.A, G.A, F.A),
+            (this.waitFor(P.default, x.A, k.Ay, U.A, G.A, F.A),
             this.syncWith([P.default], () => {
                 let e = P.default.getId();
-                Q = null != e ? X(e) : { ...B };
+                Q = null != e ? Z(e) : { ...B };
             }),
             __OVERLAY__ && W.delete((0, d.getPID)()),
             null != e)
@@ -550,7 +550,7 @@ class es extends i.Ay.PersistedStore {
             j = e;
             let t = P.default.getId();
             null != t &&
-                (null == (Q = X(t)).textChatNotifications && (Q.textChatNotifications = B.textChatNotifications),
+                (null == (Q = Z(t)).textChatNotifications && (Q.textChatNotifications = B.textChatNotifications),
                 null == Q.textWidgetOpacity && (Q.textWidgetOpacity = B.textWidgetOpacity),
                 null == Q.disableClickableRegions && (Q.disableClickableRegions = B.disableClickableRegions));
         }
@@ -571,12 +571,12 @@ class es extends i.Ay.PersistedStore {
         return H === e;
     }
     isPinned(e) {
-        let t = k.A.getLayout(d.OVERLAY_LAYOUT_ID);
+        let t = U.A.getLayout(d.OVERLAY_LAYOUT_ID);
         return (
             null != t &&
             null !=
                 t.widgets.find((t) => {
-                    let n = k.A.getWidget(t);
+                    let n = U.A.getWidget(t);
                     return null != n && n.type === e && !!n.pinned;
                 })
         );
@@ -618,7 +618,7 @@ class es extends i.Ay.PersistedStore {
         return H;
     }
     get initialized() {
-        return $;
+        return z;
     }
     get incompatibleApp() {
         return K;
@@ -630,7 +630,7 @@ class es extends i.Ay.PersistedStore {
         return Q.textWidgetOpacity;
     }
     isPreviewingInGame() {
-        return Z;
+        return X;
     }
     getTrackedGame(e) {
         return er.get(e) ?? null;
@@ -648,7 +648,7 @@ let ea = new es(s.h, {
     },
     OVERLAY_START_SESSION: function () {
         s.h.addInterceptor((e) => {
-            if (z || !ee.has(e.type)) return !1;
+            if ($ || !ee.has(e.type)) return !1;
             if ("CHANNEL_SELECT" === e.type) {
                 let { guildId: t, channelId: n } = e;
                 return (
@@ -693,13 +693,13 @@ let ea = new es(s.h, {
             t = Q.selectedChannelId;
         if (
             (null == e ||
-                (U.Ay.hasChannels(e) && (null == t || U.Ay.hasSelectableChannel(e, t))) ||
+                (k.Ay.hasChannels(e) && (null == t || k.Ay.hasSelectableChannel(e, t))) ||
                 ((e = null), (t = null)),
             null != t && null == x.A.getChannel(t) && ((e = null), (t = null)),
             null == e && null == t && (e = G.A.getGuildId()),
             null != e && null == t)
         ) {
-            let n = U.Ay.getDefaultChannel(e);
+            let n = k.Ay.getDefaultChannel(e);
             null != n && (t = n.id);
         }
         (Q.selectedGuildId = e), (Q.selectedChannelId = t);
@@ -766,7 +766,7 @@ let ea = new es(s.h, {
     },
     OVERLAY_SET_INPUT_LOCKED: function (e) {
         let { locked: t, pid: n } = e;
-        t ? W.delete(n) : W.add(n), en(), et(), (Z = !1);
+        t ? W.delete(n) : W.add(n), en(), et(), (X = !1);
     },
     OVERLAY_ACTIVATE_REGION: function (e) {
         let { region: t } = e;
@@ -775,12 +775,12 @@ let ea = new es(s.h, {
     },
     OVERLAY_DEACTIVATE_ALL_REGIONS: en,
     OVERLAY_SET_PREVIEW_IN_GAME_MODE: function (e) {
-        Z = e.isPreviewingInGame;
+        X = e.isPreviewingInGame;
     },
     WINDOW_RESIZED: function () {
         if (__OVERLAY__) {
             let e = F.A.windowSize();
-            (0, d.validResolution)(e) || (Z = !1);
+            (0, d.validResolution)(e) || (X = !1);
         }
     },
     OVERLAY_SET_ASSOCIATED_GAME: function (e) {

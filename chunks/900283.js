@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, { Q: () => s, x: () => a });
-var r,
-    i = n(64700),
+var i,
+    r = n(64700),
     s =
-        (((r = {}).DEFAULT = "default"),
-        (r.CHECKBOX = "checkbox"),
-        (r.RADIO = "radio"),
-        (r.SLIDER = "slider"),
-        (r.SEARCH = "search"),
-        (r.IMAGE_UPLOAD = "image upload"),
-        (r.SWITCH = "switch"),
-        r);
-let a = i.createContext({ onSelect: void 0 });
+        (((i = {}).DEFAULT = "default"),
+        (i.CHECKBOX = "checkbox"),
+        (i.RADIO = "radio"),
+        (i.SLIDER = "slider"),
+        (i.SEARCH = "search"),
+        (i.IMAGE_UPLOAD = "image upload"),
+        (i.SWITCH = "switch"),
+        i);
+let a = r.createContext({ onSelect: void 0 });

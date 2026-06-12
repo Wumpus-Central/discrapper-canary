@@ -1,128 +1,128 @@
-l.d(t, { Bw: () => N, ld: () => C });
-var n = l(627968);
-l(64700);
-var i = l(17928),
-    s = l(661531),
-    a = l(428678),
-    r = l(834730),
-    d = l(939249),
-    o = l(952270),
-    c = l(831544),
-    u = l(778712),
-    x = l(364522),
-    h = l(442433),
-    m = l(85448),
-    g = l(994500),
-    v = l(427262),
-    j = l(312006),
-    E = l(366098),
-    A = l(985018),
-    p = l(195695);
-let N = (e) => {
-        let { channelId: t } = e;
-        return (0, n.jsx)(f, { channelId: t });
+e.d(s, { Bw: () => N, ld: () => b });
+var l = e(627968);
+e(64700);
+var r = e(17928),
+    n = e(661531),
+    i = e(428678),
+    a = e(834730),
+    c = e(939249),
+    d = e(952270),
+    o = e(831544),
+    x = e(778712),
+    m = e(364522),
+    j = e(442433),
+    h = e(85448),
+    u = e(994500),
+    g = e(427262),
+    v = e(312006),
+    k = e(366098),
+    p = e(375708),
+    E = e(195695);
+let N = (t) => {
+        let { channelId: s } = t;
+        return (0, l.jsx)(f, { channelId: s });
     },
-    f = (e) => {
-        let { channelId: t } = e,
-            l = (0, E.D3)(t),
-            i = (0, E.Xk)(t);
-        if (0 === l && 0 === i) return null;
-        let c = (e) => {
-            (0, h.jA)(e, (e) => (0, n.jsx)(y, { ...e, channelId: t }), { position: "left", align: "bottom" });
+    f = (t) => {
+        let { channelId: s } = t,
+            e = (0, k.D3)(s),
+            r = (0, k.Xk)(s);
+        if (0 === e && 0 === r) return null;
+        let o = (t) => {
+            (0, j.jA)(t, (t) => (0, l.jsx)(A, { ...t, channelId: s }), { position: "left", align: "bottom" });
         };
-        return l > 0 && i > 0
-            ? (0, n.jsxs)("div", {
-                  className: p.jC,
+        return e > 0 && r > 0
+            ? (0, l.jsxs)("div", {
+                  className: E.jC,
                   children: [
-                      (0, n.jsx)(a.K, { size: "lg", color: s.A.unsafe_rawColors.RED_400.css }),
-                      (0, n.jsx)(r.E, {
+                      (0, l.jsx)(i.K, { size: "lg", color: n.A.unsafe_rawColors.RED_400.css }),
+                      (0, l.jsx)(a.E, {
                           variant: "text-xs/normal",
                           color: "text-default",
-                          children: A.intl.string(A.t["P/KFXz"]),
+                          children: p.intl.string(p.t["P/KFXz"]),
                       }),
-                      (0, n.jsx)(d.D, { className: p.R5, onClick: c, children: A.intl.string(A.t.rUEjBe) }),
+                      (0, l.jsx)(c.D, { className: E.R5, onClick: o, children: p.intl.string(p.t.rUEjBe) }),
                   ],
               })
-            : i > 0
-              ? (0, n.jsxs)("div", {
-                    className: p.jC,
+            : r > 0
+              ? (0, l.jsxs)("div", {
+                    className: E.jC,
                     children: [
-                        (0, n.jsx)(o.G, { size: "lg" }),
-                        (0, n.jsx)(r.E, {
+                        (0, l.jsx)(d.G, { size: "lg" }),
+                        (0, l.jsx)(a.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: A.intl.format(A.t.Ri3o33, { number: i }),
+                            children: p.intl.format(p.t.Ri3o33, { number: r }),
                         }),
-                        (0, n.jsx)(d.D, { className: p.R5, onClick: c, children: A.intl.string(A.t.rUEjBe) }),
+                        (0, l.jsx)(c.D, { className: E.R5, onClick: o, children: p.intl.string(p.t.rUEjBe) }),
                     ],
                 })
-              : (0, n.jsxs)("div", {
-                    className: p.jC,
+              : (0, l.jsxs)("div", {
+                    className: E.jC,
                     children: [
-                        (0, n.jsx)(a.K, { size: "lg", color: s.A.unsafe_rawColors.RED_400.css }),
-                        (0, n.jsx)(r.E, {
+                        (0, l.jsx)(i.K, { size: "lg", color: n.A.unsafe_rawColors.RED_400.css }),
+                        (0, l.jsx)(a.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            children: A.intl.format(A.t["6Tcdt7"], { number: l }),
+                            children: p.intl.format(p.t["6Tcdt7"], { number: e }),
                         }),
-                        (0, n.jsx)(d.D, { className: p.R5, onClick: c, children: A.intl.string(A.t.rUEjBe) }),
+                        (0, l.jsx)(c.D, { className: E.R5, onClick: o, children: p.intl.string(p.t.rUEjBe) }),
                     ],
                 });
     },
-    C = (e) => {
-        let { user: t, showStatus: l, speaker: s, channelId: a } = e,
-            d = (0, i.bG)([j.Ay], () => j.Ay.isModerator(t.id, a)),
-            o = (0, i.bG)([g.A], () => g.A.isBlocked(t.id)),
-            x = null;
+    b = (t) => {
+        let { user: s, showStatus: e, speaker: n, channelId: i } = t,
+            c = (0, r.bG)([v.Ay], () => v.Ay.isModerator(s.id, i)),
+            d = (0, r.bG)([u.A], () => u.A.isBlocked(s.id)),
+            m = null;
         return (
-            l && (x = s ? A.intl.string(A.t.LqMmG2) : d ? A.intl.string(A.t.GMZqSi) : A.intl.string(A.t.suRApw)),
-            (0, n.jsxs)("div", {
-                className: p.kQ,
+            e && (m = n ? p.intl.string(p.t.LqMmG2) : c ? p.intl.string(p.t.GMZqSi) : p.intl.string(p.t.suRApw)),
+            (0, l.jsxs)("div", {
+                className: E.kQ,
                 children: [
-                    (0, n.jsx)(
-                        m.A,
+                    (0, l.jsx)(
+                        h.A,
                         {
-                            src: t.getAvatarURL(null, 32),
-                            size: u._3.SIZE_32,
+                            src: s.getAvatarURL(null, 32),
+                            size: x._3.SIZE_32,
                             muted: !1,
                             deafen: !1,
                             speaking: !1,
                             ringing: !1,
-                            renderIcon: s
-                                ? () => (0, n.jsx)(c.c, { size: "md", color: "currentColor", className: p.Kk })
+                            renderIcon: n
+                                ? () => (0, l.jsx)(o.c, { size: "md", color: "currentColor", className: E.Kk })
                                 : null,
                         },
-                        t.id,
+                        s.id,
                     ),
-                    (0, n.jsxs)("div", {
-                        className: p.eF,
+                    (0, l.jsxs)("div", {
+                        className: E.eF,
                         children: [
-                            (0, n.jsxs)("div", {
-                                className: p.Xh,
+                            (0, l.jsxs)("div", {
+                                className: E.Xh,
                                 children: [
-                                    (0, n.jsx)(r.E, {
-                                        variant: l ? "text-md/normal" : "text-sm/normal",
-                                        children: v.Ay.getName(t),
+                                    (0, l.jsx)(a.E, {
+                                        variant: e ? "text-md/normal" : "text-sm/normal",
+                                        children: g.Ay.getName(s),
                                     }),
-                                    (0, n.jsx)(r.E, {
-                                        variant: l ? "text-md/normal" : "text-sm/normal",
+                                    (0, l.jsx)(a.E, {
+                                        variant: e ? "text-md/normal" : "text-sm/normal",
                                         color: "text-subtle",
-                                        children: `#${t.discriminator}`,
+                                        children: `#${s.discriminator}`,
                                     }),
                                 ],
                             }),
-                            (0, n.jsxs)("div", {
-                                className: p.Xh,
+                            (0, l.jsxs)("div", {
+                                className: E.Xh,
                                 children: [
-                                    (0, n.jsx)(r.E, {
+                                    (0, l.jsx)(a.E, {
                                         variant: "text-xs/normal",
-                                        color: o ? "text-feedback-critical" : "text-default",
-                                        children: o ? A.intl.string(A.t["4bDptI"]) : A.intl.string(A.t.tFY5Zb),
+                                        color: d ? "text-feedback-critical" : "text-default",
+                                        children: d ? p.intl.string(p.t["4bDptI"]) : p.intl.string(p.t.tFY5Zb),
                                     }),
-                                    (0, n.jsxs)(r.E, {
+                                    (0, l.jsxs)(a.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
-                                        children: ["| ", x],
+                                        children: ["| ", m],
                                     }),
                                 ],
                             }),
@@ -132,15 +132,15 @@ let N = (e) => {
             })
         );
     },
-    y = (e) => {
-        let { channelId: t } = e,
-            l = (0, E.mT)(t),
-            i = (0, E.Iv)(t);
-        return (0, n.jsx)(x.Ip, {
-            className: p.kL,
-            children: [...l, ...i].map((e) => {
-                let { user: l } = e;
-                return (0, n.jsx)(C, { user: l, channelId: t }, l.id);
+    A = (t) => {
+        let { channelId: s } = t,
+            e = (0, k.mT)(s),
+            r = (0, k.Iv)(s);
+        return (0, l.jsx)(m.Ip, {
+            className: E.kL,
+            children: [...e, ...r].map((t) => {
+                let { user: e } = t;
+                return (0, l.jsx)(b, { user: e, channelId: s }, e.id);
             }),
         });
     };

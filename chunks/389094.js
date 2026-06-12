@@ -1,62 +1,62 @@
-r.d(t, { default: () => b });
-var n = r(627968),
-    s = r(64700),
-    i = r(284009),
-    l = r.n(i),
-    a = r(224640),
-    c = r(683071),
-    d = r(430993),
-    o = r(789645),
-    u = r(696208),
-    x = r(10005),
-    h = r(534654),
-    j = r(208993),
-    m = r(602339),
-    C = r(985018),
-    _ = r(971653);
+i.d(t, { default: () => b });
+var n = i(627968),
+    s = i(64700),
+    r = i(284009),
+    l = i.n(r),
+    a = i(224640),
+    c = i(683071),
+    d = i(430993),
+    o = i(789645),
+    u = i(696208),
+    h = i(10005),
+    C = i(534654),
+    x = i(208993),
+    k = i(602339),
+    p = i(375708),
+    j = i(971653);
 let b = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: i, onClose: b } = e,
-        [f, g] = s.useState(!1),
-        p = s.useCallback(() => {
-            g(!0);
+    let { currentUser: t, otherUser: i, transitionState: r, onClose: b } = e,
+        [g, f] = s.useState(!1),
+        y = s.useCallback(() => {
+            f(!0);
         }, []),
-        v = s.useCallback(() => {
+        A = s.useCallback(() => {
             b();
         }, [b]),
-        k = (0, h.A)(),
-        { declineLinkRequest: A, isDeclineLoading: N } = (0, x.A)({ onError: p, onSuccess: v });
+        m = (0, C.A)(),
+        { declineLinkRequest: L, isDeclineLoading: S } = (0, h.A)({ onError: y, onSuccess: A });
     return (
-        l()(k, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
+        l()(m, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
         (0, n.jsxs)(a.d, {
-            transitionState: i,
+            transitionState: r,
             onClose: b,
             children: [
-                f && (0, n.jsx)(c.w, { type: "critical", children: C.intl.string(m.default.tJAUyn) }),
+                g && (0, n.jsx)(c.w, { type: "critical", children: p.intl.string(k.default.tJAUyn) }),
                 (0, n.jsxs)(d.c, {
                     children: [
-                        (0, n.jsx)(j.A.Header, {
+                        (0, n.jsx)(x.A.Header, {
                             currentUser: t,
-                            otherUser: r,
-                            header: C.intl.string(m.default.teIRCR),
-                            icon: (0, n.jsx)(o.P, { size: "md", color: "currentColor", className: _.u }),
+                            otherUser: i,
+                            header: p.intl.string(k.default.teIRCR),
+                            icon: (0, n.jsx)(o.P, { size: "md", color: "currentColor", className: j.u }),
                         }),
-                        (0, n.jsx)(j.A.Content, {
-                            children: (0, n.jsx)(j.A.Notice, { notice: C.intl.string(m.default.LcM8BS) }),
+                        (0, n.jsx)(x.A.Content, {
+                            children: (0, n.jsx)(x.A.Notice, { notice: p.intl.string(k.default.LcM8BS) }),
                         }),
                     ],
                 }),
                 (0, n.jsx)(u.H, {
                     actionsFullWidth: !0,
                     actions: [
-                        { variant: "secondary", text: C.intl.string(C.t["ETE/oC"]), onClick: b, disabled: N },
+                        { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: b, disabled: S },
                         {
                             variant: "critical-primary",
-                            text: C.intl.string(m.default.dKxFcn),
+                            text: p.intl.string(k.default.dKxFcn),
                             onClick: () => {
-                                g(!1), A(r.id);
+                                f(!1), L(i.id);
                             },
-                            disabled: N,
-                            loading: N,
+                            disabled: S,
+                            loading: S,
                         },
                     ],
                 }),

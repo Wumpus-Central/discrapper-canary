@@ -1,67 +1,67 @@
-n.d(t, { A: () => x }), n(134528), n(947204);
-var l = n(627968),
-    i = n(64700),
-    s = n(17928),
-    a = n(462887),
-    r = n(305866),
-    o = n(366605),
-    c = n(687709),
-    d = n(964486),
-    u = n(202803),
-    h = n(145530),
-    g = n(835835),
-    m = n(363195),
-    A = n(966833),
-    p = n(222823),
-    C = n(985018);
-let E = [];
-function x(e) {
-    let { channel: t, onJump: x } = e,
-        { items: N, state: f } = (0, s.cf)([A.A], () => {
-            let e = A.A.getPins(t.id);
-            return { items: e?.items ?? E, state: e?.state ?? A.e.LOADING };
+s.d(t, { A: () => P }), s(134528), s(947204);
+var i = s(627968),
+    n = s(64700),
+    a = s(17928),
+    r = s(462887),
+    l = s(305866),
+    c = s(366605),
+    d = s(687709),
+    o = s(964486),
+    A = s(202803),
+    u = s(145530),
+    p = s(835835),
+    g = s(363195),
+    m = s(966833),
+    h = s(222823),
+    f = s(375708);
+let b = [];
+function P(e) {
+    let { channel: t, onJump: P } = e,
+        { items: y, state: k } = (0, a.cf)([m.A], () => {
+            let e = m.A.getPins(t.id);
+            return { items: e?.items ?? b, state: e?.state ?? m.e.LOADING };
         }),
-        _ = i.useMemo(() => N.map((e) => e.message), [N]),
-        T = (0, s.bG)([p.Ay], () => p.Ay.hasUnreadPins(t.id));
-    i.useEffect(() => {
-        T && c.A.ackPins(t.id);
-    }, [T, t.id]),
-        (0, d.Ay)(() => {
-            _.some(u.$r) && c.A.fetchPins(t.id, { reset: !0 });
+        x = n.useMemo(() => y.map((e) => e.message), [y]),
+        C = (0, a.bG)([h.Ay], () => h.Ay.hasUnreadPins(t.id));
+    n.useEffect(() => {
+        C && d.A.ackPins(t.id);
+    }, [C, t.id]),
+        (0, o.Ay)(() => {
+            x.some(A.$r) && d.A.fetchPins(t.id, { reset: !0 });
         });
-    let v = i.useCallback(() => {
-            c.A.fetchPins(t.id);
+    let M = n.useCallback(() => {
+            d.A.fetchPins(t.id);
         }, [t.id]),
-        I = i.useCallback(() => {
-            c.A.fetchPins(t.id, { before: N.at(-1)?.pinnedAt });
-        }, [t.id, N]),
-        S = (0, s.bG)([m.A], () => (0, a.q)(m.A.theme));
-    return (0, l.jsx)(r.l, {
-        "aria-label": C.intl.string(C.t["mp1N/2"]),
-        children: (0, l.jsx)(g.Ay, {
+        N = n.useCallback(() => {
+            d.A.fetchPins(t.id, { before: y.at(-1)?.pinnedAt });
+        }, [t.id, y]),
+        v = (0, a.bG)([g.A], () => (0, r.q)(g.A.theme));
+    return (0, i.jsx)(l.l, {
+        "aria-label": f.intl.string(f.t["mp1N/2"]),
+        children: (0, i.jsx)(p.Ay, {
             channel: t,
-            onFetch: v,
-            messages: _,
-            loading: f === A.e.LOADING,
-            hasMore: f === A.e.LOADED_HAS_MORE,
+            onFetch: M,
+            messages: x,
+            loading: k === m.e.LOADING,
+            hasMore: k === m.e.LOADED_HAS_MORE,
             analyticsName: "Channel Pins",
             renderEmptyState: function () {
-                if (N.length > 0) return;
-                let e = C.intl.string(t.isPrivate() ? C.t.rhqcbJ : C.t.fmyaWJ),
-                    i = S ? n(395236) : n(90367);
-                return (0, l.jsx)(g.u9, { msg: e, image: i }, "emptystate");
+                if (y.length > 0) return;
+                let e = f.intl.string(t.isPrivate() ? f.t.rhqcbJ : f.t.fmyaWJ),
+                    n = v ? s(395236) : s(90367);
+                return (0, i.jsx)(p.u9, { msg: e, image: n }, "emptystate");
             },
-            renderHeader: () => (0, l.jsx)(g.Y9, { icon: o.t, title: C.intl.string(C.t["mp1N/2"]) }),
-            onCloseMessage: function (e, n) {
-                null != e && (n.shiftKey ? c.A.unpinMessage(t, e.id) : h.A.confirmUnpin(t, e));
+            renderHeader: () => (0, i.jsx)(p.Y9, { icon: c.t, title: f.intl.string(f.t["mp1N/2"]) }),
+            onCloseMessage: function (e, s) {
+                null != e && (s.shiftKey ? d.A.unpinMessage(t, e.id) : u.A.confirmUnpin(t, e));
             },
-            onJump: x,
-            loadMore: I,
+            onJump: P,
+            loadMore: N,
             getProTip: function () {
-                return t.isPrivate() ? C.intl.string(C.t["3dLGAs"]) : C.intl.string(C.t.KTbRcg);
+                return t.isPrivate() ? f.intl.string(f.t["3dLGAs"]) : f.intl.string(f.t.KTbRcg);
             },
             listName: "pins",
-            closeAriaLabel: C.intl.string(C.t["Bse+F/"]),
+            closeAriaLabel: f.intl.string(f.t["Bse+F/"]),
         }),
     });
 }

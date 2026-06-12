@@ -1,16 +1,16 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => I });
 var i = n(627968),
     l = n(64700),
-    a = n(503698),
-    r = n.n(a),
-    s = n(707554),
+    s = n(503698),
+    r = n.n(s),
+    a = n(707554),
     o = n(834730),
-    c = n(735438),
-    d = n.n(c),
+    d = n(735438),
+    c = n.n(d),
     u = n(223637),
-    _ = n(29814),
-    m = n(46054);
-let h = d().omit(_.A.RULES, ["codeBlock", "heading"]),
+    m = n(29814),
+    h = n(46054);
+let g = c().omit(m.A.RULES, ["codeBlock", "heading"]),
     p = {
         ...u.A,
         parse: function (e, t, n) {
@@ -19,23 +19,23 @@ let h = d().omit(_.A.RULES, ["codeBlock", "heading"]),
             return { ...i, level: l };
         },
     },
-    g = m.A.combineAndInjectMentionRule(h, [m.A.createReactRules(m.A.defaultReactRuleOptions), { header: p }]),
-    f = m.A.reactParserFor(g);
-var x = n(162025),
-    A = n(992595);
-function C(e) {
-    let { color: t, className: n, variant: a, text: c, lineClamp: d } = e,
-        u = (0, s.$)(),
-        _ = l.useMemo(
+    A = h.A.combineAndInjectMentionRule(g, [h.A.createReactRules(h.A.defaultReactRuleOptions), { header: p }]),
+    x = h.A.reactParserFor(A);
+var f = n(162025),
+    E = n(992595);
+function I(e) {
+    let { color: t, className: n, variant: s, text: d, lineClamp: c } = e,
+        u = (0, a.$)(),
+        m = l.useMemo(
             () =>
-                null == c ? null : f(c, !0, { allowHeading: null == d, allowList: null == d, initialHeaderLevel: u }),
-            [c, d, u],
+                null == d ? null : x(d, !0, { allowHeading: null == c, allowList: null == c, initialHeaderLevel: u }),
+            [d, c, u],
         );
     return (0, i.jsx)(o.E, {
-        className: r()(n, A.PT, { [x.E]: null != d && d > 1, [x.D]: 1 === d }),
+        className: r()(n, E.PT, { [f.E]: null != c && c > 1, [f.D]: 1 === c }),
         color: t,
-        variant: a,
-        lineClamp: d,
-        children: _,
+        variant: s,
+        lineClamp: c,
+        children: m,
     });
 }

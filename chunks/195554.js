@@ -1,15 +1,15 @@
 "use strict";
-var r,
-    i,
+var i,
+    r,
     s = n(549412),
     a = n(22700),
     o = n(96726),
     l = n(311564),
     u = n(552229);
-function d(e) {
+function c(e) {
     return ((e >>> 24) & 255) + ((e >>> 8) & 65280) + ((65280 & e) << 8) + ((255 & e) << 24);
 }
-function c() {
+function d() {
     (this.mode = 0),
         (this.last = !1),
         (this.wrap = 0),
@@ -67,54 +67,54 @@ function _(e) {
           0)
         : -2;
 }
-function f(e) {
+function h(e) {
     var t;
     return e && e.state ? (((t = e.state).wsize = 0), (t.whave = 0), (t.wnext = 0), _(e)) : -2;
 }
-function E(e, t) {
-    var n, r;
+function f(e, t) {
+    var n, i;
     return e && e.state
-        ? ((r = e.state),
+        ? ((i = e.state),
           t < 0 ? ((n = 0), (t = -t)) : ((n = (t >> 4) + 1), t < 48 && (t &= 15)),
           t && (t < 8 || t > 15))
             ? -2
-            : (null !== r.window && r.wbits !== t && (r.window = null), (r.wrap = n), (r.wbits = t), f(e))
+            : (null !== i.window && i.wbits !== t && (i.window = null), (i.wrap = n), (i.wbits = t), h(e))
         : -2;
 }
-function h(e, t) {
-    var n, r;
-    return e ? ((e.state = r = new c()), (r.window = null), 0 !== (n = E(e, t)) && (e.state = null), n) : -2;
+function p(e, t) {
+    var n, i;
+    return e ? ((e.state = i = new d()), (i.window = null), 0 !== (n = f(e, t)) && (e.state = null), n) : -2;
 }
-var p = !0;
-function m(e, t, n, r) {
-    var i,
+var E = !0;
+function m(e, t, n, i) {
+    var r,
         a = e.state;
     return (
         null === a.window && ((a.wsize = 1 << a.wbits), (a.wnext = 0), (a.whave = 0), (a.window = new s.Buf8(a.wsize))),
-        r >= a.wsize
+        i >= a.wsize
             ? (s.arraySet(a.window, t, n - a.wsize, a.wsize, 0), (a.wnext = 0), (a.whave = a.wsize))
-            : ((i = a.wsize - a.wnext) > r && (i = r),
-              s.arraySet(a.window, t, n - r, i, a.wnext),
-              (r -= i)
-                  ? (s.arraySet(a.window, t, n - r, r, 0), (a.wnext = r), (a.whave = a.wsize))
-                  : ((a.wnext += i), a.wnext === a.wsize && (a.wnext = 0), a.whave < a.wsize && (a.whave += i))),
+            : ((r = a.wsize - a.wnext) > i && (r = i),
+              s.arraySet(a.window, t, n - i, r, a.wnext),
+              (i -= r)
+                  ? (s.arraySet(a.window, t, n - i, i, 0), (a.wnext = i), (a.whave = a.wsize))
+                  : ((a.wnext += r), a.wnext === a.wsize && (a.wnext = 0), a.whave < a.wsize && (a.whave += r))),
         0
     );
 }
-(t.inflateReset = f),
-    (t.inflateReset2 = E),
+(t.inflateReset = h),
+    (t.inflateReset2 = f),
     (t.inflateResetKeep = _),
     (t.inflateInit = function (e) {
-        return h(e, 15);
+        return p(e, 15);
     }),
-    (t.inflateInit2 = h),
+    (t.inflateInit2 = p),
     (t.inflate = function (e, t) {
         var n,
-            c,
+            d,
             _,
-            f,
-            E,
             h,
+            f,
+            p,
             g,
             A,
             I,
@@ -122,34 +122,34 @@ function m(e, t, n, r) {
             S,
             y,
             N,
-            O,
-            R,
             v,
             C,
+            R,
+            O,
             b,
             D,
             L,
             w,
             M,
             P,
-            U,
+            x,
             k = 0,
-            x = new s.Buf8(4),
+            U = new s.Buf8(4),
             G = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15];
         if (!e || !e.state || !e.output || (!e.input && 0 !== e.avail_in)) return -2;
         12 === (n = e.state).mode && (n.mode = 13),
-            (E = e.next_out),
+            (f = e.next_out),
             (_ = e.output),
             (g = e.avail_out),
-            (f = e.next_in),
-            (c = e.input),
-            (h = e.avail_in),
+            (h = e.next_in),
+            (d = e.input),
+            (p = e.avail_in),
             (A = n.hold),
             (I = n.bits),
-            (T = h),
+            (T = p),
             (S = g),
             (M = 0);
-        i: for (;;)
+        r: for (;;)
             switch (n.mode) {
                 case 1:
                     if (0 === n.wrap) {
@@ -157,14 +157,14 @@ function m(e, t, n, r) {
                         break;
                     }
                     for (; I < 16; ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
                     if (2 & n.wrap && 35615 === A) {
                         (n.check = 0),
-                            (x[0] = 255 & A),
-                            (x[1] = (A >>> 8) & 255),
-                            (n.check = o(n.check, x, 2, 0)),
+                            (U[0] = 255 & A),
+                            (U[1] = (A >>> 8) & 255),
+                            (n.check = o(n.check, U, 2, 0)),
                             (A = 0),
                             (I = 0),
                             (n.mode = 2);
@@ -191,8 +191,8 @@ function m(e, t, n, r) {
                     break;
                 case 2:
                     for (; I < 16; ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
                     if (((n.flags = A), (255 & n.flags) != 8)) {
                         (e.msg = "unknown compression method"), (n.mode = 30);
@@ -203,45 +203,45 @@ function m(e, t, n, r) {
                         break;
                     }
                     n.head && (n.head.text = (A >> 8) & 1),
-                        512 & n.flags && ((x[0] = 255 & A), (x[1] = (A >>> 8) & 255), (n.check = o(n.check, x, 2, 0))),
+                        512 & n.flags && ((U[0] = 255 & A), (U[1] = (A >>> 8) & 255), (n.check = o(n.check, U, 2, 0))),
                         (A = 0),
                         (I = 0),
                         (n.mode = 3);
                 case 3:
                     for (; I < 32; ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
                     n.head && (n.head.time = A),
                         512 & n.flags &&
-                            ((x[0] = 255 & A),
-                            (x[1] = (A >>> 8) & 255),
-                            (x[2] = (A >>> 16) & 255),
-                            (x[3] = (A >>> 24) & 255),
-                            (n.check = o(n.check, x, 4, 0))),
+                            ((U[0] = 255 & A),
+                            (U[1] = (A >>> 8) & 255),
+                            (U[2] = (A >>> 16) & 255),
+                            (U[3] = (A >>> 24) & 255),
+                            (n.check = o(n.check, U, 4, 0))),
                         (A = 0),
                         (I = 0),
                         (n.mode = 4);
                 case 4:
                     for (; I < 16; ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
                     n.head && ((n.head.xflags = 255 & A), (n.head.os = A >> 8)),
-                        512 & n.flags && ((x[0] = 255 & A), (x[1] = (A >>> 8) & 255), (n.check = o(n.check, x, 2, 0))),
+                        512 & n.flags && ((U[0] = 255 & A), (U[1] = (A >>> 8) & 255), (n.check = o(n.check, U, 2, 0))),
                         (A = 0),
                         (I = 0),
                         (n.mode = 5);
                 case 5:
                     if (1024 & n.flags) {
                         for (; I < 16; ) {
-                            if (0 === h) break i;
-                            h--, (A += c[f++] << I), (I += 8);
+                            if (0 === p) break r;
+                            p--, (A += d[h++] << I), (I += 8);
                         }
                         (n.length = A),
                             n.head && (n.head.extra_len = A),
                             512 & n.flags &&
-                                ((x[0] = 255 & A), (x[1] = (A >>> 8) & 255), (n.check = o(n.check, x, 2, 0))),
+                                ((U[0] = 255 & A), (U[1] = (A >>> 8) & 255), (n.check = o(n.check, U, 2, 0))),
                             (A = 0),
                             (I = 0);
                     } else n.head && (n.head.extra = null);
@@ -249,45 +249,45 @@ function m(e, t, n, r) {
                 case 6:
                     if (
                         1024 & n.flags &&
-                        ((y = n.length) > h && (y = h),
+                        ((y = n.length) > p && (y = p),
                         y &&
                             (n.head &&
                                 ((w = n.head.extra_len - n.length),
                                 n.head.extra || (n.head.extra = Array(n.head.extra_len)),
-                                s.arraySet(n.head.extra, c, f, y, w)),
-                            512 & n.flags && (n.check = o(n.check, c, y, f)),
-                            (h -= y),
-                            (f += y),
+                                s.arraySet(n.head.extra, d, h, y, w)),
+                            512 & n.flags && (n.check = o(n.check, d, y, h)),
+                            (p -= y),
+                            (h += y),
                             (n.length -= y)),
                         n.length)
                     )
-                        break i;
+                        break r;
                     (n.length = 0), (n.mode = 7);
                 case 7:
                     if (2048 & n.flags) {
-                        if (0 === h) break i;
+                        if (0 === p) break r;
                         y = 0;
-                        do (w = c[f + y++]), n.head && w && n.length < 65536 && (n.head.name += String.fromCharCode(w));
-                        while (w && y < h);
-                        if ((512 & n.flags && (n.check = o(n.check, c, y, f)), (h -= y), (f += y), w)) break i;
+                        do (w = d[h + y++]), n.head && w && n.length < 65536 && (n.head.name += String.fromCharCode(w));
+                        while (w && y < p);
+                        if ((512 & n.flags && (n.check = o(n.check, d, y, h)), (p -= y), (h += y), w)) break r;
                     } else n.head && (n.head.name = null);
                     (n.length = 0), (n.mode = 8);
                 case 8:
                     if (4096 & n.flags) {
-                        if (0 === h) break i;
+                        if (0 === p) break r;
                         y = 0;
                         do
-                            (w = c[f + y++]),
+                            (w = d[h + y++]),
                                 n.head && w && n.length < 65536 && (n.head.comment += String.fromCharCode(w));
-                        while (w && y < h);
-                        if ((512 & n.flags && (n.check = o(n.check, c, y, f)), (h -= y), (f += y), w)) break i;
+                        while (w && y < p);
+                        if ((512 & n.flags && (n.check = o(n.check, d, y, h)), (p -= y), (h += y), w)) break r;
                     } else n.head && (n.head.comment = null);
                     n.mode = 9;
                 case 9:
                     if (512 & n.flags) {
                         for (; I < 16; ) {
-                            if (0 === h) break i;
-                            h--, (A += c[f++] << I), (I += 8);
+                            if (0 === p) break r;
+                            p--, (A += d[h++] << I), (I += 8);
                         }
                         if (A !== (65535 & n.check)) {
                             (e.msg = "header crc mismatch"), (n.mode = 30);
@@ -301,32 +301,32 @@ function m(e, t, n, r) {
                     break;
                 case 10:
                     for (; I < 32; ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
-                    (e.adler = n.check = d(A)), (A = 0), (I = 0), (n.mode = 11);
+                    (e.adler = n.check = c(A)), (A = 0), (I = 0), (n.mode = 11);
                 case 11:
                     if (0 === n.havedict)
                         return (
-                            (e.next_out = E),
+                            (e.next_out = f),
                             (e.avail_out = g),
-                            (e.next_in = f),
-                            (e.avail_in = h),
+                            (e.next_in = h),
+                            (e.avail_in = p),
                             (n.hold = A),
                             (n.bits = I),
                             2
                         );
                     (e.adler = n.check = 1), (n.mode = 12);
                 case 12:
-                    if (5 === t || 6 === t) break i;
+                    if (5 === t || 6 === t) break r;
                 case 13:
                     if (n.last) {
                         (A >>>= 7 & I), (I -= 7 & I), (n.mode = 27);
                         break;
                     }
                     for (; I < 3; ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
                     switch (((n.last = 1 & A), (I -= 1), 3 & (A >>>= 1))) {
                         case 0:
@@ -335,24 +335,24 @@ function m(e, t, n, r) {
                         case 1:
                             if (
                                 (!(function (e) {
-                                    if (p) {
+                                    if (E) {
                                         var t;
-                                        for (r = new s.Buf32(512), i = new s.Buf32(32), t = 0; t < 144; )
+                                        for (i = new s.Buf32(512), r = new s.Buf32(32), t = 0; t < 144; )
                                             e.lens[t++] = 8;
                                         for (; t < 256; ) e.lens[t++] = 9;
                                         for (; t < 280; ) e.lens[t++] = 7;
                                         for (; t < 288; ) e.lens[t++] = 8;
-                                        for (u(1, e.lens, 0, 288, r, 0, e.work, { bits: 9 }), t = 0; t < 32; )
+                                        for (u(1, e.lens, 0, 288, i, 0, e.work, { bits: 9 }), t = 0; t < 32; )
                                             e.lens[t++] = 5;
-                                        u(2, e.lens, 0, 32, i, 0, e.work, { bits: 5 }), (p = !1);
+                                        u(2, e.lens, 0, 32, r, 0, e.work, { bits: 5 }), (E = !1);
                                     }
-                                    (e.lencode = r), (e.lenbits = 9), (e.distcode = i), (e.distbits = 5);
+                                    (e.lencode = i), (e.lenbits = 9), (e.distcode = r), (e.distbits = 5);
                                 })(n),
                                 (n.mode = 20),
                                 6 === t)
                             ) {
                                 (A >>>= 2), (I -= 2);
-                                break i;
+                                break r;
                             }
                             break;
                         case 2:
@@ -365,28 +365,28 @@ function m(e, t, n, r) {
                     break;
                 case 14:
                     for (A >>>= 7 & I, I -= 7 & I; I < 32; ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
                     if ((65535 & A) != ((A >>> 16) ^ 65535)) {
                         (e.msg = "invalid stored block lengths"), (n.mode = 30);
                         break;
                     }
-                    if (((n.length = 65535 & A), (A = 0), (I = 0), (n.mode = 15), 6 === t)) break i;
+                    if (((n.length = 65535 & A), (A = 0), (I = 0), (n.mode = 15), 6 === t)) break r;
                 case 15:
                     n.mode = 16;
                 case 16:
                     if ((y = n.length)) {
-                        if ((y > h && (y = h), y > g && (y = g), 0 === y)) break i;
-                        s.arraySet(_, c, f, y, E), (h -= y), (f += y), (g -= y), (E += y), (n.length -= y);
+                        if ((y > p && (y = p), y > g && (y = g), 0 === y)) break r;
+                        s.arraySet(_, d, h, y, f), (p -= y), (h += y), (g -= y), (f += y), (n.length -= y);
                         break;
                     }
                     n.mode = 12;
                     break;
                 case 17:
                     for (; I < 14; ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
                     if (
                         ((n.nlen = (31 & A) + 257),
@@ -405,8 +405,8 @@ function m(e, t, n, r) {
                 case 18:
                     for (; n.have < n.ncode; ) {
                         for (; I < 3; ) {
-                            if (0 === h) break i;
-                            h--, (A += c[f++] << I), (I += 8);
+                            if (0 === p) break r;
+                            p--, (A += d[h++] << I), (I += 8);
                         }
                         (n.lens[G[n.have++]] = 7 & A), (A >>>= 3), (I -= 3);
                     }
@@ -427,38 +427,38 @@ function m(e, t, n, r) {
                     for (; n.have < n.nlen + n.ndist; ) {
                         for (
                             ;
-                            (R = (k = n.lencode[A & ((1 << n.lenbits) - 1)]) >>> 24),
-                                (v = (k >>> 16) & 255),
-                                (C = 65535 & k),
-                                !(R <= I);
+                            (C = (k = n.lencode[A & ((1 << n.lenbits) - 1)]) >>> 24),
+                                (R = (k >>> 16) & 255),
+                                (O = 65535 & k),
+                                !(C <= I);
                         ) {
-                            if (0 === h) break i;
-                            h--, (A += c[f++] << I), (I += 8);
+                            if (0 === p) break r;
+                            p--, (A += d[h++] << I), (I += 8);
                         }
-                        if (C < 16) (A >>>= R), (I -= R), (n.lens[n.have++] = C);
+                        if (O < 16) (A >>>= C), (I -= C), (n.lens[n.have++] = O);
                         else {
-                            if (16 === C) {
-                                for (U = R + 2; I < U; ) {
-                                    if (0 === h) break i;
-                                    h--, (A += c[f++] << I), (I += 8);
+                            if (16 === O) {
+                                for (x = C + 2; I < x; ) {
+                                    if (0 === p) break r;
+                                    p--, (A += d[h++] << I), (I += 8);
                                 }
-                                if (((A >>>= R), (I -= R), 0 === n.have)) {
+                                if (((A >>>= C), (I -= C), 0 === n.have)) {
                                     (e.msg = "invalid bit length repeat"), (n.mode = 30);
                                     break;
                                 }
                                 (w = n.lens[n.have - 1]), (y = 3 + (3 & A)), (A >>>= 2), (I -= 2);
-                            } else if (17 === C) {
-                                for (U = R + 3; I < U; ) {
-                                    if (0 === h) break i;
-                                    h--, (A += c[f++] << I), (I += 8);
+                            } else if (17 === O) {
+                                for (x = C + 3; I < x; ) {
+                                    if (0 === p) break r;
+                                    p--, (A += d[h++] << I), (I += 8);
                                 }
-                                (A >>>= R), (I -= R), (w = 0), (y = 3 + (7 & A)), (A >>>= 3), (I -= 3);
+                                (A >>>= C), (I -= C), (w = 0), (y = 3 + (7 & A)), (A >>>= 3), (I -= 3);
                             } else {
-                                for (U = R + 7; I < U; ) {
-                                    if (0 === h) break i;
-                                    h--, (A += c[f++] << I), (I += 8);
+                                for (x = C + 7; I < x; ) {
+                                    if (0 === p) break r;
+                                    p--, (A += d[h++] << I), (I += 8);
                                 }
-                                (A >>>= R), (I -= R), (w = 0), (y = 11 + (127 & A)), (A >>>= 7), (I -= 7);
+                                (A >>>= C), (I -= C), (w = 0), (y = 11 + (127 & A)), (A >>>= 7), (I -= 7);
                             }
                             if (n.have + y > n.nlen + n.ndist) {
                                 (e.msg = "invalid bit length repeat"), (n.mode = 30);
@@ -493,24 +493,24 @@ function m(e, t, n, r) {
                         (e.msg = "invalid distances set"), (n.mode = 30);
                         break;
                     }
-                    if (((n.mode = 20), 6 === t)) break i;
+                    if (((n.mode = 20), 6 === t)) break r;
                 case 20:
                     n.mode = 21;
                 case 21:
-                    if (h >= 6 && g >= 258) {
-                        (e.next_out = E),
+                    if (p >= 6 && g >= 258) {
+                        (e.next_out = f),
                             (e.avail_out = g),
-                            (e.next_in = f),
-                            (e.avail_in = h),
+                            (e.next_in = h),
+                            (e.avail_in = p),
                             (n.hold = A),
                             (n.bits = I),
                             l(e, S),
-                            (E = e.next_out),
+                            (f = e.next_out),
                             (_ = e.output),
                             (g = e.avail_out),
-                            (f = e.next_in),
-                            (c = e.input),
-                            (h = e.avail_in),
+                            (h = e.next_in),
+                            (d = e.input),
+                            (p = e.avail_in),
                             (A = n.hold),
                             (I = n.bits),
                             12 === n.mode && (n.back = -1);
@@ -518,45 +518,45 @@ function m(e, t, n, r) {
                     }
                     for (
                         n.back = 0;
-                        (R = (k = n.lencode[A & ((1 << n.lenbits) - 1)]) >>> 24),
-                            (v = (k >>> 16) & 255),
-                            (C = 65535 & k),
-                            !(R <= I);
+                        (C = (k = n.lencode[A & ((1 << n.lenbits) - 1)]) >>> 24),
+                            (R = (k >>> 16) & 255),
+                            (O = 65535 & k),
+                            !(C <= I);
                     ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
-                    if (v && (240 & v) == 0) {
+                    if (R && (240 & R) == 0) {
                         for (
-                            b = R, D = v, L = C;
-                            (R = (k = n.lencode[L + ((A & ((1 << (b + D)) - 1)) >> b)]) >>> 24),
-                                (v = (k >>> 16) & 255),
-                                (C = 65535 & k),
-                                !(b + R <= I);
+                            b = C, D = R, L = O;
+                            (C = (k = n.lencode[L + ((A & ((1 << (b + D)) - 1)) >> b)]) >>> 24),
+                                (R = (k >>> 16) & 255),
+                                (O = 65535 & k),
+                                !(b + C <= I);
                         ) {
-                            if (0 === h) break i;
-                            h--, (A += c[f++] << I), (I += 8);
+                            if (0 === p) break r;
+                            p--, (A += d[h++] << I), (I += 8);
                         }
                         (A >>>= b), (I -= b), (n.back += b);
                     }
-                    if (((A >>>= R), (I -= R), (n.back += R), (n.length = C), 0 === v)) {
+                    if (((A >>>= C), (I -= C), (n.back += C), (n.length = O), 0 === R)) {
                         n.mode = 26;
                         break;
                     }
-                    if (32 & v) {
+                    if (32 & R) {
                         (n.back = -1), (n.mode = 12);
                         break;
                     }
-                    if (64 & v) {
+                    if (64 & R) {
                         (e.msg = "invalid literal/length code"), (n.mode = 30);
                         break;
                     }
-                    (n.extra = 15 & v), (n.mode = 22);
+                    (n.extra = 15 & R), (n.mode = 22);
                 case 22:
                     if (n.extra) {
-                        for (U = n.extra; I < U; ) {
-                            if (0 === h) break i;
-                            h--, (A += c[f++] << I), (I += 8);
+                        for (x = n.extra; I < x; ) {
+                            if (0 === p) break r;
+                            p--, (A += d[h++] << I), (I += 8);
                         }
                         (n.length += A & ((1 << n.extra) - 1)), (A >>>= n.extra), (I -= n.extra), (n.back += n.extra);
                     }
@@ -564,37 +564,37 @@ function m(e, t, n, r) {
                 case 23:
                     for (
                         ;
-                        (R = (k = n.distcode[A & ((1 << n.distbits) - 1)]) >>> 24),
-                            (v = (k >>> 16) & 255),
-                            (C = 65535 & k),
-                            !(R <= I);
+                        (C = (k = n.distcode[A & ((1 << n.distbits) - 1)]) >>> 24),
+                            (R = (k >>> 16) & 255),
+                            (O = 65535 & k),
+                            !(C <= I);
                     ) {
-                        if (0 === h) break i;
-                        h--, (A += c[f++] << I), (I += 8);
+                        if (0 === p) break r;
+                        p--, (A += d[h++] << I), (I += 8);
                     }
-                    if ((240 & v) == 0) {
+                    if ((240 & R) == 0) {
                         for (
-                            b = R, D = v, L = C;
-                            (R = (k = n.distcode[L + ((A & ((1 << (b + D)) - 1)) >> b)]) >>> 24),
-                                (v = (k >>> 16) & 255),
-                                (C = 65535 & k),
-                                !(b + R <= I);
+                            b = C, D = R, L = O;
+                            (C = (k = n.distcode[L + ((A & ((1 << (b + D)) - 1)) >> b)]) >>> 24),
+                                (R = (k >>> 16) & 255),
+                                (O = 65535 & k),
+                                !(b + C <= I);
                         ) {
-                            if (0 === h) break i;
-                            h--, (A += c[f++] << I), (I += 8);
+                            if (0 === p) break r;
+                            p--, (A += d[h++] << I), (I += 8);
                         }
                         (A >>>= b), (I -= b), (n.back += b);
                     }
-                    if (((A >>>= R), (I -= R), (n.back += R), 64 & v)) {
+                    if (((A >>>= C), (I -= C), (n.back += C), 64 & R)) {
                         (e.msg = "invalid distance code"), (n.mode = 30);
                         break;
                     }
-                    (n.offset = C), (n.extra = 15 & v), (n.mode = 24);
+                    (n.offset = O), (n.extra = 15 & R), (n.mode = 24);
                 case 24:
                     if (n.extra) {
-                        for (U = n.extra; I < U; ) {
-                            if (0 === h) break i;
-                            h--, (A += c[f++] << I), (I += 8);
+                        for (x = n.extra; I < x; ) {
+                            if (0 === p) break r;
+                            p--, (A += d[h++] << I), (I += 8);
                         }
                         (n.offset += A & ((1 << n.extra) - 1)), (A >>>= n.extra), (I -= n.extra), (n.back += n.extra);
                     }
@@ -604,7 +604,7 @@ function m(e, t, n, r) {
                     }
                     n.mode = 25;
                 case 25:
-                    if (0 === g) break i;
+                    if (0 === g) break r;
                     if (((y = S - g), n.offset > y)) {
                         if ((y = n.offset - y) > n.whave && n.sane) {
                             (e.msg = "invalid distance too far back"), (n.mode = 30);
@@ -612,30 +612,30 @@ function m(e, t, n, r) {
                         }
                         y > n.wnext ? ((y -= n.wnext), (N = n.wsize - y)) : (N = n.wnext - y),
                             y > n.length && (y = n.length),
-                            (O = n.window);
-                    } else (O = _), (N = E - n.offset), (y = n.length);
+                            (v = n.window);
+                    } else (v = _), (N = f - n.offset), (y = n.length);
                     y > g && (y = g), (g -= y), (n.length -= y);
-                    do _[E++] = O[N++];
+                    do _[f++] = v[N++];
                     while (--y);
                     0 === n.length && (n.mode = 21);
                     break;
                 case 26:
-                    if (0 === g) break i;
-                    (_[E++] = n.length), g--, (n.mode = 21);
+                    if (0 === g) break r;
+                    (_[f++] = n.length), g--, (n.mode = 21);
                     break;
                 case 27:
                     if (n.wrap) {
                         for (; I < 32; ) {
-                            if (0 === h) break i;
-                            h--, (A |= c[f++] << I), (I += 8);
+                            if (0 === p) break r;
+                            p--, (A |= d[h++] << I), (I += 8);
                         }
                         if (
                             ((S -= g),
                             (e.total_out += S),
                             (n.total += S),
-                            S && (e.adler = n.check = n.flags ? o(n.check, _, S, E - S) : a(n.check, _, S, E - S)),
+                            S && (e.adler = n.check = n.flags ? o(n.check, _, S, f - S) : a(n.check, _, S, f - S)),
                             (S = g),
-                            (n.flags ? A : d(A)) !== n.check)
+                            (n.flags ? A : c(A)) !== n.check)
                         ) {
                             (e.msg = "incorrect data check"), (n.mode = 30);
                             break;
@@ -646,8 +646,8 @@ function m(e, t, n, r) {
                 case 28:
                     if (n.wrap && n.flags) {
                         for (; I < 32; ) {
-                            if (0 === h) break i;
-                            h--, (A += c[f++] << I), (I += 8);
+                            if (0 === p) break r;
+                            p--, (A += d[h++] << I), (I += 8);
                         }
                         if (A !== (0 | n.total)) {
                             (e.msg = "incorrect length check"), (n.mode = 30);
@@ -658,19 +658,19 @@ function m(e, t, n, r) {
                     n.mode = 29;
                 case 29:
                     M = 1;
-                    break i;
+                    break r;
                 case 30:
                     M = -3;
-                    break i;
+                    break r;
                 case 31:
                     return -4;
                 default:
                     return -2;
             }
-        return ((e.next_out = E),
+        return ((e.next_out = f),
         (e.avail_out = g),
-        (e.next_in = f),
-        (e.avail_in = h),
+        (e.next_in = h),
+        (e.avail_in = p),
         (n.hold = A),
         (n.bits = I),
         (n.wsize || (S !== e.avail_out && n.mode < 30 && (n.mode < 27 || 4 !== t))) &&
@@ -699,11 +699,11 @@ function m(e, t, n, r) {
     }),
     (t.inflateSetDictionary = function (e, t) {
         var n,
-            r = t.length;
+            i = t.length;
         return e && e.state && (0 === (n = e.state).wrap || 11 === n.mode)
-            ? 11 === n.mode && a(1, t, r, 0) !== n.check
+            ? 11 === n.mode && a(1, t, i, 0) !== n.check
                 ? -3
-                : m(e, t, r, r)
+                : m(e, t, i, i)
                   ? ((n.mode = 31), -4)
                   : ((n.havedict = 1), 0)
             : -2;

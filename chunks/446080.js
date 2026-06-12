@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { K: () => o });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    r = n(64700),
     s = n(744682);
 let a = {
         disable: { name: "disable", start: 0, duration: 70 },
@@ -10,28 +10,28 @@ let a = {
         hover_disabled: { name: "hover_disabled", start: 280, duration: 70 },
     },
     o = (e) => {
-        let t = i.useRef(null),
-            o = i.useRef(e);
+        let t = r.useRef(null),
+            o = r.useRef(e);
         o.current = e;
-        let l = i.useMemo(
+        let l = r.useMemo(
                 () => () => {
                     null != t.current && t.current.play(e);
                 },
                 [e],
             ),
-            u = i.useCallback(() => {
+            u = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = "enable" === e ? "hover_disabled" : "hover_enabled";
                 t.current.play(n);
             }, [e]),
-            c = i.useCallback(() => {
+            c = r.useCallback(() => {
                 if (null == t.current) return;
                 let n = "enable" === e ? "hover_disabled" : "hover_enabled";
                 t.current.stopIfPlaying(n);
             }, [e]),
-            d = i.useCallback(
+            d = r.useCallback(
                 (e) =>
-                    (0, r.jsx)(s.P, {
+                    (0, i.jsx)(s.P, {
                         ...e,
                         src: () => n.e("60810").then(n.t.bind(n, 55089, 19)),
                         ref: t,
@@ -43,8 +43,8 @@ let a = {
         return {
             events: { onClick: l, onMouseEnter: u, onMouseLeave: c },
             play: l,
-            getDuration: i.useCallback(() => t.current?.getDuration(), []),
-            getCurrentFrame: i.useCallback(() => t.current?.getCurrentFrame() ?? null, []),
+            getDuration: r.useCallback(() => t.current?.getDuration(), []),
+            getCurrentFrame: r.useCallback(() => t.current?.getCurrentFrame() ?? null, []),
             Component: d,
         };
     };

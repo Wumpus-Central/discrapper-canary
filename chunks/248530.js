@@ -1,45 +1,45 @@
-n.d(t, { L: () => m });
-var i,
-    l = n(627968);
-n(64700);
-var s = n(503698),
-    r = n.n(s),
-    a = n(575087),
-    o = n.n(a),
-    d = n(827734),
-    c = n(398355),
-    u = (((i = u || {}).XSMALL = "xsmall"), (i.SMALL = "small"), (i.LARGE = "large"), i);
-function m(e) {
+l.d(r, { L: () => u });
+var s,
+    t = l(627968);
+l(64700);
+var a = l(503698),
+    n = l.n(a),
+    i = l(575087),
+    o = l.n(i),
+    d = l(661531),
+    c = l(398355),
+    m = (((s = m || {}).XSMALL = "xsmall"), (s.SMALL = "small"), (s.LARGE = "large"), s);
+function u(e) {
     let {
-            className: t,
-            percents: n,
-            size: i = "small",
-            foregroundColors: s = [d.A.unsafe_rawColors.BRAND_500.css],
-            backgroundColor: a = "var(--interactive-background-active)",
-            animate: u = !0,
+            className: r,
+            percents: l,
+            size: s = "small",
+            foregroundColors: a = [d.A.unsafe_rawColors.BRAND_500.css],
+            backgroundColor: i = "var(--interactive-background-active)",
+            animate: m = !0,
         } = e,
-        m = o()(n ?? [], s)
-            .map((e, t) => {
-                let n,
-                    [s, a] = e;
+        u = o()(l ?? [], a)
+            .map((e, r) => {
+                let l,
+                    [a, i] = e;
                 return (
-                    (n = Array.isArray(a)
-                        ? { background: `linear-gradient(to right, ${a[0]}, ${a[1]})` }
-                        : { backgroundColor: a }),
-                    (0, l.jsx)(
+                    (l = Array.isArray(i)
+                        ? { background: `linear-gradient(to right, ${i[0]}, ${i[1]})` }
+                        : { backgroundColor: i }),
+                    (0, t.jsx)(
                         "div",
                         {
-                            className: r()(c.progressBar, c[i], { [c.animating]: u }),
+                            className: n()(c.progressBar, c[s], { [c.animating]: m }),
                             style: {
-                                transform: `translate3d(${Math.min(Math.max(0, s ?? 0), 100) - 100}%, 0, 0)`,
-                                ...n,
+                                transform: `translate3d(${Math.min(Math.max(0, a ?? 0), 100) - 100}%, 0, 0)`,
+                                ...l,
                             },
                         },
-                        t,
+                        r,
                     )
                 );
             })
             .reverse();
-    return (0, l.jsx)("div", { className: r()(t, c.progress, c[i]), style: { backgroundColor: a }, children: m });
+    return (0, t.jsx)("div", { className: n()(r, c.progress, c[s]), style: { backgroundColor: i }, children: u });
 }
-m.Sizes = u;
+u.Sizes = m;

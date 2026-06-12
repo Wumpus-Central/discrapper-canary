@@ -1,26 +1,26 @@
-l.d(e, { A: () => u });
-var n = l(64700),
-    a = l(17928),
-    i = l(985018),
-    r = l(645619),
-    s = l(998418),
-    o = l(568065),
-    d = l(853513);
-function u(t, e, l) {
-    let u = (0, a.bG)([r.A], () => r.A.getStateForGuild(t)),
-        c = (0, s.Ay)(t, e);
-    return n.useMemo(() => {
-        if (null == u || c.type === o.b_.LEVEL_ACTIVATED) return { disabled: !0, reason: void 0 };
-        let { allPowerups: t, unlockedPowerups: n } = u,
-            a = l
-                ? Object.values(n).find((t) => t.sku?.dependent_sku_id === e.skuId)?.sku_id
-                : e.dependencies.find((t) => null == n[t]);
+n.d(t, { A: () => d });
+var l = n(64700),
+    i = n(17928),
+    r = n(375708),
+    a = n(645619),
+    s = n(998418),
+    o = n(568065),
+    u = n(853513);
+function d(e, t, n) {
+    let d = (0, i.bG)([a.A], () => a.A.getStateForGuild(e)),
+        c = (0, s.Ay)(e, t);
+    return l.useMemo(() => {
+        if (null == d || c.type === o.b_.LEVEL_ACTIVATED) return { disabled: !0, reason: void 0 };
+        let { allPowerups: e, unlockedPowerups: l } = d,
+            i = n
+                ? Object.values(l).find((e) => e.sku?.dependent_sku_id === t.skuId)?.sku_id
+                : t.dependencies.find((e) => null == l[e]);
         return {
-            disabled: null != a,
+            disabled: null != i,
             reason:
-                null != a && null != t[a]
-                    ? i.intl.formatToPlainString(l ? d.default.vCEBiS : d.default["1B8AZr"], { perk: t[a]?.title })
+                null != i && null != e[i]
+                    ? r.intl.formatToPlainString(n ? u.default.vCEBiS : u.default["1B8AZr"], { perk: e[i]?.title })
                     : void 0,
         };
-    }, [u, e.skuId, e.dependencies, l, c.type]);
+    }, [d, t.skuId, t.dependencies, n, c.type]);
 }

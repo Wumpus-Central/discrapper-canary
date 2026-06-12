@@ -10,8 +10,8 @@ var i = n(636537),
     c = n(157559),
     d = n(717398),
     _ = n(730852),
-    f = n(652215),
-    h = n(375708);
+    h = n(652215),
+    f = n(375708);
 let p = {
     call(e, t, n, r, s) {
         let a = (n) => {
@@ -20,17 +20,17 @@ let p = {
         if (null != r) {
             if (o.A.isBlocked(r)) return;
             let t = l.default.getUser(r);
-            i.Bo.get({ url: f.Rsh.CALL(e), oldFormErrors: !0, rejectWithError: !0 }).then(
+            i.Bo.get({ url: h.Rsh.CALL(e), oldFormErrors: !0, rejectWithError: !0 }).then(
                 (e) => {
                     a(n && e.body.ringable);
                 },
                 () => {
-                    u.default.track(f.HAw.OPEN_POPOUT, { type: "Not Friend", source: "Call" }),
+                    u.default.track(h.HAw.OPEN_POPOUT, { type: "Not Friend", source: "Call" }),
                         c.A.show({
-                            title: h.intl.string(h.t.My50nf),
-                            body: h.intl.format(h.t.IdKo2z, { username: null != t ? t.username : "" }),
-                            confirmText: h.intl.string(h.t["PMsq/b"]),
-                            cancelText: h.intl.string(h.t.BddRzS),
+                            title: f.intl.string(f.t.My50nf),
+                            body: f.intl.format(f.t.IdKo2z, { username: null != t ? t.username : "" }),
+                            confirmText: f.intl.string(f.t["PMsq/b"]),
+                            cancelText: f.intl.string(f.t.BddRzS),
                             onConfirm() {
                                 d.A.addRelationship({ userId: r, context: { location: "Call" } });
                             },
@@ -43,15 +43,15 @@ let p = {
         let o = a.A.getChannel(e);
         if (null == o) return;
         let l = (0, s.pW)(o),
-            u = f.kvI.CALLABLE.has(o.type);
+            u = h.kvI.CALLABLE.has(o.type);
         if (l) {
             i.Bo.post({
-                url: f.Rsh.CALL_RING(e),
+                url: h.Rsh.CALL_RING(e),
                 body: { recipients: t, analytics_location: n },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             }),
-                o.type === f.rbe.GUILD_VOICE &&
+                o.type === h.rbe.GUILD_VOICE &&
                     null != t &&
                     r.h.dispatch({ type: "GUILD_LOCAL_RING_START", ringing: t, guildId: o.guild_id });
             return;
@@ -59,5 +59,5 @@ let p = {
         u && r.h.dispatch({ type: "CALL_ENQUEUE_RING", channelId: e, recipients: t });
     },
     stopRinging: (e, t) =>
-        i.Bo.post({ url: f.Rsh.CALL_STOP_RINGING(e), body: { recipients: t }, oldFormErrors: !0, rejectWithError: !0 }),
+        i.Bo.post({ url: h.Rsh.CALL_STOP_RINGING(e), body: { recipients: t }, oldFormErrors: !0, rejectWithError: !0 }),
 };

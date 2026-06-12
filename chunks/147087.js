@@ -1,6 +1,6 @@
-n.d(t, { b: () => i });
-var r = n(17928),
-    l = n(287809);
-function i() {
-    return (0, r.bG)([l.default], () => l.default.getCurrentUser()?.isStaff() ?? !1);
+r.d(e, { b: () => a });
+var s = r(17928),
+    u = r(287809);
+function a() {
+    return (0, s.bG)([u.default], () => u.default.getCurrentUser()?.isStaff() ?? !1);
 }

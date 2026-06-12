@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { RX: () => l, Sn: () => u, UZ: () => c, hQ: () => d, lc: () => o });
-var r = n(961350),
-    i = n(9448),
-    s = n(974930),
+n.d(t, { RX: () => l, Sn: () => u, UZ: () => d, hQ: () => c, lc: () => o });
+var i = n(495544),
+    r = n(9448),
+    s = n(647090),
     a = n(988794);
 function o(e) {
     return !!e?.id;
@@ -39,36 +39,36 @@ function u(e) {
               count: e.count,
           };
 }
-function d(e, t, n) {
+function c(e, t, n) {
     let {
-        name: i,
+        name: r,
         description: s,
         privacyLevel: o,
         channelId: u,
-        scheduledStartTime: d,
-        scheduledEndTime: c,
+        scheduledStartTime: c,
+        scheduledEndTime: d,
         entityType: _,
-        entityMetadata: f,
-        image: E,
-        recurrenceRule: h,
-        eventExceptions: p,
+        entityMetadata: h,
+        image: f,
+        recurrenceRule: p,
+        eventExceptions: E,
     } = e;
     return {
         id: n ?? a.tq,
-        name: i,
+        name: r,
         description: s ?? null,
         privacy_level: o,
-        scheduled_start_time: d,
-        scheduled_end_time: c,
+        scheduled_start_time: c,
+        scheduled_end_time: d,
         entity_type: _,
-        entity_metadata: f ?? null,
-        image: E ?? void 0,
+        entity_metadata: h ?? null,
+        image: f ?? void 0,
         channel_id: u,
         guild_id: t,
-        creator_id: r.default.getId(),
+        creator_id: i.default.getId(),
         status: a.XG.SCHEDULED,
-        recurrence_rule: l(h),
-        guild_scheduled_event_exceptions: p.map((e) => ({
+        recurrence_rule: l(p),
+        guild_scheduled_event_exceptions: E.map((e) => ({
             event_exception_id: e.eventExceptionId,
             event_id: e.eventId,
             guild_id: e.guildId,
@@ -78,7 +78,7 @@ function d(e, t, n) {
         })),
     };
 }
-function c(e, t) {
+function d(e, t) {
     let n = {
         name: e?.name ?? "",
         privacyLevel: e?.privacy_level ?? a.dD.GUILD_ONLY,
@@ -101,7 +101,7 @@ function c(e, t) {
         })),
     };
     if (null != e && "id" in e && e?.entity_type === a.Ps.EXTERNAL) {
-        let t = (0, i.oF)(e);
+        let t = (0, r.oF)(e);
         null != t && (n.entityMetadata = { location: t });
     } else
         null == n.channelId &&

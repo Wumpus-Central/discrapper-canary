@@ -1,4 +1,4 @@
-t.r(
+a.r(
     (e.exports = {
         reactions: "reactions__23977",
         icon: "icon__23977",

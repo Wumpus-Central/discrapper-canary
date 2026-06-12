@@ -1,58 +1,58 @@
-e.d(s, { default: () => h });
-var r = e(627968);
-e(64700);
-var i = e(189213),
-    n = e(834730),
-    l = e(696986),
-    a = e(331322),
-    c = e(608461),
-    o = e(493540),
-    d = e(985018),
-    m = e(297859);
-function x(t) {
-    let { header: s, body: e } = t;
-    return (0, r.jsxs)("div", {
-        className: m.yf,
+r.d(s, { default: () => h });
+var e = r(627968);
+r(64700);
+var i = r(189213),
+    n = r(834730),
+    a = r(696986),
+    l = r(331322),
+    c = r(608461),
+    o = r(493540),
+    d = r(375708),
+    x = r(297859);
+function m(t) {
+    let { header: s, body: r } = t;
+    return (0, e.jsxs)("div", {
+        className: x.yf,
         children: [
-            (0, r.jsx)("img", { alt: "", className: m.mT, src: "/assets/6c311db40838eb17.svg" }),
-            (0, r.jsxs)("div", {
+            (0, e.jsx)("img", { alt: "", className: x.mT, src: "/assets/6c311db40838eb17.svg" }),
+            (0, e.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(n.E, { variant: "text-sm/semibold", color: "text-default", children: s }),
-                    (0, r.jsx)(l.h, { size: 4 }),
-                    (0, r.jsx)(n.E, { variant: "text-sm/normal", color: "text-muted", children: e }),
+                    (0, e.jsx)(n.E, { variant: "text-sm/semibold", color: "text-default", children: s }),
+                    (0, e.jsx)(a.h, { size: 4 }),
+                    (0, e.jsx)(n.E, { variant: "text-sm/normal", color: "text-muted", children: r }),
                 ],
             }),
         ],
     });
 }
 function h(t) {
-    let { guildId: s, demonetized: e, transitionState: l, onClose: m } = t,
-        [h, { loading: u, error: p }] = (0, c.A)(e ? o.Y7 : o.KW),
+    let { guildId: s, demonetized: r, transitionState: a, onClose: x } = t,
+        [h, { loading: u, error: p }] = (0, c.A)(r ? o.Y7 : o.KW),
         j = async () => {
             try {
                 let t = await h(s);
-                null != t && m?.();
+                null != t && x?.();
             } catch (t) {}
         };
-    return (0, r.jsx)(i.Modal, {
+    return (0, e.jsx)(i.Modal, {
         size: "md",
-        transitionState: l,
+        transitionState: a,
         actions: [
-            { variant: "secondary", onClick: m, text: d.intl.string(d.t.Jj8nUC) },
+            { variant: "secondary", onClick: x, text: d.intl.string(d.t.Jj8nUC) },
             { variant: "primary", loading: u, onClick: j, text: d.intl.string(d.t["pC/ozD"]) },
         ],
         title: d.intl.string(d.t.TP4GSt),
-        onClose: m,
-        preview: (0, r.jsxs)(r.Fragment, {
+        onClose: x,
+        preview: (0, e.jsxs)(e.Fragment, {
             children: [
                 null == p
                     ? null
-                    : (0, r.jsxs)(n.E, {
+                    : (0, e.jsxs)(n.E, {
                           variant: "text-xs/normal",
                           color: "text-feedback-critical",
                           children: ["Error: ", p.message],
                       }),
-                (0, r.jsx)(n.E, {
+                (0, e.jsx)(n.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children: d.intl.format(d.t["+oNl6x"], {
@@ -64,11 +64,11 @@ function h(t) {
         subtitle: d.intl.format(d.t.c0IsON, {
             termsURL: "https://support.discord.com/hc/en-us/articles/5330075836311-Creator-Pilot-Terms",
         }),
-        children: (0, r.jsxs)(a.B, {
+        children: (0, e.jsxs)(l.B, {
             gap: 16,
             children: [
-                (0, r.jsx)(x, { header: d.intl.string(d.t.UzDaWD), body: d.intl.string(d.t.IDk8Fz) }),
-                (0, r.jsx)(x, { header: d.intl.string(d.t["36/RiT"]), body: d.intl.string(d.t.CBzNtr) }),
+                (0, e.jsx)(m, { header: d.intl.string(d.t.UzDaWD), body: d.intl.string(d.t.IDk8Fz) }),
+                (0, e.jsx)(m, { header: d.intl.string(d.t["36/RiT"]), body: d.intl.string(d.t.CBzNtr) }),
             ],
         }),
     });

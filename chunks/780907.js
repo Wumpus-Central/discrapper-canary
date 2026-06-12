@@ -10,22 +10,22 @@ var i = n(488428),
     c = n(62583),
     d = n(627363),
     _ = n(587895),
-    f = n(306044),
-    h = n(626584),
+    h = n(306044),
+    f = n(626584),
     p = n(113854),
-    E = n(375802),
+    E = n(207371),
     m = n(953384),
     g = n(952818),
     A = n(773669),
     I = n(134861),
     T = n(760751),
     S = n(189081),
-    N = n(340829),
-    y = n(174459),
-    C = n(738533),
-    v = n(723702),
-    O = n(499785),
-    R = n(308368),
+    y = n(340829),
+    N = n(174459),
+    v = n(738533),
+    C = n(723702),
+    R = n(499785),
+    O = n(308368),
     b = n(59636),
     D = n(912851),
     L = n(652215),
@@ -35,9 +35,9 @@ function P(e, t) {
     return null != M ? `https://${M}${e}` : t;
 }
 let x = P("/detectables/games.json", L.Rsh.GAMES_DETECTABLE),
-    U = P("/detectables/non-games.json", L.Rsh.NON_GAMES_DETECTABLE);
-var k = n(375708);
-let G = new h.A("GamesActionCreators");
+    k = P("/detectables/non-games.json", L.Rsh.NON_GAMES_DETECTABLE);
+var U = n(375708);
+let G = new f.A("GamesActionCreators");
 function F(e) {
     let {
         applicationId: t,
@@ -49,7 +49,7 @@ function F(e) {
         source: o,
         locationObject: l,
         analyticsLocations: c,
-        preferDeepLink: f = !1,
+        preferDeepLink: h = !1,
     } = e;
     if (null != i) {
         try {
@@ -63,7 +63,7 @@ function F(e) {
         }
         return Promise.resolve();
     }
-    if (f) {
+    if (h) {
         let e = _.A.getApplication(t);
         if (e?.deepLinkUri != null) {
             let i = e.deepLinkUri.replace(/\/+$/, ""),
@@ -91,8 +91,8 @@ function F(e) {
             let i = _.A.getApplication(t)?.parentId;
             return (
                 null != i &&
-                    C.A.waitParentConnected(i)
-                        .then(() => C.A.waitParentSubscribed(i, L.ZE4.ACTIVITY_JOIN))
+                    v.A.waitParentConnected(i)
+                        .then(() => v.A.waitParentSubscribed(i, L.ZE4.ACTIVITY_JOIN))
                         .then(() => {
                             u.h.dispatch({
                                 type: "ACTIVITY_JOIN",
@@ -105,10 +105,10 @@ function F(e) {
                         })
                         .catch(() => {}),
                 u.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: t }),
-                C.A.waitConnected(t).then(
+                v.A.waitConnected(t).then(
                     () => (
                         u.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: t }),
-                        C.A.waitSubscribed(t, L.ZE4.ACTIVITY_JOIN)
+                        v.A.waitSubscribed(t, L.ZE4.ACTIVITY_JOIN)
                     ),
                 )
             );
@@ -133,7 +133,7 @@ async function V(e) {
         embedded: a = !1,
         source: l,
         locationObject: d = {},
-        analyticsLocations: f = [],
+        analyticsLocations: h = [],
     } = e;
     if (a) {
         let e = _.A.getApplication(t);
@@ -144,24 +144,24 @@ async function V(e) {
                     activityChannelId: r ?? void 0,
                     source: l,
                     locationObject: d,
-                    analyticsLocations: f,
+                    analyticsLocations: h,
                 }))
               ? 0
               : Promise.resolve();
     }
     if (I.A.isConnected(t)) return Promise.resolve();
-    let h = null;
+    let f = null;
     if (null == n) {
         let e = S.A.getActiveLibraryApplication(t);
         n = null != e ? e.branchId : t;
     }
-    if (N.A.isLaunchable(t, n)) {
-        let e = N.A.getState(t, n),
+    if (y.A.isLaunchable(t, n)) {
+        let e = y.A.getState(t, n),
             r = S.A.getActiveLaunchOptionId(t, n);
         if (null == e) throw Error("Missing dispatch game when launching");
         let a = S.A.getLibraryApplication(t, n);
         if (null == a) throw Error("Missing library application when launching");
-        h = o.Bo.post({
+        f = o.Bo.post({
             url: L.Rsh.OAUTH2_AUTHORIZE,
             query: { client_id: t, response_type: "token", scope: [s.F.IDENTIFY].join(" ") },
             retries: 3,
@@ -183,21 +183,21 @@ async function V(e) {
                     throw e;
                 },
             )
-            .then((t) => C.A.launchDispatchApplication(e, t, A.default.locale, a.getBranchName(), r));
+            .then((t) => v.A.launchDispatchApplication(e, t, A.default.locale, a.getBranchName(), r));
     } else {
         let e = _.A.getApplication(t);
-        h = null != e ? C.A.launch(e) : C.A.launchGame(t);
+        f = null != e ? v.A.launch(e) : v.A.launchGame(t);
     }
     let m = Error("game not found");
-    return null != h
+    return null != f
         ? (u.h.dispatch({ type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE", applicationId: t, branchId: n }),
           u.h.dispatch({ type: "GAME_LAUNCH_START", applicationId: t }),
-          h
+          f
               .then((e) => {
                   u.h.dispatch({ type: "GAME_LAUNCH_SUCCESS", applicationId: t, pids: e });
               })
               .catch((e) => {
-                  D.A.show(L.kqX.LAUNCH_GAME_FAILURE, k.intl.string(k.t.YZEBdj)),
+                  D.A.show(L.kqX.LAUNCH_GAME_FAILURE, U.intl.string(U.t.YZEBdj)),
                       u.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: m });
               }))
         : (u.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: m }), Promise.reject(m));
@@ -208,7 +208,7 @@ function B(e) {
 let H = {
     addGame(e, t) {
         u.h.dispatch({ type: "RUNNING_GAME_ADD_OVERRIDE", pid: e }),
-            y.default.track(L.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
+            N.default.track(L.HAw.RUNNING_GAME_OVERRIDE_ADDED, { game_name: t });
     },
     toggleOverlay(e, t, n) {
         let i = (0, g.Zh)(e),
@@ -238,7 +238,7 @@ let H = {
         u.h.dispatch({ type: "RUNNING_GAME_EDIT_NAME", game: e, newName: t });
     },
     identifyGame: (e, t) =>
-        (0, f.A)().then(
+        (0, h.A)().then(
             (t) =>
                 new Promise((n, i) => {
                     null == t
@@ -271,7 +271,7 @@ let H = {
         let e = T.A.detectableGamesEtag;
         u.h.wait(() => {
             u.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
-                O.A.get({
+                R.A.get({
                     url: x,
                     headers: { "If-None-Match": e },
                     retries: 1,
@@ -339,8 +339,8 @@ let H = {
         let e = m.A.etag;
         u.h.wait(() => {
             u.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
-                O.A.get({
-                    url: U,
+                R.A.get({
+                    url: k,
                     headers: { "If-None-Match": e },
                     retries: 1,
                     trackedActionData: {
@@ -367,7 +367,7 @@ let H = {
     },
     reportUnverifiedGame(e) {
         let { name: t, iconHash: n, publisher: i, distributor: r, sku: s, executableName: a } = e,
-            l = (0, f.v)(a);
+            l = (0, h.v)(a);
         (G.log("Reporting unverified game: ", {
             name: t,
             executableName: a,
@@ -382,7 +382,7 @@ let H = {
                 url: L.Rsh.UNVERIFIED_APPLICATIONS,
                 body: {
                     name: t,
-                    os: (0, v.getPlatformName)(),
+                    os: (0, C.getPlatformName)(),
                     icon: n,
                     distributor_application: null == r || "" === r ? null : { distributor: r, sku: s },
                     executable: l,
@@ -440,14 +440,14 @@ let H = {
             );
         u.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: i, remotePartyId: _ });
         try {
-            let e = (0, v.platformPrefersDeepLink)(),
-                { secret: u, joinUrl: f } = await R.A.getJoinSecret(t, n, i, r, s);
+            let e = (0, C.platformPrefersDeepLink)(),
+                { secret: u, joinUrl: h } = await O.A.getJoinSecret(t, n, i, r, s);
             return (
                 null == _ &&
                     F({
                         applicationId: i,
                         secret: u,
-                        joinUrl: f,
+                        joinUrl: h,
                         channelId: r,
                         intent: a,
                         embedded: o,

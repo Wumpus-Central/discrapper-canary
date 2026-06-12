@@ -1,28 +1,28 @@
 "use strict";
-n.d(t, { Ie: () => s, Kp: () => o, Rx: () => l });
-var r = n(485845),
-    i = n(264322),
-    a = n(73510);
-function s(e) {
-    let { customInstallUrl: t, installParams: n, integrationTypesConfig: r } = e;
+n.d(t, { Ie: () => a, Kp: () => o, Rx: () => l });
+var i = n(485845),
+    r = n(264322),
+    s = n(73510);
+function a(e) {
+    let { customInstallUrl: t, installParams: n, integrationTypesConfig: i } = e;
     return (
         null != t ||
         null != n ||
-        (null != r && Object.values(r).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null))
+        (null != i && Object.values(i).some((e) => e?.oauth2_install_params != null || e?.oauth2InstallParams != null))
     );
 }
 function o(e) {
-    let { customInstallUrl: t, installParams: n, integrationTypesConfig: i } = e;
+    let { customInstallUrl: t, installParams: n, integrationTypesConfig: r } = e;
     return (
-        s({ customInstallUrl: t, installParams: n, integrationTypesConfig: i }) && null != i && r.b.USER_INSTALL in i
+        a({ customInstallUrl: t, installParams: n, integrationTypesConfig: r }) && null != r && i.b.USER_INSTALL in r
     );
 }
 function l(e) {
-    let { applicationId: t, channel: n, commandIntegrationTypes: s } = e;
+    let { applicationId: t, channel: n, commandIntegrationTypes: a } = e;
     return !(
-        (null != s && !s.includes(r.b.USER_INSTALL)) ||
-        t === a.Ik.BUILT_IN ||
-        i.Ay.hasUserStateApplication(t) ||
-        (null != n && i.Ay.hasContextStateApplication({ applicationId: t, channelId: n.id, guildId: n.guild_id }))
+        (null != a && !a.includes(i.b.USER_INSTALL)) ||
+        t === s.Ik.BUILT_IN ||
+        r.Ay.hasUserStateApplication(t) ||
+        (null != n && r.Ay.hasContextStateApplication({ applicationId: t, channelId: n.id, guildId: n.guild_id }))
     );
 }

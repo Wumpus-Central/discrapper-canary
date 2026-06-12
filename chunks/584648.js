@@ -14,19 +14,19 @@ function s(e, t, n) {
         a = (e) => {
             let i,
                 { to: a, animate: o, callback: l } = e,
-                { scrollPosition: _, scrollSize: d, offsetSize: u } = r(t(), s);
-            n.to({ to: a >= (i = d - u + 1) - 1 ? i : Math.max(0, a), from: _, animate: o, callback: l });
+                { scrollPosition: u, scrollSize: c, offsetSize: d } = r(t(), s);
+            n.to({ to: a >= (i = c - d + 1) - 1 ? i : Math.max(0, a), from: u, animate: o, callback: l });
         },
         o = (e) => {
-            let { start: n, end: i, shouldScrollToStart: o = !1, padding: l = 0, animate: _, callback: d } = e,
-                { scrollPosition: u, offsetSize: c } = r(t(), s);
+            let { start: n, end: i, shouldScrollToStart: o = !1, padding: l = 0, animate: u, callback: c } = e,
+                { scrollPosition: d, offsetSize: _ } = r(t(), s);
             (n -= l),
                 (i += l),
-                n >= u && i <= u + c && !o
-                    ? null != d && d()
-                    : n < u || o
-                      ? a({ to: n, animate: _, callback: d })
-                      : a({ to: i - c, animate: _, callback: d });
+                n >= d && i <= d + _ && !o
+                    ? null != c && c()
+                    : n < d || o
+                      ? a({ to: n, animate: u, callback: c })
+                      : a({ to: i - _, animate: u, callback: c });
         };
     return {
         spring: n,
@@ -34,10 +34,10 @@ function s(e, t, n) {
         mergeTo: n.mergeTo,
         scrollIntoViewRect: o,
         scrollIntoViewNode(t) {
-            let { node: n, shouldScrollToStart: r = !1, padding: a = 0, animate: l = !1, callback: _ } = t,
-                { current: d } = e;
-            if (null == d) return;
-            let { offset: u, offsetSize: c } = (function (e, t, n) {
+            let { node: n, shouldScrollToStart: r = !1, padding: a = 0, animate: l = !1, callback: u } = t,
+                { current: c } = e;
+            if (null == c) return;
+            let { offset: d, offsetSize: _ } = (function (e, t, n) {
                 let r = "horizontal" === t ? e.offsetWidth : e.offsetHeight,
                     s = "horizontal" === t ? e.offsetLeft : e.offsetTop,
                     a = e.offsetParent;
@@ -47,8 +47,8 @@ function s(e, t, n) {
                         (s += "horizontal" === t ? e.offsetLeft : e.offsetTop), (a = e.offsetParent);
                     } else a = a.parentNode;
                 return { offset: s, offsetSize: r };
-            })(n, s, d);
-            o({ start: u, end: u + c, shouldScrollToStart: r, padding: a, animate: l, callback: _ });
+            })(n, s, c);
+            o({ start: d, end: d + _, shouldScrollToStart: r, padding: a, animate: l, callback: u });
         },
         scrollPageUp() {
             let { animate: e = !1, callback: n } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},

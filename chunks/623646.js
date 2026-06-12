@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { H: () => g, Q: () => N });
+n.d(t, { H: () => g, Q: () => y });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,13 +10,13 @@ var i = n(627968),
     c = n(187322),
     d = n(38021),
     _ = n(43990),
-    f = n(508382),
-    h = n(83379),
+    h = n(508382),
+    f = n(83379),
     p = n(56553);
 let E = new WeakMap();
 function m(e) {
     let t = (0, u.p3)(e, p.qd);
-    return null == t && (t = (0, u.wB)(e, f.IP)), t ?? null;
+    return null == t && (t = (0, u.wB)(e, h.IP)), t ?? null;
 }
 function g(e, t) {
     if (e.contains(t)) return !0;
@@ -74,7 +74,7 @@ function S(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (l()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect());
 }
-class N extends r.Component {
+class y extends r.Component {
     static defaultProps = { nudgeAlignIntoViewport: !1, spacing: 0, autoInvert: !1, disablePointerEvents: !1 };
     elementRef = r.createRef();
     state = {
@@ -203,7 +203,7 @@ class N extends r.Component {
         let { position: e, autoInvert: t, avoidancePadding: n } = this.props,
             i = this.elementRef.current;
         l()(null != i, "Unexpected null element");
-        let r = (0, h.J$)(i),
+        let r = (0, f.J$)(i),
             { style: s, nudge: a } = this.calculatePositionStyle(e, i, r),
             o = { position: e, style: s, nudge: a },
             u = I(e, s, i, r, n),
@@ -233,19 +233,19 @@ class N extends r.Component {
                 }
             }
         }
-        var f = c,
+        var h = c,
             p = o;
         if (
-            null != f &&
-            f < 0 &&
+            null != h &&
+            h < 0 &&
             ("top" === p.position || "bottom" === p.position) &&
             null != i &&
-            Math.abs(f) < i?.offsetHeight &&
+            Math.abs(h) < i?.offsetHeight &&
             null != p.style
         ) {
             let e = "top" === p.position ? "bottom" : "top",
                 t = p.style[e];
-            return { ...p, style: { ...p.style, [e]: (null == t ? 0 : t) + f } };
+            return { ...p, style: { ...p.style, [e]: (null == t ? 0 : t) + h } };
         }
         return p;
     }
@@ -278,7 +278,7 @@ class N extends r.Component {
     calculateMaxHeight() {
         let e = this.elementRef.current;
         if (null == e) return;
-        let t = (0, h.J$)(e),
+        let t = (0, f.J$)(e),
             n = this.state.style;
         return null != n.top
             ? Math.max(0, t.offsetHeight - n.top - 12)
@@ -288,8 +288,8 @@ class N extends r.Component {
     }
     render() {
         let { id: e, className: t, children: n, fixed: r, disablePointerEvents: s, clickTrap: o = !1 } = this.props,
-            { position: l, isPositioned: u, nudge: f } = this.state,
-            h = this.calculateMaxHeight();
+            { position: l, isPositioned: u, nudge: h } = this.state,
+            f = this.calculateMaxHeight();
         return (0, i.jsx)("div", {
             className: a()({ [p.ld]: !0, [p.x7]: o }),
             children: (0, i.jsx)(d.aS, {
@@ -304,12 +304,12 @@ class N extends r.Component {
                                 style: {
                                     position: r ? "fixed" : "absolute",
                                     ...this.state.style,
-                                    "--reference-position-layer-max-height": null != h ? `${h}px` : void 0,
+                                    "--reference-position-layer-max-height": null != f ? `${f}px` : void 0,
                                 },
                                 ref: this.elementRef,
                                 children: (0, i.jsx)(c.xp, {
                                     containerRef: this.elementRef,
-                                    children: n({ position: l, nudge: f, isPositioned: u }, this.updatePosition),
+                                    children: n({ position: l, nudge: h, isPositioned: u }, this.updatePosition),
                                 }),
                             }),
                     });

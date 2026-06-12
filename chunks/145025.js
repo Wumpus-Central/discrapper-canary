@@ -14,11 +14,11 @@ let a =
     function (t) {
         var n,
             a,
-            i,
             u,
+            i,
             o,
-            f,
             c,
+            f,
             s,
             l,
             m,
@@ -27,13 +27,13 @@ let a =
             y,
             p = void 0 !== (t = t || {}) ? t : {};
         (p.ready = new Promise((t, n) => {
-            (a = t), (i = n);
+            (a = t), (u = n);
         })),
             (p.locateFile = function () {
                 return r(739236);
             });
         var _ = {};
-        for (u in p) p.hasOwnProperty(u) && (_[u] = p[u]);
+        for (i in p) p.hasOwnProperty(i) && (_[i] = p[i]);
         var d = [],
             v = "./this.program",
             w = "";
@@ -46,13 +46,13 @@ let a =
             });
         var b = p.print || console.log.bind(console),
             A = p.printErr || console.warn.bind(console);
-        for (u in _) _.hasOwnProperty(u) && (p[u] = _[u]);
+        for (i in _) _.hasOwnProperty(i) && (p[i] = _[i]);
         (_ = null), p.arguments && (d = p.arguments), p.thisProgram && (v = p.thisProgram), p.quit && p.quit;
         var D = 0,
             M = function (t) {
                 D = t;
             };
-        p.wasmBinary && (f = p.wasmBinary),
+        p.wasmBinary && (c = p.wasmBinary),
             p.noExitRuntime && p.noExitRuntime,
             "object" != typeof WebAssembly && U("no native wasm support detected");
         var S = !1;
@@ -69,53 +69,53 @@ let a =
         function E(t, n, r) {
             for (var e = n + r, a = n; t[a] && !(a >= e); ) ++a;
             if (a - n > 16 && t.subarray && R) return R.decode(t.subarray(n, a));
-            for (var i = ""; n < a; ) {
-                var u = t[n++];
-                if (!(128 & u)) {
-                    i += String.fromCharCode(u);
+            for (var u = ""; n < a; ) {
+                var i = t[n++];
+                if (!(128 & i)) {
+                    u += String.fromCharCode(i);
                     continue;
                 }
                 var o = 63 & t[n++];
-                if ((224 & u) == 192) {
-                    i += String.fromCharCode(((31 & u) << 6) | o);
+                if ((224 & i) == 192) {
+                    u += String.fromCharCode(((31 & i) << 6) | o);
                     continue;
                 }
-                var f = 63 & t[n++];
+                var c = 63 & t[n++];
                 if (
-                    (u =
-                        (240 & u) == 224
-                            ? ((15 & u) << 12) | (o << 6) | f
-                            : ((7 & u) << 18) | (o << 12) | (f << 6) | (63 & t[n++])) < 65536
+                    (i =
+                        (240 & i) == 224
+                            ? ((15 & i) << 12) | (o << 6) | c
+                            : ((7 & i) << 18) | (o << 12) | (c << 6) | (63 & t[n++])) < 65536
                 )
-                    i += String.fromCharCode(u);
+                    u += String.fromCharCode(i);
                 else {
-                    var c = u - 65536;
-                    i += String.fromCharCode(55296 | (c >> 10), 56320 | (1023 & c));
+                    var f = i - 65536;
+                    u += String.fromCharCode(55296 | (f >> 10), 56320 | (1023 & f));
                 }
             }
-            return i;
+            return u;
         }
-        function O(t, n) {
+        function Y(t, n) {
             return t ? E(m, t, n) : "";
         }
-        function Y(t, n, r, e) {
+        function O(t, n, r, e) {
             if (!(e > 0)) return 0;
-            for (var a = r, i = r + e - 1, u = 0; u < t.length; ++u) {
-                var o = t.charCodeAt(u);
+            for (var a = r, u = r + e - 1, i = 0; i < t.length; ++i) {
+                var o = t.charCodeAt(i);
                 if (
-                    (o >= 55296 && o <= 57343 && (o = (65536 + ((1023 & o) << 10)) | (1023 & t.charCodeAt(++u))),
+                    (o >= 55296 && o <= 57343 && (o = (65536 + ((1023 & o) << 10)) | (1023 & t.charCodeAt(++i))),
                     o <= 127)
                 ) {
-                    if (r >= i) break;
+                    if (r >= u) break;
                     n[r++] = o;
                 } else if (o <= 2047) {
-                    if (r + 1 >= i) break;
+                    if (r + 1 >= u) break;
                     (n[r++] = 192 | (o >> 6)), (n[r++] = 128 | (63 & o));
                 } else if (o <= 65535) {
-                    if (r + 2 >= i) break;
+                    if (r + 2 >= u) break;
                     (n[r++] = 224 | (o >> 12)), (n[r++] = 128 | ((o >> 6) & 63)), (n[r++] = 128 | (63 & o));
                 } else {
-                    if (r + 3 >= i) break;
+                    if (r + 3 >= u) break;
                     (n[r++] = 240 | (o >> 18)),
                         (n[r++] = 128 | ((o >> 12) & 63)),
                         (n[r++] = 128 | ((o >> 6) & 63)),
@@ -124,7 +124,7 @@ let a =
             }
             return (n[r] = 0), r - a;
         }
-        function x(t) {
+        function k(t) {
             (s = t),
                 (p.HEAP8 = l = new Int8Array(t)),
                 (p.HEAP16 = new Int16Array(t)),
@@ -136,11 +136,11 @@ let a =
                 (p.HEAPF64 = new Float64Array(t));
         }
         p.INITIAL_MEMORY;
-        var C = [],
-            k = [],
+        var x = [],
+            C = [],
             I = [],
             H = [];
-        k.push({
+        C.push({
             func: function () {
                 tn();
             },
@@ -154,7 +154,7 @@ let a =
                 (S = !0),
                 (t = "abort(" + t + "). Build with -s ASSERTIONS=1 for more info.");
             var n = new WebAssembly.RuntimeError(t);
-            throw (i(n), n);
+            throw (u(n), n);
         }
         function j(t) {
             var n;
@@ -167,7 +167,7 @@ let a =
         var B = "index.wasm";
         function z(t) {
             try {
-                if (t == B && f) return new Uint8Array(f);
+                if (t == B && c) return new Uint8Array(c);
                 if (o) return o(t);
                 throw "both async and sync fetching of the wasm failed";
             } catch (t) {
@@ -249,7 +249,7 @@ let a =
                     return (q.varargs += 4), h[(q.varargs - 4) >> 2];
                 },
                 getStr: function (t) {
-                    return O(t);
+                    return Y(t);
                 },
                 get64: function (t, n) {
                     return t;
@@ -291,9 +291,9 @@ let a =
             for (var r = new Date(t.getTime()); n > 0; ) {
                 var e = X(r.getFullYear()),
                     a = r.getMonth(),
-                    i = (e ? Z : Q)[a];
-                if (n > i - r.getDate())
-                    (n -= i - r.getDate() + 1),
+                    u = (e ? Z : Q)[a];
+                if (n > u - r.getDate())
+                    (n -= u - r.getDate() + 1),
                         r.setDate(1),
                         a < 11 ? r.setMonth(a + 1) : (r.setMonth(0), r.setFullYear(r.getFullYear() + 1));
                 else {
@@ -307,9 +307,9 @@ let a =
             a: function (t, n, r, e) {
                 U(
                     "Assertion failed: " +
-                        O(t) +
+                        Y(t) +
                         ", at: " +
-                        [n ? O(n) : "unknown filename", r, e ? O(e) : "unknown function"],
+                        [n ? Y(n) : "unknown filename", r, e ? Y(e) : "unknown function"],
                 );
             },
             g: function (t) {
@@ -331,7 +331,7 @@ let a =
                 U();
             },
             d: function (t, n) {
-                throw (tu(t, n || 1), "longjmp");
+                throw (ti(t, n || 1), "longjmp");
             },
             p: function (t, n, r) {
                 m.copyWithin(t, n, n + r);
@@ -347,7 +347,7 @@ let a =
                         ((a = Math.min(a, t + 0x6000000)),
                         (function (t) {
                             try {
-                                return c.grow((t - s.byteLength + 65535) >>> 16), x(c.buffer), 1;
+                                return f.grow((t - s.byteLength + 65535) >>> 16), k(f.buffer), 1;
                             } catch (t) {}
                         })(
                             Math.min(
@@ -364,10 +364,10 @@ let a =
                 var r = 0;
                 return (
                     V().forEach((e, a) => {
-                        var i = n + r;
-                        h[(t + 4 * a) >> 2] = i;
-                        for (var u = i, o = 0; o < e.length; ++o) l[0 | u++] = e.charCodeAt(o);
-                        (l[0 | u] = 0), (r += e.length + 1);
+                        var u = n + r;
+                        h[(t + 4 * a) >> 2] = u;
+                        for (var i = u, o = 0; o < e.length; ++o) l[0 | i++] = e.charCodeAt(o);
+                        (l[0 | i] = 0), (r += e.length + 1);
                     }),
                     0
                 );
@@ -389,14 +389,14 @@ let a =
             },
             u: function (t, n, r, e) {
                 var a = q.getStreamFromFD(t),
-                    i = q.doReadv(a, n, r);
-                return (h[e >> 2] = i), 0;
+                    u = q.doReadv(a, n, r);
+                return (h[e >> 2] = u), 0;
             },
             o: function (t, n, r, e, a) {},
             l: function (t, n, r, e) {
-                for (var a = 0, i = 0; i < r; i++) {
-                    for (var u = h[(n + 8 * i) >> 2], o = h[(n + (8 * i + 4)) >> 2], f = 0; f < o; f++)
-                        q.printChar(t, m[u + f]);
+                for (var a = 0, u = 0; u < r; u++) {
+                    for (var i = h[(n + 8 * u) >> 2], o = h[(n + (8 * u + 4)) >> 2], c = 0; c < o; c++)
+                        q.printChar(t, m[i + c]);
                     a += o;
                 }
                 return (h[e >> 2] = a), 0;
@@ -410,16 +410,16 @@ let a =
                     return g.get(t)(n, r, e);
                 } catch (t) {
                     if ((ta(a), t !== t + 0 && "longjmp" !== t)) throw t;
-                    tu(1, 0);
+                    ti(1, 0);
                 }
             },
             i: function (t, n, r, e, a) {
-                var i = te();
+                var u = te();
                 try {
                     return g.get(t)(n, r, e, a);
                 } catch (t) {
-                    if ((ta(i), t !== t + 0 && "longjmp" !== t)) throw t;
-                    tu(1, 0);
+                    if ((ta(u), t !== t + 0 && "longjmp" !== t)) throw t;
+                    ti(1, 0);
                 }
             },
             k: function (t, n, r) {
@@ -428,7 +428,7 @@ let a =
                     g.get(t)(n, r);
                 } catch (t) {
                     if ((ta(e), t !== t + 0 && "longjmp" !== t)) throw t;
-                    tu(1, 0);
+                    ti(1, 0);
                 }
             },
             j: function (t, n, r, e) {
@@ -437,7 +437,7 @@ let a =
                     g.get(t)(n, r, e);
                 } catch (t) {
                     if ((ta(a), t !== t + 0 && "longjmp" !== t)) throw t;
-                    tu(1, 0);
+                    ti(1, 0);
                 }
             },
             b: function (t) {
@@ -446,11 +446,11 @@ let a =
             r: function (t, n, r, e) {
                 return (function (t, n, r, e) {
                     var a,
-                        i,
                         u,
+                        i,
                         o,
-                        f = h[(e + 40) >> 2],
-                        c = {
+                        c = h[(e + 40) >> 2],
+                        f = {
                             tm_sec: h[e >> 2],
                             tm_min: h[(e + 4) >> 2],
                             tm_hour: h[(e + 8) >> 2],
@@ -461,9 +461,9 @@ let a =
                             tm_yday: h[(e + 28) >> 2],
                             tm_isdst: h[(e + 32) >> 2],
                             tm_gmtoff: h[(e + 36) >> 2],
-                            tm_zone: f ? O(f) : "",
+                            tm_zone: c ? Y(c) : "",
                         },
-                        s = O(r),
+                        s = Y(r),
                         m = {
                             "%c": "%a %b %d %H:%M:%S %Y",
                             "%D": "%m/%d/%y",
@@ -552,9 +552,9 @@ let a =
                             r = new Date(n.getFullYear(), 0, 4),
                             e = new Date(n.getFullYear() + 1, 0, 4),
                             a = w(r),
-                            i = w(e);
+                            u = w(e);
                         return 0 >= v(a, n)
-                            ? 0 >= v(i, n)
+                            ? 0 >= v(u, n)
                                 ? n.getFullYear() + 1
                                 : n.getFullYear()
                             : n.getFullYear() - 1;
@@ -633,10 +633,10 @@ let a =
                                 r = new Date(t.tm_year + 1901, 0, 4),
                                 e = w(n),
                                 a = w(r),
-                                i = $(new Date(t.tm_year + 1900, 0, 1), t.tm_yday);
-                            return 0 > v(i, e)
+                                u = $(new Date(t.tm_year + 1900, 0, 1), t.tm_yday);
+                            return 0 > v(u, e)
                                 ? "53"
-                                : 0 >= v(a, i)
+                                : 0 >= v(a, u)
                                   ? "01"
                                   : d(
                                         Math.ceil(
@@ -680,11 +680,11 @@ let a =
                             return "%";
                         },
                     };
-                    for (var g in A) s.indexOf(g) >= 0 && (s = s.replace(RegExp(g, "g"), A[g](c)));
+                    for (var g in A) s.indexOf(g) >= 0 && (s = s.replace(RegExp(g, "g"), A[g](f)));
                     var D =
                         ((a = s),
-                        (i = !1),
-                        (u = Array(
+                        (u = !1),
+                        (i = Array(
                             (function (t) {
                                 for (var n = 0, r = 0; r < t.length; ++r) {
                                     var e = t.charCodeAt(r);
@@ -696,9 +696,9 @@ let a =
                                 return n;
                             })(a) + 1,
                         )),
-                        (o = Y(a, u, 0, u.length)),
-                        i && (u.length = o),
-                        u);
+                        (o = O(a, i, 0, i.length)),
+                        u && (i.length = o),
+                        i);
                     return D.length > n ? 0 : (l.set(D, t), D.length - 1);
                 })(t, n, r, e);
             },
@@ -708,7 +708,7 @@ let a =
             function n(t, n) {
                 if (
                     ((p.asm = t.exports),
-                    x((c = p.asm.x).buffer),
+                    k((f = p.asm.x).buffer),
                     (g = p.asm.z),
                     P--,
                     p.monitorRunDependencies && p.monitorRunDependencies(P),
@@ -723,7 +723,7 @@ let a =
             }
             function e(n) {
                 return (
-                    !f && "function" == typeof fetch
+                    !c && "function" == typeof fetch
                         ? fetch(B, { credentials: "same-origin" })
                               .then((t) => {
                                   if (!t.ok) throw "failed to load wasm binary file at '" + B + "'";
@@ -743,7 +743,7 @@ let a =
                 } catch (t) {
                     return A("Module.instantiateWasm callback failed with error: " + t), !1;
                 }
-            (!f && "function" == typeof WebAssembly.instantiateStreaming && !j(B) && "function" == typeof fetch
+            (!c && "function" == typeof WebAssembly.instantiateStreaming && !j(B) && "function" == typeof fetch
                 ? fetch(B, { credentials: "same-origin" }).then((n) =>
                       WebAssembly.instantiateStreaming(n, t).then(
                           r,
@@ -755,7 +755,7 @@ let a =
                       ),
                   )
                 : e(r)
-            ).catch(i);
+            ).catch(u);
         })();
         var tn = (p.___wasm_call_ctors = function () {
                 return (tn = p.___wasm_call_ctors = p.asm.y).apply(null, arguments);
@@ -794,20 +794,20 @@ let a =
             ta = (p.stackRestore = function () {
                 return (ta = p.stackRestore = p.asm.K).apply(null, arguments);
             }),
-            ti = (p.stackAlloc = function () {
-                return (ti = p.stackAlloc = p.asm.L).apply(null, arguments);
+            tu = (p.stackAlloc = function () {
+                return (tu = p.stackAlloc = p.asm.L).apply(null, arguments);
             }),
-            tu = (p._setThrew = function () {
-                return (tu = p._setThrew = p.asm.M).apply(null, arguments);
+            ti = (p._setThrew = function () {
+                return (ti = p._setThrew = p.asm.M).apply(null, arguments);
             });
         function to(t) {
             if (((t = t || d), !(P > 0))) {
                 if (p.preRun)
                     for ("function" == typeof p.preRun && (p.preRun = [p.preRun]); p.preRun.length; ) {
                         var n;
-                        (n = p.preRun.shift()), C.unshift(n);
+                        (n = p.preRun.shift()), x.unshift(n);
                     }
-                L(C),
+                L(x),
                     P > 0 ||
                         (p.setStatus
                             ? (p.setStatus("Running..."),
@@ -821,7 +821,7 @@ let a =
             }
             function r() {
                 if (!y && ((y = !0), (p.calledRun = !0), !S)) {
-                    if ((L(k), L(I), a(p), p.onRuntimeInitialized && p.onRuntimeInitialized(), p.postRun))
+                    if ((L(C), L(I), a(p), p.onRuntimeInitialized && p.onRuntimeInitialized(), p.postRun))
                         for ("function" == typeof p.postRun && (p.postRun = [p.postRun]); p.postRun.length; ) {
                             var t;
                             (t = p.postRun.shift()), H.unshift(t);
@@ -838,35 +838,35 @@ let a =
                     : function () {
                           return (function (t, n, r, e) {
                               var a,
-                                  i = {
+                                  u = {
                                       string: function (t) {
                                           var n = 0;
                                           if (null != t && 0 !== t) {
                                               var r,
                                                   e,
                                                   a = (t.length << 2) + 1;
-                                              (r = t), (e = n = ti(a)), Y(r, m, e, a);
+                                              (r = t), (e = n = tu(a)), O(r, m, e, a);
                                           }
                                           return n;
                                       },
                                       array: function (t) {
                                           var n,
                                               r,
-                                              e = ti(t.length);
+                                              e = tu(t.length);
                                           return (n = t), (r = e), l.set(n, r), e;
                                       },
                                   },
-                                  u = F(t),
+                                  i = F(t),
                                   o = [],
-                                  f = 0;
+                                  c = 0;
                               if (e)
-                                  for (var c = 0; c < e.length; c++) {
-                                      var s = i[r[c]];
-                                      s ? (0 === f && (f = te()), (o[c] = s(e[c]))) : (o[c] = e[c]);
+                                  for (var f = 0; f < e.length; f++) {
+                                      var s = u[r[f]];
+                                      s ? (0 === c && (c = te()), (o[f] = s(e[f]))) : (o[f] = e[f]);
                                   }
-                              var h = u.apply(null, o);
+                              var h = i.apply(null, o);
                               return (
-                                  (a = h), (h = "string" === n ? O(a) : "boolean" === n ? !!a : a), 0 !== f && ta(f), h
+                                  (a = h), (h = "string" === n ? Y(a) : "boolean" === n ? !!a : a), 0 !== c && ta(c), h
                               );
                           })(t, n, r, arguments);
                       };

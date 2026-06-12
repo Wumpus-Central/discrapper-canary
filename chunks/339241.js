@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { KZ: () => u, Lf: () => l, YD: () => a, cX: () => f, oE: () => i });
-var r = n(64700);
-let i = {
+n.d(t, { KZ: () => u, Lf: () => l, YD: () => a, cX: () => h, oE: () => r });
+var i = n(64700);
+let r = {
         badInput: !1,
         customError: !1,
         patternMismatch: !1,
@@ -14,24 +14,24 @@ let i = {
         valueMissing: !1,
         valid: !0,
     },
-    s = { ...i, customError: !0, valid: !1 },
-    a = { isInvalid: !1, validationDetails: i, validationErrors: [] },
-    o = (0, r.createContext)({}),
+    s = { ...r, customError: !0, valid: !1 },
+    a = { isInvalid: !1, validationDetails: r, validationErrors: [] },
+    o = (0, i.createContext)({}),
     l = "__formValidationState" + Date.now();
 function u(e) {
     if (e[l]) {
         let {
             realtimeValidation: t,
             displayValidation: n,
-            updateValidation: r,
-            resetValidation: i,
+            updateValidation: i,
+            resetValidation: r,
             commitValidation: s,
         } = e[l];
         return {
             realtimeValidation: t,
             displayValidation: n,
-            updateValidation: r,
-            resetValidation: i,
+            updateValidation: i,
+            resetValidation: r,
             commitValidation: s,
         };
     }
@@ -39,67 +39,67 @@ function u(e) {
         let {
             isInvalid: t,
             validationState: n,
-            name: i,
+            name: r,
             value: l,
             builtinValidation: u,
-            validate: f,
-            validationBehavior: E = "aria",
+            validate: h,
+            validationBehavior: f = "aria",
         } = e;
         n && (t || (t = "invalid" === n));
-        let h = void 0 !== t ? { isInvalid: t, validationErrors: [], validationDetails: s } : null,
-            p = (0, r.useMemo)(
+        let p = void 0 !== t ? { isInvalid: t, validationErrors: [], validationDetails: s } : null,
+            E = (0, i.useMemo)(
                 () =>
-                    f && null != l
-                        ? c(
+                    h && null != l
+                        ? d(
                               (function (e, t) {
                                   if ("function" == typeof e) {
                                       let n = e(t);
-                                      if (n && "boolean" != typeof n) return d(n);
+                                      if (n && "boolean" != typeof n) return c(n);
                                   }
                                   return [];
-                              })(f, l),
+                              })(h, l),
                           )
                         : null,
-                [f, l],
+                [h, l],
             );
         (null == u ? void 0 : u.validationDetails.valid) && (u = void 0);
-        let m = (0, r.useContext)(o),
-            g = (0, r.useMemo)(() => (i ? (Array.isArray(i) ? i.flatMap((e) => d(m[e])) : d(m[i])) : []), [m, i]),
-            [A, I] = (0, r.useState)(m),
-            [T, S] = (0, r.useState)(!1);
+        let m = (0, i.useContext)(o),
+            g = (0, i.useMemo)(() => (r ? (Array.isArray(r) ? r.flatMap((e) => c(m[e])) : c(m[r])) : []), [m, r]),
+            [A, I] = (0, i.useState)(m),
+            [T, S] = (0, i.useState)(!1);
         m !== A && (I(m), S(!1));
-        let y = (0, r.useMemo)(() => c(T ? [] : g), [T, g]),
-            N = (0, r.useRef)(a),
-            [O, R] = (0, r.useState)(a),
-            v = (0, r.useRef)(a),
-            [C, b] = (0, r.useState)(!1);
+        let y = (0, i.useMemo)(() => d(T ? [] : g), [T, g]),
+            N = (0, i.useRef)(a),
+            [v, C] = (0, i.useState)(a),
+            R = (0, i.useRef)(a),
+            [O, b] = (0, i.useState)(!1);
         return (
-            (0, r.useEffect)(() => {
-                if (!C) return;
+            (0, i.useEffect)(() => {
+                if (!O) return;
                 b(!1);
-                let e = p || u || N.current;
-                _(e, v.current) || ((v.current = e), R(e));
+                let e = E || u || N.current;
+                _(e, R.current) || ((R.current = e), C(e));
             }),
             {
-                realtimeValidation: h || y || p || u || a,
-                displayValidation: "native" === E ? h || y || O : h || y || p || u || O,
+                realtimeValidation: p || y || E || u || a,
+                displayValidation: "native" === f ? p || y || v : p || y || E || u || v,
                 updateValidation(e) {
-                    "aria" !== E || _(O, e) ? (N.current = e) : R(e);
+                    "aria" !== f || _(v, e) ? (N.current = e) : C(e);
                 },
                 resetValidation() {
-                    _(a, v.current) || ((v.current = a), R(a)), "native" === E && b(!1), S(!0);
+                    _(a, R.current) || ((R.current = a), C(a)), "native" === f && b(!1), S(!0);
                 },
                 commitValidation() {
-                    "native" === E && b(!0), S(!0);
+                    "native" === f && b(!0), S(!0);
                 },
             }
         );
     })(e);
 }
-function d(e) {
+function c(e) {
     return e ? (Array.isArray(e) ? e : [e]) : [];
 }
-function c(e) {
+function d(e) {
     return e.length ? { isInvalid: !0, validationErrors: e, validationDetails: s } : null;
 }
 function _(e, t) {
@@ -113,13 +113,13 @@ function _(e, t) {
             Object.entries(e.validationDetails).every(([e, n]) => t.validationDetails[e] === n))
     );
 }
-function f(...e) {
+function h(...e) {
     let t = new Set(),
         n = !1,
-        r = { ...i };
-    for (let i of e) {
-        for (let e of i.validationErrors) t.add(e);
-        for (let e in (n || (n = i.isInvalid), r)) r[e] || (r[e] = i.validationDetails[e]);
+        i = { ...r };
+    for (let r of e) {
+        for (let e of r.validationErrors) t.add(e);
+        for (let e in (n || (n = r.isInvalid), i)) i[e] || (i[e] = r.validationDetails[e]);
     }
-    return (r.valid = !n), { isInvalid: n, validationErrors: [...t], validationDetails: r };
+    return (i.valid = !n), { isInvalid: n, validationErrors: [...t], validationDetails: i };
 }

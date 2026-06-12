@@ -1,27 +1,27 @@
-n.d(t, { A: () => a });
-var i = n(64700),
-    l = n(172218);
-function a(e) {
-    let { onVisible: t, threshold: n, minTimeVisibleMs: a } = e,
-        r = i.useRef(!1),
-        s = i.useRef(null);
+e.d(u, { A: () => c });
+var t = e(64700),
+    n = e(172218);
+function c(r) {
+    let { onVisible: u, threshold: e, minTimeVisibleMs: c } = r,
+        l = t.useRef(!1),
+        s = t.useRef(null);
     return (
-        i.useEffect(
+        t.useEffect(
             () => () => {
                 null != s.current && (clearTimeout(s.current), (s.current = null));
             },
             [],
         ),
-        (0, l.K)((e) => {
+        (0, n.K)((r) => {
             if (
-                (null == s.current || e || !1 !== r.current || (clearTimeout(s.current), (s.current = null)),
-                !e || !0 === r.current)
+                (null == s.current || r || !1 !== l.current || (clearTimeout(s.current), (s.current = null)),
+                !r || !0 === l.current)
             )
                 return;
-            let n = () => {
-                t(), (r.current = !0), (s.current = null);
+            let e = () => {
+                u(), (l.current = !0), (s.current = null);
             };
-            null != a ? (s.current = setTimeout(n, a)) : n();
-        }, n)
+            null != c ? (s.current = setTimeout(e, c)) : e();
+        }, e)
     );
 }

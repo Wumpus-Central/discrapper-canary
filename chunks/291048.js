@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => s });
-var r = function (e, t) {
+var i = function (e, t) {
         switch (e) {
             case "P":
                 return t.date({ width: "short" });
@@ -12,7 +12,7 @@ var r = function (e, t) {
                 return t.date({ width: "full" });
         }
     },
-    i = function (e, t) {
+    r = function (e, t) {
         switch (e) {
             case "p":
                 return t.time({ width: "short" });
@@ -25,13 +25,13 @@ var r = function (e, t) {
         }
     };
 let s = {
-    p: i,
+    p: r,
     P: function (e, t) {
         var n,
             s = e.match(/(P+)(p+)?/) || [],
             a = s[1],
             o = s[2];
-        if (!o) return r(e, t);
+        if (!o) return i(e, t);
         switch (a) {
             case "P":
                 n = t.dateTime({ width: "short" });
@@ -45,6 +45,6 @@ let s = {
             default:
                 n = t.dateTime({ width: "full" });
         }
-        return n.replace("{{date}}", r(a, t)).replace("{{time}}", i(o, t));
+        return n.replace("{{date}}", i(a, t)).replace("{{time}}", r(o, t));
     },
 };

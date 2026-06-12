@@ -1,14 +1,14 @@
-n.d(t, { A: () => s });
-var i = n(362474);
-class s {
+t.d(e, { A: () => r });
+var i = t(362474);
+class r {
     _key;
     _set;
-    constructor(e) {
-        (this._key = `$persisted-set-${e}`), (this._set = new Set()), this._load();
+    constructor(s) {
+        (this._key = `$persisted-set-${s}`), (this._set = new Set()), this._load();
     }
     _load() {
-        let e = i.u.get(this._key);
-        null != e && (this._set = new Set(e));
+        let s = i.u.get(this._key);
+        null != s && (this._set = new Set(s));
     }
     values() {
         return this._set;
@@ -23,16 +23,16 @@ class s {
             });
     }
     _persist() {
-        let e = Array.from(this._set.values());
-        i.u.set(this._key, e);
+        let s = Array.from(this._set.values());
+        i.u.set(this._key, s);
     }
-    add(e) {
-        this._set.add(e),
+    add(s) {
+        this._set.add(s),
             requestIdleCallback(() => {
                 this._persist();
             });
     }
-    has(e) {
-        return this._set.has(e);
+    has(s) {
+        return this._set.has(s);
     }
 }

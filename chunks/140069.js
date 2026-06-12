@@ -10,8 +10,8 @@ var i,
     c = n(734057),
     d = n(232835),
     _ = n(763827),
-    f = n(222823),
-    h = n(309010),
+    h = n(222823),
+    f = n(309010),
     p = n(543465),
     E = n(567761),
     m = n(927813),
@@ -20,23 +20,23 @@ var i,
     I = n(41984),
     T = n(956753),
     S = n(489277),
-    N = n(222506),
-    y = n(614455),
-    C = (((i = {}).PRIVATE_CHANNELS = "PRIVATE_CHANNELS"), (i.GUILD_CHANNELS = "GUILD_CHANNELS"), i),
-    v = (((r = {})[(r.READ = 0)] = "READ"), (r[(r.UNREAD = 1)] = "UNREAD"), (r[(r.MENTION = 2)] = "MENTION"), r);
-function O(e, t) {
+    y = n(222506),
+    N = n(614455),
+    v = (((i = {}).PRIVATE_CHANNELS = "PRIVATE_CHANNELS"), (i.GUILD_CHANNELS = "GUILD_CHANNELS"), i),
+    C = (((r = {})[(r.READ = 0)] = "READ"), (r[(r.UNREAD = 1)] = "UNREAD"), (r[(r.MENTION = 2)] = "MENTION"), r);
+function R(e, t) {
     return String(Math.max(0, Math.min(Math.floor(e), Number.MAX_SAFE_INTEGER))).padStart(t, "0");
 }
-let R = new a.J(
+let O = new a.J(
         function (e) {
-            return [e.isPrivateChannel ? C.PRIVATE_CHANNELS : C.GUILD_CHANNELS];
+            return [e.isPrivateChannel ? v.PRIVATE_CHANNELS : v.GUILD_CHANNELS];
         },
         function (e) {
             let t = e.isPrivateChannel ? "0" : "1",
-                n = e.mentionCount > 0 ? v.MENTION : e.hasUnread ? v.UNREAD : v.READ,
-                i = String(v.MENTION - n),
-                r = O(Number.MAX_SAFE_INTEGER - e.mentionCount, 16),
-                s = O(Number.MAX_SAFE_INTEGER - e.lastActivityAtMs, 16);
+                n = e.mentionCount > 0 ? C.MENTION : e.hasUnread ? C.UNREAD : C.READ,
+                i = String(C.MENTION - n),
+                r = R(Number.MAX_SAFE_INTEGER - e.mentionCount, 16),
+                s = R(Number.MAX_SAFE_INTEGER - e.lastActivityAtMs, 16);
             return `${t}\0${i}\0${r}\0${s}\0${e.channelId}`;
         },
     ),
@@ -59,26 +59,26 @@ function x(e, t, n, i, r) {
         lastActivityAtMs: i,
         lastMessageId: r,
         isPrivateChannel: ((s = c.A.getChannel(e)), s?.isPrivate() ?? !1),
-        mentionCount: f.Ay.getMentionCount(e),
-        hasUnread: f.Ay.hasUnread(e),
+        mentionCount: h.Ay.getMentionCount(e),
+        hasUnread: h.Ay.hasUnread(e),
     };
 }
-function U() {
-    R.clear(), (b = null), (D = null), (L = !1), (w = null);
-}
 function k() {
+    O.clear(), (b = null), (D = null), (L = !1), (w = null);
+}
+function U() {
     let e = Date.now();
-    U(),
+    k(),
         (D = e),
         (w = _.A.getChannelId() ?? null),
         (function (e) {
-            let t = h.A.getChannelId();
+            let t = f.A.getChannelId();
             if (null != t && null != c.A.getChannel(t)) {
-                if (((b = t), !R.has(t))) {
+                if (((b = t), !O.has(t))) {
                     let n = P(t),
                         i = c.A.getChannel(t)?.lastMessageId ?? void 0,
                         r = x(t, I.B9.MANUAL, e, n, i);
-                    R.set(t, r);
+                    O.set(t, r);
                 }
             }
         })(e),
@@ -87,7 +87,7 @@ function k() {
                 n = 0;
             for (let i of t) {
                 if (n >= 3) return;
-                if (R.has(i)) continue;
+                if (O.has(i)) continue;
                 let t = c.A.getChannel(i);
                 if (null == t || !t.isPrivate() || p.Ay.isChannelMuted(null, i) || l.A.isMessageRequest(i)) continue;
                 let r = t.lastMessageId;
@@ -95,7 +95,7 @@ function k() {
                 let s = g.default.extractTimestamp(r);
                 if (e - s > M) continue;
                 let a = x(i, I.B9.MANUAL, e, s, r);
-                R.set(i, a), n++;
+                O.set(i, a), n++;
             }
         })(e),
         V();
@@ -104,8 +104,8 @@ function G() {
     return _.A.getChannelId() ?? null;
 }
 function F(e) {
-    if (null == e) return R.values()[0]?.channelId ?? null;
-    for (let t of R.values()) if (t.channelId !== e) return t.channelId;
+    if (null == e) return O.values()[0]?.channelId ?? null;
+    for (let t of O.values()) if (t.channelId !== e) return t.channelId;
     return null;
 }
 function V() {
@@ -124,11 +124,11 @@ function B() {
     return t || n || i;
 }
 function H(e) {
-    let t = R.get(e);
+    let t = O.get(e);
     if (null == t) return !1;
-    let n = f.Ay.getMentionCount(e),
-        i = f.Ay.hasUnread(e);
-    return (t.mentionCount !== n || t.hasUnread !== i) && (R.set(e, { ...t, mentionCount: n, hasUnread: i }), !0);
+    let n = h.Ay.getMentionCount(e),
+        i = h.Ay.hasUnread(e);
+    return (t.mentionCount !== n || t.hasUnread !== i) && (O.set(e, { ...t, mentionCount: n, hasUnread: i }), !0);
 }
 function j(e) {
     let { channelId: t } = e;
@@ -137,13 +137,13 @@ function j(e) {
 class Y extends s.Ay.Store {
     static displayName = "Overlay-v3-Text-Chat-Store";
     initialize() {
-        this.waitFor(y.A, N.A, S.A, u.A, c.A, d.A, l.A, _.A, E.default, f.Ay, h.A, p.Ay), k();
+        this.waitFor(N.A, y.A, S.A, u.A, c.A, d.A, l.A, _.A, E.default, h.Ay, f.A, p.Ay), U();
     }
     isChannelTracked(e) {
-        return R.has(e);
+        return O.has(e);
     }
     getSessionEntries(e) {
-        return [null != e ? R.values(e) : R.values(), R.version];
+        return [null != e ? O.values(e) : O.values(), O.version];
     }
     getSelectedChannelId() {
         return b;
@@ -159,10 +159,10 @@ let W = (e) => (0, T.U5)(e, "OverlayTextChatStore"),
             ? {}
             : {
                   OVERLAY_MOUNTED: W(function (e) {
-                      return null == D && (k(), !0);
+                      return null == D && (U(), !0);
                   }),
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: W(function () {
-                      return U(), !0;
+                      return k(), !0;
                   }),
                   MESSAGE_ACK: W(function (e) {
                       let { channelId: t } = e;
@@ -184,12 +184,12 @@ let W = (e) => (0, T.U5)(e, "OverlayTextChatStore"),
                           if (null == e) return !1;
                           null == D && (D = Date.now()), b !== e && (b = e);
                           let n = G();
-                          if ((null != n && e === n && L && (L = !1), null != b && !R.has(b))) {
+                          if ((null != n && e === n && L && (L = !1), null != b && !O.has(b))) {
                               let e = Date.now(),
                                   n = P(b),
                                   i = c.A.getChannel(b)?.lastMessageId ?? void 0,
                                   r = x(b, t, e, n, i);
-                              R.set(b, r);
+                              O.set(b, r);
                           }
                           return !0;
                       })(t ?? null, n);
@@ -197,11 +197,11 @@ let W = (e) => (0, T.U5)(e, "OverlayTextChatStore"),
                   OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: W(function (e) {
                       let t = (function (e) {
                               let { channelId: t, source: n, lastActivityAtMs: i, lastMessageId: r } = e,
-                                  s = R.get(t) ?? null,
+                                  s = O.get(t) ?? null,
                                   a = null == s ? i : Math.max(s.lastActivityAtMs, i),
                                   o = r ?? s?.lastMessageId,
                                   l = x(t, n, s?.addedOnMs ?? i, a, o);
-                              return R.set(t, l);
+                              return O.set(t, l);
                           })({
                               channelId: e.channelId,
                               source: e.source,
@@ -212,7 +212,7 @@ let W = (e) => (0, T.U5)(e, "OverlayTextChatStore"),
                       return null == b && ((b = e.channelId), (n = !0)), t || n;
                   }),
                   OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: W(function (e) {
-                      let t = R.delete(e.channelId),
+                      let t = O.delete(e.channelId),
                           n = !1;
                       if (b === e.channelId) {
                           let e = G();
@@ -221,8 +221,8 @@ let W = (e) => (0, T.U5)(e, "OverlayTextChatStore"),
                       return t || n;
                   }),
                   OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: W(function () {
-                      let e = R.size() > 0;
-                      R.clear();
+                      let e = O.size() > 0;
+                      O.clear();
                       let t = G();
                       return (b = L || null == t ? null : t), e;
                   }),

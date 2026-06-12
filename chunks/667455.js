@@ -18,14 +18,14 @@ function s() {
         }),
         s = l?.country ?? null,
         i = l?.setAt != null,
-        d = null,
-        o = !1;
+        o = null,
+        d = !1;
     return (
         null != s && i
-            ? ((d = s), (o = n.M.EURO_CURRENCY_COUNTRIES.has(s)))
+            ? ((o = s), (d = n.M.EURO_CURRENCY_COUNTRIES.has(s)))
             : null != t
-              ? ((d = t), (o = n.M.EURO_CURRENCY_COUNTRIES.has(t)))
-              : null != s && ((d = s), (o = n.M.EURO_CURRENCY_COUNTRIES.has(s))),
-        { isEU: o, displayCountry: d, storeCountryData: l, savedPostalCode: e, savedCountry: t }
+              ? ((o = t), (d = n.M.EURO_CURRENCY_COUNTRIES.has(t)))
+              : null != s && ((o = s), (d = n.M.EURO_CURRENCY_COUNTRIES.has(s))),
+        { isEU: d, displayCountry: o, storeCountryData: l, savedPostalCode: e, savedCountry: t }
     );
 }

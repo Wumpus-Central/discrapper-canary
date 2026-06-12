@@ -1,9 +1,9 @@
-var r = n(969474);
+var i = n(969474);
 e.exports = function (e, t) {
-    return function (n, i) {
+    return function (n, r) {
         if (null == n) return n;
-        if (!r(n)) return e(n, i);
-        for (var a = n.length, s = t ? a : -1, o = Object(n); (t ? s-- : ++s < a) && !1 !== i(o[s], s, o); );
+        if (!i(n)) return e(n, r);
+        for (var s = n.length, a = t ? s : -1, o = Object(n); (t ? a-- : ++a < s) && !1 !== r(o[a], a, o); );
         return n;
     };
 };

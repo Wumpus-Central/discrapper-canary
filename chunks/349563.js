@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Bp: () => d, G5: () => _, Wy: () => f, zF: () => h });
+n.d(t, { Bp: () => d, G5: () => _, Wy: () => h, zF: () => f });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -11,7 +11,7 @@ var r = n(503698),
     c = n(3193);
 let d = "premium_new_tier_2_gradient",
     _ = "premium_old_tier_2_gradient";
-function f(e) {
+function h(e) {
     let { tier: t = u.PremiumTypes.TIER_2 } = e,
         n = (0, o.Ay)(),
         r = (0, a.q)(n);
@@ -26,17 +26,17 @@ function f(e) {
                                 [c.WJ]: t === u.PremiumTypes.TIER_2,
                             }),
                         }),
-                        (0, i.jsx)(h, { foreground: c.iM }),
+                        (0, i.jsx)(f, { foreground: c.iM }),
                     ],
                 }),
-            (0, i.jsx)(h, { foreground: c.bP }),
-            (0, i.jsx)(h, { foreground: c.ir }),
-            (0, i.jsx)(h, { foreground: c.b4 }),
-            (0, i.jsx)(h, { foreground: c.iG }),
+            (0, i.jsx)(f, { foreground: c.bP }),
+            (0, i.jsx)(f, { foreground: c.ir }),
+            (0, i.jsx)(f, { foreground: c.b4 }),
+            (0, i.jsx)(f, { foreground: c.iG }),
         ],
     });
 }
-function h(e) {
+function f(e) {
     let { width: t = 14, height: n = 13, color: r = "white", foreground: s, ...a } = e;
     return (0, i.jsxs)("svg", {
         ...(0, l.A)({ ...a }),

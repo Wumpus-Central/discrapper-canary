@@ -1,36 +1,36 @@
-n.d(t, { A: () => c });
-var i = n(64700),
-    l = n(110259),
-    a = n(17928),
-    s = n(139286),
-    r = n(989837),
-    o = n(520117);
-function c(e) {
+i.d(t, { A: () => d });
+var l = i(64700),
+    n = i(562708),
+    a = i(17928),
+    r = i(139286),
+    s = i(989837),
+    o = i(520117);
+function d(e) {
     let {
             applicationId: t,
-            applicationFlags: n,
-            sectionName: c,
-            sectionPosition: d,
-            sectionOverallPosition: u,
-            promotionalLabel: m,
-            numFriendsWhoPlay: p,
+            applicationFlags: i,
+            sectionName: d,
+            sectionPosition: p,
+            sectionOverallPosition: c,
+            promotionalLabel: u,
+            numFriendsWhoPlay: f,
         } = e,
-        _ = (0, a.bG)([r.A], () => r.A.entrypoint()),
-        h = i.useCallback(() => {
-            (0, s.x)({
-                type: l.ImpressionTypes.VIEW,
-                name: l.ImpressionNames.APP_LAUNCHER_ITEM,
+        A = (0, a.bG)([s.A], () => s.A.entrypoint()),
+        m = l.useCallback(() => {
+            (0, r.x)({
+                type: n.ImpressionTypes.VIEW,
+                name: n.ImpressionNames.APP_LAUNCHER_ITEM,
                 properties: {
                     application_id: t,
-                    application_flags: n,
-                    section_name: c,
-                    section_position: d,
-                    section_overall_position: u,
-                    source: _,
-                    promotional_label: m,
-                    num_friends_who_play: p,
+                    application_flags: i,
+                    section_name: d,
+                    section_position: p,
+                    section_overall_position: c,
+                    source: A,
+                    promotional_label: u,
+                    num_friends_who_play: f,
                 },
             });
-        }, [p]);
-    return { trackItemImpressionRef: (0, o.A)({ onVisible: h, threshold: 0.5, minTimeVisibleMs: 1e3 }) };
+        }, [f]);
+    return { trackItemImpressionRef: (0, o.A)({ onVisible: m, threshold: 0.5, minTimeVisibleMs: 1e3 }) };
 }

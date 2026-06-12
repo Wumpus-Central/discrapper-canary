@@ -1,4 +1,4 @@
-d.exports = {
+_.exports = {
     kL: "container_f53c21",
     nI: "emojiRow_f53c21",
     mp: "emojiImage_f53c21",

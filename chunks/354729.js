@@ -11,49 +11,49 @@ function n(e) {
                       : typeof e;
               })(e);
 }
-var r,
-    i = "basil",
+var i,
+    r = "basil",
     s = "https://js.stripe.com",
-    a = "".concat(s, "/").concat(i, "/stripe.js"),
+    a = "".concat(s, "/").concat(r, "/stripe.js"),
     o = /^https:\/\/js\.stripe\.com\/v3\/?(\?.*)?$/,
     l = /^https:\/\/js\.stripe\.com\/(v3|[a-z]+)\/stripe\.js(\?.*)?$/,
     u =
         "loadStripe.setLoadParameters was called but an existing Stripe.js script already exists in the document; existing script parameters will be used",
-    d = function () {
+    c = function () {
         for (var e = document.querySelectorAll('script[src^="'.concat(s, '"]')), t = 0; t < e.length; t++) {
             var n,
-                r = e[t];
-            if (((n = r.src), o.test(n) || l.test(n))) return r;
+                i = e[t];
+            if (((n = i.src), o.test(n) || l.test(n))) return i;
         }
         return null;
     },
-    c = function (e) {
+    d = function (e) {
         var t = e && !e.advancedFraudSignals ? "?advancedFraudSignals=false" : "",
             n = document.createElement("script");
         n.src = "".concat(a).concat(t);
-        var r = document.head || document.body;
-        if (!r) throw Error("Expected document.body not to be null. Stripe.js requires a <body> element.");
-        return r.appendChild(n), n;
+        var i = document.head || document.body;
+        if (!i) throw Error("Expected document.body not to be null. Stripe.js requires a <body> element.");
+        return i.appendChild(n), n;
     },
     _ = function (e, t) {
         e && e._registerWrapper && e._registerWrapper({ name: "stripe-js", version: "7.3.1", startTime: t });
     },
-    f = null,
-    E = null,
     h = null,
-    p = function (e, t, n) {
+    f = null,
+    p = null,
+    E = function (e, t, n) {
         if (null === e) return null;
-        var r,
+        var i,
             s = t[0].match(/^pk_test/),
-            a = 3 === (r = e.version) ? "v3" : r;
+            a = 3 === (i = e.version) ? "v3" : i;
         s &&
-            a !== i &&
+            a !== r &&
             console.warn(
                 "Stripe.js@"
                     .concat(a, " was loaded on the page, but @stripe/stripe-js@")
                     .concat("7.3.1", " expected Stripe.js@")
                     .concat(
-                        i,
+                        r,
                         ". This may result in unexpected behavior. For more information, see https://docs.stripe.com/sdks/stripejs-versioning",
                     ),
             );
@@ -72,60 +72,60 @@ var r,
     },
     g = !1,
     A = function () {
-        for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+        for (var e, t = arguments.length, n = Array(t), r = 0; r < t; r++) n[r] = arguments[r];
         g = !0;
         var s = Date.now();
-        return ((e = r),
-        null !== f
-            ? f
-            : (f = new Promise(function (t, n) {
+        return ((e = i),
+        null !== h
+            ? h
+            : (h = new Promise(function (t, n) {
                   if ("u" < typeof window || "u" < typeof document) return void t(null);
                   if ((window.Stripe && e && console.warn(u), window.Stripe)) return void t(window.Stripe);
                   try {
-                      var r,
-                          i = d();
-                      i && e
+                      var i,
+                          r = c();
+                      r && e
                           ? console.warn(u)
-                          : i
-                            ? i &&
-                              null !== h &&
-                              null !== E &&
-                              (i.removeEventListener("load", h),
-                              i.removeEventListener("error", E),
-                              null == (r = i.parentNode) || r.removeChild(i),
-                              (i = c(e)))
-                            : (i = c(e)),
-                          (h = function () {
+                          : r
+                            ? r &&
+                              null !== p &&
+                              null !== f &&
+                              (r.removeEventListener("load", p),
+                              r.removeEventListener("error", f),
+                              null == (i = r.parentNode) || i.removeChild(r),
+                              (r = d(e)))
+                            : (r = d(e)),
+                          (p = function () {
                               window.Stripe ? t(window.Stripe) : n(Error("Stripe.js not available"));
                           }),
-                          (E = function (e) {
+                          (f = function (e) {
                               n(Error("Failed to load Stripe.js", { cause: e }));
                           }),
-                          i.addEventListener("load", h),
-                          i.addEventListener("error", E);
+                          r.addEventListener("load", p),
+                          r.addEventListener("error", f);
                   } catch (e) {
                       n(e);
                       return;
                   }
               })).catch(function (e) {
-                  return (f = null), Promise.reject(e);
+                  return (h = null), Promise.reject(e);
               })).then(function (e) {
-            return p(e, n, s);
+            return E(e, n, s);
         });
     };
 (A.setLoadParameters = function (e) {
     if (
         !(
             g &&
-            r &&
+            i &&
             Object.keys(m(e)).reduce(function (t, n) {
-                var i;
-                return t && e[n] === (null == (i = r) ? void 0 : i[n]);
+                var r;
+                return t && e[n] === (null == (r = i) ? void 0 : r[n]);
             }, !0)
         )
     ) {
         if (g) throw Error("You cannot change load parameters after calling loadStripe");
-        r = m(e);
+        i = m(e);
     }
 }),
     (t.loadStripe = A);

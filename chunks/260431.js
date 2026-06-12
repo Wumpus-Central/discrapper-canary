@@ -1,7 +1,7 @@
 "use strict";
-function r(...e) {
+function i(...e) {
     return (...t) => {
         for (let n of e) "function" == typeof n && n(...t);
     };
 }
-n.d(t, { c: () => r });
+n.d(t, { c: () => i });

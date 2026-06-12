@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Vg: "grid__28d93",
     dq: "speakerContainer__28d93",
     my: "avatar__28d93",

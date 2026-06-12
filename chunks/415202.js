@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(439372),
     r = n(927813),
     s = n(961250),
@@ -58,4 +58,4 @@ class _ extends i.A {
                 (clearTimeout(this.virtualCurrencyUpdateTimeoutId), (this.virtualCurrencyUpdateTimeoutId = void 0));
     }
 }
-let f = new _();
+let h = new _();

@@ -1,20 +1,20 @@
-n.d(t, { a: () => r });
-var i = n(627968);
-n(64700);
-var l = n(342393),
-    s = n(71532),
-    a = n(714126);
+i.d(t, { a: () => r });
+var n = i(627968);
+i(64700);
+var l = i(342393),
+    s = i(71532),
+    a = i(714126);
 let r = (e) => {
-    let { errorLabel: t, children: n, elementOptions: r } = e,
+    let { errorLabel: t, children: i, elementOptions: r } = e,
         c = Date.now();
-    return (0, i.jsx)(
+    return (0, n.jsx)(
         a.W,
         {
             label: t,
-            children: (0, i.jsx)(l.Elements, {
+            children: (0, n.jsx)(l.Elements, {
                 stripe: (0, s.Cv)(),
                 options: { mode: "setup", currency: "usd", setup_future_usage: "off_session", ...r },
-                children: n,
+                children: i,
             }),
         },
         c,

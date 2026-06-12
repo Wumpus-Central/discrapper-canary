@@ -1,257 +1,257 @@
 "use strict";
-n.d(t, { Ff: () => A, JZ: () => I, Fk: () => C, FV: () => x, oV: () => _, se: () => E }), n(321073);
-var l = n(64700),
-    i = n(735438),
-    s = n.n(i),
+n.d(t, { Ff: () => I, JZ: () => S, Fk: () => A, FV: () => g, oV: () => m, se: () => T }), n(321073);
+var i = n(64700),
+    r = n(735438),
+    s = n.n(r),
     a = n(741918),
-    r = n(788413),
-    o = n(602034);
-let c = [a.D$.TAB];
-function u(e, t, n) {
-    return null != t && null != n ? `#${(0, o.Aq)(e, t, n)}` : `[data-ref-id=${e}]`;
+    o = n(788413),
+    l = n(602034);
+let u = [a.D$.TAB];
+function c(e, t, n) {
+    return null != t && null != n ? `#${(0, l.Aq)(e, t, n)}` : `[data-ref-id=${e}]`;
 }
 function d(e) {
     return document.querySelector(e);
 }
-var h = n(23339),
-    m = n(319060),
-    p = n(60587),
-    f = n(652215);
-let g = (0, h.xI)(m.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-    _ = (e) => {
+var _ = n(23339),
+    h = n(319060),
+    f = n(60587),
+    p = n(652215);
+let E = (0, _.xI)(h.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
+    m = (e) => {
         let {
                 gridWrapperRef: t,
                 containerWidth: n,
-                showingEmptyState: i,
-                listPaddingLeft: a = g,
-                listScrollbarWidth: r = 8,
+                showingEmptyState: r,
+                listPaddingLeft: a = E,
+                listScrollbarWidth: o = 8,
             } = e,
-            [o, c] = l.useState(void 0),
-            u = l.useCallback(() => {
+            [l, u] = i.useState(void 0),
+            c = i.useCallback(() => {
                 if (null == t.current) return null;
-                c(t.current.offsetWidth - a - r);
-            }, [t, a, r]);
+                u(t.current.offsetWidth - a - o);
+            }, [t, a, o]);
         return (
-            l.useLayoutEffect(() => {
-                u();
-            }, [n, u, i]),
-            l.useEffect(() => {
-                let e = s().debounce(u, 250);
+            i.useLayoutEffect(() => {
+                c();
+            }, [n, c, r]),
+            i.useEffect(() => {
+                let e = s().debounce(c, 250);
                 return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
-            }, [u]),
-            o
+            }, [c]),
+            l
         );
     },
-    x = (e) => {
-        let { activeCategoryIndex: t, listRef: n, searchQuery: i } = e,
-            s = l.useRef(i),
-            a = l.useRef(!0);
-        l.useLayoutEffect(() => {
-            "" === i && "" !== s.current && n.current?.scrollToSectionTop(t), (s.current = i);
-        }, [i, t, n]),
-            l.useLayoutEffect(() => {
+    g = (e) => {
+        let { activeCategoryIndex: t, listRef: n, searchQuery: r } = e,
+            s = i.useRef(r),
+            a = i.useRef(!0);
+        i.useLayoutEffect(() => {
+            "" === r && "" !== s.current && n.current?.scrollToSectionTop(t), (s.current = r);
+        }, [r, t, n]),
+            i.useLayoutEffect(() => {
                 a.current && (n.current?.scrollToSectionTop(t), (a.current = !1));
             }, [t, n]),
-            l.useEffect(() => {
-                s.current = i;
-            }, [i]);
-    },
-    C = (e) => {
-        let {
-                activeCategoryIndex: t,
-                listRef: n,
-                isScrolling: i,
-                searchQuery: a,
-                scrollOffset: r = 0,
-                onActiveCategoryIndexChange: o,
-                disableForSearch: c = !0,
-            } = e,
-            u = l.useRef(f.An1),
-            d = l.useRef(t);
-        d.current = t;
-        let h = l.useMemo(
-                () =>
-                    s().debounce(() => {
-                        i.current = !1;
-                    }, 250),
-                [i],
-            ),
-            m = l.useMemo(
-                () =>
-                    s().debounce((e) => {
-                        ("" !== a && c) ||
-                            (window.cancelAnimationFrame(u.current),
-                            (u.current = window.requestAnimationFrame(() => {
-                                let t = n.current?.getSectionDescriptors();
-                                if (null == t) return;
-                                let l = t.findIndex((n, l) => {
-                                        let i = t[l + 1],
-                                            s = e + r >= n.offset.top,
-                                            a = null != i && e + r < i.offset.top;
-                                        return (null != i && !s && !a) || (s && a) || (s && null == i);
-                                    }),
-                                    i = -1 === l ? 0 : l;
-                                d.current !== i && o(i);
-                            })));
-                    }, 0),
-                [a, n, r, o, c],
-            );
-        return l.useCallback(
-            (e) => {
-                (i.current = !0), h(), m(e);
-            },
-            [i, h, m],
-        );
+            i.useEffect(() => {
+                s.current = r;
+            }, [r]);
     },
     A = (e) => {
         let {
+                activeCategoryIndex: t,
+                listRef: n,
+                isScrolling: r,
+                searchQuery: a,
+                scrollOffset: o = 0,
+                onActiveCategoryIndexChange: l,
+                disableForSearch: u = !0,
+            } = e,
+            c = i.useRef(p.An1),
+            d = i.useRef(t);
+        d.current = t;
+        let _ = i.useMemo(
+                () =>
+                    s().debounce(() => {
+                        r.current = !1;
+                    }, 250),
+                [r],
+            ),
+            h = i.useMemo(
+                () =>
+                    s().debounce((e) => {
+                        ("" !== a && u) ||
+                            (window.cancelAnimationFrame(c.current),
+                            (c.current = window.requestAnimationFrame(() => {
+                                let t = n.current?.getSectionDescriptors();
+                                if (null == t) return;
+                                let i = t.findIndex((n, i) => {
+                                        let r = t[i + 1],
+                                            s = e + o >= n.offset.top,
+                                            a = null != r && e + o < r.offset.top;
+                                        return (null != r && !s && !a) || (s && a) || (s && null == r);
+                                    }),
+                                    r = -1 === i ? 0 : i;
+                                d.current !== r && l(r);
+                            })));
+                    }, 0),
+                [a, n, o, l, u],
+            );
+        return i.useCallback(
+            (e) => {
+                (r.current = !0), _(), h(e);
+            },
+            [r, _, h],
+        );
+    },
+    I = (e) => {
+        let {
                 columnCounts: t,
                 gridNavigatorId: n,
-                itemGrid: i,
+                itemGrid: r,
                 itemList: s,
-                onGridNavigatorItemSelect: h,
-                onGridNavigatorPositionChange: m,
+                onGridNavigatorItemSelect: _,
+                onGridNavigatorPositionChange: h,
             } = e,
-            p = l.useRef(!1),
-            f = l.useCallback(
+            f = i.useRef(!1),
+            p = i.useCallback(
                 (e, t) => {
-                    let n = i[t];
+                    let n = r[t];
                     if (null != n) return n[e];
                 },
-                [i],
+                [r],
             ),
-            g = l.useCallback(
+            E = i.useCallback(
                 (e) => {
                     let { focusedX: t, focusedY: n } = e;
-                    p.current = !0;
-                    let l = f(t, n);
-                    if (null == l) return;
-                    let { visibleRowIndex: i, columnIndex: a } = l;
-                    m(a, i), null != s.current && s.current.scrollRowIntoView(n);
+                    f.current = !0;
+                    let i = p(t, n);
+                    if (null == i) return;
+                    let { visibleRowIndex: r, columnIndex: a } = i;
+                    h(a, r), null != s.current && s.current.scrollRowIntoView(n);
                 },
-                [f, s, m],
+                [p, s, h],
             ),
             {
-                dispatch: _,
-                getItemProps: x,
-                getRowProps: C,
-                getContainerProps: A,
+                dispatch: m,
+                getItemProps: g,
+                getRowProps: A,
+                getContainerProps: I,
             } = (function (e) {
                 let {
                         navId: t,
                         columnCounts: n,
-                        focusedX: i = 0,
+                        focusedX: r = 0,
                         focusedY: s = 0,
-                        onSelect: h,
-                        prepareFocus: m,
-                        getNewFocusPosition: p,
-                        maintainFocusPosition: f = !0,
-                        enabled: g = !0,
-                        onDispatch: _,
-                        autoFocusElement: x = !0,
-                        useVirtualFocus: C = !1,
+                        onSelect: _,
+                        prepareFocus: h,
+                        getNewFocusPosition: f,
+                        maintainFocusPosition: p = !0,
+                        enabled: E = !0,
+                        onDispatch: m,
+                        autoFocusElement: g = !0,
+                        useVirtualFocus: A = !1,
                     } = e,
-                    A = l.useCallback(
+                    I = i.useCallback(
                         (e, t) => {
-                            let n = (0, r.A)(e, t);
-                            return null != _ && _(e, n, t), n;
+                            let n = (0, o.A)(e, t);
+                            return null != m && m(e, n, t), n;
                         },
-                        [_],
+                        [m],
                     ),
-                    [E, I] = l.useReducer(A, { focusedX: i, focusedY: s, columnCounts: n }),
-                    { columnCounts: v, focusedX: y, focusedY: b } = E,
-                    [S] = l.useState(() => (0, o.nF)(I, 16));
+                    [T, S] = i.useReducer(I, { focusedX: r, focusedY: s, columnCounts: n }),
+                    { columnCounts: y, focusedX: N, focusedY: v } = T,
+                    [C] = i.useState(() => (0, l.nF)(S, 16));
                 return (
-                    l.useEffect(() => {
-                        I({ type: r.n.UPDATE_COLUMN_COUNTS, columnCounts: n });
+                    i.useEffect(() => {
+                        S({ type: o.n.UPDATE_COLUMN_COUNTS, columnCounts: n });
                     }, [n]),
                     (function (e) {
                         let {
                                 navId: t,
                                 columnCounts: n,
-                                focusedX: i,
+                                focusedX: r,
                                 focusedY: s,
-                                onSelect: h,
-                                prepareFocus: m,
-                                getNewFocusPosition: p,
-                                dispatch: f,
-                                maintainFocusPosition: g,
-                                enabled: _,
-                                autoFocusElement: x,
-                                useVirtualFocus: C,
+                                onSelect: _,
+                                prepareFocus: h,
+                                getNewFocusPosition: f,
+                                dispatch: p,
+                                maintainFocusPosition: E,
+                                enabled: m,
+                                autoFocusElement: g,
+                                useVirtualFocus: A,
                             } = e,
-                            A = l.useRef(_),
-                            E = d(u(t, i, s)),
-                            [I, v] = l.useState(!1),
-                            [y, b] = l.useState(!1),
-                            [S, N] = l.useState(!1),
-                            [j] = l.useState(
+                            I = i.useRef(m),
+                            T = d(c(t, r, s)),
+                            [S, y] = i.useState(!1),
+                            [N, v] = i.useState(!1),
+                            [C, R] = i.useState(!1),
+                            [O] = i.useState(
                                 () =>
-                                    new o.Lp((e) => {
+                                    new l.Lp((e) => {
                                         let [t, n] = e.split(",").map(Number);
                                         return () => {
-                                            v(!0), f({ type: r.n.SET_FOCUSED_POSITION, x: t, y: n });
+                                            y(!0), p({ type: o.n.SET_FOCUSED_POSITION, x: t, y: n });
                                         };
                                     }),
                             );
-                        l.useEffect(() => () => j.clean(), [j]);
-                        let T = l.useCallback(
+                        i.useEffect(() => () => O.clean(), [O]);
+                        let b = i.useCallback(
                                 (e) => {
-                                    if (!A.current || !x) return !1;
+                                    if (!I.current || !g) return !1;
                                     e.focus();
                                 },
-                                [x],
+                                [g],
                             ),
-                            w = l.useCallback(
+                            D = i.useCallback(
                                 (e, n) => {
-                                    let l = u(t, e, n);
-                                    (null != m ? m(e, n, l) : Promise.resolve()).then(() => {
-                                        let e = d(l);
-                                        null != e ? (T(e), b(!1)) : requestAnimationFrame(() => b(!0));
+                                    let i = c(t, e, n);
+                                    (null != h ? h(e, n, i) : Promise.resolve()).then(() => {
+                                        let e = d(i);
+                                        null != e ? (b(e), v(!1)) : requestAnimationFrame(() => v(!0));
                                     });
                                 },
-                                [t, m, T],
+                                [t, h, b],
                             ),
-                            R = l.useCallback(
+                            L = i.useCallback(
                                 function () {
                                     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-                                        [n, l] = null != p ? p(i, s) : [i, s];
-                                    if ((n !== i || l !== s) && (f({ type: r.n.SET_FOCUSED_POSITION, x: n, y: l }), !e))
-                                        return void N(!0);
-                                    let a = d(u(t, n, l));
-                                    null != a && (N(!0), T(a));
+                                        [n, i] = null != f ? f(r, s) : [r, s];
+                                    if ((n !== r || i !== s) && (p({ type: o.n.SET_FOCUSED_POSITION, x: n, y: i }), !e))
+                                        return void R(!0);
+                                    let a = d(c(t, n, i));
+                                    null != a && (R(!0), b(a));
                                 },
-                                [f, i, s, p, t, T],
+                                [p, r, s, f, t, b],
                             ),
-                            [L, k] = l.useState(!1);
-                        l.useEffect(() => {
-                            if (!L || !I) return;
-                            k(!1);
-                            let e = d(u(t, i, s));
-                            if (null != e) return void T(e);
-                            v(!1);
-                            let n = d(u(t));
-                            null != n && T(n);
-                        }, [t, L, I, T, i, s]);
-                        let O = l.useCallback((e) => {
-                            A.current && null == e && k(!0);
+                            [w, M] = i.useState(!1);
+                        i.useEffect(() => {
+                            if (!w || !S) return;
+                            M(!1);
+                            let e = d(c(t, r, s));
+                            if (null != e) return void b(e);
+                            y(!1);
+                            let n = d(c(t));
+                            null != n && b(n);
+                        }, [t, w, S, b, r, s]);
+                        let P = i.useCallback((e) => {
+                            I.current && null == e && M(!0);
                         }, []);
-                        l.useEffect(() => {
-                            I && y && null != E && (T(E), b(!1));
-                        }, [y, E]),
-                            l.useEffect(() => {
-                                I && (S || w(i, s), N(!1));
-                            }, [i, s]);
-                        let M = l.useCallback(
+                        i.useEffect(() => {
+                            S && N && null != T && (b(T), v(!1));
+                        }, [N, T]),
+                            i.useEffect(() => {
+                                S && (C || D(r, s), R(!1));
+                            }, [r, s]);
+                        let x = i.useCallback(
                                 (e) => {
-                                    if (!A.current) return;
+                                    if (!I.current) return;
                                     if (
-                                        !C &&
-                                        c.includes(e.key) &&
+                                        !A &&
+                                        u.includes(e.key) &&
                                         !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                                         e.currentTarget === e.target
                                     ) {
-                                        e.preventDefault(), e.stopPropagation(), R();
+                                        e.preventDefault(), e.stopPropagation(), L();
                                         return;
                                     }
                                     let t = (function (e) {
@@ -284,87 +284,87 @@ let g = (0, h.xI)(m.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                                         case a.X2.NAVIGATE_START:
                                         case a.X2.NAVIGATE_END:
                                             0 !== n.length &&
-                                                (0 !== i || 0 !== s || t !== a.X2.NAVIGATE_LEFT) &&
+                                                (0 !== r || 0 !== s || t !== a.X2.NAVIGATE_LEFT) &&
                                                 (e.preventDefault(), e.stopPropagation()),
-                                                f({ type: t });
+                                                p({ type: t });
                                             return;
                                         case a.X2.SELECT_FOCUSED_ITEM:
-                                            if ((x && E?.ownerDocument.activeElement !== E) || e.repeat) return;
+                                            if ((g && T?.ownerDocument.activeElement !== T) || e.repeat) return;
                                             e.preventDefault(),
                                                 e.stopPropagation(),
-                                                f({ type: t }),
-                                                null != h ? h(i, s, e) : null != E && E.click();
+                                                p({ type: t }),
+                                                null != _ ? _(r, s, e) : null != T && T.click();
                                     }
                                 },
-                                [R, f, x, E, h, i, s],
+                                [L, p, g, T, _, r, s],
                             ),
-                            P = l.useCallback(
+                            k = i.useCallback(
                                 (e) =>
                                     e.currentTarget !== e.target
-                                        ? (I || (v(!0), N(!0)), !1)
-                                        : I
-                                          ? (R(!1), !1)
-                                          : void (g && null != E ? w(i, s) : R(!0)),
-                                [I, g, E, R, w, i, s],
+                                        ? (S || (y(!0), R(!0)), !1)
+                                        : S
+                                          ? (L(!1), !1)
+                                          : void (E && null != T ? D(r, s) : L(!0)),
+                                [S, E, T, L, D, r, s],
                             ),
-                            D = l.useCallback((e) => {
+                            U = i.useCallback((e) => {
                                 if (e.target !== e.currentTarget) {
                                     if (e.currentTarget.contains(e.relatedTarget)) return !1;
-                                    v(!1);
+                                    y(!1);
                                 }
                             }, []),
-                            U = l.useMemo(() => Math.max(...n), [n]),
-                            V = l.useCallback(
+                            G = i.useMemo(() => Math.max(...n), [n]),
+                            F = i.useCallback(
                                 () => ({
                                     role: "grid",
                                     "aria-rowcount": n.length,
-                                    "aria-colcount": U,
-                                    tabIndex: I && g ? -1 : 0,
+                                    "aria-colcount": G,
+                                    tabIndex: S && E ? -1 : 0,
                                     "data-ref-id": t,
-                                    onKeyDown: M,
-                                    onFocus: P,
-                                    onBlur: D,
+                                    onKeyDown: x,
+                                    onFocus: k,
+                                    onBlur: U,
                                 }),
-                                [n.length, U, I, g, t, M, P, D],
+                                [n.length, G, S, E, t, x, k, U],
                             ),
-                            G = l.useCallback(
+                            V = i.useCallback(
                                 (e, n) => {
-                                    let l = {
+                                    let i = {
                                         role: "gridcell",
                                         "aria-rowindex": n + 1,
                                         "aria-colindex": e + 1,
-                                        id: (0, o.Aq)(t, e, n),
-                                        tabIndex: g && e === i && n === s ? 0 : -1,
-                                        onFocus: j.get(`${e},${n}`),
+                                        id: (0, l.Aq)(t, e, n),
+                                        tabIndex: E && e === r && n === s ? 0 : -1,
+                                        onFocus: O.get(`${e},${n}`),
                                     };
-                                    return e === i && n === s && (l.ref = O), l;
+                                    return e === r && n === s && (i.ref = P), i;
                                 },
-                                [t, g, i, s, j, O],
+                                [t, E, r, s, O, P],
                             ),
-                            F = l.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
-                        return l.useMemo(
-                            () => ({ dispatch: f, getContainerProps: V, getItemProps: G, getRowProps: F }),
-                            [f, V, G, F],
+                            B = i.useCallback((e) => ({ role: "row", "aria-rowindex": e + 1 }), []);
+                        return i.useMemo(
+                            () => ({ dispatch: p, getContainerProps: F, getItemProps: V, getRowProps: B }),
+                            [p, F, V, B],
                         );
                     })({
                         navId: t,
-                        columnCounts: v,
-                        focusedX: y,
-                        focusedY: b,
-                        dispatch: S,
-                        onSelect: h,
-                        prepareFocus: m,
-                        getNewFocusPosition: p,
-                        maintainFocusPosition: f,
-                        enabled: g,
-                        autoFocusElement: x,
-                        useVirtualFocus: C,
+                        columnCounts: y,
+                        focusedX: N,
+                        focusedY: v,
+                        dispatch: C,
+                        onSelect: _,
+                        prepareFocus: h,
+                        getNewFocusPosition: f,
+                        maintainFocusPosition: p,
+                        enabled: E,
+                        autoFocusElement: g,
+                        useVirtualFocus: A,
                     })
                 );
             })({
                 navId: n,
                 columnCounts: t,
-                onDispatch: l.useCallback(
+                onDispatch: i.useCallback(
                     (e, t, n) => {
                         switch (n.type) {
                             case a.X2.NAVIGATE_UP:
@@ -377,130 +377,130 @@ let g = (0, h.xI)(m.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
                             case a.X2.NAVIGATE_END:
                             case a.X2.NAVIGATE_CROSSLINE_START:
                             case a.X2.NAVIGATE_CROSSLINE_END:
-                                g(t);
+                                E(t);
                         }
                     },
-                    [g],
+                    [E],
                 ),
-                onSelect: l.useCallback(
+                onSelect: i.useCallback(
                     (e, t, n) => {
-                        let l = f(e, t);
-                        null != l && h(l, n);
+                        let i = p(e, t);
+                        null != i && _(i, n);
                     },
-                    [f, h],
+                    [p, _],
                 ),
                 autoFocusElement: !1,
                 useVirtualFocus: !0,
             }),
-            { gridContainerProps: E, handleGridContainerKeyDown: I } = l.useMemo(() => {
-                let e = A();
+            { gridContainerProps: T, handleGridContainerKeyDown: S } = i.useMemo(() => {
+                let e = I();
                 return { gridContainerProps: e, handleGridContainerKeyDown: e.onKeyDown };
-            }, [A]);
+            }, [I]);
         return (
-            l.useEffect(() => {
+            i.useEffect(() => {
                 let e = () => {
-                    p.current = !1;
+                    f.current = !1;
                 };
                 return window.addEventListener("mousemove", e), () => window.removeEventListener("mousemove", e);
             }, []),
             {
-                gridDispatch: _,
-                getItemProps: x,
-                getRowProps: C,
-                gridContainerProps: E,
-                handleGridContainerKeyDown: I,
-                isUsingKeyboardNavigation: p,
+                gridDispatch: m,
+                getItemProps: g,
+                getRowProps: A,
+                gridContainerProps: T,
+                handleGridContainerKeyDown: S,
+                isUsingKeyboardNavigation: f,
             }
         );
     };
-function E(e) {
+function T(e) {
     let {
         categories: t,
         collapsedCategories: n,
-        gridWidth: i = 0,
+        gridWidth: r = 0,
         listPaddingRight: s = 0,
         itemNodeWidth: a,
-        itemNodeMargin: r = 0,
+        itemNodeMargin: o = 0,
     } = e;
-    return l.useMemo(() => {
-        let e = Math.max(1, Math.floor((i - s + r) / (a + r))),
-            l = Math.floor(Math.max(r, (i - s - a * e) / (e - 1))),
-            o = [],
-            c = [],
+    return i.useMemo(() => {
+        let e = Math.max(1, Math.floor((r - s + o) / (a + o))),
+            i = Math.floor(Math.max(o, (r - s - a * e) / (e - 1))),
+            l = [],
             u = [],
+            c = [],
             d = 0,
-            h = 0,
-            m = 0;
-        if (0 !== i) {
-            let l = function (t, n) {
-                let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                    i = Math.ceil(t.length / e);
-                c[h] = l ? 0 : i;
-                for (let s = 0; s < i; s++) {
-                    let i = s * e,
-                        a = i + e,
-                        r = t
-                            .slice(i, a)
+            _ = 0,
+            h = 0;
+        if (0 !== r) {
+            let i = function (t, n) {
+                let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                    r = Math.ceil(t.length / e);
+                u[_] = i ? 0 : r;
+                for (let s = 0; s < r; s++) {
+                    let r = s * e,
+                        a = r + e,
+                        o = t
+                            .slice(r, a)
                             .map((e, t) => ({
                                 item: e,
-                                gridSectionIndex: h,
+                                gridSectionIndex: _,
                                 rowIndex: d,
                                 columnIndex: t,
-                                visibleRowIndex: m,
+                                visibleRowIndex: h,
                                 category: n,
                             }));
-                    l || (m++, u.push(r), o.push(r.length)), d++;
+                    i || (h++, c.push(o), l.push(o.length)), d++;
                 }
-                h++;
+                _++;
             };
-            for (let e of t) e.items.length > 0 && l(e.items, e.categoryInfo.type, n?.has(`${e.key}`) ?? !1);
+            for (let e of t) e.items.length > 0 && i(e.items, e.categoryInfo.type, n?.has(`${e.key}`) ?? !1);
         }
-        return { expressionsGrid: u, rowCount: d, rowCountBySection: c, columnCounts: o, gutterWidth: l };
-    }, [t, n, i, r, a, s]);
+        return { expressionsGrid: c, rowCount: d, rowCountBySection: u, columnCounts: l, gutterWidth: i };
+    }, [t, n, r, o, a, s]);
 }
-function I(e) {
+function S(e) {
     let {
             columnCounts: t,
             expressionsGrid: n,
-            expressionsListRef: i,
+            expressionsListRef: r,
             store: s,
             gridNavigatorId: a,
-            onSelectItem: o,
+            onSelectItem: l,
         } = e,
         {
-            gridDispatch: c,
-            getItemProps: u,
+            gridDispatch: u,
+            getItemProps: c,
             getRowProps: d,
-            gridContainerProps: h,
-            handleGridContainerKeyDown: m,
-            isUsingKeyboardNavigation: f,
-        } = A({
+            gridContainerProps: _,
+            handleGridContainerKeyDown: h,
+            isUsingKeyboardNavigation: p,
+        } = I({
             columnCounts: t,
             gridNavigatorId: a,
             itemGrid: n,
-            itemList: i,
-            onGridNavigatorItemSelect: o,
+            itemList: r,
+            onGridNavigatorItemSelect: l,
             onGridNavigatorPositionChange: s.setInspectedExpressionPosition,
         });
     return (
-        l.useEffect(
+        i.useEffect(
             () =>
                 s.subscribe(
                     (e) => e.inspectedExpressionPosition,
                     (e) => {
                         if (null == e) return;
-                        let { columnIndex: t, rowIndex: n, source: l } = e;
-                        l !== p.t.GRID_NAVIGATOR_EVENT && c({ type: r.n.SET_FOCUSED_POSITION, x: t, y: n });
+                        let { columnIndex: t, rowIndex: n, source: i } = e;
+                        i !== f.t.GRID_NAVIGATOR_EVENT && u({ type: o.n.SET_FOCUSED_POSITION, x: t, y: n });
                     },
                 ),
-            [c, s],
+            [u, s],
         ),
         {
-            getItemProps: u,
+            getItemProps: c,
             getRowProps: d,
-            gridContainerProps: h,
-            handleGridContainerKeyDown: m,
-            isUsingKeyboardNavigation: f,
+            gridContainerProps: _,
+            handleGridContainerKeyDown: h,
+            isUsingKeyboardNavigation: p,
         }
     );
 }

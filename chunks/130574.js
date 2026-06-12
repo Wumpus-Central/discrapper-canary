@@ -5,7 +5,7 @@ var a = n(627968),
     e = n(834730),
     l = n(349288),
     c = n(360469),
-    o = n(985018);
+    o = n(375708);
 function d(t) {
     let { application: i, onCancel: n, onClose: d, onConfirm: h, ...x } = t;
     return (0, a.jsx)(r.Modal, {

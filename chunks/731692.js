@@ -1,7 +1,7 @@
 "use strict";
-let r;
+let i;
 n.d(t, { B: () => a });
-let i = Symbol.for("react-aria.i18n.locale"),
+let r = Symbol.for("react-aria.i18n.locale"),
     s = Symbol.for("react-aria.i18n.strings");
 class a {
     getStringForLocale(e, t) {
@@ -14,11 +14,11 @@ class a {
         return (
             t ||
                 ((t = (function (e, t, n = "en-US") {
-                    var r;
+                    var i;
                     if (t[e]) return t[e];
-                    let i = ((r = e), Intl.Locale ? new Intl.Locale(r).language : r.split("-")[0]);
-                    if (t[i]) return t[i];
-                    for (let e in t) if (e.startsWith(i + "-")) return t[e];
+                    let r = ((i = e), Intl.Locale ? new Intl.Locale(i).language : i.split("-")[0]);
+                    if (t[r]) return t[r];
+                    for (let e in t) if (e.startsWith(r + "-")) return t[e];
                     return t[n];
                 })(e, this.strings, this.defaultLocale)),
                 (this.strings[e] = t)),
@@ -27,13 +27,13 @@ class a {
     }
     static getGlobalDictionaryForPackage(e) {
         if ("u" < typeof window) return null;
-        let t = window[i];
-        if (void 0 === r) {
+        let t = window[r];
+        if (void 0 === i) {
             let e = window[s];
             if (!e) return null;
-            for (let n in ((r = {}), e)) r[n] = new a({ [t]: e[n] }, t);
+            for (let n in ((i = {}), e)) i[n] = new a({ [t]: e[n] }, t);
         }
-        let n = null == r ? void 0 : r[e];
+        let n = null == i ? void 0 : i[e];
         if (!n)
             throw Error(
                 `Strings for package "${e}" were not included by LocalizedStringProvider. Please add it to the list passed to createLocalizedStringDictionary.`,

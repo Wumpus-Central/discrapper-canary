@@ -1,22 +1,22 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = /[dualxmsipngr]{0,12}/,
-        n = {
+        n = /[dualxmsipngr]{0,12}/,
+        i = {
             $pattern: /[\w.]+/,
             keyword:
                 "abs accept alarm and atan2 bind binmode bless break caller chdir chmod chomp chop chown chr chroot class close closedir connect continue cos crypt dbmclose dbmopen defined delete die do dump each else elsif endgrent endhostent endnetent endprotoent endpwent endservent eof eval exec exists exit exp fcntl field fileno flock for foreach fork format formline getc getgrent getgrgid getgrnam gethostbyaddr gethostbyname gethostent getlogin getnetbyaddr getnetbyname getnetent getpeername getpgrp getpriority getprotobyname getprotobynumber getprotoent getpwent getpwnam getpwuid getservbyname getservbyport getservent getsockname getsockopt given glob gmtime goto grep gt hex if index int ioctl join keys kill last lc lcfirst length link listen local localtime log lstat lt ma map method mkdir msgctl msgget msgrcv msgsnd my ne next no not oct open opendir or ord our pack package pipe pop pos print printf prototype push q|0 qq quotemeta qw qx rand read readdir readline readlink readpipe recv redo ref rename require reset return reverse rewinddir rindex rmdir say scalar seek seekdir select semctl semget semop send setgrent sethostent setnetent setpgrp setpriority setprotoent setpwent setservent setsockopt shift shmctl shmget shmread shmwrite shutdown sin sleep socket socketpair sort splice split sprintf sqrt srand stat state study sub substr symlink syscall sysopen sysread sysseek system syswrite tell telldir tie tied time times tr truncate uc ucfirst umask undef unless unlink unpack unshift untie until use utime values vec wait waitpid wantarray warn when while write x|0 xor y|0",
         },
-        r = { className: "subst", begin: "[$@]\\{", end: "\\}", keywords: n },
-        i = { begin: /->\{/, end: /\}/ },
-        o = { scope: "attr", match: /\s+:\s*\w+(\s*\(.*?\))?/ },
-        s = {
+        r = { className: "subst", begin: "[$@]\\{", end: "\\}", keywords: i },
+        s = { begin: /->\{/, end: /\}/ },
+        a = { scope: "attr", match: /\s+:\s*\w+(\s*\(.*?\))?/ },
+        o = {
             scope: "variable",
             variants: [
                 { begin: /\$\d/ },
                 { begin: t.concat(/[$%@](?!")(\^\w\b|#\w+(::\w+)*|\{\w+\}|\w+(::\w*)*)/, "(?![A-Za-z])(?![@$%])") },
                 { begin: /[$%@](?!")[^\s\w{=]|\$=/, relevance: 0 },
             ],
-            contains: [o],
+            contains: [a],
         },
         l = {
             className: "number",
@@ -29,21 +29,21 @@ e.exports = function (e) {
             ],
             relevance: 0,
         },
-        c = [e.BACKSLASH_ESCAPE, r, s],
-        _ = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
-        d = (e, n, r = "\\1") => {
-            let i = "\\1" === r ? r : t.concat(r, n);
-            return t.concat(t.concat("(?:", e, ")"), n, /(?:\\.|[^\\\/])*?/, i, /(?:\\.|[^\\\/])*?/, r, a);
+        u = [e.BACKSLASH_ESCAPE, r, o],
+        c = [/!/, /\//, /\|/, /\?/, /'/, /"/, /#/],
+        d = (e, i, r = "\\1") => {
+            let s = "\\1" === r ? r : t.concat(r, i);
+            return t.concat(t.concat("(?:", e, ")"), i, /(?:\\.|[^\\\/])*?/, s, /(?:\\.|[^\\\/])*?/, r, n);
         },
-        m = (e, n, r) => t.concat(t.concat("(?:", e, ")"), n, /(?:\\.|[^\\\/])*?/, r, a),
-        p = [
-            s,
+        _ = (e, i, r) => t.concat(t.concat("(?:", e, ")"), i, /(?:\\.|[^\\\/])*?/, r, n),
+        h = [
+            o,
             e.HASH_COMMENT_MODE,
             e.COMMENT(/^=\w/, /=cut/, { endsWithParent: !0 }),
-            i,
+            s,
             {
                 className: "string",
-                contains: c,
+                contains: u,
                 variants: [
                     { begin: "q[qwxr]?\\s*\\(", end: "\\)", relevance: 5 },
                     { begin: "q[qwxr]?\\s*\\[", end: "\\]", relevance: 5 },
@@ -68,7 +68,7 @@ e.exports = function (e) {
                     {
                         className: "regexp",
                         variants: [
-                            { begin: d("s|tr|y", t.either(..._, { capture: !0 })) },
+                            { begin: d("s|tr|y", t.either(...c, { capture: !0 })) },
                             { begin: d("s|tr|y", "\\(", "\\)") },
                             { begin: d("s|tr|y", "\\[", "\\]") },
                             { begin: d("s|tr|y", "\\{", "\\}") },
@@ -79,11 +79,11 @@ e.exports = function (e) {
                         className: "regexp",
                         variants: [
                             { begin: /(m|qr)\/\//, relevance: 0 },
-                            { begin: m("(?:m|qr)?", /\//, /\//) },
-                            { begin: m("m|qr", t.either(..._, { capture: !0 }), /\1/) },
-                            { begin: m("m|qr", /\(/, /\)/) },
-                            { begin: m("m|qr", /\[/, /\]/) },
-                            { begin: m("m|qr", /\{/, /\}/) },
+                            { begin: _("(?:m|qr)?", /\//, /\//) },
+                            { begin: _("m|qr", t.either(...c, { capture: !0 }), /\1/) },
+                            { begin: _("m|qr", /\(/, /\)/) },
+                            { begin: _("m|qr", /\[/, /\]/) },
+                            { begin: _("m|qr", /\{/, /\}/) },
                         ],
                     },
                 ],
@@ -94,7 +94,7 @@ e.exports = function (e) {
                 end: "(\\s*\\(.*?\\))?[;{]",
                 excludeEnd: !0,
                 relevance: 5,
-                contains: [e.TITLE_MODE, o],
+                contains: [e.TITLE_MODE, a],
             },
             {
                 className: "class",
@@ -102,7 +102,7 @@ e.exports = function (e) {
                 end: "[;{]",
                 excludeEnd: !0,
                 relevance: 5,
-                contains: [e.TITLE_MODE, o, l],
+                contains: [e.TITLE_MODE, a, l],
             },
             { begin: "-\\w\\b", relevance: 0 },
             {
@@ -112,5 +112,5 @@ e.exports = function (e) {
                 contains: [{ begin: "^@@.*", end: "$", className: "comment" }],
             },
         ];
-    return (r.contains = p), (i.contains = p), { name: "Perl", aliases: ["pl", "pm"], keywords: n, contains: p };
+    return (r.contains = h), (s.contains = h), { name: "Perl", aliases: ["pl", "pm"], keywords: i, contains: h };
 };

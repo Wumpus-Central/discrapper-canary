@@ -1,4 +1,4 @@
-var r = n(212032);
+var i = n(212032);
 e.exports = function (e) {
-    return r(this, e).get(e);
+    return i(this, e).get(e);
 };

@@ -1,20 +1,20 @@
 "use strict";
-var r = (function () {
+var i = (function () {
     function e(e, t) {
         for (var n = 0; n < t.length; n++) {
-            var r = t[n];
-            (r.enumerable = r.enumerable || !1),
-                (r.configurable = !0),
-                "value" in r && (r.writable = !0),
-                Object.defineProperty(e, r.key, r);
+            var i = t[n];
+            (i.enumerable = i.enumerable || !1),
+                (i.configurable = !0),
+                "value" in i && (i.writable = !0),
+                Object.defineProperty(e, i.key, i);
         }
     }
-    return function (t, n, r) {
-        return n && e(t.prototype, n), r && e(t, r), t;
+    return function (t, n, i) {
+        return n && e(t.prototype, n), i && e(t, i), t;
     };
 })();
 n(313319);
-var i = n(698380),
+var r = n(698380),
     s = n(284009),
     a = n(82322),
     o = n(972535);
@@ -23,18 +23,18 @@ e.exports = (function (e) {
         throw TypeError("Super expression must either be null or a function, not " + typeof e);
     function t(e, n) {
         if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        var r = (function (e, t) {
+        var i = (function (e, t) {
             if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
             return t && ("object" == typeof t || "function" == typeof t) ? t : e;
         })(this, (t.__proto__ || Object.getPrototypeOf(t)).call(this));
-        return (r._parent = e), (r._interpolation = n), (r._listeners = {}), r;
+        return (i._parent = e), (i._interpolation = n), (i._listeners = {}), i;
     }
     return (
         (t.prototype = Object.create(e && e.prototype, {
             constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
         })),
         e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-        r(t, [
+        i(t, [
             {
                 key: "__getValue",
                 value: function () {
@@ -85,4 +85,4 @@ e.exports = (function (e) {
         ]),
         t
     );
-})(i);
+})(r);

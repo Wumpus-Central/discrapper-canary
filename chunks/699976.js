@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Z: () => i });
-var l = n(778712);
-let i = Object.freeze({
+n.d(t, { Z: () => r });
+var i = n(778712);
+let r = Object.freeze({
     SIZE_90: Object.freeze({
         size: 90,
         iconSize: 20,
         iconInset: 6,
         buttonInset: 4,
-        avatarSize: l._3.SIZE_16,
+        avatarSize: i._3.SIZE_16,
         wishlistButtonSize: "xs",
     }),
     SIZE_110: Object.freeze({
@@ -15,7 +15,7 @@ let i = Object.freeze({
         iconSize: 20,
         iconInset: 6,
         buttonInset: 4,
-        avatarSize: l._3.SIZE_16,
+        avatarSize: i._3.SIZE_16,
         wishlistButtonSize: "sm",
     }),
     SIZE_133: Object.freeze({
@@ -23,7 +23,7 @@ let i = Object.freeze({
         iconSize: 24,
         iconInset: 8,
         buttonInset: 8,
-        avatarSize: l._3.SIZE_20,
+        avatarSize: i._3.SIZE_20,
         wishlistButtonSize: "md",
     }),
     SIZE_150: Object.freeze({
@@ -31,7 +31,7 @@ let i = Object.freeze({
         iconSize: 24,
         iconInset: 8,
         buttonInset: 8,
-        avatarSize: l._3.SIZE_20,
+        avatarSize: i._3.SIZE_20,
         wishlistButtonSize: "md",
     }),
 });

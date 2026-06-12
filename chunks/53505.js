@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { SU: () => _, Vf: () => d, b$: () => f, oW: () => u });
+n.d(t, { SU: () => _, Vf: () => d, b$: () => h, oW: () => u });
 var i = n(481613),
     r = n.n(i),
     s = n(742821),
@@ -34,7 +34,7 @@ function _() {
     let e = c();
     return u(e, !1, e === l ? "tar.gz" : null);
 }
-function f(e, t, n) {
+function h(e, t, n) {
     let i = null != n ? n.toString() : null;
     switch (t) {
         case "iOS":

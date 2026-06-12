@@ -1,15 +1,15 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = /(r#)?/,
-        n = t.concat(a, e.UNDERSCORE_IDENT_RE),
-        r = t.concat(a, e.IDENT_RE),
-        i = {
+        n = /(r#)?/,
+        i = t.concat(n, e.UNDERSCORE_IDENT_RE),
+        r = t.concat(n, e.IDENT_RE),
+        s = {
             className: "title.function.invoke",
             relevance: 0,
             begin: t.concat(/\b/, /(?!let|for|while|if|else|match\b)/, r, t.lookahead(/\s*\(/)),
         },
-        o = "([ui](8|16|32|64|128|size)|f(32|64))?",
-        s = [
+        a = "([ui](8|16|32|64|128|size)|f(32|64))?",
+        o = [
             "drop ",
             "Copy",
             "Send",
@@ -159,7 +159,7 @@ e.exports = function (e) {
                 "yield",
             ],
             literal: ["true", "false", "Some", "None", "Ok", "Err"],
-            built_in: s,
+            built_in: o,
         },
         illegal: "</",
         contains: [
@@ -181,30 +181,30 @@ e.exports = function (e) {
             {
                 className: "number",
                 variants: [
-                    { begin: "\\b0b([01_]+)" + o },
-                    { begin: "\\b0o([0-7_]+)" + o },
-                    { begin: "\\b0x([A-Fa-f0-9_]+)" + o },
-                    { begin: "\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)" + o },
+                    { begin: "\\b0b([01_]+)" + a },
+                    { begin: "\\b0o([0-7_]+)" + a },
+                    { begin: "\\b0x([A-Fa-f0-9_]+)" + a },
+                    { begin: "\\b(\\d[\\d_]*(\\.[0-9_]+)?([eE][+-]?[0-9_]+)?)" + a },
                 ],
                 relevance: 0,
             },
-            { begin: [/fn/, /\s+/, n], className: { 1: "keyword", 3: "title.function" } },
+            { begin: [/fn/, /\s+/, i], className: { 1: "keyword", 3: "title.function" } },
             {
                 className: "meta",
                 begin: "#!?\\[",
                 end: "\\]",
                 contains: [{ className: "string", begin: /"/, end: /"/, contains: [e.BACKSLASH_ESCAPE] }],
             },
-            { begin: [/let/, /\s+/, /(?:mut\s+)?/, n], className: { 1: "keyword", 3: "keyword", 4: "variable" } },
-            { begin: [/for/, /\s+/, n, /\s+/, /in/], className: { 1: "keyword", 3: "variable", 5: "keyword" } },
-            { begin: [/type/, /\s+/, n], className: { 1: "keyword", 3: "title.class" } },
+            { begin: [/let/, /\s+/, /(?:mut\s+)?/, i], className: { 1: "keyword", 3: "keyword", 4: "variable" } },
+            { begin: [/for/, /\s+/, i, /\s+/, /in/], className: { 1: "keyword", 3: "variable", 5: "keyword" } },
+            { begin: [/type/, /\s+/, i], className: { 1: "keyword", 3: "title.class" } },
             {
-                begin: [/(?:trait|enum|struct|union|impl|for)/, /\s+/, n],
+                begin: [/(?:trait|enum|struct|union|impl|for)/, /\s+/, i],
                 className: { 1: "keyword", 3: "title.class" },
             },
-            { begin: e.IDENT_RE + "::", keywords: { keyword: "Self", built_in: s, type: l } },
+            { begin: e.IDENT_RE + "::", keywords: { keyword: "Self", built_in: o, type: l } },
             { className: "punctuation", begin: "->" },
-            i,
+            s,
         ],
     };
 };

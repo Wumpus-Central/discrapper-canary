@@ -8,20 +8,20 @@ n.r(t),
         getOS: () => es,
         getDevice: () => eo,
         getCampaignParams: () => eu,
-        ImpressionNames: () => $.I,
-        ImpressionGroups: () => z.q,
-        getSuperPropertiesBase64: () => ef,
+        ImpressionNames: () => z.I,
+        ImpressionGroups: () => $.q,
+        getSuperPropertiesBase64: () => eh,
         trackMaker: () => em,
         AnalyticsActionHandlers: () => H,
-        NetworkActionNames: () => $.D,
+        NetworkActionNames: () => z.D,
         getSuperProperties: () => e_,
-        ImpressionTypes: () => z.z,
+        ImpressionTypes: () => $.z,
         extendSuperProperties: () => ed,
     });
 var d = n(812729),
     _ = n.n(d),
-    f = n(284009),
-    h = n.n(f),
+    h = n(284009),
+    f = n.n(h),
     p = n(264572).Buffer;
 function E(e) {
     try {
@@ -38,12 +38,12 @@ var g = n(80703),
     I = n(636537),
     T = n(187207),
     S = n(818348);
-let N = "x-science-test",
-    y = 1500,
-    C = 0,
+let y = "x-science-test",
+    N = 1500,
     v = 0,
-    O = 0,
+    C = 0,
     R = 0,
+    O = 0,
     b = 0,
     D = null,
     L = 0,
@@ -51,8 +51,8 @@ let N = "x-science-test",
     M = 0,
     P = 0,
     x = null,
-    U = !1,
-    k = null,
+    k = !1,
+    U = null,
     G = null;
 function F(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1;
@@ -85,11 +85,11 @@ let V = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         function _() {
             return 0 !== j.length && (null != r ? null != i : null != s());
         }
-        function f(e) {
+        function h(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == Y && _() && (Y = t ? setTimeout(h, 0) : c(h, { timeout: y }));
+            null == Y && _() && (Y = t ? setTimeout(f, 0) : c(f, { timeout: N }));
         }
-        function h() {
+        function f() {
             if (((Y = null), !_())) return Promise.resolve();
             let e = j.slice();
             (j = []), (L = F(L));
@@ -102,10 +102,10 @@ let V = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                         e.forEach((e) => {
                             e.resolve?.();
                         }),
-                            (O = F(O));
+                            (R = F(R));
                     },
                     (t) => {
-                        j.unshift(...e), (R = F(R));
+                        j.unshift(...e), (O = F(O));
                         let { message: n } = t.body || t;
                         console.warn("[AnalyticsTrackingStore] Track:", n);
                     },
@@ -119,9 +119,9 @@ let V = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 r = e.map((e) => ({ ...e, properties: { ...e.properties, client_send_timestamp: n } })),
                 s = {};
             return (
-                U || ((G = (0, m.A)()), (s[N] = G), (U = !0)),
+                k || ((G = (0, m.A)()), (s[y] = G), (k = !0)),
                 I.Bo.post({ url: t, headers: s, body: { token: i, events: r }, retries: 3, rejectWithError: !1 }).then(
-                    (e) => (s[N] && (k = e?.headers?.[N] ?? null), e),
+                    (e) => (s[y] && (U = e?.headers?.[y] ?? null), e),
                 )
             );
         }
@@ -130,36 +130,36 @@ let V = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 type: S.bZ.CLIENT_TELEMETRY,
                 properties: {
                     client_track_timestamp: Date.now(),
-                    rpc_success_count: O,
-                    rpc_failure_count: R,
+                    rpc_success_count: R,
+                    rpc_failure_count: O,
                     first_seen_event_sequence_number: b,
-                    last_seen_event_sequence_number: C,
+                    last_seen_event_sequence_number: v,
                     telemetry_period_start_timestamp: D,
                     telemetry_period_end_timestamp: Date.now(),
-                    event_queue_rejection_count: v,
+                    event_queue_rejection_count: C,
                     event_queue_batch_count: L,
                     event_queue_batch_min_size: w === Number.MAX_SAFE_INTEGER ? 0 : w,
                     event_queue_batch_max_size: M,
                     event_queue_batch_avg_size: L > 0 ? P / L : 0,
                     science_request_id: G,
-                    science_response: k,
+                    science_response: U,
                     launch_signature: d(),
                 },
             };
             return (
-                (v = 0),
-                (O = 0),
+                (C = 0),
                 (R = 0),
+                (O = 0),
                 (L = 0),
                 (w = Number.MAX_SAFE_INTEGER),
                 (M = 0),
                 (P = 0),
                 (D = Date.now()),
-                (b = C),
+                (b = v),
                 p([e], S.mX.CLIENT_TELEMETRY)
             );
         }
-        (y = l ?? 1500),
+        (N = l ?? 1500),
             (H.handleConnectionOpen = function (e) {
                 let { analyticsToken: t, user: n } = e;
                 return (
@@ -188,13 +188,13 @@ let V = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             ),
                         };
                     })(),
-                    f({ shouldFlushOnNextTick: !1 }),
+                    h({ shouldFlushOnNextTick: !1 }),
                     !1
                 );
             }),
             (H.handleConnectionClosed = function () {
                 return (
-                    h(),
+                    f(),
                     (function () {
                         if (null == x) return;
                         switch (x.type) {
@@ -215,7 +215,7 @@ let V = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 );
             }),
             (H.handleFingerprint = function () {
-                return h(), !1;
+                return f(), !1;
             }),
             (H.handleTrack = function (e) {
                 let { event: t, properties: n, flush: i, fingerprint: o, resolve: l } = e;
@@ -228,7 +228,7 @@ let V = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                                 properties: {
                                     client_track_timestamp: Date.now(),
                                     client_heartbeat_session_id: a,
-                                    event_sequence_number: ++C,
+                                    event_sequence_number: ++v,
                                     ...n,
                                 },
                                 resolve: l,
@@ -240,16 +240,16 @@ let V = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                             })(u);
                         if ((null != c && (u.properties.client_uuid = B.generate(c)), j.push(u), j.length > 1e4)) {
                             let e = j.length - 1e4;
-                            (v = F(v, e)), (j = j.slice(-1e4));
+                            (C = F(C, e)), (j = j.slice(-1e4));
                         }
-                        i ? f({ shouldFlushOnNextTick: !0 }) : f({ shouldFlushOnNextTick: !1 });
+                        i ? h({ shouldFlushOnNextTick: !0 }) : h({ shouldFlushOnNextTick: !1 });
                     }),
                     !1
                 );
             }),
             (H.handleSetAnalyticsToken = function (e) {
                 let { analyticsToken: t, userId: n } = e;
-                return null == i && null != t && ((i = t), (r = n), f({ shouldFlushOnNextTick: !1 })), !1;
+                return null == i && null != t && ((i = t), (r = n), h({ shouldFlushOnNextTick: !1 })), !1;
             });
         class T extends A.Ay.Store {
             static displayName = "AnalyticsTrackingStore";
@@ -260,12 +260,12 @@ let V = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         }
         return new T(t, n);
     };
-var z = n(412728),
-    $ = n(239947),
+var $ = n(412728),
+    z = n(239947),
     q = n(214958),
-    Z = n.n(q);
+    X = n.n(q);
 n(689953);
-var X = n(70298),
+var Z = n(70298),
     Q = n(175259),
     J = n(506774),
     ee = n(362474),
@@ -305,11 +305,11 @@ if (null != er) {
             os_arch: r,
             app_arch: a,
             system_locale: l,
-            has_client_mods: (0, X.b)(),
+            has_client_mods: (0, Z.b)(),
             client_launch_id: et.C,
         }),
-        Z().name?.toLocaleLowerCase() === "electron" &&
-            ((s.browser_user_agent = Z().ua || ""), (s.browser_version = Z().version || "")),
+        X().name?.toLocaleLowerCase() === "electron" &&
+            ((s.browser_user_agent = X().ua || ""), (s.browser_version = X().version || "")),
         "linux" === n)
     ) {
         let e = er.crashReporter.getMetadata();
@@ -420,7 +420,7 @@ if (null == s)
                     })()),
                     (t.device = eo()),
                     (t.system_locale = (0, Q.c)()),
-                    (t.has_client_mods = (0, X.b)()),
+                    (t.has_client_mods = (0, Z.b)()),
                     (e = t),
                     J.w.set(en, e);
             }
@@ -435,8 +435,8 @@ if (null == s)
             return {
                 ...e,
                 ...{
-                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: Z().version || "" },
-                    os_version: Z()?.os?.version ?? "",
+                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: X().version || "" },
+                    os_version: X()?.os?.version ?? "",
                 },
                 ...t,
                 ...n,
@@ -451,7 +451,7 @@ function ed(e) {
 function e_() {
     return s;
 }
-function ef() {
+function eh() {
     return a;
 }
 ed(
@@ -459,7 +459,7 @@ ed(
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == o.release_channel || "" === o.release_channel) &&
         (o.release_channel = l.split("-")[0]),
-    isNaN((u = parseInt("538080", 10))) || (o.client_build_number = u),
+    isNaN((u = parseInt("562146", 10))) || (o.client_build_number = u),
     null == (c = er?.app.getBuildNumber()) || isNaN(c) || (o.native_build_number = c),
     (o.client_event_source = (function () {
         try {
@@ -467,14 +467,14 @@ ed(
         } catch (e) {}
         return null;
     })()),
-    (o.has_client_mods = (0, X.b)()),
+    (o.has_client_mods = (0, Z.b)()),
     (o.client_launch_id = et.C),
     o),
 );
-let eh = {},
+let ef = {},
     ep = {};
 function eE(e) {
-    return null != eh[e] && eh[e] > Date.now();
+    return null != ef[e] && ef[e] > Date.now();
 }
 let em = (e) => {
     let { addBreadcrumb: t, analyticEventConfigs: i, dispatcher: r, TRACK_ACTION_NAME: s } = e,
@@ -505,10 +505,10 @@ let em = (e) => {
                     if (_()(e, o)) return Promise.resolve();
                     ep[t] = o;
                 }
-                eh[t] = Date.now() + l.throttlePeriod;
+                ef[t] = Date.now() + l.throttlePeriod;
             } else if ("throttlePercent" in l) {
                 if (Math.random() > l.throttlePercent) return Promise.resolve();
-            } else h()(!1, `Unsupported analytics event config: ${l}`);
+            } else f()(!1, `Unsupported analytics event config: ${l}`);
         return t?.(e), a(e, r, s);
     };
 };

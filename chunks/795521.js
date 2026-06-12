@@ -1,14 +1,14 @@
-function s(e) {
+function R(I) {
     let i = 0,
         t = [];
     return async function () {
         if (2 !== i) {
             if (1 === i)
-                return new Promise((e) => {
-                    t.push(e);
+                return new Promise((I) => {
+                    t.push(I);
                 });
-            for (i = 1, await e(), i = 2; t.length > 0; ) t.shift()?.();
+            for (i = 1, await I(), i = 2; t.length > 0; ) t.shift()?.();
         }
     };
 }
-t.d(i, { u: () => s }), t(321073);
+t.d(i, { u: () => R }), t(321073);

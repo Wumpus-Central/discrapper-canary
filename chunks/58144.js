@@ -1,74 +1,74 @@
-r.d(t, { default: () => C });
-var n = r(627968),
-    l = r(64700),
-    s = r(284009),
-    a = r.n(s),
-    i = r(224640),
-    d = r(683071),
-    o = r(430993),
-    c = r(173936),
-    x = r(834730),
-    u = r(696208),
-    h = r(427262),
-    m = r(10005),
-    j = r(534654),
-    _ = r(208993),
-    f = r(299628),
-    p = r(602339),
-    g = r(985018),
-    b = r(605409);
-let C = (e) => {
-    let { currentUser: t, otherUser: r, transitionState: s, onClose: C } = e,
-        v = l.useCallback(() => {
-            C();
-        }, [C]),
-        N = (0, j.A)(),
-        [w, A] = l.useState(!1),
-        k = l.useCallback(() => {
-            A(!0);
+a.d(t, { default: () => b });
+var l = a(627968),
+    n = a(64700),
+    r = a(284009),
+    s = a.n(r),
+    i = a(224640),
+    d = a(683071),
+    c = a(430993),
+    o = a(173936),
+    u = a(834730),
+    h = a(696208),
+    x = a(427262),
+    p = a(10005),
+    C = a(534654),
+    j = a(208993),
+    f = a(299628),
+    g = a(602339),
+    k = a(375708),
+    m = a(605409);
+let b = (e) => {
+    let { currentUser: t, otherUser: a, transitionState: r, onClose: b } = e,
+        A = n.useCallback(() => {
+            b();
+        }, [b]),
+        w = (0, C.A)(),
+        [y, N] = n.useState(!1),
+        v = n.useCallback(() => {
+            N(!0);
         }, []),
-        { acceptLinkRequest: y, isAcceptLoading: E } = (0, m.A)({ onError: k, onSuccess: v });
+        { acceptLinkRequest: E, isAcceptLoading: S } = (0, p.A)({ onError: v, onSuccess: A });
     return (
-        a()(N, "FamilyCenterAcceptLinkModal should only be rendered for teens."),
-        (0, n.jsxs)(i.d, {
-            transitionState: s,
-            onClose: C,
-            "aria-label": g.intl.string(p.default.rlNJwZ),
+        s()(w, "FamilyCenterAcceptLinkModal should only be rendered for teens."),
+        (0, l.jsxs)(i.d, {
+            transitionState: r,
+            onClose: b,
+            "aria-label": k.intl.string(g.default.rlNJwZ),
             children: [
-                w && (0, n.jsx)(d.w, { type: "critical", children: g.intl.string(p.default.pegSM5) }),
-                (0, n.jsxs)(o.c, {
+                y && (0, l.jsx)(d.w, { type: "critical", children: k.intl.string(g.default.pegSM5) }),
+                (0, l.jsxs)(c.c, {
                     children: [
-                        (0, n.jsx)(_.A.Header, {
+                        (0, l.jsx)(j.A.Header, {
                             currentUser: t,
-                            otherUser: r,
-                            header: g.intl.string(p.default.rlNJwZ),
-                            icon: (0, n.jsx)(c.q, { size: "md", color: "currentColor", className: b.wP }),
+                            otherUser: a,
+                            header: k.intl.string(g.default.rlNJwZ),
+                            icon: (0, l.jsx)(o.q, { size: "md", color: "currentColor", className: m.wP }),
                         }),
-                        (0, n.jsxs)(_.A.Content, {
+                        (0, l.jsxs)(j.A.Content, {
                             children: [
-                                (0, n.jsx)(f.A, { inModal: !0 }),
-                                (0, n.jsx)(x.E, {
-                                    className: b.ed,
+                                (0, l.jsx)(f.A, { inModal: !0 }),
+                                (0, l.jsx)(u.E, {
+                                    className: m.ed,
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: g.intl.format(p.default.snlFqR, { username: h.Ay.getName(r) }),
+                                    children: k.intl.format(g.default.snlFqR, { username: x.Ay.getName(a) }),
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, n.jsx)(u.H, {
+                (0, l.jsx)(h.H, {
                     actionsFullWidth: !0,
                     actions: [
-                        { variant: "secondary", text: g.intl.string(g.t["ETE/oC"]), onClick: C, disabled: E },
+                        { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: b, disabled: S },
                         {
                             variant: "primary",
-                            text: g.intl.string(p.default["wI/jo3"]),
+                            text: k.intl.string(g.default["wI/jo3"]),
                             onClick: () => {
-                                A(!1), y(r.id);
+                                N(!1), E(a.id);
                             },
-                            disabled: E,
-                            loading: E,
+                            disabled: S,
+                            loading: S,
                         },
                     ],
                 }),

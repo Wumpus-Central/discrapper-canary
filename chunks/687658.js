@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { d: () => i }), n(321073);
-var r = n(509973);
-class i {
-    digest = new r.Digest();
+n.d(t, { d: () => r }), n(321073);
+var i = n(509973);
+class r {
+    digest = new i.Digest();
     total = 0;
     samples = 0;
     totalWeight = 0;
@@ -14,7 +14,7 @@ class i {
         (this.total += e * t),
             (this.totalWeight += t),
             this.samples++,
-            r.TDigest.prototype.push.call(this.digest, e, t),
+            i.TDigest.prototype.push.call(this.digest, e, t),
             this.digest.check_continuous();
     }
     addSamples(e) {
@@ -22,7 +22,7 @@ class i {
         (this.total += e.reduce((e, n) => e + n * t, 0)),
             (this.totalWeight += t * e.length),
             (this.samples += e.length),
-            r.TDigest.prototype.push.call(this.digest, e, t),
+            i.TDigest.prototype.push.call(this.digest, e, t),
             this.digest.check_continuous();
     }
     getReport() {

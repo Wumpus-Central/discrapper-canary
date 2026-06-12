@@ -6,15 +6,15 @@ var a = l(17928),
     i = l(97808),
     s = l(688810),
     o = l(919395),
-    d = l(252732),
-    u = l(101058),
+    u = l(252732),
+    d = l(101058),
     c = l(392107),
-    v = l(696451),
-    g = l(84540),
+    g = l(696451),
+    v = l(84540),
     h = l(836602),
     f = l(854627),
-    m = l(930349),
-    p = l(339984),
+    p = l(930349),
+    m = l(339984),
     b = l(375708);
 let x = r._3.SIZE_72;
 function C(e) {
@@ -28,27 +28,27 @@ function I(e) {
         { user: r, guildId: i, disabled: f } = e,
         { newestAnalyticsLocation: x } = (0, s.Ay)(),
         I = null != i,
-        A = (0, a.bG)([v.Ay], () => (null != i ? v.Ay.getMember(i, r.id) : null)),
+        A = (0, a.bG)([g.Ay], () => (null != i ? g.Ay.getMember(i, r.id) : null)),
         k = (0, a.bG)([h.A], () => h.A.getPendingChanges(i ?? void 0).pendingAvatar),
-        y = (0, u.V7)({ userId: r.id, image: k }),
+        y = (0, d.V7)({ userId: r.id, image: k }),
         j = r.avatar,
         N = I ? A?.avatar : j,
-        w = I && null != j,
-        E = (0, o.z5)(k, N)
+        E = I && null != j,
+        w = (0, o.z5)(k, N)
             ? {
                   onClick: () => {
-                      (0, d.rM)(null, N, (e) => (0, g.p)({ guildId: i ?? void 0, avatar: e })),
-                          (0, o.WU)(w ? "reset" : "remove");
+                      (0, u.rM)(null, N, (e) => (0, v.p)({ guildId: i ?? void 0, avatar: e })),
+                          (0, o.WU)(E ? "reset" : "remove");
                   },
-                  type: w ? "reset" : "remove",
-                  accessibleLabel: b.intl.string(w ? b.t.Y0mxy1 : b.t.twB3fz),
+                  type: E ? "reset" : "remove",
+                  accessibleLabel: b.intl.string(E ? b.t.Y0mxy1 : b.t.twB3fz),
               }
             : void 0;
-    return (0, t.jsx)(m.V, {
-        affordance: E,
+    return (0, t.jsx)(p.V, {
+        affordance: w,
         variant: "square",
         onClick: () =>
-            (0, d.XD)({ uploadType: p.HL.AVATAR, analyticsSource: x, guildId: i ?? void 0, stackingBehavior: "stack" }),
+            (0, u.XD)({ uploadType: m.HL.AVATAR, analyticsSource: x, guildId: i ?? void 0, stackingBehavior: "stack" }),
         accessibleLabel: b.intl.string(b.t.lqaIxI),
         accessibleValue:
             ((n = null === k),

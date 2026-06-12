@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(17928),
     r = n(228366),
     s = n(500049);
@@ -51,13 +51,13 @@ class l extends i.Ay.Store {
         return a.initialState;
     }
 }
-function d() {
+function u() {
     o({ closeReason: s.Se.DISMISSED });
 }
-function _() {
+function c() {
     o({ closeReason: s.Se.COMMAND });
 }
-let u = new l(r.h, {
+let d = new l(r.h, {
     APP_LAUNCHER_SHOW: function (e) {
         let { entrypoint: t, activeViewType: n, initialState: i, activeChannelId: r } = e;
         return (
@@ -72,9 +72,9 @@ let u = new l(r.h, {
         );
     },
     APP_LAUNCHER_DISMISS: o,
-    CONNECTION_OPEN: d,
-    LOGOUT: d,
-    CHANNEL_SELECT: d,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: _,
-    APP_LAUNCHER_SET_ACTIVE_COMMAND: _,
+    CONNECTION_OPEN: u,
+    LOGOUT: u,
+    CHANNEL_SELECT: u,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: c,
+    APP_LAUNCHER_SET_ACTIVE_COMMAND: c,
 });

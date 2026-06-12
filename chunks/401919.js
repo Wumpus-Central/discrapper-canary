@@ -9,7 +9,7 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
             s = i - (r.getBoundingClientRect().left + window.pageXOffset),
             u = l - (r.getBoundingClientRect().top + window.pageYOffset);
         s < 0 ? (s = 0) : s > o && (s = o), u < 0 ? (u = 0) : u > a && (u = a);
-        var c = s / o,
-            p = 1 - u / a;
-        return { h: t.h, s: c, v: p, a: t.a, source: "hsv" };
+        var p = s / o,
+            c = 1 - u / a;
+        return { h: t.h, s: p, v: c, a: t.a, source: "hsv" };
     });

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { eW: () => C, em: () => N, oi: () => y, wN: () => S });
+n.d(t, { eW: () => v, em: () => y, oi: () => N, wN: () => S });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -9,10 +9,10 @@ var r = n(503698),
     l = n(789645),
     u = n(933832),
     c = n(22231),
-    d = n(777666),
+    d = n(812993),
     _ = n(565787),
-    f = n(81466),
-    h = n(451394),
+    h = n(81466),
+    f = n(451394),
     p = n(31300),
     E = n(428689),
     m = n(983851),
@@ -23,10 +23,10 @@ var r = n(503698),
 function S(e, t, n) {
     return (0, i.jsx)(d.hV, { count: e, color: t, "aria-hidden": n });
 }
-function N() {
+function y() {
     return (0, i.jsx)(d.fk, { icon: (0, _.k)(I.A), disableColor: !0, className: T.yk });
 }
-function y(e) {
+function N(e) {
     let t,
         {
             audio: n,
@@ -37,8 +37,8 @@ function y(e) {
             activeEvent: o,
             activity: l,
         } = e;
-    if (o) t = f.C;
-    else if (a) t = h.q;
+    if (o) t = h.C;
+    else if (a) t = f.q;
     else if (r) t = p.k;
     else if (i) t = E.n;
     else if (n) t = m.H;
@@ -46,9 +46,9 @@ function y(e) {
         if (!l) return null;
         t = g.k;
     }
-    return v({ icon: t, isCurrentUserConnected: s });
+    return C({ icon: t, isCurrentUserConnected: s });
 }
-function C(e) {
+function v(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {
@@ -62,9 +62,9 @@ function C(e) {
                     return [void 0, c.R];
             }
         })(t);
-    return v({ icon: i, color: n });
+    return C({ icon: i, color: n });
 }
-function v(e) {
+function C(e) {
     let { icon: t, color: n, isCurrentUserConnected: r } = e;
     return (0, i.jsx)(d.fk, {
         icon: t,

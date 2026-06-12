@@ -15,8 +15,8 @@ let _ = r.forwardRef(function (e, t) {
             onClick: r,
             selected: s = !1,
             showBadge: _ = !1,
-            disabled: f = !1,
-            color: h,
+            disabled: h = !1,
+            color: f,
             colorClass: p,
             tooltip: E,
             "aria-label": m,
@@ -24,7 +24,7 @@ let _ = r.forwardRef(function (e, t) {
             "aria-haspopup": A,
             "data-jump-section": I,
         } = e,
-        T = (0, i.jsx)(n, { size: "sm", color: h ?? "currentColor", colorClass: p });
+        T = (0, i.jsx)(n, { size: "sm", color: f ?? "currentColor", colorClass: p });
     return (0, i.jsx)(l.m, {
         position: "bottom",
         text: E,
@@ -32,14 +32,14 @@ let _ = r.forwardRef(function (e, t) {
         children: (0, i.jsx)(u.D, {
             innerRef: t,
             tag: "div",
-            onClick: f ? void 0 : r,
-            className: a()(d.vk, { [d.wH]: s, [d.r9]: f }),
+            onClick: h ? void 0 : r,
+            className: a()(d.vk, { [d.wH]: s, [d.r9]: h }),
             role: "button",
             "aria-label": null != m ? m : E,
             "aria-haspopup": A,
             "aria-expanded": g,
             "data-jump-section": I,
-            "aria-disabled": f,
+            "aria-disabled": h,
             children: _
                 ? (0, i.jsxs)("div", {
                       className: d.fC,

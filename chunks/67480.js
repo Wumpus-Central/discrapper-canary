@@ -6,15 +6,15 @@ var r = n(17928),
     a = n(32731),
     o = n(773669),
     l = n(760751);
-let _ = new Map(),
+let u = new Map(),
+    c = new Set(),
     d = new Set(),
-    u = new Set(),
-    c = new Map(),
-    E = new Map(),
-    h = new Map();
-function m(e) {
+    _ = new Map(),
+    h = new Map(),
+    f = new Map();
+function p(e) {
     var t;
-    let n = c.get(e.id),
+    let n = _.get(e.id),
         i =
             ((t = a.A.createFromServer(e)),
             null == n ||
@@ -23,101 +23,101 @@ function m(e) {
                 null == t.orbsReward && null != n.orbsReward && (t.orbsReward = n.orbsReward),
                 0 === t.eligibleOffers.length && n.eligibleOffers.length > 0 && (t.eligibleOffers = n.eligibleOffers)),
             t);
-    c.set(e.id, i),
+    _.set(e.id, i),
+        c.delete(e.id),
         d.delete(e.id),
-        u.delete(e.id),
         e.bundled_sku_ids?.forEach((t) => {
-            _.set(t, e.id);
+            u.set(t, e.id);
         }),
-        E.has(e.application_id) || E.set(e.application_id, new Set()),
-        E.get(e.application_id).add(e.id);
+        h.has(e.application_id) || h.set(e.application_id, new Set()),
+        h.get(e.application_id).add(e.id);
 }
-function f(e) {
-    m(e.sku),
-        null != e.child_skus && e.child_skus.forEach((e) => m(e)),
-        null != e.alternative_skus && e.alternative_skus.forEach((e) => m(e));
+function E(e) {
+    p(e.sku),
+        null != e.child_skus && e.child_skus.forEach((e) => p(e)),
+        null != e.alternative_skus && e.alternative_skus.forEach((e) => p(e));
 }
-function g(e) {
+function m(e) {
     let { entitlements: t } = e;
-    for (let e of t) null != e.sku && m(e.sku);
+    for (let e of t) null != e.sku && p(e.sku);
+}
+function g() {
+    (u = new Map()), (c = new Set()), (d = new Set()), (_ = new Map()), (h = new Map()), (f = new Map());
 }
 function A() {
-    (_ = new Map()), (d = new Set()), (u = new Set()), (c = new Map()), (E = new Map()), (h = new Map());
-}
-function I() {
     if (i === o.default.locale) return !1;
-    (i = o.default.locale), A();
+    (i = o.default.locale), g();
 }
-class p extends r.il {
+class I extends r.il {
     static displayName = "SKUStore";
     initialize() {
-        this.waitFor(o.default, l.A), this.syncWith([o.default], I), (i = o.default.locale);
+        this.waitFor(o.default, l.A), this.syncWith([o.default], A), (i = o.default.locale);
     }
     get(e) {
-        return c.get(e);
+        return _.get(e);
     }
     getForApplication(e) {
-        let t = E.get(e);
-        return null == t ? [] : Array.from(t).map((e) => c.get(e));
+        let t = h.get(e);
+        return null == t ? [] : Array.from(t).map((e) => _.get(e));
     }
     isFetching(e) {
-        return d.has(e);
+        return c.has(e);
     }
     getFetchingSkuIds() {
-        return [...d.keys()];
+        return [...c.keys()];
     }
     getSKUs() {
-        return Object.fromEntries(c);
+        return Object.fromEntries(_);
     }
     getParentSKU(e) {
-        let t = _.get(e);
+        let t = u.get(e);
         if (null != t) return this.get(t);
     }
     didFetchingSkuFail(e) {
-        return u.has(e);
+        return d.has(e);
     }
 }
-let T = new p(s.h, {
+let T = new I(s.h, {
     STORE_LISTINGS_FETCH_START: function (e) {
         let { skuId: t } = e;
-        d.add(t);
+        c.add(t);
     },
     STORE_LISTINGS_FETCH_FAIL: function (e) {
         let { skuId: t } = e;
-        d.delete(t), u.add(t);
+        c.delete(t), d.add(t);
     },
     STORE_LISTINGS_FETCH_SUCCESS: function (e) {
         let { storeListings: t } = e;
-        for (let e of t) f(e);
+        for (let e of t) E(e);
     },
     STORE_LISTING_FETCH_SUCCESS: function (e) {
         let { storeListing: t } = e;
-        f(t);
+        E(t);
     },
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
         let { giftCode: t } = e;
         if (null == t.store_listing) return !1;
-        m(t.store_listing.sku);
+        p(t.store_listing.sku);
     },
     SKU_FETCH_START: function (e) {
         let { skuId: t } = e;
-        d.add(t);
+        c.add(t);
     },
     SKU_FETCH_SUCCESS: function (e) {
         let { sku: t } = e;
-        m(t);
+        p(t);
     },
     SKU_FETCH_FAIL: function (e) {
         let { skuId: t } = e;
-        d.delete(t), u.add(t);
+        c.delete(t), d.add(t);
     },
     SKUS_FETCH_SUCCESS: function (e) {
         let { guildId: t, skus: n } = e;
-        for (let e of n) m(e);
-        null != t && h.set(t, new Set(n.map((e) => e.id)));
+        for (let e of n) p(e);
+        null != t && f.set(t, new Set(n.map((e) => e.id)));
     },
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: g,
-    APPLICATION_STORE_CLEAR_DATA: A,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: g,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: g,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: m,
+    APPLICATION_STORE_CLEAR_DATA: g,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: m,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: m,
 });

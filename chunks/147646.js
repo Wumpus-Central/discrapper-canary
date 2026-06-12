@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     pz: "sidebar__83a6b",
     Qw: "art__83a6b",
     yx: "step12Animation__83a6b",

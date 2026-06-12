@@ -1,43 +1,43 @@
 "use strict";
-n.d(t, { A: () => h, w: () => d });
-var l,
-    i = n(627968),
+n.d(t, { A: () => _, w: () => d });
+var i,
+    r = n(627968),
     s = n(64700),
     a = n(503698),
-    r = n.n(a),
-    o = n(834730),
-    c = n(985018),
-    u = n(840625),
-    d = (((l = {})[(l.SMALL = 0)] = "SMALL"), (l[(l.LARGE = 1)] = "LARGE"), l);
-function h(e) {
-    let { game: t, size: n, className: l } = e,
+    o = n.n(a),
+    l = n(834730),
+    u = n(375708),
+    c = n(840625),
+    d = (((i = {})[(i.SMALL = 0)] = "SMALL"), (i[(i.LARGE = 1)] = "LARGE"), i);
+function _(e) {
+    let { game: t, size: n, className: i } = e,
         [a, d] = s.useState(!1),
-        h = t.name,
-        m = null != t.firstReleaseDate ? new Date(t.firstReleaseDate) : null,
-        p = t.getCoverURL();
-    return null == p || a
-        ? (0, i.jsxs)("div", {
-              className: r()(u.N, l),
+        _ = t.name,
+        h = null != t.firstReleaseDate ? new Date(t.firstReleaseDate) : null,
+        f = t.getCoverURL();
+    return null == f || a
+        ? (0, r.jsxs)("div", {
+              className: o()(c.N, i),
               children: [
-                  (0, i.jsx)("div", { className: u.j }),
-                  (0, i.jsx)(o.E, {
+                  (0, r.jsx)("div", { className: c.j }),
+                  (0, r.jsx)(l.E, {
                       variant: 1 === n ? "text-md/medium" : "text-xs/medium",
                       color: "always-white",
                       lineClamp: 1 === n ? 4 : 3,
-                      children: h,
+                      children: _,
                   }),
-                  (0, i.jsx)("div", { className: u.j }),
-                  (0, i.jsx)(o.E, {
+                  (0, r.jsx)("div", { className: c.j }),
+                  (0, r.jsx)(l.E, {
                       variant: 1 === n ? "text-sm/normal" : "text-xxs/normal",
                       color: "always-white",
-                      children: null != m ? `(${m?.getFullYear()})` : null,
+                      children: null != h ? `(${h?.getFullYear()})` : null,
                   }),
               ],
           })
-        : (0, i.jsx)("img", {
-              className: l,
-              src: p,
-              alt: c.intl.formatToPlainString(c.t["3ev90U"], { game: h }),
+        : (0, r.jsx)("img", {
+              className: i,
+              src: f,
+              alt: u.intl.formatToPlainString(u.t["3ev90U"], { game: _ }),
               onError: () => {
                   d(!0);
               },

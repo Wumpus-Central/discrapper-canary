@@ -1,68 +1,68 @@
-n.d(t, { i: () => s });
-var i = n(64700),
-    a = n(688807),
-    l = n(425763);
-function s(e) {
-    let { containerRef: t, itemType: n = "WIDGET", edgeDistance: s = 130, maxSpeed: r = 1700, power: o = 2.2 } = e,
-        c = (0, i.useRef)(null),
-        d = (0, i.useRef)(0),
-        u = (0, i.useRef)({ top: 0, bottom: 0 }),
-        g = (0, i.useRef)(null),
-        m = (0, i.useCallback)(
+i.d(t, { i: () => a });
+var n = i(64700),
+    l = i(688807),
+    s = i(425763);
+function a(e) {
+    let { containerRef: t, itemType: i = "WIDGET", edgeDistance: a = 130, maxSpeed: r = 1700, power: c = 2.2 } = e,
+        u = (0, n.useRef)(null),
+        o = (0, n.useRef)(0),
+        d = (0, n.useRef)({ top: 0, bottom: 0 }),
+        g = (0, n.useRef)(null),
+        m = (0, n.useCallback)(
             (e) => ({ isDragging: e.isDragging(), clientOffset: e.getClientOffset(), item: e.getItem() }),
             [],
         ),
-        { isDragging: _, clientOffset: f, item: x } = (0, a.V)(m);
-    (0, i.useEffect)(() => {
-        g.current = f;
-    }, [f]);
-    let p = (0, l.VU)();
-    (0, i.useEffect)(() => {
+        { isDragging: f, clientOffset: x, item: p } = (0, l.V)(m);
+    (0, n.useEffect)(() => {
+        g.current = x;
+    }, [x]);
+    let I = (0, s.VU)();
+    (0, n.useEffect)(() => {
         let e = t.current;
         if (null == e) return;
-        if (!(!0 === _ && x?.itemType === n && !p)) {
-            null !== c.current && cancelAnimationFrame(c.current),
-                (c.current = null),
+        if (!(!0 === f && p?.itemType === i && !I)) {
+            null !== u.current && cancelAnimationFrame(u.current),
+                (u.current = null),
                 (e.style.overflowAnchor = "auto"),
                 (e.style.overscrollBehavior = "auto"),
-                (d.current = 0);
+                (o.current = 0);
             return;
         }
-        let i = e.getBoundingClientRect();
+        let n = e.getBoundingClientRect();
         return (
-            (u.current = { top: i.top, bottom: i.bottom }),
+            (d.current = { top: n.top, bottom: n.bottom }),
             (e.style.overflowAnchor = "none"),
             (e.style.overscrollBehavior = "contain"),
-            (c.current = requestAnimationFrame(function t(n) {
-                c.current = requestAnimationFrame(t);
-                let i = g.current;
-                if (null == e || null == i) {
-                    d.current = n;
+            (u.current = requestAnimationFrame(function t(i) {
+                u.current = requestAnimationFrame(t);
+                let n = g.current;
+                if (null == e || null == n) {
+                    o.current = i;
                     return;
                 }
-                let a = Math.min(32, 0 !== d.current ? n - d.current : 16) / 1e3;
-                d.current = n;
-                let { top: l, bottom: m } = u.current,
-                    _ = i.y,
-                    f = _ - l,
-                    x = m - _,
-                    p = 0;
+                let l = Math.min(32, 0 !== o.current ? i - o.current : 16) / 1e3;
+                o.current = i;
+                let { top: s, bottom: m } = d.current,
+                    f = n.y,
+                    x = f - s,
+                    p = m - f,
+                    I = 0;
                 if (
-                    (f >= 0 && f < s
-                        ? (p = -r * Math.pow(1 - f / s, o))
-                        : x >= 0 && x < s && (p = r * Math.pow(1 - x / s, o)),
-                    0 !== p)
+                    (x >= 0 && x < a
+                        ? (I = -r * Math.pow(1 - x / a, c))
+                        : p >= 0 && p < a && (I = r * Math.pow(1 - p / a, c)),
+                    0 !== I)
                 ) {
-                    let t = p * a;
+                    let t = I * l;
                     Math.abs(t) >= 1 && (e.scrollTop += Math.round(t));
                 }
             })),
             () => {
-                null !== c.current && cancelAnimationFrame(c.current),
-                    (c.current = null),
-                    (d.current = 0),
+                null !== u.current && cancelAnimationFrame(u.current),
+                    (u.current = null),
+                    (o.current = 0),
                     null != e && ((e.style.overflowAnchor = "auto"), (e.style.overscrollBehavior = "auto"));
             }
         );
-    }, [t, _, x?.itemType, n, s, r, o, p]);
+    }, [t, f, p?.itemType, i, a, r, c, I]);
 }

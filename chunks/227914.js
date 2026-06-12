@@ -128,12 +128,12 @@ e.exports = function (e) {
             "unaligned",
             "varargs",
         ],
-        a = [
+        n = [
             e.C_LINE_COMMENT_MODE,
             e.COMMENT(/\{/, /\}/, { relevance: 0 }),
             e.COMMENT(/\(\*/, /\*\)/, { relevance: 10 }),
         ],
-        n = {
+        i = {
             className: "meta",
             variants: [
                 { begin: /\{\$/, end: /\}/ },
@@ -141,7 +141,7 @@ e.exports = function (e) {
             ],
         },
         r = { className: "string", begin: /'/, end: /'/, contains: [{ begin: /''/ }] },
-        i = {
+        s = {
             className: "string",
             variants: [
                 { match: /#\d[\d_]*/ },
@@ -150,17 +150,17 @@ e.exports = function (e) {
                 { match: /#%[01][01_]*/ },
             ],
         },
-        o = { begin: e.IDENT_RE + "\\s*=\\s*class\\s*\\(", returnBegin: !0, contains: [e.TITLE_MODE] },
-        s = {
+        a = { begin: e.IDENT_RE + "\\s*=\\s*class\\s*\\(", returnBegin: !0, contains: [e.TITLE_MODE] },
+        o = {
             className: "function",
             beginKeywords: "function constructor destructor procedure",
             end: /[:;]/,
             keywords: "function constructor|10 destructor|10 procedure|10",
             contains: [
                 e.TITLE_MODE,
-                { className: "params", begin: /\(/, end: /\)/, keywords: t, contains: [r, i, n].concat(a) },
-                n,
-            ].concat(a),
+                { className: "params", begin: /\(/, end: /\)/, keywords: t, contains: [r, s, i].concat(n) },
+                i,
+            ].concat(n),
         };
     return {
         name: "Delphi",
@@ -170,7 +170,7 @@ e.exports = function (e) {
         illegal: /"|\$[G-Zg-z]|\/\*|<\/|\|/,
         contains: [
             r,
-            i,
+            s,
             {
                 className: "number",
                 relevance: 0,
@@ -183,9 +183,9 @@ e.exports = function (e) {
                     { match: /%/, relevance: 0 },
                 ],
             },
+            a,
             o,
-            s,
-            n,
-        ].concat(a),
+            i,
+        ].concat(n),
     };
 };

@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, { Ht: () => l });
-var r = n(542113),
-    i = n(404555),
-    s = n.n(i),
+var i = n(542113),
+    r = n(404555),
+    s = n.n(r),
     a = {
         CASE_SENSITIVE_EQUAL: 7,
         EQUAL: 6,
@@ -19,49 +19,49 @@ var o = function (e, t) {
 };
 function l(e, t, n) {
     void 0 === n && (n = {});
-    var i = n,
-        s = i.keys,
-        l = i.threshold,
-        d = void 0 === l ? a.MATCHES : l,
-        _ = i.baseSort,
-        f = void 0 === _ ? o : _,
-        E = i.sorter;
+    var r = n,
+        s = r.keys,
+        l = r.threshold,
+        c = void 0 === l ? a.MATCHES : l,
+        _ = r.baseSort,
+        h = void 0 === _ ? o : _,
+        f = r.sorter;
     return (
-        void 0 === E
+        void 0 === f
             ? function (e) {
                   return e.sort(function (e, t) {
-                      var n, r, i, s, a, o, l;
+                      var n, i, r, s, a, o, l;
                       return (
                           (n = e),
-                          (r = t),
-                          (i = f),
+                          (i = t),
+                          (r = h),
                           (s = n.rank),
                           (a = n.keyIndex),
-                          (o = r.rank),
-                          (l = r.keyIndex),
-                          s !== o ? (s > o ? -1 : 1) : a === l ? i(n, r) : a < l ? -1 : 1
+                          (o = i.rank),
+                          (l = i.keyIndex),
+                          s !== o ? (s > o ? -1 : 1) : a === l ? r(n, i) : a < l ? -1 : 1
                       );
                   });
               }
-            : E
+            : f
     )(
-        e.reduce(function (e, i, o) {
+        e.reduce(function (e, r, o) {
             var l,
                 _,
+                h,
                 f,
-                E,
-                h =
-                    ((l = i),
+                p =
+                    ((l = r),
                     (_ = s),
-                    (f = t),
-                    (E = n),
+                    (h = t),
+                    (f = n),
                     _
                         ? (function (e, t) {
-                              for (var n = [], i = 0, s = t.length; i < s; i++) {
+                              for (var n = [], r = 0, s = t.length; r < s; r++) {
                                   for (
                                       var a,
-                                          o = t[i],
-                                          l = "string" == typeof (a = o) ? c : (0, r.A)({}, c, a),
+                                          o = t[r],
+                                          l = "string" == typeof (a = o) ? d : (0, i.A)({}, d, a),
                                           u = (function (e, t) {
                                               var n;
                                               if (("object" == typeof t && (t = t.key), "function" == typeof t))
@@ -72,75 +72,75 @@ function l(e, t, n) {
                                                   if (t.includes("."))
                                                       return (function (e, t) {
                                                           for (
-                                                              var n = e.split("."), r = [t], i = 0, s = n.length;
-                                                              i < s;
-                                                              i++
+                                                              var n = e.split("."), i = [t], r = 0, s = n.length;
+                                                              r < s;
+                                                              r++
                                                           ) {
                                                               for (
-                                                                  var a = n[i], o = [], l = 0, u = r.length;
+                                                                  var a = n[r], o = [], l = 0, u = i.length;
                                                                   l < u;
                                                                   l++
                                                               ) {
-                                                                  var d = r[l];
-                                                                  if (null != d)
-                                                                      if (Object.hasOwnProperty.call(d, a)) {
-                                                                          var c = d[a];
-                                                                          null != c && o.push(c);
-                                                                      } else "*" === a && (o = o.concat(d));
+                                                                  var c = i[l];
+                                                                  if (null != c)
+                                                                      if (Object.hasOwnProperty.call(c, a)) {
+                                                                          var d = c[a];
+                                                                          null != d && o.push(d);
+                                                                      } else "*" === a && (o = o.concat(c));
                                                               }
-                                                              r = o;
+                                                              i = o;
                                                           }
-                                                          if (Array.isArray(r[0])) {
+                                                          if (Array.isArray(i[0])) {
                                                               var _ = [];
-                                                              return _.concat.apply(_, r);
+                                                              return _.concat.apply(_, i);
                                                           }
-                                                          return r;
+                                                          return i;
                                                       })(t, e);
                                                   n = null;
                                               }
                                               return null == n ? [] : Array.isArray(n) ? n : [String(n)];
                                           })(e, o),
-                                          d = 0,
+                                          c = 0,
                                           _ = u.length;
-                                      d < _;
-                                      d++
+                                      c < _;
+                                      c++
                                   )
-                                      n.push({ itemValue: u[d], attributes: l });
+                                      n.push({ itemValue: u[c], attributes: l });
                               }
                               return n;
                           })(l, _).reduce(
                               function (e, t, n) {
-                                  var r = e.rank,
-                                      i = e.rankedValue,
+                                  var i = e.rank,
+                                      r = e.rankedValue,
                                       s = e.keyIndex,
                                       o = e.keyThreshold,
                                       l = t.itemValue,
-                                      d = t.attributes,
-                                      c = u(l, f, E),
-                                      _ = i,
-                                      h = d.minRanking,
-                                      p = d.maxRanking,
-                                      m = d.threshold;
+                                      c = t.attributes,
+                                      d = u(l, h, f),
+                                      _ = r,
+                                      p = c.minRanking,
+                                      E = c.maxRanking,
+                                      m = c.threshold;
                                   return (
-                                      c < h && c >= a.MATCHES ? (c = h) : c > p && (c = p),
-                                      c > r && ((r = c), (s = n), (o = m), (_ = l)),
-                                      { rankedValue: _, rank: r, keyIndex: s, keyThreshold: o }
+                                      d < p && d >= a.MATCHES ? (d = p) : d > E && (d = E),
+                                      d > i && ((i = d), (s = n), (o = m), (_ = l)),
+                                      { rankedValue: _, rank: i, keyIndex: s, keyThreshold: o }
                                   );
                               },
-                              { rankedValue: l, rank: a.NO_MATCH, keyIndex: -1, keyThreshold: E.threshold },
+                              { rankedValue: l, rank: a.NO_MATCH, keyIndex: -1, keyThreshold: f.threshold },
                           )
-                        : { rankedValue: l, rank: u(l, f, E), keyIndex: -1, keyThreshold: E.threshold }),
-                p = h.rank,
-                m = h.keyThreshold;
-            return p >= (void 0 === m ? d : m) && e.push((0, r.A)({}, h, { item: i, index: o })), e;
+                        : { rankedValue: l, rank: u(l, h, f), keyIndex: -1, keyThreshold: f.threshold }),
+                E = p.rank,
+                m = p.keyThreshold;
+            return E >= (void 0 === m ? c : m) && e.push((0, i.A)({}, p, { item: r, index: o })), e;
         }, []),
     ).map(function (e) {
         return e.item;
     });
 }
 function u(e, t, n) {
-    var r;
-    return ((e = d(e, n)), (t = d(t, n)).length > e.length)
+    var i;
+    return ((e = c(e, n)), (t = c(t, n)).length > e.length)
         ? a.NO_MATCH
         : e === t
           ? a.CASE_SENSITIVE_EQUAL
@@ -154,32 +154,32 @@ function u(e, t, n) {
                   ? a.CONTAINS
                   : 1 === t.length
                     ? a.NO_MATCH
-                    : ((r = ""),
+                    : ((i = ""),
                         e.split(" ").forEach(function (e) {
                             e.split("-").forEach(function (e) {
-                                r += e.substr(0, 1);
+                                i += e.substr(0, 1);
                             });
                         }),
-                        r).includes(t)
+                        i).includes(t)
                       ? a.ACRONYM
                       : (function (e, t) {
                             var n,
-                                r,
-                                i = 0,
+                                i,
+                                r = 0,
                                 s = 0;
                             function o(e, t, n) {
-                                for (var r = n, s = t.length; r < s; r++) if (t[r] === e) return (i += 1), r + 1;
+                                for (var i = n, s = t.length; i < s; i++) if (t[i] === e) return (r += 1), i + 1;
                                 return -1;
                             }
                             var l = o(t[0], e, 0);
                             if (l < 0) return a.NO_MATCH;
                             s = l;
-                            for (var u = 1, d = t.length; u < d; u++)
+                            for (var u = 1, c = t.length; u < c; u++)
                                 if (!((s = o(t[u], e, s)) > -1)) return a.NO_MATCH;
-                            return (n = s - l), (r = i / t.length), a.MATCHES + (1 / n) * r;
+                            return (n = s - l), (i = r / t.length), a.MATCHES + (1 / n) * i;
                         })(e, t);
 }
-function d(e, t) {
+function c(e, t) {
     return (e = "" + e), t.keepDiacritics || (e = s()(e)), e;
 }
-var c = { maxRanking: 1 / 0, minRanking: -1 / 0 };
+var d = { maxRanking: 1 / 0, minRanking: -1 / 0 };

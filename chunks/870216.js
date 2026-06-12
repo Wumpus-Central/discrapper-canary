@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var r = n(17928),
     s = n(228366);
 let a = [],
@@ -33,7 +33,7 @@ class _ extends r.Ay.Store {
         return null == e ? null : (d[e] ?? null);
     }
 }
-let f = new _(s.h, {
+let h = new _(s.h, {
     COLLECTIBLES_SHOP_OPEN: (e) => {
         (o = e.analyticsLocations ?? a), (l = e.analyticsSource ?? null), (i = e.initialProductSkuId);
     },

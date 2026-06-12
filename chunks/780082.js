@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     vK: "banner_dd6b5e",
     nw: "bannerInfo_dd6b5e",
     q3: "bannerIcon_dd6b5e",

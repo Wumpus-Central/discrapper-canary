@@ -18,8 +18,8 @@ function d(e) {
             tts: i = !1,
             type: d = u.lAJ.DEFAULT,
             messageReference: _,
-            allowedMentions: f,
-            author: h,
+            allowedMentions: h,
+            author: f,
             flags: p,
             nonce: E,
             poll: m,
@@ -28,27 +28,27 @@ function d(e) {
             giftingPrompt: I,
             boostingPrompt: T,
             state: S,
-            mediaMention: N,
+            mediaMention: y,
         } = e,
-        y = [];
-    if (d === u.lAJ.REPLY && (r()(null != _, "Replies must have a message reference"), null == f || f.replied_user)) {
+        N = [];
+    if (d === u.lAJ.REPLY && (r()(null != _, "Replies must have a message reference"), null == h || h.replied_user)) {
         let e = s.A.getMessageByReference(_);
-        e?.state === s.a.LOADED && y.push(c(e.message.author));
+        e?.state === s.a.LOADED && N.push(c(e.message.author));
     }
     return (
-        null == h && (h = o.default.getCurrentUser()),
-        h instanceof a.A && (h = c(h)),
-        r()(null != h, "createMessage: author cannot be undefined"),
+        null == f && (f = o.default.getCurrentUser()),
+        f instanceof a.A && (f = c(f)),
+        r()(null != f, "createMessage: author cannot be undefined"),
         {
             id: E ?? (0, l.m)(),
             type: d,
             content: n,
             channel_id: t,
-            author: h,
+            author: f,
             attachments: [],
             embeds: [],
             pinned: !1,
-            mentions: y,
+            mentions: N,
             mention_channels: [],
             mention_roles: [],
             mention_everyone: !1,
@@ -64,7 +64,7 @@ function d(e) {
             changelog_id: A,
             gifting_prompt: I,
             boosting_prompt: T,
-            media_mention: N,
+            media_mention: y,
         }
     );
 }

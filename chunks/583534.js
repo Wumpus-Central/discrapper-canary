@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => p });
 var i = n(141931),
-    r = n(205693),
+    r = n(459838),
     s = n(439372),
     a = n(495544),
     o = n(19575),
     l = n(652215);
-let d = new Set();
-function _(e) {
+let u = new Set();
+function c(e) {
     switch (e) {
         case r.x.DEFAULT:
             return i.du.VideoMediaSessionId;
@@ -15,19 +15,19 @@ function _(e) {
             return i.du.StreamMediaSessionId;
     }
 }
-function u(e) {
-    o.Ay.setCrashInformation(_(e.context), e.mediaSessionId ?? null);
+function d(e) {
+    o.Ay.setCrashInformation(c(e.context), e.mediaSessionId ?? null);
 }
-function c(e) {
+function _(e) {
     let t = (e.channelId ?? "unknown") + e.context;
     switch (e.state) {
         case l.S7L.RTC_CONNECTED:
-            d.add(t), o.Ay.setCrashInformation(i.du.HasRTCConnection, 1);
+            u.add(t), o.Ay.setCrashInformation(i.du.HasRTCConnection, 1);
             break;
         case l.S7L.DISCONNECTED:
-            o.Ay.setCrashInformation(_(e.context), null),
-                d.delete(t),
-                0 === d.size &&
+            o.Ay.setCrashInformation(c(e.context), null),
+                u.delete(t),
+                0 === u.size &&
                     (function () {
                         for (let e of [
                             i.du.HasRTCConnection,
@@ -40,7 +40,7 @@ function c(e) {
                     })();
     }
 }
-function E(e) {
+function h(e) {
     let t = e.userId === a.default.getId(),
         n = null != e.streamId,
         s = null;
@@ -53,7 +53,7 @@ function E(e) {
     }
     o.Ay.setCrashInformation(s, +!!n);
 }
-class h extends s.A {
-    actions = { RTC_CONNECTION_STATE: c, RTC_CONNECTION_VIDEO: E, MEDIA_SESSION_JOINED: u };
+class f extends s.A {
+    actions = { RTC_CONNECTION_STATE: _, RTC_CONNECTION_VIDEO: h, MEDIA_SESSION_JOINED: d };
 }
-let m = new h();
+let p = new f();

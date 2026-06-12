@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { RG: () => R, Di: () => y, uD: () => C, Y: () => v }), n(323874), n(14289), n(35956);
+n.d(t, { RG: () => O, Di: () => N, uD: () => v, Y: () => C }), n(323874), n(14289), n(35956);
 var i = n(284009),
     r = n.n(i),
     s = n(636537),
@@ -18,7 +18,7 @@ function _(e) {
     }
     c = n;
 }
-class f extends u.Ay.Store {
+class h extends u.Ay.Store {
     static displayName = "ApplicationAssetsStore";
     getApplicationAssetFetchState(e) {
         return c[e] ?? 0;
@@ -40,7 +40,7 @@ class f extends u.Ay.Store {
         return d[e];
     }
 }
-let h = new f(a.h, {
+let f = new h(a.h, {
     APPLICATION_ASSETS_FETCH: function (e) {
         let { applicationId: t } = e;
         c = { ...c, [t]: 1 };
@@ -106,15 +106,15 @@ let g = "https://i.scdn.co/image/",
         },
     },
     S = new Map();
-async function N(e) {
+async function y(e) {
     let { body: t } = await s.Bo.get({ url: m.Rsh.APPLICATION_ASSETS(e), oldFormErrors: !0, rejectWithError: !1 });
-    return a.h.dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: e, assets: t }), h.getApplicationAssets(e);
+    return a.h.dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: e, assets: t }), f.getApplicationAssets(e);
 }
-function y(e, t) {
+function N(e, t) {
     let n = T[e].serialize(t);
     return n ? `${e}:${n.toString()}` : null;
 }
-function C(e, t, n) {
+function v(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
     if (null != t && t.includes(":")) {
         let [e, i] = t.split(":");
@@ -133,15 +133,15 @@ function C(e, t, n) {
         ? `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/app-assets/${e}/${t}.${i}${a}`
         : `${(0, s.TP)()}/applications/${e}/app-assets/${t}.${i}${a}`;
 }
-async function v(e) {
+async function C(e) {
     var t;
     let n,
-        i = await (null == (n = h.getApplicationAssets(e)) || ((t = n.lastUpdated), Date.now() - t > 36e5)
-            ? N(e)
+        i = await (null == (n = f.getApplicationAssets(e)) || ((t = n.lastUpdated), Date.now() - t > 36e5)
+            ? y(e)
             : Promise.resolve(n));
     return i?.assets;
 }
-async function O(e, t) {
+async function R(e, t) {
     let n = t.filter((e) => null != e && null == S.get(e));
     if (0 === n.length) return;
     let { body: i } = await s.Bo.post({
@@ -152,13 +152,13 @@ async function O(e, t) {
     });
     for (let { url: e, external_asset_path: t } of i) S.set(e, t);
 }
-async function R(e, t) {
+async function O(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1;
     a.h.dispatch({ type: "APPLICATION_ASSETS_FETCH", applicationId: e });
     let i = [],
         r = t.filter((e) => e?.startsWith("http:") || e?.startsWith("https:"));
     if (
-        (r.length > 0 && (await O(e, r)),
+        (r.length > 0 && (await R(e, r)),
         (function (e, t) {
             let n = 0;
             if (e.filter((e) => e?.startsWith("http:") || e?.startsWith("https:")).length > 0)
@@ -166,13 +166,13 @@ async function R(e, t) {
                     let r = e[i];
                     if (null == r) continue;
                     let s = S.get(r);
-                    null != s && ((t[i] = y("mp", s)), n++);
+                    null != s && ((t[i] = N("mp", s)), n++);
                 }
             return n === e.length;
         })(t, i))
     )
         return a.h.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: e }), i;
-    let s = await v(e);
+    let s = await C(e);
     return (a.h.dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: e, assets: s }),
     (function (e, t, n, i) {
         let r = !1;
@@ -191,6 +191,6 @@ async function R(e, t) {
         }
         return r;
     })(t, i, s, n))
-        ? N(e).then(() => R(e, t, n - 1))
+        ? y(e).then(() => O(e, t, n - 1))
         : (a.h.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: e }), i);
 }

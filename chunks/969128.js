@@ -1,40 +1,40 @@
-i.d(e, { A: () => s });
-var t = i(627968);
-i(64700);
-var l = i(17928),
-    a = i(477782),
-    r = i(816662),
-    d = i(395504),
-    c = i(543465),
-    o = i(652215),
-    u = i(985018);
-function s(n) {
-    let e = (0, d.jN)(n.guild_id),
-        i = (0, l.bG)([c.Ay], () => c.Ay.isChannelOptedIn(n.guild_id, n.id)),
-        s = (0, l.bG)([c.Ay], () => null != n.parent_id && c.Ay.isChannelOptedIn(n.guild_id, n.parent_id)),
-        A = () => {
-            (0, r.AC)(n.guild_id, n.id, !i, { section: o.JJy.CONTEXT_MENU });
+n.d(t, { A: () => u });
+var d = n(627968);
+n(64700);
+var l = n(17928),
+    a = n(477782),
+    e = n(816662),
+    r = n(395504),
+    s = n(543465),
+    o = n(652215),
+    p = n(375708);
+function u(i) {
+    let t = (0, r.jN)(i.guild_id),
+        n = (0, l.bG)([s.Ay], () => s.Ay.isChannelOptedIn(i.guild_id, i.id)),
+        u = (0, l.bG)([s.Ay], () => null != i.parent_id && s.Ay.isChannelOptedIn(i.guild_id, i.parent_id)),
+        c = () => {
+            (0, e.AC)(i.guild_id, i.id, !n, { section: o.JJy.CONTEXT_MENU });
         };
-    return !e || n.isThread()
+    return !t || i.isThread()
         ? null
-        : n.isCategory()
-          ? (0, t.jsx)(a.Dr, {
+        : i.isCategory()
+          ? (0, d.jsx)(a.Dr, {
                 id: "opt-into-category",
-                label: i ? u.intl.string(u.t["3zySTA"]) : u.intl.string(u.t["9mysCh"]),
-                action: () => A(),
+                label: n ? p.intl.string(p.t["3zySTA"]) : p.intl.string(p.t["9mysCh"]),
+                action: () => c(),
             })
-          : s
-            ? (0, t.jsx)(a.Dr, {
+          : u
+            ? (0, d.jsx)(a.Dr, {
                   id: "opt-out-category",
-                  label: u.intl.string(u.t.jNphKT),
+                  label: p.intl.string(p.t.jNphKT),
                   action: () =>
                       void (
-                          null != n.parent_id && (0, r.AC)(n.guild_id, n.parent_id, !1, { section: o.JJy.CONTEXT_MENU })
+                          null != i.parent_id && (0, e.AC)(i.guild_id, i.parent_id, !1, { section: o.JJy.CONTEXT_MENU })
                       ),
               })
-            : (0, t.jsx)(a.Dr, {
+            : (0, d.jsx)(a.Dr, {
                   id: "opt-into-channel",
-                  label: i ? u.intl.string(u.t["3zySTA"]) : u.intl.string(u.t["9mysCh"]),
-                  action: () => A(),
+                  label: n ? p.intl.string(p.t["3zySTA"]) : p.intl.string(p.t["9mysCh"]),
+                  action: () => c(),
               });
 }

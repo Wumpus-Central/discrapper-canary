@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { ef: () => a, lJ: () => o, xM: () => s });
-var r = ["D", "DD"],
-    i = ["YY", "YYYY"];
-function a(e) {
-    return -1 !== r.indexOf(e);
-}
+n.d(t, { ef: () => s, lJ: () => o, xM: () => a });
+var i = ["D", "DD"],
+    r = ["YY", "YYYY"];
 function s(e) {
     return -1 !== i.indexOf(e);
+}
+function a(e) {
+    return -1 !== r.indexOf(e);
 }
 function o(e, t, n) {
     if ("YYYY" === e)

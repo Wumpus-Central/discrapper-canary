@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { OW: () => u, YK: () => l, dm: () => c, eM: () => o, ly: () => d });
 var i = n(565150),
-    r = n(762555),
+    r = n(757574),
     s = n(381941);
 let a = [
         { reName: /\.jpe?g$/i, name: (e) => `image${e}.jpg`, type: "image/jpeg" },

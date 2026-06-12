@@ -1,43 +1,43 @@
-l.r(n), l.d(n, { default: () => x });
-var r = l(627968),
-    t = l(64700),
-    s = l(503698),
-    i = l.n(s),
-    a = l(873263),
-    c = l(607399),
-    d = l(862482),
-    u = l(349288),
-    o = l(458518),
-    m = l(573648),
-    h = l(950198),
-    f = l(652215),
-    N = l(985018),
-    g = l(844733);
-let v = "https://dis.gd/Amazon-Music-Connection",
-    j = null != window.opener;
-function x() {
-    let { type: e } = (0, a.g)(),
-        n = (0, h.mw)(e),
-        l = (0, o.o)().get("error-code"),
-        s = t.useCallback(() => {
+e.r(l), e.d(l, { default: () => O });
+var t = e(627968),
+    i = e(64700),
+    r = e(503698),
+    s = e.n(r),
+    a = e(873263),
+    c = e(607399),
+    u = e(862482),
+    d = e(349288),
+    o = e(458518),
+    h = e(573648),
+    m = e(950198),
+    N = e(652215),
+    f = e(375708),
+    p = e(844733);
+let C = "https://dis.gd/Amazon-Music-Connection",
+    g = null != window.opener;
+function O() {
+    let { type: n } = (0, a.g)(),
+        l = (0, m.mw)(n),
+        e = (0, o.o)().get("error-code"),
+        r = i.useCallback(() => {
             window.close();
         }, []),
-        x = t.useMemo(() => {
-            switch (n) {
-                case f.fg2.AMAZON_MUSIC:
-                    return (0, r.jsx)("div", {
-                        className: i()(g.iU, g.zH),
+        O = i.useMemo(() => {
+            switch (l) {
+                case N.fg2.AMAZON_MUSIC:
+                    return (0, t.jsx)("div", {
+                        className: s()(p.iU, p.zH),
                         children: c.Fr
-                            ? N.intl.format(N.t["0EikXi"], {
-                                  link: () => (0, r.jsx)(u.Anchor, { href: v, children: v }),
+                            ? f.intl.format(f.t["0EikXi"], {
+                                  link: () => (0, t.jsx)(d.Anchor, { href: C, children: C }),
                               })
-                            : N.intl.format(N.t.hKHZhO, { link: () => (0, r.jsx)(u.Anchor, { href: v, children: v }) }),
+                            : f.intl.format(f.t.hKHZhO, { link: () => (0, t.jsx)(d.Anchor, { href: C, children: C }) }),
                     });
-                case f.fg2.YOUTUBE:
-                    if (l === f.t02.UNKNOWN_ACCOUNT.toString())
-                        return (0, r.jsx)("div", {
-                            className: i()(g.iU, g.zH),
-                            children: N.intl.format(N.t.nQPJdL, {
+                case N.fg2.YOUTUBE:
+                    if (e === N.t02.UNKNOWN_ACCOUNT.toString())
+                        return (0, t.jsx)("div", {
+                            className: s()(p.iU, p.zH),
+                            children: f.intl.format(f.t.nQPJdL, {
                                 link: "https://support.google.com/youtube/answer/1646861",
                             }),
                         });
@@ -45,39 +45,39 @@ function x() {
                 default:
                     return null;
             }
-        }, [l, n]),
-        _ = null != l ? Number(l) : null,
-        p = t.useMemo(() => {
-            if (null == n) return null;
-            let e = m.A.get(n);
-            switch (_) {
-                case f.t02.INVALID_CONNECTION_WHITESPACE_NAME:
-                    return (0, r.jsx)("div", {
-                        className: i()(g.iU, g.zH),
-                        children: N.intl.format(N.t["O7/vPw"], { name: e.name }),
+        }, [e, l]),
+        j = null != e ? Number(e) : null,
+        A = i.useMemo(() => {
+            if (null == l) return null;
+            let n = h.A.get(l);
+            switch (j) {
+                case N.t02.INVALID_CONNECTION_WHITESPACE_NAME:
+                    return (0, t.jsx)("div", {
+                        className: s()(p.iU, p.zH),
+                        children: f.intl.format(f.t["O7/vPw"], { name: n.name }),
                     });
-                case f.t02.CONNECTION_RATE_LIMITED:
-                    return (0, r.jsx)("div", { className: i()(g.iU, g.zH), children: N.intl.string(N.t["Y6Jo+p"]) });
-                case f.t02.TOO_MANY_CONNECTIONS:
-                    return (0, r.jsx)("div", { className: i()(g.iU, g.zH), children: N.intl.string(N.t.M92PQ3) });
+                case N.t02.CONNECTION_RATE_LIMITED:
+                    return (0, t.jsx)("div", { className: s()(p.iU, p.zH), children: f.intl.string(f.t["Y6Jo+p"]) });
+                case N.t02.TOO_MANY_CONNECTIONS:
+                    return (0, t.jsx)("div", { className: s()(p.iU, p.zH), children: f.intl.string(f.t.M92PQ3) });
                 default:
                     return null;
             }
-        }, [_, n]);
-    if (null == n) return null;
-    let w = m.A.get(n);
-    return (0, r.jsxs)(h.mP, {
-        platformType: n,
+        }, [j, l]);
+    if (null == l) return null;
+    let U = h.A.get(l);
+    return (0, t.jsxs)(m.mP, {
+        platformType: l,
         children: [
-            (0, r.jsx)("div", { className: i()(g.iU, g.z3), children: N.intl.format(N.t.E62dXo, { name: w.name }) }),
-            (0, r.jsx)("div", { className: i()(g.iU, g.zH), children: N.intl.string(N.t.Ra6lcp) }),
-            x,
-            p,
-            j ? (0, r.jsx)(d.$n, { className: g.HM, onClick: s, children: N.intl.string(N.t.i4jeWR) }) : null,
-            null != l
-                ? (0, r.jsx)("div", {
-                      className: i()(g.iU, g.nf),
-                      children: N.intl.format(N.t.LElyIL, { errorCode: l }),
+            (0, t.jsx)("div", { className: s()(p.iU, p.z3), children: f.intl.format(f.t.E62dXo, { name: U.name }) }),
+            (0, t.jsx)("div", { className: s()(p.iU, p.zH), children: f.intl.string(f.t.Ra6lcp) }),
+            O,
+            A,
+            g ? (0, t.jsx)(u.$n, { className: p.HM, onClick: r, children: f.intl.string(f.t.i4jeWR) }) : null,
+            null != e
+                ? (0, t.jsx)("div", {
+                      className: s()(p.iU, p.nf),
+                      children: f.intl.format(f.t.LElyIL, { errorCode: e }),
                   })
                 : null,
         ],

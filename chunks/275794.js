@@ -4,8 +4,8 @@ e.exports = function (e) {
             variants: [{ begin: "\\b([gtps][A-Z]{1}[a-zA-Z0-9]*)(\\[.+\\])?(?:\\s*?)" }, { begin: "\\$_[A-Z]+" }],
             relevance: 0,
         },
-        a = [e.C_BLOCK_COMMENT_MODE, e.HASH_COMMENT_MODE, e.COMMENT("--", "$"), e.COMMENT("[^:]//", "$")],
-        n = e.inherit(e.TITLE_MODE, {
+        n = [e.C_BLOCK_COMMENT_MODE, e.HASH_COMMENT_MODE, e.COMMENT("--", "$"), e.COMMENT("[^:]//", "$")],
+        i = e.inherit(e.TITLE_MODE, {
             variants: [{ begin: "\\b_*rig[A-Z][A-Za-z0-9_\\-]*" }, { begin: "\\b_[a-z0-9\\-]+" }],
         }),
         r = e.inherit(e.TITLE_MODE, { begin: "\\b([A-Za-z0-9_\\-]+)\\b" });
@@ -27,13 +27,13 @@ e.exports = function (e) {
                 className: "function",
                 beginKeywords: "function",
                 end: "$",
-                contains: [t, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE, n],
+                contains: [t, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE, i],
             },
-            { className: "function", begin: "\\bend\\s+", end: "$", keywords: "end", contains: [r, n], relevance: 0 },
+            { className: "function", begin: "\\bend\\s+", end: "$", keywords: "end", contains: [r, i], relevance: 0 },
             {
                 beginKeywords: "command on",
                 end: "$",
-                contains: [t, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE, n],
+                contains: [t, r, e.APOS_STRING_MODE, e.QUOTE_STRING_MODE, e.BINARY_NUMBER_MODE, e.C_NUMBER_MODE, i],
             },
             {
                 className: "meta",
@@ -43,8 +43,8 @@ e.exports = function (e) {
             e.QUOTE_STRING_MODE,
             e.BINARY_NUMBER_MODE,
             e.C_NUMBER_MODE,
-            n,
-        ].concat(a),
+            i,
+        ].concat(n),
         illegal: ";$|^\\[|^=|&|\\{",
     };
 };

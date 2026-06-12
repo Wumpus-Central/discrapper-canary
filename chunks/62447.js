@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => o, t: () => s });
-var r = n(64700),
-    i = n(20015),
-    a = n(652215);
-function s(e) {
-    return (0, i.n)(e, a.gfo.PARENT);
+n.d(t, { A: () => o, t: () => a });
+var i = n(64700),
+    r = n(20015),
+    s = n(652215);
+function a(e) {
+    return (0, r.n)(e, s.gfo.PARENT);
 }
 function o(e) {
-    return r.useMemo(() => s(e), [e]);
+    return i.useMemo(() => a(e), [e]);
 }

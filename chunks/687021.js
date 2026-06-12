@@ -1,62 +1,62 @@
-n.d(t, { A: () => p, v: () => E }), n(667532);
-var i = n(627968),
-    l = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(17928),
-    o = n(444550),
+n.d(l, { A: () => m, v: () => v }), n(667532);
+var a = n(627968),
+    i = n(64700),
+    r = n(503698),
+    t = n.n(r),
+    s = n(17928),
+    u = n(444550),
     d = n(548118),
-    u = n(128450),
-    c = n(836602),
-    g = n(71393),
-    _ = n(711014),
-    m = n(403362),
-    h = n(985018),
-    A = n(379464);
-function p(e) {
-    let { guildId: t, className: n, globalOption: l, hideDivider: s = !1, onChange: r, renderOptionSuffix: o } = e;
-    return (0, i.jsx)(u.A, {
-        className: a()(A.u, n),
+    c = n(128450),
+    o = n(836602),
+    p = n(71393),
+    g = n(711014),
+    f = n(403362),
+    h = n(375708),
+    x = n(379464);
+function m(e) {
+    let { guildId: l, className: n, globalOption: i, hideDivider: r = !1, onChange: s, renderOptionSuffix: u } = e;
+    return (0, a.jsx)(c.A, {
+        className: t()(x.u, n),
         title: h.intl.string(h.t.ref7Ki),
-        hideDivider: s,
+        hideDivider: r,
         forcedDivider: !0,
-        children: (0, i.jsx)(E, { guildId: t, onChange: r, renderOptionSuffix: o, globalOption: l }),
+        children: (0, a.jsx)(v, { guildId: l, onChange: s, renderOptionSuffix: u, globalOption: i }),
     });
 }
-function E(e) {
-    let { guildId: t, globalOption: n, onChange: s, renderOptionSuffix: a } = e,
-        u = (0, r.bG)([c.A], () => c.A.showNotice()),
-        p = (0, r.bG)([_.Ay], () => _.Ay.getFlattenedGuildIds()),
-        E = (0, r.bG)([g.A], () => g.A.getGuilds()),
-        T = l.useMemo(() => {
-            let e = p
+function v(e) {
+    let { guildId: l, globalOption: n, onChange: r, renderOptionSuffix: t } = e,
+        c = (0, s.bG)([o.A], () => o.A.showNotice()),
+        m = (0, s.bG)([g.Ay], () => g.Ay.getFlattenedGuildIds()),
+        v = (0, s.bG)([p.A], () => p.A.getGuilds()),
+        b = i.useMemo(() => {
+            let e = m
                 .map((e) => {
-                    let t = E[e];
-                    return null == t ? null : { label: t.name, value: t.id };
+                    let l = v[e];
+                    return null == l ? null : { label: l.name, value: l.id };
                 })
-                .filter(m.Vq);
+                .filter(f.Vq);
             return null != n && e.unshift(n), e;
-        }, [p, E, n]),
-        S = l.useCallback(
+        }, [m, v, n]),
+        A = i.useCallback(
             (e) => {
-                let t = e?.label === n?.label && e?.value === n?.value;
-                return null == e || "" === e.value || t
+                let l = e?.label === n?.label && e?.value === n?.value;
+                return null == e || "" === e.value || l
                     ? null
-                    : (0, i.jsx)(d.Ay, { className: A.c, guild: E[e.value], size: d.Ay.Sizes.SMOL, active: !0 });
+                    : (0, a.jsx)(d.Ay, { className: x.c, guild: v[e.value], size: d.Ay.Sizes.SMOL, active: !0 });
             },
-            [E, n],
+            [v, n],
         );
-    return (0, i.jsx)(o.p, {
-        isDisabled: u,
+    return (0, a.jsx)(u.p, {
+        isDisabled: c,
         onChange: (e) => {
-            if ("" === e || e === n?.value) return void s(null);
-            let t = E[e];
-            null != t && s(t);
+            if ("" === e || e === n?.value) return void r(null);
+            let l = v[e];
+            null != l && r(l);
         },
-        value: t,
-        options: T,
-        renderOptionPrefix: S,
-        renderOptionSuffix: a,
+        value: l,
+        options: b,
+        renderOptionPrefix: A,
+        renderOptionSuffix: t,
         placeholder: h.intl.string(h.t["kMgj+e"]),
         "data-migration-pending": !0,
     });

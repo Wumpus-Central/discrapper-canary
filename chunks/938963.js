@@ -1,7 +1,7 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = { begin: /<\/?[A-Za-z_]/, end: ">", subLanguage: "xml", relevance: 0 },
-        n = {
+        n = { begin: /<\/?[A-Za-z_]/, end: ">", subLanguage: "xml", relevance: 0 },
+        i = {
             variants: [
                 { begin: /\[.+?\]\[.*?\]/, relevance: 0 },
                 { begin: /\[.+?\]\(((data|javascript|mailto):|(?:http|ftp)s?:\/\/).*?\)/, relevance: 2 },
@@ -25,7 +25,7 @@ e.exports = function (e) {
                 { begin: /\*{2}(?!\s)/, end: /\*{2}/ },
             ],
         },
-        i = {
+        s = {
             className: "emphasis",
             contains: [],
             variants: [
@@ -33,12 +33,12 @@ e.exports = function (e) {
                 { begin: /_(?![_\s])/, end: /_/, relevance: 0 },
             ],
         },
-        o = e.inherit(r, { contains: [] }),
-        s = e.inherit(i, { contains: [] });
-    r.contains.push(s), i.contains.push(o);
-    let l = [a, n];
+        a = e.inherit(r, { contains: [] }),
+        o = e.inherit(s, { contains: [] });
+    r.contains.push(o), s.contains.push(a);
+    let l = [n, i];
     return (
-        [r, i, o, s].forEach((e) => {
+        [r, s, a, o].forEach((e) => {
             e.contains = e.contains.concat(l);
         }),
         {
@@ -48,17 +48,17 @@ e.exports = function (e) {
                 {
                     className: "section",
                     variants: [
-                        { begin: "^#{1,6}", end: "$", contains: (l = l.concat(r, i)) },
+                        { begin: "^#{1,6}", end: "$", contains: (l = l.concat(r, s)) },
                         {
                             begin: "(?=^.+?\\n[=-]{2,}$)",
                             contains: [{ begin: "^[=-]*$" }, { begin: "^", end: "\\n", contains: l }],
                         },
                     ],
                 },
-                a,
+                n,
                 { className: "bullet", begin: "^[ 	]*([*+-]|(\\d+\\.))(?=\\s+)", end: "\\s+", excludeEnd: !0 },
                 r,
-                i,
+                s,
                 { className: "quote", begin: "^>\\s+", contains: l, end: "$" },
                 {
                     className: "code",
@@ -72,7 +72,7 @@ e.exports = function (e) {
                     ],
                 },
                 { begin: "^[-\\*]{3,}", end: "$" },
-                n,
+                i,
                 {
                     begin: /^\[[^\n]+\]:/,
                     returnBegin: !0,

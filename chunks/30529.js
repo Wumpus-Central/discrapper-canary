@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { X: () => a });
-var r = n(544105),
-    i = n(652215);
-function a(e) {
+n.d(t, { X: () => s });
+var i = n(544105),
+    r = n(652215);
+function s(e) {
     switch (e) {
-        case i.fg2.XBOX:
-            return r.f$.XBOX;
-        case i.fg2.PLAYSTATION:
-        case i.fg2.PLAYSTATION_STAGING:
-            return r.f$.PLAYSTATION;
+        case r.fg2.XBOX:
+            return i.f$.XBOX;
+        case r.fg2.PLAYSTATION:
+        case r.fg2.PLAYSTATION_STAGING:
+            return i.f$.PLAYSTATION;
         default:
             return null;
     }

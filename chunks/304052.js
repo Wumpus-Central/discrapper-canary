@@ -6,8 +6,8 @@ var i = n(221015),
     o = function (e) {
         var t = 1 === e;
         return function (n, o, l) {
-            for (var u, c = s(n), d = r(c), _ = a(d), f = i(o, l); _-- > 0; )
-                if (f((u = d[_]), _, c))
+            for (var u, c = s(n), d = r(c), _ = a(d), h = i(o, l); _-- > 0; )
+                if (h((u = d[_]), _, c))
                     switch (e) {
                         case 0:
                             return u;

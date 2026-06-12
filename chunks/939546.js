@@ -1,7 +1,7 @@
 t.d(a, {
     p9: () => b,
     $I: () => C,
-    xz: () => $,
+    xz: () => R,
     RZ: () => E,
     oT: () => w,
     tB: () => m,
@@ -14,7 +14,7 @@ t.d(a, {
     SJ: () => c,
     SE: () => D,
     ro: () => i,
-    D: () => R,
+    D: () => $,
     ZI: () => V,
     Ec: () => h,
     cK: () => s,
@@ -207,14 +207,14 @@ function D(e, a) {
     return e.calendar.toJulianDay(e) - a.calendar.toJulianDay(a);
 }
 function y(e, a) {
-    return p(e) - p(a);
+    return g(e) - g(a);
 }
-function p(e) {
+function g(e) {
     return 36e5 * e.hour + 6e4 * e.minute + 1e3 * e.second + e.millisecond;
 }
-let g = null;
+let p = null;
 function f() {
-    return null == g && (g = new Intl.DateTimeFormat().resolvedOptions().timeZone), g;
+    return null == p && (p = new Intl.DateTimeFormat().resolvedOptions().timeZone), p;
 }
 function v(e) {
     return e.subtract({ days: e.day - 1 });
@@ -222,10 +222,10 @@ function v(e) {
 function b(e) {
     return e.add({ days: e.calendar.getDaysInMonth(e) - e.day });
 }
-function R(e) {
+function $(e) {
     return v(e.subtract({ months: e.month - 1 }));
 }
-function $(e) {
+function R(e) {
     return e.calendar.getMinimumMonthInYear ? e.calendar.getMinimumMonthInYear(e) : 1;
 }
 function w(e) {

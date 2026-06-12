@@ -1,7 +1,7 @@
 n.d(t, { h: () => A });
 var l = n(627968),
     i = n(64700),
-    r = n(777666),
+    r = n(812993),
     s = n(661531),
     a = n(778712),
     u = n(97808),
@@ -27,8 +27,8 @@ function m(e) {
         E = `${m}-shape_mask`,
         A = `${m}-stroke_mask`,
         f = r?.width != null ? r.width : 16,
-        p = r?.height != null ? r.height : 16,
-        S = { width: t + 8, height: t + 8, x: -4, y: -4 },
+        S = r?.height != null ? r.height : 16,
+        p = { width: t + 8, height: t + 8, x: -4, y: -4 },
         N = o
             ? (0, l.jsx)("circle", { id: E, cx: t / 2, cy: t / 2, r: t / 2 })
             : (0, l.jsx)("rect", { id: E, x: 0, y: 0, width: t, height: t, rx: 8, ry: 8 });
@@ -40,9 +40,9 @@ function m(e) {
             "aria-hidden": d,
             children: [
                 (0, l.jsxs)("svg", {
-                    width: S.width,
-                    height: S.height,
-                    viewBox: `${S.x} ${S.y} ${S.width} ${S.height}`,
+                    width: p.width,
+                    height: p.height,
+                    viewBox: `${p.x} ${p.y} ${p.width} ${p.height}`,
                     className: h()(g.JW, g.Pm),
                     overflow: "visible",
                     role: "none",
@@ -54,9 +54,9 @@ function m(e) {
                                     ? (0, l.jsx)("rect", {
                                           id: I,
                                           x: t - (f + 4) + 2,
-                                          y: t - (p + 4) + 2,
+                                          y: t - (S + 4) + 2,
                                           width: f + 4,
-                                          height: p + 4,
+                                          height: S + 4,
                                           rx: t / 4,
                                           ry: t / 4,
                                       })
@@ -118,8 +118,8 @@ let A = i.memo(function (e) {
             size: g = a._3.SIZE_32,
             status: A,
             isMobile: f,
-            isTyping: p = !1,
-            "aria-hidden": S = !1,
+            isTyping: S = !1,
+            "aria-hidden": p = !1,
         } = e,
         N = (0, a.FT)(g),
         x = i.useMemo(
@@ -128,16 +128,16 @@ let A = i.memo(function (e) {
                     ? (0, l.jsx)(u.eu, {
                           src: n.getAvatarURL(t?.getGuildId(), (0, a.FT)(g), !1),
                           size: g,
-                          "aria-hidden": S,
-                          "aria-label": S ? void 0 : n.username,
+                          "aria-hidden": p,
+                          "aria-label": p ? void 0 : n.username,
                           status: A,
                           isMobile: !(c > 0) && f,
-                          isTyping: p,
+                          isTyping: S,
                       })
                     : t?.isMultiUserDM()
                       ? t?.recipients.length >= 2 && null == t.icon
                           ? (0, l.jsx)(d.A, {
-                                "aria-hidden": S,
+                                "aria-hidden": p,
                                 recipients: t.recipients,
                                 size: (function (e) {
                                     switch (e) {
@@ -158,18 +158,18 @@ let A = i.memo(function (e) {
                                             return a._3.SIZE_32;
                                     }
                                 })(g),
-                                isTyping: p,
-                                status: p ? I.clD.ONLINE : null,
+                                isTyping: S,
+                                status: S ? I.clD.ONLINE : null,
                             })
                           : (0, l.jsx)(u.eu, {
                                 src: (0, o.Y)(t) ?? void 0,
-                                "aria-hidden": S,
+                                "aria-hidden": p,
                                 size: g,
-                                status: p ? I.clD.ONLINE : null,
-                                isTyping: p,
+                                status: S ? I.clD.ONLINE : null,
+                                isTyping: S,
                             })
-                      : (0, l.jsx)(u.eu, { src: void 0, "aria-hidden": S, size: g }),
-            [S, t, f, p, c, g, A, n],
+                      : (0, l.jsx)(u.eu, { src: void 0, "aria-hidden": p, size: g }),
+            [p, t, f, S, c, g, A, n],
         );
     return c <= 0
         ? x

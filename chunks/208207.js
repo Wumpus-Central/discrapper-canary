@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => U });
+n.d(t, { A: () => k });
 var i = n(835245),
     r = n(141931),
     s = n(451988),
@@ -10,8 +10,8 @@ var i = n(835245),
     c = n(296027),
     d = n(614455),
     _ = n(871633),
-    f = n(760751),
-    h = n(763827),
+    h = n(760751),
+    f = n(763827),
     p = n(531685),
     E = n(174459),
     m = n(927813),
@@ -56,13 +56,13 @@ class T {
     }
 }
 let S = new T();
-var N = n(952818),
-    y = n(687658),
-    C = n(451314);
-let v = new o.A("RunningGameSystemMetricsMonitor"),
-    O = [50, 95, 99];
-function R(e) {
-    let t = e.getReport(O);
+var y = n(952818),
+    N = n(687658),
+    v = n(321034);
+let C = new o.A("RunningGameSystemMetricsMonitor"),
+    R = [50, 95, 99];
+function O(e) {
+    let t = e.getReport(R);
     return {
         p50: t.percentiles[50] ?? 0,
         p95: t.percentiles[95] ?? 0,
@@ -73,9 +73,9 @@ function R(e) {
     };
 }
 class b {
-    cpuHistogram = new y.d();
-    memoryHistogram = new y.d();
-    discordMemoryHistogram = new y.d();
+    cpuHistogram = new N.d();
+    memoryHistogram = new N.d();
+    discordMemoryHistogram = new N.d();
     lastCpuSnapshot = null;
     samplingInterval = null;
     isExperimentEnabled() {
@@ -101,9 +101,9 @@ class b {
             )
         )
             return null;
-        let e = R(this.cpuHistogram),
-            t = R(this.memoryHistogram),
-            n = R(this.discordMemoryHistogram);
+        let e = O(this.cpuHistogram),
+            t = O(this.memoryHistogram),
+            n = O(this.discordMemoryHistogram);
         return (
             this.resetHistograms(),
             {
@@ -129,14 +129,14 @@ class b {
         );
     }
     resetHistograms() {
-        (this.cpuHistogram = new y.d()), (this.memoryHistogram = new y.d()), (this.discordMemoryHistogram = new y.d());
+        (this.cpuHistogram = new N.d()), (this.memoryHistogram = new N.d()), (this.discordMemoryHistogram = new N.d());
     }
     async takeSample() {
         this.sampleDiscordMemory(), await this.sampleCpuAndMemory();
     }
     async sampleCpuAndMemory() {
         try {
-            let e = await C.A.getSystemMetrics();
+            let e = await v.A.getSystemMetrics();
             if (null == e) return;
             if (e.memoryTotal > 0) {
                 let t = ((e.memoryTotal - e.memoryFree) / e.memoryTotal) * 100;
@@ -149,23 +149,23 @@ class b {
             }
             this.lastCpuSnapshot = e;
         } catch (e) {
-            v.warn("Failed to sample CPU/memory metrics", e?.message);
+            C.warn("Failed to sample CPU/memory metrics", e?.message);
         }
     }
     sampleDiscordMemory() {
         try {
             let e;
             if (null == this.lastCpuSnapshot || this.lastCpuSnapshot.memoryTotal <= 0) return;
-            let t = C.A.getCurrentMemoryUsageKB();
+            let t = v.A.getCurrentMemoryUsageKB();
             if (null != t && t > 0) e = 1024 * t;
             else {
-                let t = C.A.getMemoryUsageDetails();
+                let t = v.A.getMemoryUsageDetails();
                 if (null == t || (e = Object.values(t).reduce((e, t) => e + t, 0)) <= 0) return;
             }
             let n = (e / this.lastCpuSnapshot.memoryTotal) * 100;
             this.discordMemoryHistogram.addSample(n);
         } catch (e) {
-            v.warn("Failed to sample Discord memory metrics", e?.message);
+            C.warn("Failed to sample Discord memory metrics", e?.message);
         }
     }
 }
@@ -265,7 +265,7 @@ class x extends a.A {
         let a = e.runningGame,
             o = performance.now(),
             p = t ? 0 : Math.round(o - e.lastHeartbeatTime),
-            m = a.id ?? f.A.findGame(a)?.id;
+            m = a.id ?? h.A.findGame(a)?.id;
         e.lastHeartbeatTime = o;
         let A = {
                 game_id: m,
@@ -274,13 +274,13 @@ class x extends a.A {
                 game_distributor_game_id: a.sku,
                 game_metadata: (0, _.MT)(a),
                 game_executable: (0, g.Ic)(a.exePath),
-                game_detection_enabled: (0, N.Xr)(a),
+                game_detection_enabled: (0, y.Xr)(a),
                 initial_heartbeat: t,
                 final_heartbeat: n,
                 game_session_id: e.sessionId,
                 duration_tracked_ms: p,
-                rtc_connection_id: h.A.getRTCConnectionId(),
-                media_session_id: h.A.getMediaSessionId(),
+                rtc_connection_id: f.A.getRTCConnectionId(),
+                media_session_id: f.A.getMediaSessionId(),
             },
             I = (function (e) {
                 if (!l.O) return null;
@@ -315,7 +315,7 @@ class x extends a.A {
             });
     }
     processSessionChanges() {
-        let e = N.Ay.getRunningGames(),
+        let e = y.Ay.getRunningGames(),
             t = performance.now(),
             n = new Set(),
             r = this.windowTrackingEnabled ? this.peekWindowStateDurations() : null;
@@ -359,4 +359,4 @@ class x extends a.A {
         for (let n of this.gameSessions.values()) this.logHeartbeat(n, !1, !1, e, t);
     };
 }
-let U = new x();
+let k = new x();

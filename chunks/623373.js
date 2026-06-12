@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $K: () => a, Ab: () => u, B1: () => d, CW: () => s, YW: () => h, ex: () => c, rb: () => f, v8: () => _ });
+n.d(t, { $K: () => a, Ab: () => u, B1: () => d, CW: () => s, YW: () => f, ex: () => c, rb: () => h, v8: () => _ });
 var i = n(575593),
     r = n(652215);
 let s = (e) => {
@@ -34,8 +34,8 @@ let s = (e) => {
         }),
     d = (e) => e.type === i.R.VARIANTS_GROUP && null != e.variants && 0 !== e.variants.length,
     _ = (e) => (d(e) ? e.variants.map((e) => e.skuId) : [e.skuId]),
-    f = (e, t) => (d(e) && null != t ? (e.variants[t] ?? e) : e),
-    h = (e) => {
+    h = (e, t) => (d(e) && null != t ? (e.variants[t] ?? e) : e),
+    f = (e) => {
         if (null == e) return null;
         if (e.type === i.R.VARIANTS_GROUP) {
             if (null == e.variants || 0 === e.variants.length) return null;

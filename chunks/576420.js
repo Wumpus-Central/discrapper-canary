@@ -1,8 +1,8 @@
-n.d(t, { A2: () => a, Ay: () => u, WS: () => s });
+n.d(t, { A2: () => a, Ay: () => u, WS: () => r });
 var l = n(839214),
     i = n(914853);
-let s = 1e3,
-    r = (0, l.D)((e, t) => ({
+let r = 1e3,
+    s = (0, l.D)((e, t) => ({
         activeTab: i.x.FRIENDS,
         recentlyAddedFavoriteTimestampMsByKey: {},
         setActiveTab: (n) => {
@@ -28,6 +28,6 @@ let s = 1e3,
         },
     }));
 function a(e) {
-    return r.useState((t) => t.recentlyAddedFavoriteTimestampMsByKey[e] ?? null);
+    return s.useState((t) => t.recentlyAddedFavoriteTimestampMsByKey[e] ?? null);
 }
-let u = r;
+let u = s;

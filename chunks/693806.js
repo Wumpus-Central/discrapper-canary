@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(961350),
-    i = n(734057),
-    a = n(977997);
-function s() {
-    let e = a.A.getVoiceStateForSession(r.default.getId(), r.default.getSessionId()),
+n.d(t, { A: () => a });
+var i = n(495544),
+    r = n(734057),
+    s = n(977997);
+function a() {
+    let e = s.A.getVoiceStateForSession(i.default.getId(), i.default.getSessionId()),
         t = e?.channelId;
-    return i.A.getChannel(t);
+    return r.A.getChannel(t);
 }

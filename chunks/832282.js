@@ -1,23 +1,23 @@
-var r = n(225063),
-    i = n(993001);
+var i = n(225063),
+    r = n(993001);
 (e.exports = function e(t, n) {
     var s;
     this.next ||
-        (i(e.prototype),
-        i(e.prototype, ("function" == typeof Symbol && Symbol.asyncIterator) || "@asyncIterator", function () {
+        (r(e.prototype),
+        r(e.prototype, ("function" == typeof Symbol && Symbol.asyncIterator) || "@asyncIterator", function () {
             return this;
         })),
-        i(
+        r(
             this,
             "_invoke",
-            function (e, i, a) {
+            function (e, r, a) {
                 function o() {
-                    return new n(function (i, s) {
-                        !(function e(i, s, a, o) {
+                    return new n(function (r, s) {
+                        !(function e(r, s, a, o) {
                             try {
-                                var l = t[i](s),
+                                var l = t[r](s),
                                     u = l.value;
-                                return u instanceof r
+                                return u instanceof i
                                     ? n.resolve(u.v).then(
                                           function (t) {
                                               e("next", t, a, o);
@@ -37,7 +37,7 @@ var r = n(225063),
                             } catch (e) {
                                 o(e);
                             }
-                        })(e, a, i, s);
+                        })(e, a, r, s);
                     });
                 }
                 return (s = s ? s.then(o, o) : o());

@@ -1,14 +1,14 @@
-a.d(_, { A: () => d });
-var i = a(627968);
-a(64700);
-var t = a(503698),
-    r = a.n(t),
-    l = a(176781),
-    n = a(870386);
-function d(e) {
-    let { className: _ } = e;
-    return (0, i.jsx)("div", {
-        className: r()(n.L, _),
-        children: (0, i.jsx)(l.x, { size: "lg", color: "currentColor" }),
+c.d(s, { A: () => d });
+var e = c(627968);
+c(64700);
+var i = c(503698),
+    a = c.n(i),
+    n = c(176781),
+    t = c(870386);
+function d(r) {
+    let { className: s } = r;
+    return (0, e.jsx)("div", {
+        className: a()(t.L, s),
+        children: (0, e.jsx)(n.x, { size: "lg", color: "currentColor" }),
     });
 }

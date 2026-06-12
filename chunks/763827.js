@@ -6,7 +6,7 @@ var s = n(17928),
     o = n(228366),
     l = n(507821),
     u = n(735438),
-    c = n(761853),
+    c = n(890063),
     d = n(977997),
     _ = n(607567),
     h = n(731854);
@@ -108,7 +108,7 @@ let I = new p.A("RTCConnectionStore"),
 function w(e, t) {
     if (null == r) throw Error("Creating RTCConnection without session.");
     let i = g.default.getId(),
-        s = new (n(492737).A)({ userId: i, sessionId: r, guildId: e, channelId: t, joinVoiceId: D });
+        s = new (n(930187).A)({ userId: i, sessionId: r, guildId: e, channelId: t, joinVoiceId: D });
     return (
         s.on(l.q.State, (e, t, n) => {
             o.h.wait(() => o.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n }));

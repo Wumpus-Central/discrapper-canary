@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
     G8: () => D,
-    NV: () => O,
-    QY: () => v,
+    NV: () => R,
+    QY: () => C,
     V: () => b,
     ax: () => M,
     ds: () => L,
-    fK: () => y,
+    fK: () => N,
     fS: () => w,
-    nh: () => C,
-    p6: () => R,
+    nh: () => v,
+    p6: () => O,
 }),
     n(938796),
     n(323874),
@@ -26,8 +26,8 @@ var i = n(735438),
     c = n(935208),
     d = n(652215),
     _ = n(581619);
-let f = /sketchfab/i,
-    h = /^https:\/\/sketchfab\.com/i,
+let h = /sketchfab/i,
+    f = /^https:\/\/sketchfab\.com/i,
     p = /youtube|steam|imgur|vimeo|sketchfab|soundcloud|streamable|twitch|vid\.me|twitter/i,
     E = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop$/,
     m = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/shop\/([0-9]+)$/,
@@ -40,7 +40,7 @@ function S(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function N(e) {
+function y(e) {
     let {
         url: t,
         proxy_url: n,
@@ -65,7 +65,7 @@ function N(e) {
         contentType: c ?? void 0,
     };
 }
-function y(e, t, n) {
+function N(e, t, n) {
     var i, s;
     let l,
         E = {
@@ -97,13 +97,13 @@ function y(e, t, n) {
         switch (E.type) {
             case d.Auw.ARTICLE:
             case d.Auw.IMAGE:
-                E.image = N(n.thumbnail);
+                E.image = y(n.thumbnail);
                 break;
             default:
-                E.thumbnail = N(n.thumbnail);
+                E.thumbnail = y(n.thumbnail);
         }
     if (
-        (null != n.image && S(n.image) && (E.image = N(n.image)),
+        (null != n.image && S(n.image) && (E.image = y(n.image)),
         null != n.video &&
             (null == E.thumbnail &&
                 null != n.video.proxy_url &&
@@ -123,7 +123,7 @@ function y(e, t, n) {
             null != E.thumbnail &&
                 S(n.video) &&
                 (function (e, t, n) {
-                    if ((null != t && f.test(t.name)) || h.test(n.url)) return !1;
+                    if ((null != t && h.test(t.name)) || f.test(n.url)) return !1;
                     let i = null != n.proxy_url || /^https:/i.test(n.url);
                     return (
                         null != e &&
@@ -132,7 +132,7 @@ function y(e, t, n) {
                         i
                     );
                 })(t, n.provider, n.video) &&
-                (E.video = N(n.video))),
+                (E.video = y(n.video))),
         _.p.has(E.type)
             ? (E.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: i } = e;
@@ -146,7 +146,7 @@ function y(e, t, n) {
     }
     return E;
 }
-function C(e) {
+function v(e) {
     let t = new Map(),
         n = [];
     return (
@@ -164,7 +164,7 @@ function C(e) {
         n
     );
 }
-function v(e, t) {
+function C(e, t) {
     if ("YouTube" === e || "TikTok" === e) return e;
     if (null != t)
         try {
@@ -174,11 +174,11 @@ function v(e, t) {
         } catch {}
     return e;
 }
-function O(e) {
+function R(e) {
     let { image: t, video: n, type: i, author: r, rawTitle: s } = e;
     return (null != t || null != n) && (i === d.Auw.GIFV || (i !== d.Auw.RICH && null == r && null == s));
 }
-function R(e) {
+function O(e) {
     return e.type === d.Auw.ARTICLE && null != e.url && (m.test(e.url) || E.test(e.url));
 }
 function b(e) {

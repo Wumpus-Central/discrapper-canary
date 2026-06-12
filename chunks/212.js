@@ -1,5 +1,5 @@
-var r = n(815428),
-    i = /^\s+/;
+var i = n(815428),
+    r = /^\s+/;
 e.exports = function (e) {
-    return e ? e.slice(0, r(e) + 1).replace(i, "") : e;
+    return e ? e.slice(0, i(e) + 1).replace(r, "") : e;
 };

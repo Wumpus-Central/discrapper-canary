@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(734057);
-let i = new (class {
+n.d(t, { A: () => r });
+var i = n(734057);
+let r = new (class {
     filterTagIds;
     sortOrder;
     layout;
@@ -19,7 +19,7 @@ let i = new (class {
         this.tagSetting = e;
     };
     getFilterTagIdsAnalytics = () => (null != this.filterTagIds ? Array.from(this.filterTagIds) : []);
-    getSortOrderAnalytics = (e) => this.sortOrder ?? r.A.getChannel(e)?.getDefaultSortOrder();
-    getLayoutAnalytics = (e) => this.layout ?? r.A.getChannel(e)?.getDefaultLayout();
-    getTagSettingAnalytics = (e) => this.tagSetting ?? r.A.getChannel(e)?.getDefaultTagSetting();
+    getSortOrderAnalytics = (e) => this.sortOrder ?? i.A.getChannel(e)?.getDefaultSortOrder();
+    getLayoutAnalytics = (e) => this.layout ?? i.A.getChannel(e)?.getDefaultLayout();
+    getTagSettingAnalytics = (e) => this.tagSetting ?? i.A.getChannel(e)?.getDefaultTagSetting();
 })();

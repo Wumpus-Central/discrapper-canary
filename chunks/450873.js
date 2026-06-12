@@ -1,6 +1,6 @@
-var r = n(59221),
-    i = n(400095),
-    s = Object.prototype.hasOwnProperty;
-e.exports = i(function (e, t, n) {
-    s.call(e, n) ? ++e[n] : r(e, n, 1);
+var i = s(59221),
+    r = s(400095),
+    l = Object.prototype.hasOwnProperty;
+e.exports = r(function (e, t, s) {
+    l.call(e, s) ? ++e[s] : i(e, s, 1);
 });

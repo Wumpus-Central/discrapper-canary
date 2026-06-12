@@ -1,78 +1,78 @@
 n.d(t, { A: () => f });
-var i = n(64700),
-    a = n(17928),
-    r = n(587895),
-    l = n(429913),
-    s = n(201718),
+var l = n(64700),
+    i = n(17928),
+    s = n(587895),
+    r = n(429913),
+    a = n(201718),
     o = n(339580),
-    d = n(207803),
+    u = n(207803),
     c = n(633075),
-    u = n(841595),
-    h = n(576622),
-    m = n(385113),
-    p = n(369374),
-    g = n(188951);
+    d = n(841595),
+    m = n(903209),
+    p = n(385113),
+    g = n(369374),
+    h = n(188951);
 function f(e, t, n) {
-    var f, _, x, A;
-    let E,
-        S,
-        { enabled: I } = p.A.useConfig({ location: n ?? "use_user_application_widget_data" }),
-        v = (function (e) {
-            let { data: t, isLoading: n } = (0, d.FY)();
+    var f, A, x, E;
+    let v,
+        C,
+        { enabled: I } = g.A.useConfig({ location: n ?? "use_user_application_widget_data" }),
+        _ = (function (e) {
+            let { data: t, isLoading: n } = (0, u.FY)();
             return null == e ? [!1, null] : [n, t?.find((t) => t.applicationId === e) ?? null];
         })(I ? null : t),
-        b =
+        j =
             ((f = I ? t : null),
-            (0, g.A)(null != f ? [f] : []),
-            (0, a.yK)([m.A], () => {
+            (0, h.A)(null != f ? [f] : []),
+            (0, i.yK)([p.A], () => {
                 if (null == f) return [!1, null];
-                let e = m.A.getConfig(f) ?? null,
-                    t = m.A.getFetchState(f);
-                return [(t === m.e.NOT_FETCHED || t === m.e.FETCHING) && null == e, e];
+                let e = p.A.getConfig(f) ?? null,
+                    t = p.A.getFetchState(f);
+                return [(t === p.e.NOT_FETCHED || t === p.e.FETCHING) && null == e, e];
             }, [f])),
-        [C, T] = I ? b : v,
-        [y, j] =
-            ((_ = null != T ? t : null),
-            (E = (0, l.h)(_)),
-            [(0, a.bG)([r.A], () => null != _ && r.A.isFetchingApplication(_), [_]) && null == E, E ?? null]),
-        w = null != T && null != j,
-        [N, R] =
-            ((x = w ? e : null),
-            (A = w ? t : null),
-            (S = (0, a.bG)([o.A], () => null != x && o.A.getFetchState(x) === o.e.NOT_FETCHED, [x])),
-            i.useEffect(() => {
-                S && null != x && s.A.fetchUserApplicationIdentitiesWithProfiles(x);
-            }, [S, x]),
-            (0, a.yK)([o.A], () => {
-                if (null == x || null == A) return [!1, null];
-                let e = o.A.getUserIdentityByApplication(x, A) ?? null;
+        [S, N] = I ? j : _,
+        [b, y] =
+            ((A = null != N ? t : null),
+            (v = (0, r.h)(A)),
+            [(0, i.bG)([s.A], () => null != A && s.A.isFetchingApplication(A), [A]) && null == v, v ?? null]),
+        T = null != N && null != y,
+        [w, D] =
+            ((x = T ? e : null),
+            (E = T ? t : null),
+            (C = (0, i.bG)([o.A], () => null != x && o.A.getFetchState(x) === o.e.NOT_FETCHED, [x])),
+            l.useEffect(() => {
+                C && null != x && a.A.fetchUserApplicationIdentitiesWithProfiles(x);
+            }, [C, x]),
+            (0, i.yK)([o.A], () => {
+                if (null == x || null == E) return [!1, null];
+                let e = o.A.getUserIdentityByApplication(x, E) ?? null;
                 return [(o.A.isFetchingUser(x) || o.A.getFetchState(x) === o.e.NOT_FETCHED) && null == e, e];
-            }, [x, A])),
-        [M, O] = (function (e) {
-            let [t, n] = (0, a.yK)(
-                    [u.A],
-                    () => (null != e ? [u.A.isFetchingProfile(e), u.A.getUserProfile(e) ?? null] : [!1, null]),
+            }, [x, E])),
+        [R, k] = (function (e) {
+            let [t, n] = (0, i.yK)(
+                    [d.A],
+                    () => (null != e ? [d.A.isFetchingProfile(e), d.A.getUserProfile(e) ?? null] : [!1, null]),
                     [e],
                 ),
-                r = null != e && !t && null == n;
+                s = null != e && !t && null == n;
             return (
-                i.useEffect(() => {
-                    r && null != e && (0, h.A)(e);
-                }, [r, e]),
-                [(t || r) && null == n, n]
+                l.useEffect(() => {
+                    s && null != e && (0, m.A)(e);
+                }, [s, e]),
+                [(t || s) && null == n, n]
             );
-        })(w ? e : null),
-        k = C || y || N || M;
-    return i.useMemo(
+        })(T ? e : null),
+        L = S || b || w || R;
+    return l.useMemo(
         () => ({
             isV2: I,
-            isLoading: k,
-            application: j,
-            applicationWidgetConfig: T,
-            userApplicationIdentity: R,
+            isLoading: L,
+            application: y,
+            applicationWidgetConfig: N,
+            userApplicationIdentity: D,
             profileApplicationWidget:
-                O?.widgets?.find((e) => null != t && e instanceof c.R && e.applicationId === t) ?? null,
+                k?.widgets?.find((e) => null != t && e instanceof c.R && e.applicationId === t) ?? null,
         }),
-        [j, t, T, R, k, I, O],
+        [y, t, N, D, L, I, k],
     );
 }

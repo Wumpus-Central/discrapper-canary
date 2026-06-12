@@ -1,25 +1,25 @@
-c.d(e, { default: () => r });
-var a = c(627968);
-c(64700);
-var d = c(192308),
-    n = c(523527),
-    o = c(182681),
-    l = c(976860),
-    s = c(954571),
-    i = c(652215);
+e.d(a, { default: () => r });
+var o = e(627968);
+e(64700);
+var c = e(192308),
+    n = e(523527),
+    l = e(366638),
+    s = e(976860),
+    d = e(174459),
+    i = e(652215);
 function r(t) {
-    let { onClose: e, ...c } = t;
-    return (0, a.jsx)(o.default, {
-        onClose: e,
+    let { onClose: a, ...e } = t;
+    return (0, o.jsx)(l.default, {
+        onClose: a,
         handleLearnMore: function () {
             (0, n.A)(),
-                (0, d.closeAllModals)(),
-                s.default.track(i.HAw.PREMIUM_PROMOTION_OPENED, {
+                (0, c.closeAllModals)(),
+                d.default.track(i.HAw.PREMIUM_PROMOTION_OPENED, {
                     location_section: i.JJy.STREAM_UPSELL_MODAL,
                     location_object: i.ZSU.NAVIGATION_LINK,
                 }),
-                (0, l.pX)(i.BVt.APPLICATION_STORE);
+                (0, s.pX)(i.BVt.APPLICATION_STORE);
         },
-        ...c,
+        ...e,
     });
 }

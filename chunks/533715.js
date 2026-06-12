@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { U: () => i });
-var r = n(64700);
-function i(e) {
-    let t = (0, r.useRef)(null),
-        n = (0, r.useRef)(void 0),
-        i = (0, r.useCallback)(
+n.d(t, { U: () => r });
+var i = n(64700);
+function r(e) {
+    let t = (0, i.useRef)(null),
+        n = (0, i.useRef)(void 0),
+        r = (0, i.useCallback)(
             (t) => {
                 if ("function" == typeof e) {
                     let n = e(t);
@@ -22,7 +22,7 @@ function i(e) {
             },
             [e],
         );
-    return (0, r.useMemo)(
+    return (0, i.useMemo)(
         () => ({
             get current() {
                 return t.current;
@@ -30,9 +30,9 @@ function i(e) {
             set current(value) {
                 (t.current = value),
                     n.current && (n.current(), (n.current = void 0)),
-                    null != value && (n.current = i(value));
+                    null != value && (n.current = r(value));
             },
         }),
-        [i],
+        [r],
     );
 }

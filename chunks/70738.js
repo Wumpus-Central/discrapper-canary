@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { mF: () => a, tX: () => r, vf: () => i });
-let r = 2 * n(927813).A.Millis.DAY;
-function i(e) {
+n.d(t, { mF: () => a, tX: () => i, vf: () => r });
+let i = 2 * n(927813).A.Millis.DAY;
+function r(e) {
     let { joinedAt: t, userId: n } = e;
     return null == t ? null : { guild_joined_at: new Date(t).getTime(), user_id: n };
 }

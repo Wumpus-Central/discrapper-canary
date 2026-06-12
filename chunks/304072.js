@@ -1,20 +1,20 @@
 "use strict";
 n.d(t, { A: () => a });
-var l = n(64700),
-    i = n(451988),
+var i = n(64700),
+    r = n(451988),
     s = n(444927);
 function a(e, t) {
-    let [n, a] = (0, l.useState)(e),
-        r = (0, s.A)(() => new i.Ep());
+    let [n, a] = (0, i.useState)(e),
+        o = (0, s.A)(() => new r.Ep());
     return (
-        (0, l.useEffect)(() => () => r.stop(), [r]),
+        (0, i.useEffect)(() => () => o.stop(), [o]),
         [
             n,
-            (0, l.useCallback)(
+            (0, i.useCallback)(
                 (n) => {
-                    a(n), n !== e && r.start(t, () => a(e));
+                    a(n), n !== e && o.start(t, () => a(e));
                 },
-                [t, e, r],
+                [t, e, o],
             ),
         ]
     );

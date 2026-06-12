@@ -3,16 +3,16 @@ let i, r, s;
 n.d(t, {
     EL: () => A,
     JK: () => T,
-    MX: () => v,
+    MX: () => C,
     PR: () => S,
-    SB: () => C,
+    SB: () => v,
     TX: () => p,
-    UC: () => N,
-    aX: () => O,
+    UC: () => y,
+    aX: () => R,
     bG: () => I,
-    m: () => y,
+    m: () => N,
     pX: () => m,
-    sY: () => R,
+    sY: () => O,
     uh: () => g,
 }),
     n(321073),
@@ -31,9 +31,9 @@ __OVERLAY__
     : (i = (0, a.zR)()).block((e, t) => {
           if ("POP" === t && !p()) return !1;
       });
-let f = !1,
-    h = i.listen((e, t) => {
-        "REPLACE" !== t && ((f = !0), h());
+let h = !1,
+    f = i.listen((e, t) => {
+        "REPLACE" !== t && ((h = !0), f());
     });
 function p() {
     if (l._.hasSubscribers(c.jej.MODAL_CLOSE)) {
@@ -80,13 +80,13 @@ function T() {
 function S() {
     return r;
 }
-function N() {
+function y() {
     return s;
 }
-function y(e) {
+function N(e) {
     return null == e && (e = i.location.pathname ?? ""), !e.startsWith(c.BVt.HANDOFF);
 }
-function C(e) {
+function v(e) {
     if ((null == e && (e = i.location.pathname ?? ""), e.startsWith(c.BVt.LOGIN))) return c.S3d.LOGIN;
     if (e.startsWith(c.BVt.REGISTER)) return c.S3d.REGISTER;
     if (e.startsWith(c.BVt.INVITE(""))) return c.S3d.INVITE;
@@ -104,12 +104,12 @@ function C(e) {
     else if (e.startsWith(c.BVt.ACCOUNT_REVERT(""))) return c.S3d.ACCOUNT_REVERT;
     return e;
 }
-function v() {
-    return f;
-}
-function O() {
-    p() && ((r = null), i.goBack());
+function C() {
+    return h;
 }
 function R() {
+    p() && ((r = null), i.goBack());
+}
+function O() {
     p() && ((r = null), i.goForward());
 }

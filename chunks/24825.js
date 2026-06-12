@@ -13,13 +13,13 @@ let n = (l) => {
             colorClass: h = "",
             ...d
         } = l,
-        o = (0, r.J)(e),
-        v = o?.width ?? t,
-        f = o?.height ?? n;
+        v = (0, r.J)(e),
+        o = v?.width ?? t,
+        f = v?.height ?? n;
     return (0, s.jsxs)("svg", {
         ...(0, i.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
-        width: v,
+        width: o,
         height: f,
         fill: "none",
         viewBox: "0 0 24 24",

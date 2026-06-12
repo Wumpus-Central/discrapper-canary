@@ -1,79 +1,79 @@
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.FileTypes = t.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = void 0);
-let n = i(817762),
-    r = i(639371),
-    o = i(536168),
-    a = i(868791),
-    s = i(775356),
-    l = i(501778),
-    u = i(636102);
+let i = n(817762),
+    r = n(639371),
+    o = n(536168),
+    a = n(868791),
+    s = n(775356),
+    l = n(501778),
+    u = n(636102);
 t.FILE_TYPES_REQUIRED_ADDITIONAL_CHECK = ["m4v", "flv", "mp4", "mkv", "webm", "avif", "heic"];
 class c {
     static getInfoByName(e) {
-        return (0, n.fetchFromObject)(c, e.toUpperCase());
+        return (0, i.fetchFromObject)(c, e.toUpperCase());
     }
     static getSignaturesByName(e) {
-        let { signatures: t } = (0, n.fetchFromObject)(c, e.toUpperCase());
+        let { signatures: t } = (0, i.fetchFromObject)(c, e.toUpperCase());
         return t;
     }
     static detectSignature(e, t) {
-        for (let i of t) {
+        for (let n of t) {
             let t = !0,
-                n = i.offset || 0,
+                i = n.offset || 0,
                 r = 0;
-            for (let o = 0; o < i.sequence.length; o++) {
-                if (i.skippedBytes && i.skippedBytes.includes(o)) {
+            for (let o = 0; o < n.sequence.length; o++) {
+                if (n.skippedBytes && n.skippedBytes.includes(o)) {
                     r++;
                     continue;
                 }
-                if (e[n + o] !== i.sequence[o - r]) {
+                if (e[i + o] !== n.sequence[o - r]) {
                     t = !1;
                     break;
                 }
             }
-            if (t) return i;
+            if (t) return n;
         }
     }
     static detectTypeByAdditionalCheck(e, t) {
-        let i = t.map((e) => e.extension);
-        if (i.some((e) => ["m4v", "flv", "mp4", "heic"].includes(e)))
-            return i.includes("heic") && (0, u.isHEIC)(e)
+        let n = t.map((e) => e.extension);
+        if (n.some((e) => ["m4v", "flv", "mp4", "heic"].includes(e)))
+            return n.includes("heic") && (0, u.isHEIC)(e)
                 ? "heic"
                 : (0, u.isFLV)(e)
                   ? "flv"
                   : (0, u.isM4V)(e) && !(0, u.isHEIC)(e)
                     ? "m4v"
                     : "mp4";
-        if (i.some((e) => ["mkv", "webm"].includes(e))) {
-            let t = (0, n.findMatroskaDocTypeElements)(e);
+        if (n.some((e) => ["mkv", "webm"].includes(e))) {
+            let t = (0, i.findMatroskaDocTypeElements)(e);
             if ("mkv" === t && (0, u.isMKV)(e)) return "mkv";
             if ("webm" === t && (0, u.isWEBM)(e)) return "webm";
-        } else if (i.some((e) => ["avif"].includes(e)) && (0, n.isAvifStringIncluded)(e)) return "avif";
+        } else if (n.some((e) => ["avif"].includes(e)) && (0, i.isAvifStringIncluded)(e)) return "avif";
     }
     static detectbBySignatures(e, t) {
-        for (let i of t) {
+        for (let n of t) {
             let t = 0,
-                n = !0,
-                r = i.offset || 0,
-                o = (null == i ? void 0 : i.skippedBytes)
-                    ? i.sequence.length + i.skippedBytes.length
-                    : i.sequence.length;
+                i = !0,
+                r = n.offset || 0,
+                o = (null == n ? void 0 : n.skippedBytes)
+                    ? n.sequence.length + n.skippedBytes.length
+                    : n.sequence.length;
             for (let a = 0; a < o; a++) {
-                if (i.skippedBytes && i.skippedBytes.includes(a)) {
+                if (n.skippedBytes && n.skippedBytes.includes(a)) {
                     t++;
                     continue;
                 }
-                if (e[r + a] !== i.sequence[a - t]) {
-                    n = !1;
+                if (e[r + a] !== n.sequence[a - t]) {
+                    i = !1;
                     break;
                 }
             }
-            if (n) return i;
+            if (i) return n;
         }
     }
     static checkByFileType(e, t) {
         if (Object.prototype.hasOwnProperty.call(c, t.toUpperCase())) {
-            let i = c.getSignaturesByName(t.toUpperCase());
-            if (c.detectSignature(e, i)) return !0;
+            let n = c.getSignaturesByName(t.toUpperCase());
+            if (c.detectSignature(e, n)) return !0;
         }
         return !1;
     }

@@ -1,4 +1,4 @@
-i.d(t, { F: () => N });
+i.d(t, { F: () => f });
 var n = i(419954),
     s = i(780964),
     l = i(627968),
@@ -38,7 +38,7 @@ function E() {
                 }),
             [],
         ),
-        T = r.useCallback((e) => {
+        S = r.useCallback((e) => {
             n(e),
                 h.nextTick(() => {
                     d.Ay.updateLocale(e),
@@ -52,24 +52,24 @@ function E() {
         description: m.intl.string(m.t.rTPlcq),
         value: t,
         options: E,
-        onSelectionChange: T,
+        onSelectionChange: S,
     });
 }
-let T = (0, n.E2)(s.X.LANGUAGE_SELECT_SETTING, {
+let S = (0, n.E2)(s.X.LANGUAGE_SELECT_SETTING, {
     useSearchTerms: () => [m.intl.string(m.t.IHMsPn)],
     Component: () => (0, l.jsx)(E, {}),
 });
-var x = i(873298),
-    S = i(885386);
+var T = i(873298),
+    x = i(885386);
 let p = (0, n.Qx)(s.X.TIME_FORMAT_SETTING, {
         useSearchTerms: () => [m.intl.string(m.t.dyamEI), m.intl.string(m.t.p8NOwi), m.intl.string(m.t["+o/sOo"])],
         useTitle: () => m.intl.string(m.t.dyamEI),
-        useValue: () => S.PZ.useSetting(),
-        setValue: (e) => S.PZ.updateSetting(e),
+        useValue: () => x.PZ.useSetting(),
+        setValue: (e) => x.PZ.updateSetting(e),
         useOptions: () => [
-            { name: m.intl.string(m.t.FMWYvb), value: x.PZ.AUTO },
-            { name: m.intl.string(m.t.p8NOwi), value: x.PZ.H12 },
-            { name: m.intl.string(m.t["+o/sOo"]), value: x.PZ.H23 },
+            { name: m.intl.string(m.t.FMWYvb), value: T.PZ.AUTO },
+            { name: m.intl.string(m.t.p8NOwi), value: T.PZ.H12 },
+            { name: m.intl.string(m.t["+o/sOo"]), value: T.PZ.H23 },
         ],
     }),
-    N = (0, n.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [T, p] });
+    f = (0, n.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [S, p] });

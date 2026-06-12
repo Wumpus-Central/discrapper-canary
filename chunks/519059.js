@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { HF: () => f, f8: () => h, c: () => _ });
+n.d(t, { HF: () => h, f8: () => f, c: () => _ });
 var i = n(945810),
     r = n(17928),
     s = n(228366);
@@ -43,7 +43,7 @@ function _(e) {
         i = p.useConfig({ location: e });
     return !t && n && i.icymiDesktopEnabled;
 }
-function f(e) {
+function h(e) {
     let t = u.get(c),
         { enabled: n } = d.getConfig({ location: e });
     {
@@ -51,7 +51,7 @@ function f(e) {
         return !t && n && i;
     }
 }
-let h = (0, i.mj)({
+let f = (0, i.mj)({
         name: "2026-03-icymi-staff-debugging-utility",
         kind: "user",
         defaultConfig: { enabled: !1 },

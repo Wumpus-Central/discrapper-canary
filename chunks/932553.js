@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Wz: "devBanner__56d75",
     sr: "local__56d75",
     mr: "staging__56d75",

@@ -1,39 +1,39 @@
-i.d(t, { A: () => v });
-var l = i(481613),
-    n = i.n(l),
-    s = i(400253),
-    a = i(742821),
-    r = i(80703),
+i.d(e, { A: () => A });
+var a = i(481613),
+    n = i.n(a),
+    r = i(400253),
+    u = i(742821),
+    d = i(80703),
     c = i(803306),
-    d = i(976860),
-    o = i(495544),
-    u = i(650048),
-    m = i(954571),
-    x = i(877062),
+    l = i(976860),
+    f = i(495544),
+    p = i(650048),
+    s = i(174459),
+    o = i(877062),
     h = i(652215);
-async function g(e) {
-    let t = n().os?.family;
-    if ("Android" === t || "iOS" === t) {
-        let t = o.default.getFingerprint() ?? o.default.getId(),
-            i = (0, a.I_)();
-        if (null == t && o.default.isAuthenticated())
+async function g(t) {
+    let e = n().os?.family;
+    if ("Android" === e || "iOS" === e) {
+        let e = f.default.getFingerprint() ?? f.default.getId(),
+            i = (0, u.I_)();
+        if (null == e && f.default.isAuthenticated())
             try {
-                await (0, c.rQ)(), (t = o.default.getId());
+                await (0, c.rQ)(), (e = f.default.getId());
             } catch {}
-        return (0, a.Ay)((0, s.BH)(), { utmSource: e, fingerprint: t, attemptId: i });
+        return (0, u.Ay)((0, r.BH)(), { utmSource: t, fingerprint: e, attemptId: i });
     }
     return "discord://";
 }
-async function v(e) {
-    let t = await g(e),
-        i = (0, a.X7)(t);
+async function A(t) {
+    let e = await g(t),
+        i = (0, u.X7)(e);
     null != i &&
-        m.default.track(h.HAw.DEEP_LINK_CLICKED, {
-            fingerprint: (0, r.v)(i.fingerprint),
+        s.default.track(h.HAw.DEEP_LINK_CLICKED, {
+            fingerprint: (0, d.v)(i.fingerprint),
             attempt_id: i.attemptId,
             source: i.utmSource,
         }),
-        x.A.launch(t, (e) => {
-            e || (0, d.bG)(u.A.fallbackRoute);
+        o.A.launch(e, (t) => {
+            t || (0, l.bG)(p.A.fallbackRoute);
         });
 }

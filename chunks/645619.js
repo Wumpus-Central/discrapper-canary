@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => h });
 var i = n(17928),
     r = n(228366),
     s = n(71393),
     a = n(568065),
     o = n(652215);
 let l = {};
-function d(e) {
+function u(e) {
     let t = s.A.getGuild(e),
         n = t?.features.has(o.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0 ? 0 : o.M2T[t?.premiumTier ?? o.TVA.NONE];
     for (let [i, r] of Object.entries(a.sy))
@@ -16,22 +16,22 @@ function d(e) {
             (n += r.boostPrice);
     return n;
 }
-function _(e) {
+function c(e) {
     if (null == l[e]) {
-        let t = d(e);
+        let t = u(e);
         l[e] = { allPowerups: {}, powerupCatalog: {}, unlockedPowerups: {}, appliedBoosts: t };
     }
     return l[e];
 }
-function u(e, t) {
+function d(e, t) {
     let { guildId: n, entitlements: i } = e,
-        r = _(n);
+        r = c(n);
     i.forEach((e) => {
         t ? (r.unlockedPowerups[e.sku_id] = e) : delete r.unlockedPowerups[e.sku_id];
     }),
-        (l = { ...l, [n]: { ...r, appliedBoosts: d(n) } });
+        (l = { ...l, [n]: { ...r, appliedBoosts: u(n) } });
 }
-class c extends i.Ay.PersistedStore {
+class _ extends i.Ay.PersistedStore {
     static displayName = "GuildPowerupsStore";
     static persistKey = "GuildPowerupsStore";
     static migrations = [
@@ -82,13 +82,13 @@ class c extends i.Ay.PersistedStore {
         return null != e && l[e]?.hasFetchedUnlockedPowerups === !0;
     }
 }
-let E = new c(r.h, {
+let h = new _(r.h, {
     LOGOUT: function () {
         l = {};
     },
     GUILD_POWERUP_CATALOG_FETCH_SUCCESS: function (e) {
         let { guildId: t, allPowerups: n, powerupCatalog: i } = e,
-            r = _(t);
+            r = c(t);
         l = {
             ...l,
             [t]: {
@@ -102,8 +102,8 @@ let E = new c(r.h, {
     },
     GUILD_BOOST_ENTITLEMENTS_FETCH_SUCCESS: function (e) {
         let { guildId: t, unlockedPowerups: n } = e,
-            i = _(t),
-            r = d(t);
+            i = c(t),
+            r = u(t);
         l = {
             ...l,
             [t]: {
@@ -116,19 +116,19 @@ let E = new c(r.h, {
         };
     },
     GUILD_POWERUP_ENTITLEMENTS_CREATE: function (e) {
-        u(e, !0);
+        d(e, !0);
     },
     GUILD_POWERUP_ENTITLEMENTS_DELETE: function (e) {
-        u(e, !1);
+        d(e, !1);
     },
     GUILD_UPDATE: function (e) {
         let {
             guild: { id: t },
         } = e;
-        l[t] = { ..._(t), appliedBoosts: d(t) };
+        l[t] = { ...c(t), appliedBoosts: u(t) };
     },
     GAME_SERVER_FETCH_INSTANCES_SUCCESS: function (e) {
         let { guildId: t } = e;
-        l[t] = { ..._(t), appliedBoosts: d(t) };
+        l[t] = { ...c(t), appliedBoosts: u(t) };
     },
 });

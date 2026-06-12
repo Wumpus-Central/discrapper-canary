@@ -1,5 +1,5 @@
-a.d(t, { s: () => i });
-let i = (0, a(945810).mj)({
+n.d(t, { s: () => i });
+let i = (0, n(945810).mj)({
     name: "2026-01-haven-client",
     kind: "user",
     defaultConfig: { enabled: !1 },

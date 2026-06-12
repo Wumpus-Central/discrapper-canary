@@ -1,20 +1,20 @@
 s.d(t, { A: () => p }), s(321073);
-var r = s(627968),
-    n = s(64700),
+var o = s(627968),
+    h = s(64700),
     l = s(503698),
-    a = s.n(l),
-    i = s(235986),
-    o = s(953051),
-    c = s(650583),
-    h = s(579767);
-class d extends n.PureComponent {
+    n = s.n(l),
+    c = s(235986),
+    r = s(953051),
+    a = s(650583),
+    i = s(579767);
+class d extends h.PureComponent {
     static defaultProps = { autoFocus: !1 };
     _codeBlockRef;
     render() {
         let { className: e } = this.props;
-        return (0, r.jsx)("input", {
+        return (0, o.jsx)("input", {
             ref: this.setCodeBlockRef,
-            className: a()(h.h, e),
+            className: n()(i.h, e),
             maxLength: 1,
             value: null != this.props.code ? this.props.code : void 0,
             autoFocus: this.props.autoFocus,
@@ -32,18 +32,18 @@ class d extends n.PureComponent {
         this._codeBlockRef?.blur();
     }
     handleKeyDown = (e) => {
-        let t = e.key === c.dh.BACKSPACE || e.key === c.dh.ARROW_LEFT || e.key === c.dh.ARROW_RIGHT,
-            s = (0, o.A)(e.key);
+        let t = e.key === a.dh.BACKSPACE || e.key === a.dh.ARROW_LEFT || e.key === a.dh.ARROW_RIGHT,
+            s = (0, r.A)(e.key);
         t || s || e.preventDefault();
-        let { onKeyDown: r } = this.props;
-        r?.(e);
+        let { onKeyDown: o } = this.props;
+        o?.(e);
     };
     handleChange = (e) => {
         let { onChange: t } = this.props;
         t?.(e.currentTarget.value);
     };
 }
-class u extends n.PureComponent {
+class u extends h.PureComponent {
     _codeBlockRefs = Array(this.props.count);
     static defaultProps = { count: 6 };
     constructor(e) {
@@ -52,11 +52,11 @@ class u extends n.PureComponent {
     render() {
         let { className: e, inputClassName: t } = this.props,
             { codes: s } = this.state,
-            n = [];
+            h = [];
         for (let e = 0; e < s.length; e++)
-            e === s.length / 2 && n.push((0, r.jsx)("div", { className: h.j }, "spacer")),
-                n.push(
-                    (0, r.jsx)(
+            e === s.length / 2 && h.push((0, o.jsx)("div", { className: i.j }, "spacer")),
+                h.push(
+                    (0, o.jsx)(
                         d,
                         {
                             ref: (t) => this.setCodeBlockRef(e, t),
@@ -69,7 +69,7 @@ class u extends n.PureComponent {
                         e,
                     ),
                 );
-        return (0, r.jsx)(i.A, { align: i.A.Align.CENTER, justify: i.A.Justify.CENTER, className: e, children: n });
+        return (0, o.jsx)(c.A, { align: c.A.Align.CENTER, justify: c.A.Justify.CENTER, className: e, children: h });
     }
     setCodeBlockRef(e, t) {
         this._codeBlockRefs[e] = t;
@@ -85,11 +85,11 @@ class u extends n.PureComponent {
     }
     handleKeyDown(e, t) {
         let { codes: s } = this.state;
-        if (t.key === c.dh.BACKSPACE && e > 0 && (null == s[e] || 0 === s[e].length)) {
+        if (t.key === a.dh.BACKSPACE && e > 0 && (null == s[e] || 0 === s[e].length)) {
             let t = e - 1;
             s[t] = "";
-            let r = this._codeBlockRefs[t];
-            r?.focus();
+            let o = this._codeBlockRefs[t];
+            o?.focus();
         }
     }
     getCodeOrFirstEmptyIndex() {

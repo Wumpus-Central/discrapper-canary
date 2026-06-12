@@ -1,46 +1,46 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(562465),
-    i = n(954571);
-function a(e, t, n) {
-    let { trackedActionData: r, ...a } = t,
-        s = { url: a.url, request_method: n };
+n.d(t, { A: () => a });
+var i = n(636537),
+    r = n(174459);
+function s(e, t, n) {
+    let { trackedActionData: i, ...s } = t,
+        a = { url: s.url, request_method: n };
     return new Promise((t, n) => {
-        e(a)
+        e(s)
             .then((e) => {
-                let n = r.properties;
-                "function" == typeof r.properties && (n = r.properties(e)),
-                    (0, i.trackNetworkAction)(r.event, { status_code: e.status, ...s, ...n }),
+                let n = i.properties;
+                "function" == typeof i.properties && (n = i.properties(e)),
+                    (0, r.trackNetworkAction)(i.event, { status_code: e.status, ...a, ...n }),
                     t(e);
             })
             .catch((e) => {
-                let t = r.properties;
-                "function" == typeof r.properties && (t = r.properties(e)),
-                    (0, i.trackNetworkAction)(r.event, {
+                let t = i.properties;
+                "function" == typeof i.properties && (t = i.properties(e)),
+                    (0, r.trackNetworkAction)(i.event, {
                         status_code: e.status,
                         error_code: e.body?.code,
                         error_message: e.body?.message,
-                        ...s,
+                        ...a,
                         ...t,
                     }),
                     n(e);
             });
     });
 }
-let s = {
+let a = {
     get: function (e) {
-        return a(r.Bo.get, e, "get");
+        return s(i.Bo.get, e, "get");
     },
     post: function (e) {
-        return a(r.Bo.post, e, "post");
+        return s(i.Bo.post, e, "post");
     },
     put: function (e) {
-        return a(r.Bo.put, e, "put");
+        return s(i.Bo.put, e, "put");
     },
     patch: function (e) {
-        return a(r.Bo.patch, e, "patch");
+        return s(i.Bo.patch, e, "patch");
     },
     delete: function (e) {
-        return a(r.Bo.del, e, "del");
+        return s(i.Bo.del, e, "del");
     },
 };

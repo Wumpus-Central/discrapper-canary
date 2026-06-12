@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(17928),
     r = n(228366),
     s = n(652215),
@@ -21,7 +21,7 @@ function _(e, t) {
         u[e][t ?? s.eGj] = r;
     }
 }
-class f extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "VideoStreamStore";
     getStreamId(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.x.DEFAULT;
@@ -38,7 +38,7 @@ class f extends i.Ay.Store {
         return c[d(e, t)];
     }
 }
-let h = new f(r.h, {
+let f = new h(r.h, {
     CONNECTION_OPEN: function (e) {
         let { user: t, sessionId: n } = e;
         (o = t.id), (l = n);

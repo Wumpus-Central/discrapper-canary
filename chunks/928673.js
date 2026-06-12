@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.UNDERSCORE_IDENT_RE,
-        a = {
+        n = {
             keyword: [
                 "abstract",
                 "as",
@@ -127,7 +127,7 @@ e.exports = function (e) {
     return {
         name: "X++",
         aliases: ["x++"],
-        keywords: a,
+        keywords: n,
         contains: [
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
@@ -141,7 +141,7 @@ e.exports = function (e) {
                     { match: [/class\s+/, t] },
                 ],
                 scope: { 2: "title.class", 4: "title.class.inherited" },
-                keywords: a,
+                keywords: n,
             },
         ],
     };

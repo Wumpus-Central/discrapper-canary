@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Fc: () => y, Jm: () => R, m9: () => S, Uc: () => O, ZG: () => T, VP: () => L, VR: () => C, JS: () => N }),
+n.d(t, { Fc: () => N, Jm: () => O, m9: () => S, Uc: () => R, ZG: () => T, VP: () => L, VR: () => v, JS: () => y }),
     n(321073);
 var i,
     r,
@@ -8,18 +8,18 @@ var i,
     o = n(636537),
     l = n(228366),
     u = n(157559),
-    c = n(409826),
+    c = n(386723),
     d = n(763827),
     _ = n(528767),
-    f = n(174459),
-    h = n(38405),
+    h = n(174459),
+    f = n(38405),
     p = n(124697),
     E = n(643501),
     m = n(350701),
     g = n(652215),
     A = n(375708);
 function I(e, t) {
-    f.default.track(g.HAw.REMOTE_COMMAND_SENT, {
+    h.default.track(g.HAw.REMOTE_COMMAND_SENT, {
         command_type: e,
         remote_platform: _.A.getSessionById(t)?.clientInfo?.os,
     });
@@ -44,7 +44,7 @@ async function T() {
 function S(e) {
     l.h.dispatch({ type: "REMOTE_SESSION_CONNECT", sessionId: e });
 }
-function N(e, t) {
+function y(e, t) {
     let { selfMute: n, selfDeaf: i } = t;
     l.h.dispatch({
         type: "REMOTE_COMMAND",
@@ -53,10 +53,10 @@ function N(e, t) {
     }),
         I("VOICE_STATE_UPDATE", e);
 }
-function y(e) {
+function N(e) {
     l.h.dispatch({ type: "REMOTE_COMMAND", sessionId: e, payload: { type: "DISCONNECT" } }), I("DISCONNECT", e), T();
 }
-function C(e, t, n, i) {
+function v(e, t, n, i) {
     let r = (0, c.o)(n);
     null != r &&
         (l.h.dispatch({
@@ -66,7 +66,7 @@ function C(e, t, n, i) {
         }),
         I("AUDIO_SETTINGS_UPDATE", e));
 }
-async function v() {
+async function C() {
     let e;
     try {
         let t = null != d.A.getRTCConnectionId() ? a.TRANSFER_EXISTING_CALL : a.CREATE_NEW_CALL;
@@ -78,11 +78,11 @@ async function v() {
             })
         ).body.nonce;
     } catch (e) {
-        h.A.captureException(e);
+        f.A.captureException(e);
     }
     return e;
 }
-async function O(e) {
+async function R(e) {
     let t;
     l.h.dispatch({ type: "GAME_CONSOLE_FETCH_DEVICES_START", platform: e });
     try {
@@ -93,7 +93,7 @@ async function O(e) {
     let n = t.body.devices;
     return l.h.dispatch({ type: "GAME_CONSOLE_FETCH_DEVICES_SUCCESS", platform: e, devices: n }), n;
 }
-function R(e, t) {
+function O(e, t) {
     l.h.dispatch({ type: "GAME_CONSOLE_SELECT_DEVICE", platform: e, deviceId: t });
 }
 async function b(e, t, n, i) {
@@ -141,6 +141,6 @@ async function D(e, t, n) {
 }
 async function L(e, t, n) {
     await p.A.maybeShowPTTAlert(e), await T();
-    let i = await v();
+    let i = await C();
     await b(e, t, n, i), (0, m.A)(n.id, e);
 }

@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { A: () => a });
-var r = n(95701),
-    i = n(652215);
-function a(e, t) {
-    return (0, r.Gw)(e.type) || t.canBasicChannel(i.hVb.CONNECT | i.hVb.VIEW_CHANNEL, e);
+n.d(t, { A: () => s });
+var i = n(95701),
+    r = n(652215);
+function s(e, t) {
+    return (0, i.Gw)(e.type) || t.canBasicChannel(r.hVb.CONNECT | r.hVb.VIEW_CHANNEL, e);
 }

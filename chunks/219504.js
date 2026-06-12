@@ -22,9 +22,9 @@ function l(e, t) {
                 if (null == l || null == s || l === s) return;
                 let r = [...e],
                     o = r.indexOf(l),
-                    d = r.indexOf(s),
-                    c = +(d - o > 0);
-                r.splice(o, 1), (d = r.indexOf(s)), r.splice(d + c, 0, l), t(r);
+                    c = r.indexOf(s),
+                    d = +(c - o > 0);
+                r.splice(o, 1), (c = r.indexOf(s)), r.splice(c + d, 0, l), t(r);
             },
             [e, n, a, t],
         );

@@ -1,43 +1,43 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(448761),
     r = n(720149),
     s = n(439372),
     a = n(495544),
     o = n(734057),
     l = n(232835),
-    d = n(576705),
-    _ = n(309010),
-    u = n(287809),
-    c = n(233993),
-    E = n(228366),
-    h = n(935208),
-    m = n(652215);
-class f extends s.A {
+    u = n(576705),
+    c = n(309010),
+    d = n(287809),
+    _ = n(233993),
+    h = n(228366),
+    f = n(935208),
+    p = n(652215);
+class E extends s.A {
     actions = { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates };
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         t.forEach((e) => {
-            let { channelId: t, userId: n, suppress: s, requestToSpeakTimestamp: f } = e;
+            let { channelId: t, userId: n, suppress: s, requestToSpeakTimestamp: E } = e;
             if (
-                _.A.getVoiceChannelId() === t &&
+                c.A.getVoiceChannelId() === t &&
                 s &&
                 null != t &&
                 n !== a.default.getId() &&
-                d.A.can(c.QY, o.A.getChannel(t))
+                u.A.can(_.QY, o.A.getChannel(t))
             )
-                if (null != f) {
-                    let e = u.default.getUser(n);
+                if (null != E) {
+                    let e = d.default.getUser(n);
                     null != e &&
-                        E.h.dispatch({
+                        h.h.dispatch({
                             type: "MESSAGE_CREATE",
                             channelId: t,
                             message: (function (e) {
                                 let { channelId: t, requesterUser: n, requestToSpeakTimestamp: i } = e;
                                 return {
-                                    id: h.default.fromTimestamp(Date.parse(i)),
-                                    type: m.lAJ.STAGE_RAISE_HAND,
-                                    flags: m.pr7.EPHEMERAL,
+                                    id: f.default.fromTimestamp(Date.parse(i)),
+                                    type: p.lAJ.STAGE_RAISE_HAND,
+                                    flags: p.pr7.EPHEMERAL,
                                     content: "",
                                     channel_id: t,
                                     author: n,
@@ -49,21 +49,21 @@ class f extends s.A {
                                     mention_roles: [],
                                     mention_everyone: !1,
                                     timestamp: i,
-                                    state: m.cmJ.SENT,
+                                    state: p.cmJ.SENT,
                                     tts: !1,
                                 };
-                            })({ channelId: t, requesterUser: e, requestToSpeakTimestamp: f }),
+                            })({ channelId: t, requesterUser: e, requestToSpeakTimestamp: E }),
                             optimistic: !1,
                             sendMessageOptions: {},
                             isPushNotification: !1,
                         });
                 } else {
                     let e = l.A.getMessages(t).findNewest(
-                        (e) => e.type === i.l.STAGE_RAISE_HAND && e.hasFlag(m.pr7.EPHEMERAL) && e.author.id === n,
+                        (e) => e.type === i.l.STAGE_RAISE_HAND && e.hasFlag(p.pr7.EPHEMERAL) && e.author.id === n,
                     );
                     null != e && r.A.deleteMessage(t, e.id, !0);
                 }
         });
     }
 }
-let g = new f();
+let m = new E();

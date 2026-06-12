@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { El: () => d, Fd: () => o, nK: () => f, sJ: () => l });
+n.d(t, { El: () => d, Fd: () => o, nK: () => h, sJ: () => l });
 var i = n(998218);
 let r = ["\u034F", "\u17B4", "\u17B5", "\u1160", "\u3164", "\uFFA0"],
     s = RegExp(`${/\p{Cf}|\p{Zl}|\p{Zp}|[^\P{Cc}\n]|[^\P{Zs} ]/gu.source}|${r.join("|")}`, "gu"),
@@ -177,7 +177,7 @@ let _ = [
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
     1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 0,
 ];
-function f(e) {
+function h(e) {
     let t = (function (e) {
         if ("null" === e.origin && e.pathname.startsWith("//")) return e.protocol;
         let t = "";
@@ -185,9 +185,9 @@ function f(e) {
         let n = "//" === e.href.substr(e.protocol.length, 2);
         return `${e.protocol}${n ? "//" : ""}${t}${e.host}`;
     })(e);
-    return (t += h(e.pathname)), (t += h(e.search)), (t += h(e.hash));
+    return (t += f(e.pathname)), (t += f(e.search)), (t += f(e.hash));
 }
-function h(e) {
+function f(e) {
     let t = i.A.safeDecodeURIComponent(e);
     if (null == t) return e;
     let n = "",

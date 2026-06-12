@@ -6,12 +6,12 @@ var i,
 n(980504);
 var a = (((i = {})[(i.GLOBAL = 0)] = "GLOBAL"), (i[(i.GUILD = 1)] = "GUILD"), i);
 function o(e) {
-    return (0, r.bG)([s.A], () => d(e, s.A.settings.guilds?.guilds ?? {}));
+    return (0, r.bG)([s.A], () => u(e, s.A.settings.guilds?.guilds ?? {}));
 }
 function l(e) {
-    return d(e, s.A.settings.guilds?.guilds ?? {});
+    return u(e, s.A.settings.guilds?.guilds ?? {});
 }
-function d(e, t) {
+function u(e, t) {
     let n = t[e]?.joinSound,
         i = t["0"]?.joinSound,
         r = n ?? i;

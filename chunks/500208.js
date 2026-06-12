@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { DG: () => r, _T: () => a, vN: () => i });
-let r = "guild-product-edit-modal",
-    i = 0x40000000,
-    a = 0x40000000;
+n.d(t, { DG: () => i, _T: () => s, vN: () => r });
+let i = "guild-product-edit-modal",
+    r = 0x40000000,
+    s = 0x40000000;

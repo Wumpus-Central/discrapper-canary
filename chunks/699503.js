@@ -118,7 +118,7 @@ let t = [
         "foreignObject",
         "clipPath",
     ],
-    a = [
+    n = [
         "any-hover",
         "any-pointer",
         "aspect-ratio",
@@ -155,7 +155,7 @@ let t = [
     ]
         .sort()
         .reverse(),
-    n = [
+    i = [
         "active",
         "any-link",
         "blank",
@@ -236,7 +236,7 @@ let t = [
     ]
         .sort()
         .reverse(),
-    i = [
+    s = [
         "accent-color",
         "align-content",
         "align-items",
@@ -755,8 +755,8 @@ let t = [
         .sort()
         .reverse();
 e.exports = function (e) {
-    let o = e.regex,
-        s = {
+    let a = e.regex,
+        o = {
             IMPORTANT: { scope: "meta", begin: "!important" },
             BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
             HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
@@ -785,26 +785,26 @@ e.exports = function (e) {
         keywords: { keyframePosition: "from to" },
         classNameAliases: { keyframePosition: "selector-tag" },
         contains: [
-            s.BLOCK_COMMENT,
+            o.BLOCK_COMMENT,
             { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ },
-            s.CSS_NUMBER_MODE,
+            o.CSS_NUMBER_MODE,
             { className: "selector-id", begin: /#[A-Za-z0-9_-]+/, relevance: 0 },
             { className: "selector-class", begin: "\\.[a-zA-Z-][a-zA-Z0-9_-]*", relevance: 0 },
-            s.ATTRIBUTE_SELECTOR_MODE,
+            o.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: "selector-pseudo",
-                variants: [{ begin: ":(" + n.join("|") + ")" }, { begin: ":(:)?(" + r.join("|") + ")" }],
+                variants: [{ begin: ":(" + i.join("|") + ")" }, { begin: ":(:)?(" + r.join("|") + ")" }],
             },
-            s.CSS_VARIABLE,
-            { className: "attribute", begin: "\\b(" + i.join("|") + ")\\b" },
+            o.CSS_VARIABLE,
+            { className: "attribute", begin: "\\b(" + s.join("|") + ")\\b" },
             {
                 begin: /:/,
                 end: /[;}{]/,
                 contains: [
-                    s.BLOCK_COMMENT,
-                    s.HEXCOLOR,
-                    s.IMPORTANT,
-                    s.CSS_NUMBER_MODE,
+                    o.BLOCK_COMMENT,
+                    o.HEXCOLOR,
+                    o.IMPORTANT,
+                    o.CSS_NUMBER_MODE,
                     ...l,
                     {
                         begin: /(url|data-uri)\(/,
@@ -813,11 +813,11 @@ e.exports = function (e) {
                         keywords: { built_in: "url data-uri" },
                         contains: [...l, { className: "string", begin: /[^)]/, endsWithParent: !0, excludeEnd: !0 }],
                     },
-                    s.FUNCTION_DISPATCH,
+                    o.FUNCTION_DISPATCH,
                 ],
             },
             {
-                begin: o.lookahead(/@/),
+                begin: a.lookahead(/@/),
                 end: "[{;]",
                 relevance: 0,
                 illegal: /:/,
@@ -828,8 +828,8 @@ e.exports = function (e) {
                         endsWithParent: !0,
                         excludeEnd: !0,
                         relevance: 0,
-                        keywords: { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: a.join(" ") },
-                        contains: [{ begin: /[a-z-]+(?=:)/, className: "attribute" }, ...l, s.CSS_NUMBER_MODE],
+                        keywords: { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: n.join(" ") },
+                        contains: [{ begin: /[a-z-]+(?=:)/, className: "attribute" }, ...l, o.CSS_NUMBER_MODE],
                     },
                 ],
             },

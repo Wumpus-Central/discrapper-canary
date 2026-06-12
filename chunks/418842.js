@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, { C: () => a });
-var r = n(64700),
-    i = n(873298),
-    s = n(253932);
+var i = n(64700),
+    r = n(873298),
+    s = n(885386);
 function a() {
     let e = s.Xi.useSetting(),
         t = (function () {
-            let [e, t] = r.useState("cozy");
+            let [e, t] = i.useState("cozy");
             return (
-                r.useEffect(() => {
+                i.useEffect(() => {
                     let e = window.matchMedia("(min-width: 1024px) and (min-height: 820px)"),
                         n = (e) => {
                             t(e.matches ? "cozy" : "compact");
@@ -24,13 +24,13 @@ function a() {
             );
         })();
     switch (e) {
-        case i.NS.RESPONSIVE:
+        case r.NS.RESPONSIVE:
             return t;
-        case i.NS.COZY:
+        case r.NS.COZY:
             return "cozy";
-        case i.NS.DEFAULT:
+        case r.NS.DEFAULT:
             return "default";
-        case i.NS.COMPACT:
+        case r.NS.COMPACT:
             return "compact";
         default:
             return "default";

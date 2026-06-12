@@ -1,16 +1,16 @@
-n.d(t, { A: () => l });
-var i = n(627968),
-    s = n(64700);
-let r = (e) => (t) => {
-    t?.stopPropagation(), e();
+i.d(n, { A: () => s });
+var e = i(627968),
+    r = i(64700);
+let l = (t) => (n) => {
+    n?.stopPropagation(), t();
 };
-function l(e) {
-    let { onClick: t, className: n, children: l } = e,
-        o = s.useRef(null);
-    return (0, i.jsx)("div", {
-        onClick: t,
-        ref: o,
-        className: n,
-        children: l({ areaRef: o, handleStopPropagation: r }),
+function s(t) {
+    let { onClick: n, className: i, children: s } = t,
+        a = r.useRef(null);
+    return (0, e.jsx)("div", {
+        onClick: n,
+        ref: a,
+        className: i,
+        children: s({ areaRef: a, handleStopPropagation: l }),
     });
 }

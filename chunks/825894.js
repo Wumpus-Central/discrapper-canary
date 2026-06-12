@@ -6,7 +6,7 @@ var r = i(189213),
     e = i(834730),
     s = i(47167),
     c = i(734057),
-    o = i(985018);
+    o = i(375708);
 function d(t) {
     let { onConfirm: n, channelId: i, ...d } = t,
         u = (0, a.bG)([c.A], () => (null != i ? c.A.getChannel(i) : null)),

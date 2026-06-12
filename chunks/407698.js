@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Q: () => f });
+n.d(t, { Q: () => h });
 var i = n(627968),
     r = n(64700),
     s = n(990078),
@@ -10,11 +10,11 @@ var i = n(627968),
     c = n(714991),
     d = n(107773),
     _ = n(652215);
-function f(e) {
+function h(e) {
     let { guild: t, children: n } = e,
-        f = (0, u.A)(t);
+        h = (0, u.A)(t);
     return r.useMemo(() => {
-        if (f) {
+        if (h) {
             let e = (0, l.Jp)(t);
             return (0, o.K)(e) !== o._.NONE;
         }
@@ -24,9 +24,9 @@ function f(e) {
             t.features.has(_.GuildFeatures.VERIFIED) ||
             t.features.has(_.GuildFeatures.PARTNERED)
         );
-    }, [t, f])
+    }, [t, h])
         ? (0, i.jsx)(a.u, {
-              asset: f
+              asset: h
                   ? (0, i.jsx)(d.A, { disableBoostClick: !0, guild: t, size: 20 })
                   : (0, i.jsx)(c.A, { guild: t, size: 20 }),
               assetSize: 20,

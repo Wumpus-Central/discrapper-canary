@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     ty: "productCardContainer_fcbddd",
     qt: "productCardContentContainer_fcbddd",
     vD: "staticBundleBackgroundAsset_fcbddd",

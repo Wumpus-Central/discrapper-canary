@@ -6,8 +6,8 @@ e.exports = function (e) {
             built_in:
                 "ac asnp cat cd CFS chdir clc clear clhy cli clp cls clv cnsn compare copy cp cpi cpp curl cvpa dbp del diff dir dnsn ebp echo|0 epal epcsv epsn erase etsn exsn fc fhx fl ft fw gal gbp gc gcb gci gcm gcs gdr gerr ghy gi gin gjb gl gm gmo gp gps gpv group gsn gsnp gsv gtz gu gv gwmi h history icm iex ihy ii ipal ipcsv ipmo ipsn irm ise iwmi iwr kill lp ls man md measure mi mount move mp mv nal ndr ni nmo npssc nsn nv ogv oh popd ps pushd pwd r rbp rcjb rcsn rd rdr ren ri rjb rm rmdir rmo rni rnp rp rsn rsnp rujb rv rvpa rwmi sajb sal saps sasv sbp sc scb select set shcm si sl sleep sls sort sp spjb spps spsv start stz sujb sv swmi tee trcm type wget where wjb write",
         },
-        a = { begin: "`[\\s\\S]", relevance: 0 },
-        n = {
+        n = { begin: "`[\\s\\S]", relevance: 0 },
+        i = {
             className: "variable",
             variants: [{ begin: /\$\B/ }, { className: "keyword", begin: /\$this/ }, { begin: /\$[\w\d][\w\d_:]*/ }],
         },
@@ -17,16 +17,16 @@ e.exports = function (e) {
                 { begin: /"/, end: /"/ },
                 { begin: /@"/, end: /^"@/ },
             ],
-            contains: [a, n, { className: "variable", begin: /\$[A-z]/, end: /[^A-z]/ }],
+            contains: [n, i, { className: "variable", begin: /\$[A-z]/, end: /[^A-z]/ }],
         },
-        i = {
+        s = {
             className: "string",
             variants: [
                 { begin: /'/, end: /'/ },
                 { begin: /@'/, end: /^'@/ },
             ],
         },
-        o = e.inherit(e.COMMENT(null, null), {
+        a = e.inherit(e.COMMENT(null, null), {
             variants: [
                 { begin: /#/, end: /$/ },
                 { begin: /<#/, end: /#>/ },
@@ -45,7 +45,7 @@ e.exports = function (e) {
                 },
             ],
         }),
-        s = {
+        o = {
             className: "class",
             beginKeywords: "class enum",
             end: /\s*[{]/,
@@ -69,13 +69,13 @@ e.exports = function (e) {
                 e.inherit(e.TITLE_MODE, { endsParent: !0 }),
             ],
         },
-        c = [
+        u = [
             l,
-            o,
             a,
+            n,
             e.NUMBER_MODE,
             r,
-            i,
+            s,
             {
                 className: "built_in",
                 variants: [
@@ -87,11 +87,11 @@ e.exports = function (e) {
                     },
                 ],
             },
-            n,
+            i,
             { className: "literal", begin: /\$(null|true|false)\b/ },
             { className: "selector-tag", begin: /@\B/, relevance: 0 },
         ],
-        _ = {
+        c = {
             begin: /\[/,
             end: /\]/,
             excludeBegin: !0,
@@ -99,7 +99,7 @@ e.exports = function (e) {
             relevance: 0,
             contains: [].concat(
                 "self",
-                c,
+                u,
                 {
                     begin: "(string|char|byte|int|long|bool|decimal|single|double|DateTime|xml|array|hashtable|void)",
                     className: "built_in",
@@ -109,14 +109,14 @@ e.exports = function (e) {
             ),
         };
     return (
-        l.contains.unshift(_),
+        l.contains.unshift(c),
         {
             name: "PowerShell",
             aliases: ["pwsh", "ps", "ps1"],
             case_insensitive: !0,
             keywords: t,
-            contains: c.concat(
-                s,
+            contains: u.concat(
+                o,
                 {
                     className: "function",
                     begin: /function\s+/,
@@ -127,14 +127,14 @@ e.exports = function (e) {
                     contains: [
                         { begin: "function", relevance: 0, className: "keyword" },
                         { className: "title", begin: /\w[\w\d]*((-)[\w\d]+)*/, relevance: 0 },
-                        { begin: /\(/, end: /\)/, className: "params", relevance: 0, contains: [n] },
+                        { begin: /\(/, end: /\)/, className: "params", relevance: 0, contains: [i] },
                     ],
                 },
                 {
                     begin: /using\s/,
                     end: /$/,
                     returnBegin: !0,
-                    contains: [r, i, { className: "keyword", begin: /(using|assembly|command|module|namespace|type)/ }],
+                    contains: [r, s, { className: "keyword", begin: /(using|assembly|command|module|namespace|type)/ }],
                 },
                 {
                     variants: [
@@ -148,7 +148,7 @@ e.exports = function (e) {
                         { className: "literal", begin: /(-){1,2}[\w\d-]+/, relevance: 0 },
                     ],
                 },
-                _,
+                c,
             ),
         }
     );

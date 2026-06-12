@@ -6,12 +6,12 @@ var i = n(77729),
     a = n(296027),
     o = n(243612),
     l = n(929921),
-    u = n(235058),
+    u = n(890063),
     c = n(763827),
     d = n(157257),
     _ = n(174459),
-    f = n(95561),
-    h = n(652215);
+    h = n(95561),
+    f = n(652215);
 function p() {
     let e,
         t,
@@ -52,11 +52,11 @@ async function E(e, t) {
             hardware_display_count: (await i.A?.hardware?.getDisplayCount?.()) ?? null,
         };
     switch ((__OVERLAY__ && (g.overlay_render_method = s.Ue[s.Ue.Hook]), (t = { ...g, ...t }), e)) {
-        case h.HAw.VOICE_CHANNEL_SELECTED:
-        case h.HAw.SETTINGS_PANE_VIEWED:
-        case h.HAw.GUILD_VIEWED:
-        case h.HAw.CHANNEL_OPENED:
-            return (0, f.zV)(e, t, n);
+        case f.HAw.VOICE_CHANNEL_SELECTED:
+        case f.HAw.SETTINGS_PANE_VIEWED:
+        case f.HAw.GUILD_VIEWED:
+        case f.HAw.CHANNEL_OPENED:
+            return (0, h.zV)(e, t, n);
         default:
             return _.default.track(e, t, { flush: n });
     }

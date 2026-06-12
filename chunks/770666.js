@@ -1,19 +1,19 @@
-n.d(t, { A: () => d });
-var i = n(17928),
-    l = n(931991),
-    s = n(808728),
-    r = n(71393),
-    a = n(576705),
-    o = n(652215);
-function d(e, t) {
-    return (0, i.bG)([r.A, s.Ay, a.A], () => {
-        let n = r.A.getGuild(e);
-        if (a.A.can(o.xBc.ADMINISTRATOR, n) || a.A.can(o.xBc.CREATE_EVENTS, n)) return !0;
-        for (let { channel: n } of s.Ay.getChannels(e)[s.vM])
-            if (null == t || n.type === t) {
-                let [e] = (0, l.p_)(n);
-                if (a.A.can(e, n)) return !0;
+n.d(e, { A: () => p });
+var r = n(17928),
+    A = n(931991),
+    c = n(808728),
+    u = n(71393),
+    i = n(576705),
+    a = n(652215);
+function p(t, e) {
+    return (0, r.bG)([u.A, c.Ay, i.A], () => {
+        let n = u.A.getGuild(t);
+        if (i.A.can(a.xBc.ADMINISTRATOR, n) || i.A.can(a.xBc.CREATE_EVENTS, n)) return !0;
+        for (let { channel: n } of c.Ay.getChannels(t)[c.vM])
+            if (null == e || n.type === e) {
+                let [t] = (0, A.p_)(n);
+                if (i.A.can(t, n)) return !0;
             }
         return !1;
-    }, [e, t]);
+    }, [t, e]);
 }

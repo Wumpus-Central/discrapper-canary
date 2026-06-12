@@ -1,40 +1,40 @@
-i.d(n, { A: () => A });
-var e = i(627968);
-i(64700);
-var l = i(17928),
-    r = i(477782),
-    a = i(177953),
-    s = i(950305),
-    d = i(147087),
-    o = i(867455),
-    u = i(780057),
-    c = i(985018);
-function A(t) {
-    let n = (0, l.bG)([u.A], () => u.A.isInProgress());
-    return (0, d.b)() && t.isThread()
-        ? (0, e.jsx)(r.Dr, {
+n.d(e, { A: () => h });
+var i = n(627968);
+n(64700);
+var r = n(17928),
+    a = n(477782),
+    l = n(177953),
+    d = n(950305),
+    s = n(147087),
+    o = n(867455),
+    u = n(780057),
+    c = n(375708);
+function h(t) {
+    let e = (0, r.bG)([u.A], () => u.A.isInProgress());
+    return (0, s.b)() && t.isThread()
+        ? (0, i.jsx)(a.Dr, {
               id: "summarize-thread",
-              label: n ? c.intl.string(c.t.oKECxB) : c.intl.string(c.t.EXfguE),
-              disabled: n,
-              loading: n,
+              label: e ? c.intl.string(c.t.oKECxB) : c.intl.string(c.t.EXfguE),
+              disabled: e,
+              loading: e,
               action: () => o.A.summarizeThread(t),
-              children: n
+              children: e
                   ? null
-                  : (0, e.jsxs)(e.Fragment, {
+                  : (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, e.jsx)(r.Dr, {
+                            (0, i.jsx)(a.Dr, {
                                 id: "summarize_thread_for_everyone",
                                 label: c.intl.string(c.t.eCzSdd),
                                 action: () => o.A.summarizeThread(t, !1),
-                                icon: a.n,
-                                leadingAccessory: { type: "icon", icon: a.n },
+                                icon: l.n,
+                                leadingAccessory: { type: "icon", icon: l.n },
                             }),
-                            (0, e.jsx)(r.Dr, {
+                            (0, i.jsx)(a.Dr, {
                                 id: "summarize_thread_for_me",
                                 label: c.intl.string(c.t["HOe+Hq"]),
                                 action: () => o.A.summarizeThread(t),
-                                icon: s.n,
-                                leadingAccessory: { type: "icon", icon: s.n },
+                                icon: d.n,
+                                leadingAccessory: { type: "icon", icon: d.n },
                             }),
                         ],
                     }),

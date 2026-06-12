@@ -1,7 +1,7 @@
 i.d(t, {
     AK: () => b,
     D1: () => A,
-    E2: () => v,
+    E2: () => y,
     FW: () => T,
     Hn: () => I,
     Hr: () => r,
@@ -101,6 +101,6 @@ function C(e, t) {
 function b(e, t) {
     return x(e, n.Z6.NAVIGATOR, t);
 }
-function v(e, t) {
+function y(e, t) {
     return x(e, n.Z6.CUSTOM, t);
 }

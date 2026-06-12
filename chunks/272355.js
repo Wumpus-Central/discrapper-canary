@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => r }), n(423034);
-class r {
+n.d(t, { A: () => i }), n(423034);
+class i {
     isInitialized = !1;
     initialize() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];

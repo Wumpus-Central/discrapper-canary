@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => m });
-var r = n(406935),
-    i = n(451988),
+n.d(t, { A: () => E });
+var i = n(406935),
+    r = n(451988),
     s = n(439372),
     a = n(827827),
     o = n(970931),
-    l = n(253932),
+    l = n(885386),
     u = n(594061),
     c = n(461213),
     d = n(652215);
-let _ = new i.Ep(),
-    f = new i.Ep(),
-    p = new i.Ep();
-class h extends s.A {
+let _ = new r.Ep(),
+    h = new r.Ep(),
+    f = new r.Ep();
+class p extends s.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
         USER_SETTINGS_PROTO_UPDATE: () => this.handleUserSettingsProtoUpdate(),
@@ -31,19 +31,19 @@ class h extends s.A {
     };
     manageExpiringCustomStatus = () => {
         let e = l.G2.getSetting();
-        if (null == e) p.stop();
+        if (null == e) f.stop();
         else if (null != e.expiresAtMs && "0" !== e.expiresAtMs) {
             let t = new Date(Number(e.expiresAtMs)).getTime() - new Date().getTime();
             t > 0
-                ? p.start(
+                ? f.start(
                       t,
                       () => {
                           l.G2.updateSetting(void 0);
                       },
                       !0,
                   )
-                : (l.G2.updateSetting(void 0), p.stop());
-        } else null != p && p.stop();
+                : (l.G2.updateSetting(void 0), f.stop());
+        } else null != f && f.stop();
     };
     manageExpiringStatus = () => {
         let e = l.CY.getSetting();
@@ -73,7 +73,7 @@ class h extends s.A {
             u.wc.updateAsync(
                 "status",
                 (e) => {
-                    e.statusCreatedAtMs = r.ol.create({ value: `${Date.now()}` });
+                    e.statusCreatedAtMs = i.ol.create({ value: `${Date.now()}` });
                 },
                 u.Sb.INFREQUENT_USER_ACTION,
             );
@@ -83,15 +83,15 @@ class h extends s.A {
         if (null != e && "0" !== e) {
             let t = new Date(Number(e)).getTime() - new Date().getTime();
             t > 0
-                ? f.start(
+                ? h.start(
                       t,
                       () => {
                           (0, o.ES)(!1);
                       },
                       !0,
                   )
-                : ((0, o.ES)(!1), f.stop());
-        } else null != f && f.stop();
+                : ((0, o.ES)(!1), h.stop());
+        } else null != h && h.stop();
     };
 }
-let m = new h();
+let E = new p();

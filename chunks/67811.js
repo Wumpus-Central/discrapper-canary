@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { j: () => p }), n(321073);
-var r = n(627968),
-    i = n(64700),
+n.d(t, { j: () => E }), n(321073);
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(873263),
     l = n(602853),
-    u = n(827734),
-    d = n(939249),
-    c = n(140735),
+    u = n(661531),
+    c = n(939249),
+    d = n(140735),
     _ = n(240248),
-    f = n(155570);
-let E = [18, 18, 16, 16, 14, 12, 10];
-function h(e, t) {
-    return a()({ [f.AN]: !0, [f.CW]: "always" === e, [f._W]: "on-hover" === e && t });
+    h = n(155570);
+let f = [18, 18, 16, 16, 14, 12, 10];
+function p(e, t) {
+    return a()({ [h.AN]: !0, [h.CW]: "always" === e, [h._W]: "on-hover" === e && t });
 }
-let p = (e) => {
+let E = (e) => {
     let t,
         n,
         {
             backgroundStyle: s = "always",
-            children: p,
+            children: E,
             icon: m,
             name: g,
             ariaLabel: A,
@@ -29,36 +29,36 @@ let p = (e) => {
             to: S,
             onClick: y,
             selected: N = !1,
-            ...O
+            ...v
         } = e,
-        R = (0, o.W6)();
-    null == m && null != g && (n = E[(t = (0, _.oN)(g)).length - 1] ?? E[E.length - 1]);
-    let v = i.useCallback(
+        C = (0, o.W6)();
+    null == m && null != g && (n = f[(t = (0, _.oN)(g)).length - 1] ?? f[f.length - 1]);
+    let R = r.useCallback(
             (e) => {
                 if (null == S);
-                else if ("string" == typeof S) R.push(S);
+                else if ("string" == typeof S) C.push(S);
                 else {
                     let { pathname: e = "", state: t } = S;
-                    R.push(e, t);
+                    C.push(e, t);
                 }
                 null != y && y(e);
             },
-            [R, S, y],
+            [C, S, y],
         ),
-        C = (0, l.r)(u.A.modules.guildbar.AVATAR_SIZE);
-    return (0, r.jsxs)(d.D, {
-        ...O,
-        onClick: v,
-        className: a()(I, f.iE, { [f.wH]: N }),
+        O = (0, l.r)(u.A.modules.guildbar.AVATAR_SIZE);
+    return (0, i.jsxs)(c.D, {
+        ...v,
+        onClick: R,
+        className: a()(I, h.iE, { [h.wH]: N }),
         style: { ...T, fontSize: n },
         focusProps: { enabled: !1 },
         children: [
-            (0, r.jsx)(c.A, { children: null != A && "" !== A ? A : (g ?? "") }),
-            null != t ? (0, r.jsx)("div", { className: a()(h(s, !1), f.q9), "aria-hidden": !0, children: t }) : null,
+            (0, i.jsx)(d.A, { children: null != A && "" !== A ? A : (g ?? "") }),
+            null != t ? (0, i.jsx)("div", { className: a()(p(s, !1), h.q9), "aria-hidden": !0, children: t }) : null,
             null != m
-                ? (0, r.jsx)("img", { className: f.Kk, src: m, alt: " ", width: C, height: C, "aria-hidden": !0 })
+                ? (0, i.jsx)("img", { className: h.Kk, src: m, alt: " ", width: O, height: O, "aria-hidden": !0 })
                 : null,
-            null != p ? (0, r.jsx)("div", { className: h(s, !0), children: p }) : null,
+            null != E ? (0, i.jsx)("div", { className: p(s, !0), children: E }) : null,
         ],
     });
 };

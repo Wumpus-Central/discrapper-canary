@@ -1,4 +1,4 @@
-n.d(t, { Hy: () => s, kd: () => r, mj: () => a, ql: () => o, ti: () => d });
+n.d(e, { Hy: () => s, kd: () => r, mj: () => a, ql: () => o, ti: () => d });
 var i,
     l,
     s =
@@ -21,9 +21,9 @@ var a =
     (l[(l.EDIT_HOME_SETTINGS = 5)] = "EDIT_HOME_SETTINGS"),
     (l[(l.EDIT_CONNECTIONS = 6)] = "EDIT_CONNECTIONS"),
     l);
-let d = r.filter((e) => 0 !== e);
-function o(e) {
-    switch (e) {
+let d = r.filter((t) => 0 !== t);
+function o(t) {
+    switch (t) {
         case 1:
             return "Safety Check";
         case 2:

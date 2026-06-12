@@ -7,7 +7,7 @@ var e = i(627968),
     c = i(47167),
     d = i(137177),
     o = i(514810),
-    x = i(985018),
+    x = i(375708),
     h = i(748386);
 let m = (t) => {
     let { channel: a, application: m, onClose: u, transitionState: p } = t,

@@ -1,29 +1,29 @@
 n.d(t, { A: () => o });
-var i = n(627968);
+var l = n(627968);
 n(64700);
-var l = n(487329),
-    a = n(821715),
+var i = n(487329),
+    s = n(821715),
     r = n(93067),
-    s = n(985018);
+    a = n(375708);
 function o(e) {
     let { participant: t, className: n } = e,
-        o = (0, a.A)(t);
+        o = (0, s.A)(t);
     if (null == o) return null;
-    let d = (function (e) {
+    let u = (function (e) {
         switch (e) {
-            case l.iy.STREAM_SEND_LOW_FPS:
-            case l.iy.STREAM_SEND_HIGH_PACKET_LOSS:
-                return s.intl.string(s.t["1f1LHp"]);
-            case l.iy.STREAM_BAD_NETWORK_QUALITY:
-                return s.intl.string(s.t.Ic588B);
-            case l.iy.STREAM_SOUNDSHARE_FAILED:
-                return s.intl.string(s.t["9lcych"]);
-            case l.iy.STREAM_VIEW_HIGH_PACKET_LOSS:
-            case l.iy.STREAM_VIEW_LOW_FPS:
-                return s.intl.string(s.t.BcOifw);
+            case i.iy.STREAM_SEND_LOW_FPS:
+            case i.iy.STREAM_SEND_HIGH_PACKET_LOSS:
+                return a.intl.string(a.t["1f1LHp"]);
+            case i.iy.STREAM_BAD_NETWORK_QUALITY:
+                return a.intl.string(a.t.Ic588B);
+            case i.iy.STREAM_SOUNDSHARE_FAILED:
+                return a.intl.string(a.t["9lcych"]);
+            case i.iy.STREAM_VIEW_HIGH_PACKET_LOSS:
+            case i.iy.STREAM_VIEW_LOW_FPS:
+                return a.intl.string(a.t.BcOifw);
             default:
                 return;
         }
     })(o);
-    return null != d ? (0, i.jsx)(r.A, { className: n, errorMessage: d, avError: o }) : null;
+    return null != u ? (0, l.jsx)(r.A, { className: n, errorMessage: u, avError: o }) : null;
 }

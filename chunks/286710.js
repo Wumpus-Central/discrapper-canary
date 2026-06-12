@@ -1,41 +1,41 @@
-n.d(e, { A: () => S });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
-var a = n(17928),
-    r = n(192308),
-    l = n(477782),
-    d = n(964404),
+var r = n(17928),
+    l = n(192308),
+    a = n(477782),
+    d = n(742023),
     s = n(401843),
-    o = n(616356),
-    c = n(495544),
+    u = n(616356),
+    o = n(495544),
     A = n(513963),
-    u = n(951829),
-    f = n(985018);
-function S(t, e) {
+    c = n(951829),
+    f = n(375708);
+function p(e, t) {
     let n,
-        S,
-        [g, p, b] =
-            ((n = (0, a.bG)([c.default], () => c.default.getId())),
-            (S = (0, a.bG)([o.A], () => {
-                let e = o.A.getCurrentUserActiveStream();
-                return null != e && e.channelId === t;
-            }, [t])),
+        p,
+        [b, h, m] =
+            ((n = (0, r.bG)([o.default], () => o.default.getId())),
+            (p = (0, r.bG)([u.A], () => {
+                let t = u.A.getCurrentUserActiveStream();
+                return null != t && t.channelId === e;
+            }, [e])),
             [
-                (null == e || e === n) && S,
-                (0, a.bG)([o.A], () => o.A.isSelfStreamHidden(t), [t]),
-                (e) => {
-                    (0, s.Ho)(t, e);
+                (null == t || t === n) && p,
+                (0, r.bG)([u.A], () => u.A.isSelfStreamHidden(e), [e]),
+                (t) => {
+                    (0, s.Ho)(e, t);
                 },
             ]),
-        h = (0, a.bG)([d.Ay], () => d.Ay.disableHideSelfStreamAndVideoConfirmationAlert);
-    return g
-        ? (0, i.jsx)(l.sL, {
+        S = (0, r.bG)([d.Ay], () => d.Ay.disableHideSelfStreamAndVideoConfirmationAlert);
+    return b
+        ? (0, i.jsx)(a.sL, {
               id: "self-stream-hide",
               label: f.intl.string(f.t.aol7iW),
-              checked: !p,
+              checked: !h,
               action: () => {
-                  if (h || p) return b(!p);
-                  (0, r.openModal)((t) => (0, i.jsx)(A.A, { ...t, type: u.f.STREAM, onConfirm: () => b(!p) }));
+                  if (S || h) return m(!h);
+                  (0, l.openModal)((e) => (0, i.jsx)(A.A, { ...e, type: c.f.STREAM, onConfirm: () => m(!h) }));
               },
           })
         : null;

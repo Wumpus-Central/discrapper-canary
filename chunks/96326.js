@@ -1,49 +1,49 @@
 "use strict";
-var n, a, s, i, o, l;
+var i, r, s, a, o, l;
 function u(e) {
     let t = !1,
-        r = [];
-    for (let n = 0; n < e.length; n++) {
-        let a = e.charAt(n);
-        "_" == a
+        n = [];
+    for (let i = 0; i < e.length; i++) {
+        let r = e.charAt(i);
+        "_" == r
             ? (t = !0)
-            : /\d/.test(a)
-              ? (r.push(a), (t = !0))
+            : /\d/.test(r)
+              ? (n.push(r), (t = !0))
               : t
-                ? (r.push(a.toUpperCase()), (t = !1))
-                : 0 == n
-                  ? r.push(a.toLowerCase())
-                  : r.push(a);
+                ? (n.push(r.toUpperCase()), (t = !1))
+                : 0 == i
+                  ? n.push(r.toLowerCase())
+                  : n.push(r);
     }
-    return r.join("");
+    return n.join("");
 }
 function c(e) {
-    var t, r, n, a;
+    var t, n, i, r;
     return (
         (e.localName = null != (t = e.localName) ? t : u(e.name)),
-        (e.jsonName = null != (r = e.jsonName) ? r : u(e.name)),
-        (e.repeat = null != (n = e.repeat) ? n : s.NO),
-        (e.opt = null != (a = e.opt) ? a : !e.repeat && !e.oneof && "message" == e.kind),
+        (e.jsonName = null != (n = e.jsonName) ? n : u(e.name)),
+        (e.repeat = null != (i = e.repeat) ? i : s.NO),
+        (e.opt = null != (r = e.opt) ? r : !e.repeat && !e.oneof && "message" == e.kind),
         e
     );
 }
-r.d(t, { sA: () => s, LN: () => n, rO: () => a, mS: () => c }),
-    ((i = n || (n = {}))[(i.DOUBLE = 1)] = "DOUBLE"),
-    (i[(i.FLOAT = 2)] = "FLOAT"),
-    (i[(i.INT64 = 3)] = "INT64"),
-    (i[(i.UINT64 = 4)] = "UINT64"),
-    (i[(i.INT32 = 5)] = "INT32"),
-    (i[(i.FIXED64 = 6)] = "FIXED64"),
-    (i[(i.FIXED32 = 7)] = "FIXED32"),
-    (i[(i.BOOL = 8)] = "BOOL"),
-    (i[(i.STRING = 9)] = "STRING"),
-    (i[(i.BYTES = 12)] = "BYTES"),
-    (i[(i.UINT32 = 13)] = "UINT32"),
-    (i[(i.SFIXED32 = 15)] = "SFIXED32"),
-    (i[(i.SFIXED64 = 16)] = "SFIXED64"),
-    (i[(i.SINT32 = 17)] = "SINT32"),
-    (i[(i.SINT64 = 18)] = "SINT64"),
-    ((o = a || (a = {}))[(o.BIGINT = 0)] = "BIGINT"),
+n.d(t, { sA: () => s, LN: () => i, rO: () => r, mS: () => c }),
+    ((a = i || (i = {}))[(a.DOUBLE = 1)] = "DOUBLE"),
+    (a[(a.FLOAT = 2)] = "FLOAT"),
+    (a[(a.INT64 = 3)] = "INT64"),
+    (a[(a.UINT64 = 4)] = "UINT64"),
+    (a[(a.INT32 = 5)] = "INT32"),
+    (a[(a.FIXED64 = 6)] = "FIXED64"),
+    (a[(a.FIXED32 = 7)] = "FIXED32"),
+    (a[(a.BOOL = 8)] = "BOOL"),
+    (a[(a.STRING = 9)] = "STRING"),
+    (a[(a.BYTES = 12)] = "BYTES"),
+    (a[(a.UINT32 = 13)] = "UINT32"),
+    (a[(a.SFIXED32 = 15)] = "SFIXED32"),
+    (a[(a.SFIXED64 = 16)] = "SFIXED64"),
+    (a[(a.SINT32 = 17)] = "SINT32"),
+    (a[(a.SINT64 = 18)] = "SINT64"),
+    ((o = r || (r = {}))[(o.BIGINT = 0)] = "BIGINT"),
     (o[(o.STRING = 1)] = "STRING"),
     (o[(o.NUMBER = 2)] = "NUMBER"),
     ((l = s || (s = {}))[(l.NO = 0)] = "NO"),

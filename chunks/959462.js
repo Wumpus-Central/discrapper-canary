@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, { J: () => o });
-var r,
-    i = n(3388),
-    a = n(64700);
-let s = null != (r = a.useInsertionEffect) ? r : i.N;
+var i,
+    r = n(3388),
+    s = n(64700);
+let a = null != (i = s.useInsertionEffect) ? i : r.N;
 function o(e) {
-    let t = (0, a.useRef)(null);
+    let t = (0, s.useRef)(null);
     return (
-        s(() => {
+        a(() => {
             t.current = e;
         }, [e]),
-        (0, a.useCallback)((...e) => {
+        (0, s.useCallback)((...e) => {
             let n = t.current;
             return null == n ? void 0 : n(...e);
         }, [])

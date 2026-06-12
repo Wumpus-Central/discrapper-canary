@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(587895);
-function i(e) {
-    let { applicationId: t, activityConfigs: n, applications: i } = e,
-        a = i?.find((e) => e.id === t) ?? r.A.getApplication(t),
-        s = n.find((e) => e.application_id === t);
-    return null == s || null == a ? null : { activity: s, application: a };
+n.d(t, { A: () => r });
+var i = n(587895);
+function r(e) {
+    let { applicationId: t, activityConfigs: n, applications: r } = e,
+        s = r?.find((e) => e.id === t) ?? i.A.getApplication(t),
+        a = n.find((e) => e.application_id === t);
+    return null == a || null == s ? null : { activity: a, application: s };
 }

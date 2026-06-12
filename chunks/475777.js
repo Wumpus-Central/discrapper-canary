@@ -1,6 +1,6 @@
-t.d(n, { A: () => l });
-var i = t(531335),
-    r = t(652215);
-function l(e, n, t) {
-    return (0, i.A)({ guild: n, channel: e, stageInstance: t, source: r.PE1.CONTEXT_MENU });
+p.d(c, { A: () => i });
+var r = p(531335),
+    u = p(652215);
+function i(s, c, p) {
+    return (0, r.A)({ guild: c, channel: s, stageInstance: p, source: u.PE1.CONTEXT_MENU });
 }

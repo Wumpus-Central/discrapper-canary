@@ -1,60 +1,60 @@
-s.d(l, { A: () => g });
-var n = s(627968),
+s.d(e, { A: () => j });
+var i = s(627968),
     r = s(64700),
-    i = s(503698),
-    t = s.n(i),
-    o = s(132500),
-    a = s(887129),
-    d = s(837381),
+    t = s(503698),
+    n = s.n(t),
+    a = s(835245),
+    d = s(887129),
+    o = s(837381),
     c = s(834730),
     u = s(417454),
-    m = s(7864),
-    x = s(652215),
-    f = s(985018),
-    h = s(556603);
-function g(e) {
-    let { guild: l, roles: s, className: i } = e,
-        g = r.useMemo(() => `invite-roles-${(0, o.A)()}`, []),
-        j = (0, a.Ay)({ id: g, isEnabled: !0, scrollToStart: x.js$, scrollToEnd: x.js$, wrap: !0 }),
-        b = r.useMemo(
-            () => (null == l || null == s || 0 === s.length ? [] : [...s].sort(m.d6).map((e) => (0, m.ZW)(l.id, e))),
-            [l, s],
+    h = s(7864),
+    m = s(652215),
+    p = s(375708),
+    g = s(556603);
+function j(l) {
+    let { guild: e, roles: s, className: t } = l,
+        j = r.useMemo(() => `invite-roles-${(0, a.A)()}`, []),
+        v = (0, d.Ay)({ id: j, isEnabled: !0, scrollToStart: m.js$, scrollToEnd: m.js$, wrap: !0 }),
+        x = r.useMemo(
+            () => (null == e || null == s || 0 === s.length ? [] : [...s].sort(h.d6).map((l) => (0, h.ZW)(e.id, l))),
+            [e, s],
         );
-    if (null == l || 0 === b.length) return null;
-    let A = b.length,
-        v = f.intl.formatToPlainString(f.t.PCs0oo, { numRoles: A });
-    return (0, n.jsx)(d.hD, {
-        navigator: j,
-        children: (0, n.jsx)(d.PR, {
-            children: (e) => {
-                let { ref: s, ...r } = e;
-                return (0, n.jsxs)("div", {
-                    className: t()(h.zr, i),
+    if (null == e || 0 === x.length) return null;
+    let b = x.length,
+        f = p.intl.formatToPlainString(p.t.PCs0oo, { numRoles: b });
+    return (0, i.jsx)(o.hD, {
+        navigator: v,
+        children: (0, i.jsx)(o.PR, {
+            children: (l) => {
+                let { ref: s, ...r } = l;
+                return (0, i.jsxs)("div", {
+                    className: n()(g.zr, t),
                     children: [
-                        (0, n.jsx)(c.E, {
+                        (0, i.jsx)(c.E, {
                             variant: "text-sm/semibold",
                             color: "text-default",
-                            className: h.Ed,
-                            children: f.intl.string(f.t.stcSfI),
+                            className: g.Ed,
+                            children: p.intl.string(p.t.stcSfI),
                         }),
-                        (0, n.jsx)("div", {
-                            className: h.Ei,
-                            "aria-label": v,
+                        (0, i.jsx)("div", {
+                            className: g.Ei,
+                            "aria-label": f,
                             ref: s,
                             ...r,
-                            children: b.map((e) =>
-                                (0, n.jsx)(
+                            children: x.map((l) =>
+                                (0, i.jsx)(
                                     u.b_,
                                     {
-                                        className: h.Yq,
-                                        role: e,
+                                        className: g.Yq,
+                                        role: l,
                                         canRemove: !1,
                                         onRemove: () => {},
-                                        guildId: l.id,
-                                        guild: l,
+                                        guildId: e.id,
+                                        guild: e,
                                         disableBorderColor: !1,
                                     },
-                                    e.id,
+                                    l.id,
                                 ),
                             ),
                         }),

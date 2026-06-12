@@ -1,78 +1,78 @@
-i.d(n, { A: () => b });
-var e = i(627968);
-i(64700);
-var l = i(17928),
-    r = i(477782),
-    a = i(442433),
-    s = i(565645),
-    d = i(159273),
-    o = i(919577),
-    u = i(435470),
-    c = i(406704),
-    A = i(734057),
-    h = i(690521);
-i(253913);
-var g = i(985018);
-function b(t) {
-    let n = (0, l.bG)([A.A], () => A.A.getChannel(t), [t]),
-        i = (0, c.NI)(n),
-        b = (0, l.bG)([A.A], () => A.A.getChannel(n?.parent_id), [n]),
-        m = (0, u.OT)(b),
-        f = (0, u.kt)(n),
-        j = f.length >= 5,
-        v = (0, c.Id)(n),
-        p = (0, l.bG)([d.Ay], () => {
+n.d(e, { A: () => g });
+var i = n(627968);
+n(64700);
+var r = n(17928),
+    a = n(477782),
+    l = n(442433),
+    d = n(565645),
+    s = n(159273),
+    o = n(919577),
+    u = n(691060),
+    c = n(406704),
+    h = n(734057),
+    A = n(690521);
+n(253913);
+var m = n(375708);
+function g(t) {
+    let e = (0, r.bG)([h.A], () => h.A.getChannel(t), [t]),
+        n = (0, c.NI)(e),
+        g = (0, r.bG)([h.A], () => h.A.getChannel(e?.parent_id), [e]),
+        b = (0, u.OT)(g),
+        j = (0, u.kt)(e),
+        p = j.length >= 5,
+        v = (0, c.Id)(e),
+        f = (0, r.bG)([s.Ay], () => {
             let t = new Set();
-            for (let n of m ?? [])
-                if (null != n.emojiId) {
-                    let i = d.Ay.getUsableCustomEmojiById(n.emojiId);
-                    i?.animated && t.add(n.emojiId);
+            for (let e of b ?? [])
+                if (null != e.emojiId) {
+                    let n = s.Ay.getUsableCustomEmojiById(e.emojiId);
+                    n?.animated && t.add(e.emojiId);
                 }
             return t;
-        }, [m]);
-    if (null == n) return (0, a.Z_)(), null;
-    if (!i || __OVERLAY__ || !n.isForumPost() || m?.length === 0 || !v || n.isModeratorReportChannel()) return null;
-    let x = m?.map((t) => {
-        let i = f.includes(t),
-            l = null != t.emojiId || null != t.emojiName;
-        return (0, e.jsx)(
-            r.sL,
+        }, [b]);
+    if (null == e) return (0, l.Z_)(), null;
+    if (!n || __OVERLAY__ || !e.isForumPost() || b?.length === 0 || !v || e.isModeratorReportChannel()) return null;
+    let _ = b?.map((t) => {
+        let n = j.includes(t),
+            r = null != t.emojiId || null != t.emojiName;
+        return (0, i.jsx)(
+            a.sL,
             {
                 id: t.id,
                 label: t.name,
-                leftIcon: l
-                    ? (0, e.jsx)(s.A, {
+                leftIcon: r
+                    ? (0, i.jsx)(d.A, {
                           emojiId: t.emojiId,
                           emojiName: t.emojiName,
-                          animated: null != t.emojiId && p.has(t.emojiId),
+                          animated: null != t.emojiId && f.has(t.emojiId),
                       })
                     : void 0,
-                leadingAccessory: (function (t, n) {
-                    let { emojiId: i, emojiName: e } = t;
-                    if (null != i || null != e)
+                leadingAccessory: (function (t, e) {
+                    let { emojiId: n, emojiName: i } = t;
+                    if (null != n || null != i)
                         return {
                             type: "emoji",
-                            emojiId: i,
-                            src: null == i && null != e ? h.Ay.getURL(e) : void 0,
-                            animated: null != i && n.has(i),
+                            emojiId: n,
+                            src: null == n && null != i ? A.Ay.getURL(i) : void 0,
+                            animated: null != n && e.has(n),
                         };
-                })(t, p),
-                disabled: j && !i,
+                })(t, f),
+                disabled: p && !n,
                 action: () =>
                     ((t) => {
-                        let i = new Set(f);
-                        if (i.has(t)) i.delete(t);
+                        let n = new Set(j);
+                        if (n.has(t)) n.delete(t);
                         else {
-                            if (j) return;
-                            i.add(t);
+                            if (p) return;
+                            n.add(t);
                         }
-                        let e = Array.from(i).map((t) => t.id);
-                        o.A.updateForumPostTags(n.id, e);
+                        let i = Array.from(n).map((t) => t.id);
+                        o.A.updateForumPostTags(e.id, i);
                     })(t),
-                checked: i,
+                checked: n,
             },
             t.id,
         );
     });
-    return (0, e.jsx)(r.Dr, { id: "edit-tags", label: g.intl.string(g.t["436ZFw"]), children: x });
+    return (0, i.jsx)(a.Dr, { id: "edit-tags", label: m.intl.string(m.t["436ZFw"]), children: _ });
 }

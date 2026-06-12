@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => p, hh: () => f, u7: () => h });
+n.d(t, { Ay: () => p, hh: () => h, u7: () => f });
 var i = n(627968),
     r = n(64700),
     s = n(17928),
@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(506326),
     d = n(868065),
     _ = n(352760);
-let f = [c.R_];
-function h(e) {
+let h = [c.R_];
+function f(e) {
     let t = (0, s.bG)([l.A], () => l.A.getMatchingActivity(e)),
         n = (0, s.bG)([a.default], () => a.default.getUser(e.author_id));
     if (null == t || null == n) return {};
@@ -22,7 +22,7 @@ function h(e) {
 }
 let p = r.memo(function (e) {
     let { entry: t, channel: n, selected: r, hovered: s } = e,
-        { activity: a, artist: l } = h(t),
+        { activity: a, artist: l } = f(t),
         { largeImage: p } = (0, o.nO)({ entry: t, trackingSource: "memberlist_listened_session_content_row" });
     return null == a
         ? (0, i.jsx)(d.eG, {})
@@ -35,7 +35,7 @@ let p = r.memo(function (e) {
                           (0, i.jsx)(d.ZB, { children: l.replace(/; /g, ", ") }),
                           (0, i.jsx)(c.mG, {
                               location: c.N5.CARD,
-                              children: f.map((e, n) => (0, i.jsx)(e, { entry: t, hovered: s }, n)),
+                              children: h.map((e, n) => (0, i.jsx)(e, { entry: t, hovered: s }, n)),
                           }),
                       ],
                   }),

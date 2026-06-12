@@ -1,7 +1,7 @@
-var r = n(59221),
-    i = n(31289),
-    a = Object.prototype.hasOwnProperty;
+var i = n(59221),
+    r = n(31289),
+    s = Object.prototype.hasOwnProperty;
 e.exports = function (e, t, n) {
-    var s = e[t];
-    (a.call(e, t) && i(s, n) && (void 0 !== n || t in e)) || r(e, t, n);
+    var a = e[t];
+    (s.call(e, t) && r(a, n) && (void 0 !== n || t in e)) || i(e, t, n);
 };

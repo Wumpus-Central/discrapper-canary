@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, { V: () => o });
-var r = n(64700),
-    i = n(190334),
+var i = n(64700),
+    r = n(190334),
     s = n(87515);
 function a(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-    return r;
+    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
+    return i;
 }
 function o(e) {
     var t,
-        n = (0, i.u)().getMonitor(),
+        n = (0, r.u)().getMonitor(),
         o =
             (function (e) {
                 if (Array.isArray(e)) return e;
@@ -18,23 +18,23 @@ function o(e) {
             (function (e) {
                 var t,
                     n,
-                    r = null == e ? null : ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
-                if (null != r) {
-                    var i = [],
+                    i = null == e ? null : ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
+                if (null != i) {
+                    var r = [],
                         s = !0,
                         a = !1;
                     try {
-                        for (r = r.call(e); !(s = (t = r.next()).done) && (i.push(t.value), 2 !== i.length); s = !0);
+                        for (i = i.call(e); !(s = (t = i.next()).done) && (r.push(t.value), 2 !== r.length); s = !0);
                     } catch (e) {
                         (a = !0), (n = e);
                     } finally {
                         try {
-                            s || null == r.return || r.return();
+                            s || null == i.return || i.return();
                         } finally {
                             if (a) throw n;
                         }
                     }
-                    return i;
+                    return r;
                 }
             })(t) ||
             (function (e) {
@@ -54,10 +54,10 @@ function o(e) {
         l = o[0],
         u = o[1];
     return (
-        (0, r.useEffect)(function () {
+        (0, i.useEffect)(function () {
             return n.subscribeToOffsetChange(u);
         }),
-        (0, r.useEffect)(function () {
+        (0, i.useEffect)(function () {
             return n.subscribeToStateChange(u);
         }),
         l

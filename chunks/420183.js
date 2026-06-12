@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     wx: "header_d0b769",
     Qs: "content_d0b769",
     Kk: "icon_d0b769",

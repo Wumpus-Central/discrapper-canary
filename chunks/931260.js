@@ -1,67 +1,67 @@
 "use strict";
 n.d(t, { A: () => g });
-var r = n(562465),
-    i = n(439372),
+var i = n(636537),
+    r = n(439372),
     s = n(924985),
     a = n(734057),
     o = n(927813),
     l = n(652215);
 let u = {},
-    d = 0,
-    c = 15 * o.A.Millis.SECOND;
+    c = 0,
+    d = 15 * o.A.Millis.SECOND;
 function _() {
     u = { ...s.A.getCollapsedCategories() };
 }
-function f() {
-    __OVERLAY__ || (clearTimeout(d), (d = setTimeout(() => h({}), c)));
+function h() {
+    __OVERLAY__ || (clearTimeout(c), (c = setTimeout(() => p({}), d)));
 }
-async function E(e, t) {
+async function f(e, t) {
     null == e || e === l.ME
-        ? await r.Bo.patch({ url: l.Rsh.USER_GUILD_SETTINGS(l.ME), body: t, rejectWithError: !1 })
-        : await h(null != t ? { [e ?? l.ME]: t } : {});
+        ? await i.Bo.patch({ url: l.Rsh.USER_GUILD_SETTINGS(l.ME), body: t, rejectWithError: !1 })
+        : await p(null != t ? { [e ?? l.ME]: t } : {});
 }
-async function h(e) {
-    clearTimeout(d);
+async function p(e) {
+    clearTimeout(c);
     let t = 0 !== Object.keys(e).length,
         n = s.A.getCollapsedCategories(),
-        i = (function () {
+        r = (function () {
             let e = {},
                 t = s.A.getCollapsedCategories();
             for (let n in t) t[n] !== u[n] && (e[n] = !0);
             for (let n in u) t[n] !== u[n] && (e[n] = !0);
             return e;
         })();
-    for (let r in i) {
-        let i = a.A.getChannel(r);
-        null != i &&
-            null != i.guild_id &&
-            (i.guild_id in e || (e[i.guild_id] = {}),
-            null == e[i.guild_id].channel_overrides && (e[i.guild_id].channel_overrides = {}),
-            (e[i.guild_id].channel_overrides[i.id] = {
-                ...e[i.guild_id].channel_overrides[i.id],
-                collapsed: i.id in n,
+    for (let i in r) {
+        let r = a.A.getChannel(i);
+        null != r &&
+            null != r.guild_id &&
+            (r.guild_id in e || (e[r.guild_id] = {}),
+            null == e[r.guild_id].channel_overrides && (e[r.guild_id].channel_overrides = {}),
+            (e[r.guild_id].channel_overrides[r.id] = {
+                ...e[r.guild_id].channel_overrides[r.id],
+                collapsed: r.id in n,
             }),
             (t = !0));
     }
     return t
         ? ((u = { ...n }),
           delete e[l.YYv],
-          (await r.Bo.patch({ url: l.Rsh.USER_GUILD_SETTINGS_BULK, body: { guilds: e }, rejectWithError: !1 })).body)
+          (await i.Bo.patch({ url: l.Rsh.USER_GUILD_SETTINGS_BULK, body: { guilds: e }, rejectWithError: !1 })).body)
         : [];
 }
-function p() {
+function E() {
     u = { ...s.A.getCollapsedCategories() };
 }
-class m extends i.A {
+class m extends r.A {
     actions = {
-        CATEGORY_COLLAPSE: f,
-        CATEGORY_EXPAND: f,
-        CATEGORY_COLLAPSE_ALL: f,
-        CATEGORY_EXPAND_ALL: f,
+        CATEGORY_COLLAPSE: h,
+        CATEGORY_EXPAND: h,
+        CATEGORY_COLLAPSE_ALL: h,
+        CATEGORY_EXPAND_ALL: h,
         POST_CONNECTION_OPEN: _,
-        USER_GUILD_SETTINGS_FULL_UPDATE: p,
+        USER_GUILD_SETTINGS_FULL_UPDATE: E,
     };
-    saveUserGuildSettings = E;
-    saveUserGuildSettingsBulk = h;
+    saveUserGuildSettings = f;
+    saveUserGuildSettingsBulk = p;
 }
 let g = new m();

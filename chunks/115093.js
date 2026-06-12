@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { B: () => i });
-var r,
-    i =
-        (((r = {}).STAGING = "staging"),
-        (r.DEVELOPMENT = "development"),
-        (r.PRODUCTION = "production"),
-        (r.TEST = "test"),
-        r);
+n.d(t, { B: () => r });
+var i,
+    r =
+        (((i = {}).STAGING = "staging"),
+        (i.DEVELOPMENT = "development"),
+        (i.PRODUCTION = "production"),
+        (i.TEST = "test"),
+        i);

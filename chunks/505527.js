@@ -1,4 +1,4 @@
 "use strict";
-n.d(t, { v: () => i });
-var r,
-    i = (((r = {})[(r.NORMAL = 0)] = "NORMAL"), (r[(r.BURST = 1)] = "BURST"), (r[(r.VOTE = 2)] = "VOTE"), r);
+n.d(t, { v: () => r });
+var i,
+    r = (((i = {})[(i.NORMAL = 0)] = "NORMAL"), (i[(i.BURST = 1)] = "BURST"), (i[(i.VOTE = 2)] = "VOTE"), i);

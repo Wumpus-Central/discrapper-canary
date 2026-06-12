@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { Wj: () => u, cH: () => f, hd: () => l, j_: () => c, lj: () => _, np: () => d }), n(938796);
-var r = n(136722),
-    i = n(317097),
+n.d(t, { Wj: () => u, cH: () => h, hd: () => l, j_: () => d, lj: () => _, np: () => c }), n(938796);
+var i = n(136722),
+    r = n(317097),
     s = n(867051),
     a = n(176201),
     o = n(34457);
 function l(e, t) {
     let n = {};
-    for (let r of t) n[r.id] = u(e, r);
+    for (let i of t) n[i.id] = u(e, i);
     return n;
 }
 function u(e, t) {
-    return d({
+    return c({
         id: t.id,
         name: t.name,
         guildId: e,
-        permissions: r.iu(t.permissions),
+        permissions: i.iu(t.permissions),
         mentionable: t.mentionable,
         position: t.position,
         color: t.color,
-        colorString: 0 !== t.color ? (0, i.Hl)(t.color) : null,
+        colorString: 0 !== t.color ? (0, r.Hl)(t.color) : null,
         colors: t.colors ?? null,
         colorStrings: null != t.colors ? (0, a.K3)(t.colors) : null,
         hoist: t.hoist,
@@ -32,29 +32,29 @@ function u(e, t) {
         version: t.version,
     });
 }
-function d(e) {
+function c(e) {
     return (0, s.yE)(o.xh, e);
 }
-function c(e, t, n) {
+function d(e, t, n) {
     if ("full_sync" === t.op) return l(e, t.items);
-    let r = { ...n };
-    for (let e of t.deletes) delete r[e];
-    for (let n of t.writes) r[n.id] = u(e, n);
-    return r;
+    let i = { ...n };
+    for (let e of t.deletes) delete i[e];
+    for (let n of t.writes) i[n.id] = u(e, n);
+    return i;
 }
 function _(e, t) {
     let n = {};
     for (let o in t) {
         var s;
-        n[o] = d({
+        n[o] = c({
             id: (s = t[o]).id,
             name: s.name,
             guildId: e,
-            permissions: r.iu(s.permissions),
+            permissions: i.iu(s.permissions),
             mentionable: s.mentionable,
             position: s.position,
             color: s.color,
-            colorString: null != s.color && 0 !== s.color ? (0, i.Hl)(s.color) : null,
+            colorString: null != s.color && 0 !== s.color ? (0, r.Hl)(s.color) : null,
             colors: s.colors ?? null,
             colorStrings: null != s.colors ? (0, a.K3)(s.colors) : null,
             hoist: s.hoist,
@@ -69,11 +69,11 @@ function _(e, t) {
     }
     return n;
 }
-function f(e) {
+function h(e) {
     let t = {};
     for (let n in e) {
-        let r = e[n];
-        t[n] = { ...r, permissions: r.permissions.toString() };
+        let i = e[n];
+        t[n] = { ...i, permissions: i.permissions.toString() };
     }
     return t;
 }

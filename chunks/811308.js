@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     H: "avatarContainer_efaad4",
     my: "avatar_efaad4",
     op: "infoContainer_efaad4",

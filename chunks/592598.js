@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(17928),
     r = n(228366),
     s = n(184809),
@@ -83,7 +83,7 @@ class _ extends i.Ay.PersistedStore {
         return d(e);
     }
 }
-let f = new _(r.h, {
+let h = new _(r.h, {
     LOGOUT: function () {
         c = u();
     },

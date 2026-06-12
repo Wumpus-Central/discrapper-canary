@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(908031),
     d = n(155545),
     _ = n(561155),
-    f = n(723702),
-    h = n(19575),
+    h = n(723702),
+    f = n(19575),
     p = n(375708),
     E = n(666044);
 function m(e) {
@@ -29,21 +29,21 @@ function I(e) {
     let { windowKey: t, showDivider: n } = e,
         r = (0, i.jsx)(o.D, {
             className: a()(E.R6, E.d1),
-            onClick: () => h.Ay.close(t),
+            onClick: () => f.Ay.close(t),
             "aria-label": p.intl.string(p.t.ZdNUj2),
             tabIndex: -1,
             children: (0, i.jsx)(c.A, {}),
         }),
         s = (0, i.jsx)(o.D, {
             className: a()(E.R6, E.T0),
-            onClick: () => h.Ay.maximize(t),
+            onClick: () => f.Ay.maximize(t),
             "aria-label": p.intl.string(p.t.G1u0hK),
             tabIndex: -1,
             children: (0, i.jsx)(d.A, {}),
         }),
         l = (0, i.jsx)(o.D, {
             className: a()(E.R6, E.T0),
-            onClick: () => h.Ay.minimize(t),
+            onClick: () => f.Ay.minimize(t),
             "aria-label": p.intl.string(p.t.CxOC4U),
             tabIndex: -1,
             children: (0, i.jsx)(_.A, {}),
@@ -52,9 +52,9 @@ function I(e) {
 }
 function T(e) {
     let { leading: t, title: n, trailing: s, windowKey: o, className: l } = e,
-        u = (0, f.getPlatform)(),
-        c = r.useCallback(() => h.Ay.maximize(o), [o]),
-        d = u === f.PlatformTypes.WINDOWS || u === f.PlatformTypes.LINUX;
+        u = (0, h.getPlatform)(),
+        c = r.useCallback(() => f.Ay.maximize(o), [o]),
+        d = u === h.PlatformTypes.WINDOWS || u === h.PlatformTypes.LINUX;
     return (0, i.jsxs)("div", {
         className: a()(E.M0, l),
         onDoubleClick: c,
@@ -72,17 +72,17 @@ function T(e) {
 }
 function S(e) {
     let { fixed: t = !1, show: n, windowKey: s, isLayerOpen: o } = e,
-        c = (0, f.getPlatform)(),
+        c = (0, h.getPlatform)(),
         d = r.useCallback(() => {
             u.A.isOpen() && (0, l.jD)();
         }, []),
         _ = r.useCallback(() => {
             let e = u.A.getLastShowTimestamp();
-            (null != e && Date.now() - e < 1e3) || h.Ay.maximize(s);
+            (null != e && Date.now() - e < 1e3) || f.Ay.maximize(s);
         }, [s]),
-        p = c === f.PlatformTypes.WINDOWS;
-    if (c === f.PlatformTypes.WEB) return null;
-    let m = p || c === f.PlatformTypes.LINUX;
+        p = c === h.PlatformTypes.WINDOWS;
+    if (c === h.PlatformTypes.WEB) return null;
+    let m = p || c === h.PlatformTypes.LINUX;
     return (0, i.jsx)("div", {
         className: a()(E.M0, E.bN, { [E.Zu]: t, [E.WU]: n, [E.dS]: o }),
         onClick: d,

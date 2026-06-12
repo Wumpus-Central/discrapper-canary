@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366);
 let s = { topEmojisByGuildId: {} },
@@ -21,7 +21,7 @@ class l extends i.Ay.PersistedStore {
         return o[e];
     }
 }
-let d = new l(r.h, {
+let u = new l(r.h, {
     LOGOUT: function () {
         (a = s), (o = {});
     },

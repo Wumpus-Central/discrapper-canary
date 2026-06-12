@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { V: () => f, A: () => m });
+n.d(t, { V: () => h, A: () => m });
 var i,
     r = n(410530),
     s = n(107678),
@@ -8,13 +8,13 @@ var i,
     l = n(228366),
     u = n(287809),
     c = n(927813),
-    d = n(636592),
-    _ = n(51935),
-    f =
+    d = n(440005),
+    _ = n(49132),
+    h =
         (((i = {}).NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD = "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD"),
         (i.CACHE_SHOULD_NOT_FETCH = "CACHE_SHOULD_NOT_FETCH"),
         i);
-let h = new (class {
+let f = new (class {
     value = null;
     fetchState = "idle";
     fetchedAt = null;
@@ -88,7 +88,7 @@ let h = new (class {
 })({ ttlMs: 864e5 });
 function p() {
     let { state: e, msUntilReward: t } = (function () {
-        let e = h.getValue();
+        let e = f.getValue();
         if (null == e) return { state: "MORE_THAN_24H_BEFORE_REWARD" };
         let t = new Date();
         for (let n of e.values()) {
@@ -101,7 +101,7 @@ function p() {
         }
         return { state: "MORE_THAN_24H_BEFORE_REWARD" };
     })();
-    h.setTtl("LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? 864e5) : 864e5);
+    f.setTtl("LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? 864e5) : 864e5);
 }
 class E extends o.Ay.PersistedStore {
     static displayName = "ProgramRewardsStore";
@@ -109,12 +109,12 @@ class E extends o.Ay.PersistedStore {
     initialize(e) {
         if ((this.waitFor(u.default), e?.cache != null)) {
             let t = new Map(e.cache.value);
-            h.restore({ value: t, fetchedAt: e.cache.fetchedAt });
+            f.restore({ value: t, fetchedAt: e.cache.fetchedAt });
         }
         p();
     }
     getState() {
-        let e = h.serialize();
+        let e = f.serialize();
         return { cache: null != e ? { value: Array.from(e.value.entries()), fetchedAt: e.fetchedAt } : null };
     }
     getTotalDaysInDuration(e) {
@@ -124,35 +124,35 @@ class E extends o.Ay.PersistedStore {
         return null == n || n <= 0 ? null : Math.ceil(n / c.A.Millis.DAY);
     }
     isFetching() {
-        return h.isLoading();
+        return f.isLoading();
     }
     isFetched() {
-        return h.isValid();
+        return f.isValid();
     }
     hasCachedValue() {
-        return null != h.getValue();
+        return null != f.getValue();
     }
     isReady() {
         return !this.isFetching() && (this.hasCachedValue() || !(0, _.CZ)("ProgramRewardsStore") || this.isError());
     }
     shouldFetch() {
         return (0, _.CZ)("ProgramRewardsStore.shouldFetch")
-            ? h.shouldFetch()
+            ? f.shouldFetch()
                 ? { shouldFetch: !0 }
                 : { shouldFetch: !1, reason: "CACHE_SHOULD_NOT_FETCH" }
             : { shouldFetch: !1, reason: "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD" };
     }
     isError() {
-        return h.isError();
+        return f.isError();
     }
     getStatus() {
-        return h.getStatus();
+        return f.getStatus();
     }
     getRewardForProgram(e) {
-        return h.getValue()?.get(e);
+        return f.getValue()?.get(e);
     }
     forceExpire() {
-        h.forceExpire();
+        f.forceExpire();
     }
     __getLocalVars = () => {
         let e = this.getState(),
@@ -190,24 +190,24 @@ class E extends o.Ay.PersistedStore {
 }
 let m = new E(l.h, {
     LOGOUT: function () {
-        h.clear();
+        f.clear();
     },
     PROGRAM_REWARDS_FETCH: function () {
-        h.setLoading();
+        f.setLoading();
     },
     PROGRAM_REWARDS_FETCH_SUCCESS: function (e) {
         let { programRewards: t } = e;
-        if (!h.isLoading()) return !1;
+        if (!f.isLoading()) return !1;
         let n = new Map();
         t.forEach((e) => {
             n.set(e.reward_program, e);
         }),
-            h.setValue(n),
+            f.setValue(n),
             p();
     },
     PROGRAM_REWARDS_FETCH_FAILURE: function () {
-        if (!h.isLoading()) return !1;
-        h.setError();
+        if (!f.isLoading()) return !1;
+        f.setError();
     },
     CURRENT_USER_UPDATE: p,
     CONNECTION_OPEN: p,

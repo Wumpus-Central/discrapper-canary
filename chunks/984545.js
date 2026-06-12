@@ -1,102 +1,102 @@
-n.d(t, { A: () => M });
-var i = n(627968),
-    l = n(64700),
-    s = n(17928),
-    r = n(922016),
-    a = n(550079),
-    o = n(477782),
-    d = n(365199),
-    c = n(793574),
-    u = n(688810),
-    h = n(173936),
-    A = n(735991),
-    _ = n(287809),
-    g = n(957565),
-    m = n(342384),
-    p = n(20015),
-    f = n(652215),
-    E = n(189213),
-    C = n(192308),
-    x = n(331322),
-    I = n(928658),
-    b = n(632738),
-    S = n(627363),
-    N = n(587895),
-    T = n(985018);
-let v = "useReportAppItemModal";
-var y = n(50268),
-    R = n(239211),
-    j = n(399476),
-    L = n(183555),
-    O = n(841595),
-    G = n(993401);
-function M(e) {
-    let { user: t, guildId: n, viewProfileItem: M } = e,
+i.d(t, { A: () => k });
+var e = i(627968),
+    l = i(64700),
+    o = i(17928),
+    r = i(922016),
+    a = i(980707),
+    c = i(477782),
+    d = i(365199),
+    s = i(793574),
+    p = i(688810),
+    u = i(173936),
+    A = i(735991),
+    g = i(287809),
+    m = i(957565),
+    I = i(342384),
+    P = i(20015),
+    _ = i(652215),
+    f = i(189213),
+    O = i(192308),
+    h = i(331322),
+    C = i(928658),
+    x = i(632738),
+    N = i(627363),
+    b = i(587895),
+    y = i(375708);
+let E = "useReportAppItemModal";
+var R = i(50268),
+    j = i(239211),
+    v = i(399476),
+    M = i(183555),
+    S = i(841595),
+    U = i(993401);
+function k(n) {
+    let { user: t, guildId: i, viewProfileItem: k } = n,
         D = l.useRef(null),
-        { trackUserProfileAction: U } = (0, L.NJ)(),
-        { analyticsLocations: P, newestAnalyticsLocation: w } = (0, u.Ay)(c.A.USER_PROFILE_OVERFLOW_MENU),
-        k = (0, s.bG)([O.A], () => O.A.getUserProfile(t.id)),
-        V = k?.application,
-        B = (0, R.A)({
+        { trackUserProfileAction: L } = (0, M.NJ)(),
+        { analyticsLocations: B, newestAnalyticsLocation: w } = (0, p.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
+        G = (0, o.bG)([S.A], () => S.A.getUserProfile(t.id)),
+        K = G?.application,
+        V = (0, j.A)({
             user: t,
-            guildId: n,
+            guildId: i,
             location: w,
-            onBlock: () => U({ action: "BLOCK", analyticsLocations: P }),
-            onUnblock: () => U({ action: "UNBLOCK", analyticsLocations: P }),
+            onBlock: () => L({ action: "BLOCK", analyticsLocations: B }),
+            onUnblock: () => L({ action: "UNBLOCK", analyticsLocations: B }),
         }),
-        H = (0, j.A)({
+        W = (0, v.A)({
             user: t,
-            guildId: n,
+            guildId: i,
             location: w,
-            onIgnore: () => U({ action: "IGNORE", analyticsLocations: P }),
-            onUnignore: () => U({ action: "UNIGNORE", analyticsLocations: P }),
+            onIgnore: () => L({ action: "IGNORE", analyticsLocations: B }),
+            onUnignore: () => L({ action: "UNIGNORE", analyticsLocations: B }),
         }),
-        F = (function (e) {
-            let { applicationId: t, ...n } = e;
+        q = (function (n) {
+            let { applicationId: t, ...i } = n;
             return null == t
                 ? null
-                : (0, i.jsx)(o.Dr, {
+                : (0, e.jsx)(c.Dr, {
                       id: "report-app",
-                      color: n.color,
-                      label: T.intl.string(T.t.NgA5vp),
+                      color: i.color,
+                      label: y.intl.string(y.t.NgA5vp),
                       action: () => {
-                          var e, l;
-                          let s;
+                          var n, l;
+                          let o;
                           return (
-                              (e = t),
-                              (l = n),
-                              (s = () => {
-                                  (0, C.closeModal)(v), l.onSubmit?.();
+                              (n = t),
+                              (l = i),
+                              (o = () => {
+                                  (0, O.closeModal)(E), l.onSubmit?.();
                               }),
-                              void (0, C.openModalLazy)(
+                              void (0, O.openModalLazy)(
                                   async () => {
-                                      await S.Ay.fetchApplication(e);
-                                      let t = N.A.getApplication(e);
-                                      return (e) =>
-                                          (0, i.jsx)(E.Modal, {
-                                              title: T.intl.string(T.t.Bd10bR),
+                                      await N.Ay.fetchApplication(n);
+                                      let t = b.A.getApplication(n);
+                                      return (n) =>
+                                          (0, e.jsx)(f.Modal, {
+                                              title: y.intl.string(y.t.Bd10bR),
                                               actions: [],
-                                              ...e,
-                                              children: (0, i.jsxs)(x.B, {
+                                              ...n,
+                                              children: (0, e.jsxs)(h.B, {
                                                   children: [
-                                                      (0, i.jsx)(b.PQ, {
+                                                      (0, e.jsx)(x.PQ, {
                                                           variant: "clickable",
-                                                          title: T.intl.string(T.t.eyEkG1),
-                                                          description: T.intl.string(T.t.ptItsj),
+                                                          title: y.intl.string(y.t.eyEkG1),
+                                                          description: y.intl.string(y.t.ptItsj),
                                                           onButtonPress: () =>
-                                                              (0, I.NW)(l.user, l.guildId, s, l.appContext),
+                                                              (0, C.NW)(l.user, l.guildId, o, l.appContext),
                                                       }),
-                                                      (0, i.jsx)(b.PQ, {
+                                                      (0, e.jsx)(x.PQ, {
                                                           variant: "clickable",
-                                                          title: T.intl.string(T.t.atP0yX),
-                                                          description: T.intl.string(T.t.UGg603),
+                                                          title: y.intl.string(y.t.atP0yX),
+                                                          description: y.intl.string(y.t.UGg603),
                                                           onButtonPress: () => {
-                                                              (0, I.r3)({
+                                                              (0, C.r3)({
                                                                   application: t,
                                                                   entrypoint: l.entrypoint ?? "user_profile",
                                                                   contextualGuildId: l.guildId,
                                                                   contextualChannelId: l.channelId,
-                                                                  onSubmit: s,
+                                                                  onSubmit: o,
                                                                   appContext: l.appContext,
                                                               });
                                                           },
@@ -105,81 +105,81 @@ function M(e) {
                                               }),
                                           });
                                   },
-                                  { modalKey: v },
+                                  { modalKey: E },
                               )
                           );
                       },
                   });
         })({
-            applicationId: V?.id,
+            applicationId: K?.id,
             user: t,
-            guildId: n,
-            onSubmit: () => U({ action: "REPORT", analyticsLocations: P }),
+            guildId: i,
+            onSubmit: () => L({ action: "REPORT", analyticsLocations: B }),
             color: "danger",
         }),
-        W = (0, y.A)({
-            id: V?.id,
-            label: T.intl.string(T.t["+NP/b2"]),
-            onSuccess: () => U({ action: "COPY_APP_ID", analyticsLocations: P }),
+        T = (0, R.A)({
+            id: K?.id,
+            label: y.intl.string(y.t["+NP/b2"]),
+            onSuccess: () => L({ action: "COPY_APP_ID", analyticsLocations: B }),
         }),
-        K = [
-            [M],
-            [H, B, F],
+        Y = [
+            [k],
+            [W, V, q],
             [
-                (function (e) {
-                    let { application: t, label: n, onSuccess: l, showIconFirst: s } = e;
-                    if (__OVERLAY__ || !g.p5 || null == t) return null;
-                    let r = _.default.getCurrentUser(),
+                (function (n) {
+                    let { application: t, label: i, onSuccess: l, showIconFirst: o } = n;
+                    if (__OVERLAY__ || !m.p5 || null == t) return null;
+                    let r = g.default.getCurrentUser(),
                         a = (0, A.EF)(t),
                         d = `copy-app-link-${t.id}`;
-                    return (0, i.jsx)(
-                        o.Dr,
+                    return (0, e.jsx)(
+                        c.Dr,
                         {
                             id: d,
-                            label: n,
+                            label: i,
                             action: function () {
                                 if (null == t) return;
-                                let e = (0, p.n)(t, f.gfo.EMBEDDED)
-                                    ? (0, m.W)({ applicationId: t.id, referrerId: r?.id })
-                                    : (0, m.V)({ id: t.id, ...a });
-                                null != e && (0, g.C)(e, l);
+                                let n = (0, P.n)(t, _.gfo.EMBEDDED)
+                                    ? (0, I.W)({ applicationId: t.id, referrerId: r?.id })
+                                    : (0, I.V)({ id: t.id, ...a });
+                                null != n && (0, m.C)(n, l);
                             },
-                            icon: s ? void 0 : h.q,
-                            iconLeft: s ? h.q : void 0,
-                            leadingAccessory: { type: "icon", icon: h.q },
+                            icon: o ? void 0 : u.q,
+                            iconLeft: o ? u.q : void 0,
+                            leadingAccessory: { type: "icon", icon: u.q },
                         },
                         d,
                     );
                 })({
-                    application: V,
-                    label: T.intl.string(T.t.WqhZss),
-                    onSuccess: () => U({ action: "COPY_APP_LINK", analyticsLocations: P }),
+                    application: K,
+                    label: y.intl.string(y.t.WqhZss),
+                    onSuccess: () => L({ action: "COPY_APP_LINK", analyticsLocations: B }),
                 }),
-                W,
+                T,
             ],
         ];
-    return K.every((e) => e.every((e) => null == e))
+    return Y.every((n) => n.every((n) => null == n))
         ? null
-        : (0, i.jsx)(r.Y, {
+        : (0, e.jsx)(r.Y, {
               targetElementRef: D,
-              renderPopout: (e) => {
-                  let { closePopout: t } = e;
-                  return (0, i.jsx)(a.W, {
+              renderPopout: (n) => {
+                  let { closePopout: t } = n;
+                  return (0, e.jsx)(a.W, {
                       "data-menu-migrated": !0,
                       navId: "user-bot-profile-overflow-menu",
                       onSelect: void 0,
                       onClose: t,
-                      "aria-label": T.intl.string(T.t.AXIHpV),
-                      children: K.map((e, t) => (0, i.jsx)(o.rX, { children: e.map((e) => e) }, t)),
+                      "aria-label": y.intl.string(y.t.AXIHpV),
+                      children: Y.map((n, t) => (0, e.jsx)(c.rX, { children: n.map((n) => n) }, t)),
                   });
               },
-              children: (e) =>
-                  (0, i.jsx)(G.br, {
+              children: (n) =>
+                  (0, e.jsx)(U.br, {
                       buttonRef: D,
                       action: "PRESS_OPTIONS",
                       icon: d.j,
-                      tooltipText: T.intl.string(T.t["UKOtz+"]),
-                      ...e,
+                      tooltipText: y.intl.string(y.t["UKOtz+"]),
+                      ...n,
                   }),
           });
 }

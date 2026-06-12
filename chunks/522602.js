@@ -5,68 +5,68 @@ var i = n(735438),
     s = n(17928),
     a = n(228366),
     o = n(157559),
-    l = n(743445),
-    d = n(972711),
-    _ = n(31717),
-    u = n(652215),
-    c = n(985018);
-let E = new Map(),
-    h = [];
-function m(e, t) {
-    return f(e)?.get(t) ?? h;
+    l = n(417325),
+    u = n(972711),
+    c = n(31717),
+    d = n(652215),
+    _ = n(375708);
+let h = new Map(),
+    f = [];
+function p(e, t) {
+    return E(e)?.get(t) ?? f;
 }
-function f(e) {
-    return E.get(e) ?? new Map();
+function E(e) {
+    return h.get(e) ?? new Map();
 }
-function g(e, t, n) {
-    let i = f(e);
-    i.set(t, n), E.set(e, i);
+function m(e, t, n) {
+    let i = E(e);
+    i.set(t, n), h.set(e, i);
 }
-class p extends s.Ay.Store {
+class g extends s.Ay.Store {
     static displayName = "UploadAttachmentStore";
     getFirstUpload(e, t) {
-        let n = m(e, t);
+        let n = p(e, t);
         return n.length > 0 ? n[0] : null;
     }
     hasAdditionalUploads(e, t) {
-        return (m(e, t).length ?? 0) > 1;
+        return (p(e, t).length ?? 0) > 1;
     }
     getUploads(e, t) {
-        return m(e, t);
+        return p(e, t);
     }
     getUploadCount(e, t) {
-        return m(e, t).length ?? 0;
+        return p(e, t).length ?? 0;
     }
     getUpload(e, t, n) {
-        return m(e, n).find((e) => e.id === t);
+        return p(e, n).find((e) => e.id === t);
     }
     findUpload(e, t, n) {
-        return m(e, t).find(n);
+        return p(e, t).find(n);
     }
 }
-let A = new p(a.h, {
+let A = new g(a.h, {
     UPLOAD_ATTACHMENT_POP_FILE: function (e) {
         let { channelId: t } = e,
-            n = [...m(t, _.C.ChannelMessage)];
-        n.shift(), g(t, _.C.ChannelMessage, n);
+            n = [...p(t, c.C.ChannelMessage)];
+        n.shift(), m(t, c.C.ChannelMessage, n);
     },
     UPLOAD_ATTACHMENT_ADD_FILES: (e) => {
         let { files: t, channelId: n, draftType: i, allowOptimization: s } = e,
-            a = [...m(n, i)];
-        a.length + t.length > u.XgB && i !== _.C.SlashCommand && i !== _.C.ApplicationLauncherCommand
+            a = [...p(n, i)];
+        a.length + t.length > d.XgB && i !== c.C.SlashCommand && i !== c.C.ApplicationLauncherCommand
             ? o.A.show({
-                  title: c.intl.string(c.t.wOr6hB),
-                  body: c.intl.formatToPlainString(c.t["qqyp/e"], { limit: u.XgB }),
+                  title: _.intl.string(_.t.wOr6hB),
+                  body: _.intl.formatToPlainString(_.t["qqyp/e"], { limit: d.XgB }),
               })
             : (r().forEach(t, (e) => {
                   let t = new l.bK(e, n, a.length, s);
                   t.upload(), a.push(t);
               }),
-              g(n, i, a));
+              m(n, i, a));
     },
     UPLOAD_ATTACHMENT_UPDATE_FILE: function (e) {
         let { channelId: t, id: n, filename: i, description: r, spoiler: s, thumbnail: a, draftType: o } = e,
-            l = [...m(t, o)].map(
+            l = [...p(t, o)].map(
                 (e) => (
                     e.id === n &&
                         (void 0 !== i && (e.filename = i),
@@ -76,35 +76,35 @@ let A = new p(a.h, {
                     e
                 ),
             );
-        g(t, o, l);
+        m(t, o, l);
     },
     UPLOAD_ATTACHMENT_REMOVE_FILE: function (e) {
         let { channelId: t, id: n, draftType: i } = e,
-            r = [...m(t, i)],
-            s = r.findIndex((e) => (0, d.ph)({ uri: n, filename: n }, e));
-        s > -1 && (r.splice(s, 1)[0].removeFromMsgDraft(), g(t, i, r));
+            r = [...p(t, i)],
+            s = r.findIndex((e) => (0, u.ph)({ uri: n, filename: n }, e));
+        s > -1 && (r.splice(s, 1)[0].removeFromMsgDraft(), m(t, i, r));
     },
     UPLOAD_ATTACHMENT_REMOVE_FILES: function (e) {
         let { channelId: t, attachmentIds: n, draftType: i } = e,
-            r = [...m(t, i)];
+            r = [...p(t, i)];
         n.forEach((e) => {
             let t = r.findIndex((t) => e === t.id);
             t > -1 && r.splice(t, 1)[0].removeFromMsgDraft();
         }),
-            g(t, i, r);
+            m(t, i, r);
     },
     UPLOAD_ATTACHMENT_CLEAR_ALL_FILES: function (e) {
         let { channelId: t, draftType: n } = e;
-        g(t, n, []);
+        m(t, n, []);
     },
     UPLOAD_ATTACHMENT_SET_UPLOADS: function (e) {
         let { channelId: t, uploads: n, draftType: i } = e;
-        g(t, i, n);
+        m(t, i, n);
     },
     UPLOAD_ATTACHMENT_SET_FILE: function (e) {
         let { channelId: t, id: n, file: i, draftType: r, allowOptimization: s } = e,
-            a = [...m(t, r)].filter((e) => e.id !== n),
+            a = [...p(t, r)].filter((e) => e.id !== n),
             o = new l.bK(i, t, void 0, s);
-        o.upload(), a.push(o), g(t, r, a);
+        o.upload(), a.push(o), m(t, r, a);
     },
 });

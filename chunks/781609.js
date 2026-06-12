@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => _ });
 var i = n(439372),
     r = n(710195),
     s = n(965957),
     a = n(312671),
     o = n(458640),
     l = n(417146),
-    d = n(552122),
-    _ = n(235079);
-class u extends i.A {
+    u = n(552122),
+    c = n(235079);
+class d extends i.A {
     stores = new Map().set(r.A, () => this.handleExperimentUpdated());
     actions = { NOTIFICATIONS_SET_DISABLED_SOUNDS: this.updateRingtone };
     handleExperimentUpdated = () => {
@@ -18,16 +18,16 @@ class u extends i.A {
         let e = a.A.getSoundpack(),
             t = a.A.getLastSoundpackExperimentId(),
             n = l.A.experiment?.definition.name,
-            i = d.A.isEligible();
-        i || (null == t && e === _.i.CLASSIC)
+            i = u.A.isEligible();
+        i || (null == t && e === c.i.CLASSIC)
             ? i && null != l.A.soundpack && n !== t && e !== l.A.soundpack && (0, s.p)(l.A.soundpack, n)
-            : (0, s.p)(_.i.CLASSIC, null);
+            : (0, s.p)(c.i.CLASSIC, null);
     }
     updateRingtone() {
-        if (d.A.isEligible()) {
+        if (u.A.isEligible()) {
             let e = (0, o.A)(a.A.getSoundpack());
             null != e.call_ringing && e.call_ringing;
         }
     }
 }
-let c = new u();
+let _ = new d();

@@ -21,23 +21,23 @@ function a(e) {
         o = decodeURIComponent(t);
     } catch (e) {}
     let l = o.split("/"),
-        d = null,
-        _ = 0;
+        u = null,
+        c = 0;
     for (let e = l.length - 1; e >= 0; e--) {
         let t = l[e];
         if ("" !== t && "." !== t) {
             if (".." === t) {
-                _++;
+                c++;
                 continue;
             }
-            if (_ > e) break;
-            d = l[e - _];
+            if (c > e) break;
+            u = l[e - c];
             break;
         }
     }
-    if (null == d) return null;
-    let u = d.split(".");
-    if (u.length < 2) return null;
-    let c = u.pop()?.toLowerCase();
-    return null != c && r.has(c) ? c : null;
+    if (null == u) return null;
+    let d = u.split(".");
+    if (d.length < 2) return null;
+    let _ = d.pop()?.toLowerCase();
+    return null != _ && r.has(_) ? _ : null;
 }

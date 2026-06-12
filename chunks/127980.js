@@ -1,9 +1,9 @@
 e.exports = function (e) {
     let t = e.COMMENT("#", "$"),
-        a = "([A-Za-z_]|::)(\\w|::)*",
-        n = e.inherit(e.TITLE_MODE, { begin: a }),
-        r = { className: "variable", begin: "\\$" + a },
-        i = {
+        n = "([A-Za-z_]|::)(\\w|::)*",
+        i = e.inherit(e.TITLE_MODE, { begin: n }),
+        r = { className: "variable", begin: "\\$" + n },
+        s = {
             className: "string",
             contains: [e.BACKSLASH_ESCAPE, r],
             variants: [
@@ -17,8 +17,8 @@ e.exports = function (e) {
         contains: [
             t,
             r,
-            i,
-            { beginKeywords: "class", end: "\\{|;", illegal: /=/, contains: [n, t] },
+            s,
+            { beginKeywords: "class", end: "\\{|;", illegal: /=/, contains: [i, t] },
             {
                 beginKeywords: "define",
                 end: /\{/,
@@ -43,7 +43,7 @@ e.exports = function (e) {
                         },
                         relevance: 0,
                         contains: [
-                            i,
+                            s,
                             t,
                             {
                                 begin: "[a-zA-Z_]+\\s*=>",

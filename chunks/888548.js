@@ -1,20 +1,20 @@
 "use strict";
 n.r(t),
     n.d(t, {
-        extractCaptchaPropsFromResponse: () => _,
-        CaptchaCancelError: () => c,
-        CaptchaError: () => d,
-        emitCaptchaDistributionMetric: () => u,
+        extractCaptchaPropsFromResponse: () => c,
+        CaptchaCancelError: () => _,
+        CaptchaError: () => u,
+        emitCaptchaDistributionMetric: () => d,
     });
 var i,
     r = n(353640),
     s = n(731738),
     a = n(121894),
-    o = n(831062);
+    o = n(807393);
 let l = (0, r.v)((e) => ({ captchaServeVolume: {} }));
 n(320028);
-var d = (((i = {}).CANCEL = "cancel"), (i.ERROR = "error"), (i.EXPIRED = "expired"), i);
-function _(e) {
+var u = (((i = {}).CANCEL = "cancel"), (i.ERROR = "error"), (i.EXPIRED = "expired"), i);
+function c(e) {
     return {
         captchaService: e.captcha_service,
         sitekey: e.captcha_sitekey,
@@ -27,7 +27,7 @@ function _(e) {
         },
     };
 }
-function u(e) {
+function d(e) {
     0 === Object.keys(l.getState().captchaServeVolume).length &&
         setTimeout(
             () =>
@@ -52,7 +52,7 @@ function u(e) {
             );
         });
 }
-class c extends Error {
+class _ extends Error {
     constructor() {
         super("Captcha cancelled");
     }

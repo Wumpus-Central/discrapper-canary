@@ -16,7 +16,7 @@ var i = n(702841),
     y = n.n(p),
     h = n(827343),
     T = n(730852),
-    I = n(555975),
+    I = n(890063),
     S = n(469802),
     b = n(350701),
     G = n(857253),
@@ -109,7 +109,7 @@ function w(e) {
                                 : (i.type === P.fg2.PLAYSTATION || i.type === P.fg2.PLAYSTATION_STAGING) &&
                                   (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("33343"),
+                                          n.e("28758"),
                                           n.e("25861"),
                                           n.e("71210"),
                                           n.e("38035"),

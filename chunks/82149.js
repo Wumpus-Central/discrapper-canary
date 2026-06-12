@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { Cy: () => _, IS: () => f, UW: () => c, eL: () => d });
-var r = n(961350),
-    i = n(734057),
+n.d(t, { Cy: () => _, IS: () => h, UW: () => d, eL: () => c });
+var i = n(495544),
+    r = n(734057),
     s = n(71393),
     a = n(312006),
     o = n(516607),
     l = n(652215);
 let u = "stage:";
-function d(e, t) {
+function c(e, t) {
     let n = 0,
-        i = r.default.getId();
-    a.Ay.isSpeaker(i, e.id) && (n |= 1);
+        r = i.default.getId();
+    a.Ay.isSpeaker(r, e.id) && (n |= 1);
     let o = s.A.getGuild(e.getGuildId());
     null != o &&
         (o.features.has(l.GuildFeatures.PARTNERED) && (n |= 2), o.features.has(l.GuildFeatures.VERIFIED) && (n |= 4));
-    let d = n.toString(16);
-    return `${u}${e.guild_id}:${e.id}:${d}:${t.id}`;
+    let c = n.toString(16);
+    return `${u}${e.guild_id}:${e.id}:${c}:${t.id}`;
 }
-function c(e) {
+function d(e) {
     if (null == e || null == e.party) return;
     let { id: t, size: n } = e.party;
     try {
         if (null == t || !t.startsWith(u)) return;
-        let [, e, r, i, s] = t.split(":"),
-            a = parseInt(i, 16);
+        let [, e, i, r, s] = t.split(":"),
+            a = parseInt(r, 16);
         return {
             guildId: e,
-            channelId: r,
+            channelId: i,
             size: n,
             userIsSpeaker: (1 & a) != 0,
             guildIsPartnered: (2 & a) != 0,
@@ -40,9 +40,9 @@ function c(e) {
 function _(e) {
     return e?.application_id === o.SS;
 }
-function f(e) {
-    let t = c(e);
+function h(e) {
+    let t = d(e);
     if (null == t) return !1;
     let { channelId: n } = t;
-    return null != i.A.getChannel(n);
+    return null != r.A.getChannel(n);
 }

@@ -1,8 +1,8 @@
 n.d(t, { A: () => S });
 var l = n(627968),
-    a = n(64700),
+    r = n(64700),
     i = n(503698),
-    r = n.n(i),
+    a = n.n(i),
     s = n(661531),
     o = n(834730),
     u = n(922016),
@@ -11,36 +11,36 @@ var l = n(627968),
     p = n(460905),
     m = n(267889),
     h = n(652215),
-    C = n(307731),
-    A = n(375708),
-    y = n(24238);
-let E = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
-    P = C.EmojiIntention.GIFT;
+    A = n(307731),
+    E = n(375708),
+    C = n(24238);
+let y = { section: h.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
+    _ = A.EmojiIntention.GIFT;
 function S(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
-        [i, h] = a.useState(!1),
-        C = a.useRef(null),
-        S = r()(y.Qq, y.Ow),
-        _ = (e) =>
+        [i, h] = r.useState(!1),
+        A = r.useRef(null),
+        S = a()(C.Qq, C.Ow),
+        P = (e) =>
             (0, l.jsxs)("div", {
-                className: y.ZC,
+                className: C.ZC,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: y.Ry,
+                        className: C.Ry,
                         children: [
-                            (0, l.jsx)(o.E, { variant: "text-md/bold", children: A.intl.string(A.t.Hl2Ige) }),
-                            (0, l.jsx)(o.E, { variant: "text-sm/normal", children: A.intl.string(A.t.stGFA3) }),
+                            (0, l.jsx)(o.E, { variant: "text-md/bold", children: E.intl.string(E.t.Hl2Ige) }),
+                            (0, l.jsx)(o.E, { variant: "text-sm/normal", children: E.intl.string(E.t.stGFA3) }),
                         ],
                     }),
                     e,
                 ],
             }),
-        f = (e) => {
+        I = (e) => {
             let { emoji: n } = e;
             null != t && (t(n), h(!1));
         };
     return (0, l.jsx)(u.Y, {
-        targetElementRef: C,
+        targetElementRef: A,
         shouldShow: i,
         position: "bottom",
         align: "left",
@@ -49,35 +49,35 @@ function S(e) {
             let { closePopout: t } = e;
             return (0, l.jsx)(c.l, {
                 children: (0, l.jsx)(m.A, {
-                    analyticsOverride: E,
+                    analyticsOverride: y,
                     closePopout: t,
-                    onSelectEmoji: f,
+                    onSelectEmoji: I,
                     wrapper: "div",
-                    pickerIntention: P,
+                    pickerIntention: _,
                     showAddEmojiButton: !1,
-                    renderHeader: _,
-                    headerClassName: y.a8,
-                    className: y.vX,
-                    listHeaderClassName: y.vX,
-                    categoryListClassName: y.jv,
+                    renderHeader: P,
+                    headerClassName: C.a8,
+                    className: C.vX,
+                    listHeaderClassName: C.vX,
+                    categoryListClassName: C.jv,
                     searchProps: { accessory: (0, l.jsx)(l.Fragment, {}) },
                 }),
             });
         },
         children: () =>
             (0, l.jsx)(d.D, {
-                className: r()(y.kL, y.Ow),
+                className: a()(C.kL, C.Ow),
                 onClick: () => h(!0),
-                innerRef: C,
+                innerRef: A,
                 children:
                     n?.name == null
                         ? (0, l.jsxs)("div", {
-                              className: y.hQ,
+                              className: C.hQ,
                               children: [
                                   (0, l.jsx)(p.n, {
                                       size: "custom",
                                       color: s.A.colors.ICON_STRONG,
-                                      className: y.mI,
+                                      className: C.mI,
                                       width: 14,
                                       height: 14,
                                   }),
@@ -85,12 +85,12 @@ function S(e) {
                                       className: S,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
-                                      children: A.intl.string(A.t.Hl2Ige),
+                                      children: E.intl.string(E.t.Hl2Ige),
                                   }),
                               ],
                           })
                         : (0, l.jsxs)("div", {
-                              className: y.hQ,
+                              className: C.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
                                       className: S,

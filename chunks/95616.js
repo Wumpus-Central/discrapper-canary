@@ -1,52 +1,52 @@
-t.d(n, { default: () => C });
-var r = t(627968);
-t(64700);
-var i = t(861672),
-    l = t(477782),
-    a = t(442433),
-    u = t(847767),
-    d = t(358367),
-    s = t(793574),
-    o = t(886393),
-    c = t(848977),
-    A = t(995102),
-    E = t(288104),
-    f = t(661504),
-    v = t(50268),
-    N = t(769591),
-    g = t(914853),
-    h = t(708653),
-    I = t(297460),
-    _ = t(652215),
-    y = t(985018),
-    M = t(221314);
-let C = (0, d.A)(
-    (0, u.A)(
+n.d(t, { default: () => k });
+var r = n(627968);
+n(64700);
+var i = n(980707),
+    l = n(477782),
+    o = n(442433),
+    a = n(847767),
+    d = n(358367),
+    s = n(793574),
+    c = n(886393),
+    A = n(848977),
+    h = n(995102),
+    E = n(288104),
+    u = n(661504),
+    p = n(50268),
+    C = n(769591),
+    N = n(914853),
+    _ = n(708653),
+    T = n(297460),
+    x = n(652215),
+    X = n(375708),
+    g = n(221314);
+let k = (0, d.A)(
+    (0, a.A)(
         function (e) {
-            let { channel: n, widgetType: t, onSelect: u } = e,
-                d = (0, c.A)(n),
-                s = (0, o.A)(n),
-                _ = (0, I.A)({ kind: "CHANNEL", channel: n, guildId: n.getGuildId?.() ?? null }, t),
-                { toggleFavoriteItem: C } = (0, h.$X)(g.x.MESSAGES, n, t),
-                S = (0, A.A)(n),
-                x = (0, v.A)({ id: n.id, label: y.intl.string(y.t.gFHI3k) }),
-                T = (0, E.A)(n),
-                b = (0, f.Ay)(n),
-                p = (0, N.os)("ReportToModChannelContextMenu");
+            let { channel: t, widgetType: n, onSelect: a } = e,
+                d = (0, A.A)(t),
+                s = (0, c.A)(t),
+                x = (0, T.A)({ kind: "CHANNEL", channel: t, guildId: t.getGuildId?.() ?? null }, n),
+                { toggleFavoriteItem: k } = (0, _.$X)(N.x.MESSAGES, t, n),
+                v = (0, h.A)(t),
+                M = (0, p.A)({ id: t.id, label: X.intl.string(X.t.gFHI3k) }),
+                O = (0, E.A)(t),
+                j = (0, u.Ay)(t),
+                b = (0, C.os)("ReportToModChannelContextMenu");
             return (0, r.jsxs)(i.W, {
                 navId: "overlay-report-to-mod-channel-context",
-                onClose: a.Z_,
-                "aria-label": y.intl.string(M.default["zp+z/E"]),
-                onSelect: u,
+                onClose: o.Z_,
+                "aria-label": X.intl.string(g.default["zp+z/E"]),
+                onSelect: a,
                 children: [
-                    (0, r.jsxs)(l.rX, { children: [d, _, C] }, "mark-as-read-or-favorite"),
+                    (0, r.jsxs)(l.rX, { children: [d, x, k] }, "mark-as-read-or-favorite"),
                     (0, r.jsx)(l.rX, { children: s }, "channel-actions"),
-                    (0, r.jsxs)(l.rX, { children: [S, p ? b : T] }, "notifications"),
-                    (0, r.jsx)(l.rX, { children: x }, "developer-actions"),
+                    (0, r.jsxs)(l.rX, { children: [v, b ? j : O] }, "notifications"),
+                    (0, r.jsx)(l.rX, { children: M }, "developer-actions"),
                 ],
             });
         },
-        { object: _.ZSU.CONTEXT_MENU },
+        { object: x.ZSU.CONTEXT_MENU },
     ),
     [s.A.CONTEXT_MENU, s.A.OVERLAY, s.A.REPORT_TO_MOD_CHANNEL_CONTEXT_MENU],
 );

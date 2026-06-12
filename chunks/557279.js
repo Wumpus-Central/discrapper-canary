@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { Di: () => l, S: () => u, gz: () => o });
-var r = n(617617),
-    i = n(287809),
+var i = n(617617),
+    r = n(287809),
     s = n(349435),
     a = n(665909);
 function o() {
-    let e = i.default.getCurrentUser()?.isStaff() === !0,
-        t = r.A.settings.privacy?.inappropriateConversationWarnings?.value ?? !0;
+    let e = r.default.getCurrentUser()?.isStaff() === !0,
+        t = i.A.settings.privacy?.inappropriateConversationWarnings?.value ?? !0;
     return ((0, a.Wu)() || e) && t;
 }
 function l(e) {

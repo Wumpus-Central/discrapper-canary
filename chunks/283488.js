@@ -8,13 +8,13 @@ function a(e) {
         [l, u] = i.useState(null),
         [c, d] = i.useState(!0),
         _ = (0, r.uD)(t, l, n, o),
-        f = i.useRef(a);
+        h = i.useRef(a);
     return (
         i.useEffect(() => {
-            f.current = a;
+            h.current = a;
         }),
         i.useEffect(() => {
-            let { current: e } = f;
+            let { current: e } = h;
             null != t &&
                 (0, r.Y)(t).then((t) => {
                     for (let [n, i] of (d(!1), Object.entries(t)))

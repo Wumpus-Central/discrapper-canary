@@ -1,14 +1,14 @@
 "use strict";
-var r = n(969001),
-    i = function () {
-        return !!r;
+var i = n(969001),
+    r = function () {
+        return !!i;
     };
-(i.hasArrayLengthDefineBug = function () {
-    if (!r) return null;
+(r.hasArrayLengthDefineBug = function () {
+    if (!i) return null;
     try {
-        return 1 !== r([], "length", { value: 1 }).length;
+        return 1 !== i([], "length", { value: 1 }).length;
     } catch (e) {
         return !0;
     }
 }),
-    (e.exports = i);
+    (e.exports = r);

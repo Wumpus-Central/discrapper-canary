@@ -1,21 +1,21 @@
 a.d(t, { A: () => u });
-var n = a(64700),
-    l = a(17928),
-    s = a(778712),
-    r = a(45837),
-    i = a(495544),
+var l = a(64700),
+    n = a(17928),
+    r = a(778712),
+    i = a(45837),
+    s = a(495544),
     c = a(101058),
     o = a(595535);
 function u(e) {
     let { avatarId: t, storageHash: a, size: u } = e,
-        { onMouseEnter: d, onMouseLeave: A, shouldAnimate: h } = (0, r.A)(),
-        f = (0, l.bG)([i.default], () => i.default.getId());
+        { onMouseEnter: d, onMouseLeave: h, shouldAnimate: A } = (0, i.A)(),
+        g = (0, n.bG)([s.default], () => s.default.getId());
     return {
-        avatarSrc: n.useMemo(
-            () => (0, c.Xp)({ userId: f, avatarId: t, storageHash: a, canAnimate: h, size: (0, s.FT)(u ?? o.q) }),
-            [f, t, a, h, u],
+        avatarSrc: l.useMemo(
+            () => (0, c.Xp)({ userId: g, avatarId: t, storageHash: a, canAnimate: A, size: (0, r.FT)(u ?? o.q) }),
+            [g, t, a, A, u],
         ),
-        isAvatarAnimating: h,
-        eventHandlers: { onMouseEnter: d, onMouseLeave: A },
+        isAvatarAnimating: A,
+        eventHandlers: { onMouseEnter: d, onMouseLeave: h },
     };
 }

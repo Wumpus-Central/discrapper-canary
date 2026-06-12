@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, { VQ: () => a, kx: () => s, wp: () => o });
-var r,
-    i,
+var i,
+    r,
     s =
-        (((r = {}).EMOJI = "emoji"),
-        (r.GIF = "gif"),
-        (r.STICKER = "sticker"),
-        (r.SOUNDBOARD = "soundboard"),
-        (r.KAOMOJI = "kaomoji"),
-        r);
+        (((i = {}).EMOJI = "emoji"),
+        (i.GIF = "gif"),
+        (i.STICKER = "sticker"),
+        (i.SOUNDBOARD = "soundboard"),
+        (i.KAOMOJI = "kaomoji"),
+        i);
 let a = "expression-picker-chat-input-button";
-var o = (((i = {}).MIN = "min"), (i.MAX = "max"), i);
+var o = (((r = {}).MIN = "min"), (r.MAX = "max"), r);

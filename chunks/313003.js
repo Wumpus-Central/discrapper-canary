@@ -1,34 +1,34 @@
-a.d(e, { default: () => _ });
-var n = a(627968),
-    i = a(64700),
-    r = a(954197),
-    l = a(198982),
-    o = a(997509),
-    s = a(809505),
-    c = a(242273),
-    d = a(652215),
-    u = a(985018);
-function _(t) {
-    let { guild: e, onClose: a, hideColors: _ } = t,
-        [b, p] = i.useState(e.verificationLevel),
-        [C, g] = i.useState(null),
-        h = e.features.has(d.GuildFeatures.COMMUNITY),
-        v = (0, s.vd)(h, _).filter((t) => !t.disabled),
-        f = i.useCallback(async () => {
-            null != C && g(null);
+i.d(t, { default: () => p });
+var a = i(627968),
+    n = i(64700),
+    l = i(773812),
+    r = i(913122),
+    s = i(468689),
+    u = i(809505),
+    d = i(242273),
+    c = i(652215),
+    o = i(375708);
+function p(e) {
+    let { guild: t, onClose: i, hideColors: p } = e,
+        [h, f] = n.useState(t.verificationLevel),
+        [v, C] = n.useState(null),
+        k = t.features.has(c.GuildFeatures.COMMUNITY),
+        b = (0, u.vd)(k, p).filter((e) => !e.disabled),
+        g = n.useCallback(async () => {
+            null != v && C(null);
             try {
-                await o.A.saveGuild(e.id, { verificationLevel: b }), o.A.updateGuild({ verificationLevel: b }), a();
-            } catch (t) {
-                g(new l.LG(t).getAnyErrorMessage());
+                await s.A.saveGuild(t.id, { verificationLevel: h }), s.A.updateGuild({ verificationLevel: h }), i();
+            } catch (e) {
+                C(new r.LG(e).getAnyErrorMessage());
             }
-        }, [C, e.id, b, a]);
-    return (0, n.jsx)(c.A, {
-        ...t,
-        title: u.intl.string(u.t.DpRdYK),
-        description: u.intl.format(u.t.iuRk2j, {}),
-        errorText: C,
-        onConfirm: f,
-        onCancel: a,
-        children: (0, n.jsx)(r.z, { value: b, options: v, onChange: (t) => p(t) }),
+        }, [v, t.id, h, i]);
+    return (0, a.jsx)(d.A, {
+        ...e,
+        title: o.intl.string(o.t.DpRdYK),
+        description: o.intl.format(o.t.iuRk2j, {}),
+        errorText: v,
+        onConfirm: g,
+        onCancel: i,
+        children: (0, a.jsx)(l.z, { value: h, options: b, onChange: (e) => f(e) }),
     });
 }

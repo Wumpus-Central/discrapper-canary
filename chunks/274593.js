@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { A: () => s });
-var r = n(255438),
-    i = n(613057),
-    a = n(985018);
-class s {
+n.d(t, { A: () => a });
+var i = n(255438),
+    r = n(613057),
+    s = n(375708);
+class a {
     raw;
     context;
     code;
@@ -19,41 +19,41 @@ class s {
             null != e.context ? (this.context = e.context) : (this.context = {});
     }
     get displayMessage() {
-        if (null == this.code) return a.intl.string(a.t["5NMPSS"]);
+        if (null == this.code) return s.intl.string(s.t["5NMPSS"]);
         let { path: e } = this.context;
         switch (this.code) {
-            case i.Hi.DISK_LOW:
+            case r.Hi.DISK_LOW:
                 let { available: t, required: n } = this.context,
-                    s = (0, r.Xq)(t, { useKibibytes: !0 }),
-                    o = (0, r.Xq)(n, { useKibibytes: !0 });
-                return a.intl.formatToPlainString(a.t["2DR5dl"], { required: o, available: s });
-            case i.Hi.POST_INSTALL_FAILED:
+                    a = (0, i.Xq)(t, { useKibibytes: !0 }),
+                    o = (0, i.Xq)(n, { useKibibytes: !0 });
+                return s.intl.formatToPlainString(s.t["2DR5dl"], { required: o, available: a });
+            case r.Hi.POST_INSTALL_FAILED:
                 let { name: l } = this.context;
-                return a.intl.formatToPlainString(a.t.hP0B3A, { name: l });
-            case i.Hi.FILE_NAME_TOO_LONG:
-                return a.intl.string(a.t["FWht5+"]);
-            case i.Hi.POST_INSTALL_CANCELLED:
-                return a.intl.string(a.t["9CNxFJ"]);
-            case i.Hi.IO_PERMISSION_DENIED:
-                return a.intl.string(a.t["PJx5+Z"]);
-            case i.Hi.NO_MANIFESTS:
-                return a.intl.string(a.t.gLM395);
-            case i.Hi.NOT_ENTITLED:
-                return a.intl.string(a.t.TLCR43);
-            case i.Hi.NOT_DIRECTORY:
-            case i.Hi.DISK_PERMISSION_DENIED:
-                return a.intl.formatToPlainString(a.t.EjWbO6, { path: e });
-            case i.Hi.INVALID_DRIVE:
-                return a.intl.formatToPlainString(a.t["08L2TG"], { path: e });
-            case i.Hi.APPLICATION_LOCK_FAILED:
-                return a.intl.string(a.t.RDYCUV);
-            case i.Hi.DISK_FULL:
-                return a.intl.string(a.t.mojtDJ);
-            case i.Hi.API_ERROR:
-            case i.Hi.MAX_REQUEST_RETRIES_EXCEEDED:
-                return a.intl.string(a.t.OXD41D);
+                return s.intl.formatToPlainString(s.t.hP0B3A, { name: l });
+            case r.Hi.FILE_NAME_TOO_LONG:
+                return s.intl.string(s.t["FWht5+"]);
+            case r.Hi.POST_INSTALL_CANCELLED:
+                return s.intl.string(s.t["9CNxFJ"]);
+            case r.Hi.IO_PERMISSION_DENIED:
+                return s.intl.string(s.t["PJx5+Z"]);
+            case r.Hi.NO_MANIFESTS:
+                return s.intl.string(s.t.gLM395);
+            case r.Hi.NOT_ENTITLED:
+                return s.intl.string(s.t.TLCR43);
+            case r.Hi.NOT_DIRECTORY:
+            case r.Hi.DISK_PERMISSION_DENIED:
+                return s.intl.formatToPlainString(s.t.EjWbO6, { path: e });
+            case r.Hi.INVALID_DRIVE:
+                return s.intl.formatToPlainString(s.t["08L2TG"], { path: e });
+            case r.Hi.APPLICATION_LOCK_FAILED:
+                return s.intl.string(s.t.RDYCUV);
+            case r.Hi.DISK_FULL:
+                return s.intl.string(s.t.mojtDJ);
+            case r.Hi.API_ERROR:
+            case r.Hi.MAX_REQUEST_RETRIES_EXCEEDED:
+                return s.intl.string(s.t.OXD41D);
             default:
-                return a.intl.formatToPlainString(a.t.r477WB, { code: `${this.code}` });
+                return s.intl.formatToPlainString(s.t.r477WB, { code: `${this.code}` });
         }
     }
 }

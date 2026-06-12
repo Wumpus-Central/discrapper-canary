@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(636537),
     r = n(228366),
     s = n(883600),
-    a = n(253932),
+    a = n(885386),
     o = n(652215),
     l = n(559868);
-function _() {
+function u() {
     let e = new Date().getMinutes();
     return `x=${Math.floor(e / 5)}`;
 }
-let d = {
+let c = {
     lockChangeLog(e) {
         r.h.dispatch({ type: "CHANGE_LOG_LOCK", key: e });
     },
@@ -28,14 +28,14 @@ let d = {
     },
     fetchChangelogConfig() {
         let e = l.V5.DESKTOP;
-        return i.Bo.get({ url: `https://cdn.discordapp.com/changelogs/config_${e}.json?${_()}`, rejectWithError: !0 });
+        return i.Bo.get({ url: `https://cdn.discordapp.com/changelogs/config_${e}.json?${u()}`, rejectWithError: !0 });
     },
     async fetchChangelog(e, t) {
         arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
         let n = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
         if (null != s.A.getChangelog(e, t)) return null;
         let a = l.V5.DESKTOP,
-            o = n ? "" : `?${_()}`;
+            o = n ? "" : `?${u()}`;
         try {
             let n = await i.Bo.get({
                 url: `https://cdn.discordapp.com/changelogs/${a}/${e}/${t}.json${o}`,

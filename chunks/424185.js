@@ -59,7 +59,7 @@ function f(t) {
     );
     return (
         l.useEffect(() => {
-            null == S && (0, g.F4)(k, j);
+            null == S && (0, g.iR)(k, j);
         }, [k, j, S]),
         l.useEffect(() => {
             if (null != S && "checking" !== S) {

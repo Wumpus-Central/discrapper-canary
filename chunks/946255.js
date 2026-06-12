@@ -14,8 +14,8 @@ function s(e) {
         partyId: c,
         messageId: d,
         locationObject: _,
-        analyticsLocations: f,
-        referrerId: h,
+        analyticsLocations: h,
+        referrerId: f,
         inviterUserId: p,
         remoteJoinPlatform: E,
     } = e;
@@ -30,8 +30,8 @@ function s(e) {
         other_user_id: s,
         message_id: d,
         location: _,
-        location_stack: f,
-        referrer_id: h,
+        location_stack: h,
+        referrer_id: f,
         invite_inviter_id: p,
         remote_join_platform: E,
     });

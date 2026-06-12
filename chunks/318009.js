@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(980707),
     d = n(442433),
     _ = n(139286),
-    f = n(750506),
-    h = n(267102),
+    h = n(750506),
+    f = n(267102),
     p = n(363195),
     E = n(712687),
     m = n(625494),
@@ -33,19 +33,19 @@ let I = (e) => {
             disableClickTrap: T = !1,
             repositionOnContentChange: S = !1,
         } = e,
-        N = r.useRef(null),
-        y = r.useMemo(() => ({ current: c }), [c]),
-        C = r.useRef(n);
+        y = r.useRef(null),
+        N = r.useMemo(() => ({ current: c }), [c]),
+        v = r.useRef(n);
     r.useEffect(() => {
-        C.current = n;
+        v.current = n;
     }),
         r.useEffect(() => {
-            let e = N.current?.elementRef.current;
+            let e = y.current?.elementRef.current;
             if (null == e) return;
             let t = (e) => {
                 let t = e.target,
-                    n = N.current?.elementRef.current;
-                (null != n && (0, u.H)(n, t)) || (A(), C.current());
+                    n = y.current?.elementRef.current;
+                (null != n && (0, u.H)(n, t)) || (A(), v.current());
             };
             return (
                 e.ownerDocument?.addEventListener("click", t, !0),
@@ -56,22 +56,22 @@ let I = (e) => {
                 }
             );
         }, []);
-    let v = r.useRef(o);
+    let C = r.useRef(o);
     r.useEffect(() => {
-        v.current = o;
+        C.current = o;
     }),
-        r.useEffect(() => () => v.current?.(), []),
+        r.useEffect(() => () => C.current?.(), []),
         r.useLayoutEffect(() => {
-            N.current?.updatePosition();
+            y.current?.updatePosition();
         }),
         (0, _.A)({ type: s.ImpressionTypes.MENU, name: m, properties: I });
-    let O = (0, h.aL)(),
-        R = r.useCallback(() => {
-            O.dispatch(g.jej.POPOUT_SHOW);
-        }, [O]),
+    let R = (0, f.aL)(),
+        O = r.useCallback(() => {
+            R.dispatch(g.jej.POPOUT_SHOW);
+        }, [R]),
         b = r.useCallback(() => {
-            O.dispatch(g.jej.POPOUT_HIDE);
-        }, [O]),
+            R.dispatch(g.jej.POPOUT_HIDE);
+        }, [R]),
         D = (0, l.D)("ContextMenu"),
         L = c.ownerDocument;
     return D
@@ -82,7 +82,7 @@ let I = (e) => {
               open: !0,
               ownerDocument: L,
               onOpenChange: (e, t, n) => {
-                  e ? R() : (b(), "outside-press" === n && setTimeout(A, 0), C.current());
+                  e ? O() : (b(), "outside-press" === n && setTimeout(A, 0), v.current());
               },
               overrideTargetRect: d,
               placement: (0, a.Pv)(p ?? "right", E ?? "top"),
@@ -95,15 +95,15 @@ let I = (e) => {
               },
               children: () => null,
           })
-        : (0, i.jsx)(f.nE, {
-              onMount: R,
+        : (0, i.jsx)(h.nE, {
+              onMount: O,
               onUnmount: b,
-              targetRef: y,
+              targetRef: N,
               overrideTargetRect: d,
               position: p ?? "right",
               align: E ?? "top",
               autoInvert: !0,
-              ref: N,
+              ref: y,
               nudgeAlignIntoViewport: !0,
               clickTrap: !T,
               children: t,
@@ -188,6 +188,6 @@ function S() {
             isOpen: n,
         } = (0, o.cf)([E.A], () => ({ contextMenu: E.A.getContextMenu(), version: E.A.version, isOpen: E.A.isOpen() })),
         s = (0, o.bG)([p.A], () => p.A.theme),
-        { appContext: a, renderWindow: l } = r.useContext(h.Ay);
+        { appContext: a, renderWindow: l } = r.useContext(f.Ay);
     return (0, i.jsx)(T, { appContext: a, renderWindow: l, ...e, isOpen: n, theme: s, closeContextMenu: d.Z_ }, t);
 }

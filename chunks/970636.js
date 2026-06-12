@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(267102),
     d = n(675991),
     _ = n(204651),
-    f = n(652215),
-    h = n(375708),
+    h = n(652215),
+    f = n(375708),
     p = n(181859);
 function E(e) {
     let t = (0, d.Q)(e),
@@ -20,7 +20,7 @@ function E(e) {
             cameraUnavailable: s,
             onChange: a,
             onCameraUnavailable: _,
-            hasPermission: h,
+            hasPermission: f,
             children: p,
             channelLimitReached: E = !1,
             join: m,
@@ -29,13 +29,13 @@ function E(e) {
         A = s ? () => _() : () => a(!e.enabled, g),
         { Component: I, play: T, events: S } = (0, o.K)(m || n ? "disable" : "enable");
     r.useEffect(() => () => T(), [n, T]);
-    let N = m ? l.n : g === f.BRT.POPOUT ? (n ? l.n : u.O) : I;
+    let y = m ? l.n : g === h.BRT.POPOUT ? (n ? l.n : u.O) : I;
     return (0, i.jsx)(i.Fragment, {
         children: p({
             onClick: A,
             isActive: n,
-            disabled: !n && (!h || E),
-            iconComponent: N,
+            disabled: !n && (!f || E),
+            iconComponent: y,
             iconColor: "currentColor",
             label: t,
             unavailable: s,
@@ -55,7 +55,7 @@ function m(e) {
             hasPermission: u,
             className: c,
             channelLimitReached: d,
-            channelLimit: f,
+            channelLimit: h,
             centerButton: m = !1,
             onPopoutClick: g,
             ...A
@@ -70,7 +70,7 @@ function m(e) {
         cameraUnavailable: l,
         hasPermission: u,
         channelLimitReached: d,
-        channelLimit: f,
+        channelLimit: h,
         children: (e) => {
             let { unavailable: r, onMouseEnter: s, onMouseLeave: o, isActive: l, ...u } = e;
             return (0, i.jsx)(I, {
@@ -78,7 +78,7 @@ function m(e) {
                 ...A,
                 color: n ? "join" : l ? "green" : A.color,
                 caretColor: n ? "join" : t ? "green" : "primaryDark",
-                caretAriaLabel: h.intl.string(h.t.jO7lgy),
+                caretAriaLabel: f.intl.string(f.t.jO7lgy),
                 isActive: l,
                 onMouseEnter: (e) => {
                     A.onMouseEnter?.(e), s?.();

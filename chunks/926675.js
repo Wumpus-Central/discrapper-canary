@@ -1,7 +1,7 @@
 "use strict";
-n.d(t, { Z: () => i, u: () => r });
-let r = { favorite_games: 1, current_games: 5, want_to_play_games: 20, played_games: 20 },
-    i = new Set([
+n.d(t, { Z: () => r, u: () => i });
+let i = { favorite_games: 1, current_games: 5, want_to_play_games: 20, played_games: 20 },
+    r = new Set([
         "484425151631589378",
         "1124351896166076496",
         "1124351975702679583",

@@ -22,11 +22,11 @@ function h(e) {
     let { className: t, children: n, keyExtractor: a, paddingTop: h = 0, paddingBottom: p = 0 } = e,
         [m, A] = l.useState({ width: 0, height: 0 }),
         { width: x, height: g } = m,
-        C = n?.length ?? 0,
-        f = x - 16,
-        E = g - (h + p),
+        f = n?.length ?? 0,
+        C = x - 16,
+        y = g - (h + p),
         {
-            tileStyle: y,
+            tileStyle: E,
             tileWidth: N,
             rows: j,
             columns: v,
@@ -59,13 +59,13 @@ function h(e) {
                         (h = Math.ceil(i / (o = d(s, l)))),
                         { tileWidth: s, columns: Math.max(1, o), rows: h });
                     return { tileStyle: { width: A }, tileWidth: A, rows: p, columns: m };
-                })(C, f, E),
-            [C, f, E],
+                })(f, C, y),
+            [f, C, y],
         ),
         I = v + 1,
         T = I * N + (I - 1) * 8 <= x,
         _ = Math.floor(N / c) + 8,
-        R = Math.max(0, E - _ * j) / 2;
+        R = Math.max(0, y - _ * j) / 2;
     return (0, i.jsx)(r.A, {
         fade: !0,
         className: t,
@@ -81,11 +81,11 @@ function h(e) {
                         return (0, i.jsx)(
                             "div",
                             {
-                                style: y,
+                                style: E,
                                 className: s()(o.Vs, {
                                     [o.E3]: T,
                                     [o.k4]: l >= (j - 1) * v,
-                                    [o.Kk]: (l + 1) % v == 0 || l === C - 1,
+                                    [o.Kk]: (l + 1) % v == 0 || l === f - 1,
                                 }),
                                 children: (0, i.jsx)("div", { className: o.eP, children: e(N) }),
                             },

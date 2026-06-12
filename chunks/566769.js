@@ -9,7 +9,7 @@ var n = l(627968),
     u = l(39623),
     o = l(873298),
     x = l(26692);
-function h(e) {
+function m(e) {
     let { redactionType: t, label: l } = e,
         s = i.useMemo(() => {
             switch (t) {
@@ -31,9 +31,9 @@ function h(e) {
         ],
     });
 }
-let m = i.memo(function (e) {
+let h = i.memo(function (e) {
     let { option: t } = e;
-    return (0, n.jsx)(h, { redactionType: t.value, label: t.label });
+    return (0, n.jsx)(m, { redactionType: t.value, label: t.label });
 });
 var j = l(731142);
 function g(e) {
@@ -55,9 +55,9 @@ function g(e) {
                 onChange: (e) => i(e),
                 renderOptionValue: (e) => {
                     let [t] = e;
-                    return (0, n.jsx)(m, { option: t });
+                    return (0, n.jsx)(h, { option: t });
                 },
-                renderOptionLabel: (e) => (0, n.jsx)(m, { option: e }),
+                renderOptionLabel: (e) => (0, n.jsx)(h, { option: e }),
                 isDisabled: d,
                 "data-migration-pending": !0,
             }),

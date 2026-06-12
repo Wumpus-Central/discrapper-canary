@@ -1,131 +1,131 @@
-n.d(t, { default: () => y }), n(321073);
-var l = n(627968),
+n.d(t, { default: () => w }), n(321073);
+var i = n(627968),
     s = n(64700),
-    a = n(189213),
+    l = n(189213),
     r = n(17928),
-    i = n(770880),
-    o = n(146151),
-    c = n(834730),
-    h = n(702805),
-    u = n(845584),
-    d = n(47167),
-    p = n(95701),
+    a = n(770880),
+    c = n(146151),
+    o = n(834730),
+    d = n(702805),
+    u = n(913122),
+    h = n(47167),
+    x = n(95701),
     g = n(734057),
-    f = n(71393),
-    _ = n(954571),
-    R = n(147036),
-    v = n(517622),
+    p = n(71393),
+    A = n(174459),
+    y = n(871237),
+    f = n(517622),
     E = n(86944),
-    x = n(719366),
-    b = n(652215),
-    A = n(985018),
-    m = n(142483);
-function y(e) {
+    m = n(719366),
+    j = n(652215),
+    v = n(375708),
+    k = n(142483);
+function w(e) {
     let { channelId: t, ...n } = e,
-        a = (0, r.bG)([g.A], () => g.A.getChannel(t), [t]),
-        i = (0, r.bG)([f.A], () => f.A.getGuild(a?.getGuildId()));
+        l = (0, r.bG)([g.A], () => g.A.getChannel(t), [t]),
+        a = (0, r.bG)([p.A], () => p.A.getGuild(l?.getGuildId()));
     return (s.useEffect(() => {
-        _.default.track(b.HAw.OPEN_MODAL, { type: "Grant Channel Access" });
+        A.default.track(j.HAw.OPEN_MODAL, { type: "Grant Channel Access" });
     }, []),
-    null == a || null == i)
+    null == l || null == a)
         ? null
-        : (0, l.jsx)(k, { guild: i, channel: a, ...n });
+        : (0, i.jsx)(C, { guild: a, channel: l, ...n });
 }
-function k(e) {
-    let { guild: t, channel: n, onClose: r, newChannel: g, inSettings: f, ..._ } = e,
-        [b, y] = s.useState(""),
-        [k, C] = s.useState({}),
-        [N, P] = s.useState(!1),
-        [w, T] = s.useState(null),
-        j = s.useRef(null),
-        D = (0, d.Ay)(n),
-        { roles: H, members: L, getRichTag: S } = (0, E.K)(t, n, n.accessPermissions, b),
-        M = v.A.useSections({ roles: H, members: L }),
-        O = g && 0 === Object.keys(k).length;
-    async function G() {
-        if (null == n || 0 === Object.keys(k).length) return void r();
-        P(!0);
+function C(e) {
+    let { guild: t, channel: n, onClose: r, newChannel: g, inSettings: p, ...A } = e,
+        [j, w] = s.useState(""),
+        [C, b] = s.useState({}),
+        [R, S] = s.useState(!1),
+        [T, G] = s.useState(null),
+        H = s.useRef(null),
+        O = (0, h.Ay)(n),
+        { roles: N, members: M, getRichTag: _ } = (0, E.K)(t, n, n.accessPermissions, j),
+        I = f.A.useSections({ roles: N, members: M }),
+        L = g && 0 === Object.keys(C).length;
+    async function P() {
+        if (null == n || 0 === Object.keys(C).length) return void r();
+        S(!0);
         try {
-            var e, t, l;
+            var e, t, i;
             let s;
             await ((e = n),
-            (t = k),
-            (l = f),
+            (t = C),
+            (i = p),
             (s = []),
             Object.values(t).forEach((t) => {
                 let { row: n } = t;
                 null != n.id &&
                     "" !== n.id &&
-                    (n.rowType === x.T6.ROLE
-                        ? s.push((0, R.we)(n.id, e.type))
-                        : n.rowType === x.T6.MEMBER && s.push((0, R.n3)(n.id, e.type)));
+                    (n.rowType === m.T6.ROLE
+                        ? s.push((0, y.we)(n.id, e.type))
+                        : n.rowType === m.T6.MEMBER && s.push((0, y.n3)(n.id, e.type)));
             }),
-            (0, h.R$)(e.id, s, l)),
+            (0, d.R$)(e.id, s, i)),
                 r(),
-                P(!1);
+                S(!1);
         } catch (t) {
             let e = new u.LG(t);
-            P(!1), T(e);
+            S(!1), G(e);
         }
     }
-    let W = (0, p.ke)(n.type) ? i.I : o.t;
-    return (0, l.jsx)(v.A.Provider, {
-        listRef: j,
-        query: b,
-        setQuery: y,
-        pendingAdditions: k,
-        setPendingAdditions: C,
-        roles: H,
-        members: L,
-        getRichTag: S,
-        children: (0, l.jsx)(a.Modal, {
-            ..._,
-            title: A.intl.string(A.t.dMJ3Y6),
+    let W = (0, x.ke)(n.type) ? a.I : c.t;
+    return (0, i.jsx)(f.A.Provider, {
+        listRef: H,
+        query: j,
+        setQuery: w,
+        pendingAdditions: C,
+        setPendingAdditions: b,
+        roles: N,
+        members: M,
+        getRichTag: _,
+        children: (0, i.jsx)(l.Modal, {
+            ...A,
+            title: v.intl.string(v.t.dMJ3Y6),
             onClose: r,
-            input: (0, l.jsxs)("div", {
+            input: (0, i.jsxs)("div", {
                 children: [
-                    (0, l.jsxs)(c.E, {
-                        className: m.HA,
+                    (0, i.jsxs)(o.E, {
+                        className: k.HA,
                         variant: "text-lg/normal",
                         color: "text-default",
-                        children: [(0, l.jsx)(W, { className: m.p, size: "sm", color: "currentColor" }), D],
+                        children: [(0, i.jsx)(W, { className: k.p, size: "sm", color: "currentColor" }), O],
                     }),
                     n.isGuildStageVoice() &&
-                        (0, l.jsx)(c.E, {
+                        (0, i.jsx)(o.E, {
                             color: "text-default",
-                            className: m.h_,
+                            className: k.h_,
                             variant: "text-sm/normal",
-                            children: A.intl.string(A.t.f7VbhF),
+                            children: v.intl.string(v.t.f7VbhF),
                         }),
-                    (0, l.jsx)(v.A.SearchBox, { placeholderText: A.intl.string(A.t.iezLLn) }),
-                    (0, l.jsx)(c.E, {
-                        className: m.W$,
+                    (0, i.jsx)(f.A.SearchBox, { placeholderText: v.intl.string(v.t.iezLLn) }),
+                    (0, i.jsx)(o.E, {
+                        className: k.W$,
                         variant: "text-xs/normal",
-                        children: A.intl.string(A.t.rwFx85),
+                        children: v.intl.string(v.t.rwFx85),
                     }),
-                    null != w
-                        ? (0, l.jsx)(c.E, {
-                              className: m.W$,
+                    null != T
+                        ? (0, i.jsx)(o.E, {
+                              className: k.W$,
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
-                              children: w.getAnyErrorMessage(),
+                              children: T.getAnyErrorMessage(),
                           })
                         : null,
                 ],
             }),
             listProps: {
-                ref: j,
-                sectionHeight: v.A.SECTION_HEIGHT,
-                renderSection: v.A.renderSection,
-                rowHeight: v.A.ROW_HEIGHT,
-                renderRow: v.A.renderRow,
-                sections: M,
+                ref: H,
+                sectionHeight: f.A.SECTION_HEIGHT,
+                renderSection: f.A.renderSection,
+                rowHeight: f.A.ROW_HEIGHT,
+                renderRow: f.A.renderRow,
+                sections: I,
             },
-            actions: O
-                ? [{ variant: "secondary", text: A.intl.string(A.t.u46sxe), onClick: r }]
+            actions: L
+                ? [{ variant: "secondary", text: v.intl.string(v.t.u46sxe), onClick: r }]
                 : [
-                      { variant: "secondary", text: A.intl.string(A.t["ETE/oC"]), onClick: r },
-                      { variant: "primary", text: A.intl.string(A.t.i4jeWR), onClick: G, loading: N },
+                      { variant: "secondary", text: v.intl.string(v.t["ETE/oC"]), onClick: r },
+                      { variant: "primary", text: v.intl.string(v.t.i4jeWR), onClick: P, loading: R },
                   ],
         }),
     });

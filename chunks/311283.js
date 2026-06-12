@@ -1,61 +1,61 @@
 n.d(t, { A: () => u });
-var i = n(64700);
-let l = new Map(),
+var a = n(64700);
+let i = new Map(),
     s = new Map(),
-    a = new Map();
+    l = new Map();
 function r(e) {
-    return l.has(e) || l.set(e, !1), l.get(e);
+    return i.has(e) || i.set(e, !1), i.get(e);
 }
-function o(e) {
+function d(e) {
     var t;
-    let n, i, l, r;
+    let n, a, i, r;
     return (
         s.has(e) ||
             (s.set(e, new Set()),
-            a.set(
+            l.set(
                 e,
                 ((t = e),
                 (n = (e) => {
-                    d(e.shiftKey, t);
+                    o(e.shiftKey, t);
+                }),
+                (a = (e) => {
+                    o(e.shiftKey, t);
                 }),
                 (i = (e) => {
-                    d(e.shiftKey, t);
-                }),
-                (l = (e) => {
-                    d(e.shiftKey, t);
+                    o(e.shiftKey, t);
                 }),
                 (r = () => {
-                    d(!1, t);
+                    o(!1, t);
                 }),
                 t.addEventListener("keydown", n),
-                t.addEventListener("keyup", i),
-                t.addEventListener("mousemove", l),
+                t.addEventListener("keyup", a),
+                t.addEventListener("mousemove", i),
                 t.addEventListener("blur", r),
                 () => {
                     t.removeEventListener("keydown", n),
-                        t.removeEventListener("keyup", i),
-                        t.removeEventListener("mousemove", l),
+                        t.removeEventListener("keyup", a),
+                        t.removeEventListener("mousemove", i),
                         t.removeEventListener("blur", r);
                 }),
             )),
         s.get(e)
     );
 }
-function d(e, t) {
-    e !== r(t) && (l.set(t, e), o(t).forEach((t) => t(e)));
+function o(e, t) {
+    e !== r(t) && (i.set(t, e), d(t).forEach((t) => t(e)));
 }
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : window,
-        [t, n] = i.useState(r(e));
+        [t, n] = a.useState(r(e));
     return (
-        i.useEffect(() => {
+        a.useEffect(() => {
             let t = (e) => {
                 n(e);
             };
             return (
-                o(e).add(t),
+                d(e).add(t),
                 () => {
-                    o(e).delete(t), 0 === o(e).size && (a.get(e)?.(), a.delete(e), s.delete(e), l.delete(e));
+                    d(e).delete(t), 0 === d(e).size && (l.get(e)?.(), l.delete(e), s.delete(e), i.delete(e));
                 }
             );
         }, [e]),

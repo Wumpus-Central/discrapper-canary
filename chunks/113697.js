@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Pf: "label__27da5",
     fp: "createLabel__27da5",
     IX: "labelIcon__27da5",

@@ -10,8 +10,8 @@ var i = n(607399),
     c = n(488803),
     d = n(764322),
     _ = n(868652),
-    f = n(645619),
-    h = n(832547),
+    h = n(645619),
+    f = n(832547),
     p = n(323472),
     E = n(103821),
     m = n(313205),
@@ -29,13 +29,13 @@ class T extends s.A {
             g.g$.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" }),
             (0, c.TS)(t.id, "GuildPowerupsManager") &&
                 d.r.trackExposure({ guildId: t.id, location: "GuildPowerupsManager" });
-        let n = h.A.getConfig({ location: "GuildPowerupsManager" }).enabled,
+        let n = f.A.getConfig({ location: "GuildPowerupsManager" }).enabled,
             r = E.A.getConfig({ location: "GuildPowerupsManager" }).enabled;
         if (!(0, A.G)(l.A, t)) {
             let e = (n || r) && (0, I.X)();
             if (i.Fr || !e) return;
         }
-        f.A.shouldFetchCatalogForGuild(e) && (0, _.AK)(e), f.A.shouldFetchPowerupsForGuild(e) && (0, _.Xd)(e);
+        h.A.shouldFetchCatalogForGuild(e) && (0, _.AK)(e), h.A.shouldFetchPowerupsForGuild(e) && (0, _.Xd)(e);
     }
     handleEntitlementUpdate(e) {
         let { guildId: t } = e;

@@ -1,5 +1,5 @@
 t.d(a, { lG: () => y, MV: () => h, RG: () => D });
-var n = t(197867),
+var n = t(650682),
     r = t(825913),
     i = t(257537),
     l = t(985620),
@@ -15,7 +15,7 @@ let h = (0, s.createContext)(null),
     y = (0, s.forwardRef)(function (e, a) {
         let t = e["aria-labelledby"];
         [e, a] = (0, r.JT)(e, a, h);
-        let { dialogProps: y, titleProps: p } = (function (e, a) {
+        let { dialogProps: y, titleProps: g } = (function (e, a) {
                 let t,
                     n,
                     { role: r = "dialog" } = e,
@@ -55,7 +55,7 @@ let h = (0, s.createContext)(null),
                     }
                 );
             })({ ...e, "aria-labelledby": t }, a),
-            g = (0, s.useContext)(D);
+            p = (0, s.useContext)(D);
         y["aria-label"] ||
             y["aria-labelledby"] ||
             (e["aria-labelledby"] && (y["aria-labelledby"] = e["aria-labelledby"]));
@@ -64,7 +64,7 @@ let h = (0, s.createContext)(null),
                 className: e.className,
                 style: e.style,
                 children: e.children,
-                values: { close: (null == g ? void 0 : g.close) || (() => {}) },
+                values: { close: (null == p ? void 0 : p.close) || (() => {}) },
             }),
             v = (0, o.$)(e, { global: !0 });
         return s.createElement(
@@ -74,8 +74,8 @@ let h = (0, s.createContext)(null),
                 r.Kq,
                 {
                     values: [
-                        [i.A3, { slots: { [r.P_]: {}, title: { ...p, level: 2 } } }],
-                        [n.k, { slots: { [r.P_]: {}, close: { onPress: () => (null == g ? void 0 : g.close()) } } }],
+                        [i.A3, { slots: { [r.P_]: {}, title: { ...g, level: 2 } } }],
+                        [n.k, { slots: { [r.P_]: {}, close: { onPress: () => (null == p ? void 0 : p.close()) } } }],
                     ],
                 },
                 f.children,

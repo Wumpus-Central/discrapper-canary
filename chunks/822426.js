@@ -27,15 +27,15 @@ function A(e) {
         })),
         { isGift: y } = (0, d.Pv)(),
         _ = null != E ? (0, c.EL)(E) : null,
-        P = null != _ ? (0, c.RH)(_.planId) : null,
-        S = null != _ ? (0, c.m6)(_.planId) : null,
+        S = null != _ ? (0, c.RH)(_.planId) : null,
+        P = null != _ ? (0, c.m6)(_.planId) : null,
         I = (0, m.vT)({ isTrial: !1, isGift: y, selectedSkuId: r, startedPaymentFlowWithPaymentSources: C });
     return (
-        i()(null != S, "Expected premium type"),
+        i()(null != P, "Expected premium type"),
         (0, l.jsx)(u.A, {
-            premiumType: S,
+            premiumType: P,
             titleText: h.intl.string(h.t["7VcWW0"]),
-            subtitleText: h.intl.format(h.t.Qk34Ik, { subscriptionName: P }),
+            subtitleText: h.intl.format(h.t.Qk34Ik, { subscriptionName: S }),
             footer: (0, l.jsxs)(a.e, {
                 direction: "horizontal-reverse",
                 align: "center",

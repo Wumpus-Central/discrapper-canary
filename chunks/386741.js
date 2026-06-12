@@ -10,8 +10,8 @@ var i = n(735438),
     c = n(643501),
     d = n(209932),
     _ = n(495544),
-    f = n(761853),
-    h = n(935208),
+    h = n(890063),
+    f = n(935208),
     p = n(594061),
     E = n(125325),
     m = n(386723),
@@ -24,7 +24,7 @@ function T() {
             "audioContextSettings",
             (e) => {
                 let t = !1;
-                for (let [n, i] of Object.entries(f.Ay.getState().settingsByContext)) {
+                for (let [n, i] of Object.entries(h.Ay.getState().settingsByContext)) {
                     let r = (0, m.o)(n);
                     if (null == r) continue;
                     let s = e[r],
@@ -46,10 +46,10 @@ function T() {
         );
 }
 let S = r().debounce(() => {
-        y();
+        N();
     }, 2e3),
-    N = r().debounce(u.VR, 500, { maxWait: 500 });
-function y() {
+    y = r().debounce(u.VR, 500, { maxWait: 500 });
+function N() {
     p.wc.updateAsync(
         "audioContextSettings",
         (e) => {
@@ -67,7 +67,7 @@ function y() {
                             (o[t].modifiedAt = String(Date.now())),
                             r && (o[t].volume !== I(n) || o[t].muted || o[t].soundboardMuted || delete o[t]),
                             !(function (e) {
-                                let t = h.default.entries(e),
+                                let t = f.default.entries(e),
                                     n = t.length;
                                 if (n <= 300) return;
                                 let i = t.sort((e, t) => {
@@ -94,27 +94,27 @@ function y() {
         p.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function C(e) {
+function v(e) {
     let { context: t, userId: n, volume: i } = e;
     if (n === _.default.getId()) return;
     let r = c.default.getRemoteSessionId();
-    null != r && N(r, n, t, { muted: f.Ay.isLocalMute(n, t), volume: i }), (0, E.gq)(t, n, { volume: i }), S();
+    null != r && y(r, n, t, { muted: h.Ay.isLocalMute(n, t), volume: i }), (0, E.gq)(t, n, { volume: i }), S();
 }
-function v(e) {
+function C(e) {
     let { context: t, userId: n } = e;
     if (n !== _.default.getId()) {
         var i;
-        (i = f.Ay.isLocalMute(n, t)), (0, E.gq)(t, n, { muted: i }), S.cancel(), y();
-    }
-}
-function O(e) {
-    let { context: t, userId: n } = e;
-    if (n !== _.default.getId()) {
-        var i;
-        (i = d.A.isLocalSoundboardMuted(n)), (0, E.gq)(t, n, { soundboardMuted: i }), S.cancel(), y();
+        (i = h.Ay.isLocalMute(n, t)), (0, E.gq)(t, n, { muted: i }), S.cancel(), N();
     }
 }
 function R(e) {
+    let { context: t, userId: n } = e;
+    if (n !== _.default.getId()) {
+        var i;
+        (i = d.A.isLocalSoundboardMuted(n)), (0, E.gq)(t, n, { soundboardMuted: i }), S.cancel(), N();
+    }
+}
+function O(e) {
     let {} = e;
     p.wc.updateAsync(
         "audioContextSettings",
@@ -127,10 +127,10 @@ function R(e) {
 class b extends l.A {
     actions = {
         POST_CONNECTION_OPEN: T,
-        AUDIO_SET_LOCAL_VOLUME: C,
-        AUDIO_TOGGLE_LOCAL_MUTE: v,
-        AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: O,
-        MEDIA_ENGINE_RESET_SETTINGS: R,
+        AUDIO_SET_LOCAL_VOLUME: v,
+        AUDIO_TOGGLE_LOCAL_MUTE: C,
+        AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE: R,
+        MEDIA_ENGINE_RESET_SETTINGS: O,
     };
 }
 let D = new b();

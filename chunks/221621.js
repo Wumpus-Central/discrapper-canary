@@ -1,41 +1,41 @@
-n.d(t, { default: () => b });
-var i = n(627968);
+n.d(t, { default: () => x });
+var r = n(627968);
 n(64700);
-var s = n(550079),
-    d = n(477782),
-    r = n(442433),
-    a = n(820284),
+var a = n(980707),
+    i = n(477782),
+    s = n(442433),
+    d = n(820284),
     c = n(17928),
     l = n(334738),
-    u = n(222823),
+    h = n(222823),
     o = n(790782),
-    h = n(985018),
-    v = n(568873),
-    _ = n(652215);
-function b(e) {
+    u = n(375708),
+    b = n(568873),
+    p = n(652215);
+function x(e) {
     let t,
-        { guildId: n, analyticsContext: b, onSelect: E } = e,
-        p =
-            ((t = (0, c.bG)([u.Ay], () => u.Ay.hasUnread(n, o.P.GUILD_EVENT), [n])),
-            (0, i.jsx)(d.Dr, {
+        { guildId: n, analyticsContext: x, onSelect: j } = e,
+        E =
+            ((t = (0, c.bG)([h.Ay], () => h.Ay.hasUnread(n, o.P.GUILD_EVENT), [n])),
+            (0, r.jsx)(i.Dr, {
                 id: "mark-events-read",
-                label: h.intl.string(h.t.e6RscS),
+                label: u.intl.string(u.t.e6RscS),
                 action: function () {
                     (0, l.hK)(n, o.P.GUILD_EVENT);
                 },
                 disabled: !t,
             })),
-        x = (0, v.A)(n);
-    return (0, i.jsx)(a.A, {
-        context: b,
-        object: _.ZSU.CONTEXT_MENU,
-        children: (0, i.jsxs)(s.W, {
+        _ = (0, b.A)(n);
+    return (0, r.jsx)(d.A, {
+        context: x,
+        object: p.ZSU.CONTEXT_MENU,
+        children: (0, r.jsxs)(a.W, {
             "data-menu-migrated": !0,
             navId: "user-context",
-            onClose: r.Z_,
-            "aria-label": h.intl.string(h.t.liqwPJ),
-            onSelect: E,
-            children: [(0, i.jsx)(d.rX, { children: p }), (0, i.jsx)(d.rX, { children: x })],
+            onClose: s.Z_,
+            "aria-label": u.intl.string(u.t.liqwPJ),
+            onSelect: j,
+            children: [(0, r.jsx)(i.rX, { children: E }), (0, r.jsx)(i.rX, { children: _ })],
         }),
     });
 }

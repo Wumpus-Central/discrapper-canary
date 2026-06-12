@@ -1,22 +1,22 @@
-i.d(e, { default: () => h });
-var s = i(627968);
-i(64700);
-var n = i(772707),
-    c = i(834730),
-    r = i(83107),
-    a = i(960027),
-    l = i(297152),
-    o = i(985018),
-    d = i(792046),
-    x = i(973324);
-let u = (t) => {
-    let { text: e, icon: i, foreground: n } = t;
-    return (0, s.jsxs)("div", {
+s.d(i, { default: () => u });
+var e = s(627968);
+s(64700);
+var n = s(772707),
+    r = s(834730),
+    a = s(83107),
+    c = s(960027),
+    l = s(297152),
+    o = s(375708),
+    d = s(792046),
+    x = s(973324);
+let h = (t) => {
+    let { text: i, icon: s, foreground: n } = t;
+    return (0, e.jsxs)("div", {
         className: d.OI,
         children: [
-            (0, s.jsx)("div", {
+            (0, e.jsx)("div", {
                 className: d.zc,
-                children: (0, s.jsx)(i, {
+                children: (0, e.jsx)(s, {
                     color: n ?? "currentColor",
                     className: d.kZ,
                     size: "custom",
@@ -24,23 +24,23 @@ let u = (t) => {
                     width: 40,
                 }),
             }),
-            (0, s.jsx)(c.E, { variant: "text-md/normal", color: "text-default", className: d.Ct, children: e }),
+            (0, e.jsx)(r.E, { variant: "text-md/normal", color: "text-default", className: d.Ct, children: i }),
         ],
     });
 };
-function h(t) {
-    let { transitionState: e, onClose: i, ...c } = t;
-    return (0, s.jsxs)(n.k, {
-        ...c,
+function u(t) {
+    let { transitionState: i, onClose: s, ...r } = t;
+    return (0, e.jsxs)(n.k, {
+        ...r,
         graphic: { type: "image", src: x.A },
         title: o.intl.string(o.t.UVuXCs),
-        onClose: i,
-        transitionState: e,
-        actions: [{ text: o.intl.string(o.t.obLqZ8), variant: "primary", onClick: i }],
+        onClose: s,
+        transitionState: i,
+        actions: [{ text: o.intl.string(o.t.obLqZ8), variant: "primary", onClick: s }],
         children: [
-            (0, s.jsx)(u, { text: o.intl.string(o.t.sBDfo6), icon: r.z, foreground: "var(--icon-feedback-critical)" }),
-            (0, s.jsx)(u, { text: o.intl.string(o.t.x58YtH), icon: a.z }),
-            (0, s.jsx)(u, { text: o.intl.string(o.t.XtVqla), icon: l.E }),
+            (0, e.jsx)(h, { text: o.intl.string(o.t.sBDfo6), icon: a.z, foreground: "var(--icon-feedback-critical)" }),
+            (0, e.jsx)(h, { text: o.intl.string(o.t.x58YtH), icon: c.z }),
+            (0, e.jsx)(h, { text: o.intl.string(o.t.XtVqla), icon: l.E }),
         ],
     });
 }

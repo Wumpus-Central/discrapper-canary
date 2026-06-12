@@ -1,17 +1,17 @@
-n.d(t, { A: () => d, f: () => c });
-var i = n(554146),
-    l = n(506774),
-    s = n(367727),
-    a = n(927813),
-    r = n(49999);
-let o = "doNotShowReorderModal";
-function c() {
-    (0, s.uh)(i.M.CHANNEL_REORDER_MODAL_DISMISS_SETTING, { dismissAction: r.i.USER_DISMISS });
-}
+t.d(i, { A: () => r, f: () => d });
+var S = t(554146),
+    s = t(506774),
+    e = t(367727),
+    n = t(927813),
+    E = t(49999);
+let _ = "doNotShowReorderModal";
 function d() {
-    null != l.w.get(o) && l.w.remove(o);
-    let { isDismissed: e } = (0, s.FZ)(i.M.CHANNEL_REORDER_MODAL_DISMISS_SETTING, {
-        cooldownDurationMs: a.A.Millis.WEEK,
+    (0, e.uh)(S.M.CHANNEL_REORDER_MODAL_DISMISS_SETTING, { dismissAction: E.i.USER_DISMISS });
+}
+function r() {
+    null != s.w.get(_) && s.w.remove(_);
+    let { isDismissed: o } = (0, e.FZ)(S.M.CHANNEL_REORDER_MODAL_DISMISS_SETTING, {
+        cooldownDurationMs: n.A.Millis.WEEK,
     });
-    return !e;
+    return !o;
 }

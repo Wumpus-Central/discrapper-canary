@@ -2,16 +2,16 @@
 n.d(t, {
     Aq: () => u,
     HP: () => a,
-    KE: () => i,
-    Lp: () => c,
+    KE: () => r,
+    Lp: () => d,
     M4: () => l,
     Mz: () => o,
-    eM: () => r,
-    nF: () => d,
+    eM: () => i,
+    nF: () => c,
     t$: () => s,
 });
-let r = "data-list-item-id",
-    i = "data-list-id";
+let i = "data-list-item-id",
+    r = "data-list-id";
 function s(e, t) {
     return `${e}___${t}`;
 }
@@ -19,7 +19,7 @@ function a(e) {
     return e.split("___")[1];
 }
 function o(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r;
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i;
     return `[${t}="${e}"]`;
 }
 function l(e, t) {
@@ -28,14 +28,14 @@ function l(e, t) {
 function u(e, t, n) {
     return `${e}-${t}-${n}`;
 }
-function d(e, t) {
+function c(e, t) {
     let n = !1;
     return function () {
-        for (var r = arguments.length, i = Array(r), s = 0; s < r; s++) i[s] = arguments[s];
-        n || (e(...i), (n = !0), setTimeout(() => (n = !1), t));
+        for (var i = arguments.length, r = Array(i), s = 0; s < i; s++) r[s] = arguments[s];
+        n || (e(...r), (n = !0), setTimeout(() => (n = !1), t));
     };
 }
-class c {
+class d {
     makeHandler;
     handlers = new Map();
     constructor(e) {

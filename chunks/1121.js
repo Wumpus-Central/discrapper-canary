@@ -1,4 +1,4 @@
-var r = n(435815);
+var i = n(435815);
 e.exports = function (e) {
-    return r(this, e).has(e);
+    return i(this, e).has(e);
 };

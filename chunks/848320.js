@@ -16,43 +16,43 @@ var r,
     v = l.MutationObserver || l.WebKitMutationObserver,
     g = l.document,
     b = l.process,
-    A = l.Promise,
-    _ = c("queueMicrotask");
-if (!_) {
-    var k = new p(),
-        C = function () {
+    _ = l.Promise,
+    k = c("queueMicrotask");
+if (!k) {
+    var C = new p(),
+        w = function () {
             var e, t;
-            for (y && (e = b.domain) && e.exit(); (t = k.get()); )
+            for (y && (e = b.domain) && e.exit(); (t = C.get()); )
                 try {
                     t();
                 } catch (e) {
-                    throw (k.head && r(), e);
+                    throw (C.head && r(), e);
                 }
             e && e.enter();
         };
     h || y || m || !v || !g
-        ? !f && A && A.resolve
-            ? (((i = A.resolve(void 0)).constructor = A),
+        ? !f && _ && _.resolve
+            ? (((i = _.resolve(void 0)).constructor = _),
               (s = u(i.then, i)),
               (r = function () {
-                  s(C);
+                  s(w);
               }))
             : y
               ? (r = function () {
-                    b.nextTick(C);
+                    b.nextTick(w);
                 })
               : ((d = u(d, l)),
                 (r = function () {
-                    d(C);
+                    d(w);
                 }))
         : ((a = !0),
           (o = g.createTextNode("")),
-          new v(C).observe(o, { characterData: !0 }),
+          new v(w).observe(o, { characterData: !0 }),
           (r = function () {
               o.data = a = !a;
           })),
-        (_ = function (e) {
-            k.head || r(), k.add(e);
+        (k = function (e) {
+            C.head || r(), C.add(e);
         });
 }
-e.exports = _;
+e.exports = k;

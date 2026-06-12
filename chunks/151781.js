@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { A: () => F }), n(321073);
+n.d(t, { A: () => V }), n(321073);
 var i = n(17928),
     r = n(228366),
     s = n(495544),
     a = n(696451),
     o = n(71393),
     l = n(287809),
-    d = n(403362),
-    _ = n(935208),
-    u = n(735438),
-    c = n(927813),
-    E = n(157347),
-    h = n(551816),
-    m = n(233693),
-    f = n(33851),
-    g = n.n(f),
-    p = n(229527),
+    u = n(403362),
+    c = n(935208),
+    d = n(735438),
+    _ = n(927813),
+    h = n(157347),
+    f = n(551816),
+    p = n(233693),
+    E = n(33851),
+    m = n.n(E),
+    g = n(229527),
     A = n(316031),
     I = n(859126);
 function T() {
@@ -34,10 +34,10 @@ function T() {
     };
 }
 let S = Object.freeze(T());
-function N(e, t) {
+function y(e, t) {
     return null != e && !!e.toLowerCase().includes(t.toLowerCase());
 }
-class C {
+class N {
     guildId;
     _searchState;
     hasDefaultQuery;
@@ -52,7 +52,7 @@ class C {
     }
     updateSearchState(e) {
         return (
-            (this._searchState = { ...this._searchState, ...e }), (this.hasDefaultQuery = g()(this._searchState, S)), !0
+            (this._searchState = { ...this._searchState, ...e }), (this.hasDefaultQuery = m()(this._searchState, S)), !0
         );
     }
     resetSearchState() {
@@ -71,8 +71,8 @@ class C {
             selectedRoleIds: a,
             selectedJoinDateOption: o,
             selectedAccountAgeOption: l,
-            selectedSourceInviteCode: d,
-            selectedJoinSourceType: u,
+            selectedSourceInviteCode: u,
+            selectedJoinSourceType: d,
         } = this._searchState;
         return (
             !(
@@ -81,34 +81,34 @@ class C {
                         if ("" === t.trim()) return !1;
                         let [n, i] = (0, I.H)(t);
                         for (let t of i) if (e.userId === t) return !0;
-                        for (let t of n) if (N(e.nick, t)) return !0;
+                        for (let t of n) if (y(e.nick, t)) return !0;
                         if (null == e.user) return !1;
                         let { globalName: r, username: s } = e.user;
-                        for (let e of n) if (N(s, e)) return !0;
-                        for (let e of n) if (N(r, e)) return !0;
+                        for (let e of n) if (y(s, e)) return !0;
+                        for (let e of n) if (y(r, e)) return !0;
                         return !1;
                     })(e, t)) ||
                 (a.size > 0 && !(0 !== a.size && Array.from(a).every((t) => e.roles.includes(t)))) ||
                 (null != o.afterDate && e.joinedAtTimestamp < o.afterDate) ||
                 (null != o.beforeDate && e.joinedAtTimestamp > o.beforeDate) ||
-                (null != l.afterDate && _.default.extractTimestamp(e.userId) < l.afterDate) ||
-                (null != l.beforeDate && _.default.extractTimestamp(e.userId) > l.beforeDate) ||
-                (null != d && e.sourceInviteCode !== d) ||
-                (null != u && e.joinSourceType !== u)
+                (null != l.afterDate && c.default.extractTimestamp(e.userId) < l.afterDate) ||
+                (null != l.beforeDate && c.default.extractTimestamp(e.userId) > l.beforeDate) ||
+                (null != u && e.sourceInviteCode !== u) ||
+                (null != d && e.joinSourceType !== d)
             ) &&
             ((!n && !i && !r && !s) ||
                 !!(
                     (n && e.hasUnusualDmActivity) ||
                     (i && (0, A.Z)(e)) ||
                     (r && e.hasUnusualAccountActivity) ||
-                    (s && (0, p.TR)(e))
+                    (s && (0, g.TR)(e))
                 ))
         );
     }
 }
-var R = n(230959);
-let O = 3 * c.A.Millis.SECOND;
-class y {
+var v = n(230959);
+let C = 3 * _.A.Millis.SECOND;
+class R {
     guildId;
     lastRefreshTimestamp = 0;
     lastCursorTimestamp = Date.now();
@@ -127,8 +127,8 @@ class y {
     }
     getSearchIndex() {
         return null == this._search || this._search.hasDefaultQuery
-            ? h.Tu.CURRENT_GUILD_MEMBER
-            : h.Tu.INCLUDED_IN_SEARCH_RESULTS;
+            ? f.Tu.CURRENT_GUILD_MEMBER
+            : f.Tu.INCLUDED_IN_SEARCH_RESULTS;
     }
     initialize() {
         if (this._initialized) {
@@ -136,9 +136,9 @@ class y {
             return;
         }
         (this._initialized = !0),
-            (this._search = new C(this.guildId)),
-            (this._members = new h.z8(this.guildId)),
-            (this._pagination = new m.qi(this.guildId, this._members.values(this.getSearchIndex())));
+            (this._search = new N(this.guildId)),
+            (this._members = new f.z8(this.guildId)),
+            (this._pagination = new p.qi(this.guildId, this._members.values(this.getSearchIndex())));
     }
     get isInitialized() {
         return this._initialized;
@@ -149,7 +149,7 @@ class y {
             (this._members?.reset(), this._pagination?.reset(), this._search?.reset(), e && this.initialize());
     }
     get searchChunkSize() {
-        return null != this._pagination && this._initialized ? (0, m.n4)(this._pagination.getPaginationState()) : 0;
+        return null != this._pagination && this._initialized ? (0, p.n4)(this._pagination.getPaginationState()) : 0;
     }
     getMember(e) {
         return null != this._members && this._initialized ? (this._members.getMemberByUserId(e) ?? null) : null;
@@ -230,7 +230,7 @@ class y {
             if (null == s.joinedAt) continue;
             let e = s;
             if ((t && (e = { ...e, isIncludedInSearchResults: !0 }), n)) {
-                let t = (0, E.vn)(s.joinedAt);
+                let t = (0, h.vn)(s.joinedAt);
                 e = {
                     ...e,
                     isCurrentGuildMemberByTimestamp: t <= this._members.newMemberTimestamp,
@@ -265,10 +265,10 @@ class y {
     updateMembersSort(e) {
         return new Promise((t) => {
             [
-                ...(0, u.cloneDeep)(this.getMembersByIndex(h.Tu.CURRENT_GUILD_MEMBER)[0]),
-                ...(0, u.cloneDeep)(this.getMembersByIndex(h.Tu.NEW_GUILD_MEMBER)[0]),
+                ...(0, d.cloneDeep)(this.getMembersByIndex(f.Tu.CURRENT_GUILD_MEMBER)[0]),
+                ...(0, d.cloneDeep)(this.getMembersByIndex(f.Tu.NEW_GUILD_MEMBER)[0]),
             ].forEach((t) => {
-                let n = (0, R.R)(t, e),
+                let n = (0, v.R)(t, e),
                     i = this._search?.isMemberIncludedInSearchResults(t) ?? !1;
                 this._members?.updateMember(t, { sort: n, isIncludedInSearchResults: i });
             }),
@@ -304,13 +304,13 @@ class y {
             null != this._lastRefreshTimer && clearTimeout(this._lastRefreshTimer),
             (this._lastRefreshTimer = setTimeout(() => {
                 (this._lastRefreshTimer = null), (this.lastRefreshTimestamp = 0);
-            }, O));
+            }, C));
     }
     refreshNewMembersAndSearchResults() {
         if (null == this._search || null == this._members || !this._initialized) return !1;
         let e = Number(Date.now());
         this._scheduleRefresh(e);
-        let t = (0, u.cloneDeep)(this._members.values(h.Tu.NEW_GUILD_MEMBER)),
+        let t = (0, d.cloneDeep)(this._members.values(f.Tu.NEW_GUILD_MEMBER)),
             n = !1;
         for (let i of t)
             n =
@@ -334,7 +334,7 @@ class y {
             this.sortMembersBySelectedSort(e.selectedSort);
         let n = this._search.updateSearchState(e);
         if (this._search.hasDefaultQuery && t) return this.updatePaginationChunks();
-        let i = (0, u.cloneDeep)(this._members.values(h.Tu.CURRENT_GUILD_MEMBER)),
+        let i = (0, d.cloneDeep)(this._members.values(f.Tu.CURRENT_GUILD_MEMBER)),
             r = t !== this._search.hasDefaultQuery;
         for (let e of i) {
             if (!e.isCurrentGuildMemberByTimestamp) continue;
@@ -379,7 +379,7 @@ class y {
         this._pagination?.reset();
     }
     getPaginationState() {
-        return null != this._pagination && this._initialized ? this._pagination.getPaginationState() : (0, m.vg)();
+        return null != this._pagination && this._initialized ? this._pagination.getPaginationState() : (0, p.vg)();
     }
     getPaginatedMembers() {
         return null != this._pagination && this._initialized
@@ -397,89 +397,89 @@ class y {
         return t.delete(e), this.updateSearchState({ selectedRoleIds: t });
     }
 }
-var v = n(70738),
-    D = n(166233),
-    L = n(11541),
-    b = n(652215);
+var O = n(70738),
+    b = n(166233),
+    D = n(11541),
+    L = n(652215);
 let w = !1,
-    P = {};
-function k(e) {
-    return null == P[e] && (P[e] = new y(e)), P[e];
-}
-function M(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    k(e).reset(t);
-}
-function U() {
-    return !1;
+    M = {};
+function P(e) {
+    return null == M[e] && (M[e] = new R(e)), M[e];
 }
 function x(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    P(e).reset(t);
+}
+function k() {
+    return !1;
+}
+function U(e) {
     let t = !1,
-        n = k(e.guildId);
+        n = P(e.guildId);
     return "GUILD_ROLE_DELETE" === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
 }
 function G(e) {
     let { guildId: t, userId: n } = e;
-    return k(t).updateMembersByMemberIds([n]);
+    return P(t).updateMembersByMemberIds([n]);
 }
-class V extends i.Ay.Store {
+class F extends i.Ay.Store {
     static displayName = "MemberSafetyStore";
     initialize() {
         this.waitFor(s.default, a.Ay, o.A, l.default);
     }
     isInitialized(e) {
-        return k(e).isInitialized;
+        return P(e).isInitialized;
     }
     getMembersByGuildId(e, t) {
-        return k(e).getMembersByIndex(t);
+        return P(e).getMembersByIndex(t);
     }
     getMembersCountByGuildId(e, t) {
-        return k(e).countMembersByIndex(t);
+        return P(e).countMembersByIndex(t);
     }
     getEstimatedMemberSearchCountByGuildId(e) {
-        let t = k(e),
+        let t = P(e),
             n = t.searchChunkSize,
             i = t.countMembersByIndex(t.getSearchIndex()),
             r = t.getTotalResultsCount();
         return null == r || r < n ? i : r;
     }
     getKnownMemberSearchCountByGuildId(e) {
-        let t = k(e);
+        let t = P(e);
         return t.countMembersByIndex(t.getSearchIndex());
     }
     getCurrentMemberSearchResultsByGuildId(e) {
-        let t = k(e);
+        let t = P(e);
         return t.getMembersByIndex(t.getSearchIndex());
     }
     getSearchStateByGuildId(e) {
-        return k(e).getSearchState();
+        return P(e).getSearchState();
     }
     hasDefaultSearchStateByGuildId(e) {
-        return k(e).hasDefaultSearchState();
+        return P(e).hasDefaultSearchState();
     }
     getPagedMembersByGuildId(e) {
-        return k(e).getPaginatedMembers();
+        return P(e).getPaginatedMembers();
     }
     getPaginationStateByGuildId(e) {
-        return k(e).getPaginationState();
+        return P(e).getPaginationState();
     }
     getElasticSearchPaginationByGuildId(e) {
-        return k(e).getElasticSearchPagination();
+        return P(e).getElasticSearchPagination();
     }
     getEnhancedMember(e, t) {
-        return k(e).getMember(t);
+        return P(e).getMember(t);
     }
     getNewMemberTimestamp(e) {
-        return k(e).getNewMemberTimestamp();
+        return P(e).getNewMemberTimestamp();
     }
     getLastRefreshTimestamp(e) {
-        return k(e).lastRefreshTimestamp;
+        return P(e).lastRefreshTimestamp;
     }
     getLastCursorTimestamp(e) {
-        return k(e).lastCursorTimestamp;
+        return P(e).lastCursorTimestamp;
     }
 }
-let F = new V(r.h, {
+let V = new F(r.h, {
     CONNECTION_OPEN: function (e) {
         let t;
         return (
@@ -487,12 +487,12 @@ let F = new V(r.h, {
                 ? (w = !1)
                 : (function () {
                       let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                      for (let t in P) M(t, e);
+                      for (let t in M) x(t, e);
                   })(!0),
             (t = !1),
             e.guilds.forEach((e) => {
                 let { id: n, members: i } = e;
-                t = k(n).updateServerMembers(i) || t;
+                t = P(n).updateServerMembers(i) || t;
             }),
             t
         );
@@ -503,11 +503,11 @@ let F = new V(r.h, {
             (t = !1),
             e.guilds.forEach((e) => {
                 let { id: n, activity_instances: i } = e,
-                    r = k(n),
+                    r = P(n),
                     s = [];
                 i?.forEach((e) => {
                     e.participants?.forEach((e) => {
-                        (0, d.Vq)(e.member) && s.push(e.member);
+                        (0, u.Vq)(e.member) && s.push(e.member);
                     });
                 }),
                     (t = r.updateServerMembers(s) || t);
@@ -519,7 +519,7 @@ let F = new V(r.h, {
         let { guildId: t, members: n } = e;
         if (null == t || null == o.A.getGuild(t)) return !1;
         w = !0;
-        let i = k(t),
+        let i = P(t),
             r = [];
         for (let e of n) null == i.getMember(e.userId) && r.push(e);
         return r.length > 0 && i.updateClientMembers(r);
@@ -529,57 +529,57 @@ let F = new V(r.h, {
             n = !1;
         return (
             (w = !0),
-            _.default.entries(t).forEach((e) => {
+            c.default.entries(t).forEach((e) => {
                 let [t, i] = e;
-                n = k(t).updateClientMembers(Object.values(i)) || n;
+                n = P(t).updateClientMembers(Object.values(i)) || n;
             }),
             n
         );
     },
     PASSIVE_UPDATE_V2: function (e) {
         let { members: t, guildId: n } = e;
-        return t.length > 0 && k(n).updateServerMembers(t);
+        return t.length > 0 && P(n).updateServerMembers(t);
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e,
-            n = k(t.id);
-        M(t.id, n.isInitialized);
+            n = P(t.id);
+        x(t.id, n.isInitialized);
     },
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },
         } = e;
-        M(t);
+        x(t);
     },
     GUILD_MEMBERS_CHUNK_BATCH: function (e) {
         let { chunks: t } = e,
             n = !1;
-        for (let e of t) n = k(e.guildId).updateServerMembers(e.members) || n;
+        for (let e of t) n = P(e.guildId).updateServerMembers(e.members) || n;
         return n;
     },
-    GUILD_MEMBER_ADD: U,
-    GUILD_MEMBER_UPDATE: U,
+    GUILD_MEMBER_ADD: k,
+    GUILD_MEMBER_UPDATE: k,
     GUILD_MEMBER_UPDATE_LOCAL: function (e) {
         let { guildId: t } = e,
             n = s.default.getId();
-        return k(t).updateMembersByMemberIds([n]);
+        return P(t).updateMembersByMemberIds([n]);
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t, user: n } = e;
-        return k(t).removeMember(n.id);
+        return P(t).removeMember(n.id);
     },
-    GUILD_ROLE_UPDATE: x,
-    GUILD_ROLE_DELETE: x,
+    GUILD_ROLE_UPDATE: U,
+    GUILD_ROLE_DELETE: U,
     GUILD_MEMBER_PROFILE_UPDATE: function (e) {
         let { guildId: t, guildMember: n } = e;
-        return k(t).updateMembersByMemberIds([n.user.id]);
+        return P(t).updateMembersByMemberIds([n.user.id]);
     },
     GUILD_ROLE_MEMBER_REMOVE: G,
     GUILD_ROLE_MEMBER_ADD: G,
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
         if (null == n || 0 === n.length) return !1;
-        let i = k(t),
+        let i = P(t),
             r = n.reduce((e, t) => {
                 if (null != t.member) {
                     let n = t.member.user.id;
@@ -592,7 +592,7 @@ let F = new V(r.h, {
     THREAD_MEMBERS_UPDATE: function (e) {
         let { guildId: t, addedMembers: n } = e;
         if (null == n || 0 === n.length) return !1;
-        let i = k(t),
+        let i = P(t),
             r = n.reduce((e, t) => {
                 let n = t.userId;
                 return e.push(n), e;
@@ -602,7 +602,7 @@ let F = new V(r.h, {
     LOAD_ARCHIVED_THREADS_SUCCESS: function (e) {
         let { guildId: t, members: n } = e;
         if (null == n || 0 === n.length) return !1;
-        let i = k(t),
+        let i = P(t),
             r = n.reduce((e, t) => {
                 let n = t.userId;
                 return e.push(n), e;
@@ -613,7 +613,7 @@ let F = new V(r.h, {
         let { guildId: t, threads: n } = e,
             i = Object.values(n);
         if (0 === i.length) return !1;
-        let r = k(t),
+        let r = P(t),
             s = i.reduce((e, t) => {
                 if (null != t.owner) {
                     let n = t.owner.user.id;
@@ -625,35 +625,35 @@ let F = new V(r.h, {
     },
     INITIALIZE_MEMBER_SAFETY_STORE: function (e) {
         let { guildId: t } = e;
-        return k(t).initialize();
+        return P(t).initialize();
     },
     MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: function (e) {
         let { guildId: t } = e;
-        return k(t).refreshNewMembersAndSearchResults();
+        return P(t).refreshNewMembersAndSearchResults();
     },
     MEMBER_SAFETY_PAGINATION_UPDATE: function (e) {
         let { guildId: t, pagination: n } = e,
-            [i] = k(t).updatePaginationState(n);
+            [i] = P(t).updatePaginationState(n);
         return i;
     },
     MEMBER_SAFETY_PAGINATION_TOKEN_UPDATE: function (e) {
         let { guildId: t, continuationToken: n } = e;
-        return k(t).updatePaginationToken(n);
+        return P(t).updatePaginationToken(n);
     },
     MEMBER_SAFETY_SEARCH_STATE_UPDATE: function (e) {
         let { guildId: t, searchState: n } = e;
-        return k(t).updateSearchState(n);
+        return P(t).updateSearchState(n);
     },
     FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: function (e) {
         let { guildId: t, memberSupplementals: n } = e,
-            i = (0, D.Ob)(t, n);
-        return i && k(t).updateMembersByMemberIds(n.map((e) => e.userId)), i;
+            i = (0, b.Ob)(t, n);
+        return i && P(t).updateMembersByMemberIds(n.map((e) => e.userId)), i;
     },
     MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function (e) {
         let t,
             n,
             { guildId: i, members: r, total_result_count: s } = e,
-            a = k(i),
+            a = P(i),
             { memberIds: o, memberSupplementals: l } = r.reduce(
                 (e, t) => {
                     let {
@@ -680,24 +680,24 @@ let F = new V(r.h, {
                 },
                 { memberIds: [], memberSupplementals: [] },
             ),
-            d = (0, D.Ob)(i, l);
-        (0, L.uY)(i, o);
-        let _ = a.updateSearchedMembersByMemberIds(o);
+            u = (0, b.Ob)(i, l);
+        (0, D.uY)(i, o);
+        let c = a.updateSearchedMembersByMemberIds(o);
         r.length > 0 && ((t = r[0]), (n = r[r.length - 1]));
-        let [u] = a.updatePaginationState(
+        let [d] = a.updatePaginationState(
             {
                 totalResultsCount: s,
                 elasticSearchCursor: {
-                    before: (0, v.vf)({ joinedAt: t?.member?.joined_at, userId: t?.member?.user.id ?? b.dJq }),
-                    after: (0, v.vf)({ joinedAt: n?.member?.joined_at, userId: n?.member?.user.id ?? b.dJq }),
+                    before: (0, O.vf)({ joinedAt: t?.member?.joined_at, userId: t?.member?.user.id ?? L.dJq }),
+                    after: (0, O.vf)({ joinedAt: n?.member?.joined_at, userId: n?.member?.user.id ?? L.dJq }),
                 },
             },
             !1,
         );
-        return d || _ || u;
+        return u || c || d;
     },
     MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: function (e) {
         let { guildId: t, userIds: n } = e;
-        return k(t).updateMembersByMemberIds(n);
+        return P(t).updateMembersByMemberIds(n);
     },
 });

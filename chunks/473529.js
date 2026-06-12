@@ -1,49 +1,49 @@
 "use strict";
-n.d(t, { K: () => m, d: () => h });
-var r = n(417597),
-    i = n(961973),
-    a = n(164956),
-    s = n(734057),
+n.d(t, { K: () => E, d: () => p });
+var i = n(702841),
+    r = n(961973),
+    s = n(164956),
+    a = n(734057),
     o = n(71393),
     l = n(701785),
     u = n(707167),
     c = n(978165),
     d = n(652215),
     _ = n(746080);
-function f(e) {
+function h(e) {
     let t = e.id,
         n = (l.h.getNewMemberActions(t) ?? []).length > 0,
-        r = l.h.getEnabled(t);
-    return n && e.features.has(d.GuildFeatures.COMMUNITY) && !(e.features.has(d.GuildFeatures.GUILD_ONBOARDING) && !r);
+        i = l.h.getEnabled(t);
+    return n && e.features.has(d.GuildFeatures.COMMUNITY) && !(e.features.has(d.GuildFeatures.GUILD_ONBOARDING) && !i);
 }
-function p(e, t) {
+function f(e, t) {
     let n = t.getMutableGuildChannelsForGuild(e);
     for (let e in n) if (n[e].hasFlag(_.lx.IS_GUILD_RESOURCE_CHANNEL)) return !0;
     return !1;
 }
-function h(e) {
+function p(e) {
     let t = (0, c.A)(e);
-    return (0, r.bG)([s.A, o.A, a.A], () => {
+    return (0, i.bG)([a.A, o.A, s.A], () => {
         if (__OVERLAY__ || e === d.ME || e === d.YYv) return !1;
         let n = o.A.getGuild(e);
         return (
             !!n?.features.has(d.GuildFeatures.COMMUNITY) &&
-            (a.A.isFullServerPreview(e) ? f(n) : (0, i.rs)(e) ? t || p(e, s.A) : !!(0, u.A)(n) && (t || p(e, s.A)))
+            (s.A.isFullServerPreview(e) ? h(n) : (0, r.rs)(e) ? t || f(e, a.A) : !!(0, u.A)(n) && (t || f(e, a.A)))
         );
     }, [e, t]);
 }
-function m(e) {
+function E(e) {
     let t = o.A.getGuild(e),
-        n = a.A.isFullServerPreview(e);
+        n = s.A.isFullServerPreview(e);
     if (null == t || __OVERLAY__ || e === d.ME || e === d.YYv) return !1;
-    if (n) return f(t);
-    let r =
-        (0, i.rs)(e) &&
+    if (n) return h(t);
+    let i =
+        (0, r.rs)(e) &&
         t.features.has(d.GuildFeatures.GUILD_ONBOARDING) &&
         t.features.has(d.GuildFeatures.GUILD_SERVER_GUIDE);
     return (
         ((t.features.has(d.GuildFeatures.GUILD_ONBOARDING) && t.features.has(d.GuildFeatures.GUILD_SERVER_GUIDE)) ||
-            r) &&
+            i) &&
         t.features.has(d.GuildFeatures.COMMUNITY)
     );
 }

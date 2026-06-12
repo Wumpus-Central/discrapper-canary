@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => a });
-var r = n(61330),
-    i = n(652215);
-function a(e) {
-    return null == e || null == e.type || e.type !== i.$pd.PLAYING
+n.d(t, { A: () => s });
+var i = n(61330),
+    r = n(652215);
+function s(e) {
+    return null == e || null == e.type || e.type !== r.$pd.PLAYING
         ? null
-        : (0, r.A)(e)
-          ? i.yTV.XBOX
+        : (0, i.A)(e)
+          ? r.yTV.XBOX
           : null != e.platform
             ? e.platform
-            : i.yTV.DESKTOP;
+            : r.yTV.DESKTOP;
 }

@@ -1,38 +1,38 @@
-a.d(t, { A: () => p });
-var n = a(627968),
-    l = a(64700),
-    i = a(503698),
-    s = a.n(i),
-    r = a(187322),
-    o = a(862301),
-    d = a(95635),
-    c = a(834730),
-    u = a(821609),
-    m = a(817363),
-    h = a(55881);
-function p(e) {
-    let { filename: t, className: a, filters: i, buttonText: p, placeholder: x, onFileSelect: g } = e,
-        v = l.useRef(null),
-        b = l.useRef(null);
-    return (0, n.jsx)(r.vN, {
-        ringTarget: v,
+s.d(t, { A: () => f });
+var n = s(627968),
+    r = s(64700),
+    i = s(503698),
+    a = s.n(i),
+    l = s(187322),
+    d = s(862301),
+    u = s(95635),
+    c = s(834730),
+    h = s(821609),
+    x = s(780777),
+    p = s(55881);
+function f(e) {
+    let { filename: t, className: s, filters: i, buttonText: f, placeholder: m, onFileSelect: o } = e,
+        j = r.useRef(null),
+        g = r.useRef(null);
+    return (0, n.jsx)(l.vN, {
+        ringTarget: j,
         within: !0,
-        children: (0, n.jsxs)(o.F, {
-            ref: v,
-            className: s()(a, h.U),
+        children: (0, n.jsxs)(d.F, {
+            ref: j,
+            className: a()(s, p.U),
             children: [
-                (0, n.jsx)(d.J, { size: "sm" }),
+                (0, n.jsx)(u.J, { size: "sm" }),
                 (0, n.jsx)(c.E, {
                     variant: "text-md/normal",
                     color: "" !== t ? "text-default" : "text-muted",
                     lineClamp: 1,
-                    children: "" !== t ? t : x,
+                    children: "" !== t ? t : m,
                 }),
-                (0, n.jsx)(u.$, { "aria-hidden": !0, variant: "secondary", size: "sm", text: p, tabIndex: -1 }),
-                (0, n.jsx)(m.A, {
-                    ref: b,
+                (0, n.jsx)(h.$, { "aria-hidden": !0, variant: "secondary", size: "sm", text: f, tabIndex: -1 }),
+                (0, n.jsx)(x.A, {
+                    ref: g,
                     onChange: (e) => {
-                        g(e.currentTarget.files?.[0]);
+                        o(e.currentTarget.files?.[0]);
                     },
                     multiple: !1,
                     filters: i,

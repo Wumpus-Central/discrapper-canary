@@ -10,17 +10,17 @@ var i = n(17928),
     c = n(567761);
 let d = [],
     _ = new Set();
-function f() {
+function h() {
     let e = c.default.getPrivateChannelIds().filter((e) => l.Ay.getMentionCount(e) > 0);
     return e.length > 20 && (e.length = 20), !(0, a.in)(e, d) && ((d = e), (_ = new Set(e)), !0);
 }
-function h() {
-    return f();
+function f() {
+    return h();
 }
 function p(e) {
     let { channelId: t } = e,
         n = o.A.getChannel(t);
-    return null != n && !!(0, s.Gw)(n.type) && f();
+    return null != n && !!(0, s.Gw)(n.type) && h();
 }
 class E extends i.Ay.Store {
     static displayName = "PrivateChannelReadStateStore";
@@ -32,31 +32,31 @@ class E extends i.Ay.Store {
     }
 }
 let m = new E(r.h, {
-    CONNECTION_OPEN: h,
-    OVERLAY_INITIALIZE: h,
+    CONNECTION_OPEN: f,
+    OVERLAY_INITIALIZE: f,
     MESSAGE_CREATE: p,
     MESSAGE_ACK: p,
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e,
             n = o.A.getChannel(t);
-        return null != n && !!(0, s.Gw)(n.type) && f();
+        return null != n && !!(0, s.Gw)(n.type) && h();
     },
     CHANNEL_DELETE: function (e) {
         let {
             channel: { id: t },
         } = e;
-        return !!_.has(t) && f();
+        return !!_.has(t) && h();
     },
     WINDOW_FOCUS: function () {
         let e = o.A.getChannel(u.A.getChannelId());
-        return null != e && !!(0, s.Gw)(e.type) && f();
+        return null != e && !!(0, s.Gw)(e.type) && h();
     },
     CHANNEL_CREATE: function (e) {
         let {
                 channel: { id: t },
             } = e,
             n = o.A.getChannel(t);
-        return null != n && !!(0, s.Gw)(n.type) && f();
+        return null != n && !!(0, s.Gw)(n.type) && h();
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
@@ -65,6 +65,6 @@ let m = new E(r.h, {
             let t = o.A.getChannel(e);
             null != t && (0, s.Gw)(t.type) && (n = !0);
         }
-        return !!n && f();
+        return !!n && h();
     },
 });

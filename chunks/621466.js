@@ -1,19 +1,19 @@
 "use strict";
-function r(e, t) {
+function i(e, t) {
     if (null == e) return !1;
     let n = e?.ownerDocument?.defaultView;
     if (null == n) return console.warn("Unable to determine render window for element", e), !1;
-    let r = t?.name ?? "Element",
-        i = n[r];
-    return null == i ? (console.warn(`Unable to find element constructor "${r}" in`, n), !1) : e instanceof i;
+    let i = t?.name ?? "Element",
+        r = n[i];
+    return null == r ? (console.warn(`Unable to find element constructor "${i}" in`, n), !1) : e instanceof r;
 }
-function i(e) {
+function r(e) {
     let t = parseInt(e, 10);
     return isNaN(t) ? 0 : t;
 }
-n.d(t, { BF: () => u, Cw: () => l, p3: () => c, vq: () => r, wB: () => d, xI: () => i });
-let a = /input/i,
-    s = /textarea/i,
+n.d(t, { BF: () => u, Cw: () => l, p3: () => c, vq: () => i, wB: () => d, xI: () => r });
+let s = /input/i,
+    a = /textarea/i,
     o = new Set([
         "text",
         "password",
@@ -30,8 +30,8 @@ let a = /input/i,
     ]);
 function l(e) {
     if (null == e) return !1;
-    if ("true" === e.getAttribute("contenteditable") || s.test(e.tagName)) return !0;
-    if (a.test(e.tagName)) {
+    if ("true" === e.getAttribute("contenteditable") || a.test(e.tagName)) return !0;
+    if (s.test(e.tagName)) {
         let t = e.getAttribute("type") ?? "text";
         if (o.has(t)) return !0;
     }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(17928),
     r = n(228366),
     s = n(956518),
@@ -10,7 +10,7 @@ let l = null,
     c = new Map(),
     d = new Map(),
     _ = new Map();
-class f extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "FramesStore";
     getConnectedFrame() {
         return l;
@@ -37,7 +37,7 @@ class f extends i.Ay.Store {
         return _.get(e) ?? this.getOrientationLockStateForApp(e);
     }
 }
-let h = new f(r.h, {
+let f = new h(r.h, {
     FRAME_LAUNCH_START: function (e) {
         let { applicationId: t } = e;
         u.set(t, !0);

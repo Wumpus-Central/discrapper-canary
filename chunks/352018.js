@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => v });
+n.d(t, { A: () => C });
 var i = n(627968),
     r = n(64700),
     s = n(17928),
@@ -10,44 +10,44 @@ var i = n(627968),
     c = n(480890),
     d = n(573435),
     _ = n(848362),
-    f = n(471993),
-    h = n(734057),
+    h = n(471993),
+    f = n(734057),
     p = n(287809),
     E = n(964989),
-    m = n(927578),
+    m = n(428262),
     g = n(447404),
     A = n(204651),
     I = n(806931),
     T = n(788868),
     S = n(375708),
-    N = n(570027);
-function y(e) {
+    y = n(570027);
+function N(e) {
     let { className: t } = e;
     return (0, i.jsx)(a.Z, { size: "md", color: "currentColor", className: t });
 }
-function C(e) {
+function v(e) {
     let { className: t } = e;
     return (0, i.jsxs)(r.Fragment, {
         children: [
-            (0, i.jsx)(d.Ay, { className: t, mask: d.Ay.Masks.HEADER_BAR_BADGE_BOTTOM, children: (0, i.jsx)(y, {}) }),
-            (0, i.jsx)(E.A, { className: N.s }),
+            (0, i.jsx)(d.Ay, { className: t, mask: d.Ay.Masks.HEADER_BAR_BADGE_BOTTOM, children: (0, i.jsx)(N, {}) }),
+            (0, i.jsx)(E.A, { className: y.s }),
         ],
     });
 }
-function v(e) {
+function C(e) {
     let { hideBadges: t = !1, stream: n, location: a, ...d } = e,
         E = r.useRef(null),
-        { analyticsLocations: N, parentAnalyticsLocation: v } = (0, l.Ay)(),
-        O = (0, s.bG)([p.default], () => m.Ay.isPremium(p.default.getCurrentUser(), T.PremiumTypes.TIER_1)),
-        R = (0, s.bG)([h.A], () => h.A.getChannel(n?.channelId)),
+        { analyticsLocations: y, parentAnalyticsLocation: C } = (0, l.Ay)(),
+        R = (0, s.bG)([p.default], () => m.Ay.isPremium(p.default.getCurrentUser(), T.PremiumTypes.TIER_1)),
+        O = (0, s.bG)([f.A], () => f.A.getChannel(n?.channelId)),
         b = r.useMemo(() => (null != n ? [n] : []), [n]),
         D = r.useCallback(() => {
-            null != R && (0, f.A)(R.getGuildId(), R.id, N);
-        }, [R, N]);
-    if (null == n || null == R) return null;
-    let L = y;
+            null != O && (0, h.A)(O.getGuildId(), O.id, y);
+        }, [O, y]);
+    if (null == n || null == O) return null;
+    let L = N;
     return (
-        t || O || (L = C),
+        t || R || (L = v),
         (0, i.jsx)(o.Y, {
             targetElementRef: E,
             position: "top",
@@ -55,13 +55,13 @@ function v(e) {
                 let { closePopout: t } = e;
                 return (0, i.jsx)(g.A, {
                     children: (0, i.jsx)(_.A, {
-                        channel: R,
+                        channel: O,
                         currentUser: p.default.getCurrentUser(),
                         activeStreams: b,
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: D,
-                        onInteraction: (0, c.s)("ManageStreamsButton", v ?? a, { entrypoint: I.GK.OTHER_BUTTON }),
+                        onInteraction: (0, c.s)("ManageStreamsButton", C ?? a, { entrypoint: I.GK.OTHER_BUTTON }),
                     }),
                 });
             },
@@ -73,7 +73,7 @@ function v(e) {
                     label: S.intl.string(S.t.tmiYpF),
                     iconComponent: L,
                     onClick: (t) => {
-                        (null != v || null != a) && (0, u.X)(v ?? a, u.O.STREAM_SETTINGS), e?.onClick(t);
+                        (null != C || null != a) && (0, u.X)(C ?? a, u.O.STREAM_SETTINGS), e?.onClick(t);
                     },
                     ...d,
                 }),

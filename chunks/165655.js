@@ -1,10 +1,10 @@
-n.d(t, { T: () => l });
-var a = n(627968),
-    i = n(583087);
-function l(e) {
+n.d(t, { T: () => s });
+var l = n(627968),
+    a = n(942034);
+function s(e) {
     let { imageUrl: t } = e;
-    return (0, a.jsx)("div", {
-        className: i.k,
-        children: (0, a.jsx)("div", { className: i.d, style: { backgroundImage: `url(${t})` } }),
+    return (0, l.jsx)("div", {
+        className: a.k,
+        children: (0, l.jsx)("div", { className: a.d, style: { backgroundImage: `url(${t})` } }),
     });
 }

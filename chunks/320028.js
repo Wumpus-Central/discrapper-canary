@@ -1,3 +1,3 @@
 "use strict";
-n.d(t, { f: () => r });
-let r = "Captcha";
+n.d(t, { f: () => i });
+let i = "Captcha";

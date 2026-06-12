@@ -1,8 +1,8 @@
 i.d(t, { A: () => N });
 var s = i(627968),
     n = i(64700),
-    a = i(503698),
-    l = i.n(a),
+    l = i(503698),
+    a = i.n(l),
     r = i(735438),
     o = i.n(r),
     d = i(643612),
@@ -18,23 +18,23 @@ function g(e) {
     if (2 === n) return (0, s.jsx)(j, { itemsForLayout: t, maxWidth: i });
     if (3 === n) return (0, s.jsx)(C, { itemsForLayout: t, maxWidth: i });
     if (4 === n) return (0, s.jsx)(y, { itemsForLayout: t, maxWidth: i });
-    let a = n % 3;
+    let l = n % 3;
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            1 === a && (0, s.jsx)(p, { itemsForLayout: t.slice(0, a), maxWidth: i }),
-            2 === a && (0, s.jsx)(j, { itemsForLayout: t.slice(0, a), maxWidth: i }),
-            0 === a
+            1 === l && (0, s.jsx)(p, { itemsForLayout: t.slice(0, l), maxWidth: i }),
+            2 === l && (0, s.jsx)(j, { itemsForLayout: t.slice(0, l), maxWidth: i }),
+            0 === l
                 ? (0, s.jsx)(I, { itemsForLayout: t, maxWidth: i })
-                : (0, s.jsx)(I, { itemsForLayout: t.slice(a), maxWidth: i }),
+                : (0, s.jsx)(I, { itemsForLayout: t.slice(l), maxWidth: i }),
         ],
     });
 }
 function p(e) {
     let { itemsForLayout: t, maxWidth: i, isSingleImage: n } = e,
-        a = t[0];
+        l = t[0];
     return (0, s.jsx)("div", {
-        className: l()(c.EO, { [c.Gj]: n, [c.Kv]: !n }),
-        children: (0, s.jsx)(f, { props: a, useFullWidth: !n, isSingleItem: !0, maxWidth: i }),
+        className: a()(c.EO, { [c.Gj]: n, [c.Kv]: !n }),
+        children: (0, s.jsx)(f, { props: l, useFullWidth: !n, isSingleItem: !0, maxWidth: i }),
     });
 }
 function j(e) {
@@ -54,9 +54,9 @@ function j(e) {
 function C(e) {
     let { itemsForLayout: t, maxWidth: i } = e,
         n = Math.round((2 * (i - 4)) / 3),
-        a = n / 2;
+        l = n / 2;
     return (0, s.jsxs)("div", {
-        className: l()(c.SQ, c.o_),
+        className: a()(c.SQ, c.o_),
         children: [
             (0, s.jsx)("div", { className: c.es, children: (0, s.jsx)(f, { props: t[0], maxWidth: n }) }),
             (0, s.jsx)("div", {
@@ -68,7 +68,7 @@ function C(e) {
                         .map((e) =>
                             (0, s.jsx)(
                                 "div",
-                                { className: c.$w, children: (0, s.jsx)(f, { props: e, maxWidth: a, maxHeight: x }) },
+                                { className: c.$w, children: (0, s.jsx)(f, { props: e, maxWidth: l, maxHeight: x }) },
                                 e.item.uniqueId,
                             ),
                         ),
@@ -102,7 +102,7 @@ function f(e) {
         i,
         {
             props: n,
-            maxWidth: a = h.k6,
+            maxWidth: l = h.k6,
             maxHeight: r = h.Rk,
             useFullWidth: o = !0,
             isSingleItem: u = !1,
@@ -112,11 +112,11 @@ function f(e) {
         p = {
             ...n,
             ...("IMAGE" === g &&
-                ((t = n.className), { className: l()(t, c.s_), imgContainerClassName: c.nh, imgClassName: c.g2 })),
-            ...(("VIDEO" === g || "CLIP" === g) && ((i = n.className), { className: l()(i, c.g2) })),
+                ((t = n.className), { className: a()(t, c.s_), imgContainerClassName: c.nh, imgClassName: c.g2 })),
+            ...(("VIDEO" === g || "CLIP" === g) && ((i = n.className), { className: a()(i, c.g2) })),
             displayGridItem: x,
             mediaLayoutType: h.dG.MOSAIC,
-            maxWidth: a,
+            maxWidth: l,
             maxHeight: r,
             useFullWidth: o,
             isSingleMosaicItem: u,
@@ -125,19 +125,19 @@ function f(e) {
 }
 let N = function (e) {
     var t;
-    let { items: i, isInAppComponentsV2: a = !1 } = e,
+    let { items: i, isInAppComponentsV2: l = !1 } = e,
         { visualMediaItems: r, nonVisualMediaItems: d } =
             ((t = i),
             n.useMemo(() => {
                 let [e, i] = o().partition(t, (e) => (0, u.Xg)(e.item.type));
                 return { visualMediaItems: e, nonVisualMediaItems: i };
             }, [t])),
-        m = a ? h.ww : h.k6;
+        m = l ? h.ww : h.k6;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             r.length > 0 &&
                 (0, s.jsx)("div", {
-                    className: l()(c.XU, { [c.dM]: a, [c.eO]: 1 === r.length && "CLIP" === r[0].item.type }),
+                    className: a()(c.XU, { [c.dM]: l, [c.eO]: 1 === r.length && "CLIP" === r[0].item.type }),
                     children: (0, s.jsx)(g, { visualMediaItems: r, maxWidth: m }),
                 }),
             d.length > 0 &&

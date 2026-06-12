@@ -1,10 +1,10 @@
-n.d(t, { XO: () => i, dL: () => l });
+n.d(t, { XO: () => a, dL: () => i });
 var r = n(243277);
-function l(e) {
-    let t = i();
+function i(e) {
+    let t = a();
     return Array.from(e.defaultActionTypes).map((e) => t[e]);
 }
-function i() {
+function a() {
     return {
         [r.AH.BLOCK_MESSAGE]: { type: r.AH.BLOCK_MESSAGE, metadata: { customMessage: void 0 } },
         [r.AH.FLAG_TO_CHANNEL]: { type: r.AH.FLAG_TO_CHANNEL, metadata: { channelId: void 0 } },

@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => d }), n(938796);
-var r = n(989349),
-    i = n.n(r),
+n.d(t, { A: () => c }), n(938796);
+var i = n(989349),
+    r = n.n(i),
     s = n(665260),
     a = n(315069),
     o = n(587895),
     l = n(557009),
     u = n(652215);
-class d extends a.A {
+class c extends a.A {
     id;
     branchId;
     flags;
@@ -17,7 +17,7 @@ class d extends a.A {
     sku;
     isTestMode;
     static createFromServer(e) {
-        return new d({
+        return new c({
             id: e.application.id,
             branchId: e.branch_id,
             entitlements: null != e.entitlements ? e.entitlements.map((e) => l.A.createFromServer(e)) : [],
@@ -28,14 +28,14 @@ class d extends a.A {
                 id: e.sku.id,
                 type: e.sku.type,
                 premium: e.sku.premium,
-                preorderReleaseAt: null != e.sku.preorder_release_at ? i()(e.sku.preorder_release_at) : null,
+                preorderReleaseAt: null != e.sku.preorder_release_at ? r()(e.sku.preorder_release_at) : null,
                 preorderApproximateReleaseDate:
                     null != e.sku.preorder_approximate_release_date ? e.sku.preorder_approximate_release_date : null,
             },
         });
     }
     static createForTestMode(e) {
-        return new d({
+        return new c({
             id: e.id,
             entitlements: [],
             branchId: e.branch.id,

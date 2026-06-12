@@ -1,99 +1,99 @@
-n.d(t, { A: () => C, K: () => E });
-var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    r = n(573613),
-    o = n(761508),
-    c = n(707554),
-    d = n(140735),
-    u = n(207803),
-    _ = n(183555),
-    g = n(61881),
-    f = n(790417),
-    m = n(113763),
-    x = n(583246),
-    p = n(463259),
-    I = n(133583),
-    A = n(518477),
-    h = n(464229);
-function E(e) {
-    let { children: t, className: n, scrollerRef: a, ...l } = e;
-    return (0, i.jsx)(r.Ip, { ref: a, className: s()(h.gN, n), fade: !0, ...l, children: t });
+i.d(t, { A: () => T, K: () => j });
+var n = i(627968),
+    l = i(64700),
+    s = i(503698),
+    a = i.n(s),
+    r = i(364522),
+    c = i(761508),
+    u = i(707554),
+    o = i(140735),
+    d = i(207803),
+    g = i(183555),
+    m = i(61881),
+    f = i(790417),
+    x = i(113763),
+    p = i(583246),
+    I = i(598161),
+    A = i(483189),
+    E = i(518477),
+    h = i(464229);
+function j(e) {
+    let { children: t, className: i, scrollerRef: l, ...s } = e;
+    return (0, n.jsx)(r.Ip, { ref: l, className: a()(h.gN, i), fade: !0, ...s, children: t });
 }
-function v(e) {
-    let { user: t, currentUser: n, section: a, displayProfile: l, guildId: s, channelId: r, onClose: o } = e;
-    return a === A.RP.ACTIVITY
-        ? (0, i.jsx)(f.A, { user: t, currentUser: n, displayProfile: l, guildId: s, channelId: r, onClose: o })
-        : a === A.RP.MUTUAL_FRIENDS
-          ? (0, i.jsx)(m.A, { user: t, guildId: s, channelId: r, onClose: o })
-          : a === A.RP.MUTUAL_GUILDS
-            ? (0, i.jsx)(x.A, { user: t, onClose: o })
-            : a === A.RP.WIDGETS
-              ? (0, i.jsx)(p.A, { user: t, guildId: s, channelId: r })
-              : a === A.RP.WISHLIST
-                ? (0, i.jsx)(I.A, { profileOwner: t })
+function N(e) {
+    let { user: t, currentUser: i, section: l, displayProfile: s, guildId: a, channelId: r, onClose: c } = e;
+    return l === E.RP.ACTIVITY
+        ? (0, n.jsx)(f.A, { user: t, currentUser: i, displayProfile: s, guildId: a, channelId: r, onClose: c })
+        : l === E.RP.MUTUAL_FRIENDS
+          ? (0, n.jsx)(x.A, { user: t, guildId: a, channelId: r, onClose: c })
+          : l === E.RP.MUTUAL_GUILDS
+            ? (0, n.jsx)(p.A, { user: t, onClose: c })
+            : l === E.RP.WIDGETS
+              ? (0, n.jsx)(I.A, { user: t, guildId: a, channelId: r })
+              : l === E.RP.WISHLIST
+                ? (0, n.jsx)(A.A, { profileOwner: t })
                 : null;
 }
-function C(e) {
+function T(e) {
     let {
             user: t,
-            currentUser: n,
-            displayProfile: l,
-            guildId: s,
+            currentUser: i,
+            displayProfile: s,
+            guildId: a,
             channelId: f,
-            items: m,
-            initialSection: x,
-            onClose: p,
+            items: x,
+            initialSection: p,
+            onClose: I,
         } = e,
-        { trackUserProfileAction: I } = (0, _.NJ)(),
-        [{ section: E, text: C }, b] = a.useState(
-            m.find((e) => {
+        { trackUserProfileAction: A } = (0, g.NJ)(),
+        [{ section: j, text: T }, v] = l.useState(
+            x.find((e) => {
                 let { section: t } = e;
-                return t === x;
-            }) ?? m[0],
+                return t === p;
+            }) ?? x[0],
         );
-    return (0, i.jsxs)("div", {
+    return (0, n.jsxs)("div", {
         className: h.kL,
         children: [
-            (0, i.jsx)(r.Ip, {
+            (0, n.jsx)(r.Ip, {
                 orientation: "horizontal",
                 className: h.gU,
                 fade: !0,
                 paddingFix: !1,
-                children: (0, i.jsx)(o.V, {
+                children: (0, n.jsx)(c.V, {
                     type: "top",
                     look: "custom",
-                    selectedItem: E,
+                    selectedItem: j,
                     onItemSelect: (e) => {
-                        g.A.hasUnsavedChanges() && E === A.RP.WIDGETS
-                            ? (0, u.VQ)()
-                            : (I({ action: "PRESS_SECTION", section: e }),
-                              b((t) => m.find((t) => t.section === e) ?? t));
+                        m.A.hasUnsavedChanges() && j === E.RP.WIDGETS
+                            ? (0, d.VQ)()
+                            : (A({ action: "PRESS_SECTION", section: e }),
+                              v((t) => x.find((t) => t.section === e) ?? t));
                     },
-                    children: m.map((e) =>
-                        (0, i.jsx)(
-                            o.V.Item,
+                    children: x.map((e) =>
+                        (0, n.jsx)(
+                            c.V.Item,
                             { className: h.YU, id: e.section, "aria-label": e.text, children: e.text },
                             e.section,
                         ),
                     ),
                 }),
             }),
-            (0, i.jsx)(o.V.Panel, {
-                id: E,
-                "aria-label": C,
+            (0, n.jsx)(c.V.Panel, {
+                id: j,
+                "aria-label": T,
                 className: h.NM,
-                children: (0, i.jsx)(c.F, {
-                    component: (0, i.jsx)(d.A, { children: (0, i.jsx)(c.H, { children: C }) }),
-                    children: (0, i.jsx)(v, {
+                children: (0, n.jsx)(u.F, {
+                    component: (0, n.jsx)(o.A, { children: (0, n.jsx)(u.H, { children: T }) }),
+                    children: (0, n.jsx)(N, {
                         user: t,
-                        currentUser: n,
-                        displayProfile: l,
-                        guildId: s,
+                        currentUser: i,
+                        displayProfile: s,
+                        guildId: a,
                         channelId: f,
-                        section: E,
-                        onClose: p,
+                        section: j,
+                        onClose: I,
                     }),
                 }),
             }),

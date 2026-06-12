@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { w: () => i });
-var r = n(64700);
-function i(e, t) {
-    let n = (0, r.useRef)(!0),
-        i = (0, r.useRef)(null);
-    (0, r.useEffect)(
+n.d(t, { w: () => r });
+var i = n(64700);
+function r(e, t) {
+    let n = (0, i.useRef)(!0),
+        r = (0, i.useRef)(null);
+    (0, i.useEffect)(
         () => (
             (n.current = !0),
             () => {
@@ -13,8 +13,8 @@ function i(e, t) {
         ),
         [],
     ),
-        (0, r.useEffect)(() => {
-            let r = i.current;
-            n.current ? (n.current = !1) : (!r || t.some((e, t) => !Object.is(e, r[t]))) && e(), (i.current = t);
+        (0, i.useEffect)(() => {
+            let i = r.current;
+            n.current ? (n.current = !1) : (!i || t.some((e, t) => !Object.is(e, i[t]))) && e(), (r.current = t);
         }, t);
 }

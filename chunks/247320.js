@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = {
+n.d(t, { A: () => r });
+var i = {
     lastWeek: "'last' eeee 'at' p",
     yesterday: "'yesterday at' p",
     today: "'today at' p",
@@ -8,6 +8,6 @@ var r = {
     nextWeek: "eeee 'at' p",
     other: "P",
 };
-let i = function (e, t, n, i) {
-    return r[e];
+let r = function (e, t, n, r) {
+    return i[e];
 };

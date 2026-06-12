@@ -36,8 +36,8 @@ var l = r(627968),
     x = r(39619),
     L = r(157559),
     _ = r(713654),
-    T = r(734057),
-    y = r(287809),
+    y = r(734057),
+    T = r(287809),
     b = r(403362),
     N = r(562153),
     F = r(427262),
@@ -111,7 +111,7 @@ function w(e, t) {
                     (0, O.sC)(n)
                 ) {
                     let r = n.getData("userId"),
-                        a = y.default.getUser(r);
+                        a = T.default.getUser(r);
                     if (null != a) {
                         let r = $({ user: a, guildId: l, channelId: s });
                         t.add(a.id), e.push(r);
@@ -122,7 +122,7 @@ function w(e, t) {
                 a.length > 0 &&
                     a.forEach((r) => {
                         if (t.has(r)) return;
-                        let n = y.default.getUser(r);
+                        let n = T.default.getUser(r);
                         if (null == n) return;
                         let a = $({ user: n, guildId: l, channelId: s });
                         t.add(r), e.unshift(a);
@@ -142,7 +142,7 @@ function w(e, t) {
                 let t = O.Ay[e];
                 return a
                     .map((e) => {
-                        let r = y.default.getUser(e);
+                        let r = T.default.getUser(e);
                         if (null == r) return null;
                         let l = F.Ay.getUserTag(r);
                         return "" === l ? null : `${t.key} ${l}`;
@@ -168,7 +168,7 @@ function z(e) {
         { channel: r } = e;
     if (r.isDM()) {
         let e = r.getRecipientId(),
-            l = y.default.getUser(e);
+            l = T.default.getUser(e);
         null != l && (t = { type: "avatar", src: l.getAvatarURL(null, (0, c.FT)(c._3.SIZE_20)) });
     } else
         t = r.isGroupDM()
@@ -202,7 +202,7 @@ function U(e) {
                     null != e &&
                         e.length > 0 &&
                         e.forEach((e) => {
-                            let r = T.A.getChannel(e);
+                            let r = y.A.getChannel(e);
                             if (null != r) {
                                 let e = z({ channel: r });
                                 l.add(r.id), t.push(e);
@@ -214,7 +214,7 @@ function U(e) {
                 r.length > 0 &&
                     r.forEach((e) => {
                         if (l.has(e)) return;
-                        let r = T.A.getChannel(e);
+                        let r = y.A.getChannel(e);
                         if (null == r) return;
                         let n = z({ channel: r });
                         l.add(e), t.unshift(n);
@@ -234,7 +234,7 @@ function U(e) {
                 let t = O.Ay[e];
                 return r
                     .map((e) => {
-                        let r = T.A.getChannel(e);
+                        let r = y.A.getChannel(e);
                         if (null == r) return;
                         let l = (0, j.E3)(r),
                             n = (0, j.TZ)(l);
@@ -614,11 +614,11 @@ function ee(e) {
                         switch (e) {
                             case P.LWr.FILTER_FROM:
                             case P.LWr.FILTER_MENTIONS:
-                                let n = y.default.getUser(t);
+                                let n = T.default.getUser(t);
                                 r = null == n ? t : `${n.username}`;
                                 break;
                             case P.LWr.FILTER_IN:
-                                let s = T.A.getChannel(t);
+                                let s = y.A.getChannel(t);
                                 if (null == s) r = t;
                                 else {
                                     let e = (0, j.E3)(s);

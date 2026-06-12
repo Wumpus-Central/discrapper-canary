@@ -1,17 +1,17 @@
 r.r(e), r.d(e, { default: () => w });
 var a = r(627968),
     i = r(64700),
-    s = r(132500),
+    s = r(835245),
     n = r(607399),
     l = r(821609),
     c = r(534514),
     d = r(834730),
     u = r(289873),
-    o = r(954571),
+    o = r(174459),
     h = r(723702);
 r(323874), r(14289), r(35956);
-var _ = r(17928),
-    p = r(157559),
+var p = r(17928),
+    _ = r(157559),
     f = r(308528),
     m = r(793574),
     A = r(688810),
@@ -20,7 +20,7 @@ var _ = r(17928),
     T = r(287809),
     x = r(956549),
     g = r(257269),
-    v = r(985018);
+    v = r(375708);
 function P(t) {
     let { match: e } = t,
         r = (0, E.UC)() ?? [],
@@ -28,7 +28,7 @@ function P(t) {
         { applicationId: s } = e.params,
         [n] = (0, I.A)([s]),
         l = n?.bot?.id,
-        c = (0, _.bG)([T.default], () => T.default.getCurrentUser());
+        c = (0, p.bG)([T.default], () => T.default.getCurrentUser());
     return (
         i.useEffect(() => {
             null != l &&
@@ -55,7 +55,7 @@ function P(t) {
         }, [a, s, l, c]),
         i.useEffect(() => {
             let t = setTimeout(() => {
-                null == l && p.A.show({ title: v.intl.string(v.t.PtobXW), body: v.intl.string(v.t["IOy+I5"]) });
+                null == l && _.A.show({ title: v.intl.string(v.t.PtobXW), body: v.intl.string(v.t["IOy+I5"]) });
             }, 5e3);
             return () => {
                 clearTimeout(t);
@@ -65,14 +65,14 @@ function P(t) {
     );
 }
 var b = r(652215),
-    k = r(613057),
-    C = r(897152);
+    C = r(613057),
+    k = r(897152);
 function w(t) {
     let { applicationId: e } = t.match.params,
-        [_, p] = i.useState(!1),
+        [p, _] = i.useState(!1),
         f = i.useRef(!1),
         [m, A] = i.useState(null),
-        I = !h.isPlatformEmbedded && !n.Fr && !_,
+        I = !h.isPlatformEmbedded && !n.Fr && !p,
         E = i.useMemo(() => (0, s.A)(), []);
     return (i.useEffect(() => {
         I &&
@@ -82,7 +82,7 @@ function w(t) {
                 .then((t) => {
                     let { default: r } = t;
                     r.request(b.e$_.DEEP_LINK, {
-                        type: k.XK.ACTIVITIES,
+                        type: C.XK.ACTIVITIES,
                         params: { applicationId: e, url: location.href, attemptId: E },
                     })
                         .then((t) => {
@@ -111,15 +111,15 @@ function w(t) {
     I && !1 !== m)
         ? !0 === m
             ? (0, a.jsxs)("div", {
-                  className: C.k,
+                  className: k.k,
                   children: [
                       (0, a.jsx)(c.D, { variant: "heading-xxl/bold", children: v.intl.string(v.t.csrAMJ) }),
                       (0, a.jsx)(d.E, { variant: "text-xs/semibold", children: v.intl.string(v.t["m1+IBn"]) }),
-                      (0, a.jsx)(l.$, { variant: "primary", text: v.intl.string(v.t.fIv16B), onClick: () => p(!0) }),
+                      (0, a.jsx)(l.$, { variant: "primary", text: v.intl.string(v.t.fIv16B), onClick: () => _(!0) }),
                   ],
               })
             : (0, a.jsxs)("div", {
-                  className: C.k,
+                  className: k.k,
                   children: [
                       (0, a.jsx)(c.D, { variant: "heading-xxl/bold", children: v.intl.string(v.t["Z+hCVU"]) }),
                       (0, a.jsx)(u.y, {}),

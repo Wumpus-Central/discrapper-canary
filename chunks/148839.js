@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(64700);
-function i(e) {
-    let t = r.useRef(e);
+n.d(t, { A: () => r });
+var i = n(64700);
+function r(e) {
+    let t = i.useRef(e);
     return (
-        r.useInsertionEffect(() => {
+        i.useInsertionEffect(() => {
             t.current = e;
         }),
-        r.useCallback(function () {
-            for (var e = arguments.length, n = Array(e), r = 0; r < e; r++) n[r] = arguments[r];
+        i.useCallback(function () {
+            for (var e = arguments.length, n = Array(e), i = 0; i < e; i++) n[i] = arguments[i];
             return t.current(...n);
         }, [])
     );

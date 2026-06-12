@@ -1,22 +1,22 @@
-i.d(n, { A: () => o });
-var e = i(627968);
-i(64700);
-var l = i(477782),
-    r = i(192308),
-    a = i(435183),
-    s = i(406704),
-    d = i(985018);
+n.d(e, { A: () => o });
+var i = n(627968);
+n(64700);
+var r = n(477782),
+    a = n(192308),
+    l = n(435183),
+    d = n(406704),
+    s = n(375708);
 function o(t) {
-    let n = (0, s.NI)(t),
-        i = (0, s.Id)(t),
-        o = (0, s.s5)(t);
-    return !n || !i || o || t.isModeratorReportChannel() || __OVERLAY__
+    let e = (0, d.NI)(t),
+        n = (0, d.Id)(t),
+        o = (0, d.s5)(t);
+    return !e || !n || o || t.isModeratorReportChannel() || __OVERLAY__
         ? null
-        : (0, e.jsx)(l.Dr, {
+        : (0, i.jsx)(r.Dr, {
               id: "edit-thread",
-              label: t.isForumPost() ? d.intl.string(d.t.NP1yHG) : d.intl.string(d.t["2Mk1TP"]),
+              label: t.isForumPost() ? s.intl.string(s.t.NP1yHG) : s.intl.string(s.t["2Mk1TP"]),
               action: () => {
-                  (0, r.closeAllModals)(), a.Ay.open(t.id);
+                  (0, a.closeAllModals)(), l.Ay.open(t.id);
               },
           });
 }

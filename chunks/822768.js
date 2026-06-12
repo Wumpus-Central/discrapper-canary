@@ -11,8 +11,8 @@ let u = () => {
         t = (0, o.A)(),
         [n, u] = r.useState(!1),
         [c, d] = r.useState([0, 0]),
-        [_, f] = r.useState(0.5),
-        [h, p] = r.useState(0),
+        [_, h] = r.useState(0.5),
+        [f, p] = r.useState(0),
         [E, m] = r.useState(!1);
     return (
         r.useEffect(() => {
@@ -24,7 +24,7 @@ let u = () => {
                     t = window.setTimeout(() => {
                         u(!0),
                             d([(0, s.random)(128, 1792), (0, s.random)(64, 360)]),
-                            f((0, s.random)(0.15, 0.5)),
+                            h((0, s.random)(0.15, 0.5)),
                             p((0, s.random)(-15, 15)),
                             m(Math.random() > 0.5);
                     }, e);
@@ -40,7 +40,7 @@ let u = () => {
         (0, i.jsx)(a.A, {
             ref: e,
             className: l.d,
-            style: { transform: `translate(${c[0]}px, ${c[1]}px) scale(${E ? -1 * _ : _}, ${_}) rotate(${h}deg)` },
+            style: { transform: `translate(${c[0]}px, ${c[1]}px) scale(${E ? -1 * _ : _}, ${_}) rotate(${f}deg)` },
             src: t?.misc["shooting-star"],
             loop: !1,
             onEnded: () => {

@@ -1,4 +1,4 @@
 "use strict";
-n.d(t, { X: () => i });
-var r,
-    i = (((r = {})[(r.PROVIDER_UNSPECIFIED = 0)] = "PROVIDER_UNSPECIFIED"), (r[(r.SPOTIFY = 1)] = "SPOTIFY"), r);
+n.d(t, { X: () => r });
+var i,
+    r = (((i = {})[(i.PROVIDER_UNSPECIFIED = 0)] = "PROVIDER_UNSPECIFIED"), (i[(i.SPOTIFY = 1)] = "SPOTIFY"), i);

@@ -1,3 +1,3 @@
 "use strict";
-n.d(t, { qx: () => r });
-let r = "domainMigrationSuccess";
+n.d(t, { qx: () => i });
+let i = "domainMigrationSuccess";

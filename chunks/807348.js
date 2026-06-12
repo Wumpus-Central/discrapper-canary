@@ -2,9 +2,9 @@
 n.d(t, {
     A2: () => p,
     Cx: () => E,
-    FH: () => f,
+    FH: () => h,
     If: () => c,
-    N0: () => h,
+    N0: () => f,
     Vr: () => _,
     Zm: () => g,
     ib: () => d,
@@ -25,8 +25,8 @@ var i,
         i),
     d = (((r = {}).ENTRY = "entry_sound"), (r.EXIT = "exit_sound"), (r.DEFAULT = "default"), r),
     _ = (((s = {}).ADDED = "added"), (s.UPDATED = "updated"), (s.REMOVED = "removed"), s),
-    f = (((a = {}).DEFAULT = "default"), (a.CUSTOM = "custom"), a);
-function h(e, t) {
+    h = (((a = {}).DEFAULT = "default"), (a.CUSTOM = "custom"), a);
+function f(e, t) {
     let { sound_id: n, emoji_id: i, emoji_name: r, user_id: s, available: a, ...o } = e;
     return { ...o, soundId: n, guildId: t, emojiId: i, emojiName: r, userId: s, available: a ?? !0 };
 }

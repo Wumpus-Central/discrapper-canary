@@ -9,26 +9,26 @@ var i = n(410323),
     c = n(883972),
     d = c.enforce,
     _ = c.get,
-    f = String,
-    h = Object.defineProperty,
+    h = String,
+    f = Object.defineProperty,
     p = i("".slice),
     E = i("".replace),
     m = i([].join),
     g =
         o &&
         !r(function () {
-            return 8 !== h(function () {}, "length", { value: 8 }).length;
+            return 8 !== f(function () {}, "length", { value: 8 }).length;
         }),
     A = String(String).split("String"),
     I = (e.exports = function (e, t, n) {
-        "Symbol(" === p(f(t), 0, 7) && (t = "[" + E(f(t), /^Symbol\(([^)]*)\).*$/, "$1") + "]"),
+        "Symbol(" === p(h(t), 0, 7) && (t = "[" + E(h(t), /^Symbol\(([^)]*)\).*$/, "$1") + "]"),
             n && n.getter && (t = "get " + t),
             n && n.setter && (t = "set " + t),
-            (!a(e, "name") || (l && e.name !== t)) && (o ? h(e, "name", { value: t, configurable: !0 }) : (e.name = t)),
-            g && n && a(n, "arity") && e.length !== n.arity && h(e, "length", { value: n.arity });
+            (!a(e, "name") || (l && e.name !== t)) && (o ? f(e, "name", { value: t, configurable: !0 }) : (e.name = t)),
+            g && n && a(n, "arity") && e.length !== n.arity && f(e, "length", { value: n.arity });
         try {
             n && a(n, "constructor") && n.constructor
-                ? o && h(e, "prototype", { writable: !1 })
+                ? o && f(e, "prototype", { writable: !1 })
                 : e.prototype && (e.prototype = void 0);
         } catch (e) {}
         var i = d(e);

@@ -2690,7 +2690,7 @@ class ta {
     constructor(e) {
         if (null != e) this.announcer = e;
         else {
-            const e = n(620557);
+            const e = n(295403);
             this.announcer = { announce: e.announce, clearAnnouncements: e.clearAnnouncer };
         }
     }

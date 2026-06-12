@@ -1,22 +1,22 @@
-l.r(s), l.d(s, { default: () => o });
-var n = l(627968),
-    i = l(503698),
-    a = l.n(i),
-    t = l(873263),
-    r = l(573648),
-    c = l(950198),
-    d = l(985018),
-    u = l(499132);
-function o() {
-    let { type: e } = (0, t.g)(),
-        s = (0, c.mw)(e);
-    if (null == s) return null;
-    let l = r.A.get(s);
+i.r(e), i.d(e, { default: () => u });
+var n = i(627968),
+    l = i(503698),
+    s = i.n(l),
+    r = i(873263),
+    a = i(573648),
+    c = i(950198),
+    d = i(375708),
+    p = i(697900);
+function u() {
+    let { type: t } = (0, r.g)(),
+        e = (0, c.mw)(t);
+    if (null == e) return null;
+    let i = a.A.get(e);
     return (0, n.jsxs)(c.mP, {
-        platformType: s,
+        platformType: e,
         children: [
-            (0, n.jsx)("div", { className: u.i, children: d.intl.format(d.t.RzEB5v, { name: l.name }) }),
-            (0, n.jsx)("div", { className: a()(u.i, u.z), children: d.intl.string(d.t["Q+lNwZ"]) }),
+            (0, n.jsx)("div", { className: p.i, children: d.intl.format(d.t.RzEB5v, { name: i.name }) }),
+            (0, n.jsx)("div", { className: s()(p.i, p.z), children: d.intl.string(d.t["Q+lNwZ"]) }),
         ],
     });
 }

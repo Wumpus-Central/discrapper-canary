@@ -1,130 +1,130 @@
 "use strict";
-n.d(t, { Ay: () => L, LF: () => w });
-var l = n(627968),
-    i = n(64700),
+n.d(t, { Ay: () => w, LF: () => D });
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(702841),
-    o = n(990078),
-    c = n(939249),
-    u = n(983851),
+    o = n(702841),
+    l = n(990078),
+    u = n(939249),
+    c = n(983851),
     d = n(565645),
-    h = n(864145),
-    m = n(704591),
-    p = n(470020),
-    f = n(320572),
-    g = n(102597),
-    _ = n(904054),
-    x = n(584014),
-    C = n(253932),
-    A = n(954571),
-    E = n(652215);
-function I(e, t) {
-    let { isPlaying: n, playSound: l } = (0, x.A)(null != e ? (0, g.A)(e.soundId) : null);
+    _ = n(864145),
+    h = n(926972),
+    f = n(470020),
+    p = n(319993),
+    E = n(102597),
+    m = n(904054),
+    g = n(584014),
+    A = n(885386),
+    I = n(174459),
+    T = n(652215);
+function S(e, t) {
+    let { isPlaying: n, playSound: i } = (0, g.A)(null != e ? (0, E.A)(e.soundId) : null);
     return {
         isPlaying: n,
-        playSound: i.useCallback(
+        playSound: r.useCallback(
             () =>
-                !!l({ volume: (0, _.A)(e?.volume ?? 1, C.HO.getSetting()) }) &&
-                (A.default.track(E.HAw.SOUNDMOJI_PLAY, {
+                !!i({ volume: (0, m.A)(e?.volume ?? 1, A.HO.getSetting()) }) &&
+                (I.default.track(T.HAw.SOUNDMOJI_PLAY, {
                     guild_id: t?.guild_id,
                     channel_id: t?.id,
                     sound_guild_id: e?.guildId,
                     sound_id: e?.soundId,
                 }),
                 !0),
-            [t?.guild_id, t?.id, l, e?.guildId, e?.soundId, e?.volume],
+            [t?.guild_id, t?.id, i, e?.guildId, e?.soundId, e?.volume],
         ),
     };
 }
-var v = n(209932),
-    y = n(807348),
-    b = n(805945),
-    S = n(734057),
-    N = n(985018),
-    j = n(720417);
-function T(e) {
+var y = n(209932),
+    N = n(807348),
+    v = n(805945),
+    C = n(734057),
+    R = n(375708),
+    O = n(720417);
+function b(e) {
     let { playSound: t } = e;
-    return (0, l.jsxs)(c.D, {
+    return (0, i.jsxs)(u.D, {
         title: "Risky Click",
         tag: "span",
         onClick: t,
-        className: j.Ls,
+        className: O.Ls,
         children: [
-            (0, l.jsx)(u.H, { size: "md", color: "currentColor", className: j.uA }),
-            (0, l.jsx)("span", { children: "Unknown" }),
+            (0, i.jsx)(c.H, { size: "md", color: "currentColor", className: O.uA }),
+            (0, i.jsx)("span", { children: "Unknown" }),
         ],
     });
 }
-function w(e) {
+function D(e) {
     let { soundId: t } = e,
-        n = (0, r.bG)([v.A], () => v.A.getSoundById(t)),
-        i = (0, m.tj)({ location: "SoundboardMentionInline" }),
-        { isPlaying: s, playSound: a } = I(n);
-    return i
+        n = (0, o.bG)([y.A], () => y.A.getSoundById(t)),
+        r = (0, h.tj)({ location: "SoundboardMentionInline" }),
+        { isPlaying: s, playSound: a } = S(n);
+    return r
         ? null == n
-            ? (0, l.jsx)(T, {})
-            : (0, l.jsx)(R, { className: j.wg, isPlaying: s, playSound: a, sound: n })
+            ? (0, i.jsx)(b, {})
+            : (0, i.jsx)(L, { className: O.wg, isPlaying: s, playSound: a, sound: n })
         : null;
 }
-function R(e) {
-    let { className: t, sound: n, playSound: i, isPlaying: s } = e,
-        r = n?.emojiId != null || n?.emojiName != null,
-        o = N.intl.formatToPlainString(N.t.tuMUJ2, { emojiName: n?.emojiName, soundName: n?.name });
-    return (0, h.X)({ location: "SoundboardMentionInline" })
-        ? (0, l.jsxs)(c.D, {
-              "aria-label": o,
+function L(e) {
+    let { className: t, sound: n, playSound: r, isPlaying: s } = e,
+        o = n?.emojiId != null || n?.emojiName != null,
+        l = R.intl.formatToPlainString(R.t.tuMUJ2, { emojiName: n?.emojiName, soundName: n?.name });
+    return (0, _.X)({ location: "SoundboardMentionInline" })
+        ? (0, i.jsxs)(u.D, {
+              "aria-label": l,
               tag: "span",
-              onClick: i,
-              className: a()(j.Ls, j.oR, { [j.he]: !0 === s }, t),
+              onClick: r,
+              className: a()(O.Ls, O.oR, { [O.he]: !0 === s }, t),
               children: [
-                  r && (0, l.jsx)(d.A, { emojiId: n?.emojiId, emojiName: n?.emojiName, className: j.JS }),
-                  (0, l.jsx)("span", { children: ` ${n?.name} ` }),
+                  o && (0, i.jsx)(d.A, { emojiId: n?.emojiId, emojiName: n?.emojiName, className: O.JS }),
+                  (0, i.jsx)("span", { children: ` ${n?.name} ` }),
               ],
           })
         : null;
 }
-let L = function (e) {
-    let { channelId: t, messageId: n, soundId: s, messageSounds: a, jumbo: c = !1 } = e,
-        u = C.hH.useSetting(),
-        d = (0, r.bG)([v.A], () => v.A.getSoundById(s), [s]),
-        m = i.useMemo(() => (0, p.A)(t, n, s, a) ?? d, [t, n, s, a, d]),
-        g = (0, r.bG)([S.A], () => S.A.getChannel(t)),
-        _ = (0, h.X)({ location: "SoundboardMention" }),
-        x = i.useRef(null),
-        { isPlaying: A, playSound: E } = I(m, g),
-        N = i.useCallback(async () => {
-            (await E()) && x.current?.addAnimation();
-        }, [E]);
-    return _
-        ? null == m
-            ? (0, l.jsx)(T, { playSound: N })
-            : c && !u
-              ? (0, l.jsx)(
-                    b.Ay,
+let w = function (e) {
+    let { channelId: t, messageId: n, soundId: s, messageSounds: a, jumbo: u = !1 } = e,
+        c = A.hH.useSetting(),
+        d = (0, o.bG)([y.A], () => y.A.getSoundById(s), [s]),
+        h = r.useMemo(() => (0, f.A)(t, n, s, a) ?? d, [t, n, s, a, d]),
+        E = (0, o.bG)([C.A], () => C.A.getChannel(t)),
+        m = (0, _.X)({ location: "SoundboardMention" }),
+        g = r.useRef(null),
+        { isPlaying: I, playSound: T } = S(h, E),
+        R = r.useCallback(async () => {
+            (await T()) && g.current?.addAnimation();
+        }, [T]);
+    return m
+        ? null == h
+            ? (0, i.jsx)(b, { playSound: R })
+            : u && !c
+              ? (0, i.jsx)(
+                    v.Ay,
                     {
-                        containerClassName: j.Ti,
-                        className: j.UX,
-                        sound: m,
-                        channel: g,
-                        onSelectItem: N,
-                        isPlayingSoundOverride: A,
+                        containerClassName: O.Ti,
+                        className: O.UX,
+                        sound: h,
+                        channel: E,
+                        onSelectItem: R,
+                        isPlayingSoundOverride: I,
                         isSoundmoji: !0,
-                        buttonOverlay: y.If.SOUNDMOJI,
-                        tooltipClassName: j.YL,
-                        tooltipContentClassName: j.R3,
-                        tooltipOverride: (0, l.jsx)(f.WE, { sound: m }),
-                        soundmojiVisualEffectRef: x,
+                        buttonOverlay: N.If.SOUNDMOJI,
+                        tooltipClassName: O.YL,
+                        tooltipContentClassName: O.R3,
+                        tooltipOverride: (0, i.jsx)(p.WE, { sound: h }),
+                        soundmojiVisualEffectRef: g,
                     },
-                    `${m.soundId}`,
+                    `${h.soundId}`,
                 )
-              : (0, l.jsx)(o.m, {
-                    "aria-label": m.name,
+              : (0, i.jsx)(l.m, {
+                    "aria-label": h.name,
                     "data-pending-richtooltip-migration": !0,
-                    __unsupportedReactNodeAsText: (0, l.jsx)(f.WE, { sound: m }),
+                    __unsupportedReactNodeAsText: (0, i.jsx)(p.WE, { sound: h }),
                     position: "top",
                     delay: 500,
-                    children: (0, l.jsx)("span", { children: (0, l.jsx)(R, { sound: m, playSound: N, isPlaying: A }) }),
+                    children: (0, i.jsx)("span", { children: (0, i.jsx)(L, { sound: h, playSound: R, isPlaying: I }) }),
                 })
         : null;
 };

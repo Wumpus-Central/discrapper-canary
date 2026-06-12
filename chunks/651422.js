@@ -1,12 +1,12 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = "[a-zA-Z_][a-zA-Z0-9\\._]{0,149}",
-        n = {
-            begin: t.concat(a, /\s*\{/),
+        n = "[a-zA-Z_][a-zA-Z0-9\\._]{0,149}",
+        i = {
+            begin: t.concat(n, /\s*\{/),
             end: /\{/,
             returnBegin: !0,
             relevance: 0,
-            contains: [e.inherit(e.TITLE_MODE, { begin: a })],
+            contains: [e.inherit(e.TITLE_MODE, { begin: n })],
         };
     return {
         name: "QML",
@@ -76,14 +76,14 @@ e.exports = function (e) {
                 illegal: /\[|%/,
             },
             { begin: "\\." + e.IDENT_RE, relevance: 0 },
-            { className: "attribute", begin: "\\bid\\s*:", starts: { className: "string", end: a, returnEnd: !1 } },
+            { className: "attribute", begin: "\\bid\\s*:", starts: { className: "string", end: n, returnEnd: !1 } },
             {
-                begin: a + "\\s*:",
+                begin: n + "\\s*:",
                 returnBegin: !0,
-                contains: [{ className: "attribute", begin: a, end: "\\s*:", excludeEnd: !0, relevance: 0 }],
+                contains: [{ className: "attribute", begin: n, end: "\\s*:", excludeEnd: !0, relevance: 0 }],
                 relevance: 0,
             },
-            n,
+            i,
         ],
         illegal: /#/,
     };

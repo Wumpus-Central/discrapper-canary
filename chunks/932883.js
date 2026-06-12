@@ -10,8 +10,8 @@ var i,
     c = n(174459),
     d = n(310031),
     _ = n(394953),
-    f = n(849077),
-    h = n(652215);
+    h = n(849077),
+    f = n(652215);
 let p = s.createContext(""),
     E = (e) => {
         let { children: t } = e,
@@ -28,7 +28,7 @@ var g =
     i);
 function A(e) {
     let { message: t, interactionType: n, viewId: i } = e;
-    c.default.track(h.HAw.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
+    c.default.track(f.HAw.NOTIFICATIONS_INBOX_ITEM_INTERACTED, {
         interaction_type: n,
         message_id: t.id,
         channel_id: t.channel_id,
@@ -39,7 +39,7 @@ function A(e) {
 }
 function I(e) {
     let { section: t, enabled: n, viewId: i } = e;
-    c.default.track(h.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: i });
+    c.default.track(f.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: i });
 }
 function T(e) {
     let {
@@ -51,13 +51,13 @@ function T(e) {
         loadingTrigger: a,
         viewId: o,
     } = e;
-    c.default.track(h.HAw.NOTIFICATIONS_INBOX_DATA_LOADED, {
+    c.default.track(f.HAw.NOTIFICATIONS_INBOX_DATA_LOADED, {
         time_to_load: t,
         messages_count: n,
         unread_messages_count: i,
         channels_fetched: r,
         mentions_fetched: s,
-        loading_trigger: a ?? f.VA.UNKNOWN,
+        loading_trigger: a ?? h.VA.UNKNOWN,
         view_id: o,
     });
 }
@@ -75,11 +75,11 @@ function S(e) {
         g = (0, o.bG)([d.A], () => d.A.isLoading),
         A = (0, u.A)(g),
         I = (0, o.bG)([d.A], () => d.A.currentRequestAnalyticsPayload ?? null),
-        { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
+        { unreadRecentMentionsCount: S, unreadChannelIds: y } = (0, _.U4)();
     (0, l.Ay)(() => {
         !(function (e) {
             let { variant: t, viewId: n, entrypoint: i } = e;
-            c.default.track(h.HAw.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t, inbox_entrypoint: i, view_id: n });
+            c.default.track(f.HAw.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t, inbox_entrypoint: i, view_id: n });
         })({ variant: t, viewId: a, entrypoint: n }),
             (E.current = Date.now());
     }),
@@ -98,7 +98,7 @@ function S(e) {
                             unreadMessageItemsCount: o,
                             unreadMentionsCount: l,
                         } = e;
-                        c.default.track(h.HAw.NOTIFICATIONS_INBOX_READY, {
+                        c.default.track(f.HAw.NOTIFICATIONS_INBOX_READY, {
                             time_to_load: t,
                             unreads_count: n,
                             total_messages_count: i,
@@ -113,15 +113,15 @@ function S(e) {
                         unreadsCount: r.length,
                         totalMessagesCount: i.length,
                         unreadsBadgeMentionCount: S,
-                        unreadsBadgeChannelCount: N.length,
+                        unreadsBadgeChannelCount: y.length,
                         unreadMessageItemsCount: p.UNREAD.length,
-                        unreadMentionsCount: p.UNREAD.filter((e) => e.every((e) => e.kind === f.yL.MENTION)).length,
+                        unreadMentionsCount: p.UNREAD.filter((e) => e.every((e) => e.kind === h.yL.MENTION)).length,
                         viewId: a,
                     });
             }
-        }, [i, r, a, N, S, p]),
+        }, [i, r, a, y, S, p]),
         s.useEffect(() => {
-            let e = I?.loadingTrigger === f.VA.AUTO_LOAD;
+            let e = I?.loadingTrigger === h.VA.AUTO_LOAD;
             null == I ||
                 !0 !== A ||
                 !1 !== g ||
@@ -130,7 +130,7 @@ function S(e) {
                     timeToLoad: I?.timeToLoad,
                     messagesCount: i.length,
                     unreadMessagesCount: r.length,
-                    loadingTrigger: I?.loadingTrigger ?? f.VA.UNKNOWN,
+                    loadingTrigger: I?.loadingTrigger ?? h.VA.UNKNOWN,
                     viewId: I?.viewId,
                     channelsFetched: I?.channelsFetched,
                     mentionsFetched: I?.mentionsFetched,
@@ -139,7 +139,7 @@ function S(e) {
         (0, l.l0)(() => {
             !(function (e) {
                 let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: i, totalItemsCount: r, viewId: s } = e;
-                c.default.track(h.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {
+                c.default.track(f.HAw.NOTIFICATIONS_INBOX_UNMOUNTED, {
                     unreads_count: t,
                     total_messages_count: n,
                     unread_items_count: i,

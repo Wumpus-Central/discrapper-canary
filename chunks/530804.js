@@ -1,136 +1,136 @@
-n.d(t, { $n: () => A, uy: () => C, vp: () => p }), n(321073);
-var i = n(64700),
-    l = n(735438),
-    a = n(17928),
-    s = n(568598),
-    r = n(313961),
-    o = n(288737),
-    d = n(495544),
-    c = n(734057),
-    u = n(696451),
-    h = n(584569),
-    _ = n(763827),
-    m = n(287809),
-    g = n(977997),
-    f = n(403362);
-function A(e, t) {
-    let n = (0, a.bG)([h.A, _.A], () => (e === _.A.getChannelId() ? h.A.getDesyncedVoiceStates() : null)),
-        s = (0, a.yK)([r.A], () => (null == e ? [] : [...r.A.getGuildRingingUsers(e)])),
-        d = (0, a.yK)([m.default], () => s.map((e) => m.default.getUser(e)).filter(f.Vq)),
-        g = (0, a.bG)([c.A], () => c.A.getBasicChannel(e)),
-        A = i.useMemo(
+t.d(n, { $n: () => b, uy: () => C, vp: () => m }), t(321073);
+var u = t(64700),
+    l = t(735438),
+    r = t(17928),
+    i = t(568598),
+    s = t(313961),
+    a = t(288737),
+    c = t(495544),
+    d = t(734057),
+    o = t(696451),
+    A = t(584569),
+    f = t(763827),
+    g = t(287809),
+    h = t(977997),
+    p = t(403362);
+function b(e, n) {
+    let t = (0, r.bG)([A.A, f.A], () => (e === f.A.getChannelId() ? A.A.getDesyncedVoiceStates() : null)),
+        i = (0, r.yK)([s.A], () => (null == e ? [] : [...s.A.getGuildRingingUsers(e)])),
+        c = (0, r.yK)([g.default], () => i.map((e) => g.default.getUser(e)).filter(p.Vq)),
+        h = (0, r.bG)([d.A], () => d.A.getBasicChannel(e)),
+        b = u.useMemo(
             () =>
-                d.map((e) => ({
-                    voiceState: new o.A(e.id),
+                c.map((e) => ({
+                    voiceState: new a.A(e.id),
                     user: e,
-                    member: g?.guild_id != null ? u.Ay.getMember(g?.guild_id, e.id) : null,
+                    member: h?.guild_id != null ? o.Ay.getMember(h?.guild_id, e.id) : null,
                     nick: e.globalName,
                     comparator: e.globalName,
                     _isPlaceholder: !1,
                 })),
-            [d, g?.guild_id],
+            [c, h?.guild_id],
         );
-    return i.useMemo(
+    return u.useMemo(
         () =>
-            (function (e, t, n) {
-                if ((null == e || 0 === e.length) && 0 === n.length) return t;
-                let i = [],
-                    a = new Set();
-                for (let e of t) i.push(e), a.add(e.user.id);
+            (function (e, n, t) {
+                if ((null == e || 0 === e.length) && 0 === t.length) return n;
+                let u = [],
+                    r = new Set();
+                for (let e of n) u.push(e), r.add(e.user.id);
                 return (
                     e?.forEach((e) => {
-                        i.splice(
-                            (0, l.sortedIndexBy)(i, e, (e) => {
-                                let { comparator: t } = e;
-                                return t;
+                        u.splice(
+                            (0, l.sortedIndexBy)(u, e, (e) => {
+                                let { comparator: n } = e;
+                                return n;
                             }),
                             0,
                             e,
                         );
                     }),
-                    n.length > 0 &&
-                        n.forEach((e) => {
-                            a.has(e.user.id) ||
-                                i.splice(
-                                    (0, l.sortedIndexBy)(i, e, (e) => {
-                                        let { comparator: t } = e;
-                                        return t;
+                    t.length > 0 &&
+                        t.forEach((e) => {
+                            r.has(e.user.id) ||
+                                u.splice(
+                                    (0, l.sortedIndexBy)(u, e, (e) => {
+                                        let { comparator: n } = e;
+                                        return n;
                                     }),
                                     0,
                                     e,
                                 );
                         }),
-                    i
+                    u
                 );
-            })(n, t, A),
-        [n, t, A],
+            })(t, n, b),
+        [t, n, b],
     );
 }
-function p(e, t) {
-    let n = (0, a.bG)([h.A, _.A], () => (e === _.A.getChannelId() ? h.A.getDesyncedParticipants() : null));
-    return i.useMemo(
+function m(e, n) {
+    let t = (0, r.bG)([A.A, f.A], () => (e === f.A.getChannelId() ? A.A.getDesyncedParticipants() : null));
+    return u.useMemo(
         () =>
-            (function (e, t) {
-                if (null == e || 0 === e.length) return t;
-                let n = [...t];
+            (function (e, n) {
+                if (null == e || 0 === e.length) return n;
+                let t = [...n];
                 return (
                     e.forEach((e) => {
-                        n.splice(
-                            (0, l.sortedIndexBy)(n, e, (e) => (0, s.KU)(e)),
+                        t.splice(
+                            (0, l.sortedIndexBy)(t, e, (e) => (0, i.KU)(e)),
                             0,
                             e,
                         );
                     }),
-                    n
+                    t
                 );
-            })(n, t),
-        [n, t],
+            })(t, n),
+        [t, n],
     );
 }
-function C(e, t) {
-    let n = (0, a.bG)([d.default], () => d.default.getId() === t),
-        l = (0, a.bG)([_.A], () => _.A.getChannelId()),
-        s = i.useRef(null),
-        [r, o] = i.useState(!1),
-        [c, u] = i.useState(!1),
-        h = (0, a.bG)(
-            [_.A, g.A],
+function C(e, n) {
+    let t = (0, r.bG)([c.default], () => c.default.getId() === n),
+        l = (0, r.bG)([f.A], () => f.A.getChannelId()),
+        i = u.useRef(null),
+        [s, a] = u.useState(!1),
+        [d, o] = u.useState(!1),
+        A = (0, r.bG)(
+            [f.A, h.A],
             () =>
-                null != t &&
+                null != n &&
                 null != e &&
-                _.A.getChannelId() === e &&
-                null != g.A.isInChannel(e, t) &&
-                _.A.isUserConnected(t),
+                f.A.getChannelId() === e &&
+                null != h.A.isInChannel(e, n) &&
+                f.A.isUserConnected(n),
         ),
-        m = (0, a.bG)(
-            [_.A, g.A],
+        g = (0, r.bG)(
+            [f.A, h.A],
             () =>
-                null != t &&
+                null != n &&
                 null != e &&
-                _.A.getChannelId() === e &&
-                null != g.A.isInChannel(e, t) &&
-                !_.A.isUserConnected(t),
+                f.A.getChannelId() === e &&
+                null != h.A.isInChannel(e, n) &&
+                !f.A.isUserConnected(n),
         );
     return (
-        i.useEffect(() => {
-            h && u(!0);
-        }, [h]),
-        i.useEffect(() => {
-            l !== e && u(!1);
+        u.useEffect(() => {
+            A && o(!0);
+        }, [A]),
+        u.useEffect(() => {
+            l !== e && o(!1);
         }, [e, l]),
-        i.useEffect(
+        u.useEffect(
             () => (
-                m && null == s.current
-                    ? (s.current = setTimeout(() => {
-                          (s.current = null), o(!0);
+                g && null == i.current
+                    ? (i.current = setTimeout(() => {
+                          (i.current = null), a(!0);
                       }, 250))
-                    : (clearTimeout(s.current), (s.current = null), o(!1)),
+                    : (clearTimeout(i.current), (i.current = null), a(!1)),
                 () => {
-                    clearTimeout(s.current), (s.current = null);
+                    clearTimeout(i.current), (i.current = null);
                 }
             ),
-            [m],
+            [g],
         ),
-        !n && c && r
+        !t && d && s
     );
 }

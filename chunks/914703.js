@@ -1,39 +1,39 @@
-n.d(t, { A: () => u });
-var i = n(627968);
-n(64700);
-var l = n(861672),
-    s = n(477782),
-    a = n(660273),
-    r = n(57907),
-    o = n(867455),
-    d = n(607508),
-    c = n(37411);
-function u(e) {
-    let { channel: t, closePopout: n, onSelect: u, navId: h, label: A } = e,
-        _ = (0, a.A)(t, "Notifications Bell"),
-        m = (0, r.A)(t),
-        g = (0, d.X)(t);
-    return (0, i.jsxs)(l.W, {
+e.d(t, { A: () => u });
+var a = e(627968);
+e(64700);
+var s = e(980707),
+    n = e(477782),
+    r = e(660273),
+    o = e(57907),
+    c = e(867455),
+    l = e(607508),
+    d = e(37411);
+function u(i) {
+    let { channel: t, closePopout: e, onSelect: u, navId: h, label: p } = i,
+        f = (0, r.A)(t, "Notifications Bell"),
+        k = (0, o.A)(t),
+        b = (0, l.X)(t);
+    return (0, a.jsxs)(s.W, {
         "data-menu-migrated-auto": !0,
         navId: h,
-        onClose: n,
-        "aria-label": A,
+        onClose: e,
+        "aria-label": p,
         onSelect: u,
         children: [
-            (0, i.jsxs)(s.rX, { children: [t.isForumPost() ? _ : null, m] }),
-            (0, i.jsx)(s.rX, {
-                children: (0, c.EU)().map((e) => {
-                    let { setting: n, label: l } = e;
-                    return (0, i.jsx)(
-                        s.iD,
+            (0, a.jsxs)(n.rX, { children: [t.isForumPost() ? f : null, k] }),
+            (0, a.jsx)(n.rX, {
+                children: (0, d.EU)().map((i) => {
+                    let { setting: e, label: s } = i;
+                    return (0, a.jsx)(
+                        n.iD,
                         {
                             group: "thread-notifications",
-                            id: `${n}`,
-                            label: l,
-                            action: () => o.A.setNotificationSettings(t, { flags: n }),
-                            checked: n === g,
+                            id: `${e}`,
+                            label: s,
+                            action: () => c.A.setNotificationSettings(t, { flags: e }),
+                            checked: e === b,
                         },
-                        n,
+                        e,
                     );
                 }),
             }),

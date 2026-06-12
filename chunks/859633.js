@@ -1,4 +1,4 @@
-o.r(
+t.r(
     (e.exports = {
         wishlistButton: "wishlistButton__979b1",
         disabled: "disabled__979b1",

@@ -1,14 +1,14 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = e.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] }),
-        n = "decltype\\(auto\\)",
+        n = e.COMMENT("//", "$", { contains: [{ begin: /\\\n/ }] }),
+        i = "decltype\\(auto\\)",
         r = "[a-zA-Z_]\\w{0,149}::",
-        i = "(" + n + "|" + t.optional(r) + "[a-zA-Z_]\\w{0,149}" + t.optional("<[^<>]+>") + ")",
-        o = {
+        s = "(" + i + "|" + t.optional(r) + "[a-zA-Z_]\\w{0,149}" + t.optional("<[^<>]+>") + ")",
+        a = {
             className: "type",
             variants: [{ begin: "\\b[a-z\\d_]{0,149}_t\\b" }, { match: /\batomic_[a-z]{3,6}\b/ }],
         },
-        s = {
+        o = {
             className: "string",
             variants: [
                 { begin: '(u8?|U|L)?"', end: '"', illegal: "\\n", contains: [e.BACKSLASH_ESCAPE] },
@@ -32,7 +32,7 @@ e.exports = function (e) {
             ],
             relevance: 0,
         },
-        c = {
+        u = {
             className: "meta",
             begin: /#\s*[a-z]+\b/,
             end: /$/,
@@ -42,15 +42,15 @@ e.exports = function (e) {
             },
             contains: [
                 { begin: /\\\n/, relevance: 0 },
-                e.inherit(s, { className: "string" }),
+                e.inherit(o, { className: "string" }),
                 { className: "string", begin: /<.*?>/ },
-                a,
+                n,
                 e.C_BLOCK_COMMENT_MODE,
             ],
         },
-        _ = { className: "title", begin: t.optional(r) + e.IDENT_RE, relevance: 0 },
+        c = { className: "title", begin: t.optional(r) + e.IDENT_RE, relevance: 0 },
         d = t.optional(r) + e.IDENT_RE + "\\s*\\(",
-        m = {
+        _ = {
             keyword: [
                 "asm",
                 "auto",
@@ -131,64 +131,64 @@ e.exports = function (e) {
             built_in:
                 "std string wstring cin cout cerr clog stdin stdout stderr stringstream istringstream ostringstream auto_ptr deque list queue stack vector map set pair bitset multiset multimap unordered_set unordered_map unordered_multiset unordered_multimap priority_queue make_pair array shared_ptr abort terminate abs acos asin atan2 atan calloc ceil cosh cos exit exp fabs floor fmod fprintf fputs free frexp fscanf future isalnum isalpha iscntrl isdigit isgraph islower isprint ispunct isspace isupper isxdigit tolower toupper labs ldexp log10 log malloc realloc memchr memcmp memcpy memset modf pow printf putchar puts scanf sinh sin snprintf sprintf sqrt sscanf strcat strchr strcmp strcpy strcspn strlen strncat strncmp strncpy strpbrk strrchr strspn strstr tanh tan vfprintf vprintf vsprintf endl initializer_list unique_ptr",
         },
-        p = [c, o, a, e.C_BLOCK_COMMENT_MODE, l, s],
-        u = {
+        h = [u, a, n, e.C_BLOCK_COMMENT_MODE, l, o],
+        f = {
             variants: [
                 { begin: /=/, end: /;/ },
                 { begin: /\(/, end: /\)/ },
                 { beginKeywords: "new throw return else", end: /;/ },
             ],
-            keywords: m,
-            contains: p.concat([{ begin: /\(/, end: /\)/, keywords: m, contains: p.concat(["self"]), relevance: 0 }]),
+            keywords: _,
+            contains: h.concat([{ begin: /\(/, end: /\)/, keywords: _, contains: h.concat(["self"]), relevance: 0 }]),
             relevance: 0,
         },
-        g = {
-            begin: "(" + i + "[\\*&\\s]+){1,12}" + d,
+        p = {
+            begin: "(" + s + "[\\*&\\s]+){1,12}" + d,
             returnBegin: !0,
             end: /[{;=]/,
             excludeEnd: !0,
-            keywords: m,
+            keywords: _,
             illegal: /[^\w\s\*&:<>.]/,
             contains: [
-                { begin: n, keywords: m, relevance: 0 },
-                { begin: d, returnBegin: !0, contains: [e.inherit(_, { className: "title.function" })], relevance: 0 },
+                { begin: i, keywords: _, relevance: 0 },
+                { begin: d, returnBegin: !0, contains: [e.inherit(c, { className: "title.function" })], relevance: 0 },
                 { relevance: 0, match: /,/ },
                 {
                     className: "params",
                     begin: /\(/,
                     end: /\)/,
-                    keywords: m,
+                    keywords: _,
                     relevance: 0,
                     contains: [
-                        a,
+                        n,
                         e.C_BLOCK_COMMENT_MODE,
-                        s,
-                        l,
                         o,
+                        l,
+                        a,
                         {
                             begin: /\(/,
                             end: /\)/,
-                            keywords: m,
+                            keywords: _,
                             relevance: 0,
-                            contains: ["self", a, e.C_BLOCK_COMMENT_MODE, s, l, o],
+                            contains: ["self", n, e.C_BLOCK_COMMENT_MODE, o, l, a],
                         },
                     ],
                 },
-                o,
                 a,
+                n,
                 e.C_BLOCK_COMMENT_MODE,
-                c,
+                u,
             ],
         };
     return {
         name: "C",
         aliases: ["h"],
-        keywords: m,
+        keywords: _,
         disableAutodetect: !0,
         illegal: "</",
-        contains: [].concat(u, g, p, [
-            c,
-            { begin: e.IDENT_RE + "::", keywords: m },
+        contains: [].concat(f, p, h, [
+            u,
+            { begin: e.IDENT_RE + "::", keywords: _ },
             {
                 className: "class",
                 beginKeywords: "enum class struct union",
@@ -196,6 +196,6 @@ e.exports = function (e) {
                 contains: [{ beginKeywords: "final class struct" }, e.TITLE_MODE],
             },
         ]),
-        exports: { preprocessor: c, strings: s, keywords: m },
+        exports: { preprocessor: u, strings: o, keywords: _ },
     };
 };

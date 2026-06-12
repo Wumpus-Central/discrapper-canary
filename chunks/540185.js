@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { x: () => i });
-var r,
-    i =
-        (((r = {}).CURRENT_GAMES = "current_games"),
-        (r.WANT_TO_PLAY_GAMES = "want_to_play_games"),
-        (r.PLAYED_GAMES = "played_games"),
-        (r.FAVORITE_GAMES = "favorite_games"),
-        (r.APPLICATION = "application"),
-        r);
+n.d(t, { x: () => r });
+var i,
+    r =
+        (((i = {}).CURRENT_GAMES = "current_games"),
+        (i.WANT_TO_PLAY_GAMES = "want_to_play_games"),
+        (i.PLAYED_GAMES = "played_games"),
+        (i.FAVORITE_GAMES = "favorite_games"),
+        (i.APPLICATION = "application"),
+        i);

@@ -1,49 +1,49 @@
-n.d(t, { A: () => u });
-var i = n(627968);
-n(64700);
-var l = n(534514),
-    a = n(834730),
-    s = n(573435),
-    r = n(145497),
-    o = n(649640),
-    d = n(985018),
-    c = n(890653);
-function u(e) {
-    let { guildId: t, name: n } = e,
-        u = (0, o.b2)(),
-        m = (0, o.n6)(u.hex());
+l.d(e, { A: () => m });
+var i = l(627968);
+l(64700);
+var n = l(534514),
+    a = l(834730),
+    r = l(573435),
+    c = l(145497),
+    t = l(649640),
+    d = l(375708),
+    x = l(890653);
+function m(s) {
+    let { guildId: e, name: l } = s,
+        m = (0, t.b2)(),
+        h = (0, t.n6)(m.hex());
     return (0, i.jsxs)("div", {
-        className: c.kL,
+        className: x.kL,
         children: [
-            (0, i.jsx)("div", { className: c.vK, style: { background: m } }),
+            (0, i.jsx)("div", { className: x.vK, style: { background: h } }),
             (0, i.jsx)("div", {
-                className: c.H,
-                children: (0, i.jsx)(s.Ay, {
-                    mask: s.hW.CLAN_ICON,
+                className: x.H,
+                children: (0, i.jsx)(r.Ay, {
+                    mask: r.hW.CLAN_ICON,
                     width: 70,
                     height: 70,
                     children: (0, i.jsx)("div", {
-                        className: c.R3,
-                        children: (0, i.jsx)(r.j, {
-                            guildId: t,
-                            guildName: n ?? "?",
+                        className: x.R3,
+                        children: (0, i.jsx)(c.j, {
+                            guildId: e,
+                            guildName: l ?? "?",
                             guildIcon: null,
                             iconSize: 64,
-                            acronymClassName: c.F2,
+                            acronymClassName: x.F2,
                         }),
                     }),
                 }),
             }),
             (0, i.jsx)("div", {
-                className: c.wx,
-                children: (0, i.jsx)(l.D, {
+                className: x.wx,
+                children: (0, i.jsx)(n.D, {
                     variant: "heading-lg/medium",
                     color: "text-strong",
-                    children: n ?? d.intl.string(d.t.wZmueu),
+                    children: l ?? d.intl.string(d.t.wZmueu),
                 }),
             }),
             (0, i.jsx)("div", {
-                className: c.rf,
+                className: x.rf,
                 children: (0, i.jsx)(a.E, {
                     variant: "text-sm/normal",
                     color: "text-subtle",

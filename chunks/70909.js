@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { A: () => i }), n(321073);
-var r = n(205693);
-function i(e) {
+n.d(t, { A: () => r }), n(321073);
+var i = n(459838);
+function r(e) {
     let t = !1;
-    e.on(r.bg.Destroy, () => (t = !0));
+    e.on(i.bg.Destroy, () => (t = !0));
     let n = async () => {
         if (t) return;
-        let i = [];
-        e.eachConnection((e) => i.push({ connection: e, stats: e.emitStats() }));
-        let a = [];
-        for (let e of i) {
+        let r = [];
+        e.eachConnection((e) => r.push({ connection: e, stats: e.emitStats() }));
+        let s = [];
+        for (let e of r) {
             let t = await e.stats;
-            null != t && a.push({ connection: e.connection, stats: t });
+            null != t && s.push({ connection: e.connection, stats: t });
         }
-        e.emit(r.bg.ConnectionStats, a), setTimeout(n, 1e3);
+        e.emit(i.bg.ConnectionStats, s), setTimeout(n, 1e3);
     };
     setTimeout(n, 1e3);
 }

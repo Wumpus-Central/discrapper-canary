@@ -1,11 +1,11 @@
 l.d(t, { default: () => o });
 var n = l(627968),
     i = l(17928),
-    a = l(550079),
+    a = l(980707),
     s = l(477782),
     d = l(442433),
     r = l(684407),
-    c = l(985018);
+    c = l(375708);
 let o = (e) => {
     let { guildId: t, welcomeChannel: l, onChannelReorder: o, onShowDeleteModal: b, index: g, onSelect: h } = e,
         u = (0, i.bG)([r.A], () => r.A.get(t)),

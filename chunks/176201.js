@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { K3: () => a, Qv: () => o, kz: () => s });
-var r = n(317097),
-    i = n(652215);
-function a(e) {
+n.d(t, { K3: () => s, Qv: () => o, kz: () => a });
+var i = n(317097),
+    r = n(652215);
+function s(e) {
     return {
-        primaryColor: 0 === e.primary_color ? i.TpD : (0, r.Hl)(e.primary_color),
-        secondaryColor: null == e.secondary_color ? null : (0, r.Hl)(e.secondary_color),
-        tertiaryColor: null == e.tertiary_color ? null : (0, r.Hl)(e.tertiary_color),
+        primaryColor: 0 === e.primary_color ? r.TpD : (0, i.Hl)(e.primary_color),
+        secondaryColor: null == e.secondary_color ? null : (0, i.Hl)(e.secondary_color),
+        tertiaryColor: null == e.tertiary_color ? null : (0, i.Hl)(e.tertiary_color),
     };
 }
-function s(e) {
+function a(e) {
     return (
         null != e &&
         null != e.colorStrings &&

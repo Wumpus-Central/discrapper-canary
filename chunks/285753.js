@@ -10,12 +10,12 @@ function r(e) {
             activationEntry: void 0,
             activationIdle: void 0,
         }),
-        [s, d] = (0, a.useState)(!1),
-        l = (0, a.useRef)(!1);
+        [s, l] = (0, a.useState)(!1),
+        d = (0, a.useRef)(!1);
     return (
         (0, a.useEffect)(() => {
-            if (!e || l.current) return;
-            l.current = !0;
+            if (!e || d.current) return;
+            d.current = !0;
             let n = !1;
             return (
                 Promise.all([
@@ -57,14 +57,14 @@ function r(e) {
                                 activationEntry: window.URL.createObjectURL(c.body),
                                 activationIdle: window.URL.createObjectURL(i.body),
                             }),
-                            d(!0));
+                            l(!0));
                     },
                     () => {
-                        n || (l.current = !1);
+                        n || (d.current = !1);
                     },
                 ),
                 () => {
-                    (n = !0), (l.current = !1);
+                    (n = !0), (d.current = !1);
                 }
             );
         }, [e, t]),

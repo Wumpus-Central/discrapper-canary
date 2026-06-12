@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { Iy: () => a, _z: () => s, wL: () => i });
-var r = n(502075);
-function i(e) {
-    return null != e && (e.startsWith(r.U4.GUILD) || e.startsWith(r.U4.CALL));
+n.d(t, { Iy: () => s, _z: () => a, wL: () => r });
+var i = n(325278);
+function r(e) {
+    return null != e && (e.startsWith(i.U4.GUILD) || e.startsWith(i.U4.CALL));
 }
-function a(e) {
+function s(e) {
     let t = e.split(":"),
         n = t[0];
     switch (n) {
-        case r.U4.GUILD: {
-            let [e, n, r, i] = t;
-            return { streamType: e, guildId: n, channelId: r, ownerId: i };
+        case i.U4.GUILD: {
+            let [e, n, i, r] = t;
+            return { streamType: e, guildId: n, channelId: i, ownerId: r };
         }
-        case r.U4.CALL: {
-            let [e, n, r] = t;
-            return { streamType: e, channelId: n, ownerId: r };
+        case i.U4.CALL: {
+            let [e, n, i] = t;
+            return { streamType: e, channelId: n, ownerId: i };
         }
         default:
             throw Error(`Unknown stream type ${n}`);
     }
 }
-function s(e) {
-    let { streamType: t, guildId: n, channelId: i, ownerId: a } = e;
+function a(e) {
+    let { streamType: t, guildId: n, channelId: r, ownerId: s } = e;
     switch (t) {
-        case r.U4.GUILD:
-            return [t, n, i, a].join(":");
-        case r.U4.CALL:
-            return [t, i, a].join(":");
+        case i.U4.GUILD:
+            return [t, n, r, s].join(":");
+        case i.U4.CALL:
+            return [t, r, s].join(":");
         default:
             throw Error(`Unknown stream type ${t}`);
     }

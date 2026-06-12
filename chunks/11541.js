@@ -12,10 +12,10 @@ let d = {};
 function _(e, t) {
     return t.map((t) => e + t);
 }
-function f(e) {
+function h(e) {
     return e.split("-")[1];
 }
-function h(e, t) {
+function f(e, t) {
     e.forEach((e) => {
         d[e] = t;
     });
@@ -89,16 +89,16 @@ function I(e) {
 }
 async function T(e, t) {
     let n = _(e, t),
-        i = n.filter((e) => d[e] <= 1).map(f);
+        i = n.filter((e) => d[e] <= 1).map(h);
     if (0 === i.length) return [];
-    h(n, 2);
+    f(n, 2);
     try {
         let t = await r.Bo.post({
             url: u.Rsh.MEMBER_SAFETY_SUPPLEMENTAL(e),
             body: { user_ids: i },
             rejectWithError: !0,
         });
-        if (!Array.isArray(t.body)) return h(n, 0), [];
+        if (!Array.isArray(t.body)) return f(n, 0), [];
         let s = t.body.map(I),
             a = [];
         s.forEach((e) => {
@@ -108,9 +108,9 @@ async function T(e, t) {
         let o = _(e, a),
             l = i.filter((e) => !a.includes(e)),
             c = _(e, l);
-        return h(o, 3), h(c, 0), s;
+        return f(o, 3), f(c, 0), s;
     } catch (e) {
-        h(n, 0);
+        f(n, 0);
     }
     return [];
 }

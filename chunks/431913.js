@@ -1,41 +1,41 @@
-i.d(r, { default: () => T });
-var n = i(627968),
-    a = i(64700),
-    e = i(189213),
-    o = i(27192),
-    E = i(493540),
-    c = i(980406),
-    s = i(985018);
-function T(t) {
-    let { guildId: r, transitionState: i, onClose: T } = t,
-        [R, l] = a.useState(!1),
-        [O, u] = a.useState(!1),
-        _ = async () => {
-            l(!0);
+a.d(i, { default: () => c });
+var n = a(627968),
+    e = a(64700),
+    s = a(189213),
+    l = a(27192),
+    r = a(493540),
+    o = a(980406),
+    d = a(375708);
+function c(t) {
+    let { guildId: i, transitionState: a, onClose: c } = t,
+        [u, h] = e.useState(!1),
+        [p, C] = e.useState(!1),
+        b = async () => {
+            h(!0);
             try {
-                await (0, E.Bo)(r), T();
+                await (0, r.Bo)(i), c();
             } finally {
-                l(!1);
+                h(!1);
             }
         },
-        A = s.intl.string(s.t["22itmo"]);
-    return (0, n.jsx)(e.Modal, {
+        k = d.intl.string(d.t["22itmo"]);
+    return (0, n.jsx)(s.Modal, {
         size: "md",
-        transitionState: i,
-        onClose: T,
-        "aria-label": A,
-        title: A,
-        subtitle: s.intl.string(s.t.kdbm9C),
+        transitionState: a,
+        onClose: c,
+        "aria-label": k,
+        title: k,
+        subtitle: d.intl.string(d.t.kdbm9C),
         actions: [
-            { variant: "secondary", onClick: T, text: s.intl.string(s.t["ETE/oC"]) },
-            { variant: "primary", text: s.intl.string(s.t["cY+Oob"]), disabled: !O, onClick: _, loading: R },
+            { variant: "secondary", onClick: c, text: d.intl.string(d.t["ETE/oC"]) },
+            { variant: "primary", text: d.intl.string(d.t["cY+Oob"]), disabled: !p, onClick: b, loading: u },
         ],
-        children: (0, n.jsx)(o.Kj, {
+        children: (0, n.jsx)(l.Kj, {
             onChange: () => {
-                u((t) => !t);
+                C((t) => !t);
             },
-            value: O,
-            children: (0, c.r)(),
+            value: p,
+            children: (0, o.r)(),
         }),
     });
 }

@@ -1,37 +1,37 @@
-l.d(t, { default: () => h });
-var i = l(627968);
-l(64700);
-var e = l(550079),
-    a = l(477782),
-    s = l(442433),
-    c = l(50268),
-    r = l(173936),
-    o = l(957565),
-    d = l(886393),
-    u = l(985018);
-function h(n) {
-    let { channel: t, channelId: l, originalLink: h, messageId: p, onSelect: C } = n,
-        g =
-            null != t
-                ? (0, d.A)(t, p, h)
-                : (0, i.jsx)(a.Dr, {
+t.d(e, { default: () => p });
+var i = t(627968);
+t(64700);
+var a = t(980707),
+    l = t(477782),
+    c = t(442433),
+    s = t(50268),
+    r = t(173936),
+    o = t(957565),
+    d = t(886393),
+    h = t(375708);
+function p(n) {
+    let { channel: e, channelId: t, originalLink: p, messageId: u, onSelect: g } = n,
+        k =
+            null != e
+                ? (0, d.A)(e, u, p)
+                : (0, i.jsx)(l.Dr, {
                       id: "channel-copy-link",
-                      label: u.intl.string(u.t.WqhZss),
+                      label: h.intl.string(h.t.WqhZss),
                       leadingAccessory: { type: "icon", icon: r.q },
                       action: () => {
-                          (0, o.C)(h ?? "");
+                          (0, o.C)(p ?? "");
                       },
                   }),
-        b = (0, c.A)({ id: l, label: u.intl.string(u.t.gFHI3k) });
-    return (0, i.jsxs)(e.W, {
+        b = (0, s.A)({ id: t, label: h.intl.string(h.t.gFHI3k) });
+    return (0, i.jsxs)(a.W, {
         "data-menu-migrated-auto": !0,
         navId: "channel-mention-context",
-        onClose: s.Z_,
-        onSelect: C,
-        "aria-label": u.intl.string(u.t.feGACE),
+        onClose: c.Z_,
+        onSelect: g,
+        "aria-label": h.intl.string(h.t.feGACE),
         children: [
-            (0, i.jsx)(a.rX, { children: g }, "channel-mention-actions"),
-            (0, i.jsx)(a.rX, { children: b }, "developer-actions"),
+            (0, i.jsx)(l.rX, { children: k }, "channel-mention-actions"),
+            (0, i.jsx)(l.rX, { children: b }, "developer-actions"),
         ],
     });
 }

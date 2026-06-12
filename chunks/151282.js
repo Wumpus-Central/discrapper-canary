@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Eg: () => d, Ps: () => E, mk: () => _, pr: () => c, sy: () => h, yF: () => p }), n(938796);
+n.d(t, { Eg: () => d, Ps: () => E, mk: () => _, pr: () => c, sy: () => f, yF: () => p }), n(938796);
 var i = n(636537),
     r = n(228366),
     s = n(723444),
@@ -79,15 +79,15 @@ async function _(e) {
         );
     }
 }
-async function f() {
+async function h() {
     let e = await i.Bo.get({ url: l.Rsh.SCHEDULED_MESSAGES, rejectWithError: !0 });
     if (!e.ok) throw Error("Failed to fetch scheduled messages");
     return e.body.map(o.Lg);
 }
-async function h() {
+async function f() {
     r.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
     try {
-        let e = await f();
+        let e = await h();
         o.dx.info("Fetched scheduled messages", e),
             r.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES_SUCCESS", messages: e });
     } catch (e) {

@@ -9,24 +9,24 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
         t.getFileChunk =
             void 0),
     (t.getFileChunk = function (e, t = 32) {
-        let i = e instanceof ArrayBuffer ? new Uint8Array(e) : e,
-            n = [];
+        let n = e instanceof ArrayBuffer ? new Uint8Array(e) : e,
+            i = [];
         if (
             (Array.isArray(e) && e.every((e) => "number" == typeof e)) ||
             e instanceof ArrayBuffer ||
             e instanceof Uint8Array
         )
-            n = Array.from(i.slice(0, t));
+            i = Array.from(n.slice(0, t));
         else
             throw TypeError(
                 `Expected the \`file\` argument to be of type \`Array<number>\`, \`Uint8Array\`, or \`ArrayBuffer\`, got \`${typeof e}\``,
             );
-        if (!n.every((e) => "number" == typeof e && !isNaN(e))) throw TypeError("File content contains illegal values");
-        return n;
+        if (!i.every((e) => "number" == typeof e && !isNaN(e))) throw TypeError("File content contains illegal values");
+        return i;
     }),
-    (t.fetchFromObject = function e(t, i) {
-        let n = i.indexOf(".");
-        return n > -1 ? e(t[i.slice(0, n)], i.slice(n + 1)) : t[i];
+    (t.fetchFromObject = function e(t, n) {
+        let i = n.indexOf(".");
+        return i > -1 ? e(t[n.slice(0, i)], n.slice(i + 1)) : t[n];
     }),
     (t.findMatroskaDocTypeElements = function (e) {
         let t = e.map((e) => String.fromCharCode(e)).join("");
@@ -34,14 +34,14 @@ Object.defineProperty(t, "__esModule", { value: !0 }),
     }),
     (t.isftypStringIncluded = function (e) {
         let t = [102, 116, 121, 112];
-        for (let i = 0; i < e.length - t.length; i++) {
-            let n = !0;
+        for (let n = 0; n < e.length - t.length; n++) {
+            let i = !0;
             for (let r = 0; r < t.length; r++)
-                if (e[i + r] !== t[r]) {
-                    n = !1;
+                if (e[n + r] !== t[r]) {
+                    i = !1;
                     break;
                 }
-            if (n) return !0;
+            if (i) return !0;
         }
         return !1;
     }),

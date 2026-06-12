@@ -4,14 +4,14 @@ var i = n(17928),
     r = n(439372),
     s = n(400492),
     a = n(734057),
-    o = n(235058),
+    o = n(890063),
     l = n(309010),
     u = n(977997),
     c = n(63995),
     d = n(113783),
     _ = n(518769),
-    f = n(446600),
-    h = n(39938);
+    h = n(446600),
+    f = n(39938);
 let p = !1,
     E = (0, s.Qh)("stage_waiting", "stage_waiting", o.Ay.getOutputVolume() / 400);
 function m() {
@@ -25,15 +25,15 @@ function m() {
         E.stop(), (p = !1);
         return;
     }
-    if (h.A.shouldPlay()) {
+    if (f.A.shouldPlay()) {
         (E.volume = o.Ay.getOutputVolume() / 400), E.loop(), (p = !0);
         return;
     }
-    if (f.A.isLive(e)) {
+    if (h.A.isLive(e)) {
         E.stop(), (p = !1);
         return;
     }
-    if (h.A.isMuted()) {
+    if (f.A.isMuted()) {
         E.pause(), (p = !1);
         return;
     }
@@ -43,13 +43,13 @@ function m() {
 function g(e) {
     let t = (0, i.bG)([l.A], () => l.A.getVoiceChannelId() === e),
         n = null != (0, d.E5)(e, _.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        r = (0, i.bG)([f.A], () => f.A.getStageInstanceByChannel(e));
+        r = (0, i.bG)([h.A], () => h.A.getStageInstanceByChannel(e));
     return t && null == r && !n;
 }
 function A(e) {
     let t = l.A.getVoiceChannelId() === e,
         n = null != c.A.getMutableParticipants(e, _.ip.SPEAKER).find((e) => !e.voiceState.isVoiceMuted()),
-        i = f.A.getStageInstanceByChannel(e);
+        i = h.A.getStageInstanceByChannel(e);
     return t && null == i && !n;
 }
 class I extends r.A {

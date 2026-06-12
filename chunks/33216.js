@@ -1,24 +1,24 @@
-n.d(e, { default: () => o });
-var i = n(627968);
+n.d(i, { default: () => o });
+var e = n(627968);
 n(64700);
 var a = n(189213),
     l = n(834730),
     s = n(974875),
-    r = n(985018);
+    r = n(375708);
 function o(t) {
-    let { channelId: e, messageId: n, onClose: o, transitionState: c } = t;
-    return (0, i.jsx)(a.Modal, {
-        transitionState: c,
+    let { channelId: i, messageId: n, onClose: o, transitionState: d } = t;
+    return (0, e.jsx)(a.Modal, {
+        transitionState: d,
         onClose: o,
         title: r.intl.string(r.t.B3vFdU),
         subtitle: r.intl.string(r.t.i4AbAS),
         actions: [{ text: r.intl.string(r.t.WAI6xu), onClick: o }],
-        children: (0, i.jsx)(l.E, {
+        children: (0, e.jsx)(l.E, {
             variant: "text-md/normal",
             color: "text-default",
             children: r.intl.format(r.t.Ge0HUi, {
                 handleFalsePositiveHook: () => {
-                    o(), (0, s.Q)(e, n);
+                    o(), (0, s.Q)(i, n);
                 },
             }),
         }),

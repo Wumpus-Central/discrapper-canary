@@ -1,6 +1,6 @@
-n.d(t, { A: () => o });
-var l = n(17928),
-    i = n(228366);
+t.d(n, { A: () => o });
+var l = t(17928),
+    i = t(228366);
 let s = { toastsEnabledForChannel: {} },
     a = s;
 class r extends l.Ay.PersistedStore {
@@ -18,8 +18,8 @@ class r extends l.Ay.PersistedStore {
 }
 let o = new r(i.h, {
     CALL_CHAT_TOASTS_SET_ENABLED: function (e) {
-        let { channelId: t, toastsEnabled: n } = e;
-        a.toastsEnabledForChannel[t] = n;
+        let { channelId: n, toastsEnabled: t } = e;
+        a.toastsEnabledForChannel[n] = t;
     },
     LOGOUT: function () {
         a.toastsEnabledForChannel = {};

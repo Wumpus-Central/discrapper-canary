@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, { P: () => a, b: () => s });
-var r,
-    i,
+var i,
+    r,
     s =
-        (((r = {}).COZY = "cozy"),
-        (r.COZY_DRAWER = "cozy-drawer"),
-        (r.COZY_DRAWER_SMOL = "cozy-drawer-smol"),
-        (r.COMPACT = "compact"),
-        (r.MINIMAL = "minimal"),
-        r),
-    a = (((i = {}).ALL = "all"), (i.UNREADS = "unreads"), (i.NONE = "none"), i);
+        (((i = {}).COZY = "cozy"),
+        (i.COZY_DRAWER = "cozy-drawer"),
+        (i.COZY_DRAWER_SMOL = "cozy-drawer-smol"),
+        (i.COMPACT = "compact"),
+        (i.MINIMAL = "minimal"),
+        i),
+    a = (((r = {}).ALL = "all"), (r.UNREADS = "unreads"), (r.NONE = "none"), r);

@@ -8,9 +8,9 @@ n.d(t, {
     f7: () => g,
     ft: () => d,
     gU: () => T,
-    oT: () => h,
+    oT: () => f,
     pK: () => I,
-    tR: () => f,
+    tR: () => h,
     wN: () => c,
 });
 var i = n(64700),
@@ -40,7 +40,7 @@ function _(e, t, n) {
         a.default.track(u.HAw.GAME_SERVER_SETTINGS_OPENED, { guild_id: e, game_server_id: t, type: n });
     }, [e, t, n]);
 }
-function f(e) {
+function h(e) {
     let t = (0, o.A)(e),
         n = (0, s.bG)([l.A], () => l.A.getStateForGuild(e)),
         c = i.useRef(!1);
@@ -59,7 +59,7 @@ function f(e) {
             }));
     }, [e, t, n?.instances]);
 }
-function h(e, t, n, i) {
+function f(e, t, n, i) {
     a.default.track(u.HAw.GAME_SERVER_GAME_CLICKED, { guild_id: e, product_id: t, product_name: n, location: i });
 }
 function p(e) {

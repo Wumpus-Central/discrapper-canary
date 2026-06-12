@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { c: () => r });
-var l = n(627968),
-    i = n(64700),
-    s = n(123924),
+n.d(t, { c: () => o });
+var i = n(627968),
+    r = n(64700),
+    s = n(922139),
     a = n(844222);
-function r(e) {
+function o(e) {
     let { shouldAnimate: t = "respect-motion-settings", ...n } = e,
-        r = i.useContext(a.C).reducedMotion.enabled;
-    return (0, l.jsx)(s.Spring, {
+        o = r.useContext(a.C).reducedMotion.enabled;
+    return (0, i.jsx)(s.Spring, {
         ...n,
-        immediate: !("animate-always" === t || ("respect-motion-settings" === t && !r)),
+        immediate: !("animate-always" === t || ("respect-motion-settings" === t && !o)),
     });
 }

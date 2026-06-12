@@ -1,38 +1,38 @@
 "use strict";
 n.d(t, { B: () => c });
-var r = n(627968),
-    i = n(64700),
+var i = n(627968),
+    r = n(64700),
     s = n(503698),
     a = n.n(s),
     o = n(855036),
     l = n.n(o),
-    u = n(927556);
-let c = i.forwardRef(function (e, t) {
+    u = n(369997);
+let c = r.forwardRef(function (e, t) {
         let {
             as: n = "div",
-            gap: i = 8,
+            gap: r = 8,
             direction: s = "vertical",
             align: o = "stretch",
             justify: l = "start",
             wrap: c = !1,
-            padding: f = 0,
-            fullWidth: p = !0,
-            style: h,
-            className: m,
-            children: E,
+            padding: h = 0,
+            fullWidth: f = !0,
+            style: p,
+            className: E,
+            children: m,
             ...g
         } = e;
-        return (0, r.jsx)(n, {
+        return (0, i.jsx)(n, {
             ref: t,
             "data-align": o,
             "data-justify": l,
             "data-direction": s,
             "data-wrap": c,
-            "data-full-width": p,
-            className: a()(u.t, m),
-            style: { ...h, gap: d(i), ..._(f) },
+            "data-full-width": f,
+            className: a()(u.t, E),
+            style: { ...p, gap: d(r), ..._(h) },
             ...g,
-            children: E,
+            children: m,
         });
     }),
     d = (e) => `var(--space-${e})`,
@@ -40,6 +40,6 @@ let c = i.forwardRef(function (e, t) {
         "number" == typeof e || "string" == typeof e
             ? { padding: d(e) }
             : Object.entries(e).reduce((e, t) => {
-                  let [n, r] = t;
-                  return (e[`padding${l()(n)}`] = d(r)), e;
+                  let [n, i] = t;
+                  return (e[`padding${l()(n)}`] = d(i)), e;
               }, {});

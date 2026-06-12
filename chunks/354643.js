@@ -1,25 +1,25 @@
-n.d(e, { default: () => c });
-var i = n(627968),
-    o = n(64700),
-    r = n(732159),
-    l = n(72152),
-    s = n(770376),
-    a = n(985018);
-function c(t) {
-    let [e, n] = o.useState(!1);
-    return (0, i.jsx)(r.ConfirmModal, {
+i.d(n, { default: () => l });
+var e = i(627968),
+    r = i(64700),
+    a = i(732159),
+    o = i(72152),
+    s = i(770376),
+    c = i(375708);
+function l(t) {
+    let [n, i] = r.useState(!1);
+    return (0, e.jsx)(a.ConfirmModal, {
         ...t,
-        title: a.intl.string(a.t["pjYu0/"]),
-        subtitle: a.intl.format(a.t["0eydyj"], {}),
-        confirmText: a.intl.string(a.t.zVZXRU),
-        cancelText: a.intl.string(a.t["ETE/oC"]),
+        title: c.intl.string(c.t["pjYu0/"]),
+        subtitle: c.intl.format(c.t["0eydyj"], {}),
+        confirmText: c.intl.string(c.t.zVZXRU),
+        cancelText: c.intl.string(c.t["ETE/oC"]),
         onConfirm: () => {
-            (0, l.Z)(!0);
+            (0, o.Z)(!0);
         },
         onCloseCallback: () => {
-            e && (0, s.f)();
+            n && (0, s.f)();
         },
         variant: "primary",
-        checkboxProps: { checked: e, onChange: (t) => n(t) },
+        checkboxProps: { checked: n, onChange: (t) => i(t) },
     });
 }

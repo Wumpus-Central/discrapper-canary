@@ -1,5 +1,5 @@
-var r = n(338036),
-    i = n(856330),
+var i = n(338036),
+    r = n(856330),
     s = n(422750),
     a = {};
 (a["[object Float32Array]"] =
@@ -29,5 +29,5 @@ var r = n(338036),
         a["[object WeakMap]"] =
             !1),
     (e.exports = function (e) {
-        return s(e) && i(e.length) && !!a[r(e)];
+        return s(e) && r(e.length) && !!a[i(e)];
     });

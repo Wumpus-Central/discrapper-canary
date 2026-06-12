@@ -1,4 +1,4 @@
-i.d(t, { J3: () => j, sB: () => D });
+i.d(t, { J3: () => v, sB: () => L });
 var n = i(627968),
     s = i(64700),
     l = i(17928),
@@ -13,44 +13,44 @@ var n = i(627968),
     A = i(826673),
     h = i(422936),
     E = i(234419),
-    T = i(792656),
-    x = i(511484),
-    S = i(811611),
+    S = i(792656),
+    T = i(410516),
+    x = i(811611),
     p = i(174459),
-    N = i(830543),
-    f = i(652215),
+    f = i(830543),
+    N = i(652215),
     _ = i(385803),
-    C = i(49999),
-    I = i(788868),
+    I = i(49999),
+    C = i(788868),
     b = i(375708),
-    v = i(220982);
-let j = () => {
-    (0, A.Dr)(r.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: C.i.PRIMARY, forceTrack: !0 }),
+    y = i(220982);
+let v = () => {
+    (0, A.Dr)(r.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: I.i.PRIMARY, forceTrack: !0 }),
         (0, m.nf)(m.HP.CLIENT_THEMES),
-        (0, N.default)();
+        (0, f.default)();
 };
-function y() {
+function j() {
     let e = (0, h.O)(),
-        t = (0, x.U9)(e, I.pe.TIER_2)
+        t = (0, T.U9)(e, C.pe.TIER_2)
             ? b.intl.formatToPlainString(b.t.bkQ4bH, { percent: e?.discount.amount })
             : b.intl.string(b.t.mr4K7D);
-    return (0, n.jsx)(T.A, {
-        subscriptionTier: I.pe.TIER_2,
+    return (0, n.jsx)(S.A, {
+        subscriptionTier: C.pe.TIER_2,
         defaultTextOverride: t,
-        premiumModalAnalyticsLocation: { object: f.ZSU.BUTTON_CTA, objectType: f.AnalyticsObjectTypes.BUY },
+        premiumModalAnalyticsLocation: { object: N.ZSU.BUTTON_CTA, objectType: N.AnalyticsObjectTypes.BUY },
         fullWidth: !0,
     });
 }
 function O() {
     let e = (0, l.bG)([c.A], () => c.A.isPreview),
-        t = (0, E.V)()?.subscription_trial?.sku_id === I.pe.TIER_2;
+        t = (0, E.V)()?.subscription_trial?.sku_id === C.pe.TIER_2;
     return !e || t
         ? null
         : (0, n.jsxs)("div", {
-              className: v.gY,
+              className: y.gY,
               children: [
-                  (0, n.jsx)(a.$, { variant: "secondary", text: b.intl.string(b.t["E+COuA"]), onClick: j }),
-                  (0, n.jsx)(y, {}),
+                  (0, n.jsx)(a.$, { variant: "secondary", text: b.intl.string(b.t["E+COuA"]), onClick: v }),
+                  (0, n.jsx)(j, {}),
               ],
           });
 }
@@ -60,37 +60,37 @@ function R(e) {
         { analyticsLocations: r } = (0, d.Ay)(u.A.USER_SETTINGS);
     return (s.useEffect(() => {
         i &&
-            p.default.track(f.HAw.PREMIUM_UPSELL_VIEWED, {
-                type: I.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
+            p.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, {
+                type: C.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                 location_stack: r,
             });
     }, [i, r]),
     i)
-        ? (0, n.jsx)("div", { className: v._$, children: t })
+        ? (0, n.jsx)("div", { className: y._$, children: t })
         : t;
 }
-function L() {
+function D() {
     let e = (0, l.bG)([c.A], () => c.A.isPreview),
-        t = (0, E.V)()?.subscription_trial?.sku_id === I.pe.TIER_2;
+        t = (0, E.V)()?.subscription_trial?.sku_id === C.pe.TIER_2;
     return e && t
         ? (0, n.jsxs)("div", {
               children: [
                   (0, n.jsx)("div", {
-                      className: v.c7,
+                      className: y.c7,
                       children: (0, n.jsx)(a.$, {
                           variant: "secondary",
                           fullWidth: !0,
                           text: b.intl.string(b.t["E+COuA"]),
-                          onClick: () => j(),
+                          onClick: () => v(),
                       }),
                   }),
-                  (0, n.jsx)("div", { className: v.BU }),
-                  (0, n.jsx)(S.Ay, { type: I.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: I.pe.TIER_2 }),
+                  (0, n.jsx)("div", { className: y.BU }),
+                  (0, n.jsx)(x.Ay, { type: C.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: C.pe.TIER_2 }),
               ],
           })
         : null;
 }
-function D() {
+function L() {
     return (0, n.jsx)(g.Ay, {
         type: g.v0.SETTINGS,
         children: (0, n.jsxs)(R, {
@@ -98,10 +98,10 @@ function D() {
                 (0, n.jsx)(g.ew, {
                     isCoachmark: !1,
                     renderCTAButtons: () => (0, n.jsx)(O, {}),
-                    headingClassName: v.EK,
+                    headingClassName: y.EK,
                     titleTextVariant: "text-md/semibold",
-                    titleClassName: v.cI,
-                    titleIconClassName: v.Hq,
+                    titleClassName: y.cI,
+                    titleIconClassName: y.Hq,
                 }),
                 (0, n.jsx)(o.B, {
                     direction: "horizontal",
@@ -110,7 +110,7 @@ function D() {
                     padding: { top: 24 },
                     children: (0, n.jsx)(g.Zg, { disabled: !1, size: _.ni.SIZE_48 }),
                 }),
-                (0, n.jsx)(L, {}),
+                (0, n.jsx)(D, {}),
             ],
         }),
     });

@@ -1,11 +1,11 @@
 e.exports = function (e) {
     let t = { className: "number", begin: "[1-9][0-9]*", relevance: 0 },
-        a = { className: "symbol", begin: ":[^\\]]+" },
-        n = {
+        n = { className: "symbol", begin: ":[^\\]]+" },
+        i = {
             className: "built_in",
             begin: "(AI|AO|DI|DO|F|RI|RO|UI|UO|GI|GO|SI|SO)\\[",
             end: "\\]",
-            contains: ["self", t, e.QUOTE_STRING_MODE, a],
+            contains: ["self", t, e.QUOTE_STRING_MODE, n],
         };
     return {
         name: "TP",
@@ -87,9 +87,9 @@ e.exports = function (e) {
                 className: "built_in",
                 begin: "(AR|P|PAYLOAD|PR|R|SR|RSR|LBL|VR|UALM|MESSAGE|UTOOL|UFRAME|TIMER|TIMER_OVERFLOW|JOINT_MAX_SPEED|RESUME_PROG|DIAG_REC)\\[",
                 end: "\\]",
-                contains: ["self", t, a],
+                contains: ["self", t, n],
             },
-            n,
+            i,
             { className: "keyword", begin: "/(PROG|ATTR|MN|POS|END)\\b" },
             { className: "keyword", begin: "(CALL|RUN|POINT_LOGIC|LBL)\\b" },
             { className: "keyword", begin: "\\b(ACC|CNT|Skip|Offset|PSPD|RT_LD|AP_LD|Tool_Offset)" },

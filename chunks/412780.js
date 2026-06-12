@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { Ay: () => b, Bz: () => y, EM: () => d, Xi: () => N, iA: () => p }), n(134528), n(947204), n(321073);
+n.d(t, { Ay: () => b, Bz: () => N, EM: () => d, Xi: () => y, iA: () => p }), n(134528), n(947204), n(321073);
 var i = n(17928),
     r = n(459838),
     s = n(228366),
     a = n(233545),
-    o = n(235058),
+    o = n(890063),
     l = n(287809),
     u = n(652215),
     c = n(731854);
-let d = N(c.x.DEFAULT, u.zWA.TRANSPORT, 0),
+let d = y(c.x.DEFAULT, u.zWA.TRANSPORT, 0),
     _ = d,
-    f = {},
-    h = new Map(),
+    h = {},
+    f = new Map(),
     p = {
         availableOutgoingBitrate: !0,
         bitrate: !0,
@@ -69,26 +69,26 @@ let A = g.empty(),
     I = !1,
     T = null,
     S = new Map();
-function N(e, t, n) {
+function y(e, t, n) {
     return `${e}:${t}:${n}`;
 }
-function y(e) {
+function N(e) {
     let [t, n] = e.split(":");
     return { context: t, section: n };
 }
-function C(e) {
+function v(e) {
     return Array.isArray(e) ? e.at(-1)?.value : e;
 }
-function v() {
+function C() {
     Object.values(c.x).forEach((e) => {
-        f[e] = {};
+        h[e] = {};
     });
 }
-function O() {
+function R() {
     null != T && (T.destroy(), (T = null));
 }
-v();
-class R extends i.Ay.Store {
+C();
+class O extends i.Ay.Store {
     initialize() {
         this.waitFor(o.Ay, l.default);
     }
@@ -100,7 +100,7 @@ class R extends i.Ay.Store {
         let n = this.getAllStats(t),
             i = n[0]?.rtp?.inbound[e],
             r = i?.find((e) => "video" === e.type);
-        return { codec: r?.codec.name, resolution: r?.resolution, bitrateEstimate: void 0, fps: C(r?.frameRateRender) };
+        return { codec: r?.codec.name, resolution: r?.resolution, bitrateEstimate: void 0, fps: v(r?.frameRateRender) };
     }
     getOutboundStats(e) {
         let t = this.getAllStats(e),
@@ -110,13 +110,13 @@ class R extends i.Ay.Store {
         return {
             codec: r?.codec.name,
             resolution: r?.resolution,
-            bitrateEstimate: C(n?.availableOutgoingBitrate),
-            fps: C(r?.frameRateEncode),
+            bitrateEstimate: v(n?.availableOutgoingBitrate),
+            fps: v(r?.frameRateEncode),
         };
     }
     getAllStats() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : c.x.DEFAULT;
-        return Object.values(f[e]);
+        return Object.values(h[e]);
     }
     getVideoStreams() {
         return A;
@@ -126,15 +126,15 @@ class R extends i.Ay.Store {
     }
     getSimulcastDebugOverride(e, t) {
         let n = m(e, t);
-        return h.has(n) ? h.get(n) : c.r8.NO_OVERRIDE;
+        return f.has(n) ? f.get(n) : c.r8.NO_OVERRIDE;
     }
 }
-let b = new R(s.h, {
+let b = new O(s.h, {
     RTC_DEBUG_MODAL_OPEN: function (e) {
         _ = e.section ?? d;
     },
     RTC_DEBUG_MODAL_CLOSE: function () {
-        O();
+        R();
     },
     RTC_DEBUG_MODAL_SET_SECTION: function (e) {
         _ = e.section;
@@ -145,7 +145,7 @@ let b = new R(s.h, {
     RTC_DEBUG_MODAL_OPEN_REPLAY_AT_PATH: function (e) {
         let { path: t } = e,
             n = o.Ay.getMediaEngine();
-        if ((O(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
+        if ((R(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
         let i = n.createReplayConnection(c.x.DEFAULT, t);
         null != i &&
             ((T = i),
@@ -169,15 +169,15 @@ let b = new R(s.h, {
     },
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function (e) {
         let { userId: t, context: n, quality: i } = e;
-        h.set(m(t, n), i);
+        f.set(m(t, n), i);
     },
     VOICE_CHANNEL_SELECT: function (e) {
-        null != e.channelId && (v(), h.clear(), S.clear());
+        null != e.channelId && (C(), f.clear(), S.clear());
     },
     RTC_CONNECTION_VIDEO: function (e) {
         if (null === e.streamId) {
             let t = m(e.userId, e.context);
-            h.set(t, c.r8.NO_OVERRIDE);
+            f.set(t, c.r8.NO_OVERRIDE);
         }
     },
     MEDIA_ENGINE_CONNECTION_STATS: function (e) {
@@ -189,7 +189,7 @@ let b = new R(s.h, {
             }).forEach((t, n) => {
                 !(function (e) {
                     let { context: t, stats: n, index: i } = e,
-                        r = f[t];
+                        r = h[t];
                     if (null != n) {
                         let [e, a, o] = _.split(":");
                         if (e === t && parseInt(o) === i && null != l.default.getUser(a)) {

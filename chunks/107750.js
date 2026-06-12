@@ -4,13 +4,13 @@ n.d(t, {
     VR: () => I,
     ZH: () => m,
     f0: () => A,
-    iD: () => h,
+    iD: () => f,
     oG: () => E,
-    tB: () => f,
+    tB: () => h,
     tO: () =>
         function e(t, n, i) {
             let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 2;
-            return f
+            return h
                 .put(t, n, { url: c.RQ.NOTIFICATIONS_PLAYER, query: { connection_id: i } })
                 .catch((a) => (s <= 0 ? Promise.reject(a) : (0, r.BK)(5e3).then(() => e(t, n, i, s - 1))));
         },
@@ -34,7 +34,7 @@ function _(e, t, n, i) {
             let a = !0 !== i.onlyRetryOnAuthorizationErrors && 202 === n.status;
             return (401 === n.status || a) && s > 0
                 ? (202 === n.status ? (0, r.BK)(5e3) : Promise.resolve())
-                      .then(() => h(t))
+                      .then(() => f(t))
                       .then((n) => {
                           let {
                               body: { access_token: r },
@@ -45,8 +45,8 @@ function _(e, t, n, i) {
                 : Promise.reject(n);
         });
 }
-let f = { get: _.bind(null, i.Bo.get), put: _.bind(null, i.Bo.put) };
-function h(e) {
+let h = { get: _.bind(null, i.Bo.get), put: _.bind(null, i.Bo.put) };
+function f(e) {
     return i.Bo.get({ url: d.Rsh.CONNECTION_ACCESS_TOKEN(d.fg2.SPOTIFY, e), oldFormErrors: !0, rejectWithError: !1 })
         .catch((t) => {
             if (t.body?.code === d.t02.CONNECTION_REVOKED)
@@ -54,7 +54,7 @@ function h(e) {
             else if (429 === t.status) {
                 let n = t.headers["retry-after"] * a.A.Millis.SECOND,
                     i = isNaN(n) || 0 === n ? 5e3 : n;
-                return (0, r.BK)(i).then(() => h(e));
+                return (0, r.BK)(i).then(() => f(e));
             }
             return Promise.reject(t);
         })
@@ -64,7 +64,7 @@ function h(e) {
         });
 }
 function p(e, t) {
-    return f
+    return h
         .get(e, t, { url: c.RQ.PROFILE })
         .then(
             (t) => (
@@ -74,7 +74,7 @@ function p(e, t) {
         );
 }
 function E(e, t) {
-    return f
+    return h
         .get(e, t, { url: c.RQ.PLAYER_DEVICES })
         .then(
             (t) => (t.body && s.h.dispatch({ type: "SPOTIFY_SET_DEVICES", accountId: e, devices: t.body.devices }), t),
@@ -84,7 +84,7 @@ function m(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         a = c.RQ.PLAYER_OPEN(i, n, !1),
         { deviceId: o, position: l, contextUri: u, repeat: d } = r;
-    return f
+    return h
         .put(e, t, {
             url: c.RQ.PLAYER_PLAY,
             query: { device_id: o },
@@ -98,12 +98,12 @@ function m(e, t, n, i) {
         .then((n) =>
             null == d
                 ? n
-                : f.put(e, t, { url: c.RQ.PLAYER_REPEAT, query: { device_id: o, state: d ? "context" : "off" } }),
+                : h.put(e, t, { url: c.RQ.PLAYER_REPEAT, query: { device_id: o, state: d ? "context" : "off" } }),
         )
         .then((e) => (s.h.dispatch({ type: "SPOTIFY_PLAYER_PLAY", id: n, position: null != l ? l : 0 }), e));
 }
 function g(e, t) {
-    return f.put(e, t, { url: c.RQ.PLAYER_PAUSE }).then((e) => (s.h.dispatch({ type: "SPOTIFY_PLAYER_PAUSE" }), e));
+    return h.put(e, t, { url: c.RQ.PLAYER_PAUSE }).then((e) => (s.h.dispatch({ type: "SPOTIFY_PLAYER_PAUSE" }), e));
 }
 function A() {
     !u.A.isProtocolRegistered() &&

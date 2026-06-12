@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(626584),
     r = n(723176);
 let s = "version",
     a = "force-resync-version",
-    o = "stable-297",
+    o = "stable-298",
     l = new i.A("KvCacheVersion"),
-    d = new (class {
+    u = new (class {
         hasSuccessfullyConnected = !1;
         async okAsync(e) {
             let t = await r.A.cache(e).get(s);

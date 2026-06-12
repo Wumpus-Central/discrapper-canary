@@ -1,4 +1,4 @@
-_.r(
+i.r(
     (e.exports = {
         badge: "badge_c2b88c",
         default: "default_c2b88c",

@@ -1,79 +1,79 @@
-e.d(a, { default: () => E });
-var s = e(627968),
-    i = e(64700),
-    n = e(935462),
-    r = e(534514),
-    l = e(475358),
-    d = e(834730),
-    o = e(821609),
-    c = e(675704),
-    h = e(28647),
-    m = e(915089),
-    x = e(975571),
-    j = e(955572),
-    p = e(652215),
-    b = e(985018),
-    u = e(262476);
-function E(t) {
-    let { transitionState: a, onClose: e } = t,
-        E = (0, m.GV)();
+s.d(i, { default: () => g });
+var a = s(627968),
+    n = s(64700),
+    r = s(935462),
+    e = s(534514),
+    l = s(475358),
+    d = s(834730),
+    c = s(821609),
+    o = s(675704),
+    x = s(28647),
+    h = s(915089),
+    m = s(975571),
+    j = s(955572),
+    u = s(652215),
+    p = s(375708),
+    b = s(262476);
+function g(t) {
+    let { transitionState: i, onClose: s } = t,
+        g = (0, h.GV)();
     return (
-        i.useEffect(() => {
+        n.useEffect(() => {
             j.Er();
         }, []),
-        (0, s.jsxs)(n.EO, {
-            transitionState: a,
+        (0, a.jsxs)(r.EO, {
+            transitionState: i,
             role: "alertdialog",
-            "aria-labelledby": E,
+            "aria-labelledby": g,
             parentComponent: "KeyboardNavigationModal",
             children: [
-                (0, s.jsxs)(n.$m, {
-                    className: u.Qs,
+                (0, a.jsxs)(r.$m, {
+                    className: b.Qs,
                     children: [
-                        (0, s.jsx)(r.D, {
+                        (0, a.jsx)(e.D, {
                             variant: "heading-xl/semibold",
-                            id: E,
-                            className: u.wx,
-                            children: b.intl.format(b.t.V4fxrp, {
-                                tab: (t, a) => (0, s.jsx)(l.e, { shortcut: "tab", className: u.Wj }, a),
+                            id: g,
+                            className: b.wx,
+                            children: p.intl.format(p.t.V4fxrp, {
+                                tab: (t, i) => (0, a.jsx)(l.e, { shortcut: "tab", className: b.Wj }, i),
                             }),
                         }),
-                        (0, s.jsx)(d.E, { variant: "text-md/normal", children: b.intl.string(b.t["oQA/OB"]) }),
-                        (0, s.jsxs)("ul", {
-                            className: u.Xq,
+                        (0, a.jsx)(d.E, { variant: "text-md/normal", children: p.intl.string(p.t["oQA/OB"]) }),
+                        (0, a.jsxs)("ul", {
+                            className: b.Xq,
                             children: [
-                                (0, s.jsxs)("li", {
+                                (0, a.jsxs)("li", {
                                     children: [
-                                        (0, s.jsx)(l.e, { shortcut: h.z.binds["0"] }),
-                                        (0, s.jsx)(d.E, {
+                                        (0, a.jsx)(l.e, { shortcut: x.z.binds["0"] }),
+                                        (0, a.jsx)(d.E, {
                                             variant: "text-md/normal",
-                                            children: b.intl.string(b.t["43Qn2r"]),
+                                            children: p.intl.string(p.t["43Qn2r"]),
                                         }),
                                     ],
                                 }),
-                                (0, s.jsxs)("li", {
+                                (0, a.jsxs)("li", {
                                     children: [
-                                        (0, s.jsx)(l.e, { shortcut: c.R.binds["0"] }),
-                                        (0, s.jsx)(d.E, {
+                                        (0, a.jsx)(l.e, { shortcut: o.R.binds["0"] }),
+                                        (0, a.jsx)(d.E, {
                                             variant: "text-md/normal",
-                                            children: b.intl.string(b.t.zJg4FY),
+                                            children: p.intl.string(p.t.zJg4FY),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, s.jsx)(d.E, {
+                        (0, a.jsx)(d.E, {
                             variant: "text-md/normal",
-                            children: b.intl.format(b.t.EWFVSW, { link: x.A.getArticleURL(p.MVz.KEYBOARD_NAVIGATION) }),
+                            children: p.intl.format(p.t.EWFVSW, { link: m.A.getArticleURL(u.MVz.KEYBOARD_NAVIGATION) }),
                         }),
                     ],
                 }),
-                (0, s.jsx)(n.jl, {
-                    children: (0, s.jsx)(o.$, {
+                (0, a.jsx)(r.jl, {
+                    children: (0, a.jsx)(c.$, {
                         variant: "primary",
                         size: "sm",
-                        text: b.intl.string(b.t.BddRzS),
-                        onClick: e,
+                        text: p.intl.string(p.t.BddRzS),
+                        onClick: s,
                         autoFocus: !0,
                     }),
                 }),

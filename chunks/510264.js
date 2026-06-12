@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Q: () => f, A: () => h });
+n.d(t, { Q: () => h, A: () => f });
 var i = n(636537),
     r = n(439372),
     s = n(627968);
@@ -30,7 +30,7 @@ class _ extends r.A {
         c.openDmSettingsUpsellModal(e.guildId);
     }
 }
-function f(e) {
+function h(e) {
     return i.Bo.post({ url: d.Rsh.DM_SETTINGS_UPSELL_ACK(e), rejectWithError: !1 });
 }
-let h = new _();
+let f = new _();

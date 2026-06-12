@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { A: () => o, K: () => s });
-var r = n(573648),
-    i = n(611010),
-    a = n(985018);
-let s = "twitch:";
-class o extends i.Ay {
+n.d(t, { A: () => o, K: () => a });
+var i = n(573648),
+    r = n(395671),
+    s = n(375708);
+let a = "twitch:";
+class o extends r.Ay {
     constructor(e) {
-        super(e), (this.id = `${s}${e.url}`), (this.name = a.intl.string(a.t.JIPtgq));
+        super(e), (this.id = `${a}${e.url}`), (this.name = s.intl.string(s.t.JIPtgq));
     }
     getIconURL() {
-        return r.A.get("twitch").icon.lightPNG;
+        return i.A.get("twitch").icon.lightPNG;
     }
 }

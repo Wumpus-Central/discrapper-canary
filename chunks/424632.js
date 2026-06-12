@@ -1,4 +1,4 @@
-r.d(t, { F3: () => l, Qp: () => u, Qx: () => s, l$: () => h, ny: () => o }),
+r.d(t, { F3: () => l, Qp: () => u, Qx: () => h, l$: () => s, ny: () => o }),
     r(323874),
     r(14289),
     r(35956),
@@ -19,8 +19,8 @@ async function o(e) {
             cropDimensions: o,
             cropOriginCoordinates: l,
             maxDimensions: c,
-            imageRotation: s = 0,
-            flipHorizontal: h = !1,
+            imageRotation: h = 0,
+            flipHorizontal: s = !1,
             resizeWidth: u = null,
             resizeHeight: f = null,
         } = e,
@@ -28,17 +28,17 @@ async function o(e) {
             sourceX: A,
             sourceY: m,
             sourceWidth: w,
-            sourceHeight: d,
+            sourceHeight: E,
         } = (0, n.R7)({
             image: a,
             cropDimensions: o,
             cropOriginCoordinates: l,
             maxDimensions: c,
-            imageRotation: s,
-            flipHorizontal: h,
+            imageRotation: h,
+            flipHorizontal: s,
         }),
-        E = await t.arrayBuffer(),
-        _ = new Worker(new URL("/assets/" + r.u("47773"), r.b)),
+        d = await t.arrayBuffer(),
+        _ = new Worker(new URL("/assets/" + r.u("24962"), r.b)),
         p = new Promise((e, r) => {
             _.onmessage = (a) => {
                 let { data: n } = a;
@@ -67,21 +67,21 @@ async function o(e) {
         y = Math.max(0, Math.round(A)),
         M = Math.max(0, Math.round(m)),
         H = Math.round(w),
-        g = Math.round(d),
+        g = Math.round(E),
         D = a.naturalWidth - y,
         I = a.naturalHeight - M,
-        L = Math.min(H, D),
-        P = Math.min(g, I);
+        P = Math.min(H, D),
+        L = Math.min(g, I);
     return (
         _.postMessage({
             type: i.lA.CROP_ANIMATED_IMAGE_START,
-            data: new Uint8Array(E),
+            data: new Uint8Array(d),
             x: y,
             y: M,
-            width: L,
-            height: P,
-            imageRotation: 0 | s,
-            flipHorizontal: h,
+            width: P,
+            height: L,
+            imageRotation: 0 | h,
+            flipHorizontal: s,
             resizeWidth: u,
             resizeHeight: f,
             format: b,
@@ -100,7 +100,7 @@ function c(e, t, r, a) {
         ? { width: n, height: o }
         : { width: (t / o) * n, height: t };
 }
-function s(e, t, r) {
+function h(e, t, r) {
     switch (e) {
         case i.HL.AVATAR:
         case i.HL.AVATAR_DECORATION:
@@ -122,7 +122,7 @@ function s(e, t, r) {
             return c(i.ny, i.eJ, t, r);
     }
 }
-function h(e, t, r) {
+function s(e, t, r) {
     let a = { top: 0, bottom: 0, left: 0, right: 0 },
         n = e - r.width,
         i = t - r.height;
@@ -149,10 +149,10 @@ function u(e, t, r, a) {
             let c = Math.min(t, i.Ip);
             return { width: c, height: (9 / 16) * c };
         case i.HL.SCHEDULED_EVENT_IMAGE:
-            let s = Math.min(t, i.Ip);
-            return { width: s, height: 0.4 * s };
-        case i.HL.HOME_HEADER:
             let h = Math.min(t, i.Ip);
-            return { width: h, height: h * (1 / i.ny) };
+            return { width: h, height: 0.4 * h };
+        case i.HL.HOME_HEADER:
+            let s = Math.min(t, i.Ip);
+            return { width: s, height: s * (1 / i.ny) };
     }
 }

@@ -1,56 +1,56 @@
-t.d(e, { default: () => v });
-var i = t(627968);
-t(64700);
-var r = t(861672),
-    l = t(477782),
-    a = t(442433),
-    c = t(847767),
-    d = t(358367),
-    o = t(793574),
-    s = t(886393),
-    u = t(317910),
-    A = t(848977),
-    h = t(995102),
-    _ = t(288104),
-    f = t(661504),
-    b = t(50268),
-    E = t(133238),
-    x = t(769591),
-    g = t(652215),
-    j = t(221314),
-    C = t(985018);
-let v = (0, d.A)(
-    (0, c.A)(
-        function (n) {
-            let { channel: e, onSelect: t } = n,
-                c = (0, A.A)(e),
-                d = (0, s.A)(e),
-                o = (0, E.m)(e),
-                g = (0, E.y)(e),
-                v = (0, h.A)(e),
-                y = (0, b.A)({ id: e.id, label: C.intl.string(C.t.gFHI3k) }),
-                N = (0, u.A)(e),
-                p = (0, _.A)(e),
-                G = (0, f.Ay)(e),
-                T = (0, x.os)("ReportToModChannelContextMenu");
-            return (0, i.jsxs)(r.W, {
+r.d(n, { default: () => N });
+var t = r(627968);
+r(64700);
+var i = r(980707),
+    a = r(477782),
+    s = r(442433),
+    d = r(847767),
+    l = r(358367),
+    o = r(793574),
+    c = r(886393),
+    h = r(317910),
+    A = r(848977),
+    p = r(995102),
+    u = r(288104),
+    x = r(661504),
+    X = r(50268),
+    _ = r(133238),
+    j = r(769591),
+    C = r(652215),
+    E = r(221314),
+    T = r(375708);
+let N = (0, l.A)(
+    (0, d.A)(
+        function (e) {
+            let { channel: n, onSelect: r } = e,
+                d = (0, A.A)(n),
+                l = (0, c.A)(n),
+                o = (0, _.m)(n),
+                C = (0, _.y)(n),
+                N = (0, p.A)(n),
+                k = (0, X.A)({ id: n.id, label: T.intl.string(T.t.gFHI3k) }),
+                M = (0, h.A)(n),
+                O = (0, u.A)(n),
+                b = (0, x.Ay)(n),
+                f = (0, j.os)("ReportToModChannelContextMenu");
+            return (0, t.jsxs)(i.W, {
                 "data-menu-migrated": !0,
                 navId: "report-to-mod-channel-context",
-                onClose: a.Z_,
-                "aria-label": C.intl.string(j.default["zp+z/E"]),
-                onSelect: t,
+                onClose: s.Z_,
+                "aria-label": T.intl.string(E.default["zp+z/E"]),
+                onSelect: r,
                 children: [
-                    (0, i.jsx)(l.rX, { children: c }, "mark-as-read-or-favorite"),
-                    (0, i.jsx)(l.rX, { children: o }),
-                    (0, i.jsx)(l.rX, { children: d }, "channel-actions"),
-                    (0, i.jsxs)(l.rX, { children: [v, T ? G : p] }, "notifications"),
-                    (0, i.jsx)(l.rX, { children: N }),
-                    (0, i.jsx)(l.rX, { children: g }),
-                    (0, i.jsx)(l.rX, { children: y }, "developer-actions"),
+                    (0, t.jsx)(a.rX, { children: d }, "mark-as-read-or-favorite"),
+                    (0, t.jsx)(a.rX, { children: o }),
+                    (0, t.jsx)(a.rX, { children: l }, "channel-actions"),
+                    (0, t.jsxs)(a.rX, { children: [N, f ? b : O] }, "notifications"),
+                    (0, t.jsx)(a.rX, { children: M }),
+                    (0, t.jsx)(a.rX, { children: C }),
+                    (0, t.jsx)(a.rX, { children: k }, "developer-actions"),
                 ],
             });
         },
-        { object: g.ZSU.CONTEXT_MENU },
+        { object: C.ZSU.CONTEXT_MENU },
     ),
     [o.A.CONTEXT_MENU, o.A.REPORT_TO_MOD_CHANNEL_CONTEXT_MENU],
 );

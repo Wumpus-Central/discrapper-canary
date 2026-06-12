@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366),
     s = n(31717);
@@ -11,7 +11,7 @@ class l extends i.Ay.Store {
         return (t === s.C.FirstThreadMessage ? o : a)[e];
     }
 }
-let d = new l(r.h, {
+let u = new l(r.h, {
     ADD_STICKER_PREVIEW: function (e) {
         let { channelId: t, sticker: n, draftType: i } = e;
         (i === s.C.FirstThreadMessage ? o : a)[t] = [n];

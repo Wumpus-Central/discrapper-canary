@@ -1,25 +1,25 @@
 "use strict";
-n.d(t, { P: () => i });
-var r = n(64700);
-function i(e, t, n) {
-    let [i, a] = (0, r.useState)(e || t),
-        s = (0, r.useRef)(void 0 !== e),
+n.d(t, { P: () => r });
+var i = n(64700);
+function r(e, t, n) {
+    let [r, s] = (0, i.useState)(e || t),
+        a = (0, i.useRef)(void 0 !== e),
         o = void 0 !== e;
-    (0, r.useEffect)(() => {
-        s.current, (s.current = o);
+    (0, i.useEffect)(() => {
+        a.current, (a.current = o);
     }, [o]);
-    let l = o ? e : i,
-        u = (0, r.useCallback)(
+    let l = o ? e : r,
+        u = (0, i.useCallback)(
             (e, ...t) => {
-                let r = (e, ...t) => {
+                let i = (e, ...t) => {
                     n && !Object.is(l, e) && n(e, ...t), o || (l = e);
                 };
                 "function" == typeof e
-                    ? a((n, ...i) => {
-                          let a = e(o ? l : n, ...i);
-                          return (r(a, ...t), o) ? n : a;
+                    ? s((n, ...r) => {
+                          let s = e(o ? l : n, ...r);
+                          return (i(s, ...t), o) ? n : s;
                       })
-                    : (o || a(e), r(e, ...t));
+                    : (o || s(e), i(e, ...t));
             },
             [o, l, n],
         );

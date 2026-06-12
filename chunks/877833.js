@@ -1,40 +1,40 @@
-i.d(t, { default: () => E });
-var n,
-    l = i(627968),
-    c = i(64700),
-    s = i(189213),
+i.d(t, { default: () => C });
+var l,
+    n = i(627968),
+    s = i(64700),
+    c = i(189213),
     d = i(150934),
-    a = i(985018),
-    o = i(58149),
-    r = i(954571),
+    a = i(375708),
+    r = i(95561),
+    o = i(174459),
     u = i(975571),
     _ = i(652215),
     h =
-        (((n = {}).DESCRIPTION = "description"),
-        (n.CATEGORIES = "categories"),
-        (n.TAGS = "tags"),
-        (n.AGREE_TO_RULES = "agree_to_rules"),
-        n);
+        (((l = {}).DESCRIPTION = "description"),
+        (l.CATEGORIES = "categories"),
+        (l.TAGS = "tags"),
+        (l.AGREE_TO_RULES = "agree_to_rules"),
+        l);
 let k = (e) => {
-    let { articleId: t, guildId: i, modalStep: n = null, pageView: l = null } = e;
+    let { articleId: t, guildId: i, modalStep: l = null, pageView: n = null } = e;
     open(u.A.getArticleURL(t)),
-        r.default.track(_.HAw.DISCOVERY_SETUP_CTA_CLICKED, {
+        o.default.track(_.HAw.DISCOVERY_SETUP_CTA_CLICKED, {
             cta_name: _.Mmu,
-            discovery_settings_view: l,
+            discovery_settings_view: n,
             help_center_article_id: t,
-            modal_step: n,
-            ...(0, o.H$)(i),
+            modal_step: l,
+            ...(0, r.H$)(i),
         });
 };
-var C = i(710825);
-function E(e) {
-    let { guildId: t, transitionState: i, onClose: n, onConfirm: o } = e,
-        { rules: r, rulesAccepted: u } = (function () {
-            let [e, t] = c.useState(!1),
-                [i, n] = c.useState(!1),
-                [l, s] = c.useState(!1);
+var E = i(710825);
+function C(e) {
+    let { guildId: t, transitionState: i, onClose: l, onConfirm: r } = e,
+        { rules: o, rulesAccepted: u } = (function () {
+            let [e, t] = s.useState(!1),
+                [i, l] = s.useState(!1),
+                [n, c] = s.useState(!1);
             return {
-                rules: c.useMemo(
+                rules: s.useMemo(
                     () => [
                         {
                             key: "healthy",
@@ -47,26 +47,26 @@ function E(e) {
                             key: "nonNSFW",
                             title: a.intl.string(a.t["iwnCh+"]),
                             body: a.intl.string(a.t.UKFzEY),
-                            onCheck: () => n(!i),
+                            onCheck: () => l(!i),
                             checked: i,
                         },
                         {
                             key: "guidelines",
                             title: a.intl.string(a.t.cZwlWn),
                             body: a.intl.string(a.t.u0Go2s),
-                            onCheck: () => s(!l),
-                            checked: l,
+                            onCheck: () => c(!n),
+                            checked: n,
                         },
                     ],
-                    [l, e, i],
+                    [n, e, i],
                 ),
-                rulesAccepted: e && i && l,
+                rulesAccepted: e && i && n,
             };
         })(),
-        E = c.useCallback(() => {
-            n(), o();
-        }, [n, o]);
-    return (0, l.jsx)(s.Modal, {
+        C = s.useCallback(() => {
+            l(), r();
+        }, [l, r]);
+    return (0, n.jsx)(c.Modal, {
         title: a.intl.string(a.t["Q8OFN+"]),
         subtitle: a.intl.format(a.t.JLUVfo, {
             onCommunityGuidelinesClick: () =>
@@ -74,17 +74,17 @@ function E(e) {
             onDiscoveryGuidelinesClick: () =>
                 k({ articleId: _.MVz.SERVER_DISCOVERY_GUIDELINES, guildId: t, modalStep: h.AGREE_TO_RULES }),
         }),
-        actions: [{ disabled: !u, text: a.intl.string(a.t["qjtt/p"]), onClick: E }],
+        actions: [{ disabled: !u, text: a.intl.string(a.t["qjtt/p"]), onClick: C }],
         transitionState: i,
-        onClose: n,
-        children: (0, l.jsx)("div", {
-            className: C.H,
-            children: r.map((e) =>
-                (0, l.jsx)(
+        onClose: l,
+        children: (0, n.jsx)("div", {
+            className: E.H,
+            children: o.map((e) =>
+                (0, n.jsx)(
                     "div",
                     {
-                        className: C.k,
-                        children: (0, l.jsx)(d.S, {
+                        className: E.k,
+                        children: (0, n.jsx)(d.S, {
                             checked: e.checked,
                             onChange: e.onCheck,
                             label: e.title,

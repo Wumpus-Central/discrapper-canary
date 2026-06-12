@@ -37,8 +37,8 @@ var l = n(627968),
     k = n(837015),
     G = n(61750),
     F = n(287809),
-    B = n(758836),
-    Y = n(375708),
+    Y = n(758836),
+    B = n(375708),
     W = n(258915);
 function H(e) {
     let { rewardSkuId: t, onClose: n, onRewardModalClose: i } = e,
@@ -109,7 +109,7 @@ function H(e) {
                           }),
                     (0, l.jsx)(x.$, {
                         variant: "primary",
-                        text: Y.intl.string(Y.t.kMYVwv),
+                        text: B.intl.string(B.t.kMYVwv),
                         loading: p,
                         onClick: () => {
                             null != d &&
@@ -118,7 +118,7 @@ function H(e) {
                                     product: d,
                                     shouldShowPromotionalExperience: !0,
                                     analyticsLocations: u,
-                                    purchaseType: B.gs.PROMOTIONAL,
+                                    purchaseType: Y.gs.PROMOTIONAL,
                                     onCloseCallback: i,
                                 }));
                         },
@@ -152,7 +152,7 @@ function $(e) {
             paymentSourceId: k,
             isPremiumGroupPurchase: G,
             startingPremiumSubscriptionPlanId: F,
-            startingFractionalPremiumEndsAt: B,
+            startingFractionalPremiumEndsAt: Y,
         } = (0, h.t4)((e) => ({
             activeSubscription: e.activeSubscription,
             selectedSkuId: e.selectedSkuId,
@@ -162,7 +162,7 @@ function $(e) {
             startingPremiumSubscriptionPlanId: e.startingPremiumSubscriptionPlanId,
             startingFractionalPremiumEndsAt: e.startingFractionalPremiumEndsAt,
         })),
-        Y = (0, m.A)(),
+        B = (0, m.A)(),
         W = (0, V.bB)(),
         {
             isGift: $,
@@ -176,8 +176,8 @@ function $(e) {
             openGiftingBadgePostPurchaseModal: er,
         } = (0, T.Pv)(),
         { confirmationFooter: ei } = (0, N.cG)(),
-        ea = (0, C.px)(Y, $, en),
-        es = (0, C.Mq)(Y),
+        ea = (0, C.px)(B, $, en),
+        es = (0, C.Mq)(B),
         eo = (0, A.Mv)(el, !1),
         eu = (0, s.bG)([y.A], () => y.A.getGiftPromotion()?.id),
         ec = (0, s.bG)([y.A], () => {
@@ -188,8 +188,8 @@ function $(e) {
         }),
         ed = (0, K.g)(j, k),
         ep = $ && null != el && null != eo && es,
-        em = { selectedPlan: Y, selectedSkuId: D, step: W };
-    if (null == Y) throw new d.v({ message: "Expected plan to be selected", extraSentryInformation: em });
+        em = { selectedPlan: B, selectedSkuId: D, step: W };
+    if (null == B) throw new d.v({ message: "Expected plan to be selected", extraSentryInformation: em });
     if (null == D) throw new d.v({ message: "Expected selectedSkuId", extraSentryInformation: em });
     if (null == W) throw new d.v({ message: "Step should be set", extraSentryInformation: em });
     let eh = r.useCallback(() => {
@@ -259,23 +259,23 @@ function $(e) {
                 (0, E.qr)(o.M.GIFTING_PROMOTION_REMINDER, eu, { dismissAction: z.i.INDIRECT_ACTION });
         }, [ec, eu, ea]);
     let eA = null != O ? _.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
-    if (null != M) t = M(Y, eh, U);
-    else if ($) t = (0, l.jsx)(_.fw, { planId: Y.id, onClose: eh });
+    if (null != M) t = M(B, eh, U);
+    else if ($) t = (0, l.jsx)(_.fw, { planId: B.id, onClose: eh });
     else {
         let e =
-            F === Y.id
+            F === B.id
                 ? { postSuccessGuild: b }
                 : {
                       followupSKUInfo: L,
                       startingPremiumSubscriptionPlanId: F,
-                      isDowngrade: null != w && (0, f.vT)(w, Y.id, x),
+                      isDowngrade: null != w && (0, f.vT)(w, B.id, x),
                   };
         t = (0, l.jsx)(_.Ay, {
-            planId: Y.id,
+            planId: B.id,
             onClose: eh,
             paymentSourceType: ed,
             hideClose: null != ei,
-            startingFractionalPremiumEndsAt: B,
+            startingFractionalPremiumEndsAt: Y,
             customCTAType: eA,
             ...e,
         });

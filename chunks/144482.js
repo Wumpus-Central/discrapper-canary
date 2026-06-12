@@ -1,85 +1,85 @@
-n.d(t, { default: () => f });
-var a = n(627968),
-    l = n(64700),
-    i = n(319060),
-    o = n(862482),
-    u = n(935462),
-    c = n(97808),
-    r = n(778712),
-    s = n(534514),
-    d = n(834730),
-    I = n(789645),
-    p = n(398866),
-    A = n(709066),
-    m = n(681827),
-    _ = n(981355),
-    E = n(240248),
-    h = n(969508),
-    C = n(705751),
-    y = n(985018),
-    T = n(952829);
-let N = (0, E.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
-    O = (0, E.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
-    M = (0, E.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
-    g = (0, E.xI)(i.A.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
-function f(e) {
-    let { title: t, onClose: n } = e,
-        { applicationIconURL: i, applicationName: E, queryParams: f, iframeUrl: R } = (0, h.aV)(e),
-        { width: v, height: S } = (0, _.A)(),
-        L = l.useMemo(() => {
-            let e = Math.min(((S - g - 2 * M) * 16) / 9, O);
-            return Math.max(N, Math.min(v - 2 * M, e));
-        }, [v, S]);
-    return (0, a.jsx)(u.EO, {
+s.d(a, { default: () => T });
+var i = s(627968),
+    n = s(64700),
+    r = s(319060),
+    t = s(862482),
+    l = s(935462),
+    d = s(97808),
+    c = s(778712),
+    A = s(534514),
+    o = s(834730),
+    I = s(789645),
+    h = s(395678),
+    m = s(709066),
+    N = s(681827),
+    x = s(981355),
+    _ = s(240248),
+    u = s(969508),
+    M = s(705751),
+    p = s(375708),
+    O = s(952829);
+let j = (0, _.xI)(r.A.INTERACTION_IFRAME_MODAL_MODAL_MIN_WIDTH),
+    E = (0, _.xI)(r.A.INTERACTION_IFRAME_MODAL_MODAL_MAX_WIDTH),
+    v = (0, _.xI)(r.A.INTERACTION_IFRAME_MODAL_MODAL_MARGIN),
+    D = (0, _.xI)(r.A.INTERACTION_IFRAME_MODAL_MODAL_HEADER_HEIGHT);
+function T(e) {
+    let { title: a, onClose: s } = e,
+        { applicationIconURL: r, applicationName: _, queryParams: T, iframeUrl: R } = (0, u.aV)(e),
+        { width: C, height: g } = (0, x.A)(),
+        L = n.useMemo(() => {
+            let e = Math.min(((g - D - 2 * v) * 16) / 9, E);
+            return Math.max(j, Math.min(C - 2 * v, e));
+        }, [C, g]);
+    return (0, i.jsx)(l.EO, {
         ...e,
-        size: u.rI.DYNAMIC,
-        className: T.zr,
+        size: l.rI.DYNAMIC,
+        className: O.zr,
         parentComponent: "InteractionIframeModal",
         "data-migration-pending": !0,
-        children: (0, a.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             style: { width: L },
             children: [
-                (0, a.jsxs)(u.rQ, {
+                (0, i.jsxs)(l.rQ, {
                     separator: !1,
-                    className: T.Hc,
+                    className: O.Hc,
                     "data-migration-pending": !0,
                     children: [
-                        (0, a.jsx)(c.eu, { src: i, size: r._3.SIZE_32, "aria-label": E, className: T.In }),
-                        (0, a.jsxs)("div", {
-                            className: T.Wh,
+                        (0, i.jsx)(d.eu, { src: r, size: c._3.SIZE_32, "aria-label": _, className: O.In }),
+                        (0, i.jsxs)("div", {
+                            className: O.Wh,
                             children: [
-                                (0, a.jsxs)("div", {
+                                (0, i.jsxs)("div", {
                                     children: [
-                                        (0, a.jsx)(s.D, { variant: "heading-sm/bold", children: E }),
-                                        (0, a.jsx)(d.E, {
+                                        (0, i.jsx)(A.D, { variant: "heading-sm/bold", children: _ }),
+                                        (0, i.jsx)(o.E, {
                                             variant: "text-xs/medium",
                                             color: "interactive-text-default",
-                                            children: t,
+                                            children: a,
                                         }),
                                     ],
                                 }),
-                                (0, a.jsx)(A.A, {
-                                    type: C.nu.BOT,
-                                    className: T.AO,
+                                (0, i.jsx)(m.A, {
+                                    type: M.nu.BOT,
+                                    className: O.AO,
                                     verified: e.application.bot?.verified,
                                 }),
                             ],
                         }),
-                        (0, a.jsx)(o.$n, {
-                            onClick: n,
-                            innerClassName: T.b,
-                            className: T.cG,
-                            look: o.$n.Looks.BLANK,
-                            size: o.$n.Sizes.NONE,
-                            "aria-label": y.intl.string(y.t.WAI6xu),
+                        (0, i.jsx)(t.$n, {
+                            onClick: s,
+                            innerClassName: O.b,
+                            className: O.cG,
+                            look: t.$n.Looks.BLANK,
+                            size: t.$n.Sizes.NONE,
+                            "aria-label": p.intl.string(p.t.WAI6xu),
                             "data-migration-pending": !0,
-                            children: (0, a.jsx)(I.P, { size: "md", color: "currentColor", className: T.ut }),
+                            children: (0, i.jsx)(I.P, { size: "md", color: "currentColor", className: O.ut }),
                         }),
                     ],
                 }),
-                (0, a.jsx)(m.A, {
+                (0, i.jsx)(N.A, {
                     aspectRatio: 16 / 9,
-                    children: (0, a.jsx)(p.o, { url: R, shouldRefocus: !0, className: T.pU, queryParams: f }),
+                    children: (0, i.jsx)(h.o, { url: R, shouldRefocus: !0, className: O.pU, queryParams: T }),
                 }),
             ],
         }),

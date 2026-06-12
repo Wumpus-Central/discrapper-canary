@@ -1,12 +1,12 @@
-n.d(t, { wG: () => h }), n(321073);
-var a = n(735438),
-    r = n.n(a);
+n.d(e, { wG: () => p }), n(321073);
+var r = n(735438),
+    i = n.n(r);
 n(309613);
-let l = n(346344).newStemmer("english");
-function s(e) {
-    return l.stem(e);
+let o = n(346344).newStemmer("english");
+function h(t) {
+    return o.stem(t);
 }
-let i = new Set([
+let u = new Set([
     "a",
     "an",
     "and",
@@ -41,49 +41,49 @@ let i = new Set([
     "will",
     "with",
 ]);
-function u(e) {
-    return e.replace(/('|\u2019|\uFF07)(s|S)$/, "");
+function s(t) {
+    return t.replace(/('|\u2019|\uFF07)(s|S)$/, "");
 }
-function o(e) {
-    return e.toLowerCase();
+function c(t) {
+    return t.toLowerCase();
 }
-function c(e) {
-    return i.has(e);
+function l(t) {
+    return u.has(t);
 }
-function d(e) {
-    return 0 === e.length;
+function a(t) {
+    return 0 === t.length;
 }
-function h(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = e.length >= 3 && e.length <= 12 && t,
-        a = new Set(r()(e.split(/\W+/)).map(u).reject(d).map(o).reject(c).map(s).value());
-    return (e) =>
-        (function e(t, n, a) {
-            if (Array.isArray(t)) t.forEach((t) => e(t, n, a));
-            else if ("list" === t.type) t.items.forEach((t) => e(t, n, a));
-            else if ("string" == typeof t.content && "codeBlock" !== t.type) {
-                let e = [],
-                    r = "";
-                t.content.split(/(\W+)/g).forEach((t) => {
-                    !(function (e, t) {
+function p(t) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = t.length >= 3 && t.length <= 12 && e,
+        r = new Set(i()(t.split(/\W+/)).map(s).reject(a).map(c).reject(l).map(h).value());
+    return (t) =>
+        (function t(e, n, r) {
+            if (Array.isArray(e)) e.forEach((e) => t(e, n, r));
+            else if ("list" === e.type) e.items.forEach((e) => t(e, n, r));
+            else if ("string" == typeof e.content && "codeBlock" !== e.type) {
+                let t = [],
+                    i = "";
+                e.content.split(/(\W+)/g).forEach((e) => {
+                    !(function (t, e) {
                         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                        if (d((e = o(u(e)))) || c(e)) return !1;
-                        let a = s(e);
+                        if (a((t = c(s(t)))) || l(t)) return !1;
+                        let r = h(t);
                         if (n) {
-                            for (let e of t.values()) if (a.includes(e)) return !0;
+                            for (let t of e.values()) if (r.includes(t)) return !0;
                             return !1;
                         }
-                        return t.has(a);
-                    })(t, n, a)
-                        ? (r += t)
-                        : (r.length > 0 && e.push({ type: "text", content: r }),
-                          e.push({ type: "highlight", content: t }),
-                          (r = ""));
+                        return e.has(r);
+                    })(e, n, r)
+                        ? (i += e)
+                        : (i.length > 0 && t.push({ type: "text", content: i }),
+                          t.push({ type: "highlight", content: e }),
+                          (i = ""));
                 }),
-                    e.length > 0 &&
-                        (r.length > 0 && e.push({ type: "text", content: r }),
-                        "text" === t.type ? (t.content = e) : (t.content = [{ type: "text", content: e }]));
-            } else null != t.content && e(t.content, n, a);
-            return t;
-        })(e, a, n);
+                    t.length > 0 &&
+                        (i.length > 0 && t.push({ type: "text", content: i }),
+                        "text" === e.type ? (e.content = t) : (e.content = [{ type: "text", content: t }]));
+            } else null != e.content && t(e.content, n, r);
+            return e;
+        })(t, r, n);
 }

@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { R: () => a, g: () => i });
-var r = n(627968);
-let i = n(64700).createContext(!1);
-function a(e) {
+n.d(t, { R: () => s, g: () => r });
+var i = n(627968);
+let r = n(64700).createContext(!1);
+function s(e) {
     let { children: t } = e;
-    return (0, r.jsx)(i.Provider, { value: !0, children: t });
+    return (0, i.jsx)(r.Provider, { value: !0, children: t });
 }

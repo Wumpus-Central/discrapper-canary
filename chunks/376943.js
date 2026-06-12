@@ -34,7 +34,7 @@ function m(e) {
 function g(e) {
     if (null == e) return null;
     let t = e.match(f);
-    return null != t && t.length > 1 ? { guildId: t[1], guildEventId: t[2], recurrenceId: t[3] } : null;
+    return null != t && t.length > 1 ? { guildId: t[1], guildEventId: t[2], recurrenceId: t[4] } : null;
 }
 function A(e) {
     return !!e.isPrivate() || s.A.can(o.xBc.VIEW_CHANNEL, e);

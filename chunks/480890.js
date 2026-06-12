@@ -29,8 +29,8 @@ function c(e) {
             tileType: d,
         } = e,
         _ = s.A.getChannelId(),
-        f = s.A.getGuildId(),
-        h = r.A.getChannel(_)?.type,
+        h = s.A.getGuildId(),
+        f = r.A.getChannel(_)?.type,
         p = i.default.getId();
     a.default.track(l.HAw.CALL_MENU_ITEM_INTERACTED, {
         location: o,
@@ -38,9 +38,9 @@ function c(e) {
         menu_item_type: t,
         entrypoint: u,
         targets_self: null == c ? void 0 : c === p,
-        guild_id: f,
+        guild_id: h,
         channel_id: _,
-        channel_type: h,
+        channel_type: f,
         tile_type: d,
     });
 }

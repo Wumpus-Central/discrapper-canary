@@ -1,12 +1,12 @@
 "use strict";
-let r = n(20816),
-    i = n(978884),
+let i = n(20816),
+    r = n(978884),
     s = n(597084),
     a = () => {},
-    o = new i.TimeoutError();
-t.default = class extends r {
+    o = new r.TimeoutError();
+t.default = class extends i {
     constructor(e) {
-        var t, n, r, i;
+        var t, n, i, r;
         if (
             (super(),
             (this._intervalCount = 0),
@@ -34,7 +34,7 @@ t.default = class extends r {
             );
         if (void 0 === e.interval || !(Number.isFinite(e.interval) && e.interval >= 0))
             throw TypeError(
-                `Expected \`interval\` to be a finite number >= 0, got \`${null != ((i = null == (r = e.interval) ? void 0 : r.toString())) ? i : ""}\` (${typeof e.interval})`,
+                `Expected \`interval\` to be a finite number >= 0, got \`${null != ((r = null == (i = e.interval) ? void 0 : i.toString())) ? r : ""}\` (${typeof e.interval})`,
             );
         (this._carryoverConcurrencyCount = e.carryoverConcurrencyCount),
             (this._isIntervalIgnored = e.intervalCap === 1 / 0 || 0 === e.interval),
@@ -125,19 +125,19 @@ t.default = class extends r {
         (this._concurrency = e), this._processQueue();
     }
     async add(e, t = {}) {
-        return new Promise((n, r) => {
+        return new Promise((n, i) => {
             let s = async () => {
                 this._pendingCount++, this._intervalCount++;
                 try {
                     let s =
                         void 0 === this._timeout && void 0 === t.timeout
                             ? e()
-                            : i.default(Promise.resolve(e()), void 0 === t.timeout ? this._timeout : t.timeout, () => {
-                                  (void 0 === t.throwOnTimeout ? this._throwOnTimeout : t.throwOnTimeout) && r(o);
+                            : r.default(Promise.resolve(e()), void 0 === t.timeout ? this._timeout : t.timeout, () => {
+                                  (void 0 === t.throwOnTimeout ? this._throwOnTimeout : t.throwOnTimeout) && i(o);
                               });
                     n(await s);
                 } catch (e) {
-                    r(e);
+                    i(e);
                 }
                 this._next();
             };

@@ -1,8 +1,8 @@
 e.exports = {
     kL: "container__7a78a",
-    Yi: "placeholderDetailsCard__7a78a " + a(334488).H,
+    Yi: "placeholderDetailsCard__7a78a " + t(334488).H,
     RC: "placeholderText__7a78a",
     h$: "placeholderBar__7a78a",
-    Nu: "placeholderCoverGrid__7a78a " + a(334488).H,
+    Nu: "placeholderCoverGrid__7a78a " + t(334488).H,
     LH: "placeholderCover__7a78a",
 };

@@ -1,9 +1,9 @@
 "use strict";
-var r = n(860511),
-    i = n(65978),
+var i = n(860511),
+    r = n(65978),
     s = n(647055),
     a = function (e) {
-        return i.slice(0, e.length) === e;
+        return r.slice(0, e.length) === e;
     };
 e.exports = a("Bun/")
     ? "BUN"
@@ -13,12 +13,12 @@ e.exports = a("Bun/")
         ? "DENO"
         : a("Node.js/")
           ? "NODE"
-          : r.Bun && "string" == typeof Bun.version
+          : i.Bun && "string" == typeof Bun.version
             ? "BUN"
-            : r.Deno && "object" == typeof Deno.version
+            : i.Deno && "object" == typeof Deno.version
               ? "DENO"
-              : "process" === s(r.process)
+              : "process" === s(i.process)
                 ? "NODE"
-                : r.window && r.document
+                : i.window && i.document
                   ? "BROWSER"
                   : "REST";

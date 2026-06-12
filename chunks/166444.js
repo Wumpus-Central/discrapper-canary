@@ -21,8 +21,8 @@ var m = n(25639),
     D = n(922301),
     b = n(368919),
     T = n(584682),
-    j = n(598104),
-    y = n(95035),
+    y = n(598104),
+    j = n(95035),
     M = n(71393),
     p = n(290863),
     R = n(741961),
@@ -48,7 +48,7 @@ function O(e) {
 let P = _.Ay.getEnableHardwareAcceleration() ? d.Js : d.eu;
 function B(e) {
     let { channel: t, size: n = g._3.SIZE_20, className: a } = e;
-    return (0, i.jsx)(j.A, { className: a, channel: t, "aria-hidden": !0, size: n });
+    return (0, i.jsx)(y.A, { className: a, channel: t, "aria-hidden": !0, size: n });
 }
 function V(e) {
     let { channel: t, size: n = g._3.SIZE_20, className: a } = e,
@@ -144,7 +144,7 @@ let F = a.memo(function (e) {
                           onMouseUp: S,
                           onContextMenu: D,
                           connectDragPreview: b,
-                          className: j,
+                          className: y,
                           iconClassName: M,
                           subtitle: p,
                           subtitleColor: R,
@@ -176,7 +176,7 @@ let F = a.memo(function (e) {
                       ec = (0, i.jsx)("div", {
                           className: r()({ [k.ow]: Y }),
                           ref: ea,
-                          children: (0, i.jsxs)(y.A, {
+                          children: (0, i.jsxs)(j.A, {
                               role: eu && !g ? "button" : "link",
                               href: eu ? void 0 : er,
                               target: "_blank",
@@ -236,7 +236,7 @@ let F = a.memo(function (e) {
                       children: (0, i.jsxs)("div", {
                           ref: t,
                           className: r()(
-                              j,
+                              y,
                               eo ? k.iE : k.IA,
                               (() => {
                                   if (d) return r()(U.rM, H.SELECTED);

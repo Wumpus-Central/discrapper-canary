@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R, F: () => C });
+n.d(t, { A: () => O, F: () => v });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(834730),
     d = n(939249),
     _ = n(554830),
-    f = n(975460),
-    h = n(369374),
+    h = n(975460),
+    f = n(369374),
     p = n(531913),
     E = n(850046),
     m = n(619517),
@@ -20,7 +20,7 @@ var i = n(627968),
     I = n(903209),
     T = n(375708),
     S = n(532786);
-function N(e, t) {
+function y(e, t) {
     let n = (0, u.bG)([A.A], () => A.A.getUserProfile(e));
     return (
         r.useEffect(() => {
@@ -39,19 +39,19 @@ function N(e, t) {
         )
     );
 }
-function y(e) {
-    let t = (0, f.g)(e.activityApplication),
+function N(e) {
+    let t = (0, h.g)(e.activityApplication),
         n = (function (e, t) {
             let n = (0, E.A)(
                     e,
                     r.useMemo(() => (null != t ? [t.id] : []), [t]),
                 ),
-                { hasWidget: i, isLoadingProfile: s } = N(e, t);
+                { hasWidget: i, isLoadingProfile: s } = y(e, t);
             return null == t || null == n[t.id] || s ? null : { previewData: n[t.id], hasWidget: i };
         })(e.userId, t);
-    return null == n ? null : (0, i.jsx)(C, { ...e, ...n });
+    return null == n ? null : (0, i.jsx)(v, { ...e, ...n });
 }
-function C(e) {
+function v(e) {
     let {
         previewData: { previewIcon: t, previewText: n },
         hasWidget: r,
@@ -96,14 +96,14 @@ function C(e) {
         ],
     });
 }
-function v(e) {
-    let t = (0, f.g)(e.activityApplication);
-    return null == t ? null : (0, i.jsx)(O, { ...e, widgetApplication: t });
+function C(e) {
+    let t = (0, h.g)(e.activityApplication);
+    return null == t ? null : (0, i.jsx)(R, { ...e, widgetApplication: t });
 }
-function O(e) {
+function R(e) {
     let t = (0, p.A)(e.userId, e.widgetApplication.id),
         n = t.surfaceConfigs[l.m.ACTIVITY_ACCESSORY],
-        { hasWidget: r, isLoadingProfile: s } = N(e.userId, e.widgetApplication);
+        { hasWidget: r, isLoadingProfile: s } = y(e.userId, e.widgetApplication);
     return null == n || s || !t.hasIdentity
         ? null
         : (0, i.jsxs)("div", {
@@ -123,7 +123,7 @@ function O(e) {
               ],
           });
 }
-function R(e) {
-    let { enabled: t } = h.A.useConfig({ location: "ActivityApplicationWidgetPreview" });
-    return t ? (0, i.jsx)(v, { ...e }) : (0, i.jsx)(y, { ...e });
+function O(e) {
+    let { enabled: t } = f.A.useConfig({ location: "ActivityApplicationWidgetPreview" });
+    return t ? (0, i.jsx)(C, { ...e }) : (0, i.jsx)(N, { ...e });
 }

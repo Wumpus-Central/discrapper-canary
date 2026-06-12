@@ -1,41 +1,41 @@
 l.d(t, { default: () => g });
-var n = l(627968),
-    i = l(64700),
-    a = l(296489),
-    r = l.n(a),
-    s = l(820284),
-    o = l(198982),
-    u = l(513461),
+var i = l(627968),
+    n = l(64700),
+    r = l(296489),
+    s = l.n(r),
+    u = l(820284),
+    a = l(913122),
+    d = l(513461),
     c = l(241499),
-    d = l(242273),
-    x = l(652215),
-    p = l(985018);
+    p = l(242273),
+    h = l(652215),
+    o = l(375708);
 let g = function (e) {
-    let { field: t, onSave: l, onClose: a, guild: g } = e,
-        [_, h] = i.useState(
-            t?.values != null ? t?.values.map((e) => ({ id: r()(), value: e })) : [{ id: r()(), value: "" }],
+    let { field: t, onSave: l, onClose: r, guild: g } = e,
+        [v, _] = n.useState(
+            t?.values != null ? t?.values.map((e) => ({ id: s()(), value: e })) : [{ id: s()(), value: "" }],
         ),
-        [f, C] = i.useState(null),
-        m = async () => {
-            null != f && C(null);
-            let e = _.map((e) => e.value.trim()).filter((e) => "" !== e);
-            if (0 === e.length) return void C(p.intl.string(p.t.TCHkcd));
-            let t = { field_type: u.rX.TERMS, label: p.intl.string(p.t["9suSIA"]), values: e, required: !0 };
+        [f, A] = n.useState(null),
+        C = async () => {
+            null != f && A(null);
+            let e = v.map((e) => e.value.trim()).filter((e) => "" !== e);
+            if (0 === e.length) return void A(o.intl.string(o.t.TCHkcd));
+            let t = { field_type: d.rX.TERMS, label: o.intl.string(o.t["9suSIA"]), values: e, required: !0 };
             try {
-                await l(t), a();
+                await l(t), r();
             } catch (e) {
-                C(new o.LG(e).getAnyErrorMessage());
+                A(new a.LG(e).getAnyErrorMessage());
             }
         };
-    return (0, n.jsx)(s.A, {
-        page: x.liQ.GUILD_RULES_CREATE_MODAL,
-        children: (0, n.jsx)(d.A, {
+    return (0, i.jsx)(u.A, {
+        page: h.liQ.GUILD_RULES_CREATE_MODAL,
+        children: (0, i.jsx)(p.A, {
             ...e,
             errorText: f,
-            title: p.intl.string(p.t["3pz9t3"]),
-            onCancel: a,
-            onConfirm: m,
-            children: (0, n.jsx)(c._, { guild: g, rules: _, setRules: h }),
+            title: o.intl.string(o.t["3pz9t3"]),
+            onCancel: r,
+            onConfirm: C,
+            children: (0, i.jsx)(c._, { guild: g, rules: v, setRules: _ }),
         }),
     });
 };

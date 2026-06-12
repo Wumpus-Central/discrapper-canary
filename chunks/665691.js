@@ -1,34 +1,34 @@
-n.d(t, { DY: () => u, UF: () => c, bG: () => h });
-var i = n(17928),
-    l = n(652896),
-    s = n(495544),
-    r = n(763827),
-    a = n(707890),
-    o = n(83942),
-    d = n(259374);
-function c(e) {
-    let { userId: t, channelId: n } = e,
-        l = (0, d.k)({ channelId: n });
+r.d(t, { DY: () => c, UF: () => f, bG: () => A });
+var i = r(17928),
+    u = r(652896),
+    n = r(495544),
+    d = r(763827),
+    l = r(707890),
+    s = r(83942),
+    a = r(259374);
+function f(e) {
+    let { userId: t, channelId: r } = e,
+        u = (0, a.k)({ channelId: r });
     return (0, i.bG)(
-        [a.A, s.default, r.A],
-        () => null != t && l && r.A.isUserConnected(t) && s.default.getId() !== t && a.A.isUserVerified(t),
-        [l, t],
+        [l.A, n.default, d.A],
+        () => null != t && u && d.A.isUserConnected(t) && n.default.getId() !== t && l.A.isUserVerified(t),
+        [u, t],
     );
 }
-function u(e) {
-    let { streamKey: t, channelId: n } = e,
-        r = (0, d.k)({ channelId: n }),
-        c = (0, o.w)(t);
-    return (0, i.bG)([a.A, s.default], () => {
-        if (!r || c || null == t) return !1;
-        let e = s.default.getId(),
-            { ownerId: n } = (0, l.Iy)(t);
-        return n !== e && a.A.isStreamVerified(t);
-    }, [c, r, t]);
+function c(e) {
+    let { streamKey: t, channelId: r } = e,
+        d = (0, a.k)({ channelId: r }),
+        f = (0, s.w)(t);
+    return (0, i.bG)([l.A, n.default], () => {
+        if (!d || f || null == t) return !1;
+        let e = n.default.getId(),
+            { ownerId: r } = (0, u.Iy)(t);
+        return r !== e && l.A.isStreamVerified(t);
+    }, [f, d, t]);
 }
-function h(e) {
+function A(e) {
     let { channelId: t } = e,
-        n = (0, d.k)({ channelId: t }),
-        l = (0, o.c)();
-    return (0, i.bG)([a.A], () => !!n && !l && a.A.isCallVerified(), [l, n]);
+        r = (0, a.k)({ channelId: t }),
+        u = (0, s.c)();
+    return (0, i.bG)([l.A], () => !!r && !u && l.A.isCallVerified(), [u, r]);
 }

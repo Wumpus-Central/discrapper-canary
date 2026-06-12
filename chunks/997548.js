@@ -1,14 +1,14 @@
 e.exports = function (e) {
     let t,
-        a = e.regex,
-        n = /(?![A-Za-z0-9])(?![$])/,
-        r = a.concat(/[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/, n),
-        i = a.concat(/(\\?[A-Z][a-z0-9_\x7f-\xff]+|\\?[A-Z]+(?=[A-Z][a-z0-9_\x7f-\xff])){1,}/, n),
-        o = a.concat(/[A-Z]+/, n),
-        s = { scope: "variable", match: "\\$+" + r },
+        n = e.regex,
+        i = /(?![A-Za-z0-9])(?![$])/,
+        r = n.concat(/[a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*/, i),
+        s = n.concat(/(\\?[A-Z][a-z0-9_\x7f-\xff]+|\\?[A-Z]+(?=[A-Z][a-z0-9_\x7f-\xff])){1,}/, i),
+        a = n.concat(/[A-Z]+/, i),
+        o = { scope: "variable", match: "\\$+" + r },
         l = { scope: "subst", variants: [{ begin: /\$\w+/ }, { begin: /\{\$/, end: /\}/ }] },
-        c = e.inherit(e.APOS_STRING_MODE, { illegal: null }),
-        _ = e.inherit(e.QUOTE_STRING_MODE, { illegal: null, contains: e.QUOTE_STRING_MODE.contains.concat(l) }),
+        u = e.inherit(e.APOS_STRING_MODE, { illegal: null }),
+        c = e.inherit(e.QUOTE_STRING_MODE, { illegal: null, contains: e.QUOTE_STRING_MODE.contains.concat(l) }),
         d = {
             begin: /<<<[ \t]*(?:(\w+)|"(\w+)")\n/,
             end: /[ \t]*(\w+)\b/,
@@ -20,10 +20,10 @@ e.exports = function (e) {
                 t.data._beginMatch !== e[1] && t.ignoreMatch();
             },
         },
-        m = e.END_SAME_AS_BEGIN({ begin: /<<<[ \t]*'(\w+)'\n/, end: /[ \t]*(\w+)\b/ }),
-        p = "[ 	\n]",
-        u = { scope: "string", variants: [_, c, d, m] },
-        g = {
+        _ = e.END_SAME_AS_BEGIN({ begin: /<<<[ \t]*'(\w+)'\n/, end: /[ \t]*(\w+)\b/ }),
+        h = "[ 	\n]",
+        f = { scope: "string", variants: [c, u, d, _] },
+        p = {
             scope: "number",
             variants: [
                 { begin: "\\b0[bB][01]+(?:_[01]+)*\\b" },
@@ -34,7 +34,7 @@ e.exports = function (e) {
             relevance: 0,
         },
         E = ["false", "null", "true"],
-        S = [
+        m = [
             "__CLASS__",
             "__DIR__",
             "__FILE__",
@@ -126,7 +126,7 @@ e.exports = function (e) {
             "xor",
             "yield",
         ],
-        b = [
+        g = [
             "Error|0",
             "AppendIterator",
             "ArgumentCountError",
@@ -216,56 +216,56 @@ e.exports = function (e) {
             "static",
             "stdClass",
         ],
-        T = {
-            keyword: S,
+        A = {
+            keyword: m,
             literal:
                 ((t = []),
                 E.forEach((e) => {
                     t.push(e), e.toLowerCase() === e ? t.push(e.toUpperCase()) : t.push(e.toLowerCase());
                 }),
                 t),
-            built_in: b,
+            built_in: g,
         },
-        f = (e) => e.map((e) => e.replace(/\|\d+$/, "")),
-        C = {
+        I = (e) => e.map((e) => e.replace(/\|\d+$/, "")),
+        T = {
             variants: [
                 {
-                    match: [/new/, a.concat(p, "+"), a.concat("(?!", f(b).join("\\b|"), "\\b)"), i],
+                    match: [/new/, n.concat(h, "+"), n.concat("(?!", I(g).join("\\b|"), "\\b)"), s],
                     scope: { 1: "keyword", 4: "title.class" },
                 },
             ],
         },
-        R = a.concat(r, "\\b(?!\\()"),
-        N = {
+        S = n.concat(r, "\\b(?!\\()"),
+        y = {
             variants: [
-                { match: [a.concat(/::/, a.lookahead(/(?!class\b)/)), R], scope: { 2: "variable.constant" } },
+                { match: [n.concat(/::/, n.lookahead(/(?!class\b)/)), S], scope: { 2: "variable.constant" } },
                 { match: [/::/, /class/], scope: { 2: "variable.language" } },
                 {
-                    match: [i, a.concat(/::/, a.lookahead(/(?!class\b)/)), R],
+                    match: [s, n.concat(/::/, n.lookahead(/(?!class\b)/)), S],
                     scope: { 1: "title.class", 3: "variable.constant" },
                 },
-                { match: [i, a.concat("::", a.lookahead(/(?!class\b)/))], scope: { 1: "title.class" } },
-                { match: [i, /::/, /class/], scope: { 1: "title.class", 3: "variable.language" } },
+                { match: [s, n.concat("::", n.lookahead(/(?!class\b)/))], scope: { 1: "title.class" } },
+                { match: [s, /::/, /class/], scope: { 1: "title.class", 3: "variable.language" } },
             ],
         },
-        h = { scope: "attr", match: a.concat(r, a.lookahead(":"), a.lookahead(/(?!::)/)) },
-        O = { relevance: 0, begin: /\(/, end: /\)/, keywords: T, contains: [h, s, N, e.C_BLOCK_COMMENT_MODE, u, g, C] },
-        v = {
+        N = { scope: "attr", match: n.concat(r, n.lookahead(":"), n.lookahead(/(?!::)/)) },
+        v = { relevance: 0, begin: /\(/, end: /\)/, keywords: A, contains: [N, o, y, e.C_BLOCK_COMMENT_MODE, f, p, T] },
+        C = {
             relevance: 0,
             match: [
                 /\b/,
-                a.concat("(?!fn\\b|function\\b|", f(S).join("\\b|"), "|", f(b).join("\\b|"), "\\b)"),
+                n.concat("(?!fn\\b|function\\b|", I(m).join("\\b|"), "|", I(g).join("\\b|"), "\\b)"),
                 r,
-                a.concat(p, "*"),
-                a.lookahead(/(?=\()/),
+                n.concat(h, "*"),
+                n.lookahead(/(?=\()/),
             ],
             scope: { 3: "title.function.invoke" },
-            contains: [O],
+            contains: [v],
         };
-    O.contains.push(v);
-    let y = [h, N, e.C_BLOCK_COMMENT_MODE, u, g, C],
-        A = {
-            begin: a.concat(/#\[\s*\\?/, a.either(i, o)),
+    v.contains.push(C);
+    let R = [N, y, e.C_BLOCK_COMMENT_MODE, f, p, T],
+        O = {
+            begin: n.concat(/#\[\s*\\?/, n.either(s, a)),
             beginScope: "meta",
             end: /]/,
             endScope: "meta",
@@ -275,17 +275,17 @@ e.exports = function (e) {
                     begin: /\[/,
                     end: /]/,
                     keywords: { literal: E, keyword: ["new", "array"] },
-                    contains: ["self", ...y],
+                    contains: ["self", ...R],
                 },
-                ...y,
-                { scope: "meta", variants: [{ match: i }, { match: o }] },
+                ...R,
+                { scope: "meta", variants: [{ match: s }, { match: a }] },
             ],
         };
     return {
         case_insensitive: !1,
-        keywords: T,
+        keywords: A,
         contains: [
-            A,
+            O,
             e.HASH_COMMENT_MODE,
             e.COMMENT("//", "$"),
             e.COMMENT("/\\*", "\\*/", { contains: [{ scope: "doctag", match: "@[A-Za-z]+" }] }),
@@ -308,11 +308,11 @@ e.exports = function (e) {
                 ],
             },
             { scope: "variable.language", match: /\$this\b/ },
-            s,
-            v,
-            N,
-            { match: [/const/, /\s/, r], scope: { 1: "keyword", 3: "variable.constant" } },
+            o,
             C,
+            y,
+            { match: [/const/, /\s/, r], scope: { 1: "keyword", 3: "variable.constant" } },
+            T,
             {
                 scope: "function",
                 relevance: 0,
@@ -330,8 +330,8 @@ e.exports = function (e) {
                         end: "\\)",
                         excludeBegin: !0,
                         excludeEnd: !0,
-                        keywords: T,
-                        contains: ["self", A, s, N, e.C_BLOCK_COMMENT_MODE, u, g],
+                        keywords: A,
+                        contains: ["self", O, o, y, e.C_BLOCK_COMMENT_MODE, f, p],
                     },
                 ],
             },
@@ -359,8 +359,8 @@ e.exports = function (e) {
                 end: ";",
                 contains: [{ match: /\b(as|const|function)\b/, scope: "keyword" }, e.UNDERSCORE_TITLE_MODE],
             },
-            u,
-            g,
+            f,
+            p,
         ],
     };
 };

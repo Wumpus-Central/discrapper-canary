@@ -1,43 +1,43 @@
 "use strict";
-r.d(t, { k: () => a });
-var n = r(672722),
-    s = r(132803),
-    a = function (e, t, r) {
-        if (s.is.fun(e)) return e;
-        if (s.is.arr(e)) return a({ range: e, output: t, extrapolate: r });
-        if (s.is.str(e.output[0])) return n.createStringInterpolator(e);
-        var o = e.output,
-            i = e.range || [0, 1],
-            u = e.extrapolateLeft || e.extrapolate || "extend",
-            c = e.extrapolateRight || e.extrapolate || "extend",
-            l =
+n.d(t, { k: () => s });
+var i = n(672722),
+    r = n(132803),
+    s = function (e, t, n) {
+        if (r.is.fun(e)) return e;
+        if (r.is.arr(e)) return s({ range: e, output: t, extrapolate: n });
+        if (r.is.str(e.output[0])) return i.createStringInterpolator(e);
+        var a = e.output,
+            o = e.range || [0, 1],
+            l = e.extrapolateLeft || e.extrapolate || "extend",
+            u = e.extrapolateRight || e.extrapolate || "extend",
+            c =
                 e.easing ||
                 function (e) {
                     return e;
                 };
         return function (t) {
-            var r = (function (e, t) {
-                for (var r = 1; r < t.length - 1 && !(t[r] >= e); ++r);
-                return r - 1;
-            })(t, i);
-            return (function (e, t, r, n, s, a, o, i, u) {
-                var c = u ? u(e) : e;
-                if (c < t)
-                    if ("identity" === o) return c;
-                    else "clamp" === o && (c = t);
-                if (c > r)
-                    if ("identity" === i) return c;
-                    else "clamp" === i && (c = r);
-                return n === s
-                    ? n
-                    : t === r
+            var n = (function (e, t) {
+                for (var n = 1; n < t.length - 1 && !(t[n] >= e); ++n);
+                return n - 1;
+            })(t, o);
+            return (function (e, t, n, i, r, s, a, o, l) {
+                var u = l ? l(e) : e;
+                if (u < t)
+                    if ("identity" === a) return u;
+                    else "clamp" === a && (u = t);
+                if (u > n)
+                    if ("identity" === o) return u;
+                    else "clamp" === o && (u = n);
+                return i === r
+                    ? i
+                    : t === n
                       ? e <= t
-                          ? n
-                          : s
-                      : (t === -1 / 0 ? (c = -c) : r === 1 / 0 ? (c -= t) : (c = (c - t) / (r - t)),
-                        (c = a(c)),
-                        n === -1 / 0 ? (c = -c) : s === 1 / 0 ? (c += n) : (c = c * (s - n) + n),
-                        c);
-            })(t, i[r], i[r + 1], o[r], o[r + 1], l, u, c, e.map);
+                          ? i
+                          : r
+                      : (t === -1 / 0 ? (u = -u) : n === 1 / 0 ? (u -= t) : (u = (u - t) / (n - t)),
+                        (u = s(u)),
+                        i === -1 / 0 ? (u = -u) : r === 1 / 0 ? (u += i) : (u = u * (r - i) + i),
+                        u);
+            })(t, o[n], o[n + 1], a[n], a[n + 1], c, l, u, e.map);
         };
     };

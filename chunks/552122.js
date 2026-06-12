@@ -1,33 +1,33 @@
 "use strict";
 n.d(t, { A: () => o });
-var r = n(223567);
-function i() {
-    let e = r.A.getIsExperimentEligible();
+var i = n(417146);
+function r() {
+    let e = i.A.getIsExperimentEligible();
     return a() && e;
 }
 function s() {
-    let e = r.A.useIsExperimentEligible();
+    let e = i.A.useIsExperimentEligible();
     return a() && e;
 }
 function a() {
     let e = Date.now();
-    return e >= r.A.startTimeMs && e <= r.A.endTimeMs;
+    return e >= i.A.startTimeMs && e <= i.A.endTimeMs;
 }
 let o = {
-    isEligible: i,
+    isEligible: r,
     useHolidaySoundpack: function () {
-        return s() && null != r.A.soundpack && null != r.A.soundpackLabel
-            ? { soundpack: r.A.soundpack, soundpackLabel: r.A.soundpackLabel }
+        return s() && null != i.A.soundpack && null != i.A.soundpackLabel
+            ? { soundpack: i.A.soundpack, soundpackLabel: i.A.soundpackLabel }
             : null;
     },
     useIsEligible: s,
     getAppSpinnerSources: function () {
-        return a() ? r.A.appSpinnerSources : null;
+        return a() ? i.A.appSpinnerSources : null;
     },
     getLoadingTips: function () {
-        return a() ? r.A.getLoadingTips?.() : null;
+        return a() ? i.A.getLoadingTips?.() : null;
     },
     getHolidaySoundpack: function () {
-        return i() && null != r.A.soundpack ? r.A.soundpack : null;
+        return r() && null != i.A.soundpack ? i.A.soundpack : null;
     },
 };

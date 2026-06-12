@@ -1,17 +1,17 @@
-n.d(t, { e: () => r, n: () => a });
-var i = n(17928),
-    l = n(576705),
-    s = n(652215);
-function a(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.A;
+t.d(c, { e: () => r, n: () => a });
+var u = t(17928),
+    e = t(576705),
+    i = t(652215);
+function a(n) {
+    let c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e.A;
     return (
-        null != e &&
-        null != e.linkedLobby &&
-        t.can(s.xBc.MANAGE_CHANNELS, e) &&
-        t.can(s.xBc.VIEW_CHANNEL, e) &&
-        t.can(s.xBc.SEND_MESSAGES, e)
+        null != n &&
+        null != n.linkedLobby &&
+        c.can(i.xBc.MANAGE_CHANNELS, n) &&
+        c.can(i.xBc.VIEW_CHANNEL, n) &&
+        c.can(i.xBc.SEND_MESSAGES, n)
     );
 }
-function r(e) {
-    return (0, i.bG)([l.A], () => a(e, l.A));
+function r(n) {
+    return (0, u.bG)([e.A], () => a(n, e.A));
 }

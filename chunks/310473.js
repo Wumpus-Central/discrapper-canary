@@ -1,17 +1,17 @@
-var r = n(876666),
-    i = n(752909),
-    a = n(750615);
+var i = n(876666),
+    r = n(752909),
+    s = n(750615);
 e.exports = function (e) {
-    return function (t, n, s) {
+    return function (t, n, a) {
         var o = Object(t);
-        if (!i(t)) {
-            var l = r(n, 3);
-            (t = a(t)),
+        if (!r(t)) {
+            var l = i(n, 3);
+            (t = s(t)),
                 (n = function (e) {
                     return l(o[e], e, o);
                 });
         }
-        var c = e(t, n, s);
-        return c > -1 ? o[l ? t[c] : c] : void 0;
+        var u = e(t, n, a);
+        return u > -1 ? o[l ? t[u] : u] : void 0;
     };
 };

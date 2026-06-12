@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => c });
 var i = n(17928),
     r = n(228366),
     s = n(734057);
@@ -12,7 +12,7 @@ function l(e) {
     let t = a[e] ?? { query: null, loading: !1, results: null };
     return (a[e] = t), t;
 }
-class d extends i.Ay.Store {
+class u extends i.Ay.Store {
     initialize() {
         this.waitFor(s.A);
     }
@@ -34,7 +34,7 @@ class d extends i.Ay.Store {
         return t?.results != null && t.results.length > 0;
     }
 }
-let _ = new d(r.h, {
+let c = new u(r.h, {
     CONNECTION_OPEN: function () {
         a = {};
     },

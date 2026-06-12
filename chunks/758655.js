@@ -13,7 +13,7 @@ var l = n(627968),
     m = n(163437),
     _ = n(166532),
     E = n(566980),
-    T = n(871084),
+    T = n(166926),
     I = n(534479),
     S = n(482132),
     h = n(953761),
@@ -79,7 +79,7 @@ function O(e) {
                                 }),
                   }),
                   (0, l.jsx)(S.UX, {
-                      children: (0, l.jsx)(T.A, {
+                      children: (0, l.jsx)(T.U, {
                           premiumSubscription: v ?? null,
                           onBack: () => null != L && t(L),
                           handleStepChange: t,

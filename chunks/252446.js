@@ -1,5 +1,5 @@
-var r = n(996533),
-    i = n(850361),
+var i = n(996533),
+    r = n(850361),
     s = n(164133),
     a = n(415169);
 function o(t) {
@@ -14,13 +14,13 @@ function o(t) {
                     n.set(e, t);
                 }
                 function t() {
-                    return a(e, arguments, r(this).constructor);
+                    return a(e, arguments, i(this).constructor);
                 }
                 return (
                     (t.prototype = Object.create(e.prototype, {
                         constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
                     })),
-                    i(t, e)
+                    r(t, e)
                 );
             }),
         (e.exports.__esModule = !0),

@@ -6,99 +6,99 @@ var i = n(735438),
     a = n(228366),
     o = n(495544),
     l = n(994500),
-    d = n(461213),
-    _ = n(652215);
-let u = {},
-    c = new Map();
-function E(e, t) {
-    let n = (u[e] ?? {})[t];
+    u = n(461213),
+    c = n(652215);
+let d = {},
+    _ = new Map();
+function h(e, t) {
+    let n = (d[e] ?? {})[t];
     if (null == n) return;
-    let i = u[e];
-    delete i[t], r().isEmpty(i) && delete u[e];
-    let s = c.get(n);
-    null != s && (s.delete(e), 0 === s.size && c.delete(n));
+    let i = d[e];
+    delete i[t], r().isEmpty(i) && delete d[e];
+    let s = _.get(n);
+    null != s && (s.delete(e), 0 === s.size && _.delete(n));
 }
-function h(e, t, n, i) {
+function f(e, t, n, i) {
     let r = n.find((e) => null != e.party && e.party.id),
         s = null != r && null != r.party ? r.party.id : null,
-        a = (u[t] ?? {})[e];
-    if (null == s || i === _.clD.OFFLINE) return null != a && (E(t, e), !0);
+        a = (d[t] ?? {})[e];
+    if (null == s || i === c.clD.OFFLINE) return null != a && (h(t, e), !0);
     if (null != a) {
         if (a === s) return !1;
-        E(t, e);
+        h(t, e);
     }
     return (
         !(function (e, t, n) {
-            let i = u[e];
-            if ((null == i && (i = u[e] = {}), (i[t] = n), l.A.isBlocked(e) || l.A.isIgnored(e))) return;
-            let r = c.get(n) ?? new Set();
-            c.set(n, r), r.add(e);
+            let i = d[e];
+            if ((null == i && (i = d[e] = {}), (i[t] = n), l.A.isBlocked(e) || l.A.isIgnored(e))) return;
+            let r = _.get(n) ?? new Set();
+            _.set(n, r), r.add(e);
         })(t, e, s),
         !0
     );
 }
-function m(e) {
+function p(e) {
     let { guild: t } = e,
         n = !1;
-    for (let { user: e, status: i, activities: r } of t.presences) !1 !== h(t.id, e.id, r, i) && (n = !0);
+    for (let { user: e, status: i, activities: r } of t.presences) !1 !== f(t.id, e.id, r, i) && (n = !0);
     return n;
 }
-function f(e, t) {
+function E(e, t) {
     let n = !1;
     return (
         t.forEach((t) => {
-            null != t && h(e, t.user.id, t.activities, t.status) && (n = !0);
+            null != t && f(e, t.user.id, t.activities, t.status) && (n = !0);
         }),
         n
     );
 }
-function g() {
+function m() {
     let e = o.default.getId(),
-        t = d.A.getActivities();
-    return h(_.ME, e, t);
+        t = u.A.getActivities();
+    return f(c.ME, e, t);
 }
-function p(e) {
+function g(e) {
     let { relationship: t } = e;
     if (!l.A.isBlocked(t.id) && !l.A.isIgnored(t.id)) return !1;
-    let n = u[t.id];
+    let n = d[t.id];
     if (null == n) return !1;
     for (let e of r().values(n)) {
-        let n = c.get(e);
+        let n = _.get(e);
         null != n && n.delete(t.id);
     }
 }
 class A extends s.Ay.Store {
     static displayName = "GamePartyStore";
     initialize() {
-        this.syncWith([d.A], g), this.waitFor(o.default, l.A, d.A);
+        this.syncWith([u.A], m), this.waitFor(o.default, l.A, u.A);
     }
     getParty(e) {
-        return null != e && c.has(e) ? c.get(e) : null;
+        return null != e && _.has(e) ? _.get(e) : null;
     }
     getUserParties() {
-        return u;
+        return d;
     }
     getParties() {
-        return c;
+        return _;
     }
 }
 let I = new A(a.h, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             i = !1;
-        for (let { user: e, status: t, activities: r } of n) null != e && !1 !== h(_.ME, e.id, r, t) && (i = !0);
-        for (let e of t) !1 !== m({ guild: e }) && (i = !0);
+        for (let { user: e, status: t, activities: r } of n) null != e && !1 !== f(c.ME, e.id, r, t) && (i = !0);
+        for (let e of t) !1 !== p({ guild: e }) && (i = !0);
         return i;
     },
     OVERLAY_INITIALIZE: function (e) {
         let { parties: t, userParties: n } = e;
-        (c = new Map()), (u = { ...n }), Object.keys(t).forEach((e) => c.set(e, new Set(t[e])));
+        (_ = new Map()), (d = { ...n }), Object.keys(t).forEach((e) => _.set(e, new Set(t[e])));
     },
-    GUILD_CREATE: m,
+    GUILD_CREATE: p,
     PRESENCES_REPLACE: function (e) {
         let { presences: t } = e,
             n = !1;
-        for (let { user: e, activities: i } of t) null != e && !1 !== h(_.ME, e.id, i) && (n = !0);
+        for (let { user: e, activities: i } of t) null != e && !1 !== f(c.ME, e.id, i) && (n = !0);
         return n;
     },
     PRESENCE_UPDATES: function (e) {
@@ -106,13 +106,13 @@ let I = new A(a.h, {
         return t
             .map((e) => {
                 let { guildId: t, user: n, status: i, activities: r } = e;
-                return h(t ?? _.ME, n.id, r, i);
+                return f(t ?? c.ME, n.id, r, i);
             })
             .some((e) => e);
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
-        return f(
+        return E(
             t,
             n.map((e) => e.presence),
         );
@@ -121,20 +121,20 @@ let I = new A(a.h, {
         let { guildId: t, addedMembers: n } = e;
         return (
             null != n &&
-            f(
+            E(
                 t,
                 n.map((e) => e.presence),
             )
         );
     },
-    RELATIONSHIP_ADD: p,
-    RELATIONSHIP_UPDATE: p,
+    RELATIONSHIP_ADD: g,
+    RELATIONSHIP_UPDATE: g,
     RELATIONSHIP_REMOVE: function (e) {
         let { relationship: t } = e,
-            n = u[t.id];
+            n = d[t.id];
         if (null == n) return !1;
         for (let e of r().values(n)) {
-            let n = c.get(e);
+            let n = _.get(e);
             null != n && n.add(t.id);
         }
     },

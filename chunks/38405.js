@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => c });
 var i = n(668279),
     r = n(39304),
     s = n(228366);
@@ -17,7 +17,7 @@ function a(e) {
 }
 var o = n(723702),
     l = n(19575);
-function d() {
+function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     o.isPlatformEmbedded &&
         l.Ay.updateCrashReporter({
@@ -27,13 +27,13 @@ function d() {
             sentry: { user: { id: e.id ?? "", username: e.username ?? "", email: e.email ?? "" } },
         });
 }
-let _ = {
+let c = {
     setUser(e, t, n, i) {
         let r = { id: e, username: t, email: n, staff: i };
-        window.DiscordSentry?.getCurrentScope().setUser(r), d(r);
+        window.DiscordSentry?.getCurrentScope().setUser(r), u(r);
     },
     clearUser() {
-        window.DiscordSentry?.getCurrentScope().setUser(null), d();
+        window.DiscordSentry?.getCurrentScope().setUser(null), u();
     },
     setTags(e) {
         window.DiscordSentry?.getCurrentScope().setTags(e);

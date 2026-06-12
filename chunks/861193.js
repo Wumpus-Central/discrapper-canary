@@ -1,31 +1,31 @@
 "use strict";
-function n(t) {
-    return "/" === t.charAt(0);
+function i(e) {
+    return "/" === e.charAt(0);
 }
-function o(t, r) {
-    for (var e = r, n = e + 1, o = t.length; n < o; e += 1, n += 1) t[e] = t[n];
-    t.pop();
+function r(e, t) {
+    for (var n = t, i = n + 1, r = e.length; i < r; n += 1, i += 1) e[n] = e[i];
+    e.pop();
 }
-e.d(r, { A: () => i });
-let i = function (t, r) {
-    void 0 === r && (r = "");
-    var e,
-        i = (t && t.split("/")) || [],
-        f = (r && r.split("/")) || [],
-        u = t && n(t),
-        s = r && n(r),
-        a = u || s;
-    if ((t && n(t) ? (f = i) : i.length && (f.pop(), (f = f.concat(i))), !f.length)) return "/";
-    if (f.length) {
-        var h = f[f.length - 1];
-        e = "." === h || ".." === h || "" === h;
-    } else e = !1;
-    for (var p = 0, c = f.length; c >= 0; c--) {
-        var l = f[c];
-        "." === l ? o(f, c) : ".." === l ? (o(f, c), p++) : p && (o(f, c), p--);
+n.d(t, { A: () => s });
+let s = function (e, t) {
+    void 0 === t && (t = "");
+    var n,
+        s = (e && e.split("/")) || [],
+        a = (t && t.split("/")) || [],
+        o = e && i(e),
+        l = t && i(t),
+        u = o || l;
+    if ((e && i(e) ? (a = s) : s.length && (a.pop(), (a = a.concat(s))), !a.length)) return "/";
+    if (a.length) {
+        var c = a[a.length - 1];
+        n = "." === c || ".." === c || "" === c;
+    } else n = !1;
+    for (var d = 0, _ = a.length; _ >= 0; _--) {
+        var h = a[_];
+        "." === h ? r(a, _) : ".." === h ? (r(a, _), d++) : d && (r(a, _), d--);
     }
-    if (!a) for (; p--; ) f.unshift("..");
-    !a || "" === f[0] || (f[0] && n(f[0])) || f.unshift("");
-    var y = f.join("/");
-    return e && "/" !== y.substr(-1) && (y += "/"), y;
+    if (!u) for (; d--; ) a.unshift("..");
+    !u || "" === a[0] || (a[0] && i(a[0])) || a.unshift("");
+    var f = a.join("/");
+    return n && "/" !== f.substr(-1) && (f += "/"), f;
 };

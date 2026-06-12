@@ -1,6 +1,6 @@
-n.d(t, { I: () => p });
-var i = n(735438),
-    l = n.n(i),
+n.d(t, { I: () => g });
+var l = n(735438),
+    i = n.n(l),
     s = n(17928),
     a = n(636537),
     r = n(228366),
@@ -10,12 +10,12 @@ var i = n(735438),
     u = n(652215);
 let h = new Set(),
     m = null;
-function p(e) {
+function g(e) {
     var t;
     let { id: n } = e,
-        { enabled: i = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { enabled: l = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         {
-            loaded: l,
+            loaded: i,
             message: a,
             error: r,
         } = (0, s.cf)([d.A, o.A, c.Ay], () => {
@@ -29,13 +29,13 @@ function p(e) {
         }, [n]),
         u = (0, s.bG)([d.A], () => d.A.shouldLoadMessageRequestPreview(n), [n]);
     return (
-        i && !l && null == a && u && ((t = n), h.add(t), null == m && (m = setTimeout(g, 0))),
-        { loaded: l, error: r, message: a }
+        l && !i && null == a && u && ((t = n), h.add(t), null == m && (m = setTimeout(p, 0))),
+        { loaded: i, error: r, message: a }
     );
 }
-async function g() {
+async function p() {
     try {
-        for (; !l().isEmpty(h); ) await A();
+        for (; !i().isEmpty(h); ) await A();
     } finally {
         m = null;
     }

@@ -1,55 +1,55 @@
-s.d(l, { A: () => m });
-var t = s(627968),
-    r = s(64700),
-    a = s(503698),
-    n = s.n(a),
-    i = s(462887),
-    c = s(534514),
-    o = s(834730),
-    d = s(736653),
-    u = s(611371),
-    x = s(408291);
-function h(e) {
-    let { title: l, betaTag: s, color: r = "text-strong" } = e;
-    return (0, t.jsxs)(c.D, {
-        className: n()(x.DD, x.Zv),
+t.d(l, { A: () => b });
+var s = t(627968),
+    r = t(64700),
+    a = t(503698),
+    n = t.n(a),
+    i = t(462887),
+    c = t(534514),
+    o = t(834730),
+    d = t(736653),
+    u = t(611371),
+    h = t(408291);
+function x(e) {
+    let { title: l, betaTag: t, color: r = "text-strong" } = e;
+    return (0, s.jsxs)(c.D, {
+        className: n()(h.DD, h.Zv),
         variant: "display-lg",
         color: r,
-        children: [l, s && (0, t.jsx)(u.A, { className: x.TN })],
+        children: [l, t && (0, s.jsx)(u.A, { className: h.TN })],
     });
 }
-function m(e) {
-    let { title: l, titleColor: s, description: a, button: c, className: u, children: m, betaTag: b = !1 } = e,
+function b(e) {
+    let { title: l, titleColor: t, description: a, button: c, className: u, children: b, betaTag: m = !1 } = e,
         j = (0, d.Ay)(),
-        v = (0, i.M)(j),
-        f = r.useMemo(
+        f = (0, i.M)(j),
+        v = r.useMemo(
             () =>
                 Array.isArray(l)
-                    ? l.map((e, l) => (0, t.jsx)(h, { title: e, betaTag: b, color: s }, l))
-                    : (0, t.jsx)(h, { title: l, betaTag: b, color: s }),
-            [l, b, s],
+                    ? l.map((e, l) => (0, s.jsx)(x, { title: e, betaTag: m, color: t }, l))
+                    : (0, s.jsx)(x, { title: l, betaTag: m, color: t }),
+            [l, m, t],
         );
-    return (0, t.jsxs)("div", {
-        className: n()(x.kL, u),
+    return (0, s.jsxs)("div", {
+        className: n()(h.kL, u),
         children: [
-            (0, t.jsx)("div", {
-                className: x.Qs,
-                children: (0, t.jsxs)("div", {
-                    className: x.FS,
+            (0, s.jsx)("div", {
+                className: h.Qs,
+                children: (0, s.jsxs)("div", {
+                    className: h.FS,
                     children: [
-                        f,
+                        v,
                         null != a &&
-                            (0, t.jsx)(o.E, {
-                                className: x.h_,
+                            (0, s.jsx)(o.E, {
+                                className: h.h_,
                                 variant: "text-md/medium",
-                                color: v ? "text-muted" : "text-strong",
+                                color: f ? "text-muted" : "text-strong",
                                 children: a,
                             }),
-                        null != c && (0, t.jsx)("div", { className: x.UD, children: c }),
+                        null != c && (0, s.jsx)("div", { className: h.UD, children: c }),
                     ],
                 }),
             }),
-            m,
+            b,
         ],
     });
 }

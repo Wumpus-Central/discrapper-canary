@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     qr: "footer__57c71",
     k0: "subscriberButtonContainer__57c71",
     UX: "upsell__57c71",

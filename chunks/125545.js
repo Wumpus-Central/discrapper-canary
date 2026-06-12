@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Nr: "card__88264",
     hT: "lurking__88264",
     Ms: "padding__88264",

@@ -1,26 +1,26 @@
 "use strict";
-let r;
-function i(e, t) {
+let i;
+function r(e, t) {
     (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, r = Array(t); n < t; n++) r[n] = e[n];
-    return r;
+    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
+    return i;
 }
 "u" > typeof window
-    ? (r = window)
+    ? (i = window)
     : "u" < typeof self
-      ? (console.warn("Using browser-only version of superagent in non-browser environment"), (r = void 0))
-      : (r = self);
+      ? (console.warn("Using browser-only version of superagent in non-browser environment"), (i = void 0))
+      : (i = self);
 let s = n(882630),
     a = n(232859),
     o = n(591560),
     l = n(191203),
     u = n(17101),
-    d = u.isObject,
-    c = u.mixin,
+    c = u.isObject,
+    d = u.mixin,
     _ = u.hasOwn,
-    f = n(531679),
-    E = n(427879);
-function h() {}
+    h = n(531679),
+    f = n(427879);
+function p() {}
 e.exports = function (e, n) {
     return "function" == typeof n
         ? new t.Request("GET", e).end(n)
@@ -28,22 +28,22 @@ e.exports = function (e, n) {
           ? new t.Request("GET", e)
           : new t.Request(e, n);
 };
-let p = (t = e.exports);
+let E = (t = e.exports);
 (t.Request = S),
-    (p.getXHR = () => {
-        if (r.XMLHttpRequest) return new r.XMLHttpRequest();
+    (E.getXHR = () => {
+        if (i.XMLHttpRequest) return new i.XMLHttpRequest();
         throw Error("Browser-only version of superagent could not find XHR");
     });
 let m = "".trim ? (e) => e.trim() : (e) => e.replace(/(^\s*|\s*$)/g, "");
 function g(e) {
-    if (!d(e)) return e;
+    if (!c(e)) return e;
     let t = [];
     for (let n in e)
         _(e, n) &&
-            (function e(t, n, r) {
-                if (void 0 !== r) {
-                    if (null === r) return void t.push(encodeURI(n));
-                    if (Array.isArray(r)) {
+            (function e(t, n, i) {
+                if (void 0 !== i) {
+                    if (null === i) return void t.push(encodeURI(n));
+                    if (Array.isArray(i)) {
                         var s,
                             a = (function (e) {
                                 var t = ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
@@ -52,7 +52,7 @@ function g(e) {
                                         Array.isArray(e) ||
                                         (t = (function (e) {
                                             if (e) {
-                                                if ("string" == typeof e) return i(e, void 0);
+                                                if ("string" == typeof e) return r(e, void 0);
                                                 var t = Object.prototype.toString.call(e).slice(8, -1);
                                                 if (
                                                     ("Object" === t && e.constructor && (t = e.constructor.name),
@@ -63,22 +63,22 @@ function g(e) {
                                                     "Arguments" === t ||
                                                     /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)
                                                 )
-                                                    return i(e, void 0);
+                                                    return r(e, void 0);
                                             }
                                         })(e))
                                     ) {
                                         t && (e = t);
                                         var n = 0,
-                                            r = function () {};
+                                            i = function () {};
                                         return {
-                                            s: r,
+                                            s: i,
                                             n: function () {
                                                 return n >= e.length ? { done: !0 } : { done: !1, value: e[n++] };
                                             },
                                             e: function (e) {
                                                 throw e;
                                             },
-                                            f: r,
+                                            f: i,
                                         };
                                     }
                                     throw TypeError(
@@ -107,19 +107,19 @@ function g(e) {
                                         }
                                     },
                                 };
-                            })(r);
+                            })(i);
                         try {
                             for (a.s(); !(s = a.n()).done; ) {
-                                let r = s.value;
-                                e(t, n, r);
+                                let i = s.value;
+                                e(t, n, i);
                             }
                         } catch (e) {
                             a.e(e);
                         } finally {
                             a.f();
                         }
-                    } else if (d(r)) for (let i in r) _(r, i) && e(t, `${n}[${i}]`, r[i]);
-                    else t.push(encodeURI(n) + "=" + encodeURIComponent(r));
+                    } else if (c(i)) for (let r in i) _(i, r) && e(t, `${n}[${r}]`, i[r]);
+                    else t.push(encodeURI(n) + "=" + encodeURIComponent(i));
                 }
             })(t, n, e[n]);
     return t.join("&");
@@ -127,13 +127,13 @@ function g(e) {
 function A(e) {
     let t,
         n,
-        r = {},
-        i = e.split("&");
-    for (let e = 0, s = i.length; e < s; ++e)
-        -1 === (n = (t = i[e]).indexOf("="))
-            ? (r[decodeURIComponent(t)] = "")
-            : (r[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
-    return r;
+        i = {},
+        r = e.split("&");
+    for (let e = 0, s = r.length; e < s; ++e)
+        -1 === (n = (t = r[e]).indexOf("="))
+            ? (i[decodeURIComponent(t)] = "")
+            : (i[decodeURIComponent(t.slice(0, n))] = decodeURIComponent(t.slice(n + 1)));
+    return i;
 }
 function I(e) {
     return /[/+]json($|[^-\w])/i.test(e);
@@ -153,13 +153,13 @@ function T(e) {
         (this.headers = (function (e) {
             let t,
                 n,
-                r,
                 i,
+                r,
                 s = e.split(/\r?\n/),
                 a = {};
             for (let e = 0, o = s.length; e < o; ++e)
                 -1 !== (t = (n = s[e]).indexOf(":")) &&
-                    ((r = n.slice(0, t).toLowerCase()), (i = m(n.slice(t + 1))), (a[r] = i));
+                    ((i = n.slice(0, t).toLowerCase()), (r = m(n.slice(t + 1))), (a[i] = r));
             return a;
         })(this.xhr.getAllResponseHeaders())),
         (this.header = this.headers),
@@ -180,9 +180,9 @@ function S(e, t) {
         this.on("end", () => {
             let e,
                 t = null,
-                r = null;
+                i = null;
             try {
-                r = new T(n);
+                i = new T(n);
             } catch (e) {
                 return (
                     ((t = Error("Parser is unable to parse the response")).parse = !0),
@@ -195,20 +195,20 @@ function S(e, t) {
                     n.callback(t)
                 );
             }
-            n.emit("response", r);
+            n.emit("response", i);
             try {
-                n._isResponseOK(r) || (e = Error(r.statusText || r.text || "Unsuccessful HTTP response"));
+                n._isResponseOK(i) || (e = Error(i.statusText || i.text || "Unsuccessful HTTP response"));
             } catch (t) {
                 e = t;
             }
             e
-                ? ((e.original = t), (e.response = r), (e.status = e.status || r.status), n.callback(e, r))
-                : n.callback(null, r);
+                ? ((e.original = t), (e.response = i), (e.status = e.status || i.status), n.callback(e, i))
+                : n.callback(null, i);
         });
 }
-(p.serializeObject = g),
-    (p.parseString = A),
-    (p.types = {
+(E.serializeObject = g),
+    (E.parseString = A),
+    (E.types = {
         html: "text/html",
         json: "application/json",
         xml: "text/xml",
@@ -216,43 +216,43 @@ function S(e, t) {
         form: "application/x-www-form-urlencoded",
         "form-data": "application/x-www-form-urlencoded",
     }),
-    (p.serialize = { "application/x-www-form-urlencoded": o.stringify, "application/json": a }),
-    (p.parse = { "application/x-www-form-urlencoded": A, "application/json": JSON.parse }),
-    c(T.prototype, f.prototype),
+    (E.serialize = { "application/x-www-form-urlencoded": o.stringify, "application/json": a }),
+    (E.parse = { "application/x-www-form-urlencoded": A, "application/json": JSON.parse }),
+    d(T.prototype, h.prototype),
     (T.prototype._parseBody = function (e) {
-        let t = p.parse[this.type];
+        let t = E.parse[this.type];
         return this.req._parser
             ? this.req._parser(this, e)
-            : (!t && I(this.type) && (t = p.parse["application/json"]),
+            : (!t && I(this.type) && (t = E.parse["application/json"]),
               t && e && (e.length > 0 || e instanceof Object) ? t(e) : null);
     }),
     (T.prototype.toError = function () {
         let e = this.req,
             t = e.method,
             n = e.url,
-            r = Error(`cannot ${t} ${n} (${this.status})`);
-        return (r.status = this.status), (r.method = t), (r.url = n), r;
+            i = Error(`cannot ${t} ${n} (${this.status})`);
+        return (i.status = this.status), (i.method = t), (i.url = n), i;
     }),
-    (p.Response = T),
+    (E.Response = T),
     s(S.prototype),
-    c(S.prototype, l.prototype),
+    d(S.prototype, l.prototype),
     (S.prototype.type = function (e) {
-        return this.set("Content-Type", p.types[e] || e), this;
+        return this.set("Content-Type", E.types[e] || e), this;
     }),
     (S.prototype.accept = function (e) {
-        return this.set("Accept", p.types[e] || e), this;
+        return this.set("Accept", E.types[e] || e), this;
     }),
     (S.prototype.auth = function (e, t, n) {
         1 == arguments.length && (t = ""),
             "object" == typeof t && null !== t && ((n = t), (t = "")),
             n || (n = { type: "function" == typeof btoa ? "basic" : "auto" });
-        let r = n.encoder
+        let i = n.encoder
             ? n.encoder
             : (e) => {
                   if ("function" == typeof btoa) return btoa(e);
                   throw Error("Cannot use basic auth, btoa is not a function");
               };
-        return this._auth(e, t, n, r);
+        return this._auth(e, t, n, i);
     }),
     (S.prototype.query = function (e) {
         return "string" != typeof e && (e = g(e)), e && this._query.push(e), this;
@@ -265,7 +265,7 @@ function S(e, t) {
         return this;
     }),
     (S.prototype._getFormData = function () {
-        return this._formData || (this._formData = new r.FormData()), this._formData;
+        return this._formData || (this._formData = new i.FormData()), this._formData;
     }),
     (S.prototype.callback = function (e, t) {
         if (this._shouldRetry(e, t)) return this._retry();
@@ -295,7 +295,7 @@ function S(e, t) {
     (S.prototype.end = function (e) {
         this._endCalled && console.warn("Warning: .end() was called twice. This is not supported in superagent"),
             (this._endCalled = !0),
-            (this._callback = e || h),
+            (this._callback = e || p),
             this._finalizeQueryString(),
             this._end();
     }),
@@ -310,14 +310,14 @@ function S(e, t) {
     (S.prototype._end = function () {
         if (this._aborted) return this.callback(Error("The request has been aborted even before .end() was called"));
         let e = this;
-        this.xhr = p.getXHR();
+        this.xhr = E.getXHR();
         let t = this.xhr,
             n = this._formData || this._data;
         this._setTimeouts(),
             t.addEventListener("readystatechange", () => {
                 let n,
-                    r = t.readyState;
-                if ((r >= 2 && e._responseTimeoutTimer && clearTimeout(e._responseTimeoutTimer), 4 === r)) {
+                    i = t.readyState;
+                if ((i >= 2 && e._responseTimeoutTimer && clearTimeout(e._responseTimeoutTimer), 4 === i)) {
                     try {
                         n = t.status;
                     } catch (e) {
@@ -330,7 +330,7 @@ function S(e, t) {
                     e.emit("end");
                 }
             });
-        let r = (t, n) => {
+        let i = (t, n) => {
             n.total > 0 &&
                 ((n.percent = (n.loaded / n.total) * 100), 100 === n.percent && clearTimeout(e._uploadTimeoutTimer)),
                 (n.direction = t),
@@ -338,8 +338,8 @@ function S(e, t) {
         };
         if (this.hasListeners("progress"))
             try {
-                t.addEventListener("progress", r.bind(null, "download")),
-                    t.upload && t.upload.addEventListener("progress", r.bind(null, "upload"));
+                t.addEventListener("progress", i.bind(null, "download")),
+                    t.upload && t.upload.addEventListener("progress", i.bind(null, "upload"));
             } catch (e) {}
         t.upload && this._setUploadTimeout();
         try {
@@ -358,8 +358,8 @@ function S(e, t) {
                 !this._isHost(n))
         ) {
             let e = this._header["content-type"],
-                t = this._serializer || p.serialize[e ? e.split(";")[0] : ""];
-            !t && I(e) && (t = p.serialize["application/json"]), t && (n = t(n));
+                t = this._serializer || E.serialize[e ? e.split(";")[0] : ""];
+            !t && I(e) && (t = E.serialize["application/json"]), t && (n = t(n));
         }
         for (let e in this.header)
             null !== this.header[e] && _(this.header, e) && t.setRequestHeader(e, this.header[e]);
@@ -367,42 +367,42 @@ function S(e, t) {
             this.emit("request", this),
             t.send(void 0 === n ? null : n);
     }),
-    (p.agent = () => new E());
+    (E.agent = () => new f());
 for (var y = 0, N = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; y < N.length; y++) {
     let e = N[y];
-    E.prototype[e.toLowerCase()] = function (t, n) {
-        let r = new p.Request(e, t);
-        return this._setDefaults(r), n && r.end(n), r;
+    f.prototype[e.toLowerCase()] = function (t, n) {
+        let i = new E.Request(e, t);
+        return this._setDefaults(i), n && i.end(n), i;
     };
 }
-function O(e, t, n) {
-    let r = p("DELETE", e);
-    return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
+function v(e, t, n) {
+    let i = E("DELETE", e);
+    return "function" == typeof t && ((n = t), (t = null)), t && i.send(t), n && i.end(n), i;
 }
-(E.prototype.del = E.prototype.delete),
-    (p.get = (e, t, n) => {
-        let r = p("GET", e);
-        return "function" == typeof t && ((n = t), (t = null)), t && r.query(t), n && r.end(n), r;
+(f.prototype.del = f.prototype.delete),
+    (E.get = (e, t, n) => {
+        let i = E("GET", e);
+        return "function" == typeof t && ((n = t), (t = null)), t && i.query(t), n && i.end(n), i;
     }),
-    (p.head = (e, t, n) => {
-        let r = p("HEAD", e);
-        return "function" == typeof t && ((n = t), (t = null)), t && r.query(t), n && r.end(n), r;
+    (E.head = (e, t, n) => {
+        let i = E("HEAD", e);
+        return "function" == typeof t && ((n = t), (t = null)), t && i.query(t), n && i.end(n), i;
     }),
-    (p.options = (e, t, n) => {
-        let r = p("OPTIONS", e);
-        return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
+    (E.options = (e, t, n) => {
+        let i = E("OPTIONS", e);
+        return "function" == typeof t && ((n = t), (t = null)), t && i.send(t), n && i.end(n), i;
     }),
-    (p.del = O),
-    (p.delete = O),
-    (p.patch = (e, t, n) => {
-        let r = p("PATCH", e);
-        return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
+    (E.del = v),
+    (E.delete = v),
+    (E.patch = (e, t, n) => {
+        let i = E("PATCH", e);
+        return "function" == typeof t && ((n = t), (t = null)), t && i.send(t), n && i.end(n), i;
     }),
-    (p.post = (e, t, n) => {
-        let r = p("POST", e);
-        return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
+    (E.post = (e, t, n) => {
+        let i = E("POST", e);
+        return "function" == typeof t && ((n = t), (t = null)), t && i.send(t), n && i.end(n), i;
     }),
-    (p.put = (e, t, n) => {
-        let r = p("PUT", e);
-        return "function" == typeof t && ((n = t), (t = null)), t && r.send(t), n && r.end(n), r;
+    (E.put = (e, t, n) => {
+        let i = E("PUT", e);
+        return "function" == typeof t && ((n = t), (t = null)), t && i.send(t), n && i.end(n), i;
     });

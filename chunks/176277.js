@@ -1,5 +1,5 @@
 e.exports = {
-    oO: "popover__1bad5 " + a(824078).popover,
+    oO: "popover__1bad5 " + _(824078).popover,
     vW: "inner__1bad5",
     DD: "title__1bad5",
     p_: "list__1bad5",

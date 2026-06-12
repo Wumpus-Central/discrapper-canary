@@ -2,10 +2,10 @@
 n.d(t, {
     Hi: () => p,
     LQ: () => l,
-    OE: () => h,
+    OE: () => f,
     VH: () => d,
     W_: () => _,
-    XK: () => f,
+    XK: () => h,
     hj: () => c,
     kw: () => u,
     sm: () => o,
@@ -21,7 +21,7 @@ let l = "RPC_PRIVATE_SCOPE",
     c = "RPC_LOCAL_SCOPE",
     d = "RPC_AUTHENTICATED_SCOPE",
     _ = "RPC_EMBEDDED_APP_SCOPE";
-var f =
+var h =
     (((r = {}).USER_SETTINGS = "USER_SETTINGS"),
     (r.CHANGELOG = "CHANGELOG"),
     (r.LIBRARY = "LIBRARY"),
@@ -40,7 +40,7 @@ var f =
     (r.ONE_TIME_LOGIN = "ONE_TIME_LOGIN"),
     (r.PLAYGROUND = "PLAYGROUND"),
     r);
-function h(e) {
+function f(e) {
     switch (e) {
         case "USER_SETTINGS":
             return "settings";

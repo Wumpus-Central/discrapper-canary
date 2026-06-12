@@ -1,11 +1,11 @@
-o.d(e, { Q: () => l });
+o.d(e, { Q: () => s });
 var t = o(627968);
 o(64700);
-let a =
+let i =
     "https://cdn.discordapp.com/assets/content/a9d4129fe10ee310d96f95d04fbf382b9c26914a30780ebb307e908a826248f2.riv";
-var i = o(502377),
-    n = o(799226);
-let s = {
+var a = o(594639),
+    n = o(105596);
+let l = {
     "box-wumpus": {},
     "+++1_BOX_nested_comp_0": {},
     "+++1_BOX_nested_comp_4": {},
@@ -13,19 +13,19 @@ let s = {
     "+++1_BOX_nested_comp_2": {},
     "+++1_BOX_nested_comp_3": {},
 };
-function l(r) {
-    let { artboard: e = "box-wumpus", stateMachine: o, ...l } = r,
-        { status: c, buffer: b } = (0, n.CE)(a),
-        d = (0, n.m2)(a);
-    return c === n.BW.Loading
+function s(r) {
+    let { artboard: e = "box-wumpus", stateMachine: o, ...s } = r,
+        { status: b, buffer: c } = (0, n.CE)(i),
+        d = (0, n.m2)(i);
+    return b === n.BW.Loading
         ? null
-        : (0, t.jsx)(i.w, {
+        : (0, t.jsx)(a.w, {
               ...(d ? { key: "override" } : {}),
-              buffer: b,
+              buffer: c,
               artboard: e,
               stateMachine: o,
-              artboardProperties: s,
-              ...l,
+              artboardProperties: l,
+              ...s,
           });
 }
-l.riveSrc = a;
+s.riveSrc = i;

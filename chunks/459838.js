@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { WI: () => h, hB: () => p, gO: () => d, Qo: () => c, yq: () => o.y, x: () => u.x, bg: () => l, Tr: () => _ });
+n.d(t, { WI: () => f, hB: () => p, gO: () => d, Qo: () => c, yq: () => o.y, x: () => u.x, bg: () => l, Tr: () => _ });
 var i,
     r,
     s,
@@ -44,7 +44,7 @@ var i,
         (((a = {}).CAMERA_BACKGROUND_PREVIEW = "cameraBackgroundPreview"),
         (a.CAMERA_BACKGROUND_LIVE = "cameraBackgroundLive"),
         a);
-function f(e) {
+function h(e) {
     switch (e) {
         case u.Ku.NATIVE:
             return n(206959).A;
@@ -55,9 +55,9 @@ function f(e) {
             return n(432351).A;
     }
 }
-function h() {
-    return [u.Ku.NATIVE, u.Ku.WEBRTC].find((e) => f(e).supported()) ?? u.Ku.DUMMY;
+function f() {
+    return [u.Ku.NATIVE, u.Ku.WEBRTC].find((e) => h(e).supported()) ?? u.Ku.DUMMY;
 }
 function p(e) {
-    return new (f(e))();
+    return new (h(e))();
 }

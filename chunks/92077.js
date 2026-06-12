@@ -1,35 +1,35 @@
 "use strict";
 n.d(t, {
     BK: () => b,
-    BO: () => C,
+    BO: () => v,
     K3: () => T,
     NQ: () => S,
     Ts: () => m,
-    U: () => N,
-    Vt: () => O,
-    ZT: () => v,
-    jU: () => R,
+    U: () => y,
+    Vt: () => R,
+    ZT: () => C,
+    jU: () => O,
     oc: () => A,
     qv: () => I,
-    v7: () => y,
+    v7: () => N,
     zr: () => g,
 });
 var i = n(636537),
     r = n(228366),
     s = n(587895),
-    a = n(328153),
+    a = n(952818),
     o = n(976860),
     l = n(885386),
     u = n(775228),
     c = n(174459),
     d = n(645243),
     _ = n(738533),
-    f = n(962052),
-    h = n(356645),
+    h = n(962052),
+    f = n(356645),
     p = n(652215),
     E = n(375708);
 function m(e, t) {
-    f.A.init({
+    h.A.init({
         userToken: e,
         userId: t,
         installPaths: u.A.installationPaths,
@@ -43,11 +43,11 @@ function m(e, t) {
     });
 }
 function g() {
-    f.A.destroy();
+    h.A.destroy();
 }
 function A(e) {
     let { application: t, branchId: n, buildId: i, manifestIds: s, installationPath: a, analyticsLocation: o } = e;
-    f.A.setTargetManifest({
+    h.A.setTargetManifest({
         applicationId: t.id,
         applicationName: t.name,
         applicationIcon: t.icon,
@@ -65,7 +65,7 @@ function A(e) {
         });
 }
 function I(e, t, n) {
-    (0, h.n)(e.id, t).then(() => {
+    (0, f.n)(e.id, t).then(() => {
         r.h.dispatch({ type: "DISPATCH_APPLICATION_REPAIR", applicationId: e.id, branchId: t });
     }),
         c.default.track(p.HAw.LIBRARY_REPAIR_INITIATED, {
@@ -81,7 +81,7 @@ function T(e, t, n, i) {
         if (a.Ay.getRunningDiscordApplicationIds().includes(e.id)) return;
         let r = u.A.getInstallationPath(e.id, t);
         if (null == r) throw Error(`Missing installation path for application: ${e.id} ${t}`);
-        f.A.setTargetManifest({
+        h.A.setTargetManifest({
             applicationId: e.id,
             applicationName: e.name,
             applicationIcon: e.icon,
@@ -103,25 +103,25 @@ function S(e, t, n) {
             sku_id: i.primarySkuId,
             location: n,
         })),
-        f.A.uninstall(e, t),
+        h.A.uninstall(e, t),
         r.h.dispatch({ type: "DISPATCH_APPLICATION_UNINSTALL", applicationId: e, branchId: t });
 }
-function N() {
-    f.A.resume();
-}
 function y() {
-    f.A.pause();
+    h.A.resume();
 }
-function C(e, t) {
-    r.h.dispatch({ type: "DISPATCH_APPLICATION_MOVE_UP", applicationId: e, branchId: t });
+function N() {
+    h.A.pause();
 }
 function v(e, t) {
-    f.A.cancel(e, t), r.h.dispatch({ type: "DISPATCH_APPLICATION_CANCEL", applicationId: e, branchId: t });
+    r.h.dispatch({ type: "DISPATCH_APPLICATION_MOVE_UP", applicationId: e, branchId: t });
 }
-function O(e, t) {
-    r.h.dispatch({ type: "DISPATCH_APPLICATION_REMOVE_FINISHED", applicationId: e, branchId: t });
+function C(e, t) {
+    h.A.cancel(e, t), r.h.dispatch({ type: "DISPATCH_APPLICATION_CANCEL", applicationId: e, branchId: t });
 }
 function R(e, t) {
+    r.h.dispatch({ type: "DISPATCH_APPLICATION_REMOVE_FINISHED", applicationId: e, branchId: t });
+}
+function O(e, t) {
     let n = s.A.getApplication(e);
     null != n && _.A.createShortcuts(l.uB.getSetting(), l.Pf.getSetting(), n.name, n.id, t.installPath);
 }

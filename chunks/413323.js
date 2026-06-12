@@ -1,32 +1,32 @@
 "use strict";
 let i, r;
-n.d(t, { Ay: () => k, Zs: () => y });
+n.d(t, { Ay: () => P, Zs: () => R });
 var s = n(143236),
     a = n(424899),
     o = n.n(a),
     l = n(175259),
-    d = n(791332),
-    _ = n.n(d);
-let { newline: u, paragraph: c, url: E, link: h, strong: m, u: f, br: g, em: p, image: A, text: I } = d.defaultRules,
+    u = n(791332),
+    c = n.n(u);
+let { newline: d, paragraph: _, url: h, link: f, strong: p, u: E, br: m, em: g, image: A, text: I } = u.defaultRules,
     T = {
-        newline: u,
-        paragraph: c,
-        url: E,
+        newline: d,
+        paragraph: _,
+        url: h,
         link: {
-            ...h,
+            ...f,
             parse(e, t, n) {
-                let i = h.parse(e, t, n);
+                let i = f.parse(e, t, n);
                 return (i.context = n.context), i;
             },
         },
-        strong: m,
-        u: f,
-        br: g,
-        em: p,
+        strong: p,
+        u: E,
+        br: m,
+        em: g,
         image: A,
         hook: {
             order: I.order,
-            match: (0, d.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
+            match: (0, u.inlineRegex)(/^\$\[(.*?)\]\((\w+)\)/),
             parse(e, t, n) {
                 let { context: i } = n;
                 return { render: i[e[2]], content: t(e[1], n) };
@@ -35,7 +35,7 @@ let { newline: u, paragraph: c, url: E, link: h, strong: m, u: f, br: g, em: p, 
         },
         noparse: {
             order: I.order,
-            match: (0, d.inlineRegex)(/^!!(\d+?)!!/),
+            match: (0, u.inlineRegex)(/^!!(\d+?)!!/),
             parse(e, t, n) {
                 let { unsafeContext: i } = n,
                     r = i[e[1]];
@@ -46,15 +46,15 @@ let { newline: u, paragraph: c, url: E, link: h, strong: m, u: f, br: g, em: p, 
         text: I,
     },
     S = /\{.+?\}/,
-    N = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
-    C = /!!/,
-    R = /!!/g;
-class O {
+    y = /[~*_]{2}.+?[~*_]{2}|\[.*?\]\(.+?\)|\n\n/,
+    N = /!!/,
+    v = /!!/g;
+class C {
     message;
     hasMarkdown;
     intlMessage;
     constructor(e, t, n) {
-        (this.message = n ? e : e.replace(R, "")),
+        (this.message = n ? e : e.replace(v, "")),
             (this.hasMarkdown = n),
             (this.intlMessage = new (o())(this.message, t));
     }
@@ -71,7 +71,7 @@ class O {
         return this.intlMessage.format(e);
     }
     getContext(e) {
-        let t = C.test(this.message),
+        let t = N.test(this.message),
             n = {};
         if (t) {
             let t = 0;
@@ -80,23 +80,23 @@ class O {
         return [e, n];
     }
 }
-function y(e) {
+function R(e) {
     let t, n, s;
-    (t = _().parserFor(e(T))),
-        (n = _().reactFor(_().ruleOutput(T, "react"))),
+    (t = c().parserFor(e(T))),
+        (n = c().reactFor(c().ruleOutput(T, "react"))),
         (i = (e, i, r) => {
             let s = !e.includes("\n\n");
             return s || (e += "\n\n"), n(t(e, { inline: s, context: i, unsafeContext: r }));
         }),
-        (s = _().parserFor(T)),
+        (s = c().parserFor(T)),
         (r = (e, t, n) => s(e + "\n\n", { inline: !1, context: t, unsafeContext: n }));
 }
-function v(e, t) {
+function O(e, t) {
     if (null == e) return "";
-    null == i && y(n(759794).A), (e = e.replace(/^\n+|\n+$/g, ""));
+    null == i && R(n(759794).A), (e = e.replace(/^\n+|\n+$/g, ""));
     let r = S.test(e),
-        s = N.test(e);
-    return r || s ? new O(e, t, s) : e;
+        s = y.test(e);
+    return r || s ? new C(e, t, s) : e;
 }
 (n.g.IntlMessageFormat = o()),
     n(718931),
@@ -129,9 +129,9 @@ function v(e, t) {
     n(525919),
     delete n.g.IntlMessageFormat,
     "u" < typeof Intl && n(426586);
-let D = "en-US";
-class L {
-    _context = { messages: {}, defaultMessages: {}, locale: D };
+let b = "en-US";
+class D {
+    _context = { messages: {}, defaultMessages: {}, locale: b };
     _parsedMessages = {};
     _getParsedMessages;
     constructor(e) {
@@ -141,7 +141,7 @@ class L {
         return this._parsedMessages;
     }
 }
-class b extends L {
+class L extends D {
     refresh(e) {
         (this._context = e), this._refresh(e, this._parsedMessages);
     }
@@ -161,7 +161,7 @@ class b extends L {
         };
     })();
 }
-class w extends L {
+class w extends D {
     constructor(e) {
         super(e), (this._parsedMessages = this._createProxy(this._context));
     }
@@ -179,7 +179,7 @@ class w extends L {
         };
     })();
 }
-class P extends s.EventEmitter {
+class M extends s.EventEmitter {
     Messages;
     loadPromise = Promise.resolve();
     initialLanguageLoad;
@@ -196,7 +196,7 @@ class P extends s.EventEmitter {
             })),
             Intl.__addLocaleData && Intl.__addLocaleData(n(217671)),
             (this._languages = i()),
-            (this._provider = null != window.Proxy ? new w(this._getParsedMessages) : new b(this._getParsedMessages)),
+            (this._provider = null != window.Proxy ? new w(this._getParsedMessages) : new L(this._getParsedMessages)),
             (this.Messages = this._provider.getMessages()),
             (this._getMessages = t);
         try {
@@ -223,7 +223,7 @@ class P extends s.EventEmitter {
             this.emit("locale", this._chosenLocale, t);
     }
     setUpdateRules(e) {
-        y(e);
+        R(e);
     }
     getLanguages() {
         return this._languages;
@@ -251,7 +251,7 @@ class P extends s.EventEmitter {
         return this._languages.find((e) => e.code === this._chosenLocale);
     }
     getDefaultLocale() {
-        let e = (0, l.c)() ?? D,
+        let e = (0, l.c)() ?? b,
             t = this._languages
                 .filter((e) => {
                     let { enabled: t } = e;
@@ -266,8 +266,8 @@ class P extends s.EventEmitter {
         return t.includes(n[0])
             ? n[0]
             : "zh" === n[0] && n.length > 1 && "Hant" === n[1]
-              ? (t.find((e) => "zh-TW" === e) ?? D)
-              : (t.find((e) => e.split("-")[0] === n[0]) ?? D);
+              ? (t.find((e) => "zh-TW" === e) ?? b)
+              : (t.find((e) => e.split("-")[0] === n[0]) ?? b);
     }
     _loadMessagesForLocale(e) {
         let t = this._fetchMessages(e);
@@ -276,7 +276,7 @@ class P extends s.EventEmitter {
             : (this._applyMessagesForLocale(t, e), Promise.resolve());
     }
     _applyMessagesForLocale(e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this._findMessages(D);
+        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : this._findMessages(b);
         this._requestedLocale === t &&
             (this._provider.refresh({ messages: e, defaultMessages: n, locale: t }), this.resolveLanguageLoaded());
     }
@@ -285,13 +285,13 @@ class P extends s.EventEmitter {
             a = i[t] || r[t];
         if ("object" == typeof a) return n({ messages: a, defaultMessages: r[t], locale: s });
         try {
-            return v(a, s);
+            return O(a, s);
         } catch (e) {
             if (
                 (console.warn(`Failed parsing intl key '${String(t)}' in locale '${s}' defaulting to English`, e),
                 "string" == typeof (a = r[t]))
             )
-                return v(a, s);
+                return O(a, s);
         }
         return "";
     };
@@ -302,13 +302,13 @@ class P extends s.EventEmitter {
     }
     _fetchMessages(e) {
         let t =
-            e === D
+            e === b
                 ? () => {
-                      throw Error(`Error Loading ${D}`);
+                      throw Error(`Error Loading ${b}`);
                   }
                 : () =>
                       (console.warn("Unsupported Locale", e), -1 === e.indexOf("-"))
-                          ? this._fetchMessages(D)
+                          ? this._fetchMessages(b)
                           : this._fetchMessages(e.split("-")[0]);
         try {
             let n = this._getMessages(e);
@@ -321,4 +321,4 @@ class P extends s.EventEmitter {
         "locale" === e && this.emit(e, this._chosenLocale);
     };
 }
-let k = P;
+let P = M;

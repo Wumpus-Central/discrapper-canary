@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     j8: "tileBaseContainer__71eb2",
     iA: "tileContainer__71eb2 tileBaseContainer__71eb2",
     FS: "textContainer__71eb2",

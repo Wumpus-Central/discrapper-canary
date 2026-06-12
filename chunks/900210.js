@@ -1,85 +1,85 @@
-i.d(t, { A: () => h, W: () => s });
-var n,
-    l = i(17928),
-    a = i(228366),
-    s = (((n = {}).HOVER = "HOVER"), (n.EXTERNAL = "EXTERNAL"), (n.RANDOM = "RANDOM"), n);
+n.d(t, { A: () => m, W: () => r });
+var i,
+    l = n(17928),
+    a = n(228366),
+    r = (((i = {}).HOVER = "HOVER"), (i.EXTERNAL = "EXTERNAL"), (i.RANDOM = "RANDOM"), i);
 let o = {},
-    r = {},
+    s = {},
     u = {},
-    d = (e, t) => {
-        let i = null != t.id ? t.id : t.name;
-        return `${e}:${i}`;
+    c = (e, t) => {
+        let n = null != t.id ? t.id : t.name;
+        return `${e}:${n}`;
     };
-class c extends l.Ay.Store {
+class d extends l.Ay.Store {
     static displayName = "BurstReactionEffectsStore";
-    getReactionPickerAnimation(e, t, i) {
-        return o[`${e}:${t}:${i ?? ""}`];
+    getReactionPickerAnimation(e, t, n) {
+        return o[`${e}:${t}:${n ?? ""}`];
     }
-    getEffectForEmojiId(e, t, i) {
-        let n = d(t, i);
-        return r[e]?.[n];
+    getEffectForEmojiId(e, t, n) {
+        let i = c(t, n);
+        return s[e]?.[i];
     }
 }
-let h = new c(a.h, {
+let m = new d(a.h, {
     BURST_REACTION_EFFECT_CLEAR: (e) => {
-        let { channelId: t, messageId: i, emoji: n } = e,
-            l = d(i, n);
-        delete r[t]?.[l];
+        let { channelId: t, messageId: n, emoji: i } = e,
+            l = c(n, i);
+        delete s[t]?.[l];
     },
     BURST_REACTION_EFFECT_PLAY: (e) => {
-        let { channelId: t, messageId: i, emoji: n, key: l } = e,
-            a = d(i, n);
+        let { channelId: t, messageId: n, emoji: i, key: l } = e,
+            a = c(n, i);
         if (
             ((e, t) => {
-                let i;
+                let n;
                 switch (e) {
                     case "HOVER":
-                        i = "HOVER";
+                        n = "HOVER";
                         break;
                     case "RANDOM":
-                        i = "RANDOM";
+                        n = "RANDOM";
                         break;
                     default:
-                        i = "EXTERNAL";
+                        n = "EXTERNAL";
                 }
-                let n = Object.fromEntries(
-                    Object.entries(r[t] ?? {}).filter((e) => {
+                let i = Object.fromEntries(
+                    Object.entries(s[t] ?? {}).filter((e) => {
                         let [, t] = e;
-                        return t === i;
+                        return t === n;
                     }),
                 );
-                if (Object.keys(n).length >= 5 && "EXTERNAL" === e) {
-                    for (let e in n)
+                if (Object.keys(i).length >= 5 && "EXTERNAL" === e) {
+                    for (let e in i)
                         if (null == u[t] || null == u[t][e]) {
-                            delete r[t][e], delete n[e];
+                            delete s[t][e], delete i[e];
                             break;
                         }
                 }
-                return Object.keys(n).length;
+                return Object.keys(i).length;
             })(l, t) >= 5
         )
             return;
-        let s = r[t] ?? {},
+        let r = s[t] ?? {},
             o = (u[t] ?? {})[a],
-            c = s[a];
-        ("HOVER" !== l || null == c) &&
-            ("HOVER" === c &&
+            d = r[a];
+        ("HOVER" !== l || null == d) &&
+            ("HOVER" === d &&
                 "EXTERNAL" === l &&
                 null != o &&
-                ("function" == typeof o.destroy && o.destroy(), delete u[t]?.[a], (c = void 0)),
-            null == c && (null != r[t] ? (r[t][a] = l) : (r[t] = { [a]: l })));
+                ("function" == typeof o.destroy && o.destroy(), delete u[t]?.[a], (d = void 0)),
+            null == d && (null != s[t] ? (s[t][a] = l) : (s[t] = { [a]: l })));
     },
     BURST_REACTION_ANIMATION_ADD: (e) => {
-        let { channelId: t, messageId: i, emoji: n, animation: l } = e,
-            a = d(i, n);
+        let { channelId: t, messageId: n, emoji: i, animation: l } = e,
+            a = c(n, i);
         null == u[t] && (u[t] = {}), (u[t][a] = l);
     },
     BURST_REACTION_PICKER_ANIMATION_ADD: (e) => {
-        let { messageId: t, emojiName: i, emojiId: n, startPosition: l } = e;
-        o[`${t}:${i}:${n ?? ""}`] = l;
+        let { messageId: t, emojiName: n, emojiId: i, startPosition: l } = e;
+        o[`${t}:${n}:${i ?? ""}`] = l;
     },
     BURST_REACTION_PICKER_ANIMATION_CLEAR: (e) => {
-        let { messageId: t, emojiName: i, emojiId: n } = e;
-        delete o[`${t}:${i}:${n ?? ""}`];
+        let { messageId: t, emojiName: n, emojiId: i } = e;
+        delete o[`${t}:${n}:${i ?? ""}`];
     },
 });

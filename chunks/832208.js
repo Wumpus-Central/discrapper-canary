@@ -1,12 +1,12 @@
 n.d(t, { A: () => d });
 var l = n(627968),
-    a = n(64700),
+    r = n(64700),
     i = n(503698),
-    r = n.n(i),
+    a = n.n(i),
     s = n(452027),
     o = n(235986),
     u = n(536439);
-class c extends a.PureComponent {
+class c extends r.PureComponent {
     state = { changedSinceError: new Set() };
     componentDidUpdate(e) {
         if (this.props.formError !== e.formError) this.setState({ changedSinceError: new Set() });
@@ -25,33 +25,33 @@ class c extends a.PureComponent {
         return null != t[e] ? t[e] : null == n || this.state.changedSinceError.has(e) ? null : n.getFieldMessage(e);
     }
     renderFormSection = (e) => {
-        let { values: t, onFieldChange: n, onFieldFocus: a, onFieldBlur: i, layout: o, ...u } = this.props,
+        let { values: t, onFieldChange: n, onFieldFocus: r, onFieldBlur: i, layout: o, ...u } = this.props,
             {
                 getClassNameForLayout: c,
                 renderInput: d,
                 title: p,
                 name: m,
                 id: h,
-                placeholder: C,
-                helperText: A,
-                ...E
+                placeholder: A,
+                helperText: E,
+                ...C
             } = e,
             y = {
-                ...E,
-                placeholder: C?.(),
+                ...C,
+                placeholder: A?.(),
                 error: this.getError(m),
                 value: t[m],
                 name: m,
                 "aria-labelledby": h,
                 onChange: n,
-                onFocus: a,
+                onFocus: r,
                 onBlur: i,
             };
         return (0, l.jsx)(
             "div",
             {
-                className: r()(c?.(o)),
-                children: (0, l.jsx)(s.D, { id: h, label: p(), helperText: A?.(), children: d(y, u, o) }),
+                className: a()(c?.(o)),
+                children: (0, l.jsx)(s.D, { id: h, label: p(), helperText: E?.(), children: d(y, u, o) }),
             },
             m,
         );
@@ -60,7 +60,7 @@ class c extends a.PureComponent {
         let t = e.fields.map(this.renderFormSection);
         return (0, l.jsx)(
             o.A,
-            { className: r()(u.nM, e.className), children: t },
+            { className: a()(u.nM, e.className), children: t },
             e.fields.map((e) => e.name).join(""),
         );
     };

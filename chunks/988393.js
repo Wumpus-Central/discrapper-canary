@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { N: () => f });
+n.d(t, { N: () => h });
 var i = n(627968),
     r = n(64700),
-    s = n(873174),
+    s = n(922139),
     a = n(866323),
     o = n(857250),
     l = n(691540),
@@ -29,7 +29,7 @@ let d = { duration: 300, friction: 24, tension: 280 },
             },
         },
     };
-function f(e) {
+function h(e) {
     let { appContext: t } = e,
         n = (0, l.WE)((e) => e.currentToastMap.get(t)),
         c = r.useRef(n?.options?.position ?? u.jg.position),
@@ -38,8 +38,8 @@ function f(e) {
         null != n &&
             ((c.current = n.options?.position ?? u.jg.position), (d.current = n.options?.duration ?? u.jg.duration));
     }, [n]);
-    let f = r.useMemo(() => _[n?.options?.position ?? c.current], [n]),
-        h = (0, a.p)(n, { keys: (e) => e?.id ?? "", ...f.transition });
+    let h = r.useMemo(() => _[n?.options?.position ?? c.current], [n]),
+        f = (0, a.p)(n, { keys: (e) => e?.id ?? "", ...h.transition });
     return (
         r.useEffect(() => {
             null != n &&
@@ -48,8 +48,8 @@ function f(e) {
                 }, d.current);
         }, [n, t]),
         (0, i.jsx)("div", {
-            className: f.styles,
-            children: h((e, t) =>
+            className: h.styles,
+            children: f((e, t) =>
                 null == t ? null : (0, i.jsx)(s.animated.div, { style: e, children: (0, i.jsx)(o.y, { ...t }) }, t.id),
             ),
         })

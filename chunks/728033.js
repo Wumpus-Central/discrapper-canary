@@ -1,43 +1,43 @@
-n.d(t, { default: () => p });
-var l = n(627968),
-    i = n(550079),
-    a = n(17928),
-    r = n(477782),
-    o = n(138134),
-    s = n(928658),
+n.d(i, { default: () => s });
+var a = n(627968),
+    e = n(980707),
+    o = n(17928),
+    l = n(477782),
+    p = n(138134),
+    r = n(928658),
     c = n(734057),
-    d = n(985018),
+    d = n(375708),
     u = n(652215);
-function p(e) {
-    var t;
+function s(t) {
+    var i;
     let n,
-        p,
-        { onClose: m, onSelect: A, application: h, channelId: x } = e,
-        v =
-            ((t = u.BRT.POPOUT),
-            (n = (0, a.bG)([c.A], () => c.A.getChannel(x))),
-            (p = n?.getGuildId()),
-            (0, l.jsx)(r.Dr, {
+        s,
+        { onClose: g, onSelect: h, application: v, channelId: b } = t,
+        y =
+            ((i = u.BRT.POPOUT),
+            (n = (0, o.bG)([c.A], () => c.A.getChannel(b))),
+            (s = n?.getGuildId()),
+            (0, a.jsx)(l.Dr, {
                 id: "report-app",
                 color: "danger",
                 label: d.intl.string(d.t.NgA5vp),
                 action: () =>
-                    (0, s.r3)({
-                        application: h,
+                    (0, r.r3)({
+                        application: v,
                         entrypoint: "activity_ui_popout",
-                        contextualGuildId: p ?? void 0,
+                        contextualGuildId: s ?? void 0,
                         contextualChannelId: n?.id,
-                        appContext: t,
+                        appContext: i,
                     }),
-                icon: o.i,
-                leadingAccessory: { type: "icon", icon: o.i },
+                icon: p.i,
+                leadingAccessory: { type: "icon", icon: p.i },
             }));
-    return (0, l.jsx)(i.W, {
+    return (0, a.jsx)(e.W, {
         "data-menu-migrated": !0,
         navId: "activity-popout-overflow-popout",
-        onClose: m,
-        onSelect: A,
+        onClose: g,
+        onSelect: h,
         "aria-label": d.intl.string(d.t.SS9Y6P),
-        children: v,
+        children: y,
     });
 }

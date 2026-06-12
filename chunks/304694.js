@@ -1,20 +1,20 @@
-n.d(t, { A: () => u });
-var i = n(627968);
-n(64700);
-var l = n(477782),
-    r = n(138134),
-    a = n(928658),
-    s = n(446600),
-    d = n(985018);
-function u(e) {
-    let t = s.A.isLive(e.id);
-    return e.isGuildStageVoice() && t
-        ? (0, i.jsx)(l.Dr, {
+t.d(n, { A: () => d });
+var e = t(627968);
+t(64700);
+var l = t(477782),
+    a = t(138134),
+    s = t(928658),
+    c = t(446600),
+    r = t(375708);
+function d(i) {
+    let n = c.A.isLive(i.id);
+    return i.isGuildStageVoice() && n
+        ? (0, e.jsx)(l.Dr, {
               id: "report-stage",
-              label: d.intl.string(d.t.JGj6Ci),
-              action: () => (0, a.pb)(e),
-              icon: r.i,
-              leadingAccessory: { type: "icon", icon: r.i },
+              label: r.intl.string(r.t.JGj6Ci),
+              action: () => (0, s.pb)(i),
+              icon: a.i,
+              leadingAccessory: { type: "icon", icon: a.i },
               color: "danger",
           })
         : null;

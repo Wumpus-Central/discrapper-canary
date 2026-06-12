@@ -14,14 +14,14 @@ var n = i(627968),
     x = i(851284);
 function p(e) {
     let { user: t, guildId: i, channelId: p, onClose: j } = e,
-        { analyticsLocations: A } = (0, a.Ay)(),
-        { context: f, trackUserProfileAction: I } = (0, d.NJ)(),
+        { analyticsLocations: f } = (0, a.Ay)(),
+        { context: A, trackUserProfileAction: I } = (0, d.NJ)(),
         { mutualFriends: S, mutualFriendsCount: v } = (0, o.A)(t),
-        E = (0, s.A)();
+        b = (0, s.A)();
     return (
         l.useEffect(() => {
-            (0, c.A)(t.id, E);
-        }, [t.id, E]),
+            (0, c.A)(t.id, b);
+        }, [t.id, b]),
         (0, n.jsx)(h.K, {
             className: x.XG,
             children:
@@ -54,9 +54,9 @@ function p(e) {
                                         j?.(),
                                             I({ action: "PRESS_MUTUAL_FRIEND" }),
                                             (0, u.openUserProfileModal)({
-                                                ...f,
+                                                ...A,
                                                 userId: l.id,
-                                                sourceAnalyticsLocations: A,
+                                                sourceAnalyticsLocations: f,
                                             });
                                     },
                                 },

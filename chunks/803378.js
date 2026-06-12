@@ -3,17 +3,17 @@ n.d(t, { A: () => x });
 var a = n(17928),
     r = n(228366),
     o = n(168186),
-    d = n(200662);
-let c = {},
+    c = n(200662);
+let d = {},
     u = {},
     m = !1;
 function g() {
-    (i = void 0), (c = {}), (u = {}), (l = void 0), (s = void 0), (m = !1);
+    (i = void 0), (d = {}), (u = {}), (l = void 0), (s = void 0), (m = !1);
 }
 class h extends a.Ay.Store {
     static displayName = "IntegrationPermissionStore";
     getApplicationPermissions() {
-        return c;
+        return d;
     }
     getCommands() {
         return u;
@@ -50,12 +50,12 @@ let x = new h(r.h, {
         let { applicationId: t, commandId: n, permissions: l } = e;
         if (t !== i) return !1;
         if (n === i) {
-            c = (0, d.UZ)(l);
+            d = (0, c.UZ)(l);
             return;
         }
         let s = u[n];
         if (null == s) return !1;
-        u[n] = { ...s, permissions: (0, d.UZ)(l) };
+        u[n] = { ...s, permissions: (0, c.UZ)(l) };
     },
     INTEGRATION_PERMISSION_SETTINGS_EDIT: function (e) {
         let { applicationId: t, commandId: n, permissions: a } = e;
@@ -80,7 +80,7 @@ let x = new h(r.h, {
             if (e.application_id === i) {
                 let t = (0, o.Oe)({ rootCommand: e, command: e, applicationId: e.application_id }),
                     n = s[e.id];
-                null != n && (t.permissions = (0, d.UZ)(n)), (a[e.id] = t);
+                null != n && (t.permissions = (0, c.UZ)(n)), (a[e.id] = t);
             }
         u = a;
     },

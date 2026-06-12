@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { JH: () => m, VC: () => d, b4: () => h, oQ: () => _, qv: () => f, tg: () => E, xl: () => p });
+n.d(t, { JH: () => m, VC: () => d, b4: () => f, oQ: () => _, qv: () => h, tg: () => E, xl: () => p });
 var i = n(17928),
     r = n(52133),
     s = n(55730);
@@ -27,7 +27,7 @@ function _(e, t) {
             return !1;
     return !0;
 }
-function f() {
+function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : a.Ay,
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : u.A,
@@ -38,8 +38,8 @@ function f() {
         ? void 0
         : { id: r?.id ?? s?.application_id, altId: s?.application_id, name: r?.name ?? s?.name };
 }
-function h() {
-    return (0, i.bG)([a.Ay, o.A, u.A], () => f(a.Ay, o.A, u.A), [], r.A);
+function f() {
+    return (0, i.bG)([a.Ay, o.A, u.A], () => h(a.Ay, o.A, u.A), [], r.A);
 }
 function p(e) {
     return (0, i.bG)(

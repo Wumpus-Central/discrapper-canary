@@ -11,10 +11,10 @@ function l(e) {
         l = (0, r.NQ)(n, e.document.body, function () {
             (0, i.tV)(e);
         });
-    function d() {
+    function u() {
         (0, o.I_)(n);
     }
-    function _() {
+    function c() {
         setTimeout(() => {
             (0, o.xz)(n);
         }, 0);
@@ -33,7 +33,7 @@ function l(e) {
         (0, i.t2)(e);
     }),
     o.NC))
-        t.addEventListener(s, d, !0), t.addEventListener(s, _, !1);
+        t.addEventListener(s, u, !0), t.addEventListener(s, c, !1);
     (0, s.a3)(t, function () {
         (0, i._c)(e);
     }),

@@ -14,8 +14,8 @@ var i,
     x = n(503698),
     A = n.n(x),
     p = n(785007),
-    f = n(789645),
-    b = n(933832),
+    b = n(789645),
+    f = n(933832),
     j = n(88187),
     N = n(939249),
     E = n(375708),
@@ -53,10 +53,10 @@ function S(e) {
         { type: s, onSelect: a, isSelected: r, permissionName: o } = e;
     switch (s) {
         case "DENY":
-            (i = E.intl.string(E.t["6639O5"])), (t = f.P), (n = C.Xg);
+            (i = E.intl.string(E.t["6639O5"])), (t = b.P), (n = C.Xg);
             break;
         case "ALLOW":
-            (i = E.intl.string(E.t.RzDfSk)), (t = b.A), (n = C.cw);
+            (i = E.intl.string(E.t.RzDfSk)), (t = f.A), (n = C.cw);
             break;
         default:
             (i = E.intl.string(E.t.ujC3ZS)), (t = j.F), (n = C.le);
@@ -119,7 +119,7 @@ class L extends s.PureComponent {
             x = g?.(s),
             A = !!(r || x),
             p = "string" == typeof x && "" !== x ? o.K : void 0,
-            f =
+            b =
                 null == a
                     ? (0, l.jsx)(
                           O,
@@ -152,7 +152,7 @@ class L extends s.PureComponent {
                 (0, l.jsxs)(u.B, {
                     gap: 8,
                     children: [
-                        f,
+                        b,
                         "string" == typeof x &&
                             "" !== x &&
                             (0, l.jsx)(m.E, {

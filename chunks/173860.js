@@ -10,8 +10,8 @@ var i = n(627968),
     c = n(52133),
     d = n(844222),
     _ = n(21);
-let f = { friction: 10, tension: 300 };
-class h extends r.Component {
+let h = { friction: 10, tension: 300 };
+class f extends r.Component {
     _timeout;
     constructor(e) {
         super(e), (this.state = { translateY: new u.A.Value(), reduceMotion: !1 });
@@ -35,14 +35,14 @@ class h extends r.Component {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
             ? (this._timeout = setTimeout(() => {
-                  u.A.spring(e, { toValue: 0, ...f }).start();
+                  u.A.spring(e, { toValue: 0, ...h }).start();
               }, 100))
             : e.setValue(0);
     }
     animateOut() {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
-            ? u.A.spring(e, { toValue: 1, ...f }).start()
+            ? u.A.spring(e, { toValue: 1, ...h }).start()
             : e.setValue(1);
     }
     render() {
@@ -145,7 +145,7 @@ class p extends r.PureComponent {
             { reducedMotion: d } = this.context;
         return (0, i.jsx)("div", {
             className: o ?? void 0,
-            children: (0, i.jsx)(h, {
+            children: (0, i.jsx)(f, {
                 hide: !0 === u || (null == e && null == t),
                 className: a()(l, null != t ? _.lE : _.gy),
                 text: null != t ? n : r,

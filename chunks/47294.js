@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(627968),
     r = n(64700),
     s = n(189213),
@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(192308),
     l = n(231723),
     u = n(817281),
-    c = n(964404),
+    c = n(742023),
     d = n(375708);
 function _(e) {
     let { onConfirm: t, onCancel: n, ...o } = e,
@@ -41,7 +41,7 @@ function _(e) {
         })
     );
 }
-function f(e) {
+function h(e) {
     let { onConfirm: t, onCancel: n, usesPopoutContext: r = !1 } = e;
     c.Ay.disableEmbeddedActivityPopOutAlert
         ? t()

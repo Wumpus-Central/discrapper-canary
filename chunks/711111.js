@@ -1,8 +1,8 @@
-a.d(t, { G: () => s });
-var n = a(64700),
-    l = a(419354);
-class i {
-    top = new l.SpringValue(0);
+t.d(l, { G: () => n });
+var s = t(64700),
+    r = t(922139);
+class a {
+    top = new r.SpringValue(0);
     handleScroll(e) {
         this.top.set(e.currentTarget.scrollTop);
     }
@@ -10,16 +10,16 @@ class i {
         return this.top;
     }
 }
-function s() {
-    let e = n.useRef(new i()),
-        t = n.useCallback((t) => {
-            e.current.handleScroll(t);
+function n() {
+    let e = s.useRef(new a()),
+        l = s.useCallback((l) => {
+            e.current.handleScroll(l);
         }, []);
     return {
-        resetScrollPosition: n.useCallback(() => {
+        resetScrollPosition: s.useCallback(() => {
             e.current.scrollPosition.set(0);
         }, []),
         scrollPosition: e.current.scrollPosition,
-        onScroll: t,
+        onScroll: l,
     };
 }

@@ -1,18 +1,18 @@
 "use strict";
-r.d(t, { A: () => s });
-var n = r(64700);
-let a = [];
+n.d(t, { A: () => s });
+var i = n(64700);
+let r = [];
 function s(e, t) {
-    let r = (0, n.useRef)(),
-        s = (0, n.useRef)(a);
+    let n = (0, i.useRef)(),
+        s = (0, i.useRef)(r);
     return (
-        s.current === a
-            ? ((r.current = e()), (s.current = t))
+        s.current === r
+            ? ((n.current = e()), (s.current = t))
             : !(function (e, t) {
                   if (e.length !== t.length) return !1;
-                  for (let r = 0; r < t.length && r < e.length; r++) if (!Object.is(e[r], t[r])) return !1;
+                  for (let n = 0; n < t.length && n < e.length; n++) if (!Object.is(e[n], t[n])) return !1;
                   return !0;
-              })(t, s.current) && ((r.current = e()), (s.current = t)),
-        r.current
+              })(t, s.current) && ((n.current = e()), (s.current = t)),
+        n.current
     );
 }

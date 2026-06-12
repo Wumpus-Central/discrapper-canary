@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, { n: () => o });
-var r = n(353640),
-    i = n(499867),
+var i = n(353640),
+    r = n(499867),
     s = n(998740),
     a = n(572808);
-let o = (0, r.v)()(
-    (0, i.Zr)(
+let o = (0, i.v)()(
+    (0, r.Zr)(
         (e, t) => ({
             songIndex: 0,
             genre: a.TU.SLEEPY,
@@ -19,17 +19,17 @@ let o = (0, r.v)()(
             setVolume: (t, n) => e((e) => ({ volumes: { ...e.volumes, [t]: n } })),
             playNextSong: () => {
                 let n = t(),
-                    r = s.A.getSongs(n.genre);
-                if (null == r) return;
-                let i = r.length;
-                0 === i || e({ songIndex: (n.songIndex + 1) % i });
+                    i = s.A.getSongs(n.genre);
+                if (null == i) return;
+                let r = i.length;
+                0 === r || e({ songIndex: (n.songIndex + 1) % r });
             },
             playPrevSong: () => {
                 let n = t(),
-                    r = s.A.getSongs(n.genre);
-                if (null == r) return;
-                let i = r.length;
-                0 === i || e({ songIndex: n.songIndex - 1 >= 0 ? n.songIndex - 1 : i - 1 });
+                    i = s.A.getSongs(n.genre);
+                if (null == i) return;
+                let r = i.length;
+                0 === r || e({ songIndex: n.songIndex - 1 >= 0 ? n.songIndex - 1 : r - 1 });
             },
             resetPlayback: () => e({ songIndex: 0, playRadio: !0 }),
         }),

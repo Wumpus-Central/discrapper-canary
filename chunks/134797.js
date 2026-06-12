@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = {
+        n = {
             className: "variable.constant",
             begin: t.concat(
                 /\$/,
@@ -52,10 +52,10 @@ e.exports = function (e) {
                 ),
             ),
         },
-        n = { className: "variable", begin: /\$+\{[\!\w.:-]+\}/ },
+        i = { className: "variable", begin: /\$+\{[\!\w.:-]+\}/ },
         r = { className: "variable", begin: /\$+\w[\w\.]*/, illegal: /\(\)\{\}/ },
-        i = { className: "variable", begin: /\$+\([\w^.:!-]+\)/ },
-        o = {
+        s = { className: "variable", begin: /\$+\([\w^.:!-]+\)/ },
+        a = {
             className: "params",
             begin: t.either(
                 "ARCHIVE",
@@ -111,7 +111,7 @@ e.exports = function (e) {
                 "SYSTEM|TEMPORARY",
             ),
         },
-        s = {
+        o = {
             className: "keyword",
             begin: t.concat(
                 /!/,
@@ -446,13 +446,13 @@ e.exports = function (e) {
                     { begin: "`", end: "`" },
                 ],
                 illegal: /\n/,
-                contains: [{ className: "char.escape", begin: /\$(\\[nrt]|\$)/ }, a, n, r, i],
+                contains: [{ className: "char.escape", begin: /\$(\\[nrt]|\$)/ }, n, i, r, s],
             },
-            s,
-            n,
-            r,
-            i,
             o,
+            i,
+            r,
+            s,
+            a,
             { className: "title.function", begin: /\w+::\w+/ },
             e.NUMBER_MODE,
         ],

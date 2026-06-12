@@ -15,12 +15,12 @@ let a = {
         r.h.dispatch({ type: "TRUNCATE_MENTIONS", size: e });
     },
     fetchRecentMentions(e) {
-        let { before: t, limit: n = s.Ue3, guildId: a = null, roles: o = !0, everyone: l = !0, feature: d } = e;
+        let { before: t, limit: n = s.Ue3, guildId: a = null, roles: o = !0, everyone: l = !0, feature: u } = e;
         return (
             r.h.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId: a }),
             i.Bo.get({
                 url: s.Rsh.MENTIONS,
-                query: { before: t, limit: n, guild_id: a, roles: o, everyone: l, feature: d },
+                query: { before: t, limit: n, guild_id: a, roles: o, everyone: l, feature: u },
                 retries: 2,
                 oldFormErrors: !0,
                 rejectWithError: !0,

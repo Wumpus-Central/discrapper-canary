@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, { Y: () => a, i: () => s });
-var r,
-    i,
+var i,
+    r,
     s =
-        (((r = {})[(r.USE_NEW_NOTIFICATIONS = 16)] = "USE_NEW_NOTIFICATIONS"),
-        (r[(r.MENTION_ON_ALL_MESSAGES = 32)] = "MENTION_ON_ALL_MESSAGES"),
-        r),
+        (((i = {})[(i.USE_NEW_NOTIFICATIONS = 16)] = "USE_NEW_NOTIFICATIONS"),
+        (i[(i.MENTION_ON_ALL_MESSAGES = 32)] = "MENTION_ON_ALL_MESSAGES"),
+        i),
     a =
-        (((i = {}).GUILD = "guild"),
-        (i.CHANNEL = "channel"),
-        (i.ACCOUNT = "account"),
-        (i.AUTHORIZED_APP_DM = "authorized_app_dm"),
-        (i.AUTHORIZED_APP_DM_PUSH_NOTIFICATION = "authorized_app_dm_push_notification"),
-        i);
+        (((r = {}).GUILD = "guild"),
+        (r.CHANNEL = "channel"),
+        (r.ACCOUNT = "account"),
+        (r.AUTHORIZED_APP_DM = "authorized_app_dm"),
+        (r.AUTHORIZED_APP_DM_PUSH_NOTIFICATION = "authorized_app_dm_push_notification"),
+        r);

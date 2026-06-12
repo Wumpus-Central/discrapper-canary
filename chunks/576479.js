@@ -118,7 +118,7 @@ let t = [
         "foreignObject",
         "clipPath",
     ],
-    a = [
+    n = [
         "any-hover",
         "any-pointer",
         "aspect-ratio",
@@ -155,7 +155,7 @@ let t = [
     ]
         .sort()
         .reverse(),
-    n = [
+    i = [
         "active",
         "any-link",
         "blank",
@@ -236,7 +236,7 @@ let t = [
     ]
         .sort()
         .reverse(),
-    i = [
+    s = [
         "accent-color",
         "align-content",
         "align-items",
@@ -754,9 +754,9 @@ let t = [
     ]
         .sort()
         .reverse(),
-    o = n.concat(r).sort().reverse();
+    a = i.concat(r).sort().reverse();
 e.exports = function (e) {
-    let s = {
+    let o = {
             IMPORTANT: { scope: "meta", begin: "!important" },
             BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
             HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
@@ -778,55 +778,55 @@ e.exports = function (e) {
             CSS_VARIABLE: { className: "attr", begin: /--[A-Za-z_][A-Za-z0-9_-]*/ },
         },
         l = "[\\w-]+",
-        c = "(" + l + "|@\\{" + l + "\\})",
-        _ = [],
+        u = "(" + l + "|@\\{" + l + "\\})",
+        c = [],
         d = [],
-        m = function (e) {
+        _ = function (e) {
             return { className: "string", begin: "~?" + e + ".*?" + e };
         },
-        p = function (e, t, a) {
-            return { className: e, begin: t, relevance: a };
+        h = function (e, t, n) {
+            return { className: e, begin: t, relevance: n };
         },
-        u = { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: a.join(" ") };
+        f = { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: n.join(" ") };
     d.push(
         e.C_LINE_COMMENT_MODE,
         e.C_BLOCK_COMMENT_MODE,
-        m("'"),
-        m('"'),
-        s.CSS_NUMBER_MODE,
+        _("'"),
+        _('"'),
+        o.CSS_NUMBER_MODE,
         { begin: "(url|data-uri)\\(", starts: { className: "string", end: "[\\)\\n]", excludeEnd: !0 } },
-        s.HEXCOLOR,
-        { begin: "\\(", end: "\\)", contains: d, keywords: u, relevance: 0 },
-        p("variable", "@@?" + l, 10),
-        p("variable", "@\\{" + l + "\\}"),
-        p("built_in", "~?`[^`]*?`"),
+        o.HEXCOLOR,
+        { begin: "\\(", end: "\\)", contains: d, keywords: f, relevance: 0 },
+        h("variable", "@@?" + l, 10),
+        h("variable", "@\\{" + l + "\\}"),
+        h("built_in", "~?`[^`]*?`"),
         { className: "attribute", begin: l + "\\s*:", end: ":", returnBegin: !0, excludeEnd: !0 },
-        s.IMPORTANT,
+        o.IMPORTANT,
         { beginKeywords: "and not" },
-        s.FUNCTION_DISPATCH,
+        o.FUNCTION_DISPATCH,
     );
-    let g = d.concat({ begin: /\{/, end: /\}/, contains: _ }),
+    let p = d.concat({ begin: /\{/, end: /\}/, contains: c }),
         E = { beginKeywords: "when", endsWithParent: !0, contains: [{ beginKeywords: "and not" }].concat(d) },
-        S = {
-            begin: c + "\\s*:",
+        m = {
+            begin: u + "\\s*:",
             returnBegin: !0,
             end: /[;}]/,
             relevance: 0,
             contains: [
                 { begin: /-(webkit|moz|ms|o)-/ },
-                s.CSS_VARIABLE,
+                o.CSS_VARIABLE,
                 {
                     className: "attribute",
-                    begin: "\\b(" + i.join("|") + ")\\b",
+                    begin: "\\b(" + s.join("|") + ")\\b",
                     end: /(?=:)/,
                     starts: { endsWithParent: !0, illegal: "[<=$]", relevance: 0, contains: d },
                 },
             ],
         },
-        b = {
+        g = {
             variants: [
                 { begin: "[\\.#:&\\[>]", end: "[;{}]" },
-                { begin: c, end: /\{/ },
+                { begin: u, end: /\{/ },
             ],
             returnBegin: !0,
             returnEnd: !0,
@@ -836,43 +836,43 @@ e.exports = function (e) {
                 e.C_LINE_COMMENT_MODE,
                 e.C_BLOCK_COMMENT_MODE,
                 E,
-                p("keyword", "all\\b"),
-                p("variable", "@\\{" + l + "\\}"),
+                h("keyword", "all\\b"),
+                h("variable", "@\\{" + l + "\\}"),
                 { begin: "\\b(" + t.join("|") + ")\\b", className: "selector-tag" },
-                s.CSS_NUMBER_MODE,
-                p("selector-tag", c, 0),
-                p("selector-id", "#" + c),
-                p("selector-class", "\\." + c, 0),
-                p("selector-tag", "&", 0),
-                s.ATTRIBUTE_SELECTOR_MODE,
-                { className: "selector-pseudo", begin: ":(" + n.join("|") + ")" },
+                o.CSS_NUMBER_MODE,
+                h("selector-tag", u, 0),
+                h("selector-id", "#" + u),
+                h("selector-class", "\\." + u, 0),
+                h("selector-tag", "&", 0),
+                o.ATTRIBUTE_SELECTOR_MODE,
+                { className: "selector-pseudo", begin: ":(" + i.join("|") + ")" },
                 { className: "selector-pseudo", begin: ":(:)?(" + r.join("|") + ")" },
-                { begin: /\(/, end: /\)/, relevance: 0, contains: g },
+                { begin: /\(/, end: /\)/, relevance: 0, contains: p },
                 { begin: "!important" },
-                s.FUNCTION_DISPATCH,
+                o.FUNCTION_DISPATCH,
             ],
         },
-        T = { begin: l + ":(:)?" + `(${o.join("|")})`, returnBegin: !0, contains: [b] };
+        A = { begin: l + ":(:)?" + `(${a.join("|")})`, returnBegin: !0, contains: [g] };
     return (
-        _.push(
+        c.push(
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             {
                 className: "keyword",
                 begin: "@(import|media|charset|font-face|(-[a-z]+-)?keyframes|supports|document|namespace|page|viewport|host)\\b",
-                starts: { end: "[;{}]", keywords: u, returnEnd: !0, contains: d, relevance: 0 },
+                starts: { end: "[;{}]", keywords: f, returnEnd: !0, contains: d, relevance: 0 },
             },
             {
                 className: "variable",
                 variants: [{ begin: "@" + l + "\\s*:", relevance: 15 }, { begin: "@" + l }],
-                starts: { end: "[;}]", returnEnd: !0, contains: g },
+                starts: { end: "[;}]", returnEnd: !0, contains: p },
             },
-            T,
-            S,
-            b,
+            A,
+            m,
+            g,
             E,
-            s.FUNCTION_DISPATCH,
+            o.FUNCTION_DISPATCH,
         ),
-        { name: "Less", case_insensitive: !0, illegal: "[=>'/<($\"]", contains: _ }
+        { name: "Less", case_insensitive: !0, illegal: "[=>'/<($\"]", contains: c }
     );
 };

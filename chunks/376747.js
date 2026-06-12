@@ -1,3 +1,3 @@
-n.d(t, { T: () => a, Y: () => l });
+n.d(t, { T: () => r, Y: () => l });
 let l = "(max-width: 485px)",
-    a = "(max-height: 450px)";
+    r = "(max-height: 450px)";

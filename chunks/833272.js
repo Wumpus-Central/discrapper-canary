@@ -11,7 +11,7 @@ let i = (function () {
                     var t = "string" == typeof e ? parseInt(e, 16) : e;
                     return t < 65536 ? o(t) : o(55296 + ((t -= 65536) >> 10), 56320 + (1023 & t));
                 },
-                toCodePoint: h,
+                toCodePoint: f,
             },
             onerror: function () {
                 this.parentNode && this.parentNode.replaceChild(l(this.alt, !1), this);
@@ -22,7 +22,7 @@ let i = (function () {
                     (i && "function" != typeof i) || (i = { callback: i }),
                     ("string" == typeof t
                         ? function (e, t) {
-                              return f(e, function (e) {
+                              return h(e, function (e) {
                                   var n,
                                       i,
                                       r = e,
@@ -60,8 +60,8 @@ let i = (function () {
                                       u,
                                       d,
                                       _,
-                                      f,
                                       h,
+                                      f,
                                       p,
                                       E,
                                       m,
@@ -80,13 +80,13 @@ let i = (function () {
                                   I--;
                               ) {
                                   for (
-                                      s = !1, o = document.createDocumentFragment(), d = (u = A[I]).nodeValue, f = 0;
+                                      s = !1, o = document.createDocumentFragment(), d = (u = A[I]).nodeValue, h = 0;
                                       (_ = n.exec(d));
                                   ) {
                                       if (
-                                          ((h = _.index) !== f && o.appendChild(l(d.slice(f, h), !0)),
+                                          ((f = _.index) !== h && o.appendChild(l(d.slice(h, f), !0)),
                                           (m = c((E = _[0]))),
-                                          (f = h + E.length),
+                                          (h = f + E.length),
                                           (g = t.callback(m, t)),
                                           m && g)
                                       ) {
@@ -106,7 +106,7 @@ let i = (function () {
                                       p || o.appendChild(l(E, !1)), (p = null);
                                   }
                                   s &&
-                                      (f < d.length && o.appendChild(l(d.slice(f), !0)),
+                                      (h < d.length && o.appendChild(l(d.slice(h), !0)),
                                       u.parentNode.replaceChild(o, u));
                               }
                               return e;
@@ -121,7 +121,7 @@ let i = (function () {
                     })
                 );
             },
-            replace: f,
+            replace: h,
             test: function (e) {
                 n.lastIndex = 0;
                 var t = n.test(e);
@@ -144,7 +144,7 @@ let i = (function () {
         return "".concat(t.base, t.size, "/", e, t.ext);
     }
     function c(e) {
-        return h(0 > e.indexOf(r) ? e.replace(i, "") : e);
+        return f(0 > e.indexOf(r) ? e.replace(i, "") : e);
     }
     function d(e) {
         return t[e];
@@ -152,10 +152,10 @@ let i = (function () {
     function _() {
         return null;
     }
-    function f(e, t) {
+    function h(e, t) {
         return String(e).replace(n, t);
     }
-    function h(e, t) {
+    function f(e, t) {
         for (var n = [], i = 0, r = 0, s = 0; s < e.length; )
             (i = e.charCodeAt(s++)),
                 r

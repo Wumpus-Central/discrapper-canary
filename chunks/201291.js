@@ -10,7 +10,7 @@ var n = l(284009),
     d = l(915089),
     o = l(493540),
     p = l(652215),
-    h = l(985018);
+    h = l(375708);
 function m(t) {
     let { transitionState: i, guild: l, onClose: n } = t,
         m = (0, d.GV)(),

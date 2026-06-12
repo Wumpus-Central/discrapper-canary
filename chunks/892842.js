@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { iQ: () => p, FH: () => m, P4: () => f, pd: () => h, ML: () => u, pX: () => I, hw: () => A }), n(321073);
+n.d(t, { iQ: () => p, FH: () => m, P4: () => h, pd: () => f, ML: () => u, pX: () => I, hw: () => A }), n(321073);
 var i = n(284009),
     r = n.n(i),
     s = n(306173),
@@ -53,7 +53,7 @@ class _ extends d {
         return null == e || -1 === e.treatmentId ? this.defaultValue : 1 === e.treatmentId;
     }
 }
-let f = new (class extends d {
+let h = new (class extends d {
         storeName;
         constructor(e, t, n) {
             super(e, n), (this.storeName = t);
@@ -86,7 +86,7 @@ let f = new (class extends d {
             return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
         }
     })("2026-01-libdiscore-batch-store-refactor", "batch-store-refactor"),
-    h = new (class extends d {
+    f = new (class extends d {
         MAX_EMISSIONS_PER_APP_LAUNCH = 5;
         emissionsCount = 0;
         getLabel() {

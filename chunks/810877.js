@@ -26,19 +26,19 @@ let p = (e, t, n, i) => (
                 guildId: A,
                 uploadId: f,
                 roles: I,
-                image: C,
-                hideErrorModal: v,
-                analyticsLocation: S,
+                image: S,
+                hideErrorModal: C,
+                analyticsLocation: v,
             } = e,
             _ = d.A.fromBlob(c.f.EMOJI, n),
             T = g.Ay.sanitizeEmojiName(n.name.split(".")[0]);
         if (g.Ay.isFileTooBig(n)) {
             if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
                 return p(n.name, n.size, A, f);
-            else if (null != C) {
+            else if (null != S) {
                 var b, y;
                 let e;
-                t = (0, i.h_)(C, 128, 128);
+                t = (0, i.h_)(S, 128, 128);
                 try {
                     e = g.Ay.isDataTooBig(t);
                 } catch (e) {
@@ -61,7 +61,7 @@ let p = (e, t, n, i) => (
         }
         try {
             let e = await _.getOriginalMd5(),
-                n = await (0, o.Gf)({ guildId: A, image: t, name: T, roles: I, analyticsLocation: S, originalMd5: e });
+                n = await (0, o.Gf)({ guildId: A, image: t, name: T, roles: I, analyticsLocation: v, originalMd5: e });
             return (
                 m.default.track(E.HAw.EMOJI_UPLOAD_COMPLETED, { guild_id: A, upload_id: f }),
                 (0, l.P0)((0, s.o)(j.intl.string(j.t["r0w9m/"]), r.Ck.SUCCESS)),
@@ -88,7 +88,7 @@ let p = (e, t, n, i) => (
                             : (null != i.image || i.code === E.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED) &&
                               (n = u.o.RESIZE_ANIMATED)),
                 429 === l && ((e = j.intl.string(j.t.Whhv4w)), (n = u.o.RATE_LIMIT)),
-                null == e || v || a.A.show({ title: j.intl.string(j.t.iufib1), body: e }),
+                null == e || C || a.A.show({ title: j.intl.string(j.t.iufib1), body: e }),
                 n
             );
         }

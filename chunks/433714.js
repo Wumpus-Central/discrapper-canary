@@ -1,7 +1,7 @@
-var r = n(221637),
-    i = n(983249);
+var i = n(221637),
+    r = n(983249);
 e.exports = function (e, t) {
-    t = r(t, e);
-    for (var n = 0, a = t.length; null != e && n < a; ) e = e[i(t[n++])];
-    return n && n == a ? e : void 0;
+    t = i(t, e);
+    for (var n = 0, s = t.length; null != e && n < s; ) e = e[r(t[n++])];
+    return n && n == s ? e : void 0;
 };

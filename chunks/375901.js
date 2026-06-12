@@ -1,5 +1,5 @@
-n.d(t, { D: () => i, j: () => l });
-let i = "chat-messages";
-function l(e, t) {
-    return `${i}-${e}-${t}`;
+n.d(t, { D: () => l, j: () => i });
+let l = "chat-messages";
+function i(e, t) {
+    return `${l}-${e}-${t}`;
 }

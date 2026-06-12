@@ -1,26 +1,26 @@
 "use strict";
-n.d(t, { A: () => u, b: () => _ });
+n.d(t, { A: () => d, b: () => c });
 var i = n(17928),
     r = n(260509),
     s = n(71393),
     a = n(576705),
     o = n(287809),
     l = n(488926),
-    d = n(652215);
-function _(e, t) {
-    let [n, i, _] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.default, s.A, a.A],
-        u = i.getGuild(e),
-        c = n.getUser(t);
+    u = n(652215);
+function c(e, t) {
+    let [n, i, c] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [o.default, s.A, a.A],
+        d = i.getGuild(e),
+        _ = n.getUser(t);
     return (
         !(
-            null == u ||
-            null == c ||
-            c.isNonUserBot() ||
-            (0, r.bM)(u, c) ||
-            l.$3({ permission: d.xBc.ADMINISTRATOR, user: c, context: u })
-        ) && _.canManageUser(d.xBc.MODERATE_MEMBERS, c, u)
+            null == d ||
+            null == _ ||
+            _.isNonUserBot() ||
+            (0, r.bM)(d, _) ||
+            l.$3({ permission: u.xBc.ADMINISTRATOR, user: _, context: d })
+        ) && c.canManageUser(u.xBc.MODERATE_MEMBERS, _, d)
     );
 }
-function u(e, t) {
-    return (0, i.bG)([o.default, s.A, a.A], () => _(e, t, [o.default, s.A, a.A]), [e, t]);
+function d(e, t) {
+    return (0, i.bG)([o.default, s.A, a.A], () => c(e, t, [o.default, s.A, a.A]), [e, t]);
 }

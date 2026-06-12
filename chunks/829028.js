@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     rJ: "collection__6f806",
     rf: "body__6f806",
     wm: "logo__6f806",

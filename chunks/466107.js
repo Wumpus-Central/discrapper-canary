@@ -1,6 +1,6 @@
 "use strict";
-var r = n(589841),
-    i = Object.prototype.hasOwnProperty,
+var i = n(589841),
+    r = Object.prototype.hasOwnProperty,
     s = Array.isArray,
     a = {
         allowDots: !1,
@@ -12,7 +12,7 @@ var r = n(589841),
         charsetSentinel: !1,
         comma: !1,
         decodeDotInKeys: !1,
-        decoder: r.decode,
+        decoder: i.decode,
         delimiter: "&",
         depth: 5,
         duplicates: "combine",
@@ -42,96 +42,96 @@ var r = n(589841),
             l = t.ignoreQueryPrefix ? e.replace(/^\?/, "") : e;
         l = l.replace(/%5B/gi, "[").replace(/%5D/gi, "]");
         var u = t.parameterLimit === 1 / 0 ? void 0 : t.parameterLimit,
-            d = l.split(t.delimiter, t.throwOnLimitExceeded ? u + 1 : u);
-        if (t.throwOnLimitExceeded && d.length > u)
+            c = l.split(t.delimiter, t.throwOnLimitExceeded ? u + 1 : u);
+        if (t.throwOnLimitExceeded && c.length > u)
             throw RangeError("Parameter limit exceeded. Only " + u + " parameter" + (1 === u ? "" : "s") + " allowed.");
-        var c = -1,
+        var d = -1,
             _ = t.charset;
         if (t.charsetSentinel)
-            for (f = 0; f < d.length; ++f)
-                0 === d[f].indexOf("utf8=") &&
-                    ("utf8=%E2%9C%93" === d[f] ? (_ = "utf-8") : "utf8=%26%2310003%3B" === d[f] && (_ = "iso-8859-1"),
-                    (c = f),
-                    (f = d.length));
-        for (f = 0; f < d.length; ++f)
-            if (f !== c) {
-                var f,
-                    E,
-                    h,
-                    p = d[f],
-                    m = p.indexOf("]="),
-                    g = -1 === m ? p.indexOf("=") : m + 1;
+            for (h = 0; h < c.length; ++h)
+                0 === c[h].indexOf("utf8=") &&
+                    ("utf8=%E2%9C%93" === c[h] ? (_ = "utf-8") : "utf8=%26%2310003%3B" === c[h] && (_ = "iso-8859-1"),
+                    (d = h),
+                    (h = c.length));
+        for (h = 0; h < c.length; ++h)
+            if (h !== d) {
+                var h,
+                    f,
+                    p,
+                    E = c[h],
+                    m = E.indexOf("]="),
+                    g = -1 === m ? E.indexOf("=") : m + 1;
                 -1 === g
-                    ? ((E = t.decoder(p, a.decoder, _, "key")), (h = t.strictNullHandling ? null : ""))
-                    : ((E = t.decoder(p.slice(0, g), a.decoder, _, "key")),
-                      (h = r.maybeMap(o(p.slice(g + 1), t, s(n[E]) ? n[E].length : 0), function (e) {
+                    ? ((f = t.decoder(E, a.decoder, _, "key")), (p = t.strictNullHandling ? null : ""))
+                    : ((f = t.decoder(E.slice(0, g), a.decoder, _, "key")),
+                      (p = i.maybeMap(o(E.slice(g + 1), t, s(n[f]) ? n[f].length : 0), function (e) {
                           return t.decoder(e, a.decoder, _, "value");
                       }))),
-                    h &&
+                    p &&
                         t.interpretNumericEntities &&
                         "iso-8859-1" === _ &&
-                        (h = String(h).replace(/&#(\d+);/g, function (e, t) {
+                        (p = String(p).replace(/&#(\d+);/g, function (e, t) {
                             return String.fromCharCode(parseInt(t, 10));
                         })),
-                    p.indexOf("[]=") > -1 && (h = s(h) ? [h] : h);
-                var A = i.call(n, E);
+                    E.indexOf("[]=") > -1 && (p = s(p) ? [p] : p);
+                var A = r.call(n, f);
                 A && "combine" === t.duplicates
-                    ? (n[E] = r.combine(n[E], h))
-                    : (A && "last" !== t.duplicates) || (n[E] = h);
+                    ? (n[f] = i.combine(n[f], p))
+                    : (A && "last" !== t.duplicates) || (n[f] = p);
             }
         return n;
     },
-    u = function (e, t, n, i) {
+    u = function (e, t, n, r) {
         var s = 0;
         if (e.length > 0 && "[]" === e[e.length - 1]) {
             var a = e.slice(0, -1).join("");
             s = Array.isArray(t) && t[a] ? t[a].length : 0;
         }
-        for (var l = i ? t : o(t, n, s), u = e.length - 1; u >= 0; --u) {
-            var d,
-                c = e[u];
-            if ("[]" === c && n.parseArrays)
-                d = n.allowEmptyArrays && ("" === l || (n.strictNullHandling && null === l)) ? [] : r.combine([], l);
+        for (var l = r ? t : o(t, n, s), u = e.length - 1; u >= 0; --u) {
+            var c,
+                d = e[u];
+            if ("[]" === d && n.parseArrays)
+                c = n.allowEmptyArrays && ("" === l || (n.strictNullHandling && null === l)) ? [] : i.combine([], l);
             else {
-                d = n.plainObjects ? { __proto__: null } : {};
-                var _ = "[" === c.charAt(0) && "]" === c.charAt(c.length - 1) ? c.slice(1, -1) : c,
-                    f = n.decodeDotInKeys ? _.replace(/%2E/g, ".") : _,
-                    E = parseInt(f, 10);
-                n.parseArrays || "" !== f
-                    ? !isNaN(E) && c !== f && String(E) === f && E >= 0 && n.parseArrays && E <= n.arrayLimit
-                        ? ((d = [])[E] = l)
-                        : "__proto__" !== f && (d[f] = l)
-                    : (d = { 0: l });
+                c = n.plainObjects ? { __proto__: null } : {};
+                var _ = "[" === d.charAt(0) && "]" === d.charAt(d.length - 1) ? d.slice(1, -1) : d,
+                    h = n.decodeDotInKeys ? _.replace(/%2E/g, ".") : _,
+                    f = parseInt(h, 10);
+                n.parseArrays || "" !== h
+                    ? !isNaN(f) && d !== h && String(f) === h && f >= 0 && n.parseArrays && f <= n.arrayLimit
+                        ? ((c = [])[f] = l)
+                        : "__proto__" !== h && (c[h] = l)
+                    : (c = { 0: l });
             }
-            l = d;
+            l = c;
         }
         return l;
     },
-    d = function (e, t, n, r) {
+    c = function (e, t, n, i) {
         if (e) {
             var s = n.allowDots ? e.replace(/\.([^.[]+)/g, "[$1]") : e,
                 a = /(\[[^[\]]*])/g,
                 o = n.depth > 0 && /(\[[^[\]]*])/.exec(s),
                 l = o ? s.slice(0, o.index) : s,
-                d = [];
+                c = [];
             if (l) {
-                if (!n.plainObjects && i.call(Object.prototype, l) && !n.allowPrototypes) return;
-                d.push(l);
+                if (!n.plainObjects && r.call(Object.prototype, l) && !n.allowPrototypes) return;
+                c.push(l);
             }
-            for (var c = 0; n.depth > 0 && null !== (o = a.exec(s)) && c < n.depth; ) {
-                if (((c += 1), !n.plainObjects && i.call(Object.prototype, o[1].slice(1, -1)) && !n.allowPrototypes))
+            for (var d = 0; n.depth > 0 && null !== (o = a.exec(s)) && d < n.depth; ) {
+                if (((d += 1), !n.plainObjects && r.call(Object.prototype, o[1].slice(1, -1)) && !n.allowPrototypes))
                     return;
-                d.push(o[1]);
+                c.push(o[1]);
             }
             if (o) {
                 if (!0 === n.strictDepth)
                     throw RangeError("Input depth exceeded depth option of " + n.depth + " and strictDepth is true");
-                d.push("[" + s.slice(o.index) + "]");
+                c.push("[" + s.slice(o.index) + "]");
             }
-            return u(d, t, n, r);
+            return u(c, t, n, i);
         }
     },
-    c = function (e) {
+    d = function (e) {
         if (!e) return a;
         if (void 0 !== e.allowEmptyArrays && "boolean" != typeof e.allowEmptyArrays)
             throw TypeError("`allowEmptyArrays` option can only be `true` or `false`, when provided");
@@ -158,7 +158,7 @@ var r = n(589841),
             comma: "boolean" == typeof e.comma ? e.comma : a.comma,
             decodeDotInKeys: "boolean" == typeof e.decodeDotInKeys ? e.decodeDotInKeys : a.decodeDotInKeys,
             decoder: "function" == typeof e.decoder ? e.decoder : a.decoder,
-            delimiter: "string" == typeof e.delimiter || r.isRegExp(e.delimiter) ? e.delimiter : a.delimiter,
+            delimiter: "string" == typeof e.delimiter || i.isRegExp(e.delimiter) ? e.delimiter : a.delimiter,
             depth: "number" == typeof e.depth || !1 === e.depth ? +e.depth : a.depth,
             duplicates: n,
             ignoreQueryPrefix: !0 === e.ignoreQueryPrefix,
@@ -175,19 +175,19 @@ var r = n(589841),
         };
     };
 e.exports = function (e, t) {
-    var n = c(t);
+    var n = d(t);
     if ("" === e || null == e) return n.plainObjects ? { __proto__: null } : {};
     for (
-        var i = "string" == typeof e ? l(e, n) : e,
+        var r = "string" == typeof e ? l(e, n) : e,
             s = n.plainObjects ? { __proto__: null } : {},
-            a = Object.keys(i),
+            a = Object.keys(r),
             o = 0;
         o < a.length;
         ++o
     ) {
         var u = a[o],
-            _ = d(u, i[u], n, "string" == typeof e);
-        s = r.merge(s, _, n);
+            _ = c(u, r[u], n, "string" == typeof e);
+        s = i.merge(s, _, n);
     }
-    return !0 === n.allowSparse ? s : r.compact(s);
+    return !0 === n.allowSparse ? s : i.compact(s);
 };

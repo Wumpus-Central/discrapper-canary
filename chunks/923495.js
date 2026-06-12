@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => h });
 var i = n(17928),
     r = n(228366),
-    s = n(518977);
+    s = n(423764);
 class a {
     teenByDefault;
     constructor(e) {
@@ -49,39 +49,39 @@ class l {
         return new l(new a(e.teen_by_default_settings), new o(e.age_gated_features));
     }
 }
-let d = null,
-    _ = null;
-function u(e) {
+let u = null,
+    c = null;
+function d(e) {
     if (null == e) return !1;
-    _ = (0, s.XF)(e) ?? (0, s.rE)();
+    c = (0, s.XF)(e) ?? (0, s.rE)();
 }
-class c extends i.Ay.Store {
+class _ extends i.Ay.Store {
     static displayName = "RegionalFeatureConfigStore";
     getRegionalFeatureConfig() {
-        return d;
+        return u;
     }
     isFeatureAgeGated(e) {
-        return d?.isFeatureAgeGated(e) ?? !1;
+        return u?.isFeatureAgeGated(e) ?? !1;
     }
     isSettingTeenByDefault(e) {
-        return d?.isFeatureTeenByDefault(e) ?? !1;
+        return u?.isFeatureTeenByDefault(e) ?? !1;
     }
     hasAgeGatedFeatures() {
-        return d?.hasAgeGatedFeatures() ?? !1;
+        return u?.hasAgeGatedFeatures() ?? !1;
     }
     hasTeenDefaults() {
-        return d?.hasTeenDefaults() ?? !1;
+        return u?.hasTeenDefaults() ?? !1;
     }
     getUserCountryCode() {
-        return _;
+        return c;
     }
 }
-let E = new c(r.h, {
+let h = new _(r.h, {
     CONNECTION_OPEN: function (e) {
-        u(e.countryCode), (d = null != e.regionalFeatureConfig ? l.fromConnectionOpen(e.regionalFeatureConfig) : null);
+        d(e.countryCode), (u = null != e.regionalFeatureConfig ? l.fromConnectionOpen(e.regionalFeatureConfig) : null);
     },
     SET_LOCATION_METADATA: function (e) {
         let { countryCode: t } = e;
-        return u(t);
+        return d(t);
     },
 });

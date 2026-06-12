@@ -9,9 +9,9 @@ var n = s(627968),
     c = s(854378),
     o = s(235986),
     f = s(976860),
-    p = s(495544),
-    u = s(652215),
-    x = s(985018),
+    u = s(495544),
+    p = s(652215),
+    x = s(375708),
     j = s(738997),
     g = s(818050);
 a.Ay.initialize();
@@ -33,8 +33,8 @@ class k extends i.PureComponent {
         let { stage: t, key: e } = this.state;
         t === A
             ? N()
-            : p.default.isAuthenticated()
-              ? l.Bo.post({ url: u.Rsh.HANDOFF, body: { key: e }, oldFormErrors: !0, rejectWithError: !0 }).then(
+            : u.default.isAuthenticated()
+              ? l.Bo.post({ url: p.Rsh.HANDOFF, body: { key: e }, oldFormErrors: !0, rejectWithError: !0 }).then(
                     (t) => this.handoff(t.body.handoff_token),
                     () => this.handoff(),
                 )
@@ -42,7 +42,7 @@ class k extends i.PureComponent {
     }
     handoff(t) {
         h.default
-            .requestRedirect(u.e$_.BROWSER_HANDOFF, { handoffToken: t, fingerprint: p.default.getFingerprint() })
+            .requestRedirect(p.e$_.BROWSER_HANDOFF, { handoffToken: t, fingerprint: u.default.getFingerprint() })
             .then(this.done, this.failed);
     }
     done = () => {
@@ -52,7 +52,7 @@ class k extends i.PureComponent {
         this.setState({ stage: C }), N();
     };
     handleOpenApp = () => {
-        (0, f.pX)(u.BVt.ME);
+        (0, f.pX)(p.BVt.ME);
     };
     renderDone() {
         return (0, n.jsxs)(c.Ay, {

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     XG: "scroller__68617",
     Xk: "voiceUsers__68617",
     yZ: "collapsed__68617",

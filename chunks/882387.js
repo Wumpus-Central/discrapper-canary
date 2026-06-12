@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     fy: "bgShade__6d791",
     P: "keybind__6d791",
     oB: "titleWrapper__6d791 bgShade__6d791",

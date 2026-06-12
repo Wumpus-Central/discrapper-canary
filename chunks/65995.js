@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366);
 let s = {},
@@ -18,7 +18,7 @@ class l extends i.Ay.Store {
         return null == e ? {} : { completedActions: a[e], loading: o.has(e) };
     }
 }
-let d = new l(r.h, {
+let u = new l(r.h, {
     GUILD_NEW_MEMBER_ACTIONS_FETCH_START: function (e) {
         let { guildId: t } = e;
         o.add(t);

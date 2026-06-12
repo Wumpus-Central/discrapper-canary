@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     S3: "modalBody_a51bc0",
     jJ: "modalBodyText_a51bc0",
     tl: "cannotLinkAccountWarning_a51bc0",

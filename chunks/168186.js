@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, {
-    $S: () => C,
+    $S: () => O,
     Am: () => w,
     Ap: () => y,
     Cq: () => N,
@@ -8,34 +8,34 @@ n.d(t, {
     Lz: () => A,
     Oe: () => g,
     PV: () => T,
-    Qr: () => v,
+    Qr: () => R,
     XM: () => S,
     bq: () => b,
     gI: () => M,
     hT: () => I,
     my: () => L,
-    zl: () => O,
+    zl: () => v,
 }),
     n(321073);
-var r = n(824120),
-    i = n.n(r),
+var i = n(824120),
+    r = n.n(i),
     s = n(284009),
     a = n.n(s),
     o = n(735438),
     l = n.n(o),
     u = n(136722),
-    d = n(155718),
-    c = n(58149),
+    c = n(155718),
+    d = n(95561),
     _ = n(200662);
 n(95701);
-var f = n(31717),
-    E = n(392054),
-    h = n(73510),
-    p = n(652215),
+var h = n(31717),
+    f = n(392054),
+    p = n(73510),
+    E = n(652215),
     m = n(818348);
 function g(e) {
     let t,
-        { rootCommand: n, command: r, applicationId: i, subCommandPath: s, useKeyedPermissions: a } = e;
+        { rootCommand: n, command: i, applicationId: r, subCommandPath: s, useKeyedPermissions: a } = e;
     null != n.permissions &&
         n.permissions.length > 0 &&
         (a
@@ -49,17 +49,17 @@ function g(e) {
     return {
         version: n.version,
         guildId: n.guild_id,
-        id: [n.id, ...o].join(h.v4),
+        id: [n.id, ...o].join(p.v4),
         untranslatedName: [n.name, ...o].join(" "),
-        serverLocalizedName: r.name_localized,
-        applicationId: i,
-        type: n.type ?? d.kc.CHAT,
-        inputType: E.y$.BOT,
-        untranslatedDescription: r.description,
+        serverLocalizedName: i.name_localized,
+        applicationId: r,
+        type: n.type ?? c.kc.CHAT,
+        inputType: f.y$.BOT,
+        untranslatedDescription: i.description,
         options: (function e(t) {
             return t?.map((t) => {
                 var n;
-                let r = {
+                let i = {
                     ...t,
                     choices: ((n = t.choices), n?.map((e) => ({ ...e, displayName: e.name_localized ?? e.name }))),
                     options: e(t.options),
@@ -67,22 +67,22 @@ function g(e) {
                     displayName: t.name_localized ?? t.name,
                     displayDescription: t.description_localized ?? t.description,
                 };
-                return t.type === d.n4.CHANNEL && "channel_types" in t
-                    ? { ...r, channelTypes: t.channel_types }
-                    : (t.type === d.n4.NUMBER || t.type === d.n4.INTEGER) && ("min_value" in t || "max_value" in t)
-                      ? { ...r, minValue: t.min_value, maxValue: t.max_value }
-                      : t.type === d.n4.STRING && ("min_length" in t || "max_length" in t)
-                        ? { ...r, minLength: t.min_length, maxLength: t.max_length }
-                        : r;
+                return t.type === c.n4.CHANNEL && "channel_types" in t
+                    ? { ...i, channelTypes: t.channel_types }
+                    : (t.type === c.n4.NUMBER || t.type === c.n4.INTEGER) && ("min_value" in t || "max_value" in t)
+                      ? { ...i, minValue: t.min_value, maxValue: t.max_value }
+                      : t.type === c.n4.STRING && ("min_length" in t || "max_length" in t)
+                        ? { ...i, minLength: t.min_length, maxLength: t.max_length }
+                        : i;
             });
-        })(r.options),
+        })(i.options),
         rootCommand: n,
         subCommandPath: s,
         defaultMemberPermissions: null == n.default_member_permissions ? void 0 : u.iu(n.default_member_permissions),
         dmPermission: n.dm_permission,
         permissions: t,
         displayName: [n.name_localized ?? n.name, ...l].join(" "),
-        displayDescription: r.description_localized ?? r.description,
+        displayDescription: i.description_localized ?? i.description,
         nsfw: n.nsfw,
         contexts: n.contexts,
         integration_types: n.integration_types,
@@ -96,56 +96,56 @@ function A(e, t) {
         (e) => (
             a()(null != e.id, "Missing command id"),
             (function e(t) {
-                let { rootCommand: n, command: r, applicationId: i, subCommandPath: s, useKeyedPermissions: a } = t;
-                if (r.hasOwnProperty("id")) {
-                    if (null == r.options || 0 === r.options.length)
+                let { rootCommand: n, command: i, applicationId: r, subCommandPath: s, useKeyedPermissions: a } = t;
+                if (i.hasOwnProperty("id")) {
+                    if (null == i.options || 0 === i.options.length)
                         return [
                             g({
                                 rootCommand: n,
-                                command: r,
-                                applicationId: i,
+                                command: i,
+                                applicationId: r,
                                 subCommandPath: s,
                                 useKeyedPermissions: a,
                             }),
                         ];
                 } else if (
-                    r.type !== d.n4.SUB_COMMAND &&
-                    r.type !== d.n4.SUB_COMMAND_GROUP &&
-                    (null == r.options || 0 === r.options.length)
+                    i.type !== c.n4.SUB_COMMAND &&
+                    i.type !== c.n4.SUB_COMMAND_GROUP &&
+                    (null == i.options || 0 === i.options.length)
                 )
                     return [
-                        g({ rootCommand: n, command: r, applicationId: i, subCommandPath: s, useKeyedPermissions: a }),
+                        g({ rootCommand: n, command: i, applicationId: r, subCommandPath: s, useKeyedPermissions: a }),
                     ];
                 let o = [];
-                if (null == r.options) return o;
-                let l = r.options.filter((e) => e.type === d.n4.SUB_COMMAND_GROUP);
+                if (null == i.options) return o;
+                let l = i.options.filter((e) => e.type === c.n4.SUB_COMMAND_GROUP);
                 for (let t = 0; t < l.length; t++)
                     o.push(
                         ...e({
                             rootCommand: n,
                             command: l[t],
-                            applicationId: i,
+                            applicationId: r,
                             subCommandPath: (s ?? []).concat([
                                 {
                                     name: l[t].name,
-                                    type: d.n4.SUB_COMMAND_GROUP,
+                                    type: c.n4.SUB_COMMAND_GROUP,
                                     displayName: l[t].name_localized ?? l[t].name,
                                 },
                             ]),
                             useKeyedPermissions: a,
                         }),
                     );
-                let u = r.options.filter((e) => e.type === d.n4.SUB_COMMAND);
+                let u = i.options.filter((e) => e.type === c.n4.SUB_COMMAND);
                 for (let e = 0; e < u.length; e++)
                     o.push(
                         g({
                             rootCommand: n,
                             command: u[e],
-                            applicationId: i,
+                            applicationId: r,
                             subCommandPath: (s ?? []).concat([
                                 {
                                     name: u[e].name,
-                                    type: d.n4.SUB_COMMAND,
+                                    type: c.n4.SUB_COMMAND,
                                     displayName: u[e].name_localized ?? u[e].name,
                                 },
                             ]),
@@ -158,8 +158,8 @@ function A(e, t) {
                         o.push(
                             g({
                                 rootCommand: n,
-                                command: r,
-                                applicationId: i,
+                                command: i,
+                                applicationId: r,
                                 subCommandPath: s,
                                 useKeyedPermissions: a,
                             }),
@@ -177,98 +177,98 @@ function A(e, t) {
     );
 }
 function I(e) {
-    return p.Ut1.test(e.trim());
+    return E.Ut1.test(e.trim());
 }
-function T(e, t, n, r) {
-    let i = [];
+function T(e, t, n, i) {
+    let r = [];
     return (
         l()(e).forEach((e) => {
-            t.test(e.displayName) && (null == e.predicate || e.predicate(n)) && i.push(e);
+            t.test(e.displayName) && (null == e.predicate || e.predicate(n)) && r.push(e);
         }),
-        i.slice(0, r)
+        r.slice(0, i)
     );
 }
 function S(e) {
-    let t = e.type === d.n4.STRING,
-        n = e.type === d.n4.CHANNEL,
-        r = e.type === d.n4.USER || e.type === d.n4.MENTIONABLE,
-        i = e.type === d.n4.ROLE || e.type === d.n4.MENTIONABLE;
+    let t = e.type === c.n4.STRING,
+        n = e.type === c.n4.CHANNEL,
+        i = e.type === c.n4.USER || e.type === c.n4.MENTIONABLE,
+        r = e.type === c.n4.ROLE || e.type === c.n4.MENTIONABLE;
     return {
-        canMentionEveryone: t || i,
+        canMentionEveryone: t || r,
         canMentionHere: t,
         canMentionChannels: t || n,
-        canMentionUsers: t || r,
-        canMentionRoles: t || i,
-        canMentionAnyGuildUser: r,
-        canMentionNonMentionableRoles: i,
+        canMentionUsers: t || i,
+        canMentionRoles: t || r,
+        canMentionAnyGuildUser: i,
+        canMentionNonMentionableRoles: r,
         canMentionOtherGlobals: t,
     };
 }
 function y(e) {
-    return i()(e).subtract(1).toString();
+    return r()(e).subtract(1).toString();
 }
 let N = u.iu(0);
-function O(e) {
+function v(e) {
     let {
         PermissionStore: t,
         guild: n,
-        selfMember: r,
-        applicationLevelPermissions: i,
+        selfMember: i,
+        applicationLevelPermissions: r,
         commandLevelPermissions: s,
         defaultMemberPermissions: a,
     } = e;
-    if (n.ownerId === r.userId || t.can(m.xB.ADMINISTRATOR, n)) return !0;
+    if (n.ownerId === i.userId || t.can(m.xB.ADMINISTRATOR, n)) return !0;
     let o = n.id;
     if (null != s) {
-        let e = R(r, o, s);
+        let e = C(i, o, s);
         if ("boolean" == typeof e) return e;
     }
-    let l = R(r, o, i);
+    let l = C(i, o, r);
     return ("boolean" != typeof l || !!l) && (null == a || (!u.aI(a, N) && t.can(a, n)));
 }
-function R(e, t, n) {
-    let r = n[(0, _.Eu)(e.userId, E.RA.USER)];
-    if (null != r) return r.permission;
-    let i = !1;
+function C(e, t, n) {
+    let i = n[(0, _.Eu)(e.userId, f.RA.USER)];
+    if (null != i) return i.permission;
+    let r = !1;
     for (let t of e.roles) {
-        let e = n[(0, _.Eu)(t, E.RA.ROLE)];
-        if (null != e && ((i = !0), e.permission)) return !0;
+        let e = n[(0, _.Eu)(t, f.RA.ROLE)];
+        if (null != e && ((r = !0), e.permission)) return !0;
     }
-    if (i) return !1;
-    let s = n[(0, _.Eu)(t, E.RA.ROLE)];
+    if (r) return !1;
+    let s = n[(0, _.Eu)(t, f.RA.ROLE)];
     return null != s ? s.permission : null;
 }
-function v(e) {
+function R(e) {
     switch (e) {
-        case E.iw.CHAT:
-        case E.iw.APPLICATION_LAUNCHER:
-        case E.iw.APP_LAUNCHER_APPLICATION_VIEW:
-        case E.iw.CONTEXT_MENU:
-        case E.iw.VOICE_UI:
-        case E.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS:
-        case E.iw.MINI_SHELF:
-        case E.iw.USER_PROFILE:
-        case E.iw.NOW_PLAYING:
-        case E.iw.ACTIVITY_DETAILS:
-        case E.iw.ACTIVITIES_HOME:
-        case E.iw.ACTIVITY_INSTANCE_EMBED:
-        case E.iw.ACTIVITY_BOOKMARK_EMBED:
-        case E.iw.APP_MESSAGE_EMBED:
-        case E.iw.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
-        case E.iw.IMAGE_RECS_MENU:
-        case E.iw.IMAGE_RECS_SUBMENU:
-            return f.C.SlashCommand;
+        case f.iw.CHAT:
+        case f.iw.APPLICATION_LAUNCHER:
+        case f.iw.APP_LAUNCHER_APPLICATION_VIEW:
+        case f.iw.CONTEXT_MENU:
+        case f.iw.VOICE_UI:
+        case f.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS:
+        case f.iw.MINI_SHELF:
+        case f.iw.USER_PROFILE:
+        case f.iw.NOW_PLAYING:
+        case f.iw.ACTIVITY_DETAILS:
+        case f.iw.ACTIVITIES_HOME:
+        case f.iw.ACTIVITY_INSTANCE_EMBED:
+        case f.iw.ACTIVITY_BOOKMARK_EMBED:
+        case f.iw.APP_MESSAGE_EMBED:
+        case f.iw.APP_DMS_ENTRY_POINT_COMMAND_BUTTON:
+        case f.iw.IMAGE_RECS_MENU:
+        case f.iw.IMAGE_RECS_SUBMENU:
+            return h.C.SlashCommand;
     }
 }
-function C(e) {
+function O(e) {
     if (null != e)
-        if (e.id === h.Ik.BUILT_IN) return E.gK.BUILT_IN;
-        else if (e.id === h.Ik.FRECENCY) return E.gK.FRECENCY;
-        else return E.gK.APP;
+        if (e.id === p.Ik.BUILT_IN) return f.gK.BUILT_IN;
+        else if (e.id === p.Ik.FRECENCY) return f.gK.FRECENCY;
+        else return f.gK.APP;
 }
 function b(e, t, n) {
     return {
-        type: E.Hf.APPLICATION,
+        type: f.Hf.APPLICATION,
         id: e.id,
         name: n ?? e?.bot?.username ?? e.name,
         icon: e.icon,
@@ -279,28 +279,28 @@ function b(e, t, n) {
 function D(e) {
     let t = e.id,
         n = e.options,
-        r = n?.find((e) => e.type === d.n4.SUB_COMMAND_GROUP);
-    null != r && ((t += `${h.v4}${r.name}`), (n = r.options));
-    let i = n?.find((e) => e.type === d.n4.SUB_COMMAND);
-    return null != i && ((t += `${h.v4}${i.name}`), (n = i.options)), { commandKey: t, interactionOptions: n };
+        i = n?.find((e) => e.type === c.n4.SUB_COMMAND_GROUP);
+    null != i && ((t += `${p.v4}${i.name}`), (n = i.options));
+    let r = n?.find((e) => e.type === c.n4.SUB_COMMAND);
+    return null != r && ((t += `${p.v4}${r.name}`), (n = r.options)), { commandKey: t, interactionOptions: n };
 }
 function L(e) {
     let {
         command: t,
         location: n,
-        triggerSection: r,
-        queryLength: i,
+        triggerSection: i,
+        queryLength: r,
         sectionName: s,
         query: a,
         searchResultsPosition: o,
         source: l,
     } = e;
-    (0, c.zV)(p.HAw.APPLICATION_COMMAND_SELECTED, {
+    (0, d.zV)(E.HAw.APPLICATION_COMMAND_SELECTED, {
         command_id: t.rootCommand?.id ?? t.id,
         application_id: t.applicationId,
         location: n,
-        section: r,
-        query_length: i,
+        section: i,
+        query_length: r,
         command_text_length: t.displayName.length,
         section_name: s,
         query: a,

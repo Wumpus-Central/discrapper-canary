@@ -1,36 +1,36 @@
-n.r(t), n.d(t, { default: () => o });
-var i = n(627968);
-n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(225180),
-    r = n(295485);
-function o(e) {
-    let { gameId: t } = e,
-        n = (0, a.A)(t, "cover");
-    return (0, i.jsxs)("div", {
-        className: r.kL,
+c.r(a), c.d(a, { default: () => r });
+var e = c(627968);
+c(64700);
+var i = c(503698),
+    d = c.n(i),
+    l = c(225180),
+    j = c(291021);
+function r(s) {
+    let { gameId: a } = s,
+        c = (0, l.A)(a, "cover");
+    return (0, e.jsxs)("div", {
+        className: j.kL,
         children: [
-            (0, i.jsxs)("div", {
-                className: s()(r.Su, r.TK),
+            (0, e.jsxs)("div", {
+                className: d()(j.Su, j.TK),
                 children: [
-                    (0, i.jsx)("div", { className: s()(r.w1, r.Uf) }),
-                    (0, i.jsx)("div", { className: s()(r.w1, r.Gj) }),
+                    (0, e.jsx)("div", { className: d()(j.w1, j.Uf) }),
+                    (0, e.jsx)("div", { className: d()(j.w1, j.Gj) }),
                 ],
             }),
-            (0, i.jsxs)("div", {
-                className: s()(r.Su, r._3),
+            (0, e.jsxs)("div", {
+                className: d()(j.Su, j._3),
                 children: [
-                    (0, i.jsx)("div", { className: s()(r.w1, r.Uf) }),
-                    (0, i.jsx)("div", { className: s()(r.w1, r.Gj) }),
+                    (0, e.jsx)("div", { className: d()(j.w1, j.Uf) }),
+                    (0, e.jsx)("div", { className: d()(j.w1, j.Gj) }),
                 ],
             }),
-            (0, i.jsxs)("div", {
-                className: s()(r.Su, r.Tp),
+            (0, e.jsxs)("div", {
+                className: d()(j.Su, j.Tp),
                 children: [
-                    (0, i.jsx)("img", { src: n, alt: "", className: r.Sl }),
-                    (0, i.jsx)("div", { className: s()(r.w1, r.Uf) }),
-                    (0, i.jsx)("div", { className: s()(r.w1, r.Gj) }),
+                    (0, e.jsx)("img", { src: c, alt: "", className: j.Sl }),
+                    (0, e.jsx)("div", { className: d()(j.w1, j.Uf) }),
+                    (0, e.jsx)("div", { className: d()(j.w1, j.Gj) }),
                 ],
             }),
         ],

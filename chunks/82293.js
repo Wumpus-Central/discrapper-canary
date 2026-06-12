@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f, e: () => l });
+n.d(t, { A: () => h, e: () => l });
 var i,
     r = n(635377),
     s = n.n(r),
@@ -30,7 +30,7 @@ class _ extends a.Ay.Store {
         if (null != t) return d[u({ applicationId: t, guildId: n, page: i })];
     }
 }
-let f = new _(o.h, {
+let h = new _(o.h, {
     APPLICATION_DIRECTORY_FETCH_SIMILAR_APPLICATIONS: function (e) {
         let { applicationId: t, guildId: n, page: i } = e,
             r = u({ applicationId: t, guildId: n, page: i });

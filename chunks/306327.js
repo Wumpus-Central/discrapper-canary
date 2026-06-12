@@ -1,22 +1,22 @@
 "use strict";
 let a;
-function n(e, t) {
-    let r = e.length;
-    Array.isArray(e[0]) || (e = [e]), Array.isArray(t[0]) || (t = t.map((e) => [e]));
-    let a = t[0].length,
-        n = t[0].map((e, r) => t.map((e) => e[r])),
+function n(e, r) {
+    let t = e.length;
+    Array.isArray(e[0]) || (e = [e]), Array.isArray(r[0]) || (r = r.map((e) => [e]));
+    let a = r[0].length,
+        n = r[0].map((e, t) => r.map((e) => e[t])),
         o = e.map((e) =>
-            n.map((t) => {
-                let r = 0;
+            n.map((r) => {
+                let t = 0;
                 if (!Array.isArray(e)) {
-                    for (let a of t) r += e * a;
-                    return r;
+                    for (let a of r) t += e * a;
+                    return t;
                 }
-                for (let a = 0; a < e.length; a++) r += e[a] * (t[a] || 0);
-                return r;
+                for (let a = 0; a < e.length; a++) t += e[a] * (r[a] || 0);
+                return t;
             }),
         );
-    return (1 === r && (o = o[0]), 1 === a) ? o.map((e) => e[0]) : o;
+    return (1 === t && (o = o[0]), 1 === a) ? o.map((e) => e[0]) : o;
 }
 function o(e) {
     return "string" === s(e);
@@ -24,45 +24,45 @@ function o(e) {
 function s(e) {
     return (Object.prototype.toString.call(e).match(/^\[object\s+(.*?)\]$/)[1] || "").toLowerCase();
 }
-function i(e, { precision: t, unit: r }) {
-    return c(e) ? "none" : u(e, t) + (r ?? "");
-}
-function c(e) {
-    return Number.isNaN(e) || (e instanceof Number && e?.none);
+function i(e, { precision: r, unit: t }) {
+    return l(e) ? "none" : u(e, r) + (t ?? "");
 }
 function l(e) {
-    return c(e) ? 0 : e;
+    return Number.isNaN(e) || (e instanceof Number && e?.none);
 }
-function u(e, t) {
+function c(e) {
+    return l(e) ? 0 : e;
+}
+function u(e, r) {
     if (0 === e) return 0;
-    let r = ~~e,
+    let t = ~~e,
         a = 0;
-    r && t && (a = ~~Math.log10(Math.abs(r)) + 1);
-    let n = 10 ** (t - a);
+    t && r && (a = ~~Math.log10(Math.abs(t)) + 1);
+    let n = 10 ** (r - a);
     return Math.floor(e * n + 0.5) / n;
 }
-r.d(t, { A: () => rb });
+t.d(r, { A: () => th });
 let f = { deg: 1, grad: 0.9, rad: 180 / Math.PI, turn: 360 };
-function b(e) {
+function h(e) {
     if (!e) return;
     e = e.trim();
-    let t = /^-?[\d.]+$/,
-        r = /%|deg|g?rad|turn$/,
+    let r = /^-?[\d.]+$/,
+        t = /%|deg|g?rad|turn$/,
         a = e.match(/^([a-z]+)\((.+?)\)$/i);
     if (a) {
         let e = [];
         return (
             a[2].replace(/\/?\s*(none|[-\w.]+(?:%|deg|g?rad|turn)?)/g, (a, n) => {
-                let o = n.match(r),
+                let o = n.match(t),
                     s = n;
                 if (o) {
                     let e = o[0],
-                        t = s.slice(0, -e.length);
+                        r = s.slice(0, -e.length);
                     "%" === e
-                        ? ((s = new Number(t / 100)).type = "<percentage>")
-                        : (((s = new Number(t * f[e])).type = "<angle>"), (s.unit = e));
+                        ? ((s = new Number(r / 100)).type = "<percentage>")
+                        : (((s = new Number(r * f[e])).type = "<angle>"), (s.unit = e));
                 } else
-                    t.test(s)
+                    r.test(s)
                         ? ((s = new Number(s)).type = "<number>")
                         : "none" === s && ((s = new Number(NaN)).none = !0);
                 a.startsWith("/") && ((s = s instanceof Number ? s : new Number(s)).alpha = !0),
@@ -76,85 +76,85 @@ function b(e) {
 function d(e) {
     return e[e.length - 1];
 }
-function h(e, t, r) {
-    return isNaN(e) ? t : isNaN(t) ? e : e + (t - e) * r;
+function m(e, r, t) {
+    return isNaN(e) ? r : isNaN(r) ? e : e + (r - e) * t;
 }
-function p(e, t, r) {
-    return (r - e) / (t - e);
+function p(e, r, t) {
+    return (t - e) / (r - e);
 }
-function m(e, t, r) {
-    return h(t[0], t[1], p(e[0], e[1], r));
+function g(e, r, t) {
+    return m(r[0], r[1], p(e[0], e[1], t));
 }
-function g(e) {
+function b(e) {
     return e.map((e) =>
         e.split("|").map((e) => {
-            let t = (e = e.trim()).match(/^(<[a-z]+>)\[(-?[.\d]+),\s*(-?[.\d]+)\]?$/);
-            if (t) {
-                let e = new String(t[1]);
-                return (e.range = [+t[2], +t[3]]), e;
+            let r = (e = e.trim()).match(/^(<[a-z]+>)\[(-?[.\d]+),\s*(-?[.\d]+)\]?$/);
+            if (r) {
+                let e = new String(r[1]);
+                return (e.range = [+r[2], +r[3]]), e;
             }
             return e;
         }),
     );
 }
-function y(e, t, r) {
-    return Math.max(Math.min(r, t), e);
+function M(e, r, t) {
+    return Math.max(Math.min(t, r), e);
 }
-function v(e, t) {
-    return Math.sign(e) === Math.sign(t) ? e : -e;
+function v(e, r) {
+    return Math.sign(e) === Math.sign(r) ? e : -e;
 }
-function w(e, t) {
-    return v(Math.abs(e) ** t, e);
+function w(e, r) {
+    return v(Math.abs(e) ** r, e);
 }
-function M(e, t) {
-    return 0 === t ? 0 : e / t;
+function y(e, r) {
+    return 0 === r ? 0 : e / r;
 }
-function A(e, t, r = 0, a = e.length) {
-    for (; r < a; ) {
-        let n = (r + a) >> 1;
-        e[n] < t ? (r = n + 1) : (a = n);
+function C(e, r, t = 0, a = e.length) {
+    for (; t < a; ) {
+        let n = (t + a) >> 1;
+        e[n] < r ? (t = n + 1) : (a = n);
     }
-    return r;
+    return t;
 }
-var O = Object.freeze({
+var R = Object.freeze({
     __proto__: null,
-    bisectLeft: A,
-    clamp: y,
+    bisectLeft: C,
+    clamp: M,
     copySign: v,
-    interpolate: h,
+    interpolate: m,
     interpolateInv: p,
-    isNone: c,
+    isNone: l,
     isString: o,
     last: d,
-    mapRange: m,
+    mapRange: g,
     multiplyMatrices: n,
-    parseCoordGrammar: g,
-    parseFunction: b,
+    parseCoordGrammar: b,
+    parseFunction: h,
     serializeNumber: i,
-    skipNone: l,
+    skipNone: c,
     spow: w,
     toPrecision: u,
     type: s,
-    zdiv: M,
+    zdiv: y,
 });
 let k = new (class {
-    add(e, t, r) {
+    add(e, r, t) {
         if ("string" != typeof arguments[0]) {
             for (var e in arguments[0]) this.add(e, arguments[0][e], arguments[1]);
             return;
         }
         (Array.isArray(e) ? e : [e]).forEach(function (e) {
-            (this[e] = this[e] || []), t && this[e][r ? "unshift" : "push"](t);
+            (this[e] = this[e] || []), r && this[e][t ? "unshift" : "push"](r);
         }, this);
     }
-    run(e, t) {
+    run(e, r) {
         (this[e] = this[e] || []),
             this[e].forEach(function (e) {
-                e.call(t && t.context ? t.context : t, t);
+                e.call(r && r.context ? r.context : r, r);
             });
     }
 })();
-var C = {
+var _ = {
     gamut_mapping: "css",
     precision: 5,
     deltaE: "76",
@@ -163,26 +163,26 @@ var C = {
         this.verbose && globalThis?.console?.warn?.(e);
     },
 };
-let E = { D50: [0.3457 / 0.3585, 1, 0.8251046025104602], D65: [0.3127 / 0.329, 1, 1.0890577507598784] };
-function x(e) {
-    return Array.isArray(e) ? e : E[e];
+let B = { D50: [0.3457 / 0.3585, 1, 0.8251046025104602], D65: [0.3127 / 0.329, 1, 1.0890577507598784] };
+function N(e) {
+    return Array.isArray(e) ? e : B[e];
 }
-function R(e, t, r, a = {}) {
-    if (((e = x(e)), (t = x(t)), !e || !t))
-        throw TypeError(`Missing white point to convert ${!e ? "from" : ""}${!e && !t ? "/" : ""}${!t ? "to" : ""}`);
-    if (e === t) return r;
-    let o = { W1: e, W2: t, XYZ: r, options: a };
+function x(e, r, t, a = {}) {
+    if (((e = N(e)), (r = N(r)), !e || !r))
+        throw TypeError(`Missing white point to convert ${!e ? "from" : ""}${!e && !r ? "/" : ""}${!r ? "to" : ""}`);
+    if (e === r) return t;
+    let o = { W1: e, W2: r, XYZ: t, options: a };
     if (
         (k.run("chromatic-adaptation-start", o),
         o.M ||
-            (o.W1 === E.D65 && o.W2 === E.D50
+            (o.W1 === B.D65 && o.W2 === B.D50
                 ? (o.M = [
                       [1.0479297925449969, 0.022946870601609652, -0.05019226628920524],
                       [0.02962780877005599, 0.9904344267538799, -0.017073799063418826],
                       [-0.009243040646204504, 0.015055191490298152, 0.7518742814281371],
                   ])
-                : o.W1 === E.D50 &&
-                  o.W2 === E.D65 &&
+                : o.W1 === B.D50 &&
+                  o.W2 === B.D65 &&
                   (o.M = [
                       [0.955473421488075, -0.02309845494876471, 0.06325924320057072],
                       [-0.0283697093338637, 1.0099953980813041, 0.021041441191917323],
@@ -194,49 +194,49 @@ function R(e, t, r, a = {}) {
         return n(o.M, o.XYZ);
     throw TypeError("Only Bradford CAT with white points D50 and D65 supported for now.");
 }
-let _ = new Set(["<number>", "<percentage>", "<angle>"]);
-function j(e, t, r, a) {
+let S = new Set(["<number>", "<percentage>", "<angle>"]);
+function z(e, r, t, a) {
     return Object.entries(e.coords).map(([e, n], o) => {
         let s,
-            i = t.coordGrammar[o],
-            c = a[o],
-            l = c?.type;
-        if (!(s = c.none ? i.find((e) => _.has(e)) : i.find((e) => e == l))) {
-            let t = n.name || e;
-            throw TypeError(`${l ?? c.raw} not allowed for ${t} in ${r}()`);
+            i = r.coordGrammar[o],
+            l = a[o],
+            c = l?.type;
+        if (!(s = l.none ? i.find((e) => S.has(e)) : i.find((e) => e == c))) {
+            let r = n.name || e;
+            throw TypeError(`${c ?? l.raw} not allowed for ${r} in ${t}()`);
         }
         let u = s.range;
-        "<percentage>" === l && (u ||= [0, 1]);
+        "<percentage>" === c && (u ||= [0, 1]);
         let f = n.range || n.refRange;
-        return u && f && (a[o] = m(u, f, a[o])), s;
+        return u && f && (a[o] = g(u, f, a[o])), s;
     });
 }
-function S(e, { meta: t } = {}) {
-    let r = { str: String(e)?.trim() };
-    if ((k.run("parse-start", r), r.color)) return r.color;
-    if (((r.parsed = b(r.str)), r.parsed)) {
-        let e = r.parsed.name;
+function I(e, { meta: r } = {}) {
+    let t = { str: String(e)?.trim() };
+    if ((k.run("parse-start", t), t.color)) return t.color;
+    if (((t.parsed = h(t.str)), t.parsed)) {
+        let e = t.parsed.name;
         if ("color" === e) {
-            let e = r.parsed.args.shift(),
+            let e = t.parsed.args.shift(),
                 a = e.startsWith("--") ? e.substring(2) : `--${e}`,
                 n = [e, a],
-                o = r.parsed.rawArgs.indexOf("/") > 0 ? r.parsed.args.pop() : 1;
-            for (let a of B.all) {
+                o = t.parsed.rawArgs.indexOf("/") > 0 ? t.parsed.args.pop() : 1;
+            for (let a of A.all) {
                 let s = a.getFormat("color");
                 if (s && (n.includes(s.id) || s.ids?.filter((e) => n.includes(e)).length)) {
                     let n,
-                        i = Object.keys(a.coords).map((e, t) => r.parsed.args[t] || 0);
+                        i = Object.keys(a.coords).map((e, r) => t.parsed.args[r] || 0);
                     return (
-                        s.coordGrammar && (n = j(a, s, "color", i)),
-                        t && Object.assign(t, { formatId: "color", types: n }),
+                        s.coordGrammar && (n = z(a, s, "color", i)),
+                        r && Object.assign(r, { formatId: "color", types: n }),
                         s.id.startsWith("--") &&
                             !e.startsWith("--") &&
-                            C.warn(
+                            _.warn(
                                 `${a.name} is a non-standard space and not currently supported in the CSS spec. Use prefixed color(${s.id}) instead of color(${e}).`,
                             ),
                         e.startsWith("--") &&
                             !s.id.startsWith("--") &&
-                            C.warn(
+                            _.warn(
                                 `${a.name} is a standard space and supported in the CSS spec. Use color(${s.id}) instead of prefixed color(${e}).`,
                             ),
                         { spaceId: a.id, coords: i, alpha: o }
@@ -244,72 +244,72 @@ function S(e, { meta: t } = {}) {
                 }
             }
             let s = "",
-                i = e in B.registry ? e : a;
-            if (i in B.registry) {
-                let e = B.registry[i].formats?.color?.id;
+                i = e in A.registry ? e : a;
+            if (i in A.registry) {
+                let e = A.registry[i].formats?.color?.id;
                 e && (s = `Did you mean color(${e})?`);
             }
             throw TypeError(`Cannot parse color(${e}). ` + (s || "Missing a plugin?"));
         }
-        for (let a of B.all) {
+        for (let a of A.all) {
             let n = a.getFormat(e);
             if (n && "function" === n.type) {
                 let o,
                     s = 1;
-                (n.lastAlpha || d(r.parsed.args).alpha) && (s = r.parsed.args.pop());
-                let i = r.parsed.args;
+                (n.lastAlpha || d(t.parsed.args).alpha) && (s = t.parsed.args.pop());
+                let i = t.parsed.args;
                 return (
-                    n.coordGrammar && (o = j(a, n, e, i)),
-                    t && Object.assign(t, { formatId: n.name, types: o }),
+                    n.coordGrammar && (o = z(a, n, e, i)),
+                    r && Object.assign(r, { formatId: n.name, types: o }),
                     { spaceId: a.id, coords: i, alpha: s }
                 );
             }
         }
     } else
-        for (let e of B.all)
+        for (let e of A.all)
             for (let a in e.formats) {
                 let n = e.formats[a];
-                if ("custom" !== n.type || (n.test && !n.test(r.str))) continue;
-                let o = n.parse(r.str);
-                if (o) return (o.alpha ??= 1), t && (t.formatId = a), o;
+                if ("custom" !== n.type || (n.test && !n.test(t.str))) continue;
+                let o = n.parse(t.str);
+                if (o) return (o.alpha ??= 1), r && (r.formatId = a), o;
             }
     throw TypeError(`Could not parse ${e} as a color. Missing a plugin?`);
 }
-function N(e) {
-    if (Array.isArray(e)) return e.map(N);
+function L(e) {
+    if (Array.isArray(e)) return e.map(L);
     if (!e) throw TypeError("Empty color reference");
-    o(e) && (e = S(e));
-    let t = e.space || e.spaceId;
-    return t instanceof B || (e.space = B.get(t)), void 0 === e.alpha && (e.alpha = 1), e;
+    o(e) && (e = I(e));
+    let r = e.space || e.spaceId;
+    return r instanceof A || (e.space = A.get(r)), void 0 === e.alpha && (e.alpha = 1), e;
 }
-class B {
+class A {
     constructor(e) {
         (this.id = e.id),
             (this.name = e.name),
-            (this.base = e.base ? B.get(e.base) : null),
+            (this.base = e.base ? A.get(e.base) : null),
             (this.aliases = e.aliases),
             this.base && ((this.fromBase = e.fromBase), (this.toBase = e.toBase));
-        let t = e.coords ?? this.base.coords;
-        for (let e in t) "name" in t[e] || (t[e].name = e);
-        this.coords = t;
-        let r = e.white ?? this.base.white ?? "D65";
-        for (let t in ((this.white = x(r)), (this.formats = e.formats ?? {}), this.formats)) {
-            let e = this.formats[t];
-            (e.type ||= "function"), (e.name ||= t);
+        let r = e.coords ?? this.base.coords;
+        for (let e in r) "name" in r[e] || (r[e].name = e);
+        this.coords = r;
+        let t = e.white ?? this.base.white ?? "D65";
+        for (let r in ((this.white = N(t)), (this.formats = e.formats ?? {}), this.formats)) {
+            let e = this.formats[r];
+            (e.type ||= "function"), (e.name ||= r);
         }
         this.formats.color?.id || (this.formats.color = { ...(this.formats.color ?? {}), id: e.cssId || this.id }),
             e.gamutSpace
-                ? (this.gamutSpace = "self" === e.gamutSpace ? this : B.get(e.gamutSpace))
+                ? (this.gamutSpace = "self" === e.gamutSpace ? this : A.get(e.gamutSpace))
                 : this.isPolar
                   ? (this.gamutSpace = this.base)
                   : (this.gamutSpace = this),
-            this.gamutSpace.isUnbounded && (this.inGamut = (e, t) => !0),
+            this.gamutSpace.isUnbounded && (this.inGamut = (e, r) => !0),
             (this.referred = e.referred),
             Object.defineProperty(this, "path", {
                 value: (function (e) {
-                    let t = [e];
-                    for (let r = e; (r = r.base); ) t.push(r);
-                    return t;
+                    let r = [e];
+                    for (let t = e; (t = t.base); ) r.push(t);
+                    return r;
                 })(this).reverse(),
                 writable: !1,
                 enumerable: !0,
@@ -317,16 +317,16 @@ class B {
             }),
             k.run("colorspace-init-end", this);
     }
-    inGamut(e, { epsilon: t = 75e-6 } = {}) {
+    inGamut(e, { epsilon: r = 75e-6 } = {}) {
         if (!this.equals(this.gamutSpace))
-            return (e = this.to(this.gamutSpace, e)), this.gamutSpace.inGamut(e, { epsilon: t });
-        let r = Object.values(this.coords);
+            return (e = this.to(this.gamutSpace, e)), this.gamutSpace.inGamut(e, { epsilon: r });
+        let t = Object.values(this.coords);
         return e.every((e, a) => {
-            let n = r[a];
+            let n = t[a];
             if ("angle" !== n.type && n.range) {
                 if (Number.isNaN(e)) return !0;
-                let [r, a] = n.range;
-                return (void 0 === r || e >= r - t) && (void 0 === a || e <= a + t);
+                let [t, a] = n.range;
+                return (void 0 === t || e >= t - r) && (void 0 === a || e <= a + r);
             }
             return !0;
         });
@@ -342,119 +342,119 @@ class B {
         return !1;
     }
     getFormat(e) {
-        let t;
+        let r;
         return "object" == typeof e
-            ? (e = P(e, this))
-            : (t = "default" === e ? Object.values(this.formats)[0] : this.formats[e])
-              ? (t = P(t, this))
+            ? (e = E(e, this))
+            : (r = "default" === e ? Object.values(this.formats)[0] : this.formats[e])
+              ? (r = E(r, this))
               : null;
     }
     equals(e) {
         return !!e && (this === e || this.id === e || this.id === e.id);
     }
-    to(e, t) {
-        let r, a;
+    to(e, r) {
+        let t, a;
         if (1 == arguments.length) {
-            let r = N(e);
-            [e, t] = [r.space, r.coords];
+            let t = L(e);
+            [e, r] = [t.space, t.coords];
         }
-        if (((e = B.get(e)), this.equals(e))) return t;
-        t = t.map((e) => (Number.isNaN(e) ? 0 : e));
+        if (((e = A.get(e)), this.equals(e))) return r;
+        r = r.map((e) => (Number.isNaN(e) ? 0 : e));
         let n = this.path,
             o = e.path;
         for (let e = 0; e < n.length; e++)
-            if (n[e].equals(o[e])) (r = n[e]), (a = e);
+            if (n[e].equals(o[e])) (t = n[e]), (a = e);
             else break;
-        if (!r) throw Error(`Cannot convert between color spaces ${this} and ${e}: no connection space was found`);
-        for (let e = n.length - 1; e > a; e--) t = n[e].toBase(t);
-        for (let e = a + 1; e < o.length; e++) t = o[e].fromBase(t);
-        return t;
+        if (!t) throw Error(`Cannot convert between color spaces ${this} and ${e}: no connection space was found`);
+        for (let e = n.length - 1; e > a; e--) r = n[e].toBase(r);
+        for (let e = a + 1; e < o.length; e++) r = o[e].fromBase(r);
+        return r;
     }
-    from(e, t) {
+    from(e, r) {
         if (1 == arguments.length) {
-            let r = N(e);
-            [e, t] = [r.space, r.coords];
+            let t = L(e);
+            [e, r] = [t.space, t.coords];
         }
-        return (e = B.get(e)).to(this, t);
+        return (e = A.get(e)).to(this, r);
     }
     toString() {
         return `${this.name} (${this.id})`;
     }
     getMinCoords() {
         let e = [];
-        for (let t in this.coords) {
-            let r = this.coords[t],
-                a = r.range || r.refRange;
+        for (let r in this.coords) {
+            let t = this.coords[r],
+                a = t.range || t.refRange;
             e.push(a?.min ?? 0);
         }
         return e;
     }
     static registry = {};
     static get all() {
-        return [...new Set(Object.values(B.registry))];
+        return [...new Set(Object.values(A.registry))];
     }
-    static register(e, t) {
+    static register(e, r) {
         if (
-            (1 == arguments.length && ((t = arguments[0]), (e = t.id)),
-            (t = this.get(t)),
-            this.registry[e] && this.registry[e] !== t)
+            (1 == arguments.length && ((r = arguments[0]), (e = r.id)),
+            (r = this.get(r)),
+            this.registry[e] && this.registry[e] !== r)
         )
             throw Error(`Duplicate color space registration: '${e}'`);
-        if (((this.registry[e] = t), 1 == arguments.length && t.aliases)) for (let e of t.aliases) this.register(e, t);
-        return t;
+        if (((this.registry[e] = r), 1 == arguments.length && r.aliases)) for (let e of r.aliases) this.register(e, r);
+        return r;
     }
-    static get(e, ...t) {
-        if (!e || e instanceof B) return e;
+    static get(e, ...r) {
+        if (!e || e instanceof A) return e;
         if ("string" === s(e)) {
-            let t = B.registry[e.toLowerCase()];
-            if (!t) throw TypeError(`No color space found with id = "${e}"`);
-            return t;
+            let r = A.registry[e.toLowerCase()];
+            if (!r) throw TypeError(`No color space found with id = "${e}"`);
+            return r;
         }
-        if (t.length) return B.get(...t);
+        if (r.length) return A.get(...r);
         throw TypeError(`${e} is not a valid color space`);
     }
-    static resolveCoord(e, t) {
-        let r,
+    static resolveCoord(e, r) {
+        let t,
             a,
             n = s(e);
         if (
             ("string" === n
                 ? e.includes(".")
-                    ? ([r, a] = e.split("."))
-                    : ([r, a] = [, e])
+                    ? ([t, a] = e.split("."))
+                    : ([t, a] = [, e])
                 : Array.isArray(e)
-                  ? ([r, a] = e)
-                  : ((r = e.space), (a = e.coordId)),
-            (r = B.get(r)) || (r = t),
-            !r)
+                  ? ([t, a] = e)
+                  : ((t = e.space), (a = e.coordId)),
+            (t = A.get(t)) || (t = r),
+            !t)
         )
             throw TypeError(
                 `Cannot resolve coordinate reference ${e}: No color space specified and relative references are not allowed here`,
             );
         if ("number" === (n = s(a)) || ("string" === n && a >= 0)) {
-            let e = Object.entries(r.coords)[a];
-            if (e) return { space: r, id: e[0], index: a, ...e[1] };
+            let e = Object.entries(t.coords)[a];
+            if (e) return { space: t, id: e[0], index: a, ...e[1] };
         }
-        r = B.get(r);
+        t = A.get(t);
         let o = a.toLowerCase(),
             i = 0;
-        for (let e in r.coords) {
-            let t = r.coords[e];
-            if (e.toLowerCase() === o || t.name?.toLowerCase() === o) return { space: r, id: e, index: i, ...t };
+        for (let e in t.coords) {
+            let r = t.coords[e];
+            if (e.toLowerCase() === o || r.name?.toLowerCase() === o) return { space: t, id: e, index: i, ...r };
             i++;
         }
         throw TypeError(
-            `No "${a}" coordinate found in ${r.name}. Its coordinates are: ${Object.keys(r.coords).join(", ")}`,
+            `No "${a}" coordinate found in ${t.name}. Its coordinates are: ${Object.keys(t.coords).join(", ")}`,
         );
     }
     static DEFAULT_FORMAT = { type: "functions", name: "color" };
 }
-function P(e, { coords: t } = {}) {
+function E(e, { coords: r } = {}) {
     if (e.coords && !e.coordGrammar) {
-        (e.type ||= "function"), (e.name ||= "color"), (e.coordGrammar = g(e.coords));
-        let r = Object.entries(t).map(([t, r], a) => {
+        (e.type ||= "function"), (e.name ||= "color"), (e.coordGrammar = b(e.coords));
+        let t = Object.entries(r).map(([r, t], a) => {
             let n = e.coordGrammar[a][0],
-                o = r.range || r.refRange,
+                o = t.range || t.refRange,
                 s = n.range,
                 i = "";
             return (
@@ -462,15 +462,15 @@ function P(e, { coords: t } = {}) {
                 { fromRange: o, toRange: s, suffix: i }
             );
         });
-        e.serializeCoords = (e, t) =>
+        e.serializeCoords = (e, r) =>
             e.map((e, a) => {
-                let { fromRange: n, toRange: o, suffix: s } = r[a];
-                return n && o && (e = m(n, o, e)), (e = i(e, { precision: t, unit: s }));
+                let { fromRange: n, toRange: o, suffix: s } = t[a];
+                return n && o && (e = g(n, o, e)), (e = i(e, { precision: r, unit: s }));
             });
     }
     return e;
 }
-var D = new B({
+var P = new A({
     id: "xyz-d65",
     name: "XYZ D65",
     coords: { x: { name: "X" }, y: { name: "Y" }, z: { name: "Z" } },
@@ -478,7 +478,7 @@ var D = new B({
     formats: { color: { ids: ["xyz-d65", "xyz"] } },
     aliases: ["xyz"],
 });
-class I extends B {
+class j extends A {
     constructor(e) {
         e.coords ||
             (e.coords = {
@@ -486,55 +486,55 @@ class I extends B {
                 g: { range: [0, 1], name: "Green" },
                 b: { range: [0, 1], name: "Blue" },
             }),
-            e.base || (e.base = D),
+            e.base || (e.base = P),
             e.toXYZ_M &&
                 e.fromXYZ_M &&
-                ((e.toBase ??= (t) => {
-                    let r = n(e.toXYZ_M, t);
-                    return this.white !== this.base.white && (r = R(this.white, this.base.white, r)), r;
+                ((e.toBase ??= (r) => {
+                    let t = n(e.toXYZ_M, r);
+                    return this.white !== this.base.white && (t = x(this.white, this.base.white, t)), t;
                 }),
-                (e.fromBase ??= (t) => ((t = R(this.base.white, this.white, t)), n(e.fromXYZ_M, t)))),
+                (e.fromBase ??= (r) => ((r = x(this.base.white, this.white, r)), n(e.fromXYZ_M, r)))),
             (e.referred ??= "display"),
             super(e);
     }
 }
-function T(e, t) {
-    return ((e = N(e)), !t || e.space.equals(t)) ? e.coords.slice() : (t = B.get(t)).from(e);
+function O(e, r) {
+    return ((e = L(e)), !r || e.space.equals(r)) ? e.coords.slice() : (r = A.get(r)).from(e);
 }
-function L(e, t) {
-    e = N(e);
-    let { space: r, index: a } = B.resolveCoord(t, e.space);
-    return T(e, r)[a];
+function $(e, r) {
+    e = L(e);
+    let { space: t, index: a } = A.resolveCoord(r, e.space);
+    return O(e, t)[a];
 }
-function F(e, t, r) {
-    return (e = N(e)), (t = B.get(t)), (e.coords = t.to(e.space, r)), e;
+function D(e, r, t) {
+    return (e = L(e)), (r = A.get(r)), (e.coords = r.to(e.space, t)), e;
 }
-function z(e, t, r) {
-    if (((e = N(e)), 2 == arguments.length && "object" === s(arguments[1]))) {
-        let t = arguments[1];
-        for (let r in t) z(e, r, t[r]);
+function q(e, r, t) {
+    if (((e = L(e)), 2 == arguments.length && "object" === s(arguments[1]))) {
+        let r = arguments[1];
+        for (let t in r) q(e, t, r[t]);
     } else {
-        "function" == typeof r && (r = r(L(e, t)));
-        let { space: a, index: n } = B.resolveCoord(t, e.space),
-            o = T(e, a);
-        (o[n] = r), F(e, a, o);
+        "function" == typeof t && (t = t($(e, r)));
+        let { space: a, index: n } = A.resolveCoord(r, e.space),
+            o = O(e, a);
+        (o[n] = t), D(e, a, o);
     }
     return e;
 }
-(F.returns = "color"), (z.returns = "color");
-var q = new B({
+(D.returns = "color"), (q.returns = "color");
+var T = new A({
     id: "xyz-d50",
     name: "XYZ D50",
     white: "D50",
-    base: D,
-    fromBase: (e) => R(D.white, "D50", e),
-    toBase: (e) => R("D50", D.white, e),
+    base: P,
+    fromBase: (e) => x(P.white, "D50", e),
+    toBase: (e) => x("D50", P.white, e),
 });
-let $ = 216 / 24389,
-    U = 24 / 116,
-    W = 24389 / 27,
-    G = E.D50;
-var H = new B({
+let H = 216 / 24389,
+    W = 24 / 116,
+    F = 24389 / 27,
+    G = B.D50;
+var X = new A({
     id: "lab",
     name: "Lab",
     coords: {
@@ -543,32 +543,32 @@ var H = new B({
         b: { refRange: [-125, 125] },
     },
     white: G,
-    base: q,
+    base: T,
     fromBase(e) {
-        let t = e.map((e, t) => e / G[t]).map((e) => (e > $ ? Math.cbrt(e) : (W * e + 16) / 116));
-        return [116 * t[1] - 16, 500 * (t[0] - t[1]), 200 * (t[1] - t[2])];
+        let r = e.map((e, r) => e / G[r]).map((e) => (e > H ? Math.cbrt(e) : (F * e + 16) / 116));
+        return [116 * r[1] - 16, 500 * (r[0] - r[1]), 200 * (r[1] - r[2])];
     },
     toBase(e) {
-        let t = [];
+        let r = [];
         return (
-            (t[1] = (e[0] + 16) / 116),
-            (t[0] = e[1] / 500 + t[1]),
-            (t[2] = t[1] - e[2] / 200),
+            (r[1] = (e[0] + 16) / 116),
+            (r[0] = e[1] / 500 + r[1]),
+            (r[2] = r[1] - e[2] / 200),
             [
-                t[0] > U ? Math.pow(t[0], 3) : (116 * t[0] - 16) / W,
-                e[0] > 8 ? Math.pow((e[0] + 16) / 116, 3) : e[0] / W,
-                t[2] > U ? Math.pow(t[2], 3) : (116 * t[2] - 16) / W,
-            ].map((e, t) => e * G[t])
+                r[0] > W ? Math.pow(r[0], 3) : (116 * r[0] - 16) / F,
+                e[0] > 8 ? Math.pow((e[0] + 16) / 116, 3) : e[0] / F,
+                r[2] > W ? Math.pow(r[2], 3) : (116 * r[2] - 16) / F,
+            ].map((e, r) => e * G[r])
         );
     },
     formats: {
         lab: { coords: ["<number> | <percentage>", "<number> | <percentage>[-1,1]", "<number> | <percentage>[-1,1]"] },
     },
 });
-function Z(e) {
+function Y(e) {
     return ((e % 360) + 360) % 360;
 }
-var Y = new B({
+var Z = new A({
     id: "lch",
     name: "LCH",
     coords: {
@@ -576,93 +576,93 @@ var Y = new B({
         c: { refRange: [0, 150], name: "Chroma" },
         h: { refRange: [0, 360], type: "angle", name: "Hue" },
     },
-    base: H,
+    base: X,
     fromBase(e) {
-        let t,
-            [r, a, n] = e;
+        let r,
+            [t, a, n] = e;
         return (
-            (t = 0.02 > Math.abs(a) && 0.02 > Math.abs(n) ? NaN : (180 * Math.atan2(n, a)) / Math.PI),
-            [r, Math.sqrt(a ** 2 + n ** 2), Z(t)]
+            (r = 0.02 > Math.abs(a) && 0.02 > Math.abs(n) ? NaN : (180 * Math.atan2(n, a)) / Math.PI),
+            [t, Math.sqrt(a ** 2 + n ** 2), Y(r)]
         );
     },
     toBase(e) {
-        let [t, r, a] = e;
+        let [r, t, a] = e;
         return (
-            r < 0 && (r = 0),
+            t < 0 && (t = 0),
             isNaN(a) && (a = 0),
-            [t, r * Math.cos((a * Math.PI) / 180), r * Math.sin((a * Math.PI) / 180)]
+            [r, t * Math.cos((a * Math.PI) / 180), t * Math.sin((a * Math.PI) / 180)]
         );
     },
     formats: { lch: { coords: ["<number> | <percentage>", "<number> | <percentage>", "<number> | <angle>"] } },
 });
-let X = Math.PI,
-    J = 180 / X,
-    V = X / 180;
-function K(e) {
-    let t = e * e;
-    return t * t * t * e;
+let U = Math.PI,
+    J = 180 / U,
+    Q = U / 180;
+function V(e) {
+    let r = e * e;
+    return r * r * r * e;
 }
-function Q(e, t, { kL: r = 1, kC: a = 1, kH: n = 1 } = {}) {
+function K(e, r, { kL: t = 1, kC: a = 1, kH: n = 1 } = {}) {
     let o, s;
-    [e, t] = N([e, t]);
-    let [i, c, l] = H.from(e),
-        u = Y.from(H, [i, c, l])[1],
-        [f, b, d] = H.from(t),
-        h = Y.from(H, [f, b, d])[1];
-    u < 0 && (u = 0), h < 0 && (h = 0);
-    let p = K((u + h) / 2),
-        m = 0.5 * (1 - Math.sqrt(p / (p + 0x16bcc41e9))),
-        g = (1 + m) * c,
-        y = (1 + m) * b,
-        v = Math.sqrt(g ** 2 + l ** 2),
-        w = Math.sqrt(y ** 2 + d ** 2),
-        M = 0 === g && 0 === l ? 0 : Math.atan2(l, g),
-        A = 0 === y && 0 === d ? 0 : Math.atan2(d, y);
-    M < 0 && (M += 2 * X), A < 0 && (A += 2 * X), (M *= J);
-    let O = f - i,
+    [e, r] = L([e, r]);
+    let [i, l, c] = X.from(e),
+        u = Z.from(X, [i, l, c])[1],
+        [f, h, d] = X.from(r),
+        m = Z.from(X, [f, h, d])[1];
+    u < 0 && (u = 0), m < 0 && (m = 0);
+    let p = V((u + m) / 2),
+        g = 0.5 * (1 - Math.sqrt(p / (p + 0x16bcc41e9))),
+        b = (1 + g) * l,
+        M = (1 + g) * h,
+        v = Math.sqrt(b ** 2 + c ** 2),
+        w = Math.sqrt(M ** 2 + d ** 2),
+        y = 0 === b && 0 === c ? 0 : Math.atan2(c, b),
+        C = 0 === M && 0 === d ? 0 : Math.atan2(d, M);
+    y < 0 && (y += 2 * U), C < 0 && (C += 2 * U), (y *= J);
+    let R = f - i,
         k = w - v,
-        E = (A *= J) - M,
-        x = M + A,
-        R = Math.abs(E);
+        B = (C *= J) - y,
+        N = y + C,
+        x = Math.abs(B);
     v * w == 0
         ? (o = 0)
-        : R <= 180
-          ? (o = E)
-          : E > 180
-            ? (o = E - 360)
-            : E < -180
-              ? (o = E + 360)
-              : C.warn("the unthinkable has happened");
-    let _ = 2 * Math.sqrt(w * v) * Math.sin((o * V) / 2),
-        j = (i + f) / 2,
-        S = (v + w) / 2,
-        B = K(S),
-        P = (j - 50) ** 2,
-        D = 1 + (0.015 * P) / Math.sqrt(20 + P),
-        I = 1 + 0.045 * S,
-        T =
+        : x <= 180
+          ? (o = B)
+          : B > 180
+            ? (o = B - 360)
+            : B < -180
+              ? (o = B + 360)
+              : _.warn("the unthinkable has happened");
+    let S = 2 * Math.sqrt(w * v) * Math.sin((o * Q) / 2),
+        z = (i + f) / 2,
+        I = (v + w) / 2,
+        A = V(I),
+        E = (z - 50) ** 2,
+        P = 1 + (0.015 * E) / Math.sqrt(20 + E),
+        j = 1 + 0.045 * I,
+        O =
             1 +
             0.015 *
-                S *
+                I *
                 (1 -
                     0.17 *
                         Math.cos(
-                            ((s = v * w == 0 ? x : R <= 180 ? x / 2 : x < 360 ? (x + 360) / 2 : (x - 360) / 2) - 30) *
-                                V,
+                            ((s = v * w == 0 ? N : x <= 180 ? N / 2 : N < 360 ? (N + 360) / 2 : (N - 360) / 2) - 30) *
+                                Q,
                         ) +
-                    0.24 * Math.cos(2 * s * V) +
-                    0.32 * Math.cos((3 * s + 6) * V) -
-                    0.2 * Math.cos((4 * s - 63) * V)),
-        L = (O / (r * D)) ** 2;
+                    0.24 * Math.cos(2 * s * Q) +
+                    0.32 * Math.cos((3 * s + 6) * Q) -
+                    0.2 * Math.cos((4 * s - 63) * Q)),
+        $ = (R / (t * P)) ** 2;
     return Math.sqrt(
-        (L +=
-            (k / (a * I)) ** 2 +
-            (_ / (n * T)) ** 2 +
-            (k / (a * I)) *
+        ($ +=
+            (k / (a * j)) ** 2 +
+            (S / (n * O)) ** 2 +
+            (k / (a * j)) *
                 (-1 *
-                    Math.sin(2 * (30 * Math.exp(-1 * ((s - 275) / 25) ** 2)) * V) *
-                    (2 * Math.sqrt(B / (B + 0x16bcc41e9)))) *
-                (_ / (n * T))),
+                    Math.sin(2 * (30 * Math.exp(-1 * ((s - 275) / 25) ** 2)) * Q) *
+                    (2 * Math.sqrt(A / (A + 0x16bcc41e9)))) *
+                (S / (n * O))),
     );
 }
 let ee = [
@@ -670,12 +670,12 @@ let ee = [
         [0.0329836539323885, 0.9292868615863434, 0.0361446663506424],
         [0.0481771893596242, 0.2642395317527308, 0.6335478284694309],
     ],
-    et = [
+    er = [
         [1.2268798758459243, -0.5578149944602171, 0.2813910456659647],
         [-0.0405757452148008, 1.112286803280317, -0.0717110580655164],
         [-0.0763729366746601, -0.4214933324022432, 1.5869240198367816],
     ],
-    er = [
+    et = [
         [0.210454268309314, 0.7936177747023054, -0.0040720430116193],
         [1.9779985324311684, -2.42859224204858, 0.450593709617411],
         [0.0259040424655478, 0.7827717124575296, -0.8086757549230774],
@@ -685,19 +685,19 @@ let ee = [
         [1, -0.1055613458156586, -0.0638541728258133],
         [1, -0.0894841775298119, -1.2914855480194092],
     ];
-var en = new B({
+var en = new A({
     id: "oklab",
     name: "Oklab",
     coords: { l: { refRange: [0, 1], name: "Lightness" }, a: { refRange: [-0.4, 0.4] }, b: { refRange: [-0.4, 0.4] } },
     white: "D65",
-    base: D,
+    base: P,
     fromBase(e) {
-        let t = n(ee, e).map((e) => Math.cbrt(e));
-        return n(er, t);
+        let r = n(ee, e).map((e) => Math.cbrt(e));
+        return n(et, r);
     },
     toBase(e) {
-        let t = n(ea, e).map((e) => e ** 3);
-        return n(et, t);
+        let r = n(ea, e).map((e) => e ** 3);
+        return n(er, r);
     },
     formats: {
         oklab: {
@@ -705,32 +705,32 @@ var en = new B({
         },
     },
 });
-function eo(e, t) {
-    [e, t] = N([e, t]);
-    let [r, a, n] = en.from(e),
-        [o, s, i] = en.from(t);
-    return Math.sqrt((r - o) ** 2 + (a - s) ** 2 + (n - i) ** 2);
+function eo(e, r) {
+    [e, r] = L([e, r]);
+    let [t, a, n] = en.from(e),
+        [o, s, i] = en.from(r);
+    return Math.sqrt((t - o) ** 2 + (a - s) ** 2 + (n - i) ** 2);
 }
-function es(e, t, { epsilon: r = 75e-6 } = {}) {
-    (e = N(e)), t || (t = e.space), (t = B.get(t));
+function es(e, r, { epsilon: t = 75e-6 } = {}) {
+    (e = L(e)), r || (r = e.space), (r = A.get(r));
     let a = e.coords;
-    return t !== e.space && (a = t.from(e)), t.inGamut(a, { epsilon: r });
+    return r !== e.space && (a = r.from(e)), r.inGamut(a, { epsilon: t });
 }
 function ei(e) {
     return { space: e.space, coords: e.coords.slice(), alpha: e.alpha };
 }
-function ec(e, t, r = "lab") {
-    let a = (r = B.get(r)).from(e),
-        n = r.from(t);
+function el(e, r, t = "lab") {
+    let a = (t = A.get(t)).from(e),
+        n = t.from(r);
     return Math.sqrt(
-        a.reduce((e, t, r) => {
-            let a = n[r];
-            return isNaN(t) || isNaN(a) ? e : e + (a - t) ** 2;
+        a.reduce((e, r, t) => {
+            let a = n[t];
+            return isNaN(r) || isNaN(a) ? e : e + (a - r) ** 2;
         }, 0),
     );
 }
-let el = Math.PI / 180;
-var eu = new B({
+let ec = Math.PI / 180;
+var eu = new A({
     id: "xyz-abs-d65",
     cssId: "--xyz-abs-d65",
     name: "Absolute XYZ D65",
@@ -739,59 +739,59 @@ var eu = new B({
         y: { refRange: [0, 1e4], name: "Ya" },
         z: { refRange: [0, 10888.3], name: "Za" },
     },
-    base: D,
+    base: P,
     fromBase: (e) => e.map((e) => Math.max(203 * e, 0)),
     toBase: (e) => e.map((e) => Math.max(e / 203, 0)),
 });
 let ef = 2610 / 16384,
-    eb = 16384 / 2610,
+    eh = 16384 / 2610,
     ed = (1.7 * 2523) / 32,
-    eh = 32 / (1.7 * 2523),
+    em = 32 / (1.7 * 2523),
     ep = [
         [0.41478972, 0.579999, 0.014648],
         [-0.20151, 1.120649, 0.0531008],
         [-0.0166008, 0.2648, 0.6684799],
     ],
-    em = [
+    eg = [
         [1.9242264357876067, -1.0047923125953657, 0.037651404030618],
         [0.35031676209499907, 0.7264811939316552, -0.06538442294808501],
         [-0.09098281098284752, -0.3127282905230739, 1.5227665613052603],
     ],
-    eg = [
+    eb = [
         [0.5, 0.5, 0],
         [3.524, -4.066708, 0.542708],
         [0.199076, 1.096799, -1.295875],
     ],
-    ey = [
+    eM = [
         [1, 0.1386050432715393, 0.05804731615611886],
         [0.9999999999999999, -0.1386050432715393, -0.05804731615611886],
         [0.9999999999999998, -0.09601924202631895, -0.8118918960560388],
     ];
-var ev = new B({
+var ev = new A({
         id: "jzazbz",
         name: "Jzazbz",
         coords: { jz: { refRange: [0, 1], name: "Jz" }, az: { refRange: [-0.5, 0.5] }, bz: { refRange: [-0.5, 0.5] } },
         base: eu,
         fromBase(e) {
-            let [t, r, a] = e,
-                o = n(ep, [1.15 * t - (1.15 - 1) * a, 0.66 * r - (0.66 - 1) * t, a]).map(function (e) {
+            let [r, t, a] = e,
+                o = n(ep, [1.15 * r - (1.15 - 1) * a, 0.66 * t - (0.66 - 1) * r, a]).map(function (e) {
                     return ((0.8359375 + 18.8515625 * (e / 1e4) ** ef) / (1 + 18.6875 * (e / 1e4) ** ef)) ** ed;
                 }),
-                [s, i, c] = n(eg, o);
-            return [(0.43999999999999995 * s) / (1 + -0.56 * s) - 16295499532821565e-27, i, c];
+                [s, i, l] = n(eb, o);
+            return [(0.43999999999999995 * s) / (1 + -0.56 * s) - 16295499532821565e-27, i, l];
         },
         toBase(e) {
-            let [t, r, a] = e,
-                o = n(ey, [
-                    (t + 16295499532821565e-27) / (0.43999999999999995 - -0.56 * (t + 16295499532821565e-27)),
-                    r,
+            let [r, t, a] = e,
+                o = n(eM, [
+                    (r + 16295499532821565e-27) / (0.43999999999999995 - -0.56 * (r + 16295499532821565e-27)),
+                    t,
                     a,
                 ]).map(function (e) {
-                    return 1e4 * ((0.8359375 - e ** eh) / (18.6875 * e ** eh - 18.8515625)) ** eb;
+                    return 1e4 * ((0.8359375 - e ** em) / (18.6875 * e ** em - 18.8515625)) ** eh;
                 }),
-                [s, i, c] = n(em, o),
-                l = (s + (1.15 - 1) * c) / 1.15;
-            return [l, (i + (0.66 - 1) * l) / 0.66, c];
+                [s, i, l] = n(eg, o),
+                c = (s + (1.15 - 1) * l) / 1.15;
+            return [c, (i + (0.66 - 1) * c) / 0.66, l];
         },
         formats: {
             color: {
@@ -799,7 +799,7 @@ var ev = new B({
             },
         },
     }),
-    ew = new B({
+    ew = new A({
         id: "jzczhz",
         name: "JzCzHz",
         coords: {
@@ -809,41 +809,41 @@ var ev = new B({
         },
         base: ev,
         fromBase(e) {
-            let t,
-                [r, a, n] = e;
+            let r,
+                [t, a, n] = e;
             return (
-                (t = 2e-4 > Math.abs(a) && 2e-4 > Math.abs(n) ? NaN : (180 * Math.atan2(n, a)) / Math.PI),
-                [r, Math.sqrt(a ** 2 + n ** 2), Z(t)]
+                (r = 2e-4 > Math.abs(a) && 2e-4 > Math.abs(n) ? NaN : (180 * Math.atan2(n, a)) / Math.PI),
+                [t, Math.sqrt(a ** 2 + n ** 2), Y(r)]
             );
         },
         toBase: (e) => [e[0], e[1] * Math.cos((e[2] * Math.PI) / 180), e[1] * Math.sin((e[2] * Math.PI) / 180)],
     });
-let eM = 2413 / 128,
-    eA = 2610 / 16384,
-    eO = 2523 / 32,
+let ey = 2413 / 128,
+    eC = 2610 / 16384,
+    eR = 2523 / 32,
     ek = 16384 / 2610,
-    eC = 32 / 2523,
-    eE = [
+    e_ = 32 / 2523,
+    eB = [
         [0.3592832590121217, 0.6976051147779502, -0.035891593232029],
         [-0.1920808463704993, 1.100476797037432, 0.0753748658519118],
         [0.0070797844607479, 0.0748396662186362, 0.8433265453898765],
     ],
-    ex = [
+    eN = [
         [0.5, 0.5, 0],
         [6610 / 4096, -13613 / 4096, 7003 / 4096],
         [17933 / 4096, -17390 / 4096, -543 / 4096],
     ],
-    eR = [
+    ex = [
         [0.9999999999999998, 0.0086090370379328, 0.111029625003026],
         [0.9999999999999998, -0.0086090370379328, -0.1110296250030259],
         [0.9999999999999998, 0.5600313357106791, -0.3206271749873188],
     ],
-    e_ = [
+    eS = [
         [2.0701522183894223, -1.3263473389671563, 0.2066510476294053],
         [0.3647385209748072, 0.6805660249472273, -0.0453045459220347],
         [-0.0497472075358123, -0.0492609666966131, 1.1880659249923042],
     ];
-var ej = new B({
+var ez = new A({
     id: "ictcp",
     name: "ICTCP",
     coords: {
@@ -853,82 +853,82 @@ var ej = new B({
     },
     base: eu,
     fromBase: (e) => {
-        var t;
+        var r;
         return (
-            (t = n(eE, e)),
+            (r = n(eB, e)),
             n(
-                ex,
-                t.map(function (e) {
-                    return ((0.8359375 + eM * (e / 1e4) ** eA) / (1 + 18.6875 * (e / 1e4) ** eA)) ** eO;
+                eN,
+                r.map(function (e) {
+                    return ((0.8359375 + ey * (e / 1e4) ** eC) / (1 + 18.6875 * (e / 1e4) ** eC)) ** eR;
                 }),
             )
         );
     },
     toBase: (e) =>
         n(
-            e_,
-            n(eR, e).map(function (e) {
-                let t = Math.max(e ** eC - 0.8359375, 0);
-                return 1e4 * (t / (eM - 18.6875 * e ** eC)) ** ek;
+            eS,
+            n(ex, e).map(function (e) {
+                let r = Math.max(e ** e_ - 0.8359375, 0);
+                return 1e4 * (r / (ey - 18.6875 * e ** e_)) ** ek;
             }),
         ),
 });
-let eS = E.D65,
-    eN = 2 * Math.PI,
-    eB = [
+let eI = B.D65,
+    eL = 2 * Math.PI,
+    eA = [
         [0.401288, 0.650173, -0.051461],
         [-0.250268, 1.204414, 0.045854],
         [-0.002079, 0.048952, 0.953127],
     ],
-    eP = [
+    eE = [
         [1.8620678550872327, -1.0112546305316843, 0.14918677544445175],
         [0.38752654323613717, 0.6214474419314753, -0.008973985167612518],
         [-0.015841498849333856, -0.03412293802851557, 1.0499644368778496],
     ],
-    eD = [
+    eP = [
         [460, 451, 288],
         [460, -891, -261],
         [460, -220, -6300],
     ],
-    eI = { dark: [0.8, 0.525, 0.8], dim: [0.9, 0.59, 0.9], average: [1, 0.69, 1] },
-    eT = [20.14, 90, 164.25, 237.53, 380.14],
-    eL = [0.8, 0.7, 1, 1.2, 0.8],
-    eF = [0, 100, 200, 300, 400],
-    ez = 180 / Math.PI,
-    eq = Math.PI / 180;
-function e$(e, t) {
+    ej = { dark: [0.8, 0.525, 0.8], dim: [0.9, 0.59, 0.9], average: [1, 0.69, 1] },
+    eO = [20.14, 90, 164.25, 237.53, 380.14],
+    e$ = [0.8, 0.7, 1, 1.2, 0.8],
+    eD = [0, 100, 200, 300, 400],
+    eq = 180 / Math.PI,
+    eT = Math.PI / 180;
+function eH(e, r) {
     return e.map((e) => {
-        let r = w(t * Math.abs(e) * 0.01, 0.42);
-        return (400 * v(r, e)) / (r + 27.13);
+        let t = w(r * Math.abs(e) * 0.01, 0.42);
+        return (400 * v(t, e)) / (t + 27.13);
     });
 }
-function eU(e, t, r, a, o) {
+function eW(e, r, t, a, o) {
     let s = {};
     (s.discounting = o), (s.refWhite = e), (s.surround = a);
     let i = e.map((e) => 100 * e);
-    (s.la = t), (s.yb = r);
-    let c = i[1],
-        l = n(eB, i),
-        u = (a = eI[s.surround])[0];
+    (s.la = r), (s.yb = t);
+    let l = i[1],
+        c = n(eA, i),
+        u = (a = ej[s.surround])[0];
     (s.c = a[1]), (s.nc = a[2]);
     let f = (1 / (5 * s.la + 1)) ** 4;
     (s.fl = f * s.la + 0.1 * (1 - f) * (1 - f) * Math.cbrt(5 * s.la)),
         (s.flRoot = s.fl ** 0.25),
-        (s.n = s.yb / c),
+        (s.n = s.yb / l),
         (s.z = 1.48 + Math.sqrt(s.n)),
         (s.nbb = 0.725 * s.n ** -0.2),
         (s.ncb = s.nbb);
-    let b = o ? 1 : Math.max(Math.min(u * (1 - (1 / 3.6) * Math.exp((-s.la - 42) / 92)), 1), 0);
-    (s.dRgb = l.map((e) => h(1, c / e, b))), (s.dRgbInv = s.dRgb.map((e) => 1 / e));
-    let d = e$(
-        l.map((e, t) => e * s.dRgb[t]),
+    let h = o ? 1 : Math.max(Math.min(u * (1 - (1 / 3.6) * Math.exp((-s.la - 42) / 92)), 1), 0);
+    (s.dRgb = c.map((e) => m(1, l / e, h))), (s.dRgbInv = s.dRgb.map((e) => 1 / e));
+    let d = eH(
+        c.map((e, r) => e * s.dRgb[r]),
         s.fl,
     );
     return (s.aW = s.nbb * (2 * d[0] + d[1] + 0.05 * d[2])), s;
 }
-let eW = eU(eS, (64 / Math.PI) * 0.2, 20, "average", !1);
-function eG(e, t) {
-    var r;
+let eF = eW(eI, (64 / Math.PI) * 0.2, 20, "average", !1);
+function eG(e, r) {
+    var t;
     let a;
     if (!((void 0 !== e.J) ^ (void 0 !== e.Q))) throw Error("Conversion requires one and only one: 'J' or 'Q'");
     if (!((void 0 !== e.C) ^ (void 0 !== e.M) ^ (void 0 !== e.s)))
@@ -939,77 +939,77 @@ function eG(e, t) {
         s = Math.cos(
             (o =
                 void 0 !== e.h
-                    ? Z(e.h) * eq
+                    ? Y(e.h) * eT
                     : (function (e) {
-                          let t = ((e % 400) + 400) % 400,
-                              r = Math.floor(0.01 * t);
-                          t %= 100;
-                          let [a, n] = eT.slice(r, r + 2),
-                              [o, s] = eL.slice(r, r + 2);
-                          return Z((t * (s * a - o * n) - 100 * a * s) / (t * (s - o) - 100 * s));
-                      })(e.H) * eq),
+                          let r = ((e % 400) + 400) % 400,
+                              t = Math.floor(0.01 * r);
+                          r %= 100;
+                          let [a, n] = eO.slice(t, t + 2),
+                              [o, s] = e$.slice(t, t + 2);
+                          return Y((r * (s * a - o * n) - 100 * a * s) / (r * (s - o) - 100 * s));
+                      })(e.H) * eT),
         ),
         i = Math.sin(o),
-        c = 0;
-    void 0 !== e.J ? (c = 0.1 * w(e.J, 0.5)) : void 0 !== e.Q && (c = (0.25 * t.c * e.Q) / ((t.aW + 4) * t.flRoot));
-    let l = 0;
+        l = 0;
+    void 0 !== e.J ? (l = 0.1 * w(e.J, 0.5)) : void 0 !== e.Q && (l = (0.25 * r.c * e.Q) / ((r.aW + 4) * r.flRoot));
+    let c = 0;
     void 0 !== e.C
-        ? (l = e.C / c)
+        ? (c = e.C / l)
         : void 0 !== e.M
-          ? (l = e.M / t.flRoot / c)
-          : void 0 !== e.s && (l = (4e-4 * e.s ** 2 * (t.aW + 4)) / t.c);
-    let u = w(l * Math.pow(1.64 - Math.pow(0.29, t.n), -0.73), 10 / 9),
+          ? (c = e.M / r.flRoot / l)
+          : void 0 !== e.s && (c = (4e-4 * e.s ** 2 * (r.aW + 4)) / r.c);
+    let u = w(c * Math.pow(1.64 - Math.pow(0.29, r.n), -0.73), 10 / 9),
         f = 0.25 * (Math.cos(o + 2) + 3.8),
-        b = t.aW * w(c, 2 / t.c / t.z),
-        d = (5e4 / 13) * t.nc * t.ncb * f,
-        h = b / t.nbb,
-        p = 23 * (h + 0.305) * M(u, 23 * d + u * (11 * s + 108 * i)),
-        m =
-            ((r = n(eD, [h, p * s, p * i]).map((e) => e / 1403)),
-            (a = (100 / t.fl) * 2588.068098016295),
-            r.map((e) => {
-                let t = Math.abs(e);
-                return v(a * w(t / (400 - t), 2.380952380952381), e);
+        h = r.aW * w(l, 2 / r.c / r.z),
+        d = (5e4 / 13) * r.nc * r.ncb * f,
+        m = h / r.nbb,
+        p = 23 * (m + 0.305) * y(u, 23 * d + u * (11 * s + 108 * i)),
+        g =
+            ((t = n(eP, [m, p * s, p * i]).map((e) => e / 1403)),
+            (a = (100 / r.fl) * 2588.068098016295),
+            t.map((e) => {
+                let r = Math.abs(e);
+                return v(a * w(r / (400 - r), 2.380952380952381), e);
             }));
     return n(
-        eP,
-        m.map((e, r) => e * t.dRgbInv[r]),
+        eE,
+        g.map((e, t) => e * r.dRgbInv[t]),
     ).map((e) => e / 100);
 }
-function eH(e, t) {
-    let r = e$(
+function eX(e, r) {
+    let t = eH(
             n(
-                eB,
+                eA,
                 e.map((e) => 100 * e),
-            ).map((e, r) => e * t.dRgb[r]),
-            t.fl,
+            ).map((e, t) => e * r.dRgb[t]),
+            r.fl,
         ),
-        a = r[0] + (-12 * r[1] + r[2]) / 11,
-        o = (r[0] + r[1] - 2 * r[2]) / 9,
-        s = ((Math.atan2(o, a) % eN) + eN) % eN,
+        a = t[0] + (-12 * t[1] + t[2]) / 11,
+        o = (t[0] + t[1] - 2 * t[2]) / 9,
+        s = ((Math.atan2(o, a) % eL) + eL) % eL,
         i = 0.25 * (Math.cos(s + 2) + 3.8),
-        c =
-            w((5e4 / 13) * t.nc * t.ncb * M(i * Math.sqrt(a ** 2 + o ** 2), r[0] + r[1] + 1.05 * r[2] + 0.305), 0.9) *
-            Math.pow(1.64 - Math.pow(0.29, t.n), 0.73),
-        l = w((t.nbb * (2 * r[0] + r[1] + 0.05 * r[2])) / t.aW, 0.5 * t.c * t.z),
-        u = 100 * w(l, 2),
-        f = (4 / t.c) * l * (t.aW + 4) * t.flRoot,
-        b = c * l,
-        d = b * t.flRoot,
-        h = Z(s * ez),
+        l =
+            w((5e4 / 13) * r.nc * r.ncb * y(i * Math.sqrt(a ** 2 + o ** 2), t[0] + t[1] + 1.05 * t[2] + 0.305), 0.9) *
+            Math.pow(1.64 - Math.pow(0.29, r.n), 0.73),
+        c = w((r.nbb * (2 * t[0] + t[1] + 0.05 * t[2])) / r.aW, 0.5 * r.c * r.z),
+        u = 100 * w(c, 2),
+        f = (4 / r.c) * c * (r.aW + 4) * r.flRoot,
+        h = l * c,
+        d = h * r.flRoot,
+        m = Y(s * eq),
         p = (function (e) {
-            let t = Z(e);
-            t <= eT[0] && (t += 360);
-            let r = A(eT, t) - 1,
-                [a, n] = eT.slice(r, r + 2),
-                [o, s] = eL.slice(r, r + 2),
-                i = eF[r],
-                c = (t - a) / o;
-            return i + (100 * c) / (c + (n - t) / s);
-        })(h);
-    return { J: u, C: b, h: h, s: 50 * w((t.c * c) / (t.aW + 4), 0.5), Q: f, M: d, H: p };
+            let r = Y(e);
+            r <= eO[0] && (r += 360);
+            let t = C(eO, r) - 1,
+                [a, n] = eO.slice(t, t + 2),
+                [o, s] = e$.slice(t, t + 2),
+                i = eD[t],
+                l = (r - a) / o;
+            return i + (100 * l) / (l + (n - r) / s);
+        })(m);
+    return { J: u, C: h, h: m, s: 50 * w((r.c * l) / (r.aW + 4), 0.5), Q: f, M: d, H: p };
 }
-var eZ = new B({
+var eY = new A({
     id: "cam16-jmh",
     cssId: "--cam16-jmh",
     name: "CAM16-JMh",
@@ -1018,21 +1018,21 @@ var eZ = new B({
         m: { refRange: [0, 105], name: "Colorfulness" },
         h: { refRange: [0, 360], type: "angle", name: "Hue" },
     },
-    base: D,
+    base: P,
     fromBase(e) {
-        let t = eH(e, eW);
-        return [t.J, t.M, t.h];
+        let r = eX(e, eF);
+        return [r.J, r.M, r.h];
     },
-    toBase: (e) => eG({ J: e[0], M: e[1], h: e[2] }, eW),
+    toBase: (e) => eG({ J: e[0], M: e[1], h: e[2] }, eF),
 });
-let eY = E.D65,
-    eX = 216 / 24389,
+let eZ = B.D65,
+    eU = 216 / 24389,
     eJ = 24389 / 27;
-function eV(e) {
+function eQ(e) {
     return e > 8 ? Math.pow((e + 16) / 116, 3) : e / eJ;
 }
-let eK = eU(eY, (200 / Math.PI) * eV(50), 100 * eV(50), "average", !1);
-var eQ = new B({
+let eV = eW(eZ, (200 / Math.PI) * eQ(50), 100 * eQ(50), "average", !1);
+var eK = new A({
     id: "hct",
     name: "HCT",
     coords: {
@@ -1040,108 +1040,108 @@ var eQ = new B({
         c: { refRange: [0, 145], name: "Colorfulness" },
         t: { refRange: [0, 100], name: "Tone" },
     },
-    base: D,
+    base: P,
     fromBase: (e) =>
         (function (e) {
-            var t;
-            let r = 116 * ((t = e[1]) > eX ? Math.cbrt(t) : (eJ * t + 16) / 116) - 16;
-            if (0 === r) return [0, 0, 0];
-            let a = eH(e, eK);
-            return [Z(a.h), a.C, r];
+            var r;
+            let t = 116 * ((r = e[1]) > eU ? Math.cbrt(r) : (eJ * r + 16) / 116) - 16;
+            if (0 === t) return [0, 0, 0];
+            let a = eX(e, eV);
+            return [Y(a.h), a.C, t];
         })(e),
     toBase: (e) =>
-        (function (e, t) {
-            let [r, a, n] = e,
+        (function (e, r) {
+            let [t, a, n] = e,
                 o = [],
                 s = 0;
             if (0 === n) return [0, 0, 0];
-            let i = eV(n);
+            let i = eQ(n);
             s =
                 n > 0
                     ? 0.00379058511492914 * n ** 2 + 0.608983189401032 * n + 0.9155088574762233
                     : 9514440756550361e-21 * n ** 2 + 0.08693057439788597 * n - 21.928975842194614;
-            let c = 0,
-                l = 1 / 0;
-            for (; c <= 15; ) {
-                let e = Math.abs((o = eG({ J: s, C: a, h: r }, t))[1] - i);
-                if (e < l) {
+            let l = 0,
+                c = 1 / 0;
+            for (; l <= 15; ) {
+                let e = Math.abs((o = eG({ J: s, C: a, h: t }, r))[1] - i);
+                if (e < c) {
                     if (e <= 2e-12) return o;
-                    l = e;
+                    c = e;
                 }
-                (s -= ((o[1] - i) * s) / (2 * o[1])), (c += 1);
+                (s -= ((o[1] - i) * s) / (2 * o[1])), (l += 1);
             }
-            return eG({ J: s, C: a, h: r }, t);
-        })(e, eK),
+            return eG({ J: s, C: a, h: t }, r);
+        })(e, eV),
     formats: {
         color: { id: "--hct", coords: ["<number> | <angle>", "<percentage> | <number>", "<percentage> | <number>"] },
     },
 });
-let e0 = Math.PI / 180;
-function e1(e) {
-    e[1] < 0 && (e = eQ.fromBase(eQ.toBase(e)));
-    let t = Math.log(Math.max(1 + 0.0228 * e[1] * eK.flRoot, 1)) / 0.0228,
-        r = e[0] * e0,
-        a = t * Math.cos(r),
-        n = t * Math.sin(r);
+let e1 = Math.PI / 180;
+function e0(e) {
+    e[1] < 0 && (e = eK.fromBase(eK.toBase(e)));
+    let r = Math.log(Math.max(1 + 0.0228 * e[1] * eV.flRoot, 1)) / 0.0228,
+        t = e[0] * e1,
+        a = r * Math.cos(t),
+        n = r * Math.sin(t);
     return [e[2], a, n];
 }
 var e2 = {
-    deltaE76: function (e, t) {
-        return ec(e, t, "lab");
+    deltaE76: function (e, r) {
+        return el(e, r, "lab");
     },
-    deltaECMC: function (e, t, { l: r = 2, c: a = 1 } = {}) {
-        [e, t] = N([e, t]);
-        let [n, o, s] = H.from(e),
-            [, i, c] = Y.from(H, [n, o, s]),
-            [l, u, f] = H.from(t),
-            b = Y.from(H, [l, u, f])[1];
-        i < 0 && (i = 0), b < 0 && (b = 0);
-        let d = n - l,
-            h = i - b,
+    deltaECMC: function (e, r, { l: t = 2, c: a = 1 } = {}) {
+        [e, r] = L([e, r]);
+        let [n, o, s] = X.from(e),
+            [, i, l] = Z.from(X, [n, o, s]),
+            [c, u, f] = X.from(r),
+            h = Z.from(X, [c, u, f])[1];
+        i < 0 && (i = 0), h < 0 && (h = 0);
+        let d = n - c,
+            m = i - h,
             p = o - u,
-            m = s - f,
-            g = 0.511;
-        n >= 16 && (g = (0.040975 * n) / (1 + 0.01765 * n));
-        let y = (0.0638 * i) / (1 + 0.0131 * i) + 0.638;
-        Number.isNaN(c) && (c = 0);
+            g = s - f,
+            b = 0.511;
+        n >= 16 && (b = (0.040975 * n) / (1 + 0.01765 * n));
+        let M = (0.0638 * i) / (1 + 0.0131 * i) + 0.638;
+        Number.isNaN(l) && (l = 0);
         let v = Math.pow(i, 4),
             w = Math.sqrt(v / (v + 1900)),
-            M =
-                y *
+            y =
+                M *
                 (w *
-                    (c >= 164 && c <= 345
-                        ? 0.56 + Math.abs(0.2 * Math.cos((c + 168) * el))
-                        : 0.36 + Math.abs(0.4 * Math.cos((c + 35) * el))) +
+                    (l >= 164 && l <= 345
+                        ? 0.56 + Math.abs(0.2 * Math.cos((l + 168) * ec))
+                        : 0.36 + Math.abs(0.4 * Math.cos((l + 35) * ec))) +
                     1 -
                     w),
-            A = (d / (r * g)) ** 2;
-        return Math.sqrt((A += (h / (a * y)) ** 2 + (p ** 2 + m ** 2 - h ** 2) / M ** 2));
+            C = (d / (t * b)) ** 2;
+        return Math.sqrt((C += (m / (a * M)) ** 2 + (p ** 2 + g ** 2 - m ** 2) / y ** 2));
     },
-    deltaE2000: Q,
-    deltaEJz: function (e, t) {
-        [e, t] = N([e, t]);
-        let [r, a, n] = ew.from(e),
-            [o, s, i] = ew.from(t);
+    deltaE2000: K,
+    deltaEJz: function (e, r) {
+        [e, r] = L([e, r]);
+        let [t, a, n] = ew.from(e),
+            [o, s, i] = ew.from(r);
         Number.isNaN(n) && Number.isNaN(i)
             ? ((n = 0), (i = 0))
             : Number.isNaN(n)
               ? (n = i)
               : Number.isNaN(i) && (i = n);
-        let c = 2 * Math.sqrt(a * s) * Math.sin(((n - i) / 2) * (Math.PI / 180));
-        return Math.sqrt((r - o) ** 2 + (a - s) ** 2 + c ** 2);
+        let l = 2 * Math.sqrt(a * s) * Math.sin(((n - i) / 2) * (Math.PI / 180));
+        return Math.sqrt((t - o) ** 2 + (a - s) ** 2 + l ** 2);
     },
-    deltaEITP: function (e, t) {
-        [e, t] = N([e, t]);
-        let [r, a, n] = ej.from(e),
-            [o, s, i] = ej.from(t);
-        return 720 * Math.sqrt((r - o) ** 2 + 0.25 * (a - s) ** 2 + (n - i) ** 2);
+    deltaEITP: function (e, r) {
+        [e, r] = L([e, r]);
+        let [t, a, n] = ez.from(e),
+            [o, s, i] = ez.from(r);
+        return 720 * Math.sqrt((t - o) ** 2 + 0.25 * (a - s) ** 2 + (n - i) ** 2);
     },
     deltaEOK: eo,
-    deltaEHCT: function (e, t) {
-        [e, t] = N([e, t]);
-        let [r, a, n] = e1(eQ.from(e)),
-            [o, s, i] = e1(eQ.from(t));
-        return Math.sqrt((r - o) ** 2 + (a - s) ** 2 + (n - i) ** 2);
+    deltaEHCT: function (e, r) {
+        [e, r] = L([e, r]);
+        let [t, a, n] = e0(eK.from(e)),
+            [o, s, i] = e0(eK.from(r));
+        return Math.sqrt((t - o) ** 2 + (a - s) ** 2 + (n - i) ** 2);
     },
 };
 let e5 = {
@@ -1153,66 +1153,66 @@ let e5 = {
         blackWhiteClamp: { channel: "hct.t", min: 0, max: 100 },
     },
 };
-function e3(
+function e6(
     e,
-    { method: t = C.gamut_mapping, space: r, deltaEMethod: a = "", jnd: n = 2, blackWhiteClamp: s = {} } = {},
+    { method: r = _.gamut_mapping, space: t, deltaEMethod: a = "", jnd: n = 2, blackWhiteClamp: s = {} } = {},
 ) {
     let i;
-    if (((e = N(e)), o(arguments[1]) ? (r = arguments[1]) : r || (r = e.space), es(e, (r = B.get(r)), { epsilon: 0 })))
+    if (((e = L(e)), o(arguments[1]) ? (t = arguments[1]) : t || (t = e.space), es(e, (t = A.get(t)), { epsilon: 0 })))
         return e;
-    if ("css" === t)
-        i = (function (e, { space: t } = {}) {
-            (e = N(e)), t || (t = e.space), (t = B.get(t));
-            let r = B.get("oklch");
-            if (t.isUnbounded) return e9(e, t);
-            let a = e9(e, r),
+    if ("css" === r)
+        i = (function (e, { space: r } = {}) {
+            (e = L(e)), r || (r = e.space), (r = A.get(r));
+            let t = A.get("oklch");
+            if (r.isUnbounded) return e8(e, r);
+            let a = e8(e, t),
                 n = a.coords[0];
             if (n >= 1) {
-                let r = e9(e6, t);
-                return (r.alpha = e.alpha), e9(r, t);
+                let t = e8(e3, r);
+                return (t.alpha = e.alpha), e8(t, r);
             }
             if (n <= 0) {
-                let r = e9(e8, t);
-                return (r.alpha = e.alpha), e9(r, t);
+                let t = e8(e9, r);
+                return (t.alpha = e.alpha), e8(t, r);
             }
-            if (es(a, t, { epsilon: 0 })) return e9(a, t);
+            if (es(a, r, { epsilon: 0 })) return e8(a, r);
             function o(e) {
-                let r = e9(e, t),
-                    a = Object.values(t.coords);
+                let t = e8(e, r),
+                    a = Object.values(r.coords);
                 return (
-                    (r.coords = r.coords.map((e, t) => {
-                        if ("range" in a[t]) {
-                            let [r, n] = a[t].range;
-                            return y(r, e, n);
+                    (t.coords = t.coords.map((e, r) => {
+                        if ("range" in a[r]) {
+                            let [t, n] = a[r].range;
+                            return M(t, e, n);
                         }
                         return e;
                     })),
-                    r
+                    t
                 );
             }
             let s = 0,
                 i = a.coords[1],
-                c = !0,
-                l = ei(a),
-                u = o(l),
-                f = eo(u, l);
+                l = !0,
+                c = ei(a),
+                u = o(c),
+                f = eo(u, c);
             if (f < 0.02) return u;
             for (; i - s > 1e-4; ) {
                 let e = (s + i) / 2;
-                if (((l.coords[1] = e), c && es(l, t, { epsilon: 0 }))) s = e;
-                else if ((f = eo((u = o(l)), l)) < 0.02)
+                if (((c.coords[1] = e), l && es(c, r, { epsilon: 0 }))) s = e;
+                else if ((f = eo((u = o(c)), c)) < 0.02)
                     if (0.02 - f < 1e-4) break;
-                    else (c = !1), (s = e);
+                    else (l = !1), (s = e);
                 else i = e;
             }
             return u;
-        })(e, { space: r });
+        })(e, { space: t });
     else {
-        if ("clip" === t || es(e, r)) i = e9(e, r);
+        if ("clip" === r || es(e, t)) i = e8(e, t);
         else {
-            Object.prototype.hasOwnProperty.call(e5, t) &&
-                ({ method: t, jnd: n, deltaEMethod: a, blackWhiteClamp: s } = e5[t]);
-            let o = Q;
+            Object.prototype.hasOwnProperty.call(e5, r) &&
+                ({ method: r, jnd: n, deltaEMethod: a, blackWhiteClamp: s } = e5[r]);
+            let o = K;
             if ("" !== a) {
                 for (let e in e2)
                     if ("deltae" + a.toLowerCase() === e.toLowerCase()) {
@@ -1220,82 +1220,82 @@ function e3(
                         break;
                     }
             }
-            let u = e3(e9(e, r), { method: "clip", space: r });
+            let u = e6(e8(e, t), { method: "clip", space: t });
             if (o(e, u) > n) {
-                var l;
+                var c;
                 let a;
                 if (3 === Object.keys(s).length) {
-                    let t = B.resolveCoord(s.channel),
-                        r = L(e9(e, t.space), t.id);
-                    if ((c(r) && (r = 0), r >= s.max)) return e9({ space: "xyz-d65", coords: E.D65 }, e.space);
-                    if (r <= s.min) return e9({ space: "xyz-d65", coords: [0, 0, 0] }, e.space);
+                    let r = A.resolveCoord(s.channel),
+                        t = $(e8(e, r.space), r.id);
+                    if ((l(t) && (t = 0), t >= s.max)) return e8({ space: "xyz-d65", coords: B.D65 }, e.space);
+                    if (t <= s.min) return e8({ space: "xyz-d65", coords: [0, 0, 0] }, e.space);
                 }
-                let u = B.resolveCoord(t),
+                let u = A.resolveCoord(r),
                     f = u.space,
-                    b = u.id,
-                    d = e9(e, f);
-                d.coords.forEach((e, t) => {
-                    c(e) && (d.coords[t] = 0);
+                    h = u.id,
+                    d = e8(e, f);
+                d.coords.forEach((e, r) => {
+                    l(e) && (d.coords[r] = 0);
                 });
-                let h = (u.range || u.refRange)[0],
+                let m = (u.range || u.refRange)[0],
                     p =
-                        ((a = (l = n) ? Math.floor(Math.log10(Math.abs(l))) : 0),
+                        ((a = (c = n) ? Math.floor(Math.log10(Math.abs(c))) : 0),
                         Math.max(parseFloat(`1e${a - 2}`), 1e-6)),
-                    m = h,
-                    g = L(d, b);
-                for (; g - m > p; ) {
+                    g = m,
+                    b = $(d, h);
+                for (; b - g > p; ) {
                     let e = ei(d);
-                    o(d, (e = e3(e, { space: r, method: "clip" }))) - n < p ? (m = L(d, b)) : (g = L(d, b)),
-                        z(d, b, (m + g) / 2);
+                    o(d, (e = e6(e, { space: t, method: "clip" }))) - n < p ? (g = $(d, h)) : (b = $(d, h)),
+                        q(d, h, (g + b) / 2);
                 }
-                i = e9(d, r);
+                i = e8(d, t);
             } else i = u;
         }
-        if ("clip" === t || !es(i, r, { epsilon: 0 })) {
-            let e = Object.values(r.coords).map((e) => e.range || []);
-            i.coords = i.coords.map((t, r) => {
-                let [a, n] = e[r];
-                return void 0 !== a && (t = Math.max(a, t)), void 0 !== n && (t = Math.min(t, n)), t;
+        if ("clip" === r || !es(i, t, { epsilon: 0 })) {
+            let e = Object.values(t.coords).map((e) => e.range || []);
+            i.coords = i.coords.map((r, t) => {
+                let [a, n] = e[t];
+                return void 0 !== a && (r = Math.max(a, r)), void 0 !== n && (r = Math.min(r, n)), r;
             });
         }
     }
-    return r !== e.space && (i = e9(i, e.space)), (e.coords = i.coords), e;
+    return t !== e.space && (i = e8(i, e.space)), (e.coords = i.coords), e;
 }
-e3.returns = "color";
-let e6 = { space: en, coords: [1, 0, 0] },
-    e8 = { space: en, coords: [0, 0, 0] };
-function e9(e, t, { inGamut: r } = {}) {
-    e = N(e);
-    let a = (t = B.get(t)).from(e),
-        n = { space: t, coords: a, alpha: e.alpha };
-    return r && (n = e3(n, !0 === r ? void 0 : r)), n;
+e6.returns = "color";
+let e3 = { space: en, coords: [1, 0, 0] },
+    e9 = { space: en, coords: [0, 0, 0] };
+function e8(e, r, { inGamut: t } = {}) {
+    e = L(e);
+    let a = (r = A.get(r)).from(e),
+        n = { space: r, coords: a, alpha: e.alpha };
+    return t && (n = e6(n, !0 === t ? void 0 : t)), n;
 }
-function e4(e, { precision: t = C.precision, format: r = "default", inGamut: a = !0, ...n } = {}) {
+function e4(e, { precision: r = _.precision, format: t = "default", inGamut: a = !0, ...n } = {}) {
     let o;
-    e = N(e);
-    let s = r;
-    r = e.space.getFormat(r) ?? e.space.getFormat("default") ?? B.DEFAULT_FORMAT;
-    let c = e.coords.slice();
-    if (((a ||= r.toGamut) && !es(e) && (c = e3(ei(e), !0 === a ? void 0 : a).coords), "custom" === r.type))
-        if (((n.precision = t), r.serialize)) o = r.serialize(c, e.alpha, n);
+    e = L(e);
+    let s = t;
+    t = e.space.getFormat(t) ?? e.space.getFormat("default") ?? A.DEFAULT_FORMAT;
+    let l = e.coords.slice();
+    if (((a ||= t.toGamut) && !es(e) && (l = e6(ei(e), !0 === a ? void 0 : a).coords), "custom" === t.type))
+        if (((n.precision = r), t.serialize)) o = t.serialize(l, e.alpha, n);
         else throw TypeError(`format ${s} can only be used to parse colors, not for serialization`);
     else {
-        let a = r.name || "color";
-        r.serializeCoords ? (c = r.serializeCoords(c, t)) : null !== t && (c = c.map((e) => i(e, { precision: t })));
-        let n = [...c];
+        let a = t.name || "color";
+        t.serializeCoords ? (l = t.serializeCoords(l, r)) : null !== r && (l = l.map((e) => i(e, { precision: r })));
+        let n = [...l];
         if ("color" === a) {
-            let t = r.id || r.ids?.[0] || e.space.id;
-            n.unshift(t);
+            let r = t.id || t.ids?.[0] || e.space.id;
+            n.unshift(r);
         }
         let s = e.alpha;
-        null !== t && (s = i(s, { precision: t }));
-        let l = e.alpha >= 1 || r.noAlpha ? "" : `${r.commas ? "," : " /"} ${s}`;
-        o = `${a}(${n.join(r.commas ? ", " : " ")}${l})`;
+        null !== r && (s = i(s, { precision: r }));
+        let c = e.alpha >= 1 || t.noAlpha ? "" : `${t.commas ? "," : " /"} ${s}`;
+        o = `${a}(${n.join(t.commas ? ", " : " ")}${c})`;
     }
     return o;
 }
-e9.returns = "color";
-var e7 = new I({
+e8.returns = "color";
+var e7 = new j({
         id: "rec2020-linear",
         cssId: "--rec2020-linear",
         name: "Linear REC.2020",
@@ -1311,7 +1311,7 @@ var e7 = new I({
             [0.017639857445311, -0.042770613257809, 0.942103121235474],
         ],
     }),
-    te = new I({
+    re = new j({
         id: "rec2020",
         name: "REC.2020",
         base: e7,
@@ -1326,7 +1326,7 @@ var e7 = new I({
                 return e >= 0.018053968510807 ? 1.09929682680944 * Math.pow(e, 0.45) - (1.09929682680944 - 1) : 4.5 * e;
             }),
     }),
-    tt = new I({
+    rr = new j({
         id: "p3-linear",
         cssId: "--display-p3-linear",
         name: "Linear P3",
@@ -1342,12 +1342,12 @@ var e7 = new I({
             [0.03584583024378447, -0.07617238926804182, 0.9568845240076872],
         ],
     });
-let tr = [
+let rt = [
     [3.2409699419045226, -1.537383177570094, -0.4986107602930034],
     [-0.9692436362808796, 1.8759675015077202, 0.04155505740717559],
     [0.05563007969699366, -0.20397695888897652, 1.0569715142428786],
 ];
-var ta = new I({
+var ra = new j({
         id: "srgb-linear",
         name: "Linear sRGB",
         white: "D65",
@@ -1356,9 +1356,9 @@ var ta = new I({
             [0.21263900587151027, 0.715168678767756, 0.07219231536073371],
             [0.01933081871559182, 0.11919477979462598, 0.9505321522496607],
         ],
-        fromXYZ_M: tr,
+        fromXYZ_M: rt,
     }),
-    tn = {
+    rn = {
         aliceblue: [240 / 255, 248 / 255, 1],
         antiquewhite: [250 / 255, 235 / 255, 215 / 255],
         aqua: [0, 1, 1],
@@ -1508,47 +1508,47 @@ var ta = new I({
         yellow: [1, 1, 0],
         yellowgreen: [154 / 255, 205 / 255, 50 / 255],
     };
-let to = [, , ,].fill("<percentage> | <number>[0, 255]"),
-    ts = [, , ,].fill("<number>[0, 255]");
-var ti = new I({
+let ro = [, , ,].fill("<percentage> | <number>[0, 255]"),
+    rs = [, , ,].fill("<number>[0, 255]");
+var ri = new j({
         id: "srgb",
         name: "sRGB",
-        base: ta,
+        base: ra,
         fromBase: (e) =>
             e.map((e) => {
-                let t = e < 0 ? -1 : 1,
-                    r = e * t;
-                return r > 0.0031308 ? t * (1.055 * r ** (1 / 2.4) - 0.055) : 12.92 * e;
+                let r = e < 0 ? -1 : 1,
+                    t = e * r;
+                return t > 0.0031308 ? r * (1.055 * t ** (1 / 2.4) - 0.055) : 12.92 * e;
             }),
         toBase: (e) =>
             e.map((e) => {
-                let t = e < 0 ? -1 : 1,
-                    r = e * t;
-                return r <= 0.04045 ? e / 12.92 : t * ((r + 0.055) / 1.055) ** 2.4;
+                let r = e < 0 ? -1 : 1,
+                    t = e * r;
+                return t <= 0.04045 ? e / 12.92 : r * ((t + 0.055) / 1.055) ** 2.4;
             }),
         formats: {
-            rgb: { coords: to },
-            rgb_number: { name: "rgb", commas: !0, coords: ts, noAlpha: !0 },
+            rgb: { coords: ro },
+            rgb_number: { name: "rgb", commas: !0, coords: rs, noAlpha: !0 },
             color: {},
-            rgba: { coords: to, commas: !0, lastAlpha: !0 },
-            rgba_number: { name: "rgba", commas: !0, coords: ts },
+            rgba: { coords: ro, commas: !0, lastAlpha: !0 },
+            rgba_number: { name: "rgba", commas: !0, coords: rs },
             hex: {
                 type: "custom",
                 toGamut: !0,
                 test: (e) => /^#([a-f0-9]{3,4}){1,2}$/i.test(e),
                 parse(e) {
                     e.length <= 5 && (e = e.replace(/[a-f0-9]/gi, "$&$&"));
-                    let t = [];
+                    let r = [];
                     return (
                         e.replace(/[a-f0-9]{2}/gi, (e) => {
-                            t.push(parseInt(e, 16) / 255);
+                            r.push(parseInt(e, 16) / 255);
                         }),
-                        { spaceId: "srgb", coords: t.slice(0, 3), alpha: t.slice(3)[0] }
+                        { spaceId: "srgb", coords: r.slice(0, 3), alpha: r.slice(3)[0] }
                     );
                 },
-                serialize: (e, t, { collapse: r = !0 } = {}) => {
-                    t < 1 && e.push(t), (e = e.map((e) => Math.round(255 * e)));
-                    let a = r && e.every((e) => e % 17 == 0);
+                serialize: (e, r, { collapse: t = !0 } = {}) => {
+                    r < 1 && e.push(r), (e = e.map((e) => Math.round(255 * e)));
+                    let a = t && e.every((e) => e % 17 == 0);
                     return "#" + e.map((e) => (a ? (e / 17).toString(16) : e.toString(16).padStart(2, "0"))).join("");
                 },
             },
@@ -1557,56 +1557,56 @@ var ti = new I({
                 test: (e) => /^[a-z]+$/i.test(e),
                 parse(e) {
                     e = e.toLowerCase();
-                    let t = { spaceId: "srgb", coords: null, alpha: 1 };
-                    if (("transparent" === e ? ((t.coords = tn.black), (t.alpha = 0)) : (t.coords = tn[e]), t.coords))
-                        return t;
+                    let r = { spaceId: "srgb", coords: null, alpha: 1 };
+                    if (("transparent" === e ? ((r.coords = rn.black), (r.alpha = 0)) : (r.coords = rn[e]), r.coords))
+                        return r;
                 },
             },
         },
     }),
-    tc = new I({ id: "p3", cssId: "display-p3", name: "P3", base: tt, fromBase: ti.fromBase, toBase: ti.toBase });
-if (((C.display_space = ti), "u" > typeof CSS && CSS.supports))
-    for (let e of [H, te, tc]) {
-        let t = e.getMinCoords(),
-            r = e4({ space: e, coords: t, alpha: 1 });
-        if (CSS.supports("color", r)) {
-            C.display_space = e;
+    rl = new j({ id: "p3", cssId: "display-p3", name: "P3", base: rr, fromBase: ri.fromBase, toBase: ri.toBase });
+if (((_.display_space = ri), "u" > typeof CSS && CSS.supports))
+    for (let e of [X, re, rl]) {
+        let r = e.getMinCoords(),
+            t = e4({ space: e, coords: r, alpha: 1 });
+        if (CSS.supports("color", t)) {
+            _.display_space = e;
             break;
         }
     }
-function tl(e) {
-    return L(e, [D, "y"]);
+function rc(e) {
+    return $(e, [P, "y"]);
 }
-function tu(e, t) {
-    z(e, [D, "y"], t);
+function ru(e, r) {
+    q(e, [P, "y"], r);
 }
-var tf = Object.freeze({
+var rf = Object.freeze({
     __proto__: null,
-    getLuminance: tl,
+    getLuminance: rc,
     register: function (e) {
         Object.defineProperty(e.prototype, "luminance", {
             get() {
-                return tl(this);
+                return rc(this);
             },
             set(e) {
-                tu(this, e);
+                ru(this, e);
             },
         });
     },
-    setLuminance: tu,
+    setLuminance: ru,
 });
-function tb(e) {
+function rh(e) {
     return e >= 0.022 ? e : e + (0.022 - e) ** 1.414;
 }
-function td(e) {
-    let t = Math.abs(e);
-    return (e < 0 ? -1 : 1) * Math.pow(t, 2.4);
+function rd(e) {
+    let r = Math.abs(e);
+    return (e < 0 ? -1 : 1) * Math.pow(r, 2.4);
 }
-let th = 216 / 24389,
-    tp = 24 / 116,
-    tm = 24389 / 27,
-    tg = E.D65;
-var ty = new B({
+let rm = 216 / 24389,
+    rp = 24 / 116,
+    rg = 24389 / 27,
+    rb = B.D65;
+var rM = new A({
         id: "lab-d65",
         name: "Lab D65",
         coords: {
@@ -1614,23 +1614,23 @@ var ty = new B({
             a: { refRange: [-125, 125] },
             b: { refRange: [-125, 125] },
         },
-        white: tg,
-        base: D,
+        white: rb,
+        base: P,
         fromBase(e) {
-            let t = e.map((e, t) => e / tg[t]).map((e) => (e > th ? Math.cbrt(e) : (tm * e + 16) / 116));
-            return [116 * t[1] - 16, 500 * (t[0] - t[1]), 200 * (t[1] - t[2])];
+            let r = e.map((e, r) => e / rb[r]).map((e) => (e > rm ? Math.cbrt(e) : (rg * e + 16) / 116));
+            return [116 * r[1] - 16, 500 * (r[0] - r[1]), 200 * (r[1] - r[2])];
         },
         toBase(e) {
-            let t = [];
+            let r = [];
             return (
-                (t[1] = (e[0] + 16) / 116),
-                (t[0] = e[1] / 500 + t[1]),
-                (t[2] = t[1] - e[2] / 200),
+                (r[1] = (e[0] + 16) / 116),
+                (r[0] = e[1] / 500 + r[1]),
+                (r[2] = r[1] - e[2] / 200),
                 [
-                    t[0] > tp ? Math.pow(t[0], 3) : (116 * t[0] - 16) / tm,
-                    e[0] > 8 ? Math.pow((e[0] + 16) / 116, 3) : e[0] / tm,
-                    t[2] > tp ? Math.pow(t[2], 3) : (116 * t[2] - 16) / tm,
-                ].map((e, t) => e * tg[t])
+                    r[0] > rp ? Math.pow(r[0], 3) : (116 * r[0] - 16) / rg,
+                    e[0] > 8 ? Math.pow((e[0] + 16) / 116, 3) : e[0] / rg,
+                    r[2] > rp ? Math.pow(r[2], 3) : (116 * r[2] - 16) / rg,
+                ].map((e, r) => e * rb[r])
             );
         },
         formats: {
@@ -1639,216 +1639,216 @@ var ty = new B({
             },
         },
     }),
-    tv = Object.freeze({
+    rv = Object.freeze({
         __proto__: null,
-        contrastAPCA: function (e, t) {
-            let r, a, n, o;
-            (t = N(t)), (e = N(e)), (t = e9(t, "srgb")), ([a, n, o] = t.coords);
-            let s = 0.2126729 * td(a) + 0.7151522 * td(n) + 0.072175 * td(o);
-            (e = e9(e, "srgb")), ([a, n, o] = e.coords);
-            let i = 0.2126729 * td(a) + 0.7151522 * td(n) + 0.072175 * td(o),
-                c = tb(s),
-                l = tb(i);
+        contrastAPCA: function (e, r) {
+            let t, a, n, o;
+            (r = L(r)), (e = L(e)), (r = e8(r, "srgb")), ([a, n, o] = r.coords);
+            let s = 0.2126729 * rd(a) + 0.7151522 * rd(n) + 0.072175 * rd(o);
+            (e = e8(e, "srgb")), ([a, n, o] = e.coords);
+            let i = 0.2126729 * rd(a) + 0.7151522 * rd(n) + 0.072175 * rd(o),
+                l = rh(s),
+                c = rh(i);
             return (
                 100 *
                 (0.1 >
                 Math.abs(
-                    (r =
-                        5e-4 > Math.abs(l - c)
+                    (t =
+                        5e-4 > Math.abs(c - l)
                             ? 0
-                            : l > c
-                              ? 1.14 * (l ** 0.56 - c ** 0.57)
-                              : 1.14 * (l ** 0.65 - c ** 0.62)),
+                            : c > l
+                              ? 1.14 * (c ** 0.56 - l ** 0.57)
+                              : 1.14 * (c ** 0.65 - l ** 0.62)),
                 )
                     ? 0
-                    : r > 0
-                      ? r - 0.027
-                      : r + 0.027)
+                    : t > 0
+                      ? t - 0.027
+                      : t + 0.027)
             );
         },
-        contrastDeltaPhi: function (e, t) {
-            (e = N(e)), (t = N(t));
-            let r =
+        contrastDeltaPhi: function (e, r) {
+            (e = L(e)), (r = L(r));
+            let t =
                 Math.pow(
                     Math.abs(
-                        Math.pow(L(e, [ty, "l"]), 1.618033988749895) - Math.pow(L(t, [ty, "l"]), 1.618033988749895),
+                        Math.pow($(e, [rM, "l"]), 1.618033988749895) - Math.pow($(r, [rM, "l"]), 1.618033988749895),
                     ),
                     0.6180339887498948,
                 ) *
                     Math.SQRT2 -
                 40;
-            return r < 7.5 ? 0 : r;
+            return t < 7.5 ? 0 : t;
         },
-        contrastLstar: function (e, t) {
-            return (e = N(e)), (t = N(t)), Math.abs(L(e, [H, "l"]) - L(t, [H, "l"]));
+        contrastLstar: function (e, r) {
+            return (e = L(e)), (r = L(r)), Math.abs($(e, [X, "l"]) - $(r, [X, "l"]));
         },
-        contrastMichelson: function (e, t) {
-            (e = N(e)), (t = N(t));
-            let r = Math.max(tl(e), 0),
-                a = Math.max(tl(t), 0);
-            a > r && ([r, a] = [a, r]);
-            let n = r + a;
-            return 0 === n ? 0 : (r - a) / n;
+        contrastMichelson: function (e, r) {
+            (e = L(e)), (r = L(r));
+            let t = Math.max(rc(e), 0),
+                a = Math.max(rc(r), 0);
+            a > t && ([t, a] = [a, t]);
+            let n = t + a;
+            return 0 === n ? 0 : (t - a) / n;
         },
-        contrastWCAG21: function (e, t) {
-            (e = N(e)), (t = N(t));
-            let r = Math.max(tl(e), 0),
-                a = Math.max(tl(t), 0);
-            return a > r && ([r, a] = [a, r]), (r + 0.05) / (a + 0.05);
+        contrastWCAG21: function (e, r) {
+            (e = L(e)), (r = L(r));
+            let t = Math.max(rc(e), 0),
+                a = Math.max(rc(r), 0);
+            return a > t && ([t, a] = [a, t]), (t + 0.05) / (a + 0.05);
         },
-        contrastWeber: function (e, t) {
-            (e = N(e)), (t = N(t));
-            let r = Math.max(tl(e), 0),
-                a = Math.max(tl(t), 0);
-            return a > r && ([r, a] = [a, r]), 0 === a ? 5e4 : (r - a) / a;
+        contrastWeber: function (e, r) {
+            (e = L(e)), (r = L(r));
+            let t = Math.max(rc(e), 0),
+                a = Math.max(rc(r), 0);
+            return a > t && ([t, a] = [a, t]), 0 === a ? 5e4 : (t - a) / a;
         },
     });
-function tw(e) {
-    let [t, r, a] = T(e, D),
-        n = t + 15 * r + 3 * a;
-    return [(4 * t) / n, (9 * r) / n];
+function rw(e) {
+    let [r, t, a] = O(e, P),
+        n = r + 15 * t + 3 * a;
+    return [(4 * r) / n, (9 * t) / n];
 }
-function tM(e) {
-    let [t, r, a] = T(e, D),
-        n = t + r + a;
-    return [t / n, r / n];
+function ry(e) {
+    let [r, t, a] = O(e, P),
+        n = r + t + a;
+    return [r / n, t / n];
 }
-var tA = Object.freeze({
+var rC = Object.freeze({
     __proto__: null,
     register: function (e) {
         Object.defineProperty(e.prototype, "uv", {
             get() {
-                return tw(this);
+                return rw(this);
             },
         }),
             Object.defineProperty(e.prototype, "xy", {
                 get() {
-                    return tM(this);
+                    return ry(this);
                 },
             });
     },
-    uv: tw,
-    xy: tM,
+    uv: rw,
+    xy: ry,
 });
-function tO(e, t, r = {}) {
-    o(r) && (r = { method: r });
-    let { method: a = C.deltaE, ...n } = r;
-    for (let r in e2) if ("deltae" + a.toLowerCase() === r.toLowerCase()) return e2[r](e, t, n);
+function rR(e, r, t = {}) {
+    o(t) && (t = { method: t });
+    let { method: a = _.deltaE, ...n } = t;
+    for (let t in e2) if ("deltae" + a.toLowerCase() === t.toLowerCase()) return e2[t](e, r, n);
     throw TypeError(`Unknown deltaE method: ${a}`);
 }
-var tk = Object.freeze({
+var rk = Object.freeze({
     __proto__: null,
-    darken: function (e, t = 0.25) {
-        return z(e, [B.get("oklch", "lch"), "l"], (e) => e * (1 - t));
+    darken: function (e, r = 0.25) {
+        return q(e, [A.get("oklch", "lch"), "l"], (e) => e * (1 - r));
     },
-    lighten: function (e, t = 0.25) {
-        return z(e, [B.get("oklch", "lch"), "l"], (e) => e * (1 + t));
+    lighten: function (e, r = 0.25) {
+        return q(e, [A.get("oklch", "lch"), "l"], (e) => e * (1 + r));
     },
 });
-function tC(e, t, r = 0.5, a = {}) {
-    return ([e, t] = [N(e), N(t)]), "object" === s(r) && ([r, a] = [0.5, r]), tx(e, t, a)(r);
+function r_(e, r, t = 0.5, a = {}) {
+    return ([e, r] = [L(e), L(r)]), "object" === s(t) && ([t, a] = [0.5, t]), rN(e, r, a)(t);
 }
-function tE(e, t, r = {}) {
+function rB(e, r, t = {}) {
     let a;
-    tR(e) && (([a, r] = [e, t]), ([e, t] = a.rangeArgs.colors));
-    let { maxDeltaE: n, deltaEMethod: o, steps: s = 2, maxSteps: i = 1e3, ...c } = r;
-    a || (([e, t] = [N(e), N(t)]), (a = tx(e, t, c)));
-    let l = tO(e, t),
-        u = n > 0 ? Math.max(s, Math.ceil(l / n) + 1) : s,
+    rx(e) && (([a, t] = [e, r]), ([e, r] = a.rangeArgs.colors));
+    let { maxDeltaE: n, deltaEMethod: o, steps: s = 2, maxSteps: i = 1e3, ...l } = t;
+    a || (([e, r] = [L(e), L(r)]), (a = rN(e, r, l)));
+    let c = rR(e, r),
+        u = n > 0 ? Math.max(s, Math.ceil(c / n) + 1) : s,
         f = [];
     if ((void 0 !== i && (u = Math.min(u, i)), 1 === u)) f = [{ p: 0.5, color: a(0.5) }];
     else {
         let e = 1 / (u - 1);
-        f = Array.from({ length: u }, (t, r) => {
-            let n = r * e;
+        f = Array.from({ length: u }, (r, t) => {
+            let n = t * e;
             return { p: n, color: a(n) };
         });
     }
     if (n > 0) {
-        let e = f.reduce((e, t, r) => (0 === r ? 0 : Math.max(e, tO(t.color, f[r - 1].color, o))), 0);
+        let e = f.reduce((e, r, t) => (0 === t ? 0 : Math.max(e, rR(r.color, f[t - 1].color, o))), 0);
         for (; e > n; ) {
             e = 0;
-            for (let t = 1; t < f.length && f.length < i; t++) {
-                let r = f[t - 1],
-                    n = f[t],
-                    o = (n.p + r.p) / 2,
+            for (let r = 1; r < f.length && f.length < i; r++) {
+                let t = f[r - 1],
+                    n = f[r],
+                    o = (n.p + t.p) / 2,
                     s = a(o);
-                (e = Math.max(e, tO(s, r.color), tO(s, n.color))), f.splice(t, 0, { p: o, color: a(o) }), t++;
+                (e = Math.max(e, rR(s, t.color), rR(s, n.color))), f.splice(r, 0, { p: o, color: a(o) }), r++;
             }
         }
     }
     return (f = f.map((e) => e.color));
 }
-function tx(e, t, r = {}) {
-    if (tR(e)) {
-        let [r, a] = [e, t];
-        return tx(...r.rangeArgs.colors, { ...r.rangeArgs.options, ...a });
+function rN(e, r, t = {}) {
+    if (rx(e)) {
+        let [t, a] = [e, r];
+        return rN(...t.rangeArgs.colors, { ...t.rangeArgs.options, ...a });
     }
-    let { space: a, outputSpace: n, progression: o, premultiplied: s } = r;
-    (e = N(e)), (t = N(t)), (e = ei(e)), (t = ei(t));
-    let i = { colors: [e, t], options: r };
+    let { space: a, outputSpace: n, progression: o, premultiplied: s } = t;
+    (e = L(e)), (r = L(r)), (e = ei(e)), (r = ei(r));
+    let i = { colors: [e, r], options: t };
     if (
-        ((a = a ? B.get(a) : B.registry[C.interpolationSpace] || e.space),
-        (n = n ? B.get(n) : a),
-        (e = e9(e, a)),
-        (t = e9(t, a)),
-        (e = e3(e)),
-        (t = e3(t)),
+        ((a = a ? A.get(a) : A.registry[_.interpolationSpace] || e.space),
+        (n = n ? A.get(n) : a),
+        (e = e8(e, a)),
+        (r = e8(r, a)),
+        (e = e6(e)),
+        (r = e6(r)),
         a.coords.h && "angle" === a.coords.h.type)
     ) {
-        let n = (r.hue = r.hue || "shorter"),
+        let n = (t.hue = t.hue || "shorter"),
             o = [a, "h"],
-            [s, i] = [L(e, o), L(t, o)];
+            [s, i] = [$(e, o), $(r, o)];
         isNaN(s) && !isNaN(i) ? (s = i) : isNaN(i) && !isNaN(s) && (i = s),
-            ([s, i] = (function (e, t) {
-                if ("raw" === e) return t;
-                let [r, a] = t.map(Z),
-                    n = a - r;
+            ([s, i] = (function (e, r) {
+                if ("raw" === e) return r;
+                let [t, a] = r.map(Y),
+                    n = a - t;
                 return (
                     "increasing" === e
                         ? n < 0 && (a += 360)
                         : "decreasing" === e
-                          ? n > 0 && (r += 360)
+                          ? n > 0 && (t += 360)
                           : "longer" === e
-                            ? -180 < n && n < 180 && (n > 0 ? (r += 360) : (a += 360))
-                            : "shorter" === e && (n > 180 ? (r += 360) : n < -180 && (a += 360)),
-                    [r, a]
+                            ? -180 < n && n < 180 && (n > 0 ? (t += 360) : (a += 360))
+                            : "shorter" === e && (n > 180 ? (t += 360) : n < -180 && (a += 360)),
+                    [t, a]
                 );
             })(n, [s, i])),
-            z(e, o, s),
-            z(t, o, i);
+            q(e, o, s),
+            q(r, o, i);
     }
     return (
-        s && ((e.coords = e.coords.map((t) => t * e.alpha)), (t.coords = t.coords.map((e) => e * t.alpha))),
+        s && ((e.coords = e.coords.map((r) => r * e.alpha)), (r.coords = r.coords.map((e) => e * r.alpha))),
         Object.assign(
-            (r) => {
-                r = o ? o(r) : r;
-                let i = e.coords.map((e, a) => h(e, t.coords[a], r)),
-                    c = h(e.alpha, t.alpha, r),
-                    l = { space: a, coords: i, alpha: c };
-                return s && (l.coords = l.coords.map((e) => e / c)), n !== a && (l = e9(l, n)), l;
+            (t) => {
+                t = o ? o(t) : t;
+                let i = e.coords.map((e, a) => m(e, r.coords[a], t)),
+                    l = m(e.alpha, r.alpha, t),
+                    c = { space: a, coords: i, alpha: l };
+                return s && (c.coords = c.coords.map((e) => e / l)), n !== a && (c = e8(c, n)), c;
             },
             { rangeArgs: i },
         )
     );
 }
-function tR(e) {
+function rx(e) {
     return "function" === s(e) && !!e.rangeArgs;
 }
-C.interpolationSpace = "lab";
-var t_ = Object.freeze({
+_.interpolationSpace = "lab";
+var rS = Object.freeze({
         __proto__: null,
-        isRange: tR,
-        mix: tC,
-        range: tx,
+        isRange: rx,
+        mix: r_,
+        range: rN,
         register: function (e) {
-            e.defineFunction("mix", tC, { returns: "color" }),
-                e.defineFunction("range", tx, { returns: "function<color>" }),
-                e.defineFunction("steps", tE, { returns: "array<color>" });
+            e.defineFunction("mix", r_, { returns: "color" }),
+                e.defineFunction("range", rN, { returns: "function<color>" }),
+                e.defineFunction("steps", rB, { returns: "array<color>" });
         },
-        steps: tE,
+        steps: rB,
     }),
-    tj = new B({
+    rz = new A({
         id: "hsl",
         name: "HSL",
         coords: {
@@ -1856,43 +1856,43 @@ var t_ = Object.freeze({
             s: { range: [0, 100], name: "Saturation" },
             l: { range: [0, 100], name: "Lightness" },
         },
-        base: ti,
+        base: ri,
         fromBase: (e) => {
-            let t = Math.max(...e),
-                r = Math.min(...e),
+            let r = Math.max(...e),
+                t = Math.min(...e),
                 [a, n, o] = e,
-                [s, i, c] = [NaN, 0, (r + t) / 2],
-                l = t - r;
-            if (0 !== l) {
-                switch (((i = 0 === c || 1 === c ? 0 : (t - c) / Math.min(c, 1 - c)), t)) {
+                [s, i, l] = [NaN, 0, (t + r) / 2],
+                c = r - t;
+            if (0 !== c) {
+                switch (((i = 0 === l || 1 === l ? 0 : (r - l) / Math.min(l, 1 - l)), r)) {
                     case a:
-                        s = (n - o) / l + 6 * (n < o);
+                        s = (n - o) / c + 6 * (n < o);
                         break;
                     case n:
-                        s = (o - a) / l + 2;
+                        s = (o - a) / c + 2;
                         break;
                     case o:
-                        s = (a - n) / l + 4;
+                        s = (a - n) / c + 4;
                 }
                 s *= 60;
             }
-            return i < 0 && ((s += 180), (i = Math.abs(i))), s >= 360 && (s -= 360), [s, 100 * i, 100 * c];
+            return i < 0 && ((s += 180), (i = Math.abs(i))), s >= 360 && (s -= 360), [s, 100 * i, 100 * l];
         },
         toBase: (e) => {
-            let [t, r, a] = e;
+            let [r, t, a] = e;
             function n(e) {
-                let n = (e + t / 30) % 12,
-                    o = r * Math.min(a, 1 - a);
+                let n = (e + r / 30) % 12,
+                    o = t * Math.min(a, 1 - a);
                 return a - o * Math.max(-1, Math.min(n - 3, 9 - n, 1));
             }
-            return (t %= 360) < 0 && (t += 360), (r /= 100), (a /= 100), [n(0), n(8), n(4)];
+            return (r %= 360) < 0 && (r += 360), (t /= 100), (a /= 100), [n(0), n(8), n(4)];
         },
         formats: {
             hsl: { coords: ["<number> | <angle>", "<percentage>", "<percentage>"] },
             hsla: { coords: ["<number> | <angle>", "<percentage>", "<percentage>"], commas: !0, lastAlpha: !0 },
         },
     }),
-    tS = new B({
+    rI = new A({
         id: "hsv",
         name: "HSV",
         coords: {
@@ -1900,16 +1900,16 @@ var t_ = Object.freeze({
             s: { range: [0, 100], name: "Saturation" },
             v: { range: [0, 100], name: "Value" },
         },
-        base: tj,
+        base: rz,
         fromBase(e) {
-            let [t, r, a] = e,
-                n = (a /= 100) + (r /= 100) * Math.min(a, 1 - a);
-            return [t, 0 === n ? 0 : 200 * (1 - a / n), 100 * n];
+            let [r, t, a] = e,
+                n = (a /= 100) + (t /= 100) * Math.min(a, 1 - a);
+            return [r, 0 === n ? 0 : 200 * (1 - a / n), 100 * n];
         },
         toBase(e) {
-            let [t, r, a] = e,
-                n = (a /= 100) * (1 - (r /= 100) / 2);
-            return [t, 0 === n || 1 === n ? 0 : ((a - n) / Math.min(n, 1 - n)) * 100, 100 * n];
+            let [r, t, a] = e,
+                n = (a /= 100) * (1 - (t /= 100) / 2);
+            return [r, 0 === n || 1 === n ? 0 : ((a - n) / Math.min(n, 1 - n)) * 100, 100 * n];
         },
         formats: {
             color: {
@@ -1918,7 +1918,7 @@ var t_ = Object.freeze({
             },
         },
     }),
-    tN = new B({
+    rL = new A({
         id: "hwb",
         name: "HWB",
         coords: {
@@ -1926,21 +1926,21 @@ var t_ = Object.freeze({
             w: { range: [0, 100], name: "Whiteness" },
             b: { range: [0, 100], name: "Blackness" },
         },
-        base: tS,
+        base: rI,
         fromBase(e) {
-            let [t, r, a] = e;
-            return [t, (a * (100 - r)) / 100, 100 - a];
+            let [r, t, a] = e;
+            return [r, (a * (100 - t)) / 100, 100 - a];
         },
         toBase(e) {
-            let [t, r, a] = e,
-                n = (r /= 100) + (a /= 100);
-            if (n >= 1) return [t, 0, (r / n) * 100];
+            let [r, t, a] = e,
+                n = (t /= 100) + (a /= 100);
+            if (n >= 1) return [r, 0, (t / n) * 100];
             let o = 1 - a;
-            return [t, 100 * (0 === o ? 0 : 1 - r / o), 100 * o];
+            return [r, 100 * (0 === o ? 0 : 1 - t / o), 100 * o];
         },
         formats: { hwb: { coords: ["<number> | <angle>", "<percentage> | <number>", "<percentage> | <number>"] } },
     }),
-    tB = new I({
+    rA = new j({
         id: "a98rgb-linear",
         cssId: "--a98-rgb-linear",
         name: "Linear Adobe\xae 98 RGB compatible",
@@ -1956,20 +1956,20 @@ var t_ = Object.freeze({
             [0.013444280632031142, -0.11836239223101838, 1.0151749943912054],
         ],
     }),
-    tP = new I({
+    rE = new j({
         id: "a98rgb",
         cssId: "a98-rgb",
         name: "Adobe\xae 98 RGB compatible",
-        base: tB,
+        base: rA,
         toBase: (e) => e.map((e) => Math.pow(Math.abs(e), 563 / 256) * Math.sign(e)),
         fromBase: (e) => e.map((e) => Math.pow(Math.abs(e), 256 / 563) * Math.sign(e)),
     }),
-    tD = new I({
+    rP = new j({
         id: "prophoto-linear",
         cssId: "--prophoto-rgb-linear",
         name: "Linear ProPhoto",
         white: "D50",
-        base: q,
+        base: T,
         toXYZ_M: [
             [0.7977666449006423, 0.13518129740053308, 0.0313477341283922],
             [0.2880748288194013, 0.711835234241873, 8993693872564e-17],
@@ -1981,17 +1981,17 @@ var t_ = Object.freeze({
             [0, 0, 1.2119675456389452],
         ],
     });
-let tI = 1 / 512,
-    tT = 16 / 512;
-var tL = new I({
+let rj = 1 / 512,
+    rO = 16 / 512;
+var r$ = new j({
         id: "prophoto",
         cssId: "prophoto-rgb",
         name: "ProPhoto",
-        base: tD,
-        toBase: (e) => e.map((e) => (e < tT ? e / 16 : e ** 1.8)),
-        fromBase: (e) => e.map((e) => (e >= tI ? e ** (1 / 1.8) : 16 * e)),
+        base: rP,
+        toBase: (e) => e.map((e) => (e < rO ? e / 16 : e ** 1.8)),
+        fromBase: (e) => e.map((e) => (e >= rj ? e ** (1 / 1.8) : 16 * e)),
     }),
-    tF = new B({
+    rD = new A({
         id: "oklch",
         name: "Oklch",
         coords: {
@@ -2002,33 +2002,33 @@ var tL = new I({
         white: "D65",
         base: en,
         fromBase(e) {
-            let t,
-                [r, a, n] = e;
+            let r,
+                [t, a, n] = e;
             return (
-                (t = 2e-4 > Math.abs(a) && 2e-4 > Math.abs(n) ? NaN : (180 * Math.atan2(n, a)) / Math.PI),
-                [r, Math.sqrt(a ** 2 + n ** 2), Z(t)]
+                (r = 2e-4 > Math.abs(a) && 2e-4 > Math.abs(n) ? NaN : (180 * Math.atan2(n, a)) / Math.PI),
+                [t, Math.sqrt(a ** 2 + n ** 2), Y(r)]
             );
         },
         toBase(e) {
-            let t,
-                r,
+            let r,
+                t,
                 [a, n, o] = e;
             return (
                 isNaN(o)
-                    ? ((t = 0), (r = 0))
-                    : ((t = n * Math.cos((o * Math.PI) / 180)), (r = n * Math.sin((o * Math.PI) / 180))),
-                [a, t, r]
+                    ? ((r = 0), (t = 0))
+                    : ((r = n * Math.cos((o * Math.PI) / 180)), (t = n * Math.sin((o * Math.PI) / 180))),
+                [a, r, t]
             );
         },
         formats: {
             oklch: { coords: ["<percentage> | <number>", "<number> | <percentage>[0,1]", "<number> | <angle>"] },
         },
     });
-let tz = E.D65,
-    tq = 216 / 24389,
-    t$ = 24389 / 27,
-    [tU, tW] = tw({ space: D, coords: tz });
-var tG = new B({
+let rq = B.D65,
+    rT = 216 / 24389,
+    rH = 24389 / 27,
+    [rW, rF] = rw({ space: P, coords: rq });
+var rG = new A({
         id: "luv",
         name: "Luv",
         coords: {
@@ -2036,23 +2036,23 @@ var tG = new B({
             u: { refRange: [-215, 215] },
             v: { refRange: [-215, 215] },
         },
-        white: tz,
-        base: D,
+        white: rq,
+        base: P,
         fromBase(e) {
-            let t = [l(e[0]), l(e[1]), l(e[2])],
-                r = t[1],
-                [a, n] = tw({ space: D, coords: t });
+            let r = [c(e[0]), c(e[1]), c(e[2])],
+                t = r[1],
+                [a, n] = rw({ space: P, coords: r });
             if (!Number.isFinite(a) || !Number.isFinite(n)) return [0, 0, 0];
-            let o = r <= tq ? t$ * r : 116 * Math.cbrt(r) - 16;
-            return [o, 13 * o * (a - tU), 13 * o * (n - tW)];
+            let o = t <= rT ? rH * t : 116 * Math.cbrt(t) - 16;
+            return [o, 13 * o * (a - rW), 13 * o * (n - rF)];
         },
         toBase(e) {
-            let [t, r, a] = e;
-            if (0 === t || c(t)) return [0, 0, 0];
-            (r = l(r)), (a = l(a));
-            let n = r / (13 * t) + tU,
-                o = a / (13 * t) + tW,
-                s = t <= 8 ? t / t$ : Math.pow((t + 16) / 116, 3);
+            let [r, t, a] = e;
+            if (0 === r || l(r)) return [0, 0, 0];
+            (t = c(t)), (a = c(a));
+            let n = t / (13 * r) + rW,
+                o = a / (13 * r) + rF,
+                s = r <= 8 ? r / rH : Math.pow((r + 16) / 116, 3);
             return [((9 * n) / (4 * o)) * s, s, ((12 - 3 * n - 20 * o) / (4 * o)) * s];
         },
         formats: {
@@ -2062,7 +2062,7 @@ var tG = new B({
             },
         },
     }),
-    tH = new B({
+    rX = new A({
         id: "lchuv",
         name: "LChuv",
         coords: {
@@ -2070,21 +2070,21 @@ var tG = new B({
             c: { refRange: [0, 220], name: "Chroma" },
             h: { refRange: [0, 360], type: "angle", name: "Hue" },
         },
-        base: tG,
+        base: rG,
         fromBase(e) {
-            let t,
-                [r, a, n] = e;
+            let r,
+                [t, a, n] = e;
             return (
-                (t = 0.02 > Math.abs(a) && 0.02 > Math.abs(n) ? NaN : (180 * Math.atan2(n, a)) / Math.PI),
-                [r, Math.sqrt(a ** 2 + n ** 2), Z(t)]
+                (r = 0.02 > Math.abs(a) && 0.02 > Math.abs(n) ? NaN : (180 * Math.atan2(n, a)) / Math.PI),
+                [t, Math.sqrt(a ** 2 + n ** 2), Y(r)]
             );
         },
         toBase(e) {
-            let [t, r, a] = e;
+            let [r, t, a] = e;
             return (
-                r < 0 && (r = 0),
+                t < 0 && (t = 0),
                 isNaN(a) && (a = 0),
-                [t, r * Math.cos((a * Math.PI) / 180), r * Math.sin((a * Math.PI) / 180)]
+                [r, t * Math.cos((a * Math.PI) / 180), t * Math.sin((a * Math.PI) / 180)]
             );
         },
         formats: {
@@ -2094,60 +2094,60 @@ var tG = new B({
             },
         },
     });
-let tZ = 216 / 24389,
-    tY = 24389 / 27,
-    tX = tr[0][0],
-    tJ = tr[0][1],
-    tV = tr[0][2],
-    tK = tr[1][0],
-    tQ = tr[1][1],
-    t0 = tr[1][2],
-    t1 = tr[2][0],
-    t2 = tr[2][1],
-    t5 = tr[2][2];
-function t3(e, t, r) {
-    let a = t / (Math.sin(r) - e * Math.cos(r));
+let rY = 216 / 24389,
+    rZ = 24389 / 27,
+    rU = rt[0][0],
+    rJ = rt[0][1],
+    rQ = rt[0][2],
+    rV = rt[1][0],
+    rK = rt[1][1],
+    r1 = rt[1][2],
+    r0 = rt[2][0],
+    r2 = rt[2][1],
+    r5 = rt[2][2];
+function r6(e, r, t) {
+    let a = r / (Math.sin(t) - e * Math.cos(t));
     return a < 0 ? 1 / 0 : a;
 }
-function t6(e) {
-    let t = Math.pow(e + 16, 3) / 1560896,
-        r = t > tZ ? t : e / tY,
-        a = r * (284517 * tX - 94839 * tV),
-        n = r * (838422 * tV + 769860 * tJ + 731718 * tX),
-        o = r * (632260 * tV - 126452 * tJ),
-        s = r * (284517 * tK - 94839 * t0),
-        i = r * (838422 * t0 + 769860 * tQ + 731718 * tK),
-        c = r * (632260 * t0 - 126452 * tQ),
-        l = r * (284517 * t1 - 94839 * t5),
-        u = r * (838422 * t5 + 769860 * t2 + 731718 * t1),
-        f = r * (632260 * t5 - 126452 * t2);
+function r3(e) {
+    let r = Math.pow(e + 16, 3) / 1560896,
+        t = r > rY ? r : e / rZ,
+        a = t * (284517 * rU - 94839 * rQ),
+        n = t * (838422 * rQ + 769860 * rJ + 731718 * rU),
+        o = t * (632260 * rQ - 126452 * rJ),
+        s = t * (284517 * rV - 94839 * r1),
+        i = t * (838422 * r1 + 769860 * rK + 731718 * rV),
+        l = t * (632260 * r1 - 126452 * rK),
+        c = t * (284517 * r0 - 94839 * r5),
+        u = t * (838422 * r5 + 769860 * r2 + 731718 * r0),
+        f = t * (632260 * r5 - 126452 * r2);
     return {
         r0s: a / o,
         r0i: (n * e) / o,
         r1s: a / (o + 126452),
         r1i: ((n - 769860) * e) / (o + 126452),
-        g0s: s / c,
-        g0i: (i * e) / c,
-        g1s: s / (c + 126452),
-        g1i: ((i - 769860) * e) / (c + 126452),
-        b0s: l / f,
+        g0s: s / l,
+        g0i: (i * e) / l,
+        g1s: s / (l + 126452),
+        g1i: ((i - 769860) * e) / (l + 126452),
+        b0s: c / f,
         b0i: (u * e) / f,
-        b1s: l / (f + 126452),
+        b1s: c / (f + 126452),
         b1i: ((u - 769860) * e) / (f + 126452),
     };
 }
-function t8(e, t) {
-    let r = (t / 360) * Math.PI * 2;
+function r9(e, r) {
+    let t = (r / 360) * Math.PI * 2;
     return Math.min(
-        t3(e.r0s, e.r0i, r),
-        t3(e.r1s, e.r1i, r),
-        t3(e.g0s, e.g0i, r),
-        t3(e.g1s, e.g1i, r),
-        t3(e.b0s, e.b0i, r),
-        t3(e.b1s, e.b1i, r),
+        r6(e.r0s, e.r0i, t),
+        r6(e.r1s, e.r1i, t),
+        r6(e.g0s, e.g0i, t),
+        r6(e.g1s, e.g1i, t),
+        r6(e.b0s, e.b0i, t),
+        r6(e.b1s, e.b1i, t),
     );
 }
-var t9 = new B({
+var r8 = new A({
     id: "hsluv",
     name: "HSLuv",
     coords: {
@@ -2155,43 +2155,43 @@ var t9 = new B({
         s: { range: [0, 100], name: "Saturation" },
         l: { range: [0, 100], name: "Lightness" },
     },
-    base: tH,
-    gamutSpace: ti,
+    base: rX,
+    gamutSpace: ri,
     fromBase(e) {
-        let t,
-            [r, a, n] = [l(e[0]), l(e[1]), l(e[2])];
+        let r,
+            [t, a, n] = [c(e[0]), c(e[1]), c(e[2])];
         return (
-            r > 99.9999999 ? ((t = 0), (r = 100)) : r < 1e-8 ? ((t = 0), (r = 0)) : (t = (a / t8(t6(r), n)) * 100),
-            [n, t, r]
+            t > 99.9999999 ? ((r = 0), (t = 100)) : t < 1e-8 ? ((r = 0), (t = 0)) : (r = (a / r9(r3(t), n)) * 100),
+            [n, r, t]
         );
     },
     toBase(e) {
-        let t,
-            [r, a, n] = [l(e[0]), l(e[1]), l(e[2])];
+        let r,
+            [t, a, n] = [c(e[0]), c(e[1]), c(e[2])];
         return (
-            n > 99.9999999 ? ((n = 100), (t = 0)) : n < 1e-8 ? ((n = 0), (t = 0)) : (t = (t8(t6(n), r) / 100) * a),
-            [n, t, r]
+            n > 99.9999999 ? ((n = 100), (r = 0)) : n < 1e-8 ? ((n = 0), (r = 0)) : (r = (r9(r3(n), t) / 100) * a),
+            [n, r, t]
         );
     },
     formats: {
         color: { id: "--hsluv", coords: ["<number> | <angle>", "<percentage> | <number>", "<percentage> | <number>"] },
     },
 });
-function t4(e, t) {
-    return Math.abs(t) / Math.sqrt(Math.pow(e, 2) + 1);
+function r4(e, r) {
+    return Math.abs(r) / Math.sqrt(Math.pow(e, 2) + 1);
 }
-function t7(e) {
+function r7(e) {
     return Math.min(
-        t4(e.r0s, e.r0i),
-        t4(e.r1s, e.r1i),
-        t4(e.g0s, e.g0i),
-        t4(e.g1s, e.g1i),
-        t4(e.b0s, e.b0i),
-        t4(e.b1s, e.b1i),
+        r4(e.r0s, e.r0i),
+        r4(e.r1s, e.r1i),
+        r4(e.g0s, e.g0i),
+        r4(e.g1s, e.g1i),
+        r4(e.b0s, e.b0i),
+        r4(e.b1s, e.b1i),
     );
 }
-tr[0][0], tr[0][1], tr[0][2], tr[1][0], tr[1][1], tr[1][2], tr[2][0], tr[2][1], tr[2][2];
-var re = new B({
+rt[0][0], rt[0][1], rt[0][2], rt[1][0], rt[1][1], rt[1][2], rt[2][0], rt[2][1], rt[2][2];
+var te = new A({
     id: "hpluv",
     name: "HPLuv",
     coords: {
@@ -2199,47 +2199,47 @@ var re = new B({
         s: { range: [0, 100], name: "Saturation" },
         l: { range: [0, 100], name: "Lightness" },
     },
-    base: tH,
+    base: rX,
     gamutSpace: "self",
     fromBase(e) {
-        let t,
-            [r, a, n] = [l(e[0]), l(e[1]), l(e[2])];
+        let r,
+            [t, a, n] = [c(e[0]), c(e[1]), c(e[2])];
         return (
-            r > 99.9999999 ? ((t = 0), (r = 100)) : r < 1e-8 ? ((t = 0), (r = 0)) : (t = (a / t7(t6(r))) * 100),
-            [n, t, r]
+            t > 99.9999999 ? ((r = 0), (t = 100)) : t < 1e-8 ? ((r = 0), (t = 0)) : (r = (a / r7(r3(t))) * 100),
+            [n, r, t]
         );
     },
     toBase(e) {
-        let t,
-            [r, a, n] = [l(e[0]), l(e[1]), l(e[2])];
+        let r,
+            [t, a, n] = [c(e[0]), c(e[1]), c(e[2])];
         return (
-            n > 99.9999999 ? ((n = 100), (t = 0)) : n < 1e-8 ? ((n = 0), (t = 0)) : (t = (t7(t6(n)) / 100) * a),
-            [n, t, r]
+            n > 99.9999999 ? ((n = 100), (r = 0)) : n < 1e-8 ? ((n = 0), (r = 0)) : (r = (r7(r3(n)) / 100) * a),
+            [n, r, t]
         );
     },
     formats: {
         color: { id: "--hpluv", coords: ["<number> | <angle>", "<percentage> | <number>", "<percentage> | <number>"] },
     },
 });
-let rt = 2610 / 16384,
-    rr = 16384 / 2610,
-    ra = 32 / 2523;
-var rn = new I({
+let tr = 2610 / 16384,
+    tt = 16384 / 2610,
+    ta = 32 / 2523;
+var tn = new j({
         id: "rec2100pq",
         cssId: "rec2100-pq",
         name: "REC.2100-PQ",
         base: e7,
         toBase: (e) =>
             e.map(function (e) {
-                return (1e4 * (Math.max(e ** ra - 0.8359375, 0) / (18.8515625 - 18.6875 * e ** ra)) ** rr) / 203;
+                return (1e4 * (Math.max(e ** ta - 0.8359375, 0) / (18.8515625 - 18.6875 * e ** ta)) ** tt) / 203;
             }),
         fromBase: (e) =>
             e.map(function (e) {
-                let t = Math.max((203 * e) / 1e4, 0);
-                return ((0.8359375 + 18.8515625 * t ** rt) / (1 + 18.6875 * t ** rt)) ** 78.84375;
+                let r = Math.max((203 * e) / 1e4, 0);
+                return ((0.8359375 + 18.8515625 * r ** tr) / (1 + 18.6875 * r ** tr)) ** 78.84375;
             }),
     }),
-    ro = new I({
+    to = new j({
         id: "rec2100hlg",
         cssId: "rec2100-hlg",
         name: "REC.2100-HLG",
@@ -2258,18 +2258,18 @@ var rn = new I({
                     : 0.17883277 * Math.log(12 * e - 0.28466892) + 0.55991073;
             }),
     });
-let rs = {};
-function ri({ id: e, toCone_M: t, fromCone_M: r }) {
-    rs[e] = arguments[0];
+let ts = {};
+function ti({ id: e, toCone_M: r, fromCone_M: t }) {
+    ts[e] = arguments[0];
 }
-function rc(e, t, r = "Bradford") {
-    let a = rs[r],
+function tl(e, r, t = "Bradford") {
+    let a = ts[t],
         [o, s, i] = n(a.toCone_M, e),
-        [c, l, u] = n(a.toCone_M, t),
+        [l, c, u] = n(a.toCone_M, r),
         f = n(
             [
-                [c / o, 0, 0],
-                [0, l / s, 0],
+                [l / o, 0, 0],
+                [0, c / s, 0],
                 [0, 0, u / i],
             ],
             a.toCone_M,
@@ -2277,12 +2277,12 @@ function rc(e, t, r = "Bradford") {
     return n(a.fromCone_M, f);
 }
 k.add("chromatic-adaptation-start", (e) => {
-    e.options.method && (e.M = rc(e.W1, e.W2, e.options.method));
+    e.options.method && (e.M = tl(e.W1, e.W2, e.options.method));
 }),
     k.add("chromatic-adaptation-end", (e) => {
-        e.M || (e.M = rc(e.W1, e.W2, e.options.method));
+        e.M || (e.M = tl(e.W1, e.W2, e.options.method));
     }),
-    ri({
+    ti({
         id: "von Kries",
         toCone_M: [
             [0.40024, 0.7076, -0.08081],
@@ -2295,7 +2295,7 @@ k.add("chromatic-adaptation-start", (e) => {
             [0, 0, 1.0890636230968613],
         ],
     }),
-    ri({
+    ti({
         id: "Bradford",
         toCone_M: [
             [0.8951, 0.2664, -0.1614],
@@ -2308,7 +2308,7 @@ k.add("chromatic-adaptation-start", (e) => {
             [-0.00852866457517732, 0.04004282165408486, 0.96848669578755],
         ],
     }),
-    ri({
+    ti({
         id: "CAT02",
         toCone_M: [
             [0.7328, 0.4296, -0.1624],
@@ -2321,7 +2321,7 @@ k.add("chromatic-adaptation-start", (e) => {
             [-0.009627608738429355, -0.00569803121611342, 1.0153256399545427],
         ],
     }),
-    ri({
+    ti({
         id: "CAT16",
         toCone_M: [
             [0.401288, 0.650173, -0.051461],
@@ -2334,7 +2334,7 @@ k.add("chromatic-adaptation-start", (e) => {
             [-0.01584149884933386, -0.03412293802851557, 1.0499644368778496],
         ],
     }),
-    Object.assign(E, {
+    Object.assign(B, {
         A: [1.0985, 1, 0.35585],
         C: [0.98074, 1, 1.18232],
         D55: [0.95682, 1, 0.92149],
@@ -2344,8 +2344,8 @@ k.add("chromatic-adaptation-start", (e) => {
         F7: [0.95041, 1, 1.08747],
         F11: [1.00962, 1, 0.6435],
     }),
-    (E.ACES = [0.32168 / 0.33767, 1, 1.0088251843515859]);
-var rl = new I({
+    (B.ACES = [0.32168 / 0.33767, 1, 1.0088251843515859]);
+var tc = new j({
     id: "acescg",
     cssId: "--acescg",
     name: "ACEScg",
@@ -2355,7 +2355,7 @@ var rl = new I({
         b: { range: [0, 65504], name: "Blue" },
     },
     referred: "scene",
-    white: E.ACES,
+    white: B.ACES,
     toXYZ_M: [
         [0.6624541811085053, 0.13400420645643313, 0.1561876870049078],
         [0.27222871678091454, 0.6740817658111484, 0.05368951740793705],
@@ -2367,28 +2367,28 @@ var rl = new I({
         [0.011721894328375376, -0.008284441996237409, 0.9883948585390215],
     ],
 });
-let ru = (Math.log2(65504) + 9.72) / 17.52;
-var rf = Object.freeze({
+let tu = (Math.log2(65504) + 9.72) / 17.52;
+var tf = Object.freeze({
     __proto__: null,
-    A98RGB: tP,
-    A98RGB_Linear: tB,
-    ACEScc: new I({
+    A98RGB: rE,
+    A98RGB_Linear: rA,
+    ACEScc: new j({
         id: "acescc",
         cssId: "--acescc",
         name: "ACEScc",
         coords: {
-            r: { range: [-0.35828683, ru], name: "Red" },
-            g: { range: [-0.35828683, ru], name: "Green" },
-            b: { range: [-0.35828683, ru], name: "Blue" },
+            r: { range: [-0.35828683, tu], name: "Red" },
+            g: { range: [-0.35828683, tu], name: "Green" },
+            b: { range: [-0.35828683, tu], name: "Blue" },
         },
         referred: "scene",
-        base: rl,
+        base: tc,
         toBase(e) {
-            let t = (9.72 - 15) / 17.52;
+            let r = (9.72 - 15) / 17.52;
             return e.map(function (e) {
-                return e <= t
+                return e <= r
                     ? (2 ** (17.52 * e - 9.72) - 152587890625e-16) * 2
-                    : e < ru
+                    : e < tu
                       ? 2 ** (17.52 * e - 9.72)
                       : 65504;
             });
@@ -2402,199 +2402,199 @@ var rf = Object.freeze({
                       : (Math.log2(e) + 9.72) / 17.52;
             }),
     }),
-    ACEScg: rl,
-    CAM16_JMh: eZ,
-    HCT: eQ,
-    HPLuv: re,
-    HSL: tj,
-    HSLuv: t9,
-    HSV: tS,
-    HWB: tN,
-    ICTCP: ej,
+    ACEScg: tc,
+    CAM16_JMh: eY,
+    HCT: eK,
+    HPLuv: te,
+    HSL: rz,
+    HSLuv: r8,
+    HSV: rI,
+    HWB: rL,
+    ICTCP: ez,
     JzCzHz: ew,
     Jzazbz: ev,
-    LCH: Y,
-    LCHuv: tH,
-    Lab: H,
-    Lab_D65: ty,
-    Luv: tG,
-    OKLCH: tF,
+    LCH: Z,
+    LCHuv: rX,
+    Lab: X,
+    Lab_D65: rM,
+    Luv: rG,
+    OKLCH: rD,
     OKLab: en,
-    P3: tc,
-    P3_Linear: tt,
-    ProPhoto: tL,
-    ProPhoto_Linear: tD,
-    REC_2020: te,
+    P3: rl,
+    P3_Linear: rr,
+    ProPhoto: r$,
+    ProPhoto_Linear: rP,
+    REC_2020: re,
     REC_2020_Linear: e7,
-    REC_2100_HLG: ro,
-    REC_2100_PQ: rn,
+    REC_2100_HLG: to,
+    REC_2100_PQ: tn,
     XYZ_ABS_D65: eu,
-    XYZ_D50: q,
-    XYZ_D65: D,
-    sRGB: ti,
-    sRGB_Linear: ta,
+    XYZ_D50: T,
+    XYZ_D65: P,
+    sRGB: ri,
+    sRGB_Linear: ra,
 });
-class rb {
+class th {
     constructor(...e) {
-        let t, r, a, n;
-        1 === e.length && (t = N(e[0])),
-            t ? ((r = t.space || t.spaceId), (a = t.coords), (n = t.alpha)) : ([r, a, n] = e),
-            Object.defineProperty(this, "space", { value: B.get(r), writable: !1, enumerable: !0, configurable: !0 }),
+        let r, t, a, n;
+        1 === e.length && (r = L(e[0])),
+            r ? ((t = r.space || r.spaceId), (a = r.coords), (n = r.alpha)) : ([t, a, n] = e),
+            Object.defineProperty(this, "space", { value: A.get(t), writable: !1, enumerable: !0, configurable: !0 }),
             (this.coords = a ? a.slice() : [0, 0, 0]),
             (this.alpha = n > 1 || void 0 === n ? 1 : n < 0 ? 0 : n);
         for (let e = 0; e < this.coords.length; e++) "NaN" === this.coords[e] && (this.coords[e] = NaN);
         for (let e in this.space.coords)
-            Object.defineProperty(this, e, { get: () => this.get(e), set: (t) => this.set(e, t) });
+            Object.defineProperty(this, e, { get: () => this.get(e), set: (r) => this.set(e, r) });
     }
     get spaceId() {
         return this.space.id;
     }
     clone() {
-        return new rb(this.space, this.coords, this.alpha);
+        return new th(this.space, this.coords, this.alpha);
     }
     toJSON() {
         return { spaceId: this.spaceId, coords: this.coords, alpha: this.alpha };
     }
     display(...e) {
-        let t = (function (e, { space: t = C.display_space, ...r } = {}) {
-            let n = e4(e, r);
-            if ("u" < typeof CSS || CSS.supports("color", n) || !C.display_space) (n = new String(n)).color = e;
+        let r = (function (e, { space: r = _.display_space, ...t } = {}) {
+            let n = e4(e, t);
+            if ("u" < typeof CSS || CSS.supports("color", n) || !_.display_space) (n = new String(n)).color = e;
             else {
                 let o = e;
                 if (
-                    (e.coords.some(c) || c(e.alpha)) &&
+                    (e.coords.some(l) || l(e.alpha)) &&
                     !(a ??= CSS.supports("color", "hsl(none 50% 50%)")) &&
-                    (((o = ei(e)).coords = o.coords.map(l)),
-                    (o.alpha = l(o.alpha)),
-                    (n = e4(o, r)),
+                    (((o = ei(e)).coords = o.coords.map(c)),
+                    (o.alpha = c(o.alpha)),
+                    (n = e4(o, t)),
                     CSS.supports("color", n))
                 )
                     return ((n = new String(n)).color = o), n;
-                (n = new String(e4((o = e9(o, t)), r))).color = o;
+                (n = new String(e4((o = e8(o, r)), t))).color = o;
             }
             return n;
         })(this, ...e);
-        return (t.color = new rb(t.color)), t;
+        return (r.color = new th(r.color)), r;
     }
-    static get(e, ...t) {
-        return e instanceof rb ? e : new rb(e, ...t);
+    static get(e, ...r) {
+        return e instanceof th ? e : new th(e, ...r);
     }
-    static defineFunction(e, t, r = t) {
-        let { instance: a = !0, returns: n } = r,
+    static defineFunction(e, r, t = r) {
+        let { instance: a = !0, returns: n } = t,
             o = function (...e) {
-                let r = t(...e);
-                if ("color" === n) r = rb.get(r);
+                let t = r(...e);
+                if ("color" === n) t = th.get(t);
                 else if ("function<color>" === n) {
-                    let e = r;
+                    let e = t;
                     Object.assign(
-                        (r = function (...t) {
-                            let r = e(...t);
-                            return rb.get(r);
+                        (t = function (...r) {
+                            let t = e(...r);
+                            return th.get(t);
                         }),
                         e,
                     );
-                } else "array<color>" === n && (r = r.map((e) => rb.get(e)));
-                return r;
+                } else "array<color>" === n && (t = t.map((e) => th.get(e)));
+                return t;
             };
-        e in rb || (rb[e] = o),
+        e in th || (th[e] = o),
             a &&
-                (rb.prototype[e] = function (...e) {
+                (th.prototype[e] = function (...e) {
                     return o(this, ...e);
                 });
     }
     static defineFunctions(e) {
-        for (let t in e) rb.defineFunction(t, e[t], e[t]);
+        for (let r in e) th.defineFunction(r, e[r], e[r]);
     }
     static extend(e) {
-        if (e.register) e.register(rb);
-        else for (let t in e) rb.defineFunction(t, e[t]);
+        if (e.register) e.register(th);
+        else for (let r in e) th.defineFunction(r, e[r]);
     }
 }
-for (let e of (rb.defineFunctions({
-    get: L,
-    getAll: T,
-    set: z,
-    setAll: F,
-    to: e9,
-    equals: function (e, t) {
+for (let e of (th.defineFunctions({
+    get: $,
+    getAll: O,
+    set: q,
+    setAll: D,
+    to: e8,
+    equals: function (e, r) {
         return (
-            (e = N(e)),
-            (t = N(t)),
-            e.space === t.space && e.alpha === t.alpha && e.coords.every((e, r) => e === t.coords[r])
+            (e = L(e)),
+            (r = L(r)),
+            e.space === r.space && e.alpha === r.alpha && e.coords.every((e, t) => e === r.coords[t])
         );
     },
     inGamut: es,
-    toGamut: e3,
-    distance: ec,
+    toGamut: e6,
+    distance: el,
     toString: e4,
 }),
-Object.assign(rb, { util: O, hooks: k, WHITES: E, Space: B, spaces: B.registry, parse: S, defaults: C }),
-Object.keys(rf)))
-    B.register(rf[e]);
-for (let e in B.registry) rd(e, B.registry[e]);
-function rd(e, t) {
-    let r = e.replace(/-/g, "_");
-    Object.defineProperty(rb.prototype, r, {
+Object.assign(th, { util: R, hooks: k, WHITES: B, Space: A, spaces: A.registry, parse: I, defaults: _ }),
+Object.keys(tf)))
+    A.register(tf[e]);
+for (let e in A.registry) td(e, A.registry[e]);
+function td(e, r) {
+    let t = e.replace(/-/g, "_");
+    Object.defineProperty(th.prototype, t, {
         get() {
-            let r = this.getAll(e);
+            let t = this.getAll(e);
             return "u" < typeof Proxy
-                ? r
-                : new Proxy(r, {
-                      has: (e, r) => {
+                ? t
+                : new Proxy(t, {
+                      has: (e, t) => {
                           try {
-                              return B.resolveCoord([t, r]), !0;
+                              return A.resolveCoord([r, t]), !0;
                           } catch (e) {}
-                          return Reflect.has(e, r);
+                          return Reflect.has(e, t);
                       },
-                      get: (e, r, a) => {
-                          if (r && "symbol" != typeof r && !(r in e)) {
-                              let { index: a } = B.resolveCoord([t, r]);
+                      get: (e, t, a) => {
+                          if (t && "symbol" != typeof t && !(t in e)) {
+                              let { index: a } = A.resolveCoord([r, t]);
                               if (a >= 0) return e[a];
                           }
-                          return Reflect.get(e, r, a);
+                          return Reflect.get(e, t, a);
                       },
-                      set: (r, a, n, o) => {
-                          if ((a && "symbol" != typeof a && !(a in r)) || a >= 0) {
-                              let { index: o } = B.resolveCoord([t, a]);
-                              if (o >= 0) return (r[o] = n), this.setAll(e, r), !0;
+                      set: (t, a, n, o) => {
+                          if ((a && "symbol" != typeof a && !(a in t)) || a >= 0) {
+                              let { index: o } = A.resolveCoord([r, a]);
+                              if (o >= 0) return (t[o] = n), this.setAll(e, t), !0;
                           }
-                          return Reflect.set(r, a, n, o);
+                          return Reflect.set(t, a, n, o);
                       },
                   });
         },
-        set(t) {
-            this.setAll(e, t);
+        set(r) {
+            this.setAll(e, r);
         },
         configurable: !0,
         enumerable: !0,
     });
 }
 k.add("colorspace-init-end", (e) => {
-    rd(e.id, e),
-        e.aliases?.forEach((t) => {
-            rd(t, e);
+    td(e.id, e),
+        e.aliases?.forEach((r) => {
+            td(r, e);
         });
 }),
-    rb.extend(e2),
-    rb.extend({ deltaE: tO }),
-    Object.assign(rb, { deltaEMethods: e2 }),
-    rb.extend(tk),
-    rb.extend({
-        contrast: function (e, t, r = {}) {
-            o(r) && (r = { algorithm: r });
-            let { algorithm: a, ...n } = r;
+    th.extend(e2),
+    th.extend({ deltaE: rR }),
+    Object.assign(th, { deltaEMethods: e2 }),
+    th.extend(rk),
+    th.extend({
+        contrast: function (e, r, t = {}) {
+            o(t) && (t = { algorithm: t });
+            let { algorithm: a, ...n } = t;
             if (!a) {
-                let e = Object.keys(tv)
+                let e = Object.keys(rv)
                     .map((e) => e.replace(/^contrast/, ""))
                     .join(", ");
                 throw TypeError(`contrast() function needs a contrast algorithm. Please specify one of: ${e}`);
             }
-            for (let r in ((e = N(e)), (t = N(t)), tv))
-                if ("contrast" + a.toLowerCase() === r.toLowerCase()) return tv[r](e, t, n);
+            for (let t in ((e = L(e)), (r = L(r)), rv))
+                if ("contrast" + a.toLowerCase() === t.toLowerCase()) return rv[t](e, r, n);
             throw TypeError(`Unknown contrast algorithm: ${a}`);
         },
     }),
-    rb.extend(tA),
-    rb.extend(tf),
-    rb.extend(t_),
-    rb.extend(tv);
+    th.extend(rC),
+    th.extend(rf),
+    th.extend(rS),
+    th.extend(rv);

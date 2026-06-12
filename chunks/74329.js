@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
 var r = n(17928),
@@ -11,8 +11,8 @@ var r = n(17928),
     c = n(495544),
     d = n(116956),
     _ = n(375708);
-function f(e, t, f) {
-    let h = (0, u.AO)(e),
+function h(e, t, h) {
+    let f = (0, u.AO)(e),
         p = (0, r.bG)([c.default], () => c.default.getId());
     if (null == e) return null;
     let E = (0, l._z)(e),
@@ -29,14 +29,14 @@ function f(e, t, f) {
         color: "danger",
         label: _.intl.string(_.t.sdnCxV),
         action: () => {
-            f?.(),
+            h?.(),
                 null != e &&
                     (0, s.openModalLazy)(async () => {
                         let { default: t } = await Promise.all([n.e("17171"), n.e("86889")]).then(n.bind(n, 292208));
                         return (n) =>
                             (0, i.jsx)(t, {
                                 stream: e,
-                                streamApplication: h,
+                                streamApplication: f,
                                 isStreamer: p === e?.ownerId,
                                 analyticsData: g,
                                 ...n,

@@ -1,9 +1,9 @@
 "use strict";
-e.exports = function (e, t, r, i) {
+e.exports = function (e, t, i, r) {
     var s = this;
     function a(t) {
-        s.fireCallback(r, t, e),
-            "keyup" !== i && (s.ignoreNextKeyup = n(780594)(t)),
+        s.fireCallback(i, t, e),
+            "keyup" !== r && (s.ignoreNextKeyup = n(780594)(t)),
             setTimeout(function () {
                 s.resetSequences();
             }, 10);
@@ -17,7 +17,7 @@ e.exports = function (e, t, r, i) {
                       return function () {
                           (s.nextExpectedAction = t), ++s.sequenceLevels[e], s.resetSequenceTimer();
                       };
-                  })(i || s.getKeyInfo(t[o + 1]).action);
-        s.bindSingle(t[o], l, i, e, o);
+                  })(r || s.getKeyInfo(t[o + 1]).action);
+        s.bindSingle(t[o], l, r, e, o);
     }
 };

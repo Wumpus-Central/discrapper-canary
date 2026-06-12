@@ -1,78 +1,78 @@
-n.d(t, { default: () => T });
-var l = n(627968),
-    r = n(64700),
-    a = n(110259),
-    o = n(189213),
-    i = n(17928),
-    s = n(894778),
-    u = n(287809),
-    c = n(954571),
-    d = n(975571),
-    A = n(955437),
-    _ = n(201505),
-    p = n(204925),
-    f = n(652215),
-    E = n(315290),
-    m = n(985018);
-function T(e) {
-    let { transitionState: t, onClose: n } = e,
-        [T, g] = r.useState(null),
-        [N, y] = r.useState(null),
-        [h, G] = r.useState(!1),
-        S = r.useRef(null),
-        w = (0, i.bG)([u.default], () => u.default.getCurrentUser()),
-        C = r.useRef(null);
-    r.useEffect(() => {
-        s.A.flowStep(E.do.ANY, E.Ot.AGE_GATE), c.default.track(f.HAw.OPEN_MODAL, { type: "Claim Age Gate" });
+l.d(t, { default: () => b });
+var n = l(627968),
+    s = l(64700),
+    i = l(562708),
+    r = l(189213),
+    a = l(17928),
+    u = l(894778),
+    o = l(287809),
+    A = l(174459),
+    d = l(975571),
+    c = l(955437),
+    f = l(201505),
+    p = l(204925),
+    _ = l(652215),
+    C = l(315290),
+    E = l(375708);
+function b(e) {
+    let { transitionState: t, onClose: l } = e,
+        [b, m] = s.useState(null),
+        [g, h] = s.useState(null),
+        [G, w] = s.useState(!1),
+        y = s.useRef(null),
+        N = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
+        S = s.useRef(null);
+    s.useEffect(() => {
+        u.A.flowStep(C.do.ANY, C.Ot.AGE_GATE), A.default.track(_.HAw.OPEN_MODAL, { type: "Claim Age Gate" });
     }, []),
-        r.useEffect(() => {
-            w?.nsfwAllowed != null && n();
-        }, [w, n]);
-    let b = async (e) => {
-            if ((e.preventDefault(), null != T)) {
-                G(!0);
+        s.useEffect(() => {
+            N?.nsfwAllowed != null && l();
+        }, [N, l]);
+    let k = async (e) => {
+            if ((e.preventDefault(), null != b)) {
+                w(!0);
                 try {
-                    await A.n7(T, f.JJy.CLAIM_ACCOUNT_MODAL);
+                    await c.n7(b, _.JJy.CLAIM_ACCOUNT_MODAL);
                 } catch (e) {
                     null != e.body && null != e.body.date_of_birth
-                        ? (s.A.flowStep(E.do.ANY, E.Ot.AGE_GATE_UNDERAGE),
-                          A.Xv(p.w_.CLAIM_ACCOUNT),
-                          A.$2(p.w_.CLAIM_ACCOUNT),
-                          n())
+                        ? (u.A.flowStep(C.do.ANY, C.Ot.AGE_GATE_UNDERAGE),
+                          c.Xv(p.w_.CLAIM_ACCOUNT),
+                          c.$2(p.w_.CLAIM_ACCOUNT),
+                          l())
                         : e?.body?.username != null
-                          ? y(m.intl.string(m.t["TGg/2k"]))
-                          : y(e?.body.message);
+                          ? h(E.intl.string(E.t["TGg/2k"]))
+                          : h(e?.body.message);
                 }
-                G(!1);
+                w(!1);
             }
         },
-        U = r.useCallback(() => {
-            C.current?.focus();
-        }, [C]);
-    return (0, l.jsx)("form", {
-        onSubmit: b,
-        children: (0, l.jsx)(o.Modal, {
+        O = s.useCallback(() => {
+            S.current?.focus();
+        }, [S]);
+    return (0, n.jsx)("form", {
+        onSubmit: k,
+        children: (0, n.jsx)(r.Modal, {
             transitionState: t,
-            onClose: n,
-            title: m.intl.string(m.t.QpSKow),
-            subtitle: m.intl.format(m.t.EcJBEI, { helpURL: d.A.getArticleURL(f.MVz.AGE_GATE) }),
-            actions: [{ text: m.intl.string(m.t.i4jeWR), type: "submit", loading: h, disabled: null == T }],
+            onClose: l,
+            title: E.intl.string(E.t.QpSKow),
+            subtitle: E.intl.format(E.t.EcJBEI, { helpURL: d.A.getArticleURL(_.MVz.AGE_GATE) }),
+            actions: [{ text: E.intl.string(E.t.i4jeWR), type: "submit", loading: G, disabled: null == b }],
             trackingProps: {
                 impression: {
-                    impressionName: a.ImpressionNames.USER_AGE_GATE,
+                    impressionName: i.ImpressionNames.USER_AGE_GATE,
                     impressionProperties: { existing_user: !1 },
                 },
             },
-            children: (0, l.jsx)(_.A, {
+            children: (0, n.jsx)(f.A, {
                 required: !0,
                 autoFocus: !0,
-                label: m.intl.string(m.t.rhBeKe),
+                label: E.intl.string(E.t.rhBeKe),
                 name: "birthday",
-                onChange: (e) => g(e),
-                onPopulated: U,
-                error: N,
-                value: T,
-                ref: S,
+                onChange: (e) => m(e),
+                onPopulated: O,
+                error: g,
+                value: b,
+                ref: y,
             }),
         }),
     });

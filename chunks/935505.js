@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $L: () => b, cr: () => S, kL: () => N, fO: () => R, au: () => C, d1: () => y, io: () => v });
+n.d(t, { $L: () => b, cr: () => S, kL: () => y, fO: () => O, au: () => v, d1: () => N, io: () => C });
 var i = n(602137),
     r = n(970278),
     s = n(152007),
@@ -10,8 +10,8 @@ var i = n(602137),
     c = n(576705),
     d = n(522602),
     _ = n(935208),
-    f = n(969043),
-    h = n(679804),
+    h = n(969043),
+    f = n(679804),
     p = n(878317),
     E = n(835245);
 function m(e) {
@@ -33,7 +33,7 @@ var A = n(652215),
 function S(e) {
     return g.getForumChannelSessionId(e);
 }
-function N(e) {
+function y(e) {
     switch (e) {
         case i.T.CREATION_DATE:
             return T.az.CREATION_DATE;
@@ -43,10 +43,10 @@ function N(e) {
             throw Error(`Unexpected sort order ${e}`);
     }
 }
-function y(e) {
+function N(e) {
     return d.A.getUploads(e, u.C.FirstThreadMessage).length;
 }
-function C(e) {
+function v(e) {
     let t = l.A.getChannel(e);
     if (null == t) return [];
     let n = l.A.getChannel(t.parent_id),
@@ -56,14 +56,14 @@ function C(e) {
         s = new Set(i.map((e) => e.id));
     return Array.from(r).filter((e) => s.has(e));
 }
-function v(e, t) {
+function C(e, t) {
     return Object.keys(r.A.getThreadsForParent(e, t)).length;
 }
-function O(e) {
-    let { loaded: t, firstMessage: n } = f.A.getMessage(e);
+function R(e) {
+    let { loaded: t, firstMessage: n } = h.A.getMessage(e);
     return t ? n : null;
 }
-function R(e) {
+function O(e) {
     let { channelId: t, sessionId: n } = e,
         i = l.A.getChannel(t);
     return null != i && i.isForumLikeChannel()
@@ -74,12 +74,12 @@ function R(e) {
               forum_channel_available_tag_ids: i.availableTags?.map((e) => e.id) ?? [],
               forum_channel_tag_required: i.hasFlag(I.lx.REQUIRE_TAG),
               forum_channel_can_create_post: c.A.can(A.xBc.SEND_MESSAGES, i),
-              forum_channel_filter_tag_ids: h.A.getFilterTagIdsAnalytics(),
-              forum_channel_sort_order: h.A.getSortOrderAnalytics(i.id),
+              forum_channel_filter_tag_ids: f.A.getFilterTagIdsAnalytics(),
+              forum_channel_sort_order: f.A.getSortOrderAnalytics(i.id),
               forum_channel_session_id: n ?? S(i.id),
-              forum_channel_layout: h.A.getLayoutAnalytics(i.id),
+              forum_channel_layout: f.A.getLayoutAnalytics(i.id),
               forum_channel_default_sort_order: i.defaultSortOrder,
-              forum_channel_tag_setting: h.A.getTagSettingAnalytics(i.id),
+              forum_channel_tag_setting: f.A.getTagSettingAnalytics(i.id),
               forum_channel_default_layout: i.defaultForumLayout,
               forum_channel_is_moderator_report_channel: i.isModeratorReportChannel(),
           }
@@ -95,7 +95,7 @@ function b(e) {
     let d = l.A.getChannel(c.parent_id);
     return null != d && d.isForumLikeChannel()
         ? {
-              ...R({ channelId: d.id, sessionId: u }),
+              ...O({ channelId: d.id, sessionId: u }),
               thread_approximate_member_count: a.A.getMemberCount(r),
               thread_approximate_message_count: o.A.getCount(r),
               thread_archived: c.threadMetadata?.archived === !0,
@@ -104,8 +104,8 @@ function b(e) {
               thread_approximate_creation_date: _.default.extractTimestamp(r),
               forum_post_id: c.id,
               forum_post_first_message_id: _.default.castChannelIdAsMessageId(c.id),
-              forum_post_num_reactions: null == (t = O(c.id)) ? 0 : t.reactions.reduce((e, t) => e + t.count, 0),
-              forum_post_num_unique_reactions: null == (n = O(c.id)) ? 0 : n.reactions.length,
+              forum_post_num_reactions: null == (t = R(c.id)) ? 0 : t.reactions.reduce((e, t) => e + t.count, 0),
+              forum_post_num_unique_reactions: null == (n = R(c.id)) ? 0 : n.reactions.length,
               forum_post_applied_tag_ids: (function (e) {
                   let t = l.A.getChannel(e);
                   if (null == t) return [];
@@ -120,7 +120,7 @@ function b(e) {
               forum_post_is_unread: p.A.getReadStateSnapshotAnalytics(c.id)?.hasUnreads,
               forum_post_is_following: s.A.hasJoined(c.id),
               forum_post_attachment_mimetypes:
-                  null == (i = O(c.id)) ? [] : i.attachments.map((e) => e.content_type ?? "unknown"),
+                  null == (i = R(c.id)) ? [] : i.attachments.map((e) => e.content_type ?? "unknown"),
           }
         : null;
 }

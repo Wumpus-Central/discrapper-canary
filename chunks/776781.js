@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $b: () => f, Ni: () => E, pC: () => m, pF: () => h, qd: () => p });
+n.d(t, { $b: () => h, Ni: () => E, pC: () => m, pF: () => f, qd: () => p });
 var i = n(136722),
     r = n(17928),
     s = n(857071);
@@ -11,11 +11,11 @@ var a = n(734057),
     c = n(233993),
     d = n(446600),
     _ = n(652215);
-function f(e, t, n) {
+function h(e, t, n) {
     let r = n?.permissionOverwrites[e];
     return { id: e, type: t, deny: r?.deny ?? u.x3, allow: i.TF(r?.allow ?? u.x3, c.QY) };
 }
-function h(e) {
+function f(e) {
     let { allow: t, deny: n } = e;
     return i.aI(t, u.x3) && i.aI(n, u.x3);
 }

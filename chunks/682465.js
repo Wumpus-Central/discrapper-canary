@@ -1,16 +1,16 @@
 "use strict";
-r.d(e, { A: () => o });
-var n = r(491301);
-function o(t) {
-    var e = (function (t, e) {
-        if ("object" != (0, n.A)(t) || !t) return t;
-        var r = t[Symbol.toPrimitive];
-        if (void 0 !== r) {
-            var o = r.call(t, e || "default");
-            if ("object" != (0, n.A)(o)) return o;
+n.d(t, { A: () => r });
+var i = n(491301);
+function r(e) {
+    var t = (function (e, t) {
+        if ("object" != (0, i.A)(e) || !e) return e;
+        var n = e[Symbol.toPrimitive];
+        if (void 0 !== n) {
+            var r = n.call(e, t || "default");
+            if ("object" != (0, i.A)(r)) return r;
             throw TypeError("@@toPrimitive must return a primitive value.");
         }
-        return ("string" === e ? String : Number)(t);
-    })(t, "string");
-    return "symbol" == (0, n.A)(e) ? e : e + "";
+        return ("string" === t ? String : Number)(e);
+    })(e, "string");
+    return "symbol" == (0, i.A)(t) ? t : t + "";
 }

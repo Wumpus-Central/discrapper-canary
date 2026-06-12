@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { m: () => i });
-var r = n(818348);
-function i(e) {
+n.d(t, { m: () => r });
+var i = n(818348);
+function r(e) {
     if (null == e) return;
-    let t = r.rE.get(e);
+    let t = i.rE.get(e);
     return null != t ? `theme-${t} theme-${e} images-${t}` : `theme-${e} images-${e}`;
 }

@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     Ot: "verification_d43202",
     wx: "header_d43202",
     nJ: "copyIcon_d43202",

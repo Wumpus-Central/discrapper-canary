@@ -1,3 +1,3 @@
 "use strict";
-n.d(t, { $: () => r });
-let r = Symbol.for("protobuf-ts/message-type");
+n.d(t, { $: () => i });
+let i = Symbol.for("protobuf-ts/message-type");

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     jC: "popoutContainer__02e2b",
     Sl: "image__02e2b",
     Gm: "infoContainerParent__02e2b",

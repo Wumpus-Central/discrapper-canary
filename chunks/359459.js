@@ -1,23 +1,23 @@
 "use strict";
 n.d(t, { _: () => o });
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    a = n.n(i),
-    s = n(507063);
+var r = n(503698),
+    s = n.n(r),
+    a = n(949756);
 let o = (e) => {
-    let { open: t = !1, className: n, ...i } = e;
-    return (0, r.jsxs)("button", {
+    let { open: t = !1, className: n, ...r } = e;
+    return (0, i.jsxs)("button", {
         type: "button",
-        className: a()(s.M, { [s.s]: t }, n),
-        ...i,
+        className: s()(a.M, { [a.s]: t }, n),
+        ...r,
         children: [
-            (0, r.jsx)("span", {}),
-            (0, r.jsx)("span", {}),
-            (0, r.jsx)("span", {}),
-            (0, r.jsx)("span", {}),
-            (0, r.jsx)("span", {}),
-            (0, r.jsx)("span", {}),
+            (0, i.jsx)("span", {}),
+            (0, i.jsx)("span", {}),
+            (0, i.jsx)("span", {}),
+            (0, i.jsx)("span", {}),
+            (0, i.jsx)("span", {}),
+            (0, i.jsx)("span", {}),
         ],
     });
 };

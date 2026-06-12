@@ -1,4 +1,4 @@
 "use strict";
-n.d(t, { Z: () => i });
-var r,
-    i = (((r = {}).GAMEPLAY = "GAMEPLAY"), (r.VIDEO = "VIDEO"), r);
+n.d(t, { Z: () => r });
+var i,
+    r = (((i = {}).GAMEPLAY = "GAMEPLAY"), (i.VIDEO = "VIDEO"), i);

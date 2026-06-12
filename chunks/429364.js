@@ -14,35 +14,35 @@ function h(e) {
     var t, h, p;
     let v,
         x,
-        g,
         b,
+        g,
         j,
         y,
-        C,
-        { children: E, clip: k, modalContainerRef: A, editOnly: N = !1 } = e,
+        E,
+        { children: C, clip: k, modalContainerRef: A, editOnly: N = !1 } = e,
         w = k.type === o.nQ.SCREENSHOT,
         {
             initialDuration: R,
             initialCropStart: T,
             initialCropEnd: L,
-            initialCurrentTime: M,
+            initialCurrentTime: I,
         } = ((v = k.length / 1e3),
         (x = k.editMetadata?.start ?? 0),
-        (g = k.editMetadata?.end ?? 0),
-        (b = 0 !== x || (0 !== g && g !== v)),
+        (b = k.editMetadata?.end ?? 0),
+        (g = 0 !== x || (0 !== b && b !== v)),
         {
             initialDuration: v,
             initialCropStart: x,
-            initialCropEnd: g,
-            isCropped: b,
-            initialCurrentTime: b ? x : v / 2,
+            initialCropEnd: b,
+            isCropped: g,
+            initialCurrentTime: g ? x : v / 2,
         }),
-        I = n.useMemo(
+        M = n.useMemo(
             () =>
                 null == s.A.clips.getClipProtocolURLFromPath ? null : s.A.clips.getClipProtocolURLFromPath(k.filepath),
             [k.filepath],
         ),
-        [O, D] = n.useState({
+        [D, O] = n.useState({
             clipName: k.name,
             isTemporary: k.isTemporary ?? !1,
             cropStart: T,
@@ -52,16 +52,16 @@ function h(e) {
             soundboardAudioEnabled: k.editMetadata?.soundboardAudio ?? !0,
         }),
         {
-            clipName: S,
-            isTemporary: _,
+            clipName: _,
+            isTemporary: S,
             cropStart: P,
             cropEnd: U,
             voiceAudioEnabled: B,
             applicationAudioEnabled: $,
             soundboardAudioEnabled: G,
-        } = O,
+        } = D,
         z = n.useRef(null),
-        F = n.useRef(M),
+        F = n.useRef(I),
         [H, V] = n.useState(R),
         [K, Z] = n.useState(!1),
         [W, X] = n.useState(!1),
@@ -77,10 +77,10 @@ function h(e) {
         em = n.useCallback(
             () => ({
                 ...k,
-                name: S,
+                name: _,
                 editMetadata: { start: P, end: U, applicationAudio: $, voiceAudio: B, soundboardAudio: G },
             }),
-            [k, S, P, U, $, B, G],
+            [k, _, P, U, $, B, G],
         ),
         ef = n.useCallback((e) => {
             (z.current = e), Y(e.videoElement);
@@ -184,21 +184,21 @@ function h(e) {
             [el],
         ),
         (h = k.id),
-        (p = { name: S, editMetadata: { start: P, end: U, voiceAudio: B, applicationAudio: $, soundboardAudio: G } }),
+        (p = { name: _, editMetadata: { start: P, end: U, voiceAudio: B, applicationAudio: $, soundboardAudio: G } }),
         ((j = n.useRef(p)).current = p),
         n.useEffect(() => {
             async function e() {
                 let e = {},
                     t = j.current;
-                w || null == I || (e = { thumbnail: await (0, c.m)(I, t.editMetadata.start) }),
+                w || null == M || (e = { thumbnail: await (0, c.m)(M, t.editMetadata.start) }),
                     (0, u.Yy)(h, { ...t, ...e }, !0);
             }
             return () => {
                 N || e();
             };
-        }, [h, I, w, j, N]),
+        }, [h, M, w, j, N]),
         n.useEffect(() => {
-            H > 0 && U <= 0 && R <= 0 && D((e) => ({ ...e, cropEnd: H }));
+            H > 0 && U <= 0 && R <= 0 && O((e) => ({ ...e, cropEnd: H }));
         }, [H, U, R]);
     let ev = n.useMemo(() => U - P, [P, U]),
         ex = n.useCallback(
@@ -211,41 +211,41 @@ function h(e) {
             [q],
         ),
         {
-            setCropStart: eg,
-            setCropEnd: eb,
+            setCropStart: eb,
+            setCropEnd: eg,
             setCrop: ej,
         } = ((y = n.useCallback(
             (e) => {
                 let t = (0, i.clamp)(e, 0, U - 1);
-                D((e) => ({ ...e, cropStart: t })), z?.current?.seek(t);
+                O((e) => ({ ...e, cropStart: t })), z?.current?.seek(t);
             },
-            [U, D, z],
+            [U, O, z],
         )),
         {
             setCropStart: y,
             setCropEnd: n.useCallback(
                 (e) => {
                     let t = (0, i.clamp)(e, P + 1, H);
-                    D((e) => ({ ...e, cropEnd: t })), z?.current?.seek(t);
+                    O((e) => ({ ...e, cropEnd: t })), z?.current?.seek(t);
                 },
-                [P, H, D, z],
+                [P, H, O, z],
             ),
             setCrop: n.useCallback(
                 (e, t) => {
-                    D((l) => ({ ...l, cropStart: e, cropEnd: t }));
+                    O((l) => ({ ...l, cropStart: e, cropEnd: t }));
                 },
-                [D],
+                [O],
             ),
         }),
         {
             play: ey,
-            pause: eC,
-            seek: eE,
-        } = ((C = n.useCallback(() => {
+            pause: eE,
+            seek: eC,
+        } = ((E = n.useCallback(() => {
             z?.current?.play();
         }, [z])),
         {
-            play: C,
+            play: E,
             pause: n.useCallback(() => {
                 z?.current?.pause();
             }, [z]),
@@ -275,7 +275,7 @@ function h(e) {
                     V(Q.duration);
                 },
                 a = () => {
-                    X(!0), V(Q.duration), z?.current?.seek(M);
+                    X(!0), V(Q.duration), z?.current?.seek(I);
                 },
                 n = () => {
                     J.current = !0;
@@ -287,7 +287,7 @@ function h(e) {
                 Q.addEventListener("loadedmetadata", a),
                 Q.addEventListener("seeked", n),
                 Q.duration > 0 && V(Q.duration),
-                Q.readyState >= 1 && (X(!0), z?.current?.seek(M)),
+                Q.readyState >= 1 && (X(!0), z?.current?.seek(I)),
                 Z(!Q.paused),
                 () => {
                     Q.removeEventListener("play", e),
@@ -297,21 +297,21 @@ function h(e) {
                         Q.removeEventListener("seeked", n);
                 }
             );
-        }, [Q, M, z, q, Z, X, V, J]);
+        }, [Q, I, z, q, Z, X, V, J]);
     let ek = n.useCallback((e) => {
-            D((t) => ({ ...t, clipName: e }));
+            O((t) => ({ ...t, clipName: e }));
         }, []),
         eA = n.useCallback((e) => {
-            D((t) => ({ ...t, isTemporary: e }));
+            O((t) => ({ ...t, isTemporary: e }));
         }, []),
         eN = n.useCallback((e) => {
-            D((t) => ({ ...t, applicationAudioEnabled: e }));
+            O((t) => ({ ...t, applicationAudioEnabled: e }));
         }, []),
         ew = n.useCallback((e) => {
-            D((t) => ({ ...t, voiceAudioEnabled: e }));
+            O((t) => ({ ...t, voiceAudioEnabled: e }));
         }, []),
         eR = n.useCallback((e) => {
-            D((t) => ({ ...t, soundboardAudioEnabled: e }));
+            O((t) => ({ ...t, soundboardAudioEnabled: e }));
         }, []),
         eT = n.useMemo(
             () =>
@@ -345,12 +345,12 @@ function h(e) {
                 cropStart: P,
                 cropEnd: U,
                 cropDuration: ev,
-                setCropStart: eg,
-                setCropEnd: eb,
+                setCropStart: eb,
+                setCropEnd: eg,
                 setCrop: ej,
                 play: ey,
-                pause: eC,
-                seek: eE,
+                pause: eE,
+                seek: eC,
                 subscribe: ex,
                 setVideoPlayerRef: ef,
                 videoPlayerRef: z,
@@ -364,9 +364,9 @@ function h(e) {
                 soundboardAudioEnabled: G,
                 setSoundboardAudioEnabled: eR,
                 getEditedClip: em,
-                clipName: S,
+                clipName: _,
                 setClipName: ek,
-                isTemporary: _,
+                isTemporary: S,
                 audioURL: el,
                 setIsTemporary: eA,
                 clip: k,
@@ -383,12 +383,12 @@ function h(e) {
                 P,
                 U,
                 ev,
-                eg,
                 eb,
+                eg,
                 ej,
                 ey,
-                eC,
                 eE,
+                eC,
                 el,
                 ex,
                 ef,
@@ -402,16 +402,16 @@ function h(e) {
                 G,
                 eR,
                 em,
-                S,
-                ek,
                 _,
+                ek,
+                S,
                 eA,
                 k,
                 eo,
                 ec,
             ],
         );
-    return (0, a.jsx)(f.Provider, { value: eL, children: E });
+    return (0, a.jsx)(f.Provider, { value: eL, children: C });
 }
 function p() {
     let e = n.useContext(f);

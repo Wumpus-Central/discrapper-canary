@@ -1,24 +1,24 @@
-n.d(t, { A: () => s });
-var i = n(64700),
-    l = n(451988);
-function s(e, t) {
-    let [n, s] = i.useState(!1),
-        a = i.useRef(new l.J_(t, () => s(!1))),
-        r = i.useRef(new l.J_(e, () => s(!0))),
-        o = i.useCallback(() => {
-            a.current.cancel(), r.current.cancel();
+c.d(u, { A: () => s });
+var a = c(64700),
+    n = c(451988);
+function s(e, u) {
+    let [c, s] = a.useState(!1),
+        t = a.useRef(new n.J_(u, () => s(!1))),
+        r = a.useRef(new n.J_(e, () => s(!0))),
+        l = a.useCallback(() => {
+            t.current.cancel(), r.current.cancel();
         }, []);
-    i.useEffect(() => o, [o]);
-    let d = i.useCallback(() => {
-        o(), a.current.delay();
-    }, [o]);
+    a.useEffect(() => l, [l]);
+    let d = a.useCallback(() => {
+        l(), t.current.delay();
+    }, [l]);
     return {
-        isHovered: n,
+        isHovered: c,
         setIsHovered: s,
-        onMouseEnter: i.useCallback(() => {
-            o(), r.current.delay();
-        }, [o]),
+        onMouseEnter: a.useCallback(() => {
+            l(), r.current.delay();
+        }, [l]),
         onMouseLeave: d,
-        cancelTimers: o,
+        cancelTimers: l,
     };
 }

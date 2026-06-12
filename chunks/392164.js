@@ -1,3 +1,3 @@
 "use strict";
-n.d(t, { f: () => r });
-let r = "DISCORD_OutOfProcessOverlay";
+n.d(t, { f: () => i });
+let i = "DISCORD_OutOfProcessOverlay";

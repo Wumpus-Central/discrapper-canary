@@ -1,80 +1,80 @@
-i.d(e, { ForwardFailedAlertModal: () => W });
-var a = i(627968),
-    s = i(64700),
-    A = i(732159),
-    l = i(17928),
-    n = i(834730),
-    _ = i(778712),
-    r = i(966327),
-    I = i(47167),
-    h = i(598104),
-    u = i(255266),
-    c = i(734057),
-    d = i(71393),
-    E = i(290863),
-    L = i(994500),
-    o = i(287809),
-    N = i(427262),
-    C = i(294454),
-    G = i(985018),
-    P = i(151399);
-function f(t) {
-    let { icon: e, label: i } = t;
-    return (0, a.jsxs)("div", {
-        className: P.us,
-        children: [e, (0, a.jsx)(n.E, { className: P.Pf, variant: "text-md/medium", lineClamp: 1, children: i })],
+t.d(n, { ForwardFailedAlertModal: () => M });
+var i = t(627968),
+    l = t(64700),
+    a = t(732159),
+    s = t(17928),
+    r = t(834730),
+    u = t(778712),
+    c = t(966327),
+    d = t(47167),
+    o = t(598104),
+    h = t(255266),
+    m = t(734057),
+    x = t(71393),
+    A = t(290863),
+    f = t(994500),
+    j = t(287809),
+    p = t(427262),
+    b = t(294454),
+    g = t(375708),
+    _ = t(151399);
+function y(e) {
+    let { icon: n, label: t } = e;
+    return (0, i.jsxs)("div", {
+        className: _.us,
+        children: [n, (0, i.jsx)(r.E, { className: _.Pf, variant: "text-md/medium", lineClamp: 1, children: t })],
     });
 }
-function g(t) {
-    let { channel: e } = t,
-        i = (0, I.Ay)(e);
-    return (0, a.jsx)(f, { icon: (0, a.jsx)(h.A, { "aria-hidden": !0, size: _._3.SIZE_32, channel: e }), label: i });
+function C(e) {
+    let { channel: n } = e,
+        t = (0, d.Ay)(n);
+    return (0, i.jsx)(y, { icon: (0, i.jsx)(o.A, { "aria-hidden": !0, size: u._3.SIZE_32, channel: n }), label: t });
 }
-function D(t) {
-    let { user: e } = t,
-        i = N.Ay.useName(e),
-        s = (0, l.bG)([L.A], () => L.A.getNickname(e.id)),
-        A = (0, l.bG)([E.A], () => E.A.getStatus(e.id));
-    return (0, a.jsx)(f, {
-        icon: (0, a.jsx)(r.A, { "aria-hidden": !0, size: _._3.SIZE_32, user: e, status: A }),
-        label: s ?? i,
+function k(e) {
+    let { user: n } = e,
+        t = p.Ay.useName(n),
+        l = (0, s.bG)([f.A], () => f.A.getNickname(n.id)),
+        a = (0, s.bG)([A.A], () => A.A.getStatus(n.id));
+    return (0, i.jsx)(y, {
+        icon: (0, i.jsx)(c.A, { "aria-hidden": !0, size: u._3.SIZE_32, user: n, status: a }),
+        label: l ?? t,
     });
 }
-function O(t) {
-    let { channel: e } = t,
-        i = (0, l.bG)([d.A], () => d.A.getGuild(e?.guild_id)),
-        s = (0, I.Ay)(e);
-    return (0, a.jsx)(f, { icon: (0, a.jsx)(u.A, { size: u.q.SMALL_32, guild: i, channel: e }), label: s });
+function v(e) {
+    let { channel: n } = e,
+        t = (0, s.bG)([x.A], () => x.A.getGuild(n?.guild_id)),
+        l = (0, d.Ay)(n);
+    return (0, i.jsx)(y, { icon: (0, i.jsx)(h.A, { size: h.q.SMALL_32, guild: t, channel: n }), label: l });
 }
-function S(t) {
-    let { destination: e } = t,
-        { channel: i, user: s } = (0, l.cf)([c.A, o.default], () => ({
-            channel: "channel" === e.type ? c.A.getChannel(e.id) : null,
-            user: "user" === e.type ? o.default.getUser(e.id) : null,
+function G(e) {
+    let { destination: n } = e,
+        { channel: t, user: l } = (0, s.cf)([m.A, j.default], () => ({
+            channel: "channel" === n.type ? m.A.getChannel(n.id) : null,
+            user: "user" === n.type ? j.default.getUser(n.id) : null,
         }));
-    return i?.isGroupDM()
-        ? (0, a.jsx)(g, { channel: i })
-        : null != s
-          ? (0, a.jsx)(D, { user: s })
-          : null != i
-            ? (0, a.jsx)(O, { channel: i })
+    return t?.isGroupDM()
+        ? (0, i.jsx)(C, { channel: t })
+        : null != l
+          ? (0, i.jsx)(k, { user: l })
+          : null != t
+            ? (0, i.jsx)(v, { channel: t })
             : null;
 }
-function W(t) {
-    let { message: e, failedDestinations: i, forwardOptions: l, ...n } = t,
-        _ = s.useCallback(() => {
-            (0, C.fO)({ message: e, source: "retry-modal", initialSelectedDestinations: i, forwardOptions: l });
-        }, [i, e, l]);
-    return (0, a.jsx)(A.ConfirmModal, {
-        title: G.intl.string(G.t["/OPIaM"]),
-        subtitle: G.intl.format(G.t.cn9vFb, { count: i.length }),
-        confirmText: G.intl.string(G.t["5911Lb"]),
-        onConfirm: _,
-        ...n,
+function M(e) {
+    let { message: n, failedDestinations: t, forwardOptions: s, ...r } = e,
+        u = l.useCallback(() => {
+            (0, b.fO)({ message: n, source: "retry-modal", initialSelectedDestinations: t, forwardOptions: s });
+        }, [t, n, s]);
+    return (0, i.jsx)(a.ConfirmModal, {
+        title: g.intl.string(g.t["/OPIaM"]),
+        subtitle: g.intl.format(g.t.cn9vFb, { count: t.length }),
+        confirmText: g.intl.string(g.t["5911Lb"]),
+        onConfirm: u,
+        ...r,
         variant: "primary",
-        children: (0, a.jsx)("div", {
-            className: P.Zc,
-            children: i.map((t, e) => (0, a.jsx)(S, { destination: t }, e)),
+        children: (0, i.jsx)("div", {
+            className: _.Zc,
+            children: t.map((e, n) => (0, i.jsx)(G, { destination: e }, n)),
         }),
     });
 }

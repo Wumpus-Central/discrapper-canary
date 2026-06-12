@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => C });
+n.d(t, { A: () => v });
 var i = n(385244),
     r = n(718564),
     s = n(807081),
@@ -10,8 +10,8 @@ var i = n(385244),
     c = n(320095),
     d = n(763754),
     _ = n(808829),
-    f = n(552691),
-    h = n(383233),
+    h = n(552691),
+    f = n(383233),
     p = n(495544),
     E = n(734057),
     m = n(71393),
@@ -24,7 +24,7 @@ let S = {
     "365975655608745985": "https://www.pokecord.com/getting-started",
     512412940897484800: "http://jameslantz.net/smilebot",
 };
-function N(e) {
+function y(e) {
     let t = [
             l.t.Jm6e0x,
             l.t.MGRnRT,
@@ -43,10 +43,10 @@ function N(e) {
         n = T.default.extractTimestamp(e) % t.length;
     return t[n];
 }
-function y(e) {
+function N(e) {
     return (0, s.$)(l.intl.formatToParts(l.t.ihxM9x, { username: e, usernameOnClick: o.tEg }));
 }
-let C = {
+let v = {
     stringify: function (e, t) {
         let n = (function (e) {
                 let [t] = e.mentions ?? [];
@@ -73,8 +73,8 @@ let C = {
                 );
             case o.lAJ.RECIPIENT_REMOVE:
                 if (null == n) return;
-                let C = e.author;
-                if (null == C || C.id === n.id)
+                let v = e.author;
+                if (null == v || v.id === n.id)
                     return (0, s.$)(l.intl.formatToParts(l.t["Qn5+Lf"], { username: S, usernameOnClick: o.tEg }));
                 return (0, s.$)(
                     l.intl.formatToParts(l.t.QtZ0RD, {
@@ -85,8 +85,8 @@ let C = {
                     }),
                 );
             case o.lAJ.CALL:
-                let { call: v } = e;
-                if (null != v && -1 === v.participants.indexOf(p.default.getId()))
+                let { call: C } = e;
+                if (null != C && -1 === C.participants.indexOf(p.default.getId()))
                     return (0, s.$)(l.intl.formatToParts(l.t.DbgSA0, { username: S, usernameOnClick: o.tEg }));
                 return;
             case o.lAJ.CHANNEL_NAME_CHANGE:
@@ -102,26 +102,26 @@ let C = {
             case o.lAJ.CHANNEL_PINNED_MESSAGE:
                 return (0, s.$)(l.intl.formatToParts(l.t["/M60j0"], { username: S, usernameOnClick: o.tEg }));
             case o.lAJ.USER_JOIN:
-                return (0, s.$)(l.intl.formatToParts(N(e.id), { username: S, usernameOnClick: o.tEg }));
+                return (0, s.$)(l.intl.formatToParts(y(e.id), { username: S, usernameOnClick: o.tEg }));
             case o.lAJ.EMOJI_ADDED:
-                let O, R;
+                let R, O;
                 return (
-                    (R = null == (O = E.A.getChannel(e.channel_id)) ? null : m.A.getGuild(O.getGuildId())),
+                    (O = null == (R = E.A.getChannel(e.channel_id)) ? null : m.A.getGuild(R.getGuildId())),
                     (0, s.$)(
                         l.intl.formatToParts(l.t.PJsjbP, {
                             emoji: e.content,
-                            guildName: R?.name ?? l.intl.string(l.t.dtwqPR),
+                            guildName: O?.name ?? l.intl.string(l.t.dtwqPR),
                         }),
                     )
                 );
             case o.lAJ.GUILD_BOOST:
-                return y(S);
+                return N(S);
             case o.lAJ.GUILD_BOOST_TIER_1:
             case o.lAJ.GUILD_BOOST_TIER_2:
             case o.lAJ.GUILD_BOOST_TIER_3:
                 let b;
                 return null == (b = E.A.getChannel(T)) || null == m.A.getGuild(b.getGuildId())
-                    ? y(S)
+                    ? N(S)
                     : (0, s.$)(l.intl.formatToParts(l.t.ihxM9x, { username: S, usernameOnClick: o.tEg }));
             case o.lAJ.GUILD_INVITE_REMINDER:
                 return l.intl.string(l.t.gxyKvr);
@@ -131,12 +131,12 @@ let C = {
                     threadName: (0, a.m1)(t, A.default, g.A),
                 });
             case o.lAJ.ROLE_SUBSCRIPTION_PURCHASE:
-                if (e instanceof h.Ay) return null;
+                if (e instanceof f.Ay) return null;
                 return (0, s.$)(
                     (0, u.eb)({ username: S, guildId: t.guild_id, roleSubscriptionData: e.role_subscription_data }),
                 );
             case o.lAJ.PURCHASE_NOTIFICATION:
-                if (e instanceof h.Ay || e.purchase_notification?.guild_product_purchase?.product_name == null)
+                if (e instanceof f.Ay || e.purchase_notification?.guild_product_purchase?.product_name == null)
                     return null;
                 return (0, s.$)(
                     (function (e) {
@@ -145,15 +145,15 @@ let C = {
                     })({ username: S, productName: e.purchase_notification.guild_product_purchase.product_name }),
                 );
             case o.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
-                if (e instanceof h.Ay) return null;
+                if (e instanceof f.Ay) return null;
                 let D = (0, d.p_)((0, c.rh)(e));
                 return (0, s.$)((0, _.P)({ application: e.application, username: D.nick }));
             case o.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED:
-                if (e instanceof h.Ay) return null;
-                return (0, s.$)((0, f.g6)({ application: e.application, username: (0, d.p_)((0, c.rh)(e)).nick }));
+                if (e instanceof f.Ay) return null;
+                return (0, s.$)((0, h.g6)({ application: e.application, username: (0, d.p_)((0, c.rh)(e)).nick }));
             case o.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED:
-                if (e instanceof h.Ay) return null;
-                return (0, s.$)((0, f.uk)({ application: e.application, username: (0, d.p_)((0, c.rh)(e)).nick }));
+                if (e instanceof f.Ay) return null;
+                return (0, s.$)((0, h.uk)({ application: e.application, username: (0, d.p_)((0, c.rh)(e)).nick }));
             case o.lAJ.AUTO_MODERATION_ACTION:
                 if (
                     e.embeds?.some((e) => {
@@ -231,7 +231,7 @@ let C = {
             n = T.default.extractTimestamp(e) % t.length;
         return t[n];
     },
-    getSystemMessageUserJoinMobile: N,
+    getSystemMessageUserJoinMobile: y,
     getSystemMessageBotJoin: function (e) {
         return null == S[e] ? null : l.intl.format(l.t.xw1Ij0, { learnOnClick: { onClick: () => window.open(S[e]) } });
     },

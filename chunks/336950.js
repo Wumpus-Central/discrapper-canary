@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = /([A-Za-z_][A-Za-z_0-9]*)?/,
-        a = {
+        n = {
             scope: "params",
             begin: /\(/,
             end: /\)(?=\:?)/,
@@ -14,7 +14,7 @@ e.exports = function (e) {
             ],
         };
     return (
-        a.contains.unshift({ match: [t, /(?=\()/], scope: { 1: "keyword" }, contains: [a] }),
+        n.contains.unshift({ match: [t, /(?=\()/], scope: { 1: "keyword" }, contains: [n] }),
         {
             name: "Leaf",
             contains: [
@@ -22,7 +22,7 @@ e.exports = function (e) {
                     match: [/#+/, t, /(?=\()/],
                     scope: { 1: "punctuation", 2: "keyword" },
                     starts: { contains: [{ match: /\:/, scope: "punctuation" }] },
-                    contains: [a],
+                    contains: [n],
                 },
                 { match: [/#+/, t, /:?/], scope: { 1: "punctuation", 2: "keyword", 3: "punctuation" } },
             ],

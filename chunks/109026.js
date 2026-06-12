@@ -1,59 +1,59 @@
-i.r(t), i.d(t, { default: () => y });
-var n = i(627968),
-    r = i(64700),
-    l = i(503698),
-    a = i.n(l),
-    s = i(17928),
-    o = i(289873),
-    d = i(305866),
-    c = i(793574),
-    u = i(688810),
-    _ = i(250527),
-    m = i(837011),
-    h = i(90084),
-    E = i(534514),
-    f = i(939249),
-    N = i(695366),
-    I = i(834730),
-    v = i(573435),
-    x = i(145497),
-    A = i(649640),
-    g = i(985018),
-    T = i(890653);
-function R(e) {
-    let { name: t, onRetry: i } = e,
-        r = (0, A.b2)(),
-        l = (0, A.n6)(r.hex()),
-        a = t ?? g.intl.string(g.t.DmIUGK);
-    return (0, n.jsxs)("div", {
-        className: T.kL,
+l.r(e), l.d(e, { default: () => w });
+var i = l(627968),
+    n = l(64700),
+    a = l(503698),
+    r = l.n(a),
+    c = l(17928),
+    t = l(289873),
+    d = l(305866),
+    x = l(793574),
+    m = l(688810),
+    h = l(250527),
+    u = l(837011),
+    o = l(90084),
+    j = l(534514),
+    v = l(939249),
+    N = l(695366),
+    g = l(834730),
+    f = l(573435),
+    k = l(145497),
+    C = l(649640),
+    A = l(375708),
+    E = l(890653);
+function b(s) {
+    let { name: e, onRetry: l } = s,
+        n = (0, C.b2)(),
+        a = (0, C.n6)(n.hex()),
+        r = e ?? A.intl.string(A.t.DmIUGK);
+    return (0, i.jsxs)("div", {
+        className: E.kL,
         children: [
-            (0, n.jsx)("div", { className: T.vK, style: { background: l } }),
-            (0, n.jsx)("div", {
-                className: T.H,
-                children: (0, n.jsx)(v.Ay, {
-                    mask: v.hW.CLAN_ICON,
+            (0, i.jsx)("div", { className: E.vK, style: { background: a } }),
+            (0, i.jsx)("div", {
+                className: E.H,
+                children: (0, i.jsx)(f.Ay, {
+                    mask: f.hW.CLAN_ICON,
                     width: 70,
                     height: 70,
-                    children: (0, n.jsx)("div", {
-                        className: T.R3,
-                        children: (0, n.jsx)(x.B$, { guildName: a, iconSize: 64 }),
+                    children: (0, i.jsx)("div", {
+                        className: E.R3,
+                        children: (0, i.jsx)(k.B$, { guildName: r, iconSize: 64 }),
                     }),
                 }),
             }),
-            (0, n.jsxs)("div", {
-                className: T.wx,
+            (0, i.jsxs)("div", {
+                className: E.wx,
                 children: [
-                    (0, n.jsx)(E.D, { variant: "heading-lg/medium", color: "text-strong", children: a }),
-                    (0, n.jsxs)(f.D, {
-                        className: T.z3,
-                        onClick: i,
+                    (0, i.jsx)(j.D, { variant: "heading-lg/medium", color: "text-strong", children: r }),
+                    (0, i.jsxs)(v.D, {
+                        className: E.z3,
+                        onClick: l,
                         children: [
-                            (0, n.jsx)(N.E, { size: "sm", color: "currentColor" }),
-                            (0, n.jsx)(I.E, {
+                            (0, i.jsx)(N.E, { size: "sm", color: "currentColor" }),
+                            (0, i.jsx)(g.E, {
                                 variant: "text-sm/normal",
                                 color: "text-feedback-warning",
-                                children: g.intl.string(g.t.tmGHjc),
+                                children: A.intl.string(A.t.tmGHjc),
                             }),
                         ],
                     }),
@@ -62,37 +62,37 @@ function R(e) {
         ],
     });
 }
-var C = i(42780),
-    p = i(576055),
-    j = i(781516);
-function y(e) {
-    let { guildId: t, name: i, setPopoutRef: l, onClose: E } = e,
-        { analyticsLocations: f } = (0, u.Ay)(c.A.GUILD_PROFILE),
-        { guildProfile: N, fetchGuildProfile: I, fetchStatus: v } = (0, h.u)(t),
-        x = (0, s.bG)([m.A], () => m.A.getErrorCode(t)),
-        A = r.useRef(null),
-        g = r.useCallback(() => {
-            I(!0);
-        }, [I]);
-    r.useEffect(() => {
-        I();
-    }, [I]),
-        r.useEffect(() => {
-            (0, _.sf)(t, f);
-        }, [t, f]),
-        r.useEffect(() => {
-            l?.(A?.current);
-        }, [A, l]);
-    let T = r.useMemo(
+var y = l(42780),
+    I = l(576055),
+    p = l(781516);
+function w(s) {
+    let { guildId: e, name: l, setPopoutRef: a, onClose: j } = s,
+        { analyticsLocations: v } = (0, m.Ay)(x.A.GUILD_PROFILE),
+        { guildProfile: N, fetchGuildProfile: g, fetchStatus: f } = (0, o.u)(e),
+        k = (0, c.bG)([u.A], () => u.A.getErrorCode(e)),
+        C = n.useRef(null),
+        A = n.useCallback(() => {
+            g(!0);
+        }, [g]);
+    n.useEffect(() => {
+        g();
+    }, [g]),
+        n.useEffect(() => {
+            (0, h.sf)(e, v);
+        }, [e, v]),
+        n.useEffect(() => {
+            a?.(C?.current);
+        }, [C, a]);
+    let E = n.useMemo(
         () =>
-            v === m.X.NOT_FETCHED || v === m.X.FETCHING
-                ? (0, n.jsx)("div", { className: a()(j.k, j.d), children: (0, n.jsx)(o.y, {}) })
-                : null == N && 50001 === x
-                  ? (0, n.jsx)("div", { className: j.k, children: (0, n.jsx)(p.A, { guildId: t, name: i }) })
+            f === u.X.NOT_FETCHED || f === u.X.FETCHING
+                ? (0, i.jsx)("div", { className: r()(p.k, p.d), children: (0, i.jsx)(t.y, {}) })
+                : null == N && 50001 === k
+                  ? (0, i.jsx)("div", { className: p.k, children: (0, i.jsx)(I.A, { guildId: e, name: l }) })
                   : null == N
-                    ? (0, n.jsx)("div", { className: j.k, children: (0, n.jsx)(R, { name: i, onRetry: g }) })
-                    : (0, n.jsx)("div", { className: j.k, children: (0, n.jsx)(C.Ay, { profile: N, onClose: E }) }),
-        [v, N, x, t, i, g, E],
+                    ? (0, i.jsx)("div", { className: p.k, children: (0, i.jsx)(b, { name: l, onRetry: A }) })
+                    : (0, i.jsx)("div", { className: p.k, children: (0, i.jsx)(y.Ay, { profile: N, onClose: j }) }),
+        [f, N, k, e, l, A, j],
     );
-    return (0, n.jsx)(d.l, { ref: A, "aria-label": N?.name, children: T });
+    return (0, i.jsx)(d.l, { ref: C, "aria-label": N?.name, children: E });
 }

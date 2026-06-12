@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h }), n(321073);
+n.d(t, { A: () => f }), n(321073);
 var i = n(685908),
     r = n(497387),
     s = n.n(r),
@@ -16,7 +16,7 @@ function _(e) {
     let t = e.match(d);
     return null != t && (e = `rgba(${0 | t[1]}, ${0 | t[2]}, ${0 | t[3]}, ${t[4]})`), e;
 }
-function f(e, t, n) {
+function h(e, t, n) {
     return void 0 !== t && void 0 != n ? o()(t, n) : e;
 }
 i.inject.ApplyAnimatedValues(
@@ -38,7 +38,7 @@ i.inject.ApplyAnimatedValues(
     },
     (e) => e,
 );
-let h = {
+let f = {
     ...i,
     Easing: s(),
     accelerate: function (e) {
@@ -55,27 +55,27 @@ let h = {
                 reverse: c,
                 invert: d,
                 callback: _,
-                type: h = "spring",
+                type: f = "spring",
                 shouldLoop: p,
                 durationMin: E,
                 durationMax: m,
                 ...g
             } = n,
             A = t._value,
-            I = f(n.duration, E, m),
-            T = f(n.toValue, s, a),
-            S = i[h](t, { ...g, toValue: T, tension: o, friction: l, duration: I }),
-            N = S;
+            I = h(n.duration, E, m),
+            T = h(n.toValue, s, a),
+            S = i[f](t, { ...g, toValue: T, tension: o, friction: l, duration: I }),
+            y = S;
         if (c || d) {
-            let e = f(n.duration, E, m);
-            (r = i[h](t, { ...g, toValue: c ? A : -T, tension: o, friction: l, duration: e })),
-                (N = i.sequence([S, r]));
+            let e = h(n.duration, E, m);
+            (r = i[f](t, { ...g, toValue: c ? A : -T, tension: o, friction: l, duration: e })),
+                (y = i.sequence([S, r]));
         }
         u
-            ? N.start(() => {
+            ? y.start(() => {
                   (!p || (p && p())) && (_ ? _(e.bind(null, t, n)) : e(t, n));
               })
-            : N.start(_);
+            : y.start(_);
     },
     interpolate: function (e) {
         for (var t = arguments.length, n = Array(t > 1 ? t - 1 : 0), i = 1; i < t; i++) n[i - 1] = arguments[i];

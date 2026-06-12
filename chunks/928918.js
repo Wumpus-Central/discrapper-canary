@@ -12,14 +12,14 @@ function n(e) {
             }, this);
         else throw TypeError("invalid argument");
 }
-function r(e, t) {
+function i(e, t) {
     return e === t || (e != e && t != t);
 }
-function i(e, t, n) {
+function r(e, t, n) {
     (this.key = e), (this.value = t), (this._index = n);
 }
 function s(e, n) {
-    for (var i = 0, s = "_" + n, a = s; t.call(e, a); a = s + i++) if (r(e[a].key, n)) return e[a];
+    for (var r = 0, s = "_" + n, a = s; t.call(e, a); a = s + r++) if (i(e[a].key, n)) return e[a];
 }
 (e.exports = n),
     (n.prototype.forEach = function (e, t) {
@@ -38,11 +38,11 @@ function s(e, n) {
     (n.prototype.set = function (e, n) {
         !(function (e, n, s) {
             for (var a = 0, o = "_" + n, l = o; t.call(e, l); l = o + a++)
-                if (r(e[l].key, n)) {
+                if (i(e[l].key, n)) {
                     e[l].value = s;
                     return;
                 }
-            e.size++, (e[l] = new i(n, s, l));
+            e.size++, (e[l] = new r(n, s, l));
         })(this._data, e, n);
     }),
     (n.prototype.delete = function (e) {

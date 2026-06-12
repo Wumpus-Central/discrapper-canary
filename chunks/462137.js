@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = [
+        n = [
             "displayHeight",
             "displayWidth",
             "mouseY",
@@ -263,13 +263,13 @@ e.exports = function (e) {
             "randomGaussian",
             "randomSeed",
         ],
-        n = e.IDENT_RE,
+        i = e.IDENT_RE,
         r = {
             variants: [
-                { match: t.concat(t.either(...a), t.lookahead(/\s*\(/)), className: "built_in" },
+                { match: t.concat(t.either(...n), t.lookahead(/\s*\(/)), className: "built_in" },
                 {
                     relevance: 0,
-                    match: t.concat(/\b(?!for|if|while)/, n, t.lookahead(/\s*\(/)),
+                    match: t.concat(/\b(?!for|if|while)/, i, t.lookahead(/\s*\(/)),
                     className: "title.function",
                 },
             ],
@@ -322,7 +322,7 @@ e.exports = function (e) {
             title: "setup draw",
             variable: "super this",
             built_in: [
-                ...a,
+                ...n,
                 "BufferedReader",
                 "PVector",
                 "PFont",
@@ -349,12 +349,12 @@ e.exports = function (e) {
         },
         contains: [
             {
-                variants: [{ match: [/class/, /\s+/, n, /\s+/, /extends/, /\s+/, n] }, { match: [/class/, /\s+/, n] }],
+                variants: [{ match: [/class/, /\s+/, i, /\s+/, /extends/, /\s+/, i] }, { match: [/class/, /\s+/, i] }],
                 className: { 1: "keyword", 3: "title.class", 5: "keyword", 7: "title.class.inherited" },
             },
-            { match: [/new\s+/, n], className: { 1: "keyword", 2: "class.title" } },
+            { match: [/new\s+/, i], className: { 1: "keyword", 2: "class.title" } },
             r,
-            { relevance: 0, match: [/\./, n], className: { 2: "property" } },
+            { relevance: 0, match: [/\./, i], className: { 2: "property" } },
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
             e.APOS_STRING_MODE,

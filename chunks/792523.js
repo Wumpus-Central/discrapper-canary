@@ -1,6 +1,6 @@
-var r = n(433714);
+var i = n(433714);
 e.exports = function (e) {
     return function (t) {
-        return r(t, e);
+        return i(t, e);
     };
 };

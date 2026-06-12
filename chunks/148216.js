@@ -1,35 +1,35 @@
-n.d(t, { default: () => p });
-var a = n(627968),
-    i = n(64700),
-    l = n(989349),
-    r = n.n(l),
-    s = n(732159),
-    o = n(582306),
-    u = n(335310),
-    c = n(985018),
-    d = n(218108);
-function p(e) {
-    let { createReminder: t, ...n } = e,
-        [l, p] = i.useState(() => r()()),
-        [h, m] = i.useState(() => r()()),
-        f = i.useCallback(() => {
-            t(l.toDate());
-        }, [t, l]),
-        x = (e) => {
-            e.isValid() && p(e);
+i.d(e, { default: () => p });
+var n = i(627968),
+    a = i(64700),
+    s = i(989349),
+    l = i.n(s),
+    r = i(732159),
+    c = i(582306),
+    u = i(666944),
+    d = i(375708),
+    o = i(218108);
+function p(t) {
+    let { createReminder: e, ...i } = t,
+        [s, p] = a.useState(() => l()()),
+        [h, m] = a.useState(() => l()()),
+        C = a.useCallback(() => {
+            e(s.toDate());
+        }, [e, s]),
+        b = (t) => {
+            t.isValid() && p(t);
         };
-    return (0, a.jsx)(s.ConfirmModal, {
-        title: c.intl.string(c.t.VKsXpY),
-        confirmText: c.intl.string(c.t["R3BPH+"]),
-        cancelText: c.intl.string(c.t["ETE/oC"]),
-        onConfirm: f,
-        ...n,
+    return (0, n.jsx)(r.ConfirmModal, {
+        title: d.intl.string(d.t.VKsXpY),
+        confirmText: d.intl.string(d.t["R3BPH+"]),
+        cancelText: d.intl.string(d.t["ETE/oC"]),
+        onConfirm: C,
+        ...i,
         variant: "primary",
-        children: (0, a.jsxs)("div", {
-            className: d.U,
+        children: (0, n.jsxs)("div", {
+            className: o.U,
             children: [
-                (0, a.jsx)(o.J, { label: c.intl.string(c.t.pSZKvM), required: !0, value: l, onSelect: x, minDate: h }),
-                (0, a.jsx)(u.c, { label: c.intl.string(c.t.GOmEb8), required: !0, value: l, onChange: x }),
+                (0, n.jsx)(c.J, { label: d.intl.string(d.t.pSZKvM), required: !0, value: s, onSelect: b, minDate: h }),
+                (0, n.jsx)(u.c, { label: d.intl.string(d.t.GOmEb8), required: !0, value: s, onChange: b }),
             ],
         }),
     });

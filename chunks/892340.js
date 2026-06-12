@@ -6,8 +6,8 @@ n.d(t, {
     xJ: () => A,
     Mn: () => S,
     uW: () => I,
-    G9: () => y,
-    Yj: () => N,
+    G9: () => N,
+    Yj: () => y,
     iU: () => m,
 });
 var i = n(136722),
@@ -22,8 +22,8 @@ var l = n(203389),
     d = n(232835);
 n(287809), n(488926);
 var _ = n(628691),
-    f = n(272720),
-    h = n(56595),
+    h = n(272720),
+    f = n(56595),
     p = n(652215);
 function E(e) {
     if (!(0, _.UN)(e.author)) return !1;
@@ -31,8 +31,8 @@ function E(e) {
     if (null == t) return !1;
     let n = c.A.getGuild(t.guild_id);
     if (null == n) return !1;
-    let i = (0, h.A)(n),
-        r = (0, f.A)(n);
+    let i = (0, f.A)(n),
+        r = (0, h.A)(n);
     return i && null != r;
 }
 function m(e) {
@@ -55,10 +55,10 @@ function T(e) {
 function S(e, t) {
     return !!e.isFirstMessageInForumPost(t) && !!e.isSystemDM() && A(t);
 }
-function N(e) {
+function y(e) {
     return e.sort((e, t) => (e.id == a ? -1 : +(t.id == a)));
 }
-function y(e, t) {
+function N(e, t) {
     let n = u.A.getChannel(e);
     if (null == n || !n.isModeratorReportChannel()) return !1;
     let i = d.A.getMessages(e).first();

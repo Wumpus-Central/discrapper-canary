@@ -1,15 +1,15 @@
 "use strict";
-var r = n(195554),
-    i = n(549412),
+var i = n(195554),
+    r = n(549412),
     s = n(382811),
     a = n(231428),
     o = n(163173),
     l = n(267795),
     u = n(236525),
-    d = Object.prototype.toString;
-function c(e) {
-    if (!(this instanceof c)) return new c(e);
-    this.options = i.assign({ chunkSize: 16384, windowBits: 0, to: "" }, e || {});
+    c = Object.prototype.toString;
+function d(e) {
+    if (!(this instanceof d)) return new d(e);
+    this.options = r.assign({ chunkSize: 16384, windowBits: 0, to: "" }, e || {});
     var t = this.options;
     t.raw &&
         t.windowBits >= 0 &&
@@ -23,83 +23,83 @@ function c(e) {
         (this.chunks = []),
         (this.strm = new l()),
         (this.strm.avail_out = 0);
-    var n = r.inflateInit2(this.strm, t.windowBits);
+    var n = i.inflateInit2(this.strm, t.windowBits);
     if (n !== a.Z_OK) throw Error(o[n]);
-    (this.header = new u()), r.inflateGetHeader(this.strm, this.header);
+    (this.header = new u()), i.inflateGetHeader(this.strm, this.header);
 }
 function _(e, t) {
-    var n = new c(t);
+    var n = new d(t);
     if ((n.push(e, !0), n.err)) throw n.msg || o[n.err];
     return n.result;
 }
-(c.prototype.push = function (e, t) {
+(d.prototype.push = function (e, t) {
     var n,
         o,
         l,
         u,
-        c,
+        d,
         _,
-        f = this.strm,
-        E = this.options.chunkSize,
-        h = this.options.dictionary,
-        p = !1;
+        h = this.strm,
+        f = this.options.chunkSize,
+        p = this.options.dictionary,
+        E = !1;
     if (this.ended) return !1;
     (o = t === ~~t ? t : !0 === t ? a.Z_FINISH : a.Z_NO_FLUSH),
         "string" == typeof e
-            ? (f.input = s.binstring2buf(e))
-            : "[object ArrayBuffer]" === d.call(e)
-              ? (f.input = new Uint8Array(e))
-              : (f.input = e),
-        (f.next_in = 0),
-        (f.avail_in = f.input.length);
+            ? (h.input = s.binstring2buf(e))
+            : "[object ArrayBuffer]" === c.call(e)
+              ? (h.input = new Uint8Array(e))
+              : (h.input = e),
+        (h.next_in = 0),
+        (h.avail_in = h.input.length);
     do {
         if (
-            (0 === f.avail_out && ((f.output = new i.Buf8(E)), (f.next_out = 0), (f.avail_out = E)),
-            (n = r.inflate(f, a.Z_NO_FLUSH)) === a.Z_NEED_DICT &&
-                h &&
+            (0 === h.avail_out && ((h.output = new r.Buf8(f)), (h.next_out = 0), (h.avail_out = f)),
+            (n = i.inflate(h, a.Z_NO_FLUSH)) === a.Z_NEED_DICT &&
+                p &&
                 ((_ =
-                    "string" == typeof h
-                        ? s.string2buf(h)
-                        : "[object ArrayBuffer]" === d.call(h)
-                          ? new Uint8Array(h)
-                          : h),
-                (n = r.inflateSetDictionary(this.strm, _))),
-            n === a.Z_BUF_ERROR && !0 === p && ((n = a.Z_OK), (p = !1)),
+                    "string" == typeof p
+                        ? s.string2buf(p)
+                        : "[object ArrayBuffer]" === c.call(p)
+                          ? new Uint8Array(p)
+                          : p),
+                (n = i.inflateSetDictionary(this.strm, _))),
+            n === a.Z_BUF_ERROR && !0 === E && ((n = a.Z_OK), (E = !1)),
             n !== a.Z_STREAM_END && n !== a.Z_OK)
         )
             return this.onEnd(n), (this.ended = !0), !1;
-        f.next_out &&
-            (0 === f.avail_out ||
+        h.next_out &&
+            (0 === h.avail_out ||
                 n === a.Z_STREAM_END ||
-                (0 === f.avail_in && (o === a.Z_FINISH || o === a.Z_SYNC_FLUSH))) &&
+                (0 === h.avail_in && (o === a.Z_FINISH || o === a.Z_SYNC_FLUSH))) &&
             ("string" === this.options.to
-                ? ((l = s.utf8border(f.output, f.next_out)),
-                  (u = f.next_out - l),
-                  (c = s.buf2string(f.output, l)),
-                  (f.next_out = u),
-                  (f.avail_out = E - u),
-                  u && i.arraySet(f.output, f.output, l, u, 0),
-                  this.onData(c))
-                : this.onData(i.shrinkBuf(f.output, f.next_out))),
-            0 === f.avail_in && 0 === f.avail_out && (p = !0);
-    } while ((f.avail_in > 0 || 0 === f.avail_out) && n !== a.Z_STREAM_END);
+                ? ((l = s.utf8border(h.output, h.next_out)),
+                  (u = h.next_out - l),
+                  (d = s.buf2string(h.output, l)),
+                  (h.next_out = u),
+                  (h.avail_out = f - u),
+                  u && r.arraySet(h.output, h.output, l, u, 0),
+                  this.onData(d))
+                : this.onData(r.shrinkBuf(h.output, h.next_out))),
+            0 === h.avail_in && 0 === h.avail_out && (E = !0);
+    } while ((h.avail_in > 0 || 0 === h.avail_out) && n !== a.Z_STREAM_END);
     return (n === a.Z_STREAM_END && (o = a.Z_FINISH), o === a.Z_FINISH)
-        ? ((n = r.inflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === a.Z_OK)
-        : (o === a.Z_SYNC_FLUSH && (this.onEnd(a.Z_OK), (f.avail_out = 0)), !0);
+        ? ((n = i.inflateEnd(this.strm)), this.onEnd(n), (this.ended = !0), n === a.Z_OK)
+        : (o === a.Z_SYNC_FLUSH && (this.onEnd(a.Z_OK), (h.avail_out = 0)), !0);
 }),
-    (c.prototype.onData = function (e) {
+    (d.prototype.onData = function (e) {
         this.chunks.push(e);
     }),
-    (c.prototype.onEnd = function (e) {
+    (d.prototype.onEnd = function (e) {
         e === a.Z_OK &&
             ("string" === this.options.to
                 ? (this.result = this.chunks.join(""))
-                : (this.result = i.flattenChunks(this.chunks))),
+                : (this.result = r.flattenChunks(this.chunks))),
             (this.chunks = []),
             (this.err = e),
             (this.msg = this.strm.msg);
     }),
-    (t.Inflate = c),
+    (t.Inflate = d),
     (t.inflate = _),
     (t.inflateRaw = function (e, t) {
         return ((t = t || {}).raw = !0), _(e, t);

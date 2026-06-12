@@ -1,32 +1,32 @@
 "use strict";
-n.d(t, { A: () => p });
-var l = n(64700),
-    i = n(435428),
+n.d(t, { A: () => f });
+var i = n(64700),
+    r = n(127382),
     s = n(17928),
     a = n(549699),
-    r = n(29496),
-    o = n(201718),
-    c = n(339580),
-    u = n(773669),
+    o = n(29496),
+    l = n(201718),
+    u = n(339580),
+    c = n(773669),
     d = n(403362),
-    h = n(188951);
-let m = [];
-function p(e, t) {
-    (0, o.P)(e);
-    let n = (0, s.bG)([c.A], () => c.A.getUserIdentityByApplication(e, t)),
-        p = (0, s.bG)([u.default], () => u.default.locale),
-        f = l.useMemo(() => [t], [t]),
-        [g] = (0, h.A)(f),
-        _ = l.useMemo(() => (0, i.VG)(n?.profile ?? void 0), [n?.profile]),
-        x = (0, s.bG)([c.A], () => c.A.getFetchState(e) !== c.e.FETCHED),
-        C = (0, s.bG)([r.A], () => r.A.getAssets(t)),
-        A = l.useMemo(() => Object.values(C ?? {}).filter(d.Vq), [C]),
-        E = l.useCallback((e) => (0, a.Q)(t, e, e.metadata.width), [t]);
+    _ = n(188951);
+let h = [];
+function f(e, t) {
+    (0, l.P)(e);
+    let n = (0, s.bG)([u.A], () => u.A.getUserIdentityByApplication(e, t)),
+        f = (0, s.bG)([c.default], () => c.default.locale),
+        p = i.useMemo(() => [t], [t]),
+        [E] = (0, _.A)(p),
+        m = i.useMemo(() => (0, r.VG)(n?.profile ?? void 0), [n?.profile]),
+        g = (0, s.bG)([u.A], () => u.A.getFetchState(e) !== u.e.FETCHED),
+        A = (0, s.bG)([o.A], () => o.A.getAssets(t)),
+        I = i.useMemo(() => Object.values(A ?? {}).filter(d.Vq), [A]),
+        T = i.useCallback((e) => (0, a.Q)(t, e, e.metadata.width), [t]);
     return {
-        locale: p,
-        surfaceConfigs: g?.surfaces ?? {},
-        isLoading: x,
+        locale: f,
+        surfaceConfigs: E?.surfaces ?? {},
+        isLoading: g,
         hasIdentity: null != n,
-        resolutionContext: { data: _, applicationAssets: A, getApplicationAssetUrl: E, localizedStrings: m },
+        resolutionContext: { data: m, applicationAssets: I, getApplicationAssetUrl: T, localizedStrings: h },
     };
 }

@@ -7234,13 +7234,13 @@ let t = [
     "$WolframUUID",
 ];
 e.exports = function (e) {
-    let a = e.regex,
-        n = a.either(a.concat(/([2-9]|[1-2]\d|[3][0-5])\^\^/, /(\w*\.\w+|\w+\.\w*|\w+)/), /(\d*\.\d+|\d+\.\d*|\d+)/),
-        r = a.either(/``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/, /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/),
-        i = a.concat(n, a.optional(r), a.optional(/\*\^[+-]?\d+/)),
-        o = /[a-zA-Z$][a-zA-Z0-9$]*/,
-        s = new Set(t),
-        l = { className: "message-name", relevance: 0, begin: a.concat("::", o) };
+    let n = e.regex,
+        i = n.either(n.concat(/([2-9]|[1-2]\d|[3][0-5])\^\^/, /(\w*\.\w+|\w+\.\w*|\w+)/), /(\d*\.\d+|\d+\.\d*|\d+)/),
+        r = n.either(/``[+-]?(\d*\.\d+|\d+\.\d*|\d+)/, /`([+-]?(\d*\.\d+|\d+\.\d*|\d+))?/),
+        s = n.concat(i, n.optional(r), n.optional(/\*\^[+-]?\d+/)),
+        a = /[a-zA-Z$][a-zA-Z0-9$]*/,
+        o = new Set(t),
+        l = { className: "message-name", relevance: 0, begin: n.concat("::", a) };
     return {
         name: "Mathematica",
         aliases: ["mma", "wl"],
@@ -7262,17 +7262,17 @@ e.exports = function (e) {
                 variants: [
                     {
                         className: "builtin-symbol",
-                        begin: o,
+                        begin: a,
                         "on:begin": (e, t) => {
-                            s.has(e[0]) || t.ignoreMatch();
+                            o.has(e[0]) || t.ignoreMatch();
                         },
                     },
-                    { className: "symbol", relevance: 0, begin: o },
+                    { className: "symbol", relevance: 0, begin: a },
                 ],
             },
             { className: "named-character", begin: /\\\[[$a-zA-Z][$a-zA-Z0-9]+\]/ },
             e.QUOTE_STRING_MODE,
-            { className: "number", relevance: 0, begin: i },
+            { className: "number", relevance: 0, begin: s },
             { className: "operator", relevance: 0, begin: /[+\-*/,;.:@~=><&|_`'^?!%]+/ },
             { className: "brace", relevance: 0, begin: /[[\](){}]/ },
         ],

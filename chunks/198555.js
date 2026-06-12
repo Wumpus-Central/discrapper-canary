@@ -1,11 +1,11 @@
-var r = n(509185),
-    i = n(621699),
-    a = n(624977),
-    s = Object.prototype.hasOwnProperty;
+var i = n(509185),
+    r = n(621699),
+    s = n(624977),
+    a = Object.prototype.hasOwnProperty;
 e.exports = function (e) {
-    if (!r(e)) return a(e);
-    var t = i(e),
+    if (!i(e)) return s(e);
+    var t = r(e),
         n = [];
-    for (var o in e) ("constructor" == o && (t || !s.call(e, o))) || n.push(o);
+    for (var o in e) ("constructor" == o && (t || !a.call(e, o))) || n.push(o);
     return n;
 };

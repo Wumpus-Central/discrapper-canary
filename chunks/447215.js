@@ -1,75 +1,75 @@
-n.d(t, { P: () => N });
-var l = n(627968),
-    i = n(64700),
+n.d(l, { P: () => x });
+var r = n(627968),
+    t = n(64700),
     a = n(349288),
-    r = n(473193),
-    o = n(614820),
+    i = n(473193),
+    u = n(614820),
     s = n(463930),
-    u = n(793574),
-    c = n(688810),
-    d = n(609425),
-    m = n(922301),
-    h = n(368919),
-    g = n(73392),
-    p = n(676608),
-    f = n(342296),
-    A = n(734057),
-    I = n(841549),
-    x = n(560936);
-function N(e) {
+    o = n(793574),
+    d = n(688810),
+    c = n(609425),
+    h = n(922301),
+    f = n(368919),
+    p = n(73392),
+    m = n(676608),
+    g = n(342296),
+    I = n(734057),
+    y = n(841549),
+    b = n(560936);
+function x(e) {
     let {
-            user: t,
+            user: l,
             channelId: n,
-            guildId: N,
-            messageId: E,
-            stopPropagation: j = !1,
-            ariaLabel: v,
-            enableDisplayNameStyles: T = !1,
-            displayInline: b = !1,
+            guildId: x,
+            messageId: C,
+            stopPropagation: w = !1,
+            ariaLabel: A,
+            enableDisplayNameStyles: M = !1,
+            displayInline: j = !1,
         } = e,
-        R = i.useRef(null),
-        { analyticsLocations: C } = (0, c.Ay)(u.A.USERNAME),
-        S = (0, p.Ay)(N, t?.id),
-        y = (0, d.A)({ userId: t?.id, guildId: N }),
-        O = (0, g.a)({ displayNameStyles: y }),
-        L = i.useCallback(
+        P = t.useRef(null),
+        { analyticsLocations: k } = (0, d.Ay)(o.A.USERNAME),
+        L = (0, m.Ay)(x, l?.id),
+        D = (0, c.A)({ userId: l?.id, guildId: x }),
+        N = (0, p.a)({ displayNameStyles: D }),
+        S = t.useCallback(
             (e) => {
-                let l = A.A.getChannel(n);
-                null != l && null != t && (0, I.wQ)(e, t, l);
+                let r = I.A.getChannel(n);
+                null != r && null != l && (0, y.wQ)(e, l, r);
             },
-            [t, n],
+            [l, n],
         ),
-        _ = i.useContext(r.C);
+        v = t.useContext(i.C);
     return (
-        (0, x.A)({ subscribeToGroupId: E, authorId: t?.id, shouldSubscribe: T && null != y && null == N }),
-        i.useCallback(
-            (e) => (i, r) => {
-                let u = e?.colorStrings,
-                    d = S && null != u && null != u.primaryColor && null != u.secondaryColor,
-                    g = (t, n) => {
-                        if (!T || null == y || null != N)
-                            return (0, l.jsx)(s.V, {
-                                ...(null != t ? t : {}),
-                                ref: R,
-                                onContextMenu: L,
-                                name: (0, o.O)(i) ?? "",
+        (0, b.A)({ subscribeToGroupId: C, authorId: l?.id, shouldSubscribe: M && null != D && null == x }),
+        t.useCallback(
+            (e) => (t, i) => {
+                let o = e?.colorStrings,
+                    c = L && null != o && null != o.primaryColor && null != o.secondaryColor,
+                    p = (l, n) => {
+                        if (!M || null == D || null != x)
+                            return (0, r.jsx)(s.V, {
+                                ...(null != l ? l : {}),
+                                ref: P,
+                                onContextMenu: S,
+                                name: (0, u.O)(t) ?? "",
                                 colorString: e?.colorString ?? null,
                                 roleName: e?.colorRoleName,
-                                colorStrings: d ? u : null,
-                                "aria-label": v,
-                                className: O,
-                                displayInline: b,
+                                colorStrings: c ? o : null,
+                                "aria-label": A,
+                                className: N,
+                                displayInline: j,
                             });
                         {
-                            let e = _?.animate || n?.isShown ? m.G.ANIMATED : m.G.PLAIN;
-                            return (0, l.jsx)(a.Anchor, {
-                                ...(null != t ? t : {}),
-                                ref: R,
-                                onContextMenu: L,
-                                "aria-label": v,
-                                children: (0, l.jsx)(h.A, {
-                                    userName: (0, o.O)(i) ?? "",
-                                    displayNameStyles: y,
+                            let e = v?.animate || n?.isShown ? h.G.ANIMATED : h.G.PLAIN;
+                            return (0, r.jsx)(a.Anchor, {
+                                ...(null != l ? l : {}),
+                                ref: P,
+                                onContextMenu: S,
+                                "aria-label": A,
+                                children: (0, r.jsx)(f.A, {
+                                    userName: (0, u.O)(t) ?? "",
+                                    displayNameStyles: D,
                                     effectDisplayType: e,
                                     shouldUnderlineOnHover: !0,
                                     loop: !0,
@@ -77,39 +77,39 @@ function N(e) {
                             });
                         }
                     };
-                return (0, l.jsx)(
-                    c.f5,
+                return (0, r.jsx)(
+                    d.f5,
                     {
-                        value: C,
+                        value: k,
                         children:
-                            null != t
-                                ? (0, l.jsx)(f.A, {
-                                      targetElementRef: R,
-                                      user: t,
-                                      guildId: N,
+                            null != l
+                                ? (0, r.jsx)(g.A, {
+                                      targetElementRef: P,
+                                      user: l,
+                                      guildId: x,
                                       channelId: n,
-                                      messageId: E,
+                                      messageId: C,
                                       roleId: e?.colorRoleId,
                                       clickTrap: !0,
-                                      children: (e, t) => {
-                                          let { onClick: n, ...l } = e;
-                                          return g(
+                                      children: (e, l) => {
+                                          let { onClick: n, ...r } = e;
+                                          return p(
                                               {
                                                   onClick: (e) => {
-                                                      j && null != e && e.stopPropagation(), n(e);
+                                                      w && null != e && e.stopPropagation(), n(e);
                                                   },
-                                                  ...l,
+                                                  ...r,
                                               },
-                                              t,
+                                              l,
                                           );
                                       },
                                   })
-                                : g(void 0, void 0),
+                                : p(void 0, void 0),
                     },
-                    r,
+                    i,
                 );
             },
-            [C, t, n, N, E, L, j, v, S, O, _?.animate, y, T, b],
+            [k, l, n, x, C, S, w, A, L, N, v?.animate, D, M, j],
         )
     );
 }

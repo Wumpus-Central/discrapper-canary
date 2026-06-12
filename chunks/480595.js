@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => k }), n(321073), n(938796);
+n.d(t, { A: () => U }), n(321073), n(938796);
 var i = n(812729),
     r = n.n(i),
     s = n(735438),
@@ -10,8 +10,8 @@ var i = n(812729),
     c = n(933958),
     d = n(182892),
     _ = n(587895),
-    f = n(685396),
-    h = n(328153);
+    h = n(685396),
+    f = n(952818);
 let p = [n(732755).A],
     E = [];
 function m() {
@@ -35,12 +35,12 @@ let A = new g(u.h);
 var I = n(155718),
     T = n(871633),
     S = n(655116),
-    N = n(885386),
-    y = n(617617),
-    C = n(616356),
-    v = n(734057),
-    O = n(760751),
-    R = n(794383),
+    y = n(885386),
+    N = n(617617),
+    v = n(616356),
+    C = n(734057),
+    R = n(760751),
+    O = n(794383),
     b = n(309010),
     D = n(528767),
     L = n(652215);
@@ -49,24 +49,24 @@ let w = [],
     P = null;
 function x() {
     let e = [],
-        t = N.G2.getSetting();
+        t = y.G2.getSetting();
     null != t &&
         ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) &&
-        e.push((0, f.F)(t));
+        e.push((0, h.F)(t));
     let n = A.getActivities();
     e.push(...n);
-    let i = R.A.getStream();
+    let i = O.A.getStream();
     null != i && e.push({ type: L.$pd.STREAMING, ...i });
     let s = new Set();
     a().forEach(M, (t) => {
         let [, n] = t;
         null != n.application_id && (s.add(n.name), e.push(n));
     });
-    let o = null != C.A.getCurrentUserActiveStream(),
-        l = h.Ay.getVisibleGame();
+    let o = null != v.A.getCurrentUserActiveStream(),
+        l = f.Ay.getVisibleGame();
     if (o) {
-        let e = C.A.getStreamerActiveStreamMetadata(),
-            t = h.Ay.getVisibleRunningGames(),
+        let e = v.A.getStreamerActiveStreamMetadata(),
+            t = f.Ay.getVisibleRunningGames(),
             n = null;
         e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
             null == n && e?.id != null && (n = t.find((t) => t.id === e.id) ?? null),
@@ -95,7 +95,7 @@ function x() {
                 })(l, [...e, ...D.A.getRemoteActivities()])),
         c = null != l && l.isLauncher;
     if (null != l && null != l.name && !(u || (c && !o))) {
-        let t = O.A.findGame(l);
+        let t = R.A.findGame(l);
         e.push({
             type: L.$pd.PLAYING,
             name: l.name,
@@ -107,10 +107,10 @@ function x() {
     let d = S.A.getActivity();
     null != d && e.push({ type: L.$pd.LISTENING, ...d }), r()(w, e) || (w = e);
 }
-class U extends l.Ay.Store {
+class k extends l.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        this.waitFor(_.A, C.A, v.A, c.Ay, R.A, A, O.A, h.Ay, b.A, D.A, S.A, y.A), this.syncWith([A], () => x());
+        this.waitFor(_.A, v.A, C.A, c.Ay, O.A, A, R.A, f.Ay, b.A, D.A, S.A, N.A), this.syncWith([A], () => x());
     }
     getActivities() {
         return w;
@@ -135,7 +135,7 @@ class U extends l.Ay.Store {
         return null;
     }
 }
-let k = new U(u.h, {
+let U = new k(u.h, {
     ROBLOX_SUBGAME_UPDATE: x,
     ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: x,
     OVERLAY_INITIALIZE: function (e) {

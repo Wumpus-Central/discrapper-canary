@@ -927,8 +927,8 @@ var eK = n(495544),
 function e0() {
     let e = (0, eQ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "561804",
-        l = "139b8ca9e9e073d8b6937bf83c17116527c45d09".substring(0, 7),
+        n = "562146",
+        l = "618e1a0d94bdf950f65ca0052441902501c96239".substring(0, 7),
         s = e$.A?.app.getVersion(),
         i = e$.A?.app.getBuildNumber(),
         u = e$.A?.app.getAppArch(),
@@ -1039,7 +1039,7 @@ function e9(e) {
         }),
     });
 }
-function e7() {
+function e2() {
     let e = l.useRef(null);
     return (0, r.jsxs)("div", {
         children: [
@@ -1096,7 +1096,7 @@ function e7() {
         ],
     });
 }
-var e2 = n(402651),
+var e7 = n(402651),
     e5 = n(669067),
     e3 = n(830543),
     e8 = n(466745);
@@ -1119,7 +1119,7 @@ function te(e) {
         return (
             eK.default.addChangeListener(e),
             () => {
-                eK.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+                eK.default.removeChangeListener(e), e7.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
             }
         );
     }, []),
@@ -1129,7 +1129,7 @@ function te(e) {
               partialRoot: eL.D,
               searchBar: tt,
               emptyState: tn,
-              sidebarFooter: e7,
+              sidebarFooter: e2,
               onViewChange: (e) => {
                   e6.has(e) || (0, e5._)(e);
                   let t = e4.get(e);
@@ -1137,9 +1137,9 @@ function te(e) {
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e2.A.getField("source") },
+                          properties: { source: e7.A.getField("source") },
                       }),
-                      e2.A.setState({ source: void 0 });
+                      e7.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: eB.X.ACCOUNT_PANEL,

@@ -2,24 +2,24 @@ i.d(t, { default: () => N });
 var l = i(627968),
     n = i(64700),
     s = i(284009),
-    a = i.n(s),
-    d = i(110259),
-    r = i(189213),
-    c = i(17928),
+    d = i.n(s),
+    a = i(562708),
+    c = i(189213),
+    r = i(17928),
     o = i(565787),
-    u = i(144228),
+    u = i(773812),
     C = i(289873),
     f = i(157559),
-    h = i(208039),
+    h = i(546385),
     g = i(953727),
-    v = i(108713),
+    v = i(469802),
     m = i(643501),
-    p = i(985018),
+    p = i(375708),
     j = i(587972);
 let x = (0, o.k)(function (e) {
-    let { width: t = 24, height: i = 24, color: n = "currentColor", foreground: s, ...a } = e;
+    let { width: t = 24, height: i = 24, color: n = "currentColor", foreground: s, ...d } = e;
     return (0, l.jsxs)("svg", {
-        ...(0, g.A)(a),
+        ...(0, g.A)(d),
         width: t,
         height: i,
         viewBox: "0 0 24 25",
@@ -76,26 +76,26 @@ function N(e) {
         s,
         o,
         { channel: u, platform: h, transitionState: g, onClose: x } = e,
-        N = (0, c.bG)([m.default], () => m.default.getDevicesForPlatform(h), [h]),
-        w = (0, c.bG)([m.default], () => m.default.getLastSelectedDeviceByPlatform(h)),
+        N = (0, r.bG)([m.default], () => m.default.getDevicesForPlatform(h), [h]),
+        w = (0, r.bG)([m.default], () => m.default.getLastSelectedDeviceByPlatform(h)),
         I = n.useMemo(() => Object.values(N), [N]),
-        _ = (0, c.bG)([m.default], () => m.default.getFetchingDevices(h)),
-        k = (0, c.bG)([m.default], () => m.default.getAwaitingRemoteSessionInfo()?.deviceId),
-        [y, D] = n.useState(!1),
-        [R, A] = n.useState(() => N[k ?? ""]?.id ?? null);
+        k = (0, r.bG)([m.default], () => m.default.getFetchingDevices(h)),
+        D = (0, r.bG)([m.default], () => m.default.getAwaitingRemoteSessionInfo()?.deviceId),
+        [R, y] = n.useState(!1),
+        [E, M] = n.useState(() => N[D ?? ""]?.id ?? null);
     n.useEffect(() => {
         v.Uc(h);
     }, [h]),
         n.useEffect(() => {
-            1 === I.length ? A(I[0].id) : null != w && A(w);
+            1 === I.length ? M(I[0].id) : null != w && M(w);
         }, [I, w]);
-    let E = async () => {
-        let e = N[R ?? ""];
-        a()(null != e, "Cannot transfer without selected device");
+    let A = async () => {
+        let e = N[E ?? ""];
+        d()(null != e, "Cannot transfer without selected device");
         try {
-            D(!0), await v.VP(h, e.id, u), x();
+            y(!0), await v.VP(h, e.id, u), x();
         } catch (t) {
-            D(!1),
+            y(!1),
                 f.A.show({
                     title: p.intl.string(p.t.QL1y93),
                     body: p.intl.formatToPlainString(p.t["6ZyNH/"], { deviceName: e.name }),
@@ -103,27 +103,27 @@ function N(e) {
         }
     };
     return (
-        _
+        k
             ? ((i = p.intl.string(p.t["+d9SH8"])),
               (t = (0, l.jsx)("div", { className: j.dc, children: (0, l.jsx)(C.y, {}) })))
             : 0 === I.length
               ? ((i = p.intl.string(p.t.OkJf1e)), (s = p.intl.string(p.t["of/l5Z"])), (t = (0, l.jsx)(S, {})))
               : ((i = p.intl.string(p.t["+d9SH8"])),
                 (s = p.intl.string(p.t["5DtaWg"])),
-                (o = [{ text: p.intl.string(p.t.FJR4bD), onClick: E, loading: y || null != k, disabled: null == R }]),
+                (o = [{ text: p.intl.string(p.t.FJR4bD), onClick: A, loading: R || null != D, disabled: null == E }]),
                 (t = (0, l.jsx)(b, {
                     devices: I,
-                    selectedDeviceId: R,
+                    selectedDeviceId: E,
                     onSelectDeviceId: (e) => {
-                        A(e), (0, v.Jm)(h, e);
+                        M(e), (0, v.Jm)(h, e);
                     },
                 }))),
-        (0, l.jsx)(r.Modal, {
+        (0, l.jsx)(c.Modal, {
             title: i,
             subtitle: s,
             actions: o,
             transitionState: g,
-            trackingProps: { impression: { impressionName: d.ImpressionNames.GAME_CONSOLE_DEVICE_LIST } },
+            trackingProps: { impression: { impressionName: a.ImpressionNames.GAME_CONSOLE_DEVICE_LIST } },
             onClose: x,
             children: t,
         })

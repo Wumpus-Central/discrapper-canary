@@ -1,14 +1,14 @@
-n.d(t, { A: () => d, t: () => o });
-var i = n(17928),
-    l = n(696451),
-    a = n(71393),
-    s = n(652215);
-function r(e, t, n, i) {
-    return n.getGuild(e)?.features.has(s.GuildFeatures.CONFERENCE) !== !0 && i.isGuestOrLurker(e, t);
+t.d(n, { A: () => c, t: () => a });
+var u = t(17928),
+    l = t(696451),
+    r = t(71393),
+    i = t(652215);
+function s(e, n, t, u) {
+    return t.getGuild(e)?.features.has(i.GuildFeatures.CONFERENCE) !== !0 && u.isGuestOrLurker(e, n);
 }
-function o(e, t) {
-    return r(e, t, a.A, l.Ay);
+function a(e, n) {
+    return s(e, n, r.A, l.Ay);
 }
-function d(e, t) {
-    return (0, i.bG)([a.A, l.Ay], () => r(e, t, a.A, l.Ay), [e, t]);
+function c(e, n) {
+    return (0, u.bG)([r.A, l.Ay], () => s(e, n, r.A, l.Ay), [e, n]);
 }

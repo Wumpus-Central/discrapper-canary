@@ -1,11 +1,11 @@
 "use strict";
-r.d(t, { $7: () => u, $r: () => l, OX: () => a, __: () => c, bX: () => d, is: () => o, lQ: () => s, n4: () => i });
-var n = r(672722),
-    s = function () {},
-    a = function (e, t, r) {
-        return Object.defineProperty(e, t, { value: r, writable: !0, configurable: !0 });
+n.d(t, { $7: () => l, $r: () => c, OX: () => s, __: () => u, bX: () => d, is: () => a, lQ: () => r, n4: () => o });
+var i = n(672722),
+    r = function () {},
+    s = function (e, t, n) {
+        return Object.defineProperty(e, t, { value: n, writable: !0, configurable: !0 });
     },
-    o = {
+    a = {
         arr: Array.isArray,
         obj: function (e) {
             return !!e && "Object" === e.constructor.name;
@@ -23,30 +23,30 @@ var n = r(672722),
             return void 0 === e;
         },
     };
-function i(e, t) {
-    if (o.arr(e)) {
-        if (!o.arr(t) || e.length !== t.length) return !1;
-        for (var r = 0; r < e.length; r++) if (e[r] !== t[r]) return !1;
+function o(e, t) {
+    if (a.arr(e)) {
+        if (!a.arr(t) || e.length !== t.length) return !1;
+        for (var n = 0; n < e.length; n++) if (e[n] !== t[n]) return !1;
         return !0;
     }
     return e === t;
 }
-var u = function (e) {
-        return o.str(e) && ("#" == e[0] || /\d/.test(e) || !!(n.colorNames && n.colorNames[e]));
+var l = function (e) {
+        return a.str(e) && ("#" == e[0] || /\d/.test(e) || !!(i.colorNames && i.colorNames[e]));
     },
-    c = function (e, t, r) {
-        o.fun(e.forEach)
-            ? e.forEach(t, r)
-            : Object.keys(e).forEach(function (n) {
-                  return t.call(r, e[n], n);
+    u = function (e, t, n) {
+        a.fun(e.forEach)
+            ? e.forEach(t, n)
+            : Object.keys(e).forEach(function (i) {
+                  return t.call(n, e[i], i);
               });
     },
-    l = function (e) {
-        return o.und(e) ? [] : o.arr(e) ? e : [e];
+    c = function (e) {
+        return a.und(e) ? [] : a.arr(e) ? e : [e];
     };
 function d(e, t) {
     if (e.size) {
-        var r = Array.from(e);
-        e.clear(), c(r, t);
+        var n = Array.from(e);
+        e.clear(), u(n, t);
     }
 }

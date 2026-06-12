@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { PA: () => u, UG: () => l, X1: () => o, a4: () => c, s8: () => d });
-var r,
-    i,
+n.d(t, { PA: () => u, UG: () => l, X1: () => o, a4: () => d, s8: () => c });
+var i,
+    r,
     s,
     a,
-    o = (((r = {}).GLOBAL_FEED = "global feed"), (r.GAME_PROFILE_FEED = "game profile feed"), r),
-    l = (((i = {})[(i.GUILD_MEMBER_LIST = 1)] = "GUILD_MEMBER_LIST"), i),
+    o = (((i = {}).GLOBAL_FEED = "global feed"), (i.GAME_PROFILE_FEED = "game profile feed"), i),
+    l = (((r = {})[(r.GUILD_MEMBER_LIST = 1)] = "GUILD_MEMBER_LIST"), r),
     u =
         (((s = {})[(s.CARD_POPOUT_OPEN = 2)] = "CARD_POPOUT_OPEN"),
         (s[(s.REACTION_EMOJI_REACT_SENT = 3)] = "REACTION_EMOJI_REACT_SENT"),
@@ -17,8 +17,8 @@ var r,
         (s[(s.COPIED_LEADERBOARD_ROW = 9)] = "COPIED_LEADERBOARD_ROW"),
         (s[(s.APPLICATION_WIDGET_PREVIEW_VIEW_MORE = 10)] = "APPLICATION_WIDGET_PREVIEW_VIEW_MORE"),
         s);
-let d = "https://www.igdb.com/about";
-var c =
+let c = "https://www.igdb.com/about";
+var d =
     (((a = {})[(a.SPOTIFY = 1)] = "SPOTIFY"),
     (a[(a.CRUNCHYROLL = 2)] = "CRUNCHYROLL"),
     (a[(a.XBOX = 3)] = "XBOX"),

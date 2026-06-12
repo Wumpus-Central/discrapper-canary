@@ -1,42 +1,42 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    a = n(64700),
-    r = n(834730),
-    l = n(939249),
-    s = n(435328),
-    o = n(427080),
-    c = n(515115),
-    d = n(988794),
-    u = n(985018),
-    p = n(478799);
-function _(e) {
-    let { guildScheduledEvent: t, channel: n, onClose: _ } = e,
-        f = t.entity_type === d.Ps.EXTERNAL,
-        v = a.useCallback((e) => (0, o.GI)(t, _)(e), [t, _]),
-        m = (0, c.L)(t, n);
-    if (null == m) return null;
-    let { IconComponent: g, locationName: b } = m,
-        h = (0, i.jsxs)(i.Fragment, {
+e.d(s, { A: () => p });
+var t = e(627968),
+    n = e(64700),
+    a = e(834730),
+    r = e(939249),
+    i = e(435328),
+    c = e(427080),
+    u = e(515115),
+    d = e(988794),
+    h = e(375708),
+    o = e(478799);
+function p(l) {
+    let { guildScheduledEvent: s, channel: e, onClose: p } = l,
+        m = s.entity_type === d.Ps.EXTERNAL,
+        x = n.useCallback((l) => (0, c.GI)(s, p)(l), [s, p]),
+        k = (0, u.L)(s, e);
+    if (null == k) return null;
+    let { IconComponent: C, locationName: N } = k,
+        j = (0, t.jsxs)(t.Fragment, {
             children: [
-                null != g &&
-                    (0, i.jsx)(g, {
+                null != C &&
+                    (0, t.jsx)(C, {
                         size: "custom",
                         color: "currentColor",
                         width: 20,
                         height: 20,
-                        className: p.p,
-                        "aria-label": u.intl.string(u.t.gwSn4I),
+                        className: o.p,
+                        "aria-label": h.intl.string(h.t.gwSn4I),
                     }),
-                (0, i.jsx)(r.E, {
+                (0, t.jsx)(a.E, {
                     color: "text-default",
                     variant: "text-sm/normal",
-                    className: p.fN,
-                    children: (0, s.l)(b, !0),
+                    className: o.fN,
+                    children: (0, i.l)(N, !0),
                 }),
             ],
         });
-    return (0, i.jsx)("div", {
-        className: p.nM,
-        children: null != v ? (0, i.jsx)(l.D, { className: f ? p.dC : p.h7, onClick: v, children: h }) : h,
+    return (0, t.jsx)("div", {
+        className: o.nM,
+        children: null != x ? (0, t.jsx)(r.D, { className: m ? o.dC : o.h7, onClick: x, children: j }) : j,
     });
 }

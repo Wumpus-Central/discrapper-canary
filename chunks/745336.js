@@ -1,75 +1,75 @@
-a.d(t, { default: () => b });
-var n = a(627968),
-    r = a(64700),
-    s = a(503698),
-    i = a.n(s),
-    l = a(192308),
-    o = a(935462),
-    c = a(825484),
-    d = a(123292),
-    m = a(393033),
-    u = a(36149),
-    p = a(40449),
-    _ = a(985018),
-    x = a(971469);
-let b = function (e) {
-    let { onClose: t, onComplete: a, onCancel: s, transitionState: b, webviewUrl: h } = e,
-        f = (0, m.W$)(),
-        j = r.useCallback(() => {
-            a(), t();
-        }, [a, t]),
-        y = r.useCallback(() => {
-            (0, l.hasModalOpen)(p.SW) && j();
-        }, [j]);
-    (0, u.dZ)(y);
-    let g = r.useCallback(
+n.d(a, { default: () => f });
+var s = n(627968),
+    i = n(64700),
+    t = n(503698),
+    r = n.n(t),
+    l = n(192308),
+    c = n(935462),
+    d = n(825484),
+    o = n(123292),
+    p = n(393033),
+    m = n(36149),
+    u = n(40449),
+    h = n(375708),
+    g = n(971469);
+let f = function (e) {
+    let { onClose: a, onComplete: n, onCancel: t, transitionState: f, webviewUrl: j } = e,
+        x = (0, p.W$)(),
+        C = i.useCallback(() => {
+            n(), a();
+        }, [n, a]),
+        k = i.useCallback(() => {
+            (0, l.hasModalOpen)(u.SW) && C();
+        }, [C]);
+    (0, m.dZ)(k);
+    let v = i.useCallback(
         (e) => {
-            f && "" !== h && e?.data?.eventType === "Verification.Result" && j();
+            x && "" !== j && e?.data?.eventType === "Verification.Result" && C();
         },
-        [h, j, f],
+        [j, C, x],
     );
     return (
-        r.useEffect(
+        i.useEffect(
             () => (
-                window.addEventListener("message", g),
+                window.addEventListener("message", v),
                 () => {
-                    window.removeEventListener("message", g);
+                    window.removeEventListener("message", v);
                 }
             ),
-            [g],
+            [v],
         ),
-        (0, n.jsxs)(o.EO, {
+        (0, s.jsxs)(c.EO, {
             "data-migration-pending": !0,
-            transitionState: b,
-            className: i()(x.zr, x.rh),
+            transitionState: f,
+            className: r()(g.zr, g.rh),
             parentComponent: "AgeVerificationModal",
-            size: o.rI.MEDIUM,
+            size: c.rI.MEDIUM,
             children: [
-                (0, n.jsx)(o.$m, {
+                (0, s.jsx)(c.$m, {
                     "data-migration-pending": !0,
-                    className: i()(x.Qs, x.WM),
+                    className: r()(g.Qs, g.WM),
                     scrollbarType: "none",
-                    children: (0, n.jsx)("iframe", {
+                    children: (0, s.jsx)("iframe", {
                         id: "frame",
-                        src: h,
-                        className: x.pU,
+                        src: j,
+                        className: g.pU,
                         allow: "camera; microphone",
                     }),
                 }),
-                (0, n.jsx)(o.jl, {
+                (0, s.jsx)(c.jl, {
                     "data-migration-pending": !0,
-                    children: (0, n.jsx)("div", {
-                        className: x.qr,
-                        children: (0, n.jsxs)(c.e, {
+                    children: (0, s.jsx)("div", {
+                        className: g.qr,
+                        children: (0, s.jsxs)(d.e, {
                             justify: "space-between",
                             fullWidthContainer: !0,
                             children: [
-                                (0, n.jsx)(d.Q, { variant: "secondary", text: _.intl.string(_.t.fjKFae), onClick: t }),
-                                null != s &&
-                                    (0, n.jsx)(d.Q, {
+                                (0, s.jsx)(o.Q, { variant: "secondary", text: h.intl.string(h.t.fjKFae), onClick: a }),
+                                null != t &&
+                                    (0, s.jsx)(o.Q, {
                                         variant: "secondary",
-                                        text: _.intl.string(_.t["4gTnU0"]),
-                                        onClick: s,
+                                        text: h.intl.string(h.t["4gTnU0"]),
+                                        onClick: t,
                                     }),
                             ],
                         }),

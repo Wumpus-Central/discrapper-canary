@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { l: () => h, A: () => p });
+n.d(t, { l: () => f, A: () => p });
 var i = n(64700),
     r = n(17928),
     s = n(99753),
@@ -9,9 +9,9 @@ var i = n(64700),
 let u = [];
 var c = n(52133),
     d = n(290863),
-    _ = n(832384),
-    f = n(818348);
-function h(e, t) {
+    _ = n(751765),
+    h = n(818348);
+function f(e, t) {
     let { types: n } = e;
     return null == n || !!n.has(t.content_type);
 }
@@ -24,14 +24,14 @@ function p(e) {
         I,
         T,
         S,
-        { id: N, unrankedEntries: y = !1 } = e,
-        { feed: C, filters: v } = (0, r.cf)([s.A], () => ({ feed: s.A.getFeed(N), filters: s.A.getFilters() })),
-        O = i.useMemo(() => {
-            let e = y ? C?.unranked_game_entries.map((e) => e.content) : C?.entries.map((e) => e.content);
-            return null != v ? e?.filter((e) => h(v, e)) : e;
-        }, [C, v, y]);
+        { id: y, unrankedEntries: N = !1 } = e,
+        { feed: v, filters: C } = (0, r.cf)([s.A], () => ({ feed: s.A.getFeed(y), filters: s.A.getFilters() })),
+        R = i.useMemo(() => {
+            let e = N ? v?.unranked_game_entries.map((e) => e.content) : v?.entries.map((e) => e.content);
+            return null != C ? e?.filter((e) => f(C, e)) : e;
+        }, [v, C, N]);
     return (
-        (t = O),
+        (t = R),
         (E = (0, r.bG)([a.A], () => a.A.getPrivateChannelsVersion())),
         (m = (0, r.bG)([a.A], () => a.A.getMutableDMsByUserIds(), [E])),
         (g = (0, r.bG)([o.Ay], () => o.Ay.getMutedChannels(null))),
@@ -43,7 +43,7 @@ function p(e) {
             }
             return e;
         }, [m, g])),
-        (n = O =
+        (n = R =
             i.useMemo(
                 () =>
                     t?.filter((e) => {
@@ -52,7 +52,7 @@ function p(e) {
                     }),
                 [t, A],
             )),
-        (p = O = (0, r.yK)([l.A], () => (null == n ? u : n.filter(l.A.canRenderContent)), [n])),
+        (p = R = (0, r.yK)([l.A], () => (null == n ? u : n.filter(l.A.canRenderContent)), [n])),
         (I = i.useRef(new Set())),
         (T = i.useMemo(() => {
             let e = new Set(p?.map((e) => e.author_id));
@@ -61,10 +61,10 @@ function p(e) {
         (S = (0, r.yK)([d.A], () =>
             Array.from(T).filter((e) => {
                 let t = d.A.getStatus(e);
-                return null !== t && [f.cl.OFFLINE, f.cl.INVISIBLE].includes(t);
+                return null !== t && [h.cl.OFFLINE, h.cl.INVISIBLE].includes(t);
             }),
         )),
-        (O = i.useMemo(() => {
+        (R = i.useMemo(() => {
             let e = new Set(S);
             return p?.filter((t) => !(0, _.JM)(t) || !e.has(t.author_id));
         }, [p, S]))

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     _P: "avatarDecorationPreview__9baf3",
     xC: "profileEffectPreview__9baf3",
     pI: "profileFramePreview__9baf3",

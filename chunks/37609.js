@@ -1,8 +1,8 @@
-var r = n(681447),
-    i = 1 / 0;
+var i = n(681447),
+    r = 1 / 0;
 e.exports = function (e) {
     return e
-        ? (e = r(e)) === i || e === -i
+        ? (e = i(e)) === r || e === -r
             ? (e < 0 ? -1 : 1) * 17976931348623157e292
             : e == e
               ? e

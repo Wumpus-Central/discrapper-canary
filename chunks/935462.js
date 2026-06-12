@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { $m: () => w, Dc: () => U, EO: () => D, WM: () => b, jl: () => M, rI: () => v, rQ: () => L, s_: () => P });
-var r,
-    i,
+n.d(t, { $m: () => w, Dc: () => x, EO: () => D, WM: () => b, jl: () => M, rI: () => R, rQ: () => L, s_: () => P });
+var i,
+    r,
     s = n(627968),
     a = n(64700),
     o = n(503698),
     l = n.n(o),
-    u = n(517738),
-    d = n(110259),
-    c = n(615300),
+    u = n(922139),
+    c = n(562708),
+    d = n(615300),
     _ = n(789645),
-    f = n(844222),
-    E = n(717421),
-    h = n(187322),
-    p = n(599319),
+    h = n(844222),
+    f = n(717421),
+    p = n(187322),
+    E = n(689175),
     m = n(475825),
     g = n(862482),
     A = n(305866),
@@ -22,62 +22,62 @@ var r,
     S = n(235986),
     y = n(231723),
     N = n(818348),
-    O = n(985018),
-    R = n(889277),
-    v = (((r = {}).SMALL = "small"), (r.MEDIUM = "medium"), (r.LARGE = "large"), (r.DYNAMIC = "dynamic"), r);
-let C = Object.freeze({ small: R.EX, medium: R.Y, large: R.as, dynamic: null });
-var b = (((i = {}).DEFAULT = "default"), (i.SUBTLE = "subtle"), i);
+    v = n(375708),
+    C = n(889277),
+    R = (((i = {}).SMALL = "small"), (i.MEDIUM = "medium"), (i.LARGE = "large"), (i.DYNAMIC = "dynamic"), i);
+let O = Object.freeze({ small: C.EX, medium: C.Y, large: C.as, dynamic: null });
+var b = (((r = {}).DEFAULT = "default"), (r.SUBTLE = "subtle"), r);
 function D(e) {
     let {
             transitionState: t,
             children: n,
-            size: r = "small",
-            role: i = "dialog",
+            size: i = "small",
+            role: r = "dialog",
             className: o,
             fullscreenOnMobile: _ = !0,
-            hideShadow: p = !1,
+            hideShadow: E = !1,
             onAnimationEnd: m = N.tE,
             returnRef: g,
             animation: I = "default",
             parentComponent: S,
-            ...O
+            ...v
         } = e,
-        v = t === y.ip.ENTERING || t === y.ip.ENTERED;
+        R = t === y.ip.ENTERING || t === y.ip.ENTERED;
     a.useContext(T.A)({
-        type: d.ImpressionTypes.PAGE,
-        name: d.ImpressionNames.MODAL_ROOT_LEGACY,
+        type: c.ImpressionTypes.PAGE,
+        name: c.ImpressionNames.MODAL_ROOT_LEGACY,
         properties: { variant: S },
     });
-    let { reducedMotion: b } = a.useContext(f.C),
-        D = (0, E.z)(
+    let { reducedMotion: b } = a.useContext(h.C),
+        D = (0, f.z)(
             {
-                opacity: +!!v,
-                transform: v || b.enabled || "subtle" === I ? "scale(1)" : "scale(0.7)",
-                config: { duration: 200, easing: c.A.Easing.out(c.A.Easing.quad), clamp: !0 },
+                opacity: +!!R,
+                transform: R || b.enabled || "subtle" === I ? "scale(1)" : "scale(0.7)",
+                config: { duration: 200, easing: d.A.Easing.out(d.A.Easing.quad), clamp: !0 },
                 onRest: m,
             },
             "animate-always",
         ),
         L = a.useRef(null),
-        w = null != O["aria-label"],
-        M = null != O["aria-labelledby"],
+        w = null != v["aria-label"],
+        M = null != v["aria-labelledby"],
         P = a.useId(),
-        U = O["aria-labelledby"] ?? P,
-        k = a.useMemo(() => ({ headerId: U, headerIdIsManaged: M }), [U, M]);
+        x = v["aria-labelledby"] ?? P,
+        k = a.useMemo(() => ({ headerId: x, headerIdIsManaged: M }), [x, M]);
     return (0, s.jsx)(y.CP.Provider, {
         value: k,
         children: (0, s.jsx)(A.l, {
-            className: R.Gg,
-            role: i,
+            className: C.Gg,
+            role: r,
             returnRef: g,
-            impressionType: d.ImpressionTypes.MODAL,
+            impressionType: c.ImpressionTypes.MODAL,
             "aria-labelledby": w ? void 0 : k.headerId,
-            ...O,
+            ...v,
             children: (0, s.jsx)(u.animated.div, {
-                className: l()(o, R.zr, C[r], { [R.z]: _, [R.vl]: !p }),
+                className: l()(o, C.zr, O[i], { [C.z]: _, [C.vl]: !E }),
                 ref: L,
                 style: D,
-                children: (0, s.jsx)(h.xp, { containerRef: L, children: n }),
+                children: (0, s.jsx)(p.xp, { containerRef: L, children: n }),
             }),
         }),
     });
@@ -91,27 +91,27 @@ function L(e) {
         justify: e.justify ?? S.A.Justify.START,
         align: e.align ?? S.A.Align.CENTER,
         wrap: e.wrap ?? S.A.Wrap.NO_WRAP,
-        className: l()(R.wx, e.className, { [R.me]: e.separator ?? !0 }),
+        className: l()(C.wx, e.className, { [C.me]: e.separator ?? !0 }),
         id: n ? void 0 : t,
         children: e.children,
     });
 }
 function w(e) {
-    let { className: t, children: n, scrollerRef: r, scrollbarType: i, ...a } = e,
+    let { className: t, children: n, scrollerRef: i, scrollbarType: r, ...a } = e,
         o = (function (e) {
             switch (e ?? "thin") {
                 case "auto":
-                    return p.Gt;
+                    return E.Gt;
                 case "none":
-                    return p.zC;
+                    return E.zC;
                 default:
-                    return p.Ch;
+                    return E.Ch;
             }
-        })(i);
+        })(r);
     return (0, s.jsx)(o, {
         "data-migration-pending": !0,
-        className: l()(R.Qs, t),
-        ref: r,
+        className: l()(C.Qs, t),
+        ref: i,
         ...a,
         children: (0, s.jsx)(I.F, { children: n }),
     });
@@ -124,7 +124,7 @@ function M(e) {
         justify: e.justify ?? S.A.Justify.START,
         align: e.align ?? S.A.Align.STRETCH,
         wrap: e.wrap ?? S.A.Wrap.NO_WRAP,
-        className: l()(R.qr, e.className, { [R.h0]: e.separator ?? !0 }),
+        className: l()(C.qr, e.className, { [C.h0]: e.separator ?? !0 }),
         children: (0, s.jsx)(I.F, { children: e.children }),
     });
 }
@@ -132,16 +132,16 @@ function P(e) {
     return (0, s.jsx)(g.$n, {
         "data-migration-pending": !0,
         focusProps: e.focusProps,
-        "aria-label": O.intl.string(O.t.cpT0Cq),
+        "aria-label": v.intl.string(v.t.cpT0Cq),
         look: g.$n.Looks.BLANK,
         size: g.$n.Sizes.NONE,
         onClick: e.onClick,
-        innerClassName: l()(e.innerClassName, { [R.Xk]: e.withCircleBackground }),
-        className: l()(e.className, { [R.zB]: e.hideOnFullscreen, [R.VN]: !e.withCircleBackground }),
-        children: (0, s.jsx)(_.P, { size: "md", color: "currentColor", className: l()(e.innerClassName, R.ut) }),
+        innerClassName: l()(e.innerClassName, { [C.Xk]: e.withCircleBackground }),
+        className: l()(e.className, { [C.zB]: e.hideOnFullscreen, [C.VN]: !e.withCircleBackground }),
+        children: (0, s.jsx)(_.P, { size: "md", color: "currentColor", className: l()(e.innerClassName, C.ut) }),
     });
 }
-function U(e) {
-    let { className: t, scrollerRef: n, ...r } = e;
-    return (0, s.jsx)(m.OZ, { className: t, ref: n, ...r });
+function x(e) {
+    let { className: t, scrollerRef: n, ...i } = e;
+    return (0, s.jsx)(m.OZ, { className: t, ref: n, ...i });
 }

@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, {
-    Bo: () => C,
+    Bo: () => v,
     Cu: () => D,
     $F: () => o.LG,
-    TP: () => v,
-    oh: () => h,
+    TP: () => C,
+    oh: () => f,
     ni: () => u,
-    IA: () => R,
+    IA: () => O,
     bG: () => 50035,
     Wl: () => c,
 }),
@@ -76,8 +76,8 @@ class c {
 }
 var d = n(264572).Buffer;
 let _ = new a.Vy("HTTPUtils"),
-    f = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
-class h extends Error {
+    h = new Set([502, 504, 507, 598, 599, 522, 523, 524]);
+class f extends Error {
     method;
     url;
     ok;
@@ -147,11 +147,11 @@ function p(e, t, n, i, a) {
                 (t.retried = (null != t.retried ? t.retried : 0) + 1),
                 t.backoff.fail(() => b(t.url).then(() => p(e, t, n, i, a)));
         },
-        c = O?.prepareRequest?.(o);
+        c = R?.prepareRequest?.(o);
     o.ok((e) => null != e.status),
         o.then(
             (r) => {
-                if (null != t.retries && t.retries-- > 0 && f.has(r.status)) return l();
+                if (null != t.retries && t.retries-- > 0 && h.has(r.status)) return l();
                 let s = {
                     ok: r.ok,
                     headers: r.headers,
@@ -179,7 +179,7 @@ function p(e, t, n, i, a) {
                     _ = (e) => {
                         o || (i(e), a?.({ ok: !1, hasErr: !0, err: e }));
                     };
-                if (t?.interceptResponse?.(r, d, _) !== !0 && O?.interceptResponse?.(r, d, _, c) !== !0) {
+                if (t?.interceptResponse?.(r, d, _) !== !0 && R?.interceptResponse?.(r, d, _, c) !== !0) {
                     if (r.ok) n(s);
                     else {
                         if (t.oldFormErrors && s?.body?.code === 50035) {
@@ -188,7 +188,7 @@ function p(e, t, n, i, a) {
                         }
                         t.rejectWithError
                             ? i(
-                                  new h({
+                                  new f({
                                       method: e,
                                       url: t.url,
                                       ok: s.ok,
@@ -278,20 +278,20 @@ function A(e, t, n) {
 let I = A.bind(null, "get"),
     T = A.bind(null, "post"),
     S = A.bind(null, "put"),
-    N = A.bind(null, "patch"),
-    y = A.bind(null, "del"),
-    C = { get: I, post: T, put: S, patch: N, del: y };
+    y = A.bind(null, "patch"),
+    N = A.bind(null, "del"),
+    v = { get: I, post: T, put: S, patch: y, del: N };
 if (n.g.isServerRendering) {
     let e = (e, t) => Promise.resolve({ ok: !0, status: 200, headers: {}, body: null, text: "" });
-    (I = e), (T = e), (S = e), (N = e), (y = e);
+    (I = e), (T = e), (S = e), (y = e), (N = e);
 }
-function v() {
+function C() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     return "https:" + window.GLOBAL_ENV.API_ENDPOINT + (e ? `/v${window.GLOBAL_ENV.API_VERSION}` : "");
 }
-let O = null;
-function R(e) {
-    O = e;
+let R = null;
+function O(e) {
+    R = e;
 }
 let b = () => Promise.resolve();
 function D(e) {

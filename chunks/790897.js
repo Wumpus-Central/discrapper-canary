@@ -1,25 +1,25 @@
 e.exports = function (e) {
     let t = "foreach do while for if from to step else on-error and or not in",
-        a = "true false yes no nothing nil null",
-        n = { className: "variable", variants: [{ begin: /\$[\w\d#@][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }] },
+        n = "true false yes no nothing nil null",
+        i = { className: "variable", variants: [{ begin: /\$[\w\d#@][\w\d_]*/ }, { begin: /\$\{(.*?)\}/ }] },
         r = {
             className: "string",
             begin: /"/,
             end: /"/,
             contains: [
                 e.BACKSLASH_ESCAPE,
-                n,
+                i,
                 { className: "variable", begin: /\$\(/, end: /\)/, contains: [e.BACKSLASH_ESCAPE] },
             ],
         },
-        i = { className: "string", begin: /'/, end: /'/ };
+        s = { className: "string", begin: /'/, end: /'/ };
     return {
         name: "MikroTik RouterOS script",
         aliases: ["mikrotik"],
         case_insensitive: !0,
         keywords: {
             $pattern: /:?[\w-]+/,
-            literal: a,
+            literal: n,
             keyword:
                 t +
                 " :" +
@@ -40,8 +40,8 @@ e.exports = function (e) {
             },
             e.COMMENT("^#", "$"),
             r,
+            s,
             i,
-            n,
             {
                 begin: /[\w-]+=([^\s{}[\]()>]+)/,
                 relevance: 0,
@@ -54,9 +54,9 @@ e.exports = function (e) {
                         relevance: 0,
                         contains: [
                             r,
+                            s,
                             i,
-                            n,
-                            { className: "literal", begin: "\\b(" + a.split(" ").join("|") + ")\\b" },
+                            { className: "literal", begin: "\\b(" + n.split(" ").join("|") + ")\\b" },
                             { begin: /("[^"]*"|[^\s{}[\]]+)/ },
                         ],
                     },

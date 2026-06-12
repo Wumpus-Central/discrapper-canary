@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     gJ: "errorMessage_d332d2",
     lR: "createAccountTemplateHeader_d332d2",
     y0: "authBlock_d332d2",

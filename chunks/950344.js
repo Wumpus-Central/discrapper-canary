@@ -1,35 +1,35 @@
-n.d(t, { A: () => A });
-var i = n(64700),
-    l = n(17928),
-    s = n(58149),
-    r = n(688810),
-    a = n(976860),
-    o = n(954571),
-    d = n(300233),
-    c = n(636194),
-    u = n(700206),
-    h = n(652215);
-function A(e) {
-    let { guildId: t, groupListingId: n, location: A, relevantSubscriptionListingIds: _ } = e,
-        g = (0, d.X)("useTrackRoleSubscriptionUpsellAnalytics"),
-        { activeSubscription: m } = (0, u.A)(n),
-        p = null != m,
-        f = (0, l.yK)([c.A], () => (_ ?? []).filter((e) => c.A.getSubscriptionListing(e)?.published === !0), [_]),
-        { analyticsLocations: E } = (0, r.Ay)((0, a.UC)() ?? []),
-        C = i.useRef(!1);
-    i.useEffect(() => {
-        g &&
-            null != n &&
-            null != f &&
-            !C.current &&
-            ((C.current = !0),
-            o.default.track(h.HAw.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
-                role_subscription_group_listing_id: n,
-                role_subscription_listing_ids: f,
-                is_premium_member: p,
+t.d(s, { A: () => d });
+var e = t(64700),
+    u = t(17928),
+    r = t(95561),
+    l = t(688810),
+    c = t(976860),
+    n = t(174459),
+    _ = t(300233),
+    p = t(636194),
+    o = t(700206),
+    a = t(652215);
+function d(i) {
+    let { guildId: s, groupListingId: t, location: d, relevantSubscriptionListingIds: b } = i,
+        A = (0, _.X)("useTrackRoleSubscriptionUpsellAnalytics"),
+        { activeSubscription: k } = (0, o.A)(t),
+        f = null != k,
+        h = (0, u.yK)([p.A], () => (b ?? []).filter((i) => p.A.getSubscriptionListing(i)?.published === !0), [b]),
+        { analyticsLocations: E } = (0, l.Ay)((0, c.UC)() ?? []),
+        S = e.useRef(!1);
+    e.useEffect(() => {
+        A &&
+            null != t &&
+            null != h &&
+            !S.current &&
+            ((S.current = !0),
+            n.default.track(a.HAw.ROLE_SUBSCRIPTION_LISTING_UPSELL_PAGE_VIEWED, {
+                role_subscription_group_listing_id: t,
+                role_subscription_listing_ids: h,
+                is_premium_member: f,
                 location_stack: E,
-                location: A,
-                ...(0, s.H$)(t),
+                location: d,
+                ...(0, r.H$)(s),
             }));
-    }, [t, n, g, A, f, p, E]);
+    }, [s, t, A, d, h, f, E]);
 }

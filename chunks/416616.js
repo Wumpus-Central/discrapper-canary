@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(981737);
-let i = {
+n.d(t, { A: () => r });
+var i = n(981737);
+let r = {
     ordinalNumber: function (e, t) {
         var n = Number(e),
-            r = n % 100;
-        if (r > 20 || r < 10)
-            switch (r % 10) {
+            i = n % 100;
+        if (i > 20 || i < 10)
+            switch (i % 10) {
                 case 1:
                     return n + "st";
                 case 2:
@@ -16,11 +16,11 @@ let i = {
             }
         return n + "th";
     },
-    era: (0, r.A)({
+    era: (0, i.A)({
         values: { narrow: ["B", "A"], abbreviated: ["BC", "AD"], wide: ["Before Christ", "Anno Domini"] },
         defaultWidth: "wide",
     }),
-    quarter: (0, r.A)({
+    quarter: (0, i.A)({
         values: {
             narrow: ["1", "2", "3", "4"],
             abbreviated: ["Q1", "Q2", "Q3", "Q4"],
@@ -31,7 +31,7 @@ let i = {
             return e - 1;
         },
     }),
-    month: (0, r.A)({
+    month: (0, i.A)({
         values: {
             narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"],
             abbreviated: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
@@ -52,7 +52,7 @@ let i = {
         },
         defaultWidth: "wide",
     }),
-    day: (0, r.A)({
+    day: (0, i.A)({
         values: {
             narrow: ["S", "M", "T", "W", "T", "F", "S"],
             short: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
@@ -61,7 +61,7 @@ let i = {
         },
         defaultWidth: "wide",
     }),
-    dayPeriod: (0, r.A)({
+    dayPeriod: (0, i.A)({
         values: {
             narrow: {
                 am: "a",

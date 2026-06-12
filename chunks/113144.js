@@ -10,15 +10,15 @@ var t = {
         type: !0,
     },
     n = { name: !0, length: !0, prototype: !0, caller: !0, arguments: !0, arity: !0 },
-    r = "function" == typeof Object.getOwnPropertySymbols;
-e.exports = function (e, i, a) {
-    if ("string" != typeof i) {
-        var s = Object.getOwnPropertyNames(i);
-        r && (s = s.concat(Object.getOwnPropertySymbols(i)));
-        for (var o = 0; o < s.length; ++o)
-            if (!t[s[o]] && !n[s[o]] && (!a || !a[s[o]]))
+    i = "function" == typeof Object.getOwnPropertySymbols;
+e.exports = function (e, r, s) {
+    if ("string" != typeof r) {
+        var a = Object.getOwnPropertyNames(r);
+        i && (a = a.concat(Object.getOwnPropertySymbols(r)));
+        for (var o = 0; o < a.length; ++o)
+            if (!t[a[o]] && !n[a[o]] && (!s || !s[a[o]]))
                 try {
-                    e[s[o]] = i[s[o]];
+                    e[a[o]] = r[a[o]];
                 } catch (e) {}
     }
     return e;

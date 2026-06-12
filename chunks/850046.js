@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p, M: () => h });
+n.d(t, { A: () => p, M: () => f });
 var i = n(64700),
     r = n(205338),
     s = n(87075),
@@ -37,14 +37,14 @@ let _ = {
               };
     },
 };
-function f(e, t, n, i) {
+function h(e, t, n, i) {
     let r = t.getIconURL(16);
     if (null == r) return null;
     let s = _[e.widgetTemplateId](n, i);
     return null == s ? null : { application: { id: t.id, name: t.name, icon: r }, ...s };
 }
-function h(e, t, n, i) {
-    return f(e, t, n, i);
+function f(e, t, n, i) {
+    return h(e, t, n, i);
 }
 function p(e, t) {
     let n = (0, a.A)(t),
@@ -60,7 +60,7 @@ function p(e, t) {
                             i = n.find((t) => t?.id === e),
                             a = s?.find((t) => t.application_id === e)?.profile;
                         if (null == t || null == i || null == a) return null;
-                        let o = f(t, i, a, c);
+                        let o = h(t, i, a, c);
                         return null == o ? null : [e, o];
                     })
                     .filter(u.Vq),

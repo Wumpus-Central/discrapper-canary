@@ -1,64 +1,64 @@
-n.r(t), n.d(t, { default: () => f });
-var i = n(627968),
-    a = n(64700),
-    l = n(861672),
-    s = n(477782),
-    r = n(265872),
-    o = n(306471),
-    c = n(189252),
-    d = n(538064),
-    u = n(786574),
-    g = n(641616),
-    m = n(616621);
-function _(e) {
+i.r(t), i.d(t, { default: () => x });
+var n = i(627968),
+    l = i(64700),
+    s = i(980707),
+    a = i(477782),
+    r = i(922016),
+    c = i(306471),
+    u = i(189252),
+    o = i(538064),
+    d = i(786574),
+    g = i(985224),
+    m = i(949091);
+function f(e) {
     let { onClose: t } = e,
-        n = (0, g.x)(),
-        a = (0, u.N)(n, d.Ft),
+        i = (0, g.x)(),
+        l = (0, d.N)(i, o.Ft),
         r = (0, m.A)();
-    return (0, i.jsxs)(l.W, {
+    return (0, n.jsxs)(s.W, {
         "data-menu-migrated": !0,
         onSelect: () => {},
         navId: "devtools-popout",
         variant: "fixed",
         onClose: t,
         "aria-label": "DevTools Actions",
-        children: [a, (0, i.jsx)(s.rX, { "aria-label": "Playgrounds", children: r })],
+        children: [l, (0, n.jsx)(a.rX, { "aria-label": "Playgrounds", children: r })],
     });
 }
-function f(e) {
+function x(e) {
     let { focusSectionProps: t } = e,
-        [n, l] = a.useState(!1),
-        [s, u] = a.useState(0),
-        g = a.useRef(null),
+        [i, s] = l.useState(!1),
+        [a, d] = l.useState(0),
+        g = l.useRef(null),
         m = (e) => {
-            clearTimeout(s),
-                u(
+            clearTimeout(a),
+                d(
                     setTimeout(() => {
-                        l(e);
+                        s(e);
                     }, 100),
                 );
         };
-    return (0, i.jsx)("div", {
+    return (0, n.jsx)("div", {
         onMouseEnter: () => m(!0),
         onMouseLeave: () => m(!1),
-        children: (0, i.jsx)(r.Y, {
+        children: (0, n.jsx)(r.Y, {
             targetElementRef: g,
-            shouldShow: n,
+            shouldShow: i,
             animation: r.Y.Animation.NONE,
             position: "bottom",
             align: "right",
             autoInvert: !1,
-            onRequestOpen: () => l(!0),
-            onRequestClose: () => l(!1),
-            renderPopout: () => (0, i.jsx)(_, { onClose: () => l(!1) }),
-            children: (e, n) => {
-                let { isShown: a } = n;
-                return (0, i.jsx)(c.A, {
+            onRequestOpen: () => s(!0),
+            onRequestClose: () => s(!1),
+            renderPopout: () => (0, n.jsx)(f, { onClose: () => s(!1) }),
+            children: (e, i) => {
+                let { isShown: l } = i;
+                return (0, n.jsx)(u.A, {
                     ref: g,
-                    onClick: () => (0, d.Ft)(),
-                    icon: o.V,
+                    onClick: () => (0, o.Ft)(),
+                    icon: c.V,
                     "aria-label": "DevTools",
-                    selected: a,
+                    selected: l,
                     ...t,
                 });
             },

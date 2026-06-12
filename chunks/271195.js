@@ -11,15 +11,15 @@ var r = n(503698),
     c = n(534514),
     d = n(235986),
     _ = n(282413),
-    f = n(763827),
-    h = n(6155),
+    h = n(763827),
+    f = n(6155),
     p = n(919706),
     E = n(375708),
     m = n(27600);
 function g(e) {
     let { title: t, onJumpToChannel: n, idle: r, preventIdleComponent: s } = e,
-        o = (0, a.bG)([f.A], () => f.A.getChannelId()),
-        d = null != o ? (0, i.jsx)(h.A, { voiceChannelId: o, idle: r }) : null;
+        o = (0, a.bG)([h.A], () => h.A.getChannelId()),
+        d = null != o ? (0, i.jsx)(f.A, { voiceChannelId: o, idle: r }) : null;
     return (0, i.jsxs)(s, {
         className: m.Nc,
         children: [
@@ -56,8 +56,8 @@ function A(e) {
         onActive: l,
         onForceIdle: u,
         renderBottomLeftControls: c,
-        renderBottomRightControls: f,
-        screenMessage: h,
+        renderBottomRightControls: h,
+        screenMessage: f,
         hideControls: E = !1,
         className: A,
         innerClassName: I,
@@ -72,7 +72,7 @@ function A(e) {
         onDoubleClick: r,
         children: [
             (0, i.jsx)(o.F, { children: (0, i.jsx)(_.o, { className: I, children: t }, a) }),
-            null != h ? (0, i.jsx)(p.A, { size: "small", ...h }) : null,
+            null != f ? (0, i.jsx)(p.A, { size: "small", ...f }) : null,
             !E &&
                 (0, i.jsxs)("div", {
                     className: s()(m._v, T, "theme-dark"),
@@ -98,7 +98,7 @@ function A(e) {
                                     justify: d.A.Justify.END,
                                     basis: "50%",
                                     align: d.A.Align.CENTER,
-                                    children: f?.(),
+                                    children: h?.(),
                                 }),
                             ],
                         }),

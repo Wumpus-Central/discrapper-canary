@@ -26,21 +26,21 @@ var u = (t.Checkboard = function (e) {
         r = e.grey,
         s = e.size,
         u = e.renderers,
-        c = e.borderRadius,
-        p = e.boxShadow,
-        d = e.children,
-        f = (0, i.default)({
+        p = e.borderRadius,
+        c = e.boxShadow,
+        f = e.children,
+        d = (0, i.default)({
             default: {
                 grid: {
-                    borderRadius: c,
-                    boxShadow: p,
+                    borderRadius: p,
+                    boxShadow: c,
                     absolute: "0px 0px 0px 0px",
                     background: "url(" + l.get(t, r, s, u.canvas) + ") center left",
                 },
             },
         });
-    return (0, o.isValidElement)(d)
-        ? a.default.cloneElement(d, n({}, d.props, { style: n({}, d.props.style, f.grid) }))
-        : a.default.createElement("div", { style: f.grid });
+    return (0, o.isValidElement)(f)
+        ? a.default.cloneElement(f, n({}, f.props, { style: n({}, f.props.style, d.grid) }))
+        : a.default.createElement("div", { style: d.grid });
 });
 (u.defaultProps = { size: 8, white: "transparent", grey: "rgba(0,0,0,.08)", renderers: {} }), (t.default = u);

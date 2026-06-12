@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => D, CP: () => j, X$: () => G, _k: () => p, e_: () => T, kP: () => O });
+n.d(e, { Ay: () => f, CP: () => G, X$: () => L, _k: () => p, e_: () => O, kP: () => x });
 var i = n(228366),
     l = n(157559),
     s = n(181658),
@@ -8,59 +8,59 @@ var i = n(228366),
     o = n(961973),
     c = n(608401),
     u = n(529942),
-    m = n(209700),
-    N = n(734057),
-    h = n(71393),
-    I = n(403362),
-    E = n(997509),
-    g = n(863694),
-    A = n(107795),
-    S = n(400812),
-    _ = n(746080),
-    f = n(539916),
-    x = n(985018);
-function T(e) {
-    i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_STEP", step: e });
+    E = n(209700),
+    I = n(734057),
+    N = n(71393),
+    S = n(403362),
+    m = n(468689),
+    _ = n(863694),
+    g = n(107795),
+    h = n(400812),
+    T = n(746080),
+    A = n(539916),
+    D = n(375708);
+function O(t) {
+    i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_STEP", step: t });
 }
-function D(e) {
-    null != e && i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED", upsellType: e });
+function f(t) {
+    null != t && i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_EDUCATION_UPSELL_DISMISSED", upsellType: t });
 }
-async function j(e, t) {
-    let n = a.A.getEnabled(e),
-        r = Array.from(g.A.editedDefaultChannelIds).filter((e) => null != N.A.getChannel(e)),
-        [d] = (0, o.ui)(e, [...r]);
-    if (n && t === f.SD.ONBOARDING_DEFAULT && d.length < f.Kd)
-        return void l.A.show({ title: x.intl.string(x.t.iLdiqY), body: x.intl.string(x.t.JOT74c) });
+async function G(t, e) {
+    let n = a.A.getEnabled(t),
+        r = Array.from(_.A.editedDefaultChannelIds).filter((t) => null != I.A.getChannel(t)),
+        [d] = (0, o.ui)(t, [...r]);
+    if (n && e === A.SD.ONBOARDING_DEFAULT && d.length < A.Kd)
+        return void l.A.show({ title: D.intl.string(D.t.iLdiqY), body: D.intl.string(D.t.JOT74c) });
     try {
-        await (0, A.YN)(e, { mode: t });
+        await (0, g.YN)(t, { mode: e });
     } catch (n) {
-        let { fieldName: e, error: t } = new s.A(n).getAnyErrorMessageAndField() ?? {};
-        l.A.show({ title: x.intl.string(x.t.iLdiqY), body: [e, t].filter(I.Vq).join(": ") });
+        let { fieldName: t, error: e } = new s.A(n).getAnyErrorMessageAndField() ?? {};
+        l.A.show({ title: D.intl.string(D.t.iLdiqY), body: [t, e].filter(S.Vq).join(": ") });
     }
-    i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_SET_MODE", guildId: e, mode: t });
+    i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_SET_MODE", guildId: t, mode: e });
 }
-function p(e, t) {
-    let n = S.kd.findIndex((e) => e === t);
-    -1 !== n && n !== S.kd.length - 1 && T(S.kd[n + 1]);
+function p(t, e) {
+    let n = h.kd.findIndex((t) => t === e);
+    -1 !== n && n !== h.kd.length - 1 && O(h.kd[n + 1]);
 }
-function O(e, t) {
-    let n = S.kd.findIndex((e) => e === t);
-    -1 !== n && 0 !== n && T(S.kd[n - 1]);
+function x(t, e) {
+    let n = h.kd.findIndex((t) => t === e);
+    -1 !== n && 0 !== n && O(h.kd[n - 1]);
 }
-async function G(e) {
-    let t = h.A.getGuild(e);
-    null != t &&
-        (E.A.close(),
-        (0, u.Tk)(t.id, {
-            type: m._.NEW_MEMBER,
+async function L(t) {
+    let e = N.A.getGuild(t);
+    null != e &&
+        (m.A.close(),
+        (0, u.Tk)(e.id, {
+            type: E._.NEW_MEMBER,
             roles: {},
             optInChannels: new Set(),
             optInEnabled: !1,
             onboardingResponses: new Set(),
             onboardingEnabled: !0,
-            memberOptions: { isPending: (0, r.Qd)(t), flags: 0 },
+            memberOptions: { isPending: (0, r.Qd)(e), flags: 0 },
         }),
-        d.Ay.resetOnboardingStatus(t.id),
-        (0, c.Jg)(t.id),
-        await (0, c.default)({ guildId: t.id, isPreview: !0, returnChannelId: _.VV.GUILD_HOME }));
+        d.Ay.resetOnboardingStatus(e.id),
+        (0, c.Jg)(e.id),
+        await (0, c.default)({ guildId: e.id, isPreview: !0, returnChannelId: T.VV.GUILD_HOME }));
 }

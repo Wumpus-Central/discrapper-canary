@@ -115,27 +115,27 @@ class y extends h {
         super(...e), (this.identifier = "coptic");
     }
 }
-var p = t(526531);
-let g = 765433;
+var g = t(526531);
+let p = 765433;
 function f(e) {
-    return 7 > (0, p.z)(7 * e + 1, 19);
+    return 7 > (0, g.z)(7 * e + 1, 19);
 }
 function v(e) {
     let a = Math.floor((235 * e - 234) / 19),
         t = 29 * a + Math.floor((12084 + 13753 * a) / 25920);
-    return 3 > (0, p.z)(3 * (t + 1), 7) && (t += 1), t;
+    return 3 > (0, g.z)(3 * (t + 1), 7) && (t += 1), t;
 }
 function b(e) {
     let a, t;
     return v(e) + ((a = v(e - 1)), (t = v(e)), v(e + 1) - t == 356 ? 2 : +(t - a == 382));
 }
-function R(e) {
+function $(e) {
     return b(e + 1) - b(e);
 }
-function $(e, a) {
+function R(e, a) {
     if ((a >= 6 && !f(e) && a++, 4 === a || 7 === a || 9 === a || 11 === a || 13 === a)) return 29;
     let t = (function (e) {
-        let a = R(e);
+        let a = $(e);
         switch ((a > 380 && (a -= 30), a)) {
             case 353:
                 return 0;
@@ -150,29 +150,29 @@ function $(e, a) {
 class w {
     fromJulianDay(e) {
         let a = e - 347997,
-            t = Math.floor((((25920 * a) / g) * 19 + 234) / 235) + 1,
+            t = Math.floor((((25920 * a) / p) * 19 + 234) / 235) + 1,
             n = b(t),
             r = Math.floor(a - n);
         for (; r < 1; ) r = Math.floor(a - (n = b(--t)));
         let l = 1,
             o = 0;
-        for (; o < r; ) (o += $(t, l)), l++;
-        let u = r - (o -= $(t, --l));
+        for (; o < r; ) (o += R(t, l)), l++;
+        let u = r - (o -= R(t, --l));
         return new (0, i.ng)(this, t, l, u);
     }
     toJulianDay(e) {
         let a = b(e.year);
-        for (let t = 1; t < e.month; t++) a += $(e.year, t);
+        for (let t = 1; t < e.month; t++) a += R(e.year, t);
         return a + e.day + 347997;
     }
     getDaysInMonth(e) {
-        return $(e.year, e.month);
+        return R(e.year, e.month);
     }
     getMonthsInYear(e) {
         return f(e.year) ? 13 : 12;
     }
     getDaysInYear(e) {
-        return R(e.year);
+        return $(e.year);
     }
     getYearsInEra() {
         return 9999;
@@ -373,14 +373,14 @@ let A = [
     ],
     O = [1867, 1911, 1925, 1988, 2018],
     N = ["meiji", "taisho", "showa", "heisei", "reiwa"];
-function Z(e) {
+function z(e) {
     let a = A.findIndex(
         ([a, t, n]) =>
             !!(e.year < a) || (e.year === a && !!(e.month < t)) || (e.year === a && e.month === t && !!(e.day < n)),
     );
     return -1 === a ? A.length - 1 : 0 === a ? 0 : a - 1;
 }
-function z(e) {
+function Z(e) {
     let a = O[N.indexOf(e.era)];
     if (!a) throw Error("Unknown era: " + e.era);
     return new (0, i.ng)(e.year + a, e.month, e.day);
@@ -388,15 +388,15 @@ function z(e) {
 class U extends l.FG {
     fromJulianDay(e) {
         let a = super.fromJulianDay(e),
-            t = Z(a);
+            t = z(a);
         return new (0, i.ng)(this, N[t], a.year - O[t], a.month, a.day);
     }
     toJulianDay(e) {
-        return super.toJulianDay(z(e));
+        return super.toJulianDay(Z(e));
     }
     balanceDate(e) {
-        let a = z(e),
-            t = Z(a);
+        let a = Z(e),
+            t = z(a);
         N[t] !== e.era && ((e.era = N[t]), (e.year = a.year - O[t])), this.constrainDate(e);
     }
     constrainDate(e) {
@@ -425,7 +425,7 @@ class U extends l.FG {
         return (e.month < n[1] || (e.month === n[1] && e.day < n[2])) && r++, r;
     }
     getDaysInMonth(e) {
-        return super.getDaysInMonth(z(e));
+        return super.getDaysInMonth(Z(e));
     }
     getMinimumMonthInYear(e) {
         let a = j(e);
@@ -460,7 +460,7 @@ class L {
         return 12;
     }
     getDaysInMonth(e) {
-        return e.month <= 6 ? 31 : e.month <= 11 || 8 > (0, p.z)(25 * e.year + 11, 33) ? 30 : 29;
+        return e.month <= 6 ? 31 : e.month <= 11 || 8 > (0, g.z)(25 * e.year + 11, 33) ? 30 : 29;
     }
     getEras() {
         return ["AP"];

@@ -1,21 +1,21 @@
 "use strict";
 var t;
 (e.exports.timeout = function (e, n) {
-    var r,
-        i = new t();
+    var i,
+        r = new t();
     return Promise.race([
         e,
         new Promise(function (e, t) {
-            r = setTimeout(function () {
-                t(i);
+            i = setTimeout(function () {
+                t(r);
             }, n);
         }),
     ]).then(
         function (e) {
-            return clearTimeout(r), e;
+            return clearTimeout(i), e;
         },
         function (e) {
-            throw (clearTimeout(r), e);
+            throw (clearTimeout(i), e);
         },
     );
 }),

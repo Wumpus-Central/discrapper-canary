@@ -1,44 +1,44 @@
-i.d(t, { default: () => x });
-var l = i(627968),
-    s = i(64700),
-    n = i(732159),
-    a = i(691540),
-    r = i(857250),
-    c = i(97483),
-    d = i(253932),
+i.d(e, { default: () => h });
+var n = i(627968),
+    l = i(64700),
+    r = i(732159),
+    s = i(691540),
+    a = i(857250),
+    d = i(97483),
+    c = i(885386),
     o = i(365258),
     u = i(929120),
-    m = i(481045),
-    h = i(985018);
-function x(e) {
+    C = i(481045),
+    f = i(375708);
+function h(t) {
     let {
-            direction: t,
+            direction: e,
             affectedGuildIds: i,
-            settingName: x,
+            settingName: h,
             mappedActivityValue: j,
-            onClose: v,
-            transitionState: f,
-        } = e,
-        g = t === o.AI.RESTRICTING,
-        { title: I, subtitle: A, confirmText: p, toastContent: _ } = (0, o.vz)(g, x),
-        C = (0, s.useMemo)(
+            onClose: x,
+            transitionState: p,
+        } = t,
+        v = e === o.AI.RESTRICTING,
+        { title: g, subtitle: k, confirmText: m, toastContent: S } = (0, o.vz)(v, h),
+        A = (0, l.useMemo)(
             () => () => {
-                d._Z.updateSetting(j), (0, o.gF)(t, i), (0, a.P0)((0, r.o)(_, c.Ck.SUCCESS));
+                c._Z.updateSetting(j), (0, o.gF)(e, i), (0, s.P0)((0, a.o)(S, d.Ck.SUCCESS));
             },
-            [j, t, i, _],
+            [j, e, i, S],
         ),
-        b = (0, s.useCallback)(() => {
-            v(), (0, m.L7)();
-        }, [v]);
-    return (0, l.jsx)(n.ConfirmModal, {
-        title: I,
-        subtitle: A,
-        confirmText: p,
-        cancelText: h.intl.string(h.t.X1rGEm),
+        I = (0, l.useCallback)(() => {
+            x(), (0, C.L7)();
+        }, [x]);
+    return (0, n.jsx)(r.ConfirmModal, {
+        title: g,
+        subtitle: k,
+        confirmText: m,
+        cancelText: f.intl.string(f.t.X1rGEm),
         variant: "primary",
-        onConfirm: C,
-        onClose: v,
-        transitionState: f,
-        children: (0, l.jsx)(u.n, { guildIds: i, direction: t, onClick: b }),
+        onConfirm: A,
+        onClose: x,
+        transitionState: p,
+        children: (0, n.jsx)(u.n, { guildIds: i, direction: e, onClick: I }),
     });
 }

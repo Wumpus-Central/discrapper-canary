@@ -10,8 +10,8 @@ var i = n(459016),
     c = n(522602),
     d = n(360161),
     _ = n(168186),
-    f = n(375708);
-let h = {
+    h = n(375708);
+let f = {
         [o.n4.SUB_COMMAND]: () => ({ success: !1 }),
         [o.n4.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
         [o.n4.BOOLEAN]: (e) => {
@@ -44,12 +44,12 @@ let h = {
                         if (void 0 !== t.maxLength && void 0 !== t.minLength && t.minLength === t.maxLength)
                             return {
                                 success: !1,
-                                error: f.intl.formatToPlainString(n.exactRangeErrorMessage, { value: m(t.minLength) }),
+                                error: h.intl.formatToPlainString(n.exactRangeErrorMessage, { value: m(t.minLength) }),
                             };
                         else if (void 0 !== t.maxLength && void 0 !== t.minLength)
                             return {
                                 success: !1,
-                                error: f.intl.formatToPlainString(n.rangeErrorMessage, {
+                                error: h.intl.formatToPlainString(n.rangeErrorMessage, {
                                     minimum: m(t.minLength),
                                     maximum: m(t.maxLength),
                                 }),
@@ -57,20 +57,20 @@ let h = {
                         else if (void 0 !== t.minLength)
                             return {
                                 success: !1,
-                                error: f.intl.formatToPlainString(n.minErrorMessage, { minimum: m(t.minLength) }),
+                                error: h.intl.formatToPlainString(n.minErrorMessage, { minimum: m(t.minLength) }),
                             };
                         else if (void 0 !== t.maxLength)
                             return {
                                 success: !1,
-                                error: f.intl.formatToPlainString(n.maxErrorMessage, { maximum: m(t.maxLength) }),
+                                error: h.intl.formatToPlainString(n.maxErrorMessage, { maximum: m(t.maxLength) }),
                             };
                     }
                     return { success: !0 };
                 })(r, t, {
-                    exactRangeErrorMessage: f.t["e+9/SY"],
-                    rangeErrorMessage: f.t.IE1sTh,
-                    minErrorMessage: f.t.rXAFQD,
-                    maxErrorMessage: f.t["ycEPx/"],
+                    exactRangeErrorMessage: h.t["e+9/SY"],
+                    rangeErrorMessage: h.t.IE1sTh,
+                    minErrorMessage: h.t.rXAFQD,
+                    maxErrorMessage: h.t["ycEPx/"],
                 });
                 if (!e.success) return e;
             }
@@ -85,7 +85,7 @@ let h = {
             let s = Number(i.normalizeNumericString(u.default.locale, r));
             return null == s || isNaN(s) || !Number.isInteger(s) || !Number.isSafeInteger(s)
                 ? { success: !1 }
-                : E(s, t, f.t["8Y5zsp"], f.t.CyRLmH, f.t["VD3Q+S"]);
+                : E(s, t, h.t["8Y5zsp"], h.t.CyRLmH, h.t["VD3Q+S"]);
         },
         [o.n4.NUMBER]: (e, t, n) => {
             a()(t.type === o.n4.NUMBER, "option type must match validator type");
@@ -96,7 +96,7 @@ let h = {
             let s = Number(i.normalizeNumericString(u.default.locale, r));
             return isNaN(s) || s > Number.MAX_SAFE_INTEGER || s < Number.MIN_SAFE_INTEGER
                 ? { success: !1 }
-                : E(s, t, f.t["8Y5zsp"], f.t.CyRLmH, f.t["VD3Q+S"]);
+                : E(s, t, h.t["8Y5zsp"], h.t.CyRLmH, h.t["VD3Q+S"]);
         },
         [o.n4.USER]: (e, t, n, i) => {
             if ("text" !== e.type) return { success: "userMention" === e.type };
@@ -142,31 +142,31 @@ function E(e, t, n, i, r) {
         if (null != t.maxValue && null != t.minValue)
             return {
                 success: !1,
-                error: f.intl.formatToPlainString(n, { minimum: m(t.minValue), maximum: m(t.maxValue) }),
+                error: h.intl.formatToPlainString(n, { minimum: m(t.minValue), maximum: m(t.maxValue) }),
             };
         else if (null != t.minValue)
-            return { success: !1, error: f.intl.formatToPlainString(i, { minimum: m(t.minValue) }) };
+            return { success: !1, error: h.intl.formatToPlainString(i, { minimum: m(t.minValue) }) };
         else if (null != t.maxValue)
-            return { success: !1, error: f.intl.formatToPlainString(r, { maximum: m(t.maxValue) }) };
+            return { success: !1, error: h.intl.formatToPlainString(r, { maximum: m(t.maxValue) }) };
     }
     return { success: !0 };
 }
 function m(e) {
-    return e.toLocaleString(f.intl.currentLocale, { useGrouping: !1 });
+    return e.toLocaleString(h.intl.currentLocale, { useGrouping: !1 });
 }
 var g = n(73510);
 function A(e) {
     let { option: t, content: n, guildId: s, channelId: a, allowEmptyValues: o, commandOrigin: l = r.iw.CHAT } = e,
         u = null != n ? (0, i.getString)({ content: n }, "content").trim() : "",
         c = t.required;
-    if (null == n) return c ? { success: !1, error: f.intl.string(f.t.JZJQL2) } : { success: !0 };
+    if (null == n) return c ? { success: !1, error: h.intl.string(h.t.JZJQL2) } : { success: !0 };
     if ("" === u)
         return o
             ? { success: !0 }
             : c
-              ? { success: !1, error: f.intl.string(f.t.JZJQL2) }
+              ? { success: !1, error: h.intl.string(h.t.JZJQL2) }
               : { success: !1, error: (0, g.tE)(t) };
     let d = n.length > 1 ? { type: "text", text: u } : n[0],
-        _ = h[t.type](d, t, a, s, l);
+        _ = f[t.type](d, t, a, s, l);
     return _.success || null != _.error || (_.error = (0, g.tE)(t)), _;
 }

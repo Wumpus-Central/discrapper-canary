@@ -1,21 +1,21 @@
 "use strict";
-let r = n(17101);
-function i() {}
-(e.exports = i),
-    (i.prototype.get = function (e) {
+let i = n(17101);
+function r() {}
+(e.exports = r),
+    (r.prototype.get = function (e) {
         return this.header[e.toLowerCase()];
     }),
-    (i.prototype._setHeaderProperties = function (e) {
+    (r.prototype._setHeaderProperties = function (e) {
         let t = e["content-type"] || "";
-        this.type = r.type(t);
-        let n = r.params(t);
+        this.type = i.type(t);
+        let n = i.params(t);
         for (let e in n) Object.prototype.hasOwnProperty.call(n, e) && (this[e] = n[e]);
         this.links = {};
         try {
-            e.link && (this.links = r.parseLinks(e.link));
+            e.link && (this.links = i.parseLinks(e.link));
         } catch (e) {}
     }),
-    (i.prototype._setStatusProperties = function (e) {
+    (r.prototype._setStatusProperties = function (e) {
         let t = Math.trunc(e / 100);
         (this.statusCode = e),
             (this.status = this.statusCode),

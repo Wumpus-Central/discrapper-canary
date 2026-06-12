@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { P: () => _, x: () => f });
+n.d(t, { P: () => _, x: () => h });
 var i = n(941426),
     r = n(31436);
 let s = null,
@@ -30,6 +30,6 @@ function _() {
         s
     );
 }
-function f() {
+function h() {
     return !0 === window._libdiscoreInitialized;
 }

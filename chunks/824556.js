@@ -1,38 +1,38 @@
-i.d(s, { A: () => c });
-var l = i(64700),
-    a = i(172218),
-    n = i(478437),
-    d = i(17928),
-    t = i(71393),
-    r = i(732071),
-    u = i(652215);
+l.d(s, { A: () => c });
+var i = l(64700),
+    a = l(172218),
+    n = l(478437),
+    d = l(17928),
+    t = l(71393),
+    r = l(732071),
+    u = l(652215);
 function c(e) {
-    let { message: s, channel: i, announcementEnabled: c = !0, officialMessagesEnabled: g = !1 } = e,
-        o = (0, d.bG)([t.A], () => {
+    let { message: s, channel: l, announcementEnabled: c = !0, officialMessagesEnabled: o = !1 } = e,
+        g = (0, d.bG)([t.A], () => {
             if (!c) return !1;
-            let e = t.A.getGuild(i.guild_id);
+            let e = t.A.getGuild(l.guild_id);
             return e?.features.has(u.GuildFeatures.COMMUNITY) ?? !1;
-        }, [c, i.guild_id]),
+        }, [c, l.guild_id]),
         A =
             s.messageReference?.guild_id != null &&
             null != s.webhookId &&
             s.hasFlag(u.pr7.IS_CROSSPOST) &&
-            null != i.guild_id,
-        h = i.type === n.r.GUILD_ANNOUNCEMENT && o,
+            null != l.guild_id,
+        h = l.type === n.r.GUILD_ANNOUNCEMENT && g,
         p = c && !s.hasFlag(u.pr7.EPHEMERAL) && (A || h),
-        m = g && !s.hasFlag(u.pr7.EPHEMERAL) && s.hasFlag(u.pr7.IS_GUILD_OFFICIAL),
+        m = o && !s.hasFlag(u.pr7.EPHEMERAL) && s.hasFlag(u.pr7.IS_GUILD_OFFICIAL),
         I = A && null != s.messageReference ? s.messageReference.message_id : s.id,
-        M = A && null != s.messageReference ? s.messageReference.channel_id : i.id,
-        E = A && s.messageReference?.guild_id != null ? s.messageReference.guild_id : i.guild_id,
-        f = l.useCallback(
+        M = A && null != s.messageReference ? s.messageReference.channel_id : l.id,
+        E = A && s.messageReference?.guild_id != null ? s.messageReference.guild_id : l.guild_id,
+        f = i.useCallback(
             (e) => {
                 p &&
                     (e
                         ? r.A.handleMessageBecameVisible({
                               type: r.K.ANNOUNCEMENT,
                               messageId: I,
-                              channelId: i.id,
-                              guildId: i.guild_id,
+                              channelId: l.id,
+                              guildId: l.guild_id,
                               sourceChannelId: M,
                               sourceGuildId: E,
                           })
@@ -42,21 +42,21 @@ function c(e) {
                             ? r.A.handleMessageBecameVisible({
                                   type: r.K.OFFICIAL_MESSAGE,
                                   messageId: s.id,
-                                  channelId: i.id,
-                                  guildId: i.guild_id,
+                                  channelId: l.id,
+                                  guildId: l.guild_id,
                               })
                             : r.A.handleMessageLostVisibility(s.id, r.K.OFFICIAL_MESSAGE));
             },
-            [p, m, I, s.id, i.id, i.guild_id, M, E],
+            [p, m, I, s.id, l.id, l.guild_id, M, E],
         );
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             if (p)
                 return () => {
                     r.A.handleMessageLostVisibility(I, r.K.ANNOUNCEMENT);
                 };
         }, [p, I]),
-        l.useEffect(() => {
+        i.useEffect(() => {
             if (m)
                 return () => {
                     r.A.handleMessageLostVisibility(s.id, r.K.OFFICIAL_MESSAGE);

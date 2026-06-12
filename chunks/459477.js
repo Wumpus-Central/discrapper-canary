@@ -1,9 +1,9 @@
 e.d(a, { default: () => o });
 var i = e(627968),
     n = e(64700),
-    s = e(158954),
+    s = e(189213),
     l = e(37948),
-    r = e(985018);
+    r = e(375708);
 let o = (t) => {
     let { transitionState: a, onClose: e, game: o, websiteButtons: c, trackAction: u } = t,
         d = (0, l.A)(),

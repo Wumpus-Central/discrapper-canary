@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { N9: () => l, jL: () => d, jU: () => u }), n(801541);
-var r,
-    i = n(889137),
+n.d(t, { N9: () => l, jL: () => c, jU: () => u }), n(801541);
+var i,
+    r = n(889137),
     s = n(652215),
     a = n(790782),
-    o = n(985018),
+    o = n(375708),
     l =
-        (((r = {}).ALL_MESSAGES = "all_messages"),
-        (r.MENTIONS = "mentions"),
-        (r.NOTHING = "nothing"),
-        (r.CUSTOM = "custom"),
-        r);
+        (((i = {}).ALL_MESSAGES = "all_messages"),
+        (i.MENTIONS = "mentions"),
+        (i.NOTHING = "nothing"),
+        (i.CUSTOM = "custom"),
+        i);
 function u(e, t) {
-    return (0, i.YW)([t, e])
+    return (0, r.YW)([t, e])
         .with([s.orn.ALL_MESSAGES, a.e.ALL_MESSAGES], () => "all_messages")
         .with([s.orn.ONLY_MENTIONS, a.e.UNSET], () => "mentions")
         .with([s.orn.ONLY_MENTIONS, a.e.ONLY_MENTIONS], () => "mentions")
@@ -20,8 +20,8 @@ function u(e, t) {
         .with([s.orn.NO_MESSAGES, a.e.ONLY_MENTIONS], () => "nothing")
         .otherwise(() => "custom");
 }
-function d(e) {
-    return (0, i.YW)(e)
+function c(e) {
+    return (0, r.YW)(e)
         .with("all_messages", () => o.intl.string(o.t.hZrr6k))
         .with("mentions", () => o.intl.string(o.t.y59NJm))
         .with("nothing", () => o.intl.string(o.t["pGn/bJ"]))

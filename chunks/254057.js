@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => i });
-var r = n(731854);
-function i(e) {
-    return e.supportsInApp(r.O5.VIDEO);
+n.d(t, { A: () => r });
+var i = n(731854);
+function r(e) {
+    return e.supportsInApp(i.O5.VIDEO);
 }

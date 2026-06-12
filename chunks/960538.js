@@ -16,8 +16,8 @@ var i = n(627968),
     x = n(649963),
     f = n(815807),
     E = n(429433),
-    C = n(652215),
-    I = n(307731),
+    I = n(652215),
+    C = n(307731),
     v = n(375708),
     _ = n(347353),
     j = n(866661);
@@ -58,10 +58,10 @@ class N extends l.Component {
     render() {
         let { message: e, className: t, children: n, useChatFontScaling: l, tabIndex: s = 0 } = this.props,
             { isReactionPickerActive: a } = this.state;
-        if (e.state === C.cmJ.SENDING || (0, d.Lt)(e.flags, C.pr7.EPHEMERAL)) return null;
+        if (e.state === I.cmJ.SENDING || (0, d.Lt)(e.flags, I.pr7.EPHEMERAL)) return null;
         let o = l ? j : _,
             c = { size: "sm", color: "currentColor", className: o.icon };
-        return e.type === C.lAJ.EMOJI_ADDED && 0 === e.reactions.length
+        return e.type === I.lAJ.EMOJI_ADDED && 0 === e.reactions.length
             ? (0, i.jsx)(A._x, { message: e, className: r()(o.reactionBtn, t) })
             : (0, i.jsx)(m.Y, {
                   targetElementRef: this.ref,
@@ -81,8 +81,8 @@ class N extends l.Component {
                               onClick: (e) => {
                                   this.handleAddReactionClick(e);
                               },
-                              onMouseEnter: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
-                              onFocus: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutFocused),
+                              onMouseEnter: () => (0, p.K)(C.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
+                              onFocus: () => (0, p.K)(C.EmojiInteractionPoint.AddReactionPopoutFocused),
                               className: r()(o.reactionBtn, { [o.active]: a }, t),
                               children: [(0, i.jsx)(g.n, { ...c }), n],
                           }),

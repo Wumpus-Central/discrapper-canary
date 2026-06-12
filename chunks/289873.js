@@ -19,8 +19,8 @@ var i,
 function _(e) {
     let { type: t = "wanderingCubes", animated: n = !0, className: i, itemClassName: a, ...d } = e,
         { i18n: _ } = (0, u.G9)(),
-        { reducedMotion: f } = s.useContext(l.C),
-        h = f.enabled
+        { reducedMotion: h } = s.useContext(l.C),
+        f = h.enabled
             ? (function (e) {
                   switch (e) {
                       case "wanderingCubes":
@@ -32,9 +32,9 @@ function _(e) {
               })(t)
             : t,
         p = d["aria-label"] ?? _.SPINNER_LOADING_LABEL;
-    if ("spinningCircle" === h || "spinningCircleSimple" === h)
+    if ("spinningCircle" === f || "spinningCircleSimple" === f)
         return (0, r.jsx)("div", {
-            className: o()(c.spinner, c[h], i, { [c.stopAnimation]: !n }),
+            className: o()(c.spinner, c[f], i, { [c.stopAnimation]: !n }),
             role: "img",
             ...d,
             "aria-label": p,
@@ -44,7 +44,7 @@ function _(e) {
                     className: c.circular,
                     viewBox: "25 25 50 50",
                     children: [
-                        "spinningCircle" === h &&
+                        "spinningCircle" === f &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("circle", {
@@ -73,11 +73,11 @@ function _(e) {
         "aria-label": p,
         ...d,
         children: (0, r.jsxs)("span", {
-            className: o()(c.inner, c[h]),
+            className: o()(c.inner, c[f]),
             children: [
                 (0, r.jsx)("span", { className: E }),
                 (0, r.jsx)("span", { className: E }),
-                "pulsingEllipsis" === h || "lowMotion" === h ? (0, r.jsx)("span", { className: E }) : null,
+                "pulsingEllipsis" === f || "lowMotion" === f ? (0, r.jsx)("span", { className: E }) : null,
             ],
         }),
     });

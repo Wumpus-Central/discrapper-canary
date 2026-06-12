@@ -28,8 +28,8 @@ function R() {
         let { default: e } = await Promise.all([
             a.e("10448"),
             a.e("78845"),
-            a.e("26780"),
             a.e("17225"),
+            a.e("26780"),
             a.e("51130"),
             a.e("6723"),
             a.e("7319"),

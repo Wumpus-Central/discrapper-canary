@@ -1,30 +1,30 @@
 "use strict";
 n.d(t, { Cc: () => l, wR: () => _ });
-var r = n(64700);
-let i = { prefix: String(Math.round(1e10 * Math.random())), current: 0 },
-    s = r.createContext(i),
-    a = r.createContext(!1),
+var i = n(64700);
+let r = { prefix: String(Math.round(1e10 * Math.random())), current: 0 },
+    s = i.createContext(r),
+    a = i.createContext(!1),
     o = ("u" > typeof window && window.document && window.document.createElement, new WeakMap()),
     l =
-        "function" == typeof r.useId
+        "function" == typeof i.useId
             ? function (e) {
-                  let t = r.useId(),
-                      [n] = (0, r.useState)(_()),
-                      s = n ? "react-aria" : `react-aria${i.prefix}`;
+                  let t = i.useId(),
+                      [n] = (0, i.useState)(_()),
+                      s = n ? "react-aria" : `react-aria${r.prefix}`;
                   return e || `${s}-${t}`;
               }
             : function (e) {
-                  let t = (0, r.useContext)(s),
+                  let t = (0, i.useContext)(s),
                       n = (function (e = !1) {
-                          let t = (0, r.useContext)(s),
-                              n = (0, r.useRef)(null);
+                          let t = (0, i.useContext)(s),
+                              n = (0, i.useRef)(null);
                           if (null === n.current && !e) {
-                              var i, a;
+                              var r, a;
                               let e =
-                                  null == (a = r.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) ||
-                                  null == (i = a.ReactCurrentOwner)
+                                  null == (a = i.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED) ||
+                                  null == (r = a.ReactCurrentOwner)
                                       ? void 0
-                                      : i.current;
+                                      : r.current;
                               if (e) {
                                   let n = o.get(e);
                                   null == n
@@ -35,18 +35,18 @@ let i = { prefix: String(Math.round(1e10 * Math.random())), current: 0 },
                           }
                           return n.current;
                       })(!!e),
-                      i = `react-aria${t.prefix}`;
-                  return e || `${i}-${n}`;
+                      r = `react-aria${t.prefix}`;
+                  return e || `${r}-${n}`;
               };
 function u() {
     return !1;
 }
-function d() {
+function c() {
     return !0;
 }
-function c(e) {
+function d(e) {
     return () => {};
 }
 function _() {
-    return "function" == typeof r.useSyncExternalStore ? r.useSyncExternalStore(c, u, d) : (0, r.useContext)(a);
+    return "function" == typeof i.useSyncExternalStore ? i.useSyncExternalStore(d, u, c) : (0, i.useContext)(a);
 }

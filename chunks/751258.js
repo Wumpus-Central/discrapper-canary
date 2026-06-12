@@ -10,8 +10,8 @@ var l = n(791332),
     u = n(885386),
     h = n(232835),
     m = n(652215);
-let A = /\\([*?+/])/g,
-    g = {
+let g = /\\([*?+/])/g,
+    p = {
         tts: { action: () => ({ tts: u.on.getSetting() }) },
         me: { action: (e) => ({ content: `_${e}_` }) },
         tableflip: {
@@ -47,7 +47,7 @@ let A = /\\([*?+/])/g,
                 if (null == i || null == i.id) return { content: "" };
                 let [s, r, o, c] = Array.from(e.match(this.match.regex) ?? []),
                     d = c?.split("") ?? [];
-                (r = r.replace(A, (e, t) => t)), (o = o.replace(A, (e, t) => t));
+                (r = r.replace(g, (e, t) => t)), (o = o.replace(g, (e, t) => t));
                 let u = d.includes("g") ? i.content.replaceAll(r, o) : i.content.replace(r, o);
                 return (
                     (null == u || "" === u.trim()) && 0 === i.attachments.length
@@ -59,20 +59,20 @@ let A = /\\([*?+/])/g,
         },
         spoiler: { action: (e) => ({ content: (0, m.ZGg)(e).trim() }) },
     };
-function p(e, t, n, l) {
+function A(e, t, n, l) {
     return r.Ay.trackWithMetadata(m.HAw.SLASH_COMMAND_USED, { command: e }), t.action(n, l);
 }
 function f(e, t) {
-    for (let n in g) {
-        let l = g[n];
+    for (let n in p) {
+        let l = p[n];
         if (null != l.match) {
-            if (l.match.regex?.test(e)) return p(n, l, e, t);
+            if (l.match.regex?.test(e)) return A(n, l, e, t);
             continue;
         }
         if (u.D_.getSetting() && "/" === e[0]) {
             let i = e.split(" ");
-            if (n === i[0].slice(1) && null != l.action) return p(n, l, i.slice(1).join(" "), t);
+            if (n === i[0].slice(1) && null != l.action) return A(n, l, i.slice(1).join(" "), t);
         }
     }
 }
-Object.setPrototypeOf(g, null);
+Object.setPrototypeOf(p, null);

@@ -1,7 +1,7 @@
 "use strict";
-var r = n(549412).assign,
-    i = n(733344),
-    a = n(821500),
-    s = n(231428),
+var i = n(549412).assign,
+    r = n(733344),
+    s = n(821500),
+    a = n(231428),
     o = {};
-r(o, i, a, s), (e.exports = o);
+i(o, r, s, a), (e.exports = o);

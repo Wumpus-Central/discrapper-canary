@@ -1,47 +1,47 @@
-n.d(t, { A: () => _ });
-var i = n(627968),
-    l = n(64700),
+n.d(t, { A: () => C });
+var l = n(627968),
+    i = n(64700),
     s = n(661531),
     a = n(462887),
     r = n(305866),
     o = n(834730),
     c = n(821609),
     d = n(885574),
-    u = n(58149),
+    u = n(95561),
     h = n(363195),
-    m = n(954571),
-    p = n(652215),
-    g = n(985018),
+    m = n(174459),
+    g = n(652215),
+    p = n(375708),
     A = n(636801),
     f = n(992595);
-function _(e) {
-    let { onClose: t, onConfirm: _, onCancel: E, channel: C, analyticsType: x, popoutText: b, animation: S } = e;
-    l.useEffect(() => {
-        m.default.track(p.HAw.OPEN_POPOUT, { type: x, ...(0, u.dI)(C) });
-    }, [x, C]);
-    let I = l.useCallback(() => {
-            _?.(), t();
-        }, [_, t]),
-        y = l.useCallback(() => {
-            E?.(), t();
-        }, [E, t]),
-        T = l.useRef(null);
+function C(e) {
+    let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: _, animation: I } = e;
+    i.useEffect(() => {
+        m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
+    }, [S, E]);
+    let j = i.useCallback(() => {
+            C?.(), t();
+        }, [C, t]),
+        y = i.useCallback(() => {
+            x?.(), t();
+        }, [x, t]),
+        N = i.useRef(null);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             let e,
                 t = h.A.theme,
-                i = !1;
+                l = !1;
             return (
-                null != S &&
+                null != I &&
                     (async () => {
-                        let [{ default: l }, s] = await Promise.all([
+                        let [{ default: i }, s] = await Promise.all([
                             n.e("96382").then(n.t.bind(n, 883885, 23)),
-                            (0, a.M)(t) ? S.dark() : S.light(),
+                            (0, a.M)(t) ? I.dark() : I.light(),
                         ]);
-                        i ||
-                            null == T.current ||
-                            (e = l.loadAnimation({
-                                container: T.current,
+                        l ||
+                            null == N.current ||
+                            (e = i.loadAnimation({
+                                container: N.current,
                                 renderer: "svg",
                                 loop: !0,
                                 autoplay: !0,
@@ -49,67 +49,67 @@ function _(e) {
                             }));
                     })(),
                 () => {
-                    (i = !0), null != e && (e.destroy(), (e = void 0));
+                    (l = !0), null != e && (e.destroy(), (e = void 0));
                 }
             );
-        }, [S]),
-        (0, i.jsx)(r.l, {
+        }, [I]),
+        (0, l.jsx)(r.l, {
             "aria-labelledby": "content-warning-popout-label",
-            children: (0, i.jsxs)("form", {
+            children: (0, l.jsxs)("form", {
                 className: A.$,
-                onSubmit: I,
+                onSubmit: j,
                 children: [
-                    (0, i.jsxs)("div", {
+                    (0, l.jsxs)("div", {
                         className: A.rf,
                         children: [
-                            null != S && (0, i.jsx)("div", { className: A.lY, ref: T }),
-                            (0, i.jsxs)("div", {
+                            null != I && (0, l.jsx)("div", { className: A.lY, ref: N }),
+                            (0, l.jsxs)("div", {
                                 className: A.Qs,
                                 children: [
-                                    (0, i.jsx)("div", { className: A.wx, children: g.intl.string(g.t.mY3Y38) }),
-                                    (0, i.jsx)(o.E, {
+                                    (0, l.jsx)("div", { className: A.wx, children: p.intl.string(p.t.mY3Y38) }),
+                                    (0, l.jsx)(o.E, {
                                         id: "content-warning-popout-label",
                                         className: f.PT,
                                         variant: "text-sm/normal",
-                                        children: b.body,
+                                        children: _.body,
                                     }),
-                                    (0, i.jsxs)("div", {
+                                    (0, l.jsxs)("div", {
                                         className: A._o,
                                         children: [
-                                            (0, i.jsxs)("div", {
+                                            (0, l.jsxs)("div", {
                                                 className: A.UD,
                                                 children: [
-                                                    (0, i.jsx)("div", {
+                                                    (0, l.jsx)("div", {
                                                         className: A.x6,
-                                                        children: (0, i.jsx)(c.$, {
+                                                        children: (0, l.jsx)(c.$, {
                                                             variant: "secondary",
                                                             onClick: y,
-                                                            text: g.intl.string(g.t.fsBWmS),
+                                                            text: p.intl.string(p.t.fsBWmS),
                                                         }),
                                                     }),
-                                                    (0, i.jsx)(o.E, {
+                                                    (0, l.jsx)(o.E, {
                                                         variant: "text-xs/normal",
                                                         className: A.uK,
-                                                        children: g.intl.format(g.t["0LzVPZ"], {}),
+                                                        children: p.intl.format(p.t["0LzVPZ"], {}),
                                                     }),
                                                 ],
                                             }),
-                                            (0, i.jsxs)("div", {
+                                            (0, l.jsxs)("div", {
                                                 className: A.UD,
                                                 children: [
-                                                    (0, i.jsx)("div", {
+                                                    (0, l.jsx)("div", {
                                                         className: A.x6,
-                                                        children: (0, i.jsx)(c.$, {
+                                                        children: (0, l.jsx)(c.$, {
                                                             variant: "primary",
-                                                            onClick: I,
-                                                            text: g.intl.string(g.t.KJnHq3),
+                                                            onClick: j,
+                                                            text: p.intl.string(p.t.KJnHq3),
                                                             autoFocus: !0,
                                                         }),
                                                     }),
-                                                    (0, i.jsx)(o.E, {
+                                                    (0, l.jsx)(o.E, {
                                                         variant: "text-xs/normal",
                                                         className: A.uK,
-                                                        children: g.intl.format(g.t.khjqdH, {}),
+                                                        children: p.intl.format(p.t.khjqdH, {}),
                                                     }),
                                                 ],
                                             }),
@@ -119,16 +119,16 @@ function _(e) {
                             }),
                         ],
                     }),
-                    null != b.footer && "" !== b.footer
-                        ? (0, i.jsxs)("div", {
+                    null != _.footer && "" !== _.footer
+                        ? (0, l.jsxs)("div", {
                               className: A.qr,
                               children: [
-                                  (0, i.jsx)(d.m, {
+                                  (0, l.jsx)(d.m, {
                                       size: "xs",
                                       color: s.A.unsafe_rawColors.PRIMARY_400.css,
                                       className: A.Kk,
                                   }),
-                                  (0, i.jsx)(o.E, { variant: "text-sm/normal", children: b.footer }),
+                                  (0, l.jsx)(o.E, { variant: "text-sm/normal", children: _.footer }),
                               ],
                           })
                         : null,

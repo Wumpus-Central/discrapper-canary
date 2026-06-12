@@ -1,19 +1,19 @@
 "use strict";
-function n(e) {
+function i(e) {
     return e && "object" == typeof e && "default" in e ? e.default : e;
 }
 Object.defineProperty(t, "__esModule", { value: !0 });
-var s = n(r(901012)),
-    a = r(442696),
-    o = r(340287),
-    i = r(54482),
-    u = n(r(271104)),
-    c = r(294814),
-    l = r(675106),
-    d = n(r(269274)),
-    f = /^--/,
-    p = {},
-    h = {
+var r = i(n(901012)),
+    s = n(442696),
+    a = n(340287),
+    o = n(54482),
+    l = i(n(271104)),
+    u = n(294814),
+    c = n(675106),
+    d = i(n(269274)),
+    _ = /^--/,
+    h = {},
+    f = {
         animationIterationCount: !0,
         borderImageOutset: !0,
         borderImageSlice: !0,
@@ -56,71 +56,71 @@ var s = n(r(901012)),
         strokeOpacity: !0,
         strokeWidth: !0,
     },
-    m = ["Webkit", "Ms", "Moz", "O"];
-h = Object.keys(h).reduce(function (e, t) {
+    p = ["Webkit", "Ms", "Moz", "O"];
+f = Object.keys(f).reduce(function (e, t) {
     return (
-        m.forEach(function (r) {
-            return (e[r + t.charAt(0).toUpperCase() + t.substring(1)] = e[t]);
+        p.forEach(function (n) {
+            return (e[n + t.charAt(0).toUpperCase() + t.substring(1)] = e[t]);
         }),
         e
     );
-}, h);
-var v = /^(matrix|translate|scale|rotate|skew)/,
-    g = /^(translate)/,
-    y = /^(rotate|skew)/,
-    b = function (e, t) {
-        return l.is.num(e) && 0 !== e ? e + t : e;
+}, f);
+var E = /^(matrix|translate|scale|rotate|skew)/,
+    m = /^(translate)/,
+    g = /^(rotate|skew)/,
+    A = function (e, t) {
+        return c.is.num(e) && 0 !== e ? e + t : e;
     },
-    _ = function e(t, r) {
-        return l.is.arr(t)
+    I = function e(t, n) {
+        return c.is.arr(t)
             ? t.every(function (t) {
-                  return e(t, r);
+                  return e(t, n);
               })
-            : l.is.num(t)
-              ? t === r
-              : parseFloat(t) === r;
+            : c.is.num(t)
+              ? t === n
+              : parseFloat(t) === n;
     },
-    x = (function (e) {
+    T = (function (e) {
         function t(t) {
-            var r = t.x,
-                n = t.y,
-                a = t.z,
-                o = s(t, ["x", "y", "z"]),
-                i = [],
-                u = [];
+            var n = t.x,
+                i = t.y,
+                s = t.z,
+                a = r(t, ["x", "y", "z"]),
+                o = [],
+                l = [];
             return (
-                (r || n || a) &&
-                    (i.push([r || 0, n || 0, a || 0]),
-                    u.push(function (e) {
+                (n || i || s) &&
+                    (o.push([n || 0, i || 0, s || 0]),
+                    l.push(function (e) {
                         return [
                             "translate3d(" +
                                 e
                                     .map(function (e) {
-                                        return b(e, "px");
+                                        return A(e, "px");
                                     })
                                     .join(",") +
                                 ")",
-                            _(e, 0),
+                            I(e, 0),
                         ];
                     })),
-                l.each(o, function (e, t) {
+                c.each(a, function (e, t) {
                     if ("transform" === t)
-                        i.push([e || ""]),
-                            u.push(function (e) {
+                        o.push([e || ""]),
+                            l.push(function (e) {
                                 return [e, "" === e];
                             });
-                    else if (v.test(t)) {
-                        if ((delete o[t], l.is.und(e))) return;
-                        var r = g.test(t) ? "px" : y.test(t) ? "deg" : "";
-                        i.push(l.toArray(e)),
-                            u.push(
+                    else if (E.test(t)) {
+                        if ((delete a[t], c.is.und(e))) return;
+                        var n = m.test(t) ? "px" : g.test(t) ? "deg" : "";
+                        o.push(c.toArray(e)),
+                            l.push(
                                 "rotate3d" === t
                                     ? function (e) {
                                           var t = e[0],
-                                              n = e[1],
-                                              s = e[2],
-                                              a = e[3];
-                                          return ["rotate3d(" + t + "," + n + "," + s + "," + b(a, r) + ")", _(a, 0)];
+                                              i = e[1],
+                                              r = e[2],
+                                              s = e[3];
+                                          return ["rotate3d(" + t + "," + i + "," + r + "," + A(s, n) + ")", I(s, 0)];
                                       }
                                     : function (e) {
                                           return [
@@ -128,91 +128,91 @@ var v = /^(matrix|translate|scale|rotate|skew)/,
                                                   "(" +
                                                   e
                                                       .map(function (e) {
-                                                          return b(e, r);
+                                                          return A(e, n);
                                                       })
                                                       .join(",") +
                                                   ")",
-                                              _(e, +!!t.startsWith("scale")),
+                                              I(e, +!!t.startsWith("scale")),
                                           ];
                                       },
                             );
                     }
                 }),
-                i.length && (o.transform = new w(i, u)),
-                e.call(this, o) || this
+                o.length && (a.transform = new S(o, l)),
+                e.call(this, a) || this
             );
         }
         return d(t, e), t;
-    })(c.AnimatedObject),
-    w = (function (e) {
-        function t(t, r) {
-            var n;
+    })(u.AnimatedObject),
+    S = (function (e) {
+        function t(t, n) {
+            var i;
             return (
-                ((n = e.call(this) || this).inputs = t),
-                (n.transforms = r),
-                (n._value = null),
-                (n._children = new Set()),
-                n
+                ((i = e.call(this) || this).inputs = t),
+                (i.transforms = n),
+                (i._value = null),
+                (i._children = new Set()),
+                i
             );
         }
         d(t, e);
-        var r = t.prototype;
+        var n = t.prototype;
         return (
-            (r.get = function () {
+            (n.get = function () {
                 return this._value || (this._value = this._get());
             }),
-            (r._get = function () {
+            (n._get = function () {
                 var e = this,
                     t = "",
-                    r = !0;
+                    n = !0;
                 return (
-                    l.each(this.inputs, function (n, s) {
-                        var a = l.getFluidValue(n[0]),
-                            o = e.transforms[s](l.is.arr(a) ? a : n.map(l.getFluidValue)),
-                            i = o[0],
-                            u = o[1];
-                        (t += " " + i), (r = r && u);
+                    c.each(this.inputs, function (i, r) {
+                        var s = c.getFluidValue(i[0]),
+                            a = e.transforms[r](c.is.arr(s) ? s : i.map(c.getFluidValue)),
+                            o = a[0],
+                            l = a[1];
+                        (t += " " + o), (n = n && l);
                     }),
-                    r ? "none" : t
+                    n ? "none" : t
                 );
             }),
-            (r.addChild = function (e) {
+            (n.addChild = function (e) {
                 var t = this;
                 this._children.size ||
-                    l.each(this.inputs, function (e) {
-                        return l.each(e, function (e) {
-                            var r = l.getFluidConfig(e);
-                            r && r.addChild(t);
+                    c.each(this.inputs, function (e) {
+                        return c.each(e, function (e) {
+                            var n = c.getFluidConfig(e);
+                            n && n.addChild(t);
                         });
                     }),
                     this._children.add(e);
             }),
-            (r.removeChild = function (e) {
+            (n.removeChild = function (e) {
                 var t = this;
                 this._children.delete(e),
                     this._children.size ||
-                        l.each(this.inputs, function (e) {
-                            return l.each(e, function (e) {
-                                var r = l.getFluidConfig(e);
-                                r && r.removeChild(t);
+                        c.each(this.inputs, function (e) {
+                            return c.each(e, function (e) {
+                                var n = c.getFluidConfig(e);
+                                n && n.removeChild(t);
                             });
                         });
             }),
-            (r.onParentChange = function (e) {
+            (n.onParentChange = function (e) {
                 "change" == e.type && (this._value = null),
-                    l.each(this._children, function (t) {
+                    c.each(this._children, function (t) {
                         t.onParentChange(e);
                     });
             }),
             t
         );
-    })(l.FluidValue);
-a.Globals.assign({
-    colorNames: u,
-    createStringInterpolator: i.createStringInterpolator,
-    batchedUpdates: o.unstable_batchedUpdates,
+    })(c.FluidValue);
+s.Globals.assign({
+    colorNames: l,
+    createStringInterpolator: o.createStringInterpolator,
+    batchedUpdates: a.unstable_batchedUpdates,
 });
-var k = c.createHost(
+var y = u.createHost(
     [
         "a",
         "abbr",
@@ -351,58 +351,58 @@ var k = c.createHost(
     {
         applyAnimatedValues: function (e, t) {
             if (!e.nodeType || !e.setAttribute) return !1;
-            var r = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
-                n = t.style,
-                a = t.children,
-                o = t.scrollTop,
-                i = t.scrollLeft,
-                u = s(t, ["style", "children", "scrollTop", "scrollLeft"]),
-                c = Object.values(u),
-                d = Object.keys(u).map(function (t) {
-                    return r || e.hasAttribute(t)
+            var n = "filter" === e.nodeName || (e.parentNode && "filter" === e.parentNode.nodeName),
+                i = t.style,
+                s = t.children,
+                a = t.scrollTop,
+                o = t.scrollLeft,
+                l = r(t, ["style", "children", "scrollTop", "scrollLeft"]),
+                u = Object.values(l),
+                d = Object.keys(l).map(function (t) {
+                    return n || e.hasAttribute(t)
                         ? t
-                        : p[t] ||
-                              (p[t] = t.replace(/([A-Z])/g, function (e) {
+                        : h[t] ||
+                              (h[t] = t.replace(/([A-Z])/g, function (e) {
                                   return "-" + e.toLowerCase();
                               }));
                 });
-            l.Globals.frameLoop.onWrite(function () {
-                for (var t in (void 0 !== a && (e.textContent = a), n))
-                    if (n.hasOwnProperty(t)) {
-                        var r,
-                            s,
-                            u =
-                                ((r = t),
-                                null == (s = n[t]) || "boolean" == typeof s || "" === s
+            c.Globals.frameLoop.onWrite(function () {
+                for (var t in (void 0 !== s && (e.textContent = s), i))
+                    if (i.hasOwnProperty(t)) {
+                        var n,
+                            r,
+                            l =
+                                ((n = t),
+                                null == (r = i[t]) || "boolean" == typeof r || "" === r
                                     ? ""
-                                    : "number" != typeof s || 0 === s || f.test(r) || (h.hasOwnProperty(r) && h[r])
-                                      ? ("" + s).trim()
-                                      : s + "px");
-                        "float" === t ? (t = "cssFloat") : f.test(t) ? e.style.setProperty(t, u) : (e.style[t] = u);
+                                    : "number" != typeof r || 0 === r || _.test(n) || (f.hasOwnProperty(n) && f[n])
+                                      ? ("" + r).trim()
+                                      : r + "px");
+                        "float" === t ? (t = "cssFloat") : _.test(t) ? e.style.setProperty(t, l) : (e.style[t] = l);
                     }
-                d.forEach(function (t, r) {
-                    e.setAttribute(t, c[r]);
+                d.forEach(function (t, n) {
+                    e.setAttribute(t, u[n]);
                 }),
-                    void 0 !== o && (e.scrollTop = o),
-                    void 0 !== i && (e.scrollLeft = i);
+                    void 0 !== a && (e.scrollTop = a),
+                    void 0 !== o && (e.scrollLeft = o);
             });
         },
         createAnimatedStyle: function (e) {
-            return new x(e);
+            return new T(e);
         },
         getComponentProps: function (e) {
-            return e.scrollTop, e.scrollLeft, s(e, ["scrollTop", "scrollLeft"]);
+            return e.scrollTop, e.scrollLeft, r(e, ["scrollTop", "scrollLeft"]);
         },
     },
 ).animated;
-Object.keys(a).forEach(function (e) {
+Object.keys(s).forEach(function (e) {
     "default" !== e &&
         Object.defineProperty(t, e, {
             enumerable: !0,
             get: function () {
-                return a[e];
+                return s[e];
             },
         });
 }),
-    (t.a = k),
-    (t.animated = k);
+    (t.a = y),
+    (t.animated = y);

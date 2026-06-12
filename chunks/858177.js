@@ -1,15 +1,15 @@
-i.d(t, { O: () => m }), i(321073);
-var n = i(64700),
-    l = i(735438),
-    s = i.n(l),
-    a = i(17928),
-    r = i(451988),
-    d = i(627363),
-    o = i(587895);
-class u {
+n.d(t, { O: () => r }), n(321073);
+var h = n(64700),
+    s = n(735438),
+    i = n.n(s),
+    l = n(17928),
+    a = n(451988),
+    p = n(627363),
+    c = n(587895);
+class d {
     _lastFetchedAttempted = new Map();
     _pending = new Set();
-    _flushHandler = new r.J_(32, () => this._flush());
+    _flushHandler = new a.J_(32, () => this._flush());
     request(e) {
         if (this._pending.has(e)) return;
         let t = this._lastFetchedAttempted.get(e);
@@ -22,30 +22,30 @@ class u {
         }),
             this._pending.clear();
         let t = [],
-            i = [];
+            n = [];
         e.forEach((e) => {
-            o.A.didFetchingApplicationFail(e) ? i.push(e) : t.push(e);
+            c.A.didFetchingApplicationFail(e) ? n.push(e) : t.push(e);
         }),
             t.length > 0 &&
-                s()
+                i()
                     .chunk(t, 20)
                     .forEach((e) => {
-                        d.Ay.fetchApplications(e, !1);
+                        p.Ay.fetchApplications(e, !1);
                     }),
-            i.length > 0 &&
-                s()
-                    .chunk(i, 20)
+            n.length > 0 &&
+                i()
+                    .chunk(n, 20)
                     .forEach((e) => {
-                        d.Ay.fetchApplications(e, !0);
+                        p.Ay.fetchApplications(e, !0);
                     });
     }
 }
-let c = new u();
-function m(e) {
+let u = new d();
+function r(e) {
     return (
-        n.useEffect(() => {
-            null != e && "" !== e && c.request(e);
+        h.useEffect(() => {
+            null != e && "" !== e && u.request(e);
         }, [e]),
-        (0, a.bG)([o.A], () => (null != e && "" !== e ? o.A.getApplication(e) : null), [e])
+        (0, l.bG)([c.A], () => (null != e && "" !== e ? c.A.getApplication(e) : null), [e])
     );
 }

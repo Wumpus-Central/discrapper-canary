@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { NJ: () => i, rE: () => a });
-let r = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" },
-    i = r,
-    a = new Map([
-        [r.MIDNIGHT, r.DARK],
-        [r.DARKER, r.DARK],
+n.d(t, { NJ: () => r, rE: () => s });
+let i = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" },
+    r = i,
+    s = new Map([
+        [i.MIDNIGHT, i.DARK],
+        [i.DARKER, i.DARK],
     ]);

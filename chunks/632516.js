@@ -1,6 +1,6 @@
-var r,
-    i = n(417477),
-    s = (r = /[^.]+$/.exec((i && i.keys && i.keys.IE_PROTO) || "")) ? "Symbol(src)_1." + r : "";
+var i,
+    r = n(417477),
+    s = (i = /[^.]+$/.exec((r && r.keys && r.keys.IE_PROTO) || "")) ? "Symbol(src)_1." + i : "";
 e.exports = function (e) {
     return !!s && s in e;
 };

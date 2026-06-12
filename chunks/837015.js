@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { A: () => s, F: () => a });
-var r = n(575593),
-    i = n(149807);
-let a = (e) => e instanceof s;
-class s extends i.A {
+n.d(t, { A: () => a, F: () => s });
+var i = n(575593),
+    r = n(149807);
+let s = (e) => e instanceof a;
+class a extends r.A {
     asset;
     label;
     palette;
     constructor(e) {
         super(e),
-            (this.type = r.R.NAMEPLATE),
+            (this.type = i.R.NAMEPLATE),
             (this.asset = e.asset),
             (this.label = e.label),
             (this.palette = e.palette);
     }
     static fromServer(e) {
-        return new s({ ...super.fromServer(e), ...e });
+        return new a({ ...super.fromServer(e), ...e });
     }
 }

@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { A: () => f });
-var l = n(607399),
-    i = n(17928),
+n.d(t, { A: () => p });
+var i = n(607399),
+    r = n(17928),
     s = n(228366),
-    a = n(366853);
-let r = Object.freeze({
+    a = n(617710);
+let o = Object.freeze({
     "voice-conversations": { popoutOffset: { x: 45, y: 0 } },
     "writing-messages": { prerequisites: ["voice-conversations"], popoutOffset: { x: -36, y: 0 } },
     "direct-messages": { popoutOffset: { x: 50, y: 0 } },
@@ -17,62 +17,62 @@ let r = Object.freeze({
     "create-more-servers": { prerequisites: ["server-settings"], popoutOffset: { x: 45, y: 0 } },
 });
 n(436317);
-let o = {},
-    c = {},
-    u = !0,
+let l = {},
+    u = {},
+    c = !0,
     d = {},
-    h = !1;
-function m() {
-    if (((d = {}), !u))
-        for (let [e, t] of Object.entries(r)) {
-            let n = !1 !== o[e];
-            if (((d[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== o[n] && (d[e] = !1);
+    _ = !1;
+function h() {
+    if (((d = {}), !c))
+        for (let [e, t] of Object.entries(o)) {
+            let n = !1 !== l[e];
+            if (((d[e] = n), n && null != t.prerequisites)) for (let n of t.prerequisites) !1 !== l[n] && (d[e] = !1);
         }
 }
-class p extends i.Ay.Store {
+class f extends r.Ay.Store {
     static displayName = "TutorialIndicatorStore";
     initialize() {
-        m(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(a.A);
+        h(), this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type), this.waitFor(a.A);
     }
     shouldShow(e) {
-        return !(!h || u || (l.Fr && ["writing-messages", "organize-by-topic"].includes(e))) && (d[e] || !1);
+        return !(!_ || c || (i.Fr && ["writing-messages", "organize-by-topic"].includes(e))) && (d[e] || !1);
     }
     shouldShowAnyIndicators() {
-        return !u;
+        return !c;
     }
     getIndicators() {
-        return c;
+        return u;
     }
     getData() {
-        return r;
+        return o;
     }
     getDefinition(e) {
         let t = this.getData();
         return null != t ? t[e] : null;
     }
 }
-let f = new p(s.h, {
+let p = new f(s.h, {
     CONNECTION_OPEN: function (e) {
         let { tutorial: t } = e;
-        (h = !0),
-            (u = !0),
-            (o = {}),
-            null != t && ((u = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (o[e] = !1))),
-            m();
+        (_ = !0),
+            (c = !0),
+            (l = {}),
+            null != t && ((c = t.indicators_suppressed), t.indicators_confirmed.forEach((e) => (l[e] = !1))),
+            h();
     },
     CONNECTION_CLOSED: function () {
-        h = !1;
+        _ = !1;
     },
     TUTORIAL_INDICATOR_DISMISS: function (e) {
-        (o = { ...o, [e.tutorialId]: !1 }), (c = { ...c }), delete c[e.tutorialId], m();
+        (l = { ...l, [e.tutorialId]: !1 }), (u = { ...u }), delete u[e.tutorialId], h();
     },
     TUTORIAL_INDICATOR_SHOW: function (e) {
-        c = { ...c, [e.tutorialId]: e.renderData };
+        u = { ...u, [e.tutorialId]: e.renderData };
     },
     TUTORIAL_INDICATOR_HIDE: function (e) {
-        (c = { ...c }), delete c[e.tutorialId];
+        (u = { ...u }), delete u[e.tutorialId];
     },
     TUTORIAL_INDICATOR_SUPPRESS_ALL: function () {
-        u = !0;
+        c = !0;
     },
 });

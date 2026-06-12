@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { O: () => d });
+n.d(t, { O: () => u });
 var i = n(228366),
     r = n(626584),
     s = n(986120),
@@ -11,7 +11,7 @@ class l {
         this.message = e;
     }
 }
-async function d(e, t) {
+async function u(e, t) {
     let n,
         r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
     i.h.dispatch({ type: "GAME_CLOUD_SYNC_START", applicationId: e, branchId: t });

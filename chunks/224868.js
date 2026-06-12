@@ -10,8 +10,8 @@ var i = n(47167),
     c = n(317525),
     d = n(71393),
     _ = n(576705),
-    f = n(994500),
-    h = n(287809),
+    h = n(994500),
+    f = n(287809),
     p = n(768038),
     E = n(690521),
     m = n(935208),
@@ -40,25 +40,25 @@ function T(e, t, n, g) {
                                   return t;
                               })
                     )
-                        .map((e) => h.default.getUser(e))
-                        .filter((e) => void 0 !== e && N(s, a, e));
+                        .map((e) => f.default.getUser(e))
+                        .filter((e) => void 0 !== e && y(s, a, e));
                     if (1 === i.length) {
                         let e = i[0];
-                        if (N(s, a, e, { requireExact: !0 }))
+                        if (y(s, a, e, { requireExact: !0 }))
                             return { type: "userMention", userId: e.id, children: [{ text: "" }] };
                     }
                 }
                 return null;
             })(e, t, n, T, S);
         case ":":
-            var y = e,
-                C = t,
-                v = n;
-            let O = s.Ay.EMOJI_NAME_RE.exec(y);
-            if (null == O) break;
-            let R = O[1],
-                b = r.Ay.getDisambiguatedEmojiContext(C).getCustomEmoji().get(R),
-                D = null != v ? o.A.getChannel(v) : null;
+            var N = e,
+                v = t,
+                C = n;
+            let R = s.Ay.EMOJI_NAME_RE.exec(N);
+            if (null == R) break;
+            let O = R[1],
+                b = r.Ay.getDisambiguatedEmojiContext(v).getCustomEmoji().get(O),
+                D = null != C ? o.A.getChannel(C) : null;
             return null == b || E.Ay.isEmojiFiltered({ emoji: b, channel: D, intention: I.EmojiIntention.CHAT })
                 ? null
                 : {
@@ -86,7 +86,7 @@ function T(e, t, n, g) {
             for (let e of p.L3)
                 if (e !== l.I6) {
                     for (let { channel: t } of l.Ay.getChannels(M)[e])
-                        if ((0, i.m1)(t, h.default, f.A) === L) {
+                        if ((0, i.m1)(t, f.default, h.A) === L) {
                             if (t.isCategory() && !_.A.can(A.xBc.VIEW_CHANNEL, t)) continue;
                             return { type: "channelMention", channelId: t.id, children: [{ text: "" }] };
                         }
@@ -95,7 +95,7 @@ function T(e, t, n, g) {
             for (let e of m.default.keys(x))
                 for (let t of m.default.keys(x[e])) {
                     let { channel: n } = x[e][t];
-                    if ((0, i.m1)(n, h.default, f.A) === L)
+                    if ((0, i.m1)(n, f.default, h.A) === L)
                         return { type: "channelMention", channelId: n.id, children: [{ text: "" }] };
                 }
             break;
@@ -106,7 +106,7 @@ function S(e, t, n, i) {
     let r = T(e, t, n, i);
     return null == r ? null : (0, g.QR)(r);
 }
-function N(e, t, n) {
+function y(e, t, n) {
     let { requireExact: i = !1 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     return null != n && (i ? n.username === e : n.username.startsWith(e)) && n.discriminator === (t ?? "0");
 }

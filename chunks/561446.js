@@ -1,7 +1,7 @@
-n.d(t, { A: () => E });
-var i = n(627968);
+n.d(t, { A: () => x });
+var l = n(627968);
 n(64700);
-var l = n(17928),
+var i = n(17928),
     s = n(990078),
     a = n(821609),
     r = n(58736),
@@ -11,21 +11,21 @@ var l = n(17928),
     u = n(576705),
     h = n(935208),
     m = n(844944),
-    p = n(513461),
-    g = n(123393),
+    g = n(513461),
+    p = n(123393),
     A = n(652215),
-    f = n(985018),
-    _ = n(782329);
-function E(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: E = !1 } = e,
-        C = h.default.cast(t),
+    f = n(375708),
+    C = n(782329);
+function x(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: x = !1 } = e,
+        E = h.default.cast(t),
         {
-            joinRequest: x,
-            isModmin: b,
-            guildId: S,
-            maxMembers: I,
-        } = (0, l.cf)([m.A, d.A, u.A], () => {
-            let e = m.A.getRequest(C),
+            joinRequest: S,
+            isModmin: _,
+            guildId: I,
+            maxMembers: j,
+        } = (0, i.cf)([m.A, d.A, u.A], () => {
+            let e = m.A.getRequest(E),
                 t = d.A.getGuild(e?.guildId);
             return {
                 joinRequest: e,
@@ -34,42 +34,42 @@ function E(e) {
                 maxMembers: t?.maxMembers,
             };
         }),
-        y = (0, l.bG)([c.A], () => (null != S ? c.A.getMemberCount(S) : 0)),
-        T = null != I && (y ?? 0) >= I,
-        { approveRequest: v, rejectRequest: N, submitting: j } = (0, g.W)(x?.guildId, x?.userId, x?.joinRequestId);
-    return null != x && x.applicationStatus === p.B5.SUBMITTED && b
-        ? (0, i.jsxs)("div", {
-              className: _.U,
+        y = (0, i.bG)([c.A], () => (null != I ? c.A.getMemberCount(I) : 0)),
+        N = null != j && (y ?? 0) >= j,
+        { approveRequest: T, rejectRequest: b, submitting: v } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
+    return null != S && S.applicationStatus === g.B5.SUBMITTED && _
+        ? (0, l.jsxs)("div", {
+              className: C.U,
               children: [
-                  (0, i.jsx)(s.m, {
+                  (0, l.jsx)(s.m, {
                       text: f.intl.string(f.t.cdPGbE),
-                      shouldShow: T,
-                      children: (0, i.jsx)(a.$, {
+                      shouldShow: N,
+                      children: (0, l.jsx)(a.$, {
                           variant: "active",
                           size: "sm",
                           text: f.intl.string(f.t.BzjDQJ),
-                          loading: j,
-                          onClick: v,
-                          disabled: T,
+                          loading: v,
+                          onClick: T,
+                          disabled: N,
                       }),
                   }),
-                  (0, i.jsx)(a.$, {
+                  (0, l.jsx)(a.$, {
                       variant: "critical-primary",
                       size: "sm",
                       text: f.intl.string(f.t.hDtbsz),
-                      onClick: N,
-                      disabled: j || x.applicationStatus !== p.B5.SUBMITTED,
+                      onClick: b,
+                      disabled: v || S.applicationStatus !== g.B5.SUBMITTED,
                   }),
                   n &&
-                      (0, i.jsx)(a.$, {
+                      (0, l.jsx)(a.$, {
                           onClick: () => {
-                              (0, o.openUserProfileModal)({ userId: x.userId, guildId: x.guildId });
+                              (0, o.openUserProfileModal)({ userId: S.userId, guildId: S.guildId });
                           },
                           variant: "secondary",
                           size: "sm",
                           text: f.intl.string(f.t.iXAna6),
                       }),
-                  E && (0, i.jsx)(r.Ay.Divider, {}),
+                  x && (0, l.jsx)(r.Ay.Divider, {}),
               ],
           })
         : null;

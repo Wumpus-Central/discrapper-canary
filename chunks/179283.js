@@ -1,36 +1,36 @@
-l.d(t, { P: () => I });
-var i = l(627968),
-    n = l(64700),
-    r = l(503698),
-    s = l.n(r),
-    a = l(834730),
-    u = l(115703),
-    c = l(438842),
-    o = l(879472),
-    d = l(890653);
+i.d(l, { P: () => I });
+var t = i(627968),
+    n = i(64700),
+    s = i(503698),
+    a = i.n(s),
+    r = i(834730),
+    u = i(115703),
+    c = i(438842),
+    o = i(879472),
+    d = i(890653);
 function I(e) {
-    let { profile: t, className: l } = e,
-        { gamesToDisplay: r, lastGameToDisplay: I, remainingGames: A } = (0, u.A)(t),
-        _ = n.useMemo(
-            () => t.traits.map((e, t) => ({ key: `trait-${t}`, ...e })).filter((e) => e.label.length > 0),
-            [t],
+    let { profile: l, className: i } = e,
+        { gamesToDisplay: s, lastGameToDisplay: I, remainingGames: A } = (0, u.A)(l),
+        C = n.useMemo(
+            () => l.traits.map((e, l) => ({ key: `trait-${l}`, ...e })).filter((e) => e.label.length > 0),
+            [l],
         ),
-        E = t.description.length > 0;
-    return E || r.length > 0 || _.length > 0
-        ? (0, i.jsxs)("div", {
-              className: s()(d.rf, l),
+        E = l.description.length > 0;
+    return E || s.length > 0 || C.length > 0
+        ? (0, t.jsxs)("div", {
+              className: a()(d.rf, i),
               children: [
                   E
-                      ? (0, i.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: t.description })
+                      ? (0, t.jsx)(r.E, { variant: "text-sm/normal", color: "text-subtle", children: l.description })
                       : null,
-                  (0, i.jsx)(c.A, {
-                      gamesToDisplay: r,
+                  (0, t.jsx)(c.A, {
+                      gamesToDisplay: s,
                       lastGameToDisplay: I,
                       remainingGames: A,
-                      activity: t.gameActivity,
+                      activity: l.gameActivity,
                   }),
-                  (0, i.jsx)(o.w, { items: _ }),
+                  (0, t.jsx)(o.w, { items: C }),
               ],
           })
-        : (0, i.jsx)("div", { className: d.C3 });
+        : (0, t.jsx)("div", { className: d.C3 });
 }

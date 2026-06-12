@@ -23,8 +23,8 @@ let l = (e) => {
             onElementResizeEnd: c,
             throttleDuration: d = 300,
             orientation: _,
-            usePointerEvents: f = !1,
-            getClampedValue: h = s.clamp,
+            usePointerEvents: h = !1,
+            getClampedValue: f = s.clamp,
         } = e,
         [p, E] = r.useState(!1),
         m = r.useRef(0),
@@ -40,7 +40,7 @@ let l = (e) => {
                 return A.current + i;
             }
             function t(e) {
-                return h(e, a ?? 0, i ?? e);
+                return f(e, a ?? 0, i ?? e);
             }
             let r = (0, s.throttle)(l, d),
                 I = (i) => {
@@ -56,17 +56,17 @@ let l = (e) => {
                         r = t(i);
                     l(r, i), c?.(r), (g.current = !1);
                 },
-                S = f ? "pointerup" : "mouseup",
-                N = f ? "pointermove" : "mousemove",
-                y = n.current.ownerDocument;
+                S = h ? "pointerup" : "mouseup",
+                y = h ? "pointermove" : "mousemove",
+                N = n.current.ownerDocument;
             return (
-                y.addEventListener(S, T),
-                y.addEventListener(N, I),
+                N.addEventListener(S, T),
+                N.addEventListener(y, I),
                 () => {
-                    y.removeEventListener(S, T), y.removeEventListener(N, I), r.cancel();
+                    N.removeEventListener(S, T), N.removeEventListener(y, I), r.cancel();
                 }
             );
-        }, [p, l, a, i, _, n, d, c, f, h, u]),
+        }, [p, l, a, i, _, n, d, c, h, f, u]),
         r.useCallback(
             (e) => {
                 let t = 1 === o(_);

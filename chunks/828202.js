@@ -1,6 +1,6 @@
 e.exports = function (e) {
     let t = /[a-zA-Z@][a-zA-Z0-9_]*/,
-        a = { $pattern: t, keyword: ["@interface", "@class", "@protocol", "@implementation"] };
+        n = { $pattern: t, keyword: ["@interface", "@class", "@protocol", "@implementation"] };
     return {
         name: "Objective-C",
         aliases: ["mm", "objc", "obj-c", "obj-c++", "objective-c++"],
@@ -170,10 +170,10 @@ e.exports = function (e) {
             },
             {
                 className: "class",
-                begin: "(" + a.keyword.join("|") + ")\\b",
+                begin: "(" + n.keyword.join("|") + ")\\b",
                 end: /(\{|$)/,
                 excludeEnd: !0,
-                keywords: a,
+                keywords: n,
                 contains: [e.UNDERSCORE_TITLE_MODE],
             },
             { begin: "\\." + e.UNDERSCORE_IDENT_RE, relevance: 0 },

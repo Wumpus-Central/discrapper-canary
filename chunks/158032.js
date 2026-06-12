@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { B1: () => c, ET: () => p, Ir: () => d, U: () => _, r6: () => f, uK: () => h });
+n.d(t, { B1: () => c, ET: () => p, Ir: () => d, U: () => _, r6: () => h, uK: () => f });
 var i = n(284009),
     r = n.n(i),
     s = n(228366),
@@ -47,14 +47,14 @@ async function d(e, t, n, i, c, d) {
     try {
         let _ = (0, l.EL)(e);
         r()(_, "Expected existing premium plan");
-        let f = (0, l.GX)(e, _.planId),
-            h = void 0 !== n ? n.toLowerCase() : e.currency;
+        let h = (0, l.GX)(e, _.planId),
+            f = void 0 !== n ? n.toLowerCase() : e.currency;
         (0, o.U)(e, t, d),
             await a.nV(
                 e,
-                { status: u.Dmq.ACTIVE, paymentSource: i, items: f, currency: n },
-                { amount: 0, currency: h },
-                (0, l.UC)(f, h, i?.id),
+                { status: u.Dmq.ACTIVE, paymentSource: i, items: h, currency: n },
+                { amount: 0, currency: f },
+                (0, l.UC)(h, f, i?.id),
                 t,
                 c,
                 d,
@@ -78,14 +78,14 @@ async function _(e, t, n) {
         throw e;
     }
 }
-async function f(e, t, n, i, r) {
+async function h(e, t, n, i, r) {
     try {
         await a.r6(e, t, n, i, r), s.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
     } catch (e) {
         throw (s.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_FAIL", error: e }), e);
     }
 }
-async function h(e, t, n, i, r) {
+async function f(e, t, n, i, r) {
     try {
         await a.uK(e, t, n, i, r), s.h.dispatch({ type: "PREMIUM_PAYMENT_UPDATE_SUCCESS" });
     } catch (e) {

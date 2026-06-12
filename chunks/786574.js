@@ -1,8 +1,8 @@
 a.d(t, { N: () => d }), a(321073);
 var n = a(627968),
     l = a(64700),
-    i = a(614820),
-    s = a(477782),
+    s = a(614820),
+    i = a(477782),
     r = a(583650),
     o = a(231643);
 function d(e, t) {
@@ -11,7 +11,7 @@ function d(e, t) {
             if ("" === a.trim()) return e;
             let t = a.toLowerCase().trim();
             return e.filter((e) => {
-                let a = ((0, i.O)(e.name) ?? "").toLowerCase(),
+                let a = ((0, s.O)(e.name) ?? "").toLowerCase(),
                     n = (e.group ?? "").toLowerCase(),
                     l = e.tags ?? [];
                 return (
@@ -26,7 +26,7 @@ function d(e, t) {
         l.useMemo(
             () =>
                 (0, n.jsx)(
-                    s.aK,
+                    i.aK,
                     {
                         id: "devtools-search",
                         control: (e, t) =>
@@ -41,7 +41,7 @@ function d(e, t) {
             if ("" !== a.trim() && 0 === c.length)
                 e.push(
                     (0, n.jsx)(
-                        s.Dr,
+                        i.Dr,
                         { id: "devtools-no-results", label: `No DevTools found for "${a}"`, disabled: !0 },
                         "devtools-no-results",
                     ),
@@ -58,26 +58,26 @@ function d(e, t) {
                     })(c.filter((e) => e.group !== o.fu.NONE));
                 l.forEach((a) => {
                     let { id: l, name: r } = a;
-                    return e.push((0, n.jsx)(s.Dr, { id: l, label: (0, i.O)(r) ?? "", action: () => t(l) }, l));
+                    return e.push((0, n.jsx)(i.Dr, { id: l, label: (0, s.O)(r) ?? "", action: () => t(l) }, l));
                 }),
                     o.BW.forEach((l) => {
                         let o = r.get(l);
                         if (null != o && o.length > 0) {
-                            let r = o.sort((e, t) => ((0, i.O)(e.name) ?? "").localeCompare((0, i.O)(t.name) ?? ""));
+                            let r = o.sort((e, t) => ((0, s.O)(e.name) ?? "").localeCompare((0, s.O)(t.name) ?? ""));
                             "" === a.trim()
                                 ? e.push(
                                       (0, n.jsx)(
-                                          s.Dr,
+                                          i.Dr,
                                           {
                                               id: `devtools-${l}`,
                                               label: l,
-                                              children: (0, n.jsx)(s.rX, {
+                                              children: (0, n.jsx)(i.rX, {
                                                   children: r.map((e) =>
                                                       (0, n.jsx)(
-                                                          s.Dr,
+                                                          i.Dr,
                                                           {
                                                               id: `devtools-${e.id}`,
-                                                              label: (0, i.O)(e.name) ?? "",
+                                                              label: (0, s.O)(e.name) ?? "",
                                                               action: () => t(e.id),
                                                           },
                                                           e.id,
@@ -90,15 +90,15 @@ function d(e, t) {
                                   )
                                 : e.push(
                                       (0, n.jsx)(
-                                          s.rX,
+                                          i.rX,
                                           {
                                               label: l,
                                               children: r.map((e) =>
                                                   (0, n.jsx)(
-                                                      s.Dr,
+                                                      i.Dr,
                                                       {
                                                           id: `devtools-filtered-${e.id}`,
-                                                          label: (0, i.O)(e.name) ?? "",
+                                                          label: (0, s.O)(e.name) ?? "",
                                                           action: () => t(e.id),
                                                       },
                                                       e.id,

@@ -1,13 +1,13 @@
 "use strict";
 n.d(t, { D: () => o });
-var r = n(499867),
-    i = n(265690),
+var i = n(499867),
+    r = n(265690),
     s = n(121894);
 function a(e, t) {
     return e === t;
 }
 function o(e) {
-    let t = (0, i.h)((0, r.eh)((t, n, r) => e((e) => (0, s.r)(() => t(e)), n, r)));
+    let t = (0, r.h)((0, i.eh)((t, n, i) => e((e) => (0, s.r)(() => t(e)), n, i)));
     function n(e) {
         let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a;
         return t(e, n);
@@ -29,8 +29,8 @@ function o(e) {
         getField: function (e) {
             return o((t) => t[e]);
         },
-        subscribe: function (e, n, r) {
-            return t.subscribe(e, n, r);
+        subscribe: function (e, n, i) {
+            return t.subscribe(e, n, i);
         },
         setState: l,
         resetState: function () {

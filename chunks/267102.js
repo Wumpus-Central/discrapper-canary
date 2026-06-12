@@ -6,9 +6,9 @@ n.d(t, {
     Uw: () => c,
     Wr: () => g,
     aL: () => I,
-    mU: () => f,
+    mU: () => h,
     rH: () => p,
-    wp: () => h,
+    wp: () => f,
     zd: () => m,
 });
 var i = n(627968),
@@ -21,14 +21,14 @@ var i = n(627968),
 let c = new a.H(),
     d = r.createContext({ appContext: u.BRT.APP, renderWindow: window, windowDispatch: c, windowId: (0, o.Xg)() }),
     _ = new Map();
-function f(e) {
+function h(e) {
     let t = e.ownerDocument.defaultView;
     if (null == t) return;
     let n = (0, o.Q2)(t);
     return _.get(n)?.windowDispatch;
 }
-function h(e) {
-    return (0, s.vq)(e?.target) ? (f(e.target) ?? null) : null;
+function f(e) {
+    return (0, s.vq)(e?.target) ? (h(e.target) ?? null) : null;
 }
 function p() {
     let e = (0, l.Sf)();

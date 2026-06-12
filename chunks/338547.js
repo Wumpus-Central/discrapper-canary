@@ -1,11 +1,11 @@
 "use strict";
-var r = n(227106);
+var i = n(227106);
 e.exports = function (e) {
     return null === e
         ? "Null"
         : void 0 === e
           ? "Undefined"
-          : r(e)
+          : i(e)
             ? "Object"
             : "number" == typeof e
               ? "Number"

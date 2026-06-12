@@ -1,33 +1,33 @@
-n.d(t, { A: () => _ });
-var i = n(627968);
-n(64700);
-var l = n(503698),
-    s = n.n(l),
-    a = n(990078),
-    r = n(187322),
-    o = n(793574),
-    d = n(688810),
-    u = n(46225),
-    c = n(486020),
-    g = n(221124);
-let _ = (e) => {
-    let { disabled: t = !1, application: n, className: l, innerClassName: _ } = e,
-        { canStartAuthorization: m, startAuthorization: h, fetched: A } = (0, u.RD)(n);
-    t = t || !A || !m;
-    let { analyticsLocations: p } = (0, d.Ay)(o.A.USER_SETTINGS_CONNECTIONS),
-        E = c.Ay.getApplicationIconURL({ id: n.id, icon: n.icon });
-    return (0, i.jsx)(a.m, {
-        text: n.name,
+a.d(t, { A: () => h });
+var i = a(627968);
+a(64700);
+var n = a(503698),
+    s = a.n(n),
+    l = a(990078),
+    r = a(187322),
+    c = a(793574),
+    d = a(688810),
+    o = a(46225),
+    p = a(486020),
+    u = a(475135);
+let h = (e) => {
+    let { disabled: t = !1, application: a, className: n, innerClassName: h } = e,
+        { canStartAuthorization: m, startAuthorization: N, fetched: v } = (0, o.RD)(a);
+    t = t || !v || !m;
+    let { analyticsLocations: A } = (0, d.Ay)(c.A.USER_SETTINGS_CONNECTIONS),
+        b = p.Ay.getApplicationIconURL({ id: a.id, icon: a.icon });
+    return (0, i.jsx)(l.m, {
+        text: a.name,
         children: (0, i.jsx)("div", {
-            className: s()(g.iE, l),
+            className: s()(u.iE, n),
             children: (0, i.jsx)(r.vN, {
                 children: (0, i.jsx)("button", {
-                    className: s()(g.vW, _),
+                    className: s()(u.vW, h),
                     type: "button",
-                    onClick: () => h({ analyticsLocations: p }),
-                    "aria-label": n.name,
+                    onClick: () => N({ analyticsLocations: A }),
+                    "aria-label": a.name,
                     disabled: t,
-                    children: (0, i.jsx)("img", { className: g.Kk, src: E, height: 28, width: 28, alt: n.name }),
+                    children: (0, i.jsx)("img", { className: u.In, src: b, height: 28, width: 28, alt: a.name }),
                 }),
             }),
         }),

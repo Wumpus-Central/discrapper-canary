@@ -1,11 +1,11 @@
-n.d(l, { A: () => t }), n(938796);
-var r = n(665260),
-    u = n(652215);
-function t(e) {
+s.d(t, { A: () => u }), s(938796);
+var n = s(665260),
+    r = s(652215);
+function u(e) {
     return (
-        e.type === u.lAJ.DEFAULT &&
-        (0, r.Lt)(e.flags, u.pr7.IS_CROSSPOST) &&
+        e.type === r.lAJ.DEFAULT &&
+        (0, n.Lt)(e.flags, r.pr7.IS_CROSSPOST) &&
         null != e.messageReference &&
-        e.messageReference.type !== u.SH7.FORWARD
+        e.messageReference.type !== r.SH7.FORWARD
     );
 }

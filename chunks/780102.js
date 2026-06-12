@@ -6,7 +6,7 @@ e.exports = function (e) {
                 { begin: "'", end: "'", contains: [{ begin: "''", relevance: 0 }] },
             ],
         },
-        a = {
+        n = {
             className: "meta",
             begin: /#\s*[a-z]+\b/,
             end: /$/,
@@ -2551,7 +2551,7 @@ e.exports = function (e) {
             { className: "variable", begin: /\b_+[a-zA-Z]\w*/ },
             { className: "title", begin: /[a-zA-Z][a-zA-Z_0-9]*_fnc_[a-zA-Z_0-9]+/ },
             t,
-            a,
+            n,
         ],
         illegal: [/\$[^a-fA-F0-9]/, /\w\$/, /\?/, /@/, / \| /, /[a-zA-Z_]\./, /\:\=/, /\[\:/],
     };

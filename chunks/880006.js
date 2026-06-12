@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(64700),
     r = n(859141),
     s = n.n(r),
@@ -23,10 +23,10 @@ var l = n(495544),
 function _(e, t, n) {
     return "guild" === e ? c.A.getGuildExperimentDescriptor(t, n.guildId) : c.A.getUserExperimentDescriptor(t);
 }
-function f(e, t, n, i) {
+function h(e, t, n, i) {
     return i?.aaMode ? e.defaultConfig : (n.get(t)?.config ?? e.defaultConfig);
 }
-function h(e) {
+function f(e) {
     var t, n;
     e.id, e.label, e.commonTriggerPoint;
     let r = new Map();
@@ -49,9 +49,9 @@ function h(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             n = arguments.length > 2 ? arguments[2] : void 0,
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-        ((t.exposureType = n ? d.vf.AUTO_FALLBACK : d.vf.AUTO), (t.excluded = !1), null == i) ? h(e, t) : p(e, t, i);
+        ((t.exposureType = n ? d.vf.AUTO_FALLBACK : d.vf.AUTO), (t.excluded = !1), null == i) ? f(e, t) : p(e, t, i);
     }
-    function h(t) {
+    function f(t) {
         let n =
                 arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
@@ -81,10 +81,10 @@ function h(e) {
             let i = _(e.kind, e.id, t),
                 a = null == i || s ? d.RE.NOT_ELIGIBLE : i.bucket,
                 u = null == i ? -1 : i.revision;
-            (a !== o || l !== u) && (n(f(e, a, r, i), a, u), (o = a), (l = u));
+            (a !== o || l !== u) && (n(h(e, a, r, i), a, u), (o = a), (l = u));
         }
         return (
-            n(f(e, o, r, a), o, l),
+            n(h(e, o, r, a), o, l),
             c.A.addReactChangeListener(u),
             () => {
                 c.A.removeReactChangeListener(u);
@@ -98,16 +98,16 @@ function h(e) {
                 l = !1 !== n.autoTrackExposure,
                 u = _(e.kind, e.id, t),
                 c = null == n.trackExposureOptions ? void 0 : o(n.trackExposureOptions ?? {}),
-                h = u?.triggerDebuggingEnabled ?? !1,
+                f = u?.triggerDebuggingEnabled ?? !1,
                 [[p, m, g], A] = (0, i.useState)(() => {
                     let t = null == u || s ? d.RE.NOT_ELIGIBLE : u.bucket;
-                    return [f(e, t, r, u), t, null == u ? -1 : u.revision];
+                    return [h(e, t, r, u), t, null == u ? -1 : u.revision];
                 }),
                 I = o(t);
             return (
                 (0, i.useEffect)(() => {
-                    !s && (l || h) && null == e.commonTriggerPoint && a(I, c, !1 === l);
-                }, [s, l, I, c, m, g, h]),
+                    !s && (l || f) && null == e.commonTriggerPoint && a(I, c, !1 === l);
+                }, [s, l, I, c, m, g, f]),
                 (0, i.useEffect)(
                     () =>
                         E(
@@ -123,16 +123,16 @@ function h(e) {
             );
         },
         subscribe: E,
-        trackExposure: h,
+        trackExposure: f,
         getCurrentConfig: function (t) {
             let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { autoTrackExposure: !0 },
                 i = _(e.kind, e.id, t);
-            if (null == i || n.disable) return f(e, d.RE.NOT_ELIGIBLE, r, i);
+            if (null == i || n.disable) return h(e, d.RE.NOT_ELIGIBLE, r, i);
             if ((!1 !== n.autoTrackExposure || i.triggerDebuggingEnabled) && null == e.commonTriggerPoint) {
                 let e = !1 === n.autoTrackExposure;
                 a(t, n.trackExposureOptions, e, i);
             }
-            return f(e, i.bucket, r, i);
+            return h(e, i.bucket, r, i);
         },
         definition: e,
         isAAMode: function (t) {

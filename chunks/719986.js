@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { M: () => r });
-class r {
+n.d(t, { M: () => i });
+class i {
     desktopMaxHeight;
     mobileMaxHeight;
     responsive;
@@ -12,7 +12,7 @@ class r {
             (this.backgroundStyle = e.background_style);
     }
     static fromServer(e) {
-        return new r(e);
+        return new i(e);
     }
     toDesktopStyles() {
         let e = {};

@@ -1,12 +1,12 @@
 "use strict";
-var r = n(557939),
-    i = n(410323),
-    a = n(321727),
-    s = n(120394),
+var i = n(557939),
+    r = n(410323),
+    s = n(321727),
+    a = n(120394),
     o = n(304880),
     l = n(503628),
-    u = i("".charAt);
-r(
+    u = r("".charAt);
+i(
     {
         target: "String",
         proto: !0,
@@ -16,11 +16,11 @@ r(
     },
     {
         at: function (e) {
-            var t = o(a(this)),
+            var t = o(s(this)),
                 n = t.length,
-                r = s(e),
-                i = r >= 0 ? r : n + r;
-            return i < 0 || i >= n ? void 0 : u(t, i);
+                i = a(e),
+                r = i >= 0 ? i : n + i;
+            return r < 0 || r >= n ? void 0 : u(t, r);
         },
     },
 );

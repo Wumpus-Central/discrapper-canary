@@ -1,4 +1,4 @@
-var r = n(949499).default;
+var i = n(949499).default;
 (e.exports = function (e) {
     if (null != e) {
         var t = e[("function" == typeof Symbol && Symbol.iterator) || "@@iterator"],
@@ -12,7 +12,7 @@ var r = n(949499).default;
                 },
             };
     }
-    throw TypeError(r(e) + " is not iterable");
+    throw TypeError(i(e) + " is not iterable");
 }),
     (e.exports.__esModule = !0),
     (e.exports.default = e.exports);

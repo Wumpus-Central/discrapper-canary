@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { DJ: () => u, uf: () => l });
+n.d(t, { DJ: () => d, uf: () => l });
 var i = n(636537),
     r = n(228366),
     s = n(393033),
@@ -7,12 +7,12 @@ var i = n(636537),
     o = n(652215);
 async function l(e) {
     let { method: t, classificationId: n } = e;
-    return (0, s.qn)() ? await _({ classificationId: n, method: t }) : await d(t);
+    return (0, s.qn)() ? await c({ classificationId: n, method: t }) : await u(t);
 }
-async function d(e) {
+async function u(e) {
     return (await i.Bo.post({ url: o.Rsh.VERIFY_AGE, body: { method: e }, rejectWithError: !0 })).body;
 }
-async function _(e) {
+async function c(e) {
     let { classificationId: t, method: n } = e,
         r = a.default.getSuspendedUserToken();
     return (
@@ -23,7 +23,7 @@ async function _(e) {
         })
     ).body;
 }
-async function u() {
+async function d() {
     let e, t;
     return (
         r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_START" }),

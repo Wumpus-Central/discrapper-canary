@@ -15,8 +15,8 @@ let _ = r.forwardRef(function (e, t) {
             className: r,
             src: s,
             unicodeEmoji: _,
-            name: f,
-            size: h = 20,
+            name: h,
+            size: f = 20,
             enableTooltip: p = !0,
             enableHeight: E = !0,
             onClick: m,
@@ -25,27 +25,27 @@ let _ = r.forwardRef(function (e, t) {
         ? null
         : (0, i.jsx)(o.m, {
               asContainer: !0,
-              text: f,
+              text: h,
               "aria-label": !1,
               shouldShow: p,
               tag: "span",
               children:
                   ((n = (0, i.jsx)("img", {
                       ref: t,
-                      alt: c.intl.formatToPlainString(c.t["9+YWrE"], { name: f }),
+                      alt: c.intl.formatToPlainString(c.t["9+YWrE"], { name: h }),
                       className: a()(d.U, r, { [d.v]: null != m }),
-                      height: E ? h : void 0,
+                      height: E ? f : void 0,
                       src: s,
-                      width: h,
+                      width: f,
                   })),
                   (null != _ &&
                       (n = (0, i.jsx)("img", {
                           ref: t,
                           alt: _.allNamesString,
                           className: a()(d.U, r, { [d.v]: null != m }),
-                          height: E ? h : void 0,
+                          height: E ? f : void 0,
                           src: _.url,
-                          width: h,
+                          width: f,
                       })),
                   null == m)
                       ? (0, i.jsx)(l.vN, { offset: { left: 5 }, children: n })

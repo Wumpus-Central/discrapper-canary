@@ -118,7 +118,7 @@ let t = [
         "foreignObject",
         "clipPath",
     ],
-    a = [
+    n = [
         "any-hover",
         "any-pointer",
         "aspect-ratio",
@@ -155,7 +155,7 @@ let t = [
     ]
         .sort()
         .reverse(),
-    n = [
+    i = [
         "active",
         "any-link",
         "blank",
@@ -236,7 +236,7 @@ let t = [
     ]
         .sort()
         .reverse(),
-    i = [
+    s = [
         "accent-color",
         "align-content",
         "align-items",
@@ -755,7 +755,7 @@ let t = [
         .sort()
         .reverse();
 e.exports = function (e) {
-    let o = {
+    let a = {
             IMPORTANT: { scope: "meta", begin: "!important" },
             BLOCK_COMMENT: e.C_BLOCK_COMMENT_MODE,
             HEXCOLOR: { scope: "number", begin: /#(([0-9a-fA-F]{3,4})|(([0-9a-fA-F]{2}){3,4}))\b/ },
@@ -776,7 +776,7 @@ e.exports = function (e) {
             },
             CSS_VARIABLE: { className: "attr", begin: /--[A-Za-z_][A-Za-z0-9_-]*/ },
         },
-        s = { className: "variable", begin: "\\$" + e.IDENT_RE },
+        o = { className: "variable", begin: "\\$" + e.IDENT_RE },
         l = "(?=[.\\s\\n[:,(])";
     return {
         name: "Stylus",
@@ -789,28 +789,28 @@ e.exports = function (e) {
             e.APOS_STRING_MODE,
             e.C_LINE_COMMENT_MODE,
             e.C_BLOCK_COMMENT_MODE,
-            o.HEXCOLOR,
+            a.HEXCOLOR,
             { begin: "\\.[a-zA-Z][a-zA-Z0-9_-]*" + l, className: "selector-class" },
             { begin: "#[a-zA-Z][a-zA-Z0-9_-]*" + l, className: "selector-id" },
             { begin: "\\b(" + t.join("|") + ")" + l, className: "selector-tag" },
-            { className: "selector-pseudo", begin: "&?:(" + n.join("|") + ")" + l },
+            { className: "selector-pseudo", begin: "&?:(" + i.join("|") + ")" + l },
             { className: "selector-pseudo", begin: "&?:(:)?(" + r.join("|") + ")" + l },
-            o.ATTRIBUTE_SELECTOR_MODE,
+            a.ATTRIBUTE_SELECTOR_MODE,
             {
                 className: "keyword",
                 begin: /@media/,
                 starts: {
                     end: /[{;}]/,
-                    keywords: { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: a.join(" ") },
-                    contains: [o.CSS_NUMBER_MODE],
+                    keywords: { $pattern: /[a-z-]+/, keyword: "and or not only", attribute: n.join(" ") },
+                    contains: [a.CSS_NUMBER_MODE],
                 },
             },
             {
                 className: "keyword",
                 begin: "@((-(o|moz|ms|webkit)-)?(charset|css|debug|extend|font-face|for|import|include|keyframes|media|mixin|page|warn|while))\\b",
             },
-            s,
-            o.CSS_NUMBER_MODE,
+            o,
+            a.CSS_NUMBER_MODE,
             {
                 className: "function",
                 begin: "^[a-zA-Z][a-zA-Z0-9_-]*\\(.*\\)",
@@ -822,31 +822,31 @@ e.exports = function (e) {
                         className: "params",
                         begin: /\(/,
                         end: /\)/,
-                        contains: [o.HEXCOLOR, s, e.APOS_STRING_MODE, o.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE],
+                        contains: [a.HEXCOLOR, o, e.APOS_STRING_MODE, a.CSS_NUMBER_MODE, e.QUOTE_STRING_MODE],
                     },
                 ],
             },
-            o.CSS_VARIABLE,
+            a.CSS_VARIABLE,
             {
                 className: "attribute",
-                begin: "\\b(" + i.join("|") + ")\\b",
+                begin: "\\b(" + s.join("|") + ")\\b",
                 starts: {
                     end: /;|$/,
                     contains: [
-                        o.HEXCOLOR,
-                        s,
+                        a.HEXCOLOR,
+                        o,
                         e.APOS_STRING_MODE,
                         e.QUOTE_STRING_MODE,
-                        o.CSS_NUMBER_MODE,
+                        a.CSS_NUMBER_MODE,
                         e.C_BLOCK_COMMENT_MODE,
-                        o.IMPORTANT,
-                        o.FUNCTION_DISPATCH,
+                        a.IMPORTANT,
+                        a.FUNCTION_DISPATCH,
                     ],
                     illegal: /\./,
                     relevance: 0,
                 },
             },
-            o.FUNCTION_DISPATCH,
+            a.FUNCTION_DISPATCH,
         ],
     };
 };

@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => i });
-var l = n(652215);
-function i(e) {
-    return e?.platform === l.yTV.PS4 || e?.platform === l.yTV.PS5;
+n.d(t, { A: () => r });
+var i = n(652215);
+function r(e) {
+    return e?.platform === i.yTV.PS4 || e?.platform === i.yTV.PS5;
 }

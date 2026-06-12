@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { A: () => a }), n(321073);
-var r = n(627968);
+var i = n(627968);
 n(64700);
-var i = n(192308),
-    s = n(985018);
+var r = n(192308),
+    s = n(375708);
 let a = {
     show(e) {
         let {
@@ -12,38 +12,38 @@ let a = {
             confirmText: o,
             confirmVariant: l = "primary",
             cancelText: u,
-            onConfirm: d,
-            onCancel: c,
+            onConfirm: c,
+            onCancel: d,
             onCloseCallback: _,
-            contextKey: f,
+            contextKey: h,
         } = e;
-        (0, i.openModalLazy)(
+        (0, r.openModalLazy)(
             async () => {
                 let { Modal: e } = await Promise.resolve().then(n.bind(n, 189213));
                 return (n) => {
-                    let i = [];
+                    let r = [];
                     return (
                         null != u &&
                             "" !== u &&
-                            i.push({
+                            r.push({
                                 text: u,
                                 onClick: async () => {
-                                    c?.(), await n.onClose();
+                                    d?.(), await n.onClose();
                                 },
                                 variant: "secondary",
                             }),
-                        i.push({
+                        r.push({
                             text: null != o ? o : s.intl.string(s.t.BddRzS),
                             onClick: async () => {
-                                d?.(), await n.onClose();
+                                c?.(), await n.onClose();
                             },
                             variant: l,
                         }),
-                        (0, r.jsx)(e, { ...n, size: "sm", title: t, subtitle: a, actions: i })
+                        (0, i.jsx)(e, { ...n, size: "sm", title: t, subtitle: a, actions: r })
                     );
                 };
             },
-            { onCloseCallback: _, contextKey: f },
+            { onCloseCallback: _, contextKey: h },
         );
     },
     close() {},

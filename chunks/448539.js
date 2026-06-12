@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, { A: () => a });
-var r = n(64700),
-    i = n(340287);
+var i = n(64700),
+    r = n(340287);
 let s = Object.freeze({ box: "border-box" });
 function a(e) {
     let { ref: t, onUpdate: n, resizeObserver: a, listenerMap: o, key: l } = e;
-    (0, r.useLayoutEffect)(() => {
+    (0, i.useLayoutEffect)(() => {
         let { current: e } = t;
         return (
             null != e &&
                 (o.set(e, (e) => {
-                    (0, i.flushSync)(() => {
+                    (0, r.flushSync)(() => {
                         n(e, l);
                     });
                 }),

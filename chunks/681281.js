@@ -15,11 +15,11 @@ var l = n(503698),
     A = n(730134),
     x = n(440594),
     g = n(429913),
-    C = n(47167),
-    f = n(882840),
-    E = n(713654),
-    N = n(137177),
-    y = n(508654),
+    f = n(47167),
+    C = n(882840),
+    y = n(713654),
+    E = n(137177),
+    N = n(508654),
     j = n(647090),
     v = n(961314),
     I = n(58736),
@@ -53,7 +53,7 @@ function H(e) {
 function F(e) {
     let t,
         { focusedApplication: n, focusedParticipant: l, channel: a } = e,
-        s = (0, y.Qs)(a.id),
+        s = (0, N.Qs)(a.id),
         r = null != s ? (0, j.G3)(s) : null,
         o = null != s;
     if (l?.type === w.lp.ACTIVITY)
@@ -61,7 +61,7 @@ function F(e) {
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(I.Ay.Divider, { className: B.yF }),
-                    (0, i.jsx)(N.A, { game: n, className: B.RI }),
+                    (0, i.jsx)(E.A, { game: n, className: B.RI }),
                     (0, i.jsx)(c.E, {
                         className: B.W$,
                         variant: "text-md/normal",
@@ -84,8 +84,8 @@ function F(e) {
     return (0, i.jsx)("div", { className: B.kL, children: t });
 }
 function G(e) {
-    let { channel: t, guild: l, appContext: o, inCall: A, isChatOpen: x, exitFullScreen: N } = e,
-        { focusedParticipant: y } = (0, s.cf)(
+    let { channel: t, guild: l, appContext: o, inCall: A, isChatOpen: x, exitFullScreen: E } = e,
+        { focusedParticipant: N } = (0, s.cf)(
             [L.A],
             () => ({
                 focusedParticipant: L.A.getSelectedParticipant(t.id),
@@ -93,12 +93,12 @@ function G(e) {
             }),
             [t.id],
         ),
-        j = (0, C.Ay)(t),
-        v = (0, E.gU)(t),
-        [_] = (0, g.A)(y?.type === w.lp.ACTIVITY ? [y.applicationId] : []),
+        j = (0, f.Ay)(t),
+        v = (0, y.gU)(t),
+        [_] = (0, g.A)(N?.type === w.lp.ACTIVITY ? [N.applicationId] : []),
         b = V.intl.string(V.t.BVZqJl);
     t.isDM() ? (b = V.intl.string(V.t.jN2DfZ)) : t.isGroupDM() && (b = V.intl.string(V.t["e5y+gm"]));
-    let H = (0, f.l)(t),
+    let H = (0, C.l)(t),
         G = t.isGuildVoice() && A && null != H && H.length > 0,
         z = (0, M.Ay)(t),
         W = G
@@ -158,7 +158,7 @@ function G(e) {
                     appContext: o,
                     inCall: A,
                     isChatOpen: x,
-                    exitFullScreen: N,
+                    exitFullScreen: E,
                     focusedApplication: _,
                     shouldShowHeaderParticipants: !0,
                 }),
@@ -183,7 +183,7 @@ function G(e) {
                         }),
                     }),
                     (0, i.jsx)(R.i$, { channel: t, guild: l }),
-                    (0, i.jsx)(F, { focusedApplication: _, focusedParticipant: y, channel: t }),
+                    (0, i.jsx)(F, { focusedApplication: _, focusedParticipant: N, channel: t }),
                 ],
             }),
             (0, i.jsx)(P.A, { channelId: t.id }),

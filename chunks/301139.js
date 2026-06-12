@@ -1,25 +1,25 @@
-a.d(e, { default: () => f });
-var i = a(627968),
-    n = a(64700),
-    l = a(772707),
-    s = a(683071),
-    r = a(192308),
-    c = a(116833),
-    o = a(793574),
-    _ = a(688810),
-    C = a(323082),
-    A = a(964404),
-    u = a(954571),
-    N = a(163437),
-    d = a(4126),
-    I = a(189213),
-    p = a(144228),
-    S = a(292666),
-    E = a(150934),
-    O = a(817281),
-    m = a(652215),
-    T = a(985018),
-    P = a(644494);
+i.d(e, { default: () => U });
+var a = i(627968),
+    n = i(64700),
+    l = i(772707),
+    s = i(683071),
+    r = i(192308),
+    c = i(116833),
+    o = i(793574),
+    C = i(688810),
+    _ = i(753390),
+    u = i(742023),
+    A = i(174459),
+    N = i(163437),
+    I = i(4126),
+    d = i(189213),
+    S = i(773812),
+    p = i(292666),
+    E = i(150934),
+    O = i(817281),
+    m = i(652215),
+    T = i(375708),
+    P = i(644494);
 let L = [
     {
         value: "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_NOT_USING_ENOUGH",
@@ -43,53 +43,53 @@ let L = [
     },
 ];
 function g(t) {
-    let { application: e, subscriptionId: a, onClose: l, transitionState: s } = t,
+    let { application: e, subscriptionId: i, onClose: l, transitionState: s } = t,
         [r, c] = n.useState(!1),
-        [o, _] = n.useState(null),
-        [C, A] = n.useState(""),
+        [o, C] = n.useState(null),
+        [_, u] = n.useState(""),
         N = n.useCallback(() => {
             null != o &&
-                (u.default.track(m.HAw.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
+                (A.default.track(m.HAw.PREMIUM_APP_CANCELLATION_SURVEY_SUBMITTED, {
                     answer: o,
                     application_id: e.id,
-                    reason: C,
-                    subscription_id: a,
+                    reason: _,
+                    subscription_id: i,
                 }),
                 l());
-        }, [e.id, a, o, l, C]);
+        }, [e.id, i, o, l, _]);
     return (
         n.useEffect(() => {
             O.Ay.updatedUnsyncedSettings({ disableApplicationSubscriptionCancellationSurvey: r });
         }, [r]),
-        (0, i.jsxs)(I.Modal, {
+        (0, a.jsxs)(d.Modal, {
             title: T.intl.string(T.t.zPxMdQ),
             subtitle: T.intl.string(T.t["QJGdB+"]),
             actions: [{ variant: "primary", text: T.intl.string(T.t.geKm7t), onClick: N, disabled: null == o }],
             onClose: l,
             transitionState: s,
             children: [
-                (0, i.jsx)("div", {
+                (0, a.jsx)("div", {
                     className: P.U7,
-                    children: (0, i.jsx)(p.z, {
+                    children: (0, a.jsx)(S.z, {
                         value: o,
                         options: L.map((t) => {
-                            let { nameGetter: e, value: a } = t;
-                            return { name: e(), value: a };
+                            let { nameGetter: e, value: i } = t;
+                            return { name: e(), value: i };
                         }),
-                        onChange: (t) => _(t),
+                        onChange: (t) => C(t),
                     }),
                 }),
                 "APPLICATION_SUBSCRIPTION_CANCELLATION_SURVEY_ANSWER_CHOICE_OTHER" === o &&
-                    (0, i.jsx)("div", {
+                    (0, a.jsx)("div", {
                         className: P.Xo,
-                        children: (0, i.jsx)(S.k, {
+                        children: (0, a.jsx)(p.k, {
                             autoFocus: !0,
                             placeholder: T.intl.string(T.t.s6tM8c),
-                            value: C,
-                            onChange: A,
+                            value: _,
+                            onChange: u,
                         }),
                     }),
-                (0, i.jsx)(E.S, {
+                (0, a.jsx)(E.S, {
                     checked: r,
                     onChange: (t) => c(t),
                     label: T.intl.string(T.t["3vPFQi"]),
@@ -99,72 +99,72 @@ function g(t) {
         })
     );
 }
-var R = a(416072);
-function f(t) {
-    let { transitionState: e, application: a, storeListing: I, subscription: p, guild: S, onClose: E } = t,
-        { analyticsLocations: O } = (0, _.Ay)(o.A.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
+var R = i(416072);
+function U(t) {
+    let { transitionState: e, application: i, storeListing: d, subscription: S, guild: p, onClose: E } = t,
+        { analyticsLocations: O } = (0, C.Ay)(o.A.APPLICATION_SUBSCRIPTION_CANCELLATION_MODAL),
         {
             cancelSubscription: P,
             error: L,
-            submitting: f,
+            submitting: U,
         } = ((t) => {
-            let [e, a] = n.useState(!1),
-                [i, l] = n.useState(null);
+            let [e, i] = n.useState(!1),
+                [a, l] = n.useState(null);
             return {
                 cancelSubscription: async (e) => {
                     try {
-                        return a(!0), await C.M2(e, t), !0;
+                        return i(!0), await _.M2(e, t), !0;
                     } catch (t) {
                         l(t);
                     } finally {
-                        a(!1);
+                        i(!1);
                     }
                 },
-                error: i,
+                error: a,
                 submitting: e,
             };
         })(O),
-        U = async () => {
-            if (await P(p.id)) {
+        y = async () => {
+            if (await P(S.id)) {
                 try {
-                    await C.hP();
+                    await _.hP();
                 } catch {}
-                A.Ay.disableApplicationSubscriptionCancellationSurvey
+                u.Ay.disableApplicationSubscriptionCancellationSurvey
                     ? E()
                     : (0, r.openModalLazy)(
-                          async () => (await E(), (t) => (0, i.jsx)(g, { application: a, subscriptionId: p.id, ...t })),
+                          async () => (await E(), (t) => (0, a.jsx)(g, { application: i, subscriptionId: S.id, ...t })),
                       );
             }
         };
     n.useEffect(() => {
-        u.default.track(m.HAw.CANCELLATION_FLOW_STARTED, { location_stack: O });
+        A.default.track(m.HAw.CANCELLATION_FLOW_STARTED, { location_stack: O });
     }, [O]);
-    let h = (0, N.bg)(I.skuFlags);
-    return (0, i.jsx)(l.k, {
-        actions: [{ loading: f, onClick: U, text: T.intl.string(T.t.KSqyfW), variant: "critical-primary" }],
+    let h = (0, N.bg)(d.skuFlags);
+    return (0, a.jsx)(l.k, {
+        actions: [{ loading: U, onClick: y, text: T.intl.string(T.t.KSqyfW), variant: "critical-primary" }],
         graphic: {
             type: "dynamic",
             component: c.DynamicGraphicComponent.APPLICATION_IMAGE_HEADER,
             aspectRatio: "16/9",
-            props: { application: a, className: R.Sb },
+            props: { application: i, className: R.Sb },
         },
         title: T.intl.string(T.t.CeCHk1),
         subtitle: h
-            ? T.intl.format(T.t.fZP9QD, { applicationName: a.name, timestamp: p.currentPeriodEnd.getTime() })
-            : S?.name !== void 0
+            ? T.intl.format(T.t.fZP9QD, { applicationName: i.name, timestamp: S.currentPeriodEnd.getTime() })
+            : p?.name !== void 0
               ? T.intl.format(T.t["3LeWBF"], {
-                    guild: S.name,
-                    applicationName: a.name,
-                    timestamp: p.currentPeriodEnd.getTime(),
+                    guild: p.name,
+                    applicationName: i.name,
+                    timestamp: S.currentPeriodEnd.getTime(),
                 })
-              : T.intl.format(T.t["8vum6M"], { applicationName: a.name, timestamp: p.currentPeriodEnd.getTime() }),
+              : T.intl.format(T.t["8vum6M"], { applicationName: i.name, timestamp: S.currentPeriodEnd.getTime() }),
         transitionState: e,
         onClose: E,
-        children: (0, i.jsxs)("div", {
+        children: (0, a.jsxs)("div", {
             className: R.oV,
             children: [
-                null != L ? (0, i.jsx)(s.w, { type: "critical", children: L.message }) : null,
-                (0, i.jsx)(d.iH, { applicationId: a.id, storeListingBenefits: I.benefits, className: R.iq }),
+                null != L ? (0, a.jsx)(s.w, { type: "critical", children: L.message }) : null,
+                (0, a.jsx)(I.iH, { applicationId: i.id, storeListingBenefits: d.benefits, className: R.iq }),
             ],
         }),
     });

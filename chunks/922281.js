@@ -1,31 +1,31 @@
-t.r(n), t.d(n, { default: () => d });
-var a = t(627968);
-t(64700);
-var l = t(606096),
-    i = t(189252),
-    r = t(851580),
-    s = t(251333),
-    o = t(985018);
-function d(e) {
-    let { onOpen: n, onClose: t } = e;
-    return (0, a.jsx)(s.$, {
-        onOpen: n,
-        onClose: t,
+e.r(o), e.d(o, { default: () => a });
+var n = e(627968);
+e(64700);
+var i = e(606096),
+    s = e(189252),
+    r = e(851580),
+    p = e(251333),
+    c = e(375708);
+function a(t) {
+    let { onOpen: o, onClose: e } = t;
+    return (0, n.jsx)(p.$, {
+        onOpen: o,
+        onClose: e,
         popoutPosition: "bottom",
         popoutAlign: "right",
-        children: (e, n, t, s, d) =>
-            (0, a.jsxs)(a.Fragment, {
+        children: (t, o, e, p, a) =>
+            (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, a.jsx)(i.A, {
-                        ...t,
-                        ref: d,
-                        onClick: e,
-                        icon: l.c,
-                        tooltip: o.intl.string(o.t["2pAkDA"]),
-                        selected: n,
-                        showBadge: s,
+                    (0, n.jsx)(s.A, {
+                        ...e,
+                        ref: a,
+                        onClick: t,
+                        icon: i.c,
+                        tooltip: c.intl.string(c.t["2pAkDA"]),
+                        selected: o,
+                        showBadge: p,
                     }),
-                    (0, a.jsx)(r.v, { location: "bookmarks-button", targetElementRef: d }),
+                    (0, n.jsx)(r.v, { location: "bookmarks-button", targetElementRef: a }),
                 ],
             }),
     });

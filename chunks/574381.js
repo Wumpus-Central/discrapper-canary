@@ -1,19 +1,19 @@
 "use strict";
 n.d(t, {
-    Aq: () => f,
+    Aq: () => h,
     Av: () => a,
-    Ct: () => h,
+    Ct: () => f,
     HZ: () => _,
     Ls: () => I,
-    R0: () => y,
+    R0: () => N,
     Sn: () => p,
     cX: () => u,
-    cZ: () => C,
+    cZ: () => v,
     fg: () => r,
     j9: () => c,
     m0: () => E,
     q4: () => g,
-    r_: () => N,
+    r_: () => y,
     t1: () => S,
     tn: () => A,
     uF: () => l,
@@ -41,13 +41,13 @@ function d() {
 function _() {
     return "WEB" === T();
 }
-function f() {
+function h() {
     return (
         null != navigator.userAgent &&
         null != navigator.userAgent.toLowerCase().match("(android ).+chrome/[.0-9]* mobile")
     );
 }
-function h() {
+function f() {
     return navigator.userAgent?.match(/android/i) != null;
 }
 function p() {
@@ -74,7 +74,7 @@ function T() {
 function S() {
     return o;
 }
-function N() {
+function y() {
     switch (o) {
         case "ios":
         case "android":
@@ -83,7 +83,7 @@ function N() {
             return "web";
     }
 }
-function y() {
+function N() {
     let { userAgent: e } = window.navigator;
     if (/Windows/i.test(e)) return /Phone/.test(e) ? "windows mobile" : "windows";
     if (/(iPhone|iPad|iPod)/.test(e)) return "ios";
@@ -93,6 +93,6 @@ function y() {
         return null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2 ? "ios" : "macos";
     else if (/Linux/i.test(e)) return "linux";
 }
-function C() {
+function v() {
     return l() ? "win" : u() ? "osx" : void 0;
 }

@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(228366),
     r = n(439372),
     s = n(696451),
     a = n(287809),
     o = n(316031);
 let l = null,
-    d = (e, t) => {
+    u = (e, t) => {
         let n = s.Ay.getMember(e, t),
             r = a.default.getUser(t);
         if (null == n || null == r || (0, o.Z)(n)) return;
@@ -23,7 +23,7 @@ let l = null,
         };
         i.h.dispatch({ type: "GUILD_MEMBER_UPDATE", ...l });
     };
-class _ extends r.A {
+class c extends r.A {
     _initialize() {
         l = setInterval(() => {
             let e;
@@ -31,13 +31,13 @@ class _ extends r.A {
                 let n = (0, s.DL)(t),
                     i = (0, s.vg)(t),
                     r = e[t];
-                (0, o.n)(r) || d(n, i);
+                (0, o.n)(r) || u(n, i);
             });
         }, 1e4);
     }
     _terminate() {
         clearInterval(l);
     }
-    clearGuildMemberTimeout = d;
+    clearGuildMemberTimeout = u;
 }
-let u = new _();
+let d = new c();

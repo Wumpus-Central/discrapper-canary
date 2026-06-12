@@ -1,10 +1,10 @@
 "use strict";
-var r = n(741623),
-    i = n(680135),
-    a = n(227106),
-    s = n(732937);
+var i = n(741623),
+    r = n(680135),
+    s = n(227106),
+    a = n(732937);
 e.exports = function (e, t, n) {
-    if (!a(e)) throw new r("Assertion failed: Type(O) is not Object");
-    if (!s(t)) throw new r("Assertion failed: P is not a Property Key");
-    if (!i(e, t, n)) throw new r("unable to create data property");
+    if (!s(e)) throw new i("Assertion failed: Type(O) is not Object");
+    if (!a(t)) throw new i("Assertion failed: P is not a Property Key");
+    if (!r(e, t, n)) throw new i("unable to create data property");
 };

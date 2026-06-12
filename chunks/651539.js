@@ -1,9 +1,9 @@
-r.d(t, { A: () => l });
-var s = r(401755),
-    n = r(985018);
-function l(e) {
+s.d(t, { A: () => i });
+var r = s(401755),
+    n = s(375708);
+function i(e) {
     switch (e) {
-        case s.IZ.CLASSROOM:
+        case r.IZ.CLASSROOM:
             return {
                 header: n.intl.string(n.t["x7+QD9"]),
                 description: n.intl.string(n.t["11e3sB"]),
@@ -12,7 +12,7 @@ function l(e) {
                 defaultName: n.t["23nK4J"],
                 author: n.intl.string(n.t.uvGmCx),
             };
-        case s.IZ.LOCAL_COMMUNITIES:
+        case r.IZ.LOCAL_COMMUNITIES:
             return {
                 header: n.intl.string(n.t.AhPF5a),
                 description: n.intl.string(n.t.j8g45p),
@@ -21,7 +21,7 @@ function l(e) {
                 defaultName: n.t.m0gjgY,
                 author: n.intl.string(n.t.uvGmCx),
             };
-        case s.IZ.CREATORS_HOBBIES:
+        case r.IZ.CREATORS_HOBBIES:
             return {
                 header: n.intl.string(n.t.Wx7UUY),
                 description: n.intl.string(n.t.Eazykp),
@@ -30,7 +30,7 @@ function l(e) {
                 defaultName: n.t.odrS6x,
                 author: n.intl.string(n.t.uvGmCx),
             };
-        case s.IZ.GLOBAL_COMMUNITIES:
+        case r.IZ.GLOBAL_COMMUNITIES:
             return {
                 header: n.intl.string(n.t.sn5Z8t),
                 description: n.intl.string(n.t["0RE0DR"]),
@@ -39,7 +39,7 @@ function l(e) {
                 defaultName: n.t.T1ocgk,
                 author: n.intl.string(n.t.uvGmCx),
             };
-        case s.IZ.FRIENDS_FAMILY:
+        case r.IZ.FRIENDS_FAMILY:
             return {
                 header: n.intl.string(n.t.QmGwQ6),
                 description: n.intl.string(n.t.zJiGfG),
@@ -48,7 +48,7 @@ function l(e) {
                 defaultName: n.t.MPaut5,
                 author: n.intl.string(n.t.uvGmCx),
             };
-        case s.IZ.STUDY_GROUPS:
+        case r.IZ.STUDY_GROUPS:
             return {
                 header: n.intl.string(n.t.sJDGZT),
                 description: n.intl.string(n.t.ILQuET),
@@ -57,7 +57,7 @@ function l(e) {
                 defaultName: n.t.jvVOeZ,
                 author: n.intl.string(n.t.uvGmCx),
             };
-        case s.IZ.CREATE_FROM_SCRATCH:
+        case r.IZ.CREATE_FROM_SCRATCH:
             return {
                 header: n.intl.string(n.t["M/gqdd"]),
                 description: n.intl.string(n.t.shE8hW),
@@ -66,7 +66,7 @@ function l(e) {
                 defaultName: n.t.xhgNd0,
                 author: n.intl.string(n.t.uvGmCx),
             };
-        case s.IZ.CAMPUS_CLUBS:
+        case r.IZ.CAMPUS_CLUBS:
             return {
                 header: n.intl.string(n.t.v6JIt3),
                 description: n.intl.string(n.t.v71ZJG),
@@ -75,7 +75,7 @@ function l(e) {
                 defaultName: n.t.VlEPTN,
                 author: n.intl.string(n.t.uvGmCx),
             };
-        case s.IZ.LEAGUE_CLUBS:
+        case r.IZ.LEAGUE_CLUBS:
             return {
                 header: n.intl.string(n.t["zHGbB/"]),
                 description: n.intl.string(n.t["KQo/dF"]),
@@ -84,7 +84,7 @@ function l(e) {
                 defaultName: n.t.Y6Qfju,
                 author: n.intl.string(n.t.uvGmCx),
             };
-        case s.IZ.GITHUB_HACKATHON:
+        case r.IZ.GITHUB_HACKATHON:
             return {
                 header: n.intl.string(n.t.Gde9Ve),
                 description: n.intl.string(n.t.GPMwST),

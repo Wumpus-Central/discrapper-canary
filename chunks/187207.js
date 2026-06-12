@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { n: () => l });
-var r = n(824120),
-    i = n.n(r),
-    a = n(264572);
-function s(e) {
+var i = n(824120),
+    r = n.n(i),
+    s = n(264572);
+function a(e) {
     return 0 | e.mod(0x100000000).toJSNumber();
 }
 function o(e) {
@@ -11,20 +11,20 @@ function o(e) {
 }
 class l {
     _randomPrefix = 0 | Math.floor(0x100000000 * Math.random());
-    _creationTime = i()(Date.now());
+    _creationTime = r()(Date.now());
     _sequenceNumber = 0;
     generate(e) {
-        let t = i()(e),
+        let t = r()(e),
             n = 0 | this._sequenceNumber++,
-            r = new a.Buffer(24);
+            i = new s.Buffer(24);
         return (
-            r.writeInt32LE(s(t), 0, !0),
-            r.writeInt32LE(o(t), 4, !0),
-            r.writeInt32LE(this._randomPrefix, 8, !0),
-            r.writeInt32LE(s(this._creationTime), 12, !0),
-            r.writeInt32LE(o(this._creationTime), 16, !0),
-            r.writeInt32LE(n, 20, !0),
-            r.toString("base64")
+            i.writeInt32LE(a(t), 0, !0),
+            i.writeInt32LE(o(t), 4, !0),
+            i.writeInt32LE(this._randomPrefix, 8, !0),
+            i.writeInt32LE(a(this._creationTime), 12, !0),
+            i.writeInt32LE(o(this._creationTime), 16, !0),
+            i.writeInt32LE(n, 20, !0),
+            i.toString("base64")
         );
     }
 }

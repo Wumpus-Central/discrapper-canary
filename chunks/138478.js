@@ -1,5 +1,5 @@
 "use strict";
-var r = n(591082);
+var i = n(591082);
 e.exports = function (e) {
-    return r(e) || 0 === e ? e : e < 0 ? -1 : 1;
+    return i(e) || 0 === e ? e : e < 0 ? -1 : 1;
 };

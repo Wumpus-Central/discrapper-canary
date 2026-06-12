@@ -1,5 +1,5 @@
-var r = n(233346),
-    i = n(91089),
-    a = n(486413),
-    s = a && a.isSet;
-e.exports = s ? i(s) : r;
+var i = n(233346),
+    r = n(91089),
+    s = n(486413),
+    a = s && s.isSet;
+e.exports = a ? r(a) : i;

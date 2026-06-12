@@ -1,4 +1,4 @@
-n.d(t, { x: () => b, default: () => j });
+n.d(t, { x: () => f, default: () => j });
 var i = n(627968);
 n(64700);
 var l = n(980707),
@@ -16,16 +16,16 @@ var a = n(17928),
     x = n(576705),
     A = n(292024),
     p = n(375708);
-function f(e, t) {
+function b(e, t) {
     let l = (0, a.bG)([x.A], () => {
             let n = x.A.getHighestRole(e);
             return !x.A.isRoleHigher(e, n, t);
         }),
         s = [],
-        f = (0, A.A)(e, t);
-    null != f && s.push(f);
-    let b = (0, g.A)({ id: t.id, label: p.intl.string(p.t.sMsaLg) });
+        b = (0, A.A)(e, t);
     null != b && s.push(b);
+    let f = (0, g.A)({ id: t.id, label: p.intl.string(p.t.sMsaLg) });
+    null != f && s.push(f);
     let j = t.tags?.guild_connections === null,
         N = e.verificationRoleId === t.id,
         E = t.managed && !j,
@@ -69,12 +69,12 @@ function f(e, t) {
     }
     return s;
 }
-function b(e, t) {
-    return f(e, t).length > 0;
+function f(e, t) {
+    return b(e, t).length > 0;
 }
 function j(e) {
     let { role: t, guild: n, onSelect: a } = e,
-        r = f(n, t);
+        r = b(n, t);
     return 0 === r.length
         ? null
         : (0, i.jsx)(l.W, {

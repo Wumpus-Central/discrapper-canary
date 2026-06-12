@@ -1,11 +1,11 @@
 "use strict";
-e.exports = function (e, r) {
-    var t = r.length,
-        n = e.length;
-    if (n > t) return !1;
-    if (n === t) return e === r;
-    e: for (var o = 0, i = 0; o < n; o++) {
-        for (var a = e.charCodeAt(o); i < t; ) if (r.charCodeAt(i++) === a) continue e;
+e.exports = function (e, t) {
+    var n = t.length,
+        i = e.length;
+    if (i > n) return !1;
+    if (i === n) return e === t;
+    n: for (var r = 0, s = 0; r < i; r++) {
+        for (var a = e.charCodeAt(r); s < n; ) if (t.charCodeAt(s++) === a) continue n;
         return !1;
     }
     return !0;

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { LM: () => o, XJ: () => d, qw: () => l });
+n.d(t, { LM: () => o, XJ: () => u, qw: () => l });
 var i = n(636537),
     r = n(228366),
     s = n(371794),
@@ -45,7 +45,7 @@ async function l(e) {
         r.h.dispatch({ type: "ENTITLEMENTS_FETCH_FOR_USER_FAIL" });
     }
 }
-async function d() {
+async function u() {
     r.h.dispatch({ type: "ENTITLEMENTS_GIFTABLE_FETCH" });
     try {
         let e = await (0, s.aP)({ url: a.Rsh.ENTITLEMENTS_GIFTABLE, rejectWithError: !0 });

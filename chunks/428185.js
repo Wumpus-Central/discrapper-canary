@@ -1,9 +1,9 @@
 n.d(i, { default: () => s });
 var a = n(627968);
 n(64700);
-var r = n(158954),
+var r = n(732159),
     e = n(435183),
-    o = n(985018);
+    o = n(375708);
 let s = function (t) {
     let { channelId: i, application: n, onClose: s, ...l } = t,
         c = async (t) => {

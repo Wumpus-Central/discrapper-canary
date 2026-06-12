@@ -1,47 +1,47 @@
-a.d(t, { A: () => c }), a(321073);
-var n = a(64700),
-    r = a(403362),
-    s = a(473145),
-    i = a(568065),
-    l = a(333354),
-    o = a(985018);
-function c(e) {
+s.d(e, { A: () => d }), s(321073);
+var a = s(64700),
+    o = s(403362),
+    i = s(473145),
+    r = s(568065),
+    n = s(853513),
+    l = s(375708);
+function d(t) {
     let {
-        includeEmojis: t,
-        includeStickers: a,
-        includeSoundboards: c,
+        includeEmojis: e,
+        includeStickers: s,
+        includeSoundboards: d,
     } = arguments.length > 1 && void 0 !== arguments[1]
         ? arguments[1]
         : { includeEmojis: !0, includeStickers: !0, includeSoundboards: !0 };
-    return n.useMemo(() => {
-        let n = [],
-            d = (0, i.w$)();
+    return a.useMemo(() => {
+        let a = [],
+            u = (0, r.w$)();
         return (
-            t &&
-                n.push({
-                    perkIcon: s.TP.EMOJI,
-                    description: o.intl.formatToPlainString(l.default["NXvV0+"], {
-                        totalEmojis: e.features.total_emoji_slots,
-                        additionalEmojis: e.features.additional_emoji_slots,
+            e &&
+                a.push({
+                    perkIcon: i.TP.EMOJI,
+                    description: l.intl.formatToPlainString(n.default["NXvV0+"], {
+                        totalEmojis: t.features.total_emoji_slots,
+                        additionalEmojis: t.features.additional_emoji_slots,
                     }),
                 }),
-            a &&
-                n.push({
-                    perkIcon: s.TP.STICKER,
-                    description: o.intl.formatToPlainString(l.default.ZEvvPz, {
-                        totalStickers: e.features.total_sticker_slots,
-                        additionalStickers: e.features.additional_sticker_slots,
+            s &&
+                a.push({
+                    perkIcon: i.TP.STICKER,
+                    description: l.intl.formatToPlainString(n.default.ZEvvPz, {
+                        totalStickers: t.features.total_sticker_slots,
+                        additionalStickers: t.features.additional_sticker_slots,
                     }),
                 }),
-            c &&
-                n.push({
-                    perkIcon: s.TP.SOUNDBOARD,
-                    description: o.intl.formatToPlainString(l.default["s9u/E7"], {
-                        totalSoundboards: e.features.total_sound_slots,
-                        additionalSoundboards: e.features.additional_sound_slots,
+            d &&
+                a.push({
+                    perkIcon: i.TP.SOUNDBOARD,
+                    description: l.intl.formatToPlainString(n.default["s9u/E7"], {
+                        totalSoundboards: t.features.total_sound_slots,
+                        additionalSoundboards: t.features.additional_sound_slots,
                     }),
                 }),
-            n.concat(e.features.features.map((e) => d[e]).filter(r.Vq))
+            a.concat(t.features.features.map((t) => u[t]).filter(o.Vq))
         );
-    }, [e, t, a, c]);
+    }, [t, e, s, d]);
 }

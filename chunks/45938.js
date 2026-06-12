@@ -1,8 +1,8 @@
 "use strict";
 n.d(t, {
-    AK: () => U,
+    AK: () => k,
     GM: () => x,
-    Ik: () => R,
+    Ik: () => O,
     Kx: () => b,
     UJ: () => F,
     Vd: () => j,
@@ -13,12 +13,12 @@ n.d(t, {
     e7: () => M,
     eN: () => W,
     e_: () => V,
-    lo: () => O,
+    lo: () => R,
     n$: () => G,
     pF: () => w,
-    tB: () => v,
+    tB: () => C,
     u1: () => B,
-    v3: () => k,
+    v3: () => U,
 }),
     n(801541);
 var i,
@@ -31,33 +31,33 @@ var i,
     c = n(287809),
     d = n(174459),
     _ = n(403362),
-    f = n(927578),
-    h = n(257120),
+    h = n(428262),
+    f = n(257120),
     p = n(371794),
     E = n(652215),
     m = n(788868),
     g = n(375708);
 let A = [
-        h.A.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
-        ...["discordapp.com/gifts", "discord.com/gifts"].map((e) => h.A.escape(e)),
+        f.A.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
+        ...["discordapp.com/gifts", "discord.com/gifts"].map((e) => f.A.escape(e)),
     ].join("|"),
     I = RegExp(`(?: |^|https?://)(?:${A})/([a-z0-9-]+)`, "gi"),
-    T = [...["discord.com/billing/promotions", "promos.discord.gg"].map((e) => h.A.escape(e))].join("|"),
+    T = [...["discord.com/billing/promotions", "promos.discord.gg"].map((e) => f.A.escape(e))].join("|"),
     S = RegExp(`(?: |^|https?://)(?:${T})(/|(/)?\\?code=)([a-z0-9-]+)`, "gi"),
-    N = (e, t) =>
+    y = (e, t) =>
         Array(t)
             .fill(void 0)
             .map(() => `[abcdefghjkmnpqrstuvwxyzABCDEFGHJKMNPQRSTUVWXYZ23456789]{${e}}`)
             .join("-?"),
-    y = [N(4, 4), N(4, 6), N(5, 3), "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
-    C = RegExp(`^(WUMP-?)?(${y})$`);
-var v =
+    N = [y(4, 4), y(4, 6), y(5, 3), "[a-zA-Z]{4}-?[0-9a-zA-Z]{4}-?[a-zA-Z]{4}"].join("|"),
+    v = RegExp(`^(WUMP-?)?(${N})$`);
+var C =
     (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"),
     (i[(i.CUSTOM_STYLE = 1)] = "CUSTOM_STYLE"),
     (i[(i.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD"),
     i);
-let O = (e, t) => (s.Fr || s.v1 ? 0 : null != e || t ? 2 : 1),
-    R = (e) => 0 !== O(e);
+let R = (e, t) => (s.Fr || s.v1 ? 0 : null != e || t ? 2 : 1),
+    O = (e) => 0 !== R(e);
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
@@ -121,10 +121,10 @@ async function x(e) {
         throw (d.default.track(E.HAw.GIFT_CODE_RESOLVED, { resolved: !1, gift_code: e }), new o.A(t));
     }
 }
-function U(e, t) {
+function k(e, t) {
     d.default.track(E.HAw.GIFT_CODE_COPIED, { ...(0, l.A)(t, !1, !1), ...e.analyticsData });
 }
-function k(e, t, n) {
+function U(e, t, n) {
     let { error: i, accepted: r, accepting: s, opened: a, isCustomGift: o } = n;
     return null == i && (r || s || null == e)
         ? !o || a || r || s
@@ -218,7 +218,7 @@ function H(e, t, n) {
     return s.length === r.length ? s[0] : null;
 }
 function j(e) {
-    let t = e.trim().split("/").pop().match(C);
+    let t = e.trim().split("/").pop().match(v);
     if (null == t) return null;
     let [n, i, r] = t;
     return null == r ? null : r.replace(/-/g, "");
@@ -241,7 +241,7 @@ function W(e, t) {
             return g.intl.string(g.t.roztIr);
         case E.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
             return g.intl.formatToPlainString(g.t["4YTHKw"], {
-                planName: (0, f.YE)(t, m.PremiumTypes.TIER_2) ? g.intl.string(g.t.lG6a5x) : g.intl.string(g.t.FSOz78),
+                planName: (0, h.YE)(t, m.PremiumTypes.TIER_2) ? g.intl.string(g.t.lG6a5x) : g.intl.string(g.t.FSOz78),
             });
         case E.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
             return g.intl.string(g.t["9i1J30"]);

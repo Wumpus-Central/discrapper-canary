@@ -109,10 +109,10 @@ function d(e) {
                     macLabel: d.KEY_DELETE_A11Y_LABEL,
                 }),
         },
-        f = Array.isArray(t) ? t : t.split("+");
+        h = Array.isArray(t) ? t : t.split("+");
     return (0, i.jsx)("div", {
         className: s()(l.combo, r, { [l.dim]: n }),
-        children: f
+        children: h
             .map((e) => (null != _[e] ? _[e]() : e))
             .map((e, t) => (0, i.jsx)("span", { className: s()(l.key, a), children: e }, t)),
     });

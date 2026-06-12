@@ -1,24 +1,24 @@
 e.exports = function (e) {
     let t = e.regex,
-        a = {
+        n = {
             variants: [
                 e.COMMENT("!", "$", { relevance: 0 }),
                 e.COMMENT("^C[ ]", "$", { relevance: 0 }),
                 e.COMMENT("^C$", "$", { relevance: 0 }),
             ],
         },
-        n = /(_[a-z_\d]+)?/,
+        i = /(_[a-z_\d]+)?/,
         r = /([de][+-]?\d+)?/,
-        i = {
+        s = {
             className: "number",
             variants: [
-                { begin: t.concat(/\b\d+/, /\.(\d*)/, r, n) },
-                { begin: t.concat(/\b\d+/, r, n) },
-                { begin: t.concat(/\.\d+/, r, n) },
+                { begin: t.concat(/\b\d+/, /\.(\d*)/, r, i) },
+                { begin: t.concat(/\b\d+/, r, i) },
+                { begin: t.concat(/\.\d+/, r, i) },
             ],
             relevance: 0,
         },
-        o = {
+        a = {
             className: "function",
             beginKeywords: "subroutine function program",
             illegal: "[${=\\n]",
@@ -520,10 +520,10 @@ e.exports = function (e) {
         illegal: /\/\*/,
         contains: [
             { className: "string", relevance: 0, variants: [e.APOS_STRING_MODE, e.QUOTE_STRING_MODE] },
-            o,
-            { begin: /^C\s*=(?!=)/, relevance: 0 },
             a,
-            i,
+            { begin: /^C\s*=(?!=)/, relevance: 0 },
+            n,
+            s,
         ],
     };
 };

@@ -3,18 +3,18 @@ n.d(t, {
     $l: () => g,
     TF: () => l,
     Ul: () => m,
-    W0: () => d,
-    eZ: () => h,
-    pJ: () => E,
+    W0: () => c,
+    eZ: () => p,
+    pJ: () => f,
     tB: () => o,
-    w6: () => c,
-    yy: () => f,
+    w6: () => d,
+    yy: () => h,
 }),
     n(140667);
-var r,
-    i = n(682572),
-    s = n.n(i),
-    a = n(547830);
+var i,
+    r = n(682572),
+    s = n.n(r),
+    a = n(179689);
 let o = () => Math.floor(a.u5 + a.FO.now()),
     l = new (class {
         now() {
@@ -23,8 +23,8 @@ let o = () => Math.floor(a.u5 + a.FO.now()),
     })();
 class u {
     milliseconds = 0;
-    constructor(e, t, n, r) {
-        (this.milliseconds += r || 0),
+    constructor(e, t, n, i) {
+        (this.milliseconds += i || 0),
             (this.milliseconds += 1e3 * (n || 0)),
             (this.milliseconds += 1e3 * (t || 0) * 60),
             (this.milliseconds += 1e3 * (e || 0) * 3600);
@@ -47,7 +47,7 @@ class u {
     static fromMinutes = (e) => new u(0, e);
     static fromHours = (e) => new u(e);
 }
-class d {
+class c {
     timestampProducer;
     startTime = void 0;
     timePassed = 0;
@@ -85,15 +85,15 @@ class d {
         return null != this.startTime;
     }
     static startNew() {
-        let e = new d();
+        let e = new c();
         return e.start(), e;
     }
 }
-class c {
+class d {
     stopwatch;
     state;
     constructor(e, t = l) {
-        (this.stopwatch = new d(t)), (this.state = e), this.stopwatch.toggle(e);
+        (this.stopwatch = new c(t)), (this.state = e), this.stopwatch.toggle(e);
     }
     set value(e) {
         this.stopwatch.toggle(e), (this.state = e);
@@ -113,7 +113,7 @@ class c {
 }
 class _ {
     timeout;
-    watch = new d();
+    watch = new c();
     constructor(e) {
         this.timeout = e;
     }
@@ -130,33 +130,33 @@ class _ {
     }
     static async waitFor(e, t) {
         let n,
-            r = u.fromMilliseconds(100);
-        e instanceof u ? (n = e) : ((n = e.timeout), null != e.sleep && (r = e.sleep));
-        let i = _.startNew(n);
+            i = u.fromMilliseconds(100);
+        e instanceof u ? (n = e) : ((n = e.timeout), null != e.sleep && (i = e.sleep));
+        let r = _.startNew(n);
         do {
             if ((await t()) === !0) return !0;
-            await f(r);
-        } while (!i.hasTimedOut());
+            await h(i);
+        } while (!r.hasTimedOut());
         return !1;
     }
 }
-function f(e) {
+function h(e) {
     let t = "number" == typeof e ? e : e.asMilliseconds();
     return new Promise((e) => {
         setTimeout(() => e(), t);
     });
 }
-var E =
-    (((r = {}).NONE = "NONE"),
-    (r.SECONDS = "SECONDS"),
-    (r.MINUTES = "MINUTES"),
-    (r.HOURS = "HOURS"),
-    (r.DAYS = "DAYS"),
-    (r.WEEKS = "WEEKS"),
-    (r.MONTHS = "MONTHS"),
-    (r.YEARS = "YEARS"),
-    r);
-function h(e, t) {
+var f =
+    (((i = {}).NONE = "NONE"),
+    (i.SECONDS = "SECONDS"),
+    (i.MINUTES = "MINUTES"),
+    (i.HOURS = "HOURS"),
+    (i.DAYS = "DAYS"),
+    (i.WEEKS = "WEEKS"),
+    (i.MONTHS = "MONTHS"),
+    (i.YEARS = "YEARS"),
+    i);
+function p(e, t) {
     switch (t) {
         case "NONE":
             return 0;
@@ -176,7 +176,7 @@ function h(e, t) {
             return e / 60 / 24 / 365;
     }
 }
-let p = [
+let E = [
     { unit: "NONE", max: 0 },
     { unit: "SECONDS", max: 1 },
     { unit: "MINUTES", max: 60 },
@@ -187,28 +187,28 @@ let p = [
     { unit: "YEARS", max: 1 / 0 },
 ];
 function m(e, t) {
-    let n = p.findIndex((t) => {
-            let { max: n, unit: r } = t;
-            return ("NONE" === r && e === n) || e < n;
+    let n = E.findIndex((t) => {
+            let { max: n, unit: i } = t;
+            return ("NONE" === i && e === n) || e < n;
         }),
-        r = s()(
-            p,
+        i = s()(
+            E,
             (e) => {
                 let { unit: n } = e;
                 return t(n);
             },
             n,
         );
-    if (null != r) return r.unit;
-    let i = p.find((e) => {
+    if (null != i) return i.unit;
+    let r = E.find((e) => {
         let { unit: n } = e;
         return t(n);
     });
-    return null != i ? i.unit : null;
+    return null != r ? r.unit : null;
 }
 function g(e, t) {
     if (null == e) return { unit: "NONE", time: 0 };
     let n = m(e, (e) => t.includes(e)),
-        r = null != n ? h(e, n) : null;
-    return { unit: n, time: null != r ? Math.floor(r) : null };
+        i = null != n ? p(e, n) : null;
+    return { unit: n, time: null != i ? Math.floor(i) : null };
 }

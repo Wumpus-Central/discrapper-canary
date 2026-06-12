@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => h }), n(323874), n(14289), n(35956);
+n.d(t, { A: () => f }), n(323874), n(14289), n(35956);
 var i = n(562708),
     r = n(636537),
     s = n(228366),
@@ -10,7 +10,7 @@ var i = n(562708),
     c = n(499785),
     d = n(652215);
 let _ = new o.A("ConnectedAccounts");
-function f(e, t) {
+function h(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return r.Bo.post({
         url: d.Rsh.CONNECTIONS_CALLBACK(e),
@@ -19,7 +19,7 @@ function f(e, t) {
         rejectWithError: !1,
     });
 }
-let h = {
+let f = {
     fetch: () =>
         r.Bo.get({ url: d.Rsh.CONNECTIONS, oldFormErrors: !0, rejectWithError: !0 }).then(
             (e) => s.h.dispatch({ type: "USER_CONNECTIONS_UPDATE", local: !0, accounts: e.body }),
@@ -36,19 +36,19 @@ let h = {
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         u.default.track(d.HAw.CONNECTED_ACCOUNT_INITIATED, { platform_type: e, location: t });
         let _ = d.Rsh.CONNECTIONS_AUTHORIZE(e),
-            f = new URLSearchParams();
-        null != i && f.append("two_way_user_code", i),
-            null != o && f.append("success_redirect", o),
+            h = new URLSearchParams();
+        null != i && h.append("two_way_user_code", i),
+            null != o && h.append("success_redirect", o),
             null != n
-                ? (f.append("two_way_link_type", n), f.append("two_way_link", "true"))
-                : null != s && f.append("two_way_link", String(s)),
-            null != c && f.append("handle", c),
-            (_ = _ + "?" + f.toString());
-        let h = await r.Bo.get({ url: _, oldFormErrors: !0, rejectWithError: !1 }),
-            { state: p } = (0, a.vA)(h.body.url ?? "");
-        return null != p && l.A.addPendingAuthorizedState(p), h;
+                ? (h.append("two_way_link_type", n), h.append("two_way_link", "true"))
+                : null != s && h.append("two_way_link", String(s)),
+            null != c && h.append("handle", c),
+            (_ = _ + "?" + h.toString());
+        let f = await r.Bo.get({ url: _, oldFormErrors: !0, rejectWithError: !1 }),
+            { state: p } = (0, a.vA)(f.body.url ?? "");
+        return null != p && l.A.addPendingAuthorizedState(p), f;
     },
-    callback: f,
+    callback: h,
     connect: (e, t, n, r, s) =>
         c.A.put({
             url: d.Rsh.CONNECTION(e, t),
@@ -122,7 +122,7 @@ let h = {
         let { code: s, error: o, errorDescription: l } = (0, a.vA)(t);
         return null != o
             ? void _.error("Two-way link: missing authorize code", { error: o, errorDescription: l })
-            : await f(e, { code: n, state: i, two_way_link_code: s, token_redirect_uri: r });
+            : await h(e, { code: n, state: i, two_way_link_code: s, token_redirect_uri: r });
     },
     sessionHandoff: function (e, t, n, i, s) {
         return r.Bo.post({

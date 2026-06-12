@@ -16,10 +16,10 @@ let c = null,
             return (0, a.TP)() + u.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(u.kM_.BRAINTREE, i);
         },
         open: (e) => {
-            (r = e), window.open(e), h.emitChange();
+            (r = e), window.open(e), f.emitChange();
         },
     });
-class f extends s.Ay.Store {
+class h extends s.Ay.Store {
     static displayName = "BraintreeStore";
     getClient() {
         return c;
@@ -34,7 +34,7 @@ class f extends s.Ay.Store {
         return r;
     }
 }
-let h = new f(o.h, {
+let f = new h(o.h, {
         BRAINTREE_CREATE_CLIENT_SUCCESS: function (e) {
             let { client: t } = e;
             c = t;
@@ -64,4 +64,4 @@ let h = new f(o.h, {
             _ = null;
         },
     }),
-    p = h;
+    p = f;

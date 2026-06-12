@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(e, { A: () => S });
 var i = n(735438),
     l = n.n(i),
     s = n(17928),
@@ -8,24 +8,24 @@ var i = n(735438),
     o = n(652215);
 let c = !1,
     u = null,
-    m = new Set();
-function N() {
+    E = new Set();
+function I() {
     (c = !1),
         (u = null),
         null != (u = d.A.getGuildId()) &&
             d.A.getSection() === o.BEX.ONBOARDING &&
-            (m = new Set(a.A.getDefaultChannelIds(u)));
+            (E = new Set(a.A.getDefaultChannelIds(u)));
 }
-class h extends s.Ay.Store {
+class N extends s.Ay.Store {
     static displayName = "GuildSettingsDefaultChannelsStore";
     initialize() {
         this.waitFor(d.A, a.A);
     }
     hasChanges() {
         if (null == u) return !1;
-        let e = a.A.getDefaultChannelIds(u).sort(),
-            t = Array.from(m).sort();
-        return !l().isEqual(e, t);
+        let t = a.A.getDefaultChannelIds(u).sort(),
+            e = Array.from(E).sort();
+        return !l().isEqual(t, e);
     }
     get guildId() {
         return u;
@@ -34,21 +34,21 @@ class h extends s.Ay.Store {
         return c;
     }
     get editedDefaultChannelIds() {
-        return m;
+        return E;
     }
 }
-let I = new h(r.h, {
-    GUILD_SETTINGS_INIT: N,
-    GUILD_SETTINGS_SET_SECTION: N,
-    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: N,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: N,
-    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: N,
+let S = new N(r.h, {
+    GUILD_SETTINGS_INIT: I,
+    GUILD_SETTINGS_SET_SECTION: I,
+    GUILD_ONBOARDING_PROMPTS_FETCH_SUCCESS: I,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_RESET: I,
+    GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_SUCCESS: I,
     GUILD_SETTINGS_DEFAULT_CHANNELS_SAVE_FAILED: function () {
         c = !1;
     },
-    GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE: function (e) {
-        let { channelId: t } = e;
-        (m = new Set(m)).has(t) ? m.delete(t) : m.add(t);
+    GUILD_SETTINGS_DEFAULT_CHANNELS_TOGGLE: function (t) {
+        let { channelId: e } = t;
+        (E = new Set(E)).has(e) ? E.delete(e) : E.add(e);
     },
     GUILD_SETTINGS_DEFAULT_CHANNELS_SUBMIT: function () {
         c = !0;

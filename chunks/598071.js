@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Ay: () => c, Sv: () => r });
-var l = n(64700),
-    i = n(143236);
-class s extends i.EventEmitter {
+n.d(t, { Ay: () => u, Sv: () => o });
+var i = n(64700),
+    r = n(143236);
+class s extends r.EventEmitter {
     on() {
         return this;
     }
@@ -19,6 +19,6 @@ class s extends i.EventEmitter {
         return !1;
     }
 }
-let a = l.createContext(new s()),
-    { Provider: r, Consumer: o } = a,
-    c = a;
+let a = i.createContext(new s()),
+    { Provider: o, Consumer: l } = a,
+    u = a;
