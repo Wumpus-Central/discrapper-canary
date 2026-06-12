@@ -3373,9 +3373,10 @@ function lM(e) {
                     num_autoclips_loaded: e,
                     num_distributed_clips_loaded: t,
                     num_manual_clips_loaded: l,
+                    gallery_page: eb,
                 }
             );
-        }, [et]);
+        }, [et, eb]);
     (0, k.A)(
         { type: r.ImpressionTypes.MODAL, name: r.ImpressionNames.CLIP_GALLERY_VIEWED, properties: eF },
         { disableTrack: ea },
