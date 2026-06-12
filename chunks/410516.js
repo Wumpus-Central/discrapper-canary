@@ -38,15 +38,18 @@ let A = {
         discountInvoiceError: null,
     },
     I = new Set();
-function T(e, t, n) {
-    let i = null != t ? (t.id ?? t.discountId) : "unknown",
-        r = `${e}:${String(i)}`;
-    I.has(r) ||
-        (I.add(r),
-        _.A.captureMessage(e, {
-            tags: { app_context: "billing", billing_context: "discount_offer" },
-            extra: { userDiscountOfferId: t.id, discountId: t.discountId, ...n },
-        }));
+function T(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "message",
+        r = null != t ? (t.id ?? t.discountId) : "unknown",
+        s = `${e}:${String(r)}`;
+    if (I.has(s)) return;
+    I.add(s);
+    let a = {
+        tags: { app_context: "billing", billing_context: "discount_offer" },
+        extra: { userDiscountOfferId: t.id, discountId: t.discountId, ...n },
+    };
+    "message" === i ? _.A.captureMessage(e, a) : _.A.captureException(Error(e), a);
 }
 function S(e, t) {
     return (
@@ -56,6 +59,7 @@ function S(e, t) {
                   "Unexpected discountOffer payload in discountOfferHasTier: discount offer has no discount or plan ids",
                   e,
                   { reason: null == e.discount ? "missing_discount" : "missing_plan_ids" },
+                  "exception",
               ),
               !1)
             : new Set(e.discount.planIds.map((e) => E.hd[e].skuId)).has(t))
