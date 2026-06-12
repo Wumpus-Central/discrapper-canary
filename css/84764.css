@@ -539,6 +539,11 @@
     width: 106px
 }
 
+.wumpus_a2332b.noGiftPrice_a2332b {
+    height: auto;
+    width: 75px
+}
+
 .wumpus_a2332b.withAnnualDiscountBanner_a2332b {
     inset-inline-end: 10px;
     top: -40px

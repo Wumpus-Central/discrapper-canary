@@ -8,14 +8,9 @@ var i = n(439372),
     l = n(315240),
     u = n(274372),
     c = n(974293),
-    d = n(458977);
-let _ = (0, n(945810).mj)({
-    kind: "user",
-    name: "2026-06-magic-scoring",
-    defaultConfig: { enableSteamTimeline: !1 },
-    variations: { 1: { enableSteamTimeline: !0 } },
-});
-var h = n(876474);
+    d = n(458977),
+    _ = n(270962),
+    h = n(876474);
 class f extends i.A {
     registrations = new Map();
     activeHandlers = new Map();
@@ -50,7 +45,7 @@ class f extends i.A {
                     name: "steam-timeline",
                     isEnabled: () =>
                         u.Ay.getEnableAutoclipping() &&
-                        _.getConfig({ location: "Clip signal handler registration" }).enableSteamTimeline,
+                        _.A.getConfig({ location: "Clip signal handler registration" }).enableSteamTimeline,
                     importHandler: () => n.e("97097").then(n.bind(n, 891920)),
                 },
                 {
