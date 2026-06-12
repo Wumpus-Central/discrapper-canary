@@ -17,7 +17,7 @@ function _(e) {
 var h = n(709066),
     f = n(609425),
     p = n(922301),
-    E = n(368919),
+    E = n(660184),
     m = n(534400),
     g = n(518477),
     A = n(375708),
@@ -122,11 +122,10 @@ function C(e) {
                     children: [
                         (0, i.jsx)(v, {}),
                         (0, i.jsx)(a.m, {
-                            asContainer: !0,
                             text: A.intl.string(A.t.GI2A8C),
                             delay: g.In,
                             ariaHidden: !0,
-                            children: (0, i.jsx)(N, { pronouns: o }),
+                            children: (0, i.jsx)("span", { className: I.Ez, children: (0, i.jsx)(N, { pronouns: o }) }),
                         }),
                     ],
                 }),

@@ -5122,7 +5122,8 @@
 }
 
 .compact__9c314 .editable__9c314 {
-    align-self: center
+    align-self: center;
+    min-width: 0
 }
 
 .multiline__9c314 .editable__9c314 {

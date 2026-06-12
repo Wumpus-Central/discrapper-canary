@@ -10,6 +10,7 @@ e.exports = {
     j6: "hasPronouns__26b1f",
     w2: "isBot__26b1f",
     a1: "userTag__26b1f",
+    Ez: "pronounsTooltip__26b1f",
     hI: "pronouns__26b1f userTag__26b1f",
     eb: "userTagUsername__26b1f",
     sw: "userTagDiscriminator__26b1f",

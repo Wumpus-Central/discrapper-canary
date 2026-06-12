@@ -4794,6 +4794,10 @@ a-rp {
     line-height: 18px
 }
 
+.pronounsTooltip__26b1f {
+    min-width: 0
+}
+
 .pronouns__26b1f {
     margin-inline-end: 2px;
     overflow: hidden;

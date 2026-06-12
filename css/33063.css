@@ -4450,7 +4450,8 @@
 }
 
 .container__54560 {
-    margin-block: -4px
+    margin-block: -4px;
+    min-width: 0
 }
 
 .container__54560.isEditing__54560 {
