@@ -229,7 +229,7 @@ function ep(e) {
                 try {
                     let { isAuthorized: e } = await (0, w.q)({
                         applicationId: n.applicationId,
-                        channel: "channel" === t.type ? t.channel : void 0,
+                        channel: t.channel,
                         commandIntegrationTypes: n.integration_types,
                         appLauncherContext: {
                             entrypoint: s,

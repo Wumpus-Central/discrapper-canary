@@ -1,46 +1,40 @@
 "use strict";
-n.d(t, { i: () => p });
+n.d(t, { i: () => f });
 var i = n(627968);
 n(64700);
 var r = n(503698),
     s = n.n(r),
-    a = n(575593),
-    o = n(97808),
-    l = n(778712),
-    u = n(19575),
-    c = n(562819),
-    d = n(963977),
-    _ = n(375708),
-    h = n(628538);
-let f = u.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu,
-    p = (e) => {
+    a = n(97808),
+    o = n(778712),
+    l = n(19575),
+    u = n(562819),
+    c = n(963977),
+    d = n(375708),
+    _ = n(628538);
+let h = l.Ay.getEnableHardwareAcceleration() ? a.Js : a.eu,
+    f = (e) => {
         let {
                 item: t,
                 user: n,
                 isHighlighted: r = !1,
-                avatarSize: o = l._3.SIZE_152,
-                avatarPlaceholderSrc: u,
-                className: p,
+                avatarSize: a = o._3.SIZE_152,
+                avatarPlaceholderSrc: l,
+                className: f,
             } = e,
-            E = (0, c.Te)(o),
+            p = (0, u.Te)(a),
             {
-                avatarDecorationSrc: m,
-                eventHandlers: g,
-                avatarPlaceholderSrc: A,
-            } = (0, d.A)({
-                user: n,
-                avatarDecorationOverride: t?.type === a.R.AVATAR_DECORATION ? t : void 0,
-                size: E,
-                onlyAnimateOnHoverOrFocus: !r,
-            }),
-            I = _.intl.formatToPlainString(_.t.Do2lxE, { a11y_text: t.label });
-        return (0, i.jsx)(f, {
-            ...g,
-            avatarDecoration: m,
-            src: r ? n?.getAvatarURL(void 0, 152, !0) : (u ?? A),
-            imageClassName: r ? h.WG : void 0,
-            className: s()(p, h.my),
-            size: o,
-            "aria-label": I,
+                avatarDecorationSrc: E,
+                eventHandlers: m,
+                avatarPlaceholderSrc: g,
+            } = (0, c.A)({ user: n, avatarDecorationOverride: t, size: p, onlyAnimateOnHoverOrFocus: !r }),
+            A = d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: t.label });
+        return (0, i.jsx)(h, {
+            ...m,
+            avatarDecoration: E,
+            src: r ? n?.getAvatarURL(void 0, 152, !0) : (l ?? g),
+            imageClassName: r ? _.WG : void 0,
+            className: s()(f, _.my),
+            size: a,
+            "aria-label": A,
         });
     };

@@ -323,7 +323,7 @@ let eD = new eP(eO.h, {
             ? (l.splice(n, 1), l.unshift(r))
             : null != l[0] && "" !== l[0] && r.startsWith(l[0])
               ? (l[0] = r)
-              : n < 0 && l.unshift(r),
+              : l.unshift(r),
             l.length > 5 && l.splice(5, l.length),
             ej.w.set(ef.nC, { history: eM });
     },

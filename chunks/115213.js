@@ -631,7 +631,7 @@ var e4 = n(765671),
     to = n(82210);
 let tc = (e) => {
         let t = { onlineCount: e.approximate_presence_count ?? 0, memberCount: e.approximate_member_count ?? 0 };
-        return 0 === t.memberCount && 0 === t.memberCount ? null : t;
+        return 0 === t.memberCount ? null : t;
     },
     td = (e) => e.target_type === tr.yV.STREAM && null != e.target_user,
     tu = (e) => e.channel?.type === y.rbe.GROUP_DM,
