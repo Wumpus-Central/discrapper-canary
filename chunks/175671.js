@@ -96,8 +96,9 @@ function v(e) {
     );
 }
 n(508300);
-var C = n(607470),
-    R = n(375708);
+var C = n(607470);
+n(516653);
+var R = n(375708);
 function O(e) {
     let {
             poster: t,
@@ -109,26 +110,26 @@ function O(e) {
             play: u = !0,
             className: c,
             alt: d,
-            responsive: h,
+            responsive: _,
         } = e,
-        f = r.useRef(null);
+        h = r.useRef(null);
     return (r.useEffect(() => {
-        let { current: e } = f;
+        let { current: e } = h;
         u
             ? e?.play()?.catch((e) => {
                   if (!(e instanceof DOMException) || "NotAllowedError" !== e.name) throw e;
               })
             : e?.pause();
     }, [u]),
-    (o <= _.AaC && l <= _.oJQ) || (o <= _.oJQ && l <= _.AaC))
+    (o <= 6016 && l <= 3384) || (o <= 3384 && l <= 6016))
         ? (0, i.jsx)(C.A, {
-              ref: f,
+              ref: h,
               className: c,
               poster: t,
               src: n,
               width: s,
               height: a,
-              responsive: h,
+              responsive: _,
               muted: !0,
               loop: !0,
               autoPlay: u,

@@ -1,22 +1,23 @@
 "use strict";
 n.d(t, {
-    ks: () => tD,
-    UK: () => tB,
-    Ez: () => tV,
-    LL: () => tw,
-    OZ: () => tF,
-    yR: () => tW,
-    Uq: () => tK,
-    $o: () => tR,
-    bU: () => tL,
+    ks: () => tU,
+    UK: () => tW,
+    Ez: () => tG,
+    _z: () => tb,
+    LL: () => tL,
+    Uq: () => tz,
+    yR: () => tK,
+    OZ: () => tH,
+    $o: () => tO,
+    bU: () => tk,
     Uk: () => tN,
-    GN: () => tG,
-    Y0: () => tz,
-    P$: () => tM,
-    _d: () => tk,
-    gL: () => tO,
-    Dk: () => tP,
-    Ab: () => tU,
+    GN: () => tF,
+    Y0: () => tZ,
+    P$: () => tw,
+    _d: () => tP,
+    gL: () => tM,
+    Dk: () => tD,
+    Ab: () => tV,
 });
 var l,
     i = n(627968),
@@ -1374,76 +1375,93 @@ function tj(e) {
 }
 function tb(e) {
     let {
+            alt: t,
+            controlsVisible: n = !0,
+            disableAltTextDisplay: l = !1,
+            hiddenSpoilers: r = !1,
+            reducedSizeAltTextButton: o = !1,
+        } = e,
+        [c, u] = s.useState(!1),
+        d = s.useRef(null);
+    return (n || c) && !l && eq._z.getSetting() && null != t && "" !== t && !0 !== r
+        ? (0, i.jsx)("div", {
+              className: tv.NO,
+              children: (0, i.jsx)(h.Y, {
+                  targetElementRef: d,
+                  animation: h.Y.Animation.FADE,
+                  renderPopout: () => (0, i.jsx)(tj, { altText: t, altButtonRef: d }),
+                  children: (e) =>
+                      (0, i.jsx)(m.vN, {
+                          offset: 4,
+                          children: (0, i.jsx)("button", {
+                              ...e,
+                              type: "button",
+                              ref: d,
+                              "aria-label": ec.intl.string(ec.t.fSiQ3A),
+                              onMouseEnter: () => u(!0),
+                              onMouseLeave: () => u(!1),
+                              className: a()(tv.DV, { [tv.yZ]: !0, [tv.I5]: o }),
+                              children: ec.intl.string(ec.t.jCV1Tz),
+                          }),
+                      }),
+              }),
+          })
+        : null;
+}
+function tR(e) {
+    let {
             onVolumeChange: t,
             onMute: n,
             volume: l,
             autoMute: r,
-            alt: o,
-            renderAdjacentContent: c,
-            renderOverlayContent: u,
-            disableAltTextDisplay: d = !1,
-            hiddenSpoilers: p,
-            mosaicStyleAlt: f,
-            mediaLayoutType: g,
-            reducedSizeAltTextButton: x,
-            ...A
+            alt: a,
+            renderAdjacentContent: o,
+            renderOverlayContent: c,
+            disableAltTextDisplay: u = !1,
+            hiddenSpoilers: d,
+            mosaicStyleAlt: h,
+            mediaLayoutType: m,
+            reducedSizeAltTextButton: p,
+            ...f
         } = e,
-        E = t_(t),
-        C = tT(n);
+        g = t_(t),
+        x = tT(n);
     (l = null == l ? tC.v1 : l), (r = null == r ? tC.uj : r);
-    let [I, y] = s.useState(!0),
-        [S, v] = s.useState(!1),
-        N = g === tI.dG.MOSAIC || !0 === f,
-        _ = (I || S) && !d && eq._z.getSetting() && null != o && "" !== o && !0 !== p,
-        T = s.useRef(null);
+    let [A, E] = s.useState(!0),
+        C = m === tI.dG.MOSAIC || !0 === h,
+        I = A && !u && eq._z.getSetting() && null != a && "" !== a && !0 !== d;
     return (0, i.jsxs)(s.Fragment, {
         children: [
             (0, i.jsx)(B.A, {
-                ...A,
-                alt: o,
+                ...f,
+                alt: a,
                 autoMute: r,
-                mediaLayoutType: g,
-                onControlsHide: () => y(!1),
-                onControlsShow: () => y(!0),
-                onMute: C,
-                onVolumeChange: E,
-                renderLinkComponent: tL,
-                renderOverlayContent: u,
+                mediaLayoutType: m,
+                onControlsHide: () => E(!1),
+                onControlsShow: () => E(!0),
+                onMute: x,
+                onVolumeChange: g,
+                renderLinkComponent: tk,
+                renderOverlayContent: c,
                 volume: l,
             }),
-            null != c && c(),
-            N &&
-                _ &&
-                (0, i.jsx)("div", {
-                    className: tv.NO,
-                    children: (0, i.jsx)(h.Y, {
-                        targetElementRef: T,
-                        animation: h.Y.Animation.FADE,
-                        renderPopout: () => (0, i.jsx)(tj, { altText: o, altButtonRef: T }),
-                        children: (e) =>
-                            (0, i.jsx)(m.vN, {
-                                offset: 4,
-                                children: (0, i.jsx)("button", {
-                                    ...e,
-                                    type: "button",
-                                    ref: T,
-                                    "aria-label": ec.intl.string(ec.t.fSiQ3A),
-                                    onMouseEnter: () => v(!0),
-                                    onMouseLeave: () => v(!1),
-                                    className: a()(tv.DV, { [tv.yZ]: !0, [tv.I5]: x }),
-                                    children: ec.intl.string(ec.t.jCV1Tz),
-                                }),
-                            }),
-                    }),
+            null != o && o(),
+            C &&
+                (0, i.jsx)(tb, {
+                    alt: a,
+                    controlsVisible: A,
+                    disableAltTextDisplay: u,
+                    hiddenSpoilers: d,
+                    reducedSizeAltTextButton: p,
                 }),
-            !N && _ && (0, i.jsx)("span", { className: tv.R5, children: o }),
+            !C && I && (0, i.jsx)("span", { className: tv.R5, children: a }),
         ],
     });
 }
-function tR(e) {
-    return (0, i.jsx)(tb, { ...e });
-}
 function tO(e) {
+    return (0, i.jsx)(tR, { ...e });
+}
+function tM(e) {
     let {
             onVolumeChange: t,
             volume: n,
@@ -1467,20 +1485,20 @@ function tO(e) {
                     onVolumeHide: a,
                     volume: n,
                     autoMute: () => !1,
-                    renderLinkComponent: tL,
+                    renderLinkComponent: tk,
                 }),
                 null != o && o(),
             ],
         })
     );
 }
-function tM(e) {
+function tw(e) {
     let { onVolumeChange: t, volume: n, onMute: l, ...s } = e,
         r = t_(t),
         a = tT(l);
     return (n = null == n ? tC.v1 : n), (0, i.jsx)(tg, { ...s, onVolumeChange: r, onMute: a, volume: n });
 }
-function tw(e) {
+function tL(e) {
     let {
             alt: t,
             hiddenSpoilers: n,
@@ -1530,18 +1548,18 @@ function tw(e) {
         ],
     });
 }
-function tL(e) {
+function tk(e) {
     return (0, i.jsx)(w.A, { ...e });
 }
-function tk(e) {
+function tP(e) {
     let { renderAdjacentContent: t, ...n } = e;
     return (0, i.jsxs)(s.Fragment, { children: [(0, i.jsx)(eC, { ...n }), null != t && t()] });
 }
-function tP(e) {
+function tD(e) {
     return (0, i.jsx)(P.A, { ...e });
 }
-var tD = (((l = {})[(l.OLD_MESSAGES = 0)] = "OLD_MESSAGES"), (l[(l.REPLY = 1)] = "REPLY"), l);
-let tU = (e) => {
+var tU = (((l = {})[(l.OLD_MESSAGES = 0)] = "OLD_MESSAGES"), (l[(l.REPLY = 1)] = "REPLY"), l);
+let tV = (e) => {
         let { type: t = 0, onClick: n, className: l } = e;
         return (0, i.jsx)(D.Y.Consumer, {
             children: (e) =>
@@ -1592,7 +1610,7 @@ let tU = (e) => {
                       }),
         });
     },
-    tV = (e) => {
+    tG = (e) => {
         let { onClick: t, loading: n, className: l } = e;
         return (0, i.jsx)(D.Y.Consumer, {
             children: (e) =>
@@ -1618,7 +1636,7 @@ let tU = (e) => {
                       }),
         });
     };
-function tG(e) {
+function tF(e) {
     let { content: t, channelId: n } = e,
         [l] = s.useState(() => (0, U.Ld)("NewMessagesBarJumpToNewMessages_")),
         r = s.useCallback(() => {
@@ -1675,7 +1693,7 @@ function tG(e) {
               ],
           });
 }
-function tF(e) {
+function tH(e) {
     let { channel: t, content: n, scrollManager: l } = e,
         { disableInteractions: r } = s.useContext(D.Y),
         [o, h] = s.useState(null),
@@ -1701,7 +1719,7 @@ function tF(e) {
             [tx.default],
             () => _?.map((e) => e.people?.map((e) => tx.default.getUser(e) ?? null).filter(eD.Vq)) ?? [],
             [_],
-            tH,
+            tB,
         ),
         b = (0, d.bG)([ey.A], () => ey.A.visibleSummaryIndex()) ?? -1,
         R = _?.[b]?.topic;
@@ -1931,7 +1949,7 @@ function tF(e) {
               })
     );
 }
-function tH(e, t) {
+function tB(e, t) {
     return (
         null != t &&
         e.length === t.length &&
@@ -1941,7 +1959,7 @@ function tH(e, t) {
         })
     );
 }
-function tB(e) {
+function tW(e) {
     let { channel: t, scrollManager: n } = e,
         { disableInteractions: l } = s.useContext(D.Y),
         [r, o] = s.useState(null),
@@ -1967,7 +1985,7 @@ function tB(e) {
             [tx.default],
             () => x?.map((e) => e.people?.map((e) => tx.default.getUser(e) ?? null).filter(eD.Vq)) ?? [],
             [x],
-            tH,
+            tB,
         ),
         _ = (0, d.bG)([ey.A], () => ey.A.visibleSummaryIndex()) ?? -1,
         T = x?.[_]?.topic;
@@ -2202,7 +2220,7 @@ function tB(e) {
               })
     );
 }
-let tW = function (e) {
+let tK = function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
         return (0, i.jsxs)("div", {
             className: tv.YL,
@@ -2224,13 +2242,13 @@ let tW = function (e) {
             ],
         });
     },
-    tK = (e) => {
+    tz = (e) => {
         let { children: t, className: n } = e;
         return (0, i.jsx)("div", { className: a()(tv.jC, n), children: t });
     },
-    tz = (e) => {
+    tZ = (e) => {
         let { className: t } = e;
-        return (0, i.jsx)(tK, {
+        return (0, i.jsx)(tz, {
             className: t,
             children: (0, i.jsx)("div", { className: tv.wH, children: (0, i.jsx)("div", { className: tv.j3 }) }),
         });
