@@ -6114,6 +6114,7 @@ html:not(.keyboard-mode) .root_bfe55a.idle_bfe55a:not(:focus-within) .bottomCont
 }
 
 .noticeContainer_bd1d96 {
+    border-radius: 0;
     padding: 12px
 }
 
