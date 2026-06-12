@@ -1387,6 +1387,7 @@ let sn = function (e) {
         children: (e, t) =>
             (0, r.jsx)(f.$, {
                 ...e,
+                "aria-label": eE.intl.formatToPlainString(eE.t.lPlIMo, { selected: (0, t7.Js)(n) }),
                 buttonRef: t,
                 size: "sm",
                 text: (0, t7.Js)(n),
