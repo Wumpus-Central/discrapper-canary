@@ -21,9 +21,12 @@ e.exports = {
     eg: "subMeta_e12da8",
     TG: "metaDot_e12da8",
     SO: "metaBody_e12da8",
+    Ik: "restMeta_e12da8",
+    Mq: "restMetaHidden_e12da8",
+    n_: "hoverOverlay_e12da8",
+    f$: "hoverOverlayActive_e12da8",
     z5: "progressTrack_e12da8",
     TE: "progressFill_e12da8",
     E_: "hoverCtas_e12da8",
-    D8: "ctaSlideUp_e12da8",
     lO: "cta_e12da8",
 };

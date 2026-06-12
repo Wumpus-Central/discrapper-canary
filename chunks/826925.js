@@ -18,6 +18,7 @@ e.exports = {
     JS: "thumbnailClickable__09f82",
     c3: "thumbnailsStack__09f82",
     Pb: "gameRow__09f82",
+    dQ: "reviewButton__09f82",
     IL: "gameNameRow__09f82",
     Gt: "gameIcon__09f82",
     mO: "gameName__09f82",

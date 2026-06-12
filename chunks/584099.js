@@ -6,5 +6,7 @@ e.exports = {
     Hx: "slotRight_f99067",
     $u: "thumbnailShadow_f99067",
     DM: "containerHovered_f99067",
-    Yx: "thumbnailBelow_f99067",
+    tk: "thumbnailEntering_f99067",
+    Tt: "thumbnailSlideUp_f99067",
+    zx: "thumbnailExiting_f99067",
 };
