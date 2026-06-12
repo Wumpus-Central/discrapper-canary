@@ -1699,7 +1699,17 @@ var tJ = n(732139),
 function t1(e) {
     let { onSelect: t } = e,
         [n, s] = r.useState(""),
-        a = r.useMemo(() => {
+        a = r.useRef(null),
+        o = r.useRef(null);
+    r.useEffect(() => {
+        let e = requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                a.current?.focus({ preventScroll: !0 }), null != o.current && (o.current.scrollTop = 0);
+            });
+        });
+        return () => cancelAnimationFrame(e);
+    }, []);
+    let l = r.useMemo(() => {
             let e = n.trim();
             return tQ
                 .map((e) => {
@@ -1716,7 +1726,7 @@ function t1(e) {
                 .filter((e) => e.kaomojis.length > 0)
                 .filter((t) => "" !== e || !0 !== t.hidden);
         }, [n]),
-        o = r.useCallback(
+        u = r.useCallback(
             (e, n, i) => {
                 I.Ay.trackWithMetadata(e_.HAw.EXPRESSION_PICKER_KAOMOJI_SELECTED, {
                     kaomoji: e,
@@ -1727,10 +1737,10 @@ function t1(e) {
             },
             [t],
         ),
-        l = r.useCallback((e) => {
+        c = r.useCallback((e) => {
             s(e);
         }, []),
-        u = r.useCallback(() => {
+        d = r.useCallback(() => {
             s("");
         }, []);
     return (0, i.jsxs)("div", {
@@ -1741,21 +1751,23 @@ function t1(e) {
             (0, i.jsx)("div", {
                 className: t0.wx,
                 children: (0, i.jsx)(tN.I, {
+                    ref: a,
                     query: n,
-                    onChange: l,
-                    onClear: u,
+                    onChange: c,
+                    onClear: d,
                     placeholder: ef.intl.string(ef.t["5h0QOP"]),
                     "aria-label": ef.intl.string(ef.t["5h0QOP"]),
                 }),
             }),
             (0, i.jsx)(tZ.Ip, {
+                ref: o,
                 fade: !0,
                 className: t0.IA,
                 children:
-                    a.length > 0
+                    l.length > 0
                         ? (0, i.jsx)("div", {
                               className: t0.tt,
-                              children: a.map((e) =>
+                              children: l.map((e) =>
                                   (0, i.jsxs)(
                                       "div",
                                       {
@@ -1783,7 +1795,7 @@ function t1(e) {
                                                                   variant: "secondary",
                                                                   size: "sm",
                                                                   fullWidth: !0,
-                                                                  onClick: () => o(t, e.category, n.trim()),
+                                                                  onClick: () => u(t, e.category, n.trim()),
                                                                   text: t,
                                                                   "aria-label": ef.intl.formatToPlainString(
                                                                       ef.t["hi+F96"],
