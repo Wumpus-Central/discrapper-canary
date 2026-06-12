@@ -1773,7 +1773,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tj = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tb.A().log(
-    `[BUILD INFO] Release Channel: ${tj}, Build Number: 562588, Version Hash: ac2b78768cd1d2ab69e8ebdeeafecd91d79e6b7b`,
+    `[BUILD INFO] Release Channel: ${tj}, Build Number: 562612, Version Hash: 69c41981837c264e8ff52e77768aa5648f490c93`,
 ),
     ev.A.setTags({ appContext: eL.QCW }),
     tr.A.initBasic(),
@@ -18410,7 +18410,7 @@ let Sh = "isHideDevBanner",
                     className: t2()(S_.Wz, S_.mr),
                     children: [
                         (0, U.jsx)(Sd, { className: S_.Kk }),
-                        na.intl.format(na.t.uyrfYF, { buildNumber: "562588" }),
+                        na.intl.format(na.t.uyrfYF, { buildNumber: "562612" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -24788,6 +24788,20 @@ function Cf() {
                                 num_recent_channels: v8.A.recentsChannelCount(o),
                                 num_unread_channels: i.length,
                                 unread_channel_ids: i,
+                                ...(function (e) {
+                                    if (null == e) return null;
+                                    let t = tx.A.getGuild(e);
+                                    if (null == t) return null;
+                                    let n = t.guildTheme;
+                                    if (null == n || !n.enabled)
+                                        return { guild_theme_enabled: !1, guild_theme_is_custom: !1 };
+                                    let i = {
+                                            guild_theme_enabled: !0,
+                                            guild_theme_is_custom: n.themeSettings?.customUserThemeSettings != null,
+                                        },
+                                        r = n.themeSettings?.presetId;
+                                    return null != r && (i.guild_theme_preset_id = r), i;
+                                })(o),
                             };
                         if (
                             ((0, s1.zV)(eL.HAw.GUILD_VIEWED, r),
