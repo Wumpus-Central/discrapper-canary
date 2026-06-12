@@ -34,6 +34,7 @@ let u = {
         [r.M.PROFILE_FRAMES_NITRO_TAB_NEW_BADGE]: 0,
         [r.M.BOGO_2025_ANNOUNCEMENT_MODAL]: 0,
         [r.M.NITRO_DROP_REWARD]: 0,
+        [r.M.BOUNTIES_SWIPE_UP_NUX]: 0,
     },
     c = a.A.Millis.DAY;
 function d(e) {
