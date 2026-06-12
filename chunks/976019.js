@@ -17,12 +17,7 @@ function p() {
     return (0, i.jsxs)("div", {
         className: f.Jj,
         children: [
-            (0, i.jsx)(a.m, {
-                size: "sm",
-                color: o.A.colors.TEXT_LINK,
-                secondaryColor: o.A.colors.WHITE,
-                className: f.qf,
-            }),
+            (0, i.jsx)(a.m, { size: "sm", color: o.A.colors.TEXT_LINK, className: f.qf }),
             (0, i.jsxs)("div", {
                 className: f.e4,
                 children: [
@@ -49,27 +44,40 @@ let E = function (e) {
         m = r.useMemo(
             () => [
                 {
-                    renderContent: () =>
-                        (0, i.jsx)(d.L5, {
-                            children:
-                                !0 === n
-                                    ? h.intl.formatToPlainString(h.t.C45G4B, { gameTitle: t.config.messages.gameTitle })
-                                    : o === _.qh.WEB
-                                      ? h.intl.string(h.t.yqSr9m)
-                                      : h.intl.format(h.t.vDLUD3, {
-                                            gameTitle: t.config.messages.gameTitle,
-                                            onClickGameTitle: a,
-                                        }),
-                        }),
+                    renderContent: () => {
+                        let e = t.config.messages.gameTitle;
+                        if (!0 === n)
+                            return (0, i.jsx)(d.L5, {
+                                children: h.intl.formatToPlainString(h.t.C45G4B, { gameTitle: e }),
+                            });
+                        let r = o === _.qh.WEB,
+                            s =
+                                null == a
+                                    ? h.intl.formatToPlainString(r ? h.t.j3155Y : h.t.tNmoIp, { gameTitle: e })
+                                    : h.intl.format(r ? h.t["4+3zP/"] : h.t.vDLUD3, {
+                                          gameTitle: e,
+                                          onClickGameTitle: a,
+                                      });
+                        return (0, i.jsx)(d.L5, { children: s });
+                    },
                     isComplete: (n ?? !1) || f,
                 },
                 {
                     renderContent: () =>
                         (0, i.jsx)(d.L5, {
-                            children: h.intl.formatToPlainString(h.t.nP1hFd, {
-                                objective: l?.messages.taskDescription ?? "",
-                                rewardName: (0, c.mq)(t.config, E),
-                            }),
+                            children:
+                                !0 !== n || f || null == a
+                                    ? h.intl.formatToPlainString(h.t.nP1hFd, {
+                                          objective: l?.messages.taskDescription ?? "",
+                                          gameTitle: t.config.messages.gameTitle,
+                                          rewardName: (0, c.mq)(t.config, E),
+                                      })
+                                    : h.intl.format(h.t.GLZnbq, {
+                                          objective: l?.messages.taskDescription ?? "",
+                                          gameTitle: t.config.messages.gameTitle,
+                                          rewardName: (0, c.mq)(t.config, E),
+                                          onClickGameTitle: a,
+                                      }),
                         }),
                     isComplete: f,
                 },
