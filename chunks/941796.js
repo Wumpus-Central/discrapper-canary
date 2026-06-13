@@ -130,7 +130,9 @@ function ee(e) {
         }),
         ed = ei && eu && null != eo && eo.length > 0 && ec,
         ep = (Z || ee) ?? !1,
-        { monthlyDefaultSelected: em } = P.A.useConfig({ location: "PremiumPaymentPlanSelectStep" }),
+        { monthlyDefaultSelected: em } = P.A.useConfig({
+            location: `PremiumPaymentPlanSelectStep${ei ? "" : " - DO NOT USE"}`,
+        }),
         eh = (0, h.A)(em),
         eA = r.useMemo(() => {
             let e = V;

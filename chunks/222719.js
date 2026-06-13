@@ -42,16 +42,16 @@ function P(e) {
         w = (0, u.A)(),
         O = (0, x.k5)(),
         k = (0, x.nf)(),
-        F = n === A.PremiumTypes.TIER_0 ? A.pe.TIER_0 : A.pe.TIER_2,
-        D = L?.hasActiveTrial ? b?.premiumType : O ? A.PremiumTypes.TIER_2 : null,
+        D = n === A.PremiumTypes.TIER_0 ? A.pe.TIER_0 : A.pe.TIER_2,
+        F = L?.hasActiveTrial ? b?.premiumType : O ? A.PremiumTypes.TIER_2 : null,
         G = (0, p.V)(),
         H = (0, I.O)(),
         Z = n === A.PremiumTypes.TIER_0 ? A.gD.PREMIUM_MONTH_TIER_0 : A.gD.PREMIUM_MONTH_TIER_2,
         V = (0, h.N1)(Z),
         J = null != H && (0, h.YJ)(H) === Z,
-        { useNewCopy: W } = T.A.useConfig({ location: "TierCardPrice" }),
+        { useNewCopy: W } = T.A.useConfig({ location: `TierCardPrice${n}${t ? "" : " - DO NOT USE"}` }),
         B = G?.subscription_trial;
-    if (!M && !t && null != D && n === D && null != L && null != L.planIdFromItems) {
+    if (!M && !t && null != F && n === F && null != L && null != L.planIdFromItems) {
         let e = null != L.trialEndsAt ? a()(L?.trialEndsAt).diff(a()(), "d") : 0,
             t = A.hd[L.planIdFromItems],
             n = g.Ay.formatPriceString(g.Ay.getDefaultPrice(t.id), t.interval),
@@ -109,11 +109,11 @@ function P(e) {
             });
     }
     return t && W
-        ? (0, r.jsx)(f.A, { subscriptionTier: F, priceOptions: R })
+        ? (0, r.jsx)(f.A, { subscriptionTier: D, priceOptions: R })
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(j.A, {
-                      subscriptionTier: F,
+                      subscriptionTier: D,
                       isGift: t,
                       className: null != N ? N : _.q,
                       priceOptions: R,
@@ -123,7 +123,7 @@ function P(e) {
                   }),
                   P &&
                       (0, r.jsx)(j.A, {
-                          subscriptionTier: F,
+                          subscriptionTier: D,
                           interval: A.WT.YEAR,
                           className: null != N ? N : _.q,
                           isGift: t,
