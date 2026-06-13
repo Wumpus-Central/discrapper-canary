@@ -684,18 +684,20 @@
 }
 
 .container__343c1 {
+    display: flex;
+    flex-direction: column;
     gap: 64px;
     margin-top: 64px;
     padding-bottom: 144px
 }
 
-.container__343c1,
-.sectionWrapper__343c1 {
-    display: flex;
-    flex-direction: column
+.containerWithoutHero__343c1 {
+    margin-top: 0
 }
 
 .sectionWrapper__343c1 {
+    display: flex;
+    flex-direction: column;
     gap: 16px
 }
 

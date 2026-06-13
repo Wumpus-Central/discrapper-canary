@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { I: () => A }), n(323874), n(14289), n(35956);
+n.d(t, { I: () => I }), n(323874), n(14289), n(35956);
 var i = n(64700),
     r = n(873263),
     s = n(323889),
@@ -69,15 +69,16 @@ let f = new h(o.h, {
     },
 });
 var p = n(340124),
-    E = n(31587);
-function m(e) {
+    E = n(31587),
+    m = n(371912);
+function g(e) {
     return null != e && "" !== e;
 }
-function g(e) {
-    return m(e?.start) && m(e?.end);
+function A(e) {
+    return g(e?.start) && g(e?.end);
 }
-function A() {
-    let e = (0, E.T2)(),
+function I() {
+    let e = (0, m.T2)(),
         t = e?.id,
         { search: n } = (0, r.zy)(),
         o = i.useMemo(() => new URLSearchParams(n).get(E.L1.AD_CREATIVE_IDS), [n]),
@@ -87,8 +88,8 @@ function A() {
         shouldShowQuestHomeHeroContent:
             (function (e) {
                 if (null == e) return !1;
-                let t = m(e.tooltipTitle) && m(e.tooltipSubtitle);
-                return m(e.image) || g(e.linearGradient) || g(e.radialGradient) || t;
+                let t = g(e.tooltipTitle) && g(e.tooltipSubtitle);
+                return g(e.image) || A(e.linearGradient) || A(e.radialGradient) || t;
             })(e?.questHomeEntrypoint) &&
             (l || !u),
         dismissQuestHomeHeroContent: i.useCallback(() => {
