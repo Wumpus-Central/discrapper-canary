@@ -45,5 +45,3 @@ async function h(e) {
         (0, i.pX)(c.BVt.CHANNELS_GAME_SHOP(n, o, r, d))
     );
 }
-OP(t, o, l, u);
-)}
