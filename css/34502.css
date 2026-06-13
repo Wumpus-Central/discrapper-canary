@@ -2485,7 +2485,8 @@
 .container__3a1f6 {
     display: flex;
     flex-direction: column;
-    height: 100%
+    height: 100%;
+    position: relative
 }
 
 .heroDisplayContainer__3a1f6 {
