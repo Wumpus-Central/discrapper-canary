@@ -17,10 +17,9 @@ let a = "social-layer-storefront-product-details-modal",
         (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("7089"),
-                    n.e("11171"),
+                    n.e("73890"),
                     n.e("2677"),
-                    n.e("54926"),
+                    n.e("76631"),
                     n.e("43535"),
                     n.e("9233"),
                     n.e("72963"),

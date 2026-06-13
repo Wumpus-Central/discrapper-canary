@@ -1,0 +1,18 @@
+.itemIcon_d9866f {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.itemIcon_d9866f.hasTooltip_d9866f {
+    pointer-events: auto
+}
+
+.itemIconBackground_d9866f {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-round);
+    padding: 2px
+}

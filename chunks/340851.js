@@ -125,8 +125,7 @@ let U = (0, h.J)(function (e) {
         ev = (e) => {
             (0, m.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("28323"),
-                    t.e("28758"),
+                    t.e("63593"),
                     t.e("2677"),
                     t.e("47141"),
                     t.e("94881"),

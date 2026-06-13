@@ -1,13 +1,29 @@
 "use strict";
-n.d(t, { Z: () => r });
-var i = n(778712);
-let r = Object.freeze({
+n.d(t, { Z: () => a, y: () => s });
+var i,
+    r = n(778712),
+    s =
+        (((i = {}).SIZE_76 = "SIZE_76"),
+        (i.SIZE_90 = "SIZE_90"),
+        (i.SIZE_110 = "SIZE_110"),
+        (i.SIZE_133 = "SIZE_133"),
+        (i.SIZE_150 = "SIZE_150"),
+        i);
+let a = Object.freeze({
+    SIZE_76: Object.freeze({
+        size: 76,
+        iconSize: 20,
+        iconInset: 5,
+        buttonInset: 4,
+        avatarSize: r._3.SIZE_16,
+        wishlistButtonSize: "xs",
+    }),
     SIZE_90: Object.freeze({
         size: 90,
         iconSize: 20,
         iconInset: 6,
         buttonInset: 4,
-        avatarSize: i._3.SIZE_16,
+        avatarSize: r._3.SIZE_16,
         wishlistButtonSize: "xs",
     }),
     SIZE_110: Object.freeze({
@@ -15,7 +31,7 @@ let r = Object.freeze({
         iconSize: 20,
         iconInset: 6,
         buttonInset: 4,
-        avatarSize: i._3.SIZE_16,
+        avatarSize: r._3.SIZE_16,
         wishlistButtonSize: "sm",
     }),
     SIZE_133: Object.freeze({
@@ -23,7 +39,7 @@ let r = Object.freeze({
         iconSize: 24,
         iconInset: 8,
         buttonInset: 8,
-        avatarSize: i._3.SIZE_20,
+        avatarSize: r._3.SIZE_20,
         wishlistButtonSize: "md",
     }),
     SIZE_150: Object.freeze({
@@ -31,7 +47,7 @@ let r = Object.freeze({
         iconSize: 24,
         iconInset: 8,
         buttonInset: 8,
-        avatarSize: i._3.SIZE_20,
+        avatarSize: r._3.SIZE_20,
         wishlistButtonSize: "md",
     }),
 });

@@ -1,0 +1,50 @@
+.confirmationContainer_f473af {
+    margin-top: 56px
+}
+
+.confirmationHeader_f473af {
+    color: var(--text-default);
+    margin-bottom: 8px;
+    text-align: center
+}
+
+.confirmationHeader_f473af strong {
+    color: var(--text-strong)
+}
+
+.confirmationSubtitle_f473af {
+    text-align: center
+}
+
+.buttonContainer_f473af {
+    display: grid;
+    gap: 8px;
+    padding-top: 24px;
+    width: 100%
+}
+
+.bodyColumn_fa6a46 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-16);
+    justify-content: center;
+    margin-inline: var(--size-16);
+    min-height: 400px
+}
+
+.skuImage_fa6a46 {
+    border-radius: var(--radius-md);
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.customGiftMessageWrapper_fa6a46 {
+    margin: 0
+}
+
+.customGiftMessage_fa6a46 {
+    background-color: var(--background-base-lowest);
+    border-radius: var(--size-8);
+    padding: var(--size-12)
+}

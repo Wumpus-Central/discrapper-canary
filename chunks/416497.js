@@ -1,1 +1,6 @@
-_.exports = { qr: "footer__272c7", xQ: "footerContainer__272c7", wC: "footerButton__272c7" };
+_.exports = {
+    qr: "footer__272c7",
+    xQ: "footerContainer__272c7",
+    wC: "footerButton__272c7",
+    lS: "redesignFooter__272c7",
+};

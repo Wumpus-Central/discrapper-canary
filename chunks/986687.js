@@ -19,8 +19,8 @@ var l = a(627968),
     P = a(919395),
     f = a(97808),
     j = a(133171),
-    b = a(939249),
-    I = a(403581),
+    I = a(939249),
+    b = a(403581),
     C = a(922016),
     w = a(22231),
     N = a(688810),
@@ -28,19 +28,19 @@ var l = a(627968),
     T = a(290863),
     k = a(19575),
     O = a(980707),
-    S = a(477782),
-    U = a(375708);
-let B = (e) => {
+    B = a(477782),
+    S = a(375708);
+let U = (e) => {
     let { onChangeAvatar: i, onChangeAvatarDecoration: a, onClose: r } = e;
     return (0, l.jsxs)(O.W, {
         "data-menu-migrated": !0,
         onClose: r,
         onSelect: void 0,
         navId: "user-settings-change-avatar",
-        "aria-label": U.intl.string(U.t.ldIeAd),
+        "aria-label": S.intl.string(S.t.ldIeAd),
         children: [
-            (0, l.jsx)(S.Dr, { id: "change-avatar", action: i, label: U.intl.string(U.t["4OynCD"]) }),
-            (0, l.jsx)(S.Dr, { id: "change-avatar-decoration", action: a, label: U.intl.string(U.t.BVcYCx) }),
+            (0, l.jsx)(B.Dr, { id: "change-avatar", action: i, label: S.intl.string(S.t["4OynCD"]) }),
+            (0, l.jsx)(B.Dr, { id: "change-avatar-decoration", action: a, label: S.intl.string(S.t.BVcYCx) }),
         ],
     });
 };
@@ -84,7 +84,7 @@ function R(e) {
                 targetElementRef: A,
                 renderPopout: (e) => {
                     let { closePopout: i } = e;
-                    return (0, l.jsx)(B, {
+                    return (0, l.jsx)(U, {
                         onClose: i,
                         onChangeAvatar: () =>
                             (0, V.XD)({ uploadType: _.HL.AVATAR, guildId: a?.id, analyticsSource: P, isTryItOut: v }),
@@ -94,7 +94,7 @@ function R(e) {
                     });
                 },
                 children: (e) =>
-                    (0, l.jsxs)(b.D, {
+                    (0, l.jsxs)(I.D, {
                         ...e,
                         innerRef: A,
                         className: s()(z.my, z.vk),
@@ -104,12 +104,12 @@ function R(e) {
                         ],
                     }),
             })
-          : (0, l.jsxs)(b.D, {
+          : (0, l.jsxs)(I.D, {
                 onClick: y,
                 className: s()(z.my, z.vk),
                 children: [
                     O,
-                    (0, l.jsx)(I.t, { size: "custom", className: z.QY, width: 20, height: 20, color: "white" }),
+                    (0, l.jsx)(b.t, { size: "custom", className: z.QY, width: 20, height: 20, color: "white" }),
                 ],
             });
 }
@@ -132,7 +132,7 @@ function Z(e) {
         } = e,
         { newestAnalyticsLocation: c } = (0, N.Ay)(),
         m = n || a?.canUsePremiumProfileCustomization || !1,
-        g = m ? w.R : I.t,
+        g = m ? w.R : b.t,
         p = (0, G.b)(m);
     return (0, l.jsx)(F.A, {
         user: i,
@@ -144,7 +144,7 @@ function Z(e) {
         canUsePremiumProfileCustomization: n,
         children:
             !o &&
-            (0, l.jsxs)(b.D, {
+            (0, l.jsxs)(I.D, {
                 onClick: () => {
                     m || p
                         ? (0, V.XD)({ uploadType: _.HL.BANNER, analyticsSource: c, guildId: r, isTryItOut: d })
@@ -156,14 +156,14 @@ function Z(e) {
                     (0, l.jsx)(L.D, {
                         variant: "text-sm/medium",
                         color: "always-white",
-                        children: m || p ? U.intl.string(U.t.N0bC3P) : U.intl.string(U.t.O1sT5v),
+                        children: m || p ? S.intl.string(S.t.N0bC3P) : S.intl.string(S.t.O1sT5v),
                     }),
                 ],
             }),
     });
 }
 var H = a(685073),
-    q = a(328296),
+    q = a(428391),
     Q = a(878555),
     W = a(442228),
     X = a(192867),
@@ -191,7 +191,7 @@ function K(e) {
         P = a?.getPreviewBio(o),
         f = u ?? a?.pronouns,
         j = (0, V.eh)({ pendingNickname: s, pendingGlobalName: d, user: i, guildMember: y }),
-        b = (0, H.gS)(p);
+        I = (0, H.gS)(p);
     return (0, l.jsxs)("div", {
         className: $.rf,
         inert: !0,
@@ -208,7 +208,7 @@ function K(e) {
                     }
                 })(),
                 pronouns: f,
-                primaryGuild: b,
+                primaryGuild: I,
                 trailing: (0, l.jsx)(q.A, {
                     displayProfile: a,
                     themeType: M.d.POPOUT,
@@ -220,7 +220,7 @@ function K(e) {
             !h &&
                 null != P &&
                 "" !== P &&
-                (0, l.jsx)(W.A, { user: i, bio: P, hidePersonalInformation: A, viewFullBioDisabled: !0 }),
+                (0, l.jsx)(W.A, { userId: i.id, userBio: P, hidePersonalInformation: A, viewFullBioDisabled: !0 }),
         ],
     });
 }
@@ -235,7 +235,7 @@ function ea(e) {
                   className: $.qr,
                   children: (0, l.jsx)(ee.FD, {
                       variant: "primary",
-                      text: U.intl.string(U.t.hZkfwY),
+                      text: S.intl.string(S.t.hZkfwY),
                       onClick: () => {},
                       fullWidth: !0,
                   }),
@@ -252,8 +252,8 @@ function en(e) {
             onUpsellClick: n,
             pendingBanner: f,
             pendingAccentColor: j,
-            pendingBio: b,
-            pendingPronouns: I,
+            pendingBio: I,
+            pendingPronouns: b,
             pendingAvatar: C,
             pendingAvatarDecoration: w,
             pendingNickname: N,
@@ -261,8 +261,8 @@ function en(e) {
             pendingThemeColors: T,
             pendingProfileEffect: k,
             pendingProfileFrame: O,
-            pendingLegacyUsernameDisabled: S,
-            pendingDisplayNameStyles: B,
+            pendingLegacyUsernameDisabled: B,
+            pendingDisplayNameStyles: U,
             pendingPrimaryGuildId: V,
             className: _,
             avatarClassName: z,
@@ -358,10 +358,10 @@ function en(e) {
                     pendingAvatar: C,
                     pendingNickname: N,
                     pendingGlobalName: D,
-                    pendingBio: b,
-                    pendingPronouns: I,
-                    pendingLegacyUsernameDisabled: S,
-                    pendingDisplayNameStyles: B,
+                    pendingBio: I,
+                    pendingPronouns: b,
+                    pendingLegacyUsernameDisabled: B,
+                    pendingDisplayNameStyles: U,
                     pendingPrimaryGuildId: V,
                     hideBioSection: Y,
                     pendingBadges: Q,
@@ -377,7 +377,7 @@ function en(e) {
         : (0, l.jsx)("div", {
               role: "img",
               className: s()(er.i1, E),
-              "aria-label": U.intl.string(U.t.ayozFl),
+              "aria-label": S.intl.string(S.t.ayozFl),
               children: (0, l.jsx)(o.M, { children: ep }),
           });
 }

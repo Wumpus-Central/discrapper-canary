@@ -1,0 +1,16 @@
+.product__339ad {
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    flex-grow: 1;
+    height: 48px
+}
+
+.productContent__339ad {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 1
+}
