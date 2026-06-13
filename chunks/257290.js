@@ -475,14 +475,14 @@ class b extends s.A {
     }
     clear() {
         O.nx.info(
-            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${h.Ay.getCurrentClipsSessionId()} pendingSessionGameKey=${this.pendingSessionGameKey} pendingCandidates=${h.Ay.getPendingClipCandidates().length} candidates=${h.Ay.getClipCandidates().length}`,
+            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${h.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} pendingCandidates=${h.Ay.getPendingClipCandidates().length} candidates=${h.Ay.getClipCandidates().length}`,
         ),
             this.unscheduleClip(),
             this.sessionEndTimeout.stop(),
             this.processClipCandidates(),
             (this.currentSessionGameKey = null),
             (this.pendingSessionGameKey = null),
-            (0, R.p8)(null),
+            (0, R.YV)(),
             (this.lastClipTimestamp = 0),
             this.timeline.clear();
     }
@@ -501,7 +501,7 @@ class b extends s.A {
     scheduleClip(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
             n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            i = h.Ay.getCurrentClipsSessionId();
+            i = h.Ay.getCurrentClipsSession()?.id;
         (!n || this.canScheduleClipCandidate(e)) &&
             (O.nx.info(`decider: scheduleClip signal=${e.type} delay=${t}ms isCandidate=${n}`),
             this.unscheduleClip(),
@@ -522,28 +522,27 @@ class b extends s.A {
     handleVoiceChannelSelect() {
         this.clear();
         let e = l.Ay.getVisibleGame();
-        if (null != e) {
-            this.currentSessionGameKey = (0, l.Es)(e);
-            let t = crypto.randomUUID();
-            (0, R.p8)({ id: t, gameId: e.id ?? null }),
-                O.nx.info(
-                    `decider: handleVoiceChannelSelect \u{2014} new gaming session id: ${t}, for game: ${this.currentSessionGameKey}`,
-                );
-        }
+        if (null == e) return;
+        this.currentSessionGameKey = (0, l.Es)(e);
+        let t = crypto.randomUUID();
+        (0, R.mN)(t, e.id ?? null),
+            O.nx.info(
+                `decider: handleVoiceChannelSelect \u{2014} new gaming session id: ${t}, for game: ${this.currentSessionGameKey}`,
+            );
     }
     handleRunningGamesChange() {
         let e = l.Ay.getVisibleGame(),
             t = null != e ? (0, l.Es)(e) : null;
         if (
             (O.nx.info(
-                `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${h.Ay.getCurrentClipsSessionId()} pendingSessionGameKey=${this.pendingSessionGameKey}`,
+                `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${h.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey}`,
             ),
             null === this.currentSessionGameKey)
         ) {
             if (null != t) {
                 this.currentSessionGameKey = t;
                 let n = crypto.randomUUID();
-                (0, R.p8)({ id: n, gameId: e?.id ?? null }),
+                (0, R.mN)(n, e?.id ?? null),
                     O.nx.info(`decider: handleRunningGamesChange \u{2014} starting session for ${t} (id=${n})`);
             } else O.nx.info(`decider: handleRunningGamesChange \u{2014} not starting session (newPrimaryKey=${t})`);
             return;
@@ -561,7 +560,7 @@ class b extends s.A {
                 this.sessionEndTimeout.stop(),
                 this.processClipCandidates(),
                 (this.currentSessionGameKey = null),
-                (0, R.p8)(null),
+                (0, R.YV)(),
                 (this.pendingSessionGameKey = null);
             return;
         }
@@ -574,7 +573,7 @@ class b extends s.A {
               this.sessionEndTimeout.start(3e4, () => {
                   this.processClipCandidates(), (this.currentSessionGameKey = t);
                   let n = crypto.randomUUID();
-                  (0, R.p8)({ id: n, gameId: e?.id ?? null }),
+                  (0, R.mN)(n, e?.id ?? null),
                       (this.pendingSessionGameKey = null),
                       O.nx.info(
                           `decider: sessionEndTimeout fired after debounce \u{2014} finalizing previous session, started new session (newPrimaryKey=${t}, id=${n})`,
