@@ -87,4 +87,5 @@ var d = (((i = {}).LEFT = "LEFT"), (i.RIGHT = "RIGHT"), i),
         (s.OPEN_NITRO_CHECKOUT = "OPEN_NITRO_CHECKOUT"),
         (s.OPEN_NITRO_HOME = "OPEN_NITRO_HOME"),
         (s.START_BOUNTY = "START_BOUNTY"),
+        (s.BACK_TO_BOUNTIES = "BACK_TO_BOUNTIES"),
         s);
