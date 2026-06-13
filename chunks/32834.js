@@ -1119,7 +1119,7 @@ let nw = (e) => {
             (0, m.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     t.e("40989"),
-                    t.e("76306"),
+                    t.e("47789"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
@@ -3663,7 +3663,7 @@ let ae = (e) => {
 function an(e) {
     let { context: n, analyticsLocations: t, profileFrame: i, isRedesignEnabled: s, handleOpenProfile: a } = e,
         { showButton: r } = s6.useConfig({ location: "UserProfileSidebarFooter" });
-    if (!r) return null;
+    if (s && !r) return null;
     let d = () => {
         a(), (0, lx.Wn)({ action: "PRESS_VIEW_PROFILE", analyticsLocations: t, ...n });
     };
@@ -3678,18 +3678,20 @@ function an(e) {
                 onClick: d,
             }),
         });
-    let o = (0, l.jsx)("div", {
-        className: s8.qr,
-        children: (0, l.jsx)(ns.D, {
-            onClick: d,
-            className: s8.wC,
-            children: (0, l.jsx)(y.E, {
-                color: "text-strong",
-                variant: "text-sm/normal",
-                children: Y.intl.string(Y.t["+Xp3hq"]),
-            }),
-        }),
-    });
+    let o = r
+        ? (0, l.jsx)("div", {
+              className: s8.qr,
+              children: (0, l.jsx)(ns.D, {
+                  onClick: d,
+                  className: s8.wC,
+                  children: (0, l.jsx)(y.E, {
+                      color: "text-strong",
+                      variant: "text-sm/normal",
+                      children: Y.intl.string(Y.t["+Xp3hq"]),
+                  }),
+              }),
+          })
+        : null;
     return null != i
         ? (0, l.jsxs)("div", { className: s8.xQ, children: [(0, l.jsx)(s5.A, { frame: i, filterLayer: ae }), o] })
         : o;

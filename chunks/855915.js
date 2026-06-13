@@ -6,24 +6,24 @@ var i = n(64700),
     a = n(746002);
 let o = new r.A("usePreloadLayerImages");
 async function l(e, t) {
+    let n;
     t.throwIfAborted();
-    let n = new Image();
-    return (
-        (n.src = e),
+    let i = new Image();
+    i.src = e;
+    try {
         await Promise.race([
-            n.decode(),
-            new Promise((e, i) => {
-                t.addEventListener(
-                    "abort",
-                    () => {
-                        (n.src = ""), i(new DOMException("Aborted", "AbortError"));
-                    },
-                    { once: !0 },
-                );
+            i.decode(),
+            new Promise((e, r) => {
+                (n = () => {
+                    (i.src = ""), r(new DOMException("Aborted", "AbortError"));
+                }),
+                    t.addEventListener("abort", n, { once: !0 });
             }),
-        ]),
-        n
-    );
+        ]);
+    } finally {
+        null != n && t.removeEventListener("abort", n);
+    }
+    return i;
 }
 function u(e) {
     return "id" in e ? e.id : e.src;
