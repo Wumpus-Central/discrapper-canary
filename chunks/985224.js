@@ -720,8 +720,8 @@ let e1 =
         "https://cdn.discordapp.com/assets/content/ad2a252a6866e1ecb3bab521e2baaabbf13ab2d1ecaa8af67862c53c91f76761.png",
     e2 = { [eM.qH.THUMBNAIL]: null, [eM.qH.STATIC]: null, [eM.qH.REDUCED_MOTION]: null },
     e3 = "debug",
-    e6 = "reduced-motion-preview-modal",
-    e8 = (e) => {
+    e8 = "reduced-motion-preview-modal",
+    e6 = (e) => {
         let { transitionState: t, onClose: a, frameSrc: n, theme: l } = e;
         return (0, r.jsx)(eU.d, {
             transitionState: t,
@@ -787,14 +787,14 @@ let e1 =
                     ? (0, r.jsx)(B.D, {
                           className: G()(eZ.zd, eZ.eB),
                           onClick: () => {
-                              (0, e$.hasModalOpen)(e6)
-                                  ? (0, e$.closeModal)(e6)
+                              (0, e$.hasModalOpen)(e8)
+                                  ? (0, e$.closeModal)(e8)
                                   : (0, e$.openModalLazy)(
                                         () =>
                                             Promise.resolve((e) =>
-                                                (0, r.jsx)(e8, { ...e, frameSrc: a?.src ?? null, theme: n }),
+                                                (0, r.jsx)(e6, { ...e, frameSrc: a?.src ?? null, theme: n }),
                                             ),
-                                        { modalKey: e6, onCloseRequest: () => (0, e$.closeModal)(e6) },
+                                        { modalKey: e8, onCloseRequest: () => (0, e$.closeModal)(e8) },
                                     );
                           },
                           children: o,
@@ -2138,8 +2138,8 @@ function t2() {
     });
 }
 var t3 = a(576470),
-    t6 = a(693879);
-function t8() {
+    t8 = a(693879);
+function t6() {
     let e = (0, z.bG)([tY.A], () => tY.A.getFeed(tZ.X1.GLOBAL_FEED)?.refresh_stale_inbox_after_ms != null),
         { loading: t, nextFetchDate: a } = (0, z.cf)(
             [tY.A],
@@ -2162,7 +2162,7 @@ function t8() {
                 children: [
                     "Last fetch:",
                     " ",
-                    null != n ? (0, r.jsx)(t6.z, { inline: !0, entry: { start: n.getTime() } }) : "(never)",
+                    null != n ? (0, r.jsx)(t8.z, { inline: !0, entry: { start: n.getTime() } }) : "(never)",
                 ],
             }),
         ],
@@ -2248,7 +2248,7 @@ function t7() {
                     children: [
                         (0, r.jsx)(h.E, { variant: "text-md/semibold", children: "Inventory" }),
                         s.length > 0 && (0, r.jsx)(t$, { columns: t9, data: s }),
-                        (0, r.jsx)(t8, {}),
+                        (0, r.jsx)(t6, {}),
                         (0, r.jsx)(m.$, {
                             variant: "primary",
                             text: "Refresh Now",
@@ -3072,8 +3072,8 @@ var aQ = a(825484),
     a1 = a(46225),
     a2 = a(487431),
     a3 = a(546183),
-    a6 = a(134861),
-    a8 = a(71393),
+    a8 = a(134861),
+    a6 = a(71393),
     a5 = a(967198),
     a9 = a(942370),
     a4 = a(375708),
@@ -3087,7 +3087,7 @@ function nt() {
         { analyticsLocations: l } = (0, aZ.Ay)(t_.A.DEV_TOOLS),
         [s, i] = o.useState(""),
         d = (0, z.bG)([a5.A], () => a5.A.getGuildId()),
-        c = (0, z.bG)([a8.A], () => a8.A.getGuild(d)),
+        c = (0, z.bG)([a6.A], () => a6.A.getGuild(d)),
         u = c?.gameApplicationIds ?? [],
         x = (0, tG.A)(u).filter((e) => null != e),
         p = (0, z.bG)([f.Ay, E.A], () => (0, y.A)(f.Ay, E.A)),
@@ -3099,7 +3099,7 @@ function nt() {
         ),
         C = (0, a1.RD)(g, { allowedFlows: [a9._M.RPC], debug: !0 }),
         S = (0, a1.RD)(g, { allowedFlows: [a9._M.WEB], debug: !0 }),
-        N = (0, z.bG)([a6.A], () => null != b && a6.A.isConnected(b.id)),
+        N = (0, z.bG)([a8.A], () => null != b && a8.A.isConnected(b.id)),
         A = (0, a1.RD)(g, { debug: !0 }),
         { canDeauthorize: k, deauthorize: I } =
             ((e = A.connectionApp?.id),
@@ -4133,8 +4133,8 @@ function n1() {
 }
 var n2 = a(636537),
     n3 = a(153488),
-    n6 = a(927813);
-let n8 = 12 * n6.A.Millis.HOUR,
+    n8 = a(927813);
+let n6 = 12 * n8.A.Millis.HOUR,
     n5 = new Map(),
     n9 = !1,
     n4 = Object.freeze({ channelAffinities: [], lastFetched: 0 }),
@@ -4149,7 +4149,7 @@ class lt extends z.Ay.PersistedStore {
         null != e && ((n7.channelAffinities = e.channelAffinities), (n7.lastFetched = e.lastFetched), le());
     }
     shouldFetch() {
-        if (!n9) return Date.now() - n7.lastFetched > n8;
+        if (!n9) return Date.now() - n7.lastFetched > n6;
     }
     isFetching() {
         return n9;
@@ -4856,7 +4856,7 @@ var lq = a(985623),
 function l3(e) {
     return parseFloat(e.toFixed(3));
 }
-let l6 = [
+let l8 = [
     {
         key: "store",
         cellClassName: l2.lA,
@@ -4874,10 +4874,10 @@ let l6 = [
         },
     },
 ];
-function l8(e) {
+function l6(e) {
     let { actionLog: t } = e,
         a = o.useMemo(() => t.traces.map((e) => ({ key: e.name, trace: e })), [t]);
-    return (0, r.jsx)(x.Ip, { children: (0, r.jsx)(t$, { columns: l6, data: a }) });
+    return (0, r.jsx)(x.Ip, { children: (0, r.jsx)(t$, { columns: l8, data: a }) });
 }
 let l5 = [
     {
@@ -4914,7 +4914,7 @@ let l5 = [
         group: aJ.fu.NONE,
         render(e) {
             let { actionLog: t } = e;
-            return (0, r.jsx)(l8, { actionLog: t });
+            return (0, r.jsx)(l6, { actionLog: t });
         },
     },
 ];
@@ -5579,7 +5579,7 @@ var sN = a(390544),
     sI = a(661202);
 function sD() {
     let e = (0, z.bG)([a5.A], () => a5.A.getGuildId()),
-        t = (0, z.bG)([a8.A], () => a8.A.getGuild(e)?.name),
+        t = (0, z.bG)([a6.A], () => a6.A.getGuild(e)?.name),
         a = (0, z.bG)([sk.A], () => sk.A.getStateForGuild(e)?.instances),
         n = o.useMemo(() => Object.values(a ?? {})[0], [a]),
         l = o.useCallback(
@@ -5701,8 +5701,8 @@ var sw = a(950305),
     s1 = a(562708),
     s2 = a(830215),
     s3 = a(381689),
-    s6 = a(889227),
-    s8 = a(499785),
+    s8 = a(889227),
+    s6 = a(499785),
     s5 = a(315069);
 class s9 extends s5.A {
     id;
@@ -5721,7 +5721,7 @@ class s9 extends s5.A {
 }
 let s4 = { pools: null, users: null };
 function s7(e) {
-    null == s4.users && (s4.users = new Map()), s4.users.set(e.id, new s6.A(e));
+    null == s4.users && (s4.users = new Map()), s4.users.set(e.id, new s8.A(e));
 }
 class ie extends z.Ay.PersistedStore {
     static displayName = "GeneratedTestUsersStore";
@@ -5768,7 +5768,7 @@ let it = new ie(tP.h, {
 });
 var ia = a(835002);
 async function il(e, t) {
-    return await s8.A.get({
+    return await s6.A.get({
         url: ei.Rsh.GENERATED_POOL_BY_ID(e),
         trackedActionData: { event: s1.NetworkActionNames.USER_LOGIN },
         rejectWithError: !1,
@@ -5780,7 +5780,7 @@ async function il(e, t) {
             tP.h.dispatch({
                 type: "GENERATED_POOL_BY_ID_FETCH_SUCCESS",
                 pool: s9.fromServer(l).setPassword(t),
-                users: s.map((e) => new s6.A(e)),
+                users: s.map((e) => new s8.A(e)),
             });
         })
         .catch(() => (s3.A.showFailedToast(ia.OB.GENERIC_ERROR), null));
@@ -7133,8 +7133,8 @@ var i0 = a(820739),
     i1 = a(230135),
     i2 = a(45780),
     i3 = a(868652),
-    i6 = a(859241);
-let i8 = [
+    i8 = a(859241);
+let i6 = [
         ad.M.GUILD_POWERUP_PERKS_COACHMARK,
         ad.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK,
         ad.M.GUILD_POWERUP_NOTIFICATION,
@@ -7187,9 +7187,9 @@ async function ra(e) {
 }
 function rn() {
     let e = (0, z.bG)([a5.A], () => a5.A.getGuildId()),
-        t = (0, z.bG)([a8.A], () => a8.A.getGuild(e)?.name),
+        t = (0, z.bG)([a6.A], () => a6.A.getGuild(e)?.name),
         a = (0, z.yK)([au.A], () => [...i5, ...i9].filter((t) => null != e && (0, i2.zs)(t, e))),
-        n = (0, z.yK)([i6.A], () => (null != e ? (i6.A.getAppliedGuildBoostsForGuild(e) ?? []) : []));
+        n = (0, z.yK)([i8.A], () => (null != e ? (i8.A.getAppliedGuildBoostsForGuild(e) ?? []) : []));
     if (null != e)
         return (0, r.jsxs)(x.Ip, {
             className: re.kL,
@@ -7252,7 +7252,7 @@ function rn() {
                         (0, r.jsx)(h.E, { variant: "eyebrow", className: re.wx, children: "Reset User Level DCs" }),
                         (0, r.jsx)($.B, {
                             gap: 16,
-                            children: i8.map((e) => (0, r.jsx)(lE, { className: re.z6, content: ad.M[e] }, ad.M[e])),
+                            children: i6.map((e) => (0, r.jsx)(lE, { className: re.z6, content: ad.M[e] }, ad.M[e])),
                         }),
                     ],
                 }),
@@ -7912,7 +7912,7 @@ let rk = {
             let { default: e } = await Promise.all([a.e("9004"), a.e("19690"), a.e("45322"), a.e("10758")]).then(
                     a.bind(a, 455557),
                 ),
-                t = Object.values(a8.A.getGuilds())[0];
+                t = Object.values(a6.A.getGuilds())[0];
             return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
         },
         GuildContextMenu: async () => {
@@ -7937,7 +7937,7 @@ let rk = {
                     a.e("54672"),
                     a.e("36592"),
                     a.e("40989"),
-                    a.e("76306"),
+                    a.e("47789"),
                     a.e("80186"),
                     a.e("49681"),
                     a.e("96382"),
@@ -8031,7 +8031,7 @@ let rk = {
                     a.e("32607"),
                     a.e("65011"),
                 ]).then(a.bind(a, 860417)),
-                t = Object.values(a8.A.getGuilds())[0];
+                t = Object.values(a6.A.getGuilds())[0];
             return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
         },
         GuildFolderContextMenu: async () => {
@@ -8084,12 +8084,12 @@ let rk = {
         },
         AddQuestionsContextMenu: async () => {
             let { AddQuestionsContextMenu: e } = await Promise.all([
-                    a.e("76306"),
+                    a.e("47789"),
                     a.e("90163"),
                     a.e("11810"),
                     a.e("14656"),
                 ]).then(a.bind(a, 892921)),
-                t = Object.values(a8.A.getGuilds())[0];
+                t = Object.values(a6.A.getGuilds())[0];
             return null == t
                 ? () => null
                 : (a) =>
@@ -8116,7 +8116,7 @@ let rk = {
                     a.e("51212"),
                     a.e("84615"),
                 ]).then(a.bind(a, 612826)),
-                t = a8.A.getGuilds(),
+                t = a6.A.getGuilds(),
                 n = null;
             for (let e of Object.values(t)) {
                 for (let t of Object.values(ay.A.getMutableGuildChannelsForGuild(e.id))) {
@@ -8134,14 +8134,14 @@ let rk = {
         },
         MembersTableSortContextMenu: async () => {
             let { default: e } = await a.e("73091").then(a.bind(a, 779662)),
-                t = Object.values(a8.A.getGuilds())[0];
+                t = Object.values(a6.A.getGuilds())[0];
             return null == t ? () => null : () => (0, r.jsx)(e, { guildId: t.id, onClose: rN.Z_ });
         },
         MembersTableJoinTypeContextMenu: async () => {
             let { default: e } = await Promise.all([a.e("657"), a.e("71719"), a.e("14878"), a.e("66016")]).then(
                     a.bind(a, 316173),
                 ),
-                t = Object.values(a8.A.getGuilds())[0];
+                t = Object.values(a6.A.getGuilds())[0];
             return null == t ? () => null : () => (0, r.jsx)(e, { guildId: t.id, onClose: rN.Z_ });
         },
     },
@@ -9431,7 +9431,7 @@ let r3 = {
     },
     DmSettingsUpsellModal: async () => {
         let { default: e } = await Promise.all([a.e("26065"), a.e("62684")]).then(a.bind(a, 228855)),
-            t = Object.keys(a8.A.getGuilds())[0];
+            t = Object.keys(a6.A.getGuilds())[0];
         return (a) => (0, r.jsx)(e, { ...a, guildId: t });
     },
     UrgentMessageModal: async () => {
@@ -9444,7 +9444,7 @@ let r3 = {
     },
     DisableRiskyPermsModal: async () => {
         let { default: e } = await Promise.all([a.e("59066"), a.e("52823"), a.e("71905")]).then(a.bind(a, 868952)),
-            t = Object.values(a8.A.getGuilds())[0];
+            t = Object.values(a6.A.getGuilds())[0];
         return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
     },
     OtherFriendRequestsModal: async () => {
@@ -9491,7 +9491,7 @@ let r3 = {
         return (t) => (0, r.jsx)(e, { ...t });
     },
 };
-function r6() {
+function r8() {
     let e = o.useMemo(
             () =>
                 Object.keys(r3)
@@ -9549,7 +9549,7 @@ function r6() {
         }),
     });
 }
-var r8 = a(933832),
+var r6 = a(933832),
     r5 = a(472229),
     r9 = a(945960),
     r4 = a(669316),
@@ -9702,7 +9702,7 @@ function oo(e) {
                     children: [
                         (0, r.jsxs)(h.E, { variant: "eyebrow", color: "always-white", children: ["Offer: ", g] }),
                         s
-                            ? (0, r.jsx)(r8.A, { size: "md", color: "currentColor", className: sy.Kk })
+                            ? (0, r.jsx)(r6.A, { size: "md", color: "currentColor", className: sy.Kk })
                             : (0, r.jsx)(nh.T, { size: "xs", color: "currentColor", className: sy.Kk }),
                     ],
                 }),
@@ -9714,7 +9714,7 @@ function oo(e) {
                     children: [
                         (0, r.jsxs)(h.E, { variant: "eyebrow", color: "always-white", children: ["Trial: ", b] }),
                         d
-                            ? (0, r.jsx)(r8.A, { size: "md", color: "currentColor", className: sy.Kk })
+                            ? (0, r.jsx)(r6.A, { size: "md", color: "currentColor", className: sy.Kk })
                             : (0, r.jsx)(nh.T, { size: "xs", color: "currentColor", className: sy.Kk }),
                     ],
                 }),
@@ -9854,7 +9854,7 @@ function od(e) {
                     children: [
                         (0, r.jsxs)(h.E, { variant: "eyebrow", color: "text-default", children: ["Offer: ", g] }),
                         s
-                            ? (0, r.jsx)(r8.A, { size: "md", color: "currentColor", className: G()(sy.Kk, sy.mK) })
+                            ? (0, r.jsx)(r6.A, { size: "md", color: "currentColor", className: G()(sy.Kk, sy.mK) })
                             : (0, r.jsx)(nh.T, { size: "xs", color: "currentColor", className: sy.Kk }),
                     ],
                 }),
@@ -9866,7 +9866,7 @@ function od(e) {
                     children: [
                         (0, r.jsxs)(h.E, { variant: "eyebrow", color: "text-default", children: ["Discount: ", j] }),
                         d
-                            ? (0, r.jsx)(r8.A, { size: "md", color: "currentColor", className: G()(sy.Kk, sy.mK) })
+                            ? (0, r.jsx)(r6.A, { size: "md", color: "currentColor", className: G()(sy.Kk, sy.mK) })
                             : (0, r.jsx)(nh.T, { size: "xs", color: "currentColor", className: sy.Kk }),
                     ],
                 }),
@@ -10828,7 +10828,7 @@ let o2 = o.memo(function (e) {
                                 { ...e },
                             ),
                         );
-                    }, +n6.A.Millis.SECOND)),
+                    }, +n8.A.Millis.SECOND)),
                     () => clearInterval(n.current)
                 ),
                 [],
@@ -10877,7 +10877,7 @@ let o2 = o.memo(function (e) {
             })
         );
     }),
-    o6 = o.memo(function () {
+    o8 = o.memo(function () {
         let e = (0, z.cf)([oO.default], () => oO.default.getTrackedGames()),
             t = (0, oW.getPID)(),
             a = (0, z.bG)([oO.default], () => oO.default.isOverlayOOPEnabledForPid(t), [t]),
@@ -10931,7 +10931,7 @@ let o2 = o.memo(function (e) {
             ],
         });
     }),
-    o8 = [
+    o6 = [
         {
             mode: oD.x7.ClickZones,
             label: "Click Zone Debug Mode",
@@ -10983,7 +10983,7 @@ let o2 = o.memo(function (e) {
             }, []),
             (0, r.jsx)("div", {
                 className: oH.st,
-                children: o8.map((s) => {
+                children: o6.map((s) => {
                     let i =
                             s.mode === oD.x7.OverlayRafManagerForceEnabled
                                 ? `${s.label} (${oP.A.getLastRAFCallbackReason()})`
@@ -11497,7 +11497,7 @@ function dc() {
                                         children: T ? "Copied" : "Copy All",
                                     }),
                                     T
-                                        ? (0, r.jsx)(r8.A, { size: "sm", color: eV.A.unsafe_rawColors.GREEN_330.css })
+                                        ? (0, r.jsx)(r6.A, { size: "sm", color: eV.A.unsafe_rawColors.GREEN_330.css })
                                         : (0, r.jsx)(nh.T, { color: "currentColor", size: "sm" }),
                                 ],
                             }),
@@ -11625,7 +11625,7 @@ function dh() {
                 (0, r.jsx)(o5, {}),
                 (0, r.jsx)(o4, {}),
                 (0, r.jsx)(o9, {}),
-                (0, r.jsx)(o6, {}),
+                (0, r.jsx)(o8, {}),
                 (0, r.jsx)(o1, {}),
                 (0, r.jsx)(o3, {}),
                 (0, r.jsx)(du, {}),
@@ -11964,7 +11964,7 @@ function dK(e) {
 let dY = function () {
     let [e, t] = o.useState(sx.pe.TIER_2),
         [a, n] = o.useState(null),
-        l = (0, z.yK)([a8.A], () => a8.A.getGuildsArray()),
+        l = (0, z.yK)([a6.A], () => a6.A.getGuildsArray()),
         [s] = (0, z.yK)([rZ.A], () => [rZ.A.getPremiumSubscription()]),
         i = l.map((e) => ({ id: e.id, value: e, label: e.name })),
         [c, u] = o.useState(i.length > 0 ? i[0].value : null),
@@ -12350,7 +12350,7 @@ var dq = a(219887),
     d1 = a(211287),
     d2 = a(295405),
     d3 = a(188976);
-let d6 = [
+let d8 = [
         { label: "3DS and Failed Cards", value: "", disabled: !0 },
         { label: "Other", value: "OTHER" },
         { label: "Americas", value: "", disabled: !0 },
@@ -12414,7 +12414,7 @@ let d6 = [
         { label: "Taiwan", value: "TW" },
         { label: "Thailand", value: "TH" },
     ],
-    d8 = {
+    d6 = {
         OTHER: [
             { label: "Always Authenticate", value: "pm_card_authenticationRequired" },
             { label: "Decline after attaching", value: "pm_card_chargeCustomerFail" },
@@ -13171,7 +13171,7 @@ function ce() {
         [p, v] = o.useState("pm_card_us"),
         [j, b] = o.useState(!1),
         f = Object.values((0, ty.bG)([d2.A], () => d2.A.paymentSources)),
-        y = d8[e],
+        y = d6[e],
         _ = async () => {
             let t = p;
             "" === t && (t = "pm_card_us"),
@@ -13209,7 +13209,7 @@ function ce() {
                                 selectionMode: "single",
                                 label: "Card Type",
                                 value: e,
-                                options: d6
+                                options: d8
                                     .filter((e) => !("disabled" in e && e.disabled))
                                     .map((e) => {
                                         let { value: t, label: a } = e;
@@ -13225,7 +13225,7 @@ function ce() {
                                         };
                                     }),
                                 onSelectionChange: (e) => {
-                                    t(e), v(d8[e][0].value), b(1 === d8[e].length);
+                                    t(e), v(d6[e][0].value), b(1 === d6[e].length);
                                 },
                             }),
                             "US" === e &&
@@ -13580,7 +13580,7 @@ var cf = a(136722),
     cC = a(842681);
 function cS(e) {
     let { title: t, can: a } = e,
-        n = a ? r8.A : J.P,
+        n = a ? r6.A : J.P,
         l = (0, r.jsx)("div", {
             className: G()(cC.v_, a ? cC.uU : cC.Ss),
             children: (0, r.jsx)(n, { className: cC.Kk }),
@@ -13600,7 +13600,7 @@ function cN() {
     let e = (0, z.bG)([rB.A], () => rB.A.getChannelId()),
         t = (0, z.bG)([a5.A], () => a5.A.getGuildId()),
         a = (0, z.bG)([ay.A], () => ay.A.getChannel(e)),
-        n = (0, z.bG)([a8.A], () => a8.A.getGuild(t)),
+        n = (0, z.bG)([a6.A], () => a6.A.getGuild(t)),
         l = (0, z.bG)([cy.A], () => cy.A.computePermissions(a)),
         s = (0, z.bG)([cy.A], () => cy.A.computePermissions(n)),
         i = (0, af.Ay)(a, !0),
@@ -14048,8 +14048,8 @@ var cQ = a(141931),
     c1 = a(43203),
     c2 = a(349435),
     c3 = a(674272),
-    c6 = a(466034),
-    c8 = a(10094),
+    c8 = a(466034),
+    c6 = a(10094),
     c5 = a(683760);
 let c9 = () => {
     let e = (0, z.bG)([ea.default], () => ea.default.getCurrentUser()),
@@ -14066,14 +14066,14 @@ let c9 = () => {
                 options: sx.Jm,
                 value: a,
                 onSelectionChange: (t) => {
-                    (0, c8.O)(t, e);
+                    (0, c6.O)(t, e);
                 },
                 selectionMode: "single",
                 fullWidth: !0,
             }),
             (0, r.jsx)(lG.Q, {
                 onClick: () => {
-                    (0, c8.O)(sx.$I, e);
+                    (0, c6.O)(sx.$I, e);
                 },
                 text: "Reset premium type override",
             }),
@@ -14082,10 +14082,10 @@ let c9 = () => {
                 value: nu()(t),
                 onSelect: (e) => {
                     var t;
-                    return (t = e.toISOString()), void (0, c8.Y)(new Date(t));
+                    return (t = e.toISOString()), void (0, c6.Y)(new Date(t));
                 },
             }),
-            (0, r.jsx)(lG.Q, { onClick: () => (0, c8.Y)(void 0), text: "Reset account created at override" }),
+            (0, r.jsx)(lG.Q, { onClick: () => (0, c6.Y)(void 0), text: "Reset account created at override" }),
         ],
     });
 };
@@ -14238,7 +14238,7 @@ function ul() {
                               variant: "primary",
                               size: "sm",
                               text: "Show TOTP Success",
-                              onClick: () => (0, c6.sy)(!0),
+                              onClick: () => (0, c8.sy)(!0),
                           }),
                           (0, r.jsx)(m.$, {
                               variant: "primary",
@@ -14926,7 +14926,7 @@ let u0 = o.createContext({ setDropHandler: () => {} }),
                   { modalKey: uy.k, onCloseRequest: () => (0, e$.closeModal)(uy.k) },
               );
     },
-    u6 = () => {
+    u8 = () => {
         (0, e$.hasModalOpen)(uy.g)
             ? (0, e$.closeModal)(uy.g)
             : (0, e$.openModalLazy)(
@@ -14937,7 +14937,7 @@ let u0 = o.createContext({ setDropHandler: () => {} }),
                   { modalKey: uy.g, onCloseRequest: () => (0, e$.closeModal)(uy.g) },
               );
     },
-    u8 = () => {
+    u6 = () => {
         let e = (0, ew.pF)(),
             { previewProfileEffectSkuId: t, setPreviewProfileEffectSkuId: a } = (0, u_.JE)(),
             n = o.useMemo(() => [u2, ...e.map((e) => ({ id: e.skuId, label: e.name, value: e.skuId }))], [e]);
@@ -14957,7 +14957,7 @@ let u0 = o.createContext({ setDropHandler: () => {} }),
                               (0, r.jsx)(eG.K, {
                                   variant: "icon-only",
                                   size: "sm",
-                                  onClick: u6,
+                                  onClick: u8,
                                   icon: uj.c,
                                   "aria-label": "Open PFX preview instructions",
                               }),
@@ -15483,7 +15483,7 @@ let u0 = o.createContext({ setDropHandler: () => {} }),
                         variant: "text-md/normal",
                         children: "Drop files in this panel to begin preview.",
                     }),
-                    (0, r.jsx)(u8, {}),
+                    (0, r.jsx)(u6, {}),
                     (0, r.jsx)(u5, {}),
                     (0, r.jsx)(u9, {}),
                     (0, r.jsx)(u7, { clearAssets: l, clearIgnoredFiles: s }),
@@ -16343,7 +16343,7 @@ function m3(e) {
         ],
     });
 }
-function m6(e) {
+function m8(e) {
     let { recording: t, playing: a, onPlay: n, onStop: l } = e;
     return (0, r.jsx)(cz.N, {
         collapsibleContent: (0, r.jsx)(m3, { recording: t }),
@@ -16383,7 +16383,7 @@ function m6(e) {
         },
     });
 }
-function m8() {
+function m6() {
     let { name: e } = (0, m1.x5)(mG.oh.AUDIO_INPUT),
         [t, a] = o.useState(!1),
         [n, l] = o.useState([]),
@@ -16599,7 +16599,7 @@ function m8() {
                         children: [
                             (0, r.jsx)(h.E, { variant: "text-sm/semibold", children: "Recordings" }),
                             n.map((e, t) =>
-                                (0, r.jsx)(m6, { recording: e, playing: e === i, onPlay: L, onStop: w }, t),
+                                (0, r.jsx)(m8, { recording: e, playing: e === i, onPlay: L, onStop: w }, t),
                             ),
                         ],
                     }),
@@ -17343,7 +17343,7 @@ let hV = function (e) {
             })
         );
     };
-var hz = a(31587);
+var hz = a(347135);
 let hH = function (e) {
     let { onSelect: t, quest: a } = e,
         { quests: n } = (0, hz.mL)({ fetchPolicy: "cache-and-network", callerSource: "prefill_selector" }),
@@ -17453,11 +17453,11 @@ let hq = [
                 }),
                 (0, r.jsx)(v.k, {
                     label: "Task Duration",
-                    value: String(a / n6.A.Seconds.MINUTE),
+                    value: String(a / n8.A.Seconds.MINUTE),
                     onChange: function (e) {
                         let a = Number(e);
                         if (isNaN(a)) return;
-                        a *= n6.A.Seconds.MINUTE;
+                        a *= n8.A.Seconds.MINUTE;
                         let l = Object.fromEntries(
                             Object.entries(n.tasks).map((e) => {
                                 let [t, n] = e;
@@ -17523,8 +17523,8 @@ let h0 = function (e) {
 var h1 = a(617986);
 let h2 = ["png", "gif", "webp"],
     h3 = [...h2, "jpg", "jpeg"],
-    h6 = Array.from(new Set([...h3, "gif", "mp4", "webm"]));
-function h8() {
+    h8 = Array.from(new Set([...h3, "gif", "mp4", "webm"]));
+function h6() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { streamProgressSeconds: t = 0, completedAt: a = null, enrolledAt: n = null, claimedAt: l = null } = e;
     return {
@@ -17702,7 +17702,7 @@ function h4() {
     }
     let N = o.useMemo(() => {
             for (let [e, a] of Object.entries(t.config.taskConfigV2.tasks)) if (null != a.target) return a.target;
-            return 10 * n6.A.Seconds.MINUTE;
+            return 10 * n8.A.Seconds.MINUTE;
         }, [t.config.taskConfigV2.tasks]),
         A = o.useMemo(() => hj.n.WATCH_VIDEO in t.config.taskConfigV2.tasks, [t.config.taskConfigV2.tasks]);
     hg()(!1 !== t.preview && null != t.preview, "Preview config must have property preview: true");
@@ -17806,28 +17806,28 @@ function h4() {
                         title: "Hero",
                         assetKey: "hero",
                         onFileChange: f,
-                        filters: h6,
+                        filters: h8,
                         initialValue: t.config.assets.hero,
                     }),
                     (0, r.jsx)(hV, {
                         title: "Hero Video (optional)",
                         assetKey: "heroVideo",
                         onFileChange: f,
-                        filters: h6,
+                        filters: h8,
                         initialValue: t.config.assets.heroVideo ?? void 0,
                     }),
                     (0, r.jsx)(hV, {
                         title: "Quest Bar Hero",
                         assetKey: "questBarHero",
                         onFileChange: f,
-                        filters: h6,
+                        filters: h8,
                         initialValue: t.config.assets.questBarHero,
                     }),
                     (0, r.jsx)(hV, {
                         title: "Quest Bar Hero Video (optional)",
                         assetKey: "questBarHeroVideo",
                         onFileChange: f,
-                        filters: h6,
+                        filters: h8,
                         initialValue: t.config.assets.questBarHeroVideo ?? void 0,
                     }),
                     (0, r.jsx)(hV, {
@@ -17851,14 +17851,14 @@ function h4() {
                                     title: "Quest Video",
                                     assetKey: "videoPlayerVideo",
                                     onFileChange: y,
-                                    filters: h6,
+                                    filters: h8,
                                     initialValue: k?.assets.video.url,
                                 }),
                                 (0, r.jsx)(hV, {
                                     title: "Quest Video (Low Resolution)",
                                     assetKey: "videoPlayerVideoLowRes",
                                     onFileChange: y,
-                                    filters: h6,
+                                    filters: h8,
                                     initialValue: k?.assets.videoLowRes?.url,
                                 }),
                                 (0, r.jsx)(hV, {
@@ -17926,7 +17926,7 @@ function h4() {
                                                         });
                                                     }
                                                 })(e, n, a),
-                                            filters: h6,
+                                            filters: h8,
                                             initialValue: e.asset,
                                         }),
                                     (0, r.jsxs)($.B, {
@@ -17981,12 +17981,12 @@ function h4() {
                                     l({ ...t, userStatus: null });
                                     break;
                                 case hZ.ENROLLED:
-                                    l({ ...t, userStatus: h8({ enrolledAt: new Date().toISOString() }) });
+                                    l({ ...t, userStatus: h6({ enrolledAt: new Date().toISOString() }) });
                                     break;
                                 case hZ.COMPLETED_25:
                                     l({
                                         ...t,
-                                        userStatus: h8({
+                                        userStatus: h6({
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 0.25 * N,
                                         }),
@@ -17995,7 +17995,7 @@ function h4() {
                                 case hZ.COMPLETED_50:
                                     l({
                                         ...t,
-                                        userStatus: h8({
+                                        userStatus: h6({
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 0.5 * N,
                                         }),
@@ -18004,7 +18004,7 @@ function h4() {
                                 case hZ.COMPLETED_75:
                                     l({
                                         ...t,
-                                        userStatus: h8({
+                                        userStatus: h6({
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: 0.75 * N,
                                         }),
@@ -18013,7 +18013,7 @@ function h4() {
                                 case hZ.COMPLETED_100:
                                     l({
                                         ...t,
-                                        userStatus: h8({
+                                        userStatus: h6({
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
                                             streamProgressSeconds: N,
@@ -18023,7 +18023,7 @@ function h4() {
                                 case hZ.CLAIMED:
                                     l({
                                         ...t,
-                                        userStatus: h8({
+                                        userStatus: h6({
                                             claimedAt: new Date().toISOString(),
                                             completedAt: new Date().toISOString(),
                                             enrolledAt: new Date().toISOString(),
@@ -18321,7 +18321,7 @@ async function xp() {
 async function xg(e) {
     let t = await xn.A.requestDebugState(),
         a = null != t ? JSON.parse(t.users)[e] : null,
-        n = a8.A.getGuildIds(),
+        n = a6.A.getGuildIds(),
         l = [];
     n.forEach((t) => {
         let a = xo.Ay.getMember(t, e);
@@ -18760,7 +18760,7 @@ function xA(e) {
                             children: (0, r.jsx)(h.E, { variant: "text-sm/normal", children: "None" }),
                         }),
                     a.map((e) => {
-                        let t = a8.A.getGuild(e);
+                        let t = a6.A.getGuild(e);
                         return null == t
                             ? null
                             : (0, r.jsxs)(
@@ -18855,7 +18855,7 @@ function xk(e) {
                                     }),
                                 Object.entries(n.nicknames).map((e) => {
                                     let [t, a] = e,
-                                        n = a8.A.getGuild(t),
+                                        n = a6.A.getGuild(t),
                                         l = ay.A.getChannel(t);
                                     return (0, r.jsxs)(
                                         "div",
@@ -18898,7 +18898,7 @@ function xk(e) {
                 (0, r.jsx)("div", {
                     className: xv.uk,
                     children: l.map((e) => {
-                        let t = a8.A.getGuild(e.guildId);
+                        let t = a6.A.getGuild(e.guildId);
                         if (null == t) return null;
                         let a = e.nick ?? "";
                         return (0, r.jsxs)(
@@ -19205,7 +19205,7 @@ function x3(e) {
         (0, r.jsx)(x2, { title: t.key, initExpanded: a <= 2, highlightMode: l, children: i })
     );
 }
-function x6() {
+function x8() {
     let { node: e } = (0, ee.Ay)(x0.D, ""),
         t = (0, ee.KA)();
     return (0, r.jsxs)(d.n, {
@@ -19221,16 +19221,16 @@ function x6() {
         ],
     });
 }
-var x8 = a(168803);
+var x6 = a(168803);
 function x5() {
     return (0, r.jsxs)(x.Ip, {
-        className: x8.n,
+        className: x6.n,
         children: [
             (0, r.jsx)(xX, {}),
             (0, r.jsx)(j.c, {}),
             (0, r.jsx)(xq, {}),
             (0, r.jsx)(j.c, {}),
-            (0, r.jsx)(x6, {}),
+            (0, r.jsx)(x8, {}),
         ],
     });
 }
@@ -19452,7 +19452,7 @@ function x9() {
                 name: "Modals",
                 group: aJ.fu.UI,
                 tags: ["dialogs", "popups"],
-                render: () => (0, r.jsx)(r6, {}),
+                render: () => (0, r.jsx)(r8, {}),
             }),
             e.push({
                 id: "menus",
@@ -19559,7 +19559,7 @@ function x9() {
                 name: "Krisp Tester",
                 group: aJ.fu.AUDIO_VIDEO,
                 tags: ["noise cancellation", "audio", "vad"],
-                render: () => (0, r.jsx)(m8, {}),
+                render: () => (0, r.jsx)(m6, {}),
             }),
             e.push({
                 id: "av_overrides",

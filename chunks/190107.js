@@ -159,6 +159,7 @@ let F = "1333839522189938740",
         g.yW.MOBILE_HOME_DOCK_AREA,
         g.yW.QUEST_HOME_BANNER_DESKTOP,
         g.yW.QUEST_HOME_MOBILE_CAROUSEL,
+        g.yW.VIDEO_MODAL_MOBILE,
     ]),
     K = new Set([
         h.n.STREAM_ON_DESKTOP,

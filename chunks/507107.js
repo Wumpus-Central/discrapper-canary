@@ -19,6 +19,7 @@ var i,
         (r[(r.MOBILE_HOME_DOCK_AREA = 2)] = "MOBILE_HOME_DOCK_AREA"),
         (r[(r.QUEST_HOME_BANNER_DESKTOP = 3)] = "QUEST_HOME_BANNER_DESKTOP"),
         (r[(r.QUEST_HOME_MOBILE_CAROUSEL = 4)] = "QUEST_HOME_MOBILE_CAROUSEL"),
+        (r[(r.VIDEO_MODAL_MOBILE = 5)] = "VIDEO_MODAL_MOBILE"),
         r);
 let d = new Set(Object.values(l).filter((e) => "number" == typeof e));
 var _ = (((s = {}).GENERIC = "generic"), (s.RATE_LIMITED = "rate_limited"), s),

@@ -90,6 +90,7 @@ function y(e) {
         [l.uF.QUEST_HOME_HERO]: l.yW.QUEST_HOME_BANNER_DESKTOP,
         [l.uF.QUEST_HOME_HERO_SHELF]: l.yW.QUEST_HOME_BANNER_DESKTOP,
         [l.uF.QUEST_HOME_MOBILE_CAROUSEL]: l.yW.QUEST_HOME_MOBILE_CAROUSEL,
+        [l.uF.VIDEO_MODAL_MOBILE]: l.yW.VIDEO_MODAL_MOBILE,
     }[e];
 }
 function N(e) {
@@ -108,7 +109,7 @@ function v(e) {
 }
 function C(e, t) {
     let n = (function (e, t) {
-        if (e !== l.yW.QUEST_HOME_MOBILE_CAROUSEL || null == t) return null;
+        if ((e !== l.yW.QUEST_HOME_MOBILE_CAROUSEL && e !== l.yW.VIDEO_MODAL_MOBILE) || null == t) return null;
         let n = a.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
         return null != n ? v(n) : null;
     })(e, t);

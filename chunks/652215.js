@@ -4142,6 +4142,7 @@ var rD =
         (ex.AD_VIDEO_RESUMED = "ad_video_resumed"),
         (ex.BOUNTY_CAROUSEL_SCROLL = "bounty_carousel_scroll"),
         (ex.BOUNTY_CAROUSEL_EMPTY_STATE_VIEWED = "bounty_carousel_empty_state_viewed"),
+        (ex.BOUNTY_VERTICAL_SCROLL = "bounty_vertical_scroll"),
         (ex.USER_SETTINGS_KEYBIND_UPDATED = "user_settings_keybind_updated"),
         (ex.USER_ATTRIBUTION_RECEIVED = "user_attribution_received"),
         (ex.USER_AVATAR_UPDATED = "user_avatar_updated"),
