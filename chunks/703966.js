@@ -396,9 +396,8 @@ let ex = s.memo(function (e) {
                 let { default: e } = await Promise.all([
                     n.e("11352"),
                     n.e("23887"),
-                    n.e("82216"),
-                    n.e("88623"),
-                    n.e("79825"),
+                    n.e("24554"),
+                    n.e("29244"),
                     n.e("17095"),
                     n.e("45043"),
                     n.e("30204"),

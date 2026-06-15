@@ -7,6 +7,7 @@ a.r(
         tileButton: "tileButton__4e9aa",
         disabled: "disabled__4e9aa",
         content: "content__4e9aa",
+        hasError: "hasError__4e9aa",
         overlay: "overlay__4e9aa",
         isInteracting: "isInteracting__4e9aa",
         iconContainer: "iconContainer__4e9aa",

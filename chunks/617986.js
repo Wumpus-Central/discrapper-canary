@@ -97,12 +97,13 @@ function K(e) {
     let { quest: t, sourceQuestContent: r } = e;
     (0, o.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("40989"),
+            n.e("54389"),
             n.e("17095"),
             n.e("96575"),
             n.e("2677"),
-            n.e("57444"),
+            n.e("89729"),
             n.e("32285"),
+            n.e("6683"),
             n.e("76631"),
             n.e("95726"),
             n.e("94307"),

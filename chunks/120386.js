@@ -16,9 +16,9 @@ var t = l(627968),
     m = l(19575),
     b = l(84540),
     x = l(854627),
-    C = l(930349),
-    I = l(735438),
-    A = l.n(I),
+    I = l(930349),
+    C = l(735438),
+    A = l.n(C),
     k = l(993408),
     y = l(841702),
     j = l(486020),
@@ -85,7 +85,7 @@ function P(e) {
     let {
             avatarDecorationSrc: m,
             avatarSrc: b,
-            avatarPlaceholderSrc: C,
+            avatarPlaceholderSrc: I,
         } = (0, x.A)({
             userId: n.id,
             guildId: l,
@@ -94,43 +94,43 @@ function P(e) {
             avatarDecorationOverride: f ? v : o ? u : void 0,
             animateOnHover: !d,
         }),
-        I = "default" === p && null != m && d;
+        C = "default" === p && null != m && d;
     return (0, t.jsx)(R, {
         className: i()({ [w.yT]: null == m, [w.m_]: "placeholder" === p }),
-        src: I ? b : C,
-        imageClassName: I ? w.WG : void 0,
+        src: C ? b : I,
+        imageClassName: C ? w.WG : void 0,
         avatarDecoration: m,
         size: S,
         "aria-hidden": !0,
     });
 }
 function D(e) {
-    let { user: n, guildId: l, disabled: a } = e,
-        { analyticsLocations: r } = (0, d.Ay)(),
-        i = (0, s.bG)([p.A], () => (null != l ? p.A.getGuild(l) : null)),
-        o = null != l,
-        u = (0, f.a4)({ user: n }),
-        m = (0, f.a4)({ user: n, guildId: l ?? void 0 }),
-        { pendingAvatarDecoration: x } = (0, f.CP)(l ?? void 0),
-        I = void 0 !== x,
-        A = null === x || (!I && null == m),
-        k = o && null != u,
-        y = A && k,
-        j = (0, c.A)((0, f.lw)({ userValue: u, guildValue: m, pendingValue: x, guildId: l })),
-        { product: N } = (0, v.q)(j?.skuId),
-        w = I ? null != x : null != m,
-        S =
-            null != j && w
+    let { user: n, guildId: l, disabled: a, errorMessageId: r } = e,
+        { analyticsLocations: i } = (0, d.Ay)(),
+        o = (0, s.bG)([p.A], () => (null != l ? p.A.getGuild(l) : null)),
+        u = null != l,
+        m = (0, f.a4)({ user: n }),
+        x = (0, f.a4)({ user: n, guildId: l ?? void 0 }),
+        { pendingAvatarDecoration: C } = (0, f.CP)(l ?? void 0),
+        A = void 0 !== C,
+        k = null === C || (!A && null == x),
+        y = u && null != m,
+        j = k && y,
+        N = (0, c.A)((0, f.lw)({ userValue: m, guildValue: x, pendingValue: C, guildId: l })),
+        { product: w } = (0, v.q)(N?.skuId),
+        S = A ? null != C : null != x,
+        R =
+            null != N && S
                 ? {
                       onClick: () => (0, b.p)({ guildId: l ?? void 0, avatarDecoration: null }),
-                      type: k ? "reset" : "remove",
-                      accessibleLabel: E.intl.string(k ? E.t.pJsnPf : E.t["2U4Bga"]),
+                      type: y ? "reset" : "remove",
+                      accessibleLabel: E.intl.string(y ? E.t.pJsnPf : E.t["2U4Bga"]),
                   }
                 : void 0;
-    return (0, t.jsx)(C.V, {
-        affordance: A && !k ? "add" : S,
+    return (0, t.jsx)(I.V, {
+        affordance: k && !y ? "add" : R,
         variant: "square",
-        onClick: () => (0, g.L)({ analyticsLocations: r, guild: i ?? void 0, stackingBehavior: "stack" }),
+        onClick: () => (0, g.L)({ analyticsLocations: i, guild: o ?? void 0, stackingBehavior: "stack" }),
         accessibleLabel: E.intl.string(E.t["7v0T9P"]),
         accessibleValue: (function (e) {
             let { avatarDecorationPreview: n, productName: l, hasPendingSelection: t } = e;
@@ -139,17 +139,18 @@ function D(e) {
                 : null != l && "" !== l
                   ? l
                   : E.intl.string(t ? E.t.SZPJG4 : E.t.K77yQe);
-        })({ avatarDecorationPreview: j, productName: (0, h.VG)(N), hasPendingSelection: null != x }),
+        })({ avatarDecorationPreview: N, productName: (0, h.VG)(w), hasPendingSelection: null != C }),
         "aria-haspopup": "dialog",
         disabled: a,
+        errorMessageId: r,
         renderPreview: (e) =>
             (0, t.jsx)(P, {
                 user: n,
                 guildId: l,
-                isEmpty: A,
-                isPreviewingMainProfileFallback: y,
-                hasPendingChange: I,
-                avatarDecorationPreview: j,
+                isEmpty: k,
+                isPreviewingMainProfileFallback: j,
+                hasPendingChange: A,
+                avatarDecorationPreview: N,
                 isInteracting: e,
                 disabled: a,
             }),

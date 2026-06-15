@@ -15,15 +15,15 @@ var l = n(627968),
     A = n(444927),
     f = n(919796),
     C = n(95561),
-    x = n(735438),
-    E = n.n(x),
+    E = n(735438),
+    x = n.n(E),
     S = n(855687),
     _ = n(143413),
     I = n(495544),
     j = n(734057),
     y = n(808728),
-    N = n(498642),
-    T = n(71393),
+    T = n(498642),
+    N = n(71393),
     b = n(186111),
     v = n(232835),
     M = n(576705),
@@ -31,8 +31,8 @@ var l = n(627968),
     D = n(652215),
     L = n(468689),
     P = n(794967),
-    O = n(595818),
-    k = n(287809),
+    k = n(595818),
+    O = n(287809),
     G = n(147925),
     U = n(625494),
     w = n(975571),
@@ -73,7 +73,7 @@ function W(e) {
         d,
         h,
         f,
-        x,
+        E,
         G,
         W,
         q,
@@ -82,7 +82,7 @@ function W(e) {
         Z,
         Y,
         { channel: X } = e,
-        Q = (0, o.bG)([T.A], () => (null != X ? T.A.getGuild(X.getGuildId()) : null), [X]),
+        Q = (0, o.bG)([N.A], () => (null != X ? N.A.getGuild(X.getGuildId()) : null), [X]),
         ee = null != Q && R.default.extractTimestamp(Q.id) < Date.now() - D.NOr,
         et = (0, o.bG)([I.default], () => Q?.ownerId === I.default.getId(), [Q]),
         {
@@ -100,8 +100,8 @@ function W(e) {
             [Q, X],
         ),
         es = (0, o.bG)(
-            [k.default],
-            () => k.default.getCurrentUser()?.desktop === !0 || k.default.getCurrentUser()?.mobile === !0,
+            [O.default],
+            () => O.default.getCurrentUser()?.desktop === !0 || O.default.getCurrentUser()?.mobile === !0,
         ),
         {
             guildPopulated: ea,
@@ -111,25 +111,25 @@ function W(e) {
             guildPopulated:
                 ((s = (0, o.bG)([j.A], () => j.A.getChannel(Q?.systemChannelId))),
                 (d = (0, o.yK)([v.A], () => (null != s ? v.A.getMessages(s.id).toArray() : []))),
-                (0, o.bG)([N.A], () => {
-                    let e = N.A.getMemberCount(Q?.id) ?? 0,
+                (0, o.bG)([T.A], () => {
+                    let e = T.A.getMemberCount(Q?.id) ?? 0,
                         t = d.some((e) => e.type === D.lAJ.USER_JOIN);
                     return e > 1 || t;
                 }, [Q, d])),
             guildMessaged:
                 ((h = (0, o.bG)([j.A], () => (null != Q ? j.A.getMutableBasicGuildChannelsForGuild(Q.id) : null))),
-                (t = i.useMemo(() => (null == h ? [] : E().values(h)), [h])),
+                (t = i.useMemo(() => (null == h ? [] : x().values(h)), [h])),
                 (f = (0, o.bG)([I.default], () => I.default.getId())),
                 (0, o.bG)([v.A], () =>
-                    E().some(t, (e) => {
+                    x().some(t, (e) => {
                         let t = v.A.getMessages(e.id).toArray();
-                        return E().some(t, (e) => e.author.id === f && !(0, _.A)(e));
+                        return x().some(t, (e) => e.author.id === f && !(0, _.A)(e));
                     }),
                 )),
             guildPersonalized:
-                ((x = (0, o.bG)([b.A], () => b.A.hasLayers())),
-                (G = (0, o.bG)([T.A], () => T.A.getGuild(Q?.id))),
-                G?.icon != null && !x),
+                ((E = (0, o.bG)([b.A], () => b.A.hasLayers())),
+                (G = (0, o.bG)([N.A], () => N.A.getGuild(Q?.id))),
+                G?.icon != null && !E),
             guildChannelCreated: (0, o.bG)([y.Ay], () => {
                 let e = y.Ay.getChannels(Q?.id),
                     t = e[y.vM];
@@ -155,8 +155,7 @@ function W(e) {
                 null != Q &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("42657"),
-                            n.e("74539"),
+                            n.e("6683"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -184,7 +183,7 @@ function W(e) {
                 setup_type: B.XT.CHANNEL_WELCOME,
                 action: B.AG.PERSONALIZE_SERVER,
             }),
-                null != Q && L.A.open(Q.id, (0, O.x)(), { section: D.JJy.CHANNEL_WELCOME_CTA });
+                null != Q && L.A.open(Q.id, (0, k.x)(), { section: D.JJy.CHANNEL_WELCOME_CTA });
         }, [Q])),
         {
             handleInvite: W,
@@ -250,7 +249,7 @@ function W(e) {
                 opacities: Y,
             }),
         [ef, eC] = i.useState([]),
-        ex = ef.length > 0;
+        eE = ef.length > 0;
     if (
         (i.useEffect(() => {
             (async () => {
@@ -263,15 +262,15 @@ function W(e) {
         null == Q)
     )
         return null;
-    let eE = [];
+    let ex = [];
     ee ||
         (en &&
-            eE.push(
+            ex.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: K.cW,
-                        style: eg ? { opacity: eA[eE.length] } : {},
+                        style: eg ? { opacity: eA[ex.length] } : {},
                         children: (0, l.jsx)(z, {
                             iconUrl: "/assets/ea08bfae3e0ab96d.svg",
                             header: V.intl.string(V.t.q9n0Ta),
@@ -283,12 +282,12 @@ function W(e) {
                 ),
             ),
         el &&
-            eE.push(
+            ex.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: K.cW,
-                        style: eg ? { opacity: eA[eE.length] } : {},
+                        style: eg ? { opacity: eA[ex.length] } : {},
                         children: (0, l.jsx)(z, {
                             iconUrl: "/assets/428a003b3c729aa6.svg",
                             header: V.intl.string(V.t.c5kxPh),
@@ -300,12 +299,12 @@ function W(e) {
                 ),
             ),
         ei &&
-            eE.push(
+            ex.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: K.cW,
-                        style: eg ? { opacity: eA[eE.length] } : {},
+                        style: eg ? { opacity: eA[ex.length] } : {},
                         children: (0, l.jsx)(z, {
                             iconUrl: "/assets/2ed198e767bd5423.svg",
                             header: V.intl.string(V.t["SoP7+l"]),
@@ -317,12 +316,12 @@ function W(e) {
                 ),
             ),
         (0, F.isWeb)() &&
-            eE.push(
+            ex.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: K.cW,
-                        style: eg ? { opacity: eA[eE.length] } : {},
+                        style: eg ? { opacity: eA[ex.length] } : {},
                         children: (0, l.jsx)(z, {
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
                             header: V.intl.string(V.t.pGVNI9),
@@ -333,16 +332,16 @@ function W(e) {
                     "download",
                 ),
             ),
-        eE.push(
+        ex.push(
             (0, l.jsx)(
                 r.A.div,
                 {
                     className: K.cW,
-                    style: eg ? { opacity: eA[eE.length] } : {},
+                    style: eg ? { opacity: eA[ex.length] } : {},
                     children: (0, l.jsx)(z, {
                         iconUrl: g,
                         header: V.intl.string(V.t.IhHDEO),
-                        completed: ex,
+                        completed: eE,
                         onClick: em,
                     }),
                 },
@@ -369,13 +368,13 @@ function W(e) {
                             }),
                             (0, l.jsxs)(u.E, {
                                 color: "text-default",
-                                className: a()({ [K.VA]: !0, [K.lg]: 0 === eE.length }),
+                                className: a()({ [K.VA]: !0, [K.lg]: 0 === ex.length }),
                                 variant: "text-sm/normal",
-                                children: [eS, " ", eE.length > 0 ? V.intl.format(V.t.UOtD32, { guideURL: e_ }) : null],
+                                children: [eS, " ", ex.length > 0 ? V.intl.format(V.t.UOtD32, { guideURL: e_ }) : null],
                             }),
                         ],
                     }),
-                    eE,
+                    ex,
                 ],
             }),
         }),
