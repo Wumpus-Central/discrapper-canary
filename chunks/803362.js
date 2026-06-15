@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eC });
+n.d(t, { A: () => eN });
 var i = n(627968),
     r = n(64700),
     s = n(735438),
@@ -117,7 +117,7 @@ function P(e) {
     return (0, i.jsx)(D.A, { title: r, body: o, badgeImage: s, badgeName: r, rarity: a, children: t });
 }
 var x = n(470739),
-    k = n(859040),
+    k = n(564064),
     U = n(459192);
 function G(e) {
     let { targetElementRef: t, delay: n, forceOpen: r, badgeDescription: s, children: a } = e;
@@ -315,36 +315,13 @@ var ed = n(174459),
     e_ = n(474090),
     eh = n(439174),
     ef = n(183555),
-    ep = n(47675);
-let eE = (0, n(240921).Ay)({
-    name: "2026-04-boosting-badge-hover-popup",
-    kind: "user",
-    defaultConfig: { enabled: !1 },
-    variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-});
-var em = n(999291);
-function eg(e) {
-    let { children: t, targetElementRef: n, delay: r, badgeIcon: s, premiumGuildSince: a } = e,
-        o = (0, K.L7)(s),
-        l = c.intl.string(c.t.OAq2KW).toLocaleUpperCase(),
-        u = c.intl.formatToPlainString(c.t.rTUArF, { date: a });
-    return (0, i.jsx)(j.A, {
-        targetElementRef: n,
-        estimatedTooltipHeight: 220,
-        delay: r,
-        gradientColor: "purple",
-        size: "lg",
-        graphic: { type: "image", src: o, aspectRatio: "6/4" },
-        title: l,
-        body: u,
-        children: t,
-    });
-}
-var eA = n(652215),
-    eI = n(758836);
-let eT = "premium";
-var eS = n(992028);
-function ey(e) {
+    ep = n(47675),
+    eE = n(999291),
+    em = n(652215),
+    eg = n(758836);
+let eA = "premium";
+var eI = n(992028);
+function eT(e) {
     let {
             badges: t,
             className: n,
@@ -357,69 +334,66 @@ function ey(e) {
         f = r.useRef(null),
         p = r.useRef(null),
         N = r.useRef(null),
-        O = r.useRef(null),
-        { analyticsLocations: b } = (0, S.Ay)(T.A.BADGE),
-        { context: D, trackUserProfileAction: L } = (0, ef.NJ)(),
-        P = u.default.getCurrentUser(),
-        U = (0, e_.CC)(P?.premiumType, Y.PremiumTypes.TIER_2),
-        F = eE.useConfig({ location: "UserProfileBadgeList" }).enabled,
-        V = (function (e) {
+        { analyticsLocations: O } = (0, S.Ay)(T.A.BADGE),
+        { context: b, trackUserProfileAction: D } = (0, ef.NJ)(),
+        L = u.default.getCurrentUser(),
+        P = (0, e_.CC)(L?.premiumType, Y.PremiumTypes.TIER_2),
+        U = (function (e) {
             let { location: t } = e;
             return v.useConfig({ location: t }).enabled;
         })({ location: "UserProfileBadgeList" }),
-        B = (function (e) {
+        F = (function (e) {
             let { location: t } = e;
             return R.useConfig({ location: t }).enabled;
         })({ location: "UserProfileBadgeList" });
     r.useEffect(() => {
-        (V || B) && a?.userId != null && !C.Ay.hasCatalogFor(a.userId) && (0, y.R)(a.userId);
-    }, [V, B, a?.userId]);
-    let H = a?.userId,
-        j = (0, m.bG)([C.Ay], () => {
-            if (!B || null == H) return null;
+        (U || F) && a?.userId != null && !C.Ay.hasCatalogFor(a.userId) && (0, y.R)(a.userId);
+    }, [U, F, a?.userId]);
+    let V = a?.userId,
+        B = (0, m.bG)([C.Ay], () => {
+            if (!F || null == V) return null;
             let e = {};
             for (let n of t) {
                 let t = (0, w.w0)(n.id);
                 if (null == t) continue;
-                let i = C.Ay.getBadgeById(t, H)?.simple_icon_url;
+                let i = C.Ay.getBadgeById(t, V)?.simple_icon_url;
                 null != i && (e[n.id] = i);
             }
             return e;
-        }, [B, H, t]),
-        W = _((0, em.AP)(P?.id ?? null)).some((e) => e.id === h.A.ORB_PROFILE_BADGE);
+        }, [F, V, t]),
+        H = _((0, eE.AP)(L?.id ?? null)).some((e) => e.id === h.A.ORB_PROFILE_BADGE);
     return (0, i.jsx)("div", {
-        className: E()(eS.kL, n),
+        className: E()(eI.kL, n),
         "aria-label": c.intl.string(c.t.VWV0y5),
         role: "group",
         children: t.map((e, t) => {
             let n = e.id === h.A.ORB_PROFILE_BADGE,
                 r = (0, eh.e0)(e.id),
-                c = null != r || e.id === eT,
-                _ = a?.userId === P?.id,
+                c = null != r || e.id === eA,
+                _ = a?.userId === L?.id,
                 m = "april_fools_2026" === e.id,
-                S = e.id.startsWith(K.Ky),
-                y = void 0 !== r && e.id !== eT,
-                v = j?.[e.id],
-                C = (0, i.jsx)("img", {
+                S = void 0 !== r && e.id !== eA,
+                y = B?.[e.id],
+                v = (0, i.jsx)("img", {
                     alt: " ",
                     "aria-hidden": !0,
-                    src: e.iconSrc ?? v ?? (0, K.L7)(e.icon),
-                    className: E()(eS.qS, null != v && eS.Do, s),
+                    src: e.iconSrc ?? y ?? (0, K.L7)(e.icon),
+                    className: E()(eI.qS, null != y && eI.Do, s),
                 }),
-                R = null != l && l(e.id),
-                B = {
+                C = null != l && l(e.id),
+                R = {
                     onClick: (i) => {
-                        L({ action: "PRESS_BADGE" }),
+                        D({ action: "PRESS_BADGE" }),
                             (0, ep.vP)({
                                 badgeId: (0, w.w0)(e.id),
                                 badgeAction: "PRESS_BADGE",
                                 position: t,
-                                analyticsLocations: b,
-                                ...D,
+                                analyticsLocations: O,
+                                ...b,
                             });
                         let r = e.id.startsWith("staff") && !_,
                             s = a?.userId != null ? u.default.getUser(a.userId) : null;
-                        if (V && !r && s?.bot !== !0) {
+                        if (U && !r && s?.bot !== !0) {
                             i.preventDefault(),
                                 (0, x._)({
                                     initialBadgeId: (0, w.w0)(e.id),
@@ -430,8 +404,8 @@ function ey(e) {
                         }
                         if (n) {
                             (0, k.Cz)({
-                                tab: eI.G2.ORBS,
-                                analyticsLocations: b,
+                                tab: eg.G2.ORBS,
+                                analyticsLocations: O,
                                 analyticsSource: T.A.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE,
                             }),
                                 o?.();
@@ -440,49 +414,49 @@ function ey(e) {
                         if (c) {
                             if (
                                 (i.preventDefault(),
-                                ed.default.track(eA.HAw.TIERED_TENURE_BADGE_CLICKED, {
+                                ed.default.track(em.HAw.TIERED_TENURE_BADGE_CLICKED, {
                                     badge: e.id,
-                                    premium_type: U,
+                                    premium_type: P,
                                     viewed_user_id: a?.userId,
                                 }),
-                                U)
+                                P)
                             ) {
                                 _
-                                    ? (0, er.pX)(eA.BVt.NITRO_HOME)
-                                    : (0, et.D)({ analyticsLocations: b, displayProfile: a }),
+                                    ? (0, er.pX)(em.BVt.NITRO_HOME)
+                                    : (0, et.D)({ analyticsLocations: O, displayProfile: a }),
                                     o?.();
                                 return;
                             }
                             if (_) {
-                                let t = null != e.link ? (0, I.default)(e.link, { analyticsLocations: b }) : null;
+                                let t = null != e.link ? (0, I.default)(e.link, { analyticsLocations: O }) : null;
                                 if (null == t) return;
                                 return o?.(), t(i);
                             }
-                            return (0, et.D)({ analyticsLocations: b, displayProfile: a }), void o?.();
+                            return (0, et.D)({ analyticsLocations: O, displayProfile: a }), void o?.();
                         }
-                        let l = null != e.link ? (0, I.default)(e.link, { analyticsLocations: b }) : null;
+                        let l = null != e.link ? (0, I.default)(e.link, { analyticsLocations: O }) : null;
                         if (null != l) return o?.(), l(i);
                     },
                     onMouseEnter: () => {
                         "quest_completed" === e.id &&
-                            ed.default.track(eA.HAw.QUEST_CONTENT_VIEWED, {
+                            ed.default.track(em.HAw.QUEST_CONTENT_VIEWED, {
                                 ...(0, ei.fF)(en.uF.QUEST_BADGE),
                                 is_targeted: !1,
                             }),
-                            L({ action: "HOVER_BADGE" }),
+                            D({ action: "HOVER_BADGE" }),
                             (0, ep.vP)({
                                 badgeId: (0, w.w0)(e.id),
                                 badgeAction: "HOVER_BADGE",
                                 position: t,
-                                analyticsLocations: b,
-                                ...D,
+                                analyticsLocations: O,
+                                ...b,
                             });
                     },
                     href: e.link,
                     "aria-label": e.description,
                     style: { filter: d && null != r ? `drop-shadow(0 0 5px ${r.glowColor})` : void 0 },
                 };
-            if (V)
+            if (U)
                 return (0, i.jsx)(
                     M,
                     {
@@ -490,12 +464,12 @@ function ey(e) {
                         userId: a?.userId,
                         fallbackTitle: e.description,
                         fallbackIconSrc: e.iconSrc ?? e.simple_icon_url ?? (0, K.L7)(e.icon),
-                        children: (0, i.jsx)(A.Anchor, { ...B, children: C }),
+                        children: (0, i.jsx)(A.Anchor, { ...R, children: v }),
                     },
                     `${e.id}-${t}`,
                 );
-            if (y) {
-                let n = (0, i.jsx)(A.Anchor, { ...B, ref: f, children: C });
+            if (S) {
+                let n = (0, i.jsx)(A.Anchor, { ...R, ref: f, children: v });
                 return (0, i.jsx)(
                     "div",
                     {
@@ -505,7 +479,7 @@ function ey(e) {
                             mode: "tooltip",
                             body: e.description,
                             onShow: () => {
-                                ed.default.track(eA.HAw.TOOLTIP_VIEWED, {
+                                ed.default.track(em.HAw.TOOLTIP_VIEWED, {
                                     type: "tiered_tenure_badge_profile_" + (_ ? "self" : "other"),
                                 });
                             },
@@ -517,65 +491,51 @@ function ey(e) {
                 );
             }
             if (n) {
-                let n = (0, i.jsx)(A.Anchor, { ...B, ref: p, children: C });
+                let n = (0, i.jsx)(A.Anchor, { ...R, ref: p, children: v });
                 return (0, i.jsx)(
                     eu,
                     {
                         targetElementRef: p,
                         delay: K.In,
-                        showSubtext: !W && !e.isPreviewMode,
-                        forceOpen: R,
+                        showSubtext: !H && !e.isPreviewMode,
+                        forceOpen: C,
                         children: n,
                     },
                     `${e.id}-${t}`,
                 );
             }
             if (m) {
-                let n = (0, i.jsx)(A.Anchor, { ...B, ref: N, children: C });
+                let n = (0, i.jsx)(A.Anchor, { ...R, ref: N, children: v });
                 return (0, i.jsx)(
                     G,
-                    { targetElementRef: N, delay: K.In, forceOpen: R, badgeDescription: e.description, children: n },
+                    { targetElementRef: N, delay: K.In, forceOpen: C, badgeDescription: e.description, children: n },
                     `${e.id}-${t}`,
                 );
             }
-            if (S && a?.premiumGuildSince != null && F) {
-                let n = (0, i.jsx)(A.Anchor, { ...B, ref: O, children: C });
-                return (0, i.jsx)(
-                    eg,
-                    {
-                        targetElementRef: O,
-                        delay: K.In,
-                        badgeIcon: e.icon,
-                        premiumGuildSince: a.premiumGuildSince,
-                        children: n,
-                    },
-                    `${e.id}-${t}`,
-                );
-            }
-            let H = (0, i.jsx)(A.Anchor, { ...B, children: C }),
-                Y = ((e) => {
+            let F = (0, i.jsx)(A.Anchor, { ...R, children: v }),
+                V = ((e) => {
                     let { badge: t, tieredTenureBadge: n } = e;
-                    return void 0 !== n && t.id !== eT
+                    return void 0 !== n && t.id !== eA
                         ? (0, i.jsx)(ee, { profileBadge: t, tenureBadge: n })
                         : t.description;
-                })({ badge: e, tieredTenureBadge: c && e.id !== eT ? r : void 0 });
+                })({ badge: e, tieredTenureBadge: c && e.id !== eA ? r : void 0 });
             return (0, i.jsx)(
                 g.m,
-                { __unsupportedReactNodeAsText: Y, forceOpen: R, delay: K.In, ariaHidden: !0, children: H },
+                { __unsupportedReactNodeAsText: V, forceOpen: C, delay: K.In, ariaHidden: !0, children: F },
                 `${e.id}-${t}`,
             );
         }),
     });
 }
-var eN = n(996988);
-let ev = {
-    [eN.d.POPOUT]: 12,
-    [eN.d.MODAL]: 26,
-    [eN.d.MODAL_V2]: 16,
-    [eN.d.SIDEBAR]: 13,
-    [eN.d.VIDEO_TILE_BACKGROUND]: 12,
+var eS = n(996988);
+let ey = {
+    [eS.d.POPOUT]: 12,
+    [eS.d.MODAL]: 26,
+    [eS.d.MODAL_V2]: 16,
+    [eS.d.SIDEBAR]: 13,
+    [eS.d.VIDEO_TILE_BACKGROUND]: 12,
 };
-function eC(e) {
+function eN(e) {
     let {
             displayProfile: t,
             themeType: n,
@@ -594,9 +554,9 @@ function eC(e) {
     return 0 === h.length
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: (0, s.chunk)(h, ev[n]).map((e) =>
+              children: (0, s.chunk)(h, ey[n]).map((e) =>
                   (0, i.jsx)(
-                      ey,
+                      eT,
                       { badges: e, displayProfile: t, onClose: l, shouldOpenBadgeTooltip: u, shouldGlowTenureBadge: c },
                       e[0].id,
                   ),

@@ -1,17 +1,16 @@
 "use strict";
 n.d(t, {
-    AQ: () => S,
+    AQ: () => T,
     In: () => _,
-    KM: () => f,
-    Ky: () => h,
-    L7: () => I,
-    Mq: () => A,
-    RP: () => p,
-    bk: () => E,
-    d6: () => m,
-    dS: () => T,
-    jM: () => y,
-    pt: () => g,
+    KM: () => h,
+    L7: () => A,
+    Mq: () => g,
+    RP: () => f,
+    bk: () => p,
+    d6: () => E,
+    dS: () => I,
+    jM: () => S,
+    pt: () => m,
 }),
     n(70283);
 var i,
@@ -24,9 +23,8 @@ var i,
     c,
     d = n(652215);
 let _ = 300,
-    h = "guild_booster_lvl",
-    f = "user-profile-popout";
-var p =
+    h = "user-profile-popout";
+var f =
         (((i = {}).FEATURED = "FEATURED"),
         (i.USER_INFO = "USER_INFO"),
         (i.BOT_INFO = "BOT_INFO"),
@@ -39,14 +37,14 @@ var p =
         (i.WISHLIST = "WISHLIST"),
         (i.MAIN = "MAIN"),
         i),
-    E =
+    p =
         (((r = {}).ROLES = "ROLES"),
         (r.CONNECTIONS = "CONNECTIONS"),
         (r.APPS = "APPS"),
         (r.NOTE = "NOTE"),
         (r.RECENT_ACTIVITY = "RECENT_ACTIVITY"),
         r),
-    m =
+    E =
         (((s = {})[(s.NICKNAME = 0)] = "NICKNAME"),
         (s[(s.PRONOUNS = 1)] = "PRONOUNS"),
         (s[(s.AVATAR = 2)] = "AVATAR"),
@@ -58,7 +56,7 @@ var p =
         (s[(s.AVATAR_DECORATION = 8)] = "AVATAR_DECORATION"),
         (s[(s.PROFILE_EFFECT = 9)] = "PROFILE_EFFECT"),
         s),
-    g =
+    m =
         (((a = {}).VIEW = "VIEW"),
         (a.SEND_MESSAGE = "SEND_MESSAGE"),
         (a.SEND_DIRECT_MESSAGE = "SEND_DIRECT_MESSAGE"),
@@ -178,7 +176,7 @@ var p =
         (a.COPY_BANNER_IMAGE_LINK = "COPY_BANNER_IMAGE_LINK"),
         (a.GIFT = "GIFT"),
         a),
-    A =
+    g =
         (((o = {}).WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),
         (o.WISHLIST_TOGGLE_PRIVATE = "WISHLIST_TOGGLE_PRIVATE"),
         (o.WISHLIST_TOGGLE_PUBLIC = "WISHLIST_TOGGLE_PUBLIC"),
@@ -188,13 +186,13 @@ var p =
         (o.PRESS_EDIT_WISHLIST = "PRESS_EDIT_WISHLIST"),
         (o.PRESS_ADD_WISHLIST_ITEM = "PRESS_ADD_WISHLIST_ITEM"),
         o);
-function I(e) {
+function A(e) {
     let { API_ENDPOINT: t, CDN_HOST: n } = window.GLOBAL_ENV;
     return null != n ? `https://${n}/badge-icons/${e}.png` : `${location.protocol}${t}${d.Rsh.BADGE_ICON(e)}`;
 }
-var T = (((l = {}).ACTIVITY = "ACTIVITY"), (l.AVATAR = "AVATAR"), (l.STATUS = "STATUS"), l),
-    S = (((u = {}).REPLY = "REPLY"), (u.REACT = "REACT"), u),
-    y =
+var I = (((l = {}).ACTIVITY = "ACTIVITY"), (l.AVATAR = "AVATAR"), (l.STATUS = "STATUS"), l),
+    T = (((u = {}).REPLY = "REPLY"), (u.REACT = "REACT"), u),
+    S =
         (((c = {}).WIDGET_ADDED = "WIDGET_ADDED"),
         (c.WIDGET_REMOVED = "WIDGET_REMOVED"),
         (c.PROFILE_SAVE_GENERIC_FAILURE = "PROFILE_SAVE_GENERIC_FAILURE"),
