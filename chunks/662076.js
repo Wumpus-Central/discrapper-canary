@@ -1775,7 +1775,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tY = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tD.A().log(
-    `[BUILD INFO] Release Channel: ${tY}, Build Number: 563263, Version Hash: 75242e786045e9bd7ba0146cc2a730c35beb51ff`,
+    `[BUILD INFO] Release Channel: ${tY}, Build Number: 563266, Version Hash: fab18f8da1c71430827142d26c2910289a5ec0e5`,
 ),
     eC.A.setTags({ appContext: ew.QCW }),
     ts.A.initBasic(),
@@ -4017,7 +4017,7 @@ let sG = (0, ra.Fe)({
                 n.e("85426"),
                 n.e("18240"),
                 n.e("49297"),
-                n.e("11352"),
+                n.e("38873"),
                 n.e("17095"),
                 n.e("83185"),
                 n.e("90648"),
@@ -18425,7 +18425,7 @@ let Sf = "isHideDevBanner",
                     className: t3()(Sh.Wz, Sh.mr),
                     children: [
                         (0, G.jsx)(S_, { className: Sh.Kk }),
-                        no.intl.format(no.t.uyrfYF, { buildNumber: "563263" }),
+                        no.intl.format(no.t.uyrfYF, { buildNumber: "563266" }),
                         (0, G.jsx)(r, {}),
                     ],
                 })
@@ -35704,7 +35704,8 @@ let P9 = [
                 (0, RB.B)(() => {
                     (0, nC.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("11352"),
+                            n.e("38873"),
+                            n.e("11619"),
                             n.e("17095"),
                             n.e("18240"),
                             n.e("81804"),
@@ -35811,9 +35812,10 @@ let P9 = [
                             n.e("1962"),
                             n.e("76622"),
                             n.e("99976"),
+                            n.e("31247"),
                             n.e("38672"),
-                            n.e("26102"),
-                        ]).then(n.bind(n, 779669));
+                            n.e("36611"),
+                        ]).then(n.bind(n, 252046));
                         return (t) => (0, G.jsx)(e, { gameId: i, source: oJ.Ob.Deeplink, ...t });
                     });
                 }),
@@ -36103,6 +36105,7 @@ let xT = (0, ra.qT)({
                 n.e("21690"),
                 n.e("53729"),
                 n.e("31390"),
+                n.e("68726"),
                 n.e("17225"),
                 n.e("96123"),
                 n.e("21435"),
@@ -36228,7 +36231,7 @@ let xL = (0, nv.Fe)({
             n.e("87550"),
             n.e("77688"),
             n.e("49297"),
-            n.e("11352"),
+            n.e("38873"),
             n.e("83185"),
             n.e("90648"),
             n.e("41475"),
@@ -36477,6 +36480,7 @@ let xL = (0, nv.Fe)({
             n.e("43437"),
             n.e("39970"),
             n.e("76418"),
+            n.e("68726"),
             n.e("90244"),
             n.e("40258"),
             n.e("18943"),
@@ -38166,6 +38170,7 @@ let kx = (0, ra.Fe)({
                 n.e("98125"),
                 n.e("21825"),
                 n.e("43437"),
+                n.e("68726"),
                 n.e("90244"),
                 n.e("18943"),
                 n.e("17225"),
@@ -38738,7 +38743,7 @@ let kx = (0, ra.Fe)({
     kq = (0, ra.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("11352"),
+                n.e("38873"),
                 n.e("24806"),
                 n.e("23924"),
                 n.e("13554"),

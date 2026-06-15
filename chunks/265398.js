@@ -39,6 +39,7 @@ class l extends r.A {
     reviews;
     opencriticUrl;
     gameFlags;
+    contentClassification;
     get applicationId() {
         return this.id;
     }
@@ -101,7 +102,8 @@ class l extends r.A {
                     };
             })(e.reviews)),
             (this.opencriticUrl = e.opencritic_url),
-            (this.gameFlags = e.game_flags ?? 0);
+            (this.gameFlags = e.game_flags ?? 0),
+            (this.contentClassification = e.content_classification);
     }
     getIconURL(e, t) {
         return null == this.iconHash || "" === this.iconHash

@@ -1,0 +1,56 @@
+r.d(s, { A: () => v });
+var t = r(627968);
+r(64700);
+var i = r(503698),
+    n = r.n(i),
+    a = r(661531),
+    l = r(408278),
+    c = r(789645),
+    d = r(87221),
+    o = r(834730),
+    u = r(191096),
+    x = r(375708),
+    h = r(517521);
+function v(e) {
+    let { obscured: s, children: r, className: i, contentClassName: v, heading: m, description: j, onClose: p } = e;
+    return s
+        ? (0, t.jsx)(u.OB.Provider, {
+              value: u.Wl,
+              children: (0, t.jsxs)("div", {
+                  className: n()(h.kL, i),
+                  children: [
+                      (0, t.jsx)("div", { className: n()(h.Qs, v), inert: !0, "aria-hidden": "true", children: r }),
+                      null != p &&
+                          (0, t.jsx)("div", {
+                              className: h.b,
+                              children: (0, t.jsx)(l.K, {
+                                  icon: c.P,
+                                  variant: "overlay-secondary",
+                                  size: "sm",
+                                  onClick: () => p(),
+                                  "aria-label": x.intl.string(x.t.cpT0Cq),
+                              }),
+                          }),
+                      (0, t.jsxs)("div", {
+                          className: h.$e,
+                          role: "status",
+                          children: [
+                              (0, t.jsx)(d.D, { size: "lg", color: a.A.colors.TEXT_DEFAULT }),
+                              (0, t.jsx)(o.E, {
+                                  tag: "div",
+                                  variant: "heading-md/semibold",
+                                  color: "text-strong",
+                                  children: m ?? x.intl.string(x.t.xC8Saf),
+                              }),
+                              (0, t.jsx)(o.E, {
+                                  variant: "text-sm/normal",
+                                  color: "text-muted",
+                                  children: j ?? x.intl.string(x.t["0fc/DG"]),
+                              }),
+                          ],
+                      }),
+                  ],
+              }),
+          })
+        : r;
+}
