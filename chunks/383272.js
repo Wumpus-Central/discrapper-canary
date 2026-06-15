@@ -1,15 +1,26 @@
 "use strict";
-n.d(t, { DD: () => s, Qs: () => r, g$: () => i });
-let i = (0, n(600975).C)({
+n.d(t, { DD: () => l, Qs: () => o, g$: () => a });
+var i = n(600975),
+    r = n(772788),
+    s = n(652215);
+let a = (0, i.C)({
     kind: "guild",
     id: "2026-04_server_theme",
     label: "Server Theme",
-    defaultConfig: { enabled: !1 },
-    treatments: [{ id: 1, label: "Enable Server Theme", config: { enabled: !0 } }],
+    defaultConfig: { enabled: !1, inExperiment: !1, gatesApex: !1 },
+    treatments: [
+        { id: 0, label: "Control", config: { enabled: !1, inExperiment: !0, gatesApex: !1 } },
+        { id: 1, label: "Enable Server Theme", config: { enabled: !0, inExperiment: !0, gatesApex: !1 } },
+    ],
 });
-function r(e, t) {
-    return i.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }).enabled;
+function o(e, t) {
+    let { enabled: n, inExperiment: i } = a.getCurrentConfig({ guildId: e, location: t }, { autoTrackExposure: !1 }),
+        { enabled: s, gatesApex: o } =
+            null != e ? r.K.getConfig({ guildId: e, location: t }) : { enabled: !1, gatesApex: !1 };
+    return i ? n : !!o && s;
 }
-function s(e, t) {
-    return i.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 }).enabled;
+function l(e, t) {
+    let { enabled: n, inExperiment: i } = a.useExperiment({ guildId: e, location: t }, { autoTrackExposure: !1 }),
+        { enabled: o, gatesApex: l } = r.K.useConfig({ guildId: e ?? s.dJq, location: t });
+    return i ? n : null != e && !!l && o;
 }
