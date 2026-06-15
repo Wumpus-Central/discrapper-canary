@@ -53,7 +53,7 @@ function _(e) {
             i.default.track(l.HAw.CLIP_TIMELINE_TRIMMED, {
                 clip_uuid: e.id,
                 clip_event_timeline_size: p.length,
-                clip_runtime: (0, a.GN)(),
+                clip_runtime: (0, a.GN)("getClipEventsTimeline"),
             }),
         E.length > 0 ? E : void 0
     );

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => ei });
+n.d(t, { A: () => en });
 var i,
     r = n(691540),
     s = n(97483),
@@ -82,7 +82,11 @@ class x extends A.A {
     }
     handleClipsInitFailure(e) {
         let { applicationName: t, errMsg: n } = e;
-        N.default.track(M.HAw.CLIPS_INIT_FAILURE, { application_name: t, error_message: n, clip_runtime: (0, b.GN)() });
+        N.default.track(M.HAw.CLIPS_INIT_FAILURE, {
+            application_name: t,
+            error_message: n,
+            clip_runtime: (0, b.GN)("handleClipsInitFailure"),
+        });
     }
     maybeShowClipsWarning(e) {
         let t = S.A.getChannelId();
@@ -140,7 +144,7 @@ class x extends A.A {
                     classification: t,
                     version: w.V0,
                     gpu_models: e,
-                    clip_runtime: (0, b.GN)(),
+                    clip_runtime: (0, b.GN)("classifyHardwareAndTrack"),
                 }),
                 t
             );
@@ -320,42 +324,7 @@ let z = !1,
     Z = null,
     Q = null,
     J = null;
-function ee() {
-    let e = (0, b.qi)(),
-        t = (0, b.$i)(),
-        n = R.Ay.getEnableAutoclipping(),
-        i = X !== e,
-        r = Z !== t,
-        s = Q !== n;
-    if (!i && !r && !s) return;
-    let a = p.Ay.getMediaEngine();
-    i && a.setClipsV3Enabled(e),
-        w.nx.info(
-            `clips v3 runtime flags pushed: v3=${e} (was ${X}), ml=${t} (was ${Z}), autoclipping=${n} (was ${Q})`,
-        ),
-        (X = e),
-        (Z = t),
-        (Q = n),
-        e &&
-            (t
-                ? (null === J &&
-                      (w.nx.info("clips v3 ml flag set ml=false until download complete"),
-                      a.setClipsV3MLEnabled(!1),
-                      (J = !1)),
-                  (async () => {
-                      let { allAssetsDownloaded: e } = await B.start(),
-                          t = e && !0 === Z && !0 === Q;
-                      J !== t &&
-                          (w.nx.info(
-                              `clips v3 ml flag set ml=${t} (was ${J}). allAssetsDownloaded=${e}, autoclipping=${Q}`,
-                          ),
-                          a.setClipsV3MLEnabled(t),
-                          (J = t));
-                  })())
-                : !1 !== J &&
-                  (w.nx.info(`clips v3 ml flag set ml=false (was ${J})`), a.setClipsV3MLEnabled(!1), (J = !1)));
-}
-class et extends x {
+class ee extends x {
     constructor() {
         super(),
             Object.assign(this.actions, {
@@ -412,28 +381,66 @@ class et extends x {
                         this.fireClipsInitEvent();
                 }
             };
-        ee(),
-            !(0, b.qi)() || z
-                ? n()
-                : (z
-                      ? Promise.resolve()
-                      : null != q
-                        ? q
-                        : (q = (async () => {
-                              try {
-                                  ee(), await m.Ay.ensureModule("discord_clips");
-                                  let e = m.Ay.requireModule("discord_clips").getModulePath(),
-                                      t = p.Ay.getMediaEngine(),
-                                      n = m.Ay.getClipsDataDirSync();
-                                  t.setClipsDataPath(n),
-                                      t.setClipsModulePath(e),
-                                      (z = !0),
-                                      w.nx.info("discord_clips module loaded, path: " + e);
-                              } catch (e) {
-                                  (q = null), w.nx.error("Failed to load discord_clips module", e);
-                              }
-                          })())
-                  ).then(n);
+        (0, L.TD)()
+            ? (!(function () {
+                  let e = (0, b.qi)("pushClipsV3RuntimeFlagsToNative"),
+                      t = (0, b.$i)("pushClipsV3RuntimeFlagsToNative"),
+                      n = R.Ay.getEnableAutoclipping(),
+                      i = X !== e,
+                      r = Z !== t,
+                      s = Q !== n;
+                  if (!i && !r && !s) return;
+                  let a = p.Ay.getMediaEngine();
+                  i && a.setClipsV3Enabled(e),
+                      w.nx.info(
+                          `clips v3 runtime flags pushed: v3=${e} (was ${X}), ml=${t} (was ${Z}), autoclipping=${n} (was ${Q})`,
+                      ),
+                      (X = e),
+                      (Z = t),
+                      (Q = n),
+                      e &&
+                          (t
+                              ? (null === J &&
+                                    (w.nx.info("clips v3 ml flag set ml=false until download complete"),
+                                    a.setClipsV3MLEnabled(!1),
+                                    (J = !1)),
+                                (async () => {
+                                    let { allAssetsDownloaded: e } = await B.start(),
+                                        t = e && !0 === Z && !0 === Q;
+                                    J !== t &&
+                                        (w.nx.info(
+                                            `clips v3 ml flag set ml=${t} (was ${J}). allAssetsDownloaded=${e}, autoclipping=${Q}`,
+                                        ),
+                                        a.setClipsV3MLEnabled(t),
+                                        (J = t));
+                                })())
+                              : !1 !== J &&
+                                (w.nx.info(`clips v3 ml flag set ml=false (was ${J})`),
+                                a.setClipsV3MLEnabled(!1),
+                                (J = !1)));
+              })(),
+              (0, b.qi)("applyNativeClipsSettings") && !z
+                  ? (z
+                        ? Promise.resolve()
+                        : null != q
+                          ? q
+                          : (q = (async () => {
+                                try {
+                                    await m.Ay.ensureModule("discord_clips");
+                                    let e = m.Ay.requireModule("discord_clips").getModulePath(),
+                                        t = p.Ay.getMediaEngine(),
+                                        n = m.Ay.getClipsDataDirSync();
+                                    t.setClipsDataPath(n),
+                                        t.setClipsModulePath(e),
+                                        (z = !0),
+                                        w.nx.info("discord_clips module loaded, path: " + e);
+                                } catch (e) {
+                                    (q = null), w.nx.error("Failed to load discord_clips module", e);
+                                }
+                            })())
+                    ).then(n)
+                  : n())
+            : n();
     }
     handleClipsInitOnToggleDetection(e) {
         let t = c.Ay.getVisibleGame();
@@ -457,9 +464,9 @@ class et extends x {
         d.I.fetchMany([e]), l.YY.fetchMany([e]);
     }
     handleStreamEnded(e) {
-        if (!(0, b.qi)()) return;
+        if (!(0, L.TD)()) return;
         let { ownerId: t } = (0, _.Iy)(e.streamKey);
-        t === f.default.getId() && this.fireClipsInitEvent();
+        t !== f.default.getId() || ((0, b.qi)("handleStreamEnded") && this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
         if (!(0, L.TD)() || null != h.A.getCurrentUserActiveStream()) return;
@@ -479,13 +486,13 @@ class et extends x {
             e !== R.he &&
             j
                 .Fb(e)
-                .then(() => en())
+                .then(() => et())
                 .catch((e) => {
                     w.nx.error("Failed to load clips directory on connection open", e);
                 });
     }
 }
-async function en() {
+async function et() {
     if (R.Ay.hasClips() || null == o.A || null == o.A.app) return;
     let e = await o.A.app.getPath("documents");
     if (R.Ay.getSettings().storageLocation === e)
@@ -496,4 +503,4 @@ async function en() {
             w.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let ei = new et();
+let en = new ee();

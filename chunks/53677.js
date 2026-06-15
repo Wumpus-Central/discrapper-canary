@@ -30,7 +30,10 @@ function _(e) {
     };
 }
 function h() {
-    return { clip_runtime: (0, c.GN)(), current_clip_session_id: l.Ay.getCurrentClipsSession()?.id };
+    return {
+        clip_runtime: (0, c.GN)("getClipContextProperties"),
+        current_clip_session_id: l.Ay.getCurrentClipsSession()?.id,
+    };
 }
 function f(e) {
     let t = [];

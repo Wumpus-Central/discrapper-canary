@@ -18238,7 +18238,7 @@ let Nk = (() => {
         useTitle: () => j.intl.string(j.t.sA0WKL),
         usePredicate: () => {
             let e = (0, Ny.As)(),
-                t = (0, NM.aJ)(),
+                t = (0, NM.aJ)("ClipsAutomaticClippingCategory"),
                 i = NU.A.useConfig({ location: "ClipsAutomaticClippingCategory" }).enableDistributedClips;
             return !e && (t || i);
         },

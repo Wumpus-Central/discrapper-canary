@@ -304,7 +304,10 @@ function j() {
 async function Y(e) {
     let { allowVoiceRecording: t } = e;
     await a.Q$.updateSetting(t),
-        g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, { allow_voice_recording: t, clip_runtime: (0, N.GN)() }),
+        g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, {
+            allow_voice_recording: t,
+            clip_runtime: (0, N.GN)("updateAllowVoiceRecording"),
+        }),
         r.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
 }
 async function W(e) {
@@ -319,7 +322,7 @@ async function W(e) {
                 clips_enabled: t,
                 guild_id: n,
                 ...(s && { decoupled_clips_enabled: !1 }),
-                clip_runtime: (0, N.GN)(),
+                clip_runtime: (0, N.GN)("updateClipsEnabled"),
             });
 }
 function K(e) {
@@ -332,7 +335,7 @@ function K(e) {
             g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, {
                 ...(t && { clips_enabled: !0 }),
                 decoupled_clips_enabled: t,
-                clip_runtime: (0, N.GN)(),
+                clip_runtime: (0, N.GN)("updateDecoupledClipsEnabled"),
             });
 }
 function $(e) {
@@ -340,7 +343,10 @@ function $(e) {
 }
 function z(e) {
     r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { remindersEnabled: e } }),
-        g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, { reminders_enabled: e, clip_runtime: (0, N.GN)() });
+        g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, {
+            reminders_enabled: e,
+            clip_runtime: (0, N.GN)("updateRemindersEnabled"),
+        });
 }
 function q(e) {
     r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { showPovClipsInGallery: e } });
@@ -393,7 +399,7 @@ async function J(e) {
                     clip_trigger_type: e.decision?.signal.type,
                     num_clip_participants: e.users.length,
                     application_id: e.applicationId,
-                    clip_runtime: (0, N.GN)(),
+                    clip_runtime: (0, N.GN)("maybeSendRemoteClipTrigger"),
                 });
         } catch (e) {
             D.nx.warn("Failed to send remote clip trigger", e);
@@ -486,7 +492,7 @@ async function et(e) {
         );
     } catch (t) {
         if ((o && r.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE_ERROR", clipId: d.id }), !("errorMessage" in t)))
-            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...T, clip_runtime: (0, N.GN)() }), t);
+            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...T, clip_runtime: (0, N.GN)("doSaveClip") }), t);
         let e = I.kY(T, t);
         throw (
             ((e.error_at = t.errorAt),
@@ -704,7 +710,7 @@ async function ef(e) {
             voiceAudio: !0,
             soundboardAudio: !0,
         };
-        if (t.hasExportClipToFile() && (0, N.qi)()) {
+        if (t.hasExportClipToFile() && (0, N.qi)("exportClip")) {
             let n = await s.A.app.getPath("temp"),
                 i = s.A.fileManager.join(n, "Discord Clips"),
                 a = `${crypto.randomUUID()}-${Date.now()}.mp4`,

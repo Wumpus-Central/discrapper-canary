@@ -6,17 +6,17 @@ let i = (0, n(945810).mj)({
     defaultConfig: { enableClipsV3: !1, enableClipsV3ML: !1 },
     variations: { 1: { enableClipsV3: !0, enableClipsV3ML: !1 }, 2: { enableClipsV3: !0, enableClipsV3ML: !0 } },
 });
-function r() {
-    return i.getConfig({ location: "isClipsV3Enabled" }).enableClipsV3;
+function r(e) {
+    return i.getConfig({ location: e }).enableClipsV3;
 }
-function s() {
-    return r() ? "v3" : "v1";
+function s(e) {
+    return r(e) ? "v3" : "v1";
 }
-function a() {
-    let { enableClipsV3: e, enableClipsV3ML: t } = i.getConfig({ location: "isClipsV3MLEnabled" });
-    return e && t;
+function a(e) {
+    let { enableClipsV3: t, enableClipsV3ML: n } = i.getConfig({ location: e });
+    return t && n;
 }
-function o() {
-    let { enableClipsV3: e, enableClipsV3ML: t } = i.useConfig({ location: "isClipsV3MLEnabled" });
-    return e && t;
+function o(e) {
+    let { enableClipsV3: t, enableClipsV3ML: n } = i.useConfig({ location: e });
+    return t && n;
 }

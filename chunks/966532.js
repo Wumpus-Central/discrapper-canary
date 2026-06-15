@@ -29,7 +29,7 @@ class f extends i.A {
                 {
                     type: "voiceChannel",
                     name: "ml-audio-classification",
-                    isEnabled: () => (0, c.$i)() && u.Ay.getEnableAutoclipping(),
+                    isEnabled: () => (0, c.$i)("Clip signal handler registration") && u.Ay.getEnableAutoclipping(),
                     importHandler: () => n.e("53725").then(n.bind(n, 691148)),
                 },
                 {
