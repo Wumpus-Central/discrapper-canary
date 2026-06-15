@@ -1,4 +1,4 @@
-.popover_c97e55 {
+.popover_c97e55.popover_c97e55 {
     background-color: var(--user-profile-toolbar-background);
     border: 1px solid var(--user-profile-toolbar-border);
     border-radius: 100px;
@@ -14,18 +14,18 @@
     top: -20px
 }
 
-.custom-user-profile-theme.theme-dark .popover_c97e55 {
+.custom-user-profile-theme.theme-dark .popover_c97e55.popover_c97e55 {
     -webkit-backdrop-filter: blur(36px);
     backdrop-filter: blur(36px)
 }
 
-.custom-user-profile-theme.theme-light .popover_c97e55 {
+.custom-user-profile-theme.theme-light .popover_c97e55.popover_c97e55 {
     -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px)
 }
 
-.popover_c97e55.visible_c97e55,
-.popover_c97e55:focus-within {
+.popover_c97e55.popover_c97e55.visible_c97e55,
+.popover_c97e55.popover_c97e55:focus-within {
     opacity: 1;
     pointer-events: all
 }
@@ -53,35 +53,35 @@
     }
 }
 
-.button_c97e55 {
+.button_c97e55.button_c97e55 {
     height: unset;
     min-width: unset;
     padding: 4px
 }
 
-.button_c97e55.left_c97e55 {
+.button_c97e55.button_c97e55.left_c97e55 {
     border-radius: 100px 6px 6px 100px;
     padding-inline-start: 6px
 }
 
-.button_c97e55.right_c97e55 {
+.button_c97e55.button_c97e55.right_c97e55 {
     border-radius: 6px 100px 100px 6px;
     padding-inline-end: 6px
 }
 
-.button_c97e55:hover {
+.button_c97e55.button_c97e55:hover {
     background: var(--background-mod-normal)
 }
 
-.button_c97e55:hover .icon_c97e55 {
+.button_c97e55.button_c97e55:hover .icon_c97e55 {
     fill: var(--interactive-text-hover)
 }
 
-.button_c97e55:active {
+.button_c97e55.button_c97e55:active {
     background: var(--background-mod-strong)
 }
 
-.button_c97e55:active .icon_c97e55 {
+.button_c97e55.button_c97e55:active .icon_c97e55 {
     fill: var(--interactive-text-active)
 }
 
