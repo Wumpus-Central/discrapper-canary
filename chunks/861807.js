@@ -1,0 +1,31 @@
+"use strict";
+n.d(t, { A: () => l });
+var i = n(17928),
+    r = n(228366);
+let s = !1;
+class a extends i.Ay.PersistedStore {
+    static displayName = "ParentalConsentStore";
+    static persistKey = "ParentalConsentStore";
+    initialize(e) {
+        s = e?.shouldShowGuardianConnect ?? !1;
+    }
+    getShouldShowGuardianConnect() {
+        return s;
+    }
+    getState() {
+        return { shouldShowGuardianConnect: s };
+    }
+}
+let o = new a(r.h, {
+        GUARDIAN_CONNECT_REQUIRED: function (e) {
+            let { shouldShowGuardianConnect: t } = e;
+            (s = !0 === t), o.persist();
+        },
+        GUARDIAN_CONNECT_CLEARED: function () {
+            (s = !1), o.persist();
+        },
+        NUF_COMPLETE: function () {
+            (s = !1), o.persist();
+        },
+    }),
+    l = o;

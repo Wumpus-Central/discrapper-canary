@@ -1,124 +1,148 @@
-e.d(i, { A: () => A });
-var a = e(64700),
-    n = e(17928),
-    r = e(793574),
-    l = e(532794),
-    s = e(976860),
-    u = e(287809),
-    f = e(975571),
-    c = e(474090),
-    d = e(507107),
-    o = e(561844),
-    T = e(590202),
-    m = e(190107),
-    _ = e(652215),
-    R = e(788868),
-    g = e(375708),
-    p = e(237146);
-function A(t, i, e) {
-    let A = t.config.features.some((t) => m.Tz.has(t)),
-        C = (0, n.bG)([u.default], () => u.default.getCurrentUser()),
-        I = C?.hasPaidTier2Subscription(),
-        O = (0, c.ki)(C) && !C?.isPremiumWithFractionalPremiumOnly(),
-        V = a.useCallback(async () => {
-            A &&
-                (I
-                    ? ((0, o.Y5)({
-                          questId: t.id,
-                          questContent: d.uF.REWARD_MODAL,
-                          questContentCTA: T.Cy.OPEN_NITRO_HOME,
-                          impressionId: i.impressionId,
-                          sourceQuestContent: i.sourceQuestContent,
-                      }),
-                      await e?.(),
-                      (0, s.pX)(_.BVt.NITRO_HOME))
-                    : ((0, o.Y5)({
-                          questId: t.id,
-                          questContent: d.uF.REWARD_MODAL,
-                          questContentCTA: T.Cy.OPEN_NITRO_CHECKOUT,
-                          impressionId: i.impressionId,
-                          sourceQuestContent: i.sourceQuestContent,
-                      }),
-                      await e?.(),
-                      await (0, l.A)({ subscriptionTier: R.pe.TIER_2, analyticsLocations: [r.A.QUEST_REWARD_MODAL] })));
-        }, [A, I, t.id, i.impressionId, i.sourceQuestContent, e]);
-    if (!A) return null;
-    if (t.config.features.includes(m.Li.NITRO_2_POINT_0_CTA)) {
-        let t = f.A.getArticleURL(_.MVz.NITRO_2_POINT_0);
-        return I
+i.d(e, { A: () => g });
+var a = i(64700),
+    n = i(323889),
+    r = i(17928),
+    s = i(274670),
+    u = i(144779),
+    l = i(793574),
+    d = i(532794),
+    c = i(976860),
+    f = i(287809),
+    o = i(975571),
+    C = i(474090),
+    _ = i(507107),
+    T = i(104886),
+    I = i(561844),
+    R = i(590202),
+    p = i(190107),
+    A = i(652215),
+    m = i(788868),
+    E = i(375708),
+    O = i(237146);
+function g(t, e, i) {
+    let g = t.config.features.some((t) => p.Tz.has(t)),
+        L = (0, r.bG)([f.default], () => f.default.getCurrentUser()),
+        N = L?.hasPaidTier2Subscription(),
+        y = (0, C.ki)(L) && !L?.isPremiumWithFractionalPremiumOnly(),
+        Q = a.useCallback(async () => {
+            g &&
+                (N
+                    ? ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "quest_nitro_reward_cta")
+                          ? (0, s.r)({
+                                type: u.F.CLICK_INTERNAL,
+                                adCreativeType: n.p.QUEST,
+                                adCreativeId: t.id,
+                                questContentCTA: R.Cy.OPEN_NITRO_HOME,
+                                surfaceId: _.uF.REWARD_MODAL,
+                                sourceQuestContent: e.sourceQuestContent,
+                                impressionId: e.impressionId,
+                            })
+                          : (0, I.Y5)({
+                                questId: t.id,
+                                questContent: _.uF.REWARD_MODAL,
+                                questContentCTA: R.Cy.OPEN_NITRO_HOME,
+                                impressionId: e.impressionId,
+                                sourceQuestContent: e.sourceQuestContent,
+                            }),
+                      await i?.(),
+                      (0, c.pX)(A.BVt.NITRO_HOME))
+                    : ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "quest_nitro_reward_cta")
+                          ? (0, s.r)({
+                                type: u.F.CLICK_INTERNAL,
+                                adCreativeType: n.p.QUEST,
+                                adCreativeId: t.id,
+                                questContentCTA: R.Cy.OPEN_NITRO_CHECKOUT,
+                                surfaceId: _.uF.REWARD_MODAL,
+                                sourceQuestContent: e.sourceQuestContent,
+                                impressionId: e.impressionId,
+                            })
+                          : (0, I.Y5)({
+                                questId: t.id,
+                                questContent: _.uF.REWARD_MODAL,
+                                questContentCTA: R.Cy.OPEN_NITRO_CHECKOUT,
+                                impressionId: e.impressionId,
+                                sourceQuestContent: e.sourceQuestContent,
+                            }),
+                      await i?.(),
+                      await (0, d.A)({ subscriptionTier: m.pe.TIER_2, analyticsLocations: [l.A.QUEST_REWARD_MODAL] })));
+        }, [g, N, t.id, e.impressionId, e.sourceQuestContent, i]);
+    if (!g) return null;
+    if (t.config.features.includes(p.Li.NITRO_2_POINT_0_CTA)) {
+        let t = o.A.getArticleURL(A.MVz.NITRO_2_POINT_0);
+        return N
             ? {
-                  title: g.intl.string(p.default.LIc2xy),
-                  subtitle: g.intl.format(p.default.gzazAe, { helpCenterLink: t }),
-                  ctaText: g.intl.string(p.default.HlVJm0),
+                  title: E.intl.string(O.default.LIc2xy),
+                  subtitle: E.intl.format(O.default.gzazAe, { helpCenterLink: t }),
+                  ctaText: E.intl.string(O.default.HlVJm0),
                   ctaVariant: "primary",
-                  onClickCta: V,
+                  onClickCta: Q,
               }
-            : O
+            : y
               ? {
-                    title: g.intl.string(p.default.HTsycG),
-                    subtitle: g.intl.format(p.default["3JKWU6"], { helpCenterLink: t }),
-                    ctaText: g.intl.string(p.default["2iX+XV"]),
+                    title: E.intl.string(O.default.HTsycG),
+                    subtitle: E.intl.format(O.default["3JKWU6"], { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["2iX+XV"]),
                     ctaVariant: "primary",
-                    onClickCta: V,
+                    onClickCta: Q,
                 }
               : {
-                    title: g.intl.string(p.default.bOf5IH),
-                    subtitle: g.intl.format(p.default.SzOYGc, { helpCenterLink: t }),
-                    ctaText: g.intl.string(p.default["620Iwi"]),
+                    title: E.intl.string(O.default.bOf5IH),
+                    subtitle: E.intl.format(O.default.SzOYGc, { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["620Iwi"]),
                     ctaVariant: "primary",
-                    onClickCta: V,
+                    onClickCta: Q,
                 };
     }
-    if (t.config.features.includes(m.Li.ORBS_MULTIPLIER_QUEST)) {
-        let t = f.A.getArticleURL(_.MVz.VIRTUAL_CURRENCY_LEARN_MORE);
-        return I
+    if (t.config.features.includes(p.Li.ORBS_MULTIPLIER_QUEST)) {
+        let t = o.A.getArticleURL(A.MVz.VIRTUAL_CURRENCY_LEARN_MORE);
+        return N
             ? {
-                  title: g.intl.string(p.default["QP/6xR"]),
-                  subtitle: g.intl.format(p.default.zPnFYf, { helpCenterLink: t }),
-                  ctaText: g.intl.string(p.default.TNS24d),
+                  title: E.intl.string(O.default["QP/6xR"]),
+                  subtitle: E.intl.format(O.default.zPnFYf, { helpCenterLink: t }),
+                  ctaText: E.intl.string(O.default.TNS24d),
                   ctaVariant: "primary",
-                  onClickCta: V,
+                  onClickCta: Q,
               }
-            : O
+            : y
               ? {
-                    title: g.intl.string(p.default.CFfUkp),
-                    subtitle: g.intl.format(p.default["02smVH"], { helpCenterLink: t }),
-                    ctaText: g.intl.string(p.default["2iX+XV"]),
+                    title: E.intl.string(O.default.CFfUkp),
+                    subtitle: E.intl.format(O.default["02smVH"], { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["2iX+XV"]),
                     ctaVariant: "primary",
-                    onClickCta: V,
+                    onClickCta: Q,
                 }
               : {
-                    title: g.intl.string(p.default.CFfUkp),
-                    subtitle: g.intl.format(p.default["02smVH"], { helpCenterLink: t }),
-                    ctaText: g.intl.string(p.default["620Iwi"]),
+                    title: E.intl.string(O.default.CFfUkp),
+                    subtitle: E.intl.format(O.default["02smVH"], { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["620Iwi"]),
                     ctaVariant: "primary",
-                    onClickCta: V,
+                    onClickCta: Q,
                 };
     }
-    if (t.config.features.includes(m.Li.XBOX_GAME_PASS_QUEST)) {
-        let t = f.A.getArticleURL(_.MVz.NITRO_2_POINT_0);
-        return I
+    if (t.config.features.includes(p.Li.XBOX_GAME_PASS_QUEST)) {
+        let t = o.A.getArticleURL(A.MVz.NITRO_2_POINT_0);
+        return N
             ? {
-                  title: g.intl.string(p.default["4zROKG"]),
-                  subtitle: g.intl.format(p.default.v9AaV4, { helpCenterLink: t }),
-                  ctaText: g.intl.string(p.default["/AUOfc"]),
+                  title: E.intl.string(O.default["4zROKG"]),
+                  subtitle: E.intl.format(O.default.v9AaV4, { helpCenterLink: t }),
+                  ctaText: E.intl.string(O.default["/AUOfc"]),
                   ctaVariant: "primary",
-                  onClickCta: V,
+                  onClickCta: Q,
               }
-            : O
+            : y
               ? {
-                    title: g.intl.string(p.default.Q15RXC),
-                    subtitle: g.intl.format(p.default["zUjL+R"], { helpCenterLink: t }),
-                    ctaText: g.intl.string(p.default["+ADjaQ"]),
+                    title: E.intl.string(O.default.Q15RXC),
+                    subtitle: E.intl.format(O.default["zUjL+R"], { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["+ADjaQ"]),
                     ctaVariant: "primary",
-                    onClickCta: V,
+                    onClickCta: Q,
                 }
               : {
-                    title: g.intl.string(p.default.Q15RXC),
-                    subtitle: g.intl.format(p.default.dHQQvk, { helpCenterLink: t }),
-                    ctaText: g.intl.string(p.default.qI5XnY),
+                    title: E.intl.string(O.default.Q15RXC),
+                    subtitle: E.intl.format(O.default.dHQQvk, { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default.qI5XnY),
                     ctaVariant: "primary",
-                    onClickCta: V,
+                    onClickCta: Q,
                 };
     }
     return null;
