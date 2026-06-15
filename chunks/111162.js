@@ -1,6 +1,6 @@
 "use strict";
 let i, r, s, a;
-n.r(t), n.d(t, { default: () => y }), n(938796);
+n.r(t), n.d(t, { default: () => C }), n(938796);
 var o = n(158390),
     l = n(247775),
     u = n(17928),
@@ -66,15 +66,22 @@ let m =
         alertStartupMetrics: !1,
         logQuestEvents: !1,
     },
-    I = { ...A };
-function T(e) {
+    I = { ...A },
+    T = "DeveloperOptionsRoutingKey",
+    S = [];
+function y(e) {
     (I = { ...A, ...I, ...e }), m.set(I.sourceMapsEnabled), d.w.set(g, I);
 }
-class S extends u.Ay.Store {
+function N(e) {
+    (S = e), d.w.set(T, S);
+}
+class v extends u.Ay.Store {
     static displayName = "DeveloperOptionsStore";
     initialize() {
         let e = d.w.get(g);
         null != e && (I = { ...A, ...e });
+        let t = d.w.get(T);
+        null != t && (S = t);
     }
     get isTracingRequests() {
         return I.trace;
@@ -138,10 +145,16 @@ class S extends u.Ay.Store {
                 .join(",")
         );
     }
+    get routingKeyTags() {
+        return S;
+    }
+    getRoutingKeyHeaderValue() {
+        return 0 === S.length ? null : S.join(",");
+    }
 }
-let y = new S(_.h, {
+let C = new v(_.h, {
     LOGOUT: function (e) {
-        T(A);
+        y(A), N([]);
     },
     CONNECTION_OPEN: function (e) {
         let t = ((e.user.flags ?? 0) & E.nhx.STAFF) === E.nhx.STAFF,
@@ -150,6 +163,10 @@ let y = new S(_.h, {
     },
     DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
         let { settings: t } = e;
-        T(t);
+        y(t);
+    },
+    DEVELOPER_OPTIONS_SET_ROUTING_KEY: function (e) {
+        let { tags: t } = e;
+        N(t);
     },
 });

@@ -3766,7 +3766,6 @@ function as(e) {
                                                   (0, l.jsx)(s7.A, {
                                                       userId: n.id,
                                                       userBio: d?.bio,
-                                                      heading: Y.intl.string(Y.t.ZzAR2Y),
                                                       isHoveringOrFocusing: g,
                                                       animateOnHoverOrFocusOnly: !0,
                                                       hideRestrictedProfile: !0,
@@ -4363,7 +4362,6 @@ function ro(e) {
                         (0, l.jsx)(s7.A, {
                             userId: n.id,
                             userBio: i?.bio,
-                            heading: Y.intl.string(Y.t.ZzAR2Y),
                             hidePersonalInformation: m,
                             isHoveringOrFocusing: r,
                             animateOnHoverOrFocusOnly: !0,
