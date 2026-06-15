@@ -39,4 +39,5 @@ e.exports = {
     Yf: "placeholderCard_abfd90",
     RC: "placeholderText_abfd90",
     pt: "orbsEarnedContainer_abfd90",
+    fN: "orbIconAligned_abfd90",
 };

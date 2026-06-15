@@ -940,6 +940,11 @@
     gap: var(--space-4)
 }
 
+.orbIconAligned_abfd90 {
+    margin-top: 1px;
+    vertical-align: top
+}
+
 .full-motion .placeholderCard_abfd90 {
     animation: pulse_abfd90 2s ease-in-out infinite alternate;
     animation-fill-mode: backwards
