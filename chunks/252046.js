@@ -1191,7 +1191,7 @@ function tU(e) {
                 }, [o, e]),
                 m = a.useCallback(
                     async (e, l) => {
-                        let n = null;
+                        let n;
                         if (
                             (await tW((i) => {
                                 let a = i.filter(tG.fu).find((t) => t.type === e) ?? null;
@@ -1225,9 +1225,9 @@ function tU(e) {
                 ),
                 x = a.useCallback(
                     async (e) => {
-                        if (null == u) return;
-                        let t = null;
+                        let t;
                         if (
+                            null == u ||
                             (await tW((l) =>
                                 e
                                     ? l.some((e) => e instanceof t_.R && e.applicationId === u)

@@ -1,14 +1,15 @@
 r(321073), r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
 let o = null;
 async function n(e, t, r, o) {
-    let { videoTrack: n, syncSamples: a, description: i } = e,
-        l = n.timescale,
-        s = a.map((e) => e.cts / l),
-        c = new Map(),
-        f = new Map();
+    let n,
+        { videoTrack: a, syncSamples: i, description: l } = e,
+        s = a.timescale,
+        c = i.map((e) => e.cts / s),
+        f = new Map(),
+        u = new Map();
     for (let e = 0; e < t.length; e++) {
         let r =
-                a[
+                i[
                     (function (e, t) {
                         let r = 0,
                             o = Math.abs(e[0] - t);
@@ -17,24 +18,23 @@ async function n(e, t, r, o) {
                             a < o && ((o = a), (r = n));
                         }
                         return r;
-                    })(s, t[e])
+                    })(c, t[e])
                 ],
-            o = Math.round((r.cts / l) * 1e6);
-        f.set(o, r);
-        let n = c.get(o) ?? [];
-        n.push(e), c.set(o, n);
+            o = Math.round((r.cts / s) * 1e6);
+        u.set(o, r);
+        let n = f.get(o) ?? [];
+        n.push(e), f.set(o, n);
     }
-    let u = Array(t.length),
-        d = [],
-        p = null,
+    let d = Array(t.length),
+        p = [],
         h = new VideoDecoder({
             output: (e) => {
-                let t = c.get(e.timestamp);
+                let t = f.get(e.timestamp);
                 async function n() {
                     try {
                         if (null == t) return;
                         for (let n of t)
-                            u[n] = await createImageBitmap(e, {
+                            d[n] = await createImageBitmap(e, {
                                 resizeWidth: r,
                                 resizeHeight: o,
                                 resizeQuality: "low",
@@ -43,30 +43,30 @@ async function n(e, t, r, o) {
                         e.close();
                     }
                 }
-                d.push(n());
+                p.push(n());
             },
             error: (e) => {
-                p = e instanceof Error ? e : Error(String(e));
+                n = e instanceof Error ? e : Error(String(e));
             },
         });
     try {
-        for (let [e, t] of (h.configure({ codec: n.codec, description: i }), f.entries()))
+        for (let [e, t] of (h.configure({ codec: a.codec, description: l }), u.entries()))
             h.decode(
                 new EncodedVideoChunk({
                     type: "key",
                     timestamp: e,
-                    duration: t.duration > 0 ? Math.round((t.duration / l) * 1e6) : void 0,
+                    duration: t.duration > 0 ? Math.round((t.duration / s) * 1e6) : void 0,
                     data: t.data,
                 }),
             );
-        if ((await h.flush(), await Promise.all(d), null != p)) throw p;
+        if ((await h.flush(), await Promise.all(p), null != n)) throw n;
     } catch (e) {
-        for (let e of u) e?.close();
+        for (let e of d) e?.close();
         throw e;
     } finally {
         "closed" !== h.state && h.close();
     }
-    return u;
+    return d;
 }
 self.addEventListener("message", async (e) => {
     let { data: t } = e;
