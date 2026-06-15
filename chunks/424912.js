@@ -33,9 +33,9 @@ function A(e) {
         [D, G] = n.useState(j.A.getGuildNameSuggestion()),
         [L, w] = n.useState(null),
         [F, R] = n.useState(!1),
-        [T, U] = n.useState(null),
-        I = !!f.default.getCurrentUser()?.isStaff(),
-        [q, Q] = n.useState(I),
+        [T, I] = n.useState(null),
+        U = !!f.default.getCurrentUser()?.isStaff(),
+        [q, Q] = n.useState(U),
         V = (0, p.GV)(),
         X = n.useRef(null);
     n.useEffect(() => {
@@ -44,7 +44,7 @@ function A(e) {
     let B = n.useCallback(
             async (e) => {
                 if ((e.preventDefault(), null != t)) {
-                    R(!0), U(null);
+                    R(!0), I(null);
                     try {
                         if (null != y) y(D, L);
                         else {
@@ -52,7 +52,7 @@ function A(e) {
                             x.A.transitionToGuildSync(e.id), C?.(e.id);
                         }
                     } catch (e) {
-                        U(e);
+                        I(e);
                     }
                     R(!1);
                 }
@@ -114,7 +114,7 @@ function A(e) {
                                         inputRef: X,
                                         id: V,
                                     }),
-                                    I &&
+                                    U &&
                                         (0, a.jsx)(m.d, {
                                             label: "Staff Only",
                                             description: N.intl.string(N.t.edQ5va),
@@ -122,6 +122,7 @@ function A(e) {
                                             onChange: (e) => Q(e),
                                         }),
                                     (0, a.jsx)(d.E, {
+                                        className: k.I4,
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         children: N.intl.format(N.t["2bprXx"], { guidelinesURL: b.X7G.GUIDELINES }),
