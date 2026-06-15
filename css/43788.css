@@ -2133,9 +2133,19 @@ html .tabBadge_e6b769 {
     align-items: center;
     display: flex;
     flex: 1;
+    gap: 8px;
     justify-content: center;
     margin-bottom: -2px;
-    padding: 0 16px 16px
+    min-width: 0;
+    padding: 0 8px 16px
+}
+
+.tabLabel_ab6641 {
+    line-height: 1.4;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 
 .inboxIcon_ab6641 {
@@ -2158,7 +2168,7 @@ html .tabBadge_e6b769 {
 }
 
 .iconBadge_ab6641 {
-    margin-inline-start: 8px
+    flex-shrink: 0
 }
 
 .search_c322aa {
