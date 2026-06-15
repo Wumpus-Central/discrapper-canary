@@ -15,3 +15,5 @@ let r = {
         i.Bo.del({ url: s.Rsh.FRIEND_SUGGESTION(e), rejectWithError: !0 });
     },
 };
+hError: !0;
+})}}
