@@ -525,7 +525,7 @@ class eh extends ec {
         return this.application_id;
     }
     getDefaultSortOrder() {
-        return this.defaultSortOrder ?? u.T.LATEST_ACTIVITY;
+        return this.isGameInvitesChannel() ? u.T.CREATION_DATE : (this.defaultSortOrder ?? u.T.LATEST_ACTIVITY);
     }
     getDefaultLayout() {
         return this.isMediaChannel() || this.isGameInvitesChannel()

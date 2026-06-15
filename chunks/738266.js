@@ -2018,19 +2018,20 @@ class lE extends i.PureComponent {
                       ],
                   })
                 : null,
-            E = e.isForumLikeChannel()
-                ? (0, n.jsx)(tG.l, {
-                      selectionMode: "single",
-                      label: eH.intl.string(eH.t.gePre2),
-                      description: eH.intl.string(eH.t["165cVX"]),
-                      options: [
-                          { id: "activity", label: eH.intl.string(eH.t.ElZtzj), value: tI.T.LATEST_ACTIVITY },
-                          { id: "creation", label: eH.intl.string(eH.t.w28f3F), value: tI.T.CREATION_DATE },
-                      ],
-                      value: e.getDefaultSortOrder(),
-                      onSelectionChange: this.handleChangeDefaultSortOrder,
-                  })
-                : null,
+            E =
+                e.isForumLikeChannel() && !e.isGameInvitesChannel()
+                    ? (0, n.jsx)(tG.l, {
+                          selectionMode: "single",
+                          label: eH.intl.string(eH.t.gePre2),
+                          description: eH.intl.string(eH.t["165cVX"]),
+                          options: [
+                              { id: "activity", label: eH.intl.string(eH.t.ElZtzj), value: tI.T.LATEST_ACTIVITY },
+                              { id: "creation", label: eH.intl.string(eH.t.w28f3F), value: tI.T.CREATION_DATE },
+                          ],
+                          value: e.getDefaultSortOrder(),
+                          onSelectionChange: this.handleChangeDefaultSortOrder,
+                      })
+                    : null,
             v = e.isForumLikeChannel()
                 ? (0, n.jsx)(tG.l, {
                       selectionMode: "single",
