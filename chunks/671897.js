@@ -373,6 +373,10 @@ function Q(e) {
                                     fillStyles: { backgroundColor: u.A.colors.WHITE.css },
                                     orientation: "horizontal",
                                     "aria-label": k.intl.string(z.default.XiLvuG),
+                                    getAriaValueText: (e) =>
+                                        k.intl.formatToPlainString(z.default["5L6uDs"], {
+                                            percent: Math.round(100 * e),
+                                        }),
                                 }),
                             }),
                         ],
