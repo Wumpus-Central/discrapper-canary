@@ -1,38 +1,39 @@
-n.d(t, { A: () => x });
+"use strict";
+n.d(t, { A: () => g });
 var i = n(627968),
-    l = n(64700),
+    r = n(64700),
     s = n(17928),
     a = n(43105),
-    r = n(403581),
-    o = n(793574),
+    o = n(403581),
+    l = n(793574),
     u = n(688810),
     c = n(532794),
     d = n(181079),
-    h = n(313281),
-    m = n(49999),
-    p = n(788868),
-    f = n(335993),
-    g = n(375708),
-    A = n(988572);
-function x(e) {
+    _ = n(313281),
+    h = n(49999),
+    f = n(788868),
+    p = n(335993),
+    E = n(375708),
+    m = n(988572);
+function g(e) {
     let { targetElementRef: t, markMenuItemPopoverAsDismissed: n } = e,
-        [x, C] = l.useState("top"),
-        E = l.useRef(null),
-        v = l.useRef(null),
-        { hasAccess: T } = (0, h.TW)("FavoritesOnboardingMenuItemPopover"),
-        { analyticsLocations: j } = (0, u.Ay)(o.A.FAVORITES_GUILD_MENU_ITEM),
-        _ = (0, s.bG)([d.A], () => d.A.hasStoredFavorites());
-    l.useLayoutEffect(() => {
+        [g, A] = r.useState("top"),
+        I = r.useRef(null),
+        T = r.useRef(null),
+        { hasAccess: S } = (0, _.TW)("FavoritesOnboardingMenuItemPopover"),
+        { analyticsLocations: y } = (0, u.Ay)(l.A.FAVORITES_GUILD_MENU_ITEM),
+        N = (0, s.bG)([d.A], () => d.A.hasStoredFavorites());
+    r.useLayoutEffect(() => {
         if (null == t.current) return;
         let e = () => {
-            null == v.current &&
-                (v.current = window.requestAnimationFrame(() => {
-                    (v.current = null),
+            null == T.current &&
+                (T.current = window.requestAnimationFrame(() => {
+                    (T.current = null),
                         (() => {
                             let e = t.current?.getBoundingClientRect();
                             if (null == e) return;
-                            let n = E.current?.getBoundingClientRect().height ?? 0;
-                            C(window.innerHeight - e.top < n ? "bottom" : "top");
+                            let n = I.current?.getBoundingClientRect().height ?? 0;
+                            A(window.innerHeight - e.top < n ? "bottom" : "top");
                         })();
                 }));
         };
@@ -41,31 +42,31 @@ function x(e) {
             window.addEventListener("resize", e),
             window.addEventListener("scroll", e, !0),
             () => {
-                null != v.current && (window.cancelAnimationFrame(v.current), (v.current = null)),
+                null != T.current && (window.cancelAnimationFrame(T.current), (T.current = null)),
                     window.removeEventListener("resize", e),
                     window.removeEventListener("scroll", e, !0);
             }
         );
     }, [t]);
-    let N = l.useCallback(() => {
-            n?.(m.i.TAKE_ACTION), T || (0, c.A)({ subscriptionTier: p.pe.TIER_2, analyticsLocations: j });
-        }, [n, j, T]),
-        S = _ ? f.default.TWuDTt : f.default["25YCHl"];
+    let v = r.useCallback(() => {
+            n?.(h.i.TAKE_ACTION), S || (0, c.A)({ subscriptionTier: f.pe.TIER_2, analyticsLocations: y });
+        }, [n, y, S]),
+        C = N ? p.default.TWuDTt : p.default["25YCHl"];
     return (0, i.jsx)(a.A, {
         targetElementRef: t,
         gradientColor: "nitro-pink",
         position: "right",
         alignmentStrategy: "edge",
-        align: x,
-        caretConfig: { align: "top" === x ? "start" : "end" },
-        popoverRef: E,
+        align: g,
+        caretConfig: { align: "top" === g ? "start" : "end" },
+        popoverRef: I,
         badge: { type: "beta", variant: "expressive" },
-        graphic: { src: A.A, type: "image", aspectRatio: "16/9" },
-        title: g.intl.string(T ? S : f.default.A3ZjbM),
-        body: g.intl.string(T ? f.default.DFjrWw : f.default.qJUI2v),
-        onRequestClose: () => n?.(m.i.USER_DISMISS),
-        actions: T
+        graphic: { src: m.A, type: "image", aspectRatio: "16/9" },
+        title: E.intl.string(S ? C : p.default.A3ZjbM),
+        body: E.intl.string(S ? p.default.DFjrWw : p.default.qJUI2v),
+        onRequestClose: () => n?.(h.i.USER_DISMISS),
+        actions: S
             ? void 0
-            : [{ icon: r.t, text: g.intl.string(f.default["avps/2"]), onClick: () => N(), variant: "expressive" }],
+            : [{ icon: o.t, text: E.intl.string(p.default["avps/2"]), onClick: () => v(), variant: "expressive" }],
     });
 }

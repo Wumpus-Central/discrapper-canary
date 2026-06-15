@@ -1,10 +1,11 @@
-l.d(t, { h: () => s });
-var a = l(627968);
-l(64700);
-var r = l(503698),
-    n = l.n(r),
-    i = l(780479);
-let s = (e) => {
-    let { children: t, className: l, isVisible: r = !0 } = e;
-    return (0, a.jsx)("div", { className: n()(i.n, { [i.z]: r }, l), children: t });
+"use strict";
+n.d(t, { h: () => o });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(780479);
+let o = (e) => {
+    let { children: t, className: n, isVisible: r = !0 } = e;
+    return (0, i.jsx)("div", { className: s()(a.n, { [a.z]: r }, n), children: t });
 };

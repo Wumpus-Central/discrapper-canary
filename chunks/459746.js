@@ -1,42 +1,43 @@
-n.d(t, { A: () => m, w: () => d });
+"use strict";
+n.d(t, { A: () => _, w: () => d });
 var i,
-    l = n(627968),
-    r = n(64700),
+    r = n(627968),
+    s = n(64700),
     a = n(503698),
-    s = n.n(a),
-    o = n(834730),
+    o = n.n(a),
+    l = n(834730),
     u = n(375708),
     c = n(840625),
     d = (((i = {})[(i.SMALL = 0)] = "SMALL"), (i[(i.LARGE = 1)] = "LARGE"), i);
-function m(e) {
+function _(e) {
     let { game: t, size: n, className: i } = e,
-        [a, d] = r.useState(!1),
-        m = t.name,
-        f = null != t.firstReleaseDate ? new Date(t.firstReleaseDate) : null,
-        g = t.getCoverURL();
-    return null == g || a
-        ? (0, l.jsxs)("div", {
-              className: s()(c.N, i),
+        [a, d] = s.useState(!1),
+        _ = t.name,
+        h = null != t.firstReleaseDate ? new Date(t.firstReleaseDate) : null,
+        f = t.getCoverURL();
+    return null == f || a
+        ? (0, r.jsxs)("div", {
+              className: o()(c.N, i),
               children: [
-                  (0, l.jsx)("div", { className: c.j }),
-                  (0, l.jsx)(o.E, {
+                  (0, r.jsx)("div", { className: c.j }),
+                  (0, r.jsx)(l.E, {
                       variant: 1 === n ? "text-md/medium" : "text-xs/medium",
                       color: "always-white",
                       lineClamp: 1 === n ? 4 : 3,
-                      children: m,
+                      children: _,
                   }),
-                  (0, l.jsx)("div", { className: c.j }),
-                  (0, l.jsx)(o.E, {
+                  (0, r.jsx)("div", { className: c.j }),
+                  (0, r.jsx)(l.E, {
                       variant: 1 === n ? "text-sm/normal" : "text-xxs/normal",
                       color: "always-white",
-                      children: null != f ? `(${f?.getFullYear()})` : null,
+                      children: null != h ? `(${h?.getFullYear()})` : null,
                   }),
               ],
           })
-        : (0, l.jsx)("img", {
+        : (0, r.jsx)("img", {
               className: i,
-              src: g,
-              alt: u.intl.formatToPlainString(u.t["3ev90U"], { game: m }),
+              src: f,
+              alt: u.intl.formatToPlainString(u.t["3ev90U"], { game: _ }),
               onError: () => {
                   d(!0);
               },

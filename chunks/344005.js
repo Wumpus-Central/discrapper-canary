@@ -1,72 +1,73 @@
-n.d(t, { oS: () => I, Ay: () => _ }), n(321073);
-var l,
-    a,
-    i = n(64700),
-    r = n(284009),
-    o = n.n(r),
-    u = (((l = {})[(l.GAME_PROFILE_DISABLED = 1)] = "GAME_PROFILE_DISABLED"), l),
-    c =
-        (((a = {})[(a.THRILLER = 0)] = "THRILLER"),
-        (a[(a.SCIENCE_FICTION = 1)] = "SCIENCE_FICTION"),
-        (a[(a.ACTION = 2)] = "ACTION"),
-        (a[(a.HORROR = 3)] = "HORROR"),
-        (a[(a.SURVIVAL = 4)] = "SURVIVAL"),
-        (a[(a.FANTASY = 5)] = "FANTASY"),
-        (a[(a.HISTORICAL = 6)] = "HISTORICAL"),
-        (a[(a.STEALTH = 7)] = "STEALTH"),
-        (a[(a.COMEDY = 8)] = "COMEDY"),
-        (a[(a.BUSINESS = 9)] = "BUSINESS"),
-        (a[(a.DRAMA = 10)] = "DRAMA"),
-        (a[(a.NON_FICTION = 11)] = "NON_FICTION"),
-        (a[(a.KIDS = 12)] = "KIDS"),
-        (a[(a.SANDBOX = 13)] = "SANDBOX"),
-        (a[(a.OPEN_WORLD = 14)] = "OPEN_WORLD"),
-        (a[(a.WARFARE = 15)] = "WARFARE"),
-        (a[(a.EDUCATIONAL = 16)] = "EDUCATIONAL"),
-        (a[(a.MYSTERY = 17)] = "MYSTERY"),
-        (a[(a.PARTY = 18)] = "PARTY"),
-        (a[(a.ROMANCE = 19)] = "ROMANCE"),
-        (a[(a.EROTIC = 20)] = "EROTIC"),
-        a),
-    s = n(665260),
+"use strict";
+n.d(t, { oS: () => g, Ay: () => A }), n(321073);
+var i,
+    r,
+    s = n(64700),
+    a = n(284009),
+    o = n.n(a),
+    l = (((i = {})[(i.GAME_PROFILE_DISABLED = 1)] = "GAME_PROFILE_DISABLED"), i),
+    u =
+        (((r = {})[(r.THRILLER = 0)] = "THRILLER"),
+        (r[(r.SCIENCE_FICTION = 1)] = "SCIENCE_FICTION"),
+        (r[(r.ACTION = 2)] = "ACTION"),
+        (r[(r.HORROR = 3)] = "HORROR"),
+        (r[(r.SURVIVAL = 4)] = "SURVIVAL"),
+        (r[(r.FANTASY = 5)] = "FANTASY"),
+        (r[(r.HISTORICAL = 6)] = "HISTORICAL"),
+        (r[(r.STEALTH = 7)] = "STEALTH"),
+        (r[(r.COMEDY = 8)] = "COMEDY"),
+        (r[(r.BUSINESS = 9)] = "BUSINESS"),
+        (r[(r.DRAMA = 10)] = "DRAMA"),
+        (r[(r.NON_FICTION = 11)] = "NON_FICTION"),
+        (r[(r.KIDS = 12)] = "KIDS"),
+        (r[(r.SANDBOX = 13)] = "SANDBOX"),
+        (r[(r.OPEN_WORLD = 14)] = "OPEN_WORLD"),
+        (r[(r.WARFARE = 15)] = "WARFARE"),
+        (r[(r.EDUCATIONAL = 16)] = "EDUCATIONAL"),
+        (r[(r.MYSTERY = 17)] = "MYSTERY"),
+        (r[(r.PARTY = 18)] = "PARTY"),
+        (r[(r.ROMANCE = 19)] = "ROMANCE"),
+        (r[(r.EROTIC = 20)] = "EROTIC"),
+        r),
+    c = n(665260),
     d = n(311043),
-    p = n(174459),
-    A = n(738250),
+    _ = n(174459),
+    h = n(738250),
     f = n(652215);
-let E = function (e, t) {
+let p = function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            l = arguments.length > 3 ? arguments[3] : void 0;
-        p.default.track(f.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
+            i = arguments.length > 3 ? arguments[3] : void 0;
+        _.default.track(f.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
             game_profile_available: e,
             application_id: t,
             rejection_reason: n,
-            source: l,
+            source: i,
         });
     },
-    h = (e) => {
+    E = (e) => {
         if (null == e) return ["no match"];
         let t = [];
         return (
-            s.Lt(e.gameFlags, u.GAME_PROFILE_DISABLED) && t.push("profile disabled"),
-            e.themes.includes(c.EROTIC) && t.push("nsfw"),
+            c.Lt(e.gameFlags, l.GAME_PROFILE_DISABLED) && t.push("profile disabled"),
+            e.themes.includes(u.EROTIC) && t.push("nsfw"),
             t
         );
     },
-    R = (e) => 0 === h(e).length,
-    I = (e) => R(d.A.getGame(e)),
-    _ = (e) => {
-        let { applicationId: t = "", gameId: n, source: l, trackEntryPointImpression: a = !0 } = e,
-            r = i.useRef(!1),
-            { gameId: u, gameRecord: c, isLoading: s } = (0, A.A)({ applicationId: t, gameId: n }),
-            d = R(c);
+    m = (e) => 0 === E(e).length,
+    g = (e) => m(d.A.getGame(e)),
+    A = (e) => {
+        let { applicationId: t = "", gameId: n, source: i, trackEntryPointImpression: r = !0 } = e,
+            a = s.useRef(!1),
+            { gameId: l, gameRecord: u, isLoading: c } = (0, h.A)({ applicationId: t, gameId: n }),
+            d = m(u);
         return (
-            i.useEffect(() => {
-                if (!r.current && a && !s && null != c) {
-                    o()(null != l, "Cannot track a Game Profile Entry Point Impressions without a source.");
-                    let e = h(c);
-                    E(d, c.id, e, l), (r.current = !0);
+            s.useEffect(() => {
+                if (!a.current && r && !c && null != u) {
+                    o()(null != i, "Cannot track a Game Profile Entry Point Impressions without a source.");
+                    let e = E(u);
+                    p(d, u.id, e, i), (a.current = !0);
                 }
-            }, [c, d, s, l, a]),
-            { shouldOpenGameProfile: d, gameId: u }
+            }, [u, d, c, i, r]),
+            { shouldOpenGameProfile: d, gameId: l }
         );
     };

@@ -1,51 +1,52 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(17928),
-    l = n(228366);
+    r = n(228366);
 let s = !1,
-    r = {},
-    a = new Set(),
-    o = {};
+    a = {},
+    o = new Set(),
+    l = {};
 function u() {
-    o = {};
+    l = {};
 }
-class d extends i.Ay.Store {
+class c extends i.Ay.Store {
     static displayName = "scheduledMessageStore";
     getMessagesPendingDeletion() {
-        return a;
+        return o;
     }
     getScheduledMessagesForInbox() {
-        return r;
+        return a;
     }
     getPendingScheduledMessage(e) {
-        return o[e];
+        return l[e];
     }
     get loading() {
         return s;
     }
 }
-let c = new d(l.h, {
+let d = new c(r.h, {
     SCHEDULED_MESSAGES_CREATE_SUCCESS: function (e) {
         let { channelId: t, scheduledMessageSend: n } = e;
-        (r = { ...r, [n.scheduledMessageId]: n }), (o = { ...o }), delete o[t];
+        (a = { ...a, [n.scheduledMessageId]: n }), (l = { ...l }), delete l[t];
     },
     SCHEDULED_MESSAGES_UPDATE_SUCCESS: function (e) {
         let { scheduledMessageSend: t } = e;
-        r = { ...r, [t.scheduledMessageId]: t };
+        a = { ...a, [t.scheduledMessageId]: t };
     },
     SCHEDULED_MESSAGES_DELETE_START: function (e) {
         let { scheduledMessageId: t } = e;
-        if (a.has(t)) return !1;
-        (a = new Set(a)).add(t);
+        if (o.has(t)) return !1;
+        (o = new Set(o)).add(t);
     },
     SCHEDULED_MESSAGES_DELETE_SUCCESS: function (e) {
         let { scheduledMessageId: t } = e;
-        if (!a.has(t)) return !1;
-        (a = new Set(a)).delete(t), (r = { ...r }), delete r[t];
+        if (!o.has(t)) return !1;
+        (o = new Set(o)).delete(t), (a = { ...a }), delete a[t];
     },
     SCHEDULED_MESSAGES_DELETE_FAILURE: function (e) {
         let { scheduledMessageId: t } = e;
-        if (!a.has(t)) return !1;
-        (a = new Set(a)).delete(t);
+        if (!o.has(t)) return !1;
+        (o = new Set(o)).delete(t);
     },
     FETCH_SCHEDULED_MESSAGES: function (e) {
         let {} = e;
@@ -53,7 +54,7 @@ let c = new d(l.h, {
     },
     FETCH_SCHEDULED_MESSAGES_SUCCESS: function (e) {
         let { messages: t } = e;
-        for (let e of ((r = {}), t)) r[e.scheduledMessageId] = e;
+        for (let e of ((a = {}), t)) a[e.scheduledMessageId] = e;
         s = !1;
     },
     FETCH_SCHEDULED_MESSAGES_FAILURE: function (e) {
@@ -62,11 +63,11 @@ let c = new d(l.h, {
     },
     CREATE_PENDING_SCHEDULED_MESSAGE: function (e) {
         let { channelId: t, scheduledTimestamp: n } = e;
-        o = { ...o, [t]: { channelId: t, scheduledTimestamp: n } };
+        l = { ...l, [t]: { channelId: t, scheduledTimestamp: n } };
     },
     DELETE_PENDING_SCHEDULED_MESSAGE: function (e) {
         let { channelId: t } = e;
-        (o = { ...o }), delete o[t];
+        (l = { ...l }), delete l[t];
     },
     LOGOUT: u,
     CONNECTION_OPEN: u,

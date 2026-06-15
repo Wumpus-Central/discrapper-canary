@@ -1,45 +1,46 @@
-t.d(e, { H: () => n });
-var s = t(627968);
-t(64700);
-var a = t(661531),
-    i = t(996682),
-    r = t(27989);
-let n = (l) => {
+"use strict";
+n.d(t, { H: () => o });
+var i = n(627968);
+n(64700);
+var r = n(661531),
+    s = n(996682),
+    a = n(27989);
+let o = (e) => {
     let {
-            size: e = "md",
-            width: t,
-            height: n,
-            color: c = a.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: h = "",
-            ...d
-        } = l,
-        v = (0, r.J)(e),
-        o = v?.width ?? t,
-        f = v?.height ?? n;
-    return (0, s.jsxs)("svg", {
-        ...(0, i.A)(d),
+            size: t = "md",
+            width: n,
+            height: o,
+            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
+            ...c
+        } = e,
+        d = (0, a.J)(t),
+        _ = d?.width ?? n,
+        h = d?.height ?? o;
+    return (0, i.jsxs)("svg", {
+        ...(0, s.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: f,
+        width: _,
+        height: h,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, s.jsx)("path", {
-                fill: "string" == typeof c ? c : c.css,
+            (0, i.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
                 d: "M15.68 12c1.2 0 2.32.36 3.23.98a5.45 5.45 0 0 1 2.18 6.2c-.1.33-.08.68.1.96l.83 1.32a1 1 0 0 1-.84 1.54h-5.5A5.6 5.6 0 0 1 10 17.5a5.6 5.6 0 0 1 5.68-5.5Z",
-                className: h,
+                className: u,
             }),
-            (0, s.jsx)("path", {
-                fill: "string" == typeof c ? c : c.css,
+            (0, i.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
                 d: "M11 2c.4 0 .79.02 1.17.07.69.08.99.86.69 1.49l-.07.14-.19.45a2.35 2.35 0 0 0 0 1.7c.17.44.67 1.59 1.62 2.66.39.44.05 1.6-.52 1.74l-.43.13A7.52 7.52 0 0 0 8 17.5a.5.5 0 0 1-.48.5h-5.1a1 1 0 0 1-.71-1.7l1.51-1.52c.18-.18.2-.46.06-.67A7.31 7.31 0 0 1 2 10c0-4.42 4.03-8 9-8ZM19 3.5c.08 0 .12.1.09.17a.94.94 0 0 0 1.24 1.25c.07-.04.17 0 .17.08A1.5 1.5 0 1 1 19 3.5Z",
-                className: h,
+                className: u,
             }),
-            (0, s.jsx)("path", {
-                fill: "string" == typeof c ? c : c.css,
+            (0, i.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
                 fillRule: "evenodd",
                 d: "M19 1.25c2.96 0 4.28 2.96 4.54 3.62.03.09.03.17 0 .26-.26.66-1.58 3.62-4.54 3.62h-.27c-2.77-.18-4.02-2.98-4.27-3.62a.35.35 0 0 1 0-.26c.26-.66 1.58-3.62 4.54-3.62Zm0 1.25c-1.01 0-1.77.5-2.35 1.14-.42.48-.71 1-.88 1.36.17.35.46.88.88 1.36A3.08 3.08 0 0 0 19 7.5c1.01 0 1.77-.5 2.35-1.14.42-.48.71-1 .88-1.36a5.81 5.81 0 0 0-.88-1.36A3.08 3.08 0 0 0 19 2.5Z",
                 clipRule: "evenodd",
-                className: h,
+                className: u,
             }),
         ],
     });

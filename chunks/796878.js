@@ -1,28 +1,29 @@
-n.d(t, { A: () => d });
-var a = n(627968);
+"use strict";
+n.d(t, { A: () => l });
+var i = n(627968);
 n(64700);
-var o = n(877624),
-    r = n(459192),
-    l = n(549996),
-    i = n(807098);
-function d(e) {
+var r = n(877624),
+    s = n(459192),
+    a = n(549996),
+    o = n(807098);
+function l(e) {
     let { children: t } = e,
-        n = (0, l.c)(o.C.PREMIUM_TAB_TOOLTIP),
-        d =
+        n = (0, a.c)(r.C.PREMIUM_TAB_TOOLTIP),
+        l =
             null != n && "premiumTabTooltip" === n.properties.properties.oneofKind
                 ? n.properties.properties.premiumTabTooltip
                 : null,
-        s = (0, i.T)(d?.asset);
-    return null == d
+        u = (0, o.T)(l?.asset);
+    return null == l
         ? t
-        : (0, a.jsx)(r.u, {
-              title: d.header,
-              body: d.body,
-              asset: null != s ? (0, a.jsx)("img", { src: s, alt: "" }) : void 0,
+        : (0, i.jsx)(s.u, {
+              title: l.header,
+              body: l.body,
+              asset: null != u ? (0, i.jsx)("img", { src: u, alt: "" }) : void 0,
               assetSize: 80,
               padding: "lg",
               position: "right",
               asContainer: !0,
-              children: (0, a.jsx)("div", { children: t }),
+              children: (0, i.jsx)("div", { children: t }),
           });
 }

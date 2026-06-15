@@ -1,39 +1,40 @@
-n.d(t, { Ay: () => c, Bu: () => o, OJ: () => u, XY: () => s });
-var r = n(64700),
-    l = n(771253),
-    a = n(876230),
-    i = n(614269);
-let s = 8e5,
-    u = 20,
-    o = 30;
+"use strict";
+n.d(t, { Ay: () => c, Bu: () => u, OJ: () => l, XY: () => o });
+var i = n(64700),
+    r = n(771253),
+    s = n(876230),
+    a = n(614269);
+let o = 8e5,
+    l = 20,
+    u = 30;
 function c(e, t) {
-    let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: m, crossOrigin: h = "anonymous" } = t,
-        f = r.useRef(null),
-        p = r.useRef(c);
+    let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: _, crossOrigin: h = "anonymous" } = t,
+        f = i.useRef(null),
+        p = i.useRef(c);
     p.current = c;
-    let v = r.useRef(d),
-        g = r.useRef(m),
-        x = r.useRef(h);
-    (x.current = h),
-        r.useEffect(() => {
-            v.current = d;
+    let E = i.useRef(d),
+        m = i.useRef(_),
+        g = i.useRef(h);
+    (g.current = h),
+        i.useEffect(() => {
+            E.current = d;
         }, [d]),
-        r.useEffect(() => {
-            g.current = m;
-        }, [m]);
-    let E = i.u.isHlsUrl(n) && l.Ay.isSupported();
+        i.useEffect(() => {
+            m.current = _;
+        }, [_]);
+    let A = a.u.isHlsUrl(n) && r.Ay.isSupported();
     return (
-        r.useEffect(() => {
-            if (!E || null == n || null == e.current) return;
+        i.useEffect(() => {
+            if (!A || null == n || null == e.current) return;
             let t = e.current,
-                r = new l.Ay({
-                    backBufferLength: u,
-                    maxBufferLength: o,
+                i = new r.Ay({
+                    backBufferLength: l,
+                    maxBufferLength: u,
                     startPosition: p.current,
                     startFragPrefetch: !0,
                     startLevel: -1,
                     xhrSetup: (e) => {
-                        e.withCredentials = "use-credentials" === x.current;
+                        e.withCredentials = "use-credentials" === g.current;
                     },
                     fetchSetup: (e, t) => (
                         (t.credentials = (function (e) {
@@ -44,72 +45,72 @@ function c(e, t) {
                                 case null:
                                     return "same-origin";
                             }
-                        })(x.current)),
+                        })(g.current)),
                         new Request(e.url, t)
                     ),
                 });
-            (f.current = r), g.current?.(r);
-            let i = 0,
+            (f.current = i), m.current?.(i);
+            let a = 0,
                 c = () => {
-                    r.mainForwardBufferInfo?.len === 0 &&
-                        r.trigger(l.Ay.Events.BUFFER_FLUSHING, {
+                    i.mainForwardBufferInfo?.len === 0 &&
+                        i.trigger(r.Ay.Events.BUFFER_FLUSHING, {
                             startOffset: t.currentTime,
                             endOffset: 1 / 0,
                             type: "video",
                         });
                 };
             return (
-                r.on(l.Ay.Events.FRAG_LOADING, () => {
-                    r.config.minAutoBitrate !== s && (r.config.minAutoBitrate = s);
+                i.on(r.Ay.Events.FRAG_LOADING, () => {
+                    i.config.minAutoBitrate !== o && (i.config.minAutoBitrate = o);
                 }),
-                r.on(l.Ay.Events.ERROR, (e, t) => {
+                i.on(r.Ay.Events.ERROR, (e, t) => {
                     if (
-                        (v.current?.(
+                        (E.current?.(
                             (function (e) {
                                 switch (e) {
-                                    case l.Ay.ErrorTypes.NETWORK_ERROR:
-                                        return a.SB.HLS_NETWORK_ERROR;
-                                    case l.Ay.ErrorTypes.MEDIA_ERROR:
-                                        return a.SB.HLS_MEDIA_ERROR;
-                                    case l.Ay.ErrorTypes.MUX_ERROR:
-                                        return a.SB.HLS_MUX_ERROR;
-                                    case l.Ay.ErrorTypes.KEY_SYSTEM_ERROR:
-                                        return a.SB.HLS_KEY_SYSTEM_ERROR;
+                                    case r.Ay.ErrorTypes.NETWORK_ERROR:
+                                        return s.SB.HLS_NETWORK_ERROR;
+                                    case r.Ay.ErrorTypes.MEDIA_ERROR:
+                                        return s.SB.HLS_MEDIA_ERROR;
+                                    case r.Ay.ErrorTypes.MUX_ERROR:
+                                        return s.SB.HLS_MUX_ERROR;
+                                    case r.Ay.ErrorTypes.KEY_SYSTEM_ERROR:
+                                        return s.SB.HLS_KEY_SYSTEM_ERROR;
                                     default:
-                                        return a.SB.HLS_OTHER_ERROR;
+                                        return s.SB.HLS_OTHER_ERROR;
                                 }
                             })(t.type),
                             { errorDetails: t.details, fatal: t.fatal },
                         ),
                         t.fatal)
                     ) {
-                        if (i >= 3) {
-                            r.destroy(), (f.current = null), g.current?.(null);
+                        if (a >= 3) {
+                            i.destroy(), (f.current = null), m.current?.(null);
                             return;
                         }
-                        switch ((i++, t.type)) {
-                            case l.Ay.ErrorTypes.NETWORK_ERROR:
-                                r.startLoad();
+                        switch ((a++, t.type)) {
+                            case r.Ay.ErrorTypes.NETWORK_ERROR:
+                                i.startLoad();
                                 break;
-                            case l.Ay.ErrorTypes.MEDIA_ERROR:
-                                r.recoverMediaError();
+                            case r.Ay.ErrorTypes.MEDIA_ERROR:
+                                i.recoverMediaError();
                                 break;
                             default:
-                                r.destroy(), (f.current = null), g.current?.(null);
+                                i.destroy(), (f.current = null), m.current?.(null);
                         }
                     }
                 }),
                 t.addEventListener("seeking", c),
-                r.loadSource(n),
-                r.attachMedia(t),
+                i.loadSource(n),
+                i.attachMedia(t),
                 () => {
                     t.removeEventListener("seeking", c),
-                        f.current === r && (r.destroy(), (f.current = null), g.current?.(null)),
+                        f.current === i && (i.destroy(), (f.current = null), m.current?.(null)),
                         t.removeAttribute("src"),
                         t.load();
                 }
             );
-        }, [E, n, e]),
-        { isHlsActive: E, hlsRef: f }
+        }, [A, n, e]),
+        { isHlsActive: A, hlsRef: f }
     );
 }

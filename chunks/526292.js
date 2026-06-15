@@ -1,100 +1,101 @@
-n.d(t, { Bv: () => I, ar: () => N, f9: () => _, g5: () => T, k0: () => h, k5: () => m, nf: () => p });
-var l = n(64700),
-    i = n(989349),
-    a = n.n(i),
-    r = n(17928),
+"use strict";
+n.d(t, { Bv: () => T, ar: () => E, f9: () => I, g5: () => A, k0: () => S, k5: () => m, nf: () => g });
+var i = n(64700),
+    r = n(989349),
+    s = n.n(r),
+    a = n(17928),
     o = n(155718),
-    s = n(166403),
-    c = n(89366),
-    u = n(881489),
+    l = n(166403),
+    u = n(89366),
+    c = n(881489),
     d = n(945960),
-    C = n(504836),
-    A = n(422936),
-    g = n(234419),
-    f = n(788868);
-function N() {
-    let e = (0, g.V)(),
-        t = (0, c.QQ)(),
-        n = (0, A.O)(),
-        l = (0, A.p)(),
-        i = m();
-    return null != e || t || null != n || null != l || i;
+    _ = n(504836),
+    h = n(422936),
+    f = n(234419),
+    p = n(788868);
+function E() {
+    let e = (0, f.V)(),
+        t = (0, u.QQ)(),
+        n = (0, h.O)(),
+        i = (0, h.p)(),
+        r = m();
+    return null != e || t || null != n || null != i || r;
 }
 let m = () => {
-        let e = (0, r.bG)([s.A], () => s.A.getPremiumTypeSubscription()),
+        let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = e?.metadata?.active_discount_expires_at;
-        return null != t && a()(Date.now()) <= a()(t);
+        return null != t && s()(Date.now()) <= s()(t);
     },
-    p = () => {
-        let e = (0, r.bG)([s.A], () => s.A.getPremiumTypeSubscription()),
+    g = () => {
+        let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = e?.metadata?.active_discount_id;
         switch (t) {
-            case f.q:
-            case f.lj:
+            case p.q:
+            case p.lj:
                 return { duration: 1, percentage: 30, discountId: t };
-            case f.EG:
-            case f.TU:
-            case f.KG:
+            case p.EG:
+            case p.TU:
+            case p.KG:
                 return { duration: 3, percentage: 30, discountId: t };
-            case f.HF:
+            case p.HF:
                 return { duration: 1, percentage: 40, discountId: t };
-            case f.BR:
+            case p.BR:
                 return { duration: 1, percentage: 20, discountId: t };
-            case f.CW:
+            case p.CW:
                 return { duration: 1, percentage: 25, discountId: t };
-            case f.UX:
+            case p.UX:
                 return { duration: 12, percentage: 20, discountId: t };
-            case f.RG:
+            case p.RG:
                 return { duration: 12, percentage: 30, discountId: t };
-            case f.V2:
+            case p.V2:
                 return { duration: 1, percentage: 40, discountId: t };
-            case f.xH:
+            case p.xH:
                 return { duration: 3, percentage: 30, discountId: t };
             default:
                 return;
         }
     },
-    T = (e) => {
-        let [t, n] = l.useState(!1),
-            [i, a] = l.useState(!1),
-            [r, o] = l.useState(null);
-        if (e) return { churnUserDiscountOffer: r, isFetchingChurnDiscountOffer: i };
-        let s = () => {
-            n(!0), a(!1);
+    A = (e) => {
+        let [t, n] = i.useState(!1),
+            [r, s] = i.useState(!1),
+            [a, o] = i.useState(null);
+        if (e) return { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: r };
+        let l = () => {
+            n(!0), s(!1);
         };
         return (
-            i ||
+            r ||
                 t ||
-                (a(!0),
+                (s(!0),
                 (0, d.qz)()
                     .then((e) => {
-                        o(e), s();
+                        o(e), l();
                     })
                     .catch((e) => {
-                        s();
+                        l();
                     })),
-            { churnUserDiscountOffer: r, isFetchingChurnDiscountOffer: i }
+            { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: r }
         );
     },
-    _ = () => {
-        let e = (0, r.bG)([s.A], () => s.A.getPremiumTypeSubscription()),
+    I = () => {
+        let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = m(),
-            n = (0, C.Z)({ location: "churn_offer" }),
-            l = null !== e && e.hasPremiumNitroMonthly,
-            i = !!e?.hasActiveTrial;
-        return l && !t && (!i || n);
+            n = (0, _.Z)({ location: "churn_offer" }),
+            i = null !== e && e.hasPremiumNitroMonthly,
+            r = !!e?.hasActiveTrial;
+        return i && !t && (!r || n);
     },
-    I = (e) => {
+    T = (e) => {
         for (let t of e.invoiceItems) {
             let e = t.discounts.find((e) => e.type === o.iS.SUBSCRIPTION_PLAN);
             if (null != e)
                 switch (e.discount_id) {
-                    case f.q:
+                    case p.q:
                         return { duration: 1, percentage: e.percentage_amount, discountId: e.discount_id };
-                    case f.EG:
+                    case p.EG:
                         return { duration: 3, percentage: e.percentage_amount, discountId: e.discount_id };
                 }
         }
         return null;
     },
-    h = () => (0, u.ds)();
+    S = () => (0, c.ds)();

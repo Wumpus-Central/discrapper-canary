@@ -1,21 +1,22 @@
-a.d(t, { $p: () => d, A: () => m, FZ: () => c, XQ: () => o, xf: () => u });
-var s,
-    i = a(64700),
-    n = a(688810),
-    r = a(174459),
-    l = a(652215);
-let c = "xbox",
-    o = "thirdPartyPartnerPerk",
-    d = "third_party_learn_more_xbox";
-var u = (((s = {}).CLAIM = "claim"), (s.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (s.CANCEL = "cancel"), s);
-function m() {
-    let { analyticsLocations: e } = (0, n.Ay)();
-    return i.useCallback(
-        (t, a) => {
-            r.default.track(l.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
-                partner: c,
+"use strict";
+n.d(t, { $p: () => c, A: () => _, FZ: () => l, XQ: () => u, xf: () => d });
+var i,
+    r = n(64700),
+    s = n(688810),
+    a = n(174459),
+    o = n(652215);
+let l = "xbox",
+    u = "thirdPartyPartnerPerk",
+    c = "third_party_learn_more_xbox";
+var d = (((i = {}).CLAIM = "claim"), (i.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (i.CANCEL = "cancel"), i);
+function _() {
+    let { analyticsLocations: e } = (0, s.Ay)();
+    return r.useCallback(
+        (t, n) => {
+            a.default.track(o.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                partner: l,
                 cta_type: t,
-                url: a ?? null,
+                url: n ?? null,
                 location_stack: e,
             });
         },

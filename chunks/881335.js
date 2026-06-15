@@ -1,9 +1,10 @@
-r.d(n, { A: () => s });
-var i = r(729937),
-    a = r(981616),
-    e = r(285933),
-    l = r(227005);
-async function s(t, n, r) {
-    let { hasSpotifyAccount: s, activity: u, user: c } = t;
-    (0, l.A)(s) && null != u && null != u.sync_id && (await (0, a.dM)(), i.ZH(u, c.id), (0, e.A)(n, c, u, r));
+"use strict";
+n.d(t, { A: () => o });
+var i = n(729937),
+    r = n(981616),
+    s = n(285933),
+    a = n(227005);
+async function o(e, t, n) {
+    let { hasSpotifyAccount: o, activity: l, user: u } = e;
+    (0, a.A)(o) && null != l && null != l.sync_id && (await (0, r.dM)(), i.ZH(l, u.id), (0, s.A)(t, u, l, n));
 }

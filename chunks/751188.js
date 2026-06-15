@@ -1,17 +1,18 @@
-n.d(t, { $: () => A });
-var l = n(64700),
-    i = n(532794),
-    a = n(561794),
-    r = n(627968),
+"use strict";
+n.d(t, { $: () => h });
+var i = n(64700),
+    r = n(532794),
+    s = n(561794),
+    a = n(627968),
     o = n(192308),
-    s = n(945810);
-let c = (0, s.mj)({
+    l = n(945810);
+let u = (0, l.mj)({
         name: "2026-02-gifting-modal-redesign",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    u = (0, s.mj)({
+    c = (0, l.mj)({
         name: "2026-02-non-dm-gifting-modal-redesign",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -20,12 +21,12 @@ let c = (0, s.mj)({
 function d(e) {
     let {
         giftRecipient: t,
-        onClose: l,
-        analyticsLocations: i,
-        analyticsLocation: a,
-        analyticsObject: s,
-        giftMessage: c,
-        giftingOrigin: u,
+        onClose: i,
+        analyticsLocations: r,
+        analyticsLocation: s,
+        analyticsObject: l,
+        giftMessage: u,
+        giftingOrigin: c,
     } = e;
     return (0, o.openModalLazy)(
         async () => {
@@ -298,65 +299,65 @@ function d(e) {
                 n.e("13081"),
             ]).then(n.bind(n, 631808));
             return (n) =>
-                (0, r.jsx)(e, {
+                (0, a.jsx)(e, {
                     ...n,
                     giftRecipient: t,
-                    analyticsLocations: i,
-                    analyticsLocation: a,
-                    analyticsObject: s,
-                    giftMessage: c,
-                    giftingOrigin: u,
+                    analyticsLocations: r,
+                    analyticsLocation: s,
+                    analyticsObject: l,
+                    giftMessage: u,
+                    giftingOrigin: c,
                 });
         },
-        { modalKey: null != t ? `gift-selection-modal-${t.id}` : "gift-selection-modal", onCloseCallback: l },
+        { modalKey: null != t ? `gift-selection-modal-${t.id}` : "gift-selection-modal", onCloseCallback: i },
     );
 }
-var C = n(788868);
-function A(e) {
+var _ = n(788868);
+function h(e) {
     let {
             giftRecipient: t,
-            analyticsLocations: s,
-            analyticsObject: A,
-            wishlistAnalyticsObject: g,
-            premiumAnalyticsObject: f,
-            analyticsLocation: N,
+            analyticsLocations: l,
+            analyticsObject: h,
+            wishlistAnalyticsObject: f,
+            premiumAnalyticsObject: p,
+            analyticsLocation: E,
             giftMessage: m,
-            location: p,
+            location: g,
         } = e,
-        { enabled: T } = c.useConfig({ location: p }),
-        { enabled: _ } = u.useConfig({ location: p }),
-        I = (0, a.tA)({ isGift: !0, giftRecipient: t }),
-        h = T && null != t,
-        b = _ && null == t,
-        R = h || b,
-        O = I && null != t;
+        { enabled: A } = u.useConfig({ location: g }),
+        { enabled: I } = c.useConfig({ location: g }),
+        T = (0, s.tA)({ isGift: !0, giftRecipient: t }),
+        S = A && null != t,
+        y = I && null == t,
+        N = S || y,
+        v = T && null != t;
     return {
-        openGiftModal: l.useCallback(() => {
-            h && null != t
+        openGiftModal: i.useCallback(() => {
+            S && null != t
                 ? d({
                       giftRecipient: t,
-                      analyticsLocations: s,
-                      analyticsLocation: N,
-                      analyticsObject: g ?? A,
+                      analyticsLocations: l,
+                      analyticsLocation: E,
+                      analyticsObject: f ?? h,
                       giftMessage: m,
                   })
-                : b
+                : y
                   ? d({
-                        analyticsLocations: s,
-                        analyticsLocation: N,
-                        analyticsObject: g ?? A,
+                        analyticsLocations: l,
+                        analyticsLocation: E,
+                        analyticsObject: f ?? h,
                         giftMessage: m,
-                        giftingOrigin: C.vQ.GUILD_CHANNEL,
+                        giftingOrigin: _.vQ.GUILD_CHANNEL,
                     })
-                  : O && null != t
+                  : v && null != t
                     ? (function (e) {
                           let {
                               giftRecipient: t,
-                              onClose: l,
-                              analyticsLocations: i,
-                              analyticsLocation: a,
-                              analyticsObject: s,
-                              giftMessage: c,
+                              onClose: i,
+                              analyticsLocations: r,
+                              analyticsLocation: s,
+                              analyticsObject: l,
+                              giftMessage: u,
                           } = e;
                           (0, o.openModalLazy)(
                               async () => {
@@ -631,35 +632,35 @@ function A(e) {
                                       n.e("67730"),
                                   ]).then(n.bind(n, 746793));
                                   return (n) =>
-                                      (0, r.jsx)(e, {
+                                      (0, a.jsx)(e, {
                                           ...n,
                                           giftRecipient: t,
-                                          analyticsLocations: i,
-                                          analyticsLocation: a,
-                                          analyticsObject: s,
-                                          giftMessage: c,
+                                          analyticsLocations: r,
+                                          analyticsLocation: s,
+                                          analyticsObject: l,
+                                          giftMessage: u,
                                       });
                               },
-                              { modalKey: `gift-option-select-modal-${t.id}`, onCloseCallback: l },
+                              { modalKey: `gift-option-select-modal-${t.id}`, onCloseCallback: i },
                           );
                       })({
                           giftRecipient: t,
-                          analyticsLocations: s,
-                          analyticsLocation: N,
-                          analyticsObject: g ?? A,
+                          analyticsLocations: l,
+                          analyticsLocation: E,
+                          analyticsObject: f ?? h,
                           giftMessage: m,
                       })
-                    : (0, i.A)({
+                    : (0, r.A)({
                           isGift: !0,
                           giftRecipient: t ?? void 0,
                           initialPlanId: null,
-                          analyticsLocations: s,
-                          analyticsLocation: N,
-                          analyticsObject: f ?? A,
+                          analyticsLocations: l,
+                          analyticsLocation: E,
+                          analyticsObject: p ?? h,
                           giftMessage: m,
                       });
-        }, [h, b, O, t, s, N, A, g, f, m]),
-        shouldShowWishlistModal: O,
-        shouldShowGiftSelectionModal: R,
+        }, [S, y, v, t, l, E, h, f, p, m]),
+        shouldShowWishlistModal: v,
+        shouldShowGiftSelectionModal: N,
     };
 }

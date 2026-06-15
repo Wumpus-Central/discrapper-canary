@@ -1,42 +1,43 @@
-a.d(t, { r: () => m });
-var s = a(64700),
-    i = a(17928),
-    n = a(469778),
-    r = a(276666),
-    l = a(545600),
-    c = a(777376),
-    o = a(674567),
-    d = a(788868);
-let u = {
-    [c.gR.INITIAL]: c.p1.CLAIM_IN_PROGRESS,
-    [c.gR.AWAITING_ACTIVATION]: c.p1.CLAIM_IN_PROGRESS,
-    [c.gR.ACTIVATED]: c.p1.CLAIMED,
-    [c.gR.FAILED]: c.p1.NOT_CLAIMED,
-    [c.gR.EXPIRED]: c.p1.NOT_CLAIMED,
-    [c.gR.CANCELLATION_PENDING]: c.p1.CANCELLATION_IN_PROGRESS,
+"use strict";
+n.d(t, { r: () => _ });
+var i = n(64700),
+    r = n(17928),
+    s = n(469778),
+    a = n(276666),
+    o = n(545600),
+    l = n(777376),
+    u = n(674567),
+    c = n(788868);
+let d = {
+    [l.gR.INITIAL]: l.p1.CLAIM_IN_PROGRESS,
+    [l.gR.AWAITING_ACTIVATION]: l.p1.CLAIM_IN_PROGRESS,
+    [l.gR.ACTIVATED]: l.p1.CLAIMED,
+    [l.gR.FAILED]: l.p1.NOT_CLAIMED,
+    [l.gR.EXPIRED]: l.p1.NOT_CLAIMED,
+    [l.gR.CANCELLATION_PENDING]: l.p1.CANCELLATION_IN_PROGRESS,
 };
-function m() {
-    let e = (0, o.V)(),
-        t = (0, i.bG)([n.A], () => n.A.isFetchedForApplication(d.tv)),
-        { activationStatus: a, activationRequestState: m } = (0, i.cf)([l.A], () => ({
-            activationStatus: l.A.getActivationStatus(),
-            activationRequestState: l.A.getRequestState(),
+function _() {
+    let e = (0, u.V)(),
+        t = (0, r.bG)([s.A], () => s.A.isFetchedForApplication(c.tv)),
+        { activationStatus: n, activationRequestState: _ } = (0, r.cf)([o.A], () => ({
+            activationStatus: o.A.getActivationStatus(),
+            activationRequestState: o.A.getRequestState(),
         })),
-        A = t && (null != a ? a.state === c.gR.CANCELLATION_PENDING : m === c.Px.NOT_FETCHED);
+        h = t && (null != n ? n.state === l.gR.CANCELLATION_PENDING : _ === l.Px.NOT_FETCHED);
     return (
-        s.useEffect(() => {
-            e === o.s.NITRO && A && (0, r.x6)(c.n9.XGPP);
-        }, [e, A]),
+        i.useEffect(() => {
+            e === u.s.NITRO && h && (0, a.x6)(l.n9.XGPP);
+        }, [e, h]),
         (function (e) {
-            let { activationStatus: t, activationRequestState: a } = e,
-                s = a === c.Px.FETCHING || a === c.Px.CANCELLING;
-            return a === c.Px.NOT_FETCHED || a === c.Px.FETCHING
-                ? { status: c.p1.NOT_CLAIMED, redirect: null, requestInProgress: !0 }
+            let { activationStatus: t, activationRequestState: n } = e,
+                i = n === l.Px.FETCHING || n === l.Px.CANCELLING;
+            return n === l.Px.NOT_FETCHED || n === l.Px.FETCHING
+                ? { status: l.p1.NOT_CLAIMED, redirect: null, requestInProgress: !0 }
                 : {
-                      status: null != t ? u[t.state] : c.p1.NOT_CLAIMED,
+                      status: null != t ? d[t.state] : l.p1.NOT_CLAIMED,
                       redirect: t?.redirect ?? null,
-                      requestInProgress: s,
+                      requestInProgress: i,
                   };
-        })({ activationStatus: a, activationRequestState: m })
+        })({ activationStatus: n, activationRequestState: _ })
     );
 }

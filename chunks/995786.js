@@ -1,38 +1,39 @@
-n.d(t, { s6: () => y, W5: () => m, Vj: () => S, E5: () => U, nV: () => R, wu: () => D, H0: () => T, G6: () => N });
-var a = n(636537),
+"use strict";
+n.d(t, { s6: () => I, W5: () => C, Vj: () => S, E5: () => v, nV: () => y, wu: () => R, H0: () => N, G6: () => T });
+var i = n(636537),
     r = n(228366),
-    i = n(95561),
-    o = n(71393),
-    l = n(576705),
-    d = n(403362),
-    s = n(935208),
-    _ = n(615550),
-    E = n(735438);
-function u(e) {
+    s = n(95561),
+    a = n(71393),
+    o = n(576705),
+    l = n(403362),
+    u = n(935208),
+    c = n(615550),
+    d = n(735438);
+function _(e) {
     return null == e
         ? e
         : Object.keys(e).reduce((t, n) => {
-              let a = (0, E.camelCase)(n);
-              return "object" != typeof e[n] || Array.isArray(e[n]) ? (t[a] = e[n]) : (t[a] = u(e[n])), t;
+              let i = (0, d.camelCase)(n);
+              return "object" != typeof e[n] || Array.isArray(e[n]) ? (t[i] = e[n]) : (t[i] = _(e[n])), t;
           }, {});
 }
-function A(e) {
+function h(e) {
     return null == e
         ? e
         : Object.keys(e).reduce((t, n) => {
-              let a = (0, E.snakeCase)(n);
+              let i = (0, d.snakeCase)(n);
               return (
-                  "object" != typeof e[n] || Array.isArray(e[n]) ? (t[a] = e[n]) : (t[a] = A(e[n])), (t[a] = e[n]), t
+                  "object" != typeof e[n] || Array.isArray(e[n]) ? (t[i] = e[n]) : (t[i] = h(e[n])), (t[i] = e[n]), t
               );
           }, {});
 }
-var c = n(449585),
-    I = n(652215);
-function O(e) {
-    return { type: e.type, metadata: A(e.metadata) };
+var f = n(449585),
+    p = n(652215);
+function E(e) {
+    return { type: e.type, metadata: h(e.metadata) };
 }
-function L(e) {
-    let t = A(e.triggerMetadata);
+function m(e) {
+    let t = h(e.triggerMetadata);
     return (
         null != t && delete t.keywordLists,
         {
@@ -42,7 +43,7 @@ function L(e) {
             event_type: e.eventType,
             trigger_type: e.triggerType,
             trigger_metadata: t,
-            actions: e.actions.filter(d.Vq).map(O),
+            actions: e.actions.filter(l.Vq).map(E),
             enabled: e.enabled,
             creator_id: e.creatorId,
             position: e.position,
@@ -51,18 +52,18 @@ function L(e) {
         }
     );
 }
-function M(e) {
-    return { type: e.type, metadata: u(e.metadata) };
+function g(e) {
+    return { type: e.type, metadata: _(e.metadata) };
 }
-function p(e) {
+function A(e) {
     let t = {
-        id: e.id ?? s.default.fromTimestamp(Date.now()),
+        id: e.id ?? u.default.fromTimestamp(Date.now()),
         name: e.name,
         guildId: e.guild_id,
         eventType: e.event_type,
         triggerType: e.trigger_type,
-        triggerMetadata: u(e.trigger_metadata),
-        actions: e.actions.filter(d.Vq).map(M),
+        triggerMetadata: _(e.trigger_metadata),
+        actions: e.actions.filter(l.Vq).map(g),
         enabled: e.enabled,
         creatorId: e.creator_id,
         position: e.position,
@@ -71,51 +72,51 @@ function p(e) {
     };
     return null != t.triggerMetadata && delete t.triggerMetadata.keywordLists, t;
 }
-async function y(e) {
-    let t = L(e);
-    return u(
-        (await a.Bo.post({ url: I.Rsh.GUILD_AUTOMOD_VALIDATE_RULE(e.guildId), body: t, rejectWithError: !1 })).body,
+async function I(e) {
+    let t = m(e);
+    return _(
+        (await i.Bo.post({ url: p.Rsh.GUILD_AUTOMOD_VALIDATE_RULE(e.guildId), body: t, rejectWithError: !1 })).body,
     );
 }
-async function N(e) {
-    let t = L(e);
+async function T(e) {
+    let t = m(e);
     return (
         delete t.id,
-        p((await a.Bo.post({ url: I.Rsh.GUILD_AUTOMOD_RULES(e.guildId), body: t, rejectWithError: !1 })).body)
+        A((await i.Bo.post({ url: p.Rsh.GUILD_AUTOMOD_RULES(e.guildId), body: t, rejectWithError: !1 })).body)
     );
 }
 async function S(e) {
-    let t = L(e);
-    return p((await a.Bo.patch({ url: I.Rsh.GUILD_AUTOMOD_RULE(e.guildId, e.id), body: t, rejectWithError: !1 })).body);
+    let t = m(e);
+    return A((await i.Bo.patch({ url: p.Rsh.GUILD_AUTOMOD_RULE(e.guildId, e.id), body: t, rejectWithError: !1 })).body);
 }
-async function R(e, t) {
-    return await a.Bo.del({ url: I.Rsh.GUILD_AUTOMOD_RULE(t, e), rejectWithError: !1 }), !0;
+async function y(e, t) {
+    return await i.Bo.del({ url: p.Rsh.GUILD_AUTOMOD_RULE(t, e), rejectWithError: !1 }), !0;
 }
-async function T(e) {
-    let t = await a.Bo.get({ url: I.Rsh.GUILD_AUTOMOD_RULES(e), rejectWithError: !1 });
-    return Array.isArray(t.body) ? t.body.map(p) : [];
+async function N(e) {
+    let t = await i.Bo.get({ url: p.Rsh.GUILD_AUTOMOD_RULES(e), rejectWithError: !1 });
+    return Array.isArray(t.body) ? t.body.map(A) : [];
 }
-async function U(e, t, n) {
-    l.A.can(I.xBc.MANAGE_MESSAGES, t) &&
-        (await a.Bo.post({
-            url: I.Rsh.GUILD_AUTOMOD_ALERT_ACTION(t.guild_id),
+async function v(e, t, n) {
+    o.A.can(p.xBc.MANAGE_MESSAGES, t) &&
+        (await i.Bo.post({
+            url: p.Rsh.GUILD_AUTOMOD_ALERT_ACTION(t.guild_id),
             body: { message_id: e, channel_id: t.id, alert_action_type: n },
             rejectWithError: !1,
         }));
 }
-function m(e, t, n) {
-    let r = o.A.getGuild(e);
+function C(e, t, n) {
+    let r = a.A.getGuild(e);
     null != r &&
-        l.A.can(I.xBc.MANAGE_GUILD, r) &&
-        (0, c.rI)(() => {
-            (0, i.zV)(I.HAw.GUILD_AUTOMOD_FEEDBACK, {
-                feedback_type: _.Gb.MENTION_RAID_REMOVE_RESTRICTION,
+        o.A.can(p.xBc.MANAGE_GUILD, r) &&
+        (0, f.rI)(() => {
+            (0, s.zV)(p.HAw.GUILD_AUTOMOD_FEEDBACK, {
+                feedback_type: c.Gb.MENTION_RAID_REMOVE_RESTRICTION,
                 decision_id: t,
             }),
-                a.Bo.post({ url: I.Rsh.GUILD_AUTOMOD_CLEAR_MENTION_RAID(e), rejectWithError: !0 }),
+                i.Bo.post({ url: p.Rsh.GUILD_AUTOMOD_CLEAR_MENTION_RAID(e), rejectWithError: !0 }),
                 n();
         });
 }
-function D(e) {
+function R(e) {
     r.h.dispatch({ type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS", guildId: e });
 }

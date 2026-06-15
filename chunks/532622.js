@@ -1,18 +1,19 @@
-a.d(t, { Ay: () => d });
-var n = a(17928),
-    l = a(576705),
-    i = a(488926),
-    s = a(818348);
-let r = [s.xB.SET_VOICE_CHANNEL_STATUS, s.xB.CONNECT, s.xB.VIEW_CHANNEL],
-    u = [s.xB.SET_VOICE_CHANNEL_STATUS];
-function d(e) {
+"use strict";
+n.d(t, { Ay: () => u });
+var i = n(17928),
+    r = n(576705),
+    s = n(488926),
+    a = n(818348);
+let o = [a.xB.SET_VOICE_CHANNEL_STATUS, a.xB.CONNECT, a.xB.VIEW_CHANNEL],
+    l = [a.xB.SET_VOICE_CHANNEL_STATUS];
+function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        a = arguments.length > 2 ? arguments[2] : void 0;
-    return (0, n.bG)([l.A], () => {
-        var n;
+        n = arguments.length > 2 ? arguments[2] : void 0;
+    return (0, i.bG)([r.A], () => {
+        var i;
         return (
-            (n = l.A),
-            (t ? u : r).every((t) => (null == a ? n.can(t, e) : i.$3({ permission: t, user: a, context: e })))
+            (i = r.A),
+            (t ? l : o).every((t) => (null == n ? i.can(t, e) : s.$3({ permission: t, user: n, context: e })))
         );
-    }, [e, t, a]);
+    }, [e, t, n]);
 }
