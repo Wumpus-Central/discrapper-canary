@@ -8133,7 +8133,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 48;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 40;
+                        for (let e of t) if ("mobile-visual-refresh" === e) break;
                         return 48;
                     },
                 },
@@ -8141,7 +8141,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 28;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 18;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 22;
                         return 28;
                     },
                 },
@@ -8149,7 +8149,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 33;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 24;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 28;
                         return 33;
                     },
                 },
@@ -8157,7 +8157,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 12;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                        for (let e of t) if ("mobile-visual-refresh" === e) break;
                         return 12;
                     },
                 },
@@ -8165,7 +8165,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 28;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 20;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 24;
                         return 28;
                     },
                 },
