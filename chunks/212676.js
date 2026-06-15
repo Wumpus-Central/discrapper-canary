@@ -4204,7 +4204,7 @@ function sI(e) {
         if (null == a) return null;
         (0, sf.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("42657"),
+                n.e("21277"),
                 n.e("94881"),
                 n.e("26132"),
                 n.e("46652"),
@@ -5227,7 +5227,7 @@ function a6(e) {
                                                   message: _,
                                                   channel: S,
                                                   useChatFontScaling: !1,
-                                                  className: d()(a5.secondary, a4.vU, { [a4.w$]: !P }),
+                                                  className: d()(a5.secondary, a4.vU, a7.visible, { [a4.w$]: !P }),
                                                   isForumToolbar: !0,
                                                   children: !P && eR.intl.string(eR.t.xpOyTO),
                                               }),
