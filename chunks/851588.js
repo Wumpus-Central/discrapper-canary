@@ -15,16 +15,16 @@ var s = l(627968),
     f = l(562153),
     j = l(183555),
     x = l(47675),
-    I = l(628779),
-    m = l(999291),
+    m = l(628779),
+    I = l(999291),
     O = l(975732),
     g = l(718019),
     y = l(915614),
     b = l(946356),
     C = l(984545),
     U = l(587168),
-    T = l(983495),
-    v = l(364522),
+    v = l(983495),
+    T = l(364522),
     _ = l(734057),
     E = l(696451),
     L = l(309010),
@@ -62,7 +62,7 @@ function $(e) {
         A = (0, n.bG)([_.A, L.A], () => _.A.getChannel(L.A.getChannelId())),
         P = (0, n.bG)([E.Ay], () => E.Ay.isMember(r?.id, i.id)),
         h = (0, n.bG)([N.A], () => N.A.hidePersonalInformation);
-    return (0, s.jsxs)(v.Ip, {
+    return (0, s.jsxs)(T.Ip, {
         fade: !0,
         className: Y.rf,
         children: [
@@ -111,7 +111,7 @@ function Z(e) {
     let {
             user: i,
             currentUser: l,
-            guildId: v,
+            guildId: T,
             channelId: _,
             messageId: E,
             roleId: L,
@@ -125,10 +125,10 @@ function Z(e) {
         } = e,
         { analyticsLocations: V } = (0, c.Ay)([...S, u.A.USER_PROFILE_POPOUT]),
         W = (0, P.aL)(),
-        M = (0, j.pb)({ layout: "POPOUT", userId: i.id, guildId: v, channelId: _, messageId: E, roleId: L }),
-        B = (0, m.Ay)(i.id, v),
-        H = (0, I.$)("BotUserProfilePopout"),
-        q = (0, n.bG)([h.A], () => (null != v ? h.A.getGuild(v) : null)),
+        M = (0, j.pb)({ layout: "POPOUT", userId: i.id, guildId: T, channelId: _, messageId: E, roleId: L }),
+        B = (0, I.Ay)(i.id, T),
+        H = (0, m.$)("BotUserProfilePopout"),
+        q = (0, n.bG)([h.A], () => (null != T ? h.A.getGuild(T) : null)),
         D = d.useRef(null),
         { isHoveringOrFocusing: X } = (0, A.A)(D);
     d.useEffect(() => {
@@ -141,7 +141,7 @@ function Z(e) {
         },
         ee = w ? "div" : o.l,
         ei = (0, p.GV)(),
-        el = f.Ay.useName(v, _, i);
+        el = f.Ay.useName(T, _, i);
     return (0, s.jsx)(c.f5, {
         value: V,
         children: (0, s.jsx)(j.of, {
@@ -167,7 +167,7 @@ function Z(e) {
                             (0, s.jsx)(U.A, {
                                 children: (0, s.jsx)(C.A, {
                                     user: i,
-                                    guildId: v,
+                                    guildId: T,
                                     viewProfileItem: G
                                         ? null
                                         : (0, s.jsx)(r.Dr, {
@@ -187,16 +187,22 @@ function Z(e) {
                             (0, s.jsxs)("div", {
                                 className: Y.wx,
                                 children: [
-                                    (0, s.jsx)(y.A, { user: i, displayProfile: B, guildId: v, themeType: J.d.POPOUT }),
+                                    (0, s.jsx)(y.A, {
+                                        user: i,
+                                        displayProfile: B,
+                                        guildId: T,
+                                        themeType: J.d.POPOUT,
+                                        specOverrides: H ? { themePadding: 1 } : void 0,
+                                    }),
                                     (0, s.jsx)(g.A, {
                                         user: i,
                                         displayProfile: B,
-                                        guildId: v,
+                                        guildId: T,
                                         channelId: _,
                                         themeType: J.d.POPOUT,
                                         onOpenProfile: G ? void 0 : Z,
                                     }),
-                                    (0, s.jsx)(T.A, {
+                                    (0, s.jsx)(v.A, {
                                         user: i,
                                         themeType: J.d.POPOUT,
                                         onCloseProfile: k,
@@ -214,7 +220,7 @@ function Z(e) {
                                 channelId: _,
                                 onClose: k,
                             }),
-                            (0, s.jsx)(z.A, { user: i, guildId: v, channelId: _, onClose: k, disableAutoFocus: w }),
+                            (0, s.jsx)(z.A, { user: i, guildId: T, channelId: _, onClose: k, disableAutoFocus: w }),
                         ],
                     }),
                 ],

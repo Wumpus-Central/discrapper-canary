@@ -16,15 +16,15 @@ var d = s(627968),
     x = s(562153),
     j = s(183555),
     O = s(47675),
-    y = s(628779),
-    m = s(999291),
-    E = s(975732),
-    I = s(718019),
-    v = s(428391),
+    m = s(628779),
+    y = s(999291),
+    v = s(975732),
+    E = s(718019),
+    I = s(428391),
     T = s(915614),
     _ = s(308244),
-    U = s(946356),
-    g = s(878555),
+    g = s(946356),
+    U = s(878555),
     k = s(35241),
     L = s(587168),
     N = s(652215),
@@ -46,8 +46,8 @@ function S(e) {
             disableAutoFocus: W = !1,
             onClickContainer: D,
         } = e,
-        G = (0, m.Ay)(i.id, s),
-        K = (0, y.$)("NonUserBotProfilePopout"),
+        G = (0, y.Ay)(i.id, s),
+        K = (0, m.$)("NonUserBotProfilePopout"),
         X = (0, A.aL)(),
         { analyticsLocations: Y } = (0, u.Ay)([...M, c.A.USER_PROFILE_POPOUT]),
         $ = (0, j.pb)({ layout: "POPOUT", userId: i.id, guildId: s, channelId: S, messageId: w, roleId: F }),
@@ -59,7 +59,7 @@ function S(e) {
     let Q = () => {
             B?.(),
                 X.dispatch(N.jej.POPOUT_CLOSE),
-                (0, E.openUserProfileModal)({ sourceAnalyticsLocations: Y, hideRestrictedProfile: !0, ...$ });
+                (0, v.openUserProfileModal)({ sourceAnalyticsLocations: Y, hideRestrictedProfile: !0, ...$ });
         },
         Z = !H && (0, f.A)(i.id),
         ee = W ? "div" : t.l,
@@ -81,7 +81,7 @@ function S(e) {
                     (0, d.jsx)(a.A, {
                         children: (0, d.jsx)(o.H, { id: ei, children: C.intl.format(C.t.KRe1Fk, { name: es }) }),
                     }),
-                    (0, d.jsxs)(U.A, {
+                    (0, d.jsxs)(g.A, {
                         user: i,
                         displayProfile: G,
                         themeType: b.d.POPOUT,
@@ -109,8 +109,14 @@ function S(e) {
                             (0, d.jsxs)("div", {
                                 className: R.wx,
                                 children: [
-                                    (0, d.jsx)(T.A, { user: i, displayProfile: G, guildId: s, themeType: b.d.POPOUT }),
-                                    (0, d.jsx)(I.A, {
+                                    (0, d.jsx)(T.A, {
+                                        user: i,
+                                        displayProfile: G,
+                                        guildId: s,
+                                        themeType: b.d.POPOUT,
+                                        specOverrides: K ? { themePadding: 1 } : void 0,
+                                    }),
+                                    (0, d.jsx)(E.A, {
                                         user: i,
                                         displayProfile: G,
                                         guildId: s,
@@ -124,12 +130,12 @@ function S(e) {
                                 fade: !0,
                                 className: R.rf,
                                 children: [
-                                    (0, d.jsx)(g.Ay, {
+                                    (0, d.jsx)(U.Ay, {
                                         user: i,
                                         guildId: s,
                                         displayName: x.Ay.getName(s, S, i),
                                         onClickName: Z ? Q : void 0,
-                                        trailing: (0, d.jsx)(v.A, {
+                                        trailing: (0, d.jsx)(I.A, {
                                             displayProfile: G,
                                             themeType: b.d.POPOUT,
                                             onClose: B,

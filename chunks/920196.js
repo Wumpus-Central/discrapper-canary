@@ -1677,7 +1677,12 @@ function n2(e) {
                                     (0, i.jsxs)("div", {
                                         className: n1.wx,
                                         children: [
-                                            (0, i.jsx)(tH.A, { user: E, displayProfile: v, themeType: n0.d.POPOUT }),
+                                            (0, i.jsx)(tH.A, {
+                                                user: E,
+                                                displayProfile: v,
+                                                themeType: n0.d.POPOUT,
+                                                specOverrides: z ? { themePadding: 1 } : void 0,
+                                            }),
                                             (0, i.jsx)(tV.A, {
                                                 user: E,
                                                 displayProfile: v,
