@@ -7,12 +7,7 @@ function r(e) {
         if (null != e.name && "" !== e.name) return "";
         if (e.decision?.signal != null) {
             let t = e.decision?.signal;
-            switch (t.type) {
-                case n.Gy.GAME_EVENT:
-                    return t.description ?? t.title ?? i.intl.string(i.t.Cyxddp);
-                case n.Gy.PHRASE:
-                    return `"${t.text}"`;
-            }
+            if (t.type === n.Gy.GAME_EVENT) return t.description ?? t.title ?? i.intl.string(i.t.Cyxddp);
         }
         return i.intl.string(i.t.Cyxddp);
     }, [e.name, e.decision]);

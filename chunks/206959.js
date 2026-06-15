@@ -2236,56 +2236,104 @@ class er extends l.A {
     setClipBufferLength(e) {
         (0, b.lE)().setClipBufferLength?.(e);
     }
-    saveClip(e, t, n) {
-        let i = (0, b.lE)();
-        return null == i.setClipBufferLength || null == i.saveClip
+    saveClip(e) {
+        let { filepath: t, metadata: n, thumbnailMs: i, startMs: r, endMs: s, trimStartMs: a, trimEndMs: o } = e,
+            l = (0, b.lE)();
+        return null == l.setClipBufferLength || (null == l.saveClip && null == l.saveClipWithTime)
             ? Promise.reject("unsupported")
-            : new Promise((r, s) => {
-                  let a = (e, t, n) => {
-                          let i;
+            : new Promise((e, u) => {
+                  let c = (t, n, i, r) => {
+                          let s;
                           try {
-                              i = JSON.parse("" !== n ? n : "{}");
+                              s = JSON.parse("" !== n ? n : "{}");
                           } catch {
-                              i = {};
+                              s = {};
                           }
-                          let s = { duration: e, clipStats: i };
-                          return void 0 !== t && t.length > 0 && (s.thumbnail = t), r(s);
+                          let a = { duration: t, clipStats: s };
+                          return (
+                              void 0 !== i && i.length > 0 && (a.thumbnail = i),
+                              void 0 !== r && r.length > 0 && (a.metadata = r),
+                              e(a)
+                          );
                       },
-                      o = (e) => {
+                      d = (e) => {
                           try {
                               let t = JSON.parse("" !== e ? e : "{}");
-                              return s(t);
+                              return u(t);
                           } catch {
-                              return s({ errorMessage: "clip save failed", errorAt: "unknown" });
+                              return u({ errorMessage: "clip save failed", errorAt: "unknown" });
                           }
                       };
-                  (0, b.$b)(G.CLIPS_THUMBNAIL) ? i.saveClip(e, t, a, o, n) : i.saveClip(e, t, a, o);
+                  null != l.saveClipWithTime
+                      ? l.saveClipWithTime(
+                            t,
+                            n,
+                            void 0 === r ? null : r,
+                            void 0 === s ? null : s,
+                            void 0 === a ? null : a,
+                            void 0 === o ? null : o,
+                            (e, t, n) => c(e, t, void 0, n),
+                            d,
+                            i,
+                        )
+                      : (0, b.$b)(G.CLIPS_THUMBNAIL)
+                        ? l.saveClip(t, n, (e, t, n) => c(e, n, t, void 0), d, i)
+                        : l.saveClip(t, n, (e, t, n) => c(e, n, t, void 0), d);
               });
     }
-    saveClipForUser(e, t, n, i) {
-        let r = (0, b.lE)();
-        return null == r.saveClipForUser
+    saveClipForUser(e) {
+        let {
+                userID: t,
+                filepath: n,
+                metadata: i,
+                thumbnailMs: r,
+                startMs: s,
+                endMs: a,
+                trimStartMs: o,
+                trimEndMs: l,
+            } = e,
+            u = (0, b.lE)();
+        return null == u.saveClipForUser && null == u.saveClipForUserWithTime
             ? Promise.reject("unsupported")
-            : new Promise((s, a) => {
-                  let o = (e, t, n) => {
-                          let i;
+            : new Promise((e, c) => {
+                  let d = (t, n, i, r) => {
+                          let s;
                           try {
-                              i = JSON.parse("" !== n ? n : "{}");
+                              s = JSON.parse("" !== n ? n : "{}");
                           } catch {
-                              i = {};
+                              s = {};
                           }
-                          let r = { duration: e, clipStats: i };
-                          return void 0 !== t && t.length > 0 && (r.thumbnail = t), s(r);
+                          let a = { duration: t, clipStats: s };
+                          return (
+                              void 0 !== i && i.length > 0 && (a.thumbnail = i),
+                              void 0 !== r && r.length > 0 && (a.metadata = r),
+                              e(a)
+                          );
                       },
-                      l = (e) => {
+                      _ = (e) => {
                           try {
                               let t = JSON.parse("" !== e ? e : "{}");
-                              return a(t);
+                              return c(t);
                           } catch {
-                              return a({ errorMessage: "clip save failed", errorAt: "unknown" });
+                              return c({ errorMessage: "clip save failed", errorAt: "unknown" });
                           }
                       };
-                  (0, b.$b)(G.CLIPS_THUMBNAIL) ? r.saveClipForUser(e, t, n, o, l, i) : r.saveClipForUser(e, t, n, o, l);
+                  null != u.saveClipForUserWithTime
+                      ? u.saveClipForUserWithTime(
+                            t,
+                            n,
+                            i,
+                            void 0 === s ? null : s,
+                            void 0 === a ? null : a,
+                            void 0 === o ? null : o,
+                            void 0 === l ? null : l,
+                            (e, t, n) => d(e, t, void 0, n),
+                            _,
+                            r,
+                        )
+                      : (0, b.$b)(G.CLIPS_THUMBNAIL)
+                        ? u.saveClipForUser(t, n, i, (e, t, n) => d(e, n, t, void 0), _, r)
+                        : u.saveClipForUser(t, n, i, (e, t, n) => d(e, n, t, void 0), _);
               });
     }
     updateClipMetadata(e, t) {

@@ -334,9 +334,7 @@ var R = n(315240),
     O = n(696016);
 class b extends s.A {
     timeline;
-    scheduledClipTimeout = new r.Ep();
-    scheduledClipSignal = null;
-    lastClipTimestamp = 0;
+    scheduledClips = [];
     pendingCandidateDiscards = new Set();
     decisionSignals = A();
     sessionEndTimeout = new r.Ep();
@@ -420,13 +418,17 @@ class b extends s.A {
         switch (e) {
             case p.Gy.DISTRIBUTED:
                 return h.Ay.getSettings().clipSignals.enableDistributedSignals;
-            case p.Gy.PHRASE:
-                return h.Ay.getSettings().clipSignals.enablePhraseSignals;
             case p.Gy.GAME_EVENT:
                 return h.Ay.getSettings().clipSignals.enableGameSignals;
             default:
                 return !0;
         }
+    }
+    calculateAutoclipRequest(e) {
+        let t = e - 3e4,
+            n = Math.round(t + 15e3),
+            i = Math.round(3e4);
+        return { startMs: n - i, endMs: n + i, trimStartMs: t, trimEndMs: e };
     }
     process(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
@@ -435,43 +437,37 @@ class b extends s.A {
             case p.Gy.DISTRIBUTED:
                 this.scheduleClip(e);
                 break;
-            case p.Gy.GAME_EVENT:
-                if (
-                    (this.decisionSignals.gameEventData.push({
-                        timestamp_ms: t,
-                        score: e.score ?? 0,
-                        name: e.eventName ?? e.eventIconTag,
-                    }),
-                    1 === e.importance)
-                ) {
-                    let n = Math.max(0, 1e4 - Math.max(0, Date.now() - t));
-                    this.scheduleClip(e, n, !0);
-                }
-                break;
-            case p.Gy.PHRASE:
-                if (
-                    this.scheduledClipSignal?.type === p.Gy.GAME_EVENT ||
-                    performance.now() - this.lastClipTimestamp < 1e4
-                )
-                    return;
-                this.scheduleClip(e);
-                break;
             case p.Gy.LAUGHTER:
+            case p.Gy.GAME_EVENT: {
+                let n = 0;
+                if (e.type === p.Gy.GAME_EVENT) {
+                    if (
+                        (this.decisionSignals.gameEventData.push({
+                            timestamp_ms: t,
+                            score: e.score ?? 0,
+                            name: e.eventName ?? e.eventIconTag,
+                        }),
+                        1 !== e.importance)
+                    )
+                        break;
+                    n = Math.max(Date.now(), t + 1e4);
+                } else n = Date.now() + 1e4;
                 if (
-                    this.scheduledClipSignal?.type === p.Gy.GAME_EVENT ||
-                    this.scheduledClipSignal?.type === p.Gy.PHRASE ||
-                    performance.now() - this.lastClipTimestamp < 15e3
-                )
-                    return;
-                this.scheduleClip(e, 0, !0);
+                    this.scheduledClips.some(
+                        (e) =>
+                            (e.signal.type === p.Gy.GAME_EVENT || e.signal.type === p.Gy.LAUGHTER) &&
+                            t >= e.request.trimStartMs &&
+                            t <= e.request.trimEndMs,
+                    )
+                ) {
+                    O.nx.info(
+                        `decider: suppressing ${e.type} clip \u{2014} timestamp ${t} falls within an existing scheduled candidate's trimmed range`,
+                    );
+                    break;
+                }
+                this.scheduleClip(e, this.calculateAutoclipRequest(n), !0);
+            }
         }
-    }
-    read() {
-        return {
-            timeline: this.timeline.read(),
-            scheduledClipSignal: this.scheduledClipSignal,
-            phraseCooldown: Math.max(0, 1e4 - (performance.now() - this.lastClipTimestamp)),
-        };
     }
     clear() {
         O.nx.info(
@@ -483,11 +479,11 @@ class b extends s.A {
             (this.currentSessionGameKey = null),
             (this.pendingSessionGameKey = null),
             (0, R.YV)(),
-            (this.lastClipTimestamp = 0),
             this.timeline.clear();
     }
     unscheduleClip() {
-        this.scheduledClipTimeout.stop(), (this.scheduledClipSignal = null);
+        for (let e of this.scheduledClips) e.timeout.stop();
+        this.scheduledClips = [];
     }
     canScheduleClipCandidate(e) {
         let t = h.Ay.getCurrentClipsSession();
@@ -498,26 +494,40 @@ class b extends s.A {
             r = null != t.gameId && y.applicationIds.includes(t.gameId);
         return e.type === p.Gy.GAME_EVENT && i && r;
     }
-    scheduleClip(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
-            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+    scheduleClip(e, t) {
+        let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
             i = h.Ay.getCurrentClipsSession()?.id;
-        (!n || this.canScheduleClipCandidate(e)) &&
-            (O.nx.info(`decider: scheduleClip signal=${e.type} delay=${t}ms isCandidate=${n}`),
-            this.unscheduleClip(),
-            (this.scheduledClipSignal = e),
-            (this.lastClipTimestamp = performance.now() + t),
-            this.scheduledClipTimeout.start(t, () => {
-                O.nx.info(`decider: scheduled timeout fired \u{2014} saving clip (signal=${e.type} isCandidate=${n})`),
-                    (this.scheduledClipSignal = null),
-                    (0, R.yd)(
-                        e.type === p.Gy.MANUAL ? "manual" : "auto",
-                        [...this.timeline.read()],
-                        { signal: e, timestamp: Date.now() },
-                        n,
-                        i ?? void 0,
-                    );
-            }));
+        if (n && !this.canScheduleClipCandidate(e)) return;
+        let s = Date.now(),
+            a = t?.endMs != null ? t.endMs : s,
+            o = t?.startMs != null ? t.startMs : a - Number(h.Ay.getSettings().clipsLength),
+            l = {
+                startMs: o,
+                endMs: a,
+                trimStartMs: t?.trimStartMs != null ? t.trimStartMs : o,
+                trimEndMs: t?.trimEndMs != null ? t.trimEndMs : a,
+            };
+        O.nx.info(`decider: scheduleClip signal=${e.type}, request=${JSON.stringify(t)}`);
+        let u = { timeout: new r.Ep(), request: l, signal: e };
+        this.scheduledClips.push(u),
+            u.timeout.start(a > s ? a - s : 0, async () => {
+                O.nx.info(
+                    `decider: scheduled timeout fired \u{2014} saving clip (signal=${e.type}, fullRequest=${JSON.stringify(l)})`,
+                );
+                try {
+                    await (0, R.yd)({
+                        clipMethod: e.type === p.Gy.MANUAL ? "manual" : "auto",
+                        request: l,
+                        timeline: [...this.timeline.read()],
+                        decision: { signal: e, timestamp: Date.now() },
+                        isCandidate: n,
+                        gameSessionId: i ?? void 0,
+                    });
+                } finally {
+                    let e = this.scheduledClips.indexOf(u);
+                    -1 !== e && this.scheduledClips.splice(e, 1);
+                }
+            });
     }
     handleVoiceChannelSelect() {
         this.clear();

@@ -179,10 +179,6 @@ function P() {
                                     }),
                             }),
                             (0, r.jsx)(m.$, {
-                                text: "Phrase: Clip",
-                                onClick: () => N.Ts({ type: S.Gy.PHRASE, text: "clip" }),
-                            }),
-                            (0, r.jsx)(m.$, {
                                 text: "Yelling",
                                 onClick: () => N.Ts({ type: S.Gy.YELLING, userId: "123" }),
                             }),

@@ -8,7 +8,6 @@ var i,
     l =
         (((i = {}).MANUAL = "manual"),
         (i.DISTRIBUTED = "distributed"),
-        (i.PHRASE = "phrase"),
         (i.YELLING = "yelling"),
         (i.LAUGHTER = "laughter"),
         (i.GAME_EVENT = "game_event"),
