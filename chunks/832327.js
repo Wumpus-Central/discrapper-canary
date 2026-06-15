@@ -287,7 +287,7 @@ var eL = n(875317),
     e1 = n(468689),
     e6 = n(375708),
     e3 = n(330766);
-function e2(e) {
+function e4(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
         s = (0, eJ.bG)([V.A, eN.default], () => {
             let e = eN.default.getCurrentUser(),
@@ -321,7 +321,7 @@ function e2(e) {
     );
 }
 var e8 = n(338854);
-function e4(e) {
+function e2(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e;
     return (0, l.jsx)(e8.H, {
         targetElementRef: i,
@@ -461,7 +461,7 @@ let ts = a.memo(function (e) {
                 }
                 case u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
                     return (0, l.jsx)(ti, {
-                        renderPopout: (e) => (0, l.jsx)(e2, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e4, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
@@ -476,7 +476,7 @@ let ts = a.memo(function (e) {
                     });
                 case u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
                     return (0, l.jsx)(ti, {
-                        renderPopout: (e) => (0, l.jsx)(e4, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e2, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 default:
@@ -751,9 +751,9 @@ var tK = n(503698),
     t1 = n(713654),
     t6 = n(976860),
     t3 = n(790535),
-    t2 = n(110618),
+    t4 = n(110618),
     t8 = n(495544),
-    t4 = n(309010),
+    t2 = n(309010),
     t5 = n(312006),
     t9 = n(403362),
     t7 = n(707592),
@@ -1053,9 +1053,9 @@ function nN(e) {
         u = (0, d.bG)([R.A], () => R.A.can(v.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([t8.default, t4.A, t5.Ay], () => {
+            (0, d.bG)([t8.default, t2.A, t5.Ay], () => {
                 let e = t8.default.getId();
-                return t4.A.getVoiceChannelId() === t ? t5.Ay.getPermissionsForUser(e, t) : null;
+                return t2.A.getVoiceChannelId() === t ? t5.Ay.getPermissionsForUser(e, t) : null;
             }, [t])),
         A = e6.intl.string(e6.t.VJlc0S);
     switch (s) {
@@ -1085,7 +1085,7 @@ function nN(e) {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: no.c8,
-                                    children: (0, t2.c)(r, o, n?.id, i.length),
+                                    children: (0, t4.c)(r, o, n?.id, i.length),
                                 }),
                             ],
                         })
@@ -1315,7 +1315,7 @@ class nw extends a.PureComponent {
         (0, I.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("40989"),
-                n.e("47789"),
+                n.e("21372"),
                 n.e("59957"),
                 n.e("28136"),
                 n.e("16084"),
@@ -1325,7 +1325,7 @@ class nw extends a.PureComponent {
         });
     };
     handleClose = () => {
-        let e = t4.A.getChannelId(),
+        let e = t2.A.getChannelId(),
             t = e6.intl.formatToPlainString(e6.t.DEn7nu, { invitePeople: e6.intl.string(e6.t.Sd8Ixw) });
         this.props.markAsDismissed(eE.i.UNKNOWN), null != e && nB.A.sendBotMessage(e, t);
     };
@@ -1431,11 +1431,11 @@ let n0 = new nJ(_.h),
         { type: v.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
     ],
     n3 = n6.map((e) => e.store).filter(t9.Vq),
-    n2 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
+    n4 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n8(e) {
     e.stopPropagation();
 }
-let n4 = [];
+let n2 = [];
 function n5(e) {
     var t, n;
     let i,
@@ -1459,7 +1459,7 @@ function n5(e) {
             (c = r && o),
             a.useMemo(() => {
                 let e = [];
-                return c && e.push(u.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n4;
+                return c && e.push(u.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n2;
             }, [c])),
         [I, _] = (0, ei.ww)(g, A.id, eE.m.CHANNEL_NOTICES, !0),
         N = null != I,
@@ -1471,7 +1471,7 @@ function n5(e) {
                     : n6
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
-                              return !0 === n?.channelNoticePredicate(A, E) && !n2.has(t);
+                              return !0 === n?.channelNoticePredicate(A, E) && !n4.has(t);
                           })
                           .map((e) => e.dismissibleContentType),
             [A, E, N],
@@ -1612,75 +1612,72 @@ class ir extends a.PureComponent {
             if ((0, el.ai)(t.id)) return void this.props.onFavoriteGuildContextMenu(e);
             (0, N.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("60940"),
-                    n.e("90163"),
-                    n.e("63593"),
+                    n.e("17095"),
+                    n.e("60513"),
                     n.e("33063"),
-                    n.e("51407"),
-                    n.e("68089"),
+                    n.e("79825"),
+                    n.e("98901"),
+                    n.e("45333"),
                     n.e("47141"),
                     n.e("2677"),
-                    n.e("657"),
+                    n.e("77084"),
                     n.e("51692"),
-                    n.e("56136"),
-                    n.e("22018"),
-                    n.e("2238"),
+                    n.e("82216"),
+                    n.e("96575"),
+                    n.e("28130"),
                     n.e("99961"),
                     n.e("89209"),
-                    n.e("48530"),
+                    n.e("18240"),
+                    n.e("81804"),
                     n.e("19393"),
-                    n.e("26105"),
-                    n.e("90737"),
-                    n.e("23294"),
-                    n.e("72321"),
+                    n.e("4355"),
+                    n.e("84764"),
+                    n.e("70294"),
                     n.e("76631"),
                     n.e("72451"),
-                    n.e("23581"),
+                    n.e("11819"),
+                    n.e("15931"),
                     n.e("46334"),
-                    n.e("42515"),
                     n.e("26963"),
                     n.e("38805"),
-                    n.e("58661"),
-                    n.e("55882"),
+                    n.e("80653"),
                     n.e("8981"),
-                    n.e("46912"),
-                    n.e("98307"),
+                    n.e("99474"),
+                    n.e("91888"),
                     n.e("6324"),
-                    n.e("32124"),
+                    n.e("6162"),
                     n.e("13627"),
-                    n.e("61753"),
-                    n.e("68146"),
-                    n.e("96919"),
+                    n.e("50748"),
+                    n.e("44667"),
                     n.e("83928"),
                     n.e("92702"),
                     n.e("53727"),
-                    n.e("78920"),
-                    n.e("62144"),
-                    n.e("87103"),
+                    n.e("34609"),
                     n.e("69344"),
-                    n.e("29337"),
-                    n.e("42987"),
-                    n.e("50704"),
+                    n.e("52033"),
+                    n.e("85791"),
                     n.e("57006"),
                     n.e("40989"),
                     n.e("83566"),
                     n.e("58376"),
-                    n.e("73890"),
-                    n.e("72345"),
-                    n.e("60389"),
-                    n.e("83061"),
-                    n.e("83652"),
-                    n.e("50862"),
-                    n.e("83671"),
-                    n.e("63980"),
-                    n.e("49089"),
+                    n.e("4460"),
+                    n.e("49297"),
+                    n.e("88712"),
+                    n.e("83185"),
+                    n.e("69337"),
+                    n.e("57444"),
+                    n.e("21372"),
+                    n.e("15081"),
+                    n.e("85426"),
+                    n.e("45043"),
+                    n.e("87845"),
+                    n.e("78230"),
+                    n.e("91165"),
                     n.e("45970"),
+                    n.e("26846"),
+                    n.e("43943"),
                     n.e("22410"),
-                    n.e("56574"),
-                    n.e("65380"),
-                    n.e("54672"),
-                    n.e("36592"),
-                    n.e("47789"),
+                    n.e("4974"),
                     n.e("80186"),
                     n.e("23924"),
                     n.e("42205"),
@@ -1738,13 +1735,13 @@ class ir extends a.PureComponent {
                     n.e("62931"),
                     n.e("50417"),
                     n.e("9907"),
-                    n.e("93103"),
                     n.e("28367"),
+                    n.e("93103"),
                     n.e("81647"),
                     n.e("76602"),
-                    n.e("91763"),
                     n.e("21921"),
                     n.e("9233"),
+                    n.e("91763"),
                     n.e("52511"),
                     n.e("40402"),
                     n.e("93766"),
@@ -1754,16 +1751,15 @@ class ir extends a.PureComponent {
                     n.e("40258"),
                     n.e("86127"),
                     n.e("66495"),
-                    n.e("71210"),
                     n.e("8555"),
                     n.e("28095"),
                     n.e("46070"),
                     n.e("88599"),
                     n.e("75842"),
                     n.e("36863"),
+                    n.e("71210"),
                     n.e("72789"),
                     n.e("50117"),
-                    n.e("88342"),
                     n.e("17249"),
                     n.e("71273"),
                     n.e("53917"),
@@ -1771,9 +1767,9 @@ class ir extends a.PureComponent {
                     n.e("9640"),
                     n.e("62422"),
                     n.e("90365"),
+                    n.e("88342"),
                     n.e("98765"),
                     n.e("52548"),
-                    n.e("89421"),
                     n.e("67861"),
                     n.e("1518"),
                     n.e("15186"),
@@ -1783,6 +1779,7 @@ class ir extends a.PureComponent {
                     n.e("28083"),
                     n.e("82644"),
                     n.e("3589"),
+                    n.e("89421"),
                     n.e("53984"),
                     n.e("43780"),
                     n.e("20590"),
@@ -1804,25 +1801,25 @@ class ir extends a.PureComponent {
                     n.e("47417"),
                     n.e("19558"),
                     n.e("58946"),
-                    n.e("89911"),
                     n.e("48330"),
                     n.e("14285"),
                     n.e("3332"),
                     n.e("8362"),
                     n.e("72401"),
-                    n.e("62201"),
                     n.e("52617"),
                     n.e("4744"),
                     n.e("37021"),
                     n.e("81314"),
-                    n.e("46547"),
+                    n.e("89911"),
                     n.e("501"),
                     n.e("86243"),
                     n.e("67837"),
                     n.e("73384"),
                     n.e("82783"),
+                    n.e("62201"),
                     n.e("62862"),
                     n.e("5043"),
+                    n.e("46547"),
                     n.e("39171"),
                     n.e("83952"),
                     n.e("44780"),
@@ -1852,10 +1849,10 @@ class ir extends a.PureComponent {
                     n.e("57458"),
                     n.e("38601"),
                     n.e("93336"),
+                    n.e("15920"),
                     n.e("1243"),
                     n.e("28136"),
                     n.e("69495"),
-                    n.e("15920"),
                     n.e("3930"),
                     n.e("3663"),
                     n.e("27659"),
@@ -1942,7 +1939,7 @@ class ir extends a.PureComponent {
                     n.e("94832"),
                     n.e("26386"),
                     n.e("65338"),
-                    n.e("94171"),
+                    n.e("71790"),
                     n.e("74572"),
                 ]).then(n.bind(n, 860417));
                 return (n) => (0, l.jsx)(e, { ...n, guild: t });
@@ -2338,10 +2335,10 @@ function io(e) {
     it.A.useConfig({ guildId: L, location: "guild_sidebar" });
     let e6 = (0, eG.C$)(L, "GuildSidebar"),
         e3 = (0, d.bG)([V.A], () => V.A.getGuild(L)?.features.has(v.GuildFeatures.GAME_SERVERS) ?? !1, [L]),
-        e2 = e6 && !e3 && !1 === e1,
+        e4 = e6 && !e3 && !1 === e1,
         e8 = (0, eD.J)("GuildSidebar"),
-        e4 = (0, eU.S)(L, "GuildSidebar"),
-        e5 = e6 && !e3 && e4 && !1 === e1,
+        e2 = (0, eU.S)(L, "GuildSidebar"),
+        e5 = e6 && !e3 && e2 && !1 === e1,
         e9 = (0, ej.A)(),
         e7 = (0, eP.A)(L),
         te = !1 === e1 && e9 && null != e7,
@@ -2352,7 +2349,7 @@ function io(e) {
         eT && ti.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
         eM && ti.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === e1 && ti.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
-        e2 && ti.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        e4 && ti.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         e5 && ti.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         e$ && ti.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [ts, tl] = (0, ei.kn)(ti, eE.m.GUILD_HEADER_TOOLTIPS),

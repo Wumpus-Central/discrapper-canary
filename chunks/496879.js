@@ -197,7 +197,8 @@ function O(e) {
                         (0, h.L3)(e.event, async () => {
                             let { default: n } = await Promise.all([
                                 t.e("40989"),
-                                t.e("63593"),
+                                t.e("60513"),
+                                t.e("45043"),
                                 t.e("2677"),
                                 t.e("47141"),
                                 t.e("94881"),

@@ -14,10 +14,13 @@ let o = function () {
         (0, r.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.all([
-                    n.e("51407"),
+                    n.e("11352"),
                     n.e("23887"),
-                    n.e("56136"),
+                    n.e("82216"),
                     n.e("40989"),
+                    n.e("88623"),
+                    n.e("79825"),
+                    n.e("45043"),
                     n.e("30204"),
                     n.e("75842"),
                     n.e("83952"),
@@ -30,8 +33,8 @@ let o = function () {
                     n.e("89160"),
                     n.e("31782"),
                     n.e("20342"),
-                    n.e("82640"),
-                ]).then(n.bind(n, 189875));
+                    n.e("85577"),
+                ]).then(n.bind(n, 310480));
                 return (n) => (0, i.jsx)(t, { initialEditingClipId: e, ...n });
             },
             { modalKey: a.nm },

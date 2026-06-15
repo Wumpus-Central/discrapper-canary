@@ -1,4 +1,4 @@
-i.d(e, { H: () => T, y: () => h });
+i.d(e, { H: () => h, y: () => T });
 var n = i(627968),
     l = i(64700),
     a = i(17928),
@@ -10,8 +10,8 @@ var n = i(627968),
     d = i(279250),
     A = i(880144),
     f = i(560595),
-    y = i(929921),
-    p = i(734057),
+    p = i(929921),
+    y = i(734057),
     m = i(71393),
     g = i(136491),
     I = i(576705),
@@ -20,7 +20,7 @@ var n = i(627968),
     N = i(652215),
     _ = i(753070),
     C = i(375708);
-function h(t) {
+function T(t) {
     let {
             pid: e,
             analyticsLocation: i,
@@ -30,16 +30,16 @@ function h(t) {
             appContext: o,
         } = t,
         u = (0, a.bG)([E.A], () => E.A.getVoiceChannelId()),
-        c = (0, a.bG)([p.A], () => p.A.getChannel(u), [u]),
+        c = (0, a.bG)([y.A], () => y.A.getChannel(u), [u]),
         f = (0, a.bG)([S.default], () => S.default.getCurrentUser()),
-        y = (0, a.bG)([g.Ay], () => (0, A.A)(g.Ay)),
+        p = (0, a.bG)([g.Ay], () => (0, A.A)(g.Ay)),
         N = (0, a.bG)([m.A, I.A], () => null != c && (0, d.vz)(c, m.A, I.A));
     return l.useCallback(async () => {
         await v({
             pid: e,
             voiceChannelId: u,
             user: f,
-            canGoLive: y,
+            canGoLive: p,
             canStream: N,
             analyticsLocation: i,
             allowOneClickGoLive: n,
@@ -47,9 +47,9 @@ function h(t) {
             onOneClickGoLive: s,
             appContext: o,
         });
-    }, [e, u, f, y, N, i, n, r, s, o]);
+    }, [e, u, f, p, N, i, n, r, s, o]);
 }
-async function T(t) {
+async function h(t) {
     let {
             pid: e,
             analyticsLocation: i,
@@ -59,7 +59,7 @@ async function T(t) {
             appContext: r,
         } = t,
         s = E.A.getVoiceChannelId(),
-        o = p.A.getChannel(s),
+        o = y.A.getChannel(s),
         u = S.default.getCurrentUser(),
         c = null != o && (0, d.vz)(o, m.A, I.A),
         f = (0, A.A)(g.Ay);
@@ -83,14 +83,14 @@ async function v(t) {
         user: a,
         canGoLive: d,
         canStream: A,
-        allowOneClickGoLive: p,
+        allowOneClickGoLive: y,
         onBeforeShowModal: m,
         onOneClickGoLive: g,
         appContext: I,
     } = t;
     if (d && A) {
-        if (p && null !== l) {
-            let t = y.A.getState().preset;
+        if (y && null !== l) {
+            let t = p.A.getState().preset;
             if (t === _.jQ.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, c.eO)({ location: "overlay _goLive" });
                 t = e ? _.jQ.PRESET_AUTO : _.jQ.PRESET_VIDEO;
@@ -104,8 +104,7 @@ async function v(t) {
             (0, u.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
-                        i.e("56136"),
-                        i.e("49115"),
+                        i.e("85426"),
                         i.e("76171"),
                         i.e("58337"),
                         i.e("38601"),

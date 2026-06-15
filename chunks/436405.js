@@ -856,8 +856,7 @@ let t2 = new t8(
                                                   let o = s ? { contextKey: tf.KX } : void 0;
                                                   (0, ez.openModalLazy)(async () => {
                                                       let { default: e } = await Promise.all([
-                                                          n.e("56136"),
-                                                          n.e("49115"),
+                                                          n.e("85426"),
                                                           n.e("76171"),
                                                           n.e("38601"),
                                                           n.e("36946"),
@@ -903,8 +902,7 @@ let t2 = new t8(
                                                   let o = a ? { contextKey: tf.KX } : void 0;
                                                   (0, ez.openModalLazy)(async () => {
                                                       let { default: e } = await Promise.all([
-                                                          n.e("56136"),
-                                                          n.e("49115"),
+                                                          n.e("85426"),
                                                           n.e("76171"),
                                                           n.e("38601"),
                                                           n.e("36946"),
@@ -3231,7 +3229,7 @@ class sZ extends a.PureComponent {
         let { context: e, channel: t, title: i } = this.props;
         (0, ez.openModalLazy)(async () => {
             let { default: s } = await Promise.all([
-                n.e("63593"),
+                n.e("60513"),
                 n.e("2677"),
                 n.e("97162"),
                 n.e("46327"),

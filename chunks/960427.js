@@ -5,13 +5,9 @@ var a = r(192308);
 let i = {
     open: function (t) {
         (0, a.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([
-                r.e("657"),
-                r.e("29462"),
-                r.e("35778"),
-                r.e("47812"),
-                r.e("31233"),
-            ]).then(r.bind(r, 524792));
+            let { default: e } = await Promise.all([r.e("77084"), r.e("35778"), r.e("47812"), r.e("31233")]).then(
+                r.bind(r, 524792),
+            );
             return (r) => (0, n.jsx)(e, { ...t, ...r });
         });
     },

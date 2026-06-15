@@ -1,0 +1,65 @@
+.header__553a5 {
+    margin-top: -16px;
+    width: 100%
+}
+
+.headerArtWrapper__553a5 {
+    margin-inline: -16px -32px;
+    position: relative;
+    width: calc(100% + 32px)
+}
+
+.headerArt__553a5 {
+    background-position: 50%;
+    background-size: cover;
+    border-radius: 16px;
+    padding-top: 25%;
+    width: 100%
+}
+
+.headerArtPlaceholder__553a5 {
+    padding-top: 12%
+}
+
+.theme-dark .headerArtPlaceholder__553a5 {
+    background-color: var(--background-base-lowest)
+}
+
+.theme-light .headerArtPlaceholder__553a5 {
+    background-color: var(--background-base-lower)
+}
+
+.editButtonContainer__553a5 {
+    bottom: min(24px, 2vw);
+    inset-inline-end: min(24px, 2vw);
+    opacity: 0;
+    position: absolute;
+    transition: opacity .1s ease-in-out
+}
+
+.editButtonContainer__553a5:focus-within,
+.headerArtWrapper__553a5:hover .editButtonContainer__553a5 {
+    opacity: 1
+}
+
+.headerIcon__553a5 {
+    background-color: var(--background-base-low);
+    border: 4px solid var(--background-base-low);
+    margin-bottom: 16px;
+    margin-top: -50px
+}
+
+.headerName__553a5 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.inviteButton__553a5 {
+    margin-inline-start: auto
+}
+
+.titleWrapper__553a5 {
+    display: flex;
+    flex-direction: column
+}
