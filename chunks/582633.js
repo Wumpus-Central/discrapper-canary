@@ -32,11 +32,11 @@ var d = l(735438),
     p = l(226421),
     v = l(376595),
     x = l(773503),
-    b = l(429364);
-let g = [],
+    g = l(429364);
+let b = [],
     j = [];
 function y() {
-    let { subscribe: e, soundboardAudioEnabled: t, voiceAudioEnabled: l, clip: i } = (0, b.T)(),
+    let { subscribe: e, soundboardAudioEnabled: t, voiceAudioEnabled: l, clip: i } = (0, g.T)(),
         r = i.decision?.timestamp ?? 0,
         s = n.useMemo(() => new v.H(i.timeline ?? []), [i.timeline]),
         o = r - i.length,
@@ -59,7 +59,7 @@ function y() {
             [e, u],
         ),
         (0, a.jsx)(x.A, {
-            speakingUserIds: l ? c.speakingUserIds : g,
+            speakingUserIds: l ? c.speakingUserIds : b,
             activeSoundboards: t ? c.activeSoundboards : j,
             userIds: i.users,
             guildId: i.guildId,
@@ -115,17 +115,17 @@ let w = n.forwardRef(function (e, t) {
             voiceAudioEnabled: m,
             soundboardAudioEnabled: v,
             clip: x,
-        } = (0, b.T)(),
-        g = n.useRef({}),
+        } = (0, g.T)(),
+        b = n.useRef({}),
         j = n.useRef(!1),
         [w, R] = n.useState([]),
         T = n.useCallback(() => {
-            let e = g.current.main;
+            let e = b.current.main;
             if (null == e) return;
             let t = (0, d.round)(e.currentTime, 3),
                 a = (0, d.round)(l, 3);
             if (t >= (null != i ? (0, d.round)(i, 3) : (0, d.round)(e.duration, 3)) || t < a) {
-                for (let e of Object.values(g.current)) null != e && (e.currentTime = l);
+                for (let e of Object.values(b.current)) null != e && (e.currentTime = l);
                 return !0;
             }
         }, [l, i]),
@@ -143,26 +143,26 @@ let w = n.forwardRef(function (e, t) {
         j.current && T() && I();
     });
     let I = n.useCallback(() => {
-            for (let e of ((j.current = !0), T(), Object.values(g.current))) null != e && e.play();
+            for (let e of ((j.current = !0), T(), Object.values(b.current))) null != e && e.play();
         }, [T]),
         M = n.useCallback(() => {
-            for (let e of Object.values(g.current)) null != e && e.pause();
+            for (let e of Object.values(b.current)) null != e && e.pause();
         }, []),
         D = n.useCallback((e) => {
-            for (let t of (g.current.main?.paused && (j.current = !1), Object.values(g.current)))
+            for (let t of (b.current.main?.paused && (j.current = !1), Object.values(b.current)))
                 null != t && (t.currentTime = e);
         }, []),
         O = n.useCallback(() => {
-            g.current.main?.paused ? I() : M();
+            b.current.main?.paused ? I() : M();
         }, [I, M]),
         _ = n.useCallback((e) => {
-            g.current.main = e;
+            b.current.main = e;
         }, []),
         S = n.useCallback((e, t) => {
-            g.current[t] = e;
+            b.current[t] = e;
         }, []);
     n.useImperativeHandle(t, () => {
-        let e = { play: I, seek: D, pause: M, videoElement: g.current.main };
+        let e = { play: I, seek: D, pause: M, videoElement: b.current.main };
         return r(e), e;
     }, [I, D, M, r]);
     let P = n.useCallback(() => {
@@ -244,9 +244,9 @@ var T = l(503698),
     P = l(898196),
     U = l(187322),
     B = l(765671),
-    $ = l(531685);
+    G = l(531685);
 l(323874), l(14289), l(35956), l(393431), l(532706), l(42231), l(232424), l(949626), l(767709), l(65162);
-var G = l(661531),
+var $ = l(661531),
     z = l(602853),
     F = l(602674),
     H = l(335416),
@@ -257,7 +257,7 @@ let K = new Map(),
             o = n.useRef(null),
             { ref: u, width: c, height: d } = (0, B.Ay)(),
             [m, f] = n.useState(null),
-            h = (0, z.r)(G.A.colors.BACKGROUND_MOD_STRONG).hex();
+            h = (0, z.r)($.A.colors.BACKGROUND_MOD_STRONG).hex();
         return (n.useEffect(
             () => (
                 (o.current = new Worker(new URL("/assets/" + l.u("33197"), l.b))),
@@ -354,7 +354,7 @@ function en(e) {
         children: (0, a.jsx)("div", {
             className: ea.H,
             style: { left: `${i}%` },
-            children: (0, a.jsx)(t, { size: "refresh_sm", color: G.A.colors.ICON_DEFAULT }),
+            children: (0, a.jsx)(t, { size: "refresh_sm", color: $.A.colors.ICON_DEFAULT }),
         }),
     });
 }
@@ -384,10 +384,15 @@ let er = n.memo(function (e) {
         .useMemo(
             () =>
                 (function (e) {
-                    let t = e.filter((e) => e.signal.type === o.Gy.LAUGHTER).sort((e, t) => e.timestamp - t.timestamp),
-                        l = new Set();
-                    for (let e = 0; e < t.length - 1; e++) t[e + 1].timestamp - t[e].timestamp < 2500 && l.add(t[e]);
-                    return e.filter((e) => !l.has(e));
+                    let t = e
+                            .filter((e) => e.signal.type === o.Gy.LAUGHTER && e.signal.confidence > 0.8)
+                            .sort((e, t) => e.timestamp - t.timestamp),
+                        l = new Set(),
+                        a = 0;
+                    for (let e = 1; e <= t.length; e++)
+                        (e < t.length && t[e].timestamp - t[e - 1].timestamp < 2500) ||
+                            (e - a >= 2 && l.add(t[e - 1]), (a = e));
+                    return e.filter((e) => e.signal.type !== o.Gy.LAUGHTER || l.has(e));
                 })(t.timeline),
             [t.timeline],
         )
@@ -538,27 +543,27 @@ function ef(e) {
             pause: p,
             subscribe: v,
             seek: x,
-            clip: g,
+            clip: b,
             generateThumbnails: j,
             videoDimensions: y,
-        } = (0, b.T)(),
+        } = (0, g.T)(),
         C = i(),
         [k, A] = n.useState(null),
         N = n.useRef(null),
         w = n.useRef(null),
-        [T, G] = n.useState(!1),
+        [T, $] = n.useState(!1),
         [z, F] = n.useState(null);
     n.useEffect(
         () =>
             v({
                 onPlay: () => {
-                    A(null), G(!1);
+                    A(null), $(!1);
                 },
             }),
         [v],
     );
     let { ref: H, width: V = 0, height: K = 0 } = (0, B.Ay)(),
-        W = (0, I.bG)([$.A], () => $.A.windowSize());
+        W = (0, I.bG)([G.A], () => G.A.windowSize());
     n.useMemo(() => {
         W.width, W.height;
         let e = H.current;
@@ -571,7 +576,7 @@ function ef(e) {
                 let l = (((0, d.clamp)(e, z.left, z.right) - z.left) / z.width) * r,
                     a = (0, d.clamp)(l, 0, r),
                     n = k;
-                null == n && t && ((n = a <= o ? "start" : a >= u ? "end" : "playhead"), s && (p(), G(!0)), A(n)),
+                null == n && t && ((n = a <= o ? "start" : a >= u ? "end" : "playhead"), s && (p(), $(!0)), A(n)),
                     "start" === n ? m(a) : "end" === n ? f(a) : "playhead" === n && x((0, d.clamp)(a, o, u));
             },
             [r, z, k, o, u, s, p, m, f, x],
@@ -621,7 +626,7 @@ function ef(e) {
             [X],
         ),
         ee = n.useCallback(() => {
-            T && h(), G(!1), A(null);
+            T && h(), $(!1), A(null);
         }, [T, h]);
     n.useEffect(
         () => (
@@ -719,8 +724,8 @@ function ef(e) {
                         }),
                     ],
                 }),
-                (0, a.jsx)(Z, { onMouseDown: Q, voiceAudioTracks: t, clipId: g.id, className: ec.ou }),
-                (0, a.jsx)(eo, { onMouseDown: Q, videoLength: r, clip: g }),
+                (0, a.jsx)(Z, { onMouseDown: Q, voiceAudioTracks: t, clipId: b.id, className: ec.ou }),
+                (0, a.jsx)(eo, { onMouseDown: Q, videoLength: r, clip: b }),
                 (0, a.jsx)("div", {
                     className: ec.PH,
                     children: (0, a.jsxs)("div", {
@@ -780,7 +785,7 @@ function ef(e) {
 }
 function eh(e) {
     let { transitionState: t } = e,
-        { cropStart: l, cropEnd: u, videoPlayerRef: d, videoURL: m, audioTracks: f, clip: h } = (0, b.T)(),
+        { cropStart: l, cropEnd: u, videoPlayerRef: d, videoURL: m, audioTracks: f, clip: h } = (0, g.T)(),
         p = h.type === o.nQ.SCREENSHOT;
     n.useEffect(() => {
         if (!p) return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
@@ -836,12 +841,12 @@ function eh(e) {
                           }),
                       }),
         });
-    let g = null == m || t !== i.ip.ENTERED;
+    let b = null == m || t !== i.ip.ENTERED;
     return (0, a.jsx)("div", {
         className: C.OJ,
         children: (0, a.jsx)("div", {
             className: C.zT,
-            children: g
+            children: b
                 ? (0, a.jsx)(c, {})
                 : (0, a.jsxs)("div", {
                       className: C.Xf,
