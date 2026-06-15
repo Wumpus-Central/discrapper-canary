@@ -14,4 +14,5 @@ var i,
         (i[(i.RIBES = 9)] = "RIBES"),
         (i[(i.SINISTRE = 10)] = "SINISTRE"),
         (i[(i.ZILLA_SLAB = 12)] = "ZILLA_SLAB"),
+        (i[(i.PLAYPEN_SANS = 13)] = "PLAYPEN_SANS"),
         i);

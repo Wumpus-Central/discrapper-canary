@@ -1141,6 +1141,7 @@ var V =
         (o[(o.RIBES = 9)] = "RIBES"),
         (o[(o.SINISTRE = 10)] = "SINISTRE"),
         (o[(o.ZILLA_SLAB = 12)] = "ZILLA_SLAB"),
+        (o[(o.PLAYPEN_SANS = 13)] = "PLAYPEN_SANS"),
         o),
     H =
         (((l = {})[(l.UNSPECIFIED = 0)] = "UNSPECIFIED"),
