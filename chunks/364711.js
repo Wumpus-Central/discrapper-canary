@@ -1669,8 +1669,10 @@ class ez {
                         let e = JSON.parse(t);
                         null != e[0] &&
                             "" !== e[0] &&
+                            "string" == typeof e[0] &&
                             e[0].startsWith("gateway-") &&
-                            (n.identify_total_server_duration_ms = Math.floor(e[1].micros / 1e3)),
+                            (n.identify_total_server_duration_ms =
+                                "object" == typeof e[1] && "micros" in e[1] ? Math.floor(e[1].micros / 1e3) : 0),
                             (function e(t, n) {
                                 if (null != t && t.length > 0)
                                     for (let i = 0; i < t.length; i += 2) {
