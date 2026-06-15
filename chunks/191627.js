@@ -36,8 +36,9 @@ var i,
     h = n(602339),
     f = n(375708);
 let p = "RESTRICTED_HOURS_LAYER",
-    E = 30 * _.A.Millis.SECOND,
-    m = 8,
+    E = 30 * _.A.Millis.SECOND;
+_.A.Millis.MINUTE;
+let m = 8,
     g = 3,
     A = 26,
     I = 64,

@@ -48,6 +48,7 @@ var i,
         (i.START_STAGE_PROMPT = "start_stage_prompt"),
         (i.AGE_RESTRICTED_DM_COMMANDS_SETTINGS = "age_restricted_dm_commands_settings"),
         (i.AGE_RESTRICTED_SERVERS_ACCESS_SETTINGS = "age_restricted_servers_access_settings"),
+        (i.FAMILY_CENTER_CONNECTION = "family_center_connection"),
         i),
     f =
         (((r = {})[(r.PRIMARY = 1)] = "PRIMARY"),

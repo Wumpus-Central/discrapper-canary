@@ -104,6 +104,20 @@ let A = {
             t = { linkedUsers: e.linked_users, users: e.users };
         return s.h.dispatch({ type: "FAMILY_CENTER_LINKED_USERS_FETCH_SUCCESS", ...t }), t;
     },
+    async getConnectionPrerequisites(e, t) {
+        let { body: n } = await i.Bo.get({
+            url: _.Rsh.FAMILY_CENTER_CONNECTION_PREREQUISITES,
+            query: { teen_id: e, link_code: t },
+            rejectWithError: !0,
+        });
+        return n;
+    },
+    setPendingConnection(e, t) {
+        s.h.dispatch({ type: "FAMILY_CENTER_PENDING_CONNECTION_SET", teenId: e, linkCode: t });
+    },
+    clearPendingConnection() {
+        s.h.dispatch({ type: "FAMILY_CENTER_PENDING_CONNECTION_CLEAR" });
+    },
     async requestLink(e, t) {
         let { body: n } = await i.Bo.post({
                 url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
