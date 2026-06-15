@@ -1,23 +1,26 @@
 "use strict";
 n.r(t),
     n.d(t, {
-        closeAllModals: () => N,
-        closeAllModalsInContext: () => v,
+        closeAllModals: () => R,
+        closeAllModalsInContext: () => O,
         closeModal: () => m,
         closeModalInAllContexts: () => g,
-        doesTopModalAllowNavigation: () => b,
+        doesTopModalAllowNavigation: () => w,
         getInteractingModalContext: () => _,
+        getOpenModalKeys: () => S,
         hasAnyModalOpen: () => T,
         hasAnyModalOpenSelector: () => I,
-        hasModalOpen: () => R,
-        hasModalOpenSelector: () => C,
+        hasModalOpen: () => D,
+        hasModalOpenSelector: () => b,
+        hasModalOpenedSince: () => y,
         modalContextFromAppContext: () => h,
         openModal: () => E,
         openModalLazy: () => p,
+        subscribeToModalChanges: () => N,
         updateModal: () => A,
-        useHasAnyModalOpen: () => S,
-        useHasModalOpen: () => O,
-        useIsModalAtTop: () => y,
+        useHasAnyModalOpen: () => v,
+        useHasModalOpen: () => L,
+        useIsModalAtTop: () => C,
         useModalsStore: () => f,
     }),
     n(134528),
@@ -58,7 +61,7 @@ async function p(e) {
         l = await e();
     return (
         clearTimeout(o),
-        a ? R(s, n) && A(s, l, i.onCloseRequest, i.onCloseCallback, n) : E(l, { ...i, modalKey: s }, n),
+        a ? D(s, n) && A(s, l, i.onCloseRequest, i.onCloseCallback, n) : E(l, { ...i, modalKey: s }, n),
         s
     );
 }
@@ -204,33 +207,47 @@ function T() {
     return I(f.getState());
 }
 function S() {
-    return I(f());
+    let e = f.getState(),
+        t = new Set();
+    for (let n of d) for (let i of e[n] ?? []) t.add(i.key);
+    return t;
 }
 function y(e) {
+    let t = f.getState();
+    for (let n of d) for (let i of t[n] ?? []) if (!e.has(i.key)) return !0;
+    return !1;
+}
+function N(e) {
+    return f.subscribe(e);
+}
+function v() {
+    return I(f());
+}
+function C(e) {
     let { default: t, popout: n } = f();
     return n.length > 0 ? n.at(-1)?.key === e : t.at(-1)?.key === e;
 }
-function N() {
+function R() {
     let e = f.getState();
     for (let t in e) for (let n of e[t]) m(n.key, t);
 }
-function v() {
+function O() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _(),
         t = f.getState()[e];
     if (null != t) for (let n of t) m(n.key, e);
 }
-function C(e, t) {
+function b(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.SY,
         i = e[n];
     return null != i && i.some((e) => e.key === t);
 }
-function R(e, t) {
-    return C(f.getState(), e, t);
+function D(e, t) {
+    return b(f.getState(), e, t);
 }
-function O(e, t) {
-    return C(f(), e, t);
+function L(e, t) {
+    return b(f(), e, t);
 }
-function b() {
+function w() {
     let e = f.getState(),
         t = _();
     if (t !== l.SY && null != e[t] && e[t].length > 0) return !1;

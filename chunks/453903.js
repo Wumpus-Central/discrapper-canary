@@ -37,6 +37,8 @@ class N extends r.Component {
     loadingTimeout = new f.Ep();
     validClickTimeout = new f.Ep();
     isValidClickStart = !1;
+    modalsAtOpen = new Set();
+    unsubscribeModalChanges = null;
     static contextType = m.Ay;
     state = {
         renderedPosition: this.props.position,
@@ -44,6 +46,7 @@ class N extends r.Component {
         shouldShowLoadingState: !1,
         isLoading: !1,
         resizeKey: 0,
+        isModalStackedOnTop: !1,
     };
     shouldShowPopout(e, t) {
         return null != e.shouldShow ? e.shouldShow : t.shouldShowPopout;
@@ -53,12 +56,13 @@ class N extends r.Component {
     }
     componentDidUpdate(e, t) {
         e.shouldShow, this.props.shouldShow;
-        let n = this.shouldShowPopout(this.props, this.state);
+        let n = this.shouldShowPopout(this.props, this.state),
+            i = this.shouldShowPopout(e, t);
         if (
-            ((this.shouldShowPopout(e, t) !== n ||
+            ((i !== n ||
                 t.isLoading !== this.state.isLoading ||
                 e.ignoreModalClicks !== this.props.ignoreModalClicks) &&
-                (n ? this.setupShowPopout() : this.unsubscribe()),
+                (n ? this.setupShowPopout(!i) : this.unsubscribe()),
             this.props.scrollBehavior !== e.scrollBehavior)
         ) {
             let e = this.getDomElement();
@@ -83,19 +87,32 @@ class N extends r.Component {
         return this.props.ignoreModalClicks ? T.jej.POPOUT_CLOSE_AFTER_MODALS : T.jej.POPOUT_CLOSE;
     }
     setupShowPopout() {
-        let e = this.getDomElement();
-        null != e &&
-            (e.ownerDocument?.addEventListener("mousedown", this.handleDocumentMouseDown, !0),
-            e.ownerDocument?.addEventListener("mouseup", this.handleDocumentMouseUp, !0),
+        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+            t = this.getDomElement();
+        null != t &&
+            (t.ownerDocument?.addEventListener("mousedown", this.handleDocumentMouseDown, !0),
+            t.ownerDocument?.addEventListener("mouseup", this.handleDocumentMouseUp, !0),
             "close" === this.props.scrollBehavior
-                ? e.ownerDocument?.addEventListener("scroll", this.handleScroll, !0)
+                ? t.ownerDocument?.addEventListener("scroll", this.handleScroll, !0)
                 : "sticky" === this.props.scrollBehavior &&
-                  e.ownerDocument?.addEventListener("scroll", this.handleStickyScroll, !0),
+                  t.ownerDocument?.addEventListener("scroll", this.handleStickyScroll, !0),
             this.context.windowDispatch.subscribe(this.closeAction, this.handleEscapeClose),
-            (this.domElementRef.current = e),
+            (this.domElementRef.current = t),
             (this.isValidClickStart = !1),
+            e && (this.modalsAtOpen = (0, p.getOpenModalKeys)()),
+            this.subscribeToModalStack(),
             this.forceUpdate());
     }
+    subscribeToModalStack() {
+        !0 === this.props.clickTrap &&
+            (this.updateModalStackedOnTop(),
+            null == this.unsubscribeModalChanges &&
+                (this.unsubscribeModalChanges = (0, p.subscribeToModalChanges)(this.updateModalStackedOnTop)));
+    }
+    updateModalStackedOnTop = () => {
+        let e = (0, p.hasModalOpenedSince)(this.modalsAtOpen);
+        this.state.isModalStackedOnTop !== e && this.setState({ isModalStackedOnTop: e });
+    };
     unsubscribe() {
         let e = this.domElementRef.current;
         null != e &&
@@ -105,7 +122,9 @@ class N extends r.Component {
             e.ownerDocument?.removeEventListener("scroll", this.handleStickyScroll, !0)),
             this.context.windowDispatch.unsubscribe(T.jej.POPOUT_CLOSE, this.handleEscapeClose),
             this.context.windowDispatch.unsubscribe(T.jej.POPOUT_CLOSE_AFTER_MODALS, this.handleEscapeClose),
-            this.resizeObserver?.disconnect();
+            this.resizeObserver?.disconnect(),
+            this.unsubscribeModalChanges?.(),
+            (this.unsubscribeModalChanges = null);
     }
     componentWillUnmount() {
         this.unsubscribe(),
@@ -173,7 +192,7 @@ class N extends r.Component {
                       positionKey: c ?? String(m),
                       disablePointerEvents: d,
                       onPositionChange: this.handlePopoutPositionChange,
-                      clickTrap: p,
+                      clickTrap: p && !this.state.isModalStackedOnTop,
                       children: this.renderPopout,
                   }),
               });
@@ -246,7 +265,7 @@ class N extends r.Component {
         let i = e.target,
             r = this.domElementRef.current;
         if (null != r) {
-            if ((0, h.H)(r, i) || g.A.isOpen() || (t && (0, p.hasAnyModalOpen)())) return;
+            if ((0, h.H)(r, i) || g.A.isOpen() || (t && (0, p.hasModalOpenedSince)(this.modalsAtOpen))) return;
             this.isValidClickStart = !0;
         }
     };
