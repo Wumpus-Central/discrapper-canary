@@ -364,7 +364,7 @@ function te(e) {
                     renewal: !1,
                     applyEntitlements: !0,
                     paymentSourceId: i.paymentSourceId,
-                    currency: i.currency,
+                    currency: void 0,
                     analyticsLocations: g,
                     analyticsLocation: m.A.GUILD_BOOSTING_REVIEW_PRORATED,
                 }),
@@ -373,7 +373,7 @@ function te(e) {
                     items: t,
                     renewal: !0,
                     paymentSourceId: i.paymentSourceId,
-                    currency: i.currency,
+                    currency: void 0,
                     analyticsLocations: g,
                     analyticsLocation: m.A.GUILD_BOOSTING_REVIEW_RENEWAL,
                 });
