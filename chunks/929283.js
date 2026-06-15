@@ -27,11 +27,12 @@ let h = l.Ay.getEnableHardwareAcceleration() ? a.Js : a.eu,
                 eventHandlers: m,
                 avatarPlaceholderSrc: g,
             } = (0, c.A)({ user: n, avatarDecorationOverride: t, size: p, onlyAnimateOnHoverOrFocus: !r }),
-            A = d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: t.label });
+            A = d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: t.label }),
+            I = (0, o.FT)(o._3.SIZE_152);
         return (0, i.jsx)(h, {
             ...m,
             avatarDecoration: E,
-            src: r ? n?.getAvatarURL(void 0, 152, !0) : (l ?? g),
+            src: r ? n?.getAvatarURL(void 0, I, !0) : (l ?? g),
             imageClassName: r ? _.WG : void 0,
             className: s()(f, _.my),
             size: a,
