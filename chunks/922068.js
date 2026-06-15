@@ -2086,22 +2086,24 @@ function sT(e) {
                         t.id,
                     ),
                 );
-        }),
-            t.messages.length >= 25 &&
-                u.push(
-                    (0, i.jsx)(
-                        "div",
-                        {
-                            className: sC.Gr,
-                            children: (0, i.jsx)(nD.Q, {
-                                variant: "primary",
-                                text: `${$.intl.string($.t["9OB9hq"])} \u203A`,
-                                onClick: (e) => s(e, m[m.length - 1].id),
-                            }),
-                        },
-                        "view-all",
-                    ),
+        });
+        let A = m[m.length - 1];
+        null != A &&
+            0 > k.default.compare(A.id, t.newestUnreadMessageId) &&
+            u.push(
+                (0, i.jsx)(
+                    "div",
+                    {
+                        className: sC.Gr,
+                        children: (0, i.jsx)(nD.Q, {
+                            variant: "primary",
+                            text: `${$.intl.string($.t["9OB9hq"])} \u203A`,
+                            onClick: (e) => s(e, A.id),
+                        }),
+                    },
+                    "view-all",
                 ),
+            ),
             0 === u.length && (u = [(0, i.jsx)(X.y, {}, "spinner")]);
     }
     return o && r && nM.A.trackExposure({ location: "20e3b0_2" }), (0, i.jsx)("div", { className: sC.DZ, children: u });
