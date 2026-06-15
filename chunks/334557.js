@@ -17,12 +17,13 @@ let d = (e) => {
     _ = (0, n(240921).Ay)({
         kind: "user",
         name: "2026-02-mobile-visual-refresh",
-        defaultConfig: { enabled: !1, chatInputFloating: !1 },
+        defaultConfig: { enabled: !1, chatInputFloating: !1, chatInputLegacySendButton: !1 },
         variations: {
-            0: { enabled: !1, chatInputFloating: !1 },
-            1: { enabled: !0, chatInputFloating: !1 },
-            2: { enabled: !0, chatInputFloating: !0 },
-            3: { enabled: !0, chatInputFloating: !0 },
+            0: { enabled: !1, chatInputFloating: !1, chatInputLegacySendButton: !1 },
+            1: { enabled: !0, chatInputFloating: !1, chatInputLegacySendButton: !1 },
+            2: { enabled: !0, chatInputFloating: !0, chatInputLegacySendButton: !1 },
+            3: { enabled: !0, chatInputFloating: !0, chatInputLegacySendButton: !1 },
+            4: { enabled: !0, chatInputFloating: !0, chatInputLegacySendButton: !0 },
         },
     });
 var h = n(543699),

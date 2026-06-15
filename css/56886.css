@@ -9444,6 +9444,7 @@
     --mobile-chat-input-pill-padding: 2px;
     --mobile-chat-input-reply-mention-icon-margin-right: 4px;
     --mobile-chat-input-reply-mention-icon-size: 20px;
+    --mobile-chat-input-send-button-height: 40px;
     --mobile-chat-input-send-button-width: 40px;
     --mobile-coachmark-body-width: 260px;
     --mobile-coachmark-button-spacing: 12px;
@@ -9585,6 +9586,7 @@
     --mobile-chat-input-pill-border-width: 1px;
     --mobile-chat-input-pill-margin-horizontal: 8px;
     --mobile-chat-input-pill-padding: 0px;
+    --mobile-chat-input-send-button-height: 32px;
     --mobile-chat-input-send-button-width: 32px;
     --mobile-coachmark-body-width: 240px;
     --mobile-coachmark-button-spacing: 16px;
@@ -9674,6 +9676,7 @@
     --mobile-channel-drawer-corner-radius: 0px;
     --mobile-channel-drawer-divider-width: 1px;
     --mobile-channel-drawer-spacing: 0px;
+    --mobile-chat-input-action-button-gap: 10px;
     --mobile-chat-input-context-bar-gap: 8px;
     --mobile-chat-input-context-bar-padding-horizontal: 12px;
     --mobile-chat-input-context-bar-padding-vertical: 8px;
@@ -9684,10 +9687,19 @@
     --mobile-chat-input-floating-accessory-top-border-width: 0px;
     --mobile-chat-input-floating-border-radius: 16px;
     --mobile-chat-input-floating-content-gap: 8px;
-    --mobile-chat-input-floating-content-padding-horizontal: 12px;
-    --mobile-chat-input-floating-content-padding-vertical: 12px;
+    --mobile-chat-input-floating-content-padding-horizontal: 10px;
+    --mobile-chat-input-floating-content-padding-vertical: 10px;
     --mobile-chat-input-reply-mention-icon-margin-right: 0px;
     --mobile-chat-input-reply-mention-icon-size: 16px;
+    --mobile-chat-input-send-button-height: 36px;
+    --mobile-chat-input-send-button-width: 36px
+}
+
+.mobile-visual-refresh-legacy-send-button {
+    --mobile-chat-input-action-button-gap: 8px;
+    --mobile-chat-input-floating-content-padding-horizontal: 12px;
+    --mobile-chat-input-floating-content-padding-vertical: 12px;
+    --mobile-chat-input-send-button-height: 32px;
     --mobile-chat-input-send-button-width: 40px
 }
 

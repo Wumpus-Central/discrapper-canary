@@ -7720,7 +7720,14 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh":
+                                case "mobile-visual-refresh-legacy-send-button":
+                                    return 8;
+                                case "mobile-visual-refresh-floating":
+                                    return 10;
+                            }
                         return 0;
                     },
                 },
@@ -7881,7 +7888,13 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 12;
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh-floating":
+                                    return 10;
+                                case "mobile-visual-refresh-legacy-send-button":
+                                    return 12;
+                            }
                         return 0;
                     },
                 },
@@ -7889,7 +7902,13 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh-floating" === e) return 12;
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh-floating":
+                                    return 10;
+                                case "mobile-visual-refresh-legacy-send-button":
+                                    return 12;
+                            }
                         return 0;
                     },
                 },
@@ -7997,6 +8016,21 @@ let { Themes: c } = u.zv,
                         return 20;
                     },
                 },
+                CHAT_INPUT_SEND_BUTTON_HEIGHT: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 40;
+                        for (let e of t)
+                            switch (e) {
+                                case "mobile-visual-refresh":
+                                case "mobile-visual-refresh-legacy-send-button":
+                                    return 32;
+                                case "mobile-visual-refresh-floating":
+                                    return 36;
+                            }
+                        return 40;
+                    },
+                },
                 CHAT_INPUT_SEND_BUTTON_WIDTH: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -8006,6 +8040,8 @@ let { Themes: c } = u.zv,
                                 case "mobile-visual-refresh":
                                     return 32;
                                 case "mobile-visual-refresh-floating":
+                                    return 36;
+                                case "mobile-visual-refresh-legacy-send-button":
                                     return 40;
                             }
                         return 40;
