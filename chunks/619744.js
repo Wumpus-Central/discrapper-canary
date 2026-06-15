@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { k: () => d });
-var i = n(627968),
-    r = n(64700),
-    s = n(408278),
-    a = n(241326),
-    o = n(990078),
-    l = n(609174),
-    u = n(192308),
-    c = n(375708);
+l.d(t, { k: () => d });
+var a = l(627968),
+    r = l(64700),
+    n = l(408278),
+    i = l(241326),
+    s = l(990078),
+    u = l(609174),
+    c = l(192308),
+    o = l(375708);
 let d = (e) => {
-    let { onBeforeDelete: t, onAfterDelete: d, variant: _ = "overlay-secondary" } = e,
-        h = (0, l.Y_)(),
+    let { onBeforeDelete: t, onAfterDelete: d, variant: p = "overlay-secondary" } = e,
+        m = (0, u.Y_)(),
         f = r.useCallback(
             (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
                     ((e) => {
-                        let { clips: t, onBeforeDelete: r, onAfterDelete: s } = e;
-                        (0, u.openModalLazy)(
+                        let { clips: t, onBeforeDelete: r, onAfterDelete: n } = e;
+                        (0, c.openModalLazy)(
                             async () => {
-                                let { default: e } = await n.e("13367").then(n.bind(n, 223818));
-                                return (n) =>
-                                    (0, i.jsx)(e, {
+                                let { default: e } = await l.e("13367").then(l.bind(l, 223818));
+                                return (l) =>
+                                    (0, a.jsx)(e, {
                                         clips: t,
-                                        ...n,
+                                        ...l,
                                         onBeforeDelete: r,
                                         onAfterDelete: async () => {
-                                            await n.onClose(), s?.();
+                                            await l.onClose(), n?.();
                                         },
                                     });
                             },
                             { stackingBehavior: "stack" },
                         );
-                    })({ clips: [h], onAfterDelete: d, onBeforeDelete: t });
+                    })({ clips: [m], onAfterDelete: d, onBeforeDelete: t });
             },
-            [h, d, t],
+            [m, d, t],
         );
-    return (0, i.jsx)(o.m, {
-        text: c.intl.string(c.t.oyYWHE),
+    return (0, a.jsx)(s.m, {
+        text: o.intl.string(o.t.oyYWHE),
         position: "top",
-        children: (0, i.jsx)(s.K, {
+        children: (0, a.jsx)(n.K, {
             onClick: f,
-            icon: a.u,
-            "aria-label": c.intl.string(c.t.oyYWHE),
-            variant: _,
+            icon: i.u,
+            "aria-label": o.intl.string(o.t.oyYWHE),
+            variant: p,
             size: "sm",
         }),
     });

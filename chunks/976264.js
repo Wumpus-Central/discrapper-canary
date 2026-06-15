@@ -1,2 +1,1 @@
-"use strict";
-e.exports = n.p + "06ed02fb3171cf6d.wasm";
+e.exports = s.p + "06ed02fb3171cf6d.wasm";

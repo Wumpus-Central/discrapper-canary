@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(636537),
-    r = n(451988),
-    s = n(228366),
-    a = n(546183),
+n.d(t, { A: () => s });
+var l = n(636537),
+    a = n(451988),
+    i = n(228366),
+    r = n(546183),
     o = n(652215);
-let l = new r.OC(u, (e) => a.default.getFetchStateForApplication(e) !== a.FetchState.FETCHING);
-async function u(e) {
-    s.h.dispatch({
+let u = new a.OC(c, (e) => r.default.getFetchStateForApplication(e) !== r.FetchState.FETCHING);
+async function c(e) {
+    i.h.dispatch({
         type: "USER_AUTHORIZED_APPS_REQUEST",
         request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
     }),
-        await i.Bo.get({
+        await l.Bo.get({
             url: o.Rsh.OAUTH2_TOKENS,
             oldFormErrors: !0,
             rejectWithError: !0,
             query: { application_ids: e },
         }).then(
             (t) =>
-                s.h.dispatch({
+                i.h.dispatch({
                     type: "USER_AUTHORIZED_APPS_UPDATE",
                     isFullFetch: null == e,
                     tokens: (function (e, t) {
@@ -28,18 +27,18 @@ async function u(e) {
                     })(t.body, e),
                 }),
             () =>
-                s.h.dispatch({
+                i.h.dispatch({
                     type: "USER_AUTHORIZED_APPS_REQUEST_FAILED",
                     request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
                 }),
         );
 }
-let c = {
+let s = {
     fetch(e) {
-        a.default.getFetchState() !== a.FetchState.FETCHING && (null != e ? l.queue(e) : (l.reset(), u()));
+        r.default.getFetchState() !== r.FetchState.FETCHING && (null != e ? u.queue(e) : (u.reset(), c()));
     },
     delete(e) {
-        i.Bo.del({ url: o.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
+        l.Bo.del({ url: o.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
             this.fetch();
         });
     },

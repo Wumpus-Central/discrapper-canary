@@ -1,301 +1,300 @@
-"use strict";
-n.d(t, { A: () => g });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(17928),
-    l = n(408278),
-    u = n(548411),
-    c = n(554830),
-    d = n(331322),
-    _ = n(770178),
-    h = n(59520),
-    f = n(775602),
-    p = n(152858),
-    E = n(375708),
-    m = n(652046);
-let g = (e) => {
+r.d(t, { A: () => x });
+var l = r(627968),
+    n = r(64700),
+    u = r(503698),
+    c = r.n(u),
+    i = r(17928),
+    a = r(408278),
+    s = r(548411),
+    o = r(554830),
+    d = r(331322),
+    f = r(770178),
+    h = r(59520),
+    b = r(775602),
+    m = r(152858),
+    E = r(375708),
+    v = r(652046);
+let x = (e) => {
     let {
             children: t,
-            gap: n = 24,
-            edgeFade: s = "xl",
-            hideActionsWhenDisabled: g = !0,
+            gap: r = 24,
+            edgeFade: u = "xl",
+            hideActionsWhenDisabled: x = !0,
             className: A,
-            iconButtonSize: I,
-            scrollBehavior: T = p.Uf.PAGE,
-            "aria-label": S,
+            iconButtonSize: y,
+            scrollBehavior: C = m.Uf.PAGE,
+            "aria-label": p,
         } = e,
-        y = r.useId(),
-        N = r.useRef(0),
-        v = r.useRef(0),
-        C = r.useRef(0),
-        R = r.useRef(!1),
-        O = r.useRef(!1),
-        b = r.useRef(null),
-        D = r.useRef(null),
-        L = (0, o.bG)([f.Ay], () => f.Ay.keyboardModeEnabled),
-        w = (0, o.bG)([f.Ay], () => f.Ay.useReducedMotion),
-        M = r.useMemo(
+        k = n.useId(),
+        L = n.useRef(0),
+        M = n.useRef(0),
+        I = n.useRef(0),
+        g = n.useRef(!1),
+        w = n.useRef(!1),
+        R = n.useRef(null),
+        W = n.useRef(null),
+        T = (0, i.bG)([b.Ay], () => b.Ay.keyboardModeEnabled),
+        j = (0, i.bG)([b.Ay], () => b.Ay.useReducedMotion),
+        S = n.useMemo(
             () =>
-                r.Children.map(t, (e) =>
-                    r.isValidElement(e)
+                n.Children.map(t, (e) =>
+                    n.isValidElement(e)
                         ? null != e && "object" == typeof e && e.$$typeof === Symbol.for("react.portal")
                             ? e
-                            : r.cloneElement(e, { tabIndex: -1 })
+                            : n.cloneElement(e, { tabIndex: -1 })
                         : e,
                 ),
             [t],
         ),
-        [P, x] = r.useState(!1),
-        [k, U] = r.useState(!1),
-        [G, F] = r.useState(!0),
-        V = () => {
-            x(v.current > N.current);
+        [N, G] = n.useState(!1),
+        [D, U] = n.useState(!1),
+        [z, K] = n.useState(!0),
+        P = () => {
+            G(M.current > L.current);
         },
-        B = r.useCallback(() => {
+        $ = n.useCallback(() => {
             let e;
-            if (O.current) return null;
-            let t = W.current;
+            if (w.current) return null;
+            let t = O.current;
             if (null == t || 0 === t.childElementCount) return null;
-            let n = C.current,
-                i = t.clientWidth,
-                r = t.scrollWidth - i;
-            if (n <= 0) e = 0;
-            else if (n >= r) e = t.childElementCount - 1;
+            let r = I.current,
+                l = t.clientWidth,
+                n = t.scrollWidth - l;
+            if (r <= 0) e = 0;
+            else if (r >= n) e = t.childElementCount - 1;
             else {
-                let r = n + i / 2,
-                    s = 0,
-                    a = 1 / 0;
+                let n = r + l / 2,
+                    u = 0,
+                    c = 1 / 0;
                 for (let e = 0; e < t.children.length; e++) {
-                    let n = t.children[e],
-                        i = Math.abs(n.offsetLeft + n.offsetWidth / 2 - r);
-                    i < a && ((a = i), (s = e));
+                    let r = t.children[e],
+                        l = Math.abs(r.offsetLeft + r.offsetWidth / 2 - n);
+                    l < c && ((c = l), (u = e));
                 }
-                e = s;
+                e = u;
             }
-            return (b.current = e), e;
+            return (R.current = e), e;
         }, []),
-        H = r.useCallback(() => {
-            let e = W.current;
-            null != e && (U(C.current > 0), F(C.current + e.clientWidth < e.scrollWidth), B());
-        }, [B]),
-        j = r.useCallback(() => {
-            let e = W.current;
+        _ = n.useCallback(() => {
+            let e = O.current;
+            null != e && (U(I.current > 0), K(I.current + e.clientWidth < e.scrollWidth), $());
+        }, [$]),
+        B = n.useCallback(() => {
+            let e = O.current;
             if (null == e) return;
-            let t = b.current;
-            Array.from(e.children).forEach((e, n) => {
+            let t = R.current;
+            Array.from(e.children).forEach((e, r) => {
                 Array.from(e.children).forEach((e) => {
-                    L && n !== t ? e.setAttribute("inert", "true") : e.removeAttribute("inert");
+                    T && r !== t ? e.setAttribute("inert", "true") : e.removeAttribute("inert");
                 });
             });
-        }, [L]),
-        Y = (0, _.w)((e) => {
+        }, [T]),
+        F = (0, f.w)((e) => {
             let { contentRect: t } = e;
-            (N.current = t.width), null != W.current && (C.current = W.current?.scrollLeft), V(), H(), j();
+            (L.current = t.width), null != O.current && (I.current = O.current?.scrollLeft), P(), _(), B();
         }),
-        W = r.useRef(null);
-    r.useEffect(() => {
-        let e = W.current;
+        O = n.useRef(null);
+    n.useEffect(() => {
+        let e = O.current;
         if (null == e) return;
         let t = new ResizeObserver(() => {
-            (v.current = e.scrollWidth), e.scrollLeft !== C.current && (e.scrollLeft = C.current), V(), H();
+            (M.current = e.scrollWidth), e.scrollLeft !== I.current && (e.scrollLeft = I.current), P(), _();
         });
         Array.from(e.children).forEach((e) => {
             t.observe(e);
         });
-        let n = new MutationObserver(() => {
+        let r = new MutationObserver(() => {
             t.disconnect(),
                 Array.from(e.children).forEach((e) => {
                     t.observe(e);
                 }),
-                null != D.current && D.current >= e.childElementCount && (D.current = null);
+                null != W.current && W.current >= e.childElementCount && (W.current = null);
         });
-        n.observe(e, { childList: !0 });
-        let i = () => {
-            T === p.Uf.ITEM && (C.current = e.scrollLeft), H();
+        r.observe(e, { childList: !0 });
+        let l = () => {
+            C === m.Uf.ITEM && (I.current = e.scrollLeft), _();
         };
         return (
-            e.addEventListener("scrollend", i),
+            e.addEventListener("scrollend", l),
             () => {
-                t.disconnect(), n.disconnect(), e.removeEventListener("scrollend", i);
+                t.disconnect(), r.disconnect(), e.removeEventListener("scrollend", l);
             }
         );
-    }, [H, T]);
-    let K = r.useCallback(
+    }, [_, C]);
+    let V = n.useCallback(
             (e) => {
-                let t = W.current;
+                let t = O.current;
                 if (null == t) return;
-                let n = w ? "auto" : "smooth",
-                    i = Math.max(0, t.scrollWidth - t.clientWidth);
-                if (T === p.Uf.ITEM && null != t.firstElementChild) {
-                    let r = b.current ?? B() ?? 0,
-                        s = Math.max(0, Math.min(t.childElementCount - 1, r + ("right" === e ? 1 : -1))),
-                        a = t.children[s];
-                    if (null != a) {
-                        let e = Math.max(0, Math.min(i, a.offsetLeft));
-                        (C.current = e),
-                            (R.current = !0),
+                let r = j ? "auto" : "smooth",
+                    l = Math.max(0, t.scrollWidth - t.clientWidth);
+                if (C === m.Uf.ITEM && null != t.firstElementChild) {
+                    let n = R.current ?? $() ?? 0,
+                        u = Math.max(0, Math.min(t.childElementCount - 1, n + ("right" === e ? 1 : -1))),
+                        c = t.children[u];
+                    if (null != c) {
+                        let e = Math.max(0, Math.min(l, c.offsetLeft));
+                        (I.current = e),
+                            (g.current = !0),
                             t.addEventListener(
                                 "scrollend",
                                 () => {
-                                    (R.current = !1), (b.current = s), (D.current = s);
+                                    (g.current = !1), (R.current = u), (W.current = u);
                                 },
                                 { once: !0 },
                             ),
-                            t.scrollTo({ left: e, behavior: n }),
-                            H(),
-                            (b.current = s),
-                            (D.current = s);
+                            t.scrollTo({ left: e, behavior: r }),
+                            _(),
+                            (R.current = u),
+                            (W.current = u);
                     }
                     return;
                 }
-                let r = "right" === e ? N.current : -N.current,
-                    s = Math.max(0, Math.min(i, C.current + r));
-                (C.current = s),
-                    (R.current = !0),
-                    t.addEventListener("scrollend", () => (R.current = !1), { once: !0 }),
-                    t.scrollTo({ left: s, behavior: n }),
-                    H();
-                let a = B();
-                null != a && (D.current = a);
+                let n = "right" === e ? L.current : -L.current,
+                    u = Math.max(0, Math.min(l, I.current + n));
+                (I.current = u),
+                    (g.current = !0),
+                    t.addEventListener("scrollend", () => (g.current = !1), { once: !0 }),
+                    t.scrollTo({ left: u, behavior: r }),
+                    _();
+                let c = $();
+                null != c && (W.current = c);
             },
-            [T, w, H, B],
+            [C, j, _, $],
         ),
-        $ = r.useCallback(() => K("left"), [K]),
-        z = r.useCallback(() => K("right"), [K]),
-        q = (0, h.I)($, 200, [$]),
-        X = (0, h.I)(z, 200, [z]),
-        Z = r.useCallback(() => {
-            let e = W.current;
+        Y = n.useCallback(() => V("left"), [V]),
+        H = n.useCallback(() => V("right"), [V]),
+        Q = (0, h.I)(Y, 200, [Y]),
+        X = (0, h.I)(H, 200, [H]),
+        Z = n.useCallback(() => {
+            let e = O.current;
             if (null == e) return !1;
             for (let t of e.children) if (t.contains(document.activeElement)) return !0;
             return !1;
         }, []),
-        Q = r.useCallback(() => {
+        q = n.useCallback(() => {
             setTimeout(() => {
                 if (!Z()) {
-                    let e = W.current;
+                    let e = O.current;
                     if (null != e) {
                         for (let t of (e.setAttribute("tabIndex", "0"), e.children)) t.setAttribute("tabIndex", "-1");
-                        j();
+                        B();
                     }
                 }
             }, 10);
-        }, [Z, j]);
-    r.useEffect(() => {
-        j();
-    }, [L, j]);
-    let J = { "--custom-edge-fade-width": `var(--space-${s})` };
-    return (0, i.jsxs)("div", {
-        ref: Y,
-        role: null != S ? "region" : void 0,
-        "aria-label": S,
+        }, [Z, B]);
+    n.useEffect(() => {
+        B();
+    }, [T, B]);
+    let J = { "--custom-edge-fade-width": `var(--space-${u})` };
+    return (0, l.jsxs)("div", {
+        ref: F,
+        role: null != p ? "region" : void 0,
+        "aria-label": p,
         style: J,
-        className: a()(m.kL, A),
+        className: c()(v.kL, A),
         children: [
-            P &&
-                (0, i.jsxs)("div", {
-                    className: m.o1,
+            N &&
+                (0, l.jsxs)("div", {
+                    className: v.o1,
                     role: "group",
                     children: [
-                        (0, i.jsx)("div", {
-                            className: a()(m.x6, { [m.r9]: !k && g }),
-                            children: (0, i.jsx)(l.K, {
-                                icon: u.Z,
-                                size: I,
+                        (0, l.jsx)("div", {
+                            className: c()(v.x6, { [v.r9]: !D && x }),
+                            children: (0, l.jsx)(a.K, {
+                                icon: s.Z,
+                                size: y,
                                 variant: "overlay-secondary",
-                                onClick: q,
-                                disabled: !k,
+                                onClick: Q,
+                                disabled: !D,
                                 "aria-label": E.intl.string(E.t.FQx1Ru),
-                                "aria-hidden": !k && g,
-                                "aria-controls": y,
+                                "aria-hidden": !D && x,
+                                "aria-controls": k,
                             }),
                         }),
-                        (0, i.jsx)("div", {
-                            className: a()(m.x6, { [m.r9]: !G && g }),
-                            children: (0, i.jsx)(l.K, {
-                                icon: c.K,
-                                size: I,
+                        (0, l.jsx)("div", {
+                            className: c()(v.x6, { [v.r9]: !z && x }),
+                            children: (0, l.jsx)(a.K, {
+                                icon: o.K,
+                                size: y,
                                 variant: "overlay-secondary",
                                 onClick: X,
-                                disabled: !G,
+                                disabled: !z,
                                 "aria-label": E.intl.string(E.t.H4hwjn),
-                                "aria-hidden": !G && g,
-                                "aria-controls": y,
+                                "aria-hidden": !z && x,
+                                "aria-controls": k,
                             }),
                         }),
                     ],
                 }),
-            (0, i.jsx)(d.B, {
+            (0, l.jsx)(d.B, {
                 direction: "horizontal",
-                gap: n,
-                id: y,
-                "aria-label": S,
-                ref: W,
-                className: a()(m.Y_, { [m.jL]: k, [m.w6]: G, [m.XG]: k && G, [m.DY]: L }),
+                gap: r,
+                id: k,
+                "aria-label": p,
+                ref: O,
+                className: c()(v.Y_, { [v.jL]: D, [v.w6]: z, [v.XG]: D && z, [v.DY]: T }),
                 tabIndex: 0,
                 onFocus: (e) => {
-                    let t = W.current;
+                    let t = O.current;
                     if (null != t) {
                         if (
                             (e.preventDefault(),
-                            (null == b.current || b.current >= t.childElementCount) && B(),
+                            (null == R.current || R.current >= t.childElementCount) && $(),
                             -1 !== t.tabIndex)
                         ) {
-                            let e = D.current,
-                                n = (null != e && e < t.childElementCount ? e : null) ?? 0,
-                                i = t.children[n];
-                            null != i && (i.focus(), i.setAttribute("tabIndex", "0"), (b.current = n), j());
+                            let e = W.current,
+                                r = (null != e && e < t.childElementCount ? e : null) ?? 0,
+                                l = t.children[r];
+                            null != l && (l.focus(), l.setAttribute("tabIndex", "0"), (R.current = r), B());
                         }
                         t.setAttribute("tabIndex", "-1");
                     }
                 },
                 onBlur: (e) => {
-                    e.preventDefault(), Q();
+                    e.preventDefault(), q();
                 },
                 onKeyDown: (e) => {
-                    let t = W.current;
+                    let t = O.current;
                     if (null == t) return;
-                    let n = t.children,
-                        i = b.current ?? 0,
-                        r = n[i];
-                    null != r && r.setAttribute("tabIndex", "-1");
-                    let s = ["ArrowLeft"],
-                        a = ["ArrowRight"];
-                    if ([...s, ...a].includes(e.key))
+                    let r = t.children,
+                        l = R.current ?? 0,
+                        n = r[l];
+                    null != n && n.setAttribute("tabIndex", "-1");
+                    let u = ["ArrowLeft"],
+                        c = ["ArrowRight"];
+                    if ([...u, ...c].includes(e.key))
                         if (
                             (e.preventDefault(),
-                            s.includes(e.key) && (i = Math.max(0, i - 1)),
-                            a.includes(e.key) && (i = Math.min(t.childElementCount - 1, i + 1)),
-                            null != (r = n[i]))
+                            u.includes(e.key) && (l = Math.max(0, l - 1)),
+                            c.includes(e.key) && (l = Math.min(t.childElementCount - 1, l + 1)),
+                            null != (n = r[l]))
                         ) {
-                            r.setAttribute("tabIndex", "0"),
+                            n.setAttribute("tabIndex", "0"),
                                 t.setAttribute("tabIndex", "-1"),
-                                r.focus({ preventScroll: !0 });
-                            let e = r.offsetLeft - t.clientWidth / 2 + r.offsetWidth / 2,
-                                n = Math.max(0, Math.min(t.scrollWidth - t.clientWidth, e));
-                            (C.current = n),
-                                n !== t.scrollLeft &&
-                                    ((R.current = !0),
-                                    (O.current = !0),
+                                n.focus({ preventScroll: !0 });
+                            let e = n.offsetLeft - t.clientWidth / 2 + n.offsetWidth / 2,
+                                r = Math.max(0, Math.min(t.scrollWidth - t.clientWidth, e));
+                            (I.current = r),
+                                r !== t.scrollLeft &&
+                                    ((g.current = !0),
+                                    (w.current = !0),
                                     t.addEventListener(
                                         "scrollend",
                                         () => {
-                                            (R.current = !1), (O.current = !1);
+                                            (g.current = !1), (w.current = !1);
                                         },
                                         { once: !0 },
                                     ),
-                                    t.scrollTo({ left: n, behavior: w ? "auto" : "smooth" })),
-                                (b.current = i),
-                                (D.current = i),
-                                j();
-                        } else t.setAttribute("tabIndex", "0"), B();
+                                    t.scrollTo({ left: r, behavior: j ? "auto" : "smooth" })),
+                                (R.current = l),
+                                (W.current = l),
+                                B();
+                        } else t.setAttribute("tabIndex", "0"), $();
                 },
                 onScroll: (e) => {
-                    R.current || ((C.current = e.target.scrollLeft), H());
+                    g.current || ((I.current = e.target.scrollLeft), _());
                 },
-                children: M,
+                children: S,
             }),
         ],
     });

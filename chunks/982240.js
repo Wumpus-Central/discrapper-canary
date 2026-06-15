@@ -1,81 +1,80 @@
-"use strict";
-n.d(t, { Ay: () => _, H5: () => o, rL: () => a });
-var i = n(17928),
-    r = n(228366),
-    s = n(287809);
-function a(e) {
+r.d(t, { Ay: () => _, H5: () => u, rL: () => l });
+var n = r(17928),
+    i = r(228366),
+    a = r(287809);
+function l(e) {
     return e?.requirements[0]?.threshold ?? 0;
 }
-function o(e) {
+function u(e) {
     if (null != e) return (null != e.current_tier ? e.tier_obtained_at?.[e.current_tier] : void 0) ?? e.obtained_at;
 }
-let l = new Map(),
-    u = new Set(),
-    c = new Set();
-class d extends i.Ay.Store {
+let d = new Map(),
+    s = new Set(),
+    g = new Set();
+class o extends n.Ay.Store {
     initialize() {
-        this.waitFor(s.default);
+        this.waitFor(a.default);
     }
     static displayName = "BadgeDirectoryStore";
     getBadges(e) {
-        let t = e ?? s.default.getCurrentUser()?.id;
+        let t = e ?? a.default.getCurrentUser()?.id;
         if (null == t) return [];
-        let n = l.get(t);
-        return null != n ? Array.from(n.values()) : [];
+        let r = d.get(t);
+        return null != r ? Array.from(r.values()) : [];
     }
     hasCatalogFor(e) {
-        return u.has(e);
+        return s.has(e);
     }
     hasCatalogFetchErrorFor(e) {
-        let t = e ?? s.default.getCurrentUser()?.id;
-        return null != t && c.has(t);
+        let t = e ?? a.default.getCurrentUser()?.id;
+        return null != t && g.has(t);
     }
     getBadgeById(e, t) {
-        let n = t ?? s.default.getCurrentUser()?.id;
-        return null != n ? l.get(n)?.get(e) : void 0;
+        let r = t ?? a.default.getCurrentUser()?.id;
+        return null != r ? d.get(r)?.get(e) : void 0;
     }
     getSingleRequirementProgress(e, t) {
-        let n = this.getBadgeById(e, t)?.progress;
-        if (null != n && 0 !== n.length) return n[0];
+        let r = this.getBadgeById(e, t)?.progress;
+        if (null != r && 0 !== r.length) return r[0];
     }
     getCurrentTier(e, t) {
-        let n = this.getBadgeById(e, t);
-        if (n?.current_tier != null) return n.tiers.find((e) => e.key === n.current_tier);
+        let r = this.getBadgeById(e, t);
+        if (r?.current_tier != null) return r.tiers.find((e) => e.key === r.current_tier);
     }
     getObtainedAt(e, t) {
-        return o(this.getBadgeById(e, t));
+        return u(this.getBadgeById(e, t));
     }
     getNextTier(e, t) {
-        let n = this.getBadgeById(e, t);
-        if (n?.next_tier != null) return n.tiers.find((e) => e.key === n.next_tier);
+        let r = this.getBadgeById(e, t);
+        if (r?.next_tier != null) return r.tiers.find((e) => e.key === r.next_tier);
     }
     getRemainingToNextTier(e, t) {
-        let n = this.getNextTier(e, t),
-            i = this.getSingleRequirementProgress(e, t);
-        return null == n || null == i ? 0 : Math.max(0, a(n) - i.current);
+        let r = this.getNextTier(e, t),
+            n = this.getSingleRequirementProgress(e, t);
+        return null == r || null == n ? 0 : Math.max(0, l(r) - n.current);
     }
 }
-let _ = new d(r.h, {
+let _ = new o(i.h, {
     BADGE_DIRECTORY_FETCH_START: function (e) {
         let { userId: t } = e;
-        (c = new Set(c)).delete(t);
+        (g = new Set(g)).delete(t);
     },
     BADGE_DIRECTORY_FETCH_SUCCESS: function (e) {
-        let { userId: t, badges: n } = e,
-            i = new Map(l);
-        i.set(t, new Map(n.map((e) => [e.badge_id, e]))), (l = i), (u = new Set(u).add(t)), (c = new Set(c)).delete(t);
+        let { userId: t, badges: r } = e,
+            n = new Map(d);
+        n.set(t, new Map(r.map((e) => [e.badge_id, e]))), (d = n), (s = new Set(s).add(t)), (g = new Set(g)).delete(t);
     },
     BADGE_DIRECTORY_FETCH_FAILURE: function (e) {
         let { userId: t } = e;
-        c = new Set(c).add(t);
+        g = new Set(g).add(t);
     },
     BADGE_FETCH_SUCCESS: function (e) {
-        let { userId: t, badge: n } = e,
-            i = new Map(l),
-            r = new Map(i.get(t) ?? new Map());
-        r.set(n.badge_id, n), i.set(t, r), (l = i);
+        let { userId: t, badge: r } = e,
+            n = new Map(d),
+            i = new Map(n.get(t) ?? new Map());
+        i.set(r.badge_id, r), n.set(t, i), (d = n);
     },
     LOGOUT: function () {
-        (l = new Map()), (u = new Set()), (c = new Set());
+        (d = new Map()), (s = new Set()), (g = new Set());
     },
 });

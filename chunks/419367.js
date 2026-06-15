@@ -1,3 +1,2 @@
-"use strict";
-n.d(t, { N: () => i });
-let i = { tension: 250, friction: 20 };
+a.d(s, { N: () => r });
+let r = { tension: 250, friction: 20 };

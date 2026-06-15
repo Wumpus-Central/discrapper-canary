@@ -1,77 +1,76 @@
-"use strict";
-n.d(t, { A: () => p });
-var i = n(627968),
+n.d(t, { A: () => m });
+var l = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(123292),
-    l = n(688810),
+    a = n(503698),
+    i = n.n(a),
+    s = n(123292),
+    o = n(688810),
     u = n(183555),
     c = n(975732),
     d = n(308244),
-    _ = n(900179),
+    f = n(900179),
     h = n(375708),
-    f = n(851929);
-let p = r.memo(function (e) {
+    A = n(851929);
+let m = r.memo(function (e) {
     let {
             userId: t,
             userBio: n,
-            heading: s,
-            onClose: p,
-            animateOnHoverOrFocusOnly: E = !1,
-            isHoveringOrFocusing: m = !1,
-            hidePersonalInformation: g = !1,
-            hideRestrictedProfile: A = !1,
-            viewFullBioDisabled: I = !1,
+            heading: a,
+            onClose: m,
+            animateOnHoverOrFocusOnly: x = !1,
+            isHoveringOrFocusing: g = !1,
+            hidePersonalInformation: S = !1,
+            hideRestrictedProfile: T = !1,
+            viewFullBioDisabled: E = !1,
         } = e,
-        { context: T } = (0, u.NJ)(),
-        { analyticsLocations: S } = (0, l.Ay)(),
-        [y, N] = r.useState(!1),
-        [v, C] = r.useState(!1),
-        R = r.useRef(null);
-    return g || null == n || "" === n
+        { context: p } = (0, u.NJ)(),
+        { analyticsLocations: v } = (0, o.Ay)(),
+        [R, y] = r.useState(!1),
+        [C, j] = r.useState(!1),
+        N = r.useRef(null);
+    return S || null == n || "" === n
         ? null
-        : (0, i.jsxs)(_.A, {
-              heading: s,
+        : (0, l.jsxs)(f.A, {
+              heading: a,
               children: [
-                  (0, i.jsx)("div", {
+                  (0, l.jsx)("div", {
                       ref: (e) => {
-                          (R.current = e),
+                          (N.current = e),
                               null == e ||
-                                  (N(!v && e.scrollHeight - e.clientHeight > 1),
-                                  e.getBoundingClientRect().height > 57.75 && C(!0));
+                                  (y(!C && e.scrollHeight - e.clientHeight > 1),
+                                  e.getBoundingClientRect().height > 57.75 && j(!0));
                       },
-                      className: a()(f.mA, v && f.Em),
+                      className: i()(A.mA, C && A.Em),
                       onBlur: (e) => {
-                          null == R.current || R.current.contains(e.relatedTarget) || (R.current.scrollTop = 0);
+                          null == N.current || N.current.contains(e.relatedTarget) || (N.current.scrollTop = 0);
                       },
-                      children: (0, i.jsx)(d.A, {
+                      children: (0, l.jsx)(d.A, {
                           userId: t,
                           userBio: n,
                           setLineClamp: !1,
                           textColor: "text-strong",
-                          animateOnHoverOrFocusOnly: E,
-                          isHoveringOrFocusing: m,
+                          animateOnHoverOrFocusOnly: x,
+                          isHoveringOrFocusing: g,
                       }),
                   }),
-                  (y || v) &&
-                      (0, i.jsx)("div", {
-                          className: f.HV,
-                          children: (0, i.jsx)(o.Q, {
+                  (R || C) &&
+                      (0, l.jsx)("div", {
+                          className: A.HV,
+                          children: (0, l.jsx)(s.Q, {
                               textVariant: "text-xs/normal",
                               size: "sm",
                               variant: "secondary",
                               text: h.intl.string(h.t.YDiPq8),
                               onClick: () => {
-                                  p?.(),
+                                  m?.(),
                                       (0, c.openUserProfileModal)({
-                                          ...T,
+                                          ...p,
                                           userId: t,
-                                          hideRestrictedProfile: A,
-                                          sourceAnalyticsLocations: S,
+                                          hideRestrictedProfile: T,
+                                          sourceAnalyticsLocations: v,
                                       });
                               },
-                              disabled: I,
+                              disabled: E,
                           }),
                       }),
               ],

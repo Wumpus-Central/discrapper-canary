@@ -1,122 +1,121 @@
-"use strict";
-n.d(t, { A: () => A, I: () => p });
-var i = n(627968);
-n(64700);
-var r = n(607399),
-    s = n(793574),
-    a = n(688810),
-    o = n(268218),
-    l = n(335180),
-    u = n(723702),
-    c = n(19575),
-    d = n(58736),
-    _ = n(746080),
-    h = n(546930);
-let f = (0, o.Fe)({
+a.d(t, { A: () => h, I: () => g });
+var s = a(627968);
+a(64700);
+var i = a(607399),
+    n = a(793574),
+    r = a(688810),
+    l = a(268218),
+    c = a(335180),
+    o = a(723702),
+    d = a(19575),
+    u = a(58736),
+    m = a(746080),
+    A = a(546930);
+let N = (0, l.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("53989"),
-            n.e("79093"),
-            n.e("33063"),
-            n.e("11394"),
-            n.e("37082"),
-            n.e("38939"),
-            n.e("43039"),
-            n.e("48804"),
-            n.e("55112"),
-            n.e("31390"),
-            n.e("17225"),
-            n.e("96123"),
-            n.e("21435"),
-            n.e("43300"),
-            n.e("61156"),
-            n.e("65617"),
-            n.e("8371"),
-            n.e("44385"),
-            n.e("20803"),
-            n.e("66016"),
-            n.e("81202"),
-            n.e("21225"),
-            n.e("12549"),
-            n.e("83752"),
-        ]).then(n.bind(n, 381687)),
+            a.e("53989"),
+            a.e("79093"),
+            a.e("33063"),
+            a.e("11394"),
+            a.e("37082"),
+            a.e("38939"),
+            a.e("43039"),
+            a.e("48804"),
+            a.e("55112"),
+            a.e("31390"),
+            a.e("17225"),
+            a.e("96123"),
+            a.e("21435"),
+            a.e("43300"),
+            a.e("61156"),
+            a.e("65617"),
+            a.e("8371"),
+            a.e("44385"),
+            a.e("20803"),
+            a.e("66016"),
+            a.e("81202"),
+            a.e("21225"),
+            a.e("12549"),
+            a.e("83752"),
+        ]).then(a.bind(a, 381687)),
     webpackId: 381687,
     name: "Search",
-    renderLoader: l.O7,
+    renderLoader: c.O7,
 });
-async function p(e) {
-    if (!e && (0, u.isMac)() && u.isPlatformEmbedded) {
+async function g(e) {
+    if (!e && (0, o.isMac)() && o.isPlatformEmbedded) {
         let e = await window.DiscordNative.app.getDefaultDoubleClickAction();
-        "Minimize" === e ? c.Ay.minimize() : "Maximize" === e && c.Ay.maximize();
+        "Minimize" === e ? d.Ay.minimize() : "Maximize" === e && d.Ay.maximize();
     }
 }
-function E(e) {
+function p(e) {
     let {
         children: t,
-        className: n,
-        channelId: s,
-        guildId: a,
-        innerClassname: o,
-        transparent: l = !1,
-        hidden: u = !1,
-        toolbar: c,
-        mobileToolbar: E,
-        "aria-label": m,
-        "aria-labelledby": g,
-        scrollable: A,
-        role: I,
-        hideSearch: T,
-        disableDoubleClick: S,
+        className: a,
+        channelId: n,
+        guildId: r,
+        innerClassname: l,
+        transparent: c = !1,
+        hidden: o = !1,
+        toolbar: d,
+        mobileToolbar: p,
+        "aria-label": x,
+        "aria-labelledby": E,
+        scrollable: h,
+        role: f,
+        hideSearch: C,
+        disableDoubleClick: R,
     } = e;
-    return (0, i.jsx)(d.Ay, {
-        className: n,
-        innerClassName: o,
+    return (0, s.jsx)(u.Ay, {
+        className: a,
+        innerClassName: l,
         toolbar: (function () {
-            if (null == c) return null;
-            let e = null != s && !T;
-            return r.Fr
-                ? E
-                : (0, i.jsxs)(i.Fragment, {
+            if (null == d) return null;
+            let e = null != n && !C;
+            return i.Fr
+                ? p
+                : (0, s.jsxs)(s.Fragment, {
                       children: [
-                          c,
-                          e && !(0, _.jq)(s)
-                              ? (0, i.jsx)(f, { guildId: a, channelId: s, className: h.$P }, a ?? s)
+                          d,
+                          e && !(0, m.jq)(n)
+                              ? (0, s.jsx)(N, { guildId: r, channelId: n, className: A.$P }, r ?? n)
                               : null,
                       ],
                   });
         })(),
-        transparent: l,
-        hidden: u,
-        onDoubleClick: () => p(S),
-        "aria-label": m,
-        "aria-labelledby": g,
-        role: I,
-        scrollable: A,
+        transparent: c,
+        hidden: o,
+        onDoubleClick: () => g(R),
+        "aria-label": x,
+        "aria-labelledby": E,
+        role: f,
+        scrollable: h,
         children: t,
     });
 }
-function m(e) {
-    let { children: t, className: n, "aria-label": r, "aria-labelledby": s, role: a, disableDoubleClick: o } = e;
-    return (0, i.jsx)(d.Ay, {
-        className: n,
-        onDoubleClick: () => p(o),
-        "aria-label": r,
-        "aria-labelledby": s,
-        role: a,
+function x(e) {
+    let { children: t, className: a, "aria-label": i, "aria-labelledby": n, role: r, disableDoubleClick: l } = e;
+    return (0, s.jsx)(u.Ay, {
+        className: a,
+        onDoubleClick: () => g(l),
+        "aria-label": i,
+        "aria-labelledby": n,
+        role: r,
         children: t,
     });
 }
-function g(e) {
-    let { isAuthenticated: t = !0, ...n } = e,
-        { analyticsLocations: r } = (0, a.Ay)(s.A.HEADER_BAR);
-    return (0, i.jsx)(a.f5, {
-        value: r,
-        children: t ? (0, i.jsx)(E, { ...n, className: n.className }) : (0, i.jsx)(m, { ...n, className: n.className }),
+function E(e) {
+    let { isAuthenticated: t = !0, ...a } = e,
+        { analyticsLocations: i } = (0, r.Ay)(n.A.HEADER_BAR);
+    return (0, s.jsx)(r.f5, {
+        value: i,
+        children: t ? (0, s.jsx)(p, { ...a, className: a.className }) : (0, s.jsx)(x, { ...a, className: a.className }),
     });
 }
-(g.Title = d.Ay.Title),
-    (g.Icon = d.Ay.Icon),
-    (g.ChannelIcon = d.Ay.ChannelIcon),
-    (g.Divider = d.Ay.Divider),
-    (g.Caret = d.Ay.Caret);
-let A = g;
+(E.Title = u.Ay.Title),
+    (E.Icon = u.Ay.Icon),
+    (E.ChannelIcon = u.Ay.ChannelIcon),
+    (E.Divider = u.Ay.Divider),
+    (E.Caret = u.Ay.Caret);
+let h = E;

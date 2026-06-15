@@ -1,72 +1,71 @@
-"use strict";
-n.d(t, { A: () => E });
-var i = n(627968),
-    r = n(64700),
-    s = n(877624),
-    a = n(554146),
-    o = n(349288),
-    l = n(367727),
-    u = n(174459),
-    c = n(549996),
-    d = n(498470),
-    _ = n(637706),
-    h = n(635995),
-    f = n(652215),
-    p = n(49999);
-function E() {
-    let e = (0, c.c)(s.C.NAGBAR),
+a.d(t, { A: () => p });
+var s = a(627968),
+    i = a(64700),
+    n = a(877624),
+    r = a(554146),
+    l = a(349288),
+    c = a(367727),
+    o = a(174459),
+    d = a(549996),
+    u = a(498470),
+    m = a(637706),
+    A = a(635995),
+    N = a(652215),
+    g = a(49999);
+function p() {
+    let e = (0, d.c)(n.C.NAGBAR),
         t = e?.properties.properties.oneofKind === "nagbar" ? e.properties.properties.nagbar : null,
-        n = e?.promotionId,
-        E = r.useCallback(
+        a = e?.promotionId,
+        p = i.useCallback(
             (e) => {
-                null != n &&
-                    (0, l.qr)(a.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, n, { dismissAction: e, forceTrack: !0 });
+                null != a &&
+                    (0, c.qr)(r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, a, { dismissAction: e, forceTrack: !0 });
             },
-            [n],
+            [a],
         ),
-        m = r.useCallback(() => {
-            u.default.track(f.HAw.APP_NOTICE_CLOSED, { notice_type: f.kqX.PREMIUM_MARKETING_NAGBAR }),
-                E(p.i.USER_DISMISS);
-        }, [E]),
-        g = r.useRef(null);
+        x = i.useCallback(() => {
+            o.default.track(N.HAw.APP_NOTICE_CLOSED, { notice_type: N.kqX.PREMIUM_MARKETING_NAGBAR }),
+                p(g.i.USER_DISMISS);
+        }, [p]),
+        E = i.useRef(null);
     if (
-        (r.useEffect(() => {
+        (i.useEffect(() => {
             null == t ||
-                null == n ||
-                (g.current !== n &&
-                    ((g.current = n), (0, l.Wx)(a.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, { snowflakeId: n })));
-        }, [t, n]),
+                null == a ||
+                (E.current !== a &&
+                    ((E.current = a), (0, c.Wx)(r.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, { snowflakeId: a })));
+        }, [t, a]),
         null == t)
     )
         return null;
-    let A = (0, d.h)({
+    let h = (0, u.h)({
             buttonAction: t.ctaAction,
             deeplinkSection: t.deeplinkSection,
             onClose: () => {
-                E(p.i.TAKE_ACTION);
+                p(g.i.TAKE_ACTION);
             },
         }),
-        I = (0, _.C)(t.helpArticle, "");
-    return (0, i.jsxs)(h.T0, {
-        onClick: m,
+        f = (0, m.C)(t.helpArticle, "");
+    return (0, s.jsxs)(A.T0, {
+        onClick: x,
         children: [
-            (0, i.jsxs)(h.In, {
+            (0, s.jsxs)(A.In, {
                 children: [
                     t.body,
-                    null != I &&
-                        (0, i.jsxs)(i.Fragment, {
-                            children: ["\xa0", (0, i.jsx)(o.Anchor, { href: I.url, children: I.linkText })],
+                    null != f &&
+                        (0, s.jsxs)(s.Fragment, {
+                            children: ["\xa0", (0, s.jsx)(l.Anchor, { href: f.url, children: f.linkText })],
                         }),
                 ],
             }),
             "" !== t.ctaLabel &&
-                (0, i.jsx)(h.fY, {
+                (0, s.jsx)(A.fY, {
                     text: t.ctaLabel,
                     onClick: () => {
-                        u.default.track(f.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                            notice_type: f.kqX.PREMIUM_MARKETING_NAGBAR,
+                        o.default.track(N.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                            notice_type: N.kqX.PREMIUM_MARKETING_NAGBAR,
                         }),
-                            A();
+                            h();
                     },
                 }),
         ],

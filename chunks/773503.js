@@ -1,61 +1,60 @@
-"use strict";
-n.d(t, { A: () => g });
-var i = n(627968),
-    r = n(64700),
-    s = n(735438),
-    a = n.n(s),
-    o = n(17928),
-    l = n(97808),
-    u = n(778712),
-    c = n(834730),
-    d = n(287809),
-    _ = n(690521),
-    h = n(562153),
-    f = n(990956);
-function p(e) {
-    let { avatarURL: t, avatarLabel: n, text: r, leading: s } = e;
-    return (0, i.jsxs)("div", {
-        className: f.AB,
+a.d(t, { A: () => b });
+var s = a(627968),
+    n = a(64700),
+    i = a(735438),
+    r = a.n(i),
+    o = a(17928),
+    l = a(97808),
+    d = a(778712),
+    u = a(834730),
+    p = a(287809),
+    m = a(690521),
+    c = a(562153),
+    h = a(990956);
+function g(e) {
+    let { avatarURL: t, avatarLabel: a, text: n, leading: i } = e;
+    return (0, s.jsxs)("div", {
+        className: h.AB,
         children: [
-            (0, i.jsx)(l.eu, { "aria-label": n, size: u._3.SIZE_24, src: t }),
-            s,
-            (0, i.jsx)(c.E, { className: f.PW, color: "always-white", variant: "text-sm/normal", children: r }),
+            (0, s.jsx)(l.eu, { "aria-label": a, size: d._3.SIZE_24, src: t }),
+            i,
+            (0, s.jsx)(u.E, { className: h.PW, color: "always-white", variant: "text-sm/normal", children: n }),
         ],
     });
 }
-function E(e) {
-    let { user: t, guildId: n, channelId: r } = e,
-        s = (0, h.tx)(n, r, t);
-    return null == t ? null : (0, i.jsx)(p, { avatarURL: t.getAvatarURL(n, 24, !1), avatarLabel: s, text: s });
+function S(e) {
+    let { user: t, guildId: a, channelId: n } = e,
+        i = (0, c.tx)(a, n, t);
+    return null == t ? null : (0, s.jsx)(g, { avatarURL: t.getAvatarURL(a, 24, !1), avatarLabel: i, text: i });
 }
-function m(e) {
-    let { soundboard: t, user: n, guildId: r } = e;
-    if (null == n) return null;
-    let s =
+function y(e) {
+    let { soundboard: t, user: a, guildId: n } = e;
+    if (null == a) return null;
+    let i =
         null != t.emojiId || null != t.emojiName
-            ? (0, i.jsx)("img", {
+            ? (0, s.jsx)("img", {
                   alt: t.name,
-                  className: f.g8,
-                  src: (0, _.Ez)({ id: t.emojiId, name: t.emojiName ?? "", animated: t.emojiAnimated ?? !1 }, 24),
+                  className: h.g8,
+                  src: (0, m.Ez)({ id: t.emojiId, name: t.emojiName ?? "", animated: t.emojiAnimated ?? !1 }, 24),
               })
             : null;
-    return (0, i.jsx)(p, { avatarURL: n.getAvatarURL(r, 24, !1), avatarLabel: n.username, text: t.name, leading: s });
+    return (0, s.jsx)(g, { avatarURL: a.getAvatarURL(n, 24, !1), avatarLabel: a.username, text: t.name, leading: i });
 }
-let g = r.memo(function (e) {
-    let { speakingUserIds: t, activeSoundboards: n, userIds: r, guildId: s, channelId: l } = e,
-        u = (0, o.cf)([d.default], () => a().pick(d.default.getUsers(), r));
-    return (0, i.jsxs)("div", {
-        className: f.zr,
+let b = n.memo(function (e) {
+    let { speakingUserIds: t, activeSoundboards: a, userIds: n, guildId: i, channelId: l } = e,
+        d = (0, o.cf)([p.default], () => r().pick(p.default.getUsers(), n));
+    return (0, s.jsxs)("div", {
+        className: h.zr,
         children: [
             t.map((e) => {
-                let t = u[e];
-                return (0, i.jsx)(E, { user: t, guildId: s, channelId: l }, e);
+                let t = d[e];
+                return (0, s.jsx)(S, { user: t, guildId: i, channelId: l }, e);
             }),
-            n.map((e) => {
-                let t = u[e.userId];
-                return (0, i.jsx)(
-                    m,
-                    { soundboard: e, user: t, guildId: s, channelId: l },
+            a.map((e) => {
+                let t = d[e.userId];
+                return (0, s.jsx)(
+                    y,
+                    { soundboard: e, user: t, guildId: i, channelId: l },
                     `${e.soundboardId}:${e.userId}`,
                 );
             }),

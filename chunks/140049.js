@@ -1,104 +1,103 @@
-"use strict";
-n.r(t), n.d(t, { BadgeImageWithProgressCircle: () => _, default: () => h });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(366010),
-    o = n(834730),
-    l = n(736653),
-    u = n(905545);
-let c = (e) => {
+a.r(e), a.d(e, { BadgeImageWithProgressCircle: () => u, default: () => x });
+var s = a(627968);
+a(64700);
+var t = a(503698),
+    l = a.n(t),
+    c = a(366010),
+    i = a(834730),
+    o = a(736653),
+    n = a(905545);
+let d = (r) => {
     let {
-            innerRingPercent: t,
-            outerRingColor: n = "currentColor",
-            innerRingColor: r = "currentColor",
-            strokeWidth: s = 4,
-            children: a,
-            backgroundCircleColor: o,
-            backgroundCircleBlurAmount: l = 0,
-        } = e,
-        c = Math.min(Math.max(t, 0), 100),
-        d = (100 - s) / 2,
-        _ = d * Math.PI * 2,
-        h = (100 - s) / 2,
-        f = h * Math.PI * 2;
-    return (0, i.jsxs)("div", {
-        className: u.kL,
+            innerRingPercent: e,
+            outerRingColor: a = "currentColor",
+            innerRingColor: t = "currentColor",
+            strokeWidth: l = 4,
+            children: c,
+            backgroundCircleColor: i,
+            backgroundCircleBlurAmount: o = 0,
+        } = r,
+        d = Math.min(Math.max(e, 0), 100),
+        h = (100 - l) / 2,
+        u = h * Math.PI * 2,
+        x = (100 - l) / 2,
+        k = x * Math.PI * 2;
+    return (0, s.jsxs)("div", {
+        className: n.kL,
         children: [
-            (0, i.jsx)("svg", {
+            (0, s.jsx)("svg", {
                 viewBox: "0 0 100 100",
-                className: u.DT,
-                style: null != l ? { "--custom-backdrop-blur-amount": `${l}px` } : void 0,
-                children: (0, i.jsx)("circle", { cx: 50, cy: 50, r: 50, fill: o }),
+                className: n.DT,
+                style: null != o ? { "--custom-backdrop-blur-amount": `${o}px` } : void 0,
+                children: (0, s.jsx)("circle", { cx: 50, cy: 50, r: 50, fill: i }),
             }),
-            (0, i.jsxs)("svg", {
+            (0, s.jsxs)("svg", {
                 viewBox: "0 0 100 100",
-                className: u.JW,
+                className: n.JW,
                 children: [
-                    (0, i.jsx)("circle", {
-                        cx: 50,
-                        cy: 50,
-                        r: d,
-                        strokeWidth: s,
-                        stroke: n,
-                        fill: "none",
-                        strokeLinecap: "round",
-                        transform: "rotate(-90 50 50)",
-                        style: { strokeDasharray: _ },
-                    }),
-                    (0, i.jsx)("circle", {
+                    (0, s.jsx)("circle", {
                         cx: 50,
                         cy: 50,
                         r: h,
-                        strokeWidth: s,
-                        stroke: r,
+                        strokeWidth: l,
+                        stroke: a,
                         fill: "none",
                         strokeLinecap: "round",
                         transform: "rotate(-90 50 50)",
-                        style: { strokeDasharray: f, strokeDashoffset: (1 - c / 100) * f },
+                        style: { strokeDasharray: u },
+                    }),
+                    (0, s.jsx)("circle", {
+                        cx: 50,
+                        cy: 50,
+                        r: x,
+                        strokeWidth: l,
+                        stroke: t,
+                        fill: "none",
+                        strokeLinecap: "round",
+                        transform: "rotate(-90 50 50)",
+                        style: { strokeDasharray: k, strokeDashoffset: (1 - d / 100) * k },
                     }),
                 ],
             }),
-            null != a && (0, i.jsx)("div", { className: u.Lw, children: a }),
+            null != c && (0, s.jsx)("div", { className: n.Lw, children: c }),
         ],
     });
 };
-var d = n(255041);
-let _ = (e) => {
+var h = a(255041);
+let u = (r) => {
         let {
-                src: t,
-                alt: n,
-                progressCircleText: r,
-                progressCirclePercent: u,
-                progressCircleUrgency: _,
-                compact: h = !1,
-            } = e,
-            f = (0, l.Ay)();
-        return (0, i.jsxs)("div", {
-            className: s()(d.mI, { [d.oE]: h }),
+                src: e,
+                alt: a,
+                progressCircleText: t,
+                progressCirclePercent: n,
+                progressCircleUrgency: u,
+                compact: x = !1,
+            } = r,
+            k = (0, o.Ay)();
+        return (0, s.jsxs)("div", {
+            className: l()(h.mI, { [h.oE]: x }),
             children: [
-                (0, i.jsx)("img", { alt: n, src: t, className: d.pq }),
-                null != r &&
+                (0, s.jsx)("img", { alt: a, src: e, className: h.pq }),
+                null != t &&
+                    null != n &&
                     null != u &&
-                    null != _ &&
-                    (0, i.jsx)("div", {
-                        className: d.$t,
-                        children: (0, i.jsx)(c, {
-                            innerRingPercent: u,
-                            outerRingColor: "critical" === _ ? "var(--red-new-74)" : "var(--opacity-orange-36)",
-                            innerRingColor: "critical" === _ ? "var(--red-new-43)" : "var(--opacity-orange-96)",
+                    (0, s.jsx)("div", {
+                        className: h.$t,
+                        children: (0, s.jsx)(d, {
+                            innerRingPercent: n,
+                            outerRingColor: "critical" === u ? "var(--red-new-74)" : "var(--opacity-orange-36)",
+                            innerRingColor: "critical" === u ? "var(--red-new-43)" : "var(--opacity-orange-96)",
                             strokeWidth: 7,
-                            backgroundCircleColor: (0, a.M)(f) ? "var(--opacity-black-72)" : "var(--opacity-white-72)",
+                            backgroundCircleColor: (0, c.M)(k) ? "var(--opacity-black-72)" : "var(--opacity-white-72)",
                             backgroundCircleBlurAmount: 2,
-                            children: (0, i.jsx)(o.E, {
+                            children: (0, s.jsx)(i.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-subtle",
-                                children: r,
+                                children: t,
                             }),
                         }),
                     }),
             ],
         });
     },
-    h = _;
+    x = u;

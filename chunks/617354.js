@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => r });
+n.d(t, { A: () => l });
 var i = n(375708);
-function r(e, t, n) {
+function l(e, t, n) {
     return n
         ? i.intl.string(i.t["2Ne/Y1"])
         : t
