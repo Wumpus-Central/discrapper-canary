@@ -167,22 +167,63 @@ function g(e, t) {
     );
 }
 function A(e, t) {
+    let n, r, s;
     if ("subscriptionId" in e && null == e.subscriptionId) {
         let { subscriptionId: t, ...n } = e;
         e = n;
     }
-    let n = (0, i.useRef)(e),
-        r = (0, i.useRef)(!1);
+    let a = (0, i.useRef)(e),
+        o = (0, i.useRef)(!1),
+        {
+            serverPricedPreviewRef: l,
+            shouldReturnInvoiceCache: u,
+            updateServerPricedPreviewRef: c,
+        } = ((n = (0, i.useRef)(null)),
+        (0, i.useEffect)(() => {
+            n.current = null;
+        }, [t]),
+        (r = (0, i.useCallback)((e, t) => {
+            let i = n.current;
+            return (
+                null != i &&
+                null != e.paymentSourceId &&
+                e.paymentSourceId === i.serverSelectedPaymentSourceId &&
+                t === i.dedupeKey
+            );
+        }, [])),
+        (s = (0, i.useCallback)((e, t, i) => {
+            let r;
+            if (null != i) {
+                n.current = null;
+                return;
+            }
+            n.current = {
+                record: e,
+                dedupeKey: t,
+                serverSelectedPaymentSourceId:
+                    null == (r = e.checkoutContext?.payment_sources) ? null : (r.find((e) => e.enabled)?.id ?? null),
+            };
+        }, [])),
+        { serverPricedPreviewRef: n, shouldReturnInvoiceCache: r, updateServerPricedPreviewRef: s });
     (0, i.useEffect)(() => {
-        n.current = e;
+        a.current = e;
     });
-    let s = JSON.stringify(e),
-        a = (0, i.useCallback)(() => {
-            let e = n.current,
-                t = r.current ? e : { ...e, paymentSourceId: null };
-            return "subscriptionId" in t ? ((r.current = !0), f(t)) : "items" in t ? ((r.current = !0), h(t)) : null;
-        }, [s]);
-    return m(e, a, t);
+    let d = JSON.stringify(e),
+        _ = (0, i.useCallback)(() => {
+            let e = a.current,
+                t = o.current ? e : { ...e, paymentSourceId: null };
+            if ("subscriptionId" in t) return (o.current = !0), f(t);
+            if (!("items" in t)) return null;
+            {
+                o.current = !0;
+                let e = JSON.stringify({ ...t, paymentSourceId: "exclude_from_dedupe" }),
+                    n = l.current;
+                return null != n && u(t, e)
+                    ? Promise.resolve(n.record)
+                    : h(t).then((n) => (c(n, e, t.paymentSourceId), n));
+            }
+        }, [d, l, u, c]);
+    return m(e, _, t);
 }
 function I(e, t) {
     let n = (0, i.useRef)(e);
