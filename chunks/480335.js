@@ -164,60 +164,65 @@ let v = (e) => {
                 restartMethod: _,
                 profileEffect: h,
                 delayIntro: f = !0,
-                layerData: p,
+                restartKey: p,
+                layerData: E,
             } = e,
-            E = r.useRef(null),
-            [m, g] = r.useState([]),
-            [I, T] = r.useState(0),
-            [S, y] = r.useState(0),
-            { accessibilityLabel: C } = h,
-            R = f ? 500 : 0.1,
-            [O, b] = r.useState(-R),
-            {
-                stop: D,
-                reset: L,
-                ticking: w,
-            } = A((e) => {
-                b((t) => t + e);
-            }),
-            M = r.useRef(R);
-        r.useEffect(() => {
-            M.current = R;
-        }),
-            r.useEffect(() => {
-                b(-M.current), g(h.effects.sort((e, t) => (e.zIndex ?? 0) - (t.zIndex ?? 0)));
-            }, [h]),
-            r.useEffect(() => {
+            m = r.useRef(null),
+            g = r.useMemo(() => h.effects.sort((e, t) => (e.zIndex ?? 0) - (t.zIndex ?? 0)), [h]),
+            { accessibilityLabel: I } = h,
+            { firstLoop: T, loopEnd: S } = r.useMemo(() => {
                 let e = 0,
                     t = 1 / 0;
-                m.forEach((n) => {
-                    let i = n.start + n.duration;
-                    i > e && (e = i), n.loop && n.start < t && (t = n.start);
-                }),
-                    T(t),
-                    y(e);
-            }, [y, m]);
-        let [P, x] = r.useState(!1);
+                return (
+                    g.forEach((n) => {
+                        let i = n.start + n.duration;
+                        i > e && (e = i), n.loop && n.start < t && (t = n.start);
+                    }),
+                    { firstLoop: t, loopEnd: e }
+                );
+            }, [g]),
+            y = f ? 500 : 0.1,
+            [C, R] = r.useState(-y),
+            {
+                stop: O,
+                reset: b,
+                ticking: D,
+            } = A(
+                r.useCallback((e) => {
+                    R((t) => t + e);
+                }, []),
+            ),
+            L = r.useRef(y);
+        r.useEffect(() => {
+            L.current = y;
+        }),
+            r.useEffect(() => {
+                R(-L.current);
+            }, [h]);
+        let [w, M] = r.useState(!1);
         return (
             r.useEffect(() => {
-                !0 === c || l || (D(), b(0)),
-                    !l && P && w.current && (D(), b(0)),
+                null != p && (R(-L.current), M(!1), D.current || b());
+            }, [p, b, D]),
+            r.useEffect(() => {
+                !0 === c || l || (O(), R(0)),
+                    !l && w && D.current && (O(), R(0)),
                     s &&
                         l &&
-                        !w.current &&
-                        (L(),
-                        h.animationType === o.l.ANIMATION_TYPE_PERSISTENT ? b(_ === d.HL.FromStart ? 0 : I) : b(0));
-            }, [l, P, I, s, D, L, w, h.animationType, c, _]),
+                        !D.current &&
+                        (b(),
+                        h.animationType === o.l.ANIMATION_TYPE_PERSISTENT ? R(_ === d.HL.FromStart ? 0 : T) : R(0));
+            }, [l, w, T, s, O, b, D, h.animationType, c, _]),
             (0, i.jsx)("div", {
-                ref: E,
+                ref: m,
                 className: a()(N.yC, { [N.yo]: l && u }),
-                "aria-label": C,
+                "aria-label": I,
                 role: "img",
                 children: (0, i.jsx)("div", {
                     className: N.vW,
-                    children: m.map((e, r) => {
+                    children: g.map((e, r) => {
                         if (
-                            !w.current &&
+                            !D.current &&
                             h.animationType === o.l.ANIMATION_TYPE_PERSISTENT &&
                             null != h.staticFrameSrc &&
                             0 === r &&
@@ -241,14 +246,14 @@ let v = (e) => {
                             {
                                 layerConfig: e,
                                 animationType: h.animationType,
-                                ticking: w.current,
-                                time: O,
-                                hasPlayedThrough: P,
-                                setHasPlayedThrough: x,
+                                ticking: D.current,
+                                time: C,
+                                hasPlayedThrough: w,
+                                setHasPlayedThrough: M,
                                 maxLoops: n,
                                 loopEnd: S,
                                 bannerAdjustment: t,
-                                imageData: p?.[e.src],
+                                imageData: E?.[e.src],
                             },
                             e.src + r,
                         );

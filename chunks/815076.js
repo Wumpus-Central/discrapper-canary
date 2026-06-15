@@ -16,8 +16,8 @@ var i,
     A = t(652165),
     v = t(287809),
     j = t(174459),
-    I = t(859040),
-    R = t(440938),
+    R = t(859040),
+    I = t(440938),
     g = t(298072),
     N = t(993408),
     f = t(503089),
@@ -206,8 +206,8 @@ var eo =
     eA = t(320095),
     ev = t(963852),
     ej = t(763754),
-    eI = t(20851),
-    eR = t(986687),
+    eR = t(20851),
+    eI = t(986687),
     eg = t(101058),
     eN = t(84540),
     ef = t(836602),
@@ -291,7 +291,7 @@ let e_ = (e) => {
                     outline: !0,
                     "aria-hidden": !0,
                     children: [
-                        (0, r.jsx)(eI.A, { className: eL.G5, author: (0, ej.p_)(t), message: t }, t.id),
+                        (0, r.jsx)(eR.A, { className: eL.G5, author: (0, ej.p_)(t), message: t }, t.id),
                         (0, r.jsxs)("div", {
                             className: eL.lG,
                             children: [
@@ -315,8 +315,8 @@ let e_ = (e) => {
             h = m === b.R.PROFILE_EFFECT,
             { firstAvatarDecoration: E, firstProfileEffect: p, firstNameplate: A, firstProfileFrame: v } = (0, V.f5)(s),
             j = u?.type === b.R.AVATAR_DECORATION ? u : E,
-            I = u?.type === b.R.PROFILE_EFFECT ? u : p,
-            R = u?.type === b.R.PROFILE_FRAME ? u : v,
+            R = u?.type === b.R.PROFILE_EFFECT ? u : p,
+            I = u?.type === b.R.PROFILE_FRAME ? u : v,
             g = u?.type === b.R.NAMEPLATE ? u : A;
         if (
             (l.useEffect(() => {
@@ -332,14 +332,15 @@ let e_ = (e) => {
             className: x ? eL.RA : eL.hZ,
             children: (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(eR.A, {
+                    (0, r.jsx)(eI.A, {
                         ...c,
                         pendingAvatar: d,
                         user: t,
                         canUsePremiumCustomization: a,
                         pendingAvatarDecoration: j,
-                        pendingProfileEffect: I,
-                        pendingProfileFrame: R,
+                        pendingProfileEffect: R,
+                        profileEffectRestartKey: i,
+                        pendingProfileFrame: I,
                         disabledInputs: !0,
                         hideMessageInput: !h,
                         hideCustomStatus: !0,
@@ -527,7 +528,7 @@ let so = (e) => {
             onClose: h,
             onTrackClick: E,
         } = e,
-        { cardId: p, sessionId: v, tilePosition: j } = (0, R.uM)() ?? {},
+        { cardId: p, sessionId: v, tilePosition: j } = (0, I.uM)() ?? {},
         g = (0, eQ.L)(sn.PremiumTypes.TIER_2),
         f = (0, N.xM)(s),
         C = (0, eF.Do)("CollectiblesShopProductDetailsModal") && i.type === b.R.PROFILE_FRAME,
@@ -650,7 +651,7 @@ let so = (e) => {
                                           loadingFinishedLabel: F.intl.string(F.t.Pg1UP5),
                                           onClick: async () => {
                                               E(el.sH.ADD_TO_COLLECTION),
-                                                  await (0, I.iJ)(i.skuId),
+                                                  await (0, R.iJ)(i.skuId),
                                                   h(),
                                                   (0, sa.A)({
                                                       product: i,
@@ -691,7 +692,7 @@ let so = (e) => {
                                                                             (0, A.B4)({
                                                                                 skuId: i.skuId,
                                                                                 onComplete: (e) => {
-                                                                                    (0, I.gB)(),
+                                                                                    (0, R.gB)(),
                                                                                         h(),
                                                                                         (0, sa.A)({
                                                                                             product: i,
@@ -797,7 +798,7 @@ var sx = t(408278),
     sA = t(668953),
     sv = t(881636),
     sj = t(428445);
-let sI = (e) => {
+let sR = (e) => {
     let { goPrev: s, goNext: t } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -824,7 +825,7 @@ let sI = (e) => {
         ],
     });
 };
-var sR = t(742441);
+var sI = t(742441);
 let sg = (e) => {
     let {
             user: s,
@@ -847,10 +848,10 @@ let sg = (e) => {
         j = l.useCallback(() => {
             v <= 1 || d((e) => (e - 1 + v) % v);
         }, [v, d]),
-        I = l.useCallback(() => {
+        R = l.useCallback(() => {
             v <= 1 || d((e) => (e + 1) % v);
         }, [v, d]),
-        R = l.useCallback(
+        I = l.useCallback(
             (e) => {
                 if (v <= 1) return;
                 let s = e.target;
@@ -859,9 +860,9 @@ let sg = (e) => {
                     s.isContentEditable ||
                     ("ArrowLeft" === e.key
                         ? (e.preventDefault(), j())
-                        : "ArrowRight" === e.key && (e.preventDefault(), I()));
+                        : "ArrowRight" === e.key && (e.preventDefault(), R()));
             },
-            [v, j, I],
+            [v, j, R],
         ),
         g = l.useCallback(() => {
             E(el.sH.CLOSE_DETAIL), h();
@@ -878,12 +879,12 @@ let sg = (e) => {
             null != e && ((e.style.animation = "none"), e.offsetHeight, (e.style.animation = ""));
         }, [c]),
         (0, r.jsxs)("div", {
-            className: D()(sR.i1, (0, el.EZ)(a.skuId) ? sR.bF : a.type === b.R.AVATAR_DECORATION ? sR.Jq : sR.eF),
+            className: D()(sI.i1, (0, el.EZ)(a.skuId) ? sI.bF : a.type === b.R.AVATAR_DECORATION ? sI.Jq : sI.eF),
             style: null != m ? { backgroundImage: `url(${m})` } : void 0,
-            onKeyDown: R,
+            onKeyDown: I,
             children: [
                 (0, r.jsx)("div", {
-                    className: sR.KR,
+                    className: sI.KR,
                     ref: f,
                     children: (0, r.jsx)(p.RightPreview, {
                         user: s,
@@ -895,9 +896,9 @@ let sg = (e) => {
                         isOrbCheckoutModalOpen: u,
                     }),
                 }),
-                A && v > 1 && (0, r.jsx)(sI, { goPrev: j, goNext: I }),
+                A && v > 1 && (0, r.jsx)(sR, { goPrev: j, goNext: R }),
                 (0, r.jsxs)("div", {
-                    className: sR.VG,
+                    className: sI.VG,
                     children: [
                         (0, r.jsx)(sp.R, {
                             product: t,
@@ -958,9 +959,9 @@ let sf = (e) => {
             sku_id: V.skuId,
             product_type: Y,
         }),
-            (0, I.RD)(V.skuId);
+            (0, R.RD)(V.skuId);
     }, [D, X, V.skuId, Y]);
-    let { cardId: q, sessionId: $, tilePosition: J } = (0, R.uM)() ?? {},
+    let { cardId: q, sessionId: $, tilePosition: J } = (0, I.uM)() ?? {},
         Q = l.useMemo(() => (0, k.v8)(i), [i]),
         ee = (0, C.R)({ skuId: V.skuId, productSkuIds: Q, analyticsLocations: X });
     (0, E.A)({
