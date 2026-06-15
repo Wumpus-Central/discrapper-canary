@@ -4,6 +4,7 @@ e.exports = {
     YF: "headerTabs_ab6641",
     $H: "tabBar_ab6641",
     Mf: "tab_ab6641",
+    Gn: "tabLabel_ab6641",
     yH: "inboxIcon_ab6641",
     Hi: "inboxTitle_ab6641",
     ne: "controls_ab6641",
