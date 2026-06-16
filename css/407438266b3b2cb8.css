@@ -85,6 +85,10 @@
     padding: 12px
 }
 
+.user-profile-sidebar-redesign .container__06b03 {
+    padding: var(--space-8)
+}
+
 .header__06b03 {
     align-items: center;
     display: flex;
@@ -98,6 +102,10 @@
 
 .orbsRewardOfferNotice__06b03 {
     margin: 0 -12px -12px
+}
+
+.user-profile-sidebar-redesign .orbsRewardOfferNotice__06b03 {
+    margin: 0 calc(var(--space-8)*-1) calc(var(--space-8)*-1)
 }
 
 .row__89036 {

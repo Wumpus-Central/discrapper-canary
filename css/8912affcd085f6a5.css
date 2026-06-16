@@ -153,6 +153,10 @@
     padding: 12px
 }
 
+.user-profile-sidebar-redesign .overlay_b32ca4 {
+    padding: var(--space-8)
+}
+
 .note_b32ca4 {
     margin: -4px
 }
