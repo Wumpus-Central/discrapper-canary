@@ -1,1 +1,1 @@
-e.exports={I:"safetySettingsNotice__9536c",b:"closeButton__9536c"}
+_.exports = { I: "safetySettingsNotice__9536c", b: "closeButton__9536c" };

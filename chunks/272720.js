@@ -1,1 +1,5 @@
-"use strict";function i(e){return e.moderatorReporting?.moderatorReportChannelId??null}n.d(t,{A:()=>i})
+"use strict";
+function i(e) {
+    return e.moderatorReporting?.moderatorReportChannelId ?? null;
+}
+n.d(t, { A: () => i });

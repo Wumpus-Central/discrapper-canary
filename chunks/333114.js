@@ -1,1 +1,68 @@
-i.d(e,{default:()=>h});var l=i(627968),n=i(64700),s=i(189213),r=i(17928),a=i(834730),d=i(287809),u=i(633075),c=i(725386),o=i(527139),g=i(375708),f=i(500681);function h(t){let{onClose:e,trackUserProfileEditAction:i,highlightedApplicationIds:h,...p}=t,k=(0,r.bG)([d.default],()=>d.default.getCurrentUser()),m=function(t){let e=(0,c.A)({location:"UserProfileWidgetAddModal"}),[i,l]=n.useState(e);return n.useEffect(()=>{e.length>i.length&&l(e)},[e,i]),n.useMemo(()=>{if(null==t||0===t.length)return i;let e=e=>e instanceof u.R&&t.includes(e.applicationId);return[...i.filter(e),...i.filter(t=>!e(t))]},[i,t])}(h),x=m.length>0,[C,b]=n.useState(!1),A={onClick:()=>e(),text:g.intl.string(g.t.cpT0Cq)},U=n.useCallback(()=>{b(!0),e()},[e]);return null==k?null:(0,l.jsx)(s.Modal,{title:g.intl.string(g.t["grUgR+"]),actions:x?[]:[A],size:x?"md":"sm",onClose:e,...p,children:x?(0,l.jsx)("ul",{"aria-label":g.intl.string(g.t["+EIBSA"]),className:f.f,children:m.map(t=>(0,l.jsx)(o.A,{widget:t,onAddWidget:U,loading:C,trackUserProfileEditAction:i,isHighlighted:null!=h&&t instanceof u.R&&h.includes(t.applicationId)},t.getUniqueKey()))}):(0,l.jsx)(a.E,{variant:"text-md/medium",color:"text-subtle",children:g.intl.string(g.t["1nkDOs"])})})}
+i.d(e, { default: () => h });
+var l = i(627968),
+    n = i(64700),
+    s = i(189213),
+    r = i(17928),
+    a = i(834730),
+    d = i(287809),
+    u = i(633075),
+    c = i(725386),
+    o = i(527139),
+    g = i(375708),
+    f = i(500681);
+function h(t) {
+    let { onClose: e, trackUserProfileEditAction: i, highlightedApplicationIds: h, ...p } = t,
+        k = (0, r.bG)([d.default], () => d.default.getCurrentUser()),
+        m = (function (t) {
+            let e = (0, c.A)({ location: "UserProfileWidgetAddModal" }),
+                [i, l] = n.useState(e);
+            return (
+                n.useEffect(() => {
+                    e.length > i.length && l(e);
+                }, [e, i]),
+                n.useMemo(() => {
+                    if (null == t || 0 === t.length) return i;
+                    let e = (e) => e instanceof u.R && t.includes(e.applicationId);
+                    return [...i.filter(e), ...i.filter((t) => !e(t))];
+                }, [i, t])
+            );
+        })(h),
+        x = m.length > 0,
+        [C, b] = n.useState(!1),
+        A = { onClick: () => e(), text: g.intl.string(g.t.cpT0Cq) },
+        U = n.useCallback(() => {
+            b(!0), e();
+        }, [e]);
+    return null == k
+        ? null
+        : (0, l.jsx)(s.Modal, {
+              title: g.intl.string(g.t["grUgR+"]),
+              actions: x ? [] : [A],
+              size: x ? "md" : "sm",
+              onClose: e,
+              ...p,
+              children: x
+                  ? (0, l.jsx)("ul", {
+                        "aria-label": g.intl.string(g.t["+EIBSA"]),
+                        className: f.f,
+                        children: m.map((t) =>
+                            (0, l.jsx)(
+                                o.A,
+                                {
+                                    widget: t,
+                                    onAddWidget: U,
+                                    loading: C,
+                                    trackUserProfileEditAction: i,
+                                    isHighlighted: null != h && t instanceof u.R && h.includes(t.applicationId),
+                                },
+                                t.getUniqueKey(),
+                            ),
+                        ),
+                    })
+                  : (0, l.jsx)(a.E, {
+                        variant: "text-md/medium",
+                        color: "text-subtle",
+                        children: g.intl.string(g.t["1nkDOs"]),
+                    }),
+          });
+}

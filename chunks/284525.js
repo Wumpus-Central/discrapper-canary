@@ -1,1 +1,40 @@
-"use strict";n.d(t,{A:()=>o});var i=n(627968);n(64700);var r=n(990078),s=n(821609),a=n(102853);function o(e){let{activity:t,embeddedActivity:n,user:o,onAction:l,location:u,variant:c="secondary",size:d="sm",..._}=e,h=(0,a.l)({activity:t??void 0,embeddedActivity:n,user:o,onGameJoin:l,location:u});if(null==h)return null;let{isJoining:f,handleJoinRequest:p,buttonCTA:E,tooltip:m,isEnabled:g}=h;return(0,i.jsx)(r.m,{text:m,asContainer:!g,children:(0,i.jsx)(s.$,{variant:c,size:d,text:E,onClick:p,disabled:!g,loading:f,fullWidth:!0,..._})},"join")}
+"use strict";
+n.d(t, { A: () => o });
+var i = n(627968);
+n(64700);
+var r = n(990078),
+    s = n(821609),
+    a = n(102853);
+function o(e) {
+    let {
+            activity: t,
+            embeddedActivity: n,
+            user: o,
+            onAction: l,
+            location: u,
+            variant: c = "secondary",
+            size: d = "sm",
+            ..._
+        } = e,
+        h = (0, a.l)({ activity: t ?? void 0, embeddedActivity: n, user: o, onGameJoin: l, location: u });
+    if (null == h) return null;
+    let { isJoining: f, handleJoinRequest: p, buttonCTA: E, tooltip: m, isEnabled: g } = h;
+    return (0, i.jsx)(
+        r.m,
+        {
+            text: m,
+            asContainer: !g,
+            children: (0, i.jsx)(s.$, {
+                variant: c,
+                size: d,
+                text: E,
+                onClick: p,
+                disabled: !g,
+                loading: f,
+                fullWidth: !0,
+                ..._,
+            }),
+        },
+        "join",
+    );
+}

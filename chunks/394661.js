@@ -1,1 +1,1 @@
-e.exports={d:"exemptionHint__54558"}
+e.exports = { d: "exemptionHint__54558" };

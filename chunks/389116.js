@@ -1,1 +1,1 @@
-e.exports={l:"actionBarIcon_a7e304"}
+a.exports = { l: "actionBarIcon_a7e304" };

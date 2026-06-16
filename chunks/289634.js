@@ -1,1 +1,151 @@
-t.d(s,{default:()=>S});var i=t(627968),a=t(189213),n=t(834730),r=t(363487),l=t(64700),o=t(503698),c=t.n(o),d=t(812993),x=t(104510),u=t(661531),m=t(939249),p=t(470934),h=t(998418),j=t(813847),v=t(146793),g=t(490557),N=t(439156),A=t(249286),I=t(867060),b=t(375708),k=t(416122);function f(e){let{canUseBoosts:s,guildId:t,powerup:a,isNewPerk:r,forceStaticImages:o}=e,[f,w]=l.useState(!1),S=(0,h.Ay)(t,a),_=(0,j.e)(a,S,!1),y=(0,h.dy)(S),{disabled:C}=(0,p.A)(t,a,y),{onActivate:M,error:E}=(0,A.A)(t,a);(0,I.A)(E);let P=!s||C,L=y&&!P,T=(0,i.jsxs)(i.Fragment,{children:[(0,i.jsxs)("div",{className:k.R9,children:[(0,i.jsx)("div",{className:c()(k._W,{[k.vu]:y}),children:(0,i.jsx)(g.l,{powerup:a,isHovering:!P&&f,forceStaticImage:o})}),r&&(0,i.jsx)(d.Lp,{className:k.qS,text:b.intl.string(b.t.y2b7CA)})]}),(0,i.jsxs)("div",{className:k.xQ,children:[(0,i.jsxs)("div",{className:k.U7,children:[(0,i.jsx)("div",{children:(0,i.jsx)(n.E,{variant:"text-sm/medium",color:(y||f)&&!P?"text-strong":"text-subtle",children:a.description})}),(0,i.jsxs)("div",{children:[_?.type==="expiring"&&(0,i.jsx)(v.P5,{dateString:_.expiringAt}),_?.type==="removing"&&(0,i.jsx)(v.Yq,{removingAt:_.removingAt}),_?.type==="active"&&(0,i.jsx)(v.TG,{text:_.statusText}),null==_&&(0,i.jsxs)("div",{className:k.II,children:[(0,i.jsx)(x._,{size:"sm",color:u.A.unsafe_rawColors.GUILD_BOOSTING_PINK}),(0,i.jsx)(n.E,{variant:"text-sm/medium",color:"text-subtle",children:b.intl.formatToPlainString(b.t.t2Wbo1,{required:a.cost,decorator:""})})]})]})]}),L&&(0,i.jsx)(N.A,{compact:!0,iconSize:"md",guildId:t,powerup:a,className:k.Rm})]})]});return y?(0,i.jsx)("div",{className:c()(k.nK,k.RO,{[k.r9]:P}),onMouseEnter:()=>w(!0),onMouseLeave:()=>w(!1),children:T}):(0,i.jsx)(m.D,{className:c()(k.nK,{[k.r9]:P}),onMouseEnter:()=>w(!0),onMouseLeave:()=>w(!1),"aria-disabled":P,onClick:e=>{e.stopPropagation(),P||M?.({shouldCloseAllModals:!1})},children:T})}var w=t(422699);function S(e){let{guildId:s,title:t,description:l,powerups:o,newPowerupSkuIdSet:c,forceStaticImages:d,footerInfoText:x,footerAction:u,...m}=e,p=(0,r.A)(s),h=null!=x&&x.length>0?(0,i.jsx)("div",{className:w.x,children:(0,i.jsx)(n.E,{variant:"text-sm/semibold",color:"text-feedback-warning",children:x})}):void 0;return(0,i.jsx)(a.Modal,{title:t,subtitle:l,actionBarInput:h,actions:null!=u?[u]:[],...m,children:(0,i.jsx)("div",{className:w.p,children:o.map(e=>(0,i.jsx)(f,{guildId:s,powerup:e,canUseBoosts:p??!1,isNewPerk:c?.has(e.skuId),forceStaticImages:d},e.skuId))})})}
+t.d(s, { default: () => S });
+var i = t(627968),
+    a = t(189213),
+    n = t(834730),
+    r = t(363487),
+    l = t(64700),
+    o = t(503698),
+    c = t.n(o),
+    d = t(812993),
+    x = t(104510),
+    u = t(661531),
+    m = t(939249),
+    p = t(470934),
+    h = t(998418),
+    j = t(813847),
+    v = t(146793),
+    g = t(490557),
+    N = t(439156),
+    A = t(249286),
+    I = t(867060),
+    b = t(375708),
+    k = t(416122);
+function f(e) {
+    let { canUseBoosts: s, guildId: t, powerup: a, isNewPerk: r, forceStaticImages: o } = e,
+        [f, w] = l.useState(!1),
+        S = (0, h.Ay)(t, a),
+        _ = (0, j.e)(a, S, !1),
+        y = (0, h.dy)(S),
+        { disabled: C } = (0, p.A)(t, a, y),
+        { onActivate: M, error: E } = (0, A.A)(t, a);
+    (0, I.A)(E);
+    let P = !s || C,
+        L = y && !P,
+        T = (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsxs)("div", {
+                    className: k.R9,
+                    children: [
+                        (0, i.jsx)("div", {
+                            className: c()(k._W, { [k.vu]: y }),
+                            children: (0, i.jsx)(g.l, { powerup: a, isHovering: !P && f, forceStaticImage: o }),
+                        }),
+                        r && (0, i.jsx)(d.Lp, { className: k.qS, text: b.intl.string(b.t.y2b7CA) }),
+                    ],
+                }),
+                (0, i.jsxs)("div", {
+                    className: k.xQ,
+                    children: [
+                        (0, i.jsxs)("div", {
+                            className: k.U7,
+                            children: [
+                                (0, i.jsx)("div", {
+                                    children: (0, i.jsx)(n.E, {
+                                        variant: "text-sm/medium",
+                                        color: (y || f) && !P ? "text-strong" : "text-subtle",
+                                        children: a.description,
+                                    }),
+                                }),
+                                (0, i.jsxs)("div", {
+                                    children: [
+                                        _?.type === "expiring" && (0, i.jsx)(v.P5, { dateString: _.expiringAt }),
+                                        _?.type === "removing" && (0, i.jsx)(v.Yq, { removingAt: _.removingAt }),
+                                        _?.type === "active" && (0, i.jsx)(v.TG, { text: _.statusText }),
+                                        null == _ &&
+                                            (0, i.jsxs)("div", {
+                                                className: k.II,
+                                                children: [
+                                                    (0, i.jsx)(x._, {
+                                                        size: "sm",
+                                                        color: u.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                                                    }),
+                                                    (0, i.jsx)(n.E, {
+                                                        variant: "text-sm/medium",
+                                                        color: "text-subtle",
+                                                        children: b.intl.formatToPlainString(b.t.t2Wbo1, {
+                                                            required: a.cost,
+                                                            decorator: "",
+                                                        }),
+                                                    }),
+                                                ],
+                                            }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                        L && (0, i.jsx)(N.A, { compact: !0, iconSize: "md", guildId: t, powerup: a, className: k.Rm }),
+                    ],
+                }),
+            ],
+        });
+    return y
+        ? (0, i.jsx)("div", {
+              className: c()(k.nK, k.RO, { [k.r9]: P }),
+              onMouseEnter: () => w(!0),
+              onMouseLeave: () => w(!1),
+              children: T,
+          })
+        : (0, i.jsx)(m.D, {
+              className: c()(k.nK, { [k.r9]: P }),
+              onMouseEnter: () => w(!0),
+              onMouseLeave: () => w(!1),
+              "aria-disabled": P,
+              onClick: (e) => {
+                  e.stopPropagation(), P || M?.({ shouldCloseAllModals: !1 });
+              },
+              children: T,
+          });
+}
+var w = t(422699);
+function S(e) {
+    let {
+            guildId: s,
+            title: t,
+            description: l,
+            powerups: o,
+            newPowerupSkuIdSet: c,
+            forceStaticImages: d,
+            footerInfoText: x,
+            footerAction: u,
+            ...m
+        } = e,
+        p = (0, r.A)(s),
+        h =
+            null != x && x.length > 0
+                ? (0, i.jsx)("div", {
+                      className: w.x,
+                      children: (0, i.jsx)(n.E, {
+                          variant: "text-sm/semibold",
+                          color: "text-feedback-warning",
+                          children: x,
+                      }),
+                  })
+                : void 0;
+    return (0, i.jsx)(a.Modal, {
+        title: t,
+        subtitle: l,
+        actionBarInput: h,
+        actions: null != u ? [u] : [],
+        ...m,
+        children: (0, i.jsx)("div", {
+            className: w.p,
+            children: o.map((e) =>
+                (0, i.jsx)(
+                    f,
+                    { guildId: s, powerup: e, canUseBoosts: p ?? !1, isNewPerk: c?.has(e.skuId), forceStaticImages: d },
+                    e.skuId,
+                ),
+            ),
+        }),
+    });
+}

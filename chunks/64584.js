@@ -1,1 +1,2 @@
-a.d(t,{c:()=>l});let l=a(64700).createContext({spacing:24})
+a.d(t, { c: () => l });
+let l = a(64700).createContext({ spacing: 24 });

@@ -1,1 +1,8 @@
-e.exports={kL:"container_effb26",o0:"graphContainer_effb26",VU:"userSelectText_effb26",ew:"statsRow_effb26",zS:"statsText_effb26",Uo:"buttons_effb26"}
+e.exports = {
+    kL: "container_effb26",
+    o0: "graphContainer_effb26",
+    VU: "userSelectText_effb26",
+    ew: "statsRow_effb26",
+    zS: "statsText_effb26",
+    Uo: "buttons_effb26",
+};

@@ -1,1 +1,7 @@
-var i=n(250581),r=Array.prototype.splice;e.exports=function(e){var t=this.__data__,n=i(t,e);return!(n<0)&&(n==t.length-1?t.pop():r.call(t,n,1),--this.size,!0)}
+var i = n(250581),
+    r = Array.prototype.splice;
+e.exports = function (e) {
+    var t = this.__data__,
+        n = i(t, e);
+    return !(n < 0) && (n == t.length - 1 ? t.pop() : r.call(t, n, 1), --this.size, !0);
+};

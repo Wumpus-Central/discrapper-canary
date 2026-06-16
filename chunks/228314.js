@@ -1,1 +1,6 @@
-var t=n(240820),s=n(972617),u=n(113213);r.exports=function(r,p){return u(s(r,p,t),r+"")}
+var t = n(240820),
+    s = n(972617),
+    u = n(113213);
+r.exports = function (r, p) {
+    return u(s(r, p, t), r + "");
+};

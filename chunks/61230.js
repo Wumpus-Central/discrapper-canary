@@ -1,1 +1,177 @@
-n.d(l,{A:()=>O,T:()=>G});var t=n(627968),i=n(64700),a=n(17928),s=n(451988),r=n(922016),o=n(714114),c=n(323073),d=n(10862),u=n(734057),m=n(576705),h=n(342952),g=n(834730),x=n(778712),A=n(821609),p=n(693879),j=n(607407),v=n(34337),N=n(790535),f=n(575731),C=n(616356),I=n(977997),b=n(47167),y=n(475889),E=n(262763),_=n(402216),M=n(375708),R=n(255201);let w=function(e){let{channel:l}=e,n=(0,a.bG)([I.A],()=>I.A.isInChannel(l.id)),i=(0,f.A)(l),s=(0,b.Ay)(l),r=(0,y.H)(l),o=(0,a.bG)([C.A],()=>C.A.getAllApplicationStreamsForChannel(l.id)[0]);return(0,t.jsxs)(v.Uq,{className:R.jC,children:[(0,t.jsxs)("div",{className:R.hY,children:[(0,t.jsxs)("div",{className:R.HA,children:[(0,t.jsx)(d.A,{size:"custom",height:20,width:20,color:"currentColor",channel:l,style:{flexShrink:0}}),(0,t.jsx)("div",{className:R.Mw,children:(0,t.jsx)(g.E,{variant:"text-sm/medium",color:"text-default",className:R.Kw,children:s})})]}),null!=r&&(0,t.jsx)("span",{className:R.j2,children:(0,t.jsx)(p.z,{entry:{start:r},textColor:"text-feedback-positive"})})]}),(0,t.jsxs)("div",{className:R.Bm,children:[null!=o&&(0,t.jsxs)("div",{className:R.yt,children:[(0,t.jsx)(j.A,{stream:o,className:R.Rh,noText:!0}),(0,t.jsx)(_.Ay,{size:_.Ay.Sizes.SMALL,className:R.wI})]}),(0,t.jsx)(h.A,{users:i,guildId:l.guild_id,channelId:l.id,size:x._3.SIZE_24,maxUsers:8,"aria-label":M.intl.string(M.t["jNqDh/"])}),(0,t.jsx)(A.$,{variant:n?"secondary":"active",size:"sm",text:n?M.intl.string(M.t["3xjX0U"]):M.intl.string(M.t.VJlc0S),fullWidth:!0,onClick:()=>{l.isGuildStageVoice()?(0,N.av)(l):E.A.handleVoiceConnect({channel:l,connected:n,needSubscriptionToAccess:!1,routeDirectlyToChannel:!0,bypassChangeModal:!0})}})]})]})};var S=n(652215),T=n(129728);function G(e){let{channel:l,children:n,childWrapperClassName:a}=e,o=i.useRef(null),[c,d]=i.useState(!1),u=i.useRef(new s.J_(50,()=>{d(!0)})),m=i.useRef(new s.J_(175,()=>{d(!1)}));i.useEffect(()=>{let e=u.current,l=m.current;return()=>{e.cancel(),l.cancel()}},[]);let h=i.useCallback(()=>{m.current.cancel(),u.current.delay()},[]),g=i.useCallback(()=>{u.current.cancel(),m.current.delay()},[]);return(0,t.jsx)(r.Y,{targetElementRef:o,animation:r.Y.Animation.TRANSLATE,align:"center",autoInvert:!0,nudgeAlignIntoViewport:!0,position:"right",shouldShow:c,renderPopout:()=>(0,t.jsx)("div",{onMouseEnter:h,onMouseLeave:g,children:(0,t.jsx)(w,{channel:l})}),children:()=>(0,t.jsx)("div",{className:a,ref:o,onMouseEnter:h,onMouseLeave:g,children:n})})}function O(e){let{guild:l,message:n}=e,{voiceState:i,voiceChannel:s}=(0,o.A)({userId:n.author.id,guildId:l.id}),r=(0,a.bG)([u.A],()=>u.A.getChannel(n.channel_id)?.isVocal()),h=(0,a.bG)([m.A],()=>{if(null==s)return!1;let e=(0,c.r9)()&&(0,c.UK)(s.id);return(s.isPrivate()||m.A.can(S.xBc.VIEW_CHANNEL,s)&&m.A.can(S.xBc.CONNECT,s))&&!e});return null!=i&&null!=s&&s.isGuildVocal()&&h&&!r?(0,t.jsx)(G,{channel:s,childWrapperClassName:T.y,children:(0,t.jsx)(d.A,{className:T.B,size:"custom",color:"currentColor",width:20,height:20,channel:s})}):null}
+n.d(l, { A: () => O, T: () => G });
+var t = n(627968),
+    i = n(64700),
+    a = n(17928),
+    s = n(451988),
+    r = n(922016),
+    o = n(714114),
+    c = n(323073),
+    d = n(10862),
+    u = n(734057),
+    m = n(576705),
+    h = n(342952),
+    g = n(834730),
+    x = n(778712),
+    A = n(821609),
+    p = n(693879),
+    j = n(607407),
+    v = n(34337),
+    N = n(790535),
+    f = n(575731),
+    C = n(616356),
+    I = n(977997),
+    b = n(47167),
+    y = n(475889),
+    E = n(262763),
+    _ = n(402216),
+    M = n(375708),
+    R = n(255201);
+let w = function (e) {
+    let { channel: l } = e,
+        n = (0, a.bG)([I.A], () => I.A.isInChannel(l.id)),
+        i = (0, f.A)(l),
+        s = (0, b.Ay)(l),
+        r = (0, y.H)(l),
+        o = (0, a.bG)([C.A], () => C.A.getAllApplicationStreamsForChannel(l.id)[0]);
+    return (0, t.jsxs)(v.Uq, {
+        className: R.jC,
+        children: [
+            (0, t.jsxs)("div", {
+                className: R.hY,
+                children: [
+                    (0, t.jsxs)("div", {
+                        className: R.HA,
+                        children: [
+                            (0, t.jsx)(d.A, {
+                                size: "custom",
+                                height: 20,
+                                width: 20,
+                                color: "currentColor",
+                                channel: l,
+                                style: { flexShrink: 0 },
+                            }),
+                            (0, t.jsx)("div", {
+                                className: R.Mw,
+                                children: (0, t.jsx)(g.E, {
+                                    variant: "text-sm/medium",
+                                    color: "text-default",
+                                    className: R.Kw,
+                                    children: s,
+                                }),
+                            }),
+                        ],
+                    }),
+                    null != r &&
+                        (0, t.jsx)("span", {
+                            className: R.j2,
+                            children: (0, t.jsx)(p.z, { entry: { start: r }, textColor: "text-feedback-positive" }),
+                        }),
+                ],
+            }),
+            (0, t.jsxs)("div", {
+                className: R.Bm,
+                children: [
+                    null != o &&
+                        (0, t.jsxs)("div", {
+                            className: R.yt,
+                            children: [
+                                (0, t.jsx)(j.A, { stream: o, className: R.Rh, noText: !0 }),
+                                (0, t.jsx)(_.Ay, { size: _.Ay.Sizes.SMALL, className: R.wI }),
+                            ],
+                        }),
+                    (0, t.jsx)(h.A, {
+                        users: i,
+                        guildId: l.guild_id,
+                        channelId: l.id,
+                        size: x._3.SIZE_24,
+                        maxUsers: 8,
+                        "aria-label": M.intl.string(M.t["jNqDh/"]),
+                    }),
+                    (0, t.jsx)(A.$, {
+                        variant: n ? "secondary" : "active",
+                        size: "sm",
+                        text: n ? M.intl.string(M.t["3xjX0U"]) : M.intl.string(M.t.VJlc0S),
+                        fullWidth: !0,
+                        onClick: () => {
+                            l.isGuildStageVoice()
+                                ? (0, N.av)(l)
+                                : E.A.handleVoiceConnect({
+                                      channel: l,
+                                      connected: n,
+                                      needSubscriptionToAccess: !1,
+                                      routeDirectlyToChannel: !0,
+                                      bypassChangeModal: !0,
+                                  });
+                        },
+                    }),
+                ],
+            }),
+        ],
+    });
+};
+var S = n(652215),
+    T = n(129728);
+function G(e) {
+    let { channel: l, children: n, childWrapperClassName: a } = e,
+        o = i.useRef(null),
+        [c, d] = i.useState(!1),
+        u = i.useRef(
+            new s.J_(50, () => {
+                d(!0);
+            }),
+        ),
+        m = i.useRef(
+            new s.J_(175, () => {
+                d(!1);
+            }),
+        );
+    i.useEffect(() => {
+        let e = u.current,
+            l = m.current;
+        return () => {
+            e.cancel(), l.cancel();
+        };
+    }, []);
+    let h = i.useCallback(() => {
+            m.current.cancel(), u.current.delay();
+        }, []),
+        g = i.useCallback(() => {
+            u.current.cancel(), m.current.delay();
+        }, []);
+    return (0, t.jsx)(r.Y, {
+        targetElementRef: o,
+        animation: r.Y.Animation.TRANSLATE,
+        align: "center",
+        autoInvert: !0,
+        nudgeAlignIntoViewport: !0,
+        position: "right",
+        shouldShow: c,
+        renderPopout: () =>
+            (0, t.jsx)("div", { onMouseEnter: h, onMouseLeave: g, children: (0, t.jsx)(w, { channel: l }) }),
+        children: () => (0, t.jsx)("div", { className: a, ref: o, onMouseEnter: h, onMouseLeave: g, children: n }),
+    });
+}
+function O(e) {
+    let { guild: l, message: n } = e,
+        { voiceState: i, voiceChannel: s } = (0, o.A)({ userId: n.author.id, guildId: l.id }),
+        r = (0, a.bG)([u.A], () => u.A.getChannel(n.channel_id)?.isVocal()),
+        h = (0, a.bG)([m.A], () => {
+            if (null == s) return !1;
+            let e = (0, c.r9)() && (0, c.UK)(s.id);
+            return (s.isPrivate() || (m.A.can(S.xBc.VIEW_CHANNEL, s) && m.A.can(S.xBc.CONNECT, s))) && !e;
+        });
+    return null != i && null != s && s.isGuildVocal() && h && !r
+        ? (0, t.jsx)(G, {
+              channel: s,
+              childWrapperClassName: T.y,
+              children: (0, t.jsx)(d.A, {
+                  className: T.B,
+                  size: "custom",
+                  color: "currentColor",
+                  width: 20,
+                  height: 20,
+                  channel: s,
+              }),
+          })
+        : null;
+}

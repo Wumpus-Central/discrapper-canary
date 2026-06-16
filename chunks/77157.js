@@ -1,1 +1,14 @@
-t.d(r,{A:()=>o});var a=t(17928),n=t(590180),l=t(4227),i=t(892118);function o(e){return(0,a.bG)([n.A,l.A],()=>{if(null==e)return;let r=n.A.getProduct(e);if((0,i.s)(r?.items[0]))return r.items[0];let t=l.A.getPurchase(e);if((0,i.s)(t?.items[0]))return t.items[0]})}
+a.d(r, { A: () => o });
+var n = a(17928),
+    t = a(590180),
+    l = a(4227),
+    i = a(892118);
+function o(e) {
+    return (0, n.bG)([t.A, l.A], () => {
+        if (null == e) return;
+        let r = t.A.getProduct(e);
+        if ((0, i.s)(r?.items[0])) return r.items[0];
+        let a = l.A.getPurchase(e);
+        if ((0, i.s)(a?.items[0])) return a.items[0];
+    });
+}

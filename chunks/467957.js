@@ -1,1 +1,1 @@
-e.exports=Array.isArray
+e.exports = Array.isArray;

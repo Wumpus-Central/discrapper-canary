@@ -1,1 +1,109 @@
-s.d(t,{A:()=>p}),s(321073);var o=s(627968),h=s(64700),l=s(503698),n=s.n(l),c=s(235986),r=s(953051),a=s(650583),i=s(579767);class d extends h.PureComponent{static defaultProps={autoFocus:!1};_codeBlockRef;render(){let{className:e}=this.props;return(0,o.jsx)("input",{ref:this.setCodeBlockRef,className:n()(i.h,e),maxLength:1,value:null!=this.props.code?this.props.code:void 0,autoFocus:this.props.autoFocus,onKeyDown:this.handleKeyDown,onChange:this.handleChange})}setCodeBlockRef=e=>{this._codeBlockRef=e};focus(){this._codeBlockRef?.focus()}blur(){this._codeBlockRef?.blur()}handleKeyDown=e=>{let t=e.key===a.dh.BACKSPACE||e.key===a.dh.ARROW_LEFT||e.key===a.dh.ARROW_RIGHT,s=(0,r.A)(e.key);t||s||e.preventDefault();let{onKeyDown:o}=this.props;o?.(e)};handleChange=e=>{let{onChange:t}=this.props;t?.(e.currentTarget.value)}}class u extends h.PureComponent{_codeBlockRefs=Array(this.props.count);static defaultProps={count:6};constructor(e){super(e),this.state={codes:Array(e.count)}}render(){let{className:e,inputClassName:t}=this.props,{codes:s}=this.state,h=[];for(let e=0;e<s.length;e++)e===s.length/2&&h.push((0,o.jsx)("div",{className:i.j},"spacer")),h.push((0,o.jsx)(d,{ref:t=>this.setCodeBlockRef(e,t),code:s[e],autoFocus:0===e,onChange:t=>this.handleChange(e,t),onKeyDown:t=>this.handleKeyDown(e,t),className:t},e));return(0,o.jsx)(c.A,{align:c.A.Align.CENTER,justify:c.A.Justify.CENTER,className:e,children:h})}setCodeBlockRef(e,t){this._codeBlockRefs[e]=t}handleChange(e,t){this.state.codes[e]=t;let s=this.getCodeOrFirstEmptyIndex();if("string"==typeof s)this.submit(s);else{let e=this._codeBlockRefs[s];e?.focus()}}handleKeyDown(e,t){let{codes:s}=this.state;if(t.key===a.dh.BACKSPACE&&e>0&&(null==s[e]||0===s[e].length)){let t=e-1;s[t]="";let o=this._codeBlockRefs[t];o?.focus()}}getCodeOrFirstEmptyIndex(){let{codes:e}=this.state,t="";for(let s=0;s<e.length;s++){if(isNaN(parseInt(e[s])))return s;t+=e[s]}return t}submit(e){let{onSubmit:t}=this.props;t?.(e)}}let p=u
+s.d(t, { A: () => p }), s(321073);
+var o = s(627968),
+    h = s(64700),
+    l = s(503698),
+    n = s.n(l),
+    c = s(235986),
+    r = s(953051),
+    a = s(650583),
+    i = s(579767);
+class d extends h.PureComponent {
+    static defaultProps = { autoFocus: !1 };
+    _codeBlockRef;
+    render() {
+        let { className: e } = this.props;
+        return (0, o.jsx)("input", {
+            ref: this.setCodeBlockRef,
+            className: n()(i.h, e),
+            maxLength: 1,
+            value: null != this.props.code ? this.props.code : void 0,
+            autoFocus: this.props.autoFocus,
+            onKeyDown: this.handleKeyDown,
+            onChange: this.handleChange,
+        });
+    }
+    setCodeBlockRef = (e) => {
+        this._codeBlockRef = e;
+    };
+    focus() {
+        this._codeBlockRef?.focus();
+    }
+    blur() {
+        this._codeBlockRef?.blur();
+    }
+    handleKeyDown = (e) => {
+        let t = e.key === a.dh.BACKSPACE || e.key === a.dh.ARROW_LEFT || e.key === a.dh.ARROW_RIGHT,
+            s = (0, r.A)(e.key);
+        t || s || e.preventDefault();
+        let { onKeyDown: o } = this.props;
+        o?.(e);
+    };
+    handleChange = (e) => {
+        let { onChange: t } = this.props;
+        t?.(e.currentTarget.value);
+    };
+}
+class u extends h.PureComponent {
+    _codeBlockRefs = Array(this.props.count);
+    static defaultProps = { count: 6 };
+    constructor(e) {
+        super(e), (this.state = { codes: Array(e.count) });
+    }
+    render() {
+        let { className: e, inputClassName: t } = this.props,
+            { codes: s } = this.state,
+            h = [];
+        for (let e = 0; e < s.length; e++)
+            e === s.length / 2 && h.push((0, o.jsx)("div", { className: i.j }, "spacer")),
+                h.push(
+                    (0, o.jsx)(
+                        d,
+                        {
+                            ref: (t) => this.setCodeBlockRef(e, t),
+                            code: s[e],
+                            autoFocus: 0 === e,
+                            onChange: (t) => this.handleChange(e, t),
+                            onKeyDown: (t) => this.handleKeyDown(e, t),
+                            className: t,
+                        },
+                        e,
+                    ),
+                );
+        return (0, o.jsx)(c.A, { align: c.A.Align.CENTER, justify: c.A.Justify.CENTER, className: e, children: h });
+    }
+    setCodeBlockRef(e, t) {
+        this._codeBlockRefs[e] = t;
+    }
+    handleChange(e, t) {
+        this.state.codes[e] = t;
+        let s = this.getCodeOrFirstEmptyIndex();
+        if ("string" == typeof s) this.submit(s);
+        else {
+            let e = this._codeBlockRefs[s];
+            e?.focus();
+        }
+    }
+    handleKeyDown(e, t) {
+        let { codes: s } = this.state;
+        if (t.key === a.dh.BACKSPACE && e > 0 && (null == s[e] || 0 === s[e].length)) {
+            let t = e - 1;
+            s[t] = "";
+            let o = this._codeBlockRefs[t];
+            o?.focus();
+        }
+    }
+    getCodeOrFirstEmptyIndex() {
+        let { codes: e } = this.state,
+            t = "";
+        for (let s = 0; s < e.length; s++) {
+            if (isNaN(parseInt(e[s]))) return s;
+            t += e[s];
+        }
+        return t;
+    }
+    submit(e) {
+        let { onSubmit: t } = this.props;
+        t?.(e);
+    }
+}
+let p = u;

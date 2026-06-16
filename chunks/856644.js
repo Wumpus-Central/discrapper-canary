@@ -1,1 +1,97 @@
-n.d(t,{EF:()=>f,K5:()=>p,L9:()=>I,SB:()=>N,Vh:()=>S,cG:()=>A,gz:()=>j,uc:()=>E}),n(321073);var i=n(64700),l=n(91871),s=n.n(l),r=n(17928),a=n(696451),o=n(287809),d=n(174459),c=n(403362),u=n(695184),m=n(427262),g=n(545868),x=n(927573),h=n(652215);let E=50,j=1e3;function N(e,t){let n=(0,r.yK)([a.Ay],()=>{let n=a.Ay.getMembers(e);return null==t?n:n.filter(t)},[e,t]),l=(0,r.cf)([o.default],()=>n.reduce((e,t)=>{let n=o.default.getUser(t.userId);return null==n||(e[t.userId]=n),e},{}),[n]);return i.useMemo(()=>{let t=[];for(let i of n){let n=l[i.userId];null!=n&&t.push({name:i.nick??m.Ay.getName(n),userTag:m.Ay.getUserTag(n),id:i.userId,avatarSource:n.getAvatarSource(e),avatarURL:n.getAvatarURL(e,80),bot:n.bot,verifiedBot:n.isVerifiedBot(),roles:i.roles,key:i.userId,user:n})}return t},[n,l,e])}function p(e,t,n){let l=i.useRef(n);return i.useEffect(()=>{l.current=n}),i.useEffect(()=>{(0,g.a)(e,t).catch(l.current)},[e,t]),N(e,i.useCallback(e=>e.roles.includes(t),[t]))}function A(e,t){let n=i.useRef(!1);i.useEffect(()=>{u.A.requestMembers(e,t,200),""===t||n.current||(d.default.track(h.HAw.SEARCH_STARTED,{search_type:"Role Members"}),n.current=!0)},[e,t])}function f(e,t){let n=e.trim().toLowerCase();return t.id===n||s()(n,t.name.toLowerCase())||s()(n,t.userTag.toLowerCase())}function I(e){switch(e){case x.T$.MEMBERS:return"Members";case x.T$.PERMISSIONS:return"Permissions";case x.T$.DISPLAY:return"Role Settings";case x.T$.VERIFICATIONS:return"Connections";default:(0,c.xb)(e)}}function S(e,t){return""===t||e.name.toLowerCase().includes(t.toLowerCase())}
+n.d(t, { EF: () => f, K5: () => p, L9: () => I, SB: () => N, Vh: () => S, cG: () => A, gz: () => j, uc: () => E }),
+    n(321073);
+var i = n(64700),
+    l = n(91871),
+    s = n.n(l),
+    r = n(17928),
+    a = n(696451),
+    o = n(287809),
+    d = n(174459),
+    c = n(403362),
+    u = n(695184),
+    m = n(427262),
+    g = n(545868),
+    x = n(927573),
+    h = n(652215);
+let E = 50,
+    j = 1e3;
+function N(e, t) {
+    let n = (0, r.yK)([a.Ay], () => {
+            let n = a.Ay.getMembers(e);
+            return null == t ? n : n.filter(t);
+        }, [e, t]),
+        l = (0, r.cf)(
+            [o.default],
+            () =>
+                n.reduce((e, t) => {
+                    let n = o.default.getUser(t.userId);
+                    return null == n || (e[t.userId] = n), e;
+                }, {}),
+            [n],
+        );
+    return i.useMemo(() => {
+        let t = [];
+        for (let i of n) {
+            let n = l[i.userId];
+            null != n &&
+                t.push({
+                    name: i.nick ?? m.Ay.getName(n),
+                    userTag: m.Ay.getUserTag(n),
+                    id: i.userId,
+                    avatarSource: n.getAvatarSource(e),
+                    avatarURL: n.getAvatarURL(e, 80),
+                    bot: n.bot,
+                    verifiedBot: n.isVerifiedBot(),
+                    roles: i.roles,
+                    key: i.userId,
+                    user: n,
+                });
+        }
+        return t;
+    }, [n, l, e]);
+}
+function p(e, t, n) {
+    let l = i.useRef(n);
+    return (
+        i.useEffect(() => {
+            l.current = n;
+        }),
+        i.useEffect(() => {
+            (0, g.a)(e, t).catch(l.current);
+        }, [e, t]),
+        N(
+            e,
+            i.useCallback((e) => e.roles.includes(t), [t]),
+        )
+    );
+}
+function A(e, t) {
+    let n = i.useRef(!1);
+    i.useEffect(() => {
+        u.A.requestMembers(e, t, 200),
+            "" === t ||
+                n.current ||
+                (d.default.track(h.HAw.SEARCH_STARTED, { search_type: "Role Members" }), (n.current = !0));
+    }, [e, t]);
+}
+function f(e, t) {
+    let n = e.trim().toLowerCase();
+    return t.id === n || s()(n, t.name.toLowerCase()) || s()(n, t.userTag.toLowerCase());
+}
+function I(e) {
+    switch (e) {
+        case x.T$.MEMBERS:
+            return "Members";
+        case x.T$.PERMISSIONS:
+            return "Permissions";
+        case x.T$.DISPLAY:
+            return "Role Settings";
+        case x.T$.VERIFICATIONS:
+            return "Connections";
+        default:
+            (0, c.xb)(e);
+    }
+}
+function S(e, t) {
+    return "" === t || e.name.toLowerCase().includes(t.toLowerCase());
+}

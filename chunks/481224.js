@@ -1,1 +1,1 @@
-p.exports={q:"layer__95d7b"}
+t.exports = { q: "layer__95d7b" };

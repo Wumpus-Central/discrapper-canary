@@ -1,1 +1,31 @@
-"use strict";var i,r=n(906046),s=n(581070)(),a=n(353841),o=n(267768);if(s){var l=r("RegExp.prototype.exec"),u={},c=function(){throw u},d={toString:c,valueOf:c};"symbol"==typeof Symbol.toPrimitive&&(d[Symbol.toPrimitive]=c),i=function(e){if(!e||"object"!=typeof e)return!1;var t=o(e,"lastIndex");if(!(t&&a(t,"value")))return!1;try{l(e,d)}catch(e){return e===u}}}else{var _=r("Object.prototype.toString");i=function(e){return!!e&&("object"==typeof e||"function"==typeof e)&&"[object RegExp]"===_(e)}}e.exports=i
+"use strict";
+var i,
+    r = n(906046),
+    s = n(581070)(),
+    a = n(353841),
+    o = n(267768);
+if (s) {
+    var l = r("RegExp.prototype.exec"),
+        u = {},
+        c = function () {
+            throw u;
+        },
+        d = { toString: c, valueOf: c };
+    "symbol" == typeof Symbol.toPrimitive && (d[Symbol.toPrimitive] = c),
+        (i = function (e) {
+            if (!e || "object" != typeof e) return !1;
+            var t = o(e, "lastIndex");
+            if (!(t && a(t, "value"))) return !1;
+            try {
+                l(e, d);
+            } catch (e) {
+                return e === u;
+            }
+        });
+} else {
+    var _ = r("Object.prototype.toString");
+    i = function (e) {
+        return !!e && ("object" == typeof e || "function" == typeof e) && "[object RegExp]" === _(e);
+    };
+}
+e.exports = i;

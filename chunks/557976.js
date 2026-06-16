@@ -1,1 +1,1 @@
-c.exports={j:"modalContainer_c4cc6e",L:"warningSectionHeader_c4cc6e"}
+c.exports = { j: "modalContainer_c4cc6e", L: "warningSectionHeader_c4cc6e" };

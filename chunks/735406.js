@@ -1,1 +1,1 @@
-e.exports={y:"divider__44f7f"}
+e.exports = { y: "divider__44f7f" };

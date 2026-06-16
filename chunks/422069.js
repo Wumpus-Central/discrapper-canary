@@ -1,1 +1,86 @@
-t.d(n,{A:()=>G});var E=t(17928),_=t(228366);let r={},i={},l={},u={},S={},c={},o={},R={},O=null;class A extends E.Ay.Store{static displayName="GameProfileStore";getSimilarGames(e){return r[e]}getSimilarGamesError(e){return i[e]}getShopCollectionSkuIds(e){return l[e]}hasShopCollectionBeenFetched(e){return u[e]??!1}isShopCollectionFetching(e){return S[e]??!1}getAnnouncements(e){return c[e]}hasAnnouncementsBeenFetched(e){return o[e]??!1}isAnnouncementsFetching(e){return R[e]??!1}getPendingReturn(){return O}}let G=new A(_.h,{GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS:function(e){let{gameId:n,games:t}=e;r[n]=t},GAME_PROFILE_GET_SIMILAR_GAMES_ERROR:function(e){let{gameId:n,error:t}=e;i[n]=t},GAME_PROFILE_GET_SHOP_COLLECTION_START:function(e){let{collectionId:n}=e;S[n]=!0},GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS:function(e){let{collectionId:n,skuIds:t}=e;l[n]=t,u[n]=!0,S[n]=!1},GAME_PROFILE_GET_SHOP_COLLECTION_ERROR:function(e){let{collectionId:n}=e;u[n]=!0,S[n]=!1},GAME_PROFILE_GET_ANNOUNCEMENTS_START:function(e){let{gameId:n}=e;R[n]=!0},GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS:function(e){let{gameId:n,messages:t,channelId:E,guildId:_}=e;c[n]={messages:t,channelId:E,guildId:_},o[n]=!0,R[n]=!1},GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR:function(e){let{gameId:n}=e;o[n]=!0,R[n]=!1},GAME_PROFILE_SET_PENDING_RETURN:function(e){let{gameId:n,channelId:t,initialScrollOffset:E}=e;if(O?.gameId===n&&O?.channelId===t&&O?.initialScrollOffset===E)return!1;O={gameId:n,channelId:t,initialScrollOffset:E}},GAME_PROFILE_CLEAR_PENDING_RETURN:function(e){let{gameId:n}=e;if(null==O||O.gameId!==n)return!1;O=null}})
+t.d(n, { A: () => G });
+var E = t(17928),
+    _ = t(228366);
+let r = {},
+    i = {},
+    l = {},
+    u = {},
+    S = {},
+    c = {},
+    o = {},
+    R = {},
+    O = null;
+class A extends E.Ay.Store {
+    static displayName = "GameProfileStore";
+    getSimilarGames(e) {
+        return r[e];
+    }
+    getSimilarGamesError(e) {
+        return i[e];
+    }
+    getShopCollectionSkuIds(e) {
+        return l[e];
+    }
+    hasShopCollectionBeenFetched(e) {
+        return u[e] ?? !1;
+    }
+    isShopCollectionFetching(e) {
+        return S[e] ?? !1;
+    }
+    getAnnouncements(e) {
+        return c[e];
+    }
+    hasAnnouncementsBeenFetched(e) {
+        return o[e] ?? !1;
+    }
+    isAnnouncementsFetching(e) {
+        return R[e] ?? !1;
+    }
+    getPendingReturn() {
+        return O;
+    }
+}
+let G = new A(_.h, {
+    GAME_PROFILE_GET_SIMILAR_GAMES_SUCCESS: function (e) {
+        let { gameId: n, games: t } = e;
+        r[n] = t;
+    },
+    GAME_PROFILE_GET_SIMILAR_GAMES_ERROR: function (e) {
+        let { gameId: n, error: t } = e;
+        i[n] = t;
+    },
+    GAME_PROFILE_GET_SHOP_COLLECTION_START: function (e) {
+        let { collectionId: n } = e;
+        S[n] = !0;
+    },
+    GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS: function (e) {
+        let { collectionId: n, skuIds: t } = e;
+        (l[n] = t), (u[n] = !0), (S[n] = !1);
+    },
+    GAME_PROFILE_GET_SHOP_COLLECTION_ERROR: function (e) {
+        let { collectionId: n } = e;
+        (u[n] = !0), (S[n] = !1);
+    },
+    GAME_PROFILE_GET_ANNOUNCEMENTS_START: function (e) {
+        let { gameId: n } = e;
+        R[n] = !0;
+    },
+    GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS: function (e) {
+        let { gameId: n, messages: t, channelId: E, guildId: _ } = e;
+        (c[n] = { messages: t, channelId: E, guildId: _ }), (o[n] = !0), (R[n] = !1);
+    },
+    GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR: function (e) {
+        let { gameId: n } = e;
+        (o[n] = !0), (R[n] = !1);
+    },
+    GAME_PROFILE_SET_PENDING_RETURN: function (e) {
+        let { gameId: n, channelId: t, initialScrollOffset: E } = e;
+        if (O?.gameId === n && O?.channelId === t && O?.initialScrollOffset === E) return !1;
+        O = { gameId: n, channelId: t, initialScrollOffset: E };
+    },
+    GAME_PROFILE_CLEAR_PENDING_RETURN: function (e) {
+        let { gameId: n } = e;
+        if (null == O || O.gameId !== n) return !1;
+        O = null;
+    },
+});

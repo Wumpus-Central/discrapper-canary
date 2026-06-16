@@ -1,1 +1,192 @@
-n.d(r,{A:()=>R});var a=n(627968),l=n(64700),s=n(503698),t=n.n(s),o=n(735438),i=n(269115),c=n(508770),d=n(821609),u=n(745396),x=n(534514),h=n(825484),p=n(834730),j=n(315629),m=n(241524),b=n(303136),A=n(607470),g=n(174459),v=n(676279),C=n(406860),y=n(280041),E=n(652215),N=n(693591),k=n(856556);let R=e=>{let{name:r,title:n,description:s,descriptionCta:R,previewImage:_,videoUrl:M,shouldLoadVideo:f,index:T,customVideoStyle:B,isReducedMotion:I,onClick:L,badgeText:w,badgeVariant:O="gradient",size:V,backgroundVideoUrl:G,previewImageStyle:D=y.Tb.CONTAINED,actions:P,mediaRef:$,boxArtContainerClassName:F}=e,H=(0,v.TM)(),S=l.useRef(null),W=l.useRef(0),{sectionRef:K,handleVisibilityChange:U}=(0,C.A)({boxType:r}),X=(0,m.A)("(min-width: 1140px)"),Y=D===y.Tb.OVERLAY&&(V!==y.A0.LARGE||!X),q=V===y.A0.LARGE&&X&&D===y.Tb.OVERLAY,z=null!=G&&X&&V===y.A0.LARGE,J=l.useMemo(()=>(0,o.debounce)(()=>{g.default.track(E.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED,{box_type:(0,o.snakeCase)(r)})},800),[r]),Q=()=>{null==S.current||I||(S.current.currentTime=W.current,S.current.play()),I||$?.current?.play()},Z=()=>{null==S.current||I||(W.current=S.current.currentTime,S.current.pause()),I||$?.current?.pause()},ee=V===y.A0.LARGE?"heading-xxl/bold":"heading-xl/bold",er=()=>{let e=null!=R&&null!=L,r=null!=P&&P.length>0;if(!e&&!r)return null;let n=e?[{variant:"secondary",onClick:L,text:R}]:P;return(0,a.jsx)("div",{className:k.bentoBoxButton,children:(0,a.jsx)(h.e,{children:n?.map((e,r)=>{let{onClick:n,...l}=e;return(0,a.jsx)(d.$,{...l,onClick:e=>{J(),n?.(e)}},r)})})})},en=()=>(0,a.jsxs)("div",{className:t()(k.textBox,k[`${V}`],q&&k.overlayTextBox),children:[(0,a.jsxs)("div",{children:[null==w?null:"gradient"===O?(0,a.jsx)("div",{className:k.badgeContainer,children:(0,a.jsx)("div",{className:k.badge,children:(0,a.jsx)(x.D,{variant:"eyebrow",color:"always-white",children:w})})}):(0,a.jsx)("div",{className:k.badgeContainer,children:(0,a.jsx)(c.E,{type:{text:w},variant:O})}),(0,a.jsx)(x.D,{variant:ee,color:"text-strong",className:k.header,children:n})]}),(0,a.jsx)(p.E,{variant:"text-md/medium",color:"text-strong",className:k.description,children:s}),(0,a.jsx)(er,{})]}),ea=()=>(0,a.jsx)("div",{className:t()(k.boxArtContainer,k[`${V}`],F),children:null==M&&(0,u.O)(_)&&"string"!=typeof _?_:(0,a.jsx)(A.A,{playsInline:!0,preload:f?"auto":"none",muted:!0,poster:_,loop:!0,className:t()(q?k.overlayImage:k.boxVideo,{[B]:null!=B}),ref:S,children:(0,a.jsx)("source",{src:M,type:H?N.a.MP4:N.a.WEBM})},M)}),el=T%2!=0;return(0,a.jsx)(i.L,{innerRef:K,onChange:U,threshold:.5,children:(0,a.jsxs)(j.h,{ref:K,id:r,className:t()(k.backgroundColor,k.boxContainer,k[`${V}`],k.gradientBackground,Y&&k.overlayImageMode,q&&k.overlayMode),onMouseEnter:Q,onFocus:Q,onBlur:Z,onMouseLeave:Z,color:"purple",children:[z&&(0,a.jsx)("div",{className:k.backgroundVideoContainer,children:(0,a.jsx)(b.A,{preload:f?"auto":"none",className:k.backgroundVideo,src:G})}),(0,a.jsx)(()=>el?(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(en,{}),(0,a.jsx)(ea,{})]}):(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(ea,{}),(0,a.jsx)(en,{})]}),{})]})})}
+n.d(r, { A: () => R });
+var a = n(627968),
+    l = n(64700),
+    s = n(503698),
+    t = n.n(s),
+    o = n(735438),
+    i = n(269115),
+    c = n(508770),
+    d = n(821609),
+    u = n(745396),
+    x = n(534514),
+    h = n(825484),
+    p = n(834730),
+    j = n(315629),
+    m = n(241524),
+    b = n(303136),
+    A = n(607470),
+    g = n(174459),
+    v = n(676279),
+    C = n(406860),
+    y = n(280041),
+    E = n(652215),
+    N = n(693591),
+    k = n(856556);
+let R = (e) => {
+    let {
+            name: r,
+            title: n,
+            description: s,
+            descriptionCta: R,
+            previewImage: _,
+            videoUrl: M,
+            shouldLoadVideo: f,
+            index: T,
+            customVideoStyle: B,
+            isReducedMotion: I,
+            onClick: L,
+            badgeText: w,
+            badgeVariant: O = "gradient",
+            size: V,
+            backgroundVideoUrl: G,
+            previewImageStyle: D = y.Tb.CONTAINED,
+            actions: P,
+            mediaRef: $,
+            boxArtContainerClassName: F,
+        } = e,
+        H = (0, v.TM)(),
+        S = l.useRef(null),
+        W = l.useRef(0),
+        { sectionRef: K, handleVisibilityChange: U } = (0, C.A)({ boxType: r }),
+        X = (0, m.A)("(min-width: 1140px)"),
+        Y = D === y.Tb.OVERLAY && (V !== y.A0.LARGE || !X),
+        q = V === y.A0.LARGE && X && D === y.Tb.OVERLAY,
+        z = null != G && X && V === y.A0.LARGE,
+        J = l.useMemo(
+            () =>
+                (0, o.debounce)(() => {
+                    g.default.track(E.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, o.snakeCase)(r) });
+                }, 800),
+            [r],
+        ),
+        Q = () => {
+            null == S.current || I || ((S.current.currentTime = W.current), S.current.play()), I || $?.current?.play();
+        },
+        Z = () => {
+            null == S.current || I || ((W.current = S.current.currentTime), S.current.pause()),
+                I || $?.current?.pause();
+        },
+        ee = V === y.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold",
+        er = () => {
+            let e = null != R && null != L,
+                r = null != P && P.length > 0;
+            if (!e && !r) return null;
+            let n = e ? [{ variant: "secondary", onClick: L, text: R }] : P;
+            return (0, a.jsx)("div", {
+                className: k.bentoBoxButton,
+                children: (0, a.jsx)(h.e, {
+                    children: n?.map((e, r) => {
+                        let { onClick: n, ...l } = e;
+                        return (0, a.jsx)(
+                            d.$,
+                            {
+                                ...l,
+                                onClick: (e) => {
+                                    J(), n?.(e);
+                                },
+                            },
+                            r,
+                        );
+                    }),
+                }),
+            });
+        },
+        en = () =>
+            (0, a.jsxs)("div", {
+                className: t()(k.textBox, k[`${V}`], q && k.overlayTextBox),
+                children: [
+                    (0, a.jsxs)("div", {
+                        children: [
+                            null == w
+                                ? null
+                                : "gradient" === O
+                                  ? (0, a.jsx)("div", {
+                                        className: k.badgeContainer,
+                                        children: (0, a.jsx)("div", {
+                                            className: k.badge,
+                                            children: (0, a.jsx)(x.D, {
+                                                variant: "eyebrow",
+                                                color: "always-white",
+                                                children: w,
+                                            }),
+                                        }),
+                                    })
+                                  : (0, a.jsx)("div", {
+                                        className: k.badgeContainer,
+                                        children: (0, a.jsx)(c.E, { type: { text: w }, variant: O }),
+                                    }),
+                            (0, a.jsx)(x.D, { variant: ee, color: "text-strong", className: k.header, children: n }),
+                        ],
+                    }),
+                    (0, a.jsx)(p.E, {
+                        variant: "text-md/medium",
+                        color: "text-strong",
+                        className: k.description,
+                        children: s,
+                    }),
+                    (0, a.jsx)(er, {}),
+                ],
+            }),
+        ea = () =>
+            (0, a.jsx)("div", {
+                className: t()(k.boxArtContainer, k[`${V}`], F),
+                children:
+                    null == M && (0, u.O)(_) && "string" != typeof _
+                        ? _
+                        : (0, a.jsx)(
+                              A.A,
+                              {
+                                  playsInline: !0,
+                                  preload: f ? "auto" : "none",
+                                  muted: !0,
+                                  poster: _,
+                                  loop: !0,
+                                  className: t()(q ? k.overlayImage : k.boxVideo, { [B]: null != B }),
+                                  ref: S,
+                                  children: (0, a.jsx)("source", { src: M, type: H ? N.a.MP4 : N.a.WEBM }),
+                              },
+                              M,
+                          ),
+            }),
+        el = T % 2 != 0;
+    return (0, a.jsx)(i.L, {
+        innerRef: K,
+        onChange: U,
+        threshold: 0.5,
+        children: (0, a.jsxs)(j.h, {
+            ref: K,
+            id: r,
+            className: t()(
+                k.backgroundColor,
+                k.boxContainer,
+                k[`${V}`],
+                k.gradientBackground,
+                Y && k.overlayImageMode,
+                q && k.overlayMode,
+            ),
+            onMouseEnter: Q,
+            onFocus: Q,
+            onBlur: Z,
+            onMouseLeave: Z,
+            color: "purple",
+            children: [
+                z &&
+                    (0, a.jsx)("div", {
+                        className: k.backgroundVideoContainer,
+                        children: (0, a.jsx)(b.A, {
+                            preload: f ? "auto" : "none",
+                            className: k.backgroundVideo,
+                            src: G,
+                        }),
+                    }),
+                (0, a.jsx)(
+                    () =>
+                        el
+                            ? (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(en, {}), (0, a.jsx)(ea, {})] })
+                            : (0, a.jsxs)(a.Fragment, { children: [(0, a.jsx)(ea, {}), (0, a.jsx)(en, {})] }),
+                    {},
+                ),
+            ],
+        }),
+    });
+};

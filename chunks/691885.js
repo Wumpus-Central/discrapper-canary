@@ -1,1 +1,400 @@
-"use strict";n.d(t,{l:()=>N});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(494012),l=n(612324),u=n(661531),c=n(603392),d=n(890856),_=n(452027),h=n(140735),f=n(540637),p=n(460890),E=n(528265),m=n(834730),g=n(991957),A=n(44482),I=n(601973),T=n(483084),S=n(641668),y=n(715022),C=n(930856);function N(e){let{i18n:t}=(0,p.G9)(),{selectionMode:n,readOnly:s,autoFocus:E,clearable:m,fullWidth:N,closeOnSelect:R=!0,shouldFocusWrap:O,placeholder:b=t.SELECT_PLACEHOLDER,name:D,form:L,autoComplete:w,maxOptionsVisible:M=5,fitContent:P=!1,options:x,formatOption:k,onSelectionChange:U,value:G,wrapTags:F=!1,variant:V="default",...B}=e,j=r.useRef(null),{fieldProps:H}=(0,_.n)(B),{id:Y,required:W,label:K,disabled:$}=H,{isOpen:z,setIsOpen:q,refs:Z,floatingStyles:X,getReferenceProps:Q,getFloatingProps:J,transitionStyles:ee}=(0,S.G)(),et=r.useId(),{options:en,loading:ei}=(0,T.K)({active:z,options:x,renderOption:k}),er=r.useRef(null),es=r.useRef(null),[ea,eo]=r.useState(null),el=null!=ea?(0,y.ZN)(et,ea):void 0,eu=r.useRef(!1),ec=r.useRef(!1),ed=R??"multiple"!==n,e_=Array.isArray(G)?G.length>0:null!=G,eh=$||s,{measuredWidth:ef,itemsForMeasurement:ep}=function(e,t){let{ref:n,width:s}=(0,o.Ay)(),a=r.useId();return{measuredWidth:s,itemsForMeasurement:r.useMemo(()=>(0,i.jsx)("div",{ref:n,style:{position:"absolute",visibility:"hidden",pointerEvents:"none",width:"max-content"},"aria-hidden":"true",children:(0,i.jsx)(f.q,{id:`measurement-${a}`,required:!1,items:e,selectionMode:t,selectedItems:[],onSelectionChange:()=>{},shouldFocusWrap:!1,renderListItem:e=>(0,i.jsx)(A.c,{...e})})}),[e,t,a,n])}}(en,n),eE=r.useCallback(()=>{eh||q(!z)},[eh,q,z]),em=r.useCallback(e=>{z&&0===e.button&&e.preventDefault()},[z]),eg=r.useCallback(()=>{q(!1),er.current?.focus()},[q]),eA=r.useCallback(()=>{!1!==m&&("multiple"===n?U([]):U(null),er.current?.focus())},[U,n,m]);r.useEffect(()=>{E&&er.current?.focus()},[E]);let eI=r.useRef(null),eT=r.useCallback(e=>{if(!eI.current?.contains(e.relatedTarget)){if(ec.current){ec.current=!1;return}if(z&&"single"===n&&null!=ea){let e=en[ea];null!=e&&!0!==e.disabled&&U(e.value)}z&&q(!1)}},[z,n,ea,en,U,q]),eS=r.useMemo(()=>{let e=Array.isArray(G)?G:[G];return en.filter(t=>(0,y.fI)(t.value,e))},[G,en]),ey=r.useCallback(e=>{if(eh)return;let t=Array.from(e);"multiple"===n&&t.length<1?U([]):"multiple"===n?U(t.map(e=>e.value)):U(t[0]?.value),ed&&z&&eg()},[eh,n,U,ed,eg,z]),{activeIndex:eC,handleKeyDown:eN}=(0,f.l)(!0,en),ev=r.useRef(null);r.useEffect(()=>{let e=eC!==ev.current;ev.current=eC,null!=eC&&e&&(eo(eC),z||(eu.current=!0,q(!0)))},[eC,z,q]);let eR=r.useCallback(e=>{if(eh)return;let t=en.length;switch(e.key){case"ArrowDown":case"PageDown":{let n="PageDown"===e.key?10:1;if(0===t)return;if(e.preventDefault(),!z||e.altKey){z||q(!0);return}eo(e=>{if(null===e)return 0;let i=e+n;return i>=t&&O?0:Math.min(i,t-1)});break}case"ArrowUp":case"PageUp":{let n="PageUp"===e.key?10:1;if(0===t)return;if(e.preventDefault(),e.altKey&&z){if(null!=ea){let e=en[ea];if(null!=e&&!0!==e.disabled){ey([e]);break}}eg();break}if(!z)return void q(!0);eo(e=>{if(null===e)return 0;let i=e-n;return i<0&&O?t-1:Math.max(i,0)});break}case"Enter":case" ":if(e.preventDefault(),e.stopPropagation(),!z)return void q(!0);if(null==ea||ea>t-1)return;{let e=en[ea];if(null==e||!0===e.disabled)return;ey("single"===n?[e]:(0,y.qH)(n,eS,e))}break;case"Home":if(e.preventDefault(),0===t)return;eo(0),z||(eu.current=!0,q(!0));break;case"End":if(e.preventDefault(),0===t)return;eo(t-1),z||(eu.current=!0,q(!0));break;case"Tab":if(z&&"single"===n&&null!=ea){let e=en[ea];null!=e&&!0!==e.disabled&&U(e.value)}ec.current=!0,q(!1);break;case"ArrowLeft":e.preventDefault(),j.current?.firstChild?.focus();break;case"ArrowRight":e.preventDefault(),j.current?.lastChild?.focus();break;case"Backspace":e_&&(e.preventDefault(),j.current?.lastChild?.focus());break;case"Escape":z?(e.preventDefault(),e.stopPropagation(),eg()):e_&&m&&(e.preventDefault(),e.stopPropagation(),eA());break;default:eN(e)}},[eh,z,en,O,n,eS,ea,U,ey,eg,eA,eN,e_,m,q]),eO=r.useMemo(()=>{if(!N||P)return`${Math.max(ef??200,200)*("multiple"===n?1.5:1)+24*!!m+36+12}px`},[N,P,ef,n,m]),eb="multiple"===n&&eS.length>0,eD=r.useRef(null);r.useEffect(()=>{clearTimeout(eD.current),eb&&!F&&(eD.current=setTimeout(()=>{j.current?.lastElementChild?.scrollIntoView({behavior:"smooth",inline:"end",block:"end"})},10))},[eS,eb,F]);let eL=(0,l.A)(es,Z.setReference),ew=r.useCallback(e=>{if(eh)return;let t=Array.from(e)[0],n=eS.filter(e=>e.id!==t);ey(n),0===n.length&&er.current?.focus()},[ey,eS,eh]),eM=Math.max(en.findIndex(e=>e.id===eS[eS.length-1]?.id),0),eP=r.useRef(!1);r.useEffect(()=>{ei||!z||eP.current?z||(eP.current=!1,eo(null),eu.current=!1):(eP.current=!0,eu.current||eo(en.length>0?eM:null),eu.current=!1,er.current?.focus())},[ei,z,eM,en.length]);let ex=(0,c.r)(u.A.modules.select.MAX_WIDTH),ek=r.useMemo(()=>P&&null!=eO?{horizontalControlColumnWidth:eO}:{horizontalControlColumnWidth:`min(${ex}px, auto)`},[P,eO,ex]);return(0,i.jsx)(_.D,{...H,"data-mana-component":"select",layoutConfig:ek,children:e=>(0,i.jsx)("div",{ref:eI,style:{width:N?"100%":`minmax(${eO}px, 100%)`},children:(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(I.p,{ref:eL,disabled:$,readOnly:s,loading:ei,clearable:m,fullWidth:N,isOpen:z,isInert:eh,hasValue:e_,hasError:e?.errorMessageId!=null,handleToggle:eE,handleClear:eA,variant:V,...Q(),children:(0,i.jsxs)(d.s,{"aria-label":K,buttonRef:er,buttonProps:{...null!=Y?{id:Y}:{},style:{marginLeft:-4},role:"combobox","aria-haspopup":"listbox","aria-controls":z?et:void 0,"aria-expanded":z,"aria-activedescendant":el,"aria-errormessage":e?.errorMessageId,"aria-invalid":e?.errorMessageId!=null,"aria-required":W,children:(0,i.jsx)(h.A,{children:eS.map(e=>e.label).join(", ")})},focusProps:{ringTarget:es},className:a()(C.L5,{[C.kj]:F,[C.M8]:"multiple"===n}),onClick:eE,onMouseDown:em,onKeyDown:eR,onBlur:eT,"aria-describedby":e?.describedById,children:[(0,i.jsxs)(h.A,{children:[K,", "]}),(0,i.jsx)(v,{tagGroupRef:j,placeholder:b,selectionMode:n,selectedItems:eS,onRemove:ew})]})}),(0,i.jsx)(g.H,{name:D,form:L,disabled:eh,autoComplete:w,selectionMode:n,selectedItems:eS,onSelectionChange:ey,listItems:en}),(!N||P)&&ep,!eh&&z&&(0,i.jsx)("div",{ref:Z.setFloating,className:C.S_,...J(),style:{...X,...ee},children:(0,i.jsx)(f.q,{id:et,tabIndex:-1,required:W,items:en,selectionMode:n,selectedItems:eS,onSelectionChange:ey,shouldFocusWrap:O,activeDescendantIndex:ea,renderListItem:e=>(0,i.jsx)(A.c,{...e}),maxVisibleItems:M,loading:ei})})]})})})}function v(e){let{placeholder:t,selectionMode:n,selectedItems:r,onRemove:s,tagGroupRef:a}=e,{i18n:o}=(0,p.G9)();return null==r||0===r.length?(0,i.jsx)("div",{className:C.qf,children:(0,i.jsx)(m.E,{variant:"text-md/normal",color:"currentColor",lineClamp:1,children:t})}):"multiple"===n?(0,i.jsx)(E.C,{listRef:a,label:o.SELECTED_TAGS_HEADING,items:r,layout:"inline",onRemove:s}):(0,i.jsx)(A.c,{...r[0],inInput:!0})}
+"use strict";
+n.d(t, { l: () => N });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(494012),
+    l = n(612324),
+    u = n(661531),
+    c = n(603392),
+    d = n(890856),
+    _ = n(452027),
+    h = n(140735),
+    f = n(540637),
+    p = n(460890),
+    E = n(528265),
+    m = n(834730),
+    g = n(991957),
+    A = n(44482),
+    I = n(601973),
+    T = n(483084),
+    S = n(641668),
+    y = n(715022),
+    C = n(930856);
+function N(e) {
+    let { i18n: t } = (0, p.G9)(),
+        {
+            selectionMode: n,
+            readOnly: s,
+            autoFocus: E,
+            clearable: m,
+            fullWidth: N,
+            closeOnSelect: R = !0,
+            shouldFocusWrap: O,
+            placeholder: b = t.SELECT_PLACEHOLDER,
+            name: D,
+            form: L,
+            autoComplete: w,
+            maxOptionsVisible: M = 5,
+            fitContent: P = !1,
+            options: x,
+            formatOption: k,
+            onSelectionChange: U,
+            value: G,
+            wrapTags: F = !1,
+            variant: V = "default",
+            ...B
+        } = e,
+        j = r.useRef(null),
+        { fieldProps: H } = (0, _.n)(B),
+        { id: Y, required: W, label: K, disabled: $ } = H,
+        {
+            isOpen: z,
+            setIsOpen: q,
+            refs: Z,
+            floatingStyles: X,
+            getReferenceProps: Q,
+            getFloatingProps: J,
+            transitionStyles: ee,
+        } = (0, S.G)(),
+        et = r.useId(),
+        { options: en, loading: ei } = (0, T.K)({ active: z, options: x, renderOption: k }),
+        er = r.useRef(null),
+        es = r.useRef(null),
+        [ea, eo] = r.useState(null),
+        el = null != ea ? (0, y.ZN)(et, ea) : void 0,
+        eu = r.useRef(!1),
+        ec = r.useRef(!1),
+        ed = R ?? "multiple" !== n,
+        e_ = Array.isArray(G) ? G.length > 0 : null != G,
+        eh = $ || s,
+        { measuredWidth: ef, itemsForMeasurement: ep } = (function (e, t) {
+            let { ref: n, width: s } = (0, o.Ay)(),
+                a = r.useId();
+            return {
+                measuredWidth: s,
+                itemsForMeasurement: r.useMemo(
+                    () =>
+                        (0, i.jsx)("div", {
+                            ref: n,
+                            style: {
+                                position: "absolute",
+                                visibility: "hidden",
+                                pointerEvents: "none",
+                                width: "max-content",
+                            },
+                            "aria-hidden": "true",
+                            children: (0, i.jsx)(f.q, {
+                                id: `measurement-${a}`,
+                                required: !1,
+                                items: e,
+                                selectionMode: t,
+                                selectedItems: [],
+                                onSelectionChange: () => {},
+                                shouldFocusWrap: !1,
+                                renderListItem: (e) => (0, i.jsx)(A.c, { ...e }),
+                            }),
+                        }),
+                    [e, t, a, n],
+                ),
+            };
+        })(en, n),
+        eE = r.useCallback(() => {
+            eh || q(!z);
+        }, [eh, q, z]),
+        em = r.useCallback(
+            (e) => {
+                z && 0 === e.button && e.preventDefault();
+            },
+            [z],
+        ),
+        eg = r.useCallback(() => {
+            q(!1), er.current?.focus();
+        }, [q]),
+        eA = r.useCallback(() => {
+            !1 !== m && ("multiple" === n ? U([]) : U(null), er.current?.focus());
+        }, [U, n, m]);
+    r.useEffect(() => {
+        E && er.current?.focus();
+    }, [E]);
+    let eI = r.useRef(null),
+        eT = r.useCallback(
+            (e) => {
+                if (!eI.current?.contains(e.relatedTarget)) {
+                    if (ec.current) {
+                        ec.current = !1;
+                        return;
+                    }
+                    if (z && "single" === n && null != ea) {
+                        let e = en[ea];
+                        null != e && !0 !== e.disabled && U(e.value);
+                    }
+                    z && q(!1);
+                }
+            },
+            [z, n, ea, en, U, q],
+        ),
+        eS = r.useMemo(() => {
+            let e = Array.isArray(G) ? G : [G];
+            return en.filter((t) => (0, y.fI)(t.value, e));
+        }, [G, en]),
+        ey = r.useCallback(
+            (e) => {
+                if (eh) return;
+                let t = Array.from(e);
+                "multiple" === n && t.length < 1 ? U([]) : "multiple" === n ? U(t.map((e) => e.value)) : U(t[0]?.value),
+                    ed && z && eg();
+            },
+            [eh, n, U, ed, eg, z],
+        ),
+        { activeIndex: eC, handleKeyDown: eN } = (0, f.l)(!0, en),
+        ev = r.useRef(null);
+    r.useEffect(() => {
+        let e = eC !== ev.current;
+        (ev.current = eC), null != eC && e && (eo(eC), z || ((eu.current = !0), q(!0)));
+    }, [eC, z, q]);
+    let eR = r.useCallback(
+            (e) => {
+                if (eh) return;
+                let t = en.length;
+                switch (e.key) {
+                    case "ArrowDown":
+                    case "PageDown": {
+                        let n = "PageDown" === e.key ? 10 : 1;
+                        if (0 === t) return;
+                        if ((e.preventDefault(), !z || e.altKey)) {
+                            z || q(!0);
+                            return;
+                        }
+                        eo((e) => {
+                            if (null === e) return 0;
+                            let i = e + n;
+                            return i >= t && O ? 0 : Math.min(i, t - 1);
+                        });
+                        break;
+                    }
+                    case "ArrowUp":
+                    case "PageUp": {
+                        let n = "PageUp" === e.key ? 10 : 1;
+                        if (0 === t) return;
+                        if ((e.preventDefault(), e.altKey && z)) {
+                            if (null != ea) {
+                                let e = en[ea];
+                                if (null != e && !0 !== e.disabled) {
+                                    ey([e]);
+                                    break;
+                                }
+                            }
+                            eg();
+                            break;
+                        }
+                        if (!z) return void q(!0);
+                        eo((e) => {
+                            if (null === e) return 0;
+                            let i = e - n;
+                            return i < 0 && O ? t - 1 : Math.max(i, 0);
+                        });
+                        break;
+                    }
+                    case "Enter":
+                    case " ":
+                        if ((e.preventDefault(), e.stopPropagation(), !z)) return void q(!0);
+                        if (null == ea || ea > t - 1) return;
+                        {
+                            let e = en[ea];
+                            if (null == e || !0 === e.disabled) return;
+                            ey("single" === n ? [e] : (0, y.qH)(n, eS, e));
+                        }
+                        break;
+                    case "Home":
+                        if ((e.preventDefault(), 0 === t)) return;
+                        eo(0), z || ((eu.current = !0), q(!0));
+                        break;
+                    case "End":
+                        if ((e.preventDefault(), 0 === t)) return;
+                        eo(t - 1), z || ((eu.current = !0), q(!0));
+                        break;
+                    case "Tab":
+                        if (z && "single" === n && null != ea) {
+                            let e = en[ea];
+                            null != e && !0 !== e.disabled && U(e.value);
+                        }
+                        (ec.current = !0), q(!1);
+                        break;
+                    case "ArrowLeft":
+                        e.preventDefault(), j.current?.firstChild?.focus();
+                        break;
+                    case "ArrowRight":
+                        e.preventDefault(), j.current?.lastChild?.focus();
+                        break;
+                    case "Backspace":
+                        e_ && (e.preventDefault(), j.current?.lastChild?.focus());
+                        break;
+                    case "Escape":
+                        z
+                            ? (e.preventDefault(), e.stopPropagation(), eg())
+                            : e_ && m && (e.preventDefault(), e.stopPropagation(), eA());
+                        break;
+                    default:
+                        eN(e);
+                }
+            },
+            [eh, z, en, O, n, eS, ea, U, ey, eg, eA, eN, e_, m, q],
+        ),
+        eO = r.useMemo(() => {
+            if (!N || P) return `${Math.max(ef ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!m + 36 + 12}px`;
+        }, [N, P, ef, n, m]),
+        eb = "multiple" === n && eS.length > 0,
+        eD = r.useRef(null);
+    r.useEffect(() => {
+        clearTimeout(eD.current),
+            eb &&
+                !F &&
+                (eD.current = setTimeout(() => {
+                    j.current?.lastElementChild?.scrollIntoView({ behavior: "smooth", inline: "end", block: "end" });
+                }, 10));
+    }, [eS, eb, F]);
+    let eL = (0, l.A)(es, Z.setReference),
+        ew = r.useCallback(
+            (e) => {
+                if (eh) return;
+                let t = Array.from(e)[0],
+                    n = eS.filter((e) => e.id !== t);
+                ey(n), 0 === n.length && er.current?.focus();
+            },
+            [ey, eS, eh],
+        ),
+        eM = Math.max(
+            en.findIndex((e) => e.id === eS[eS.length - 1]?.id),
+            0,
+        ),
+        eP = r.useRef(!1);
+    r.useEffect(() => {
+        ei || !z || eP.current
+            ? z || ((eP.current = !1), eo(null), (eu.current = !1))
+            : ((eP.current = !0), eu.current || eo(en.length > 0 ? eM : null), (eu.current = !1), er.current?.focus());
+    }, [ei, z, eM, en.length]);
+    let ex = (0, c.r)(u.A.modules.select.MAX_WIDTH),
+        ek = r.useMemo(
+            () =>
+                P && null != eO
+                    ? { horizontalControlColumnWidth: eO }
+                    : { horizontalControlColumnWidth: `min(${ex}px, auto)` },
+            [P, eO, ex],
+        );
+    return (0, i.jsx)(_.D, {
+        ...H,
+        "data-mana-component": "select",
+        layoutConfig: ek,
+        children: (e) =>
+            (0, i.jsx)("div", {
+                ref: eI,
+                style: { width: N ? "100%" : `minmax(${eO}px, 100%)` },
+                children: (0, i.jsxs)(i.Fragment, {
+                    children: [
+                        (0, i.jsx)(I.p, {
+                            ref: eL,
+                            disabled: $,
+                            readOnly: s,
+                            loading: ei,
+                            clearable: m,
+                            fullWidth: N,
+                            isOpen: z,
+                            isInert: eh,
+                            hasValue: e_,
+                            hasError: e?.errorMessageId != null,
+                            handleToggle: eE,
+                            handleClear: eA,
+                            variant: V,
+                            ...Q(),
+                            children: (0, i.jsxs)(d.s, {
+                                "aria-label": K,
+                                buttonRef: er,
+                                buttonProps: {
+                                    ...(null != Y ? { id: Y } : {}),
+                                    style: { marginLeft: -4 },
+                                    role: "combobox",
+                                    "aria-haspopup": "listbox",
+                                    "aria-controls": z ? et : void 0,
+                                    "aria-expanded": z,
+                                    "aria-activedescendant": el,
+                                    "aria-errormessage": e?.errorMessageId,
+                                    "aria-invalid": e?.errorMessageId != null,
+                                    "aria-required": W,
+                                    children: (0, i.jsx)(h.A, { children: eS.map((e) => e.label).join(", ") }),
+                                },
+                                focusProps: { ringTarget: es },
+                                className: a()(C.L5, { [C.kj]: F, [C.M8]: "multiple" === n }),
+                                onClick: eE,
+                                onMouseDown: em,
+                                onKeyDown: eR,
+                                onBlur: eT,
+                                "aria-describedby": e?.describedById,
+                                children: [
+                                    (0, i.jsxs)(h.A, { children: [K, ", "] }),
+                                    (0, i.jsx)(v, {
+                                        tagGroupRef: j,
+                                        placeholder: b,
+                                        selectionMode: n,
+                                        selectedItems: eS,
+                                        onRemove: ew,
+                                    }),
+                                ],
+                            }),
+                        }),
+                        (0, i.jsx)(g.H, {
+                            name: D,
+                            form: L,
+                            disabled: eh,
+                            autoComplete: w,
+                            selectionMode: n,
+                            selectedItems: eS,
+                            onSelectionChange: ey,
+                            listItems: en,
+                        }),
+                        (!N || P) && ep,
+                        !eh &&
+                            z &&
+                            (0, i.jsx)("div", {
+                                ref: Z.setFloating,
+                                className: C.S_,
+                                ...J(),
+                                style: { ...X, ...ee },
+                                children: (0, i.jsx)(f.q, {
+                                    id: et,
+                                    tabIndex: -1,
+                                    required: W,
+                                    items: en,
+                                    selectionMode: n,
+                                    selectedItems: eS,
+                                    onSelectionChange: ey,
+                                    shouldFocusWrap: O,
+                                    activeDescendantIndex: ea,
+                                    renderListItem: (e) => (0, i.jsx)(A.c, { ...e }),
+                                    maxVisibleItems: M,
+                                    loading: ei,
+                                }),
+                            }),
+                    ],
+                }),
+            }),
+    });
+}
+function v(e) {
+    let { placeholder: t, selectionMode: n, selectedItems: r, onRemove: s, tagGroupRef: a } = e,
+        { i18n: o } = (0, p.G9)();
+    return null == r || 0 === r.length
+        ? (0, i.jsx)("div", {
+              className: C.qf,
+              children: (0, i.jsx)(m.E, {
+                  variant: "text-md/normal",
+                  color: "currentColor",
+                  lineClamp: 1,
+                  children: t,
+              }),
+          })
+        : "multiple" === n
+          ? (0, i.jsx)(E.C, { listRef: a, label: o.SELECTED_TAGS_HEADING, items: r, layout: "inline", onRemove: s })
+          : (0, i.jsx)(A.c, { ...r[0], inInput: !0 });
+}

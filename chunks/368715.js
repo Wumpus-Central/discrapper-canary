@@ -1,1 +1,655 @@
-n.d(e,{A:()=>Z});var s=n(627968),i=n(821609),a=n(801365),l=n(662940),o=n(371912),r=n(79545),u=n(412703),c=n(347135),C=n(590202),E=n(792620),d=n(814793),A=n(753386),T=n(617986),_=n(190107),x=n(375708);function I(t,e){return u.o.VIDEO.has(t)?C.Cy.WATCH_VIDEO:(0,d.vA)(e)?C.Cy.START_QUEST:C.Cy.ACCEPT_QUEST}function L(t,e,n,s){let{launchInGameActivity:i}=(0,c.zW)(t);return(0,E.K$)(t)?()=>{(0,T.Fy)(t)}:(0,E.IO)(t)?()=>{(0,T.d5)({quest:t,questContent:e,sourceQuestContent:n,sourceQuestContentCTA:s})}:(0,d.vA)(t)?()=>{i()}:null}let O=function(t){let{quest:e,taskType:n,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:o,size:u,surface:C}=t,O=(0,c.fc)(e),g=L(e,a,o,I(n,e)),h=C===r.V3.QUEST_HOME_TILE_V2_FOOTER,N=h?(0,T.Q_)(e):(0,T.Oz)(e),f=h?(0,l.C0)(e):function(t,e){if((0,E.K$)(t))return x.intl.string(x.t["/cXIc6"]);if((0,E.IO)(t))return(0,A.WM)(e);if((0,d.vA)(t))return(0,E.Ov)(t)?x.intl.string(x.t.CkUzLd):(0,E.vl)(t)?t.config.features.includes(_.Li.CLOUD_GAMING_ACTIVITY)?x.intl.string(x.t["+qoymD"]):x.intl.string(x.t.E4kW5O):x.intl.string(x.t.l7E81v);return x.intl.string(x.t["9KoPyB"])}(e,O);return null==g?(0,s.jsx)(i.$,{size:u,variant:"secondary",disabled:!0,text:f,fullWidth:!0}):(0,s.jsx)(i.$,{size:u,variant:(0,r.wX)(C),onClick:g,text:f,icon:N,fullWidth:!0})},g=function(t){let{quest:e,taskType:n,analyticsCtxQuestContent:u,analyticsCtxSourceQuestContent:c,analyticsCtxQuestContentPosition:C,analyticsCtxQuestContentRowIndex:E,size:d,surface:A}=t,T=A===r.V3.QUEST_HOME_TILE_V2_FOOTER,_=(0,a.r7)(e.config)?x.intl.string(x.t.bAGFz3):x.intl.string(x.t.vTgCWx),O=(0,o.ix)({quest:e,questContent:u,questContentPosition:C,questContentRowIndex:E,sourceQuestContent:c}),g=(0,l.vj)(e),h=L(e,u,c,I(n,e));return(0,s.jsx)(i.$,{variant:(0,r.wX)(A),fullWidth:!0,size:d,onClick:T?h:O,text:T?g:_})};var h=n(17928),N=n(859703),f=n(795965);let R=function(t){let{quest:e,analyticsCtxQuestContent:n,analyticsCtxSourceQuestContent:a,analyticsCtxQuestContentPosition:l,analyticsCtxQuestContentRowIndex:o,size:u,surface:c}=t,C=e.id,{isClaiming:E}=(0,h.cf)([N.A],()=>({isClaiming:N.A.isClaimingReward(C)||N.A.isFetchingRewardCode(C)}),[C]),d=null!=c?(0,r.Ut)(c):null,A=(0,f.D)({quest:e,questContent:n,sourceQuestContent:a,questContentPosition:l,questContentRowIndex:o,experimentLocation:d});return(0,s.jsx)(i.$,{variant:(0,r.wX)(c),fullWidth:!0,size:u,loading:E,onClick:A,text:x.intl.string(x.t.cfY4PE)})};var y=n(64700),S=n(141628),P=n(862482),D=n(775602),U=n(178540),p=n(507107),v=n(18437),m=n(971649),M=n(651892),Q=n(901406),w=n(862611),q=n(284846),j=n(263752);function b(t){let{quest:e,analyticsCtxQuestContent:n,analyticsCtxSourceQuestContent:i,analyticsCtxQuestContentPosition:a,analyticsCtxQuestContentRowIndex:l}=t,r=(0,v.Ut)(),u=(0,h.bG)([D.Ay],()=>D.Ay.useReducedMotion),E=(0,o.Xf)({useReducedMotion:u}),d=(0,U.O)(t=>t.setErrorHints),{startingConsoleQuest:A,startConsoleQuest:T}=(0,c.Wj)({questId:e.id,beforeRequest:()=>{E.startAnimation(),r({questId:e.id,questContent:n,questContentCTA:C.Cy.DEFIBRILLATOR,questContentPosition:a,questContentRowIndex:l,sourceQuestContent:i})},afterRequest:t=>{E.stopAnimation(),d(e.id,t)}});return(0,s.jsx)(P.$n,{"data-migration-pending":!0,color:P.XD.PRIMARY,onClick:T,disabled:A,className:j.x,children:(0,s.jsxs)("div",{className:j.t,children:[E.render(),x.intl.string(x.t.nPThNb)]})})}function V(t){let{quest:e,surface:n,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:l,analyticsCtxQuestContentPosition:o,analyticsCtxQuestContentRowIndex:u,size:E}=t,d=(0,c.RR)({quest:e}),A=(0,m.vU)()?.getId(),T=(0,c.Vn)(e),_=(0,c.fc)(e),[I,L,O]=(0,c.Qo)(e,_);return T||I===p.X0.DESKTOP?(0,s.jsx)(i.$,{variant:"secondary",size:E,disabled:!0,text:x.intl.string(x.t["9KoPyB"]),fullWidth:!0}):d&&n===r.V3.QUEST_HOME_TILE_FOOTER?(0,s.jsx)(i.$,{size:E,variant:"secondary",onClick:()=>{(0,Q.se)({quest:e},{content:a,ctaContent:C.Cy.CONNECT_CONSOLE,position:o,rowIndex:u,impressionId:A,sourceQuestContent:l})},text:x.intl.string(x.t.Cfye4v),fullWidth:!0}):(0,s.jsx)(b,{quest:e,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:l,analyticsCtxQuestContentPosition:o,analyticsCtxQuestContentRowIndex:u})}function F(t){let{quest:e,surface:n,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:l,analyticsCtxQuestContentPosition:o,analyticsCtxQuestContentRowIndex:u,size:c}=t,{hasAlreadyLinked:E}=(0,q.U)(e),d=(0,m.go)(),A=(0,v.Ut)();if(!0===E)return n===r.V3.QUEST_BAR_FOOTER?(0,s.jsx)(i.$,{size:c,fullWidth:!0,variant:"secondary",text:(0,M.wr)(e),onClick:()=>(0,Q.pu)(e,{content:a,ctaContent:C.Cy.OPEN_GAME_LINK,position:o,impressionId:d,sourceQuestContent:l})}):(0,s.jsx)(i.$,{size:c,fullWidth:!0,variant:(0,r.wX)(n),text:x.intl.string(x.t.SHZo2x),onClick:()=>(0,T._x)({quest:e,sourceQuestContent:l})});let _=n===r.V3.QUEST_HOME_TILE_V2_FOOTER;return(0,s.jsx)(i.$,{size:c,fullWidth:!0,variant:(0,r.wX)(n),icon:_?void 0:S.A,text:_?x.intl.string(x.t.SHZo2x):x.intl.string(x.t.sbdnpw),onClick:()=>{A({questId:e.id,questContent:a,questContentCTA:C.Cy.OPEN_ACCOUNT_LINK_MODAL,questContentPosition:o,questContentRowIndex:u,sourceQuestContent:l}),(0,T._x)({quest:e,sourceQuestContent:l})}})}function H(t){let{quest:e,analyticsCtxSourceQuestContent:n,size:a,parentContainerRef:l}=t,{applications:o}=(0,c.fc)(e);return(0,s.jsx)(w.A,{quest:e,sourceQuestContent:n,applications:o??[],targetElementRef:l,children:t=>(0,s.jsx)(i.$,{variant:"secondary",fullWidth:!0,size:a,text:x.intl.string(x.t["93PTEs"]),...t})})}function k(t){let{quest:e,surface:n,analyticsCtxSourceQuestContent:a,size:l}=t;return(0,s.jsx)(i.$,{size:l,fullWidth:!0,variant:(0,r.wX)(n,"primary"),text:x.intl.string(x.t.SHZo2x),onClick:()=>(0,T.ii)({quest:e,sourceQuestContent:a})})}let B=function(t){let{quest:e,surface:n,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:l,analyticsCtxQuestContentPosition:o,analyticsCtxQuestContentRowIndex:u,size:c}=t,C=y.useRef(null);return(0,E.I6)(e)?(0,s.jsx)(F,{quest:e,surface:n,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:l,analyticsCtxQuestContentPosition:o,analyticsCtxQuestContentRowIndex:u,size:c}):(0,E.g5)(e)&&n===r.V3.QUEST_HOME_TILE_FOOTER?(0,s.jsx)(V,{quest:e,surface:n,size:c,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:l,analyticsCtxQuestContentPosition:o,analyticsCtxQuestContentRowIndex:u}):(0,d.ui)(e)&&n===r.V3.QUEST_BAR_FOOTER?(0,s.jsx)("div",{ref:C,children:(0,s.jsx)(H,{quest:e,analyticsCtxSourceQuestContent:l,size:c,parentContainerRef:C})}):n===r.V3.QUEST_HOME_TILE_V2_FOOTER?(0,s.jsx)(k,{quest:e,surface:n,analyticsCtxSourceQuestContent:l,size:c}):(0,s.jsx)(i.$,{size:c,variant:"secondary",disabled:!0,text:x.intl.string(x.t["9KoPyB"]),fullWidth:!0})},W=function(t){let{quest:e,taskType:n,surface:i,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:l,analyticsCtxQuestContentPosition:o,analyticsCtxQuestContentRowIndex:r,size:u}=t;return(0,E.GL)(e)?(0,s.jsx)(B,{quest:e,surface:i,size:u,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:l,analyticsCtxQuestContentPosition:o,analyticsCtxQuestContentRowIndex:r}):(0,s.jsx)(O,{quest:e,taskType:n,size:u,surface:i,analyticsCtxQuestContent:a,analyticsCtxSourceQuestContent:l})},z=function(t){let{quest:e,taskType:n,surface:a,size:l,analyticsCtxQuestContent:o,analyticsCtxSourceQuestContent:u,analyticsCtxQuestContentPosition:C,analyticsCtxQuestContentRowIndex:E}=t,d=(0,c.S5)(e.config.expiresAt,{month:"numeric",day:"numeric"}),A=e.userStatus?.claimedAt!=null;return a===r.V3.QUEST_HOME_TILE_FOOTER&&A?(0,s.jsx)(g,{quest:e,taskType:n,size:l,analyticsCtxQuestContent:o,analyticsCtxSourceQuestContent:u,analyticsCtxQuestContentPosition:C,analyticsCtxQuestContentRowIndex:E}):(0,s.jsx)(i.$,{variant:"secondary",disabled:!0,fullWidth:!0,size:l,text:x.intl.format(x.t["6p8BZx"],{expiryDate:d})})},G=function(t){let{quest:e,taskType:n,surface:a,analyticsCtxQuestContent:l,analyticsCtxSourceQuestContent:o,analyticsCtxQuestContentPosition:u,analyticsCtxQuestContentRowIndex:c,size:C}=t;return((0,E.t)({quest:e})||(0,E.g5)(e))&&a===r.V3.QUEST_BAR_FOOTER&&(0,d.ui)(e)?(0,s.jsx)(i.$,{size:C,variant:"secondary",disabled:!0,text:x.intl.string(x.t["9KoPyB"]),fullWidth:!0}):(0,s.jsx)(W,{quest:e,taskType:n,surface:a,analyticsCtxQuestContent:l,analyticsCtxSourceQuestContent:o,analyticsCtxQuestContentPosition:u,analyticsCtxQuestContentRowIndex:c,size:C})};var X=n(340124);function Y(t){switch(t){case u.n.ACHIEVEMENT_IN_ACTIVITY:case u.n.PLAY_ACTIVITY:case u.n.WATCH_VIDEO:return C.Cy.START_QUEST;default:return C.Cy.ACCEPT_QUEST}}let K=function(t){var e;let{quest:n,taskType:a,size:o="sm",surface:C,preClickCallback:d,analyticsCtxQuestContent:I,analyticsCtxSourceQuestContent:L,analyticsCtxQuestContentPosition:O,analyticsCtxQuestContentRowIndex:g}=t,f={questContent:I,questContentCTA:Y(a),sourceQuestContent:L,questContentPosition:O,questContentRowIndex:g},R=n.id,{isEnrolling:y}=(0,h.cf)([N.A],()=>({isEnrolling:N.A.isEnrolling(R)}),[R]),S=C===r.V3.QUEST_HOME_TILE_V2_FOOTER,P=S?(0,T.Q_)(n):(0,T.Oz)(n),D=function(t,e,n,s){let{launchInGameActivity:i}=(0,c.zW)(e),a=s===r.V3.QUEST_HOME_TILE_V2_FOOTER;if((0,E.K$)(e))return()=>{(0,T.Fy)(e)};switch(t){case u.n.ACHIEVEMENT_IN_ACTIVITY:case u.n.PLAY_ACTIVITY:return()=>{i()};case u.n.ACHIEVEMENT_IN_GAME:return a?()=>{(0,T._x)({quest:e,sourceQuestContent:n})}:null;case u.n.PLAY_ON_XBOX:case u.n.PLAY_ON_PLAYSTATION:case u.n.PLAY_ON_DESKTOP:return a?()=>{(0,T.ii)({quest:e,sourceQuestContent:n})}:null;default:return null}}(a,n,L,C),U=S?(0,l.C0)(n):function(t,e){let{features:n}=e.config;switch(t){case u.n.WATCH_VIDEO:return(0,A.WM)((0,E.Yh)(e));case u.n.ACHIEVEMENT_IN_ACTIVITY:return x.intl.string(x.t.CkUzLd);case u.n.PLAY_ACTIVITY:if(n.includes(_.Li.CLOUD_GAMING_ACTIVITY))return x.intl.string(x.t["+qoymD"]);return x.intl.string(x.t.E4kW5O);default:return x.intl.string(x.t.kUQLMJ)}}(a,n),p=(e=D??void 0,a===u.n.WATCH_VIDEO?async()=>{await (0,T.e0)(n,{questContent:f.questContent,questContentCTA:f.questContentCTA,sourceQuestContent:f.sourceQuestContent,sourceQuestContentCTA:Y(a),questContentPosition:f.questContentPosition,questContentRowIndex:f.questContentRowIndex})}:async()=>{await (0,X.Oy)(n.id,{questContent:f.questContent,questContentCTA:f.questContentCTA,sourceQuestContent:f.sourceQuestContent,questContentPosition:f.questContentPosition,questContentRowIndex:f.questContentRowIndex}),e?.()});return(0,s.jsx)(i.$,{size:o,loading:y,variant:(0,r.wX)(C,"primary"),onClick:()=>{d?.(),p()},text:U,icon:P,fullWidth:!0})},Z=function(t){let{quest:e,surface:n,preClickCallback:a,analyticsCtxQuestContent:l,analyticsCtxSourceQuestContent:o,analyticsCtxQuestContentPosition:u,analyticsCtxQuestContentRowIndex:c,size:C="md"}=t,E=(0,r.Pd)(e);if(0===Object.keys(e.config.taskConfigV2.tasks).length)return(0,s.jsx)(i.$,{variant:"primary",fullWidth:!0,size:"sm",text:x.intl.string(x.t.P84bAD)});let d=Object.values(e.config.taskConfigV2.tasks)[0];switch(E){case r.UA.UNENROLLED:return(0,s.jsx)(K,{quest:e,taskType:d.type,size:C,surface:n,preClickCallback:a,analyticsCtxQuestContent:l,analyticsCtxSourceQuestContent:o,analyticsCtxQuestContentPosition:u,analyticsCtxQuestContentRowIndex:c});case r.UA.ENROLLED:return(0,s.jsx)(W,{quest:e,taskType:d.type,size:C,analyticsCtxQuestContent:l,analyticsCtxSourceQuestContent:o,analyticsCtxQuestContentPosition:u,analyticsCtxQuestContentRowIndex:c,surface:n});case r.UA.INCOMPLETE:return(0,s.jsx)(G,{quest:e,taskType:d.type,size:C,analyticsCtxQuestContent:l,analyticsCtxSourceQuestContent:o,analyticsCtxQuestContentPosition:u,analyticsCtxQuestContentRowIndex:c,surface:n});case r.UA.EXPIRED_CLAIMABLE:case r.UA.COMPLETED:return(0,s.jsx)(R,{quest:e,size:C,surface:n,analyticsCtxQuestContent:l,analyticsCtxSourceQuestContent:o,analyticsCtxQuestContentPosition:u,analyticsCtxQuestContentRowIndex:c});case r.UA.CLAIMED:return(0,s.jsx)(g,{quest:e,taskType:d.type,size:C,surface:n,analyticsCtxQuestContent:l,analyticsCtxSourceQuestContent:o,analyticsCtxQuestContentPosition:u,analyticsCtxQuestContentRowIndex:c});case r.UA.EXPIRED:return(0,s.jsx)(z,{quest:e,taskType:d.type,surface:n,size:C,analyticsCtxQuestContent:l,analyticsCtxSourceQuestContent:o,analyticsCtxQuestContentPosition:u,analyticsCtxQuestContentRowIndex:c});default:return(0,s.jsx)(i.$,{variant:"primary",fullWidth:!0,size:C,text:x.intl.string(x.t.P84bAD)})}}
+"use strict";
+n.d(t, { A: () => X });
+var i = n(627968),
+    r = n(821609),
+    s = n(801365),
+    a = n(662940),
+    o = n(371912),
+    l = n(79545),
+    u = n(412703),
+    c = n(347135),
+    d = n(590202),
+    _ = n(792620),
+    h = n(814793),
+    f = n(753386),
+    p = n(617986),
+    E = n(190107),
+    m = n(375708);
+function g(e, t) {
+    return u.o.VIDEO.has(e) ? d.Cy.WATCH_VIDEO : (0, h.vA)(t) ? d.Cy.START_QUEST : d.Cy.ACCEPT_QUEST;
+}
+function A(e, t, n, i) {
+    let { launchInGameActivity: r } = (0, c.zW)(e);
+    return (0, _.K$)(e)
+        ? () => {
+              (0, p.Fy)(e);
+          }
+        : (0, _.IO)(e)
+          ? () => {
+                (0, p.d5)({ quest: e, questContent: t, sourceQuestContent: n, sourceQuestContentCTA: i });
+            }
+          : (0, h.vA)(e)
+            ? () => {
+                  r();
+              }
+            : null;
+}
+let I = function (e) {
+        let {
+                quest: t,
+                taskType: n,
+                analyticsCtxQuestContent: s,
+                analyticsCtxSourceQuestContent: o,
+                size: u,
+                surface: d,
+            } = e,
+            I = (0, c.fc)(t),
+            T = A(t, s, o, g(n, t)),
+            S = d === l.V3.QUEST_HOME_TILE_V2_FOOTER,
+            y = S ? (0, p.Q_)(t) : (0, p.Oz)(t),
+            C = S
+                ? (0, a.C0)(t)
+                : (function (e, t) {
+                      if ((0, _.K$)(e)) return m.intl.string(m.t["/cXIc6"]);
+                      if ((0, _.IO)(e)) return (0, f.WM)(t);
+                      if ((0, h.vA)(e))
+                          return (0, _.Ov)(e)
+                              ? m.intl.string(m.t.CkUzLd)
+                              : (0, _.vl)(e)
+                                ? e.config.features.includes(E.Li.CLOUD_GAMING_ACTIVITY)
+                                    ? m.intl.string(m.t["+qoymD"])
+                                    : m.intl.string(m.t.E4kW5O)
+                                : m.intl.string(m.t.l7E81v);
+                      return m.intl.string(m.t["9KoPyB"]);
+                  })(t, I);
+        return null == T
+            ? (0, i.jsx)(r.$, { size: u, variant: "secondary", disabled: !0, text: C, fullWidth: !0 })
+            : (0, i.jsx)(r.$, { size: u, variant: (0, l.wX)(d), onClick: T, text: C, icon: y, fullWidth: !0 });
+    },
+    T = function (e) {
+        let {
+                quest: t,
+                taskType: n,
+                analyticsCtxQuestContent: u,
+                analyticsCtxSourceQuestContent: c,
+                analyticsCtxQuestContentPosition: d,
+                analyticsCtxQuestContentRowIndex: _,
+                size: h,
+                surface: f,
+            } = e,
+            p = f === l.V3.QUEST_HOME_TILE_V2_FOOTER,
+            E = (0, s.r7)(t.config) ? m.intl.string(m.t.bAGFz3) : m.intl.string(m.t.vTgCWx),
+            I = (0, o.ix)({
+                quest: t,
+                questContent: u,
+                questContentPosition: d,
+                questContentRowIndex: _,
+                sourceQuestContent: c,
+            }),
+            T = (0, a.vj)(t),
+            S = A(t, u, c, g(n, t));
+        return (0, i.jsx)(r.$, { variant: (0, l.wX)(f), fullWidth: !0, size: h, onClick: p ? S : I, text: p ? T : E });
+    };
+var S = n(17928),
+    y = n(859703),
+    C = n(795965);
+let N = function (e) {
+    let {
+            quest: t,
+            analyticsCtxQuestContent: n,
+            analyticsCtxSourceQuestContent: s,
+            analyticsCtxQuestContentPosition: a,
+            analyticsCtxQuestContentRowIndex: o,
+            size: u,
+            surface: c,
+        } = e,
+        d = t.id,
+        { isClaiming: _ } = (0, S.cf)(
+            [y.A],
+            () => ({ isClaiming: y.A.isClaimingReward(d) || y.A.isFetchingRewardCode(d) }),
+            [d],
+        ),
+        h = null != c ? (0, l.Ut)(c) : null,
+        f = (0, C.D)({
+            quest: t,
+            questContent: n,
+            sourceQuestContent: s,
+            questContentPosition: a,
+            questContentRowIndex: o,
+            experimentLocation: h,
+        });
+    return (0, i.jsx)(r.$, {
+        variant: (0, l.wX)(c),
+        fullWidth: !0,
+        size: u,
+        loading: _,
+        onClick: f,
+        text: m.intl.string(m.t.cfY4PE),
+    });
+};
+var v = n(64700),
+    R = n(141628),
+    O = n(862482),
+    b = n(775602),
+    D = n(178540),
+    L = n(507107),
+    w = n(18437),
+    M = n(971649),
+    P = n(651892),
+    x = n(901406),
+    k = n(862611),
+    U = n(284846),
+    G = n(263752);
+function F(e) {
+    let {
+            quest: t,
+            analyticsCtxQuestContent: n,
+            analyticsCtxSourceQuestContent: r,
+            analyticsCtxQuestContentPosition: s,
+            analyticsCtxQuestContentRowIndex: a,
+        } = e,
+        l = (0, w.Ut)(),
+        u = (0, S.bG)([b.Ay], () => b.Ay.useReducedMotion),
+        _ = (0, o.Xf)({ useReducedMotion: u }),
+        h = (0, D.O)((e) => e.setErrorHints),
+        { startingConsoleQuest: f, startConsoleQuest: p } = (0, c.Wj)({
+            questId: t.id,
+            beforeRequest: () => {
+                _.startAnimation(),
+                    l({
+                        questId: t.id,
+                        questContent: n,
+                        questContentCTA: d.Cy.DEFIBRILLATOR,
+                        questContentPosition: s,
+                        questContentRowIndex: a,
+                        sourceQuestContent: r,
+                    });
+            },
+            afterRequest: (e) => {
+                _.stopAnimation(), h(t.id, e);
+            },
+        });
+    return (0, i.jsx)(O.$n, {
+        "data-migration-pending": !0,
+        color: O.XD.PRIMARY,
+        onClick: p,
+        disabled: f,
+        className: G.x,
+        children: (0, i.jsxs)("div", { className: G.t, children: [_.render(), m.intl.string(m.t.nPThNb)] }),
+    });
+}
+function V(e) {
+    let {
+            quest: t,
+            surface: n,
+            analyticsCtxQuestContent: s,
+            analyticsCtxSourceQuestContent: a,
+            analyticsCtxQuestContentPosition: o,
+            analyticsCtxQuestContentRowIndex: u,
+            size: _,
+        } = e,
+        h = (0, c.RR)({ quest: t }),
+        f = (0, M.vU)()?.getId(),
+        p = (0, c.Vn)(t),
+        E = (0, c.fc)(t),
+        [g, A, I] = (0, c.Qo)(t, E);
+    return p || g === L.X0.DESKTOP
+        ? (0, i.jsx)(r.$, {
+              variant: "secondary",
+              size: _,
+              disabled: !0,
+              text: m.intl.string(m.t["9KoPyB"]),
+              fullWidth: !0,
+          })
+        : h && n === l.V3.QUEST_HOME_TILE_FOOTER
+          ? (0, i.jsx)(r.$, {
+                size: _,
+                variant: "secondary",
+                onClick: () => {
+                    (0, x.se)(
+                        { quest: t },
+                        {
+                            content: s,
+                            ctaContent: d.Cy.CONNECT_CONSOLE,
+                            position: o,
+                            rowIndex: u,
+                            impressionId: f,
+                            sourceQuestContent: a,
+                        },
+                    );
+                },
+                text: m.intl.string(m.t.Cfye4v),
+                fullWidth: !0,
+            })
+          : (0, i.jsx)(F, {
+                quest: t,
+                analyticsCtxQuestContent: s,
+                analyticsCtxSourceQuestContent: a,
+                analyticsCtxQuestContentPosition: o,
+                analyticsCtxQuestContentRowIndex: u,
+            });
+}
+function B(e) {
+    let {
+            quest: t,
+            surface: n,
+            analyticsCtxQuestContent: s,
+            analyticsCtxSourceQuestContent: a,
+            analyticsCtxQuestContentPosition: o,
+            analyticsCtxQuestContentRowIndex: u,
+            size: c,
+        } = e,
+        { hasAlreadyLinked: _ } = (0, U.U)(t),
+        h = (0, M.go)(),
+        f = (0, w.Ut)();
+    if (!0 === _)
+        return n === l.V3.QUEST_BAR_FOOTER
+            ? (0, i.jsx)(r.$, {
+                  size: c,
+                  fullWidth: !0,
+                  variant: "secondary",
+                  text: (0, P.wr)(t),
+                  onClick: () =>
+                      (0, x.pu)(t, {
+                          content: s,
+                          ctaContent: d.Cy.OPEN_GAME_LINK,
+                          position: o,
+                          impressionId: h,
+                          sourceQuestContent: a,
+                      }),
+              })
+            : (0, i.jsx)(r.$, {
+                  size: c,
+                  fullWidth: !0,
+                  variant: (0, l.wX)(n),
+                  text: m.intl.string(m.t.SHZo2x),
+                  onClick: () => (0, p._x)({ quest: t, sourceQuestContent: a }),
+              });
+    let E = n === l.V3.QUEST_HOME_TILE_V2_FOOTER;
+    return (0, i.jsx)(r.$, {
+        size: c,
+        fullWidth: !0,
+        variant: (0, l.wX)(n),
+        icon: E ? void 0 : R.A,
+        text: E ? m.intl.string(m.t.SHZo2x) : m.intl.string(m.t.sbdnpw),
+        onClick: () => {
+            f({
+                questId: t.id,
+                questContent: s,
+                questContentCTA: d.Cy.OPEN_ACCOUNT_LINK_MODAL,
+                questContentPosition: o,
+                questContentRowIndex: u,
+                sourceQuestContent: a,
+            }),
+                (0, p._x)({ quest: t, sourceQuestContent: a });
+        },
+    });
+}
+function j(e) {
+    let { quest: t, analyticsCtxSourceQuestContent: n, size: s, parentContainerRef: a } = e,
+        { applications: o } = (0, c.fc)(t);
+    return (0, i.jsx)(k.A, {
+        quest: t,
+        sourceQuestContent: n,
+        applications: o ?? [],
+        targetElementRef: a,
+        children: (e) =>
+            (0, i.jsx)(r.$, { variant: "secondary", fullWidth: !0, size: s, text: m.intl.string(m.t["93PTEs"]), ...e }),
+    });
+}
+function H(e) {
+    let { quest: t, surface: n, analyticsCtxSourceQuestContent: s, size: a } = e;
+    return (0, i.jsx)(r.$, {
+        size: a,
+        fullWidth: !0,
+        variant: (0, l.wX)(n, "primary"),
+        text: m.intl.string(m.t.SHZo2x),
+        onClick: () => (0, p.ii)({ quest: t, sourceQuestContent: s }),
+    });
+}
+let Y = function (e) {
+        let {
+                quest: t,
+                surface: n,
+                analyticsCtxQuestContent: s,
+                analyticsCtxSourceQuestContent: a,
+                analyticsCtxQuestContentPosition: o,
+                analyticsCtxQuestContentRowIndex: u,
+                size: c,
+            } = e,
+            d = v.useRef(null);
+        return (0, _.I6)(t)
+            ? (0, i.jsx)(B, {
+                  quest: t,
+                  surface: n,
+                  analyticsCtxQuestContent: s,
+                  analyticsCtxSourceQuestContent: a,
+                  analyticsCtxQuestContentPosition: o,
+                  analyticsCtxQuestContentRowIndex: u,
+                  size: c,
+              })
+            : (0, _.g5)(t) && n === l.V3.QUEST_HOME_TILE_FOOTER
+              ? (0, i.jsx)(V, {
+                    quest: t,
+                    surface: n,
+                    size: c,
+                    analyticsCtxQuestContent: s,
+                    analyticsCtxSourceQuestContent: a,
+                    analyticsCtxQuestContentPosition: o,
+                    analyticsCtxQuestContentRowIndex: u,
+                })
+              : (0, h.ui)(t) && n === l.V3.QUEST_BAR_FOOTER
+                ? (0, i.jsx)("div", {
+                      ref: d,
+                      children: (0, i.jsx)(j, {
+                          quest: t,
+                          analyticsCtxSourceQuestContent: a,
+                          size: c,
+                          parentContainerRef: d,
+                      }),
+                  })
+                : n === l.V3.QUEST_HOME_TILE_V2_FOOTER
+                  ? (0, i.jsx)(H, { quest: t, surface: n, analyticsCtxSourceQuestContent: a, size: c })
+                  : (0, i.jsx)(r.$, {
+                        size: c,
+                        variant: "secondary",
+                        disabled: !0,
+                        text: m.intl.string(m.t["9KoPyB"]),
+                        fullWidth: !0,
+                    });
+    },
+    W = function (e) {
+        let {
+            quest: t,
+            taskType: n,
+            surface: r,
+            analyticsCtxQuestContent: s,
+            analyticsCtxSourceQuestContent: a,
+            analyticsCtxQuestContentPosition: o,
+            analyticsCtxQuestContentRowIndex: l,
+            size: u,
+        } = e;
+        return (0, _.GL)(t)
+            ? (0, i.jsx)(Y, {
+                  quest: t,
+                  surface: r,
+                  size: u,
+                  analyticsCtxQuestContent: s,
+                  analyticsCtxSourceQuestContent: a,
+                  analyticsCtxQuestContentPosition: o,
+                  analyticsCtxQuestContentRowIndex: l,
+              })
+            : (0, i.jsx)(I, {
+                  quest: t,
+                  taskType: n,
+                  size: u,
+                  surface: r,
+                  analyticsCtxQuestContent: s,
+                  analyticsCtxSourceQuestContent: a,
+              });
+    },
+    K = function (e) {
+        let {
+                quest: t,
+                taskType: n,
+                surface: s,
+                size: a,
+                analyticsCtxQuestContent: o,
+                analyticsCtxSourceQuestContent: u,
+                analyticsCtxQuestContentPosition: d,
+                analyticsCtxQuestContentRowIndex: _,
+            } = e,
+            h = (0, c.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
+            f = t.userStatus?.claimedAt != null;
+        return s === l.V3.QUEST_HOME_TILE_FOOTER && f
+            ? (0, i.jsx)(T, {
+                  quest: t,
+                  taskType: n,
+                  size: a,
+                  analyticsCtxQuestContent: o,
+                  analyticsCtxSourceQuestContent: u,
+                  analyticsCtxQuestContentPosition: d,
+                  analyticsCtxQuestContentRowIndex: _,
+              })
+            : (0, i.jsx)(r.$, {
+                  variant: "secondary",
+                  disabled: !0,
+                  fullWidth: !0,
+                  size: a,
+                  text: m.intl.format(m.t["6p8BZx"], { expiryDate: h }),
+              });
+    },
+    $ = function (e) {
+        let {
+            quest: t,
+            taskType: n,
+            surface: s,
+            analyticsCtxQuestContent: a,
+            analyticsCtxSourceQuestContent: o,
+            analyticsCtxQuestContentPosition: u,
+            analyticsCtxQuestContentRowIndex: c,
+            size: d,
+        } = e;
+        return ((0, _.t)({ quest: t }) || (0, _.g5)(t)) && s === l.V3.QUEST_BAR_FOOTER && (0, h.ui)(t)
+            ? (0, i.jsx)(r.$, {
+                  size: d,
+                  variant: "secondary",
+                  disabled: !0,
+                  text: m.intl.string(m.t["9KoPyB"]),
+                  fullWidth: !0,
+              })
+            : (0, i.jsx)(W, {
+                  quest: t,
+                  taskType: n,
+                  surface: s,
+                  analyticsCtxQuestContent: a,
+                  analyticsCtxSourceQuestContent: o,
+                  analyticsCtxQuestContentPosition: u,
+                  analyticsCtxQuestContentRowIndex: c,
+                  size: d,
+              });
+    };
+var z = n(340124);
+function q(e) {
+    switch (e) {
+        case u.n.ACHIEVEMENT_IN_ACTIVITY:
+        case u.n.PLAY_ACTIVITY:
+        case u.n.WATCH_VIDEO:
+            return d.Cy.START_QUEST;
+        default:
+            return d.Cy.ACCEPT_QUEST;
+    }
+}
+let Z = function (e) {
+        var t;
+        let {
+                quest: n,
+                taskType: s,
+                size: o = "sm",
+                surface: d,
+                preClickCallback: h,
+                analyticsCtxQuestContent: g,
+                analyticsCtxSourceQuestContent: A,
+                analyticsCtxQuestContentPosition: I,
+                analyticsCtxQuestContentRowIndex: T,
+            } = e,
+            C = {
+                questContent: g,
+                questContentCTA: q(s),
+                sourceQuestContent: A,
+                questContentPosition: I,
+                questContentRowIndex: T,
+            },
+            N = n.id,
+            { isEnrolling: v } = (0, S.cf)([y.A], () => ({ isEnrolling: y.A.isEnrolling(N) }), [N]),
+            R = d === l.V3.QUEST_HOME_TILE_V2_FOOTER,
+            O = R ? (0, p.Q_)(n) : (0, p.Oz)(n),
+            b = (function (e, t, n, i) {
+                let { launchInGameActivity: r } = (0, c.zW)(t),
+                    s = i === l.V3.QUEST_HOME_TILE_V2_FOOTER;
+                if ((0, _.K$)(t))
+                    return () => {
+                        (0, p.Fy)(t);
+                    };
+                switch (e) {
+                    case u.n.ACHIEVEMENT_IN_ACTIVITY:
+                    case u.n.PLAY_ACTIVITY:
+                        return () => {
+                            r();
+                        };
+                    case u.n.ACHIEVEMENT_IN_GAME:
+                        return s
+                            ? () => {
+                                  (0, p._x)({ quest: t, sourceQuestContent: n });
+                              }
+                            : null;
+                    case u.n.PLAY_ON_XBOX:
+                    case u.n.PLAY_ON_PLAYSTATION:
+                    case u.n.PLAY_ON_DESKTOP:
+                        return s
+                            ? () => {
+                                  (0, p.ii)({ quest: t, sourceQuestContent: n });
+                              }
+                            : null;
+                    default:
+                        return null;
+                }
+            })(s, n, A, d),
+            D = R
+                ? (0, a.C0)(n)
+                : (function (e, t) {
+                      let { features: n } = t.config;
+                      switch (e) {
+                          case u.n.WATCH_VIDEO:
+                              return (0, f.WM)((0, _.Yh)(t));
+                          case u.n.ACHIEVEMENT_IN_ACTIVITY:
+                              return m.intl.string(m.t.CkUzLd);
+                          case u.n.PLAY_ACTIVITY:
+                              if (n.includes(E.Li.CLOUD_GAMING_ACTIVITY)) return m.intl.string(m.t["+qoymD"]);
+                              return m.intl.string(m.t.E4kW5O);
+                          default:
+                              return m.intl.string(m.t.kUQLMJ);
+                      }
+                  })(s, n),
+            L =
+                ((t = b ?? void 0),
+                s === u.n.WATCH_VIDEO
+                    ? async () => {
+                          await (0, p.e0)(n, {
+                              questContent: C.questContent,
+                              questContentCTA: C.questContentCTA,
+                              sourceQuestContent: C.sourceQuestContent,
+                              sourceQuestContentCTA: q(s),
+                              questContentPosition: C.questContentPosition,
+                              questContentRowIndex: C.questContentRowIndex,
+                          });
+                      }
+                    : async () => {
+                          await (0, z.Oy)(n.id, {
+                              questContent: C.questContent,
+                              questContentCTA: C.questContentCTA,
+                              sourceQuestContent: C.sourceQuestContent,
+                              questContentPosition: C.questContentPosition,
+                              questContentRowIndex: C.questContentRowIndex,
+                          }),
+                              t?.();
+                      });
+        return (0, i.jsx)(r.$, {
+            size: o,
+            loading: v,
+            variant: (0, l.wX)(d, "primary"),
+            onClick: () => {
+                h?.(), L();
+            },
+            text: D,
+            icon: O,
+            fullWidth: !0,
+        });
+    },
+    X = function (e) {
+        let {
+                quest: t,
+                surface: n,
+                preClickCallback: s,
+                analyticsCtxQuestContent: a,
+                analyticsCtxSourceQuestContent: o,
+                analyticsCtxQuestContentPosition: u,
+                analyticsCtxQuestContentRowIndex: c,
+                size: d = "md",
+            } = e,
+            _ = (0, l.Pd)(t);
+        if (0 === Object.keys(t.config.taskConfigV2.tasks).length)
+            return (0, i.jsx)(r.$, { variant: "primary", fullWidth: !0, size: "sm", text: m.intl.string(m.t.P84bAD) });
+        let h = Object.values(t.config.taskConfigV2.tasks)[0];
+        switch (_) {
+            case l.UA.UNENROLLED:
+                return (0, i.jsx)(Z, {
+                    quest: t,
+                    taskType: h.type,
+                    size: d,
+                    surface: n,
+                    preClickCallback: s,
+                    analyticsCtxQuestContent: a,
+                    analyticsCtxSourceQuestContent: o,
+                    analyticsCtxQuestContentPosition: u,
+                    analyticsCtxQuestContentRowIndex: c,
+                });
+            case l.UA.ENROLLED:
+                return (0, i.jsx)(W, {
+                    quest: t,
+                    taskType: h.type,
+                    size: d,
+                    analyticsCtxQuestContent: a,
+                    analyticsCtxSourceQuestContent: o,
+                    analyticsCtxQuestContentPosition: u,
+                    analyticsCtxQuestContentRowIndex: c,
+                    surface: n,
+                });
+            case l.UA.INCOMPLETE:
+                return (0, i.jsx)($, {
+                    quest: t,
+                    taskType: h.type,
+                    size: d,
+                    analyticsCtxQuestContent: a,
+                    analyticsCtxSourceQuestContent: o,
+                    analyticsCtxQuestContentPosition: u,
+                    analyticsCtxQuestContentRowIndex: c,
+                    surface: n,
+                });
+            case l.UA.EXPIRED_CLAIMABLE:
+            case l.UA.COMPLETED:
+                return (0, i.jsx)(N, {
+                    quest: t,
+                    size: d,
+                    surface: n,
+                    analyticsCtxQuestContent: a,
+                    analyticsCtxSourceQuestContent: o,
+                    analyticsCtxQuestContentPosition: u,
+                    analyticsCtxQuestContentRowIndex: c,
+                });
+            case l.UA.CLAIMED:
+                return (0, i.jsx)(T, {
+                    quest: t,
+                    taskType: h.type,
+                    size: d,
+                    surface: n,
+                    analyticsCtxQuestContent: a,
+                    analyticsCtxSourceQuestContent: o,
+                    analyticsCtxQuestContentPosition: u,
+                    analyticsCtxQuestContentRowIndex: c,
+                });
+            case l.UA.EXPIRED:
+                return (0, i.jsx)(K, {
+                    quest: t,
+                    taskType: h.type,
+                    surface: n,
+                    size: d,
+                    analyticsCtxQuestContent: a,
+                    analyticsCtxSourceQuestContent: o,
+                    analyticsCtxQuestContentPosition: u,
+                    analyticsCtxQuestContentRowIndex: c,
+                });
+            default:
+                return (0, i.jsx)(r.$, { variant: "primary", fullWidth: !0, size: d, text: m.intl.string(m.t.P84bAD) });
+        }
+    };

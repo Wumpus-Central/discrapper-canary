@@ -1,1 +1,782 @@
-n.d(t,{A:()=>eG});var i=n(627968),l=n(64700),s=n(17928),r=n(269115),a=n(187322),o=n(939249),c=n(789645),d=n(689175),u=n(688810),m=n(396748),h=n(488803),g=n(522055),x=n(645619),f=n(174459),p=n(917064),A=n(503698),E=n.n(A),_=n(534514),j=n(104510),N=n(661531),v=n(834730),T=n(821609),I=n(597770),C=n(548118),S=n(532794),b=n(864310),y=n(338548),R=n(287809),O=n(178368),L=n(428262),P=n(987144),k=n(652215),G=n(788868),D=n(375708),w=n(474236);let V=function(e){let{className:t,closeLayer:n,guild:a,onCtaVisibilityChange:o}=e,c=l.useRef(null),d=(0,s.bG)([R.default],()=>R.default.getCurrentUser()),m=(0,s.bG)([O.A],()=>O.A.boostSlots),h=d?.isPremiumGroupMember(),{analyticsLocations:g}=(0,u.Ay)(),[x,f]=l.useState(!1),p=l.useMemo(()=>Object.keys(m).filter(e=>{let t=m[e];return null!=t.premiumGuildSubscription&&t.premiumGuildSubscription.guildId===a.id}).length,[m,a.id]),A=(0,b.A)(e.guild.id).total;async function V(){f(!0),await (0,P.g)({analyticsLocations:g,analyticsLocation:{page:k.liQ.PREMIUM_GUILD_USER_MODAL,section:k.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,object:k.ZSU.BUTTON_CTA,objectType:k.AnalyticsObjectTypes.BUY},guild:a,closeLayer:n}),f(!1)}return(0,i.jsxs)("div",{className:E()(w.kL,t),children:[(0,i.jsxs)("div",{className:w.$R,children:[(0,i.jsx)(C.Ay,{className:w.$f,guild:a,size:C.Ay.Sizes.LARGER,iconSize:70,active:!0}),(0,i.jsxs)("div",{className:w.CR,children:[(0,i.jsx)(_.D,{className:w.J5,variant:"heading-lg/semibold",children:a.name}),(0,i.jsxs)("div",{className:w.SJ,children:[(0,i.jsx)(j._,{color:A>0?N.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH:"currentColor",className:E()(w.Me,{[w.S3]:A>0})}),(0,i.jsx)(v.E,{className:w.n,variant:"text-md/semibold",children:D.intl.format(D.t["pob/cL"],{subscriptions:A})})]}),p>0?(0,i.jsx)(v.E,{className:w.EV,variant:"text-sm/normal",children:D.intl.format(D.t.Jeto2u,{numSubscriptions:p})}):null]})]}),(0,i.jsxs)("div",{className:w.mY,children:[(0,i.jsx)("h1",{className:w.R_,children:D.intl.string(D.t.N4sqzL)}),h?(0,i.jsx)(y.A,{alwaysWhite:!0}):null,(0,i.jsxs)("div",{className:w.Sq,children:[(0,i.jsx)(r.L,{innerRef:c,onChange:o,threshold:.9,children:(0,i.jsx)("div",{ref:c,className:w.dp,children:(0,i.jsx)(T.$,{variant:"expressive",size:"md",icon:j._,text:D.intl.string(D.t.gKmQ1G),onClick:V,loading:x,disabled:h})})}),L.Ay.hasFreeBoosts(d)||L.Ay.isPremium(d,G.PremiumTypes.TIER_2)?(0,i.jsx)(T.$,{variant:"secondary",size:"md",icon:I.o,text:D.intl.string(D.t["8MYSQw"]),onClick:function(){(0,S.A)({initialPlanId:null,subscriptionTier:G.pe.TIER_2,isGift:!0,analyticsLocations:g,analyticsObject:{page:k.liQ.PREMIUM_GUILD_USER_MODAL,section:k.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,object:k.ZSU.BUTTON_ICON,objectType:k.AnalyticsObjectTypes.GIFT},onClose:e=>e&&n()})}}):(0,i.jsx)(T.$,{variant:"secondary",size:"md",text:D.intl.string(D.t.Q43TvC),onClick:function(){(0,S.A)({initialPlanId:null,subscriptionTier:G.pe.TIER_2,analyticsLocations:g,analyticsObject:{page:k.liQ.PREMIUM_GUILD_USER_MODAL,section:k.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,object:k.ZSU.BUTTON_ICON,objectType:k.AnalyticsObjectTypes.BUY},onClose:e=>e&&n()})},disabled:h})]})]})]})};var U=n(232122),M=n(366010),B=n(736653),F=n(303136),W=n(676279),z=n(215895);function H(e){let{className:t}=e,n=(0,B.Ay)(),l=(0,M.q)(n),s=(0,W.TM)()?l?"https://cdn.discordapp.com/assets/content/8890fba87ecb3f990dce6db1bacdad17315a2cffe4d7283344081eee03d8cc56.mp4":"https://cdn.discordapp.com/assets/content/6aea381b0f52d09809a9f8d67b0af01fb94b2646164361e321652beed97cf2ec.mp4":l?"https://cdn.discordapp.com/assets/content/efb7e2ce9b9536e7e9fffdc31d66f89a6035f8f6168afa555fa3fccc34b1977d.webm":"https://cdn.discordapp.com/assets/content/aedb1f458fe4c95624bfe88e0486722d0b6ccc8dfcf0e9878f04d8431252be44.webm";return(0,i.jsxs)("div",{className:t,children:[(0,i.jsx)("div",{className:z.YL}),(0,i.jsx)(F.A,{fallbackImage:l?"https://cdn.discordapp.com/assets/content/21a8558f1bce9743f99774ee1247a18908a35222409835448accf90a8b4e2fd8.png":"https://cdn.discordapp.com/assets/content/f91111a24ca4c59e87a462e8a3523938628e03e3723c31e5681991a07b0acf48.png",children:(0,i.jsx)("source",{src:s})},s)]})}var Q=n(64051),K=n(972919),Y=n(724677),X=n(210273),q=n(508155),$=n(853513),Z=n(111674);function J(e){let{tier:t,isActive:n}=e,l=t===k.TVA.TIER_1,s=t===k.TVA.TIER_3,r=t===k.TVA.TIER_1?Q.v:t===k.TVA.TIER_2?K.w:Y.H;return(0,i.jsxs)("div",{className:Z.MY,children:[(0,i.jsx)("div",{className:E()(Z.hr,{[Z.ti]:n,[Z.YO]:!n,[Z.JQ]:l,[Z.Uz]:s})}),(0,i.jsx)("div",{className:E()(Z.Zj,{[Z.jv]:n,[Z.ip]:t===k.TVA.TIER_1,[Z.p3]:t===k.TVA.TIER_2,[Z.wF]:t===k.TVA.TIER_3}),children:(0,i.jsx)(r,{alt:"",ariaHidden:!0,size:24})})]})}function ee(e){let{guild:t,definition:n}=e,{tier:l,perks:s}=n,r=t.premiumTier>=l,a=k.M2T[l];return(0,i.jsxs)("div",{className:E()(Z.Nr,{[Z.Bm]:r,[Z.c]:!r}),children:[(0,i.jsx)(J,{tier:l,isActive:r}),(0,i.jsxs)("div",{className:Z.zI,children:[(0,i.jsxs)("div",{className:Z.$h,children:[(0,i.jsx)(_.D,{className:E()(Z.JJ,{[Z.eX]:!r}),variant:"heading-xl/semibold",color:r?"text-strong":void 0,children:D.intl.string(l===k.TVA.TIER_1?D.t.nzXtaS:l===k.TVA.TIER_2?D.t["h33/uW"]:D.t.BfF6ED)}),(0,i.jsxs)("div",{className:Z.yC,children:[(0,i.jsx)(j._,{size:"xs",color:"currentColor"}),(0,i.jsx)(v.E,{variant:"text-md/medium",children:D.intl.format(D.t["pob/cL"],{subscriptions:a})})]})]}),(0,i.jsxs)("div",{className:Z.PJ,children:[s.slice(0,4).map((e,t)=>{if(null!=e.predicate&&!e.predicate())return null;let n=(0,X.X)(e.perkIcon);return(0,i.jsxs)("div",{className:E()(Z.bK,{[Z.o]:!r}),children:[(0,i.jsx)(n,{className:Z.kf,color:r?"var(--text-default)":"currentColor",size:"sm"}),(0,i.jsx)(v.E,{variant:"text-md/medium",color:r?"text-default":void 0,children:e.getCopy()})]},t)}),(0,i.jsx)(v.E,{className:Z.wx,variant:"text-md/medium",children:D.intl.string($.default.nIj3LZ)})]})]})]})}function et(e){let{guild:t,className:n}=e;return(0,i.jsx)("div",{className:E()(Z.iE,n),children:q.t.map(e=>(0,i.jsx)(ee,{guild:t,definition:e},e.tier))})}var en=n(922139),ei=n(172218),el=n(717421),es=n(289704),er=n(628284),ea=n(812993),eo=n(775602),ec=n(793574),ed=n(868652),eu=n(363487),em=n(73381),eh=n(998418),eg=n(828162),ex=n(71393),ef=n(975571),ep=n(800007),eA=n(568065),eE=n(576709),e_=n(262880);function ej(e){let{guildId:t,activeStatus:n,title:r,description:a,cost:o,costDecorator:c,staticImageUrl:d,animatedImageUrl:m,powerup:h,badge:g,onClose:x}=e,{analyticsLocations:f}=(0,u.Ay)(),p=n!==eA.b_.INACTIVE,A=(0,eu.A)(t),I=(0,s.bG)([eo.Ay],()=>eo.Ay.useReducedMotion),C=l.useRef(null),[S,b]=l.useState(!1),[y,R]=l.useState(!1),[O,L]=l.useState(!1),G=y||O,w=l.useCallback(()=>{let e=ex.A.getGuild(t);null!=e&&(0,P.g)({analyticsLocation:{page:k.liQ.GUILD_POWERUPS_MARKETING,section:k.JJy.GUILD_POWERUPS_MARKETING_PERKS_SECTION},numberOfBoostsToAdd:1,analyticsLocations:f,guild:e})},[t,f]),V=l.useCallback(()=>{x(),(0,eg.A)(t,ec.A.GUILD_POWERUPS_MARKETING,h.skuId)},[t,h.skuId,x]),U={tension:400,friction:30},M=(0,el.z)({scale:G?.85:1,y:G?-32:0,config:U}),B=(0,el.z)({scale:G?.7:1,y:G?-35:0,config:U}),F=(0,el.z)({y:G?-32:0,config:U}),W=(0,el.z)({opacity:+!!G,transform:G?"translateY(0)":"translateY(16px)",config:U}),z=l.useCallback(e=>{e&&b(!0)},[]),H=l.useCallback(()=>{L(!0)},[]),Q=l.useCallback(e=>{let t=e.relatedTarget;null!=t&&e.currentTarget.contains(t)||L(!1)},[]),K=(0,ei.K)(z),Y=h.skuId===ep.W5;return(0,i.jsxs)("div",{className:E()(e_.Nr,{[e_.fM]:S}),onFocus:H,onBlur:Q,onMouseEnter:()=>R(!0),onMouseLeave:()=>R(!1),children:[(0,i.jsx)("div",{className:e_.sL,ref:K}),(0,i.jsx)("div",{className:e_.kQ,children:Y?(0,i.jsx)(en.animated.div,{className:e_.bm,style:{transform:(0,en.to)([B.scale,B.y],(e,t)=>`scale(${e}) translateY(${t}px)`)},children:(0,i.jsx)(es.E,{withReducedMotion:"halt",eventTargetRef:C,fit:"contain",className:e_.Sq,stateMachine:"SM_Main_Int"})}):(0,i.jsx)(en.animated.img,{className:e_.bm,src:G&&null!=m&&""!==m&&!I?m:d,alt:"",style:{transform:(0,en.to)([M.scale,M.y],(e,t)=>`scale(${e}) translateY(${t}px)`)}})}),(0,i.jsxs)(en.animated.div,{style:{...F,transform:F.y.to(e=>`translateY(${e}px)`)},className:e_.Qs,children:[(0,i.jsxs)("div",{className:e_.P_,children:[(0,i.jsx)(_.D,{className:e_.DD,variant:"heading-lg/semibold",children:r}),(0,i.jsx)(v.E,{className:e_.h_,variant:"text-md/medium",children:a})]}),(0,i.jsxs)("div",{className:e_.jp,children:[(0,i.jsxs)("div",{className:e_.qS,children:[(0,i.jsx)(j._,{size:"xs",color:N.A.unsafe_rawColors.ILLO_PINK_40}),(0,i.jsx)(v.E,{className:e_.Vv,variant:"text-sm/semibold",children:D.intl.formatToPlainString(null!=c?eE.default["G/aTXi"]:eE.default.r9pa9K,{boostCount:o})})]}),p&&(0,i.jsxs)("div",{className:E()(e_.qS,e_.nt),children:[(0,i.jsx)(er.y,{size:"xs",color:"currentColor"}),(0,i.jsx)(v.E,{className:e_.nt,variant:"text-sm/semibold",children:D.intl.string(D.t.pCMkDb)})]})]})]}),(0,i.jsxs)(en.animated.div,{style:W,className:e_.NC,children:[(0,i.jsx)("div",{className:e_.x6,children:(0,i.jsx)(T.$,{variant:"primary",text:D.intl.string(D.t.oPAx73),onClick:w,fullWidth:!0})}),A&&(0,i.jsx)("div",{className:e_.x6,children:(0,i.jsx)(T.$,{variant:"secondary",text:D.intl.string(D.t.GoCQxU),onClick:V,fullWidth:!0})})]}),"new"===g&&(0,i.jsx)(ea.Lp,{className:e_.AP,text:D.intl.string(D.t.y2b7CA)}),"beta"===g&&(0,i.jsx)(ea.Lp,{className:e_.AP,text:D.intl.string(D.t.oW0eUd),color:N.A.colors.BACKGROUND_BRAND.css})]})}function eN(e){let{guildId:t,powerup:n,costDecorator:l,badge:s,onClose:r}=e,a=(0,eh.Ay)(t,n).type;return(0,i.jsx)(ej,{guildId:t,activeStatus:a,title:n.title,description:n.description,cost:n.cost,staticImageUrl:n.staticImageUrl,animatedImageUrl:n.animatedImageUrl,powerup:n,costDecorator:l,badge:s,onClose:r})}let ev=new Map([[ep.W5,"+"]]),eT=l.forwardRef((e,t)=>{let{guild:n,onClose:s}=e;l.useEffect(()=>{x.A.shouldFetchCatalogForGuild(n.id)&&(0,ed.AK)(n.id),x.A.shouldFetchPowerupsForGuild(n.id)&&(0,ed.Xd)(n.id)},[n.id]);let r=Array.from((0,em.A)(n.id)??[]).reverse().slice(0,6);return 0===r.length?null:(0,i.jsxs)("div",{ref:t,className:e_.iE,children:[(0,i.jsxs)("div",{className:e_.ND,children:[(0,i.jsx)(_.D,{className:e_.R_,variant:"heading-xxl/semibold",children:D.intl.string($.default.wjI18Q)}),(0,i.jsx)(v.E,{className:e_.fV,variant:"text-md/medium",children:D.intl.format($.default.S562fn,{helpDeskArticle:ef.A.getArticleURL(k.MVz.GUILD_BOOSTING_FAQ)})})]}),(0,i.jsx)("div",{className:e_.vY,children:r.map(e=>(0,i.jsx)(eN,{guildId:n.id,powerup:e,costDecorator:ev.get(e.skuId),badge:eA.ys[e.skuId],onClose:s},`perk-card-${e.skuId}`))})]})});eT.displayName="GuildBoostingMarketingPerkCards";var eI=n(527113),eC=n(862482),eS=n(944304),eb=n(672350);let ey=function(e){let{closeLayer:t,guild:n,isVisible:s}=e,r=l.useRef(null),o=(0,el.z)({transform:s?"translateY(-100%)":"translateY(0%)",config:{tension:120,friction:12}});return(0,i.jsx)(en.animated.div,{className:eb.iE,style:o,children:(0,i.jsx)("div",{ref:r,className:eb.iJ,children:(0,i.jsxs)(a.xp,{containerRef:r,children:[(0,i.jsxs)("div",{className:eb.OA,children:[(0,i.jsx)(C.Ay,{className:eb.$f,guild:n,size:C.Ay.Sizes.SMALL}),(0,i.jsx)(v.E,{className:eb.J5,variant:"text-md/semibold",children:n.name})]}),(0,i.jsx)(eS.A,{className:eb.lI,guild:n,analyticsLocation:{page:k.liQ.PREMIUM_GUILD_USER_MODAL,section:k.JJy.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,object:k.ZSU.BUTTON_CTA,objectType:k.AnalyticsObjectTypes.BUY},closeLayer:t,pauseAnimation:!s,size:eC.$n.Sizes.SMALL,useExpressiveButton:!0})]})})})};var eR=n(192308),eO=n(65154),eL=n(387772),eP=n(519636);function ek(e){let{guild:t,analyticsLocation:s,videoPlacement:r,sourceAnalyticsLocations:a}=e,c=l.useCallback(()=>{(0,eR.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e("6836"),n.e("85810")]).then(n.bind(n,872233));return n=>(0,i.jsx)(e,{...n,guildId:t.id,analyticsLocation:s,videoPlacement:r,sourceAnalyticsLocations:a})})},[s,t.id,a,r]);return(0,i.jsxs)(o.D,{className:eL.kL,onClick:c,"aria-label":D.intl.string($.default["103aY+"]),children:[(0,i.jsx)("img",{alt:"",className:eL.xn,src:eP.A}),(0,i.jsx)("div",{className:eL.Lw}),(0,i.jsx)("div",{className:eL.Rr,children:(0,i.jsx)(eO.S,{size:"custom",width:76,height:76,color:"white"})})]})}function eG(e){let{analyticsLocation:t,guild:n,onClose:A,scrollToPowerupCards:E}=e,[_,j]=l.useState(!0),N=l.useRef(!1),{analyticsLocations:v}=(0,u.Ay)(),T=l.useRef(null),I=l.useRef(null),C=l.useRef(null),S=l.useRef(null),b=l.useCallback(()=>{A?.()},[A]),y=l.useCallback(()=>{null!=C.current&&null!=I.current&&I.current.scrollIntoViewNode({node:C.current,animate:!0,shouldScrollToStart:!0})},[]),R=l.useCallback(e=>{e&&!N.current&&(f.default.track(k.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM,{type:k.liQ.PREMIUM_GUILD_USER_MODAL,location_stack:v,location_section:t.section,location_object:t.object,guild_id:n.id}),N.current=!0)},[t,v,n.id]);l.useEffect(()=>{f.default.track(k.HAw.OPEN_MODAL,{type:k.liQ.PREMIUM_GUILD_USER_MODAL,location_stack:v,location_section:t.section,location_object:t.object,guild_id:n.id})},[n.id,t,v]);let O=(0,h.C$)(n.id,"GuildBoostingMarketingRefresh"),L=(0,s.bG)([g.A],()=>g.A.shouldFetchCatalogForGuild(n.id));l.useEffect(()=>{O&&L&&(0,m.z9)(n.id)},[n.id,O,L]);let P=(0,s.bG)([x.A],()=>x.A.hasFetchedPowerupCatalog(n.id));return l.useEffect(()=>{if(E&&P){let e=setTimeout(()=>{y()},100);return()=>clearTimeout(e)}},[E,y,P]),(0,i.jsxs)(i.Fragment,{children:[null!=A&&(0,i.jsx)("div",{ref:S,className:z.Yk,children:(0,i.jsx)(a.xp,{containerRef:S,children:(0,i.jsx)(o.D,{className:z.b,onClick:b,"aria-label":D.intl.string(D.t.cpT0Cq),children:(0,i.jsx)(c.P,{size:"md",color:"currentColor"})})})}),(0,i.jsxs)(d.Gt,{ref:I,className:z.XG,children:[(0,i.jsxs)("div",{className:z.wx,children:[(0,i.jsx)(H,{className:z.y2}),(0,i.jsxs)("div",{className:z.AZ,children:[(0,i.jsx)(V,{guild:n,closeLayer:b,onCtaVisibilityChange:j,className:z.Oh}),(0,i.jsx)(ek,{guild:n,analyticsLocation:t,videoPlacement:"top",sourceAnalyticsLocations:v}),(0,i.jsx)(et,{guild:n})]})]}),(0,i.jsx)("div",{className:z.uE,children:(0,i.jsx)(eT,{ref:C,guild:e.guild,onClose:b})}),(0,i.jsx)("div",{className:z.o6,children:(0,i.jsxs)("div",{className:z.y$,children:[(0,i.jsx)(eI.A,{className:z.Q,guild:n}),(0,i.jsx)(p.A,{}),(0,i.jsx)(U.A,{})]})}),(0,i.jsx)(r.L,{innerRef:T,onChange:R,children:(0,i.jsx)("div",{ref:T,className:z.mR})})]}),(0,i.jsx)(ey,{guild:n,isVisible:!_,closeLayer:b})]})}
+"use strict";
+n.d(t, { A: () => ex });
+var i = n(627968),
+    r = n(64700),
+    s = n(17928),
+    a = n(269115),
+    o = n(187322),
+    l = n(939249),
+    u = n(789645),
+    c = n(689175),
+    d = n(688810),
+    _ = n(396748),
+    h = n(488803),
+    f = n(522055),
+    p = n(645619),
+    E = n(174459),
+    m = n(917064),
+    g = n(503698),
+    A = n.n(g),
+    I = n(534514),
+    T = n(104510),
+    S = n(661531),
+    y = n(834730),
+    C = n(821609),
+    N = n(597770),
+    v = n(548118),
+    R = n(532794),
+    O = n(864310),
+    b = n(338548),
+    D = n(287809),
+    L = n(178368),
+    w = n(428262),
+    M = n(987144),
+    P = n(652215),
+    x = n(788868),
+    k = n(375708),
+    U = n(474236);
+let G = function (e) {
+    let { className: t, closeLayer: n, guild: o, onCtaVisibilityChange: l } = e,
+        u = r.useRef(null),
+        c = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
+        _ = (0, s.bG)([L.A], () => L.A.boostSlots),
+        h = c?.isPremiumGroupMember(),
+        { analyticsLocations: f } = (0, d.Ay)(),
+        [p, E] = r.useState(!1),
+        m = r.useMemo(
+            () =>
+                Object.keys(_).filter((e) => {
+                    let t = _[e];
+                    return null != t.premiumGuildSubscription && t.premiumGuildSubscription.guildId === o.id;
+                }).length,
+            [_, o.id],
+        ),
+        g = (0, O.A)(e.guild.id).total;
+    async function G() {
+        E(!0),
+            await (0, M.g)({
+                analyticsLocations: f,
+                analyticsLocation: {
+                    page: P.liQ.PREMIUM_GUILD_USER_MODAL,
+                    section: P.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                    object: P.ZSU.BUTTON_CTA,
+                    objectType: P.AnalyticsObjectTypes.BUY,
+                },
+                guild: o,
+                closeLayer: n,
+            }),
+            E(!1);
+    }
+    return (0, i.jsxs)("div", {
+        className: A()(U.kL, t),
+        children: [
+            (0, i.jsxs)("div", {
+                className: U.$R,
+                children: [
+                    (0, i.jsx)(v.Ay, { className: U.$f, guild: o, size: v.Ay.Sizes.LARGER, iconSize: 70, active: !0 }),
+                    (0, i.jsxs)("div", {
+                        className: U.CR,
+                        children: [
+                            (0, i.jsx)(I.D, { className: U.J5, variant: "heading-lg/semibold", children: o.name }),
+                            (0, i.jsxs)("div", {
+                                className: U.SJ,
+                                children: [
+                                    (0, i.jsx)(T._, {
+                                        color:
+                                            g > 0 ? S.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH : "currentColor",
+                                        className: A()(U.Me, { [U.S3]: g > 0 }),
+                                    }),
+                                    (0, i.jsx)(y.E, {
+                                        className: U.n,
+                                        variant: "text-md/semibold",
+                                        children: k.intl.format(k.t["pob/cL"], { subscriptions: g }),
+                                    }),
+                                ],
+                            }),
+                            m > 0
+                                ? (0, i.jsx)(y.E, {
+                                      className: U.EV,
+                                      variant: "text-sm/normal",
+                                      children: k.intl.format(k.t.Jeto2u, { numSubscriptions: m }),
+                                  })
+                                : null,
+                        ],
+                    }),
+                ],
+            }),
+            (0, i.jsxs)("div", {
+                className: U.mY,
+                children: [
+                    (0, i.jsx)("h1", { className: U.R_, children: k.intl.string(k.t.N4sqzL) }),
+                    h ? (0, i.jsx)(b.A, { alwaysWhite: !0 }) : null,
+                    (0, i.jsxs)("div", {
+                        className: U.Sq,
+                        children: [
+                            (0, i.jsx)(a.L, {
+                                innerRef: u,
+                                onChange: l,
+                                threshold: 0.9,
+                                children: (0, i.jsx)("div", {
+                                    ref: u,
+                                    className: U.dp,
+                                    children: (0, i.jsx)(C.$, {
+                                        variant: "expressive",
+                                        size: "md",
+                                        icon: T._,
+                                        text: k.intl.string(k.t.gKmQ1G),
+                                        onClick: G,
+                                        loading: p,
+                                        disabled: h,
+                                    }),
+                                }),
+                            }),
+                            w.Ay.hasFreeBoosts(c) || w.Ay.isPremium(c, x.PremiumTypes.TIER_2)
+                                ? (0, i.jsx)(C.$, {
+                                      variant: "secondary",
+                                      size: "md",
+                                      icon: N.o,
+                                      text: k.intl.string(k.t["8MYSQw"]),
+                                      onClick: function () {
+                                          (0, R.A)({
+                                              initialPlanId: null,
+                                              subscriptionTier: x.pe.TIER_2,
+                                              isGift: !0,
+                                              analyticsLocations: f,
+                                              analyticsObject: {
+                                                  page: P.liQ.PREMIUM_GUILD_USER_MODAL,
+                                                  section: P.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                                  object: P.ZSU.BUTTON_ICON,
+                                                  objectType: P.AnalyticsObjectTypes.GIFT,
+                                              },
+                                              onClose: (e) => e && n(),
+                                          });
+                                      },
+                                  })
+                                : (0, i.jsx)(C.$, {
+                                      variant: "secondary",
+                                      size: "md",
+                                      text: k.intl.string(k.t.Q43TvC),
+                                      onClick: function () {
+                                          (0, R.A)({
+                                              initialPlanId: null,
+                                              subscriptionTier: x.pe.TIER_2,
+                                              analyticsLocations: f,
+                                              analyticsObject: {
+                                                  page: P.liQ.PREMIUM_GUILD_USER_MODAL,
+                                                  section: P.JJy.PREMIUM_GUILD_USER_MODAL_CTA_BAR,
+                                                  object: P.ZSU.BUTTON_ICON,
+                                                  objectType: P.AnalyticsObjectTypes.BUY,
+                                              },
+                                              onClose: (e) => e && n(),
+                                          });
+                                      },
+                                      disabled: h,
+                                  }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
+    });
+};
+var F = n(232122),
+    V = n(366010),
+    B = n(736653),
+    j = n(303136),
+    H = n(676279),
+    Y = n(215895);
+function W(e) {
+    let { className: t } = e,
+        n = (0, B.Ay)(),
+        r = (0, V.q)(n),
+        s = (0, H.TM)()
+            ? r
+                ? "https://cdn.discordapp.com/assets/content/8890fba87ecb3f990dce6db1bacdad17315a2cffe4d7283344081eee03d8cc56.mp4"
+                : "https://cdn.discordapp.com/assets/content/6aea381b0f52d09809a9f8d67b0af01fb94b2646164361e321652beed97cf2ec.mp4"
+            : r
+              ? "https://cdn.discordapp.com/assets/content/efb7e2ce9b9536e7e9fffdc31d66f89a6035f8f6168afa555fa3fccc34b1977d.webm"
+              : "https://cdn.discordapp.com/assets/content/aedb1f458fe4c95624bfe88e0486722d0b6ccc8dfcf0e9878f04d8431252be44.webm";
+    return (0, i.jsxs)("div", {
+        className: t,
+        children: [
+            (0, i.jsx)("div", { className: Y.YL }),
+            (0, i.jsx)(
+                j.A,
+                {
+                    fallbackImage: r
+                        ? "https://cdn.discordapp.com/assets/content/21a8558f1bce9743f99774ee1247a18908a35222409835448accf90a8b4e2fd8.png"
+                        : "https://cdn.discordapp.com/assets/content/f91111a24ca4c59e87a462e8a3523938628e03e3723c31e5681991a07b0acf48.png",
+                    children: (0, i.jsx)("source", { src: s }),
+                },
+                s,
+            ),
+        ],
+    });
+}
+var K = n(64051),
+    $ = n(972919),
+    z = n(724677),
+    q = n(210273),
+    Z = n(508155),
+    X = n(853513),
+    Q = n(111674);
+function J(e) {
+    let { tier: t, isActive: n } = e,
+        r = t === P.TVA.TIER_1,
+        s = t === P.TVA.TIER_3,
+        a = t === P.TVA.TIER_1 ? K.v : t === P.TVA.TIER_2 ? $.w : z.H;
+    return (0, i.jsxs)("div", {
+        className: Q.MY,
+        children: [
+            (0, i.jsx)("div", { className: A()(Q.hr, { [Q.ti]: n, [Q.YO]: !n, [Q.JQ]: r, [Q.Uz]: s }) }),
+            (0, i.jsx)("div", {
+                className: A()(Q.Zj, {
+                    [Q.jv]: n,
+                    [Q.ip]: t === P.TVA.TIER_1,
+                    [Q.p3]: t === P.TVA.TIER_2,
+                    [Q.wF]: t === P.TVA.TIER_3,
+                }),
+                children: (0, i.jsx)(a, { alt: "", ariaHidden: !0, size: 24 }),
+            }),
+        ],
+    });
+}
+function ee(e) {
+    let { guild: t, definition: n } = e,
+        { tier: r, perks: s } = n,
+        a = t.premiumTier >= r,
+        o = P.M2T[r];
+    return (0, i.jsxs)("div", {
+        className: A()(Q.Nr, { [Q.Bm]: a, [Q.c]: !a }),
+        children: [
+            (0, i.jsx)(J, { tier: r, isActive: a }),
+            (0, i.jsxs)("div", {
+                className: Q.zI,
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: Q.$h,
+                        children: [
+                            (0, i.jsx)(I.D, {
+                                className: A()(Q.JJ, { [Q.eX]: !a }),
+                                variant: "heading-xl/semibold",
+                                color: a ? "text-strong" : void 0,
+                                children: k.intl.string(
+                                    r === P.TVA.TIER_1 ? k.t.nzXtaS : r === P.TVA.TIER_2 ? k.t["h33/uW"] : k.t.BfF6ED,
+                                ),
+                            }),
+                            (0, i.jsxs)("div", {
+                                className: Q.yC,
+                                children: [
+                                    (0, i.jsx)(T._, { size: "xs", color: "currentColor" }),
+                                    (0, i.jsx)(y.E, {
+                                        variant: "text-md/medium",
+                                        children: k.intl.format(k.t["pob/cL"], { subscriptions: o }),
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                    (0, i.jsxs)("div", {
+                        className: Q.PJ,
+                        children: [
+                            s.slice(0, 4).map((e, t) => {
+                                if (null != e.predicate && !e.predicate()) return null;
+                                let n = (0, q.X)(e.perkIcon);
+                                return (0, i.jsxs)(
+                                    "div",
+                                    {
+                                        className: A()(Q.bK, { [Q.o]: !a }),
+                                        children: [
+                                            (0, i.jsx)(n, {
+                                                className: Q.kf,
+                                                color: a ? "var(--text-default)" : "currentColor",
+                                                size: "sm",
+                                            }),
+                                            (0, i.jsx)(y.E, {
+                                                variant: "text-md/medium",
+                                                color: a ? "text-default" : void 0,
+                                                children: e.getCopy(),
+                                            }),
+                                        ],
+                                    },
+                                    t,
+                                );
+                            }),
+                            (0, i.jsx)(y.E, {
+                                className: Q.wx,
+                                variant: "text-md/medium",
+                                children: k.intl.string(X.default.nIj3LZ),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+function et(e) {
+    let { guild: t, className: n } = e;
+    return (0, i.jsx)("div", {
+        className: A()(Q.iE, n),
+        children: Z.t.map((e) => (0, i.jsx)(ee, { guild: t, definition: e }, e.tier)),
+    });
+}
+var en = n(922139),
+    ei = n(172218),
+    er = n(717421),
+    es = n(289704),
+    ea = n(628284),
+    eo = n(812993),
+    el = n(775602),
+    eu = n(793574),
+    ec = n(868652),
+    ed = n(363487),
+    e_ = n(73381),
+    eh = n(998418),
+    ef = n(828162),
+    ep = n(71393),
+    eE = n(975571),
+    em = n(800007),
+    eg = n(568065),
+    eA = n(576709),
+    eI = n(262880);
+function eT(e) {
+    let {
+            guildId: t,
+            activeStatus: n,
+            title: a,
+            description: o,
+            cost: l,
+            costDecorator: u,
+            staticImageUrl: c,
+            animatedImageUrl: _,
+            powerup: h,
+            badge: f,
+            onClose: p,
+        } = e,
+        { analyticsLocations: E } = (0, d.Ay)(),
+        m = n !== eg.b_.INACTIVE,
+        g = (0, ed.A)(t),
+        N = (0, s.bG)([el.Ay], () => el.Ay.useReducedMotion),
+        v = r.useRef(null),
+        [R, O] = r.useState(!1),
+        [b, D] = r.useState(!1),
+        [L, w] = r.useState(!1),
+        x = b || L,
+        U = r.useCallback(() => {
+            let e = ep.A.getGuild(t);
+            null != e &&
+                (0, M.g)({
+                    analyticsLocation: {
+                        page: P.liQ.GUILD_POWERUPS_MARKETING,
+                        section: P.JJy.GUILD_POWERUPS_MARKETING_PERKS_SECTION,
+                    },
+                    numberOfBoostsToAdd: 1,
+                    analyticsLocations: E,
+                    guild: e,
+                });
+        }, [t, E]),
+        G = r.useCallback(() => {
+            p(), (0, ef.A)(t, eu.A.GUILD_POWERUPS_MARKETING, h.skuId);
+        }, [t, h.skuId, p]),
+        F = { tension: 400, friction: 30 },
+        V = (0, er.z)({ scale: x ? 0.85 : 1, y: x ? -32 : 0, config: F }),
+        B = (0, er.z)({ scale: x ? 0.7 : 1, y: x ? -35 : 0, config: F }),
+        j = (0, er.z)({ y: x ? -32 : 0, config: F }),
+        H = (0, er.z)({ opacity: +!!x, transform: x ? "translateY(0)" : "translateY(16px)", config: F }),
+        Y = r.useCallback((e) => {
+            e && O(!0);
+        }, []),
+        W = r.useCallback(() => {
+            w(!0);
+        }, []),
+        K = r.useCallback((e) => {
+            let t = e.relatedTarget;
+            (null != t && e.currentTarget.contains(t)) || w(!1);
+        }, []),
+        $ = (0, ei.K)(Y),
+        z = h.skuId === em.W5;
+    return (0, i.jsxs)("div", {
+        className: A()(eI.Nr, { [eI.fM]: R }),
+        onFocus: W,
+        onBlur: K,
+        onMouseEnter: () => D(!0),
+        onMouseLeave: () => D(!1),
+        children: [
+            (0, i.jsx)("div", { className: eI.sL, ref: $ }),
+            (0, i.jsx)("div", {
+                className: eI.kQ,
+                children: z
+                    ? (0, i.jsx)(en.animated.div, {
+                          className: eI.bm,
+                          style: { transform: (0, en.to)([B.scale, B.y], (e, t) => `scale(${e}) translateY(${t}px)`) },
+                          children: (0, i.jsx)(es.E, {
+                              withReducedMotion: "halt",
+                              eventTargetRef: v,
+                              fit: "contain",
+                              className: eI.Sq,
+                              stateMachine: "SM_Main_Int",
+                          }),
+                      })
+                    : (0, i.jsx)(en.animated.img, {
+                          className: eI.bm,
+                          src: x && null != _ && "" !== _ && !N ? _ : c,
+                          alt: "",
+                          style: { transform: (0, en.to)([V.scale, V.y], (e, t) => `scale(${e}) translateY(${t}px)`) },
+                      }),
+            }),
+            (0, i.jsxs)(en.animated.div, {
+                style: { ...j, transform: j.y.to((e) => `translateY(${e}px)`) },
+                className: eI.Qs,
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: eI.P_,
+                        children: [
+                            (0, i.jsx)(I.D, { className: eI.DD, variant: "heading-lg/semibold", children: a }),
+                            (0, i.jsx)(y.E, { className: eI.h_, variant: "text-md/medium", children: o }),
+                        ],
+                    }),
+                    (0, i.jsxs)("div", {
+                        className: eI.jp,
+                        children: [
+                            (0, i.jsxs)("div", {
+                                className: eI.qS,
+                                children: [
+                                    (0, i.jsx)(T._, { size: "xs", color: S.A.unsafe_rawColors.ILLO_PINK_40 }),
+                                    (0, i.jsx)(y.E, {
+                                        className: eI.Vv,
+                                        variant: "text-sm/semibold",
+                                        children: k.intl.formatToPlainString(
+                                            null != u ? eA.default["G/aTXi"] : eA.default.r9pa9K,
+                                            { boostCount: l },
+                                        ),
+                                    }),
+                                ],
+                            }),
+                            m &&
+                                (0, i.jsxs)("div", {
+                                    className: A()(eI.qS, eI.nt),
+                                    children: [
+                                        (0, i.jsx)(ea.y, { size: "xs", color: "currentColor" }),
+                                        (0, i.jsx)(y.E, {
+                                            className: eI.nt,
+                                            variant: "text-sm/semibold",
+                                            children: k.intl.string(k.t.pCMkDb),
+                                        }),
+                                    ],
+                                }),
+                        ],
+                    }),
+                ],
+            }),
+            (0, i.jsxs)(en.animated.div, {
+                style: H,
+                className: eI.NC,
+                children: [
+                    (0, i.jsx)("div", {
+                        className: eI.x6,
+                        children: (0, i.jsx)(C.$, {
+                            variant: "primary",
+                            text: k.intl.string(k.t.oPAx73),
+                            onClick: U,
+                            fullWidth: !0,
+                        }),
+                    }),
+                    g &&
+                        (0, i.jsx)("div", {
+                            className: eI.x6,
+                            children: (0, i.jsx)(C.$, {
+                                variant: "secondary",
+                                text: k.intl.string(k.t.GoCQxU),
+                                onClick: G,
+                                fullWidth: !0,
+                            }),
+                        }),
+                ],
+            }),
+            "new" === f && (0, i.jsx)(eo.Lp, { className: eI.AP, text: k.intl.string(k.t.y2b7CA) }),
+            "beta" === f &&
+                (0, i.jsx)(eo.Lp, {
+                    className: eI.AP,
+                    text: k.intl.string(k.t.oW0eUd),
+                    color: S.A.colors.BACKGROUND_BRAND.css,
+                }),
+        ],
+    });
+}
+function eS(e) {
+    let { guildId: t, powerup: n, costDecorator: r, badge: s, onClose: a } = e,
+        o = (0, eh.Ay)(t, n).type;
+    return (0, i.jsx)(eT, {
+        guildId: t,
+        activeStatus: o,
+        title: n.title,
+        description: n.description,
+        cost: n.cost,
+        staticImageUrl: n.staticImageUrl,
+        animatedImageUrl: n.animatedImageUrl,
+        powerup: n,
+        costDecorator: r,
+        badge: s,
+        onClose: a,
+    });
+}
+let ey = new Map([[em.W5, "+"]]),
+    eC = r.forwardRef((e, t) => {
+        let { guild: n, onClose: s } = e;
+        r.useEffect(() => {
+            p.A.shouldFetchCatalogForGuild(n.id) && (0, ec.AK)(n.id),
+                p.A.shouldFetchPowerupsForGuild(n.id) && (0, ec.Xd)(n.id);
+        }, [n.id]);
+        let a = Array.from((0, e_.A)(n.id) ?? [])
+            .reverse()
+            .slice(0, 6);
+        return 0 === a.length
+            ? null
+            : (0, i.jsxs)("div", {
+                  ref: t,
+                  className: eI.iE,
+                  children: [
+                      (0, i.jsxs)("div", {
+                          className: eI.ND,
+                          children: [
+                              (0, i.jsx)(I.D, {
+                                  className: eI.R_,
+                                  variant: "heading-xxl/semibold",
+                                  children: k.intl.string(X.default.wjI18Q),
+                              }),
+                              (0, i.jsx)(y.E, {
+                                  className: eI.fV,
+                                  variant: "text-md/medium",
+                                  children: k.intl.format(X.default.S562fn, {
+                                      helpDeskArticle: eE.A.getArticleURL(P.MVz.GUILD_BOOSTING_FAQ),
+                                  }),
+                              }),
+                          ],
+                      }),
+                      (0, i.jsx)("div", {
+                          className: eI.vY,
+                          children: a.map((e) =>
+                              (0, i.jsx)(
+                                  eS,
+                                  {
+                                      guildId: n.id,
+                                      powerup: e,
+                                      costDecorator: ey.get(e.skuId),
+                                      badge: eg.ys[e.skuId],
+                                      onClose: s,
+                                  },
+                                  `perk-card-${e.skuId}`,
+                              ),
+                          ),
+                      }),
+                  ],
+              });
+    });
+eC.displayName = "GuildBoostingMarketingPerkCards";
+var eN = n(527113),
+    ev = n(862482),
+    eR = n(944304),
+    eO = n(672350);
+let eb = function (e) {
+    let { closeLayer: t, guild: n, isVisible: s } = e,
+        a = r.useRef(null),
+        l = (0, er.z)({
+            transform: s ? "translateY(-100%)" : "translateY(0%)",
+            config: { tension: 120, friction: 12 },
+        });
+    return (0, i.jsx)(en.animated.div, {
+        className: eO.iE,
+        style: l,
+        children: (0, i.jsx)("div", {
+            ref: a,
+            className: eO.iJ,
+            children: (0, i.jsxs)(o.xp, {
+                containerRef: a,
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: eO.OA,
+                        children: [
+                            (0, i.jsx)(v.Ay, { className: eO.$f, guild: n, size: v.Ay.Sizes.SMALL }),
+                            (0, i.jsx)(y.E, { className: eO.J5, variant: "text-md/semibold", children: n.name }),
+                        ],
+                    }),
+                    (0, i.jsx)(eR.A, {
+                        className: eO.lI,
+                        guild: n,
+                        analyticsLocation: {
+                            page: P.liQ.PREMIUM_GUILD_USER_MODAL,
+                            section: P.JJy.PREMIUM_GUILD_USER_MODAL_FLOATING_CTA_BAR,
+                            object: P.ZSU.BUTTON_CTA,
+                            objectType: P.AnalyticsObjectTypes.BUY,
+                        },
+                        closeLayer: t,
+                        pauseAnimation: !s,
+                        size: ev.$n.Sizes.SMALL,
+                        useExpressiveButton: !0,
+                    }),
+                ],
+            }),
+        }),
+    });
+};
+var eD = n(192308),
+    eL = n(65154),
+    ew = n(387772),
+    eM = n(519636);
+function eP(e) {
+    let { guild: t, analyticsLocation: s, videoPlacement: a, sourceAnalyticsLocations: o } = e,
+        u = r.useCallback(() => {
+            (0, eD.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([n.e("6836"), n.e("85810")]).then(n.bind(n, 872233));
+                return (n) =>
+                    (0, i.jsx)(e, {
+                        ...n,
+                        guildId: t.id,
+                        analyticsLocation: s,
+                        videoPlacement: a,
+                        sourceAnalyticsLocations: o,
+                    });
+            });
+        }, [s, t.id, o, a]);
+    return (0, i.jsxs)(l.D, {
+        className: ew.kL,
+        onClick: u,
+        "aria-label": k.intl.string(X.default["103aY+"]),
+        children: [
+            (0, i.jsx)("img", { alt: "", className: ew.xn, src: eM.A }),
+            (0, i.jsx)("div", { className: ew.Lw }),
+            (0, i.jsx)("div", {
+                className: ew.Rr,
+                children: (0, i.jsx)(eL.S, { size: "custom", width: 76, height: 76, color: "white" }),
+            }),
+        ],
+    });
+}
+function ex(e) {
+    let { analyticsLocation: t, guild: n, onClose: g, scrollToPowerupCards: A } = e,
+        [I, T] = r.useState(!0),
+        S = r.useRef(!1),
+        { analyticsLocations: y } = (0, d.Ay)(),
+        C = r.useRef(null),
+        N = r.useRef(null),
+        v = r.useRef(null),
+        R = r.useRef(null),
+        O = r.useCallback(() => {
+            g?.();
+        }, [g]),
+        b = r.useCallback(() => {
+            null != v.current &&
+                null != N.current &&
+                N.current.scrollIntoViewNode({ node: v.current, animate: !0, shouldScrollToStart: !0 });
+        }, []),
+        D = r.useCallback(
+            (e) => {
+                e &&
+                    !S.current &&
+                    (E.default.track(P.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, {
+                        type: P.liQ.PREMIUM_GUILD_USER_MODAL,
+                        location_stack: y,
+                        location_section: t.section,
+                        location_object: t.object,
+                        guild_id: n.id,
+                    }),
+                    (S.current = !0));
+            },
+            [t, y, n.id],
+        );
+    r.useEffect(() => {
+        E.default.track(P.HAw.OPEN_MODAL, {
+            type: P.liQ.PREMIUM_GUILD_USER_MODAL,
+            location_stack: y,
+            location_section: t.section,
+            location_object: t.object,
+            guild_id: n.id,
+        });
+    }, [n.id, t, y]);
+    let L = (0, h.C$)(n.id, "GuildBoostingMarketingRefresh"),
+        w = (0, s.bG)([f.A], () => f.A.shouldFetchCatalogForGuild(n.id));
+    r.useEffect(() => {
+        L && w && (0, _.z9)(n.id);
+    }, [n.id, L, w]);
+    let M = (0, s.bG)([p.A], () => p.A.hasFetchedPowerupCatalog(n.id));
+    return (
+        r.useEffect(() => {
+            if (A && M) {
+                let e = setTimeout(() => {
+                    b();
+                }, 100);
+                return () => clearTimeout(e);
+            }
+        }, [A, b, M]),
+        (0, i.jsxs)(i.Fragment, {
+            children: [
+                null != g &&
+                    (0, i.jsx)("div", {
+                        ref: R,
+                        className: Y.Yk,
+                        children: (0, i.jsx)(o.xp, {
+                            containerRef: R,
+                            children: (0, i.jsx)(l.D, {
+                                className: Y.b,
+                                onClick: O,
+                                "aria-label": k.intl.string(k.t.cpT0Cq),
+                                children: (0, i.jsx)(u.P, { size: "md", color: "currentColor" }),
+                            }),
+                        }),
+                    }),
+                (0, i.jsxs)(c.Gt, {
+                    ref: N,
+                    className: Y.XG,
+                    children: [
+                        (0, i.jsxs)("div", {
+                            className: Y.wx,
+                            children: [
+                                (0, i.jsx)(W, { className: Y.y2 }),
+                                (0, i.jsxs)("div", {
+                                    className: Y.AZ,
+                                    children: [
+                                        (0, i.jsx)(G, {
+                                            guild: n,
+                                            closeLayer: O,
+                                            onCtaVisibilityChange: T,
+                                            className: Y.Oh,
+                                        }),
+                                        (0, i.jsx)(eP, {
+                                            guild: n,
+                                            analyticsLocation: t,
+                                            videoPlacement: "top",
+                                            sourceAnalyticsLocations: y,
+                                        }),
+                                        (0, i.jsx)(et, { guild: n }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                        (0, i.jsx)("div", {
+                            className: Y.uE,
+                            children: (0, i.jsx)(eC, { ref: v, guild: e.guild, onClose: O }),
+                        }),
+                        (0, i.jsx)("div", {
+                            className: Y.o6,
+                            children: (0, i.jsxs)("div", {
+                                className: Y.y$,
+                                children: [
+                                    (0, i.jsx)(eN.A, { className: Y.Q, guild: n }),
+                                    (0, i.jsx)(m.A, {}),
+                                    (0, i.jsx)(F.A, {}),
+                                ],
+                            }),
+                        }),
+                        (0, i.jsx)(a.L, {
+                            innerRef: C,
+                            onChange: D,
+                            children: (0, i.jsx)("div", { ref: C, className: Y.mR }),
+                        }),
+                    ],
+                }),
+                (0, i.jsx)(eb, { guild: n, isVisible: !I, closeLayer: O }),
+            ],
+        })
+    );
+}

@@ -1,1 +1,16 @@
-e.exports={kL:"container__9bfb9",V:"connectionList__9bfb9",qG:"addConnectionButton__9bfb9",FI:"connection__9bfb9",Hd:"connectionInfo__9bfb9",k_:"platformIconContainer__9bfb9",tV:"platformIcon__9bfb9",sN:"applicationConnectionIcon__9bfb9",vi:"accountName__9bfb9",GW:"accountNameText__9bfb9",Y2:"platformUrlAnchor__9bfb9",yu:"metadata__9bfb9",OB:"connectedAppRoleAccountClickable__9bfb9",nk:"connectedAppRoleAccountPoweredBy__9bfb9"}
+_.exports = {
+    kL: "container__9bfb9",
+    V: "connectionList__9bfb9",
+    qG: "addConnectionButton__9bfb9",
+    FI: "connection__9bfb9",
+    Hd: "connectionInfo__9bfb9",
+    k_: "platformIconContainer__9bfb9",
+    tV: "platformIcon__9bfb9",
+    sN: "applicationConnectionIcon__9bfb9",
+    vi: "accountName__9bfb9",
+    GW: "accountNameText__9bfb9",
+    Y2: "platformUrlAnchor__9bfb9",
+    yu: "metadata__9bfb9",
+    OB: "connectedAppRoleAccountClickable__9bfb9",
+    nk: "connectedAppRoleAccountPoweredBy__9bfb9",
+};

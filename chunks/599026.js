@@ -1,1 +1,4 @@
-n.d(t,{A:()=>r});var l,r=((l={})[l.NAME=0]="NAME",l[l.STATE=1]="STATE",l[l.DETAILS=2]="DETAILS",l)
+"use strict";
+n.d(t, { A: () => r });
+var i,
+    r = (((i = {})[(i.NAME = 0)] = "NAME"), (i[(i.STATE = 1)] = "STATE"), (i[(i.DETAILS = 2)] = "DETAILS"), i);

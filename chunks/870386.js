@@ -1,1 +1,1 @@
-e.exports={L:"voiceClipThumbnail__60cfd"}
+_.exports = { L: "voiceClipThumbnail__60cfd" };

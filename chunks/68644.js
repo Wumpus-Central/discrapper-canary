@@ -1,1 +1,5 @@
-e.exports={W4:"externalProductWrapper__320c6",oy:"orbProfileBadgeAsset__320c6",eV:"fractionalNitroRive__320c6"}
+a.exports = {
+    W4: "externalProductWrapper__320c6",
+    oy: "orbProfileBadgeAsset__320c6",
+    eV: "fractionalNitroRive__320c6",
+};

@@ -1,1 +1,1 @@
-e.exports={Rh:"selectedGames_eb5373"}
+e.exports = { Rh: "selectedGames_eb5373" };

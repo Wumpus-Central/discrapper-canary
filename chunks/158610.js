@@ -1,1 +1,2 @@
-"use strict";t.exports={}
+"use strict";
+t.exports = {};

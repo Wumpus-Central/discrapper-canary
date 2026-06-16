@@ -1,1 +1,53 @@
-n.d(t,{Li:()=>I,_g:()=>R,dj:()=>N});var i=n(136722),l=n(702841),r=n(617617),s=n(71393),a=n(576705),E=n(967198),o=n(287809),c=n(488926),_=n(935208),u=n(974103),A=n(903093),T=n(610136),d=n(218113);function I(e){let t=(0,l.bG)([s.A,a.A],()=>{let t=s.A.getGuild(e);if(null==t)return!1;let n=a.A.getGuildPermissions(t);return null!=n&&i.X8(n,d.Sz)}),n=(0,l.bG)([T.A],()=>null!=e?T.A.getGuildIncident(e):null),r=null!=n&&(0,A._J)(n);return{shouldShowIncidentActions:t,incidentData:n,isUnderLockdown:r}}function N(){let e=function(e){let t=o.default.getCurrentUser(),n=T.A.getIncidentsByGuild();for(let l of _.default.keys(n).map(e=>s.A.getGuild(e))){if(null==l)continue;let r=n[l.id];if(!(null==r||!(0,A.k$)(r)&&!(0,A._J)(r)||(0,A._J)(r)&&l.id!==e)&&i.X8(c.cc({user:t,context:l,checkElevated:!1}),d.Sz))return l.id}return null}(E.A.getGuildId()),t=r.A.getGuildsProto()??{},n=null!=e?t[e]:null,l=null!=n&&n.disableRaidAlertNag;return{show:null!=e&&!l,guildId:e}}function R(e){return(0,l.bG)([a.A,s.A],()=>{let t=s.A.getGuild(e);return(0,u.nc)(t,a.A)})}n(652215)
+"use strict";
+n.d(t, { Li: () => E, _g: () => g, dj: () => m });
+var i = n(136722),
+    r = n(702841),
+    s = n(617617),
+    a = n(71393),
+    o = n(576705),
+    l = n(967198),
+    u = n(287809),
+    c = n(488926),
+    d = n(935208),
+    _ = n(974103),
+    h = n(903093),
+    f = n(610136),
+    p = n(218113);
+function E(e) {
+    let t = (0, r.bG)([a.A, o.A], () => {
+            let t = a.A.getGuild(e);
+            if (null == t) return !1;
+            let n = o.A.getGuildPermissions(t);
+            return null != n && i.X8(n, p.Sz);
+        }),
+        n = (0, r.bG)([f.A], () => (null != e ? f.A.getGuildIncident(e) : null)),
+        s = null != n && (0, h._J)(n);
+    return { shouldShowIncidentActions: t, incidentData: n, isUnderLockdown: s };
+}
+function m() {
+    let e = (function (e) {
+            let t = u.default.getCurrentUser(),
+                n = f.A.getIncidentsByGuild();
+            for (let r of d.default.keys(n).map((e) => a.A.getGuild(e))) {
+                if (null == r) continue;
+                let s = n[r.id];
+                if (
+                    !(null == s || (!(0, h.k$)(s) && !(0, h._J)(s)) || ((0, h._J)(s) && r.id !== e)) &&
+                    i.X8(c.cc({ user: t, context: r, checkElevated: !1 }), p.Sz)
+                )
+                    return r.id;
+            }
+            return null;
+        })(l.A.getGuildId()),
+        t = s.A.getGuildsProto() ?? {},
+        n = null != e ? t[e] : null,
+        r = null != n && n.disableRaidAlertNag;
+    return { show: null != e && !r, guildId: e };
+}
+function g(e) {
+    return (0, r.bG)([o.A, a.A], () => {
+        let t = a.A.getGuild(e);
+        return (0, _.nc)(t, o.A);
+    });
+}
+n(652215);

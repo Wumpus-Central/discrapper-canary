@@ -1,1 +1,211 @@
-n.d(t,{x:()=>S,e:()=>b});var a=n(627968),r=n(64700),l=n(503698),i=n.n(l),s=n(922139),o=n(113325),c=n(315629),d=n(17928),u=n(453903),m=n(765671),h=n(186111),p=n(795127),_=n(844222),g=n(866323);let f={mass:1,tension:800,friction:32},E={mass:1,tension:1200,friction:48};var x=n(818348),v=n(824078);let b=r.createContext(null),I=x.FX;function S(e){let{children:t,targetElementRef:n,shouldShow:l=!0,onRequestClose:x,position:S="top",align:C,alignmentStrategy:k="trigger-center",caretConfig:y,hasVideo:A=!1,gradientColor:M,gradientOffsetBottom:j=.4,onPositionChange:N,onNudgeChange:w,scrollBehavior:R="sticky",modal:O=!1,returnRef:D,experimental_ignoreModalClicks:T=!0,closeOnClickOutside:P=!1}=e,[L,V]=r.useState(l),[B,W]=r.useState(S),U=r.useRef(S),G=r.useRef(0),{ref:H,width:Z,height:z}=(0,m.Ay)(),F=(0,d.bG)([h.A],()=>h.A.getLayers()),$=F[F.length-1]??"base",K=r.useRef(N);r.useEffect(()=>{K.current=N},[N]);let Q=r.useCallback(e=>{null!=e&&e!==U.current&&(U.current=e,W(e),K.current?.(e))},[]),q=r.useMemo(()=>null==n.current||(n.current.closest("[data-layer]")?.getAttribute("data-layer")??"base")===$,[n,$]);r.useEffect(()=>{q&&l?V(!0):q||V(!1)},[q,l]),r.useEffect(()=>{Q(S)},[S,Q]);let J=function(e){let{shouldShow:t,caretPosition:n,onExitComplete:a}=e,{reducedMotion:l}=r.useContext(_.C),{config:i,...s}=((e,t)=>{let n={opacity:0,transform:""},a={opacity:0,transform:""};if(t)return{from:{opacity:0},enter:{opacity:1},leave:{opacity:0},config:{duration:150}};switch(e){case"top":n.transform="translate3d(0, -10px, 0)",a.transform="translate3d(0, -10px, 0)";break;case"bottom":n.transform="translate3d(0, 10px, 0)",a.transform="translate3d(0, 10px, 0)";break;case"left":n.transform="translate3d(-10px, 0, 0)",a.transform="translate3d(-10px, 0, 0)";break;case"right":n.transform="translate3d(10px, 0, 0)",a.transform="translate3d(10px, 0, 0)"}return{from:n,enter:{opacity:1,transform:"translate3d(0px, 0px, 0)"},leave:a,config:void 0}})(n,l.enabled);return(0,g.p)(t,{...s,config:i??((e,n)=>t?f:E),onRest:()=>{t||null==a||a()}},"animate-always")}({shouldShow:l,caretPosition:(0,p.g)(B),onExitComplete:()=>{V(!1)}}),Y=r.useMemo(()=>{if("edge"===k&&null!=C){let e="top"===B||"bottom"===B,t="left"===B||"right"===B;if(e){if("left"===C||"center"===C||"right"===C)return C}else if(t&&("top"===C||"center"===C||"bottom"===C))return C;}return"center"},[k,C,B]),X=r.useMemo(()=>{if("edge"!==k)return function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"center",t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"top",n=arguments.length>2?arguments[2]:void 0,a=arguments.length>3&&void 0!==arguments[3]?arguments[3]:0;if("center"===e||"custom"===e)return 0;let r="left"===t||"right"===t,l=r?a:n??240;if(0===l)return 0;let i=l/2-(r?22:20);switch(e){case"start":return i;case"end":return-i;default:return 0}}(y?.align??"center",B,Z,z)},[k,y,B,Z,z]),ee=r.useMemo(()=>({position:B,caretConfig:y??{align:"center"}}),[B,y]);return(0,a.jsx)(u.$,{targetElementRef:n,shouldShow:L,onRequestClose:x,position:B,align:Y,spacing:14,offset:X,layerContext:void 0,positionKey:null!=X?`${B}-${X}`:void 0,popoutKey:void 0,fixed:!1,autoInvert:!0,nudgeAlignIntoViewport:"top"===B||"bottom"===B,closeOnClickOutside:P,ignoreModalClicks:T,scrollBehavior:R,renderPopout:e=>{let{setPopoutRef:n,position:r,nudge:l,...d}=e;return Q(r),l!==G.current&&(G.current=l,w?.(l)),J((e,r)=>{if(!r)return null;let u=(0,a.jsx)(o.lG,{...d,setDialogRef:n,modal:O,className:i()(null!=M?v.popoverContentWithGradient:v.popover,{[v["popover--video"]]:A}),returnRef:D,children:(0,a.jsx)(b.Provider,{value:ee,children:t})});return(0,a.jsx)(s.animated.div,{ref:H,"data-mana-component":"popover",style:{...e,"--custom-caret-edge-offset-horizontal":"20px","--custom-caret-edge-offset-vertical":"22px","--custom-caret-edge-offset-horizontal-nudge":`${l}px`,"--custom-popover-width":"240px"},children:null!=M?(0,a.jsx)(c.h,{offsetBottom:j,color:M,className:v.popoverGradientWrapper,children:u}):u})})},children:I})}
+"use strict";
+n.d(t, { x: () => y, e: () => T });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(922139),
+    l = n(113325),
+    u = n(315629),
+    c = n(17928),
+    d = n(453903),
+    _ = n(765671),
+    h = n(186111),
+    f = n(795127),
+    p = n(844222),
+    E = n(866323);
+let m = { mass: 1, tension: 800, friction: 32 },
+    g = { mass: 1, tension: 1200, friction: 48 };
+var A = n(818348),
+    I = n(824078);
+let T = r.createContext(null),
+    S = A.FX;
+function y(e) {
+    let {
+            children: t,
+            targetElementRef: n,
+            shouldShow: s = !0,
+            onRequestClose: A,
+            position: y = "top",
+            align: C,
+            alignmentStrategy: N = "trigger-center",
+            caretConfig: v,
+            hasVideo: R = !1,
+            gradientColor: O,
+            gradientOffsetBottom: b = 0.4,
+            onPositionChange: D,
+            onNudgeChange: L,
+            scrollBehavior: w = "sticky",
+            modal: M = !1,
+            returnRef: P,
+            experimental_ignoreModalClicks: x = !0,
+            closeOnClickOutside: k = !1,
+        } = e,
+        [U, G] = r.useState(s),
+        [F, V] = r.useState(y),
+        B = r.useRef(y),
+        j = r.useRef(0),
+        { ref: H, width: Y, height: W } = (0, _.Ay)(),
+        K = (0, c.bG)([h.A], () => h.A.getLayers()),
+        $ = K[K.length - 1] ?? "base",
+        z = r.useRef(D);
+    r.useEffect(() => {
+        z.current = D;
+    }, [D]);
+    let q = r.useCallback((e) => {
+            null != e && e !== B.current && ((B.current = e), V(e), z.current?.(e));
+        }, []),
+        Z = r.useMemo(
+            () => null == n.current || (n.current.closest("[data-layer]")?.getAttribute("data-layer") ?? "base") === $,
+            [n, $],
+        );
+    r.useEffect(() => {
+        Z && s ? G(!0) : Z || G(!1);
+    }, [Z, s]),
+        r.useEffect(() => {
+            q(y);
+        }, [y, q]);
+    let X = (function (e) {
+            let { shouldShow: t, caretPosition: n, onExitComplete: i } = e,
+                { reducedMotion: s } = r.useContext(p.C),
+                { config: a, ...o } = ((e, t) => {
+                    let n = { opacity: 0, transform: "" },
+                        i = { opacity: 0, transform: "" };
+                    if (t)
+                        return {
+                            from: { opacity: 0 },
+                            enter: { opacity: 1 },
+                            leave: { opacity: 0 },
+                            config: { duration: 150 },
+                        };
+                    switch (e) {
+                        case "top":
+                            (n.transform = "translate3d(0, -10px, 0)"), (i.transform = "translate3d(0, -10px, 0)");
+                            break;
+                        case "bottom":
+                            (n.transform = "translate3d(0, 10px, 0)"), (i.transform = "translate3d(0, 10px, 0)");
+                            break;
+                        case "left":
+                            (n.transform = "translate3d(-10px, 0, 0)"), (i.transform = "translate3d(-10px, 0, 0)");
+                            break;
+                        case "right":
+                            (n.transform = "translate3d(10px, 0, 0)"), (i.transform = "translate3d(10px, 0, 0)");
+                    }
+                    return {
+                        from: n,
+                        enter: { opacity: 1, transform: "translate3d(0px, 0px, 0)" },
+                        leave: i,
+                        config: void 0,
+                    };
+                })(n, s.enabled);
+            return (0, E.p)(
+                t,
+                {
+                    ...o,
+                    config: a ?? ((e, n) => (t ? m : g)),
+                    onRest: () => {
+                        t || null == i || i();
+                    },
+                },
+                "animate-always",
+            );
+        })({
+            shouldShow: s,
+            caretPosition: (0, f.g)(F),
+            onExitComplete: () => {
+                G(!1);
+            },
+        }),
+        Q = r.useMemo(() => {
+            if ("edge" === N && null != C) {
+                let e = "top" === F || "bottom" === F,
+                    t = "left" === F || "right" === F;
+                if (e) {
+                    if ("left" === C || "center" === C || "right" === C) return C;
+                } else if (t && ("top" === C || "center" === C || "bottom" === C)) return C;
+            }
+            return "center";
+        }, [N, C, F]),
+        J = r.useMemo(() => {
+            if ("edge" !== N)
+                return (function () {
+                    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "center",
+                        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
+                        n = arguments.length > 2 ? arguments[2] : void 0,
+                        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 0;
+                    if ("center" === e || "custom" === e) return 0;
+                    let r = "left" === t || "right" === t,
+                        s = r ? i : (n ?? 240);
+                    if (0 === s) return 0;
+                    let a = s / 2 - (r ? 22 : 20);
+                    switch (e) {
+                        case "start":
+                            return a;
+                        case "end":
+                            return -a;
+                        default:
+                            return 0;
+                    }
+                })(v?.align ?? "center", F, Y, W);
+        }, [N, v, F, Y, W]),
+        ee = r.useMemo(() => ({ position: F, caretConfig: v ?? { align: "center" } }), [F, v]);
+    return (0, i.jsx)(d.$, {
+        targetElementRef: n,
+        shouldShow: U,
+        onRequestClose: A,
+        position: F,
+        align: Q,
+        spacing: 14,
+        offset: J,
+        layerContext: void 0,
+        positionKey: null != J ? `${F}-${J}` : void 0,
+        popoutKey: void 0,
+        fixed: !1,
+        autoInvert: !0,
+        nudgeAlignIntoViewport: "top" === F || "bottom" === F,
+        closeOnClickOutside: k,
+        ignoreModalClicks: x,
+        scrollBehavior: w,
+        renderPopout: (e) => {
+            let { setPopoutRef: n, position: r, nudge: s, ...c } = e;
+            return (
+                q(r),
+                s !== j.current && ((j.current = s), L?.(s)),
+                X((e, r) => {
+                    if (!r) return null;
+                    let d = (0, i.jsx)(l.lG, {
+                        ...c,
+                        setDialogRef: n,
+                        modal: M,
+                        className: a()(null != O ? I.popoverContentWithGradient : I.popover, {
+                            [I["popover--video"]]: R,
+                        }),
+                        returnRef: P,
+                        children: (0, i.jsx)(T.Provider, { value: ee, children: t }),
+                    });
+                    return (0, i.jsx)(o.animated.div, {
+                        ref: H,
+                        "data-mana-component": "popover",
+                        style: {
+                            ...e,
+                            "--custom-caret-edge-offset-horizontal": "20px",
+                            "--custom-caret-edge-offset-vertical": "22px",
+                            "--custom-caret-edge-offset-horizontal-nudge": `${s}px`,
+                            "--custom-popover-width": "240px",
+                        },
+                        children:
+                            null != O
+                                ? (0, i.jsx)(u.h, {
+                                      offsetBottom: b,
+                                      color: O,
+                                      className: I.popoverGradientWrapper,
+                                      children: d,
+                                  })
+                                : d,
+                    });
+                })
+            );
+        },
+        children: S,
+    });
+}

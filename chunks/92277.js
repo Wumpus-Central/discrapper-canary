@@ -1,1 +1,24 @@
-"use strict";n.d(t,{$:()=>l,g:()=>o}),n(393431),n(532706),n(42231),n(232424),n(949626),n(767709),n(65162);var i=n(735438),r=n.n(i),s=n(136722),a=n(460288);function o(e){return r().cloneDeepWith(e,e=>(0,s.H0)(e)?{__tag__:"bigflag",data:e.toJSON()}:(0,a.mg)(e)?{__tag__:"uint8array",data:Array.from(e)}:void 0)}function l(e){return r().cloneDeepWith(e,e=>null!=e&&"object"==typeof e&&"__tag__"in e&&"bigflag"===e.__tag__?s.iu(e.data):(0,a.I)(e)?new Uint8Array(e.data):void 0)}
+"use strict";
+n.d(t, { $: () => l, g: () => o }), n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
+var i = n(735438),
+    r = n.n(i),
+    s = n(136722),
+    a = n(460288);
+function o(e) {
+    return r().cloneDeepWith(e, (e) =>
+        (0, s.H0)(e)
+            ? { __tag__: "bigflag", data: e.toJSON() }
+            : (0, a.mg)(e)
+              ? { __tag__: "uint8array", data: Array.from(e) }
+              : void 0,
+    );
+}
+function l(e) {
+    return r().cloneDeepWith(e, (e) =>
+        null != e && "object" == typeof e && "__tag__" in e && "bigflag" === e.__tag__
+            ? s.iu(e.data)
+            : (0, a.I)(e)
+              ? new Uint8Array(e.data)
+              : void 0,
+    );
+}

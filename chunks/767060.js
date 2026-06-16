@@ -1,1 +1,13 @@
-e.r(s),e.d(s,{default:()=>o});var r=e(627968);e(64700);var a=e(873263),d=e(718446),u=e(33666),i=e(718697),n=e(355097);function o(){return"teen"===(0,u.A)()?(0,r.jsx)(a.rd,{to:(0,d.settingsPathToRoute)(n.od.FAMILY_CENTER)}):(0,r.jsx)(i.A,{})}
+e.r(s), e.d(s, { default: () => o });
+var r = e(627968);
+e(64700);
+var a = e(873263),
+    d = e(718446),
+    u = e(33666),
+    i = e(718697),
+    n = e(355097);
+function o() {
+    return "teen" === (0, u.A)()
+        ? (0, r.jsx)(a.rd, { to: (0, d.settingsPathToRoute)(n.od.FAMILY_CENTER) })
+        : (0, r.jsx)(i.A, {});
+}

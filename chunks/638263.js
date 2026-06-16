@@ -1,1 +1,1 @@
-e.exports={F:"fileInput__46231"}
+e.exports = { F: "fileInput__46231" };

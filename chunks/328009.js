@@ -1,1 +1,262 @@
-i.d(s,{RegisterWebAuthnCredentialModal:()=>U});var e,n=i(627968),a=i(64700),r=i(636537),l=i(935462),c=i(534514),d=i(430690),x=i(834730),h=i(821609),j=i(331322),o=i(292666),m=i(825484),E=i(915089),g=i(46054),S=i(780964),v=i(466034),u=i(766075),C=i(723702),p=i(38405),N=i(19575),I=i(84948),k=i(917136),A=i(293731),T=((e={}).MODAL_UPSELL="MODAL_UPSELL",e.INIT="INIT",e.EDIT="EDIT",e.REGISTER="REGISTER",e.NAME="NAME",e.SUCCESS="SUCCESS",e),b=i(652215),y=i(375708),R=i(790085);function U(t){let{transitionState:s,onClose:e,ticket:U,challenge:f,showAccountSettingsButton:M=!1,initialSlide:$=T.INIT}=t,w=(0,E.GV)(),[L,q]=a.useState(y.intl.string(y.t["I/sJtJ"])),[G,z]=a.useState(!1),[D,O]=a.useState($),[P,Q]=a.useState(""),[_,B]=a.useState(null),F=a.useCallback(async()=>{O(T.REGISTER);let t=C.isPlatformEmbedded&&N.Ay.supportsFeature(b.BYE.WEBAUTHN)?N.Ay.webAuthnRegister(f):(0,A.v)(f);try{let s=await t;Q(s),O(T.NAME)}catch(t){p.A.captureException(t),B(y.intl.string(y.t.xSCvBf)),O(T.INIT)}},[f]);return(0,n.jsxs)(l.EO,{transitionState:s,"aria-labelledby":w,parentComponent:"UserSettingsWebAuthn",children:[(0,n.jsxs)(l.rQ,{className:R.wx,separator:!1,children:[(0,n.jsxs)(c.D,{id:w,variant:"heading-lg/semibold",children:[D===T.INIT&&y.intl.string(y.t.vrOCCk),D===T.REGISTER&&y.intl.string(y.t.wePEBF),D===T.NAME&&y.intl.string(y.t["cY/IOu"]),D===T.SUCCESS&&g.A.parse(y.intl.string(y.t.FXC7ZC))]}),(0,n.jsx)(l.s_,{onClick:e,className:R.iT})]}),(0,n.jsxs)(d.t,{activeSlide:D,width:440,children:[(0,n.jsxs)(d.q,{id:T.INIT,children:[(0,n.jsxs)(l.$m,{className:R.Qs,children:[(0,n.jsx)("div",{className:R.Kk,children:(0,n.jsx)("img",{alt:"",src:i(142668)})}),(0,n.jsx)("div",{children:null!=_&&(0,n.jsx)(x.E,{variant:"text-md/normal",color:"text-feedback-critical",children:_})}),(0,n.jsx)("div",{children:(0,n.jsx)(x.E,{variant:"text-md/normal",children:y.intl.string(y.t.Lh5vTW)})})]}),(0,n.jsx)(l.jl,{children:(0,n.jsx)(h.$,{variant:"primary",text:y.intl.string(y.t.oibaQa),onClick:F})})]}),(0,n.jsxs)(d.q,{id:T.REGISTER,children:[(0,n.jsxs)(l.$m,{className:R.Qs,children:[(0,n.jsx)("div",{className:R.Kk,children:(0,n.jsx)("img",{alt:"",src:i(142668)})}),(0,n.jsx)("div",{children:(0,n.jsx)(x.E,{variant:"text-md/normal",children:y.intl.string(y.t.aVMiX3)})})]}),(0,n.jsx)(l.jl,{children:(0,n.jsx)(h.$,{variant:"primary",text:"",loading:!0})})]}),(0,n.jsx)(d.q,{id:T.NAME,children:(0,n.jsxs)("form",{onSubmit:t=>{t.preventDefault(),k.AF(L,U,P).then(async()=>{M?O(T.SUCCESS):(await (0,v.sy)(!1),e())}).catch(t=>{t instanceof r.oh&&t.status>=400&&t.status<500&&I.A.signalUnknownCredential(P),B(y.intl.string(y.t.fEptJP)),O(T.INIT)})},children:[(0,n.jsxs)(l.$m,{className:R.Qs,children:[(0,n.jsx)("div",{className:R.Kk,children:(0,n.jsx)("img",{alt:"",src:i(179644)})}),(0,n.jsxs)(j.B,{gap:8,children:[(0,n.jsx)(x.E,{variant:"text-md/normal",children:y.intl.string(y.t["Jzd+z/"])}),(0,n.jsx)(o.k,{value:L,"aria-label":y.intl.string(y.t["Jzd+z/"]),onChange:t=>{q(t),z(0===t.length)},autoFocus:!0,minLength:1})]})]}),(0,n.jsx)(l.jl,{className:R.qr,children:(0,n.jsxs)(m.e,{direction:"horizontal-reverse",children:[(0,n.jsx)(h.$,{variant:"primary",text:y.intl.string(y.t["5dyZ1S"]),type:"submit",disabled:G}),(0,n.jsx)(h.$,{variant:"secondary",text:y.intl.string(y.t["13/7kX"]),onClick:()=>{O(T.INIT)}})]})})]})}),(0,n.jsxs)(d.q,{id:T.SUCCESS,children:[(0,n.jsxs)(l.$m,{className:R.Qs,children:[(0,n.jsx)("div",{className:R.Kk,children:(0,n.jsx)("img",{alt:"",src:i(179644)})}),(0,n.jsx)("div",{children:(0,n.jsx)(x.E,{variant:"text-md/normal",children:y.intl.string(y.t.e1qv6i)})})]}),(0,n.jsx)(l.jl,{className:R.qr,children:(0,n.jsxs)(m.e,{direction:"horizontal-reverse",children:[(0,n.jsx)(h.$,{variant:"primary",text:y.intl.string(y.t.MubYG8),onClick:()=>{e(),(0,u.openUserSettings)(S.X.ACCOUNT_PANEL)}}),(0,n.jsx)(h.$,{variant:"secondary",text:y.intl.string(y.t.i4jeWR),onClick:e})]})})]})]})]})}
+i.d(s, { RegisterWebAuthnCredentialModal: () => U });
+var e,
+    n = i(627968),
+    a = i(64700),
+    r = i(636537),
+    l = i(935462),
+    c = i(534514),
+    d = i(430690),
+    x = i(834730),
+    h = i(821609),
+    j = i(331322),
+    o = i(292666),
+    m = i(825484),
+    E = i(915089),
+    g = i(46054),
+    S = i(780964),
+    v = i(466034),
+    u = i(766075),
+    C = i(723702),
+    p = i(38405),
+    N = i(19575),
+    I = i(84948),
+    k = i(917136),
+    A = i(293731),
+    T =
+        (((e = {}).MODAL_UPSELL = "MODAL_UPSELL"),
+        (e.INIT = "INIT"),
+        (e.EDIT = "EDIT"),
+        (e.REGISTER = "REGISTER"),
+        (e.NAME = "NAME"),
+        (e.SUCCESS = "SUCCESS"),
+        e),
+    b = i(652215),
+    y = i(375708),
+    R = i(790085);
+function U(t) {
+    let {
+            transitionState: s,
+            onClose: e,
+            ticket: U,
+            challenge: f,
+            showAccountSettingsButton: M = !1,
+            initialSlide: $ = T.INIT,
+        } = t,
+        w = (0, E.GV)(),
+        [L, q] = a.useState(y.intl.string(y.t["I/sJtJ"])),
+        [G, z] = a.useState(!1),
+        [D, O] = a.useState($),
+        [P, Q] = a.useState(""),
+        [_, B] = a.useState(null),
+        F = a.useCallback(async () => {
+            O(T.REGISTER);
+            let t =
+                C.isPlatformEmbedded && N.Ay.supportsFeature(b.BYE.WEBAUTHN) ? N.Ay.webAuthnRegister(f) : (0, A.v)(f);
+            try {
+                let s = await t;
+                Q(s), O(T.NAME);
+            } catch (t) {
+                p.A.captureException(t), B(y.intl.string(y.t.xSCvBf)), O(T.INIT);
+            }
+        }, [f]);
+    return (0, n.jsxs)(l.EO, {
+        transitionState: s,
+        "aria-labelledby": w,
+        parentComponent: "UserSettingsWebAuthn",
+        children: [
+            (0, n.jsxs)(l.rQ, {
+                className: R.wx,
+                separator: !1,
+                children: [
+                    (0, n.jsxs)(c.D, {
+                        id: w,
+                        variant: "heading-lg/semibold",
+                        children: [
+                            D === T.INIT && y.intl.string(y.t.vrOCCk),
+                            D === T.REGISTER && y.intl.string(y.t.wePEBF),
+                            D === T.NAME && y.intl.string(y.t["cY/IOu"]),
+                            D === T.SUCCESS && g.A.parse(y.intl.string(y.t.FXC7ZC)),
+                        ],
+                    }),
+                    (0, n.jsx)(l.s_, { onClick: e, className: R.iT }),
+                ],
+            }),
+            (0, n.jsxs)(d.t, {
+                activeSlide: D,
+                width: 440,
+                children: [
+                    (0, n.jsxs)(d.q, {
+                        id: T.INIT,
+                        children: [
+                            (0, n.jsxs)(l.$m, {
+                                className: R.Qs,
+                                children: [
+                                    (0, n.jsx)("div", {
+                                        className: R.Kk,
+                                        children: (0, n.jsx)("img", { alt: "", src: i(142668) }),
+                                    }),
+                                    (0, n.jsx)("div", {
+                                        children:
+                                            null != _ &&
+                                            (0, n.jsx)(x.E, {
+                                                variant: "text-md/normal",
+                                                color: "text-feedback-critical",
+                                                children: _,
+                                            }),
+                                    }),
+                                    (0, n.jsx)("div", {
+                                        children: (0, n.jsx)(x.E, {
+                                            variant: "text-md/normal",
+                                            children: y.intl.string(y.t.Lh5vTW),
+                                        }),
+                                    }),
+                                ],
+                            }),
+                            (0, n.jsx)(l.jl, {
+                                children: (0, n.jsx)(h.$, {
+                                    variant: "primary",
+                                    text: y.intl.string(y.t.oibaQa),
+                                    onClick: F,
+                                }),
+                            }),
+                        ],
+                    }),
+                    (0, n.jsxs)(d.q, {
+                        id: T.REGISTER,
+                        children: [
+                            (0, n.jsxs)(l.$m, {
+                                className: R.Qs,
+                                children: [
+                                    (0, n.jsx)("div", {
+                                        className: R.Kk,
+                                        children: (0, n.jsx)("img", { alt: "", src: i(142668) }),
+                                    }),
+                                    (0, n.jsx)("div", {
+                                        children: (0, n.jsx)(x.E, {
+                                            variant: "text-md/normal",
+                                            children: y.intl.string(y.t.aVMiX3),
+                                        }),
+                                    }),
+                                ],
+                            }),
+                            (0, n.jsx)(l.jl, {
+                                children: (0, n.jsx)(h.$, { variant: "primary", text: "", loading: !0 }),
+                            }),
+                        ],
+                    }),
+                    (0, n.jsx)(d.q, {
+                        id: T.NAME,
+                        children: (0, n.jsxs)("form", {
+                            onSubmit: (t) => {
+                                t.preventDefault(),
+                                    k
+                                        .AF(L, U, P)
+                                        .then(async () => {
+                                            M ? O(T.SUCCESS) : (await (0, v.sy)(!1), e());
+                                        })
+                                        .catch((t) => {
+                                            t instanceof r.oh &&
+                                                t.status >= 400 &&
+                                                t.status < 500 &&
+                                                I.A.signalUnknownCredential(P),
+                                                B(y.intl.string(y.t.fEptJP)),
+                                                O(T.INIT);
+                                        });
+                            },
+                            children: [
+                                (0, n.jsxs)(l.$m, {
+                                    className: R.Qs,
+                                    children: [
+                                        (0, n.jsx)("div", {
+                                            className: R.Kk,
+                                            children: (0, n.jsx)("img", { alt: "", src: i(179644) }),
+                                        }),
+                                        (0, n.jsxs)(j.B, {
+                                            gap: 8,
+                                            children: [
+                                                (0, n.jsx)(x.E, {
+                                                    variant: "text-md/normal",
+                                                    children: y.intl.string(y.t["Jzd+z/"]),
+                                                }),
+                                                (0, n.jsx)(o.k, {
+                                                    value: L,
+                                                    "aria-label": y.intl.string(y.t["Jzd+z/"]),
+                                                    onChange: (t) => {
+                                                        q(t), z(0 === t.length);
+                                                    },
+                                                    autoFocus: !0,
+                                                    minLength: 1,
+                                                }),
+                                            ],
+                                        }),
+                                    ],
+                                }),
+                                (0, n.jsx)(l.jl, {
+                                    className: R.qr,
+                                    children: (0, n.jsxs)(m.e, {
+                                        direction: "horizontal-reverse",
+                                        children: [
+                                            (0, n.jsx)(h.$, {
+                                                variant: "primary",
+                                                text: y.intl.string(y.t["5dyZ1S"]),
+                                                type: "submit",
+                                                disabled: G,
+                                            }),
+                                            (0, n.jsx)(h.$, {
+                                                variant: "secondary",
+                                                text: y.intl.string(y.t["13/7kX"]),
+                                                onClick: () => {
+                                                    O(T.INIT);
+                                                },
+                                            }),
+                                        ],
+                                    }),
+                                }),
+                            ],
+                        }),
+                    }),
+                    (0, n.jsxs)(d.q, {
+                        id: T.SUCCESS,
+                        children: [
+                            (0, n.jsxs)(l.$m, {
+                                className: R.Qs,
+                                children: [
+                                    (0, n.jsx)("div", {
+                                        className: R.Kk,
+                                        children: (0, n.jsx)("img", { alt: "", src: i(179644) }),
+                                    }),
+                                    (0, n.jsx)("div", {
+                                        children: (0, n.jsx)(x.E, {
+                                            variant: "text-md/normal",
+                                            children: y.intl.string(y.t.e1qv6i),
+                                        }),
+                                    }),
+                                ],
+                            }),
+                            (0, n.jsx)(l.jl, {
+                                className: R.qr,
+                                children: (0, n.jsxs)(m.e, {
+                                    direction: "horizontal-reverse",
+                                    children: [
+                                        (0, n.jsx)(h.$, {
+                                            variant: "primary",
+                                            text: y.intl.string(y.t.MubYG8),
+                                            onClick: () => {
+                                                e(), (0, u.openUserSettings)(S.X.ACCOUNT_PANEL);
+                                            },
+                                        }),
+                                        (0, n.jsx)(h.$, {
+                                            variant: "secondary",
+                                            text: y.intl.string(y.t.i4jeWR),
+                                            onClick: e,
+                                        }),
+                                    ],
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
+    });
+}

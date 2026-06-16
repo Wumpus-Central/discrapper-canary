@@ -1,1 +1,137 @@
-"use strict";n.d(t,{A:()=>R});var i=n(627968),r=n(64700),s=n(342393),a=n(503698),o=n.n(a),l=n(451988),u=n(597770),c=n(40474),d=n(683071),_=n(289873),h=n(685094),f=n(689175),p=n(430993),E=n(102741),m=n(913122),g=n(136857),A=n(783327),I=n(166532);n(69494),n(482132);var T=n(739508),S=n(927813),y=n(652215),C=n(375708),N=n(691189);let v=new Set([I.pn.SKU_SELECT,I.pn.AWAITING_AUTHENTICATION,I.pn.AWAITING_PURCHASE_TOKEN_AUTH,I.pn.CONFIRM]);function R(e){let{steps:t,currentStep:n,body:a,overrideKey:R,paymentError:O,header:b,footer:D,isGift:L=!1,giftMessage:w=C.intl.string(C.t["DrgnS+"]),hideBreadcrumbs:M=!1,isLoading:P=!1,purchaseError:x,purchaseErrorBlockRef:k,planError:U,onScroll:G,scrollerClassName:F,hasCurrencies:V=!1,shouldUseManaModal:B=!1}=e,j=null;null!=O&&null==(0,I.ou)(O)?j=O:null!=x?j=x:null!=U&&(j=U);let H=null!=j?j.message:"";null!=j&&j instanceof m.Ey&&(j.code===g.tG.CARD_DECLINED&&V&&(H+=` ${C.intl.string(C.t.iWvwQS)}`),j.code===g.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED&&(H=C.intl.string(C.t.ypuSd8)),j.code===y.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE&&(H=C.intl.string(C.t.mXMmWE)));let Y=(0,A.S)();P=P||null==Y;let W=r.useRef(new l.Ep);r.useEffect(()=>{let e=W.current;return null!=Y||e.isStarted()?null!=Y&&e.stop():e.start(10*S.A.Millis.SECOND,()=>{let e=Error("Stripe took too long to load");(0,T.pM)(e)}),()=>{e.stop()}},[Y]);let K=t.includes(I.pn.PAYMENT_TYPE)?I.pn.PAYMENT_TYPE:I.pn.ADD_PAYMENT_STEPS,$=(0,i.jsxs)(i.Fragment,{children:[L&&n!==I.pn.CONFIRM?(0,i.jsx)(E.A,{className:N.zJ,iconSize:E.A.Sizes.SMALL,icon:u.o,color:null==w?E.A.Colors.PRIMARY:E.A.Colors.SECONDARY,children:w}):null,M?null:(0,i.jsx)("div",{className:o()(N.QN,{[N.k3]:B}),children:(0,i.jsx)(c.A,{activeId:I.ZC.has(n)?K:n,breadcrumbs:t.filter(e=>!I.ZC.has(e)&&!v.has(e)).map(e=>({id:e,label:(0,I.Ir)(e)}))})}),(0,i.jsxs)("div",{className:N.uK,children:[null==j?null:(0,i.jsx)("div",{className:B?N.Nk:N.YU,ref:k,children:(0,i.jsx)(d.w,{type:"critical",children:H})}),P?(0,i.jsx)(_.y,{className:N.CI}):(0,i.jsx)(h.Y,{className:N.C9,overrideKey:R,staticClassName:N.a2,animatedNodeClassName:N.L2,fillParent:!0,step:n,steps:t,sideMargin:20,children:B?a:(0,i.jsx)(f.Ch,{onScroll:G,className:o()(N.XG,F),children:a})})]})]});return(0,i.jsxs)(s.Elements,{options:y.XL8,stripe:Y,children:[b,B?(0,i.jsx)(p.c,{children:$}):(0,i.jsx)("div",{className:o()("paymentModalContent",N.Qs),children:$}),D]})}
+"use strict";
+n.d(t, { A: () => R });
+var i = n(627968),
+    r = n(64700),
+    s = n(342393),
+    a = n(503698),
+    o = n.n(a),
+    l = n(451988),
+    u = n(597770),
+    c = n(40474),
+    d = n(683071),
+    _ = n(289873),
+    h = n(685094),
+    f = n(689175),
+    p = n(430993),
+    E = n(102741),
+    m = n(913122),
+    g = n(136857),
+    A = n(783327),
+    I = n(166532);
+n(69494), n(482132);
+var T = n(739508),
+    S = n(927813),
+    y = n(652215),
+    C = n(375708),
+    N = n(691189);
+let v = new Set([I.pn.SKU_SELECT, I.pn.AWAITING_AUTHENTICATION, I.pn.AWAITING_PURCHASE_TOKEN_AUTH, I.pn.CONFIRM]);
+function R(e) {
+    let {
+            steps: t,
+            currentStep: n,
+            body: a,
+            overrideKey: R,
+            paymentError: O,
+            header: b,
+            footer: D,
+            isGift: L = !1,
+            giftMessage: w = C.intl.string(C.t["DrgnS+"]),
+            hideBreadcrumbs: M = !1,
+            isLoading: P = !1,
+            purchaseError: x,
+            purchaseErrorBlockRef: k,
+            planError: U,
+            onScroll: G,
+            scrollerClassName: F,
+            hasCurrencies: V = !1,
+            shouldUseManaModal: B = !1,
+        } = e,
+        j = null;
+    null != O && null == (0, I.ou)(O) ? (j = O) : null != x ? (j = x) : null != U && (j = U);
+    let H = null != j ? j.message : "";
+    null != j &&
+        j instanceof m.Ey &&
+        (j.code === g.tG.CARD_DECLINED && V && (H += ` ${C.intl.string(C.t.iWvwQS)}`),
+        j.code === g.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (H = C.intl.string(C.t.ypuSd8)),
+        j.code === y.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (H = C.intl.string(C.t.mXMmWE)));
+    let Y = (0, A.S)();
+    P = P || null == Y;
+    let W = r.useRef(new l.Ep());
+    r.useEffect(() => {
+        let e = W.current;
+        return (
+            null != Y || e.isStarted()
+                ? null != Y && e.stop()
+                : e.start(10 * S.A.Millis.SECOND, () => {
+                      let e = Error("Stripe took too long to load");
+                      (0, T.pM)(e);
+                  }),
+            () => {
+                e.stop();
+            }
+        );
+    }, [Y]);
+    let K = t.includes(I.pn.PAYMENT_TYPE) ? I.pn.PAYMENT_TYPE : I.pn.ADD_PAYMENT_STEPS,
+        $ = (0, i.jsxs)(i.Fragment, {
+            children: [
+                L && n !== I.pn.CONFIRM
+                    ? (0, i.jsx)(E.A, {
+                          className: N.zJ,
+                          iconSize: E.A.Sizes.SMALL,
+                          icon: u.o,
+                          color: null == w ? E.A.Colors.PRIMARY : E.A.Colors.SECONDARY,
+                          children: w,
+                      })
+                    : null,
+                M
+                    ? null
+                    : (0, i.jsx)("div", {
+                          className: o()(N.QN, { [N.k3]: B }),
+                          children: (0, i.jsx)(c.A, {
+                              activeId: I.ZC.has(n) ? K : n,
+                              breadcrumbs: t
+                                  .filter((e) => !I.ZC.has(e) && !v.has(e))
+                                  .map((e) => ({ id: e, label: (0, I.Ir)(e) })),
+                          }),
+                      }),
+                (0, i.jsxs)("div", {
+                    className: N.uK,
+                    children: [
+                        null == j
+                            ? null
+                            : (0, i.jsx)("div", {
+                                  className: B ? N.Nk : N.YU,
+                                  ref: k,
+                                  children: (0, i.jsx)(d.w, { type: "critical", children: H }),
+                              }),
+                        P
+                            ? (0, i.jsx)(_.y, { className: N.CI })
+                            : (0, i.jsx)(h.Y, {
+                                  className: N.C9,
+                                  overrideKey: R,
+                                  staticClassName: N.a2,
+                                  animatedNodeClassName: N.L2,
+                                  fillParent: !0,
+                                  step: n,
+                                  steps: t,
+                                  sideMargin: 20,
+                                  children: B
+                                      ? a
+                                      : (0, i.jsx)(f.Ch, { onScroll: G, className: o()(N.XG, F), children: a }),
+                              }),
+                    ],
+                }),
+            ],
+        });
+    return (0, i.jsxs)(s.Elements, {
+        options: y.XL8,
+        stripe: Y,
+        children: [
+            b,
+            B
+                ? (0, i.jsx)(p.c, { children: $ })
+                : (0, i.jsx)("div", { className: o()("paymentModalContent", N.Qs), children: $ }),
+            D,
+        ],
+    });
+}

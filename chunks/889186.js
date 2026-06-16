@@ -1,1 +1,182 @@
-l.d(t,{default:()=>H}),l(321073);var n=l(627968),r=l(64700),i=l(189213),s=l(17928),a=l(892547),u=l(821609),d=l(834730),o=l(778712),c=l(966327),h=l(115718),g=l(47167),f=l(359378),p=l(598104),C=l(255266),x=l(223863),A=l(151054),b=l(734057),m=l(71393),M=l(576705),_=l(287809),D=l(181079),E=l(422258),S=l(668267),j=l(313281),y=l(5180),k=l(652215),I=l(335993),w=l(375708),R=l(761357);function H(e){let{transitionState:t,onClose:l,parentId:d,source:o}=e;r.useEffect(()=>{null!=o&&(0,S.tC)(o)},[o]);let[c,g]=r.useState(""),[f,p]=r.useState(()=>new Set),{notifyFavoriteAdded:C}=(0,j.CJ)(),{hasHigherPrivileges:x}=(0,j.TW)("AddFavoriteChannelModal"),m=(0,s.bG)([D.A],()=>D.A.getFavoriteChannels()),_=r.useMemo(()=>new Set(Object.keys(m)),[m]),H=r.useCallback((e,t)=>{if(e.type===h.rD.USER){let l=b.A.getDMChannelFromUserId(e.record.id);return(!!t||null!=l)&&(null==l||!_.has(l.id))}return e.type===h.rD.GROUP_DM?!_.has(e.record.id):M.A.can(k.xBc.VIEW_CHANNEL,e.record)&&(0,y.IF)(e.record,x)&&!_.has(e.record.id)},[_,x]),{results:L,updateSearchText:P}=(0,A.R)({includeMissingDMs:!0,channelFilter:H}),U=r.useMemo(()=>[...f].filter(e=>!_.has(e)).length,[_,f]),F=U>=20,O=r.useMemo(()=>U>=2?w.intl.formatToPlainString(I.default.LbCa8x,{count:U}):w.intl.string(I.default.xKXcSu),[U]),T=r.useCallback(e=>{g(e),P(e)},[P]),z=r.useCallback(e=>{_.has(e)||p(t=>{let l=0;for(let e of t)_.has(e)||(l+=1);if(l>=20&&!t.has(e))return t;let n=new Set(t);return n.has(e)?n.delete(e):n.add(e),n})},[_]),Q=r.useCallback(()=>{let e=[...f].filter(e=>!_.has(e));e.length>0&&(C(),(0,E.S_)(e,d??null,"modal")),l()},[_,C,l,d,f]),W=r.useMemo(()=>{let e=[];for(let t of L)t.type!==h.rD.HEADER&&null!=v(t)&&e.push(t);return e},[L]),q=r.useMemo(()=>0===W.length?{sections:[1],sectionHeight:0,renderRow:()=>(0,n.jsx)(N,{}),rowHeight:72}:{sections:[W.length],sectionHeight:0,rowHeight:48,renderRow:e=>{let{section:t,row:l}=e;if(t>0)return null;let r=W[l];if(null==r)return null;let i=v(r);return null==i?null:(0,n.jsx)(G,{channel:i,selected:f.has(i.id),disabled:F&&!f.has(i.id),onToggleChannel:z},i.id)}},[W,z,f,F]);return(0,n.jsx)(i.Modal,{title:w.intl.string(I.default.Rp35U1),actions:[],transitionState:t,onClose:l,input:(0,n.jsx)(a.I,{query:c,onChange:T,onClear:()=>T(""),placeholder:w.intl.string(w.t["5h0QOP"]),"aria-label":w.intl.string(w.t["5h0QOP"]),autoFocus:!0}),actionBarInput:(0,n.jsx)("div",{className:R.c,children:(0,n.jsx)(u.$,{variant:"primary",size:"md",fullWidth:!0,text:O,onClick:Q,disabled:0===U})}),listProps:q})}function N(){return(0,n.jsx)("div",{className:R.p,children:(0,n.jsx)(d.E,{variant:"text-md/normal",color:"text-muted",children:w.intl.string(I.default.kQL9be)})})}function v(e){if(e.type===h.rD.USER){let t=(0,x._g)({type:"user",id:e.record.id});return null!=t?b.A.getChannel(t)??null:null}return e.type===h.rD.TEXT_CHANNEL||e.type===h.rD.VOICE_CHANNEL||e.type===h.rD.GROUP_DM?e.record:null}function G(e){let{channel:t,selected:l,disabled:r,onToggleChannel:i}=e,a=(0,s.bG)([m.A],()=>m.A.getGuild(t.guild_id),[t.guild_id]),u=(0,g.Ay)(t),d=(0,s.bG)([_.default],()=>t.isDM()?_.default.getUser(t.recipients?.[0]):null,[t]);return(0,n.jsx)(f.A,{listItemId:t.id,icon:t.isDM()&&null!=d?(0,n.jsx)(c.A,{"aria-hidden":!0,size:o._3.SIZE_32,user:d}):t.isGroupDM()?(0,n.jsx)(p.A,{"aria-hidden":!0,size:o._3.SIZE_32,channel:t}):(0,n.jsx)(C.A,{size:C.q.SMALL_32,guild:a,channel:t}),label:u,selected:l,disabled:r,onPress:()=>i(t.id)})}
+l.d(t, { default: () => H }), l(321073);
+var n = l(627968),
+    r = l(64700),
+    i = l(189213),
+    s = l(17928),
+    a = l(892547),
+    u = l(821609),
+    d = l(834730),
+    o = l(778712),
+    c = l(966327),
+    h = l(115718),
+    g = l(47167),
+    f = l(359378),
+    p = l(598104),
+    C = l(255266),
+    x = l(223863),
+    A = l(151054),
+    b = l(734057),
+    m = l(71393),
+    M = l(576705),
+    _ = l(287809),
+    D = l(181079),
+    E = l(422258),
+    S = l(668267),
+    j = l(313281),
+    y = l(5180),
+    k = l(652215),
+    I = l(335993),
+    w = l(375708),
+    R = l(761357);
+function H(e) {
+    let { transitionState: t, onClose: l, parentId: d, source: o } = e;
+    r.useEffect(() => {
+        null != o && (0, S.tC)(o);
+    }, [o]);
+    let [c, g] = r.useState(""),
+        [f, p] = r.useState(() => new Set()),
+        { notifyFavoriteAdded: C } = (0, j.CJ)(),
+        { hasHigherPrivileges: x } = (0, j.TW)("AddFavoriteChannelModal"),
+        m = (0, s.bG)([D.A], () => D.A.getFavoriteChannels()),
+        _ = r.useMemo(() => new Set(Object.keys(m)), [m]),
+        H = r.useCallback(
+            (e, t) => {
+                if (e.type === h.rD.USER) {
+                    let l = b.A.getDMChannelFromUserId(e.record.id);
+                    return (!!t || null != l) && (null == l || !_.has(l.id));
+                }
+                return e.type === h.rD.GROUP_DM
+                    ? !_.has(e.record.id)
+                    : M.A.can(k.xBc.VIEW_CHANNEL, e.record) && (0, y.IF)(e.record, x) && !_.has(e.record.id);
+            },
+            [_, x],
+        ),
+        { results: L, updateSearchText: P } = (0, A.R)({ includeMissingDMs: !0, channelFilter: H }),
+        U = r.useMemo(() => [...f].filter((e) => !_.has(e)).length, [_, f]),
+        F = U >= 20,
+        O = r.useMemo(
+            () =>
+                U >= 2 ? w.intl.formatToPlainString(I.default.LbCa8x, { count: U }) : w.intl.string(I.default.xKXcSu),
+            [U],
+        ),
+        T = r.useCallback(
+            (e) => {
+                g(e), P(e);
+            },
+            [P],
+        ),
+        z = r.useCallback(
+            (e) => {
+                _.has(e) ||
+                    p((t) => {
+                        let l = 0;
+                        for (let e of t) _.has(e) || (l += 1);
+                        if (l >= 20 && !t.has(e)) return t;
+                        let n = new Set(t);
+                        return n.has(e) ? n.delete(e) : n.add(e), n;
+                    });
+            },
+            [_],
+        ),
+        Q = r.useCallback(() => {
+            let e = [...f].filter((e) => !_.has(e));
+            e.length > 0 && (C(), (0, E.S_)(e, d ?? null, "modal")), l();
+        }, [_, C, l, d, f]),
+        W = r.useMemo(() => {
+            let e = [];
+            for (let t of L) t.type !== h.rD.HEADER && null != v(t) && e.push(t);
+            return e;
+        }, [L]),
+        q = r.useMemo(
+            () =>
+                0 === W.length
+                    ? { sections: [1], sectionHeight: 0, renderRow: () => (0, n.jsx)(N, {}), rowHeight: 72 }
+                    : {
+                          sections: [W.length],
+                          sectionHeight: 0,
+                          rowHeight: 48,
+                          renderRow: (e) => {
+                              let { section: t, row: l } = e;
+                              if (t > 0) return null;
+                              let r = W[l];
+                              if (null == r) return null;
+                              let i = v(r);
+                              return null == i
+                                  ? null
+                                  : (0, n.jsx)(
+                                        G,
+                                        {
+                                            channel: i,
+                                            selected: f.has(i.id),
+                                            disabled: F && !f.has(i.id),
+                                            onToggleChannel: z,
+                                        },
+                                        i.id,
+                                    );
+                          },
+                      },
+            [W, z, f, F],
+        );
+    return (0, n.jsx)(i.Modal, {
+        title: w.intl.string(I.default.Rp35U1),
+        actions: [],
+        transitionState: t,
+        onClose: l,
+        input: (0, n.jsx)(a.I, {
+            query: c,
+            onChange: T,
+            onClear: () => T(""),
+            placeholder: w.intl.string(w.t["5h0QOP"]),
+            "aria-label": w.intl.string(w.t["5h0QOP"]),
+            autoFocus: !0,
+        }),
+        actionBarInput: (0, n.jsx)("div", {
+            className: R.c,
+            children: (0, n.jsx)(u.$, {
+                variant: "primary",
+                size: "md",
+                fullWidth: !0,
+                text: O,
+                onClick: Q,
+                disabled: 0 === U,
+            }),
+        }),
+        listProps: q,
+    });
+}
+function N() {
+    return (0, n.jsx)("div", {
+        className: R.p,
+        children: (0, n.jsx)(d.E, {
+            variant: "text-md/normal",
+            color: "text-muted",
+            children: w.intl.string(I.default.kQL9be),
+        }),
+    });
+}
+function v(e) {
+    if (e.type === h.rD.USER) {
+        let t = (0, x._g)({ type: "user", id: e.record.id });
+        return null != t ? (b.A.getChannel(t) ?? null) : null;
+    }
+    return e.type === h.rD.TEXT_CHANNEL || e.type === h.rD.VOICE_CHANNEL || e.type === h.rD.GROUP_DM ? e.record : null;
+}
+function G(e) {
+    let { channel: t, selected: l, disabled: r, onToggleChannel: i } = e,
+        a = (0, s.bG)([m.A], () => m.A.getGuild(t.guild_id), [t.guild_id]),
+        u = (0, g.Ay)(t),
+        d = (0, s.bG)([_.default], () => (t.isDM() ? _.default.getUser(t.recipients?.[0]) : null), [t]);
+    return (0, n.jsx)(f.A, {
+        listItemId: t.id,
+        icon:
+            t.isDM() && null != d
+                ? (0, n.jsx)(c.A, { "aria-hidden": !0, size: o._3.SIZE_32, user: d })
+                : t.isGroupDM()
+                  ? (0, n.jsx)(p.A, { "aria-hidden": !0, size: o._3.SIZE_32, channel: t })
+                  : (0, n.jsx)(C.A, { size: C.q.SMALL_32, guild: a, channel: t }),
+        label: u,
+        selected: l,
+        disabled: r,
+        onPress: () => i(t.id),
+    });
+}

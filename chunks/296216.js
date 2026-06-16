@@ -1,1 +1,47 @@
-t.d(i,{F:()=>m,J:()=>A});var n=t(913247),l=t(22174),s=t(66834),a=t(71393),r=t(576705),d=t(977997),u=t(607567),c=t(652215);let o="DRAGGABLE_USER";function m(e){return(0,n.T)(o,{canDrop(e){let{channel:i}=e,t=i.getGuildId(),n=a.A.getGuild(t)?.maxVideoChannelUsers??-1,l=u.Ay.countVoiceStatesForChannel(i.id),s=null!=t&&d.A.hasVideo(i.id)&&n>0&&l>=n+1;return r.A.can(c.xBc.MOVE_MEMBERS,i)&&r.A.can(c.xBc.CONNECT,i)&&!s},drop(e,i){let{channel:t}=e,n=d.A.getVoiceStateForUser(i.getItem().user.id);n?.channelId!==t.id&&s.A.setChannel(t.getGuildId(),i.getItem().user.id,t.id)}},(e,i)=>({connectUserDropTarget:e.dropTarget(),isUserOver:i.isOver()&&i.canDrop()}))(e)}function A(e){return(0,l.I)(o,{canDrag(e){let{user:i,canDrag:t}=e;return t??!1},beginDrag(e){let{user:i}=e;return{user:i}}},e=>({connectUserDragSource:e.dragSource()}))(e)}
+t.d(i, { F: () => m, J: () => A });
+var n = t(913247),
+    l = t(22174),
+    s = t(66834),
+    a = t(71393),
+    r = t(576705),
+    d = t(977997),
+    u = t(607567),
+    c = t(652215);
+let o = "DRAGGABLE_USER";
+function m(e) {
+    return (0, n.T)(
+        o,
+        {
+            canDrop(e) {
+                let { channel: i } = e,
+                    t = i.getGuildId(),
+                    n = a.A.getGuild(t)?.maxVideoChannelUsers ?? -1,
+                    l = u.Ay.countVoiceStatesForChannel(i.id),
+                    s = null != t && d.A.hasVideo(i.id) && n > 0 && l >= n + 1;
+                return r.A.can(c.xBc.MOVE_MEMBERS, i) && r.A.can(c.xBc.CONNECT, i) && !s;
+            },
+            drop(e, i) {
+                let { channel: t } = e,
+                    n = d.A.getVoiceStateForUser(i.getItem().user.id);
+                n?.channelId !== t.id && s.A.setChannel(t.getGuildId(), i.getItem().user.id, t.id);
+            },
+        },
+        (e, i) => ({ connectUserDropTarget: e.dropTarget(), isUserOver: i.isOver() && i.canDrop() }),
+    )(e);
+}
+function A(e) {
+    return (0, l.I)(
+        o,
+        {
+            canDrag(e) {
+                let { user: i, canDrag: t } = e;
+                return t ?? !1;
+            },
+            beginDrag(e) {
+                let { user: i } = e;
+                return { user: i };
+            },
+        },
+        (e) => ({ connectUserDragSource: e.dragSource() }),
+    )(e);
+}

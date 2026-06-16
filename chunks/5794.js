@@ -1,1 +1,1 @@
-e.exports={D:"resizeHandle__4b144"}
+s.exports = { D: "resizeHandle__4b144" };

@@ -1,1 +1,1 @@
-p.exports={z:"error__77bc8"}
+p.exports = { z: "error__77bc8" };

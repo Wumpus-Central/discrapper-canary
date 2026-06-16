@@ -1,1 +1,75 @@
-"use strict";n.d(t,{Ay:()=>_,E0:()=>f,Vr:()=>p,c5:()=>c,eI:()=>h});var i=n(64700),r=n(485845),s=n(155718),a=n(734057),o=n(577700),l=n(264322),u=n(210978);let c="no primary app command for application",d=[s.kc.PRIMARY_ENTRY_POINT];async function _(e,t){let n,i=a.A.getChannel(e);if(null!=i&&null==(n=h({channel:i,type:"channel"},t))&&(await (0,l.Zn)({type:"application",applicationId:t}),n=h({channel:i,type:"channel"},t)),null!=n)return n;throw Error(c)}function h(e,t){return l.Ay.query(e,{commandTypes:[s.kc.PRIMARY_ENTRY_POINT]},{placeholderCount:1,scoreMethod:u.M.COMMAND_ONLY,applicationId:t,allowFetch:!1,allowApplicationState:!0}).commands[0]}function f(e,t){var n,r;let{commands:s,loading:a}=(n=e,r=t,(0,l.ZA)(n,{commandTypes:d},{placeholderCount:1,scoreMethod:u.M.COMMAND_ONLY,applicationId:r,allowFetch:!1,allowApplicationState:!0})),c=s[0],_=null!=c;return i.useEffect(()=>{_||a||(0,o.$)({type:"application",applicationId:t})},[t,_,a]),c}function p(e){let{context:t,applicationId:n,botUserId:i}=e,a=f(t,n);return null!=a&&null!=i&&function(e){if(null==e)return!1;let t=null!=e.integration_types&&e.integration_types.includes(r.b.USER_INSTALL),n=null!=e.contexts&&e.contexts.includes(s.OL.BOT_DM);return t&&n}(a)}
+"use strict";
+n.d(t, { Ay: () => _, E0: () => f, Vr: () => p, c5: () => c, eI: () => h });
+var i = n(64700),
+    r = n(485845),
+    s = n(155718),
+    a = n(734057),
+    o = n(577700),
+    l = n(264322),
+    u = n(210978);
+let c = "no primary app command for application",
+    d = [s.kc.PRIMARY_ENTRY_POINT];
+async function _(e, t) {
+    let n,
+        i = a.A.getChannel(e);
+    if (
+        (null != i &&
+            null == (n = h({ channel: i, type: "channel" }, t)) &&
+            (await (0, l.Zn)({ type: "application", applicationId: t }), (n = h({ channel: i, type: "channel" }, t))),
+        null != n)
+    )
+        return n;
+    throw Error(c);
+}
+function h(e, t) {
+    return l.Ay.query(
+        e,
+        { commandTypes: [s.kc.PRIMARY_ENTRY_POINT] },
+        {
+            placeholderCount: 1,
+            scoreMethod: u.M.COMMAND_ONLY,
+            applicationId: t,
+            allowFetch: !1,
+            allowApplicationState: !0,
+        },
+    ).commands[0];
+}
+function f(e, t) {
+    var n, r;
+    let { commands: s, loading: a } =
+            ((n = e),
+            (r = t),
+            (0, l.ZA)(
+                n,
+                { commandTypes: d },
+                {
+                    placeholderCount: 1,
+                    scoreMethod: u.M.COMMAND_ONLY,
+                    applicationId: r,
+                    allowFetch: !1,
+                    allowApplicationState: !0,
+                },
+            )),
+        c = s[0],
+        _ = null != c;
+    return (
+        i.useEffect(() => {
+            _ || a || (0, o.$)({ type: "application", applicationId: t });
+        }, [t, _, a]),
+        c
+    );
+}
+function p(e) {
+    let { context: t, applicationId: n, botUserId: i } = e,
+        a = f(t, n);
+    return (
+        null != a &&
+        null != i &&
+        (function (e) {
+            if (null == e) return !1;
+            let t = null != e.integration_types && e.integration_types.includes(r.b.USER_INSTALL),
+                n = null != e.contexts && e.contexts.includes(s.OL.BOT_DM);
+            return t && n;
+        })(a)
+    );
+}

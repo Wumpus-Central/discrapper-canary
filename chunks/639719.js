@@ -1,1 +1,81 @@
-i.d(s,{default:()=>f});var e=i(627968),n=i(64700),r=i(562708),l=i(509434),a=i(702841),c=i(772707),o=i(331322),u=i(834730),x=i(404778),m=i(803306),d=i(139286),E=i(870570),p=i(652215),j=i(375708),h=i(893192),S=i(546);function A(t){let{text:s}=t;return(0,e.jsxs)("li",{className:h.nf,children:[s," ",(0,e.jsx)(l.I,{size:"sm",color:"currentColor"})]})}function f(t){let{transitionState:s}=t,i=(0,a.bG)([E.A],()=>E.A.getAction()),[l,f]=n.useState(!1);async function g(){return f(!0),i===p.a3B.AGREEMENTS&&f(await (0,m.Q9)()),null}return(0,d.A)({type:r.ImpressionTypes.VIEW,name:r.ImpressionNames.USER_AGREEMENTS,properties:{required_action:i}},{},[]),(0,e.jsx)(c.k,{graphic:{src:S.A,type:"image"},gradientColor:"blue",dismissable:!1,title:j.intl.string(j.t["7glvXu"]),subtitle:j.intl.string(j.t["+USXQE"]),actions:[{variant:"primary",text:j.intl.string(j.t["+TBKL1"]),onClick:g,loading:l}],transitionState:s,onClose:p.js$,children:(0,e.jsxs)(o.B,{gap:20,children:[i===p.a3B.AGREEMENTS?(0,e.jsx)(u.E,{variant:"text-md/normal",className:h.h_,children:j.intl.format(j.t.CN0Hvb,{url:p.X7G.TERMS_SUMMARY})}):null,(0,e.jsx)("div",{className:h.kL,children:(0,e.jsxs)("ul",{className:h.yJ,children:[(0,e.jsx)(A,{text:j.intl.format(j.t.iw0hFi,{url:p.X7G.TERMS})}),(0,e.jsx)(x.c,{}),(0,e.jsx)(A,{text:j.intl.format(j.t["36klnD"],{url:p.X7G.PAID_TERMS})}),(0,e.jsx)(x.c,{}),(0,e.jsx)(A,{text:j.intl.format(j.t.TquFBF,{url:p.X7G.PRIVACY})}),(0,e.jsx)(x.c,{}),(0,e.jsx)(A,{text:j.intl.format(j.t.ia96Tb,{url:p.X7G.GUIDELINES})})]})})]})})}
+"use strict";
+n.d(t, { default: () => I });
+var i = n(627968),
+    r = n(64700),
+    s = n(562708),
+    a = n(509434),
+    o = n(702841),
+    l = n(772707),
+    u = n(331322),
+    c = n(834730),
+    d = n(404778),
+    _ = n(803306),
+    h = n(139286),
+    f = n(870570),
+    p = n(652215),
+    E = n(375708),
+    m = n(893192),
+    g = n(546);
+function A(e) {
+    let { text: t } = e;
+    return (0, i.jsxs)("li", {
+        className: m.nf,
+        children: [t, " ", (0, i.jsx)(a.I, { size: "sm", color: "currentColor" })],
+    });
+}
+function I(e) {
+    let { transitionState: t } = e,
+        n = (0, o.bG)([f.A], () => f.A.getAction()),
+        [a, I] = r.useState(!1);
+    async function T() {
+        return I(!0), n === p.a3B.AGREEMENTS && I(await (0, _.Q9)()), null;
+    }
+    return (
+        (0, h.A)(
+            {
+                type: s.ImpressionTypes.VIEW,
+                name: s.ImpressionNames.USER_AGREEMENTS,
+                properties: { required_action: n },
+            },
+            {},
+            [],
+        ),
+        (0, i.jsx)(l.k, {
+            graphic: { src: g.A, type: "image" },
+            gradientColor: "blue",
+            dismissable: !1,
+            title: E.intl.string(E.t["7glvXu"]),
+            subtitle: E.intl.string(E.t["+USXQE"]),
+            actions: [{ variant: "primary", text: E.intl.string(E.t["+TBKL1"]), onClick: T, loading: a }],
+            transitionState: t,
+            onClose: p.js$,
+            children: (0, i.jsxs)(u.B, {
+                gap: 20,
+                children: [
+                    n === p.a3B.AGREEMENTS
+                        ? (0, i.jsx)(c.E, {
+                              variant: "text-md/normal",
+                              className: m.h_,
+                              children: E.intl.format(E.t.CN0Hvb, { url: p.X7G.TERMS_SUMMARY }),
+                          })
+                        : null,
+                    (0, i.jsx)("div", {
+                        className: m.kL,
+                        children: (0, i.jsxs)("ul", {
+                            className: m.yJ,
+                            children: [
+                                (0, i.jsx)(A, { text: E.intl.format(E.t.iw0hFi, { url: p.X7G.TERMS }) }),
+                                (0, i.jsx)(d.c, {}),
+                                (0, i.jsx)(A, { text: E.intl.format(E.t["36klnD"], { url: p.X7G.PAID_TERMS }) }),
+                                (0, i.jsx)(d.c, {}),
+                                (0, i.jsx)(A, { text: E.intl.format(E.t.TquFBF, { url: p.X7G.PRIVACY }) }),
+                                (0, i.jsx)(d.c, {}),
+                                (0, i.jsx)(A, { text: E.intl.format(E.t.ia96Tb, { url: p.X7G.GUIDELINES }) }),
+                            ],
+                        }),
+                    }),
+                ],
+            }),
+        })
+    );
+}

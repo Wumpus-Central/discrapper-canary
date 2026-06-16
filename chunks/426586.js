@@ -1,1 +1,6 @@
-var i=n(795139).default;n.g.IntlPolyfill=i,n(897975),n.g.Intl||(n.g.Intl=i,i.__applyLocaleSensitivePrototypes()),e.exports=t=i,t.default=i
+var i = n(795139).default;
+(n.g.IntlPolyfill = i),
+    n(897975),
+    n.g.Intl || ((n.g.Intl = i), i.__applyLocaleSensitivePrototypes()),
+    (e.exports = t = i),
+    (t.default = i);

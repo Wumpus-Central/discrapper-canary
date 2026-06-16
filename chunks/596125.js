@@ -1,1 +1,1 @@
-p.exports={$:"attachmentIcon__1db97"}
+p.exports = { $: "attachmentIcon__1db97" };

@@ -1,1 +1,30 @@
-r.d(t,{A:()=>c});var n=r(627968),i=r(821609),l=r(206835),a=r(450481),s=r(758836),o=r(375708);let c=e=>{let{product:t,onSuccess:r,onTrackClick:c}=e,{handleUseNow:u,isApplying:d,canUseNow:m}=(0,a.p)({product:t,onSuccess:r}),R=(0,l.A)();return m?(0,n.jsx)(i.$,{variant:"primary",onClick:()=>{c?.(s.sH.USE_NOW),u()},loading:d,text:o.intl.string(o.t.MAS7uK),fullWidth:!0}):(0,n.jsx)(i.$,{variant:"primary",onClick:()=>{c?.(s.sH.EDIT_PROFILE),R(),r?.()},text:o.intl.string(o.t["2p2aYz"]),fullWidth:!0})}
+r.d(t, { A: () => c });
+var n = r(627968),
+    i = r(821609),
+    l = r(206835),
+    a = r(450481),
+    s = r(758836),
+    o = r(375708);
+let c = (e) => {
+    let { product: t, onSuccess: r, onTrackClick: c } = e,
+        { handleUseNow: u, isApplying: d, canUseNow: m } = (0, a.p)({ product: t, onSuccess: r }),
+        R = (0, l.A)();
+    return m
+        ? (0, n.jsx)(i.$, {
+              variant: "primary",
+              onClick: () => {
+                  c?.(s.sH.USE_NOW), u();
+              },
+              loading: d,
+              text: o.intl.string(o.t.MAS7uK),
+              fullWidth: !0,
+          })
+        : (0, n.jsx)(i.$, {
+              variant: "primary",
+              onClick: () => {
+                  c?.(s.sH.EDIT_PROFILE), R(), r?.();
+              },
+              text: o.intl.string(o.t["2p2aYz"]),
+              fullWidth: !0,
+          });
+};

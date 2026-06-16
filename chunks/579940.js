@@ -1,1 +1,17 @@
-"use strict";n.d(t,{Y0:()=>o,gf:()=>l,nQ:()=>u});var i=n(64700),r=n(353640),s=n(121894);let a=Object.freeze({id:null,activeDescendant:null}),o=(0,r.v)(()=>a);function l(e,t,n){(0,i.useEffect)(()=>{(0,s.r)(()=>{t?o.setState({id:e,activeDescendant:n}):o.setState({id:null,activeDescendant:null})})},[e,t,n])}function u(){(0,s.r)(()=>o.setState(()=>a))}
+"use strict";
+n.d(t, { Y0: () => o, gf: () => l, nQ: () => u });
+var i = n(64700),
+    r = n(353640),
+    s = n(121894);
+let a = Object.freeze({ id: null, activeDescendant: null }),
+    o = (0, r.v)(() => a);
+function l(e, t, n) {
+    (0, i.useEffect)(() => {
+        (0, s.r)(() => {
+            t ? o.setState({ id: e, activeDescendant: n }) : o.setState({ id: null, activeDescendant: null });
+        });
+    }, [e, t, n]);
+}
+function u() {
+    (0, s.r)(() => o.setState(() => a));
+}

@@ -1,1 +1,17 @@
-"use strict";n.d(t,{A:()=>o});var i=n(439372),r=n(763827),s=n(313961);class a extends i.A{stores=new Map().set(s.A,this.handleFocusParticipant);handleFocusParticipant(){let e=r.A.getChannelId();if(null!=e){let t=s.A.getSelectedParticipantId(e),n=s.A.getVideoParticipants(e);r.A.getRTCConnection()?.setSelectedParticipant(n.find(e=>e.id===t&&!e.localVideoDisabled)?.id)}}}let o=new a
+"use strict";
+n.d(t, { A: () => o });
+var i = n(439372),
+    r = n(763827),
+    s = n(313961);
+class a extends i.A {
+    stores = new Map().set(s.A, this.handleFocusParticipant);
+    handleFocusParticipant() {
+        let e = r.A.getChannelId();
+        if (null != e) {
+            let t = s.A.getSelectedParticipantId(e),
+                n = s.A.getVideoParticipants(e);
+            r.A.getRTCConnection()?.setSelectedParticipant(n.find((e) => e.id === t && !e.localVideoDisabled)?.id);
+        }
+    }
+}
+let o = new a();

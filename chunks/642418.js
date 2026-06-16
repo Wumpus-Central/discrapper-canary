@@ -1,1 +1,1 @@
-e.exports={_:"buttonWrapper_bf1984"}
+p.exports = { _: "buttonWrapper_bf1984" };

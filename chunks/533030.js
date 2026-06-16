@@ -1,1 +1,7 @@
-var i=n(574366),r=n(115455),s=n(926226),a=i?i.isConcatSpreadable:void 0;e.exports=function(e){return s(e)||r(e)||!!(a&&e&&e[a])}
+var i = n(574366),
+    r = n(115455),
+    s = n(926226),
+    a = i ? i.isConcatSpreadable : void 0;
+e.exports = function (e) {
+    return s(e) || r(e) || !!(a && e && e[a]);
+};

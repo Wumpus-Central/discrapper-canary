@@ -1,1 +1,15 @@
-e.exports={j8:"tileBaseContainer__71eb2",iA:"tileContainer__71eb2 tileBaseContainer__71eb2",FS:"textContainer__71eb2",H:"avatarContainer__71eb2",my:"avatar__71eb2",zj:"faded__71eb2",Qq:"text__71eb2",wP:"singleIcon__71eb2",fP:"doubleIcon__71eb2",EH:"boost__71eb2",Q6:"blockedIcon__71eb2",Kk:"icon__71eb2",MD:"invited__71eb2"}
+_.exports = {
+    j8: "tileBaseContainer__71eb2",
+    iA: "tileContainer__71eb2 tileBaseContainer__71eb2",
+    FS: "textContainer__71eb2",
+    H: "avatarContainer__71eb2",
+    my: "avatar__71eb2",
+    zj: "faded__71eb2",
+    Qq: "text__71eb2",
+    wP: "singleIcon__71eb2",
+    fP: "doubleIcon__71eb2",
+    EH: "boost__71eb2",
+    Q6: "blockedIcon__71eb2",
+    Kk: "icon__71eb2",
+    MD: "invited__71eb2",
+};

@@ -1,1 +1,28 @@
-n.d(i,{default:()=>_});var c=n(627968);n(64700);var e=n(976860),s=n(174459),a=n(831318),o=n(652215),r=n(375708),l=n(936037);function _(t){let{onClose:i,...n}=t;return(0,c.jsx)(a.A,{title:r.intl.string(r.t.w4DRbZ),subtitle:r.intl.string(r.t.F6u3E3),graphic:{src:l,type:"image"},secondaryCTA:r.intl.string(r.t.PcTCB7),onSecondaryClick:function(){s.default.track(o.HAw.PREMIUM_PROMOTION_OPENED,{location_section:o.JJy.PREMIUM_FOR_LATER_UPSELL_MODAL,location_object:o.ZSU.NAVIGATION_LINK}),i(),(0,e.pX)(o.BVt.APPLICATION_STORE)},onClose:i,...n})}
+n.d(i, { default: () => _ });
+var c = n(627968);
+n(64700);
+var e = n(976860),
+    s = n(174459),
+    a = n(831318),
+    o = n(652215),
+    r = n(375708),
+    l = n(936037);
+function _(t) {
+    let { onClose: i, ...n } = t;
+    return (0, c.jsx)(a.A, {
+        title: r.intl.string(r.t.w4DRbZ),
+        subtitle: r.intl.string(r.t.F6u3E3),
+        graphic: { src: l, type: "image" },
+        secondaryCTA: r.intl.string(r.t.PcTCB7),
+        onSecondaryClick: function () {
+            s.default.track(o.HAw.PREMIUM_PROMOTION_OPENED, {
+                location_section: o.JJy.PREMIUM_FOR_LATER_UPSELL_MODAL,
+                location_object: o.ZSU.NAVIGATION_LINK,
+            }),
+                i(),
+                (0, e.pX)(o.BVt.APPLICATION_STORE);
+        },
+        onClose: i,
+        ...n,
+    });
+}

@@ -1,1 +1,191 @@
-l.d(t,{default:()=>j}),l(321073);var n=l(627968),i=l(64700),s=l(189213),a=l(331322),r=l(534514),u=l(773812),o=l(260598),c=l(145331),g=l(670455),d=l(375708);let b="other";function p(e){return{name:e.label,value:e.value}}function v(e){let t=e.freeformText.trim().slice(0,g.u0);return t.length>0?t:null}function h(e){return e.selectedOption?.value}function f(e){var t;if(null==h(e))return!1;if(t=e.selectedOption,t?.value===b){let t=v(e);return null!=t&&t.length>0}return!0}function _(){return[{value:"missing_expected_result",label:d.intl.string(d.t["4DEniX"])},{value:"no_results",label:d.intl.string(d.t.jlh29e)},{value:"required_multiple_searches",label:d.intl.string(d.t.TpGBIB)},{value:"buried_expected_result",label:d.intl.string(d.t.Zh6bNN)},{value:"irrelevant_results",label:d.intl.string(d.t.WCiDBF)},{value:"inadequate_filters",label:d.intl.string(d.t.mf36b7)},{value:"hard_to_scan_results",label:d.intl.string(d.t.ECI0Of)},{value:b,label:d.intl.string(d.t.oxbtmN)}]}function m(){return[{value:"looking_for_known_answer",label:d.intl.string(d.t["Str6/o"])},{value:"looking_for_unknown_answer",label:d.intl.string(d.t.DePZNY)},{value:"message_from_specific_author",label:d.intl.string(d.t["sGKG/Y"])},{value:"images_and_files_results",label:d.intl.string(d.t.DYLXHx)},{value:"link_results",label:d.intl.string(d.t.a1ZtE8)},{value:"specific_topic",label:d.intl.string(d.t.EIHXbc)},{value:"navigation_results",label:d.intl.string(d.t["6wKpiV"])},{value:b,label:d.intl.string(d.t.RBmOLj)}]}var x=l(930932);function k(e){let{getOptions:t}=e,l=i.useMemo(()=>{let e=t();return(0,x.ed)(e,b)},[t]),[n,s]=i.useState(null),[a,r]=i.useState(""),[u,o]=i.useState(!1),c=i.useCallback(e=>{o(!0),s(e)},[]),g=i.useCallback(e=>{r(e)},[]);return i.useMemo(()=>({options:l,selectedOption:n,freeformText:a,isFreeformEnabled:u,selectOption:c,onFreeformTextChange:g}),[l,n,a,u,c,g])}function C(e){let{title:t,options:l,selectedOption:s,freeformText:c,isFreeformEnabled:b,selectOption:v,onFreeformTextChange:h}=e,f=i.useMemo(()=>l.map(p),[l]),_=i.useCallback(e=>{let t=l.find(t=>t.value===e);null!=t&&v(t)},[v,l]);return(0,n.jsxs)(a.B,{gap:24,children:[(0,n.jsxs)(a.B,{gap:16,children:[(0,n.jsx)(r.D,{variant:"heading-lg/semibold",color:"text-strong",children:t}),(0,n.jsx)(u.z,{options:f,value:s?.value,onChange:_})]}),(0,n.jsxs)(a.B,{gap:16,children:[(0,n.jsx)(r.D,{variant:"heading-lg/semibold",color:"text-strong",children:d.intl.string(d.t.oV10fv)}),(0,n.jsx)(o.f,{value:c,maxLength:g.u0,onChange:h,disabled:!b})]})]})}let j=function(e){let{searchContext:t,rating:l,transitionState:a,onClose:r}=e,u=k({getOptions:_}),o=k({getOptions:m}),b=l===g.P0.BAD,{questionItems:p,questionTitles:x}=i.useMemo(()=>{let e=[],t=[];return b&&(e.push(u),t.push(d.intl.string(d.t.UyBQF7))),e.push(o),t.push(d.intl.string(d.t.LhMLCk)),{questionItems:e,questionTitles:t}},[b,o,u]);i.useEffect(()=>{(0,c.wU)({rating:l,searchContext:t})},[l,t]);let[j,M]=i.useState(0),B=0===j,w=j===p.length-1,D=i.useMemo(()=>{let e=p[j],t=x[j];return(0,n.jsx)(C,{title:t,...e})},[p,x,j]),O=i.useMemo(()=>p.every(f),[p]),S=i.useMemo(()=>f(p[j]),[p,j]),y=i.useCallback(()=>{O&&((0,c.uZ)({rating:l,searchContext:t,unsatisfiedQuestionOption:b?h(u):null,unsatisfiedQuestionText:b?v(u):null,describeSearchQuestionOption:h(o),describeSearchQuestionText:v(o)}),r())},[O,l,t,b,u,o,r]),E=i.useCallback(()=>{B?r():M(j-1)},[B,j,r]),L=i.useCallback(()=>{M(j+1)},[j]),T=i.useMemo(()=>{let e=[];return B?e.push({variant:"secondary",text:d.intl.string(d.t["ETE/oC"]),onClick:r}):e.push({variant:"secondary",text:d.intl.string(d.t["13/7kX"]),onClick:E}),w?e.push({variant:"primary",text:d.intl.string(d.t["4Zpxtl"]),onClick:y,disabled:!O}):e.push({variant:"primary",text:d.intl.string(d.t.PDTjLN),onClick:L,disabled:!S}),e},[B,w,O,S,r,E,y,L]);return(0,n.jsx)(s.Modal,{title:d.intl.string(d.t.LRGdVy),actions:T,onClose:r,transitionState:a,children:D})}
+l.d(t, { default: () => j }), l(321073);
+var n = l(627968),
+    i = l(64700),
+    s = l(189213),
+    a = l(331322),
+    r = l(534514),
+    u = l(773812),
+    o = l(260598),
+    c = l(145331),
+    g = l(670455),
+    d = l(375708);
+let b = "other";
+function p(e) {
+    return { name: e.label, value: e.value };
+}
+function v(e) {
+    let t = e.freeformText.trim().slice(0, g.u0);
+    return t.length > 0 ? t : null;
+}
+function h(e) {
+    return e.selectedOption?.value;
+}
+function f(e) {
+    var t;
+    if (null == h(e)) return !1;
+    if (((t = e.selectedOption), t?.value === b)) {
+        let t = v(e);
+        return null != t && t.length > 0;
+    }
+    return !0;
+}
+function _() {
+    return [
+        { value: "missing_expected_result", label: d.intl.string(d.t["4DEniX"]) },
+        { value: "no_results", label: d.intl.string(d.t.jlh29e) },
+        { value: "required_multiple_searches", label: d.intl.string(d.t.TpGBIB) },
+        { value: "buried_expected_result", label: d.intl.string(d.t.Zh6bNN) },
+        { value: "irrelevant_results", label: d.intl.string(d.t.WCiDBF) },
+        { value: "inadequate_filters", label: d.intl.string(d.t.mf36b7) },
+        { value: "hard_to_scan_results", label: d.intl.string(d.t.ECI0Of) },
+        { value: b, label: d.intl.string(d.t.oxbtmN) },
+    ];
+}
+function m() {
+    return [
+        { value: "looking_for_known_answer", label: d.intl.string(d.t["Str6/o"]) },
+        { value: "looking_for_unknown_answer", label: d.intl.string(d.t.DePZNY) },
+        { value: "message_from_specific_author", label: d.intl.string(d.t["sGKG/Y"]) },
+        { value: "images_and_files_results", label: d.intl.string(d.t.DYLXHx) },
+        { value: "link_results", label: d.intl.string(d.t.a1ZtE8) },
+        { value: "specific_topic", label: d.intl.string(d.t.EIHXbc) },
+        { value: "navigation_results", label: d.intl.string(d.t["6wKpiV"]) },
+        { value: b, label: d.intl.string(d.t.RBmOLj) },
+    ];
+}
+var x = l(930932);
+function k(e) {
+    let { getOptions: t } = e,
+        l = i.useMemo(() => {
+            let e = t();
+            return (0, x.ed)(e, b);
+        }, [t]),
+        [n, s] = i.useState(null),
+        [a, r] = i.useState(""),
+        [u, o] = i.useState(!1),
+        c = i.useCallback((e) => {
+            o(!0), s(e);
+        }, []),
+        g = i.useCallback((e) => {
+            r(e);
+        }, []);
+    return i.useMemo(
+        () => ({
+            options: l,
+            selectedOption: n,
+            freeformText: a,
+            isFreeformEnabled: u,
+            selectOption: c,
+            onFreeformTextChange: g,
+        }),
+        [l, n, a, u, c, g],
+    );
+}
+function C(e) {
+    let {
+            title: t,
+            options: l,
+            selectedOption: s,
+            freeformText: c,
+            isFreeformEnabled: b,
+            selectOption: v,
+            onFreeformTextChange: h,
+        } = e,
+        f = i.useMemo(() => l.map(p), [l]),
+        _ = i.useCallback(
+            (e) => {
+                let t = l.find((t) => t.value === e);
+                null != t && v(t);
+            },
+            [v, l],
+        );
+    return (0, n.jsxs)(a.B, {
+        gap: 24,
+        children: [
+            (0, n.jsxs)(a.B, {
+                gap: 16,
+                children: [
+                    (0, n.jsx)(r.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
+                    (0, n.jsx)(u.z, { options: f, value: s?.value, onChange: _ }),
+                ],
+            }),
+            (0, n.jsxs)(a.B, {
+                gap: 16,
+                children: [
+                    (0, n.jsx)(r.D, {
+                        variant: "heading-lg/semibold",
+                        color: "text-strong",
+                        children: d.intl.string(d.t.oV10fv),
+                    }),
+                    (0, n.jsx)(o.f, { value: c, maxLength: g.u0, onChange: h, disabled: !b }),
+                ],
+            }),
+        ],
+    });
+}
+let j = function (e) {
+    let { searchContext: t, rating: l, transitionState: a, onClose: r } = e,
+        u = k({ getOptions: _ }),
+        o = k({ getOptions: m }),
+        b = l === g.P0.BAD,
+        { questionItems: p, questionTitles: x } = i.useMemo(() => {
+            let e = [],
+                t = [];
+            return (
+                b && (e.push(u), t.push(d.intl.string(d.t.UyBQF7))),
+                e.push(o),
+                t.push(d.intl.string(d.t.LhMLCk)),
+                { questionItems: e, questionTitles: t }
+            );
+        }, [b, o, u]);
+    i.useEffect(() => {
+        (0, c.wU)({ rating: l, searchContext: t });
+    }, [l, t]);
+    let [j, M] = i.useState(0),
+        B = 0 === j,
+        w = j === p.length - 1,
+        D = i.useMemo(() => {
+            let e = p[j],
+                t = x[j];
+            return (0, n.jsx)(C, { title: t, ...e });
+        }, [p, x, j]),
+        O = i.useMemo(() => p.every(f), [p]),
+        S = i.useMemo(() => f(p[j]), [p, j]),
+        y = i.useCallback(() => {
+            O &&
+                ((0, c.uZ)({
+                    rating: l,
+                    searchContext: t,
+                    unsatisfiedQuestionOption: b ? h(u) : null,
+                    unsatisfiedQuestionText: b ? v(u) : null,
+                    describeSearchQuestionOption: h(o),
+                    describeSearchQuestionText: v(o),
+                }),
+                r());
+        }, [O, l, t, b, u, o, r]),
+        E = i.useCallback(() => {
+            B ? r() : M(j - 1);
+        }, [B, j, r]),
+        L = i.useCallback(() => {
+            M(j + 1);
+        }, [j]),
+        T = i.useMemo(() => {
+            let e = [];
+            return (
+                B
+                    ? e.push({ variant: "secondary", text: d.intl.string(d.t["ETE/oC"]), onClick: r })
+                    : e.push({ variant: "secondary", text: d.intl.string(d.t["13/7kX"]), onClick: E }),
+                w
+                    ? e.push({ variant: "primary", text: d.intl.string(d.t["4Zpxtl"]), onClick: y, disabled: !O })
+                    : e.push({ variant: "primary", text: d.intl.string(d.t.PDTjLN), onClick: L, disabled: !S }),
+                e
+            );
+        }, [B, w, O, S, r, E, y, L]);
+    return (0, n.jsx)(s.Modal, {
+        title: d.intl.string(d.t.LRGdVy),
+        actions: T,
+        onClose: r,
+        transitionState: a,
+        children: D,
+    });
+};

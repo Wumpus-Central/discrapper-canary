@@ -1,1 +1,40 @@
-n.d(t,{A:()=>u});var d=n(627968);n(64700);var l=n(17928),a=n(477782),e=n(816662),r=n(395504),s=n(543465),o=n(652215),p=n(375708);function u(i){let t=(0,r.jN)(i.guild_id),n=(0,l.bG)([s.Ay],()=>s.Ay.isChannelOptedIn(i.guild_id,i.id)),u=(0,l.bG)([s.Ay],()=>null!=i.parent_id&&s.Ay.isChannelOptedIn(i.guild_id,i.parent_id)),c=()=>{(0,e.AC)(i.guild_id,i.id,!n,{section:o.JJy.CONTEXT_MENU})};return!t||i.isThread()?null:i.isCategory()?(0,d.jsx)(a.Dr,{id:"opt-into-category",label:n?p.intl.string(p.t["3zySTA"]):p.intl.string(p.t["9mysCh"]),action:()=>c()}):u?(0,d.jsx)(a.Dr,{id:"opt-out-category",label:p.intl.string(p.t.jNphKT),action:()=>void(null!=i.parent_id&&(0,e.AC)(i.guild_id,i.parent_id,!1,{section:o.JJy.CONTEXT_MENU}))}):(0,d.jsx)(a.Dr,{id:"opt-into-channel",label:n?p.intl.string(p.t["3zySTA"]):p.intl.string(p.t["9mysCh"]),action:()=>c()})}
+n.d(t, { A: () => u });
+var d = n(627968);
+n(64700);
+var l = n(17928),
+    a = n(477782),
+    e = n(816662),
+    r = n(395504),
+    s = n(543465),
+    o = n(652215),
+    p = n(375708);
+function u(i) {
+    let t = (0, r.jN)(i.guild_id),
+        n = (0, l.bG)([s.Ay], () => s.Ay.isChannelOptedIn(i.guild_id, i.id)),
+        u = (0, l.bG)([s.Ay], () => null != i.parent_id && s.Ay.isChannelOptedIn(i.guild_id, i.parent_id)),
+        c = () => {
+            (0, e.AC)(i.guild_id, i.id, !n, { section: o.JJy.CONTEXT_MENU });
+        };
+    return !t || i.isThread()
+        ? null
+        : i.isCategory()
+          ? (0, d.jsx)(a.Dr, {
+                id: "opt-into-category",
+                label: n ? p.intl.string(p.t["3zySTA"]) : p.intl.string(p.t["9mysCh"]),
+                action: () => c(),
+            })
+          : u
+            ? (0, d.jsx)(a.Dr, {
+                  id: "opt-out-category",
+                  label: p.intl.string(p.t.jNphKT),
+                  action: () =>
+                      void (
+                          null != i.parent_id && (0, e.AC)(i.guild_id, i.parent_id, !1, { section: o.JJy.CONTEXT_MENU })
+                      ),
+              })
+            : (0, d.jsx)(a.Dr, {
+                  id: "opt-into-channel",
+                  label: n ? p.intl.string(p.t["3zySTA"]) : p.intl.string(p.t["9mysCh"]),
+                  action: () => c(),
+              });
+}

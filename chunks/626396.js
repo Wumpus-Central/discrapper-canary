@@ -1,1 +1,1 @@
-e.exports={l:"split__678d3"}
+_.exports = { l: "split__678d3" };

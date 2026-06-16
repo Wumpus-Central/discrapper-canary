@@ -1,1 +1,41 @@
-"use strict";n.d(t,{A:()=>E,h:()=>m});var i,r=n(627968);n(64700);var s=n(17928),a=n(462887),o=n(534514),l=n(834730),u=n(821609),c=n(736653),d=n(287809),_=n(375708),h=n(588651),f=n(626768),p=n(464896),E=((i={})[i.SHOP_PAGE=0]="SHOP_PAGE",i[i.GIFT_MODAL=1]="GIFT_MODAL",i);let m=e=>{let{onRetry:t,errorOrigin:n,errorMessage:i}=e,E=(0,c.Ay)(),m=(0,s.bG)([d.default],()=>{let e=d.default.getCurrentUser();return e?.isStaff()||e?.isStaffPersonal()}),g=1===n?h.tV:h.Df,A=1===n?_.intl.string(_.t["+2QBZX"]):_.intl.string(_.t.LuhKs2);return(0,r.jsxs)("div",{className:g,children:[(0,r.jsx)("img",{className:h.__invalid_loadIssueImg,src:(0,a.M)(E)?f:p,alt:""}),(0,r.jsx)(o.D,{className:h.st,variant:"heading-xl/semibold",children:_.intl.string(_.t.i5SQ74)}),(0,r.jsx)(l.E,{className:h.h_,variant:"text-md/normal",children:A}),m&&null!=i&&(0,r.jsx)(l.E,{variant:"text-md/normal",children:"staff-only debug: "+i}),(0,r.jsx)("div",{"data-button-hoisted-classname-wrapper":!0,className:h.yQ,children:(0,r.jsx)(u.$,{variant:"primary",text:_.intl.string(_.t["+hivLW"]),onClick:t})})]})}
+"use strict";
+n.d(t, { A: () => E, h: () => m });
+var i,
+    r = n(627968);
+n(64700);
+var s = n(17928),
+    a = n(462887),
+    o = n(534514),
+    l = n(834730),
+    u = n(821609),
+    c = n(736653),
+    d = n(287809),
+    _ = n(375708),
+    h = n(588651),
+    f = n(626768),
+    p = n(464896),
+    E = (((i = {})[(i.SHOP_PAGE = 0)] = "SHOP_PAGE"), (i[(i.GIFT_MODAL = 1)] = "GIFT_MODAL"), i);
+let m = (e) => {
+    let { onRetry: t, errorOrigin: n, errorMessage: i } = e,
+        E = (0, c.Ay)(),
+        m = (0, s.bG)([d.default], () => {
+            let e = d.default.getCurrentUser();
+            return e?.isStaff() || e?.isStaffPersonal();
+        }),
+        g = 1 === n ? h.tV : h.Df,
+        A = 1 === n ? _.intl.string(_.t["+2QBZX"]) : _.intl.string(_.t.LuhKs2);
+    return (0, r.jsxs)("div", {
+        className: g,
+        children: [
+            (0, r.jsx)("img", { className: h.__invalid_loadIssueImg, src: (0, a.M)(E) ? f : p, alt: "" }),
+            (0, r.jsx)(o.D, { className: h.st, variant: "heading-xl/semibold", children: _.intl.string(_.t.i5SQ74) }),
+            (0, r.jsx)(l.E, { className: h.h_, variant: "text-md/normal", children: A }),
+            m && null != i && (0, r.jsx)(l.E, { variant: "text-md/normal", children: "staff-only debug: " + i }),
+            (0, r.jsx)("div", {
+                "data-button-hoisted-classname-wrapper": !0,
+                className: h.yQ,
+                children: (0, r.jsx)(u.$, { variant: "primary", text: _.intl.string(_.t["+hivLW"]), onClick: t }),
+            }),
+        ],
+    });
+};

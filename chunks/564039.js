@@ -1,1 +1,1 @@
-e.exports={Q:"visuallyHidden__1d70e"}
+n.exports = { Q: "visuallyHidden__1d70e" };

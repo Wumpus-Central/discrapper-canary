@@ -1,1 +1,115 @@
-"use strict";n.d(t,{L:()=>E,A:()=>g});var i,r=n(627968),s=n(64700),a=n(503698),o=n.n(a),l=n(837381),u=n(187322),c=n(608299),d=n(101555),_=n(625494),h=n(652215),f=n(375708),p=n(248201),E=((i={})[i.SMALL=0]="SMALL",i[i.MEDIUM=1]="MEDIUM",i[i.XXSMALL=2]="XXSMALL",i[i.XSMALL=3]="XSMALL",i);function m(e){e.stopPropagation()}let g=s.forwardRef(function(e,t){let{id:n,channelId:i,className:a,children:E,actions:g,handleEditModal:A,keyboardModeEnabled:I,onKeyDown:T,draftType:S,size:y=1}=e,N=s.useRef(null),{onFocus:v,...C}=(0,l.rm)(n),{handleFocus:R,handleBlur:O}=function(e){let[t,n]=(0,s.useState)(!1);return{handleFocus:(0,s.useCallback)(t=>{(t.target===t.currentTarget||t.currentTarget.contains(document.activeElement))&&n(!0),null!=e&&e(t)},[e]),handleBlur:(0,s.useCallback)(e=>{e.target!==e.currentTarget&&e.currentTarget.contains(document.activeElement)||n(!1)},[void 0]),isFocused:t}}(v),b=0===y,D=null!=g;return(0,r.jsx)(u.vN,{children:(0,r.jsx)("li",{...C,onFocus:R,onBlur:O,onClick:e=>{if(0===e.detail&&null!=N.current){let e=N.current.querySelector('[role="button"], button');e?.click()}},onKeyDown:e=>{if(I){switch(e.which){case h.Ks6.D:e.preventDefault(),c.A.remove(i,n,S);return;case h.Ks6.E:null!=A&&(e.preventDefault(),A(e));return;case h.Ks6.BACKSPACE:e.ctrlKey?(e.preventDefault(),c.A.clearAll(i,S)):(e.preventDefault(),c.A.remove(i,n,S));return;case h.Ks6.ARROW_UP:if(e.shiftKey||e.altKey||e.ctrlKey||e.metaKey)return;e.preventDefault(),_._.dispatchToLastSubscribed(h.jej.FOCUS_MESSAGES,{atEnd:!0})}T?.(e)}},className:o()(p.Se,a),ref:t,children:(0,r.jsxs)("div",{className:p.PO,ref:N,children:[E,D?(0,r.jsx)("div",{className:p.TC,children:(0,r.jsx)("div",{className:o()(p.KY,{[p.BN]:b}),onContextMenu:m,"aria-label":f.intl.string(f.t["8Lu3Du"]),children:(0,r.jsx)(d.Ay,{className:o()({[p.BX]:b}),children:g})})}):null]})})})})
+"use strict";
+n.d(t, { L: () => E, A: () => g });
+var i,
+    r = n(627968),
+    s = n(64700),
+    a = n(503698),
+    o = n.n(a),
+    l = n(837381),
+    u = n(187322),
+    c = n(608299),
+    d = n(101555),
+    _ = n(625494),
+    h = n(652215),
+    f = n(375708),
+    p = n(248201),
+    E =
+        (((i = {})[(i.SMALL = 0)] = "SMALL"),
+        (i[(i.MEDIUM = 1)] = "MEDIUM"),
+        (i[(i.XXSMALL = 2)] = "XXSMALL"),
+        (i[(i.XSMALL = 3)] = "XSMALL"),
+        i);
+function m(e) {
+    e.stopPropagation();
+}
+let g = s.forwardRef(function (e, t) {
+    let {
+            id: n,
+            channelId: i,
+            className: a,
+            children: E,
+            actions: g,
+            handleEditModal: A,
+            keyboardModeEnabled: I,
+            onKeyDown: T,
+            draftType: S,
+            size: y = 1,
+        } = e,
+        C = s.useRef(null),
+        { onFocus: N, ...v } = (0, l.rm)(n),
+        { handleFocus: R, handleBlur: O } = (function (e) {
+            let [t, n] = (0, s.useState)(!1);
+            return {
+                handleFocus: (0, s.useCallback)(
+                    (t) => {
+                        (t.target === t.currentTarget || t.currentTarget.contains(document.activeElement)) && n(!0),
+                            null != e && e(t);
+                    },
+                    [e],
+                ),
+                handleBlur: (0, s.useCallback)(
+                    (e) => {
+                        (e.target !== e.currentTarget && e.currentTarget.contains(document.activeElement)) || n(!1);
+                    },
+                    [void 0],
+                ),
+                isFocused: t,
+            };
+        })(N),
+        b = 0 === y,
+        D = null != g;
+    return (0, r.jsx)(u.vN, {
+        children: (0, r.jsx)("li", {
+            ...v,
+            onFocus: R,
+            onBlur: O,
+            onClick: (e) => {
+                if (0 === e.detail && null != C.current) {
+                    let e = C.current.querySelector('[role="button"], button');
+                    e?.click();
+                }
+            },
+            onKeyDown: (e) => {
+                if (I) {
+                    switch (e.which) {
+                        case h.Ks6.D:
+                            e.preventDefault(), c.A.remove(i, n, S);
+                            return;
+                        case h.Ks6.E:
+                            null != A && (e.preventDefault(), A(e));
+                            return;
+                        case h.Ks6.BACKSPACE:
+                            e.ctrlKey
+                                ? (e.preventDefault(), c.A.clearAll(i, S))
+                                : (e.preventDefault(), c.A.remove(i, n, S));
+                            return;
+                        case h.Ks6.ARROW_UP:
+                            if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
+                            e.preventDefault(), _._.dispatchToLastSubscribed(h.jej.FOCUS_MESSAGES, { atEnd: !0 });
+                    }
+                    T?.(e);
+                }
+            },
+            className: o()(p.Se, a),
+            ref: t,
+            children: (0, r.jsxs)("div", {
+                className: p.PO,
+                ref: C,
+                children: [
+                    E,
+                    D
+                        ? (0, r.jsx)("div", {
+                              className: p.TC,
+                              children: (0, r.jsx)("div", {
+                                  className: o()(p.KY, { [p.BN]: b }),
+                                  onContextMenu: m,
+                                  "aria-label": f.intl.string(f.t["8Lu3Du"]),
+                                  children: (0, r.jsx)(d.Ay, { className: o()({ [p.BX]: b }), children: g }),
+                              }),
+                          })
+                        : null,
+                ],
+            }),
+        }),
+    });
+});

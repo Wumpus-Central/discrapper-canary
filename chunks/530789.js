@@ -1,1 +1,569 @@
-n.d(e,{pD:()=>tu,cH:()=>to}),n(321073);var i=n(731738),l=n(136722),a=n(17928),r=n(506774),o=n(765178),u=n(228366),s=n(308528),d=n(367513),c=n(66834),A=n(264686),f=n(730852),_=n(77729),E=n(883600),N=n(963027),g=n(47167),T=n(435470),I=n(707592),h=n(741231),C=n(380335),S=n(320095),p=n(807393),O=n(535586),m=n(938005),y=n(571524),U=n(181370),P=n.n(U),D=n(695515),R=n(976860),v=n(378570),L=n(790535),k=n(446600),w=n(747926),G=n(885386),V=n(718446),M=n(260509),b=n(734057),F=n(71393),W=n(232835),H=n(803224),Y=n(576705),B=n(222823),x=n(994500),K=n(309010),q=n(461213),J=n(351906),j=n(870570),X=n(287809),$=n(977997),z=n(174459),Q=n(562153),Z=n(723702),tt=n(427262),te=n(756876),tn=n(652215),ti=n(988794),tl=n(672396),ta=n(355097),tr=n(375708);let to="message1",tu=.4,ts=_.A?.features.supports("notifications")?20:1,td="discord_dismissed_notification_shown",tc=document.hasFocus(),tA=null,tf=new Set,t_=["FR","GF","PF","TF","RE","GP","MQ","YT","NC","PM","WF"],tE=new class{_channels={};track(t,e,n){let i=this._channels[t];for(null==i&&(i=[],this._channels[t]=i),i.push({notification:e,trackingProps:n});i.length>ts;){let t=i.shift();t?.notification?.close!=null&&(t.notification.close(),z.default.track(tn.HAw.NOTIFICATION_ACTION,{action:"REMOVE",...t.trackingProps}))}}clearChannel(t){let e=this._channels[t];null!=e&&(delete this._channels[t],e.forEach(t=>{let{notification:e,trackingProps:n}=t;e.close(),z.default.track(tn.HAw.NOTIFICATION_ACTION,{action:"ACK",...n})}))}};function tN(){return!!(H.A.getDesktopType()===tn.nRU.NEVER||q.A.getStatus()===tn.clD.DND||G.NO.getSetting()||D.A.isCurrentUserInRestrictedHours())}function tg(t){p.A.increment({name:i.K.NOTIFICATION_SOUND_PLAYBACK_ATTEMPT,tags:[`reason:${t?"played":"disabled_by_user"}`]})}function tT(t){return null!=$.A.getVoiceStateForChannel(t)}class tI extends a.Ay.Store{static displayName="NotificationStore";initialize(){this.waitFor(E.A,b.A,D.A,F.A,C.A,W.A,H.A,Y.A,B.Ay,x.A,K.A,q.A,k.A,J.A,j.A,X.default,$.A)}}new tI(u.h,__OVERLAY__?{}:{NOTIFICATIONS_SET_PERMISSION_STATE:function(t){let{enabled:e}=t;e!==tn.kCE.ENABLED||Z.isPlatformEmbedded||te.A.showNotification(n(705194),tr.intl.string(tr.t.VSgOVg),tr.intl.string(tr.t["1UJvqc"]),{notif_type:"NOTIFICATIONS_SET_PERMISSION_STATE"},{sound:to,volume:tu,tag:"hello",onClick:()=>{window.focus()},isUserAvatar:!1})},NOTIFICATION_CREATE:function(t){let{icon:e,title:n,body:i,trackingProps:l,options:a}=t;return!tN()&&(te.A.showNotification(e,n,i,l,a),!1)},WINDOW_FOCUS:function(t){if(tc=t.focused){let t=K.A.getChannelId();null!=t&&tE.clearChannel(t)}},MESSAGE_CREATE:function(t){let{channelId:e,message:l,optimistic:a}=t;if(a)return!1;let r=b.A.getChannel(e),s=X.default.getUser(l.author?.id),c=X.default.getCurrentUser();if(null==r||null==s||null==c)return!1;let f=W.A.getMessage(e,l.id)??(0,S.rh)(l),_=B.Ay.getMentionCount(e);(0,B.Wm)(f,c)&&_>0&&o.O.announce((0,N.Ay)({channel:r,mentionCount:_}));let g=(0,m.lx)(l,e,!tc),T=H.A.getNotifyMessagesInSelectedChannel()&&(0,m.kY)(l,e);if(!g&&!T)return!1;if(D.A.isCurrentUserInRestrictedHours())return p.A.increment({name:i.K.NOTIFICATION_SOUND_PLAYBACK_ATTEMPT,tags:["reason:restricted_hours"]}),!1;if(j.A.hasAction())return p.A.increment({name:i.K.NOTIFICATION_SOUND_PLAYBACK_ATTEMPT,tags:["reason:required_action"]}),!1;if(l.type===tn.lAJ.CHANGELOG&&(null==l.changelog_id||E.A.latestChangelogId()!==l.changelog_id))return!1;let I=!H.A.isSoundDisabled(to);if(T&&(tg(I),I&&te.A.playNotificationSound("message3",.4),!tc)||!g)return!1;let h=n(773371).default,C=n(592598).A;if(null!=h.getFocusedPID()&&!C.isNotificationDisabled(tl.KS.TextChat)&&!J.A.disableNotifications)return!1;let{icon:y,title:U,body:R,emoji:L}=(0,m.TB)(r,l,s),k=!(t=>{let e;return null!=t&&((e=P().v3(String(t)))<0&&(e+=0x100000000),e%0x7fffffff<21474836.47)})(c?.id);if(u.h.dispatch({type:"RPC_NOTIFICATION_CREATE",channelId:r.id,message:l,icon:y,title:U,body:R}),(0,O.n)(l,r.guild_id),H.A.getDesktopType()===tn.nRU.NEVER)return tg(I),I&&te.A.playNotificationSound(to,tu),!1;tg(I),te.A.showNotification(y,U,R,{notif_type:"MESSAGE_CREATE",notif_user_id:l.author?.id,message_id:l.id,message_type:l.type,channel_id:r.id,channel_type:r.type,guild_id:r.guild_id,badge:(0,B.Wm)(f,c)},{omitViewTracking:k,tag:l.id,sound:I?to:void 0,volume:tu,onClick(){(0,v.iN)(r.id),(r.type===tn.rbe.GUILD_VOICE||r.type===tn.rbe.GUILD_STAGE_VOICE)&&d.A.updateChatOpen(r.id,!0),A.default.clickedNotification()},isUserAvatar:!0,messageRecord:f,fallbackDeepLink:(0,te.I)(tn.BVt.CHANNEL(r.guild_id,r.id,l.id)),emoji:L}).then(t=>{null!=t&&tE.track(r.id,t.notification,t.trackingProps)})},CHANNEL_SELECT:function(t){let{channelId:e}=t;return null!=e&&tE.clearChannel(e),!1},MESSAGE_ACK:function(t){let{channelId:e}=t;return tE.clearChannel(e),!1},ACTIVITY_START:function(t){let{userId:e,activity:n}=t;if(tN()||n.type!==tn.$pd.PLAYING)return!1;{let t=X.default.getUser(e);if(null==t)return!1;let i=tt.Ay.getName(t),l=n.name,a=t.getAvatarURL(void 0,128),r=tr.intl.string(tr.t.XoTWsI),o=tr.intl.formatToPlainString(tr.t.o4Aipn,{username:i,gameName:l});return te.A.showNotification(a,r,o,{notif_type:"ACTIVITY_START",activity_type:tn.$pd.PLAYING,notif_user_id:e,activity_name:l},{sound:"message2",playSoundIfDisabled:!1,volume:.4,onClick(){s.A.openPrivateChannel({recipientIds:e})},isUserAvatar:!0}),!1}},VOICE_STATE_UPDATES:function(t){let{voiceStates:e}=t;if(tN())return;let n=X.default.getCurrentUser();if(null==n)return;let i=e.find(t=>t.userId===n.id);if(null==i)return;let{channelId:l,guildId:a,suppress:r,requestToSpeakTimestamp:o}=i;if(null==l||null==a||!(!r&&null!=o))return;let u=F.A.getGuild(a),s=b.A.getChannel(l),d=k.A.getStageInstanceByChannel(l);null!=u&&null!=s&&null!=d&&te.A.showNotification((0,M.Iv)(u,128),(0,g.m1)(s,X.default,x.A),tr.intl.formatToPlainString(tr.t.sqnsSP,{channelName:(0,g.m1)(s,X.default,x.A),channelTopic:d?.topic}),{notif_type:"Stage Speak Invite"},{isUserAvatar:!1})},STAGE_INSTANCE_UPDATE:function(t){let{instance:e}=t;if(tN()||!e.send_start_notification||tT(e.channel_id))return!1;let n=X.default.getCurrentUser(),i=F.A.getGuild(e.guild_id),a=b.A.getChannel(e.channel_id),r=X.default.getUser(e.host_id);if(null==n||null==a||null==i||null==r||!(0,m.Wv)(n,r,a)||!Y.A.can(l.kg(tn.xBc.CONNECT,tn.xBc.VIEW_CHANNEL),a)||tf.has(e.id))return!1;tf.add(e.id),te.A.showNotification((0,M.Iv)(i,128),tr.intl.formatToPlainString(tr.t.bZ4Okd,{guildName:i.name}),tr.intl.formatToPlainString(tr.t.qTelnO,{username:Q.Ay.getName(i.id,a.id,r),topic:e.topic}),{notif_type:"STAGE_INSTANCE_CREATE",guild_id:i.id,channel_id:a.id},{onClick(){(0,L.av)(a)},isUserAvatar:!1})},STAGE_INSTANCE_DELETE:function(t){let{instance:e}=t;tf.delete(e.id)},GUILD_SCHEDULED_EVENT_UPDATE:function(t){let{guildScheduledEvent:e}=t;if(tN()||null==e.notification_type)return!1;e.notification_type===ti.b8.EVENT_START?e.entity_type===ti.Ps.STAGE_INSTANCE||e.entity_type===ti.Ps.VOICE?function(t){if(tN())return;let e=t.channel_id;if(null==e||tT(e))return;let n=X.default.getCurrentUser(),i=F.A.getGuild(t.guild_id),a=b.A.getChannel(t.channel_id),r=X.default.getUser(t.host_id);null!=n&&null!=a&&null!=i&&null!=r&&Y.A.can(l.kg(tn.xBc.CONNECT,tn.xBc.VIEW_CHANNEL),a)&&te.A.showNotification((0,M.Iv)(i,128),tr.intl.formatToPlainString(tr.t.bOu6Wn,{guildName:i.name}),tr.intl.formatToPlainString(tr.t.GV9L8u,{topic:t.name,username:Q.Ay.getName(i.id,a.id,r)}),{notif_type:"GUILD_SCHEDULED_EVENT_UPDATE",guild_id:i.id,channel_id:a.id},{onClick(){t.entity_type===ti.Ps.STAGE_INSTANCE&&(0,L.av)(a),t.entity_type===ti.Ps.VOICE&&f.default.selectVoiceChannel(a.id)},isUserAvatar:!1})}(e):e.entity_type===ti.Ps.EXTERNAL&&function(t){if(tN())return;let e=X.default.getCurrentUser(),n=F.A.getGuild(t.guild_id);null==e||null==n||te.A.showNotification((0,M.Iv)(n,128),tr.intl.formatToPlainString(tr.t.bOu6Wn,{guildName:n.name}),tr.intl.formatToPlainString(tr.t.mYyaRB,{topic:t.name}),{notif_type:"GUILD_SCHEDULED_EVENT_UPDATE",guild_id:n.id},{onClick(){c.A.transitionToGuildSync(t.guild_id),(0,I.uR)({eventId:t.id})},isUserAvatar:!1})}(e):e.notification_type},THREAD_CREATE:function(t){let{channel:e,isNewlyCreated:n}=t;if(tN())return!1;let i=b.A.getChannel(e.parent_id);if(null==i||!tn.kvI.GUILD_THREADS_ONLY.has(i.type)||!n||!(0,m.q1)(e,i,!tc))return!1;let{author:l,user:a}=(0,T.tY)(e);if(null==a)return!1;let r=F.A.getGuild(i.guild_id);if(null==r)return!1;let o=tr.intl.formatToPlainString(tr.t["2IGVl5"],{channelName:(0,g.m1)(i,X.default,x.A),guildName:r.name}),u=tr.intl.formatToPlainString(tr.t.jPhTvT,{channelName:(0,g.m1)(e,X.default,x.A),userUsername:l?.nick??a?.username}),s=a.getAvatarURL(void 0,128);te.A.showNotification(s,o,u,{notif_type:"THREAD_CREATE",notif_user_id:a.id},{onClick(){(0,w.JA)(e)},isUserAvatar:!0})},GENERIC_PUSH_NOTIFICATION_SENT:function(t){let e,{icon:n,title:i,body:l,route:a,trackingType:r,tag:o}=t;if(tN()||null==i||null==l||null==r||"reactions_push_notification"===r.toLowerCase())return!1;te.A.showNotification(n,i,l,{notif_type:r},{onClick(){null!=a&&((0,h.A)(a),A.default.clickedNotification())},tag:o,isUserAvatar:!1}).then(t=>{null!=t&&null!=e&&tE.track(e,t.notification,t.trackingProps)})},REACTION_NOTIFICATION_SENT:function(t){let{icon:e,title:n,body:i,route:l,trackingType:a,message:r,reactorUserId:o}=t;if(tN()||null==n||null==i||null==a)return!1;let u=r.channel_id;if(null==u||K.A.getCurrentlySelectedChannelId()===u&&tc)return!1;let s=b.A.getChannel(u);if(null==s)return!1;if(s.type===tn.rbe.GROUP_DM){let t=X.default.getCurrentUser();if(r.author?.id!==t?.id&&!y.A.getConfig({location:"desktopNotification"}).showSettingsToggle)return!1}te.A.showNotification(e,n,i,{notif_type:a,notif_user_id:o,message_id:r.id},{onClick(){null!=l&&((0,h.A)(l),A.default.clickedNotification())},isUserAvatar:!0}).then(t=>{null!=t&&null!=u&&tE.track(u,t.notification,t.trackingProps)})},WINDOW_HIDDEN:function(){let t=(0,Z.isWindows)(),e=(0,Z.isLinux)();if(!(!r.w.get(td,!1)&&Z.isPlatformEmbedded&&(t||e)))return!1;let i=!1;return null!=tA&&(i=t_.includes(tA)),!!i&&(te.A.showNotification(n(608598),tr.intl.string(tr.t.VSgOVg),tr.intl.string(tr.t["+J/F66"]),{notif_type:"WINDOW_HIDDEN"},{overrideStreamerMode:!0,onClick:()=>{(0,R.pX)((0,V.settingsPathToRoute)(t?ta.od.WINDOWS:ta.od.LINUX))},onShown:()=>{r.w.set(td,!0)},isUserAvatar:!1}),!1)},LOGOUT:function(){return r.w.remove(td),!1},CONNECTION_OPEN:function(t){let{countryCode:e,guilds:n}=t;tA=e,tf.clear(),n.forEach(t=>t.stage_instances.forEach(t=>tf.add(t.id)))},MESSAGE_REMINDER_DUE:function(t){let{savedMessage:e}=t;if(tN())return!1;let n=e.message;if(null==n||null==n.author)return!1;let i=b.A.getChannel(e.saveData.channelId);if(null==i)return!1;let{icon:l,body:a}=(0,m.TB)(i,n,n.author);te.A.showNotification(l,tr.intl.string(tr.t.IjZJB5),a,{notif_type:"MESSAGE_REMINDER_DUE"},{onClick(){(0,h.A)(tn.BVt.CHANNEL(i?.getGuildId(),i.id,n.id))},isUserAvatar:!0})},RESTRICTED_HOURS_WARNING:function(t){let{title:e,subtitle:i}=t;if(tN()||!H.A.screenDowntimeReminder)return!1;te.A.showNotification(n(608598),e,i,{notif_type:"RESTRICTED_HOURS_WARNING"},{isUserAvatar:!1})}})
+"use strict";
+n.d(t, { pD: () => el, cH: () => eo }), n(321073);
+var i = n(731738),
+    r = n(136722),
+    s = n(17928),
+    a = n(506774),
+    o = n(765178),
+    l = n(228366),
+    u = n(308528),
+    c = n(367513),
+    d = n(66834),
+    _ = n(264686),
+    h = n(730852),
+    f = n(77729),
+    p = n(883600),
+    E = n(963027),
+    m = n(47167),
+    g = n(435470),
+    A = n(707592),
+    I = n(741231),
+    T = n(380335),
+    S = n(320095),
+    y = n(807393),
+    C = n(535586),
+    N = n(938005),
+    v = n(571524),
+    R = n(181370),
+    O = n.n(R),
+    b = n(695515),
+    D = n(976860),
+    L = n(378570),
+    w = n(790535),
+    M = n(446600),
+    P = n(747926),
+    x = n(885386),
+    k = n(718446),
+    U = n(260509),
+    G = n(734057),
+    F = n(71393),
+    V = n(232835),
+    B = n(803224),
+    j = n(576705),
+    H = n(222823),
+    Y = n(994500),
+    W = n(309010),
+    K = n(461213),
+    $ = n(351906),
+    z = n(870570),
+    q = n(287809),
+    Z = n(977997),
+    X = n(174459),
+    Q = n(562153),
+    J = n(723702),
+    ee = n(427262),
+    et = n(756876),
+    en = n(652215),
+    ei = n(988794),
+    er = n(672396),
+    es = n(355097),
+    ea = n(375708);
+let eo = "message1",
+    el = 0.4,
+    eu = f.A?.features.supports("notifications") ? 20 : 1,
+    ec = "discord_dismissed_notification_shown",
+    ed = document.hasFocus(),
+    e_ = null,
+    eh = new Set(),
+    ef = ["FR", "GF", "PF", "TF", "RE", "GP", "MQ", "YT", "NC", "PM", "WF"],
+    ep = new (class {
+        _channels = {};
+        track(e, t, n) {
+            let i = this._channels[e];
+            for (
+                null == i && ((i = []), (this._channels[e] = i)), i.push({ notification: t, trackingProps: n });
+                i.length > eu;
+            ) {
+                let e = i.shift();
+                e?.notification?.close != null &&
+                    (e.notification.close(),
+                    X.default.track(en.HAw.NOTIFICATION_ACTION, { action: "REMOVE", ...e.trackingProps }));
+            }
+        }
+        clearChannel(e) {
+            let t = this._channels[e];
+            null != t &&
+                (delete this._channels[e],
+                t.forEach((e) => {
+                    let { notification: t, trackingProps: n } = e;
+                    t.close(), X.default.track(en.HAw.NOTIFICATION_ACTION, { action: "ACK", ...n });
+                }));
+        }
+    })();
+function eE() {
+    return !!(
+        B.A.getDesktopType() === en.nRU.NEVER ||
+        K.A.getStatus() === en.clD.DND ||
+        x.NO.getSetting() ||
+        b.A.isCurrentUserInRestrictedHours()
+    );
+}
+function em(e) {
+    y.A.increment({
+        name: i.K.NOTIFICATION_SOUND_PLAYBACK_ATTEMPT,
+        tags: [`reason:${e ? "played" : "disabled_by_user"}`],
+    });
+}
+function eg(e) {
+    return null != Z.A.getVoiceStateForChannel(e);
+}
+class eA extends s.Ay.Store {
+    static displayName = "NotificationStore";
+    initialize() {
+        this.waitFor(p.A, G.A, b.A, F.A, T.A, V.A, B.A, j.A, H.Ay, Y.A, W.A, K.A, M.A, $.A, z.A, q.default, Z.A);
+    }
+}
+new eA(
+    l.h,
+    __OVERLAY__
+        ? {}
+        : {
+              NOTIFICATIONS_SET_PERMISSION_STATE: function (e) {
+                  let { enabled: t } = e;
+                  t !== en.kCE.ENABLED ||
+                      J.isPlatformEmbedded ||
+                      et.A.showNotification(
+                          n(705194),
+                          ea.intl.string(ea.t.VSgOVg),
+                          ea.intl.string(ea.t["1UJvqc"]),
+                          { notif_type: "NOTIFICATIONS_SET_PERMISSION_STATE" },
+                          {
+                              sound: eo,
+                              volume: el,
+                              tag: "hello",
+                              onClick: () => {
+                                  window.focus();
+                              },
+                              isUserAvatar: !1,
+                          },
+                      );
+              },
+              NOTIFICATION_CREATE: function (e) {
+                  let { icon: t, title: n, body: i, trackingProps: r, options: s } = e;
+                  return !eE() && (et.A.showNotification(t, n, i, r, s), !1);
+              },
+              WINDOW_FOCUS: function (e) {
+                  if ((ed = e.focused)) {
+                      let e = W.A.getChannelId();
+                      null != e && ep.clearChannel(e);
+                  }
+              },
+              MESSAGE_CREATE: function (e) {
+                  let { channelId: t, message: r, optimistic: s } = e;
+                  if (s) return !1;
+                  let a = G.A.getChannel(t),
+                      u = q.default.getUser(r.author?.id),
+                      d = q.default.getCurrentUser();
+                  if (null == a || null == u || null == d) return !1;
+                  let h = V.A.getMessage(t, r.id) ?? (0, S.rh)(r),
+                      f = H.Ay.getMentionCount(t);
+                  (0, H.Wm)(h, d) && f > 0 && o.O.announce((0, E.Ay)({ channel: a, mentionCount: f }));
+                  let m = (0, N.lx)(r, t, !ed),
+                      g = B.A.getNotifyMessagesInSelectedChannel() && (0, N.kY)(r, t);
+                  if (!m && !g) return !1;
+                  if (b.A.isCurrentUserInRestrictedHours())
+                      return (
+                          y.A.increment({
+                              name: i.K.NOTIFICATION_SOUND_PLAYBACK_ATTEMPT,
+                              tags: ["reason:restricted_hours"],
+                          }),
+                          !1
+                      );
+                  if (z.A.hasAction())
+                      return (
+                          y.A.increment({
+                              name: i.K.NOTIFICATION_SOUND_PLAYBACK_ATTEMPT,
+                              tags: ["reason:required_action"],
+                          }),
+                          !1
+                      );
+                  if (
+                      r.type === en.lAJ.CHANGELOG &&
+                      (null == r.changelog_id || p.A.latestChangelogId() !== r.changelog_id)
+                  )
+                      return !1;
+                  let A = !B.A.isSoundDisabled(eo);
+                  if ((g && (em(A), A && et.A.playNotificationSound("message3", 0.4), !ed)) || !m) return !1;
+                  let I = n(773371).default,
+                      T = n(592598).A;
+                  if (
+                      null != I.getFocusedPID() &&
+                      !T.isNotificationDisabled(er.KS.TextChat) &&
+                      !$.A.disableNotifications
+                  )
+                      return !1;
+                  let { icon: v, title: R, body: D, emoji: w } = (0, N.TB)(a, r, u),
+                      M = !((e, t) => {
+                          let n;
+                          return (
+                              null != t &&
+                              ((n = O().v3(String(t))) < 0 && (n += 0x100000000), n % 0x7fffffff < 21474836.47)
+                          );
+                      })(0, d?.id);
+                  if (
+                      (l.h.dispatch({
+                          type: "RPC_NOTIFICATION_CREATE",
+                          channelId: a.id,
+                          message: r,
+                          icon: v,
+                          title: R,
+                          body: D,
+                      }),
+                      (0, C.n)(r, a.guild_id),
+                      B.A.getDesktopType() === en.nRU.NEVER)
+                  )
+                      return em(A), A && et.A.playNotificationSound(eo, el), !1;
+                  em(A),
+                      et.A.showNotification(
+                          v,
+                          R,
+                          D,
+                          {
+                              notif_type: "MESSAGE_CREATE",
+                              notif_user_id: r.author?.id,
+                              message_id: r.id,
+                              message_type: r.type,
+                              channel_id: a.id,
+                              channel_type: a.type,
+                              guild_id: a.guild_id,
+                              badge: (0, H.Wm)(h, d),
+                          },
+                          {
+                              omitViewTracking: M,
+                              tag: r.id,
+                              sound: A ? eo : void 0,
+                              volume: el,
+                              onClick() {
+                                  (0, L.iN)(a.id),
+                                      (a.type === en.rbe.GUILD_VOICE || a.type === en.rbe.GUILD_STAGE_VOICE) &&
+                                          c.A.updateChatOpen(a.id, !0),
+                                      _.default.clickedNotification();
+                              },
+                              isUserAvatar: !0,
+                              messageRecord: h,
+                              fallbackDeepLink: (0, et.I)(en.BVt.CHANNEL(a.guild_id, a.id, r.id)),
+                              emoji: w,
+                          },
+                      ).then((e) => {
+                          null != e && ep.track(a.id, e.notification, e.trackingProps);
+                      });
+              },
+              CHANNEL_SELECT: function (e) {
+                  let { channelId: t } = e;
+                  return null != t && ep.clearChannel(t), !1;
+              },
+              MESSAGE_ACK: function (e) {
+                  let { channelId: t } = e;
+                  return ep.clearChannel(t), !1;
+              },
+              ACTIVITY_START: function (e) {
+                  let { userId: t, activity: n } = e;
+                  if (eE() || n.type !== en.$pd.PLAYING) return !1;
+                  {
+                      let e = q.default.getUser(t);
+                      if (null == e) return !1;
+                      let i = ee.Ay.getName(e),
+                          r = n.name,
+                          s = e.getAvatarURL(void 0, 128),
+                          a = ea.intl.string(ea.t.XoTWsI),
+                          o = ea.intl.formatToPlainString(ea.t.o4Aipn, { username: i, gameName: r });
+                      return (
+                          et.A.showNotification(
+                              s,
+                              a,
+                              o,
+                              {
+                                  notif_type: "ACTIVITY_START",
+                                  activity_type: en.$pd.PLAYING,
+                                  notif_user_id: t,
+                                  activity_name: r,
+                              },
+                              {
+                                  sound: "message2",
+                                  playSoundIfDisabled: !1,
+                                  volume: 0.4,
+                                  onClick() {
+                                      u.A.openPrivateChannel({ recipientIds: t });
+                                  },
+                                  isUserAvatar: !0,
+                              },
+                          ),
+                          !1
+                      );
+                  }
+              },
+              VOICE_STATE_UPDATES: function (e) {
+                  let { voiceStates: t } = e;
+                  if (eE()) return;
+                  let n = q.default.getCurrentUser();
+                  if (null == n) return;
+                  let i = t.find((e) => e.userId === n.id);
+                  if (null == i) return;
+                  let { channelId: r, guildId: s, suppress: a, requestToSpeakTimestamp: o } = i;
+                  if (null == r || null == s || !(!a && null != o)) return;
+                  let l = F.A.getGuild(s),
+                      u = G.A.getChannel(r),
+                      c = M.A.getStageInstanceByChannel(r);
+                  null != l &&
+                      null != u &&
+                      null != c &&
+                      et.A.showNotification(
+                          (0, U.Iv)(l, 128),
+                          (0, m.m1)(u, q.default, Y.A),
+                          ea.intl.formatToPlainString(ea.t.sqnsSP, {
+                              channelName: (0, m.m1)(u, q.default, Y.A),
+                              channelTopic: c?.topic,
+                          }),
+                          { notif_type: "Stage Speak Invite" },
+                          { isUserAvatar: !1 },
+                      );
+              },
+              STAGE_INSTANCE_UPDATE: function (e) {
+                  let { instance: t } = e;
+                  if (eE() || !t.send_start_notification || eg(t.channel_id)) return !1;
+                  let n = q.default.getCurrentUser(),
+                      i = F.A.getGuild(t.guild_id),
+                      s = G.A.getChannel(t.channel_id),
+                      a = q.default.getUser(t.host_id);
+                  if (
+                      null == n ||
+                      null == s ||
+                      null == i ||
+                      null == a ||
+                      !(0, N.Wv)(n, a, s) ||
+                      !j.A.can(r.kg(en.xBc.CONNECT, en.xBc.VIEW_CHANNEL), s) ||
+                      eh.has(t.id)
+                  )
+                      return !1;
+                  eh.add(t.id),
+                      et.A.showNotification(
+                          (0, U.Iv)(i, 128),
+                          ea.intl.formatToPlainString(ea.t.bZ4Okd, { guildName: i.name }),
+                          ea.intl.formatToPlainString(ea.t.qTelnO, {
+                              username: Q.Ay.getName(i.id, s.id, a),
+                              topic: t.topic,
+                          }),
+                          { notif_type: "STAGE_INSTANCE_CREATE", guild_id: i.id, channel_id: s.id },
+                          {
+                              onClick() {
+                                  (0, w.av)(s);
+                              },
+                              isUserAvatar: !1,
+                          },
+                      );
+              },
+              STAGE_INSTANCE_DELETE: function (e) {
+                  let { instance: t } = e;
+                  eh.delete(t.id);
+              },
+              GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
+                  let { guildScheduledEvent: t } = e;
+                  if (eE() || null == t.notification_type) return !1;
+                  t.notification_type === ei.b8.EVENT_START
+                      ? t.entity_type === ei.Ps.STAGE_INSTANCE || t.entity_type === ei.Ps.VOICE
+                          ? (function (e) {
+                                if (eE()) return;
+                                let t = e.channel_id;
+                                if (null == t || eg(t)) return;
+                                let n = q.default.getCurrentUser(),
+                                    i = F.A.getGuild(e.guild_id),
+                                    s = G.A.getChannel(e.channel_id),
+                                    a = q.default.getUser(e.host_id);
+                                null != n &&
+                                    null != s &&
+                                    null != i &&
+                                    null != a &&
+                                    j.A.can(r.kg(en.xBc.CONNECT, en.xBc.VIEW_CHANNEL), s) &&
+                                    et.A.showNotification(
+                                        (0, U.Iv)(i, 128),
+                                        ea.intl.formatToPlainString(ea.t.bOu6Wn, { guildName: i.name }),
+                                        ea.intl.formatToPlainString(ea.t.GV9L8u, {
+                                            topic: e.name,
+                                            username: Q.Ay.getName(i.id, s.id, a),
+                                        }),
+                                        {
+                                            notif_type: "GUILD_SCHEDULED_EVENT_UPDATE",
+                                            guild_id: i.id,
+                                            channel_id: s.id,
+                                        },
+                                        {
+                                            onClick() {
+                                                e.entity_type === ei.Ps.STAGE_INSTANCE && (0, w.av)(s),
+                                                    e.entity_type === ei.Ps.VOICE && h.default.selectVoiceChannel(s.id);
+                                            },
+                                            isUserAvatar: !1,
+                                        },
+                                    );
+                            })(t)
+                          : t.entity_type === ei.Ps.EXTERNAL &&
+                            (function (e) {
+                                if (eE()) return;
+                                let t = q.default.getCurrentUser(),
+                                    n = F.A.getGuild(e.guild_id);
+                                null == t ||
+                                    null == n ||
+                                    et.A.showNotification(
+                                        (0, U.Iv)(n, 128),
+                                        ea.intl.formatToPlainString(ea.t.bOu6Wn, { guildName: n.name }),
+                                        ea.intl.formatToPlainString(ea.t.mYyaRB, { topic: e.name }),
+                                        { notif_type: "GUILD_SCHEDULED_EVENT_UPDATE", guild_id: n.id },
+                                        {
+                                            onClick() {
+                                                d.A.transitionToGuildSync(e.guild_id), (0, A.uR)({ eventId: e.id });
+                                            },
+                                            isUserAvatar: !1,
+                                        },
+                                    );
+                            })(t)
+                      : t.notification_type;
+              },
+              THREAD_CREATE: function (e) {
+                  let { channel: t, isNewlyCreated: n } = e;
+                  if (eE()) return !1;
+                  let i = G.A.getChannel(t.parent_id);
+                  if (null == i || !en.kvI.GUILD_THREADS_ONLY.has(i.type) || !n || !(0, N.q1)(t, i, !ed)) return !1;
+                  let { author: r, user: s } = (0, g.tY)(t);
+                  if (null == s) return !1;
+                  let a = F.A.getGuild(i.guild_id);
+                  if (null == a) return !1;
+                  let o = ea.intl.formatToPlainString(ea.t["2IGVl5"], {
+                          channelName: (0, m.m1)(i, q.default, Y.A),
+                          guildName: a.name,
+                      }),
+                      l = ea.intl.formatToPlainString(ea.t.jPhTvT, {
+                          channelName: (0, m.m1)(t, q.default, Y.A),
+                          userUsername: r?.nick ?? s?.username,
+                      }),
+                      u = s.getAvatarURL(void 0, 128);
+                  et.A.showNotification(
+                      u,
+                      o,
+                      l,
+                      { notif_type: "THREAD_CREATE", notif_user_id: s.id },
+                      {
+                          onClick() {
+                              (0, P.JA)(t);
+                          },
+                          isUserAvatar: !0,
+                      },
+                  );
+              },
+              GENERIC_PUSH_NOTIFICATION_SENT: function (e) {
+                  let t,
+                      { icon: n, title: i, body: r, route: s, trackingType: a, tag: o } = e;
+                  if (eE() || null == i || null == r || null == a || "reactions_push_notification" === a.toLowerCase())
+                      return !1;
+                  et.A.showNotification(
+                      n,
+                      i,
+                      r,
+                      { notif_type: a },
+                      {
+                          onClick() {
+                              null != s && ((0, I.A)(s), _.default.clickedNotification());
+                          },
+                          tag: o,
+                          isUserAvatar: !1,
+                      },
+                  ).then((e) => {
+                      null != e && null != t && ep.track(t, e.notification, e.trackingProps);
+                  });
+              },
+              REACTION_NOTIFICATION_SENT: function (e) {
+                  let { icon: t, title: n, body: i, route: r, trackingType: s, message: a, reactorUserId: o } = e;
+                  if (eE() || null == n || null == i || null == s) return !1;
+                  let l = a.channel_id;
+                  if (null == l || (W.A.getCurrentlySelectedChannelId() === l && ed)) return !1;
+                  let u = G.A.getChannel(l);
+                  if (null == u) return !1;
+                  if (u.type === en.rbe.GROUP_DM) {
+                      let e = q.default.getCurrentUser();
+                      if (
+                          a.author?.id !== e?.id &&
+                          !v.A.getConfig({ location: "desktopNotification" }).showSettingsToggle
+                      )
+                          return !1;
+                  }
+                  et.A.showNotification(
+                      t,
+                      n,
+                      i,
+                      { notif_type: s, notif_user_id: o, message_id: a.id },
+                      {
+                          onClick() {
+                              null != r && ((0, I.A)(r), _.default.clickedNotification());
+                          },
+                          isUserAvatar: !0,
+                      },
+                  ).then((e) => {
+                      null != e && null != l && ep.track(l, e.notification, e.trackingProps);
+                  });
+              },
+              WINDOW_HIDDEN: function () {
+                  let e = (0, J.isWindows)(),
+                      t = (0, J.isLinux)();
+                  if (!(!a.w.get(ec, !1) && J.isPlatformEmbedded && (e || t))) return !1;
+                  let i = !1;
+                  return (
+                      null != e_ && (i = ef.includes(e_)),
+                      !!i &&
+                          (et.A.showNotification(
+                              n(608598),
+                              ea.intl.string(ea.t.VSgOVg),
+                              ea.intl.string(ea.t["+J/F66"]),
+                              { notif_type: "WINDOW_HIDDEN" },
+                              {
+                                  overrideStreamerMode: !0,
+                                  onClick: () => {
+                                      (0, D.pX)((0, k.settingsPathToRoute)(e ? es.od.WINDOWS : es.od.LINUX));
+                                  },
+                                  onShown: () => {
+                                      a.w.set(ec, !0);
+                                  },
+                                  isUserAvatar: !1,
+                              },
+                          ),
+                          !1)
+                  );
+              },
+              LOGOUT: function () {
+                  return a.w.remove(ec), !1;
+              },
+              CONNECTION_OPEN: function (e) {
+                  let { countryCode: t, guilds: n } = e;
+                  (e_ = t), eh.clear(), n.forEach((e) => e.stage_instances.forEach((e) => eh.add(e.id)));
+              },
+              MESSAGE_REMINDER_DUE: function (e) {
+                  let { savedMessage: t } = e;
+                  if (eE()) return !1;
+                  let n = t.message;
+                  if (null == n || null == n.author) return !1;
+                  let i = G.A.getChannel(t.saveData.channelId);
+                  if (null == i) return !1;
+                  let { icon: r, body: s } = (0, N.TB)(i, n, n.author);
+                  et.A.showNotification(
+                      r,
+                      ea.intl.string(ea.t.IjZJB5),
+                      s,
+                      { notif_type: "MESSAGE_REMINDER_DUE" },
+                      {
+                          onClick() {
+                              (0, I.A)(en.BVt.CHANNEL(i?.getGuildId(), i.id, n.id));
+                          },
+                          isUserAvatar: !0,
+                      },
+                  );
+              },
+              RESTRICTED_HOURS_WARNING: function (e) {
+                  let { title: t, subtitle: i } = e;
+                  if (eE() || !B.A.screenDowntimeReminder) return !1;
+                  et.A.showNotification(
+                      n(608598),
+                      t,
+                      i,
+                      { notif_type: "RESTRICTED_HOURS_WARNING" },
+                      { isUserAvatar: !1 },
+                  );
+              },
+          },
+);

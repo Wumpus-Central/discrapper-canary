@@ -1,1 +1,1 @@
-e.exports={a:"soundButton_d9cf5f"}
+a.exports = { a: "soundButton_d9cf5f" };

@@ -1,1 +1,1 @@
-s.exports={s:"errors__7962e"}
+s.exports = { s: "errors__7962e" };

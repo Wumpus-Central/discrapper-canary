@@ -1,1 +1,1 @@
-e.exports={o:"toast__1562f"}
+i.exports = { o: "toast__1562f" };

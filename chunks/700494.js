@@ -1,1 +1,1 @@
-e.exports={Tg:"textArea__08bd2"}
+_.exports = { Tg: "textArea__08bd2" };

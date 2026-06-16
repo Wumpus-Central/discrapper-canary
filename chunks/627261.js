@@ -1,5 +1,101 @@
-n.d(i,{default:()=>x});var r=n(627968);n(64700);var t=n(17928),s=n(862482),a=n(935462),e=n(534514),d=n(821609),c=n(587895),o=n(235986),u=n(755439),h=n(975571),p=n(375708),j=n(663630);let x=l=>{let{onClose:i,transitionState:n}=l,{error:x,applicationName:g}=(0,t.cf)([u.A,c.A],()=>{let l=u.A.getLastError(),i=null;if(null!=l&&null!=l.applicationId){let n=c.A.getApplication(l.applicationId);null!=n&&(i=n.name)}return{error:l,applicationName:i}});return(0,r.jsxs)(a.EO,{transitionState:n,size:a.rI.SMALL,"aria-label":p.intl.string(p.t["6kHRYP"]),parentComponent:"DispatchErrorModal",children:[(0,r.jsxs)(a.rQ,{justify:o.A.Justify.BETWEEN,separator:!1,children:[(0,r.jsx)(o.A.Child,{grow:1,children:(0,r.jsx)(e.D,{variant:"heading-lg/semibold",children:p.intl.string(p.t["6kHRYP"])})}),(0,r.jsx)(o.A.Child,{grow:0,children:(0,r.jsx)(a.s_,{onClick:i})})]}),(0,r.jsx)(a.$m,{children:(0,r.jsxs)("div",{className:j.rf,children:[(0,r.jsx)("div",{children:p.intl.format(p.t["NnE/6P"],{link:"https://dis.gd/dispatch-error"})}),(0,r.jsx)("div",{className:j.dr,children:p.intl.string(p.t["o+efY9"])}),(0,r.jsx)("div",{className:j.Vk,children:p.intl.string(p.t.BiSnZ9)}),(0,r.jsx)("div",{className:j.nf,children:(0,r.jsxs)("div",{children:[null!=g?`Game: ${g}
-`:null,x?.applicationId!=null?`Game ID: ${x.applicationId}
-`:null,x?.branchId!=null&&x?.applicationId!==x?.branchId?`Branch ID: ${x?.branchId}
-`:null,x?.code!=null?`Error Code: ${x?.code}
-`:null,x?.uuid!=null?`Unique Case ID: ${x?.uuid}`:null]})})]})}),(0,r.jsxs)(a.jl,{children:[(0,r.jsx)(d.$,{variant:"primary",text:p.intl.string(p.t.VdyWmB),onClick:()=>{window.open(h.A.getSubmitRequestURL())}}),(0,r.jsx)(s.$n,{look:s.$n.Looks.LINK,onClick:i,color:j.bE,children:p.intl.string(p.t.cpT0Cq)})]})]})}
+n.d(i, { default: () => x });
+var r = n(627968);
+n(64700);
+var t = n(17928),
+    s = n(862482),
+    a = n(935462),
+    e = n(534514),
+    d = n(821609),
+    c = n(587895),
+    o = n(235986),
+    u = n(755439),
+    h = n(975571),
+    p = n(375708),
+    j = n(663630);
+let x = (l) => {
+    let { onClose: i, transitionState: n } = l,
+        { error: x, applicationName: g } = (0, t.cf)([u.A, c.A], () => {
+            let l = u.A.getLastError(),
+                i = null;
+            if (null != l && null != l.applicationId) {
+                let n = c.A.getApplication(l.applicationId);
+                null != n && (i = n.name);
+            }
+            return { error: l, applicationName: i };
+        });
+    return (0, r.jsxs)(a.EO, {
+        transitionState: n,
+        size: a.rI.SMALL,
+        "aria-label": p.intl.string(p.t["6kHRYP"]),
+        parentComponent: "DispatchErrorModal",
+        children: [
+            (0, r.jsxs)(a.rQ, {
+                justify: o.A.Justify.BETWEEN,
+                separator: !1,
+                children: [
+                    (0, r.jsx)(o.A.Child, {
+                        grow: 1,
+                        children: (0, r.jsx)(e.D, {
+                            variant: "heading-lg/semibold",
+                            children: p.intl.string(p.t["6kHRYP"]),
+                        }),
+                    }),
+                    (0, r.jsx)(o.A.Child, { grow: 0, children: (0, r.jsx)(a.s_, { onClick: i }) }),
+                ],
+            }),
+            (0, r.jsx)(a.$m, {
+                children: (0, r.jsxs)("div", {
+                    className: j.rf,
+                    children: [
+                        (0, r.jsx)("div", {
+                            children: p.intl.format(p.t["NnE/6P"], { link: "https://dis.gd/dispatch-error" }),
+                        }),
+                        (0, r.jsx)("div", { className: j.dr, children: p.intl.string(p.t["o+efY9"]) }),
+                        (0, r.jsx)("div", { className: j.Vk, children: p.intl.string(p.t.BiSnZ9) }),
+                        (0, r.jsx)("div", {
+                            className: j.nf,
+                            children: (0, r.jsxs)("div", {
+                                children: [
+                                    null != g
+                                        ? `Game: ${g}
+`
+                                        : null,
+                                    x?.applicationId != null
+                                        ? `Game ID: ${x.applicationId}
+`
+                                        : null,
+                                    x?.branchId != null && x?.applicationId !== x?.branchId
+                                        ? `Branch ID: ${x?.branchId}
+`
+                                        : null,
+                                    x?.code != null
+                                        ? `Error Code: ${x?.code}
+`
+                                        : null,
+                                    x?.uuid != null ? `Unique Case ID: ${x?.uuid}` : null,
+                                ],
+                            }),
+                        }),
+                    ],
+                }),
+            }),
+            (0, r.jsxs)(a.jl, {
+                children: [
+                    (0, r.jsx)(d.$, {
+                        variant: "primary",
+                        text: p.intl.string(p.t.VdyWmB),
+                        onClick: () => {
+                            window.open(h.A.getSubmitRequestURL());
+                        },
+                    }),
+                    (0, r.jsx)(s.$n, {
+                        look: s.$n.Looks.LINK,
+                        onClick: i,
+                        color: j.bE,
+                        children: p.intl.string(p.t.cpT0Cq),
+                    }),
+                ],
+            }),
+        ],
+    });
+};

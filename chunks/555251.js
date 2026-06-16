@@ -1,1 +1,57 @@
-s.d(i,{default:()=>u});var e=s(627968),a=s(64700),n=s(189213),l=s(778712),r=s(834730),c=s(656925),o=s(375708),d=s(918684);function u(t){let{avatarId:i,storageHash:s,avatarDescription:u,onConfirmDelete:x,onClose:h,...m}=t,[p,v]=a.useState(!1),{avatarSrc:y,eventHandlers:b}=(0,c.A)({avatarId:i,storageHash:s,size:l._3.SIZE_120}),{onMouseEnter:g,onMouseLeave:k}=b,E=a.useCallback(async()=>{v(!0);try{await x()}catch(t){}finally{v(!1)}h()},[x,h]);return(0,e.jsx)(n.Modal,{size:"sm",title:o.intl.string(o.t.rfaLTH),subtitle:o.intl.string(o.t.EKmxKc),actions:[{text:o.intl.string(o.t["ETE/oC"]),variant:"secondary",onClick:h,disabled:p},{text:o.intl.string(o.t.Lh0uyy),variant:"critical-primary",onClick:E,loading:p}],onClose:h,...m,children:(0,e.jsxs)("div",{className:d.jE,children:[(0,e.jsx)("div",{onMouseEnter:g,onMouseLeave:k,className:d.H,children:(0,e.jsx)("img",{src:y,alt:u,className:d.my})}),(0,e.jsx)(r.E,{variant:"eyebrow",color:"text-feedback-positive",children:o.intl.string(o.t["2Ld8DM"])}),(0,e.jsx)(r.E,{variant:"text-xs/normal",color:"text-subtle",children:o.intl.string(o.t.Oe0xqt)})]})})}
+s.d(i, { default: () => u });
+var e = s(627968),
+    a = s(64700),
+    n = s(189213),
+    l = s(778712),
+    r = s(834730),
+    c = s(656925),
+    o = s(375708),
+    d = s(918684);
+function u(t) {
+    let { avatarId: i, storageHash: s, avatarDescription: u, onConfirmDelete: x, onClose: h, ...m } = t,
+        [p, v] = a.useState(!1),
+        { avatarSrc: y, eventHandlers: b } = (0, c.A)({ avatarId: i, storageHash: s, size: l._3.SIZE_120 }),
+        { onMouseEnter: g, onMouseLeave: k } = b,
+        E = a.useCallback(async () => {
+            v(!0);
+            try {
+                await x();
+            } catch (t) {
+            } finally {
+                v(!1);
+            }
+            h();
+        }, [x, h]);
+    return (0, e.jsx)(n.Modal, {
+        size: "sm",
+        title: o.intl.string(o.t.rfaLTH),
+        subtitle: o.intl.string(o.t.EKmxKc),
+        actions: [
+            { text: o.intl.string(o.t["ETE/oC"]), variant: "secondary", onClick: h, disabled: p },
+            { text: o.intl.string(o.t.Lh0uyy), variant: "critical-primary", onClick: E, loading: p },
+        ],
+        onClose: h,
+        ...m,
+        children: (0, e.jsxs)("div", {
+            className: d.jE,
+            children: [
+                (0, e.jsx)("div", {
+                    onMouseEnter: g,
+                    onMouseLeave: k,
+                    className: d.H,
+                    children: (0, e.jsx)("img", { src: y, alt: u, className: d.my }),
+                }),
+                (0, e.jsx)(r.E, {
+                    variant: "eyebrow",
+                    color: "text-feedback-positive",
+                    children: o.intl.string(o.t["2Ld8DM"]),
+                }),
+                (0, e.jsx)(r.E, {
+                    variant: "text-xs/normal",
+                    color: "text-subtle",
+                    children: o.intl.string(o.t.Oe0xqt),
+                }),
+            ],
+        }),
+    });
+}

@@ -1,1 +1,152 @@
-l.d(t,{Gk:()=>f,Sn:()=>_,jY:()=>v});var n=l(627968),r=l(64700),s=l(158390),i=l(621466),u=l(174459),a=l(38405),o=l(652215);let d=r.createContext({registerAsset:()=>()=>{},unregisterAsset:()=>{},hasError:!1,isLoading:!0});function c(e){return(0,i.vq)(e,HTMLImageElement)?e.complete:(0,i.vq)(e,HTMLVideoElement)?e.readyState>=2:!!(0,i.vq)(e,HTMLDivElement)||!0}function E(e){return(0,i.vq)(e,HTMLImageElement)?e.getAttribute("src"):(0,i.vq)(e,HTMLVideoElement)?e.querySelectorAll("source")[0]?.getAttribute("src")??"video":((0,i.vq)(e,HTMLDivElement),e.tagName)}function v(e){let{children:t,isPreview:l=!1,source:v,questId:_}=e,[f,m]=r.useState(!1),[g,p]=r.useState(new Set),[T,A]=r.useState(!1),S=r.useRef(!1);r.useEffect(()=>{let e=new Set;for(let t of g)c(t)||e.add(t);e.size!==g.size&&p(e)},[g]);let C=r.useCallback(e=>{let{assetNode:t,nodeId:n,errorPrefix:r,errorMessage:s}=e;if(l||null==v)return;let d=(0,i.vq)(t,HTMLVideoElement)?t.networkState:void 0;u.default.track(o.HAw.QUEST_ASSET_LOADING_FAILURE,{source:v,quest_id:_,asset_id:E(t),video_network_state:d}),a.A.captureException(Error(`${r}: ${null!=s?`${s}, `:""}${E(t)}, ${n}`),{tags:{source:v}}),m(!0)},[l,v,_]),L=r.useCallback(e=>{p(t=>{let l=new Set(t);return l.delete(e),l})},[]),h=r.useCallback((e,t)=>{A(!0);let l=(0,i.vq)(e,HTMLImageElement)?"load":(0,i.vq)(e,HTMLVideoElement)?"canplaythrough":((0,i.vq)(e,HTMLDivElement),"load"),n=new AbortController,r=new s.A;function u(){r.succeed(),L(e),e.removeEventListener(l,u)}function a(l){d(),L(e),C({assetNode:e,nodeId:t,errorPrefix:"Error loading asset",errorMessage:"message"in l?l.message:null})}function o(t){r.fails<3&&(0,i.vq)(e,HTMLVideoElement)?r.fail(()=>{e.load()}):a(t)}if(c(e)||(p(t=>{let l=new Set(t);return l.add(e),l}),e.addEventListener(l,u)),e.addEventListener("error",a,{signal:n.signal}),(0,i.vq)(e,HTMLVideoElement)){let t=e.querySelectorAll("source"),l=t[t.length-1];l?.addEventListener("error",o,{signal:n.signal})}function d(){if(r.cancel(),n.abort(),e.removeEventListener(l,u),e.removeEventListener("error",a),(0,i.vq)(e,HTMLVideoElement)){let t=e.querySelectorAll("source"),l=t[t.length-1];l?.removeEventListener("error",o)}}return d},[C,L]),H=r.useMemo(()=>g.size>0||!T,[T,g]);r.useEffect(()=>{H||(S.current=!0)},[H]);let k=r.useMemo(()=>({registerAsset:h,unregisterAsset:L,hasError:f,isLoading:H&&!S.current}),[h,L,f,H]);return(0,n.jsx)(d.Provider,{value:k,children:t})}function _(e){let{id:t,children:l}=e,{registerAsset:n,unregisterAsset:s}=r.useContext(d),i=r.useRef(null);return r.useEffect(()=>{let e,l=i.current;return null!=l&&(e=n(l,t)),()=>{e?.(),null!=l&&s(l)}},[n,s,t]),l(i)}function f(){let{hasError:e,isLoading:t}=r.useContext(d);return{hasError:e,isLoading:t}}
+"use strict";
+n.d(t, { Gk: () => p, Sn: () => f, jY: () => h });
+var i = n(627968),
+    r = n(64700),
+    s = n(158390),
+    a = n(621466),
+    o = n(174459),
+    l = n(38405),
+    u = n(652215);
+let c = r.createContext({ registerAsset: () => () => {}, unregisterAsset: () => {}, hasError: !1, isLoading: !0 });
+function d(e) {
+    return (0, a.vq)(e, HTMLImageElement)
+        ? e.complete
+        : (0, a.vq)(e, HTMLVideoElement)
+          ? e.readyState >= 2
+          : !!(0, a.vq)(e, HTMLDivElement) || !0;
+}
+function _(e) {
+    return (0, a.vq)(e, HTMLImageElement)
+        ? e.getAttribute("src")
+        : (0, a.vq)(e, HTMLVideoElement)
+          ? (e.querySelectorAll("source")[0]?.getAttribute("src") ?? "video")
+          : ((0, a.vq)(e, HTMLDivElement), e.tagName);
+}
+function h(e) {
+    let { children: t, isPreview: n = !1, source: h, questId: f } = e,
+        [p, E] = r.useState(!1),
+        [m, g] = r.useState(new Set()),
+        [A, I] = r.useState(!1),
+        T = r.useRef(!1);
+    r.useEffect(() => {
+        let e = new Set();
+        for (let t of m) d(t) || e.add(t);
+        e.size !== m.size && g(e);
+    }, [m]);
+    let S = r.useCallback(
+            (e) => {
+                let { assetNode: t, nodeId: i, errorPrefix: r, errorMessage: s } = e;
+                if (n || null == h) return;
+                let c = (0, a.vq)(t, HTMLVideoElement) ? t.networkState : void 0;
+                o.default.track(u.HAw.QUEST_ASSET_LOADING_FAILURE, {
+                    source: h,
+                    quest_id: f,
+                    asset_id: _(t),
+                    video_network_state: c,
+                }),
+                    l.A.captureException(Error(`${r}: ${null != s ? `${s}, ` : ""}${_(t)}, ${i}`), {
+                        tags: { source: h },
+                    }),
+                    E(!0);
+            },
+            [n, h, f],
+        ),
+        y = r.useCallback((e) => {
+            g((t) => {
+                let n = new Set(t);
+                return n.delete(e), n;
+            });
+        }, []),
+        C = r.useCallback(
+            (e, t) => {
+                I(!0);
+                let n = (0, a.vq)(e, HTMLImageElement)
+                        ? "load"
+                        : (0, a.vq)(e, HTMLVideoElement)
+                          ? "canplaythrough"
+                          : ((0, a.vq)(e, HTMLDivElement), "load"),
+                    i = new AbortController(),
+                    r = new s.A();
+                function o() {
+                    r.succeed(), y(e), e.removeEventListener(n, o);
+                }
+                function l(n) {
+                    c(),
+                        y(e),
+                        S({
+                            assetNode: e,
+                            nodeId: t,
+                            errorPrefix: "Error loading asset",
+                            errorMessage: "message" in n ? n.message : null,
+                        });
+                }
+                function u(t) {
+                    r.fails < 3 && (0, a.vq)(e, HTMLVideoElement)
+                        ? r.fail(() => {
+                              e.load();
+                          })
+                        : l(t);
+                }
+                if (
+                    (d(e) ||
+                        (g((t) => {
+                            let n = new Set(t);
+                            return n.add(e), n;
+                        }),
+                        e.addEventListener(n, o)),
+                    e.addEventListener("error", l, { signal: i.signal }),
+                    (0, a.vq)(e, HTMLVideoElement))
+                ) {
+                    let t = e.querySelectorAll("source"),
+                        n = t[t.length - 1];
+                    n?.addEventListener("error", u, { signal: i.signal });
+                }
+                function c() {
+                    if (
+                        (r.cancel(),
+                        i.abort(),
+                        e.removeEventListener(n, o),
+                        e.removeEventListener("error", l),
+                        (0, a.vq)(e, HTMLVideoElement))
+                    ) {
+                        let t = e.querySelectorAll("source"),
+                            n = t[t.length - 1];
+                        n?.removeEventListener("error", u);
+                    }
+                }
+                return c;
+            },
+            [S, y],
+        ),
+        N = r.useMemo(() => m.size > 0 || !A, [A, m]);
+    r.useEffect(() => {
+        N || (T.current = !0);
+    }, [N]);
+    let v = r.useMemo(
+        () => ({ registerAsset: C, unregisterAsset: y, hasError: p, isLoading: N && !T.current }),
+        [C, y, p, N],
+    );
+    return (0, i.jsx)(c.Provider, { value: v, children: t });
+}
+function f(e) {
+    let { id: t, children: n } = e,
+        { registerAsset: i, unregisterAsset: s } = r.useContext(c),
+        a = r.useRef(null);
+    return (
+        r.useEffect(() => {
+            let e,
+                n = a.current;
+            return (
+                null != n && (e = i(n, t)),
+                () => {
+                    e?.(), null != n && s(n);
+                }
+            );
+        }, [i, s, t]),
+        n(a)
+    );
+}
+function p() {
+    let { hasError: e, isLoading: t } = r.useContext(c);
+    return { hasError: e, isLoading: t };
+}

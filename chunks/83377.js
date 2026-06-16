@@ -1,1 +1,1 @@
-e.exports={U:"noticeContainer_f2a57a"}
+e.exports = { U: "noticeContainer_f2a57a" };

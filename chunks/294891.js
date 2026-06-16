@@ -1,1 +1,18 @@
-e.exports={jE:"modalContent_edf440",pd:"imageSelectionSection_edf440",f9:"optionsList_edf440",uK:"option_edf440",q3:"optionDescription_edf440",j5:"hasBoostingPill_edf440",Mn:"optionIconAndLabel_edf440",xo:"optionLabelText_edf440",Fy:"hasPremiumIcon_edf440",p8:"gifGrid_edf440",kU:"imageUploadOption_edf440",nX:"gif_edf440",T$:"premiumWheel_edf440",x9:"boostingPill_edf440",KQ:"imageSpecifications_edf440",Lu:"premiumUpsell_edf440"}
+e.exports = {
+    jE: "modalContent_edf440",
+    pd: "imageSelectionSection_edf440",
+    f9: "optionsList_edf440",
+    uK: "option_edf440",
+    q3: "optionDescription_edf440",
+    j5: "hasBoostingPill_edf440",
+    Mn: "optionIconAndLabel_edf440",
+    xo: "optionLabelText_edf440",
+    Fy: "hasPremiumIcon_edf440",
+    p8: "gifGrid_edf440",
+    kU: "imageUploadOption_edf440",
+    nX: "gif_edf440",
+    T$: "premiumWheel_edf440",
+    x9: "boostingPill_edf440",
+    KQ: "imageSpecifications_edf440",
+    Lu: "premiumUpsell_edf440",
+};

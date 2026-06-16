@@ -1,1 +1,55 @@
-r.d(t,{FY:()=>s,Ub:()=>c,j2:()=>o,pI:()=>d});var n=r(636537),a=r(136857),l=r(626584);r(739508);var i=r(652215);new l.A("OrderActionCreators");class s extends a.Ay{order;constructor(e){super("Order signing failed due to unsatisfied constraints"),this.order=e}}class o extends a.Ay{constructor(){super("Order signed but entitlements not yet visible after polling")}}async function c(e){let t,{orderId:r,expectedRevision:a,loadId:l}=e,o={};null!=a&&(o.expected_revision=a);try{t=await n.Bo.post({url:i.Rsh.ORDER_SIGN(r),body:o,context:null!=l&&""!==l?{load_id:l}:void 0,rejectWithError:!0})}catch(e){var c;if(e instanceof n.oh&&400===e.status&&null!=(c=e.body)&&"object"==typeof c&&"id"in c&&"status"in c)throw new s(e.body);throw e}if(null==t.body)throw Error("Invalid sign order response");return t.body}async function d(e){try{let t=await n.Bo.get({url:i.Rsh.ORDER_ENTITLEMENTS(e),rejectWithError:!1});return null!=t.body?t.body:[]}catch(e){return[]}}
+"use strict";
+n.d(t, { FY: () => o, Ub: () => u, j2: () => l, pI: () => c });
+var i = n(636537),
+    r = n(136857),
+    s = n(626584);
+n(739508);
+var a = n(652215);
+new s.A("OrderActionCreators");
+class o extends r.Ay {
+    order;
+    constructor(e) {
+        super("Order signing failed due to unsatisfied constraints"), (this.order = e);
+    }
+}
+class l extends r.Ay {
+    constructor() {
+        super("Order signed but entitlements not yet visible after polling");
+    }
+}
+async function u(e) {
+    let t,
+        { orderId: n, expectedRevision: r, loadId: s } = e,
+        l = {};
+    null != r && (l.expected_revision = r);
+    try {
+        t = await i.Bo.post({
+            url: a.Rsh.ORDER_SIGN(n),
+            body: l,
+            context: null != s && "" !== s ? { load_id: s } : void 0,
+            rejectWithError: !0,
+        });
+    } catch (e) {
+        var u;
+        if (
+            e instanceof i.oh &&
+            400 === e.status &&
+            null != (u = e.body) &&
+            "object" == typeof u &&
+            "id" in u &&
+            "status" in u
+        )
+            throw new o(e.body);
+        throw e;
+    }
+    if (null == t.body) throw Error("Invalid sign order response");
+    return t.body;
+}
+async function c(e) {
+    try {
+        let t = await i.Bo.get({ url: a.Rsh.ORDER_ENTITLEMENTS(e), rejectWithError: !1 });
+        return null != t.body ? t.body : [];
+    } catch (e) {
+        return [];
+    }
+}

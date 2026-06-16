@@ -1,1 +1,2 @@
-"use strict";e.exports=ReferenceError
+"use strict";
+e.exports = ReferenceError;

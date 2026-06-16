@@ -1,1 +1,101 @@
-n.d(t,{Bv:()=>_,ar:()=>h,f9:()=>b,g5:()=>I,k0:()=>x,k5:()=>T,nf:()=>A});var i=n(64700),r=n(989349),l=n.n(r),a=n(17928),s=n(155718),o=n(166403),c=n(89366),u=n(881489),d=n(945960),m=n(504836),g=n(422936),f=n(234419),p=n(788868);function h(){let e=(0,f.V)(),t=(0,c.QQ)(),n=(0,g.O)(),i=(0,g.p)(),r=T();return null!=e||t||null!=n||null!=i||r}let T=()=>{let e=(0,a.bG)([o.A],()=>o.A.getPremiumTypeSubscription()),t=e?.metadata?.active_discount_expires_at;return null!=t&&l()(Date.now())<=l()(t)},A=()=>{let e=(0,a.bG)([o.A],()=>o.A.getPremiumTypeSubscription()),t=e?.metadata?.active_discount_id;switch(t){case p.q:case p.lj:return{duration:1,percentage:30,discountId:t};case p.EG:case p.TU:case p.KG:return{duration:3,percentage:30,discountId:t};case p.HF:return{duration:1,percentage:40,discountId:t};case p.BR:return{duration:1,percentage:20,discountId:t};case p.CW:return{duration:1,percentage:25,discountId:t};case p.UX:return{duration:12,percentage:20,discountId:t};case p.RG:return{duration:12,percentage:30,discountId:t};case p.V2:return{duration:1,percentage:40,discountId:t};case p.xH:return{duration:3,percentage:30,discountId:t};default:return}},I=e=>{let[t,n]=i.useState(!1),[r,l]=i.useState(!1),[a,s]=i.useState(null);if(e)return{churnUserDiscountOffer:a,isFetchingChurnDiscountOffer:r};let o=()=>{n(!0),l(!1)};return r||t||(l(!0),(0,d.qz)().then(e=>{s(e),o()}).catch(e=>{o()})),{churnUserDiscountOffer:a,isFetchingChurnDiscountOffer:r}},b=()=>{let e=(0,a.bG)([o.A],()=>o.A.getPremiumTypeSubscription()),t=T(),n=(0,m.Z)({location:"churn_offer"}),i=null!==e&&e.hasPremiumNitroMonthly,r=!!e?.hasActiveTrial;return i&&!t&&(!r||n)},_=e=>{for(let t of e.invoiceItems){let e=t.discounts.find(e=>e.type===s.iS.SUBSCRIPTION_PLAN);if(null!=e)switch(e.discount_id){case p.q:return{duration:1,percentage:e.percentage_amount,discountId:e.discount_id};case p.EG:return{duration:3,percentage:e.percentage_amount,discountId:e.discount_id}}}return null},x=()=>(0,u.ds)()
+"use strict";
+n.d(t, { Bv: () => T, ar: () => E, f9: () => I, g5: () => A, k0: () => S, k5: () => m, nf: () => g });
+var i = n(64700),
+    r = n(989349),
+    s = n.n(r),
+    a = n(17928),
+    o = n(155718),
+    l = n(166403),
+    u = n(89366),
+    c = n(881489),
+    d = n(945960),
+    _ = n(504836),
+    h = n(422936),
+    f = n(234419),
+    p = n(788868);
+function E() {
+    let e = (0, f.V)(),
+        t = (0, u.QQ)(),
+        n = (0, h.O)(),
+        i = (0, h.p)(),
+        r = m();
+    return null != e || t || null != n || null != i || r;
+}
+let m = () => {
+        let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+            t = e?.metadata?.active_discount_expires_at;
+        return null != t && s()(Date.now()) <= s()(t);
+    },
+    g = () => {
+        let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+            t = e?.metadata?.active_discount_id;
+        switch (t) {
+            case p.q:
+            case p.lj:
+                return { duration: 1, percentage: 30, discountId: t };
+            case p.EG:
+            case p.TU:
+            case p.KG:
+                return { duration: 3, percentage: 30, discountId: t };
+            case p.HF:
+                return { duration: 1, percentage: 40, discountId: t };
+            case p.BR:
+                return { duration: 1, percentage: 20, discountId: t };
+            case p.CW:
+                return { duration: 1, percentage: 25, discountId: t };
+            case p.UX:
+                return { duration: 12, percentage: 20, discountId: t };
+            case p.RG:
+                return { duration: 12, percentage: 30, discountId: t };
+            case p.V2:
+                return { duration: 1, percentage: 40, discountId: t };
+            case p.xH:
+                return { duration: 3, percentage: 30, discountId: t };
+            default:
+                return;
+        }
+    },
+    A = (e) => {
+        let [t, n] = i.useState(!1),
+            [r, s] = i.useState(!1),
+            [a, o] = i.useState(null);
+        if (e) return { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: r };
+        let l = () => {
+            n(!0), s(!1);
+        };
+        return (
+            r ||
+                t ||
+                (s(!0),
+                (0, d.qz)()
+                    .then((e) => {
+                        o(e), l();
+                    })
+                    .catch((e) => {
+                        l();
+                    })),
+            { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: r }
+        );
+    },
+    I = () => {
+        let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+            t = m(),
+            n = (0, _.Z)({ location: "churn_offer" }),
+            i = null !== e && e.hasPremiumNitroMonthly,
+            r = !!e?.hasActiveTrial;
+        return i && !t && (!r || n);
+    },
+    T = (e) => {
+        for (let t of e.invoiceItems) {
+            let e = t.discounts.find((e) => e.type === o.iS.SUBSCRIPTION_PLAN);
+            if (null != e)
+                switch (e.discount_id) {
+                    case p.q:
+                        return { duration: 1, percentage: e.percentage_amount, discountId: e.discount_id };
+                    case p.EG:
+                        return { duration: 3, percentage: e.percentage_amount, discountId: e.discount_id };
+                }
+        }
+        return null;
+    },
+    S = () => (0, c.ds)();

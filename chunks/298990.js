@@ -1,1 +1,19 @@
-n.d(e,{Jb:()=>o,b4:()=>r,oR:()=>a,qf:()=>l});var i=n(228366);function l(t,e,n){return new Promise(l=>{setTimeout(()=>{i.h.dispatch({type:"ACTIVITY_INVITE_MODAL_OPEN",activity:t,isPrivate:e,context:n,resolve:l})},0)})}function a(t){i.h.dispatch({type:"ACTIVITY_INVITE_MODAL_QUERY",query:t})}function r(t){i.h.dispatch({type:"ACTIVITY_INVITE_MODAL_SEND",channelId:t})}function o(t){i.h.dispatch({type:"ACTIVITY_INVITE_MODAL_SEND",userId:t})}
+"use strict";
+n.d(t, { Jb: () => o, b4: () => a, oR: () => s, qf: () => r });
+var i = n(228366);
+function r(e, t, n) {
+    return new Promise((r) => {
+        setTimeout(() => {
+            i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_OPEN", activity: e, isPrivate: t, context: n, resolve: r });
+        }, 0);
+    });
+}
+function s(e) {
+    i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_QUERY", query: e });
+}
+function a(e) {
+    i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", channelId: e });
+}
+function o(e) {
+    i.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_SEND", userId: e });
+}

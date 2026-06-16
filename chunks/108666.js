@@ -1,1 +1,1 @@
-e.exports={e:"credential_ef7bc0"}
+e.exports = { e: "credential_ef7bc0" };

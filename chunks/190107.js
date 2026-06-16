@@ -1,1 +1,221 @@
-"use strict";n.d(t,{yr:()=>j,Fw:()=>F,Ko:()=>N,ej:()=>k,K3:()=>q,hK:()=>H,ZV:()=>y,J6:()=>W,zO:()=>z,rE:()=>I,eA:()=>G,tZ:()=>S,Ls:()=>$,Li:()=>f.L,K:()=>L,BQ:()=>Q,fP:()=>x,B3:()=>K,gB:()=>B,A6:()=>C,fO:()=>R,Pc:()=>Z,mg:()=>U,ls:()=>D,uz:()=>Y,Tz:()=>T,aA:()=>v,i$:()=>b,WQ:()=>J,aJ:()=>V,CI:()=>P,pc:()=>et,GD:()=>M,qh:()=>O,kL:()=>X,TY:()=>A});var i,r,s,a,o,l,u,c,d,_=n(735438),h=n(412703),f=n(902173),p=((i={})[i.ConsecutiveHeartbeatPeriodMinutes=2]="ConsecutiveHeartbeatPeriodMinutes",i[i.StatusLookbackPeriodDays=30]="StatusLookbackPeriodDays",i),E=n(636537),m=n(927813),g=n(507107);let A={GIFT_INVENTORY_SETTINGS_BADGE:1,QUEST_BAR:2,QUEST_BAR_V2:2,QUEST_BAR_MOBILE:2,ACTIVITY_PANEL:4,QUEST_LIVE_STREAM:8};var I=((r={}).ACTIVITY_PANEL="quests_bar_activity_panel",r.QUESTS_MANAGER="quests_manager",r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER="quests_console_optimistic_updates_manager",r.USER_SETTINGS_GIFT_INVENTORY="user_settings_gift_inventory",r.USER_SETTINGS_SEARCH_GIFT_INVENTORY="user_settings_search_gift_inventory",r.USE_QUESTS="use_quests",r.STREAM_SOURCE_SELECT="stream_source_select",r.MEMBERS_LIST="members_list",r.QUESTS_BAR="quests_bar",r.QUESTS_BAR_MOBILE="quests_bar_mobile",r.REWARD_CODE_MODAL="reward_code_modal",r.INGAME_REWARD_MODAL="ingame_reward_modal",r.INGAME_CONNECTION_MODAL="ingame_connection_modal",r.COLLECTIBLE_REWARD_MODAL="collectible_reward_modal",r.ORBS_REWARD_MODAL="orbs_reward_modal",r.QUESTS_MINOR_REWARD_CAPPING_CONFIG="QUESTS_MINOR_REWARD_CAPPING_CONFIG",r.QUESTS_CARD="quests_card",r.QUESTS_STORE="quests_store",r.QUEST_CHANNEL_CALL_HEADER="quests_channel_call_header",r.QUEST_HOME_DESKTOP="quest_home_desktop",r.QUEST_HOME_MOBILE="quest_home_mobile",r.QUEST_PROGRESS_BAR="quest_progress_bar",r.EMBED_MOBILE="embed_mobile",r.EMBED_DESKTOP="embed_desktop",r.QUEST_CONTEXT_MENU="context_menu",r.CODED_LINK="coded_link",r.QUEST_DISCLOSURE_MODAL="quest_disclosure_modal",r.DISCOVERY_SIDEBAR="discovery_sidebar",r.DISCOVERY_COMPASS="discovery_compass",r.BADGE="badge",r.COLLECTIBLES_SHOP_HEADER_BAR="collectibles_shop_header_bar",r.ORBS_ANNOUNCEMENT_MODAL="orbs_announcement_modal",r.CONFLICT_CHECKS="conflict_checks",r.VIDEO_MODAL="video_modal",r.VIDEO_MODAL_MOBILE="video_modal_mobile",r.GAME_WIDGETS_POPOVER="game_widgets_popover",r.PRIVATE_CHANNELS_LIST="private_channels_list",r.INTERNAL_TOOLING="internal_tooling",r.QUEST_HOME_MOVED_CALLOUT="quest_home_moved_callout",r.IN_APP_NAVIGATION="in_app_navigation",r.QUEST_DEEP_LINK_UTIL="quest_deep_link_util",r.YOU_TAB_PROFILE_HEADER="you_tab_profile_header",r.QUEST_INSTRUCTIONS="quest_instructions",r.QUEST_ACTIVITY_BOTTOM_SHEET="quest_activity_bottom_sheet",r.QUEST_PRIMARY_CTA="quest_primary_cta",r.QUEST_ACTIVITY_HEADER="quest_activity_header",r.QUEST_ACTIVITY_UNENROLLED_MODAL="quest_activity_unenrolled_modal",r.NITRO_HOME_MARKETING="nitro_home_marketing",r.NITRO_HOME_TAB="nitro_home_tab",r.QUEST_ORB_MULTIPLIER_TAB_TOOLTIP="quest_orb_multiplier_tab_tooltip",r.PLAY_QUEST_CONNECTION_MODAL="play_quest_connection_modal",r);let T=new Set([f.L.NITRO_2_POINT_0_CTA,f.L.ORBS_MULTIPLIER_QUEST,f.L.XBOX_GAME_PASS_QUEST]),S=m.A.Millis.MINUTE*p.ConsecutiveHeartbeatPeriodMinutes,y={tension:900,friction:45,clamp:!0},N={tension:360,friction:30,clamp:!0},v=6,C=2;var R=((s={}).CONSOLE="CONSOLE",s.DESKTOP="DESKTOP",s),O=((a={}).IN_GAME="in_game",a.WEB="web",a);let b=454,D=190,L=2,w=(0,E.TP)(),M=-1!==w.indexOf("localhost")||-1!==w.indexOf("127.0.0.1")?`${w}/_cdn_storage/`:"https://cdn.discordapp.com/",P=M+"quests/";var x=((o={}).COLLAPSED="collapsed",o.EXPANDED="expanded",o.CLOSED="closed",o.SOFT_DISMISSED="soft-dismissed",o.RESET_TO_PREVIOUS="reset-to-previous",o);let k="545364944258990091",U="{reward_code}";var G=((l={}).EXCLUDED_QUEST="excluded_quest",l.UNKNOWN_QUEST="unknown_quest",l.NOT_SHAREABLE_QUEST="not_shareable_quest",l);let F="1333839522189938740",V="1410358070831480904",B="1420556874629251124",H="1402418703554842694",j="1496993616537587813",Y="1496993616537587812",W=new Set([g.yW.DESKTOP_ACCOUNT_PANEL_AREA,g.yW.MOBILE_HOME_DOCK_AREA,g.yW.QUEST_HOME_BANNER_DESKTOP,g.yW.QUEST_HOME_MOBILE_CAROUSEL,g.yW.VIDEO_MODAL_MOBILE]),K=new Set([h.n.STREAM_ON_DESKTOP,h.n.PLAY_ON_DESKTOP,h.n.PLAY_ON_XBOX,h.n.PLAY_ON_PLAYSTATION,h.n.PLAY_ACTIVITY]),$=new Set([h.n.STREAM_ON_DESKTOP,h.n.PLAY_ON_DESKTOP,h.n.PLAY_ON_XBOX,h.n.PLAY_ON_PLAYSTATION,h.n.PLAY_ACTIVITY]),z=new Set([h.n.STREAM_ON_DESKTOP,h.n.PLAY_ON_DESKTOP,h.n.PLAY_ON_XBOX,h.n.PLAY_ON_PLAYSTATION,h.n.PLAY_ACTIVITY]),q={is_targeted:!1};var X=((u={}).SUGGESTED="suggested",u.MOST_RECENT="most_recent",u.EXPIRING_SOON="expiring_soon",u.RECENTLY_ENROLLED="recently_enrolled",u),Z=((c={}).VIDEO="task_video",c.PLAY="task_play",c),Q=((d={}).VIRTUAL_CURRENCY="reward_virtual_currency",d.COLLECTIBLE="reward_collectible",d.IN_GAME="reward_in_game",d);function J(e){return Object.values(Z).includes(e)?{group:"task",filter:e}:Object.values(Q).includes(e)?{group:"reward",filter:e}:null}let ee=["reward","task"],et=Object.entries((0,_.groupBy)([{group:"task",filter:"task_play"},{group:"task",filter:"task_video"},{group:"reward",filter:"reward_virtual_currency"},{group:"reward",filter:"reward_collectible"},{group:"reward",filter:"reward_in_game"}],"group")).sort((e,t)=>{let n=ee.indexOf(e[0]),i=ee.indexOf(t[0]);return n<i?-1:+(i<n)})
+"use strict";
+n.d(t, {
+    yr: () => H,
+    Fw: () => F,
+    Ko: () => C,
+    ej: () => k,
+    K3: () => q,
+    hK: () => j,
+    ZV: () => y,
+    J6: () => W,
+    zO: () => z,
+    rE: () => I,
+    eA: () => G,
+    tZ: () => S,
+    Ls: () => $,
+    Li: () => f.L,
+    K: () => L,
+    BQ: () => Q,
+    fP: () => x,
+    B3: () => K,
+    gB: () => B,
+    A6: () => v,
+    fO: () => R,
+    Pc: () => X,
+    mg: () => U,
+    ls: () => D,
+    uz: () => Y,
+    Tz: () => T,
+    aA: () => N,
+    i$: () => b,
+    WQ: () => J,
+    aJ: () => V,
+    CI: () => P,
+    pc: () => et,
+    GD: () => M,
+    qh: () => O,
+    kL: () => Z,
+    TY: () => A,
+});
+var i,
+    r,
+    s,
+    a,
+    o,
+    l,
+    u,
+    c,
+    d,
+    _ = n(735438),
+    h = n(412703),
+    f = n(902173),
+    p =
+        (((i = {})[(i.ConsecutiveHeartbeatPeriodMinutes = 2)] = "ConsecutiveHeartbeatPeriodMinutes"),
+        (i[(i.StatusLookbackPeriodDays = 30)] = "StatusLookbackPeriodDays"),
+        i),
+    E = n(636537),
+    m = n(927813),
+    g = n(507107);
+let A = {
+    GIFT_INVENTORY_SETTINGS_BADGE: 1,
+    QUEST_BAR: 2,
+    QUEST_BAR_V2: 2,
+    QUEST_BAR_MOBILE: 2,
+    ACTIVITY_PANEL: 4,
+    QUEST_LIVE_STREAM: 8,
+};
+var I =
+    (((r = {}).ACTIVITY_PANEL = "quests_bar_activity_panel"),
+    (r.QUESTS_MANAGER = "quests_manager"),
+    (r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),
+    (r.USER_SETTINGS_GIFT_INVENTORY = "user_settings_gift_inventory"),
+    (r.USER_SETTINGS_SEARCH_GIFT_INVENTORY = "user_settings_search_gift_inventory"),
+    (r.USE_QUESTS = "use_quests"),
+    (r.STREAM_SOURCE_SELECT = "stream_source_select"),
+    (r.MEMBERS_LIST = "members_list"),
+    (r.QUESTS_BAR = "quests_bar"),
+    (r.QUESTS_BAR_MOBILE = "quests_bar_mobile"),
+    (r.REWARD_CODE_MODAL = "reward_code_modal"),
+    (r.INGAME_REWARD_MODAL = "ingame_reward_modal"),
+    (r.INGAME_CONNECTION_MODAL = "ingame_connection_modal"),
+    (r.COLLECTIBLE_REWARD_MODAL = "collectible_reward_modal"),
+    (r.ORBS_REWARD_MODAL = "orbs_reward_modal"),
+    (r.QUESTS_MINOR_REWARD_CAPPING_CONFIG = "QUESTS_MINOR_REWARD_CAPPING_CONFIG"),
+    (r.QUESTS_CARD = "quests_card"),
+    (r.QUESTS_STORE = "quests_store"),
+    (r.QUEST_CHANNEL_CALL_HEADER = "quests_channel_call_header"),
+    (r.QUEST_HOME_DESKTOP = "quest_home_desktop"),
+    (r.QUEST_HOME_MOBILE = "quest_home_mobile"),
+    (r.QUEST_PROGRESS_BAR = "quest_progress_bar"),
+    (r.EMBED_MOBILE = "embed_mobile"),
+    (r.EMBED_DESKTOP = "embed_desktop"),
+    (r.QUEST_CONTEXT_MENU = "context_menu"),
+    (r.CODED_LINK = "coded_link"),
+    (r.QUEST_DISCLOSURE_MODAL = "quest_disclosure_modal"),
+    (r.DISCOVERY_SIDEBAR = "discovery_sidebar"),
+    (r.DISCOVERY_COMPASS = "discovery_compass"),
+    (r.BADGE = "badge"),
+    (r.COLLECTIBLES_SHOP_HEADER_BAR = "collectibles_shop_header_bar"),
+    (r.ORBS_ANNOUNCEMENT_MODAL = "orbs_announcement_modal"),
+    (r.CONFLICT_CHECKS = "conflict_checks"),
+    (r.VIDEO_MODAL = "video_modal"),
+    (r.VIDEO_MODAL_MOBILE = "video_modal_mobile"),
+    (r.GAME_WIDGETS_POPOVER = "game_widgets_popover"),
+    (r.PRIVATE_CHANNELS_LIST = "private_channels_list"),
+    (r.INTERNAL_TOOLING = "internal_tooling"),
+    (r.QUEST_HOME_MOVED_CALLOUT = "quest_home_moved_callout"),
+    (r.IN_APP_NAVIGATION = "in_app_navigation"),
+    (r.QUEST_DEEP_LINK_UTIL = "quest_deep_link_util"),
+    (r.YOU_TAB_PROFILE_HEADER = "you_tab_profile_header"),
+    (r.QUEST_INSTRUCTIONS = "quest_instructions"),
+    (r.QUEST_ACTIVITY_BOTTOM_SHEET = "quest_activity_bottom_sheet"),
+    (r.QUEST_PRIMARY_CTA = "quest_primary_cta"),
+    (r.QUEST_ACTIVITY_HEADER = "quest_activity_header"),
+    (r.QUEST_ACTIVITY_UNENROLLED_MODAL = "quest_activity_unenrolled_modal"),
+    (r.NITRO_HOME_MARKETING = "nitro_home_marketing"),
+    (r.NITRO_HOME_TAB = "nitro_home_tab"),
+    (r.QUEST_ORB_MULTIPLIER_TAB_TOOLTIP = "quest_orb_multiplier_tab_tooltip"),
+    (r.PLAY_QUEST_CONNECTION_MODAL = "play_quest_connection_modal"),
+    r);
+let T = new Set([f.L.NITRO_2_POINT_0_CTA, f.L.ORBS_MULTIPLIER_QUEST, f.L.XBOX_GAME_PASS_QUEST]),
+    S = m.A.Millis.MINUTE * p.ConsecutiveHeartbeatPeriodMinutes,
+    y = { tension: 900, friction: 45, clamp: !0 },
+    C = { tension: 360, friction: 30, clamp: !0 },
+    N = 6,
+    v = 2;
+var R = (((s = {}).CONSOLE = "CONSOLE"), (s.DESKTOP = "DESKTOP"), s),
+    O = (((a = {}).IN_GAME = "in_game"), (a.WEB = "web"), a);
+let b = 454,
+    D = 190,
+    L = 2,
+    w = (0, E.TP)(),
+    M =
+        -1 !== w.indexOf("localhost") || -1 !== w.indexOf("127.0.0.1")
+            ? `${w}/_cdn_storage/`
+            : "https://cdn.discordapp.com/",
+    P = M + "quests/";
+var x =
+    (((o = {}).COLLAPSED = "collapsed"),
+    (o.EXPANDED = "expanded"),
+    (o.CLOSED = "closed"),
+    (o.SOFT_DISMISSED = "soft-dismissed"),
+    (o.RESET_TO_PREVIOUS = "reset-to-previous"),
+    o);
+let k = "545364944258990091",
+    U = "{reward_code}";
+var G =
+    (((l = {}).EXCLUDED_QUEST = "excluded_quest"),
+    (l.UNKNOWN_QUEST = "unknown_quest"),
+    (l.NOT_SHAREABLE_QUEST = "not_shareable_quest"),
+    l);
+let F = "1333839522189938740",
+    V = "1410358070831480904",
+    B = "1420556874629251124",
+    j = "1402418703554842694",
+    H = "1496993616537587813",
+    Y = "1496993616537587812",
+    W = new Set([
+        g.yW.DESKTOP_ACCOUNT_PANEL_AREA,
+        g.yW.MOBILE_HOME_DOCK_AREA,
+        g.yW.QUEST_HOME_BANNER_DESKTOP,
+        g.yW.QUEST_HOME_MOBILE_CAROUSEL,
+        g.yW.VIDEO_MODAL_MOBILE,
+    ]),
+    K = new Set([
+        h.n.STREAM_ON_DESKTOP,
+        h.n.PLAY_ON_DESKTOP,
+        h.n.PLAY_ON_XBOX,
+        h.n.PLAY_ON_PLAYSTATION,
+        h.n.PLAY_ACTIVITY,
+    ]),
+    $ = new Set([
+        h.n.STREAM_ON_DESKTOP,
+        h.n.PLAY_ON_DESKTOP,
+        h.n.PLAY_ON_XBOX,
+        h.n.PLAY_ON_PLAYSTATION,
+        h.n.PLAY_ACTIVITY,
+    ]),
+    z = new Set([
+        h.n.STREAM_ON_DESKTOP,
+        h.n.PLAY_ON_DESKTOP,
+        h.n.PLAY_ON_XBOX,
+        h.n.PLAY_ON_PLAYSTATION,
+        h.n.PLAY_ACTIVITY,
+    ]),
+    q = { is_targeted: !1 };
+var Z =
+        (((u = {}).SUGGESTED = "suggested"),
+        (u.MOST_RECENT = "most_recent"),
+        (u.EXPIRING_SOON = "expiring_soon"),
+        (u.RECENTLY_ENROLLED = "recently_enrolled"),
+        u),
+    X = (((c = {}).VIDEO = "task_video"), (c.PLAY = "task_play"), c),
+    Q =
+        (((d = {}).VIRTUAL_CURRENCY = "reward_virtual_currency"),
+        (d.COLLECTIBLE = "reward_collectible"),
+        (d.IN_GAME = "reward_in_game"),
+        d);
+function J(e) {
+    return Object.values(X).includes(e)
+        ? { group: "task", filter: e }
+        : Object.values(Q).includes(e)
+          ? { group: "reward", filter: e }
+          : null;
+}
+let ee = ["reward", "task"],
+    et = Object.entries(
+        (0, _.groupBy)(
+            [
+                { group: "task", filter: "task_play" },
+                { group: "task", filter: "task_video" },
+                { group: "reward", filter: "reward_virtual_currency" },
+                { group: "reward", filter: "reward_collectible" },
+                { group: "reward", filter: "reward_in_game" },
+            ],
+            "group",
+        ),
+    ).sort((e, t) => {
+        let n = ee.indexOf(e[0]),
+            i = ee.indexOf(t[0]);
+        return n < i ? -1 : +(i < n);
+    });

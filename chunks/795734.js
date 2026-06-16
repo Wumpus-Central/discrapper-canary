@@ -1,1 +1,7 @@
-"use strict";var i=n(439619)("%String%"),r=n(741623);e.exports=function(e){if("symbol"==typeof e)throw new r("Cannot convert a Symbol value to a string");return i(e)}
+"use strict";
+var i = n(439619)("%String%"),
+    r = n(741623);
+e.exports = function (e) {
+    if ("symbol" == typeof e) throw new r("Cannot convert a Symbol value to a string");
+    return i(e);
+};

@@ -1,1 +1,29 @@
-e.d(i,{A:()=>h});var n=e(627968);e(64700);var r=e(17928),l=e(477782),s=e(734057),a=e(71393),u=e(576705),d=e(287809),c=e(849736),p=e(312006),A=e(652215),g=e(375708);function h(t,i,e){let h=s.A.getChannel(e),o=(0,r.bG)([a.A],()=>a.A.getGuild(i),[i]),b=(0,r.bG)([p.Ay],()=>p.Ay.getPermissionsForUser(t.id,e),[e,t.id]),C=d.default.getCurrentUser()?.id===t.id,k=(0,r.bG)([u.A],()=>null!=e&&u.A.canWithPartialContext(A.xBc.MUTE_MEMBERS,{channelId:e}),[e]);return null!=h&&null!=o&&(k||C)&&b.speaker?(0,n.jsx)(l.Dr,{id:"audience",label:C?g.intl.string(g.t["6C6PJx"]):g.intl.string(g.t.VK3vQy),action:()=>{C?(0,c.Tf)(h):(0,c.gt)(t,h)}}):null}
+e.d(i, { A: () => h });
+var n = e(627968);
+e(64700);
+var r = e(17928),
+    l = e(477782),
+    s = e(734057),
+    a = e(71393),
+    u = e(576705),
+    d = e(287809),
+    c = e(849736),
+    p = e(312006),
+    A = e(652215),
+    g = e(375708);
+function h(t, i, e) {
+    let h = s.A.getChannel(e),
+        o = (0, r.bG)([a.A], () => a.A.getGuild(i), [i]),
+        b = (0, r.bG)([p.Ay], () => p.Ay.getPermissionsForUser(t.id, e), [e, t.id]),
+        C = d.default.getCurrentUser()?.id === t.id,
+        k = (0, r.bG)([u.A], () => null != e && u.A.canWithPartialContext(A.xBc.MUTE_MEMBERS, { channelId: e }), [e]);
+    return null != h && null != o && (k || C) && b.speaker
+        ? (0, n.jsx)(l.Dr, {
+              id: "audience",
+              label: C ? g.intl.string(g.t["6C6PJx"]) : g.intl.string(g.t.VK3vQy),
+              action: () => {
+                  C ? (0, c.Tf)(h) : (0, c.gt)(t, h);
+              },
+          })
+        : null;
+}

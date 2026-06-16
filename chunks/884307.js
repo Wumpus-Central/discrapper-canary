@@ -1,1 +1,1 @@
-_.exports={y:"categorySubGroup_ed5050"}
+_.exports = { y: "categorySubGroup_ed5050" };

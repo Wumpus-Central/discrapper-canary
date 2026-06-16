@@ -1,1 +1,95 @@
-"use strict";n.d(t,{Bh:()=>E,MW:()=>m,ud:()=>I,wz:()=>T});var i=n(64700),r=n(136722),s=n(17928),a=n(155718),o=n(164956),l=n(386171),u=n(95701),c=n(495544),d=n(734057),_=n(696451),h=n(576705),f=n(287809),p=n(652215);function E(e,t){let n,i=null!=(n=e instanceof u.YB&&e.isThread()?d.A.getChannel(e.parent_id)??e:e)?T(n):void 0,r=(0,l.S9)(),s=c.default.getId(),a=f.default.getCurrentUser()?.nsfwAllowed??!1,h=null!=i?_.Ay.getMember(i,s)?.roles??[]:[],p=o.A.isViewingRoles(i),{computedPermissions:E,hasBaseAccessPermissions:m,hasSendMessagesPermission:I}=A(n,e instanceof u.YB&&e.isThread());return{context:n,userId:s,roleIds:h,isImpersonating:p,commandTypes:t,computedPermissions:E,hasBaseAccessPermissions:m,hasSendMessagesPermission:I,allowNsfw:g(n,a,r)}}function m(e,t){let n=i.useMemo(()=>e instanceof u.YB&&e.isThread()?d.A.getChannel(e.parent_id)??e:e,[e]),r=null!=n?T(n):void 0,a=(0,l.hT)(),h=(0,s.bG)([c.default],()=>c.default.getId()),p=(0,s.bG)([f.default],()=>f.default.getCurrentUser()?.nsfwAllowed??!1),E=(0,s.yK)([_.Ay],()=>null!=r?_.Ay.getMember(r,h)?.roles??[]:[]),m=(0,s.bG)([o.A],()=>o.A.isViewingRoles(r));return i.useMemo(()=>{let{computedPermissions:i,hasBaseAccessPermissions:r,hasSendMessagesPermission:s}=A(n,e instanceof u.YB&&e.isThread());return{context:n,userId:h,roleIds:E,commandTypes:t,isImpersonating:m,computedPermissions:i,hasBaseAccessPermissions:r,hasSendMessagesPermission:s,allowNsfw:g(n,p,a)}},[t,n,m,E,h,p,a,e])}function g(e,t,n){return!!t&&(!(e instanceof u.YB)||(null!=e.guild_id?e.nsfw:n))}function A(e,t){let n,i;if(e instanceof u.YB&&e.isPrivate()||null==e)return{computedPermissions:r.iu(0),hasBaseAccessPermissions:!0,hasSendMessagesPermission:!0};let s=h.A.computePermissions(e);return r.zy(s,p.xBc.ADMINISTRATOR)?(n=!0,i=!0):e instanceof u.YB?(n=r.zy(s,p.xBc.VIEW_CHANNEL)&&r.zy(s,p.xBc.USE_APPLICATION_COMMANDS),i=t?r.zy(s,p.xBc.SEND_MESSAGES_IN_THREADS):r.zy(s,p.xBc.SEND_MESSAGES)):(n=r.zy(s,p.xBc.VIEW_CHANNEL),i=!0),{computedPermissions:s,hasBaseAccessPermissions:n,hasSendMessagesPermission:i}}function I(e,t){return e instanceof u.YB&&e?.guild_id==null?e?.type===p.rbe.DM&&e?.getRecipientId()===t?a.OL.BOT_DM:a.OL.PRIVATE_CHANNEL:a.OL.GUILD}function T(e){return e instanceof u.YB?e.guild_id:e.id}
+"use strict";
+n.d(t, { Bh: () => E, MW: () => m, ud: () => I, wz: () => T });
+var i = n(64700),
+    r = n(136722),
+    s = n(17928),
+    a = n(155718),
+    o = n(164956),
+    l = n(386171),
+    u = n(95701),
+    c = n(495544),
+    d = n(734057),
+    _ = n(696451),
+    h = n(576705),
+    f = n(287809),
+    p = n(652215);
+function E(e, t) {
+    let n,
+        i = null != (n = e instanceof u.YB && e.isThread() ? (d.A.getChannel(e.parent_id) ?? e) : e) ? T(n) : void 0,
+        r = (0, l.S9)(),
+        s = c.default.getId(),
+        a = f.default.getCurrentUser()?.nsfwAllowed ?? !1,
+        h = null != i ? (_.Ay.getMember(i, s)?.roles ?? []) : [],
+        p = o.A.isViewingRoles(i),
+        {
+            computedPermissions: E,
+            hasBaseAccessPermissions: m,
+            hasSendMessagesPermission: I,
+        } = A(n, e instanceof u.YB && e.isThread());
+    return {
+        context: n,
+        userId: s,
+        roleIds: h,
+        isImpersonating: p,
+        commandTypes: t,
+        computedPermissions: E,
+        hasBaseAccessPermissions: m,
+        hasSendMessagesPermission: I,
+        allowNsfw: g(n, a, r),
+    };
+}
+function m(e, t) {
+    let n = i.useMemo(() => (e instanceof u.YB && e.isThread() ? (d.A.getChannel(e.parent_id) ?? e) : e), [e]),
+        r = null != n ? T(n) : void 0,
+        a = (0, l.hT)(),
+        h = (0, s.bG)([c.default], () => c.default.getId()),
+        p = (0, s.bG)([f.default], () => f.default.getCurrentUser()?.nsfwAllowed ?? !1),
+        E = (0, s.yK)([_.Ay], () => (null != r ? (_.Ay.getMember(r, h)?.roles ?? []) : [])),
+        m = (0, s.bG)([o.A], () => o.A.isViewingRoles(r));
+    return i.useMemo(() => {
+        let {
+            computedPermissions: i,
+            hasBaseAccessPermissions: r,
+            hasSendMessagesPermission: s,
+        } = A(n, e instanceof u.YB && e.isThread());
+        return {
+            context: n,
+            userId: h,
+            roleIds: E,
+            commandTypes: t,
+            isImpersonating: m,
+            computedPermissions: i,
+            hasBaseAccessPermissions: r,
+            hasSendMessagesPermission: s,
+            allowNsfw: g(n, p, a),
+        };
+    }, [t, n, m, E, h, p, a, e]);
+}
+function g(e, t, n) {
+    return !!t && (!(e instanceof u.YB) || (null != e.guild_id ? e.nsfw : n));
+}
+function A(e, t) {
+    let n, i;
+    if ((e instanceof u.YB && e.isPrivate()) || null == e)
+        return { computedPermissions: r.iu(0), hasBaseAccessPermissions: !0, hasSendMessagesPermission: !0 };
+    let s = h.A.computePermissions(e);
+    return (
+        r.zy(s, p.xBc.ADMINISTRATOR)
+            ? ((n = !0), (i = !0))
+            : e instanceof u.YB
+              ? ((n = r.zy(s, p.xBc.VIEW_CHANNEL) && r.zy(s, p.xBc.USE_APPLICATION_COMMANDS)),
+                (i = t ? r.zy(s, p.xBc.SEND_MESSAGES_IN_THREADS) : r.zy(s, p.xBc.SEND_MESSAGES)))
+              : ((n = r.zy(s, p.xBc.VIEW_CHANNEL)), (i = !0)),
+        { computedPermissions: s, hasBaseAccessPermissions: n, hasSendMessagesPermission: i }
+    );
+}
+function I(e, t) {
+    return e instanceof u.YB && e?.guild_id == null
+        ? e?.type === p.rbe.DM && e?.getRecipientId() === t
+            ? a.OL.BOT_DM
+            : a.OL.PRIVATE_CHANNEL
+        : a.OL.GUILD;
+}
+function T(e) {
+    return e instanceof u.YB ? e.guild_id : e.id;
+}

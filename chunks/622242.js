@@ -1,1 +1,11 @@
-"use strict";n.d(t,{k:()=>r});var i,r=((i={}).FATAL="fatal",i.ERROR="error",i.WARNING="warning",i.LOG="log",i.INFO="info",i.DEBUG="debug",i)
+"use strict";
+n.d(t, { k: () => r });
+var i,
+    r =
+        (((i = {}).FATAL = "fatal"),
+        (i.ERROR = "error"),
+        (i.WARNING = "warning"),
+        (i.LOG = "log"),
+        (i.INFO = "info"),
+        (i.DEBUG = "debug"),
+        i);

@@ -1,1 +1,41 @@
-i.d(a,{A:()=>A}),i(321073);var l,s=i(627968),E=i(64700),n=i(189213),c=i(82002),r=((l=r||{}).UPGRADE="UPGRADE",l.CANCEL="CANCEL",l.UNVERIFIED="UNVERIFIED",l.UNCLAIMED="UNCLAIMED",l.GRANDFATHERED="GRANDFATHERED",l);let t={UPGRADE:"imageUpgrade",CANCEL:"imageCancel",UNVERIFIED:"imageUnverified",UNCLAIMED:"imageUnclaimed",GRANDFATHERED:"imageCancel"},C=e=>{let{children:a,premiumModalType:i,primary:l,secondary:r,...C}=e,A=E.useMemo(()=>{let e=[];return null!=r&&e.push({variant:"secondary",text:r.label,onClick:r.onClick}),null!=l&&e.push({variant:"primary",text:l.label,onClick:l.onClick}),e},[l,r]);return(0,s.jsxs)(n.Modal,{...C,actions:A,children:[(0,s.jsx)("div",{className:c[t[i]]}),(0,s.jsx)("div",{className:c.message,children:a})]})};C.Types=r;let A=C
+i.d(a, { A: () => A }), i(321073);
+var l,
+    s = i(627968),
+    E = i(64700),
+    n = i(189213),
+    c = i(82002),
+    r =
+        (((l = r || {}).UPGRADE = "UPGRADE"),
+        (l.CANCEL = "CANCEL"),
+        (l.UNVERIFIED = "UNVERIFIED"),
+        (l.UNCLAIMED = "UNCLAIMED"),
+        (l.GRANDFATHERED = "GRANDFATHERED"),
+        l);
+let t = {
+        UPGRADE: "imageUpgrade",
+        CANCEL: "imageCancel",
+        UNVERIFIED: "imageUnverified",
+        UNCLAIMED: "imageUnclaimed",
+        GRANDFATHERED: "imageCancel",
+    },
+    C = (e) => {
+        let { children: a, premiumModalType: i, primary: l, secondary: r, ...C } = e,
+            A = E.useMemo(() => {
+                let e = [];
+                return (
+                    null != r && e.push({ variant: "secondary", text: r.label, onClick: r.onClick }),
+                    null != l && e.push({ variant: "primary", text: l.label, onClick: l.onClick }),
+                    e
+                );
+            }, [l, r]);
+        return (0, s.jsxs)(n.Modal, {
+            ...C,
+            actions: A,
+            children: [
+                (0, s.jsx)("div", { className: c[t[i]] }),
+                (0, s.jsx)("div", { className: c.message, children: a }),
+            ],
+        });
+    };
+C.Types = r;
+let A = C;

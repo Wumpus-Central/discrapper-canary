@@ -1,1 +1,19 @@
-n.d(t,{D:()=>o});var a=n(627968);n(64700);var r=n(113494),l=n(782134),i=n(460890),s=n(657718);function o(e){let{"aria-label":t,playing:n,...o}=e,{i18n:c}=(0,i.G9)();return(0,a.jsx)(s.S,{...o,"aria-label":t??(n?c.PAUSE_BUTTON_LABEL:c.PLAY_BUTTON_LABEL),icon:n?r.E:l.u,variant:"overlay-secondary",fullWidth:!1,rounded:!0})}
+n.d(t, { D: () => o });
+var a = n(627968);
+n(64700);
+var r = n(113494),
+    l = n(782134),
+    i = n(460890),
+    s = n(657718);
+function o(e) {
+    let { "aria-label": t, playing: n, ...o } = e,
+        { i18n: c } = (0, i.G9)();
+    return (0, a.jsx)(s.S, {
+        ...o,
+        "aria-label": t ?? (n ? c.PAUSE_BUTTON_LABEL : c.PLAY_BUTTON_LABEL),
+        icon: n ? r.E : l.u,
+        variant: "overlay-secondary",
+        fullWidth: !1,
+        rounded: !0,
+    });
+}

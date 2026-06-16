@@ -1,1 +1,1 @@
-e.exports={w:"watchStreamRow__43481"}
+e.exports = { w: "watchStreamRow__43481" };

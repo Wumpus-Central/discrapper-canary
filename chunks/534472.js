@@ -1,1 +1,1 @@
-e.exports={I:"labelValueRow__2e5ea"}
+e.exports = { I: "labelValueRow__2e5ea" };

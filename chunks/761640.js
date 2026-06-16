@@ -1,1 +1,201 @@
-"use strict";n.d(t,{Ay:()=>x,JU:()=>D,fe:()=>I});var i=n(607399),r=n(17928),s=n(228366),a=n(736056),o=n(517381),l=n(940382),u=n(625494),c=n(935208),d=n(734057),_=n(71393),h=n(576705),f=n(309010),p=n(967198),E=n(287809),m=n(652215),g=n(746080),A=n(818348);let I="message_requests",T=!1,S=!1,y=!1,N=!0,v={},C={},R=!1,O=null;function b(e){if(null==e)return null;if((0,g.jq)(e)){let t=p.A.getGuildId();return null==t?null:(0,g.Gr)(e,t)}return e}function D(e){return[l.PE.VIEW_CHANNEL,l.PE.VIEW_THREAD,l.PE.VIEW_MESSAGE_REQUEST,l.PE.VIEW_MOD_REPORT].includes(e.type)}function L(e){let t=!1;R&&(R=!1,t=!0);let n=b(f.A.getChannelId());return null!=n&&n in v&&(delete v[n],t=!0),t&&e?e:!e}function w(){let e=!1;for(let t in v){let n=v[t];if(n.type===l.PE.VIEW_THREAD||n.type===l.PE.VIEW_CHANNEL){let i=d.A.getChannel(n.channelId);null!=i&&h.A.can(A.xB.VIEW_CHANNEL,i)||(delete v[t],e=!0)}}return e}function M(){let e=null!=O&&o.A.hasSearchState(O);if(e===R)return!1;R=e}class P extends r.Ay.PersistedStore{static displayName="ChannelSectionStore";static persistKey="ChannelSectionStore2";initialize(e){null!=e&&(T=e.isMembersOpen??!1,S=e.isSummariesOpen??!1,N=e.isProfileOpen??!0,v=e.sidebars??{},C=e.guildSidebars??{}),this.syncWith([o.A],M),this.syncWith([h.A],w),this.waitFor(d.A,a.A,_.A,h.A,o.A,f.A,p.A,E.default)}getState(){return{isMembersOpen:T,isSummariesOpen:S,isProfileOpen:N,sidebars:v,guildSidebars:C}}getSection(e,t){if(R)return m.YvQ.SEARCH;let n=b(e);return null!=n&&null!=v[n]?m.YvQ.SIDEBAR_CHAT:t&&N?m.YvQ.PROFILE:S?m.YvQ.SUMMARIES:T?m.YvQ.MEMBERS:y?m.YvQ.CONVERSATIONS:m.YvQ.NONE}getSidebarState(e){let t=b(e);return null==t?void 0:v[t]}getGuildSidebarState(e){return null==e?void 0:C[e]}getCurrentSidebarChannelId(e){let t=b(e);if(null==t||R)return null;let n=v[t];return null==n?null:n.type===l.PE.VIEW_THREAD||n.type===l.PE.VIEW_CHANNEL||n.type===l.PE.VIEW_MOD_REPORT?n.channelId:null}getCurrentSidebarMessageId(e){let t=b(e);if(null==t||R)return null;let n=v[t];return null==n?null:n.type===l.PE.VIEW_THREAD||n.type===l.PE.VIEW_CHANNEL||n.type===l.PE.VIEW_MOD_REPORT?n.details?.initialMessageId:null}getCurrentSearchContextId(){return O}}let x=new P(s.h,{SIDEBAR_SET_SELECTED_SEARCH_CONTEXT:function(e){return O=e.searchContextId,M()},CHANNEL_TOGGLE_MEMBERS_SECTION:function(){R&&u._.dispatch(m.jej.SEARCH_RESULTS_CLOSE),S&&(S=L(S)),y&&(y=L(y)),T=L(T)},USER_PROFILE_SIDEBAR_TOGGLE_SECTION:function(){N||u._.dispatch(m.jej.SEARCH_RESULTS_CLOSE),N=L(N)},CHANNEL_TOGGLE_SUMMARIES_SECTION:function(){T&&(T=L(T)),y&&(y=L(y)),S=L(S)},CHANNEL_TOGGLE_CONVERSATIONS_SECTION:function(){R&&u._.dispatch(m.jej.SEARCH_RESULTS_CLOSE),T=!1,S=!1,y=L(y)},CHANNEL_OPEN_CONVERSATIONS_SECTION:function(){return!y&&(R&&u._.dispatch(m.jej.SEARCH_RESULTS_CLOSE),T=!1,S=!1,y=!0,!0)},SIDEBAR_VIEW_CHANNEL:function(e){let{sidebarType:t,baseChannelId:n,channelId:i,details:r}=e;R=!1;let s=b(n);if(null==s)return!1;let a={type:t,channelId:i,details:r};return t===l.PE.VIEW_MOD_REPORT&&(a={...a,baseChannelId:n}),v[s]=a,!0},SIDEBAR_VIEW_GUILD:function(e){let{sidebarType:t,guildId:n,baseChannelId:i,details:r}=e;R=!1;let s=b(i);return null!=s&&(C[n]={type:t,baseChannelId:s,guildId:n,details:r},!0)},SIDEBAR_CREATE_THREAD:function(e){let{parentChannelId:t,parentMessageId:n,location:i}=e;R=!1;let r=b(t);null!=r&&(v[r]={type:l.PE.CREATE_THREAD,parentChannelId:t,parentMessageId:n,location:i})},SIDEBAR_CLOSE:function(e){let{baseChannelId:t}=e,n=b(t);null!=n&&delete v[n]},SIDEBAR_CLOSE_GUILD:function(e){let{guildId:t}=e;return null!=C[t]&&(delete C[t],!0)},CHANNEL_DELETE:function(e){let{channel:t}=e;if(t.id in v)return delete v[t.id],!0;let n=!1;for(let e in v){let i=v[e];null!=i&&i.type===l.PE.VIEW_CHANNEL&&i.channelId===t.id&&(delete v[e],n=!0)}return n},CHANNEL_SELECT:function(){i.Fr&&T&&(T=!1,S=!1,y=!1)},THREAD_CREATE:function(e){let{channel:t}=e;if(t.ownerId===E.default.getCurrentUser()?.id)return!1;let n=v[t.parent_id];null!=n&&n.type===l.PE.CREATE_THREAD&&n.parentMessageId===c.default.castChannelIdAsMessageId(t.id)&&(v[t.parent_id]={type:l.PE.VIEW_THREAD,channelId:t.id})},THREAD_DELETE:function(e){let{channel:t}=e,n=v[t.parent_id];if(null==n||n.type!==l.PE.VIEW_THREAD||n.channelId!==t.id)return!1;delete v[t.parent_id]}})
+"use strict";
+n.d(t, { Ay: () => x, JU: () => D, fe: () => I });
+var i = n(607399),
+    r = n(17928),
+    s = n(228366),
+    a = n(736056),
+    o = n(517381),
+    l = n(940382),
+    u = n(625494),
+    c = n(935208),
+    d = n(734057),
+    _ = n(71393),
+    h = n(576705),
+    f = n(309010),
+    p = n(967198),
+    E = n(287809),
+    m = n(652215),
+    g = n(746080),
+    A = n(818348);
+let I = "message_requests",
+    T = !1,
+    S = !1,
+    y = !1,
+    C = !0,
+    N = {},
+    v = {},
+    R = !1,
+    O = null;
+function b(e) {
+    if (null == e) return null;
+    if ((0, g.jq)(e)) {
+        let t = p.A.getGuildId();
+        return null == t ? null : (0, g.Gr)(e, t);
+    }
+    return e;
+}
+function D(e) {
+    return [l.PE.VIEW_CHANNEL, l.PE.VIEW_THREAD, l.PE.VIEW_MESSAGE_REQUEST, l.PE.VIEW_MOD_REPORT].includes(e.type);
+}
+function L(e) {
+    let t = !1;
+    R && ((R = !1), (t = !0));
+    let n = b(f.A.getChannelId());
+    return null != n && n in N && (delete N[n], (t = !0)), t && e ? e : !e;
+}
+function w() {
+    let e = !1;
+    for (let t in N) {
+        let n = N[t];
+        if (n.type === l.PE.VIEW_THREAD || n.type === l.PE.VIEW_CHANNEL) {
+            let i = d.A.getChannel(n.channelId);
+            (null != i && h.A.can(A.xB.VIEW_CHANNEL, i)) || (delete N[t], (e = !0));
+        }
+    }
+    return e;
+}
+function M() {
+    let e = null != O && o.A.hasSearchState(O);
+    if (e === R) return !1;
+    R = e;
+}
+class P extends r.Ay.PersistedStore {
+    static displayName = "ChannelSectionStore";
+    static persistKey = "ChannelSectionStore2";
+    initialize(e) {
+        null != e &&
+            ((T = e.isMembersOpen ?? !1),
+            (S = e.isSummariesOpen ?? !1),
+            (C = e.isProfileOpen ?? !0),
+            (N = e.sidebars ?? {}),
+            (v = e.guildSidebars ?? {})),
+            this.syncWith([o.A], M),
+            this.syncWith([h.A], w),
+            this.waitFor(d.A, a.A, _.A, h.A, o.A, f.A, p.A, E.default);
+    }
+    getState() {
+        return { isMembersOpen: T, isSummariesOpen: S, isProfileOpen: C, sidebars: N, guildSidebars: v };
+    }
+    getSection(e, t) {
+        if (R) return m.YvQ.SEARCH;
+        let n = b(e);
+        return null != n && null != N[n]
+            ? m.YvQ.SIDEBAR_CHAT
+            : t && C
+              ? m.YvQ.PROFILE
+              : S
+                ? m.YvQ.SUMMARIES
+                : T
+                  ? m.YvQ.MEMBERS
+                  : y
+                    ? m.YvQ.CONVERSATIONS
+                    : m.YvQ.NONE;
+    }
+    getSidebarState(e) {
+        let t = b(e);
+        return null == t ? void 0 : N[t];
+    }
+    getGuildSidebarState(e) {
+        return null == e ? void 0 : v[e];
+    }
+    getCurrentSidebarChannelId(e) {
+        let t = b(e);
+        if (null == t || R) return null;
+        let n = N[t];
+        return null == n
+            ? null
+            : n.type === l.PE.VIEW_THREAD || n.type === l.PE.VIEW_CHANNEL || n.type === l.PE.VIEW_MOD_REPORT
+              ? n.channelId
+              : null;
+    }
+    getCurrentSidebarMessageId(e) {
+        let t = b(e);
+        if (null == t || R) return null;
+        let n = N[t];
+        return null == n
+            ? null
+            : n.type === l.PE.VIEW_THREAD || n.type === l.PE.VIEW_CHANNEL || n.type === l.PE.VIEW_MOD_REPORT
+              ? n.details?.initialMessageId
+              : null;
+    }
+    getCurrentSearchContextId() {
+        return O;
+    }
+}
+let x = new P(s.h, {
+    SIDEBAR_SET_SELECTED_SEARCH_CONTEXT: function (e) {
+        return (O = e.searchContextId), M();
+    },
+    CHANNEL_TOGGLE_MEMBERS_SECTION: function () {
+        R && u._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), S && (S = L(S)), y && (y = L(y)), (T = L(T));
+    },
+    USER_PROFILE_SIDEBAR_TOGGLE_SECTION: function () {
+        C || u._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (C = L(C));
+    },
+    CHANNEL_TOGGLE_SUMMARIES_SECTION: function () {
+        T && (T = L(T)), y && (y = L(y)), (S = L(S));
+    },
+    CHANNEL_TOGGLE_CONVERSATIONS_SECTION: function () {
+        R && u._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (T = !1), (S = !1), (y = L(y));
+    },
+    CHANNEL_OPEN_CONVERSATIONS_SECTION: function () {
+        return !y && (R && u._.dispatch(m.jej.SEARCH_RESULTS_CLOSE), (T = !1), (S = !1), (y = !0), !0);
+    },
+    SIDEBAR_VIEW_CHANNEL: function (e) {
+        let { sidebarType: t, baseChannelId: n, channelId: i, details: r } = e;
+        R = !1;
+        let s = b(n);
+        if (null == s) return !1;
+        let a = { type: t, channelId: i, details: r };
+        return t === l.PE.VIEW_MOD_REPORT && (a = { ...a, baseChannelId: n }), (N[s] = a), !0;
+    },
+    SIDEBAR_VIEW_GUILD: function (e) {
+        let { sidebarType: t, guildId: n, baseChannelId: i, details: r } = e;
+        R = !1;
+        let s = b(i);
+        return null != s && ((v[n] = { type: t, baseChannelId: s, guildId: n, details: r }), !0);
+    },
+    SIDEBAR_CREATE_THREAD: function (e) {
+        let { parentChannelId: t, parentMessageId: n, location: i } = e;
+        R = !1;
+        let r = b(t);
+        null != r && (N[r] = { type: l.PE.CREATE_THREAD, parentChannelId: t, parentMessageId: n, location: i });
+    },
+    SIDEBAR_CLOSE: function (e) {
+        let { baseChannelId: t } = e,
+            n = b(t);
+        null != n && delete N[n];
+    },
+    SIDEBAR_CLOSE_GUILD: function (e) {
+        let { guildId: t } = e;
+        return null != v[t] && (delete v[t], !0);
+    },
+    CHANNEL_DELETE: function (e) {
+        let { channel: t } = e;
+        if (t.id in N) return delete N[t.id], !0;
+        let n = !1;
+        for (let e in N) {
+            let i = N[e];
+            null != i && i.type === l.PE.VIEW_CHANNEL && i.channelId === t.id && (delete N[e], (n = !0));
+        }
+        return n;
+    },
+    CHANNEL_SELECT: function () {
+        i.Fr && T && ((T = !1), (S = !1), (y = !1));
+    },
+    THREAD_CREATE: function (e) {
+        let { channel: t } = e;
+        if (t.ownerId === E.default.getCurrentUser()?.id) return !1;
+        let n = N[t.parent_id];
+        null != n &&
+            n.type === l.PE.CREATE_THREAD &&
+            n.parentMessageId === c.default.castChannelIdAsMessageId(t.id) &&
+            (N[t.parent_id] = { type: l.PE.VIEW_THREAD, channelId: t.id });
+    },
+    THREAD_DELETE: function (e) {
+        let { channel: t } = e,
+            n = N[t.parent_id];
+        if (null == n || n.type !== l.PE.VIEW_THREAD || n.channelId !== t.id) return !1;
+        delete N[t.parent_id];
+    },
+});

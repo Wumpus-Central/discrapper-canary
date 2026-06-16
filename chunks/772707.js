@@ -1,1 +1,34 @@
-e.d(a,{k:()=>n});var l=e(627968);e(64700);var s=e(224640),d=e(696208),r=e(430993),t=e(20742);function n(i){let{size:a="md",gradientColor:e="purple",graphic:n,badge:c,title:p,subtitle:u,actionBarInput:h,actions:o,children:b,"aria-label":g,...k}=i;return(0,l.jsxs)(s.d,{...k,"aria-label":g??p,size:a,paddingSize:"lg",children:[(0,l.jsx)(t.V6,{gradientColor:e,graphic:n,badge:c,title:p,subtitle:u}),(0,l.jsx)(r.c,{children:b}),(0,l.jsx)(d.H,{leading:h,actions:o,actionsFullWidth:null==h})]})}
+"use strict";
+n.d(t, { k: () => l });
+var i = n(627968);
+n(64700);
+var r = n(224640),
+    s = n(696208),
+    a = n(430993),
+    o = n(20742);
+function l(e) {
+    let {
+        size: t = "md",
+        gradientColor: n = "purple",
+        graphic: l,
+        badge: u,
+        title: c,
+        subtitle: d,
+        actionBarInput: _,
+        actions: h,
+        children: f,
+        "aria-label": p,
+        ...E
+    } = e;
+    return (0, i.jsxs)(r.d, {
+        ...E,
+        "aria-label": p ?? c,
+        size: t,
+        paddingSize: "lg",
+        children: [
+            (0, i.jsx)(o.V6, { gradientColor: n, graphic: l, badge: u, title: c, subtitle: d }),
+            (0, i.jsx)(a.c, { children: f }),
+            (0, i.jsx)(s.H, { leading: _, actions: h, actionsFullWidth: null == _ }),
+        ],
+    });
+}

@@ -1,1 +1,20 @@
-e.exports={kL:"container__37e49",my:"avatar__37e49",Q9:"accountPopoutButtonWrapper__37e49",oM:"nameTag__37e49",$n:"accountPopoutButton__37e49",dI:"accountPopout__37e49",eW:"panelTitleContainer__37e49",XP:"panelSubtextContainer__37e49",e8:"withDisplayNameStyles__37e49",XD:"activityStatusText__37e49",WO:"customStatus__37e49",Zg:"emoji__37e49",Uo:"buttons__37e49",G5:"containerListenAlongVisible__37e49",bc:"containerQuestBarVisible__37e49",UG:"containerRtcOpened__37e49",t4:"iconForeground__37e49",ZQ:"plated__37e49"}
+e.exports = {
+    kL: "container__37e49",
+    my: "avatar__37e49",
+    Q9: "accountPopoutButtonWrapper__37e49",
+    oM: "nameTag__37e49",
+    $n: "accountPopoutButton__37e49",
+    dI: "accountPopout__37e49",
+    eW: "panelTitleContainer__37e49",
+    XP: "panelSubtextContainer__37e49",
+    e8: "withDisplayNameStyles__37e49",
+    XD: "activityStatusText__37e49",
+    WO: "customStatus__37e49",
+    Zg: "emoji__37e49",
+    Uo: "buttons__37e49",
+    G5: "containerListenAlongVisible__37e49",
+    bc: "containerQuestBarVisible__37e49",
+    UG: "containerRtcOpened__37e49",
+    t4: "iconForeground__37e49",
+    ZQ: "plated__37e49",
+};

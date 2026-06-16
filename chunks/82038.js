@@ -1,1 +1,121 @@
-n.d(t,{c:()=>C});var i=n(621466),l=n(825437),r=n(775602),s=n(186111),o=n(136491),a=n(763827),d=n(625494),c=n(350535),u=n(652215);let h=new Set(["PageDown","PageUp","Home","End","ArrowUp","ArrowDown","ArrowLeft","ArrowRight"]),A=new Set(["Alt","AltGraph","CapsLock","Control","Fn","FnLock","Hyper","Meta","NumLock","OS","ScrollLock","Shift","Super","Symbol","SymbolLock"]),E=new Set(["F1","F2","F3","F4","F5","F6","F7","F8","F9","F10","F11","F12","F13","F14","F15","F16","F17","F18","F19","F20","Accept","ContextMenu","Find","ZoomIn","ZoomOut"]),g=new Set(["ChannelDown","ChannelUp","MediaFastForward","MediaPause","MediaPlay","MediaPlayPause","MediaRecord","MediaRewind","MediaStop","MediaTrackNext","MediaTrackPrevious","AudioBalanceLeft","AudioBalanceRight","AudioBassDown","AudioBassBoostDown","AudioBassBoostToggle","AudioBassBoostUp","AudioBassUp","AudioFaderFront","AudioFaderReader","AudioSurroundModeNext","AudioTrebleDown","AudioTreblUp","AudioVolumeDown","AudioVolumeMute","AudioVolumeUp","VolumeUp","VolumeDown","VolumeMute"]),C={binds:["any-character"],keydown(e,t){let n=(0,i.BF)(e)?.activeElement;if((0,i.Cw)(n)||l.rx.isActive()||A.has(t)||E.has(t)||g.has(t))return!1;let C=null!=n&&"BODY"===n.tagName;if(r.Ay.keyboardModeEnabled&&!C&&!/^[a-zA-Z0-9]$/.test(t)||d._.hasSubscribers(u.jej.MODAL_CLOSE)||s.A.hasLayers())return!1;if("Tab"===t&&d._.hasSubscribers(u.jej.TEXTAREA_FOCUS)&&null!=document.querySelector('[data-can-focus="true"]'))return e.preventDefault(),d._.dispatch(u.jej.TEXTAREA_FOCUS),!1;if(a.A.isConnected()&&o.Ay.getMode()===u.TBI.PUSH_TO_TALK&&!o.Ay.isSelfMute()&&Object.values(o.Ay.getShortcuts()).map(c.pi).some(t=>t.map(e=>e.keyCode).includes(e.keyCode))||e.metaKey||e.ctrlKey||h.has(t))return!1;let _="Enter"===t&&!e.shiftKey&&!e.altKey;d._.dispatchToLastSubscribed(u.jej.TEXTAREA_FOCUS,{event:e,wasEnterPressed:_})}}
+"use strict";
+n.d(t, { c: () => E });
+var i = n(621466),
+    r = n(825437),
+    s = n(775602),
+    a = n(186111),
+    o = n(941327),
+    l = n(763827),
+    u = n(625494),
+    c = n(350535),
+    d = n(652215);
+let _ = new Set(["PageDown", "PageUp", "Home", "End", "ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"]),
+    h = new Set([
+        "Alt",
+        "AltGraph",
+        "CapsLock",
+        "Control",
+        "Fn",
+        "FnLock",
+        "Hyper",
+        "Meta",
+        "NumLock",
+        "OS",
+        "ScrollLock",
+        "Shift",
+        "Super",
+        "Symbol",
+        "SymbolLock",
+    ]),
+    f = new Set([
+        "F1",
+        "F2",
+        "F3",
+        "F4",
+        "F5",
+        "F6",
+        "F7",
+        "F8",
+        "F9",
+        "F10",
+        "F11",
+        "F12",
+        "F13",
+        "F14",
+        "F15",
+        "F16",
+        "F17",
+        "F18",
+        "F19",
+        "F20",
+        "Accept",
+        "ContextMenu",
+        "Find",
+        "ZoomIn",
+        "ZoomOut",
+    ]),
+    p = new Set([
+        "ChannelDown",
+        "ChannelUp",
+        "MediaFastForward",
+        "MediaPause",
+        "MediaPlay",
+        "MediaPlayPause",
+        "MediaRecord",
+        "MediaRewind",
+        "MediaStop",
+        "MediaTrackNext",
+        "MediaTrackPrevious",
+        "AudioBalanceLeft",
+        "AudioBalanceRight",
+        "AudioBassDown",
+        "AudioBassBoostDown",
+        "AudioBassBoostToggle",
+        "AudioBassBoostUp",
+        "AudioBassUp",
+        "AudioFaderFront",
+        "AudioFaderReader",
+        "AudioSurroundModeNext",
+        "AudioTrebleDown",
+        "AudioTreblUp",
+        "AudioVolumeDown",
+        "AudioVolumeMute",
+        "AudioVolumeUp",
+        "VolumeUp",
+        "VolumeDown",
+        "VolumeMute",
+    ]),
+    E = {
+        binds: ["any-character"],
+        keydown(e, t) {
+            let n = (0, i.BF)(e)?.activeElement;
+            if ((0, i.Cw)(n) || r.rx.isActive() || h.has(t) || f.has(t) || p.has(t)) return !1;
+            let E = null != n && "BODY" === n.tagName;
+            if (
+                (s.Ay.keyboardModeEnabled && !E && !/^[a-zA-Z0-9]$/.test(t)) ||
+                u._.hasSubscribers(d.jej.MODAL_CLOSE) ||
+                a.A.hasLayers()
+            )
+                return !1;
+            if (
+                "Tab" === t &&
+                u._.hasSubscribers(d.jej.TEXTAREA_FOCUS) &&
+                null != document.querySelector('[data-can-focus="true"]')
+            )
+                return e.preventDefault(), u._.dispatch(d.jej.TEXTAREA_FOCUS), !1;
+            if (
+                (l.A.isConnected() &&
+                    o.Ay.getMode() === d.TBI.PUSH_TO_TALK &&
+                    !o.Ay.isSelfMute() &&
+                    Object.values(o.Ay.getShortcuts())
+                        .map(c.pi)
+                        .some((t) => t.map((e) => e.keyCode).includes(e.keyCode))) ||
+                e.metaKey ||
+                e.ctrlKey ||
+                _.has(t)
+            )
+                return !1;
+            let m = "Enter" === t && !e.shiftKey && !e.altKey;
+            u._.dispatchToLastSubscribed(d.jej.TEXTAREA_FOCUS, { event: e, wasEnterPressed: m });
+        },
+    };

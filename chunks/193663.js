@@ -1,1 +1,78 @@
-"use strict";n.d(t,{A:()=>h});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(936504),l=n(187322),u=n(939249),c=n(88686),d=n(174755),_=n(352139);let h=function(e){let{ref:t,avatar:n,name:s,nameplate:h,children:f,subText:p,decorators:E,onClick:m,hovered:g,selected:A,muted:I,to:T,avatarClassName:S,selectedClassName:y,innerClassName:N,wrapContent:v,highlighted:C,focusProps:R,...O}=e;O.className=a()(O.className,_.kL,{[_.wH]:A,[_.mr]:C,[y??""]:A,[_.vk]:!A&&(null!=T||null!=m)}),O["aria-selected"]=O["aria-selected"]??A;let b=r.useRef(null),D=(0,i.jsxs)("div",{className:a()(_.sn,{[_.EY]:null!=h}),children:[(0,i.jsx)(d.A,{nameplate:h,hovered:g,selected:A,content:b,placement:c.u.MEMBER_LIST}),(0,i.jsxs)("div",{ref:b,className:a()(N,_.Zp,{[_.SU]:!A&&I,[_.Ib]:v}),children:[(0,i.jsx)("div",{className:a()(_.my,S),children:n}),(0,i.jsxs)("div",{className:_.Qs,children:[(0,i.jsxs)("div",{className:_.BG,children:[(0,i.jsx)("div",{className:a()(_.UU,{[_.to]:v}),children:s}),E]}),null!=p?(0,i.jsx)("div",{className:_.Sv,children:p}):null]}),null!=f?(0,i.jsx)("div",{className:_.Y_,children:f}):null]})]});return null!=T?(0,i.jsx)(l.vN,{...R,children:(0,i.jsx)(o.N_,{to:T,onClick:m,...O,role:"listitem",ref:t,children:D})}):null!=m?(0,i.jsx)(u.D,{onClick:m,focusProps:R,...O,role:"listitem",innerRef:t,children:D}):(0,i.jsx)(l.vN,{...R,children:(0,i.jsx)("div",{...O,role:"listitem",ref:t,children:D})})}
+"use strict";
+n.d(t, { A: () => h });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(936504),
+    l = n(187322),
+    u = n(939249),
+    c = n(88686),
+    d = n(174755),
+    _ = n(574520);
+let h = function (e) {
+    let {
+        ref: t,
+        avatar: n,
+        name: s,
+        nameplate: h,
+        children: f,
+        subText: p,
+        decorators: E,
+        onClick: m,
+        hovered: g,
+        selected: A,
+        muted: I,
+        to: T,
+        avatarClassName: S,
+        selectedClassName: y,
+        innerClassName: C,
+        wrapContent: N,
+        highlighted: v,
+        focusProps: R,
+        ...O
+    } = e;
+    (O.className = a()(O.className, _.kL, {
+        [_.wH]: A,
+        [_.mr]: v,
+        [y ?? ""]: A,
+        [_.vk]: !A && (null != T || null != m),
+    })),
+        (O["aria-selected"] = O["aria-selected"] ?? A);
+    let b = r.useRef(null),
+        D = (0, i.jsxs)("div", {
+            className: a()(_.sn, { [_.EY]: null != h }),
+            children: [
+                (0, i.jsx)(d.A, { nameplate: h, hovered: g, selected: A, content: b, placement: c.u.MEMBER_LIST }),
+                (0, i.jsxs)("div", {
+                    ref: b,
+                    className: a()(C, _.Zp, { [_.SU]: !A && I, [_.Ib]: N }),
+                    children: [
+                        (0, i.jsx)("div", { className: a()(_.my, S), children: n }),
+                        (0, i.jsxs)("div", {
+                            className: _.Qs,
+                            children: [
+                                (0, i.jsxs)("div", {
+                                    className: _.BG,
+                                    children: [
+                                        (0, i.jsx)("div", { className: a()(_.UU, { [_.to]: N }), children: s }),
+                                        E,
+                                    ],
+                                }),
+                                null != p ? (0, i.jsx)("div", { className: _.Sv, children: p }) : null,
+                            ],
+                        }),
+                        null != f ? (0, i.jsx)("div", { className: _.Y_, children: f }) : null,
+                    ],
+                }),
+            ],
+        });
+    return null != T
+        ? (0, i.jsx)(l.vN, {
+              ...R,
+              children: (0, i.jsx)(o.N_, { to: T, onClick: m, ...O, role: "listitem", ref: t, children: D }),
+          })
+        : null != m
+          ? (0, i.jsx)(u.D, { onClick: m, focusProps: R, ...O, role: "listitem", innerRef: t, children: D })
+          : (0, i.jsx)(l.vN, { ...R, children: (0, i.jsx)("div", { ...O, role: "listitem", ref: t, children: D }) });
+};

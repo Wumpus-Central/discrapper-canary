@@ -1,1 +1,1 @@
-e.exports={r:"menuIcon__62974"}
+p.exports = { r: "menuIcon__62974" };

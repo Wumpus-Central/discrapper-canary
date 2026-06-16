@@ -1,1 +1,43 @@
-"use strict";n.r(t),n.d(t,{default:()=>o});var i=n(98430),r=n(29583),s=n(998280),a=n(618027);function o(e,t){(0,a.A)(1,arguments);var n,o,l,u,c,d,_,h,f=(0,i.q)(),p=(0,s.A)(null!=(n=null!=(o=null!=(l=null!=(u=null==t?void 0:t.weekStartsOn)?u:null==t||null==(c=t.locale)||null==(d=c.options)?void 0:d.weekStartsOn)?l:f.weekStartsOn)?o:null==(_=f.locale)||null==(h=_.options)?void 0:h.weekStartsOn)?n:0);if(!(p>=0&&p<=6))throw RangeError("weekStartsOn must be between 0 and 6 inclusively");var E=(0,r.default)(e),m=E.getDay();return E.setDate(E.getDate()+((m<p?-7:0)+6-(m-p))),E.setHours(23,59,59,999),E}
+"use strict";
+n.r(t), n.d(t, { default: () => o });
+var i = n(98430),
+    r = n(29583),
+    s = n(998280),
+    a = n(618027);
+function o(e, t) {
+    (0, a.A)(1, arguments);
+    var n,
+        o,
+        l,
+        u,
+        c,
+        d,
+        _,
+        h,
+        f = (0, i.q)(),
+        p = (0, s.A)(
+            null !=
+                (n =
+                    null !=
+                    (o =
+                        null !=
+                        (l =
+                            null != (u = null == t ? void 0 : t.weekStartsOn)
+                                ? u
+                                : null == t || null == (c = t.locale) || null == (d = c.options)
+                                  ? void 0
+                                  : d.weekStartsOn)
+                            ? l
+                            : f.weekStartsOn)
+                        ? o
+                        : null == (_ = f.locale) || null == (h = _.options)
+                          ? void 0
+                          : h.weekStartsOn)
+                ? n
+                : 0,
+        );
+    if (!(p >= 0 && p <= 6)) throw RangeError("weekStartsOn must be between 0 and 6 inclusively");
+    var E = (0, r.default)(e),
+        m = E.getDay();
+    return E.setDate(E.getDate() + ((m < p ? -7 : 0) + 6 - (m - p))), E.setHours(23, 59, 59, 999), E;
+}

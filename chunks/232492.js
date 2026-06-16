@@ -1,1 +1,29 @@
-n.d(t,{A:()=>u});var i=n(17928),l=n(963027),s=n(262763),r=n(976860),a=n(734057),o=n(977997),c=n(499211),d=n(652215);function u(e,t){let n=(0,i.bG)([a.A],()=>a.A.getChannel(t)),{needSubscriptionToAccess:u}=(0,c.A)(n?.id);if(null==n||u||n.isObfuscated())return null;let m=n.isGuildVocal();return{navigateToChannel:()=>{m?s.A.handleVoiceConnect({channel:n,connected:o.A.isInChannel(n.id),needSubscriptionToAccess:!1,routeDirectlyToChannel:!0}):(0,r.pX)(d.BVt.CHANNEL(e,n.id))},ariaLabel:(0,l.Ay)({channel:n})}}
+"use strict";
+n.d(t, { A: () => d });
+var i = n(17928),
+    r = n(963027),
+    s = n(262763),
+    a = n(976860),
+    o = n(734057),
+    l = n(977997),
+    u = n(499211),
+    c = n(652215);
+function d(e, t) {
+    let n = (0, i.bG)([o.A], () => o.A.getChannel(t)),
+        { needSubscriptionToAccess: d } = (0, u.A)(n?.id);
+    if (null == n || d || n.isObfuscated()) return null;
+    let _ = n.isGuildVocal();
+    return {
+        navigateToChannel: () => {
+            _
+                ? s.A.handleVoiceConnect({
+                      channel: n,
+                      connected: l.A.isInChannel(n.id),
+                      needSubscriptionToAccess: !1,
+                      routeDirectlyToChannel: !0,
+                  })
+                : (0, a.pX)(c.BVt.CHANNEL(e, n.id));
+        },
+        ariaLabel: (0, r.Ay)({ channel: n }),
+    };
+}

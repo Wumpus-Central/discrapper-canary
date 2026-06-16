@@ -1,1 +1,77 @@
-"use strict";n.d(t,{A:()=>I});var i=n(17928),r=n(228366),s=n(212455),a=n(463347),o=n(334465),l=n(976860),u=n(495544),c=n(650048),d=n(71393),_=n(652215);let h=null,f=null,p={};function E(){null!=h&&null==d.A.getGuild(h)&&null==s.A.getRequest(h)&&(h=null),null!=f&&null==d.A.getGuild(f)&&null==s.A.getRequest(f)&&(f=null),m(h)}function m(e){null!=e&&(p[e]=Date.now())}function g(e){let t=!1;return delete p[e],f===e&&(f=null,t=!0),h===e&&(h=null,(0,l.bG)(_.BVt.ME),t=!0),t}class A extends i.Ay.PersistedStore{static displayName="SelectedGuildStore";static persistKey="SelectedGuildStore";initialize(e){this.mustEmitChanges(e=>"CONNECTION_OPEN"!==e.type),this.waitFor(u.default,c.A,d.A,s.A),p=e?.selectedGuildTimestampMillis??{},h=e?.selectedGuildId??null,f=e?.lastSelectedGuildId??null;let t=c.A.lastNonVoiceRoute,n=(0,o.B)(t,{path:_.BVt.CHANNEL(a.pv.guildId())});n?.params?.guildId,_.ME}getState(){return{selectedGuildTimestampMillis:p,selectedGuildId:h,lastSelectedGuildId:f}}getGuildId(){return h}getLastSelectedGuildId(){return f}getLastSelectedTimestamp(e){return h===e?-1:p[e]}}let I=new A(r.h,{CONNECTION_OPEN:E,OVERLAY_INITIALIZE:function(e){h=e.selectedGuildId,f=void 0,E()},CHANNEL_SELECT:function(e){let{guildId:t}=e;if(h===t)return!1;m(h),m(t),null!=t&&(f=t),h=t},GUILD_MEMBER_REMOVE:function(e){let{guildId:t,user:n}=e;return n.id===u.default.getId()&&g(t)},GUILD_DELETE:function(e){let{guild:{id:t,unavailable:n}}=e;return!0!==n&&g(t)},LOGOUT:function(){h=null,f=null}})
+"use strict";
+n.d(t, { A: () => I });
+var i = n(17928),
+    r = n(228366),
+    s = n(212455),
+    a = n(463347),
+    o = n(334465),
+    l = n(976860),
+    u = n(495544),
+    c = n(650048),
+    d = n(71393),
+    _ = n(652215);
+let h = null,
+    f = null,
+    p = {};
+function E() {
+    null != h && null == d.A.getGuild(h) && null == s.A.getRequest(h) && (h = null),
+        null != f && null == d.A.getGuild(f) && null == s.A.getRequest(f) && (f = null),
+        m(h);
+}
+function m(e) {
+    null != e && (p[e] = Date.now());
+}
+function g(e) {
+    let t = !1;
+    return delete p[e], f === e && ((f = null), (t = !0)), h === e && ((h = null), (0, l.bG)(_.BVt.ME), (t = !0)), t;
+}
+class A extends i.Ay.PersistedStore {
+    static displayName = "SelectedGuildStore";
+    static persistKey = "SelectedGuildStore";
+    initialize(e) {
+        this.mustEmitChanges((e) => "CONNECTION_OPEN" !== e.type),
+            this.waitFor(u.default, c.A, d.A, s.A),
+            (p = e?.selectedGuildTimestampMillis ?? {}),
+            (h = e?.selectedGuildId ?? null),
+            (f = e?.lastSelectedGuildId ?? null);
+        let t = c.A.lastNonVoiceRoute,
+            n = (0, o.B)(t, { path: _.BVt.CHANNEL(a.pv.guildId()) });
+        n?.params?.guildId, _.ME;
+    }
+    getState() {
+        return { selectedGuildTimestampMillis: p, selectedGuildId: h, lastSelectedGuildId: f };
+    }
+    getGuildId() {
+        return h;
+    }
+    getLastSelectedGuildId() {
+        return f;
+    }
+    getLastSelectedTimestamp(e) {
+        return h === e ? -1 : p[e];
+    }
+}
+let I = new A(r.h, {
+    CONNECTION_OPEN: E,
+    OVERLAY_INITIALIZE: function (e) {
+        (h = e.selectedGuildId), (f = void 0), E();
+    },
+    CHANNEL_SELECT: function (e) {
+        let { guildId: t } = e;
+        if (h === t) return !1;
+        m(h), m(t), null != t && (f = t), (h = t);
+    },
+    GUILD_MEMBER_REMOVE: function (e) {
+        let { guildId: t, user: n } = e;
+        return n.id === u.default.getId() && g(t);
+    },
+    GUILD_DELETE: function (e) {
+        let {
+            guild: { id: t, unavailable: n },
+        } = e;
+        return !0 !== n && g(t);
+    },
+    LOGOUT: function () {
+        (h = null), (f = null);
+    },
+});

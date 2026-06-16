@@ -1,1 +1,104 @@
-l.d(t,{a:()=>p,v:()=>g}),l(321073);var s=l(627968),a=l(64700),n=l(355522),r=l(885574),i=l(691885),d=l(834730),c=l(939249),o=l(661531),u=l(990078),m=l(46054),x=l(812745),h=l(327105),j=l(375708),v=l(643892);let p="new_payment_source_id";function g(e){let{value:t,options:l,onChange:g,onNew:f,noticeMessage:N,newPaymentMethodOptionLabel:b,disabled:E=!1,error:T}=e,A=a.useMemo(()=>{let e=l.map(e=>{let t=null!=e.icon?e.icon===x.Be.BANK?(0,s.jsx)(n.M,{className:v.s7}):(0,s.jsx)("img",{src:(0,x.Nj)(e.icon),alt:"",className:v.s7}):void 0,l=null!=e.tooltipText?(0,s.jsx)(u.m,{text:e.tooltipText,asContainer:!0,children:(0,s.jsx)(r.m,{size:"xs",color:o.A.colors.TEXT_MUTED})}):void 0;return{id:e.id,value:e.id,label:e.label,leading:t,trailing:l,description:e.description,disabled:e.disabled}});return e.push({id:p,value:p,label:b??j.intl.string(h.default.rNF29q),leading:void 0,description:void 0}),e},[l,b]),S=a.useCallback(e=>{e===p?f():null!=e&&g(e)},[f,g]),C=(0,s.jsxs)(s.Fragment,{children:[(0,s.jsx)(i.l,{label:j.intl.string(j.t["u+Cw58"]),hideLabel:!0,placeholder:j.intl.string(h.default.rNF29q),value:t,options:A,onSelectionChange:S,selectionMode:"single",disabled:E||0===l.length,errorMessage:T,fullWidth:!0,variant:"unsupported_payment_modal_card"}),null!=N?(0,s.jsxs)("div",{className:v.T4,children:[(0,s.jsx)(r.m,{size:"xs",color:o.A.colors.TEXT_FEEDBACK_INFO}),(0,s.jsx)(d.E,{variant:"text-xs/normal",color:"text-feedback-info",children:"string"==typeof N?m.A.parse(N,!1,{allowLinks:!0}):N})]}):null]});return 0!==l.length||E?C:(0,s.jsx)(c.D,{onClick:f,"aria-label":j.intl.string(h.default.rNF29q),className:v.OV,children:C})}
+n.d(t, { a: () => p, v: () => A }), n(321073);
+var i = n(627968),
+    l = n(64700),
+    s = n(355522),
+    r = n(885574),
+    a = n(691885),
+    o = n(834730),
+    c = n(939249),
+    d = n(661531),
+    u = n(990078),
+    m = n(46054),
+    h = n(812745),
+    g = n(327105),
+    x = n(375708),
+    f = n(643892);
+let p = "new_payment_source_id";
+function A(e) {
+    let {
+            value: t,
+            options: n,
+            onChange: A,
+            onNew: E,
+            noticeMessage: _,
+            newPaymentMethodOptionLabel: j,
+            disabled: N = !1,
+            error: v,
+        } = e,
+        T = l.useMemo(() => {
+            let e = n.map((e) => {
+                let t =
+                        null != e.icon
+                            ? e.icon === h.Be.BANK
+                                ? (0, i.jsx)(s.M, { className: f.s7 })
+                                : (0, i.jsx)("img", { src: (0, h.Nj)(e.icon), alt: "", className: f.s7 })
+                            : void 0,
+                    n =
+                        null != e.tooltipText
+                            ? (0, i.jsx)(u.m, {
+                                  text: e.tooltipText,
+                                  asContainer: !0,
+                                  children: (0, i.jsx)(r.m, { size: "xs", color: d.A.colors.TEXT_MUTED }),
+                              })
+                            : void 0;
+                return {
+                    id: e.id,
+                    value: e.id,
+                    label: e.label,
+                    leading: t,
+                    trailing: n,
+                    description: e.description,
+                    disabled: e.disabled,
+                };
+            });
+            return (
+                e.push({
+                    id: p,
+                    value: p,
+                    label: j ?? x.intl.string(g.default.rNF29q),
+                    leading: void 0,
+                    description: void 0,
+                }),
+                e
+            );
+        }, [n, j]),
+        I = l.useCallback(
+            (e) => {
+                e === p ? E() : null != e && A(e);
+            },
+            [E, A],
+        ),
+        C = (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsx)(a.l, {
+                    label: x.intl.string(x.t["u+Cw58"]),
+                    hideLabel: !0,
+                    placeholder: x.intl.string(g.default.rNF29q),
+                    value: t,
+                    options: T,
+                    onSelectionChange: I,
+                    selectionMode: "single",
+                    disabled: N || 0 === n.length,
+                    errorMessage: v,
+                    fullWidth: !0,
+                    variant: "unsupported_payment_modal_card",
+                }),
+                null != _
+                    ? (0, i.jsxs)("div", {
+                          className: f.T4,
+                          children: [
+                              (0, i.jsx)(r.m, { size: "xs", color: d.A.colors.TEXT_FEEDBACK_INFO }),
+                              (0, i.jsx)(o.E, {
+                                  variant: "text-xs/normal",
+                                  color: "text-feedback-info",
+                                  children: "string" == typeof _ ? m.A.parse(_, !1, { allowLinks: !0 }) : _,
+                              }),
+                          ],
+                      })
+                    : null,
+            ],
+        });
+    return 0 !== n.length || N
+        ? C
+        : (0, i.jsx)(c.D, { onClick: E, "aria-label": x.intl.string(g.default.rNF29q), className: f.OV, children: C });
+}

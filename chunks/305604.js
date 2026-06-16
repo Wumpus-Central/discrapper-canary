@@ -1,1 +1,1 @@
-p.exports={q:"rowContainer__4dfe0"}
+o.exports = { q: "rowContainer__4dfe0" };

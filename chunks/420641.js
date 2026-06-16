@@ -1,1 +1,1 @@
-e.exports={I:"applicationIcon__80465"}
+_.exports = { I: "applicationIcon__80465" };

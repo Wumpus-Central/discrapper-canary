@@ -1,1 +1,1 @@
-e.exports={e:"keybindContainer__28cca"}
+i.exports = { e: "keybindContainer__28cca" };

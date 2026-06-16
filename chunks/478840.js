@@ -1,1 +1,60 @@
-n.d(t,{V:()=>c});var i=n(310784),l=n.n(i),a=n(325335),r=n(998304),o=n(350593);let s="#ffffff",u="#36393e",c=(e,t,n)=>{if(null==e||e.length<1)return null;let i=(e=>{let{colors:t,saturationFactor:n=1,shouldProcessMobileColors:i=!1}=e,c=(e=>{let{colors:t,saturationFactor:n=1}=e;if(null==t||t.length<1)return null;let i=(0,r.h6)(t),o=a.A.parseString(i);if(null==o)return null;let c=(0,r.IB)(o.red,o.blue,o.green),d=(0,r.lZ)({foreground:l()((0,r.fE)(o,.6,!0).toHexString()),background:l()(s),ratio:3,saturationFactor:n})??o,m=(0,r.lZ)({foreground:l()((0,r.fE)(o,.6,!1).toHexString()),background:l()(u),ratio:5,saturationFactor:n})??o,h=(0,r.lZ)({foreground:l()(i),background:l()(s),ratio:7,saturationFactor:n}),g=(0,r.lZ)({foreground:l()(i),background:l()(u),ratio:7,saturationFactor:n});return{LIGHT:{accentColor:h?.hex(),backgroundColor:(0,r.WN)({colorRGB:d,saturationFactor:n}),highlightColor:o?.toHexString(),opacity:c?.saturation<.1?.35:.1},DARK:{accentColor:g?.hex(),backgroundColor:(0,r.WN)({colorRGB:m,saturationFactor:n}),highlightColor:o?.toHexString(),opacity:c?.saturation<.1?.5:.2}}})({colors:t,saturationFactor:n});return o.A.applyPlatformToThemedEmojiColorPalette({palette:c,shouldProcessMobileColors:i})})({colors:e,saturationFactor:t}),c=n?i?.DARK:i?.LIGHT;return{backgroundColor:c?.backgroundColor,accentColor:c?.accentColor,highlightColor:c?.highlightColor,opacity:c?.opacity??.15}}
+n.d(t, { V: () => c });
+var i = n(310784),
+    l = n.n(i),
+    a = n(325335),
+    r = n(998304),
+    o = n(350593);
+let s = "#ffffff",
+    u = "#36393e",
+    c = (e, t, n) => {
+        if (null == e || e.length < 1) return null;
+        let i = ((e) => {
+                let { colors: t, saturationFactor: n = 1, shouldProcessMobileColors: i = !1 } = e,
+                    c = ((e) => {
+                        let { colors: t, saturationFactor: n = 1 } = e;
+                        if (null == t || t.length < 1) return null;
+                        let i = (0, r.h6)(t),
+                            o = a.A.parseString(i);
+                        if (null == o) return null;
+                        let c = (0, r.IB)(o.red, o.blue, o.green),
+                            d =
+                                (0, r.lZ)({
+                                    foreground: l()((0, r.fE)(o, 0.6, !0).toHexString()),
+                                    background: l()(s),
+                                    ratio: 3,
+                                    saturationFactor: n,
+                                }) ?? o,
+                            m =
+                                (0, r.lZ)({
+                                    foreground: l()((0, r.fE)(o, 0.6, !1).toHexString()),
+                                    background: l()(u),
+                                    ratio: 5,
+                                    saturationFactor: n,
+                                }) ?? o,
+                            h = (0, r.lZ)({ foreground: l()(i), background: l()(s), ratio: 7, saturationFactor: n }),
+                            g = (0, r.lZ)({ foreground: l()(i), background: l()(u), ratio: 7, saturationFactor: n });
+                        return {
+                            LIGHT: {
+                                accentColor: h?.hex(),
+                                backgroundColor: (0, r.WN)({ colorRGB: d, saturationFactor: n }),
+                                highlightColor: o?.toHexString(),
+                                opacity: c?.saturation < 0.1 ? 0.35 : 0.1,
+                            },
+                            DARK: {
+                                accentColor: g?.hex(),
+                                backgroundColor: (0, r.WN)({ colorRGB: m, saturationFactor: n }),
+                                highlightColor: o?.toHexString(),
+                                opacity: c?.saturation < 0.1 ? 0.5 : 0.2,
+                            },
+                        };
+                    })({ colors: t, saturationFactor: n });
+                return o.A.applyPlatformToThemedEmojiColorPalette({ palette: c, shouldProcessMobileColors: i });
+            })({ colors: e, saturationFactor: t }),
+            c = n ? i?.DARK : i?.LIGHT;
+        return {
+            backgroundColor: c?.backgroundColor,
+            accentColor: c?.accentColor,
+            highlightColor: c?.highlightColor,
+            opacity: c?.opacity ?? 0.15,
+        };
+    };

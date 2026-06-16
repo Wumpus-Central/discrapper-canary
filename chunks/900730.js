@@ -1,1 +1,24 @@
-"use strict";n.d(t,{c:()=>c});var i=n(627968);n(64700);var r=n(683071),s=n(423764),a=n(46054),o=n(327105),l=n(375708),u=n(558981);function c(e){let{relocationCountry:t,relocationCurrencyCode:n,willForfeitGiftCardBalance:c=!1}=e,d=(0,s.j7)(t),_=c?o.default["DE+C4G"]:o.default.vcs3zU,h=l.intl.formatToMarkdownString(_,{country:d,currency:n?.toUpperCase()??"",willForfeitGiftCardBalance:c?"true":"false"});return(0,i.jsx)(r.w,{type:"warning",children:(0,i.jsx)("div",{className:u.Q,children:a.A.parse(h,!1,{allowList:!0})})})}
+"use strict";
+n.d(t, { c: () => c });
+var i = n(627968);
+n(64700);
+var r = n(683071),
+    s = n(423764),
+    a = n(46054),
+    o = n(327105),
+    l = n(375708),
+    u = n(558981);
+function c(e) {
+    let { relocationCountry: t, relocationCurrencyCode: n, willForfeitGiftCardBalance: c = !1 } = e,
+        d = (0, s.j7)(t),
+        _ = c ? o.default["DE+C4G"] : o.default.vcs3zU,
+        h = l.intl.formatToMarkdownString(_, {
+            country: d,
+            currency: n?.toUpperCase() ?? "",
+            willForfeitGiftCardBalance: c ? "true" : "false",
+        });
+    return (0, i.jsx)(r.w, {
+        type: "warning",
+        children: (0, i.jsx)("div", { className: u.Q, children: a.A.parse(h, !1, { allowList: !0 }) }),
+    });
+}

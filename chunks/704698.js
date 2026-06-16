@@ -1,1 +1,21 @@
-"use strict";var i=n(906046),r=i("Object.prototype.toString"),s=n(912877)(),a=n(429013);if(s){var o=i("Symbol.prototype.toString"),l=a(/^Symbol\(.*\)$/);e.exports=function(e){if("symbol"==typeof e)return!0;if(!e||"object"!=typeof e||"[object Symbol]"!==r(e))return!1;try{return"symbol"==typeof e.valueOf()&&l(o(e))}catch(e){return!1}}}else e.exports=function(e){return!1}
+"use strict";
+var i = n(906046),
+    r = i("Object.prototype.toString"),
+    s = n(912877)(),
+    a = n(429013);
+if (s) {
+    var o = i("Symbol.prototype.toString"),
+        l = a(/^Symbol\(.*\)$/);
+    e.exports = function (e) {
+        if ("symbol" == typeof e) return !0;
+        if (!e || "object" != typeof e || "[object Symbol]" !== r(e)) return !1;
+        try {
+            return "symbol" == typeof e.valueOf() && l(o(e));
+        } catch (e) {
+            return !1;
+        }
+    };
+} else
+    e.exports = function (e) {
+        return !1;
+    };

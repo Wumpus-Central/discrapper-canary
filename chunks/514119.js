@@ -1,1 +1,7 @@
-var i=n(574366),r=n(512930),s=n(460337),a=i?i.toStringTag:void 0;e.exports=function(e){return null==e?void 0===e?"[object Undefined]":"[object Null]":a&&a in Object(e)?r(e):s(e)}
+var i = n(574366),
+    r = n(512930),
+    s = n(460337),
+    a = i ? i.toStringTag : void 0;
+e.exports = function (e) {
+    return null == e ? (void 0 === e ? "[object Undefined]" : "[object Null]") : a && a in Object(e) ? r(e) : s(e);
+};

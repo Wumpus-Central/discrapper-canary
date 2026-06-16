@@ -1,1 +1,15 @@
-e.exports={iE:"wrapper_ef3116",R:"hidden_ef3116",B2:"tree_ef3116",qD:"itemsContainer_ef3116",XG:"scroller_ef3116",qw:"scrolling_ef3116",LZ:"unreadMentionsIndicatorBottom_ef3116",Xl:"unreadMentionsIndicatorTop_ef3116",Sh:"unreadMentionsBar_ef3116",CH:"unreadMentionsFixedFooter_ef3116",ai:"discoveryIcon_ef3116",JU:"bottomRailNotifCenterButton_ef3116",c0:"unreadMentionsFixedFooterBottomNotifCenterEntrypoint_ef3116"}
+e.exports = {
+    iE: "wrapper_ef3116",
+    R: "hidden_ef3116",
+    B2: "tree_ef3116",
+    qD: "itemsContainer_ef3116",
+    XG: "scroller_ef3116",
+    qw: "scrolling_ef3116",
+    LZ: "unreadMentionsIndicatorBottom_ef3116",
+    Xl: "unreadMentionsIndicatorTop_ef3116",
+    Sh: "unreadMentionsBar_ef3116",
+    CH: "unreadMentionsFixedFooter_ef3116",
+    ai: "discoveryIcon_ef3116",
+    JU: "bottomRailNotifCenterButton_ef3116",
+    c0: "unreadMentionsFixedFooterBottomNotifCenterEntrypoint_ef3116",
+};

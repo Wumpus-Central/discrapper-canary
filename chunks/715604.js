@@ -1,1 +1,2 @@
-e.exports=s.p+"80a5722bc623941c.wasm"
+"use strict";
+e.exports = n.p + "80a5722bc623941c.wasm";

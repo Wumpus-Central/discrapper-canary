@@ -1,1 +1,15 @@
-"use strict";n.d(t,{A:()=>a});var l=n(64700),i=n(17928),r=n(753390),s=n(166403);function a(){let e=(0,i.bG)([s.A],()=>s.A.hasFetchedSubscriptions());return l.useEffect(()=>{e||(0,r.hP)()},[e]),e}
+"use strict";
+n.d(t, { A: () => o });
+var i = n(64700),
+    r = n(17928),
+    s = n(753390),
+    a = n(166403);
+function o() {
+    let e = (0, r.bG)([a.A], () => a.A.hasFetchedSubscriptions());
+    return (
+        i.useEffect(() => {
+            e || (0, s.hP)();
+        }, [e]),
+        e
+    );
+}

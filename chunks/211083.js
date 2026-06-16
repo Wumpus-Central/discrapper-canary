@@ -1,1 +1,14 @@
-"use strict";n.d(t,{o:()=>o});var i=n(17928),r=n(251913),s=n(825755),a=n(153084);function o(){let e=(0,i.bG)([s.A],()=>s.A.error),[t,n]=(0,i.yK)([a.A],()=>[a.A.error,a.A.isAwaitingAuthentication]);return{paymentError:null!=t?t:e,paymentAuthenticationState:n?r.oc.PENDING:null!=t?r.oc.ERROR:r.oc.NONE}}
+"use strict";
+n.d(t, { o: () => o });
+var i = n(17928),
+    r = n(251913),
+    s = n(825755),
+    a = n(153084);
+function o() {
+    let e = (0, i.bG)([s.A], () => s.A.error),
+        [t, n] = (0, i.yK)([a.A], () => [a.A.error, a.A.isAwaitingAuthentication]);
+    return {
+        paymentError: null != t ? t : e,
+        paymentAuthenticationState: n ? r.oc.PENDING : null != t ? r.oc.ERROR : r.oc.NONE,
+    };
+}

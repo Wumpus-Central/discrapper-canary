@@ -1,1 +1,1 @@
-e.exports={L:"loading__6ef4d"}
+e.exports = { L: "loading__6ef4d" };

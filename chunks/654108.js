@@ -1,1 +1,6 @@
-a.d(e,{A:()=>n});function n(t){let e=t?.activeElement;return["INPUT","TEXTAREA"].includes(e?.tagName)||e?.isContentEditable}
+"use strict";
+function i(e) {
+    let t = e?.activeElement;
+    return ["INPUT", "TEXTAREA"].includes(t?.tagName) || t?.isContentEditable;
+}
+n.d(t, { A: () => i });

@@ -1,1 +1,1 @@
-e.exports={I:"channelAttachmentArea_b77158"}
+a.exports = { I: "channelAttachmentArea_b77158" };

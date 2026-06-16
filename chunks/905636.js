@@ -1,1 +1,1 @@
-e.exports={Y:"legacyInputCommandHeader__38272"}
+e.exports = { Y: "legacyInputCommandHeader__38272" };

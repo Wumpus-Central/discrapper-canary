@@ -1,1 +1,6 @@
-"use strict";var i=n(624462),r=n(854970);e.exports=function(e){return r(e),i(e)}
+"use strict";
+var i = n(624462),
+    r = n(854970);
+e.exports = function (e) {
+    return r(e), i(e);
+};

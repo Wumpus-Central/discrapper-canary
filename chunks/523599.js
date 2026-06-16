@@ -1,1 +1,298 @@
-n.d(t,{A:()=>X}),n(321073),n(667532);var l=n(735438),r=n.n(l),a=n(136722),i=n(17928),s=n(228366),E=n(411153),u=n(95701),_=n(34457),c=n(696451),o=n(317525),A=n(71393),d=n(652215);let T=a.kg(d.xBc.KICK_MEMBERS,d.xBc.BAN_MEMBERS,d.xBc.ADMINISTRATOR,d.xBc.MANAGE_CHANNELS,d.xBc.MANAGE_GUILD,d.xBc.MANAGE_MESSAGES,d.xBc.MANAGE_NICKNAMES,d.xBc.MANAGE_ROLES,d.xBc.MANAGE_WEBHOOKS,d.xBc.MANAGE_GUILD_EXPRESSIONS,d.xBc.MOVE_MEMBERS,d.xBc.MUTE_MEMBERS,d.xBc.DEAFEN_MEMBERS),g=null,I=[],N=[],G=[],O=[],S=[],R=[],D=[],m=[],L=!0,h=!1,C=!1,M=!0,U=!1,x=null,f=d.F_X.ALL,p=null,F={},P=0;function k(e){let t=[],n=0;return e.reverse().forEach(e=>{let l=[],a=null,i=null,s=null;if(null!=e.reason&&l.push(new E.QO(d.gGk.REASON,null,e.reason)),null!=e.changes)for(let t of e.changes){let e=new E.QO(t.key,t.old_value,t.new_value);l.push(e),e.key===d.gGk.NAME?a=e:e.key===d.gGk.TYPE?s=e:e.key===d.gGk.TITLE&&(i=e)}if(e.action_type===d.F_X.MEMBER_PRUNE){let t=null!=e&&null!=e.options&&null!=e.options.delete_member_days?e.options.delete_member_days:1,n=new E.QO(d.gGk.PRUNE_DELETE_DAYS,null,t);l.push(n)}e.action_type===d.F_X.AUTO_MODERATION_BLOCK_MESSAGE&&e.options?.auto_moderation_rule_name!=null&&l.push(new E.QO(d.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME,null,e.options.auto_moderation_rule_name)),e.action_type===d.F_X.VOICE_CHANNEL_STATUS_CREATE&&e.options?.status!=null&&l.push(new E.QO(d.gGk.STATUS,null,e.options.status));let _=new E.Ay({id:e.id,action:e.action_type,targetId:e.target_id,userId:e.user_id,changes:l,options:e.options}),c=t[0];if(function(e,t,n){let l=arguments.length>3&&void 0!==arguments[3]?arguments[3]:30,a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:50;return null!=e&&e.action===t.action&&e.targetId===t.targetId&&e.userId===t.userId&&r().isEqual(e.options,t.options)&&t.timestampStart.diff(e.timestampStart,"minutes")<l&&n<a&&t.targetType!==d.GaG.INVITE&&t.action!==d.F_X.MESSAGE_DELETE&&t.action!==d.F_X.MESSAGE_BULK_DELETE&&t.action!==d.F_X.MESSAGE_PIN&&t.action!==d.F_X.MESSAGE_UNPIN&&t.action!==d.F_X.MEMBER_MOVE&&t.action!==d.F_X.MEMBER_DISCONNECT&&t.action!==d.F_X.BOT_ADD&&t.action!==d.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE&&t.action!==d.F_X.MEMBER_PRUNE}(c,_,n)){t[0]=c.merge({changes:[...c.changes,..._.changes],timestampEnd:_.timestampStart}),n++;return}if(_.actionType===d.RWi.DELETE&&(null!=a||null!=i)){let e=a?.oldValue??i?.oldValue;(_.targetType===d.GaG.CHANNEL||_.targetType===d.GaG.CHANNEL_OVERWRITE)&&null!==s&&(0,u.tr)(s.oldValue)&&(e=`#${e}`),null==F[_.targetType]?F[_.targetType]={[_.targetId]:e}:F[_.targetType][_.targetId]=e}n=0,t.unshift(_)}),t}function j(e){let{section:t}=e;if(t!==d.BEX.AUDIT_LOG)return!1;let n=c.Ay.getMembers(g),l=A.A.getGuild(g),a=null!=g?o.A.getUnsafeMutableRoles(g):void 0;G=r()(n).filter(e=>e.roles.some(t=>{if(null!=l){if(e.userId===l.ownerId)return!0;let n=a?.[t];return null!=n&&(0,_.sx)(n,T)}})).map(e=>e.userId).value()}class v extends i.Ay.Store{static displayName="GuildSettingsAuditLogStore";initialize(){this.waitFor(A.A,o.A,c.Ay)}get logs(){return I}get integrations(){return N}get webhooks(){return O}get guildScheduledEvents(){return S}get automodRules(){return R}get threads(){return D}get applicationCommands(){return m}get isInitialLoading(){return L}get isLoading(){return h}get isLoadingNextPage(){return C}get hasOlderLogs(){return M}get hasError(){return U}get userIds(){return G}get userIdFilter(){return x}get targetIdFilter(){return p}get actionFilter(){return f}get deletedTargets(){return F}get groupedFetchCount(){return P}}let X=new v(s.h,{AUDIT_LOG_FETCH_START:function(){h=!0},AUDIT_LOG_FETCH_SUCCESS:function(e){P=0,L=!1,h=!1,M=!0,U=!1,I=k(e.logs),N=e.integrations,O=e.webhooks,S=e.guildScheduledEvents,R=e.automodRules??[],D=e.threads,m=e.applicationCommands,e.logs.length<d.$jw&&(M=!1)},AUDIT_LOG_FETCH_FAIL:function(){h=!1,U=!0,I=[]},AUDIT_LOG_FETCH_NEXT_PAGE_START:function(e){let{isGroupedFetch:t}=e;C=!0,t&&P++},AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS:function(e){let{logs:t,integrations:n,webhooks:l,guildScheduledEvents:r,automodRules:a,threads:i,applicationCommands:s}=e;if(C=!1,N=n,O=l,S=r,R=a,D=i,m=s,(0===t.length||t.length<d.$jw)&&(M=!1),t.length>0){let e=k(t);I=[...I,...e]}},AUDIT_LOG_FETCH_NEXT_PAGE_FAIL:function(){C=!1},AUDIT_LOG_FILTER_BY_ACTION:function(e){let{action:t}=e;f=t},AUDIT_LOG_FILTER_BY_USER:function(e){let{userId:t}=e;x=t},AUDIT_LOG_FILTER_BY_TARGET:function(e){let{targetId:t}=e;p=t},GUILD_SETTINGS_SET_SECTION:j,GUILD_SETTINGS_INIT:function(e){let{guildId:t,section:n}=e;return g=t,p=null,j({section:n})},GUILD_SETTINGS_CLOSE:function(){I=[],G=[],f=d.F_X.ALL,x=null,p=null,F={},P=0,L=!0,N=[],O=[],S=[],R=[],D=[]}})
+n.d(t, { A: () => X }), n(321073), n(667532);
+var l = n(735438),
+    r = n.n(l),
+    a = n(136722),
+    i = n(17928),
+    s = n(228366),
+    E = n(411153),
+    u = n(95701),
+    _ = n(34457),
+    c = n(696451),
+    o = n(317525),
+    A = n(71393),
+    d = n(652215);
+let T = a.kg(
+        d.xBc.KICK_MEMBERS,
+        d.xBc.BAN_MEMBERS,
+        d.xBc.ADMINISTRATOR,
+        d.xBc.MANAGE_CHANNELS,
+        d.xBc.MANAGE_GUILD,
+        d.xBc.MANAGE_MESSAGES,
+        d.xBc.MANAGE_NICKNAMES,
+        d.xBc.MANAGE_ROLES,
+        d.xBc.MANAGE_WEBHOOKS,
+        d.xBc.MANAGE_GUILD_EXPRESSIONS,
+        d.xBc.MOVE_MEMBERS,
+        d.xBc.MUTE_MEMBERS,
+        d.xBc.DEAFEN_MEMBERS,
+    ),
+    g = null,
+    I = [],
+    N = [],
+    G = [],
+    O = [],
+    S = [],
+    R = [],
+    D = [],
+    m = [],
+    L = !0,
+    h = !1,
+    C = !1,
+    M = !0,
+    U = !1,
+    x = null,
+    f = d.F_X.ALL,
+    p = null,
+    F = {},
+    P = 0;
+function k(e) {
+    let t = [],
+        n = 0;
+    return (
+        e.reverse().forEach((e) => {
+            let l = [],
+                a = null,
+                i = null,
+                s = null;
+            if ((null != e.reason && l.push(new E.QO(d.gGk.REASON, null, e.reason)), null != e.changes))
+                for (let t of e.changes) {
+                    let e = new E.QO(t.key, t.old_value, t.new_value);
+                    l.push(e),
+                        e.key === d.gGk.NAME
+                            ? (a = e)
+                            : e.key === d.gGk.TYPE
+                              ? (s = e)
+                              : e.key === d.gGk.TITLE && (i = e);
+                }
+            if (e.action_type === d.F_X.MEMBER_PRUNE) {
+                let t =
+                        null != e && null != e.options && null != e.options.delete_member_days
+                            ? e.options.delete_member_days
+                            : 1,
+                    n = new E.QO(d.gGk.PRUNE_DELETE_DAYS, null, t);
+                l.push(n);
+            }
+            e.action_type === d.F_X.AUTO_MODERATION_BLOCK_MESSAGE &&
+                e.options?.auto_moderation_rule_name != null &&
+                l.push(new E.QO(d.gGk.AUTO_MODERATION_TRIGGERED_RULE_NAME, null, e.options.auto_moderation_rule_name)),
+                e.action_type === d.F_X.VOICE_CHANNEL_STATUS_CREATE &&
+                    e.options?.status != null &&
+                    l.push(new E.QO(d.gGk.STATUS, null, e.options.status));
+            let _ = new E.Ay({
+                    id: e.id,
+                    action: e.action_type,
+                    targetId: e.target_id,
+                    userId: e.user_id,
+                    changes: l,
+                    options: e.options,
+                }),
+                c = t[0];
+            if (
+                (function (e, t, n) {
+                    let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 30,
+                        a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 50;
+                    return (
+                        null != e &&
+                        e.action === t.action &&
+                        e.targetId === t.targetId &&
+                        e.userId === t.userId &&
+                        r().isEqual(e.options, t.options) &&
+                        t.timestampStart.diff(e.timestampStart, "minutes") < l &&
+                        n < a &&
+                        t.targetType !== d.GaG.INVITE &&
+                        t.action !== d.F_X.MESSAGE_DELETE &&
+                        t.action !== d.F_X.MESSAGE_BULK_DELETE &&
+                        t.action !== d.F_X.MESSAGE_PIN &&
+                        t.action !== d.F_X.MESSAGE_UNPIN &&
+                        t.action !== d.F_X.MEMBER_MOVE &&
+                        t.action !== d.F_X.MEMBER_DISCONNECT &&
+                        t.action !== d.F_X.BOT_ADD &&
+                        t.action !== d.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE &&
+                        t.action !== d.F_X.MEMBER_PRUNE
+                    );
+                })(c, _, n)
+            ) {
+                (t[0] = c.merge({ changes: [...c.changes, ..._.changes], timestampEnd: _.timestampStart })), n++;
+                return;
+            }
+            if (_.actionType === d.RWi.DELETE && (null != a || null != i)) {
+                let e = a?.oldValue ?? i?.oldValue;
+                (_.targetType === d.GaG.CHANNEL || _.targetType === d.GaG.CHANNEL_OVERWRITE) &&
+                    null !== s &&
+                    (0, u.tr)(s.oldValue) &&
+                    (e = `#${e}`),
+                    null == F[_.targetType]
+                        ? (F[_.targetType] = { [_.targetId]: e })
+                        : (F[_.targetType][_.targetId] = e);
+            }
+            (n = 0), t.unshift(_);
+        }),
+        t
+    );
+}
+function j(e) {
+    let { section: t } = e;
+    if (t !== d.BEX.AUDIT_LOG) return !1;
+    let n = c.Ay.getMembers(g),
+        l = A.A.getGuild(g),
+        a = null != g ? o.A.getUnsafeMutableRoles(g) : void 0;
+    G = r()(n)
+        .filter((e) =>
+            e.roles.some((t) => {
+                if (null != l) {
+                    if (e.userId === l.ownerId) return !0;
+                    let n = a?.[t];
+                    return null != n && (0, _.sx)(n, T);
+                }
+            }),
+        )
+        .map((e) => e.userId)
+        .value();
+}
+class v extends i.Ay.Store {
+    static displayName = "GuildSettingsAuditLogStore";
+    initialize() {
+        this.waitFor(A.A, o.A, c.Ay);
+    }
+    get logs() {
+        return I;
+    }
+    get integrations() {
+        return N;
+    }
+    get webhooks() {
+        return O;
+    }
+    get guildScheduledEvents() {
+        return S;
+    }
+    get automodRules() {
+        return R;
+    }
+    get threads() {
+        return D;
+    }
+    get applicationCommands() {
+        return m;
+    }
+    get isInitialLoading() {
+        return L;
+    }
+    get isLoading() {
+        return h;
+    }
+    get isLoadingNextPage() {
+        return C;
+    }
+    get hasOlderLogs() {
+        return M;
+    }
+    get hasError() {
+        return U;
+    }
+    get userIds() {
+        return G;
+    }
+    get userIdFilter() {
+        return x;
+    }
+    get targetIdFilter() {
+        return p;
+    }
+    get actionFilter() {
+        return f;
+    }
+    get deletedTargets() {
+        return F;
+    }
+    get groupedFetchCount() {
+        return P;
+    }
+}
+let X = new v(s.h, {
+    AUDIT_LOG_FETCH_START: function () {
+        h = !0;
+    },
+    AUDIT_LOG_FETCH_SUCCESS: function (e) {
+        (P = 0),
+            (L = !1),
+            (h = !1),
+            (M = !0),
+            (U = !1),
+            (I = k(e.logs)),
+            (N = e.integrations),
+            (O = e.webhooks),
+            (S = e.guildScheduledEvents),
+            (R = e.automodRules ?? []),
+            (D = e.threads),
+            (m = e.applicationCommands),
+            e.logs.length < d.$jw && (M = !1);
+    },
+    AUDIT_LOG_FETCH_FAIL: function () {
+        (h = !1), (U = !0), (I = []);
+    },
+    AUDIT_LOG_FETCH_NEXT_PAGE_START: function (e) {
+        let { isGroupedFetch: t } = e;
+        (C = !0), t && P++;
+    },
+    AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
+        let {
+            logs: t,
+            integrations: n,
+            webhooks: l,
+            guildScheduledEvents: r,
+            automodRules: a,
+            threads: i,
+            applicationCommands: s,
+        } = e;
+        if (
+            ((C = !1),
+            (N = n),
+            (O = l),
+            (S = r),
+            (R = a),
+            (D = i),
+            (m = s),
+            (0 === t.length || t.length < d.$jw) && (M = !1),
+            t.length > 0)
+        ) {
+            let e = k(t);
+            I = [...I, ...e];
+        }
+    },
+    AUDIT_LOG_FETCH_NEXT_PAGE_FAIL: function () {
+        C = !1;
+    },
+    AUDIT_LOG_FILTER_BY_ACTION: function (e) {
+        let { action: t } = e;
+        f = t;
+    },
+    AUDIT_LOG_FILTER_BY_USER: function (e) {
+        let { userId: t } = e;
+        x = t;
+    },
+    AUDIT_LOG_FILTER_BY_TARGET: function (e) {
+        let { targetId: t } = e;
+        p = t;
+    },
+    GUILD_SETTINGS_SET_SECTION: j,
+    GUILD_SETTINGS_INIT: function (e) {
+        let { guildId: t, section: n } = e;
+        return (g = t), (p = null), j({ section: n });
+    },
+    GUILD_SETTINGS_CLOSE: function () {
+        (I = []),
+            (G = []),
+            (f = d.F_X.ALL),
+            (x = null),
+            (p = null),
+            (F = {}),
+            (P = 0),
+            (L = !0),
+            (N = []),
+            (O = []),
+            (S = []),
+            (R = []),
+            (D = []);
+    },
+});

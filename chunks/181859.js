@@ -1,1 +1,1 @@
-e.exports={t:"fauxDisabled__666fa"}
+s.exports = { t: "fauxDisabled__666fa" };

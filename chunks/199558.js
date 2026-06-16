@@ -1,1 +1,8 @@
-e.exports={yl:"modal_aa8c67",BM:"refWrapper_aa8c67",jE:"modalContent_aa8c67",_H:"leftPanel_aa8c67",xK:"rightPanel_aa8c67",u1:"spinner_aa8c67"}
+e.exports = {
+    yl: "modal_aa8c67",
+    BM: "refWrapper_aa8c67",
+    jE: "modalContent_aa8c67",
+    _H: "leftPanel_aa8c67",
+    xK: "rightPanel_aa8c67",
+    u1: "spinner_aa8c67",
+};

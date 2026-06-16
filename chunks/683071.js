@@ -1,1 +1,25 @@
-"use strict";n.d(t,{w:()=>s});var i=n(627968);n(64700);var r=n(512950);function s(e){let{type:t,hidden:n,iconAlign:s,children:a}=e;return(0,i.jsx)(r.p,{messageType:function(e){switch(e){case"critical":return r.Y.ERROR;case"warning":return r.Y.WARNING;case"info":return r.Y.INFO;case"success":return r.Y.POSITIVE}}(t),hidden:n,iconAlign:s,children:a})}
+"use strict";
+n.d(t, { w: () => s });
+var i = n(627968);
+n(64700);
+var r = n(512950);
+function s(e) {
+    let { type: t, hidden: n, iconAlign: s, children: a } = e;
+    return (0, i.jsx)(r.p, {
+        messageType: (function (e) {
+            switch (e) {
+                case "critical":
+                    return r.Y.ERROR;
+                case "warning":
+                    return r.Y.WARNING;
+                case "info":
+                    return r.Y.INFO;
+                case "success":
+                    return r.Y.POSITIVE;
+            }
+        })(t),
+        hidden: n,
+        iconAlign: s,
+        children: a,
+    });
+}

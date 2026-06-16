@@ -1,1 +1,346 @@
-n.d(e,{default:()=>k});var i=n(627968),s=n(64700),l=n(507107),r=n(347135),o=n(717200),a=n(412703),c=n(928264),u=n(802516),g=n(22363),d=n(17928),C=n(663417),O=n(287809),T=n(975571),A=n(18437),m=n(590202),E=n(971649),S=n(901406),_=n(801365),L=n(108811),f=n(123292),N=n(52093),P=n(114046),h=n(661531),x=n(834730),U=n(653766),I=n(695366),W=n(30370),D=n(814793),p=n(375708),j=n(590091);function M(t){return(0,i.jsx)(x.E,{className:j.rf,color:"text-muted",variant:"text-xxs/normal",children:t.children})}function X(t){let{quest:e,questContent:n,sourceQuestContent:l,errorHints:r}=t,o=(0,E.go)(),{header:a,renderBody:c}=s.useMemo(()=>{let t=r.length>0,s=e.config.messages.gameTitle;return{header:t?p.intl.string(p.t["20NLWC"]):(0,D.ui)(e)?p.intl.string(p.t.YstzGO):p.intl.formatToPlainString(p.t.gX0Qcx,{gameTitle:s}),renderBody:t?()=>(0,i.jsx)(i.Fragment,{children:r.map((t,s)=>{if(t.type===P._.EXPIRED_CREDENTIAL){let r=W.A.getAccount(t.connected_account_id,t.connected_account_type),a=(0,S.IG)(t),c=(0,S.$J)(t);return(0,i.jsx)(M,{children:p.intl.format(a,{account_name:r?.name,onClick:()=>{(0,S.v0)({quest:e,platformType:c},{content:n,ctaContent:m.Cy.DEFIBRILLATOR_RECONNECT_CONSOLE,impressionId:o,sourceQuestContent:l})}})},s)}return(0,i.jsx)(M,{children:t.message},s)})}):()=>(0,i.jsx)(x.E,{className:j.rf,color:"text-muted",variant:"text-xxs/normal",children:(0,D.ui)(e)?p.intl.string(p.t.bUyEZZ):p.intl.format(p.t.GXqvC1,{gameTitle:s})})}},[r,e,o,n,l]);return(0,i.jsxs)("div",{className:j.kL,children:[(0,i.jsxs)("div",{className:j.wx,children:[r.length>0?(0,i.jsx)(U.e,{size:"sm",color:h.A.colors.ICON_FEEDBACK_CRITICAL.css}):(0,i.jsx)(I.E,{size:"sm",color:h.A.colors.ICON_FEEDBACK_WARNING.css}),(0,i.jsx)(x.E,{variant:"text-xs/semibold",children:a})]}),c()]})}var Y=n(553409);function b(t){let{quest:e,sourceQuestContent:n,selectedPlatform:o,supportedPlatforms:a,isConnected:c,noConsoleProgress:u,errorHints:g}=t,C=(0,E.go)(),T=(0,d.bG)([O.default],()=>O.default.getCurrentUser()),A=(0,r.fc)(e),L=e.userStatus?.completedAt!=null,P=s.useMemo(()=>({renderContent:()=>(0,i.jsx)(N.L5,{children:p.intl.formatToPlainString(p.t.NIimTt,{gameTitle:e.config.messages.gameTitle,targetMinutes:A.targetMinutes,rewardNameWithArticle:(0,_.mH)(e.config,T)})}),isComplete:L}),[e.config,A.targetMinutes,L,T]),h=s.useMemo(()=>1===a.length?[P]:[{renderContent:()=>(0,i.jsx)(N.L5,{children:p.intl.string(p.t["sI+PPN"])}),isComplete:!0},P],[P,a.length]),x=s.useCallback(()=>{(0,S.b6)({quest:e},{content:l.uF.PLAY_QUEST_MODAL,ctaContent:m.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,impressionId:C,sourceQuestContent:n})},[e,C,n]),U=s.useMemo(()=>[{renderContent:t=>(0,i.jsxs)("div",{children:[(0,i.jsx)(N.L5,{children:p.intl.string(t?p.t["rmw++9"]:p.t.yqSr9m)}),t&&(0,i.jsx)(f.Q,{textVariant:"text-xs/medium",onClick:x,text:p.intl.string(p.t["qiS+xj"])})]}),isComplete:c||L},P],[P,L,c,x]),I=o===S.WU.DESKTOP?h:U,W=c&&(u||g.length>0)&&!L;return(0,i.jsx)(N.Ay,{heading:p.intl.string(p.t.dc9w4N),steps:I,className:Y._,children:W&&(0,i.jsx)(X,{quest:e,questContent:l.uF.PLAY_QUEST_MODAL,sourceQuestContent:n,errorHints:g})})}var q=n(190107),v=n(652215);function y(t){switch(t){case a.n.PLAY_ON_XBOX:return S.WU.XBOX;case a.n.PLAY_ON_PLAYSTATION:return S.WU.PLAYSTATION;case a.n.PLAY_ON_DESKTOP:default:return S.WU.DESKTOP}}function B(t){let{quest:e,sourceQuestContent:n}=t,o=(0,E.go)(),a=(0,A.Ut)(),f=(0,d.bG)([O.default],()=>O.default.getCurrentUser()),N=s.useCallback(()=>{(0,S.pu)(e,{content:l.uF.PLAY_QUEST_MODAL,ctaContent:m.Cy.OPEN_GAME_LINK,impressionId:o,sourceQuestContent:n})},[e,o,n]),P=(0,r.fc)(e),h=s.useMemo(()=>(0,S.UR)(e),[e]),x=s.useMemo(()=>(0,S.bg)(e),[e]),U=P.percentComplete>0,I=null;1===h.length?I=S.WU.DESKTOP:U&&(I=y(P.taskType));let[W,D]=s.useState(I),j=W===S.WU.XBOX||W===S.WU.PLAYSTATION,{xboxAccounts:M,playstationAccounts:X}=(0,r.Du)(),Y=!1;j&&(Y=(W===S.WU.XBOX?M:X).length>0);let B=[...[{id:q.fO.DESKTOP,value:S.WU.DESKTOP,label:p.intl.string(p.t.g6Dr44),leading:c.I}].filter(t=>h.includes(t.id)),...[{id:v.fg2.XBOX,value:S.WU.XBOX,label:p.intl.string(p.t.Nfvo72),leading:u.Y},{id:v.fg2.PLAYSTATION,value:S.WU.PLAYSTATION,label:p.intl.string(p.t.fFl4jo),leading:g.X}].filter(t=>h.includes(q.fO.CONSOLE)&&x.includes(t.id))],k=[{label:p.intl.string(p.t["TWSB/5"]),placeholder:p.intl.string(p.t["TWSB/5"]),options:B,value:W,onSelectionChange:t=>{D(t),null!=t&&a({questId:e.id,questContent:l.uF.PLAY_QUEST_MODAL,questContentCTA:t===S.WU.DESKTOP?m.Cy.SELECT_DESKTOP_PLATFORM:m.Cy.SELECT_CONSOLE_PLATFORM,sourceQuestContent:n})},disabled:B.length<=1}],[Q,R]=s.useState({[S.WU.XBOX]:[],[S.WU.PLAYSTATION]:[],[S.WU.DESKTOP]:[]}),{startingConsoleQuest:F,startConsoleQuest:K}=(0,r.Wj)({questId:e.id,beforeRequest:()=>{a({questId:e.id,questContent:l.uF.PLAY_QUEST_MODAL,questContentCTA:m.Cy.DEFIBRILLATOR,sourceQuestContent:n})},afterRequest:t=>{R(e=>({...e,[W]:t}))}}),G=p.intl.string(p.t.qQmNEy);if(1===h.length&&W===S.WU.DESKTOP)G=p.intl.format(p.t.Fo68kU,{gameTitle:e.config.messages.gameTitle});else if(j&&(Y&&(G=p.intl.format(p.t["0vGRCS"],{gameTitle:e.config.messages.gameTitle,targetMinutes:P.targetMinutes,rewardNameWithArticle:(0,_.mH)(e.config,f),onClickGameTitle:N})),Q[W]?.length>0)){let t=T.A.getArticleURL(v.MVz.QUEST_HOW_TO_PLAYSTATION),e=T.A.getArticleURL(v.MVz.QUEST_HOW_TO_XBOX);G=p.intl.format(p.t.HVS7nh,{helpdeskArticle:W===S.WU.PLAYSTATION?t:e})}let H=p.intl.string(p.t["Gcmjy/"]);return j?H=p.intl.string(p.t["5ZilMg"]):W===S.WU.DESKTOP&&(H=p.intl.string(p.t["93tEDn"])),(0,i.jsx)(L.A,{heading:H,subtitle:G,methodSelect:k,ctaButton:W===S.WU.DESKTOP?{text:p.intl.string(p.t.E4kW5O),onClick:N}:j?Y?{text:p.intl.string(p.t.nPThNb),onClick:K,loading:F,icon:C.f}:{text:p.intl.string(p.t.S0W8Z5),onClick:()=>{(0,S.Ps)({quest:e},{content:l.uF.PLAY_QUEST_MODAL,ctaContent:m.Cy.CONNECT_CONSOLE,impressionId:o,sourceQuestContent:n},W===S.WU.XBOX?v.fg2.XBOX:v.fg2.PLAYSTATION)}}:void 0,children:null!=W&&(0,i.jsx)(b,{quest:e,sourceQuestContent:n,selectedPlatform:W,noConsoleProgress:j&&W!==y(P.taskType),supportedPlatforms:h,isConnected:Y,errorHints:Q[W]})})}let k=function(t){let{initialQuest:e,sourceQuestContent:n,transitionState:s,onClose:a}=t,c=(0,r.C5)(e.id)??e;return(0,i.jsx)(o.A,{quest:c,questContent:l.uF.PLAY_QUEST_MODAL,sourceQuestContent:n,ariaLabel:p.intl.string(p.t.SHZo2x),transitionState:s,onClose:a,isContentLoading:!1,contentHasError:!1,leftContent:(0,i.jsx)(B,{quest:c,sourceQuestContent:n}),location:q.rE.PLAY_QUEST_CONNECTION_MODAL})}
+n.d(e, { default: () => k });
+var i = n(627968),
+    s = n(64700),
+    l = n(507107),
+    r = n(347135),
+    o = n(717200),
+    a = n(412703),
+    c = n(928264),
+    u = n(802516),
+    g = n(22363),
+    d = n(17928),
+    C = n(663417),
+    O = n(287809),
+    T = n(975571),
+    A = n(18437),
+    m = n(590202),
+    E = n(971649),
+    S = n(901406),
+    _ = n(801365),
+    L = n(108811),
+    f = n(123292),
+    N = n(52093),
+    P = n(114046),
+    h = n(661531),
+    x = n(834730),
+    U = n(653766),
+    I = n(695366),
+    W = n(30370),
+    D = n(814793),
+    p = n(375708),
+    j = n(590091);
+function M(t) {
+    return (0, i.jsx)(x.E, { className: j.rf, color: "text-muted", variant: "text-xxs/normal", children: t.children });
+}
+function X(t) {
+    let { quest: e, questContent: n, sourceQuestContent: l, errorHints: r } = t,
+        o = (0, E.go)(),
+        { header: a, renderBody: c } = s.useMemo(() => {
+            let t = r.length > 0,
+                s = e.config.messages.gameTitle;
+            return {
+                header: t
+                    ? p.intl.string(p.t["20NLWC"])
+                    : (0, D.ui)(e)
+                      ? p.intl.string(p.t.YstzGO)
+                      : p.intl.formatToPlainString(p.t.gX0Qcx, { gameTitle: s }),
+                renderBody: t
+                    ? () =>
+                          (0, i.jsx)(i.Fragment, {
+                              children: r.map((t, s) => {
+                                  if (t.type === P._.EXPIRED_CREDENTIAL) {
+                                      let r = W.A.getAccount(t.connected_account_id, t.connected_account_type),
+                                          a = (0, S.IG)(t),
+                                          c = (0, S.$J)(t);
+                                      return (0, i.jsx)(
+                                          M,
+                                          {
+                                              children: p.intl.format(a, {
+                                                  account_name: r?.name,
+                                                  onClick: () => {
+                                                      (0, S.v0)(
+                                                          { quest: e, platformType: c },
+                                                          {
+                                                              content: n,
+                                                              ctaContent: m.Cy.DEFIBRILLATOR_RECONNECT_CONSOLE,
+                                                              impressionId: o,
+                                                              sourceQuestContent: l,
+                                                          },
+                                                      );
+                                                  },
+                                              }),
+                                          },
+                                          s,
+                                      );
+                                  }
+                                  return (0, i.jsx)(M, { children: t.message }, s);
+                              }),
+                          })
+                    : () =>
+                          (0, i.jsx)(x.E, {
+                              className: j.rf,
+                              color: "text-muted",
+                              variant: "text-xxs/normal",
+                              children: (0, D.ui)(e)
+                                  ? p.intl.string(p.t.bUyEZZ)
+                                  : p.intl.format(p.t.GXqvC1, { gameTitle: s }),
+                          }),
+            };
+        }, [r, e, o, n, l]);
+    return (0, i.jsxs)("div", {
+        className: j.kL,
+        children: [
+            (0, i.jsxs)("div", {
+                className: j.wx,
+                children: [
+                    r.length > 0
+                        ? (0, i.jsx)(U.e, { size: "sm", color: h.A.colors.ICON_FEEDBACK_CRITICAL.css })
+                        : (0, i.jsx)(I.E, { size: "sm", color: h.A.colors.ICON_FEEDBACK_WARNING.css }),
+                    (0, i.jsx)(x.E, { variant: "text-xs/semibold", children: a }),
+                ],
+            }),
+            c(),
+        ],
+    });
+}
+var Y = n(553409);
+function b(t) {
+    let {
+            quest: e,
+            sourceQuestContent: n,
+            selectedPlatform: o,
+            supportedPlatforms: a,
+            isConnected: c,
+            noConsoleProgress: u,
+            errorHints: g,
+        } = t,
+        C = (0, E.go)(),
+        T = (0, d.bG)([O.default], () => O.default.getCurrentUser()),
+        A = (0, r.fc)(e),
+        L = e.userStatus?.completedAt != null,
+        P = s.useMemo(
+            () => ({
+                renderContent: () =>
+                    (0, i.jsx)(N.L5, {
+                        children: p.intl.formatToPlainString(p.t.NIimTt, {
+                            gameTitle: e.config.messages.gameTitle,
+                            targetMinutes: A.targetMinutes,
+                            rewardNameWithArticle: (0, _.mH)(e.config, T),
+                        }),
+                    }),
+                isComplete: L,
+            }),
+            [e.config, A.targetMinutes, L, T],
+        ),
+        h = s.useMemo(
+            () =>
+                1 === a.length
+                    ? [P]
+                    : [
+                          {
+                              renderContent: () => (0, i.jsx)(N.L5, { children: p.intl.string(p.t["sI+PPN"]) }),
+                              isComplete: !0,
+                          },
+                          P,
+                      ],
+            [P, a.length],
+        ),
+        x = s.useCallback(() => {
+            (0, S.b6)(
+                { quest: e },
+                {
+                    content: l.uF.PLAY_QUEST_MODAL,
+                    ctaContent: m.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
+                    impressionId: C,
+                    sourceQuestContent: n,
+                },
+            );
+        }, [e, C, n]),
+        U = s.useMemo(
+            () => [
+                {
+                    renderContent: (t) =>
+                        (0, i.jsxs)("div", {
+                            children: [
+                                (0, i.jsx)(N.L5, { children: p.intl.string(t ? p.t["rmw++9"] : p.t.yqSr9m) }),
+                                t &&
+                                    (0, i.jsx)(f.Q, {
+                                        textVariant: "text-xs/medium",
+                                        onClick: x,
+                                        text: p.intl.string(p.t["qiS+xj"]),
+                                    }),
+                            ],
+                        }),
+                    isComplete: c || L,
+                },
+                P,
+            ],
+            [P, L, c, x],
+        ),
+        I = o === S.WU.DESKTOP ? h : U,
+        W = c && (u || g.length > 0) && !L;
+    return (0, i.jsx)(N.Ay, {
+        heading: p.intl.string(p.t.dc9w4N),
+        steps: I,
+        className: Y._,
+        children:
+            W && (0, i.jsx)(X, { quest: e, questContent: l.uF.PLAY_QUEST_MODAL, sourceQuestContent: n, errorHints: g }),
+    });
+}
+var q = n(190107),
+    v = n(652215);
+function y(t) {
+    switch (t) {
+        case a.n.PLAY_ON_XBOX:
+            return S.WU.XBOX;
+        case a.n.PLAY_ON_PLAYSTATION:
+            return S.WU.PLAYSTATION;
+        case a.n.PLAY_ON_DESKTOP:
+        default:
+            return S.WU.DESKTOP;
+    }
+}
+function B(t) {
+    let { quest: e, sourceQuestContent: n } = t,
+        o = (0, E.go)(),
+        a = (0, A.Ut)(),
+        f = (0, d.bG)([O.default], () => O.default.getCurrentUser()),
+        N = s.useCallback(() => {
+            (0, S.pu)(e, {
+                content: l.uF.PLAY_QUEST_MODAL,
+                ctaContent: m.Cy.OPEN_GAME_LINK,
+                impressionId: o,
+                sourceQuestContent: n,
+            });
+        }, [e, o, n]),
+        P = (0, r.fc)(e),
+        h = s.useMemo(() => (0, S.UR)(e), [e]),
+        x = s.useMemo(() => (0, S.bg)(e), [e]),
+        U = P.percentComplete > 0,
+        I = null;
+    1 === h.length ? (I = S.WU.DESKTOP) : U && (I = y(P.taskType));
+    let [W, D] = s.useState(I),
+        j = W === S.WU.XBOX || W === S.WU.PLAYSTATION,
+        { xboxAccounts: M, playstationAccounts: X } = (0, r.Du)(),
+        Y = !1;
+    j && (Y = (W === S.WU.XBOX ? M : X).length > 0);
+    let B = [
+            ...[{ id: q.fO.DESKTOP, value: S.WU.DESKTOP, label: p.intl.string(p.t.g6Dr44), leading: c.I }].filter((t) =>
+                h.includes(t.id),
+            ),
+            ...[
+                { id: v.fg2.XBOX, value: S.WU.XBOX, label: p.intl.string(p.t.Nfvo72), leading: u.Y },
+                { id: v.fg2.PLAYSTATION, value: S.WU.PLAYSTATION, label: p.intl.string(p.t.fFl4jo), leading: g.X },
+            ].filter((t) => h.includes(q.fO.CONSOLE) && x.includes(t.id)),
+        ],
+        k = [
+            {
+                label: p.intl.string(p.t["TWSB/5"]),
+                placeholder: p.intl.string(p.t["TWSB/5"]),
+                options: B,
+                value: W,
+                onSelectionChange: (t) => {
+                    D(t),
+                        null != t &&
+                            a({
+                                questId: e.id,
+                                questContent: l.uF.PLAY_QUEST_MODAL,
+                                questContentCTA:
+                                    t === S.WU.DESKTOP ? m.Cy.SELECT_DESKTOP_PLATFORM : m.Cy.SELECT_CONSOLE_PLATFORM,
+                                sourceQuestContent: n,
+                            });
+                },
+                disabled: B.length <= 1,
+            },
+        ],
+        [Q, R] = s.useState({ [S.WU.XBOX]: [], [S.WU.PLAYSTATION]: [], [S.WU.DESKTOP]: [] }),
+        { startingConsoleQuest: F, startConsoleQuest: K } = (0, r.Wj)({
+            questId: e.id,
+            beforeRequest: () => {
+                a({
+                    questId: e.id,
+                    questContent: l.uF.PLAY_QUEST_MODAL,
+                    questContentCTA: m.Cy.DEFIBRILLATOR,
+                    sourceQuestContent: n,
+                });
+            },
+            afterRequest: (t) => {
+                R((e) => ({ ...e, [W]: t }));
+            },
+        }),
+        G = p.intl.string(p.t.qQmNEy);
+    if (1 === h.length && W === S.WU.DESKTOP) G = p.intl.format(p.t.Fo68kU, { gameTitle: e.config.messages.gameTitle });
+    else if (
+        j &&
+        (Y &&
+            (G = p.intl.format(p.t["0vGRCS"], {
+                gameTitle: e.config.messages.gameTitle,
+                targetMinutes: P.targetMinutes,
+                rewardNameWithArticle: (0, _.mH)(e.config, f),
+                onClickGameTitle: N,
+            })),
+        Q[W]?.length > 0)
+    ) {
+        let t = T.A.getArticleURL(v.MVz.QUEST_HOW_TO_PLAYSTATION),
+            e = T.A.getArticleURL(v.MVz.QUEST_HOW_TO_XBOX);
+        G = p.intl.format(p.t.HVS7nh, { helpdeskArticle: W === S.WU.PLAYSTATION ? t : e });
+    }
+    let H = p.intl.string(p.t["Gcmjy/"]);
+    return (
+        j ? (H = p.intl.string(p.t["5ZilMg"])) : W === S.WU.DESKTOP && (H = p.intl.string(p.t["93tEDn"])),
+        (0, i.jsx)(L.A, {
+            heading: H,
+            subtitle: G,
+            methodSelect: k,
+            ctaButton:
+                W === S.WU.DESKTOP
+                    ? { text: p.intl.string(p.t.E4kW5O), onClick: N }
+                    : j
+                      ? Y
+                          ? { text: p.intl.string(p.t.nPThNb), onClick: K, loading: F, icon: C.f }
+                          : {
+                                text: p.intl.string(p.t.S0W8Z5),
+                                onClick: () => {
+                                    (0, S.Ps)(
+                                        { quest: e },
+                                        {
+                                            content: l.uF.PLAY_QUEST_MODAL,
+                                            ctaContent: m.Cy.CONNECT_CONSOLE,
+                                            impressionId: o,
+                                            sourceQuestContent: n,
+                                        },
+                                        W === S.WU.XBOX ? v.fg2.XBOX : v.fg2.PLAYSTATION,
+                                    );
+                                },
+                            }
+                      : void 0,
+            children:
+                null != W &&
+                (0, i.jsx)(b, {
+                    quest: e,
+                    sourceQuestContent: n,
+                    selectedPlatform: W,
+                    noConsoleProgress: j && W !== y(P.taskType),
+                    supportedPlatforms: h,
+                    isConnected: Y,
+                    errorHints: Q[W],
+                }),
+        })
+    );
+}
+let k = function (t) {
+    let { initialQuest: e, sourceQuestContent: n, transitionState: s, onClose: a } = t,
+        c = (0, r.C5)(e.id) ?? e;
+    return (0, i.jsx)(o.A, {
+        quest: c,
+        questContent: l.uF.PLAY_QUEST_MODAL,
+        sourceQuestContent: n,
+        ariaLabel: p.intl.string(p.t.SHZo2x),
+        transitionState: s,
+        onClose: a,
+        isContentLoading: !1,
+        contentHasError: !1,
+        leftContent: (0, i.jsx)(B, { quest: c, sourceQuestContent: n }),
+        location: q.rE.PLAY_QUEST_CONNECTION_MODAL,
+    });
+};

@@ -1,1 +1,48 @@
-n.d(t,{A:()=>C});var l=n(64700),d=n(960027),s=n(978940),r=n(17928),o=n(661531),e=n(387755),g=n(313961),u=n(325909),a=n(290863),p=n(994500),c=n(806931),A=n(818348),b=n(375708);function C(i){let{user:t,channel:n,location:C}=i,_=(0,u.oP)(t,C,n.id),h=(0,u.lQ)(t,C,n),k=t.bot||t.system||t.isProvisional,v=(0,r.bG)([g.A],()=>g.A.getParticipant(n.id,t.id)),G=null==v,f=null!=v&&v.type===c.lp.USER&&v.ringing,y=(0,r.bG)([p.A],()=>p.A.isFriend(t.id)),D=(0,r.bG)([a.A],()=>a.A.getStatus(t.id)===A.cl.DND&&n?.guild_id!=null),E=!_&&(!h||k),F=(0,l.useCallback)(()=>{if(_){if(G)return void e.A.ring(n.id,[t.id],C);f&&e.A.stopRinging(n.id,[t.id])}},[G,f,_,C,n.id,t.id]);return{iconColor:f?o.A.colors.ICON_FEEDBACK_CRITICAL:void 0,icon:f?d.z:s._,tooltipText:y?D?b.intl.string(b.t.jaNpQH):G?b.intl.string(b.t["3Hv9qQ"]):f?b.intl.string(b.t.ygslb0):null:b.intl.string(b.t.TGqF9g),disabled:!_,shouldHideButton:E,onClick:F}}
+n.d(t, { A: () => C });
+var l = n(64700),
+    d = n(960027),
+    s = n(978940),
+    r = n(17928),
+    o = n(661531),
+    e = n(387755),
+    g = n(313961),
+    u = n(325909),
+    a = n(290863),
+    p = n(994500),
+    c = n(806931),
+    A = n(818348),
+    b = n(375708);
+function C(i) {
+    let { user: t, channel: n, location: C } = i,
+        _ = (0, u.oP)(t, C, n.id),
+        h = (0, u.lQ)(t, C, n),
+        k = t.bot || t.system || t.isProvisional,
+        v = (0, r.bG)([g.A], () => g.A.getParticipant(n.id, t.id)),
+        G = null == v,
+        f = null != v && v.type === c.lp.USER && v.ringing,
+        y = (0, r.bG)([p.A], () => p.A.isFriend(t.id)),
+        D = (0, r.bG)([a.A], () => a.A.getStatus(t.id) === A.cl.DND && n?.guild_id != null),
+        E = !_ && (!h || k),
+        F = (0, l.useCallback)(() => {
+            if (_) {
+                if (G) return void e.A.ring(n.id, [t.id], C);
+                f && e.A.stopRinging(n.id, [t.id]);
+            }
+        }, [G, f, _, C, n.id, t.id]);
+    return {
+        iconColor: f ? o.A.colors.ICON_FEEDBACK_CRITICAL : void 0,
+        icon: f ? d.z : s._,
+        tooltipText: y
+            ? D
+                ? b.intl.string(b.t.jaNpQH)
+                : G
+                  ? b.intl.string(b.t["3Hv9qQ"])
+                  : f
+                    ? b.intl.string(b.t.ygslb0)
+                    : null
+            : b.intl.string(b.t.TGqF9g),
+        disabled: !_,
+        shouldHideButton: E,
+        onClick: F,
+    };
+}

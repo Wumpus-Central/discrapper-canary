@@ -1,1 +1,117 @@
-"use strict";n.d(t,{g:()=>g}),n(321073);var l=n(627968);n(64700);var i=n(231723),r=n(192308),s=n(820739),a=n(73825),o=n(753390),u=n(287809),c=n(178368),d=n(97352),m=n(473145),h=n(212637),p=n(652215);let f="apply-guild-boost-modal";async function g(e){let{analyticsLocations:t,analyticsLocation:g,analyticsSourceLocation:E,numberOfBoostsToAdd:A,onClose:C,onLoading:x,closeLayer:I,onSubscriptionConfirmation:_,onSubscribeComplete:S,guild:y,handleSubscribeModalClose:v,disablePremiumUpsell:T,inPopout:N,applicationId:j,intent:b}=e,R=N?i.KX:i.SY,P=u.default.getCurrentUser();if(null==P)return;if(!P.verified)return void(0,r.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e("54681"),n.e("74913"),n.e("12206"),n.e("90406")]).then(n.bind(n,661925));return t=>{let{onClose:n,...i}=t;return(0,l.jsx)(e,{...i,onClose:n})}},{contextKey:R});let L=[];d.A.isLoadedForPremiumSKUs()||L.push((0,a.zS)()),c.A.hasFetched||(L.push(o.hP()),L.push((0,s.CD)())),L.length>0&&(x?.(!0),await Promise.allSettled(L),x?.(!1));let M=(0,m.D$)(c.A.boostSlots),O=M.length,w=e=>{C?.(),v?.(e)};if(O>0&&(null==A||O>=A)){let e;1===O?e=M.slice(0,1):null!=A&&(e=M.slice(0,A)),await (0,r.openModalLazy)(async()=>{let{default:t}=await Promise.all([n.e("71455"),n.e("39281"),n.e("58164"),n.e("71470"),n.e("10943"),n.e("95602"),n.e("22455"),n.e("18710"),n.e("34428"),n.e("38249")]).then(n.bind(n,724624));return n=>{let{onClose:i,...r}=n;return(0,l.jsx)(t,{...r,onClose:e=>{i(),w(e)},selectedGuild:y,locationSection:p.liQ.PREMIUM_GUILD_USER_MODAL,guildBoostSlots:e,intent:b})}},{modalKey:f,onCloseRequest:()=>{(0,r.closeModal)(f),w(!1)},contextKey:R})}else(0,h.A)({analyticsLocations:t,analyticsLocation:g,analyticsSourceLocation:E,guildId:y.id,closeLayer:()=>{C?.(),I?.()},totalNumberOfSlotsToAssign:A??1,onCloseModal:w,disablePremiumUpsell:T,onSubscriptionConfirmation:_,onSubscribeComplete:S,inPopout:N,applicationId:j,intent:b})}
+"use strict";
+n.d(t, { g: () => E }), n(321073);
+var i = n(627968);
+n(64700);
+var r = n(231723),
+    s = n(192308),
+    a = n(820739),
+    o = n(73825),
+    l = n(753390),
+    u = n(287809),
+    c = n(178368),
+    d = n(97352),
+    _ = n(473145),
+    h = n(212637),
+    f = n(652215);
+let p = "apply-guild-boost-modal";
+async function E(e) {
+    let {
+            analyticsLocations: t,
+            analyticsLocation: E,
+            analyticsSourceLocation: m,
+            numberOfBoostsToAdd: g,
+            onClose: A,
+            onLoading: I,
+            closeLayer: T,
+            onSubscriptionConfirmation: S,
+            onSubscribeComplete: y,
+            guild: C,
+            handleSubscribeModalClose: N,
+            disablePremiumUpsell: v,
+            inPopout: R,
+            applicationId: O,
+            intent: b,
+        } = e,
+        D = R ? r.KX : r.SY,
+        L = u.default.getCurrentUser();
+    if (null == L) return;
+    if (!L.verified)
+        return void (0, s.openModalLazy)(
+            async () => {
+                let { default: e } = await Promise.all([n.e("54681"), n.e("74913"), n.e("12206"), n.e("90406")]).then(
+                    n.bind(n, 661925),
+                );
+                return (t) => {
+                    let { onClose: n, ...r } = t;
+                    return (0, i.jsx)(e, { ...r, onClose: n });
+                };
+            },
+            { contextKey: D },
+        );
+    let w = [];
+    d.A.isLoadedForPremiumSKUs() || w.push((0, o.zS)()),
+        c.A.hasFetched || (w.push(l.hP()), w.push((0, a.CD)())),
+        w.length > 0 && (I?.(!0), await Promise.allSettled(w), I?.(!1));
+    let M = (0, _.D$)(c.A.boostSlots),
+        P = M.length,
+        x = (e) => {
+            A?.(), N?.(e);
+        };
+    if (P > 0 && (null == g || P >= g)) {
+        let e;
+        1 === P ? (e = M.slice(0, 1)) : null != g && (e = M.slice(0, g)),
+            await (0, s.openModalLazy)(
+                async () => {
+                    let { default: t } = await Promise.all([
+                        n.e("71455"),
+                        n.e("39281"),
+                        n.e("58164"),
+                        n.e("71470"),
+                        n.e("10943"),
+                        n.e("95602"),
+                        n.e("22455"),
+                        n.e("18710"),
+                        n.e("34428"),
+                        n.e("38249"),
+                    ]).then(n.bind(n, 724624));
+                    return (n) => {
+                        let { onClose: r, ...s } = n;
+                        return (0, i.jsx)(t, {
+                            ...s,
+                            onClose: (e) => {
+                                r(), x(e);
+                            },
+                            selectedGuild: C,
+                            locationSection: f.liQ.PREMIUM_GUILD_USER_MODAL,
+                            guildBoostSlots: e,
+                            intent: b,
+                        });
+                    };
+                },
+                {
+                    modalKey: p,
+                    onCloseRequest: () => {
+                        (0, s.closeModal)(p), x(!1);
+                    },
+                    contextKey: D,
+                },
+            );
+    } else
+        (0, h.A)({
+            analyticsLocations: t,
+            analyticsLocation: E,
+            analyticsSourceLocation: m,
+            guildId: C.id,
+            closeLayer: () => {
+                A?.(), T?.();
+            },
+            totalNumberOfSlotsToAssign: g ?? 1,
+            onCloseModal: x,
+            disablePremiumUpsell: v,
+            onSubscriptionConfirmation: S,
+            onSubscribeComplete: y,
+            inPopout: R,
+            applicationId: O,
+            intent: b,
+        });
+}

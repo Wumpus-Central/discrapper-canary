@@ -1,1 +1,10 @@
-t.d(d,{default:()=>n});var e=t(627968);t(64700);var i=t(192308);function n(a){(0,i.openModalLazy)(async()=>{let{default:d}=await t.e("88862").then(t.bind(t,846637));return t=>(0,e.jsx)(d,{...t,guildId:a})})}
+t.d(d, { default: () => n });
+var e = t(627968);
+t(64700);
+var i = t(192308);
+function n(a) {
+    (0, i.openModalLazy)(async () => {
+        let { default: d } = await t.e("88862").then(t.bind(t, 846637));
+        return (t) => (0, e.jsx)(d, { ...t, guildId: a });
+    });
+}

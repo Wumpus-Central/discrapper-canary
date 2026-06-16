@@ -1,1 +1,5 @@
-var i=n(522545),r=n(269882);e.exports=function(e,t){return null!=e&&r(e,t,i)}
+var i = n(522545),
+    r = n(269882);
+e.exports = function (e, t) {
+    return null != e && r(e, t, i);
+};

@@ -1,1 +1,172 @@
-"use strict";let i,r,s,a;n.r(t),n.d(t,{default:()=>C}),n(938796);var o=n(158390),l=n(247775),u=n(17928),c=n(636537),d=n(506774),_=n(228366),h=n(926919),f=n(927813),p=n(38405),E=n(652215);let m=(i=`${location.protocol}//${location.host}/__development/source_maps`,r=null,s=new o.A(5*f.A.Millis.SECOND,+f.A.Millis.MINUTE,!0),a=()=>{c.Bo.put({url:i,headers:{Authorization:l.getToken()},oldFormErrors:!0,rejectWithError:!0}).then(e=>{401===e.status||403===e.status?(r=null,(0,h.x)({sourceMapsEnabled:!1})):200!==e.status?r=setTimeout(a,s.fail()):(s.succeed(),r=setTimeout(a,e.body.sourceMapCookieTTLSeconds*f.A.Millis.SECOND*.75))},()=>{r=setTimeout(a,s.fail())})},{set:e=>{e!==(null!=r)&&(e?r=setTimeout(a,0):(clearTimeout(r),r=null,c.Bo.del({url:i,headers:{Authorization:l.getToken()},oldFormErrors:!0,rejectWithError:!0})))}}),g="DeveloperOptionsStore",A={trace:!1,canary:!1,logGatewayEvents:!1,logOverlayEvents:!1,logAnalyticsEvents:!1,sourceMapsEnabled:!1,axeEnabled:!1,cssDebuggingEnabled:!1,layoutDebuggingEnabled:!1,bugReporterEnabled:!0,idleStatusIndicatorEnabled:!1,onlyShowPreviewAppCollections:!1,disableAppCollectionsCache:!1,isStreamInfoOverlayEnabled:!1,preventPopoutClose:!1,logKeyboardMismatches:!1,alertStartupMetrics:!1,logQuestEvents:!1},I={...A},T="DeveloperOptionsRoutingKey",S=[];function y(e){I={...A,...I,...e},m.set(I.sourceMapsEnabled),d.w.set(g,I)}function N(e){S=e,d.w.set(T,S)}class v extends u.Ay.Store{static displayName="DeveloperOptionsStore";initialize(){let e=d.w.get(g);null!=e&&(I={...A,...e});let t=d.w.get(T);null!=t&&(S=t)}get isTracingRequests(){return I.trace}get isForcedCanary(){return I.canary}get isLoggingGatewayEvents(){return I.logGatewayEvents}get isLoggingOverlayEvents(){return I.logOverlayEvents}get isLoggingAnalyticsEvents(){return I.logAnalyticsEvents}get isAxeEnabled(){return I.axeEnabled}get cssDebuggingEnabled(){return I.cssDebuggingEnabled}get layoutDebuggingEnabled(){return I.layoutDebuggingEnabled}get sourceMapsEnabled(){return I.sourceMapsEnabled}get isBugReporterEnabled(){return I.bugReporterEnabled}get isIdleStatusIndicatorEnabled(){return I.idleStatusIndicatorEnabled}get onlyShowPreviewAppCollections(){return I.onlyShowPreviewAppCollections}get disableAppCollectionsCache(){return I.disableAppCollectionsCache}get isStreamInfoOverlayEnabled(){return I.isStreamInfoOverlayEnabled}get preventPopoutClose(){return I.preventPopoutClose}get logKeyboardMismatches(){return I.logKeyboardMismatches}get alertStartupMetrics(){return I.alertStartupMetrics}get isLoggingQuestEvents(){return I.logQuestEvents}getDebugOptionsHeaderValue(){return Object.keys(I).map(e=>I[e]),Object.keys(I).filter(e=>I[e]).join(",")}get routingKeyTags(){return S}getRoutingKeyHeaderValue(){return 0===S.length?null:S.join(",")}}let C=new v(_.h,{LOGOUT:function(e){y(A),N([])},CONNECTION_OPEN:function(e){let t=((e.user.flags??0)&E.nhx.STAFF)===E.nhx.STAFF,n=t||null!=e.user.personal_connection_id;t&&m.set(I.sourceMapsEnabled),p.A.setTags({isStaff:n.toString()})},DEVELOPER_OPTIONS_UPDATE_SETTINGS:function(e){let{settings:t}=e;y(t)},DEVELOPER_OPTIONS_SET_ROUTING_KEY:function(e){let{tags:t}=e;N(t)}})
+"use strict";
+let i, r, s, a;
+n.r(t), n.d(t, { default: () => v }), n(938796);
+var o = n(158390),
+    l = n(247775),
+    u = n(17928),
+    c = n(636537),
+    d = n(506774),
+    _ = n(228366),
+    h = n(926919),
+    f = n(927813),
+    p = n(38405),
+    E = n(652215);
+let m =
+        ((i = `${location.protocol}//${location.host}/__development/source_maps`),
+        (r = null),
+        (s = new o.A(5 * f.A.Millis.SECOND, +f.A.Millis.MINUTE, !0)),
+        (a = () => {
+            c.Bo.put({ url: i, headers: { Authorization: l.getToken() }, oldFormErrors: !0, rejectWithError: !0 }).then(
+                (e) => {
+                    401 === e.status || 403 === e.status
+                        ? ((r = null), (0, h.x)({ sourceMapsEnabled: !1 }))
+                        : 200 !== e.status
+                          ? (r = setTimeout(a, s.fail()))
+                          : (s.succeed(),
+                            (r = setTimeout(a, e.body.sourceMapCookieTTLSeconds * f.A.Millis.SECOND * 0.75)));
+                },
+                () => {
+                    r = setTimeout(a, s.fail());
+                },
+            );
+        }),
+        {
+            set: (e) => {
+                e !== (null != r) &&
+                    (e
+                        ? (r = setTimeout(a, 0))
+                        : (clearTimeout(r),
+                          (r = null),
+                          c.Bo.del({
+                              url: i,
+                              headers: { Authorization: l.getToken() },
+                              oldFormErrors: !0,
+                              rejectWithError: !0,
+                          })));
+            },
+        }),
+    g = "DeveloperOptionsStore",
+    A = {
+        trace: !1,
+        canary: !1,
+        logGatewayEvents: !1,
+        logOverlayEvents: !1,
+        logAnalyticsEvents: !1,
+        sourceMapsEnabled: !1,
+        axeEnabled: !1,
+        cssDebuggingEnabled: !1,
+        layoutDebuggingEnabled: !1,
+        bugReporterEnabled: !0,
+        idleStatusIndicatorEnabled: !1,
+        onlyShowPreviewAppCollections: !1,
+        disableAppCollectionsCache: !1,
+        isStreamInfoOverlayEnabled: !1,
+        preventPopoutClose: !1,
+        logKeyboardMismatches: !1,
+        alertStartupMetrics: !1,
+        logQuestEvents: !1,
+    },
+    I = { ...A },
+    T = "DeveloperOptionsRoutingKey",
+    S = [];
+function y(e) {
+    (I = { ...A, ...I, ...e }), m.set(I.sourceMapsEnabled), d.w.set(g, I);
+}
+function C(e) {
+    (S = e), d.w.set(T, S);
+}
+class N extends u.Ay.Store {
+    static displayName = "DeveloperOptionsStore";
+    initialize() {
+        let e = d.w.get(g);
+        null != e && (I = { ...A, ...e });
+        let t = d.w.get(T);
+        null != t && (S = t);
+    }
+    get isTracingRequests() {
+        return I.trace;
+    }
+    get isForcedCanary() {
+        return I.canary;
+    }
+    get isLoggingGatewayEvents() {
+        return I.logGatewayEvents;
+    }
+    get isLoggingOverlayEvents() {
+        return I.logOverlayEvents;
+    }
+    get isLoggingAnalyticsEvents() {
+        return I.logAnalyticsEvents;
+    }
+    get isAxeEnabled() {
+        return I.axeEnabled;
+    }
+    get cssDebuggingEnabled() {
+        return I.cssDebuggingEnabled;
+    }
+    get layoutDebuggingEnabled() {
+        return I.layoutDebuggingEnabled;
+    }
+    get sourceMapsEnabled() {
+        return I.sourceMapsEnabled;
+    }
+    get isBugReporterEnabled() {
+        return I.bugReporterEnabled;
+    }
+    get isIdleStatusIndicatorEnabled() {
+        return I.idleStatusIndicatorEnabled;
+    }
+    get onlyShowPreviewAppCollections() {
+        return I.onlyShowPreviewAppCollections;
+    }
+    get disableAppCollectionsCache() {
+        return I.disableAppCollectionsCache;
+    }
+    get isStreamInfoOverlayEnabled() {
+        return I.isStreamInfoOverlayEnabled;
+    }
+    get preventPopoutClose() {
+        return I.preventPopoutClose;
+    }
+    get logKeyboardMismatches() {
+        return I.logKeyboardMismatches;
+    }
+    get alertStartupMetrics() {
+        return I.alertStartupMetrics;
+    }
+    get isLoggingQuestEvents() {
+        return I.logQuestEvents;
+    }
+    getDebugOptionsHeaderValue() {
+        return (
+            Object.keys(I).map((e) => I[e]),
+            Object.keys(I)
+                .filter((e) => I[e])
+                .join(",")
+        );
+    }
+    get routingKeyTags() {
+        return S;
+    }
+    getRoutingKeyHeaderValue() {
+        return 0 === S.length ? null : S.join(",");
+    }
+}
+let v = new N(_.h, {
+    LOGOUT: function (e) {
+        y(A), C([]);
+    },
+    CONNECTION_OPEN: function (e) {
+        let t = ((e.user.flags ?? 0) & E.nhx.STAFF) === E.nhx.STAFF,
+            n = t || null != e.user.personal_connection_id;
+        t && m.set(I.sourceMapsEnabled), p.A.setTags({ isStaff: n.toString() });
+    },
+    DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
+        let { settings: t } = e;
+        y(t);
+    },
+    DEVELOPER_OPTIONS_SET_ROUTING_KEY: function (e) {
+        let { tags: t } = e;
+        C(t);
+    },
+});

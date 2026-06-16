@@ -1,1 +1,1225 @@
-n.d(t,{default:()=>tl});var l=n(627968),r=n(64700),s=n(562708),i=n(892547),a=n(834730),u=n(252452),o=n(139286),c=n(200921),d=n(507553),h=n(89381),m=n(17928),g=n(521489),x=n(568602),y=n(775602),f=n(531685),j=n(625494),v=n(140735),A=n(534514),b=n(707554),p=n(964486);n(667532),n(134528),n(947204);var N=n(503698),C=n.n(N),S=n(607399),E=n(408278),k=n(477155),I=n(43990),M=n(331322),R=n(668953),T=n(972213),w=n(97469),K=n(963935),_=n(894858),B=n(272053),D=n(377980),O=n(939249),F=n(508770),L=n(738188),P=n(661531),G=n(812993),X=n(933297);function q(e){let{badge:t}=e;return t.useCustomBadge()}function z(e){let{badge:t}=e,n=t.useCount();return n<=0?null:(0,l.jsx)(G.hV,{count:n})}let U=function(e){let{badge:t}=e;switch(t.badgeType){case X.Xi.BETA:return(0,l.jsx)(F.E,{type:"beta",variant:"brand"});case X.Xi.COUNT:return(0,l.jsx)(z,{badge:t});case X.Xi.WARNING:return(0,l.jsx)(L.i,{size:"xs",color:P.A.colors.ICON_FEEDBACK_WARNING});case X.Xi.STRONGLY_DISCOURAGED_CUSTOM:return(0,l.jsx)(q,{badge:t})}};var V=n(375708),W=n(508891);function $(e){let{node:t,isLast:n}=e,r=t.useTitle(),s=t.usePersistentBadge?.(),i=(0,l.jsxs)(M.B,{direction:"horizontal",align:"center",gap:"xs",className:W.Ze,children:[(0,l.jsx)(a.E,{variant:n?"text-md/medium":"text-md/normal",color:n?"text-default":void 0,className:W.b,children:r}),n&&null!=s&&(0,l.jsx)(U,{badge:s}),!n&&(0,l.jsx)(a.E,{variant:"text-md/normal",color:"interactive-text-default","aria-hidden":!0,children:"/"})]});return(0,l.jsx)("li",{"aria-current":n?"page":void 0,className:W.QF,children:n?i:(0,l.jsx)(O.D,{onClick:()=>{B.A.navigate(t.key)},className:W.vk,children:i})})}function H(e){let{path:t}=e;return(0,l.jsx)("nav",{"aria-label":V.intl.string(V.t["bM+M/m"]),className:W.m7,children:(0,l.jsx)(M.B,{direction:"horizontal",role:"list",className:W.jD,children:t.map((e,n)=>(0,l.jsx)($,{node:e,isLast:n===t.length-1},e.key))})})}var Q=n(441562);function Y(e){let{icon:t,label:n,onClick:r}=e;return(0,l.jsx)(E.K,{onClick:r,icon:t,size:"sm",variant:"icon-only","aria-label":n})}function Z(e){let{setting:t,onClose:n}=e,r=(0,w.NC)(),s=null!=t?function(e){let t=[e];for(let n=e.parent;null!=n&&n.type!==K.Z6.SIDEBAR_ITEM;n=n.parent)n.type===K.Z6.PANEL&&t.unshift(n);return t}(t):[],i=s.at(-2),a=S.Fr&&s.length<=1,u=s.length>1&&null!=i;return(0,l.jsx)(I.N,{theme:r,children:e=>(0,l.jsxs)("div",{className:C()(Q.$Q,e,{[Q.HW]:a||u}),children:[(0,l.jsxs)(M.B,{direction:"horizontal",align:"center",className:Q.y9,children:[a&&(0,l.jsx)(Y,{icon:R.f,onClick:()=>_.A.setState({showNavigationMobile:!0}),label:V.intl.string(V.t["13/7kX"])}),u&&(0,l.jsx)(Y,{icon:k.r,onClick:()=>B.A.navigate(i.key),label:V.intl.string(V.t["13/7kX"])}),null!=t&&(0,l.jsx)(H,{path:s})]}),(0,l.jsx)(Y,{icon:T.d,onClick:n,label:V.intl.string(V.t.cpT0Cq)})]})})}let J=r.memo(function(e){let{onClose:t,setting:n}=e,r=_.A.useField("showNavigationMobile");return(0,l.jsxs)("div",{className:C()(Q.Qs,{[Q.Hw]:S.Fr,[Q.n7]:r}),children:[(0,l.jsx)(Z,{setting:n,onClose:t}),(0,l.jsx)("div",{className:Q.yp,children:null!=n&&(0,l.jsx)(D.A,{node:n})})]})});n(321073);var ee=n(837381),et=n(741918),en=n(689175),el=n(928039),er=n(131607),es=n(199966),ei=n(397274);function ea(e,t,n){let{nodeKeyToDismissibleContents:l,dismissibleContentToBadge:r}=n,s=l.get(e);return null!=t&&null!=s&&s.has(t)?r.get(t):null}let eu=function(e){let{badge:t}=e;switch(t.badgeType){case X.Xi.NEW:return(0,l.jsx)(F.E,{type:"new",variant:"brand"});case X.Xi.STRONGLY_DISCOURAGED_CUSTOM:let{StronglyDiscouragedCustomComponent:n}=t;return(0,l.jsx)(n,{})}};var eo=n(284009),ec=n.n(eo),ed=n(922139),eh=n(935399),em=n(319354),eg=n(717421),ex=n(885386),ey=n(429566);function ef(e){let{category:t,onClick:n,active:s,dismissibleBadge:i}=e,{useTitle:a,useSubnavLabel:u,key:o,usePersistentBadge:c}=t,d=c?.(),h=r.useMemo(()=>null!=i?s?null:(0,l.jsx)(eu,{badge:i}):null!=d?(0,l.jsx)(U,{badge:d}):void 0,[s,i,d]),m=a?.(),g=u?.()??m;return ec()(null!=g,"[SettingsSubnavigationCategory] Category must have a title"),(0,l.jsx)(ee.tG,{id:o,children:e=>(0,l.jsx)("div",{role:"listitem",children:(0,l.jsxs)(O.D,{onClick:n,className:C()(ey.AS,{[ey.vu]:s}),...e,role:"link","aria-current":s?"location":void 0,children:[g,h]},o)})})}function ej(e){let t,n,s,i,{active:a,isTopLevelPanelVisible:u,visibleCategories:o,visibleContent:c,dismissibleBadges:d}=e,h=_.A.useField("currentCategoryKey"),[m,g]=r.useState(a);r.useLayoutEffect(()=>{a&&g(!0)},[a]);let x=r.useMemo(()=>o.findIndex(e=>e.key===h),[o,h]);r.useEffect(()=>{if(!a){let e=y.current;null!=e&&(e.style.height=`${e.scrollHeight}px`,window.getComputedStyle(e).height,e.style.height="0",Promise.allSettled(e.getAnimations().map(e=>e.finished)).then(()=>{g(!1)}))}},[a]);let y=r.useRef(null),[f,j]=r.useState(a?"auto":"0");return t=r.useRef(null),n=r.useRef(new Set),s=r.useRef(!1),i=r.useMemo(()=>{let e=new Set;return o.forEach(t=>e.add(t.key)),e},[o]),r.useEffect(()=>{if(!u)return;let e=ei.A.getPanelScrollerNode();if(null==e)return;let l=e.querySelectorAll("[data-settings-category-key]"),r=e.querySelector("[data-panel-bottom]"),a=[];Array.from(l).forEach(e=>{let t=e.getAttribute("data-settings-category-key");null!=t&&i.has(t)&&a.push(e)});let o=new Map,c=[];return a.forEach(e=>{let t=e.getAttribute("data-settings-category-key");null!=t&&(o.set(e,t),c.push(t))}),t.current=new IntersectionObserver(t=>{if(t.forEach(t=>{let{isIntersecting:l,target:i}=t;if(i===r){let t=e.scrollHeight>e.clientHeight;s.current=l&&t;return}let a=o.get(i);null!=a&&(l?n.current.add(a):n.current.delete(a))}),!ei.A.getIsSidebarCategoryAutoSelectEnabled())return;let l=[];if(c.forEach(e=>{n.current.has(e)&&l.push(e)}),0===l.length)return;let i=l.at(s.current?-1:0);_.A.getField("currentCategoryKey")!==i&&_.A.setState({currentCategoryKey:i})},{root:e,rootMargin:"0px 100000px 0px 100000px",threshold:1}),a.forEach(e=>t.current?.observe(e)),null!=r&&t.current?.observe(r),()=>{a.forEach(e=>t.current?.unobserve(e)),null!=r&&t.current?.unobserve(r),t.current?.disconnect(),t.current=null}},[i,u]),(0,l.jsx)("div",{className:ey.lK,style:{height:f,opacity:+!!a},ref:y,children:m&&(0,l.jsx)(ev,{index:x,activeKey:h,categories:o,visibleContent:c,dismissibleBadges:d,onMount:function(){let e=y.current;null!=e&&(e.style.height=`${e.scrollHeight}px`,Promise.all(e.getAnimations().map(e=>e.finished)).then(()=>{e.style.height="auto",ei.A.scrollSidebarNodeIntoView(e,{animate:!0,block:"nearest"})}).catch(()=>{}))}})})}function ev(e){let{index:t,activeKey:n,categories:s,visibleContent:i,dismissibleBadges:a,onMount:u}=e,{thumbRef:o,trackRef:c,thumbAnchorRef:d,springs:h}=function(e){let t=ex.Xi.useSetting(),n=r.useRef(null),l=r.useRef(null),s=r.useRef(null),i=r.useRef(!0),a=r.useRef(t),u=r.useRef(e),[o,c]=(0,eg.z)(()=>({y:0,height:0,config:{mass:.1,friction:20,tension:300}}));return r.useLayoutEffect(()=>{let r=a.current!==t,d=()=>{if(null==n.current||null==l.current||null==s.current)return;let[d,h]=[n.current.getBoundingClientRect(),s.current.getBoundingClientRect()],m=d.width/2,g=(h.y-d.y)/m,x=h.height/m;i.current||r||y.Ay.useReducedMotion||-1===u.current?(o.y.set(g),o.height.set(x)):c({y:g,height:x}),i.current=!1,a.current=t,u.current=e},h=null;return r?h=requestAnimationFrame(()=>{h=null,d()}):d(),()=>{null!=h&&cancelAnimationFrame(h)}},[e,c,o.y,o.height,t]),{thumbRef:l,trackRef:n,thumbAnchorRef:s,springs:o}}(t);return(0,eh.Ay)(u),(0,l.jsxs)("div",{className:ey.o8,role:"list",style:{"--custom-nav-count":s.length,"--custom-nav-index":Math.max(t,0),"--custom-nav-width":"2px","--custom-icon-size":`${em.E[eb]}px`},children:[(0,l.jsx)("div",{className:ey.u4,"aria-hidden":"true",ref:c,children:(0,l.jsx)(ed.animated.div,{className:C()(ey.FF,{[ey.R]:null==n}),style:h,ref:o})}),(0,l.jsx)("div",{className:ey.gu,"aria-hidden":"true",ref:d}),s.map(e=>{let t=ea(e.key,i,a);return(0,l.jsx)(ef,{onClick:()=>{var t;return t=e.key,void B.A.navigate(t,{showNavigationMobile:!1})},active:e.key===n,category:e,dismissibleBadge:t},e.key)})]})}var eA=n(585635);let eb="refresh_sm";function ep(e){let{onClick:t,active:n,node:s,dismissibleBadge:i,panelKey:u,listItemProps:o,children:c}=e,{icon:d,StronglyDiscouragedCustomComponent:h,usePersistentBadge:m,useTitle:g,variant:x="default"}=s,y=g?.(),f=function(e){switch(e){case"default":return"currentColor";case"destructive":return"text-feedback-critical"}}(x),j=function(e){switch(e){case"default":return"currentColor";case"destructive":return P.A.colors.ICON_FEEDBACK_CRITICAL}}(x),v=m?.(n),A=r.useMemo(()=>null!=i?n?null:(0,l.jsx)(eu,{badge:i}):null!=v?(0,l.jsx)(U,{badge:v}):void 0,[n,i,v]);return(0,l.jsxs)("li",{"data-settings-sidebar-item":u,className:eA.DB,children:[(0,l.jsxs)(O.D,{...o,role:"link","aria-current":n?"page":void 0,className:C()(eA.AS,{[eA.vu]:n,[eA.RD]:"destructive"===x}),onClick:t,children:[null!=h?(0,l.jsx)(h,{}):(0,l.jsxs)("div",{className:eA.Ly,children:[(0,l.jsx)(d,{color:j,size:eb,className:eA.Kk}),(0,l.jsx)(a.E,{variant:"text-md/medium",color:f,children:y})]}),A]}),c]})}function eN(e){let{node:t,visibleContent:n,dismissibleBadges:s,hoisted:i=!1}=e,a=r.useMemo(()=>t.layout[0],[t]),u=_.A.useField("currentPanelKey"),{accessibleDirectory:o}=(0,es._)(),c=a?.key===u,d=r.useMemo(()=>{if(null==u)return!1;let e=o.entry(u);return e?.parentSidebarItemKey===t.key},[u,t.key,o]),h=r.useMemo(()=>{if(null==a||!(0,K.Iu)(a.layout))return null;let e=a.layout.filter(K.bJ);return e.length>1?e:null},[a]),m=null!=a?()=>{let e=u===a.key&&null!=h?h[0].key:a.key;B.A.navigate(e,{animateSidebarScroll:!0,showNavigationMobile:!1})}:t.onClick,g=null!=u,x=r.useMemo(()=>null!=h&&g?(0,l.jsx)(ej,{active:d,isTopLevelPanelVisible:c,visibleCategories:h,visibleContent:n,dismissibleBadges:s}):null,[h,g,d,c,n,s]),y=r.useMemo(()=>ea(t.key,n,s),[t.key,n,s]);return i?(0,l.jsx)(ep,{panelKey:a?.key,onClick:m,active:d,"aria-expanded":null!=h?d:void 0,node:t,dismissibleBadge:y,children:x}):(0,l.jsx)(ee.tG,{id:a?.key??t.key,children:e=>(0,l.jsx)(ep,{panelKey:a?.key,onClick:m,active:d,node:t,dismissibleBadge:y,listItemProps:e,children:x})})}var eC=n(826673),eS=n(49999),eE=n(443263);function ek(e){let{currentPanelKey:t,root:n,onClose:s,footer:i,emptyState:a,searchBar:u}=e,o=_.A.useField("showNavigationMobile"),c=r.useRef(null),[d]=r.useState(n),{accessibleDirectory:h}=(0,es._)(),m=r.useMemo(()=>{let e,t,n,l;return e=[],t=new Map,n=new Map,l=new Map,!function e(t,n){if(n(t),(0,K.nW)(t))for(let l of t.layout)e(l,n)}(d,r=>{if(!("getDismissibleBadges"in r))return;let s=r.getDismissibleBadges?.();if(null==s)return;let i=h.entry(r.key);if(i?.parentSidebarItemKey==null)return;let a=null;if(null!=i.parentCategoryKey){let e=h.get(i.parentCategoryKey);e?.type===K.Z6.CATEGORY&&(0,K.bJ)(e)&&(a=i.parentCategoryKey)}let u={sidebarItemKey:i.parentSidebarItemKey,categoryKey:a};s.forEach(r=>(function(r,s){let{dismissibleContent:i}=r;e.push(i),t.set(i,s),l.set(i,r);let a=n.get(s.sidebarItemKey)??new Set;if(a.add(i),n.set(s.sidebarItemKey,a),null!=s.categoryKey){let e=n.get(s.categoryKey)??new Set;e.add(i),n.set(s.categoryKey,e)}})(r,u))}),{allDismissibleContents:e,dismissibleContentToNodeKeys:t,nodeKeyToDismissibleContents:n,dismissibleContentToBadge:l}},[d,h]),[g]=(0,er.kn)(m.allDismissibleContents);!function(e){let{visibleContent:t,dismissibleBadges:n,accessibleDirectory:l}=e,{dismissibleContentToNodeKeys:s,nodeKeyToDismissibleContents:i}=n,a=r.useRef(!1);r.useEffect(()=>{if(a.current=!1,null==t||!s.has(t))return;let e=s.get(t);if(null==e)return;let n=()=>{a.current=!1;let t=i.get(e.sidebarItemKey);null!=t&&t.forEach(e=>{(0,eC.Dr)(e,{dismissAction:eS.i.AUTO,forceTrack:!0})})},r=_.A.subscribe(e=>{let{currentPanelKey:t}=e;return t},t=>{let r=null!=t&&null!=l?l.entry(t)?.parentSidebarItemKey:null;null!=r&&(r===e.sidebarItemKey?a.current=!0:a.current&&n())},{equalityFn:(e,t)=>e===t,fireImmediately:!0});return()=>{r(),a.current&&n()}},[t,s,l,i])}({visibleContent:g,dismissibleBadges:m,accessibleDirectory:h});let[x,y]=r.useMemo(()=>{let e=[],t=[];return n.layout.forEach(n=>{n.hoisted?e.push(n):t.push(n)}),[e,t]},[n.layout]),f=(0,w.NC)(),j=(0,el.A)("settings-sidebar",c,{orientation:et.Gl.VERTICAL,defaultFocused:t}),[p,N]=r.useState(!1),k=r.useCallback(()=>{let e=c.current?.getScrollerNode();N(null!=e&&e.scrollTop>12)},[]),M=r.useId();return(0,l.jsx)(I.N,{theme:f,children:e=>(0,l.jsxs)("aside",{"aria-labelledby":M,className:C()(eE.pz,e,{[eE.Hw]:S.Fr,[eE.n7]:o}),children:[(0,l.jsx)(v.A,{children:(0,l.jsx)(A.D,{variant:"text-sm/bold",id:M,children:V.intl.string(V.t["ZU3/B4"])})}),(0,l.jsxs)(b.F,{children:[(0,l.jsxs)("div",{className:C()(eE.gM,{[eE.to]:p}),children:[S.Fr&&(0,l.jsx)("div",{className:eE.hg,children:(0,l.jsx)(E.K,{icon:T.d,onClick:s,variant:"icon-only",size:"sm","aria-label":V.intl.string(V.t.cpT0Cq)})}),(0,l.jsx)("div",{children:x.map(e=>(0,l.jsx)(eI,{section:e,visibleContent:g,dismissibleBadges:m},e.key))}),null!=u&&(0,l.jsx)(u,{}),null!=a&&0===y.length&&(0,l.jsx)(a,{})]}),(0,l.jsx)("nav",{className:eE.C$,"aria-label":V.intl.string(V.t.MqTGqz),children:(0,l.jsx)(ee.hD,{navigator:j,children:(0,l.jsx)(ee.PR,{children:e=>{let{ref:t,...n}=e;return(0,l.jsxs)(en.Ch,{ref:e=>{c.current=e,ei.A.setSidebarScrollerRef(e),k()},className:eE.Mt,fade:!0,onScroll:k,children:[(0,l.jsx)("ul",{className:eE.jV,...n,ref:t,children:y.map(e=>(0,l.jsx)(eM,{section:e,visibleContent:g,dismissibleBadges:m},e.key))}),null!=i&&(0,l.jsx)(i,{})]})}})})})]})]})})}function eI(e){let{section:t,visibleContent:n,dismissibleBadges:r}=e;return(0,l.jsx)("div",{className:eE.uW,children:(0,l.jsx)("ul",{className:eE.C4,children:t.layout.map(e=>(0,l.jsx)(eN,{node:e,visibleContent:n,dismissibleBadges:r,hoisted:!0},e.key))})})}function eM(e){let{section:t,visibleContent:n,dismissibleBadges:s}=e,i=t.useTitle?.()??V.intl.string(V.t["3D5yo/"]),a=r.useId();return(0,l.jsxs)("li",{className:eE.uW,"aria-labelledby":a,children:[t.hideTitle?(0,l.jsx)(v.A,{children:(0,l.jsx)(A.D,{id:a,variant:"heading-sm/medium",children:i})}):(0,l.jsx)("div",{className:eE.a9,children:(0,l.jsx)(A.D,{id:a,className:eE.Pf,variant:"heading-sm/medium",color:"text-muted",children:i})}),(0,l.jsx)("ul",{className:eE.C4,children:t.layout.map(e=>(0,l.jsx)(eN,{node:e,visibleContent:n,dismissibleBadges:s},e.key))})]})}var eR=n(823092),eT=n(581298),ew=n(910772);function eK(e){let{partialRoot:t,target:n,defaultTarget:s,onClose:i,sidebarFooter:a,searchBar:u,onViewChange:o,emptyState:c,searchQuery:d,clearSearchQuery:h}=e,m=_.A.useField("currentPanelKey"),{node:g,visibleDirectory:x,accessibleDirectory:y}=(0,eT.Ay)(t,d??""),f=null!=n&&x.entry(n)?.parentPanelKey!=null?n:s,j=r.useMemo(()=>{let e=y.entry(m??f)?.parentPanelKey;if(null!=e)return y.getPanelOrThrow(e)},[m,y,f]),{navigateWithValidation:N}=(0,eR.L_)(),C=r.useMemo(()=>()=>N(i),[N,i]);r.useEffect(()=>{B.A.init({accessibleDirectory:y,onViewChange:o,navigateWithValidation:(e,t)=>{null==x.entry(e)&&h?.(),N(t)},closeWithValidation:C})},[y,N,o,h,x,C]);let[S,E]=r.useState(!0);(0,p.Ay)(()=>(B.A.navigate(f,{animatePanelScroll:!1,animateSidebarScroll:!1,showNavigationMobile:null==n}),E(!1),()=>{B.A.reset(),ei.A.reset(),_.A.resetState()}));let k=r.useMemo(()=>({visibleDirectory:x,accessibleDirectory:y}),[x,y]),I=null!=m?x.get(m):void 0,M=S?void 0:I??j,R=M?.useTitle()??V.intl.string(V.t["3D5yo/"]);return(0,l.jsx)(es.x.Provider,{value:k,children:(0,l.jsxs)("div",{className:ew.k,children:[(0,l.jsx)(v.A,{children:(0,l.jsx)(A.D,{variant:"text-sm/bold",children:R})}),(0,l.jsxs)(b.F,{children:[(0,l.jsx)(ek,{currentPanelKey:m,root:g,onClose:C,footer:a,emptyState:c,searchBar:u}),(0,l.jsx)(J,{onClose:C,setting:M})]})]})})}function e_(e){return(0,l.jsx)(eR.ms,{children:(0,l.jsx)(eK,{...e})})}var eB=n(652215);function eD(e){let{partialRoot:t,target:n,defaultTarget:s,onViewChange:i,sidebarFooter:a,emptyState:u,searchQuery:o,clearSearchQuery:c,searchBar:d,...h}=e,[v,A]=r.useState(!1),[b,p]=r.useState(1.4),N=r.useRef(null),C=(0,m.bG)([y.Ay],()=>y.Ay.useReducedMotion),S=(0,m.bG)([f.A],()=>f.A.isFocused());return r.useEffect(()=>{let e=e=>{let{intensity:t,duration:n}=e;!C&&S&&(A(!0),p(t??1.4),clearTimeout(N.current),N.current=setTimeout(()=>A(!1),n??1e3))};return j._.subscribe(eB.jej.SHAKE_SETTINGS_MODAL,e),()=>{j._.unsubscribe(eB.jej.SHAKE_SETTINGS_MODAL,e),clearTimeout(N.current)}},[C,S]),(0,l.jsx)(x.b,{isShaking:v,intensity:b,children:(0,l.jsx)(g.N,{...h,children:(0,l.jsx)(e_,{onClose:h.onClose,partialRoot:t,target:n,defaultTarget:s,onViewChange:i,emptyState:u,sidebarFooter:a,searchQuery:o,clearSearchQuery:c,searchBar:d})})})}var eO=n(495544),eF=n(287809),eL=n(152056),eP=n(780964),eG=n(157035),eX=n(980707),eq=n(477782),ez=n(349288),eU=n(922016),eV=n(975807),eW=n(212031),e$=n(975571),eH=n(481613),eQ=n.n(eH),eY=n(77729),eZ=n(521502),eJ=n(915089),e0=n(206845),e1=n(19575),e9=n(763224);function e7(){let e=(0,eJ.GV)(),t=window.GLOBAL_ENV.RELEASE_CHANNEL,n="563553",r="2bb1f1c172ee0ebf3ee2e8759451c0fcad16510b".substring(0,7),s=eY.A?.app.getVersion(),i=eY.A?.app.getBuildNumber(),u=eY.A?.app.getAppArch(),o=eZ.A.getCurrentBuildOverride().overrides?.discord_web,c=function(){let e=eQ()?.os?.toString();if(null==e||null==eY.A)return null;let t=eY.A.os.release,[n,l,r]=e1.Ay.parsedOSRelease;return e.includes("Windows 10")&&void 0!==r&&r>=22e3&&(e=e.replace("Windows 10","Windows 11")),e.includes("OS X 10.15.7")&&void 0!==n&&n>=20&&(e=`macOS ${n>=25?n+1:n-9}`),`${e} (${t})`}(),d=[t,n,`(${r})`];return null!=s&&(d.push(`Host ${s}`),null!=u&&d.push(u.toLowerCase()),null!=i&&d.push(`(${i})`)),d.push(`Build Override: ${null!=o?o.id:"N/A"}`),null!=c&&d.push(c),(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(e0.A,{copyValue:d.join(" "),text:V.intl.string(V.t["9Al4Qd"]),"aria-label":!1,dataMeticulousIgnore:"true",children:c=>(0,l.jsxs)(O.D,{...c,"aria-describedby":e,className:C()(e9.vk,e9.oE),children:[(0,l.jsxs)("div",{className:e9.Cr,"data-mtctest-ignore":"true",children:[(0,l.jsxs)(a.E,{tag:"span",variant:"text-xxs/normal",color:"text-muted",children:[t," ",n," ",(0,l.jsxs)("span",{className:e9.Pc,children:["(",r,")"]})]}),null!=s&&(0,l.jsxs)(a.E,{tag:"span",variant:"text-xxs/normal",color:"text-muted",children:[s,null!=u&&(0,l.jsxs)("span",{className:e9.GI,children:[" ",u.toLowerCase()]}),null!=i&&(0,l.jsxs)("span",{children:[" (",i,")"]})]})]}),null!=o&&(0,l.jsx)(a.E,{tag:"span",variant:"text-xxs/normal",color:"text-muted",children:(0,l.jsxs)("span",{className:e9.Pc,children:["Build Override: ",o.id]})})]})}),(0,l.jsx)(v.A,{id:e,children:V.intl.string(V.t["9Al4Qd"])})]})}var e2=n(779801);function e5(e){let{onClose:t}=e;return(0,l.jsx)(eX.W,{"data-menu-migrated-auto":!0,navId:"settings-footer-more-menu",onClose:t,onSelect:()=>{},"aria-label":"More options",children:(0,l.jsxs)(eq.rX,{children:[(0,l.jsx)(eq.Dr,{id:"changelog",label:V.intl.string(V.t.LRmNAl),action:()=>(0,eW.j)(!0)}),(0,l.jsx)(eq.Dr,{id:"acknowledgements",label:V.intl.string(V.t["0nUKy3"]),action:()=>(0,eV.A)(eB.X7G.ACKNOWLEDGEMENTS)}),(0,l.jsx)(eq.Dr,{id:"support",label:V.intl.string(V.t["Yl/Riu"]),action:()=>(0,eV.A)(e$.C)})]})})}function e3(){let e=r.useRef(null);return(0,l.jsxs)("div",{children:[(0,l.jsx)(e7,{}),(0,l.jsxs)("div",{className:e2.yJ,children:[(0,l.jsx)(ez.Anchor,{href:eB.X7G.PRIVACY,children:(0,l.jsx)(a.E,{tag:"span",variant:"text-xxs/normal",color:"currentColor",children:V.intl.string(V.t["Knf/f/"])})}),(0,l.jsx)("span",{className:e2.xE,"aria-hidden":"true",children:"\u2022"}),(0,l.jsx)(ez.Anchor,{href:eB.X7G.TERMS,children:(0,l.jsx)(a.E,{tag:"span",variant:"text-xxs/normal",color:"currentColor",children:V.intl.string(V.t.uFSTGq)})}),(0,l.jsx)("span",{className:e2.xE,"aria-hidden":"true",children:"\u2022"}),(0,l.jsx)(eU.Y,{targetElementRef:e,position:"top",align:"center",spacing:0,animation:eU.Y.Animation.NONE,renderPopout:e=>{let{closePopout:t}=e;return(0,l.jsx)(e5,{onClose:t})},children:(t,n)=>(0,l.jsx)(ez.Anchor,{...t,ref:e,useDefaultUnderlineStyles:!1,className:C()(e2.Mj,{[e2.vu]:n.isShown}),children:(0,l.jsx)(a.E,{tag:"span",variant:"text-xxs/normal",color:"currentColor",children:V.intl.string(V.t["UKOtz+"])})})})]})]})}var e8=n(402651),e4=n(669067),e6=n(830543),te=n(466745);let tt=new Set([eP.X.PROFILE_PANEL,eP.X.SUBSCRIPTIONS_PANEL,eP.X.FAMILY_CENTER_PANEL,eP.X.POGGERMODE_PANEL]),tn=new Map([[eP.X.CONNECTIONS_PANEL,s.ImpressionNames.USER_SETTINGS_CONNECTIONS],[eP.X.SESSIONS_PANEL,s.ImpressionNames.USER_SETTINGS_SESSIONS]]);function tl(e){let{target:t,...n}=e,i=eL.A.useField("query"),a=r.useCallback(()=>{eL.A.setState({query:""}),h.A.terminate()},[]),[m,g]=r.useState(!1);return(r.useLayoutEffect(()=>{let e=()=>{null==eF.default.getCurrentUser()&&(g(!0),(0,e6.default)())};return eO.default.addChangeListener(e),()=>{eO.default.removeChangeListener(e),e8.A.resetState(),d.A.resetState(),u.A.close(),(0,c.ZQ)()}},[]),m)?null:(0,l.jsx)(eD,{partialRoot:eG.D,searchBar:tr,emptyState:ts,sidebarFooter:e3,onViewChange:e=>{tt.has(e)||(0,e4._)(e);let t=tn.get(e);null!=t&&(0,o.x)({type:s.ImpressionTypes.PANE,name:t,properties:{source:e8.A.getField("source")}}),e8.A.setState({source:void 0})},target:t,defaultTarget:eP.X.ACCOUNT_PANEL,searchQuery:i,clearSearchQuery:a,...n})}function tr(){let e=eL.A.useField("query"),t=r.useCallback(e=>{eL.A.setState({query:e}),h.A.maybeTrackQueryEntered()},[]),n=r.useCallback(()=>{h.A.isSessionActive()||h.A.initialize()},[]),s=r.useCallback(()=>{0===eL.A.getField("query").trim().length&&h.A.terminate()},[]),a=r.useCallback(()=>{eL.A.setState({query:""}),h.A.terminate()},[]);return r.useEffect(()=>()=>{eL.A.resetState(),h.A.terminate()},[]),(0,l.jsx)("div",{className:te.P,children:(0,l.jsx)(i.I,{size:"md",query:e,onFocus:n,onBlur:s,onChange:t,onClear:a})})}function ts(){return(0,l.jsxs)("div",{className:te.t,children:[(0,l.jsx)(a.E,{variant:"text-sm/semibold",color:"text-strong",children:V.intl.string(V.t.zihbmv)}),(0,l.jsx)(a.E,{variant:"text-sm/normal",color:"text-subtle",children:V.intl.string(V.t.XclvsB)})]})}
+n.d(t, { default: () => tl });
+var l = n(627968),
+    r = n(64700),
+    s = n(562708),
+    i = n(892547),
+    a = n(834730),
+    u = n(252452),
+    o = n(139286),
+    c = n(200921),
+    d = n(507553),
+    h = n(89381),
+    m = n(17928),
+    g = n(521489),
+    x = n(568602),
+    y = n(775602),
+    f = n(531685),
+    j = n(625494),
+    v = n(140735),
+    b = n(534514),
+    A = n(707554),
+    p = n(964486);
+n(667532), n(134528), n(947204);
+var N = n(503698),
+    C = n.n(N),
+    S = n(607399),
+    E = n(408278),
+    k = n(477155),
+    I = n(43990),
+    M = n(331322),
+    R = n(668953),
+    T = n(972213),
+    w = n(97469),
+    K = n(963935),
+    _ = n(894858),
+    B = n(272053),
+    D = n(377980),
+    O = n(939249),
+    F = n(508770),
+    L = n(738188),
+    P = n(661531),
+    G = n(812993),
+    X = n(933297);
+function q(e) {
+    let { badge: t } = e;
+    return t.useCustomBadge();
+}
+function z(e) {
+    let { badge: t } = e,
+        n = t.useCount();
+    return n <= 0 ? null : (0, l.jsx)(G.hV, { count: n });
+}
+let U = function (e) {
+    let { badge: t } = e;
+    switch (t.badgeType) {
+        case X.Xi.BETA:
+            return (0, l.jsx)(F.E, { type: "beta", variant: "brand" });
+        case X.Xi.COUNT:
+            return (0, l.jsx)(z, { badge: t });
+        case X.Xi.WARNING:
+            return (0, l.jsx)(L.i, { size: "xs", color: P.A.colors.ICON_FEEDBACK_WARNING });
+        case X.Xi.STRONGLY_DISCOURAGED_CUSTOM:
+            return (0, l.jsx)(q, { badge: t });
+    }
+};
+var V = n(375708),
+    W = n(508891);
+function $(e) {
+    let { node: t, isLast: n } = e,
+        r = t.useTitle(),
+        s = t.usePersistentBadge?.(),
+        i = (0, l.jsxs)(M.B, {
+            direction: "horizontal",
+            align: "center",
+            gap: "xs",
+            className: W.Ze,
+            children: [
+                (0, l.jsx)(a.E, {
+                    variant: n ? "text-md/medium" : "text-md/normal",
+                    color: n ? "text-default" : void 0,
+                    className: W.b,
+                    children: r,
+                }),
+                n && null != s && (0, l.jsx)(U, { badge: s }),
+                !n &&
+                    (0, l.jsx)(a.E, {
+                        variant: "text-md/normal",
+                        color: "interactive-text-default",
+                        "aria-hidden": !0,
+                        children: "/",
+                    }),
+            ],
+        });
+    return (0, l.jsx)("li", {
+        "aria-current": n ? "page" : void 0,
+        className: W.QF,
+        children: n
+            ? i
+            : (0, l.jsx)(O.D, {
+                  onClick: () => {
+                      B.A.navigate(t.key);
+                  },
+                  className: W.vk,
+                  children: i,
+              }),
+    });
+}
+function H(e) {
+    let { path: t } = e;
+    return (0, l.jsx)("nav", {
+        "aria-label": V.intl.string(V.t["bM+M/m"]),
+        className: W.m7,
+        children: (0, l.jsx)(M.B, {
+            direction: "horizontal",
+            role: "list",
+            className: W.jD,
+            children: t.map((e, n) => (0, l.jsx)($, { node: e, isLast: n === t.length - 1 }, e.key)),
+        }),
+    });
+}
+var Q = n(441562);
+function Y(e) {
+    let { icon: t, label: n, onClick: r } = e;
+    return (0, l.jsx)(E.K, { onClick: r, icon: t, size: "sm", variant: "icon-only", "aria-label": n });
+}
+function Z(e) {
+    let { setting: t, onClose: n } = e,
+        r = (0, w.NC)(),
+        s =
+            null != t
+                ? (function (e) {
+                      let t = [e];
+                      for (let n = e.parent; null != n && n.type !== K.Z6.SIDEBAR_ITEM; n = n.parent)
+                          n.type === K.Z6.PANEL && t.unshift(n);
+                      return t;
+                  })(t)
+                : [],
+        i = s.at(-2),
+        a = S.Fr && s.length <= 1,
+        u = s.length > 1 && null != i;
+    return (0, l.jsx)(I.N, {
+        theme: r,
+        children: (e) =>
+            (0, l.jsxs)("div", {
+                className: C()(Q.$Q, e, { [Q.HW]: a || u }),
+                children: [
+                    (0, l.jsxs)(M.B, {
+                        direction: "horizontal",
+                        align: "center",
+                        className: Q.y9,
+                        children: [
+                            a &&
+                                (0, l.jsx)(Y, {
+                                    icon: R.f,
+                                    onClick: () => _.A.setState({ showNavigationMobile: !0 }),
+                                    label: V.intl.string(V.t["13/7kX"]),
+                                }),
+                            u &&
+                                (0, l.jsx)(Y, {
+                                    icon: k.r,
+                                    onClick: () => B.A.navigate(i.key),
+                                    label: V.intl.string(V.t["13/7kX"]),
+                                }),
+                            null != t && (0, l.jsx)(H, { path: s }),
+                        ],
+                    }),
+                    (0, l.jsx)(Y, { icon: T.d, onClick: n, label: V.intl.string(V.t.cpT0Cq) }),
+                ],
+            }),
+    });
+}
+let J = r.memo(function (e) {
+    let { onClose: t, setting: n } = e,
+        r = _.A.useField("showNavigationMobile");
+    return (0, l.jsxs)("div", {
+        className: C()(Q.Qs, { [Q.Hw]: S.Fr, [Q.n7]: r }),
+        children: [
+            (0, l.jsx)(Z, { setting: n, onClose: t }),
+            (0, l.jsx)("div", { className: Q.yp, children: null != n && (0, l.jsx)(D.A, { node: n }) }),
+        ],
+    });
+});
+n(321073);
+var ee = n(837381),
+    et = n(741918),
+    en = n(689175),
+    el = n(928039),
+    er = n(131607),
+    es = n(199966),
+    ei = n(397274);
+function ea(e, t, n) {
+    let { nodeKeyToDismissibleContents: l, dismissibleContentToBadge: r } = n,
+        s = l.get(e);
+    return null != t && null != s && s.has(t) ? r.get(t) : null;
+}
+let eu = function (e) {
+    let { badge: t } = e;
+    switch (t.badgeType) {
+        case X.Xi.NEW:
+            return (0, l.jsx)(F.E, { type: "new", variant: "brand" });
+        case X.Xi.STRONGLY_DISCOURAGED_CUSTOM:
+            let { StronglyDiscouragedCustomComponent: n } = t;
+            return (0, l.jsx)(n, {});
+    }
+};
+var eo = n(284009),
+    ec = n.n(eo),
+    ed = n(922139),
+    eh = n(935399),
+    em = n(319354),
+    eg = n(717421),
+    ex = n(885386),
+    ey = n(429566);
+function ef(e) {
+    let { category: t, onClick: n, active: s, dismissibleBadge: i } = e,
+        { useTitle: a, useSubnavLabel: u, key: o, usePersistentBadge: c } = t,
+        d = c?.(),
+        h = r.useMemo(
+            () =>
+                null != i
+                    ? s
+                        ? null
+                        : (0, l.jsx)(eu, { badge: i })
+                    : null != d
+                      ? (0, l.jsx)(U, { badge: d })
+                      : void 0,
+            [s, i, d],
+        ),
+        m = a?.(),
+        g = u?.() ?? m;
+    return (
+        ec()(null != g, "[SettingsSubnavigationCategory] Category must have a title"),
+        (0, l.jsx)(ee.tG, {
+            id: o,
+            children: (e) =>
+                (0, l.jsx)("div", {
+                    role: "listitem",
+                    children: (0, l.jsxs)(
+                        O.D,
+                        {
+                            onClick: n,
+                            className: C()(ey.AS, { [ey.vu]: s }),
+                            ...e,
+                            role: "link",
+                            "aria-current": s ? "location" : void 0,
+                            children: [g, h],
+                        },
+                        o,
+                    ),
+                }),
+        })
+    );
+}
+function ej(e) {
+    let t,
+        n,
+        s,
+        i,
+        { active: a, isTopLevelPanelVisible: u, visibleCategories: o, visibleContent: c, dismissibleBadges: d } = e,
+        h = _.A.useField("currentCategoryKey"),
+        [m, g] = r.useState(a);
+    r.useLayoutEffect(() => {
+        a && g(!0);
+    }, [a]);
+    let x = r.useMemo(() => o.findIndex((e) => e.key === h), [o, h]);
+    r.useEffect(() => {
+        if (!a) {
+            let e = y.current;
+            null != e &&
+                ((e.style.height = `${e.scrollHeight}px`),
+                window.getComputedStyle(e).height,
+                (e.style.height = "0"),
+                Promise.allSettled(e.getAnimations().map((e) => e.finished)).then(() => {
+                    g(!1);
+                }));
+        }
+    }, [a]);
+    let y = r.useRef(null),
+        [f, j] = r.useState(a ? "auto" : "0");
+    return (
+        (t = r.useRef(null)),
+        (n = r.useRef(new Set())),
+        (s = r.useRef(!1)),
+        (i = r.useMemo(() => {
+            let e = new Set();
+            return o.forEach((t) => e.add(t.key)), e;
+        }, [o])),
+        r.useEffect(() => {
+            if (!u) return;
+            let e = ei.A.getPanelScrollerNode();
+            if (null == e) return;
+            let l = e.querySelectorAll("[data-settings-category-key]"),
+                r = e.querySelector("[data-panel-bottom]"),
+                a = [];
+            Array.from(l).forEach((e) => {
+                let t = e.getAttribute("data-settings-category-key");
+                null != t && i.has(t) && a.push(e);
+            });
+            let o = new Map(),
+                c = [];
+            return (
+                a.forEach((e) => {
+                    let t = e.getAttribute("data-settings-category-key");
+                    null != t && (o.set(e, t), c.push(t));
+                }),
+                (t.current = new IntersectionObserver(
+                    (t) => {
+                        if (
+                            (t.forEach((t) => {
+                                let { isIntersecting: l, target: i } = t;
+                                if (i === r) {
+                                    let t = e.scrollHeight > e.clientHeight;
+                                    s.current = l && t;
+                                    return;
+                                }
+                                let a = o.get(i);
+                                null != a && (l ? n.current.add(a) : n.current.delete(a));
+                            }),
+                            !ei.A.getIsSidebarCategoryAutoSelectEnabled())
+                        )
+                            return;
+                        let l = [];
+                        if (
+                            (c.forEach((e) => {
+                                n.current.has(e) && l.push(e);
+                            }),
+                            0 === l.length)
+                        )
+                            return;
+                        let i = l.at(s.current ? -1 : 0);
+                        _.A.getField("currentCategoryKey") !== i && _.A.setState({ currentCategoryKey: i });
+                    },
+                    { root: e, rootMargin: "0px 100000px 0px 100000px", threshold: 1 },
+                )),
+                a.forEach((e) => t.current?.observe(e)),
+                null != r && t.current?.observe(r),
+                () => {
+                    a.forEach((e) => t.current?.unobserve(e)),
+                        null != r && t.current?.unobserve(r),
+                        t.current?.disconnect(),
+                        (t.current = null);
+                }
+            );
+        }, [i, u]),
+        (0, l.jsx)("div", {
+            className: ey.lK,
+            style: { height: f, opacity: +!!a },
+            ref: y,
+            children:
+                m &&
+                (0, l.jsx)(ev, {
+                    index: x,
+                    activeKey: h,
+                    categories: o,
+                    visibleContent: c,
+                    dismissibleBadges: d,
+                    onMount: function () {
+                        let e = y.current;
+                        null != e &&
+                            ((e.style.height = `${e.scrollHeight}px`),
+                            Promise.all(e.getAnimations().map((e) => e.finished))
+                                .then(() => {
+                                    (e.style.height = "auto"),
+                                        ei.A.scrollSidebarNodeIntoView(e, { animate: !0, block: "nearest" });
+                                })
+                                .catch(() => {}));
+                    },
+                }),
+        })
+    );
+}
+function ev(e) {
+    let { index: t, activeKey: n, categories: s, visibleContent: i, dismissibleBadges: a, onMount: u } = e,
+        {
+            thumbRef: o,
+            trackRef: c,
+            thumbAnchorRef: d,
+            springs: h,
+        } = (function (e) {
+            let t = ex.Xi.useSetting(),
+                n = r.useRef(null),
+                l = r.useRef(null),
+                s = r.useRef(null),
+                i = r.useRef(!0),
+                a = r.useRef(t),
+                u = r.useRef(e),
+                [o, c] = (0, eg.z)(() => ({ y: 0, height: 0, config: { mass: 0.1, friction: 20, tension: 300 } }));
+            return (
+                r.useLayoutEffect(() => {
+                    let r = a.current !== t,
+                        d = () => {
+                            if (null == n.current || null == l.current || null == s.current) return;
+                            let [d, h] = [n.current.getBoundingClientRect(), s.current.getBoundingClientRect()],
+                                m = d.width / 2,
+                                g = (h.y - d.y) / m,
+                                x = h.height / m;
+                            i.current || r || y.Ay.useReducedMotion || -1 === u.current
+                                ? (o.y.set(g), o.height.set(x))
+                                : c({ y: g, height: x }),
+                                (i.current = !1),
+                                (a.current = t),
+                                (u.current = e);
+                        },
+                        h = null;
+                    return (
+                        r
+                            ? (h = requestAnimationFrame(() => {
+                                  (h = null), d();
+                              }))
+                            : d(),
+                        () => {
+                            null != h && cancelAnimationFrame(h);
+                        }
+                    );
+                }, [e, c, o.y, o.height, t]),
+                { thumbRef: l, trackRef: n, thumbAnchorRef: s, springs: o }
+            );
+        })(t);
+    return (
+        (0, eh.Ay)(u),
+        (0, l.jsxs)("div", {
+            className: ey.o8,
+            role: "list",
+            style: {
+                "--custom-nav-count": s.length,
+                "--custom-nav-index": Math.max(t, 0),
+                "--custom-nav-width": "2px",
+                "--custom-icon-size": `${em.E[eA]}px`,
+            },
+            children: [
+                (0, l.jsx)("div", {
+                    className: ey.u4,
+                    "aria-hidden": "true",
+                    ref: c,
+                    children: (0, l.jsx)(ed.animated.div, {
+                        className: C()(ey.FF, { [ey.R]: null == n }),
+                        style: h,
+                        ref: o,
+                    }),
+                }),
+                (0, l.jsx)("div", { className: ey.gu, "aria-hidden": "true", ref: d }),
+                s.map((e) => {
+                    let t = ea(e.key, i, a);
+                    return (0, l.jsx)(
+                        ef,
+                        {
+                            onClick: () => {
+                                var t;
+                                return (t = e.key), void B.A.navigate(t, { showNavigationMobile: !1 });
+                            },
+                            active: e.key === n,
+                            category: e,
+                            dismissibleBadge: t,
+                        },
+                        e.key,
+                    );
+                }),
+            ],
+        })
+    );
+}
+var eb = n(585635);
+let eA = "refresh_sm";
+function ep(e) {
+    let { onClick: t, active: n, node: s, dismissibleBadge: i, panelKey: u, listItemProps: o, children: c } = e,
+        {
+            icon: d,
+            StronglyDiscouragedCustomComponent: h,
+            usePersistentBadge: m,
+            useTitle: g,
+            variant: x = "default",
+        } = s,
+        y = g?.(),
+        f = (function (e) {
+            switch (e) {
+                case "default":
+                    return "currentColor";
+                case "destructive":
+                    return "text-feedback-critical";
+            }
+        })(x),
+        j = (function (e) {
+            switch (e) {
+                case "default":
+                    return "currentColor";
+                case "destructive":
+                    return P.A.colors.ICON_FEEDBACK_CRITICAL;
+            }
+        })(x),
+        v = m?.(n),
+        b = r.useMemo(
+            () =>
+                null != i
+                    ? n
+                        ? null
+                        : (0, l.jsx)(eu, { badge: i })
+                    : null != v
+                      ? (0, l.jsx)(U, { badge: v })
+                      : void 0,
+            [n, i, v],
+        );
+    return (0, l.jsxs)("li", {
+        "data-settings-sidebar-item": u,
+        className: eb.DB,
+        children: [
+            (0, l.jsxs)(O.D, {
+                ...o,
+                role: "link",
+                "aria-current": n ? "page" : void 0,
+                className: C()(eb.AS, { [eb.vu]: n, [eb.RD]: "destructive" === x }),
+                onClick: t,
+                children: [
+                    null != h
+                        ? (0, l.jsx)(h, {})
+                        : (0, l.jsxs)("div", {
+                              className: eb.Ly,
+                              children: [
+                                  (0, l.jsx)(d, { color: j, size: eA, className: eb.Kk }),
+                                  (0, l.jsx)(a.E, { variant: "text-md/medium", color: f, children: y }),
+                              ],
+                          }),
+                    b,
+                ],
+            }),
+            c,
+        ],
+    });
+}
+function eN(e) {
+    let { node: t, visibleContent: n, dismissibleBadges: s, hoisted: i = !1 } = e,
+        a = r.useMemo(() => t.layout[0], [t]),
+        u = _.A.useField("currentPanelKey"),
+        { accessibleDirectory: o } = (0, es._)(),
+        c = a?.key === u,
+        d = r.useMemo(() => {
+            if (null == u) return !1;
+            let e = o.entry(u);
+            return e?.parentSidebarItemKey === t.key;
+        }, [u, t.key, o]),
+        h = r.useMemo(() => {
+            if (null == a || !(0, K.Iu)(a.layout)) return null;
+            let e = a.layout.filter(K.bJ);
+            return e.length > 1 ? e : null;
+        }, [a]),
+        m =
+            null != a
+                ? () => {
+                      let e = u === a.key && null != h ? h[0].key : a.key;
+                      B.A.navigate(e, { animateSidebarScroll: !0, showNavigationMobile: !1 });
+                  }
+                : t.onClick,
+        g = null != u,
+        x = r.useMemo(
+            () =>
+                null != h && g
+                    ? (0, l.jsx)(ej, {
+                          active: d,
+                          isTopLevelPanelVisible: c,
+                          visibleCategories: h,
+                          visibleContent: n,
+                          dismissibleBadges: s,
+                      })
+                    : null,
+            [h, g, d, c, n, s],
+        ),
+        y = r.useMemo(() => ea(t.key, n, s), [t.key, n, s]);
+    return i
+        ? (0, l.jsx)(ep, {
+              panelKey: a?.key,
+              onClick: m,
+              active: d,
+              "aria-expanded": null != h ? d : void 0,
+              node: t,
+              dismissibleBadge: y,
+              children: x,
+          })
+        : (0, l.jsx)(ee.tG, {
+              id: a?.key ?? t.key,
+              children: (e) =>
+                  (0, l.jsx)(ep, {
+                      panelKey: a?.key,
+                      onClick: m,
+                      active: d,
+                      node: t,
+                      dismissibleBadge: y,
+                      listItemProps: e,
+                      children: x,
+                  }),
+          });
+}
+var eC = n(826673),
+    eS = n(49999),
+    eE = n(443263);
+function ek(e) {
+    let { currentPanelKey: t, root: n, onClose: s, footer: i, emptyState: a, searchBar: u } = e,
+        o = _.A.useField("showNavigationMobile"),
+        c = r.useRef(null),
+        [d] = r.useState(n),
+        { accessibleDirectory: h } = (0, es._)(),
+        m = r.useMemo(() => {
+            let e, t, n, l;
+            return (
+                (e = []),
+                (t = new Map()),
+                (n = new Map()),
+                (l = new Map()),
+                !(function e(t, n) {
+                    if ((n(t), (0, K.nW)(t))) for (let l of t.layout) e(l, n);
+                })(d, (r) => {
+                    if (!("getDismissibleBadges" in r)) return;
+                    let s = r.getDismissibleBadges?.();
+                    if (null == s) return;
+                    let i = h.entry(r.key);
+                    if (i?.parentSidebarItemKey == null) return;
+                    let a = null;
+                    if (null != i.parentCategoryKey) {
+                        let e = h.get(i.parentCategoryKey);
+                        e?.type === K.Z6.CATEGORY && (0, K.bJ)(e) && (a = i.parentCategoryKey);
+                    }
+                    let u = { sidebarItemKey: i.parentSidebarItemKey, categoryKey: a };
+                    s.forEach((r) =>
+                        (function (r, s) {
+                            let { dismissibleContent: i } = r;
+                            e.push(i), t.set(i, s), l.set(i, r);
+                            let a = n.get(s.sidebarItemKey) ?? new Set();
+                            if ((a.add(i), n.set(s.sidebarItemKey, a), null != s.categoryKey)) {
+                                let e = n.get(s.categoryKey) ?? new Set();
+                                e.add(i), n.set(s.categoryKey, e);
+                            }
+                        })(r, u),
+                    );
+                }),
+                {
+                    allDismissibleContents: e,
+                    dismissibleContentToNodeKeys: t,
+                    nodeKeyToDismissibleContents: n,
+                    dismissibleContentToBadge: l,
+                }
+            );
+        }, [d, h]),
+        [g] = (0, er.kn)(m.allDismissibleContents);
+    !(function (e) {
+        let { visibleContent: t, dismissibleBadges: n, accessibleDirectory: l } = e,
+            { dismissibleContentToNodeKeys: s, nodeKeyToDismissibleContents: i } = n,
+            a = r.useRef(!1);
+        r.useEffect(() => {
+            if (((a.current = !1), null == t || !s.has(t))) return;
+            let e = s.get(t);
+            if (null == e) return;
+            let n = () => {
+                    a.current = !1;
+                    let t = i.get(e.sidebarItemKey);
+                    null != t &&
+                        t.forEach((e) => {
+                            (0, eC.Dr)(e, { dismissAction: eS.i.AUTO, forceTrack: !0 });
+                        });
+                },
+                r = _.A.subscribe(
+                    (e) => {
+                        let { currentPanelKey: t } = e;
+                        return t;
+                    },
+                    (t) => {
+                        let r = null != t && null != l ? l.entry(t)?.parentSidebarItemKey : null;
+                        null != r && (r === e.sidebarItemKey ? (a.current = !0) : a.current && n());
+                    },
+                    { equalityFn: (e, t) => e === t, fireImmediately: !0 },
+                );
+            return () => {
+                r(), a.current && n();
+            };
+        }, [t, s, l, i]);
+    })({ visibleContent: g, dismissibleBadges: m, accessibleDirectory: h });
+    let [x, y] = r.useMemo(() => {
+            let e = [],
+                t = [];
+            return (
+                n.layout.forEach((n) => {
+                    n.hoisted ? e.push(n) : t.push(n);
+                }),
+                [e, t]
+            );
+        }, [n.layout]),
+        f = (0, w.NC)(),
+        j = (0, el.A)("settings-sidebar", c, { orientation: et.Gl.VERTICAL, defaultFocused: t }),
+        [p, N] = r.useState(!1),
+        k = r.useCallback(() => {
+            let e = c.current?.getScrollerNode();
+            N(null != e && e.scrollTop > 12);
+        }, []),
+        M = r.useId();
+    return (0, l.jsx)(I.N, {
+        theme: f,
+        children: (e) =>
+            (0, l.jsxs)("aside", {
+                "aria-labelledby": M,
+                className: C()(eE.pz, e, { [eE.Hw]: S.Fr, [eE.n7]: o }),
+                children: [
+                    (0, l.jsx)(v.A, {
+                        children: (0, l.jsx)(b.D, {
+                            variant: "text-sm/bold",
+                            id: M,
+                            children: V.intl.string(V.t["ZU3/B4"]),
+                        }),
+                    }),
+                    (0, l.jsxs)(A.F, {
+                        children: [
+                            (0, l.jsxs)("div", {
+                                className: C()(eE.gM, { [eE.to]: p }),
+                                children: [
+                                    S.Fr &&
+                                        (0, l.jsx)("div", {
+                                            className: eE.hg,
+                                            children: (0, l.jsx)(E.K, {
+                                                icon: T.d,
+                                                onClick: s,
+                                                variant: "icon-only",
+                                                size: "sm",
+                                                "aria-label": V.intl.string(V.t.cpT0Cq),
+                                            }),
+                                        }),
+                                    (0, l.jsx)("div", {
+                                        children: x.map((e) =>
+                                            (0, l.jsx)(
+                                                eI,
+                                                { section: e, visibleContent: g, dismissibleBadges: m },
+                                                e.key,
+                                            ),
+                                        ),
+                                    }),
+                                    null != u && (0, l.jsx)(u, {}),
+                                    null != a && 0 === y.length && (0, l.jsx)(a, {}),
+                                ],
+                            }),
+                            (0, l.jsx)("nav", {
+                                className: eE.C$,
+                                "aria-label": V.intl.string(V.t.MqTGqz),
+                                children: (0, l.jsx)(ee.hD, {
+                                    navigator: j,
+                                    children: (0, l.jsx)(ee.PR, {
+                                        children: (e) => {
+                                            let { ref: t, ...n } = e;
+                                            return (0, l.jsxs)(en.Ch, {
+                                                ref: (e) => {
+                                                    (c.current = e), ei.A.setSidebarScrollerRef(e), k();
+                                                },
+                                                className: eE.Mt,
+                                                fade: !0,
+                                                onScroll: k,
+                                                children: [
+                                                    (0, l.jsx)("ul", {
+                                                        className: eE.jV,
+                                                        ...n,
+                                                        ref: t,
+                                                        children: y.map((e) =>
+                                                            (0, l.jsx)(
+                                                                eM,
+                                                                { section: e, visibleContent: g, dismissibleBadges: m },
+                                                                e.key,
+                                                            ),
+                                                        ),
+                                                    }),
+                                                    null != i && (0, l.jsx)(i, {}),
+                                                ],
+                                            });
+                                        },
+                                    }),
+                                }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+    });
+}
+function eI(e) {
+    let { section: t, visibleContent: n, dismissibleBadges: r } = e;
+    return (0, l.jsx)("div", {
+        className: eE.uW,
+        children: (0, l.jsx)("ul", {
+            className: eE.C4,
+            children: t.layout.map((e) =>
+                (0, l.jsx)(eN, { node: e, visibleContent: n, dismissibleBadges: r, hoisted: !0 }, e.key),
+            ),
+        }),
+    });
+}
+function eM(e) {
+    let { section: t, visibleContent: n, dismissibleBadges: s } = e,
+        i = t.useTitle?.() ?? V.intl.string(V.t["3D5yo/"]),
+        a = r.useId();
+    return (0, l.jsxs)("li", {
+        className: eE.uW,
+        "aria-labelledby": a,
+        children: [
+            t.hideTitle
+                ? (0, l.jsx)(v.A, { children: (0, l.jsx)(b.D, { id: a, variant: "heading-sm/medium", children: i }) })
+                : (0, l.jsx)("div", {
+                      className: eE.a9,
+                      children: (0, l.jsx)(b.D, {
+                          id: a,
+                          className: eE.Pf,
+                          variant: "heading-sm/medium",
+                          color: "text-muted",
+                          children: i,
+                      }),
+                  }),
+            (0, l.jsx)("ul", {
+                className: eE.C4,
+                children: t.layout.map((e) =>
+                    (0, l.jsx)(eN, { node: e, visibleContent: n, dismissibleBadges: s }, e.key),
+                ),
+            }),
+        ],
+    });
+}
+var eR = n(823092),
+    eT = n(581298),
+    ew = n(910772);
+function eK(e) {
+    let {
+            partialRoot: t,
+            target: n,
+            defaultTarget: s,
+            onClose: i,
+            sidebarFooter: a,
+            searchBar: u,
+            onViewChange: o,
+            emptyState: c,
+            searchQuery: d,
+            clearSearchQuery: h,
+        } = e,
+        m = _.A.useField("currentPanelKey"),
+        { node: g, visibleDirectory: x, accessibleDirectory: y } = (0, eT.Ay)(t, d ?? ""),
+        f = null != n && x.entry(n)?.parentPanelKey != null ? n : s,
+        j = r.useMemo(() => {
+            let e = y.entry(m ?? f)?.parentPanelKey;
+            if (null != e) return y.getPanelOrThrow(e);
+        }, [m, y, f]),
+        { navigateWithValidation: N } = (0, eR.L_)(),
+        C = r.useMemo(() => () => N(i), [N, i]);
+    r.useEffect(() => {
+        B.A.init({
+            accessibleDirectory: y,
+            onViewChange: o,
+            navigateWithValidation: (e, t) => {
+                null == x.entry(e) && h?.(), N(t);
+            },
+            closeWithValidation: C,
+        });
+    }, [y, N, o, h, x, C]);
+    let [S, E] = r.useState(!0);
+    (0, p.Ay)(
+        () => (
+            B.A.navigate(f, { animatePanelScroll: !1, animateSidebarScroll: !1, showNavigationMobile: null == n }),
+            E(!1),
+            () => {
+                B.A.reset(), ei.A.reset(), _.A.resetState();
+            }
+        ),
+    );
+    let k = r.useMemo(() => ({ visibleDirectory: x, accessibleDirectory: y }), [x, y]),
+        I = null != m ? x.get(m) : void 0,
+        M = S ? void 0 : (I ?? j),
+        R = M?.useTitle() ?? V.intl.string(V.t["3D5yo/"]);
+    return (0, l.jsx)(es.x.Provider, {
+        value: k,
+        children: (0, l.jsxs)("div", {
+            className: ew.k,
+            children: [
+                (0, l.jsx)(v.A, { children: (0, l.jsx)(b.D, { variant: "text-sm/bold", children: R }) }),
+                (0, l.jsxs)(A.F, {
+                    children: [
+                        (0, l.jsx)(ek, {
+                            currentPanelKey: m,
+                            root: g,
+                            onClose: C,
+                            footer: a,
+                            emptyState: c,
+                            searchBar: u,
+                        }),
+                        (0, l.jsx)(J, { onClose: C, setting: M }),
+                    ],
+                }),
+            ],
+        }),
+    });
+}
+function e_(e) {
+    return (0, l.jsx)(eR.ms, { children: (0, l.jsx)(eK, { ...e }) });
+}
+var eB = n(652215);
+function eD(e) {
+    let {
+            partialRoot: t,
+            target: n,
+            defaultTarget: s,
+            onViewChange: i,
+            sidebarFooter: a,
+            emptyState: u,
+            searchQuery: o,
+            clearSearchQuery: c,
+            searchBar: d,
+            ...h
+        } = e,
+        [v, b] = r.useState(!1),
+        [A, p] = r.useState(1.4),
+        N = r.useRef(null),
+        C = (0, m.bG)([y.Ay], () => y.Ay.useReducedMotion),
+        S = (0, m.bG)([f.A], () => f.A.isFocused());
+    return (
+        r.useEffect(() => {
+            let e = (e) => {
+                let { intensity: t, duration: n } = e;
+                !C &&
+                    S &&
+                    (b(!0), p(t ?? 1.4), clearTimeout(N.current), (N.current = setTimeout(() => b(!1), n ?? 1e3)));
+            };
+            return (
+                j._.subscribe(eB.jej.SHAKE_SETTINGS_MODAL, e),
+                () => {
+                    j._.unsubscribe(eB.jej.SHAKE_SETTINGS_MODAL, e), clearTimeout(N.current);
+                }
+            );
+        }, [C, S]),
+        (0, l.jsx)(x.b, {
+            isShaking: v,
+            intensity: A,
+            children: (0, l.jsx)(g.N, {
+                ...h,
+                children: (0, l.jsx)(e_, {
+                    onClose: h.onClose,
+                    partialRoot: t,
+                    target: n,
+                    defaultTarget: s,
+                    onViewChange: i,
+                    emptyState: u,
+                    sidebarFooter: a,
+                    searchQuery: o,
+                    clearSearchQuery: c,
+                    searchBar: d,
+                }),
+            }),
+        })
+    );
+}
+var eO = n(495544),
+    eF = n(287809),
+    eL = n(152056),
+    eP = n(780964),
+    eG = n(429987),
+    eX = n(980707),
+    eq = n(477782),
+    ez = n(349288),
+    eU = n(922016),
+    eV = n(975807),
+    eW = n(212031),
+    e$ = n(975571),
+    eH = n(481613),
+    eQ = n.n(eH),
+    eY = n(77729),
+    eZ = n(521502),
+    eJ = n(915089),
+    e0 = n(206845),
+    e1 = n(19575),
+    e7 = n(763224);
+function e9() {
+    let e = (0, eJ.GV)(),
+        t = window.GLOBAL_ENV.RELEASE_CHANNEL,
+        n = "564083",
+        r = "ca7cb477e5f46133bb3f0eba97731ee2d4b4b463".substring(0, 7),
+        s = eY.A?.app.getVersion(),
+        i = eY.A?.app.getBuildNumber(),
+        u = eY.A?.app.getAppArch(),
+        o = eZ.A.getCurrentBuildOverride().overrides?.discord_web,
+        c = (function () {
+            let e = eQ()?.os?.toString();
+            if (null == e || null == eY.A) return null;
+            let t = eY.A.os.release,
+                [n, l, r] = e1.Ay.parsedOSRelease;
+            return (
+                e.includes("Windows 10") && void 0 !== r && r >= 22e3 && (e = e.replace("Windows 10", "Windows 11")),
+                e.includes("OS X 10.15.7") && void 0 !== n && n >= 20 && (e = `macOS ${n >= 25 ? n + 1 : n - 9}`),
+                `${e} (${t})`
+            );
+        })(),
+        d = [t, n, `(${r})`];
+    return (
+        null != s && (d.push(`Host ${s}`), null != u && d.push(u.toLowerCase()), null != i && d.push(`(${i})`)),
+        d.push(`Build Override: ${null != o ? o.id : "N/A"}`),
+        null != c && d.push(c),
+        (0, l.jsxs)(l.Fragment, {
+            children: [
+                (0, l.jsx)(e0.A, {
+                    copyValue: d.join(" "),
+                    text: V.intl.string(V.t["9Al4Qd"]),
+                    "aria-label": !1,
+                    dataMeticulousIgnore: "true",
+                    children: (c) =>
+                        (0, l.jsxs)(O.D, {
+                            ...c,
+                            "aria-describedby": e,
+                            className: C()(e7.vk, e7.oE),
+                            children: [
+                                (0, l.jsxs)("div", {
+                                    className: e7.Cr,
+                                    "data-mtctest-ignore": "true",
+                                    children: [
+                                        (0, l.jsxs)(a.E, {
+                                            tag: "span",
+                                            variant: "text-xxs/normal",
+                                            color: "text-muted",
+                                            children: [
+                                                t,
+                                                " ",
+                                                n,
+                                                " ",
+                                                (0, l.jsxs)("span", { className: e7.Pc, children: ["(", r, ")"] }),
+                                            ],
+                                        }),
+                                        null != s &&
+                                            (0, l.jsxs)(a.E, {
+                                                tag: "span",
+                                                variant: "text-xxs/normal",
+                                                color: "text-muted",
+                                                children: [
+                                                    s,
+                                                    null != u &&
+                                                        (0, l.jsxs)("span", {
+                                                            className: e7.GI,
+                                                            children: [" ", u.toLowerCase()],
+                                                        }),
+                                                    null != i && (0, l.jsxs)("span", { children: [" (", i, ")"] }),
+                                                ],
+                                            }),
+                                    ],
+                                }),
+                                null != o &&
+                                    (0, l.jsx)(a.E, {
+                                        tag: "span",
+                                        variant: "text-xxs/normal",
+                                        color: "text-muted",
+                                        children: (0, l.jsxs)("span", {
+                                            className: e7.Pc,
+                                            children: ["Build Override: ", o.id],
+                                        }),
+                                    }),
+                            ],
+                        }),
+                }),
+                (0, l.jsx)(v.A, { id: e, children: V.intl.string(V.t["9Al4Qd"]) }),
+            ],
+        })
+    );
+}
+var e2 = n(779801);
+function e3(e) {
+    let { onClose: t } = e;
+    return (0, l.jsx)(eX.W, {
+        "data-menu-migrated-auto": !0,
+        navId: "settings-footer-more-menu",
+        onClose: t,
+        onSelect: () => {},
+        "aria-label": "More options",
+        children: (0, l.jsxs)(eq.rX, {
+            children: [
+                (0, l.jsx)(eq.Dr, { id: "changelog", label: V.intl.string(V.t.LRmNAl), action: () => (0, eW.j)(!0) }),
+                (0, l.jsx)(eq.Dr, {
+                    id: "acknowledgements",
+                    label: V.intl.string(V.t["0nUKy3"]),
+                    action: () => (0, eV.A)(eB.X7G.ACKNOWLEDGEMENTS),
+                }),
+                (0, l.jsx)(eq.Dr, {
+                    id: "support",
+                    label: V.intl.string(V.t["Yl/Riu"]),
+                    action: () => (0, eV.A)(e$.C),
+                }),
+            ],
+        }),
+    });
+}
+function e5() {
+    let e = r.useRef(null);
+    return (0, l.jsxs)("div", {
+        children: [
+            (0, l.jsx)(e9, {}),
+            (0, l.jsxs)("div", {
+                className: e2.yJ,
+                children: [
+                    (0, l.jsx)(ez.Anchor, {
+                        href: eB.X7G.PRIVACY,
+                        children: (0, l.jsx)(a.E, {
+                            tag: "span",
+                            variant: "text-xxs/normal",
+                            color: "currentColor",
+                            children: V.intl.string(V.t["Knf/f/"]),
+                        }),
+                    }),
+                    (0, l.jsx)("span", { className: e2.xE, "aria-hidden": "true", children: "\u2022" }),
+                    (0, l.jsx)(ez.Anchor, {
+                        href: eB.X7G.TERMS,
+                        children: (0, l.jsx)(a.E, {
+                            tag: "span",
+                            variant: "text-xxs/normal",
+                            color: "currentColor",
+                            children: V.intl.string(V.t.uFSTGq),
+                        }),
+                    }),
+                    (0, l.jsx)("span", { className: e2.xE, "aria-hidden": "true", children: "\u2022" }),
+                    (0, l.jsx)(eU.Y, {
+                        targetElementRef: e,
+                        position: "top",
+                        align: "center",
+                        spacing: 0,
+                        animation: eU.Y.Animation.NONE,
+                        renderPopout: (e) => {
+                            let { closePopout: t } = e;
+                            return (0, l.jsx)(e3, { onClose: t });
+                        },
+                        children: (t, n) =>
+                            (0, l.jsx)(ez.Anchor, {
+                                ...t,
+                                ref: e,
+                                useDefaultUnderlineStyles: !1,
+                                className: C()(e2.Mj, { [e2.vu]: n.isShown }),
+                                children: (0, l.jsx)(a.E, {
+                                    tag: "span",
+                                    variant: "text-xxs/normal",
+                                    color: "currentColor",
+                                    children: V.intl.string(V.t["UKOtz+"]),
+                                }),
+                            }),
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+var e4 = n(402651),
+    e8 = n(669067),
+    e6 = n(830543),
+    te = n(466745);
+let tt = new Set([eP.X.PROFILE_PANEL, eP.X.SUBSCRIPTIONS_PANEL, eP.X.FAMILY_CENTER_PANEL, eP.X.POGGERMODE_PANEL]),
+    tn = new Map([
+        [eP.X.CONNECTIONS_PANEL, s.ImpressionNames.USER_SETTINGS_CONNECTIONS],
+        [eP.X.SESSIONS_PANEL, s.ImpressionNames.USER_SETTINGS_SESSIONS],
+    ]);
+function tl(e) {
+    let { target: t, ...n } = e,
+        i = eL.A.useField("query"),
+        a = r.useCallback(() => {
+            eL.A.setState({ query: "" }), h.A.terminate();
+        }, []),
+        [m, g] = r.useState(!1);
+    return (r.useLayoutEffect(() => {
+        let e = () => {
+            null == eF.default.getCurrentUser() && (g(!0), (0, e6.default)());
+        };
+        return (
+            eO.default.addChangeListener(e),
+            () => {
+                eO.default.removeChangeListener(e), e4.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+            }
+        );
+    }, []),
+    m)
+        ? null
+        : (0, l.jsx)(eD, {
+              partialRoot: eG.D,
+              searchBar: tr,
+              emptyState: ts,
+              sidebarFooter: e5,
+              onViewChange: (e) => {
+                  tt.has(e) || (0, e8._)(e);
+                  let t = tn.get(e);
+                  null != t &&
+                      (0, o.x)({
+                          type: s.ImpressionTypes.PANE,
+                          name: t,
+                          properties: { source: e4.A.getField("source") },
+                      }),
+                      e4.A.setState({ source: void 0 });
+              },
+              target: t,
+              defaultTarget: eP.X.ACCOUNT_PANEL,
+              searchQuery: i,
+              clearSearchQuery: a,
+              ...n,
+          });
+}
+function tr() {
+    let e = eL.A.useField("query"),
+        t = r.useCallback((e) => {
+            eL.A.setState({ query: e }), h.A.maybeTrackQueryEntered();
+        }, []),
+        n = r.useCallback(() => {
+            h.A.isSessionActive() || h.A.initialize();
+        }, []),
+        s = r.useCallback(() => {
+            0 === eL.A.getField("query").trim().length && h.A.terminate();
+        }, []),
+        a = r.useCallback(() => {
+            eL.A.setState({ query: "" }), h.A.terminate();
+        }, []);
+    return (
+        r.useEffect(
+            () => () => {
+                eL.A.resetState(), h.A.terminate();
+            },
+            [],
+        ),
+        (0, l.jsx)("div", {
+            className: te.P,
+            children: (0, l.jsx)(i.I, { size: "md", query: e, onFocus: n, onBlur: s, onChange: t, onClear: a }),
+        })
+    );
+}
+function ts() {
+    return (0, l.jsxs)("div", {
+        className: te.t,
+        children: [
+            (0, l.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: V.intl.string(V.t.zihbmv) }),
+            (0, l.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: V.intl.string(V.t.XclvsB) }),
+        ],
+    });
+}

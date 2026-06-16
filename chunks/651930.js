@@ -1,1 +1,292 @@
-n.d(t,{default:()=>y,i:()=>N}),n(321073);var a=n(627968),i=n(64700),l=n(562708),s=n(189213),r=n(17928),o=n(783878),u=n(834730),c=n(773812),m=n(260598),d=n(587895),g=n(429913),p=n(952818),h=n(137177),x=n(409626),_=n(379078),v=n(704554),A=n(760751),b=n(174459),j=n(486020),f=n(21241),C=n(652215),k=n(375708),S=n(247947);let w=i.memo(function(e){let{game:t}=e,n=(0,r.bG)([d.A],()=>d.A.getApplicationByName(t.name)??d.A.getApplication(t.id),[t.id,t.name]),i=(0,r.bG)([p.Ay],()=>{let e=p.Ay.getVisibleGame(),n=null!=e?p.Ay.getGameOrTransformedSubgameForPID(e.pid):null;return n?.name?.toLowerCase()===t.name.toLowerCase()?n:p.Ay.getGameForName(t.name)},[t]),[l]=(0,g.A)([function(){if(null!=t.id)return t.id;if(null!=t.name){let e=d.A.getApplicationByName(t.name);if(null!=e)return e.id}if(null!=i)return i.id}()]);return(0,a.jsx)(h.A,{pid:i?.pid,game:l??n??t,size:h.M.XSMALL,className:S.Gt})}),G={searchType:_.n.FUZZY,sortType:_.r.JARO_WINKLER,searchStringGenerator:e=>{let{game:t,label:n}=e,a=[t.name,n,t.id.toString()];return t.aliases.length>0&&a.push(...t.aliases),null!=t.description&&a.push(t.description),a},throttleMs:100,maxSearchResults:20},N=i.memo(function(e){let{games:t,selectedGame:n,onGameSelected:l,onGameSearchQueryChange:s,placeholder:r}=e,[u,c]=i.useState(""),m=i.useCallback(e=>{c(e),s?.(e)},[s]),d=i.useMemo(()=>{let e=[];for(let i of(null!=n&&e.push({id:n.id,value:n.id,label:n.name,game:n,leading:(0,a.jsx)(w,{game:n})}),t))(null==n||n.id!==i.id&&n.name.toLowerCase()!==i.name.toLowerCase())&&e.push({id:i.id,value:i.id,label:i.name,game:i,leading:(0,a.jsx)(w,{game:i})});return e},[t,n]),g=i.useMemo(()=>d.reduce((e,t)=>(null!=e[t.value]||(e[t.value]=t),e),{}),[d]),[p,h]=i.useState(d),x=i.useCallback(e=>{h(e)},[]),_=i.useCallback(e=>{let t=g[e];if(null==t)return;let n=t.game;l(n??null),m(n?.name??"")},[g,l,m]),A=i.useCallback(e=>{let t=e.target.value;m(t),null!=n&&t!==n.name&&l(null)},[n,l,m]);return(0,v.RT)(u,d,x,G),(0,a.jsx)(o.Z,{options:p,selectionMode:"single",value:n?.id??void 0,onSelectionChange:_,onQueryChange:A,placeholder:r,clearable:!0,maxOptionsVisible:5})});function y(e){let{onClose:t,transitionState:n,onSubmitted:o,detectedActivity:g,defaultStep:p="issue_selection"}=e,[h,_]=i.useState(p),[v,w]=i.useState(null),[G,y]=i.useState(""),[E,M]=i.useState(null),[T,L]=i.useState(""),D=i.useMemo(()=>(0,x.u9)(),[]),I=(0,r.bG)([A.A],()=>A.A.games),O=null!=g,R=(0,r.bG)([d.A],()=>g?.application_id!=null?d.A.getApplication(g.application_id):null),Z=()=>{(0,x.K6)({viewId:D,applicationId:g?.application_id??"",suggestedGameName:""!==G.trim()?G.trim():void 0,suggestedGameApplicationId:E?.id??null,feedback:""!==T.trim()?T.trim():void 0,submitted:!0}),o?.(E??null),t()},K=(()=>{switch(h){case"issue_selection":return{title:k.intl.string(k.t["6tnjbD"]),actions:[]};case"game_search":return{title:O?k.intl.string(k.t.TZgkxY):k.intl.string(k.t["+ie+wX"]),actions:[{text:k.intl.string(k.t.geKm7t),onClick:Z,variant:"primary",disabled:""===G.trim()}]};case"other_feedback":return{title:k.intl.string(k.t.tdDpJj),actions:[{text:k.intl.string(k.t.geKm7t),onClick:Z,variant:"primary",disabled:""===T.trim()}]};default:return{title:"",actions:[]}}})();return(0,a.jsx)(s.Modal,{...K,transitionState:n,onClose:t,trackingProps:{impression:{impressionName:l.ImpressionNames.GAME_DETECTION_REPORT_MODAL}},children:(()=>{switch(h){case"issue_selection":return(0,a.jsxs)("div",{className:S.Qs,children:[(0,a.jsx)(u.E,{variant:"text-sm/normal",color:"text-muted",children:k.intl.string(k.t.IQHicr)}),(0,a.jsx)("div",{className:S.R$,children:(0,a.jsx)(c.z,{value:v??void 0,onChange:e=>{w(e),b.default.track(C.HAw.GAME_DETECTION_FEEDBACK_MODAL,{selected_option:e,application_id:g?.application_id??null}),setTimeout(()=>{"game_not_detected"===e||"wrong_game_shown"===e?_("game_search"):_("other_feedback")},100)},options:O?[{name:k.intl.string(k.t.TZgkxY),value:"wrong_game_shown"},{name:k.intl.string(k.t.tdDpJj),value:"other_feedback"}]:[{name:k.intl.string(k.t["+ie+wX"]),value:"game_not_detected"},{name:k.intl.string(k.t.tdDpJj),value:"other_feedback"}]})})]});case"game_search":let e;return(0,a.jsxs)("div",{className:S.Qs,children:[(0,a.jsx)(u.E,{variant:"text-sm/normal",color:"text-muted",children:O?k.intl.string(k.t["79o/iq"]):k.intl.string(k.t["r/2pZy"])}),O&&(0,a.jsxs)(a.Fragment,{children:[(0,a.jsxs)("div",{className:S.Gr,children:[null!=(e=j.Ay.getApplicationIconURL({id:g.application_id??"",icon:R?.icon??null}))?(0,a.jsx)("img",{src:e,alt:null!=g.name&&""!==g.name?g.name:R?.name??"",className:S.q_}):(0,a.jsx)("div",{className:`${S.q_} ${S.x_}`,children:(0,a.jsx)("div",{style:{fontSize:"28px",fontWeight:"bold",color:"var(--text-muted)",userSelect:"none"},children:"?"})}),(0,a.jsx)(u.E,{variant:"text-md/semibold",color:"text-strong",children:null!=g.name&&""!==g.name?g.name:R?.name})]}),(0,a.jsx)(f.A,{})]}),(0,a.jsx)(N,{games:I,selectedGame:E,onGameSelected:M,onGameSearchQueryChange:y,placeholder:O?k.intl.string(k.t["/SGi7v"]):k.intl.string(k.t.ss9Zwa)})]});case"other_feedback":return(0,a.jsxs)("div",{className:S.Qs,children:[(0,a.jsx)(u.E,{variant:"text-sm/normal",color:"text-muted",children:k.intl.string(k.t.IblYEw)}),(0,a.jsx)(m.f,{value:T,onChange:L,placeholder:k.intl.string(k.t.aiPKV4),maxLength:300,rows:4})]});default:return null}})()})}
+n.d(t, { default: () => y, i: () => N }), n(321073);
+var a = n(627968),
+    i = n(64700),
+    l = n(562708),
+    s = n(189213),
+    r = n(17928),
+    o = n(783878),
+    u = n(834730),
+    c = n(773812),
+    m = n(260598),
+    d = n(587895),
+    g = n(429913),
+    p = n(952818),
+    h = n(137177),
+    x = n(409626),
+    _ = n(379078),
+    v = n(704554),
+    A = n(760751),
+    b = n(174459),
+    j = n(486020),
+    f = n(21241),
+    C = n(652215),
+    k = n(375708),
+    S = n(247947);
+let w = i.memo(function (e) {
+        let { game: t } = e,
+            n = (0, r.bG)([d.A], () => d.A.getApplicationByName(t.name) ?? d.A.getApplication(t.id), [t.id, t.name]),
+            i = (0, r.bG)([p.Ay], () => {
+                let e = p.Ay.getVisibleGame(),
+                    n = null != e ? p.Ay.getGameOrTransformedSubgameForPID(e.pid) : null;
+                return n?.name?.toLowerCase() === t.name.toLowerCase() ? n : p.Ay.getGameForName(t.name);
+            }, [t]),
+            [l] = (0, g.A)([
+                (function () {
+                    if (null != t.id) return t.id;
+                    if (null != t.name) {
+                        let e = d.A.getApplicationByName(t.name);
+                        if (null != e) return e.id;
+                    }
+                    if (null != i) return i.id;
+                })(),
+            ]);
+        return (0, a.jsx)(h.A, { pid: i?.pid, game: l ?? n ?? t, size: h.M.XSMALL, className: S.Gt });
+    }),
+    G = {
+        searchType: _.n.FUZZY,
+        sortType: _.r.JARO_WINKLER,
+        searchStringGenerator: (e) => {
+            let { game: t, label: n } = e,
+                a = [t.name, n, t.id.toString()];
+            return t.aliases.length > 0 && a.push(...t.aliases), null != t.description && a.push(t.description), a;
+        },
+        throttleMs: 100,
+        maxSearchResults: 20,
+    },
+    N = i.memo(function (e) {
+        let { games: t, selectedGame: n, onGameSelected: l, onGameSearchQueryChange: s, placeholder: r } = e,
+            [u, c] = i.useState(""),
+            m = i.useCallback(
+                (e) => {
+                    c(e), s?.(e);
+                },
+                [s],
+            ),
+            d = i.useMemo(() => {
+                let e = [];
+                for (let i of (null != n &&
+                    e.push({ id: n.id, value: n.id, label: n.name, game: n, leading: (0, a.jsx)(w, { game: n }) }),
+                t))
+                    (null == n || (n.id !== i.id && n.name.toLowerCase() !== i.name.toLowerCase())) &&
+                        e.push({ id: i.id, value: i.id, label: i.name, game: i, leading: (0, a.jsx)(w, { game: i }) });
+                return e;
+            }, [t, n]),
+            g = i.useMemo(() => d.reduce((e, t) => (null != e[t.value] || (e[t.value] = t), e), {}), [d]),
+            [p, h] = i.useState(d),
+            x = i.useCallback((e) => {
+                h(e);
+            }, []),
+            _ = i.useCallback(
+                (e) => {
+                    let t = g[e];
+                    if (null == t) return;
+                    let n = t.game;
+                    l(n ?? null), m(n?.name ?? "");
+                },
+                [g, l, m],
+            ),
+            A = i.useCallback(
+                (e) => {
+                    let t = e.target.value;
+                    m(t), null != n && t !== n.name && l(null);
+                },
+                [n, l, m],
+            );
+        return (
+            (0, v.RT)(u, d, x, G),
+            (0, a.jsx)(o.Z, {
+                options: p,
+                selectionMode: "single",
+                value: n?.id ?? void 0,
+                onSelectionChange: _,
+                onQueryChange: A,
+                placeholder: r,
+                clearable: !0,
+                maxOptionsVisible: 5,
+            })
+        );
+    });
+function y(e) {
+    let { onClose: t, transitionState: n, onSubmitted: o, detectedActivity: g, defaultStep: p = "issue_selection" } = e,
+        [h, _] = i.useState(p),
+        [v, w] = i.useState(null),
+        [G, y] = i.useState(""),
+        [E, M] = i.useState(null),
+        [T, L] = i.useState(""),
+        D = i.useMemo(() => (0, x.u9)(), []),
+        I = (0, r.bG)([A.A], () => A.A.games),
+        O = null != g,
+        R = (0, r.bG)([d.A], () => (g?.application_id != null ? d.A.getApplication(g.application_id) : null)),
+        Z = () => {
+            (0, x.K6)({
+                viewId: D,
+                applicationId: g?.application_id ?? "",
+                suggestedGameName: "" !== G.trim() ? G.trim() : void 0,
+                suggestedGameApplicationId: E?.id ?? null,
+                feedback: "" !== T.trim() ? T.trim() : void 0,
+                submitted: !0,
+            }),
+                o?.(E ?? null),
+                t();
+        },
+        K = (() => {
+            switch (h) {
+                case "issue_selection":
+                    return { title: k.intl.string(k.t["6tnjbD"]), actions: [] };
+                case "game_search":
+                    return {
+                        title: O ? k.intl.string(k.t.TZgkxY) : k.intl.string(k.t["+ie+wX"]),
+                        actions: [
+                            {
+                                text: k.intl.string(k.t.geKm7t),
+                                onClick: Z,
+                                variant: "primary",
+                                disabled: "" === G.trim(),
+                            },
+                        ],
+                    };
+                case "other_feedback":
+                    return {
+                        title: k.intl.string(k.t.tdDpJj),
+                        actions: [
+                            {
+                                text: k.intl.string(k.t.geKm7t),
+                                onClick: Z,
+                                variant: "primary",
+                                disabled: "" === T.trim(),
+                            },
+                        ],
+                    };
+                default:
+                    return { title: "", actions: [] };
+            }
+        })();
+    return (0, a.jsx)(s.Modal, {
+        ...K,
+        transitionState: n,
+        onClose: t,
+        trackingProps: { impression: { impressionName: l.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
+        children: (() => {
+            switch (h) {
+                case "issue_selection":
+                    return (0, a.jsxs)("div", {
+                        className: S.Qs,
+                        children: [
+                            (0, a.jsx)(u.E, {
+                                variant: "text-sm/normal",
+                                color: "text-muted",
+                                children: k.intl.string(k.t.IQHicr),
+                            }),
+                            (0, a.jsx)("div", {
+                                className: S.R$,
+                                children: (0, a.jsx)(c.z, {
+                                    value: v ?? void 0,
+                                    onChange: (e) => {
+                                        w(e),
+                                            b.default.track(C.HAw.GAME_DETECTION_FEEDBACK_MODAL, {
+                                                selected_option: e,
+                                                application_id: g?.application_id ?? null,
+                                            }),
+                                            setTimeout(() => {
+                                                "game_not_detected" === e || "wrong_game_shown" === e
+                                                    ? _("game_search")
+                                                    : _("other_feedback");
+                                            }, 100);
+                                    },
+                                    options: O
+                                        ? [
+                                              { name: k.intl.string(k.t.TZgkxY), value: "wrong_game_shown" },
+                                              { name: k.intl.string(k.t.tdDpJj), value: "other_feedback" },
+                                          ]
+                                        : [
+                                              { name: k.intl.string(k.t["+ie+wX"]), value: "game_not_detected" },
+                                              { name: k.intl.string(k.t.tdDpJj), value: "other_feedback" },
+                                          ],
+                                }),
+                            }),
+                        ],
+                    });
+                case "game_search":
+                    let e;
+                    return (0, a.jsxs)("div", {
+                        className: S.Qs,
+                        children: [
+                            (0, a.jsx)(u.E, {
+                                variant: "text-sm/normal",
+                                color: "text-muted",
+                                children: O ? k.intl.string(k.t["79o/iq"]) : k.intl.string(k.t["r/2pZy"]),
+                            }),
+                            O &&
+                                (0, a.jsxs)(a.Fragment, {
+                                    children: [
+                                        (0, a.jsxs)("div", {
+                                            className: S.Gr,
+                                            children: [
+                                                null !=
+                                                (e = j.Ay.getApplicationIconURL({
+                                                    id: g.application_id ?? "",
+                                                    icon: R?.icon ?? null,
+                                                }))
+                                                    ? (0, a.jsx)("img", {
+                                                          src: e,
+                                                          alt:
+                                                              null != g.name && "" !== g.name
+                                                                  ? g.name
+                                                                  : (R?.name ?? ""),
+                                                          className: S.q_,
+                                                      })
+                                                    : (0, a.jsx)("div", {
+                                                          className: `${S.q_} ${S.x_}`,
+                                                          children: (0, a.jsx)("div", {
+                                                              style: {
+                                                                  fontSize: "28px",
+                                                                  fontWeight: "bold",
+                                                                  color: "var(--text-muted)",
+                                                                  userSelect: "none",
+                                                              },
+                                                              children: "?",
+                                                          }),
+                                                      }),
+                                                (0, a.jsx)(u.E, {
+                                                    variant: "text-md/semibold",
+                                                    color: "text-strong",
+                                                    children: null != g.name && "" !== g.name ? g.name : R?.name,
+                                                }),
+                                            ],
+                                        }),
+                                        (0, a.jsx)(f.A, {}),
+                                    ],
+                                }),
+                            (0, a.jsx)(N, {
+                                games: I,
+                                selectedGame: E,
+                                onGameSelected: M,
+                                onGameSearchQueryChange: y,
+                                placeholder: O ? k.intl.string(k.t["/SGi7v"]) : k.intl.string(k.t.ss9Zwa),
+                            }),
+                        ],
+                    });
+                case "other_feedback":
+                    return (0, a.jsxs)("div", {
+                        className: S.Qs,
+                        children: [
+                            (0, a.jsx)(u.E, {
+                                variant: "text-sm/normal",
+                                color: "text-muted",
+                                children: k.intl.string(k.t.IblYEw),
+                            }),
+                            (0, a.jsx)(m.f, {
+                                value: T,
+                                onChange: L,
+                                placeholder: k.intl.string(k.t.aiPKV4),
+                                maxLength: 300,
+                                rows: 4,
+                            }),
+                        ],
+                    });
+                default:
+                    return null;
+            }
+        })(),
+    });
+}

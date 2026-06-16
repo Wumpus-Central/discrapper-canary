@@ -1,1 +1,18 @@
-"use strict";n.d(t,{A:()=>s});var l=n(64700),i=n(739508),r=n(71532);function s(){let[e,t]=l.useState(null);return l.useEffect(()=>{(0,r.Cv)().then(e=>t(e)).catch(e=>{(0,i.pM)(e)})},[]),e}
+"use strict";
+n.d(t, { A: () => a });
+var i = n(64700),
+    r = n(739508),
+    s = n(71532);
+function a() {
+    let [e, t] = i.useState(null);
+    return (
+        i.useEffect(() => {
+            (0, s.Cv)()
+                .then((e) => t(e))
+                .catch((e) => {
+                    (0, r.pM)(e);
+                });
+        }, []),
+        e
+    );
+}

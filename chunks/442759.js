@@ -1,1 +1,43 @@
-s.d(t,{Ym:()=>c,f5:()=>i}),s(321073);var a=s(64700),r=s(575593);s(375708);class c{itemsByTypes;constructor(e){this.itemsByTypes=this.sortByTypes(e)}get firstAvatarDecoration(){return this.getFirstItemByType(r.R.AVATAR_DECORATION)}get firstProfileEffect(){return this.getFirstItemByType(r.R.PROFILE_EFFECT)}get firstNameplate(){return this.getFirstItemByType(r.R.NAMEPLATE)}get firstProfileFrame(){return this.getFirstItemByType(r.R.PROFILE_FRAME)}getFirstItemByType(e){let t=(this.itemsByTypes.get(e)??[])[0];if(null!=t)return t}sortByTypes(e){return e.reduce((e,t)=>{let s=e.get(t.type);return null!=s?s.push(t):e.set(t.type,[t]),e},new Map)}}let i=e=>a.useMemo(()=>{let t=new c(e.items);return{firstProfileEffect:t.firstProfileEffect,firstAvatarDecoration:t.firstAvatarDecoration,firstNameplate:t.firstNameplate,firstProfileFrame:t.firstProfileFrame}},[e])
+"use strict";
+n.d(t, { Ym: () => s, f5: () => a }), n(321073);
+var i = n(64700),
+    r = n(575593);
+n(375708);
+class s {
+    itemsByTypes;
+    constructor(e) {
+        this.itemsByTypes = this.sortByTypes(e);
+    }
+    get firstAvatarDecoration() {
+        return this.getFirstItemByType(r.R.AVATAR_DECORATION);
+    }
+    get firstProfileEffect() {
+        return this.getFirstItemByType(r.R.PROFILE_EFFECT);
+    }
+    get firstNameplate() {
+        return this.getFirstItemByType(r.R.NAMEPLATE);
+    }
+    get firstProfileFrame() {
+        return this.getFirstItemByType(r.R.PROFILE_FRAME);
+    }
+    getFirstItemByType(e) {
+        let t = (this.itemsByTypes.get(e) ?? [])[0];
+        if (null != t) return t;
+    }
+    sortByTypes(e) {
+        return e.reduce((e, t) => {
+            let n = e.get(t.type);
+            return null != n ? n.push(t) : e.set(t.type, [t]), e;
+        }, new Map());
+    }
+}
+let a = (e) =>
+    i.useMemo(() => {
+        let t = new s(e.items);
+        return {
+            firstProfileEffect: t.firstProfileEffect,
+            firstAvatarDecoration: t.firstAvatarDecoration,
+            firstNameplate: t.firstNameplate,
+            firstProfileFrame: t.firstProfileFrame,
+        };
+    }, [e]);

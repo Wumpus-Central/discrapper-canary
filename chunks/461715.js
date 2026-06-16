@@ -1,1 +1,79 @@
-"use strict";n.d(t,{$m:()=>m,CI:()=>E,tU:()=>p}),n(938796);var i=n(47167),r=n(833291),s=n(376943),a=n(71393),o=n(994500),l=n(287809),u=n(486020),c=n(562153),d=n(304162),_=n(652215),h=n(381941),f=n(375708);function p(e){let{mediaPostEmbedData:t,guild:n,parentChannel:r,postThread:s,user:a,selectedGuildId:_,canAccess:p=!1}=e;if(null==t)return null;let E=(0,d.et)(t.thumbnail),m=!p&&t.has_media_attachment,g=p?f.intl.string(f.t.UsZEBI):f.intl.string(f.t.ReFzYZ),A=null!=a?c.Ay.getName(t.guild_id,t.channel_id,a):void 0,I=a?.getAvatarURL(n?.id,40);(null==I||_!==t.guild_id)&&(I=u.Ay.getGuildIconURL({id:t.guild_id,icon:t.guild_icon,size:40,canAnimate:!1}));let T=function(e){if(null==e)return!1;let{height:t,width:n}=e;return null!=t&&null!=n&&t>=n}(t.thumbnail)&&!m,S=t.thumbnail?.filename!=null&&t.thumbnail?.filename?.startsWith(h._W);return{title:t.title??"",subtitle:t.description,ctaText:g,coverImage:E,coverImageOverlayText:m?f.intl.string(f.t.Yonlia):void 0,parentChannelId:t.parent_channel_id,threadId:t.channel_id,postThread:s,messageId:t.message_id,canAccess:p,guildId:t.guild_id,guildName:n?.name??t.guild_name,authorId:t?.author_id,authorName:A,channelName:null!=r?(0,i.m1)(r,l.default,o.A):void 0,avatarUrl:I,shouldShowBlurredThumbnailImage:m,shouldContainMediaWithBackground:T,shouldSpoiler:S,obscureAwaitingScan:!1,flags:t.flags,contentScanVersion:t.content_scan_version}}function E(e){if(null==e)return;let t=(0,r.l7)(e);if(null==t)return;let n=(0,r.tl)(t);if(null!=n)return(0,s.vu)(n)}function m(e,t){let n=a.A.getGuild(e);if(null==n||null==t)return!1;let i=n.features.has(_.GuildFeatures.CREATOR_MONETIZABLE)||n.features.has(_.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);return!0===t.isMediaChannel()&&i}
+"use strict";
+n.d(t, { $m: () => m, CI: () => E, tU: () => p }), n(938796);
+var i = n(47167),
+    r = n(833291),
+    s = n(376943),
+    a = n(71393),
+    o = n(994500),
+    l = n(287809),
+    u = n(486020),
+    c = n(562153),
+    d = n(304162),
+    _ = n(652215),
+    h = n(381941),
+    f = n(375708);
+function p(e) {
+    let {
+        mediaPostEmbedData: t,
+        guild: n,
+        parentChannel: r,
+        postThread: s,
+        user: a,
+        selectedGuildId: _,
+        canAccess: p = !1,
+    } = e;
+    if (null == t) return null;
+    let E = (0, d.et)(t.thumbnail),
+        m = !p && t.has_media_attachment,
+        g = p ? f.intl.string(f.t.UsZEBI) : f.intl.string(f.t.ReFzYZ),
+        A = null != a ? c.Ay.getName(t.guild_id, t.channel_id, a) : void 0,
+        I = a?.getAvatarURL(n?.id, 40);
+    (null == I || _ !== t.guild_id) &&
+        (I = u.Ay.getGuildIconURL({ id: t.guild_id, icon: t.guild_icon, size: 40, canAnimate: !1 }));
+    let T =
+            (function (e) {
+                if (null == e) return !1;
+                let { height: t, width: n } = e;
+                return null != t && null != n && t >= n;
+            })(t.thumbnail) && !m,
+        S = t.thumbnail?.filename != null && t.thumbnail?.filename?.startsWith(h._W);
+    return {
+        title: t.title ?? "",
+        subtitle: t.description,
+        ctaText: g,
+        coverImage: E,
+        coverImageOverlayText: m ? f.intl.string(f.t.Yonlia) : void 0,
+        parentChannelId: t.parent_channel_id,
+        threadId: t.channel_id,
+        postThread: s,
+        messageId: t.message_id,
+        canAccess: p,
+        guildId: t.guild_id,
+        guildName: n?.name ?? t.guild_name,
+        authorId: t?.author_id,
+        authorName: A,
+        channelName: null != r ? (0, i.m1)(r, l.default, o.A) : void 0,
+        avatarUrl: I,
+        shouldShowBlurredThumbnailImage: m,
+        shouldContainMediaWithBackground: T,
+        shouldSpoiler: S,
+        obscureAwaitingScan: !1,
+        flags: t.flags,
+        contentScanVersion: t.content_scan_version,
+    };
+}
+function E(e) {
+    if (null == e) return;
+    let t = (0, r.l7)(e);
+    if (null == t) return;
+    let n = (0, r.tl)(t);
+    if (null != n) return (0, s.vu)(n);
+}
+function m(e, t) {
+    let n = a.A.getGuild(e);
+    if (null == n || null == t) return !1;
+    let i =
+        n.features.has(_.GuildFeatures.CREATOR_MONETIZABLE) ||
+        n.features.has(_.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL);
+    return !0 === t.isMediaChannel() && i;
+}

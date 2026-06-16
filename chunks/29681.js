@@ -1,1 +1,75 @@
-n.d(e,{default:()=>C});var a=n(627968),s=n(64700),l=n(189213),i=n(17928),r=n(512950),c=n(534514),o=n(834730),d=n(349288),u=n(97260),h=n(635242),x=n(775121),A=n(532624),b=n(350535);n(980504);var m=n(652215),g=n(375708),p=n(690320);function C(t){let{transitionState:e,onClose:n}=t,C=(0,i.bG)([A.Ay],()=>A.Ay.getKeybindForAction(m.hCu.SOUNDBOARD_HOLD)),[y,N]=s.useState(C?.shortcut??[]),f=s.useCallback(()=>{if(0===y.length)return null!=C&&u.A.deleteKeybind(C.id),n();null==C?u.A.addKeybind({action:m.hCu.SOUNDBOARD_HOLD,shortcut:y,enabled:!0,params:{}}):u.A.setKeybind({...C,shortcut:y}),n()},[C,n,y]);s.useEffect(()=>(x.A.disable(),()=>{x.A.enable()}),[]);let v=s.useMemo(()=>[{text:g.intl.string(g.t["ETE/oC"]),onClick:n,variant:"secondary"},{text:g.intl.string(g.t["R3BPH+"]),onClick:f,variant:"primary"}],[n,f]);return(0,a.jsxs)(l.Modal,{transitionState:e,title:g.intl.string(g.t["0Osu3x"]),actions:v,onClose:n,children:[(0,a.jsx)(r.p,{className:p.$e,messageType:r.Y.WARNING,children:g.intl.string(g.t["O2v/eP"])}),(0,a.jsx)(c.D,{className:p._5,variant:"eyebrow",color:"text-default",children:g.intl.string(g.t.UUpAD6)}),(0,a.jsx)(o.E,{className:p.XI,variant:"text-md/normal",children:g.intl.string(g.t["1xFbP/"])}),(0,a.jsx)(o.E,{className:p.lf,variant:"text-sm/normal",children:g.intl.string(g.t.laNlTl)}),(0,a.jsx)(c.D,{className:p._5,variant:"eyebrow",color:"text-default",children:g.intl.string(g.t["1La4tC"])}),(0,a.jsx)(h.A,{defaultValue:y,onChange:N}),(0,a.jsx)(d.Anchor,{className:p.WA,onClick:()=>N((0,b.OH)("ctrl+`")),children:g.intl.string(g.t["s7+2rQ"])})]})}
+n.d(e, { default: () => C });
+var a = n(627968),
+    s = n(64700),
+    l = n(189213),
+    i = n(17928),
+    r = n(512950),
+    c = n(534514),
+    o = n(834730),
+    d = n(349288),
+    u = n(97260),
+    h = n(635242),
+    x = n(775121),
+    A = n(532624),
+    b = n(350535);
+n(980504);
+var m = n(652215),
+    g = n(375708),
+    p = n(690320);
+function C(t) {
+    let { transitionState: e, onClose: n } = t,
+        C = (0, i.bG)([A.Ay], () => A.Ay.getKeybindForAction(m.hCu.SOUNDBOARD_HOLD)),
+        [y, N] = s.useState(C?.shortcut ?? []),
+        f = s.useCallback(() => {
+            if (0 === y.length) return null != C && u.A.deleteKeybind(C.id), n();
+            null == C
+                ? u.A.addKeybind({ action: m.hCu.SOUNDBOARD_HOLD, shortcut: y, enabled: !0, params: {} })
+                : u.A.setKeybind({ ...C, shortcut: y }),
+                n();
+        }, [C, n, y]);
+    s.useEffect(
+        () => (
+            x.A.disable(),
+            () => {
+                x.A.enable();
+            }
+        ),
+        [],
+    );
+    let v = s.useMemo(
+        () => [
+            { text: g.intl.string(g.t["ETE/oC"]), onClick: n, variant: "secondary" },
+            { text: g.intl.string(g.t["R3BPH+"]), onClick: f, variant: "primary" },
+        ],
+        [n, f],
+    );
+    return (0, a.jsxs)(l.Modal, {
+        transitionState: e,
+        title: g.intl.string(g.t["0Osu3x"]),
+        actions: v,
+        onClose: n,
+        children: [
+            (0, a.jsx)(r.p, { className: p.$e, messageType: r.Y.WARNING, children: g.intl.string(g.t["O2v/eP"]) }),
+            (0, a.jsx)(c.D, {
+                className: p._5,
+                variant: "eyebrow",
+                color: "text-default",
+                children: g.intl.string(g.t.UUpAD6),
+            }),
+            (0, a.jsx)(o.E, { className: p.XI, variant: "text-md/normal", children: g.intl.string(g.t["1xFbP/"]) }),
+            (0, a.jsx)(o.E, { className: p.lf, variant: "text-sm/normal", children: g.intl.string(g.t.laNlTl) }),
+            (0, a.jsx)(c.D, {
+                className: p._5,
+                variant: "eyebrow",
+                color: "text-default",
+                children: g.intl.string(g.t["1La4tC"]),
+            }),
+            (0, a.jsx)(h.A, { defaultValue: y, onChange: N }),
+            (0, a.jsx)(d.Anchor, {
+                className: p.WA,
+                onClick: () => N((0, b.OH)("ctrl+`")),
+                children: g.intl.string(g.t["s7+2rQ"]),
+            }),
+        ],
+    });
+}

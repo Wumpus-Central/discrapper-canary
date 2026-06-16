@@ -1,1 +1,1 @@
-e.exports={g:"loadingContainer__7e18f"}
+p.exports = { g: "loadingContainer__7e18f" };

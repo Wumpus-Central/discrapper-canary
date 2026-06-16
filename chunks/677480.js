@@ -1,1 +1,8 @@
-"use strict";var i=n(439619)("%Array%"),r=!i.isArray&&n(906046)("Object.prototype.toString");e.exports=i.isArray||function(e){return"[object Array]"===r(e)}
+"use strict";
+var i = n(439619)("%Array%"),
+    r = !i.isArray && n(906046)("Object.prototype.toString");
+e.exports =
+    i.isArray ||
+    function (e) {
+        return "[object Array]" === r(e);
+    };

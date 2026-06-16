@@ -1,1 +1,16 @@
-e.exports={vk:"clickable_a3e8db",r9:"disabled_a3e8db",kL:"container_a3e8db",hr:"orbsLottieContainer_a3e8db",E$:"orbsLottie_a3e8db",t0:"spin_a3e8db",nr:"orbIconloading_a3e8db",En:"containerLoading_a3e8db",F:"counterLoading_a3e8db",Ay:"default_a3e8db",mr:"highlighted_a3e8db",wH:"selected_a3e8db",dA:"inModalOverlay_a3e8db",V8:"notificationBadge_a3e8db"}
+e.exports = {
+    vk: "clickable_a3e8db",
+    r9: "disabled_a3e8db",
+    kL: "container_a3e8db",
+    hr: "orbsLottieContainer_a3e8db",
+    E$: "orbsLottie_a3e8db",
+    t0: "spin_a3e8db",
+    nr: "orbIconloading_a3e8db",
+    En: "containerLoading_a3e8db",
+    F: "counterLoading_a3e8db",
+    Ay: "default_a3e8db",
+    mr: "highlighted_a3e8db",
+    wH: "selected_a3e8db",
+    dA: "inModalOverlay_a3e8db",
+    V8: "notificationBadge_a3e8db",
+};

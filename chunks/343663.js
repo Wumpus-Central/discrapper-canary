@@ -1,1 +1,66 @@
-"use strict";var i=n(64700),r=n(524519),s="function"==typeof Object.is?Object.is:function(e,t){return e===t&&(0!==e||1/e==1/t)||e!=e&&t!=t},a=r.useSyncExternalStore,o=i.useRef,l=i.useEffect,u=i.useMemo,c=i.useDebugValue;t.useSyncExternalStoreWithSelector=function(e,t,n,i,r){var d=o(null);if(null===d.current){var _={hasValue:!1,value:null};d.current=_}else _=d.current;var h=a(e,(d=u(function(){function e(e){if(!l){if(l=!0,a=e,e=i(e),void 0!==r&&_.hasValue){var t=_.value;if(r(t,e))return o=t}return o=e}if(t=o,s(a,e))return t;var n=i(e);return void 0!==r&&r(t,n)?(a=e,t):(a=e,o=n)}var a,o,l=!1,u=void 0===n?null:n;return[function(){return e(t())},null===u?void 0:function(){return e(u())}]},[t,n,i,r]))[0],d[1]);return l(function(){_.hasValue=!0,_.value=h},[h]),c(h),h}
+"use strict";
+var i = n(64700),
+    r = n(524519),
+    s =
+        "function" == typeof Object.is
+            ? Object.is
+            : function (e, t) {
+                  return (e === t && (0 !== e || 1 / e == 1 / t)) || (e != e && t != t);
+              },
+    a = r.useSyncExternalStore,
+    o = i.useRef,
+    l = i.useEffect,
+    u = i.useMemo,
+    c = i.useDebugValue;
+t.useSyncExternalStoreWithSelector = function (e, t, n, i, r) {
+    var d = o(null);
+    if (null === d.current) {
+        var _ = { hasValue: !1, value: null };
+        d.current = _;
+    } else _ = d.current;
+    var h = a(
+        e,
+        (d = u(
+            function () {
+                function e(e) {
+                    if (!l) {
+                        if (((l = !0), (a = e), (e = i(e)), void 0 !== r && _.hasValue)) {
+                            var t = _.value;
+                            if (r(t, e)) return (o = t);
+                        }
+                        return (o = e);
+                    }
+                    if (((t = o), s(a, e))) return t;
+                    var n = i(e);
+                    return void 0 !== r && r(t, n) ? ((a = e), t) : ((a = e), (o = n));
+                }
+                var a,
+                    o,
+                    l = !1,
+                    u = void 0 === n ? null : n;
+                return [
+                    function () {
+                        return e(t());
+                    },
+                    null === u
+                        ? void 0
+                        : function () {
+                              return e(u());
+                          },
+                ];
+            },
+            [t, n, i, r],
+        ))[0],
+        d[1],
+    );
+    return (
+        l(
+            function () {
+                (_.hasValue = !0), (_.value = h);
+            },
+            [h],
+        ),
+        c(h),
+        h
+    );
+};

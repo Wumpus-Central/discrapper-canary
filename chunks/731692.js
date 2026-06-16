@@ -1,1 +1,46 @@
-"use strict";let i;n.d(t,{B:()=>a});let r=Symbol.for("react-aria.i18n.locale"),s=Symbol.for("react-aria.i18n.strings");class a{getStringForLocale(e,t){let n=this.getStringsForLocale(t)[e];if(!n)throw Error(`Could not find intl message ${e} in ${t} locale`);return n}getStringsForLocale(e){let t=this.strings[e];return t||(t=function(e,t,n="en-US"){var i;if(t[e])return t[e];let r=(i=e,Intl.Locale?new Intl.Locale(i).language:i.split("-")[0]);if(t[r])return t[r];for(let e in t)if(e.startsWith(r+"-"))return t[e];return t[n]}(e,this.strings,this.defaultLocale),this.strings[e]=t),t}static getGlobalDictionaryForPackage(e){if("u"<typeof window)return null;let t=window[r];if(void 0===i){let e=window[s];if(!e)return null;for(let n in i={},e)i[n]=new a({[t]:e[n]},t)}let n=null==i?void 0:i[e];if(!n)throw Error(`Strings for package "${e}" were not included by LocalizedStringProvider. Please add it to the list passed to createLocalizedStringDictionary.`);return n}constructor(e,t="en-US"){this.strings=Object.fromEntries(Object.entries(e).filter(([,e])=>e)),this.defaultLocale=t}}
+"use strict";
+let i;
+n.d(t, { B: () => a });
+let r = Symbol.for("react-aria.i18n.locale"),
+    s = Symbol.for("react-aria.i18n.strings");
+class a {
+    getStringForLocale(e, t) {
+        let n = this.getStringsForLocale(t)[e];
+        if (!n) throw Error(`Could not find intl message ${e} in ${t} locale`);
+        return n;
+    }
+    getStringsForLocale(e) {
+        let t = this.strings[e];
+        return (
+            t ||
+                ((t = (function (e, t, n = "en-US") {
+                    var i;
+                    if (t[e]) return t[e];
+                    let r = ((i = e), Intl.Locale ? new Intl.Locale(i).language : i.split("-")[0]);
+                    if (t[r]) return t[r];
+                    for (let e in t) if (e.startsWith(r + "-")) return t[e];
+                    return t[n];
+                })(e, this.strings, this.defaultLocale)),
+                (this.strings[e] = t)),
+            t
+        );
+    }
+    static getGlobalDictionaryForPackage(e) {
+        if ("u" < typeof window) return null;
+        let t = window[r];
+        if (void 0 === i) {
+            let e = window[s];
+            if (!e) return null;
+            for (let n in ((i = {}), e)) i[n] = new a({ [t]: e[n] }, t);
+        }
+        let n = null == i ? void 0 : i[e];
+        if (!n)
+            throw Error(
+                `Strings for package "${e}" were not included by LocalizedStringProvider. Please add it to the list passed to createLocalizedStringDictionary.`,
+            );
+        return n;
+    }
+    constructor(e, t = "en-US") {
+        (this.strings = Object.fromEntries(Object.entries(e).filter(([, e]) => e))), (this.defaultLocale = t);
+    }
+}

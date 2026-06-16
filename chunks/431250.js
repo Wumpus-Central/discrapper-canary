@@ -1,1 +1,36 @@
-var i=n(765405),r=Object.prototype.hasOwnProperty;e.exports=function(e,t,n,s,a,o){var l=1&n,u=i(e),c=u.length;if(c!=i(t).length&&!l)return!1;for(var d=c;d--;){var _=u[d];if(!(l?_ in t:r.call(t,_)))return!1}var h=o.get(e);if(h&&o.get(t))return h==t;var f=!0;o.set(e,t),o.set(t,e);for(var p=l;++d<c;){var E=e[_=u[d]],m=t[_];if(s)var g=l?s(m,E,_,t,e,o):s(E,m,_,e,t,o);if(!(void 0===g?E===m||a(E,m,n,s,o):g)){f=!1;break}p||(p="constructor"==_)}if(f&&!p){var A=e.constructor,I=t.constructor;A!=I&&"constructor"in e&&"constructor"in t&&!("function"==typeof A&&A instanceof A&&"function"==typeof I&&I instanceof I)&&(f=!1)}return o.delete(e),o.delete(t),f}
+var i = n(765405),
+    r = Object.prototype.hasOwnProperty;
+e.exports = function (e, t, n, s, a, o) {
+    var l = 1 & n,
+        u = i(e),
+        c = u.length;
+    if (c != i(t).length && !l) return !1;
+    for (var d = c; d--; ) {
+        var _ = u[d];
+        if (!(l ? _ in t : r.call(t, _))) return !1;
+    }
+    var h = o.get(e);
+    if (h && o.get(t)) return h == t;
+    var f = !0;
+    o.set(e, t), o.set(t, e);
+    for (var p = l; ++d < c; ) {
+        var E = e[(_ = u[d])],
+            m = t[_];
+        if (s) var g = l ? s(m, E, _, t, e, o) : s(E, m, _, e, t, o);
+        if (!(void 0 === g ? E === m || a(E, m, n, s, o) : g)) {
+            f = !1;
+            break;
+        }
+        p || (p = "constructor" == _);
+    }
+    if (f && !p) {
+        var A = e.constructor,
+            I = t.constructor;
+        A != I &&
+            "constructor" in e &&
+            "constructor" in t &&
+            !("function" == typeof A && A instanceof A && "function" == typeof I && I instanceof I) &&
+            (f = !1);
+    }
+    return o.delete(e), o.delete(t), f;
+};

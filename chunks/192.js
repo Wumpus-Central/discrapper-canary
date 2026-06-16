@@ -1,1 +1,31 @@
-t.d(l,{D:()=>c,r:()=>o});var s=t(627968),n=t(64700),i=t(818348);let a=n.createContext(null),r={registerManageWidgetButtonRef:()=>i.tE,manageFocusOnReorder:i.tE,getManageButtonForWidget:()=>null};function o(){return n.useContext(a)??r}function c(e){let{children:l}=e,t=n.useRef(new Map),i=n.useCallback(e=>l=>{null!=l?t.current.set(e,l):t.current.delete(e)},[]),r=n.useCallback(e=>{requestAnimationFrame(()=>{let l=t.current.get(e);l?.focus()})},[]),o=n.useCallback(e=>t.current.get(e)??null,[]),c=n.useMemo(()=>({registerManageWidgetButtonRef:i,manageFocusOnReorder:r,getManageButtonForWidget:o}),[i,r,o]);return(0,s.jsx)(a.Provider,{value:c,children:l})}
+t.d(l, { D: () => c, r: () => o });
+var s = t(627968),
+    n = t(64700),
+    i = t(818348);
+let a = n.createContext(null),
+    r = { registerManageWidgetButtonRef: () => i.tE, manageFocusOnReorder: i.tE, getManageButtonForWidget: () => null };
+function o() {
+    return n.useContext(a) ?? r;
+}
+function c(e) {
+    let { children: l } = e,
+        t = n.useRef(new Map()),
+        i = n.useCallback(
+            (e) => (l) => {
+                null != l ? t.current.set(e, l) : t.current.delete(e);
+            },
+            [],
+        ),
+        r = n.useCallback((e) => {
+            requestAnimationFrame(() => {
+                let l = t.current.get(e);
+                l?.focus();
+            });
+        }, []),
+        o = n.useCallback((e) => t.current.get(e) ?? null, []),
+        c = n.useMemo(
+            () => ({ registerManageWidgetButtonRef: i, manageFocusOnReorder: r, getManageButtonForWidget: o }),
+            [i, r, o],
+        );
+    return (0, s.jsx)(a.Provider, { value: c, children: l });
+}

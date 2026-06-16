@@ -1,1 +1,3 @@
-"use strict";function i(){}n.d(t,{Y:()=>i})
+"use strict";
+function i() {}
+n.d(t, { Y: () => i });

@@ -1,1 +1,9 @@
-s.d(e,{A:()=>r});var n=s(627968),i=s(503698),a=s.n(i),l=s(181672);function r(t){let{width:e,height:s,showPlaceholder:i,children:r,className:o}=t;return i?(0,n.jsx)("div",{className:a()(l.s,o),style:{width:e,height:s}}):r}
+s.d(e, { A: () => r });
+var n = s(627968),
+    i = s(503698),
+    a = s.n(i),
+    l = s(181672);
+function r(t) {
+    let { width: e, height: s, showPlaceholder: i, children: r, className: o } = t;
+    return i ? (0, n.jsx)("div", { className: a()(l.s, o), style: { width: e, height: s } }) : r;
+}

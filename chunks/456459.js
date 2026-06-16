@@ -1,1 +1,54 @@
-i.d(e,{V:()=>h});var n=i(627968),r=i(64700),l=i(772707),a=i(17928),s=i(775602),o=i(524246),u=i(816252),c=i(916974),d=i(788868),m=i(375708),f=i(476791),g=i(303930),p=i(977544);let h=()=>{let{transitionState:t,onClose:e,premiumType:i,confettiCanvas:h,churnUserDiscountOffer:x,discountedPrice:P}=(0,c.X)(),C=(0,r.useRef)(null),[y,E]=(0,r.useState)(!1),v=(0,a.bG)([s.Ay],()=>s.Ay.useReducedMotion);if((0,r.useEffect)(()=>{null!==C.current&&null!==P&&E(!0)},[C,P]),null===x)return null;let D=i===d.PremiumTypes.TIER_2;return(0,n.jsxs)("div",{ref:C,children:[(0,n.jsx)(l.k,{graphic:{type:"image",src:D?p.A:g},gradientColor:D?"nitro-pink":"nitro-green",transitionState:t,title:m.intl.string(m.t.PZSyRk),onClose:async()=>e(),children:(0,n.jsx)("div",{className:f.TA,children:(0,n.jsx)(u._,{offerState:u.b.APPLIED,userDiscountOffer:x})})}),!v&&y&&(0,n.jsx)(o.A,{confettiTarget:C.current,confettiCanvas:h,confettiVelocityMultiplier:.75})]})}
+i.d(e, { V: () => h });
+var n = i(627968),
+    r = i(64700),
+    l = i(772707),
+    a = i(17928),
+    s = i(775602),
+    o = i(524246),
+    u = i(816252),
+    c = i(916974),
+    d = i(788868),
+    m = i(375708),
+    f = i(476791),
+    g = i(303930),
+    p = i(977544);
+let h = () => {
+    let {
+            transitionState: t,
+            onClose: e,
+            premiumType: i,
+            confettiCanvas: h,
+            churnUserDiscountOffer: x,
+            discountedPrice: P,
+        } = (0, c.X)(),
+        C = (0, r.useRef)(null),
+        [y, E] = (0, r.useState)(!1),
+        v = (0, a.bG)([s.Ay], () => s.Ay.useReducedMotion);
+    if (
+        ((0, r.useEffect)(() => {
+            null !== C.current && null !== P && E(!0);
+        }, [C, P]),
+        null === x)
+    )
+        return null;
+    let D = i === d.PremiumTypes.TIER_2;
+    return (0, n.jsxs)("div", {
+        ref: C,
+        children: [
+            (0, n.jsx)(l.k, {
+                graphic: { type: "image", src: D ? p.A : g },
+                gradientColor: D ? "nitro-pink" : "nitro-green",
+                transitionState: t,
+                title: m.intl.string(m.t.PZSyRk),
+                onClose: async () => e(),
+                children: (0, n.jsx)("div", {
+                    className: f.TA,
+                    children: (0, n.jsx)(u._, { offerState: u.b.APPLIED, userDiscountOffer: x }),
+                }),
+            }),
+            !v &&
+                y &&
+                (0, n.jsx)(o.A, { confettiTarget: C.current, confettiCanvas: h, confettiVelocityMultiplier: 0.75 }),
+        ],
+    });
+};

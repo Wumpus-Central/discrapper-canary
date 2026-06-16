@@ -1,1 +1,291 @@
-"use strict";n.d(t,{_:()=>$});var l=n(627968),i=n(64700),r=n(735438),s=n(877624),a=n(17928),o=n(554146),u=n(192308),c=n(964486),d=n(71804),m=n(426398),h=n(558620),p=n(211159),f=n(841702),g=n(367727),E=n(380619),A=n(374200),C=n(771566),x=n(174459),I=n(625494),_=n(45938),S=n(615396),y=n(937008),v=n(491057),T=n(482132),N=n(364840),j=n(821609),b=n(778712),R=n(97808),P=n(775602),L=n(688810),M=n(912140),O=n(674658),w=n(780898),D=n(344346),k=n(898461),U=n(837015),G=n(61750),F=n(287809),V=n(758836),B=n(375708),H=n(258915);function W(e){let{rewardSkuId:t,onClose:n,onRewardModalClose:r}=e,s=(0,a.bG)([F.default],()=>F.default.getCurrentUser()),o=(0,a.bG)([P.Ay],()=>P.Ay.useReducedMotion),{analyticsLocations:u}=(0,L.Ay)(),c=b._3.SIZE_32,{product:d,isFetching:m}=(0,O.q)(t),[h,p]=i.useState(!1),f=d?.items[0],{isNameplateReward:g,nameplateData:E,rewardAvatarDecorationSrc:A}=i.useMemo(()=>null==f?{isNameplateReward:!1,nameplateData:null,rewardAvatarDecorationSrc:null}:(0,U.F)(f)?{isNameplateReward:!0,nameplateData:{skuId:f.skuId,src:f.asset,palette:(0,w.H6)(f.palette??"sky"),imgAlt:f.label},rewardAvatarDecorationSrc:null}:(0,k.T)(f)?{isNameplateReward:!1,nameplateData:null,rewardAvatarDecorationSrc:(0,M.A)({legacyAssetId:f.asset,skuId:f.skuId,size:c,canAnimate:!o})}:{isNameplateReward:!1,nameplateData:null,rewardAvatarDecorationSrc:null},[f,c,o]);return(0,l.jsx)(T.UX,{children:(0,l.jsx)(N.j,{children:(0,l.jsxs)("div",{className:H.W,children:[g&&null!=E?(0,l.jsx)("div",{className:H.D,onMouseEnter:()=>p(!0),onMouseLeave:()=>p(!1),children:(0,l.jsx)(D.a,{user:s,nameplate:null,nameplateData:E,showPlaceholderUser:!0,nameplatePreviewSize:"xsmall",isHighlighted:h})}):(0,l.jsx)(R.Js,{"aria-label":s?.username,size:c,src:s?.getAvatarURL(void 0,(0,b.FT)(c),!o),avatarDecoration:A}),(0,l.jsx)(j.$,{variant:"primary",text:B.intl.string(B.t.kMYVwv),loading:m,onClick:()=>{null!=d&&(n(),(0,G.A)({product:d,shouldShowPromotionalExperience:!0,analyticsLocations:u,purchaseType:V.gs.PROMOTIONAL,onCloseCallback:r}))}})]})})})}var K=n(615310),Y=n(216641),z=n(921925),Z=n(652215),q=n(49999);function $(e){let t,{handleClose:N,planGroup:j,onSubscriptionConfirmation:b,renderPurchaseConfirmation:R,postSuccessGuild:P,followupSKUInfo:L,continueSessionToInitialStep:M}=e,{paymentSources:O}=(0,m.jm)(),{activeSubscription:w,selectedSkuId:D,updatedSubscription:k,paymentSourceId:U,isPremiumGroupPurchase:G,startingPremiumSubscriptionPlanId:F,startingFractionalPremiumEndsAt:V}=(0,p.t4)(e=>({activeSubscription:e.activeSubscription,selectedSkuId:e.selectedSkuId,updatedSubscription:e.updatedSubscription,paymentSourceId:e.paymentSourceId,isPremiumGroupPurchase:e.get("isPremiumGroupPurchase"),startingPremiumSubscriptionPlanId:e.startingPremiumSubscriptionPlanId,startingFractionalPremiumEndsAt:e.startingFractionalPremiumEndsAt})),B=(0,h.A)(),H=(0,K.bB)(),{isGift:$,giftRecipient:X,giftCode:J,hasSentMessage:Q,isSendingMessage:ee,sendGiftMessage:et,claimableRewards:en,selectedGiftingPromotionReward:el,openGiftingBadgePostPurchaseModal:ei}=(0,y.Pv)(),{confirmationFooter:er}=(0,v.cG)(),es=(0,E.px)(B,$,en),ea=(0,E.Mq)(B),eo=(0,f.Mv)(el,!1),eu=(0,a.bG)([A.A],()=>A.A.getGiftPromotion()?.id),ec=(0,a.bG)([A.A],()=>{let e=A.A.getMarketingComponentByType(s.C.GIFT_REMINDER_NAGBAR);return null==e||"giftReminderNagbar"!==e.properties.properties.oneofKind?null:e.properties.properties.giftReminderNagbar}),ed=(0,Y.g)(O,U),em=$&&null!=el&&null!=eo&&ea,eh={selectedPlan:B,selectedSkuId:D,step:H};if(null==B)throw new d.v({message:"Expected plan to be selected",extraSentryInformation:eh});if(null==D)throw new d.v({message:"Expected selectedSkuId",extraSentryInformation:eh});if(null==H)throw new d.v({message:"Step should be set",extraSentryInformation:eh});let ep=i.useCallback(()=>{N(),b?.()},[N,b]);(0,c.Ay)(()=>{G&&x.default.track(Z.HAw.PREMIUM_GROUP_PURCHASE_CONFIRMATION_VIEWED,{has_updated_subscription:null!=k,has_any_premium_group:k?.hasAnyPremiumGroup??!1,subscription_id:k?.id})}),i.useEffect(()=>{function e(){if(G)if(null!=k&&k.hasAnyPremiumGroup){x.default.track(Z.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_OPENED,{subscription_id:k.id});let e=(0,r.uniqueId)("premium-group-purchase-flow-modal");(0,u.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e("17494"),n.e("44616"),n.e("96680"),n.e("85579")]).then(n.bind(n,785606));return t=>(0,l.jsx)(e,{...t,subscription:k,isFromPurchaseFlow:!0,onClose:async()=>{I._.dispatch(Z.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),await t.onClose()}})},{onCloseRequest:()=>{I._.dispatch(Z.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),(0,u.closeModal)(e)},modalKey:e})}else x.default.track(Z.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_SKIPPED,{has_updated_subscription:null!=k,has_any_premium_group:k?.hasAnyPremiumGroup??!1}),I._.dispatch(Z.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED)}return I._.subscribe(Z.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED,e),()=>{I._.unsubscribe(Z.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED,e)}},[G,k]),i.useEffect(()=>{!$||null==X||null==J||Q||ee||(0,_.Ik)(X)||et({onSubscriptionConfirmation:b})},[et,$,X,J,Q,ee,b]),i.useEffect(()=>{es&&null!=ec&&null!=eu&&(0,g.qr)(o.M.GIFTING_PROMOTION_REMINDER,eu,{dismissAction:q.i.INDIRECT_ACTION})},[ec,eu,es]);let ef=null!=M?C.Rs.DEEPLINK_TO_DESKTOP_APP:void 0;if(null!=R)t=R(B,ep,k);else if($)t=(0,l.jsx)(C.fw,{planId:B.id,onClose:ep});else{let e=F===B.id?{postSuccessGuild:P}:{followupSKUInfo:L,startingPremiumSubscriptionPlanId:F,isDowngrade:null!=w&&(0,S.vT)(w,B.id,j)};t=(0,l.jsx)(C.Ay,{planId:B.id,onClose:ep,paymentSourceType:ed,hideClose:null!=er,startingFractionalPremiumEndsAt:V,customCTAType:ef,...e})}return(0,l.jsxs)(l.Fragment,{children:[(0,l.jsxs)(T.dZ,{children:[(0,l.jsx)(z.A,{}),t]}),null!=er&&er,em&&null!=el&&(0,l.jsx)(W,{rewardSkuId:el,onClose:ep,onRewardModalClose:ei})]})}
+"use strict";
+n.d(t, { _: () => Z });
+var i = n(627968),
+    r = n(64700),
+    s = n(735438),
+    a = n(877624),
+    o = n(17928),
+    l = n(554146),
+    u = n(192308),
+    c = n(964486),
+    d = n(71804),
+    _ = n(426398),
+    h = n(558620),
+    f = n(211159),
+    p = n(841702),
+    E = n(367727),
+    m = n(380619),
+    g = n(374200),
+    A = n(771566),
+    I = n(174459),
+    T = n(625494),
+    S = n(45938),
+    y = n(615396),
+    C = n(937008),
+    N = n(491057),
+    v = n(482132),
+    R = n(364840),
+    O = n(821609),
+    b = n(778712),
+    D = n(97808),
+    L = n(775602),
+    w = n(688810),
+    M = n(912140),
+    P = n(674658),
+    x = n(780898),
+    k = n(344346),
+    U = n(898461),
+    G = n(837015),
+    F = n(61750),
+    V = n(287809),
+    B = n(758836),
+    j = n(375708),
+    H = n(258915);
+function Y(e) {
+    let { rewardSkuId: t, onClose: n, onRewardModalClose: s } = e,
+        a = (0, o.bG)([V.default], () => V.default.getCurrentUser()),
+        l = (0, o.bG)([L.Ay], () => L.Ay.useReducedMotion),
+        { analyticsLocations: u } = (0, w.Ay)(),
+        c = b._3.SIZE_32,
+        { product: d, isFetching: _ } = (0, P.q)(t),
+        [h, f] = r.useState(!1),
+        p = d?.items[0],
+        {
+            isNameplateReward: E,
+            nameplateData: m,
+            rewardAvatarDecorationSrc: g,
+        } = r.useMemo(
+            () =>
+                null == p
+                    ? { isNameplateReward: !1, nameplateData: null, rewardAvatarDecorationSrc: null }
+                    : (0, G.F)(p)
+                      ? {
+                            isNameplateReward: !0,
+                            nameplateData: {
+                                skuId: p.skuId,
+                                src: p.asset,
+                                palette: (0, x.H6)(p.palette ?? "sky"),
+                                imgAlt: p.label,
+                            },
+                            rewardAvatarDecorationSrc: null,
+                        }
+                      : (0, U.T)(p)
+                        ? {
+                              isNameplateReward: !1,
+                              nameplateData: null,
+                              rewardAvatarDecorationSrc: (0, M.A)({
+                                  legacyAssetId: p.asset,
+                                  skuId: p.skuId,
+                                  size: c,
+                                  canAnimate: !l,
+                              }),
+                          }
+                        : { isNameplateReward: !1, nameplateData: null, rewardAvatarDecorationSrc: null },
+            [p, c, l],
+        );
+    return (0, i.jsx)(v.UX, {
+        children: (0, i.jsx)(R.j, {
+            children: (0, i.jsxs)("div", {
+                className: H.W,
+                children: [
+                    E && null != m
+                        ? (0, i.jsx)("div", {
+                              className: H.D,
+                              onMouseEnter: () => f(!0),
+                              onMouseLeave: () => f(!1),
+                              children: (0, i.jsx)(k.a, {
+                                  user: a,
+                                  nameplate: null,
+                                  nameplateData: m,
+                                  showPlaceholderUser: !0,
+                                  nameplatePreviewSize: "xsmall",
+                                  isHighlighted: h,
+                              }),
+                          })
+                        : (0, i.jsx)(D.Js, {
+                              "aria-label": a?.username,
+                              size: c,
+                              src: a?.getAvatarURL(void 0, (0, b.FT)(c), !l),
+                              avatarDecoration: g,
+                          }),
+                    (0, i.jsx)(O.$, {
+                        variant: "primary",
+                        text: j.intl.string(j.t.kMYVwv),
+                        loading: _,
+                        onClick: () => {
+                            null != d &&
+                                (n(),
+                                (0, F.A)({
+                                    product: d,
+                                    shouldShowPromotionalExperience: !0,
+                                    analyticsLocations: u,
+                                    purchaseType: B.gs.PROMOTIONAL,
+                                    onCloseCallback: s,
+                                }));
+                        },
+                    }),
+                ],
+            }),
+        }),
+    });
+}
+var W = n(615310),
+    K = n(216641),
+    $ = n(921925),
+    z = n(652215),
+    q = n(49999);
+function Z(e) {
+    let t,
+        {
+            handleClose: R,
+            planGroup: O,
+            onSubscriptionConfirmation: b,
+            renderPurchaseConfirmation: D,
+            postSuccessGuild: L,
+            followupSKUInfo: w,
+            continueSessionToInitialStep: M,
+        } = e,
+        { paymentSources: P } = (0, _.jm)(),
+        {
+            activeSubscription: x,
+            selectedSkuId: k,
+            updatedSubscription: U,
+            paymentSourceId: G,
+            isPremiumGroupPurchase: F,
+            startingPremiumSubscriptionPlanId: V,
+            startingFractionalPremiumEndsAt: B,
+        } = (0, f.t4)((e) => ({
+            activeSubscription: e.activeSubscription,
+            selectedSkuId: e.selectedSkuId,
+            updatedSubscription: e.updatedSubscription,
+            paymentSourceId: e.paymentSourceId,
+            isPremiumGroupPurchase: e.get("isPremiumGroupPurchase"),
+            startingPremiumSubscriptionPlanId: e.startingPremiumSubscriptionPlanId,
+            startingFractionalPremiumEndsAt: e.startingFractionalPremiumEndsAt,
+        })),
+        j = (0, h.A)(),
+        H = (0, W.bB)(),
+        {
+            isGift: Z,
+            giftRecipient: X,
+            giftCode: Q,
+            hasSentMessage: J,
+            isSendingMessage: ee,
+            sendGiftMessage: et,
+            claimableRewards: en,
+            selectedGiftingPromotionReward: ei,
+            openGiftingBadgePostPurchaseModal: er,
+        } = (0, C.Pv)(),
+        { confirmationFooter: es } = (0, N.cG)(),
+        ea = (0, m.px)(j, Z, en),
+        eo = (0, m.Mq)(j),
+        el = (0, p.Mv)(ei, !1),
+        eu = (0, o.bG)([g.A], () => g.A.getGiftPromotion()?.id),
+        ec = (0, o.bG)([g.A], () => {
+            let e = g.A.getMarketingComponentByType(a.C.GIFT_REMINDER_NAGBAR);
+            return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
+                ? null
+                : e.properties.properties.giftReminderNagbar;
+        }),
+        ed = (0, K.g)(P, G),
+        e_ = Z && null != ei && null != el && eo,
+        eh = { selectedPlan: j, selectedSkuId: k, step: H };
+    if (null == j) throw new d.v({ message: "Expected plan to be selected", extraSentryInformation: eh });
+    if (null == k) throw new d.v({ message: "Expected selectedSkuId", extraSentryInformation: eh });
+    if (null == H) throw new d.v({ message: "Step should be set", extraSentryInformation: eh });
+    let ef = r.useCallback(() => {
+        R(), b?.();
+    }, [R, b]);
+    (0, c.Ay)(() => {
+        F &&
+            I.default.track(z.HAw.PREMIUM_GROUP_PURCHASE_CONFIRMATION_VIEWED, {
+                has_updated_subscription: null != U,
+                has_any_premium_group: U?.hasAnyPremiumGroup ?? !1,
+                subscription_id: U?.id,
+            });
+    }),
+        r.useEffect(() => {
+            function e() {
+                if (F)
+                    if (null != U && U.hasAnyPremiumGroup) {
+                        I.default.track(z.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_OPENED, { subscription_id: U.id });
+                        let e = (0, s.uniqueId)("premium-group-purchase-flow-modal");
+                        (0, u.openModalLazy)(
+                            async () => {
+                                let { default: e } = await Promise.all([
+                                    n.e("17494"),
+                                    n.e("44616"),
+                                    n.e("96680"),
+                                    n.e("85579"),
+                                ]).then(n.bind(n, 785606));
+                                return (t) =>
+                                    (0, i.jsx)(e, {
+                                        ...t,
+                                        subscription: U,
+                                        isFromPurchaseFlow: !0,
+                                        onClose: async () => {
+                                            T._.dispatch(z.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED),
+                                                await t.onClose();
+                                        },
+                                    });
+                            },
+                            {
+                                onCloseRequest: () => {
+                                    T._.dispatch(z.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED), (0, u.closeModal)(e);
+                                },
+                                modalKey: e,
+                            },
+                        );
+                    } else
+                        I.default.track(z.HAw.PREMIUM_GROUP_PURCHASE_FRIEND_SELECTOR_SKIPPED, {
+                            has_updated_subscription: null != U,
+                            has_any_premium_group: U?.hasAnyPremiumGroup ?? !1,
+                        }),
+                            T._.dispatch(z.jej.PREMIUM_GROUP_PURCHASE_FLOW_COMPLETED);
+            }
+            return (
+                T._.subscribe(z.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e),
+                () => {
+                    T._.unsubscribe(z.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED, e);
+                }
+            );
+        }, [F, U]),
+        r.useEffect(() => {
+            !Z || null == X || null == Q || J || ee || (0, S.Ik)(X) || et({ onSubscriptionConfirmation: b });
+        }, [et, Z, X, Q, J, ee, b]),
+        r.useEffect(() => {
+            ea &&
+                null != ec &&
+                null != eu &&
+                (0, E.qr)(l.M.GIFTING_PROMOTION_REMINDER, eu, { dismissAction: q.i.INDIRECT_ACTION });
+        }, [ec, eu, ea]);
+    let ep = null != M ? A.Rs.DEEPLINK_TO_DESKTOP_APP : void 0;
+    if (null != D) t = D(j, ef, U);
+    else if (Z) t = (0, i.jsx)(A.fw, { planId: j.id, onClose: ef });
+    else {
+        let e =
+            V === j.id
+                ? { postSuccessGuild: L }
+                : {
+                      followupSKUInfo: w,
+                      startingPremiumSubscriptionPlanId: V,
+                      isDowngrade: null != x && (0, y.vT)(x, j.id, O),
+                  };
+        t = (0, i.jsx)(A.Ay, {
+            planId: j.id,
+            onClose: ef,
+            paymentSourceType: ed,
+            hideClose: null != es,
+            startingFractionalPremiumEndsAt: B,
+            customCTAType: ep,
+            ...e,
+        });
+    }
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsxs)(v.dZ, { children: [(0, i.jsx)($.A, {}), t] }),
+            null != es && es,
+            e_ && null != ei && (0, i.jsx)(Y, { rewardSkuId: ei, onClose: ef, onRewardModalClose: er }),
+        ],
+    });
+}

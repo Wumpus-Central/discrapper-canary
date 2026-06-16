@@ -1,1 +1,10 @@
-"use strict";n.r(t),n.d(t,{default:()=>s});var i=n(29583),r=n(618027);function s(e){(0,r.A)(1,arguments);var t=(0,i.default)(e),n=t.getMonth();return t.setMonth(n-n%3,1),t.setHours(0,0,0,0),t}
+"use strict";
+n.r(t), n.d(t, { default: () => s });
+var i = n(29583),
+    r = n(618027);
+function s(e) {
+    (0, r.A)(1, arguments);
+    var t = (0, i.default)(e),
+        n = t.getMonth();
+    return t.setMonth(n - (n % 3), 1), t.setHours(0, 0, 0, 0), t;
+}

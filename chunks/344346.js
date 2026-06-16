@@ -1,1 +1,149 @@
-l.d(t,{a:()=>_,A:()=>L});var a=l(627968),s=l(64700),r=l(503698),n=l.n(r),u=l(17928),i=l(462887),c=l(778712),d=l(652215),o=l(346055),m=l(97808),I=l(736653),g=l(262295),f=l(609425),h=l(922301),N=l(660184),A=l(685073),v=l(534400),p=l(919395),b=l(252732),x=l(696451),E=l(290863),C=l(162232),y=l(88686),k=l(780898),S=l(174755),T=l(375708),j=l(136958);let M={xlarge:c._3.SIZE_48,large:c._3.SIZE_40,small:c._3.SIZE_24,xsmall:c._3.SIZE_20,default:c._3.SIZE_32},_=s.memo(function(e){let{user:t,guildId:l,nameplate:r,nameplateData:c,className:_,innerClassName:L,isHighlighted:R,showStatus:w,showPlaceholderUser:U,pendingGlobalName:G,pendingNickname:$,pendingAvatarDecoration:D,pendingDisplayNameStyles:F,pendingPrimaryGuildId:H,hideDecorators:W=!1,nameplatePreviewSize:B="default",skipEffectDisplayName:O=!1,width:P}=e,V=(0,I.Ay)(),K=(0,i.M)(V),Z=(0,k.WK)(r)??c,J=(0,u.bG)([E.A],()=>null!=t?E.A.getStatus(t.id):d.clD.ONLINE),z=s.useRef(null),q=(0,u.bG)([x.Ay],()=>null!=l&&null!=t?x.Ay.getMember(l,t.id):null),Q=null!=t?(0,b.eh)({pendingNickname:$,pendingGlobalName:G,user:t,guildMember:q}):void 0,X=(0,p.lw)({pendingValue:D,userValue:t?.avatarDecoration,guildValue:q?.avatarDecoration,guildId:l}),Y=s.useMemo(()=>M[B],[B]),ee=(0,f.A)({userId:t?.id,guildId:l,pendingDisplayNameStyles:F}),et=(0,A.gS)(H),el=s.useMemo(()=>null!=r?T.intl.formatToPlainString(T.t.YJig7C,{a11y_text:r.label}):T.intl.string(T.t.SZeUdR),[r]);return(0,a.jsx)("div",{role:"img","aria-label":el,style:{color:K?"white":"black",width:null!=P?`${P}px`:"100%"},children:(0,a.jsxs)(o.M,{className:n()(_,j.M4,{[j.s]:"xsmall"===B,[j.EX]:"small"===B,[j.as]:"large"===B,[j.AQ]:"xlarge"===B,[j.gf]:null!=P}),children:[null!=Z&&(0,a.jsx)(S.A,{nameplate:Z,hovered:R,placement:y.u.PREVIEW,content:U?void 0:z},r?.skuId),(0,a.jsxs)("div",{className:j.MU,children:[null!=t?(0,a.jsx)("div",{className:n()(j.H,!U&&j.Mk),children:(0,a.jsx)(g.A,{ref:z,avatar:(0,a.jsx)(C.A,{user:t,guildId:l,avatarSize:Y,status:w?J:void 0,avatarDecorationOverride:X,"aria-hidden":!0}),decorators:W?void 0:(0,a.jsx)(v.Ay,{primaryGuild:et,userId:t.id,contextGuildId:l,className:j.id}),name:(0,a.jsx)(N.A,{userName:Q,displayNameStyles:ee,effectDisplayType:O?h.G.PLAIN:h.G.ANIMATED,loop:!0}),innerClassName:L,withDisplayNameStyles:null!=ee})}):null,(0,a.jsxs)("div",{className:n()(j.H,U&&j.Mk),children:[(0,a.jsx)(m.eu,{src:K?"/assets/2ca6b6f4a73913ed.png":"/assets/9d8606c1376ca484.png",size:Y,"aria-hidden":!0,status:d.clD.ONLINE,statusColor:K?"#706F74":"#aaaab2",className:j.my}),(0,a.jsx)("div",{className:j.gM})]})]})]})})}),L=_
+"use strict";
+n.d(t, { a: () => L, A: () => w });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(17928),
+    l = n(462887),
+    u = n(778712),
+    c = n(652215),
+    d = n(346055),
+    _ = n(97808),
+    h = n(736653),
+    f = n(262295),
+    p = n(609425),
+    E = n(922301),
+    m = n(660184),
+    g = n(685073),
+    A = n(534400),
+    I = n(919395),
+    T = n(252732),
+    S = n(696451),
+    y = n(290863),
+    C = n(162232),
+    N = n(88686),
+    v = n(780898),
+    R = n(174755),
+    O = n(375708),
+    b = n(136958);
+let D = { xlarge: u._3.SIZE_48, large: u._3.SIZE_40, small: u._3.SIZE_24, xsmall: u._3.SIZE_20, default: u._3.SIZE_32 },
+    L = r.memo(function (e) {
+        let {
+                user: t,
+                guildId: n,
+                nameplate: s,
+                nameplateData: u,
+                className: L,
+                innerClassName: w,
+                isHighlighted: M,
+                showStatus: P,
+                showPlaceholderUser: x,
+                pendingGlobalName: k,
+                pendingNickname: U,
+                pendingAvatarDecoration: G,
+                pendingDisplayNameStyles: F,
+                pendingPrimaryGuildId: V,
+                hideDecorators: B = !1,
+                nameplatePreviewSize: j = "default",
+                skipEffectDisplayName: H = !1,
+                width: Y,
+            } = e,
+            W = (0, h.Ay)(),
+            K = (0, l.M)(W),
+            $ = (0, v.WK)(s) ?? u,
+            z = (0, o.bG)([y.A], () => (null != t ? y.A.getStatus(t.id) : c.clD.ONLINE)),
+            q = r.useRef(null),
+            Z = (0, o.bG)([S.Ay], () => (null != n && null != t ? S.Ay.getMember(n, t.id) : null)),
+            X = null != t ? (0, T.eh)({ pendingNickname: U, pendingGlobalName: k, user: t, guildMember: Z }) : void 0,
+            Q = (0, I.lw)({
+                pendingValue: G,
+                userValue: t?.avatarDecoration,
+                guildValue: Z?.avatarDecoration,
+                guildId: n,
+            }),
+            J = r.useMemo(() => D[j], [j]),
+            ee = (0, p.A)({ userId: t?.id, guildId: n, pendingDisplayNameStyles: F }),
+            et = (0, g.gS)(V),
+            en = r.useMemo(
+                () =>
+                    null != s
+                        ? O.intl.formatToPlainString(O.t.YJig7C, { a11y_text: s.label })
+                        : O.intl.string(O.t.SZeUdR),
+                [s],
+            );
+        return (0, i.jsx)("div", {
+            role: "img",
+            "aria-label": en,
+            style: { color: K ? "white" : "black", width: null != Y ? `${Y}px` : "100%" },
+            children: (0, i.jsxs)(d.M, {
+                className: a()(L, b.M4, {
+                    [b.s]: "xsmall" === j,
+                    [b.EX]: "small" === j,
+                    [b.as]: "large" === j,
+                    [b.AQ]: "xlarge" === j,
+                    [b.gf]: null != Y,
+                }),
+                children: [
+                    null != $ &&
+                        (0, i.jsx)(
+                            R.A,
+                            { nameplate: $, hovered: M, placement: N.u.PREVIEW, content: x ? void 0 : q },
+                            s?.skuId,
+                        ),
+                    (0, i.jsxs)("div", {
+                        className: b.MU,
+                        children: [
+                            null != t
+                                ? (0, i.jsx)("div", {
+                                      className: a()(b.H, !x && b.Mk),
+                                      children: (0, i.jsx)(f.A, {
+                                          ref: q,
+                                          avatar: (0, i.jsx)(C.A, {
+                                              user: t,
+                                              guildId: n,
+                                              avatarSize: J,
+                                              status: P ? z : void 0,
+                                              avatarDecorationOverride: Q,
+                                              "aria-hidden": !0,
+                                          }),
+                                          decorators: B
+                                              ? void 0
+                                              : (0, i.jsx)(A.Ay, {
+                                                    primaryGuild: et,
+                                                    userId: t.id,
+                                                    contextGuildId: n,
+                                                    className: b.id,
+                                                }),
+                                          name: (0, i.jsx)(m.A, {
+                                              userName: X,
+                                              displayNameStyles: ee,
+                                              effectDisplayType: H ? E.G.PLAIN : E.G.ANIMATED,
+                                              loop: !0,
+                                          }),
+                                          innerClassName: w,
+                                          withDisplayNameStyles: null != ee,
+                                      }),
+                                  })
+                                : null,
+                            (0, i.jsxs)("div", {
+                                className: a()(b.H, x && b.Mk),
+                                children: [
+                                    (0, i.jsx)(_.eu, {
+                                        src: K ? "/assets/2ca6b6f4a73913ed.png" : "/assets/9d8606c1376ca484.png",
+                                        size: J,
+                                        "aria-hidden": !0,
+                                        status: c.clD.ONLINE,
+                                        statusColor: K ? "#706F74" : "#aaaab2",
+                                        className: b.my,
+                                    }),
+                                    (0, i.jsx)("div", { className: b.gM }),
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        });
+    }),
+    w = L;

@@ -1,1 +1,26 @@
-s.d(l,{M:()=>d,v:()=>x});var e=s(627968);s(64700);var i=s(855522),r=s(950305),n=s(664121),a=s(834730),o=s(661531),c=s(323517);function d(t){let{type:l}=t;return(0,e.jsx)(x,{icon:"user"===l?(0,e.jsx)(r.n,{size:"xxs",color:o.A.colors.INTERACTIVE_TEXT_DEFAULT}):(0,e.jsx)(n.R,{size:"xxs",color:o.A.colors.INTERACTIVE_TEXT_DEFAULT}),text:"user"===l?i.A.Messages.STOREFRONT_USER_SUBSCRIPTION:i.A.Messages.STOREFRONT_SERVER_SUBSCRIPTION})}function x(t){let{icon:l,text:s}=t;return(0,e.jsxs)("div",{className:c.k,children:[l,(0,e.jsx)(a.E,{color:"text-strong",variant:"text-sm/medium",children:s})]})}
+s.d(l, { M: () => d, v: () => x });
+var e = s(627968);
+s(64700);
+var i = s(855522),
+    r = s(950305),
+    n = s(664121),
+    a = s(834730),
+    o = s(661531),
+    c = s(323517);
+function d(t) {
+    let { type: l } = t;
+    return (0, e.jsx)(x, {
+        icon:
+            "user" === l
+                ? (0, e.jsx)(r.n, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT })
+                : (0, e.jsx)(n.R, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+        text: "user" === l ? i.A.Messages.STOREFRONT_USER_SUBSCRIPTION : i.A.Messages.STOREFRONT_SERVER_SUBSCRIPTION,
+    });
+}
+function x(t) {
+    let { icon: l, text: s } = t;
+    return (0, e.jsxs)("div", {
+        className: c.k,
+        children: [l, (0, e.jsx)(a.E, { color: "text-strong", variant: "text-sm/medium", children: s })],
+    });
+}

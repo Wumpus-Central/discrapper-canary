@@ -1,1 +1,48 @@
-e.r(i),e.d(i,{ItemDetailsModal:()=>m});var n=e(627968);e(64700);var d=e(423090),r=e(17928),l=e(638916),a=e(67480),o=e(328968),s=e(371794),u=e(998218),p=e(56754),c=e(550732),k=e(376374),h=e(888781),g=e(652215),v=e(375708);function m(t){let{onClose:i,transitionState:e,skuId:m,appId:A,onHeaderTitleClick:I}=t,b=(0,r.bG)([o.A],()=>o.A.getForSKU(m),[m]),f=(0,r.bG)([a.A],()=>a.A.get(m),[m]),x=(0,p.L)(m);if(null==f)return null;let C=f.name??"",j=b?.description?.trim()??void 0,B=b?.headerBackground!=null?u.A.toURLSafe((0,s.YE)(A,b.headerBackground,256))??void 0:void 0,D=f.type===g.Puh.DURABLE&&x,L=f.type===g.Puh.DURABLE?D?v.intl.string(v.t.bm82mm):v.intl.string(v.t["6gprwf"]):void 0,{price:S}=f;return null==S?null:(0,n.jsx)(c.C,{appId:A,skuId:f.id,transitionState:e,onHeaderTitleClick:I??i,onClose:i,footer:(0,n.jsx)(k.$P,{appId:A,sku:f}),children:(0,n.jsx)(h.D,{appId:A,skuId:f.id,title:C,description:j,imgSrc:B,tag:null!=L?(0,n.jsx)(d.v,{text:L}):void 0,FallbackIcon:l.q})})}
+e.r(i), e.d(i, { ItemDetailsModal: () => m });
+var n = e(627968);
+e(64700);
+var d = e(423090),
+    r = e(17928),
+    l = e(638916),
+    a = e(67480),
+    o = e(328968),
+    s = e(371794),
+    u = e(998218),
+    p = e(56754),
+    c = e(550732),
+    k = e(376374),
+    h = e(888781),
+    g = e(652215),
+    v = e(375708);
+function m(t) {
+    let { onClose: i, transitionState: e, skuId: m, appId: A, onHeaderTitleClick: I } = t,
+        b = (0, r.bG)([o.A], () => o.A.getForSKU(m), [m]),
+        f = (0, r.bG)([a.A], () => a.A.get(m), [m]),
+        x = (0, p.L)(m);
+    if (null == f) return null;
+    let C = f.name ?? "",
+        j = b?.description?.trim() ?? void 0,
+        B = b?.headerBackground != null ? (u.A.toURLSafe((0, s.YE)(A, b.headerBackground, 256)) ?? void 0) : void 0,
+        D = f.type === g.Puh.DURABLE && x,
+        L = f.type === g.Puh.DURABLE ? (D ? v.intl.string(v.t.bm82mm) : v.intl.string(v.t["6gprwf"])) : void 0,
+        { price: S } = f;
+    return null == S
+        ? null
+        : (0, n.jsx)(c.C, {
+              appId: A,
+              skuId: f.id,
+              transitionState: e,
+              onHeaderTitleClick: I ?? i,
+              onClose: i,
+              footer: (0, n.jsx)(k.$P, { appId: A, sku: f }),
+              children: (0, n.jsx)(h.D, {
+                  appId: A,
+                  skuId: f.id,
+                  title: C,
+                  description: j,
+                  imgSrc: B,
+                  tag: null != L ? (0, n.jsx)(d.v, { text: L }) : void 0,
+                  FallbackIcon: l.q,
+              }),
+          });
+}

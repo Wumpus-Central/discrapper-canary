@@ -1,1 +1,40 @@
-"use strict";n.d(t,{A:()=>E});var i=n(481613),r=n.n(i),s=n(400253),a=n(742821),o=n(80703),l=n(803306),u=n(976860),c=n(495544),d=n(650048),_=n(174459),h=n(877062),f=n(652215);async function p(e){let t=r().os?.family;if("Android"===t||"iOS"===t){let t=c.default.getFingerprint()??c.default.getId(),n=(0,a.I_)();if(null==t&&c.default.isAuthenticated())try{await (0,l.rQ)(),t=c.default.getId()}catch{}return(0,a.Ay)((0,s.BH)(),{utmSource:e,fingerprint:t,attemptId:n})}return"discord://"}async function E(e){let t=await p(e),n=(0,a.X7)(t);null!=n&&_.default.track(f.HAw.DEEP_LINK_CLICKED,{fingerprint:(0,o.v)(n.fingerprint),attempt_id:n.attemptId,source:n.utmSource}),h.A.launch(t,e=>{e||(0,u.bG)(d.A.fallbackRoute)})}
+"use strict";
+n.d(t, { A: () => E });
+var i = n(481613),
+    r = n.n(i),
+    s = n(400253),
+    a = n(742821),
+    o = n(80703),
+    l = n(803306),
+    u = n(976860),
+    c = n(495544),
+    d = n(650048),
+    _ = n(174459),
+    h = n(877062),
+    f = n(652215);
+async function p(e) {
+    let t = r().os?.family;
+    if ("Android" === t || "iOS" === t) {
+        let t = c.default.getFingerprint() ?? c.default.getId(),
+            n = (0, a.I_)();
+        if (null == t && c.default.isAuthenticated())
+            try {
+                await (0, l.rQ)(), (t = c.default.getId());
+            } catch {}
+        return (0, a.Ay)((0, s.BH)(), { utmSource: e, fingerprint: t, attemptId: n });
+    }
+    return "discord://";
+}
+async function E(e) {
+    let t = await p(e),
+        n = (0, a.X7)(t);
+    null != n &&
+        _.default.track(f.HAw.DEEP_LINK_CLICKED, {
+            fingerprint: (0, o.v)(n.fingerprint),
+            attempt_id: n.attemptId,
+            source: n.utmSource,
+        }),
+        h.A.launch(t, (e) => {
+            e || (0, u.bG)(d.A.fallbackRoute);
+        });
+}

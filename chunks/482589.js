@@ -1,1 +1,18 @@
-r.d(t,{j:()=>d});var i=r(64700),s=r(554146),l=r(558845),a=r(367727),n=r(366505),o=r(49999);function d(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0],{programReward:t}=(0,n.F)(),r=t?.last_granted_reward??null;i.useEffect(()=>{e||(0,l.dD)(s.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)||null!=r&&(0,a.qr)(s.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER,r,{dismissAction:o.i.INDIRECT_ACTION})},[e,r])}
+"use strict";
+n.d(t, { j: () => u });
+var i = n(64700),
+    r = n(554146),
+    s = n(558845),
+    a = n(367727),
+    o = n(366505),
+    l = n(49999);
+function u() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+        { programReward: t } = (0, o.F)(),
+        n = t?.last_granted_reward ?? null;
+    i.useEffect(() => {
+        e ||
+            (0, s.dD)(r.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER) ||
+            (null != n && (0, a.qr)(r.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER, n, { dismissAction: l.i.INDIRECT_ACTION }));
+    }, [e, n]);
+}

@@ -1,1 +1,1 @@
-e.exports={t:"crossfade__04d60",K:"icon__04d60"}
+d.exports = { t: "crossfade__04d60", K: "icon__04d60" };

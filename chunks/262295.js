@@ -1,1 +1,39 @@
-l.d(t,{A:()=>c});var a=l(627968),s=l(64700),r=l(503698),n=l.n(r),u=l(195462);let i=s.forwardRef((e,t)=>{let{muted:l=!1,highlighted:s=!1,avatar:r,decorators:i,name:c,subText:d,avatarClassName:o,innerClassName:m,withDisplayNameStyles:I=!1}=e;return(0,a.jsxs)("div",{ref:t,className:n()(u.Zp,m,{[u.SU]:l,[u.mr]:s}),children:[(0,a.jsx)("div",{className:n()(u.my,o),children:r}),(0,a.jsxs)("div",{className:n()(u.Qs,{[u.e8]:I}),children:[(0,a.jsxs)("div",{className:u.BG,children:[(0,a.jsx)("div",{className:u.UU,children:c}),i]}),null!=d?(0,a.jsx)("div",{className:u.Sv,children:d}):null]})]})});i.displayName="AvatarWithText";let c=i
+"use strict";
+n.d(t, { A: () => u });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(195462);
+let l = r.forwardRef((e, t) => {
+    let {
+        muted: n = !1,
+        highlighted: r = !1,
+        avatar: s,
+        decorators: l,
+        name: u,
+        subText: c,
+        avatarClassName: d,
+        innerClassName: _,
+        withDisplayNameStyles: h = !1,
+    } = e;
+    return (0, i.jsxs)("div", {
+        ref: t,
+        className: a()(o.Zp, _, { [o.SU]: n, [o.mr]: r }),
+        children: [
+            (0, i.jsx)("div", { className: a()(o.my, d), children: s }),
+            (0, i.jsxs)("div", {
+                className: a()(o.Qs, { [o.e8]: h }),
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: o.BG,
+                        children: [(0, i.jsx)("div", { className: o.UU, children: u }), l],
+                    }),
+                    null != c ? (0, i.jsx)("div", { className: o.Sv, children: c }) : null,
+                ],
+            }),
+        ],
+    });
+});
+l.displayName = "AvatarWithText";
+let u = l;

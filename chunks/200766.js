@@ -1,1 +1,1 @@
-e.exports={$:"purchaseItemGraphic__2455b"}
+e.exports = { $: "purchaseItemGraphic__2455b" };

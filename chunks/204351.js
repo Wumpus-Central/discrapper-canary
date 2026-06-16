@@ -1,1 +1,1 @@
-e.exports={Q:"clipThumbContainer_b492ef",f:"clipThumb_b492ef"}
+_.exports = { Q: "clipThumbContainer_b492ef", f: "clipThumb_b492ef" };

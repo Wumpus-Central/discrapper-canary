@@ -1,1 +1,1 @@
-e.exports={l:"tabBarItemContainer_c7e907"}
+p.exports = { l: "tabBarItemContainer_c7e907" };

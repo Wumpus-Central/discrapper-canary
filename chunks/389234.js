@@ -1,1 +1,19 @@
-"use strict";n.d(t,{H:()=>l});var i=n(643501),r=n(742023),s=n(495544),a=n(71393),o=n(977997);function l(e){if(r.Ay.disableVoiceChannelChangeAlert)return!1;let t=i.default.getRemoteSessionId();if(null!=o.A.getVoiceStateForSession(s.default.getId(),t)||!o.A.isCurrentClientInVoiceChannel()||o.A.isInChannel(e.id))return!1;let n=a.A.getGuild(e.getGuildId());return!(n?.afkChannelId!=null&&o.A.isInChannel(n.afkChannelId))}
+"use strict";
+n.d(t, { H: () => l });
+var i = n(643501),
+    r = n(742023),
+    s = n(495544),
+    a = n(71393),
+    o = n(977997);
+function l(e) {
+    if (r.Ay.disableVoiceChannelChangeAlert) return !1;
+    let t = i.default.getRemoteSessionId();
+    if (
+        null != o.A.getVoiceStateForSession(s.default.getId(), t) ||
+        !o.A.isCurrentClientInVoiceChannel() ||
+        o.A.isInChannel(e.id)
+    )
+        return !1;
+    let n = a.A.getGuild(e.getGuildId());
+    return !(n?.afkChannelId != null && o.A.isInChannel(n.afkChannelId));
+}

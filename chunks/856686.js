@@ -1,1 +1,22 @@
-r.d(t,{S:()=>s});var l=r(353640);let n={skus:[],currentPage:0,totalCount:0,hasMorePages:!1,searchError:null,isFetchingResults:!1},s=(0,l.v)(e=>({...n,onSetResponse:t=>{let r=Math.floor(t.pageOffset/t.pageLimit)+1;e({...t,currentPage:r})},setSearchError:t=>{e({...n,searchError:t})},setIsFetchingResults:t=>{e({isFetchingResults:t})},clearError:()=>{e({searchError:null})},clear:()=>{e({...n})}}))
+r.d(t, { S: () => s });
+var l = r(353640);
+let n = { skus: [], currentPage: 0, totalCount: 0, hasMorePages: !1, searchError: null, isFetchingResults: !1 },
+    s = (0, l.v)((e) => ({
+        ...n,
+        onSetResponse: (t) => {
+            let r = Math.floor(t.pageOffset / t.pageLimit) + 1;
+            e({ ...t, currentPage: r });
+        },
+        setSearchError: (t) => {
+            e({ ...n, searchError: t });
+        },
+        setIsFetchingResults: (t) => {
+            e({ isFetchingResults: t });
+        },
+        clearError: () => {
+            e({ searchError: null });
+        },
+        clear: () => {
+            e({ ...n });
+        },
+    }));

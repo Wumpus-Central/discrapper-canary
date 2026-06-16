@@ -1,1 +1,128 @@
-s.d(e,{A:()=>T});var n=s(627968),i=s(64700),a=s(17928),l=s(104510),r=s(661531),o=s(834730),c=s(123292),u=s(688810),d=s(188989),A=s(631305),x=s(71393),N=s(967198),E=s(652215),m=s(625633),_=s(375708),L=s(724709);function f(t){let{analyticsSection:e,analyticsPage:s,isGIF:i,banner:f}=t,I=(0,a.bG)([N.A],()=>N.A.getGuildId()),R=(0,a.bG)([x.A],()=>x.A.getGuild(I)),{analyticsLocations:h}=(0,u.Ay)();return null==R||R.features.has(E.GuildFeatures.ANIMATED_BANNER)||!i&&R.features.has(E.GuildFeatures.BANNER)?null:(0,n.jsxs)("div",{className:L.kL,children:[(0,n.jsx)(l._,{color:r.A.unsafe_rawColors.GUILD_BOOSTING_PINK,className:L.qC}),(0,n.jsx)(o.E,{color:"text-strong",variant:"text-sm/semibold",children:_.intl.string(_.t["56M7xe"])}),(0,n.jsx)("div",{className:L.xF,children:(0,n.jsx)(c.Q,{text:_.intl.string(_.t.WUHdZV),onClick:()=>{if(null==R)return;let t={section:e,page:s,object:E.ZSU.UPSELL_HEADER};null!=f?(0,d._)({analyticsLocations:h,analyticsLocation:t,guild:R,isGIF:i,banner:f}):(0,A.A)({analyticsLocations:h,analyticsSourceLocation:t,guild:R,perks:i?(0,m.Pf)():(0,m.QR)()})},textVariant:"text-sm/semibold"})})]})}var I=s(862482),R=s(793574),h=s(725807),p=s(503698),U=s.n(p),g=s(403581),j=s(404374),k=s(291590);function b(t){let{text:e,className:s,button:i,reducedRightPadding:a=!1}=t;return(0,n.jsxs)("div",{className:U()(a?k.wp:k.Ug,s),children:[(0,n.jsxs)("div",{className:k.g9,children:[(0,n.jsx)(g.t,{size:"md",className:k.Kk,color:j.k0.PREMIUM_TIER_2}),(0,n.jsx)(o.E,{className:k.Qq,variant:"text-md/normal",color:"text-strong",children:e})]}),i]})}var v=s(287809),P=s(174459),S=s(428262),y=s(339984),G=s(788868),C=s(582602);function M(t){let{analyticsSection:e,type:s}=t,l=(0,a.bG)([v.default],()=>v.default.getCurrentUser()),r=S.Ay.canUseAnimatedAvatar(l),o=S.Ay.canUsePremiumProfileCustomization(l),c=s===y.HL.BANNER&&o||s===y.HL.AVATAR&&r,{sourceAnalyticsLocations:d}=(0,u.Ay)(R.A.PREMIUM_PREVIEW_UPSELL_HEADER);if(i.useEffect(()=>{c||P.default.track(E.HAw.PREMIUM_UPSELL_VIEWED,{type:e,location_stack:d})},[c,e,d]),c)return null;let A=(0,n.jsx)(h.A,{className:C.__invalid_getNitroLink,size:I.$n.Sizes.SMALL,look:I.$n.Looks.LINK,color:I.$n.Colors.LINK,subscriptionTier:G.pe.TIER_2,textOptions:{textOverride:_.intl.format(_.t["944tDv"],{})},showIcon:!1,premiumModalAnalyticsLocation:{section:e,object:E.ZSU.BUTTON_CTA},disableShine:!0});return(0,n.jsx)(b,{reducedRightPadding:!0,className:C.C,text:_.intl.format(_.t.Og803x,{}),button:A})}function T(t){let{type:e,analyticsPage:s,analyticsSection:i,isGIF:a,banner:l}=t;return[y.HL.BANNER,y.HL.AVATAR].includes(e)&&a?(0,n.jsx)(M,{analyticsSection:i,type:e}):e===y.HL.GUILD_BANNER?(0,n.jsx)(f,{analyticsSection:i,analyticsPage:s,isGIF:a,banner:l}):null}
+s.d(e, { A: () => T });
+var n = s(627968),
+    i = s(64700),
+    a = s(17928),
+    l = s(104510),
+    r = s(661531),
+    o = s(834730),
+    c = s(123292),
+    u = s(688810),
+    d = s(188989),
+    A = s(631305),
+    x = s(71393),
+    N = s(967198),
+    E = s(652215),
+    m = s(625633),
+    _ = s(375708),
+    L = s(724709);
+function f(t) {
+    let { analyticsSection: e, analyticsPage: s, isGIF: i, banner: f } = t,
+        I = (0, a.bG)([N.A], () => N.A.getGuildId()),
+        R = (0, a.bG)([x.A], () => x.A.getGuild(I)),
+        { analyticsLocations: h } = (0, u.Ay)();
+    return null == R ||
+        R.features.has(E.GuildFeatures.ANIMATED_BANNER) ||
+        (!i && R.features.has(E.GuildFeatures.BANNER))
+        ? null
+        : (0, n.jsxs)("div", {
+              className: L.kL,
+              children: [
+                  (0, n.jsx)(l._, { color: r.A.unsafe_rawColors.GUILD_BOOSTING_PINK, className: L.qC }),
+                  (0, n.jsx)(o.E, {
+                      color: "text-strong",
+                      variant: "text-sm/semibold",
+                      children: _.intl.string(_.t["56M7xe"]),
+                  }),
+                  (0, n.jsx)("div", {
+                      className: L.xF,
+                      children: (0, n.jsx)(c.Q, {
+                          text: _.intl.string(_.t.WUHdZV),
+                          onClick: () => {
+                              if (null == R) return;
+                              let t = { section: e, page: s, object: E.ZSU.UPSELL_HEADER };
+                              null != f
+                                  ? (0, d._)({
+                                        analyticsLocations: h,
+                                        analyticsLocation: t,
+                                        guild: R,
+                                        isGIF: i,
+                                        banner: f,
+                                    })
+                                  : (0, A.A)({
+                                        analyticsLocations: h,
+                                        analyticsSourceLocation: t,
+                                        guild: R,
+                                        perks: i ? (0, m.Pf)() : (0, m.QR)(),
+                                    });
+                          },
+                          textVariant: "text-sm/semibold",
+                      }),
+                  }),
+              ],
+          });
+}
+var I = s(862482),
+    R = s(793574),
+    h = s(725807),
+    p = s(503698),
+    U = s.n(p),
+    g = s(403581),
+    j = s(404374),
+    k = s(291590);
+function b(t) {
+    let { text: e, className: s, button: i, reducedRightPadding: a = !1 } = t;
+    return (0, n.jsxs)("div", {
+        className: U()(a ? k.wp : k.Ug, s),
+        children: [
+            (0, n.jsxs)("div", {
+                className: k.g9,
+                children: [
+                    (0, n.jsx)(g.t, { size: "md", className: k.Kk, color: j.k0.PREMIUM_TIER_2 }),
+                    (0, n.jsx)(o.E, { className: k.Qq, variant: "text-md/normal", color: "text-strong", children: e }),
+                ],
+            }),
+            i,
+        ],
+    });
+}
+var v = s(287809),
+    P = s(174459),
+    S = s(428262),
+    y = s(339984),
+    G = s(788868),
+    C = s(582602);
+function M(t) {
+    let { analyticsSection: e, type: s } = t,
+        l = (0, a.bG)([v.default], () => v.default.getCurrentUser()),
+        r = S.Ay.canUseAnimatedAvatar(l),
+        o = S.Ay.canUsePremiumProfileCustomization(l),
+        c = (s === y.HL.BANNER && o) || (s === y.HL.AVATAR && r),
+        { sourceAnalyticsLocations: d } = (0, u.Ay)(R.A.PREMIUM_PREVIEW_UPSELL_HEADER);
+    if (
+        (i.useEffect(() => {
+            c || P.default.track(E.HAw.PREMIUM_UPSELL_VIEWED, { type: e, location_stack: d });
+        }, [c, e, d]),
+        c)
+    )
+        return null;
+    let A = (0, n.jsx)(h.A, {
+        className: C.__invalid_getNitroLink,
+        size: I.$n.Sizes.SMALL,
+        look: I.$n.Looks.LINK,
+        color: I.$n.Colors.LINK,
+        subscriptionTier: G.pe.TIER_2,
+        textOptions: { textOverride: _.intl.format(_.t["944tDv"], {}) },
+        showIcon: !1,
+        premiumModalAnalyticsLocation: { section: e, object: E.ZSU.BUTTON_CTA },
+        disableShine: !0,
+    });
+    return (0, n.jsx)(b, { reducedRightPadding: !0, className: C.C, text: _.intl.format(_.t.Og803x, {}), button: A });
+}
+function T(t) {
+    let { type: e, analyticsPage: s, analyticsSection: i, isGIF: a, banner: l } = t;
+    return [y.HL.BANNER, y.HL.AVATAR].includes(e) && a
+        ? (0, n.jsx)(M, { analyticsSection: i, type: e })
+        : e === y.HL.GUILD_BANNER
+          ? (0, n.jsx)(f, { analyticsSection: i, analyticsPage: s, isGIF: a, banner: l })
+          : null;
+}

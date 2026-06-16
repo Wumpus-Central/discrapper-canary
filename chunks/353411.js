@@ -1,1 +1,85 @@
-l.d(e,{Gq:()=>h,J$:()=>T,_B:()=>f});var a=l(64700),u=l(17928),s=l(451988),i=l(475743),n=l(495544),d=l(927813),c=l(427262),A=l(655116),C=l(160768),E=l(341335),_=l(286617),o=l(533207),r=l(881335),p=l(272984);let N=30*d.A.Millis.SECOND;function I(t){let{currentUserTrackId:e,syncingWithUser:l,syncingWithParty:u}=t,[n,d]=a.useState(!1),[c]=a.useState(()=>new s.Ep),A=(0,i.A)(e);a.useEffect(()=>{n&&(e!==A||l||u)&&(d(!1),c.stop())},[e,A,l,u,n,c]);let C=a.useCallback(()=>{d(!0),c.start(N,()=>d(!1))},[c]),E=a.useCallback(()=>{d(!1),c.stop()},[c]);return a.useEffect(()=>()=>c.stop(),[c]),{loading:n,startLoading:C,clearLoading:E}}function S(t,e){return(0,u.cf)([A.A,n.default],()=>(0,_.A)(A.A,n.default,e,t),[t,e])}function f(t,e,l){let u=S(t,e),{notPlayable:s,isCurrentUser:i,playingSameTrack:n}=u,{loading:d,startLoading:c,clearLoading:A}=I(u),_=a.useCallback(()=>{c(),(0,r.A)(u,p.Qp.USER_ACTIVITY_PLAY,l).catch(A)},[u,l,c,A]);return{label:(0,C.A)(u,p.Qp.USER_ACTIVITY_PLAY),tooltip:(0,E.A)(u,p.Qp.USER_ACTIVITY_PLAY),disabled:!d&&(i||s||n),loading:d,onClick:_,spotifyData:u}}function T(t,e,l,u){let s=u??c.Ay.getName(e),i=S(t,e),{notPlayable:n,syncingWithUser:d,syncingWithParty:A,isCurrentUser:_}=i,{loading:r,startLoading:N,clearLoading:f}=I(i),T=a.useCallback(()=>{N(),(0,o.A)(i,p.Qp.USER_ACTIVITY_SYNC,l).catch(f)},[i,l,N,f]);return{label:(0,C.A)(i,p.Qp.USER_ACTIVITY_SYNC),tooltip:(0,E.A)(i,p.Qp.USER_ACTIVITY_SYNC,s),disabled:!r&&(n||_||d||A),loading:r,onClick:T,spotifyData:i}}function h(t,e,l){let u=S(t,e),{notPlayable:s,syncingWithUser:i,syncingWithParty:n,isCurrentUser:d}=u,{loading:c,startLoading:A,clearLoading:_}=I(u),r=a.useCallback(()=>{A(),(0,o.A)(u,p.Qp.EMBED_SYNC,l).catch(_)},[u,l,A,_]);return{label:(0,C.A)(u,p.Qp.EMBED_SYNC),tooltip:(0,E.A)(u,p.Qp.EMBED_SYNC),disabled:!c&&(d||i||n||s),loading:c,onClick:r,spotifyData:u}}
+"use strict";
+n.d(t, { Gq: () => S, J$: () => T, _B: () => I });
+var i = n(64700),
+    r = n(17928),
+    s = n(451988),
+    a = n(475743),
+    o = n(495544),
+    l = n(927813),
+    u = n(427262),
+    c = n(655116),
+    d = n(160768),
+    _ = n(341335),
+    h = n(286617),
+    f = n(533207),
+    p = n(881335),
+    E = n(272984);
+let m = 30 * l.A.Millis.SECOND;
+function g(e) {
+    let { currentUserTrackId: t, syncingWithUser: n, syncingWithParty: r } = e,
+        [o, l] = i.useState(!1),
+        [u] = i.useState(() => new s.Ep()),
+        c = (0, a.A)(t);
+    i.useEffect(() => {
+        o && (t !== c || n || r) && (l(!1), u.stop());
+    }, [t, c, n, r, o, u]);
+    let d = i.useCallback(() => {
+            l(!0), u.start(m, () => l(!1));
+        }, [u]),
+        _ = i.useCallback(() => {
+            l(!1), u.stop();
+        }, [u]);
+    return i.useEffect(() => () => u.stop(), [u]), { loading: o, startLoading: d, clearLoading: _ };
+}
+function A(e, t) {
+    return (0, r.cf)([c.A, o.default], () => (0, h.A)(c.A, o.default, t, e), [e, t]);
+}
+function I(e, t, n) {
+    let r = A(e, t),
+        { notPlayable: s, isCurrentUser: a, playingSameTrack: o } = r,
+        { loading: l, startLoading: u, clearLoading: c } = g(r),
+        h = i.useCallback(() => {
+            u(), (0, p.A)(r, E.Qp.USER_ACTIVITY_PLAY, n).catch(c);
+        }, [r, n, u, c]);
+    return {
+        label: (0, d.A)(r, E.Qp.USER_ACTIVITY_PLAY),
+        tooltip: (0, _.A)(r, E.Qp.USER_ACTIVITY_PLAY),
+        disabled: !l && (a || s || o),
+        loading: l,
+        onClick: h,
+        spotifyData: r,
+    };
+}
+function T(e, t, n, r) {
+    let s = r ?? u.Ay.getName(t),
+        a = A(e, t),
+        { notPlayable: o, syncingWithUser: l, syncingWithParty: c, isCurrentUser: h } = a,
+        { loading: p, startLoading: m, clearLoading: I } = g(a),
+        T = i.useCallback(() => {
+            m(), (0, f.A)(a, E.Qp.USER_ACTIVITY_SYNC, n).catch(I);
+        }, [a, n, m, I]);
+    return {
+        label: (0, d.A)(a, E.Qp.USER_ACTIVITY_SYNC),
+        tooltip: (0, _.A)(a, E.Qp.USER_ACTIVITY_SYNC, s),
+        disabled: !p && (o || h || l || c),
+        loading: p,
+        onClick: T,
+        spotifyData: a,
+    };
+}
+function S(e, t, n) {
+    let r = A(e, t),
+        { notPlayable: s, syncingWithUser: a, syncingWithParty: o, isCurrentUser: l } = r,
+        { loading: u, startLoading: c, clearLoading: h } = g(r),
+        p = i.useCallback(() => {
+            c(), (0, f.A)(r, E.Qp.EMBED_SYNC, n).catch(h);
+        }, [r, n, c, h]);
+    return {
+        label: (0, d.A)(r, E.Qp.EMBED_SYNC),
+        tooltip: (0, _.A)(r, E.Qp.EMBED_SYNC),
+        disabled: !u && (l || a || o || s),
+        loading: u,
+        onClick: p,
+        spotifyData: r,
+    };
+}

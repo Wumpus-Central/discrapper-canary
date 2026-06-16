@@ -1,1 +1,1 @@
-p.exports={ZZ:"field_db41ea"}
+e.exports = { ZZ: "field_db41ea" };

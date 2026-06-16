@@ -1,1 +1,20 @@
-_.exports={nd:"panel__3932d",$H:"tabBar__3932d",V3:"tabItem__3932d",u7:"tabItemSelected__3932d",Lj:"tabContent__3932d",uW:"section__3932d",LY:"gamesSection__3932d",Nr:"card__3932d",Ss:"callLogAppRow__3932d",MY:"cardHeader__3932d",Z2:"appIcon__3932d",qi:"appInfo__3932d",aq:"callLogHeader__3932d",O9:"callLogEntryHeader__3932d",rb:"callLogAppIcon__3932d",Jd:"callLogAppName__3932d",OK:"eligible__3932d",t7:"excluded__3932d"}
+_.exports = {
+    nd: "panel__3932d",
+    $H: "tabBar__3932d",
+    V3: "tabItem__3932d",
+    u7: "tabItemSelected__3932d",
+    Lj: "tabContent__3932d",
+    uW: "section__3932d",
+    LY: "gamesSection__3932d",
+    Nr: "card__3932d",
+    Ss: "callLogAppRow__3932d",
+    MY: "cardHeader__3932d",
+    Z2: "appIcon__3932d",
+    qi: "appInfo__3932d",
+    aq: "callLogHeader__3932d",
+    O9: "callLogEntryHeader__3932d",
+    rb: "callLogAppIcon__3932d",
+    Jd: "callLogAppName__3932d",
+    OK: "eligible__3932d",
+    t7: "excluded__3932d",
+};

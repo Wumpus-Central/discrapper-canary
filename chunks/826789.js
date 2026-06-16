@@ -1,1 +1,25 @@
-e.d(a,{default:()=>r});var o=e(627968);e(64700);var c=e(192308),n=e(523527),l=e(366638),s=e(976860),d=e(174459),i=e(652215);function r(t){let{onClose:a,...e}=t;return(0,o.jsx)(l.default,{onClose:a,handleLearnMore:function(){(0,n.A)(),(0,c.closeAllModals)(),d.default.track(i.HAw.PREMIUM_PROMOTION_OPENED,{location_section:i.JJy.STREAM_UPSELL_MODAL,location_object:i.ZSU.NAVIGATION_LINK}),(0,s.pX)(i.BVt.APPLICATION_STORE)},...e})}
+e.d(a, { default: () => r });
+var o = e(627968);
+e(64700);
+var c = e(192308),
+    n = e(523527),
+    l = e(366638),
+    s = e(976860),
+    d = e(174459),
+    i = e(652215);
+function r(t) {
+    let { onClose: a, ...e } = t;
+    return (0, o.jsx)(l.default, {
+        onClose: a,
+        handleLearnMore: function () {
+            (0, n.A)(),
+                (0, c.closeAllModals)(),
+                d.default.track(i.HAw.PREMIUM_PROMOTION_OPENED, {
+                    location_section: i.JJy.STREAM_UPSELL_MODAL,
+                    location_object: i.ZSU.NAVIGATION_LINK,
+                }),
+                (0, s.pX)(i.BVt.APPLICATION_STORE);
+        },
+        ...e,
+    });
+}

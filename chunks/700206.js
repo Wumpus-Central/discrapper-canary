@@ -1,1 +1,45 @@
-l.d(e,{A:()=>u});var i=l(64700),n=l(17928),s=l(73825),a=l(97352),r=l(166403),c=l(636194),d=l(624456),o=l(652215);function u(t){let e=(0,n.bG)([r.A],()=>r.A.getSubscriptions()),l=i.useMemo(()=>{if(null==e)return{};let t={};for(let l of Object.values(e))l.type===o.rzx.GUILD&&(t[(0,d.M)(l)]=l);return t},[e]),{activeSubscription:u,activeSubscriptionListing:m}=(0,n.cf)([c.A],()=>{let e,i=null,n=null!=t?c.A.getSubscriptionGroupListing(t):null;for(let t of n?.subscription_listings_ids??[]){let n=c.A.getSubscriptionListing(t),s=n?.subscription_plans[0].id;if(null==s)continue;let a=l[s];if(null!=a){i=a,e=n;break}}return{activeSubscription:i,activeSubscriptionListing:e}}),x=m?.subscription_plans[0],h=x?.id,g=x?.sku_id,j=(0,n.bG)([a.A],()=>null!=h?a.A.get(h):null),v=m?.soft_deleted;return i.useEffect(()=>{null!=j||null==g||a.A.isFetchingForSKU(g)||(0,s.ur)(g,void 0,void 0,v)},[j,g,v]),{activeSubscription:u,activeSubscriptionListing:m,activeSubscriptionPlanFromStore:j}}
+l.d(e, { A: () => u });
+var i = l(64700),
+    n = l(17928),
+    s = l(73825),
+    a = l(97352),
+    r = l(166403),
+    c = l(636194),
+    d = l(624456),
+    o = l(652215);
+function u(t) {
+    let e = (0, n.bG)([r.A], () => r.A.getSubscriptions()),
+        l = i.useMemo(() => {
+            if (null == e) return {};
+            let t = {};
+            for (let l of Object.values(e)) l.type === o.rzx.GUILD && (t[(0, d.M)(l)] = l);
+            return t;
+        }, [e]),
+        { activeSubscription: u, activeSubscriptionListing: m } = (0, n.cf)([c.A], () => {
+            let e,
+                i = null,
+                n = null != t ? c.A.getSubscriptionGroupListing(t) : null;
+            for (let t of n?.subscription_listings_ids ?? []) {
+                let n = c.A.getSubscriptionListing(t),
+                    s = n?.subscription_plans[0].id;
+                if (null == s) continue;
+                let a = l[s];
+                if (null != a) {
+                    (i = a), (e = n);
+                    break;
+                }
+            }
+            return { activeSubscription: i, activeSubscriptionListing: e };
+        }),
+        x = m?.subscription_plans[0],
+        h = x?.id,
+        g = x?.sku_id,
+        j = (0, n.bG)([a.A], () => (null != h ? a.A.get(h) : null)),
+        v = m?.soft_deleted;
+    return (
+        i.useEffect(() => {
+            null != j || null == g || a.A.isFetchingForSKU(g) || (0, s.ur)(g, void 0, void 0, v);
+        }, [j, g, v]),
+        { activeSubscription: u, activeSubscriptionListing: m, activeSubscriptionPlanFromStore: j }
+    );
+}

@@ -1,1 +1,12 @@
-"use strict";n.r(t),n.d(t,{default:()=>s});var i=n(29583),r=n(618027);function s(e,t){(0,r.A)(2,arguments);var n=(0,i.default)(e).getTime(),s=(0,i.default)(t.start).getTime(),a=(0,i.default)(t.end).getTime();if(!(s<=a))throw RangeError("Invalid interval");return n>=s&&n<=a}
+"use strict";
+n.r(t), n.d(t, { default: () => s });
+var i = n(29583),
+    r = n(618027);
+function s(e, t) {
+    (0, r.A)(2, arguments);
+    var n = (0, i.default)(e).getTime(),
+        s = (0, i.default)(t.start).getTime(),
+        a = (0, i.default)(t.end).getTime();
+    if (!(s <= a)) throw RangeError("Invalid interval");
+    return n >= s && n <= a;
+}

@@ -1,1 +1,17 @@
-"use strict";n.d(t,{A:()=>l});var i=n(159273),r=n(95701),s=n(690521),a=n(488926),o=n(652215);function l(e){let{activity:t,user:n,channel:l}=e;if(null==n||t?.type!==o.$pd.CUSTOM_STATUS||null==t.emoji)return!1;let u=t.emoji;if(null==u.id||null==l||!(0,r.ke)(l.type))return!0;let c=i.Ay.getUsableCustomEmojiById(u.id),d=s.Ay.isInternalEmojiForGuildId(c,l.getGuildId()),_=a.$3({permission:o.xBc.USE_EXTERNAL_EMOJIS,user:n,context:l});return!d||_}
+"use strict";
+n.d(t, { A: () => l });
+var i = n(159273),
+    r = n(95701),
+    s = n(690521),
+    a = n(488926),
+    o = n(652215);
+function l(e) {
+    let { activity: t, user: n, channel: l } = e;
+    if (null == n || t?.type !== o.$pd.CUSTOM_STATUS || null == t.emoji) return !1;
+    let u = t.emoji;
+    if (null == u.id || null == l || !(0, r.ke)(l.type)) return !0;
+    let c = i.Ay.getUsableCustomEmojiById(u.id),
+        d = s.Ay.isInternalEmojiForGuildId(c, l.getGuildId()),
+        _ = a.$3({ permission: o.xBc.USE_EXTERNAL_EMOJIS, user: n, context: l });
+    return !d || _;
+}

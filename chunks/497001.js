@@ -1,1 +1,1 @@
-e.exports={S:"pricePerInterval_b39acb"}
+e.exports = { S: "pricePerInterval_b39acb" };

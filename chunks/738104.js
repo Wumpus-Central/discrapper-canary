@@ -1,1 +1,33 @@
-"use strict";n.d(t,{d:()=>o});var i=n(77468),r=n(723702),s=n(783419),a=n(652215);async function o(e){let{location:t,twoWayLinkType:n,successRedirect:o,handle:l}=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},u=arguments.length>2?arguments[2]:void 0,c=Math.round(screen.width/2-350),d=screen.height>640?Math.round(screen.height/2-320):0,_=null;(0,r.isDesktop)()||(_=window.open(`${window.location.protocol}//${window.location.host}${a.BVt.CONNECTIONS(e)}?loading=true`,"authorize",`scrollbars=yes,resizable=yes,toolbar=no,location=yes,top=${d},left=${c},width=700,height=640`));let h=u;if(null==h&&e!==s.zR)try{let{body:r}=await i.A.authorize(e,{location:t,twoWayLinkType:n,successRedirect:o,handle:l});h=r.url}catch(e){throw _?.close(),e}return null==h?void _?.close():(null!=_?_.location.href=h:window.open(h),h)}
+"use strict";
+n.d(t, { d: () => o });
+var i = n(77468),
+    r = n(723702),
+    s = n(783419),
+    a = n(652215);
+async function o(e) {
+    let {
+            location: t,
+            twoWayLinkType: n,
+            successRedirect: o,
+            handle: l,
+        } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        u = arguments.length > 2 ? arguments[2] : void 0,
+        c = Math.round(screen.width / 2 - 350),
+        d = screen.height > 640 ? Math.round(screen.height / 2 - 320) : 0,
+        _ = null;
+    (0, r.isDesktop)() ||
+        (_ = window.open(
+            `${window.location.protocol}//${window.location.host}${a.BVt.CONNECTIONS(e)}?loading=true`,
+            "authorize",
+            `scrollbars=yes,resizable=yes,toolbar=no,location=yes,top=${d},left=${c},width=700,height=640`,
+        ));
+    let h = u;
+    if (null == h && e !== s.zR)
+        try {
+            let { body: r } = await i.A.authorize(e, { location: t, twoWayLinkType: n, successRedirect: o, handle: l });
+            h = r.url;
+        } catch (e) {
+            throw (_?.close(), e);
+        }
+    return null == h ? void _?.close() : (null != _ ? (_.location.href = h) : window.open(h), h);
+}

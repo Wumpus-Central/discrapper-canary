@@ -1,1 +1,33 @@
-"use strict";n.d(t,{Iy:()=>s,_z:()=>a,wL:()=>r});var i=n(325278);function r(e){return null!=e&&(e.startsWith(i.U4.GUILD)||e.startsWith(i.U4.CALL))}function s(e){let t=e.split(":"),n=t[0];switch(n){case i.U4.GUILD:{let[e,n,i,r]=t;return{streamType:e,guildId:n,channelId:i,ownerId:r}}case i.U4.CALL:{let[e,n,i]=t;return{streamType:e,channelId:n,ownerId:i}}default:throw Error(`Unknown stream type ${n}`)}}function a(e){let{streamType:t,guildId:n,channelId:r,ownerId:s}=e;switch(t){case i.U4.GUILD:return[t,n,r,s].join(":");case i.U4.CALL:return[t,r,s].join(":");default:throw Error(`Unknown stream type ${t}`)}}
+"use strict";
+n.d(t, { Iy: () => s, _z: () => a, wL: () => r });
+var i = n(325278);
+function r(e) {
+    return null != e && (e.startsWith(i.U4.GUILD) || e.startsWith(i.U4.CALL));
+}
+function s(e) {
+    let t = e.split(":"),
+        n = t[0];
+    switch (n) {
+        case i.U4.GUILD: {
+            let [e, n, i, r] = t;
+            return { streamType: e, guildId: n, channelId: i, ownerId: r };
+        }
+        case i.U4.CALL: {
+            let [e, n, i] = t;
+            return { streamType: e, channelId: n, ownerId: i };
+        }
+        default:
+            throw Error(`Unknown stream type ${n}`);
+    }
+}
+function a(e) {
+    let { streamType: t, guildId: n, channelId: r, ownerId: s } = e;
+    switch (t) {
+        case i.U4.GUILD:
+            return [t, n, r, s].join(":");
+        case i.U4.CALL:
+            return [t, r, s].join(":");
+        default:
+            throw Error(`Unknown stream type ${t}`);
+    }
+}

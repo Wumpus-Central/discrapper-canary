@@ -1,1 +1,1 @@
-e.exports={v:"tabs__70e05"}
+_.exports = { v: "tabs__70e05" };

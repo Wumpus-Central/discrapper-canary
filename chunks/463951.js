@@ -1,1 +1,8 @@
-"use strict";n.d(t,{A:()=>s});var i=n(136491),r=n(731854);function s(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:i.Ay;return e.supports(r.O5.MEDIAPIPE)&&Object.values(e.getVideoDevices()).length>0}
+"use strict";
+n.d(t, { A: () => s });
+var i = n(941327),
+    r = n(731854);
+function s() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i.Ay;
+    return e.supports(r.O5.MEDIAPIPE) && Object.values(e.getVideoDevices()).length > 0;
+}

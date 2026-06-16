@@ -1,1 +1,1 @@
-e.exports={l:"innerPanel__2ed89"}
+e.exports = { l: "innerPanel__2ed89" };

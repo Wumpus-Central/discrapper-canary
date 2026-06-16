@@ -1,1 +1,34 @@
-t.d(r,{Ay:()=>v,ed:()=>c,gv:()=>u,u1:()=>h});var C,s=t(627968);t(64700);var l=t(503698),n=t.n(l),i=t(661531),a=t(812993),d=t(375708),o=t(494647),u=((C={}).RED="RED",C.GRAY="GRAY",C);let c={LARGE:o.Kp,SMALL:o.qx},h={[a.EG.ROUND]:o.qG,[a.EG.ROUND_LEFT]:o.HZ,[a.EG.ROUND_RIGHT]:o.q5,[a.EG.SQUARE]:""};function L(e){let{className:r,style:t,shape:C=a.EG.ROUND,look:l="RED",size:u=c.LARGE}=e;return"RED"===l?(0,s.jsx)(a.Lp,{text:d.intl.string(d.t.dI3q4h),className:n()(r,o.VD,u),color:i.A.unsafe_rawColors.RED_400.css,shape:h[C],style:t}):(0,s.jsx)(a.Lp,{text:d.intl.string(d.t.dI3q4h),className:n()(r,o.VD,u,o.Oh),disableColor:!0,shape:h[C],style:t})}L.Looks=u,L.Sizes=c;let v=L
+"use strict";
+n.d(t, { Ay: () => p, ed: () => _, gv: () => d, u1: () => h });
+var i,
+    r = n(627968);
+n(64700);
+var s = n(503698),
+    a = n.n(s),
+    o = n(661531),
+    l = n(812993),
+    u = n(375708),
+    c = n(494647),
+    d = (((i = {}).RED = "RED"), (i.GRAY = "GRAY"), i);
+let _ = { LARGE: c.Kp, SMALL: c.qx },
+    h = { [l.EG.ROUND]: c.qG, [l.EG.ROUND_LEFT]: c.HZ, [l.EG.ROUND_RIGHT]: c.q5, [l.EG.SQUARE]: "" };
+function f(e) {
+    let { className: t, style: n, shape: i = l.EG.ROUND, look: s = "RED", size: d = _.LARGE } = e;
+    return "RED" === s
+        ? (0, r.jsx)(l.Lp, {
+              text: u.intl.string(u.t.dI3q4h),
+              className: a()(t, c.VD, d),
+              color: o.A.unsafe_rawColors.RED_400.css,
+              shape: h[i],
+              style: n,
+          })
+        : (0, r.jsx)(l.Lp, {
+              text: u.intl.string(u.t.dI3q4h),
+              className: a()(t, c.VD, d, c.Oh),
+              disableColor: !0,
+              shape: h[i],
+              style: n,
+          });
+}
+(f.Looks = d), (f.Sizes = _);
+let p = f;

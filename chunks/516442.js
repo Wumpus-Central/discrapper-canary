@@ -1,1 +1,1 @@
-e.exports={F:"legalFinePrint__1048e"}
+e.exports = { F: "legalFinePrint__1048e" };

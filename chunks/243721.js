@@ -1,1 +1,11 @@
-"use strict";n.d(t,{d:()=>o});var i=n(627968),r=n(64700),s=n(844222),a=n(553270);function o(e){let{switchIconsEnabled:t}=r.useContext(s.C),n=void 0!==e.hasIcon?e.hasIcon:t;return(0,i.jsx)(a.A,{...e,hasIcon:n})}
+"use strict";
+n.d(t, { d: () => o });
+var i = n(627968),
+    r = n(64700),
+    s = n(844222),
+    a = n(553270);
+function o(e) {
+    let { switchIconsEnabled: t } = r.useContext(s.C),
+        n = void 0 !== e.hasIcon ? e.hasIcon : t;
+    return (0, i.jsx)(a.A, { ...e, hasIcon: n });
+}

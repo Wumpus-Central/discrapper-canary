@@ -1,1 +1,14 @@
-t.d(s,{Y:()=>i,v:()=>n});let l=new Set;function i(e){return l.add(e),()=>{l.delete(e)}}function n(e){if(0!==l.size)for(let s of l)s(e)}
+"use strict";
+n.d(t, { Y: () => r, v: () => s });
+let i = new Set();
+function r(e) {
+    return (
+        i.add(e),
+        () => {
+            i.delete(e);
+        }
+    );
+}
+function s(e) {
+    if (0 !== i.size) for (let t of i) t(e);
+}

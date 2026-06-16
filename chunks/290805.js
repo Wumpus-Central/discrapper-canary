@@ -1,1 +1,4 @@
-"use strict";n.d(t,{M:()=>i,y:()=>r});let i="stable"===window.GLOBAL_ENV.RELEASE_CHANNEL,r=window.GLOBAL_ENV.RELEASE_CHANNEL
+"use strict";
+n.d(t, { M: () => i, y: () => r });
+let i = "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL,
+    r = window.GLOBAL_ENV.RELEASE_CHANNEL;

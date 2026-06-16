@@ -1,1 +1,17 @@
-"use strict";n.d(t,{A:()=>s});var i=n(187522);class r extends i.V{requestPermissionCore(e,t){return Promise.resolve(!0)}hasPermissionCore(e,t){return Promise.resolve(!0)}openSettings(e){}didHavePermission(e){return!0}openAlertModal(e){}}let s=new r
+"use strict";
+n.d(t, { A: () => s });
+var i = n(187522);
+class r extends i.V {
+    requestPermissionCore(e, t) {
+        return Promise.resolve(!0);
+    }
+    hasPermissionCore(e, t) {
+        return Promise.resolve(!0);
+    }
+    openSettings(e) {}
+    didHavePermission(e) {
+        return !0;
+    }
+    openAlertModal(e) {}
+}
+let s = new r();

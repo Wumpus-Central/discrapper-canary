@@ -1,1 +1,16 @@
-var u=t(587779),e=t(876666),i=t(974915),o=t(790318);r.exports=function(r,n){if(null==r)return{};var t=u(o(r),function(r){return[r]});return n=e(n),i(r,t,function(r,t){return n(r,t[0])})}
+var u = t(587779),
+    e = t(876666),
+    i = t(974915),
+    o = t(790318);
+r.exports = function (r, n) {
+    if (null == r) return {};
+    var t = u(o(r), function (r) {
+        return [r];
+    });
+    return (
+        (n = e(n)),
+        i(r, t, function (r, t) {
+            return n(r, t[0]);
+        })
+    );
+};

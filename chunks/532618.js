@@ -1,1 +1,10 @@
-let i=n(864886);e.exports=(e,t,n=!1)=>{if(e instanceof i)return e;try{return new i(e,t)}catch(e){if(!n)return null;throw e}}
+let i = n(864886);
+e.exports = (e, t, n = !1) => {
+    if (e instanceof i) return e;
+    try {
+        return new i(e, t);
+    } catch (e) {
+        if (!n) return null;
+        throw e;
+    }
+};

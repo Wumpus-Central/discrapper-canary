@@ -1,1 +1,20 @@
-e.exports={HA:"channelName_cb862a",gy:"unread_cb862a",p4:"inlineIcon_cb862a",zC:"messageContainer_cb862a",FJ:"messageClickableContainer_cb862a",iU:"message_cb862a",Yj:"actionMenuOpen_cb862a",vE:"timestamp_cb862a",WK:"mentionBadge_cb862a",o1:"actions_cb862a",wH:"selected_cb862a",QP:"descriptionMessage_cb862a",Xh:"username_cb862a",Ys:"usernameTagContainer_cb862a",ZR:"usernameOuterContainer_cb862a",Zm:"unreadDot_cb862a",gE:"actionIcon_cb862a",XI:"action_cb862a"}
+e.exports = {
+    HA: "channelName_cb862a",
+    gy: "unread_cb862a",
+    p4: "inlineIcon_cb862a",
+    zC: "messageContainer_cb862a",
+    FJ: "messageClickableContainer_cb862a",
+    iU: "message_cb862a",
+    Yj: "actionMenuOpen_cb862a",
+    vE: "timestamp_cb862a",
+    WK: "mentionBadge_cb862a",
+    o1: "actions_cb862a",
+    wH: "selected_cb862a",
+    QP: "descriptionMessage_cb862a",
+    Xh: "username_cb862a",
+    Ys: "usernameTagContainer_cb862a",
+    ZR: "usernameOuterContainer_cb862a",
+    Zm: "unreadDot_cb862a",
+    gE: "actionIcon_cb862a",
+    XI: "action_cb862a",
+};

@@ -1,1 +1,63 @@
-t.d(i,{A:()=>A});var n=t(627968);t(64700);var l=t(17928),a=t(34188),r=t(192308),d=t(658575),o=t(123791),u=t(841595),c=t(993401),s=t(375708);function p(e){let{user:i,onClick:t,...l}=e;return(0,o.C)(i.id),(0,n.jsx)(c.FD,{action:"PRESS_APP_STOREFRONT",icon:a.U,text:s.intl.string(s.t.V7j5aZ),onClick:t,variant:"primary",...l})}function A(e){let{user:i,guildId:a,...o}=e,c=(0,l.bG)([u.A],()=>u.A.getUserProfile(i.id)?.application),s=(0,d.G)(c?.id??"");return null!=c&&s?(0,n.jsx)(p,{user:i,guildId:a,onClick:()=>{(0,r.openModalLazy)(async()=>{let{default:e}=await Promise.all([t.e("45976"),t.e("82885"),t.e("97690"),t.e("70179"),t.e("60654"),t.e("24007"),t.e("6949"),t.e("46070"),t.e("53917"),t.e("90365"),t.e("89088"),t.e("15186"),t.e("26437"),t.e("78050"),t.e("94607"),t.e("41250"),t.e("68031"),t.e("85384"),t.e("20428")]).then(t.bind(t,719847));return i=>(0,n.jsx)(e,{appId:c.id,guildId:a,...i})})},...o}):null}
+t.d(i, { A: () => A });
+var n = t(627968);
+t(64700);
+var l = t(17928),
+    a = t(34188),
+    r = t(192308),
+    d = t(658575),
+    o = t(123791),
+    u = t(841595),
+    c = t(993401),
+    s = t(375708);
+function p(e) {
+    let { user: i, onClick: t, ...l } = e;
+    return (
+        (0, o.C)(i.id),
+        (0, n.jsx)(c.FD, {
+            action: "PRESS_APP_STOREFRONT",
+            icon: a.U,
+            text: s.intl.string(s.t.V7j5aZ),
+            onClick: t,
+            variant: "primary",
+            ...l,
+        })
+    );
+}
+function A(e) {
+    let { user: i, guildId: a, ...o } = e,
+        c = (0, l.bG)([u.A], () => u.A.getUserProfile(i.id)?.application),
+        s = (0, d.G)(c?.id ?? "");
+    return null != c && s
+        ? (0, n.jsx)(p, {
+              user: i,
+              guildId: a,
+              onClick: () => {
+                  (0, r.openModalLazy)(async () => {
+                      let { default: e } = await Promise.all([
+                          t.e("45976"),
+                          t.e("82885"),
+                          t.e("97690"),
+                          t.e("70179"),
+                          t.e("60654"),
+                          t.e("24007"),
+                          t.e("6949"),
+                          t.e("46070"),
+                          t.e("53917"),
+                          t.e("90365"),
+                          t.e("89088"),
+                          t.e("15186"),
+                          t.e("26437"),
+                          t.e("78050"),
+                          t.e("94607"),
+                          t.e("41250"),
+                          t.e("68031"),
+                          t.e("85384"),
+                          t.e("20428"),
+                      ]).then(t.bind(t, 719847));
+                      return (i) => (0, n.jsx)(e, { appId: c.id, guildId: a, ...i });
+                  });
+              },
+              ...o,
+          })
+        : null;
+}

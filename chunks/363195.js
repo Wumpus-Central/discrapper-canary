@@ -1,1 +1,120 @@
-"use strict";n.d(t,{A:()=>R});var i=n(17928),r=n(462887),s=n(228366),a=n(677313),o=n(873298),l=n(775602),u=n(284016),c=n(742023),d=n(617617),_=n(652215),h=n(185928),f=n(661531),p=n(353835),E=n(723702);function m(e){if(!__OVERLAY__&&E.isPlatformEmbedded)try{let t=f.A.colors.BACKGROUND_BASE_LOWEST.resolve({theme:e,saturation:l.Ay.saturation}).hex();p.A.setApplicationBackgroundColor(t)}catch{}}var g=n(594061),A=n(355097);let I=0,T=h.qj,S=(0,a.A)(),y=T[S],C=null;function N(){let e=function(){if(!__OVERLAY__&&null!=C)return C;var e=S,t=T;if(__OVERLAY__)return _.NJ8.DARK;let n=h.dP;if(l.Ay.syncForcedColors&&"active"===l.Ay.systemForcedColors&&e!==h.Fc.NO_PREFERENCE)return e;if(c.Ay.useSystemTheme===h.Q_.ON&&e!==h.Fc.NO_PREFERENCE)return t[e];let i=u.A.getAppearanceSettings()?.theme;return null!=i?i:n[d.A.settings.appearance?.theme??o.Sx.UNSET]}();return e!==y&&(m(y=e),!0)}class v extends i.Ay.PersistedStore{static displayName="ThemeStore";static persistKey="ThemeStore";static migrations=[e=>{let t=e.theme;return"amoled"===t&&(t="midnight"),{...e,theme:t}},e=>e];initialize(e){e?.theme!=null&&(I=1,m(y=e.theme),null!=e.preferences&&(T=e.preferences),(0,r.M)(y)&&(T[h.Fc.DARK]=y)),this.waitFor(c.Ay,u.A,d.A)}getState(){return{theme:this.theme,preferences:T,status:I}}get theme(){return y}get systemTheme(){return S}themePreferenceForSystemTheme(e){return T[e]}}let R=new v(s.h,{CACHE_LOADED:N,CONNECTION_OPEN:function(){return 0===I&&(T={...T,[h.Fc.DARK]:_.NJ8.DARKER},I=1),c.Ay.darkSidebar&&(d.A.settings.appearance?.darkSidebar||g.wc.updateAsync("appearance",e=>{e.darkSidebar=!0},A.Sb.INFREQUENT_USER_ACTION),s.h.wait(()=>{s.h.dispatch({type:"UNSYNCED_USER_SETTINGS_UPDATE",settings:{darkSidebar:!1}})})),N()},LOGOUT:function(e){return C=null,!e.isSwitchingAccount&&y!==_.NJ8.DARK&&(m(y=_.NJ8.DARK),N())},OVERLAY_INITIALIZE:N,SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE:N,UNSYNCED_USER_SETTINGS_UPDATE:N,USER_SETTINGS_PROTO_UPDATE:N,RESET_PREVIEW_CLIENT_THEME:N,SYSTEM_THEME_CHANGE:function(e){let{systemTheme:t}=e;return S=t,N()},UPDATE_THEME_PREFERENCES:function(e){return T={...T,...e.preferences},N()},SET_THEME_OVERRIDE:function(e){return C=e.theme,N()},CLEAR_THEME_OVERRIDE:function(){return C=null,N()},REFRESH_THEME:function(){return N()}})
+"use strict";
+n.d(t, { A: () => R });
+var i = n(17928),
+    r = n(462887),
+    s = n(228366),
+    a = n(677313),
+    o = n(873298),
+    l = n(775602),
+    u = n(284016),
+    c = n(742023),
+    d = n(617617),
+    _ = n(652215),
+    h = n(185928),
+    f = n(661531),
+    p = n(353835),
+    E = n(723702);
+function m(e) {
+    if (!__OVERLAY__ && E.isPlatformEmbedded)
+        try {
+            let t = f.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: l.Ay.saturation }).hex();
+            p.A.setApplicationBackgroundColor(t);
+        } catch {}
+}
+var g = n(594061),
+    A = n(355097);
+let I = 0,
+    T = h.qj,
+    S = (0, a.A)(),
+    y = T[S],
+    C = null;
+function N() {
+    let e = (function () {
+        if (!__OVERLAY__ && null != C) return C;
+        var e = S,
+            t = T;
+        if (__OVERLAY__) return _.NJ8.DARK;
+        let n = h.dP;
+        if (l.Ay.syncForcedColors && "active" === l.Ay.systemForcedColors && e !== h.Fc.NO_PREFERENCE) return e;
+        if (c.Ay.useSystemTheme === h.Q_.ON && e !== h.Fc.NO_PREFERENCE) return t[e];
+        let i = u.A.getAppearanceSettings()?.theme;
+        return null != i ? i : n[d.A.settings.appearance?.theme ?? o.Sx.UNSET];
+    })();
+    return e !== y && (m((y = e)), !0);
+}
+class v extends i.Ay.PersistedStore {
+    static displayName = "ThemeStore";
+    static persistKey = "ThemeStore";
+    static migrations = [
+        (e) => {
+            let t = e.theme;
+            return "amoled" === t && (t = "midnight"), { ...e, theme: t };
+        },
+        (e) => e,
+    ];
+    initialize(e) {
+        e?.theme != null &&
+            ((I = 1),
+            m((y = e.theme)),
+            null != e.preferences && (T = e.preferences),
+            (0, r.M)(y) && (T[h.Fc.DARK] = y)),
+            this.waitFor(c.Ay, u.A, d.A);
+    }
+    getState() {
+        return { theme: this.theme, preferences: T, status: I };
+    }
+    get theme() {
+        return y;
+    }
+    get systemTheme() {
+        return S;
+    }
+    themePreferenceForSystemTheme(e) {
+        return T[e];
+    }
+}
+let R = new v(s.h, {
+    CACHE_LOADED: N,
+    CONNECTION_OPEN: function () {
+        return (
+            0 === I && ((T = { ...T, [h.Fc.DARK]: _.NJ8.DARKER }), (I = 1)),
+            c.Ay.darkSidebar &&
+                (d.A.settings.appearance?.darkSidebar ||
+                    g.wc.updateAsync(
+                        "appearance",
+                        (e) => {
+                            e.darkSidebar = !0;
+                        },
+                        A.Sb.INFREQUENT_USER_ACTION,
+                    ),
+                s.h.wait(() => {
+                    s.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: !1 } });
+                })),
+            N()
+        );
+    },
+    LOGOUT: function (e) {
+        return (C = null), !e.isSwitchingAccount && y !== _.NJ8.DARK && (m((y = _.NJ8.DARK)), N());
+    },
+    OVERLAY_INITIALIZE: N,
+    SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE: N,
+    UNSYNCED_USER_SETTINGS_UPDATE: N,
+    USER_SETTINGS_PROTO_UPDATE: N,
+    RESET_PREVIEW_CLIENT_THEME: N,
+    SYSTEM_THEME_CHANGE: function (e) {
+        let { systemTheme: t } = e;
+        return (S = t), N();
+    },
+    UPDATE_THEME_PREFERENCES: function (e) {
+        return (T = { ...T, ...e.preferences }), N();
+    },
+    SET_THEME_OVERRIDE: function (e) {
+        return (C = e.theme), N();
+    },
+    CLEAR_THEME_OVERRIDE: function () {
+        return (C = null), N();
+    },
+    REFRESH_THEME: function () {
+        return N();
+    },
+});

@@ -1,1 +1,1 @@
-e.exports={W:"errorPage__01b8d"}
+e.exports = { W: "errorPage__01b8d" };

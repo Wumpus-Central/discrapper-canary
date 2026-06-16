@@ -1,1 +1,18 @@
-e.exports={k$:"animationWrapper_e8d31f",fF:"animationWrapperStacked_e8d31f",VC:"clickZone_e8d31f",vk:"clickable_e8d31f",af:"overflowWrapper_e8d31f",kL:"container_e8d31f",VM:"iconAndDetails_e8d31f",zH:"details_e8d31f",qr:"footer_e8d31f",aK:"hint_e8d31f",r:"dismissButton_e8d31f",UD:"buttonContainer_e8d31f",x6:"button_e8d31f",my:"avatar_e8d31f",Kk:"icon_e8d31f",B3:"unreadAccessoryContainer_e8d31f"}
+e.exports = {
+    k$: "animationWrapper_e8d31f",
+    fF: "animationWrapperStacked_e8d31f",
+    VC: "clickZone_e8d31f",
+    vk: "clickable_e8d31f",
+    af: "overflowWrapper_e8d31f",
+    kL: "container_e8d31f",
+    VM: "iconAndDetails_e8d31f",
+    zH: "details_e8d31f",
+    qr: "footer_e8d31f",
+    aK: "hint_e8d31f",
+    r: "dismissButton_e8d31f",
+    UD: "buttonContainer_e8d31f",
+    x6: "button_e8d31f",
+    my: "avatar_e8d31f",
+    Kk: "icon_e8d31f",
+    B3: "unreadAccessoryContainer_e8d31f",
+};

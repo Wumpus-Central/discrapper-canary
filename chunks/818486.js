@@ -1,1 +1,1 @@
-p.exports={E:"colorPicker__69f5f"}
+p.exports = { E: "colorPicker__69f5f" };

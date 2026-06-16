@@ -1,1 +1,117 @@
-"use strict";n.d(t,{default:()=>m});var i=n(143236),r=n(481613),s=n.n(r),a=n(488428),o=n(835245),l=n(636537),u=n(636401),c=n(652215);let d=c.xEi+c.sJq-1;function _(e,t){if(null==e||null==t)throw Error("cmd and name required");return`${e}:${t}`}let h=a.parse(location.search.slice(1)),f=parseInt(null!=h.rpc&&""!==h.rpc?h.rpc:c.xEi,10),p=null;class E extends i.EventEmitter{get port(){return f}get connected(){return null!=p&&p.readyState===WebSocket.OPEN}connect(){if(null==p){if(f>d){f=c.xEi,this.emit("disconnected");return}try{p=new WebSocket(`ws://127.0.0.1:${this.port}/?v=${c.dL4}`)}catch(e){this.disconnect({code:c.YI$.CLOSE_ABNORMAL});return}null!=p&&(p.onmessage=e=>{let t;try{if("string"==typeof e.data)t=JSON.parse(e.data);else throw Error("payload data not a string")}catch(e){this.emit("error",e),this.disconnect();return}let{cmd:n,evt:i,nonce:r,data:s}=t;if(n===c.e$_.DISPATCH){if(i===c.ZE4.READY)return void this.emit("connected");if(i===c.ZE4.ERROR){this.emit("error",new u.A({errorCode:s.code},s.message)),this.disconnect();return}return void this.emit(_(n,i),s)}let a=null;i===c.ZE4.ERROR&&(a=new u.A({errorCode:s.code},s.message),s=null),this.emit(_(n,r),a,s)},p.onclose=p.onerror=e=>this.disconnect(e))}}disconnect(e){if(null!=e&&"code"in e&&[c.YI$.CLOSE_ABNORMAL,c.YI$.INVALID_CLIENTID].includes(e.code)){f++,p=null,this.connect();return}null!=p&&(this.emit("disconnected"),p.close(),p=null)}subscribe(e,t,n){return this.on(_(c.e$_.DISPATCH,e),n),this.request(c.e$_.SUBSCRIBE,t,e)}unsubscribe(e,t,n){return this.removeListener(_(c.e$_.DISPATCH,e),n),this.request(c.e$_.UNSUBSCRIBE,t,e)}request(e,t,n){return new Promise((i,r)=>{if(!this.connected){this.once("connected",()=>{this.removeAllListeners("disconnected"),i(this.request(e,t,n))}),this.once("disconnected",()=>{this.removeAllListeners("connected"),r(Error("disconnected during request"))}),this.connect();return}let s=(0,o.A)(),a=JSON.stringify({cmd:e,args:t,evt:n,nonce:s});this.once(_(e,s),(e,t)=>null!=e?r(e):i(t)),p?.send(a)})}requestOnce(e,t,n){return l.Bo.post({url:`http://127.0.0.1:${this.port}/rpc?v=${c.dL4}`,body:{cmd:e,args:t,evt:n,nonce:(0,o.A)()},rejectWithError:!1}).then(e=>{let{body:{evt:t,data:n}}=e;if(t===c.ZE4.ERROR)throw new u.A({errorCode:n.code},n.message);return n})}requestRedirect(e,t,n){if("Chrome"===s().name&&parseInt(s().version,10)>=58)return this.requestOnce(e,t,n);let i=encodeURIComponent(JSON.stringify({cmd:e,args:t,evt:n,nonce:(0,o.A)()})),r=encodeURIComponent(`${location.protocol}//${location.host}${location.pathname}?done=true`);return window.open(`http://127.0.0.1:${this.port}/rpc?v=${c.dL4}&payload=${i}&callback=${r}`,"_self"),new Promise(()=>null)}}let m=new E
+"use strict";
+n.d(t, { default: () => m });
+var i = n(143236),
+    r = n(481613),
+    s = n.n(r),
+    a = n(488428),
+    o = n(835245),
+    l = n(636537),
+    u = n(636401),
+    c = n(652215);
+let d = c.xEi + c.sJq - 1;
+function _(e, t) {
+    if (null == e || null == t) throw Error("cmd and name required");
+    return `${e}:${t}`;
+}
+let h = a.parse(location.search.slice(1)),
+    f = parseInt(null != h.rpc && "" !== h.rpc ? h.rpc : c.xEi, 10),
+    p = null;
+class E extends i.EventEmitter {
+    get port() {
+        return f;
+    }
+    get connected() {
+        return null != p && p.readyState === WebSocket.OPEN;
+    }
+    connect() {
+        if (null == p) {
+            if (f > d) {
+                (f = c.xEi), this.emit("disconnected");
+                return;
+            }
+            try {
+                p = new WebSocket(`ws://127.0.0.1:${this.port}/?v=${c.dL4}`);
+            } catch (e) {
+                this.disconnect({ code: c.YI$.CLOSE_ABNORMAL });
+                return;
+            }
+            null != p &&
+                ((p.onmessage = (e) => {
+                    let t;
+                    try {
+                        if ("string" == typeof e.data) t = JSON.parse(e.data);
+                        else throw Error("payload data not a string");
+                    } catch (e) {
+                        this.emit("error", e), this.disconnect();
+                        return;
+                    }
+                    let { cmd: n, evt: i, nonce: r, data: s } = t;
+                    if (n === c.e$_.DISPATCH) {
+                        if (i === c.ZE4.READY) return void this.emit("connected");
+                        if (i === c.ZE4.ERROR) {
+                            this.emit("error", new u.A({ errorCode: s.code }, s.message)), this.disconnect();
+                            return;
+                        }
+                        return void this.emit(_(n, i), s);
+                    }
+                    let a = null;
+                    i === c.ZE4.ERROR && ((a = new u.A({ errorCode: s.code }, s.message)), (s = null)),
+                        this.emit(_(n, r), a, s);
+                }),
+                (p.onclose = p.onerror = (e) => this.disconnect(e)));
+        }
+    }
+    disconnect(e) {
+        if (null != e && "code" in e && [c.YI$.CLOSE_ABNORMAL, c.YI$.INVALID_CLIENTID].includes(e.code)) {
+            f++, (p = null), this.connect();
+            return;
+        }
+        null != p && (this.emit("disconnected"), p.close(), (p = null));
+    }
+    subscribe(e, t, n) {
+        return this.on(_(c.e$_.DISPATCH, e), n), this.request(c.e$_.SUBSCRIBE, t, e);
+    }
+    unsubscribe(e, t, n) {
+        return this.removeListener(_(c.e$_.DISPATCH, e), n), this.request(c.e$_.UNSUBSCRIBE, t, e);
+    }
+    request(e, t, n) {
+        return new Promise((i, r) => {
+            if (!this.connected) {
+                this.once("connected", () => {
+                    this.removeAllListeners("disconnected"), i(this.request(e, t, n));
+                }),
+                    this.once("disconnected", () => {
+                        this.removeAllListeners("connected"), r(Error("disconnected during request"));
+                    }),
+                    this.connect();
+                return;
+            }
+            let s = (0, o.A)(),
+                a = JSON.stringify({ cmd: e, args: t, evt: n, nonce: s });
+            this.once(_(e, s), (e, t) => (null != e ? r(e) : i(t))), p?.send(a);
+        });
+    }
+    requestOnce(e, t, n) {
+        return l.Bo.post({
+            url: `http://127.0.0.1:${this.port}/rpc?v=${c.dL4}`,
+            body: { cmd: e, args: t, evt: n, nonce: (0, o.A)() },
+            rejectWithError: !1,
+        }).then((e) => {
+            let {
+                body: { evt: t, data: n },
+            } = e;
+            if (t === c.ZE4.ERROR) throw new u.A({ errorCode: n.code }, n.message);
+            return n;
+        });
+    }
+    requestRedirect(e, t, n) {
+        if ("Chrome" === s().name && parseInt(s().version, 10) >= 58) return this.requestOnce(e, t, n);
+        let i = encodeURIComponent(JSON.stringify({ cmd: e, args: t, evt: n, nonce: (0, o.A)() })),
+            r = encodeURIComponent(`${location.protocol}//${location.host}${location.pathname}?done=true`);
+        return (
+            window.open(`http://127.0.0.1:${this.port}/rpc?v=${c.dL4}&payload=${i}&callback=${r}`, "_self"),
+            new Promise(() => null)
+        );
+    }
+}
+let m = new E();

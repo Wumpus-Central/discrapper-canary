@@ -1,1 +1,1 @@
-p.exports={r:"body_f19188"}
+e.exports = { r: "body_f19188" };

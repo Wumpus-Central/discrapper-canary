@@ -1,1 +1,8 @@
-"use strict";n.d(t,{U:()=>a});var i=n(636537),r=n(549022),s=n(652215);function a(e){return(0,r.jG)(e),i.Bo.post({url:s.Rsh.CHANNEL_BLOCKED_USER_WARNING_ACK(e),rejectWithError:!1})}
+"use strict";
+n.d(t, { U: () => a });
+var i = n(636537),
+    r = n(549022),
+    s = n(652215);
+function a(e) {
+    return (0, r.jG)(e), i.Bo.post({ url: s.Rsh.CHANNEL_BLOCKED_USER_WARNING_ACK(e), rejectWithError: !1 });
+}

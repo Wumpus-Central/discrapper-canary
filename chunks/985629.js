@@ -1,1 +1,37 @@
-e.d(n,{A:()=>x});var i=e(627968),l=e(562708),a=e(990078),r=e(414499),s=e(737393),o=e(139286),c=e(939496),u=e(993401),d=e(996988),A=e(375708);function x(t){let{application:n,analyticsLocations:e,onAction:x,onClose:p}=t,{themeType:f}=(0,c.E)(),_=(0,s.A)({application:n,analyticsLocations:e});return((0,o.A)({name:l.ImpressionNames.CLOUD_PLAY_CTA,type:l.ImpressionTypes.VIEW,properties:{location_stack:e}},{disableTrack:null==_},[_]),null==_)?null:(0,i.jsx)(a.m,{text:A.intl.string(A.t.JVwWva),position:"top",children:(0,i.jsx)(u.FD,{icon:r.h,text:A.intl.string(A.t["jaYS/h"]),size:"sm",onClick:t=>{t.stopPropagation(),x?.({action:"PRESS_CLOUD_PLAY_BUTTON"}),_(),p?.()},fullWidth:f!==d.d.MODAL_V2})})}
+"use strict";
+n.d(t, { A: () => h });
+var i = n(627968),
+    r = n(562708),
+    s = n(990078),
+    a = n(414499),
+    o = n(737393),
+    l = n(139286),
+    u = n(939496),
+    c = n(993401),
+    d = n(996988),
+    _ = n(375708);
+function h(e) {
+    let { application: t, analyticsLocations: n, onAction: h, onClose: f } = e,
+        { themeType: p } = (0, u.E)(),
+        E = (0, o.A)({ application: t, analyticsLocations: n });
+    return ((0, l.A)(
+        { name: r.ImpressionNames.CLOUD_PLAY_CTA, type: r.ImpressionTypes.VIEW, properties: { location_stack: n } },
+        { disableTrack: null == E },
+        [E],
+    ),
+    null == E)
+        ? null
+        : (0, i.jsx)(s.m, {
+              text: _.intl.string(_.t.JVwWva),
+              position: "top",
+              children: (0, i.jsx)(c.FD, {
+                  icon: a.h,
+                  text: _.intl.string(_.t["jaYS/h"]),
+                  size: "sm",
+                  onClick: (e) => {
+                      e.stopPropagation(), h?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), E(), f?.();
+                  },
+                  fullWidth: p !== d.d.MODAL_V2,
+              }),
+          });
+}

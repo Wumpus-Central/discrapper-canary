@@ -1,1 +1,1 @@
-e.exports={r:"settingsPage__9cd63"}
+e.exports = { r: "settingsPage__9cd63" };

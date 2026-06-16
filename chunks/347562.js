@@ -1,1 +1,15 @@
-e.exports={iE:"wrapper__19b5e",rH:"wrapperAccepted__19b5e",D9:"rewardTileWrapper__19b5e",Qq:"rewardTile__19b5e",R_:"heading__19b5e",Pu:"promotedTag__19b5e",Qs:"content__19b5e",Mg:"headingWithSubmenu__19b5e",bB:"questTitle__19b5e",rC:"gameTile__19b5e",uz:"ctas__19b5e",rb:"submenuWrapper__19b5e",Bx:"submenuIcon__19b5e"}
+e.exports = {
+    iE: "wrapper__19b5e",
+    rH: "wrapperAccepted__19b5e",
+    D9: "rewardTileWrapper__19b5e",
+    Qq: "rewardTile__19b5e",
+    R_: "heading__19b5e",
+    Pu: "promotedTag__19b5e",
+    Qs: "content__19b5e",
+    Mg: "headingWithSubmenu__19b5e",
+    bB: "questTitle__19b5e",
+    rC: "gameTile__19b5e",
+    uz: "ctas__19b5e",
+    rb: "submenuWrapper__19b5e",
+    Bx: "submenuIcon__19b5e",
+};

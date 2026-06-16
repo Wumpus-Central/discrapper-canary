@@ -1,1 +1,20 @@
-n.d(t,{A:()=>i,z:()=>T});var c=n(702841),r=n(885386),E=n(576705),O=n(652215);function i(e,t){switch(e){case O.P6Q.ALWAYS:return!0;case O.P6Q.IF_MODERATOR:return t;case O.P6Q.ON_CLICK:default:return!1}}function T(e){let t=(0,c.bG)([E.A],()=>E.A.can(O.xBc.MANAGE_MESSAGES,e));return!i(r.gs.useSetting(),t)}
+n.d(t, { A: () => i, z: () => T });
+var c = n(702841),
+    r = n(885386),
+    E = n(576705),
+    O = n(652215);
+function i(e, t) {
+    switch (e) {
+        case O.P6Q.ALWAYS:
+            return !0;
+        case O.P6Q.IF_MODERATOR:
+            return t;
+        case O.P6Q.ON_CLICK:
+        default:
+            return !1;
+    }
+}
+function T(e) {
+    let t = (0, c.bG)([E.A], () => E.A.can(O.xBc.MANAGE_MESSAGES, e));
+    return !i(r.gs.useSetting(), t);
+}

@@ -1,1 +1,81 @@
-n.d(t,{ZK:()=>p,pF:()=>f,wu:()=>x}),n(323874),n(14289),n(35956),n(321073);var i=n(64700),l=n(942381),s=n(265690),r=n(121894),a=n(506774),o=n(691540),c=n(857250),d=n(97483),u=n(87558);let m="__DEBUG_PROFILE_EFFECTS_STORE",h={profileEffects:a.w.get(m)??{}},g=e=>{try{a.w.set(m,e.profileEffects)}catch(e){console.error(e),(0,o.P0)((0,c.o)("This file is too large to save into localstorage. You will be able to view but not persist these changes.",d.Ck.FAILURE))}},x=(0,s.h)(e=>({...h,upsertProfileEffect:t=>(0,r.r)(()=>{e(e=>{let n={...e};return n.profileEffects[t.skuId]=t,g(n),n})}),deleteProfileEffect:t=>(0,r.r)(()=>{e(e=>{let n={...e};return delete n.profileEffects[t],g(n),n})}),clearAll:()=>(0,r.r)(()=>{e(()=>(a.w.remove(m),{profileEffects:{}}))})})),f=()=>x(e=>{let{profileEffects:t}=e;return Object.values(t)},l.x),p=e=>{let t=x(t=>null!=e?t.profileEffects[e]:null),n=i.useRef([]);return i.useEffect(()=>()=>{n.current.forEach(e=>{URL.revokeObjectURL(e)}),n.current=[]},[]),i.useMemo(()=>{if(null==t)return null;let e=e=>{let t=(0,u.fB)(e);return n.current.push(t),t},i=t.stillFrames,l=null!=i?{...i}:{};for(let t in l){let n=l[t];null!=n&&(l[t]={...n,src:e(n.base64)})}return{...t,stillFrames:l}},[t])}
+"use strict";
+n.d(t, { ZK: () => m, pF: () => E, wu: () => p }), n(323874), n(14289), n(35956), n(321073);
+var i = n(64700),
+    r = n(942381),
+    s = n(265690),
+    a = n(121894),
+    o = n(506774),
+    l = n(691540),
+    u = n(857250),
+    c = n(97483),
+    d = n(87558);
+let _ = "__DEBUG_PROFILE_EFFECTS_STORE",
+    h = { profileEffects: o.w.get(_) ?? {} },
+    f = (e) => {
+        try {
+            o.w.set(_, e.profileEffects);
+        } catch (e) {
+            console.error(e),
+                (0, l.P0)(
+                    (0, u.o)(
+                        "This file is too large to save into localstorage. You will be able to view but not persist these changes.",
+                        c.Ck.FAILURE,
+                    ),
+                );
+        }
+    },
+    p = (0, s.h)((e) => ({
+        ...h,
+        upsertProfileEffect: (t) =>
+            (0, a.r)(() => {
+                e((e) => {
+                    let n = { ...e };
+                    return (n.profileEffects[t.skuId] = t), f(n), n;
+                });
+            }),
+        deleteProfileEffect: (t) =>
+            (0, a.r)(() => {
+                e((e) => {
+                    let n = { ...e };
+                    return delete n.profileEffects[t], f(n), n;
+                });
+            }),
+        clearAll: () =>
+            (0, a.r)(() => {
+                e(() => (o.w.remove(_), { profileEffects: {} }));
+            }),
+    })),
+    E = () =>
+        p((e) => {
+            let { profileEffects: t } = e;
+            return Object.values(t);
+        }, r.x),
+    m = (e) => {
+        let t = p((t) => (null != e ? t.profileEffects[e] : null)),
+            n = i.useRef([]);
+        return (
+            i.useEffect(
+                () => () => {
+                    n.current.forEach((e) => {
+                        URL.revokeObjectURL(e);
+                    }),
+                        (n.current = []);
+                },
+                [],
+            ),
+            i.useMemo(() => {
+                if (null == t) return null;
+                let e = (e) => {
+                        let t = (0, d.fB)(e);
+                        return n.current.push(t), t;
+                    },
+                    i = t.stillFrames,
+                    r = null != i ? { ...i } : {};
+                for (let t in r) {
+                    let n = r[t];
+                    null != n && (r[t] = { ...n, src: e(n.base64) });
+                }
+                return { ...t, stillFrames: r };
+            }, [t])
+        );
+    };

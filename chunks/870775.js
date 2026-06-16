@@ -1,1 +1,14 @@
-var i=n(926226),r=n(305327),s=/\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,a=/^\w*$/;e.exports=function(e,t){if(i(e))return!1;var n=typeof e;return!!("number"==n||"symbol"==n||"boolean"==n||null==e||r(e))||a.test(e)||!s.test(e)||null!=t&&e in Object(t)}
+var i = n(926226),
+    r = n(305327),
+    s = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
+    a = /^\w*$/;
+e.exports = function (e, t) {
+    if (i(e)) return !1;
+    var n = typeof e;
+    return (
+        !!("number" == n || "symbol" == n || "boolean" == n || null == e || r(e)) ||
+        a.test(e) ||
+        !s.test(e) ||
+        (null != t && e in Object(t))
+    );
+};

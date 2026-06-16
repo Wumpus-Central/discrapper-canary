@@ -1,1 +1,1 @@
-p.exports={m:"separator__7bf69"}
+o.exports = { m: "separator__7bf69" };

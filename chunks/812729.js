@@ -1,1 +1,46 @@
-var i=Array.prototype.slice,r=n(66529),s=n(295394),a=e.exports=function(e,t,n){return n||(n={}),e===t||(e instanceof Date&&t instanceof Date?e.getTime()===t.getTime():e&&t&&("object"==typeof e||"object"==typeof t)?function(e,t,n){if(null==e||null==t||e.prototype!==t.prototype)return!1;if(s(e))return!!s(t)&&a(e=i.call(e),t=i.call(t),n);if(o(e)){if(!o(t)||e.length!==t.length)return!1;for(l=0;l<e.length;l++)if(e[l]!==t[l])return!1;return!0}try{var l,u,c=r(e),d=r(t)}catch(e){return!1}if(c.length!=d.length)return!1;for(c.sort(),d.sort(),l=c.length-1;l>=0;l--)if(c[l]!=d[l])return!1;for(l=c.length-1;l>=0;l--)if(!a(e[u=c[l]],t[u],n))return!1;return typeof e==typeof t}(e,t,n):n.strict?e===t:e==t)};function o(e){return!!e&&"object"==typeof e&&"number"==typeof e.length&&"function"==typeof e.copy&&"function"==typeof e.slice&&(!(e.length>0)||"number"==typeof e[0])}
+var i = Array.prototype.slice,
+    r = n(66529),
+    s = n(295394),
+    a = (e.exports = function (e, t, n) {
+        return (
+            n || (n = {}),
+            e === t ||
+                (e instanceof Date && t instanceof Date
+                    ? e.getTime() === t.getTime()
+                    : e && t && ("object" == typeof e || "object" == typeof t)
+                      ? (function (e, t, n) {
+                            if (null == e || null == t || e.prototype !== t.prototype) return !1;
+                            if (s(e)) return !!s(t) && a((e = i.call(e)), (t = i.call(t)), n);
+                            if (o(e)) {
+                                if (!o(t) || e.length !== t.length) return !1;
+                                for (l = 0; l < e.length; l++) if (e[l] !== t[l]) return !1;
+                                return !0;
+                            }
+                            try {
+                                var l,
+                                    u,
+                                    c = r(e),
+                                    d = r(t);
+                            } catch (e) {
+                                return !1;
+                            }
+                            if (c.length != d.length) return !1;
+                            for (c.sort(), d.sort(), l = c.length - 1; l >= 0; l--) if (c[l] != d[l]) return !1;
+                            for (l = c.length - 1; l >= 0; l--) if (!a(e[(u = c[l])], t[u], n)) return !1;
+                            return typeof e == typeof t;
+                        })(e, t, n)
+                      : n.strict
+                        ? e === t
+                        : e == t)
+        );
+    });
+function o(e) {
+    return (
+        !!e &&
+        "object" == typeof e &&
+        "number" == typeof e.length &&
+        "function" == typeof e.copy &&
+        "function" == typeof e.slice &&
+        (!(e.length > 0) || "number" == typeof e[0])
+    );
+}

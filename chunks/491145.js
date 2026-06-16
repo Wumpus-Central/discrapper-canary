@@ -1,1 +1,149 @@
-i.d(e,{A:()=>g});var a=i(64700),n=i(323889),r=i(17928),s=i(274670),u=i(144779),l=i(793574),d=i(532794),c=i(976860),f=i(287809),o=i(975571),C=i(474090),_=i(507107),T=i(104886),I=i(561844),R=i(590202),p=i(190107),A=i(652215),m=i(788868),E=i(375708),O=i(237146);function g(t,e,i){let g=t.config.features.some(t=>p.Tz.has(t)),L=(0,r.bG)([f.default],()=>f.default.getCurrentUser()),N=L?.hasPaidTier2Subscription(),y=(0,C.ki)(L)&&!L?.isPremiumWithFractionalPremiumOnly(),Q=a.useCallback(async()=>{g&&(N?((0,T.E5)(T.kI.STEP_2_CLICKED_INTERNAL,"quest_nitro_reward_cta")?(0,s.r)({type:u.F.CLICK_INTERNAL,adCreativeType:n.p.QUEST,adCreativeId:t.id,questContentCTA:R.Cy.OPEN_NITRO_HOME,surfaceId:_.uF.REWARD_MODAL,sourceQuestContent:e.sourceQuestContent,impressionId:e.impressionId}):(0,I.Y5)({questId:t.id,questContent:_.uF.REWARD_MODAL,questContentCTA:R.Cy.OPEN_NITRO_HOME,impressionId:e.impressionId,sourceQuestContent:e.sourceQuestContent}),await i?.(),(0,c.pX)(A.BVt.NITRO_HOME)):((0,T.E5)(T.kI.STEP_2_CLICKED_INTERNAL,"quest_nitro_reward_cta")?(0,s.r)({type:u.F.CLICK_INTERNAL,adCreativeType:n.p.QUEST,adCreativeId:t.id,questContentCTA:R.Cy.OPEN_NITRO_CHECKOUT,surfaceId:_.uF.REWARD_MODAL,sourceQuestContent:e.sourceQuestContent,impressionId:e.impressionId}):(0,I.Y5)({questId:t.id,questContent:_.uF.REWARD_MODAL,questContentCTA:R.Cy.OPEN_NITRO_CHECKOUT,impressionId:e.impressionId,sourceQuestContent:e.sourceQuestContent}),await i?.(),await (0,d.A)({subscriptionTier:m.pe.TIER_2,analyticsLocations:[l.A.QUEST_REWARD_MODAL]})))},[g,N,t.id,e.impressionId,e.sourceQuestContent,i]);if(!g)return null;if(t.config.features.includes(p.Li.NITRO_2_POINT_0_CTA)){let t=o.A.getArticleURL(A.MVz.NITRO_2_POINT_0);return N?{title:E.intl.string(O.default.LIc2xy),subtitle:E.intl.format(O.default.gzazAe,{helpCenterLink:t}),ctaText:E.intl.string(O.default.HlVJm0),ctaVariant:"primary",onClickCta:Q}:y?{title:E.intl.string(O.default.HTsycG),subtitle:E.intl.format(O.default["3JKWU6"],{helpCenterLink:t}),ctaText:E.intl.string(O.default["2iX+XV"]),ctaVariant:"primary",onClickCta:Q}:{title:E.intl.string(O.default.bOf5IH),subtitle:E.intl.format(O.default.SzOYGc,{helpCenterLink:t}),ctaText:E.intl.string(O.default["620Iwi"]),ctaVariant:"primary",onClickCta:Q}}if(t.config.features.includes(p.Li.ORBS_MULTIPLIER_QUEST)){let t=o.A.getArticleURL(A.MVz.VIRTUAL_CURRENCY_LEARN_MORE);return N?{title:E.intl.string(O.default["QP/6xR"]),subtitle:E.intl.format(O.default.zPnFYf,{helpCenterLink:t}),ctaText:E.intl.string(O.default.TNS24d),ctaVariant:"primary",onClickCta:Q}:y?{title:E.intl.string(O.default.CFfUkp),subtitle:E.intl.format(O.default["02smVH"],{helpCenterLink:t}),ctaText:E.intl.string(O.default["2iX+XV"]),ctaVariant:"primary",onClickCta:Q}:{title:E.intl.string(O.default.CFfUkp),subtitle:E.intl.format(O.default["02smVH"],{helpCenterLink:t}),ctaText:E.intl.string(O.default["620Iwi"]),ctaVariant:"primary",onClickCta:Q}}if(t.config.features.includes(p.Li.XBOX_GAME_PASS_QUEST)){let t=o.A.getArticleURL(A.MVz.NITRO_2_POINT_0);return N?{title:E.intl.string(O.default["4zROKG"]),subtitle:E.intl.format(O.default.v9AaV4,{helpCenterLink:t}),ctaText:E.intl.string(O.default["/AUOfc"]),ctaVariant:"primary",onClickCta:Q}:y?{title:E.intl.string(O.default.Q15RXC),subtitle:E.intl.format(O.default["zUjL+R"],{helpCenterLink:t}),ctaText:E.intl.string(O.default["+ADjaQ"]),ctaVariant:"primary",onClickCta:Q}:{title:E.intl.string(O.default.Q15RXC),subtitle:E.intl.format(O.default.dHQQvk,{helpCenterLink:t}),ctaText:E.intl.string(O.default.qI5XnY),ctaVariant:"primary",onClickCta:Q}}return null}
+i.d(e, { A: () => g });
+var a = i(64700),
+    n = i(323889),
+    r = i(17928),
+    s = i(274670),
+    u = i(144779),
+    l = i(793574),
+    d = i(532794),
+    c = i(976860),
+    f = i(287809),
+    o = i(975571),
+    C = i(474090),
+    _ = i(507107),
+    T = i(104886),
+    I = i(561844),
+    R = i(590202),
+    p = i(190107),
+    A = i(652215),
+    m = i(788868),
+    E = i(375708),
+    O = i(237146);
+function g(t, e, i) {
+    let g = t.config.features.some((t) => p.Tz.has(t)),
+        L = (0, r.bG)([f.default], () => f.default.getCurrentUser()),
+        N = L?.hasPaidTier2Subscription(),
+        y = (0, C.ki)(L) && !L?.isPremiumWithFractionalPremiumOnly(),
+        Q = a.useCallback(async () => {
+            g &&
+                (N
+                    ? ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "quest_nitro_reward_cta")
+                          ? (0, s.r)({
+                                type: u.F.CLICK_INTERNAL,
+                                adCreativeType: n.p.QUEST,
+                                adCreativeId: t.id,
+                                questContentCTA: R.Cy.OPEN_NITRO_HOME,
+                                surfaceId: _.uF.REWARD_MODAL,
+                                sourceQuestContent: e.sourceQuestContent,
+                                impressionId: e.impressionId,
+                            })
+                          : (0, I.Y5)({
+                                questId: t.id,
+                                questContent: _.uF.REWARD_MODAL,
+                                questContentCTA: R.Cy.OPEN_NITRO_HOME,
+                                impressionId: e.impressionId,
+                                sourceQuestContent: e.sourceQuestContent,
+                            }),
+                      await i?.(),
+                      (0, c.pX)(A.BVt.NITRO_HOME))
+                    : ((0, T.E5)(T.kI.STEP_2_CLICKED_INTERNAL, "quest_nitro_reward_cta")
+                          ? (0, s.r)({
+                                type: u.F.CLICK_INTERNAL,
+                                adCreativeType: n.p.QUEST,
+                                adCreativeId: t.id,
+                                questContentCTA: R.Cy.OPEN_NITRO_CHECKOUT,
+                                surfaceId: _.uF.REWARD_MODAL,
+                                sourceQuestContent: e.sourceQuestContent,
+                                impressionId: e.impressionId,
+                            })
+                          : (0, I.Y5)({
+                                questId: t.id,
+                                questContent: _.uF.REWARD_MODAL,
+                                questContentCTA: R.Cy.OPEN_NITRO_CHECKOUT,
+                                impressionId: e.impressionId,
+                                sourceQuestContent: e.sourceQuestContent,
+                            }),
+                      await i?.(),
+                      await (0, d.A)({ subscriptionTier: m.pe.TIER_2, analyticsLocations: [l.A.QUEST_REWARD_MODAL] })));
+        }, [g, N, t.id, e.impressionId, e.sourceQuestContent, i]);
+    if (!g) return null;
+    if (t.config.features.includes(p.Li.NITRO_2_POINT_0_CTA)) {
+        let t = o.A.getArticleURL(A.MVz.NITRO_2_POINT_0);
+        return N
+            ? {
+                  title: E.intl.string(O.default.LIc2xy),
+                  subtitle: E.intl.format(O.default.gzazAe, { helpCenterLink: t }),
+                  ctaText: E.intl.string(O.default.HlVJm0),
+                  ctaVariant: "primary",
+                  onClickCta: Q,
+              }
+            : y
+              ? {
+                    title: E.intl.string(O.default.HTsycG),
+                    subtitle: E.intl.format(O.default["3JKWU6"], { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["2iX+XV"]),
+                    ctaVariant: "primary",
+                    onClickCta: Q,
+                }
+              : {
+                    title: E.intl.string(O.default.bOf5IH),
+                    subtitle: E.intl.format(O.default.SzOYGc, { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["620Iwi"]),
+                    ctaVariant: "primary",
+                    onClickCta: Q,
+                };
+    }
+    if (t.config.features.includes(p.Li.ORBS_MULTIPLIER_QUEST)) {
+        let t = o.A.getArticleURL(A.MVz.VIRTUAL_CURRENCY_LEARN_MORE);
+        return N
+            ? {
+                  title: E.intl.string(O.default["QP/6xR"]),
+                  subtitle: E.intl.format(O.default.zPnFYf, { helpCenterLink: t }),
+                  ctaText: E.intl.string(O.default.TNS24d),
+                  ctaVariant: "primary",
+                  onClickCta: Q,
+              }
+            : y
+              ? {
+                    title: E.intl.string(O.default.CFfUkp),
+                    subtitle: E.intl.format(O.default["02smVH"], { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["2iX+XV"]),
+                    ctaVariant: "primary",
+                    onClickCta: Q,
+                }
+              : {
+                    title: E.intl.string(O.default.CFfUkp),
+                    subtitle: E.intl.format(O.default["02smVH"], { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["620Iwi"]),
+                    ctaVariant: "primary",
+                    onClickCta: Q,
+                };
+    }
+    if (t.config.features.includes(p.Li.XBOX_GAME_PASS_QUEST)) {
+        let t = o.A.getArticleURL(A.MVz.NITRO_2_POINT_0);
+        return N
+            ? {
+                  title: E.intl.string(O.default["4zROKG"]),
+                  subtitle: E.intl.format(O.default.v9AaV4, { helpCenterLink: t }),
+                  ctaText: E.intl.string(O.default["/AUOfc"]),
+                  ctaVariant: "primary",
+                  onClickCta: Q,
+              }
+            : y
+              ? {
+                    title: E.intl.string(O.default.Q15RXC),
+                    subtitle: E.intl.format(O.default["zUjL+R"], { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default["+ADjaQ"]),
+                    ctaVariant: "primary",
+                    onClickCta: Q,
+                }
+              : {
+                    title: E.intl.string(O.default.Q15RXC),
+                    subtitle: E.intl.format(O.default.dHQQvk, { helpCenterLink: t }),
+                    ctaText: E.intl.string(O.default.qI5XnY),
+                    ctaVariant: "primary",
+                    onClickCta: Q,
+                };
+    }
+    return null;
+}

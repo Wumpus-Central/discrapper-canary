@@ -1,1 +1,107 @@
-e.d(i,{default:()=>f});var n=e(627968),l=e(64700),r=e(224640),s=e(20742),a=e(430993),c=e(834730),u=e(696208),d=e(289873),o=e(17928),_=e(964486),E=e(174459),g=e(733391),h=e(832163),p=e(652215),x=e(375708),b=e(495630);function f(t){let{transitionState:i,onClose:e,onContinue:f,applicationId:k,guildId:R,skuId:j,analyticsLocations:m}=t,A=(0,o.bG)([h.A],()=>h.A.getSKUEligibilityEntry(j)),S=A?.state,T=l.useRef(0),C=l.useRef(!1);(0,_.Ay)(()=>{T.current=Date.now(),E.default.track(p.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_STARTED,{sku_id:j,guild_id:R,application_id:k,eligibility_state:A?.state??"none",location_stack:m})});let I=l.useCallback(t=>{if(C.current)return;C.current=!0;let i=A?.state==="error"?A:void 0;E.default.track(p.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_COMPLETED,{sku_id:j,guild_id:R,application_id:k,result:t,duration_ms:Date.now()-T.current,error_reason:i?.reason??null,error_http_status:i?.httpStatus??null,location_stack:m})},[j,R,k,A,m]);return l.useEffect(()=>{null==S&&(0,g.iR)(k,j)},[k,j,S]),l.useEffect(()=>{if(null!=S&&"checking"!==S){if("ineligible"===S)return void I("ineligible");I(S),f()}},[S,f,I]),(0,n.jsx)(r.d,{transitionState:i,onClose:e,size:"ineligible"===S?"md":"sm",children:"ineligible"===S?(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(s.rQ,{title:x.intl.string(x.t.cg0M2H)}),(0,n.jsx)(a.c,{children:(0,n.jsx)(c.E,{variant:"text-md/normal",color:"text-subtle",children:x.intl.string(x.t.IqlPbQ)})}),(0,n.jsx)(u.H,{actionsFullWidth:!0,actions:[{variant:"primary",text:x.intl.string(x.t.cpT0Cq),onClick:e}]})]}):(0,n.jsx)(a.c,{children:(0,n.jsxs)("div",{className:b.Q,children:[(0,n.jsx)(d.y,{}),(0,n.jsx)(c.E,{variant:"text-md/normal",color:"text-subtle",children:x.intl.string(x.t.pWxiLd)})]})})})}
+e.d(i, { default: () => f });
+var n = e(627968),
+    l = e(64700),
+    r = e(224640),
+    s = e(20742),
+    a = e(430993),
+    c = e(834730),
+    u = e(696208),
+    d = e(289873),
+    o = e(17928),
+    _ = e(964486),
+    E = e(174459),
+    g = e(733391),
+    h = e(832163),
+    p = e(652215),
+    x = e(375708),
+    b = e(495630);
+function f(t) {
+    let {
+            transitionState: i,
+            onClose: e,
+            onContinue: f,
+            applicationId: k,
+            guildId: R,
+            skuId: j,
+            analyticsLocations: m,
+        } = t,
+        A = (0, o.bG)([h.A], () => h.A.getSKUEligibilityEntry(j)),
+        S = A?.state,
+        T = l.useRef(0),
+        C = l.useRef(!1);
+    (0, _.Ay)(() => {
+        (T.current = Date.now()),
+            E.default.track(p.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_STARTED, {
+                sku_id: j,
+                guild_id: R,
+                application_id: k,
+                eligibility_state: A?.state ?? "none",
+                location_stack: m,
+            });
+    });
+    let I = l.useCallback(
+        (t) => {
+            if (C.current) return;
+            C.current = !0;
+            let i = A?.state === "error" ? A : void 0;
+            E.default.track(p.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_COMPLETED, {
+                sku_id: j,
+                guild_id: R,
+                application_id: k,
+                result: t,
+                duration_ms: Date.now() - T.current,
+                error_reason: i?.reason ?? null,
+                error_http_status: i?.httpStatus ?? null,
+                location_stack: m,
+            });
+        },
+        [j, R, k, A, m],
+    );
+    return (
+        l.useEffect(() => {
+            null == S && (0, g.iR)(k, j);
+        }, [k, j, S]),
+        l.useEffect(() => {
+            if (null != S && "checking" !== S) {
+                if ("ineligible" === S) return void I("ineligible");
+                I(S), f();
+            }
+        }, [S, f, I]),
+        (0, n.jsx)(r.d, {
+            transitionState: i,
+            onClose: e,
+            size: "ineligible" === S ? "md" : "sm",
+            children:
+                "ineligible" === S
+                    ? (0, n.jsxs)(n.Fragment, {
+                          children: [
+                              (0, n.jsx)(s.rQ, { title: x.intl.string(x.t.cg0M2H) }),
+                              (0, n.jsx)(a.c, {
+                                  children: (0, n.jsx)(c.E, {
+                                      variant: "text-md/normal",
+                                      color: "text-subtle",
+                                      children: x.intl.string(x.t.IqlPbQ),
+                                  }),
+                              }),
+                              (0, n.jsx)(u.H, {
+                                  actionsFullWidth: !0,
+                                  actions: [{ variant: "primary", text: x.intl.string(x.t.cpT0Cq), onClick: e }],
+                              }),
+                          ],
+                      })
+                    : (0, n.jsx)(a.c, {
+                          children: (0, n.jsxs)("div", {
+                              className: b.Q,
+                              children: [
+                                  (0, n.jsx)(d.y, {}),
+                                  (0, n.jsx)(c.E, {
+                                      variant: "text-md/normal",
+                                      color: "text-subtle",
+                                      children: x.intl.string(x.t.pWxiLd),
+                                  }),
+                              ],
+                          }),
+                      }),
+        })
+    );
+}

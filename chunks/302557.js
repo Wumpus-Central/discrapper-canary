@@ -1,1 +1,465 @@
-n.d(t,{ImportBenefitsFromRoleModal:()=>er,ImportBenefitsFromSubscriptionListingModal:()=>et});var i=n(627968),l=n(64700),s=n(503698),r=n.n(s),a=n(189213),o=n(17928),d=n(52133),c=n(319060),m=n(187322),h=n(933832),x=n(534514),u=n(194117),g=n(834730),j=n(939249),f=n(957485),p=n(935462),v=n(276293),N=n(825484),C=n(821609),b=n(430690),_=n(565645),E=n(444927),S=n(47167),A=n(713654),I=n(915089),k=n(159273),y=n(201275),M=n(657048),T=n(95701),w=n(34457),B=n(769765),z=n(317525),L=n(71393),D=n(994500),O=n(287809),G=n(147925),R=n(240248),F=n(500345),J=n(136722),K=n(488926),P=n(652215);function Q(e,t){let n={[t.id]:t};return e.filter(e=>{let t=K.aH({forceRoles:n,context:e}),i=P.xBc.VIEW_CHANNEL;return e.isGuildVocal()&&(i=J.WQ(i,P.xBc.CONNECT)),J.zy(t,i)&&!K.MJ(i,e)})}var $=n(417360),q=n(898612),H=n(375708),V=n(251148);let W=(0,I.Ld)(),Z=(0,I.Ld)(),U=(0,R.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);function Y(e){let{emojiId:t,emojiName:n,className:l}=e,s=(0,o.bG)([k.Ay],()=>null!=t?k.Ay.getCustomEmojiById(t):void 0);return(0,i.jsx)(_.A,{emojiId:t,emojiName:n,animated:s?.animated??!1,className:l})}function X(e){let{icon:t,children:n,checked:l,disabled:s=!1,onChange:a}=e,o=l||s;return(0,i.jsxs)("label",{className:r()(V.nM,{[V.KD]:o,[V.r9]:s}),children:[(0,i.jsx)("div",{className:V.N,children:t}),(0,i.jsx)("div",{className:V.qg,children:n}),(0,i.jsxs)("div",{className:V.eF,children:[(0,i.jsx)(m.vN,{children:(0,i.jsx)("input",{type:"checkbox",checked:o,disabled:s,className:V.m8,onChange:function(e){a(e.target.checked)}})}),(0,i.jsx)("div",{className:V.Ew,children:(0,i.jsx)(h.A,{size:"md",color:"currentColor",className:V.pc,"aria-hidden":!0})})]})]})}function ee(e){let{title:t,selectAllText:n,benefits:l,dupeBenefits:s,selectedBenefits:r,onToggleBenefit:a}=e,o=l.every(e=>r.has(e));return l.length>0?(0,i.jsxs)("div",{className:V.uW,children:[(0,i.jsx)(x.D,{variant:"heading-md/semibold",color:"text-strong",children:t}),l.length-s.size>1&&(0,i.jsx)("div",{className:V.p_,children:(0,i.jsx)(X,{icon:(0,i.jsx)(u.f,{size:"md",color:"currentColor",className:V.aL}),checked:o,onChange:function(e){for(let t of l)s.has(t)||a(t,e)},children:(0,i.jsx)(g.E,{color:"text-strong",variant:"text-md/normal",children:n})})}),(0,i.jsx)("div",{className:V.p_,children:l.map(e=>(0,i.jsxs)(X,{icon:(0,i.jsx)(Y,{emojiId:e.emoji_id,emojiName:e.emoji_name,className:V.aL}),checked:r.has(e),disabled:s.has(e),onChange:t=>a(e,t),children:[(0,i.jsx)(g.E,{color:"text-strong",variant:"text-md/semibold",children:(0,q.A)(e)}),(0,i.jsx)(g.E,{color:"interactive-text-default",variant:"text-sm/normal",children:e.description})]},(0,F.nh)(e)))})]}):null}function et(e){let{transitionState:t,fromSubscriptionListing:n,existingChannelBenefits:s,existingIntangibleBenefits:r,onSubmit:o,onClose:c}=e,m=n.role_benefits.benefits,[h,x]=l.useState(()=>new Set(m)),u=l.useMemo(()=>m.filter(F.B1),[m]),j=(0,$.A)(u),f=l.useMemo(()=>m.filter(F.b1),[m]),p=l.useMemo(()=>new Set(j.filter(e=>s.some(t=>t.ref_id===e.ref_id))),[j,s]),v=l.useMemo(()=>new Set(f.filter(e=>r.some(t=>(0,d.A)(e,t)))),[r,f]);function N(e,t){x(n=>{let i=new Set(n);return t?i.add(e):i.delete(e),i})}function C(e){e.preventDefault();let t=m.filter(e=>h.has(e));o(t.filter(F.B1).filter(e=>!p.has(e)),t.filter(F.b1).filter(e=>!v.has(e))),c()}return(0,i.jsx)("form",{onSubmit:C,children:(0,i.jsxs)(a.Modal,{transitionState:t,onClose:c,title:H.intl.format(H.t["7zpiYL"],{tierName:n.name}).toString(),actions:[{variant:"secondary",text:H.intl.string(H.t["ETE/oC"]),onClick:c},{variant:"primary",text:H.intl.string(H.t["27a21y"]),disabled:0===h.size,onClick:C}],children:[0===j.length&&0===f.length&&(0,i.jsx)(g.E,{variant:"text-md/normal",children:H.intl.string(H.t["I+16xv"])}),(0,i.jsx)(ee,{title:H.intl.string(H.t.S2kKzP),selectAllText:H.intl.string(H.t["5Q/fLO"]),benefits:j,dupeBenefits:p,selectedBenefits:h,onToggleBenefit:N}),(0,i.jsx)(ee,{title:H.intl.string(H.t.RdwKw7),selectAllText:H.intl.string(H.t.aJPLVE),benefits:f,dupeBenefits:v,selectedBenefits:h,onToggleBenefit:N})]})})}function en(e){let{guildId:t,role:n,channelCount:l,onSelect:s}=e,r=(0,y.$7)({guildId:t,roleId:n.id,size:U});return(0,i.jsxs)(j.D,{className:V.xf,onClick:s,children:[(0,i.jsx)("div",{className:V.N,children:null!=r?(0,i.jsx)(M.A,{...r}):(0,i.jsx)(f.i,{size:"custom",width:23,height:23,color:n.colorString??P.TpD,className:V.bO})}),(0,i.jsxs)("div",{className:V.qg,children:[(0,i.jsx)(g.E,{color:"text-strong",variant:"text-md/normal",className:V.__invalid_benefitTitle,children:n.name}),(0,i.jsx)(g.E,{color:"text-default",variant:"text-sm/normal",children:H.intl.format(H.t["2KzH89"],{num:l})})]}),(0,i.jsx)("div",{className:V.eF,children:(0,i.jsx)(G.A,{direction:G.A.Directions.RIGHT})})]})}function ei(e){let{guild:t,onSelect:n}=e,s=(0,o.bG)([z.A],()=>z.A.getSortedRoles(t.id)),r=(0,o.bG)([B.A],()=>B.A.getCategories(t.id)),a=l.useMemo(()=>r._categories.flatMap(e=>r[e.channel.id].filter(e=>{let{channel:t}=e;return T.JT.has(t.type)}).map(e=>{let{channel:t}=e;return t})),[r]),d=l.useMemo(()=>s.flatMap(e=>{if((0,w.Oy)(e)||e.tags?.subscription_listing_id!=null||(0,w.sx)(e,P.Lti))return[];let t=Q(a,e).length;return t>0?{role:e,channelCount:t}:[]}),[s,a]);return d.length>0?(0,i.jsx)("div",{className:V.p_,children:d.map(e=>(0,i.jsx)(en,{guildId:t.id,role:e.role,channelCount:e.channelCount,onSelect:()=>n(e.role)},e.role.id))}):(0,i.jsx)(g.E,{variant:"text-md/normal",children:H.intl.string(H.t.u09gKk)})}function el(e){let{onClose:t,guildId:n,onSelect:l}=e,s=(0,o.bG)([L.A],()=>L.A.getGuild(n));return null==s?null:(0,i.jsxs)(i.Fragment,{children:[(0,i.jsxs)(p.rQ,{"data-migration-pending":!0,children:[(0,i.jsx)(x.D,{id:W,variant:"heading-md/semibold",children:H.intl.string(H.t["3JrZ/P"])}),(0,i.jsx)(p.s_,{"data-migration-pending":!0,className:V.iT,onClick:t})]}),(0,i.jsx)(p.$m,{"data-migration-pending":!0,className:V.jE,children:(0,i.jsx)(ei,{guild:s,onSelect:l})})]})}function es(e){let{onClose:t,guildId:n,role:s,onCancel:r,onImport:a}=e,o=l.useRef(s);null!=s&&(o.current=s);let d=s??o.current,c=(0,E.A)(()=>{let e=B.A.getCategories(n);return e._categories.flatMap(t=>e[t.channel.id].filter(e=>{let{channel:t}=e;return T.JT.has(t.type)}).map(e=>{let{channel:t}=e;return t}))}),m=l.useMemo(()=>Q(c,d),[c,d]),[h,j]=l.useState(()=>new Set(m.map(e=>e.id)));function f(e,t){j(n=>{let i=new Set(n);return t?i.add(e):i.delete(e),i})}return(0,i.jsxs)("form",{onSubmit:function(e){e.preventDefault(),a(m.map(e=>e.id).filter(e=>h.has(e))),t()},className:V.ID,children:[(0,i.jsxs)(p.rQ,{"data-migration-pending":!0,children:[(0,i.jsx)(x.D,{id:Z,variant:"heading-md/semibold",children:H.intl.format(H.t.iuPodG,{roleName:d.name})}),(0,i.jsx)(p.s_,{"data-migration-pending":!0,className:V.iT,onClick:t})]}),(0,i.jsxs)(p.$m,{"data-migration-pending":!0,className:V.jE,children:[m.length>1&&(0,i.jsx)("div",{className:V.p_,children:(0,i.jsx)(X,{icon:(0,i.jsx)(u.f,{size:"md",color:"currentColor"}),checked:h.size===m.length,onChange:function(e){for(let t of m)f(t.id,e)},children:(0,i.jsx)(g.E,{color:"text-strong",variant:"text-md/normal",children:H.intl.string(H.t["5Q/fLO"])})})}),(0,i.jsx)("div",{className:V.p_,children:m.map(e=>{let t=(0,A._U)(e.type)??v.N;return(0,i.jsx)(X,{icon:(0,i.jsx)("div",{className:V.aL,children:(0,i.jsx)(t,{size:"custom",color:"currentColor",width:"100%",height:"100%"})}),checked:h.has(e.id),onChange:t=>f(e.id,t),children:(0,i.jsx)(g.E,{color:"text-strong",variant:"text-md/normal",className:V.__invalid_benefitTitle,children:(0,S.m1)(e,O.default,D.A)})},e.id)})})]}),(0,i.jsx)(p.jl,{"data-migration-pending":!0,children:(0,i.jsxs)(N.e,{direction:"horizontal-reverse",children:[(0,i.jsx)(C.$,{variant:"primary",text:H.intl.string(H.t["1j8Sow"]),type:"submit"}),(0,i.jsx)(C.$,{variant:"secondary",text:H.intl.string(H.t["ETE/oC"]),onClick:r})]})})]})}function er(e){let{transitionState:t,guildId:n,onClose:s,onImport:r}=e,[a,o]=l.useState();return(0,i.jsx)(p.EO,{"data-migration-pending":!0,transitionState:t,"aria-labelledby":null==a?W:Z,parentComponent:"ImportBenefitsModal",children:(0,i.jsxs)(b.t,{contentDisplay:"flex",activeSlide:+(null!=a),width:440,children:[(0,i.jsx)(b.q,{id:0,children:(0,i.jsx)(el,{onClose:s,guildId:n,onSelect:o})}),(0,i.jsx)(b.q,{id:1,children:(0,i.jsx)(es,{onClose:s,guildId:n,role:a,onCancel:()=>o(void 0),onImport:r})})]})})}
+n.d(t, { ImportBenefitsFromRoleModal: () => er, ImportBenefitsFromSubscriptionListingModal: () => et });
+var i = n(627968),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(189213),
+    o = n(17928),
+    d = n(52133),
+    c = n(319060),
+    m = n(187322),
+    h = n(933832),
+    x = n(534514),
+    u = n(194117),
+    g = n(834730),
+    j = n(939249),
+    f = n(957485),
+    p = n(935462),
+    v = n(276293),
+    N = n(825484),
+    C = n(821609),
+    b = n(430690),
+    _ = n(565645),
+    E = n(444927),
+    S = n(47167),
+    A = n(713654),
+    I = n(915089),
+    k = n(159273),
+    y = n(201275),
+    M = n(657048),
+    T = n(95701),
+    w = n(34457),
+    B = n(769765),
+    z = n(317525),
+    L = n(71393),
+    D = n(994500),
+    O = n(287809),
+    G = n(147925),
+    R = n(240248),
+    F = n(500345),
+    J = n(136722),
+    K = n(488926),
+    P = n(652215);
+function Q(e, t) {
+    let n = { [t.id]: t };
+    return e.filter((e) => {
+        let t = K.aH({ forceRoles: n, context: e }),
+            i = P.xBc.VIEW_CHANNEL;
+        return e.isGuildVocal() && (i = J.WQ(i, P.xBc.CONNECT)), J.zy(t, i) && !K.MJ(i, e);
+    });
+}
+var $ = n(417360),
+    q = n(898612),
+    H = n(375708),
+    V = n(251148);
+let W = (0, I.Ld)(),
+    Z = (0, I.Ld)(),
+    U = (0, R.xI)(c.A.IMPORT_BENEFITS_MODAL_ROLE_ICON_SIZE);
+function Y(e) {
+    let { emojiId: t, emojiName: n, className: l } = e,
+        s = (0, o.bG)([k.Ay], () => (null != t ? k.Ay.getCustomEmojiById(t) : void 0));
+    return (0, i.jsx)(_.A, { emojiId: t, emojiName: n, animated: s?.animated ?? !1, className: l });
+}
+function X(e) {
+    let { icon: t, children: n, checked: l, disabled: s = !1, onChange: a } = e,
+        o = l || s;
+    return (0, i.jsxs)("label", {
+        className: r()(V.nM, { [V.KD]: o, [V.r9]: s }),
+        children: [
+            (0, i.jsx)("div", { className: V.N, children: t }),
+            (0, i.jsx)("div", { className: V.qg, children: n }),
+            (0, i.jsxs)("div", {
+                className: V.eF,
+                children: [
+                    (0, i.jsx)(m.vN, {
+                        children: (0, i.jsx)("input", {
+                            type: "checkbox",
+                            checked: o,
+                            disabled: s,
+                            className: V.m8,
+                            onChange: function (e) {
+                                a(e.target.checked);
+                            },
+                        }),
+                    }),
+                    (0, i.jsx)("div", {
+                        className: V.Ew,
+                        children: (0, i.jsx)(h.A, {
+                            size: "md",
+                            color: "currentColor",
+                            className: V.pc,
+                            "aria-hidden": !0,
+                        }),
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+function ee(e) {
+    let { title: t, selectAllText: n, benefits: l, dupeBenefits: s, selectedBenefits: r, onToggleBenefit: a } = e,
+        o = l.every((e) => r.has(e));
+    return l.length > 0
+        ? (0, i.jsxs)("div", {
+              className: V.uW,
+              children: [
+                  (0, i.jsx)(x.D, { variant: "heading-md/semibold", color: "text-strong", children: t }),
+                  l.length - s.size > 1 &&
+                      (0, i.jsx)("div", {
+                          className: V.p_,
+                          children: (0, i.jsx)(X, {
+                              icon: (0, i.jsx)(u.f, { size: "md", color: "currentColor", className: V.aL }),
+                              checked: o,
+                              onChange: function (e) {
+                                  for (let t of l) s.has(t) || a(t, e);
+                              },
+                              children: (0, i.jsx)(g.E, {
+                                  color: "text-strong",
+                                  variant: "text-md/normal",
+                                  children: n,
+                              }),
+                          }),
+                      }),
+                  (0, i.jsx)("div", {
+                      className: V.p_,
+                      children: l.map((e) =>
+                          (0, i.jsxs)(
+                              X,
+                              {
+                                  icon: (0, i.jsx)(Y, {
+                                      emojiId: e.emoji_id,
+                                      emojiName: e.emoji_name,
+                                      className: V.aL,
+                                  }),
+                                  checked: r.has(e),
+                                  disabled: s.has(e),
+                                  onChange: (t) => a(e, t),
+                                  children: [
+                                      (0, i.jsx)(g.E, {
+                                          color: "text-strong",
+                                          variant: "text-md/semibold",
+                                          children: (0, q.A)(e),
+                                      }),
+                                      (0, i.jsx)(g.E, {
+                                          color: "interactive-text-default",
+                                          variant: "text-sm/normal",
+                                          children: e.description,
+                                      }),
+                                  ],
+                              },
+                              (0, F.nh)(e),
+                          ),
+                      ),
+                  }),
+              ],
+          })
+        : null;
+}
+function et(e) {
+    let {
+            transitionState: t,
+            fromSubscriptionListing: n,
+            existingChannelBenefits: s,
+            existingIntangibleBenefits: r,
+            onSubmit: o,
+            onClose: c,
+        } = e,
+        m = n.role_benefits.benefits,
+        [h, x] = l.useState(() => new Set(m)),
+        u = l.useMemo(() => m.filter(F.B1), [m]),
+        j = (0, $.A)(u),
+        f = l.useMemo(() => m.filter(F.b1), [m]),
+        p = l.useMemo(() => new Set(j.filter((e) => s.some((t) => t.ref_id === e.ref_id))), [j, s]),
+        v = l.useMemo(() => new Set(f.filter((e) => r.some((t) => (0, d.A)(e, t)))), [r, f]);
+    function N(e, t) {
+        x((n) => {
+            let i = new Set(n);
+            return t ? i.add(e) : i.delete(e), i;
+        });
+    }
+    function C(e) {
+        e.preventDefault();
+        let t = m.filter((e) => h.has(e));
+        o(
+            t.filter(F.B1).filter((e) => !p.has(e)),
+            t.filter(F.b1).filter((e) => !v.has(e)),
+        ),
+            c();
+    }
+    return (0, i.jsx)("form", {
+        onSubmit: C,
+        children: (0, i.jsxs)(a.Modal, {
+            transitionState: t,
+            onClose: c,
+            title: H.intl.format(H.t["7zpiYL"], { tierName: n.name }).toString(),
+            actions: [
+                { variant: "secondary", text: H.intl.string(H.t["ETE/oC"]), onClick: c },
+                { variant: "primary", text: H.intl.string(H.t["27a21y"]), disabled: 0 === h.size, onClick: C },
+            ],
+            children: [
+                0 === j.length &&
+                    0 === f.length &&
+                    (0, i.jsx)(g.E, { variant: "text-md/normal", children: H.intl.string(H.t["I+16xv"]) }),
+                (0, i.jsx)(ee, {
+                    title: H.intl.string(H.t.S2kKzP),
+                    selectAllText: H.intl.string(H.t["5Q/fLO"]),
+                    benefits: j,
+                    dupeBenefits: p,
+                    selectedBenefits: h,
+                    onToggleBenefit: N,
+                }),
+                (0, i.jsx)(ee, {
+                    title: H.intl.string(H.t.RdwKw7),
+                    selectAllText: H.intl.string(H.t.aJPLVE),
+                    benefits: f,
+                    dupeBenefits: v,
+                    selectedBenefits: h,
+                    onToggleBenefit: N,
+                }),
+            ],
+        }),
+    });
+}
+function en(e) {
+    let { guildId: t, role: n, channelCount: l, onSelect: s } = e,
+        r = (0, y.$7)({ guildId: t, roleId: n.id, size: U });
+    return (0, i.jsxs)(j.D, {
+        className: V.xf,
+        onClick: s,
+        children: [
+            (0, i.jsx)("div", {
+                className: V.N,
+                children:
+                    null != r
+                        ? (0, i.jsx)(M.A, { ...r })
+                        : (0, i.jsx)(f.i, {
+                              size: "custom",
+                              width: 23,
+                              height: 23,
+                              color: n.colorString ?? P.TpD,
+                              className: V.bO,
+                          }),
+            }),
+            (0, i.jsxs)("div", {
+                className: V.qg,
+                children: [
+                    (0, i.jsx)(g.E, {
+                        color: "text-strong",
+                        variant: "text-md/normal",
+                        className: V.__invalid_benefitTitle,
+                        children: n.name,
+                    }),
+                    (0, i.jsx)(g.E, {
+                        color: "text-default",
+                        variant: "text-sm/normal",
+                        children: H.intl.format(H.t["2KzH89"], { num: l }),
+                    }),
+                ],
+            }),
+            (0, i.jsx)("div", { className: V.eF, children: (0, i.jsx)(G.A, { direction: G.A.Directions.RIGHT }) }),
+        ],
+    });
+}
+function ei(e) {
+    let { guild: t, onSelect: n } = e,
+        s = (0, o.bG)([z.A], () => z.A.getSortedRoles(t.id)),
+        r = (0, o.bG)([B.A], () => B.A.getCategories(t.id)),
+        a = l.useMemo(
+            () =>
+                r._categories.flatMap((e) =>
+                    r[e.channel.id]
+                        .filter((e) => {
+                            let { channel: t } = e;
+                            return T.JT.has(t.type);
+                        })
+                        .map((e) => {
+                            let { channel: t } = e;
+                            return t;
+                        }),
+                ),
+            [r],
+        ),
+        d = l.useMemo(
+            () =>
+                s.flatMap((e) => {
+                    if ((0, w.Oy)(e) || e.tags?.subscription_listing_id != null || (0, w.sx)(e, P.Lti)) return [];
+                    let t = Q(a, e).length;
+                    return t > 0 ? { role: e, channelCount: t } : [];
+                }),
+            [s, a],
+        );
+    return d.length > 0
+        ? (0, i.jsx)("div", {
+              className: V.p_,
+              children: d.map((e) =>
+                  (0, i.jsx)(
+                      en,
+                      { guildId: t.id, role: e.role, channelCount: e.channelCount, onSelect: () => n(e.role) },
+                      e.role.id,
+                  ),
+              ),
+          })
+        : (0, i.jsx)(g.E, { variant: "text-md/normal", children: H.intl.string(H.t.u09gKk) });
+}
+function el(e) {
+    let { onClose: t, guildId: n, onSelect: l } = e,
+        s = (0, o.bG)([L.A], () => L.A.getGuild(n));
+    return null == s
+        ? null
+        : (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsxs)(p.rQ, {
+                      "data-migration-pending": !0,
+                      children: [
+                          (0, i.jsx)(x.D, {
+                              id: W,
+                              variant: "heading-md/semibold",
+                              children: H.intl.string(H.t["3JrZ/P"]),
+                          }),
+                          (0, i.jsx)(p.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
+                      ],
+                  }),
+                  (0, i.jsx)(p.$m, {
+                      "data-migration-pending": !0,
+                      className: V.jE,
+                      children: (0, i.jsx)(ei, { guild: s, onSelect: l }),
+                  }),
+              ],
+          });
+}
+function es(e) {
+    let { onClose: t, guildId: n, role: s, onCancel: r, onImport: a } = e,
+        o = l.useRef(s);
+    null != s && (o.current = s);
+    let d = s ?? o.current,
+        c = (0, E.A)(() => {
+            let e = B.A.getCategories(n);
+            return e._categories.flatMap((t) =>
+                e[t.channel.id]
+                    .filter((e) => {
+                        let { channel: t } = e;
+                        return T.JT.has(t.type);
+                    })
+                    .map((e) => {
+                        let { channel: t } = e;
+                        return t;
+                    }),
+            );
+        }),
+        m = l.useMemo(() => Q(c, d), [c, d]),
+        [h, j] = l.useState(() => new Set(m.map((e) => e.id)));
+    function f(e, t) {
+        j((n) => {
+            let i = new Set(n);
+            return t ? i.add(e) : i.delete(e), i;
+        });
+    }
+    return (0, i.jsxs)("form", {
+        onSubmit: function (e) {
+            e.preventDefault(), a(m.map((e) => e.id).filter((e) => h.has(e))), t();
+        },
+        className: V.ID,
+        children: [
+            (0, i.jsxs)(p.rQ, {
+                "data-migration-pending": !0,
+                children: [
+                    (0, i.jsx)(x.D, {
+                        id: Z,
+                        variant: "heading-md/semibold",
+                        children: H.intl.format(H.t.iuPodG, { roleName: d.name }),
+                    }),
+                    (0, i.jsx)(p.s_, { "data-migration-pending": !0, className: V.iT, onClick: t }),
+                ],
+            }),
+            (0, i.jsxs)(p.$m, {
+                "data-migration-pending": !0,
+                className: V.jE,
+                children: [
+                    m.length > 1 &&
+                        (0, i.jsx)("div", {
+                            className: V.p_,
+                            children: (0, i.jsx)(X, {
+                                icon: (0, i.jsx)(u.f, { size: "md", color: "currentColor" }),
+                                checked: h.size === m.length,
+                                onChange: function (e) {
+                                    for (let t of m) f(t.id, e);
+                                },
+                                children: (0, i.jsx)(g.E, {
+                                    color: "text-strong",
+                                    variant: "text-md/normal",
+                                    children: H.intl.string(H.t["5Q/fLO"]),
+                                }),
+                            }),
+                        }),
+                    (0, i.jsx)("div", {
+                        className: V.p_,
+                        children: m.map((e) => {
+                            let t = (0, A._U)(e.type) ?? v.N;
+                            return (0, i.jsx)(
+                                X,
+                                {
+                                    icon: (0, i.jsx)("div", {
+                                        className: V.aL,
+                                        children: (0, i.jsx)(t, {
+                                            size: "custom",
+                                            color: "currentColor",
+                                            width: "100%",
+                                            height: "100%",
+                                        }),
+                                    }),
+                                    checked: h.has(e.id),
+                                    onChange: (t) => f(e.id, t),
+                                    children: (0, i.jsx)(g.E, {
+                                        color: "text-strong",
+                                        variant: "text-md/normal",
+                                        className: V.__invalid_benefitTitle,
+                                        children: (0, S.m1)(e, O.default, D.A),
+                                    }),
+                                },
+                                e.id,
+                            );
+                        }),
+                    }),
+                ],
+            }),
+            (0, i.jsx)(p.jl, {
+                "data-migration-pending": !0,
+                children: (0, i.jsxs)(N.e, {
+                    direction: "horizontal-reverse",
+                    children: [
+                        (0, i.jsx)(C.$, { variant: "primary", text: H.intl.string(H.t["1j8Sow"]), type: "submit" }),
+                        (0, i.jsx)(C.$, { variant: "secondary", text: H.intl.string(H.t["ETE/oC"]), onClick: r }),
+                    ],
+                }),
+            }),
+        ],
+    });
+}
+function er(e) {
+    let { transitionState: t, guildId: n, onClose: s, onImport: r } = e,
+        [a, o] = l.useState();
+    return (0, i.jsx)(p.EO, {
+        "data-migration-pending": !0,
+        transitionState: t,
+        "aria-labelledby": null == a ? W : Z,
+        parentComponent: "ImportBenefitsModal",
+        children: (0, i.jsxs)(b.t, {
+            contentDisplay: "flex",
+            activeSlide: +(null != a),
+            width: 440,
+            children: [
+                (0, i.jsx)(b.q, { id: 0, children: (0, i.jsx)(el, { onClose: s, guildId: n, onSelect: o }) }),
+                (0, i.jsx)(b.q, {
+                    id: 1,
+                    children: (0, i.jsx)(es, {
+                        onClose: s,
+                        guildId: n,
+                        role: a,
+                        onCancel: () => o(void 0),
+                        onImport: r,
+                    }),
+                }),
+            ],
+        }),
+    });
+}

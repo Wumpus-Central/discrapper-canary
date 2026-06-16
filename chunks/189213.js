@@ -1,1 +1,42 @@
-"use strict";n.d(t,{Modal:()=>c});var i=n(627968);n(64700);var r=n(224640),s=n(696208),a=n(430993),o=n(364840),l=n(20742),u=n(655053);function c(e){let{size:t,title:n,subtitle:c,input:d,preview:_,actions:h,actionBarInput:f,actionBarInputLayout:p="default",listProps:E,notice:m,onScroll:g,scrollerRef:A,children:I,"aria-label":T,...S}=e,y=null!=t?t:null!=d||null!=f||(0,a.y)(I)||null!=E?"md":"sm";return(0,i.jsxs)(r.d,{...S,"aria-label":T??n,size:y,children:[(0,i.jsx)(l.rQ,{title:n,subtitle:c}),(0,i.jsx)(u.i,{message:m?.message,type:m?.type}),(0,i.jsx)(a.c,{controls:d,listProps:E,onScroll:g,scrollerRef:A,children:I}),(0,i.jsx)(o.j,{children:_}),(0,i.jsx)(s.H,{leading:f,leadingLayout:p,actions:h,actionsFullWidth:null==f})]})}
+"use strict";
+n.d(t, { Modal: () => c });
+var i = n(627968);
+n(64700);
+var r = n(224640),
+    s = n(696208),
+    a = n(430993),
+    o = n(364840),
+    l = n(20742),
+    u = n(655053);
+function c(e) {
+    let {
+            size: t,
+            title: n,
+            subtitle: c,
+            input: d,
+            preview: _,
+            actions: h,
+            actionBarInput: f,
+            actionBarInputLayout: p = "default",
+            listProps: E,
+            notice: m,
+            onScroll: g,
+            scrollerRef: A,
+            children: I,
+            "aria-label": T,
+            ...S
+        } = e,
+        y = null != t ? t : null != d || null != f || (0, a.y)(I) || null != E ? "md" : "sm";
+    return (0, i.jsxs)(r.d, {
+        ...S,
+        "aria-label": T ?? n,
+        size: y,
+        children: [
+            (0, i.jsx)(l.rQ, { title: n, subtitle: c }),
+            (0, i.jsx)(u.i, { message: m?.message, type: m?.type }),
+            (0, i.jsx)(a.c, { controls: d, listProps: E, onScroll: g, scrollerRef: A, children: I }),
+            (0, i.jsx)(o.j, { children: _ }),
+            (0, i.jsx)(s.H, { leading: f, leadingLayout: p, actions: h, actionsFullWidth: null == f }),
+        ],
+    });
+}

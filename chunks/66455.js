@@ -1,1 +1,7 @@
-"use strict";n.d(t,{A:()=>r});var i=n(64700);function r(e){let t=i.useRef(e);return t.current=e,t}
+"use strict";
+n.d(t, { A: () => r });
+var i = n(64700);
+function r(e) {
+    let t = i.useRef(e);
+    return (t.current = e), t;
+}

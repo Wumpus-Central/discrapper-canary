@@ -1,1 +1,5 @@
-let i=n(532618);e.exports=(e,t)=>{let n=i(e,t);return n&&n.prerelease.length?n.prerelease:null}
+let i = n(532618);
+e.exports = (e, t) => {
+    let n = i(e, t);
+    return n && n.prerelease.length ? n.prerelease : null;
+};

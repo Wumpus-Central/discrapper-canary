@@ -1,1 +1,31 @@
-a.d(l,{I:()=>c});var s=a(64700),t=a(411986);function c(e){let{userId:l,applicationId:a,isGameRelationship:c,location:i,onConfirm:n,onCancel:d,onFinally:p}=e,r=s.useCallback(()=>{t.A.cancelFriendRequest({userId:l,applicationId:c?a:null,location:i})},[a,c,i,l]);return{acceptFriendRequest:s.useCallback(()=>{t.A.maybeConfirmFriendRequestAccept({userId:l,applicationId:c?a:null,location:i,onConfirm:n,onCancel:d,onFinally:p})},[a,c,i,d,n,p,l]),cancelFriendRequest:r}}
+"use strict";
+n.d(t, { I: () => s });
+var i = n(64700),
+    r = n(411986);
+function s(e) {
+    let {
+            userId: t,
+            applicationId: n,
+            isGameRelationship: s,
+            location: a,
+            onConfirm: o,
+            onCancel: l,
+            onFinally: u,
+        } = e,
+        c = i.useCallback(() => {
+            r.A.cancelFriendRequest({ userId: t, applicationId: s ? n : null, location: a });
+        }, [n, s, a, t]);
+    return {
+        acceptFriendRequest: i.useCallback(() => {
+            r.A.maybeConfirmFriendRequestAccept({
+                userId: t,
+                applicationId: s ? n : null,
+                location: a,
+                onConfirm: o,
+                onCancel: l,
+                onFinally: u,
+            });
+        }, [n, s, a, l, o, u, t]),
+        cancelFriendRequest: c,
+    };
+}

@@ -1,1 +1,26 @@
-"use strict";n.d(t,{Q:()=>s,f:()=>a});var i=n(317525),r=n(375708);let s=e=>{switch(e){case"home":case"guide":return r.intl.string(r.t.VbpLyU);case"browse":return r.intl.string(r.t.et6wav);case"customize":return r.intl.string(r.t.h9mGOP);case"linked-roles":return r.intl.string(r.t.ghtnss)}return null},a=(e,t,n)=>{if("linked-roles"===e){if(null==n)return null;let e=i.A.getRole(n,t);return null==e||e.tags?.guild_connections!==null?null:e.name}return null}
+"use strict";
+n.d(t, { Q: () => s, f: () => a });
+var i = n(317525),
+    r = n(375708);
+let s = (e) => {
+        switch (e) {
+            case "home":
+            case "guide":
+                return r.intl.string(r.t.VbpLyU);
+            case "browse":
+                return r.intl.string(r.t.et6wav);
+            case "customize":
+                return r.intl.string(r.t.h9mGOP);
+            case "linked-roles":
+                return r.intl.string(r.t.ghtnss);
+        }
+        return null;
+    },
+    a = (e, t, n) => {
+        if ("linked-roles" === e) {
+            if (null == n) return null;
+            let e = i.A.getRole(n, t);
+            return null == e || e.tags?.guild_connections !== null ? null : e.name;
+        }
+        return null;
+    };

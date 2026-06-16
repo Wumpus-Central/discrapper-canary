@@ -1,1 +1,13 @@
-i.d(t,{YG:()=>s,xk:()=>d});var l=i(353640);let s="0",r={selectedGuildId:s},d=(0,l.v)(e=>({...r,setSelectedGuildId:t=>{e({selectedGuildId:t})},reset:()=>{e(r)}}))
+i.d(t, { YG: () => s, xk: () => d });
+var l = i(353640);
+let s = "0",
+    r = { selectedGuildId: s },
+    d = (0, l.v)((e) => ({
+        ...r,
+        setSelectedGuildId: (t) => {
+            e({ selectedGuildId: t });
+        },
+        reset: () => {
+            e(r);
+        },
+    }));

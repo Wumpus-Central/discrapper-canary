@@ -1,1 +1,89 @@
-i.d(t,{default:()=>S});var a=i(627968),e=i(64700),c=i(935399),n=i(22856),d=i(224640),r=i(315629),l=i(20742),o=i(534514),x=i(834730),h=i(821609),m=i(403581),p=i(400829),g=i(367727),j=i(975571),u=i(87719),b=i(652215),v=i(49999),f=i(375708),k=i(886626);function S(s){let{renderModalProps:t,dismissibleContent:i,markAsDismissed:S}=s,{onClose:w,transitionState:C}=t,{headingId:N}=(0,n.k)();return(0,c.Ay)(()=>{(0,g.Wx)(i)}),e.useEffect(()=>()=>{S(v.i.AUTO_DISMISS)},[S]),(0,a.jsx)(d.d,{transitionState:C,onClose:w,size:"md",paddingSize:"lg",children:(0,a.jsxs)(r.h,{color:"nitro-pink",className:k.D7,children:[(0,a.jsx)("div",{className:k.cG,children:(0,a.jsx)(l.s_,{shouldColorMix:!0})}),(0,a.jsx)("div",{className:k.JS,children:(0,a.jsx)(p.D,{alt:"",width:360,height:"auto"})}),(0,a.jsxs)("div",{className:k.Qs,children:[(0,a.jsx)(o.D,{id:N,variant:"display-md",color:"text-strong",className:k.wx,children:f.intl.string(f.t.Xm5q5l)}),(0,a.jsx)(x.E,{variant:"text-md/normal",color:"text-subtle",className:k.rf,children:f.intl.string(f.t.svsMII)}),(0,a.jsxs)("div",{className:k.v0,children:[(0,a.jsx)(h.$,{variant:"secondary",size:"md",onClick:()=>window.open(j.A.getArticleURL(b.MVz.PREMIUM_DETAILS),"_blank"),text:f.intl.string(f.t.WHWwCY)}),(0,a.jsx)(h.$,{variant:"primary",size:"md",icon:m.t,text:f.intl.string(f.t["mHF+AF"]),onClick:()=>(0,u.x)(w)})]})]})]})})}
+i.d(t, { default: () => S });
+var a = i(627968),
+    e = i(64700),
+    c = i(935399),
+    n = i(22856),
+    d = i(224640),
+    r = i(315629),
+    l = i(20742),
+    o = i(534514),
+    x = i(834730),
+    h = i(821609),
+    m = i(403581),
+    p = i(400829),
+    g = i(367727),
+    j = i(975571),
+    u = i(87719),
+    b = i(652215),
+    v = i(49999),
+    f = i(375708),
+    k = i(886626);
+function S(s) {
+    let { renderModalProps: t, dismissibleContent: i, markAsDismissed: S } = s,
+        { onClose: w, transitionState: C } = t,
+        { headingId: N } = (0, n.k)();
+    return (
+        (0, c.Ay)(() => {
+            (0, g.Wx)(i);
+        }),
+        e.useEffect(
+            () => () => {
+                S(v.i.AUTO_DISMISS);
+            },
+            [S],
+        ),
+        (0, a.jsx)(d.d, {
+            transitionState: C,
+            onClose: w,
+            size: "md",
+            paddingSize: "lg",
+            children: (0, a.jsxs)(r.h, {
+                color: "nitro-pink",
+                className: k.D7,
+                children: [
+                    (0, a.jsx)("div", { className: k.cG, children: (0, a.jsx)(l.s_, { shouldColorMix: !0 }) }),
+                    (0, a.jsx)("div", {
+                        className: k.JS,
+                        children: (0, a.jsx)(p.D, { alt: "", width: 360, height: "auto" }),
+                    }),
+                    (0, a.jsxs)("div", {
+                        className: k.Qs,
+                        children: [
+                            (0, a.jsx)(o.D, {
+                                id: N,
+                                variant: "display-md",
+                                color: "text-strong",
+                                className: k.wx,
+                                children: f.intl.string(f.t.Xm5q5l),
+                            }),
+                            (0, a.jsx)(x.E, {
+                                variant: "text-md/normal",
+                                color: "text-subtle",
+                                className: k.rf,
+                                children: f.intl.string(f.t.svsMII),
+                            }),
+                            (0, a.jsxs)("div", {
+                                className: k.v0,
+                                children: [
+                                    (0, a.jsx)(h.$, {
+                                        variant: "secondary",
+                                        size: "md",
+                                        onClick: () => window.open(j.A.getArticleURL(b.MVz.PREMIUM_DETAILS), "_blank"),
+                                        text: f.intl.string(f.t.WHWwCY),
+                                    }),
+                                    (0, a.jsx)(h.$, {
+                                        variant: "primary",
+                                        size: "md",
+                                        icon: m.t,
+                                        text: f.intl.string(f.t["mHF+AF"]),
+                                        onClick: () => (0, u.x)(w),
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        })
+    );
+}

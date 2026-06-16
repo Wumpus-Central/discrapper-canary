@@ -1,1 +1,6 @@
-"use strict";n.d(t,{A:()=>r});var i=n(731854);function r(e){return e.supportsInApp(i.O5.VIDEO)}
+"use strict";
+n.d(t, { A: () => r });
+var i = n(731854);
+function r(e) {
+    return e.supportsInApp(i.O5.VIDEO);
+}

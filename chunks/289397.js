@@ -1,1 +1,4 @@
-c.d(p,{n:()=>t});function t(s){return`https://cdn.discordapp.com/assets/${s}`}
+c.d(p, { n: () => t });
+function t(s) {
+    return `https://cdn.discordapp.com/assets/${s}`;
+}

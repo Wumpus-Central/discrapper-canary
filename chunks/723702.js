@@ -1,1 +1,25 @@
-"use strict";n.r(t),n.d(t,{PlatformTypes:()=>i.fg,getNativePlatform:()=>i.r_,getNewUpdaterPlatformName:()=>i.cZ,getOS:()=>i.R0,getPlatform:()=>i.uo,getPlatformName:()=>i.t1,isAndroid:()=>i.m0,isAndroidChrome:()=>i.Aq,isAndroidWeb:()=>i.Ct,isDesktop:()=>i.xl,isIOS:()=>i.un,isLinux:()=>i.j9,isMac:()=>i.cX,isMacWeb:()=>i.Sn,isOculusWeb:()=>i.q4,isPlatformEmbedded:()=>i.Av,isWeb:()=>i.HZ,isWindows:()=>i.uF,platformPrefersDeepLink:()=>i.tn,platformSupportsActivityJoin:()=>i.Ls});var i=n(574381)
+"use strict";
+n.r(t),
+    n.d(t, {
+        PlatformTypes: () => i.fg,
+        getNativePlatform: () => i.r_,
+        getNewUpdaterPlatformName: () => i.cZ,
+        getOS: () => i.R0,
+        getPlatform: () => i.uo,
+        getPlatformName: () => i.t1,
+        isAndroid: () => i.m0,
+        isAndroidChrome: () => i.Aq,
+        isAndroidWeb: () => i.Ct,
+        isDesktop: () => i.xl,
+        isIOS: () => i.un,
+        isLinux: () => i.j9,
+        isMac: () => i.cX,
+        isMacWeb: () => i.Sn,
+        isOculusWeb: () => i.q4,
+        isPlatformEmbedded: () => i.Av,
+        isWeb: () => i.HZ,
+        isWindows: () => i.uF,
+        platformPrefersDeepLink: () => i.tn,
+        platformSupportsActivityJoin: () => i.Ls,
+    });
+var i = n(574381);

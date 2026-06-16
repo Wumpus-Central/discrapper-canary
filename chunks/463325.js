@@ -1,1 +1,64 @@
-n.d(t,{default:()=>A});var i=n(627968),l=n(64700),a=n(189213),s=n(17928),r=n(834730),c=n(696451),u=n(71393),o=n(287809),d=n(624458),g=n(202384),h=n(212455),m=n(976860),p=n(652215),k=n(375708),b=n(369364);let A=function(e){let{guildId:t,transitionState:n,onClose:A}=e,f=(0,s.bG)([h.A],()=>h.A.getRequest(t),[t]),j=(0,s.bG)([u.A],()=>u.A.getGuild(t),[t]),x=(0,s.bG)([o.default],()=>o.default.getCurrentUser()?.id),C=(0,s.bG)([c.Ay],()=>null!=x?c.Ay.getMember(t,x):null,[x,t]),G=l.useCallback(()=>{let e;A(),null==C&&((e=(0,m.JK)()).length>0?e.goBack():(0,m.pX)(p.BVt.ME))},[C,A]),R=l.useCallback(async()=>{if(C?.isPending){try{await d.A.removeGuildJoinRequest(t)}catch(e){throw e}A(),(0,g.Ze)(t)}else d.A.resetGuildJoinRequest(t)},[t,C?.isPending,A]),y=l.useMemo(()=>[{text:k.intl.string(k.t.I1LYVk),variant:"secondary",onClick:R},{text:k.intl.string(k.t.BddRzS),variant:"critical-primary",onClick:G}],[R,G]);return(0,i.jsx)(a.Modal,{transitionState:n,onClose:A,title:j?.name!=null?k.intl.formatToPlainString(k.t["P+/gzA"],{guildName:j.name}):k.intl.string(k.t.gBPcuP),actions:y,children:f?.rejectionReason!=null&&f?.rejectionReason!==""?(0,i.jsxs)(r.E,{variant:"text-md/medium",color:"text-default",children:[(0,i.jsx)("span",{className:b.Wj,children:k.intl.string(k.t.cf1psW)}),(0,i.jsx)("span",{children:f?.rejectionReason})]}):null})}
+n.d(t, { default: () => A });
+var i = n(627968),
+    l = n(64700),
+    a = n(189213),
+    s = n(17928),
+    r = n(834730),
+    c = n(696451),
+    u = n(71393),
+    o = n(287809),
+    d = n(624458),
+    g = n(202384),
+    h = n(212455),
+    m = n(976860),
+    p = n(652215),
+    k = n(375708),
+    b = n(369364);
+let A = function (e) {
+    let { guildId: t, transitionState: n, onClose: A } = e,
+        f = (0, s.bG)([h.A], () => h.A.getRequest(t), [t]),
+        j = (0, s.bG)([u.A], () => u.A.getGuild(t), [t]),
+        x = (0, s.bG)([o.default], () => o.default.getCurrentUser()?.id),
+        C = (0, s.bG)([c.Ay], () => (null != x ? c.Ay.getMember(t, x) : null), [x, t]),
+        G = l.useCallback(() => {
+            let e;
+            A(), null == C && ((e = (0, m.JK)()).length > 0 ? e.goBack() : (0, m.pX)(p.BVt.ME));
+        }, [C, A]),
+        R = l.useCallback(async () => {
+            if (C?.isPending) {
+                try {
+                    await d.A.removeGuildJoinRequest(t);
+                } catch (e) {
+                    throw e;
+                }
+                A(), (0, g.Ze)(t);
+            } else d.A.resetGuildJoinRequest(t);
+        }, [t, C?.isPending, A]),
+        y = l.useMemo(
+            () => [
+                { text: k.intl.string(k.t.I1LYVk), variant: "secondary", onClick: R },
+                { text: k.intl.string(k.t.BddRzS), variant: "critical-primary", onClick: G },
+            ],
+            [R, G],
+        );
+    return (0, i.jsx)(a.Modal, {
+        transitionState: n,
+        onClose: A,
+        title:
+            j?.name != null
+                ? k.intl.formatToPlainString(k.t["P+/gzA"], { guildName: j.name })
+                : k.intl.string(k.t.gBPcuP),
+        actions: y,
+        children:
+            f?.rejectionReason != null && f?.rejectionReason !== ""
+                ? (0, i.jsxs)(r.E, {
+                      variant: "text-md/medium",
+                      color: "text-default",
+                      children: [
+                          (0, i.jsx)("span", { className: b.Wj, children: k.intl.string(k.t.cf1psW) }),
+                          (0, i.jsx)("span", { children: f?.rejectionReason }),
+                      ],
+                  })
+                : null,
+    });
+};

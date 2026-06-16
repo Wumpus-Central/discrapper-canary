@@ -1,1 +1,32 @@
-"use strict";n.d(t,{A:()=>d,C:()=>o});var i=n(472501),r=n(773669),s=n(723702),a=n(652215);let o=`https://${a.XlF}`,l=`https://${a.hCb}`;function u(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:o;return t+e}function c(){return r.default.locale.toLowerCase()}let d={getArticleURL:e=>u(`/hc/${c()}/articles/${e}`),getDevArticleURL:e=>u(`/hc/${c()}/articles/${e}`,l),getCreatorSupportArticleURL:e=>u(`/hc/${c()}/articles/${e}`,"https://creator-support.discord.com"),getTwitterURL:()=>(0,i.A)(a.Pq7.TWITTER),getCommunityURL:()=>u(`/hc/${c()}`),getSubmitRequestURL(e){let t=u(`/hc/${c()}/requests/new?platform=${encodeURIComponent((0,s.getPlatformName)())}`);return null!=e&&(t+=`&device_info=${encodeURIComponent(e)}`),t},getSearchURL(e){let t=encodeURIComponent(e);return u(`/hc/${c()}/search?utf8=%E2%9C%93&query=${t}&commit=Search`)},getFeaturedArticlesJsonURL:()=>u("/api/v2/help_center/en-us/articles.json?label_names=featured"),getAppsSupportURL:e=>u(`/hc/${c()}/articles/${e}`,"https://support-apps.discord.com")}
+"use strict";
+n.d(t, { A: () => d, C: () => o });
+var i = n(472501),
+    r = n(773669),
+    s = n(723702),
+    a = n(652215);
+let o = `https://${a.XlF}`,
+    l = `https://${a.hCb}`;
+function u(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o;
+    return t + e;
+}
+function c() {
+    return r.default.locale.toLowerCase();
+}
+let d = {
+    getArticleURL: (e) => u(`/hc/${c()}/articles/${e}`),
+    getDevArticleURL: (e) => u(`/hc/${c()}/articles/${e}`, l),
+    getCreatorSupportArticleURL: (e) => u(`/hc/${c()}/articles/${e}`, "https://creator-support.discord.com"),
+    getTwitterURL: () => (0, i.A)(a.Pq7.TWITTER),
+    getCommunityURL: () => u(`/hc/${c()}`),
+    getSubmitRequestURL(e) {
+        let t = u(`/hc/${c()}/requests/new?platform=${encodeURIComponent((0, s.getPlatformName)())}`);
+        return null != e && (t += `&device_info=${encodeURIComponent(e)}`), t;
+    },
+    getSearchURL(e) {
+        let t = encodeURIComponent(e);
+        return u(`/hc/${c()}/search?utf8=%E2%9C%93&query=${t}&commit=Search`);
+    },
+    getFeaturedArticlesJsonURL: () => u("/api/v2/help_center/en-us/articles.json?label_names=featured"),
+    getAppsSupportURL: (e) => u(`/hc/${c()}/articles/${e}`, "https://support-apps.discord.com"),
+};

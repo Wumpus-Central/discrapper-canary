@@ -1,1 +1,5 @@
-var i=n(431875),r=n(517688),s=n(984638),a=s&&s.isSet;e.exports=a?r(a):i
+var i = n(431875),
+    r = n(517688),
+    s = n(984638),
+    a = s && s.isSet;
+e.exports = a ? r(a) : i;

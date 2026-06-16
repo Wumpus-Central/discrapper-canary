@@ -1,1 +1,269 @@
-n.d(t,{w:()=>Z,A:()=>Q});var i=n(627968),l=n(64700),r=n(503698),s=n.n(r),a=n(17928),E=n(661531),o=n(990078),c=n(862482),_=n(417098),u=n(922016),A=n(695366),T=n(669953),d=n(713125),I=n(608401),N=n(739455),R=n(468689),S=n(976860),O=n(309010),C=n(967198),D=n(792831),P=n(147925),M=n(723702),p=n(529942),m=n(164956);n(321073);var h=n(136722),U=n(44482),g=n(834730),f=n(732771),k=n(260509),y=n(34457),L=n(696451),x=n(317525),G=n(71393),j=n(287809),q=n(488926),v=n(935208),X=n(209700),b=n(652215),B=n(375708),F=n(59742);function w(e){let{guildId:t}=e,n=(0,a.bG)([j.default],()=>j.default.getCurrentUser()),r=(0,a.bG)([G.A],()=>G.A.getGuild(t)),s=(0,a.bG)([x.A],()=>x.A.getRolesSnapshot(t)),E=(0,a.bG)([x.A],()=>x.A.getSortedRoles(t)),{impersonateType:o,viewingRoles:c}=(0,a.cf)([m.A],()=>({impersonateType:m.A.getImpersonateType(t),viewingRoles:m.A.getViewingRoles(t)})),_=o===X._.SERVER_SHOP,u=(0,a.bG)([L.Ay],()=>null!=n?L.Ay.getTrueMember(t,n.id):null),A=null!=r?s[(0,k.af)(r)]:null,[T,d]=l.useState(()=>{let e=null==c?[]:v.default.keys(c);return null!=A&&e.push(A.id),e}),I=l.useRef(r);l.useEffect(()=>{let e={},t=I.current;if(null!=t&&null!=o){for(let t of T){let n=s[t];null!=n&&(e[t]=n)}(0,p.IA)(t.id,{type:o,roles:e})}},[T,o,s]);let N=null!=r&&null!=n&&null!=u?E.find(e=>u.roles.includes(e.id)):void 0,R=l.useMemo(()=>null!=r&&null!=n?E.filter(e=>!(0,y.Oy)(e)).filter(e=>!_||e.tags?.subscription_listing_id!=null).filter(e=>N?.id===e.id||q.wO(r,n.id,N,e)):[],[r,n,_,N,E]),S=l.useMemo(()=>{let e=Array.from(R).map(e=>({leading:H(e),value:e.id,label:e.name,id:e.id.toString(),disabled:!1}));return null!=r&&null!=A&&e.push({leading:H(A),value:A.id,label:A.name,id:A.id.toString(),disabled:!0}),e},[R,r,A]);if(null==n||null==r||null==u)return null;let O={};return(u.roles.forEach(e=>{let t=s[e];null!=t&&(O[t.id]=t)}),h.zy(q.aH({forceRoles:O,context:r}),h.kg(b.xBc.MANAGE_GUILD,b.xBc.MANAGE_ROLES))||(0,k.bM)(r,n))?(0,i.jsx)("div",{className:F.kL,children:(0,i.jsxs)(f.iS,{selectionMode:"multiple",options:S,value:T,onSelectionChange:e=>{d(e)},children:[(0,i.jsx)(f.a3,{hideTags:!0,autoFocus:!0,placeholder:B.intl.string(B.t.Sojqsr)}),(0,i.jsx)(f.X2,{renderListItem:e=>(0,i.jsx)(U.c,{...e})})]})}):(0,i.jsx)(g.E,{variant:"text-md/medium",children:B.intl.string(B.t.MNSTbY)})}function H(e){return()=>(0,i.jsx)("svg",{width:"12",height:"12",viewBox:"0 0 12 12",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:(0,i.jsx)("circle",{cx:"6",cy:"6",r:"6",fill:e.colorString??"currentColor"})})}var V=n(746080);n(500208);var Y=n(2242),W=n(595156);function K(e){let{className:t,onClick:n,children:l,buttonRef:r}=e;return(0,i.jsx)(c.$n,{buttonRef:r,className:s()(W.x6,t),innerClassName:W.hZ,look:c.$n.Looks.OUTLINED,color:c.$n.Colors.WHITE,size:c.$n.Sizes.NONE,onClick:n,children:l})}function $(e){let{onClick:t,className:n}=e;return(0,i.jsx)(K,{onClick:t,className:n,children:B.intl.string(B.t.R9GHya)})}function Q(){let e=l.useRef(null),t=(0,a.bG)([C.A],()=>C.A.getGuildId()),n=(0,a.bG)([O.A],()=>O.A.getChannelId(t)),{viewingRoles:r,backNavigationSection:s,isFullServerPreview:c,isServerShopPreview:M}=(0,a.cf)([m.A],()=>({viewingRoles:null!=t?m.A.getViewingRoles(t):null,backNavigationSection:m.A.getBackNavigationSection(t),isFullServerPreview:null!=t&&m.A.isFullServerPreview(t),isServerShopPreview:null!=t&&m.A.isViewingServerShop(t)}));if(null==r||null==t)return null;let h=function(e){switch(e){case b.BEX.INTEGRATIONS:return B.intl.string(B.t.k7LGdh);case b.BEX.ROLE_SUBSCRIPTIONS:return B.intl.string(B.t.bRqiqa);case b.BEX.ONBOARDING:return B.intl.string(B.t.qZpU3S);default:return B.intl.string(B.t.MTIXhi)}}(s),U=s===b.BEX.ROLE_SUBSCRIPTIONS?B.intl.string(B.t.hZUCzd):B.intl.string(B.t["/djIh7"]),g=n===V.VV.GUILD_ONBOARDING,f=e=>{let{backToSettings:n}=e;null!=t&&(m.A.isFullServerPreview(t)&&(0,S.pX)(b.BVt.CHANNEL(t)),d.Ay.shouldShowOnboarding(t)&&(T.A.finishOnboarding(t),(0,I.Jg)(t)),(0,p.rf)(t),n&&R.A.open(t,s),s===b.BEX.ROLE_SUBSCRIPTIONS&&(0,N.Fx)(t))};return(0,i.jsxs)(_.$T,{color:_.Hv.BRAND,className:W.lm,children:[(0,i.jsxs)(K,{onClick:()=>f({backToSettings:!0}),className:W.R4,children:[(0,i.jsx)(D.A,{width:16,height:16,direction:D.A.Directions.LEFT,className:W.lJ}),h]}),g&&c?(0,i.jsx)("div",{className:W.XI,children:(0,i.jsx)("div",{className:W.ut,children:B.intl.string(B.t.PxbiAf)})}):(0,i.jsxs)("div",{className:W.XI,children:[(0,i.jsx)("div",{className:W.ut,children:c?B.intl.formatToPlainString(B.t["0PHahI"],{numRoles:Object.keys(r).length}):B.intl.formatToPlainString(B.t.vMlK8t,{numRoles:Object.keys(r).length})}),(0,i.jsx)(u.Y,{targetElementRef:e,position:"bottom",renderPopout:()=>(0,i.jsx)(w,{guildId:t}),children:t=>{let{onClick:n}=t;return(0,i.jsxs)(K,{onClick:n,buttonRef:e,children:[U,(0,i.jsx)(P.A,{width:16,height:16,direction:P.A.Directions.DOWN,className:W.k5})]})}}),c&&(0,i.jsx)(o.m,{asContainer:!0,text:B.intl.string(B.t.mW4DUE),children:(0,i.jsx)(A.E,{size:"xs",color:E.A.unsafe_rawColors.YELLOW_300.css})}),M&&(0,i.jsx)(o.m,{asContainer:!0,text:B.intl.formatToPlainString(B.t.eummvd,{maxTiers:Y.f7,maxProducts:50}),children:(0,i.jsx)(A.E,{size:"xs",color:E.A.unsafe_rawColors.YELLOW_300.css})})]}),c||s===b.BEX.ROLE_SUBSCRIPTIONS?null:(0,i.jsx)($,{onClick:()=>f({backToSettings:!1}),className:W.ZY})]})}function Z(e){let{guildId:t}=e;return(0,a.bG)([m.A],()=>m.A.isViewingRoles(t))?(0,i.jsx)("div",{className:s()(W.xd,{[W.KF]:(0,M.isWindows)(),[W.Xz]:(0,M.isMac)(),[W.pS]:(0,M.isLinux)()}),children:(0,i.jsx)(Q,{})}):null}
+"use strict";
+n.d(t, { w: () => X, A: () => Z });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(17928),
+    l = n(661531),
+    u = n(990078),
+    c = n(862482),
+    d = n(417098),
+    _ = n(922016),
+    h = n(695366),
+    f = n(669953),
+    p = n(713125),
+    E = n(608401),
+    m = n(739455),
+    g = n(468689),
+    A = n(976860),
+    I = n(309010),
+    T = n(967198),
+    S = n(792831),
+    y = n(147925),
+    C = n(723702),
+    N = n(529942),
+    v = n(164956);
+n(321073);
+var R = n(136722),
+    O = n(44482),
+    b = n(834730),
+    D = n(732771),
+    L = n(260509),
+    w = n(34457),
+    M = n(696451),
+    P = n(317525),
+    x = n(71393),
+    k = n(287809),
+    U = n(488926),
+    G = n(935208),
+    F = n(209700),
+    V = n(652215),
+    B = n(375708),
+    j = n(59742);
+function H(e) {
+    let { guildId: t } = e,
+        n = (0, o.bG)([k.default], () => k.default.getCurrentUser()),
+        s = (0, o.bG)([x.A], () => x.A.getGuild(t)),
+        a = (0, o.bG)([P.A], () => P.A.getRolesSnapshot(t)),
+        l = (0, o.bG)([P.A], () => P.A.getSortedRoles(t)),
+        { impersonateType: u, viewingRoles: c } = (0, o.cf)([v.A], () => ({
+            impersonateType: v.A.getImpersonateType(t),
+            viewingRoles: v.A.getViewingRoles(t),
+        })),
+        d = u === F._.SERVER_SHOP,
+        _ = (0, o.bG)([M.Ay], () => (null != n ? M.Ay.getTrueMember(t, n.id) : null)),
+        h = null != s ? a[(0, L.af)(s)] : null,
+        [f, p] = r.useState(() => {
+            let e = null == c ? [] : G.default.keys(c);
+            return null != h && e.push(h.id), e;
+        }),
+        E = r.useRef(s);
+    r.useEffect(() => {
+        let e = {},
+            t = E.current;
+        if (null != t && null != u) {
+            for (let t of f) {
+                let n = a[t];
+                null != n && (e[t] = n);
+            }
+            (0, N.IA)(t.id, { type: u, roles: e });
+        }
+    }, [f, u, a]);
+    let m = null != s && null != n && null != _ ? l.find((e) => _.roles.includes(e.id)) : void 0,
+        g = r.useMemo(
+            () =>
+                null != s && null != n
+                    ? l
+                          .filter((e) => !(0, w.Oy)(e))
+                          .filter((e) => !d || e.tags?.subscription_listing_id != null)
+                          .filter((e) => m?.id === e.id || U.wO(s, n.id, m, e))
+                    : [],
+            [s, n, d, m, l],
+        ),
+        A = r.useMemo(() => {
+            let e = Array.from(g).map((e) => ({
+                leading: Y(e),
+                value: e.id,
+                label: e.name,
+                id: e.id.toString(),
+                disabled: !1,
+            }));
+            return (
+                null != s &&
+                    null != h &&
+                    e.push({ leading: Y(h), value: h.id, label: h.name, id: h.id.toString(), disabled: !0 }),
+                e
+            );
+        }, [g, s, h]);
+    if (null == n || null == s || null == _) return null;
+    let I = {};
+    return (_.roles.forEach((e) => {
+        let t = a[e];
+        null != t && (I[t.id] = t);
+    }),
+    R.zy(U.aH({ forceRoles: I, context: s }), R.kg(V.xBc.MANAGE_GUILD, V.xBc.MANAGE_ROLES)) || (0, L.bM)(s, n))
+        ? (0, i.jsx)("div", {
+              className: j.kL,
+              children: (0, i.jsxs)(D.iS, {
+                  selectionMode: "multiple",
+                  options: A,
+                  value: f,
+                  onSelectionChange: (e) => {
+                      p(e);
+                  },
+                  children: [
+                      (0, i.jsx)(D.a3, { hideTags: !0, autoFocus: !0, placeholder: B.intl.string(B.t.Sojqsr) }),
+                      (0, i.jsx)(D.X2, { renderListItem: (e) => (0, i.jsx)(O.c, { ...e }) }),
+                  ],
+              }),
+          })
+        : (0, i.jsx)(b.E, { variant: "text-md/medium", children: B.intl.string(B.t.MNSTbY) });
+}
+function Y(e) {
+    return () =>
+        (0, i.jsx)("svg", {
+            width: "12",
+            height: "12",
+            viewBox: "0 0 12 12",
+            fill: "none",
+            xmlns: "http://www.w3.org/2000/svg",
+            children: (0, i.jsx)("circle", { cx: "6", cy: "6", r: "6", fill: e.colorString ?? "currentColor" }),
+        });
+}
+var W = n(746080);
+n(500208);
+var K = n(2242),
+    $ = n(595156);
+function z(e) {
+    let { className: t, onClick: n, children: r, buttonRef: s } = e;
+    return (0, i.jsx)(c.$n, {
+        buttonRef: s,
+        className: a()($.x6, t),
+        innerClassName: $.hZ,
+        look: c.$n.Looks.OUTLINED,
+        color: c.$n.Colors.WHITE,
+        size: c.$n.Sizes.NONE,
+        onClick: n,
+        children: r,
+    });
+}
+function q(e) {
+    let { onClick: t, className: n } = e;
+    return (0, i.jsx)(z, { onClick: t, className: n, children: B.intl.string(B.t.R9GHya) });
+}
+function Z() {
+    let e = r.useRef(null),
+        t = (0, o.bG)([T.A], () => T.A.getGuildId()),
+        n = (0, o.bG)([I.A], () => I.A.getChannelId(t)),
+        {
+            viewingRoles: s,
+            backNavigationSection: a,
+            isFullServerPreview: c,
+            isServerShopPreview: C,
+        } = (0, o.cf)([v.A], () => ({
+            viewingRoles: null != t ? v.A.getViewingRoles(t) : null,
+            backNavigationSection: v.A.getBackNavigationSection(t),
+            isFullServerPreview: null != t && v.A.isFullServerPreview(t),
+            isServerShopPreview: null != t && v.A.isViewingServerShop(t),
+        }));
+    if (null == s || null == t) return null;
+    let R = (function (e) {
+            switch (e) {
+                case V.BEX.INTEGRATIONS:
+                    return B.intl.string(B.t.k7LGdh);
+                case V.BEX.ROLE_SUBSCRIPTIONS:
+                    return B.intl.string(B.t.bRqiqa);
+                case V.BEX.ONBOARDING:
+                    return B.intl.string(B.t.qZpU3S);
+                default:
+                    return B.intl.string(B.t.MTIXhi);
+            }
+        })(a),
+        O = a === V.BEX.ROLE_SUBSCRIPTIONS ? B.intl.string(B.t.hZUCzd) : B.intl.string(B.t["/djIh7"]),
+        b = n === W.VV.GUILD_ONBOARDING,
+        D = (e) => {
+            let { backToSettings: n } = e;
+            null != t &&
+                (v.A.isFullServerPreview(t) && (0, A.pX)(V.BVt.CHANNEL(t)),
+                p.Ay.shouldShowOnboarding(t) && (f.A.finishOnboarding(t), (0, E.Jg)(t)),
+                (0, N.rf)(t),
+                n && g.A.open(t, a),
+                a === V.BEX.ROLE_SUBSCRIPTIONS && (0, m.Fx)(t));
+        };
+    return (0, i.jsxs)(d.$T, {
+        color: d.Hv.BRAND,
+        className: $.lm,
+        children: [
+            (0, i.jsxs)(z, {
+                onClick: () => D({ backToSettings: !0 }),
+                className: $.R4,
+                children: [
+                    (0, i.jsx)(S.A, { width: 16, height: 16, direction: S.A.Directions.LEFT, className: $.lJ }),
+                    R,
+                ],
+            }),
+            b && c
+                ? (0, i.jsx)("div", {
+                      className: $.XI,
+                      children: (0, i.jsx)("div", { className: $.ut, children: B.intl.string(B.t.PxbiAf) }),
+                  })
+                : (0, i.jsxs)("div", {
+                      className: $.XI,
+                      children: [
+                          (0, i.jsx)("div", {
+                              className: $.ut,
+                              children: c
+                                  ? B.intl.formatToPlainString(B.t["0PHahI"], { numRoles: Object.keys(s).length })
+                                  : B.intl.formatToPlainString(B.t.vMlK8t, { numRoles: Object.keys(s).length }),
+                          }),
+                          (0, i.jsx)(_.Y, {
+                              targetElementRef: e,
+                              position: "bottom",
+                              renderPopout: () => (0, i.jsx)(H, { guildId: t }),
+                              children: (t) => {
+                                  let { onClick: n } = t;
+                                  return (0, i.jsxs)(z, {
+                                      onClick: n,
+                                      buttonRef: e,
+                                      children: [
+                                          O,
+                                          (0, i.jsx)(y.A, {
+                                              width: 16,
+                                              height: 16,
+                                              direction: y.A.Directions.DOWN,
+                                              className: $.k5,
+                                          }),
+                                      ],
+                                  });
+                              },
+                          }),
+                          c &&
+                              (0, i.jsx)(u.m, {
+                                  asContainer: !0,
+                                  text: B.intl.string(B.t.mW4DUE),
+                                  children: (0, i.jsx)(h.E, { size: "xs", color: l.A.unsafe_rawColors.YELLOW_300.css }),
+                              }),
+                          C &&
+                              (0, i.jsx)(u.m, {
+                                  asContainer: !0,
+                                  text: B.intl.formatToPlainString(B.t.eummvd, { maxTiers: K.f7, maxProducts: 50 }),
+                                  children: (0, i.jsx)(h.E, { size: "xs", color: l.A.unsafe_rawColors.YELLOW_300.css }),
+                              }),
+                      ],
+                  }),
+            c || a === V.BEX.ROLE_SUBSCRIPTIONS
+                ? null
+                : (0, i.jsx)(q, { onClick: () => D({ backToSettings: !1 }), className: $.ZY }),
+        ],
+    });
+}
+function X(e) {
+    let { guildId: t } = e;
+    return (0, o.bG)([v.A], () => v.A.isViewingRoles(t))
+        ? (0, i.jsx)("div", {
+              className: a()($.xd, { [$.KF]: (0, C.isWindows)(), [$.Xz]: (0, C.isMac)(), [$.pS]: (0, C.isLinux)() }),
+              children: (0, i.jsx)(Z, {}),
+          })
+        : null;
+}

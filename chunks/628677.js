@@ -1,1 +1,15 @@
-"use strict";n.d(t,{R:()=>o});var i=n(64700),r=n(885386),s=n(371794),a=n(218394);function o(e,t){let{shouldAnimate:n=!0}=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},o=r.kt.useSetting(),l=(0,a.j)(),u=n&&l&&o;return i.useMemo(()=>{if(e?.image_asset!=null)return(0,s.YE)(e.application_id,e.image_asset,t,u?void 0:"webp")},[t,e,u])}
+"use strict";
+n.d(t, { R: () => o });
+var i = n(64700),
+    r = n(885386),
+    s = n(371794),
+    a = n(218394);
+function o(e, t) {
+    let { shouldAnimate: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        o = r.kt.useSetting(),
+        l = (0, a.j)(),
+        u = n && l && o;
+    return i.useMemo(() => {
+        if (e?.image_asset != null) return (0, s.YE)(e.application_id, e.image_asset, t, u ? void 0 : "webp");
+    }, [t, e, u]);
+}

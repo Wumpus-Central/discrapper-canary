@@ -1,1 +1,100 @@
-n.d(l,{A:()=>I});var s=n(627968),t=n(64700),a=n(503698),i=n.n(a),r=n(702841),c=n(993077),d=n(97808),u=n(778712),o=n(834730),m=n(329177),x=n(66834),h=n(775602),g=n(569944),j=n(903209),A=n(71393),N=n(287809),f=n(562153),v=n(427262),b=n(108660);function I(e){var l,n;let a,{guildId:I,welcomeMessage:p,className:C}=e,E=(0,r.bG)([A.A],()=>A.A.getGuild(I)),G=(0,r.bG)([h.Ay],()=>h.Ay.useReducedMotion),M=(0,r.bG)([N.default],()=>N.default.getUser(p?.authorIds[0])),y=t.useMemo(()=>null!=E&&null!=M&&(0,g.c)(E,M)?M:null,[E,M]),L=(0,r.bG)([N.default],()=>N.default.getCurrentUser()),_=t.useMemo(()=>p?.authorIds??[],[p]);t.useEffect(()=>{x.A.requestMembersById(I,_)},[I,_]),t.useEffect(()=>{null!=y&&(0,j.A)(y.id,y.getAvatarURL(I,48),{guildId:I})},[y,I]);let k=f.Ay.useName(I,null,y),U=(0,v.tx)(L);if(null==y||null==L||null==p)return null;let R=null!=E&&E.ownerId===y.id;return(0,s.jsxs)(c.Z,{className:i()(b.fr,C),children:[(0,s.jsx)("div",{className:b.oJ}),G?(0,s.jsx)(d.eu,{src:y.getAvatarURL(I,48),size:u._3.SIZE_48,className:b.my,"aria-label":y.username}):(0,s.jsx)(d.Js,{src:y.getAvatarURL(I,48),size:u._3.SIZE_48,className:b.my,"aria-label":y.username}),(0,s.jsx)("div",{className:b.uh}),(0,s.jsxs)("div",{className:b.H0,children:[(0,s.jsxs)("div",{className:b.HO,children:[(0,s.jsx)(o.E,{variant:"text-sm/semibold",color:"text-strong",children:k}),R?(0,s.jsx)(m.p,{size:"xxs",color:"currentColor",className:b.Dd}):null]}),(0,s.jsx)(o.E,{variant:"text-md/medium",children:(l=p?.message,n=U??L.username,a=l.split(/\[@username\]/g),(0,s.jsx)("span",{children:a.map((e,l)=>(0,s.jsxs)(t.Fragment,{children:[e,l<a.length-1?(0,s.jsx)(o.E,{tag:"span",variant:"text-md/semibold",children:`@${n}`}):null]},`username-${l}`))}))})]})]})}
+n.d(l, { A: () => I });
+var s = n(627968),
+    t = n(64700),
+    a = n(503698),
+    i = n.n(a),
+    r = n(702841),
+    c = n(993077),
+    d = n(97808),
+    u = n(778712),
+    o = n(834730),
+    m = n(329177),
+    x = n(66834),
+    h = n(775602),
+    g = n(569944),
+    j = n(903209),
+    A = n(71393),
+    N = n(287809),
+    f = n(562153),
+    v = n(427262),
+    b = n(108660);
+function I(e) {
+    var l, n;
+    let a,
+        { guildId: I, welcomeMessage: p, className: C } = e,
+        E = (0, r.bG)([A.A], () => A.A.getGuild(I)),
+        G = (0, r.bG)([h.Ay], () => h.Ay.useReducedMotion),
+        M = (0, r.bG)([N.default], () => N.default.getUser(p?.authorIds[0])),
+        y = t.useMemo(() => (null != E && null != M && (0, g.c)(E, M) ? M : null), [E, M]),
+        L = (0, r.bG)([N.default], () => N.default.getCurrentUser()),
+        _ = t.useMemo(() => p?.authorIds ?? [], [p]);
+    t.useEffect(() => {
+        x.A.requestMembersById(I, _);
+    }, [I, _]),
+        t.useEffect(() => {
+            null != y && (0, j.A)(y.id, y.getAvatarURL(I, 48), { guildId: I });
+        }, [y, I]);
+    let k = f.Ay.useName(I, null, y),
+        U = (0, v.tx)(L);
+    if (null == y || null == L || null == p) return null;
+    let R = null != E && E.ownerId === y.id;
+    return (0, s.jsxs)(c.Z, {
+        className: i()(b.fr, C),
+        children: [
+            (0, s.jsx)("div", { className: b.oJ }),
+            G
+                ? (0, s.jsx)(d.eu, {
+                      src: y.getAvatarURL(I, 48),
+                      size: u._3.SIZE_48,
+                      className: b.my,
+                      "aria-label": y.username,
+                  })
+                : (0, s.jsx)(d.Js, {
+                      src: y.getAvatarURL(I, 48),
+                      size: u._3.SIZE_48,
+                      className: b.my,
+                      "aria-label": y.username,
+                  }),
+            (0, s.jsx)("div", { className: b.uh }),
+            (0, s.jsxs)("div", {
+                className: b.H0,
+                children: [
+                    (0, s.jsxs)("div", {
+                        className: b.HO,
+                        children: [
+                            (0, s.jsx)(o.E, { variant: "text-sm/semibold", color: "text-strong", children: k }),
+                            R ? (0, s.jsx)(m.p, { size: "xxs", color: "currentColor", className: b.Dd }) : null,
+                        ],
+                    }),
+                    (0, s.jsx)(o.E, {
+                        variant: "text-md/medium",
+                        children:
+                            ((l = p?.message),
+                            (n = U ?? L.username),
+                            (a = l.split(/\[@username\]/g)),
+                            (0, s.jsx)("span", {
+                                children: a.map((e, l) =>
+                                    (0, s.jsxs)(
+                                        t.Fragment,
+                                        {
+                                            children: [
+                                                e,
+                                                l < a.length - 1
+                                                    ? (0, s.jsx)(o.E, {
+                                                          tag: "span",
+                                                          variant: "text-md/semibold",
+                                                          children: `@${n}`,
+                                                      })
+                                                    : null,
+                                            ],
+                                        },
+                                        `username-${l}`,
+                                    ),
+                                ),
+                            })),
+                    }),
+                ],
+            }),
+        ],
+    });
+}

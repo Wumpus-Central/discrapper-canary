@@ -1,1 +1,1 @@
-e.exports={R:"heading__66230"}
+t.exports = { R: "heading__66230" };

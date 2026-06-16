@@ -1,1 +1,20 @@
-e.d(r,{m:()=>s});var i=e(636537),d=e(228366),u=e(287809),a=e(652215);async function s(t,r){try{let e=await i.Bo.put({url:a.Rsh.USER_SET_GUILD_IDENTITY,body:{identity_guild_id:t,identity_enabled:r},rejectWithError:!1});return e.ok&&d.h.dispatch({type:"CURRENT_USER_UPDATE",user:{...u.default.getCurrentUser(),...e.body}}),e}catch(t){return t}}
+"use strict";
+n.d(t, { m: () => o });
+var i = n(636537),
+    r = n(228366),
+    s = n(287809),
+    a = n(652215);
+async function o(e, t) {
+    try {
+        let n = await i.Bo.put({
+            url: a.Rsh.USER_SET_GUILD_IDENTITY,
+            body: { identity_guild_id: e, identity_enabled: t },
+            rejectWithError: !1,
+        });
+        return (
+            n.ok && r.h.dispatch({ type: "CURRENT_USER_UPDATE", user: { ...s.default.getCurrentUser(), ...n.body } }), n
+        );
+    } catch (e) {
+        return e;
+    }
+}

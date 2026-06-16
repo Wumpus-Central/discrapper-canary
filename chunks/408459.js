@@ -1,1 +1,12 @@
-var i=n(300823),r=n(776892);e.exports=function(e,t,n,s){var a=!n;n||(n={});for(var o=-1,l=t.length;++o<l;){var u=t[o],c=s?s(n[u],e[u],u,n,e):void 0;void 0===c&&(c=e[u]),a?r(n,u,c):i(n,u,c)}return n}
+var i = n(300823),
+    r = n(776892);
+e.exports = function (e, t, n, s) {
+    var a = !n;
+    n || (n = {});
+    for (var o = -1, l = t.length; ++o < l; ) {
+        var u = t[o],
+            c = s ? s(n[u], e[u], u, n, e) : void 0;
+        void 0 === c && (c = e[u]), a ? r(n, u, c) : i(n, u, c);
+    }
+    return n;
+};

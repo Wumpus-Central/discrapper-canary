@@ -1,1 +1,1 @@
-p.exports={S:"phoneNumber__764ef"}
+p.exports = { S: "phoneNumber__764ef" };

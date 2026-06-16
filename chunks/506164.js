@@ -1,1 +1,68 @@
-t.d(l,{A:()=>d});var n=t(627968),i=t(64700),s=t(331322),a=t(834730),r=t(821609),c=t(847599),u=t(347273);let d=function(e){let{title:l,subtitle:t,description:d,agreement:o,disagreement:m,onAgree:A,onDisagree:g,modalType:h,channelId:x,guildId:N}=e;i.useEffect(()=>{(0,c.Bf)(h,x,N)},[h,x,N]);let j=i.useCallback(()=>{(0,c.mU)(c.IY.NSFW_CHANNEL_DISAGREE_CTA,h,x,N),g?.()},[g,h,x,N]),E=i.useCallback(()=>{(0,c.mU)(c.IY.NSFW_CHANNEL_AGREE_CTA,h,x,N),A?.()},[A,h,x,N]);return(0,n.jsxs)(s.B,{justify:"center",align:"center",direction:"vertical",gap:16,className:u.XG,children:[(0,n.jsxs)(s.B,{gap:8,justify:"center",align:"center",direction:"vertical",children:[(0,n.jsx)(a.E,{variant:"text-lg/semibold",className:u.DD,children:l}),null!=t?(0,n.jsx)(a.E,{variant:"text-md/medium",className:u.VA,color:"text-muted",children:t}):null,(0,n.jsx)(a.E,{variant:"text-md/medium",className:u.h_,color:"text-muted",children:d})]}),(0,n.jsxs)(s.B,{direction:"horizontal",justify:"center",align:"center",gap:16,children:[null!=m&&null!=g?(0,n.jsx)(r.$,{variant:"secondary",text:m,onClick:j}):null,null!=o&&null!=A?(0,n.jsx)(r.$,{onClick:E,text:o}):null]})]})}
+t.d(l, { A: () => d });
+var n = t(627968),
+    i = t(64700),
+    s = t(331322),
+    a = t(834730),
+    r = t(821609),
+    c = t(847599),
+    u = t(347273);
+let d = function (e) {
+    let {
+        title: l,
+        subtitle: t,
+        description: d,
+        agreement: o,
+        disagreement: m,
+        onAgree: A,
+        onDisagree: g,
+        modalType: h,
+        channelId: x,
+        guildId: N,
+    } = e;
+    i.useEffect(() => {
+        (0, c.Bf)(h, x, N);
+    }, [h, x, N]);
+    let j = i.useCallback(() => {
+            (0, c.mU)(c.IY.NSFW_CHANNEL_DISAGREE_CTA, h, x, N), g?.();
+        }, [g, h, x, N]),
+        E = i.useCallback(() => {
+            (0, c.mU)(c.IY.NSFW_CHANNEL_AGREE_CTA, h, x, N), A?.();
+        }, [A, h, x, N]);
+    return (0, n.jsxs)(s.B, {
+        justify: "center",
+        align: "center",
+        direction: "vertical",
+        gap: 16,
+        className: u.XG,
+        children: [
+            (0, n.jsxs)(s.B, {
+                gap: 8,
+                justify: "center",
+                align: "center",
+                direction: "vertical",
+                children: [
+                    (0, n.jsx)(a.E, { variant: "text-lg/semibold", className: u.DD, children: l }),
+                    null != t
+                        ? (0, n.jsx)(a.E, {
+                              variant: "text-md/medium",
+                              className: u.VA,
+                              color: "text-muted",
+                              children: t,
+                          })
+                        : null,
+                    (0, n.jsx)(a.E, { variant: "text-md/medium", className: u.h_, color: "text-muted", children: d }),
+                ],
+            }),
+            (0, n.jsxs)(s.B, {
+                direction: "horizontal",
+                justify: "center",
+                align: "center",
+                gap: 16,
+                children: [
+                    null != m && null != g ? (0, n.jsx)(r.$, { variant: "secondary", text: m, onClick: j }) : null,
+                    null != o && null != A ? (0, n.jsx)(r.$, { onClick: E, text: o }) : null,
+                ],
+            }),
+        ],
+    });
+};

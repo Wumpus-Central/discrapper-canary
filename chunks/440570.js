@@ -1,1 +1,25 @@
-n.d(t,{e:()=>d});var i=n(627968);n(64700);var l=n(503698),s=n.n(l),r=n(834730),a=n(788868),o=n(375708),c=n(577129);function d(e){let t,{premiumType:n,size:l,className:d,tag:u="span",...m}=e;switch(n){case a.PremiumTypes.TIER_0:t=o.intl.string(o.t["t9uG/o"]);break;case a.PremiumTypes.TIER_1:t=o.intl.string(o.t.FSOz78);break;case a.PremiumTypes.TIER_2:t=o.intl.string(o.t.lG6a5x)}return(0,i.jsx)(r.E,{tag:u,variant:`display-${l}`,className:s()(d,c.Q),...m,children:t})}
+"use strict";
+n.d(t, { e: () => c });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(834730),
+    o = n(788868),
+    l = n(375708),
+    u = n(577129);
+function c(e) {
+    let t,
+        { premiumType: n, size: r, className: c, tag: d = "span", ..._ } = e;
+    switch (n) {
+        case o.PremiumTypes.TIER_0:
+            t = l.intl.string(l.t["t9uG/o"]);
+            break;
+        case o.PremiumTypes.TIER_1:
+            t = l.intl.string(l.t.FSOz78);
+            break;
+        case o.PremiumTypes.TIER_2:
+            t = l.intl.string(l.t.lG6a5x);
+    }
+    return (0, i.jsx)(a.E, { tag: d, variant: `display-${r}`, className: s()(c, u.Q), ..._, children: t });
+}

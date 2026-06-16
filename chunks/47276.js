@@ -1,1 +1,16 @@
-"use strict";n.d(t,{e:()=>l,o:()=>u});var i=n(402112),r=n(731692),s=n(944490),a=n(64700);let o=new WeakMap;function l(e,t){let n;return t&&r.B.getGlobalDictionaryForPackage(t)||((n=o.get(e))||(n=new(0,r.B)(e),o.set(e,n)),n)}function u(e,t){let{locale:n}=(0,i.Y)(),r=l(e,t);return(0,a.useMemo)(()=>new(0,s.J)(n,r),[n,r])}
+"use strict";
+n.d(t, { e: () => l, o: () => u });
+var i = n(402112),
+    r = n(731692),
+    s = n(944490),
+    a = n(64700);
+let o = new WeakMap();
+function l(e, t) {
+    let n;
+    return (t && r.B.getGlobalDictionaryForPackage(t)) || ((n = o.get(e)) || ((n = new (0, r.B)(e)), o.set(e, n)), n);
+}
+function u(e, t) {
+    let { locale: n } = (0, i.Y)(),
+        r = l(e, t);
+    return (0, a.useMemo)(() => new (0, s.J)(n, r), [n, r]);
+}

@@ -1,1 +1,28 @@
-"use strict";n.d(t,{E5:()=>o,kI:()=>s});var i,r=n(945810),s=((i={})[i.STEP_1_LOADED=0]="STEP_1_LOADED",i[i.STEP_2_CLICKED_INTERNAL=1]="STEP_2_CLICKED_INTERNAL",i[i.STEP_3_CLICKED_EXTERNAL=2]="STEP_3_CLICKED_EXTERNAL",i[i.STEP_4_VIEWED_NON_IMPRESSION=3]="STEP_4_VIEWED_NON_IMPRESSION",i[i.STEP_5_VIEWED_IMPRESSION=4]="STEP_5_VIEWED_IMPRESSION",i);let a=(0,r.mj)({name:"2026-05-use-ad-analytics-interface",kind:"user",defaultConfig:{enabled:!1,maxStep:-1},variations:{0:{enabled:!1,maxStep:-1},1:{enabled:!0,maxStep:0},2:{enabled:!0,maxStep:1},3:{enabled:!0,maxStep:2},4:{enabled:!0,maxStep:3},5:{enabled:!0,maxStep:4}}});function o(e,t){let n=a.getConfig({location:t});return n.enabled&&e<=n.maxStep}
+"use strict";
+n.d(t, { E5: () => o, kI: () => s });
+var i,
+    r = n(945810),
+    s =
+        (((i = {})[(i.STEP_1_LOADED = 0)] = "STEP_1_LOADED"),
+        (i[(i.STEP_2_CLICKED_INTERNAL = 1)] = "STEP_2_CLICKED_INTERNAL"),
+        (i[(i.STEP_3_CLICKED_EXTERNAL = 2)] = "STEP_3_CLICKED_EXTERNAL"),
+        (i[(i.STEP_4_VIEWED_NON_IMPRESSION = 3)] = "STEP_4_VIEWED_NON_IMPRESSION"),
+        (i[(i.STEP_5_VIEWED_IMPRESSION = 4)] = "STEP_5_VIEWED_IMPRESSION"),
+        i);
+let a = (0, r.mj)({
+    name: "2026-05-use-ad-analytics-interface",
+    kind: "user",
+    defaultConfig: { enabled: !1, maxStep: -1 },
+    variations: {
+        0: { enabled: !1, maxStep: -1 },
+        1: { enabled: !0, maxStep: 0 },
+        2: { enabled: !0, maxStep: 1 },
+        3: { enabled: !0, maxStep: 2 },
+        4: { enabled: !0, maxStep: 3 },
+        5: { enabled: !0, maxStep: 4 },
+    },
+});
+function o(e, t) {
+    let n = a.getConfig({ location: t });
+    return n.enabled && e <= n.maxStep;
+}

@@ -1,1 +1,1 @@
-e.exports=n(237050).Symbol
+e.exports = n(237050).Symbol;

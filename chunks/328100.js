@@ -1,1 +1,736 @@
-l.d(t,{s:()=>ex,A:()=>ef});var n,a,r=l(627968),i=l(64700),s=l(310784),o=l.n(s),c=l(503698),u=l.n(c),d=l(989349),m=l.n(d),_=l(318254),x=l(939249),p=l(366010),f=l(821609),C=l(187322),h=l(638916),g=l(43990),E=l(825484),b=l(17928),v=l(269115),j=l(990078),R=l(834730),N=l(890856),S=l(812993),k=l(442433),A=l(775602),y=l(793574),T=l(688810),I=l(429913),M=l(713517),w=l(427209),L=l(976860),O=l(117218),H=l(363195),B=l(885386),D=l(652165),P=l(67480),U=l(174459),F=l(871123),G=l(733391),V=l(439303),W=l(353281),Y=l(832163),z=l(945810),$=((n={}).CONTROL="control",n.EXPRESSIVE_HOVER="expressive_hover",n.ALWAYS_EXPRESSIVE="always_expressive",n);let q=(0,z.mj)({name:"2026-05-slayer-storefront-exclusive-expressive-flair",kind:"user",defaultConfig:{treatment:"control"},variations:{0:{treatment:"control"},1:{treatment:"expressive_hover"},2:{treatment:"always_expressive"}}});var K=l(69236),X=l(654107),J=l(345938),Q=l(510022),Z=l(533406),ee=l(263911),et=l(971146),el=l(366523),en=l(300182),ea=l(900719);function er(){let[e]=i.useState(()=>Math.floor(1600*Math.random())/1e3);return(0,r.jsx)("div",{className:u()(ea.Vl,ea.Yf),style:{animationDelay:`${e}s`}})}function ei(){let[e]=i.useState(()=>Math.floor(60*Math.random())+20);return(0,r.jsx)("div",{className:ea.RC,style:{width:`${e}%`}})}var es=l(743693),eo=l(652215),ec=l(995393),eu=l(375708);let ed=[[0,50],[0,50],[0,40]],em=o()("#000000").darken(1.5).alpha(.9).hex(),e_=o()("#000000").alpha(0).hex();var ex=((a={})[a.SMALL=0]="SMALL",a[a.MEDIUM=1]="MEDIUM",a[a.EMBEDDED=2]="EMBEDDED",a);function ep(e){let{guildId:t,sku:l,isCardHovered:n,trackCardClick:a,variant:s,analyticsLocations:o,analyticsContext:c}=e,d=i.useCallback(e=>{e.stopPropagation(),null!=l&&(a(ec.bB.FORWARD_BUTTON),(0,J.d)({sku:l,guildId:t,analyticsContext:c,analyticsLocations:o,source:"social-layer-storefront-embed"}))},[l,t,a,c,o]),m=i.useCallback(()=>{a(ec.bB.WISHLIST_BUTTON)},[a]),_=i.useMemo(()=>u()(ea.o,{[ea.H5]:n}),[n]);return(0,r.jsxs)("div",{className:ea.zu,children:[2===s&&(0,r.jsx)(x.D,{className:u()(_,ea.gy),onClick:d,children:(0,r.jsx)(w.A,{size:"refresh_sm",color:"currentColor"})}),(0,r.jsx)(es._,{sku:l,isCardHovered:n,trackButtonClick:m,className:u()(_,ea.ij),location:"social_layer_storefront_card"})]})}function ef(e){let{positionInSection:t,skuId:n,variant:a=0,onClick:s,className:o,analyticsLocations:c}=e,d=i.useRef(null),x=i.useRef(null),w=(0,b.bG)([P.A],()=>P.A.get(n)),{guildId:z}=(0,F.nG)(w?.applicationId),J=w?.applicationId,es=(0,b.bG)([H.A],()=>(0,p.M)(H.A.theme)),ex=(0,b.bG)([A.Ay],()=>A.Ay.useReducedMotion),ef=B.Q_.useSetting(),{isHoveringOrFocusing:eC}=(0,M.A)(d),eh=(0,V.jM)(),{analyticsLocations:eg}=(0,T.Ay)(c??[]),eE=i.useRef({positionInSection:t,analyticsLocations:eg}),[eb,ev]=i.useState(!1),ej=(0,b.bG)([Y.A],()=>null!=n?Y.A.getNormalizedSKUEligibility(n):void 0,[n]),eR=function(e,t){let l=(0,b.bG)([P.A],()=>P.A.get(e)),[n,a]=i.useState(!1),[r,s]=i.useState(!1),o=i.useMemo(()=>(0,F.xf)(l),[l]),c=i.useMemo(()=>(0,F.fq)(l),[l]);return i.useEffect(()=>{if(l?.id==null||n||!t)return;if(null==c)return void a(!0);let e=new Image;return e.src=c.toString(),e.onload=()=>{a(!0)},e.onerror=()=>{a(!0)},()=>{e.onerror=null,e.onload=null,e.src=""}},[c,t,n,l?.id]),i.useEffect(()=>{if(l?.id==null||r||!t)return;if(null==o)return void s(!0);let e=!0;return(0,X.l0)(o.toString()).finally(()=>{e&&s(!0)}),()=>{e=!1}},[r,o,t,l?.id]),i.useMemo(()=>n&&r,[n,r])}(n,eb),eN=(0,O.JL)({sku:w}),eS=eN?.amount,ek=(0,K.o)({orbPriceAmount:eS,location:"social_layer_storefront_card"}),eA=(0,I.h)(w?.applicationId),ey=i.useCallback(e=>{ev(e)},[]),eT=i.useMemo(()=>u()(ea.Nr,{[ea.ax]:0===a,[ea.GW]:1===a,[ea.jz]:2===a}),[a]),{handleCardHover:eI,handleCardUnhover:eM}=function(e){let{skuId:t,applicationId:l,guildId:n,analyticsContext:a,positionInSection:r,analyticsLocations:s}=e,o=i.useRef(!1),c=i.useRef(a),u=i.useRef({positionInSection:r,analyticsLocations:s});return i.useEffect(()=>{c.current=a},[a]),{handleCardHover:i.useCallback(()=>{if(!o.current){let{sessionId:e,guildId:a,applicationId:r,pageIndex:i,pageTitle:s,pageSection:d,pageSectionTitle:m,isUserGuildMember:_,pageHasLeaderboard:x}=c.current,{positionInSection:p,analyticsLocations:f}=u.current;U.default.track(eo.HAw.SLAYER_STOREFRONT_CARD_HOVERED,{slayer_storefront_session_id:e,sku_id:t,guild_id:n??a,application_id:l??r,page_index:i,page_title:s,page_section:d,page_section_title:m,position_in_section:p,is_user_guild_member:_,page_has_leaderboard:x,location_stack:f}),o.current=!0}},[t,l,n]),handleCardUnhover:i.useCallback(()=>{o.current=!1},[])}}({skuId:n,applicationId:J,guildId:z,analyticsContext:eh,positionInSection:t,analyticsLocations:eg}),{handleCardVisibilityChange:ew}=function(e){let{skuId:t,applicationId:l,guildId:n,analyticsContext:a,positionInSection:r,analyticsLocations:s}=e,o=i.useRef(null),c=i.useRef(a),u=i.useRef({positionInSection:r,analyticsLocations:s});i.useEffect(()=>{c.current=a},[a]);let d=i.useCallback(()=>{let{sessionId:e,guildId:a,applicationId:r,pageIndex:i,pageTitle:s,pageSection:o,pageSectionTitle:d,isUserGuildMember:m,pageHasLeaderboard:_}=c.current,{positionInSection:x,analyticsLocations:p}=u.current;U.default.track(eo.HAw.SLAYER_STOREFRONT_CARD_IMPRESSION,{slayer_storefront_session_id:e,sku_id:t,guild_id:n??a,application_id:l??r,page_index:i,page_title:s,page_section:o,page_section_title:d,position_in_section:x,is_user_guild_member:m,page_has_leaderboard:_,location_stack:p})},[t,l,n]),m=i.useCallback(e=>{e?null===o.current&&(o.current=window.setTimeout(()=>{d(),o.current=null},1e3)):null!==o.current&&(clearTimeout(o.current),o.current=null)},[d]);return i.useEffect(()=>()=>{null!==o.current&&(clearTimeout(o.current),o.current=null)},[]),{handleCardVisibilityChange:m}}({skuId:n,applicationId:J,guildId:z,analyticsContext:eh,positionInSection:t,analyticsLocations:eg});i.useEffect(()=>{ew(eb)},[eb]);let eL=i.useCallback(e=>{let{analyticsLocations:t,positionInSection:l}=eE.current,{sessionId:a,guildId:r,applicationId:i,pageIndex:s,pageTitle:o,pageSection:c,pageSectionTitle:u,isUserGuildMember:d,pageHasLeaderboard:m}=eh;U.default.track(eo.HAw.SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED,{slayer_storefront_session_id:a,sku_id:n,guild_id:z??r,application_id:J??i,page_index:s,page_title:o,page_section:c,page_section_title:u,position_in_section:l,is_user_guild_member:d,page_has_leaderboard:m,cta_type:e,location_stack:t})},[n,J,z,eh]),{primaryIconAsset:eO,primaryIconLabel:eH}=i.useMemo(()=>(0,F.Cv)(w,J),[w,J]),eB=(0,b.bG)([Y.A],()=>Y.A.getStorefrontState(J)?.activePage??0),eD=i.useMemo(()=>{let e=w?.tenantMetadata?.socialLayer?.expiresAt;if(null==e)return null;let t=m()(),l=Math.max(m()(e).diff(t,"days"),1);return l<=3?eu.intl.format(eu.t.PWw4Vp,{days:l}):null},[w?.tenantMetadata?.socialLayer?.expiresAt]),eP=(0,F.xf)(w),eU=i.useMemo(()=>{if(!eR)return"none";let[e,t]=ed[a];return`linear-gradient(to top, ${em} ${30+e}%, ${e_} ${30+t}%)`},[a,eR]),eF=i.useCallback(()=>{null!=J&&(0,G.iR)(J,n)},[J,n]),eG=i.useCallback(()=>{eI(),null!=J&&(x.current=setTimeout(()=>{(0,G.iR)(J,n)},1e3))},[J,n,eI]),eV=i.useCallback(()=>{eM(),null!=x.current&&(clearTimeout(x.current),x.current=null)},[eM]);i.useEffect(()=>()=>{null!=x.current&&clearTimeout(x.current)},[]);let{getSocialLayerStorefrontLink:eW}=(0,W.H)(),eY=i.useCallback(()=>{null!=J&&null!=eW&&(0,L.bG)(eW(eB,n,w?.slug))},[J,n,eB,w?.slug,eW]),ez=i.useCallback(e=>{(eL(ec.bB.CARD),null!=s&&w?.applicationId!=null)?s(e,{skuId:n,applicationId:w.applicationId}):eY()},[eL,s,eY,n,w?.applicationId]),e$=i.useCallback(e=>{ef&&(0,k.L3)(e,async()=>{let{default:e}=await l.e("97249").then(l.bind(l,10680));return t=>(0,r.jsx)(e,{...t,skuId:n})})},[ef,n]),eq=i.useMemo(()=>[...eg,y.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON],[eg]),eK=i.useCallback(e=>{e.stopPropagation(),null!=eA&&(eL(ec.bB.BUY_WITH_ORBS_BUTTON),(0,D.B4)({skuId:n,applicationId:eA.id,onComplete:()=>{null!=eA&&null!=w&&(0,Q.n)({sku:w,application:eA,analyticsLocations:eq})},analyticsLocations:eq}))},[w,eA,n,eL,eq]),eX=i.useCallback(e=>{e.stopPropagation(),null!=w&&(eL(ec.bB.BUY_BUTTON),(0,Z.a)(w,{isGift:!1},{analyticsLocations:eq,guildId:z}))},[w,z,eL,eq]),{priceComponent:eJ,extendedHeight:eQ,displayPrice:eZ}=function(e){let{sku:t,orbsGate:l,orbPriceAmount:n}=e,{normalPrice:a,discountedPrice:s,discountPercent:o,userPrice:c}=(0,O.CD)({sku:t}),u=i.useMemo(()=>null!=t&&null!=t.orbsReward&&t.orbsReward>0?(0,r.jsx)("div",{className:ea.pt,children:(0,r.jsx)(R.E,{variant:"text-sm/semibold",color:"currentColor",children:eu.intl.format(eu.t.GiVd2Q,{orbCount:t.orbsReward,orbIconHook:()=>(0,r.jsx)(_.C,{size:"xs",color:"currentColor"},"orbs-icon")})})}):null,[t]);return null!=t&&(0,F.mC)(t)?"CAN_CHECKOUT"===l?{priceComponent:(0,r.jsxs)("div",{className:ea.p6,children:[(0,r.jsx)(_.C,{size:"xs",color:"white"}),(0,r.jsx)(R.E,{variant:"text-md/bold",color:"always-white",lineClamp:1,children:n})]}),extendedHeight:!1,displayPrice:c}:null!=o&&null!=s?{priceComponent:(0,r.jsxs)("div",{children:[(0,r.jsxs)("div",{className:ea.p6,children:[null!=a&&(0,r.jsx)(R.E,{className:ea.of,variant:"text-md/medium",color:"text-muted",lineClamp:1,children:a}),(0,r.jsx)(R.E,{variant:"text-md/bold",color:"always-white",lineClamp:1,children:s}),(0,r.jsxs)(R.E,{variant:"text-md/bold",color:"text-feedback-positive",lineClamp:1,children:["(",o,")"]})]}),u]}),extendedHeight:null!=u,displayPrice:c}:{priceComponent:(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(R.E,{variant:"text-md/bold",color:"always-white",lineClamp:1,children:a}),u]}),extendedHeight:!1,displayPrice:c}:{priceComponent:null,extendedHeight:!1,displayPrice:c}}({sku:w,orbsGate:ek,orbPriceAmount:eS}),e0=function(e){let{location:t}=e;return q.useConfig({location:t}).treatment}({location:"social_layer_storefront_card"}),e1=w?.exclusive===!0&&2!==a&&(e0===$.EXPRESSIVE_HOVER||e0===$.ALWAYS_EXPRESSIVE),e3=i.useMemo(()=>"CAN_CHECKOUT"===ek?(0,r.jsx)(f.$,{variant:"primary",onMouseDown:eF,onClick:eK,"aria-label":eu.intl.formatToPlainString(eu.t.yi41qQ,{orbPrice:eS}),text:eu.intl.format(eu.t.JC15qj,{orbPrice:eS,orbIconHook:()=>(0,r.jsx)(_.C,{className:ea.fN,size:"sm",color:"currentColor"},"orbs-icon")}),fullWidth:!0}):(0,r.jsx)(f.$,{variant:"primary",onMouseDown:eF,onClick:eX,text:null!=eZ?eu.intl.format(eu.t.Xp5WTn,{price:eZ}):eu.intl.string(eu.t.boqtTA),fullWidth:!0}),[ek,eK,eX,eF,eS,eZ]);if(null==w)return null;let e9=(0,F.fq)(w),e2=e1?(0,r.jsx)("div",{className:u()(ea.mN,{[ea.Oj]:e0===$.ALWAYS_EXPRESSIVE,[ea.T_]:e0===$.EXPRESSIVE_HOVER}),"aria-hidden":!0}):null,e8=(0,r.jsx)(v.L,{innerRef:d,onChange:ey,threshold:0,children:(0,r.jsx)(C.vN,{children:(0,r.jsxs)(N.s,{onClick:ez,onContextMenu:e$,onMouseEnter:eG,onMouseLeave:eV,className:u()(eT,{[ea.Zl]:!ex&&2!==a,[ea.BN]:es,[es?ea.Mn:ea.YF]:eC,[ea.Rc]:!eR},o),ref:d,"aria-label":w.name,children:[w.exclusive?(0,r.jsx)("div",{className:ea.fC,children:(0,r.jsx)(ee.I,{})}):null!=eD&&(0,r.jsx)(S.Lp,{text:eD,disableColor:!0,className:ea.qS}),(0,r.jsx)(ep,{sku:w,guildId:z,isCardHovered:eC,variant:a,trackCardClick:eL,analyticsLocations:eg,analyticsContext:eh}),null!=e9?eR?(0,r.jsx)(el.A,{containerClassName:ea.Vl,foregroundImageClassName:ea.wP,cardImage:e9,altText:w.name,shape:"custom",backgroundImageClassName:ea.GC,cardBackgroundImage:eP,cssPosition:"absolute"}):(0,r.jsx)(er,{}):(0,r.jsx)("div",{className:ea.t7,children:(0,r.jsx)(h.q,{color:"white",size:"custom",height:80,width:80,className:ea.Cw})}),2!==a?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)("div",{className:ea.iZ,style:{background:eU}}),(0,r.jsx)(g.N,{theme:eo.NJ8.DARKER,children:e=>(0,r.jsxs)("div",{className:u()(ea.zH,e),children:[(0,r.jsxs)("div",{className:u()(ea.gn,{[ea.ov]:!(0,F.mC)(w),[ea.w4]:eQ}),children:[eR&&(0,r.jsx)("div",{className:ea.S1,children:(0,r.jsx)(et.V,{textColor:"always-white"})}),eR?(0,r.jsxs)(r.Fragment,{children:[null!=eO&&(0,r.jsx)("img",{src:eO.toString(),alt:eH,className:ea.ye}),(0,r.jsx)(R.E,{color:"always-white",variant:"text-md/medium",lineClamp:1,children:w.name})]}):(0,r.jsx)(ei,{})]}),(0,r.jsx)("div",{className:ea.iQ,children:eR?eJ:(0,r.jsx)(ei,{})})]})}),(0,r.jsx)("div",{className:ea.li,children:(0,r.jsxs)(E.e,{wrap:!1,fullWidth:!0,children:[ej?e3:(0,r.jsx)(j.m,{text:eu.intl.string(eu.t.IqlPbQ),children:(0,r.jsx)(f.$,{variant:"primary",onClick:e=>{e.stopPropagation(),eL(ec.bB.VIEW_DETAILS_BUTTON),eY()},text:eu.intl.string(eu.t.KLBTgF),fullWidth:!0})}),(0,r.jsx)(en.A,{onGift:e=>{e.stopPropagation(),eL(ec.bB.GIFT_BUTTON),(0,Z.a)(w,{isGift:!0},{analyticsLocations:[...eg,y.A.SLAYER_STOREFRONT_CARD_GIFT_BUTTON]})}})]})})]}):null]})})});return e1?(0,r.jsxs)("div",{className:ea.ur,children:[e2,e8]}):e8}
+l.d(t, { s: () => ex, A: () => ef });
+var n,
+    a,
+    r = l(627968),
+    i = l(64700),
+    s = l(310784),
+    o = l.n(s),
+    c = l(503698),
+    u = l.n(c),
+    d = l(989349),
+    m = l.n(d),
+    _ = l(318254),
+    x = l(939249),
+    p = l(366010),
+    f = l(821609),
+    C = l(187322),
+    h = l(638916),
+    g = l(43990),
+    E = l(825484),
+    b = l(17928),
+    v = l(269115),
+    j = l(990078),
+    R = l(834730),
+    N = l(890856),
+    S = l(812993),
+    k = l(442433),
+    A = l(775602),
+    y = l(793574),
+    T = l(688810),
+    I = l(429913),
+    M = l(713517),
+    w = l(427209),
+    L = l(976860),
+    O = l(117218),
+    H = l(363195),
+    B = l(885386),
+    D = l(652165),
+    P = l(67480),
+    U = l(174459),
+    F = l(871123),
+    G = l(733391),
+    V = l(439303),
+    W = l(353281),
+    Y = l(832163),
+    z = l(945810),
+    $ =
+        (((n = {}).CONTROL = "control"),
+        (n.EXPRESSIVE_HOVER = "expressive_hover"),
+        (n.ALWAYS_EXPRESSIVE = "always_expressive"),
+        n);
+let q = (0, z.mj)({
+    name: "2026-05-slayer-storefront-exclusive-expressive-flair",
+    kind: "user",
+    defaultConfig: { treatment: "control" },
+    variations: {
+        0: { treatment: "control" },
+        1: { treatment: "expressive_hover" },
+        2: { treatment: "always_expressive" },
+    },
+});
+var K = l(69236),
+    X = l(654107),
+    J = l(345938),
+    Q = l(510022),
+    Z = l(533406),
+    ee = l(263911),
+    et = l(971146),
+    el = l(366523),
+    en = l(300182),
+    ea = l(900719);
+function er() {
+    let [e] = i.useState(() => Math.floor(1600 * Math.random()) / 1e3);
+    return (0, r.jsx)("div", { className: u()(ea.Vl, ea.Yf), style: { animationDelay: `${e}s` } });
+}
+function ei() {
+    let [e] = i.useState(() => Math.floor(60 * Math.random()) + 20);
+    return (0, r.jsx)("div", { className: ea.RC, style: { width: `${e}%` } });
+}
+var es = l(743693),
+    eo = l(652215),
+    ec = l(995393),
+    eu = l(375708);
+let ed = [
+        [0, 50],
+        [0, 50],
+        [0, 40],
+    ],
+    em = o()("#000000").darken(1.5).alpha(0.9).hex(),
+    e_ = o()("#000000").alpha(0).hex();
+var ex = (((a = {})[(a.SMALL = 0)] = "SMALL"), (a[(a.MEDIUM = 1)] = "MEDIUM"), (a[(a.EMBEDDED = 2)] = "EMBEDDED"), a);
+function ep(e) {
+    let {
+            guildId: t,
+            sku: l,
+            isCardHovered: n,
+            trackCardClick: a,
+            variant: s,
+            analyticsLocations: o,
+            analyticsContext: c,
+        } = e,
+        d = i.useCallback(
+            (e) => {
+                e.stopPropagation(),
+                    null != l &&
+                        (a(ec.bB.FORWARD_BUTTON),
+                        (0, J.d)({
+                            sku: l,
+                            guildId: t,
+                            analyticsContext: c,
+                            analyticsLocations: o,
+                            source: "social-layer-storefront-embed",
+                        }));
+            },
+            [l, t, a, c, o],
+        ),
+        m = i.useCallback(() => {
+            a(ec.bB.WISHLIST_BUTTON);
+        }, [a]),
+        _ = i.useMemo(() => u()(ea.o, { [ea.H5]: n }), [n]);
+    return (0, r.jsxs)("div", {
+        className: ea.zu,
+        children: [
+            2 === s &&
+                (0, r.jsx)(x.D, {
+                    className: u()(_, ea.gy),
+                    onClick: d,
+                    children: (0, r.jsx)(w.A, { size: "refresh_sm", color: "currentColor" }),
+                }),
+            (0, r.jsx)(es._, {
+                sku: l,
+                isCardHovered: n,
+                trackButtonClick: m,
+                className: u()(_, ea.ij),
+                location: "social_layer_storefront_card",
+            }),
+        ],
+    });
+}
+function ef(e) {
+    let { positionInSection: t, skuId: n, variant: a = 0, onClick: s, className: o, analyticsLocations: c } = e,
+        d = i.useRef(null),
+        x = i.useRef(null),
+        w = (0, b.bG)([P.A], () => P.A.get(n)),
+        { guildId: z } = (0, F.nG)(w?.applicationId),
+        J = w?.applicationId,
+        es = (0, b.bG)([H.A], () => (0, p.M)(H.A.theme)),
+        ex = (0, b.bG)([A.Ay], () => A.Ay.useReducedMotion),
+        ef = B.Q_.useSetting(),
+        { isHoveringOrFocusing: eC } = (0, M.A)(d),
+        eh = (0, V.jM)(),
+        { analyticsLocations: eg } = (0, T.Ay)(c ?? []),
+        eE = i.useRef({ positionInSection: t, analyticsLocations: eg }),
+        [eb, ev] = i.useState(!1),
+        ej = (0, b.bG)([Y.A], () => (null != n ? Y.A.getNormalizedSKUEligibility(n) : void 0), [n]),
+        eR = (function (e, t) {
+            let l = (0, b.bG)([P.A], () => P.A.get(e)),
+                [n, a] = i.useState(!1),
+                [r, s] = i.useState(!1),
+                o = i.useMemo(() => (0, F.xf)(l), [l]),
+                c = i.useMemo(() => (0, F.fq)(l), [l]);
+            return (
+                i.useEffect(() => {
+                    if (l?.id == null || n || !t) return;
+                    if (null == c) return void a(!0);
+                    let e = new Image();
+                    return (
+                        (e.src = c.toString()),
+                        (e.onload = () => {
+                            a(!0);
+                        }),
+                        (e.onerror = () => {
+                            a(!0);
+                        }),
+                        () => {
+                            (e.onerror = null), (e.onload = null), (e.src = "");
+                        }
+                    );
+                }, [c, t, n, l?.id]),
+                i.useEffect(() => {
+                    if (l?.id == null || r || !t) return;
+                    if (null == o) return void s(!0);
+                    let e = !0;
+                    return (
+                        (0, X.l0)(o.toString()).finally(() => {
+                            e && s(!0);
+                        }),
+                        () => {
+                            e = !1;
+                        }
+                    );
+                }, [r, o, t, l?.id]),
+                i.useMemo(() => n && r, [n, r])
+            );
+        })(n, eb),
+        eN = (0, O.JL)({ sku: w }),
+        eS = eN?.amount,
+        ek = (0, K.o)({ orbPriceAmount: eS, location: "social_layer_storefront_card" }),
+        eA = (0, I.h)(w?.applicationId),
+        ey = i.useCallback((e) => {
+            ev(e);
+        }, []),
+        eT = i.useMemo(() => u()(ea.Nr, { [ea.ax]: 0 === a, [ea.GW]: 1 === a, [ea.jz]: 2 === a }), [a]),
+        { handleCardHover: eI, handleCardUnhover: eM } = (function (e) {
+            let {
+                    skuId: t,
+                    applicationId: l,
+                    guildId: n,
+                    analyticsContext: a,
+                    positionInSection: r,
+                    analyticsLocations: s,
+                } = e,
+                o = i.useRef(!1),
+                c = i.useRef(a),
+                u = i.useRef({ positionInSection: r, analyticsLocations: s });
+            return (
+                i.useEffect(() => {
+                    c.current = a;
+                }, [a]),
+                {
+                    handleCardHover: i.useCallback(() => {
+                        if (!o.current) {
+                            let {
+                                    sessionId: e,
+                                    guildId: a,
+                                    applicationId: r,
+                                    pageIndex: i,
+                                    pageTitle: s,
+                                    pageSection: d,
+                                    pageSectionTitle: m,
+                                    isUserGuildMember: _,
+                                    pageHasLeaderboard: x,
+                                } = c.current,
+                                { positionInSection: p, analyticsLocations: f } = u.current;
+                            U.default.track(eo.HAw.SLAYER_STOREFRONT_CARD_HOVERED, {
+                                slayer_storefront_session_id: e,
+                                sku_id: t,
+                                guild_id: n ?? a,
+                                application_id: l ?? r,
+                                page_index: i,
+                                page_title: s,
+                                page_section: d,
+                                page_section_title: m,
+                                position_in_section: p,
+                                is_user_guild_member: _,
+                                page_has_leaderboard: x,
+                                location_stack: f,
+                            }),
+                                (o.current = !0);
+                        }
+                    }, [t, l, n]),
+                    handleCardUnhover: i.useCallback(() => {
+                        o.current = !1;
+                    }, []),
+                }
+            );
+        })({
+            skuId: n,
+            applicationId: J,
+            guildId: z,
+            analyticsContext: eh,
+            positionInSection: t,
+            analyticsLocations: eg,
+        }),
+        { handleCardVisibilityChange: ew } = (function (e) {
+            let {
+                    skuId: t,
+                    applicationId: l,
+                    guildId: n,
+                    analyticsContext: a,
+                    positionInSection: r,
+                    analyticsLocations: s,
+                } = e,
+                o = i.useRef(null),
+                c = i.useRef(a),
+                u = i.useRef({ positionInSection: r, analyticsLocations: s });
+            i.useEffect(() => {
+                c.current = a;
+            }, [a]);
+            let d = i.useCallback(() => {
+                    let {
+                            sessionId: e,
+                            guildId: a,
+                            applicationId: r,
+                            pageIndex: i,
+                            pageTitle: s,
+                            pageSection: o,
+                            pageSectionTitle: d,
+                            isUserGuildMember: m,
+                            pageHasLeaderboard: _,
+                        } = c.current,
+                        { positionInSection: x, analyticsLocations: p } = u.current;
+                    U.default.track(eo.HAw.SLAYER_STOREFRONT_CARD_IMPRESSION, {
+                        slayer_storefront_session_id: e,
+                        sku_id: t,
+                        guild_id: n ?? a,
+                        application_id: l ?? r,
+                        page_index: i,
+                        page_title: s,
+                        page_section: o,
+                        page_section_title: d,
+                        position_in_section: x,
+                        is_user_guild_member: m,
+                        page_has_leaderboard: _,
+                        location_stack: p,
+                    });
+                }, [t, l, n]),
+                m = i.useCallback(
+                    (e) => {
+                        e
+                            ? null === o.current &&
+                              (o.current = window.setTimeout(() => {
+                                  d(), (o.current = null);
+                              }, 1e3))
+                            : null !== o.current && (clearTimeout(o.current), (o.current = null));
+                    },
+                    [d],
+                );
+            return (
+                i.useEffect(
+                    () => () => {
+                        null !== o.current && (clearTimeout(o.current), (o.current = null));
+                    },
+                    [],
+                ),
+                { handleCardVisibilityChange: m }
+            );
+        })({
+            skuId: n,
+            applicationId: J,
+            guildId: z,
+            analyticsContext: eh,
+            positionInSection: t,
+            analyticsLocations: eg,
+        });
+    i.useEffect(() => {
+        ew(eb);
+    }, [eb]);
+    let eL = i.useCallback(
+            (e) => {
+                let { analyticsLocations: t, positionInSection: l } = eE.current,
+                    {
+                        sessionId: a,
+                        guildId: r,
+                        applicationId: i,
+                        pageIndex: s,
+                        pageTitle: o,
+                        pageSection: c,
+                        pageSectionTitle: u,
+                        isUserGuildMember: d,
+                        pageHasLeaderboard: m,
+                    } = eh;
+                U.default.track(eo.HAw.SLAYER_STOREFRONT_CARD_ELEMENT_CLICKED, {
+                    slayer_storefront_session_id: a,
+                    sku_id: n,
+                    guild_id: z ?? r,
+                    application_id: J ?? i,
+                    page_index: s,
+                    page_title: o,
+                    page_section: c,
+                    page_section_title: u,
+                    position_in_section: l,
+                    is_user_guild_member: d,
+                    page_has_leaderboard: m,
+                    cta_type: e,
+                    location_stack: t,
+                });
+            },
+            [n, J, z, eh],
+        ),
+        { primaryIconAsset: eO, primaryIconLabel: eH } = i.useMemo(() => (0, F.Cv)(w, J), [w, J]),
+        eB = (0, b.bG)([Y.A], () => Y.A.getStorefrontState(J)?.activePage ?? 0),
+        eD = i.useMemo(() => {
+            let e = w?.tenantMetadata?.socialLayer?.expiresAt;
+            if (null == e) return null;
+            let t = m()(),
+                l = Math.max(m()(e).diff(t, "days"), 1);
+            return l <= 3 ? eu.intl.format(eu.t.PWw4Vp, { days: l }) : null;
+        }, [w?.tenantMetadata?.socialLayer?.expiresAt]),
+        eP = (0, F.xf)(w),
+        eU = i.useMemo(() => {
+            if (!eR) return "none";
+            let [e, t] = ed[a];
+            return `linear-gradient(to top, ${em} ${30 + e}%, ${e_} ${30 + t}%)`;
+        }, [a, eR]),
+        eF = i.useCallback(() => {
+            null != J && (0, G.iR)(J, n);
+        }, [J, n]),
+        eG = i.useCallback(() => {
+            eI(),
+                null != J &&
+                    (x.current = setTimeout(() => {
+                        (0, G.iR)(J, n);
+                    }, 1e3));
+        }, [J, n, eI]),
+        eV = i.useCallback(() => {
+            eM(), null != x.current && (clearTimeout(x.current), (x.current = null));
+        }, [eM]);
+    i.useEffect(
+        () => () => {
+            null != x.current && clearTimeout(x.current);
+        },
+        [],
+    );
+    let { getSocialLayerStorefrontLink: eW } = (0, W.H)(),
+        eY = i.useCallback(() => {
+            null != J && null != eW && (0, L.bG)(eW(eB, n, w?.slug));
+        }, [J, n, eB, w?.slug, eW]),
+        ez = i.useCallback(
+            (e) => {
+                (eL(ec.bB.CARD), null != s && w?.applicationId != null)
+                    ? s(e, { skuId: n, applicationId: w.applicationId })
+                    : eY();
+            },
+            [eL, s, eY, n, w?.applicationId],
+        ),
+        e$ = i.useCallback(
+            (e) => {
+                ef &&
+                    (0, k.L3)(e, async () => {
+                        let { default: e } = await l.e("97249").then(l.bind(l, 10680));
+                        return (t) => (0, r.jsx)(e, { ...t, skuId: n });
+                    });
+            },
+            [ef, n],
+        ),
+        eq = i.useMemo(() => [...eg, y.A.SLAYER_STOREFRONT_CARD_PURCHASE_BUTTON], [eg]),
+        eK = i.useCallback(
+            (e) => {
+                e.stopPropagation(),
+                    null != eA &&
+                        (eL(ec.bB.BUY_WITH_ORBS_BUTTON),
+                        (0, D.B4)({
+                            skuId: n,
+                            applicationId: eA.id,
+                            onComplete: () => {
+                                null != eA &&
+                                    null != w &&
+                                    (0, Q.n)({ sku: w, application: eA, analyticsLocations: eq });
+                            },
+                            analyticsLocations: eq,
+                        }));
+            },
+            [w, eA, n, eL, eq],
+        ),
+        eX = i.useCallback(
+            (e) => {
+                e.stopPropagation(),
+                    null != w &&
+                        (eL(ec.bB.BUY_BUTTON), (0, Z.a)(w, { isGift: !1 }, { analyticsLocations: eq, guildId: z }));
+            },
+            [w, z, eL, eq],
+        ),
+        {
+            priceComponent: eJ,
+            extendedHeight: eQ,
+            displayPrice: eZ,
+        } = (function (e) {
+            let { sku: t, orbsGate: l, orbPriceAmount: n } = e,
+                { normalPrice: a, discountedPrice: s, discountPercent: o, userPrice: c } = (0, O.CD)({ sku: t }),
+                u = i.useMemo(
+                    () =>
+                        null != t && null != t.orbsReward && t.orbsReward > 0
+                            ? (0, r.jsx)("div", {
+                                  className: ea.pt,
+                                  children: (0, r.jsx)(R.E, {
+                                      variant: "text-sm/semibold",
+                                      color: "currentColor",
+                                      children: eu.intl.format(eu.t.GiVd2Q, {
+                                          orbCount: t.orbsReward,
+                                          orbIconHook: () =>
+                                              (0, r.jsx)(_.C, { size: "xs", color: "currentColor" }, "orbs-icon"),
+                                      }),
+                                  }),
+                              })
+                            : null,
+                    [t],
+                );
+            return null != t && (0, F.mC)(t)
+                ? "CAN_CHECKOUT" === l
+                    ? {
+                          priceComponent: (0, r.jsxs)("div", {
+                              className: ea.p6,
+                              children: [
+                                  (0, r.jsx)(_.C, { size: "xs", color: "white" }),
+                                  (0, r.jsx)(R.E, {
+                                      variant: "text-md/bold",
+                                      color: "always-white",
+                                      lineClamp: 1,
+                                      children: n,
+                                  }),
+                              ],
+                          }),
+                          extendedHeight: !1,
+                          displayPrice: c,
+                      }
+                    : null != o && null != s
+                      ? {
+                            priceComponent: (0, r.jsxs)("div", {
+                                children: [
+                                    (0, r.jsxs)("div", {
+                                        className: ea.p6,
+                                        children: [
+                                            null != a &&
+                                                (0, r.jsx)(R.E, {
+                                                    className: ea.of,
+                                                    variant: "text-md/medium",
+                                                    color: "text-muted",
+                                                    lineClamp: 1,
+                                                    children: a,
+                                                }),
+                                            (0, r.jsx)(R.E, {
+                                                variant: "text-md/bold",
+                                                color: "always-white",
+                                                lineClamp: 1,
+                                                children: s,
+                                            }),
+                                            (0, r.jsxs)(R.E, {
+                                                variant: "text-md/bold",
+                                                color: "text-feedback-positive",
+                                                lineClamp: 1,
+                                                children: ["(", o, ")"],
+                                            }),
+                                        ],
+                                    }),
+                                    u,
+                                ],
+                            }),
+                            extendedHeight: null != u,
+                            displayPrice: c,
+                        }
+                      : {
+                            priceComponent: (0, r.jsxs)(r.Fragment, {
+                                children: [
+                                    (0, r.jsx)(R.E, {
+                                        variant: "text-md/bold",
+                                        color: "always-white",
+                                        lineClamp: 1,
+                                        children: a,
+                                    }),
+                                    u,
+                                ],
+                            }),
+                            extendedHeight: !1,
+                            displayPrice: c,
+                        }
+                : { priceComponent: null, extendedHeight: !1, displayPrice: c };
+        })({ sku: w, orbsGate: ek, orbPriceAmount: eS }),
+        e0 = (function (e) {
+            let { location: t } = e;
+            return q.useConfig({ location: t }).treatment;
+        })({ location: "social_layer_storefront_card" }),
+        e1 = w?.exclusive === !0 && 2 !== a && (e0 === $.EXPRESSIVE_HOVER || e0 === $.ALWAYS_EXPRESSIVE),
+        e3 = i.useMemo(
+            () =>
+                "CAN_CHECKOUT" === ek
+                    ? (0, r.jsx)(f.$, {
+                          variant: "primary",
+                          onMouseDown: eF,
+                          onClick: eK,
+                          "aria-label": eu.intl.formatToPlainString(eu.t.yi41qQ, { orbPrice: eS }),
+                          text: eu.intl.format(eu.t.JC15qj, {
+                              orbPrice: eS,
+                              orbIconHook: () =>
+                                  (0, r.jsx)(_.C, { className: ea.fN, size: "sm", color: "currentColor" }, "orbs-icon"),
+                          }),
+                          fullWidth: !0,
+                      })
+                    : (0, r.jsx)(f.$, {
+                          variant: "primary",
+                          onMouseDown: eF,
+                          onClick: eX,
+                          text: null != eZ ? eu.intl.format(eu.t.Xp5WTn, { price: eZ }) : eu.intl.string(eu.t.boqtTA),
+                          fullWidth: !0,
+                      }),
+            [ek, eK, eX, eF, eS, eZ],
+        );
+    if (null == w) return null;
+    let e9 = (0, F.fq)(w),
+        e2 = e1
+            ? (0, r.jsx)("div", {
+                  className: u()(ea.mN, { [ea.Oj]: e0 === $.ALWAYS_EXPRESSIVE, [ea.T_]: e0 === $.EXPRESSIVE_HOVER }),
+                  "aria-hidden": !0,
+              })
+            : null,
+        e8 = (0, r.jsx)(v.L, {
+            innerRef: d,
+            onChange: ey,
+            threshold: 0,
+            children: (0, r.jsx)(C.vN, {
+                children: (0, r.jsxs)(N.s, {
+                    onClick: ez,
+                    onContextMenu: e$,
+                    onMouseEnter: eG,
+                    onMouseLeave: eV,
+                    className: u()(
+                        eT,
+                        { [ea.Zl]: !ex && 2 !== a, [ea.BN]: es, [es ? ea.Mn : ea.YF]: eC, [ea.Rc]: !eR },
+                        o,
+                    ),
+                    ref: d,
+                    "aria-label": w.name,
+                    children: [
+                        w.exclusive
+                            ? (0, r.jsx)("div", { className: ea.fC, children: (0, r.jsx)(ee.I, {}) })
+                            : null != eD && (0, r.jsx)(S.Lp, { text: eD, disableColor: !0, className: ea.qS }),
+                        (0, r.jsx)(ep, {
+                            sku: w,
+                            guildId: z,
+                            isCardHovered: eC,
+                            variant: a,
+                            trackCardClick: eL,
+                            analyticsLocations: eg,
+                            analyticsContext: eh,
+                        }),
+                        null != e9
+                            ? eR
+                                ? (0, r.jsx)(el.A, {
+                                      containerClassName: ea.Vl,
+                                      foregroundImageClassName: ea.wP,
+                                      cardImage: e9,
+                                      altText: w.name,
+                                      shape: "custom",
+                                      backgroundImageClassName: ea.GC,
+                                      cardBackgroundImage: eP,
+                                      cssPosition: "absolute",
+                                  })
+                                : (0, r.jsx)(er, {})
+                            : (0, r.jsx)("div", {
+                                  className: ea.t7,
+                                  children: (0, r.jsx)(h.q, {
+                                      color: "white",
+                                      size: "custom",
+                                      height: 80,
+                                      width: 80,
+                                      className: ea.Cw,
+                                  }),
+                              }),
+                        2 !== a
+                            ? (0, r.jsxs)(r.Fragment, {
+                                  children: [
+                                      (0, r.jsx)("div", { className: ea.iZ, style: { background: eU } }),
+                                      (0, r.jsx)(g.N, {
+                                          theme: eo.NJ8.DARKER,
+                                          children: (e) =>
+                                              (0, r.jsxs)("div", {
+                                                  className: u()(ea.zH, e),
+                                                  children: [
+                                                      (0, r.jsxs)("div", {
+                                                          className: u()(ea.gn, {
+                                                              [ea.ov]: !(0, F.mC)(w),
+                                                              [ea.w4]: eQ,
+                                                          }),
+                                                          children: [
+                                                              eR &&
+                                                                  (0, r.jsx)("div", {
+                                                                      className: ea.S1,
+                                                                      children: (0, r.jsx)(et.V, {
+                                                                          textColor: "always-white",
+                                                                      }),
+                                                                  }),
+                                                              eR
+                                                                  ? (0, r.jsxs)(r.Fragment, {
+                                                                        children: [
+                                                                            null != eO &&
+                                                                                (0, r.jsx)("img", {
+                                                                                    src: eO.toString(),
+                                                                                    alt: eH,
+                                                                                    className: ea.ye,
+                                                                                }),
+                                                                            (0, r.jsx)(R.E, {
+                                                                                color: "always-white",
+                                                                                variant: "text-md/medium",
+                                                                                lineClamp: 1,
+                                                                                children: w.name,
+                                                                            }),
+                                                                        ],
+                                                                    })
+                                                                  : (0, r.jsx)(ei, {}),
+                                                          ],
+                                                      }),
+                                                      (0, r.jsx)("div", {
+                                                          className: ea.iQ,
+                                                          children: eR ? eJ : (0, r.jsx)(ei, {}),
+                                                      }),
+                                                  ],
+                                              }),
+                                      }),
+                                      (0, r.jsx)("div", {
+                                          className: ea.li,
+                                          children: (0, r.jsxs)(E.e, {
+                                              wrap: !1,
+                                              fullWidth: !0,
+                                              children: [
+                                                  ej
+                                                      ? e3
+                                                      : (0, r.jsx)(j.m, {
+                                                            text: eu.intl.string(eu.t.IqlPbQ),
+                                                            children: (0, r.jsx)(f.$, {
+                                                                variant: "primary",
+                                                                onClick: (e) => {
+                                                                    e.stopPropagation(),
+                                                                        eL(ec.bB.VIEW_DETAILS_BUTTON),
+                                                                        eY();
+                                                                },
+                                                                text: eu.intl.string(eu.t.KLBTgF),
+                                                                fullWidth: !0,
+                                                            }),
+                                                        }),
+                                                  (0, r.jsx)(en.A, {
+                                                      onGift: (e) => {
+                                                          e.stopPropagation(),
+                                                              eL(ec.bB.GIFT_BUTTON),
+                                                              (0, Z.a)(
+                                                                  w,
+                                                                  { isGift: !0 },
+                                                                  {
+                                                                      analyticsLocations: [
+                                                                          ...eg,
+                                                                          y.A.SLAYER_STOREFRONT_CARD_GIFT_BUTTON,
+                                                                      ],
+                                                                  },
+                                                              );
+                                                      },
+                                                  }),
+                                              ],
+                                          }),
+                                      }),
+                                  ],
+                              })
+                            : null,
+                    ],
+                }),
+            }),
+        });
+    return e1 ? (0, r.jsxs)("div", { className: ea.ur, children: [e2, e8] }) : e8;
+}

@@ -1,1 +1,14 @@
-e.d(a,{I:()=>i});var n=e(334279),r=e(17928),s=e(166403),l=e(375708);let i=t=>{let a=(0,r.bG)([s.A],()=>{let t=s.A.getPremiumSubscription();return t?.isPurchasedExternally===!0});return n.I.ALL.has(t)?{isDisabled:a,disabledReason:a?l.intl.string(l.t.NbveHD):null}:{isDisabled:!1,disabledReason:null}}
+e.d(a, { I: () => i });
+var n = e(334279),
+    r = e(17928),
+    s = e(166403),
+    l = e(375708);
+let i = (t) => {
+    let a = (0, r.bG)([s.A], () => {
+        let t = s.A.getPremiumSubscription();
+        return t?.isPurchasedExternally === !0;
+    });
+    return n.I.ALL.has(t)
+        ? { isDisabled: a, disabledReason: a ? l.intl.string(l.t.NbveHD) : null }
+        : { isDisabled: !1, disabledReason: null };
+};

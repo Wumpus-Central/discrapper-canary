@@ -1,1 +1,1 @@
-_.exports={O:"baseCardOutline__1ab14"}
+e.exports = { O: "baseCardOutline__1ab14" };

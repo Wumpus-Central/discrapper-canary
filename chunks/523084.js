@@ -1,1 +1,61 @@
-n.d(s,{A:()=>h});var a=n(627968),i=n(64700),r=n(106778),t=n(17928),l=n(935462),c=n(534514),d=n(834730),o=n(775602),u=n(524246),m=n(14368),p=n(372165);function h(e){let{title:s,description:n,image:h,button:x,...g}=e,j=(0,t.bG)([o.Ay],()=>o.Ay.useReducedMotion),N=i.useRef(null),v=i.useRef(new r.OH),[f,k]=i.useState(null);return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(r.Fk,{ref:k,className:p.Lb,environment:v.current}),(0,a.jsxs)(l.EO,{"data-migration-pending":!0,className:p.yl,size:l.rI.DYNAMIC,...g,parentComponent:"GuildPowerupActivateModal",children:[(0,a.jsx)(l.$m,{"data-migration-pending":!0,className:p._F,scrollbarType:"none",children:(0,a.jsxs)("div",{className:p.kL,ref:N,children:[h,(0,a.jsxs)("div",{className:p.hQ,children:[(0,a.jsx)(c.D,{variant:"heading-xl/extrabold",children:s}),null!=n&&(0,a.jsx)(d.E,{tag:"span",className:p.h_,variant:"text-sm/normal",children:n}),x]})]})}),(0,a.jsx)(l.s_,{"data-migration-pending":!0,className:p.VN,onClick:g.onClose}),!j&&(0,a.jsx)(u.A,{confettiTarget:N.current,confettiCanvas:f,sprites:(0,m.rA)()})]})]})}
+n.d(s, { A: () => h });
+var a = n(627968),
+    i = n(64700),
+    r = n(106778),
+    t = n(17928),
+    l = n(935462),
+    c = n(534514),
+    d = n(834730),
+    o = n(775602),
+    u = n(524246),
+    m = n(14368),
+    p = n(372165);
+function h(e) {
+    let { title: s, description: n, image: h, button: x, ...g } = e,
+        j = (0, t.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        N = i.useRef(null),
+        v = i.useRef(new r.OH()),
+        [f, k] = i.useState(null);
+    return (0, a.jsxs)(a.Fragment, {
+        children: [
+            (0, a.jsx)(r.Fk, { ref: k, className: p.Lb, environment: v.current }),
+            (0, a.jsxs)(l.EO, {
+                "data-migration-pending": !0,
+                className: p.yl,
+                size: l.rI.DYNAMIC,
+                ...g,
+                parentComponent: "GuildPowerupActivateModal",
+                children: [
+                    (0, a.jsx)(l.$m, {
+                        "data-migration-pending": !0,
+                        className: p._F,
+                        scrollbarType: "none",
+                        children: (0, a.jsxs)("div", {
+                            className: p.kL,
+                            ref: N,
+                            children: [
+                                h,
+                                (0, a.jsxs)("div", {
+                                    className: p.hQ,
+                                    children: [
+                                        (0, a.jsx)(c.D, { variant: "heading-xl/extrabold", children: s }),
+                                        null != n &&
+                                            (0, a.jsx)(d.E, {
+                                                tag: "span",
+                                                className: p.h_,
+                                                variant: "text-sm/normal",
+                                                children: n,
+                                            }),
+                                        x,
+                                    ],
+                                }),
+                            ],
+                        }),
+                    }),
+                    (0, a.jsx)(l.s_, { "data-migration-pending": !0, className: p.VN, onClick: g.onClose }),
+                    !j && (0, a.jsx)(u.A, { confettiTarget: N.current, confettiCanvas: f, sprites: (0, m.rA)() }),
+                ],
+            }),
+        ],
+    });
+}

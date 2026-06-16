@@ -1,1 +1,5 @@
-"use strict";var i=n(591082);e.exports=function(e){return i(e)||0===e?e:e<0?-1:1}
+"use strict";
+var i = n(591082);
+e.exports = function (e) {
+    return i(e) || 0 === e ? e : e < 0 ? -1 : 1;
+};

@@ -1,1 +1,4 @@
-n.d(t,{A:()=>l});var i,l=((i={})[i.STORE_ASSET=1]="STORE_ASSET",i[i.EMOJI=2]="EMOJI",i)
+"use strict";
+n.d(t, { A: () => r });
+var i,
+    r = (((i = {})[(i.STORE_ASSET = 1)] = "STORE_ASSET"), (i[(i.EMOJI = 2)] = "EMOJI"), i);

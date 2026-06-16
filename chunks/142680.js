@@ -1,1 +1,2841 @@
-"use strict";n.d(t,{o:()=>lX}),n(321073);var l,i=n(627968),r=n(835245),s=n(192308),a=n(231723),o=n(166532),u=n(64700),c=n(295405),d=n(314671),m=n(735305),h=n(343834),p=n(926795),f=n(284009),g=n.n(f),E=n(821609),A=n(534514),C=n(834730),x=n(31823),I=n(427675),_=n(211159),S=n(937008),y=n(921925),v=n(482132),T=n(375708),N=n(989553);function j(e){let{handleClose:t}=e,n=(0,_.t4)(e=>e.selectedSkuId),{application:l}=(0,x.V)(),r=(0,I.gU)(),{isGift:s,giftRecipient:a}=(0,S.Pv)();g()(null!=n,"Expected selectedSkuId"),g()(null!=l,"Expected application");let o=r[n];g()(null!=o,"Expected sku");let u=s?T.intl.formatToPlainString(T.t["2VjPTw"],{itemName:o.name,giftRecipient:a?.username??"your recipient"}):T.intl.formatToPlainString(T.t.wK0IbP,{applicationName:l.name,itemName:o.name});return(0,i.jsxs)(v.dZ,{children:[(0,i.jsx)(y.A,{}),(0,i.jsxs)("div",{className:N.EL,children:[(0,i.jsx)(A.D,{variant:"heading-xxl/bold",className:N.RS,children:"Success!"}),(0,i.jsx)(C.E,{variant:"text-md/normal",children:u}),(0,i.jsx)("div",{className:N.yF}),(0,i.jsx)(E.$,{onClick:t,text:T.intl.string(T.t.cpT0Cq),fullWidth:!0})]})]})}var b=n(702841),R=n(86379),P=n(545075),L=n(426398),M=n(590180),O=n(20742),w=n(430993),D=n(579151),k=n(599062);function U(){let{refreshCategories:e}=(0,D.A)();return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(O.rQ,{title:T.intl.string(T.t["p8+qtU"])}),(0,i.jsx)(w.c,{children:(0,i.jsx)(k.h,{onRetry:e,errorOrigin:k.A.GIFT_MODAL})})]})}var G=n(534479),F=n(652215);function V(e){let{handleStepChange:t}=e,n=(0,_.t4)(e=>e.selectedSkuId),{paymentSources:l,hasFetchedPaymentSources:r}=(0,L.jm)(),{application:s}=(0,x.V)(),a=(0,R.Hp)(),c=(0,I.gU)(),d=(0,I.Hu)(),{isGift:m}=(0,S.Pv)(),[h,p]=u.useState(!0),[f,g]=(0,b.yK)([M.A],()=>[M.A.isFetchingCategories,M.A.error]);return(u.useEffect(()=>{let e=null!=s;d&&r&&e&&p(f)},[d,r,s,f]),u.useEffect(()=>{if(h||a||null==n)return;let e=c[n];m&&(e?.productLine===F.EZt.COLLECTIBLES||e?.productLine===F.EZt.APPLICATION||e?.productLine===F.EZt.SOCIAL_LAYER_GAME_ITEM)?t(o.pn.GIFT_CUSTOMIZATION):0===Object.keys(l).length?t(o.pn.ADD_PAYMENT_STEPS):t(o.pn.REVIEW)},[h,a,t,l,m,c,n]),h)?(0,i.jsx)(G.A,{}):a?(0,i.jsx)(P.oO,{}):null!=g?(0,i.jsx)(U,{}):null}let B={key:null,renderStep:e=>(0,i.jsx)(V,{...e}),options:{modalSizeGetter:()=>"md"}},H={key:null,renderStep:e=>(0,i.jsx)(d.I,{...e})};o.pn.ADD_PAYMENT_STEPS;let W={key:o.pn.AWAITING_PURCHASE_TOKEN_AUTH,renderStep:()=>(0,i.jsx)(p.A,{})},K={key:o.pn.AWAITING_AUTHENTICATION,renderStep:()=>(0,i.jsx)(h.A,{}),options:{renderHeader:!0}},Y={key:o.pn.CONFIRM,renderStep:e=>(0,i.jsx)(j,{...e})},z=[W,K];var Z=n(624210),q=n(26279);async function $(e){let{checkoutSucceeded:t,order:n}=e;if(!t&&n?.id!=null&&n.status===q.Re.DRAFT)try{await (0,Z.Nl)(n.id)}catch(e){}}var X=n(925847),J=n(310829),Q=n(174459),ee=n(75304),et=n(145659),en=n(17928),el=n(444927),ei=n(964486),er=n(793574),es=n(120700),ea=n(197510),eo=n(584160),eu=n(480642),ec=n(832286),ed=n(958340),em=n(566980),eh=n(615310),ep=n(489254),ef=n(71393),eg=n(178368),eE=n(166403),eA=n(473145),eC=n(802790),ex=n(636441),eI=n(587491),e_=n(285753),eS=n(655857),ey=n(121005),ev=n(526151),eT=n(303557),eN=n(898640);function ej(e){let{message:t}=e;return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(eu.s3,{title:T.intl.string(T.t.q9EGps)}),(0,i.jsx)(w.c,{children:(0,i.jsx)("p",{className:eN.C,children:t})})]})}var eb=n(989351),eR=n(619088),eP=n(587187),eL=n(130305),eM=n(160946),eO=n(97352),ew=n(83617),eD=n(788868);function ek(){let{setCurrency:e,setCurrencies:t}=(0,ev.Oe)(),{paymentSourceId:n,activeSubscription:l}=(0,_.t4)(e=>({paymentSourceId:e.paymentSourceId,activeSubscription:e.activeSubscription})),i=(0,eM.Y)();return u.useEffect(()=>{(0,ew.c_)(n)},[n]),u.useEffect(()=>{let r;i&&(null!=eO.A.get(eD.gD.PREMIUM_MONTH_GUILD)&&t(r=(0,ew._w)(eD.gD.PREMIUM_MONTH_GUILD,n,!1)),null==n&&null!=l&&null!=l.paymentSourceId?e(l.currency):null!=r&&e(r[0]))},[n,l,i,e,t]),null}var eU=n(121226);let eG=[o.pn.PLAN_SELECT],eF=[eD.pe.GUILD],eV=[{key:o.pn.PLAN_SELECT,renderStep:e=>(0,i.jsx)(eR.c,{...e}),options:{renderHeader:!0}},{key:o.pn.PREMIUM_UPSELL,renderStep:e=>(0,i.jsx)(eP.d,{...e}),options:{renderHeader:!1,hideSlider:!0}}],eB={CHECKOUT_FLOW:es.C.GUILD_BOOST_CHECKOUT,CustomCheckoutPredicateStep:function(e){let{handleStepChange:t}=e,n=(0,_.t4)(e=>e.activeSubscription),{guildId:l,analyticsLocation:r,currency:s}=(0,ev.Oe)(),a=(0,R.Hp)(),c=(0,ey.A)(),{hasFetchedRelatedSubscriptionPlans:d}=(0,eS.Jn)(),{hasFetchedPremiumSubscriptionPlan:m}=(0,eT.l)(),h=null!=n&&null!=n.renewalMutations,p=null!=n&&n.isPausedOrPausePending&&!n.isPausedAllowsUpdatesButNotResume,f=!c||!d||!m||null==s||""===s;return((0,ei.Ay)(()=>{h&&Q.default.track(F.HAw.PREMIUM_GUILD_PENDING_MODAL,{location:r,guild_id:l})}),u.useEffect(()=>{f||a||p||h||t(o.pn.PLAN_SELECT)},[f,a,p,h,t]),p)?(0,i.jsx)(ej,{message:T.intl.string(T.t.mOWsF1)}):h?(0,i.jsx)(ej,{message:T.intl.string(T.t.npfhh0)}):f?(0,i.jsx)(G.A,{}):a?(0,i.jsx)(P.oO,{}):null},STEPS_BEFORE_CHECKOUT:eV,CHECKOUT_STEPS:{[o.pn.REVIEW]:eL.b},TENANT_PROVIDER_CONFIGS:{tenantProvidesCheckoutRoot:!0,CustomTenantProvider:e=>{let{tenantParams:{guildId:t,totalNumberOfSlotsToAssign:n=1,intent:l,disablePremiumUpsell:r,onSubscribeComplete:s,closeGuildPerksModal:a,analyticsLocation:o},applicationId:u,analyticsSourceLocation:c,stepConfigs:d,loadId:m,onComplete:h,children:p}=e,f=(0,en.bG)([eE.A],()=>eE.A.getPremiumTypeSubscription()),g=(0,el.A)(()=>n-(0,eA.D$)(eg.A.boostSlots).length);return(0,ei.Ay)(()=>{null!=ed.A.getGuild(t)||ed.A.isGuildFetching(t)||(0,ec.y)(t)}),(0,i.jsx)(ea.M,{activeSubscription:f,stepConfigs:d,skuIDs:eF,loadId:m,unifiedCheckoutFlow:es.C.GUILD_BOOST_CHECKOUT,children:(0,i.jsxs)(ev.mf,{initialNumGuildBoostsToPurchase:g,disablePremiumUpsell:r,closeGuildPerksModal:a,guildId:t,analyticsLocation:o,analyticsSourceLocation:c,applicationId:u,intent:l,onSubscribeComplete:s,children:[(0,i.jsx)(ek,{}),(0,i.jsx)(eU.B,{onComplete:h}),p]})})},TenantPaymentModalRenderer:e=>{let{originalPaymentModalProps:t,renderPaymentModal:n}=e,{numGuildBoostsToPurchase:l,guildId:r,existingAvailableSlotCount:s}=(0,ev.Oe)(),a=(0,eh.bB)(),c=(0,_.t4)(e=>e.purchaseState),d=(0,ep.n)("GuildBoostUnifiedCheckout"),m=d&&(a===o.pn.REVIEW||a===o.pn.CONFIRM),h=(0,e_.A)(m),p=u.useMemo(()=>({quantity:l}),[l]);return d&&a===o.pn.CONFIRM?(0,i.jsx)(eI.A,{mediaUrls:h.mediaUrls,isSuccess:h.isSuccess,transitionState:t.transitionState,onClose:()=>(t.onClose(c===em.h.COMPLETED),Promise.resolve()),children:(e,n)=>(0,i.jsx)(ex.A,{transitionState:t.transitionState,guild:ef.A.getGuild(r),guildBoostQuantity:l+s,isTransfer:!1,graphic:e,onClose:n})}):n({...t,analyticsDataOverride:p,skipUnifiedHeaderForSteps:eG,disableUnsupportedExternalSubscriptionHandler:!0,isMediumModal:!0})},tenantAnalyticsLocation:er.A.GUILD_BOOST_PURCHASE_MODAL},CustomHeaderComponent:e=>{let{plan:t,onClose:n,step:l}=e,r=(0,ep.n)("GuildBoostUnifiedCheckout"),s=(0,_.t4)(e=>e.purchaseState);return l===o.pn.PREMIUM_UPSELL?null:l===o.pn.REVIEW?(0,i.jsx)(eu.s3,{...(0,eo.u)({skuId:t?.skuId??null,step:l})}):r?(0,i.jsx)(eu.s3,{title:(0,eo.u)({skuId:null,step:l}).title}):(0,i.jsx)(eC.A,{onClose:()=>n(s===em.h.COMPLETED),currentStep:l,purchaseState:s})},CUSTOM_CONFIRM_STEP_CONFIG:{renderStep:e=>(0,i.jsx)(eb.H,{...e}),options:{renderHeader:!0}}};var eH=n(529427),eW=n(630303),eK=n(666646),eY=n(871109);let ez=u.createContext(void 0);function eZ(){let e=u.useContext(ez);return g()(null!=e,"GuildProductPurchaseContext not found"),e}function eq(e){let{children:t,skuId:n,...l}=e,r=(0,en.bG)([eY.A],()=>eY.A.getGuildProduct(n));return g()(null!=r,"guildProductListing cannot be null"),(0,i.jsx)(ez.Provider,{value:{guildProductListing:r,...l},children:t})}function e$(e){let{handleClose:t}=e,{guildProductListing:l,guildId:r}=eZ(),a=(0,eK.sw)();return(0,ei.Ay)(()=>{var e;g()(null!=a,"invoicePreview cannot be null"),e={guildId:r,guildProductListingId:l.id,invoicePreview:a},(0,s.openModalLazy)(async()=>{let{default:t}=await Promise.all([n.e("57034"),n.e("67837"),n.e("35778"),n.e("47812"),n.e("13583"),n.e("28090")]).then(n.bind(n,779457));return n=>(0,i.jsx)(t,{...e,...n})}),t()}),null}var eX=n(503698),eJ=n.n(eX),eQ=n(939249),e0=n(789645),e1=n(935462),e2=n(303612),e3=n(916261),e6=n(575650);function e4(e){let{className:t,onClose:n}=e;return(0,i.jsx)(eQ.D,{className:eJ()(e3.cG,t),onClick:n,children:(0,i.jsx)(e0.P,{size:"xs",color:"currentColor",className:e3.yP})})}function e5(e){let{guildProductListing:t,onClose:n,className:l}=e;return(0,i.jsxs)(e1.rQ,{className:eJ()(e3.wx,e6.GI,l),separator:!1,"data-migration-pending":!0,children:[(0,i.jsx)(e2.A,{className:e3.F0,listing:t,imageSize:500,alt:""}),(0,i.jsx)(e4,{className:e3.b,onClose:n})]})}var e7=n(196617);let e8={CHECKOUT_FLOW:eH.CL.GUILD_PRODUCT_CHECKOUT,CHECKOUT_STEPS:{[o.pn.REVIEW]:eW.p},TENANT_PROVIDER_CONFIGS:{CustomTenantProvider:e=>{let{tenantParams:{guildId:t},skuId:n,children:l}=e;return(0,i.jsx)(eq,{guildId:t,skuId:n,children:l})},tenantProvidesCheckoutRoot:!1,tenantAnalyticsLocation:er.A.GUILD_PRODUCT_PAYMENT_MODAL},CustomHeaderComponent:function(e){let{onClose:t,step:n}=e,{guildProductListing:l}=eZ();return n===o.pn.CONFIRM?null:(0,i.jsx)(e5,{guildProductListing:l,className:e7.w,onClose:()=>t(!1)})},CUSTOM_CONFIRM_STEP_CONFIG:{renderStep:e=>(0,i.jsx)(e$,{...e})}};var e9=n(688810),te=n(848149),tt=n(106778),tn=n(228366),tl=n(213530),ti=n(966971),tr=n(758836),ts=n(483764);let ta={sliderBodyClassName:ts.Bz},to=e=>{let{environment:t,setConfettiCanvas:n,customConfettiDisplayOptions:l,customConfettiVisible:r}=e;return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(tt.Fk,{ref:n,className:ts.Lb,environment:t.current}),(0,i.jsx)(tl.K,{options:l,className:eJ()(ts.Oh,{[ts.R]:!r})})]})};var tu=n(775602),tc=n(211083),td=n(953150),tm=n(524246),th=n(14368),tp=n(61750),tf=n(972607);function tg(e){let{handleClose:t,analyticsLocations:n}=e,{selectedSkuId:l,purchaseError:r,purchasePreviewError:s,appliedUserDiscounts:a}=(0,_.t4)(e=>({selectedSkuId:e.selectedSkuId,purchaseError:e.purchaseError,purchasePreviewError:e.purchasePreviewError,appliedUserDiscounts:e.appliedUserDiscounts})),{paymentError:o}=(0,tc.o)(),{application:c}=(0,x.V)(),d=(0,I.gU)(),m=(0,b.bG)([M.A],()=>M.A.getProduct(l)),h=u.useRef(!1);g()(null!=l,"Expected selectedSkuId"),g()(null!=c,"Expected application");let p=d[l];g()(null!=p,"Expected sku");let f=null!=o||null!=r||null!=s,E=a.length>0?T.intl.formatToPlainString(T.t.VuV3Td,{discountOfferAmount:a[0].discount.amount}):void 0;return(u.useEffect(()=>{null==m||f||h.current||(h.current=!0,(0,tp.A)({product:m,overrideTitle:E,analyticsLocations:n,onCloseCallback:t,purchaseType:tr.gs.FIAT}))},[m,n,t,f,E]),f)?(0,i.jsx)(v.dZ,{children:(0,i.jsx)(y.A,{})}):null}function tE(e){let{isGift:t,giftCode:n,selectedGiftStyle:l,hasSentMessage:r,giftRecipient:s,giftMessageError:a,isSendingMessage:o,giftingOrigin:c}=(0,S.Pv)(),d=(0,b.bG)([tu.Ay],()=>tu.Ay.useReducedMotion),m=u.useRef(null),h=(0,_.t4)(e=>e.selectedSkuId),p=(0,b.bG)([M.A],()=>M.A.getProduct(h)),{confettiColors:f}=(0,td.A)(p?.styles);return u.useEffect(()=>{t&&null!=s&&null!=h&&(c===eD.vQ.USER_PROFILE_WISHLIST||c===eD.vQ.DM_CHANNEL_WISHLIST)&&tn.h.dispatch({type:"WISHLIST_GIFT_SENT",skuId:h,recipientId:s.id})},[t,s,h,c]),t?(0,i.jsxs)("div",{ref:m,children:[(0,i.jsx)(tf.A,{giftCode:n,onClose:e.handleClose,selectedGiftStyle:l,hasSentMessage:r,giftRecipient:s,giftMessageError:a,isSendingMessage:o}),!e.hideConfetti&&!d&&(0,i.jsx)(tm.A,{confettiTarget:m.current,confettiCanvas:e.confettiCanvas,sprites:(0,th.rA)(p?.categorySkuId),colors:f?.map(e=>e.toHexString())})]}):(0,i.jsx)(tg,{...e})}var tA=n(123292),tC=n(564064),tx=n(993408),tI=n(575593),t_=n(452027),tS=n(922016),ty=n(778712),tv=n(986687),tT=n(999291),tN=n(903209),tj=n(287809),tb=n(428262),tR=n(674658),tP=n(898461),tL=n(203632),tM=n(892118),tO=n(536572),tw=n(456839),tD=n(219103),tk=n(525723),tU=n(780651);function tG(e){let{skuId:t,priceAmount:n,priceCurrency:l,className:r,previewHeaderClassName:s,hideProfilePreview:a}=e,{giftRecipient:o,giftRecipientError:c}=(0,S.Pv)(),d=(0,en.bG)([tj.default],()=>tj.default.getCurrentUser()),m=tb.Ay.canUseShopDiscounts(d),h=(0,tT.Ay)(o?.id),p=u.useRef(null),[f,g]=u.useState(!1),{product:E}=(0,tR.q)(t,!0),x=u.useMemo(()=>(0,tx.fT)(E,m),[E,m]),I=(0,tk.V_)(E);if(null==E||0===E.items.length)return null;let[_]=E.items,y=(0,tO.VG)(E),v=null!=o&&o.id!==d?.id&&E.type!==tI.R.BUNDLE&&_.type!==tI.R.NAMEPLATE&&!a;return(0,i.jsxs)("div",{className:r,children:[(0,i.jsx)("div",{className:eJ()(tU.QU,s),children:(0,i.jsx)(t_.D,{label:T.intl.string(T.t.PpoJzt),children:v&&(0,i.jsx)(tS.Y,{targetElementRef:p,align:"center",shouldShow:f,onRequestClose:()=>g(!1),preload:()=>(0,tN.A)(o.id,o.getAvatarURL(null,80)),renderPopout:e=>(0,i.jsx)(tv.A,{...e,user:o,pendingAvatar:o.getAvatarURL(null,(0,ty.FT)(ty._3.SIZE_80)),pendingAvatarDecoration:(0,tP.T)(_)?_:null,pendingProfileEffect:(0,tL.C3)(_)?_:null,pendingProfileFrame:(0,tM.s)(_)?_:null,canUsePremiumCustomization:!0,disabledInputs:!0,hideExampleButton:!0}),children:e=>{let{onClick:t,onMouseDown:n,...l}=e;return(0,i.jsx)(eQ.D,{...l,className:tU.Nx,innerRef:p,onClick:e=>{g(e=>!e),t?.(e)},onMouseDown:e=>{f?e.stopPropagation():n?.(e)},children:(0,i.jsx)(C.E,{variant:"text-xs/medium",color:"text-link",children:T.intl.string(T.t["2GnJQL"])})})}},h?.userId)})}),(0,i.jsxs)("div",{className:eJ()(tU.i1,null!=c?tU.cN:tU.no),children:[(0,i.jsxs)("div",{className:tU.Ug,children:[(0,i.jsx)(tw.O,{product:E}),(0,i.jsxs)("div",{className:tU.JZ,children:[(0,i.jsx)(C.E,{variant:"text-md/semibold",children:y}),(0,i.jsx)(A.D,{variant:"heading-sm/medium",color:"text-default",children:E?.type===tI.R.BUNDLE?null:_.type===tI.R.AVATAR_DECORATION?T.intl.string(T.t["7v0T9P"]):_.type===tI.R.NAMEPLATE?T.intl.string(T.t.x5CoXR):_.type===tI.R.PROFILE_EFFECT?T.intl.string(T.t.wR5wOo):_.type===tI.R.PROFILE_FRAME?T.intl.string(T.t.GWrZOd):null})]}),(0,i.jsx)(tD.x,{priceAmount:n,priceCurrency:l,discount:x,discountOfferAmount:I,variant:"text-md/bold"})]}),null!=c&&(0,i.jsx)("div",{className:tU.Wh,children:(0,i.jsx)(C.E,{variant:"text-sm/normal",color:"text-feedback-critical",children:c})})]})]})}var tF=n(783878),tV=n(966327),tB=n(427262);let tH=e=>{let{selectedSkuId:t,validateSelectedGift:n,className:l,recipients:r}=e,{giftRecipient:s,setGiftRecipient:a}=(0,S.Pv)();return null==t?null:(0,i.jsx)("div",{className:l,children:(0,i.jsx)(tF.Z,{selectionMode:"single",label:T.intl.string(T.t.xFn72s),placeholder:T.intl.string(T.t.R0vK0N),value:s?.id,onSelectionChange:e=>{let l=r.find(t=>t.id===e);null!=l&&(n(l,t),a(l))},options:r.map(e=>({id:e.id,value:e.id,label:`${tB.Ay.getUserTag(e)}`,leading:(0,i.jsx)(tV.A,{user:e,size:ty._3.SIZE_20})}))})})};var tW=n(735438),tK=n.n(tW),tY=n(427358),tz=n(570287),tZ=n(994500);function tq(){let e=(0,en.yK)([tZ.A],()=>tZ.A.getFriendIDs()),t=(0,en.yK)([tY.A],()=>tY.A.getUserAffinities().filter(e=>{let{isFriend:t,communicationProbability:n,vcProbability:l,otherUserId:i}=e,r=(0,tz.q)(i);return!t&&(n>=.1||l>=.1)&&r}).map(e=>{let{otherUserId:t}=e;return t})),n=u.useMemo(()=>tK().uniq([...e,...t]),[e,t]);return(0,en.yK)([tj.default],()=>n.reduce((e,t)=>{let n=tj.default.getUser(t);return null==n||n.bot||e.push(n),e},[]),[n])}var t$=n(871181),tX=n(318007),tJ=n(285719),tQ=n(976860),t0=n(353791);function t1(e){let{handleClose:t,selectedSkuId:n}=e,{analyticsLocations:l}=(0,e9.Ay)(er.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);return(0,i.jsx)(tA.Q,{text:T.intl.string(T.t.J82mpK),onClick:function(){t(),(0,s.closeAllModals)(),null==n?(0,tC.Cz)({analyticsLocations:l,analyticsSource:er.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL}):(0,tQ.pX)(`${F.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`)},textVariant:"text-sm/medium"})}var t2=n(818348);let t3=(0,u.createContext)({setCustomConfettiVisible:()=>{},confettiCanvas:null,hideConfirmStepConfetti:!1,skuIDs:[],onStepChange:void 0}),t6=()=>(0,u.useContext)(t3),t4=e=>{let{hideConfirmStepConfetti:t,confettiCanvas:n}=t6(),{analyticsLocations:l}=(0,e9.Ay)();return(0,i.jsx)(tE,{analyticsLocations:l,hideConfetti:t,confettiCanvas:n,...e})},t5={[o.pn.GIFT_CUSTOMIZATION]:()=>T.intl.string(T.t["JCFN/y"]),[o.pn.AWAITING_PURCHASE_TOKEN_AUTH]:()=>T.intl.string(T.t.lDbi6H),[o.pn.CONFIRM]:()=>""},t7=e=>{let{step:t}=e,n=t5[t];return null==n?null:(0,i.jsx)(O.rQ,{title:n(),titleTextVariant:"heading-lg/semibold"})},t8={CHECKOUT_FLOW:eH.CL.COLLECTIBLES_CHECKOUT,CHECKOUT_STEPS:{[o.pn.GIFT_CUSTOMIZATION]:e=>{let{handleStepChange:t,handleClose:n}=e,{renderLeftColumn:l,renderRightColumn:r,ctaDisabled:s,loading:a}=(e=>{let{handleStepChange:t,handleClose:n}=e,{customGiftMessage:l="",setCustomGiftMessage:r,giftRecipientError:s,setGiftRecipientError:a,validatingGiftRecipient:o,giftRecipient:u,giftingOrigin:c,setValidatingGiftRecipient:d}=(0,S.Pv)(),{selectedSkuId:m,checkoutInvoicePreview:h}=(0,_.t4)(e=>({selectedSkuId:e.selectedSkuId,checkoutInvoicePreview:e.checkoutInvoicePreview})),p=(0,I.gU)(),f=(0,en.bG)([tj.default],()=>tj.default.getCurrentUser()),g=tq(),E=async(e,t)=>{d(!0),null!=s&&a(),await (0,tC.JJ)(e.id,t)||a(T.intl.string(T.t["4kgVqQ"])),d(!1)};(0,ei.Ay)(()=>{null!=m&&null!=u&&(c!==eD.vQ.DM_CHANNEL_WISHLIST&&Q.default.track(F.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED,{sku_id:m}),E(u,m))});let A=()=>(0,i.jsx)(t$.A,{onTextChange:e=>r?.(e),pendingText:l,currentText:l,disableThemedBackground:!0,className:t0.iX,innerClassName:t0.pt});return{renderLeftColumn:()=>(0,i.jsx)("div",{className:t0.qL,children:(0,i.jsx)(tX.t,{isShopGift:!0})}),renderRightColumn:()=>{let e=(0,tx.pA)({invoicePreview:h,selectedSkuId:m,skusById:p});return c===eD.vQ.USER_PROFILE_WISHLIST||c===eD.vQ.DM_CHANNEL_WISHLIST?(0,i.jsxs)("div",{children:[(0,i.jsx)(tJ.Z,{giftRecipient:u}),A(),null!=e&&null!=m&&(0,i.jsx)(tG,{skuId:m,priceAmount:e.amount,priceCurrency:e.currency,className:t0.uW,previewHeaderClassName:t0.vX,hideProfilePreview:!0}),(0,i.jsx)("div",{className:t0.fi,children:(0,i.jsx)(t1,{handleClose:n,selectedSkuId:m})})]}):(0,i.jsxs)("div",{children:[(0,i.jsx)(tH,{selectedSkuId:m,recipients:g,className:t0.uh,validateSelectedGift:E}),A(),null!=e&&null!=m&&(0,i.jsx)(tG,{skuId:m,priceAmount:e.amount,priceCurrency:e.currency,className:t0.Ng})]})},onStepChange:t,onBackClick:n,ctaDisabled:null!=s||null==u||u.id===f?.id||l.length>eD.Jo,loading:o}})({handleStepChange:t,handleClose:n}),o=u.useMemo(()=>({loading:a,disabled:s}),[a,s]);return(0,i.jsx)(eH.Mw,{paymentModalStepProps:e,layout:eH.XZ.TWO_COLUMN,renderLeftColumn:l,renderRightColumn:r,primaryCTAButtonProps:o})},[o.pn.REVIEW]:eW.p},TENANT_PROVIDER_CONFIGS:{tenantProvidesCheckoutRoot:!0,CustomTenantProvider:e=>{let{skuId:t,additionalOptions:n,children:l,...r}=e,{environment:s,confettiCanvas:a,setConfettiCanvas:o,customConfettiVisible:c,setCustomConfettiVisible:d,customConfettiDisplayOptions:m,hideConfirmStepConfetti:h}=(e=>{let{skuId:t}=e,n=u.useRef(new tt.OH),[l,i]=u.useState(null),[r,s]=u.useState(!1),a=u.useMemo(()=>(0,ti.AB)({purchaseType:tr.gs.FIAT,skuId:t}),[t]);return{environment:n,confettiCanvas:l,setConfettiCanvas:i,customConfettiVisible:r,setCustomConfettiVisible:s,customConfettiDisplayOptions:a,hideConfirmStepConfetti:null!=a}})({skuId:t}),p=(e=>{let{skuId:t}=e;return null!=t?[t]:[]})({skuId:t}),f=null!=n?n.onStepChange:void 0,g=(0,u.useMemo)(()=>({skuIDs:p,setCustomConfettiVisible:d,hideConfirmStepConfetti:h,confettiCanvas:a,onStepChange:f}),[p,d,h,a,f]);return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(to,{environment:s,setConfettiCanvas:o,customConfettiDisplayOptions:m,customConfettiVisible:c}),(0,i.jsx)(ea.M,{...r,skuIDs:p,stepConfigs:r.stepConfigs,activeSubscription:null,purchaseType:t2.VV.ONE_TIME,excludeSubscriptionPlansBySKU:!0,children:(0,i.jsx)(t3.Provider,{value:g,children:l})})]})},TenantPaymentModalRenderer:e=>{let{originalPaymentModalProps:t,renderPaymentModal:n}=e,{skuIDs:l,setCustomConfettiVisible:i,onStepChange:r}=t6(),{isGift:s}=(0,S.Pv)(),a=(0,te.J)(),{paymentModalSkuId:o,paymentModalOnClose:c,paymentModalOnComplete:d}=(e=>{let{skuIDs:t,onClose:n,onComplete:l,setCustomConfettiVisible:i}=e,r=t[0]??null,s=u.useCallback(()=>{i(!0),l?.()},[l,i]);return{paymentModalSkuId:r,paymentModalOnClose:u.useCallback(e=>{i(!1),n(e),tn.h.dispatch({type:"SKU_PURCHASE_MODAL_CLOSE",error:null})},[n,i]),paymentModalOnComplete:s}})({onClose:t.onClose,onComplete:t.onComplete,skuIDs:l,setCustomConfettiVisible:i}),m=u.useCallback(e=>{c(e),e&&s&&a()},[c,s,a]);return n({...t,skuId:o,onClose:m,onComplete:d,applicationId:F.FYj,onStepChange:r})},tenantAnalyticsLocation:er.A.COLLECTIBLES_PAYMENT_MODAL},CustomHeaderComponent:e=>{let{step:t}=e,{isGift:n}=(0,S.Pv)();return n?(0,i.jsx)(t7,{step:t}):null},CUSTOM_CONFIRM_STEP_CONFIG:{renderStep:e=>(0,i.jsx)(t4,{...e}),options:ta}};var t9=n(354033),ne=n(786300),nt=n(491057),nn=n(496142),nl=n(394584);let[ni,nr]=(0,ne.A)(),ns={CHECKOUT_FLOW:eH.CL.GUILD_ROLE_CHECKOUT,CHECKOUT_STEPS:{[o.pn.REVIEW]:nn.E},TENANT_PROVIDER_CONFIGS:{CustomTenantProvider:e=>{let{tenantParams:{guildId:t,listing:n},children:l}=e,r=u.useMemo(()=>({guildId:t,listing:n}),[t,n]);return(0,i.jsx)(ni.Provider,{value:r,children:(0,i.jsx)(nt.Qt,{children:l})})},tenantProvidesCheckoutRoot:!1},CustomHeaderComponent:e=>{let{onClose:t,step:n}=e,{guildId:l,listing:r}=nr();return(0,i.jsx)(t9.Y,{onClose:t,listing:r,step:n,guildId:l})},CUSTOM_CONFIRM_STEP_CONFIG:{renderStep:e=>(0,i.jsx)(nl._,{...e}),options:{modalSizeGetter:()=>"md"}}};var na=n(73825),no=n(960851),nu=n(117945),nc=n(344159),nd=n(561794),nm=n(811656),nh=n(363373),np=n(800471),nf=n(941796),ng=n(957489),nE=n(822426);let nA=[{key:o.pn.SKU_SELECT,renderStep:e=>(0,i.jsx)(ng.F,{...e}),options:{renderHeader:!1,hideSlider:!0,modalSizeGetter:e=>{let{canCurrentlyPurchasePremiumGroup:t}=e;return t?"xl":"md"}}},{key:o.pn.WHAT_YOU_LOSE,renderStep:e=>(0,i.jsx)(nE.K,{...e}),options:{modalSizeGetter:()=>"md",renderHeader:!1,hideSlider:!0}},{key:o.pn.PLAN_SELECT,renderStep:e=>(0,i.jsx)(nf.Z,{...e}),options:{renderHeader:!0,useBreadcrumbLabel:e=>(0,np.lp)(e)?null:T.intl.string(T.t["r+SebU"]),sectionHeaderText:()=>T.intl.string(T.t.UKbp1N),modalSizeGetter:e=>{let{isGift:t}=e;return t?"xl":"md"}}},{key:o.pn.SELECT_FREE_SKU,renderStep:e=>(0,i.jsx)(nh.j,{...e}),options:{modalSizeGetter:()=>"lg",hideDefaultModalBody:!0}}],nC={CHECKOUT_FLOW:es.C.PREMIUM_CHECKOUT,STEPS_BEFORE_CHECKOUT:nA,CHECKOUT_STEPS:{[o.pn.REVIEW]:nn.E},TENANT_PROVIDER_CONFIGS:{tenantProvidesCheckoutRoot:!0,CustomTenantProvider:e=>{let{tenantParams:{confirmationFooter:t,defaultPlanId:n,referralCode:l,referralTrialOfferId:r,subscriptionTier:s,subscription:a},stepConfigs:c,loadId:d,giftContextProps:m={isGift:!1,giftRecipient:null},renderModalProps:h,children:p}=e,f=(0,en.bG)([eE.A],()=>eE.A.getPremiumTypeSubscription()),g=(0,no.cg)()?eD.gD.PREMIUM_MONTH_TIER_2:void 0,{isGift:E,giftRecipient:A}=m;if(null!=s&&!Object.values(eD.pe).includes(s))throw Error("subscriptionTier must be a premium subscription");let C=(0,nd.tA)({giftRecipient:A,isGift:E??!1}),x=u.useMemo(()=>C?c.map(e=>e.key===o.pn.SKU_SELECT&&null!=e.options?{...e,options:{...e.options,modalSizeGetter:()=>"xl"}}:e):c,[c,C]),I=null!=a?a:f,_=!E&&null!=I&&I.isPurchasedExternally&&null!=I.paymentGateway;(0,nc.s)(I,()=>h.onClose(),E??!1);let S=u.useMemo(()=>[...eD.oz],[]);return _?null:(0,i.jsx)(ea.M,{loadId:d,activeSubscription:I,stepConfigs:x,skuIDs:S,isGift:E,defaultPlanId:g??n,referralCode:l,referralTrialOfferId:r,unifiedCheckoutFlow:es.C.PREMIUM_CHECKOUT,children:(0,i.jsx)(nt.Qt,{confirmationFooter:t,children:p})})},TenantPaymentModalRenderer:e=>{let{originalPaymentModalProps:t,renderPaymentModal:n}=e,{onClose:l,renderPurchaseConfirmation:r,continueSessionToInitialStep:s}=t;u.useEffect(()=>{eO.A.isLoadedForPremiumSKUs()||tn.h.wait(()=>(0,na.zS)())},[]);let{selectedSkuId:a,purchaseState:c}=(0,_.t4)(e=>({selectedSkuId:e.selectedSkuId,purchaseState:e.purchaseState})),d=(0,eh.bB)(),{isGift:m,selectedGiftingPromotionReward:h,openGiftingBadgePostPurchaseModal:p}=(0,S.Pv)(),f=u.useCallback((e,t)=>{l(e,t),e&&m&&null==h&&p()},[l,m,h,p]),g=(0,nu.T)(m,a),E=c===em.h.PURCHASING;return(0,i.jsx)(nm.A,{isConfirmationStep:d===o.pn.CONFIRM&&null==s&&null==r,isEligibleForWowMoment:g,shouldPrefetchWowMoment:E,children:n({...t,onClose:f,analyticsSubscriptionType:F.rzx.PREMIUM,shakeWhilePurchasing:!0,planGroup:eD.LE})})},tenantAnalyticsLocation:er.A.PREMIUM_PAYMENT_MODAL},CUSTOM_CONFIRM_STEP_CONFIG:{renderStep:e=>(0,i.jsx)(nl._,{...e}),options:{modalSizeGetter:()=>"md"}}};var nx=n(753390),nI=n(143582),n_=n(897904),nS=n(967198);let[ny,nv]=(0,ne.A)();function nT(e){let{guildId:t,showBenefitsFirst:n,children:l}=e,[r,s]=u.useState(null),a=u.useMemo(()=>({guildId:t,showBenefitsFirst:n,subscriptionMetadataRequest:r,setSubscriptionMetadataRequest:s}),[t,n,r]);return(0,i.jsx)(ny.Provider,{value:a,children:l})}n(938796);var nN=n(241524),nj=n(266060),nb=n(163437),nR=n(701273),nP=n(425013);let nL=e=>{let{onConfirm:t,onCancel:n,title:l,subtitle:r,confirmCta:s,showOpenDiscord:a=!0}=e;return(0,i.jsxs)("div",{className:nP.RP,children:[(0,i.jsx)(A.D,{className:nP.RS,variant:"heading-lg/extrabold",children:l}),null!=r?(0,i.jsx)(C.E,{className:nP.sT,variant:"text-sm/normal",color:"text-default",children:r}):null,(0,i.jsxs)("div",{className:nP.UD,children:[a&&(0,i.jsx)(E.$,{variant:"primary",text:T.intl.string(T.t["8L5bZG"]),fullWidth:!0,onClick:()=>(0,nR.A)("application_sub_mweb_success_modal")}),(0,i.jsx)(E.$,{variant:"secondary",text:s,fullWidth:!0,onClick:t}),null!=n&&(0,i.jsx)(E.$,{variant:"secondary",text:T.intl.string(T.t.iAfxo3),fullWidth:!0,onClick:n})]})]})};function nM(e){let{onConfirm:t,tierName:n,subscription:l}=e;return(0,i.jsxs)("div",{className:nP.RP,children:[(0,i.jsx)(A.D,{className:nP.RS,variant:"heading-lg/extrabold",children:T.intl.format(T.t.wLFT6z,{tier:n})}),(0,i.jsx)(C.E,{className:nP.sT,variant:"text-sm/normal",color:"text-default",children:T.intl.format(T.t.OsAK9h,{timestamp:l?.currentPeriodEnd})}),(0,i.jsxs)("div",{className:nP.UD,children:[(0,i.jsx)("div",{"data-button-hoisted-classname-wrapper":!0,className:nP.__invalid_openDiscordButton,children:(0,i.jsx)(E.$,{variant:"primary",text:T.intl.string(T.t["8L5bZG"]),onClick:()=>(0,nR.A)("application_sub_mweb_success_modal")})}),(0,i.jsx)(E.$,{variant:"secondary",text:T.intl.string(T.t.nlkywz),onClick:t})]})]})}var nO=n(19311),nw=n(376747);function nD(e){let{handleStepChange:t,handleClose:n}=e,l=(0,nj.K)(),{subscriptionMetadataRequest:r}=nv(),{application:s}=(0,x.V)(),a=(0,I.S3)(),c=(0,nN.A)(nw.Y),d=(0,en.bG)([ef.A],()=>ef.A.getGuild(r?.guild_id)),m=u.useCallback(()=>t(o.pn.REVIEW),[t]);if(null==a)return null;let h=(0,nb.bg)(a.flags);return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(v.dZ,{children:c?(0,i.jsx)(nL,{confirmCta:T.intl.string(T.t.PBHFSq),onConfirm:m,onCancel:n,title:T.intl.format(T.t["6n6oXA"],{tier:a.name}),subtitle:h?T.intl.string(T.t.lzAoKB):T.intl.formatToPlainString(T.t["GqaY/j"],{guildName:d?.name}),showOpenDiscord:!1}):(0,i.jsx)(n_.Uf,{icon:l?.thumbnail,storeListingBenefits:l?.benefits,application:s??void 0,title:T.intl.format(T.t.haiCxc,{tier:a.name}),subtitle:h?T.intl.string(T.t.RvtbP5):T.intl.string(T.t.zY39Zu),description:h?T.intl.formatToPlainString(T.t.QCe4rY,{applicationName:s?.name}):T.intl.string(T.t.n1Pu8C)})}),!c&&(0,i.jsx)(v.UX,{children:(0,i.jsx)(nO.Ay,{onBack:n,backText:T.intl.string(T.t.TQBY1J),onPrimary:m,primaryCTA:nO.ti.CONTINUE,primaryText:T.intl.string(T.t["gZhF+3"])})})]})}var nk=n(21161);function nU(e){let t,n,{handleClose:l,onSubscriptionConfirmation:r}=e,s=(0,nj.K)(),{application:a}=(0,x.V)(),{readySlideId:c,updatedSubscription:d}=(0,_.t4)(e=>({readySlideId:e.readySlideId,updatedSubscription:e.updatedSubscription})),m=(0,I.S3)(),h=(0,nN.A)(nw.Y),{createMultipleConfettiAt:p}=u.useContext(nk.x),f=m?.name??"",g=()=>{l(),r?.()},E=c===o.pn.CONFIRM,A=(0,nb.bg)(m?.flags??0),C=null!=s&&s.benefits.length>0?T.intl.formatToPlainString(T.t["+IQQVM"],{benefitCount:s.benefits.length}):null,{showBenefitsFirst:S}=nv();return S?t=h?(0,i.jsx)(nM,{tierName:f,onConfirm:g,subscription:d}):(0,i.jsx)(n_.XG,{tierName:f,onConfirm:g,subscription:d}):h?t=(0,i.jsx)(nL,{title:T.intl.format(T.t.ea6tZr,{tierName:f}),subtitle:null!=s&&s.benefits.length>0?T.intl.formatToPlainString(T.t.HNepft,{benefits:C}):null,onConfirm:g,confirmCta:T.intl.string(T.t.nlkywz)}):(t=null!=s&&null!=a?(0,i.jsx)(n_.Uf,{icon:s.thumbnail,storeListingBenefits:s.benefits,application:a,title:T.intl.format(T.t["Q+qktS"],{tier:f}),subtitle:T.intl.string(T.t.ECKxXU),description:A?T.intl.format(T.t["MAtQk/"],{applicationName:a?.name}):T.intl.format(T.t.vHkMF4,{tier:f})}):(0,i.jsx)(G.A,{}),n=(0,i.jsx)(nO.Ay,{onPrimary:g,primaryCTA:nO.ti.CONTINUE,primaryText:T.intl.string(T.t["JtWl+a"])})),u.useEffect(()=>{tu.Ay.useReducedMotion&&E&&p(window.innerWidth/2,window.innerHeight/2)},[p,E]),(0,i.jsxs)(i.Fragment,{children:[(0,i.jsxs)(v.dZ,{children:[(0,i.jsx)(y.A,{}),t]}),null!=n&&(0,i.jsx)(v.UX,{children:n})]})}var nG=n(304072),nF=n(71804),nV=n(558620),nB=n(427858),nH=n(166926),nW=n(953761);let nK={CHECKOUT_FLOW:es.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,CustomCheckoutPredicateStep:function(e){let{initialPlanId:t,setAnalyticsData:n}=e,{selectedSkuId:l,setSelectedSkuId:r,setSelectedPlanId:s,priceOptions:a}=(0,_.t4)(e=>({selectedSkuId:e.selectedSkuId,setSelectedSkuId:e.setSelectedSkuId,setSelectedPlanId:e.setSelectedPlanId,priceOptions:e.checkoutPriceOptions})),{hasFetchedRelatedSubscriptionPlans:c,subscriptionPriceOptionsLoading:d,displayCurrency:m}=(0,eS.Jn)(),{setSubscriptionMetadataRequest:h,guildId:p,showBenefitsFirst:f}=nv(),g=(0,R.Hp)(),E=(0,ey.A)(),A=(0,eh.l)(),{isGift:C}=(0,S.Pv)(),x=f?o.pn.BENEFITS:o.pn.REVIEW,[I,y]=u.useState(!E||!c||d);return(u.useEffect(()=>{y(!E||!c||d)},[d,c,E]),u.useEffect(()=>{null!=p&&h({guild_id:p})},[p,h]),u.useEffect(()=>{s(t);let e=null!=t?eO.A.get(t):null;I||g||(n(t=>{let n=null!=e?(0,tb.y8)(e.id,!1,C,{paymentSourceId:a.paymentSourceId}):void 0;return{...t,subscription_plan_id:e?.id,price:n?.amount,regular_price:e?.price,currency:m}}),null!=e&&(r(e?.skuId),A(x)))},[g,t,C,I,a,m,l,n,s,r,A,x]),I)?(0,i.jsx)(G.A,{}):g?(0,i.jsx)(P.oO,{}):null},CustomHeaderComponent:e=>{let{step:t,onClose:n}=e,l=u.useCallback(()=>n(!1),[n]);return(0,i.jsx)(n_.fs,{step:t,onClose:l})},STEPS_BEFORE_CHECKOUT:[{key:o.pn.BENEFITS,renderStep:e=>(0,i.jsx)(nD,{...e}),options:{useBreadcrumbLabel:()=>T.intl.string(T.t["5LD2+B"])}}],CHECKOUT_STEPS:{[o.pn.REVIEW]:function(e){let{handleStepChange:t,planGroup:n,openInvoiceId:l,analyticsData:r,analyticsLocation:s}=e,{purchaseState:a,contextMetadata:c,purchaseError:d,setCurrency:m,activeSubscription:h}=(0,_.t4)(e=>({purchaseState:e.purchaseState,contextMetadata:e.contextMetadata,purchaseError:e.purchaseError,setCurrency:e.setCheckoutCurrency,activeSubscription:e.activeSubscription})),{paymentSources:p}=(0,L.jm)(),{dropdownCurrencies:f}=(0,eS.Jn)(),{subscriptionMetadataRequest:g,showBenefitsFirst:E}=nv(),A=E?o.pn.BENEFITS:void 0,C=(0,nV.A)(),x=(0,I.S3)();if(null==C)throw new nF.v({message:"Expected plan to be selected",extraSentryInformation:{selectedPlan:C}});let S=u.useRef(null),[y,T]=(0,nG.A)(!1,500),N=(0,eK.mx)(),j=(0,nb.bg)(x?.flags??0);u.useEffect(()=>{null!=d&&null!=S.current&&S.current.scrollIntoView({behavior:"smooth"})},[d]);let b=u.useRef(null),R=u.useCallback(()=>{t(o.pn.ADD_PAYMENT_STEPS)},[t]);return a===em.h.PURCHASING?(0,i.jsx)(G.A,{}):(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(v.dZ,{children:null==h?(0,i.jsx)(nW._,{selectedPlanId:C.id,planGroup:n,paymentSources:p,handlePaymentSourceAdd:R,metadata:j?void 0:g}):(0,i.jsx)(nB.A,{premiumSubscription:h,paymentSources:p,handlePaymentSourceAdd:R,planId:C.id,planGroup:n,currencies:f,onCurrencyChange:e=>m(e),hasOpenInvoice:null!=l,purchaseState:a})}),(0,i.jsx)(v.UX,{children:(0,i.jsx)(nH.U,{premiumSubscription:h??null,onBack:()=>null!=A&&t(A),handleStepChange:t,postPurchaseStep:o.pn.CONFIRM,legalTermsNodeRef:b,flashLegalTerms:()=>T(!0),analyticsLocation:s,baseAnalyticsData:r,flowStartTime:c.startTime,planGroup:n,openInvoiceId:l,metadata:j?void 0:g,backButtonEligible:!!E||void 0,invoiceError:N,disablePurchase:g?.guild_id==null&&!j,onPaymentSourceAdd:R})})]})}},TENANT_PROVIDER_CONFIGS:{tenantProvidesCheckoutRoot:!0,CustomTenantProvider:e=>{let{loadId:t,applicationId:n,activeSubscription:l,stepConfigs:r,skuId:s,tenantParams:a,children:o}=e,{guildId:u,showBenefitsFirst:c}=a;return(0,i.jsx)(ea.M,{loadId:t,applicationId:n,activeSubscription:l,stepConfigs:r,skuIDs:[s],unifiedCheckoutFlow:es.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,children:(0,i.jsx)(nT,{guildId:u,showBenefitsFirst:c,children:(0,i.jsx)(nt.Qt,{children:o})})})},TenantPaymentModalRenderer:e=>{let{originalPaymentModalProps:t,renderPaymentModal:n,tenantParams:{forcesTransitionToGuild:l,guildId:i}}=e,r=t.onClose,s=t.onComplete,a=u.useCallback(e=>{r(e),e&&null!=i&&(nx.hP(),(0,nI.f5)(i),null!=s&&s(),null!=i&&(l||nS.A.getGuildId()!==i)&&(0,tQ.pX)(F.BVt.CHANNEL(i)))},[r,s,l,i]);return n({...t,onClose:a,forceNewPaymentModal:!0})},tenantAnalyticsLocation:er.A.APPLICATION_SUBSCRIPTION_CHECKOUT},CUSTOM_CONFIRM_STEP_CONFIG:{renderStep:e=>(0,i.jsx)(nU,{...e})}};var nY=n(67480),nz=n(328968),nZ=n(371794),nq=n(565756);o.pn.GIFT_CUSTOMIZATION;let n$={CHECKOUT_FLOW:eH.CL.PREMIUM_APPS_OTP_CHECKOUT,CHECKOUT_STEPS:{[o.pn.GIFT_CUSTOMIZATION]:e=>{let{customGiftMessage:t="",setCustomGiftMessage:n,giftRecipient:l}=(0,S.Pv)(),r=(0,_.t4)(e=>e.selectedSkuId),s=(0,en.bG)([tj.default],()=>tj.default.getCurrentUser()),a=(0,en.bG)([nY.A],()=>null!=r?nY.A.get(r):null,[r]),o=tq(),c=(0,en.bG)([nz.A],()=>null!=r?nz.A.getForSKU(r):null,[r]),d=c?.headerBackground!=null&&a?.applicationId!=null?(0,nZ.YE)(a.applicationId,c.headerBackground,256):void 0,m=async(e,t)=>{},h=null==l||l.id===s?.id||t.length>eD.Jo,p=u.useMemo(()=>({disabled:h}),[h]);return(0,i.jsx)(eH.Mw,{onBackClick:e.handleClose,paymentModalStepProps:e,layout:eH.XZ.TWO_COLUMN,renderLeftColumn:()=>(0,i.jsxs)("div",{className:nq.P6,children:[a?.name!=null&&(0,i.jsx)(A.D,{variant:"heading-lg/semibold",color:"text-strong",children:a.name}),null!=d&&(0,i.jsx)("img",{src:d,alt:a?.name??"",className:nq.LC})]}),renderRightColumn:()=>(0,i.jsxs)("div",{className:nq.P6,children:[(0,i.jsx)(tH,{recipients:o,selectedSkuId:r,validateSelectedGift:m}),(0,i.jsx)(t$.A,{onTextChange:e=>n?.(e),pendingText:t,currentText:t,disableThemedBackground:!0,className:nq.iX,innerClassName:nq.pt})]}),primaryCTAButtonProps:p})},[o.pn.REVIEW]:eW.p},CUSTOM_CONFIRM_STEP_CONFIG:Y,TENANT_PROVIDER_CONFIGS:{CustomTenantProvider:e=>e.children,tenantProvidesCheckoutRoot:!1,tenantAnalyticsLocation:er.A.APPLICATION_OTP_PAYMENT_MODAL}};var nX=n(429913),nJ=n(733391),nQ=n(318254),n0=n(510022),n1=n(317560),n2=n(366523),n3=n(910200),n6=n(208733);function n4(e){let{handleClose:t}=e,{analyticsLocations:n}=(0,e9.Ay)(),{selectedSkuId:l,entitlementsGranted:r}=(0,_.t4)(e=>({selectedSkuId:e.selectedSkuId,entitlementsGranted:e.entitlementsGranted})),{application:s}=(0,x.V)(),a=(0,I.gU)(),{isGift:o,giftRecipient:c}=(0,S.Pv)();g()(null!=l,"Expected selectedSkuId"),g()(null!=s,"Expected application");let d=a[l];g()(null!=d,"Expected sku");let m=r.find(e=>e.sku_id===l),h=m?.metadata?.orbs_reward;if(u.useEffect(()=>{o||((0,n1.j)(),t(),(0,n0.n)({sku:d,application:s,analyticsLocations:n,orbsReward:h}))},[o,d,s,t,n,h]),!o)return null;let p=null!=h&&h>0;return(0,i.jsxs)(v.dZ,{children:[(0,i.jsx)(y.A,{}),(0,i.jsxs)("div",{className:n6.EL,children:[(0,i.jsx)(n2.e,{sku:d,shape:"square",containerClassName:n6.LC}),(0,i.jsx)(A.D,{variant:"heading-xl/semibold",className:n6.RS,children:T.intl.string(T.t["5glWta"])}),(0,i.jsx)(C.E,{variant:"text-md/normal",children:T.intl.formatToPlainString(T.t["2VjPTw"],{itemName:d.name,giftRecipient:c?.username??"your recipient"})}),p&&(0,i.jsx)("div",{className:n6.Is,children:(0,i.jsx)(n3.A,{Icon:nQ.C,text:T.intl.format(T.t["ZV+aS9"],{orbCount:h})})}),(0,i.jsx)("div",{className:n6.UD,children:(0,i.jsx)(E.$,{onClick:t,text:T.intl.string(T.t.cpT0Cq),fullWidth:!0})})]})]})}n(801541);var n5=n(889137),n7=n(742158),n8=n(683071),n9=n(313961),le=n(238017),lt=n(650588),ln=n(117218),ll=n(763827),li=n(403362),lr=n(871123),ls=n(832163),la=n(44724),lo=n(980094),lu=n(806931),lc=n(107610);function ld(e){let{handleClose:t,sku:n,application:l}=e,r=u.useCallback(()=>{(0,la.G)({applicationId:n.applicationId})},[n.applicationId]),a=u.useCallback(()=>{t();let e=ls.A.getStorefrontState(n.applicationId)?.activePage;(0,lr.uV)({pathname:window.location.pathname,search:window.location.search,applicationId:n.applicationId,pageIndex:e??0,guildId:l?.guildId,skuId:n.id})||((0,s.closeAllModals)(),(0,la.default)({applicationId:n.applicationId,pageIndex:e??0,skuId:n.id,slug:n.slug}))},[n.applicationId,n.id,n.slug,t,l]);return(0,i.jsx)("div",{className:lc.$O,children:(0,i.jsx)(tA.Q,{text:T.intl.string(T.t.ImioFL),onMouseDown:r,onClick:a,textVariant:"text-sm/medium",lineClamp:void 0})})}let lm={CHECKOUT_FLOW:eH.CL.SLAYER_STOREFRONT_CHECKOUT,CHECKOUT_STEPS:{[o.pn.GIFT_CUSTOMIZATION]:e=>{let{handleStepChange:t,handleClose:n}=e,{renderStepBody:l,disabled:r}=(e=>{var t;let n,l,r,{handleStepChange:s,handleClose:a}=e,{customGiftMessage:o="",setCustomGiftMessage:c,giftRecipient:d,emojiConfetti:m,soundEffect:h,setEmojiConfetti:p,setSoundEffect:f,giftingOrigin:g,additionalUserIds:E}=(0,S.Pv)(),A=(0,_.t4)(e=>e.selectedSkuId),{application:I}=(0,x.V)(),y=(0,en.bG)([tj.default],()=>tj.default.getCurrentUser()),v=(t=y?.id,n=tq(),l=function(e){let t=(0,en.bG)([ll.A],()=>ll.A.isConnected()?ll.A.getChannelId():null),[n,l]=u.useState([]);return u.useEffect(()=>{let n=null!=t?n9.A.getParticipants(t):[],i=[],r=new Set;for(let t of n)!(0,lu.Xw)(t)&&!(0,lu.Ay)(t)||t.user.id===e||r.has(t.user.id)||(r.add(t.user.id),i.push(t));i.sort((e,t)=>(0,lu.Ay)(e)&&!(0,lu.Ay)(t)?-1:(0,lu.Ay)(t)&&!(0,lu.Ay)(e)?1:0),l(i.map(e=>e.user))},[t,e]),n}(t),r=(0,en.yK)([tj.default],()=>E?.map(tj.default.getUser).filter(li.Vq)??[],[E]),u.useMemo(()=>tK().uniqWith([...null!=d?[d]:[],...r,...l,...n],(e,t)=>e.id===t.id),[d,r,l,n])),N=(0,en.bG)([nY.A],()=>null!=A?nY.A.get(A):null,[A]),{userPrice:j}=(0,ln.CD)({sku:N,priceSetAssignmentPurchaseType:F.lid.GIFT}),b=(0,lr.fq)(N),R=(0,lr.xf)(N),P=async(e,t)=>{},L=e=>{null!=f&&f(null==e?void 0:e)},M=()=>(0,i.jsxs)("div",{className:lc.mT,children:[null!=b&&(0,i.jsx)(n2.A,{containerClassName:lc.T3,cardImage:b,cardBackgroundImage:R,altText:N?.name??"",shape:"square"}),(0,i.jsxs)("div",{className:lc._T,children:[(0,i.jsx)(lt.A,{sound:h,onSelect:L}),(0,i.jsx)(le.A,{setEmojiConfetti:p,emojiConfetti:null==m?void 0:m})]})]}),O=()=>{let e=N?.orbsReward;return(0,i.jsxs)("div",{className:lc.Tc,children:[null!=d&&(g===eD.vQ.USER_PROFILE_WISHLIST||g===eD.vQ.DM_CHANNEL_WISHLIST)?(0,i.jsx)(tJ.Z,{giftRecipient:d}):(0,i.jsx)(tH,{selectedSkuId:A,validateSelectedGift:P,recipients:v}),(0,i.jsx)(t$.A,{onTextChange:e=>c?.(e),pendingText:o,currentText:o,disableThemedBackground:!0,className:lc.iX,innerClassName:lc.pt}),null==N?null:(0,i.jsxs)("div",{className:lc.AN,children:[(0,i.jsx)(n7.z,{className:lc.jr,children:T.intl.string(T.t.PpoJzt)}),(0,i.jsxs)("div",{className:lc.Wx,children:[(0,i.jsx)("div",{className:lc.Xb,children:null!=N&&null!=b&&(0,i.jsx)(n2.A,{containerClassName:lc.Iy,cardImage:b,cardBackgroundImage:R,altText:N.name,shape:"square"})}),(0,i.jsxs)("div",{className:lc.vz,children:[null!=I&&(0,i.jsx)(lo.Q,{application:I}),(0,i.jsx)(C.E,{variant:"text-sm/semibold",children:N.name})]}),(0,i.jsx)(C.E,{variant:"text-md/semibold",children:j})]})]}),null!=N&&(0,lr.Ri)(N)&&(0,i.jsx)(n8.w,{type:"info",children:T.intl.string(T.t.lORYb6)}),null!=e&&e>0&&(0,i.jsx)(n3.A,{Icon:nQ.C,text:T.intl.format(T.t["ZV+aS9"],{orbCount:e})}),null!=N&&(0,i.jsx)(ld,{handleClose:a,sku:N,application:I})]})};return{renderStepBody:()=>(0,i.jsxs)("div",{className:lc.Du,children:[M(),O()]}),getLeftColumnComponent:M,getRightColumnComponent:O,onStepChange:s,onBackClick:a,disabled:null==d||d.id===y?.id||o.length>eD.Jo}})({handleStepChange:t,handleClose:n}),s=u.useMemo(()=>({disabled:r}),[r]);return(0,i.jsx)(eH.Mw,{paymentModalStepProps:e,layout:eH.XZ.CUSTOM_STEP_BODY,renderStepBody:l,primaryCTAButtonProps:s})},[o.pn.REVIEW]:eW.p},CUSTOM_CONFIRM_STEP_CONFIG:{renderStep:e=>(0,i.jsx)(n4,{...e})},TENANT_PROVIDER_CONFIGS:{tenantProvidesCheckoutRoot:!0,CustomTenantProvider:e=>{let{children:t,discoverySessionId:n,loadId:l,applicationId:r,isGift:s,skuId:a,...o}=e;return(e=>{let{applicationId:t,skuId:n}=e,l=(0,nX.h)(t);u.useEffect(()=>{null==l||null==n||nz.A.isFetchingForSKU(n)||null!=nY.A.get(n)||(0,nJ.Pp)(l.id,n)},[l,n])})({applicationId:r,skuId:a}),(0,i.jsx)(ea.M,{loadId:l,discoverySessionId:n,applicationId:r,skuIDs:[a],purchaseType:t2.VV.ONE_TIME,isGift:s,...o,activeSubscription:null,children:t})},TenantPaymentModalRenderer:e=>{let{originalPaymentModalProps:t,renderPaymentModal:n}=e;return n({...t,analyticsObject:t.analyticsSourceLocation})},tenantAnalyticsLocation:er.A.SLAYER_STOREFRONT_PAYMENT_MODAL},CustomHeaderComponent:function(e){let{step:t}=e,n=(0,n5.YW)(t).with(o.pn.GIFT_CUSTOMIZATION,()=>T.intl.string(T.t["JCFN/y"])).with(o.pn.AWAITING_PURCHASE_TOKEN_AUTH,()=>T.intl.string(T.t.lDbi6H)).with(o.pn.CONFIRM,()=>"").otherwise(()=>null);return null==n?null:(0,i.jsx)(O.rQ,{title:n,titleTextVariant:"heading-lg/semibold"})}};var lh=n(274971),lp=n(944355),lf=n(977445),lg=n(908419),lE=n(211287),lA=n(623373),lC=n(739508),lx=n(715054);(0,r.A)();var lI=n(136857),l_=n(158317),lS=n(855104);n(322076);var ly=((l={})[l.INSUFFICIENT_ORB_BALANCE=1e3]="INSUFFICIENT_ORB_BALANCE",l[l.MISSING_DEPENDENT_SKU_ENTITLEMENT=1001]="MISSING_DEPENDENT_SKU_ENTITLEMENT",l[l.SKU_PRODUCT_LINE_NOT_PURCHASABLE=1002]="SKU_PRODUCT_LINE_NOT_PURCHASABLE",l[l.SKU_ALREADY_OWNED=1003]="SKU_ALREADY_OWNED",l[l.FRACTIONAL_PREMIUM_ACTIVE_MOBILE_SUBSCRIPTION=1004]="FRACTIONAL_PREMIUM_ACTIVE_MOBILE_SUBSCRIPTION",l[l.SKU_NOT_AVAILABLE_FOR_DISTRIBUTION=1005]="SKU_NOT_AVAILABLE_FOR_DISTRIBUTION",l[l.SKU_MISSING_ORB_PRICE=1006]="SKU_MISSING_ORB_PRICE",l[l.SKU_IS_THIRD_PARTY=1007]="SKU_IS_THIRD_PARTY",l[l.SLAYER_STOREFRONT_ORB_REDEMPTION_DISABLED=1008]="SLAYER_STOREFRONT_ORB_REDEMPTION_DISABLED",l[l.FRACTIONAL_PREMIUM_SUBSCRIPTION_GROUP_MEMBER=1009]="FRACTIONAL_PREMIUM_SUBSCRIPTION_GROUP_MEMBER",l[l.BUNDLE_PARTIALLY_OWNED=1010]="BUNDLE_PARTIALLY_OWNED",l[l.SOCIAL_LAYER_NOT_PURCHASABLE=1011]="SOCIAL_LAYER_NOT_PURCHASABLE",l[l.FRAMES_FIAT_EXCLUSIVE=1012]="FRAMES_FIAT_EXCLUSIVE",l[l.FIRST_PARTY_NO_ORBS=1013]="FIRST_PARTY_NO_ORBS",l),lv=n(289873),lT=n(241989),lN=n(576052),lj=n(120992),lb=n(194256),lR=n(319820),lP=n(327105),lL=n(200766);let lM=e=>{let{sku:t,orbPriceAmount:n}=e,{product:l,isSocialLayerGameItem:r}=(0,lR.AO)({sku:t}),s=(0,lb.oO)(l);r?s=T.intl.string(lP.default.qwSlCO):(0,lA.Ab)(l)&&(s=T.intl.string(T.t["0TmQRG"]));let a=(0,lb.dL)(t),o=(0,tr.EZ)(t.id)?lN.m[t.id].render({className:lL.$}):(0,i.jsx)(lT.WH,{sku:t,product:l});return(0,i.jsx)(lT.f7,{label:a,description:s,graphic:o,price:null!=n?`${n}`:"",PriceIcon:nQ.C})},lO=e=>{let{skuId:t,orbPriceAmount:n}=e;(0,lj.c)({applicationId:(0,J.P)(t),skuIDs:[t]});let l=(0,b.bG)([nY.A],()=>nY.A.get(t),[t]);return null==l?(0,i.jsx)(lv.y,{type:lv.y.Type.PULSING_ELLIPSIS}):(0,i.jsx)(lM,{sku:l,orbPriceAmount:n})},lw=e=>{let{orbBalance:t}=e;return(0,i.jsx)(lp.vW,{label:T.intl.string(T.t.y0WGqP),value:null!=t?`${t}`:"",Icon:nQ.C})},lD=()=>T.intl.string(T.t.wmcDyu);function lk(){let{immediateDelivery:e}=(0,lg.U)(),t=lD();return(0,i.jsx)(lp._P,{variant:{type:lp.I0.OrbsRedemption,purchaseButtonText:t},paymentSourceType:null,immediateDelivery:e})}let lU=(0,u.createContext)({isRedeeming:!1,orbRedemptionError:null,orbProductContext:null,onRedeemVirtualCurrency:()=>{},skuId:"",analyticsSourceLocation:void 0}),lG=()=>(0,u.useContext)(lU),lF={payment_gateway:t2.kM.VIRTUAL_CURRENCY,currency:F.Yri.DISCORD_ORB},lV={CHECKOUT_FLOW:eH.CL.ORB_CHECKOUT,CHECKOUT_STEPS:{[o.pn.REVIEW]:e=>{let{handleStepChange:t}=e,{orbProductContext:n,isRedeeming:l,orbRedemptionError:r,onRedeemVirtualCurrency:s,skuId:a,analyticsSourceLocation:c}=lG(),{primaryButtonProps:d,...m}=(e=>{let{skuId:t,analyticsSourceLocation:n,orbProductContext:l,isRedeeming:r,orbRedemptionError:s,onRedeemVirtualCurrency:a,handleStepChange:c}=e,{enabled:d}=lE.A.useConfig({location:"orb_checkout_review_step"}),{invoicePreviewTotal:m,orderOrbPriceAmount:h}=(0,_.t4)(e=>{let n=null!=e.orderRecord?e.orderRecord.getInvoicePreview():null;return{invoicePreviewTotal:null!=n?n.total:null,orderOrbPriceAmount:null!=n?n.getInvoicePreviewLineItemUnitPriceForSku(t):null}}),{isStepLoading:p,orbPriceAmount:f,orbBalanceToDisplay:g,onClickCheckout:E,showCollectiblesDiscountWarning:A,errorMessage:C}=(e=>{let{skuId:t,onRedeemVirtualCurrency:n,orbRedemptionError:l,orbProductContext:i,analyticsSourceLocation:r,handleStepChange:s}=e,{analyticsLocations:a}=(0,e9.Ay)(),{selectedSkuId:c,setPurchaseState:d,firstConstraintReasonCode:m}=(0,_.t4)(e=>({selectedSkuId:e.selectedSkuId,setPurchaseState:e.setPurchaseState,firstConstraintReasonCode:null!=e.orderRecord?e.orderRecord.firstUnsatisfiedConstraintReasonCode():null})),h=(0,lS.gN)(),p=(0,u.useRef)(h),{emitOrbCheckoutPaymentFlowEvent:f}=(e=>{let{skuId:t,orbProductContext:n,analyticsLocations:l,analyticsSourceLocation:i}=e,{activitySessionId:r}=(0,x.V)(),{hasPaymentSources:s}=(0,L.jm)(),{loadId:a,startTime:c,discoverySessionId:d}=(0,_.t4)(e=>e.contextMetadata),m=(0,u.useMemo)(()=>({load_id:a,discovery_session_id:d,application_id:(0,J.P)(t),location:l,location_stack:l,sku_id:t,activity_session_id:r,payment_gateway:t2.ps.VIRTUAL_CURRENCY,...null!=n&&{price:n.orbPriceAmount??void 0,regular_price:n.orbPriceAmount??void 0},currency:F.Yri.DISCORD_ORB,...null!=i&&{source:i},...{payment_type:F.frM[F.VVm.ONE_TIME],is_gift:!1,eligible_for_trial:!1,payment_modal_version:"v2",checkout_design:et.r.UNIFIED,checkout_flow:es.C.ORB_CHECKOUT}}),[a,d,r,t,l,i,n]);return{emitOrbCheckoutPaymentFlowEvent:(0,u.useCallback)((e,t)=>{let n=Date.now()-c;e===F.HAw.PAYMENT_FLOW_STARTED?Q.default.track(F.HAw.PAYMENT_FLOW_STARTED,{...m,has_saved_payment_source:s,payment_gateway:t2.ps.VIRTUAL_CURRENCY,continue_session_initial_step:null}):e===F.HAw.PAYMENT_FLOW_LOADED?Q.default.track(F.HAw.PAYMENT_FLOW_LOADED,{...m,has_saved_payment_source:s,initial_step:o.pn.REVIEW,duration_ms:n}):e===F.HAw.PAYMENT_FLOW_CANCELED?Q.default.track(F.HAw.PAYMENT_FLOW_CANCELED,{...m,duration_ms:n}):e===F.HAw.PAYMENT_FLOW_COMPLETED?Q.default.track(F.HAw.PAYMENT_FLOW_COMPLETED,{...m,duration_ms:n}):e===F.HAw.PAYMENT_FLOW_SUCCEEDED?Q.default.track(F.HAw.PAYMENT_FLOW_SUCCEEDED,{...m,duration_ms:n}):Q.default.track(F.HAw.PAYMENT_FLOW_FAILED,{...m,duration_ms:n,...null!=t?{payment_error_code:t.code,error_message:t.message}:{}})},[c,m,s])}})({skuId:t,orbProductContext:i,analyticsLocations:a,analyticsSourceLocation:r});(0,u.useEffect)(()=>{null!=l&&null!==p.current&&(f(F.HAw.PAYMENT_FLOW_FAILED,l),p.current=null)},[l,f]);let g=(0,u.useCallback)(()=>{p.current=h,f(F.HAw.PAYMENT_FLOW_COMPLETED),n(e=>{d(em.h.COMPLETED),s(o.pn.CONFIRM,{fulfillment:{entitlements:e}})})},[n,d,h,f,s]),E=p.current??h,A=null!=i?i.orbPriceAmount:null;return{isStepLoading:null==i,showCollectiblesDiscountWarning:(0,tk.vw)({skuId:t,isOrbsPurchase:!0}),errorMessage:(0,u.useMemo)(()=>(function(e,t){if(null==e)return null;if(e instanceof l_.FY&&null!=t)switch(t){case ly.INSUFFICIENT_ORB_BALANCE:return T.intl.string(T.t.keFvXM);case ly.SKU_ALREADY_OWNED:return T.intl.string(T.t.m371Mx);case ly.BUNDLE_PARTIALLY_OWNED:return T.intl.string(T.t.v9oC0p);default:return T.intl.string(T.t.fqJZ11)}return e instanceof l_.j2?T.intl.string(T.t["2BmwgV"]):e.code===lI.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE?T.intl.string(T.t.keFvXM):e.code===lI.tG.ALREADY_PURCHASED?T.intl.string(T.t.m371Mx):T.intl.string(T.t.fqJZ11)})(l,m),[l,m]),orbPriceAmount:A,orbBalanceToDisplay:E,onClickCheckout:g,selectedSkuId:c}})({skuId:t,analyticsSourceLocation:n,orbProductContext:l,orbRedemptionError:s,onRedeemVirtualCurrency:a,handleStepChange:c}),I=(0,en.bG)([nY.A],()=>nY.A.get(t),[t]),S=(0,lf.uS)(I?.applicationId),{disabled:y,tooltipText:v,text:N}=(e=>{let{orbBalance:t,orbPriceAmount:n,isInTestMode:l=!1}=e,{disabled:i,tooltipText:r}=(0,u.useMemo)(()=>null==n?{disabled:!0,tooltipText:T.intl.string(T.t["c/rcUu"])}:!l&&(null==t||n>t)?{disabled:!0,tooltipText:T.intl.string(T.t.keFvXM)}:{disabled:!1,tooltipText:null},[n,t,l]);return{disabled:i,tooltipText:r,text:lD()}})({orbBalance:g,orbPriceAmount:d?m:f,isInTestMode:S}),j=(0,u.useMemo)(()=>({onClick:E,loading:r,text:N,disabled:y,tooltipText:v}),[E,r,N,y,v]),b=A?T.intl.format(T.t.fsOXXO,{}):null,R=S?T.intl.string(T.t.OvMyMd):null;return{isStepLoading:p,upperInlineNoticeProps:(0,u.useMemo)(()=>{if(null!=R||null!=b||null!=C){let e=[];return null!=R&&e.push({type:"warning",message:R,key:"test-mode-warning-notice"}),null!=b&&e.push({type:"warning",message:b,key:"orb-checkout-warning-notice"}),null!=C&&e.push({type:"critical",message:C,key:"orb-checkout-error-notice"}),e}return null},[R,b,C]),purchaseItemContent:(0,i.jsx)(lO,{skuId:t,orbPriceAmount:d?h:f}),paymentMethodContent:(0,i.jsx)(lw,{orbBalance:g}),legalContent:(0,i.jsx)(lk,{}),primaryButtonProps:j,invoiceSummaryContent:null,invoiceTotalDueLabel:null,invoiceTotalDueValue:null}})({skuId:a,analyticsSourceLocation:c,orbProductContext:n,isRedeeming:l,orbRedemptionError:r,onRedeemVirtualCurrency:s,handleStepChange:t});return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(v.dZ,{children:(0,i.jsx)(lh.T,{...m})}),(0,i.jsx)(v.UX,{children:(0,i.jsx)(eu.lo,{primaryButtonProps:d})})]})}},TENANT_PROVIDER_CONFIGS:{tenantProvidesCheckoutRoot:!1,CustomTenantProvider:e=>{let{skuId:t,loadId:n,analyticsSourceLocation:l,children:r}=e,{order:s,setOrder:a}=(0,_.t4)(e=>({order:e.order,setOrder:e.setOrder})),{orbProductContext:o,isRedeeming:c,orbRedemptionError:d,onRedeemVirtualCurrency:m}=(e=>{let{skuId:t,loadId:n,onCheckoutSuccess:l,onSignFailure:i,order:r}=e,s=(0,en.bG)([tj.default],()=>tb.Ay.canUseShopDiscounts(tj.default.getCurrentUser())),a=(0,en.bG)([nY.A],()=>nY.A.get(t),[t]),o=(0,ln.JL)({sku:a}),{product:c}=(0,tR.q)(t),d=(0,u.useMemo)(()=>{if(null!=o)return{orbPriceAmount:o.amount};if(null!=c){let e=(0,lA.CW)({product:c,hasShopDiscount:s});return{orbPriceAmount:null!==e?e.amount:null}}return null},[o,c,s]);d?.orbPriceAmount==null&&(0,lC.hD)("Orb price not found for product",{tags:{sku_id:t}});let{redeemVirtualCurrency:m,isSubmitting:h,error:p}=(0,lx.Q)({skuId:t,loadId:n,order:r,onSignFailure:i}),f=(0,u.useCallback)(e=>{m(t,n,n=>{l?.({entitlements:n,skuId:t}),e(n)})},[t,n,m,l]);return{skuId:t,loadId:n,orbProductContext:d,onRedeemVirtualCurrency:f,isRedeeming:h,orbRedemptionError:p}})({skuId:t,loadId:n,order:s,onSignFailure:a}),h=(0,u.useMemo)(()=>({orbProductContext:o,isRedeeming:c,orbRedemptionError:d,onRedeemVirtualCurrency:m,skuId:t,analyticsSourceLocation:l}),[o,c,d,m,t,l]);return(0,i.jsx)(lU.Provider,{value:h,children:r})},TenantPaymentModalRenderer:e=>{let{originalPaymentModalProps:t,renderPaymentModal:n}=e,{orbProductContext:l}=lG(),i=(e=>{let{orbProductContext:t,overrideAnalyticParams:n}=e;return{analyticsDataOverride:(0,u.useMemo)(()=>{if(null!=t)return{...n,price:t.orbPriceAmount??void 0,regular_price:t.orbPriceAmount??void 0}},[t,n]),skipConfirm:!0}})({orbProductContext:l,overrideAnalyticParams:lF});return n({...t,...i})},overrideAnalyticParams:lF}},lB={[ee.C.ORB_CHECKOUT]:{flowType:ee.C.ORB_CHECKOUT,implemented:!0,purchaseType:F.VVm.ONE_TIME,TENANT_CHECKOUT_FLOW_CONFIG:lV},[ee.C.COLLECTIBLES_CHECKOUT]:{flowType:ee.C.COLLECTIBLES_CHECKOUT,implemented:!0,purchaseType:F.VVm.ONE_TIME,TENANT_CHECKOUT_FLOW_CONFIG:t8},[ee.C.SLAYER_STOREFRONT_CHECKOUT]:{implemented:!0,flowType:ee.C.SLAYER_STOREFRONT_CHECKOUT,purchaseType:F.VVm.ONE_TIME,TENANT_CHECKOUT_FLOW_CONFIG:lm},[ee.C.PREMIUM_CHECKOUT]:{implemented:!0,flowType:ee.C.PREMIUM_CHECKOUT,purchaseType:F.VVm.SUBSCRIPTION,TENANT_CHECKOUT_FLOW_CONFIG:nC},[ee.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT]:{implemented:!1,flowType:ee.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT},[ee.C.PREMIUM_APPS_OTP_CHECKOUT]:{implemented:!0,flowType:ee.C.PREMIUM_APPS_OTP_CHECKOUT,purchaseType:F.VVm.ONE_TIME,TENANT_CHECKOUT_FLOW_CONFIG:n$},[ee.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT]:{implemented:!0,flowType:ee.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,purchaseType:F.VVm.SUBSCRIPTION,TENANT_CHECKOUT_FLOW_CONFIG:nK},[ee.C.GUILD_PRODUCT_CHECKOUT]:{implemented:!0,purchaseType:F.VVm.ONE_TIME,TENANT_CHECKOUT_FLOW_CONFIG:e8,flowType:ee.C.GUILD_PRODUCT_CHECKOUT},[ee.C.GUILD_ROLE_CHECKOUT]:{implemented:!0,flowType:ee.C.GUILD_ROLE_CHECKOUT,TENANT_CHECKOUT_FLOW_CONFIG:ns,purchaseType:F.VVm.SUBSCRIPTION},[ee.C.GUILD_BOOST_CHECKOUT]:{implemented:!0,flowType:ee.C.GUILD_BOOST_CHECKOUT,purchaseType:F.VVm.SUBSCRIPTION,TENANT_CHECKOUT_FLOW_CONFIG:eB}};var lH=n(169801),lW=n(380619);let lK=e=>{let{returnStep:t=o.pn.REVIEW,returnStepIfNoPaymentSources:n,paymentModalStepProps:l}=e,{purchaseType:r}=(0,_.t4)(e=>({purchaseType:e.purchaseType})),s=u.useCallback(()=>(e=>{let{paymentModalStepProps:t,returnStep:n=o.pn.REVIEW,returnStepIfNoPaymentSources:l,purchaseType:i}=e;if(0===Object.keys(c.A.paymentSources).length){if(null!=l)return void t.handleStepChange(l);i===t2.VV.SUBSCRIPTION?t.handleStepChange(n,{trackedFromStep:o.pn.ADD_PAYMENT_STEPS}):t.handleClose()}else t.handleStepChange(n,{trackedFromStep:o.pn.ADD_PAYMENT_STEPS})})({returnStep:t,returnStepIfNoPaymentSources:n,paymentModalStepProps:l,purchaseType:r}),[t,n,l,r]);return(0,i.jsx)(m.x,{...l,onReturn:s})},lY=e=>{let{initialPlanId:t}=e,n=(0,_.t4)(e=>e.selectedSkuId),l=(0,nV.A)(),{isGift:r,claimableRewards:s}=(0,S.Pv)(),a=(0,lH.A)({isGift:r,skuId:n}),c=(0,np.lp)(a),d=(0,lW.px)(l,r,s),m=u.useMemo(()=>{let e=null==t?o.pn.PLAN_SELECT:o.pn.REVIEW;return c&&(e=o.pn.REVIEW),d&&(e=o.pn.SELECT_FREE_SKU),e},[c,d,t]);return(0,i.jsx)(lK,{paymentModalStepProps:e,returnStep:o.pn.REVIEW,returnStepIfNoPaymentSources:m})},lz=e=>{let{checkoutFlow:t,returnStep:n=o.pn.REVIEW,returnStepIfNoPaymentSources:l,paymentModalStepProps:r}=e;return t===ee.C.PREMIUM_CHECKOUT?(0,i.jsx)(lY,{...r}):(0,i.jsx)(lK,{paymentModalStepProps:r,returnStep:n,returnStepIfNoPaymentSources:l})};var lZ=n(246681);let lq=e=>{let{paymentModalStepProps:t,defaultStep:n}=e,l=(0,u.useRef)(!1),r=(0,R.Hp)(),{handleStepChange:s}=t;return((0,u.useEffect)(()=>{r||l.current||(s(n),l.current=!0)},[r,s,n]),r)?(0,i.jsx)(P.oO,{}):null},l$={[ee.C.ORB_CHECKOUT]:{allowGiftCustomization:!1,excludePaymentAuthSteps:!0,predicateStepType:"unified"},[ee.C.COLLECTIBLES_CHECKOUT]:{allowGiftCustomization:!0,predicateStepType:"one_time_payment"},[ee.C.SLAYER_STOREFRONT_CHECKOUT]:{allowGiftCustomization:!0,predicateStepType:"one_time_payment"},[ee.C.PREMIUM_CHECKOUT]:{allowGiftCustomization:!1,predicateStepType:"subscription"},[ee.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT]:{allowGiftCustomization:!1},[ee.C.PREMIUM_APPS_OTP_CHECKOUT]:{allowGiftCustomization:!0,predicateStepType:"one_time_payment"},[ee.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT]:{allowGiftCustomization:!1},[ee.C.GUILD_BOOST_CHECKOUT]:{allowGiftCustomization:!1},[ee.C.GUILD_PRODUCT_CHECKOUT]:{allowGiftCustomization:!1,predicateStepType:"one_time_payment"},[ee.C.GUILD_ROLE_CHECKOUT]:{allowGiftCustomization:!1,predicateStepType:"subscription"}};class lX{checkoutFlow;checkoutFlowConfiguration;tenantCheckoutFlowConfig;internalCheckoutFlowControls;override_analytic_params;constructor({checkoutFlow:e}){this.checkoutFlow=e;const t=lB[e];if(!((e,t)=>null!=t&&t.implemented&&t.flowType===e)(e,t))throw Error(`Checkout flow ${e} is not implemented`);this.checkoutFlowConfiguration=t,this.tenantCheckoutFlowConfig=t.TENANT_CHECKOUT_FLOW_CONFIG,this.internalCheckoutFlowControls=l$[e],this.override_analytic_params=this.tenantCheckoutFlowConfig.TENANT_PROVIDER_CONFIGS.overrideAnalyticParams}getCheckoutStep(e){return this.tenantCheckoutFlowConfig.CHECKOUT_STEPS[e]}generateRenderHeader(){let{CustomHeaderComponent:e}=this.tenantCheckoutFlowConfig;if(null!=e)return(t,n,l)=>(0,i.jsx)(e,{plan:t,onClose:n,step:l})}getPredicateStepConfig(){let{CustomCheckoutPredicateStep:e}=this.tenantCheckoutFlowConfig,{predicateStepType:t}=this.internalCheckoutFlowControls;return null!=e?{key:null,renderStep:t=>(0,i.jsx)(e,{...t})}:"one_time_payment"===t?B:"subscription"===t?H:{key:null,renderStep:e=>(0,i.jsx)(lq,{paymentModalStepProps:e,defaultStep:o.pn.REVIEW})}}getAddPaymentStepConfig(e){let{isGift:t}=e,{allowGiftCustomization:n}=this.internalCheckoutFlowControls;if(this.checkoutFlow!==ee.C.ORB_CHECKOUT)return{key:o.pn.ADD_PAYMENT_STEPS,renderStep:e=>(0,i.jsx)(lz,{checkoutFlow:this.checkoutFlow,paymentModalStepProps:e,returnStep:o.pn.REVIEW,returnStepIfNoPaymentSources:t&&n?o.pn.GIFT_CUSTOMIZATION:void 0}),options:{renderHeader:!0}}}getGiftCustomizationStepConfig(e){let{isGift:t}=e,{allowGiftCustomization:n}=this.internalCheckoutFlowControls,l=this.getCheckoutStep(o.pn.GIFT_CUSTOMIZATION);if(t&&n&&null!=l)return{key:o.pn.GIFT_CUSTOMIZATION,renderStep:e=>(0,i.jsx)(l,{...e}),options:{modalSizeGetter:()=>"xl",useBreadcrumbLabel:()=>T.intl.string(T.t["W685+b"])}}}getReviewStepConfig(){let e=this.getCheckoutStep(o.pn.REVIEW);return{key:o.pn.REVIEW,renderStep:t=>(0,i.jsx)(e,{...t}),options:{useBreadcrumbLabel:()=>T.intl.string(T.t.QBnNHq)}}}createDefinedStepConfigsArray(e){return e.filter(e=>null!=e)}generateCheckoutStepConfigs(e){let{isGift:t}=e,{CUSTOM_CONFIRM_STEP_CONFIG:n,STEPS_BEFORE_CHECKOUT:l=[]}=this.tenantCheckoutFlowConfig,{excludePaymentAuthSteps:i}=this.internalCheckoutFlowControls,r=this.getPredicateStepConfig(),s=this.getGiftCustomizationStepConfig({isGift:t}),a=this.getAddPaymentStepConfig({isGift:t}),u=this.getReviewStepConfig(),c=this.createDefinedStepConfigsArray([r,...null!=s?[s]:[],...l,a,...i?[]:z,u]);return null!=n&&c.push({key:o.pn.CONFIRM,renderStep:n.renderStep,options:n.options}),c}getApplicationId(e){return this.checkoutFlow===ee.C.ORB_CHECKOUT&&null!=e?(0,J.P)(e):this.checkoutFlow===ee.C.COLLECTIBLES_CHECKOUT?F.FYj:this.checkoutFlow===ee.C.PREMIUM_CHECKOUT?eD.tv:void 0}trackPaymentFlowCanceled(e){let{loadId:t,skuId:n,skuProductLine:l,applicationId:i,discoverySessionId:r,analyticsLocation:s,analyticsLocations:a,analyticsObject:o,analyticsSourceLocation:u,isGift:c,eligibleForTrial:d}=e;Q.default.track(F.HAw.PAYMENT_FLOW_CANCELED,{load_id:t,discovery_session_id:r,payment_type:F.frM[this.checkoutFlowConfiguration.purchaseType],is_gift:c,sku_id:n,sku_product_line:l,application_id:i,location:s??o,location_stack:a,source:u,eligible_for_trial:d,payment_modal_version:"v2",checkout_design:et.r.UNIFIED,checkout_flow:this.checkoutFlow,...this.checkoutFlow===ee.C.PREMIUM_CHECKOUT?{subscription_type:F.rzx.PREMIUM}:{},...this.override_analytic_params})}renderCheckoutInstance(e){let{additionalOptions:t,giftContextProps:l,onComplete:o,onClose:u,skuId:c,skuProductLine:d,discoverySessionId:m,applicationId:h,analyticsSourceLocation:p,analyticsLocations:f,analyticsObject:g,tenantParams:E,activeSubscription:A=null,...C}=e,x=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"modal",I=arguments.length>2?arguments[2]:void 0,_={current:(this.checkoutFlow===ee.C.PREMIUM_CHECKOUT?(0,X.A)():null)??(0,r.A)()},S={current:null},{modalKey:y}=I,v=this.generateRenderHeader(),T=h??this.getApplicationId(c),N=!!(null!=l&&l.isGift),j=!1,b={...C,checkoutFlow:this.checkoutFlow,checkoutFlowConfiguration:this.checkoutFlowConfiguration,tenantCheckoutFlowConfig:this.tenantCheckoutFlowConfig,stepConfigs:this.generateCheckoutStepConfigs({isGift:N}),onComplete:e=>{null!=o&&o(e),j=!0},onClose:u,renderHeader:v,skuId:c??null,tenantParams:E??{},loadId:_.current,onOrderCreated:e=>{_.current=e.id,S.current=e},discoverySessionId:m,activeSubscription:A,applicationId:T,analyticsLocations:f,analyticsObject:g,analyticsSourceLocation:p,giftContextProps:l,additionalOptions:t};if("modal"===x)return(0,s.openModalLazy)(async()=>{let{UnifiedCheckoutInstance:e}=await Promise.resolve().then(n.bind(n,246681));return t=>(0,i.jsx)(e,{...b,renderModalProps:t})},{...I,onCloseRequest:()=>{null!=I.onCloseRequest&&I.onCloseRequest(j,_.current),I.skipCloseModalOnCloseRequest||(0,s.closeModal)(y)},onCloseCallback:()=>{j||($({checkoutSucceeded:j,order:S.current}),this.trackPaymentFlowCanceled({loadId:_.current,skuId:c,skuProductLine:d,applicationId:T,discoverySessionId:m,analyticsLocation:C.analyticsLocation,analyticsLocations:f,analyticsObject:g,analyticsSourceLocation:p,isGift:N,eligibleForTrial:null!=C.trialId})),null!=I.onCloseCallback&&I.onCloseCallback(j),null!=u&&u(j,c)},modalKey:y});{let e=C.paymentModalOnClose??u,t={transitionState:a.ip.ENTERED,onClose:()=>(null!=e&&e(!1),Promise.resolve())};return(0,i.jsx)(lZ.UnifiedCheckoutInstance,{...b,paymentModalOnClose:e,renderModalProps:t})}}openCheckoutModal(e){let{modalAPIOptions:t}=e;return this.renderCheckoutInstance(e,"modal",t)}renderStandaloneCheckout(e){return this.renderCheckoutInstance(e,"standalone",{modalKey:"standalone-checkout"})}}
+"use strict";
+n.d(t, { o: () => iJ }), n(321073);
+var i,
+    r = n(627968),
+    s = n(835245),
+    a = n(192308),
+    o = n(231723),
+    l = n(166532),
+    u = n(64700),
+    c = n(295405),
+    d = n(314671),
+    _ = n(735305),
+    h = n(343834),
+    f = n(926795),
+    p = n(284009),
+    E = n.n(p),
+    m = n(821609),
+    g = n(534514),
+    A = n(834730),
+    I = n(31823),
+    T = n(427675),
+    S = n(211159),
+    y = n(937008),
+    C = n(921925),
+    N = n(482132),
+    v = n(375708),
+    R = n(989553);
+function O(e) {
+    let { handleClose: t } = e,
+        n = (0, S.t4)((e) => e.selectedSkuId),
+        { application: i } = (0, I.V)(),
+        s = (0, T.gU)(),
+        { isGift: a, giftRecipient: o } = (0, y.Pv)();
+    E()(null != n, "Expected selectedSkuId"), E()(null != i, "Expected application");
+    let l = s[n];
+    E()(null != l, "Expected sku");
+    let u = a
+        ? v.intl.formatToPlainString(v.t["2VjPTw"], {
+              itemName: l.name,
+              giftRecipient: o?.username ?? "your recipient",
+          })
+        : v.intl.formatToPlainString(v.t.wK0IbP, { applicationName: i.name, itemName: l.name });
+    return (0, r.jsxs)(N.dZ, {
+        children: [
+            (0, r.jsx)(C.A, {}),
+            (0, r.jsxs)("div", {
+                className: R.EL,
+                children: [
+                    (0, r.jsx)(g.D, { variant: "heading-xxl/bold", className: R.RS, children: "Success!" }),
+                    (0, r.jsx)(A.E, { variant: "text-md/normal", children: u }),
+                    (0, r.jsx)("div", { className: R.yF }),
+                    (0, r.jsx)(m.$, { onClick: t, text: v.intl.string(v.t.cpT0Cq), fullWidth: !0 }),
+                ],
+            }),
+        ],
+    });
+}
+var b = n(702841),
+    D = n(86379),
+    L = n(545075),
+    w = n(426398),
+    M = n(590180),
+    P = n(20742),
+    x = n(430993),
+    k = n(579151),
+    U = n(599062);
+function G() {
+    let { refreshCategories: e } = (0, k.A)();
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(P.rQ, { title: v.intl.string(v.t["p8+qtU"]) }),
+            (0, r.jsx)(x.c, { children: (0, r.jsx)(U.h, { onRetry: e, errorOrigin: U.A.GIFT_MODAL }) }),
+        ],
+    });
+}
+var F = n(534479),
+    V = n(652215);
+function B(e) {
+    let { handleStepChange: t } = e,
+        n = (0, S.t4)((e) => e.selectedSkuId),
+        { paymentSources: i, hasFetchedPaymentSources: s } = (0, w.jm)(),
+        { application: a } = (0, I.V)(),
+        o = (0, D.Hp)(),
+        c = (0, T.gU)(),
+        d = (0, T.Hu)(),
+        { isGift: _ } = (0, y.Pv)(),
+        [h, f] = u.useState(!0),
+        [p, E] = (0, b.yK)([M.A], () => [M.A.isFetchingCategories, M.A.error]);
+    return (u.useEffect(() => {
+        let e = null != a;
+        d && s && e && f(p);
+    }, [d, s, a, p]),
+    u.useEffect(() => {
+        if (h || o || null == n) return;
+        let e = c[n];
+        _ &&
+        (e?.productLine === V.EZt.COLLECTIBLES ||
+            e?.productLine === V.EZt.APPLICATION ||
+            e?.productLine === V.EZt.SOCIAL_LAYER_GAME_ITEM)
+            ? t(l.pn.GIFT_CUSTOMIZATION)
+            : 0 === Object.keys(i).length
+              ? t(l.pn.ADD_PAYMENT_STEPS)
+              : t(l.pn.REVIEW);
+    }, [h, o, t, i, _, c, n]),
+    h)
+        ? (0, r.jsx)(F.A, {})
+        : o
+          ? (0, r.jsx)(L.oO, {})
+          : null != E
+            ? (0, r.jsx)(G, {})
+            : null;
+}
+let j = { key: null, renderStep: (e) => (0, r.jsx)(B, { ...e }), options: { modalSizeGetter: () => "md" } },
+    H = { key: null, renderStep: (e) => (0, r.jsx)(d.I, { ...e }) };
+l.pn.ADD_PAYMENT_STEPS;
+let Y = { key: l.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, r.jsx)(f.A, {}) },
+    W = { key: l.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, r.jsx)(h.A, {}), options: { renderHeader: !0 } },
+    K = { key: l.pn.CONFIRM, renderStep: (e) => (0, r.jsx)(O, { ...e }) },
+    $ = [Y, W];
+var z = n(624210),
+    q = n(26279);
+async function Z(e) {
+    let { checkoutSucceeded: t, order: n } = e;
+    if (!t && n?.id != null && n.status === q.Re.DRAFT)
+        try {
+            await (0, z.Nl)(n.id);
+        } catch (e) {}
+}
+var X = n(925847),
+    Q = n(310829),
+    J = n(174459),
+    ee = n(75304),
+    et = n(145659),
+    en = n(17928),
+    ei = n(444927),
+    er = n(964486),
+    es = n(793574),
+    ea = n(120700),
+    eo = n(197510),
+    el = n(584160),
+    eu = n(480642),
+    ec = n(832286),
+    ed = n(958340),
+    e_ = n(566980),
+    eh = n(615310),
+    ef = n(489254),
+    ep = n(71393),
+    eE = n(178368),
+    em = n(166403),
+    eg = n(473145),
+    eA = n(802790),
+    eI = n(636441),
+    eT = n(587491),
+    eS = n(285753),
+    ey = n(655857),
+    eC = n(121005),
+    eN = n(526151),
+    ev = n(303557),
+    eR = n(898640);
+function eO(e) {
+    let { message: t } = e;
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(eu.s3, { title: v.intl.string(v.t.q9EGps) }),
+            (0, r.jsx)(x.c, { children: (0, r.jsx)("p", { className: eR.C, children: t }) }),
+        ],
+    });
+}
+var eb = n(989351),
+    eD = n(619088),
+    eL = n(587187),
+    ew = n(130305),
+    eM = n(160946),
+    eP = n(97352),
+    ex = n(83617),
+    ek = n(788868);
+function eU() {
+    let { setCurrency: e, setCurrencies: t } = (0, eN.Oe)(),
+        { paymentSourceId: n, activeSubscription: i } = (0, S.t4)((e) => ({
+            paymentSourceId: e.paymentSourceId,
+            activeSubscription: e.activeSubscription,
+        })),
+        r = (0, eM.Y)();
+    return (
+        u.useEffect(() => {
+            (0, ex.c_)(n);
+        }, [n]),
+        u.useEffect(() => {
+            let s;
+            r &&
+                (null != eP.A.get(ek.gD.PREMIUM_MONTH_GUILD) && t((s = (0, ex._w)(ek.gD.PREMIUM_MONTH_GUILD, n, !1))),
+                null == n && null != i && null != i.paymentSourceId ? e(i.currency) : null != s && e(s[0]));
+        }, [n, i, r, e, t]),
+        null
+    );
+}
+var eG = n(121226);
+let eF = [l.pn.PLAN_SELECT],
+    eV = [ek.pe.GUILD],
+    eB = [
+        { key: l.pn.PLAN_SELECT, renderStep: (e) => (0, r.jsx)(eD.c, { ...e }), options: { renderHeader: !0 } },
+        {
+            key: l.pn.PREMIUM_UPSELL,
+            renderStep: (e) => (0, r.jsx)(eL.d, { ...e }),
+            options: { renderHeader: !1, hideSlider: !0 },
+        },
+    ],
+    ej = {
+        CHECKOUT_FLOW: ea.C.GUILD_BOOST_CHECKOUT,
+        CustomCheckoutPredicateStep: function (e) {
+            let { handleStepChange: t } = e,
+                n = (0, S.t4)((e) => e.activeSubscription),
+                { guildId: i, analyticsLocation: s, currency: a } = (0, eN.Oe)(),
+                o = (0, D.Hp)(),
+                c = (0, eC.A)(),
+                { hasFetchedRelatedSubscriptionPlans: d } = (0, ey.Jn)(),
+                { hasFetchedPremiumSubscriptionPlan: _ } = (0, ev.l)(),
+                h = null != n && null != n.renewalMutations,
+                f = null != n && n.isPausedOrPausePending && !n.isPausedAllowsUpdatesButNotResume,
+                p = !c || !d || !_ || null == a || "" === a;
+            return ((0, er.Ay)(() => {
+                h && J.default.track(V.HAw.PREMIUM_GUILD_PENDING_MODAL, { location: s, guild_id: i });
+            }),
+            u.useEffect(() => {
+                p || o || f || h || t(l.pn.PLAN_SELECT);
+            }, [p, o, f, h, t]),
+            f)
+                ? (0, r.jsx)(eO, { message: v.intl.string(v.t.mOWsF1) })
+                : h
+                  ? (0, r.jsx)(eO, { message: v.intl.string(v.t.npfhh0) })
+                  : p
+                    ? (0, r.jsx)(F.A, {})
+                    : o
+                      ? (0, r.jsx)(L.oO, {})
+                      : null;
+        },
+        STEPS_BEFORE_CHECKOUT: eB,
+        CHECKOUT_STEPS: { [l.pn.REVIEW]: ew.b },
+        TENANT_PROVIDER_CONFIGS: {
+            tenantProvidesCheckoutRoot: !0,
+            CustomTenantProvider: (e) => {
+                let {
+                        tenantParams: {
+                            guildId: t,
+                            totalNumberOfSlotsToAssign: n = 1,
+                            intent: i,
+                            disablePremiumUpsell: s,
+                            onSubscribeComplete: a,
+                            closeGuildPerksModal: o,
+                            analyticsLocation: l,
+                        },
+                        applicationId: u,
+                        analyticsSourceLocation: c,
+                        stepConfigs: d,
+                        loadId: _,
+                        onComplete: h,
+                        children: f,
+                    } = e,
+                    p = (0, en.bG)([em.A], () => em.A.getPremiumTypeSubscription()),
+                    E = (0, ei.A)(() => n - (0, eg.D$)(eE.A.boostSlots).length);
+                return (
+                    (0, er.Ay)(() => {
+                        null != ed.A.getGuild(t) || ed.A.isGuildFetching(t) || (0, ec.y)(t);
+                    }),
+                    (0, r.jsx)(eo.M, {
+                        activeSubscription: p,
+                        stepConfigs: d,
+                        skuIDs: eV,
+                        loadId: _,
+                        unifiedCheckoutFlow: ea.C.GUILD_BOOST_CHECKOUT,
+                        children: (0, r.jsxs)(eN.mf, {
+                            initialNumGuildBoostsToPurchase: E,
+                            disablePremiumUpsell: s,
+                            closeGuildPerksModal: o,
+                            guildId: t,
+                            analyticsLocation: l,
+                            analyticsSourceLocation: c,
+                            applicationId: u,
+                            intent: i,
+                            onSubscribeComplete: a,
+                            children: [(0, r.jsx)(eU, {}), (0, r.jsx)(eG.B, { onComplete: h }), f],
+                        }),
+                    })
+                );
+            },
+            TenantPaymentModalRenderer: (e) => {
+                let { originalPaymentModalProps: t, renderPaymentModal: n } = e,
+                    { numGuildBoostsToPurchase: i, guildId: s, existingAvailableSlotCount: a } = (0, eN.Oe)(),
+                    o = (0, eh.bB)(),
+                    c = (0, S.t4)((e) => e.purchaseState),
+                    d = (0, ef.n)("GuildBoostUnifiedCheckout"),
+                    _ = d && (o === l.pn.REVIEW || o === l.pn.CONFIRM),
+                    h = (0, eS.A)(_),
+                    f = u.useMemo(() => ({ quantity: i }), [i]);
+                return d && o === l.pn.CONFIRM
+                    ? (0, r.jsx)(eT.A, {
+                          mediaUrls: h.mediaUrls,
+                          isSuccess: h.isSuccess,
+                          transitionState: t.transitionState,
+                          onClose: () => (t.onClose(c === e_.h.COMPLETED), Promise.resolve()),
+                          children: (e, n) =>
+                              (0, r.jsx)(eI.A, {
+                                  transitionState: t.transitionState,
+                                  guild: ep.A.getGuild(s),
+                                  guildBoostQuantity: i + a,
+                                  isTransfer: !1,
+                                  graphic: e,
+                                  onClose: n,
+                              }),
+                      })
+                    : n({
+                          ...t,
+                          analyticsDataOverride: f,
+                          skipUnifiedHeaderForSteps: eF,
+                          disableUnsupportedExternalSubscriptionHandler: !0,
+                          isMediumModal: !0,
+                      });
+            },
+            tenantAnalyticsLocation: es.A.GUILD_BOOST_PURCHASE_MODAL,
+        },
+        CustomHeaderComponent: (e) => {
+            let { plan: t, onClose: n, step: i } = e,
+                s = (0, ef.n)("GuildBoostUnifiedCheckout"),
+                a = (0, S.t4)((e) => e.purchaseState);
+            return i === l.pn.PREMIUM_UPSELL
+                ? null
+                : i === l.pn.REVIEW
+                  ? (0, r.jsx)(eu.s3, { ...(0, el.u)({ skuId: t?.skuId ?? null, step: i }) })
+                  : s
+                    ? (0, r.jsx)(eu.s3, { title: (0, el.u)({ skuId: null, step: i }).title })
+                    : (0, r.jsx)(eA.A, { onClose: () => n(a === e_.h.COMPLETED), currentStep: i, purchaseState: a });
+        },
+        CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, r.jsx)(eb.H, { ...e }), options: { renderHeader: !0 } },
+    };
+var eH = n(529427),
+    eY = n(630303),
+    eW = n(666646),
+    eK = n(871109);
+let e$ = u.createContext(void 0);
+function ez() {
+    let e = u.useContext(e$);
+    return E()(null != e, "GuildProductPurchaseContext not found"), e;
+}
+function eq(e) {
+    let { children: t, skuId: n, ...i } = e,
+        s = (0, en.bG)([eK.A], () => eK.A.getGuildProduct(n));
+    return (
+        E()(null != s, "guildProductListing cannot be null"),
+        (0, r.jsx)(e$.Provider, { value: { guildProductListing: s, ...i }, children: t })
+    );
+}
+function eZ(e) {
+    let { handleClose: t } = e,
+        { guildProductListing: i, guildId: s } = ez(),
+        o = (0, eW.sw)();
+    return (
+        (0, er.Ay)(() => {
+            var e;
+            E()(null != o, "invoicePreview cannot be null"),
+                (e = { guildId: s, guildProductListingId: i.id, invoicePreview: o }),
+                (0, a.openModalLazy)(async () => {
+                    let { default: t } = await Promise.all([
+                        n.e("57034"),
+                        n.e("67837"),
+                        n.e("35778"),
+                        n.e("47812"),
+                        n.e("13583"),
+                        n.e("28090"),
+                    ]).then(n.bind(n, 779457));
+                    return (n) => (0, r.jsx)(t, { ...e, ...n });
+                }),
+                t();
+        }),
+        null
+    );
+}
+var eX = n(503698),
+    eQ = n.n(eX),
+    eJ = n(939249),
+    e0 = n(789645),
+    e1 = n(935462),
+    e2 = n(303612),
+    e3 = n(916261),
+    e6 = n(575650);
+function e4(e) {
+    let { className: t, onClose: n } = e;
+    return (0, r.jsx)(eJ.D, {
+        className: eQ()(e3.cG, t),
+        onClick: n,
+        children: (0, r.jsx)(e0.P, { size: "xs", color: "currentColor", className: e3.yP }),
+    });
+}
+function e5(e) {
+    let { guildProductListing: t, onClose: n, className: i } = e;
+    return (0, r.jsxs)(e1.rQ, {
+        className: eQ()(e3.wx, e6.GI, i),
+        separator: !1,
+        "data-migration-pending": !0,
+        children: [
+            (0, r.jsx)(e2.A, { className: e3.F0, listing: t, imageSize: 500, alt: "" }),
+            (0, r.jsx)(e4, { className: e3.b, onClose: n }),
+        ],
+    });
+}
+var e7 = n(196617);
+let e8 = {
+    CHECKOUT_FLOW: eH.CL.GUILD_PRODUCT_CHECKOUT,
+    CHECKOUT_STEPS: { [l.pn.REVIEW]: eY.p },
+    TENANT_PROVIDER_CONFIGS: {
+        CustomTenantProvider: (e) => {
+            let {
+                tenantParams: { guildId: t },
+                skuId: n,
+                children: i,
+            } = e;
+            return (0, r.jsx)(eq, { guildId: t, skuId: n, children: i });
+        },
+        tenantProvidesCheckoutRoot: !1,
+        tenantAnalyticsLocation: es.A.GUILD_PRODUCT_PAYMENT_MODAL,
+    },
+    CustomHeaderComponent: function (e) {
+        let { onClose: t, step: n } = e,
+            { guildProductListing: i } = ez();
+        return n === l.pn.CONFIRM
+            ? null
+            : (0, r.jsx)(e5, { guildProductListing: i, className: e7.w, onClose: () => t(!1) });
+    },
+    CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, r.jsx)(eZ, { ...e }) },
+};
+var e9 = n(688810),
+    te = n(848149),
+    tt = n(106778),
+    tn = n(228366),
+    ti = n(213530),
+    tr = n(966971),
+    ts = n(758836),
+    ta = n(483764);
+let to = { sliderBodyClassName: ta.Bz },
+    tl = (e) => {
+        let { environment: t, setConfettiCanvas: n, customConfettiDisplayOptions: i, customConfettiVisible: s } = e;
+        return (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsx)(tt.Fk, { ref: n, className: ta.Lb, environment: t.current }),
+                (0, r.jsx)(ti.K, { options: i, className: eQ()(ta.Oh, { [ta.R]: !s }) }),
+            ],
+        });
+    };
+var tu = n(775602),
+    tc = n(211083),
+    td = n(953150),
+    t_ = n(524246),
+    th = n(14368),
+    tf = n(61750),
+    tp = n(972607);
+function tE(e) {
+    let { handleClose: t, analyticsLocations: n } = e,
+        {
+            selectedSkuId: i,
+            purchaseError: s,
+            purchasePreviewError: a,
+            appliedUserDiscounts: o,
+        } = (0, S.t4)((e) => ({
+            selectedSkuId: e.selectedSkuId,
+            purchaseError: e.purchaseError,
+            purchasePreviewError: e.purchasePreviewError,
+            appliedUserDiscounts: e.appliedUserDiscounts,
+        })),
+        { paymentError: l } = (0, tc.o)(),
+        { application: c } = (0, I.V)(),
+        d = (0, T.gU)(),
+        _ = (0, b.bG)([M.A], () => M.A.getProduct(i)),
+        h = u.useRef(!1);
+    E()(null != i, "Expected selectedSkuId"), E()(null != c, "Expected application");
+    let f = d[i];
+    E()(null != f, "Expected sku");
+    let p = null != l || null != s || null != a,
+        m =
+            o.length > 0
+                ? v.intl.formatToPlainString(v.t.VuV3Td, { discountOfferAmount: o[0].discount.amount })
+                : void 0;
+    return (u.useEffect(() => {
+        null == _ ||
+            p ||
+            h.current ||
+            ((h.current = !0),
+            (0, tf.A)({
+                product: _,
+                overrideTitle: m,
+                analyticsLocations: n,
+                onCloseCallback: t,
+                purchaseType: ts.gs.FIAT,
+            }));
+    }, [_, n, t, p, m]),
+    p)
+        ? (0, r.jsx)(N.dZ, { children: (0, r.jsx)(C.A, {}) })
+        : null;
+}
+function tm(e) {
+    let {
+            isGift: t,
+            giftCode: n,
+            selectedGiftStyle: i,
+            hasSentMessage: s,
+            giftRecipient: a,
+            giftMessageError: o,
+            isSendingMessage: l,
+            giftingOrigin: c,
+        } = (0, y.Pv)(),
+        d = (0, b.bG)([tu.Ay], () => tu.Ay.useReducedMotion),
+        _ = u.useRef(null),
+        h = (0, S.t4)((e) => e.selectedSkuId),
+        f = (0, b.bG)([M.A], () => M.A.getProduct(h)),
+        { confettiColors: p } = (0, td.A)(f?.styles);
+    return (
+        u.useEffect(() => {
+            t &&
+                null != a &&
+                null != h &&
+                (c === ek.vQ.USER_PROFILE_WISHLIST || c === ek.vQ.DM_CHANNEL_WISHLIST) &&
+                tn.h.dispatch({ type: "WISHLIST_GIFT_SENT", skuId: h, recipientId: a.id });
+        }, [t, a, h, c]),
+        t
+            ? (0, r.jsxs)("div", {
+                  ref: _,
+                  children: [
+                      (0, r.jsx)(tp.A, {
+                          giftCode: n,
+                          onClose: e.handleClose,
+                          selectedGiftStyle: i,
+                          hasSentMessage: s,
+                          giftRecipient: a,
+                          giftMessageError: o,
+                          isSendingMessage: l,
+                      }),
+                      !e.hideConfetti &&
+                          !d &&
+                          (0, r.jsx)(t_.A, {
+                              confettiTarget: _.current,
+                              confettiCanvas: e.confettiCanvas,
+                              sprites: (0, th.rA)(f?.categorySkuId),
+                              colors: p?.map((e) => e.toHexString()),
+                          }),
+                  ],
+              })
+            : (0, r.jsx)(tE, { ...e })
+    );
+}
+var tg = n(123292),
+    tA = n(564064),
+    tI = n(993408),
+    tT = n(575593),
+    tS = n(452027),
+    ty = n(922016),
+    tC = n(778712),
+    tN = n(986687),
+    tv = n(999291),
+    tR = n(903209),
+    tO = n(287809),
+    tb = n(428262),
+    tD = n(674658),
+    tL = n(898461),
+    tw = n(203632),
+    tM = n(892118),
+    tP = n(536572),
+    tx = n(456839),
+    tk = n(219103),
+    tU = n(525723),
+    tG = n(780651);
+function tF(e) {
+    let {
+            skuId: t,
+            priceAmount: n,
+            priceCurrency: i,
+            className: s,
+            previewHeaderClassName: a,
+            hideProfilePreview: o,
+        } = e,
+        { giftRecipient: l, giftRecipientError: c } = (0, y.Pv)(),
+        d = (0, en.bG)([tO.default], () => tO.default.getCurrentUser()),
+        _ = tb.Ay.canUseShopDiscounts(d),
+        h = (0, tv.Ay)(l?.id),
+        f = u.useRef(null),
+        [p, E] = u.useState(!1),
+        { product: m } = (0, tD.q)(t, !0),
+        I = u.useMemo(() => (0, tI.fT)(m, _), [m, _]),
+        T = (0, tU.V_)(m);
+    if (null == m || 0 === m.items.length) return null;
+    let [S] = m.items,
+        C = (0, tP.VG)(m),
+        N = null != l && l.id !== d?.id && m.type !== tT.R.BUNDLE && S.type !== tT.R.NAMEPLATE && !o;
+    return (0, r.jsxs)("div", {
+        className: s,
+        children: [
+            (0, r.jsx)("div", {
+                className: eQ()(tG.QU, a),
+                children: (0, r.jsx)(tS.D, {
+                    label: v.intl.string(v.t.PpoJzt),
+                    children:
+                        N &&
+                        (0, r.jsx)(
+                            ty.Y,
+                            {
+                                targetElementRef: f,
+                                align: "center",
+                                shouldShow: p,
+                                onRequestClose: () => E(!1),
+                                preload: () => (0, tR.A)(l.id, l.getAvatarURL(null, 80)),
+                                renderPopout: (e) =>
+                                    (0, r.jsx)(tN.A, {
+                                        ...e,
+                                        user: l,
+                                        pendingAvatar: l.getAvatarURL(null, (0, tC.FT)(tC._3.SIZE_80)),
+                                        pendingAvatarDecoration: (0, tL.T)(S) ? S : null,
+                                        pendingProfileEffect: (0, tw.C3)(S) ? S : null,
+                                        pendingProfileFrame: (0, tM.s)(S) ? S : null,
+                                        canUsePremiumCustomization: !0,
+                                        disabledInputs: !0,
+                                        hideExampleButton: !0,
+                                    }),
+                                children: (e) => {
+                                    let { onClick: t, onMouseDown: n, ...i } = e;
+                                    return (0, r.jsx)(eJ.D, {
+                                        ...i,
+                                        className: tG.Nx,
+                                        innerRef: f,
+                                        onClick: (e) => {
+                                            E((e) => !e), t?.(e);
+                                        },
+                                        onMouseDown: (e) => {
+                                            p ? e.stopPropagation() : n?.(e);
+                                        },
+                                        children: (0, r.jsx)(A.E, {
+                                            variant: "text-xs/medium",
+                                            color: "text-link",
+                                            children: v.intl.string(v.t["2GnJQL"]),
+                                        }),
+                                    });
+                                },
+                            },
+                            h?.userId,
+                        ),
+                }),
+            }),
+            (0, r.jsxs)("div", {
+                className: eQ()(tG.i1, null != c ? tG.cN : tG.no),
+                children: [
+                    (0, r.jsxs)("div", {
+                        className: tG.Ug,
+                        children: [
+                            (0, r.jsx)(tx.O, { product: m }),
+                            (0, r.jsxs)("div", {
+                                className: tG.JZ,
+                                children: [
+                                    (0, r.jsx)(A.E, { variant: "text-md/semibold", children: C }),
+                                    (0, r.jsx)(g.D, {
+                                        variant: "heading-sm/medium",
+                                        color: "text-default",
+                                        children:
+                                            m?.type === tT.R.BUNDLE
+                                                ? null
+                                                : S.type === tT.R.AVATAR_DECORATION
+                                                  ? v.intl.string(v.t["7v0T9P"])
+                                                  : S.type === tT.R.NAMEPLATE
+                                                    ? v.intl.string(v.t.x5CoXR)
+                                                    : S.type === tT.R.PROFILE_EFFECT
+                                                      ? v.intl.string(v.t.wR5wOo)
+                                                      : S.type === tT.R.PROFILE_FRAME
+                                                        ? v.intl.string(v.t.GWrZOd)
+                                                        : null,
+                                    }),
+                                ],
+                            }),
+                            (0, r.jsx)(tk.x, {
+                                priceAmount: n,
+                                priceCurrency: i,
+                                discount: I,
+                                discountOfferAmount: T,
+                                variant: "text-md/bold",
+                            }),
+                        ],
+                    }),
+                    null != c &&
+                        (0, r.jsx)("div", {
+                            className: tG.Wh,
+                            children: (0, r.jsx)(A.E, {
+                                variant: "text-sm/normal",
+                                color: "text-feedback-critical",
+                                children: c,
+                            }),
+                        }),
+                ],
+            }),
+        ],
+    });
+}
+var tV = n(783878),
+    tB = n(966327),
+    tj = n(427262);
+let tH = (e) => {
+    let { selectedSkuId: t, validateSelectedGift: n, className: i, recipients: s } = e,
+        { giftRecipient: a, setGiftRecipient: o } = (0, y.Pv)();
+    return null == t
+        ? null
+        : (0, r.jsx)("div", {
+              className: i,
+              children: (0, r.jsx)(tV.Z, {
+                  selectionMode: "single",
+                  label: v.intl.string(v.t.xFn72s),
+                  placeholder: v.intl.string(v.t.R0vK0N),
+                  value: a?.id,
+                  onSelectionChange: (e) => {
+                      let i = s.find((t) => t.id === e);
+                      null != i && (n(i, t), o(i));
+                  },
+                  options: s.map((e) => ({
+                      id: e.id,
+                      value: e.id,
+                      label: `${tj.Ay.getUserTag(e)}`,
+                      leading: (0, r.jsx)(tB.A, { user: e, size: tC._3.SIZE_20 }),
+                  })),
+              }),
+          });
+};
+var tY = n(735438),
+    tW = n.n(tY),
+    tK = n(427358),
+    t$ = n(570287),
+    tz = n(994500);
+function tq() {
+    let e = (0, en.yK)([tz.A], () => tz.A.getFriendIDs()),
+        t = (0, en.yK)([tK.A], () =>
+            tK.A.getUserAffinities()
+                .filter((e) => {
+                    let { isFriend: t, communicationProbability: n, vcProbability: i, otherUserId: r } = e,
+                        s = (0, t$.q)(r);
+                    return !t && (n >= 0.1 || i >= 0.1) && s;
+                })
+                .map((e) => {
+                    let { otherUserId: t } = e;
+                    return t;
+                }),
+        ),
+        n = u.useMemo(() => tW().uniq([...e, ...t]), [e, t]);
+    return (0, en.yK)(
+        [tO.default],
+        () =>
+            n.reduce((e, t) => {
+                let n = tO.default.getUser(t);
+                return null == n || n.bot || e.push(n), e;
+            }, []),
+        [n],
+    );
+}
+var tZ = n(871181),
+    tX = n(318007),
+    tQ = n(285719),
+    tJ = n(976860),
+    t0 = n(353791);
+function t1(e) {
+    let { handleClose: t, selectedSkuId: n } = e,
+        { analyticsLocations: i } = (0, e9.Ay)(es.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL);
+    return (0, r.jsx)(tg.Q, {
+        text: v.intl.string(v.t.J82mpK),
+        onClick: function () {
+            t(),
+                (0, a.closeAllModals)(),
+                null == n
+                    ? (0, tA.Cz)({ analyticsLocations: i, analyticsSource: es.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
+                    : (0, tJ.pX)(`${V.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`);
+        },
+        textVariant: "text-sm/medium",
+    });
+}
+var t2 = n(818348);
+let t3 = (0, u.createContext)({
+        setCustomConfettiVisible: () => {},
+        confettiCanvas: null,
+        hideConfirmStepConfetti: !1,
+        skuIDs: [],
+        onStepChange: void 0,
+    }),
+    t6 = () => (0, u.useContext)(t3),
+    t4 = (e) => {
+        let { hideConfirmStepConfetti: t, confettiCanvas: n } = t6(),
+            { analyticsLocations: i } = (0, e9.Ay)();
+        return (0, r.jsx)(tm, { analyticsLocations: i, hideConfetti: t, confettiCanvas: n, ...e });
+    },
+    t5 = {
+        [l.pn.GIFT_CUSTOMIZATION]: () => v.intl.string(v.t["JCFN/y"]),
+        [l.pn.AWAITING_PURCHASE_TOKEN_AUTH]: () => v.intl.string(v.t.lDbi6H),
+        [l.pn.CONFIRM]: () => "",
+    },
+    t7 = (e) => {
+        let { step: t } = e,
+            n = t5[t];
+        return null == n ? null : (0, r.jsx)(P.rQ, { title: n(), titleTextVariant: "heading-lg/semibold" });
+    },
+    t8 = {
+        CHECKOUT_FLOW: eH.CL.COLLECTIBLES_CHECKOUT,
+        CHECKOUT_STEPS: {
+            [l.pn.GIFT_CUSTOMIZATION]: (e) => {
+                let { handleStepChange: t, handleClose: n } = e,
+                    {
+                        renderLeftColumn: i,
+                        renderRightColumn: s,
+                        ctaDisabled: a,
+                        loading: o,
+                    } = ((e) => {
+                        let { handleStepChange: t, handleClose: n } = e,
+                            {
+                                customGiftMessage: i = "",
+                                setCustomGiftMessage: s,
+                                giftRecipientError: a,
+                                setGiftRecipientError: o,
+                                validatingGiftRecipient: l,
+                                giftRecipient: u,
+                                giftingOrigin: c,
+                                setValidatingGiftRecipient: d,
+                            } = (0, y.Pv)(),
+                            { selectedSkuId: _, checkoutInvoicePreview: h } = (0, S.t4)((e) => ({
+                                selectedSkuId: e.selectedSkuId,
+                                checkoutInvoicePreview: e.checkoutInvoicePreview,
+                            })),
+                            f = (0, T.gU)(),
+                            p = (0, en.bG)([tO.default], () => tO.default.getCurrentUser()),
+                            E = tq(),
+                            m = async (e, t) => {
+                                d(!0),
+                                    null != a && o(),
+                                    (await (0, tA.JJ)(e.id, t)) || o(v.intl.string(v.t["4kgVqQ"])),
+                                    d(!1);
+                            };
+                        (0, er.Ay)(() => {
+                            null != _ &&
+                                null != u &&
+                                (c !== ek.vQ.DM_CHANNEL_WISHLIST &&
+                                    J.default.track(V.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: _ }),
+                                m(u, _));
+                        });
+                        let g = () =>
+                            (0, r.jsx)(tZ.A, {
+                                onTextChange: (e) => s?.(e),
+                                pendingText: i,
+                                currentText: i,
+                                disableThemedBackground: !0,
+                                className: t0.iX,
+                                innerClassName: t0.pt,
+                            });
+                        return {
+                            renderLeftColumn: () =>
+                                (0, r.jsx)("div", { className: t0.qL, children: (0, r.jsx)(tX.t, { isShopGift: !0 }) }),
+                            renderRightColumn: () => {
+                                let e = (0, tI.pA)({ invoicePreview: h, selectedSkuId: _, skusById: f });
+                                return c === ek.vQ.USER_PROFILE_WISHLIST || c === ek.vQ.DM_CHANNEL_WISHLIST
+                                    ? (0, r.jsxs)("div", {
+                                          children: [
+                                              (0, r.jsx)(tQ.Z, { giftRecipient: u }),
+                                              g(),
+                                              null != e &&
+                                                  null != _ &&
+                                                  (0, r.jsx)(tF, {
+                                                      skuId: _,
+                                                      priceAmount: e.amount,
+                                                      priceCurrency: e.currency,
+                                                      className: t0.uW,
+                                                      previewHeaderClassName: t0.vX,
+                                                      hideProfilePreview: !0,
+                                                  }),
+                                              (0, r.jsx)("div", {
+                                                  className: t0.fi,
+                                                  children: (0, r.jsx)(t1, { handleClose: n, selectedSkuId: _ }),
+                                              }),
+                                          ],
+                                      })
+                                    : (0, r.jsxs)("div", {
+                                          children: [
+                                              (0, r.jsx)(tH, {
+                                                  selectedSkuId: _,
+                                                  recipients: E,
+                                                  className: t0.uh,
+                                                  validateSelectedGift: m,
+                                              }),
+                                              g(),
+                                              null != e &&
+                                                  null != _ &&
+                                                  (0, r.jsx)(tF, {
+                                                      skuId: _,
+                                                      priceAmount: e.amount,
+                                                      priceCurrency: e.currency,
+                                                      className: t0.Ng,
+                                                  }),
+                                          ],
+                                      });
+                            },
+                            onStepChange: t,
+                            onBackClick: n,
+                            ctaDisabled: null != a || null == u || u.id === p?.id || i.length > ek.Jo,
+                            loading: l,
+                        };
+                    })({ handleStepChange: t, handleClose: n }),
+                    l = u.useMemo(() => ({ loading: o, disabled: a }), [o, a]);
+                return (0, r.jsx)(eH.Mw, {
+                    paymentModalStepProps: e,
+                    layout: eH.XZ.TWO_COLUMN,
+                    renderLeftColumn: i,
+                    renderRightColumn: s,
+                    primaryCTAButtonProps: l,
+                });
+            },
+            [l.pn.REVIEW]: eY.p,
+        },
+        TENANT_PROVIDER_CONFIGS: {
+            tenantProvidesCheckoutRoot: !0,
+            CustomTenantProvider: (e) => {
+                let { skuId: t, additionalOptions: n, children: i, ...s } = e,
+                    {
+                        environment: a,
+                        confettiCanvas: o,
+                        setConfettiCanvas: l,
+                        customConfettiVisible: c,
+                        setCustomConfettiVisible: d,
+                        customConfettiDisplayOptions: _,
+                        hideConfirmStepConfetti: h,
+                    } = ((e) => {
+                        let { skuId: t } = e,
+                            n = u.useRef(new tt.OH()),
+                            [i, r] = u.useState(null),
+                            [s, a] = u.useState(!1),
+                            o = u.useMemo(() => (0, tr.AB)({ purchaseType: ts.gs.FIAT, skuId: t }), [t]);
+                        return {
+                            environment: n,
+                            confettiCanvas: i,
+                            setConfettiCanvas: r,
+                            customConfettiVisible: s,
+                            setCustomConfettiVisible: a,
+                            customConfettiDisplayOptions: o,
+                            hideConfirmStepConfetti: null != o,
+                        };
+                    })({ skuId: t }),
+                    f = ((e) => {
+                        let { skuId: t } = e;
+                        return null != t ? [t] : [];
+                    })({ skuId: t }),
+                    p = null != n ? n.onStepChange : void 0,
+                    E = (0, u.useMemo)(
+                        () => ({
+                            skuIDs: f,
+                            setCustomConfettiVisible: d,
+                            hideConfirmStepConfetti: h,
+                            confettiCanvas: o,
+                            onStepChange: p,
+                        }),
+                        [f, d, h, o, p],
+                    );
+                return (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)(tl, {
+                            environment: a,
+                            setConfettiCanvas: l,
+                            customConfettiDisplayOptions: _,
+                            customConfettiVisible: c,
+                        }),
+                        (0, r.jsx)(eo.M, {
+                            ...s,
+                            skuIDs: f,
+                            stepConfigs: s.stepConfigs,
+                            activeSubscription: null,
+                            purchaseType: t2.VV.ONE_TIME,
+                            excludeSubscriptionPlansBySKU: !0,
+                            children: (0, r.jsx)(t3.Provider, { value: E, children: i }),
+                        }),
+                    ],
+                });
+            },
+            TenantPaymentModalRenderer: (e) => {
+                let { originalPaymentModalProps: t, renderPaymentModal: n } = e,
+                    { skuIDs: i, setCustomConfettiVisible: r, onStepChange: s } = t6(),
+                    { isGift: a } = (0, y.Pv)(),
+                    o = (0, te.J)(),
+                    {
+                        paymentModalSkuId: l,
+                        paymentModalOnClose: c,
+                        paymentModalOnComplete: d,
+                    } = ((e) => {
+                        let { skuIDs: t, onClose: n, onComplete: i, setCustomConfettiVisible: r } = e,
+                            s = t[0] ?? null,
+                            a = u.useCallback(() => {
+                                r(!0), i?.();
+                            }, [i, r]);
+                        return {
+                            paymentModalSkuId: s,
+                            paymentModalOnClose: u.useCallback(
+                                (e) => {
+                                    r(!1), n(e), tn.h.dispatch({ type: "SKU_PURCHASE_MODAL_CLOSE", error: null });
+                                },
+                                [n, r],
+                            ),
+                            paymentModalOnComplete: a,
+                        };
+                    })({ onClose: t.onClose, onComplete: t.onComplete, skuIDs: i, setCustomConfettiVisible: r }),
+                    _ = u.useCallback(
+                        (e) => {
+                            c(e), e && a && o();
+                        },
+                        [c, a, o],
+                    );
+                return n({ ...t, skuId: l, onClose: _, onComplete: d, applicationId: V.FYj, onStepChange: s });
+            },
+            tenantAnalyticsLocation: es.A.COLLECTIBLES_PAYMENT_MODAL,
+        },
+        CustomHeaderComponent: (e) => {
+            let { step: t } = e,
+                { isGift: n } = (0, y.Pv)();
+            return n ? (0, r.jsx)(t7, { step: t }) : null;
+        },
+        CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, r.jsx)(t4, { ...e }), options: to },
+    };
+var t9 = n(354033),
+    ne = n(786300),
+    nt = n(491057),
+    nn = n(496142),
+    ni = n(394584);
+let [nr, ns] = (0, ne.A)(),
+    na = {
+        CHECKOUT_FLOW: eH.CL.GUILD_ROLE_CHECKOUT,
+        CHECKOUT_STEPS: { [l.pn.REVIEW]: nn.E },
+        TENANT_PROVIDER_CONFIGS: {
+            CustomTenantProvider: (e) => {
+                let {
+                        tenantParams: { guildId: t, listing: n },
+                        children: i,
+                    } = e,
+                    s = u.useMemo(() => ({ guildId: t, listing: n }), [t, n]);
+                return (0, r.jsx)(nr.Provider, { value: s, children: (0, r.jsx)(nt.Qt, { children: i }) });
+            },
+            tenantProvidesCheckoutRoot: !1,
+        },
+        CustomHeaderComponent: (e) => {
+            let { onClose: t, step: n } = e,
+                { guildId: i, listing: s } = ns();
+            return (0, r.jsx)(t9.Y, { onClose: t, listing: s, step: n, guildId: i });
+        },
+        CUSTOM_CONFIRM_STEP_CONFIG: {
+            renderStep: (e) => (0, r.jsx)(ni._, { ...e }),
+            options: { modalSizeGetter: () => "md" },
+        },
+    };
+var no = n(73825),
+    nl = n(960851),
+    nu = n(117945),
+    nc = n(344159),
+    nd = n(561794),
+    n_ = n(811656),
+    nh = n(363373),
+    nf = n(800471),
+    np = n(941796),
+    nE = n(957489),
+    nm = n(822426);
+let ng = [
+        {
+            key: l.pn.SKU_SELECT,
+            renderStep: (e) => (0, r.jsx)(nE.F, { ...e }),
+            options: {
+                renderHeader: !1,
+                hideSlider: !0,
+                modalSizeGetter: (e) => {
+                    let { canCurrentlyPurchasePremiumGroup: t } = e;
+                    return t ? "xl" : "md";
+                },
+            },
+        },
+        {
+            key: l.pn.WHAT_YOU_LOSE,
+            renderStep: (e) => (0, r.jsx)(nm.K, { ...e }),
+            options: { modalSizeGetter: () => "md", renderHeader: !1, hideSlider: !0 },
+        },
+        {
+            key: l.pn.PLAN_SELECT,
+            renderStep: (e) => (0, r.jsx)(np.Z, { ...e }),
+            options: {
+                renderHeader: !0,
+                useBreadcrumbLabel: (e) => ((0, nf.lp)(e) ? null : v.intl.string(v.t["r+SebU"])),
+                sectionHeaderText: () => v.intl.string(v.t.UKbp1N),
+                modalSizeGetter: (e) => {
+                    let { isGift: t } = e;
+                    return t ? "xl" : "md";
+                },
+            },
+        },
+        {
+            key: l.pn.SELECT_FREE_SKU,
+            renderStep: (e) => (0, r.jsx)(nh.j, { ...e }),
+            options: { modalSizeGetter: () => "lg", hideDefaultModalBody: !0 },
+        },
+    ],
+    nA = {
+        CHECKOUT_FLOW: ea.C.PREMIUM_CHECKOUT,
+        STEPS_BEFORE_CHECKOUT: ng,
+        CHECKOUT_STEPS: { [l.pn.REVIEW]: nn.E },
+        TENANT_PROVIDER_CONFIGS: {
+            tenantProvidesCheckoutRoot: !0,
+            CustomTenantProvider: (e) => {
+                let {
+                        tenantParams: {
+                            confirmationFooter: t,
+                            defaultPlanId: n,
+                            referralCode: i,
+                            referralTrialOfferId: s,
+                            subscriptionTier: a,
+                            subscription: o,
+                        },
+                        stepConfigs: c,
+                        loadId: d,
+                        giftContextProps: _ = { isGift: !1, giftRecipient: null },
+                        renderModalProps: h,
+                        children: f,
+                    } = e,
+                    p = (0, en.bG)([em.A], () => em.A.getPremiumTypeSubscription()),
+                    E = (0, nl.cg)() ? ek.gD.PREMIUM_MONTH_TIER_2 : void 0,
+                    { isGift: m, giftRecipient: g } = _;
+                if (null != a && !Object.values(ek.pe).includes(a))
+                    throw Error("subscriptionTier must be a premium subscription");
+                let A = (0, nd.tA)({ giftRecipient: g, isGift: m ?? !1 }),
+                    I = u.useMemo(
+                        () =>
+                            A
+                                ? c.map((e) =>
+                                      e.key === l.pn.SKU_SELECT && null != e.options
+                                          ? { ...e, options: { ...e.options, modalSizeGetter: () => "xl" } }
+                                          : e,
+                                  )
+                                : c,
+                        [c, A],
+                    ),
+                    T = null != o ? o : p,
+                    S = !m && null != T && T.isPurchasedExternally && null != T.paymentGateway;
+                (0, nc.s)(T, () => h.onClose(), m ?? !1);
+                let y = u.useMemo(() => [...ek.oz], []);
+                return S
+                    ? null
+                    : (0, r.jsx)(eo.M, {
+                          loadId: d,
+                          activeSubscription: T,
+                          stepConfigs: I,
+                          skuIDs: y,
+                          isGift: m,
+                          defaultPlanId: E ?? n,
+                          referralCode: i,
+                          referralTrialOfferId: s,
+                          unifiedCheckoutFlow: ea.C.PREMIUM_CHECKOUT,
+                          children: (0, r.jsx)(nt.Qt, { confirmationFooter: t, children: f }),
+                      });
+            },
+            TenantPaymentModalRenderer: (e) => {
+                let { originalPaymentModalProps: t, renderPaymentModal: n } = e,
+                    { onClose: i, renderPurchaseConfirmation: s, continueSessionToInitialStep: a } = t;
+                u.useEffect(() => {
+                    eP.A.isLoadedForPremiumSKUs() || tn.h.wait(() => (0, no.zS)());
+                }, []);
+                let { selectedSkuId: o, purchaseState: c } = (0, S.t4)((e) => ({
+                        selectedSkuId: e.selectedSkuId,
+                        purchaseState: e.purchaseState,
+                    })),
+                    d = (0, eh.bB)(),
+                    {
+                        isGift: _,
+                        selectedGiftingPromotionReward: h,
+                        openGiftingBadgePostPurchaseModal: f,
+                    } = (0, y.Pv)(),
+                    p = u.useCallback(
+                        (e, t) => {
+                            i(e, t), e && _ && null == h && f();
+                        },
+                        [i, _, h, f],
+                    ),
+                    E = (0, nu.T)(_, o),
+                    m = c === e_.h.PURCHASING;
+                return (0, r.jsx)(n_.A, {
+                    isConfirmationStep: d === l.pn.CONFIRM && null == a && null == s,
+                    isEligibleForWowMoment: E,
+                    shouldPrefetchWowMoment: m,
+                    children: n({
+                        ...t,
+                        onClose: p,
+                        analyticsSubscriptionType: V.rzx.PREMIUM,
+                        shakeWhilePurchasing: !0,
+                        planGroup: ek.LE,
+                    }),
+                });
+            },
+            tenantAnalyticsLocation: es.A.PREMIUM_PAYMENT_MODAL,
+        },
+        CUSTOM_CONFIRM_STEP_CONFIG: {
+            renderStep: (e) => (0, r.jsx)(ni._, { ...e }),
+            options: { modalSizeGetter: () => "md" },
+        },
+    };
+var nI = n(753390),
+    nT = n(143582),
+    nS = n(897904),
+    ny = n(967198);
+let [nC, nN] = (0, ne.A)();
+function nv(e) {
+    let { guildId: t, showBenefitsFirst: n, children: i } = e,
+        [s, a] = u.useState(null),
+        o = u.useMemo(
+            () => ({
+                guildId: t,
+                showBenefitsFirst: n,
+                subscriptionMetadataRequest: s,
+                setSubscriptionMetadataRequest: a,
+            }),
+            [t, n, s],
+        );
+    return (0, r.jsx)(nC.Provider, { value: o, children: i });
+}
+n(938796);
+var nR = n(241524),
+    nO = n(266060),
+    nb = n(163437),
+    nD = n(701273),
+    nL = n(425013);
+let nw = (e) => {
+    let { onConfirm: t, onCancel: n, title: i, subtitle: s, confirmCta: a, showOpenDiscord: o = !0 } = e;
+    return (0, r.jsxs)("div", {
+        className: nL.RP,
+        children: [
+            (0, r.jsx)(g.D, { className: nL.RS, variant: "heading-lg/extrabold", children: i }),
+            null != s
+                ? (0, r.jsx)(A.E, { className: nL.sT, variant: "text-sm/normal", color: "text-default", children: s })
+                : null,
+            (0, r.jsxs)("div", {
+                className: nL.UD,
+                children: [
+                    o &&
+                        (0, r.jsx)(m.$, {
+                            variant: "primary",
+                            text: v.intl.string(v.t["8L5bZG"]),
+                            fullWidth: !0,
+                            onClick: () => (0, nD.A)("application_sub_mweb_success_modal"),
+                        }),
+                    (0, r.jsx)(m.$, { variant: "secondary", text: a, fullWidth: !0, onClick: t }),
+                    null != n &&
+                        (0, r.jsx)(m.$, {
+                            variant: "secondary",
+                            text: v.intl.string(v.t.iAfxo3),
+                            fullWidth: !0,
+                            onClick: n,
+                        }),
+                ],
+            }),
+        ],
+    });
+};
+function nM(e) {
+    let { onConfirm: t, tierName: n, subscription: i } = e;
+    return (0, r.jsxs)("div", {
+        className: nL.RP,
+        children: [
+            (0, r.jsx)(g.D, {
+                className: nL.RS,
+                variant: "heading-lg/extrabold",
+                children: v.intl.format(v.t.wLFT6z, { tier: n }),
+            }),
+            (0, r.jsx)(A.E, {
+                className: nL.sT,
+                variant: "text-sm/normal",
+                color: "text-default",
+                children: v.intl.format(v.t.OsAK9h, { timestamp: i?.currentPeriodEnd }),
+            }),
+            (0, r.jsxs)("div", {
+                className: nL.UD,
+                children: [
+                    (0, r.jsx)("div", {
+                        "data-button-hoisted-classname-wrapper": !0,
+                        className: nL.__invalid_openDiscordButton,
+                        children: (0, r.jsx)(m.$, {
+                            variant: "primary",
+                            text: v.intl.string(v.t["8L5bZG"]),
+                            onClick: () => (0, nD.A)("application_sub_mweb_success_modal"),
+                        }),
+                    }),
+                    (0, r.jsx)(m.$, { variant: "secondary", text: v.intl.string(v.t.nlkywz), onClick: t }),
+                ],
+            }),
+        ],
+    });
+}
+var nP = n(19311),
+    nx = n(376747);
+function nk(e) {
+    let { handleStepChange: t, handleClose: n } = e,
+        i = (0, nO.K)(),
+        { subscriptionMetadataRequest: s } = nN(),
+        { application: a } = (0, I.V)(),
+        o = (0, T.S3)(),
+        c = (0, nR.A)(nx.Y),
+        d = (0, en.bG)([ep.A], () => ep.A.getGuild(s?.guild_id)),
+        _ = u.useCallback(() => t(l.pn.REVIEW), [t]);
+    if (null == o) return null;
+    let h = (0, nb.bg)(o.flags);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(N.dZ, {
+                children: c
+                    ? (0, r.jsx)(nw, {
+                          confirmCta: v.intl.string(v.t.PBHFSq),
+                          onConfirm: _,
+                          onCancel: n,
+                          title: v.intl.format(v.t["6n6oXA"], { tier: o.name }),
+                          subtitle: h
+                              ? v.intl.string(v.t.lzAoKB)
+                              : v.intl.formatToPlainString(v.t["GqaY/j"], { guildName: d?.name }),
+                          showOpenDiscord: !1,
+                      })
+                    : (0, r.jsx)(nS.Uf, {
+                          icon: i?.thumbnail,
+                          storeListingBenefits: i?.benefits,
+                          application: a ?? void 0,
+                          title: v.intl.format(v.t.haiCxc, { tier: o.name }),
+                          subtitle: h ? v.intl.string(v.t.RvtbP5) : v.intl.string(v.t.zY39Zu),
+                          description: h
+                              ? v.intl.formatToPlainString(v.t.QCe4rY, { applicationName: a?.name })
+                              : v.intl.string(v.t.n1Pu8C),
+                      }),
+            }),
+            !c &&
+                (0, r.jsx)(N.UX, {
+                    children: (0, r.jsx)(nP.Ay, {
+                        onBack: n,
+                        backText: v.intl.string(v.t.TQBY1J),
+                        onPrimary: _,
+                        primaryCTA: nP.ti.CONTINUE,
+                        primaryText: v.intl.string(v.t["gZhF+3"]),
+                    }),
+                }),
+        ],
+    });
+}
+var nU = n(21161);
+function nG(e) {
+    let t,
+        n,
+        { handleClose: i, onSubscriptionConfirmation: s } = e,
+        a = (0, nO.K)(),
+        { application: o } = (0, I.V)(),
+        { readySlideId: c, updatedSubscription: d } = (0, S.t4)((e) => ({
+            readySlideId: e.readySlideId,
+            updatedSubscription: e.updatedSubscription,
+        })),
+        _ = (0, T.S3)(),
+        h = (0, nR.A)(nx.Y),
+        { createMultipleConfettiAt: f } = u.useContext(nU.x),
+        p = _?.name ?? "",
+        E = () => {
+            i(), s?.();
+        },
+        m = c === l.pn.CONFIRM,
+        g = (0, nb.bg)(_?.flags ?? 0),
+        A =
+            null != a && a.benefits.length > 0
+                ? v.intl.formatToPlainString(v.t["+IQQVM"], { benefitCount: a.benefits.length })
+                : null,
+        { showBenefitsFirst: y } = nN();
+    return (
+        y
+            ? (t = h
+                  ? (0, r.jsx)(nM, { tierName: p, onConfirm: E, subscription: d })
+                  : (0, r.jsx)(nS.XG, { tierName: p, onConfirm: E, subscription: d }))
+            : h
+              ? (t = (0, r.jsx)(nw, {
+                    title: v.intl.format(v.t.ea6tZr, { tierName: p }),
+                    subtitle:
+                        null != a && a.benefits.length > 0
+                            ? v.intl.formatToPlainString(v.t.HNepft, { benefits: A })
+                            : null,
+                    onConfirm: E,
+                    confirmCta: v.intl.string(v.t.nlkywz),
+                }))
+              : ((t =
+                    null != a && null != o
+                        ? (0, r.jsx)(nS.Uf, {
+                              icon: a.thumbnail,
+                              storeListingBenefits: a.benefits,
+                              application: o,
+                              title: v.intl.format(v.t["Q+qktS"], { tier: p }),
+                              subtitle: v.intl.string(v.t.ECKxXU),
+                              description: g
+                                  ? v.intl.format(v.t["MAtQk/"], { applicationName: o?.name })
+                                  : v.intl.format(v.t.vHkMF4, { tier: p }),
+                          })
+                        : (0, r.jsx)(F.A, {})),
+                (n = (0, r.jsx)(nP.Ay, {
+                    onPrimary: E,
+                    primaryCTA: nP.ti.CONTINUE,
+                    primaryText: v.intl.string(v.t["JtWl+a"]),
+                }))),
+        u.useEffect(() => {
+            tu.Ay.useReducedMotion && m && f(window.innerWidth / 2, window.innerHeight / 2);
+        }, [f, m]),
+        (0, r.jsxs)(r.Fragment, {
+            children: [
+                (0, r.jsxs)(N.dZ, { children: [(0, r.jsx)(C.A, {}), t] }),
+                null != n && (0, r.jsx)(N.UX, { children: n }),
+            ],
+        })
+    );
+}
+var nF = n(304072),
+    nV = n(71804),
+    nB = n(558620),
+    nj = n(427858),
+    nH = n(166926),
+    nY = n(953761);
+let nW = {
+    CHECKOUT_FLOW: ea.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
+    CustomCheckoutPredicateStep: function (e) {
+        let { initialPlanId: t, setAnalyticsData: n } = e,
+            {
+                selectedSkuId: i,
+                setSelectedSkuId: s,
+                setSelectedPlanId: a,
+                priceOptions: o,
+            } = (0, S.t4)((e) => ({
+                selectedSkuId: e.selectedSkuId,
+                setSelectedSkuId: e.setSelectedSkuId,
+                setSelectedPlanId: e.setSelectedPlanId,
+                priceOptions: e.checkoutPriceOptions,
+            })),
+            {
+                hasFetchedRelatedSubscriptionPlans: c,
+                subscriptionPriceOptionsLoading: d,
+                displayCurrency: _,
+            } = (0, ey.Jn)(),
+            { setSubscriptionMetadataRequest: h, guildId: f, showBenefitsFirst: p } = nN(),
+            E = (0, D.Hp)(),
+            m = (0, eC.A)(),
+            g = (0, eh.l)(),
+            { isGift: A } = (0, y.Pv)(),
+            I = p ? l.pn.BENEFITS : l.pn.REVIEW,
+            [T, C] = u.useState(!m || !c || d);
+        return (u.useEffect(() => {
+            C(!m || !c || d);
+        }, [d, c, m]),
+        u.useEffect(() => {
+            null != f && h({ guild_id: f });
+        }, [f, h]),
+        u.useEffect(() => {
+            a(t);
+            let e = null != t ? eP.A.get(t) : null;
+            T ||
+                E ||
+                (n((t) => {
+                    let n = null != e ? (0, tb.y8)(e.id, !1, A, { paymentSourceId: o.paymentSourceId }) : void 0;
+                    return {
+                        ...t,
+                        subscription_plan_id: e?.id,
+                        price: n?.amount,
+                        regular_price: e?.price,
+                        currency: _,
+                    };
+                }),
+                null != e && (s(e?.skuId), g(I)));
+        }, [E, t, A, T, o, _, i, n, a, s, g, I]),
+        T)
+            ? (0, r.jsx)(F.A, {})
+            : E
+              ? (0, r.jsx)(L.oO, {})
+              : null;
+    },
+    CustomHeaderComponent: (e) => {
+        let { step: t, onClose: n } = e,
+            i = u.useCallback(() => n(!1), [n]);
+        return (0, r.jsx)(nS.fs, { step: t, onClose: i });
+    },
+    STEPS_BEFORE_CHECKOUT: [
+        {
+            key: l.pn.BENEFITS,
+            renderStep: (e) => (0, r.jsx)(nk, { ...e }),
+            options: { useBreadcrumbLabel: () => v.intl.string(v.t["5LD2+B"]) },
+        },
+    ],
+    CHECKOUT_STEPS: {
+        [l.pn.REVIEW]: function (e) {
+            let { handleStepChange: t, planGroup: n, openInvoiceId: i, analyticsData: s, analyticsLocation: a } = e,
+                {
+                    purchaseState: o,
+                    contextMetadata: c,
+                    purchaseError: d,
+                    setCurrency: _,
+                    activeSubscription: h,
+                } = (0, S.t4)((e) => ({
+                    purchaseState: e.purchaseState,
+                    contextMetadata: e.contextMetadata,
+                    purchaseError: e.purchaseError,
+                    setCurrency: e.setCheckoutCurrency,
+                    activeSubscription: e.activeSubscription,
+                })),
+                { paymentSources: f } = (0, w.jm)(),
+                { dropdownCurrencies: p } = (0, ey.Jn)(),
+                { subscriptionMetadataRequest: E, showBenefitsFirst: m } = nN(),
+                g = m ? l.pn.BENEFITS : void 0,
+                A = (0, nB.A)(),
+                I = (0, T.S3)();
+            if (null == A)
+                throw new nV.v({
+                    message: "Expected plan to be selected",
+                    extraSentryInformation: { selectedPlan: A },
+                });
+            let y = u.useRef(null),
+                [C, v] = (0, nF.A)(!1, 500),
+                R = (0, eW.mx)(),
+                O = (0, nb.bg)(I?.flags ?? 0);
+            u.useEffect(() => {
+                null != d && null != y.current && y.current.scrollIntoView({ behavior: "smooth" });
+            }, [d]);
+            let b = u.useRef(null),
+                D = u.useCallback(() => {
+                    t(l.pn.ADD_PAYMENT_STEPS);
+                }, [t]);
+            return o === e_.h.PURCHASING
+                ? (0, r.jsx)(F.A, {})
+                : (0, r.jsxs)(r.Fragment, {
+                      children: [
+                          (0, r.jsx)(N.dZ, {
+                              children:
+                                  null == h
+                                      ? (0, r.jsx)(nY._, {
+                                            selectedPlanId: A.id,
+                                            planGroup: n,
+                                            paymentSources: f,
+                                            handlePaymentSourceAdd: D,
+                                            metadata: O ? void 0 : E,
+                                        })
+                                      : (0, r.jsx)(nj.A, {
+                                            premiumSubscription: h,
+                                            paymentSources: f,
+                                            handlePaymentSourceAdd: D,
+                                            planId: A.id,
+                                            planGroup: n,
+                                            currencies: p,
+                                            onCurrencyChange: (e) => _(e),
+                                            hasOpenInvoice: null != i,
+                                            purchaseState: o,
+                                        }),
+                          }),
+                          (0, r.jsx)(N.UX, {
+                              children: (0, r.jsx)(nH.U, {
+                                  premiumSubscription: h ?? null,
+                                  onBack: () => null != g && t(g),
+                                  handleStepChange: t,
+                                  postPurchaseStep: l.pn.CONFIRM,
+                                  legalTermsNodeRef: b,
+                                  flashLegalTerms: () => v(!0),
+                                  analyticsLocation: a,
+                                  baseAnalyticsData: s,
+                                  flowStartTime: c.startTime,
+                                  planGroup: n,
+                                  openInvoiceId: i,
+                                  metadata: O ? void 0 : E,
+                                  backButtonEligible: !!m || void 0,
+                                  invoiceError: R,
+                                  disablePurchase: E?.guild_id == null && !O,
+                                  onPaymentSourceAdd: D,
+                              }),
+                          }),
+                      ],
+                  });
+        },
+    },
+    TENANT_PROVIDER_CONFIGS: {
+        tenantProvidesCheckoutRoot: !0,
+        CustomTenantProvider: (e) => {
+            let {
+                    loadId: t,
+                    applicationId: n,
+                    activeSubscription: i,
+                    stepConfigs: s,
+                    skuId: a,
+                    tenantParams: o,
+                    children: l,
+                } = e,
+                { guildId: u, showBenefitsFirst: c } = o;
+            return (0, r.jsx)(eo.M, {
+                loadId: t,
+                applicationId: n,
+                activeSubscription: i,
+                stepConfigs: s,
+                skuIDs: [a],
+                unifiedCheckoutFlow: ea.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
+                children: (0, r.jsx)(nv, {
+                    guildId: u,
+                    showBenefitsFirst: c,
+                    children: (0, r.jsx)(nt.Qt, { children: l }),
+                }),
+            });
+        },
+        TenantPaymentModalRenderer: (e) => {
+            let {
+                    originalPaymentModalProps: t,
+                    renderPaymentModal: n,
+                    tenantParams: { forcesTransitionToGuild: i, guildId: r },
+                } = e,
+                s = t.onClose,
+                a = t.onComplete,
+                o = u.useCallback(
+                    (e) => {
+                        s(e),
+                            e &&
+                                null != r &&
+                                (nI.hP(),
+                                (0, nT.f5)(r),
+                                null != a && a(),
+                                null != r && (i || ny.A.getGuildId() !== r) && (0, tJ.pX)(V.BVt.CHANNEL(r)));
+                    },
+                    [s, a, i, r],
+                );
+            return n({ ...t, onClose: o, forceNewPaymentModal: !0 });
+        },
+        tenantAnalyticsLocation: es.A.APPLICATION_SUBSCRIPTION_CHECKOUT,
+    },
+    CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, r.jsx)(nG, { ...e }) },
+};
+var nK = n(67480),
+    n$ = n(328968),
+    nz = n(371794),
+    nq = n(565756);
+l.pn.GIFT_CUSTOMIZATION;
+let nZ = {
+    CHECKOUT_FLOW: eH.CL.PREMIUM_APPS_OTP_CHECKOUT,
+    CHECKOUT_STEPS: {
+        [l.pn.GIFT_CUSTOMIZATION]: (e) => {
+            let { customGiftMessage: t = "", setCustomGiftMessage: n, giftRecipient: i } = (0, y.Pv)(),
+                s = (0, S.t4)((e) => e.selectedSkuId),
+                a = (0, en.bG)([tO.default], () => tO.default.getCurrentUser()),
+                o = (0, en.bG)([nK.A], () => (null != s ? nK.A.get(s) : null), [s]),
+                l = tq(),
+                c = (0, en.bG)([n$.A], () => (null != s ? n$.A.getForSKU(s) : null), [s]),
+                d =
+                    c?.headerBackground != null && o?.applicationId != null
+                        ? (0, nz.YE)(o.applicationId, c.headerBackground, 256)
+                        : void 0,
+                _ = async (e, t) => {},
+                h = null == i || i.id === a?.id || t.length > ek.Jo,
+                f = u.useMemo(() => ({ disabled: h }), [h]);
+            return (0, r.jsx)(eH.Mw, {
+                onBackClick: e.handleClose,
+                paymentModalStepProps: e,
+                layout: eH.XZ.TWO_COLUMN,
+                renderLeftColumn: () =>
+                    (0, r.jsxs)("div", {
+                        className: nq.P6,
+                        children: [
+                            o?.name != null &&
+                                (0, r.jsx)(g.D, {
+                                    variant: "heading-lg/semibold",
+                                    color: "text-strong",
+                                    children: o.name,
+                                }),
+                            null != d && (0, r.jsx)("img", { src: d, alt: o?.name ?? "", className: nq.LC }),
+                        ],
+                    }),
+                renderRightColumn: () =>
+                    (0, r.jsxs)("div", {
+                        className: nq.P6,
+                        children: [
+                            (0, r.jsx)(tH, { recipients: l, selectedSkuId: s, validateSelectedGift: _ }),
+                            (0, r.jsx)(tZ.A, {
+                                onTextChange: (e) => n?.(e),
+                                pendingText: t,
+                                currentText: t,
+                                disableThemedBackground: !0,
+                                className: nq.iX,
+                                innerClassName: nq.pt,
+                            }),
+                        ],
+                    }),
+                primaryCTAButtonProps: f,
+            });
+        },
+        [l.pn.REVIEW]: eY.p,
+    },
+    CUSTOM_CONFIRM_STEP_CONFIG: K,
+    TENANT_PROVIDER_CONFIGS: {
+        CustomTenantProvider: (e) => e.children,
+        tenantProvidesCheckoutRoot: !1,
+        tenantAnalyticsLocation: es.A.APPLICATION_OTP_PAYMENT_MODAL,
+    },
+};
+var nX = n(429913),
+    nQ = n(733391),
+    nJ = n(318254),
+    n0 = n(510022),
+    n1 = n(317560),
+    n2 = n(366523),
+    n3 = n(910200),
+    n6 = n(208733);
+function n4(e) {
+    let { handleClose: t } = e,
+        { analyticsLocations: n } = (0, e9.Ay)(),
+        { selectedSkuId: i, entitlementsGranted: s } = (0, S.t4)((e) => ({
+            selectedSkuId: e.selectedSkuId,
+            entitlementsGranted: e.entitlementsGranted,
+        })),
+        { application: a } = (0, I.V)(),
+        o = (0, T.gU)(),
+        { isGift: l, giftRecipient: c } = (0, y.Pv)();
+    E()(null != i, "Expected selectedSkuId"), E()(null != a, "Expected application");
+    let d = o[i];
+    E()(null != d, "Expected sku");
+    let _ = s.find((e) => e.sku_id === i),
+        h = _?.metadata?.orbs_reward;
+    if (
+        (u.useEffect(() => {
+            l || ((0, n1.j)(), t(), (0, n0.n)({ sku: d, application: a, analyticsLocations: n, orbsReward: h }));
+        }, [l, d, a, t, n, h]),
+        !l)
+    )
+        return null;
+    let f = null != h && h > 0;
+    return (0, r.jsxs)(N.dZ, {
+        children: [
+            (0, r.jsx)(C.A, {}),
+            (0, r.jsxs)("div", {
+                className: n6.EL,
+                children: [
+                    (0, r.jsx)(n2.e, { sku: d, shape: "square", containerClassName: n6.LC }),
+                    (0, r.jsx)(g.D, {
+                        variant: "heading-xl/semibold",
+                        className: n6.RS,
+                        children: v.intl.string(v.t["5glWta"]),
+                    }),
+                    (0, r.jsx)(A.E, {
+                        variant: "text-md/normal",
+                        children: v.intl.formatToPlainString(v.t["2VjPTw"], {
+                            itemName: d.name,
+                            giftRecipient: c?.username ?? "your recipient",
+                        }),
+                    }),
+                    f &&
+                        (0, r.jsx)("div", {
+                            className: n6.Is,
+                            children: (0, r.jsx)(n3.A, {
+                                Icon: nJ.C,
+                                text: v.intl.format(v.t["ZV+aS9"], { orbCount: h }),
+                            }),
+                        }),
+                    (0, r.jsx)("div", {
+                        className: n6.UD,
+                        children: (0, r.jsx)(m.$, { onClick: t, text: v.intl.string(v.t.cpT0Cq), fullWidth: !0 }),
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+n(801541);
+var n5 = n(889137),
+    n7 = n(742158),
+    n8 = n(683071),
+    n9 = n(313961),
+    ie = n(238017),
+    it = n(650588),
+    ii = n(117218),
+    ir = n(763827),
+    is = n(403362),
+    ia = n(871123),
+    io = n(832163),
+    il = n(44724),
+    iu = n(980094),
+    ic = n(806931),
+    id = n(107610);
+function i_(e) {
+    let { handleClose: t, sku: n, application: i } = e,
+        s = u.useCallback(() => {
+            (0, il.G)({ applicationId: n.applicationId });
+        }, [n.applicationId]),
+        o = u.useCallback(() => {
+            t();
+            let e = io.A.getStorefrontState(n.applicationId)?.activePage;
+            (0, ia.uV)({
+                pathname: window.location.pathname,
+                search: window.location.search,
+                applicationId: n.applicationId,
+                pageIndex: e ?? 0,
+                guildId: i?.guildId,
+                skuId: n.id,
+            }) ||
+                ((0, a.closeAllModals)(),
+                (0, il.default)({ applicationId: n.applicationId, pageIndex: e ?? 0, skuId: n.id, slug: n.slug }));
+        }, [n.applicationId, n.id, n.slug, t, i]);
+    return (0, r.jsx)("div", {
+        className: id.$O,
+        children: (0, r.jsx)(tg.Q, {
+            text: v.intl.string(v.t.ImioFL),
+            onMouseDown: s,
+            onClick: o,
+            textVariant: "text-sm/medium",
+            lineClamp: void 0,
+        }),
+    });
+}
+let ih = {
+    CHECKOUT_FLOW: eH.CL.SLAYER_STOREFRONT_CHECKOUT,
+    CHECKOUT_STEPS: {
+        [l.pn.GIFT_CUSTOMIZATION]: (e) => {
+            let { handleStepChange: t, handleClose: n } = e,
+                { renderStepBody: i, disabled: s } = ((e) => {
+                    var t;
+                    let n,
+                        i,
+                        s,
+                        { handleStepChange: a, handleClose: o } = e,
+                        {
+                            customGiftMessage: l = "",
+                            setCustomGiftMessage: c,
+                            giftRecipient: d,
+                            emojiConfetti: _,
+                            soundEffect: h,
+                            setEmojiConfetti: f,
+                            setSoundEffect: p,
+                            giftingOrigin: E,
+                            additionalUserIds: m,
+                        } = (0, y.Pv)(),
+                        g = (0, S.t4)((e) => e.selectedSkuId),
+                        { application: T } = (0, I.V)(),
+                        C = (0, en.bG)([tO.default], () => tO.default.getCurrentUser()),
+                        N =
+                            ((t = C?.id),
+                            (n = tq()),
+                            (i = (function (e) {
+                                let t = (0, en.bG)([ir.A], () => (ir.A.isConnected() ? ir.A.getChannelId() : null)),
+                                    [n, i] = u.useState([]);
+                                return (
+                                    u.useEffect(() => {
+                                        let n = null != t ? n9.A.getParticipants(t) : [],
+                                            r = [],
+                                            s = new Set();
+                                        for (let t of n)
+                                            (!(0, ic.Xw)(t) && !(0, ic.Ay)(t)) ||
+                                                t.user.id === e ||
+                                                s.has(t.user.id) ||
+                                                (s.add(t.user.id), r.push(t));
+                                        r.sort((e, t) =>
+                                            (0, ic.Ay)(e) && !(0, ic.Ay)(t)
+                                                ? -1
+                                                : (0, ic.Ay)(t) && !(0, ic.Ay)(e)
+                                                  ? 1
+                                                  : 0,
+                                        ),
+                                            i(r.map((e) => e.user));
+                                    }, [t, e]),
+                                    n
+                                );
+                            })(t)),
+                            (s = (0, en.yK)([tO.default], () => m?.map(tO.default.getUser).filter(is.Vq) ?? [], [m])),
+                            u.useMemo(
+                                () =>
+                                    tW().uniqWith(
+                                        [...(null != d ? [d] : []), ...s, ...i, ...n],
+                                        (e, t) => e.id === t.id,
+                                    ),
+                                [d, s, i, n],
+                            )),
+                        R = (0, en.bG)([nK.A], () => (null != g ? nK.A.get(g) : null), [g]),
+                        { userPrice: O } = (0, ii.CD)({ sku: R, priceSetAssignmentPurchaseType: V.lid.GIFT }),
+                        b = (0, ia.fq)(R),
+                        D = (0, ia.xf)(R),
+                        L = async (e, t) => {},
+                        w = (e) => {
+                            null != p && p(null == e ? void 0 : e);
+                        },
+                        M = () =>
+                            (0, r.jsxs)("div", {
+                                className: id.mT,
+                                children: [
+                                    null != b &&
+                                        (0, r.jsx)(n2.A, {
+                                            containerClassName: id.T3,
+                                            cardImage: b,
+                                            cardBackgroundImage: D,
+                                            altText: R?.name ?? "",
+                                            shape: "square",
+                                        }),
+                                    (0, r.jsxs)("div", {
+                                        className: id._T,
+                                        children: [
+                                            (0, r.jsx)(it.A, { sound: h, onSelect: w }),
+                                            (0, r.jsx)(ie.A, {
+                                                setEmojiConfetti: f,
+                                                emojiConfetti: null == _ ? void 0 : _,
+                                            }),
+                                        ],
+                                    }),
+                                ],
+                            }),
+                        P = () => {
+                            let e = R?.orbsReward;
+                            return (0, r.jsxs)("div", {
+                                className: id.Tc,
+                                children: [
+                                    null != d && (E === ek.vQ.USER_PROFILE_WISHLIST || E === ek.vQ.DM_CHANNEL_WISHLIST)
+                                        ? (0, r.jsx)(tQ.Z, { giftRecipient: d })
+                                        : (0, r.jsx)(tH, { selectedSkuId: g, validateSelectedGift: L, recipients: N }),
+                                    (0, r.jsx)(tZ.A, {
+                                        onTextChange: (e) => c?.(e),
+                                        pendingText: l,
+                                        currentText: l,
+                                        disableThemedBackground: !0,
+                                        className: id.iX,
+                                        innerClassName: id.pt,
+                                    }),
+                                    null == R
+                                        ? null
+                                        : (0, r.jsxs)("div", {
+                                              className: id.AN,
+                                              children: [
+                                                  (0, r.jsx)(n7.z, {
+                                                      className: id.jr,
+                                                      children: v.intl.string(v.t.PpoJzt),
+                                                  }),
+                                                  (0, r.jsxs)("div", {
+                                                      className: id.Wx,
+                                                      children: [
+                                                          (0, r.jsx)("div", {
+                                                              className: id.Xb,
+                                                              children:
+                                                                  null != R &&
+                                                                  null != b &&
+                                                                  (0, r.jsx)(n2.A, {
+                                                                      containerClassName: id.Iy,
+                                                                      cardImage: b,
+                                                                      cardBackgroundImage: D,
+                                                                      altText: R.name,
+                                                                      shape: "square",
+                                                                  }),
+                                                          }),
+                                                          (0, r.jsxs)("div", {
+                                                              className: id.vz,
+                                                              children: [
+                                                                  null != T && (0, r.jsx)(iu.Q, { application: T }),
+                                                                  (0, r.jsx)(A.E, {
+                                                                      variant: "text-sm/semibold",
+                                                                      children: R.name,
+                                                                  }),
+                                                              ],
+                                                          }),
+                                                          (0, r.jsx)(A.E, { variant: "text-md/semibold", children: O }),
+                                                      ],
+                                                  }),
+                                              ],
+                                          }),
+                                    null != R &&
+                                        (0, ia.Ri)(R) &&
+                                        (0, r.jsx)(n8.w, { type: "info", children: v.intl.string(v.t.lORYb6) }),
+                                    null != e &&
+                                        e > 0 &&
+                                        (0, r.jsx)(n3.A, {
+                                            Icon: nJ.C,
+                                            text: v.intl.format(v.t["ZV+aS9"], { orbCount: e }),
+                                        }),
+                                    null != R && (0, r.jsx)(i_, { handleClose: o, sku: R, application: T }),
+                                ],
+                            });
+                        };
+                    return {
+                        renderStepBody: () => (0, r.jsxs)("div", { className: id.Du, children: [M(), P()] }),
+                        getLeftColumnComponent: M,
+                        getRightColumnComponent: P,
+                        onStepChange: a,
+                        onBackClick: o,
+                        disabled: null == d || d.id === C?.id || l.length > ek.Jo,
+                    };
+                })({ handleStepChange: t, handleClose: n }),
+                a = u.useMemo(() => ({ disabled: s }), [s]);
+            return (0, r.jsx)(eH.Mw, {
+                paymentModalStepProps: e,
+                layout: eH.XZ.CUSTOM_STEP_BODY,
+                renderStepBody: i,
+                primaryCTAButtonProps: a,
+            });
+        },
+        [l.pn.REVIEW]: eY.p,
+    },
+    CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, r.jsx)(n4, { ...e }) },
+    TENANT_PROVIDER_CONFIGS: {
+        tenantProvidesCheckoutRoot: !0,
+        CustomTenantProvider: (e) => {
+            let { children: t, discoverySessionId: n, loadId: i, applicationId: s, isGift: a, skuId: o, ...l } = e;
+            return (
+                ((e) => {
+                    let { applicationId: t, skuId: n } = e,
+                        i = (0, nX.h)(t);
+                    u.useEffect(() => {
+                        null == i ||
+                            null == n ||
+                            n$.A.isFetchingForSKU(n) ||
+                            null != nK.A.get(n) ||
+                            (0, nQ.Pp)(i.id, n);
+                    }, [i, n]);
+                })({ applicationId: s, skuId: o }),
+                (0, r.jsx)(eo.M, {
+                    loadId: i,
+                    discoverySessionId: n,
+                    applicationId: s,
+                    skuIDs: [o],
+                    purchaseType: t2.VV.ONE_TIME,
+                    isGift: a,
+                    ...l,
+                    activeSubscription: null,
+                    children: t,
+                })
+            );
+        },
+        TenantPaymentModalRenderer: (e) => {
+            let { originalPaymentModalProps: t, renderPaymentModal: n } = e;
+            return n({ ...t, analyticsObject: t.analyticsSourceLocation });
+        },
+        tenantAnalyticsLocation: es.A.SLAYER_STOREFRONT_PAYMENT_MODAL,
+    },
+    CustomHeaderComponent: function (e) {
+        let { step: t } = e,
+            n = (0, n5.YW)(t)
+                .with(l.pn.GIFT_CUSTOMIZATION, () => v.intl.string(v.t["JCFN/y"]))
+                .with(l.pn.AWAITING_PURCHASE_TOKEN_AUTH, () => v.intl.string(v.t.lDbi6H))
+                .with(l.pn.CONFIRM, () => "")
+                .otherwise(() => null);
+        return null == n ? null : (0, r.jsx)(P.rQ, { title: n, titleTextVariant: "heading-lg/semibold" });
+    },
+};
+var ip = n(274971),
+    iE = n(944355),
+    im = n(977445),
+    ig = n(908419),
+    iA = n(211287),
+    iI = n(623373),
+    iT = n(739508),
+    iS = n(715054);
+(0, s.A)();
+var iy = n(136857),
+    iC = n(158317),
+    iN = n(855104);
+n(322076);
+var iv =
+        (((i = {})[(i.INSUFFICIENT_ORB_BALANCE = 1e3)] = "INSUFFICIENT_ORB_BALANCE"),
+        (i[(i.MISSING_DEPENDENT_SKU_ENTITLEMENT = 1001)] = "MISSING_DEPENDENT_SKU_ENTITLEMENT"),
+        (i[(i.SKU_PRODUCT_LINE_NOT_PURCHASABLE = 1002)] = "SKU_PRODUCT_LINE_NOT_PURCHASABLE"),
+        (i[(i.SKU_ALREADY_OWNED = 1003)] = "SKU_ALREADY_OWNED"),
+        (i[(i.FRACTIONAL_PREMIUM_ACTIVE_MOBILE_SUBSCRIPTION = 1004)] = "FRACTIONAL_PREMIUM_ACTIVE_MOBILE_SUBSCRIPTION"),
+        (i[(i.SKU_NOT_AVAILABLE_FOR_DISTRIBUTION = 1005)] = "SKU_NOT_AVAILABLE_FOR_DISTRIBUTION"),
+        (i[(i.SKU_MISSING_ORB_PRICE = 1006)] = "SKU_MISSING_ORB_PRICE"),
+        (i[(i.SKU_IS_THIRD_PARTY = 1007)] = "SKU_IS_THIRD_PARTY"),
+        (i[(i.SLAYER_STOREFRONT_ORB_REDEMPTION_DISABLED = 1008)] = "SLAYER_STOREFRONT_ORB_REDEMPTION_DISABLED"),
+        (i[(i.FRACTIONAL_PREMIUM_SUBSCRIPTION_GROUP_MEMBER = 1009)] = "FRACTIONAL_PREMIUM_SUBSCRIPTION_GROUP_MEMBER"),
+        (i[(i.BUNDLE_PARTIALLY_OWNED = 1010)] = "BUNDLE_PARTIALLY_OWNED"),
+        (i[(i.SOCIAL_LAYER_NOT_PURCHASABLE = 1011)] = "SOCIAL_LAYER_NOT_PURCHASABLE"),
+        (i[(i.FRAMES_FIAT_EXCLUSIVE = 1012)] = "FRAMES_FIAT_EXCLUSIVE"),
+        (i[(i.FIRST_PARTY_NO_ORBS = 1013)] = "FIRST_PARTY_NO_ORBS"),
+        i),
+    iR = n(289873),
+    iO = n(241989),
+    ib = n(576052),
+    iD = n(120992),
+    iL = n(194256),
+    iw = n(319820),
+    iM = n(327105),
+    iP = n(200766);
+let ix = (e) => {
+        let { sku: t, orbPriceAmount: n } = e,
+            { product: i, isSocialLayerGameItem: s } = (0, iw.AO)({ sku: t }),
+            a = (0, iL.oO)(i);
+        s ? (a = v.intl.string(iM.default.qwSlCO)) : (0, iI.Ab)(i) && (a = v.intl.string(v.t["0TmQRG"]));
+        let o = (0, iL.dL)(t),
+            l = (0, ts.EZ)(t.id) ? ib.m[t.id].render({ className: iP.$ }) : (0, r.jsx)(iO.WH, { sku: t, product: i });
+        return (0, r.jsx)(iO.f7, {
+            label: o,
+            description: a,
+            graphic: l,
+            price: null != n ? `${n}` : "",
+            PriceIcon: nJ.C,
+        });
+    },
+    ik = (e) => {
+        let { skuId: t, orbPriceAmount: n } = e;
+        (0, iD.c)({ applicationId: (0, Q.P)(t), skuIDs: [t] });
+        let i = (0, b.bG)([nK.A], () => nK.A.get(t), [t]);
+        return null == i
+            ? (0, r.jsx)(iR.y, { type: iR.y.Type.PULSING_ELLIPSIS })
+            : (0, r.jsx)(ix, { sku: i, orbPriceAmount: n });
+    },
+    iU = (e) => {
+        let { orbBalance: t } = e;
+        return (0, r.jsx)(iE.vW, { label: v.intl.string(v.t.y0WGqP), value: null != t ? `${t}` : "", Icon: nJ.C });
+    },
+    iG = () => v.intl.string(v.t.wmcDyu);
+function iF() {
+    let { immediateDelivery: e } = (0, ig.U)(),
+        t = iG();
+    return (0, r.jsx)(iE._P, {
+        variant: { type: iE.I0.OrbsRedemption, purchaseButtonText: t },
+        paymentSourceType: null,
+        immediateDelivery: e,
+    });
+}
+let iV = (0, u.createContext)({
+        isRedeeming: !1,
+        orbRedemptionError: null,
+        orbProductContext: null,
+        onRedeemVirtualCurrency: () => {},
+        skuId: "",
+        analyticsSourceLocation: void 0,
+    }),
+    iB = () => (0, u.useContext)(iV),
+    ij = { payment_gateway: t2.kM.VIRTUAL_CURRENCY, currency: V.Yri.DISCORD_ORB },
+    iH = {
+        CHECKOUT_FLOW: eH.CL.ORB_CHECKOUT,
+        CHECKOUT_STEPS: {
+            [l.pn.REVIEW]: (e) => {
+                let { handleStepChange: t } = e,
+                    {
+                        orbProductContext: n,
+                        isRedeeming: i,
+                        orbRedemptionError: s,
+                        onRedeemVirtualCurrency: a,
+                        skuId: o,
+                        analyticsSourceLocation: c,
+                    } = iB(),
+                    { primaryButtonProps: d, ..._ } = ((e) => {
+                        let {
+                                skuId: t,
+                                analyticsSourceLocation: n,
+                                orbProductContext: i,
+                                isRedeeming: s,
+                                orbRedemptionError: a,
+                                onRedeemVirtualCurrency: o,
+                                handleStepChange: c,
+                            } = e,
+                            { enabled: d } = iA.A.useConfig({ location: "orb_checkout_review_step" }),
+                            { invoicePreviewTotal: _, orderOrbPriceAmount: h } = (0, S.t4)((e) => {
+                                let n = null != e.orderRecord ? e.orderRecord.getInvoicePreview() : null;
+                                return {
+                                    invoicePreviewTotal: null != n ? n.total : null,
+                                    orderOrbPriceAmount:
+                                        null != n ? n.getInvoicePreviewLineItemUnitPriceForSku(t) : null,
+                                };
+                            }),
+                            {
+                                isStepLoading: f,
+                                orbPriceAmount: p,
+                                orbBalanceToDisplay: E,
+                                onClickCheckout: m,
+                                showCollectiblesDiscountWarning: g,
+                                errorMessage: A,
+                            } = ((e) => {
+                                let {
+                                        skuId: t,
+                                        onRedeemVirtualCurrency: n,
+                                        orbRedemptionError: i,
+                                        orbProductContext: r,
+                                        analyticsSourceLocation: s,
+                                        handleStepChange: a,
+                                    } = e,
+                                    { analyticsLocations: o } = (0, e9.Ay)(),
+                                    {
+                                        selectedSkuId: c,
+                                        setPurchaseState: d,
+                                        firstConstraintReasonCode: _,
+                                    } = (0, S.t4)((e) => ({
+                                        selectedSkuId: e.selectedSkuId,
+                                        setPurchaseState: e.setPurchaseState,
+                                        firstConstraintReasonCode:
+                                            null != e.orderRecord
+                                                ? e.orderRecord.firstUnsatisfiedConstraintReasonCode()
+                                                : null,
+                                    })),
+                                    h = (0, iN.gN)(),
+                                    f = (0, u.useRef)(h),
+                                    { emitOrbCheckoutPaymentFlowEvent: p } = ((e) => {
+                                        let {
+                                                skuId: t,
+                                                orbProductContext: n,
+                                                analyticsLocations: i,
+                                                analyticsSourceLocation: r,
+                                            } = e,
+                                            { activitySessionId: s } = (0, I.V)(),
+                                            { hasPaymentSources: a } = (0, w.jm)(),
+                                            {
+                                                loadId: o,
+                                                startTime: c,
+                                                discoverySessionId: d,
+                                            } = (0, S.t4)((e) => e.contextMetadata),
+                                            _ = (0, u.useMemo)(
+                                                () => ({
+                                                    load_id: o,
+                                                    discovery_session_id: d,
+                                                    application_id: (0, Q.P)(t),
+                                                    location: i,
+                                                    location_stack: i,
+                                                    sku_id: t,
+                                                    activity_session_id: s,
+                                                    payment_gateway: t2.ps.VIRTUAL_CURRENCY,
+                                                    ...(null != n && {
+                                                        price: n.orbPriceAmount ?? void 0,
+                                                        regular_price: n.orbPriceAmount ?? void 0,
+                                                    }),
+                                                    currency: V.Yri.DISCORD_ORB,
+                                                    ...(null != r && { source: r }),
+                                                    ...{
+                                                        payment_type: V.frM[V.VVm.ONE_TIME],
+                                                        is_gift: !1,
+                                                        eligible_for_trial: !1,
+                                                        payment_modal_version: "v2",
+                                                        checkout_design: et.r.UNIFIED,
+                                                        checkout_flow: ea.C.ORB_CHECKOUT,
+                                                    },
+                                                }),
+                                                [o, d, s, t, i, r, n],
+                                            );
+                                        return {
+                                            emitOrbCheckoutPaymentFlowEvent: (0, u.useCallback)(
+                                                (e, t) => {
+                                                    let n = Date.now() - c;
+                                                    e === V.HAw.PAYMENT_FLOW_STARTED
+                                                        ? J.default.track(V.HAw.PAYMENT_FLOW_STARTED, {
+                                                              ..._,
+                                                              has_saved_payment_source: a,
+                                                              payment_gateway: t2.ps.VIRTUAL_CURRENCY,
+                                                              continue_session_initial_step: null,
+                                                          })
+                                                        : e === V.HAw.PAYMENT_FLOW_LOADED
+                                                          ? J.default.track(V.HAw.PAYMENT_FLOW_LOADED, {
+                                                                ..._,
+                                                                has_saved_payment_source: a,
+                                                                initial_step: l.pn.REVIEW,
+                                                                duration_ms: n,
+                                                            })
+                                                          : e === V.HAw.PAYMENT_FLOW_CANCELED
+                                                            ? J.default.track(V.HAw.PAYMENT_FLOW_CANCELED, {
+                                                                  ..._,
+                                                                  duration_ms: n,
+                                                              })
+                                                            : e === V.HAw.PAYMENT_FLOW_COMPLETED
+                                                              ? J.default.track(V.HAw.PAYMENT_FLOW_COMPLETED, {
+                                                                    ..._,
+                                                                    duration_ms: n,
+                                                                })
+                                                              : e === V.HAw.PAYMENT_FLOW_SUCCEEDED
+                                                                ? J.default.track(V.HAw.PAYMENT_FLOW_SUCCEEDED, {
+                                                                      ..._,
+                                                                      duration_ms: n,
+                                                                  })
+                                                                : J.default.track(V.HAw.PAYMENT_FLOW_FAILED, {
+                                                                      ..._,
+                                                                      duration_ms: n,
+                                                                      ...(null != t
+                                                                          ? {
+                                                                                payment_error_code: t.code,
+                                                                                error_message: t.message,
+                                                                            }
+                                                                          : {}),
+                                                                  });
+                                                },
+                                                [c, _, a],
+                                            ),
+                                        };
+                                    })({
+                                        skuId: t,
+                                        orbProductContext: r,
+                                        analyticsLocations: o,
+                                        analyticsSourceLocation: s,
+                                    });
+                                (0, u.useEffect)(() => {
+                                    null != i &&
+                                        null !== f.current &&
+                                        (p(V.HAw.PAYMENT_FLOW_FAILED, i), (f.current = null));
+                                }, [i, p]);
+                                let E = (0, u.useCallback)(() => {
+                                        (f.current = h),
+                                            p(V.HAw.PAYMENT_FLOW_COMPLETED),
+                                            n((e) => {
+                                                d(e_.h.COMPLETED),
+                                                    a(l.pn.CONFIRM, { fulfillment: { entitlements: e } });
+                                            });
+                                    }, [n, d, h, p, a]),
+                                    m = f.current ?? h,
+                                    g = null != r ? r.orbPriceAmount : null;
+                                return {
+                                    isStepLoading: null == r,
+                                    showCollectiblesDiscountWarning: (0, tU.vw)({ skuId: t, isOrbsPurchase: !0 }),
+                                    errorMessage: (0, u.useMemo)(
+                                        () =>
+                                            (function (e, t) {
+                                                if (null == e) return null;
+                                                if (e instanceof iC.FY && null != t)
+                                                    switch (t) {
+                                                        case iv.INSUFFICIENT_ORB_BALANCE:
+                                                            return v.intl.string(v.t.keFvXM);
+                                                        case iv.SKU_ALREADY_OWNED:
+                                                            return v.intl.string(v.t.m371Mx);
+                                                        case iv.BUNDLE_PARTIALLY_OWNED:
+                                                            return v.intl.string(v.t.v9oC0p);
+                                                        default:
+                                                            return v.intl.string(v.t.fqJZ11);
+                                                    }
+                                                return e instanceof iC.j2
+                                                    ? v.intl.string(v.t["2BmwgV"])
+                                                    : e.code === iy.tG.VIRTUAL_CURRENCY_INSUFFICIENT_BALANCE
+                                                      ? v.intl.string(v.t.keFvXM)
+                                                      : e.code === iy.tG.ALREADY_PURCHASED
+                                                        ? v.intl.string(v.t.m371Mx)
+                                                        : v.intl.string(v.t.fqJZ11);
+                                            })(i, _),
+                                        [i, _],
+                                    ),
+                                    orbPriceAmount: g,
+                                    orbBalanceToDisplay: m,
+                                    onClickCheckout: E,
+                                    selectedSkuId: c,
+                                };
+                            })({
+                                skuId: t,
+                                analyticsSourceLocation: n,
+                                orbProductContext: i,
+                                orbRedemptionError: a,
+                                onRedeemVirtualCurrency: o,
+                                handleStepChange: c,
+                            }),
+                            T = (0, en.bG)([nK.A], () => nK.A.get(t), [t]),
+                            y = (0, im.uS)(T?.applicationId),
+                            {
+                                disabled: C,
+                                tooltipText: N,
+                                text: R,
+                            } = ((e) => {
+                                let { orbBalance: t, orbPriceAmount: n, isInTestMode: i = !1 } = e,
+                                    { disabled: r, tooltipText: s } = (0, u.useMemo)(
+                                        () =>
+                                            null == n
+                                                ? { disabled: !0, tooltipText: v.intl.string(v.t["c/rcUu"]) }
+                                                : !i && (null == t || n > t)
+                                                  ? { disabled: !0, tooltipText: v.intl.string(v.t.keFvXM) }
+                                                  : { disabled: !1, tooltipText: null },
+                                        [n, t, i],
+                                    );
+                                return { disabled: r, tooltipText: s, text: iG() };
+                            })({ orbBalance: E, orbPriceAmount: d ? _ : p, isInTestMode: y }),
+                            O = (0, u.useMemo)(
+                                () => ({ onClick: m, loading: s, text: R, disabled: C, tooltipText: N }),
+                                [m, s, R, C, N],
+                            ),
+                            b = g ? v.intl.format(v.t.fsOXXO, {}) : null,
+                            D = y ? v.intl.string(v.t.OvMyMd) : null;
+                        return {
+                            isStepLoading: f,
+                            upperInlineNoticeProps: (0, u.useMemo)(() => {
+                                if (null != D || null != b || null != A) {
+                                    let e = [];
+                                    return (
+                                        null != D &&
+                                            e.push({ type: "warning", message: D, key: "test-mode-warning-notice" }),
+                                        null != b &&
+                                            e.push({ type: "warning", message: b, key: "orb-checkout-warning-notice" }),
+                                        null != A &&
+                                            e.push({ type: "critical", message: A, key: "orb-checkout-error-notice" }),
+                                        e
+                                    );
+                                }
+                                return null;
+                            }, [D, b, A]),
+                            purchaseItemContent: (0, r.jsx)(ik, { skuId: t, orbPriceAmount: d ? h : p }),
+                            paymentMethodContent: (0, r.jsx)(iU, { orbBalance: E }),
+                            legalContent: (0, r.jsx)(iF, {}),
+                            primaryButtonProps: O,
+                            invoiceSummaryContent: null,
+                            invoiceTotalDueLabel: null,
+                            invoiceTotalDueValue: null,
+                        };
+                    })({
+                        skuId: o,
+                        analyticsSourceLocation: c,
+                        orbProductContext: n,
+                        isRedeeming: i,
+                        orbRedemptionError: s,
+                        onRedeemVirtualCurrency: a,
+                        handleStepChange: t,
+                    });
+                return (0, r.jsxs)(r.Fragment, {
+                    children: [
+                        (0, r.jsx)(N.dZ, { children: (0, r.jsx)(ip.T, { ..._ }) }),
+                        (0, r.jsx)(N.UX, { children: (0, r.jsx)(eu.lo, { primaryButtonProps: d }) }),
+                    ],
+                });
+            },
+        },
+        TENANT_PROVIDER_CONFIGS: {
+            tenantProvidesCheckoutRoot: !1,
+            CustomTenantProvider: (e) => {
+                let { skuId: t, loadId: n, analyticsSourceLocation: i, children: s } = e,
+                    { order: a, setOrder: o } = (0, S.t4)((e) => ({ order: e.order, setOrder: e.setOrder })),
+                    {
+                        orbProductContext: l,
+                        isRedeeming: c,
+                        orbRedemptionError: d,
+                        onRedeemVirtualCurrency: _,
+                    } = ((e) => {
+                        let { skuId: t, loadId: n, onCheckoutSuccess: i, onSignFailure: r, order: s } = e,
+                            a = (0, en.bG)([tO.default], () => tb.Ay.canUseShopDiscounts(tO.default.getCurrentUser())),
+                            o = (0, en.bG)([nK.A], () => nK.A.get(t), [t]),
+                            l = (0, ii.JL)({ sku: o }),
+                            { product: c } = (0, tD.q)(t),
+                            d = (0, u.useMemo)(() => {
+                                if (null != l) return { orbPriceAmount: l.amount };
+                                if (null != c) {
+                                    let e = (0, iI.CW)({ product: c, hasShopDiscount: a });
+                                    return { orbPriceAmount: null !== e ? e.amount : null };
+                                }
+                                return null;
+                            }, [l, c, a]);
+                        d?.orbPriceAmount == null &&
+                            (0, iT.hD)("Orb price not found for product", { tags: { sku_id: t } });
+                        let {
+                                redeemVirtualCurrency: _,
+                                isSubmitting: h,
+                                error: f,
+                            } = (0, iS.Q)({ skuId: t, loadId: n, order: s, onSignFailure: r }),
+                            p = (0, u.useCallback)(
+                                (e) => {
+                                    _(t, n, (n) => {
+                                        i?.({ entitlements: n, skuId: t }), e(n);
+                                    });
+                                },
+                                [t, n, _, i],
+                            );
+                        return {
+                            skuId: t,
+                            loadId: n,
+                            orbProductContext: d,
+                            onRedeemVirtualCurrency: p,
+                            isRedeeming: h,
+                            orbRedemptionError: f,
+                        };
+                    })({ skuId: t, loadId: n, order: a, onSignFailure: o }),
+                    h = (0, u.useMemo)(
+                        () => ({
+                            orbProductContext: l,
+                            isRedeeming: c,
+                            orbRedemptionError: d,
+                            onRedeemVirtualCurrency: _,
+                            skuId: t,
+                            analyticsSourceLocation: i,
+                        }),
+                        [l, c, d, _, t, i],
+                    );
+                return (0, r.jsx)(iV.Provider, { value: h, children: s });
+            },
+            TenantPaymentModalRenderer: (e) => {
+                let { originalPaymentModalProps: t, renderPaymentModal: n } = e,
+                    { orbProductContext: i } = iB(),
+                    r = ((e) => {
+                        let { orbProductContext: t, overrideAnalyticParams: n } = e;
+                        return {
+                            analyticsDataOverride: (0, u.useMemo)(() => {
+                                if (null != t)
+                                    return {
+                                        ...n,
+                                        price: t.orbPriceAmount ?? void 0,
+                                        regular_price: t.orbPriceAmount ?? void 0,
+                                    };
+                            }, [t, n]),
+                            skipConfirm: !0,
+                        };
+                    })({ orbProductContext: i, overrideAnalyticParams: ij });
+                return n({ ...t, ...r });
+            },
+            overrideAnalyticParams: ij,
+        },
+    },
+    iY = {
+        [ee.C.ORB_CHECKOUT]: {
+            flowType: ee.C.ORB_CHECKOUT,
+            implemented: !0,
+            purchaseType: V.VVm.ONE_TIME,
+            TENANT_CHECKOUT_FLOW_CONFIG: iH,
+        },
+        [ee.C.COLLECTIBLES_CHECKOUT]: {
+            flowType: ee.C.COLLECTIBLES_CHECKOUT,
+            implemented: !0,
+            purchaseType: V.VVm.ONE_TIME,
+            TENANT_CHECKOUT_FLOW_CONFIG: t8,
+        },
+        [ee.C.SLAYER_STOREFRONT_CHECKOUT]: {
+            implemented: !0,
+            flowType: ee.C.SLAYER_STOREFRONT_CHECKOUT,
+            purchaseType: V.VVm.ONE_TIME,
+            TENANT_CHECKOUT_FLOW_CONFIG: ih,
+        },
+        [ee.C.PREMIUM_CHECKOUT]: {
+            implemented: !0,
+            flowType: ee.C.PREMIUM_CHECKOUT,
+            purchaseType: V.VVm.SUBSCRIPTION,
+            TENANT_CHECKOUT_FLOW_CONFIG: nA,
+        },
+        [ee.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT]: {
+            implemented: !1,
+            flowType: ee.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT,
+        },
+        [ee.C.PREMIUM_APPS_OTP_CHECKOUT]: {
+            implemented: !0,
+            flowType: ee.C.PREMIUM_APPS_OTP_CHECKOUT,
+            purchaseType: V.VVm.ONE_TIME,
+            TENANT_CHECKOUT_FLOW_CONFIG: nZ,
+        },
+        [ee.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT]: {
+            implemented: !0,
+            flowType: ee.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
+            purchaseType: V.VVm.SUBSCRIPTION,
+            TENANT_CHECKOUT_FLOW_CONFIG: nW,
+        },
+        [ee.C.GUILD_PRODUCT_CHECKOUT]: {
+            implemented: !0,
+            purchaseType: V.VVm.ONE_TIME,
+            TENANT_CHECKOUT_FLOW_CONFIG: e8,
+            flowType: ee.C.GUILD_PRODUCT_CHECKOUT,
+        },
+        [ee.C.GUILD_ROLE_CHECKOUT]: {
+            implemented: !0,
+            flowType: ee.C.GUILD_ROLE_CHECKOUT,
+            TENANT_CHECKOUT_FLOW_CONFIG: na,
+            purchaseType: V.VVm.SUBSCRIPTION,
+        },
+        [ee.C.GUILD_BOOST_CHECKOUT]: {
+            implemented: !0,
+            flowType: ee.C.GUILD_BOOST_CHECKOUT,
+            purchaseType: V.VVm.SUBSCRIPTION,
+            TENANT_CHECKOUT_FLOW_CONFIG: ej,
+        },
+    };
+var iW = n(169801),
+    iK = n(380619);
+let i$ = (e) => {
+        let { returnStep: t = l.pn.REVIEW, returnStepIfNoPaymentSources: n, paymentModalStepProps: i } = e,
+            { purchaseType: s } = (0, S.t4)((e) => ({ purchaseType: e.purchaseType })),
+            a = u.useCallback(
+                () =>
+                    ((e) => {
+                        let {
+                            paymentModalStepProps: t,
+                            returnStep: n = l.pn.REVIEW,
+                            returnStepIfNoPaymentSources: i,
+                            purchaseType: r,
+                        } = e;
+                        if (0 === Object.keys(c.A.paymentSources).length) {
+                            if (null != i) return void t.handleStepChange(i);
+                            r === t2.VV.SUBSCRIPTION
+                                ? t.handleStepChange(n, { trackedFromStep: l.pn.ADD_PAYMENT_STEPS })
+                                : t.handleClose();
+                        } else t.handleStepChange(n, { trackedFromStep: l.pn.ADD_PAYMENT_STEPS });
+                    })({ returnStep: t, returnStepIfNoPaymentSources: n, paymentModalStepProps: i, purchaseType: s }),
+                [t, n, i, s],
+            );
+        return (0, r.jsx)(_.x, { ...i, onReturn: a });
+    },
+    iz = (e) => {
+        let { initialPlanId: t } = e,
+            n = (0, S.t4)((e) => e.selectedSkuId),
+            i = (0, nB.A)(),
+            { isGift: s, claimableRewards: a } = (0, y.Pv)(),
+            o = (0, iW.A)({ isGift: s, skuId: n }),
+            c = (0, nf.lp)(o),
+            d = (0, iK.px)(i, s, a),
+            _ = u.useMemo(() => {
+                let e = null == t ? l.pn.PLAN_SELECT : l.pn.REVIEW;
+                return c && (e = l.pn.REVIEW), d && (e = l.pn.SELECT_FREE_SKU), e;
+            }, [c, d, t]);
+        return (0, r.jsx)(i$, { paymentModalStepProps: e, returnStep: l.pn.REVIEW, returnStepIfNoPaymentSources: _ });
+    },
+    iq = (e) => {
+        let {
+            checkoutFlow: t,
+            returnStep: n = l.pn.REVIEW,
+            returnStepIfNoPaymentSources: i,
+            paymentModalStepProps: s,
+        } = e;
+        return t === ee.C.PREMIUM_CHECKOUT
+            ? (0, r.jsx)(iz, { ...s })
+            : (0, r.jsx)(i$, { paymentModalStepProps: s, returnStep: n, returnStepIfNoPaymentSources: i });
+    };
+var iZ = n(246681);
+let iX = (e) => {
+        let { paymentModalStepProps: t, defaultStep: n } = e,
+            i = (0, u.useRef)(!1),
+            s = (0, D.Hp)(),
+            { handleStepChange: a } = t;
+        return ((0, u.useEffect)(() => {
+            s || i.current || (a(n), (i.current = !0));
+        }, [s, a, n]),
+        s)
+            ? (0, r.jsx)(L.oO, {})
+            : null;
+    },
+    iQ = {
+        [ee.C.ORB_CHECKOUT]: { allowGiftCustomization: !1, excludePaymentAuthSteps: !0, predicateStepType: "unified" },
+        [ee.C.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
+        [ee.C.SLAYER_STOREFRONT_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
+        [ee.C.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
+        [ee.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT]: { allowGiftCustomization: !1 },
+        [ee.C.PREMIUM_APPS_OTP_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
+        [ee.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT]: { allowGiftCustomization: !1 },
+        [ee.C.GUILD_BOOST_CHECKOUT]: { allowGiftCustomization: !1 },
+        [ee.C.GUILD_PRODUCT_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "one_time_payment" },
+        [ee.C.GUILD_ROLE_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
+    };
+class iJ {
+    checkoutFlow;
+    checkoutFlowConfiguration;
+    tenantCheckoutFlowConfig;
+    internalCheckoutFlowControls;
+    override_analytic_params;
+    constructor({ checkoutFlow: e }) {
+        this.checkoutFlow = e;
+        const t = iY[e];
+        if (!((e, t) => null != t && t.implemented && t.flowType === e)(e, t))
+            throw Error(`Checkout flow ${e} is not implemented`);
+        (this.checkoutFlowConfiguration = t),
+            (this.tenantCheckoutFlowConfig = t.TENANT_CHECKOUT_FLOW_CONFIG),
+            (this.internalCheckoutFlowControls = iQ[e]),
+            (this.override_analytic_params =
+                this.tenantCheckoutFlowConfig.TENANT_PROVIDER_CONFIGS.overrideAnalyticParams);
+    }
+    getCheckoutStep(e) {
+        return this.tenantCheckoutFlowConfig.CHECKOUT_STEPS[e];
+    }
+    generateRenderHeader() {
+        let { CustomHeaderComponent: e } = this.tenantCheckoutFlowConfig;
+        if (null != e) return (t, n, i) => (0, r.jsx)(e, { plan: t, onClose: n, step: i });
+    }
+    getPredicateStepConfig() {
+        let { CustomCheckoutPredicateStep: e } = this.tenantCheckoutFlowConfig,
+            { predicateStepType: t } = this.internalCheckoutFlowControls;
+        return null != e
+            ? { key: null, renderStep: (t) => (0, r.jsx)(e, { ...t }) }
+            : "one_time_payment" === t
+              ? j
+              : "subscription" === t
+                ? H
+                : {
+                      key: null,
+                      renderStep: (e) => (0, r.jsx)(iX, { paymentModalStepProps: e, defaultStep: l.pn.REVIEW }),
+                  };
+    }
+    getAddPaymentStepConfig(e) {
+        let { isGift: t } = e,
+            { allowGiftCustomization: n } = this.internalCheckoutFlowControls;
+        if (this.checkoutFlow !== ee.C.ORB_CHECKOUT)
+            return {
+                key: l.pn.ADD_PAYMENT_STEPS,
+                renderStep: (e) =>
+                    (0, r.jsx)(iq, {
+                        checkoutFlow: this.checkoutFlow,
+                        paymentModalStepProps: e,
+                        returnStep: l.pn.REVIEW,
+                        returnStepIfNoPaymentSources: t && n ? l.pn.GIFT_CUSTOMIZATION : void 0,
+                    }),
+                options: { renderHeader: !0 },
+            };
+    }
+    getGiftCustomizationStepConfig(e) {
+        let { isGift: t } = e,
+            { allowGiftCustomization: n } = this.internalCheckoutFlowControls,
+            i = this.getCheckoutStep(l.pn.GIFT_CUSTOMIZATION);
+        if (t && n && null != i)
+            return {
+                key: l.pn.GIFT_CUSTOMIZATION,
+                renderStep: (e) => (0, r.jsx)(i, { ...e }),
+                options: { modalSizeGetter: () => "xl", useBreadcrumbLabel: () => v.intl.string(v.t["W685+b"]) },
+            };
+    }
+    getReviewStepConfig() {
+        let e = this.getCheckoutStep(l.pn.REVIEW);
+        return {
+            key: l.pn.REVIEW,
+            renderStep: (t) => (0, r.jsx)(e, { ...t }),
+            options: { useBreadcrumbLabel: () => v.intl.string(v.t.QBnNHq) },
+        };
+    }
+    createDefinedStepConfigsArray(e) {
+        return e.filter((e) => null != e);
+    }
+    generateCheckoutStepConfigs(e) {
+        let { isGift: t } = e,
+            { CUSTOM_CONFIRM_STEP_CONFIG: n, STEPS_BEFORE_CHECKOUT: i = [] } = this.tenantCheckoutFlowConfig,
+            { excludePaymentAuthSteps: r } = this.internalCheckoutFlowControls,
+            s = this.getPredicateStepConfig(),
+            a = this.getGiftCustomizationStepConfig({ isGift: t }),
+            o = this.getAddPaymentStepConfig({ isGift: t }),
+            u = this.getReviewStepConfig(),
+            c = this.createDefinedStepConfigsArray([s, ...(null != a ? [a] : []), ...i, o, ...(r ? [] : $), u]);
+        return null != n && c.push({ key: l.pn.CONFIRM, renderStep: n.renderStep, options: n.options }), c;
+    }
+    getApplicationId(e) {
+        return this.checkoutFlow === ee.C.ORB_CHECKOUT && null != e
+            ? (0, Q.P)(e)
+            : this.checkoutFlow === ee.C.COLLECTIBLES_CHECKOUT
+              ? V.FYj
+              : this.checkoutFlow === ee.C.PREMIUM_CHECKOUT
+                ? ek.tv
+                : void 0;
+    }
+    trackPaymentFlowCanceled(e) {
+        let {
+            loadId: t,
+            skuId: n,
+            skuProductLine: i,
+            applicationId: r,
+            discoverySessionId: s,
+            analyticsLocation: a,
+            analyticsLocations: o,
+            analyticsObject: l,
+            analyticsSourceLocation: u,
+            isGift: c,
+            eligibleForTrial: d,
+        } = e;
+        J.default.track(V.HAw.PAYMENT_FLOW_CANCELED, {
+            load_id: t,
+            discovery_session_id: s,
+            payment_type: V.frM[this.checkoutFlowConfiguration.purchaseType],
+            is_gift: c,
+            sku_id: n,
+            sku_product_line: i,
+            application_id: r,
+            location: a ?? l,
+            location_stack: o,
+            source: u,
+            eligible_for_trial: d,
+            payment_modal_version: "v2",
+            checkout_design: et.r.UNIFIED,
+            checkout_flow: this.checkoutFlow,
+            ...(this.checkoutFlow === ee.C.PREMIUM_CHECKOUT ? { subscription_type: V.rzx.PREMIUM } : {}),
+            ...this.override_analytic_params,
+        });
+    }
+    renderCheckoutInstance(e) {
+        let {
+                additionalOptions: t,
+                giftContextProps: i,
+                onComplete: l,
+                onClose: u,
+                skuId: c,
+                skuProductLine: d,
+                discoverySessionId: _,
+                applicationId: h,
+                analyticsSourceLocation: f,
+                analyticsLocations: p,
+                analyticsObject: E,
+                tenantParams: m,
+                activeSubscription: g = null,
+                ...A
+            } = e,
+            I = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
+            T = arguments.length > 2 ? arguments[2] : void 0,
+            S = { current: (this.checkoutFlow === ee.C.PREMIUM_CHECKOUT ? (0, X.A)() : null) ?? (0, s.A)() },
+            y = { current: null },
+            { modalKey: C } = T,
+            N = this.generateRenderHeader(),
+            v = h ?? this.getApplicationId(c),
+            R = !!(null != i && i.isGift),
+            O = !1,
+            b = {
+                ...A,
+                checkoutFlow: this.checkoutFlow,
+                checkoutFlowConfiguration: this.checkoutFlowConfiguration,
+                tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
+                stepConfigs: this.generateCheckoutStepConfigs({ isGift: R }),
+                onComplete: (e) => {
+                    null != l && l(e), (O = !0);
+                },
+                onClose: u,
+                renderHeader: N,
+                skuId: c ?? null,
+                tenantParams: m ?? {},
+                loadId: S.current,
+                onOrderCreated: (e) => {
+                    (S.current = e.id), (y.current = e);
+                },
+                discoverySessionId: _,
+                activeSubscription: g,
+                applicationId: v,
+                analyticsLocations: p,
+                analyticsObject: E,
+                analyticsSourceLocation: f,
+                giftContextProps: i,
+                additionalOptions: t,
+            };
+        if ("modal" === I)
+            return (0, a.openModalLazy)(
+                async () => {
+                    let { UnifiedCheckoutInstance: e } = await Promise.resolve().then(n.bind(n, 246681));
+                    return (t) => (0, r.jsx)(e, { ...b, renderModalProps: t });
+                },
+                {
+                    ...T,
+                    onCloseRequest: () => {
+                        null != T.onCloseRequest && T.onCloseRequest(O, S.current),
+                            T.skipCloseModalOnCloseRequest || (0, a.closeModal)(C);
+                    },
+                    onCloseCallback: () => {
+                        O ||
+                            (Z({ checkoutSucceeded: O, order: y.current }),
+                            this.trackPaymentFlowCanceled({
+                                loadId: S.current,
+                                skuId: c,
+                                skuProductLine: d,
+                                applicationId: v,
+                                discoverySessionId: _,
+                                analyticsLocation: A.analyticsLocation,
+                                analyticsLocations: p,
+                                analyticsObject: E,
+                                analyticsSourceLocation: f,
+                                isGift: R,
+                                eligibleForTrial: null != A.trialId,
+                            })),
+                            null != T.onCloseCallback && T.onCloseCallback(O),
+                            null != u && u(O, c);
+                    },
+                    modalKey: C,
+                },
+            );
+        {
+            let e = A.paymentModalOnClose ?? u,
+                t = { transitionState: o.ip.ENTERED, onClose: () => (null != e && e(!1), Promise.resolve()) };
+            return (0, r.jsx)(iZ.UnifiedCheckoutInstance, { ...b, paymentModalOnClose: e, renderModalProps: t });
+        }
+    }
+    openCheckoutModal(e) {
+        let { modalAPIOptions: t } = e;
+        return this.renderCheckoutInstance(e, "modal", t);
+    }
+    renderStandaloneCheckout(e) {
+        return this.renderCheckoutInstance(e, "standalone", { modalKey: "standalone-checkout" });
+    }
+}

@@ -1,1 +1,1 @@
-p.exports={h:"description_c524f4"}
+p.exports = { h: "description_c524f4" };

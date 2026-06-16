@@ -1,1 +1,1 @@
-t.exports={O:"carouselModal_d3a6f0"}
+e.exports = { O: "carouselModal_d3a6f0" };

@@ -1,1 +1,19 @@
-_.d(r,{Ey:()=>s,O$:()=>p,Rw:()=>o,S9:()=>h,q0:()=>e});var i=_(636537),n=_(228366),c=_(652215);function e(){n.h.dispatch({type:"VIBING_WUMPUS_PLAY_MUSIC"})}function h(){n.h.dispatch({type:"VIBING_WUMPUS_STOP_MUSIC"})}function p(){n.h.dispatch({type:"VIBING_WUMPUS_PAUSE_MUSIC"})}function s(t){return i.Bo.del({url:c.Rsh.DELETE_SAFETY_WARNINGS(t),rejectWithError:!1})}function o(t,r){return i.Bo.post({url:c.Rsh.ADD_SAFETY_WARNING(t),body:{safety_warning_type:r},rejectWithError:!1})}
+_.d(r, { Ey: () => s, O$: () => p, Rw: () => o, S9: () => h, q0: () => e });
+var i = _(636537),
+    n = _(228366),
+    c = _(652215);
+function e() {
+    n.h.dispatch({ type: "VIBING_WUMPUS_PLAY_MUSIC" });
+}
+function h() {
+    n.h.dispatch({ type: "VIBING_WUMPUS_STOP_MUSIC" });
+}
+function p() {
+    n.h.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
+}
+function s(t) {
+    return i.Bo.del({ url: c.Rsh.DELETE_SAFETY_WARNINGS(t), rejectWithError: !1 });
+}
+function o(t, r) {
+    return i.Bo.post({ url: c.Rsh.ADD_SAFETY_WARNING(t), body: { safety_warning_type: r }, rejectWithError: !1 });
+}

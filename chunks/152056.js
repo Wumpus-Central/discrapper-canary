@@ -1,1 +1,2 @@
-i.d(t,{A:()=>n});let n=(0,i(839214).D)(()=>({query:"",isActive:!1,isFocused:!1,selected:null}))
+i.d(t, { A: () => n });
+let n = (0, i(839214).D)(() => ({ query: "", isActive: !1, isFocused: !1, selected: null }));

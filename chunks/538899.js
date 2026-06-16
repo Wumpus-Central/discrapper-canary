@@ -1,1 +1,118 @@
-a.d(e,{default:()=>F});var l=a(627968),n=a(64700),i=a(189213),r=a(17928),s=a(636537),d=a(123292),c=a(720149),o=a(608299),u=a(395780),h=a(390248),C=a(946274),A=a(550642),g=a(867455),p=a(734057),E=a(31717),b=a(71393),y=a(232835),M=a(453771),I=a(935208),T=a(292348),_=a(518960),S=a(382287),k=a(853742),w=a(350527),x=a(218152),f=a(652215),m=a(818348),j=a(375708),O=a(158482);async function v(t){let e,{thread:a,attachments:l,setIsUploading:n,guild:i,onClose:r}=t,d=I.default.castChannelIdAsMessageId(a.id),C=new u.A;C.on("progress",t=>{let e=(0,A.R8)({location:"web.AddMediaToOriginalForumPostModal"}),s=(0,A.Jy)(e,(0,M.o2)(i.id));t.currentSize>s&&(C.cancel(),n(!1),r(),(0,_.V)(a,(0,S.LJ)(l)))});let p=y.A.getMessage(a.id,d),b=null!=p?p.attachments:[];n(!0);try{e=await C.uploadFiles(l)}catch(t){n(!1);return}let k=[...b,...e.map((t,e)=>(0,T.OW)(t,e))??[]];try{await g.A.unarchiveThreadIfNecessary(a.id)}catch{n(!1),r();return}try{await s.Bo.patch({url:f.Rsh.MESSAGE(a.id,d),body:{attachments:k},rejectWithError:!1}),r(),o.A.clearAll(a.id,E.C.ChannelMessage)}catch(t){n(!1),t.body?.code===f.t02.EXPLICIT_CONTENT&&(r(),c.A.sendExplicitMediaClydeError(a.id,t.body?.attachments,h.SW.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED),o.A.clearAll(a.id,E.C.ChannelMessage))}}function F(t){let{threadId:e,attachments:a,sendMessage:s,transitionState:c,onClose:o}=t,u=(0,r.bG)([p.A],()=>p.A.getChannel(e),[e]),h=(0,r.bG)([b.A],()=>b.A.getGuild(u?.getGuildId()),[u]),A=(0,r.bG)([p.A],()=>p.A.getChannel(u?.parent_id),[u]),g=a[0]?.item,[E,y]=n.useState(null);n.useEffect(()=>{null!=g&&(0,C.JF)(g.file,(t,e)=>y(t),m.tE)},[g]);let M=null!=g&&null!=E?{src:E,width:w.T5,height:w.Co,spoiler:a[0].spoiler,alt:a[0].description}:null,[I,T]=n.useState(!1),_=n.useCallback(()=>{(0,k.jh)({added:!1}),s(),o()},[s,o]),S=n.useCallback(()=>{null!=u&&null!=h&&((0,k.jh)({added:!0}),v({thread:u,attachments:a,setIsUploading:T,guild:h,onClose:o}))},[u,a,T,h,o]);return null==A?null:(0,l.jsx)(i.Modal,{title:j.intl.string(j.t["+SZF6S"]),subtitle:j.intl.string(j.t["0Ycgw5"]),transitionState:c,onClose:o,actionBarInput:(0,l.jsx)(d.Q,{variant:"secondary",disabled:I,onClick:o,text:j.intl.string(j.t["ETE/oC"])}),actions:[{variant:"secondary",text:j.intl.string(j.t["8rKVHL"]),disabled:I,onClick:_},{variant:"primary",text:j.intl.string(j.t.d611xH),loading:I,onClick:S,autoFocus:!0}],children:(0,l.jsx)(x.Cp,{channel:A,children:(0,l.jsx)(w.Ay,{threadId:e,goToThread:m.tE,overrideMedia:M,className:O.u})})})}
+a.d(e, { default: () => F });
+var l = a(627968),
+    n = a(64700),
+    i = a(189213),
+    r = a(17928),
+    s = a(636537),
+    d = a(123292),
+    c = a(720149),
+    o = a(608299),
+    u = a(395780),
+    h = a(390248),
+    C = a(946274),
+    A = a(550642),
+    g = a(867455),
+    p = a(734057),
+    E = a(31717),
+    b = a(71393),
+    y = a(232835),
+    M = a(453771),
+    I = a(935208),
+    T = a(292348),
+    _ = a(518960),
+    S = a(382287),
+    k = a(853742),
+    w = a(350527),
+    x = a(218152),
+    f = a(652215),
+    m = a(818348),
+    j = a(375708),
+    O = a(158482);
+async function v(t) {
+    let e,
+        { thread: a, attachments: l, setIsUploading: n, guild: i, onClose: r } = t,
+        d = I.default.castChannelIdAsMessageId(a.id),
+        C = new u.A();
+    C.on("progress", (t) => {
+        let e = (0, A.R8)({ location: "web.AddMediaToOriginalForumPostModal" }),
+            s = (0, A.Jy)(e, (0, M.o2)(i.id));
+        t.currentSize > s && (C.cancel(), n(!1), r(), (0, _.V)(a, (0, S.LJ)(l)));
+    });
+    let p = y.A.getMessage(a.id, d),
+        b = null != p ? p.attachments : [];
+    n(!0);
+    try {
+        e = await C.uploadFiles(l);
+    } catch (t) {
+        n(!1);
+        return;
+    }
+    let k = [...b, ...(e.map((t, e) => (0, T.OW)(t, e)) ?? [])];
+    try {
+        await g.A.unarchiveThreadIfNecessary(a.id);
+    } catch {
+        n(!1), r();
+        return;
+    }
+    try {
+        await s.Bo.patch({ url: f.Rsh.MESSAGE(a.id, d), body: { attachments: k }, rejectWithError: !1 }),
+            r(),
+            o.A.clearAll(a.id, E.C.ChannelMessage);
+    } catch (t) {
+        n(!1),
+            t.body?.code === f.t02.EXPLICIT_CONTENT &&
+                (r(),
+                c.A.sendExplicitMediaClydeError(
+                    a.id,
+                    t.body?.attachments,
+                    h.SW.EXPLICIT_MEDIA_ADD_MEDIA_TO_FORUM_POST_BLOCKED,
+                ),
+                o.A.clearAll(a.id, E.C.ChannelMessage));
+    }
+}
+function F(t) {
+    let { threadId: e, attachments: a, sendMessage: s, transitionState: c, onClose: o } = t,
+        u = (0, r.bG)([p.A], () => p.A.getChannel(e), [e]),
+        h = (0, r.bG)([b.A], () => b.A.getGuild(u?.getGuildId()), [u]),
+        A = (0, r.bG)([p.A], () => p.A.getChannel(u?.parent_id), [u]),
+        g = a[0]?.item,
+        [E, y] = n.useState(null);
+    n.useEffect(() => {
+        null != g && (0, C.JF)(g.file, (t, e) => y(t), m.tE);
+    }, [g]);
+    let M =
+            null != g && null != E
+                ? { src: E, width: w.T5, height: w.Co, spoiler: a[0].spoiler, alt: a[0].description }
+                : null,
+        [I, T] = n.useState(!1),
+        _ = n.useCallback(() => {
+            (0, k.jh)({ added: !1 }), s(), o();
+        }, [s, o]),
+        S = n.useCallback(() => {
+            null != u &&
+                null != h &&
+                ((0, k.jh)({ added: !0 }), v({ thread: u, attachments: a, setIsUploading: T, guild: h, onClose: o }));
+        }, [u, a, T, h, o]);
+    return null == A
+        ? null
+        : (0, l.jsx)(i.Modal, {
+              title: j.intl.string(j.t["+SZF6S"]),
+              subtitle: j.intl.string(j.t["0Ycgw5"]),
+              transitionState: c,
+              onClose: o,
+              actionBarInput: (0, l.jsx)(d.Q, {
+                  variant: "secondary",
+                  disabled: I,
+                  onClick: o,
+                  text: j.intl.string(j.t["ETE/oC"]),
+              }),
+              actions: [
+                  { variant: "secondary", text: j.intl.string(j.t["8rKVHL"]), disabled: I, onClick: _ },
+                  { variant: "primary", text: j.intl.string(j.t.d611xH), loading: I, onClick: S, autoFocus: !0 },
+              ],
+              children: (0, l.jsx)(x.Cp, {
+                  channel: A,
+                  children: (0, l.jsx)(w.Ay, { threadId: e, goToThread: m.tE, overrideMedia: M, className: O.u }),
+              }),
+          });
+}

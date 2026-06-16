@@ -1,1 +1,29 @@
-t.d(a,{default:()=>r});var n=t(627968);t(64700);var d=t(980707),i=t(477782),s=t(192308),l=t(346411),o=t(442433),c=t(818348);let r=e=>(0,n.jsx)(d.W,{"data-menu-migrated":!0,onClose:o.Z_,navId:"staff-only-entry-debug","aria-label":"staff only content inventory debug",onSelect:c.tE,children:(0,n.jsx)(i.Dr,{id:"test",label:"Debug (Staff-Only)",action:()=>{(0,s.openModalLazy)(async()=>{let{default:a}=await t.e("94022").then(t.bind(t,924037));return t=>(0,n.jsx)(a,{...t,...e})})},icon:l.P,leadingAccessory:{type:"icon",icon:l.P}})})
+t.d(a, { default: () => r });
+var n = t(627968);
+t(64700);
+var d = t(980707),
+    i = t(477782),
+    s = t(192308),
+    l = t(346411),
+    o = t(442433),
+    c = t(818348);
+let r = (e) =>
+    (0, n.jsx)(d.W, {
+        "data-menu-migrated": !0,
+        onClose: o.Z_,
+        navId: "staff-only-entry-debug",
+        "aria-label": "staff only content inventory debug",
+        onSelect: c.tE,
+        children: (0, n.jsx)(i.Dr, {
+            id: "test",
+            label: "Debug (Staff-Only)",
+            action: () => {
+                (0, s.openModalLazy)(async () => {
+                    let { default: a } = await t.e("94022").then(t.bind(t, 924037));
+                    return (t) => (0, n.jsx)(a, { ...t, ...e });
+                });
+            },
+            icon: l.P,
+            leadingAccessory: { type: "icon", icon: l.P },
+        }),
+    });

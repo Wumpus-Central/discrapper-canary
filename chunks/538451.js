@@ -1,1 +1,66 @@
-"use strict";n.d(t,{A:()=>f});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(939249),l=n(97808),u=n(778712),c=n(834730),d=n(297413),_=n(342296),h=n(193370);function f(e){let{user:t,guildId:n,channelId:s,nick:f,className:p,textClassName:E,disablePopout:m,ignoreModalClicks:g,onClick:A,onContextMenu:I,onPopoutRequestOpen:T,onPopoutRequestClose:S}=e,y=r.useRef(null);return(0,i.jsx)(_.A,{targetElementRef:y,user:t,guildId:n,channelId:s,position:"left",shouldShow:!m&&void 0,onRequestOpen:T,onRequestClose:S,ignoreModalClicks:g,children:e=>{let{onClick:r,...s}=e;return(0,i.jsxs)(o.D,{...s,innerRef:y,className:a()(h.DV,p,{[h.YR]:m}),onContextMenu:I,onClick:e=>{r(e),A?.(e)},children:[(0,i.jsx)(l.eu,{src:t.getAvatarURL(n,(0,u.FT)(u._3.SIZE_24)),className:h.my,"aria-label":t.username,size:u._3.SIZE_24}),(0,i.jsx)(c.E,{className:a()(h.Ft,E),variant:"text-sm/normal",children:(0,i.jsx)(d.A,{user:t,nick:f,usernameClass:h.Xh,hideDiscriminator:!0})})]})}})}
+"use strict";
+n.d(t, { A: () => f });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(939249),
+    l = n(97808),
+    u = n(778712),
+    c = n(834730),
+    d = n(297413),
+    _ = n(342296),
+    h = n(193370);
+function f(e) {
+    let {
+            user: t,
+            guildId: n,
+            channelId: s,
+            nick: f,
+            className: p,
+            textClassName: E,
+            disablePopout: m,
+            ignoreModalClicks: g,
+            onClick: A,
+            onContextMenu: I,
+            onPopoutRequestOpen: T,
+            onPopoutRequestClose: S,
+        } = e,
+        y = r.useRef(null);
+    return (0, i.jsx)(_.A, {
+        targetElementRef: y,
+        user: t,
+        guildId: n,
+        channelId: s,
+        position: "left",
+        shouldShow: !m && void 0,
+        onRequestOpen: T,
+        onRequestClose: S,
+        ignoreModalClicks: g,
+        children: (e) => {
+            let { onClick: r, ...s } = e;
+            return (0, i.jsxs)(o.D, {
+                ...s,
+                innerRef: y,
+                className: a()(h.DV, p, { [h.YR]: m }),
+                onContextMenu: I,
+                onClick: (e) => {
+                    r(e), A?.(e);
+                },
+                children: [
+                    (0, i.jsx)(l.eu, {
+                        src: t.getAvatarURL(n, (0, u.FT)(u._3.SIZE_24)),
+                        className: h.my,
+                        "aria-label": t.username,
+                        size: u._3.SIZE_24,
+                    }),
+                    (0, i.jsx)(c.E, {
+                        className: a()(h.Ft, E),
+                        variant: "text-sm/normal",
+                        children: (0, i.jsx)(d.A, { user: t, nick: f, usernameClass: h.Xh, hideDiscriminator: !0 }),
+                    }),
+                ],
+            });
+        },
+    });
+}

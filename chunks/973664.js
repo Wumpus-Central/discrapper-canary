@@ -1,1 +1,23 @@
-"use strict";n.d(t,{A:()=>l});var i=n(627968);n(64700);var r=n(109112),s=n(17928),a=n(760751),o=n(486020);function l(e){let{gameId:t,gameIconHash:n,iconClassName:l}=e,u=(0,s.bG)([a.A],()=>null!=t?a.A.getDetectableGame(t):void 0,[t]);if(null!=t&&null!=n&&""!==n){let e=o.Ay.getGameAssetURL({id:t,hash:n,size:32});if(null!=e)return(0,i.jsx)("img",{alt:"",className:l,height:32,loading:"lazy",src:e,width:32})}if(null!=u){let e=o.Ay.getApplicationIconURL({id:u.id,icon:u.icon,size:32});if(null!=e)return(0,i.jsx)("img",{alt:"",className:l,height:32,loading:"lazy",src:e,width:32})}return(0,i.jsx)(r._,{className:l,size:"md"})}
+"use strict";
+n.d(t, { A: () => l });
+var i = n(627968);
+n(64700);
+var r = n(109112),
+    s = n(17928),
+    a = n(760751),
+    o = n(486020);
+function l(e) {
+    let { gameId: t, gameIconHash: n, iconClassName: l } = e,
+        u = (0, s.bG)([a.A], () => (null != t ? a.A.getDetectableGame(t) : void 0), [t]);
+    if (null != t && null != n && "" !== n) {
+        let e = o.Ay.getGameAssetURL({ id: t, hash: n, size: 32 });
+        if (null != e)
+            return (0, i.jsx)("img", { alt: "", className: l, height: 32, loading: "lazy", src: e, width: 32 });
+    }
+    if (null != u) {
+        let e = o.Ay.getApplicationIconURL({ id: u.id, icon: u.icon, size: 32 });
+        if (null != e)
+            return (0, i.jsx)("img", { alt: "", className: l, height: 32, loading: "lazy", src: e, width: 32 });
+    }
+    return (0, i.jsx)(r._, { className: l, size: "md" });
+}

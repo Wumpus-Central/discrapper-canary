@@ -1,1 +1,1 @@
-e.exports=function(){}
+e.exports = function () {};

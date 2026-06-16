@@ -1,1 +1,115 @@
-l.d(t,{u:()=>f});var n=l(627968),i=l(64700),s=l(503698),a=l.n(s),r=l(140735),c=l(353795),o=l(834730),u=l(750506),d=l(237140),h=l(112317),m=l(348275),p=l(505679),x=l(521754),j=l(600525);function f(e){let{children:t,title:l,body:s,asset:f,assetSize:g=48,padding:E="default",asContainer:v=!1,element:y="span",position:R="top",align:b="center",spacing:k,caretConfig:C,layerContext:w,targetElementRef:S,anchorRef:N,positionKey:T,ariaHidden:V=!1,lineClamp:_,...K}=e,[P,X]=i.useState(null);i.useLayoutEffect(()=>{null!=N&&X(N.current)},[N]);let $=i.useCallback(e=>{null==N&&X(e),(0,m.cZ)(S,e)},[S,N]),{tooltipId:A,isVisible:B,targetElementRef:D,trigger:F}=(0,x.D)({children:t,targetElementRef:$,asContainer:v,containerTag:y,ariaHidden:V,...K}),L=null!=l&&("string"!=typeof l||""!==l),M=null!=f&&!i.isValidElement(f),Y=i.useMemo(()=>(0,n.jsxs)("div",{className:a()(j.jk,{[j.eb]:null==f,[j.Sx]:"lg"===E}),children:[null!=f&&(0,n.jsx)("div",{className:j.s,style:{width:g},children:M?(0,n.jsx)(c.v,{...f}):f}),(0,n.jsxs)("div",{className:j.P_,children:[L&&(0,n.jsx)(o.E,{variant:"text-sm/medium",children:l}),(0,n.jsx)(o.E,{variant:"text-sm/normal",color:L?"text-subtle":"text-default",lineClamp:_,children:s})]})]}),[f,g,E,l,s,L,M,_]),Z=T??`${(0,m.Xj)(l??"")}|${(0,m.Xj)(s)}`,q=(0,p.j)({shouldShow:B});if(!v&&!i.isValidElement(t))return null;let z=q((e,t)=>t?(0,n.jsx)(h.Bc,{isRichTooltip:!0,richTooltipPadding:E,children:(0,n.jsx)(d.R,{isVisible:B,isRendered:!0,targetElementRef:D,targetElement:P,anchorRef:N,id:A,content:Y,position:R,align:b,spacing:k,caretConfig:C,layerContext:w??u.uY,animationStyle:e,positionKey:Z,"data-mana-component":"rich-tooltip"})}):null);return(0,n.jsxs)(n.Fragment,{children:[F,V||null==Y?null:(0,n.jsx)(r.A,{id:A,children:Y}),z]})}
+"use strict";
+n.d(t, { u: () => m });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(140735),
+    l = n(353795),
+    u = n(834730),
+    c = n(750506),
+    d = n(237140),
+    _ = n(112317),
+    h = n(348275),
+    f = n(505679),
+    p = n(521754),
+    E = n(600525);
+function m(e) {
+    let {
+            children: t,
+            title: n,
+            body: s,
+            asset: m,
+            assetSize: g = 48,
+            padding: A = "default",
+            asContainer: I = !1,
+            element: T = "span",
+            position: S = "top",
+            align: y = "center",
+            spacing: C,
+            caretConfig: N,
+            layerContext: v,
+            targetElementRef: R,
+            anchorRef: O,
+            positionKey: b,
+            ariaHidden: D = !1,
+            lineClamp: L,
+            ...w
+        } = e,
+        [M, P] = r.useState(null);
+    r.useLayoutEffect(() => {
+        null != O && P(O.current);
+    }, [O]);
+    let x = r.useCallback(
+            (e) => {
+                null == O && P(e), (0, h.cZ)(R, e);
+            },
+            [R, O],
+        ),
+        {
+            tooltipId: k,
+            isVisible: U,
+            targetElementRef: G,
+            trigger: F,
+        } = (0, p.D)({ children: t, targetElementRef: x, asContainer: I, containerTag: T, ariaHidden: D, ...w }),
+        V = null != n && ("string" != typeof n || "" !== n),
+        B = null != m && !r.isValidElement(m),
+        j = r.useMemo(
+            () =>
+                (0, i.jsxs)("div", {
+                    className: a()(E.jk, { [E.eb]: null == m, [E.Sx]: "lg" === A }),
+                    children: [
+                        null != m &&
+                            (0, i.jsx)("div", {
+                                className: E.s,
+                                style: { width: g },
+                                children: B ? (0, i.jsx)(l.v, { ...m }) : m,
+                            }),
+                        (0, i.jsxs)("div", {
+                            className: E.P_,
+                            children: [
+                                V && (0, i.jsx)(u.E, { variant: "text-sm/medium", children: n }),
+                                (0, i.jsx)(u.E, {
+                                    variant: "text-sm/normal",
+                                    color: V ? "text-subtle" : "text-default",
+                                    lineClamp: L,
+                                    children: s,
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+            [m, g, A, n, s, V, B, L],
+        ),
+        H = b ?? `${(0, h.Xj)(n ?? "")}|${(0, h.Xj)(s)}`,
+        Y = (0, f.j)({ shouldShow: U });
+    if (!I && !r.isValidElement(t)) return null;
+    let W = Y((e, t) =>
+        t
+            ? (0, i.jsx)(_.Bc, {
+                  isRichTooltip: !0,
+                  richTooltipPadding: A,
+                  children: (0, i.jsx)(d.R, {
+                      isVisible: U,
+                      isRendered: !0,
+                      targetElementRef: G,
+                      targetElement: M,
+                      anchorRef: O,
+                      id: k,
+                      content: j,
+                      position: S,
+                      align: y,
+                      spacing: C,
+                      caretConfig: N,
+                      layerContext: v ?? c.uY,
+                      animationStyle: e,
+                      positionKey: H,
+                      "data-mana-component": "rich-tooltip",
+                  }),
+              })
+            : null,
+    );
+    return (0, i.jsxs)(i.Fragment, {
+        children: [F, D || null == j ? null : (0, i.jsx)(o.A, { id: k, children: j }), W],
+    });
+}

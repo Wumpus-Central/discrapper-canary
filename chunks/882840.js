@@ -1,1 +1,22 @@
-a.d(t,{l:()=>d});var n=a(64700),l=a(17928),i=a(919638),s=a(52074),r=a(309698),u=a(652215);function d(e){let t=(0,l.bG)([i.A],()=>i.A.isUnavailable(e?.guild_id)),{hasRequestedStatuses:a,status:d}=(0,l.cf)([r.A],()=>({hasRequestedStatuses:null!=e&&r.A.hasRequestedStatuses(e.guild_id),status:r.A.getChannelStatus(e)})),o=e?.type===u.rbe.GUILD_VOICE;return n.useEffect(()=>{a||!o||t||(0,s.U)(e.guild_id)},[o,e?.guild_id,a,t]),d}
+"use strict";
+n.d(t, { l: () => u });
+var i = n(64700),
+    r = n(17928),
+    s = n(919638),
+    a = n(52074),
+    o = n(309698),
+    l = n(652215);
+function u(e) {
+    let t = (0, r.bG)([s.A], () => s.A.isUnavailable(e?.guild_id)),
+        { hasRequestedStatuses: n, status: u } = (0, r.cf)([o.A], () => ({
+            hasRequestedStatuses: null != e && o.A.hasRequestedStatuses(e.guild_id),
+            status: o.A.getChannelStatus(e),
+        })),
+        c = e?.type === l.rbe.GUILD_VOICE;
+    return (
+        i.useEffect(() => {
+            n || !c || t || (0, a.U)(e.guild_id);
+        }, [c, e?.guild_id, n, t]),
+        u
+    );
+}

@@ -1,1 +1,4 @@
-var i=n(237050);e.exports=function(){return i.Date.now()}
+var i = n(237050);
+e.exports = function () {
+    return i.Date.now();
+};

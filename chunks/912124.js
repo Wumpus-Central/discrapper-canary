@@ -1,1 +1,1 @@
-e.exports={bG:"interactive_f88cfd",SU:"muted_f88cfd",wH:"selected_f88cfd"}
+e.exports = { bG: "interactive_f88cfd", SU: "muted_f88cfd", wH: "selected_f88cfd" };

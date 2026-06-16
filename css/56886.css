@@ -9294,6 +9294,14 @@
     src: url(/assets/1e9bf5a9d7b2ba04.woff2) format("woff2")
 }
 
+@font-face {
+    font-display: swap;
+    font-family: Playpen Sans;
+    font-style: normal;
+    font-weight: 700;
+    src: url(/assets/f9d0d9a870575ad7.woff2) format("woff2")
+}
+
 :root {
     --font-primary: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

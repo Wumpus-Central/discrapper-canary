@@ -1,1 +1,67 @@
-l.d(n,{A:()=>L});var t=l(64700),d=l(136722),s=l(17928),i=l(95561),r=l(837152),u=l(885437),a=l(973854),A=l(815706),c=l(808728),p=l(696451),E=l(71393),h=l(576705),g=l(309010),o=l(967198),_=l(287809),I=l(184809),C=l(9302),k=l(652215);class D extends t.Component{componentDidUpdate(e){if(this.props.locked)return null;let{selectedGuild:n,selectedChannel:l,isMemberPending:t,hasPreviewEnabled:d,postableChannelCount:s}=this.props;null!=n&&(n!==e.selectedGuild||t&&!e.isMemberPending)&&((0,A.z)(k.HAw.GUILD_VIEWED,{...t?{is_pending:t,preview_enabled:d}:{},postable_channels:s}),(0,r.k)(k.HAw.GUILD_VIEWED_CLICKSTREAM,{guild_id:n})),null!=l&&l!==e.selectedChannel&&((0,A.z)(k.HAw.CHANNEL_OPENED,{...(0,u.p)(l),...(0,i.qL)(l)}),(0,a.A)({channelId:l}))}render(){return null}}let L=s.Ay.connectStores([o.A,g.A,E.A,_.default,I.default,c.Ay,h.A,p.Ay],()=>{let e=o.A.getGuildId(),n=g.A.getChannelId(e),l=E.A.getGuild(e),t=_.default.getCurrentUser(),s=c.Ay.getChannels(l?.id)[c.I6]??[],i=s.length>0?s.filter(e=>{let{channel:n}=e;return h.A.can(d.kg(k.xBc.SEND_MESSAGES,k.xBc.VIEW_CHANNEL),n)}).length:0,r=null!=t&&null!=e&&(p.Ay.getMember(e,t.id)?.isPending??!1);return{selectedGuild:e,selectedChannel:n,locked:I.default.isLocked((0,C.getPID)()),hasPreviewEnabled:l?.features.has(k.GuildFeatures.PREVIEW_ENABLED),isMemberPending:r,postableChannelCount:i}})(D)
+l.d(n, { A: () => L });
+var t = l(64700),
+    d = l(136722),
+    s = l(17928),
+    i = l(95561),
+    r = l(837152),
+    u = l(885437),
+    a = l(973854),
+    A = l(815706),
+    c = l(808728),
+    p = l(696451),
+    E = l(71393),
+    h = l(576705),
+    g = l(309010),
+    o = l(967198),
+    _ = l(287809),
+    I = l(184809),
+    C = l(9302),
+    k = l(652215);
+class D extends t.Component {
+    componentDidUpdate(e) {
+        if (this.props.locked) return null;
+        let {
+            selectedGuild: n,
+            selectedChannel: l,
+            isMemberPending: t,
+            hasPreviewEnabled: d,
+            postableChannelCount: s,
+        } = this.props;
+        null != n &&
+            (n !== e.selectedGuild || (t && !e.isMemberPending)) &&
+            ((0, A.z)(k.HAw.GUILD_VIEWED, {
+                ...(t ? { is_pending: t, preview_enabled: d } : {}),
+                postable_channels: s,
+            }),
+            (0, r.k)(k.HAw.GUILD_VIEWED_CLICKSTREAM, { guild_id: n })),
+            null != l &&
+                l !== e.selectedChannel &&
+                ((0, A.z)(k.HAw.CHANNEL_OPENED, { ...(0, u.p)(l), ...(0, i.qL)(l) }), (0, a.A)({ channelId: l }));
+    }
+    render() {
+        return null;
+    }
+}
+let L = s.Ay.connectStores([o.A, g.A, E.A, _.default, I.default, c.Ay, h.A, p.Ay], () => {
+    let e = o.A.getGuildId(),
+        n = g.A.getChannelId(e),
+        l = E.A.getGuild(e),
+        t = _.default.getCurrentUser(),
+        s = c.Ay.getChannels(l?.id)[c.I6] ?? [],
+        i =
+            s.length > 0
+                ? s.filter((e) => {
+                      let { channel: n } = e;
+                      return h.A.can(d.kg(k.xBc.SEND_MESSAGES, k.xBc.VIEW_CHANNEL), n);
+                  }).length
+                : 0,
+        r = null != t && null != e && (p.Ay.getMember(e, t.id)?.isPending ?? !1);
+    return {
+        selectedGuild: e,
+        selectedChannel: n,
+        locked: I.default.isLocked((0, C.getPID)()),
+        hasPreviewEnabled: l?.features.has(k.GuildFeatures.PREVIEW_ENABLED),
+        isMemberPending: r,
+        postableChannelCount: i,
+    };
+})(D);

@@ -1,1 +1,63 @@
-n.d(i,{default:()=>L});var t=n(627968);n(64700);var a=n(17928),s=n(980707),l=n(477782),r=n(442433),d=n(847767),c=n(358367),o=n(793574),A=n(886393),h=n(475777),C=n(848977),E=n(995102),N=n(288104),u=n(661504),g=n(304694),p=n(671483),v=n(217563),_=n(50268),x=n(769591),I=n(446600),X=n(914853),b=n(708653),j=n(297460),k=n(652215),y=n(375708);let L=(0,c.A)((0,d.A)(function(e){let{channel:i,guild:n,onSelect:d,widgetType:c}=e,o=i.isGuildStageVoice(),k=(0,a.bG)([I.A],()=>o?I.A.getStageInstanceByChannel(i.id):void 0,[o,i.id]),L=(0,C.A)(i),O=(0,A.A)(i),{toggleFavoriteItem:V}=(0,b.Ay)(X.x.VOICE,i,c),S=(0,E.A)(i),T=(0,N.A)(i),H=(0,h.A)(i,n,k),M=(0,j.A)({kind:"CHANNEL",channel:i,guildId:n.id},c),U=(0,_.A)({id:i.id,label:y.intl.string(y.t.gFHI3k)}),f=(0,g.A)(i),m=(0,p.A)(i,n),w=(0,v.A)(i,n.id),F=(0,x.os)("OverlayChannelListVoiceChannelContextMenu"),G=(0,u.Ay)(i);return(0,t.jsxs)(s.W,{navId:"overlay-channel-context",onClose:r.Z_,"aria-label":y.intl.string(y.t.Xm41aV),onSelect:d,children:[(0,t.jsxs)(l.rX,{children:[M,V,H,O]},"primary-actions"),(0,t.jsxs)(l.rX,{children:[w,L,m,f]},"voice-actions"),(0,t.jsxs)(l.rX,{children:[S,F?G:T]},"notifications"),(0,t.jsx)(l.rX,{children:U},"developer-actions")]})},{object:k.ZSU.CONTEXT_MENU}),[o.A.CONTEXT_MENU,o.A.OVERLAY,o.A.CHANNEL_LIST_VOICE_CHANNEL_MENU])
+n.d(i, { default: () => L });
+var t = n(627968);
+n(64700);
+var a = n(17928),
+    s = n(980707),
+    l = n(477782),
+    r = n(442433),
+    d = n(847767),
+    c = n(358367),
+    o = n(793574),
+    A = n(886393),
+    h = n(475777),
+    C = n(848977),
+    E = n(995102),
+    N = n(288104),
+    u = n(661504),
+    g = n(304694),
+    p = n(671483),
+    v = n(217563),
+    _ = n(50268),
+    x = n(769591),
+    I = n(446600),
+    X = n(914853),
+    b = n(708653),
+    j = n(297460),
+    k = n(652215),
+    y = n(375708);
+let L = (0, c.A)(
+    (0, d.A)(
+        function (e) {
+            let { channel: i, guild: n, onSelect: d, widgetType: c } = e,
+                o = i.isGuildStageVoice(),
+                k = (0, a.bG)([I.A], () => (o ? I.A.getStageInstanceByChannel(i.id) : void 0), [o, i.id]),
+                L = (0, C.A)(i),
+                O = (0, A.A)(i),
+                { toggleFavoriteItem: V } = (0, b.Ay)(X.x.VOICE, i, c),
+                S = (0, E.A)(i),
+                T = (0, N.A)(i),
+                H = (0, h.A)(i, n, k),
+                M = (0, j.A)({ kind: "CHANNEL", channel: i, guildId: n.id }, c),
+                U = (0, _.A)({ id: i.id, label: y.intl.string(y.t.gFHI3k) }),
+                f = (0, g.A)(i),
+                m = (0, p.A)(i, n),
+                w = (0, v.A)(i, n.id),
+                F = (0, x.os)("OverlayChannelListVoiceChannelContextMenu"),
+                G = (0, u.Ay)(i);
+            return (0, t.jsxs)(s.W, {
+                navId: "overlay-channel-context",
+                onClose: r.Z_,
+                "aria-label": y.intl.string(y.t.Xm41aV),
+                onSelect: d,
+                children: [
+                    (0, t.jsxs)(l.rX, { children: [M, V, H, O] }, "primary-actions"),
+                    (0, t.jsxs)(l.rX, { children: [w, L, m, f] }, "voice-actions"),
+                    (0, t.jsxs)(l.rX, { children: [S, F ? G : T] }, "notifications"),
+                    (0, t.jsx)(l.rX, { children: U }, "developer-actions"),
+                ],
+            });
+        },
+        { object: k.ZSU.CONTEXT_MENU },
+    ),
+    [o.A.CONTEXT_MENU, o.A.OVERLAY, o.A.CHANNEL_LIST_VOICE_CHANNEL_MENU],
+);

@@ -1,1 +1,31 @@
-"use strict";n.d(t,{F5:()=>a,hL:()=>o,iL:()=>l});var i,r,s,a=((i={}).AUTHORIZED="authorized",i.DENIED="denied",i.RESTRICTED="restricted",i.LIMITED="limited",i.UNDETERMINED="undetermined",i),o=((r={}).DISMISSED="dismissed",r.DENIED="denied",r.ACCEPTED="accepted",r.NO_DEVICES="no_devices",r.ERROR="error",r.NONE="none",r),l=((s={}).AUDIO="audio",s.CAMERA="camera",s.HEADSET_CAMERA="headset_camera",s.STORAGE="storage",s.NOTIFICATIONS="notifications",s.PHOTOS="photos",s.CONTACTS="contacts",s.INPUT_MONITORING="input_monitoring",s.SCREEN_RECORDING="screen_recording",s)
+"use strict";
+n.d(t, { F5: () => a, hL: () => o, iL: () => l });
+var i,
+    r,
+    s,
+    a =
+        (((i = {}).AUTHORIZED = "authorized"),
+        (i.DENIED = "denied"),
+        (i.RESTRICTED = "restricted"),
+        (i.LIMITED = "limited"),
+        (i.UNDETERMINED = "undetermined"),
+        i),
+    o =
+        (((r = {}).DISMISSED = "dismissed"),
+        (r.DENIED = "denied"),
+        (r.ACCEPTED = "accepted"),
+        (r.NO_DEVICES = "no_devices"),
+        (r.ERROR = "error"),
+        (r.NONE = "none"),
+        r),
+    l =
+        (((s = {}).AUDIO = "audio"),
+        (s.CAMERA = "camera"),
+        (s.HEADSET_CAMERA = "headset_camera"),
+        (s.STORAGE = "storage"),
+        (s.NOTIFICATIONS = "notifications"),
+        (s.PHOTOS = "photos"),
+        (s.CONTACTS = "contacts"),
+        (s.INPUT_MONITORING = "input_monitoring"),
+        (s.SCREEN_RECORDING = "screen_recording"),
+        s);

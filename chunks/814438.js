@@ -1,1 +1,1 @@
-e.exports={x:"button_e18686"}
+_.exports = { x: "button_e18686" };

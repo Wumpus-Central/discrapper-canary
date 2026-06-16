@@ -1,1 +1,45 @@
-"use strict";n.d(t,{B:()=>c});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(855036),l=n.n(o),u=n(369997);let c=r.forwardRef(function(e,t){let{as:n="div",gap:r=8,direction:s="vertical",align:o="stretch",justify:l="start",wrap:c=!1,padding:h=0,fullWidth:f=!0,style:p,className:E,children:m,...g}=e;return(0,i.jsx)(n,{ref:t,"data-align":o,"data-justify":l,"data-direction":s,"data-wrap":c,"data-full-width":f,className:a()(u.t,E),style:{...p,gap:d(r),..._(h)},...g,children:m})}),d=e=>`var(--space-${e})`,_=e=>"number"==typeof e||"string"==typeof e?{padding:d(e)}:Object.entries(e).reduce((e,t)=>{let[n,i]=t;return e[`padding${l()(n)}`]=d(i),e},{})
+"use strict";
+n.d(t, { B: () => c });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(855036),
+    l = n.n(o),
+    u = n(369997);
+let c = r.forwardRef(function (e, t) {
+        let {
+            as: n = "div",
+            gap: r = 8,
+            direction: s = "vertical",
+            align: o = "stretch",
+            justify: l = "start",
+            wrap: c = !1,
+            padding: h = 0,
+            fullWidth: f = !0,
+            style: p,
+            className: E,
+            children: m,
+            ...g
+        } = e;
+        return (0, i.jsx)(n, {
+            ref: t,
+            "data-align": o,
+            "data-justify": l,
+            "data-direction": s,
+            "data-wrap": c,
+            "data-full-width": f,
+            className: a()(u.t, E),
+            style: { ...p, gap: d(r), ..._(h) },
+            ...g,
+            children: m,
+        });
+    }),
+    d = (e) => `var(--space-${e})`,
+    _ = (e) =>
+        "number" == typeof e || "string" == typeof e
+            ? { padding: d(e) }
+            : Object.entries(e).reduce((e, t) => {
+                  let [n, i] = t;
+                  return (e[`padding${l()(n)}`] = d(i)), e;
+              }, {});

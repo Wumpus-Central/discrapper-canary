@@ -1,1 +1,165 @@
-"use strict";n.d(t,{A:()=>h});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(615300),l=n(478606);let u={friction:14,tension:200},c={DURATION:"DURATION",VOLUME:"VOLUME"};function d(e){let t=0|e,n=t%60;return`${(t-n)/60}:${String(n).padStart(2,"0")}`}class _ extends r.Component{static Types=c;static defaultProps={currentWindow:window};state={animatedProgress:new o.A.Value(0),dragging:!1,offsetLeft:0,offsetWidth:0,previewWidth:new o.A.Value(0)};wrapper;bubble;_previewId;_progressId;componentDidMount(){let{previewWidth:e,animatedProgress:t}=this.state;this._previewId=e.addListener(this.handlePreviewChange),this._progressId=t.addListener(this.handleAnimatedChange)}componentWillUnmount(){let{previewWidth:e,animatedProgress:t}=this.state;e.removeListener(this._previewId),t.removeListener(this._progressId),window.removeEventListener("mouseup",this.handleDragEnd,!1),window.removeEventListener("mousemove",this.handleDragMove,!1)}handlePreviewChange=()=>{let{bubble:e,state:{dragging:t,previewWidth:n},props:{value:i}}=this;t||null==e||(e.innerText=d(n._value*i))};handleAnimatedChange=()=>{let{bubble:e,state:{dragging:t,animatedProgress:n},props:{value:i}}=this;t&&null!=e&&(e.innerText=d(n._value*i))};componentDidUpdate(e,t){let{dragging:n,previewWidth:i,animatedProgress:r}=this.state;!n&&t.dragging&&i.setValue(r._value)}setGrabber(e){let t=!(arguments.length>1)||void 0===arguments[1]||arguments[1],{animatedProgress:n}=this.state;t?o.A.spring(n,{toValue:e,...u}).start():n.setValue(e)}calculatePercentage(e,t){let{wrapper:n,props:{type:i}}=this;if(null==n)return 0;let{left:r,width:s,bottom:a,height:o}=n.getBoundingClientRect();return Math.min(1,Math.max(0,i===c.VOLUME?(a-t)/o:(e-r)/s))}handleMouseMove=e=>{let{dragging:t,previewWidth:n}=this.state;if(t)return;let{clientX:i,clientY:r}=e;n.setValue(this.calculatePercentage(i,r))};handleDragMove=e=>{let{onDrag:t,type:n}=this.props,{clientX:i,clientY:r}=e;t(this.calculatePercentage(i,r),n)};handleDragStart=e=>{let{onDragStart:t,onDrag:n,type:i,currentWindow:r}=this.props,{clientX:s,clientY:a}=e;if(e.preventDefault(),null==this.wrapper)return;let{left:o,width:l}=this.wrapper.getBoundingClientRect();this.setState({dragging:!0,offsetLeft:o,offsetWidth:l},()=>{t(i),n(this.calculatePercentage(s,a),i),r.removeEventListener("mouseup",this.handleDragEnd,!1),r.removeEventListener("mousemove",this.handleDragMove,!1),r.addEventListener("mouseup",this.handleDragEnd,!1),r.addEventListener("mousemove",this.handleDragMove,!1)})};handleDragEnd=()=>{let{onDragEnd:e,currentWindow:t}=this.props;e(),t.removeEventListener("mouseup",this.handleDragEnd,!1),t.removeEventListener("mousemove",this.handleDragMove,!1),this.setState({dragging:!1})};setBubbleRef=e=>{null==e?this.bubble=null:null!=e.componentRef?this.bubble=e.componentRef:null!=e.refs&&(this.bubble=e.refs.node)};render(){let{buffers:e,type:t,className:n,sliderClassName:r}=this.props,{dragging:s,previewWidth:u,animatedProgress:d}=this.state,_=s?d:u;return(0,i.jsx)("div",{className:a()(n,t===c.VOLUME?l.Vd:l.xM),children:(0,i.jsx)("div",{className:a()(r,s?l.h4:l.GU,t===c.VOLUME?l.iR:null),onMouseDown:this.handleDragStart,onMouseMove:this.handleMouseMove,ref:e=>{this.wrapper=e},children:(0,i.jsxs)("div",{className:a()(l.HY,t===c.VOLUME?l.xw:null),children:[null!=e?e.map((e,t)=>{let[n,r]=e;return(0,i.jsx)("div",{className:l.r,style:{width:`${100*r}%`,left:`${100*n}%`}},t)}):null,t===c.DURATION?(0,i.jsx)(o.A.div,{className:l.mk,style:{width:u.interpolate({inputRange:[0,1],outputRange:["0%","100%"]})}}):null,(0,i.jsx)(o.A.div,{className:l.vG,style:{width:d.interpolate({inputRange:[0,1],outputRange:["0%","100%"]})},children:(0,i.jsx)("span",{className:l.Pq})}),t===c.DURATION?(0,i.jsx)(o.A.div,{ref:this.setBubbleRef,className:l.Tq,style:{left:_.interpolate({inputRange:[0,1],outputRange:["0%","100%"]})}}):null]})})})}}let h=_
+"use strict";
+n.d(t, { A: () => h });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(615300),
+    l = n(478606);
+let u = { friction: 14, tension: 200 },
+    c = { DURATION: "DURATION", VOLUME: "VOLUME" };
+function d(e) {
+    let t = 0 | e,
+        n = t % 60;
+    return `${(t - n) / 60}:${String(n).padStart(2, "0")}`;
+}
+class _ extends r.Component {
+    static Types = c;
+    static defaultProps = { currentWindow: window };
+    state = {
+        animatedProgress: new o.A.Value(0),
+        dragging: !1,
+        offsetLeft: 0,
+        offsetWidth: 0,
+        previewWidth: new o.A.Value(0),
+    };
+    wrapper;
+    bubble;
+    _previewId;
+    _progressId;
+    componentDidMount() {
+        let { previewWidth: e, animatedProgress: t } = this.state;
+        (this._previewId = e.addListener(this.handlePreviewChange)),
+            (this._progressId = t.addListener(this.handleAnimatedChange));
+    }
+    componentWillUnmount() {
+        let { previewWidth: e, animatedProgress: t } = this.state;
+        e.removeListener(this._previewId),
+            t.removeListener(this._progressId),
+            window.removeEventListener("mouseup", this.handleDragEnd, !1),
+            window.removeEventListener("mousemove", this.handleDragMove, !1);
+    }
+    handlePreviewChange = () => {
+        let {
+            bubble: e,
+            state: { dragging: t, previewWidth: n },
+            props: { value: i },
+        } = this;
+        t || null == e || (e.innerText = d(n._value * i));
+    };
+    handleAnimatedChange = () => {
+        let {
+            bubble: e,
+            state: { dragging: t, animatedProgress: n },
+            props: { value: i },
+        } = this;
+        t && null != e && (e.innerText = d(n._value * i));
+    };
+    componentDidUpdate(e, t) {
+        let { dragging: n, previewWidth: i, animatedProgress: r } = this.state;
+        !n && t.dragging && i.setValue(r._value);
+    }
+    setGrabber(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+            { animatedProgress: n } = this.state;
+        t ? o.A.spring(n, { toValue: e, ...u }).start() : n.setValue(e);
+    }
+    calculatePercentage(e, t) {
+        let {
+            wrapper: n,
+            props: { type: i },
+        } = this;
+        if (null == n) return 0;
+        let { left: r, width: s, bottom: a, height: o } = n.getBoundingClientRect();
+        return Math.min(1, Math.max(0, i === c.VOLUME ? (a - t) / o : (e - r) / s));
+    }
+    handleMouseMove = (e) => {
+        let { dragging: t, previewWidth: n } = this.state;
+        if (t) return;
+        let { clientX: i, clientY: r } = e;
+        n.setValue(this.calculatePercentage(i, r));
+    };
+    handleDragMove = (e) => {
+        let { onDrag: t, type: n } = this.props,
+            { clientX: i, clientY: r } = e;
+        t(this.calculatePercentage(i, r), n);
+    };
+    handleDragStart = (e) => {
+        let { onDragStart: t, onDrag: n, type: i, currentWindow: r } = this.props,
+            { clientX: s, clientY: a } = e;
+        if ((e.preventDefault(), null == this.wrapper)) return;
+        let { left: o, width: l } = this.wrapper.getBoundingClientRect();
+        this.setState({ dragging: !0, offsetLeft: o, offsetWidth: l }, () => {
+            t(i),
+                n(this.calculatePercentage(s, a), i),
+                r.removeEventListener("mouseup", this.handleDragEnd, !1),
+                r.removeEventListener("mousemove", this.handleDragMove, !1),
+                r.addEventListener("mouseup", this.handleDragEnd, !1),
+                r.addEventListener("mousemove", this.handleDragMove, !1);
+        });
+    };
+    handleDragEnd = () => {
+        let { onDragEnd: e, currentWindow: t } = this.props;
+        e(),
+            t.removeEventListener("mouseup", this.handleDragEnd, !1),
+            t.removeEventListener("mousemove", this.handleDragMove, !1),
+            this.setState({ dragging: !1 });
+    };
+    setBubbleRef = (e) => {
+        null == e
+            ? (this.bubble = null)
+            : null != e.componentRef
+              ? (this.bubble = e.componentRef)
+              : null != e.refs && (this.bubble = e.refs.node);
+    };
+    render() {
+        let { buffers: e, type: t, className: n, sliderClassName: r } = this.props,
+            { dragging: s, previewWidth: u, animatedProgress: d } = this.state,
+            _ = s ? d : u;
+        return (0, i.jsx)("div", {
+            className: a()(n, t === c.VOLUME ? l.Vd : l.xM),
+            children: (0, i.jsx)("div", {
+                className: a()(r, s ? l.h4 : l.GU, t === c.VOLUME ? l.iR : null),
+                onMouseDown: this.handleDragStart,
+                onMouseMove: this.handleMouseMove,
+                ref: (e) => {
+                    this.wrapper = e;
+                },
+                children: (0, i.jsxs)("div", {
+                    className: a()(l.HY, t === c.VOLUME ? l.xw : null),
+                    children: [
+                        null != e
+                            ? e.map((e, t) => {
+                                  let [n, r] = e;
+                                  return (0, i.jsx)(
+                                      "div",
+                                      { className: l.r, style: { width: `${100 * r}%`, left: `${100 * n}%` } },
+                                      t,
+                                  );
+                              })
+                            : null,
+                        t === c.DURATION
+                            ? (0, i.jsx)(o.A.div, {
+                                  className: l.mk,
+                                  style: { width: u.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
+                              })
+                            : null,
+                        (0, i.jsx)(o.A.div, {
+                            className: l.vG,
+                            style: { width: d.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
+                            children: (0, i.jsx)("span", { className: l.Pq }),
+                        }),
+                        t === c.DURATION
+                            ? (0, i.jsx)(o.A.div, {
+                                  ref: this.setBubbleRef,
+                                  className: l.Tq,
+                                  style: { left: _.interpolate({ inputRange: [0, 1], outputRange: ["0%", "100%"] }) },
+                              })
+                            : null,
+                    ],
+                }),
+            }),
+        });
+    }
+}
+let h = _;

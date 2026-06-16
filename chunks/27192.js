@@ -1,1 +1,104 @@
-l.d(r,{Kj:()=>f,Or:()=>C});var o,s=l(627968),t=l(64700),a=l(503698),c=l.n(a),n=l(284009),i=l.n(n),d=l(317097),h=l(661531),u=l(187322),b=l(820081),k=l(818348),p=l(693491),C=((o=C||{}).DEFAULT="default",o.INVERTED="inverted",o.GHOST="ghost",o.ROW="row",o);let x={BOX:p.aP,ROUND:p.LI,SMALL_BOX:p.tk},g={top:p.t8,center:p.Hu},f=e=>{let{disabled:r=!1,readOnly:l=!1,displayOnly:o=!1,value:a=!1,size:n=24,type:i="default",align:d="center",onChange:h=k.tE,onClick:b,className:C,innerClassName:f,children:w,reverse:T=!1,shape:N=x.BOX,checkboxColor:j}=e,m=t.useCallback(e=>{h?.(e,e.currentTarget.checked)},[h]),A=null!=w?(0,s.jsx)("div",{className:c()(p.Pf,r?p.fR:p.ru,T?p.dT:p.a5),style:{lineHeight:`${n}px`},children:w}):null,E=r?p.pR:l?p.bB:p.qw;return(0,s.jsxs)(o?"span":"label",{"data-toggleable-component":"checkbox",className:c()(r?p.Tc:p.TQ,g[d],C,{[p.nM]:"row"===i,[p.KD]:a}),children:[T?A:null,!o&&(0,s.jsx)(u.vN,{children:(0,s.jsx)("input",{className:c()(f,E),type:"checkbox",onClick:b,onChange:r||l?k.tE:m,checked:a,style:{width:n,height:n}})}),(0,s.jsx)(v,{value:a,size:n,shape:N,checkboxColor:j,disabled:r}),T?null:A]})};function v(e){let{indicatorClassName:r,value:l,size:o,shape:a,checkboxColor:n,disabled:u}=e,k=function(e){let{value:r,type:l,color:o}=e,s=e.style??{};if(!1===r)return s;if(s={...s},null!=o)switch(l){case"default":s.borderColor=o;break;case"ghost":if(o.startsWith("var(--")){let e=`${o.slice(0,-1)}-hsl)`;s.borderColor=`rgba(${e}, 0.15)`,s.backgroundColor=`rgba(${e}, 0.15)`}else i()((0,d.qt)(o),`Checkbox: ${o} is not a valid hex color`),s.borderColor=(0,d.xp)(o,.15),s.backgroundColor=(0,d.xp)(o,.15);break;case"row":case"inverted":s.backgroundColor=o,s.borderColor=o}return s}(e),C=t.useMemo(()=>l?h.A.colors.WHITE.css:h.A.unsafe_rawColors.TRANSPARENT.css,[l]);return(0,s.jsx)("div",{className:c()(p.kv,a,r,{[p.KD]:l,[p.Ab]:u}),style:{width:o,height:o,borderColor:n,...k},children:(0,s.jsx)(b.B,{size:"sm",color:C,"aria-hidden":!0})})}
+l.d(r, { Kj: () => f, Or: () => C });
+var o,
+    s = l(627968),
+    t = l(64700),
+    a = l(503698),
+    c = l.n(a),
+    n = l(284009),
+    i = l.n(n),
+    d = l(317097),
+    h = l(661531),
+    u = l(187322),
+    b = l(820081),
+    k = l(818348),
+    p = l(693491),
+    C = (((o = C || {}).DEFAULT = "default"), (o.INVERTED = "inverted"), (o.GHOST = "ghost"), (o.ROW = "row"), o);
+let x = { BOX: p.aP, ROUND: p.LI, SMALL_BOX: p.tk },
+    g = { top: p.t8, center: p.Hu },
+    f = (e) => {
+        let {
+                disabled: r = !1,
+                readOnly: l = !1,
+                displayOnly: o = !1,
+                value: a = !1,
+                size: n = 24,
+                type: i = "default",
+                align: d = "center",
+                onChange: h = k.tE,
+                onClick: b,
+                className: C,
+                innerClassName: f,
+                children: w,
+                reverse: T = !1,
+                shape: N = x.BOX,
+                checkboxColor: j,
+            } = e,
+            m = t.useCallback(
+                (e) => {
+                    h?.(e, e.currentTarget.checked);
+                },
+                [h],
+            ),
+            A =
+                null != w
+                    ? (0, s.jsx)("div", {
+                          className: c()(p.Pf, r ? p.fR : p.ru, T ? p.dT : p.a5),
+                          style: { lineHeight: `${n}px` },
+                          children: w,
+                      })
+                    : null,
+            E = r ? p.pR : l ? p.bB : p.qw;
+        return (0, s.jsxs)(o ? "span" : "label", {
+            "data-toggleable-component": "checkbox",
+            className: c()(r ? p.Tc : p.TQ, g[d], C, { [p.nM]: "row" === i, [p.KD]: a }),
+            children: [
+                T ? A : null,
+                !o &&
+                    (0, s.jsx)(u.vN, {
+                        children: (0, s.jsx)("input", {
+                            className: c()(f, E),
+                            type: "checkbox",
+                            onClick: b,
+                            onChange: r || l ? k.tE : m,
+                            checked: a,
+                            style: { width: n, height: n },
+                        }),
+                    }),
+                (0, s.jsx)(v, { value: a, size: n, shape: N, checkboxColor: j, disabled: r }),
+                T ? null : A,
+            ],
+        });
+    };
+function v(e) {
+    let { indicatorClassName: r, value: l, size: o, shape: a, checkboxColor: n, disabled: u } = e,
+        k = (function (e) {
+            let { value: r, type: l, color: o } = e,
+                s = e.style ?? {};
+            if (!1 === r) return s;
+            if (((s = { ...s }), null != o))
+                switch (l) {
+                    case "default":
+                        s.borderColor = o;
+                        break;
+                    case "ghost":
+                        if (o.startsWith("var(--")) {
+                            let e = `${o.slice(0, -1)}-hsl)`;
+                            (s.borderColor = `rgba(${e}, 0.15)`), (s.backgroundColor = `rgba(${e}, 0.15)`);
+                        } else
+                            i()((0, d.qt)(o), `Checkbox: ${o} is not a valid hex color`),
+                                (s.borderColor = (0, d.xp)(o, 0.15)),
+                                (s.backgroundColor = (0, d.xp)(o, 0.15));
+                        break;
+                    case "row":
+                    case "inverted":
+                        (s.backgroundColor = o), (s.borderColor = o);
+                }
+            return s;
+        })(e),
+        C = t.useMemo(() => (l ? h.A.colors.WHITE.css : h.A.unsafe_rawColors.TRANSPARENT.css), [l]);
+    return (0, s.jsx)("div", {
+        className: c()(p.kv, a, r, { [p.KD]: l, [p.Ab]: u }),
+        style: { width: o, height: o, borderColor: n, ...k },
+        children: (0, s.jsx)(b.B, { size: "sm", color: C, "aria-hidden": !0 }),
+    });
+}

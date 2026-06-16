@@ -1,1 +1,180 @@
-n.d(t,{default:()=>v});var s=n(627968),i=n(64700),l=n(562708),a=n(189213),r=n(834730),o=n(452027),d=n(331322),h=n(13008),p=n(503698),u=n.n(p),c=n(96337),g=n(783878),C=n(292666),m=n(423764),b=n(375708),x=n(348043);let f=function(e){let{className:t,submitting:n,errorMessage:l,onChange:a}=e,r=i.useRef(null),{countriesMap:d,countryCodeOptions:h}=i.useMemo(()=>{let e=new Map(c.A.flatMap(e=>{let{alpha2:t,phoneCountryCodes:n}=e,s=(0,m.Gw)(t);return n.map(e=>[`${t}-${e}`,{code:e,alpha2:t,name:s}])})),t=Array.from(e.entries()).map(e=>{let[t,{name:n,alpha2:s}]=e;return{value:t,label:n,alpha2:s}});return{countriesMap:e,countryCodeOptions:t}},[]),[p,f]=i.useState(()=>{let e=c.A.find(e=>"United States"===e.name);return`${e.alpha2}-${e.phoneCountryCode}`}),[k,j]=i.useState(()=>{let[e,t]=c.A.find(e=>"United States"===e.name).phoneCountryCode.split(" ");return t??""}),v=i.useCallback((e,t)=>{let n=d.get(e)?.code;a?.(`${n}${t}`)},[d,a]),S=i.useCallback(e=>{f(e),r.current?.focus(),v(e,k)},[k,v]),M=i.useCallback(e=>{j(e),v(p,e)},[p,v]),P=d.get(p);return(0,s.jsx)("fieldset",{children:(0,s.jsxs)("div",{className:u()(x.B,t),children:[(0,s.jsx)(o.D,{label:b.intl.string(b.t["k+bvrB"]),children:(0,s.jsx)(g.Z,{selectionMode:"single",value:p??void 0,onSelectionChange:S,options:h,formatOption:e=>{let{value:t,label:n,alpha2:s}=e;return{id:t,value:t,label:n,leading:String.fromCodePoint(...(s??"").toUpperCase().split("").map(e=>127397+e.charCodeAt(0)))}},disabled:n})}),(0,s.jsx)(C.k,{label:b.intl.string(b.t["64bX0M"]),error:l,leading:P?.code,type:"tel",onChange:M,autoFocus:!0,inputRef:r,disabled:n,value:k})]})})};var k=n(762995);class j extends i.PureComponent{constructor(e){super(e),this.state={phone:""}}handlePhoneChange=e=>{this.setState({phone:e})};render(){let e,t,n,i,{error:p,working:u,transitionState:c,validPhone:g,layerContext:C}=this.props,{phone:m}=this.state,x=[];return g?e=b.intl.string(b.t["4qMI6A"]):(e=b.intl.string(b.t.Vp9je2),t=(0,s.jsx)(r.E,{variant:"text-sm/normal",children:b.intl.format(b.t["3BTmqX"],{})})),g?(n=(0,s.jsx)(o.D,{label:b.intl.string(b.t.Xclkxp),hideLabel:!0,errorMessage:p??void 0,children:(0,s.jsx)(h.A,{onSubmit:this.handleVerifyPhone})}),x=[{variant:"secondary",text:b.intl.string(b.t["5b60gi"]),onClick:this.handleResendCode,loading:u}]):(n=(0,s.jsx)(f,{label:b.intl.string(b.t["64bX0M"]),errorMessage:p??void 0,className:k.ZZ,onChange:this.handlePhoneChange,submitting:u,layerContext:C}),x=[{text:b.intl.string(b.t.TXNS7S),disabled:""===m,loading:u,onClick:this.handleAddPhone}]),i=g?b.intl.string(b.t.hDKkuo):b.intl.string(b.t.hY8QTR),(0,s.jsx)(a.Modal,{size:g?"sm":"md",title:i,subtitle:e,actions:x,onClose:this.props.onClose,trackingProps:{impression:{impressionName:l.ImpressionNames.USER_VERIFY_PHONE}},transitionState:c,children:(0,s.jsxs)(d.B,{gap:8,children:[n,t]})})}handleAddPhone=()=>{let{phone:e}=this.state,{onAddPhone:t}=this.props;t?.(e)};handleVerifyPhone=e=>{let{onVerifyPhone:t}=this.props;t?.(e)};handleResendCode=()=>{let{onAddPhone:e}=this.props;e?.(this.state.phone)}}let v=j
+n.d(t, { default: () => v });
+var s = n(627968),
+    i = n(64700),
+    l = n(562708),
+    a = n(189213),
+    r = n(834730),
+    o = n(452027),
+    d = n(331322),
+    h = n(13008),
+    p = n(503698),
+    u = n.n(p),
+    c = n(96337),
+    g = n(783878),
+    C = n(292666),
+    m = n(423764),
+    b = n(375708),
+    x = n(348043);
+let f = function (e) {
+    let { className: t, submitting: n, errorMessage: l, onChange: a } = e,
+        r = i.useRef(null),
+        { countriesMap: d, countryCodeOptions: h } = i.useMemo(() => {
+            let e = new Map(
+                    c.A.flatMap((e) => {
+                        let { alpha2: t, phoneCountryCodes: n } = e,
+                            s = (0, m.Gw)(t);
+                        return n.map((e) => [`${t}-${e}`, { code: e, alpha2: t, name: s }]);
+                    }),
+                ),
+                t = Array.from(e.entries()).map((e) => {
+                    let [t, { name: n, alpha2: s }] = e;
+                    return { value: t, label: n, alpha2: s };
+                });
+            return { countriesMap: e, countryCodeOptions: t };
+        }, []),
+        [p, f] = i.useState(() => {
+            let e = c.A.find((e) => "United States" === e.name);
+            return `${e.alpha2}-${e.phoneCountryCode}`;
+        }),
+        [k, j] = i.useState(() => {
+            let [e, t] = c.A.find((e) => "United States" === e.name).phoneCountryCode.split(" ");
+            return t ?? "";
+        }),
+        v = i.useCallback(
+            (e, t) => {
+                let n = d.get(e)?.code;
+                a?.(`${n}${t}`);
+            },
+            [d, a],
+        ),
+        S = i.useCallback(
+            (e) => {
+                f(e), r.current?.focus(), v(e, k);
+            },
+            [k, v],
+        ),
+        M = i.useCallback(
+            (e) => {
+                j(e), v(p, e);
+            },
+            [p, v],
+        ),
+        P = d.get(p);
+    return (0, s.jsx)("fieldset", {
+        children: (0, s.jsxs)("div", {
+            className: u()(x.B, t),
+            children: [
+                (0, s.jsx)(o.D, {
+                    label: b.intl.string(b.t["k+bvrB"]),
+                    children: (0, s.jsx)(g.Z, {
+                        selectionMode: "single",
+                        value: p ?? void 0,
+                        onSelectionChange: S,
+                        options: h,
+                        formatOption: (e) => {
+                            let { value: t, label: n, alpha2: s } = e;
+                            return {
+                                id: t,
+                                value: t,
+                                label: n,
+                                leading: String.fromCodePoint(
+                                    ...(s ?? "")
+                                        .toUpperCase()
+                                        .split("")
+                                        .map((e) => 127397 + e.charCodeAt(0)),
+                                ),
+                            };
+                        },
+                        disabled: n,
+                    }),
+                }),
+                (0, s.jsx)(C.k, {
+                    label: b.intl.string(b.t["64bX0M"]),
+                    error: l,
+                    leading: P?.code,
+                    type: "tel",
+                    onChange: M,
+                    autoFocus: !0,
+                    inputRef: r,
+                    disabled: n,
+                    value: k,
+                }),
+            ],
+        }),
+    });
+};
+var k = n(762995);
+class j extends i.PureComponent {
+    constructor(e) {
+        super(e), (this.state = { phone: "" });
+    }
+    handlePhoneChange = (e) => {
+        this.setState({ phone: e });
+    };
+    render() {
+        let e,
+            t,
+            n,
+            i,
+            { error: p, working: u, transitionState: c, validPhone: g, layerContext: C } = this.props,
+            { phone: m } = this.state,
+            x = [];
+        return (
+            g
+                ? (e = b.intl.string(b.t["4qMI6A"]))
+                : ((e = b.intl.string(b.t.Vp9je2)),
+                  (t = (0, s.jsx)(r.E, { variant: "text-sm/normal", children: b.intl.format(b.t["3BTmqX"], {}) }))),
+            g
+                ? ((n = (0, s.jsx)(o.D, {
+                      label: b.intl.string(b.t.Xclkxp),
+                      hideLabel: !0,
+                      errorMessage: p ?? void 0,
+                      children: (0, s.jsx)(h.A, { onSubmit: this.handleVerifyPhone }),
+                  })),
+                  (x = [
+                      {
+                          variant: "secondary",
+                          text: b.intl.string(b.t["5b60gi"]),
+                          onClick: this.handleResendCode,
+                          loading: u,
+                      },
+                  ]))
+                : ((n = (0, s.jsx)(f, {
+                      label: b.intl.string(b.t["64bX0M"]),
+                      errorMessage: p ?? void 0,
+                      className: k.ZZ,
+                      onChange: this.handlePhoneChange,
+                      submitting: u,
+                      layerContext: C,
+                  })),
+                  (x = [
+                      { text: b.intl.string(b.t.TXNS7S), disabled: "" === m, loading: u, onClick: this.handleAddPhone },
+                  ])),
+            (i = g ? b.intl.string(b.t.hDKkuo) : b.intl.string(b.t.hY8QTR)),
+            (0, s.jsx)(a.Modal, {
+                size: g ? "sm" : "md",
+                title: i,
+                subtitle: e,
+                actions: x,
+                onClose: this.props.onClose,
+                trackingProps: { impression: { impressionName: l.ImpressionNames.USER_VERIFY_PHONE } },
+                transitionState: c,
+                children: (0, s.jsxs)(d.B, { gap: 8, children: [n, t] }),
+            })
+        );
+    }
+    handleAddPhone = () => {
+        let { phone: e } = this.state,
+            { onAddPhone: t } = this.props;
+        t?.(e);
+    };
+    handleVerifyPhone = (e) => {
+        let { onVerifyPhone: t } = this.props;
+        t?.(e);
+    };
+    handleResendCode = () => {
+        let { onAddPhone: e } = this.props;
+        e?.(this.state.phone);
+    };
+}
+let v = j;

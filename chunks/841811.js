@@ -1,1 +1,115 @@
-r.d(t,{default:()=>y,j:()=>w});var n=r(627968),i=r(64700);if(21552==r.j)var l=r(189213);var s=r(17928);if(21552==r.j)var a=r(834730);if(21552==r.j)var o=r(451394);var c=r(702805),d=r(913122),u=r(155718),x=r(47167),g=r(517622),h=r(86944),A=r(734057),f=r(71393),m=r(488926),p=r(233993),v=r(719366),j=r(375708),E=r(380174);function w(e,t){return{id:e,type:t,deny:m.x3,allow:p.QY}}function y(e){let{channelId:t,onClose:r,...m}=e,y=(0,s.bG)([A.A],()=>A.A.getChannel(t)),R=(0,s.bG)([f.A],()=>f.A.getGuild(y?.getGuildId())),S=(0,x.Ay)(y),[k,C]=i.useState(""),[b,G]=i.useState({}),[T,H]=i.useState(!1),[N,O]=i.useState(null),L=i.useRef(null),{roles:M,members:_,getRichTag:I}=(0,h.K)(R,y,p.QY,k),Y=g.A.useSections({roles:M,members:_});if(null==y||null==R)return null;let P=async()=>{H(!0);try{let e;await (e=Object.values(b).filter(e=>{let{row:t}=e;return null!=t.id}).map(e=>{let{row:t}=e;return t.rowType===v.T6.ROLE?w(t.id,u.r2.ROLE):w(t.id,u.r2.MEMBER)}),(0,c.R$)(y.id,e,!0)),r()}catch(t){let e=new d.LG(t);H(!1),O(e)}};return(0,n.jsx)(g.A.Provider,{listRef:L,query:k,setQuery:C,pendingAdditions:b,setPendingAdditions:G,roles:M,members:_,getRichTag:I,children:(0,n.jsx)(l.Modal,{...m,title:j.intl.string(j.t.dMJ3Y6),onClose:r,input:(0,n.jsxs)("div",{children:[(0,n.jsxs)(a.E,{className:E.HA,variant:"text-lg/normal",color:"text-default",children:[(0,n.jsx)(o.q,{className:E.p,size:"sm",color:"currentColor"}),S]}),y.isGuildStageVoice()&&(0,n.jsx)(a.E,{color:"text-default",className:E.h_,variant:"text-sm/normal",children:j.intl.string(j.t.f7VbhF)}),(0,n.jsx)(g.A.SearchBox,{placeholderText:j.intl.string(j.t.iezLLn)}),(0,n.jsx)(a.E,{className:E.W$,variant:"text-xs/normal",children:j.intl.string(j.t.rwFx85)}),null!=N?(0,n.jsx)(a.E,{className:E.W$,variant:"text-xs/normal",color:"text-feedback-critical",children:N.getAnyErrorMessage()}):null]}),listProps:{ref:L,sectionHeight:g.A.SECTION_HEIGHT,renderSection:g.A.renderSection,rowHeight:g.A.ROW_HEIGHT,renderRow:g.A.renderRow,sections:Y},actions:[{variant:"secondary",text:j.intl.string(j.t["ETE/oC"]),onClick:r},{variant:"primary",text:j.intl.string(j.t.OYkgVk),onClick:P,loading:T}]})})}
+r.d(t, { default: () => y, j: () => w });
+var n = r(627968),
+    i = r(64700);
+if (21552 == r.j) var l = r(189213);
+var s = r(17928);
+if (21552 == r.j) var a = r(834730);
+if (21552 == r.j) var o = r(451394);
+var c = r(702805),
+    d = r(913122),
+    u = r(155718),
+    x = r(47167),
+    g = r(517622),
+    h = r(86944),
+    A = r(734057),
+    f = r(71393),
+    m = r(488926),
+    p = r(233993),
+    v = r(719366),
+    j = r(375708),
+    E = r(380174);
+function w(e, t) {
+    return { id: e, type: t, deny: m.x3, allow: p.QY };
+}
+function y(e) {
+    let { channelId: t, onClose: r, ...m } = e,
+        y = (0, s.bG)([A.A], () => A.A.getChannel(t)),
+        R = (0, s.bG)([f.A], () => f.A.getGuild(y?.getGuildId())),
+        S = (0, x.Ay)(y),
+        [k, C] = i.useState(""),
+        [b, G] = i.useState({}),
+        [T, H] = i.useState(!1),
+        [N, O] = i.useState(null),
+        L = i.useRef(null),
+        { roles: M, members: _, getRichTag: I } = (0, h.K)(R, y, p.QY, k),
+        Y = g.A.useSections({ roles: M, members: _ });
+    if (null == y || null == R) return null;
+    let P = async () => {
+        H(!0);
+        try {
+            let e;
+            await ((e = Object.values(b)
+                .filter((e) => {
+                    let { row: t } = e;
+                    return null != t.id;
+                })
+                .map((e) => {
+                    let { row: t } = e;
+                    return t.rowType === v.T6.ROLE ? w(t.id, u.r2.ROLE) : w(t.id, u.r2.MEMBER);
+                })),
+            (0, c.R$)(y.id, e, !0)),
+                r();
+        } catch (t) {
+            let e = new d.LG(t);
+            H(!1), O(e);
+        }
+    };
+    return (0, n.jsx)(g.A.Provider, {
+        listRef: L,
+        query: k,
+        setQuery: C,
+        pendingAdditions: b,
+        setPendingAdditions: G,
+        roles: M,
+        members: _,
+        getRichTag: I,
+        children: (0, n.jsx)(l.Modal, {
+            ...m,
+            title: j.intl.string(j.t.dMJ3Y6),
+            onClose: r,
+            input: (0, n.jsxs)("div", {
+                children: [
+                    (0, n.jsxs)(a.E, {
+                        className: E.HA,
+                        variant: "text-lg/normal",
+                        color: "text-default",
+                        children: [(0, n.jsx)(o.q, { className: E.p, size: "sm", color: "currentColor" }), S],
+                    }),
+                    y.isGuildStageVoice() &&
+                        (0, n.jsx)(a.E, {
+                            color: "text-default",
+                            className: E.h_,
+                            variant: "text-sm/normal",
+                            children: j.intl.string(j.t.f7VbhF),
+                        }),
+                    (0, n.jsx)(g.A.SearchBox, { placeholderText: j.intl.string(j.t.iezLLn) }),
+                    (0, n.jsx)(a.E, {
+                        className: E.W$,
+                        variant: "text-xs/normal",
+                        children: j.intl.string(j.t.rwFx85),
+                    }),
+                    null != N
+                        ? (0, n.jsx)(a.E, {
+                              className: E.W$,
+                              variant: "text-xs/normal",
+                              color: "text-feedback-critical",
+                              children: N.getAnyErrorMessage(),
+                          })
+                        : null,
+                ],
+            }),
+            listProps: {
+                ref: L,
+                sectionHeight: g.A.SECTION_HEIGHT,
+                renderSection: g.A.renderSection,
+                rowHeight: g.A.ROW_HEIGHT,
+                renderRow: g.A.renderRow,
+                sections: Y,
+            },
+            actions: [
+                { variant: "secondary", text: j.intl.string(j.t["ETE/oC"]), onClick: r },
+                { variant: "primary", text: j.intl.string(j.t.OYkgVk), onClick: P, loading: T },
+            ],
+        }),
+    });
+}

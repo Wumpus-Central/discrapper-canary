@@ -1,1 +1,9 @@
-"use strict";n.d(t,{U:()=>r}),n(702841);var i=n(696451);function r(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:[i.Ay],[r]=n,s=null!=t&&null!=e?r.getMember(t,e.id):null;return s?.avatarDecoration??e?.avatarDecoration}
+"use strict";
+n.d(t, { U: () => r }), n(702841);
+var i = n(696451);
+function r(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [i.Ay],
+        [r] = n,
+        s = null != t && null != e ? r.getMember(t, e.id) : null;
+    return s?.avatarDecoration ?? e?.avatarDecoration;
+}

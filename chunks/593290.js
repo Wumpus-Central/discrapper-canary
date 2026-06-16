@@ -1,1 +1,1 @@
-e.exports={X:"micTestHelpLink__2958a"}
+e.exports = { X: "micTestHelpLink__2958a" };

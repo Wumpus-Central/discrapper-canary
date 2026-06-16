@@ -1,1 +1,164 @@
-"use strict";let i;n.d(t,{A:()=>C}),n(321073);var r=n(812729),s=n.n(r),a=n(17928),o=n(713402),l=n(228366),u=n(935208),c=n(9302),d=n(206885),_=n(181435),h=n(614455);let f=null,p=new Set,E=null,m=null,g=new u.SnowflakeSequence;function A(e){return(0,_.Vx)(e)?`native-${e.id}`:null!=e.nativeId?`native-${e.nativeId}`:null}function I(e){let t=Math.floor(e);try{return g.willOverflowNext()&&g.reset(),u.default.fromTimestampWithSequence(t,g)}catch{return g.reset(),u.default.fromTimestampWithSequence(t,g)}}let T=new o.J(function(e){let t=[e.type,e.pid?.toString()??"null-pid"],n=A(e);return null!=n&&t.push(n),t},function(e){return-e.timestamp}),S=0;function y(e){return T.set(e.id,e)}class N extends a.Ay.Store{static displayName="Overlay-v3-Native-Debug-Module-Store";initialize(){this.waitFor(h.A)}getDebuggingState(){return i}hasRenderDebugMode(e){return p.has(e)}getRenderDebugModes(){return p}getOverlayLoggingBreadcrumbs(e){return[T.values(e,!0),T.version]}isModuleLoggingEnabled(){return null!=m}isStateDebuggingEnabled(){return null!=E}}let v=new N(l.h,__OVERLAY__||!d.O?{}:{OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS:function(){f=h.A.getNativeModule()},OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED:function(){f=null},OVERLAY_SET_STATE_DEBUGGING:function(e){let{enabled:t}=e;return t?null==E&&(E=setInterval(()=>{f?.getDebuggingState?.(e=>{s()(i,e)||(i=e,v.emitChange())})},300)):null!=E&&(clearInterval(E),E=null),!0},OVERLAY_RENDER_DEBUG_MODE:function(e){let{enabled:t,mode:n}=e;t?p.add(n):p.delete(n),p=new Set(p)},OVERLAY_SET_DETAILED_LOGGING:function(e){let{enabled:t}=e;f?.setDetailedLogging?.(t)},OVERLAY_ADD_DEBUG_BREADCRUMB:function(e){let{breadcrumb:{pid:t,name:n,data:i,type:r,logType:s}}=e;return!function(e,t,n,i){let r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:_.QJ.Info,s=performance.timeOrigin+performance.now(),a=I(s);y({id:a,key:a,nativeId:null,timestamp:s,name:e,data:t,type:n,pid:i,logType:r,stack:void 0})}(n,i??{},r,t,s),!0},OVERLAY_SET_MODULE_LOGGING:function(e){let{enabled:t}=e;return t?null==m&&(m=setInterval(()=>{let e=f?.getLastAssociatedPID()??null;f?.getNativeBreadcrumbs({minBreadcrumbId:S},t=>{let{breadcrumbs:n}=t;for(let t of n)!function(e,t,n){let i,r=A(e);if(null==r)throw Error("Native breadcrumb has no native id");T.size(r)>0||(S=Math.max(S,Number(e.id)),y({id:i=I(e.timestamp),key:i,nativeId:Number(e.id),timestamp:e.timestamp,name:e.name,data:e.data,type:t,pid:n,logType:_.QJ.Info,stack:Error().stack??""}))}(t,_.ON.NativeOOP,e??c.UNSET_PID);v.emitChange()})},3e3)):null!=m&&(clearInterval(m),m=null),!0}}),C=v
+"use strict";
+let i;
+n.d(t, { A: () => v }), n(321073);
+var r = n(812729),
+    s = n.n(r),
+    a = n(17928),
+    o = n(713402),
+    l = n(228366),
+    u = n(935208),
+    c = n(9302),
+    d = n(206885),
+    _ = n(181435),
+    h = n(614455);
+let f = null,
+    p = new Set(),
+    E = null,
+    m = null,
+    g = new u.SnowflakeSequence();
+function A(e) {
+    return (0, _.Vx)(e) ? `native-${e.id}` : null != e.nativeId ? `native-${e.nativeId}` : null;
+}
+function I(e) {
+    let t = Math.floor(e);
+    try {
+        return g.willOverflowNext() && g.reset(), u.default.fromTimestampWithSequence(t, g);
+    } catch {
+        return g.reset(), u.default.fromTimestampWithSequence(t, g);
+    }
+}
+let T = new o.J(
+        function (e) {
+            let t = [e.type, e.pid?.toString() ?? "null-pid"],
+                n = A(e);
+            return null != n && t.push(n), t;
+        },
+        function (e) {
+            return -e.timestamp;
+        },
+    ),
+    S = 0;
+function y(e) {
+    return T.set(e.id, e);
+}
+class C extends a.Ay.Store {
+    static displayName = "Overlay-v3-Native-Debug-Module-Store";
+    initialize() {
+        this.waitFor(h.A);
+    }
+    getDebuggingState() {
+        return i;
+    }
+    hasRenderDebugMode(e) {
+        return p.has(e);
+    }
+    getRenderDebugModes() {
+        return p;
+    }
+    getOverlayLoggingBreadcrumbs(e) {
+        return [T.values(e, !0), T.version];
+    }
+    isModuleLoggingEnabled() {
+        return null != m;
+    }
+    isStateDebuggingEnabled() {
+        return null != E;
+    }
+}
+let N = new C(
+        l.h,
+        __OVERLAY__ || !d.O
+            ? {}
+            : {
+                  OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: function () {
+                      f = h.A.getNativeModule();
+                  },
+                  OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: function () {
+                      f = null;
+                  },
+                  OVERLAY_SET_STATE_DEBUGGING: function (e) {
+                      let { enabled: t } = e;
+                      return (
+                          t
+                              ? null == E &&
+                                (E = setInterval(() => {
+                                    f?.getDebuggingState?.((e) => {
+                                        s()(i, e) || ((i = e), N.emitChange());
+                                    });
+                                }, 300))
+                              : null != E && (clearInterval(E), (E = null)),
+                          !0
+                      );
+                  },
+                  OVERLAY_RENDER_DEBUG_MODE: function (e) {
+                      let { enabled: t, mode: n } = e;
+                      t ? p.add(n) : p.delete(n), (p = new Set(p));
+                  },
+                  OVERLAY_SET_DETAILED_LOGGING: function (e) {
+                      let { enabled: t } = e;
+                      f?.setDetailedLogging?.(t);
+                  },
+                  OVERLAY_ADD_DEBUG_BREADCRUMB: function (e) {
+                      let {
+                          breadcrumb: { pid: t, name: n, data: i, type: r, logType: s },
+                      } = e;
+                      return (
+                          !(function (e, t, n, i) {
+                              let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _.QJ.Info,
+                                  s = performance.timeOrigin + performance.now(),
+                                  a = I(s);
+                              y({
+                                  id: a,
+                                  key: a,
+                                  nativeId: null,
+                                  timestamp: s,
+                                  name: e,
+                                  data: t,
+                                  type: n,
+                                  pid: i,
+                                  logType: r,
+                                  stack: void 0,
+                              });
+                          })(n, i ?? {}, r, t, s),
+                          !0
+                      );
+                  },
+                  OVERLAY_SET_MODULE_LOGGING: function (e) {
+                      let { enabled: t } = e;
+                      return (
+                          t
+                              ? null == m &&
+                                (m = setInterval(() => {
+                                    let e = f?.getLastAssociatedPID() ?? null;
+                                    f?.getNativeBreadcrumbs({ minBreadcrumbId: S }, (t) => {
+                                        let { breadcrumbs: n } = t;
+                                        for (let t of n)
+                                            !(function (e, t, n) {
+                                                let i,
+                                                    r = A(e);
+                                                if (null == r) throw Error("Native breadcrumb has no native id");
+                                                T.size(r) > 0 ||
+                                                    ((S = Math.max(S, Number(e.id))),
+                                                    y({
+                                                        id: (i = I(e.timestamp)),
+                                                        key: i,
+                                                        nativeId: Number(e.id),
+                                                        timestamp: e.timestamp,
+                                                        name: e.name,
+                                                        data: e.data,
+                                                        type: t,
+                                                        pid: n,
+                                                        logType: _.QJ.Info,
+                                                        stack: Error().stack ?? "",
+                                                    }));
+                                            })(t, _.ON.NativeOOP, e ?? c.UNSET_PID);
+                                        N.emitChange();
+                                    });
+                                }, 3e3))
+                              : null != m && (clearInterval(m), (m = null)),
+                          !0
+                      );
+                  },
+              },
+    ),
+    v = N;

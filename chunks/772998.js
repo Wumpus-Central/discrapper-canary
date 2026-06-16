@@ -1,1 +1,1 @@
-e.exports={J:"svg__2338f"}
+e.exports = { J: "svg__2338f" };

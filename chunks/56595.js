@@ -1,1 +1,5 @@
-"use strict";function i(e){return e.moderatorReporting?.moderatorReportingEnabled??!1}n.d(t,{A:()=>i})
+"use strict";
+function i(e) {
+    return e.moderatorReporting?.moderatorReportingEnabled ?? !1;
+}
+n.d(t, { A: () => i });

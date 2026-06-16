@@ -1,1 +1,29 @@
-n.d(t,{A:()=>c});var i=n(17928),l=n(228366),s=n(652215);let r=null,a={};class o extends i.Ay.Store{static displayName="CodedLinkNativeAppStateStore";getState(e){return a[e]}getHighestState(){return r}}let c=new o(l.h,{NATIVE_APP_MODAL_OPENING:function(e){let{code:t}=e;a[t]=s.fAW.OPENING,null===r&&(r=s.fAW.OPENING)},NATIVE_APP_MODAL_OPENED:function(e){let{code:t}=e;a[t]=s.fAW.OPEN,r=s.fAW.OPEN},NATIVE_APP_MODAL_OPEN_FAILED:function(e){let{code:t}=e;a[t]=s.fAW.OPEN_FAIL,(null===r||r===s.fAW.OPENING)&&(r=s.fAW.OPEN_FAIL)}})
+n.d(t, { A: () => c });
+var i = n(17928),
+    l = n(228366),
+    s = n(652215);
+let r = null,
+    a = {};
+class o extends i.Ay.Store {
+    static displayName = "CodedLinkNativeAppStateStore";
+    getState(e) {
+        return a[e];
+    }
+    getHighestState() {
+        return r;
+    }
+}
+let c = new o(l.h, {
+    NATIVE_APP_MODAL_OPENING: function (e) {
+        let { code: t } = e;
+        (a[t] = s.fAW.OPENING), null === r && (r = s.fAW.OPENING);
+    },
+    NATIVE_APP_MODAL_OPENED: function (e) {
+        let { code: t } = e;
+        (a[t] = s.fAW.OPEN), (r = s.fAW.OPEN);
+    },
+    NATIVE_APP_MODAL_OPEN_FAILED: function (e) {
+        let { code: t } = e;
+        (a[t] = s.fAW.OPEN_FAIL), (null === r || r === s.fAW.OPENING) && (r = s.fAW.OPEN_FAIL);
+    },
+});

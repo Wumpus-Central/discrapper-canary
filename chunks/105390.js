@@ -1,1 +1,97 @@
-n.d(t,{Ag:()=>f,MA:()=>v,fY:()=>S});var i=n(627968),s=n(64700),l=n(503698),r=n.n(l),a=n(990078),o=n(406810),d=n(834730),h=n(496431),u=n(58703),c=n(428262),g=n(234419),C=n(99462),p=n(788868),I=n(375708),y=n(386667);function A(e){let{isTabSelected:t,expiresAt:n,badgeCopy:l,className:c,tooltipTextOverride:g,tooltipPosition:C,hideTooltip:p=!1}=e,A=s.useMemo(()=>Date.parse(n),[n]),f=(0,h.A)(A,6e4);if(Object.values(f).every(e=>0===e))return null;let S=(0,i.jsxs)("div",{className:r()(y.Fg,y.C8,c,{[y.WO]:t}),children:[(0,i.jsx)(o.O,{size:"custom",width:16,height:16,color:"currentColor",className:y._q}),(0,i.jsx)(d.E,{variant:"eyebrow",color:"text-strong",children:l})]});return p?S:(0,i.jsx)(a.m,{text:null!=g?g:(0,u.uN)(f,{days:I.t.qVGNkU,hours:I.t.wyg9a9,minutes:I.t.IzmIlV}),position:null!=C?C:"top",children:S})}function f(e){let{isTabSelected:t,trialOffer:n}=e,s=(0,g.V)()?.subscription_trial,l=(0,c.tS)({intervalType:s?.interval,intervalCount:s?.interval_count}),r=n.trial_id===p.Tt,a=(0,C.Fu)(n);return(0,i.jsx)(v,{isTabSelected:t,badgeCopy:l,offerExpiresAt:n.expires_at,tooltipTextOverride:a,tooltipPosition:"right",hideTooltip:r})}function S(e){let{isTabSelected:t,userDiscount:n,includesAmountOff:s}=e,l=I.intl.formatToPlainString(I.t.iiLbvu,{percent:n.discount.amount}),r=s?l:I.intl.string(I.t["/DTtr6"]),a=n.expiresAt?.toISOString()??null,o=(0,C.__)(n);return(0,i.jsx)(v,{isTabSelected:t,badgeCopy:r,offerExpiresAt:a,tooltipTextOverride:o,tooltipPosition:"right"})}function v(e){let{isTabSelected:t,badgeCopy:n,offerExpiresAt:s,tooltipTextOverride:l,tooltipPosition:a,hideTooltip:o}=e;return null!=s?(0,i.jsx)(A,{expiresAt:s,isTabSelected:t,badgeCopy:n,tooltipTextOverride:l,tooltipPosition:a,hideTooltip:o}):(0,i.jsx)("div",{className:r()(y.Fg,y.AT),children:(0,i.jsx)(d.E,{variant:"eyebrow",className:y.md,children:n})})}
+"use strict";
+n.d(t, { Ag: () => A, MA: () => T, fY: () => I });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(990078),
+    l = n(406810),
+    u = n(834730),
+    c = n(496431),
+    d = n(58703),
+    _ = n(428262),
+    h = n(234419),
+    f = n(99462),
+    p = n(788868),
+    E = n(375708),
+    m = n(386667);
+function g(e) {
+    let {
+            isTabSelected: t,
+            expiresAt: n,
+            badgeCopy: s,
+            className: _,
+            tooltipTextOverride: h,
+            tooltipPosition: f,
+            hideTooltip: p = !1,
+        } = e,
+        g = r.useMemo(() => Date.parse(n), [n]),
+        A = (0, c.A)(g, 6e4);
+    if (Object.values(A).every((e) => 0 === e)) return null;
+    let I = (0, i.jsxs)("div", {
+        className: a()(m.Fg, m.C8, _, { [m.WO]: t }),
+        children: [
+            (0, i.jsx)(l.O, { size: "custom", width: 16, height: 16, color: "currentColor", className: m._q }),
+            (0, i.jsx)(u.E, { variant: "eyebrow", color: "text-strong", children: s }),
+        ],
+    });
+    return p
+        ? I
+        : (0, i.jsx)(o.m, {
+              text: null != h ? h : (0, d.uN)(A, { days: E.t.qVGNkU, hours: E.t.wyg9a9, minutes: E.t.IzmIlV }),
+              position: null != f ? f : "top",
+              children: I,
+          });
+}
+function A(e) {
+    let { isTabSelected: t, trialOffer: n } = e,
+        r = (0, h.V)()?.subscription_trial,
+        s = (0, _.tS)({ intervalType: r?.interval, intervalCount: r?.interval_count }),
+        a = n.trial_id === p.Tt,
+        o = (0, f.Fu)(n);
+    return (0, i.jsx)(T, {
+        isTabSelected: t,
+        badgeCopy: s,
+        offerExpiresAt: n.expires_at,
+        tooltipTextOverride: o,
+        tooltipPosition: "right",
+        hideTooltip: a,
+    });
+}
+function I(e) {
+    let { isTabSelected: t, userDiscount: n, includesAmountOff: r } = e,
+        s = E.intl.formatToPlainString(E.t.iiLbvu, { percent: n.discount.amount }),
+        a = r ? s : E.intl.string(E.t["/DTtr6"]),
+        o = n.expiresAt?.toISOString() ?? null,
+        l = (0, f.__)(n);
+    return (0, i.jsx)(T, {
+        isTabSelected: t,
+        badgeCopy: a,
+        offerExpiresAt: o,
+        tooltipTextOverride: l,
+        tooltipPosition: "right",
+    });
+}
+function T(e) {
+    let {
+        isTabSelected: t,
+        badgeCopy: n,
+        offerExpiresAt: r,
+        tooltipTextOverride: s,
+        tooltipPosition: o,
+        hideTooltip: l,
+    } = e;
+    return null != r
+        ? (0, i.jsx)(g, {
+              expiresAt: r,
+              isTabSelected: t,
+              badgeCopy: n,
+              tooltipTextOverride: s,
+              tooltipPosition: o,
+              hideTooltip: l,
+          })
+        : (0, i.jsx)("div", {
+              className: a()(m.Fg, m.AT),
+              children: (0, i.jsx)(u.E, { variant: "eyebrow", className: m.md, children: n }),
+          });
+}

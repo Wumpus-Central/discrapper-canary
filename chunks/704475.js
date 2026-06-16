@@ -1,1 +1,1 @@
-e.exports={h:"description_cd2e37"}
+d.exports = { h: "description_cd2e37" };

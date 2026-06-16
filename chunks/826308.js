@@ -1,1 +1,32 @@
-l.d(n,{A:()=>h});var o=l(627968),t=l(64700),c=l(284009),a=l.n(c),s=l(477782),i=l(7689),d=l(174459),r=l(723702),u=l(652215),p=l(375708);function h(e){let n=t.useCallback(()=>{a()(null!=e,"text cannot be null"),d.default.track(u.HAw.MESSAGE_MENU_GOOGLE_SEARCHED),window.open(`https://www.google.com/search?q=${encodeURIComponent(e)}`,"_blank")},[e]);return r.isPlatformEmbedded&&null!=e&&e?.length!==0?[(0,o.jsx)(s.Dr,{id:"search-google",label:p.intl.string(p.t["Rd/Mko"]),leadingAccessory:{type:"icon",icon:i.$},action:n},"search-google")]:null}
+l.d(n, { A: () => h });
+var o = l(627968),
+    t = l(64700),
+    c = l(284009),
+    a = l.n(c),
+    s = l(477782),
+    i = l(7689),
+    d = l(174459),
+    r = l(723702),
+    u = l(652215),
+    p = l(375708);
+function h(e) {
+    let n = t.useCallback(() => {
+        a()(null != e, "text cannot be null"),
+            d.default.track(u.HAw.MESSAGE_MENU_GOOGLE_SEARCHED),
+            window.open(`https://www.google.com/search?q=${encodeURIComponent(e)}`, "_blank");
+    }, [e]);
+    return r.isPlatformEmbedded && null != e && e?.length !== 0
+        ? [
+              (0, o.jsx)(
+                  s.Dr,
+                  {
+                      id: "search-google",
+                      label: p.intl.string(p.t["Rd/Mko"]),
+                      leadingAccessory: { type: "icon", icon: i.$ },
+                      action: n,
+                  },
+                  "search-google",
+              ),
+          ]
+        : null;
+}

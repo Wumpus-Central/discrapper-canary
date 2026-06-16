@@ -1,1 +1,5 @@
-u.exports=function(u){return function(f){return null==u?void 0:u[f]}}
+u.exports = function (u) {
+    return function (f) {
+        return null == u ? void 0 : u[f];
+    };
+};

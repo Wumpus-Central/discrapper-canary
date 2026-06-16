@@ -1,1 +1,9 @@
-n.d(e,{W:()=>s});var t=n(922590),i=n(652215);function s(r){let e=(0,t.KL)(r,i.eA$.FRIEND),n=(0,t.KL)(r,i.eA$.PENDING_INCOMING);return e||n}
+"use strict";
+n.d(t, { W: () => s });
+var i = n(922590),
+    r = n(652215);
+function s(e) {
+    let t = (0, i.KL)(e, r.eA$.FRIEND),
+        n = (0, i.KL)(e, r.eA$.PENDING_INCOMING);
+    return t || n;
+}

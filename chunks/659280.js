@@ -1,1 +1,603 @@
-"use strict";n.d(t,{Sz:()=>ec,Ay:()=>eR,aI:()=>eu});var l=n(627968),i=n(64700),r=n(503698),s=n.n(r),a=n(735438),o=n.n(a),u=n(837381),c=n(939249),d=n(534514),m=n(97808),h=n(778712),p=n(36075),f=n(545442),g=n(678708),E=n(88187),A=n(775602),C=n(392054),x=n(17928),I=n(990078),_=n(834730),S=n(81093);let y=e=>{let{children:t,className:n}=e;return(0,l.jsx)("div",{className:s()(S.um,n),children:t})},v=e=>{let{children:t,className:n}=e;return(0,l.jsx)("div",{className:s()(S.Ov,n),children:t})},T=e=>{let{children:t,className:n}=e;return(0,l.jsx)("div",{className:s()(S.wq,n),children:t})},N=e=>{let{children:t,className:n}=e;return(0,l.jsx)(_.E,{className:s()(n,S.hf),color:"interactive-text-active",variant:"text-md/normal",children:t})},j=e=>{let{children:t,className:n}=e;return(0,l.jsx)(_.E,{className:s()(n,S.p3),color:"interactive-text-default",variant:"text-xs/normal",children:t})},b=e=>{let{children:t,className:n}=e;return(0,l.jsx)(_.E,{className:s()(n,S.I0),color:"interactive-text-default",variant:"text-xs/normal",children:t})};var R=n(696451),P=n(632533);function L(e){let{name:t,className:n,state:i,isInline:r,onClick:a}=e,o=null;i?.isActive&&!r?o=P.vu:i?.lastValidationResult?.success===!1?o=P.z3:i?.hasValue&&!r&&(o=P.hZ);let u=(0,l.jsx)(_.E,{variant:r?"text-md/normal":"text-sm/normal",color:"text-strong",className:s()(P.uK,{[P.mG]:r},o,n),children:t+(r?":":"")});return null==a?u:(0,l.jsx)(c.D,{className:P.vk,onClick:()=>a(t),children:u})}var M=n(664929);n(827669);var O=n(375708),w=n(577332);function k(e,t,n){return(0,l.jsx)(L,{className:w.uK,name:e.displayName,state:t,onClick:n},e.name)}function D(e){let{command:t,optionStates:n,onOptionClick:r}=e,{requiredOptions:s,setOptionalOptions:a,unsetOptionalOptions:o}=i.useMemo(()=>{let e=t.options?.filter(e=>e.required)??[],l=t.options?.filter(e=>!e.required)??[];return{requiredOptions:e,setOptionalOptions:l.filter(e=>n?.[e.name]?.hasValue),unsetOptionalOptions:l.filter(e=>!n?.[e.name]?.hasValue)}},[t.options,n]),u=(0,l.jsx)("div",{className:w.$2,children:o.map(e=>(0,l.jsx)(_.E,{variant:"text-sm/normal",children:e.displayName},e.name))}),c=s.map(e=>k(e,n?.[e.name],r)),m=a.length>0?(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(d.D,{className:w.Ki,variant:"heading-deprecated-12/semibold",children:O.intl.string(O.t["5C107K"])}),a.map(e=>k(e,n?.[e.name],r))]}):null,h=o.length>0?(0,l.jsx)(I.m,{__unsupportedReactNodeAsText:u,"aria-label":!1,delay:200,children:(0,l.jsx)(_.E,{className:w.kP,color:"text-muted",variant:"text-sm/normal",children:0===a.length?O.intl.formatToPlainString(O.t["0mI72g"],{count:o.length}):O.intl.formatToPlainString(O.t.BP8N0K,{count:o.length})})}):null;return(0,l.jsxs)(l.Fragment,{children:[c,null!=m||null!=h?(0,l.jsxs)("div",{className:w.gM,children:[m,h]}):null]})}function U(e){let t,{command:n,activeOptionName:r,channel:a,showOptions:o,showImage:u,optionStates:c,onOptionClick:d,section:m,isSelectable:h=!0}=e,p=i.useMemo(()=>n?.options?.find(e=>e.name===r),[r,n]),f=null!=r?c?.[r]:null;t=null!=f&&f.lastValidationResult?.success===!1?f.lastValidationResult.error??"":null;let g=u&&null!=m?(0,M.Rg)(m):null,E=(0,x.bG)([R.Ay],()=>{if(null!=a.guild_id&&m?.botId!=null)return R.Ay.getMember(a.guild_id,m.botId)?.nick});return(0,l.jsxs)("div",{className:s()(w.iE,h?null:w.r9),children:[null!=g?(0,l.jsx)(g,{className:w.Sl,channel:a,section:m,width:32,height:32}):null,(0,l.jsxs)("div",{className:w.QR,children:[(0,l.jsxs)("div",{className:w.nY,children:[(0,l.jsx)(N,{className:w.DD,children:"/"+n.displayName}),o?(0,l.jsx)(D,{command:n,optionStates:c,onOptionClick:d}):null]}),(0,l.jsx)(j,{className:s()(w.h_,null!=t?w.z3:null),children:t??p?.displayDescription??n.displayDescription})]}),(0,l.jsx)(b,{className:w.sP,children:E??m?.name})]})}var G=n(746388),F=n(47167),V=n(713654),B=n(688810),H=n(573435),W=n(174459),K=n(486020),Y=n(652215),z=n(307731),Z=n(788868),q=n(202606);let $=e=>{let{emojis:t}=e,{analyticsLocations:n}=(0,B.Ay)();i.useEffect(()=>{W.default.track(Y.HAw.PREMIUM_UPSELL_VIEWED,{type:Z.e.EMOJI_AUTOCOMPLETE_INLINE,location_stack:n})},[n]);let r=(0,l.jsx)("div",{className:q.gm,children:t.slice(0,3).map((e,t)=>{if(null==e.id)return null;let n=(0,l.jsx)("div",{className:q.rT,children:(0,l.jsx)("img",{alt:e.name,className:q.Zg,src:K.Ay.getEmojiURL({id:e.id,animated:e.animated,size:z.EMOJI_URL_BASE_SIZE})})},e.id);return 2===t?n:(0,l.jsx)(H.Ay,{className:q.j3,mask:H.Ay.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI,children:n},e.id)})});return(0,l.jsxs)(y,{className:q.UX,children:[(0,l.jsx)(v,{children:(0,l.jsx)(N,{children:O.intl.format(O.t.uEky42,{count:t.length})})}),(0,l.jsx)(b,{children:r})]})};var X=n(785562),J=n(973664),Q=n(967144),ee=n(565645),et=n(71393);function en(e){let{sound:t}=e,n=(0,x.bG)([et.A],()=>"0"===t.guildId?O.intl.string(O.t.Rtvk9X):et.A.getGuild(t.guildId)?.name);return(0,l.jsxs)(y,{children:[(null!=t.emojiId||null!=t.emojiName)&&(0,l.jsx)(T,{children:(0,l.jsx)(ee.A,{emojiId:t.emojiId,emojiName:t.emojiName})}),(0,l.jsx)(v,{children:(0,l.jsx)(N,{children:t.name})}),null!=n&&(0,l.jsx)(b,{children:n})]})}n(980504);var el=n(750385),ei=n(68935),er=n(885386),es=n(994500),ea=n(287809),eo=n(427262);function eu(e){return null!=e?`autocomplete-${e}`:null}function ec(e){return`autocomplete-${e}-title`}let ed=i.createContext(null);class em extends i.PureComponent{selectable=!0;layoutClass=S.rT;constructor(e){super(e),this.state={hovered:!1}}isSelectable(){return this.selectable}renderContent(){throw Error("AutocompleteRow: renderContent must be extended")}renderClickable(e){let{layoutClass:t,props:{className:n,index:i,selected:r}}=this;return this.isSelectable()?(0,l.jsx)(c.D,{...e,className:s()(S.vk,n,t),id:eu(i)??void 0,onClick:this.handleClick,onMouseMove:()=>{this.setState({hovered:!0}),this.handleMouseEnter()},onMouseLeave:()=>this.setState({hovered:!1}),role:"option","aria-selected":r,children:(0,l.jsx)("div",{className:S.E3,children:this.renderContent()})}):(0,l.jsx)("div",{className:s()(S.vk,n,t),id:eu(i)??void 0,role:"none",children:(0,l.jsx)("div",{className:S.E3,children:this.renderContent()})})}render(){let{index:e}=this.props;return this.isSelectable()?(0,l.jsx)(u.tG,{id:`${e}`,children:e=>this.renderClickable(e)}):this.renderClickable()}handleMouseEnter=()=>{let{onHover:e,index:t,selected:n}=this.props;null==e||n||"number"!=typeof t||e(t)};handleClick=e=>{let{onClick:t,index:n}=this.props;null!=t&&"number"==typeof n&&t(n,e)}}class eh extends em{renderContent(){let{text:e,description:t,badge:n}=this.props,i=(0,l.jsx)(N,{children:e});return(0,l.jsxs)(y,{children:[(0,l.jsx)(v,{children:null!=n?(0,l.jsxs)("div",{className:S.QN,children:[i,n]}):i}),null!=t?(0,l.jsx)(b,{children:t}):null]})}}function ep(e){let t=i.useMemo(()=>o().random(60,120),[]);return(0,l.jsx)("div",{className:S.E3,"aria-busy":!0,children:(0,l.jsx)(y,{children:(0,l.jsx)(v,{children:(0,l.jsx)(N,{children:(0,l.jsx)("div",{className:S.M,style:{width:t}})})})})})}function ef(e){let{title:t,className:n,children:r}=e,a=i.useContext(ed);return(0,l.jsx)("div",{className:S.E3,children:(0,l.jsxs)(d.D,{id:ec(a.id),className:s()(S.eu,n),variant:"heading-deprecated-12/semibold",children:[t,r]})})}class eg extends em{layoutClass=S.fF;selectable=!1;renderContent(){let{className:e}=this.props;return(0,l.jsx)("div",{className:s()(e,S.yF)})}}class eE extends em{renderContent(){let{user:e,nick:t,status:n,hidePersonalInformation:i,guildId:r}=this.props,s=null==r?es.A.getNickname(e.id):null;return(0,l.jsxs)(y,{children:[(0,l.jsx)(T,{children:(0,l.jsx)(m.eu,{size:h._3.SIZE_24,src:e.getAvatarURL(r,24),"aria-hidden":!0,status:n})}),(0,l.jsx)(v,{children:(0,l.jsx)(N,{children:t??s??eo.Ay.getName(e)})}),(0,l.jsxs)(b,{children:[eo.Ay.getUserTag(e,{mode:"username",identifiable:i?"never":"always"}),i||e.hasUniqueUsername()?null:(0,l.jsxs)("span",{className:S.T,children:["#",e.discriminator]})]})]})}}class eA extends em{renderContent(){let{role:e,hideDescription:t,guildId:n}=this.props,{colorString:i,colorStrings:r}=e,a="dot"===A.Ay.roleStyle,o="username"===A.Ay.roleStyle&&(null!=i||null!=r),u=(0,Q.hH)(n,e,r),c=null!=u&&o,{gradientStyle:d,gradientClassname:m}=(0,p.Wq)({colorStrings:r,useReducedMotion:A.Ay.useReducedMotion,roleStyle:"username",includeConvenienceGlow:!0}),h=o?{...c?d:{color:null!=i?i:void 0}}:void 0;return(0,l.jsxs)(y,{children:[(0,l.jsx)(v,{children:(0,l.jsxs)(N,{children:[a&&(0,l.jsx)(f.W,{className:S.m4,color:i,colors:u,tooltip:!1}),(0,l.jsxs)("span",{className:s()({[m]:c}),style:h,"data-text":c?`@${e.name}`:void 0,children:["@",e.name]})]})}),t?null:(0,l.jsx)(b,{children:O.intl.string(O.t["/91tbr"])})]})}}class eC extends em{renderContent(){let{timestamp:e,description:t}=this.props;return(0,l.jsxs)(y,{children:[(0,l.jsx)(v,{children:(0,l.jsx)(N,{children:(0,l.jsx)(X.A,{node:e,showTooltip:!1})})}),null!=t?(0,l.jsx)(b,{children:t}):null]})}}class ex extends em{renderContent(){let{channel:e,category:t}=this.props,n=e.type===Y.rbe.GUILD_CATEGORY?g.s:(0,V.gU)(e);return(0,l.jsxs)(y,{children:[null!=n&&(0,l.jsx)(T,{children:(0,l.jsx)(n,{className:S.Kk})}),(0,l.jsx)(v,{children:(0,l.jsx)(N,{children:(0,F.m1)(e,ea.default,es.A)})}),null!=t?(0,l.jsx)(b,{children:t.name}):null]})}}class eI extends em{renderContent(){let{command:e}=this.props;return(0,l.jsxs)(y,{children:[(0,l.jsx)(T,{children:(0,l.jsx)(E.F,{size:"xs",color:"currentColor",className:S.Kk,colorClass:S.t4})}),(0,l.jsx)(v,{children:(0,l.jsx)(N,{children:e.displayName})}),(0,l.jsx)(b,{children:e.displayDescription})]})}}class e_ extends em{isSelectable(){return this.props.command.inputType!==C.y$.PLACEHOLDER}renderContent(){let{command:e,channel:t,showImage:n,section:i,selected:r}=this.props,{hovered:s}=this.state,a=this.isSelectable();return e.inputType===C.y$.PLACEHOLDER?(0,l.jsx)(G.A,{}):(0,l.jsx)(U,{command:e,channel:t,showImage:n,showOptions:s||a&&r,section:i,isSelectable:a})}}class eS extends em{layoutClass=s()(S.rT,S.Mf);renderContent(){let{emoji:e,sentinel:t,guild:n}=this.props,i=er.Sf.getSetting(),r=null!=e.id||""!==e.url?(0,l.jsx)("img",{alt:"",className:S.mp,src:null!=e.id?K.Ay.getEmojiURL({id:e.id,animated:e.animated&&i,size:z.EMOJI_URL_BASE_SIZE}):e.url}):(0,l.jsx)("span",{className:S.nT,children:e.surrogates}),s=null!=n?(0,l.jsx)(b,{children:n.name}):null;return(0,l.jsxs)(y,{children:[(0,l.jsx)(T,{children:r}),(0,l.jsx)(v,{children:(0,l.jsxs)(N,{children:[t,e.name,t]})}),s]})}}class ey extends em{layoutClass=s()(S.rT,S.Mf);renderContent(){let e,{queryMatch:t,renderSticker:n,selected:i,sticker:r}=this.props,{hovered:s}=this.state;return(0,ei.FD)(r)?e=el.A.getStickerPack(r.pack_id)?.name:(0,ei.Xw)(r)&&(e=et.A.getGuild(r.guild_id)?.name),(0,l.jsxs)(y,{children:[(0,l.jsx)(T,{children:n(r,s||!0===i)}),(0,l.jsxs)(v,{children:[(0,l.jsx)(N,{children:r.name}),null!=t&&(0,l.jsx)(j,{children:O.intl.format(O.t.PAutaQ,{queryMatch:t})})]}),null!=e&&(0,l.jsx)(b,{children:e})]})}}class ev extends em{layoutClass=S.ju;renderContent(){let{width:e,height:t,src:n}=this.props;return(0,l.jsx)("img",{alt:"",src:n,width:e,height:t})}}class eT extends em{renderContent(){return(0,l.jsx)($,{emojis:this.props.emojis})}}class eN extends em{renderContent(){return(0,l.jsx)(en,{...this.props})}}class ej extends em{renderContent(){return(0,l.jsxs)(y,{children:[(0,l.jsx)(T,{children:(0,l.jsx)(J.A,{gameId:this.props.game.id,gameIconHash:this.props.game.icon_hash,iconClassName:S.Kk})}),(0,l.jsx)(v,{children:(0,l.jsx)(N,{children:this.props.game.name})})]})}}class eb extends i.PureComponent{static Generic=eh;static Loading=ep;static Title=ef;static Divider=eg;static User=eE;static Role=eA;static Channel=ex;static Command=eI;static NewCommand=e_;static Emoji=eS;static GIFIntegration=ev;static Sticker=ey;static EmojiUpsell=eT;static Soundmoji=eN;static Game=ej;static Timestamp=eC;render(){let{children:e,className:t,innerClassName:n,id:r,...a}=this.props;return i.Children.count(e)>0?(0,l.jsx)(ed.Provider,{value:{id:r??""},children:(0,l.jsx)("div",{className:s()(S.nx,t),children:(0,l.jsx)("div",{className:s()(S.Fv,n),...a,children:e})})}):null}}let eR=eb
+"use strict";
+n.d(t, { Sz: () => ec, Ay: () => eD, aI: () => eu });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(735438),
+    l = n.n(o),
+    u = n(837381),
+    c = n(939249),
+    d = n(534514),
+    _ = n(97808),
+    h = n(778712),
+    f = n(36075),
+    p = n(545442),
+    E = n(678708),
+    m = n(88187),
+    g = n(775602),
+    A = n(392054),
+    I = n(17928),
+    T = n(990078),
+    S = n(834730),
+    y = n(81093);
+let C = (e) => {
+        let { children: t, className: n } = e;
+        return (0, i.jsx)("div", { className: a()(y.um, n), children: t });
+    },
+    N = (e) => {
+        let { children: t, className: n } = e;
+        return (0, i.jsx)("div", { className: a()(y.Ov, n), children: t });
+    },
+    v = (e) => {
+        let { children: t, className: n } = e;
+        return (0, i.jsx)("div", { className: a()(y.wq, n), children: t });
+    },
+    R = (e) => {
+        let { children: t, className: n } = e;
+        return (0, i.jsx)(S.E, {
+            className: a()(n, y.hf),
+            color: "interactive-text-active",
+            variant: "text-md/normal",
+            children: t,
+        });
+    },
+    O = (e) => {
+        let { children: t, className: n } = e;
+        return (0, i.jsx)(S.E, {
+            className: a()(n, y.p3),
+            color: "interactive-text-default",
+            variant: "text-xs/normal",
+            children: t,
+        });
+    },
+    b = (e) => {
+        let { children: t, className: n } = e;
+        return (0, i.jsx)(S.E, {
+            className: a()(n, y.I0),
+            color: "interactive-text-default",
+            variant: "text-xs/normal",
+            children: t,
+        });
+    };
+var D = n(696451),
+    L = n(632533);
+function w(e) {
+    let { name: t, className: n, state: r, isInline: s, onClick: o } = e,
+        l = null;
+    r?.isActive && !s
+        ? (l = L.vu)
+        : r?.lastValidationResult?.success === !1
+          ? (l = L.z3)
+          : r?.hasValue && !s && (l = L.hZ);
+    let u = (0, i.jsx)(S.E, {
+        variant: s ? "text-md/normal" : "text-sm/normal",
+        color: "text-strong",
+        className: a()(L.uK, { [L.mG]: s }, l, n),
+        children: t + (s ? ":" : ""),
+    });
+    return null == o ? u : (0, i.jsx)(c.D, { className: L.vk, onClick: () => o(t), children: u });
+}
+var M = n(664929);
+n(827669);
+var P = n(375708),
+    x = n(577332);
+function k(e, t, n) {
+    return (0, i.jsx)(w, { className: x.uK, name: e.displayName, state: t, onClick: n }, e.name);
+}
+function U(e) {
+    let { command: t, optionStates: n, onOptionClick: s } = e,
+        {
+            requiredOptions: a,
+            setOptionalOptions: o,
+            unsetOptionalOptions: l,
+        } = r.useMemo(() => {
+            let e = t.options?.filter((e) => e.required) ?? [],
+                i = t.options?.filter((e) => !e.required) ?? [];
+            return {
+                requiredOptions: e,
+                setOptionalOptions: i.filter((e) => n?.[e.name]?.hasValue),
+                unsetOptionalOptions: i.filter((e) => !n?.[e.name]?.hasValue),
+            };
+        }, [t.options, n]),
+        u = (0, i.jsx)("div", {
+            className: x.$2,
+            children: l.map((e) => (0, i.jsx)(S.E, { variant: "text-sm/normal", children: e.displayName }, e.name)),
+        }),
+        c = a.map((e) => k(e, n?.[e.name], s)),
+        _ =
+            o.length > 0
+                ? (0, i.jsxs)(i.Fragment, {
+                      children: [
+                          (0, i.jsx)(d.D, {
+                              className: x.Ki,
+                              variant: "heading-deprecated-12/semibold",
+                              children: P.intl.string(P.t["5C107K"]),
+                          }),
+                          o.map((e) => k(e, n?.[e.name], s)),
+                      ],
+                  })
+                : null,
+        h =
+            l.length > 0
+                ? (0, i.jsx)(T.m, {
+                      __unsupportedReactNodeAsText: u,
+                      "aria-label": !1,
+                      delay: 200,
+                      children: (0, i.jsx)(S.E, {
+                          className: x.kP,
+                          color: "text-muted",
+                          variant: "text-sm/normal",
+                          children:
+                              0 === o.length
+                                  ? P.intl.formatToPlainString(P.t["0mI72g"], { count: l.length })
+                                  : P.intl.formatToPlainString(P.t.BP8N0K, { count: l.length }),
+                      }),
+                  })
+                : null;
+    return (0, i.jsxs)(i.Fragment, {
+        children: [c, null != _ || null != h ? (0, i.jsxs)("div", { className: x.gM, children: [_, h] }) : null],
+    });
+}
+function G(e) {
+    let t,
+        {
+            command: n,
+            activeOptionName: s,
+            channel: o,
+            showOptions: l,
+            showImage: u,
+            optionStates: c,
+            onOptionClick: d,
+            section: _,
+            isSelectable: h = !0,
+        } = e,
+        f = r.useMemo(() => n?.options?.find((e) => e.name === s), [s, n]),
+        p = null != s ? c?.[s] : null;
+    t = null != p && p.lastValidationResult?.success === !1 ? (p.lastValidationResult.error ?? "") : null;
+    let E = u && null != _ ? (0, M.Rg)(_) : null,
+        m = (0, I.bG)([D.Ay], () => {
+            if (null != o.guild_id && _?.botId != null) return D.Ay.getMember(o.guild_id, _.botId)?.nick;
+        });
+    return (0, i.jsxs)("div", {
+        className: a()(x.iE, h ? null : x.r9),
+        children: [
+            null != E ? (0, i.jsx)(E, { className: x.Sl, channel: o, section: _, width: 32, height: 32 }) : null,
+            (0, i.jsxs)("div", {
+                className: x.QR,
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: x.nY,
+                        children: [
+                            (0, i.jsx)(R, { className: x.DD, children: "/" + n.displayName }),
+                            l ? (0, i.jsx)(U, { command: n, optionStates: c, onOptionClick: d }) : null,
+                        ],
+                    }),
+                    (0, i.jsx)(O, {
+                        className: a()(x.h_, null != t ? x.z3 : null),
+                        children: t ?? f?.displayDescription ?? n.displayDescription,
+                    }),
+                ],
+            }),
+            (0, i.jsx)(b, { className: x.sP, children: m ?? _?.name }),
+        ],
+    });
+}
+var F = n(746388),
+    V = n(47167),
+    B = n(713654),
+    j = n(688810),
+    H = n(573435),
+    Y = n(174459),
+    W = n(486020),
+    K = n(652215),
+    $ = n(307731),
+    z = n(788868),
+    q = n(202606);
+let Z = (e) => {
+    let { emojis: t } = e,
+        { analyticsLocations: n } = (0, j.Ay)();
+    r.useEffect(() => {
+        Y.default.track(K.HAw.PREMIUM_UPSELL_VIEWED, { type: z.e.EMOJI_AUTOCOMPLETE_INLINE, location_stack: n });
+    }, [n]);
+    let s = (0, i.jsx)("div", {
+        className: q.gm,
+        children: t.slice(0, 3).map((e, t) => {
+            if (null == e.id) return null;
+            let n = (0, i.jsx)(
+                "div",
+                {
+                    className: q.rT,
+                    children: (0, i.jsx)("img", {
+                        alt: e.name,
+                        className: q.Zg,
+                        src: W.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: $.EMOJI_URL_BASE_SIZE }),
+                    }),
+                },
+                e.id,
+            );
+            return 2 === t
+                ? n
+                : (0, i.jsx)(
+                      H.Ay,
+                      { className: q.j3, mask: H.Ay.Masks.AUTOCOMPLETE_EMOJI_UPSELL_EMOJI, children: n },
+                      e.id,
+                  );
+        }),
+    });
+    return (0, i.jsxs)(C, {
+        className: q.UX,
+        children: [
+            (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: P.intl.format(P.t.uEky42, { count: t.length }) }) }),
+            (0, i.jsx)(b, { children: s }),
+        ],
+    });
+};
+var X = n(785562),
+    Q = n(973664),
+    J = n(967144),
+    ee = n(565645),
+    et = n(71393);
+function en(e) {
+    let { sound: t } = e,
+        n = (0, I.bG)([et.A], () => ("0" === t.guildId ? P.intl.string(P.t.Rtvk9X) : et.A.getGuild(t.guildId)?.name));
+    return (0, i.jsxs)(C, {
+        children: [
+            (null != t.emojiId || null != t.emojiName) &&
+                (0, i.jsx)(v, { children: (0, i.jsx)(ee.A, { emojiId: t.emojiId, emojiName: t.emojiName }) }),
+            (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: t.name }) }),
+            null != n && (0, i.jsx)(b, { children: n }),
+        ],
+    });
+}
+n(980504);
+var ei = n(750385),
+    er = n(68935),
+    es = n(885386),
+    ea = n(994500),
+    eo = n(287809),
+    el = n(427262);
+function eu(e) {
+    return null != e ? `autocomplete-${e}` : null;
+}
+function ec(e) {
+    return `autocomplete-${e}-title`;
+}
+let ed = r.createContext(null);
+class e_ extends r.PureComponent {
+    selectable = !0;
+    layoutClass = y.rT;
+    constructor(e) {
+        super(e), (this.state = { hovered: !1 });
+    }
+    isSelectable() {
+        return this.selectable;
+    }
+    renderContent() {
+        throw Error("AutocompleteRow: renderContent must be extended");
+    }
+    renderClickable(e) {
+        let {
+            layoutClass: t,
+            props: { className: n, index: r, selected: s },
+        } = this;
+        return this.isSelectable()
+            ? (0, i.jsx)(c.D, {
+                  ...e,
+                  className: a()(y.vk, n, t),
+                  id: eu(r) ?? void 0,
+                  onClick: this.handleClick,
+                  onMouseMove: () => {
+                      this.setState({ hovered: !0 }), this.handleMouseEnter();
+                  },
+                  onMouseLeave: () => this.setState({ hovered: !1 }),
+                  role: "option",
+                  "aria-selected": s,
+                  children: (0, i.jsx)("div", { className: y.E3, children: this.renderContent() }),
+              })
+            : (0, i.jsx)("div", {
+                  className: a()(y.vk, n, t),
+                  id: eu(r) ?? void 0,
+                  role: "none",
+                  children: (0, i.jsx)("div", { className: y.E3, children: this.renderContent() }),
+              });
+    }
+    render() {
+        let { index: e } = this.props;
+        return this.isSelectable()
+            ? (0, i.jsx)(u.tG, { id: `${e}`, children: (e) => this.renderClickable(e) })
+            : this.renderClickable();
+    }
+    handleMouseEnter = () => {
+        let { onHover: e, index: t, selected: n } = this.props;
+        null == e || n || "number" != typeof t || e(t);
+    };
+    handleClick = (e) => {
+        let { onClick: t, index: n } = this.props;
+        null != t && "number" == typeof n && t(n, e);
+    };
+}
+class eh extends e_ {
+    renderContent() {
+        let { text: e, description: t, badge: n } = this.props,
+            r = (0, i.jsx)(R, { children: e });
+        return (0, i.jsxs)(C, {
+            children: [
+                (0, i.jsx)(N, { children: null != n ? (0, i.jsxs)("div", { className: y.QN, children: [r, n] }) : r }),
+                null != t ? (0, i.jsx)(b, { children: t }) : null,
+            ],
+        });
+    }
+}
+function ef(e) {
+    let t = r.useMemo(() => l().random(60, 120), []);
+    return (0, i.jsx)("div", {
+        className: y.E3,
+        "aria-busy": !0,
+        children: (0, i.jsx)(C, {
+            children: (0, i.jsx)(N, {
+                children: (0, i.jsx)(R, { children: (0, i.jsx)("div", { className: y.M, style: { width: t } }) }),
+            }),
+        }),
+    });
+}
+function ep(e) {
+    let { title: t, className: n, children: s } = e,
+        o = r.useContext(ed);
+    return (0, i.jsx)("div", {
+        className: y.E3,
+        children: (0, i.jsxs)(d.D, {
+            id: ec(o.id),
+            className: a()(y.eu, n),
+            variant: "heading-deprecated-12/semibold",
+            children: [t, s],
+        }),
+    });
+}
+class eE extends e_ {
+    layoutClass = y.fF;
+    selectable = !1;
+    renderContent() {
+        let { className: e } = this.props;
+        return (0, i.jsx)("div", { className: a()(e, y.yF) });
+    }
+}
+class em extends e_ {
+    renderContent() {
+        let { user: e, nick: t, status: n, hidePersonalInformation: r, guildId: s } = this.props,
+            a = null == s ? ea.A.getNickname(e.id) : null;
+        return (0, i.jsxs)(C, {
+            children: [
+                (0, i.jsx)(v, {
+                    children: (0, i.jsx)(_.eu, {
+                        size: h._3.SIZE_24,
+                        src: e.getAvatarURL(s, 24),
+                        "aria-hidden": !0,
+                        status: n,
+                    }),
+                }),
+                (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: t ?? a ?? el.Ay.getName(e) }) }),
+                (0, i.jsxs)(b, {
+                    children: [
+                        el.Ay.getUserTag(e, { mode: "username", identifiable: r ? "never" : "always" }),
+                        r || e.hasUniqueUsername()
+                            ? null
+                            : (0, i.jsxs)("span", { className: y.T, children: ["#", e.discriminator] }),
+                    ],
+                }),
+            ],
+        });
+    }
+}
+class eg extends e_ {
+    renderContent() {
+        let { role: e, hideDescription: t, guildId: n } = this.props,
+            { colorString: r, colorStrings: s } = e,
+            o = "dot" === g.Ay.roleStyle,
+            l = "username" === g.Ay.roleStyle && (null != r || null != s),
+            u = (0, J.hH)(n, e, s),
+            c = null != u && l,
+            { gradientStyle: d, gradientClassname: _ } = (0, f.Wq)({
+                colorStrings: s,
+                useReducedMotion: g.Ay.useReducedMotion,
+                roleStyle: "username",
+                includeConvenienceGlow: !0,
+            }),
+            h = l ? { ...(c ? d : { color: null != r ? r : void 0 }) } : void 0;
+        return (0, i.jsxs)(C, {
+            children: [
+                (0, i.jsx)(N, {
+                    children: (0, i.jsxs)(R, {
+                        children: [
+                            o && (0, i.jsx)(p.W, { className: y.m4, color: r, colors: u, tooltip: !1 }),
+                            (0, i.jsxs)("span", {
+                                className: a()({ [_]: c }),
+                                style: h,
+                                "data-text": c ? `@${e.name}` : void 0,
+                                children: ["@", e.name],
+                            }),
+                        ],
+                    }),
+                }),
+                t ? null : (0, i.jsx)(b, { children: P.intl.string(P.t["/91tbr"]) }),
+            ],
+        });
+    }
+}
+class eA extends e_ {
+    renderContent() {
+        let { timestamp: e, description: t } = this.props;
+        return (0, i.jsxs)(C, {
+            children: [
+                (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: (0, i.jsx)(X.A, { node: e, showTooltip: !1 }) }) }),
+                null != t ? (0, i.jsx)(b, { children: t }) : null,
+            ],
+        });
+    }
+}
+class eI extends e_ {
+    renderContent() {
+        let { channel: e, category: t } = this.props,
+            n = e.type === K.rbe.GUILD_CATEGORY ? E.s : (0, B.gU)(e);
+        return (0, i.jsxs)(C, {
+            children: [
+                null != n && (0, i.jsx)(v, { children: (0, i.jsx)(n, { className: y.Kk }) }),
+                (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: (0, V.m1)(e, eo.default, ea.A) }) }),
+                null != t ? (0, i.jsx)(b, { children: t.name }) : null,
+            ],
+        });
+    }
+}
+class eT extends e_ {
+    renderContent() {
+        let { command: e } = this.props;
+        return (0, i.jsxs)(C, {
+            children: [
+                (0, i.jsx)(v, {
+                    children: (0, i.jsx)(m.F, { size: "xs", color: "currentColor", className: y.Kk, colorClass: y.t4 }),
+                }),
+                (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: e.displayName }) }),
+                (0, i.jsx)(b, { children: e.displayDescription }),
+            ],
+        });
+    }
+}
+class eS extends e_ {
+    isSelectable() {
+        return this.props.command.inputType !== A.y$.PLACEHOLDER;
+    }
+    renderContent() {
+        let { command: e, channel: t, showImage: n, section: r, selected: s } = this.props,
+            { hovered: a } = this.state,
+            o = this.isSelectable();
+        return e.inputType === A.y$.PLACEHOLDER
+            ? (0, i.jsx)(F.A, {})
+            : (0, i.jsx)(G, {
+                  command: e,
+                  channel: t,
+                  showImage: n,
+                  showOptions: a || (o && s),
+                  section: r,
+                  isSelectable: o,
+              });
+    }
+}
+class ey extends e_ {
+    layoutClass = a()(y.rT, y.Mf);
+    renderContent() {
+        let { emoji: e, sentinel: t, guild: n } = this.props,
+            r = es.Sf.getSetting(),
+            s =
+                null != e.id || "" !== e.url
+                    ? (0, i.jsx)("img", {
+                          alt: "",
+                          className: y.mp,
+                          src:
+                              null != e.id
+                                  ? W.Ay.getEmojiURL({
+                                        id: e.id,
+                                        animated: e.animated && r,
+                                        size: $.EMOJI_URL_BASE_SIZE,
+                                    })
+                                  : e.url,
+                      })
+                    : (0, i.jsx)("span", { className: y.nT, children: e.surrogates }),
+            a = null != n ? (0, i.jsx)(b, { children: n.name }) : null;
+        return (0, i.jsxs)(C, {
+            children: [
+                (0, i.jsx)(v, { children: s }),
+                (0, i.jsx)(N, { children: (0, i.jsxs)(R, { children: [t, e.name, t] }) }),
+                a,
+            ],
+        });
+    }
+}
+class eC extends e_ {
+    layoutClass = a()(y.rT, y.Mf);
+    renderContent() {
+        let e,
+            { queryMatch: t, renderSticker: n, selected: r, sticker: s } = this.props,
+            { hovered: a } = this.state;
+        return (
+            (0, er.FD)(s)
+                ? (e = ei.A.getStickerPack(s.pack_id)?.name)
+                : (0, er.Xw)(s) && (e = et.A.getGuild(s.guild_id)?.name),
+            (0, i.jsxs)(C, {
+                children: [
+                    (0, i.jsx)(v, { children: n(s, a || !0 === r) }),
+                    (0, i.jsxs)(N, {
+                        children: [
+                            (0, i.jsx)(R, { children: s.name }),
+                            null != t && (0, i.jsx)(O, { children: P.intl.format(P.t.PAutaQ, { queryMatch: t }) }),
+                        ],
+                    }),
+                    null != e && (0, i.jsx)(b, { children: e }),
+                ],
+            })
+        );
+    }
+}
+class eN extends e_ {
+    layoutClass = y.ju;
+    renderContent() {
+        let { width: e, height: t, src: n } = this.props;
+        return (0, i.jsx)("img", { alt: "", src: n, width: e, height: t });
+    }
+}
+class ev extends e_ {
+    renderContent() {
+        return (0, i.jsx)(Z, { emojis: this.props.emojis });
+    }
+}
+class eR extends e_ {
+    renderContent() {
+        return (0, i.jsx)(en, { ...this.props });
+    }
+}
+class eO extends e_ {
+    renderContent() {
+        return (0, i.jsxs)(C, {
+            children: [
+                (0, i.jsx)(v, {
+                    children: (0, i.jsx)(Q.A, {
+                        gameId: this.props.game.id,
+                        gameIconHash: this.props.game.icon_hash,
+                        iconClassName: y.Kk,
+                    }),
+                }),
+                (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: this.props.game.name }) }),
+            ],
+        });
+    }
+}
+class eb extends r.PureComponent {
+    static Generic = eh;
+    static Loading = ef;
+    static Title = ep;
+    static Divider = eE;
+    static User = em;
+    static Role = eg;
+    static Channel = eI;
+    static Command = eT;
+    static NewCommand = eS;
+    static Emoji = ey;
+    static GIFIntegration = eN;
+    static Sticker = eC;
+    static EmojiUpsell = ev;
+    static Soundmoji = eR;
+    static Game = eO;
+    static Timestamp = eA;
+    render() {
+        let { children: e, className: t, innerClassName: n, id: s, ...o } = this.props;
+        return r.Children.count(e) > 0
+            ? (0, i.jsx)(ed.Provider, {
+                  value: { id: s ?? "" },
+                  children: (0, i.jsx)("div", {
+                      className: a()(y.nx, t),
+                      children: (0, i.jsx)("div", { className: a()(y.Fv, n), ...o, children: e }),
+                  }),
+              })
+            : null;
+    }
+}
+let eD = eb;

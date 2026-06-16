@@ -1,1 +1,74 @@
-n.d(t,{KK:()=>f,NZ:()=>h,gr:()=>D,lH:()=>T,uM:()=>F,xs:()=>x});var r=n(64700),l=n(17928),i=n(873298),o=n(444802),u=n(381689),d=n(389462),s=n(115063),a=n(899847),c=n(842144),C=n(704724),p=n(500470),m=n(834981),g=n(835002);let x=()=>{let e=(0,p.x)(),t=d.p7.useControlledSetting(e?.id);return null==e?null:{explicitContentNonFriendDm:(0,C.J6)({teenId:e?.id,setting:t?.explicitContentNonFriendDm}),explicitContentFriendDm:(0,C.J6)({teenId:e?.id,setting:t?.explicitContentFriendDm,isFriend:!0}),explicitContentGuilds:i.TO.BLUR}},D=()=>{let e=(0,p.x)(),t=d.oQ.useControlledSetting(e?.id);if(null==e)return null;let{goreContentNonFriendDm:n,goreContentFriendDm:r}=t??{};return{goreContentNonFriendDm:(0,C.ky)(n)?n:(0,o.jj)({isDm:!0}),goreContentFriendDm:(0,C.ky)(r)?r:(0,o.jj)({isDm:!0,isFriend:!0}),goreContentGuilds:i.TO.BLUR}},f=()=>{let e=(0,p.x)(),t=d.qz.useControlledSetting(e?.id),n=d.yr.useControlledSetting(e?.id);return null!=n?n:!!t||t};function h(){let e=(0,p.x)(),t=d.up.useControlledSetting(e?.id),n=r.useMemo(()=>(0,s.Lx)(t),[t]);return n.mutualGuilds&&!n.all}function F(){return(0,m.Du)()}function T(e){let t,n;return{hasConsented:(t=(0,p.k)(),(0,l.bG)([c.A],()=>c.A.hasConsented(t,e))),updateConsent:(n=(0,p.k)(),r.useCallback(async t=>{if(null!=n)try{await a.Ay.updateTeenConsents(n,t?[e]:[],t?[]:[e])}catch(e){u.A.showFailedToast(g.OB.GENERIC_ERROR)}},[n,e]))}}
+n.d(t, { KK: () => f, NZ: () => h, gr: () => D, lH: () => T, uM: () => F, xs: () => x });
+var r = n(64700),
+    l = n(17928),
+    i = n(873298),
+    o = n(444802),
+    u = n(381689),
+    d = n(389462),
+    s = n(115063),
+    a = n(899847),
+    c = n(842144),
+    C = n(704724),
+    p = n(500470),
+    m = n(834981),
+    g = n(835002);
+let x = () => {
+        let e = (0, p.x)(),
+            t = d.p7.useControlledSetting(e?.id);
+        return null == e
+            ? null
+            : {
+                  explicitContentNonFriendDm: (0, C.J6)({ teenId: e?.id, setting: t?.explicitContentNonFriendDm }),
+                  explicitContentFriendDm: (0, C.J6)({
+                      teenId: e?.id,
+                      setting: t?.explicitContentFriendDm,
+                      isFriend: !0,
+                  }),
+                  explicitContentGuilds: i.TO.BLUR,
+              };
+    },
+    D = () => {
+        let e = (0, p.x)(),
+            t = d.oQ.useControlledSetting(e?.id);
+        if (null == e) return null;
+        let { goreContentNonFriendDm: n, goreContentFriendDm: r } = t ?? {};
+        return {
+            goreContentNonFriendDm: (0, C.ky)(n) ? n : (0, o.jj)({ isDm: !0 }),
+            goreContentFriendDm: (0, C.ky)(r) ? r : (0, o.jj)({ isDm: !0, isFriend: !0 }),
+            goreContentGuilds: i.TO.BLUR,
+        };
+    },
+    f = () => {
+        let e = (0, p.x)(),
+            t = d.qz.useControlledSetting(e?.id),
+            n = d.yr.useControlledSetting(e?.id);
+        return null != n ? n : !!t || t;
+    };
+function h() {
+    let e = (0, p.x)(),
+        t = d.up.useControlledSetting(e?.id),
+        n = r.useMemo(() => (0, s.Lx)(t), [t]);
+    return n.mutualGuilds && !n.all;
+}
+function F() {
+    return (0, m.Du)();
+}
+function T(e) {
+    let t, n;
+    return {
+        hasConsented: ((t = (0, p.k)()), (0, l.bG)([c.A], () => c.A.hasConsented(t, e))),
+        updateConsent:
+            ((n = (0, p.k)()),
+            r.useCallback(
+                async (t) => {
+                    if (null != n)
+                        try {
+                            await a.Ay.updateTeenConsents(n, t ? [e] : [], t ? [] : [e]);
+                        } catch (e) {
+                            u.A.showFailedToast(g.OB.GENERIC_ERROR);
+                        }
+                },
+                [n, e],
+            )),
+    };
+}

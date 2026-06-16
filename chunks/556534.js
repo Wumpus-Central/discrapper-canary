@@ -1,1 +1,11 @@
-i.d(t,{Tx:()=>_,q9:()=>n});var l=i(17928),s=i(71393),r=i(22385),d=i(652215);let _=()=>(0,r.xk)().selectedGuildId,n=()=>{let e=_(),t=(0,l.bG)([s.A],()=>s.A.getGuild(e));return t?.features.has(d.GuildFeatures.HUB)??!1}
+i.d(t, { Tx: () => _, q9: () => n });
+var l = i(17928),
+    s = i(71393),
+    r = i(22385),
+    d = i(652215);
+let _ = () => (0, r.xk)().selectedGuildId,
+    n = () => {
+        let e = _(),
+            t = (0, l.bG)([s.A], () => s.A.getGuild(e));
+        return t?.features.has(d.GuildFeatures.HUB) ?? !1;
+    };

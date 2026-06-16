@@ -1,1 +1,88 @@
-"use strict";n.d(t,{A:()=>A});var i=n(587895),r=n(734057),s=n(309010),a=n(287809),o=n(811024),l=n(646865),u=n(795816),c=n(933958),d=n(799061),_=n(969151),h=n(817636),f=n(574152),p=n(108959),E=n(90804),m=n(748975),g=n(360469);function A(e){return(0,l.w)((0,l.f)(),()=>I(e))}async function I(e){let t,{applicationId:n,activityChannelId:l,locationObject:A,analyticsLocations:I,componentId:T,sectionName:S,source:y,inviterUserId:N,customId:v,referrerId:C}=e,R=(0,f.A)(),O=r.A.getChannel(l),b=O?.getGuildId(),D=null==b||""===b,L=a.default.getCurrentUser();if(null==L)return!1;if(null==O||D&&!O.isPrivate()||null==l)return Promise.resolve(!1);let w=c.Ay.getCurrentEmbeddedActivity();if(w?.applicationId!=null&&(t=i.A.getApplication(w?.applicationId)),s.A.getVoiceChannelId()===l&&null!=w&&w.applicationId===n&&(0,_.H)(w.location)===s.A.getVoiceChannelId())return(0,m.A)(b,w.location),Promise.resolve(!0);let M=await (0,h.A)(n,l);if(!await (0,d.O)({applicationId:n,application:M,channel:O,currentEmbeddedApplication:t,embeddedActivitiesManager:R,user:L}))return!1;if(null!=O){let e=(0,p.A)(O.id),n=g.lk.includes(O.type);if(e){if(!await (0,E.A)({channelId:O.id,bypassChangeModal:null!=t}))return!1}else if(!(0,o.pE)(O)||!n)return!1}else if(null==O)return!1;return null!=w&&(0,u.rW)(w.location),await (0,u.su)({channelId:l,applicationId:n,isStart:!1,embeddedActivitiesManager:R,analyticsLocations:I,locationObject:A,componentId:T,sectionName:S,source:y,inviterUserId:N,customId:v,referrerId:C})}
+"use strict";
+n.d(t, { A: () => A });
+var i = n(587895),
+    r = n(734057),
+    s = n(309010),
+    a = n(287809),
+    o = n(811024),
+    l = n(646865),
+    u = n(795816),
+    c = n(933958),
+    d = n(799061),
+    _ = n(969151),
+    h = n(817636),
+    f = n(574152),
+    p = n(108959),
+    E = n(90804),
+    m = n(748975),
+    g = n(360469);
+function A(e) {
+    return (0, l.w)((0, l.f)(), () => I(e));
+}
+async function I(e) {
+    let t,
+        {
+            applicationId: n,
+            activityChannelId: l,
+            locationObject: A,
+            analyticsLocations: I,
+            componentId: T,
+            sectionName: S,
+            source: y,
+            inviterUserId: C,
+            customId: N,
+            referrerId: v,
+        } = e,
+        R = (0, f.A)(),
+        O = r.A.getChannel(l),
+        b = O?.getGuildId(),
+        D = null == b || "" === b,
+        L = a.default.getCurrentUser();
+    if (null == L) return !1;
+    if (null == O || (D && !O.isPrivate()) || null == l) return Promise.resolve(!1);
+    let w = c.Ay.getCurrentEmbeddedActivity();
+    if (
+        (w?.applicationId != null && (t = i.A.getApplication(w?.applicationId)),
+        s.A.getVoiceChannelId() === l &&
+            null != w &&
+            w.applicationId === n &&
+            (0, _.H)(w.location) === s.A.getVoiceChannelId())
+    )
+        return (0, m.A)(b, w.location), Promise.resolve(!0);
+    let M = await (0, h.A)(n, l);
+    if (
+        !(await (0, d.O)({
+            applicationId: n,
+            application: M,
+            channel: O,
+            currentEmbeddedApplication: t,
+            embeddedActivitiesManager: R,
+            user: L,
+        }))
+    )
+        return !1;
+    if (null != O) {
+        let e = (0, p.A)(O.id),
+            n = g.lk.includes(O.type);
+        if (e) {
+            if (!(await (0, E.A)({ channelId: O.id, bypassChangeModal: null != t }))) return !1;
+        } else if (!(0, o.pE)(O) || !n) return !1;
+    } else if (null == O) return !1;
+    return (
+        null != w && (0, u.rW)(w.location),
+        await (0, u.su)({
+            channelId: l,
+            applicationId: n,
+            isStart: !1,
+            embeddedActivitiesManager: R,
+            analyticsLocations: I,
+            locationObject: A,
+            componentId: T,
+            sectionName: S,
+            source: y,
+            inviterUserId: C,
+            customId: N,
+            referrerId: v,
+        })
+    );
+}

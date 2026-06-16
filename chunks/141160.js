@@ -1,1 +1,16 @@
-e.exports={pU:"iframe__49094",iE:"wrapper__49094",Ig:"resizable__49094",Oo:"noChat__49094",lq:"activityPanelContainer__49094",wx:"header__49094",qr:"footer__49094",qd:"headerTitle__49094",pt:"leaveButtonContainer__49094",ht:"activityContainer__49094",kK:"activityContainerNoMargin__49094",Hq:"footerButtons__49094",my:"avatar__49094",qi:"buttonSection__49094"}
+_.exports = {
+    pU: "iframe__49094",
+    iE: "wrapper__49094",
+    Ig: "resizable__49094",
+    Oo: "noChat__49094",
+    lq: "activityPanelContainer__49094",
+    wx: "header__49094",
+    qr: "footer__49094",
+    qd: "headerTitle__49094",
+    pt: "leaveButtonContainer__49094",
+    ht: "activityContainer__49094",
+    kK: "activityContainerNoMargin__49094",
+    Hq: "footerButtons__49094",
+    my: "avatar__49094",
+    qi: "buttonSection__49094",
+};

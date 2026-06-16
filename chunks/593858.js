@@ -1,1 +1,2 @@
-"use strict";e.exports="u">typeof ArrayBuffer&&"u">typeof DataView
+"use strict";
+e.exports = "u" > typeof ArrayBuffer && "u" > typeof DataView;

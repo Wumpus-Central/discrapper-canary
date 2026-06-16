@@ -1,1 +1,1 @@
-e.exports={R:"hidden_b54fe3"}
+_.exports = { R: "hidden_b54fe3" };

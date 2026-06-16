@@ -1,1 +1,18 @@
-var e=t(176206),u=t(257816),i=t(317281),p=t(278276),a=t(599769),h=Math.max;n.exports=function(n){if(!(n&&n.length))return[];var r=0;return n=e(n,function(n){if(a(n))return r=h(n.length,r),!0}),p(r,function(r){return u(n,i(r))})}
+var e = t(176206),
+    u = t(257816),
+    i = t(317281),
+    p = t(278276),
+    a = t(599769),
+    h = Math.max;
+n.exports = function (n) {
+    if (!(n && n.length)) return [];
+    var r = 0;
+    return (
+        (n = e(n, function (n) {
+            if (a(n)) return (r = h(n.length, r)), !0;
+        })),
+        p(r, function (r) {
+            return u(n, i(r));
+        })
+    );
+};

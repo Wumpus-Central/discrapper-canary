@@ -1,1 +1,36 @@
-i.d(t,{default:()=>N});var n=i(627968);i(64700);var r=i(980707),s=i(477782),d=i(442433),l=i(820284),a=i(358367),c=i(793574),o=i(50268),u=i(301541),h=i(243949),A=i(652215),E=i(375708);let N=(0,a.A)(function(e){let{user:t,analyticsContext:i,onSelect:a}=e,c=(0,h.A)({userId:t.id}),N=(0,o.A)({id:t.id,label:E.intl.string(E.t["/AXYnE"])}),p=(0,u.A)(t.id),_=t.isNonUserBot();return(0,n.jsx)(l.A,{context:i,object:A.ZSU.CONTEXT_MENU,children:(0,n.jsxs)(r.W,{"data-menu-migrated":!0,navId:"user-context",onClose:d.Z_,"aria-label":E.intl.string(E.t.liqwPJ),onSelect:a,children:[(0,n.jsxs)(s.rX,{children:[!_&&c,!_&&p]}),(0,n.jsx)(s.rX,{children:N})]})})},[c.A.CONTEXT_MENU,c.A.BANNED_USER_MENU])
+i.d(t, { default: () => N });
+var n = i(627968);
+i(64700);
+var r = i(980707),
+    s = i(477782),
+    d = i(442433),
+    l = i(820284),
+    a = i(358367),
+    c = i(793574),
+    o = i(50268),
+    u = i(301541),
+    h = i(243949),
+    A = i(652215),
+    E = i(375708);
+let N = (0, a.A)(
+    function (e) {
+        let { user: t, analyticsContext: i, onSelect: a } = e,
+            c = (0, h.A)({ userId: t.id }),
+            N = (0, o.A)({ id: t.id, label: E.intl.string(E.t["/AXYnE"]) }),
+            p = (0, u.A)(t.id),
+            _ = t.isNonUserBot();
+        return (0, n.jsx)(l.A, {
+            context: i,
+            object: A.ZSU.CONTEXT_MENU,
+            children: (0, n.jsxs)(r.W, {
+                "data-menu-migrated": !0,
+                navId: "user-context",
+                onClose: d.Z_,
+                "aria-label": E.intl.string(E.t.liqwPJ),
+                onSelect: a,
+                children: [(0, n.jsxs)(s.rX, { children: [!_ && c, !_ && p] }), (0, n.jsx)(s.rX, { children: N })],
+            }),
+        });
+    },
+    [c.A.CONTEXT_MENU, c.A.BANNED_USER_MENU],
+);

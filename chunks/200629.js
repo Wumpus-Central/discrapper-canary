@@ -1,1 +1,46 @@
-r.d(n,{default:()=>s});var i=r(627968);r(64700);var e=r(189213),o=r(366098),l=r(918192),a=r(375708);function s(t){let{channel:n,onAccept:r,transitionState:s,onClose:u}=t,d=(0,o.mT)(n.id),c=(0,o.Iv)(n.id);return(0,i.jsx)(e.Modal,{onClose:u,transitionState:s,actions:[{text:a.intl.string(a.t.CZGqeT),variant:"secondary",onClick:u},{text:a.intl.string(a.t.mbD50D),variant:"primary",onClick:()=>{r(n),u()}}],title:function(t){let{blockedUsersCount:n,ignoredUsersCount:r}=t;return n>0&&r>0?a.intl.formatToPlainString(a.t.Uzdyho,{number:n+r}):r>0?a.intl.formatToPlainString(a.t.wvygk8,{number:r}):a.intl.formatToPlainString(a.t.HviVA9,{number:n})}({blockedUsersCount:d.length,ignoredUsersCount:c.length}),subtitle:function(t){let{blockedUsersCount:n,ignoredUsersCount:r}=t;return n>0&&r>0?a.intl.string(a.t["P/KFXz"]):r>0?a.intl.format(a.t.Ri3o33,{number:r}):a.intl.format(a.t["28qZMU"],{number:n})}({blockedUsersCount:d.length,ignoredUsersCount:c.length}),children:[...d,...c].map(t=>{let{user:r,id:e,speaker:o}=t;return(0,i.jsx)(l.ld,{user:r,speaker:o,showStatus:!0,channelId:n.id},e)})})}
+r.d(n, { default: () => s });
+var i = r(627968);
+r(64700);
+var e = r(189213),
+    o = r(366098),
+    l = r(918192),
+    a = r(375708);
+function s(t) {
+    let { channel: n, onAccept: r, transitionState: s, onClose: u } = t,
+        d = (0, o.mT)(n.id),
+        c = (0, o.Iv)(n.id);
+    return (0, i.jsx)(e.Modal, {
+        onClose: u,
+        transitionState: s,
+        actions: [
+            { text: a.intl.string(a.t.CZGqeT), variant: "secondary", onClick: u },
+            {
+                text: a.intl.string(a.t.mbD50D),
+                variant: "primary",
+                onClick: () => {
+                    r(n), u();
+                },
+            },
+        ],
+        title: (function (t) {
+            let { blockedUsersCount: n, ignoredUsersCount: r } = t;
+            return n > 0 && r > 0
+                ? a.intl.formatToPlainString(a.t.Uzdyho, { number: n + r })
+                : r > 0
+                  ? a.intl.formatToPlainString(a.t.wvygk8, { number: r })
+                  : a.intl.formatToPlainString(a.t.HviVA9, { number: n });
+        })({ blockedUsersCount: d.length, ignoredUsersCount: c.length }),
+        subtitle: (function (t) {
+            let { blockedUsersCount: n, ignoredUsersCount: r } = t;
+            return n > 0 && r > 0
+                ? a.intl.string(a.t["P/KFXz"])
+                : r > 0
+                  ? a.intl.format(a.t.Ri3o33, { number: r })
+                  : a.intl.format(a.t["28qZMU"], { number: n });
+        })({ blockedUsersCount: d.length, ignoredUsersCount: c.length }),
+        children: [...d, ...c].map((t) => {
+            let { user: r, id: e, speaker: o } = t;
+            return (0, i.jsx)(l.ld, { user: r, speaker: o, showStatus: !0, channelId: n.id }, e);
+        }),
+    });
+}

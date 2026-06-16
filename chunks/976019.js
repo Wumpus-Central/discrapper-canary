@@ -1,1 +1,92 @@
-s.d(t,{A:()=>x});var i=s(627968),n=s(64700),l=s(17928),r=s(885574),a=s(661531),o=s(834730),c=s(287809),m=s(801365),d=s(52093),g=s(190107),u=s(375708),f=s(459878);function h(){let e=n.useCallback(()=>{},[]);return(0,i.jsxs)("div",{className:f.Jj,children:[(0,i.jsx)(r.m,{size:"sm",color:a.A.colors.TEXT_LINK,className:f.qf}),(0,i.jsxs)("div",{className:f.e4,children:[(0,i.jsx)(o.E,{variant:"text-xs/semibold",color:"text-default",children:u.intl.string(u.t["+pgFbW"])}),(0,i.jsx)(o.E,{variant:"text-xs/normal",color:"text-muted",children:u.intl.format(u.t.Uk4lV5,{onLearnMore:e})})]})]})}let x=function(e){let{quest:t,hasAlreadyLinked:s,onClickGameTitle:r,selectedAuthMethod:a}=e,o=t.config.taskConfigV2.tasks.ACHIEVEMENT_IN_GAME,f=t.userStatus?.completedAt!=null,x=(0,l.bG)([c.default],()=>c.default.getCurrentUser()),p=n.useMemo(()=>[{renderContent:()=>{let e=t.config.messages.gameTitle;if(!0===s)return(0,i.jsx)(d.L5,{children:u.intl.formatToPlainString(u.t.C45G4B,{gameTitle:e})});let n=a===g.qh.WEB,l=null==r?u.intl.formatToPlainString(n?u.t.j3155Y:u.t.tNmoIp,{gameTitle:e}):u.intl.format(n?u.t["4+3zP/"]:u.t.vDLUD3,{gameTitle:e,onClickGameTitle:r});return(0,i.jsx)(d.L5,{children:l})},isComplete:(s??!1)||f},{renderContent:()=>(0,i.jsx)(d.L5,{children:!0!==s||f||null==r?u.intl.formatToPlainString(u.t.nP1hFd,{objective:o?.messages.taskDescription??"",gameTitle:t.config.messages.gameTitle,rewardName:(0,m.mq)(t.config,x)}):u.intl.format(u.t.GLZnbq,{objective:o?.messages.taskDescription??"",gameTitle:t.config.messages.gameTitle,rewardName:(0,m.mq)(t.config,x),onClickGameTitle:r})}),isComplete:f}],[a,s,f,t.config,o,r,x]);return(0,i.jsx)(d.Ay,{heading:u.intl.string(u.t.dc9w4N),steps:p,children:!0===s&&!f&&(0,i.jsx)(h,{})})}
+"use strict";
+n.d(t, { A: () => E });
+var i = n(627968),
+    r = n(64700),
+    s = n(17928),
+    a = n(885574),
+    o = n(661531),
+    l = n(834730),
+    u = n(287809),
+    c = n(801365),
+    d = n(52093),
+    _ = n(190107),
+    h = n(375708),
+    f = n(459878);
+function p() {
+    let e = r.useCallback(() => {}, []);
+    return (0, i.jsxs)("div", {
+        className: f.Jj,
+        children: [
+            (0, i.jsx)(a.m, { size: "sm", color: o.A.colors.TEXT_LINK, className: f.qf }),
+            (0, i.jsxs)("div", {
+                className: f.e4,
+                children: [
+                    (0, i.jsx)(l.E, {
+                        variant: "text-xs/semibold",
+                        color: "text-default",
+                        children: h.intl.string(h.t["+pgFbW"]),
+                    }),
+                    (0, i.jsx)(l.E, {
+                        variant: "text-xs/normal",
+                        color: "text-muted",
+                        children: h.intl.format(h.t.Uk4lV5, { onLearnMore: e }),
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+let E = function (e) {
+    let { quest: t, hasAlreadyLinked: n, onClickGameTitle: a, selectedAuthMethod: o } = e,
+        l = t.config.taskConfigV2.tasks.ACHIEVEMENT_IN_GAME,
+        f = t.userStatus?.completedAt != null,
+        E = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
+        m = r.useMemo(
+            () => [
+                {
+                    renderContent: () => {
+                        let e = t.config.messages.gameTitle;
+                        if (!0 === n)
+                            return (0, i.jsx)(d.L5, {
+                                children: h.intl.formatToPlainString(h.t.C45G4B, { gameTitle: e }),
+                            });
+                        let r = o === _.qh.WEB,
+                            s =
+                                null == a
+                                    ? h.intl.formatToPlainString(r ? h.t.j3155Y : h.t.tNmoIp, { gameTitle: e })
+                                    : h.intl.format(r ? h.t["4+3zP/"] : h.t.vDLUD3, {
+                                          gameTitle: e,
+                                          onClickGameTitle: a,
+                                      });
+                        return (0, i.jsx)(d.L5, { children: s });
+                    },
+                    isComplete: (n ?? !1) || f,
+                },
+                {
+                    renderContent: () =>
+                        (0, i.jsx)(d.L5, {
+                            children:
+                                !0 !== n || f || null == a
+                                    ? h.intl.formatToPlainString(h.t.nP1hFd, {
+                                          objective: l?.messages.taskDescription ?? "",
+                                          gameTitle: t.config.messages.gameTitle,
+                                          rewardName: (0, c.mq)(t.config, E),
+                                      })
+                                    : h.intl.format(h.t.GLZnbq, {
+                                          objective: l?.messages.taskDescription ?? "",
+                                          gameTitle: t.config.messages.gameTitle,
+                                          rewardName: (0, c.mq)(t.config, E),
+                                          onClickGameTitle: a,
+                                      }),
+                        }),
+                    isComplete: f,
+                },
+            ],
+            [o, n, f, t.config, l, a, E],
+        );
+    return (0, i.jsx)(d.Ay, {
+        heading: h.intl.string(h.t.dc9w4N),
+        steps: m,
+        children: !0 === n && !f && (0, i.jsx)(p, {}),
+    });
+};

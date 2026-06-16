@@ -1,1 +1,69 @@
-n.d(l,{w:()=>h});var t=n(627968),i=n(64700),r=n(503698),s=n.n(r),a=n(17928),u=n(834730),c=n(3666),o=n(565645),d=n(775602),m=n(713517),f=n(690521),p=n(446445);function j(e){let{emoji:l,shouldAnimate:n}=e;if(null==l)return null;let i=f.Ay.isCustomEmoji(l)?l.name:l.surrogates;return(0,t.jsx)(o.A,{className:p.Pw,emojiId:l.id,emojiName:i,animated:l.animated,shouldAnimate:n})}function A(e){let{trait:l,ellipsize:n,traitColor:r}=e,c=i.useRef(null),o=(0,m.M)(c),f=(0,a.bG)([d.Ay],()=>d.Ay.useReducedMotion);return null==l.label||l.label.length<=0?null:(0,t.jsxs)("div",{ref:c,className:s()(p.Bj,{[p.mc]:n}),children:[(0,t.jsx)(j,{emoji:l.emoji,shouldAnimate:!f&&o}),(0,t.jsx)(u.E,{tag:"span",className:n?p.mc:void 0,variant:"text-sm/normal",color:r,children:l.label})]})}function h(e){let{items:l,traitColor:n="text-default"}=e,r=i.useCallback((e,l)=>"string"==typeof e?(0,t.jsx)("div",{className:s()(p.Bj,{[p.mc]:l.ellipsize}),children:(0,t.jsx)(u.E,{tag:"span",variant:"text-sm/normal",color:n,children:e})},"overflow"):(0,t.jsx)(A,{trait:e,ellipsize:l.ellipsize,traitColor:n},e.key),[n]),a=i.useCallback(e=>r(e,{ellipsize:!0}),[r]),o=i.useCallback(e=>r(e,{ellipsize:!1}),[r]),d=i.useCallback(e=>(0,t.jsx)(c.g2,{items:e,renderItem:o}),[o]);return 0===l.length?null:(0,t.jsx)(c.ZV,{className:p.kL,items:l,renderItem:a,renderOverflow:d,maxLines:2,itemGapPx:4})}
+n.d(l, { w: () => h });
+var t = n(627968),
+    i = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    a = n(17928),
+    u = n(834730),
+    c = n(3666),
+    o = n(565645),
+    d = n(775602),
+    m = n(713517),
+    f = n(690521),
+    p = n(446445);
+function j(e) {
+    let { emoji: l, shouldAnimate: n } = e;
+    if (null == l) return null;
+    let i = f.Ay.isCustomEmoji(l) ? l.name : l.surrogates;
+    return (0, t.jsx)(o.A, { className: p.Pw, emojiId: l.id, emojiName: i, animated: l.animated, shouldAnimate: n });
+}
+function A(e) {
+    let { trait: l, ellipsize: n, traitColor: r } = e,
+        c = i.useRef(null),
+        o = (0, m.M)(c),
+        f = (0, a.bG)([d.Ay], () => d.Ay.useReducedMotion);
+    return null == l.label || l.label.length <= 0
+        ? null
+        : (0, t.jsxs)("div", {
+              ref: c,
+              className: s()(p.Bj, { [p.mc]: n }),
+              children: [
+                  (0, t.jsx)(j, { emoji: l.emoji, shouldAnimate: !f && o }),
+                  (0, t.jsx)(u.E, {
+                      tag: "span",
+                      className: n ? p.mc : void 0,
+                      variant: "text-sm/normal",
+                      color: r,
+                      children: l.label,
+                  }),
+              ],
+          });
+}
+function h(e) {
+    let { items: l, traitColor: n = "text-default" } = e,
+        r = i.useCallback(
+            (e, l) =>
+                "string" == typeof e
+                    ? (0, t.jsx)(
+                          "div",
+                          {
+                              className: s()(p.Bj, { [p.mc]: l.ellipsize }),
+                              children: (0, t.jsx)(u.E, {
+                                  tag: "span",
+                                  variant: "text-sm/normal",
+                                  color: n,
+                                  children: e,
+                              }),
+                          },
+                          "overflow",
+                      )
+                    : (0, t.jsx)(A, { trait: e, ellipsize: l.ellipsize, traitColor: n }, e.key),
+            [n],
+        ),
+        a = i.useCallback((e) => r(e, { ellipsize: !0 }), [r]),
+        o = i.useCallback((e) => r(e, { ellipsize: !1 }), [r]),
+        d = i.useCallback((e) => (0, t.jsx)(c.g2, { items: e, renderItem: o }), [o]);
+    return 0 === l.length
+        ? null
+        : (0, t.jsx)(c.ZV, { className: p.kL, items: l, renderItem: a, renderOverflow: d, maxLines: 2, itemGapPx: 4 });
+}

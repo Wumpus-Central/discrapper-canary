@@ -1,1 +1,1 @@
-e.exports={F:"errorCodeMessage__85414"}
+e.exports = { F: "errorCodeMessage__85414" };

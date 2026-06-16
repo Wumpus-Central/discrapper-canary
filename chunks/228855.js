@@ -1,1 +1,79 @@
-i.d(e,{default:()=>_});var n=i(627968),s=i(64700),l=i(731738),r=i(189213),a=i(17928),d=i(691540),c=i(857250),o=i(97483),u=i(331322),m=i(834730),S=i(548118),x=i(807393),D=i(885386),h=i(71393),p=i(115063),A=i(510264),E=i(386936),g=i(375708),v=i(759656);function _(t){let{transitionState:e,guildId:i,onClose:_}=t,b=(0,a.bG)([h.A],()=>h.A.getGuild(i));if(s.useEffect(()=>{(0,A.Q)(i),(0,E.$)(E.s.MODAL_VIEWED,i),x.A.increment({name:l.K.DM_SETTINGS_UPSELL_VIEW})},[i]),null==b)return null;let f=t=>{t.preventDefault();let e=(0,p.Tb)();e.add(i),D.$s.updateSetting(Array.from(e)).then(()=>(0,d.P0)((0,c.o)(g.intl.string(g.t.rlYD1W),o.Ck.SUCCESS))),_(),(0,E.$)(E.s.MODAL_DISABLED_DMS,i)};return(0,n.jsx)("form",{onSubmit:f,children:(0,n.jsx)(r.Modal,{transitionState:e,onClose:_,title:g.intl.string(g.t.w2BvnL),subtitle:g.intl.format(g.t.Depjkv,{guild_name:b.name}),actions:[{text:g.intl.string(g.t.PsWbcp),onClick:()=>{_(),(0,E.$)(E.s.MODAL_DISMISSED,i)},variant:"secondary"},{text:g.intl.string(g.t.TD7iUx),onClick:f}],children:(0,n.jsxs)(u.B,{direction:"vertical",gap:8,children:[(0,n.jsx)(m.E,{variant:"text-md/medium",color:"text-muted",children:g.intl.string(g.t.KPB2iw)}),(0,n.jsx)("div",{className:v.bo,children:(0,n.jsxs)("div",{className:v.OA,children:[(0,n.jsx)(S.Ay,{guild:b,size:S.Ay.Sizes.SMALL}),(0,n.jsx)(m.E,{className:v.J5,variant:"text-md/semibold",children:b.name})]})})]})})})}
+i.d(e, { default: () => _ });
+var n = i(627968),
+    s = i(64700),
+    l = i(731738),
+    r = i(189213),
+    a = i(17928),
+    d = i(691540),
+    c = i(857250),
+    o = i(97483),
+    u = i(331322),
+    m = i(834730),
+    S = i(548118),
+    x = i(807393),
+    D = i(885386),
+    h = i(71393),
+    p = i(115063),
+    A = i(510264),
+    E = i(386936),
+    g = i(375708),
+    v = i(759656);
+function _(t) {
+    let { transitionState: e, guildId: i, onClose: _ } = t,
+        b = (0, a.bG)([h.A], () => h.A.getGuild(i));
+    if (
+        (s.useEffect(() => {
+            (0, A.Q)(i), (0, E.$)(E.s.MODAL_VIEWED, i), x.A.increment({ name: l.K.DM_SETTINGS_UPSELL_VIEW });
+        }, [i]),
+        null == b)
+    )
+        return null;
+    let f = (t) => {
+        t.preventDefault();
+        let e = (0, p.Tb)();
+        e.add(i),
+            D.$s.updateSetting(Array.from(e)).then(() => (0, d.P0)((0, c.o)(g.intl.string(g.t.rlYD1W), o.Ck.SUCCESS))),
+            _(),
+            (0, E.$)(E.s.MODAL_DISABLED_DMS, i);
+    };
+    return (0, n.jsx)("form", {
+        onSubmit: f,
+        children: (0, n.jsx)(r.Modal, {
+            transitionState: e,
+            onClose: _,
+            title: g.intl.string(g.t.w2BvnL),
+            subtitle: g.intl.format(g.t.Depjkv, { guild_name: b.name }),
+            actions: [
+                {
+                    text: g.intl.string(g.t.PsWbcp),
+                    onClick: () => {
+                        _(), (0, E.$)(E.s.MODAL_DISMISSED, i);
+                    },
+                    variant: "secondary",
+                },
+                { text: g.intl.string(g.t.TD7iUx), onClick: f },
+            ],
+            children: (0, n.jsxs)(u.B, {
+                direction: "vertical",
+                gap: 8,
+                children: [
+                    (0, n.jsx)(m.E, {
+                        variant: "text-md/medium",
+                        color: "text-muted",
+                        children: g.intl.string(g.t.KPB2iw),
+                    }),
+                    (0, n.jsx)("div", {
+                        className: v.bo,
+                        children: (0, n.jsxs)("div", {
+                            className: v.OA,
+                            children: [
+                                (0, n.jsx)(S.Ay, { guild: b, size: S.Ay.Sizes.SMALL }),
+                                (0, n.jsx)(m.E, { className: v.J5, variant: "text-md/semibold", children: b.name }),
+                            ],
+                        }),
+                    }),
+                ],
+            }),
+        }),
+    });
+}

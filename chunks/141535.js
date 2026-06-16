@@ -1,1 +1,17 @@
-e.exports={fi:"column__8e830",mX:"gapMd__8e830",iH:"gapLg__8e830",NC:"buttonsContainer__8e830",V0:"sections__8e830",kL:"container__8e830",jC:"twoColumnMainContent__8e830",gF:"topColumnSideBarTopSpacingWithoutStoreLinks__8e830",sV:"topColumnSideBarTopSpacingWithStoreLinks__8e830",Pn:"twoColumnSidebar__8e830",b9:"oneColumnMainContent__8e830",gr:"oneColumnCoverArtStoreLinksSummaryContainer__8e830",E1:"oneColumnStoreLinksSummaryContainer__8e830",lM:"twoColumnLeftMediaSummaryContainer__8e830",oC:"twoColumnLeftSections__8e830"}
+_.exports = {
+    fi: "column__8e830",
+    mX: "gapMd__8e830",
+    iH: "gapLg__8e830",
+    NC: "buttonsContainer__8e830",
+    V0: "sections__8e830",
+    kL: "container__8e830",
+    jC: "twoColumnMainContent__8e830",
+    gF: "topColumnSideBarTopSpacingWithoutStoreLinks__8e830",
+    sV: "topColumnSideBarTopSpacingWithStoreLinks__8e830",
+    Pn: "twoColumnSidebar__8e830",
+    b9: "oneColumnMainContent__8e830",
+    gr: "oneColumnCoverArtStoreLinksSummaryContainer__8e830",
+    E1: "oneColumnStoreLinksSummaryContainer__8e830",
+    lM: "twoColumnLeftMediaSummaryContainer__8e830",
+    oC: "twoColumnLeftSections__8e830",
+};

@@ -1,1 +1,1 @@
-e.exports={P:"disabledReasonNotice_e54f51"}
+e.exports = { P: "disabledReasonNotice_e54f51" };

@@ -1,1 +1,11 @@
-s.d(e,{h:()=>function t(e,s,i=2){if(!s||"object"!=typeof s||i<=0)return s;if(e&&s&&0===Object.keys(s).length)return e;let n={...e};for(let e in s)Object.prototype.hasOwnProperty.call(s,e)&&(n[e]=t(n[e],s[e],i-1));return n}})
+"use strict";
+n.d(t, {
+    h: () =>
+        function e(t, n, i = 2) {
+            if (!n || "object" != typeof n || i <= 0) return n;
+            if (t && n && 0 === Object.keys(n).length) return t;
+            let r = { ...t };
+            for (let t in n) Object.prototype.hasOwnProperty.call(n, t) && (r[t] = e(r[t], n[t], i - 1));
+            return r;
+        },
+});

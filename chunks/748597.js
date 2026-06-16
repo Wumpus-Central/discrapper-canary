@@ -1,1 +1,1 @@
-_.exports={H:"aside_f58343"}
+_.exports = { H: "aside_f58343" };

@@ -1,1 +1,15 @@
-e.exports={kL:"container__34940",mY:"topRow__34940",oS:"memberNameAndTagContainer__34940",FD:"memberNameContainer__34940",K$:"memberNameTextContainer__34940",Dz:"memberClanTag__34940",UL:"memberClanTagContainer__34940",Wn:"memberAvatar__34940",d4:"closeAction__34940",E_:"bottomRow__34940",YB:"bottomRowAction__34940",MU:"innerBottomRowAction__34940",aA:"bottomRowActionDisabled__34940"}
+_.exports = {
+    kL: "container__34940",
+    mY: "topRow__34940",
+    oS: "memberNameAndTagContainer__34940",
+    FD: "memberNameContainer__34940",
+    K$: "memberNameTextContainer__34940",
+    Dz: "memberClanTag__34940",
+    UL: "memberClanTagContainer__34940",
+    Wn: "memberAvatar__34940",
+    d4: "closeAction__34940",
+    E_: "bottomRow__34940",
+    YB: "bottomRowAction__34940",
+    MU: "innerBottomRowAction__34940",
+    aA: "bottomRowActionDisabled__34940",
+};

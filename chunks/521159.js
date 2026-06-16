@@ -1,1 +1,2 @@
-let i=n(745271);e.exports=(e,t)=>e.sort((e,n)=>i(n,e,t))
+let i = n(745271);
+e.exports = (e, t) => e.sort((e, n) => i(n, e, t));

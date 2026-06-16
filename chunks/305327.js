@@ -1,1 +1,5 @@
-var i=n(514119),r=n(436815);e.exports=function(e){return"symbol"==typeof e||r(e)&&"[object Symbol]"==i(e)}
+var i = n(514119),
+    r = n(436815);
+e.exports = function (e) {
+    return "symbol" == typeof e || (r(e) && "[object Symbol]" == i(e));
+};

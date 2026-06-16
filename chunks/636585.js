@@ -1,1 +1,71 @@
-"use strict";n.d(t,{A:()=>p}),n(321073);var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(778712),l=n(97808),u=n(983851),c=n(889227),d=n(175268),_=n(75596);function h(e,t,n){return(0,i.jsx)("div",{className:t,children:e},n)}class f extends r.PureComponent{_ref;static defaultProps={max:10,renderMoreUsers:h,size:o._3.SIZE_24};defaultRenderUser=(e,t,n,r)=>{let{onClick:s,size:u,guildId:h}=this.props,f=e instanceof c.A?e:null!=e?e.user:null;return null==f?(0,i.jsx)("div",{className:a()(d.F2,t),style:{width:(0,o.FT)(u),height:(0,o.FT)(u)}},n):(0,i.jsx)(l.eu,{tabIndex:0,src:f.getAvatarURL(h,(0,o.FT)(u)),size:u,"aria-label":f.username,className:a()(t,_.or),onClick:e=>null!=s?s(e,f,this._ref):null},f.id)};renderUsers(){let{users:e,max:t,renderUser:n=this.defaultRenderUser,renderMoreUsers:i}=this.props,r=[],s=e.length===t?e.length:t-1,a=0;for(;a<s&&a<e.length;){let t=a===e.length-1;r.push(n(e[a]||null,t?null:d.hC,`user-${a}`,t)),a++}if(a<e.length){let t=Math.min(e.length-a,99);r.push(i(`+${t}`,d.In,"more-users",t))}return r}renderIcon(){return this.props.icon?(0,i.jsx)("div",{className:d.zc,children:(0,i.jsx)(u.H,{size:"xs",color:"currentColor",colorClass:d.CU,className:d.Kk})}):null}render(){let{className:e}=this.props;return(0,i.jsxs)("div",{className:a()(e,d.kL),ref:e=>{this._ref=e},children:[this.renderIcon(),this.renderUsers()]})}}let p=f
+"use strict";
+n.d(t, { A: () => p }), n(321073);
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(778712),
+    l = n(97808),
+    u = n(983851),
+    c = n(889227),
+    d = n(175268),
+    _ = n(75596);
+function h(e, t, n) {
+    return (0, i.jsx)("div", { className: t, children: e }, n);
+}
+class f extends r.PureComponent {
+    _ref;
+    static defaultProps = { max: 10, renderMoreUsers: h, size: o._3.SIZE_24 };
+    defaultRenderUser = (e, t, n, r) => {
+        let { onClick: s, size: u, guildId: h } = this.props,
+            f = e instanceof c.A ? e : null != e ? e.user : null;
+        return null == f
+            ? (0, i.jsx)("div", { className: a()(d.F2, t), style: { width: (0, o.FT)(u), height: (0, o.FT)(u) } }, n)
+            : (0, i.jsx)(
+                  l.eu,
+                  {
+                      tabIndex: 0,
+                      src: f.getAvatarURL(h, (0, o.FT)(u)),
+                      size: u,
+                      "aria-label": f.username,
+                      className: a()(t, _.or),
+                      onClick: (e) => (null != s ? s(e, f, this._ref) : null),
+                  },
+                  f.id,
+              );
+    };
+    renderUsers() {
+        let { users: e, max: t, renderUser: n = this.defaultRenderUser, renderMoreUsers: i } = this.props,
+            r = [],
+            s = e.length === t ? e.length : t - 1,
+            a = 0;
+        for (; a < s && a < e.length; ) {
+            let t = a === e.length - 1;
+            r.push(n(e[a] || null, t ? null : d.hC, `user-${a}`, t)), a++;
+        }
+        if (a < e.length) {
+            let t = Math.min(e.length - a, 99);
+            r.push(i(`+${t}`, d.In, "more-users", t));
+        }
+        return r;
+    }
+    renderIcon() {
+        return this.props.icon
+            ? (0, i.jsx)("div", {
+                  className: d.zc,
+                  children: (0, i.jsx)(u.H, { size: "xs", color: "currentColor", colorClass: d.CU, className: d.Kk }),
+              })
+            : null;
+    }
+    render() {
+        let { className: e } = this.props;
+        return (0, i.jsxs)("div", {
+            className: a()(e, d.kL),
+            ref: (e) => {
+                this._ref = e;
+            },
+            children: [this.renderIcon(), this.renderUsers()],
+        });
+    }
+}
+let p = f;

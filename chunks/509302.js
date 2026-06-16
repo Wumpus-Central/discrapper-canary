@@ -1,1 +1,23 @@
-n.d(t,{A:()=>s});var l=n(64700),i=n(922590),a=n(411986),r=n(433880),o=n(375708);function s(e){let{user:t}=e,n=(0,i.fi)(t.id),s=l.useCallback(e=>{a.A.acceptFriendRequest({userId:t.id,applicationId:e.id,location:"Context Menu"})},[t.id]);return(0,r.A)({user:t,gameRelationships:n,menuItemId:"add-game-friend",label:o.intl.string(o.t.X76oLM),onClick:s})}
+n.d(t, { A: () => s });
+var l = n(64700),
+    i = n(922590),
+    a = n(411986),
+    r = n(433880),
+    o = n(375708);
+function s(e) {
+    let { user: t } = e,
+        n = (0, i.fi)(t.id),
+        s = l.useCallback(
+            (e) => {
+                a.A.acceptFriendRequest({ userId: t.id, applicationId: e.id, location: "Context Menu" });
+            },
+            [t.id],
+        );
+    return (0, r.A)({
+        user: t,
+        gameRelationships: n,
+        menuItemId: "add-game-friend",
+        label: o.intl.string(o.t.X76oLM),
+        onClick: s,
+    });
+}

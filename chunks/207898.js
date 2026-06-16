@@ -1,1 +1,55 @@
-e.exports=function(e,t){t=t||{};var a,n,o,s,i,l,c,u,f,h=e.numberOfChannels,d=e.sampleRate,m=t.float32?3:1;return a=2===h?function(e,r){for(var t=e.length+r.length,a=new Float32Array(t),n=0,o=0;n<t;)a[n++]=e[o],a[n++]=r[o],o++;return a}(e.getChannelData(0),e.getChannelData(1)):e.getChannelData(0),n=m,o=d,c=(s=h)*(l=(i=3===m?32:16)/8),r(f=new DataView(u=new ArrayBuffer(44+a.length*l)),0,"RIFF"),f.setUint32(4,36+a.length*l,!0),r(f,8,"WAVE"),r(f,12,"fmt "),f.setUint32(16,16,!0),f.setUint16(20,n,!0),f.setUint16(22,s,!0),f.setUint32(24,o,!0),f.setUint32(28,o*c,!0),f.setUint16(32,c,!0),f.setUint16(34,i,!0),r(f,36,"data"),f.setUint32(40,a.length*l,!0),1===n?function(e,r,t){for(var a=0;a<t.length;a++,r+=2){var n=Math.max(-1,Math.min(1,t[a]));e.setInt16(r,n<0?32768*n:32767*n,!0)}}(f,44,a):function(e,r,t){for(var a=0;a<t.length;a++,r+=4)e.setFloat32(r,t[a],!0)}(f,44,a),u};function r(e,r,t){for(var a=0;a<t.length;a++)e.setUint8(r+a,t.charCodeAt(a))}
+e.exports = function (e, t) {
+    t = t || {};
+    var a,
+        n,
+        o,
+        s,
+        i,
+        l,
+        c,
+        u,
+        f,
+        h = e.numberOfChannels,
+        d = e.sampleRate,
+        m = t.float32 ? 3 : 1;
+    return (
+        (a =
+            2 === h
+                ? (function (e, r) {
+                      for (var t = e.length + r.length, a = new Float32Array(t), n = 0, o = 0; n < t; )
+                          (a[n++] = e[o]), (a[n++] = r[o]), o++;
+                      return a;
+                  })(e.getChannelData(0), e.getChannelData(1))
+                : e.getChannelData(0)),
+        (n = m),
+        (o = d),
+        (c = (s = h) * (l = (i = 3 === m ? 32 : 16) / 8)),
+        r((f = new DataView((u = new ArrayBuffer(44 + a.length * l)))), 0, "RIFF"),
+        f.setUint32(4, 36 + a.length * l, !0),
+        r(f, 8, "WAVE"),
+        r(f, 12, "fmt "),
+        f.setUint32(16, 16, !0),
+        f.setUint16(20, n, !0),
+        f.setUint16(22, s, !0),
+        f.setUint32(24, o, !0),
+        f.setUint32(28, o * c, !0),
+        f.setUint16(32, c, !0),
+        f.setUint16(34, i, !0),
+        r(f, 36, "data"),
+        f.setUint32(40, a.length * l, !0),
+        1 === n
+            ? (function (e, r, t) {
+                  for (var a = 0; a < t.length; a++, r += 2) {
+                      var n = Math.max(-1, Math.min(1, t[a]));
+                      e.setInt16(r, n < 0 ? 32768 * n : 32767 * n, !0);
+                  }
+              })(f, 44, a)
+            : (function (e, r, t) {
+                  for (var a = 0; a < t.length; a++, r += 4) e.setFloat32(r, t[a], !0);
+              })(f, 44, a),
+        u
+    );
+};
+function r(e, r, t) {
+    for (var a = 0; a < t.length; a++) e.setUint8(r + a, t.charCodeAt(a));
+}

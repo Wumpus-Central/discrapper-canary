@@ -1,1 +1,7 @@
-"use strict";var n=e(663172),o=TypeError;t.exports=function(t){if("object"==typeof t&&"size"in t&&"has"in t&&"add"in t&&"delete"in t&&"keys"in t)return t;throw new o(n(t)+" is not a set")}
+"use strict";
+var n = e(663172),
+    o = TypeError;
+t.exports = function (t) {
+    if ("object" == typeof t && "size" in t && "has" in t && "add" in t && "delete" in t && "keys" in t) return t;
+    throw new o(n(t) + " is not a set");
+};

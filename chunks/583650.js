@@ -1,1 +1,40 @@
-"use strict";n.d(t,{V:()=>l});var i=n(627968),r=n(64700),s=n(900283),a=n(892547),o=n(375708);let l=r.forwardRef(function(e,t){let{query:n,onChange:l,disabled:u=!1,placeholder:c=o.intl.string(o.t["5h0QOP"]),"aria-label":d,onInteraction:_}=e,h=r.useRef(null);return r.useImperativeHandle(t,()=>({focus:()=>h.current?.focus(),blur:()=>h.current?.blur(),activate:()=>!1}),[]),(0,i.jsx)(a.I,{size:"sm",disabled:u,onChange:e=>{l(e),_?.(s.Q.SEARCH)},onClear:()=>{l(""),_?.(s.Q.SEARCH)},query:n,placeholder:c,autoFocus:!1,"aria-label":d,ref:h})})
+"use strict";
+n.d(t, { V: () => l });
+var i = n(627968),
+    r = n(64700),
+    s = n(900283),
+    a = n(892547),
+    o = n(375708);
+let l = r.forwardRef(function (e, t) {
+    let {
+            query: n,
+            onChange: l,
+            disabled: u = !1,
+            placeholder: c = o.intl.string(o.t["5h0QOP"]),
+            "aria-label": d,
+            onInteraction: _,
+        } = e,
+        h = r.useRef(null);
+    return (
+        r.useImperativeHandle(
+            t,
+            () => ({ focus: () => h.current?.focus(), blur: () => h.current?.blur(), activate: () => !1 }),
+            [],
+        ),
+        (0, i.jsx)(a.I, {
+            size: "sm",
+            disabled: u,
+            onChange: (e) => {
+                l(e), _?.(s.Q.SEARCH);
+            },
+            onClear: () => {
+                l(""), _?.(s.Q.SEARCH);
+            },
+            query: n,
+            placeholder: c,
+            autoFocus: !1,
+            "aria-label": d,
+            ref: h,
+        })
+    );
+});

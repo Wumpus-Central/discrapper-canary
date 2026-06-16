@@ -1,1 +1,129 @@
-n.d(t,{A:()=>S});var i=n(627968),l=n(64700),s=n(503698),r=n.n(s),a=n(17928),o=n(502572),c=n(990078),d=n(862482),u=n(194261),m=n(821609),h=n(930861),g=n(104510),x=n(820739),f=n(688810),p=n(531260),A=n(267102),E=n(178368),_=n(166403),j=n(473145),N=n(987144),v=n(652215),T=n(788868),I=n(375708),C=n(703870);let S=e=>{let{analyticsLocation:t,analyticsSourceLocation:n,guild:s,buttonText:S,targetBoostedGuildTier:b,onClose:y=()=>{},closeLayer:R=()=>{},pauseAnimation:O=!1,applicationId:L,handleSubscribeModalClose:P,withHighlight:k=!1,icon:G,intent:D,useExpressiveButton:w=!1,...V}=e,{analyticsLocations:U}=(0,f.Ay)(),M=(0,A.Us)()===v.BRT.POPOUT,[B,F]=l.useState(!1),{fractionalState:W}=(0,p.A)(),z=(0,a.bG)([E.A],()=>E.A.hasFetched);l.useEffect(()=>{z||(0,x.CD)()},[z]);let H=(0,j.D$)(E.A.boostSlots),Q=null!=b?Math.max((0,j.Os)(s,b),1):1,K=(0,j.Nc)({fractionalState:W}),Y=async()=>{F(!0),await (0,N.g)({analyticsLocations:U,analyticsLocation:t,analyticsSourceLocation:n,guild:s,numberOfBoostsToAdd:Q,onClose:y,closeLayer:R,inPopout:M,applicationId:L,handleSubscribeModalClose:P,intent:D}),F(!1)},X=_.A.getPremiumTypeSubscription(),q=(0,i.jsxs)("div",{className:C.x6,children:[G,S??I.intl.string(I.t.gKmQ1G)]}),$=!1;return(($=null!==X&&!(H.length>0)&&X?.isPausedOrPausePending&&W===T.xc.NONE)&&(q=(0,i.jsxs)("div",{className:C.x6,children:[(0,i.jsx)(u.X,{size:"xs",className:C.iA})," ",q]}),V.disabled=!0),null!=K)?w?(0,i.jsx)(c.m,{text:K,children:(0,i.jsx)(m.$,{variant:"expressive",icon:u.X,iconPosition:"start",disabled:!0,fullWidth:V.fullWidth,text:S??I.intl.string(I.t.gKmQ1G)})}):(0,i.jsx)(o.A,{text:K,"aria-label":!1,children:e=>(0,i.jsx)(h.wL,{"data-migration-pending":!0,...e,disabled:!0,size:d.$n.Sizes.SMALL,pauseAnimation:O,...V,children:q})}):w?(0,i.jsx)(m.$,{variant:"expressive",icon:g._,disabled:$,loading:B,fullWidth:V.fullWidth,text:S??I.intl.string(I.t.gKmQ1G),onClick:Y}):(0,i.jsx)(h.wL,{"data-migration-pending":!0,size:d.$n.Sizes.SMALL,...V,className:r()(V.className,{[C.yj]:k}),submitting:B,onClick:Y,pauseAnimation:O,children:q})}
+"use strict";
+n.d(t, { A: () => R });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(17928),
+    l = n(502572),
+    u = n(990078),
+    c = n(862482),
+    d = n(194261),
+    _ = n(821609),
+    h = n(930861),
+    f = n(104510),
+    p = n(820739),
+    E = n(688810),
+    m = n(531260),
+    g = n(267102),
+    A = n(178368),
+    I = n(166403),
+    T = n(473145),
+    S = n(987144),
+    y = n(652215),
+    C = n(788868),
+    N = n(375708),
+    v = n(703870);
+let R = (e) => {
+    let {
+            analyticsLocation: t,
+            analyticsSourceLocation: n,
+            guild: s,
+            buttonText: R,
+            targetBoostedGuildTier: O,
+            onClose: b = () => {},
+            closeLayer: D = () => {},
+            pauseAnimation: L = !1,
+            applicationId: w,
+            handleSubscribeModalClose: M,
+            withHighlight: P = !1,
+            icon: x,
+            intent: k,
+            useExpressiveButton: U = !1,
+            ...G
+        } = e,
+        { analyticsLocations: F } = (0, E.Ay)(),
+        V = (0, g.Us)() === y.BRT.POPOUT,
+        [B, j] = r.useState(!1),
+        { fractionalState: H } = (0, m.A)(),
+        Y = (0, o.bG)([A.A], () => A.A.hasFetched);
+    r.useEffect(() => {
+        Y || (0, p.CD)();
+    }, [Y]);
+    let W = (0, T.D$)(A.A.boostSlots),
+        K = null != O ? Math.max((0, T.Os)(s, O), 1) : 1,
+        $ = (0, T.Nc)({ fractionalState: H }),
+        z = async () => {
+            j(!0),
+                await (0, S.g)({
+                    analyticsLocations: F,
+                    analyticsLocation: t,
+                    analyticsSourceLocation: n,
+                    guild: s,
+                    numberOfBoostsToAdd: K,
+                    onClose: b,
+                    closeLayer: D,
+                    inPopout: V,
+                    applicationId: w,
+                    handleSubscribeModalClose: M,
+                    intent: k,
+                }),
+                j(!1);
+        },
+        q = I.A.getPremiumTypeSubscription(),
+        Z = (0, i.jsxs)("div", { className: v.x6, children: [x, R ?? N.intl.string(N.t.gKmQ1G)] }),
+        X = !1;
+    return ((X = null !== q && !(W.length > 0) && q?.isPausedOrPausePending && H === C.xc.NONE) &&
+        ((Z = (0, i.jsxs)("div", {
+            className: v.x6,
+            children: [(0, i.jsx)(d.X, { size: "xs", className: v.iA }), " ", Z],
+        })),
+        (G.disabled = !0)),
+    null != $)
+        ? U
+            ? (0, i.jsx)(u.m, {
+                  text: $,
+                  children: (0, i.jsx)(_.$, {
+                      variant: "expressive",
+                      icon: d.X,
+                      iconPosition: "start",
+                      disabled: !0,
+                      fullWidth: G.fullWidth,
+                      text: R ?? N.intl.string(N.t.gKmQ1G),
+                  }),
+              })
+            : (0, i.jsx)(l.A, {
+                  text: $,
+                  "aria-label": !1,
+                  children: (e) =>
+                      (0, i.jsx)(h.wL, {
+                          "data-migration-pending": !0,
+                          ...e,
+                          disabled: !0,
+                          size: c.$n.Sizes.SMALL,
+                          pauseAnimation: L,
+                          ...G,
+                          children: Z,
+                      }),
+              })
+        : U
+          ? (0, i.jsx)(_.$, {
+                variant: "expressive",
+                icon: f._,
+                disabled: X,
+                loading: B,
+                fullWidth: G.fullWidth,
+                text: R ?? N.intl.string(N.t.gKmQ1G),
+                onClick: z,
+            })
+          : (0, i.jsx)(h.wL, {
+                "data-migration-pending": !0,
+                size: c.$n.Sizes.SMALL,
+                ...G,
+                className: a()(G.className, { [v.yj]: P }),
+                submitting: B,
+                onClick: z,
+                pauseAnimation: L,
+                children: Z,
+            });
+};

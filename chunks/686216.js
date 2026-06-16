@@ -1,1 +1,1 @@
-e.exports={S:"image_c1449e"}
+_.exports = { S: "image_c1449e" };

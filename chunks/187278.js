@@ -1,1 +1,61 @@
-i.d(t,{default:()=>g});var n=i(627968),a=i(64700),r=i(284009),l=i.n(r),s=i(224640),c=i(683071),d=i(430993),o=i(789645),u=i(696208),h=i(10005),C=i(438732),k=i(208993),p=i(602339),b=i(375708),x=i(798399);let g=e=>{let{currentUser:t,otherUser:i,transitionState:r,onClose:g}=e,[y,f]=a.useState(!1),j=a.useCallback(()=>{f(!0)},[]),m=a.useCallback(()=>{g()},[g]),A=(0,C.A)(),{cancelLinkRequest:v,isCancelLoading:w}=(0,h.A)({onError:j,onSuccess:m});return l()(A,"FamilyCenterCancelLinkModal should only be rendered for parents."),(0,n.jsxs)(s.d,{transitionState:r,onClose:g,children:[y&&(0,n.jsx)(c.w,{type:"critical",children:b.intl.string(p.default["6gyAQZ"])}),(0,n.jsx)(d.c,{children:(0,n.jsx)(k.A.Header,{currentUser:t,otherUser:i,header:b.intl.string(p.default.HynllX),icon:(0,n.jsx)(o.P,{size:"md",color:"currentColor",className:x.u})})}),(0,n.jsx)(u.H,{actionsFullWidth:!0,actions:[{variant:"secondary",text:b.intl.string(p.default.czincX),onClick:g,disabled:w},{variant:"critical-primary",text:b.intl.string(p.default.mK40bk),onClick:()=>{f(!1),v(i.id)},disabled:w||y,loading:w}]})]})}
+i.d(t, { default: () => g });
+var n = i(627968),
+    a = i(64700),
+    r = i(284009),
+    l = i.n(r),
+    s = i(224640),
+    c = i(683071),
+    d = i(430993),
+    o = i(789645),
+    u = i(696208),
+    h = i(10005),
+    C = i(438732),
+    k = i(208993),
+    p = i(602339),
+    b = i(375708),
+    x = i(798399);
+let g = (e) => {
+    let { currentUser: t, otherUser: i, transitionState: r, onClose: g } = e,
+        [y, f] = a.useState(!1),
+        j = a.useCallback(() => {
+            f(!0);
+        }, []),
+        m = a.useCallback(() => {
+            g();
+        }, [g]),
+        A = (0, C.A)(),
+        { cancelLinkRequest: v, isCancelLoading: w } = (0, h.A)({ onError: j, onSuccess: m });
+    return (
+        l()(A, "FamilyCenterCancelLinkModal should only be rendered for parents."),
+        (0, n.jsxs)(s.d, {
+            transitionState: r,
+            onClose: g,
+            children: [
+                y && (0, n.jsx)(c.w, { type: "critical", children: b.intl.string(p.default["6gyAQZ"]) }),
+                (0, n.jsx)(d.c, {
+                    children: (0, n.jsx)(k.A.Header, {
+                        currentUser: t,
+                        otherUser: i,
+                        header: b.intl.string(p.default.HynllX),
+                        icon: (0, n.jsx)(o.P, { size: "md", color: "currentColor", className: x.u }),
+                    }),
+                }),
+                (0, n.jsx)(u.H, {
+                    actionsFullWidth: !0,
+                    actions: [
+                        { variant: "secondary", text: b.intl.string(p.default.czincX), onClick: g, disabled: w },
+                        {
+                            variant: "critical-primary",
+                            text: b.intl.string(p.default.mK40bk),
+                            onClick: () => {
+                                f(!1), v(i.id);
+                            },
+                            disabled: w || y,
+                            loading: w,
+                        },
+                    ],
+                }),
+            ],
+        })
+    );
+};

@@ -1,1 +1,16 @@
-e.exports={kL:"container_edf95e",Oy:"partnerSection_edf95e",U:"subsectionLabel_edf95e",un:"rowId_edf95e",en:"rowMeta_edf95e",Od:"statusBadge_edf95e",xk:"statusActive_edf95e",kS:"statusInactive_edf95e",cm:"rowActions_edf95e",nM:"row_edf95e",Ie:"empty_edf95e",ns:"linkForm_edf95e",CM:"linkFormHelp_edf95e",kc:"errorText_edf95e"}
+e.exports = {
+    kL: "container_edf95e",
+    Oy: "partnerSection_edf95e",
+    U: "subsectionLabel_edf95e",
+    un: "rowId_edf95e",
+    en: "rowMeta_edf95e",
+    Od: "statusBadge_edf95e",
+    xk: "statusActive_edf95e",
+    kS: "statusInactive_edf95e",
+    cm: "rowActions_edf95e",
+    nM: "row_edf95e",
+    Ie: "empty_edf95e",
+    ns: "linkForm_edf95e",
+    CM: "linkFormHelp_edf95e",
+    kc: "errorText_edf95e",
+};

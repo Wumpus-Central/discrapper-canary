@@ -1,1 +1,45 @@
-t.d(s,{A:()=>c});var r=t(627968),a=t(64700),n=t(876230),i=t(268218);let u=a.lazy(()=>(0,i.sq)({createPromise:()=>Promise.resolve().then(t.bind(t,664111)),webpackId:664111,name:"DiscordVideoPlayer"})),d={width:"100%",height:"100%",objectFit:"contain"};function c(e){let{onPlay:s,autoplay:t,playable:i=!0,...c}=e,o=a.useRef(!1),l=a.useRef(!1),_=a.useCallback((e,t)=>{o.current&&(o.current=!1,s?.(l.current,e,t))},[s]),E=a.useCallback((e,s)=>{e===n.Q6.PLAYING?s!==n.KB.BUFFERING_RECOVERY&&(o.current=!0,l.current=s!==n.KB.USER):_(0,0)},[_]),A=a.useCallback((e,s)=>{_(1e3*e,Number.isFinite(s)?1e3*s:0)},[_]),f=null!=c.poster?(0,r.jsx)("img",{src:c.poster,alt:"",style:d}):null;return i?(0,r.jsx)(a.Suspense,{fallback:f,children:(0,r.jsx)(u,{...c,autoplay:t,onPlayerStateChange:E,onProgressUpdate:A})}):f}
+t.d(s, { A: () => c });
+var r = t(627968),
+    a = t(64700),
+    n = t(876230),
+    i = t(268218);
+let u = a.lazy(() =>
+        (0, i.sq)({
+            createPromise: () => Promise.resolve().then(t.bind(t, 664111)),
+            webpackId: 664111,
+            name: "DiscordVideoPlayer",
+        }),
+    ),
+    d = { width: "100%", height: "100%", objectFit: "contain" };
+function c(e) {
+    let { onPlay: s, autoplay: t, playable: i = !0, ...c } = e,
+        o = a.useRef(!1),
+        l = a.useRef(!1),
+        _ = a.useCallback(
+            (e, t) => {
+                o.current && ((o.current = !1), s?.(l.current, e, t));
+            },
+            [s],
+        ),
+        E = a.useCallback(
+            (e, s) => {
+                e === n.Q6.PLAYING
+                    ? s !== n.KB.BUFFERING_RECOVERY && ((o.current = !0), (l.current = s !== n.KB.USER))
+                    : _(0, 0);
+            },
+            [_],
+        ),
+        A = a.useCallback(
+            (e, s) => {
+                _(1e3 * e, Number.isFinite(s) ? 1e3 * s : 0);
+            },
+            [_],
+        ),
+        f = null != c.poster ? (0, r.jsx)("img", { src: c.poster, alt: "", style: d }) : null;
+    return i
+        ? (0, r.jsx)(a.Suspense, {
+              fallback: f,
+              children: (0, r.jsx)(u, { ...c, autoplay: t, onPlayerStateChange: E, onProgressUpdate: A }),
+          })
+        : f;
+}

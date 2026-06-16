@@ -1,1 +1,12 @@
-n.d(t,{A:()=>i});let i=(0,n(945810).mj)({name:"2026-06-nitro-gifting-price-copy-tweaks",kind:"user",defaultConfig:{showGiftPrice:!0,useNewCopy:!1,monthlyDefaultSelected:!1},variations:{1:{showGiftPrice:!1,useNewCopy:!1,monthlyDefaultSelected:!1},2:{showGiftPrice:!0,useNewCopy:!0,monthlyDefaultSelected:!1},3:{showGiftPrice:!0,useNewCopy:!0,monthlyDefaultSelected:!0}}})
+"use strict";
+n.d(t, { A: () => i });
+let i = (0, n(945810).mj)({
+    name: "2026-06-nitro-gifting-price-copy-tweaks",
+    kind: "user",
+    defaultConfig: { showGiftPrice: !0, useNewCopy: !1, monthlyDefaultSelected: !1 },
+    variations: {
+        1: { showGiftPrice: !1, useNewCopy: !1, monthlyDefaultSelected: !1 },
+        2: { showGiftPrice: !0, useNewCopy: !0, monthlyDefaultSelected: !1 },
+        3: { showGiftPrice: !0, useNewCopy: !0, monthlyDefaultSelected: !0 },
+    },
+});

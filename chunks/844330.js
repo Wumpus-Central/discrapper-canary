@@ -1,1 +1,67 @@
-l.d(s,{A:()=>x});var t=l(627968),i=l(64700),n=l(503698),r=l.n(n),c=l(939249),a=l(834730),u=l(147925),d=l(214205);function x(e){let{icon:s,title:l,subtitle:n,children:x,className:h,isExpanded:m,onExpandedChange:o,defaultExpanded:p=!1,onOpen:f,maxHeight:j}=e,[v,g]=i.useState(p),k=i.useRef(null),[N,b]=i.useState(null),S=void 0!==m,w=S?m:v;i.useEffect(()=>{w&&null!=k.current&&b(k.current.scrollHeight)},[w,x]);let C=i.useCallback(()=>{let e=!w;S||g(e),o?.(e),e&&null!=f&&f()},[w,S,o,f]),D=i.useMemo(()=>{if(w){if(null!=j)return{maxHeight:"number"==typeof j?`${j}px`:j};if(null!=N)return{maxHeight:`${N}px`}}},[j,w,N]);return(0,t.jsxs)("div",{className:r()(d.Yt,h,{[d.Sg]:w}),children:[(0,t.jsxs)(c.D,{className:d.wx,onClick:C,children:[null!=s&&(0,t.jsx)("div",{className:d.Y5,children:s}),(0,t.jsxs)("div",{className:d.DD,children:[(0,t.jsx)(a.E,{variant:"text-sm/medium",color:"text-default",children:l}),null!=n&&""!==n&&(0,t.jsx)(a.E,{variant:"text-xs/medium",color:"text-subtle",children:n})]}),(0,t.jsx)("div",{className:r()(d.OW,{[d.Sg]:w}),children:(0,t.jsx)(u.A,{width:20,height:20,direction:u.A.Directions.RIGHT})})]}),(0,t.jsx)("div",{ref:k,className:r()(d.Qs,{[d.Sg]:w}),style:D,children:x})]})}
+l.d(s, { A: () => x });
+var t = l(627968),
+    i = l(64700),
+    n = l(503698),
+    r = l.n(n),
+    c = l(939249),
+    a = l(834730),
+    u = l(147925),
+    d = l(214205);
+function x(e) {
+    let {
+            icon: s,
+            title: l,
+            subtitle: n,
+            children: x,
+            className: h,
+            isExpanded: m,
+            onExpandedChange: o,
+            defaultExpanded: p = !1,
+            onOpen: f,
+            maxHeight: j,
+        } = e,
+        [v, g] = i.useState(p),
+        k = i.useRef(null),
+        [N, b] = i.useState(null),
+        S = void 0 !== m,
+        w = S ? m : v;
+    i.useEffect(() => {
+        w && null != k.current && b(k.current.scrollHeight);
+    }, [w, x]);
+    let C = i.useCallback(() => {
+            let e = !w;
+            S || g(e), o?.(e), e && null != f && f();
+        }, [w, S, o, f]),
+        D = i.useMemo(() => {
+            if (w) {
+                if (null != j) return { maxHeight: "number" == typeof j ? `${j}px` : j };
+                if (null != N) return { maxHeight: `${N}px` };
+            }
+        }, [j, w, N]);
+    return (0, t.jsxs)("div", {
+        className: r()(d.Yt, h, { [d.Sg]: w }),
+        children: [
+            (0, t.jsxs)(c.D, {
+                className: d.wx,
+                onClick: C,
+                children: [
+                    null != s && (0, t.jsx)("div", { className: d.Y5, children: s }),
+                    (0, t.jsxs)("div", {
+                        className: d.DD,
+                        children: [
+                            (0, t.jsx)(a.E, { variant: "text-sm/medium", color: "text-default", children: l }),
+                            null != n &&
+                                "" !== n &&
+                                (0, t.jsx)(a.E, { variant: "text-xs/medium", color: "text-subtle", children: n }),
+                        ],
+                    }),
+                    (0, t.jsx)("div", {
+                        className: r()(d.OW, { [d.Sg]: w }),
+                        children: (0, t.jsx)(u.A, { width: 20, height: 20, direction: u.A.Directions.RIGHT }),
+                    }),
+                ],
+            }),
+            (0, t.jsx)("div", { ref: k, className: r()(d.Qs, { [d.Sg]: w }), style: D, children: x }),
+        ],
+    });
+}

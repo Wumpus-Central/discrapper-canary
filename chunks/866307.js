@@ -1,1 +1,2 @@
-"use strict";e.exports=Error
+"use strict";
+e.exports = Error;

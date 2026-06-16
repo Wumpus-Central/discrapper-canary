@@ -1,1 +1,146 @@
-e.d(s,{Bw:()=>N,ld:()=>b});var l=e(627968);e(64700);var r=e(17928),n=e(661531),i=e(428678),a=e(834730),c=e(939249),d=e(952270),o=e(831544),x=e(778712),m=e(364522),j=e(442433),h=e(85448),u=e(994500),g=e(427262),v=e(312006),k=e(366098),p=e(375708),E=e(195695);let N=t=>{let{channelId:s}=t;return(0,l.jsx)(f,{channelId:s})},f=t=>{let{channelId:s}=t,e=(0,k.D3)(s),r=(0,k.Xk)(s);if(0===e&&0===r)return null;let o=t=>{(0,j.jA)(t,t=>(0,l.jsx)(A,{...t,channelId:s}),{position:"left",align:"bottom"})};return e>0&&r>0?(0,l.jsxs)("div",{className:E.jC,children:[(0,l.jsx)(i.K,{size:"lg",color:n.A.unsafe_rawColors.RED_400.css}),(0,l.jsx)(a.E,{variant:"text-xs/normal",color:"text-default",children:p.intl.string(p.t["P/KFXz"])}),(0,l.jsx)(c.D,{className:E.R5,onClick:o,children:p.intl.string(p.t.rUEjBe)})]}):r>0?(0,l.jsxs)("div",{className:E.jC,children:[(0,l.jsx)(d.G,{size:"lg"}),(0,l.jsx)(a.E,{variant:"text-xs/normal",color:"text-default",children:p.intl.format(p.t.Ri3o33,{number:r})}),(0,l.jsx)(c.D,{className:E.R5,onClick:o,children:p.intl.string(p.t.rUEjBe)})]}):(0,l.jsxs)("div",{className:E.jC,children:[(0,l.jsx)(i.K,{size:"lg",color:n.A.unsafe_rawColors.RED_400.css}),(0,l.jsx)(a.E,{variant:"text-xs/normal",color:"text-default",children:p.intl.format(p.t["6Tcdt7"],{number:e})}),(0,l.jsx)(c.D,{className:E.R5,onClick:o,children:p.intl.string(p.t.rUEjBe)})]})},b=t=>{let{user:s,showStatus:e,speaker:n,channelId:i}=t,c=(0,r.bG)([v.Ay],()=>v.Ay.isModerator(s.id,i)),d=(0,r.bG)([u.A],()=>u.A.isBlocked(s.id)),m=null;return e&&(m=n?p.intl.string(p.t.LqMmG2):c?p.intl.string(p.t.GMZqSi):p.intl.string(p.t.suRApw)),(0,l.jsxs)("div",{className:E.kQ,children:[(0,l.jsx)(h.A,{src:s.getAvatarURL(null,32),size:x._3.SIZE_32,muted:!1,deafen:!1,speaking:!1,ringing:!1,renderIcon:n?()=>(0,l.jsx)(o.c,{size:"md",color:"currentColor",className:E.Kk}):null},s.id),(0,l.jsxs)("div",{className:E.eF,children:[(0,l.jsxs)("div",{className:E.Xh,children:[(0,l.jsx)(a.E,{variant:e?"text-md/normal":"text-sm/normal",children:g.Ay.getName(s)}),(0,l.jsx)(a.E,{variant:e?"text-md/normal":"text-sm/normal",color:"text-subtle",children:`#${s.discriminator}`})]}),(0,l.jsxs)("div",{className:E.Xh,children:[(0,l.jsx)(a.E,{variant:"text-xs/normal",color:d?"text-feedback-critical":"text-default",children:d?p.intl.string(p.t["4bDptI"]):p.intl.string(p.t.tFY5Zb)}),(0,l.jsxs)(a.E,{variant:"text-xs/normal",color:"text-muted",children:["| ",m]})]})]})]})},A=t=>{let{channelId:s}=t,e=(0,k.mT)(s),r=(0,k.Iv)(s);return(0,l.jsx)(m.Ip,{className:E.kL,children:[...e,...r].map(t=>{let{user:e}=t;return(0,l.jsx)(b,{user:e,channelId:s},e.id)})})}
+e.d(s, { Bw: () => N, ld: () => b });
+var l = e(627968);
+e(64700);
+var r = e(17928),
+    n = e(661531),
+    i = e(428678),
+    a = e(834730),
+    c = e(939249),
+    d = e(952270),
+    o = e(831544),
+    x = e(778712),
+    m = e(364522),
+    j = e(442433),
+    h = e(85448),
+    u = e(994500),
+    g = e(427262),
+    v = e(312006),
+    k = e(366098),
+    p = e(375708),
+    E = e(195695);
+let N = (t) => {
+        let { channelId: s } = t;
+        return (0, l.jsx)(f, { channelId: s });
+    },
+    f = (t) => {
+        let { channelId: s } = t,
+            e = (0, k.D3)(s),
+            r = (0, k.Xk)(s);
+        if (0 === e && 0 === r) return null;
+        let o = (t) => {
+            (0, j.jA)(t, (t) => (0, l.jsx)(A, { ...t, channelId: s }), { position: "left", align: "bottom" });
+        };
+        return e > 0 && r > 0
+            ? (0, l.jsxs)("div", {
+                  className: E.jC,
+                  children: [
+                      (0, l.jsx)(i.K, { size: "lg", color: n.A.unsafe_rawColors.RED_400.css }),
+                      (0, l.jsx)(a.E, {
+                          variant: "text-xs/normal",
+                          color: "text-default",
+                          children: p.intl.string(p.t["P/KFXz"]),
+                      }),
+                      (0, l.jsx)(c.D, { className: E.R5, onClick: o, children: p.intl.string(p.t.rUEjBe) }),
+                  ],
+              })
+            : r > 0
+              ? (0, l.jsxs)("div", {
+                    className: E.jC,
+                    children: [
+                        (0, l.jsx)(d.G, { size: "lg" }),
+                        (0, l.jsx)(a.E, {
+                            variant: "text-xs/normal",
+                            color: "text-default",
+                            children: p.intl.format(p.t.Ri3o33, { number: r }),
+                        }),
+                        (0, l.jsx)(c.D, { className: E.R5, onClick: o, children: p.intl.string(p.t.rUEjBe) }),
+                    ],
+                })
+              : (0, l.jsxs)("div", {
+                    className: E.jC,
+                    children: [
+                        (0, l.jsx)(i.K, { size: "lg", color: n.A.unsafe_rawColors.RED_400.css }),
+                        (0, l.jsx)(a.E, {
+                            variant: "text-xs/normal",
+                            color: "text-default",
+                            children: p.intl.format(p.t["6Tcdt7"], { number: e }),
+                        }),
+                        (0, l.jsx)(c.D, { className: E.R5, onClick: o, children: p.intl.string(p.t.rUEjBe) }),
+                    ],
+                });
+    },
+    b = (t) => {
+        let { user: s, showStatus: e, speaker: n, channelId: i } = t,
+            c = (0, r.bG)([v.Ay], () => v.Ay.isModerator(s.id, i)),
+            d = (0, r.bG)([u.A], () => u.A.isBlocked(s.id)),
+            m = null;
+        return (
+            e && (m = n ? p.intl.string(p.t.LqMmG2) : c ? p.intl.string(p.t.GMZqSi) : p.intl.string(p.t.suRApw)),
+            (0, l.jsxs)("div", {
+                className: E.kQ,
+                children: [
+                    (0, l.jsx)(
+                        h.A,
+                        {
+                            src: s.getAvatarURL(null, 32),
+                            size: x._3.SIZE_32,
+                            muted: !1,
+                            deafen: !1,
+                            speaking: !1,
+                            ringing: !1,
+                            renderIcon: n
+                                ? () => (0, l.jsx)(o.c, { size: "md", color: "currentColor", className: E.Kk })
+                                : null,
+                        },
+                        s.id,
+                    ),
+                    (0, l.jsxs)("div", {
+                        className: E.eF,
+                        children: [
+                            (0, l.jsxs)("div", {
+                                className: E.Xh,
+                                children: [
+                                    (0, l.jsx)(a.E, {
+                                        variant: e ? "text-md/normal" : "text-sm/normal",
+                                        children: g.Ay.getName(s),
+                                    }),
+                                    (0, l.jsx)(a.E, {
+                                        variant: e ? "text-md/normal" : "text-sm/normal",
+                                        color: "text-subtle",
+                                        children: `#${s.discriminator}`,
+                                    }),
+                                ],
+                            }),
+                            (0, l.jsxs)("div", {
+                                className: E.Xh,
+                                children: [
+                                    (0, l.jsx)(a.E, {
+                                        variant: "text-xs/normal",
+                                        color: d ? "text-feedback-critical" : "text-default",
+                                        children: d ? p.intl.string(p.t["4bDptI"]) : p.intl.string(p.t.tFY5Zb),
+                                    }),
+                                    (0, l.jsxs)(a.E, {
+                                        variant: "text-xs/normal",
+                                        color: "text-muted",
+                                        children: ["| ", m],
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                ],
+            })
+        );
+    },
+    A = (t) => {
+        let { channelId: s } = t,
+            e = (0, k.mT)(s),
+            r = (0, k.Iv)(s);
+        return (0, l.jsx)(m.Ip, {
+            className: E.kL,
+            children: [...e, ...r].map((t) => {
+                let { user: e } = t;
+                return (0, l.jsx)(b, { user: e, channelId: s }, e.id);
+            }),
+        });
+    };

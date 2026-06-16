@@ -1,1 +1,13 @@
-"use strict";var i=n(439619),r=n(741623),s=i("%Number%"),a=n(858156),o=n(449950),l=n(483955);e.exports=function(e){var t=a(e)?e:o(e,s);if("symbol"==typeof t)throw new r("Cannot convert a Symbol value to a number");if("bigint"==typeof t)throw new r("Conversion from 'BigInt' to 'number' is not allowed.");return"string"==typeof t?l(t):+t}
+"use strict";
+var i = n(439619),
+    r = n(741623),
+    s = i("%Number%"),
+    a = n(858156),
+    o = n(449950),
+    l = n(483955);
+e.exports = function (e) {
+    var t = a(e) ? e : o(e, s);
+    if ("symbol" == typeof t) throw new r("Cannot convert a Symbol value to a number");
+    if ("bigint" == typeof t) throw new r("Conversion from 'BigInt' to 'number' is not allowed.");
+    return "string" == typeof t ? l(t) : +t;
+};

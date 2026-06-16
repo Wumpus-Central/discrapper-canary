@@ -1,1 +1,13 @@
-"use strict";n.d(t,{A:()=>r});var i=n(315069);class r extends i.A{skuId;constructor(e){super(),this.skuId=e.skuId}static fromServer(e){let{sku_id:t,...n}=e;return new r({...n,skuId:t})}}
+"use strict";
+n.d(t, { A: () => r });
+var i = n(315069);
+class r extends i.A {
+    skuId;
+    constructor(e) {
+        super(), (this.skuId = e.skuId);
+    }
+    static fromServer(e) {
+        let { sku_id: t, ...n } = e;
+        return new r({ ...n, skuId: t });
+    }
+}

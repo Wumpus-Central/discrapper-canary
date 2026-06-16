@@ -1,1 +1,13 @@
-s.d(e,{I:()=>a});var n=s(64700),i=s(203879);function a(t,e){let[s,a]=n.useState(e),l=n.useCallback(t=>{t.isIntersecting&&a(!0)},[]);return{visibilityElementRef:(0,i.B)(l,{root:t??null,threshold:0,rootMargin:"900px 0px 900px 0px"},!0),almostVisibleInViewport:s}}
+s.d(e, { I: () => a });
+var n = s(64700),
+    i = s(203879);
+function a(t, e) {
+    let [s, a] = n.useState(e),
+        l = n.useCallback((t) => {
+            t.isIntersecting && a(!0);
+        }, []);
+    return {
+        visibilityElementRef: (0, i.B)(l, { root: t ?? null, threshold: 0, rootMargin: "900px 0px 900px 0px" }, !0),
+        almostVisibleInViewport: s,
+    };
+}

@@ -1,1 +1,1 @@
-e.exports={M:"menu_f727ab"}
+a.exports = { M: "menu_f727ab" };

@@ -1,1 +1,32 @@
-u.d(t,{Ay:()=>a,Do:()=>C,M:()=>E,sk:()=>S});var r=u(17928),i=u(441574),n=u(287809),c=u(474090),R=u(32206),s=u(482947),_=u(788868);function S(e){let t=(0,R.c)(e),{bucket:u}=s.A.useConfig({location:e});return t&&u!==s.H.CONTROL}function C(e){let t=(0,R.c)(e),{bucket:u}=s.A.useConfig({location:e});return t&&u===s.H.PAID_PREMIUM_SUBSCRIBERS_ONLY}function E(e){return(0,c.YE)(e,_.PremiumTypes.TIER_2)&&e?.premiumState!=null&&e.premiumState.premiumSubscriptionType===i.jK.TIER_2}function a(e){let t=(0,R.c)(e),{bucket:u}=s.A.useConfig({location:e}),i=(0,r.bG)([n.default],()=>E(n.default.getCurrentUser())),c=u===s.H.OPEN_PURCHASE||u===s.H.PAID_PREMIUM_SUBSCRIBERS_ONLY&&i;return t&&c}
+n.d(t, { Ay: () => g, Do: () => d, M: () => m, sk: () => u });
+var i = n(17928),
+    r = n(441574),
+    l = n(287809),
+    a = n(474090),
+    s = n(32206),
+    o = n(482947),
+    c = n(788868);
+function u(e) {
+    let t = (0, s.c)(e),
+        { bucket: n } = o.A.useConfig({ location: e });
+    return t && n !== o.H.CONTROL;
+}
+function d(e) {
+    let t = (0, s.c)(e),
+        { bucket: n } = o.A.useConfig({ location: e });
+    return t && n === o.H.PAID_PREMIUM_SUBSCRIBERS_ONLY;
+}
+function m(e) {
+    return (
+        (0, a.YE)(e, c.PremiumTypes.TIER_2) &&
+        e?.premiumState != null &&
+        e.premiumState.premiumSubscriptionType === r.jK.TIER_2
+    );
+}
+function g(e) {
+    let t = (0, s.c)(e),
+        { bucket: n } = o.A.useConfig({ location: e }),
+        r = (0, i.bG)([l.default], () => m(l.default.getCurrentUser())),
+        a = n === o.H.OPEN_PURCHASE || (n === o.H.PAID_PREMIUM_SUBSCRIBERS_ONLY && r);
+    return t && a;
+}

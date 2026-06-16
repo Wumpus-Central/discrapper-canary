@@ -1,1 +1,2 @@
-e.exports=s.p+"b4673c9c89418881.scm"
+"use strict";
+e.exports = n.p + "b4673c9c89418881.scm";

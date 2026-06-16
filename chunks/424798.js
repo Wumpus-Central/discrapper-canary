@@ -1,1 +1,132 @@
-a.d(t,{Fr:()=>M,Kk:()=>w,Mu:()=>S,jO:()=>I});var l=a(64700),s=a(735438),n=a.n(s),r=a(17928),i=a(919577),d=a(212007),o=a(734057),u=a(576705),c=a(222823),g=a(403362),h=a(935208),A=a(970278),m=a(45494),f=a(152007),x=a(867455),v=a(707539),j=a(818348);function w(){l.useEffect(()=>{(0,v.ju)()},[])}function I(e){let t,a=(t=(0,r.yK)([u.A,A.A,o.A],()=>n()(A.A.getThreadsForParent(e.guild_id,e.id)).values().map(e=>{let{id:t}=e;return o.A.getChannel(t)}).filter(g.Vq).filter(e=>u.A.can(j.xB.VIEW_CHANNEL,e)).map(e=>e.id).value(),[e.guild_id,e.id]),l.useMemo(()=>n()(t).sort((e,t)=>h.default.compare(c.Ay.lastMessageId(e),c.Ay.lastMessageId(t))).reverse().value(),[t])),[s,i]=(0,r.bG)([f.A],()=>n().partition(a,e=>f.A.hasJoined(e)),[a],r.My);return{joinedThreadIds:s,unjoinedThreadIds:i}}function S(e){let t=(0,r.yK)([u.A,A.A,o.A],()=>n()(A.A.getThreadsForGuild(e)).values().map(e=>n().values(e)).flatten().map(e=>{let{id:t}=e;return o.A.getChannel(t)}).filter(g.Vq).filter(e=>u.A.can(j.xB.VIEW_CHANNEL,e)).map(e=>e.id).value(),[e]);return l.useMemo(()=>n()(t).sort((e,t)=>h.default.compare(c.Ay.lastMessageId(e),c.Ay.lastMessageId(t))).reverse().value(),[t])}function M(e,t,a,s){let c=e.isModeratorReportChannel(),{showResolvedFlags:g}=(0,d.T)(e.id),{canLoadMore:h,loading:A,nextOffset:f,isInitialLoad:v}=(0,r.cf)([m.A],()=>({loading:m.A.isLoading(e.id,t,a,s),isInitialLoad:m.A.getIsInitialLoad(e.id,t,a,s),canLoadMore:m.A.getCanLoadMore(e.id,t,a,s),nextOffset:m.A.getNextOffset(e.id,t,a,s)})),w=l.useCallback(()=>{u.A.can(j.xB.READ_MESSAGE_HISTORY,e)&&(!c||g)&&x.A.loadArchivedThreads({guildId:e.guild_id,channelId:e.id,sortOrder:t,tagFilter:a,tagSetting:s,offset:f})},[e,t,a,s,f,g,c]),I=l.useRef(w);return l.useEffect(()=>{I.current=w}),l.useEffect(()=>{v&&I.current()},[e.id,t,a,v,g]),l.useEffect(()=>{i.A.resort(e.id)},[e.id,g]),{threadIds:(0,r.yK)([m.A,o.A,u.A],()=>n()(m.A.getThreads(e.id,t,a,s)).filter(e=>{if(c&&!g)return!1;let t=o.A.getChannel(e);return null!=t&&u.A.can(j.xB.VIEW_CHANNEL,t)&&!t.isMediaThread()}).value()),canLoadMore:h,loading:(A||v)&&g&&u.A.can(j.xB.READ_MESSAGE_HISTORY,e),loadMore:w}}
+a.d(t, { Fr: () => M, Kk: () => w, Mu: () => S, jO: () => I });
+var l = a(64700),
+    s = a(735438),
+    n = a.n(s),
+    r = a(17928),
+    i = a(919577),
+    d = a(212007),
+    o = a(734057),
+    u = a(576705),
+    c = a(222823),
+    g = a(403362),
+    h = a(935208),
+    A = a(970278),
+    m = a(45494),
+    f = a(152007),
+    x = a(867455),
+    v = a(707539),
+    j = a(818348);
+function w() {
+    l.useEffect(() => {
+        (0, v.ju)();
+    }, []);
+}
+function I(e) {
+    let t,
+        a =
+            ((t = (0, r.yK)(
+                [u.A, A.A, o.A],
+                () =>
+                    n()(A.A.getThreadsForParent(e.guild_id, e.id))
+                        .values()
+                        .map((e) => {
+                            let { id: t } = e;
+                            return o.A.getChannel(t);
+                        })
+                        .filter(g.Vq)
+                        .filter((e) => u.A.can(j.xB.VIEW_CHANNEL, e))
+                        .map((e) => e.id)
+                        .value(),
+                [e.guild_id, e.id],
+            )),
+            l.useMemo(
+                () =>
+                    n()(t)
+                        .sort((e, t) => h.default.compare(c.Ay.lastMessageId(e), c.Ay.lastMessageId(t)))
+                        .reverse()
+                        .value(),
+                [t],
+            )),
+        [s, i] = (0, r.bG)([f.A], () => n().partition(a, (e) => f.A.hasJoined(e)), [a], r.My);
+    return { joinedThreadIds: s, unjoinedThreadIds: i };
+}
+function S(e) {
+    let t = (0, r.yK)(
+        [u.A, A.A, o.A],
+        () =>
+            n()(A.A.getThreadsForGuild(e))
+                .values()
+                .map((e) => n().values(e))
+                .flatten()
+                .map((e) => {
+                    let { id: t } = e;
+                    return o.A.getChannel(t);
+                })
+                .filter(g.Vq)
+                .filter((e) => u.A.can(j.xB.VIEW_CHANNEL, e))
+                .map((e) => e.id)
+                .value(),
+        [e],
+    );
+    return l.useMemo(
+        () =>
+            n()(t)
+                .sort((e, t) => h.default.compare(c.Ay.lastMessageId(e), c.Ay.lastMessageId(t)))
+                .reverse()
+                .value(),
+        [t],
+    );
+}
+function M(e, t, a, s) {
+    let c = e.isModeratorReportChannel(),
+        { showResolvedFlags: g } = (0, d.T)(e.id),
+        {
+            canLoadMore: h,
+            loading: A,
+            nextOffset: f,
+            isInitialLoad: v,
+        } = (0, r.cf)([m.A], () => ({
+            loading: m.A.isLoading(e.id, t, a, s),
+            isInitialLoad: m.A.getIsInitialLoad(e.id, t, a, s),
+            canLoadMore: m.A.getCanLoadMore(e.id, t, a, s),
+            nextOffset: m.A.getNextOffset(e.id, t, a, s),
+        })),
+        w = l.useCallback(() => {
+            u.A.can(j.xB.READ_MESSAGE_HISTORY, e) &&
+                (!c || g) &&
+                x.A.loadArchivedThreads({
+                    guildId: e.guild_id,
+                    channelId: e.id,
+                    sortOrder: t,
+                    tagFilter: a,
+                    tagSetting: s,
+                    offset: f,
+                });
+        }, [e, t, a, s, f, g, c]),
+        I = l.useRef(w);
+    return (
+        l.useEffect(() => {
+            I.current = w;
+        }),
+        l.useEffect(() => {
+            v && I.current();
+        }, [e.id, t, a, v, g]),
+        l.useEffect(() => {
+            i.A.resort(e.id);
+        }, [e.id, g]),
+        {
+            threadIds: (0, r.yK)([m.A, o.A, u.A], () =>
+                n()(m.A.getThreads(e.id, t, a, s))
+                    .filter((e) => {
+                        if (c && !g) return !1;
+                        let t = o.A.getChannel(e);
+                        return null != t && u.A.can(j.xB.VIEW_CHANNEL, t) && !t.isMediaThread();
+                    })
+                    .value(),
+            ),
+            canLoadMore: h,
+            loading: (A || v) && g && u.A.can(j.xB.READ_MESSAGE_HISTORY, e),
+            loadMore: w,
+        }
+    );
+}

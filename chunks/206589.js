@@ -1,1 +1,5 @@
-n.d(e,{w:()=>i});function i(t,e){return e?.party?.id!=null&&t?.party?.id!=null&&t.party.id===e.party.id}
+"use strict";
+function i(e, t) {
+    return t?.party?.id != null && e?.party?.id != null && e.party.id === t.party.id;
+}
+n.d(t, { w: () => i });

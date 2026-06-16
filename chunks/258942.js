@@ -1,1 +1,99 @@
-i.d(s,{default:()=>E});var e=i(627968),r=i(64700),a=i(772707),l=i(554146),n=i(152367),c=i(834730),o=i(430392),d=i(460905),m=i(826673),u=i(837057),x=i(749314),C=i(174459),p=i(310419),A=i(652215),h=i(49999),N=i(488995),j=i(375708),D=i(568163);function E(t){let{guildId:s,transitionState:E,onClose:f,analyticsType:S=l.M.APP_DIRECTORY_UPSELL_MODAL}=t;return r.useEffect(()=>{C.default.track(A.HAw.DISMISSIBLE_CONTENT_SHOWN,{type:l.M[S],guild_id:s})},[s,S]),(0,e.jsx)(a.k,{title:j.intl.string(j.t["2tv5YG"]),subtitle:j.intl.string(j.t.pgwlD7),transitionState:E,size:"sm",graphic:{type:"lottie",lottie:()=>i.e("95947").then(i.t.bind(i,604902,19)),aspectRatio:"6/4"},onClose:f,actions:[{variant:"secondary",text:j.intl.string(j.t.L5eIZ2),onClick:()=>{f(),(0,m.Dr)(S,{forceTrack:!0,dismissAction:h.i.SECONDARY,guildId:s})}},{variant:"primary",text:j.intl.string(j.t["5e8Mrp"]),onClick:()=>{f(),(0,m.Dr)(S,{forceTrack:!0,dismissAction:h.i.PRIMARY,guildId:s}),(0,u.transitionToGlobalDiscovery)({tab:N.GlobalDiscoveryTab.APPS,newSessionState:{guildId:s,entrypoint:{name:p.sW.APPLICATION_DIRECTORY_UPSELL_MODAL}}})}}],children:(0,e.jsxs)("ul",{className:D.qI,children:[(0,e.jsxs)("li",{className:D.Aw,children:[(0,e.jsx)(n.D,{color:"currentColor",className:D.Kb}),(0,e.jsx)(c.E,{variant:"text-sm/medium",color:"text-default",children:j.intl.string(j.t["0vKo5F"])})]}),(0,e.jsx)(x.A,{className:D.yF}),(0,e.jsxs)("li",{className:D.Aw,children:[(0,e.jsx)(o.C,{color:"currentColor",className:D.EQ}),(0,e.jsx)(c.E,{variant:"text-sm/medium",color:"text-default",children:j.intl.string(j.t.CprEDO)})]}),(0,e.jsx)(x.A,{className:D.yF}),(0,e.jsxs)("li",{className:D.Aw,children:[(0,e.jsx)(d.n,{color:"currentColor",className:D.Cf}),(0,e.jsx)(c.E,{variant:"text-sm/medium",color:"text-default",children:j.intl.string(j.t.wQJMPC)})]})]})})}
+i.d(s, { default: () => E });
+var e = i(627968),
+    r = i(64700),
+    a = i(772707),
+    l = i(554146),
+    n = i(152367),
+    c = i(834730),
+    o = i(430392),
+    d = i(460905),
+    m = i(826673),
+    u = i(837057),
+    x = i(749314),
+    C = i(174459),
+    p = i(310419),
+    A = i(652215),
+    h = i(49999),
+    N = i(488995),
+    j = i(375708),
+    D = i(568163);
+function E(t) {
+    let { guildId: s, transitionState: E, onClose: f, analyticsType: S = l.M.APP_DIRECTORY_UPSELL_MODAL } = t;
+    return (
+        r.useEffect(() => {
+            C.default.track(A.HAw.DISMISSIBLE_CONTENT_SHOWN, { type: l.M[S], guild_id: s });
+        }, [s, S]),
+        (0, e.jsx)(a.k, {
+            title: j.intl.string(j.t["2tv5YG"]),
+            subtitle: j.intl.string(j.t.pgwlD7),
+            transitionState: E,
+            size: "sm",
+            graphic: { type: "lottie", lottie: () => i.e("95947").then(i.t.bind(i, 604902, 19)), aspectRatio: "6/4" },
+            onClose: f,
+            actions: [
+                {
+                    variant: "secondary",
+                    text: j.intl.string(j.t.L5eIZ2),
+                    onClick: () => {
+                        f(), (0, m.Dr)(S, { forceTrack: !0, dismissAction: h.i.SECONDARY, guildId: s });
+                    },
+                },
+                {
+                    variant: "primary",
+                    text: j.intl.string(j.t["5e8Mrp"]),
+                    onClick: () => {
+                        f(),
+                            (0, m.Dr)(S, { forceTrack: !0, dismissAction: h.i.PRIMARY, guildId: s }),
+                            (0, u.transitionToGlobalDiscovery)({
+                                tab: N.GlobalDiscoveryTab.APPS,
+                                newSessionState: {
+                                    guildId: s,
+                                    entrypoint: { name: p.sW.APPLICATION_DIRECTORY_UPSELL_MODAL },
+                                },
+                            });
+                    },
+                },
+            ],
+            children: (0, e.jsxs)("ul", {
+                className: D.qI,
+                children: [
+                    (0, e.jsxs)("li", {
+                        className: D.Aw,
+                        children: [
+                            (0, e.jsx)(n.D, { color: "currentColor", className: D.Kb }),
+                            (0, e.jsx)(c.E, {
+                                variant: "text-sm/medium",
+                                color: "text-default",
+                                children: j.intl.string(j.t["0vKo5F"]),
+                            }),
+                        ],
+                    }),
+                    (0, e.jsx)(x.A, { className: D.yF }),
+                    (0, e.jsxs)("li", {
+                        className: D.Aw,
+                        children: [
+                            (0, e.jsx)(o.C, { color: "currentColor", className: D.EQ }),
+                            (0, e.jsx)(c.E, {
+                                variant: "text-sm/medium",
+                                color: "text-default",
+                                children: j.intl.string(j.t.CprEDO),
+                            }),
+                        ],
+                    }),
+                    (0, e.jsx)(x.A, { className: D.yF }),
+                    (0, e.jsxs)("li", {
+                        className: D.Aw,
+                        children: [
+                            (0, e.jsx)(d.n, { color: "currentColor", className: D.Cf }),
+                            (0, e.jsx)(c.E, {
+                                variant: "text-sm/medium",
+                                color: "text-default",
+                                children: j.intl.string(j.t.wQJMPC),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        })
+    );
+}

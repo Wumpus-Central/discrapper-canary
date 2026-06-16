@@ -1,1 +1,44 @@
-s.d(t,{default:()=>o});var e=s(627968),i=s(64700),n=s(189213),r=s(834730),l=s(49999),c=s(375708),d=s(89946);function o(a){let{modalConfig:t,markAsDismissed:s,...o}=a,h=i.useCallback(a=>{t.onPrimaryClick?.(a),s(l.i.TAKE_ACTION)},[t,s]),m=[t.firstHeader,t.secondHeader].filter(Boolean).join(" "),p=[{variant:"secondary",text:c.intl.string(c.t["ETE/oC"]),onClick:o.onClose},...null!=t.primaryButtonText?[{variant:"primary",text:t.primaryButtonText,onClick:h}]:[]];return(0,e.jsx)(n.Modal,{...o,title:m,actions:p,size:"md",children:(0,e.jsx)("div",{className:d.kL,children:(0,e.jsxs)("div",{className:d.hQ,children:[(0,e.jsx)(r.E,{tag:"span",className:d.h_,variant:"text-sm/normal",children:t.firstBody}),(0,e.jsx)(r.E,{tag:"span",className:d.h_,variant:"text-sm/normal",children:t.secondBody}),(0,e.jsx)(r.E,{tag:"span",className:d.h_,variant:"text-sm/normal",children:t.thirdBody})]})})})}
+s.d(t, { default: () => o });
+var e = s(627968),
+    i = s(64700),
+    n = s(189213),
+    r = s(834730),
+    l = s(49999),
+    c = s(375708),
+    d = s(89946);
+function o(a) {
+    let { modalConfig: t, markAsDismissed: s, ...o } = a,
+        h = i.useCallback(
+            (a) => {
+                t.onPrimaryClick?.(a), s(l.i.TAKE_ACTION);
+            },
+            [t, s],
+        ),
+        m = [t.firstHeader, t.secondHeader].filter(Boolean).join(" "),
+        p = [
+            { variant: "secondary", text: c.intl.string(c.t["ETE/oC"]), onClick: o.onClose },
+            ...(null != t.primaryButtonText ? [{ variant: "primary", text: t.primaryButtonText, onClick: h }] : []),
+        ];
+    return (0, e.jsx)(n.Modal, {
+        ...o,
+        title: m,
+        actions: p,
+        size: "md",
+        children: (0, e.jsx)("div", {
+            className: d.kL,
+            children: (0, e.jsxs)("div", {
+                className: d.hQ,
+                children: [
+                    (0, e.jsx)(r.E, { tag: "span", className: d.h_, variant: "text-sm/normal", children: t.firstBody }),
+                    (0, e.jsx)(r.E, {
+                        tag: "span",
+                        className: d.h_,
+                        variant: "text-sm/normal",
+                        children: t.secondBody,
+                    }),
+                    (0, e.jsx)(r.E, { tag: "span", className: d.h_, variant: "text-sm/normal", children: t.thirdBody }),
+                ],
+            }),
+        }),
+    });
+}

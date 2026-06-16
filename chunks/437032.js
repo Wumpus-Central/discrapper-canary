@@ -1,1 +1,1 @@
-e.exports={h:"trigger__0467d"}
+e.exports = { h: "trigger__0467d" };

@@ -1,1 +1,6 @@
-var i,r=n(729106),s=(i=/[^.]+$/.exec(r&&r.keys&&r.keys.IE_PROTO||""))?"Symbol(src)_1."+i:"";e.exports=function(e){return!!s&&s in e}
+var i,
+    r = n(729106),
+    s = (i = /[^.]+$/.exec((r && r.keys && r.keys.IE_PROTO) || "")) ? "Symbol(src)_1." + i : "";
+e.exports = function (e) {
+    return !!s && s in e;
+};

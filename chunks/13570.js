@@ -1,1 +1,2 @@
-"use strict";e.exports="NODE"===n(676528)
+"use strict";
+e.exports = "NODE" === n(676528);

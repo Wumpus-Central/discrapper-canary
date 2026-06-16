@@ -1,1 +1,24 @@
-"use strict";var i=n(860511),r=n(65978),s=n(647055),a=function(e){return r.slice(0,e.length)===e};e.exports=a("Bun/")?"BUN":a("Cloudflare-Workers")?"CLOUDFLARE":a("Deno/")?"DENO":a("Node.js/")?"NODE":i.Bun&&"string"==typeof Bun.version?"BUN":i.Deno&&"object"==typeof Deno.version?"DENO":"process"===s(i.process)?"NODE":i.window&&i.document?"BROWSER":"REST"
+"use strict";
+var i = n(860511),
+    r = n(65978),
+    s = n(647055),
+    a = function (e) {
+        return r.slice(0, e.length) === e;
+    };
+e.exports = a("Bun/")
+    ? "BUN"
+    : a("Cloudflare-Workers")
+      ? "CLOUDFLARE"
+      : a("Deno/")
+        ? "DENO"
+        : a("Node.js/")
+          ? "NODE"
+          : i.Bun && "string" == typeof Bun.version
+            ? "BUN"
+            : i.Deno && "object" == typeof Deno.version
+              ? "DENO"
+              : "process" === s(i.process)
+                ? "NODE"
+                : i.window && i.document
+                  ? "BROWSER"
+                  : "REST";

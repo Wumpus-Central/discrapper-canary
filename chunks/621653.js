@@ -1,1 +1,36 @@
-r.d(t,{g:()=>i}),r(321073);var l=r(64700),n=r(702841),s=r(228366),a=r(248352),o=r(652215);function i(){let e=l.useRef(new Map),t=(0,n.bG)([a.A],()=>a.A.getUserDiscounts());l.useEffect(()=>{let r=e.current,l=Date.now(),n=[];return t.forEach(e=>{if(null==e.expiresAt)return;let t=e.expiresAt.getTime()-l;if(t<=0)n.push(e.discountId);else{let l=setTimeout(()=>{s.h.dispatch({type:"COLLECTIBLES_USER_DISCOUNTS_EXPIRED",discountIds:[e.discountId]}),r.delete(e.discountId)},Math.min(o.mnr,t));r.set(e.discountId,l)}}),n.length>0&&s.h.dispatch({type:"COLLECTIBLES_USER_DISCOUNTS_EXPIRED",discountIds:n}),()=>{r.forEach(e=>clearTimeout(e)),r.clear()}},[t])}
+r.d(t, { g: () => i }), r(321073);
+var l = r(64700),
+    n = r(702841),
+    s = r(228366),
+    a = r(248352),
+    o = r(652215);
+function i() {
+    let e = l.useRef(new Map()),
+        t = (0, n.bG)([a.A], () => a.A.getUserDiscounts());
+    l.useEffect(() => {
+        let r = e.current,
+            l = Date.now(),
+            n = [];
+        return (
+            t.forEach((e) => {
+                if (null == e.expiresAt) return;
+                let t = e.expiresAt.getTime() - l;
+                if (t <= 0) n.push(e.discountId);
+                else {
+                    let l = setTimeout(
+                        () => {
+                            s.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: [e.discountId] }),
+                                r.delete(e.discountId);
+                        },
+                        Math.min(o.mnr, t),
+                    );
+                    r.set(e.discountId, l);
+                }
+            }),
+            n.length > 0 && s.h.dispatch({ type: "COLLECTIBLES_USER_DISCOUNTS_EXPIRED", discountIds: n }),
+            () => {
+                r.forEach((e) => clearTimeout(e)), r.clear();
+            }
+        );
+    }, [t]);
+}

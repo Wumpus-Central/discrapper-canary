@@ -1,1 +1,1 @@
-e.exports={O:"group__0a16d"}
+p.exports = { O: "group__0a16d" };

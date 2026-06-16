@@ -1,1 +1,1 @@
-_.exports={IN:"hotspotsSection__16e9e",I8:"statusIcon__16e9e"}
+_.exports = { IN: "hotspotsSection__16e9e", I8: "statusIcon__16e9e" };

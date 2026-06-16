@@ -1,1 +1,190 @@
-"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.FormatBuilder=void 0,t.bindFormatValuesWithBuilder=a,t.bindFormatValues=o;let i=n(315507),r=n(725354);t.FormatBuilder=class{constructor(e){this.context=e}};class s extends Error{constructor(e,t,n){super(`No value for variable '${e}' was provided for the localized message '${t}'`),this.variableName=e,this.originalMessage=t,this.nodeType=n}}function a(e){var t;let{builder:n,originalMessage:l,nodes:u,locales:c,values:d,dataFormatters:_,formatConfig:h,currentPluralValue:f,keyPrefix:p}=e;if(1===u.length&&"string"==typeof u[0])return void n.pushLiteralText(u[0]);for(let e=0;e<u.length;e++){let E=u[e];if("string"==typeof E){n.pushLiteralText(E);continue}let m=E[0];if(m===r.FormatJsNodeType.Pound){if("number"==typeof f){let e=_.formatNumber(f);n.pushLiteralText(e)}continue}let g=E[1];if(!(g in d)&&"$"!==g[0])throw new s(g,l,m);let A=d[g];switch(m){case r.FormatJsNodeType.Argument:"object"==typeof A||"function"==typeof A?n.pushObject(A):n.pushLiteralText(String(A));break;case r.FormatJsNodeType.Date:{let e=E[2],t=e in h.date?h.date[e]:null!=e?(0,i.parseDateTimeSkeleton)(e):void 0;n.pushLiteralText(_.formatDate(A,t));break}case r.FormatJsNodeType.Time:{let e=E[2],t=e in h.time?h.time[e]:null!=e?(0,i.parseDateTimeSkeleton)(e):void 0;n.pushLiteralText(_.formatTime(A,t));break}case r.FormatJsNodeType.Number:{let e=E[2],r=e in h.number?h.number[e]:null!=e?(0,i.parseNumberSkeleton)((0,i.parseNumberSkeletonFromString)(e)):void 0,s="number"!=typeof A?A:A*(null!=(t=null==r?void 0:r.scale)?t:1);n.pushLiteralText(_.formatNumber(s,r));break}case r.FormatJsNodeType.Tag:{let t=E[2],i=E[3],r=o({Builder:n.constructor,nodes:t,locales:c,dataFormatters:_,formatConfig:h,values:d,currentPluralValue:f,keyPrefix:`${p}.${e}`}),s=null!=i?o({Builder:n.constructor,nodes:i,locales:c,dataFormatters:_,formatConfig:h,values:d,currentPluralValue:f,keyPrefix:`${p}.${e}-control`}):[];if("$"===g[0])n.pushRichTextTag(g,r,s);else{if("function"!=typeof A)throw`expected a function type for a Tag formatting value, ${g}. got ${typeof A}: ${A}`;let t=A(r,`${p}.${e}`);for(let e of t=Array.isArray(t)?t:[t])"string"==typeof e?n.pushLiteralText(e):n.pushObject(e)}break}case r.FormatJsNodeType.Select:{let t=E[2],i=A in t?t[A]:t.other;if(null==i)throw`${A} is not a known option for select value ${g}. Valid options are ${Object.keys(t).join(", ")}`;a({builder:n,nodes:i,locales:c,dataFormatters:_,formatConfig:h,values:d,keyPrefix:`${p}.${e}`});break}case r.FormatJsNodeType.Plural:{let t=E[2],i=E[3],r=E[4],s=(()=>{var e;let n=`=${A}`;return n in t?t[n]:null!=(e=t[_.getPluralRules({type:r}).select(A-(null!=i?i:0))])?e:t.other})();if(null==s)throw`${A} is not a known option for plural value ${g}. Valid options are ${Object.keys(t).join(", ")}`;a({builder:n,nodes:s,locales:c,dataFormatters:_,formatConfig:h,values:d,currentPluralValue:A-(null!=i?i:0),keyPrefix:`${p}.${e}`})}}}}function o(e){let{Builder:t,originalMessage:n,nodes:i,locales:r,dataFormatters:s,formatConfig:o,values:l,currentPluralValue:u,keyPrefix:c}=e,d=new t({keyPrefix:c});return"string"==typeof i?d.pushLiteralText(i):a({builder:d,originalMessage:n,nodes:i,locales:r,dataFormatters:s,formatConfig:o,values:l,currentPluralValue:u,keyPrefix:c}),d.finish()}
+"use strict";
+Object.defineProperty(t, "__esModule", { value: !0 }),
+    (t.FormatBuilder = void 0),
+    (t.bindFormatValuesWithBuilder = a),
+    (t.bindFormatValues = o);
+let i = n(315507),
+    r = n(725354);
+t.FormatBuilder = class {
+    constructor(e) {
+        this.context = e;
+    }
+};
+class s extends Error {
+    constructor(e, t, n) {
+        super(`No value for variable '${e}' was provided for the localized message '${t}'`),
+            (this.variableName = e),
+            (this.originalMessage = t),
+            (this.nodeType = n);
+    }
+}
+function a(e) {
+    var t;
+    let {
+        builder: n,
+        originalMessage: l,
+        nodes: u,
+        locales: c,
+        values: d,
+        dataFormatters: _,
+        formatConfig: h,
+        currentPluralValue: f,
+        keyPrefix: p,
+    } = e;
+    if (1 === u.length && "string" == typeof u[0]) return void n.pushLiteralText(u[0]);
+    for (let e = 0; e < u.length; e++) {
+        let E = u[e];
+        if ("string" == typeof E) {
+            n.pushLiteralText(E);
+            continue;
+        }
+        let m = E[0];
+        if (m === r.FormatJsNodeType.Pound) {
+            if ("number" == typeof f) {
+                let e = _.formatNumber(f);
+                n.pushLiteralText(e);
+            }
+            continue;
+        }
+        let g = E[1];
+        if (!(g in d) && "$" !== g[0]) throw new s(g, l, m);
+        let A = d[g];
+        switch (m) {
+            case r.FormatJsNodeType.Argument:
+                "object" == typeof A || "function" == typeof A ? n.pushObject(A) : n.pushLiteralText(String(A));
+                break;
+            case r.FormatJsNodeType.Date: {
+                let e = E[2],
+                    t = e in h.date ? h.date[e] : null != e ? (0, i.parseDateTimeSkeleton)(e) : void 0;
+                n.pushLiteralText(_.formatDate(A, t));
+                break;
+            }
+            case r.FormatJsNodeType.Time: {
+                let e = E[2],
+                    t = e in h.time ? h.time[e] : null != e ? (0, i.parseDateTimeSkeleton)(e) : void 0;
+                n.pushLiteralText(_.formatTime(A, t));
+                break;
+            }
+            case r.FormatJsNodeType.Number: {
+                let e = E[2],
+                    r =
+                        e in h.number
+                            ? h.number[e]
+                            : null != e
+                              ? (0, i.parseNumberSkeleton)((0, i.parseNumberSkeletonFromString)(e))
+                              : void 0,
+                    s = "number" != typeof A ? A : A * (null != (t = null == r ? void 0 : r.scale) ? t : 1);
+                n.pushLiteralText(_.formatNumber(s, r));
+                break;
+            }
+            case r.FormatJsNodeType.Tag: {
+                let t = E[2],
+                    i = E[3],
+                    r = o({
+                        Builder: n.constructor,
+                        nodes: t,
+                        locales: c,
+                        dataFormatters: _,
+                        formatConfig: h,
+                        values: d,
+                        currentPluralValue: f,
+                        keyPrefix: `${p}.${e}`,
+                    }),
+                    s =
+                        null != i
+                            ? o({
+                                  Builder: n.constructor,
+                                  nodes: i,
+                                  locales: c,
+                                  dataFormatters: _,
+                                  formatConfig: h,
+                                  values: d,
+                                  currentPluralValue: f,
+                                  keyPrefix: `${p}.${e}-control`,
+                              })
+                            : [];
+                if ("$" === g[0]) n.pushRichTextTag(g, r, s);
+                else {
+                    if ("function" != typeof A)
+                        throw `expected a function type for a Tag formatting value, ${g}. got ${typeof A}: ${A}`;
+                    let t = A(r, `${p}.${e}`);
+                    for (let e of (t = Array.isArray(t) ? t : [t]))
+                        "string" == typeof e ? n.pushLiteralText(e) : n.pushObject(e);
+                }
+                break;
+            }
+            case r.FormatJsNodeType.Select: {
+                let t = E[2],
+                    i = A in t ? t[A] : t.other;
+                if (null == i)
+                    throw `${A} is not a known option for select value ${g}. Valid options are ${Object.keys(t).join(", ")}`;
+                a({
+                    builder: n,
+                    nodes: i,
+                    locales: c,
+                    dataFormatters: _,
+                    formatConfig: h,
+                    values: d,
+                    keyPrefix: `${p}.${e}`,
+                });
+                break;
+            }
+            case r.FormatJsNodeType.Plural: {
+                let t = E[2],
+                    i = E[3],
+                    r = E[4],
+                    s = (() => {
+                        var e;
+                        let n = `=${A}`;
+                        return n in t
+                            ? t[n]
+                            : null != (e = t[_.getPluralRules({ type: r }).select(A - (null != i ? i : 0))])
+                              ? e
+                              : t.other;
+                    })();
+                if (null == s)
+                    throw `${A} is not a known option for plural value ${g}. Valid options are ${Object.keys(t).join(", ")}`;
+                a({
+                    builder: n,
+                    nodes: s,
+                    locales: c,
+                    dataFormatters: _,
+                    formatConfig: h,
+                    values: d,
+                    currentPluralValue: A - (null != i ? i : 0),
+                    keyPrefix: `${p}.${e}`,
+                });
+            }
+        }
+    }
+}
+function o(e) {
+    let {
+            Builder: t,
+            originalMessage: n,
+            nodes: i,
+            locales: r,
+            dataFormatters: s,
+            formatConfig: o,
+            values: l,
+            currentPluralValue: u,
+            keyPrefix: c,
+        } = e,
+        d = new t({ keyPrefix: c });
+    return (
+        "string" == typeof i
+            ? d.pushLiteralText(i)
+            : a({
+                  builder: d,
+                  originalMessage: n,
+                  nodes: i,
+                  locales: r,
+                  dataFormatters: s,
+                  formatConfig: o,
+                  values: l,
+                  currentPluralValue: u,
+                  keyPrefix: c,
+              }),
+        d.finish()
+    );
+}

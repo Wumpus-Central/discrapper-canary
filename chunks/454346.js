@@ -1,1 +1,33 @@
-l.d(t,{a:()=>r});var e=l(627968);l(64700);var h=l(661531),i=l(996682),a=l(27989);let r=s=>{let{size:t="md",width:l,height:r,color:d=h.A.colors.INTERACTIVE_ICON_DEFAULT,colorClass:c="",...v}=s,w=(0,a.J)(t),n=w?.width??l,o=w?.height??r;return(0,e.jsx)("svg",{...(0,i.A)(v),xmlns:"http://www.w3.org/2000/svg",width:n,height:o,fill:"none",viewBox:"0 0 24 24",children:(0,e.jsx)("path",{fill:"string"==typeof d?d:d.css,d:"m21.67 12-7.25 7.07h-3.23L7.17 23v-3.93H2.33V4.93L6.36 1h15.3v11Zm-14.5 2.36h3.62v2.75l2.82-2.75h3.22l3.23-3.15V2.57H7.16v11.79Zm6.04-9.04v4.72H11.6V5.32h1.6Zm4.43 4.72h-1.61V5.32h1.6v4.72Z",className:c})})}
+"use strict";
+n.d(t, { a: () => o });
+var i = n(627968);
+n(64700);
+var r = n(661531),
+    s = n(996682),
+    a = n(27989);
+let o = (e) => {
+    let {
+            size: t = "md",
+            width: n,
+            height: o,
+            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
+            ...c
+        } = e,
+        d = (0, a.J)(t),
+        _ = d?.width ?? n,
+        h = d?.height ?? o;
+    return (0, i.jsx)("svg", {
+        ...(0, s.A)(c),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: _,
+        height: h,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: (0, i.jsx)("path", {
+            fill: "string" == typeof l ? l : l.css,
+            d: "m21.67 12-7.25 7.07h-3.23L7.17 23v-3.93H2.33V4.93L6.36 1h15.3v11Zm-14.5 2.36h3.62v2.75l2.82-2.75h3.22l3.23-3.15V2.57H7.16v11.79Zm6.04-9.04v4.72H11.6V5.32h1.6Zm4.43 4.72h-1.61V5.32h1.6v4.72Z",
+            className: u,
+        }),
+    });
+};

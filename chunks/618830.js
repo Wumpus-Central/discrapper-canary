@@ -1,1 +1,150 @@
-"use strict";n.r(t),n.d(t,{XXH64:()=>u,hash:()=>c});let i=2n**64n-1n,r=new TextEncoder;function s(e,t,n,i){return BigInt(e)|BigInt(t)<<16n|BigInt(n)<<32n|BigInt(i)<<48n}function a(e,t){return BigInt(e[t])|BigInt(e[t+1])<<8n|BigInt(e[t+2])<<16n|BigInt(e[t+3])<<24n|BigInt(e[t+4])<<32n|BigInt(e[t+5])<<40n|BigInt(e[t+6])<<48n|BigInt(e[t+7])<<56n}function o(e,t){return e<<t&i|e>>64n-t}function l(e){return BigInt.asUintN(64,e)}class u{#s;#a;#o;#l;#u;#c;#d;#_;constructor(e=0){this.reset(e)}reset(e=this.#s){return this.#s=BigInt.asUintN(32,BigInt(e)),this.#a=l(this.#s+0x9e3779b185ebca87n+0xc2b2ae3d27d4eb4fn),this.#o=l(this.#s+0xc2b2ae3d27d4eb4fn),this.#l=this.#s,this.#u=l(this.#s-0x9e3779b185ebca87n),this.#c=null,this.#d=0,this.#_=0,this}update(e){"string"==typeof e&&(e=r.encode(e));let t=0,n=e.length,i=t+n;if(0===n)return this;if(this.#d+=n,0===this.#_&&(this.#c=new Uint8Array(32)),this.#_+n<32)return this.#c.set(e.subarray(0,n),this.#_),this.#_+=n,this;if(this.#_>0){let n;this.#c.set(e.subarray(0,32-this.#_),this.#_);let i=0;n=a(this.#c,i),this.#a=l(0x9e3779b185ebca87n*o(l(this.#a+0xc2b2ae3d27d4eb4fn*n),31n)),i+=8,n=a(this.memory,i),this.#o=l(0x9e3779b185ebca87n*o(l(this.#o+0xc2b2ae3d27d4eb4fn*n),31n)),i+=8,n=a(this.memory,i),this.#l=l(0x9e3779b185ebca87n*o(l(this.#l+0xc2b2ae3d27d4eb4fn*n),31n)),i+=8,n=a(this.memory,i),this.#u=l(0x9e3779b185ebca87n*o(l(this.#u+0xc2b2ae3d27d4eb4fn*n),31n)),t+=32-this.#_,this.#_=0}if(t<=i-32){let n=i-32;do{let n;n=a(e,t),this.#a=l(0x9e3779b185ebca87n*o(l(this.#a+0xc2b2ae3d27d4eb4fn*n),31n)),t+=8,n=a(e,t),this.#o=l(0x9e3779b185ebca87n*o(l(this.#o+0xc2b2ae3d27d4eb4fn*n),31n)),t+=8,n=a(e,t),this.#l=l(0x9e3779b185ebca87n*o(l(this.#l+0xc2b2ae3d27d4eb4fn*n),31n)),t+=8,n=a(e,t),this.#u=l(0x9e3779b185ebca87n*o(l(this.#u+0xc2b2ae3d27d4eb4fn*n),31n)),t+=8}while(t<=n)}return t<i&&(this.#c.set(e.subarray(t,i),this.#_),this.#_=i-t),this}digest(){let e=this.#c,t=this.#_,n=0,i=0n,r=0n,u=0n;for(this.#d>=32?(i=l((i=o(this.#a,1n)+o(this.#o,7n)+o(this.#l,12n)+o(this.#u,18n))^0x9e3779b185ebca87n*o(l(0xc2b2ae3d27d4eb4fn*this.#a),31n)),i=l(0x9e3779b185ebca87n*i+0x85ebca77c2b2ae63n),i=l(i^0x9e3779b185ebca87n*o(l(0xc2b2ae3d27d4eb4fn*this.#o),31n)),i=l(0x9e3779b185ebca87n*i+0x85ebca77c2b2ae63n),i=l(i^0x9e3779b185ebca87n*o(l(0xc2b2ae3d27d4eb4fn*this.#l),31n)),i=l(0x9e3779b185ebca87n*i+0x85ebca77c2b2ae63n),i=l(i^0x9e3779b185ebca87n*o(l(0xc2b2ae3d27d4eb4fn*this.#u),31n)),i=l(0x9e3779b185ebca87n*i+0x85ebca77c2b2ae63n)):i=l(this.#s+0x27d4eb2f165667c5n),i+=BigInt(this.#d);n<=t-8;)u=l(0x9e3779b185ebca87n*o(l(0xc2b2ae3d27d4eb4fn*(u=a(e,n))),31n)),i=l(0x9e3779b185ebca87n*o(i^u,27n)+0x85ebca77c2b2ae63n),n+=8;for(n+4<=t&&(i=l(0xc2b2ae3d27d4eb4fn*o(i^l(0x9e3779b185ebca87n*(u=s(e[n+1]<<8|e[n],e[n+3]<<8|e[n+2],0,0))),23n)+0x165667b19e3779f9n),n+=4);n<t;)i=l(0x9e3779b185ebca87n*o(i^l(0x27d4eb2f165667c5n*(u=s(e[n++],0,0,0))),11n));return r=l(i>>33n),i=l((i^r)*0xc2b2ae3d27d4eb4fn),r=l(i>>29n),i=l((i^r)*0x165667b19e3779f9n),r=l(i>>32n),i=l(i^r)}}function c(e,t=0){return new u(t).update(e).digest()}
+"use strict";
+n.r(t), n.d(t, { XXH64: () => u, hash: () => c });
+let i = 2n ** 64n - 1n,
+    r = new TextEncoder();
+function s(e, t, n, i) {
+    return BigInt(e) | (BigInt(t) << 16n) | (BigInt(n) << 32n) | (BigInt(i) << 48n);
+}
+function a(e, t) {
+    return (
+        BigInt(e[t]) |
+        (BigInt(e[t + 1]) << 8n) |
+        (BigInt(e[t + 2]) << 16n) |
+        (BigInt(e[t + 3]) << 24n) |
+        (BigInt(e[t + 4]) << 32n) |
+        (BigInt(e[t + 5]) << 40n) |
+        (BigInt(e[t + 6]) << 48n) |
+        (BigInt(e[t + 7]) << 56n)
+    );
+}
+function o(e, t) {
+    return ((e << t) & i) | (e >> (64n - t));
+}
+function l(e) {
+    return BigInt.asUintN(64, e);
+}
+class u {
+    #s;
+    #a;
+    #o;
+    #l;
+    #u;
+    #c;
+    #d;
+    #_;
+    constructor(e = 0) {
+        this.reset(e);
+    }
+    reset(e = this.#s) {
+        return (
+            (this.#s = BigInt.asUintN(32, BigInt(e))),
+            (this.#a = l(this.#s + 0x9e3779b185ebca87n + 0xc2b2ae3d27d4eb4fn)),
+            (this.#o = l(this.#s + 0xc2b2ae3d27d4eb4fn)),
+            (this.#l = this.#s),
+            (this.#u = l(this.#s - 0x9e3779b185ebca87n)),
+            (this.#c = null),
+            (this.#d = 0),
+            (this.#_ = 0),
+            this
+        );
+    }
+    update(e) {
+        "string" == typeof e && (e = r.encode(e));
+        let t = 0,
+            n = e.length,
+            i = t + n;
+        if (0 === n) return this;
+        if (((this.#d += n), 0 === this.#_ && (this.#c = new Uint8Array(32)), this.#_ + n < 32))
+            return this.#c.set(e.subarray(0, n), this.#_), (this.#_ += n), this;
+        if (this.#_ > 0) {
+            let n;
+            this.#c.set(e.subarray(0, 32 - this.#_), this.#_);
+            let i = 0;
+            (n = a(this.#c, i)),
+                (this.#a = l(0x9e3779b185ebca87n * o(l(this.#a + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                (i += 8),
+                (n = a(this.memory, i)),
+                (this.#o = l(0x9e3779b185ebca87n * o(l(this.#o + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                (i += 8),
+                (n = a(this.memory, i)),
+                (this.#l = l(0x9e3779b185ebca87n * o(l(this.#l + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                (i += 8),
+                (n = a(this.memory, i)),
+                (this.#u = l(0x9e3779b185ebca87n * o(l(this.#u + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                (t += 32 - this.#_),
+                (this.#_ = 0);
+        }
+        if (t <= i - 32) {
+            let n = i - 32;
+            do {
+                let n;
+                (n = a(e, t)),
+                    (this.#a = l(0x9e3779b185ebca87n * o(l(this.#a + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                    (t += 8),
+                    (n = a(e, t)),
+                    (this.#o = l(0x9e3779b185ebca87n * o(l(this.#o + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                    (t += 8),
+                    (n = a(e, t)),
+                    (this.#l = l(0x9e3779b185ebca87n * o(l(this.#l + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                    (t += 8),
+                    (n = a(e, t)),
+                    (this.#u = l(0x9e3779b185ebca87n * o(l(this.#u + 0xc2b2ae3d27d4eb4fn * n), 31n))),
+                    (t += 8);
+            } while (t <= n);
+        }
+        return t < i && (this.#c.set(e.subarray(t, i), this.#_), (this.#_ = i - t)), this;
+    }
+    digest() {
+        let e = this.#c,
+            t = this.#_,
+            n = 0,
+            i = 0n,
+            r = 0n,
+            u = 0n;
+        for (
+            this.#d >= 32
+                ? ((i = l(
+                      (i = o(this.#a, 1n) + o(this.#o, 7n) + o(this.#l, 12n) + o(this.#u, 18n)) ^
+                          (0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * this.#a), 31n)),
+                  )),
+                  (i = l(0x9e3779b185ebca87n * i + 0x85ebca77c2b2ae63n)),
+                  (i = l(i ^ (0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * this.#o), 31n)))),
+                  (i = l(0x9e3779b185ebca87n * i + 0x85ebca77c2b2ae63n)),
+                  (i = l(i ^ (0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * this.#l), 31n)))),
+                  (i = l(0x9e3779b185ebca87n * i + 0x85ebca77c2b2ae63n)),
+                  (i = l(i ^ (0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * this.#u), 31n)))),
+                  (i = l(0x9e3779b185ebca87n * i + 0x85ebca77c2b2ae63n)))
+                : (i = l(this.#s + 0x27d4eb2f165667c5n)),
+                i += BigInt(this.#d);
+            n <= t - 8;
+        )
+            (u = l(0x9e3779b185ebca87n * o(l(0xc2b2ae3d27d4eb4fn * (u = a(e, n))), 31n))),
+                (i = l(0x9e3779b185ebca87n * o(i ^ u, 27n) + 0x85ebca77c2b2ae63n)),
+                (n += 8);
+        for (
+            n + 4 <= t &&
+            ((i = l(
+                0xc2b2ae3d27d4eb4fn *
+                    o(
+                        i ^ l(0x9e3779b185ebca87n * (u = s((e[n + 1] << 8) | e[n], (e[n + 3] << 8) | e[n + 2], 0, 0))),
+                        23n,
+                    ) +
+                    0x165667b19e3779f9n,
+            )),
+            (n += 4));
+            n < t;
+        )
+            i = l(0x9e3779b185ebca87n * o(i ^ l(0x27d4eb2f165667c5n * (u = s(e[n++], 0, 0, 0))), 11n));
+        return (
+            (r = l(i >> 33n)),
+            (i = l((i ^ r) * 0xc2b2ae3d27d4eb4fn)),
+            (r = l(i >> 29n)),
+            (i = l((i ^ r) * 0x165667b19e3779f9n)),
+            (r = l(i >> 32n)),
+            (i = l(i ^ r))
+        );
+    }
+}
+function c(e, t = 0) {
+    return new u(t).update(e).digest();
+}

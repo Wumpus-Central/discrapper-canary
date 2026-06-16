@@ -1,1 +1,6 @@
-"use strict";t.exports={notEmptyKey:function(t){return null!=t&&""!=t}}
+"use strict";
+t.exports = {
+    notEmptyKey: function (t) {
+        return null != t && "" != t;
+    },
+};

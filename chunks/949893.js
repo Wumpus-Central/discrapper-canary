@@ -1,1 +1,2 @@
-"use strict";e.exports=Math.floor
+"use strict";
+e.exports = Math.floor;

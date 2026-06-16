@@ -1,1 +1,11 @@
-var i=n(526252),r=n(129959);e.exports=function e(t,n,s,a,o){var l=-1,u=t.length;for(s||(s=r),o||(o=[]);++l<u;){var c=t[l];n>0&&s(c)?n>1?e(c,n-1,s,a,o):i(o,c):a||(o[o.length]=c)}return o}
+var i = n(526252),
+    r = n(129959);
+e.exports = function e(t, n, s, a, o) {
+    var l = -1,
+        u = t.length;
+    for (s || (s = r), o || (o = []); ++l < u; ) {
+        var c = t[l];
+        n > 0 && s(c) ? (n > 1 ? e(c, n - 1, s, a, o) : i(o, c)) : a || (o[o.length] = c);
+    }
+    return o;
+};

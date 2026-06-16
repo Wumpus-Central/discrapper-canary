@@ -1,1 +1,56 @@
-a.d(r,{A:()=>m});var n=a(64700),t=a(17928),l=a(919395),i=a(696451),o=a(486020),s=a(775602),u=a(531685),c=a(940622),p=a(601255),d=a(476324);let m=e=>{let{user:r,guildId:a,size:m,avatarDecorationOverride:f,onlyAnimateOnHoverOrFocus:v=!1}=e,[g,A]=n.useState(!1),{canAnimate:_}=((e,r)=>{let a=(0,t.bG)([s.Ay],()=>s.Ay.useReducedMotion),l=(0,t.bG)([u.A],()=>u.A.isFocused()),[i,o]=n.useState(!1),c=n.useRef(null);return n.useEffect(()=>{null!==c.current&&(clearTimeout(c.current),c.current=null);let n=l&&(e||!a&&!r);n&&a?c.current=window.setTimeout(()=>{o(!0)},1e3):o(n)},[l,e,a,r]),n.useEffect(()=>()=>{null!==c.current&&(clearTimeout(c.current),c.current=null)},[]),{canAnimate:i}})(g,v),b=(0,t.bG)([i.Ay],()=>null!=a&&null!=r?i.Ay.getMember(a,r.id):null),E=(0,p.A)((0,l.lw)({userValue:r?.avatarDecoration,guildValue:b?.avatarDecoration,guildId:a})),h=(0,c.VU)(),O=n.useMemo(()=>null!=h&&""!==h?h:(0,o.F_)({avatarDecoration:void 0!==f?f:E,canAnimate:_,size:m}),[h,f,E,_,m]);return{avatarPlaceholderSrc:d,avatarDecorationSrc:O,isAvatarDecorationAnimating:_,eventHandlers:{onMouseEnter:n.useCallback(()=>A(!0),[]),onMouseLeave:n.useCallback(()=>A(!1),[])}}}
+"use strict";
+n.d(t, { A: () => h });
+var i = n(64700),
+    r = n(17928),
+    s = n(919395),
+    a = n(696451),
+    o = n(486020),
+    l = n(775602),
+    u = n(531685),
+    c = n(940622),
+    d = n(601255),
+    _ = n(476324);
+let h = (e) => {
+    let { user: t, guildId: n, size: h, avatarDecorationOverride: f, onlyAnimateOnHoverOrFocus: p = !1 } = e,
+        [E, m] = i.useState(!1),
+        { canAnimate: g } = ((e, t) => {
+            let n = (0, r.bG)([l.Ay], () => l.Ay.useReducedMotion),
+                s = (0, r.bG)([u.A], () => u.A.isFocused()),
+                [a, o] = i.useState(!1),
+                c = i.useRef(null);
+            return (
+                i.useEffect(() => {
+                    null !== c.current && (clearTimeout(c.current), (c.current = null));
+                    let i = s && (e || (!n && !t));
+                    i && n
+                        ? (c.current = window.setTimeout(() => {
+                              o(!0);
+                          }, 1e3))
+                        : o(i);
+                }, [s, e, n, t]),
+                i.useEffect(
+                    () => () => {
+                        null !== c.current && (clearTimeout(c.current), (c.current = null));
+                    },
+                    [],
+                ),
+                { canAnimate: a }
+            );
+        })(E, p),
+        A = (0, r.bG)([a.Ay], () => (null != n && null != t ? a.Ay.getMember(n, t.id) : null)),
+        I = (0, d.A)((0, s.lw)({ userValue: t?.avatarDecoration, guildValue: A?.avatarDecoration, guildId: n })),
+        T = (0, c.VU)(),
+        S = i.useMemo(
+            () =>
+                null != T && "" !== T
+                    ? T
+                    : (0, o.F_)({ avatarDecoration: void 0 !== f ? f : I, canAnimate: g, size: h }),
+            [T, f, I, g, h],
+        );
+    return {
+        avatarPlaceholderSrc: _,
+        avatarDecorationSrc: S,
+        isAvatarDecorationAnimating: g,
+        eventHandlers: { onMouseEnter: i.useCallback(() => m(!0), []), onMouseLeave: i.useCallback(() => m(!1), []) },
+    };
+};

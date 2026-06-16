@@ -1,1 +1,1 @@
-_.exports={j:"videoContainer__6c900"}
+_.exports = { j: "videoContainer__6c900" };

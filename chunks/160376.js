@@ -1,1 +1,122 @@
-e.d(n,{A:()=>f});var i=e(788733),l=e(82149),a=e(573648),r=e(541806),s=e(90644),o=e(652215),c=e(141639),u=e(61330),d=e(287743);let A=new Set([o.fg2.LEAGUE_OF_LEGENDS,o.fg2.ROBLOX,o.fg2.TWITCH,o.fg2.YOUTUBE]);var x=e(190915),p=e(375708);function f(t){let n=(0,d.A)(t.session_id),e=function(t){let n=(0,d.A)(t.session_id);if(null!=n)return n;if((0,s.A)(t))return a.A.get(o.fg2.SPOTIFY);if((0,r.A)(t))return a.A.get(o.fg2.CRUNCHYROLL);if((0,u.A)(t))return a.A.get(o.fg2.XBOX);if((0,c.A)(t))return a.A.get(o.fg2.PLAYSTATION);if(t?.platform===o.yTV.META_QUEST||(0,i.A)(t))return a.A.get(o.fg2.META_QUEST_OR_HORIZON);let e=a.A.find(n=>{let{name:e}=n;return e===t.name});return null!=e&&A.has(e.type)?e:null}(t),f=e?.icon,_=e?.name??"";if(t.type===o.$pd.PLAYING&&e?.type===o.fg2.XBOX)return{text:p.intl.formatToPlainString(p.t.A17aM8,{platform:p.intl.string(p.t.Nfvo72)}),platformIcon:f,platformLabel:_};if(t.type===o.$pd.PLAYING&&e?.type===o.fg2.PLAYSTATION)return{text:p.intl.formatToPlainString(p.t.A17aM8,{platform:p.intl.string(p.t.fFl4jo)}),platformIcon:f,platformLabel:_};if(t.type===o.$pd.PLAYING&&e?.type===o.fg2.META_QUEST_OR_HORIZON)return{text:p.intl.formatToPlainString(p.t.A17aM8,{platform:(0,i.A)(t)?p.intl.string(p.t.BrHQaq):p.intl.string(p.t.p6vL0e)}),platformIcon:f,platformLabel:_};if(t.type===o.$pd.WATCHING&&e?.type===o.fg2.META_QUEST_OR_HORIZON)return{text:p.intl.formatToPlainString(p.t.ENbTKQ,{platform:(0,i.A)(t)?p.intl.string(p.t.BrHQaq):p.intl.string(p.t.p6vL0e)}),platformIcon:f,platformLabel:_};if(t.type===o.$pd.STREAMING&&e?.type===o.fg2.TWITCH)return{text:p.intl.formatToPlainString(p.t["4CQq9Q"],{name:p.intl.string(p.t.q4pBG3)}),platformIcon:f,platformLabel:_};if(t.type===o.$pd.STREAMING&&e?.type===o.fg2.YOUTUBE)return{text:p.intl.formatToPlainString(p.t["4CQq9Q"],{name:p.intl.string(p.t.aS6cK4)}),platformIcon:f,platformLabel:_};if(null!=n){let e,i=(0,x.A)(n,t);switch(t.type){case o.$pd.PLAYING:e=p.t.A17aM8;break;case o.$pd.WATCHING:e=p.t.ENbTKQ;break;case o.$pd.LISTENING:e=p.t.EcHzWI;break;case o.$pd.COMPETING:e=p.t.ikpHeS;break;case o.$pd.STREAMING:e=p.t.Dzgz4u}if(void 0!==e)return{text:p.intl.formatToPlainString(e,{platform:i}),platformIcon:f,platformLabel:_}}return t.type===o.$pd.PLAYING?{text:p.intl.string(p.t.BMTj28),platformIcon:f,platformLabel:_}:t.type===o.$pd.STREAMING?{text:p.intl.string(p.t["Jpkr/q"]),platformIcon:f,platformLabel:_}:(0,l.Cy)(t)?{text:p.intl.formatToPlainString(p.t.pW3Ip3,{name:t.name})}:t.type===o.$pd.LISTENING&&null!=t.details?{text:p.intl.formatToPlainString(p.t["b+lA5+"],{name:t.name}),platformIcon:f,platformLabel:_}:t.type===o.$pd.LISTENING?{text:p.intl.string(p.t.dBISa6),platformIcon:f,platformLabel:_}:t.type===o.$pd.WATCHING&&null!=t.details?{text:p.intl.formatToPlainString(p.t.mqdfDc,{name:t.name}),platformIcon:f,platformLabel:_}:t.type===o.$pd.WATCHING?{text:p.intl.string(p.t.GpNXjC),platformIcon:f,platformLabel:_}:t.type===o.$pd.COMPETING&&null!=t.details?{text:p.intl.formatToPlainString(p.t.oHF7Ch,{name:t.name}),platformIcon:f,platformLabel:_}:t.type===o.$pd.COMPETING?{text:p.intl.string(p.t.OzCsIA),platformIcon:f,platformLabel:_}:{text:void 0,platformIcon:f,platformLabel:_}}
+"use strict";
+n.d(t, { A: () => p });
+var i = n(788733),
+    r = n(82149),
+    s = n(573648),
+    a = n(541806),
+    o = n(90644),
+    l = n(652215),
+    u = n(141639),
+    c = n(61330),
+    d = n(287743);
+let _ = new Set([l.fg2.LEAGUE_OF_LEGENDS, l.fg2.ROBLOX, l.fg2.TWITCH, l.fg2.YOUTUBE]);
+var h = n(190915),
+    f = n(375708);
+function p(e) {
+    let t = (0, d.A)(e.session_id),
+        n = (function (e) {
+            let t = (0, d.A)(e.session_id);
+            if (null != t) return t;
+            if ((0, o.A)(e)) return s.A.get(l.fg2.SPOTIFY);
+            if ((0, a.A)(e)) return s.A.get(l.fg2.CRUNCHYROLL);
+            if ((0, c.A)(e)) return s.A.get(l.fg2.XBOX);
+            if ((0, u.A)(e)) return s.A.get(l.fg2.PLAYSTATION);
+            if (e?.platform === l.yTV.META_QUEST || (0, i.A)(e)) return s.A.get(l.fg2.META_QUEST_OR_HORIZON);
+            let n = s.A.find((t) => {
+                let { name: n } = t;
+                return n === e.name;
+            });
+            return null != n && _.has(n.type) ? n : null;
+        })(e),
+        p = n?.icon,
+        E = n?.name ?? "";
+    if (e.type === l.$pd.PLAYING && n?.type === l.fg2.XBOX)
+        return {
+            text: f.intl.formatToPlainString(f.t.A17aM8, { platform: f.intl.string(f.t.Nfvo72) }),
+            platformIcon: p,
+            platformLabel: E,
+        };
+    if (e.type === l.$pd.PLAYING && n?.type === l.fg2.PLAYSTATION)
+        return {
+            text: f.intl.formatToPlainString(f.t.A17aM8, { platform: f.intl.string(f.t.fFl4jo) }),
+            platformIcon: p,
+            platformLabel: E,
+        };
+    if (e.type === l.$pd.PLAYING && n?.type === l.fg2.META_QUEST_OR_HORIZON)
+        return {
+            text: f.intl.formatToPlainString(f.t.A17aM8, {
+                platform: (0, i.A)(e) ? f.intl.string(f.t.BrHQaq) : f.intl.string(f.t.p6vL0e),
+            }),
+            platformIcon: p,
+            platformLabel: E,
+        };
+    if (e.type === l.$pd.WATCHING && n?.type === l.fg2.META_QUEST_OR_HORIZON)
+        return {
+            text: f.intl.formatToPlainString(f.t.ENbTKQ, {
+                platform: (0, i.A)(e) ? f.intl.string(f.t.BrHQaq) : f.intl.string(f.t.p6vL0e),
+            }),
+            platformIcon: p,
+            platformLabel: E,
+        };
+    if (e.type === l.$pd.STREAMING && n?.type === l.fg2.TWITCH)
+        return {
+            text: f.intl.formatToPlainString(f.t["4CQq9Q"], { name: f.intl.string(f.t.q4pBG3) }),
+            platformIcon: p,
+            platformLabel: E,
+        };
+    if (e.type === l.$pd.STREAMING && n?.type === l.fg2.YOUTUBE)
+        return {
+            text: f.intl.formatToPlainString(f.t["4CQq9Q"], { name: f.intl.string(f.t.aS6cK4) }),
+            platformIcon: p,
+            platformLabel: E,
+        };
+    if (null != t) {
+        let n,
+            i = (0, h.A)(t, e);
+        switch (e.type) {
+            case l.$pd.PLAYING:
+                n = f.t.A17aM8;
+                break;
+            case l.$pd.WATCHING:
+                n = f.t.ENbTKQ;
+                break;
+            case l.$pd.LISTENING:
+                n = f.t.EcHzWI;
+                break;
+            case l.$pd.COMPETING:
+                n = f.t.ikpHeS;
+                break;
+            case l.$pd.STREAMING:
+                n = f.t.Dzgz4u;
+        }
+        if (void 0 !== n)
+            return { text: f.intl.formatToPlainString(n, { platform: i }), platformIcon: p, platformLabel: E };
+    }
+    return e.type === l.$pd.PLAYING
+        ? { text: f.intl.string(f.t.BMTj28), platformIcon: p, platformLabel: E }
+        : e.type === l.$pd.STREAMING
+          ? { text: f.intl.string(f.t["Jpkr/q"]), platformIcon: p, platformLabel: E }
+          : (0, r.Cy)(e)
+            ? { text: f.intl.formatToPlainString(f.t.pW3Ip3, { name: e.name }) }
+            : e.type === l.$pd.LISTENING && null != e.details
+              ? { text: f.intl.formatToPlainString(f.t["b+lA5+"], { name: e.name }), platformIcon: p, platformLabel: E }
+              : e.type === l.$pd.LISTENING
+                ? { text: f.intl.string(f.t.dBISa6), platformIcon: p, platformLabel: E }
+                : e.type === l.$pd.WATCHING && null != e.details
+                  ? {
+                        text: f.intl.formatToPlainString(f.t.mqdfDc, { name: e.name }),
+                        platformIcon: p,
+                        platformLabel: E,
+                    }
+                  : e.type === l.$pd.WATCHING
+                    ? { text: f.intl.string(f.t.GpNXjC), platformIcon: p, platformLabel: E }
+                    : e.type === l.$pd.COMPETING && null != e.details
+                      ? {
+                            text: f.intl.formatToPlainString(f.t.oHF7Ch, { name: e.name }),
+                            platformIcon: p,
+                            platformLabel: E,
+                        }
+                      : e.type === l.$pd.COMPETING
+                        ? { text: f.intl.string(f.t.OzCsIA), platformIcon: p, platformLabel: E }
+                        : { text: void 0, platformIcon: p, platformLabel: E };
+}

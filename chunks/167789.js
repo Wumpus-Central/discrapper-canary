@@ -1,1 +1,27 @@
-"use strict";n.d(t,{O:()=>r});let i=(0,n(613345).V)();function r(e,t){if(void 0!==i&&null!=i.requestIdleCallback&&null!=i.cancelIdleCallback){let n=!1,r=null,s=()=>{n||(n=!0,null!=r&&(i.clearTimeout(r),r=null),e())},a=i.requestIdleCallback(s,t);return r=i.setTimeout(()=>{n||i.cancelIdleCallback(a),s()},t?.timeout??1e3),()=>{i.cancelIdleCallback(a),null!=r&&(i.clearTimeout(r),r=null)}}{let t=i.setTimeout(e,0);return()=>{i.clearTimeout(t)}}}
+"use strict";
+n.d(t, { O: () => r });
+let i = (0, n(613345).V)();
+function r(e, t) {
+    if (void 0 !== i && null != i.requestIdleCallback && null != i.cancelIdleCallback) {
+        let n = !1,
+            r = null,
+            s = () => {
+                n || ((n = !0), null != r && (i.clearTimeout(r), (r = null)), e());
+            },
+            a = i.requestIdleCallback(s, t);
+        return (
+            (r = i.setTimeout(() => {
+                n || i.cancelIdleCallback(a), s();
+            }, t?.timeout ?? 1e3)),
+            () => {
+                i.cancelIdleCallback(a), null != r && (i.clearTimeout(r), (r = null));
+            }
+        );
+    }
+    {
+        let t = i.setTimeout(e, 0);
+        return () => {
+            i.clearTimeout(t);
+        };
+    }
+}

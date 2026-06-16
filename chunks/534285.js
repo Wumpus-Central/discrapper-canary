@@ -1,1 +1,7 @@
-e.exports=function(e,t,n,i){for(var r=-1,s=null==e?0:e.length;++r<s;){var a=e[r];t(i,a,n(a),e)}return i}
+e.exports = function (e, t, n, i) {
+    for (var r = -1, s = null == e ? 0 : e.length; ++r < s; ) {
+        var a = e[r];
+        t(i, a, n(a), e);
+    }
+    return i;
+};

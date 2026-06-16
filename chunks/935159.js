@@ -1,1 +1,15 @@
-p.d(E,{Lx:()=>N,Nt:()=>h,iF:()=>_,pE:()=>c});var i=p(228366);function _(t){let{eventId:E,stageId:p}=t;(null!=E||null!=p)&&i.h.dispatch({type:"LIVE_CHANNEL_NOTICE_HIDE",eventId:E,stageId:p})}function N(t){i.h.dispatch({type:"UPCOMING_GUILD_EVENT_NOTICE_HIDE",eventId:t})}function c(t){i.h.dispatch({type:"UPCOMING_GUILD_EVENT_NOTICE_SEEN",guildEventId:t})}function h(t){i.h.dispatch({type:"EVENT_BANNER_DISMISS",eventId:t})}
+p.d(E, { Lx: () => N, Nt: () => h, iF: () => _, pE: () => c });
+var i = p(228366);
+function _(t) {
+    let { eventId: E, stageId: p } = t;
+    (null != E || null != p) && i.h.dispatch({ type: "LIVE_CHANNEL_NOTICE_HIDE", eventId: E, stageId: p });
+}
+function N(t) {
+    i.h.dispatch({ type: "UPCOMING_GUILD_EVENT_NOTICE_HIDE", eventId: t });
+}
+function c(t) {
+    i.h.dispatch({ type: "UPCOMING_GUILD_EVENT_NOTICE_SEEN", guildEventId: t });
+}
+function h(t) {
+    i.h.dispatch({ type: "EVENT_BANNER_DISMISS", eventId: t });
+}

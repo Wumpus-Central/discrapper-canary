@@ -1,1 +1,5 @@
-n.d(t,{A:()=>l});var i=n(652215);function l(e){return(e.type===i.$pd.PLAYING||e.type===i.$pd.COMPETING)&&null!=e.application_id}
+n.d(t, { A: () => l });
+var i = n(652215);
+function l(e) {
+    return (e.type === i.$pd.PLAYING || e.type === i.$pd.COMPETING) && null != e.application_id;
+}

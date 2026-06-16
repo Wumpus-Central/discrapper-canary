@@ -1,1 +1,71 @@
-"use strict";n.d(t,{A:()=>g});var i=n(627968);n(64700);var r=n(503698),s=n.n(r),a=n(17928),o=n(990078),l=n(821609),u=n(408278),c=n(622631),d=n(401843),_=n(616356),h=n(495544),f=n(200749),p=n(375708),E=n(559216);let m=n(913516);function g(e){let{participant:t,width:n,noArt:r=!1,selected:g=!1}=e,A=n<195,I=(0,a.bG)([_.A,h.default],()=>_.A.getAllActiveStreams().some(e=>{let{ownerId:t}=e;return t!==h.default.getId()}));return(0,i.jsx)("div",{className:s()(E.Qs,E.FY),children:(0,i.jsx)(f.A,{className:E.FP,artURL:m,noArt:r,selected:g,size:(0,f.J)(n),header:A?null:p.intl.string(p.t.epU4Ec),description:g?null:(0,i.jsxs)("div",{className:s()(E.t2,{[E.y8]:!A}),children:[(0,i.jsx)("div",{className:E.lO,children:(0,i.jsx)(l.$,{variant:"secondary",size:A?"sm":"md",text:n<175?p.intl.string(p.t.I6JG46):p.intl.string(p.t["7Xq/nV"])})}),I?(0,i.jsx)("div",{className:s()(E.lO,E.EU),children:(0,i.jsx)(o.m,{text:p.intl.string(p.t.wCrzut),children:(0,i.jsx)(u.K,{variant:"secondary",size:A?"sm":"md",icon:c.v,"aria-label":p.intl.string(p.t.wCrzut),onClick:e=>{e.stopPropagation(),(0,d.A9)(t.stream,{forceMultiple:!0})}})})}):null]})})})}
+"use strict";
+n.d(t, { A: () => g });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(17928),
+    o = n(990078),
+    l = n(821609),
+    u = n(408278),
+    c = n(845012),
+    d = n(401843),
+    _ = n(616356),
+    h = n(495544),
+    f = n(200749),
+    p = n(375708),
+    E = n(559216);
+let m = n(913516);
+function g(e) {
+    let { participant: t, width: n, noArt: r = !1, selected: g = !1 } = e,
+        A = n < 195,
+        I = (0, a.bG)([_.A, h.default], () =>
+            _.A.getAllActiveStreams().some((e) => {
+                let { ownerId: t } = e;
+                return t !== h.default.getId();
+            }),
+        );
+    return (0, i.jsx)("div", {
+        className: s()(E.Qs, E.FY),
+        children: (0, i.jsx)(f.A, {
+            className: E.FP,
+            artURL: m,
+            noArt: r,
+            selected: g,
+            size: (0, f.J)(n),
+            header: A ? null : p.intl.string(p.t.epU4Ec),
+            description: g
+                ? null
+                : (0, i.jsxs)("div", {
+                      className: s()(E.t2, { [E.y8]: !A }),
+                      children: [
+                          (0, i.jsx)("div", {
+                              className: E.lO,
+                              children: (0, i.jsx)(l.$, {
+                                  variant: "secondary",
+                                  size: A ? "sm" : "md",
+                                  text: n < 175 ? p.intl.string(p.t.I6JG46) : p.intl.string(p.t["7Xq/nV"]),
+                              }),
+                          }),
+                          I
+                              ? (0, i.jsx)("div", {
+                                    className: s()(E.lO, E.EU),
+                                    children: (0, i.jsx)(o.m, {
+                                        text: p.intl.string(p.t.wCrzut),
+                                        children: (0, i.jsx)(u.K, {
+                                            variant: "secondary",
+                                            size: A ? "sm" : "md",
+                                            icon: c.v,
+                                            "aria-label": p.intl.string(p.t.wCrzut),
+                                            onClick: (e) => {
+                                                e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 });
+                                            },
+                                        }),
+                                    }),
+                                })
+                              : null,
+                      ],
+                  }),
+        }),
+    });
+}

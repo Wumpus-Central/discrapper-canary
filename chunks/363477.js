@@ -1,1 +1,16 @@
-var i=n(305327);e.exports=function(e,t){if(e!==t){var n=void 0!==e,r=null===e,s=e==e,a=i(e),o=void 0!==t,l=null===t,u=t==t,c=i(t);if(!l&&!c&&!a&&e>t||a&&o&&u&&!l&&!c||r&&o&&u||!n&&u||!s)return 1;if(!r&&!a&&!c&&e<t||c&&n&&s&&!r&&!a||l&&n&&s||!o&&s||!u)return -1}return 0}
+var i = n(305327);
+e.exports = function (e, t) {
+    if (e !== t) {
+        var n = void 0 !== e,
+            r = null === e,
+            s = e == e,
+            a = i(e),
+            o = void 0 !== t,
+            l = null === t,
+            u = t == t,
+            c = i(t);
+        if ((!l && !c && !a && e > t) || (a && o && u && !l && !c) || (r && o && u) || (!n && u) || !s) return 1;
+        if ((!r && !a && !c && e < t) || (c && n && s && !r && !a) || (l && n && s) || (!o && s) || !u) return -1;
+    }
+    return 0;
+};

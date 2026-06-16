@@ -1,1 +1,708 @@
-n.d(t,{z9:()=>eV,w_:()=>eD,Ay:()=>eH,th:()=>eB});var i=n(627968),l=n(64700),s=n(503698),a=n.n(s),r=n(284009),o=n.n(r),u=n(936504),c=n(562708),d=n(837381),h=n(172218),m=n(612324),p=n(535185),f=n(148839),g=n(607399),A=n(17928),x=n(780645),C=n(990078),E=n(97808),v=n(939249),T=n(821609),j=n(366605),_=n(952270),N=n(428678),S=n(661531),y=n(549254),R=n(912124);function I(e){let{as:t,muted:n=!1,selected:l=!1,className:s,...r}=e,o=t??v.D;return(0,i.jsx)(o,{...r,className:a()(R.bG,s,{[R.SU]:n,[R.wH]:l})})}var b=n(778712),M=n(192308),w=n(789645),O=n(308528),U=n(442433),D=n(765671),P=n(960076),k=n(397244),L=n(714114),F=n(394871),G=n(709066),V=n(262295),B=n(620982),H=n(343328),Q=n(963027),W=n(571694),z=n(47167),q=n(691540),Z=n(857250),K=n(97483),$=n(720149),Y=n(976860),X=n(330001),J=n(989349),ee=n.n(J),et=n(74114),en=n(232835),ei=n(994500),el=n(58703),es=n(935208),ea=n(746080),er=n(652215),eo=n(381941),eu=n(375708),ec=n(449582),ed=n(351952),eh=n(88686),em=n(174755),ep=n(187322),ef=n(586893);let eg=l.forwardRef(function(e,t){let{className:n,focusProps:l,...s}=e;return(0,i.jsx)(ep.vN,{...l,children:(0,i.jsx)("li",{className:a()(n,ef.k),...s,ref:t})})});var eA=n(824994),ex=n(922301),eC=n(660184),eE=n(414808),ev=n(302005),eT=n(954376),ej=n(534400),e_=n(854627),eN=n(616356),eS=n(290863),ey=n(222823),eR=n(741961),eI=n(543465),eb=n(287809),eM=n(19575),ew=n(330076);let eO=eM.Ay.getEnableHardwareAcceleration()?E.Js:E.eu,eU={offset:{top:2,bottom:2,right:4}},eD=e=>{let{nameplate:t,icon:n,forceShow:l=!1,reducedClickTarget:s=!1,visibleElementRef:r,...o}=e,u=(0,ed.K)(t);return(0,i.jsx)(v.D,{className:a()(ew.b,{[ew.DQ]:null!=t,[ew.by]:l,[ew.wY]:s}),style:u,...o,focusProps:{offset:{top:-2,bottom:-2,left:-2,right:6}},children:(0,i.jsx)("div",{ref:r,className:a()({[ew.PJ]:null!=t}),children:(0,i.jsx)(n,{size:"sm",color:"currentColor",className:a()(ew.ut,{[ew.Uq]:null!=t})})})})},eP=e=>{let{onClick:t,channelName:n,showNameplate:l}=e;return(0,i.jsx)("div",{className:ew.KQ,children:(0,i.jsx)(C.m,{text:eu.intl.formatToPlainString(eu.t.m0zYbV,{username:n}),children:(0,i.jsx)(T.$,{size:"sm",variant:l?"overlay-secondary":"secondary",onClick:t,text:eu.intl.string(eu.t.pVlP58)})})})},ek=()=>(0,i.jsx)(j.t,{size:"xs",color:"currentColor",className:ew.wB}),eL=()=>(0,i.jsx)(_.G,{size:"xs",color:"currentColor",className:ew.wB}),eF=()=>(0,i.jsx)(N.K,{size:"xs",color:"currentColor",className:ew.wB});function eG(e){let{eventTargetRef:t,isNitro:n,contentWidth:s,hoverGradientStart:a,hoverGradientMiddle:r,hoverGradientEnd:o}=e,u=l.useMemo(()=>null!=a&&null!=r&&null!=o?{Color_GradientCenter:a,Color_InnerRing:r??S.A.colors.NITRO_TAB_GRADIENT_INNER_RING??r,Color_OuterRing:o,NitroVFX:!1}:n?{Color_GradientCenter:S.A.colors.NITRO_TAB_GRADIENT_CENTER,Color_InnerRing:S.A.colors.NITRO_TAB_GRADIENT_INNER_RING,Color_OuterRing:S.A.colors.NITRO_TAB_GRADIENT_OUTER_RING,NitroVFX:!0}:{Color_GradientCenter:S.A.colors.STANDARD_TAB_GRADIENT_CENTER,Color_InnerRing:S.A.colors.STANDARD_TAB_GRADIENT_INNER_RING,Color_OuterRing:S.A.colors.STANDARD_TAB_GRADIENT_OUTER_RING,NitroVFX:!1},[n,a,r,o]);return(0,i.jsx)(y.U,{eventTargetRef:t,className:ew.a1,dataBinding:{...u,DimmerWidth:(s??0)+32}})}let eV=e=>{let{route:t,selected:n,icon:s,iconClassName:r,interactiveClassName:o,text:c,children:d,locationState:h,onClick:m,className:p,role:f,"aria-posinset":A,"aria-setsize":x,listItemRef:C,showHoverGradient:E=!1,nitroHoverGradient:v=!1,hoverGradientStart:T,hoverGradientMiddle:j,hoverGradientEnd:_,...N}=e,{width:S,ref:y}=(0,D.Ay)(),R=l.useRef(null),b=C??R;return(0,i.jsx)(eg,{className:a()(ew.Ix,{[ew.Ij]:g.Fr},p),onClick:m,role:f,focusProps:{within:!0,...eU},"aria-posinset":A,"aria-setsize":x,ref:b,children:(0,i.jsxs)(I,{as:"div",selected:n,className:a()(o,ew.bG,ew.$J,{[ew.Q2]:n}),children:[E&&(0,i.jsx)(eG,{eventTargetRef:b,isNitro:v,contentWidth:S,hoverGradientStart:T,hoverGradientMiddle:j,hoverGradientEnd:_}),(0,i.jsxs)(u.N_,{to:{pathname:t,state:h},className:ew.nf,...N,children:[(0,i.jsx)(V.A,{ref:E?y:void 0,muted:!1,avatar:(0,i.jsx)(s,{size:"refresh_sm",className:a()(ew.e_,r),color:"currentColor"}),name:c,innerClassName:ew.xx}),d]})]})})};function eB(e){let{channel:t,selected:s=!1,user:r,activities:g,applicationStream:C,voiceChannel:E,isTyping:v,status:T,isMobile:j,isVR:_,nameplate:N,ref:S,"aria-posinset":y,"aria-setsize":R}=e,[D,L]=l.useState(!1),[J,ec]=l.useState(!1),[ed,ep]=l.useState(!1),ef=l.useRef(null),[eN,eS]=l.useState(!1),eR=(0,h.K)(l.useCallback(e=>{eS(e)},[])),eb=l.useRef(null),eM=S??eb,eG=(0,m.A)(eM,eR),{showMenuItemPopover:eV,markMenuItemPopoverAsDismissed:eB}=(0,ev.z)({location:"PrivateChannel",isChannelSelected:!0===s,isTargetInViewport:eN,channelType:t.type}),{avatarSrc:eH,avatarDecorationSrc:eQ,eventHandlers:eW}=(0,e_.A)({userId:r?.id,size:b._3.SIZE_32,animateOnHover:!(s||D||J||ed)}),[ez,eq]=l.useState({maskImage:"none"}),eZ=l.useRef(null),eK=t.isMultiUserDM(),e$=t.isSystemDM(),eY=!eK&&!e$&&t.type===er.rbe.DM,eX=eY&&r?.primaryGuild!=null,eJ=(0,A.bG)([eI.Ay],()=>eI.Ay.isChannelMuted(t.getGuildId(),t.id)),e0=(0,A.bG)([eI.Ay],()=>eI.Ay.isMessagesFavorite(t.id)),{ignored:e1,blocked:e2}=(0,A.cf)([ei.A],()=>({ignored:ei.A.isIgnored(t.getRecipientId()),blocked:ei.A.isBlocked(t.getRecipientId())})),e3=eY&&e1,e6=eY&&e2,e5=(eJ||e3||e6)&&!(s||D),e4=(0,A.bG)([ey.Ay],()=>ey.Ay.getMentionCount(t.id)>0),e8=(0,z.Ay)(t),e7=l.useRef(null),e9=null!=N&&(s||D||ed),te=()=>{L(!0)},tt=()=>{L(!1)},tn=()=>{ec(!0)},ti=()=>{ec(!1)},tl=function(e){let n=arguments.length>1&&void 0!==arguments[1]&&arguments[1];null!=e&&(e.preventDefault(),e.stopPropagation()),O.A.closePrivateChannel(t.id,s,n)},ts=()=>{O.A.preload(er.ME,t.id)},ta=e=>{e.stopPropagation()},tr=e=>{e.target===e.currentTarget&&ef.current?.click()},to=e=>{let l="contextmenu"===e.type?c.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN:c.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;ep(!0),t.isMultiUserDM()?(0,U.L3)(e,async()=>{let{default:e}=await Promise.all([n.e("26132"),n.e("46652"),n.e("93190"),n.e("91763"),n.e("38730"),n.e("34971"),n.e("42339"),n.e("12520"),n.e("17244"),n.e("46149"),n.e("53416"),n.e("60200")]).then(n.bind(n,4027));return n=>(0,i.jsx)(e,{...n,channel:t,selected:s})},{impressionName:l,noBlurEvent:!0,onClose:()=>ep(!1)}):(0,U.L3)(e,async()=>{let{default:e}=await Promise.all([n.e("71406"),n.e("86896"),n.e("76900"),n.e("88429"),n.e("94881"),n.e("26132"),n.e("46652"),n.e("93190"),n.e("93103"),n.e("34552"),n.e("91763"),n.e("8757"),n.e("85968"),n.e("89673"),n.e("68403"),n.e("29787"),n.e("71210"),n.e("38730"),n.e("88342"),n.e("82073"),n.e("97558"),n.e("91994"),n.e("89421"),n.e("98965"),n.e("76665"),n.e("35313"),n.e("76273"),n.e("36564"),n.e("34971"),n.e("52229"),n.e("45996"),n.e("792"),n.e("92822"),n.e("23427"),n.e("29422"),n.e("38056"),n.e("9291"),n.e("7059"),n.e("8829"),n.e("42339"),n.e("17244"),n.e("98199"),n.e("41175"),n.e("60816"),n.e("39778")]).then(n.bind(n,385913));return n=>(0,i.jsx)(e,{...n,user:r,channel:t,channelSelected:s})},{impressionName:l,onClose:()=>ep(!1)})},tu=e=>{e.preventDefault(),e.stopPropagation();let l=eu.intl.formatToPlainString(eu.t.hJ5Ap4,{name:e8}),s=eu.intl.format(eu.t.SSIVOu,{name:e8});t.isManaged()&&(l=eu.intl.formatToPlainString(eu.t.hVGjEW,{name:e8}),s=eu.intl.format(eu.t.IK1Qvs,{name:e8})),(0,M.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e("70588"),n.e("37803")]).then(n.bind(n,148166));return t=>(0,i.jsx)(e,{title:l,body:s,onSubmit:tl,...t})})},tc=(0,i.jsx)(eC.A,{userName:e8,displayNameStyles:r?.displayNameStyles,effectDisplayType:D||s||ed?ex.G.ANIMATED:ex.G.PLAIN,loop:D,boldFontOpacity:.9}),td=eX?(0,i.jsxs)(i.Fragment,{children:[tc,(0,i.jsx)(ej.Ay,{primaryGuild:r?.primaryGuild,userId:r?.id,inline:!0,disableGuildProfile:!0,className:a()(ew.fc,{[ew.Y_]:e5})})]}):tc,th=l.useRef(null),tm=(0,eA.W)({location:"PrivateChannel"})&&r?.displayNameStyles!=null,{isIncomingCall:tp,isOngoingCall:tf}=(0,B.A)(t.id),tg=[(0,Q.Ay)({channel:t,unread:e4,isIncomingCall:tp,isOngoingCall:tf}),(0,Q.r2)({channel:t,muted:eJ,userStatus:T,isFavorite:e0})].filter(Boolean).join(", "),tA=(0,A.bG)([ey.Ay],()=>ey.Ay.lastMessageId(t.id)),{waveShouldShow:tx,wavePressed:tC}=function(e,t){let n,i,s,a,r,o,u,c,d,h,[m,p]=l.useState(!1),f=l.useCallback(async()=>{if(!m){p(!0),(0,X.W)({channelId:e.id,source:"DM Channel"}),(0,Y.pX)(er.BVt.CHANNEL(er.ME,e.id));try{await $.A.sendStickers(e.id,["749054660769218631"],"",{location:eo.Hx.SEND_WAVE})}catch(e){e.ok||429!==e.status||(0,q.P0)((0,Z.o)(eu.intl.string(eu.t.Whhv4w),K.Ck.FAILURE))}p(!1)}},[e.id,m]);return{waveShouldShow:(i=(n=e.isDM()&&!e.isSystemDM()&&!e.rawRecipients.some(e=>e.bot))?e.getRecipientId():null,s=(0,A.bG)([ei.A],()=>null!=i&&ei.A.isFriend(i)),a=(0,A.bG)([ei.A],()=>null!=i&&ei.A.isIgnored(i)),r=(0,A.bG)([en.A],()=>{let t=en.A.getMessages(e.id);return 1===t.length&&t.first()?.type===er.lAJ.FRIEND_REQUEST_ACCEPTED}),o=e.hasFlag(ea.lx.HAS_ONLY_SYSTEM_MESSAGES),u=(0,A.bG)([en.A],()=>en.A.hasCurrentUserSentWaveBlockingMessage(e.id)),c=es.default.extractTimestamp(e.id),d=(0,el.v0)(ee()(),ee()(c),18144e5),h=(0,et.l)(e.id),n&&s&&!a&&(o||null==t||r)&&!u&&d&&null==h),wavePressed:f}}(t,tA),tE=(0,f.A)(()=>{let e=eZ.current?.getBoundingClientRect()??null,t=th.current?.getBoundingClientRect()??null;if(null==t||null==e||e.width+44-t.width<=0)return void eq({maskImage:"none"});let n=t.width-16;eq({maskImage:`linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) ${n}px, rgba(0, 0, 0, 0))`})});return l.useLayoutEffect(tE,[D,s,tE]),(0,p.g)(eM,tE),(0,i.jsx)(d.tG,{id:t.id,children:e=>{let{role:n,...l}=e;return(0,i.jsxs)(eg,{className:a()(ew.Ix,ew.dm),role:n,focusProps:{...eU,focusTarget:ef,ringTarget:eM},ref:eG,onMouseEnter:te,onMouseLeave:tt,onMouseDown:ts,onFocus:tn,onBlur:ti,onContextMenu:to,"aria-setsize":R,"aria-posinset":y,children:[e4?(0,i.jsx)("div",{className:a()(ew.dM,{[ew.SU]:e5})}):null,(0,i.jsxs)(I,{className:a()(ew.bG,{[ew.Q2]:s||ed}),as:"div",onClick:tr,muted:e5,selected:s,children:[(0,i.jsx)(em.A,{nameplate:e9?N:void 0,selected:s,hovered:D,content:th,placement:eh.u.CHANNEL}),(0,i.jsx)("div",{className:ew.lU,ref:eZ,children:td}),(0,i.jsx)(u.N_,{style:ez,innerRef:ef,to:er.BVt.CHANNEL(er.ME,t.id),className:ew.nf,"aria-label":tg,...l,children:(0,i.jsx)(V.A,{ref:th,avatar:(()=>{let e=b._3.SIZE_32;if(t.isMultiUserDM())if(t.recipients.length>=2&&null==t.icon)return(0,i.jsx)(eT.A,{"aria-hidden":!0,recipients:t.recipients,size:e,isTyping:v,status:T});else return(0,i.jsx)(eO,{...eW,src:(0,W.Y)(t),"aria-hidden":!0,size:e,status:v?er.clD.ONLINE:T,isTyping:v});o()(null!=r,"PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel");let n=null;return r.isSystemUser()||(n=(0,P.A)(g)?er.clD.STREAMING:T),(0,i.jsx)(eO,{...eW,size:b._3.SIZE_32,src:eH,avatarDecoration:eQ,status:n,isMobile:j,isVR:_,isTyping:v,"aria-label":r.username,statusTooltip:!0})})(),highlighted:e4&&!e5,muted:e5,subText:t.isSystemDM()?(0,i.jsx)("div",{className:ew.W$,children:(0,H.A)(t.id)?eu.intl.string(eu.t.FL5T01):eu.intl.string(eu.t.NnY5lc)}):t.isMultiUserDM()?(0,i.jsx)("div",{className:ew.W$,children:eu.intl.format(eu.t.CxSA5N,{members:t.recipients.length+1})}):(0,k.A)({activities:g,status:T,applicationStream:C,voiceChannel:E})?(0,i.jsx)(F.A,{user:r,activities:g,voiceChannel:E,applicationStream:C,animateEmoji:D||J||ed,textClassName:ew.XD,iconClassName:e5?ew.tG:void 0}):null,name:(0,i.jsx)(x.A,{className:a()(ew.uN,{[ew.e8]:tm}),children:td}),decorators:t.isSystemDM()?(0,i.jsx)(G.A,{className:ew.G$,type:G.A.Types.SYSTEM_DM,verified:!0}):null,withDisplayNameStyles:tm})}),(0,i.jsxs)("div",{className:a()(ew._q,{[ew.EY]:e9}),children:[e6?(0,i.jsx)(eF,{}):e3?(0,i.jsx)(eL,{}):e0?(0,i.jsx)(ek,{}):null,tx&&null!=e8?(0,i.jsx)(eP,{channelName:e8,onClick:tC,showNameplate:e9}):null,tx?null:(0,i.jsx)(eD,{icon:w.P,"aria-label":eK?eu.intl.string(eu.t["26C4oi"]):eu.intl.string(eu.t.jsvgc3),onClick:eK?tu:tl,onMouseDown:ta,nameplate:N,reducedClickTarget:!0,visibleElementRef:e7})]})]}),eV&&(0,i.jsx)(eE.A,{targetElementRef:eM,markMenuItemPopoverAsDismissed:eB})]})}})}let eH=21552==n.j?e=>{let{channel:t,selected:n,...l}=e,s=(0,A.bG)([eb.default],()=>eb.default.getUser(t.getRecipientId())),a=s?.id,r=(0,A.cf)([eS.A,eN.A],()=>{let e;if(t.isMultiUserDM()){let n=eS.A.getState().statuses;t.recipients.some(e=>n[e]===er.clD.ONLINE)&&(e=er.clD.ONLINE)}else null!=a&&(e=eS.A.getStatus(a));return{status:e,activities:null!=a?eS.A.getActivities(a):null,applicationStream:null!=a?eN.A.getAnyStreamForUser(a):null,isMobile:null!=a&&eS.A.isMobileOnline(a),isVR:null!=a&&eS.A.isVROnline(a)}},[t,a]),{voiceChannel:o}=(0,L.A)({userId:a}),u=(0,ec.r)({user:s}),c=(0,A.bG)([eb.default,eR.A],()=>t.isMultiUserDM()?es.default.keys(eR.A.getTypingUsers(t.id)).some(e=>e!==eb.default.getCurrentUser()?.id):null!=s&&eR.A.isTyping(t.id,t.getRecipientId()),[t,s]);return t.isMultiUserDM()?(0,i.jsx)(eB,{channel:t,selected:n,isTyping:c,status:r.status===er.clD.ONLINE?er.clD.ONLINE:void 0,...l}):(0,i.jsx)(eB,{channel:t,selected:n,user:s,voiceChannel:o,isTyping:c,nameplate:u,...l,...r})}:null
+"use strict";
+n.d(t, { z9: () => eB, w_: () => ex, Ay: () => eH, th: () => ej });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(284009),
+    l = n.n(o),
+    u = n(936504),
+    c = n(562708),
+    d = n(837381),
+    _ = n(172218),
+    h = n(612324),
+    f = n(535185),
+    p = n(148839),
+    E = n(607399),
+    m = n(17928),
+    g = n(780645),
+    A = n(990078),
+    I = n(97808),
+    T = n(939249),
+    S = n(821609),
+    y = n(366605),
+    C = n(952270),
+    N = n(428678),
+    v = n(661531),
+    R = n(549254),
+    O = n(912124);
+function b(e) {
+    let { as: t, muted: n = !1, selected: r = !1, className: s, ...o } = e,
+        l = t ?? T.D;
+    return (0, i.jsx)(l, { ...o, className: a()(O.bG, s, { [O.SU]: n, [O.wH]: r }) });
+}
+var D = n(778712),
+    L = n(192308),
+    w = n(789645),
+    M = n(308528),
+    P = n(442433),
+    x = n(765671),
+    k = n(960076),
+    U = n(397244),
+    G = n(714114),
+    F = n(394871),
+    V = n(709066),
+    B = n(262295),
+    j = n(620982),
+    H = n(343328),
+    Y = n(963027),
+    W = n(571694),
+    K = n(47167),
+    $ = n(691540),
+    z = n(857250),
+    q = n(97483),
+    Z = n(720149),
+    X = n(976860),
+    Q = n(330001),
+    J = n(989349),
+    ee = n.n(J),
+    et = n(74114),
+    en = n(232835),
+    ei = n(994500),
+    er = n(58703),
+    es = n(935208),
+    ea = n(746080),
+    eo = n(652215),
+    el = n(381941),
+    eu = n(375708),
+    ec = n(449582),
+    ed = n(351952),
+    e_ = n(88686),
+    eh = n(174755),
+    ef = n(187322),
+    ep = n(586893);
+let eE = r.forwardRef(function (e, t) {
+    let { className: n, focusProps: r, ...s } = e;
+    return (0, i.jsx)(ef.vN, { ...r, children: (0, i.jsx)("li", { className: a()(n, ep.k), ...s, ref: t }) });
+});
+var em = n(824994),
+    eg = n(922301),
+    eA = n(660184),
+    eI = n(414808),
+    eT = n(302005),
+    eS = n(954376),
+    ey = n(534400),
+    eC = n(854627),
+    eN = n(616356),
+    ev = n(290863),
+    eR = n(222823),
+    eO = n(741961),
+    eb = n(543465),
+    eD = n(287809),
+    eL = n(19575),
+    ew = n(330076);
+let eM = eL.Ay.getEnableHardwareAcceleration() ? I.Js : I.eu,
+    eP = { offset: { top: 2, bottom: 2, right: 4 } },
+    ex = (e) => {
+        let { nameplate: t, icon: n, forceShow: r = !1, reducedClickTarget: s = !1, visibleElementRef: o, ...l } = e,
+            u = (0, ed.K)(t);
+        return (0, i.jsx)(T.D, {
+            className: a()(ew.b, { [ew.DQ]: null != t, [ew.by]: r, [ew.wY]: s }),
+            style: u,
+            ...l,
+            focusProps: { offset: { top: -2, bottom: -2, left: -2, right: 6 } },
+            children: (0, i.jsx)("div", {
+                ref: o,
+                className: a()({ [ew.PJ]: null != t }),
+                children: (0, i.jsx)(n, {
+                    size: "sm",
+                    color: "currentColor",
+                    className: a()(ew.ut, { [ew.Uq]: null != t }),
+                }),
+            }),
+        });
+    },
+    ek = (e) => {
+        let { onClick: t, channelName: n, showNameplate: r } = e;
+        return (0, i.jsx)("div", {
+            className: ew.KQ,
+            children: (0, i.jsx)(A.m, {
+                text: eu.intl.formatToPlainString(eu.t.m0zYbV, { username: n }),
+                children: (0, i.jsx)(S.$, {
+                    size: "sm",
+                    variant: r ? "overlay-secondary" : "secondary",
+                    onClick: t,
+                    text: eu.intl.string(eu.t.pVlP58),
+                }),
+            }),
+        });
+    },
+    eU = () => (0, i.jsx)(y.t, { size: "xs", color: "currentColor", className: ew.wB }),
+    eG = () => (0, i.jsx)(C.G, { size: "xs", color: "currentColor", className: ew.wB }),
+    eF = () => (0, i.jsx)(N.K, { size: "xs", color: "currentColor", className: ew.wB });
+function eV(e) {
+    let {
+            eventTargetRef: t,
+            isNitro: n,
+            contentWidth: s,
+            hoverGradientStart: a,
+            hoverGradientMiddle: o,
+            hoverGradientEnd: l,
+        } = e,
+        u = r.useMemo(
+            () =>
+                null != a && null != o && null != l
+                    ? {
+                          Color_GradientCenter: a,
+                          Color_InnerRing: o ?? v.A.colors.NITRO_TAB_GRADIENT_INNER_RING ?? o,
+                          Color_OuterRing: l,
+                          NitroVFX: !1,
+                      }
+                    : n
+                      ? {
+                            Color_GradientCenter: v.A.colors.NITRO_TAB_GRADIENT_CENTER,
+                            Color_InnerRing: v.A.colors.NITRO_TAB_GRADIENT_INNER_RING,
+                            Color_OuterRing: v.A.colors.NITRO_TAB_GRADIENT_OUTER_RING,
+                            NitroVFX: !0,
+                        }
+                      : {
+                            Color_GradientCenter: v.A.colors.STANDARD_TAB_GRADIENT_CENTER,
+                            Color_InnerRing: v.A.colors.STANDARD_TAB_GRADIENT_INNER_RING,
+                            Color_OuterRing: v.A.colors.STANDARD_TAB_GRADIENT_OUTER_RING,
+                            NitroVFX: !1,
+                        },
+            [n, a, o, l],
+        );
+    return (0, i.jsx)(R.U, { eventTargetRef: t, className: ew.a1, dataBinding: { ...u, DimmerWidth: (s ?? 0) + 32 } });
+}
+let eB = (e) => {
+    let {
+            route: t,
+            selected: n,
+            icon: s,
+            iconClassName: o,
+            interactiveClassName: l,
+            text: c,
+            children: d,
+            locationState: _,
+            onClick: h,
+            className: f,
+            role: p,
+            "aria-posinset": m,
+            "aria-setsize": g,
+            listItemRef: A,
+            showHoverGradient: I = !1,
+            nitroHoverGradient: T = !1,
+            hoverGradientStart: S,
+            hoverGradientMiddle: y,
+            hoverGradientEnd: C,
+            ...N
+        } = e,
+        { width: v, ref: R } = (0, x.Ay)(),
+        O = r.useRef(null),
+        D = A ?? O;
+    return (0, i.jsx)(eE, {
+        className: a()(ew.Ix, { [ew.Ij]: E.Fr }, f),
+        onClick: h,
+        role: p,
+        focusProps: { within: !0, ...eP },
+        "aria-posinset": m,
+        "aria-setsize": g,
+        ref: D,
+        children: (0, i.jsxs)(b, {
+            as: "div",
+            selected: n,
+            className: a()(l, ew.bG, ew.$J, { [ew.Q2]: n }),
+            children: [
+                I &&
+                    (0, i.jsx)(eV, {
+                        eventTargetRef: D,
+                        isNitro: T,
+                        contentWidth: v,
+                        hoverGradientStart: S,
+                        hoverGradientMiddle: y,
+                        hoverGradientEnd: C,
+                    }),
+                (0, i.jsxs)(u.N_, {
+                    to: { pathname: t, state: _ },
+                    className: ew.nf,
+                    ...N,
+                    children: [
+                        (0, i.jsx)(B.A, {
+                            ref: I ? R : void 0,
+                            muted: !1,
+                            avatar: (0, i.jsx)(s, {
+                                size: "refresh_sm",
+                                className: a()(ew.e_, o),
+                                color: "currentColor",
+                            }),
+                            name: c,
+                            innerClassName: ew.xx,
+                        }),
+                        d,
+                    ],
+                }),
+            ],
+        }),
+    });
+};
+function ej(e) {
+    let {
+            channel: t,
+            selected: s = !1,
+            user: o,
+            activities: E,
+            applicationStream: A,
+            voiceChannel: I,
+            isTyping: T,
+            status: S,
+            isMobile: y,
+            isVR: C,
+            nameplate: N,
+            ref: v,
+            "aria-posinset": R,
+            "aria-setsize": O,
+        } = e,
+        [x, G] = r.useState(!1),
+        [J, ec] = r.useState(!1),
+        [ed, ef] = r.useState(!1),
+        ep = r.useRef(null),
+        [eN, ev] = r.useState(!1),
+        eO = (0, _.K)(
+            r.useCallback((e) => {
+                ev(e);
+            }, []),
+        ),
+        eD = r.useRef(null),
+        eL = v ?? eD,
+        eV = (0, h.A)(eL, eO),
+        { showMenuItemPopover: eB, markMenuItemPopoverAsDismissed: ej } = (0, eT.z)({
+            location: "PrivateChannel",
+            isChannelSelected: !0 === s,
+            isTargetInViewport: eN,
+            channelType: t.type,
+        }),
+        {
+            avatarSrc: eH,
+            avatarDecorationSrc: eY,
+            eventHandlers: eW,
+        } = (0, eC.A)({ userId: o?.id, size: D._3.SIZE_32, animateOnHover: !(s || x || J || ed) }),
+        [eK, e$] = r.useState({ maskImage: "none" }),
+        ez = r.useRef(null),
+        eq = t.isMultiUserDM(),
+        eZ = t.isSystemDM(),
+        eX = !eq && !eZ && t.type === eo.rbe.DM,
+        eQ = eX && o?.primaryGuild != null,
+        eJ = (0, m.bG)([eb.Ay], () => eb.Ay.isChannelMuted(t.getGuildId(), t.id)),
+        e0 = (0, m.bG)([eb.Ay], () => eb.Ay.isMessagesFavorite(t.id)),
+        { ignored: e1, blocked: e2 } = (0, m.cf)([ei.A], () => ({
+            ignored: ei.A.isIgnored(t.getRecipientId()),
+            blocked: ei.A.isBlocked(t.getRecipientId()),
+        })),
+        e3 = eX && e1,
+        e6 = eX && e2,
+        e4 = (eJ || e3 || e6) && !(s || x),
+        e5 = (0, m.bG)([eR.Ay], () => eR.Ay.getMentionCount(t.id) > 0),
+        e7 = (0, K.Ay)(t),
+        e8 = r.useRef(null),
+        e9 = null != N && (s || x || ed),
+        te = () => {
+            G(!0);
+        },
+        tt = () => {
+            G(!1);
+        },
+        tn = () => {
+            ec(!0);
+        },
+        ti = () => {
+            ec(!1);
+        },
+        tr = function (e) {
+            let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+            null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, s, n);
+        },
+        ts = () => {
+            M.A.preload(eo.ME, t.id);
+        },
+        ta = (e) => {
+            e.stopPropagation();
+        },
+        to = (e) => {
+            e.target === e.currentTarget && ep.current?.click();
+        },
+        tl = (e) => {
+            let r =
+                "contextmenu" === e.type
+                    ? c.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN
+                    : c.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
+            ef(!0),
+                t.isMultiUserDM()
+                    ? (0, P.L3)(
+                          e,
+                          async () => {
+                              let { default: e } = await Promise.all([
+                                  n.e("26132"),
+                                  n.e("46652"),
+                                  n.e("93190"),
+                                  n.e("91763"),
+                                  n.e("38730"),
+                                  n.e("34971"),
+                                  n.e("42339"),
+                                  n.e("12520"),
+                                  n.e("17244"),
+                                  n.e("46149"),
+                                  n.e("53416"),
+                                  n.e("60200"),
+                              ]).then(n.bind(n, 4027));
+                              return (n) => (0, i.jsx)(e, { ...n, channel: t, selected: s });
+                          },
+                          { impressionName: r, noBlurEvent: !0, onClose: () => ef(!1) },
+                      )
+                    : (0, P.L3)(
+                          e,
+                          async () => {
+                              let { default: e } = await Promise.all([
+                                  n.e("71406"),
+                                  n.e("86896"),
+                                  n.e("76900"),
+                                  n.e("88429"),
+                                  n.e("94881"),
+                                  n.e("26132"),
+                                  n.e("46652"),
+                                  n.e("93190"),
+                                  n.e("93103"),
+                                  n.e("34552"),
+                                  n.e("91763"),
+                                  n.e("8757"),
+                                  n.e("85968"),
+                                  n.e("89673"),
+                                  n.e("68403"),
+                                  n.e("29787"),
+                                  n.e("71210"),
+                                  n.e("38730"),
+                                  n.e("88342"),
+                                  n.e("82073"),
+                                  n.e("97558"),
+                                  n.e("91994"),
+                                  n.e("89421"),
+                                  n.e("98965"),
+                                  n.e("76665"),
+                                  n.e("35313"),
+                                  n.e("76273"),
+                                  n.e("36564"),
+                                  n.e("34971"),
+                                  n.e("52229"),
+                                  n.e("45996"),
+                                  n.e("792"),
+                                  n.e("92822"),
+                                  n.e("23427"),
+                                  n.e("29422"),
+                                  n.e("38056"),
+                                  n.e("9291"),
+                                  n.e("7059"),
+                                  n.e("8829"),
+                                  n.e("42339"),
+                                  n.e("17244"),
+                                  n.e("98199"),
+                                  n.e("41175"),
+                                  n.e("60816"),
+                                  n.e("39778"),
+                              ]).then(n.bind(n, 385913));
+                              return (n) => (0, i.jsx)(e, { ...n, user: o, channel: t, channelSelected: s });
+                          },
+                          { impressionName: r, onClose: () => ef(!1) },
+                      );
+        },
+        tu = (e) => {
+            e.preventDefault(), e.stopPropagation();
+            let r = eu.intl.formatToPlainString(eu.t.hJ5Ap4, { name: e7 }),
+                s = eu.intl.format(eu.t.SSIVOu, { name: e7 });
+            t.isManaged() &&
+                ((r = eu.intl.formatToPlainString(eu.t.hVGjEW, { name: e7 })),
+                (s = eu.intl.format(eu.t.IK1Qvs, { name: e7 }))),
+                (0, L.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([n.e("70588"), n.e("37803")]).then(n.bind(n, 148166));
+                    return (t) => (0, i.jsx)(e, { title: r, body: s, onSubmit: tr, ...t });
+                });
+        },
+        tc = (0, i.jsx)(eA.A, {
+            userName: e7,
+            displayNameStyles: o?.displayNameStyles,
+            effectDisplayType: x || s || ed ? eg.G.ANIMATED : eg.G.PLAIN,
+            loop: x,
+            boldFontOpacity: 0.9,
+        }),
+        td = eQ
+            ? (0, i.jsxs)(i.Fragment, {
+                  children: [
+                      tc,
+                      (0, i.jsx)(ey.Ay, {
+                          primaryGuild: o?.primaryGuild,
+                          userId: o?.id,
+                          inline: !0,
+                          disableGuildProfile: !0,
+                          className: a()(ew.fc, { [ew.Y_]: e4 }),
+                      }),
+                  ],
+              })
+            : tc,
+        t_ = r.useRef(null),
+        th = (0, em.W)({ location: "PrivateChannel" }) && o?.displayNameStyles != null,
+        { isIncomingCall: tf, isOngoingCall: tp } = (0, j.A)(t.id),
+        tE = [
+            (0, Y.Ay)({ channel: t, unread: e5, isIncomingCall: tf, isOngoingCall: tp }),
+            (0, Y.r2)({ channel: t, muted: eJ, userStatus: S, isFavorite: e0 }),
+        ]
+            .filter(Boolean)
+            .join(", "),
+        tm = (0, m.bG)([eR.Ay], () => eR.Ay.lastMessageId(t.id)),
+        { waveShouldShow: tg, wavePressed: tA } = (function (e, t) {
+            let n,
+                i,
+                s,
+                a,
+                o,
+                l,
+                u,
+                c,
+                d,
+                _,
+                [h, f] = r.useState(!1),
+                p = r.useCallback(async () => {
+                    if (!h) {
+                        f(!0),
+                            (0, Q.W)({ channelId: e.id, source: "DM Channel" }),
+                            (0, X.pX)(eo.BVt.CHANNEL(eo.ME, e.id));
+                        try {
+                            await Z.A.sendStickers(e.id, ["749054660769218631"], "", { location: el.Hx.SEND_WAVE });
+                        } catch (e) {
+                            e.ok || 429 !== e.status || (0, $.P0)((0, z.o)(eu.intl.string(eu.t.Whhv4w), q.Ck.FAILURE));
+                        }
+                        f(!1);
+                    }
+                }, [e.id, h]);
+            return {
+                waveShouldShow:
+                    ((i = (n = e.isDM() && !e.isSystemDM() && !e.rawRecipients.some((e) => e.bot))
+                        ? e.getRecipientId()
+                        : null),
+                    (s = (0, m.bG)([ei.A], () => null != i && ei.A.isFriend(i))),
+                    (a = (0, m.bG)([ei.A], () => null != i && ei.A.isIgnored(i))),
+                    (o = (0, m.bG)([en.A], () => {
+                        let t = en.A.getMessages(e.id);
+                        return 1 === t.length && t.first()?.type === eo.lAJ.FRIEND_REQUEST_ACCEPTED;
+                    })),
+                    (l = e.hasFlag(ea.lx.HAS_ONLY_SYSTEM_MESSAGES)),
+                    (u = (0, m.bG)([en.A], () => en.A.hasCurrentUserSentWaveBlockingMessage(e.id))),
+                    (c = es.default.extractTimestamp(e.id)),
+                    (d = (0, er.v0)(ee()(), ee()(c), 18144e5)),
+                    (_ = (0, et.l)(e.id)),
+                    n && s && !a && (l || null == t || o) && !u && d && null == _),
+                wavePressed: p,
+            };
+        })(t, tm),
+        tI = (0, p.A)(() => {
+            let e = ez.current?.getBoundingClientRect() ?? null,
+                t = t_.current?.getBoundingClientRect() ?? null;
+            if (null == t || null == e || e.width + 44 - t.width <= 0) return void e$({ maskImage: "none" });
+            let n = t.width - 16;
+            e$({
+                maskImage: `linear-gradient(to right, rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) ${n}px, rgba(0, 0, 0, 0))`,
+            });
+        });
+    return (
+        r.useLayoutEffect(tI, [x, s, tI]),
+        (0, f.g)(eL, tI),
+        (0, i.jsx)(d.tG, {
+            id: t.id,
+            children: (e) => {
+                let { role: n, ...r } = e;
+                return (0, i.jsxs)(eE, {
+                    className: a()(ew.Ix, ew.dm),
+                    role: n,
+                    focusProps: { ...eP, focusTarget: ep, ringTarget: eL },
+                    ref: eV,
+                    onMouseEnter: te,
+                    onMouseLeave: tt,
+                    onMouseDown: ts,
+                    onFocus: tn,
+                    onBlur: ti,
+                    onContextMenu: tl,
+                    "aria-setsize": O,
+                    "aria-posinset": R,
+                    children: [
+                        e5 ? (0, i.jsx)("div", { className: a()(ew.dM, { [ew.SU]: e4 }) }) : null,
+                        (0, i.jsxs)(b, {
+                            className: a()(ew.bG, { [ew.Q2]: s || ed }),
+                            as: "div",
+                            onClick: to,
+                            muted: e4,
+                            selected: s,
+                            children: [
+                                (0, i.jsx)(eh.A, {
+                                    nameplate: e9 ? N : void 0,
+                                    selected: s,
+                                    hovered: x,
+                                    content: t_,
+                                    placement: e_.u.CHANNEL,
+                                }),
+                                (0, i.jsx)("div", { className: ew.lU, ref: ez, children: td }),
+                                (0, i.jsx)(u.N_, {
+                                    style: eK,
+                                    innerRef: ep,
+                                    to: eo.BVt.CHANNEL(eo.ME, t.id),
+                                    className: ew.nf,
+                                    "aria-label": tE,
+                                    ...r,
+                                    children: (0, i.jsx)(B.A, {
+                                        ref: t_,
+                                        avatar: (() => {
+                                            let e = D._3.SIZE_32;
+                                            if (t.isMultiUserDM())
+                                                if (t.recipients.length >= 2 && null == t.icon)
+                                                    return (0, i.jsx)(eS.A, {
+                                                        "aria-hidden": !0,
+                                                        recipients: t.recipients,
+                                                        size: e,
+                                                        isTyping: T,
+                                                        status: S,
+                                                    });
+                                                else
+                                                    return (0, i.jsx)(eM, {
+                                                        ...eW,
+                                                        src: (0, W.Y)(t),
+                                                        "aria-hidden": !0,
+                                                        size: e,
+                                                        status: T ? eo.clD.ONLINE : S,
+                                                        isTyping: T,
+                                                    });
+                                            l()(
+                                                null != o,
+                                                "PrivateChannel.renderAvatar: Invalid prop configuration - no user or channel",
+                                            );
+                                            let n = null;
+                                            return (
+                                                o.isSystemUser() || (n = (0, k.A)(E) ? eo.clD.STREAMING : S),
+                                                (0, i.jsx)(eM, {
+                                                    ...eW,
+                                                    size: D._3.SIZE_32,
+                                                    src: eH,
+                                                    avatarDecoration: eY,
+                                                    status: n,
+                                                    isMobile: y,
+                                                    isVR: C,
+                                                    isTyping: T,
+                                                    "aria-label": o.username,
+                                                    statusTooltip: !0,
+                                                })
+                                            );
+                                        })(),
+                                        highlighted: e5 && !e4,
+                                        muted: e4,
+                                        subText: t.isSystemDM()
+                                            ? (0, i.jsx)("div", {
+                                                  className: ew.W$,
+                                                  children: (0, H.A)(t.id)
+                                                      ? eu.intl.string(eu.t.FL5T01)
+                                                      : eu.intl.string(eu.t.NnY5lc),
+                                              })
+                                            : t.isMultiUserDM()
+                                              ? (0, i.jsx)("div", {
+                                                    className: ew.W$,
+                                                    children: eu.intl.format(eu.t.CxSA5N, {
+                                                        members: t.recipients.length + 1,
+                                                    }),
+                                                })
+                                              : (0, U.A)({
+                                                      activities: E,
+                                                      status: S,
+                                                      applicationStream: A,
+                                                      voiceChannel: I,
+                                                  })
+                                                ? (0, i.jsx)(F.A, {
+                                                      user: o,
+                                                      activities: E,
+                                                      voiceChannel: I,
+                                                      applicationStream: A,
+                                                      animateEmoji: x || J || ed,
+                                                      textClassName: ew.XD,
+                                                      iconClassName: e4 ? ew.tG : void 0,
+                                                  })
+                                                : null,
+                                        name: (0, i.jsx)(g.A, { className: a()(ew.uN, { [ew.e8]: th }), children: td }),
+                                        decorators: t.isSystemDM()
+                                            ? (0, i.jsx)(V.A, {
+                                                  className: ew.G$,
+                                                  type: V.A.Types.SYSTEM_DM,
+                                                  verified: !0,
+                                              })
+                                            : null,
+                                        withDisplayNameStyles: th,
+                                    }),
+                                }),
+                                (0, i.jsxs)("div", {
+                                    className: a()(ew._q, { [ew.EY]: e9 }),
+                                    children: [
+                                        e6
+                                            ? (0, i.jsx)(eF, {})
+                                            : e3
+                                              ? (0, i.jsx)(eG, {})
+                                              : e0
+                                                ? (0, i.jsx)(eU, {})
+                                                : null,
+                                        tg && null != e7
+                                            ? (0, i.jsx)(ek, { channelName: e7, onClick: tA, showNameplate: e9 })
+                                            : null,
+                                        tg
+                                            ? null
+                                            : (0, i.jsx)(ex, {
+                                                  icon: w.P,
+                                                  "aria-label": eq
+                                                      ? eu.intl.string(eu.t["26C4oi"])
+                                                      : eu.intl.string(eu.t.jsvgc3),
+                                                  onClick: eq ? tu : tr,
+                                                  onMouseDown: ta,
+                                                  nameplate: N,
+                                                  reducedClickTarget: !0,
+                                                  visibleElementRef: e8,
+                                              }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                        eB && (0, i.jsx)(eI.A, { targetElementRef: eL, markMenuItemPopoverAsDismissed: ej }),
+                    ],
+                });
+            },
+        })
+    );
+}
+let eH = (e) => {
+    let { channel: t, selected: n, ...r } = e,
+        s = (0, m.bG)([eD.default], () => eD.default.getUser(t.getRecipientId())),
+        a = s?.id,
+        o = (0, m.cf)([ev.A, eN.A], () => {
+            let e;
+            if (t.isMultiUserDM()) {
+                let n = ev.A.getState().statuses;
+                t.recipients.some((e) => n[e] === eo.clD.ONLINE) && (e = eo.clD.ONLINE);
+            } else null != a && (e = ev.A.getStatus(a));
+            return {
+                status: e,
+                activities: null != a ? ev.A.getActivities(a) : null,
+                applicationStream: null != a ? eN.A.getAnyStreamForUser(a) : null,
+                isMobile: null != a && ev.A.isMobileOnline(a),
+                isVR: null != a && ev.A.isVROnline(a),
+            };
+        }, [t, a]),
+        { voiceChannel: l } = (0, G.A)({ userId: a }),
+        u = (0, ec.r)({ user: s }),
+        c = (0, m.bG)(
+            [eD.default, eO.A],
+            () =>
+                t.isMultiUserDM()
+                    ? es.default.keys(eO.A.getTypingUsers(t.id)).some((e) => e !== eD.default.getCurrentUser()?.id)
+                    : null != s && eO.A.isTyping(t.id, t.getRecipientId()),
+            [t, s],
+        );
+    return t.isMultiUserDM()
+        ? (0, i.jsx)(ej, {
+              channel: t,
+              selected: n,
+              isTyping: c,
+              status: o.status === eo.clD.ONLINE ? eo.clD.ONLINE : void 0,
+              ...r,
+          })
+        : (0, i.jsx)(ej, { channel: t, selected: n, user: s, voiceChannel: l, isTyping: c, nameplate: u, ...r, ...o });
+};

@@ -1,1 +1,14 @@
-i.d(s,{A:()=>n});var t=i(64700),a=i(172218);function n(e){let{wishlistId:s,onAction:i,productLines:n}=e,[l,r]=(0,t.useState)(!1),o=(0,t.useCallback)(e=>{e&&null!=s&&(i({action:"VIEW_WISHLIST",wishlistId:s,productLines:n??void 0}),r(!0))},[s,i,n]);return(0,a.K)(o,void 0,null!=s&&!l)}
+i.d(s, { A: () => n });
+var t = i(64700),
+    a = i(172218);
+function n(e) {
+    let { wishlistId: s, onAction: i, productLines: n } = e,
+        [l, r] = (0, t.useState)(!1),
+        o = (0, t.useCallback)(
+            (e) => {
+                e && null != s && (i({ action: "VIEW_WISHLIST", wishlistId: s, productLines: n ?? void 0 }), r(!0));
+            },
+            [s, i, n],
+        );
+    return (0, a.K)(o, void 0, null != s && !l);
+}

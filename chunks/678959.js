@@ -1,1 +1,1 @@
-t.exports={q:"badge__7ace6"}
+e.exports = { q: "badge__7ace6" };

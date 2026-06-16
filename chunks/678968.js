@@ -1,1 +1,114 @@
-n.d(t,{A:()=>I});var r=n(627968),l=n(64700),s=n(554830),a=n(613373),i=n(475815),u=n(507107),o=n(192444),c=n(551875),d=n(590202),E=n(971649),_=n(651892),f=n(73473),m=n(795068),p=n(503698),S=n.n(p),C=n(834926);function v(e){let{className:t,color:n}=e;return(0,r.jsx)("svg",{xmlns:"http://www.w3.org/2000/svg",width:"2",height:"40",viewBox:"0 0 2 40",fill:"none",className:S()(C.SU,t),children:(0,r.jsx)("path",{d:"M1 0V40",stroke:n,strokeOpacity:"0.3",strokeWidth:"2"})})}var A=n(781121),g=n(190107),h=n(375708);function I(e){let{videoRef:t,onTrackQuestContentClick:n,orientation:p}=e,{onClose:S,sourceQuestContent:I,quest:D,isFullscreenEnabled:T}=l.useContext(m.a),R=(0,E.go)(),x=(0,A.H)({quest:D,onClose:S,sourceQuestContent:I,impressionId:R}),O=l.useCallback(e=>{if(T){let e=(0,i.qf)(t.current?.parentNode,t.current);null!=e&&(0,i.sP)(e)}n(e,d.Cy.LEARN_MORE),x(e,d.Cy.OPEN_GAME_LINK)},[T,t,x,n]),{title:L,subtitle:P}={title:(0,_.wr)(D),subtitle:D.config.ctaConfig.subtitle??h.intl.string(h.t.mxaHfx)},{enabled:b}=o.uK.useConfig({location:g.rE.VIDEO_MODAL}),k=l.useMemo(()=>(0,c.tW)(D,c.fY.VIDEO_PLAYER_THUMBNAIL,void 0,!1)?.url??null,[D]);return b?(0,r.jsxs)(r.Fragment,{children:[(0,r.jsx)(a.nY,{url:k}),(0,r.jsx)(a.KP,{}),(0,r.jsxs)(a.zj,{orientation:p,children:[null!=k&&(0,r.jsx)(f.R,{questOrQuests:D,questContent:u.uF.VIDEO_MODAL_END_CARD,sourceQuestContent:I,children:e=>(0,r.jsx)(a.Kb,{ref:t=>{e.current=t},url:k,orientation:p})}),(0,r.jsx)(a.lx,{title:L,subtitle:P,ctaBtnLabel:D.config.ctaConfig.buttonLabel,ctaIcon:s.K,onCTAClick:()=>O(u.uF.VIDEO_MODAL),orientation:p})]})]}):(0,r.jsxs)(r.Fragment,{children:[null!=k&&(0,r.jsx)(f.R,{questOrQuests:D,questContent:u.uF.VIDEO_MODAL_END_CARD,sourceQuestContent:I,children:e=>(0,r.jsx)(a.pK,{ref:t=>{e.current=t},url:k})}),(0,r.jsx)("div",{className:C.MT,"data-testid":"discord-web-video-player-end-screen"}),(0,r.jsx)(a.OH,{title:L,subtitle:P,icon:s.K,className:C.mT,onClick:()=>O(u.uF.VIDEO_MODAL),divider:(0,r.jsx)(v,{color:"#747783"})})]})}
+n.d(t, { A: () => I });
+var r = n(627968),
+    l = n(64700),
+    s = n(554830),
+    a = n(613373),
+    i = n(475815),
+    u = n(507107),
+    o = n(192444),
+    c = n(551875),
+    d = n(590202),
+    E = n(971649),
+    _ = n(651892),
+    f = n(73473),
+    m = n(795068),
+    p = n(503698),
+    S = n.n(p),
+    C = n(834926);
+function v(e) {
+    let { className: t, color: n } = e;
+    return (0, r.jsx)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "2",
+        height: "40",
+        viewBox: "0 0 2 40",
+        fill: "none",
+        className: S()(C.SU, t),
+        children: (0, r.jsx)("path", { d: "M1 0V40", stroke: n, strokeOpacity: "0.3", strokeWidth: "2" }),
+    });
+}
+var A = n(781121),
+    g = n(190107),
+    h = n(375708);
+function I(e) {
+    let { videoRef: t, onTrackQuestContentClick: n, orientation: p } = e,
+        { onClose: S, sourceQuestContent: I, quest: D, isFullscreenEnabled: T } = l.useContext(m.a),
+        R = (0, E.go)(),
+        x = (0, A.H)({ quest: D, onClose: S, sourceQuestContent: I, impressionId: R }),
+        O = l.useCallback(
+            (e) => {
+                if (T) {
+                    let e = (0, i.qf)(t.current?.parentNode, t.current);
+                    null != e && (0, i.sP)(e);
+                }
+                n(e, d.Cy.LEARN_MORE), x(e, d.Cy.OPEN_GAME_LINK);
+            },
+            [T, t, x, n],
+        ),
+        { title: L, subtitle: P } = {
+            title: (0, _.wr)(D),
+            subtitle: D.config.ctaConfig.subtitle ?? h.intl.string(h.t.mxaHfx),
+        },
+        { enabled: b } = o.uK.useConfig({ location: g.rE.VIDEO_MODAL }),
+        k = l.useMemo(() => (0, c.tW)(D, c.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1)?.url ?? null, [D]);
+    return b
+        ? (0, r.jsxs)(r.Fragment, {
+              children: [
+                  (0, r.jsx)(a.nY, { url: k }),
+                  (0, r.jsx)(a.KP, {}),
+                  (0, r.jsxs)(a.zj, {
+                      orientation: p,
+                      children: [
+                          null != k &&
+                              (0, r.jsx)(f.R, {
+                                  questOrQuests: D,
+                                  questContent: u.uF.VIDEO_MODAL_END_CARD,
+                                  sourceQuestContent: I,
+                                  children: (e) =>
+                                      (0, r.jsx)(a.Kb, {
+                                          ref: (t) => {
+                                              e.current = t;
+                                          },
+                                          url: k,
+                                          orientation: p,
+                                      }),
+                              }),
+                          (0, r.jsx)(a.lx, {
+                              title: L,
+                              subtitle: P,
+                              ctaBtnLabel: D.config.ctaConfig.buttonLabel,
+                              ctaIcon: s.K,
+                              onCTAClick: () => O(u.uF.VIDEO_MODAL),
+                              orientation: p,
+                          }),
+                      ],
+                  }),
+              ],
+          })
+        : (0, r.jsxs)(r.Fragment, {
+              children: [
+                  null != k &&
+                      (0, r.jsx)(f.R, {
+                          questOrQuests: D,
+                          questContent: u.uF.VIDEO_MODAL_END_CARD,
+                          sourceQuestContent: I,
+                          children: (e) =>
+                              (0, r.jsx)(a.pK, {
+                                  ref: (t) => {
+                                      e.current = t;
+                                  },
+                                  url: k,
+                              }),
+                      }),
+                  (0, r.jsx)("div", { className: C.MT, "data-testid": "discord-web-video-player-end-screen" }),
+                  (0, r.jsx)(a.OH, {
+                      title: L,
+                      subtitle: P,
+                      icon: s.K,
+                      className: C.mT,
+                      onClick: () => O(u.uF.VIDEO_MODAL),
+                      divider: (0, r.jsx)(v, { color: "#747783" }),
+                  }),
+              ],
+          });
+}

@@ -1,1 +1,1 @@
-e.exports={M:"nameplatePreview__5828f"}
+e.exports = { M: "nameplatePreview__5828f" };

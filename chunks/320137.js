@@ -1,1 +1,11 @@
-n.d(t,{A:()=>o});var i=n(64700),l=n(17928),s=n(159273),r=n(492494);let a=[];function o(e){let t=(0,l.bG)([s.Ay],()=>s.Ay.getGuildEmoji(e),[e]);return i.useMemo(()=>null==t?a:t.filter(t=>(0,r.Eg)(t,e)),[t,e])}
+"use strict";
+n.d(t, { A: () => l });
+var i = n(64700),
+    r = n(17928),
+    s = n(159273),
+    a = n(492494);
+let o = [];
+function l(e) {
+    let t = (0, r.bG)([s.Ay], () => s.Ay.getGuildEmoji(e), [e]);
+    return i.useMemo(() => (null == t ? o : t.filter((t) => (0, a.Eg)(t, e))), [t, e]);
+}

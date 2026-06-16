@@ -1,1 +1,81 @@
-i.d(e,{default:()=>R});var s=i(627968),n=i(64700),r=i(189213),l=i(17928),o=i(349288),a=i(285796),c=i(661531),d=i(834730),u=i(180170),E=i(86070),C=i(517164),A=i(780964),h=i(766075),x=i(495544),_=i(591179),m=i(975732),p=i(353394),y=i(754495),I=i(939075),f=i(375708),k=i(568802);function R(t){let{user:e,entry:i,transitionState:R,onAction:S,onClose:b,onOpenGameSettings:g}=t,[L,O]=(0,l.yK)([C.A],()=>[C.A.isDeletingEntryHistory,C.A.deleteOutboxEntryError]),j=(0,_.X)("UserProfileActivityDeleteHistoryModal");return n.useEffect(()=>u.fq,[]),(0,s.jsxs)(r.Modal,{title:(0,y.W)(i),subtitle:f.intl.format(f.t.KV72oe,{settingsHook:(t,e)=>{let n=(0,I.y)({entry:i,onOpenGameSettings:g});return(0,s.jsx)(o.Anchor,{onClick:()=>{S?.({action:"PRESS_CLEAR_HISTORY_DISCLAIMER"}),null!=n?n():j?(0,m.openUserProfileModal)({userId:x.default.getId()}):(0,h.openUserSettings)(A.X.PROFILE_PANEL),b()},children:t},e)}}),size:"sm",actions:[{text:f.intl.string(f.t["ETE/oC"]),onClick:b,variant:"secondary",size:"sm"},{text:null!=O?f.intl.string(f.t["5911Lb"]):f.intl.string(f.t.VkKicb),onClick:()=>{S?.({action:"PRESS_CLEAR_HISTORY_BUTTON"}),(0,E.FO)(i,e.id,b)},disabled:L,variant:"critical-primary",size:"sm"}],onClose:b,transitionState:R,children:[null!=O?(0,s.jsxs)("div",{className:k.z3,children:[(0,s.jsx)(a.a,{color:c.A.colors.ICON_FEEDBACK_CRITICAL}),(0,s.jsx)(d.E,{variant:"text-sm/medium",children:f.intl.string(f.t.FMbL3s)})]}):null,(0,s.jsx)(p.A,{user:e,entry:i,className:k.Nr,hideContextMenu:!0})]})}
+i.d(e, { default: () => R });
+var s = i(627968),
+    n = i(64700),
+    r = i(189213),
+    l = i(17928),
+    o = i(349288),
+    a = i(285796),
+    c = i(661531),
+    d = i(834730),
+    u = i(180170),
+    E = i(86070),
+    C = i(517164),
+    A = i(780964),
+    h = i(766075),
+    x = i(495544),
+    _ = i(591179),
+    m = i(975732),
+    p = i(353394),
+    y = i(754495),
+    I = i(939075),
+    f = i(375708),
+    k = i(568802);
+function R(t) {
+    let { user: e, entry: i, transitionState: R, onAction: S, onClose: b, onOpenGameSettings: g } = t,
+        [L, O] = (0, l.yK)([C.A], () => [C.A.isDeletingEntryHistory, C.A.deleteOutboxEntryError]),
+        j = (0, _.X)("UserProfileActivityDeleteHistoryModal");
+    return (
+        n.useEffect(() => u.fq, []),
+        (0, s.jsxs)(r.Modal, {
+            title: (0, y.W)(i),
+            subtitle: f.intl.format(f.t.KV72oe, {
+                settingsHook: (t, e) => {
+                    let n = (0, I.y)({ entry: i, onOpenGameSettings: g });
+                    return (0, s.jsx)(
+                        o.Anchor,
+                        {
+                            onClick: () => {
+                                S?.({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
+                                    null != n
+                                        ? n()
+                                        : j
+                                          ? (0, m.openUserProfileModal)({ userId: x.default.getId() })
+                                          : (0, h.openUserSettings)(A.X.PROFILE_PANEL),
+                                    b();
+                            },
+                            children: t,
+                        },
+                        e,
+                    );
+                },
+            }),
+            size: "sm",
+            actions: [
+                { text: f.intl.string(f.t["ETE/oC"]), onClick: b, variant: "secondary", size: "sm" },
+                {
+                    text: null != O ? f.intl.string(f.t["5911Lb"]) : f.intl.string(f.t.VkKicb),
+                    onClick: () => {
+                        S?.({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, E.FO)(i, e.id, b);
+                    },
+                    disabled: L,
+                    variant: "critical-primary",
+                    size: "sm",
+                },
+            ],
+            onClose: b,
+            transitionState: R,
+            children: [
+                null != O
+                    ? (0, s.jsxs)("div", {
+                          className: k.z3,
+                          children: [
+                              (0, s.jsx)(a.a, { color: c.A.colors.ICON_FEEDBACK_CRITICAL }),
+                              (0, s.jsx)(d.E, { variant: "text-sm/medium", children: f.intl.string(f.t.FMbL3s) }),
+                          ],
+                      })
+                    : null,
+                (0, s.jsx)(p.A, { user: e, entry: i, className: k.Nr, hideContextMenu: !0 }),
+            ],
+        })
+    );
+}

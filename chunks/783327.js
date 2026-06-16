@@ -1,1 +1,21 @@
-"use strict";n.d(t,{R:()=>c,S:()=>u});var i=n(627968),r=n(64700),s=n(342393),a=n(87952),o=n(652215);let l=r.createContext("unset_context");function u(){let e=r.useContext(l);if("unset_context"===e)throw Error("useCheckoutStripeInstance must be used within a CheckoutStripeProvider");return e}function c(e){let{children:t}=e,n=(0,a.A)();return(0,i.jsx)(l.Provider,{value:n,children:(0,i.jsx)(s.Elements,{options:o.XL8,stripe:n,children:t})})}
+"use strict";
+n.d(t, { R: () => c, S: () => u });
+var i = n(627968),
+    r = n(64700),
+    s = n(342393),
+    a = n(87952),
+    o = n(652215);
+let l = r.createContext("unset_context");
+function u() {
+    let e = r.useContext(l);
+    if ("unset_context" === e) throw Error("useCheckoutStripeInstance must be used within a CheckoutStripeProvider");
+    return e;
+}
+function c(e) {
+    let { children: t } = e,
+        n = (0, a.A)();
+    return (0, i.jsx)(l.Provider, {
+        value: n,
+        children: (0, i.jsx)(s.Elements, { options: o.XL8, stripe: n, children: t }),
+    });
+}

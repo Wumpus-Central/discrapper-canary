@@ -1,1 +1,10 @@
-n.d(t,{A:()=>a});var l=n(550946),i=n(562153),s=n(806931),r=n(375708);function a(e,t,n){if(t.type===s.lp.ACTIVITY)return n?.name??null;let a=(0,l.t)(e.guild_id,t.user?.id);return i.Ay.getName(e.getGuildId(),e.id,t.user)+(a?` ${r.intl.string(r.t["pFO/Ph"])}`:"")}
+n.d(t, { A: () => a });
+var l = n(550946),
+    i = n(562153),
+    s = n(806931),
+    r = n(375708);
+function a(e, t, n) {
+    if (t.type === s.lp.ACTIVITY) return n?.name ?? null;
+    let a = (0, l.t)(e.guild_id, t.user?.id);
+    return i.Ay.getName(e.getGuildId(), e.id, t.user) + (a ? ` ${r.intl.string(r.t["pFO/Ph"])}` : "");
+}

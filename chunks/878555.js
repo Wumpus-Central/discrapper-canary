@@ -1,1 +1,176 @@
-"use strict";n.d(t,{c$:()=>S,Ay:()=>R,Ce:()=>v,n2:()=>N});var i=n(627968);n(64700);var r=n(503698),s=n.n(r),a=n(990078),o=n(834730),l=n(939249),u=n(140735),c=n(297413),d=n(705751);function _(e){let t;return e.isSystemUser()?t=d.nu.SYSTEM_DM:e.bot&&(t=d.nu.BOT),t}var h=n(709066),f=n(609425),p=n(922301),E=n(660184),m=n(534400),g=n(518477),A=n(375708),I=n(874644);let T={sm:"heading-lg/bold",lg:"heading-xl/semibold"};function S(e){let{user:t,guildId:n,displayName:r,size:a="sm",pendingDisplayNameStyles:l,shouldUnderlineOnHover:u=!1,displayNameTrailing:c,className:d}=e,_=(0,f.A)({userId:t.id,guildId:n,pendingDisplayNameStyles:l}),h=T[a];return null!=_?(0,i.jsx)(o.E,{variant:h,className:d,children:(0,i.jsx)(E.A,{userName:r,displayNameStyles:_,effectDisplayType:p.G.ANIMATED,textClassName:I.QC,shouldWrap:!0,loop:!0,inProfile:!0,shouldUnderlineOnHover:u,appendedInlineContent:null!=c?(0,i.jsxs)(i.Fragment,{children:[" ",c]}):null})}):(0,i.jsxs)(o.E,{className:s()(I.QC,I.O2,d),variant:h,children:[r," ",c]})}function y(e){let{user:t,guildId:n,displayName:r,trailing:a,size:o="sm",pendingDisplayNameStyles:u,onClickDisplayName:c}=e,d=_(t),f=null!=d?(0,i.jsx)(h.A,{type:d,verified:t.isVerifiedBot(),className:I.AO}):null,p=(0,i.jsx)(S,{user:t,guildId:n,displayName:r,size:o,pendingDisplayNameStyles:u,shouldUnderlineOnHover:null!=c,displayNameTrailing:f});return(0,i.jsxs)("div",{className:s()(I.K$,"lg"===o&&I.lg),children:[null!=c?(0,i.jsx)(l.D,{onClick:c,className:I.vk,children:p}):p,null!=a&&!1!==a&&(0,i.jsx)("div",{className:I.MU,children:a})]})}function N(e){let{pronouns:t,className:n}=e;return(0,i.jsxs)(o.E,{className:s()(I.hI,n),variant:"text-sm/medium",color:"text-strong",children:[(0,i.jsx)(u.A,{tag:"span",children:A.intl.formatToPlainString(A.t["DRI+T7"],{pronouns:t})}),(0,i.jsx)("span",{"aria-hidden":"true",children:t})]})}function v(){return(0,i.jsx)("div",{"aria-hidden":"true",className:I.SC})}function C(e){let{user:t,usernameIcon:n,onClickUsername:r,pronouns:o,primaryGuild:u,trailing:d,onClose:h}=e,f=null!=o&&o.length>0,p=_(t),E=t.isProvisional?null:(0,i.jsx)(c.A,{user:t,usernameIcon:n,forceUsername:!0,className:I.a1,usernameClass:I.eb,discriminatorClass:I.sw,hideBotTag:!0});return(0,i.jsxs)("div",{className:s()(I.AK,{[I.j6]:f,[I.w2]:null!=p}),children:[null!=E&&null!=r?(0,i.jsx)(l.D,{onClick:r,className:I.vk,children:E}):E,f&&(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(v,{}),(0,i.jsx)(a.m,{text:A.intl.string(A.t.GI2A8C),delay:g.In,ariaHidden:!0,children:(0,i.jsx)("span",{className:I.Ez,children:(0,i.jsx)(N,{pronouns:o})})})]}),(0,i.jsx)(m.Ay,{primaryGuild:u,userId:t.id,onClose:h,containerClassName:I.L4,className:I.Mp}),d]})}function R(e){let{user:t,guildId:n,className:r,onClickName:s,displayName:a,displayNameSize:o,pendingDisplayNameStyles:l,displayNameTrailing:u,usernameIcon:c,pronouns:d,primaryGuild:_,trailing:h,onClose:f}=e;return(0,i.jsxs)("div",{className:r,children:[(0,i.jsx)(y,{user:t,guildId:n,displayName:a,size:o,pendingDisplayNameStyles:l,onClickDisplayName:s,trailing:u}),(0,i.jsx)(C,{user:t,usernameIcon:c,pronouns:d,primaryGuild:_,onClickUsername:s,onClose:f,trailing:h})]})}
+"use strict";
+n.d(t, { c$: () => S, Ay: () => R, Ce: () => N, n2: () => C });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(990078),
+    o = n(834730),
+    l = n(939249),
+    u = n(140735),
+    c = n(297413),
+    d = n(705751);
+function _(e) {
+    let t;
+    return e.isSystemUser() ? (t = d.nu.SYSTEM_DM) : e.bot && (t = d.nu.BOT), t;
+}
+var h = n(709066),
+    f = n(609425),
+    p = n(922301),
+    E = n(660184),
+    m = n(534400),
+    g = n(518477),
+    A = n(375708),
+    I = n(874644);
+let T = { sm: "heading-lg/bold", lg: "heading-xl/semibold" };
+function S(e) {
+    let {
+            user: t,
+            guildId: n,
+            displayName: r,
+            size: a = "sm",
+            pendingDisplayNameStyles: l,
+            shouldUnderlineOnHover: u = !1,
+            displayNameTrailing: c,
+            className: d,
+        } = e,
+        _ = (0, f.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: l }),
+        h = T[a];
+    return null != _
+        ? (0, i.jsx)(o.E, {
+              variant: h,
+              className: d,
+              children: (0, i.jsx)(E.A, {
+                  userName: r,
+                  displayNameStyles: _,
+                  effectDisplayType: p.G.ANIMATED,
+                  textClassName: I.QC,
+                  shouldWrap: !0,
+                  loop: !0,
+                  inProfile: !0,
+                  shouldUnderlineOnHover: u,
+                  appendedInlineContent: null != c ? (0, i.jsxs)(i.Fragment, { children: [" ", c] }) : null,
+              }),
+          })
+        : (0, i.jsxs)(o.E, { className: s()(I.QC, I.O2, d), variant: h, children: [r, " ", c] });
+}
+function y(e) {
+    let {
+            user: t,
+            guildId: n,
+            displayName: r,
+            trailing: a,
+            size: o = "sm",
+            pendingDisplayNameStyles: u,
+            onClickDisplayName: c,
+        } = e,
+        d = _(t),
+        f = null != d ? (0, i.jsx)(h.A, { type: d, verified: t.isVerifiedBot(), className: I.AO }) : null,
+        p = (0, i.jsx)(S, {
+            user: t,
+            guildId: n,
+            displayName: r,
+            size: o,
+            pendingDisplayNameStyles: u,
+            shouldUnderlineOnHover: null != c,
+            displayNameTrailing: f,
+        });
+    return (0, i.jsxs)("div", {
+        className: s()(I.K$, "lg" === o && I.lg),
+        children: [
+            null != c ? (0, i.jsx)(l.D, { onClick: c, className: I.vk, children: p }) : p,
+            null != a && !1 !== a && (0, i.jsx)("div", { className: I.MU, children: a }),
+        ],
+    });
+}
+function C(e) {
+    let { pronouns: t, className: n } = e;
+    return (0, i.jsxs)(o.E, {
+        className: s()(I.hI, n),
+        variant: "text-sm/medium",
+        color: "text-strong",
+        children: [
+            (0, i.jsx)(u.A, { tag: "span", children: A.intl.formatToPlainString(A.t["DRI+T7"], { pronouns: t }) }),
+            (0, i.jsx)("span", { "aria-hidden": "true", children: t }),
+        ],
+    });
+}
+function N() {
+    return (0, i.jsx)("div", { "aria-hidden": "true", className: I.SC });
+}
+function v(e) {
+    let { user: t, usernameIcon: n, onClickUsername: r, pronouns: o, primaryGuild: u, trailing: d, onClose: h } = e,
+        f = null != o && o.length > 0,
+        p = _(t),
+        E = t.isProvisional
+            ? null
+            : (0, i.jsx)(c.A, {
+                  user: t,
+                  usernameIcon: n,
+                  forceUsername: !0,
+                  className: I.a1,
+                  usernameClass: I.eb,
+                  discriminatorClass: I.sw,
+                  hideBotTag: !0,
+              });
+    return (0, i.jsxs)("div", {
+        className: s()(I.AK, { [I.j6]: f, [I.w2]: null != p }),
+        children: [
+            null != E && null != r ? (0, i.jsx)(l.D, { onClick: r, className: I.vk, children: E }) : E,
+            f &&
+                (0, i.jsxs)(i.Fragment, {
+                    children: [
+                        (0, i.jsx)(N, {}),
+                        (0, i.jsx)(a.m, {
+                            text: A.intl.string(A.t.GI2A8C),
+                            delay: g.In,
+                            ariaHidden: !0,
+                            children: (0, i.jsx)("span", { className: I.Ez, children: (0, i.jsx)(C, { pronouns: o }) }),
+                        }),
+                    ],
+                }),
+            (0, i.jsx)(m.Ay, { primaryGuild: u, userId: t.id, onClose: h, containerClassName: I.L4, className: I.Mp }),
+            d,
+        ],
+    });
+}
+function R(e) {
+    let {
+        user: t,
+        guildId: n,
+        className: r,
+        onClickName: s,
+        displayName: a,
+        displayNameSize: o,
+        pendingDisplayNameStyles: l,
+        displayNameTrailing: u,
+        usernameIcon: c,
+        pronouns: d,
+        primaryGuild: _,
+        trailing: h,
+        onClose: f,
+    } = e;
+    return (0, i.jsxs)("div", {
+        className: r,
+        children: [
+            (0, i.jsx)(y, {
+                user: t,
+                guildId: n,
+                displayName: a,
+                size: o,
+                pendingDisplayNameStyles: l,
+                onClickDisplayName: s,
+                trailing: u,
+            }),
+            (0, i.jsx)(v, {
+                user: t,
+                usernameIcon: c,
+                pronouns: d,
+                primaryGuild: _,
+                onClickUsername: s,
+                onClose: f,
+                trailing: h,
+            }),
+        ],
+    });
+}

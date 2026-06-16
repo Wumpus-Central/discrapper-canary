@@ -1,1 +1,97 @@
-i.d(e,{M:()=>E});var n=i(627968),r=i(64700),l=i(772707),a=i(683071),s=i(289873),o=i(403581),u=i(834730),c=i(975571),d=i(428262),m=i(816252),f=i(473702),g=i(916974),p=i(788868),h=i(652215),x=i(375708),P=i(476791),C=i(303930),y=i(398932);let E=()=>{let{transitionState:t,onClose:e,premiumType:i,premiumSubscription:E,setStep:v,applyOffer:D,churnUserDiscountOffer:j,discountedPrice:S,fullPrice:A}=(0,g.X)(),[N,L]=(0,r.useState)(!1),[T,b]=(0,r.useState)(!1),M=async()=>{if(null===j)return void b(!0);L(!0),b(!1);try{await D(),v(f.g.DISCOUNT_APPLIED)}catch(t){b(!0),L(!1)}};if(null===j||null===S)return(0,n.jsx)("div",{className:P.dc,children:(0,n.jsx)(s.y,{})});let I=i===p.PremiumTypes.TIER_2,U=[{text:x.intl.string(x.t.zl7LZp),onClick:()=>e(),variant:"secondary",disabled:N},{text:x.intl.string(x.t.CKSuZJ),onClick:()=>M(),variant:"primary",icon:o.t,loading:N,disabled:N}];return(0,n.jsxs)(l.k,{graphic:{type:"image",src:I?y.A:C},gradientColor:I?"nitro-pink":"nitro-green",transitionState:t,title:E.status===h.Dmq.CANCELED?x.intl.string(x.t["2Otzti"]):`${x.intl.format(x.t.q9Vxu4,{percent:j.discount.amount})}`,actions:U,onClose:async()=>e(),children:[(0,n.jsx)("div",{className:P.TA,children:(0,n.jsx)(m._,{userDiscountOffer:j,offerState:m.b.CONFIRMING})}),(0,n.jsx)("div",{className:P.V6,children:(0,n.jsx)(u.E,{variant:"text-xs/medium",color:"text-subtle",children:E.status===h.Dmq.CANCELED?x.intl.format(x.t.mY3ysK,{discountedPrice:S,billingPeriod:(0,d.Ke)(j.discount.userUsageLimitInterval),numMonths:j.discount.userUsageLimit,fullPrice:A,paidURL:c.A.getArticleURL(h.MVz.PAID_TERMS)}):x.intl.format(x.t.hrGTjG,{discountedPrice:S,billingPeriod:(0,d.Ke)(j.discount.userUsageLimitInterval),numMonths:j.discount.userUsageLimit,fullPrice:A,helpdeskArticle:c.A.getArticleURL(h.MVz.PAID_TERMS)})})}),T?(0,n.jsx)(a.w,{type:"critical",children:x.intl.string(x.t["5mlOCW"])}):null]})}
+i.d(e, { M: () => E });
+var n = i(627968),
+    r = i(64700),
+    l = i(772707),
+    a = i(683071),
+    s = i(289873),
+    o = i(403581),
+    u = i(834730),
+    c = i(975571),
+    d = i(428262),
+    m = i(816252),
+    f = i(473702),
+    g = i(916974),
+    p = i(788868),
+    h = i(652215),
+    x = i(375708),
+    P = i(476791),
+    C = i(303930),
+    y = i(398932);
+let E = () => {
+    let {
+            transitionState: t,
+            onClose: e,
+            premiumType: i,
+            premiumSubscription: E,
+            setStep: v,
+            applyOffer: D,
+            churnUserDiscountOffer: j,
+            discountedPrice: S,
+            fullPrice: A,
+        } = (0, g.X)(),
+        [N, L] = (0, r.useState)(!1),
+        [T, b] = (0, r.useState)(!1),
+        M = async () => {
+            if (null === j) return void b(!0);
+            L(!0), b(!1);
+            try {
+                await D(), v(f.g.DISCOUNT_APPLIED);
+            } catch (t) {
+                b(!0), L(!1);
+            }
+        };
+    if (null === j || null === S) return (0, n.jsx)("div", { className: P.dc, children: (0, n.jsx)(s.y, {}) });
+    let I = i === p.PremiumTypes.TIER_2,
+        U = [
+            { text: x.intl.string(x.t.zl7LZp), onClick: () => e(), variant: "secondary", disabled: N },
+            {
+                text: x.intl.string(x.t.CKSuZJ),
+                onClick: () => M(),
+                variant: "primary",
+                icon: o.t,
+                loading: N,
+                disabled: N,
+            },
+        ];
+    return (0, n.jsxs)(l.k, {
+        graphic: { type: "image", src: I ? y.A : C },
+        gradientColor: I ? "nitro-pink" : "nitro-green",
+        transitionState: t,
+        title:
+            E.status === h.Dmq.CANCELED
+                ? x.intl.string(x.t["2Otzti"])
+                : `${x.intl.format(x.t.q9Vxu4, { percent: j.discount.amount })}`,
+        actions: U,
+        onClose: async () => e(),
+        children: [
+            (0, n.jsx)("div", {
+                className: P.TA,
+                children: (0, n.jsx)(m._, { userDiscountOffer: j, offerState: m.b.CONFIRMING }),
+            }),
+            (0, n.jsx)("div", {
+                className: P.V6,
+                children: (0, n.jsx)(u.E, {
+                    variant: "text-xs/medium",
+                    color: "text-subtle",
+                    children:
+                        E.status === h.Dmq.CANCELED
+                            ? x.intl.format(x.t.mY3ysK, {
+                                  discountedPrice: S,
+                                  billingPeriod: (0, d.Ke)(j.discount.userUsageLimitInterval),
+                                  numMonths: j.discount.userUsageLimit,
+                                  fullPrice: A,
+                                  paidURL: c.A.getArticleURL(h.MVz.PAID_TERMS),
+                              })
+                            : x.intl.format(x.t.hrGTjG, {
+                                  discountedPrice: S,
+                                  billingPeriod: (0, d.Ke)(j.discount.userUsageLimitInterval),
+                                  numMonths: j.discount.userUsageLimit,
+                                  fullPrice: A,
+                                  helpdeskArticle: c.A.getArticleURL(h.MVz.PAID_TERMS),
+                              }),
+                }),
+            }),
+            T ? (0, n.jsx)(a.w, { type: "critical", children: x.intl.string(x.t["5mlOCW"]) }) : null,
+        ],
+    });
+};

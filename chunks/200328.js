@@ -1,1 +1,1 @@
-e.exports={q:"product__339ad",R:"productContent__339ad"}
+_.exports = { q: "product__339ad", R: "productContent__339ad" };

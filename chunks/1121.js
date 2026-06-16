@@ -1,1 +1,4 @@
-var i=n(435815);e.exports=function(e){return i(this,e).has(e)}
+var i = n(435815);
+e.exports = function (e) {
+    return i(this, e).has(e);
+};

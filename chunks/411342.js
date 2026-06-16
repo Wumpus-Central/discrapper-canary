@@ -1,1 +1,38 @@
-r.d(e,{A:()=>y});var n=r(627968);r(64700);var a=r(317097),i=r(602853),c=r(661531),o=r(696986),s=r(834730),l=r(140735),h=r(194261),u=r(375708),d=r(304003);function y(t){let{locked:e,role:r,textVariant:y="text-xs/medium"}=t,_=(0,i.r)(c.A.colors.INTERACTIVE_TEXT_DEFAULT).hex();return(0,n.jsx)("div",{className:d.ex,children:(0,n.jsxs)("div",{className:d.b6,children:[(0,n.jsx)("div",{className:d.yY,style:{backgroundColor:(0,a.Hl)(r.color)}}),(0,n.jsx)(o.h,{size:8,horizontal:!0}),(0,n.jsxs)(s.E,{variant:y,color:"text-default",children:[(0,n.jsx)(l.A,{children:u.intl.string(u.t.RnyseL)}),r.name]}),!0===e&&(0,n.jsxs)(n.Fragment,{children:[(0,n.jsx)(o.h,{size:8,horizontal:!0}),(0,n.jsx)(h.X,{size:"md",color:_})]})]})})}
+r.d(e, { A: () => y });
+var n = r(627968);
+r(64700);
+var a = r(317097),
+    i = r(602853),
+    c = r(661531),
+    o = r(696986),
+    s = r(834730),
+    l = r(140735),
+    h = r(194261),
+    u = r(375708),
+    d = r(304003);
+function y(t) {
+    let { locked: e, role: r, textVariant: y = "text-xs/medium" } = t,
+        _ = (0, i.r)(c.A.colors.INTERACTIVE_TEXT_DEFAULT).hex();
+    return (0, n.jsx)("div", {
+        className: d.ex,
+        children: (0, n.jsxs)("div", {
+            className: d.b6,
+            children: [
+                (0, n.jsx)("div", { className: d.yY, style: { backgroundColor: (0, a.Hl)(r.color) } }),
+                (0, n.jsx)(o.h, { size: 8, horizontal: !0 }),
+                (0, n.jsxs)(s.E, {
+                    variant: y,
+                    color: "text-default",
+                    children: [(0, n.jsx)(l.A, { children: u.intl.string(u.t.RnyseL) }), r.name],
+                }),
+                !0 === e &&
+                    (0, n.jsxs)(n.Fragment, {
+                        children: [
+                            (0, n.jsx)(o.h, { size: 8, horizontal: !0 }),
+                            (0, n.jsx)(h.X, { size: "md", color: _ }),
+                        ],
+                    }),
+            ],
+        }),
+    });
+}

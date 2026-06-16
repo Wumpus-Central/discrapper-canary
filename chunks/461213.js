@@ -1,1 +1,157 @@
-"use strict";n.d(t,{A:()=>V}),n(321073),n(938796);var i=n(812729),r=n.n(i),s=n(735438),a=n.n(s),o=n(665260),l=n(17928),u=n(228366),c=n(90644),d=n(655116),_=n(885386),h=n(617617),f=n(674378),p=n(760751),E=n(885576),m=n(189081),g=n(480595),A=n(290863),I=n(528767),T=n(652215);let S=!1,y=T.clD.ONLINE,N=T.clD.UNKNOWN,v=0,C=[],R=[],O=!1,b=!0,D=Object.freeze([]),L=Object.freeze([]),w=[],M=[];function P(e){if(0===e.length)return e;let t=[],n=[];for(let i of e)i.type===T.$pd.PLAYING?n.push(i):t.push(i);return 0===n.length||1===n.length?e:[...t,[...n].sort(A.m)[0]].sort(A.m)}function x(e){return(0,f.kv)(e,m.A)}function k(e){if((0,o.Lt)(e.flags??0,T.jUm.CONTEXTLESS))return!0;switch(e.type){case T.$pd.LISTENING:if((0,c.A)(e))return d.A.shouldShowActivity();if(null!=e.application_id)return x(e.application_id);return!1;case T.$pd.PLAYING:var t;let n;return null!=e.application_id?x(e.application_id):(t=e.name,1===(n=p.A.searchGamesByName(t)).length?x(n[0]):_.tz.getSetting());case T.$pd.STREAMING:case T.$pd.WATCHING:default:return null==e.application_id||x(e.application_id)}}function U(){if(v=E.A.getIdleSince()??0,O=E.A.isAFK(),b)y=N;else if(S)y=T.clD.INVISIBLE;else{let e=_.jP.getSetting();y=e!==T.clD.UNKNOWN?e:T.clD.ONLINE}y===T.clD.ONLINE&&v>0&&(y=T.clD.IDLE);let e=!1,t=b||y===T.clD.INVISIBLE?[]:g.A.getActivities().filter(k);r()(C,t)||(C=t,R=P(t),e=!0);let n=I.A.getRemoteActivities();D!==n&&(D=n,e=!0);let i=I.A.getHiddenActivities();L!==i&&(L=i),e&&(M=P(w=a()([...C,...D.filter(e=>e.type!==T.$pd.CUSTOM_STATUS)].sort(A.m)).uniqBy(e=>`${e.type}:${e.application_id}:${e.name}`).value()))}function G(){b=!1,N=T.clD.UNKNOWN,U(),A.A.setCurrentUserOnConnectionOpen(y,w)}class F extends l.Ay.Store{static displayName="SelfPresenceStore";initialize(){this.waitFor(p.A,E.A,m.A,g.A,A.A,I.A,d.A,h.A),this.syncWith([g.A],U)}getLocalPresence(){return{status:y,since:v,activities:R,afk:O}}getStatus(){return y}getActivities(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];return e?M:R}getUnfilteredActivities(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];return e?w:C}getHiddenActivities(){return L}getPrimaryActivity(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0];return this.getActivities(e)[0]}getApplicationActivity(e){let t=!(arguments.length>1)||void 0===arguments[1]||arguments[1];return this.findActivity(t=>t.application_id===e,t)}findActivity(e){let t=!(arguments.length>1)||void 0===arguments[1]||arguments[1];return this.getActivities(t).find(e)}}let V=new F(u.h,{START_SESSION:U,CONNECTION_OPEN:function(){G()},CONNECTION_OPEN_SUPPLEMENTAL:G,OVERLAY_INITIALIZE:G,CONNECTION_CLOSED:U,IDLE:U,AFK:U,RUNNING_GAMES_CHANGE:U,STREAMING_UPDATE:U,USER_SETTINGS_PROTO_UPDATE:U,LOCAL_ACTIVITY_UPDATE:U,SPOTIFY_PLAYER_STATE:U,SPOTIFY_PLAYER_PLAY:U,USER_CONNECTIONS_UPDATE:U,SESSIONS_REPLACE:U,RPC_APP_DISCONNECTED:U,LIBRARY_FETCH_SUCCESS:U,LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS:U,LOGOUT:function(){b=!0,N=y,U()},FORCE_INVISIBLE:function(e){return S=e.invisible,U()},WINDOW_FOCUS:function(){return S=!1,U()},APP_STATE_UPDATE:function(e){if(e.state!==T.g6G.ACTIVE||!S)return!1;S=!1,U()}})
+"use strict";
+n.d(t, { A: () => V }), n(321073), n(938796);
+var i = n(812729),
+    r = n.n(i),
+    s = n(735438),
+    a = n.n(s),
+    o = n(665260),
+    l = n(17928),
+    u = n(228366),
+    c = n(90644),
+    d = n(655116),
+    _ = n(885386),
+    h = n(617617),
+    f = n(674378),
+    p = n(760751),
+    E = n(885576),
+    m = n(189081),
+    g = n(480595),
+    A = n(290863),
+    I = n(528767),
+    T = n(652215);
+let S = !1,
+    y = T.clD.ONLINE,
+    C = T.clD.UNKNOWN,
+    N = 0,
+    v = [],
+    R = [],
+    O = !1,
+    b = !0,
+    D = Object.freeze([]),
+    L = Object.freeze([]),
+    w = [],
+    M = [];
+function P(e) {
+    if (0 === e.length) return e;
+    let t = [],
+        n = [];
+    for (let i of e) i.type === T.$pd.PLAYING ? n.push(i) : t.push(i);
+    return 0 === n.length || 1 === n.length ? e : [...t, [...n].sort(A.m)[0]].sort(A.m);
+}
+function x(e) {
+    return (0, f.kv)(e, m.A);
+}
+function k(e) {
+    if ((0, o.Lt)(e.flags ?? 0, T.jUm.CONTEXTLESS)) return !0;
+    switch (e.type) {
+        case T.$pd.LISTENING:
+            if ((0, c.A)(e)) return d.A.shouldShowActivity();
+            if (null != e.application_id) return x(e.application_id);
+            return !1;
+        case T.$pd.PLAYING:
+            var t;
+            let n;
+            return null != e.application_id
+                ? x(e.application_id)
+                : ((t = e.name), 1 === (n = p.A.searchGamesByName(t)).length ? x(n[0]) : _.tz.getSetting());
+        case T.$pd.STREAMING:
+        case T.$pd.WATCHING:
+        default:
+            return null == e.application_id || x(e.application_id);
+    }
+}
+function U() {
+    if (((N = E.A.getIdleSince() ?? 0), (O = E.A.isAFK()), b)) y = C;
+    else if (S) y = T.clD.INVISIBLE;
+    else {
+        let e = _.jP.getSetting();
+        y = e !== T.clD.UNKNOWN ? e : T.clD.ONLINE;
+    }
+    y === T.clD.ONLINE && N > 0 && (y = T.clD.IDLE);
+    let e = !1,
+        t = b || y === T.clD.INVISIBLE ? [] : g.A.getActivities().filter(k);
+    r()(v, t) || ((v = t), (R = P(t)), (e = !0));
+    let n = I.A.getRemoteActivities();
+    D !== n && ((D = n), (e = !0));
+    let i = I.A.getHiddenActivities();
+    L !== i && (L = i),
+        e &&
+            (M = P(
+                (w = a()([...v, ...D.filter((e) => e.type !== T.$pd.CUSTOM_STATUS)].sort(A.m))
+                    .uniqBy((e) => `${e.type}:${e.application_id}:${e.name}`)
+                    .value()),
+            ));
+}
+function G() {
+    (b = !1), (C = T.clD.UNKNOWN), U(), A.A.setCurrentUserOnConnectionOpen(y, w);
+}
+class F extends l.Ay.Store {
+    static displayName = "SelfPresenceStore";
+    initialize() {
+        this.waitFor(p.A, E.A, m.A, g.A, A.A, I.A, d.A, h.A), this.syncWith([g.A], U);
+    }
+    getLocalPresence() {
+        return { status: y, since: N, activities: R, afk: O };
+    }
+    getStatus() {
+        return y;
+    }
+    getActivities() {
+        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+        return e ? M : R;
+    }
+    getUnfilteredActivities() {
+        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+        return e ? w : v;
+    }
+    getHiddenActivities() {
+        return L;
+    }
+    getPrimaryActivity() {
+        let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
+        return this.getActivities(e)[0];
+    }
+    getApplicationActivity(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+        return this.findActivity((t) => t.application_id === e, t);
+    }
+    findActivity(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+        return this.getActivities(t).find(e);
+    }
+}
+let V = new F(u.h, {
+    START_SESSION: U,
+    CONNECTION_OPEN: function () {
+        G();
+    },
+    CONNECTION_OPEN_SUPPLEMENTAL: G,
+    OVERLAY_INITIALIZE: G,
+    CONNECTION_CLOSED: U,
+    IDLE: U,
+    AFK: U,
+    RUNNING_GAMES_CHANGE: U,
+    STREAMING_UPDATE: U,
+    USER_SETTINGS_PROTO_UPDATE: U,
+    LOCAL_ACTIVITY_UPDATE: U,
+    SPOTIFY_PLAYER_STATE: U,
+    SPOTIFY_PLAYER_PLAY: U,
+    USER_CONNECTIONS_UPDATE: U,
+    SESSIONS_REPLACE: U,
+    RPC_APP_DISCONNECTED: U,
+    LIBRARY_FETCH_SUCCESS: U,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: U,
+    LOGOUT: function () {
+        (b = !0), (C = y), U();
+    },
+    FORCE_INVISIBLE: function (e) {
+        return (S = e.invisible), U();
+    },
+    WINDOW_FOCUS: function () {
+        return (S = !1), U();
+    },
+    APP_STATE_UPDATE: function (e) {
+        if (e.state !== T.g6G.ACTIVE || !S) return !1;
+        (S = !1), U();
+    },
+});

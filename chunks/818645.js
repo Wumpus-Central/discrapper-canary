@@ -1,1 +1,12 @@
-"use strict";n.d(t,{A:()=>s,W:()=>r});var i=n(64700);function r(e){let{topEmojis:t,newlyAddedEmojis:n,rowSize:i=9}=e,r=t.slice(0,i-n.length);return{visibleTopEmojis:r,visibleNewlyAddedEmojis:n,allEmojis:r.concat(n)}}function s(e){return i.useMemo(()=>r(e),[e])}n(732139)
+"use strict";
+n.d(t, { A: () => s, W: () => r });
+var i = n(64700);
+function r(e) {
+    let { topEmojis: t, newlyAddedEmojis: n, rowSize: i = 9 } = e,
+        r = t.slice(0, i - n.length);
+    return { visibleTopEmojis: r, visibleNewlyAddedEmojis: n, allEmojis: r.concat(n) };
+}
+function s(e) {
+    return i.useMemo(() => r(e), [e]);
+}
+n(732139);

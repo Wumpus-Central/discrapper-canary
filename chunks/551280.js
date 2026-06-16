@@ -1,1 +1,1 @@
-e.exports={g:"selector_c248b6"}
+e.exports = { g: "selector_c248b6" };

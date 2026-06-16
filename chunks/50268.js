@@ -1,1 +1,30 @@
-n.d(e,{A:()=>d});var i=n(627968);n(64700);var r=n(284009),l=n.n(r),o=n(477782),a=n(473935),u=n(885386),c=n(957565);function d(t){let{id:e,label:n,onSuccess:r,shiftId:d,showIconFirst:s,showWithoutDeveloperMode:A}=t,p=u.Q_.useSetting();if(__OVERLAY__||!(A||p)||!c.p5||null==e)return null;let f=`devmode-copy-id-${e}`;return(0,i.jsx)(o.Dr,{id:f,label:n,action:function(t){let n=null!=d&&t.shiftKey?d:e;l()(null!=n,"cannot copy null text"),(0,c.C)(n,r)},icon:s?void 0:a.L,iconLeft:s?a.L:void 0,leadingAccessory:{type:"icon",icon:a.L}},f)}
+n.d(e, { A: () => d });
+var i = n(627968);
+n(64700);
+var r = n(284009),
+    l = n.n(r),
+    o = n(477782),
+    a = n(473935),
+    u = n(885386),
+    c = n(957565);
+function d(t) {
+    let { id: e, label: n, onSuccess: r, shiftId: d, showIconFirst: s, showWithoutDeveloperMode: A } = t,
+        p = u.Q_.useSetting();
+    if (__OVERLAY__ || !(A || p) || !c.p5 || null == e) return null;
+    let f = `devmode-copy-id-${e}`;
+    return (0, i.jsx)(
+        o.Dr,
+        {
+            id: f,
+            label: n,
+            action: function (t) {
+                let n = null != d && t.shiftKey ? d : e;
+                l()(null != n, "cannot copy null text"), (0, c.C)(n, r);
+            },
+            icon: s ? void 0 : a.L,
+            iconLeft: s ? a.L : void 0,
+            leadingAccessory: { type: "icon", icon: a.L },
+        },
+        f,
+    );
+}

@@ -1,1 +1,10 @@
-"use strict";n.d(t,{A:()=>s});var i=n(702841),r=n(287809);function s(e){return(0,i.bG)([r.default],()=>null!=e&&e.isDM()&&1===e.recipients.length&&r.default.getUser(e.recipients[0])?.bot===!0)}
+"use strict";
+n.d(t, { A: () => s });
+var i = n(702841),
+    r = n(287809);
+function s(e) {
+    return (0, i.bG)(
+        [r.default],
+        () => null != e && e.isDM() && 1 === e.recipients.length && r.default.getUser(e.recipients[0])?.bot === !0,
+    );
+}

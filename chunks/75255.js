@@ -1,1 +1,30 @@
-E.d(t,{A:()=>s});var n=E(636537),l=E(228366),r=E(913122),i=E(739508),_=E(652215);let o=Object.freeze({}),s={redeemGiftCode:async function(e){let{code:t,options:E=o,onRedeemed:s,onError:c}=e,{channelId:d=null,paymentSource:a=null}=E;l.h.dispatch({type:"GIFT_CODE_REDEEM",code:t});try{let e=await n.Bo.post({url:_.Rsh.GIFT_CODE_REDEEM(t),body:{channel_id:d,payment_source_id:a?.id,gateway_checkout_context:await (0,i.ob)(a)},oldFormErrors:!0,rejectWithError:!1});return l.h.dispatch({type:"GIFT_CODE_REDEEM_SUCCESS",code:t,entitlement:e.body}),s?.(),{code:t,entitlement:e}}catch(E){let e=new r.Ey(E);throw l.h.dispatch({type:"GIFT_CODE_REDEEM_FAILURE",code:t,error:e}),c?.(e),e}}}
+E.d(t, { A: () => s });
+var n = E(636537),
+    l = E(228366),
+    r = E(913122),
+    i = E(739508),
+    _ = E(652215);
+let o = Object.freeze({}),
+    s = {
+        redeemGiftCode: async function (e) {
+            let { code: t, options: E = o, onRedeemed: s, onError: c } = e,
+                { channelId: d = null, paymentSource: a = null } = E;
+            l.h.dispatch({ type: "GIFT_CODE_REDEEM", code: t });
+            try {
+                let e = await n.Bo.post({
+                    url: _.Rsh.GIFT_CODE_REDEEM(t),
+                    body: { channel_id: d, payment_source_id: a?.id, gateway_checkout_context: await (0, i.ob)(a) },
+                    oldFormErrors: !0,
+                    rejectWithError: !1,
+                });
+                return (
+                    l.h.dispatch({ type: "GIFT_CODE_REDEEM_SUCCESS", code: t, entitlement: e.body }),
+                    s?.(),
+                    { code: t, entitlement: e }
+                );
+            } catch (E) {
+                let e = new r.Ey(E);
+                throw (l.h.dispatch({ type: "GIFT_CODE_REDEEM_FAILURE", code: t, error: e }), c?.(e), e);
+            }
+        },
+    };

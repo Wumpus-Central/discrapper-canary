@@ -1,1 +1,24 @@
-a.d(t,{A:()=>m});var s=a(64700),i=a(17928),n=a(975807),r=a(927813),l=a(276666),c=a(545600),o=a(985603),d=a(777376);let u=5*r.A.Millis.MINUTE;function m(e){let t=(0,i.bG)([c.A],()=>c.A.getLastFetchTime()),a=(0,o.A)();return s.useCallback(async()=>{var s;if(null!=e&&null!=(s=t)&&Date.now()-s<u)(0,n.A)(e.url,!0);else{let e=await (0,l.aB)(d.n9.XGPP);e?.redirect!=null&&(0,n.A)(e.redirect.url,!0)}a(o.xf.CLAIM)},[e,t,a])}
+"use strict";
+n.d(t, { A: () => _ });
+var i = n(64700),
+    r = n(17928),
+    s = n(975807),
+    a = n(927813),
+    o = n(276666),
+    l = n(545600),
+    u = n(985603),
+    c = n(777376);
+let d = 5 * a.A.Millis.MINUTE;
+function _(e) {
+    let t = (0, r.bG)([l.A], () => l.A.getLastFetchTime()),
+        n = (0, u.A)();
+    return i.useCallback(async () => {
+        var i;
+        if (null != e && null != (i = t) && Date.now() - i < d) (0, s.A)(e.url, !0);
+        else {
+            let e = await (0, o.aB)(c.n9.XGPP);
+            e?.redirect != null && (0, s.A)(e.redirect.url, !0);
+        }
+        n(u.xf.CLAIM);
+    }, [e, t, n]);
+}

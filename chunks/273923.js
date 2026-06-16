@@ -1,1 +1,19 @@
-e.exports={qc:"folderGroup__48112",GO:"folderGroupBackground__48112",Av:"isExpanded__48112",MJ:"folderHeader__48112",H3:"folderButton__48112",vA:"folderButtonInner__48112",yd:"folderButtonContent__48112",NG:"folderDragPreview__48112",hJ:"folderIconWrapper__48112",Eh:"folderIcon__48112",qJ:"folderPreviewWrapper__48112",jg:"folderPreview__48112",VL:"folderPreviewGuildIcon__48112",zU:"folderPreviewGuildIconError__48112",TN:"folderGuildsList__48112",L0:"folderHeaderSmall__48112",Lg:"isHovering__48112"}
+e.exports = {
+    qc: "folderGroup__48112",
+    GO: "folderGroupBackground__48112",
+    Av: "isExpanded__48112",
+    MJ: "folderHeader__48112",
+    H3: "folderButton__48112",
+    vA: "folderButtonInner__48112",
+    yd: "folderButtonContent__48112",
+    NG: "folderDragPreview__48112",
+    hJ: "folderIconWrapper__48112",
+    Eh: "folderIcon__48112",
+    qJ: "folderPreviewWrapper__48112",
+    jg: "folderPreview__48112",
+    VL: "folderPreviewGuildIcon__48112",
+    zU: "folderPreviewGuildIconError__48112",
+    TN: "folderGuildsList__48112",
+    L0: "folderHeaderSmall__48112",
+    Lg: "isHovering__48112",
+};

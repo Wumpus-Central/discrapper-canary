@@ -1,1 +1,1 @@
-p.exports={Y:"spacing_a5537d"}
+p.exports = { Y: "spacing_a5537d" };

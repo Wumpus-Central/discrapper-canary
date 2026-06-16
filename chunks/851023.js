@@ -1,1 +1,26 @@
-"use strict";n.d(t,{A:()=>c});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(990078),l=n(101555),u=n(389116);function c(e){let{onClick:t,children:n,tooltip:s,dangerous:c=!1,className:d,"aria-label":_}=e;return(0,i.jsx)(o.m,{text:s,children:(0,i.jsx)(l.$n,{onClick:e=>{e.stopPropagation(),t(e)},dangerous:c,"aria-label":_??s,className:d,children:r.Children.map(n,e=>r.isValidElement(e)?r.cloneElement(e,{className:a()(e.props.className,u.l)}):e)})})}
+"use strict";
+n.d(t, { A: () => c });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(990078),
+    l = n(101555),
+    u = n(389116);
+function c(e) {
+    let { onClick: t, children: n, tooltip: s, dangerous: c = !1, className: d, "aria-label": _ } = e;
+    return (0, i.jsx)(o.m, {
+        text: s,
+        children: (0, i.jsx)(l.$n, {
+            onClick: (e) => {
+                e.stopPropagation(), t(e);
+            },
+            dangerous: c,
+            "aria-label": _ ?? s,
+            className: d,
+            children: r.Children.map(n, (e) =>
+                r.isValidElement(e) ? r.cloneElement(e, { className: a()(e.props.className, u.l) }) : e,
+            ),
+        }),
+    });
+}

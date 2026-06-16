@@ -1,1 +1,18 @@
-let i=n(864886),r=n(74509);e.exports=(e,t,n)=>{let s=null,a=null,o=null;try{o=new r(t,n)}catch(e){return null}return e.forEach(e=>{o.test(e)&&(!s||1===a.compare(e))&&(a=new i(s=e,n))}),s}
+let i = n(864886),
+    r = n(74509);
+e.exports = (e, t, n) => {
+    let s = null,
+        a = null,
+        o = null;
+    try {
+        o = new r(t, n);
+    } catch (e) {
+        return null;
+    }
+    return (
+        e.forEach((e) => {
+            o.test(e) && (!s || 1 === a.compare(e)) && (a = new i((s = e), n));
+        }),
+        s
+    );
+};

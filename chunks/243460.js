@@ -1,1 +1,108 @@
-e.d(n,{A:()=>G,u:()=>I});var i=e(627968);e(64700);var a=e(862482),r=e(935462),l=e(534514),s=e(834730);let d="/assets/7f384b2c31f586cd.svg",p="/assets/2f0ebe181e1cce00.svg";var c=e(235986),m=e(174459),_=e(878314),g=e(819638),o=e(652215),E=e(375708),C=e(394272);let T=.5>Math.random();function I(t){let{onClose:n,onBack:e,onCreationIntentChosen:I,hasFooter:G=!0}=t,b=(0,i.jsx)(a.$n,{"data-migration-pending":!0,className:C.Gv,look:a.$n.Looks.BLANK,size:a.$n.Sizes.MIN,onClick:e,children:E.intl.string(E.t["13/7kX"])});function D(t){m.default.track(o.HAw.GUILD_CREATION_INTENT_SELECTED,{skipped:null==t,is_community:t===g.IR.COMMUNITY}),I(t)}return{content:(0,i.jsxs)(i.Fragment,{children:[(0,i.jsxs)(r.rQ,{"data-migration-pending":!0,direction:c.A.Direction.VERTICAL,className:C.wx,separator:!1,children:[(0,i.jsx)(l.D,{className:C.DD,variant:"heading-xl/semibold",children:E.intl.string(E.t.f3MvGS)}),(0,i.jsx)(s.E,{className:C.VA,color:"text-default",variant:"text-md/normal",children:E.intl.string(E.t.nOzc7w)}),null!=n&&(0,i.jsx)(r.s_,{"data-migration-pending":!0,className:C.b,onClick:n})]}),(0,i.jsxs)(r.$m,{"data-migration-pending":!0,className:C.f9,children:[T?(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(_.A,{icon:d,message:E.intl.string(E.t.uE7zcu),onClick:()=>D(g.IR.FRIENDS)}),(0,i.jsx)(_.A,{icon:p,message:E.intl.string(E.t.h9Q1lG),onClick:()=>D(g.IR.COMMUNITY)})]}):(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(_.A,{icon:p,message:E.intl.string(E.t.h9Q1lG),onClick:()=>D(g.IR.COMMUNITY)}),(0,i.jsx)(_.A,{icon:d,message:E.intl.string(E.t.uE7zcu),onClick:()=>D(g.IR.FRIENDS)})]}),(0,i.jsx)(s.E,{className:C.iv,color:"text-default",variant:"text-sm/normal",children:E.intl.format(E.t["SMc+Gz"],{onSkip:()=>D(null)})})]}),G&&(0,i.jsx)(r.jl,{"data-migration-pending":!0,justify:c.A.Justify.BETWEEN,children:b})]}),footer:b}}function G(t){let{content:n}=I(t);return n}
+e.d(n, { A: () => G, u: () => I });
+var i = e(627968);
+e(64700);
+var a = e(862482),
+    r = e(935462),
+    l = e(534514),
+    s = e(834730);
+let d = "/assets/7f384b2c31f586cd.svg",
+    p = "/assets/2f0ebe181e1cce00.svg";
+var c = e(235986),
+    m = e(174459),
+    _ = e(878314),
+    g = e(819638),
+    o = e(652215),
+    E = e(375708),
+    C = e(394272);
+let T = 0.5 > Math.random();
+function I(t) {
+    let { onClose: n, onBack: e, onCreationIntentChosen: I, hasFooter: G = !0 } = t,
+        b = (0, i.jsx)(a.$n, {
+            "data-migration-pending": !0,
+            className: C.Gv,
+            look: a.$n.Looks.BLANK,
+            size: a.$n.Sizes.MIN,
+            onClick: e,
+            children: E.intl.string(E.t["13/7kX"]),
+        });
+    function D(t) {
+        m.default.track(o.HAw.GUILD_CREATION_INTENT_SELECTED, {
+            skipped: null == t,
+            is_community: t === g.IR.COMMUNITY,
+        }),
+            I(t);
+    }
+    return {
+        content: (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsxs)(r.rQ, {
+                    "data-migration-pending": !0,
+                    direction: c.A.Direction.VERTICAL,
+                    className: C.wx,
+                    separator: !1,
+                    children: [
+                        (0, i.jsx)(l.D, {
+                            className: C.DD,
+                            variant: "heading-xl/semibold",
+                            children: E.intl.string(E.t.f3MvGS),
+                        }),
+                        (0, i.jsx)(s.E, {
+                            className: C.VA,
+                            color: "text-default",
+                            variant: "text-md/normal",
+                            children: E.intl.string(E.t.nOzc7w),
+                        }),
+                        null != n && (0, i.jsx)(r.s_, { "data-migration-pending": !0, className: C.b, onClick: n }),
+                    ],
+                }),
+                (0, i.jsxs)(r.$m, {
+                    "data-migration-pending": !0,
+                    className: C.f9,
+                    children: [
+                        T
+                            ? (0, i.jsxs)(i.Fragment, {
+                                  children: [
+                                      (0, i.jsx)(_.A, {
+                                          icon: d,
+                                          message: E.intl.string(E.t.uE7zcu),
+                                          onClick: () => D(g.IR.FRIENDS),
+                                      }),
+                                      (0, i.jsx)(_.A, {
+                                          icon: p,
+                                          message: E.intl.string(E.t.h9Q1lG),
+                                          onClick: () => D(g.IR.COMMUNITY),
+                                      }),
+                                  ],
+                              })
+                            : (0, i.jsxs)(i.Fragment, {
+                                  children: [
+                                      (0, i.jsx)(_.A, {
+                                          icon: p,
+                                          message: E.intl.string(E.t.h9Q1lG),
+                                          onClick: () => D(g.IR.COMMUNITY),
+                                      }),
+                                      (0, i.jsx)(_.A, {
+                                          icon: d,
+                                          message: E.intl.string(E.t.uE7zcu),
+                                          onClick: () => D(g.IR.FRIENDS),
+                                      }),
+                                  ],
+                              }),
+                        (0, i.jsx)(s.E, {
+                            className: C.iv,
+                            color: "text-default",
+                            variant: "text-sm/normal",
+                            children: E.intl.format(E.t["SMc+Gz"], { onSkip: () => D(null) }),
+                        }),
+                    ],
+                }),
+                G && (0, i.jsx)(r.jl, { "data-migration-pending": !0, justify: c.A.Justify.BETWEEN, children: b }),
+            ],
+        }),
+        footer: b,
+    };
+}
+function G(t) {
+    let { content: n } = I(t);
+    return n;
+}

@@ -1,1 +1,29 @@
-r.d(t,{A:()=>c});var n=r(627968);r(64700);var l=r(17928),i=r(978940),o=r(808107),a=r(451394),s=r(512474),u=r(146151),E=r(983851),d=r(148719),I=r(576705),_=r(818348);function c(e){let{channel:t,...r}=e,c=(0,l.bG)([I.A],()=>t.isPrivate()||I.A.can(_.xB.CONNECT,t));if(t.isDM()||t.isGroupDM())return(0,n.jsx)(i._,{...r});let S=t.isGuildStageVoice(),T=!c||(0,d.A)(t);return S&&T?(0,n.jsx)(o.D,{...r}):S?(0,n.jsx)(a.q,{...r}):t.isNSFW()?(0,n.jsx)(s.O,{...r}):T?(0,n.jsx)(u.t,{...r}):(0,n.jsx)(E.H,{...r})}
+n.d(t, { A: () => c });
+var l = n(627968);
+n(64700);
+var r = n(17928),
+    i = n(978940),
+    o = n(808107),
+    a = n(451394),
+    s = n(512474),
+    E = n(146151),
+    u = n(983851),
+    d = n(148719),
+    _ = n(576705),
+    I = n(818348);
+function c(e) {
+    let { channel: t, ...n } = e,
+        c = (0, r.bG)([_.A], () => t.isPrivate() || _.A.can(I.xB.CONNECT, t));
+    if (t.isDM() || t.isGroupDM()) return (0, l.jsx)(i._, { ...n });
+    let S = t.isGuildStageVoice(),
+        T = !c || (0, d.A)(t);
+    return S && T
+        ? (0, l.jsx)(o.D, { ...n })
+        : S
+          ? (0, l.jsx)(a.q, { ...n })
+          : t.isNSFW()
+            ? (0, l.jsx)(s.O, { ...n })
+            : T
+              ? (0, l.jsx)(E.t, { ...n })
+              : (0, l.jsx)(u.H, { ...n });
+}

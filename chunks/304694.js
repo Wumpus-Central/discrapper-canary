@@ -1,1 +1,21 @@
-t.d(n,{A:()=>d});var e=t(627968);t(64700);var l=t(477782),a=t(138134),s=t(928658),c=t(446600),r=t(375708);function d(i){let n=c.A.isLive(i.id);return i.isGuildStageVoice()&&n?(0,e.jsx)(l.Dr,{id:"report-stage",label:r.intl.string(r.t.JGj6Ci),action:()=>(0,s.pb)(i),icon:a.i,leadingAccessory:{type:"icon",icon:a.i},color:"danger"}):null}
+t.d(n, { A: () => d });
+var e = t(627968);
+t(64700);
+var l = t(477782),
+    a = t(138134),
+    s = t(928658),
+    c = t(446600),
+    r = t(375708);
+function d(i) {
+    let n = c.A.isLive(i.id);
+    return i.isGuildStageVoice() && n
+        ? (0, e.jsx)(l.Dr, {
+              id: "report-stage",
+              label: r.intl.string(r.t.JGj6Ci),
+              action: () => (0, s.pb)(i),
+              icon: a.i,
+              leadingAccessory: { type: "icon", icon: a.i },
+              color: "danger",
+          })
+        : null;
+}

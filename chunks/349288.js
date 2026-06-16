@@ -1,1 +1,45 @@
-"use strict";n.r(t),n.d(t,{Anchor:()=>h});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(470562),l=n(531142),u=n(939249),c=n(187322),d=n(752239),_=n(983763);function h(e){let{href:t,onClick:n,className:s,children:h,rel:f,target:p,useDefaultUnderlineStyles:E=!0,title:m,style:g,focusProps:A,ref:I,role:T,...S}=e;null!=t&&null==n&&(n=d.V.getDefaultLinkInterceptor(t));let y=r.useContext(l.g),N={className:a()(_.Y,{[_.D]:E},s),href:t,onClick:n,rel:null!=f?f:void 0,target:null!=p?p:void 0,title:null!=m?m:void 0,style:null!=g?g:void 0};return(null==t||(0,o.e)(t)||(N.rel="noreferrer noopener",N.target="_blank"),y&&delete N.href,null!=n)?(0,i.jsx)(u.D,{tag:"a",...S,...N,onClick:n,focusProps:A,innerRef:I,role:"link",children:h}):(0,i.jsx)(c.vN,{...A,children:(0,i.jsx)("a",{...S,...N,ref:I,children:h})})}
+"use strict";
+n.r(t), n.d(t, { Anchor: () => h });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(470562),
+    l = n(531142),
+    u = n(939249),
+    c = n(187322),
+    d = n(752239),
+    _ = n(983763);
+function h(e) {
+    let {
+        href: t,
+        onClick: n,
+        className: s,
+        children: h,
+        rel: f,
+        target: p,
+        useDefaultUnderlineStyles: E = !0,
+        title: m,
+        style: g,
+        focusProps: A,
+        ref: I,
+        role: T,
+        ...S
+    } = e;
+    null != t && null == n && (n = d.V.getDefaultLinkInterceptor(t));
+    let y = r.useContext(l.g),
+        C = {
+            className: a()(_.Y, { [_.D]: E }, s),
+            href: t,
+            onClick: n,
+            rel: null != f ? f : void 0,
+            target: null != p ? p : void 0,
+            title: null != m ? m : void 0,
+            style: null != g ? g : void 0,
+        };
+    return (null == t || (0, o.e)(t) || ((C.rel = "noreferrer noopener"), (C.target = "_blank")),
+    y && delete C.href,
+    null != n)
+        ? (0, i.jsx)(u.D, { tag: "a", ...S, ...C, onClick: n, focusProps: A, innerRef: I, role: "link", children: h })
+        : (0, i.jsx)(c.vN, { ...A, children: (0, i.jsx)("a", { ...S, ...C, ref: I, children: h }) });
+}

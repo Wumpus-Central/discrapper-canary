@@ -1,1 +1,1 @@
-e.exports={p:"gifTag_f60819"}
+p.exports = { p: "gifTag_f60819" };

@@ -1,1 +1,79 @@
-"use strict";n.d(t,{A:()=>h});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(17928),l=n(231723),u=n(775602),c=n(607470),d=n(196527);let _="https://cdn.discordapp.com/assets/content/0f6e600fdc4948050869dfd104a8101154fe07ef3bddf5fb0e21ab070be221a2.png";function h(e){let{mediaUrls:t,isSuccess:n,transitionState:s,onClose:h,children:f}=e,p=(0,o.bG)([u.Ay],()=>u.Ay.useReducedMotion),[E,m]=(0,r.useState)("entry"),[g,A]=(0,r.useState)("entry"),I=(0,r.useRef)(null),T=(0,r.useCallback)(()=>{"entry"===E&&(m("idle"),A("idle"),I.current?.play())},[E]),S=(0,r.useCallback)(async()=>{"exit"!==E&&(m("exit"),await new Promise(e=>setTimeout(e,175)),await h())},[E,h]),y=s===l.ip.EXITING;if(!p&&n&&null!=t.activationEntry&&null!=t.activationIdle&&null!=t.celebrationEntry&&null!=t.celebrationIdle){let e="idle"===g?{type:"video",src:t.activationIdle,fallbackImageSrc:_,loop:!0}:{type:"video",src:t.activationEntry,fallbackImageSrc:_,loop:!1},n="exit"===E||y;return(0,i.jsxs)("div",{children:[(0,i.jsxs)("div",{className:a()(d.j,{[d.Xn]:n}),children:[(0,i.jsx)(c.A,{playsInline:!0,muted:!0,autoPlay:!0,onEnded:T,className:a()(d.Ki,"entry"===E?d.RK:d.R),children:(0,i.jsx)("source",{src:t.celebrationEntry})}),(0,i.jsx)(c.A,{ref:I,playsInline:!0,muted:!0,loop:!0,className:a()(d.Ki,"idle"===E?d.RK:d.R),children:(0,i.jsx)("source",{src:t.celebrationIdle})})]}),(0,i.jsx)("div",{className:n?d.aO:d.ws,children:f(e,S)})]})}return(0,i.jsxs)(i.Fragment,{children:[!p&&!y&&(0,i.jsx)("img",{src:"https://cdn.discordapp.com/assets/content/5211bb6d712707a9ccfb69d14b3ead6a5ca172e1d1098e357b1d4865e90b525b.png",alt:"",className:d.hK}),f({type:"image",src:_,aspectRatio:"16/9"},h)]})}
+"use strict";
+n.d(t, { A: () => h });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(17928),
+    l = n(231723),
+    u = n(775602),
+    c = n(607470),
+    d = n(196527);
+let _ =
+    "https://cdn.discordapp.com/assets/content/0f6e600fdc4948050869dfd104a8101154fe07ef3bddf5fb0e21ab070be221a2.png";
+function h(e) {
+    let { mediaUrls: t, isSuccess: n, transitionState: s, onClose: h, children: f } = e,
+        p = (0, o.bG)([u.Ay], () => u.Ay.useReducedMotion),
+        [E, m] = (0, r.useState)("entry"),
+        [g, A] = (0, r.useState)("entry"),
+        I = (0, r.useRef)(null),
+        T = (0, r.useCallback)(() => {
+            "entry" === E && (m("idle"), A("idle"), I.current?.play());
+        }, [E]),
+        S = (0, r.useCallback)(async () => {
+            "exit" !== E && (m("exit"), await new Promise((e) => setTimeout(e, 175)), await h());
+        }, [E, h]),
+        y = s === l.ip.EXITING;
+    if (
+        !p &&
+        n &&
+        null != t.activationEntry &&
+        null != t.activationIdle &&
+        null != t.celebrationEntry &&
+        null != t.celebrationIdle
+    ) {
+        let e =
+                "idle" === g
+                    ? { type: "video", src: t.activationIdle, fallbackImageSrc: _, loop: !0 }
+                    : { type: "video", src: t.activationEntry, fallbackImageSrc: _, loop: !1 },
+            n = "exit" === E || y;
+        return (0, i.jsxs)("div", {
+            children: [
+                (0, i.jsxs)("div", {
+                    className: a()(d.j, { [d.Xn]: n }),
+                    children: [
+                        (0, i.jsx)(c.A, {
+                            playsInline: !0,
+                            muted: !0,
+                            autoPlay: !0,
+                            onEnded: T,
+                            className: a()(d.Ki, "entry" === E ? d.RK : d.R),
+                            children: (0, i.jsx)("source", { src: t.celebrationEntry }),
+                        }),
+                        (0, i.jsx)(c.A, {
+                            ref: I,
+                            playsInline: !0,
+                            muted: !0,
+                            loop: !0,
+                            className: a()(d.Ki, "idle" === E ? d.RK : d.R),
+                            children: (0, i.jsx)("source", { src: t.celebrationIdle }),
+                        }),
+                    ],
+                }),
+                (0, i.jsx)("div", { className: n ? d.aO : d.ws, children: f(e, S) }),
+            ],
+        });
+    }
+    return (0, i.jsxs)(i.Fragment, {
+        children: [
+            !p &&
+                !y &&
+                (0, i.jsx)("img", {
+                    src: "https://cdn.discordapp.com/assets/content/5211bb6d712707a9ccfb69d14b3ead6a5ca172e1d1098e357b1d4865e90b525b.png",
+                    alt: "",
+                    className: d.hK,
+                }),
+            f({ type: "image", src: _, aspectRatio: "16/9" }, h),
+        ],
+    });
+}

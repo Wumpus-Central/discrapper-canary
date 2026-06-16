@@ -1,1 +1,72 @@
-n.d(l,{A:()=>h});var i=n(627968),a=n(64700),r=n(503698),t=n.n(r),s=n(834730),u=n(742158),d=n(244367),c=n(450232),o=n(252732),p=n(212168),f=n(850949);function g(e){let{errors:l}=e;return(0,i.jsx)(i.Fragment,{children:l.map((e,l)=>(0,i.jsx)(s.E,{variant:"text-xs/normal",color:"text-feedback-critical",className:f.gJ,children:(0,o.d3)(e)},l))})}let h=a.forwardRef(function(e,l){let{title:n,titleIcon:a,titleBadge:r,titleId:s,description:o,children:h,className:x,errors:m,disabled:v=!1,hideDivider:A=!1,showBorder:b=!1,borderType:j,hasBackground:N=!1,forcedDivider:k=!1,showPremiumIcon:y=!1}=e;return(0,i.jsx)("div",{className:t()(f.fz,x,{[f.r9]:v,[f.Ai]:A,[f.Ac]:b,[f.Cx]:k}),ref:l,children:(0,i.jsxs)(p.A,{className:f.D6,backgroundClassName:f.fr,isShown:b,type:j,hasBackground:N,children:[(0,i.jsxs)(u.z,{className:f.DD,id:s,"data-migration-pending":!0,children:[n,y&&(0,i.jsx)(c.A,{size:"xs"}),a,r]}),null!=o?(0,i.jsx)(d.a,{type:d.a.Types.DESCRIPTION,className:f.yV,"data-migration-pending":!0,children:o}):null,h,null!=m&&(0,i.jsx)(g,{errors:m})]})})})
+n.d(l, { A: () => h });
+var i = n(627968),
+    a = n(64700),
+    r = n(503698),
+    t = n.n(r),
+    s = n(834730),
+    u = n(742158),
+    d = n(244367),
+    c = n(450232),
+    o = n(252732),
+    p = n(212168),
+    f = n(850949);
+function g(e) {
+    let { errors: l } = e;
+    return (0, i.jsx)(i.Fragment, {
+        children: l.map((e, l) =>
+            (0, i.jsx)(
+                s.E,
+                { variant: "text-xs/normal", color: "text-feedback-critical", className: f.gJ, children: (0, o.d3)(e) },
+                l,
+            ),
+        ),
+    });
+}
+let h = a.forwardRef(function (e, l) {
+    let {
+        title: n,
+        titleIcon: a,
+        titleBadge: r,
+        titleId: s,
+        description: o,
+        children: h,
+        className: x,
+        errors: m,
+        disabled: v = !1,
+        hideDivider: A = !1,
+        showBorder: b = !1,
+        borderType: j,
+        hasBackground: N = !1,
+        forcedDivider: k = !1,
+        showPremiumIcon: y = !1,
+    } = e;
+    return (0, i.jsx)("div", {
+        className: t()(f.fz, x, { [f.r9]: v, [f.Ai]: A, [f.Ac]: b, [f.Cx]: k }),
+        ref: l,
+        children: (0, i.jsxs)(p.A, {
+            className: f.D6,
+            backgroundClassName: f.fr,
+            isShown: b,
+            type: j,
+            hasBackground: N,
+            children: [
+                (0, i.jsxs)(u.z, {
+                    className: f.DD,
+                    id: s,
+                    "data-migration-pending": !0,
+                    children: [n, y && (0, i.jsx)(c.A, { size: "xs" }), a, r],
+                }),
+                null != o
+                    ? (0, i.jsx)(d.a, {
+                          type: d.a.Types.DESCRIPTION,
+                          className: f.yV,
+                          "data-migration-pending": !0,
+                          children: o,
+                      })
+                    : null,
+                h,
+                null != m && (0, i.jsx)(g, { errors: m }),
+            ],
+        }),
+    });
+});

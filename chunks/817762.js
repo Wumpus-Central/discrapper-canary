@@ -1,1 +1,68 @@
-Object.defineProperty(t,"__esModule",{value:!0}),t.isHeicSignatureIncluded=t.isAvifStringIncluded=t.isFileContaineJfiforExifHeader=t.isFlvStringIncluded=t.isftypStringIncluded=t.findMatroskaDocTypeElements=t.fetchFromObject=t.getFileChunk=void 0,t.getFileChunk=function(e,t=32){let n=e instanceof ArrayBuffer?new Uint8Array(e):e,i=[];if(Array.isArray(e)&&e.every(e=>"number"==typeof e)||e instanceof ArrayBuffer||e instanceof Uint8Array)i=Array.from(n.slice(0,t));else throw TypeError(`Expected the \`file\` argument to be of type \`Array<number>\`, \`Uint8Array\`, or \`ArrayBuffer\`, got \`${typeof e}\``);if(!i.every(e=>"number"==typeof e&&!isNaN(e)))throw TypeError("File content contains illegal values");return i},t.fetchFromObject=function e(t,n){let i=n.indexOf(".");return i>-1?e(t[n.slice(0,i)],n.slice(i+1)):t[n]},t.findMatroskaDocTypeElements=function(e){let t=e.map(e=>String.fromCharCode(e)).join("");return t.includes("webm")?"webm":t.includes("matroska")?"mkv":void 0},t.isftypStringIncluded=function(e){let t=[102,116,121,112];for(let n=0;n<e.length-t.length;n++){let i=!0;for(let r=0;r<t.length;r++)if(e[n+r]!==t[r]){i=!1;break}if(i)return!0}return!1},t.isFlvStringIncluded=function(e){let t=e.slice(0,3);return new TextDecoder().decode(new Uint8Array(t)).includes("FLV")},t.isFileContaineJfiforExifHeader=function(e){let t=e[3];return 224===t||225===t},t.isAvifStringIncluded=function(e){return"ftypavif"===e.slice(4,12).map(e=>String.fromCharCode(e)).join("")},t.isHeicSignatureIncluded=function(e){let t=e.map(e=>String.fromCharCode(e)).join("");return["ftypheic","ftyphevc","ftypmif1","ftypmsf1"].some(e=>t.includes(e))}
+Object.defineProperty(t, "__esModule", { value: !0 }),
+    (t.isHeicSignatureIncluded =
+        t.isAvifStringIncluded =
+        t.isFileContaineJfiforExifHeader =
+        t.isFlvStringIncluded =
+        t.isftypStringIncluded =
+        t.findMatroskaDocTypeElements =
+        t.fetchFromObject =
+        t.getFileChunk =
+            void 0),
+    (t.getFileChunk = function (e, t = 32) {
+        let n = e instanceof ArrayBuffer ? new Uint8Array(e) : e,
+            i = [];
+        if (
+            (Array.isArray(e) && e.every((e) => "number" == typeof e)) ||
+            e instanceof ArrayBuffer ||
+            e instanceof Uint8Array
+        )
+            i = Array.from(n.slice(0, t));
+        else
+            throw TypeError(
+                `Expected the \`file\` argument to be of type \`Array<number>\`, \`Uint8Array\`, or \`ArrayBuffer\`, got \`${typeof e}\``,
+            );
+        if (!i.every((e) => "number" == typeof e && !isNaN(e))) throw TypeError("File content contains illegal values");
+        return i;
+    }),
+    (t.fetchFromObject = function e(t, n) {
+        let i = n.indexOf(".");
+        return i > -1 ? e(t[n.slice(0, i)], n.slice(i + 1)) : t[n];
+    }),
+    (t.findMatroskaDocTypeElements = function (e) {
+        let t = e.map((e) => String.fromCharCode(e)).join("");
+        return t.includes("webm") ? "webm" : t.includes("matroska") ? "mkv" : void 0;
+    }),
+    (t.isftypStringIncluded = function (e) {
+        let t = [102, 116, 121, 112];
+        for (let n = 0; n < e.length - t.length; n++) {
+            let i = !0;
+            for (let r = 0; r < t.length; r++)
+                if (e[n + r] !== t[r]) {
+                    i = !1;
+                    break;
+                }
+            if (i) return !0;
+        }
+        return !1;
+    }),
+    (t.isFlvStringIncluded = function (e) {
+        let t = e.slice(0, 3);
+        return new TextDecoder().decode(new Uint8Array(t)).includes("FLV");
+    }),
+    (t.isFileContaineJfiforExifHeader = function (e) {
+        let t = e[3];
+        return 224 === t || 225 === t;
+    }),
+    (t.isAvifStringIncluded = function (e) {
+        return (
+            "ftypavif" ===
+            e
+                .slice(4, 12)
+                .map((e) => String.fromCharCode(e))
+                .join("")
+        );
+    }),
+    (t.isHeicSignatureIncluded = function (e) {
+        let t = e.map((e) => String.fromCharCode(e)).join("");
+        return ["ftypheic", "ftyphevc", "ftypmif1", "ftypmsf1"].some((e) => t.includes(e));
+    });

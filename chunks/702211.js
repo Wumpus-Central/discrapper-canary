@@ -1,1 +1,10 @@
-i.d(t,{b:()=>r});var s=i(17928),n=i(287809),a=i(474090),l=i(788868);function r(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];return!(0,s.bG)([n.default],()=>a.Ay.isPremium(n.default.getCurrentUser(),l.PremiumTypes.TIER_2))&&!e}
+"use strict";
+n.d(t, { b: () => o });
+var i = n(17928),
+    r = n(287809),
+    s = n(474090),
+    a = n(788868);
+function o() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+    return !(0, i.bG)([r.default], () => s.Ay.isPremium(r.default.getCurrentUser(), a.PremiumTypes.TIER_2)) && !e;
+}

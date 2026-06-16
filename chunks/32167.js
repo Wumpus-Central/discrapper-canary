@@ -1,1 +1,32 @@
-n.d(i,{default:()=>C});var e=n(627968),r=n(64700),o=n(732159),s=n(691540),a=n(857250),c=n(97483),d=n(365258),l=n(929120),u=n(375708);function C(t){let{direction:i,affectedGuildIds:n,settingName:C,onClose:p,transitionState:h}=t,m=i===d.AI.RESTRICTING,{title:f,subtitle:k,confirmText:S,toastContent:x}=(0,d.ae)(m,C),I=(0,r.useMemo)(()=>()=>{(0,d.gF)(i,n),(0,s.P0)((0,a.o)(x,c.Ck.SUCCESS))},[i,n,x]);return(0,e.jsx)(o.ConfirmModal,{title:f,subtitle:k,confirmText:S,cancelText:u.intl.string(u.t.X1rGEm),variant:"primary",onConfirm:I,onClose:p,transitionState:h,children:(0,e.jsx)(l.n,{guildIds:n,direction:i})})}
+n.d(i, { default: () => C });
+var e = n(627968),
+    r = n(64700),
+    o = n(732159),
+    s = n(691540),
+    a = n(857250),
+    c = n(97483),
+    d = n(365258),
+    l = n(929120),
+    u = n(375708);
+function C(t) {
+    let { direction: i, affectedGuildIds: n, settingName: C, onClose: p, transitionState: h } = t,
+        m = i === d.AI.RESTRICTING,
+        { title: f, subtitle: k, confirmText: S, toastContent: x } = (0, d.ae)(m, C),
+        I = (0, r.useMemo)(
+            () => () => {
+                (0, d.gF)(i, n), (0, s.P0)((0, a.o)(x, c.Ck.SUCCESS));
+            },
+            [i, n, x],
+        );
+    return (0, e.jsx)(o.ConfirmModal, {
+        title: f,
+        subtitle: k,
+        confirmText: S,
+        cancelText: u.intl.string(u.t.X1rGEm),
+        variant: "primary",
+        onConfirm: I,
+        onClose: p,
+        transitionState: h,
+        children: (0, e.jsx)(l.n, { guildIds: n, direction: i }),
+    });
+}

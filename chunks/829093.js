@@ -1,1 +1,20 @@
-e.exports={kL:"container_fa0751",Qs:"content_fa0751",l8:"listingInfoRow_fa0751",my:"avatar_fa0751",KR:"tierName_fa0751",FE:"listingRoleRow_fa0751",yY:"roleColor_fa0751",UT:"roleIcon_fa0751",rj:"tierDescription_fa0751",yF:"divider_fa0751",Ts:"perksHeader_fa0751",hM:"benefitTypeHeader_fa0751",$r:"channelBenefitRow_fa0751",WH:"channelBenefitIcon_fa0751",WA:"channelBenefitText_fa0751",zC:"channelBenefitTagline_fa0751",Rr:"intangibleBenefitRow_fa0751",KI:"intangibleBenefitIcon_fa0751"}
+e.exports = {
+    kL: "container_fa0751",
+    Qs: "content_fa0751",
+    l8: "listingInfoRow_fa0751",
+    my: "avatar_fa0751",
+    KR: "tierName_fa0751",
+    FE: "listingRoleRow_fa0751",
+    yY: "roleColor_fa0751",
+    UT: "roleIcon_fa0751",
+    rj: "tierDescription_fa0751",
+    yF: "divider_fa0751",
+    Ts: "perksHeader_fa0751",
+    hM: "benefitTypeHeader_fa0751",
+    $r: "channelBenefitRow_fa0751",
+    WH: "channelBenefitIcon_fa0751",
+    WA: "channelBenefitText_fa0751",
+    zC: "channelBenefitTagline_fa0751",
+    Rr: "intangibleBenefitRow_fa0751",
+    KI: "intangibleBenefitIcon_fa0751",
+};

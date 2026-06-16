@@ -1,1 +1,92 @@
-n.d(t,{A:()=>j,e:()=>f});var l,a=n(627968);n(64700);var s=n(503698),i=n.n(s),r=n(661531),d=n(939249),o=n(534514),c=n(104510),u=n(834730),m=n(397400),v=n(225180),g=n(576709),b=n(375708),x=n(439155),f=((l={}).CLICKABLE="clickable",l.VIEWABLE="viewable",l.DISABLED="disabled",l);function j(e){let{className:t,guildId:n,game:l,onClick:s,imageClassName:f,titleClassName:j,variant:p="clickable",location:h}=e,C=(0,v.A)(l.gameId,"cover"),{containerClass:I,boostGemColor:k,boostPriceTextColor:S,handleClick:N}={clickable:{containerClass:null,boostGemColor:r.A.unsafe_rawColors.GUILD_BOOSTING_PINK,boostPriceTextColor:void 0,handleClick:()=>{(0,m.oT)(n,l.id,l.name,h),s?.(l)}},viewable:{containerClass:x.Oe,boostGemColor:void 0,boostPriceTextColor:"text-muted",handleClick:void 0},disabled:{containerClass:x.r9,boostGemColor:r.A.unsafe_rawColors.GUILD_BOOSTING_PINK,boostPriceTextColor:void 0,handleClick:void 0}}[p];return(0,a.jsxs)(d.D,{"aria-disabled":"disabled"===p,className:i()(x.LO,I,t),onClick:N,children:[(0,a.jsxs)("div",{className:i()(x.Rf,f),children:[(0,a.jsx)("img",{className:x.Sl,alt:"",src:C??""}),(0,a.jsx)("div",{className:x.Gj}),(0,a.jsx)("div",{className:x.Uf})]}),(0,a.jsxs)("div",{className:i()(x.FS,j),children:[(0,a.jsx)(o.D,{variant:"heading-sm/semibold",lineClamp:2,title:l.name,children:l.name}),(0,a.jsxs)("div",{className:x.PW,children:[(0,a.jsx)(c._,{size:"sm",color:k}),(0,a.jsx)(u.E,{variant:"text-sm/medium",color:S,children:b.intl.formatToPlainString(l.plans.length>1?g.default["G/aTXi"]:g.default.r9pa9K,{boostCount:l.baseCost})})]})]})]})}
+n.d(t, { A: () => j, e: () => f });
+var l,
+    a = n(627968);
+n(64700);
+var s = n(503698),
+    i = n.n(s),
+    r = n(661531),
+    d = n(939249),
+    o = n(534514),
+    c = n(104510),
+    u = n(834730),
+    m = n(397400),
+    v = n(225180),
+    g = n(576709),
+    b = n(375708),
+    x = n(439155),
+    f = (((l = {}).CLICKABLE = "clickable"), (l.VIEWABLE = "viewable"), (l.DISABLED = "disabled"), l);
+function j(e) {
+    let {
+            className: t,
+            guildId: n,
+            game: l,
+            onClick: s,
+            imageClassName: f,
+            titleClassName: j,
+            variant: p = "clickable",
+            location: h,
+        } = e,
+        C = (0, v.A)(l.gameId, "cover"),
+        {
+            containerClass: I,
+            boostGemColor: k,
+            boostPriceTextColor: S,
+            handleClick: N,
+        } = {
+            clickable: {
+                containerClass: null,
+                boostGemColor: r.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                boostPriceTextColor: void 0,
+                handleClick: () => {
+                    (0, m.oT)(n, l.id, l.name, h), s?.(l);
+                },
+            },
+            viewable: {
+                containerClass: x.Oe,
+                boostGemColor: void 0,
+                boostPriceTextColor: "text-muted",
+                handleClick: void 0,
+            },
+            disabled: {
+                containerClass: x.r9,
+                boostGemColor: r.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                boostPriceTextColor: void 0,
+                handleClick: void 0,
+            },
+        }[p];
+    return (0, a.jsxs)(d.D, {
+        "aria-disabled": "disabled" === p,
+        className: i()(x.LO, I, t),
+        onClick: N,
+        children: [
+            (0, a.jsxs)("div", {
+                className: i()(x.Rf, f),
+                children: [
+                    (0, a.jsx)("img", { className: x.Sl, alt: "", src: C ?? "" }),
+                    (0, a.jsx)("div", { className: x.Gj }),
+                    (0, a.jsx)("div", { className: x.Uf }),
+                ],
+            }),
+            (0, a.jsxs)("div", {
+                className: i()(x.FS, j),
+                children: [
+                    (0, a.jsx)(o.D, { variant: "heading-sm/semibold", lineClamp: 2, title: l.name, children: l.name }),
+                    (0, a.jsxs)("div", {
+                        className: x.PW,
+                        children: [
+                            (0, a.jsx)(c._, { size: "sm", color: k }),
+                            (0, a.jsx)(u.E, {
+                                variant: "text-sm/medium",
+                                color: S,
+                                children: b.intl.formatToPlainString(
+                                    l.plans.length > 1 ? g.default["G/aTXi"] : g.default.r9pa9K,
+                                    { boostCount: l.baseCost },
+                                ),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
+    });
+}

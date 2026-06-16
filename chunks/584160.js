@@ -1,1 +1,46 @@
-"use strict";n.d(t,{M:()=>u,u:()=>d});var i=n(997101),r=n(278416),s=n(166532),a=n(788868),o=n(327105),l=n(375708);let u=[s.pn.PLAN_SELECT,s.pn.REVIEW,s.pn.ADD_PAYMENT_STEPS],c=(e,t)=>{if(t&&null!=e)return null!=i.d[e]?e:void 0},d=e=>{let{skuId:t,step:n,showTrialBadge:i,showPromoBadge:u,showBetaBadge:d,premiumDiscountPercent:_,storeCountryFromCheckoutContext:h,isStoreCountryEnabled:f,relocationCountry:p}=e,E=l.intl.string(l.t.q9EGps);n===s.pn.ADD_PAYMENT_STEPS&&(E=l.intl.string(l.t.CpOiEO));let m={headerBadgeText:void 0,headerBadgeIcon:void 0};d?(m.headerBadgeText=l.intl.string(l.t.oW0eUd),m.headerBadgeVariant="default"):i?(m.headerBadgeText=l.intl.string(o.default["mWL08+"]),m.headerBadgeIcon=r.g):u&&(m.headerBadgeText=null!=_?l.intl.formatToPlainString(l.t.iiLbvu,{percent:_}):l.intl.string(o.default.Fjpyfj));let g=c(h,f),A=c(p,f);return null==t?{title:E,gradientColor:void 0,countryCode:g,relocationCountryCode:A,...m}:t===a.pe.TIER_0||t===a.pe.TIER_1?{title:E,gradientColor:"nitro-green",countryCode:g,relocationCountryCode:A,...m}:t===a.pe.TIER_2?{title:E,gradientColor:"nitro-pink",countryCode:g,relocationCountryCode:A,...m}:{title:E,countryCode:g,relocationCountryCode:A,...m}}
+"use strict";
+n.d(t, { M: () => u, u: () => d });
+var i = n(997101),
+    r = n(278416),
+    s = n(166532),
+    a = n(788868),
+    o = n(327105),
+    l = n(375708);
+let u = [s.pn.PLAN_SELECT, s.pn.REVIEW, s.pn.ADD_PAYMENT_STEPS],
+    c = (e, t) => {
+        if (t && null != e) return null != i.d[e] ? e : void 0;
+    },
+    d = (e) => {
+        let {
+                skuId: t,
+                step: n,
+                showTrialBadge: i,
+                showPromoBadge: u,
+                showBetaBadge: d,
+                premiumDiscountPercent: _,
+                storeCountryFromCheckoutContext: h,
+                isStoreCountryEnabled: f,
+                relocationCountry: p,
+            } = e,
+            E = l.intl.string(l.t.q9EGps);
+        n === s.pn.ADD_PAYMENT_STEPS && (E = l.intl.string(l.t.CpOiEO));
+        let m = { headerBadgeText: void 0, headerBadgeIcon: void 0 };
+        d
+            ? ((m.headerBadgeText = l.intl.string(l.t.oW0eUd)), (m.headerBadgeVariant = "default"))
+            : i
+              ? ((m.headerBadgeText = l.intl.string(o.default["mWL08+"])), (m.headerBadgeIcon = r.g))
+              : u &&
+                (m.headerBadgeText =
+                    null != _
+                        ? l.intl.formatToPlainString(l.t.iiLbvu, { percent: _ })
+                        : l.intl.string(o.default.Fjpyfj));
+        let g = c(h, f),
+            A = c(p, f);
+        return null == t
+            ? { title: E, gradientColor: void 0, countryCode: g, relocationCountryCode: A, ...m }
+            : t === a.pe.TIER_0 || t === a.pe.TIER_1
+              ? { title: E, gradientColor: "nitro-green", countryCode: g, relocationCountryCode: A, ...m }
+              : t === a.pe.TIER_2
+                ? { title: E, gradientColor: "nitro-pink", countryCode: g, relocationCountryCode: A, ...m }
+                : { title: E, countryCode: g, relocationCountryCode: A, ...m };
+    };

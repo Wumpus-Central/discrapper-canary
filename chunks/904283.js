@@ -1,1 +1,12 @@
-"use strict";var i=n(439619),r=i("%Object.preventExtensions%",!0),s=i("%Object.isExtensible%",!0),a=n(858156);e.exports=r?function(e){return!a(e)&&s(e)}:function(e){return!a(e)}
+"use strict";
+var i = n(439619),
+    r = i("%Object.preventExtensions%", !0),
+    s = i("%Object.isExtensible%", !0),
+    a = n(858156);
+e.exports = r
+    ? function (e) {
+          return !a(e) && s(e);
+      }
+    : function (e) {
+          return !a(e);
+      };

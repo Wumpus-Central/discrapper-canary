@@ -1,1 +1,59 @@
-"use strict";n.d(t,{A:()=>_});var i=n(627968);n(64700);var r=n(192308),s=n(442433),a=n(332173),o=n(37632),l=n(734057),u=n(706083),c=n(143145),d=n(652215);function _(e){return{react(t,_,h){let f=l.A.getChannel(t.channelId),p=h.noStyleAndInteraction?void 0:n=>{e.shouldStopPropagation&&n?.stopPropagation(),(0,u.o)(t.guildId,t.channelId,t.messageId),e.shouldCloseDefaultModals&&(0,r.closeAllModals)()},E=h.noStyleAndInteraction||null==t.channelId||null==f&&null==t.originalLink?d.tEg:e=>{(0,s.L3)(e,async()=>{let{default:e}=await Promise.all([n.e("43266"),n.e("4391")]).then(n.bind(n,254106));return n=>(0,i.jsx)(e,{...n,channel:f,channelId:f?.id??t.channelId,originalLink:t.originalLink,messageId:t.messageId})})};return(0,i.jsxs)(a.A,{role:"link",onClick:p,onContextMenu:E,className:"channelMention",children:[null!=t.inContent?_(t.inContent,h):null,null!=t.inContent?(0,i.jsx)(o.A,{}):null,(0,c.t)(t,_,h)]},h.key)}}}
+"use strict";
+n.d(t, { A: () => _ });
+var i = n(627968);
+n(64700);
+var r = n(192308),
+    s = n(442433),
+    a = n(332173),
+    o = n(37632),
+    l = n(734057),
+    u = n(706083),
+    c = n(143145),
+    d = n(652215);
+function _(e) {
+    return {
+        react(t, _, h) {
+            let f = l.A.getChannel(t.channelId),
+                p = h.noStyleAndInteraction
+                    ? void 0
+                    : (n) => {
+                          e.shouldStopPropagation && n?.stopPropagation(),
+                              (0, u.o)(t.guildId, t.channelId, t.messageId),
+                              e.shouldCloseDefaultModals && (0, r.closeAllModals)();
+                      },
+                E =
+                    h.noStyleAndInteraction || null == t.channelId || (null == f && null == t.originalLink)
+                        ? d.tEg
+                        : (e) => {
+                              (0, s.L3)(e, async () => {
+                                  let { default: e } = await Promise.all([n.e("43266"), n.e("4391")]).then(
+                                      n.bind(n, 254106),
+                                  );
+                                  return (n) =>
+                                      (0, i.jsx)(e, {
+                                          ...n,
+                                          channel: f,
+                                          channelId: f?.id ?? t.channelId,
+                                          originalLink: t.originalLink,
+                                          messageId: t.messageId,
+                                      });
+                              });
+                          };
+            return (0, i.jsxs)(
+                a.A,
+                {
+                    role: "link",
+                    onClick: p,
+                    onContextMenu: E,
+                    className: "channelMention",
+                    children: [
+                        null != t.inContent ? _(t.inContent, h) : null,
+                        null != t.inContent ? (0, i.jsx)(o.A, {}) : null,
+                        (0, c.t)(t, _, h),
+                    ],
+                },
+                h.key,
+            );
+        },
+    };
+}

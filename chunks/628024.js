@@ -1,1 +1,25 @@
-"use strict";n.d(t,{i:()=>o});var i=n(89494),r=n(64700),s=n(297987),a=n(241827);function o(e){let{isDisabled:t,onFocus:n,onBlur:o,onFocusChange:l}=e,u=(0,r.useCallback)(e=>{if(e.target===e.currentTarget)return o&&o(e),l&&l(!1),!0},[o,l]),c=(0,i.yB)(u),d=(0,r.useCallback)(e=>{let t=(0,s.TW)(e.target),i=t?(0,a.bq)(t):(0,a.bq)();e.target===e.currentTarget&&i===(0,a.wt)(e.nativeEvent)&&(n&&n(e),l&&l(!0),c(e))},[l,n,c]);return{focusProps:{onFocus:!t&&(n||l||o)?d:void 0,onBlur:!t&&(o||l)?u:void 0}}}
+"use strict";
+n.d(t, { i: () => o });
+var i = n(89494),
+    r = n(64700),
+    s = n(297987),
+    a = n(241827);
+function o(e) {
+    let { isDisabled: t, onFocus: n, onBlur: o, onFocusChange: l } = e,
+        u = (0, r.useCallback)(
+            (e) => {
+                if (e.target === e.currentTarget) return o && o(e), l && l(!1), !0;
+            },
+            [o, l],
+        ),
+        c = (0, i.yB)(u),
+        d = (0, r.useCallback)(
+            (e) => {
+                let t = (0, s.TW)(e.target),
+                    i = t ? (0, a.bq)(t) : (0, a.bq)();
+                e.target === e.currentTarget && i === (0, a.wt)(e.nativeEvent) && (n && n(e), l && l(!0), c(e));
+            },
+            [l, n, c],
+        );
+    return { focusProps: { onFocus: !t && (n || l || o) ? d : void 0, onBlur: !t && (o || l) ? u : void 0 } };
+}

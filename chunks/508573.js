@@ -1,1 +1,8 @@
-p.exports=s(400095)(function(p,n,s){p[+!s].push(n)},function(){return[[],[]]})
+p.exports = s(400095)(
+    function (p, n, s) {
+        p[+!s].push(n);
+    },
+    function () {
+        return [[], []];
+    },
+);

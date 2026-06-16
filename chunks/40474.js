@@ -1,1 +1,49 @@
-"use strict";n.d(t,{A:()=>m});var l=n(627968),i=n(64700),r=n(503698),s=n.n(r),a=n(939249),o=n(235986),u=n(147925),c=n(562573);class d extends i.PureComponent{handleClick(e){let{onBreadcrumbClick:t}=this.props;null!=t&&t(e)}renderBreadcrumb=(e,t)=>{let{activeId:n,onBreadcrumbClick:i,breadcrumbs:r,renderCustomBreadcrumb:o,separatorClassName:d}=this.props,m=e.id===n,h=()=>this.handleClick(e),p=t===r.length-1,f=null!=o?o(e,m):(0,l.jsx)("span",{className:s()(c.QF,{[c.aj]:m,[c._j]:null!=i}),children:e.label});return(0,l.jsxs)("div",{className:s()(c.hj,{[c.jQ]:p}),children:[null!=i?(0,l.jsx)(a.D,{tag:"span",onClick:h,className:c.$O,children:f}):f,p?null:(0,l.jsx)(u.A,{className:s()(c.LJ,d),direction:u.A.Directions.RIGHT})]},e.id)};render(){let{breadcrumbs:e,className:t}=this.props,n=e.map(this.renderBreadcrumb);return(0,l.jsx)(o.A,{justify:o.A.Justify.START,className:s()(c.jD,t),children:n})}}let m=d
+"use strict";
+n.d(t, { A: () => m });
+var l = n(627968),
+    i = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    a = n(939249),
+    o = n(235986),
+    u = n(147925),
+    c = n(562573);
+class d extends i.PureComponent {
+    handleClick(e) {
+        let { onBreadcrumbClick: t } = this.props;
+        null != t && t(e);
+    }
+    renderBreadcrumb = (e, t) => {
+        let {
+                activeId: n,
+                onBreadcrumbClick: i,
+                breadcrumbs: r,
+                renderCustomBreadcrumb: o,
+                separatorClassName: d,
+            } = this.props,
+            m = e.id === n,
+            h = () => this.handleClick(e),
+            p = t === r.length - 1,
+            f =
+                null != o
+                    ? o(e, m)
+                    : (0, l.jsx)("span", { className: s()(c.QF, { [c.aj]: m, [c._j]: null != i }), children: e.label });
+        return (0, l.jsxs)(
+            "div",
+            {
+                className: s()(c.hj, { [c.jQ]: p }),
+                children: [
+                    null != i ? (0, l.jsx)(a.D, { tag: "span", onClick: h, className: c.$O, children: f }) : f,
+                    p ? null : (0, l.jsx)(u.A, { className: s()(c.LJ, d), direction: u.A.Directions.RIGHT }),
+                ],
+            },
+            e.id,
+        );
+    };
+    render() {
+        let { breadcrumbs: e, className: t } = this.props,
+            n = e.map(this.renderBreadcrumb);
+        return (0, l.jsx)(o.A, { justify: o.A.Justify.START, className: s()(c.jD, t), children: n });
+    }
+}
+let m = d;

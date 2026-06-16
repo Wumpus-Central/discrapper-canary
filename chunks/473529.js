@@ -1,1 +1,49 @@
-"use strict";n.d(t,{K:()=>E,d:()=>p});var i=n(702841),r=n(961973),s=n(164956),a=n(734057),o=n(71393),l=n(701785),u=n(707167),c=n(978165),d=n(652215),_=n(746080);function h(e){let t=e.id,n=(l.h.getNewMemberActions(t)??[]).length>0,i=l.h.getEnabled(t);return n&&e.features.has(d.GuildFeatures.COMMUNITY)&&!(e.features.has(d.GuildFeatures.GUILD_ONBOARDING)&&!i)}function f(e,t){let n=t.getMutableGuildChannelsForGuild(e);for(let e in n)if(n[e].hasFlag(_.lx.IS_GUILD_RESOURCE_CHANNEL))return!0;return!1}function p(e){let t=(0,c.A)(e);return(0,i.bG)([a.A,o.A,s.A],()=>{if(__OVERLAY__||e===d.ME||e===d.YYv)return!1;let n=o.A.getGuild(e);return!!n?.features.has(d.GuildFeatures.COMMUNITY)&&(s.A.isFullServerPreview(e)?h(n):(0,r.rs)(e)?t||f(e,a.A):!!(0,u.A)(n)&&(t||f(e,a.A)))},[e,t])}function E(e){let t=o.A.getGuild(e),n=s.A.isFullServerPreview(e);if(null==t||__OVERLAY__||e===d.ME||e===d.YYv)return!1;if(n)return h(t);let i=(0,r.rs)(e)&&t.features.has(d.GuildFeatures.GUILD_ONBOARDING)&&t.features.has(d.GuildFeatures.GUILD_SERVER_GUIDE);return(t.features.has(d.GuildFeatures.GUILD_ONBOARDING)&&t.features.has(d.GuildFeatures.GUILD_SERVER_GUIDE)||i)&&t.features.has(d.GuildFeatures.COMMUNITY)}
+"use strict";
+n.d(t, { K: () => E, d: () => p });
+var i = n(702841),
+    r = n(961973),
+    s = n(164956),
+    a = n(734057),
+    o = n(71393),
+    l = n(701785),
+    u = n(707167),
+    c = n(978165),
+    d = n(652215),
+    _ = n(746080);
+function h(e) {
+    let t = e.id,
+        n = (l.h.getNewMemberActions(t) ?? []).length > 0,
+        i = l.h.getEnabled(t);
+    return n && e.features.has(d.GuildFeatures.COMMUNITY) && !(e.features.has(d.GuildFeatures.GUILD_ONBOARDING) && !i);
+}
+function f(e, t) {
+    let n = t.getMutableGuildChannelsForGuild(e);
+    for (let e in n) if (n[e].hasFlag(_.lx.IS_GUILD_RESOURCE_CHANNEL)) return !0;
+    return !1;
+}
+function p(e) {
+    let t = (0, c.A)(e);
+    return (0, i.bG)([a.A, o.A, s.A], () => {
+        if (__OVERLAY__ || e === d.ME || e === d.YYv) return !1;
+        let n = o.A.getGuild(e);
+        return (
+            !!n?.features.has(d.GuildFeatures.COMMUNITY) &&
+            (s.A.isFullServerPreview(e) ? h(n) : (0, r.rs)(e) ? t || f(e, a.A) : !!(0, u.A)(n) && (t || f(e, a.A)))
+        );
+    }, [e, t]);
+}
+function E(e) {
+    let t = o.A.getGuild(e),
+        n = s.A.isFullServerPreview(e);
+    if (null == t || __OVERLAY__ || e === d.ME || e === d.YYv) return !1;
+    if (n) return h(t);
+    let i =
+        (0, r.rs)(e) &&
+        t.features.has(d.GuildFeatures.GUILD_ONBOARDING) &&
+        t.features.has(d.GuildFeatures.GUILD_SERVER_GUIDE);
+    return (
+        ((t.features.has(d.GuildFeatures.GUILD_ONBOARDING) && t.features.has(d.GuildFeatures.GUILD_SERVER_GUIDE)) ||
+            i) &&
+        t.features.has(d.GuildFeatures.COMMUNITY)
+    );
+}

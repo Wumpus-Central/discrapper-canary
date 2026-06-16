@@ -1,1 +1,192 @@
-"use strict";n.d(t,{A:()=>U});var l=n(627968);n(64700);var i=n(503698),r=n.n(i),s=n(17928),a=n(534514),o=n(315629),u=n(935462),c=n(508770),d=n(584160),m=n(211159),h=n(166532),p=n(615310),f=n(800471),g=n(834730),E=n(147925),A=n(375708),C=n(89892);function x(e){let{breadcrumb:t,isActiveBreadcrumb:n,isFinalBreadcrumb:i,separatorClassName:s}=e;return(0,l.jsxs)("div",{"aria-current":n?"step":void 0,className:r()(C.hj,{[C.jQ]:i}),children:[(0,l.jsx)(g.E,{variant:"text-sm/medium",color:n?"text-strong":"text-muted",children:t.label}),i?null:(0,l.jsx)(E.A,{"aria-hidden":!0,className:r()(C.LJ,s),direction:E.A.Directions.RIGHT})]},t.id)}let I=function(e){let{breadcrumbs:t,activeId:n,className:i,separatorClassName:s}=e;return(0,l.jsx)("nav",{"aria-label":A.intl.string(A.t.TfxqUO),className:r()(C.jD,i),children:t.map((e,i)=>(0,l.jsx)(x,{breadcrumb:e,isActiveBreadcrumb:e.id===n,isFinalBreadcrumb:i===t.length-1,separatorClassName:s},e.id))})};var _=n(573359),S=n(422936),y=n(234419),v=n(795269),T=n(788868),N=n(503110);let j=e=>{let{discountAmount:t}=e,n=(0,y.V)(),i=null!=n&&n.trial_id===T.Dw,r=A.intl.string(A.t.IBYG5U);return void 0!==t?r=A.intl.formatToPlainString(A.t.iiLbvu,{percent:t}):i&&(r=A.intl.string(A.t.gtNqJQ)),(0,l.jsx)("div",{className:N.f,children:(0,l.jsx)(v.R,{text:r})})};var b=n(88001),R=n(955212),P=n(967744),L=n(232266),M=n(243002),O=n(303930),w=n(241988);function D(e){let{isOneStepCheckout:t,headerText:n,step:i,filteredBreadcrumbs:r}=e;if(t)return(0,l.jsx)("div",{className:R.r9,children:(0,l.jsx)(a.D,{variant:"heading-md/bold",children:n})});let s=r.length>1;return(0,l.jsxs)("div",{className:R.go,children:[(0,l.jsx)(a.D,{variant:"text-lg/semibold",children:n}),s&&(0,l.jsx)(I,{activeId:i,breadcrumbs:r})]})}function k(e){let{isTier2:t}=e,n=t?M:"/assets/947416a0e8a7172a.svg";return(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)("img",{src:t?L:"/assets/792ab98da2b21b02.svg",alt:"",className:R.mR}),(0,l.jsx)("img",{src:n,alt:"",className:R.dz}),(0,l.jsx)("img",{src:n,alt:"",className:R.lM})]})}let U=function(e){let{hideCloseButton:t=!1,hideCloseOnFullScreen:n,onClose:i,upgradeToPremiumType:g,isEligibleForTrial:E=!1,showTrialBadge:C=!1,showDiscountBadge:x=!1,isPremiumGroupPurchase:I=!1,forceBrandRefreshHeader:y=!1}=e,v=g===T.PremiumTypes.TIER_2,N=(0,f.lp)(E),L=(0,S.O)(),M=L?.discount?.amount,U=(0,m.t4)(e=>e.startedPaymentFlowWithPaymentSources),G=(0,s.bG)([_.A],()=>_.A.isDisplayingWowMomentConfirmation),{step:F,breadcrumbsData:V}=(0,p.Ay)();if(!y&&(null==V||0===V.length))return null;let B=(V??[]).flatMap(e=>{let t=e.useBreadcrumbLabel(E),n=e.sectionHeaderText;return null!=t?{id:e.id,label:t,sectionHeaderText:n}:[]});if(!y&&0===B.length)return null;let H=(B=B.filter(e=>{if(I&&e.id===h.pn.PLAN_SELECT)return!1;let t=e.id!==h.pn.ADD_PAYMENT_STEPS,n=e.id===h.pn.ADD_PAYMENT_STEPS&&!U;return!E||t||n})).find(e=>e.id===F),W=H?.sectionHeaderText?.()??H?.label,K=!(null!=F&&d.M.includes(F))&&null!=W&&null!=F,Y=N&&K&&F===h.pn.REVIEW,z=v?"nitro-pink":"nitro-green",Z=I?(0,b.DP)():v?A.intl.string(A.t.lG6a5x):A.intl.string(A.t["t9uG/o"]),q=R.kL,$=r()(R.N1,P.headerGradient);return G?(0,l.jsx)("div",{className:q,children:(0,l.jsx)(o.h,{color:z,className:$})}):(0,l.jsxs)("div",{className:q,children:[(0,l.jsxs)(o.h,{color:z,className:r()($,{[R.s1]:!K}),children:[(0,l.jsx)(k,{isTier2:v}),!t&&(0,l.jsx)(u.s_,{"data-migration-pending":!0,hideOnFullscreen:n,onClick:i,className:R.Ep}),(0,l.jsx)("img",{src:v?w:O,alt:"",className:Y?R.i_:R.kX}),(0,l.jsxs)("div",{className:R.FS,children:[I&&(0,l.jsx)("div",{className:R.$N,children:(0,l.jsx)(c.E,{type:"beta",variant:"expressive"})}),(0,l.jsx)(a.D,{variant:"display-md",color:"text-strong",className:R.cf,children:Z})]})]}),(C||x)&&(0,l.jsx)(j,{discountAmount:M}),K&&(0,l.jsx)(D,{isOneStepCheckout:N,headerText:W,step:F,filteredBreadcrumbs:B})]})}
+"use strict";
+n.d(t, { A: () => U });
+var l = n(627968);
+n(64700);
+var i = n(503698),
+    r = n.n(i),
+    s = n(17928),
+    a = n(534514),
+    o = n(315629),
+    u = n(935462),
+    c = n(508770),
+    d = n(584160),
+    m = n(211159),
+    h = n(166532),
+    p = n(615310),
+    f = n(800471),
+    g = n(834730),
+    E = n(147925),
+    A = n(375708),
+    C = n(89892);
+function x(e) {
+    let { breadcrumb: t, isActiveBreadcrumb: n, isFinalBreadcrumb: i, separatorClassName: s } = e;
+    return (0, l.jsxs)(
+        "div",
+        {
+            "aria-current": n ? "step" : void 0,
+            className: r()(C.hj, { [C.jQ]: i }),
+            children: [
+                (0, l.jsx)(g.E, {
+                    variant: "text-sm/medium",
+                    color: n ? "text-strong" : "text-muted",
+                    children: t.label,
+                }),
+                i
+                    ? null
+                    : (0, l.jsx)(E.A, { "aria-hidden": !0, className: r()(C.LJ, s), direction: E.A.Directions.RIGHT }),
+            ],
+        },
+        t.id,
+    );
+}
+let I = function (e) {
+    let { breadcrumbs: t, activeId: n, className: i, separatorClassName: s } = e;
+    return (0, l.jsx)("nav", {
+        "aria-label": A.intl.string(A.t.TfxqUO),
+        className: r()(C.jD, i),
+        children: t.map((e, i) =>
+            (0, l.jsx)(
+                x,
+                {
+                    breadcrumb: e,
+                    isActiveBreadcrumb: e.id === n,
+                    isFinalBreadcrumb: i === t.length - 1,
+                    separatorClassName: s,
+                },
+                e.id,
+            ),
+        ),
+    });
+};
+var _ = n(573359),
+    S = n(422936),
+    y = n(234419),
+    v = n(795269),
+    T = n(788868),
+    N = n(503110);
+let j = (e) => {
+    let { discountAmount: t } = e,
+        n = (0, y.V)(),
+        i = null != n && n.trial_id === T.Dw,
+        r = A.intl.string(A.t.IBYG5U);
+    return (
+        void 0 !== t
+            ? (r = A.intl.formatToPlainString(A.t.iiLbvu, { percent: t }))
+            : i && (r = A.intl.string(A.t.gtNqJQ)),
+        (0, l.jsx)("div", { className: N.f, children: (0, l.jsx)(v.R, { text: r }) })
+    );
+};
+var b = n(88001),
+    R = n(955212),
+    P = n(967744),
+    L = n(232266),
+    M = n(243002),
+    O = n(303930),
+    w = n(241988);
+function k(e) {
+    let { isOneStepCheckout: t, headerText: n, step: i, filteredBreadcrumbs: r } = e;
+    if (t)
+        return (0, l.jsx)("div", {
+            className: R.r9,
+            children: (0, l.jsx)(a.D, { variant: "heading-md/bold", children: n }),
+        });
+    let s = r.length > 1;
+    return (0, l.jsxs)("div", {
+        className: R.go,
+        children: [
+            (0, l.jsx)(a.D, { variant: "text-lg/semibold", children: n }),
+            s && (0, l.jsx)(I, { activeId: i, breadcrumbs: r }),
+        ],
+    });
+}
+function D(e) {
+    let { isTier2: t } = e,
+        n = t ? M : "/assets/947416a0e8a7172a.svg";
+    return (0, l.jsxs)(l.Fragment, {
+        children: [
+            (0, l.jsx)("img", { src: t ? L : "/assets/792ab98da2b21b02.svg", alt: "", className: R.mR }),
+            (0, l.jsx)("img", { src: n, alt: "", className: R.dz }),
+            (0, l.jsx)("img", { src: n, alt: "", className: R.lM }),
+        ],
+    });
+}
+let U = function (e) {
+    let {
+            hideCloseButton: t = !1,
+            hideCloseOnFullScreen: n,
+            onClose: i,
+            upgradeToPremiumType: g,
+            isEligibleForTrial: E = !1,
+            showTrialBadge: C = !1,
+            showDiscountBadge: x = !1,
+            isPremiumGroupPurchase: I = !1,
+            forceBrandRefreshHeader: y = !1,
+        } = e,
+        v = g === T.PremiumTypes.TIER_2,
+        N = (0, f.lp)(E),
+        L = (0, S.O)(),
+        M = L?.discount?.amount,
+        U = (0, m.t4)((e) => e.startedPaymentFlowWithPaymentSources),
+        G = (0, s.bG)([_.A], () => _.A.isDisplayingWowMomentConfirmation),
+        { step: F, breadcrumbsData: V } = (0, p.Ay)();
+    if (!y && (null == V || 0 === V.length)) return null;
+    let B = (V ?? []).flatMap((e) => {
+        let t = e.useBreadcrumbLabel(E),
+            n = e.sectionHeaderText;
+        return null != t ? { id: e.id, label: t, sectionHeaderText: n } : [];
+    });
+    if (!y && 0 === B.length) return null;
+    let H = (B = B.filter((e) => {
+            if (I && e.id === h.pn.PLAN_SELECT) return !1;
+            let t = e.id !== h.pn.ADD_PAYMENT_STEPS,
+                n = e.id === h.pn.ADD_PAYMENT_STEPS && !U;
+            return !E || t || n;
+        })).find((e) => e.id === F),
+        W = H?.sectionHeaderText?.() ?? H?.label,
+        K = !(null != F && d.M.includes(F)) && null != W && null != F,
+        Y = N && K && F === h.pn.REVIEW,
+        z = v ? "nitro-pink" : "nitro-green",
+        Z = I ? (0, b.DP)() : v ? A.intl.string(A.t.lG6a5x) : A.intl.string(A.t["t9uG/o"]),
+        q = R.kL,
+        $ = r()(R.N1, P.headerGradient);
+    return G
+        ? (0, l.jsx)("div", { className: q, children: (0, l.jsx)(o.h, { color: z, className: $ }) })
+        : (0, l.jsxs)("div", {
+              className: q,
+              children: [
+                  (0, l.jsxs)(o.h, {
+                      color: z,
+                      className: r()($, { [R.s1]: !K }),
+                      children: [
+                          (0, l.jsx)(D, { isTier2: v }),
+                          !t &&
+                              (0, l.jsx)(u.s_, {
+                                  "data-migration-pending": !0,
+                                  hideOnFullscreen: n,
+                                  onClick: i,
+                                  className: R.Ep,
+                              }),
+                          (0, l.jsx)("img", { src: v ? w : O, alt: "", className: Y ? R.i_ : R.kX }),
+                          (0, l.jsxs)("div", {
+                              className: R.FS,
+                              children: [
+                                  I &&
+                                      (0, l.jsx)("div", {
+                                          className: R.$N,
+                                          children: (0, l.jsx)(c.E, { type: "beta", variant: "expressive" }),
+                                      }),
+                                  (0, l.jsx)(a.D, {
+                                      variant: "display-md",
+                                      color: "text-strong",
+                                      className: R.cf,
+                                      children: Z,
+                                  }),
+                              ],
+                          }),
+                      ],
+                  }),
+                  (C || x) && (0, l.jsx)(j, { discountAmount: M }),
+                  K && (0, l.jsx)(k, { isOneStepCheckout: N, headerText: W, step: F, filteredBreadcrumbs: B }),
+              ],
+          });
+};

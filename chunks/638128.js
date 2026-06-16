@@ -1,1 +1,47 @@
-l.d(t,{A:()=>w});var r=l(418781),a=l.n(r),n=l(17928),o=l(506774),s=l(228366),d=l(724066),L=l(916260);let i="SpellcheckStore",c=!0,p=new Set;function u(){o.w.set(i,{enabled:c,learnedWords:p})}class C extends n.Ay.Store{static displayName="SpellcheckStore";initialize(){let e=o.w.get(i);null!=e&&(c=e.enabled,p=new Set(e.learnedWords),(0,L.kv)(c),(0,L.d1)(p)),(0,d.I)(L.Av)}isEnabled(){return c}hasLearnedWord(e){return p.has(e.toLocaleLowerCase())}findLearnedWordIn(e){if(""===e||0===p.size)return null;let t=e.toLocaleLowerCase();for(let e of p)if(RegExp(`(?<![\\p{L}\\p{N}_])${a()(e)}(?![\\p{L}\\p{N}_])`,"u").test(t))return e;return null}}let w=new C(s.h,{SPELLCHECK_TOGGLE(){c=!c,(0,L.kv)(c),u()},SPELLCHECK_LEARN_WORD(e){let{word:t}=e;p.add(t.toLocaleLowerCase()),(0,L.d1)(p),u()},SPELLCHECK_UNLEARN_WORD(e){let{word:t}=e;p.delete(t.toLocaleLowerCase()),(0,L.d1)(p),u()}})
+"use strict";
+n.d(t, { A: () => p });
+var i = n(418781),
+    r = n.n(i),
+    s = n(17928),
+    a = n(506774),
+    o = n(228366),
+    l = n(724066),
+    u = n(916260);
+let c = "SpellcheckStore",
+    d = !0,
+    _ = new Set();
+function h() {
+    a.w.set(c, { enabled: d, learnedWords: _ });
+}
+class f extends s.Ay.Store {
+    static displayName = "SpellcheckStore";
+    initialize() {
+        let e = a.w.get(c);
+        null != e && ((d = e.enabled), (_ = new Set(e.learnedWords)), (0, u.kv)(d), (0, u.d1)(_)), (0, l.I)(u.Av);
+    }
+    isEnabled() {
+        return d;
+    }
+    hasLearnedWord(e) {
+        return _.has(e.toLocaleLowerCase());
+    }
+    findLearnedWordIn(e) {
+        if ("" === e || 0 === _.size) return null;
+        let t = e.toLocaleLowerCase();
+        for (let e of _) if (RegExp(`(?<![\\p{L}\\p{N}_])${r()(e)}(?![\\p{L}\\p{N}_])`, "u").test(t)) return e;
+        return null;
+    }
+}
+let p = new f(o.h, {
+    SPELLCHECK_TOGGLE() {
+        (d = !d), (0, u.kv)(d), h();
+    },
+    SPELLCHECK_LEARN_WORD(e) {
+        let { word: t } = e;
+        _.add(t.toLocaleLowerCase()), (0, u.d1)(_), h();
+    },
+    SPELLCHECK_UNLEARN_WORD(e) {
+        let { word: t } = e;
+        _.delete(t.toLocaleLowerCase()), (0, u.d1)(_), h();
+    },
+});

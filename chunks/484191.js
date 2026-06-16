@@ -1,1 +1,88 @@
-n.d(t,{A:()=>C});var i=n(627968),l=n(64700),a=n(534514),s=n(834730),r=n(821609),o=n(730852),c=n(164617),d=n(47167),u=n(202384),h=n(51758),p=n(141035),m=n(175203),A=n(426660),x=n(806931),g=n(375708),f=n(376460);let C=function(e){let{participants:t,channel:n,hasConnectPermission:C}=e,y=t.filter(x.Xw),E=(0,h.H)(n.guild_id),N=l.useCallback(()=>{E?(0,u.Ze)(n.guild_id,()=>o.default.selectVoiceChannel(n.id)):o.default.selectVoiceChannel(n.id)},[n.id,n.guild_id,E]),j=4===y.length?2:3,v=(0,d.Ay)(n);return(0,i.jsxs)("div",{className:f.kL,children:[(0,i.jsx)(A.A,{}),(0,i.jsx)("div",{className:f.os,style:{maxWidth:168*j},children:y.slice(0,5).map(e=>(0,i.jsx)(m.Ay,{participant:e,channel:n,className:f.Vs,inCall:!0,noVideoRender:!0,popoutType:c.N.NO_POPOUT,width:48},e.id))}),(0,i.jsx)(a.D,{className:f.HA,variant:"heading-xxl/semibold",children:v}),(0,i.jsx)("div",{className:f.Nu,children:(0,i.jsx)(s.E,{color:"text-default",variant:"text-sm/normal",children:0===y.length?g.intl.string(g.t.zSqdrS):1===y.length?g.intl.formatToPlainString(g.t.BUyJIG,{a:(0,p.A)(n,y[0])}):2===y.length?g.intl.formatToPlainString(g.t["dcyZf/"],{a:(0,p.A)(n,y[0]),b:(0,p.A)(n,y[1])}):y.length>2?g.intl.formatToPlainString(g.t["44/Obu"],{a:(0,p.A)(n,y[0]),b:(0,p.A)(n,y[1]),n:y.length-2}):void 0})}),(0,i.jsx)("div",{className:f.PD,children:(0,i.jsx)(r.$,{variant:"overlay-primary",text:C?g.intl.string(g.t["96ANUN"]):g.intl.string(g.t.TVBCKZ),onClick:N,disabled:!C})})]})}
+n.d(t, { A: () => C });
+var i = n(627968),
+    l = n(64700),
+    a = n(534514),
+    s = n(834730),
+    r = n(821609),
+    o = n(730852),
+    c = n(164617),
+    d = n(47167),
+    u = n(202384),
+    h = n(51758),
+    p = n(141035),
+    m = n(175203),
+    A = n(426660),
+    x = n(806931),
+    g = n(375708),
+    f = n(376460);
+let C = function (e) {
+    let { participants: t, channel: n, hasConnectPermission: C } = e,
+        y = t.filter(x.Xw),
+        E = (0, h.H)(n.guild_id),
+        N = l.useCallback(() => {
+            E ? (0, u.Ze)(n.guild_id, () => o.default.selectVoiceChannel(n.id)) : o.default.selectVoiceChannel(n.id);
+        }, [n.id, n.guild_id, E]),
+        j = 4 === y.length ? 2 : 3,
+        v = (0, d.Ay)(n);
+    return (0, i.jsxs)("div", {
+        className: f.kL,
+        children: [
+            (0, i.jsx)(A.A, {}),
+            (0, i.jsx)("div", {
+                className: f.os,
+                style: { maxWidth: 168 * j },
+                children: y
+                    .slice(0, 5)
+                    .map((e) =>
+                        (0, i.jsx)(
+                            m.Ay,
+                            {
+                                participant: e,
+                                channel: n,
+                                className: f.Vs,
+                                inCall: !0,
+                                noVideoRender: !0,
+                                popoutType: c.N.NO_POPOUT,
+                                width: 48,
+                            },
+                            e.id,
+                        ),
+                    ),
+            }),
+            (0, i.jsx)(a.D, { className: f.HA, variant: "heading-xxl/semibold", children: v }),
+            (0, i.jsx)("div", {
+                className: f.Nu,
+                children: (0, i.jsx)(s.E, {
+                    color: "text-default",
+                    variant: "text-sm/normal",
+                    children:
+                        0 === y.length
+                            ? g.intl.string(g.t.zSqdrS)
+                            : 1 === y.length
+                              ? g.intl.formatToPlainString(g.t.BUyJIG, { a: (0, p.A)(n, y[0]) })
+                              : 2 === y.length
+                                ? g.intl.formatToPlainString(g.t["dcyZf/"], {
+                                      a: (0, p.A)(n, y[0]),
+                                      b: (0, p.A)(n, y[1]),
+                                  })
+                                : y.length > 2
+                                  ? g.intl.formatToPlainString(g.t["44/Obu"], {
+                                        a: (0, p.A)(n, y[0]),
+                                        b: (0, p.A)(n, y[1]),
+                                        n: y.length - 2,
+                                    })
+                                  : void 0,
+                }),
+            }),
+            (0, i.jsx)("div", {
+                className: f.PD,
+                children: (0, i.jsx)(r.$, {
+                    variant: "overlay-primary",
+                    text: C ? g.intl.string(g.t["96ANUN"]) : g.intl.string(g.t.TVBCKZ),
+                    onClick: N,
+                    disabled: !C,
+                }),
+            }),
+        ],
+    });
+};

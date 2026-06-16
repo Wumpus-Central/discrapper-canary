@@ -1,1 +1,9 @@
-var i=n(236553);e.exports=function(e,t,n,r){return i(e,function(e,i,s){t(r,e,n(e),s)}),r}
+var i = n(236553);
+e.exports = function (e, t, n, r) {
+    return (
+        i(e, function (e, i, s) {
+            t(r, e, n(e), s);
+        }),
+        r
+    );
+};

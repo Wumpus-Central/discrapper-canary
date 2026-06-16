@@ -1,1 +1,72 @@
-"use strict";n.d(t,{l:()=>f,A:()=>p});var i=n(64700),r=n(17928),s=n(99753),a=n(734057),o=n(543465),l=n(574520);let u=[];var c=n(52133),d=n(290863),_=n(751765),h=n(818348);function f(e,t){let{types:n}=e;return null==n||!!n.has(t.content_type)}function p(e){var t,n,p;let E,m,g,A,I,T,S,{id:y,unrankedEntries:N=!1}=e,{feed:v,filters:C}=(0,r.cf)([s.A],()=>({feed:s.A.getFeed(y),filters:s.A.getFilters()})),R=i.useMemo(()=>{let e=N?v?.unranked_game_entries.map(e=>e.content):v?.entries.map(e=>e.content);return null!=C?e?.filter(e=>f(C,e)):e},[v,C,N]);return t=R,E=(0,r.bG)([a.A],()=>a.A.getPrivateChannelsVersion()),m=(0,r.bG)([a.A],()=>a.A.getMutableDMsByUserIds(),[E]),g=(0,r.bG)([o.Ay],()=>o.Ay.getMutedChannels(null)),A=i.useMemo(()=>{let e=new Set;for(let t in m){let n=m[t];null!=n&&g.has(n)&&e.add(t)}return e},[m,g]),n=R=i.useMemo(()=>t?.filter(e=>{for(let t of e.participants)if(A.has(t))return!1;return!0}),[t,A]),p=R=(0,r.yK)([l.A],()=>null==n?u:n.filter(l.A.canRenderContent),[n]),I=i.useRef(new Set),T=i.useMemo(()=>{let e=new Set(p?.map(e=>e.author_id));return(0,c.v)([...I.current],[...e])||(I.current=e),I.current},[p]),S=(0,r.yK)([d.A],()=>Array.from(T).filter(e=>{let t=d.A.getStatus(e);return null!==t&&[h.cl.OFFLINE,h.cl.INVISIBLE].includes(t)})),R=i.useMemo(()=>{let e=new Set(S);return p?.filter(t=>!(0,_.JM)(t)||!e.has(t.author_id))},[p,S])}
+"use strict";
+n.d(t, { l: () => f, A: () => p });
+var i = n(64700),
+    r = n(17928),
+    s = n(99753),
+    a = n(734057),
+    o = n(543465),
+    l = n(352139);
+let u = [];
+var c = n(52133),
+    d = n(290863),
+    _ = n(751765),
+    h = n(818348);
+function f(e, t) {
+    let { types: n } = e;
+    return null == n || !!n.has(t.content_type);
+}
+function p(e) {
+    var t, n, p;
+    let E,
+        m,
+        g,
+        A,
+        I,
+        T,
+        S,
+        { id: y, unrankedEntries: C = !1 } = e,
+        { feed: N, filters: v } = (0, r.cf)([s.A], () => ({ feed: s.A.getFeed(y), filters: s.A.getFilters() })),
+        R = i.useMemo(() => {
+            let e = C ? N?.unranked_game_entries.map((e) => e.content) : N?.entries.map((e) => e.content);
+            return null != v ? e?.filter((e) => f(v, e)) : e;
+        }, [N, v, C]);
+    return (
+        (t = R),
+        (E = (0, r.bG)([a.A], () => a.A.getPrivateChannelsVersion())),
+        (m = (0, r.bG)([a.A], () => a.A.getMutableDMsByUserIds(), [E])),
+        (g = (0, r.bG)([o.Ay], () => o.Ay.getMutedChannels(null))),
+        (A = i.useMemo(() => {
+            let e = new Set();
+            for (let t in m) {
+                let n = m[t];
+                null != n && g.has(n) && e.add(t);
+            }
+            return e;
+        }, [m, g])),
+        (n = R =
+            i.useMemo(
+                () =>
+                    t?.filter((e) => {
+                        for (let t of e.participants) if (A.has(t)) return !1;
+                        return !0;
+                    }),
+                [t, A],
+            )),
+        (p = R = (0, r.yK)([l.A], () => (null == n ? u : n.filter(l.A.canRenderContent)), [n])),
+        (I = i.useRef(new Set())),
+        (T = i.useMemo(() => {
+            let e = new Set(p?.map((e) => e.author_id));
+            return (0, c.v)([...I.current], [...e]) || (I.current = e), I.current;
+        }, [p])),
+        (S = (0, r.yK)([d.A], () =>
+            Array.from(T).filter((e) => {
+                let t = d.A.getStatus(e);
+                return null !== t && [h.cl.OFFLINE, h.cl.INVISIBLE].includes(t);
+            }),
+        )),
+        (R = i.useMemo(() => {
+            let e = new Set(S);
+            return p?.filter((t) => !(0, _.JM)(t) || !e.has(t.author_id));
+        }, [p, S]))
+    );
+}

@@ -1,1 +1,33 @@
-"use strict";n.d(t,{XF:()=>r,Xq:()=>a,up:()=>o});var i=n(375708);let r=1024,s={useKibibytes:!1,showDecimalForGB:!0,useSpace:!0};function a(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:s,n=t.useKibibytes?1024:1e3,r=t.useKibibytes?1024:1e3,a=Math.ceil(e/n);if(a<r)return t.useSpace?i.intl.formatToPlainString(i.t.cS889N,{size:a}):i.intl.formatToPlainString(i.t.pIn7Af,{size:a});let o=a/r;return o=t.showDecimalForGB?Math.round(10*o)/10:Math.round(o),t.useSpace?i.intl.formatToPlainString(i.t.yhEXX7,{size:o}):i.intl.formatToPlainString(i.t.TbMX9D,{size:o})}function o(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:s,n=t.useKibibytes?r:1e3,o=t.useKibibytes?1024:1e3,l=e/n;return l/o>=1?a(l,t):t.useSpace?i.intl.formatToPlainString(i.t.bTzRR6,{size:Math.ceil(l)}):i.intl.formatToPlainString(i.t.kEk9pr,{size:Math.ceil(l)})}
+"use strict";
+n.d(t, { XF: () => r, Xq: () => a, up: () => o });
+var i = n(375708);
+let r = 1024,
+    s = { useKibibytes: !1, showDecimalForGB: !0, useSpace: !0 };
+function a(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s,
+        n = t.useKibibytes ? 1024 : 1e3,
+        r = t.useKibibytes ? 1024 : 1e3,
+        a = Math.ceil(e / n);
+    if (a < r)
+        return t.useSpace
+            ? i.intl.formatToPlainString(i.t.cS889N, { size: a })
+            : i.intl.formatToPlainString(i.t.pIn7Af, { size: a });
+    let o = a / r;
+    return (
+        (o = t.showDecimalForGB ? Math.round(10 * o) / 10 : Math.round(o)),
+        t.useSpace
+            ? i.intl.formatToPlainString(i.t.yhEXX7, { size: o })
+            : i.intl.formatToPlainString(i.t.TbMX9D, { size: o })
+    );
+}
+function o(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s,
+        n = t.useKibibytes ? r : 1e3,
+        o = t.useKibibytes ? 1024 : 1e3,
+        l = e / n;
+    return l / o >= 1
+        ? a(l, t)
+        : t.useSpace
+          ? i.intl.formatToPlainString(i.t.bTzRR6, { size: Math.ceil(l) })
+          : i.intl.formatToPlainString(i.t.kEk9pr, { size: Math.ceil(l) });
+}

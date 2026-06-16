@@ -1,1 +1,1 @@
-o.exports={R:"tooltipContainer__7bebc",A:"tooltipWordmarkContainer__7bebc"}
+e.exports = { R: "tooltipContainer__7bebc", A: "tooltipWordmarkContainer__7bebc" };

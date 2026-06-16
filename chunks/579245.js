@@ -1,1 +1,60 @@
-a.d(n,{A:()=>j,n:()=>g});var s=a(627968),l=a(64700),t=a(503698),i=a.n(t),r=a(834730),c=a(534514),m=a(97808),o=a(854627),d=a(286320),u=a(778712),h=a(375708),x=a(727072);function j(e){let{smallerText:n,className:a,textColor:t,isApplicationHome:m,enablePremiumBrandRefresh:o}=e,j=(0,d.b)().slice(0,3).reverse(),p=j.map((e,n)=>(0,s.jsx)(g,{affinity:e,applyMask:n!==j.length-1,size:o?u._3.SIZE_24:u._3.SIZE_32},e.id)),f=e=>null!=e.globalName?e.globalName:e.username,v=l.useMemo(()=>3===j.length?h.intl.formatToPlainString(h.t.c7ETJH,{username:f(j[2])}):2===j.length?h.intl.formatToPlainString(h.t["st8Rh/"],{username:f(j[1]),otherUsername:f(j[0])}):1===j.length?h.intl.formatToPlainString(h.t.dpjXPL,{username:f(j[0])}):"",[j]);return 0===j.length?null:(0,s.jsxs)("div",{className:i()(o?x.bD:x.kL,a,{[x.gr]:!o&&m}),children:[(0,s.jsx)("div",{className:x.zc,children:p}),(0,s.jsx)("div",{className:x.FS,children:(0,s.jsx)(function(){return o?(0,s.jsx)(r.E,{variant:"text-sm/medium",color:t,children:v}):n||m?(0,s.jsx)(r.E,{variant:m?"text-sm/normal":"text-lg/medium",color:t,children:v}):(0,s.jsx)(c.D,{variant:"heading-xl/medium",color:t,children:v})},{})})]})}function g(e){let{affinity:n,applyMask:a,size:l}=e,{avatarSrc:t,eventHandlers:r}=(0,o.A)({userId:n?.id,size:l,animateOnHover:!0});return(0,s.jsx)(m.eu,{className:i()(x.Kk,{[x.dK]:a}),src:t,"aria-label":n.username,size:l,...r})}
+"use strict";
+n.d(t, { A: () => p, n: () => E });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(834730),
+    l = n(534514),
+    u = n(97808),
+    c = n(854627),
+    d = n(286320),
+    _ = n(778712),
+    h = n(375708),
+    f = n(727072);
+function p(e) {
+    let { smallerText: t, className: n, textColor: s, isApplicationHome: u, enablePremiumBrandRefresh: c } = e,
+        p = (0, d.b)().slice(0, 3).reverse(),
+        m = p.map((e, t) =>
+            (0, i.jsx)(E, { affinity: e, applyMask: t !== p.length - 1, size: c ? _._3.SIZE_24 : _._3.SIZE_32 }, e.id),
+        ),
+        g = (e) => (null != e.globalName ? e.globalName : e.username),
+        A = r.useMemo(
+            () =>
+                3 === p.length
+                    ? h.intl.formatToPlainString(h.t.c7ETJH, { username: g(p[2]) })
+                    : 2 === p.length
+                      ? h.intl.formatToPlainString(h.t["st8Rh/"], { username: g(p[1]), otherUsername: g(p[0]) })
+                      : 1 === p.length
+                        ? h.intl.formatToPlainString(h.t.dpjXPL, { username: g(p[0]) })
+                        : "",
+            [p],
+        );
+    return 0 === p.length
+        ? null
+        : (0, i.jsxs)("div", {
+              className: a()(c ? f.bD : f.kL, n, { [f.gr]: !c && u }),
+              children: [
+                  (0, i.jsx)("div", { className: f.zc, children: m }),
+                  (0, i.jsx)("div", {
+                      className: f.FS,
+                      children: (0, i.jsx)(function () {
+                          return c
+                              ? (0, i.jsx)(o.E, { variant: "text-sm/medium", color: s, children: A })
+                              : t || u
+                                ? (0, i.jsx)(o.E, {
+                                      variant: u ? "text-sm/normal" : "text-lg/medium",
+                                      color: s,
+                                      children: A,
+                                  })
+                                : (0, i.jsx)(l.D, { variant: "heading-xl/medium", color: s, children: A });
+                      }, {}),
+                  }),
+              ],
+          });
+}
+function E(e) {
+    let { affinity: t, applyMask: n, size: r } = e,
+        { avatarSrc: s, eventHandlers: o } = (0, c.A)({ userId: t?.id, size: r, animateOnHover: !0 });
+    return (0, i.jsx)(u.eu, { className: a()(f.Kk, { [f.dK]: n }), src: s, "aria-label": t.username, size: r, ...o });
+}

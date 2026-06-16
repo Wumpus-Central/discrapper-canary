@@ -1,1 +1,105 @@
-"use strict";n.d(t,{A:()=>a,Y:()=>s});var i=n(315069),r=n(874638);class s extends i.A{total;subtotal;currency;tax;invoiceItems;static createInvoiceFromOrder(e){let t=e.billing_facet,n=null!=t?t.invoice_preview:null;if(null==n)return null;let i=n.line_items.map(t=>{let i=e.order_line_items.find(e=>e.id===t.ref_order_line_item_id);return null==i?null:{skuId:i.sku_id,unitPrice:{amount:t.unit_price,currency:n.currency},quantity:t.quantity}}).filter(e=>null!=e);return new s({total:n.total,subtotal:n.subtotal,tax:n.tax,currency:n.currency,invoiceItems:i})}constructor(e){super(),this.total=e.total,this.subtotal=e.subtotal,this.tax=e.tax,this.currency=e.currency,this.invoiceItems=e.invoiceItems??[]}getInvoicePreviewLineItemForSku(e){return this.invoiceItems.find(t=>t.skuId===e)??null}getInvoicePreviewLineItemUnitPriceForSku(e){let t=this.getInvoicePreviewLineItemForSku(e);return null==t||null==t.unitPrice?null:t.unitPrice.amount}}class a extends s{id;invoiceItems;taxInclusive;subscriptionPeriodStart;subscriptionPeriodEnd;status;orbsReward;checkoutContext;static createInvoiceFromServer(e){return new a({id:e.id,invoiceItems:e.invoice_items?.map(r.c),total:e.total,subtotal:e.subtotal,currency:e.currency,tax:e.tax,taxInclusive:e.tax_inclusive,subscriptionPeriodStart:new Date(e.subscription_period_start),subscriptionPeriodEnd:new Date(e.subscription_period_end),status:e.status,orbsReward:e.orbs_reward,checkoutContext:e.checkout_context})}static createFromOTPPreview(e){return new a({id:"",invoiceItems:e.invoice_items?.map(r.c),total:e.amount,subtotal:e.subtotal,currency:e.currency,tax:e.tax,taxInclusive:e.tax_inclusive,subscriptionPeriodStart:new Date(0),subscriptionPeriodEnd:new Date(0),orbsReward:e.orbs_reward,checkoutContext:e.checkout_context})}constructor(e){super(e),this.id=e.id,this.invoiceItems=e.invoiceItems??[],this.taxInclusive=e.taxInclusive,this.subscriptionPeriodStart=e.subscriptionPeriodStart,this.subscriptionPeriodEnd=e.subscriptionPeriodEnd,this.status=e.status,this.orbsReward=e.orbsReward,this.checkoutContext=e.checkoutContext}findInvoiceItemByPlanId(e){return this.invoiceItems.find(t=>t.subscriptionPlanId===e)??null}getDiscountIdIfExists(){let e=this.invoiceItems.find(e=>e.discounts.length>0);if(null==e||0===e.discounts.length)return;let t=e.discounts[0];if(null!=t)return t.discount_id}}
+"use strict";
+n.d(t, { A: () => a, Y: () => s });
+var i = n(315069),
+    r = n(874638);
+class s extends i.A {
+    total;
+    subtotal;
+    currency;
+    tax;
+    invoiceItems;
+    static createInvoiceFromOrder(e) {
+        let t = e.billing_facet,
+            n = null != t ? t.invoice_preview : null;
+        if (null == n) return null;
+        let i = n.line_items
+            .map((t) => {
+                let i = e.order_line_items.find((e) => e.id === t.ref_order_line_item_id);
+                return null == i
+                    ? null
+                    : {
+                          skuId: i.sku_id,
+                          unitPrice: { amount: t.unit_price, currency: n.currency },
+                          quantity: t.quantity,
+                      };
+            })
+            .filter((e) => null != e);
+        return new s({ total: n.total, subtotal: n.subtotal, tax: n.tax, currency: n.currency, invoiceItems: i });
+    }
+    constructor(e) {
+        super(),
+            (this.total = e.total),
+            (this.subtotal = e.subtotal),
+            (this.tax = e.tax),
+            (this.currency = e.currency),
+            (this.invoiceItems = e.invoiceItems ?? []);
+    }
+    getInvoicePreviewLineItemForSku(e) {
+        return this.invoiceItems.find((t) => t.skuId === e) ?? null;
+    }
+    getInvoicePreviewLineItemUnitPriceForSku(e) {
+        let t = this.getInvoicePreviewLineItemForSku(e);
+        return null == t || null == t.unitPrice ? null : t.unitPrice.amount;
+    }
+}
+class a extends s {
+    id;
+    invoiceItems;
+    taxInclusive;
+    subscriptionPeriodStart;
+    subscriptionPeriodEnd;
+    status;
+    orbsReward;
+    checkoutContext;
+    static createInvoiceFromServer(e) {
+        return new a({
+            id: e.id,
+            invoiceItems: e.invoice_items?.map(r.c),
+            total: e.total,
+            subtotal: e.subtotal,
+            currency: e.currency,
+            tax: e.tax,
+            taxInclusive: e.tax_inclusive,
+            subscriptionPeriodStart: new Date(e.subscription_period_start),
+            subscriptionPeriodEnd: new Date(e.subscription_period_end),
+            status: e.status,
+            orbsReward: e.orbs_reward,
+            checkoutContext: e.checkout_context,
+        });
+    }
+    static createFromOTPPreview(e) {
+        return new a({
+            id: "",
+            invoiceItems: e.invoice_items?.map(r.c),
+            total: e.amount,
+            subtotal: e.subtotal,
+            currency: e.currency,
+            tax: e.tax,
+            taxInclusive: e.tax_inclusive,
+            subscriptionPeriodStart: new Date(0),
+            subscriptionPeriodEnd: new Date(0),
+            orbsReward: e.orbs_reward,
+            checkoutContext: e.checkout_context,
+        });
+    }
+    constructor(e) {
+        super(e),
+            (this.id = e.id),
+            (this.invoiceItems = e.invoiceItems ?? []),
+            (this.taxInclusive = e.taxInclusive),
+            (this.subscriptionPeriodStart = e.subscriptionPeriodStart),
+            (this.subscriptionPeriodEnd = e.subscriptionPeriodEnd),
+            (this.status = e.status),
+            (this.orbsReward = e.orbsReward),
+            (this.checkoutContext = e.checkoutContext);
+    }
+    findInvoiceItemByPlanId(e) {
+        return this.invoiceItems.find((t) => t.subscriptionPlanId === e) ?? null;
+    }
+    getDiscountIdIfExists() {
+        let e = this.invoiceItems.find((e) => e.discounts.length > 0);
+        if (null == e || 0 === e.discounts.length) return;
+        let t = e.discounts[0];
+        if (null != t) return t.discount_id;
+    }
+}

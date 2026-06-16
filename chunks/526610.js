@@ -1,1 +1,1 @@
-e.exports={V:"tile_eaee1d"}
+_.exports = { V: "tile_eaee1d" };

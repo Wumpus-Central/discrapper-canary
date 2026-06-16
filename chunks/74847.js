@@ -1,1 +1,10 @@
-a.d(t,{t:()=>r});var s=a(734057),n=a(576705),i=a(652215);function r(e){let t=s.A.getChannel(e),a=t?.isPrivate(),r=t?.isForumChannel();return a||n.A.can(i.xBc.ATTACH_FILES,t)&&n.A.can(i.xBc.SEND_MESSAGES,t)&&!r}
+a.d(t, { t: () => r });
+var s = a(734057),
+    n = a(576705),
+    i = a(652215);
+function r(e) {
+    let t = s.A.getChannel(e),
+        a = t?.isPrivate(),
+        r = t?.isForumChannel();
+    return a || (n.A.can(i.xBc.ATTACH_FILES, t) && n.A.can(i.xBc.SEND_MESSAGES, t) && !r);
+}

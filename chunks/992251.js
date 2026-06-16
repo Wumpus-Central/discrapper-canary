@@ -1,1 +1,15 @@
-"use strict";n.d(t,{o:()=>l});var i=n(627968),r=n(64700),s=n(460890),a=n(834730),o=n(662126);function l(e){let{message:t}=e,{i18n:n}=r.useContext(s.VO);return(0,i.jsx)("div",{className:o.p,children:(0,i.jsx)(a.E,{variant:"text-md/medium",className:o.q,children:t??n.LISTBOX_EMPTY_STATE})})}
+"use strict";
+n.d(t, { o: () => l });
+var i = n(627968),
+    r = n(64700),
+    s = n(460890),
+    a = n(834730),
+    o = n(662126);
+function l(e) {
+    let { message: t } = e,
+        { i18n: n } = r.useContext(s.VO);
+    return (0, i.jsx)("div", {
+        className: o.p,
+        children: (0, i.jsx)(a.E, { variant: "text-md/medium", className: o.q, children: t ?? n.LISTBOX_EMPTY_STATE }),
+    });
+}

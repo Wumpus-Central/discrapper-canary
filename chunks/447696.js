@@ -1,1 +1,27 @@
-i.d(e,{default:()=>d});var n=i(627968);i(64700);var r=i(612479),o=i(521732),s=i(670455),a=i(375708);let h=[o.tk.OTHER];function d(t){let{transitionState:e,startRating:i,onClose:d,onSubmit:l}=t;return(0,n.jsx)(r.A,{modalType:"summary",header:a.intl.string(a.t.hghcMh),body:a.intl.string(a.t.QFU785),problemTitle:a.intl.string(a.t.CtiHPm),onSubmit:l,onClose:d,ratingOptions:[s.P0.GOOD,s.P0.BAD],ratingEmojiKind:"thumb",transitionState:e,problems:(0,o.j0)(),freeformNeededProblems:h,otherKey:o.tk.OTHER,startRating:i,hideDontShowAgainCheckbox:!0})}
+i.d(e, { default: () => d });
+var n = i(627968);
+i(64700);
+var r = i(612479),
+    o = i(521732),
+    s = i(670455),
+    a = i(375708);
+let h = [o.tk.OTHER];
+function d(t) {
+    let { transitionState: e, startRating: i, onClose: d, onSubmit: l } = t;
+    return (0, n.jsx)(r.A, {
+        modalType: "summary",
+        header: a.intl.string(a.t.hghcMh),
+        body: a.intl.string(a.t.QFU785),
+        problemTitle: a.intl.string(a.t.CtiHPm),
+        onSubmit: l,
+        onClose: d,
+        ratingOptions: [s.P0.GOOD, s.P0.BAD],
+        ratingEmojiKind: "thumb",
+        transitionState: e,
+        problems: (0, o.j0)(),
+        freeformNeededProblems: h,
+        otherKey: o.tk.OTHER,
+        startRating: i,
+        hideDontShowAgainCheckbox: !0,
+    });
+}

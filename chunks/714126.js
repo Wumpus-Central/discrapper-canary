@@ -1,1 +1,23 @@
-n.d(e,{W:()=>c});var s=n(627968),t=n(64700),a=n(834730),l=n(723680);class c extends t.PureComponent{state={error:null,info:null};componentDidCatch(r,e){console.error("Error rendering component (LocalErrorBoundary): ",r),this.setState({error:r,info:e})}render(){return null!=this.state.error?(0,s.jsx)("div",{children:(0,s.jsx)(a.E,{color:"text-feedback-critical",variant:"text-md/normal",className:l.cW,children:"Error rendering component. Check console for more information on the error."})}):this.props.children}}
+n.d(e, { W: () => c });
+var s = n(627968),
+    t = n(64700),
+    a = n(834730),
+    l = n(723680);
+class c extends t.PureComponent {
+    state = { error: null, info: null };
+    componentDidCatch(r, e) {
+        console.error("Error rendering component (LocalErrorBoundary): ", r), this.setState({ error: r, info: e });
+    }
+    render() {
+        return null != this.state.error
+            ? (0, s.jsx)("div", {
+                  children: (0, s.jsx)(a.E, {
+                      color: "text-feedback-critical",
+                      variant: "text-md/normal",
+                      className: l.cW,
+                      children: "Error rendering component. Check console for more information on the error.",
+                  }),
+              })
+            : this.props.children;
+    }
+}

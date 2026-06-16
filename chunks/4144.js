@@ -1,1 +1,9 @@
-let i=n(74509);e.exports=(e,t,n)=>{try{t=new i(t,n)}catch(e){return!1}return t.test(e)}
+let i = n(74509);
+e.exports = (e, t, n) => {
+    try {
+        t = new i(t, n);
+    } catch (e) {
+        return !1;
+    }
+    return t.test(e);
+};

@@ -1,1 +1,7 @@
-"use strict";n.d(t,{m:()=>r});var i,r=((i={})[i.TRENDING_TYPE_UNSPECIFIED=0]="TRENDING_TYPE_UNSPECIFIED",i[i.GLOBAL=1]="GLOBAL",i)
+"use strict";
+n.d(t, { m: () => r });
+var i,
+    r =
+        (((i = {})[(i.TRENDING_TYPE_UNSPECIFIED = 0)] = "TRENDING_TYPE_UNSPECIFIED"),
+        (i[(i.GLOBAL = 1)] = "GLOBAL"),
+        i);

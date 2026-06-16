@@ -1,1 +1,83 @@
-s.d(i,{default:()=>g});var a=s(627968),n=s(64700),r=s(935462),e=s(534514),l=s(475358),d=s(834730),c=s(821609),o=s(675704),x=s(28647),h=s(915089),m=s(975571),j=s(955572),u=s(652215),p=s(375708),b=s(262476);function g(t){let{transitionState:i,onClose:s}=t,g=(0,h.GV)();return n.useEffect(()=>{j.Er()},[]),(0,a.jsxs)(r.EO,{transitionState:i,role:"alertdialog","aria-labelledby":g,parentComponent:"KeyboardNavigationModal",children:[(0,a.jsxs)(r.$m,{className:b.Qs,children:[(0,a.jsx)(e.D,{variant:"heading-xl/semibold",id:g,className:b.wx,children:p.intl.format(p.t.V4fxrp,{tab:(t,i)=>(0,a.jsx)(l.e,{shortcut:"tab",className:b.Wj},i)})}),(0,a.jsx)(d.E,{variant:"text-md/normal",children:p.intl.string(p.t["oQA/OB"])}),(0,a.jsxs)("ul",{className:b.Xq,children:[(0,a.jsxs)("li",{children:[(0,a.jsx)(l.e,{shortcut:x.z.binds["0"]}),(0,a.jsx)(d.E,{variant:"text-md/normal",children:p.intl.string(p.t["43Qn2r"])})]}),(0,a.jsxs)("li",{children:[(0,a.jsx)(l.e,{shortcut:o.R.binds["0"]}),(0,a.jsx)(d.E,{variant:"text-md/normal",children:p.intl.string(p.t.zJg4FY)})]})]}),(0,a.jsx)(d.E,{variant:"text-md/normal",children:p.intl.format(p.t.EWFVSW,{link:m.A.getArticleURL(u.MVz.KEYBOARD_NAVIGATION)})})]}),(0,a.jsx)(r.jl,{children:(0,a.jsx)(c.$,{variant:"primary",size:"sm",text:p.intl.string(p.t.BddRzS),onClick:s,autoFocus:!0})})]})}
+s.d(i, { default: () => g });
+var a = s(627968),
+    n = s(64700),
+    r = s(935462),
+    e = s(534514),
+    l = s(475358),
+    d = s(834730),
+    c = s(821609),
+    o = s(675704),
+    x = s(28647),
+    h = s(915089),
+    m = s(975571),
+    j = s(955572),
+    u = s(652215),
+    p = s(375708),
+    b = s(262476);
+function g(t) {
+    let { transitionState: i, onClose: s } = t,
+        g = (0, h.GV)();
+    return (
+        n.useEffect(() => {
+            j.Er();
+        }, []),
+        (0, a.jsxs)(r.EO, {
+            transitionState: i,
+            role: "alertdialog",
+            "aria-labelledby": g,
+            parentComponent: "KeyboardNavigationModal",
+            children: [
+                (0, a.jsxs)(r.$m, {
+                    className: b.Qs,
+                    children: [
+                        (0, a.jsx)(e.D, {
+                            variant: "heading-xl/semibold",
+                            id: g,
+                            className: b.wx,
+                            children: p.intl.format(p.t.V4fxrp, {
+                                tab: (t, i) => (0, a.jsx)(l.e, { shortcut: "tab", className: b.Wj }, i),
+                            }),
+                        }),
+                        (0, a.jsx)(d.E, { variant: "text-md/normal", children: p.intl.string(p.t["oQA/OB"]) }),
+                        (0, a.jsxs)("ul", {
+                            className: b.Xq,
+                            children: [
+                                (0, a.jsxs)("li", {
+                                    children: [
+                                        (0, a.jsx)(l.e, { shortcut: x.z.binds["0"] }),
+                                        (0, a.jsx)(d.E, {
+                                            variant: "text-md/normal",
+                                            children: p.intl.string(p.t["43Qn2r"]),
+                                        }),
+                                    ],
+                                }),
+                                (0, a.jsxs)("li", {
+                                    children: [
+                                        (0, a.jsx)(l.e, { shortcut: o.R.binds["0"] }),
+                                        (0, a.jsx)(d.E, {
+                                            variant: "text-md/normal",
+                                            children: p.intl.string(p.t.zJg4FY),
+                                        }),
+                                    ],
+                                }),
+                            ],
+                        }),
+                        (0, a.jsx)(d.E, {
+                            variant: "text-md/normal",
+                            children: p.intl.format(p.t.EWFVSW, { link: m.A.getArticleURL(u.MVz.KEYBOARD_NAVIGATION) }),
+                        }),
+                    ],
+                }),
+                (0, a.jsx)(r.jl, {
+                    children: (0, a.jsx)(c.$, {
+                        variant: "primary",
+                        size: "sm",
+                        text: p.intl.string(p.t.BddRzS),
+                        onClick: s,
+                        autoFocus: !0,
+                    }),
+                }),
+            ],
+        })
+    );
+}

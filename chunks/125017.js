@@ -1,1 +1,8 @@
-n.d(e,{_:()=>i});function i(t){if(null==t||null==t.party||null==t.party.size||t.party.size.length<2)return{partySize:-1,maxPartySize:-1};let[e,n]=t.party.size;return{partySize:e,maxPartySize:n}}
+"use strict";
+function i(e) {
+    if (null == e || null == e.party || null == e.party.size || e.party.size.length < 2)
+        return { partySize: -1, maxPartySize: -1 };
+    let [t, n] = e.party.size;
+    return { partySize: t, maxPartySize: n };
+}
+n.d(t, { _: () => i });

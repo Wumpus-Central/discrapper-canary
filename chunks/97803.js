@@ -1,1 +1,1 @@
-e.exports={p:"currencyWrapper__054b0"}
+r.exports = { p: "currencyWrapper__054b0" };

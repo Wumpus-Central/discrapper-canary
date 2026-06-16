@@ -1,1 +1,1 @@
-_.exports={o:"toast_cbb248"}
+_.exports = { o: "toast_cbb248" };

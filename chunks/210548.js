@@ -1,1 +1,1 @@
-e.exports={q:"rowContainer__8a920"}
+_.exports = { q: "rowContainer__8a920" };

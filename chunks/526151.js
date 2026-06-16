@@ -1,1 +1,64 @@
-"use strict";n.d(t,{Oe:()=>p,mf:()=>m});var i=n(627968),r=n(64700),s=n(17928),a=n(444927),o=n(211159),l=n(61299),u=n(178368),c=n(295405),d=n(166403),_=n(786300),h=n(473145);let[f,p,E]=(0,_.A)();function m(e){let{initialNumGuildBoostsToPurchase:t,disablePremiumUpsell:n=!1,closeGuildPerksModal:_,children:p,guildId:E,analyticsLocation:m,analyticsSourceLocation:g,applicationId:A,intent:I,onSubscribeComplete:T}=e,[S,y]=r.useState(t),[C,N]=r.useState(null),[v,R]=r.useState([]),[O,b]=r.useState(!0),D=(0,a.A)(()=>Date.now()),L=(0,a.A)(()=>(0,h.D$)(u.A.boostSlots).length),w=(0,o.t4)(e=>e.activeSubscription),M=(0,s.bG)([d.A],()=>d.A.hasFetchedSubscriptions()),P=(0,s.bG)([c.A],()=>c.A.defaultPaymentSourceId),x=null!=w?w.paymentSourceId:null,k=(0,l._V)(null!=x?x:M?P:null);return(0,i.jsx)(f.Provider,{value:{numGuildBoostsToPurchase:S,setNumGuildBoostsToPurchase:y,disablePremiumUpsell:n,closeGuildPerksModal:_,guildId:E,currency:C,setCurrency:N,currencies:v,setCurrencies:R,paymentModalArgs:k,premiumSubscriptionPaymentSourceId:x,analyticsLocation:m,analyticsSourceLocation:g,forceDisableSubmitButton:O,setForceDisableSubmitButton:b,applicationId:A,intent:I,onSubscribeComplete:T,flowStartTime:D,existingAvailableSlotCount:L},children:p})}
+"use strict";
+n.d(t, { Oe: () => p, mf: () => m });
+var i = n(627968),
+    r = n(64700),
+    s = n(17928),
+    a = n(444927),
+    o = n(211159),
+    l = n(61299),
+    u = n(178368),
+    c = n(295405),
+    d = n(166403),
+    _ = n(786300),
+    h = n(473145);
+let [f, p, E] = (0, _.A)();
+function m(e) {
+    let {
+            initialNumGuildBoostsToPurchase: t,
+            disablePremiumUpsell: n = !1,
+            closeGuildPerksModal: _,
+            children: p,
+            guildId: E,
+            analyticsLocation: m,
+            analyticsSourceLocation: g,
+            applicationId: A,
+            intent: I,
+            onSubscribeComplete: T,
+        } = e,
+        [S, y] = r.useState(t),
+        [C, N] = r.useState(null),
+        [v, R] = r.useState([]),
+        [O, b] = r.useState(!0),
+        D = (0, a.A)(() => Date.now()),
+        L = (0, a.A)(() => (0, h.D$)(u.A.boostSlots).length),
+        w = (0, o.t4)((e) => e.activeSubscription),
+        M = (0, s.bG)([d.A], () => d.A.hasFetchedSubscriptions()),
+        P = (0, s.bG)([c.A], () => c.A.defaultPaymentSourceId),
+        x = null != w ? w.paymentSourceId : null,
+        k = (0, l._V)(null != x ? x : M ? P : null);
+    return (0, i.jsx)(f.Provider, {
+        value: {
+            numGuildBoostsToPurchase: S,
+            setNumGuildBoostsToPurchase: y,
+            disablePremiumUpsell: n,
+            closeGuildPerksModal: _,
+            guildId: E,
+            currency: C,
+            setCurrency: N,
+            currencies: v,
+            setCurrencies: R,
+            paymentModalArgs: k,
+            premiumSubscriptionPaymentSourceId: x,
+            analyticsLocation: m,
+            analyticsSourceLocation: g,
+            forceDisableSubmitButton: O,
+            setForceDisableSubmitButton: b,
+            applicationId: A,
+            intent: I,
+            onSubscribeComplete: T,
+            flowStartTime: D,
+            existingAvailableSlotCount: L,
+        },
+        children: p,
+    });
+}

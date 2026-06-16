@@ -1,1 +1,7 @@
-"use strict";n.r(t),n.d(t,{default:()=>s});var i=n(29583),r=n(618027);function s(e){return(0,r.A)(1,arguments),Math.floor((0,i.default)(e).getMonth()/3)+1}
+"use strict";
+n.r(t), n.d(t, { default: () => s });
+var i = n(29583),
+    r = n(618027);
+function s(e) {
+    return (0, r.A)(1, arguments), Math.floor((0, i.default)(e).getMonth() / 3) + 1;
+}

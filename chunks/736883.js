@@ -1,1 +1,1 @@
-e.exports=t(40073)
+e.exports = t(40073);

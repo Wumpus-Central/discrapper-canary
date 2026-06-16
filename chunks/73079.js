@@ -1,1 +1,159 @@
-"use strict";n.d(t,{A:()=>y});var l=n(627968),i=n(64700),r=n(503698),s=n.n(r),a=n(17928),o=n(821609),u=n(289873),c=n(452027),d=n(721101),m=n(405139),h=n(626584),p=n(812745),f=n(192087),g=n(723702),E=n(652215),A=n(375708),C=n(998460),x=n(653307);let I=new h.A("ChoosePaymentSourceType"),_={[E.hes.CARD]:p.Ay.Types.UNKNOWN,[E.hes.PAYPAL]:p.Ay.Types.PAYPAL,[E.hes.SOFORT]:p.Ay.Types.SOFORT,[E.hes.GIROPAY]:p.Ay.Types.GIROPAY,[E.hes.PRZELEWY24]:p.Ay.Types.PRZELEWY24,[E.hes.PAYSAFE_CARD]:p.Ay.Types.PAYSAFECARD,[E.hes.GCASH]:p.Ay.Types.GCASH,[E.hes.GRABPAY_MY]:p.Ay.Types.GRABPAY,[E.hes.MOMO_WALLET]:p.Ay.Types.MOMO_WALLET,[E.hes.VENMO]:p.Ay.Types.VENMO,[E.hes.KAKAOPAY]:p.Ay.Types.KAKAOPAY,[E.hes.GOPAY_WALLET]:p.Ay.Types.GOPAY_WALLET,[E.hes.BANCONTACT]:p.Ay.Types.BANCONTACT,[E.hes.EPS]:p.Ay.Types.EPS,[E.hes.IDEAL]:p.Ay.Types.IDEAL,[E.hes.CASH_APP]:p.Ay.Types.CASH_APP};class S extends i.PureComponent{constructor(e){super(e),this.state={applePayLoaded:!1,googlePayLoaded:!1}}componentDidMount(){(this.props.paymentRequestWallets??[]).length>0&&setTimeout(()=>{this.considerPaymentRequestWalletsLoaded()},1e3)}considerPaymentRequestWalletsLoaded(){let e=this.props.paymentRequestWallets??[];if(0===e.length||!this.arePaymentRequestWalletsLoading())return;I.warn(`Payment request wallets failed to load in time: ${e.join(", ")}. Max time allowed: 1000 ms`);let t=e.reduce((e,t)=>({...e,[`${t}Loaded`]:!0}),{});this.setState(t)}arePaymentRequestWalletsLoading(){if((0,g.isDesktop)())return!1;let e=this.props.paymentRequestWallets??[];if(0===e.length)return!1;for(let t of e)if(!this.state[`${t}Loaded`])return!0;return!1}createPaymentButtons(e){return e.map((e,t)=>{let n=_[e],i=f.w[e](),r=null==this.props.paymentSourceTypeRestrictions||this.props.paymentSourceTypeRestrictions?.includes(e);return(0,l.jsx)(o.$,{autoFocus:0===t&&r,onClick:()=>this.props.onChooseType(e),disabled:!r,fullWidth:!0,text:i,icon:()=>(0,l.jsx)(p.Ay,{className:C.iA,type:n})},e)})}render(){let e,{onChooseType:t,className:n,onStripePaymentMethodReceived:i,paymentRequestPaymentContext:r,isEligibleForTrial:a=!1,paymentSourceCreationContext:o}=this.props,d=this.props.paymentRequestWallets??[],h={iconClassName:C.iA,paymentLabel:A.intl.string(A.t.ZURqX0),onStripePaymentMethodReceived:i,onChooseType:t,paymentRequestPaymentContext:r},p=d.map((e,t)=>{let n=()=>this.setState({[`${e}Loaded`]:!0}),i={onValidPaymentRequest:n,onPaymentRequestFailure:n},r=`${e}-${t}`;return"applePay"===e?(0,l.jsx)(m.Mv,{...h,...i},r):(0,l.jsx)(m.dP,{...h,...i},r)}),f=this.arePaymentRequestWalletsLoading(),g=null==o||o.loading||f,E=null!=o&&!o.loading&&null!=o.error,I=null==o||o.loading||null==o.data?null:o.data;if(g)e=(0,l.jsxs)("div",{children:[(0,l.jsx)("div",{className:C.R,children:p}),(0,l.jsx)(u.y,{type:u.y.Type.SPINNING_CIRCLE})]});else if(E)e=(0,l.jsx)("div",{className:C.kL,children:A.intl.string(A.t["rTU7/z"])});else if(null!=I){let t=this.createPaymentButtons(I.allowed_payment_source_types);e=(0,l.jsx)("div",{children:(0,l.jsxs)("div",{className:s()(x.LV,x.xM,C.kL),children:[t,p]})})}else e=(0,l.jsxs)("div",{children:[(0,l.jsx)("div",{className:C.R,children:p}),(0,l.jsx)(u.y,{type:u.y.Type.SPINNING_CIRCLE})]});return(0,l.jsxs)("div",{children:[a&&(0,l.jsx)("hr",{className:C.cL}),(0,l.jsx)("div",{className:n,children:(0,l.jsx)(c.D,{label:a?A.intl.string(A.t.tywMsW):A.intl.string(A.t["8lqkf8"]),children:e})}),a&&(0,l.jsx)("hr",{className:C.nD})]})}}let y=a.Ay.connectStores([d.A],()=>{let e=d.A;return{paymentSourceCreationContext:e.loading?{loading:!0,error:null,data:null}:null!=e.error?{loading:!1,error:e.error,data:null}:null!=e.data?{loading:!1,error:null,data:e.data}:{loading:!0,error:null,data:null}}})(S)
+"use strict";
+n.d(t, { A: () => y });
+var l = n(627968),
+    i = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    a = n(17928),
+    o = n(821609),
+    u = n(289873),
+    c = n(452027),
+    d = n(721101),
+    m = n(405139),
+    h = n(626584),
+    p = n(812745),
+    f = n(192087),
+    g = n(723702),
+    E = n(652215),
+    A = n(375708),
+    C = n(998460),
+    x = n(653307);
+let I = new h.A("ChoosePaymentSourceType"),
+    _ = {
+        [E.hes.CARD]: p.Ay.Types.UNKNOWN,
+        [E.hes.PAYPAL]: p.Ay.Types.PAYPAL,
+        [E.hes.SOFORT]: p.Ay.Types.SOFORT,
+        [E.hes.GIROPAY]: p.Ay.Types.GIROPAY,
+        [E.hes.PRZELEWY24]: p.Ay.Types.PRZELEWY24,
+        [E.hes.PAYSAFE_CARD]: p.Ay.Types.PAYSAFECARD,
+        [E.hes.GCASH]: p.Ay.Types.GCASH,
+        [E.hes.GRABPAY_MY]: p.Ay.Types.GRABPAY,
+        [E.hes.MOMO_WALLET]: p.Ay.Types.MOMO_WALLET,
+        [E.hes.VENMO]: p.Ay.Types.VENMO,
+        [E.hes.KAKAOPAY]: p.Ay.Types.KAKAOPAY,
+        [E.hes.GOPAY_WALLET]: p.Ay.Types.GOPAY_WALLET,
+        [E.hes.BANCONTACT]: p.Ay.Types.BANCONTACT,
+        [E.hes.EPS]: p.Ay.Types.EPS,
+        [E.hes.IDEAL]: p.Ay.Types.IDEAL,
+        [E.hes.CASH_APP]: p.Ay.Types.CASH_APP,
+    };
+class S extends i.PureComponent {
+    constructor(e) {
+        super(e), (this.state = { applePayLoaded: !1, googlePayLoaded: !1 });
+    }
+    componentDidMount() {
+        (this.props.paymentRequestWallets ?? []).length > 0 &&
+            setTimeout(() => {
+                this.considerPaymentRequestWalletsLoaded();
+            }, 1e3);
+    }
+    considerPaymentRequestWalletsLoaded() {
+        let e = this.props.paymentRequestWallets ?? [];
+        if (0 === e.length || !this.arePaymentRequestWalletsLoading()) return;
+        I.warn(`Payment request wallets failed to load in time: ${e.join(", ")}. Max time allowed: 1000 ms`);
+        let t = e.reduce((e, t) => ({ ...e, [`${t}Loaded`]: !0 }), {});
+        this.setState(t);
+    }
+    arePaymentRequestWalletsLoading() {
+        if ((0, g.isDesktop)()) return !1;
+        let e = this.props.paymentRequestWallets ?? [];
+        if (0 === e.length) return !1;
+        for (let t of e) if (!this.state[`${t}Loaded`]) return !0;
+        return !1;
+    }
+    createPaymentButtons(e) {
+        return e.map((e, t) => {
+            let n = _[e],
+                i = f.w[e](),
+                r =
+                    null == this.props.paymentSourceTypeRestrictions ||
+                    this.props.paymentSourceTypeRestrictions?.includes(e);
+            return (0, l.jsx)(
+                o.$,
+                {
+                    autoFocus: 0 === t && r,
+                    onClick: () => this.props.onChooseType(e),
+                    disabled: !r,
+                    fullWidth: !0,
+                    text: i,
+                    icon: () => (0, l.jsx)(p.Ay, { className: C.iA, type: n }),
+                },
+                e,
+            );
+        });
+    }
+    render() {
+        let e,
+            {
+                onChooseType: t,
+                className: n,
+                onStripePaymentMethodReceived: i,
+                paymentRequestPaymentContext: r,
+                isEligibleForTrial: a = !1,
+                paymentSourceCreationContext: o,
+            } = this.props,
+            d = this.props.paymentRequestWallets ?? [],
+            h = {
+                iconClassName: C.iA,
+                paymentLabel: A.intl.string(A.t.ZURqX0),
+                onStripePaymentMethodReceived: i,
+                onChooseType: t,
+                paymentRequestPaymentContext: r,
+            },
+            p = d.map((e, t) => {
+                let n = () => this.setState({ [`${e}Loaded`]: !0 }),
+                    i = { onValidPaymentRequest: n, onPaymentRequestFailure: n },
+                    r = `${e}-${t}`;
+                return "applePay" === e ? (0, l.jsx)(m.Mv, { ...h, ...i }, r) : (0, l.jsx)(m.dP, { ...h, ...i }, r);
+            }),
+            f = this.arePaymentRequestWalletsLoading(),
+            g = null == o || o.loading || f,
+            E = null != o && !o.loading && null != o.error,
+            I = null == o || o.loading || null == o.data ? null : o.data;
+        if (g)
+            e = (0, l.jsxs)("div", {
+                children: [
+                    (0, l.jsx)("div", { className: C.R, children: p }),
+                    (0, l.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE }),
+                ],
+            });
+        else if (E) e = (0, l.jsx)("div", { className: C.kL, children: A.intl.string(A.t["rTU7/z"]) });
+        else if (null != I) {
+            let t = this.createPaymentButtons(I.allowed_payment_source_types);
+            e = (0, l.jsx)("div", {
+                children: (0, l.jsxs)("div", { className: s()(x.LV, x.xM, C.kL), children: [t, p] }),
+            });
+        } else
+            e = (0, l.jsxs)("div", {
+                children: [
+                    (0, l.jsx)("div", { className: C.R, children: p }),
+                    (0, l.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE }),
+                ],
+            });
+        return (0, l.jsxs)("div", {
+            children: [
+                a && (0, l.jsx)("hr", { className: C.cL }),
+                (0, l.jsx)("div", {
+                    className: n,
+                    children: (0, l.jsx)(c.D, {
+                        label: a ? A.intl.string(A.t.tywMsW) : A.intl.string(A.t["8lqkf8"]),
+                        children: e,
+                    }),
+                }),
+                a && (0, l.jsx)("hr", { className: C.nD }),
+            ],
+        });
+    }
+}
+let y = a.Ay.connectStores([d.A], () => {
+    let e = d.A;
+    return {
+        paymentSourceCreationContext: e.loading
+            ? { loading: !0, error: null, data: null }
+            : null != e.error
+              ? { loading: !1, error: e.error, data: null }
+              : null != e.data
+                ? { loading: !1, error: null, data: e.data }
+                : { loading: !0, error: null, data: null },
+    };
+})(S);

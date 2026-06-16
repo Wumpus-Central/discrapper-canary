@@ -1,1 +1,8 @@
-let i=n(74509);e.exports=(e,t)=>{try{return new i(e,t).range||"*"}catch(e){return null}}
+let i = n(74509);
+e.exports = (e, t) => {
+    try {
+        return new i(e, t).range || "*";
+    } catch (e) {
+        return null;
+    }
+};

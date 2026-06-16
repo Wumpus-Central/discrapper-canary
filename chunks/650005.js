@@ -1,1 +1,16 @@
-e.exports={Fv:"categoryRow__1ea09",d0:"uncategorized__1ea09",O1:"categoryText__1ea09",be:"channelText__1ea09",WG:"channelRow__1ea09",r9:"disabled__1ea09",Qn:"firstChannel__1ea09",wp:"lastChannel__1ea09",yW:"channelInfo__1ea09",tN:"channelActions__1ea09",qy:"channelSubtitle__1ea09",Ks:"subtitleSeparator__1ea09",HA:"channelName__1ea09",me:"separator__1ea09"}
+e.exports = {
+    Fv: "categoryRow__1ea09",
+    d0: "uncategorized__1ea09",
+    O1: "categoryText__1ea09",
+    be: "channelText__1ea09",
+    WG: "channelRow__1ea09",
+    r9: "disabled__1ea09",
+    Qn: "firstChannel__1ea09",
+    wp: "lastChannel__1ea09",
+    yW: "channelInfo__1ea09",
+    tN: "channelActions__1ea09",
+    qy: "channelSubtitle__1ea09",
+    Ks: "subtitleSeparator__1ea09",
+    HA: "channelName__1ea09",
+    me: "separator__1ea09",
+};

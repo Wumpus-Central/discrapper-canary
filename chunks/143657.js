@@ -1,1 +1,715 @@
-n.d(t,{default:()=>ef});var l,a=n(627968),i=n(64700),r=n(239947),o=n(189213),s=n(260598),c=n(691885),u=n(192308),m=n(231723),d=n(150934),f=n(683071),g=n(696986),h=n(452027),C=n(821609),b=n(307301),p=n(579872),R=n(139286),A=n(723702),j=n(969632);n(323874),n(14289),n(35956);var w=n(744593),E=n(608461),x=n(412136);function k(e,t){let n=decodeURIComponent(t).split("/").pop()??"temp.gif";return`${e}-${n}`}var I=((l={}).PREPARING="PREPARING",l.READY_TO_UPLOAD="READY_TO_UPLOAD",l.ERROR="ERROR",l),S=n(608299),N=n(565150),P=n(31717);async function v(e,t,n){let l=k(t,n),a=await fetch(n);return y(e,t,new File([await a.blob()],l,{type:"image/gif"})),n}function y(e,t,n){let l={id:t,channelId:e,file:n,platform:N.xz.WEB,origin:"unknown:poll_attachment"};S.A.addFile({file:l,channelId:e,draftType:P.C.Poll})}async function D(e,t,n){S.A.remove(e,t,P.C.Poll)}async function O(e){S.A.clearAll(e,P.C.Poll)}var T=n(962514),_=n(375708);function L(e,t){return{mediaAttachmentState:{status:t,mediaURL:e},emoji:void 0,stickerId:void 0}}var U=n(95561),K=n(652215),Y=n(503698),F=n.n(Y),M=n(17928),W=n(980707),q=n(477782),G=n(289873),z=n(460905),B=n(922016),H=n(939249),V=n(22231),$=n(292666),X=n(241326),Q=n(565645),Z=n(267889),J=n(770335),ee=n(734057),et=n(522602),en=n(307731),el=n(698279),ea=n(231876);function ei(e){let{hasUpload:t,mediaUrl:n,mediaFilename:l,imageClassName:i,emoji:r,emojiClassName:o,fallback:s}=e;return t?(0,a.jsx)("img",{src:n,alt:l,className:i}):null!=r?(0,a.jsx)(Q.A,{className:o,emojiId:r.id,emojiName:r.type===J.i.UNICODE?r.optionallyDiverseSequence:r.name,animated:r.animated}):s}function er(e){let{onSelect:t,onEditMedia:n,onDeleteMedia:l,closePopout:i}=e;return(0,a.jsx)("div",{className:ea.li,children:(0,a.jsx)(W.W,{"data-menu-migrated-auto":!0,navId:"poll-media-edit-menu",onClose:i,"aria-label":_.intl.string(_.t["cV+h7B"]),onSelect:t,children:(0,a.jsxs)(q.rX,{children:[(0,a.jsx)(q.Dr,{id:"poll-media-replace",label:_.intl.string(_.t.CZeRhU),action:n}),(0,a.jsx)(q.Dr,{id:"poll-media-delete",label:_.intl.string(_.t.IhMxgu),action:l,color:"danger"})]})})})}function eo(e){let{channelId:t,localCreationAnswerId:n,buttonImage:l,onEmojiSelect:r,onEmojiRemove:o,answerIndex:s,shouldShowEmojiPicker:c,toggleEmojiPicker:u,containerRef:m}=e,d=i.useRef(null),f=(0,M.bG)([ee.A],()=>ee.A.getChannel(t)),{emoji:g,isLoadingMedia:h,hasUpload:C,mediaUrl:b,mediaFilename:p}=function(e){let{channelId:t,localCreationAnswerId:n,image:l}=e,a=l?.emoji,r=l?.mediaAttachmentState?.status===I.PREPARING,o=(0,M.bG)([et.A],()=>et.A.getUpload(t,n,P.C.Poll)),[s,c]=i.useState(),[u,m]=i.useState("");return i.useEffect(()=>{if(o?.item?.file==null)return;let e=URL.createObjectURL(o.item.file);return c(e),m(o.item.file.name),()=>{URL.revokeObjectURL(e)}},[o?.item?.file]),{emoji:a,isLoadingMedia:r,hasUpload:null!=o,upload:o,mediaUrl:s,mediaFilename:u}}({channelId:t,localCreationAnswerId:n,image:l}),R=C||null!=g,A=i.useCallback(()=>{o(s)},[o,s]),w=i.useMemo(()=>C?_.intl.formatToPlainString(_.t.vcC7Qn,{imageName:(0,j.Kj)(p),answerNumber:s+1}):null!=g?_.intl.formatToPlainString(_.t.ncOAha,{emojiName:g.name,answerNumber:s+1}):_.intl.formatToPlainString(_.t.emdpNo,{answerNumber:s+1}),[C,g,s,p]),E=i.useCallback(e=>{let{closePopout:t}=e;return(0,a.jsx)("div",{className:ea.Fb,children:(0,a.jsx)(Z.A,{channel:f,pickerIntention:en.EmojiIntention.POLLS,closePopout:t,onNavigateAway:t,onSelectEmoji:e=>{let{emoji:n,willClose:l}=e;null!=n&&r(n,s),l&&t()}})})},[f,r,s]),x=i.useCallback(e=>{let{closePopout:t}=e;return(0,a.jsx)(er,{onSelect:t,onEditMedia:u,onDeleteMedia:A,closePopout:t})},[A,u]),k=h?(0,a.jsx)(G.y,{className:ea.EC}):(0,a.jsx)(ei,{hasUpload:C,mediaUrl:b,mediaFilename:p,imageClassName:F()(ea.$_,ea.qX),emoji:g,emojiClassName:F()(ea.$_,ea.qZ),fallback:(0,a.jsx)(z.n,{size:"sm",color:"currentColor",className:ea.vr})}),S=F()(el.VQ,ea.GB,{[ea.ZV]:R});return(0,a.jsx)(B.Y,{targetElementRef:m,renderPopout:E,shouldShow:c,onRequestClose:u,animation:B.Y.Animation.NONE,position:"bottom",spacing:2,children:e=>{let{"aria-controls":t,"aria-expanded":n,...l}=e;return(0,a.jsx)(B.Y,{targetElementRef:d,animation:B.Y.Animation.NONE,position:"bottom",renderPopout:x,children:e=>{let{onClick:l,"aria-controls":i,"aria-expanded":r,...o}=e;return(0,a.jsxs)(H.D,{innerRef:d,...o,className:S,onClick:R&&!c?l:u,"aria-label":w,"aria-controls":t??i,"aria-expanded":n||r,children:[k,R&&(0,a.jsx)(V.R,{size:"md",color:"currentColor",className:ea.IZ,"aria-hidden":!0})]})}})}})}function es(e){let{channelId:t,answer:n,index:l,isLastAnswer:r,onAnswerTextChange:o,onEmojiSelect:s,onEmojiRemove:c,canRemoveAnswer:u,onRemoveAnswer:m,addAnswer:d,submitPoll:f,error:g,ref:h,answerRowRefs:C}=e,b=i.useRef(null),p=i.useRef(null),R=i.useRef(null);i.useImperativeHandle(h,()=>({focusDeleteButton:()=>p.current?.focus(),focusInput:()=>R.current?.focus()}));let[w,E]=i.useState(!1),k=i.useCallback(()=>{E(e=>!e)},[]),I=i.useCallback(e=>{let t=e.ctrlKey&&!(e.altKey||e.metaKey||e.shiftKey),a=e.metaKey&&!(e.altKey||e.ctrlKey||e.shiftKey);switch(e.key.toLowerCase()){case"enter":r&&(e.preventDefault(),((0,j.ND)(n)||"macos"!==(0,A.getOS)()?t:a)?(e.stopPropagation(),f()):d()),C.current[l+1]?.focusInput();break;case"e":("macos"===(0,A.getOS)()?a:t)&&(e.preventDefault(),e.stopPropagation(),k())}},[d,n,C,l,r,f,k]),S=(0,a.jsx)(eo,{containerRef:b,channelId:t,buttonImage:n.image,onEmojiSelect:s,onEmojiRemove:c,localCreationAnswerId:n.localCreationAnswerId,answerIndex:l,shouldShowEmojiPicker:w,toggleEmojiPicker:k});return(0,a.jsx)("div",{ref:b,children:(0,a.jsx)($.k,{error:g,leading:{type:"emoji",button:S},trailing:u?{"aria-label":_.intl.formatToPlainString(_.t["22fjEc"],{answerNumber:l+1}),icon:X.u,onClick:()=>m(l),buttonRef:p}:void 0,"aria-label":_.intl.formatToPlainString(_.t["3+V8G9"],{answerNumber:l+1}),placeholder:_.intl.string(_.t.NNHVlv),value:n.text,onChange:e=>o({text:e,index:l,localCreationAnswerId:n.localCreationAnswerId}),onKeyDown:I,maxLength:x.dv,inputRef:R})})}var ec=n(412728),eu=n(210540);function em(e){let{question:t,onChange:n,error:l,inputRef:i}=e;return(0,a.jsx)(s.f,{label:_.intl.string(_.t.WBiKnI),inputRef:i,placeholder:_.intl.string(_.t["/uQqJW"]),value:t,onChange:n,maxLength:x.jD,error:l,rows:1,autosize:!0,autoFocus:!0,showCharacterCount:!0})}function ed(e){let{selectedDuration:t,onSelect:n}=e,l=Object.freeze({[x.fT.ONE_HOUR]:_.intl.formatToPlainString(_.t["b/mgtw"],{num:1}),[x.fT.FOUR_HOURS]:_.intl.formatToPlainString(_.t["b/mgtw"],{num:4}),[x.fT.EIGHT_HOURS]:_.intl.formatToPlainString(_.t["b/mgtw"],{num:8}),[x.fT.ONE_DAY]:_.intl.formatToPlainString(_.t["b/mgtw"],{num:24}),[x.fT.THREE_DAYS]:_.intl.string(_.t.Xn5rX3),[x.fT.SEVEN_DAYS]:_.intl.string(_.t["Lmq+rj"]),[x.fT.FOURTEEN_DAYS]:_.intl.string(_.t["mb8A/O"])}),i=l[t];return(0,a.jsx)("div",{className:eu.p0,children:(0,a.jsx)(c.l,{label:_.intl.string(_.t.bGHzxb),"aria-label":_.intl.formatToPlainString(_.t.nXNHNJ,{duration:i}),options:Object.entries(l).map(e=>{let[t,n]=e;return{id:t.toString(),label:n,value:parseInt(t)}}),value:t,onSelectionChange:n,selectionMode:"single",fullWidth:!0})})}function ef(e){var t;let n,{channel:l,transitionState:s,onClose:c,initialQuestion:S,initialAnswers:N,initialDuration:P}=e;(0,R.A)({type:ec.z.MODAL,name:r.I.POLL_EDITOR_VIEWED});let Y=i.useRef(null),F=i.useRef([]),M=i.useRef(null),{answers:W,question:q,allowMultiSelect:G,setAllowMultiSelect:z,duration:B,setDuration:H,handleQuestionChange:V,handleAnswerTextChange:$,handleEmojiSelect:X,canAddMoreAnswers:Q,handleRemoveAnswerImage:Z,canRemoveMoreAnswers:J,handleAddAnswer:ee,handleRemoveAnswer:et,createPollError:en,handleSubmitPoll:el,fieldErrors:ea,submitting:ei,shouldFocusOnInvalidField:er,setShouldFocusOnInvalidField:eo}=function(e,t,n,l){let a=e.id,[r,o]=i.useState(()=>l?.initialAnswers?.map(e=>({...(0,j.YP)(),...e}))??[(0,j.YP)(),(0,j.YP)()]),[s,c]=i.useState(l?.initialQuestion??""),[u,m]=i.useState(!1),[d,f]=i.useState(l?.initialDuration??x.fT.ONE_DAY),[g,h]=i.useState({}),[C,b]=i.useState(!1),p=r.filter(e=>(0,j.ND)(e)),R=r.filter(e=>(0,j.VD)(e)),A=s.length>0&&p.length>=x.FW&&0===R.length,[S,{error:N,loading:P}]=(0,E.A)(T.A.createPoll),U=r.length<x.Lu,K=r.length>x.FW,Y=i.useCallback(e=>{h(e=>{let t={...e};return delete t.question,t}),c(e)},[]),F=i.useCallback(e=>{let{text:t,index:n,localCreationAnswerId:l}=e;h(e=>{let t={...e};return delete t[`answer-${l}`],t}),o(e=>{let l=[...e];return l[n]={...l[n],text:t},l})},[]),M=i.useCallback((e,t)=>{o(n=>{let l=[...n];return l[t]={...l[t],image:e},l})},[]),W=i.useCallback((e,t,n)=>{let l=r[t],a=l.image?.mediaAttachmentState;null!=a&&a.mediaURL!==n&&D(e,l.localCreationAnswerId,k(l.localCreationAnswerId,a.mediaURL))},[r]),q=i.useCallback(async(e,t,n)=>{let l=r[t].localCreationAnswerId;(W(e,t),M(L(n,I.PREPARING),t),null==await v(e,l,n))?M(L(n,I.ERROR),t):M(L(n,I.READY_TO_UPLOAD),t)},[r,M,W]),G=i.useCallback((e,t,n)=>{let l=r[t].localCreationAnswerId,a=URL.createObjectURL(n);W(e,t),M(L(a,I.PREPARING),t),y(e,l,n),M(L(a,I.READY_TO_UPLOAD),t)},[r,M,W]),z=i.useCallback((e,t)=>{W(a,t),M({emoji:e,stickerId:void 0,mediaAttachmentState:void 0},t)},[a,M,W]),B=i.useCallback(e=>{o(t=>{let n=[...t];return n[e]={...n[e],image:void 0},n})},[]),H=i.useCallback(()=>{U&&o(e=>[...e,(0,j.YP)()])},[U]),V=i.useCallback(e=>{if(!K)return;let t=r.length;W(a,e),o(t=>{let n=[...t];return n.splice(e,1),n}),n?.({indexToRemove:e,numberOfAnswers:t})},[r.length,K,a,n,W]);i.useEffect(()=>()=>{O(a)},[a]);let $=i.useCallback(()=>{let e=!0,t={};return 0===s.trim().length&&(e=!1,t.question=_.intl.string(_.t.gPX3oI)),r.filter(e=>(0,j.ND)(e)).length<x.FW&&(e=!1,t[`answer-${r[0].localCreationAnswerId}`]=_.intl.string(_.t.fYvzEX)),r.forEach(n=>{(0,j.VD)(n)&&(e=!1,t[`answer-${n.localCreationAnswerId}`]=_.intl.string(_.t["8Qqkc+"]))}),h(t),b(!e),e},[r,s]),X=i.useCallback(async()=>{await S({channel:e,question:s,answers:p,allowMultiSelect:u,duration:d,layout:w.Z.DEFAULT,onClose:t})},[s,p,u,d,S,e,t]),Q=i.useCallback(()=>{!P&&$()&&X()},[X,P,$]);return{answers:r,question:s,setQuestion:c,allowMultiSelect:u,setAllowMultiSelect:m,duration:d,setDuration:f,canPost:A,canAddMoreAnswers:U,canRemoveMoreAnswers:K,handleQuestionChange:Y,handleAnswerTextChange:F,handleGifSelect:q,handleEmojiSelect:z,handleCustomUpload:G,handleAddAnswer:H,handleRemoveAnswer:V,handleRemoveAnswerImage:B,fieldErrors:g,createPoll:X,handleSubmitPoll:Q,submitting:P,createPollError:N,shouldFocusOnInvalidField:C,setShouldFocusOnInvalidField:b}}(l,c,i.useCallback(e=>{let{indexToRemove:t,numberOfAnswers:n}=e;n===x.FW+1?M.current?.focus():F.current[t===n-1?t-1:t+1]?.focusDeleteButton()},[]),{initialQuestion:S,initialAnswers:N,initialDuration:P}),{trackPollCreationCancelled:eg}={trackPollCreationCancelled:i.useCallback(()=>{let e=0,t=0,n=0;W.forEach(l=>{let a=l.image;null!=a&&(null!=a.emoji?t+=1:null!=a.stickerId?n+=1:null!=a.mediaAttachmentState&&(e+=1))}),U.Ay.trackWithMetadata(K.HAw.POLL_CREATION_CANCELLED,{answers_count:W.length,attachments_count:e,emojis_count:t,stickers_count:n,allow_multiselect:G,layout_type:w.Z.DEFAULT})},[W,G])},eh=i.useRef(W.length),eC=i.useCallback(()=>{eg(),c()},[c,eg]),eb=i.useCallback(()=>{(0,j.Wn)(q,W)?eC():p.A.show({title:_.intl.string(_.t.HMrgcp),body:_.intl.string(_.t["Wxa/j8"]),confirmText:_.intl.string(_.t.TzJA4g),confirmVariant:"critical-primary",cancelText:_.intl.string(_.t["2BR5R2"]),onConfirm:()=>{eC()}})},[eC,W,q]);i.useEffect(()=>{(0,u.updateModal)(x.sm,e=>(0,a.jsx)(ef,{...e,channel:l}),eb)},[eb,l]),i.useEffect(()=>{W.length>eh.current&&F.current[W.length-1]?.focusInput(),eh.current=W.length},[W.length]),i.useEffect(()=>{if(er){if(ea?.question!=null)Y.current?.focus();else{let e=W.findIndex(e=>ea[`answer-${e.localCreationAnswerId}`]);-1!==e&&F.current[e]?.focusInput()}eo(!1)}},[ea,W,er,eo,F]);let ep=i.useCallback(()=>{s===m.ip.ENTERED&&el()},[el,s]),eR=(t={disabled:ei,onSubmit:ep},n=i.useRef(t),i.useEffect(()=>{n.current=t},[t]),i.useCallback(e=>{let t=e.ctrlKey&&!(e.altKey||e.metaKey||e.shiftKey),l=e.metaKey&&!(e.altKey||e.ctrlKey||e.shiftKey),{disabled:a=!1,onSubmit:i}=n.current;"enter"===e.key.toLowerCase()&&("macos"===(0,A.getOS)()?l:t)&&!a&&(e.preventDefault(),i())},[])),eA=i.useMemo(()=>[{variant:"primary",onClick:ep,submitting:ei,text:_.intl.string(_.t.JOj8Zk),autoFocus:!1}],[ep,ei]);return(0,a.jsx)(o.Modal,{transitionState:s,onClose:c,title:_.intl.string(_.t["GD/8X8"]),actions:eA,actionBarInput:(0,a.jsx)(d.S,{checked:G,onChange:e=>z(e),label:_.intl.string(_.t["Ux+iQU"])}),children:(0,a.jsxs)("div",{className:eu.Qs,onKeyDown:eR,children:[null!=en&&(0,a.jsx)(f.w,{type:"critical",children:en.getAnyErrorMessage()}),(0,a.jsx)(em,{question:q,onChange:V,error:ea?.question,inputRef:Y}),(0,a.jsx)(g.h,{size:26}),(0,a.jsxs)(h.D,{role:"group",label:_.intl.string(_.t.oMBfeS),children:[W.map((e,t)=>(0,a.jsx)(es,{answer:e,channelId:l.id,index:t,isLastAnswer:t===W.length-1,onEmojiSelect:X,onEmojiRemove:Z,onAnswerTextChange:$,onRemoveAnswer:et,addAnswer:ee,submitPoll:ep,answerRowRefs:F,error:ea?.[`answer-${e.localCreationAnswerId}`],canRemoveAnswer:J,ref:e=>{F.current[t]=e}},e.localCreationAnswerId)),Q&&(0,a.jsx)("div",{className:eu.Ox,children:(0,a.jsx)(C.$,{icon:b.j,variant:"secondary",onClick:ee,"aria-label":_.intl.string(_.t.B2Uvme),buttonRef:M,text:_.intl.string(_.t.B2Uvme)})})]}),(0,a.jsx)(g.h,{size:18}),(0,a.jsx)(ed,{selectedDuration:B,onSelect:H})]})})}
+n.d(t, { default: () => ef });
+var l,
+    a = n(627968),
+    i = n(64700),
+    r = n(239947),
+    o = n(189213),
+    s = n(260598),
+    c = n(691885),
+    u = n(192308),
+    m = n(231723),
+    d = n(150934),
+    f = n(683071),
+    g = n(696986),
+    h = n(452027),
+    C = n(821609),
+    b = n(307301),
+    p = n(579872),
+    R = n(139286),
+    A = n(723702),
+    j = n(969632);
+n(323874), n(14289), n(35956);
+var w = n(744593),
+    E = n(608461),
+    x = n(412136);
+function k(e, t) {
+    let n = decodeURIComponent(t).split("/").pop() ?? "temp.gif";
+    return `${e}-${n}`;
+}
+var I = (((l = {}).PREPARING = "PREPARING"), (l.READY_TO_UPLOAD = "READY_TO_UPLOAD"), (l.ERROR = "ERROR"), l),
+    S = n(608299),
+    N = n(565150),
+    P = n(31717);
+async function v(e, t, n) {
+    let l = k(t, n),
+        a = await fetch(n);
+    return y(e, t, new File([await a.blob()], l, { type: "image/gif" })), n;
+}
+function y(e, t, n) {
+    let l = { id: t, channelId: e, file: n, platform: N.xz.WEB, origin: "unknown:poll_attachment" };
+    S.A.addFile({ file: l, channelId: e, draftType: P.C.Poll });
+}
+async function D(e, t, n) {
+    S.A.remove(e, t, P.C.Poll);
+}
+async function O(e) {
+    S.A.clearAll(e, P.C.Poll);
+}
+var T = n(962514),
+    _ = n(375708);
+function L(e, t) {
+    return { mediaAttachmentState: { status: t, mediaURL: e }, emoji: void 0, stickerId: void 0 };
+}
+var U = n(95561),
+    K = n(652215),
+    Y = n(503698),
+    F = n.n(Y),
+    M = n(17928),
+    W = n(980707),
+    q = n(477782),
+    G = n(289873),
+    z = n(460905),
+    B = n(922016),
+    H = n(939249),
+    V = n(22231),
+    $ = n(292666),
+    X = n(241326),
+    Q = n(565645),
+    Z = n(267889),
+    J = n(770335),
+    ee = n(734057),
+    et = n(522602),
+    en = n(307731),
+    el = n(698279),
+    ea = n(231876);
+function ei(e) {
+    let {
+        hasUpload: t,
+        mediaUrl: n,
+        mediaFilename: l,
+        imageClassName: i,
+        emoji: r,
+        emojiClassName: o,
+        fallback: s,
+    } = e;
+    return t
+        ? (0, a.jsx)("img", { src: n, alt: l, className: i })
+        : null != r
+          ? (0, a.jsx)(Q.A, {
+                className: o,
+                emojiId: r.id,
+                emojiName: r.type === J.i.UNICODE ? r.optionallyDiverseSequence : r.name,
+                animated: r.animated,
+            })
+          : s;
+}
+function er(e) {
+    let { onSelect: t, onEditMedia: n, onDeleteMedia: l, closePopout: i } = e;
+    return (0, a.jsx)("div", {
+        className: ea.li,
+        children: (0, a.jsx)(W.W, {
+            "data-menu-migrated-auto": !0,
+            navId: "poll-media-edit-menu",
+            onClose: i,
+            "aria-label": _.intl.string(_.t["cV+h7B"]),
+            onSelect: t,
+            children: (0, a.jsxs)(q.rX, {
+                children: [
+                    (0, a.jsx)(q.Dr, { id: "poll-media-replace", label: _.intl.string(_.t.CZeRhU), action: n }),
+                    (0, a.jsx)(q.Dr, {
+                        id: "poll-media-delete",
+                        label: _.intl.string(_.t.IhMxgu),
+                        action: l,
+                        color: "danger",
+                    }),
+                ],
+            }),
+        }),
+    });
+}
+function eo(e) {
+    let {
+            channelId: t,
+            localCreationAnswerId: n,
+            buttonImage: l,
+            onEmojiSelect: r,
+            onEmojiRemove: o,
+            answerIndex: s,
+            shouldShowEmojiPicker: c,
+            toggleEmojiPicker: u,
+            containerRef: m,
+        } = e,
+        d = i.useRef(null),
+        f = (0, M.bG)([ee.A], () => ee.A.getChannel(t)),
+        {
+            emoji: g,
+            isLoadingMedia: h,
+            hasUpload: C,
+            mediaUrl: b,
+            mediaFilename: p,
+        } = (function (e) {
+            let { channelId: t, localCreationAnswerId: n, image: l } = e,
+                a = l?.emoji,
+                r = l?.mediaAttachmentState?.status === I.PREPARING,
+                o = (0, M.bG)([et.A], () => et.A.getUpload(t, n, P.C.Poll)),
+                [s, c] = i.useState(),
+                [u, m] = i.useState("");
+            return (
+                i.useEffect(() => {
+                    if (o?.item?.file == null) return;
+                    let e = URL.createObjectURL(o.item.file);
+                    return (
+                        c(e),
+                        m(o.item.file.name),
+                        () => {
+                            URL.revokeObjectURL(e);
+                        }
+                    );
+                }, [o?.item?.file]),
+                { emoji: a, isLoadingMedia: r, hasUpload: null != o, upload: o, mediaUrl: s, mediaFilename: u }
+            );
+        })({ channelId: t, localCreationAnswerId: n, image: l }),
+        R = C || null != g,
+        A = i.useCallback(() => {
+            o(s);
+        }, [o, s]),
+        w = i.useMemo(
+            () =>
+                C
+                    ? _.intl.formatToPlainString(_.t.vcC7Qn, { imageName: (0, j.Kj)(p), answerNumber: s + 1 })
+                    : null != g
+                      ? _.intl.formatToPlainString(_.t.ncOAha, { emojiName: g.name, answerNumber: s + 1 })
+                      : _.intl.formatToPlainString(_.t.emdpNo, { answerNumber: s + 1 }),
+            [C, g, s, p],
+        ),
+        E = i.useCallback(
+            (e) => {
+                let { closePopout: t } = e;
+                return (0, a.jsx)("div", {
+                    className: ea.Fb,
+                    children: (0, a.jsx)(Z.A, {
+                        channel: f,
+                        pickerIntention: en.EmojiIntention.POLLS,
+                        closePopout: t,
+                        onNavigateAway: t,
+                        onSelectEmoji: (e) => {
+                            let { emoji: n, willClose: l } = e;
+                            null != n && r(n, s), l && t();
+                        },
+                    }),
+                });
+            },
+            [f, r, s],
+        ),
+        x = i.useCallback(
+            (e) => {
+                let { closePopout: t } = e;
+                return (0, a.jsx)(er, { onSelect: t, onEditMedia: u, onDeleteMedia: A, closePopout: t });
+            },
+            [A, u],
+        ),
+        k = h
+            ? (0, a.jsx)(G.y, { className: ea.EC })
+            : (0, a.jsx)(ei, {
+                  hasUpload: C,
+                  mediaUrl: b,
+                  mediaFilename: p,
+                  imageClassName: F()(ea.$_, ea.qX),
+                  emoji: g,
+                  emojiClassName: F()(ea.$_, ea.qZ),
+                  fallback: (0, a.jsx)(z.n, { size: "sm", color: "currentColor", className: ea.vr }),
+              }),
+        S = F()(el.VQ, ea.GB, { [ea.ZV]: R });
+    return (0, a.jsx)(B.Y, {
+        targetElementRef: m,
+        renderPopout: E,
+        shouldShow: c,
+        onRequestClose: u,
+        animation: B.Y.Animation.NONE,
+        position: "bottom",
+        spacing: 2,
+        children: (e) => {
+            let { "aria-controls": t, "aria-expanded": n, ...l } = e;
+            return (0, a.jsx)(B.Y, {
+                targetElementRef: d,
+                animation: B.Y.Animation.NONE,
+                position: "bottom",
+                renderPopout: x,
+                children: (e) => {
+                    let { onClick: l, "aria-controls": i, "aria-expanded": r, ...o } = e;
+                    return (0, a.jsxs)(H.D, {
+                        innerRef: d,
+                        ...o,
+                        className: S,
+                        onClick: R && !c ? l : u,
+                        "aria-label": w,
+                        "aria-controls": t ?? i,
+                        "aria-expanded": n || r,
+                        children: [
+                            k,
+                            R &&
+                                (0, a.jsx)(V.R, {
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: ea.IZ,
+                                    "aria-hidden": !0,
+                                }),
+                        ],
+                    });
+                },
+            });
+        },
+    });
+}
+function es(e) {
+    let {
+            channelId: t,
+            answer: n,
+            index: l,
+            isLastAnswer: r,
+            onAnswerTextChange: o,
+            onEmojiSelect: s,
+            onEmojiRemove: c,
+            canRemoveAnswer: u,
+            onRemoveAnswer: m,
+            addAnswer: d,
+            submitPoll: f,
+            error: g,
+            ref: h,
+            answerRowRefs: C,
+        } = e,
+        b = i.useRef(null),
+        p = i.useRef(null),
+        R = i.useRef(null);
+    i.useImperativeHandle(h, () => ({
+        focusDeleteButton: () => p.current?.focus(),
+        focusInput: () => R.current?.focus(),
+    }));
+    let [w, E] = i.useState(!1),
+        k = i.useCallback(() => {
+            E((e) => !e);
+        }, []),
+        I = i.useCallback(
+            (e) => {
+                let t = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
+                    a = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey);
+                switch (e.key.toLowerCase()) {
+                    case "enter":
+                        r &&
+                            (e.preventDefault(),
+                            ((0, j.ND)(n) || "macos" !== (0, A.getOS)() ? t : a) ? (e.stopPropagation(), f()) : d()),
+                            C.current[l + 1]?.focusInput();
+                        break;
+                    case "e":
+                        ("macos" === (0, A.getOS)() ? a : t) && (e.preventDefault(), e.stopPropagation(), k());
+                }
+            },
+            [d, n, C, l, r, f, k],
+        ),
+        S = (0, a.jsx)(eo, {
+            containerRef: b,
+            channelId: t,
+            buttonImage: n.image,
+            onEmojiSelect: s,
+            onEmojiRemove: c,
+            localCreationAnswerId: n.localCreationAnswerId,
+            answerIndex: l,
+            shouldShowEmojiPicker: w,
+            toggleEmojiPicker: k,
+        });
+    return (0, a.jsx)("div", {
+        ref: b,
+        children: (0, a.jsx)($.k, {
+            error: g,
+            leading: { type: "emoji", button: S },
+            trailing: u
+                ? {
+                      "aria-label": _.intl.formatToPlainString(_.t["22fjEc"], { answerNumber: l + 1 }),
+                      icon: X.u,
+                      onClick: () => m(l),
+                      buttonRef: p,
+                  }
+                : void 0,
+            "aria-label": _.intl.formatToPlainString(_.t["3+V8G9"], { answerNumber: l + 1 }),
+            placeholder: _.intl.string(_.t.NNHVlv),
+            value: n.text,
+            onChange: (e) => o({ text: e, index: l, localCreationAnswerId: n.localCreationAnswerId }),
+            onKeyDown: I,
+            maxLength: x.dv,
+            inputRef: R,
+        }),
+    });
+}
+var ec = n(412728),
+    eu = n(210540);
+function em(e) {
+    let { question: t, onChange: n, error: l, inputRef: i } = e;
+    return (0, a.jsx)(s.f, {
+        label: _.intl.string(_.t.WBiKnI),
+        inputRef: i,
+        placeholder: _.intl.string(_.t["/uQqJW"]),
+        value: t,
+        onChange: n,
+        maxLength: x.jD,
+        error: l,
+        rows: 1,
+        autosize: !0,
+        autoFocus: !0,
+        showCharacterCount: !0,
+    });
+}
+function ed(e) {
+    let { selectedDuration: t, onSelect: n } = e,
+        l = Object.freeze({
+            [x.fT.ONE_HOUR]: _.intl.formatToPlainString(_.t["b/mgtw"], { num: 1 }),
+            [x.fT.FOUR_HOURS]: _.intl.formatToPlainString(_.t["b/mgtw"], { num: 4 }),
+            [x.fT.EIGHT_HOURS]: _.intl.formatToPlainString(_.t["b/mgtw"], { num: 8 }),
+            [x.fT.ONE_DAY]: _.intl.formatToPlainString(_.t["b/mgtw"], { num: 24 }),
+            [x.fT.THREE_DAYS]: _.intl.string(_.t.Xn5rX3),
+            [x.fT.SEVEN_DAYS]: _.intl.string(_.t["Lmq+rj"]),
+            [x.fT.FOURTEEN_DAYS]: _.intl.string(_.t["mb8A/O"]),
+        }),
+        i = l[t];
+    return (0, a.jsx)("div", {
+        className: eu.p0,
+        children: (0, a.jsx)(c.l, {
+            label: _.intl.string(_.t.bGHzxb),
+            "aria-label": _.intl.formatToPlainString(_.t.nXNHNJ, { duration: i }),
+            options: Object.entries(l).map((e) => {
+                let [t, n] = e;
+                return { id: t.toString(), label: n, value: parseInt(t) };
+            }),
+            value: t,
+            onSelectionChange: n,
+            selectionMode: "single",
+            fullWidth: !0,
+        }),
+    });
+}
+function ef(e) {
+    var t;
+    let n,
+        { channel: l, transitionState: s, onClose: c, initialQuestion: S, initialAnswers: N, initialDuration: P } = e;
+    (0, R.A)({ type: ec.z.MODAL, name: r.I.POLL_EDITOR_VIEWED });
+    let Y = i.useRef(null),
+        F = i.useRef([]),
+        M = i.useRef(null),
+        {
+            answers: W,
+            question: q,
+            allowMultiSelect: G,
+            setAllowMultiSelect: z,
+            duration: B,
+            setDuration: H,
+            handleQuestionChange: V,
+            handleAnswerTextChange: $,
+            handleEmojiSelect: X,
+            canAddMoreAnswers: Q,
+            handleRemoveAnswerImage: Z,
+            canRemoveMoreAnswers: J,
+            handleAddAnswer: ee,
+            handleRemoveAnswer: et,
+            createPollError: en,
+            handleSubmitPoll: el,
+            fieldErrors: ea,
+            submitting: ei,
+            shouldFocusOnInvalidField: er,
+            setShouldFocusOnInvalidField: eo,
+        } = (function (e, t, n, l) {
+            let a = e.id,
+                [r, o] = i.useState(
+                    () => l?.initialAnswers?.map((e) => ({ ...(0, j.YP)(), ...e })) ?? [(0, j.YP)(), (0, j.YP)()],
+                ),
+                [s, c] = i.useState(l?.initialQuestion ?? ""),
+                [u, m] = i.useState(!1),
+                [d, f] = i.useState(l?.initialDuration ?? x.fT.ONE_DAY),
+                [g, h] = i.useState({}),
+                [C, b] = i.useState(!1),
+                p = r.filter((e) => (0, j.ND)(e)),
+                R = r.filter((e) => (0, j.VD)(e)),
+                A = s.length > 0 && p.length >= x.FW && 0 === R.length,
+                [S, { error: N, loading: P }] = (0, E.A)(T.A.createPoll),
+                U = r.length < x.Lu,
+                K = r.length > x.FW,
+                Y = i.useCallback((e) => {
+                    h((e) => {
+                        let t = { ...e };
+                        return delete t.question, t;
+                    }),
+                        c(e);
+                }, []),
+                F = i.useCallback((e) => {
+                    let { text: t, index: n, localCreationAnswerId: l } = e;
+                    h((e) => {
+                        let t = { ...e };
+                        return delete t[`answer-${l}`], t;
+                    }),
+                        o((e) => {
+                            let l = [...e];
+                            return (l[n] = { ...l[n], text: t }), l;
+                        });
+                }, []),
+                M = i.useCallback((e, t) => {
+                    o((n) => {
+                        let l = [...n];
+                        return (l[t] = { ...l[t], image: e }), l;
+                    });
+                }, []),
+                W = i.useCallback(
+                    (e, t, n) => {
+                        let l = r[t],
+                            a = l.image?.mediaAttachmentState;
+                        null != a &&
+                            a.mediaURL !== n &&
+                            D(e, l.localCreationAnswerId, k(l.localCreationAnswerId, a.mediaURL));
+                    },
+                    [r],
+                ),
+                q = i.useCallback(
+                    async (e, t, n) => {
+                        let l = r[t].localCreationAnswerId;
+                        (W(e, t), M(L(n, I.PREPARING), t), null == (await v(e, l, n)))
+                            ? M(L(n, I.ERROR), t)
+                            : M(L(n, I.READY_TO_UPLOAD), t);
+                    },
+                    [r, M, W],
+                ),
+                G = i.useCallback(
+                    (e, t, n) => {
+                        let l = r[t].localCreationAnswerId,
+                            a = URL.createObjectURL(n);
+                        W(e, t), M(L(a, I.PREPARING), t), y(e, l, n), M(L(a, I.READY_TO_UPLOAD), t);
+                    },
+                    [r, M, W],
+                ),
+                z = i.useCallback(
+                    (e, t) => {
+                        W(a, t), M({ emoji: e, stickerId: void 0, mediaAttachmentState: void 0 }, t);
+                    },
+                    [a, M, W],
+                ),
+                B = i.useCallback((e) => {
+                    o((t) => {
+                        let n = [...t];
+                        return (n[e] = { ...n[e], image: void 0 }), n;
+                    });
+                }, []),
+                H = i.useCallback(() => {
+                    U && o((e) => [...e, (0, j.YP)()]);
+                }, [U]),
+                V = i.useCallback(
+                    (e) => {
+                        if (!K) return;
+                        let t = r.length;
+                        W(a, e),
+                            o((t) => {
+                                let n = [...t];
+                                return n.splice(e, 1), n;
+                            }),
+                            n?.({ indexToRemove: e, numberOfAnswers: t });
+                    },
+                    [r.length, K, a, n, W],
+                );
+            i.useEffect(
+                () => () => {
+                    O(a);
+                },
+                [a],
+            );
+            let $ = i.useCallback(() => {
+                    let e = !0,
+                        t = {};
+                    return (
+                        0 === s.trim().length && ((e = !1), (t.question = _.intl.string(_.t.gPX3oI))),
+                        r.filter((e) => (0, j.ND)(e)).length < x.FW &&
+                            ((e = !1), (t[`answer-${r[0].localCreationAnswerId}`] = _.intl.string(_.t.fYvzEX))),
+                        r.forEach((n) => {
+                            (0, j.VD)(n) &&
+                                ((e = !1), (t[`answer-${n.localCreationAnswerId}`] = _.intl.string(_.t["8Qqkc+"])));
+                        }),
+                        h(t),
+                        b(!e),
+                        e
+                    );
+                }, [r, s]),
+                X = i.useCallback(async () => {
+                    await S({
+                        channel: e,
+                        question: s,
+                        answers: p,
+                        allowMultiSelect: u,
+                        duration: d,
+                        layout: w.Z.DEFAULT,
+                        onClose: t,
+                    });
+                }, [s, p, u, d, S, e, t]),
+                Q = i.useCallback(() => {
+                    !P && $() && X();
+                }, [X, P, $]);
+            return {
+                answers: r,
+                question: s,
+                setQuestion: c,
+                allowMultiSelect: u,
+                setAllowMultiSelect: m,
+                duration: d,
+                setDuration: f,
+                canPost: A,
+                canAddMoreAnswers: U,
+                canRemoveMoreAnswers: K,
+                handleQuestionChange: Y,
+                handleAnswerTextChange: F,
+                handleGifSelect: q,
+                handleEmojiSelect: z,
+                handleCustomUpload: G,
+                handleAddAnswer: H,
+                handleRemoveAnswer: V,
+                handleRemoveAnswerImage: B,
+                fieldErrors: g,
+                createPoll: X,
+                handleSubmitPoll: Q,
+                submitting: P,
+                createPollError: N,
+                shouldFocusOnInvalidField: C,
+                setShouldFocusOnInvalidField: b,
+            };
+        })(
+            l,
+            c,
+            i.useCallback((e) => {
+                let { indexToRemove: t, numberOfAnswers: n } = e;
+                n === x.FW + 1 ? M.current?.focus() : F.current[t === n - 1 ? t - 1 : t + 1]?.focusDeleteButton();
+            }, []),
+            { initialQuestion: S, initialAnswers: N, initialDuration: P },
+        ),
+        { trackPollCreationCancelled: eg } = {
+            trackPollCreationCancelled: i.useCallback(() => {
+                let e = 0,
+                    t = 0,
+                    n = 0;
+                W.forEach((l) => {
+                    let a = l.image;
+                    null != a &&
+                        (null != a.emoji
+                            ? (t += 1)
+                            : null != a.stickerId
+                              ? (n += 1)
+                              : null != a.mediaAttachmentState && (e += 1));
+                }),
+                    U.Ay.trackWithMetadata(K.HAw.POLL_CREATION_CANCELLED, {
+                        answers_count: W.length,
+                        attachments_count: e,
+                        emojis_count: t,
+                        stickers_count: n,
+                        allow_multiselect: G,
+                        layout_type: w.Z.DEFAULT,
+                    });
+            }, [W, G]),
+        },
+        eh = i.useRef(W.length),
+        eC = i.useCallback(() => {
+            eg(), c();
+        }, [c, eg]),
+        eb = i.useCallback(() => {
+            (0, j.Wn)(q, W)
+                ? eC()
+                : p.A.show({
+                      title: _.intl.string(_.t.HMrgcp),
+                      body: _.intl.string(_.t["Wxa/j8"]),
+                      confirmText: _.intl.string(_.t.TzJA4g),
+                      confirmVariant: "critical-primary",
+                      cancelText: _.intl.string(_.t["2BR5R2"]),
+                      onConfirm: () => {
+                          eC();
+                      },
+                  });
+        }, [eC, W, q]);
+    i.useEffect(() => {
+        (0, u.updateModal)(x.sm, (e) => (0, a.jsx)(ef, { ...e, channel: l }), eb);
+    }, [eb, l]),
+        i.useEffect(() => {
+            W.length > eh.current && F.current[W.length - 1]?.focusInput(), (eh.current = W.length);
+        }, [W.length]),
+        i.useEffect(() => {
+            if (er) {
+                if (ea?.question != null) Y.current?.focus();
+                else {
+                    let e = W.findIndex((e) => ea[`answer-${e.localCreationAnswerId}`]);
+                    -1 !== e && F.current[e]?.focusInput();
+                }
+                eo(!1);
+            }
+        }, [ea, W, er, eo, F]);
+    let ep = i.useCallback(() => {
+            s === m.ip.ENTERED && el();
+        }, [el, s]),
+        eR =
+            ((t = { disabled: ei, onSubmit: ep }),
+            (n = i.useRef(t)),
+            i.useEffect(() => {
+                n.current = t;
+            }, [t]),
+            i.useCallback((e) => {
+                let t = e.ctrlKey && !(e.altKey || e.metaKey || e.shiftKey),
+                    l = e.metaKey && !(e.altKey || e.ctrlKey || e.shiftKey),
+                    { disabled: a = !1, onSubmit: i } = n.current;
+                "enter" === e.key.toLowerCase() &&
+                    ("macos" === (0, A.getOS)() ? l : t) &&
+                    !a &&
+                    (e.preventDefault(), i());
+            }, [])),
+        eA = i.useMemo(
+            () => [{ variant: "primary", onClick: ep, submitting: ei, text: _.intl.string(_.t.JOj8Zk), autoFocus: !1 }],
+            [ep, ei],
+        );
+    return (0, a.jsx)(o.Modal, {
+        transitionState: s,
+        onClose: c,
+        title: _.intl.string(_.t["GD/8X8"]),
+        actions: eA,
+        actionBarInput: (0, a.jsx)(d.S, { checked: G, onChange: (e) => z(e), label: _.intl.string(_.t["Ux+iQU"]) }),
+        children: (0, a.jsxs)("div", {
+            className: eu.Qs,
+            onKeyDown: eR,
+            children: [
+                null != en && (0, a.jsx)(f.w, { type: "critical", children: en.getAnyErrorMessage() }),
+                (0, a.jsx)(em, { question: q, onChange: V, error: ea?.question, inputRef: Y }),
+                (0, a.jsx)(g.h, { size: 26 }),
+                (0, a.jsxs)(h.D, {
+                    role: "group",
+                    label: _.intl.string(_.t.oMBfeS),
+                    children: [
+                        W.map((e, t) =>
+                            (0, a.jsx)(
+                                es,
+                                {
+                                    answer: e,
+                                    channelId: l.id,
+                                    index: t,
+                                    isLastAnswer: t === W.length - 1,
+                                    onEmojiSelect: X,
+                                    onEmojiRemove: Z,
+                                    onAnswerTextChange: $,
+                                    onRemoveAnswer: et,
+                                    addAnswer: ee,
+                                    submitPoll: ep,
+                                    answerRowRefs: F,
+                                    error: ea?.[`answer-${e.localCreationAnswerId}`],
+                                    canRemoveAnswer: J,
+                                    ref: (e) => {
+                                        F.current[t] = e;
+                                    },
+                                },
+                                e.localCreationAnswerId,
+                            ),
+                        ),
+                        Q &&
+                            (0, a.jsx)("div", {
+                                className: eu.Ox,
+                                children: (0, a.jsx)(C.$, {
+                                    icon: b.j,
+                                    variant: "secondary",
+                                    onClick: ee,
+                                    "aria-label": _.intl.string(_.t.B2Uvme),
+                                    buttonRef: M,
+                                    text: _.intl.string(_.t.B2Uvme),
+                                }),
+                            }),
+                    ],
+                }),
+                (0, a.jsx)(g.h, { size: 18 }),
+                (0, a.jsx)(ed, { selectedDuration: B, onSelect: H }),
+            ],
+        }),
+    });
+}

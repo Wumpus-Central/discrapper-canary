@@ -1,1 +1,1 @@
-e.exports={w:"cashAppPayContainer__283e5"}
+o.exports = { w: "cashAppPayContainer__283e5" };

@@ -1,1 +1,256 @@
-"use strict";n.r(t),n.d(t,{closeAllModals:()=>R,closeAllModalsInContext:()=>O,closeModal:()=>m,closeModalInAllContexts:()=>g,doesTopModalAllowNavigation:()=>w,getInteractingModalContext:()=>_,getOpenModalKeys:()=>S,hasAnyModalOpen:()=>T,hasAnyModalOpenSelector:()=>I,hasModalOpen:()=>D,hasModalOpenSelector:()=>b,hasModalOpenedSince:()=>y,modalContextFromAppContext:()=>h,openModal:()=>E,openModalLazy:()=>p,subscribeToModalChanges:()=>N,updateModal:()=>A,useHasAnyModalOpen:()=>v,useHasModalOpen:()=>L,useIsModalAtTop:()=>C,useModalsStore:()=>f}),n(134528),n(947204);var i=n(296489),r=n.n(i),s=n(353640),a=n(121894),o=n(267102),l=n(231723),u=n(652215);let c=n(450507).A,d=[l.SY,l.KX];function _(){let e=(0,o.zd)();return null!=e?h(e):l.SY}function h(e){switch(e){case u.BRT.POPOUT:return l.KX;case u.BRT.OVERLAY:if(__OVERLAY__)return l.SY;return l.KX;default:return l.SY}}let f=(0,s.v)(e=>({[l.SY]:[],[l.KX]:[]}));async function p(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},{contextKey:n=_(),...i}=t,s=null!=t.modalKey?t.modalKey:r()(),a=!1,o=setTimeout(()=>{a=!0,E(c,{...i,modalKey:s},n)},300),l=await e();return clearTimeout(o),a?D(s,n)&&A(s,l,i.onCloseRequest,i.onCloseCallback,n):E(l,{...i,modalKey:s},n),s}function E(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:Object.freeze({}),n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:_(),{modalKey:i,dismissable:s,instant:o,Layer:l,onCloseRequest:u,onCloseCallback:c,backdropStyle:d,stackingBehavior:h,stackNextByDefault:p,allowsNavigation:E}=t,g=null!=i?i:r()();return(0,a.r)(()=>{f.setState(t=>{let i=t[n];if(void 0!==i&&i.some(e=>{let{key:t}=e;return t===g}))return t;let r=h;return null==r&&(r=i.at(-1)?.stackNextByDefault===!0?"stack":"replace"),{...t,[n]:[...i,{key:g,dismissable:s,Layer:l,render:e,onCloseRequest:u??(()=>m(g,n)),onCloseCallback:c,instant:o,backdropStyle:d,stackingBehavior:r,stackNextByDefault:p,allowsNavigation:E}]}})}),g}function m(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:_(),n=f.getState()[t],i=null!=n?n.find(t=>{let{key:n}=t;return n===e}):null;return(0,a.r)(()=>{f.setState(n=>void 0===n[t]?n:{...n,[t]:n[t].filter(t=>{let{key:n}=t;return n!==e})})}),null!=i&&null!=i.onCloseCallback&&i.onCloseCallback(),null!=i}function g(e){let t=f.getState(),n=d.map(e=>t[e]??[]).map(t=>t.find(t=>{let{key:n}=t;return n===e})??null);n.some(e=>null!=e)&&((0,a.r)(()=>{f.setState(t=>{let n={...t};return d.forEach(t=>{n[t]=n[t]?.filter(t=>{let{key:n}=t;return n!==e})}),n})}),n.forEach(e=>{e?.onCloseCallback?.()}))}function A(e,t,n,i){let r=arguments.length>4&&void 0!==arguments[4]?arguments[4]:_();(0,a.r)(()=>{f.setState(s=>void 0===s[r]?s:{...s,[r]:s[r].map(s=>s.key===e?{...s,render:t,onCloseRequest:null==n?()=>m(e,r):n,onCloseCallback:i}:s)})})}function I(e){for(let t of d){let n=e[t];if(null!=n&&n.length>0)return!0}return!1}function T(){return I(f.getState())}function S(){let e=f.getState(),t=new Set;for(let n of d)for(let i of e[n]??[])t.add(i.key);return t}function y(e){let t=f.getState();for(let n of d)for(let i of t[n]??[])if(!e.has(i.key))return!0;return!1}function N(e){return f.subscribe(e)}function v(){return I(f())}function C(e){let{default:t,popout:n}=f();return n.length>0?n.at(-1)?.key===e:t.at(-1)?.key===e}function R(){let e=f.getState();for(let t in e)for(let n of e[t])m(n.key,t)}function O(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:_(),t=f.getState()[e];if(null!=t)for(let n of t)m(n.key,e)}function b(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:l.SY,i=e[n];return null!=i&&i.some(e=>e.key===t)}function D(e,t){return b(f.getState(),e,t)}function L(e,t){return b(f(),e,t)}function w(){let e=f.getState(),t=_();if(t!==l.SY&&null!=e[t]&&e[t].length>0)return!1;let n=e[l.SY];return null==n||!(n.length>0)||(n.at(-1)?.allowsNavigation??!1)}
+"use strict";
+n.r(t),
+    n.d(t, {
+        closeAllModals: () => R,
+        closeAllModalsInContext: () => O,
+        closeModal: () => m,
+        closeModalInAllContexts: () => g,
+        doesTopModalAllowNavigation: () => w,
+        getInteractingModalContext: () => _,
+        getOpenModalKeys: () => S,
+        hasAnyModalOpen: () => T,
+        hasAnyModalOpenSelector: () => I,
+        hasModalOpen: () => D,
+        hasModalOpenSelector: () => b,
+        hasModalOpenedSince: () => y,
+        modalContextFromAppContext: () => h,
+        openModal: () => E,
+        openModalLazy: () => p,
+        subscribeToModalChanges: () => C,
+        updateModal: () => A,
+        useHasAnyModalOpen: () => N,
+        useHasModalOpen: () => L,
+        useIsModalAtTop: () => v,
+        useModalsStore: () => f,
+    }),
+    n(134528),
+    n(947204);
+var i = n(296489),
+    r = n.n(i),
+    s = n(353640),
+    a = n(121894),
+    o = n(267102),
+    l = n(231723),
+    u = n(652215);
+let c = n(450507).A,
+    d = [l.SY, l.KX];
+function _() {
+    let e = (0, o.zd)();
+    return null != e ? h(e) : l.SY;
+}
+function h(e) {
+    switch (e) {
+        case u.BRT.POPOUT:
+            return l.KX;
+        case u.BRT.OVERLAY:
+            if (__OVERLAY__) return l.SY;
+            return l.KX;
+        default:
+            return l.SY;
+    }
+}
+let f = (0, s.v)((e) => ({ [l.SY]: [], [l.KX]: [] }));
+async function p(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        { contextKey: n = _(), ...i } = t,
+        s = null != t.modalKey ? t.modalKey : r()(),
+        a = !1,
+        o = setTimeout(() => {
+            (a = !0), E(c, { ...i, modalKey: s }, n);
+        }, 300),
+        l = await e();
+    return (
+        clearTimeout(o),
+        a ? D(s, n) && A(s, l, i.onCloseRequest, i.onCloseCallback, n) : E(l, { ...i, modalKey: s }, n),
+        s
+    );
+}
+function E(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _(),
+        {
+            modalKey: i,
+            dismissable: s,
+            instant: o,
+            Layer: l,
+            onCloseRequest: u,
+            onCloseCallback: c,
+            backdropStyle: d,
+            stackingBehavior: h,
+            stackNextByDefault: p,
+            allowsNavigation: E,
+        } = t,
+        g = null != i ? i : r()();
+    return (
+        (0, a.r)(() => {
+            f.setState((t) => {
+                let i = t[n];
+                if (
+                    void 0 !== i &&
+                    i.some((e) => {
+                        let { key: t } = e;
+                        return t === g;
+                    })
+                )
+                    return t;
+                let r = h;
+                return (
+                    null == r && (r = i.at(-1)?.stackNextByDefault === !0 ? "stack" : "replace"),
+                    {
+                        ...t,
+                        [n]: [
+                            ...i,
+                            {
+                                key: g,
+                                dismissable: s,
+                                Layer: l,
+                                render: e,
+                                onCloseRequest: u ?? (() => m(g, n)),
+                                onCloseCallback: c,
+                                instant: o,
+                                backdropStyle: d,
+                                stackingBehavior: r,
+                                stackNextByDefault: p,
+                                allowsNavigation: E,
+                            },
+                        ],
+                    }
+                );
+            });
+        }),
+        g
+    );
+}
+function m(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _(),
+        n = f.getState()[t],
+        i =
+            null != n
+                ? n.find((t) => {
+                      let { key: n } = t;
+                      return n === e;
+                  })
+                : null;
+    return (
+        (0, a.r)(() => {
+            f.setState((n) =>
+                void 0 === n[t]
+                    ? n
+                    : {
+                          ...n,
+                          [t]: n[t].filter((t) => {
+                              let { key: n } = t;
+                              return n !== e;
+                          }),
+                      },
+            );
+        }),
+        null != i && null != i.onCloseCallback && i.onCloseCallback(),
+        null != i
+    );
+}
+function g(e) {
+    let t = f.getState(),
+        n = d
+            .map((e) => t[e] ?? [])
+            .map(
+                (t) =>
+                    t.find((t) => {
+                        let { key: n } = t;
+                        return n === e;
+                    }) ?? null,
+            );
+    n.some((e) => null != e) &&
+        ((0, a.r)(() => {
+            f.setState((t) => {
+                let n = { ...t };
+                return (
+                    d.forEach((t) => {
+                        n[t] = n[t]?.filter((t) => {
+                            let { key: n } = t;
+                            return n !== e;
+                        });
+                    }),
+                    n
+                );
+            });
+        }),
+        n.forEach((e) => {
+            e?.onCloseCallback?.();
+        }));
+}
+function A(e, t, n, i) {
+    let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : _();
+    (0, a.r)(() => {
+        f.setState((s) =>
+            void 0 === s[r]
+                ? s
+                : {
+                      ...s,
+                      [r]: s[r].map((s) =>
+                          s.key === e
+                              ? { ...s, render: t, onCloseRequest: null == n ? () => m(e, r) : n, onCloseCallback: i }
+                              : s,
+                      ),
+                  },
+        );
+    });
+}
+function I(e) {
+    for (let t of d) {
+        let n = e[t];
+        if (null != n && n.length > 0) return !0;
+    }
+    return !1;
+}
+function T() {
+    return I(f.getState());
+}
+function S() {
+    let e = f.getState(),
+        t = new Set();
+    for (let n of d) for (let i of e[n] ?? []) t.add(i.key);
+    return t;
+}
+function y(e) {
+    let t = f.getState();
+    for (let n of d) for (let i of t[n] ?? []) if (!e.has(i.key)) return !0;
+    return !1;
+}
+function C(e) {
+    return f.subscribe(e);
+}
+function N() {
+    return I(f());
+}
+function v(e) {
+    let { default: t, popout: n } = f();
+    return n.length > 0 ? n.at(-1)?.key === e : t.at(-1)?.key === e;
+}
+function R() {
+    let e = f.getState();
+    for (let t in e) for (let n of e[t]) m(n.key, t);
+}
+function O() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _(),
+        t = f.getState()[e];
+    if (null != t) for (let n of t) m(n.key, e);
+}
+function b(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.SY,
+        i = e[n];
+    return null != i && i.some((e) => e.key === t);
+}
+function D(e, t) {
+    return b(f.getState(), e, t);
+}
+function L(e, t) {
+    return b(f(), e, t);
+}
+function w() {
+    let e = f.getState(),
+        t = _();
+    if (t !== l.SY && null != e[t] && e[t].length > 0) return !1;
+    let n = e[l.SY];
+    return null == n || !(n.length > 0) || (n.at(-1)?.allowsNavigation ?? !1);
+}

@@ -1,1 +1,153 @@
-"use strict";n.d(t,{X:()=>R,Y:()=>v});var i=n(627968);n(64700);var r=n(503698),s=n.n(r),a=n(17928),o=n(821609),l=n(939249),u=n(789645),c=n(834730),d=n(534514),_=n(565645),h=n(241524),f=n(166532),p=n(71393),E=n(371794),m=n(500345),g=n(599941),A=n(320137),I=n(417360),T=n(759625),S=n(2242),y=n(375708),C=n(28008),N=n(575650);let v=e=>{let{onClose:t,listing:n,step:r,guildId:a}=e,o=(0,g.Tq)(a),c=(0,h.A)(S.TQ),d=(()=>{if(c)return null;let e=o?.cover_image_asset?.application_id!=null?(0,E.YE)(o.cover_image_asset.application_id,o.cover_image_asset,440):void 0;return null==e&&r!==f.pn.CONFIRM?null:null==e?(0,i.jsx)("div",{className:C.gI}):(0,i.jsx)("img",{src:e,alt:"",className:C.F0})})();return(0,i.jsxs)("div",{className:s()(C.N1,{[N.GI]:null!=d,[C.TP]:c||null==d}),children:[d,(()=>{if(r!==f.pn.CONFIRM)return null;let e=null==n.image_asset?void 0:(0,E.YE)(n.application_id,n.image_asset,80);return(0,i.jsx)("div",{className:C.z9,children:(0,i.jsx)("img",{src:e,alt:"",className:C.ah})})})(),(0,i.jsx)(l.D,{className:C.G3,onClick:()=>t(!1),"aria-label":y.intl.string(y.t.cpT0Cq),children:(0,i.jsx)(u.P,{size:"md",color:"currentColor",className:C.ut})})]})},R=e=>{let{onClose:t,listing:n,guildId:r}=e,s=(0,a.bG)([p.A],()=>p.A.getGuild(r),[r]),l=(0,A.A)(r).filter(e=>e.roles.includes(n.role_id)),u=n.role_benefits.benefits.filter(m.B1).slice(0,null===l.length?4:3),h=(0,I.A)(u).slice(0,null===l.length?4:3);return(0,i.jsxs)("div",{className:C.RP,children:[(0,i.jsx)(d.D,{className:C.RS,variant:"heading-xl/semibold",color:"text-default",children:y.intl.format(y.t["1HIsTk"],{serverName:s?.name})}),(0,i.jsx)(c.E,{className:C.sT,variant:"text-md/normal",color:"text-default",children:y.intl.format(y.t.oi3gip,{tier:n.name})}),h.length>0&&(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(c.E,{variant:"text-xs/normal",color:"text-default",className:C.n2,children:y.intl.string(y.t.w0CQ01)}),(0,i.jsx)("div",{className:C.M3,children:h.map(e=>(0,i.jsx)(T.A,{benefit:e,guildId:r,onClick:()=>t(!0)},(0,m.nh)(e)))})]}),(()=>{if(0===l.length)return null;let e=l[0];return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(c.E,{variant:"text-xs/medium",color:"text-default",className:C.n2,children:y.intl.string(y.t["6Y1FLi"])}),(0,i.jsxs)("div",{className:C.DI,children:[(0,i.jsx)(_.A,{emojiId:e.id,emojiName:e.name,animated:e.animated??!1,className:C.mp}),(0,i.jsxs)("div",{children:[(0,i.jsx)(c.E,{variant:"text-md/medium",color:"text-strong",className:C.cC,children:y.intl.string(y.t.PrKk4n)}),(0,i.jsx)(c.E,{color:"interactive-text-default",variant:"text-sm/normal",children:y.intl.format(y.t["2ICUkG"],{count:l.length})})]})]})]})})(),(0,i.jsx)("div",{"data-button-hoisted-classname-wrapper":!0,className:C.EJ,children:(0,i.jsx)(o.$,{variant:"primary",text:y.intl.string(y.t["Ph+ecI"]),onClick:()=>t(!0)})})]})}
+"use strict";
+n.d(t, { X: () => R, Y: () => v });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(17928),
+    o = n(821609),
+    l = n(939249),
+    u = n(789645),
+    c = n(834730),
+    d = n(534514),
+    _ = n(565645),
+    h = n(241524),
+    f = n(166532),
+    p = n(71393),
+    E = n(371794),
+    m = n(500345),
+    g = n(599941),
+    A = n(320137),
+    I = n(417360),
+    T = n(759625),
+    S = n(2242),
+    y = n(375708),
+    C = n(28008),
+    N = n(575650);
+let v = (e) => {
+        let { onClose: t, listing: n, step: r, guildId: a } = e,
+            o = (0, g.Tq)(a),
+            c = (0, h.A)(S.TQ),
+            d = (() => {
+                if (c) return null;
+                let e =
+                    o?.cover_image_asset?.application_id != null
+                        ? (0, E.YE)(o.cover_image_asset.application_id, o.cover_image_asset, 440)
+                        : void 0;
+                return null == e && r !== f.pn.CONFIRM
+                    ? null
+                    : null == e
+                      ? (0, i.jsx)("div", { className: C.gI })
+                      : (0, i.jsx)("img", { src: e, alt: "", className: C.F0 });
+            })();
+        return (0, i.jsxs)("div", {
+            className: s()(C.N1, { [N.GI]: null != d, [C.TP]: c || null == d }),
+            children: [
+                d,
+                (() => {
+                    if (r !== f.pn.CONFIRM) return null;
+                    let e = null == n.image_asset ? void 0 : (0, E.YE)(n.application_id, n.image_asset, 80);
+                    return (0, i.jsx)("div", {
+                        className: C.z9,
+                        children: (0, i.jsx)("img", { src: e, alt: "", className: C.ah }),
+                    });
+                })(),
+                (0, i.jsx)(l.D, {
+                    className: C.G3,
+                    onClick: () => t(!1),
+                    "aria-label": y.intl.string(y.t.cpT0Cq),
+                    children: (0, i.jsx)(u.P, { size: "md", color: "currentColor", className: C.ut }),
+                }),
+            ],
+        });
+    },
+    R = (e) => {
+        let { onClose: t, listing: n, guildId: r } = e,
+            s = (0, a.bG)([p.A], () => p.A.getGuild(r), [r]),
+            l = (0, A.A)(r).filter((e) => e.roles.includes(n.role_id)),
+            u = n.role_benefits.benefits.filter(m.B1).slice(0, null === l.length ? 4 : 3),
+            h = (0, I.A)(u).slice(0, null === l.length ? 4 : 3);
+        return (0, i.jsxs)("div", {
+            className: C.RP,
+            children: [
+                (0, i.jsx)(d.D, {
+                    className: C.RS,
+                    variant: "heading-xl/semibold",
+                    color: "text-default",
+                    children: y.intl.format(y.t["1HIsTk"], { serverName: s?.name }),
+                }),
+                (0, i.jsx)(c.E, {
+                    className: C.sT,
+                    variant: "text-md/normal",
+                    color: "text-default",
+                    children: y.intl.format(y.t.oi3gip, { tier: n.name }),
+                }),
+                h.length > 0 &&
+                    (0, i.jsxs)(i.Fragment, {
+                        children: [
+                            (0, i.jsx)(c.E, {
+                                variant: "text-xs/normal",
+                                color: "text-default",
+                                className: C.n2,
+                                children: y.intl.string(y.t.w0CQ01),
+                            }),
+                            (0, i.jsx)("div", {
+                                className: C.M3,
+                                children: h.map((e) =>
+                                    (0, i.jsx)(T.A, { benefit: e, guildId: r, onClick: () => t(!0) }, (0, m.nh)(e)),
+                                ),
+                            }),
+                        ],
+                    }),
+                (() => {
+                    if (0 === l.length) return null;
+                    let e = l[0];
+                    return (0, i.jsxs)(i.Fragment, {
+                        children: [
+                            (0, i.jsx)(c.E, {
+                                variant: "text-xs/medium",
+                                color: "text-default",
+                                className: C.n2,
+                                children: y.intl.string(y.t["6Y1FLi"]),
+                            }),
+                            (0, i.jsxs)("div", {
+                                className: C.DI,
+                                children: [
+                                    (0, i.jsx)(_.A, {
+                                        emojiId: e.id,
+                                        emojiName: e.name,
+                                        animated: e.animated ?? !1,
+                                        className: C.mp,
+                                    }),
+                                    (0, i.jsxs)("div", {
+                                        children: [
+                                            (0, i.jsx)(c.E, {
+                                                variant: "text-md/medium",
+                                                color: "text-strong",
+                                                className: C.cC,
+                                                children: y.intl.string(y.t.PrKk4n),
+                                            }),
+                                            (0, i.jsx)(c.E, {
+                                                color: "interactive-text-default",
+                                                variant: "text-sm/normal",
+                                                children: y.intl.format(y.t["2ICUkG"], { count: l.length }),
+                                            }),
+                                        ],
+                                    }),
+                                ],
+                            }),
+                        ],
+                    });
+                })(),
+                (0, i.jsx)("div", {
+                    "data-button-hoisted-classname-wrapper": !0,
+                    className: C.EJ,
+                    children: (0, i.jsx)(o.$, {
+                        variant: "primary",
+                        text: y.intl.string(y.t["Ph+ecI"]),
+                        onClick: () => t(!0),
+                    }),
+                }),
+            ],
+        });
+    };

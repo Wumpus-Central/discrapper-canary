@@ -1,1 +1,1 @@
-t.exports={C:"nitroPreviewUpsell_c8eb34"}
+t.exports = { C: "nitroPreviewUpsell_c8eb34" };

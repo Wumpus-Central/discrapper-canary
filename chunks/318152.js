@@ -1,1 +1,1 @@
-e.exports={Zd:"form_a327d2"}
+_.exports = { Zd: "form_a327d2" };

@@ -1,1 +1,21 @@
-"use strict";n.d(t,{$u:()=>s,WO:()=>a});var l=n(788868),i=n(652215);let r=new Set([i.ThZ.FRIEND_ANNIVERSARIES_CHAT,i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK]);function s(e){return e===l.np.FRIEND_ANNIVERSARY?{chat:i.ThZ.FRIEND_ANNIVERSARIES_CHAT,actionButton:i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,actionButtonCoachmark:i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK}:{}}function a(e){return r.has(e)}
+"use strict";
+n.d(t, { $u: () => s, WO: () => a });
+var l = n(788868),
+    i = n(652215);
+let r = new Set([
+    i.ThZ.FRIEND_ANNIVERSARIES_CHAT,
+    i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+    i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
+]);
+function s(e) {
+    return e === l.np.FRIEND_ANNIVERSARY
+        ? {
+              chat: i.ThZ.FRIEND_ANNIVERSARIES_CHAT,
+              actionButton: i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+              actionButtonCoachmark: i.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
+          }
+        : {};
+}
+function a(e) {
+    return r.has(e);
+}

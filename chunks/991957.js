@@ -1,1 +1,42 @@
-"use strict";n.d(t,{H:()=>s});var i=n(627968);n(64700);var r=n(140735);function s(e){let{name:t,form:n,disabled:s,autoComplete:a,selectionMode:o,selectedItems:l,onSelectionChange:u,listItems:c}=e;return null==t&&(null==a||"off"===a)?null:(0,i.jsx)(r.A,{children:(0,i.jsx)("select",{"aria-hidden":!0,tabIndex:-1,disabled:s,name:t,form:n,multiple:"multiple"===o,autoComplete:a,onChange:function(e){let t=Array.from(e.target.selectedOptions).map(e=>e.dataset.id);u(c.filter(e=>t.includes(e.id)))},children:c?.map(e=>{let t="object"==typeof e.value?JSON.stringify(e.value):String(e.value);return(0,i.jsx)("option",{"data-id":e.id,value:t,selected:l.includes(e),children:e.label},e.id)})})})}
+"use strict";
+n.d(t, { H: () => s });
+var i = n(627968);
+n(64700);
+var r = n(140735);
+function s(e) {
+    let {
+        name: t,
+        form: n,
+        disabled: s,
+        autoComplete: a,
+        selectionMode: o,
+        selectedItems: l,
+        onSelectionChange: u,
+        listItems: c,
+    } = e;
+    return null == t && (null == a || "off" === a)
+        ? null
+        : (0, i.jsx)(r.A, {
+              children: (0, i.jsx)("select", {
+                  "aria-hidden": !0,
+                  tabIndex: -1,
+                  disabled: s,
+                  name: t,
+                  form: n,
+                  multiple: "multiple" === o,
+                  autoComplete: a,
+                  onChange: function (e) {
+                      let t = Array.from(e.target.selectedOptions).map((e) => e.dataset.id);
+                      u(c.filter((e) => t.includes(e.id)));
+                  },
+                  children: c?.map((e) => {
+                      let t = "object" == typeof e.value ? JSON.stringify(e.value) : String(e.value);
+                      return (0, i.jsx)(
+                          "option",
+                          { "data-id": e.id, value: t, selected: l.includes(e), children: e.label },
+                          e.id,
+                      );
+                  }),
+              }),
+          });
+}

@@ -1,1 +1,89 @@
-"use strict";n.d(t,{A:()=>m});var i=n(627968);n(64700);var r=n(17928),s=n(192308),a=n(688810),o=n(822123),l=n(532794),u=n(976860),c=n(780964),d=n(766075),_=n(287809),h=n(166403),f=n(234419),p=n(788868),E=n(652215);function m(e){let{onClick:t,subscriptionTier:m,postSuccessGuild:g,onSubscribeModalClose:A,premiumModalAnalyticsLocation:I,applicationId:T,giftMessage:S,confirmationFooter:y,isGift:C,initialPlanId:N=null,children:v}=e,R=(0,r.bG)([_.default],()=>_.default.getCurrentUser()),O=(0,r.bG)([h.A],()=>h.A.getPremiumTypeSubscription()),{analyticsLocations:b}=(0,a.Ay)(),D=(0,f.V)(),L=!C&&null!=D&&null!=m&&p.TP[D.trial_id].skus.includes(m);return v({onClick:e=>{if(e.preventDefault(),null==R)return void(0,u.pX)(E.BVt.LOGIN,{source:"premium_subscribe_button"});if(t?.(e),O?.status===E.Dmq.ACCOUNT_HOLD){(0,o.xf)(),(0,d.openUserSettings)(c.X.NITRO_PANEL),A?.(!1);return}if(!R.isClaimed())return void(0,s.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e("17487"),n.e("12206"),n.e("9998"),n.e("80388")]).then(n.bind(n,195759));return t=>{let{onClose:n,...r}=t;return(0,i.jsx)(e,{...r,onClose:n})}});if(!R.verified)return void(0,s.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e("54681"),n.e("74913"),n.e("12206"),n.e("90406")]).then(n.bind(n,661925));return t=>{let{onClose:n,...r}=t;return(0,i.jsx)(e,{...r,onClose:n})}});let r=L?D.subscription_trial?.id:null,a=E.AnalyticsObjectTypes.BUY;null!=r?a=E.AnalyticsObjectTypes.TRIAL:C&&(a=E.AnalyticsObjectTypes.GIFT),(0,l.A)({isGift:C,initialPlanId:N,subscriptionTier:m,analyticsLocations:b,analyticsObject:{object:E.ZSU.BUTTON_CTA,objectType:a,...I},trialId:r,postSuccessGuild:g,onClose:A,applicationId:T,giftMessage:S,confirmationFooter:y})}})}
+"use strict";
+n.d(t, { A: () => m });
+var i = n(627968);
+n(64700);
+var r = n(17928),
+    s = n(192308),
+    a = n(688810),
+    o = n(822123),
+    l = n(532794),
+    u = n(976860),
+    c = n(780964),
+    d = n(766075),
+    _ = n(287809),
+    h = n(166403),
+    f = n(234419),
+    p = n(788868),
+    E = n(652215);
+function m(e) {
+    let {
+            onClick: t,
+            subscriptionTier: m,
+            postSuccessGuild: g,
+            onSubscribeModalClose: A,
+            premiumModalAnalyticsLocation: I,
+            applicationId: T,
+            giftMessage: S,
+            confirmationFooter: y,
+            isGift: C,
+            initialPlanId: N = null,
+            children: v,
+        } = e,
+        R = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
+        O = (0, r.bG)([h.A], () => h.A.getPremiumTypeSubscription()),
+        { analyticsLocations: b } = (0, a.Ay)(),
+        D = (0, f.V)(),
+        L = !C && null != D && null != m && p.TP[D.trial_id].skus.includes(m);
+    return v({
+        onClick: (e) => {
+            if ((e.preventDefault(), null == R))
+                return void (0, u.pX)(E.BVt.LOGIN, { source: "premium_subscribe_button" });
+            if ((t?.(e), O?.status === E.Dmq.ACCOUNT_HOLD)) {
+                (0, o.xf)(), (0, d.openUserSettings)(c.X.NITRO_PANEL), A?.(!1);
+                return;
+            }
+            if (!R.isClaimed())
+                return void (0, s.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([
+                        n.e("17487"),
+                        n.e("12206"),
+                        n.e("9998"),
+                        n.e("80388"),
+                    ]).then(n.bind(n, 195759));
+                    return (t) => {
+                        let { onClose: n, ...r } = t;
+                        return (0, i.jsx)(e, { ...r, onClose: n });
+                    };
+                });
+            if (!R.verified)
+                return void (0, s.openModalLazy)(async () => {
+                    let { default: e } = await Promise.all([
+                        n.e("54681"),
+                        n.e("74913"),
+                        n.e("12206"),
+                        n.e("90406"),
+                    ]).then(n.bind(n, 661925));
+                    return (t) => {
+                        let { onClose: n, ...r } = t;
+                        return (0, i.jsx)(e, { ...r, onClose: n });
+                    };
+                });
+            let r = L ? D.subscription_trial?.id : null,
+                a = E.AnalyticsObjectTypes.BUY;
+            null != r ? (a = E.AnalyticsObjectTypes.TRIAL) : C && (a = E.AnalyticsObjectTypes.GIFT),
+                (0, l.A)({
+                    isGift: C,
+                    initialPlanId: N,
+                    subscriptionTier: m,
+                    analyticsLocations: b,
+                    analyticsObject: { object: E.ZSU.BUTTON_CTA, objectType: a, ...I },
+                    trialId: r,
+                    postSuccessGuild: g,
+                    onClose: A,
+                    applicationId: T,
+                    giftMessage: S,
+                    confirmationFooter: y,
+                });
+        },
+    });
+}

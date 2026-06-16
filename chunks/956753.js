@@ -1,1 +1,19 @@
-"use strict";n.d(t,{U5:()=>o,v$:()=>a});var i=n(291445),r=n(206885),s=n(589051);function a(e,t){return function(){for(var n=arguments.length,a=Array(n),o=0;o<n;o++)a[o]=arguments[o];let l=(r.O||r.e)&&(0,s.NI)(t).hasFriendList,u=i.z.getConfig({location:t}).hasFriendList;return(!!l||!!u)&&e(...a)}}function o(e,t){return function(){for(var n=arguments.length,i=Array(n),r=0;r<n;r++)i[r]=arguments[r];return!!(0,s.NI)(t).hasChat&&e(...i)}}
+"use strict";
+n.d(t, { U5: () => o, v$: () => a });
+var i = n(291445),
+    r = n(206885),
+    s = n(589051);
+function a(e, t) {
+    return function () {
+        for (var n = arguments.length, a = Array(n), o = 0; o < n; o++) a[o] = arguments[o];
+        let l = (r.O || r.e) && (0, s.NI)(t).hasFriendList,
+            u = i.z.getConfig({ location: t }).hasFriendList;
+        return (!!l || !!u) && e(...a);
+    };
+}
+function o(e, t) {
+    return function () {
+        for (var n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
+        return !!(0, s.NI)(t).hasChat && e(...i);
+    };
+}

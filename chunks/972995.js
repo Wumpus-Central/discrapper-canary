@@ -1,1 +1,56 @@
-"use strict";n.d(t,{q:()=>d});var i=n(485845),r=n(95561),s=n(887909),a=n(395671),o=n(627363),l=n(587895),u=n(204776),c=n(652215);async function d(e){let{applicationId:t,channel:n,commandIntegrationTypes:d,appLauncherContext:_}=e;if(!(0,u.Rx)({applicationId:t,channel:n,commandIntegrationTypes:d}))return Promise.resolve({isAuthorized:!0});let h=l.A.getApplication(t);if(null==h){let e=await (0,o.TA)(t);h=a.Ay.createFromServer(e)}let f=i.b.USER_INSTALL,p=h?.integrationTypesConfig?.[f]?.oauth2InstallParams?.scopes;return null!=_&&(0,r.zV)(c.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED,{application_id:t,location:_.location,section_name:_.sectionName,source:_.entrypoint}),new Promise(e=>{(0,s.openOAuth2Modal)({clientId:t,integrationType:f,scopes:p,callback:n=>{let{location:i}=n;null!=i?(null!=_&&(0,r.zV)(c.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED,{application_id:t,location:_.location,section_name:_.sectionName,source:_.entrypoint}),e({isAuthorized:!0})):e({isAuthorized:!1})}},()=>{e({isAuthorized:!1})})})}
+"use strict";
+n.d(t, { q: () => d });
+var i = n(485845),
+    r = n(95561),
+    s = n(887909),
+    a = n(395671),
+    o = n(627363),
+    l = n(587895),
+    u = n(204776),
+    c = n(652215);
+async function d(e) {
+    let { applicationId: t, channel: n, commandIntegrationTypes: d, appLauncherContext: _ } = e;
+    if (!(0, u.Rx)({ applicationId: t, channel: n, commandIntegrationTypes: d }))
+        return Promise.resolve({ isAuthorized: !0 });
+    let h = l.A.getApplication(t);
+    if (null == h) {
+        let e = await (0, o.TA)(t);
+        h = a.Ay.createFromServer(e);
+    }
+    let f = i.b.USER_INSTALL,
+        p = h?.integrationTypesConfig?.[f]?.oauth2InstallParams?.scopes;
+    return (
+        null != _ &&
+            (0, r.zV)(c.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_OPENED, {
+                application_id: t,
+                location: _.location,
+                section_name: _.sectionName,
+                source: _.entrypoint,
+            }),
+        new Promise((e) => {
+            (0, s.openOAuth2Modal)(
+                {
+                    clientId: t,
+                    integrationType: f,
+                    scopes: p,
+                    callback: (n) => {
+                        let { location: i } = n;
+                        null != i
+                            ? (null != _ &&
+                                  (0, r.zV)(c.HAw.APP_LAUNCHER_OAUTH2_AUTHORIZE_SUCCEEDED, {
+                                      application_id: t,
+                                      location: _.location,
+                                      section_name: _.sectionName,
+                                      source: _.entrypoint,
+                                  }),
+                              e({ isAuthorized: !0 }))
+                            : e({ isAuthorized: !1 });
+                    },
+                },
+                () => {
+                    e({ isAuthorized: !1 });
+                },
+            );
+        })
+    );
+}

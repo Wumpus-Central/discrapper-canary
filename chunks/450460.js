@@ -1,1 +1,28 @@
-"use strict";var i=n(839036)("%Reflect.construct%",!0),r=n(173081);try{r({},"",{"[[Get]]":function(){}})}catch(e){r=null}if(r&&i){var s={},a={};r(a,"length",{"[[Get]]":function(){throw s},"[[Enumerable]]":!0}),e.exports=function(e){try{i(e,a)}catch(e){return e===s}}}else e.exports=function(e){return"function"==typeof e&&!!e.prototype}
+"use strict";
+var i = n(839036)("%Reflect.construct%", !0),
+    r = n(173081);
+try {
+    r({}, "", { "[[Get]]": function () {} });
+} catch (e) {
+    r = null;
+}
+if (r && i) {
+    var s = {},
+        a = {};
+    r(a, "length", {
+        "[[Get]]": function () {
+            throw s;
+        },
+        "[[Enumerable]]": !0,
+    }),
+        (e.exports = function (e) {
+            try {
+                i(e, a);
+            } catch (e) {
+                return e === s;
+            }
+        });
+} else
+    e.exports = function (e) {
+        return "function" == typeof e && !!e.prototype;
+    };

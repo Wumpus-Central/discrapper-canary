@@ -1,1 +1,227 @@
-"use strict";n.d(t,{Ay:()=>R,O7:()=>N,gS:()=>v});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(284009),l=n.n(o),u=n(17928),c=n(834730),d=n(939249),_=n(150934),h=n(211159),f=n(937008),p=n(773669),E=n(97352),m=n(45938),g=n(252424),A=n(428262),I=n(580630),T=n(960851),S=n(788868),y=n(375708),C=n(672305);let N=(e,t)=>{let n=e.interval===S.WT.YEAR?y.t.ECT4A5:y.t.v9QeON;return y.intl.format(n,{price:(0,I.$g)(t.amount,t.currency)})},v=(e,t,n)=>{let{userLocale:i,isEligibleForBOGOPromotion:r,shouldShowSavingsPercent:s,isGift:a,planId:o,savingsPercent:l}=n,u=null!=e&&(e.planId===o||null!=t&&e.planId===t.id);return r?a||o!==S.gD.PREMIUM_MONTH_TIER_2?null:{type:"badge",textBadgeVariant:"eyebrow",text:y.intl.string(y.t.iQTfWx)}:null==t||t.interval===S.WT.YEAR&&null!=e||s&&!u?null!=t&&t.interval===S.WT.YEAR&&null!=e?y.intl.string(y.t["122kWB"]):s&&!u&&null!=l?{type:"badge",textBadgeVariant:"eyebrow",text:y.intl.format(y.t.IAybsG,{discount:(0,g.l9)(i,l/100)})}:null:null};function R(e){let{premiumSubscription:t,planId:n,selected:s,priceOptions:o,isPrepaid:g,shouldShowTrialOrDiscountLayout:R,isEligibleForDiscount:O,isEligibleForTrial:b,isCurrentPlan:D,disabled:L}=e,w=(0,u.bG)([p.default],()=>p.default.locale),{discountInfo:M,setSelectedPlanId:P,isGift:x}=(0,h.t4)(e=>({discountInfo:e.premiumDiscountInfo,setSelectedPlanId:e.setSelectedPlanId,isGift:e.isGift})),{giftRecipient:k}=(0,f.Pv)(),U=x&&(0,m.Ik)(k),{discountOffer:G,discountAmountOff:F,applicablePlan:V}=M,B=(0,u.bG)([E.A],()=>E.A.get(n));l()(null!=B,"Missing subscriptionPlan");let j=(0,T.cg)(),H=(0,A.L_)({planId:n,isGift:x,priceOptions:o,subscriptionPlan:B}),Y=(0,A.y8)(n,!1,x,o),W=null!=H&&!R,K=r.useCallback(()=>{let e=v(t,B,{userLocale:w,isEligibleForBOGOPromotion:j,shouldShowSavingsPercent:W,isGift:x,planId:n,savingsPercent:H});return"string"==typeof e?(0,i.jsxs)("span",{className:C.IS,children:["(",e,")"]}):null!=e?(e.type,(0,i.jsx)(c.E,{tag:"span",variant:e.textBadgeVariant,color:"always-white",className:C.kP,children:e.text})):null},[w,j,B,t,W,x,n,H]),$=(0,A.m6)(B.id),z=r.useMemo(()=>(0,A.D8)(B.interval,x,g,B.intervalCount,U,$),[B.interval,B.intervalCount,x,g,U,$]),q=null!=V&&n===V,Z=()=>{L||P(n)},X=R?y.intl.format(y.t.hXcaLT,{price:O&&null!=F&&q?(0,I.$g)(Y.amount-F,Y.currency):b?(0,I.$g)(0,Y.currency,{minimumFractionDigits:0,maximumFractionDigits:0}):(0,I.$g)(Y.amount,Y.currency)}):(0,I.$g)(Y.amount,Y.currency);return(0,i.jsxs)(d.D,{role:"radio","aria-checked":s,tabIndex:s?0:-1,focusProps:{offset:{left:-4,right:-4,top:0,bottom:0}},onClick:Z,className:a()(C.G_,{[C.vW]:U&&s,[C.Gb]:U}),children:[(0,i.jsxs)("div",{className:a()(C.XM,{[C.PA]:L}),children:[(0,i.jsxs)("div",{className:C.l,children:[!U&&(0,i.jsx)("div",{className:C.E2,children:(0,i.jsx)(_.S,{checked:s,value:s,label:"",description:"",onChange:Z})}),(0,i.jsxs)("div",{children:[(0,i.jsxs)("div",{className:a()(C.Gl,{[C.h4]:s||U,[C.ox]:R&&(s||U)}),children:[z,U&&K()]}),U&&(0,i.jsx)("div",{className:C._R,children:y.intl.format(y.t.ori2Jm,{currencyAmount:(0,I.$g)(Y.amount,Y.currency)})})]}),D&&(0,i.jsxs)("span",{className:C.bq,children:["(",y.intl.string(y.t.ymSxhy),")"]}),!U&&K()]}),R?(0,i.jsx)("div",{className:a()({[C.kb]:s}),children:X}):(0,i.jsx)("div",{className:a()({[C.h4]:s||U}),children:X})]}),R&&(0,i.jsx)("div",{className:C.hB,children:(0,i.jsx)(c.E,{variant:"text-md/normal",color:s?"text-default":"interactive-text-default",className:a()(C.Ub,{[C.sw]:O||b}),children:((e,t)=>{let{price:n,isEligibleForDiscount:i,isEligibleForTrial:r,discountAmountOff:s,discountOffer:a,isDiscountApplicableToPlan:o,savingsPercent:l}=t;return i&&null!=s&&o?e.interval===S.WT.YEAR?y.intl.format(y.t["EQmTl+"],{numYears:a?.discount.userUsageLimit??S.OJ,regularPrice:(0,I.$g)(n.amount,n.currency)}):y.intl.format(y.t["VeE/4E"],{numMonths:a?.discount.userUsageLimit??S.OJ,discountedPrice:(0,I.$g)(n.amount-s,n.currency),regularPrice:(0,I.$g)(n.amount,n.currency)}):r?N(e,n):e.interval===S.WT.YEAR?y.intl.formatToPlainString(y.t.rtLTJP,{percent:l??""}):null})(B,{price:Y,isEligibleForDiscount:O,isEligibleForTrial:b,discountAmountOff:F,discountOffer:G,isDiscountApplicableToPlan:q,savingsPercent:H})})})]})}
+"use strict";
+n.d(t, { Ay: () => R, O7: () => N, gS: () => v });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(284009),
+    l = n.n(o),
+    u = n(17928),
+    c = n(834730),
+    d = n(939249),
+    _ = n(150934),
+    h = n(211159),
+    f = n(937008),
+    p = n(773669),
+    E = n(97352),
+    m = n(45938),
+    g = n(252424),
+    A = n(428262),
+    I = n(580630),
+    T = n(960851),
+    S = n(788868),
+    y = n(375708),
+    C = n(672305);
+let N = (e, t) => {
+        let n = e.interval === S.WT.YEAR ? y.t.ECT4A5 : y.t.v9QeON;
+        return y.intl.format(n, { price: (0, I.$g)(t.amount, t.currency) });
+    },
+    v = (e, t, n) => {
+        let {
+                userLocale: i,
+                isEligibleForBOGOPromotion: r,
+                shouldShowSavingsPercent: s,
+                isGift: a,
+                planId: o,
+                savingsPercent: l,
+            } = n,
+            u = null != e && (e.planId === o || (null != t && e.planId === t.id));
+        return r
+            ? a || o !== S.gD.PREMIUM_MONTH_TIER_2
+                ? null
+                : { type: "badge", textBadgeVariant: "eyebrow", text: y.intl.string(y.t.iQTfWx) }
+            : null == t || (t.interval === S.WT.YEAR && null != e) || (s && !u)
+              ? null != t && t.interval === S.WT.YEAR && null != e
+                  ? y.intl.string(y.t["122kWB"])
+                  : s && !u && null != l
+                    ? {
+                          type: "badge",
+                          textBadgeVariant: "eyebrow",
+                          text: y.intl.format(y.t.IAybsG, { discount: (0, g.l9)(i, l / 100) }),
+                      }
+                    : null
+              : null;
+    };
+function R(e) {
+    let {
+            premiumSubscription: t,
+            planId: n,
+            selected: s,
+            priceOptions: o,
+            isPrepaid: g,
+            shouldShowTrialOrDiscountLayout: R,
+            isEligibleForDiscount: O,
+            isEligibleForTrial: b,
+            isCurrentPlan: D,
+            disabled: L,
+        } = e,
+        w = (0, u.bG)([p.default], () => p.default.locale),
+        {
+            discountInfo: M,
+            setSelectedPlanId: P,
+            isGift: x,
+        } = (0, h.t4)((e) => ({
+            discountInfo: e.premiumDiscountInfo,
+            setSelectedPlanId: e.setSelectedPlanId,
+            isGift: e.isGift,
+        })),
+        { giftRecipient: k } = (0, f.Pv)(),
+        U = x && (0, m.Ik)(k),
+        { discountOffer: G, discountAmountOff: F, applicablePlan: V } = M,
+        B = (0, u.bG)([E.A], () => E.A.get(n));
+    l()(null != B, "Missing subscriptionPlan");
+    let j = (0, T.cg)(),
+        H = (0, A.L_)({ planId: n, isGift: x, priceOptions: o, subscriptionPlan: B }),
+        Y = (0, A.y8)(n, !1, x, o),
+        W = null != H && !R,
+        K = r.useCallback(() => {
+            let e = v(t, B, {
+                userLocale: w,
+                isEligibleForBOGOPromotion: j,
+                shouldShowSavingsPercent: W,
+                isGift: x,
+                planId: n,
+                savingsPercent: H,
+            });
+            return "string" == typeof e
+                ? (0, i.jsxs)("span", { className: C.IS, children: ["(", e, ")"] })
+                : null != e
+                  ? (e.type,
+                    (0, i.jsx)(c.E, {
+                        tag: "span",
+                        variant: e.textBadgeVariant,
+                        color: "always-white",
+                        className: C.kP,
+                        children: e.text,
+                    }))
+                  : null;
+        }, [w, j, B, t, W, x, n, H]),
+        $ = (0, A.m6)(B.id),
+        z = r.useMemo(
+            () => (0, A.D8)(B.interval, x, g, B.intervalCount, U, $),
+            [B.interval, B.intervalCount, x, g, U, $],
+        ),
+        q = null != V && n === V,
+        Z = () => {
+            L || P(n);
+        },
+        X = R
+            ? y.intl.format(y.t.hXcaLT, {
+                  price:
+                      O && null != F && q
+                          ? (0, I.$g)(Y.amount - F, Y.currency)
+                          : b
+                            ? (0, I.$g)(0, Y.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                            : (0, I.$g)(Y.amount, Y.currency),
+              })
+            : (0, I.$g)(Y.amount, Y.currency);
+    return (0, i.jsxs)(d.D, {
+        role: "radio",
+        "aria-checked": s,
+        tabIndex: s ? 0 : -1,
+        focusProps: { offset: { left: -4, right: -4, top: 0, bottom: 0 } },
+        onClick: Z,
+        className: a()(C.G_, { [C.vW]: U && s, [C.Gb]: U }),
+        children: [
+            (0, i.jsxs)("div", {
+                className: a()(C.XM, { [C.PA]: L }),
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: C.l,
+                        children: [
+                            !U &&
+                                (0, i.jsx)("div", {
+                                    className: C.E2,
+                                    children: (0, i.jsx)(_.S, {
+                                        checked: s,
+                                        value: s,
+                                        label: "",
+                                        description: "",
+                                        onChange: Z,
+                                    }),
+                                }),
+                            (0, i.jsxs)("div", {
+                                children: [
+                                    (0, i.jsxs)("div", {
+                                        className: a()(C.Gl, { [C.h4]: s || U, [C.ox]: R && (s || U) }),
+                                        children: [z, U && K()],
+                                    }),
+                                    U &&
+                                        (0, i.jsx)("div", {
+                                            className: C._R,
+                                            children: y.intl.format(y.t.ori2Jm, {
+                                                currencyAmount: (0, I.$g)(Y.amount, Y.currency),
+                                            }),
+                                        }),
+                                ],
+                            }),
+                            D &&
+                                (0, i.jsxs)("span", {
+                                    className: C.bq,
+                                    children: ["(", y.intl.string(y.t.ymSxhy), ")"],
+                                }),
+                            !U && K(),
+                        ],
+                    }),
+                    R
+                        ? (0, i.jsx)("div", { className: a()({ [C.kb]: s }), children: X })
+                        : (0, i.jsx)("div", { className: a()({ [C.h4]: s || U }), children: X }),
+                ],
+            }),
+            R &&
+                (0, i.jsx)("div", {
+                    className: C.hB,
+                    children: (0, i.jsx)(c.E, {
+                        variant: "text-md/normal",
+                        color: s ? "text-default" : "interactive-text-default",
+                        className: a()(C.Ub, { [C.sw]: O || b }),
+                        children: ((e, t) => {
+                            let {
+                                price: n,
+                                isEligibleForDiscount: i,
+                                isEligibleForTrial: r,
+                                discountAmountOff: s,
+                                discountOffer: a,
+                                isDiscountApplicableToPlan: o,
+                                savingsPercent: l,
+                            } = t;
+                            return i && null != s && o
+                                ? e.interval === S.WT.YEAR
+                                    ? y.intl.format(y.t["EQmTl+"], {
+                                          numYears: a?.discount.userUsageLimit ?? S.OJ,
+                                          regularPrice: (0, I.$g)(n.amount, n.currency),
+                                      })
+                                    : y.intl.format(y.t["VeE/4E"], {
+                                          numMonths: a?.discount.userUsageLimit ?? S.OJ,
+                                          discountedPrice: (0, I.$g)(n.amount - s, n.currency),
+                                          regularPrice: (0, I.$g)(n.amount, n.currency),
+                                      })
+                                : r
+                                  ? N(e, n)
+                                  : e.interval === S.WT.YEAR
+                                    ? y.intl.formatToPlainString(y.t.rtLTJP, { percent: l ?? "" })
+                                    : null;
+                        })(B, {
+                            price: Y,
+                            isEligibleForDiscount: O,
+                            isEligibleForTrial: b,
+                            discountAmountOff: F,
+                            discountOffer: G,
+                            isDiscountApplicableToPlan: q,
+                            savingsPercent: H,
+                        }),
+                    }),
+                }),
+        ],
+    });
+}

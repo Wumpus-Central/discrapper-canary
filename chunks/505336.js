@@ -1,1 +1,5 @@
-var i=n(381885);e.exports=function(e,t){var n=this.__data__;return this.size+=+!this.has(e),n[e]=i&&void 0===t?"__lodash_hash_undefined__":t,this}
+var i = n(381885);
+e.exports = function (e, t) {
+    var n = this.__data__;
+    return (this.size += +!this.has(e)), (n[e] = i && void 0 === t ? "__lodash_hash_undefined__" : t), this;
+};

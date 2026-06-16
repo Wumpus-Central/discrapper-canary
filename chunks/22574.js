@@ -1,1 +1,7 @@
-n.d(t,{A:()=>l});let l=(0,n(945810).mj)({name:"2026-06-game-autocomplete-search",kind:"user",defaultConfig:{enabled:!1},variations:{1:{enabled:!0}}})
+n.d(t, { A: () => l });
+let l = (0, n(945810).mj)({
+    name: "2026-06-game-autocomplete-search",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});

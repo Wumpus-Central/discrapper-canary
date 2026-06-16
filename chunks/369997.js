@@ -1,1 +1,1 @@
-e.exports={t:"stack_dbd263"}
+e.exports = { t: "stack_dbd263" };

@@ -1,1 +1,16 @@
-i.d(t,{A:()=>d});var n=i(627968);i(64700);var l=i(503698),s=i.n(l),a=i(900179),r=i(918262);function d(e){let{className:t,...i}=e;return(0,n.jsx)(a.A,{className:s()(r.u,t),headingVariant:"text-xs/medium",headingColor:"text-subtle",...i})}
+i.d(t, { A: () => d });
+var n = i(627968);
+i(64700);
+var l = i(503698),
+    s = i.n(l),
+    a = i(900179),
+    r = i(918262);
+function d(e) {
+    let { className: t, ...i } = e;
+    return (0, n.jsx)(a.A, {
+        className: s()(r.u, t),
+        headingVariant: "text-xs/medium",
+        headingColor: "text-subtle",
+        ...i,
+    });
+}

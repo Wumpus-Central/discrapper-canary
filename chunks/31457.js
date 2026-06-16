@@ -1,1 +1,77 @@
-n.d(s,{ZK:()=>h,_H:()=>m,cS:()=>u,fu:()=>x});var r=n(627968);n(64700);var t=n(503698),l=n.n(t),a=n(661531),c=n(834730),o=n(628284);if(21552==n.j)var i=n(285796);var d=n(72736);function u(e){let{title:s,children:n}=e;return(0,r.jsxs)("div",{className:d.A9,children:[(0,r.jsx)(c.E,{className:d.HN,variant:"text-md/normal",color:"text-strong",children:s}),n]})}function m(e){let{title:s,children:n}=e;return(0,r.jsxs)("div",{className:d.y,children:[(0,r.jsx)(c.E,{className:d.HN,variant:"text-sm/medium",color:"text-muted",children:s}),n]})}function x(e){let{icon:s,text:n,meetsRequirement:t}=e;return(0,r.jsxs)("div",{className:d.xP,children:[(0,r.jsx)(s,{className:d.jt,height:16,width:16,size:"custom",color:"currentColor"}),(0,r.jsx)(c.E,{className:d.Pg,variant:"text-sm/medium",children:n}),t?(0,r.jsx)(o.y,{size:"sm",color:"currentColor",className:d.Fl,secondaryColor:a.A.colors.WHITE.css}):(0,r.jsx)(i.a,{size:"sm",color:"currentColor",className:d.Yk,secondaryColor:a.A.colors.WHITE.css})]})}function h(e){let{icon:s,text:n,footnote:t,meetsRequirement:i,children:u,className:m}=e;return(0,r.jsxs)(r.Fragment,{children:[(0,r.jsxs)("div",{className:l()(d.xP,m),children:[(0,r.jsx)(s,{className:d.jt,height:20,width:20,size:"custom",color:"currentColor"}),(0,r.jsx)(c.E,{className:d.Pg,variant:"text-md/normal",children:n}),i?(0,r.jsx)(o.y,{size:"md",color:"currentColor",className:d.Fl,secondaryColor:a.A.colors.WHITE.css}):u]}),null!=t&&(0,r.jsx)(c.E,{color:"text-default",className:d.xA,variant:"text-xs/normal",children:t})]})}
+n.d(s, { ZK: () => h, _H: () => m, cS: () => u, fu: () => x });
+var r = n(627968);
+n(64700);
+var t = n(503698),
+    l = n.n(t),
+    a = n(661531),
+    c = n(834730),
+    o = n(628284);
+if (21552 == n.j) var i = n(285796);
+var d = n(72736);
+function u(e) {
+    let { title: s, children: n } = e;
+    return (0, r.jsxs)("div", {
+        className: d.A9,
+        children: [
+            (0, r.jsx)(c.E, { className: d.HN, variant: "text-md/normal", color: "text-strong", children: s }),
+            n,
+        ],
+    });
+}
+function m(e) {
+    let { title: s, children: n } = e;
+    return (0, r.jsxs)("div", {
+        className: d.y,
+        children: [
+            (0, r.jsx)(c.E, { className: d.HN, variant: "text-sm/medium", color: "text-muted", children: s }),
+            n,
+        ],
+    });
+}
+function x(e) {
+    let { icon: s, text: n, meetsRequirement: t } = e;
+    return (0, r.jsxs)("div", {
+        className: d.xP,
+        children: [
+            (0, r.jsx)(s, { className: d.jt, height: 16, width: 16, size: "custom", color: "currentColor" }),
+            (0, r.jsx)(c.E, { className: d.Pg, variant: "text-sm/medium", children: n }),
+            t
+                ? (0, r.jsx)(o.y, {
+                      size: "sm",
+                      color: "currentColor",
+                      className: d.Fl,
+                      secondaryColor: a.A.colors.WHITE.css,
+                  })
+                : (0, r.jsx)(i.a, {
+                      size: "sm",
+                      color: "currentColor",
+                      className: d.Yk,
+                      secondaryColor: a.A.colors.WHITE.css,
+                  }),
+        ],
+    });
+}
+function h(e) {
+    let { icon: s, text: n, footnote: t, meetsRequirement: i, children: u, className: m } = e;
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsxs)("div", {
+                className: l()(d.xP, m),
+                children: [
+                    (0, r.jsx)(s, { className: d.jt, height: 20, width: 20, size: "custom", color: "currentColor" }),
+                    (0, r.jsx)(c.E, { className: d.Pg, variant: "text-md/normal", children: n }),
+                    i
+                        ? (0, r.jsx)(o.y, {
+                              size: "md",
+                              color: "currentColor",
+                              className: d.Fl,
+                              secondaryColor: a.A.colors.WHITE.css,
+                          })
+                        : u,
+                ],
+            }),
+            null != t &&
+                (0, r.jsx)(c.E, { color: "text-default", className: d.xA, variant: "text-xs/normal", children: t }),
+        ],
+    });
+}

@@ -1,1 +1,1 @@
-_.exports={S:"image__379fe",I:"empty__379fe"}
+_.exports = { S: "image__379fe", I: "empty__379fe" };

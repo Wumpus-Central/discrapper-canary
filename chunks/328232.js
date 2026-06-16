@@ -1,1 +1,1 @@
-e.exports={Dq:"giftRewardShopCardsGrid_d64c23"}
+b.exports = { Dq: "giftRewardShopCardsGrid_d64c23" };

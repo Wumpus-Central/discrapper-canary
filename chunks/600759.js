@@ -1,1 +1,2 @@
-e.exports=s.p+"5bac5070b554561d.scm"
+"use strict";
+e.exports = n.p + "5bac5070b554561d.scm";

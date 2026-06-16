@@ -1,1 +1,6 @@
-var r=e(777209),t=e(274581),n=e(829689);u.exports=function(u){return t(u)?n(u):r(u)}
+var r = e(777209),
+    t = e(274581),
+    n = e(829689);
+u.exports = function (u) {
+    return t(u) ? n(u) : r(u);
+};

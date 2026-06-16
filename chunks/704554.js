@@ -1,1 +1,106 @@
-r.d(t,{RT:()=>a}),r(323874),r(14289),r(35956);var u=r(64700),n=r(812729),s=r.n(n),c=r(735438),i=r(403362),l=r(379078);let f=new Worker(new URL("/assets/"+r.u("85220"),r.b));function a(e,t,r,n){let a=arguments.length>4&&void 0!==arguments[4]?arguments[4]:[],d=u.useRef(null),o=u.useRef(null),p=u.useRef(r),{searchStringGenerator:h}=n,m=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],[r,n]=u.useState(e),c=u.useRef(e);return u.useEffect(()=>{c.current=e},[e]),u.useEffect(()=>{n(e=>{let t=c.current;return s()(e,t)?e:t})},t),r}(t.map(h),[t,h,...a]),E=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:[],[r,n]=u.useState(e),c=u.useRef(e);return u.useEffect(()=>{c.current=e},[e]),u.useEffect(()=>{n(e=>{let t=c.current;return s()(e,t)?e:t})},t),r}(t,[t]);u.useEffect(()=>{p.current=r},[r]);let g=u.useMemo(()=>{let{throttleMs:e=200,throttleLeading:t=!0,throttleTrailing:r=!0,maxSearchResults:u=-1}=n;return o.current=(0,c.throttle)(async(e,t,r)=>{if(""===e.trim())return void(u>0?p.current(t.slice(0,u)):p.current(t));d.current=(0,c.uniqueId)();let s=await function(e,t,r,u){let n=u.promiseUuid??(0,c.uniqueId)(),{searchType:s=l.n.FUZZY,sortType:a=l.r.NONE,jaroWinklerSearchThreshold:d=.85,maxSearchResults:o=-1}=u;return new Promise(u=>{let c=t=>{let{data:{id:r,foundItemIndexes:s}}=t;n===r&&(u(s.map(t=>e[t]).filter(i.Vq)),f?.removeEventListener("message",c))};f?.addEventListener("message",c),f?.postMessage({id:n,searchTerm:t,searchStrings:r,searchType:s,sortType:a,jaroWinklerSearchThreshold:d,maxSearchResults:o})})}(t,e,r,{promiseUuid:d.current,...n});null!=d.current&&p.current(s)},e,{leading:t,trailing:r}),o.current},[n]);return u.useEffect(()=>{g(e,E,m)},[g,e,E,m,...a]),u.useEffect(()=>()=>{null!=o.current&&o.current.cancel(),o.current=null,d.current=null},[m,r,n]),g}
+r.d(t, { RT: () => a }), r(323874), r(14289), r(35956);
+var u = r(64700),
+    n = r(812729),
+    s = r.n(n),
+    c = r(735438),
+    i = r(403362),
+    l = r(379078);
+let f = new Worker(new URL("/assets/" + r.u("85220"), r.b));
+function a(e, t, r, n) {
+    let a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
+        d = u.useRef(null),
+        o = u.useRef(null),
+        p = u.useRef(r),
+        { searchStringGenerator: h } = n,
+        m = (function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+                [r, n] = u.useState(e),
+                c = u.useRef(e);
+            return (
+                u.useEffect(() => {
+                    c.current = e;
+                }, [e]),
+                u.useEffect(() => {
+                    n((e) => {
+                        let t = c.current;
+                        return s()(e, t) ? e : t;
+                    });
+                }, t),
+                r
+            );
+        })(t.map(h), [t, h, ...a]),
+        E = (function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
+                [r, n] = u.useState(e),
+                c = u.useRef(e);
+            return (
+                u.useEffect(() => {
+                    c.current = e;
+                }, [e]),
+                u.useEffect(() => {
+                    n((e) => {
+                        let t = c.current;
+                        return s()(e, t) ? e : t;
+                    });
+                }, t),
+                r
+            );
+        })(t, [t]);
+    u.useEffect(() => {
+        p.current = r;
+    }, [r]);
+    let g = u.useMemo(() => {
+        let { throttleMs: e = 200, throttleLeading: t = !0, throttleTrailing: r = !0, maxSearchResults: u = -1 } = n;
+        return (
+            (o.current = (0, c.throttle)(
+                async (e, t, r) => {
+                    if ("" === e.trim()) return void (u > 0 ? p.current(t.slice(0, u)) : p.current(t));
+                    d.current = (0, c.uniqueId)();
+                    let s = await (function (e, t, r, u) {
+                        let n = u.promiseUuid ?? (0, c.uniqueId)(),
+                            {
+                                searchType: s = l.n.FUZZY,
+                                sortType: a = l.r.NONE,
+                                jaroWinklerSearchThreshold: d = 0.85,
+                                maxSearchResults: o = -1,
+                            } = u;
+                        return new Promise((u) => {
+                            let c = (t) => {
+                                let {
+                                    data: { id: r, foundItemIndexes: s },
+                                } = t;
+                                n === r && (u(s.map((t) => e[t]).filter(i.Vq)), f?.removeEventListener("message", c));
+                            };
+                            f?.addEventListener("message", c),
+                                f?.postMessage({
+                                    id: n,
+                                    searchTerm: t,
+                                    searchStrings: r,
+                                    searchType: s,
+                                    sortType: a,
+                                    jaroWinklerSearchThreshold: d,
+                                    maxSearchResults: o,
+                                });
+                        });
+                    })(t, e, r, { promiseUuid: d.current, ...n });
+                    null != d.current && p.current(s);
+                },
+                e,
+                { leading: t, trailing: r },
+            )),
+            o.current
+        );
+    }, [n]);
+    return (
+        u.useEffect(() => {
+            g(e, E, m);
+        }, [g, e, E, m, ...a]),
+        u.useEffect(
+            () => () => {
+                null != o.current && o.current.cancel(), (o.current = null), (d.current = null);
+            },
+            [m, r, n],
+        ),
+        g
+    );
+}

@@ -1,1 +1,51 @@
-s.d(t,{A:()=>p});var a=s(627968),r=s(64700),l=s(106778),n=s(536283);let p=function(e){let{confettiTarget:t,confettiCanvas:s,confettiVelocityMultiplier:p,sprites:d,colors:i}=e,[c,o]=r.useState(null),u=(0,l.f9)(s,c),[x,g]=r.useState(!1);return r.useEffect(()=>{let e=Array(10).fill(0);return null!=t&&u.isReady&&!x&&(e=e.map((s,a)=>setTimeout(()=>{var s,r;a===e.length-1&&g(!0),u.createMultipleConfetti((s=t.getBoundingClientRect(),r=(r=p)??1,{...n.Mw,position:{type:"static-random",minValue:{x:s.x,y:s.y},maxValue:{x:s.x+s.width,y:s.y+s.height/2}},velocity:{type:"static-random",minValue:{x:-100*r,y:-50*r},maxValue:{x:100*r,y:-300*r}},dragCoefficient:{type:"static",value:.166}}),50)},100*a))),()=>{for(let t of e)clearTimeout(t)}},[u,t,x,p]),(0,a.jsx)(l.K_,{ref:o,sprites:d??n.uI,colors:i??n._t,spriteWidth:n.wn,spriteHeight:n.wn})}
+"use strict";
+n.d(t, { A: () => o });
+var i = n(627968),
+    r = n(64700),
+    s = n(106778),
+    a = n(536283);
+let o = function (e) {
+    let { confettiTarget: t, confettiCanvas: n, confettiVelocityMultiplier: o, sprites: l, colors: u } = e,
+        [c, d] = r.useState(null),
+        _ = (0, s.f9)(n, c),
+        [h, f] = r.useState(!1);
+    return (
+        r.useEffect(() => {
+            let e = Array(10).fill(0);
+            return (
+                null != t &&
+                    _.isReady &&
+                    !h &&
+                    (e = e.map((n, i) =>
+                        setTimeout(() => {
+                            var n, r;
+                            i === e.length - 1 && f(!0),
+                                _.createMultipleConfetti(
+                                    ((n = t.getBoundingClientRect()),
+                                    (r = (r = o) ?? 1),
+                                    {
+                                        ...a.Mw,
+                                        position: {
+                                            type: "static-random",
+                                            minValue: { x: n.x, y: n.y },
+                                            maxValue: { x: n.x + n.width, y: n.y + n.height / 2 },
+                                        },
+                                        velocity: {
+                                            type: "static-random",
+                                            minValue: { x: -100 * r, y: -50 * r },
+                                            maxValue: { x: 100 * r, y: -300 * r },
+                                        },
+                                        dragCoefficient: { type: "static", value: 0.166 },
+                                    }),
+                                    50,
+                                );
+                        }, 100 * i),
+                    )),
+                () => {
+                    for (let t of e) clearTimeout(t);
+                }
+            );
+        }, [_, t, h, o]),
+        (0, i.jsx)(s.K_, { ref: d, sprites: l ?? a.uI, colors: u ?? a._t, spriteWidth: a.wn, spriteHeight: a.wn })
+    );
+};

@@ -1,1 +1,1 @@
-_.exports={e:"infoBox_fbc3be"}
+e.exports = { e: "infoBox_fbc3be" };

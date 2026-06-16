@@ -1,1 +1,11 @@
-e.d(t,{A:()=>s});var a=e(702841),r=e(734057),l=e(746080);function s(n){let t=(0,a.bG)([r.A],()=>{let t=r.A.getChannel(n);return t?.parent_id!=null&&t.isForumPost()?r.A.getChannel(t?.parent_id):null});return t?.hasFlag(l.lx.HIDE_MEDIA_DOWNLOAD_OPTIONS)===!0}
+e.d(t, { A: () => s });
+var a = e(702841),
+    r = e(734057),
+    l = e(746080);
+function s(n) {
+    let t = (0, a.bG)([r.A], () => {
+        let t = r.A.getChannel(n);
+        return t?.parent_id != null && t.isForumPost() ? r.A.getChannel(t?.parent_id) : null;
+    });
+    return t?.hasFlag(l.lx.HIDE_MEDIA_DOWNLOAD_OPTIONS) === !0;
+}

@@ -1,1 +1,33 @@
-n.d(a,{q:()=>o});var i=n(391048),e=n(636099),l=n(529427);function o(t){let a=l.UnifiedCheckoutFlowManagerSingletons[l.CL.PREMIUM_APPS_OTP_CHECKOUT].get(),{applicationId:n,skuId:o,onClose:s,onComplete:d,analyticsLocations:u,analyticsLocationObject:c,contextKey:p,isGift:r=!1}=t;return a.openCheckoutModal({modalAPIOptions:{modalKey:"premium-apps-otp-checkout-modal",contextKey:p,onCloseCallback(){(0,i.ET)(),(0,e.z)()}},applicationId:n,skuId:o,analyticsLocations:u,analyticsObject:c,onClose:s,onComplete:d,giftContextProps:{isGift:r}})}
+n.d(a, { q: () => o });
+var i = n(391048),
+    e = n(636099),
+    l = n(529427);
+function o(t) {
+    let a = l.UnifiedCheckoutFlowManagerSingletons[l.CL.PREMIUM_APPS_OTP_CHECKOUT].get(),
+        {
+            applicationId: n,
+            skuId: o,
+            onClose: s,
+            onComplete: d,
+            analyticsLocations: u,
+            analyticsLocationObject: c,
+            contextKey: p,
+            isGift: r = !1,
+        } = t;
+    return a.openCheckoutModal({
+        modalAPIOptions: {
+            modalKey: "premium-apps-otp-checkout-modal",
+            contextKey: p,
+            onCloseCallback() {
+                (0, i.ET)(), (0, e.z)();
+            },
+        },
+        applicationId: n,
+        skuId: o,
+        analyticsLocations: u,
+        analyticsObject: c,
+        onClose: s,
+        onComplete: d,
+        giftContextProps: { isGift: r },
+    });
+}

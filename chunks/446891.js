@@ -1,1 +1,12 @@
-var i=n(605616);e.exports=function(e,t){var n=-1,r=e.length,s=r-1;for(t=void 0===t?r:t;++n<t;){var a=i(n,s),o=e[a];e[a]=e[n],e[n]=o}return e.length=t,e}
+var i = n(605616);
+e.exports = function (e, t) {
+    var n = -1,
+        r = e.length,
+        s = r - 1;
+    for (t = void 0 === t ? r : t; ++n < t; ) {
+        var a = i(n, s),
+            o = e[a];
+        (e[a] = e[n]), (e[n] = o);
+    }
+    return (e.length = t), e;
+};

@@ -1,1 +1,60 @@
-r.d(t,{default:()=>C});var a=r(627968);r(64700);var n=r(935462),o=r(289873),i=r(561794),l=r(581964),s=r(841702),d=r(494084),c=r(599062),u=r(125808),p=r(815076),h=r(479568);let C=e=>{let{skuId:t,transitionState:r,onClose:C,returnRef:g,analyticsLocations:y,analyticsSource:S,shouldCheckoutWithOrbs:f,tab:b,giftRecipient:j,giftingOrigin:x}=e,{product:I,category:k,state:A,retry:N}=(0,d.A)(t,{needsCategory:!0,seedCategoryStore:!0}),{hasPreviouslyFetched:O,fetchPurchasesError:R}=(0,s.b5)();(0,i.pE)();let D=l.A.useConfig({location:"CollectiblesShopStandaloneProductDetailsModal"})?p.default:u.default;return"ready"===A&&(O||null!=R)&&null!=I&&null!=k?(0,a.jsx)(D,{transitionState:r,onClose:C,returnRef:g,product:I,category:k,analyticsLocations:y,analyticsSource:S,shouldCheckoutWithOrbs:f,tab:b,giftRecipient:j,giftingOrigin:x}):(0,a.jsx)(n.EO,{returnRef:g,transitionState:r,size:n.rI.DYNAMIC,parentComponent:"CollectiblesShopStandaloneProductDetailsModal",children:(0,a.jsx)(n.$m,{children:"error"===A?(0,a.jsx)(c.h,{onRetry:N,errorOrigin:c.A.GIFT_MODAL}):(0,a.jsx)("div",{className:h.g,children:(0,a.jsx)(o.y,{type:o.t.SPINNING_CIRCLE})})})})}
+r.d(t, { default: () => C });
+var a = r(627968);
+r(64700);
+var n = r(935462),
+    o = r(289873),
+    i = r(561794),
+    l = r(581964),
+    s = r(841702),
+    d = r(494084),
+    c = r(599062),
+    u = r(125808),
+    p = r(815076),
+    h = r(479568);
+let C = (e) => {
+    let {
+            skuId: t,
+            transitionState: r,
+            onClose: C,
+            returnRef: g,
+            analyticsLocations: y,
+            analyticsSource: S,
+            shouldCheckoutWithOrbs: f,
+            tab: b,
+            giftRecipient: j,
+            giftingOrigin: x,
+        } = e,
+        { product: I, category: k, state: A, retry: N } = (0, d.A)(t, { needsCategory: !0, seedCategoryStore: !0 }),
+        { hasPreviouslyFetched: O, fetchPurchasesError: R } = (0, s.b5)();
+    (0, i.pE)();
+    let D = l.A.useConfig({ location: "CollectiblesShopStandaloneProductDetailsModal" }) ? p.default : u.default;
+    return "ready" === A && (O || null != R) && null != I && null != k
+        ? (0, a.jsx)(D, {
+              transitionState: r,
+              onClose: C,
+              returnRef: g,
+              product: I,
+              category: k,
+              analyticsLocations: y,
+              analyticsSource: S,
+              shouldCheckoutWithOrbs: f,
+              tab: b,
+              giftRecipient: j,
+              giftingOrigin: x,
+          })
+        : (0, a.jsx)(n.EO, {
+              returnRef: g,
+              transitionState: r,
+              size: n.rI.DYNAMIC,
+              parentComponent: "CollectiblesShopStandaloneProductDetailsModal",
+              children: (0, a.jsx)(n.$m, {
+                  children:
+                      "error" === A
+                          ? (0, a.jsx)(c.h, { onRetry: N, errorOrigin: c.A.GIFT_MODAL })
+                          : (0, a.jsx)("div", {
+                                className: h.g,
+                                children: (0, a.jsx)(o.y, { type: o.t.SPINNING_CIRCLE }),
+                            }),
+              }),
+          });
+};

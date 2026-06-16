@@ -1,1 +1,12 @@
-"use strict";n.d(t,{Om:()=>o,Sn:()=>l}),n(17928),n(450510);var i=n(71393),r=n(287809),s=n(428262),a=n(652215);function o(e){return s.Ay.canUseIncreasedGuildCap(e)||e?.isStaff()===!0}function l(){return i.A.getGuildCount()>=a.qlD&&!o(r.default.getCurrentUser())}
+"use strict";
+n.d(t, { Om: () => o, Sn: () => l }), n(17928), n(450510);
+var i = n(71393),
+    r = n(287809),
+    s = n(428262),
+    a = n(652215);
+function o(e) {
+    return s.Ay.canUseIncreasedGuildCap(e) || e?.isStaff() === !0;
+}
+function l() {
+    return i.A.getGuildCount() >= a.qlD && !o(r.default.getCurrentUser());
+}

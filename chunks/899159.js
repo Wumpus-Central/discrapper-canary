@@ -1,1 +1,1 @@
-e.exports={n:"baseSettingWrapper__32428"}
+e.exports = { n: "baseSettingWrapper__32428" };

@@ -1,1 +1,5 @@
-var t=n(969474),s=n(422750);r.exports=function(r){return s(r)&&t(r)}
+var t = n(969474),
+    s = n(422750);
+r.exports = function (r) {
+    return s(r) && t(r);
+};

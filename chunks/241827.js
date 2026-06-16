@@ -1,1 +1,25 @@
-"use strict";n.d(t,{bq:()=>a,sD:()=>s,wt:()=>o});var i=n(297987),r=n(790637);function s(e,t){if(!(0,r.Nf)())return!!t&&!!e&&e.contains(t);if(!e||!t)return!1;let n=t;for(;null!==n;){if(n===e)return!0;n="SLOT"===n.tagName&&n.assignedSlot?n.assignedSlot.parentNode:(0,i.Ng)(n)?n.host:n.parentNode}return!1}let a=(e=document)=>{var t;if(!(0,r.Nf)())return e.activeElement;let n=e.activeElement;for(;n&&"shadowRoot"in n&&(null==(t=n.shadowRoot)?void 0:t.activeElement);)n=n.shadowRoot.activeElement;return n};function o(e){return(0,r.Nf)()&&e.target.shadowRoot&&e.composedPath?e.composedPath()[0]:e.target}
+"use strict";
+n.d(t, { bq: () => a, sD: () => s, wt: () => o });
+var i = n(297987),
+    r = n(790637);
+function s(e, t) {
+    if (!(0, r.Nf)()) return !!t && !!e && e.contains(t);
+    if (!e || !t) return !1;
+    let n = t;
+    for (; null !== n; ) {
+        if (n === e) return !0;
+        n = "SLOT" === n.tagName && n.assignedSlot ? n.assignedSlot.parentNode : (0, i.Ng)(n) ? n.host : n.parentNode;
+    }
+    return !1;
+}
+let a = (e = document) => {
+    var t;
+    if (!(0, r.Nf)()) return e.activeElement;
+    let n = e.activeElement;
+    for (; n && "shadowRoot" in n && (null == (t = n.shadowRoot) ? void 0 : t.activeElement); )
+        n = n.shadowRoot.activeElement;
+    return n;
+};
+function o(e) {
+    return (0, r.Nf)() && e.target.shadowRoot && e.composedPath ? e.composedPath()[0] : e.target;
+}

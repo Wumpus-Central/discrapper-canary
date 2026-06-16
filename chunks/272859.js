@@ -1,1 +1,11 @@
-s.d(l,{d:()=>a});var e=s(17928),i=s(800342),r=s(328968),n=s(652215);let a=(0,e.UT)(r.A,{getQueryId:n.fic.STORE_LISTING,get:t=>null!=t?r.A.getForSKU(t)??null:null,load:t=>null!=t?(0,i.QB)(t):Promise.resolve(),getIsLoading:t=>null!=t&&r.A.isFetchingForSKU(t)})
+s.d(l, { d: () => a });
+var e = s(17928),
+    i = s(800342),
+    r = s(328968),
+    n = s(652215);
+let a = (0, e.UT)(r.A, {
+    getQueryId: n.fic.STORE_LISTING,
+    get: (t) => (null != t ? (r.A.getForSKU(t) ?? null) : null),
+    load: (t) => (null != t ? (0, i.QB)(t) : Promise.resolve()),
+    getIsLoading: (t) => null != t && r.A.isFetchingForSKU(t),
+});

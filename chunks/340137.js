@@ -1,1 +1,97 @@
-"use strict";n.d(t,{A:()=>E});var i=n(406935),r=n(451988),s=n(439372),a=n(827827),o=n(970931),l=n(885386),u=n(594061),c=n(461213),d=n(652215);let _=new r.Ep,h=new r.Ep,f=new r.Ep;class p extends s.A{actions={POST_CONNECTION_OPEN:()=>this.handlePostConnectionOpen(),USER_SETTINGS_PROTO_UPDATE:()=>this.handleUserSettingsProtoUpdate()};handlePostConnectionOpen=()=>{this.handleCommonUpdates()};handleUserSettingsProtoUpdate=()=>{this.handleCommonUpdates()};handleCommonUpdates=()=>{this.manageExpiringCustomStatus(),this.manageExpiringStatus(),this.lazilyMigrateStatusCreatedAt(),this.manageExpiringFocusMode()};manageExpiringCustomStatus=()=>{let e=l.G2.getSetting();if(null==e)f.stop();else if(null!=e.expiresAtMs&&"0"!==e.expiresAtMs){let t=new Date(Number(e.expiresAtMs)).getTime()-new Date().getTime();t>0?f.start(t,()=>{l.G2.updateSetting(void 0)},!0):(l.G2.updateSetting(void 0),f.stop())}else null!=f&&f.stop()};manageExpiringStatus=()=>{let e=l.CY.getSetting();if(null!=e&&"0"!==e&&c.A.getStatus()!==d.clD.ONLINE){let t=new Date(Number(e)).getTime()-new Date().getTime();t>0?_.start(t,()=>{(0,a.A)({nextStatus:d.clD.ONLINE,analyticsContext:{location:{object:d.ZSU.CUSTOM_STATUS_MANAGER}}})},!0):((0,a.A)({nextStatus:d.clD.ONLINE,analyticsContext:{location:{object:d.ZSU.CUSTOM_STATUS_MANAGER}}}),_.stop())}else null!=_&&_.stop()};lazilyMigrateStatusCreatedAt=()=>{c.A.getStatus()!==d.clD.ONLINE&&null==l._6.getSetting()&&u.wc.updateAsync("status",e=>{e.statusCreatedAtMs=i.ol.create({value:`${Date.now()}`})},u.Sb.INFREQUENT_USER_ACTION)};manageExpiringFocusMode=()=>{let e=l.Jr.getSetting();if(null!=e&&"0"!==e){let t=new Date(Number(e)).getTime()-new Date().getTime();t>0?h.start(t,()=>{(0,o.ES)(!1)},!0):((0,o.ES)(!1),h.stop())}else null!=h&&h.stop()}}let E=new p
+"use strict";
+n.d(t, { A: () => E });
+var i = n(406935),
+    r = n(451988),
+    s = n(439372),
+    a = n(827827),
+    o = n(970931),
+    l = n(885386),
+    u = n(594061),
+    c = n(461213),
+    d = n(652215);
+let _ = new r.Ep(),
+    h = new r.Ep(),
+    f = new r.Ep();
+class p extends s.A {
+    actions = {
+        POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
+        USER_SETTINGS_PROTO_UPDATE: () => this.handleUserSettingsProtoUpdate(),
+    };
+    handlePostConnectionOpen = () => {
+        this.handleCommonUpdates();
+    };
+    handleUserSettingsProtoUpdate = () => {
+        this.handleCommonUpdates();
+    };
+    handleCommonUpdates = () => {
+        this.manageExpiringCustomStatus(),
+            this.manageExpiringStatus(),
+            this.lazilyMigrateStatusCreatedAt(),
+            this.manageExpiringFocusMode();
+    };
+    manageExpiringCustomStatus = () => {
+        let e = l.G2.getSetting();
+        if (null == e) f.stop();
+        else if (null != e.expiresAtMs && "0" !== e.expiresAtMs) {
+            let t = new Date(Number(e.expiresAtMs)).getTime() - new Date().getTime();
+            t > 0
+                ? f.start(
+                      t,
+                      () => {
+                          l.G2.updateSetting(void 0);
+                      },
+                      !0,
+                  )
+                : (l.G2.updateSetting(void 0), f.stop());
+        } else null != f && f.stop();
+    };
+    manageExpiringStatus = () => {
+        let e = l.CY.getSetting();
+        if (null != e && "0" !== e && c.A.getStatus() !== d.clD.ONLINE) {
+            let t = new Date(Number(e)).getTime() - new Date().getTime();
+            t > 0
+                ? _.start(
+                      t,
+                      () => {
+                          (0, a.A)({
+                              nextStatus: d.clD.ONLINE,
+                              analyticsContext: { location: { object: d.ZSU.CUSTOM_STATUS_MANAGER } },
+                          });
+                      },
+                      !0,
+                  )
+                : ((0, a.A)({
+                      nextStatus: d.clD.ONLINE,
+                      analyticsContext: { location: { object: d.ZSU.CUSTOM_STATUS_MANAGER } },
+                  }),
+                  _.stop());
+        } else null != _ && _.stop();
+    };
+    lazilyMigrateStatusCreatedAt = () => {
+        c.A.getStatus() !== d.clD.ONLINE &&
+            null == l._6.getSetting() &&
+            u.wc.updateAsync(
+                "status",
+                (e) => {
+                    e.statusCreatedAtMs = i.ol.create({ value: `${Date.now()}` });
+                },
+                u.Sb.INFREQUENT_USER_ACTION,
+            );
+    };
+    manageExpiringFocusMode = () => {
+        let e = l.Jr.getSetting();
+        if (null != e && "0" !== e) {
+            let t = new Date(Number(e)).getTime() - new Date().getTime();
+            t > 0
+                ? h.start(
+                      t,
+                      () => {
+                          (0, o.ES)(!1);
+                      },
+                      !0,
+                  )
+                : ((0, o.ES)(!1), h.stop());
+        } else null != h && h.stop();
+    };
+}
+let E = new p();

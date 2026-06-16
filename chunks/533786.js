@@ -1,1 +1,4 @@
-var i=n(285536);e.exports=function(e){return null==e?"":i(e)}
+var i = n(285536);
+e.exports = function (e) {
+    return null == e ? "" : i(e);
+};

@@ -1,1 +1,52 @@
-a.d(n,{default:()=>m});var o=a(627968);a(64700);var s=a(661531),e=a(939249),r=a(812993),c=a(688810),d=a(87719),i=a(84960),l=a(788868),p=a(652215),f=a(375708),u=a(881808),A=a(535192);function C(t,n){return(0,o.jsx)(r.Lp,{text:t,className:A.Ad,color:s.A.unsafe_rawColors.BRAND_500.css},n)}function m(t){let{guildCount:n,onClose:a,analyticsLocations:s,...r}=t,A=function(t,n){return(0,o.jsx)(e.D,{className:u.C,tag:"span",onClick:()=>{a(),(0,d.e)()},children:t},n)},{analyticsLocations:m}=(0,c.Ay)(s);return(0,o.jsx)(c.f5,{value:m,children:(0,o.jsx)(i.A,{artURL:"https://cdn.discordapp.com/assets/content/e79d4cfdd618a7a39abcd4d48afd7b216dab54ca862f39d293270af910e517e7.png",onClose:a,type:l.e.GUILD_CAP_MODAL_UPSELL,title:f.intl.string(f.t["CoNXB+"]),body:n<p.qlD?f.intl.format(f.t["5qLH7B"],{guildCount:n,onAndMore:A,newBadgeHook:C}):f.intl.format(f.t.mk9CS6,{onAndMore:A,newBadgeHook:C}),context:n<p.qlD?f.intl.formatToPlainString(f.t["C+Hqzs"],{guildCount:n}):f.intl.string(f.t.m0xavd),glowUp:f.intl.format(f.t["6Dl5X1"],{onAndMore:A}),...r})})}
+a.d(n, { default: () => m });
+var o = a(627968);
+a(64700);
+var s = a(661531),
+    e = a(939249),
+    r = a(812993),
+    c = a(688810),
+    d = a(87719),
+    i = a(84960),
+    l = a(788868),
+    p = a(652215),
+    f = a(375708),
+    u = a(881808),
+    A = a(535192);
+function C(t, n) {
+    return (0, o.jsx)(r.Lp, { text: t, className: A.Ad, color: s.A.unsafe_rawColors.BRAND_500.css }, n);
+}
+function m(t) {
+    let { guildCount: n, onClose: a, analyticsLocations: s, ...r } = t,
+        A = function (t, n) {
+            return (0, o.jsx)(
+                e.D,
+                {
+                    className: u.C,
+                    tag: "span",
+                    onClick: () => {
+                        a(), (0, d.e)();
+                    },
+                    children: t,
+                },
+                n,
+            );
+        },
+        { analyticsLocations: m } = (0, c.Ay)(s);
+    return (0, o.jsx)(c.f5, {
+        value: m,
+        children: (0, o.jsx)(i.A, {
+            artURL: "https://cdn.discordapp.com/assets/content/e79d4cfdd618a7a39abcd4d48afd7b216dab54ca862f39d293270af910e517e7.png",
+            onClose: a,
+            type: l.e.GUILD_CAP_MODAL_UPSELL,
+            title: f.intl.string(f.t["CoNXB+"]),
+            body:
+                n < p.qlD
+                    ? f.intl.format(f.t["5qLH7B"], { guildCount: n, onAndMore: A, newBadgeHook: C })
+                    : f.intl.format(f.t.mk9CS6, { onAndMore: A, newBadgeHook: C }),
+            context:
+                n < p.qlD ? f.intl.formatToPlainString(f.t["C+Hqzs"], { guildCount: n }) : f.intl.string(f.t.m0xavd),
+            glowUp: f.intl.format(f.t["6Dl5X1"], { onAndMore: A }),
+            ...r,
+        }),
+    });
+}

@@ -1,1 +1,14 @@
-"use strict";n.d(t,{A:()=>r});var i=n(515718);function r(e,t){let n=window.innerWidth-(e?76:24)*2,r=window.innerHeight-176;if(!(0,i.eJ)(t))return{width:n,height:r};let{width:s,height:a}=t,o=window.innerWidth-544,l=window.innerHeight-(e?88:36)*2,u=(0,i.Uj)({width:s,height:a,maxWidth:n,maxHeight:r}),c=(0,i.Uj)({width:s,height:a,maxWidth:o,maxHeight:l});return u.width>=c.width?u:c}
+"use strict";
+n.d(t, { A: () => r });
+var i = n(515718);
+function r(e, t) {
+    let n = window.innerWidth - (e ? 76 : 24) * 2,
+        r = window.innerHeight - 176;
+    if (!(0, i.eJ)(t)) return { width: n, height: r };
+    let { width: s, height: a } = t,
+        o = window.innerWidth - 544,
+        l = window.innerHeight - (e ? 88 : 36) * 2,
+        u = (0, i.Uj)({ width: s, height: a, maxWidth: n, maxHeight: r }),
+        c = (0, i.Uj)({ width: s, height: a, maxWidth: o, maxHeight: l });
+    return u.width >= c.width ? u : c;
+}

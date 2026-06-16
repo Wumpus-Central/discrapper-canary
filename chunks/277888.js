@@ -1,1 +1,1 @@
-_.exports={q:"footer__8e8b5"}
+_.exports = { q: "footer__8e8b5" };

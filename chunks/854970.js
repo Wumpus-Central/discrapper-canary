@@ -1,1 +1,6 @@
-"use strict";var i=n(741623);e.exports=function(e){if(null==e)throw new i(arguments.length>0&&arguments[1]||"Cannot call method on "+e);return e}
+"use strict";
+var i = n(741623);
+e.exports = function (e) {
+    if (null == e) throw new i((arguments.length > 0 && arguments[1]) || "Cannot call method on " + e);
+    return e;
+};

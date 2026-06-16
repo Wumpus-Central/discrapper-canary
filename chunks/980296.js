@@ -1,1 +1,1 @@
-_.exports={gy:"formSection__78ebf"}
+_.exports = { gy: "formSection__78ebf" };

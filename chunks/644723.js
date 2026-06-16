@@ -1,1 +1,11 @@
-let r;t.d(n,{qS:()=>a});var i=t(107076);let o=new URL(t(487179),t.b);async function u(){return r||(r=await WebAssembly.compileStreaming(fetch(o))),r}async function a(){var e;return e=await u(),(0,i.Ay)({module_or_path:e})}
+let r;
+t.d(n, { qS: () => a });
+var i = t(107076);
+let o = new URL(t(487179), t.b);
+async function u() {
+    return r || (r = await WebAssembly.compileStreaming(fetch(o))), r;
+}
+async function a() {
+    var e;
+    return (e = await u()), (0, i.Ay)({ module_or_path: e });
+}

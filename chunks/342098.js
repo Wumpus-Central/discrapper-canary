@@ -1,1 +1,78 @@
-n.d(a,{A:()=>P,l:()=>k}),n(938796);var i=n(284009),e=n.n(i),l=n(339048),o=n(391048),s=n(636099),d=n(529427),u=n(616378),c=n(163437),p=n(97352),r=n(67480),C=n(652215);function P(t){let{initialPlanId:a,activeSubscription:n,analyticsObject:i,analyticsLocation:e,analyticsLocations:l,analyticsSubscriptionType:c,planGroup:p,skuId:r,guildId:C,reviewWarningMessage:P,applicationId:h,showBenefitsFirst:k,onComplete:f,forcesTransitionToGuild:I}=t;return new u.o({checkoutFlow:d.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT}).openCheckoutModal({skuId:r,applicationId:h,onComplete:f,initialPlanId:a,activeSubscription:n,analyticsObject:i,analyticsLocation:e,analyticsLocations:l,analyticsSubscriptionType:c,planGroup:p,guildId:C??void 0,reviewWarningMessage:P,tenantParams:{forcesTransitionToGuild:I??!1,showBenefitsFirst:k,guildId:C},modalAPIOptions:{modalKey:"application-payment-modal",onCloseCallback:()=>{(0,o.ET)(),(0,s.z)()}}})}let h=async(t,a)=>{let n=(await (0,l.LM)(t)).filter(t=>null==t.ends_at||new Date(t.ends_at)>new Date).find(t=>t.sku_id===a);e()(null==n,"User already has an active subscription to this SKU")};async function k(t){let{applicationId:a,skuId:n,initialPlanId:i,analyticsLocationObject:l,analyticsLocations:o}=t,s=r.A.get(n),d=p.A.getForSKU(n);e()(null!=s,"Failed to find SKU");let u=(0,c.bg)(s.flags);e()(u,"Guild application subscriptions unsupported!"),await h(a,n),P({initialPlanId:i??d[0]?.id,activeSubscription:null,analyticsLocations:o,analyticsLocationObject:l,analyticsSubscriptionType:C.rzx.APPLICATION,planGroup:[],skuId:n,guildId:null,showBenefitsFirst:!1,applicationId:a})}
+n.d(a, { A: () => P, l: () => k }), n(938796);
+var i = n(284009),
+    e = n.n(i),
+    l = n(339048),
+    o = n(391048),
+    s = n(636099),
+    d = n(529427),
+    u = n(142680),
+    c = n(163437),
+    p = n(97352),
+    r = n(67480),
+    C = n(652215);
+function P(t) {
+    let {
+        initialPlanId: a,
+        activeSubscription: n,
+        analyticsObject: i,
+        analyticsLocation: e,
+        analyticsLocations: l,
+        analyticsSubscriptionType: c,
+        planGroup: p,
+        skuId: r,
+        guildId: C,
+        reviewWarningMessage: P,
+        applicationId: h,
+        showBenefitsFirst: k,
+        onComplete: f,
+        forcesTransitionToGuild: I,
+    } = t;
+    return new u.o({ checkoutFlow: d.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT }).openCheckoutModal({
+        skuId: r,
+        applicationId: h,
+        onComplete: f,
+        initialPlanId: a,
+        activeSubscription: n,
+        analyticsObject: i,
+        analyticsLocation: e,
+        analyticsLocations: l,
+        analyticsSubscriptionType: c,
+        planGroup: p,
+        guildId: C ?? void 0,
+        reviewWarningMessage: P,
+        tenantParams: { forcesTransitionToGuild: I ?? !1, showBenefitsFirst: k, guildId: C },
+        modalAPIOptions: {
+            modalKey: "application-payment-modal",
+            onCloseCallback: () => {
+                (0, o.ET)(), (0, s.z)();
+            },
+        },
+    });
+}
+let h = async (t, a) => {
+    let n = (await (0, l.LM)(t))
+        .filter((t) => null == t.ends_at || new Date(t.ends_at) > new Date())
+        .find((t) => t.sku_id === a);
+    e()(null == n, "User already has an active subscription to this SKU");
+};
+async function k(t) {
+    let { applicationId: a, skuId: n, initialPlanId: i, analyticsLocationObject: l, analyticsLocations: o } = t,
+        s = r.A.get(n),
+        d = p.A.getForSKU(n);
+    e()(null != s, "Failed to find SKU");
+    let u = (0, c.bg)(s.flags);
+    e()(u, "Guild application subscriptions unsupported!"),
+        await h(a, n),
+        P({
+            initialPlanId: i ?? d[0]?.id,
+            activeSubscription: null,
+            analyticsLocations: o,
+            analyticsLocationObject: l,
+            analyticsSubscriptionType: C.rzx.APPLICATION,
+            planGroup: [],
+            skuId: n,
+            guildId: null,
+            showBenefitsFirst: !1,
+            applicationId: a,
+        });
+}

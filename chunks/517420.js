@@ -1,1 +1,1 @@
-t.exports={uu:"actionButtons_cc1819"}
+e.exports = { uu: "actionButtons_cc1819" };

@@ -1,1 +1,39 @@
-t.d(n,{A:()=>a});var i=t(627968),r=t(477782),e=t(422258),d=t(313281),u=t(375708);function a(l){let n=(0,d.DZ)(),t=(0,d.Af)(l.id),a=(0,d.Rm)();if(__OVERLAY__||!n||null==t)return null;let s=a.filter(l=>null!=l.id&&l.id!==t.parentId),c=null!=t.parentId;if(!c&&0===s.length)return null;function o(l){null!=t&&(0,e.JD)(t.id,l)}return(0,i.jsxs)(r.Dr,{id:"move-to-category",label:u.intl.string(u.t.FAplms),children:[c&&(0,i.jsx)(r.rX,{children:(0,i.jsx)(r.Dr,{id:"favorite-uncategorized",label:u.intl.string(u.t.GSfOoo),action:()=>o(null)})}),s.length>0&&(0,i.jsx)(r.rX,{children:s.map(l=>{let{id:n,name:t}=l;return(0,i.jsx)(r.Dr,{id:`favorite-${n}`,label:t,action:()=>o(n)},n)})})]})}
+t.d(n, { A: () => a });
+var i = t(627968),
+    r = t(477782),
+    e = t(422258),
+    d = t(313281),
+    u = t(375708);
+function a(l) {
+    let n = (0, d.DZ)(),
+        t = (0, d.Af)(l.id),
+        a = (0, d.Rm)();
+    if (__OVERLAY__ || !n || null == t) return null;
+    let s = a.filter((l) => null != l.id && l.id !== t.parentId),
+        c = null != t.parentId;
+    if (!c && 0 === s.length) return null;
+    function o(l) {
+        null != t && (0, e.JD)(t.id, l);
+    }
+    return (0, i.jsxs)(r.Dr, {
+        id: "move-to-category",
+        label: u.intl.string(u.t.FAplms),
+        children: [
+            c &&
+                (0, i.jsx)(r.rX, {
+                    children: (0, i.jsx)(r.Dr, {
+                        id: "favorite-uncategorized",
+                        label: u.intl.string(u.t.GSfOoo),
+                        action: () => o(null),
+                    }),
+                }),
+            s.length > 0 &&
+                (0, i.jsx)(r.rX, {
+                    children: s.map((l) => {
+                        let { id: n, name: t } = l;
+                        return (0, i.jsx)(r.Dr, { id: `favorite-${n}`, label: t, action: () => o(n) }, n);
+                    }),
+                }),
+        ],
+    });
+}

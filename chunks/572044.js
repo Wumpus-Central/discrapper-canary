@@ -1,1 +1,39 @@
-"use strict";n.d(t,{A:()=>u});var i=n(439372),r=n(495544),s=n(734057),a=n(813564),o=n(652215);class l extends i.A{prevConnected=!1;tempMutedChannel=null;handleRTCConnectionState=e=>{let{state:t,channelId:n}=e,i=t===o.S7L.RTC_CONNECTED,r=i&&!this.prevConnected,l=s.A.getChannel(n),u=l?.getGuildId(),c=this.tempMutedChannel===n;r&&null!=u&&(c?this.tempMutedChannel=null:(0,a.fh)(u)),this.prevConnected=i};handleMute=e=>{let{channelId:t}=e;this.tempMutedChannel=t};handleVoiceStateUpdates=e=>{let{voiceStates:t}=e,n=r.default.getId(),i=r.default.getSessionId();t.forEach(e=>{let{userId:t,channelId:r,sessionId:s}=e;t===n&&s!==i&&null!=r&&(this.tempMutedChannel=r)})};actions={RTC_CONNECTION_STATE:this.handleRTCConnectionState,SOUNDBOARD_MUTE_JOIN_SOUND:this.handleMute,VOICE_STATE_UPDATES:this.handleVoiceStateUpdates}}let u=new l
+"use strict";
+n.d(t, { A: () => u });
+var i = n(439372),
+    r = n(495544),
+    s = n(734057),
+    a = n(813564),
+    o = n(652215);
+class l extends i.A {
+    prevConnected = !1;
+    tempMutedChannel = null;
+    handleRTCConnectionState = (e) => {
+        let { state: t, channelId: n } = e,
+            i = t === o.S7L.RTC_CONNECTED,
+            r = i && !this.prevConnected,
+            l = s.A.getChannel(n),
+            u = l?.getGuildId(),
+            c = this.tempMutedChannel === n;
+        r && null != u && (c ? (this.tempMutedChannel = null) : (0, a.fh)(u)), (this.prevConnected = i);
+    };
+    handleMute = (e) => {
+        let { channelId: t } = e;
+        this.tempMutedChannel = t;
+    };
+    handleVoiceStateUpdates = (e) => {
+        let { voiceStates: t } = e,
+            n = r.default.getId(),
+            i = r.default.getSessionId();
+        t.forEach((e) => {
+            let { userId: t, channelId: r, sessionId: s } = e;
+            t === n && s !== i && null != r && (this.tempMutedChannel = r);
+        });
+    };
+    actions = {
+        RTC_CONNECTION_STATE: this.handleRTCConnectionState,
+        SOUNDBOARD_MUTE_JOIN_SOUND: this.handleMute,
+        VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
+    };
+}
+let u = new l();

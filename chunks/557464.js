@@ -1,1 +1,3 @@
-s.d(d,{A:()=>c});let c="https://cdn.discordapp.com/assets/content/9af0badd716ab9255c841405a169dda54f64438488bc44080898752292aaad3b.png"
+s.d(d, { A: () => c });
+let c =
+    "https://cdn.discordapp.com/assets/content/9af0badd716ab9255c841405a169dda54f64438488bc44080898752292aaad3b.png";

@@ -1,1 +1,17 @@
-r.d(e,{A:()=>u});var i=r(627968);r(64700);var n=r(477782),l=r(308528),s=r(734057),a=r(375708);function u(t,e){let r=s.A.getChannel(t);return null==r||r.isMultiUserDM()?null:(0,i.jsx)(n.Dr,{id:"close-dm",label:a.intl.string(a.t.jsvgc3),action:()=>l.A.closePrivateChannel(t,e)})}
+r.d(e, { A: () => u });
+var i = r(627968);
+r(64700);
+var n = r(477782),
+    l = r(308528),
+    s = r(734057),
+    a = r(375708);
+function u(t, e) {
+    let r = s.A.getChannel(t);
+    return null == r || r.isMultiUserDM()
+        ? null
+        : (0, i.jsx)(n.Dr, {
+              id: "close-dm",
+              label: a.intl.string(a.t.jsvgc3),
+              action: () => l.A.closePrivateChannel(t, e),
+          });
+}

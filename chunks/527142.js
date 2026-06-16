@@ -1,1 +1,1 @@
-s.exports={Z:"venmoIcon__44362",y:"connectionInstructions__44362"}
+a.exports = { Z: "venmoIcon__44362", y: "connectionInstructions__44362" };

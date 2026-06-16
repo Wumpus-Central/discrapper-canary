@@ -1,1 +1,12 @@
-e.exports={b:"closeButton__2d726",Tn:"upsellImage__2d726",NH:"upsellImageWithTrialOffer__2d726",Fg:"premiumTrialBadge__2d726",G3:"bodyText__2d726",mH:"perksList__2d726",pl:"perkIconGuild__2d726",$z:"perkIconUpload__2d726",Kg:"perkIconStream__2d726",zO:"perkIconChatPerks__2d726"}
+e.exports = {
+    b: "closeButton__2d726",
+    Tn: "upsellImage__2d726",
+    NH: "upsellImageWithTrialOffer__2d726",
+    Fg: "premiumTrialBadge__2d726",
+    G3: "bodyText__2d726",
+    mH: "perksList__2d726",
+    pl: "perkIconGuild__2d726",
+    $z: "perkIconUpload__2d726",
+    Kg: "perkIconStream__2d726",
+    zO: "perkIconChatPerks__2d726",
+};

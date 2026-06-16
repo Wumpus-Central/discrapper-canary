@@ -1,1 +1,36 @@
-"use strict";n.d(t,{$v:()=>u,JE:()=>c,NQ:()=>o,wB:()=>l});var i=n(121894);let r=new WeakMap,s=new Map,a=new WeakMap;function o(e,t,n){r.set(t,e),s.set(e,n);let o=t.ownerDocument?.defaultView??window,l=a.get(o);return null==l&&(l=new o.ResizeObserver(e=>{(0,i.r)(()=>{for(let t of e){let e=t.target,n=r.get(e);if(null==n)continue;let i=s.get(n);null!=i&&i(t)}})}),a.set(o,l)),l}function l(e,t){e.observe(t)}function u(e,t){e.unobserve(t)}function c(e,t){s.delete(e),null!=t&&r.delete(t)}
+"use strict";
+n.d(t, { $v: () => u, JE: () => c, NQ: () => o, wB: () => l });
+var i = n(121894);
+let r = new WeakMap(),
+    s = new Map(),
+    a = new WeakMap();
+function o(e, t, n) {
+    r.set(t, e), s.set(e, n);
+    let o = t.ownerDocument?.defaultView ?? window,
+        l = a.get(o);
+    return (
+        null == l &&
+            ((l = new o.ResizeObserver((e) => {
+                (0, i.r)(() => {
+                    for (let t of e) {
+                        let e = t.target,
+                            n = r.get(e);
+                        if (null == n) continue;
+                        let i = s.get(n);
+                        null != i && i(t);
+                    }
+                });
+            })),
+            a.set(o, l)),
+        l
+    );
+}
+function l(e, t) {
+    e.observe(t);
+}
+function u(e, t) {
+    e.unobserve(t);
+}
+function c(e, t) {
+    s.delete(e), null != t && r.delete(t);
+}

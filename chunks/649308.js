@@ -1,1 +1,24 @@
-i.d(e,{A:()=>h});var n=i(627968),r=i(477782),d=i(72152),s=i(976860),a=i(967198),u=i(422258),l=i(313281),o=i(5180),c=i(652215),p=i(335993),f=i(375708);function h(){let{hasAccess:t}=(0,l.TW)("useHideServerItem");return(0,n.jsx)(r.Dr,{id:"hide-favorites",label:t?f.intl.string(p.default["8FO0y9"]):f.intl.string(f.t.ojM1xJ),subtext:t?f.intl.string(p.default.FaHxWl):void 0,color:t?"danger":"default",action:function(){(0,d.Z)(!1),t&&(0,u.tV)(!1,"server_context_menu"),(0,o.ai)(a.A.getGuildId())&&(0,s.pX)(c.BVt.ME)}})}
+i.d(e, { A: () => h });
+var n = i(627968),
+    r = i(477782),
+    d = i(72152),
+    s = i(976860),
+    a = i(967198),
+    u = i(422258),
+    l = i(313281),
+    o = i(5180),
+    c = i(652215),
+    p = i(335993),
+    f = i(375708);
+function h() {
+    let { hasAccess: t } = (0, l.TW)("useHideServerItem");
+    return (0, n.jsx)(r.Dr, {
+        id: "hide-favorites",
+        label: t ? f.intl.string(p.default["8FO0y9"]) : f.intl.string(f.t.ojM1xJ),
+        subtext: t ? f.intl.string(p.default.FaHxWl) : void 0,
+        color: t ? "danger" : "default",
+        action: function () {
+            (0, d.Z)(!1), t && (0, u.tV)(!1, "server_context_menu"), (0, o.ai)(a.A.getGuildId()) && (0, s.pX)(c.BVt.ME);
+        },
+    });
+}

@@ -1,1 +1,22 @@
-r.d(t,{c:()=>a,w:()=>s});var n=r(17928),E=r(495544),i=r(763827),u=r(116956);function l(e,t){return 0===e.size||1===e.size&&e.has(t)}function s(e){return(0,n.bG)([u.A,E.default],()=>{if(null==e)return!0;let t=u.A.getUserIds(e);return null==t||l(t,E.default.getId())})}function a(){return(0,n.bG)([i.A,E.default],()=>{let e=i.A.getUserIds();return null==e||l(e,E.default.getId())})}
+"use strict";
+n.d(t, { c: () => u, w: () => l });
+var i = n(17928),
+    r = n(495544),
+    s = n(763827),
+    a = n(116956);
+function o(e, t) {
+    return 0 === e.size || (1 === e.size && e.has(t));
+}
+function l(e) {
+    return (0, i.bG)([a.A, r.default], () => {
+        if (null == e) return !0;
+        let t = a.A.getUserIds(e);
+        return null == t || o(t, r.default.getId());
+    });
+}
+function u() {
+    return (0, i.bG)([s.A, r.default], () => {
+        let e = s.A.getUserIds();
+        return null == e || o(e, r.default.getId());
+    });
+}

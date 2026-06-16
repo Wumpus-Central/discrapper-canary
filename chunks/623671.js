@@ -1,1 +1,88 @@
-"use strict";n.d(t,{d:()=>g,w:()=>p});var i,r=n(627968);n(64700);var s=n(503698),a=n.n(s),o=n(990078),l=n(939249),u=n(573435),c=n(263577),d=n(662010),_=n(375708),h=n(230482);let f={none:void 0,default:h.cH,crunchyroll:a()(h.cH,h.sl)};var p=((i={}).SIZE_60="size-60",i.SIZE_72="size-72",i.SIZE_100="size-100",i);let E={"size-60":{imageSize:60,smallImageSize:24,mask:u.hW.CONTENT_IMAGE_60},"size-72":{imageSize:72,smallImageSize:32,mask:u.hW.CONTENT_IMAGE_72},"size-100":{imageSize:100,smallImageSize:32,mask:u.hW.CONTENT_IMAGE_100}};function m(e){let{children:t,onClick:n}=e;return null==n?t:(0,r.jsx)(l.D,{onClick:n,className:h.vk,children:t})}function g(e){let{image:t,smallImage:n,aspectRatio:i,onClick:s,size:l,className:p}=e,{imageSize:g,smallImageSize:A,mask:I}=E[l];if(null==t)return(0,r.jsx)(c.V,{src:void 0,alt:_.intl.string(_.t["2B/phM"]),size:g,className:a()(h.fO,f[i??"default"],p),constrain:"width"});let T=(0,r.jsx)(c.V,{src:t.src,alt:t.alt??t.text??_.intl.string(_.t["2B/phM"]),size:g,className:a()(h.fO,f[i??"default"]),constrain:"width"});return(0,r.jsxs)("div",{className:a()(h.B_,p),children:[(0,r.jsx)(m,{onClick:s,children:(0,r.jsx)(d.O,{href:t.url,children:null!=n?(0,r.jsx)(o.m,{text:t.text,children:(0,r.jsx)(u.Ay,{className:h.ZS,mask:I,width:g,height:g,children:T})}):(0,r.jsx)(o.m,{text:t.text,children:(0,r.jsx)("div",{className:h.ZS,children:T})})})}),null!=n&&(0,r.jsx)(d.O,{href:n.url,children:(0,r.jsx)(o.m,{text:n.text,children:(0,r.jsx)("div",{className:h.gn,children:(0,r.jsx)(c.V,{src:n.src,alt:n.alt??n.text,size:A,className:h.fO,constrain:"width"})})})})]})}
+"use strict";
+n.d(t, { d: () => g, w: () => p });
+var i,
+    r = n(627968);
+n(64700);
+var s = n(503698),
+    a = n.n(s),
+    o = n(990078),
+    l = n(939249),
+    u = n(573435),
+    c = n(263577),
+    d = n(662010),
+    _ = n(375708),
+    h = n(230482);
+let f = { none: void 0, default: h.cH, crunchyroll: a()(h.cH, h.sl) };
+var p = (((i = {}).SIZE_60 = "size-60"), (i.SIZE_72 = "size-72"), (i.SIZE_100 = "size-100"), i);
+let E = {
+    "size-60": { imageSize: 60, smallImageSize: 24, mask: u.hW.CONTENT_IMAGE_60 },
+    "size-72": { imageSize: 72, smallImageSize: 32, mask: u.hW.CONTENT_IMAGE_72 },
+    "size-100": { imageSize: 100, smallImageSize: 32, mask: u.hW.CONTENT_IMAGE_100 },
+};
+function m(e) {
+    let { children: t, onClick: n } = e;
+    return null == n ? t : (0, r.jsx)(l.D, { onClick: n, className: h.vk, children: t });
+}
+function g(e) {
+    let { image: t, smallImage: n, aspectRatio: i, onClick: s, size: l, className: p } = e,
+        { imageSize: g, smallImageSize: A, mask: I } = E[l];
+    if (null == t)
+        return (0, r.jsx)(c.V, {
+            src: void 0,
+            alt: _.intl.string(_.t["2B/phM"]),
+            size: g,
+            className: a()(h.fO, f[i ?? "default"], p),
+            constrain: "width",
+        });
+    let T = (0, r.jsx)(c.V, {
+        src: t.src,
+        alt: t.alt ?? t.text ?? _.intl.string(_.t["2B/phM"]),
+        size: g,
+        className: a()(h.fO, f[i ?? "default"]),
+        constrain: "width",
+    });
+    return (0, r.jsxs)("div", {
+        className: a()(h.B_, p),
+        children: [
+            (0, r.jsx)(m, {
+                onClick: s,
+                children: (0, r.jsx)(d.O, {
+                    href: t.url,
+                    children:
+                        null != n
+                            ? (0, r.jsx)(o.m, {
+                                  text: t.text,
+                                  children: (0, r.jsx)(u.Ay, {
+                                      className: h.ZS,
+                                      mask: I,
+                                      width: g,
+                                      height: g,
+                                      children: T,
+                                  }),
+                              })
+                            : (0, r.jsx)(o.m, {
+                                  text: t.text,
+                                  children: (0, r.jsx)("div", { className: h.ZS, children: T }),
+                              }),
+                }),
+            }),
+            null != n &&
+                (0, r.jsx)(d.O, {
+                    href: n.url,
+                    children: (0, r.jsx)(o.m, {
+                        text: n.text,
+                        children: (0, r.jsx)("div", {
+                            className: h.gn,
+                            children: (0, r.jsx)(c.V, {
+                                src: n.src,
+                                alt: n.alt ?? n.text,
+                                size: A,
+                                className: h.fO,
+                                constrain: "width",
+                            }),
+                        }),
+                    }),
+                }),
+        ],
+    });
+}

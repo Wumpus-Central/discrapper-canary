@@ -1,1 +1,160 @@
-n.d(t,{d:()=>_,default:()=>M});var l=n(627968),i=n(64700),s=n(189213),a=n(452027),r=n(243721),o=n(17928),d=n(990078),c=n(192308),u=n(454292),m=n(355622),h=n(408018),x=n(138617),g=n(376310),f=n(659617),j=n(474078),v=n(747926),p=n(55294),A=n(480595),C=n(461213),N=n(807632),b=n(437992),E=n(652215);n(253913);var S=n(774418),y=n(375708),T=n(939422);let I=m.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,R="create-game-invite-post";function _(e){(0,c.openModalLazy)(async()=>{let{default:t}=await Promise.resolve().then(n.bind(n,337885));return n=>(0,l.jsx)(t,{...n,parentChannel:e})},{modalKey:R})}let k=()=>Promise.resolve({shouldClear:!1,shouldRefocus:!1});function M(e){let t,{parentChannel:n,transitionState:c,onClose:m}=e,_=i.useMemo(()=>n.availableTags??[],[n.availableTags]),{application:M}=(0,N._k)(n.guild_id),w=(0,o.bG)([A.A,C.A],()=>(0,u.A)(A.A,C.A,M?.id),[M]),[{textValue:L,richValue:D},P]=i.useState(()=>(0,h.N3)()),[O,F]=i.useState(!1),[G,z]=i.useState(()=>new Set),[U,H]=i.useState(!1),B=i.useMemo(()=>_.find(e=>e.name===N.Dg),[_]),V=null==B||!G.has(B.id),W=G.size<5,$=i.useCallback((e,t,n)=>{P({textValue:t,richValue:n})},[]),q=i.useCallback(e=>{z(t=>{let n=new Set(t);return n.has(e)?n.delete(e):n.add(e),n})},[]),K=i.useCallback(e=>{null!=B&&z(t=>{let n=new Set(t);return e?n.delete(B.id):n.add(B.id),n})},[B]),Y=(t=L.trim().split("\n")[0]??"",(0,j.A)(t.slice(0,E.Ign),!0)),Q=i.useMemo(()=>null!=w?{type:E.xL.JOIN,activity:w}:void 0,[w]),X=(0,f.w0)({parentChannel:n,name:Y,appliedTags:G,upload:p.Se,activityAction:Q}),J=!U&&L.length>0&&L.length<=120,Z=i.useCallback(async()=>{if(J){H(!0);try{let e=await X(L);(0,v.JA)(e),m()}catch{H(!1)}}},[J,X,m,L]);return(0,l.jsx)(s.Modal,{title:y.intl.string(S.default.tOsHsu),transitionState:c,onClose:m,actions:[{variant:"secondary",text:y.intl.string(y.t["ETE/oC"]),onClick:m,disabled:U},{variant:"primary",text:y.intl.string(y.t.CumH4u),onClick:Z,disabled:!J,loading:U}],children:(0,l.jsxs)("div",{className:T.rf,children:[(0,l.jsx)(a.D,{required:!0,label:y.intl.string(S.default["/mEbGf"]),children:(0,l.jsx)(x.Ay,{type:I,channel:n,placeholder:y.intl.string(S.default["SU/IAE"]),textValue:L,richValue:D,focused:O,onChange:$,onFocus:()=>F(!0),onBlur:()=>F(!1),onSubmit:k,parentModalKey:R,disableThemedBackground:!0,maxCharacterCount:120,showRemainingCharsAfterCount:120,editorClassName:T.s7})}),_.length>0?(0,l.jsx)(a.D,{label:y.intl.string(y.t.KM6lRG),description:y.intl.string(S.default["yoIAe/"]),children:(0,l.jsx)("div",{className:T.GA,children:_.map(e=>(0,l.jsx)(g.A,{tag:e,size:g.A.Sizes.SMALL,selected:G.has(e.id),onClick:W||G.has(e.id)?()=>q(e.id):void 0,disabled:!G.has(e.id)&&!W},e.id))})}):null,(0,l.jsx)(a.D,{layout:"horizontal",label:y.intl.string(S.default.Xd2NFi),description:y.intl.string(S.default.G91SYQ),children:(0,l.jsx)(d.m,{text:y.intl.formatToPlainString(S.default["0s2ICk"],{noMicTagName:N.Dg}),shouldShow:null==B,asContainer:!0,children:(0,l.jsx)(r.d,{checked:V,onChange:K,disabled:null==B||!W&&!G.has(B.id)})})}),null!=M&&(0,l.jsx)(b.A,{application:M,size:"md"})]})})}
+n.d(t, { d: () => _, default: () => M });
+var l = n(627968),
+    i = n(64700),
+    s = n(189213),
+    a = n(452027),
+    r = n(243721),
+    o = n(17928),
+    d = n(990078),
+    c = n(192308),
+    u = n(454292),
+    m = n(355622),
+    h = n(408018),
+    x = n(138617),
+    g = n(376310),
+    f = n(659617),
+    j = n(474078),
+    v = n(747926),
+    p = n(55294),
+    A = n(480595),
+    C = n(461213),
+    N = n(807632),
+    b = n(437992),
+    E = n(652215);
+n(253913);
+var S = n(774418),
+    y = n(375708),
+    T = n(939422);
+let I = m.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
+    R = "create-game-invite-post";
+function _(e) {
+    (0, c.openModalLazy)(
+        async () => {
+            let { default: t } = await Promise.resolve().then(n.bind(n, 337885));
+            return (n) => (0, l.jsx)(t, { ...n, parentChannel: e });
+        },
+        { modalKey: R },
+    );
+}
+let k = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
+function M(e) {
+    let t,
+        { parentChannel: n, transitionState: c, onClose: m } = e,
+        _ = i.useMemo(() => n.availableTags ?? [], [n.availableTags]),
+        { application: M } = (0, N._k)(n.guild_id),
+        w = (0, o.bG)([A.A, C.A], () => (0, u.A)(A.A, C.A, M?.id), [M]),
+        [{ textValue: L, richValue: D }, P] = i.useState(() => (0, h.N3)()),
+        [O, F] = i.useState(!1),
+        [G, z] = i.useState(() => new Set()),
+        [U, H] = i.useState(!1),
+        B = i.useMemo(() => _.find((e) => e.name === N.Dg), [_]),
+        V = null == B || !G.has(B.id),
+        W = G.size < 5,
+        $ = i.useCallback((e, t, n) => {
+            P({ textValue: t, richValue: n });
+        }, []),
+        q = i.useCallback((e) => {
+            z((t) => {
+                let n = new Set(t);
+                return n.has(e) ? n.delete(e) : n.add(e), n;
+            });
+        }, []),
+        K = i.useCallback(
+            (e) => {
+                null != B &&
+                    z((t) => {
+                        let n = new Set(t);
+                        return e ? n.delete(B.id) : n.add(B.id), n;
+                    });
+            },
+            [B],
+        ),
+        Y = ((t = L.trim().split("\n")[0] ?? ""), (0, j.A)(t.slice(0, E.Ign), !0)),
+        Q = i.useMemo(() => (null != w ? { type: E.xL.JOIN, activity: w } : void 0), [w]),
+        X = (0, f.w0)({ parentChannel: n, name: Y, appliedTags: G, upload: p.Se, activityAction: Q }),
+        J = !U && L.length > 0 && L.length <= 120,
+        Z = i.useCallback(async () => {
+            if (J) {
+                H(!0);
+                try {
+                    let e = await X(L);
+                    (0, v.JA)(e), m();
+                } catch {
+                    H(!1);
+                }
+            }
+        }, [J, X, m, L]);
+    return (0, l.jsx)(s.Modal, {
+        title: y.intl.string(S.default.tOsHsu),
+        transitionState: c,
+        onClose: m,
+        actions: [
+            { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: m, disabled: U },
+            { variant: "primary", text: y.intl.string(y.t.CumH4u), onClick: Z, disabled: !J, loading: U },
+        ],
+        children: (0, l.jsxs)("div", {
+            className: T.rf,
+            children: [
+                (0, l.jsx)(a.D, {
+                    required: !0,
+                    label: y.intl.string(S.default["/mEbGf"]),
+                    children: (0, l.jsx)(x.Ay, {
+                        type: I,
+                        channel: n,
+                        placeholder: y.intl.string(S.default["SU/IAE"]),
+                        textValue: L,
+                        richValue: D,
+                        focused: O,
+                        onChange: $,
+                        onFocus: () => F(!0),
+                        onBlur: () => F(!1),
+                        onSubmit: k,
+                        parentModalKey: R,
+                        disableThemedBackground: !0,
+                        maxCharacterCount: 120,
+                        showRemainingCharsAfterCount: 120,
+                        editorClassName: T.s7,
+                    }),
+                }),
+                _.length > 0
+                    ? (0, l.jsx)(a.D, {
+                          label: y.intl.string(y.t.KM6lRG),
+                          description: y.intl.string(S.default["yoIAe/"]),
+                          children: (0, l.jsx)("div", {
+                              className: T.GA,
+                              children: _.map((e) =>
+                                  (0, l.jsx)(
+                                      g.A,
+                                      {
+                                          tag: e,
+                                          size: g.A.Sizes.SMALL,
+                                          selected: G.has(e.id),
+                                          onClick: W || G.has(e.id) ? () => q(e.id) : void 0,
+                                          disabled: !G.has(e.id) && !W,
+                                      },
+                                      e.id,
+                                  ),
+                              ),
+                          }),
+                      })
+                    : null,
+                (0, l.jsx)(a.D, {
+                    layout: "horizontal",
+                    label: y.intl.string(S.default.Xd2NFi),
+                    description: y.intl.string(S.default.G91SYQ),
+                    children: (0, l.jsx)(d.m, {
+                        text: y.intl.formatToPlainString(S.default["0s2ICk"], { noMicTagName: N.Dg }),
+                        shouldShow: null == B,
+                        asContainer: !0,
+                        children: (0, l.jsx)(r.d, {
+                            checked: V,
+                            onChange: K,
+                            disabled: null == B || (!W && !G.has(B.id)),
+                        }),
+                    }),
+                }),
+                null != M && (0, l.jsx)(b.A, { application: M, size: "md" }),
+            ],
+        }),
+    });
+}

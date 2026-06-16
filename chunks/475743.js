@@ -1,1 +1,12 @@
-"use strict";n.d(t,{A:()=>r});var i=n(64700);function r(e){let t=(0,i.useRef)(null);return(0,i.useEffect)(()=>{t.current=e},[e]),t.current}
+"use strict";
+n.d(t, { A: () => r });
+var i = n(64700);
+function r(e) {
+    let t = (0, i.useRef)(null);
+    return (
+        (0, i.useEffect)(() => {
+            t.current = e;
+        }, [e]),
+        t.current
+    );
+}

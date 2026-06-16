@@ -1,1 +1,59 @@
-"use strict";let i;n.d(t,{E:()=>p,T:()=>f});var r=n(636537),s=n(228366),a=n(626584),o=n(606076),l=n(495544),u=n(340829),c=n(674378),d=n(723702),_=n(19575),h=n(652215);async function f(){null!=i||(d.isPlatformEmbedded&&((0,d.isMac)()||(0,d.isWindows)()&&"arm64"!==_.Ay.architecture)?(await _.Ay.ensureModule("discord_cloudsync"),(i=new(_.Ay.getCloudSync())).on("state",e=>s.h.dispatch({type:"GAME_CLOUD_SYNC_UPDATE",state:e}))):new a.A("CloudSyncUtils").warn("CloudSync is not supported on this platform"))}function p(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:null;if(!u.A.supportsCloudSync(e,t))return Promise.resolve({type:h.R_U.NONE});let s=function(){if(null==i)throw Error("Initialize cloud sync module before syncing.");return i}(),a=u.A.getState(e,t);if(null==a)throw Error(`No dispatch state for ${e}:${t}`);let d=a.storage??{},_=(0,c.gW)(e,t),f=l.default.getToken();if(null==f)throw Error("Cannot use cloud sync when not authenticated.");let p=null!=a.installPath?(0,o.A)(a.installPath):null;if(null==p)throw Error(`No install path for ${e}:${t}`);let E=l.default.getId(),m={forceHash:n,manifestPath:h.gkb.STORAGE_MANIFEST(p,E),roots:null!=d.roots?d.roots:[{id:h.gkb.ROOT_ID,paths:Object.keys(h.gkb.ROOT_PLATFORMS).map(e=>({platform:e,path:h.gkb.ROOT_STORAGE_PATH(p,E)})),patterns:h.gkb.ROOT_PATTERN}],storage:{baseURL:`${(0,r.TP)()}${h.Rsh.APPLICATION_STORAGE(e,t)}`,token:f},replacements:{INSTALLDIR:h.gkb.INSTALL_DIR(p),USERID:E,BRANCHID:t}};return s.sync(_,m)}
+"use strict";
+let i;
+n.d(t, { E: () => p, T: () => f });
+var r = n(636537),
+    s = n(228366),
+    a = n(626584),
+    o = n(606076),
+    l = n(495544),
+    u = n(340829),
+    c = n(674378),
+    d = n(723702),
+    _ = n(19575),
+    h = n(652215);
+async function f() {
+    null != i ||
+        (d.isPlatformEmbedded && ((0, d.isMac)() || ((0, d.isWindows)() && "arm64" !== _.Ay.architecture))
+            ? (await _.Ay.ensureModule("discord_cloudsync"),
+              (i = new (_.Ay.getCloudSync())()).on("state", (e) =>
+                  s.h.dispatch({ type: "GAME_CLOUD_SYNC_UPDATE", state: e }),
+              ))
+            : new a.A("CloudSyncUtils").warn("CloudSync is not supported on this platform"));
+}
+function p(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
+    if (!u.A.supportsCloudSync(e, t)) return Promise.resolve({ type: h.R_U.NONE });
+    let s = (function () {
+            if (null == i) throw Error("Initialize cloud sync module before syncing.");
+            return i;
+        })(),
+        a = u.A.getState(e, t);
+    if (null == a) throw Error(`No dispatch state for ${e}:${t}`);
+    let d = a.storage ?? {},
+        _ = (0, c.gW)(e, t),
+        f = l.default.getToken();
+    if (null == f) throw Error("Cannot use cloud sync when not authenticated.");
+    let p = null != a.installPath ? (0, o.A)(a.installPath) : null;
+    if (null == p) throw Error(`No install path for ${e}:${t}`);
+    let E = l.default.getId(),
+        m = {
+            forceHash: n,
+            manifestPath: h.gkb.STORAGE_MANIFEST(p, E),
+            roots:
+                null != d.roots
+                    ? d.roots
+                    : [
+                          {
+                              id: h.gkb.ROOT_ID,
+                              paths: Object.keys(h.gkb.ROOT_PLATFORMS).map((e) => ({
+                                  platform: e,
+                                  path: h.gkb.ROOT_STORAGE_PATH(p, E),
+                              })),
+                              patterns: h.gkb.ROOT_PATTERN,
+                          },
+                      ],
+            storage: { baseURL: `${(0, r.TP)()}${h.Rsh.APPLICATION_STORAGE(e, t)}`, token: f },
+            replacements: { INSTALLDIR: h.gkb.INSTALL_DIR(p), USERID: E, BRANCHID: t },
+        };
+    return s.sync(_, m);
+}

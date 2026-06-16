@@ -1,1 +1,1 @@
-e.exports={y:"categorySubGroup__9b8f2"}
+e.exports = { y: "categorySubGroup__9b8f2" };

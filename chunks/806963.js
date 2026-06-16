@@ -1,1 +1,1 @@
-e.exports={$:"warning__490eb"}
+e.exports = { $: "warning__490eb" };

@@ -1,1 +1,1 @@
-e.exports={A:"subscriptionsContainer__8f372"}
+a.exports = { A: "subscriptionsContainer__8f372" };

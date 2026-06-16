@@ -1,1 +1,202 @@
-l.r(t),l.d(t,{default:()=>E});var i=l(627968),s=l(64700),n=l(485845),r=l(283973),a=l(664121),c=l(939249),o=l(834730),u=l(320448),d=l(534514),m=l(900797),x=l(661531),h=l(847374),j=l(735991),p=l(717048),g=l(396533),N=l(611371),f=l(566615),v=l(375708),b=l(442793),y=l(992595),C=l(291071);function E(e){let{application:t,onSelect:l}=e,d=(0,f.i)(),{iconURL:m}=s.useMemo(()=>(0,j.X2)(t,{fakeAppIconURL:C,size:84}),[t]),x=s.useMemo(()=>[{type:n.b.USER_INSTALL,icon:r.R,title:v.intl.string(v.t.aCg60P),subtitle:v.intl.string(v.t.YeiIUZ),beta:!1},{type:n.b.GUILD_INSTALL,icon:a.R,title:v.intl.string(v.t.E64YCz),subtitle:v.intl.string(v.t.bbtoKm),beta:!1}].filter(e=>t.integrationTypesConfig?.[e.type]?.oauth2InstallParams!=null),[t.integrationTypesConfig]);return(0,i.jsxs)("div",{className:b.kL,children:[(0,i.jsxs)("header",{id:d,className:b.wx,children:[(0,i.jsx)(p.A,{src:m,className:b.Z2,rendersPlaceholder:!0}),(0,i.jsx)(T,{application:t}),(0,i.jsx)(L,{application:t})]}),(0,i.jsx)("ul",{className:b.Ge,children:x.map(e=>(0,i.jsxs)(c.D,{tag:"li",className:b.nM,onClick:()=>l(e.type),children:[(0,i.jsx)(e.icon,{size:"md",color:"currentColor",className:b.hc}),(0,i.jsxs)("div",{className:b.bL,children:[(0,i.jsxs)("div",{className:b.pt,children:[(0,i.jsx)(o.E,{variant:"text-md/medium",color:"interactive-text-active",children:e.title}),(0,i.jsx)(o.E,{variant:"text-xs/medium",color:"text-muted",children:e.subtitle})]}),e.beta&&(0,i.jsx)(N.A,{}),(0,i.jsx)(u._,{size:"md",color:"currentColor",className:b.gN})]})]},e.type))})]})}function L(e){let{application:t}=e,l=t.description;return null==l||0===l.length?null:(0,i.jsx)("div",{className:b.wt,children:(0,i.jsx)("div",{className:b.bH,children:null!=l&&l.length>0?(0,i.jsx)(k,{description:l}):null})})}function T(e){let{application:t}=e,l=t.name,s=(0,j.b7)(t);return(0,i.jsxs)("div",{className:b.gn,children:[(0,i.jsx)(d.D,{variant:"heading-xl/extrabold",lineClamp:1,children:l}),s?(0,i.jsx)("div",{className:b.s3,children:(0,i.jsx)(o.E,{variant:"text-xs/medium",color:"text-default",children:v.intl.string(v.t.LO4f0P)})}):null]})}function k(e){let{description:t}=e,[n,r]=s.useState(!0);s.useLayoutEffect(()=>r(!1),[]);let a=s.useMemo(()=>{let{parseBioReact:e}=l(713804);return e(t)},[t]),{ref:u,lineHeight:d,lineCount:j}=function(){let e=s.useRef(null),[t,l]=s.useState(null),[i,n]=s.useState(null);return s.useLayoutEffect(()=>{let t=e.current;if(null===t||0===t.clientHeight)return;let i=parseInt(getComputedStyle(t).lineHeight);isNaN(i)||(l(i),n(Math.floor(t.clientHeight/i)))},[]),{ref:e,lineHeight:t,lineCount:i}}(),p=s.useMemo(()=>{if(null==d||null==j)return{key:0};let e=d*j;return{key:1,minHeightOverride:Math.min(e,3*d),maxHeightOverride:e}},[j,d]),{ref:N,isTransitioning:f,onTransitionEnd:C}=(0,g.A)({isExpanded:n,...p}),E=n||f;return(0,i.jsxs)("div",{className:b.iQ,children:[(0,i.jsx)("div",{ref:N,className:b.ZT,onTransitionEnd:C,children:(0,i.jsx)(o.E,{ref:u,className:y.PT,variant:"text-sm/medium",lineClamp:E?void 0:3,style:{maxHeight:E?void 0:p.minHeightOverride},children:a})}),null!=j&&j>3?(0,i.jsxs)(c.D,{className:b.lP,onClick:()=>r(e=>!e),children:[(0,i.jsx)(o.E,{variant:"text-sm/semibold",color:"text-brand",children:E?v.intl.string(v.t.u4YJ8g):v.intl.string(v.t["N/tajD"])}),E?(0,i.jsx)(m.t,{size:"sm",color:x.A.colors.TEXT_BRAND}):(0,i.jsx)(h.a,{size:"sm",color:x.A.colors.TEXT_BRAND})]}):null]})}
+l.r(t), l.d(t, { default: () => E });
+var i = l(627968),
+    s = l(64700),
+    n = l(485845),
+    r = l(283973),
+    a = l(664121),
+    c = l(939249),
+    o = l(834730),
+    u = l(320448),
+    d = l(534514),
+    m = l(900797),
+    x = l(661531),
+    h = l(847374),
+    j = l(735991),
+    p = l(717048),
+    g = l(396533),
+    N = l(611371),
+    f = l(566615),
+    v = l(375708),
+    b = l(442793),
+    y = l(992595),
+    C = l(291071);
+function E(e) {
+    let { application: t, onSelect: l } = e,
+        d = (0, f.i)(),
+        { iconURL: m } = s.useMemo(() => (0, j.X2)(t, { fakeAppIconURL: C, size: 84 }), [t]),
+        x = s.useMemo(
+            () =>
+                [
+                    {
+                        type: n.b.USER_INSTALL,
+                        icon: r.R,
+                        title: v.intl.string(v.t.aCg60P),
+                        subtitle: v.intl.string(v.t.YeiIUZ),
+                        beta: !1,
+                    },
+                    {
+                        type: n.b.GUILD_INSTALL,
+                        icon: a.R,
+                        title: v.intl.string(v.t.E64YCz),
+                        subtitle: v.intl.string(v.t.bbtoKm),
+                        beta: !1,
+                    },
+                ].filter((e) => t.integrationTypesConfig?.[e.type]?.oauth2InstallParams != null),
+            [t.integrationTypesConfig],
+        );
+    return (0, i.jsxs)("div", {
+        className: b.kL,
+        children: [
+            (0, i.jsxs)("header", {
+                id: d,
+                className: b.wx,
+                children: [
+                    (0, i.jsx)(p.A, { src: m, className: b.Z2, rendersPlaceholder: !0 }),
+                    (0, i.jsx)(T, { application: t }),
+                    (0, i.jsx)(L, { application: t }),
+                ],
+            }),
+            (0, i.jsx)("ul", {
+                className: b.Ge,
+                children: x.map((e) =>
+                    (0, i.jsxs)(
+                        c.D,
+                        {
+                            tag: "li",
+                            className: b.nM,
+                            onClick: () => l(e.type),
+                            children: [
+                                (0, i.jsx)(e.icon, { size: "md", color: "currentColor", className: b.hc }),
+                                (0, i.jsxs)("div", {
+                                    className: b.bL,
+                                    children: [
+                                        (0, i.jsxs)("div", {
+                                            className: b.pt,
+                                            children: [
+                                                (0, i.jsx)(o.E, {
+                                                    variant: "text-md/medium",
+                                                    color: "interactive-text-active",
+                                                    children: e.title,
+                                                }),
+                                                (0, i.jsx)(o.E, {
+                                                    variant: "text-xs/medium",
+                                                    color: "text-muted",
+                                                    children: e.subtitle,
+                                                }),
+                                            ],
+                                        }),
+                                        e.beta && (0, i.jsx)(N.A, {}),
+                                        (0, i.jsx)(u._, { size: "md", color: "currentColor", className: b.gN }),
+                                    ],
+                                }),
+                            ],
+                        },
+                        e.type,
+                    ),
+                ),
+            }),
+        ],
+    });
+}
+function L(e) {
+    let { application: t } = e,
+        l = t.description;
+    return null == l || 0 === l.length
+        ? null
+        : (0, i.jsx)("div", {
+              className: b.wt,
+              children: (0, i.jsx)("div", {
+                  className: b.bH,
+                  children: null != l && l.length > 0 ? (0, i.jsx)(k, { description: l }) : null,
+              }),
+          });
+}
+function T(e) {
+    let { application: t } = e,
+        l = t.name,
+        s = (0, j.b7)(t);
+    return (0, i.jsxs)("div", {
+        className: b.gn,
+        children: [
+            (0, i.jsx)(d.D, { variant: "heading-xl/extrabold", lineClamp: 1, children: l }),
+            s
+                ? (0, i.jsx)("div", {
+                      className: b.s3,
+                      children: (0, i.jsx)(o.E, {
+                          variant: "text-xs/medium",
+                          color: "text-default",
+                          children: v.intl.string(v.t.LO4f0P),
+                      }),
+                  })
+                : null,
+        ],
+    });
+}
+function k(e) {
+    let { description: t } = e,
+        [n, r] = s.useState(!0);
+    s.useLayoutEffect(() => r(!1), []);
+    let a = s.useMemo(() => {
+            let { parseBioReact: e } = l(713804);
+            return e(t);
+        }, [t]),
+        {
+            ref: u,
+            lineHeight: d,
+            lineCount: j,
+        } = (function () {
+            let e = s.useRef(null),
+                [t, l] = s.useState(null),
+                [i, n] = s.useState(null);
+            return (
+                s.useLayoutEffect(() => {
+                    let t = e.current;
+                    if (null === t || 0 === t.clientHeight) return;
+                    let i = parseInt(getComputedStyle(t).lineHeight);
+                    isNaN(i) || (l(i), n(Math.floor(t.clientHeight / i)));
+                }, []),
+                { ref: e, lineHeight: t, lineCount: i }
+            );
+        })(),
+        p = s.useMemo(() => {
+            if (null == d || null == j) return { key: 0 };
+            let e = d * j;
+            return { key: 1, minHeightOverride: Math.min(e, 3 * d), maxHeightOverride: e };
+        }, [j, d]),
+        { ref: N, isTransitioning: f, onTransitionEnd: C } = (0, g.A)({ isExpanded: n, ...p }),
+        E = n || f;
+    return (0, i.jsxs)("div", {
+        className: b.iQ,
+        children: [
+            (0, i.jsx)("div", {
+                ref: N,
+                className: b.ZT,
+                onTransitionEnd: C,
+                children: (0, i.jsx)(o.E, {
+                    ref: u,
+                    className: y.PT,
+                    variant: "text-sm/medium",
+                    lineClamp: E ? void 0 : 3,
+                    style: { maxHeight: E ? void 0 : p.minHeightOverride },
+                    children: a,
+                }),
+            }),
+            null != j && j > 3
+                ? (0, i.jsxs)(c.D, {
+                      className: b.lP,
+                      onClick: () => r((e) => !e),
+                      children: [
+                          (0, i.jsx)(o.E, {
+                              variant: "text-sm/semibold",
+                              color: "text-brand",
+                              children: E ? v.intl.string(v.t.u4YJ8g) : v.intl.string(v.t["N/tajD"]),
+                          }),
+                          E
+                              ? (0, i.jsx)(m.t, { size: "sm", color: x.A.colors.TEXT_BRAND })
+                              : (0, i.jsx)(h.a, { size: "sm", color: x.A.colors.TEXT_BRAND }),
+                      ],
+                  })
+                : null,
+        ],
+    });
+}

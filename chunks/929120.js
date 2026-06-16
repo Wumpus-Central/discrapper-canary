@@ -1,1 +1,64 @@
-i.d(s,{n:()=>b});var l=i(627968),t=i(64700),n=i(503698),d=i.n(n),c=i(534514),a=i(834730),r=i(17928),u=i(939249),m=i(881636),o=i(661531),h=i(71393),x=i(365258),j=i(926418),v=i(375708),N=i(563215);function b(e){let{guildIds:s,direction:i,onClick:n}=e,b=(0,t.useMemo)(()=>(0,x.AB)(s),[s]),f=(0,r.bG)([h.A],()=>h.A.getGuild(b[0])),g=i===x.AI.RESTRICTING?v.intl.string(v.t.e6Kpa7):v.intl.string(v.t.cy4G4y),p=f?.name??"",A=null!=f&&b.length>1,I=null!=n?u.D:"div";return(0,l.jsxs)(I,{className:d()(N.Nr,{[N.vk]:null!=n}),onClick:n,children:[(0,l.jsxs)("div",{className:N.Bj,children:[(0,l.jsx)(c.D,{variant:"text-md/semibold",children:v.intl.format(v.t["0fkj8J"],{count:b.length})}),(0,l.jsxs)("div",{className:N.jf,children:[(0,l.jsx)(a.E,{variant:"text-sm/medium",color:i===x.AI.RESTRICTING?"text-feedback-positive":"text-muted",className:N.Rh,children:g}),(0,l.jsx)(a.E,{variant:"text-sm/medium",color:"text-muted",className:N.SI,children:v.intl.format(A?v.t["8ZLbvR"]:v.t["+NoTYm"],{guildName:p})})]})]}),(0,l.jsxs)("div",{className:N.hE,children:[(0,l.jsx)(j.l,{guildIds:b,iconSize:24}),null!=n&&(0,l.jsx)(m.u,{color:o.A.colors.TEXT_SUBTLE,size:"xs"})]})]})}
+i.d(s, { n: () => b });
+var l = i(627968),
+    t = i(64700),
+    n = i(503698),
+    d = i.n(n),
+    c = i(534514),
+    a = i(834730),
+    r = i(17928),
+    u = i(939249),
+    m = i(881636),
+    o = i(661531),
+    h = i(71393),
+    x = i(365258),
+    j = i(926418),
+    v = i(375708),
+    N = i(563215);
+function b(e) {
+    let { guildIds: s, direction: i, onClick: n } = e,
+        b = (0, t.useMemo)(() => (0, x.AB)(s), [s]),
+        f = (0, r.bG)([h.A], () => h.A.getGuild(b[0])),
+        g = i === x.AI.RESTRICTING ? v.intl.string(v.t.e6Kpa7) : v.intl.string(v.t.cy4G4y),
+        p = f?.name ?? "",
+        A = null != f && b.length > 1,
+        I = null != n ? u.D : "div";
+    return (0, l.jsxs)(I, {
+        className: d()(N.Nr, { [N.vk]: null != n }),
+        onClick: n,
+        children: [
+            (0, l.jsxs)("div", {
+                className: N.Bj,
+                children: [
+                    (0, l.jsx)(c.D, {
+                        variant: "text-md/semibold",
+                        children: v.intl.format(v.t["0fkj8J"], { count: b.length }),
+                    }),
+                    (0, l.jsxs)("div", {
+                        className: N.jf,
+                        children: [
+                            (0, l.jsx)(a.E, {
+                                variant: "text-sm/medium",
+                                color: i === x.AI.RESTRICTING ? "text-feedback-positive" : "text-muted",
+                                className: N.Rh,
+                                children: g,
+                            }),
+                            (0, l.jsx)(a.E, {
+                                variant: "text-sm/medium",
+                                color: "text-muted",
+                                className: N.SI,
+                                children: v.intl.format(A ? v.t["8ZLbvR"] : v.t["+NoTYm"], { guildName: p }),
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+            (0, l.jsxs)("div", {
+                className: N.hE,
+                children: [
+                    (0, l.jsx)(j.l, { guildIds: b, iconSize: 24 }),
+                    null != n && (0, l.jsx)(m.u, { color: o.A.colors.TEXT_SUBTLE, size: "xs" }),
+                ],
+            }),
+        ],
+    });
+}

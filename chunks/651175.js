@@ -1,1 +1,1 @@
-e.exports={z:"effects__58042"}
+e.exports = { z: "effects__58042" };

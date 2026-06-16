@@ -1,1 +1,5 @@
-var i=n(533786),r=n(77708);e.exports=function(e){return r(i(e).toLowerCase())}
+var i = n(533786),
+    r = n(77708);
+e.exports = function (e) {
+    return r(i(e).toLowerCase());
+};

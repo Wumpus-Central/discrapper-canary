@@ -1,1 +1,18 @@
-"use strict";let i;function r(){return void 0===i&&(i=void 0===Intl?.Segmenter?null:new Intl.Segmenter),i}function s(e){let t=r();if(null==t)return e.length;let n=t.segment(e),i=0;for(let e of n)i+=1;return i}function a(e){let t=r();return null==t?Array.from(e):Array.from(t.segment(e),e=>e.segment)}n.d(t,{W:()=>s,p:()=>a})
+"use strict";
+let i;
+function r() {
+    return void 0 === i && (i = void 0 === Intl?.Segmenter ? null : new Intl.Segmenter()), i;
+}
+function s(e) {
+    let t = r();
+    if (null == t) return e.length;
+    let n = t.segment(e),
+        i = 0;
+    for (let e of n) i += 1;
+    return i;
+}
+function a(e) {
+    let t = r();
+    return null == t ? Array.from(e) : Array.from(t.segment(e), (e) => e.segment);
+}
+n.d(t, { W: () => s, p: () => a });

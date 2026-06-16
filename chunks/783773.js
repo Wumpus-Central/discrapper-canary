@@ -1,1 +1,19 @@
-"use strict";var i,r=n(326948),s=n(267768);try{i=[].__proto__===Array.prototype}catch(e){if(!e||"object"!=typeof e||!("code"in e)||"ERR_PROTO_ACCESS"!==e.code)throw e}var a=!!i&&s&&s(Object.prototype,"__proto__"),o=Object,l=o.getPrototypeOf;e.exports=a&&"function"==typeof a.get?r([a.get]):"function"==typeof l&&function(e){return l(null==e?e:o(e))}
+"use strict";
+var i,
+    r = n(326948),
+    s = n(267768);
+try {
+    i = [].__proto__ === Array.prototype;
+} catch (e) {
+    if (!e || "object" != typeof e || !("code" in e) || "ERR_PROTO_ACCESS" !== e.code) throw e;
+}
+var a = !!i && s && s(Object.prototype, "__proto__"),
+    o = Object,
+    l = o.getPrototypeOf;
+e.exports =
+    a && "function" == typeof a.get
+        ? r([a.get])
+        : "function" == typeof l &&
+          function (e) {
+              return l(null == e ? e : o(e));
+          };

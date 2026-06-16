@@ -1,1 +1,51 @@
-"use strict";n.d(t,{W:()=>l});var i=n(64700),r=n(543767),s=n(410516),a=n(211159),o=n(463376);let l=e=>{let t,{priceOptions:n,trialId:l,metadata:u,discountInvoicePreview:c}=e,{isEligibleForDiscount:d,discountOffer:_}=(0,o.i)(),h=(0,s.YJ)(_),f=!0===n.loaded,p=null!=c,[E,m]=(0,r.YV)({items:null!=h?[{planId:h,quantity:1}]:[],renewal:!1,preventFetch:p||!d||null==h||!f,trialId:l,paymentSourceId:n.paymentSourceId,currency:n.currency,metadata:u}),g=p?c:E,A=i.useMemo(()=>{let e=d?g??null:null;return{discountOffer:_,applicablePlan:h,discountInvoicePreview:e,discountAmountOff:null!=h?(0,s.pg)(e,h):null,discountInvoiceError:m}},[_,h,g,m,d]);return t=(0,a.t4)(e=>{let{setPremiumDiscountInfo:t}=e;return t}),i.useEffect(()=>(t(A),()=>{t(s.TI)}),[A,t]),A}
+"use strict";
+n.d(t, { W: () => l });
+var i = n(64700),
+    r = n(543767),
+    s = n(410516),
+    a = n(211159),
+    o = n(463376);
+let l = (e) => {
+    let t,
+        { priceOptions: n, trialId: l, metadata: u, discountInvoicePreview: c } = e,
+        { isEligibleForDiscount: d, discountOffer: _ } = (0, o.i)(),
+        h = (0, s.YJ)(_),
+        f = !0 === n.loaded,
+        p = null != c,
+        [E, m] = (0, r.YV)({
+            items: null != h ? [{ planId: h, quantity: 1 }] : [],
+            renewal: !1,
+            preventFetch: p || !d || null == h || !f,
+            trialId: l,
+            paymentSourceId: n.paymentSourceId,
+            currency: n.currency,
+            metadata: u,
+        }),
+        g = p ? c : E,
+        A = i.useMemo(() => {
+            let e = d ? (g ?? null) : null;
+            return {
+                discountOffer: _,
+                applicablePlan: h,
+                discountInvoicePreview: e,
+                discountAmountOff: null != h ? (0, s.pg)(e, h) : null,
+                discountInvoiceError: m,
+            };
+        }, [_, h, g, m, d]);
+    return (
+        (t = (0, a.t4)((e) => {
+            let { setPremiumDiscountInfo: t } = e;
+            return t;
+        })),
+        i.useEffect(
+            () => (
+                t(A),
+                () => {
+                    t(s.TI);
+                }
+            ),
+            [A, t],
+        ),
+        A
+    );
+};

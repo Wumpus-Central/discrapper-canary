@@ -1,1 +1,29 @@
-e.d(n,{A:()=>x});var i=e(17928),l=e(688810),a=e(211401),r=e(500049),s=e(975412),o=e(355622),c=e(267102),u=e(734057),d=e(309010),A=e(652215);function x(t){let{applicationId:n,onClose:e}=t,{newestAnalyticsLocation:x}=(0,l.Ay)(),p=(0,i.bG)([u.A,d.A],()=>u.A.getChannel(d.A.getChannelId())),f=(0,c.Us)()===A.BRT.POPOUT;return()=>{e?.(),null==p||p?.isVocal()?(0,s.A)({context:null!=p?{type:"channel",channel:p}:{type:"contextless"},analyticsLocation:x,openInPopout:f,initialState:{applicationId:n}}):(0,a.R)(r.s4.TEXT,o.oU.NORMAL,{applicationId:n},p.id)}}
+"use strict";
+n.d(t, { A: () => h });
+var i = n(17928),
+    r = n(688810),
+    s = n(211401),
+    a = n(500049),
+    o = n(975412),
+    l = n(355622),
+    u = n(267102),
+    c = n(734057),
+    d = n(309010),
+    _ = n(652215);
+function h(e) {
+    let { applicationId: t, onClose: n } = e,
+        { newestAnalyticsLocation: h } = (0, r.Ay)(),
+        f = (0, i.bG)([c.A, d.A], () => c.A.getChannel(d.A.getChannelId())),
+        p = (0, u.Us)() === _.BRT.POPOUT;
+    return () => {
+        n?.(),
+            null == f || f?.isVocal()
+                ? (0, o.A)({
+                      context: null != f ? { type: "channel", channel: f } : { type: "contextless" },
+                      analyticsLocation: h,
+                      openInPopout: p,
+                      initialState: { applicationId: t },
+                  })
+                : (0, s.R)(a.s4.TEXT, l.oU.NORMAL, { applicationId: t }, f.id);
+    };
+}

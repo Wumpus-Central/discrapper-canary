@@ -1,1 +1,37 @@
-"use strict";n.d(t,{v:()=>a});let i=new Map,r=new Set;function s(){if("u"<typeof window)return;function e(e){return"propertyName"in e}let t=n=>{if(!e(n)||!n.target)return;let s=i.get(n.target);if(s&&(s.delete(n.propertyName),0===s.size&&(n.target.removeEventListener("transitioncancel",t),i.delete(n.target)),0===i.size)){for(let e of r)e();r.clear()}};document.body.addEventListener("transitionrun",n=>{if(!e(n)||!n.target)return;let r=i.get(n.target);r||(r=new Set,i.set(n.target,r),n.target.addEventListener("transitioncancel",t,{once:!0})),r.add(n.propertyName)}),document.body.addEventListener("transitionend",t)}function a(e){requestAnimationFrame(()=>{for(let[e]of i)"isConnected"in e&&!e.isConnected&&i.delete(e);0===i.size?e():r.add(e)})}"u">typeof document&&("loading"!==document.readyState?s():document.addEventListener("DOMContentLoaded",s))
+"use strict";
+n.d(t, { v: () => a });
+let i = new Map(),
+    r = new Set();
+function s() {
+    if ("u" < typeof window) return;
+    function e(e) {
+        return "propertyName" in e;
+    }
+    let t = (n) => {
+        if (!e(n) || !n.target) return;
+        let s = i.get(n.target);
+        if (
+            s &&
+            (s.delete(n.propertyName),
+            0 === s.size && (n.target.removeEventListener("transitioncancel", t), i.delete(n.target)),
+            0 === i.size)
+        ) {
+            for (let e of r) e();
+            r.clear();
+        }
+    };
+    document.body.addEventListener("transitionrun", (n) => {
+        if (!e(n) || !n.target) return;
+        let r = i.get(n.target);
+        r || ((r = new Set()), i.set(n.target, r), n.target.addEventListener("transitioncancel", t, { once: !0 })),
+            r.add(n.propertyName);
+    }),
+        document.body.addEventListener("transitionend", t);
+}
+function a(e) {
+    requestAnimationFrame(() => {
+        for (let [e] of i) "isConnected" in e && !e.isConnected && i.delete(e);
+        0 === i.size ? e() : r.add(e);
+    });
+}
+"u" > typeof document && ("loading" !== document.readyState ? s() : document.addEventListener("DOMContentLoaded", s));

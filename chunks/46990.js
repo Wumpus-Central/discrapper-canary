@@ -1,1 +1,5 @@
-"use strict";var i=n(949893);e.exports=function(e){return"bigint"==typeof e?e:i(e)}
+"use strict";
+var i = n(949893);
+e.exports = function (e) {
+    return "bigint" == typeof e ? e : i(e);
+};

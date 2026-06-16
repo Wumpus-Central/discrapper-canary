@@ -1,1 +1,11 @@
-var i=n(646344),r=n(412998),s=n(537190),a=Object.prototype.hasOwnProperty;e.exports=function(e){if(!i(e))return s(e);var t=r(e),n=[];for(var o in e)"constructor"==o&&(t||!a.call(e,o))||n.push(o);return n}
+var i = n(646344),
+    r = n(412998),
+    s = n(537190),
+    a = Object.prototype.hasOwnProperty;
+e.exports = function (e) {
+    if (!i(e)) return s(e);
+    var t = r(e),
+        n = [];
+    for (var o in e) ("constructor" == o && (t || !a.call(e, o))) || n.push(o);
+    return n;
+};

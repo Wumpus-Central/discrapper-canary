@@ -1,1 +1,1 @@
-p.exports={f:"options_c4e5d7"}
+p.exports = { f: "options_c4e5d7" };

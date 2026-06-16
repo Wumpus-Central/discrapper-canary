@@ -1,1 +1,185 @@
-n.d(t,{A:()=>I,M:()=>m});var l=n(627968),r=n(64700),s=n(503698),a=n.n(s),c=n(172218),u=n(109112),i=n(635377),o=n.n(i),d=n(306044);let f=new(o())({max:1e3});var A=n(265398),L=n(548118),M=n(776231),p=n(395671),E=n(486020),v=n(788868),h=n(375708),g=n(444282);let m={XXSMALL:g.W6,XSMALL:g.s,SMALL:g.EX,MEDIUM:g.Y,MEDIUM_LARGE:g.rZ,LARGE:g.as,XLARGE:g.AQ},I=r.forwardRef(function(e,t){let s,{game:i,guild:o,skuId:I,pid:R,className:S,guildClassName:x,size:w=m.MEDIUM,allowUnknownGameIcon:y=!0,unknownGameIconFallback:G}=e,[U,b]=r.useState(null),[_,C]=r.useState(!1),D=r.useCallback(e=>{C(e)},[]),N=r.useRef(null);r.useEffect(()=>{null!=N.current&&_&&(cancelIdleCallback(N.current),N.current=null)},[_]);let X=(0,c.K)(D);if(null!=I&&(s=function(e){if(null==e)return null;switch(e){case v.pe.GUILD:return n(664419);case v.pe.TIER_0:return n(31427);case v.pe.TIER_1:return n(831180);case v.pe.TIER_2:case v.pe.LEGACY:return n(29873);default:return null}}(I)),null!=i&&null==s&&(i instanceof p.Ay?s=i.getIconURL(function(e){switch(e){case m.XXSMALL:return 16;case m.XSMALL:return 24;case m.SMALL:return 30;case m.MEDIUM:return 40;case m.MEDIUM_LARGE:return 48;case m.LARGE:return 60;default:return 80}}(w)):i instanceof A.A?s=E.Ay.getApplicationIconURL({id:i.id,icon:i.iconHash}):null!=i.icon&&(s=E.Ay.getApplicationIconURL({id:i.id,icon:i.icon}))),s=function(e,t){let[n,l]=r.useState();return r.useEffect(()=>{if(null==e||null!=t)return void l(void 0);let n=f.get(e);if(null!=n)return void l(n);let r=!1;return(0,d.A)().then(t=>{null==t||r||t.identifyGame(e,(t,n)=>{if(r)return;if(0!==t||null==n.icon||""===n.icon||null==n.name||""===n.name)return void l(void 0);let s=`data:image/png;base64,${n.icon}`;f.set(e,s),l(s)})}).catch(()=>{r||l(void 0)}),()=>{r=!0}},[e,t]),t??n}(R,s),r.useEffect(()=>{if(null==s||""===s)return;if((0,E.V0)(s)||(0,M.LE)(s))return void b(s);let e=()=>(0,M.yt)(s,(e,t)=>{b(s)});if(_)return e();let t=requestIdleCallback(()=>{N.current=null,e()});return N.current=t,()=>{null!=N.current&&(cancelIdleCallback(N.current),N.current=null)}},[s,_]),void 0===s&&null!=o){let e=function(e){switch(e){case m.XSMALL:return L.Ay.Sizes.SMALLER;case m.SMALL:return L.Ay.Sizes.SMALL;case m.LARGE:return L.Ay.Sizes.LARGE;default:case m.MEDIUM:return L.Ay.Sizes.MEDIUM}}(w);return(0,l.jsx)(L.Ay,{className:a()(g.Gt,x,S),guild:o,size:e})}if(null==s||""===s)return y?G??(0,l.jsx)(u._,{size:"md",color:"currentColor",className:a()(g.Gt,w,S)}):null;let j=i?.name,k=null!=j&&""!==j?h.intl.formatToPlainString(h.t.tiKyYg,{applicationName:j}):h.intl.string(h.t["2B/phM"]),Z=(0,E.V0)(s),T=(0,M.LE)(s),z=U===s||Z||T;return(0,l.jsxs)(l.Fragment,{children:[z?null:(0,l.jsx)("div",{className:a()(g.qD,w,S)}),(0,l.jsx)("img",{ref:t,alt:k,src:s,className:a()(g.Gt,w,S),style:z?void 0:{display:"none"}}),(0,l.jsx)("div",{className:g.Xc,children:(0,l.jsx)("div",{ref:X,className:g.Pr})})]})})
+"use strict";
+n.d(t, { A: () => S, M: () => T });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(172218),
+    l = n(109112),
+    u = n(635377),
+    c = n.n(u),
+    d = n(306044);
+let _ = new (c())({ max: 1e3 });
+var h = n(265398),
+    f = n(548118),
+    p = n(776231),
+    E = n(395671),
+    m = n(486020),
+    g = n(788868),
+    A = n(375708),
+    I = n(444282);
+let T = { XXSMALL: I.W6, XSMALL: I.s, SMALL: I.EX, MEDIUM: I.Y, MEDIUM_LARGE: I.rZ, LARGE: I.as, XLARGE: I.AQ },
+    S = r.forwardRef(function (e, t) {
+        let s,
+            {
+                game: u,
+                guild: c,
+                skuId: S,
+                pid: y,
+                className: C,
+                guildClassName: N,
+                size: v = T.MEDIUM,
+                allowUnknownGameIcon: R = !0,
+                unknownGameIconFallback: O,
+            } = e,
+            [b, D] = r.useState(null),
+            [L, w] = r.useState(!1),
+            M = r.useCallback((e) => {
+                w(e);
+            }, []),
+            P = r.useRef(null);
+        r.useEffect(() => {
+            null != P.current && L && (cancelIdleCallback(P.current), (P.current = null));
+        }, [L]);
+        let x = (0, o.K)(M);
+        if (
+            (null != S &&
+                (s = (function (e) {
+                    if (null == e) return null;
+                    switch (e) {
+                        case g.pe.GUILD:
+                            return n(664419);
+                        case g.pe.TIER_0:
+                            return n(31427);
+                        case g.pe.TIER_1:
+                            return n(831180);
+                        case g.pe.TIER_2:
+                        case g.pe.LEGACY:
+                            return n(29873);
+                        default:
+                            return null;
+                    }
+                })(S)),
+            null != u &&
+                null == s &&
+                (u instanceof E.Ay
+                    ? (s = u.getIconURL(
+                          (function (e) {
+                              switch (e) {
+                                  case T.XXSMALL:
+                                      return 16;
+                                  case T.XSMALL:
+                                      return 24;
+                                  case T.SMALL:
+                                      return 30;
+                                  case T.MEDIUM:
+                                      return 40;
+                                  case T.MEDIUM_LARGE:
+                                      return 48;
+                                  case T.LARGE:
+                                      return 60;
+                                  default:
+                                      return 80;
+                              }
+                          })(v),
+                      ))
+                    : u instanceof h.A
+                      ? (s = m.Ay.getApplicationIconURL({ id: u.id, icon: u.iconHash }))
+                      : null != u.icon && (s = m.Ay.getApplicationIconURL({ id: u.id, icon: u.icon }))),
+            (s = (function (e, t) {
+                let [n, i] = r.useState();
+                return (
+                    r.useEffect(() => {
+                        if (null == e || null != t) return void i(void 0);
+                        let n = _.get(e);
+                        if (null != n) return void i(n);
+                        let r = !1;
+                        return (
+                            (0, d.A)()
+                                .then((t) => {
+                                    null == t ||
+                                        r ||
+                                        t.identifyGame(e, (t, n) => {
+                                            if (r) return;
+                                            if (
+                                                0 !== t ||
+                                                null == n.icon ||
+                                                "" === n.icon ||
+                                                null == n.name ||
+                                                "" === n.name
+                                            )
+                                                return void i(void 0);
+                                            let s = `data:image/png;base64,${n.icon}`;
+                                            _.set(e, s), i(s);
+                                        });
+                                })
+                                .catch(() => {
+                                    r || i(void 0);
+                                }),
+                            () => {
+                                r = !0;
+                            }
+                        );
+                    }, [e, t]),
+                    t ?? n
+                );
+            })(y, s)),
+            r.useEffect(() => {
+                if (null == s || "" === s) return;
+                if ((0, m.V0)(s) || (0, p.LE)(s)) return void D(s);
+                let e = () =>
+                    (0, p.yt)(s, (e, t) => {
+                        D(s);
+                    });
+                if (L) return e();
+                let t = requestIdleCallback(() => {
+                    (P.current = null), e();
+                });
+                return (
+                    (P.current = t),
+                    () => {
+                        null != P.current && (cancelIdleCallback(P.current), (P.current = null));
+                    }
+                );
+            }, [s, L]),
+            void 0 === s && null != c)
+        ) {
+            let e = (function (e) {
+                switch (e) {
+                    case T.XSMALL:
+                        return f.Ay.Sizes.SMALLER;
+                    case T.SMALL:
+                        return f.Ay.Sizes.SMALL;
+                    case T.LARGE:
+                        return f.Ay.Sizes.LARGE;
+                    default:
+                    case T.MEDIUM:
+                        return f.Ay.Sizes.MEDIUM;
+                }
+            })(v);
+            return (0, i.jsx)(f.Ay, { className: a()(I.Gt, N, C), guild: c, size: e });
+        }
+        if (null == s || "" === s)
+            return R ? (O ?? (0, i.jsx)(l._, { size: "md", color: "currentColor", className: a()(I.Gt, v, C) })) : null;
+        let k = u?.name,
+            U =
+                null != k && "" !== k
+                    ? A.intl.formatToPlainString(A.t.tiKyYg, { applicationName: k })
+                    : A.intl.string(A.t["2B/phM"]),
+            G = (0, m.V0)(s),
+            F = (0, p.LE)(s),
+            V = b === s || G || F;
+        return (0, i.jsxs)(i.Fragment, {
+            children: [
+                V ? null : (0, i.jsx)("div", { className: a()(I.qD, v, C) }),
+                (0, i.jsx)("img", {
+                    ref: t,
+                    alt: U,
+                    src: s,
+                    className: a()(I.Gt, v, C),
+                    style: V ? void 0 : { display: "none" },
+                }),
+                (0, i.jsx)("div", { className: I.Xc, children: (0, i.jsx)("div", { ref: x, className: I.Pr }) }),
+            ],
+        });
+    });

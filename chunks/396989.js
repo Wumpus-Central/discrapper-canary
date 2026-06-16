@@ -1,1 +1,1 @@
-e.exports={g:"premiumOptionContainer__150bb"}
+_.exports = { g: "premiumOptionContainer__150bb" };

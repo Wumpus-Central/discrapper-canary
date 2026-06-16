@@ -1,1 +1,176 @@
-i.d(e,{default:()=>v});var a=i(627968),s=i(64700),n=i(935462),l=i(534514),r=i(834730),c=i(331322),o=i(292666),d=i(821609),m=i(123292),u=i(830215),x=i(631670),h=i(235986),j=i(894778),p=i(174459),C=i(53505),g=i(652215),f=i(315290),A=i(375708),N=i(541028);function S(t){let{email:e,setEmail:i,claimRequired:p,onSuccess:C,onClose:g}=t,[S,b]=s.useState(),[v,_]=s.useState(""),[k,y]=s.useState(""),[E,w]=s.useState(!1);s.useEffect(()=>j.A.flowStep(f.do.ANY,f.hc.CLAIM_ACCOUNT),[]);let D=async t=>{t.preventDefault(),w(!0),b(""),y("");try{await (0,x.KD)({email:e,password:v}),w(!1),C()}catch(t){t?.body?.email&&b(t.body.email),t?.body?.password&&y(t.body.password),w(!1)}};return(0,a.jsxs)("div",{children:[(0,a.jsxs)(n.rQ,{className:N._5,direction:h.A.Direction.VERTICAL,separator:!1,children:[(0,a.jsx)("div",{className:N.gD}),(0,a.jsx)(l.D,{className:N.Hc,variant:"heading-xl/semibold",children:A.intl.string(A.t["uQShv/"])}),(0,a.jsx)(r.E,{className:N.bQ,variant:"text-md/normal",color:"text-default",children:p?A.intl.string(A.t.sW28gZ):A.intl.string(A.t["gP/vPe"])}),(0,a.jsx)(n.s_,{className:N.b,onClick:g})]}),(0,a.jsx)(n.$m,{children:(0,a.jsx)("form",{className:N.oB,onSubmit:D,children:(0,a.jsxs)(c.B,{gap:16,children:[(0,a.jsx)(o.k,{label:A.intl.string(A.t.dI4d4S),value:e,error:S,onChange:t=>i(t),autoFocus:!0}),(0,a.jsx)(o.k,{label:A.intl.string(A.t["CIGa+7"]),type:"password",value:v,error:k,onChange:t=>_(t)}),(0,a.jsx)(d.$,{text:A.intl.string(A.t.fiNVin),variant:"primary",fullWidth:!0,type:"submit",loading:E,disabled:0===e.length||0===v.length}),p&&(0,a.jsx)("div",{className:N.pV,children:(0,a.jsx)(m.Q,{text:A.intl.string(A.t["2jxGer"]),onClick:()=>{u.A.logout("claim_account_modal"),g()}})})]})})})]})}function b(t){let{email:e,claimRequired:i,onClose:l}=t,c=i?A.t.D7trIB:A.t.JNWX7G;return s.useEffect(()=>j.A.flowStep(f.do.ANY,f.hc.CLAIM_ACCOUNT_SUCCESS),[]),(0,a.jsxs)("div",{children:[(0,a.jsxs)(n.$m,{className:N.Zc,children:[!i&&(0,a.jsx)(n.s_,{className:N.b,onClick:l}),(0,a.jsx)("div",{className:N.hW}),(0,a.jsx)(r.E,{className:N.QK,variant:"text-lg/semibold",children:A.intl.format(c,{email:e})}),(0,a.jsx)(r.E,{className:N.pQ,variant:"text-md/normal",children:A.intl.string(A.t.eXqM2d)})]}),i?(0,a.jsx)(n.jl,{direction:h.A.Direction.VERTICAL,children:(0,a.jsx)(d.$,{text:A.intl.string(A.t.BddRzS),variant:"primary",fullWidth:!0,onClick:l})}):(0,a.jsx)(n.jl,{direction:h.A.Direction.VERTICAL,children:(0,a.jsx)(d.$,{text:A.intl.string(A.t.ygArIV),variant:"primary",fullWidth:!0,onClick:function(){window.open((0,C.SU)(),"_blank"),p.default.track(g.HAw.DOWNLOAD_APP,{platform:(0,C.Vf)(),ptb:!1,released:!0,has_e_mail:!0,referring_location:"Claim Modal",qr_code:!1})}})})]})}function v(t){let{onClose:e,transitionState:i,claimRequired:l=!1}=t,[r,c]=s.useState(""),[o,d]=s.useState(!1);return o?(0,a.jsx)(n.EO,{transitionState:i,parentComponent:"ClaimAccountModal",children:(0,a.jsx)(b,{email:r,claimRequired:l,onClose:e})}):(0,a.jsx)(n.EO,{transitionState:i,parentComponent:"ClaimAccountModal",children:(0,a.jsx)(S,{email:r,setEmail:c,claimRequired:l,onSuccess:()=>d(!0),onClose:e})})}
+i.d(e, { default: () => v });
+var a = i(627968),
+    s = i(64700),
+    n = i(935462),
+    l = i(534514),
+    r = i(834730),
+    c = i(331322),
+    o = i(292666),
+    d = i(821609),
+    m = i(123292),
+    u = i(830215),
+    x = i(631670),
+    h = i(235986),
+    j = i(894778),
+    p = i(174459),
+    C = i(53505),
+    g = i(652215),
+    f = i(315290),
+    A = i(375708),
+    N = i(541028);
+function S(t) {
+    let { email: e, setEmail: i, claimRequired: p, onSuccess: C, onClose: g } = t,
+        [S, b] = s.useState(),
+        [v, _] = s.useState(""),
+        [k, y] = s.useState(""),
+        [E, w] = s.useState(!1);
+    s.useEffect(() => j.A.flowStep(f.do.ANY, f.hc.CLAIM_ACCOUNT), []);
+    let D = async (t) => {
+        t.preventDefault(), w(!0), b(""), y("");
+        try {
+            await (0, x.KD)({ email: e, password: v }), w(!1), C();
+        } catch (t) {
+            t?.body?.email && b(t.body.email), t?.body?.password && y(t.body.password), w(!1);
+        }
+    };
+    return (0, a.jsxs)("div", {
+        children: [
+            (0, a.jsxs)(n.rQ, {
+                className: N._5,
+                direction: h.A.Direction.VERTICAL,
+                separator: !1,
+                children: [
+                    (0, a.jsx)("div", { className: N.gD }),
+                    (0, a.jsx)(l.D, {
+                        className: N.Hc,
+                        variant: "heading-xl/semibold",
+                        children: A.intl.string(A.t["uQShv/"]),
+                    }),
+                    (0, a.jsx)(r.E, {
+                        className: N.bQ,
+                        variant: "text-md/normal",
+                        color: "text-default",
+                        children: p ? A.intl.string(A.t.sW28gZ) : A.intl.string(A.t["gP/vPe"]),
+                    }),
+                    (0, a.jsx)(n.s_, { className: N.b, onClick: g }),
+                ],
+            }),
+            (0, a.jsx)(n.$m, {
+                children: (0, a.jsx)("form", {
+                    className: N.oB,
+                    onSubmit: D,
+                    children: (0, a.jsxs)(c.B, {
+                        gap: 16,
+                        children: [
+                            (0, a.jsx)(o.k, {
+                                label: A.intl.string(A.t.dI4d4S),
+                                value: e,
+                                error: S,
+                                onChange: (t) => i(t),
+                                autoFocus: !0,
+                            }),
+                            (0, a.jsx)(o.k, {
+                                label: A.intl.string(A.t["CIGa+7"]),
+                                type: "password",
+                                value: v,
+                                error: k,
+                                onChange: (t) => _(t),
+                            }),
+                            (0, a.jsx)(d.$, {
+                                text: A.intl.string(A.t.fiNVin),
+                                variant: "primary",
+                                fullWidth: !0,
+                                type: "submit",
+                                loading: E,
+                                disabled: 0 === e.length || 0 === v.length,
+                            }),
+                            p &&
+                                (0, a.jsx)("div", {
+                                    className: N.pV,
+                                    children: (0, a.jsx)(m.Q, {
+                                        text: A.intl.string(A.t["2jxGer"]),
+                                        onClick: () => {
+                                            u.A.logout("claim_account_modal"), g();
+                                        },
+                                    }),
+                                }),
+                        ],
+                    }),
+                }),
+            }),
+        ],
+    });
+}
+function b(t) {
+    let { email: e, claimRequired: i, onClose: l } = t,
+        c = i ? A.t.D7trIB : A.t.JNWX7G;
+    return (
+        s.useEffect(() => j.A.flowStep(f.do.ANY, f.hc.CLAIM_ACCOUNT_SUCCESS), []),
+        (0, a.jsxs)("div", {
+            children: [
+                (0, a.jsxs)(n.$m, {
+                    className: N.Zc,
+                    children: [
+                        !i && (0, a.jsx)(n.s_, { className: N.b, onClick: l }),
+                        (0, a.jsx)("div", { className: N.hW }),
+                        (0, a.jsx)(r.E, {
+                            className: N.QK,
+                            variant: "text-lg/semibold",
+                            children: A.intl.format(c, { email: e }),
+                        }),
+                        (0, a.jsx)(r.E, {
+                            className: N.pQ,
+                            variant: "text-md/normal",
+                            children: A.intl.string(A.t.eXqM2d),
+                        }),
+                    ],
+                }),
+                i
+                    ? (0, a.jsx)(n.jl, {
+                          direction: h.A.Direction.VERTICAL,
+                          children: (0, a.jsx)(d.$, {
+                              text: A.intl.string(A.t.BddRzS),
+                              variant: "primary",
+                              fullWidth: !0,
+                              onClick: l,
+                          }),
+                      })
+                    : (0, a.jsx)(n.jl, {
+                          direction: h.A.Direction.VERTICAL,
+                          children: (0, a.jsx)(d.$, {
+                              text: A.intl.string(A.t.ygArIV),
+                              variant: "primary",
+                              fullWidth: !0,
+                              onClick: function () {
+                                  window.open((0, C.SU)(), "_blank"),
+                                      p.default.track(g.HAw.DOWNLOAD_APP, {
+                                          platform: (0, C.Vf)(),
+                                          ptb: !1,
+                                          released: !0,
+                                          has_e_mail: !0,
+                                          referring_location: "Claim Modal",
+                                          qr_code: !1,
+                                      });
+                              },
+                          }),
+                      }),
+            ],
+        })
+    );
+}
+function v(t) {
+    let { onClose: e, transitionState: i, claimRequired: l = !1 } = t,
+        [r, c] = s.useState(""),
+        [o, d] = s.useState(!1);
+    return o
+        ? (0, a.jsx)(n.EO, {
+              transitionState: i,
+              parentComponent: "ClaimAccountModal",
+              children: (0, a.jsx)(b, { email: r, claimRequired: l, onClose: e }),
+          })
+        : (0, a.jsx)(n.EO, {
+              transitionState: i,
+              parentComponent: "ClaimAccountModal",
+              children: (0, a.jsx)(S, { email: r, setEmail: c, claimRequired: l, onSuccess: () => d(!0), onClose: e }),
+          });
+}

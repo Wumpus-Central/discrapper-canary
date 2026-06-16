@@ -1,1 +1,59 @@
-"use strict";n.d(t,{Fy:()=>E,GP:()=>m,Zv:()=>T,bW:()=>g,kn:()=>I});var i=n(310784),r=n.n(i),s=n(317097),a=n(17928),o=n(498596),l=n(406704),u=n(71393),c=n(576705),d=n(998304),_=n(472282),h=n(143413),f=n(381941),p=n(652215);function E(e,t){let n=arguments.length>2&&void 0!==arguments[2]?arguments[2]:1,i=arguments.length>3&&void 0!==arguments[3]?arguments[3]:f.cZ,a=(0,s.Hl)(e),l=r()(t),u=r()(a),c=r().mix(l,a,i,"rgb"),_=r().contrast(u,c)<r().contrast(u,l)?c:l;return(0,d.lZ)({foreground:u,background:_,ratio:o.Tr.Text,saturationFactor:n})}function m(e,t){return null!=e&&e.features.has(p.GuildFeatures.VERIFIED)&&_.A.getCurrentConfig({guildId:e.id,location:t}).enabled}function g(e,t){let n=(0,a.bG)([u.A],()=>null!=e?u.A.getGuild(e):null,[e]),{enabled:i}=_.A.useExperiment({guildId:e??void 0,location:t});return null!=n&&n.features.has(p.GuildFeatures.VERIFIED)&&i}function A(e){return null!=e&&!e.isPrivate()&&(0,l.jr)(e)&&e.type!==p.rbe.GUILD_VOICE&&e.type!==p.rbe.GUILD_STAGE_VOICE}function I(e,t,n){var i;let r,s;return i=t.guild_id??void 0,r=g(i,n),s=(0,a.bG)([c.A],()=>c.A.can(p.xBc.MANAGE_OFFICIAL_MESSAGES,t),[t]),!(!r||!s||(0,h.A)(e))&&(e.hasFlag(p.pr7.IS_GUILD_OFFICIAL)?(0,l.jr)(t):A(t))}function T(e,t,n){return m(e,n)&&c.A.can(p.xBc.MANAGE_OFFICIAL_MESSAGES,t)&&A(t)}
+"use strict";
+n.d(t, { Fy: () => E, GP: () => m, Zv: () => T, bW: () => g, kn: () => I });
+var i = n(310784),
+    r = n.n(i),
+    s = n(317097),
+    a = n(17928),
+    o = n(498596),
+    l = n(406704),
+    u = n(71393),
+    c = n(576705),
+    d = n(998304),
+    _ = n(472282),
+    h = n(143413),
+    f = n(381941),
+    p = n(652215);
+function E(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1,
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : f.cZ,
+        a = (0, s.Hl)(e),
+        l = r()(t),
+        u = r()(a),
+        c = r().mix(l, a, i, "rgb"),
+        _ = r().contrast(u, c) < r().contrast(u, l) ? c : l;
+    return (0, d.lZ)({ foreground: u, background: _, ratio: o.Tr.Text, saturationFactor: n });
+}
+function m(e, t) {
+    return (
+        null != e &&
+        e.features.has(p.GuildFeatures.VERIFIED) &&
+        _.A.getCurrentConfig({ guildId: e.id, location: t }).enabled
+    );
+}
+function g(e, t) {
+    let n = (0, a.bG)([u.A], () => (null != e ? u.A.getGuild(e) : null), [e]),
+        { enabled: i } = _.A.useExperiment({ guildId: e ?? void 0, location: t });
+    return null != n && n.features.has(p.GuildFeatures.VERIFIED) && i;
+}
+function A(e) {
+    return (
+        null != e &&
+        !e.isPrivate() &&
+        (0, l.jr)(e) &&
+        e.type !== p.rbe.GUILD_VOICE &&
+        e.type !== p.rbe.GUILD_STAGE_VOICE
+    );
+}
+function I(e, t, n) {
+    var i;
+    let r, s;
+    return (
+        (i = t.guild_id ?? void 0),
+        (r = g(i, n)),
+        (s = (0, a.bG)([c.A], () => c.A.can(p.xBc.MANAGE_OFFICIAL_MESSAGES, t), [t])),
+        !(!r || !s || (0, h.A)(e)) && (e.hasFlag(p.pr7.IS_GUILD_OFFICIAL) ? (0, l.jr)(t) : A(t))
+    );
+}
+function T(e, t, n) {
+    return m(e, n) && c.A.can(p.xBc.MANAGE_OFFICIAL_MESSAGES, t) && A(t);
+}

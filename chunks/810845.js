@@ -1,1 +1,41 @@
-l.d(i,{A:()=>C});var a=l(627968),e=l(64700),n=l(17928),p=l(477782),s=l(811893),c=l(367513),r=l(401843),u=l(574172),o=l(174459),A=l(313961),d=l(806931),y=l(652215),P=l(375708);function C(t,i){let l=(0,n.bG)([A.A],()=>A.A.getParticipant(t,i)),C=(0,n.bG)([A.A],()=>A.A.isParticipantPoppedOut(t,i)),_=e.useCallback(()=>{null!=l&&((0,d.Ay)(l)&&(0,r.A9)(l.stream,{forceMultiple:!0}),c.A.popoutParticipant(t,l.id),u.openCallTilePopout(t,l.id),o.default.track(y.HAw.CALL_TILE_POPPED_OUT,{channel_id:t,tile_type:(0,d.Ay)(l)?"stream":"user"}))},[l,t]);return C||null==l||l.type===d.lp.ACTIVITY?null:(0,a.jsx)(p.Dr,{id:"call-tile-popout",label:(0,d.Ay)(l)?P.intl.string(P.t.Cm4aDQ):null!=l.streamId?P.intl.string(P.t["8Xyas9"]):P.intl.string(P.t.ifpl2s),action:_,icon:s.t,leadingAccessory:{type:"icon",icon:s.t}})}
+l.d(i, { A: () => C });
+var a = l(627968),
+    e = l(64700),
+    n = l(17928),
+    p = l(477782),
+    s = l(811893),
+    c = l(367513),
+    r = l(401843),
+    u = l(574172),
+    o = l(174459),
+    A = l(313961),
+    d = l(806931),
+    y = l(652215),
+    P = l(375708);
+function C(t, i) {
+    let l = (0, n.bG)([A.A], () => A.A.getParticipant(t, i)),
+        C = (0, n.bG)([A.A], () => A.A.isParticipantPoppedOut(t, i)),
+        _ = e.useCallback(() => {
+            null != l &&
+                ((0, d.Ay)(l) && (0, r.A9)(l.stream, { forceMultiple: !0 }),
+                c.A.popoutParticipant(t, l.id),
+                u.openCallTilePopout(t, l.id),
+                o.default.track(y.HAw.CALL_TILE_POPPED_OUT, {
+                    channel_id: t,
+                    tile_type: (0, d.Ay)(l) ? "stream" : "user",
+                }));
+        }, [l, t]);
+    return C || null == l || l.type === d.lp.ACTIVITY
+        ? null
+        : (0, a.jsx)(p.Dr, {
+              id: "call-tile-popout",
+              label: (0, d.Ay)(l)
+                  ? P.intl.string(P.t.Cm4aDQ)
+                  : null != l.streamId
+                    ? P.intl.string(P.t["8Xyas9"])
+                    : P.intl.string(P.t.ifpl2s),
+              action: _,
+              icon: s.t,
+              leadingAccessory: { type: "icon", icon: s.t },
+          });
+}

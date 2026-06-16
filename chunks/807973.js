@@ -1,1 +1,28 @@
-n.d(t,{A:()=>m});var i=n(627968);n(64700);var l=n(503698),s=n.n(l),r=n(661531),a=n(565645),o=n(17928),c=n(159273),d=n(35275),u=n(606481);function m(e){let{guildId:t,emojiId:n,emojiName:l,className:m}=e,h=(0,o.bG)([c.Ay],()=>{if(null==n)return null;let e=c.Ay.getDisambiguatedEmojiContext(t);return e.getById(n)??e.getByName(n)},[t,n]);return null!=h||null!=l?(0,i.jsx)(a.A,{emojiId:h?.id,emojiName:l??h?.name,animated:h?.animated??!1,className:s()(u.m,m)}):(0,i.jsx)(d.A,{className:s()(u.m,m),color:r.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css})}
+"use strict";
+n.d(t, { A: () => _ });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(661531),
+    o = n(565645),
+    l = n(17928),
+    u = n(159273),
+    c = n(35275),
+    d = n(606481);
+function _(e) {
+    let { guildId: t, emojiId: n, emojiName: r, className: _ } = e,
+        h = (0, l.bG)([u.Ay], () => {
+            if (null == n) return null;
+            let e = u.Ay.getDisambiguatedEmojiContext(t);
+            return e.getById(n) ?? e.getByName(n);
+        }, [t, n]);
+    return null != h || null != r
+        ? (0, i.jsx)(o.A, {
+              emojiId: h?.id,
+              emojiName: r ?? h?.name,
+              animated: h?.animated ?? !1,
+              className: s()(d.m, _),
+          })
+        : (0, i.jsx)(c.A, { className: s()(d.m, _), color: a.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css });
+}

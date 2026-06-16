@@ -1,1 +1,35 @@
-s.d(e,{A:()=>u});var a=s(627968);s(64700);var o=s(503698),i=s.n(o),r=s(834730),n=s(309326),l=s(337322),d=s(482460);function u(t){let{powerup:e}=t,s=(0,l.A)(e);return(0,a.jsx)("div",{className:d.I1,children:s.map(t=>{let{Icon:e,className:s}=(0,n.a)(t.perkIcon,!1);return(0,a.jsxs)("div",{className:d.Ab,children:[(0,a.jsx)(e,{color:"currentColor",className:i()(d.kf,s)}),(0,a.jsx)(r.E,{className:d.uL,color:"text-default",variant:"text-sm/medium",children:t.description})]},`perk-${t.perkIcon}`)})})}
+s.d(e, { A: () => u });
+var a = s(627968);
+s(64700);
+var o = s(503698),
+    i = s.n(o),
+    r = s(834730),
+    n = s(309326),
+    l = s(337322),
+    d = s(482460);
+function u(t) {
+    let { powerup: e } = t,
+        s = (0, l.A)(e);
+    return (0, a.jsx)("div", {
+        className: d.I1,
+        children: s.map((t) => {
+            let { Icon: e, className: s } = (0, n.a)(t.perkIcon, !1);
+            return (0, a.jsxs)(
+                "div",
+                {
+                    className: d.Ab,
+                    children: [
+                        (0, a.jsx)(e, { color: "currentColor", className: i()(d.kf, s) }),
+                        (0, a.jsx)(r.E, {
+                            className: d.uL,
+                            color: "text-default",
+                            variant: "text-sm/medium",
+                            children: t.description,
+                        }),
+                    ],
+                },
+                `perk-${t.perkIcon}`,
+            );
+        }),
+    });
+}

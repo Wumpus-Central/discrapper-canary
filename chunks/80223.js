@@ -1,1 +1,11 @@
-e.exports={kL:"container__73abe",Nr:"card__73abe",ho:"cardPreview__73abe",ML:"scaledSkuPreview__73abe",M:"avatarDecoration__73abe",l2:"bundle__73abe",qF:"nameplate__73abe",Hm:"profileEffect__73abe",hH:"profileFrame__73abe"}
+e.exports = {
+    kL: "container__73abe",
+    Nr: "card__73abe",
+    ho: "cardPreview__73abe",
+    ML: "scaledSkuPreview__73abe",
+    M: "avatarDecoration__73abe",
+    l2: "bundle__73abe",
+    qF: "nameplate__73abe",
+    Hm: "profileEffect__73abe",
+    hH: "profileFrame__73abe",
+};

@@ -1,1 +1,1 @@
-p.exports={l:"appMount__51fd7"}
+p.exports = { l: "appMount__51fd7" };

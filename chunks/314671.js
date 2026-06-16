@@ -1,1 +1,495 @@
-"use strict";n.d(t,{q:()=>eS,I:()=>ey});var i=n(627968),r=n(64700),s=n(976634),a=n(702841),o=n(568602),l=n(228366),u=n(339048),c=n(158032),d=n(830382),_=n(428644),h=n(964486),f=n(86379),p=n(234320),E=n(545075),m=n(145659),g=n(31823),A=n(426398),I=n(211083),T=n(655857),S=n(666646),y=n(558620),C=n(427675),N=n(480642),v=n(211159),R=n(357669),O=n(319437),b=n(70730),D=n(45787),L=n(51501),w=n(422936),M=n(862990),P=n(410516),x=n(251913),k=n(166532),U=n(71319),G=n(344159),F=n(97352),V=n(469778),B=n(174459),j=n(45938),H=n(428262),Y=n(937008),W=n(566980),K=n(615310),$=n(121005),z=n(800471),q=n(169801),Z=n(216641),X=n(284009),Q=n.n(X),J=n(17928),ee=n(935462),et=n(546605),en=n(364995),ei=n(463376),er=n(584160),es=n(242874),ea=n(573359),eo=n(165191),el=n(237412),eu=n(897904),ec=n(906234),ed=n(652215),e_=n(788868),eh=n(818348),ef=n(575650);function ep(e){let{renderHeader:t,handleClose:n,skipUnifiedHeaderForSteps:s}=e,{selectedSkuId:a,purchaseState:o,paymentSourceId:l,purchaseType:u,premiumDiscountPercent:c,isPremiumDiscountAppliedToCheckoutInvoice:d}=(0,v.t4)(e=>({selectedSkuId:e.selectedSkuId,purchaseState:e.purchaseState,paymentSourceId:e.paymentSourceId,purchaseType:e.purchaseType,premiumDiscountPercent:e.get("premiumDiscountPercent"),isPremiumDiscountAppliedToCheckoutInvoice:e.get("isPremiumDiscountAppliedToCheckoutInvoice")})),_=(0,J.bG)([ea.A],()=>ea.A.isDisplayingWowMomentConfirmation),{isPremium:h,isPremiumGroupPurchase:f,isEligibleForTrial:p,isEligibleForDiscount:E}=(0,ei.i)(),m=(0,y.A)(),g=(0,C.S3)(),A=(0,K.bB)(),{checkoutPaymentSources:I,storeCountry:T}=(0,en.t)(),S=r.useMemo(()=>{if(null==l)return null;let e=I.find(e=>e.id===l);return e?.relocationCountry??null},[I,l]),{isGift:R,selectedGiftStyle:O,giftRecipient:b}=(0,Y.Pv)(),D=(0,et.vg)("PaymentModalHeader"),L=g?.productLine===ed.EZt.COLLECTIBLES,w=g?.productLine===ed.EZt.SOCIAL_LAYER_GAME_ITEM,M=R&&(0,j.Ik)(b)&&A===k.pn.CONFIRM&&null!=O&&!L&&!w,P=null!=t&&null!=A,x=[k.pn.SKU_SELECT,k.pn.SELECT_FREE_SKU],U=null!=A&&!x.includes(A)&&null!=a,G=(0,ec.G)(m?.id??"")&&!p;return r.useMemo(()=>{if(null==A)return;if(function(e){let{step:t,skipUnifiedHeaderForSteps:n}=e,i=null!=n&&n.includes(t);return er.M.includes(t)&&!i}({step:A,skipUnifiedHeaderForSteps:s})){let e=(0,er.u)({step:A,skuId:a??(null!=g?g.id:null),showBetaBadge:f,showTrialBadge:p,showPromoBadge:E||G,premiumDiscountPercent:d?c:null,storeCountryFromCheckoutContext:T,isStoreCountryEnabled:D,relocationCountry:S});return(0,i.jsx)(N.s3,{...e})}let e=null;return M?e=(0,i.jsxs)("div",{className:ef.kL,children:[(0,i.jsx)("div",{"aria-hidden":!0,style:{display:"contents"},children:(0,i.jsx)(eo.A,{defaultAnimationState:es.oA.LOOP,giftStyle:O,className:ef.qq})}),(0,i.jsx)(ee.s_,{onClick:n,className:ef.b,"data-migration-pending":!0})]}):P?e=t(m??null,n,A):u===eh.VV.ONE_TIME?e=(0,i.jsx)(eu.fs,{step:A,onClose:n}):U&&(Q()(a in e_.WN,`invalid sku id: ${a}`),e=(0,i.jsx)(el.A,{currentStep:A??void 0,purchaseState:o,premiumType:e_.WN[a],onClose:n,showTrialBadge:p,showDiscountBadge:E,isGift:R,giftRecipient:b,isEligibleForTrial:p,enablePremiumBrandRefresh:h,isDisplayingWowMomentConfirmation:_,isPremiumGroupPurchase:f})),e},[s,D,T,S,O,n,o,t,m,g,a,A,p,E,c,d,G,M,U,P,u,R,b,h,_,f])}var eE=n(534479),em=n(482132);n(322076);var eg=n(375708),eA=n(106451);let eI={[k.pn.GIFT_CUSTOMIZATION]:"xl",[k.pn.REVIEW]:"md",[k.pn.ADD_PAYMENT_STEPS]:"md"},eT=e=>{let{step:t,transitionState:n,handleClose:r,isGift:s,giftRecipient:a,manaModalSize:o,modalSizeGetter:l,returnRef:u,children:c}=e,d=(0,M.FY)({isGift:s}),_=null!=l?l({canCurrentlyPurchasePremiumGroup:d,isGift:s,giftRecipient:a}):((e,t)=>{let{manaModalSizeFromProps:n}=t,i=n??"md";return null==e?i:e in eI?eI[e]:i})(t,{manaModalSizeFromProps:o});return(0,i.jsx)(N.Jg,{transitionState:n,size:_,returnRef:u,"aria-label":eg.intl.string(eg.t.q9EGps),onClose:async()=>{await r()},children:c})};function eS(e){let{analyticsDataOverride:t,analyticsLocations:n,analyticsLocation:u,analyticsObject:_,analyticsSourceLocation:f,analyticsSubscriptionType:E=ed.rzx.PREMIUM,onComplete:N,transitionState:M,initialPlanId:V,subscriptionTier:$,onClose:z,trialId:q,reviewWarningMessage:X,planGroup:Q=e_.LE,openInvoiceId:J,onSubscriptionConfirmation:ee,renderPurchaseConfirmation:et,postSuccessGuild:en,followupSKUInfo:ei,renderHeader:er,skipUnifiedHeaderForSteps:es,disableUnsupportedExternalSubscriptionHandler:ea=!1,applicationId:eo,guildId:el,skuId:eu,onStepChange:ec,shakeWhilePurchasing:eh=!1,isLargeModal:ef=!1,isMediumModal:eE=!1,returnRef:eI,skipConfirm:eS=!1,continueSessionToInitialStep:ey,paymentModalVersion:eC="v1"}=e,{paymentSources:eN,hasPaymentSources:ev}=(0,A.jm)(),{selectedSkuId:eR,setSelectedSkuId:eO,setSelectedPlanId:eb,purchaseState:eD,setPurchaseState:eL,contextMetadata:ew,paymentSourceId:eM,setPurchaseError:eP,priceOptions:ex,activeSubscription:ek,purchaseType:eU,defaultPlanId:eG,customCheckoutFlow:eF,unifiedCheckoutFlow:eV}=(0,v.t4)(e=>({selectedSkuId:e.selectedSkuId,setSelectedSkuId:e.setSelectedSkuId,setSelectedPlanId:e.setSelectedPlanId,purchaseState:e.purchaseState,setPurchaseState:e.setPurchaseState,contextMetadata:e.contextMetadata,paymentSourceId:e.paymentSourceId,setPurchaseError:e.setPurchaseError,priceOptions:e.checkoutPriceOptions,activeSubscription:e.activeSubscription,purchaseType:e.purchaseType,defaultPlanId:e.defaultPlanId,customCheckoutFlow:e.customCheckoutFlow,unifiedCheckoutFlow:e.unifiedCheckoutFlow})),{displayCurrency:eB}=(0,T.Jn)(),{activitySessionId:ej}=(0,g.V)(),{paymentAuthenticationState:eH}=(0,I.o)(),eY=(0,a.bG)([U.A],()=>U.A.purchaseTokenAuthState),eW=(0,S.sw)(),eK=(0,y.A)(),e$=(0,C.S3)(),ez=function(){let{step:e,stepConfigs:t}=(0,K.Ay)(),n=t.find(t=>t.key===e);return n?.options}(),{isGift:eq,giftRecipient:eZ,customGiftMessage:eX,emojiConfetti:eQ,soundEffect:eJ}=(0,Y.Pv)(),e0=(0,K.bB)(),e1=(0,K.l)(),e2="sm";ef?e2="xl":(eE||e0===k.pn.ADD_PAYMENT_STEPS)&&(e2="md");let e3=ez?.modalSizeGetter,e6=(0,w.O)(),e4=null!=$&&!eq&&(0,P.U9)(e6,$),[e5,e7]=r.useState({load_id:ew.loadId,discovery_session_id:ew.discoverySessionId,payment_type:ed.frM[eU],location:u??_,source:f,subscription_type:E,subscription_plan_id:eK?.id??V,is_gift:eq,eligible_for_trial:null!=q,location_stack:n,sku_id:eu,application_id:eo,guild_id:el,payment_modal_version:eC,activity_session_id:ej,eligible_for_discount:e4,sku_product_line:e$?.productLine,checkout_design:m.r.UNIFIED,checkout_flow:eV,...t}),e8=(0,Z.W)(eN,eM),{giftCardBalance:e9,giftCardCurrency:te}=(0,p.h)(),tt=null!=eW?eW.getDiscountIdIfExists():void 0;r.useEffect(()=>{e7(e=>{let n=null!=eK?(0,H.y8)(eK.id,!1,eq,{paymentSourceId:ex.paymentSourceId}):void 0;return{...e,subscription_plan_id:eK?.id,price:n?.amount,regular_price:eK?.price,currency:eB,sku_id:eR,sku_product_line:e$?.productLine,...t}})},[eK,eR,eq,ex,eB,t,e$?.productLine]),(0,h.Ay)(()=>{(0,R.b)({...e5,continue_session_initial_step:ey,custom_checkout_flow:eF,has_saved_payment_source:ev,discount_id:null!=e6?e6.discountId:tt})}),r.useEffect(()=>{null==eK&&(null!=eG&&null!=ey?eb(eG):eb(V)),null!=eu?eO(eu):null!=V&&eO(F.A.get(V)?.skuId)},[eb,eK,eO,V,eu,eG,ey]);let tn=r.useCallback(()=>{let e=(0,j.lo)(eZ)===j.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,t=Date.now();B.default.track(ed.HAw.PAYMENT_FLOW_SUCCEEDED,{...e5,is_custom_message_edited:eq&&e&&null!=eX?eX!==eg.intl.string(eg.t.ZkOo1U):void 0,is_custom_emoji_sound_available:eq&&e,emoji_name:eq&&e&&eQ?.id==null?eQ?.surrogates:void 0,sound_id:eq&&e?eJ?.soundId:void 0,duration_ms:t-ew.startTime,payment_source_type:e8?.type,gift_card_balance:e9,gift_card_currency:te});let{enabled:n}=b.u.getConfig({location:"PaymentModal emitPaymentFlowSuccess"});eq&&null!=eZ&&null!=u&&n&&(0,L.WO)(u)&&(0,D.Yd)(eZ.id)},[e5,eQ,eX,eZ,eq,eJ,ew.startTime,e8,e9,te,u]),ti=r.useMemo(()=>()=>z?.(eD===W.h.COMPLETED,eR),[z,eD,eR]),tr=(0,s.A)(()=>Date.now(),[e0]),ts=r.useCallback(function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},{trackedFromStep:n,analyticsDataOverride:i,fulfillment:r,emitPaymentFlowLoadedEvent:s}=t,a=Date.now();if(e===k.pn.CONFIRM&&(tn(),N?.(r),eS))return void ti();e1(e),ec?.(e),eP(null),e===k.pn.ADD_PAYMENT_STEPS&&(l.h.wait(c.ET),l.h.wait(d.T3));let o=null!=n?n:e0;null===o||s?B.default.track(ed.HAw.PAYMENT_FLOW_LOADED,{...e5,initial_step:o??e,continue_session_initial_step:ey,has_saved_payment_source:ev}):B.default.track(ed.HAw.PAYMENT_FLOW_STEP,{...e5,...i,from_step:o,to_step:e===k.pn.ADD_PAYMENT_STEPS?k.pn.PAYMENT_TYPE:e,step_duration_ms:a-tr,flow_duration_ms:a-ew.startTime,gift_card_balance:e9,gift_card_currency:te})},[e1,ec,eP,e0,ey,e5,tr,ew.startTime,tn,N,eS,ti,ev,e9,te]);return(0,x.b)(e0,eH,ts,eL),r.useEffect(()=>{null!=e0&&e0!==k.pn.AWAITING_PURCHASE_TOKEN_AUTH&&eY===U.C.PENDING?ts(k.pn.AWAITING_PURCHASE_TOKEN_AUTH):e0===k.pn.AWAITING_PURCHASE_TOKEN_AUTH&&eY===U.C.SUCCESS&&ts(k.pn.REVIEW)},[e0,eY,ts]),(0,O.A)(ti),(0,G.s)(ek,()=>z(!1),eq,!ea),(0,x.QR)(eH),(0,i.jsx)(o.b,{className:eA.Xn,isShaking:eh&&eD===W.h.PURCHASING,intensity:2,children:(0,i.jsx)(eT,{step:e0,transitionState:M,isGift:eq,giftRecipient:eZ,returnRef:eI,manaModalSize:e2,modalSizeGetter:e3,handleClose:ti,children:(0,i.jsx)(em.Ay,{header:(0,i.jsx)(ep,{handleClose:ti,skipUnifiedHeaderForSteps:es,renderHeader:er}),...{initialPlanId:V,subscriptionTier:$,handleStepChange:ts,handleClose:ti,analyticsData:e5,setAnalyticsData:e7,trialId:q,reviewWarningMessage:X,planGroup:Q,openInvoiceId:J,analyticsLocation:u,onSubscriptionConfirmation:ee,renderPurchaseConfirmation:et,postSuccessGuild:en,followupSKUInfo:ei,skipConfirm:eS,continueSessionToInitialStep:ey}})})})}function ey(e){let{subscriptionTier:t,initialPlanId:n,handleStepChange:s,continueSessionToInitialStep:o}=e,{hasPaymentSources:l}=(0,A.jm)(),{selectedSkuId:c,setSelectedPlanId:d,activeSubscription:h,defaultPlanId:p,startedPaymentFlowWithPaymentSources:m}=(0,v.t4)(e=>({selectedSkuId:e.selectedSkuId,setSelectedPlanId:e.setSelectedPlanId,activeSubscription:e.activeSubscription,defaultPlanId:e.defaultPlanId,startedPaymentFlowWithPaymentSources:e.startedPaymentFlowWithPaymentSources})),g=(0,f.Hp)(),I=(0,$.A)(),{hasFetchedRelatedSubscriptionPlans:S,subscriptionPriceOptionsLoading:y}=(0,T.Jn)(),{isGift:C}=(0,Y.Pv)(),N=(0,q.A)({isGift:C,skuId:c}),R=!I||!S||y,O=(0,a.bG)([V.A],()=>V.A.applicationIdsFetched.has(e_.tv));return((0,_.A)("Payment Modal",R,5,{hasFetchedSubscriptions:I,hasFetchedSubscriptionPlans:S,subscriptionPriceOptionsLoading:y},{tags:{app_context:"billing"}}),r.useEffect(()=>{if(O||(0,u.LM)(e_.tv),R||g)return;let e=(0,z.vT)({isTrial:N,isGift:C,selectedSkuId:c,startedPaymentFlowWithPaymentSources:m});null!=o?s(k.pn.ADD_PAYMENT_STEPS,{emitPaymentFlowLoadedEvent:!0,trackedFromStep:o}):null!=n?n!==e_.gD.PREMIUM_GROUP_MONTH||l?s(k.pn.REVIEW):s(k.pn.ADD_PAYMENT_STEPS):e?(d((0,z.xT)(c,h,p)),s(k.pn.REVIEW)):null!=t?s(k.pn.PLAN_SELECT):s(k.pn.SKU_SELECT)},[o,h,g,O,n,R,s,t,c,d,N,p,C,m,l]),R)?(0,i.jsx)(eE.A,{}):g?(0,i.jsx)(E.oO,{}):null}
+"use strict";
+n.d(t, { q: () => eS, I: () => ey });
+var i = n(627968),
+    r = n(64700),
+    s = n(976634),
+    a = n(702841),
+    o = n(568602),
+    l = n(228366),
+    u = n(339048),
+    c = n(158032),
+    d = n(830382),
+    _ = n(428644),
+    h = n(964486),
+    f = n(86379),
+    p = n(234320),
+    E = n(545075),
+    m = n(145659),
+    g = n(31823),
+    A = n(426398),
+    I = n(211083),
+    T = n(655857),
+    S = n(666646),
+    y = n(558620),
+    C = n(427675),
+    N = n(480642),
+    v = n(211159),
+    R = n(357669),
+    O = n(319437),
+    b = n(70730),
+    D = n(45787),
+    L = n(51501),
+    w = n(422936),
+    M = n(862990),
+    P = n(410516),
+    x = n(251913),
+    k = n(166532),
+    U = n(71319),
+    G = n(344159),
+    F = n(97352),
+    V = n(469778),
+    B = n(174459),
+    j = n(45938),
+    H = n(428262),
+    Y = n(937008),
+    W = n(566980),
+    K = n(615310),
+    $ = n(121005),
+    z = n(800471),
+    q = n(169801),
+    Z = n(216641),
+    X = n(284009),
+    Q = n.n(X),
+    J = n(17928),
+    ee = n(935462),
+    et = n(546605),
+    en = n(364995),
+    ei = n(463376),
+    er = n(584160),
+    es = n(242874),
+    ea = n(573359),
+    eo = n(165191),
+    el = n(237412),
+    eu = n(897904),
+    ec = n(906234),
+    ed = n(652215),
+    e_ = n(788868),
+    eh = n(818348),
+    ef = n(575650);
+function ep(e) {
+    let { renderHeader: t, handleClose: n, skipUnifiedHeaderForSteps: s } = e,
+        {
+            selectedSkuId: a,
+            purchaseState: o,
+            paymentSourceId: l,
+            purchaseType: u,
+            premiumDiscountPercent: c,
+            isPremiumDiscountAppliedToCheckoutInvoice: d,
+        } = (0, v.t4)((e) => ({
+            selectedSkuId: e.selectedSkuId,
+            purchaseState: e.purchaseState,
+            paymentSourceId: e.paymentSourceId,
+            purchaseType: e.purchaseType,
+            premiumDiscountPercent: e.get("premiumDiscountPercent"),
+            isPremiumDiscountAppliedToCheckoutInvoice: e.get("isPremiumDiscountAppliedToCheckoutInvoice"),
+        })),
+        _ = (0, J.bG)([ea.A], () => ea.A.isDisplayingWowMomentConfirmation),
+        { isPremium: h, isPremiumGroupPurchase: f, isEligibleForTrial: p, isEligibleForDiscount: E } = (0, ei.i)(),
+        m = (0, y.A)(),
+        g = (0, C.S3)(),
+        A = (0, K.bB)(),
+        { checkoutPaymentSources: I, storeCountry: T } = (0, en.t)(),
+        S = r.useMemo(() => {
+            if (null == l) return null;
+            let e = I.find((e) => e.id === l);
+            return e?.relocationCountry ?? null;
+        }, [I, l]),
+        { isGift: R, selectedGiftStyle: O, giftRecipient: b } = (0, Y.Pv)(),
+        D = (0, et.vg)("PaymentModalHeader"),
+        L = g?.productLine === ed.EZt.COLLECTIBLES,
+        w = g?.productLine === ed.EZt.SOCIAL_LAYER_GAME_ITEM,
+        M = R && (0, j.Ik)(b) && A === k.pn.CONFIRM && null != O && !L && !w,
+        P = null != t && null != A,
+        x = [k.pn.SKU_SELECT, k.pn.SELECT_FREE_SKU],
+        U = null != A && !x.includes(A) && null != a,
+        G = (0, ec.G)(m?.id ?? "") && !p;
+    return r.useMemo(() => {
+        if (null == A) return;
+        if (
+            (function (e) {
+                let { step: t, skipUnifiedHeaderForSteps: n } = e,
+                    i = null != n && n.includes(t);
+                return er.M.includes(t) && !i;
+            })({ step: A, skipUnifiedHeaderForSteps: s })
+        ) {
+            let e = (0, er.u)({
+                step: A,
+                skuId: a ?? (null != g ? g.id : null),
+                showBetaBadge: f,
+                showTrialBadge: p,
+                showPromoBadge: E || G,
+                premiumDiscountPercent: d ? c : null,
+                storeCountryFromCheckoutContext: T,
+                isStoreCountryEnabled: D,
+                relocationCountry: S,
+            });
+            return (0, i.jsx)(N.s3, { ...e });
+        }
+        let e = null;
+        return (
+            M
+                ? (e = (0, i.jsxs)("div", {
+                      className: ef.kL,
+                      children: [
+                          (0, i.jsx)("div", {
+                              "aria-hidden": !0,
+                              style: { display: "contents" },
+                              children: (0, i.jsx)(eo.A, {
+                                  defaultAnimationState: es.oA.LOOP,
+                                  giftStyle: O,
+                                  className: ef.qq,
+                              }),
+                          }),
+                          (0, i.jsx)(ee.s_, { onClick: n, className: ef.b, "data-migration-pending": !0 }),
+                      ],
+                  }))
+                : P
+                  ? (e = t(m ?? null, n, A))
+                  : u === eh.VV.ONE_TIME
+                    ? (e = (0, i.jsx)(eu.fs, { step: A, onClose: n }))
+                    : U &&
+                      (Q()(a in e_.WN, `invalid sku id: ${a}`),
+                      (e = (0, i.jsx)(el.A, {
+                          currentStep: A ?? void 0,
+                          purchaseState: o,
+                          premiumType: e_.WN[a],
+                          onClose: n,
+                          showTrialBadge: p,
+                          showDiscountBadge: E,
+                          isGift: R,
+                          giftRecipient: b,
+                          isEligibleForTrial: p,
+                          enablePremiumBrandRefresh: h,
+                          isDisplayingWowMomentConfirmation: _,
+                          isPremiumGroupPurchase: f,
+                      }))),
+            e
+        );
+    }, [s, D, T, S, O, n, o, t, m, g, a, A, p, E, c, d, G, M, U, P, u, R, b, h, _, f]);
+}
+var eE = n(534479),
+    em = n(482132);
+n(322076);
+var eg = n(375708),
+    eA = n(106451);
+let eI = { [k.pn.GIFT_CUSTOMIZATION]: "xl", [k.pn.REVIEW]: "md", [k.pn.ADD_PAYMENT_STEPS]: "md" },
+    eT = (e) => {
+        let {
+                step: t,
+                transitionState: n,
+                handleClose: r,
+                isGift: s,
+                giftRecipient: a,
+                manaModalSize: o,
+                modalSizeGetter: l,
+                returnRef: u,
+                children: c,
+            } = e,
+            d = (0, M.FY)({ isGift: s }),
+            _ =
+                null != l
+                    ? l({ canCurrentlyPurchasePremiumGroup: d, isGift: s, giftRecipient: a })
+                    : ((e, t) => {
+                          let { manaModalSizeFromProps: n } = t,
+                              i = n ?? "md";
+                          return null == e ? i : e in eI ? eI[e] : i;
+                      })(t, { manaModalSizeFromProps: o });
+        return (0, i.jsx)(N.Jg, {
+            transitionState: n,
+            size: _,
+            returnRef: u,
+            "aria-label": eg.intl.string(eg.t.q9EGps),
+            onClose: async () => {
+                await r();
+            },
+            children: c,
+        });
+    };
+function eS(e) {
+    let {
+            analyticsDataOverride: t,
+            analyticsLocations: n,
+            analyticsLocation: u,
+            analyticsObject: _,
+            analyticsSourceLocation: f,
+            analyticsSubscriptionType: E = ed.rzx.PREMIUM,
+            onComplete: N,
+            transitionState: M,
+            initialPlanId: V,
+            subscriptionTier: $,
+            onClose: z,
+            trialId: q,
+            reviewWarningMessage: X,
+            planGroup: Q = e_.LE,
+            openInvoiceId: J,
+            onSubscriptionConfirmation: ee,
+            renderPurchaseConfirmation: et,
+            postSuccessGuild: en,
+            followupSKUInfo: ei,
+            renderHeader: er,
+            skipUnifiedHeaderForSteps: es,
+            disableUnsupportedExternalSubscriptionHandler: ea = !1,
+            applicationId: eo,
+            guildId: el,
+            skuId: eu,
+            onStepChange: ec,
+            shakeWhilePurchasing: eh = !1,
+            isLargeModal: ef = !1,
+            isMediumModal: eE = !1,
+            returnRef: eI,
+            skipConfirm: eS = !1,
+            continueSessionToInitialStep: ey,
+            paymentModalVersion: eC = "v1",
+        } = e,
+        { paymentSources: eN, hasPaymentSources: ev } = (0, A.jm)(),
+        {
+            selectedSkuId: eR,
+            setSelectedSkuId: eO,
+            setSelectedPlanId: eb,
+            purchaseState: eD,
+            setPurchaseState: eL,
+            contextMetadata: ew,
+            paymentSourceId: eM,
+            setPurchaseError: eP,
+            priceOptions: ex,
+            activeSubscription: ek,
+            purchaseType: eU,
+            defaultPlanId: eG,
+            customCheckoutFlow: eF,
+            unifiedCheckoutFlow: eV,
+        } = (0, v.t4)((e) => ({
+            selectedSkuId: e.selectedSkuId,
+            setSelectedSkuId: e.setSelectedSkuId,
+            setSelectedPlanId: e.setSelectedPlanId,
+            purchaseState: e.purchaseState,
+            setPurchaseState: e.setPurchaseState,
+            contextMetadata: e.contextMetadata,
+            paymentSourceId: e.paymentSourceId,
+            setPurchaseError: e.setPurchaseError,
+            priceOptions: e.checkoutPriceOptions,
+            activeSubscription: e.activeSubscription,
+            purchaseType: e.purchaseType,
+            defaultPlanId: e.defaultPlanId,
+            customCheckoutFlow: e.customCheckoutFlow,
+            unifiedCheckoutFlow: e.unifiedCheckoutFlow,
+        })),
+        { displayCurrency: eB } = (0, T.Jn)(),
+        { activitySessionId: ej } = (0, g.V)(),
+        { paymentAuthenticationState: eH } = (0, I.o)(),
+        eY = (0, a.bG)([U.A], () => U.A.purchaseTokenAuthState),
+        eW = (0, S.sw)(),
+        eK = (0, y.A)(),
+        e$ = (0, C.S3)(),
+        ez = (function () {
+            let { step: e, stepConfigs: t } = (0, K.Ay)(),
+                n = t.find((t) => t.key === e);
+            return n?.options;
+        })(),
+        { isGift: eq, giftRecipient: eZ, customGiftMessage: eX, emojiConfetti: eQ, soundEffect: eJ } = (0, Y.Pv)(),
+        e0 = (0, K.bB)(),
+        e1 = (0, K.l)(),
+        e2 = "sm";
+    ef ? (e2 = "xl") : (eE || e0 === k.pn.ADD_PAYMENT_STEPS) && (e2 = "md");
+    let e3 = ez?.modalSizeGetter,
+        e6 = (0, w.O)(),
+        e4 = null != $ && !eq && (0, P.U9)(e6, $),
+        [e5, e7] = r.useState({
+            load_id: ew.loadId,
+            discovery_session_id: ew.discoverySessionId,
+            payment_type: ed.frM[eU],
+            location: u ?? _,
+            source: f,
+            subscription_type: E,
+            subscription_plan_id: eK?.id ?? V,
+            is_gift: eq,
+            eligible_for_trial: null != q,
+            location_stack: n,
+            sku_id: eu,
+            application_id: eo,
+            guild_id: el,
+            payment_modal_version: eC,
+            activity_session_id: ej,
+            eligible_for_discount: e4,
+            sku_product_line: e$?.productLine,
+            checkout_design: m.r.UNIFIED,
+            checkout_flow: eV,
+            ...t,
+        }),
+        e8 = (0, Z.W)(eN, eM),
+        { giftCardBalance: e9, giftCardCurrency: te } = (0, p.h)(),
+        tt = null != eW ? eW.getDiscountIdIfExists() : void 0;
+    r.useEffect(() => {
+        e7((e) => {
+            let n = null != eK ? (0, H.y8)(eK.id, !1, eq, { paymentSourceId: ex.paymentSourceId }) : void 0;
+            return {
+                ...e,
+                subscription_plan_id: eK?.id,
+                price: n?.amount,
+                regular_price: eK?.price,
+                currency: eB,
+                sku_id: eR,
+                sku_product_line: e$?.productLine,
+                ...t,
+            };
+        });
+    }, [eK, eR, eq, ex, eB, t, e$?.productLine]),
+        (0, h.Ay)(() => {
+            (0, R.b)({
+                ...e5,
+                continue_session_initial_step: ey,
+                custom_checkout_flow: eF,
+                has_saved_payment_source: ev,
+                discount_id: null != e6 ? e6.discountId : tt,
+            });
+        }),
+        r.useEffect(() => {
+            null == eK && (null != eG && null != ey ? eb(eG) : eb(V)),
+                null != eu ? eO(eu) : null != V && eO(F.A.get(V)?.skuId);
+        }, [eb, eK, eO, V, eu, eG, ey]);
+    let tn = r.useCallback(() => {
+            let e = (0, j.lo)(eZ) === j.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+                t = Date.now();
+            B.default.track(ed.HAw.PAYMENT_FLOW_SUCCEEDED, {
+                ...e5,
+                is_custom_message_edited: eq && e && null != eX ? eX !== eg.intl.string(eg.t.ZkOo1U) : void 0,
+                is_custom_emoji_sound_available: eq && e,
+                emoji_name: eq && e && eQ?.id == null ? eQ?.surrogates : void 0,
+                sound_id: eq && e ? eJ?.soundId : void 0,
+                duration_ms: t - ew.startTime,
+                payment_source_type: e8?.type,
+                gift_card_balance: e9,
+                gift_card_currency: te,
+            });
+            let { enabled: n } = b.u.getConfig({ location: "PaymentModal emitPaymentFlowSuccess" });
+            eq && null != eZ && null != u && n && (0, L.WO)(u) && (0, D.Yd)(eZ.id);
+        }, [e5, eQ, eX, eZ, eq, eJ, ew.startTime, e8, e9, te, u]),
+        ti = r.useMemo(() => () => z?.(eD === W.h.COMPLETED, eR), [z, eD, eR]),
+        tr = (0, s.A)(() => Date.now(), [e0]),
+        ts = r.useCallback(
+            function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                    { trackedFromStep: n, analyticsDataOverride: i, fulfillment: r, emitPaymentFlowLoadedEvent: s } = t,
+                    a = Date.now();
+                if (e === k.pn.CONFIRM && (tn(), N?.(r), eS)) return void ti();
+                e1(e), ec?.(e), eP(null), e === k.pn.ADD_PAYMENT_STEPS && (l.h.wait(c.ET), l.h.wait(d.T3));
+                let o = null != n ? n : e0;
+                null === o || s
+                    ? B.default.track(ed.HAw.PAYMENT_FLOW_LOADED, {
+                          ...e5,
+                          initial_step: o ?? e,
+                          continue_session_initial_step: ey,
+                          has_saved_payment_source: ev,
+                      })
+                    : B.default.track(ed.HAw.PAYMENT_FLOW_STEP, {
+                          ...e5,
+                          ...i,
+                          from_step: o,
+                          to_step: e === k.pn.ADD_PAYMENT_STEPS ? k.pn.PAYMENT_TYPE : e,
+                          step_duration_ms: a - tr,
+                          flow_duration_ms: a - ew.startTime,
+                          gift_card_balance: e9,
+                          gift_card_currency: te,
+                      });
+            },
+            [e1, ec, eP, e0, ey, e5, tr, ew.startTime, tn, N, eS, ti, ev, e9, te],
+        );
+    return (
+        (0, x.b)(e0, eH, ts, eL),
+        r.useEffect(() => {
+            null != e0 && e0 !== k.pn.AWAITING_PURCHASE_TOKEN_AUTH && eY === U.C.PENDING
+                ? ts(k.pn.AWAITING_PURCHASE_TOKEN_AUTH)
+                : e0 === k.pn.AWAITING_PURCHASE_TOKEN_AUTH && eY === U.C.SUCCESS && ts(k.pn.REVIEW);
+        }, [e0, eY, ts]),
+        (0, O.A)(ti),
+        (0, G.s)(ek, () => z(!1), eq, !ea),
+        (0, x.QR)(eH),
+        (0, i.jsx)(o.b, {
+            className: eA.Xn,
+            isShaking: eh && eD === W.h.PURCHASING,
+            intensity: 2,
+            children: (0, i.jsx)(eT, {
+                step: e0,
+                transitionState: M,
+                isGift: eq,
+                giftRecipient: eZ,
+                returnRef: eI,
+                manaModalSize: e2,
+                modalSizeGetter: e3,
+                handleClose: ti,
+                children: (0, i.jsx)(em.Ay, {
+                    header: (0, i.jsx)(ep, { handleClose: ti, skipUnifiedHeaderForSteps: es, renderHeader: er }),
+                    ...{
+                        initialPlanId: V,
+                        subscriptionTier: $,
+                        handleStepChange: ts,
+                        handleClose: ti,
+                        analyticsData: e5,
+                        setAnalyticsData: e7,
+                        trialId: q,
+                        reviewWarningMessage: X,
+                        planGroup: Q,
+                        openInvoiceId: J,
+                        analyticsLocation: u,
+                        onSubscriptionConfirmation: ee,
+                        renderPurchaseConfirmation: et,
+                        postSuccessGuild: en,
+                        followupSKUInfo: ei,
+                        skipConfirm: eS,
+                        continueSessionToInitialStep: ey,
+                    },
+                }),
+            }),
+        })
+    );
+}
+function ey(e) {
+    let { subscriptionTier: t, initialPlanId: n, handleStepChange: s, continueSessionToInitialStep: o } = e,
+        { hasPaymentSources: l } = (0, A.jm)(),
+        {
+            selectedSkuId: c,
+            setSelectedPlanId: d,
+            activeSubscription: h,
+            defaultPlanId: p,
+            startedPaymentFlowWithPaymentSources: m,
+        } = (0, v.t4)((e) => ({
+            selectedSkuId: e.selectedSkuId,
+            setSelectedPlanId: e.setSelectedPlanId,
+            activeSubscription: e.activeSubscription,
+            defaultPlanId: e.defaultPlanId,
+            startedPaymentFlowWithPaymentSources: e.startedPaymentFlowWithPaymentSources,
+        })),
+        g = (0, f.Hp)(),
+        I = (0, $.A)(),
+        { hasFetchedRelatedSubscriptionPlans: S, subscriptionPriceOptionsLoading: y } = (0, T.Jn)(),
+        { isGift: C } = (0, Y.Pv)(),
+        N = (0, q.A)({ isGift: C, skuId: c }),
+        R = !I || !S || y,
+        O = (0, a.bG)([V.A], () => V.A.applicationIdsFetched.has(e_.tv));
+    return ((0, _.A)(
+        "Payment Modal",
+        R,
+        5,
+        { hasFetchedSubscriptions: I, hasFetchedSubscriptionPlans: S, subscriptionPriceOptionsLoading: y },
+        { tags: { app_context: "billing" } },
+    ),
+    r.useEffect(() => {
+        if ((O || (0, u.LM)(e_.tv), R || g)) return;
+        let e = (0, z.vT)({ isTrial: N, isGift: C, selectedSkuId: c, startedPaymentFlowWithPaymentSources: m });
+        null != o
+            ? s(k.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: o })
+            : null != n
+              ? n !== e_.gD.PREMIUM_GROUP_MONTH || l
+                  ? s(k.pn.REVIEW)
+                  : s(k.pn.ADD_PAYMENT_STEPS)
+              : e
+                ? (d((0, z.xT)(c, h, p)), s(k.pn.REVIEW))
+                : null != t
+                  ? s(k.pn.PLAN_SELECT)
+                  : s(k.pn.SKU_SELECT);
+    }, [o, h, g, O, n, R, s, t, c, d, N, p, C, m, l]),
+    R)
+        ? (0, i.jsx)(eE.A, {})
+        : g
+          ? (0, i.jsx)(E.oO, {})
+          : null;
+}

@@ -1,1 +1,73 @@
-"use strict";n.d(t,{A:()=>h}),n(321073);var i=n(439372),r=n(736056),s=n(710195),a=n(967198),o=n(38405);function l(e,t){if(null==e)return!0;let n=e.variations[t];return null==n||JSON.stringify(n)===JSON.stringify(e.defaultConfig)}let u=new Set;function c(e,t){for(let n of(e.sort(),e))o.A.addFeatureFlag(n,!0),t?.add(n)}function d(){for(let e of u)o.A.addFeatureFlag(e,!1);u.clear();let e=[],t=[],n=[],i=[],d=[],_=[],h=a.A.getGuildId(),f=r.A.getAllExperimentAssignments();for(let n in f){let i=f[n];null!=i&&!(i<=0)&&(n.includes(":")?null!=h&&n.startsWith(`${h}:`)&&t.push(`${n.split(":")[1]}:${i}`):e.push(`${n}:${i}`))}let p=s.A.getRegisteredExperiments(),E=function(){let e=s.A.getRegisteredExperiments(),t={};for(let n in e)t[s.A.getHash(n)]=n;return t}(),{evaluatedExperiments:m}=s.A.getState();for(let e of["user","installation"])for(let t in m?.[e]){let{assignments:i}=m[e]?.[t]??{};for(let e in i){let t=E[e];if(null==t)continue;let{variantId:r}=i[e];if(null==r)continue;let s=`${t}:${r}`;(l(p[t],r)?n:d).push(s)}}if(null!=h){let e=m?.guild?.[h];if(null!=e)for(let t in e.assignments){let n=E[t];if(null==n)continue;let{variantId:r}=e.assignments[t];if(null==r)continue;let s=`${n}:${r}`;(l(p[n],r)?i:_).push(s)}}c(e),c(t,u),c(n),c(i,u),c(d),c(_,u)}class _ extends i.A{stores=new Map().set(r.A,d).set(s.A,d).set(a.A,d)}let h=new _
+"use strict";
+n.d(t, { A: () => h }), n(321073);
+var i = n(439372),
+    r = n(736056),
+    s = n(710195),
+    a = n(967198),
+    o = n(38405);
+function l(e, t) {
+    if (null == e) return !0;
+    let n = e.variations[t];
+    return null == n || JSON.stringify(n) === JSON.stringify(e.defaultConfig);
+}
+let u = new Set();
+function c(e, t) {
+    for (let n of (e.sort(), e)) o.A.addFeatureFlag(n, !0), t?.add(n);
+}
+function d() {
+    for (let e of u) o.A.addFeatureFlag(e, !1);
+    u.clear();
+    let e = [],
+        t = [],
+        n = [],
+        i = [],
+        d = [],
+        _ = [],
+        h = a.A.getGuildId(),
+        f = r.A.getAllExperimentAssignments();
+    for (let n in f) {
+        let i = f[n];
+        null != i &&
+            !(i <= 0) &&
+            (n.includes(":")
+                ? null != h && n.startsWith(`${h}:`) && t.push(`${n.split(":")[1]}:${i}`)
+                : e.push(`${n}:${i}`));
+    }
+    let p = s.A.getRegisteredExperiments(),
+        E = (function () {
+            let e = s.A.getRegisteredExperiments(),
+                t = {};
+            for (let n in e) t[s.A.getHash(n)] = n;
+            return t;
+        })(),
+        { evaluatedExperiments: m } = s.A.getState();
+    for (let e of ["user", "installation"])
+        for (let t in m?.[e]) {
+            let { assignments: i } = m[e]?.[t] ?? {};
+            for (let e in i) {
+                let t = E[e];
+                if (null == t) continue;
+                let { variantId: r } = i[e];
+                if (null == r) continue;
+                let s = `${t}:${r}`;
+                (l(p[t], r) ? n : d).push(s);
+            }
+        }
+    if (null != h) {
+        let e = m?.guild?.[h];
+        if (null != e)
+            for (let t in e.assignments) {
+                let n = E[t];
+                if (null == n) continue;
+                let { variantId: r } = e.assignments[t];
+                if (null == r) continue;
+                let s = `${n}:${r}`;
+                (l(p[n], r) ? i : _).push(s);
+            }
+    }
+    c(e), c(t, u), c(n), c(i, u), c(d), c(_, u);
+}
+class _ extends i.A {
+    stores = new Map().set(r.A, d).set(s.A, d).set(a.A, d);
+}
+let h = new _();

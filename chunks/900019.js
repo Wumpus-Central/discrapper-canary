@@ -1,1 +1,57 @@
-"use strict";let i;n.d(t,{A:()=>f});var r=n(17928),s=n(228366),a=n(927813),o=n(935208);let l=(0,n(945810).mj)({name:"2025-09-sensitive-content-self-harm",kind:"user",defaultConfig:{enabled:!1},variations:{1:{enabled:!0}}}),u=14*a.A.Millis.DAY,c=Object.freeze([]),d={},_={};class h extends r.Ay.Store{static displayName="FalsePositiveStore";getFpMessageInfo(e){return d[e]}getChannelFpInfo(e){return _[e]??c}canSubmitFpReport(e){let t=d[e];return null!=t&&!t.reportSubmit&&o.default.age(t.messageId)<u}get validContentScanVersion(){return l.getConfig({location:"ExplicitMediaStore.validContentScanVersion"}).enabled?i??5:Math.min(i??4,4)}}let f=new h(s.h,{LOGOUT:function(){d={},_={}},CONNECTION_OPEN:function(e){let{explicitContentScanVersion:t}=e;i=t,d={},_={}},MESSAGE_EXPLICIT_CONTENT_FP_CREATE:function(e){let{messageId:t,channelId:n,attachments:i}=e,r={messageId:t,channelId:n,attachments:i,reportSubmit:!1},s=_[n]??c;_[n]=[...s,r],d[t]=r},MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT:function(e){let{messageId:t,channelId:n}=e,i=_[n];null!=i&&(_[n]=i.map(e=>e.messageId===t?{...e,reportSubmit:!0}:e),d[t]={...d[t],reportSubmit:!0})}})
+"use strict";
+let i;
+n.d(t, { A: () => f });
+var r = n(17928),
+    s = n(228366),
+    a = n(927813),
+    o = n(935208);
+let l = (0, n(945810).mj)({
+        name: "2025-09-sensitive-content-self-harm",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    }),
+    u = 14 * a.A.Millis.DAY,
+    c = Object.freeze([]),
+    d = {},
+    _ = {};
+class h extends r.Ay.Store {
+    static displayName = "FalsePositiveStore";
+    getFpMessageInfo(e) {
+        return d[e];
+    }
+    getChannelFpInfo(e) {
+        return _[e] ?? c;
+    }
+    canSubmitFpReport(e) {
+        let t = d[e];
+        return null != t && !t.reportSubmit && o.default.age(t.messageId) < u;
+    }
+    get validContentScanVersion() {
+        return l.getConfig({ location: "ExplicitMediaStore.validContentScanVersion" }).enabled
+            ? (i ?? 5)
+            : Math.min(i ?? 4, 4);
+    }
+}
+let f = new h(s.h, {
+    LOGOUT: function () {
+        (d = {}), (_ = {});
+    },
+    CONNECTION_OPEN: function (e) {
+        let { explicitContentScanVersion: t } = e;
+        (i = t), (d = {}), (_ = {});
+    },
+    MESSAGE_EXPLICIT_CONTENT_FP_CREATE: function (e) {
+        let { messageId: t, channelId: n, attachments: i } = e,
+            r = { messageId: t, channelId: n, attachments: i, reportSubmit: !1 },
+            s = _[n] ?? c;
+        (_[n] = [...s, r]), (d[t] = r);
+    },
+    MESSAGE_EXPLICIT_CONTENT_FP_SUBMIT: function (e) {
+        let { messageId: t, channelId: n } = e,
+            i = _[n];
+        null != i &&
+            ((_[n] = i.map((e) => (e.messageId === t ? { ...e, reportSubmit: !0 } : e))),
+            (d[t] = { ...d[t], reportSubmit: !0 }));
+    },
+});

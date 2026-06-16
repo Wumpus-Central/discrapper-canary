@@ -1,1 +1,36 @@
-"use strict";n.d(t,{V:()=>u});var i=n(627968),r=n(289873),s=n(452027),a=n(405139),o=n(375708),l=n(387650);function u(e){let t,{onChooseType:n,onStripePaymentMethodReceived:u,onPaymentRequestFailure:c,onValidPaymentRequest:d,paymentRequestRef:_,paymentRequestWallet:h}=e,f={paymentLabel:o.intl.string(o.t.ZURqX0),paymentRequestRef:_,renderConnectorView:!0,onStripePaymentMethodReceived:u,onPaymentRequestFailure:c,onValidPaymentRequest:d,onChooseType:n,loadingComponent:(0,i.jsx)(r.y,{style:{marginTop:16},type:r.t.PULSING_ELLIPSIS})};return t="applePay"===h?(0,i.jsx)(a.Mv,{...f}):(0,i.jsx)(a.dP,{...f}),(0,i.jsx)("div",{className:l.r,children:(0,i.jsx)(s.D,{label:o.intl.string(o.t.eQ2bLp),children:t})})}
+"use strict";
+n.d(t, { V: () => u });
+var i = n(627968),
+    r = n(289873),
+    s = n(452027),
+    a = n(405139),
+    o = n(375708),
+    l = n(387650);
+function u(e) {
+    let t,
+        {
+            onChooseType: n,
+            onStripePaymentMethodReceived: u,
+            onPaymentRequestFailure: c,
+            onValidPaymentRequest: d,
+            paymentRequestRef: _,
+            paymentRequestWallet: h,
+        } = e,
+        f = {
+            paymentLabel: o.intl.string(o.t.ZURqX0),
+            paymentRequestRef: _,
+            renderConnectorView: !0,
+            onStripePaymentMethodReceived: u,
+            onPaymentRequestFailure: c,
+            onValidPaymentRequest: d,
+            onChooseType: n,
+            loadingComponent: (0, i.jsx)(r.y, { style: { marginTop: 16 }, type: r.t.PULSING_ELLIPSIS }),
+        };
+    return (
+        (t = "applePay" === h ? (0, i.jsx)(a.Mv, { ...f }) : (0, i.jsx)(a.dP, { ...f })),
+        (0, i.jsx)("div", {
+            className: l.r,
+            children: (0, i.jsx)(s.D, { label: o.intl.string(o.t.eQ2bLp), children: t }),
+        })
+    );
+}

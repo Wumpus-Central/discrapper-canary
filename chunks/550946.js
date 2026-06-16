@@ -1,1 +1,14 @@
-t.d(n,{A:()=>c,t:()=>a});var u=t(17928),l=t(696451),r=t(71393),i=t(652215);function s(e,n,t,u){return t.getGuild(e)?.features.has(i.GuildFeatures.CONFERENCE)!==!0&&u.isGuestOrLurker(e,n)}function a(e,n){return s(e,n,r.A,l.Ay)}function c(e,n){return(0,u.bG)([r.A,l.Ay],()=>s(e,n,r.A,l.Ay),[e,n])}
+t.d(n, { A: () => c, t: () => a });
+var u = t(17928),
+    l = t(696451),
+    r = t(71393),
+    i = t(652215);
+function s(e, n, t, u) {
+    return t.getGuild(e)?.features.has(i.GuildFeatures.CONFERENCE) !== !0 && u.isGuestOrLurker(e, n);
+}
+function a(e, n) {
+    return s(e, n, r.A, l.Ay);
+}
+function c(e, n) {
+    return (0, u.bG)([r.A, l.Ay], () => s(e, n, r.A, l.Ay), [e, n]);
+}

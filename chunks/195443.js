@@ -1,1 +1,7 @@
-n.d(t,{z:()=>a});var r=n(17928),i=n(157550);function a(e){return(0,r.bG)([i.A],()=>i.A.isSpam(e),[e])}
+"use strict";
+n.d(t, { z: () => s });
+var i = n(17928),
+    r = n(157550);
+function s(e) {
+    return (0, i.bG)([r.A], () => r.A.isSpam(e), [e]);
+}

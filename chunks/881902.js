@@ -1,1 +1,11 @@
-"use strict";n.d(t,{A:()=>o});var i=n(439372),r=n(201718);function s(e){r.P.refetch(e.user_id)}class a extends i.A{actions={USER_APPLICATION_IDENTITY_UPDATE:s,USER_APPLICATION_IDENTITY_REMOVE:s}}let o=new a
+"use strict";
+n.d(t, { A: () => o });
+var i = n(439372),
+    r = n(201718);
+function s(e) {
+    r.P.refetch(e.user_id);
+}
+class a extends i.A {
+    actions = { USER_APPLICATION_IDENTITY_UPDATE: s, USER_APPLICATION_IDENTITY_REMOVE: s };
+}
+let o = new a();

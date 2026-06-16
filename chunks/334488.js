@@ -1,1 +1,1 @@
-e.exports={H:"gameWidgetGrid__7f3a7"}
+e.exports = { H: "gameWidgetGrid__7f3a7" };

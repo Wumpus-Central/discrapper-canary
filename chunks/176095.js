@@ -1,1 +1,33 @@
-"use strict";n.d(t,{A:()=>o});var l=n(17928),i=n(228366);let r={},s=new Set;class a extends l.Ay.Store{static displayName="WalletBalanceStore";getBalance(e){return r[e]??null}getIsFetching(e){return s.has(e)}}let o=new a(i.h,{BILLING_WALLET_BALANCE_FETCH_START:function(e){(s=new Set(s)).add(e.paymentSourceId)},BILLING_WALLET_BALANCE_FETCH_SUCCESS:function(e){(s=new Set(s)).delete(e.paymentSourceId),r={...r,[e.paymentSourceId]:{currency:e.currency,amount:e.amount}}},BILLING_WALLET_BALANCE_FETCH_FAIL:function(e){(s=new Set(s)).delete(e.paymentSourceId)},WALLET_BALANCE_UPDATE:function(e){r={...r,[e.paymentSourceId]:{currency:e.currency,amount:e.balance}}},LOGOUT:function(){r={},s=new Set}})
+"use strict";
+n.d(t, { A: () => l });
+var i = n(17928),
+    r = n(228366);
+let s = {},
+    a = new Set();
+class o extends i.Ay.Store {
+    static displayName = "WalletBalanceStore";
+    getBalance(e) {
+        return s[e] ?? null;
+    }
+    getIsFetching(e) {
+        return a.has(e);
+    }
+}
+let l = new o(r.h, {
+    BILLING_WALLET_BALANCE_FETCH_START: function (e) {
+        (a = new Set(a)).add(e.paymentSourceId);
+    },
+    BILLING_WALLET_BALANCE_FETCH_SUCCESS: function (e) {
+        (a = new Set(a)).delete(e.paymentSourceId),
+            (s = { ...s, [e.paymentSourceId]: { currency: e.currency, amount: e.amount } });
+    },
+    BILLING_WALLET_BALANCE_FETCH_FAIL: function (e) {
+        (a = new Set(a)).delete(e.paymentSourceId);
+    },
+    WALLET_BALANCE_UPDATE: function (e) {
+        s = { ...s, [e.paymentSourceId]: { currency: e.currency, amount: e.balance } };
+    },
+    LOGOUT: function () {
+        (s = {}), (a = new Set());
+    },
+});

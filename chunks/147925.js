@@ -1,1 +1,36 @@
-"use strict";n.d(t,{A:()=>d});var i=n(627968);n(64700);var r=n(900797),s=n(847374),a=n(921853),o=n(320448),l=n(570188);let u={UP:l.hv,RIGHT:l.kL,DOWN:l.Gb,LEFT:l.PI},c=e=>{let{direction:t=u.DOWN,width:n=24,height:l=24,color:c="currentColor",className:d,foreground:_,expanded:h,...f}=e,p=t;!0===h?p=u.DOWN:!1===h&&(p=u.RIGHT);let E={[u.UP]:r.t,[u.DOWN]:s.a,[u.LEFT]:a.n,[u.RIGHT]:o._}[p];return(0,i.jsx)(E,{...f,className:d,size:"custom",width:n,height:l,color:c??"currentColor",colorClass:_})};c.Directions=u;let d=c
+"use strict";
+n.d(t, { A: () => d });
+var i = n(627968);
+n(64700);
+var r = n(900797),
+    s = n(847374),
+    a = n(921853),
+    o = n(320448),
+    l = n(570188);
+let u = { UP: l.hv, RIGHT: l.kL, DOWN: l.Gb, LEFT: l.PI },
+    c = (e) => {
+        let {
+                direction: t = u.DOWN,
+                width: n = 24,
+                height: l = 24,
+                color: c = "currentColor",
+                className: d,
+                foreground: _,
+                expanded: h,
+                ...f
+            } = e,
+            p = t;
+        !0 === h ? (p = u.DOWN) : !1 === h && (p = u.RIGHT);
+        let E = { [u.UP]: r.t, [u.DOWN]: s.a, [u.LEFT]: a.n, [u.RIGHT]: o._ }[p];
+        return (0, i.jsx)(E, {
+            ...f,
+            className: d,
+            size: "custom",
+            width: n,
+            height: l,
+            color: c ?? "currentColor",
+            colorClass: _,
+        });
+    };
+c.Directions = u;
+let d = c;

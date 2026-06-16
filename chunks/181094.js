@@ -1,1 +1,52 @@
-e.d(a,{default:()=>v});var i=e(627968),l=e(189213),s=e(834730),n=e(663417),c=e(429913),d=e(47167),o=e(713654),r=e(46054),p=e(975571),h=e(652215),u=e(375708),m=e(896527),x=e(992595);function v(t){let{channel:a,guild:e,onClose:v,transitionState:j}=t,k=(0,o.gU)(a,e)??void 0,N=(0,d.Ay)(a,!1),b=(0,c.h)(a.linkedLobby?.application_id);return(0,i.jsxs)(l.Modal,{title:u.intl.string(u.t.X8jMDh),subtitle:null!=N?{text:N,leadingIcon:k}:void 0,actions:void 0,transitionState:j,onClose:v,children:[(0,i.jsx)(s.E,{selectable:!0,variant:"text-md/normal",className:x.PT,children:r.A.parseTopic(a.topic,!0,{channelId:a.id})}),null!=b?(0,i.jsxs)("div",{className:m.a6,children:[(0,i.jsx)(n.f,{className:m.NB}),(0,i.jsx)(s.E,{variant:"text-sm/normal",color:"text-default",children:u.intl.format(u.t.Ud5ryv,{applicationName:b.name,helpdeskArticle:p.A.getArticleURL(h.MVz.LINKED_LOBBIES),separatorHook:(t,a)=>(0,i.jsx)("span",{className:m.fY,children:t},a)})})]}):null]})}
+e.d(a, { default: () => v });
+var i = e(627968),
+    l = e(189213),
+    s = e(834730),
+    n = e(663417),
+    c = e(429913),
+    d = e(47167),
+    o = e(713654),
+    r = e(46054),
+    p = e(975571),
+    h = e(652215),
+    u = e(375708),
+    m = e(896527),
+    x = e(992595);
+function v(t) {
+    let { channel: a, guild: e, onClose: v, transitionState: j } = t,
+        k = (0, o.gU)(a, e) ?? void 0,
+        N = (0, d.Ay)(a, !1),
+        b = (0, c.h)(a.linkedLobby?.application_id);
+    return (0, i.jsxs)(l.Modal, {
+        title: u.intl.string(u.t.X8jMDh),
+        subtitle: null != N ? { text: N, leadingIcon: k } : void 0,
+        actions: void 0,
+        transitionState: j,
+        onClose: v,
+        children: [
+            (0, i.jsx)(s.E, {
+                selectable: !0,
+                variant: "text-md/normal",
+                className: x.PT,
+                children: r.A.parseTopic(a.topic, !0, { channelId: a.id }),
+            }),
+            null != b
+                ? (0, i.jsxs)("div", {
+                      className: m.a6,
+                      children: [
+                          (0, i.jsx)(n.f, { className: m.NB }),
+                          (0, i.jsx)(s.E, {
+                              variant: "text-sm/normal",
+                              color: "text-default",
+                              children: u.intl.format(u.t.Ud5ryv, {
+                                  applicationName: b.name,
+                                  helpdeskArticle: p.A.getArticleURL(h.MVz.LINKED_LOBBIES),
+                                  separatorHook: (t, a) => (0, i.jsx)("span", { className: m.fY, children: t }, a),
+                              }),
+                          }),
+                      ],
+                  })
+                : null,
+        ],
+    });
+}

@@ -1,1 +1,18 @@
-"use strict";n.d(t,{A:()=>s});var i=n(64700),r=n(267102);function s(e){let{renderWindow:t}=(0,i.useContext)(r.Ay),[n,s]=(0,i.useState)(()=>t.matchMedia(e)?.matches??!1);return(0,i.useEffect)(()=>{let n=t.matchMedia(e),i=e=>{s(e?.matches??!1)};return i(n),n?.addListener(i),()=>n?.removeListener(i)},[e,t]),n}
+"use strict";
+n.d(t, { A: () => s });
+var i = n(64700),
+    r = n(267102);
+function s(e) {
+    let { renderWindow: t } = (0, i.useContext)(r.Ay),
+        [n, s] = (0, i.useState)(() => t.matchMedia(e)?.matches ?? !1);
+    return (
+        (0, i.useEffect)(() => {
+            let n = t.matchMedia(e),
+                i = (e) => {
+                    s(e?.matches ?? !1);
+                };
+            return i(n), n?.addListener(i), () => n?.removeListener(i);
+        }, [e, t]),
+        n
+    );
+}

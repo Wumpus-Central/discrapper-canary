@@ -1,1 +1,353 @@
-"use strict";n.d(t,{A:()=>M,J:()=>L}),n(323874),n(14289),n(35956);var l=n(627968),i=n(64700),r=n(503698),s=n.n(r),a=n(17928),o=n(939249),u=n(192308),c=n(952270),d=n(39623),m=n(22231),h=n(241326),p=n(834730),f=n(608299),g=n(565150),E=n(783384),A=n(607470),C=n(256905),x=n(302031),I=n(734057),_=n(515718),S=n(851023),y=n(215497),v=n(375708),T=n(16590),N=n(443024);let j=["image/jpeg","image/png","image/webp","image/gif","image/avif","video/quicktime","video/mp4"];function b(e){let{alt:t,spoiler:n,renderContent:r,size:a}=e,[o,u]=i.useState(!1);return(0,l.jsx)(x.Bs.Provider,{value:!n,children:(0,l.jsx)(x.Ay,{type:x.Ay.Types.ATTACHMENT,onReveal:()=>u(!0),className:s()(N.spoilerContainer,{[N.sizeXSmall]:a===y.L.XSMALL,[N.sizeXXSmall]:a===y.L.XXSMALL}),children:e=>(0,l.jsxs)("div",{className:N.spoilerWrapper,children:[r(e),(0,l.jsxs)("div",{className:N.tags,children:[null!=t&&""!==t?(0,l.jsx)("span",{className:N.altTag,children:v.intl.string(v.t.QEW81z)}):null,o&&n?(0,l.jsx)("span",{className:N.altTag,children:v.intl.string(v.t["F+x38C"])}):null]})]})})})}function R(e){let{file:t,alt:n,spoiler:r,size:a=y.L.MEDIUM,onMouseEnter:u}=e,[c,d]=i.useState(),[m,h]=i.useState({width:0,height:0}),p=a===y.L.SMALL;i.useEffect(()=>{if(null==t||!1===j.includes(t.type))return;let e=URL.createObjectURL(t);d(e);let n=new Image;return n.onload=()=>{let{width:e,height:t}=(0,_.z$)(n.width,n.height);h({width:e,height:t})},n.src=e,()=>{d(void 0),h({width:0,height:0}),URL.revokeObjectURL(e)}},[t]);let f=i.useCallback(function(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];return null==c?(0,l.jsx)(l.Fragment,{}):(0,l.jsx)("img",{src:c,className:s()(N.media,{[N.spoiler]:e,[N.imageSmall]:p,[N.sizeXSmall]:a===y.L.XSMALL,[N.sizeXXSmall]:a===y.L.XXSMALL}),"aria-hidden":!0,alt:n??"",style:t?m:{}})},[c,p,a,n,m]),g=i.useCallback(()=>{null!=c&&(0,C.R)({location:"ChannelAttachmentUpload",items:[{type:"IMAGE",url:c}],shouldHideMediaOptions:!0})},[c]),E=t?.name!=null?t.name:v.intl.string(v.t.lduvqL),A=null!=n&&""!==n?v.intl.formatToPlainString(v.t["8TRAzR"],{filename:E,alt:n}):v.intl.formatToPlainString(v.t.lXoOEZ,{filename:E});return(0,l.jsx)("div",{onMouseEnter:u,className:s()(N.mediaContainer,{[N.imageSmall]:p}),children:(0,l.jsx)(o.D,{onClick:g,className:N.clickableMedia,"aria-label":A,tabIndex:-1,children:(0,l.jsx)(b,{size:a,alt:n,spoiler:r,renderContent:f})})})}function P(e){let{file:t,alt:n,spoiler:r,size:a=y.L.MEDIUM,onMouseEnter:o,onVideoLoadError:u,clip:c,guildId:d}=e,[m,h]=i.useState(),p=i.useRef(null);return i.useEffect(()=>{if(null==t)return;let e=URL.createObjectURL(t);return h(e),()=>{h(void 0),URL.revokeObjectURL(e)}},[t]),(0,l.jsxs)("div",{onMouseEnter:o,className:N.mediaContainer,children:[(0,l.jsx)(b,{size:a,alt:n,spoiler:r,renderContent:e=>(0,l.jsx)(A.A,{ref:p,src:m,className:s()(N.media,{[N.spoiler]:e,[N.sizeXSmall]:a===y.L.XSMALL,[N.sizeXXSmall]:a===y.L.XXSMALL}),onError:u,preload:"none","aria-hidden":!0})}),null!=c&&(0,l.jsx)("div",{className:N.clipOverlayHeader,inert:!0,children:(0,l.jsx)(E.A,{className:N.clipOverlayHeaderContent,title:c.name,createdAt:c.createdAt,participantIds:c.users,applicationId:c.applicationId,guildId:d})})]})}function L(e){let{upload:t,size:n=y.L.MEDIUM,onMouseEnter:r,clip:a,guildId:o}=e,[u,c]=i.useState(!1);return t.isImage&&t.item.platform===g.xz.WEB?(0,l.jsx)(R,{file:t.item.file,alt:t.description,spoiler:t.spoiler,size:n,onMouseEnter:r}):!u&&t.isVideo&&t.item.platform===g.xz.WEB?(0,l.jsx)(P,{file:t.item.file,size:n,alt:t.description,spoiler:t.spoiler,onMouseEnter:r,onVideoLoadError:()=>c(!0),clip:a,guildId:o}):(0,l.jsx)("div",{onMouseEnter:r,className:s()(N.icon,N[t.classification??""],{[N.imageSmall]:n===y.L.SMALL,[N.sizeXSmall]:n===y.L.XSMALL,[N.sizeXXSmall]:n===y.L.XXSMALL}),children:(0,l.jsx)("div",{className:N.tags,children:t.spoiler?(0,l.jsx)("span",{className:N.altTag,children:v.intl.string(v.t["F+x38C"])}):null})})}function M(e){let{channelId:t,draftType:r,upload:o,keyboardModeEnabled:g,label:E,size:A=y.L.MEDIUM,canEdit:C=!0,hideFileName:x=!1,clip:_}=e,j=null!=_,b=A===y.L.SMALL,R=(0,a.bG)([I.A],()=>I.A.getChannel(t)?.guild_id);function P(){f.A.remove(t,o.id,r)}let M=e=>{(e.stopPropagation(),j)?(0,u.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e("56762"),n.e("97782"),n.e("16227"),n.e("23549"),n.e("88623"),n.e("75842"),n.e("20287"),n.e("83952"),n.e("3131"),n.e("47177"),n.e("27272"),n.e("1962"),n.e("1922"),n.e("36926"),n.e("37715"),n.e("74049"),n.e("80559"),n.e("69201"),n.e("95008"),n.e("73954"),n.e("29621")]).then(n.bind(n,723028));return n=>(0,l.jsx)(e,{...n,channelId:t,clipId:_.id,onEdit:P})}):(0,u.openModalLazy)(async()=>{let{default:e}=await Promise.all([n.e("57328"),n.e("70698")]).then(n.bind(n,427281));return n=>(0,l.jsx)(e,{...n,draftType:r,upload:o,channelId:t,onSubmit:e=>{let{name:n,description:l,spoiler:i}=e;f.A.update(t,o.id,r,{filename:n,description:l,spoiler:i})}})})};return(0,l.jsxs)(y.A,{actions:(0,l.jsxs)(i.Fragment,{children:[C?(0,l.jsx)(S.A,{className:s()({[N.action]:b}),tooltip:j?v.intl.string(v.t.MYgdY2):v.intl.string(v.t.cuurzA),onClick:()=>f.A.update(t,o.id,r,{spoiler:!o.spoiler}),children:o.spoiler?(0,l.jsx)(c.G,{size:"md",color:"currentColor",className:s()({[N.actionBarIcon]:b})}):(0,l.jsx)(d.b,{size:"xs",color:"currentColor",className:s()({[N.actionBarIcon]:b})})}):null,C?(0,l.jsx)(S.A,{className:s()({[N.action]:b}),tooltip:j?v.intl.string(T.default.V8YlF7):v.intl.string(v.t.Y8ujqr),onClick:M,children:(0,l.jsx)(m.R,{size:"xs",color:"currentColor",className:s()({[N.actionBarIcon]:b})})}):null,(0,l.jsx)(S.A,{className:s()({[N.action]:b}),tooltip:j?v.intl.string(v.t.MskAXa):v.intl.string(v.t.vN7REz),onClick:P,dangerous:!0,children:(0,l.jsx)(h.u,{size:"md",color:"currentColor",className:s()({[N.actionBarIcon]:b})})})]}),draftType:r,id:o.id,channelId:t,handleEditModal:M,keyboardModeEnabled:g,size:A,className:s()({[N.attachmentItemSmall]:b}),children:[(0,l.jsx)(L,{upload:o,size:A,clip:_,guildId:R}),!x&&(0,l.jsx)("div",{className:N.filenameContainer,"aria-hidden":!0,children:(0,l.jsx)(p.E,{className:N.filename,variant:"text-sm/normal",children:null!=E?E:j?_.name:o.filename})})]})}
+"use strict";
+n.d(t, { A: () => M, J: () => w }), n(323874), n(14289), n(35956);
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(17928),
+    l = n(939249),
+    u = n(192308),
+    c = n(952270),
+    d = n(39623),
+    _ = n(22231),
+    h = n(241326),
+    f = n(834730),
+    p = n(608299),
+    E = n(565150),
+    m = n(783384),
+    g = n(607470),
+    A = n(256905),
+    I = n(302031),
+    T = n(734057),
+    S = n(515718),
+    y = n(851023),
+    C = n(215497),
+    N = n(375708),
+    v = n(16590),
+    R = n(443024);
+let O = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
+function b(e) {
+    let { alt: t, spoiler: n, renderContent: s, size: o } = e,
+        [l, u] = r.useState(!1);
+    return (0, i.jsx)(I.Bs.Provider, {
+        value: !n,
+        children: (0, i.jsx)(I.Ay, {
+            type: I.Ay.Types.ATTACHMENT,
+            onReveal: () => u(!0),
+            className: a()(R.spoilerContainer, {
+                [R.sizeXSmall]: o === C.L.XSMALL,
+                [R.sizeXXSmall]: o === C.L.XXSMALL,
+            }),
+            children: (e) =>
+                (0, i.jsxs)("div", {
+                    className: R.spoilerWrapper,
+                    children: [
+                        s(e),
+                        (0, i.jsxs)("div", {
+                            className: R.tags,
+                            children: [
+                                null != t && "" !== t
+                                    ? (0, i.jsx)("span", { className: R.altTag, children: N.intl.string(N.t.QEW81z) })
+                                    : null,
+                                l && n
+                                    ? (0, i.jsx)("span", {
+                                          className: R.altTag,
+                                          children: N.intl.string(N.t["F+x38C"]),
+                                      })
+                                    : null,
+                            ],
+                        }),
+                    ],
+                }),
+        }),
+    });
+}
+function D(e) {
+    let { file: t, alt: n, spoiler: s, size: o = C.L.MEDIUM, onMouseEnter: u } = e,
+        [c, d] = r.useState(),
+        [_, h] = r.useState({ width: 0, height: 0 }),
+        f = o === C.L.SMALL;
+    r.useEffect(() => {
+        if (null == t || !1 === O.includes(t.type)) return;
+        let e = URL.createObjectURL(t);
+        d(e);
+        let n = new Image();
+        return (
+            (n.onload = () => {
+                let { width: e, height: t } = (0, S.z$)(n.width, n.height);
+                h({ width: e, height: t });
+            }),
+            (n.src = e),
+            () => {
+                d(void 0), h({ width: 0, height: 0 }), URL.revokeObjectURL(e);
+            }
+        );
+    }, [t]);
+    let p = r.useCallback(
+            function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+                return null == c
+                    ? (0, i.jsx)(i.Fragment, {})
+                    : (0, i.jsx)("img", {
+                          src: c,
+                          className: a()(R.media, {
+                              [R.spoiler]: e,
+                              [R.imageSmall]: f,
+                              [R.sizeXSmall]: o === C.L.XSMALL,
+                              [R.sizeXXSmall]: o === C.L.XXSMALL,
+                          }),
+                          "aria-hidden": !0,
+                          alt: n ?? "",
+                          style: t ? _ : {},
+                      });
+            },
+            [c, f, o, n, _],
+        ),
+        E = r.useCallback(() => {
+            null != c &&
+                (0, A.R)({
+                    location: "ChannelAttachmentUpload",
+                    items: [{ type: "IMAGE", url: c }],
+                    shouldHideMediaOptions: !0,
+                });
+        }, [c]),
+        m = t?.name != null ? t.name : N.intl.string(N.t.lduvqL),
+        g =
+            null != n && "" !== n
+                ? N.intl.formatToPlainString(N.t["8TRAzR"], { filename: m, alt: n })
+                : N.intl.formatToPlainString(N.t.lXoOEZ, { filename: m });
+    return (0, i.jsx)("div", {
+        onMouseEnter: u,
+        className: a()(R.mediaContainer, { [R.imageSmall]: f }),
+        children: (0, i.jsx)(l.D, {
+            onClick: E,
+            className: R.clickableMedia,
+            "aria-label": g,
+            tabIndex: -1,
+            children: (0, i.jsx)(b, { size: o, alt: n, spoiler: s, renderContent: p }),
+        }),
+    });
+}
+function L(e) {
+    let {
+            file: t,
+            alt: n,
+            spoiler: s,
+            size: o = C.L.MEDIUM,
+            onMouseEnter: l,
+            onVideoLoadError: u,
+            clip: c,
+            guildId: d,
+        } = e,
+        [_, h] = r.useState(),
+        f = r.useRef(null);
+    return (
+        r.useEffect(() => {
+            if (null == t) return;
+            let e = URL.createObjectURL(t);
+            return (
+                h(e),
+                () => {
+                    h(void 0), URL.revokeObjectURL(e);
+                }
+            );
+        }, [t]),
+        (0, i.jsxs)("div", {
+            onMouseEnter: l,
+            className: R.mediaContainer,
+            children: [
+                (0, i.jsx)(b, {
+                    size: o,
+                    alt: n,
+                    spoiler: s,
+                    renderContent: (e) =>
+                        (0, i.jsx)(g.A, {
+                            ref: f,
+                            src: _,
+                            className: a()(R.media, {
+                                [R.spoiler]: e,
+                                [R.sizeXSmall]: o === C.L.XSMALL,
+                                [R.sizeXXSmall]: o === C.L.XXSMALL,
+                            }),
+                            onError: u,
+                            preload: "none",
+                            "aria-hidden": !0,
+                        }),
+                }),
+                null != c &&
+                    (0, i.jsx)("div", {
+                        className: R.clipOverlayHeader,
+                        inert: !0,
+                        children: (0, i.jsx)(m.A, {
+                            className: R.clipOverlayHeaderContent,
+                            title: c.name,
+                            createdAt: c.createdAt,
+                            participantIds: c.users,
+                            applicationId: c.applicationId,
+                            guildId: d,
+                        }),
+                    }),
+            ],
+        })
+    );
+}
+function w(e) {
+    let { upload: t, size: n = C.L.MEDIUM, onMouseEnter: s, clip: o, guildId: l } = e,
+        [u, c] = r.useState(!1);
+    return t.isImage && t.item.platform === E.xz.WEB
+        ? (0, i.jsx)(D, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: s })
+        : !u && t.isVideo && t.item.platform === E.xz.WEB
+          ? (0, i.jsx)(L, {
+                file: t.item.file,
+                size: n,
+                alt: t.description,
+                spoiler: t.spoiler,
+                onMouseEnter: s,
+                onVideoLoadError: () => c(!0),
+                clip: o,
+                guildId: l,
+            })
+          : (0, i.jsx)("div", {
+                onMouseEnter: s,
+                className: a()(R.icon, R[t.classification ?? ""], {
+                    [R.imageSmall]: n === C.L.SMALL,
+                    [R.sizeXSmall]: n === C.L.XSMALL,
+                    [R.sizeXXSmall]: n === C.L.XXSMALL,
+                }),
+                children: (0, i.jsx)("div", {
+                    className: R.tags,
+                    children: t.spoiler
+                        ? (0, i.jsx)("span", { className: R.altTag, children: N.intl.string(N.t["F+x38C"]) })
+                        : null,
+                }),
+            });
+}
+function M(e) {
+    let {
+            channelId: t,
+            draftType: s,
+            upload: l,
+            keyboardModeEnabled: E,
+            label: m,
+            size: g = C.L.MEDIUM,
+            canEdit: A = !0,
+            hideFileName: I = !1,
+            clip: S,
+        } = e,
+        O = null != S,
+        b = g === C.L.SMALL,
+        D = (0, o.bG)([T.A], () => T.A.getChannel(t)?.guild_id);
+    function L() {
+        p.A.remove(t, l.id, s);
+    }
+    let M = (e) => {
+        (e.stopPropagation(), O)
+            ? (0, u.openModalLazy)(async () => {
+                  let { default: e } = await Promise.all([
+                      n.e("56762"),
+                      n.e("97782"),
+                      n.e("16227"),
+                      n.e("23549"),
+                      n.e("88623"),
+                      n.e("75842"),
+                      n.e("20287"),
+                      n.e("83952"),
+                      n.e("3131"),
+                      n.e("47177"),
+                      n.e("27272"),
+                      n.e("1962"),
+                      n.e("1922"),
+                      n.e("36926"),
+                      n.e("37715"),
+                      n.e("74049"),
+                      n.e("80559"),
+                      n.e("69201"),
+                      n.e("95008"),
+                      n.e("73954"),
+                      n.e("29621"),
+                  ]).then(n.bind(n, 723028));
+                  return (n) => (0, i.jsx)(e, { ...n, channelId: t, clipId: S.id, onEdit: L });
+              })
+            : (0, u.openModalLazy)(async () => {
+                  let { default: e } = await Promise.all([n.e("57328"), n.e("70698")]).then(n.bind(n, 427281));
+                  return (n) =>
+                      (0, i.jsx)(e, {
+                          ...n,
+                          draftType: s,
+                          upload: l,
+                          channelId: t,
+                          onSubmit: (e) => {
+                              let { name: n, description: i, spoiler: r } = e;
+                              p.A.update(t, l.id, s, { filename: n, description: i, spoiler: r });
+                          },
+                      });
+              });
+    };
+    return (0, i.jsxs)(C.A, {
+        actions: (0, i.jsxs)(r.Fragment, {
+            children: [
+                A
+                    ? (0, i.jsx)(y.A, {
+                          className: a()({ [R.action]: b }),
+                          tooltip: O ? N.intl.string(N.t.MYgdY2) : N.intl.string(N.t.cuurzA),
+                          onClick: () => p.A.update(t, l.id, s, { spoiler: !l.spoiler }),
+                          children: l.spoiler
+                              ? (0, i.jsx)(c.G, {
+                                    size: "md",
+                                    color: "currentColor",
+                                    className: a()({ [R.actionBarIcon]: b }),
+                                })
+                              : (0, i.jsx)(d.b, {
+                                    size: "xs",
+                                    color: "currentColor",
+                                    className: a()({ [R.actionBarIcon]: b }),
+                                }),
+                      })
+                    : null,
+                A
+                    ? (0, i.jsx)(y.A, {
+                          className: a()({ [R.action]: b }),
+                          tooltip: O ? N.intl.string(v.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
+                          onClick: M,
+                          children: (0, i.jsx)(_.R, {
+                              size: "xs",
+                              color: "currentColor",
+                              className: a()({ [R.actionBarIcon]: b }),
+                          }),
+                      })
+                    : null,
+                (0, i.jsx)(y.A, {
+                    className: a()({ [R.action]: b }),
+                    tooltip: O ? N.intl.string(N.t.MskAXa) : N.intl.string(N.t.vN7REz),
+                    onClick: L,
+                    dangerous: !0,
+                    children: (0, i.jsx)(h.u, {
+                        size: "md",
+                        color: "currentColor",
+                        className: a()({ [R.actionBarIcon]: b }),
+                    }),
+                }),
+            ],
+        }),
+        draftType: s,
+        id: l.id,
+        channelId: t,
+        handleEditModal: M,
+        keyboardModeEnabled: E,
+        size: g,
+        className: a()({ [R.attachmentItemSmall]: b }),
+        children: [
+            (0, i.jsx)(w, { upload: l, size: g, clip: S, guildId: D }),
+            !I &&
+                (0, i.jsx)("div", {
+                    className: R.filenameContainer,
+                    "aria-hidden": !0,
+                    children: (0, i.jsx)(f.E, {
+                        className: R.filename,
+                        variant: "text-sm/normal",
+                        children: null != m ? m : O ? S.name : l.filename,
+                    }),
+                }),
+        ],
+    });
+}

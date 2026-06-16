@@ -1,1 +1,1 @@
-e.exports={a:"benefitLabel_f0fc41"}
+e.exports = { a: "benefitLabel_f0fc41" };

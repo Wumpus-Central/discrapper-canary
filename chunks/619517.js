@@ -1,1 +1,392 @@
-"use strict";n.d(t,{Ay:()=>N,P8:()=>T,bp:()=>I,p4:()=>S});var i=n(627968),r=n(64700),s=n(735438),a=n(731738),o=n(269115),l=n(144165),u=n(945810),c=n(693875),d=n(776231),_=n(807393),h=n(742023),f=n(544180),p=n(174459),E=n(486020),m=n(515718),g=n(652215),A=n(838541);let I=/\.gif($|\?|#)/i,T=/\.webp($|\?|#)/i,S=/\.avif($|\?|#)/i,y=/\.png($|\?|#)/i;class N extends r.Component{static visibilityObserver=new o.j({threshold:.6});static _lazyLoadTargets=new WeakMap;static _lazyLoadIO="u">typeof IntersectionObserver?new IntersectionObserver(e=>{for(let t of e)if(t.isIntersecting){let e=N._lazyLoadTargets.get(t.target);null!=e&&(N._lazyLoadIO?.unobserve(t.target),N._lazyLoadTargets.delete(t.target),e._triggerLazyLoad())}},{threshold:0,rootMargin:"300px"}):null;static defaultProps={shouldLink:!1,autoPlay:!1,animated:!1,minWidth:0,minHeight:0,shouldRenderAccessory:!0,srcIsAnimated:!1};static isAnimated(e){let{src:t,original:n,animated:i,srcIsAnimated:r}=e;return i||I.test(null!=n&&""!==n?n:t)||null!=r&&r&&(T.test(null!=n&&""!==n?n:t)||S.test(null!=n&&""!==n?n:t))}static isSrcPNG(e){let{src:t}=e;return y.test(t)}static isSrcAVIF(e){let{src:t}=e;return S.test(t)}static getFormatQuality(e){let{src:t,original:n,animated:i,srcIsAnimated:r,freeze:s=!1}=e,a=null,o=null;return E.QB&&(s||!N.isAnimated({src:t,original:n,animated:i,srcIsAnimated:r}))?(a="webp",(N.isSrcPNG({src:t})||N.isSrcAVIF({src:t}))&&(o="lossless")):s&&(a="png"),{format:a,quality:o}}static preloadImage(e){let{src:t,dimensions:{maxWidth:n,maxHeight:i,imageWidth:r,imageHeight:s},options:{srcIsAnimated:a,original:o,animated:l,sourceMetadata:u,freeze:c},callback:_}=e;if(1===r&&1===s)return;let{format:h,quality:f}=N.getFormatQuality({src:t,original:o,animated:l,srcIsAnimated:a,freeze:c}),p=(0,d.AE)({src:t,width:r,height:s,maxWidth:n,maxHeight:i,srcIsAnimated:a,format:h,quality:f}),E=Date.now();return(0,d.yt)(p,(e,n)=>{N.trackLoadingCompleted({error:e,imageData:n,trigger:"PRELOAD",startLoadingTime:E,readyState:g.Rv1.READY,format:h,quality:f,imageProps:{src:t,width:r,height:s,sourceMetadata:u,original:o}}),_?.(e,n)})}static async trackLoadingCompleted(e){let{error:t,imageData:n,trigger:i,startLoadingTime:r,readyState:s,format:o,quality:l,imageProps:{src:u,height:c,width:d,original:E,sourceMetadata:m}}=e;if(t&&_.A.increment({name:a.K.IMAGE_LOAD_ERROR}),!v.getConfig({location:"lazy_image"}).enabled)return;let A=await fetch(n.url).catch(()=>void 0),I=A?.headers?.get("content-length"),T=null!=I?Number(I):null,S=Date.now()-r;p.default.track(g.HAw.IMAGE_LOADING_COMPLETED,{duration_ms:S,requested_height:n.height,requested_width:n.width,height:c,width:d,original_url:E,url:u,requested_url:n.url,format:o,quality:l,state:t?g.Rv1.ERROR:s,data_saving_mode:h.Ay.dataSavingMode,low_quality_image_mode:h.Ay.dataSavingMode,trigger:i,size:T,message_id:m?.message?.id,message_sent_timestamp:m?.message?.timestamp.getTime(),connection_type:f.A.getType(),effective_connection_speed:f.A.getEffectiveConnectionSpeed(),service_provider:f.A.getServiceProvider()})}state={readyState:g.Rv1.LOADING,hasMouseOver:!1,hasFocus:!1};startLoadingTime=Date.now();_cancellers=new Set;_unmounted=!1;_imageRef=r.createRef();constructor(e){super(e),(0,d.LE)(this.getSrc(this.getRatio(),N.isAnimated(this.props)))&&(this.state.readyState=g.Rv1.READY)}componentDidMount(){let{readyState:e}=this.state;if(e===g.Rv1.LOADING)if(C.getConfig({location:"LazyImage_componentDidMount"}).enabled){let e=this._imageRef.current;null!=e&&null!=N._lazyLoadIO?(N._lazyLoadTargets.set(e,this),N._lazyLoadIO.observe(e)):this.loadImage(this.getSrc(this.getRatio(),N.isAnimated(this.props)),this.handleImageLoad)}else this.loadImage(this.getSrc(this.getRatio(),N.isAnimated(this.props)),this.handleImageLoad);N.isAnimated(this.props)&&this.observeVisibility()}componentDidUpdate(e){let t=N.isAnimated(this.props);N.isAnimated(e)!==t&&(t?this.observeVisibility():this.unobserveVisibility())}componentWillUnmount(){this._unmounted=!0;let e=this._imageRef.current;null!=e&&(N._lazyLoadIO?.unobserve(e),N._lazyLoadTargets.delete(e)),N.isAnimated(this.props)&&this.unobserveVisibility(),this._cancellers.forEach(e=>e()),this._cancellers.clear()}observeVisibility=()=>{N.visibilityObserver.observe(this,this._imageRef)};unobserveVisibility=()=>{N.visibilityObserver.unobserve(this)};getSrc(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],{src:n,width:i,height:r,maxWidth:s,maxHeight:a,mediaLayoutType:o}=this.props,{format:l,quality:u}=N.getFormatQuality({...this.props,freeze:t});return(0,d.AE)({src:n,width:i,height:r,ratio:e,maxWidth:o===A.dG.MOSAIC?s:void 0,maxHeight:o===A.dG.MOSAIC?a:void 0,format:l,quality:u,animated:!t,srcIsAnimated:this.props.srcIsAnimated})}getRatio(){let{width:e,height:t,maxWidth:n=400,maxHeight:i=300,mediaLayoutType:r,useFullWidth:s}=this.props;return r===A.dG.MOSAIC&&s?(0,m.V)({width:e,height:t,maxWidth:n,maxHeight:i}):(0,m.U8)({width:e,height:t,maxWidth:n,maxHeight:i})}getType(){let{mediaLayoutType:e,responsive:t}=this.props;return e??(t?A.dG.RESPONSIVE:A.dG.STATIC)}_triggerLazyLoad(){this._unmounted||this.state.readyState!==g.Rv1.LOADING||this.loadImage(this.getSrc(this.getRatio(),N.isAnimated(this.props)),this.handleImageLoad)}loadImage(e,t){let{width:n,height:i}=this.props;if(this.startLoadingTime=Date.now(),1===n&&1===i)return;let r=(0,d.yt)(e,(e,n)=>{null!=r&&this._cancellers.delete(r),t?.(e,n)});null!=r&&this._cancellers.add(r)}handleImageLoad=(e,t)=>{this._unmounted||this.setState({readyState:e?g.Rv1.ERROR:g.Rv1.READY},()=>{let{format:n,quality:i}=N.getFormatQuality(this.props);N.trackLoadingCompleted({error:e,imageData:t,trigger:this.props.trigger??"LOAD",startLoadingTime:this.startLoadingTime,readyState:this.state.readyState,format:n,quality:i,imageProps:this.props})})};onMouseEnter=e=>{N.isAnimated(this.props)&&this.setState({hasMouseOver:!0});let{onMouseEnter:t}=this.props;t?.(e)};onMouseLeave=e=>{N.isAnimated(this.props)&&this.setState({hasMouseOver:!1});let{onMouseLeave:t}=this.props;t?.(e)};onFocus=e=>{N.isAnimated(this.props)&&this.setState({hasFocus:!0})};onBlur=e=>{let{currentTarget:t,relatedTarget:n}=e;t.contains(n)||this.setState({hasFocus:!1})};onClick=e=>{let{onZoom:t,onClick:n}=this.props;null!=n?n(e):null!=t&&(e.preventDefault(),t(e,{zoomThumbnailPlaceholder:this.getSrc(this.getRatio()),trigger:"CLICK"}))};renderAccessory=()=>{let{hasMouseOver:e,hasFocus:t}=this.state,n=null!=this.props.renderAccessory?this.props.renderAccessory():null;return this.props.shouldRenderAccessory?e||t?n:(0,i.jsx)(c.A,{}):null};render(){let{alt:e,zoomThumbnailPlaceholder:t,onZoom:n,shouldLink:r,onContextMenu:a,autoPlay:o,original:u,className:c,imageClassName:d,children:_,animated:h,shouldAnimate:f,width:p,height:E,minWidth:m,minHeight:A,maxWidth:I,maxHeight:T,onClick:S,renderAccessory:y,tabIndex:v,limitResponsiveWidth:R,useFullWidth:O,placeholder:b,placeholderVersion:D,dataSafeSrc:L,srcIsAnimated:w}=this.props,{readyState:M,hasMouseOver:P,hasFocus:x}=this.state,k=null!=n,U=this.getRatio(),G=(0,s.clamp)(Math.round(p*U),m??0,I??1/0),F=(0,s.clamp)(Math.round(E*U),A??0,T??1/0),V=C.getConfig({location:"LazyImage_render"}).enabled,B={alt:e,readyState:M,onContextMenu:a??void 0,zoomable:k,className:c,imageClassName:d,minWidth:m,minHeight:A,mediaLayoutType:this.getType(),limitResponsiveWidth:R,useFullWidth:O,tabIndex:v,width:G,height:F,src:"",placeholder:b,placeholderVersion:D,dataSafeSrc:L,srcIsAnimated:w,children:null!=_?e=>{let{src:t,size:n,alt:i,mediaLayoutType:r}=e;return _({src:t,size:n,alt:i,mediaLayoutType:r})}:void 0,onMouseEnter:this.onMouseEnter,onMouseLeave:this.onMouseLeave,onFocus:this.onFocus,onBlur:this.onBlur};if(1===B.width&&1===B.height)return null;switch((k||null!=S)&&(B.onClick=this.onClick),r&&(B.original=null!=u&&""!==u?u:B.src),M){case g.Rv1.LOADING:null!=t&&(B.src=t);break;case g.Rv1.READY:if(N.isAnimated(this.props)){B.onMouseLeave=this.onMouseLeave;let e=(o||P||x)&&(null==f||f)&&N.visibilityObserver.isVisible(this);e?(B.src=this.getSrc(U),B.renderAccessory=y):(B.src=this.getSrc(U,!h||!o),B.renderAccessory=this.renderAccessory),null!=_&&(B.children=t=>{let{src:n,size:i,alt:r,mediaLayoutType:s}=t;return _({src:n,size:i,animating:e,alt:r,mediaLayoutType:s})})}else B.src=this.getSrc(U)}return(0,i.jsx)(l._,{disableLoadingSpinner:V,ref:this._imageRef,...B})}}let v=(0,u.mj)({name:"2026-03-image-load-metrics",kind:"user",defaultConfig:{enabled:!1},variations:{0:{enabled:!1},1:{enabled:!1},2:{enabled:!0}}}),C=(0,u.mj)({name:"2026-02-lazy-load-all-images",kind:"user",defaultConfig:{enabled:!1},variations:{1:{enabled:!0}}})
+"use strict";
+n.d(t, { Ay: () => C, P8: () => T, bp: () => I, p4: () => S });
+var i = n(627968),
+    r = n(64700),
+    s = n(735438),
+    a = n(731738),
+    o = n(269115),
+    l = n(144165),
+    u = n(945810),
+    c = n(693875),
+    d = n(776231),
+    _ = n(807393),
+    h = n(742023),
+    f = n(544180),
+    p = n(174459),
+    E = n(486020),
+    m = n(515718),
+    g = n(652215),
+    A = n(838541);
+let I = /\.gif($|\?|#)/i,
+    T = /\.webp($|\?|#)/i,
+    S = /\.avif($|\?|#)/i,
+    y = /\.png($|\?|#)/i;
+class C extends r.Component {
+    static visibilityObserver = new o.j({ threshold: 0.6 });
+    static _lazyLoadTargets = new WeakMap();
+    static _lazyLoadIO =
+        "u" > typeof IntersectionObserver
+            ? new IntersectionObserver(
+                  (e) => {
+                      for (let t of e)
+                          if (t.isIntersecting) {
+                              let e = C._lazyLoadTargets.get(t.target);
+                              null != e &&
+                                  (C._lazyLoadIO?.unobserve(t.target),
+                                  C._lazyLoadTargets.delete(t.target),
+                                  e._triggerLazyLoad());
+                          }
+                  },
+                  { threshold: 0, rootMargin: "300px" },
+              )
+            : null;
+    static defaultProps = {
+        shouldLink: !1,
+        autoPlay: !1,
+        animated: !1,
+        minWidth: 0,
+        minHeight: 0,
+        shouldRenderAccessory: !0,
+        srcIsAnimated: !1,
+    };
+    static isAnimated(e) {
+        let { src: t, original: n, animated: i, srcIsAnimated: r } = e;
+        return (
+            i ||
+            I.test(null != n && "" !== n ? n : t) ||
+            (null != r && r && (T.test(null != n && "" !== n ? n : t) || S.test(null != n && "" !== n ? n : t)))
+        );
+    }
+    static isSrcPNG(e) {
+        let { src: t } = e;
+        return y.test(t);
+    }
+    static isSrcAVIF(e) {
+        let { src: t } = e;
+        return S.test(t);
+    }
+    static getFormatQuality(e) {
+        let { src: t, original: n, animated: i, srcIsAnimated: r, freeze: s = !1 } = e,
+            a = null,
+            o = null;
+        return (
+            E.QB && (s || !C.isAnimated({ src: t, original: n, animated: i, srcIsAnimated: r }))
+                ? ((a = "webp"), (C.isSrcPNG({ src: t }) || C.isSrcAVIF({ src: t })) && (o = "lossless"))
+                : s && (a = "png"),
+            { format: a, quality: o }
+        );
+    }
+    static preloadImage(e) {
+        let {
+            src: t,
+            dimensions: { maxWidth: n, maxHeight: i, imageWidth: r, imageHeight: s },
+            options: { srcIsAnimated: a, original: o, animated: l, sourceMetadata: u, freeze: c },
+            callback: _,
+        } = e;
+        if (1 === r && 1 === s) return;
+        let { format: h, quality: f } = C.getFormatQuality({
+                src: t,
+                original: o,
+                animated: l,
+                srcIsAnimated: a,
+                freeze: c,
+            }),
+            p = (0, d.AE)({
+                src: t,
+                width: r,
+                height: s,
+                maxWidth: n,
+                maxHeight: i,
+                srcIsAnimated: a,
+                format: h,
+                quality: f,
+            }),
+            E = Date.now();
+        return (0, d.yt)(p, (e, n) => {
+            C.trackLoadingCompleted({
+                error: e,
+                imageData: n,
+                trigger: "PRELOAD",
+                startLoadingTime: E,
+                readyState: g.Rv1.READY,
+                format: h,
+                quality: f,
+                imageProps: { src: t, width: r, height: s, sourceMetadata: u, original: o },
+            }),
+                _?.(e, n);
+        });
+    }
+    static async trackLoadingCompleted(e) {
+        let {
+            error: t,
+            imageData: n,
+            trigger: i,
+            startLoadingTime: r,
+            readyState: s,
+            format: o,
+            quality: l,
+            imageProps: { src: u, height: c, width: d, original: E, sourceMetadata: m },
+        } = e;
+        if ((t && _.A.increment({ name: a.K.IMAGE_LOAD_ERROR }), !N.getConfig({ location: "lazy_image" }).enabled))
+            return;
+        let A = await fetch(n.url).catch(() => void 0),
+            I = A?.headers?.get("content-length"),
+            T = null != I ? Number(I) : null,
+            S = Date.now() - r;
+        p.default.track(g.HAw.IMAGE_LOADING_COMPLETED, {
+            duration_ms: S,
+            requested_height: n.height,
+            requested_width: n.width,
+            height: c,
+            width: d,
+            original_url: E,
+            url: u,
+            requested_url: n.url,
+            format: o,
+            quality: l,
+            state: t ? g.Rv1.ERROR : s,
+            data_saving_mode: h.Ay.dataSavingMode,
+            low_quality_image_mode: h.Ay.dataSavingMode,
+            trigger: i,
+            size: T,
+            message_id: m?.message?.id,
+            message_sent_timestamp: m?.message?.timestamp.getTime(),
+            connection_type: f.A.getType(),
+            effective_connection_speed: f.A.getEffectiveConnectionSpeed(),
+            service_provider: f.A.getServiceProvider(),
+        });
+    }
+    state = { readyState: g.Rv1.LOADING, hasMouseOver: !1, hasFocus: !1 };
+    startLoadingTime = Date.now();
+    _cancellers = new Set();
+    _unmounted = !1;
+    _imageRef = r.createRef();
+    constructor(e) {
+        super(e),
+            (0, d.LE)(this.getSrc(this.getRatio(), C.isAnimated(this.props))) && (this.state.readyState = g.Rv1.READY);
+    }
+    componentDidMount() {
+        let { readyState: e } = this.state;
+        if (e === g.Rv1.LOADING)
+            if (v.getConfig({ location: "LazyImage_componentDidMount" }).enabled) {
+                let e = this._imageRef.current;
+                null != e && null != C._lazyLoadIO
+                    ? (C._lazyLoadTargets.set(e, this), C._lazyLoadIO.observe(e))
+                    : this.loadImage(this.getSrc(this.getRatio(), C.isAnimated(this.props)), this.handleImageLoad);
+            } else this.loadImage(this.getSrc(this.getRatio(), C.isAnimated(this.props)), this.handleImageLoad);
+        C.isAnimated(this.props) && this.observeVisibility();
+    }
+    componentDidUpdate(e) {
+        let t = C.isAnimated(this.props);
+        C.isAnimated(e) !== t && (t ? this.observeVisibility() : this.unobserveVisibility());
+    }
+    componentWillUnmount() {
+        this._unmounted = !0;
+        let e = this._imageRef.current;
+        null != e && (C._lazyLoadIO?.unobserve(e), C._lazyLoadTargets.delete(e)),
+            C.isAnimated(this.props) && this.unobserveVisibility(),
+            this._cancellers.forEach((e) => e()),
+            this._cancellers.clear();
+    }
+    observeVisibility = () => {
+        C.visibilityObserver.observe(this, this._imageRef);
+    };
+    unobserveVisibility = () => {
+        C.visibilityObserver.unobserve(this);
+    };
+    getSrc(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            { src: n, width: i, height: r, maxWidth: s, maxHeight: a, mediaLayoutType: o } = this.props,
+            { format: l, quality: u } = C.getFormatQuality({ ...this.props, freeze: t });
+        return (0, d.AE)({
+            src: n,
+            width: i,
+            height: r,
+            ratio: e,
+            maxWidth: o === A.dG.MOSAIC ? s : void 0,
+            maxHeight: o === A.dG.MOSAIC ? a : void 0,
+            format: l,
+            quality: u,
+            animated: !t,
+            srcIsAnimated: this.props.srcIsAnimated,
+        });
+    }
+    getRatio() {
+        let {
+            width: e,
+            height: t,
+            maxWidth: n = 400,
+            maxHeight: i = 300,
+            mediaLayoutType: r,
+            useFullWidth: s,
+        } = this.props;
+        return r === A.dG.MOSAIC && s
+            ? (0, m.V)({ width: e, height: t, maxWidth: n, maxHeight: i })
+            : (0, m.U8)({ width: e, height: t, maxWidth: n, maxHeight: i });
+    }
+    getType() {
+        let { mediaLayoutType: e, responsive: t } = this.props;
+        return e ?? (t ? A.dG.RESPONSIVE : A.dG.STATIC);
+    }
+    _triggerLazyLoad() {
+        this._unmounted ||
+            this.state.readyState !== g.Rv1.LOADING ||
+            this.loadImage(this.getSrc(this.getRatio(), C.isAnimated(this.props)), this.handleImageLoad);
+    }
+    loadImage(e, t) {
+        let { width: n, height: i } = this.props;
+        if (((this.startLoadingTime = Date.now()), 1 === n && 1 === i)) return;
+        let r = (0, d.yt)(e, (e, n) => {
+            null != r && this._cancellers.delete(r), t?.(e, n);
+        });
+        null != r && this._cancellers.add(r);
+    }
+    handleImageLoad = (e, t) => {
+        this._unmounted ||
+            this.setState({ readyState: e ? g.Rv1.ERROR : g.Rv1.READY }, () => {
+                let { format: n, quality: i } = C.getFormatQuality(this.props);
+                C.trackLoadingCompleted({
+                    error: e,
+                    imageData: t,
+                    trigger: this.props.trigger ?? "LOAD",
+                    startLoadingTime: this.startLoadingTime,
+                    readyState: this.state.readyState,
+                    format: n,
+                    quality: i,
+                    imageProps: this.props,
+                });
+            });
+    };
+    onMouseEnter = (e) => {
+        C.isAnimated(this.props) && this.setState({ hasMouseOver: !0 });
+        let { onMouseEnter: t } = this.props;
+        t?.(e);
+    };
+    onMouseLeave = (e) => {
+        C.isAnimated(this.props) && this.setState({ hasMouseOver: !1 });
+        let { onMouseLeave: t } = this.props;
+        t?.(e);
+    };
+    onFocus = (e) => {
+        C.isAnimated(this.props) && this.setState({ hasFocus: !0 });
+    };
+    onBlur = (e) => {
+        let { currentTarget: t, relatedTarget: n } = e;
+        t.contains(n) || this.setState({ hasFocus: !1 });
+    };
+    onClick = (e) => {
+        let { onZoom: t, onClick: n } = this.props;
+        null != n
+            ? n(e)
+            : null != t &&
+              (e.preventDefault(), t(e, { zoomThumbnailPlaceholder: this.getSrc(this.getRatio()), trigger: "CLICK" }));
+    };
+    renderAccessory = () => {
+        let { hasMouseOver: e, hasFocus: t } = this.state,
+            n = null != this.props.renderAccessory ? this.props.renderAccessory() : null;
+        return this.props.shouldRenderAccessory ? (e || t ? n : (0, i.jsx)(c.A, {})) : null;
+    };
+    render() {
+        let {
+                alt: e,
+                zoomThumbnailPlaceholder: t,
+                onZoom: n,
+                shouldLink: r,
+                onContextMenu: a,
+                autoPlay: o,
+                original: u,
+                className: c,
+                imageClassName: d,
+                children: _,
+                animated: h,
+                shouldAnimate: f,
+                width: p,
+                height: E,
+                minWidth: m,
+                minHeight: A,
+                maxWidth: I,
+                maxHeight: T,
+                onClick: S,
+                renderAccessory: y,
+                tabIndex: N,
+                limitResponsiveWidth: R,
+                useFullWidth: O,
+                placeholder: b,
+                placeholderVersion: D,
+                dataSafeSrc: L,
+                srcIsAnimated: w,
+            } = this.props,
+            { readyState: M, hasMouseOver: P, hasFocus: x } = this.state,
+            k = null != n,
+            U = this.getRatio(),
+            G = (0, s.clamp)(Math.round(p * U), m ?? 0, I ?? 1 / 0),
+            F = (0, s.clamp)(Math.round(E * U), A ?? 0, T ?? 1 / 0),
+            V = v.getConfig({ location: "LazyImage_render" }).enabled,
+            B = {
+                alt: e,
+                readyState: M,
+                onContextMenu: a ?? void 0,
+                zoomable: k,
+                className: c,
+                imageClassName: d,
+                minWidth: m,
+                minHeight: A,
+                mediaLayoutType: this.getType(),
+                limitResponsiveWidth: R,
+                useFullWidth: O,
+                tabIndex: N,
+                width: G,
+                height: F,
+                src: "",
+                placeholder: b,
+                placeholderVersion: D,
+                dataSafeSrc: L,
+                srcIsAnimated: w,
+                children:
+                    null != _
+                        ? (e) => {
+                              let { src: t, size: n, alt: i, mediaLayoutType: r } = e;
+                              return _({ src: t, size: n, alt: i, mediaLayoutType: r });
+                          }
+                        : void 0,
+                onMouseEnter: this.onMouseEnter,
+                onMouseLeave: this.onMouseLeave,
+                onFocus: this.onFocus,
+                onBlur: this.onBlur,
+            };
+        if (1 === B.width && 1 === B.height) return null;
+        switch (
+            ((k || null != S) && (B.onClick = this.onClick), r && (B.original = null != u && "" !== u ? u : B.src), M)
+        ) {
+            case g.Rv1.LOADING:
+                null != t && (B.src = t);
+                break;
+            case g.Rv1.READY:
+                if (C.isAnimated(this.props)) {
+                    B.onMouseLeave = this.onMouseLeave;
+                    let e = (o || P || x) && (null == f || f) && C.visibilityObserver.isVisible(this);
+                    e
+                        ? ((B.src = this.getSrc(U)), (B.renderAccessory = y))
+                        : ((B.src = this.getSrc(U, !h || !o)), (B.renderAccessory = this.renderAccessory)),
+                        null != _ &&
+                            (B.children = (t) => {
+                                let { src: n, size: i, alt: r, mediaLayoutType: s } = t;
+                                return _({ src: n, size: i, animating: e, alt: r, mediaLayoutType: s });
+                            });
+                } else B.src = this.getSrc(U);
+        }
+        return (0, i.jsx)(l._, { disableLoadingSpinner: V, ref: this._imageRef, ...B });
+    }
+}
+let N = (0, u.mj)({
+        name: "2026-03-image-load-metrics",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 0: { enabled: !1 }, 1: { enabled: !1 }, 2: { enabled: !0 } },
+    }),
+    v = (0, u.mj)({
+        name: "2026-02-lazy-load-all-images",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    });

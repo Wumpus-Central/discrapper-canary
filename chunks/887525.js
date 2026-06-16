@@ -1,1 +1,10 @@
-s.d(e,{q:()=>o,r:()=>r});var i=s(128377),n=s(978862);function r(){return(0,n.B)("defaultCurrentScope",()=>new i.H)}function o(){return(0,n.B)("defaultIsolationScope",()=>new i.H)}
+"use strict";
+n.d(t, { q: () => a, r: () => s });
+var i = n(128377),
+    r = n(978862);
+function s() {
+    return (0, r.B)("defaultCurrentScope", () => new i.H());
+}
+function a() {
+    return (0, r.B)("defaultIsolationScope", () => new i.H());
+}

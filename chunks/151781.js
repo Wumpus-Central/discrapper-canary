@@ -1,1 +1,703 @@
-"use strict";n.d(t,{A:()=>V}),n(321073);var i=n(17928),r=n(228366),s=n(495544),a=n(696451),o=n(71393),l=n(287809),u=n(403362),c=n(935208),d=n(735438),_=n(927813),h=n(157347),f=n(551816),p=n(233693),E=n(33851),m=n.n(E),g=n(229527),A=n(316031),I=n(859126);function T(){return{query:"",requireUnusualDmActivity:!1,requireCommunicationDisabled:!1,requireUnusualAccountActivity:!1,requireUsernameQuarantined:!1,selectedRoleIds:new Set,selectedJoinDateOption:{optionId:0,afterDate:null,beforeDate:null},selectedAccountAgeOption:{optionId:0,afterDate:null,beforeDate:null},selectedJoinSourceType:void 0,selectedSourceInviteCode:void 0,selectedSort:void 0}}let S=Object.freeze(T());function y(e,t){return null!=e&&!!e.toLowerCase().includes(t.toLowerCase())}class N{guildId;_searchState;hasDefaultQuery;constructor(e){this.guildId=e,this._searchState=T(),this.hasDefaultQuery=!0}get requiresUsernameMatch(){return this._searchState.query.trim().length>0}reset(){this._searchState=T(),this.hasDefaultQuery=!0}updateSearchState(e){return this._searchState={...this._searchState,...e},this.hasDefaultQuery=m()(this._searchState,S),!0}resetSearchState(){return!this.hasDefaultQuery&&(this._searchState=T(),this.hasDefaultQuery=!0,!0)}getSearchState(){return this._searchState}isMemberIncludedInSearchResults(e){let{query:t,requireUnusualDmActivity:n,requireCommunicationDisabled:i,requireUnusualAccountActivity:r,requireUsernameQuarantined:s,selectedRoleIds:a,selectedJoinDateOption:o,selectedAccountAgeOption:l,selectedSourceInviteCode:u,selectedJoinSourceType:d}=this._searchState;return!(t.length>0&&!function(e,t){if(""===t.trim())return!1;let[n,i]=(0,I.H)(t);for(let t of i)if(e.userId===t)return!0;for(let t of n)if(y(e.nick,t))return!0;if(null==e.user)return!1;let{globalName:r,username:s}=e.user;for(let e of n)if(y(s,e))return!0;for(let e of n)if(y(r,e))return!0;return!1}(e,t)||a.size>0&&!(0!==a.size&&Array.from(a).every(t=>e.roles.includes(t)))||null!=o.afterDate&&e.joinedAtTimestamp<o.afterDate||null!=o.beforeDate&&e.joinedAtTimestamp>o.beforeDate||null!=l.afterDate&&c.default.extractTimestamp(e.userId)<l.afterDate||null!=l.beforeDate&&c.default.extractTimestamp(e.userId)>l.beforeDate||null!=u&&e.sourceInviteCode!==u||null!=d&&e.joinSourceType!==d)&&(!n&&!i&&!r&&!s||!!(n&&e.hasUnusualDmActivity||i&&(0,A.Z)(e)||r&&e.hasUnusualAccountActivity||s&&(0,g.TR)(e)))}}var v=n(230959);let C=3*_.A.Millis.SECOND;class R{guildId;lastRefreshTimestamp=0;lastCursorTimestamp=Date.now();_initialized;_pagination;_search;_members;_lastRefreshTimer=null;_defaultSearchTotalResultsCount;constructor(e){this.guildId=e,this._initialized=!1,this._members=null,this._pagination=null,this._search=null}getSearchIndex(){return null==this._search||this._search.hasDefaultQuery?f.Tu.CURRENT_GUILD_MEMBER:f.Tu.INCLUDED_IN_SEARCH_RESULTS}initialize(){if(this._initialized){this.lastCursorTimestamp=Date.now();return}this._initialized=!0,this._search=new N(this.guildId),this._members=new f.z8(this.guildId),this._pagination=new p.qi(this.guildId,this._members.values(this.getSearchIndex()))}get isInitialized(){return this._initialized}reset(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];this._initialized&&(this._members?.reset(),this._pagination?.reset(),this._search?.reset(),e&&this.initialize())}get searchChunkSize(){return null!=this._pagination&&this._initialized?(0,p.n4)(this._pagination.getPaginationState()):0}getMember(e){return null!=this._members&&this._initialized?this._members.getMemberByUserId(e)??null:null}getMembersByIndex(e){return null!=this._members&&this._initialized?[this._members.values(e),this._members.version]:[[],0]}countMembersByIndex(e){return null!=this._members&&this._initialized?this._members.count(e):0}_checkUpdatesForPaginationUpdate(e,t){return null!=t.isIncludedInSearchResults&&t.isIncludedInSearchResults!==e.isIncludedInSearchResults||null!=t.isCurrentGuildMemberByTimestamp&&t.isCurrentGuildMemberByTimestamp!==e.isCurrentGuildMemberByTimestamp}_getIsIncludedInSearch(e,t){if(null==this._search||this._search.hasDefaultQuery)return[!1,!1];let n={...e,...t},i=this._search.isMemberIncludedInSearchResults(n),r=i!==e.isIncludedInSearchResults;return[i,r]}updatePaginationChunks(){if(null==this._pagination||null==this._members||!this._initialized)return!1;let e=this._members.values(this.getSearchIndex());return this._pagination.updateSortedMembers(e)}removeMember(e){if(null==this._members||!this._initialized||null==this._members.getMemberByUserId(e))return!1;let t=this._members.removeMember(e);return t?this.updatePaginationChunks():t}_rawUpdateMember(e,t){if(null==this._members)return[!1,!1];let n=!1,i=this._members.getMemberByUserId(e);if(null==i){n=!0;let r=a.Ay.getTrueMember(this.guildId,e);if(null==r)return[!1,!1];i=this._members.enhanceNewMember(r,this.getSearchState(),t)}if(null==t.isIncludedInSearchResults){let[e,r]=this._getIsIncludedInSearch(i,t);r&&(n=!0,t.isIncludedInSearchResults=e)}else t.isIncludedInSearchResults!==i.isIncludedInSearchResults&&(n=!0);let r=this._members.updateMember(i,t);return n||(n=this._checkUpdatesForPaginationUpdate(i,t)),[n,r]}isMemberInIndex(e){return null!=this._members&&!!this._initialized&&this._members._membersMap.has(e)}isMemberIncludedInSearchResults(e){if(null==this._members||null==this._search||null==this._pagination||!this._initialized)return!1;if(this._search.hasDefaultQuery)return this._pagination.isMemberInAnyChunk(e);let t=this._members.getMemberByUserId(e);if(null==t){let n=a.Ay.getTrueMember(this.guildId,e);if(null==n)return!1;t=this._members.enhanceNewMember(n,this.getSearchState())}else if(t.isIncludedInSearchResults)return!0;return this._search.isMemberIncludedInSearchResults(t)}updateMember(e,t){if(null==this._members||!this._initialized)return!1;let[n,i]=this._rawUpdateMember(e,t);return n?this.updatePaginationChunks():i}updateClientMembers(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1],n=arguments.length>2&&void 0!==arguments[2]&&arguments[2];if(null==this._members||!this._initialized)return!1;let i=!1,r=!1;for(let s of e){if(null==s.joinedAt)continue;let e=s;if(t&&(e={...e,isIncludedInSearchResults:!0}),n){let t=(0,h.vn)(s.joinedAt);e={...e,isCurrentGuildMemberByTimestamp:t<=this._members.newMemberTimestamp,refreshTimestamp:this.lastRefreshTimestamp}}let[a,o]=this._rawUpdateMember(s.userId,e);i=a||i,r=o||r}return i?this.updatePaginationChunks():r}updateServerMembers(e){if(null==this._members||!this._initialized)return!1;let t=!1,n=!1;for(let i of e){let e=a.Ay.getTrueMember(this.guildId,i.user.id);if(null==e)continue;let[r,s]=this._rawUpdateMember(i.user.id,e);t=r||t,n=s||n}return t?this.updatePaginationChunks():n}updateMembersByMemberIds(e){if(null==this._members||!this._initialized)return!1;let t=e.reduce((e,t)=>{let n=a.Ay.getTrueMember(this.guildId,t);return null!=n&&e.push(n),e},[]);return this.updateClientMembers(t)}updateMembersSort(e){return new Promise(t=>{[...(0,d.cloneDeep)(this.getMembersByIndex(f.Tu.CURRENT_GUILD_MEMBER)[0]),...(0,d.cloneDeep)(this.getMembersByIndex(f.Tu.NEW_GUILD_MEMBER)[0])].forEach(t=>{let n=(0,v.R)(t,e),i=this._search?.isMemberIncludedInSearchResults(t)??!1;this._members?.updateMember(t,{sort:n,isIncludedInSearchResults:i})}),t()})}sortMembersBySelectedSort(e){null!=this._search&&null!=this._members&&this._initialized&&null!=e&&(this.updatePaginationState({sort:e},!0),this.updateMembersSort(e).then(()=>{this.updatePaginationChunks()}))}updateSearchedMembersByMemberIds(e){if(null==this._search||null==this._members||!this._initialized)return!1;let t=e.reduce((e,t)=>{let n=a.Ay.getTrueMember(this.guildId,t);return null!=n&&e.push(n),e},[]);return this.updateClientMembers(t,this._search.requiresUsernameMatch,0!==this.lastRefreshTimestamp)}rebuildAllMembers(){if(null==this._members||!this._initialized)return!1;let e=a.Ay.getMembers(this.guildId);return this.updateClientMembers(e)}_scheduleRefresh(e){this.lastRefreshTimestamp=e,this.lastCursorTimestamp=Date.now(),null!=this._lastRefreshTimer&&clearTimeout(this._lastRefreshTimer),this._lastRefreshTimer=setTimeout(()=>{this._lastRefreshTimer=null,this.lastRefreshTimestamp=0},C)}refreshNewMembersAndSearchResults(){if(null==this._search||null==this._members||!this._initialized)return!1;let e=Number(Date.now());this._scheduleRefresh(e);let t=(0,d.cloneDeep)(this._members.values(f.Tu.NEW_GUILD_MEMBER)),n=!1;for(let i of t)n=this._members.updateMember(i,{isCurrentGuildMemberByTimestamp:!0,refreshTimestamp:e,user:l.default.getUser(i.userId)})||n;this._members.resetNewMemberTimestamp(),this.resetSearchState()&&(n=!1);let[i,r]=this.updatePaginationState({currentPage:1},!1);return r&&(n=!1),n&&this.updatePaginationChunks(),!0}getNewMemberTimestamp(){return null!=this._members&&this._initialized?this._members.newMemberTimestamp:0}updateSearchState(e){if(null==this._members||null==this._search||!this._initialized)return!1;let t=!!this._search.hasDefaultQuery;null!=e.selectedSort&&e.selectedSort!==this._search.getSearchState().selectedSort&&this.sortMembersBySelectedSort(e.selectedSort);let n=this._search.updateSearchState(e);if(this._search.hasDefaultQuery&&t)return this.updatePaginationChunks();let i=(0,d.cloneDeep)(this._members.values(f.Tu.CURRENT_GUILD_MEMBER)),r=t!==this._search.hasDefaultQuery;for(let e of i){if(!e.isCurrentGuildMemberByTimestamp)continue;let t=this._search.isMemberIncludedInSearchResults(e);t!==e.isIncludedInSearchResults&&(r=!0,n=!0,this._members.updateMember(e,{isIncludedInSearchResults:t}))}return r?(this.updatePaginationChunks(),this.updatePaginationState({currentPage:1}),!0):n}getSearchState(){return null!=this._search&&this._initialized?this._search.getSearchState():T()}hasDefaultSearchState(){return null==this._search||!this._initialized||this._search.hasDefaultQuery}resetSearchState(){return null!=this._search&&!!this._initialized&&!!this._search.resetSearchState()&&this.updatePaginationChunks()}getTotalResultsCount(){return null!=this._search&&null!=this._pagination&&this._initialized?this._search.hasDefaultQuery&&null!=this._defaultSearchTotalResultsCount?this._defaultSearchTotalResultsCount:this._pagination.getPaginationState().totalResultsCount:0}updatePaginationState(e){let t=!(arguments.length>1)||void 0===arguments[1]||arguments[1];return null!=this._search&&null!=this._pagination&&this._initialized?(t&&(this.lastRefreshTimestamp=0),this._search.hasDefaultQuery&&null!=e.totalResultsCount&&(this._defaultSearchTotalResultsCount=e.totalResultsCount),this._pagination.updatePaginationState(e)):[!1,!1]}clearPaginationState(){this._pagination?.reset()}getPaginationState(){return null!=this._pagination&&this._initialized?this._pagination.getPaginationState():(0,p.vg)()}getPaginatedMembers(){return null!=this._pagination&&this._initialized?[this._pagination.paginatedMembers,this._pagination.version]:[{},0]}updatePaginationToken(e){return null!=this._pagination&&!!this._initialized&&this._pagination.updatePaginationToken(e)}getElasticSearchPagination(){return null!=this._pagination&&this._initialized?this._pagination.getElasticSearchPagination():null}removeRoleFromSearchState(e){let t=new Set(this.getSearchState().selectedRoleIds);return t.delete(e),this.updateSearchState({selectedRoleIds:t})}}var O=n(70738),b=n(166233),D=n(11541),L=n(652215);let w=!1,M={};function P(e){return null==M[e]&&(M[e]=new R(e)),M[e]}function x(e){let t=arguments.length>1&&void 0!==arguments[1]&&arguments[1];P(e).reset(t)}function k(){return!1}function U(e){let t=!1,n=P(e.guildId);return"GUILD_ROLE_DELETE"===e.type&&(t=n.removeRoleFromSearchState(e.roleId)),n.rebuildAllMembers()||t}function G(e){let{guildId:t,userId:n}=e;return P(t).updateMembersByMemberIds([n])}class F extends i.Ay.Store{static displayName="MemberSafetyStore";initialize(){this.waitFor(s.default,a.Ay,o.A,l.default)}isInitialized(e){return P(e).isInitialized}getMembersByGuildId(e,t){return P(e).getMembersByIndex(t)}getMembersCountByGuildId(e,t){return P(e).countMembersByIndex(t)}getEstimatedMemberSearchCountByGuildId(e){let t=P(e),n=t.searchChunkSize,i=t.countMembersByIndex(t.getSearchIndex()),r=t.getTotalResultsCount();return null==r||r<n?i:r}getKnownMemberSearchCountByGuildId(e){let t=P(e);return t.countMembersByIndex(t.getSearchIndex())}getCurrentMemberSearchResultsByGuildId(e){let t=P(e);return t.getMembersByIndex(t.getSearchIndex())}getSearchStateByGuildId(e){return P(e).getSearchState()}hasDefaultSearchStateByGuildId(e){return P(e).hasDefaultSearchState()}getPagedMembersByGuildId(e){return P(e).getPaginatedMembers()}getPaginationStateByGuildId(e){return P(e).getPaginationState()}getElasticSearchPaginationByGuildId(e){return P(e).getElasticSearchPagination()}getEnhancedMember(e,t){return P(e).getMember(t)}getNewMemberTimestamp(e){return P(e).getNewMemberTimestamp()}getLastRefreshTimestamp(e){return P(e).lastRefreshTimestamp}getLastCursorTimestamp(e){return P(e).lastCursorTimestamp}}let V=new F(r.h,{CONNECTION_OPEN:function(e){let t;return w?w=!1:function(){let e=arguments.length>0&&void 0!==arguments[0]&&arguments[0];for(let t in M)x(t,e)}(!0),t=!1,e.guilds.forEach(e=>{let{id:n,members:i}=e;t=P(n).updateServerMembers(i)||t}),t},CONNECTION_OPEN_SUPPLEMENTAL:function(e){let t;return t=!1,e.guilds.forEach(e=>{let{id:n,activity_instances:i}=e,r=P(n),s=[];i?.forEach(e=>{e.participants?.forEach(e=>{(0,u.Vq)(e.member)&&s.push(e.member)})}),t=r.updateServerMembers(s)||t}),t},LOCAL_MESSAGES_LOADED:function(e){let{guildId:t,members:n}=e;if(null==t||null==o.A.getGuild(t))return!1;w=!0;let i=P(t),r=[];for(let e of n)null==i.getMember(e.userId)&&r.push(e);return r.length>0&&i.updateClientMembers(r)},CACHE_LOADED:function(e){let{guildMembers:t}=e,n=!1;return w=!0,c.default.entries(t).forEach(e=>{let[t,i]=e;n=P(t).updateClientMembers(Object.values(i))||n}),n},PASSIVE_UPDATE_V2:function(e){let{members:t,guildId:n}=e;return t.length>0&&P(n).updateServerMembers(t)},GUILD_CREATE:function(e){let{guild:t}=e,n=P(t.id);x(t.id,n.isInitialized)},GUILD_DELETE:function(e){let{guild:{id:t}}=e;x(t)},GUILD_MEMBERS_CHUNK_BATCH:function(e){let{chunks:t}=e,n=!1;for(let e of t)n=P(e.guildId).updateServerMembers(e.members)||n;return n},GUILD_MEMBER_ADD:k,GUILD_MEMBER_UPDATE:k,GUILD_MEMBER_UPDATE_LOCAL:function(e){let{guildId:t}=e,n=s.default.getId();return P(t).updateMembersByMemberIds([n])},GUILD_MEMBER_REMOVE:function(e){let{guildId:t,user:n}=e;return P(t).removeMember(n.id)},GUILD_ROLE_UPDATE:U,GUILD_ROLE_DELETE:U,GUILD_MEMBER_PROFILE_UPDATE:function(e){let{guildId:t,guildMember:n}=e;return P(t).updateMembersByMemberIds([n.user.id])},GUILD_ROLE_MEMBER_REMOVE:G,GUILD_ROLE_MEMBER_ADD:G,THREAD_MEMBER_LIST_UPDATE:function(e){let{guildId:t,members:n}=e;if(null==n||0===n.length)return!1;let i=P(t),r=n.reduce((e,t)=>{if(null!=t.member){let n=t.member.user.id;e.push(n)}return e},[]);return i.updateMembersByMemberIds(r)},THREAD_MEMBERS_UPDATE:function(e){let{guildId:t,addedMembers:n}=e;if(null==n||0===n.length)return!1;let i=P(t),r=n.reduce((e,t)=>{let n=t.userId;return e.push(n),e},[]);return i.updateMembersByMemberIds(r)},LOAD_ARCHIVED_THREADS_SUCCESS:function(e){let{guildId:t,members:n}=e;if(null==n||0===n.length)return!1;let i=P(t),r=n.reduce((e,t)=>{let n=t.userId;return e.push(n),e},[]);return i.updateMembersByMemberIds(r)},LOAD_FORUM_POSTS:function(e){let{guildId:t,threads:n}=e,i=Object.values(n);if(0===i.length)return!1;let r=P(t),s=i.reduce((e,t)=>{if(null!=t.owner){let n=t.owner.user.id;e.push(n)}return e},[]);return r.updateMembersByMemberIds(s)},INITIALIZE_MEMBER_SAFETY_STORE:function(e){let{guildId:t}=e;return P(t).initialize()},MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH:function(e){let{guildId:t}=e;return P(t).refreshNewMembersAndSearchResults()},MEMBER_SAFETY_PAGINATION_UPDATE:function(e){let{guildId:t,pagination:n}=e,[i]=P(t).updatePaginationState(n);return i},MEMBER_SAFETY_PAGINATION_TOKEN_UPDATE:function(e){let{guildId:t,continuationToken:n}=e;return P(t).updatePaginationToken(n)},MEMBER_SAFETY_SEARCH_STATE_UPDATE:function(e){let{guildId:t,searchState:n}=e;return P(t).updateSearchState(n)},FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS:function(e){let{guildId:t,memberSupplementals:n}=e,i=(0,b.Ob)(t,n);return i&&P(t).updateMembersByMemberIds(n.map(e=>e.userId)),i},MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS:function(e){let t,n,{guildId:i,members:r,total_result_count:s}=e,a=P(i),{memberIds:o,memberSupplementals:l}=r.reduce((e,t)=>{let{member:n,source_invite_code:i,join_source_type:r,join_source_application_id:s,join_source_channel_id:a,inviter_id:o}=t,l=n.user;return e.memberIds.push(l.id),e.memberSupplementals.push({userId:l.id,sourceInviteCode:i,joinSourceType:r,joinSourceApplicationId:s,joinSourceChannelId:a,inviterId:o}),e},{memberIds:[],memberSupplementals:[]}),u=(0,b.Ob)(i,l);(0,D.uY)(i,o);let c=a.updateSearchedMembersByMemberIds(o);r.length>0&&(t=r[0],n=r[r.length-1]);let[d]=a.updatePaginationState({totalResultsCount:s,elasticSearchCursor:{before:(0,O.vf)({joinedAt:t?.member?.joined_at,userId:t?.member?.user.id??L.dJq}),after:(0,O.vf)({joinedAt:n?.member?.joined_at,userId:n?.member?.user.id??L.dJq})}},!1);return u||c||d},MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH:function(e){let{guildId:t,userIds:n}=e;return P(t).updateMembersByMemberIds(n)}})
+"use strict";
+n.d(t, { A: () => V }), n(321073);
+var i = n(17928),
+    r = n(228366),
+    s = n(495544),
+    a = n(696451),
+    o = n(71393),
+    l = n(287809),
+    u = n(403362),
+    c = n(935208),
+    d = n(735438),
+    _ = n(927813),
+    h = n(157347),
+    f = n(551816),
+    p = n(233693),
+    E = n(33851),
+    m = n.n(E),
+    g = n(229527),
+    A = n(316031),
+    I = n(859126);
+function T() {
+    return {
+        query: "",
+        requireUnusualDmActivity: !1,
+        requireCommunicationDisabled: !1,
+        requireUnusualAccountActivity: !1,
+        requireUsernameQuarantined: !1,
+        selectedRoleIds: new Set(),
+        selectedJoinDateOption: { optionId: 0, afterDate: null, beforeDate: null },
+        selectedAccountAgeOption: { optionId: 0, afterDate: null, beforeDate: null },
+        selectedJoinSourceType: void 0,
+        selectedSourceInviteCode: void 0,
+        selectedSort: void 0,
+    };
+}
+let S = Object.freeze(T());
+function y(e, t) {
+    return null != e && !!e.toLowerCase().includes(t.toLowerCase());
+}
+class C {
+    guildId;
+    _searchState;
+    hasDefaultQuery;
+    constructor(e) {
+        (this.guildId = e), (this._searchState = T()), (this.hasDefaultQuery = !0);
+    }
+    get requiresUsernameMatch() {
+        return this._searchState.query.trim().length > 0;
+    }
+    reset() {
+        (this._searchState = T()), (this.hasDefaultQuery = !0);
+    }
+    updateSearchState(e) {
+        return (
+            (this._searchState = { ...this._searchState, ...e }), (this.hasDefaultQuery = m()(this._searchState, S)), !0
+        );
+    }
+    resetSearchState() {
+        return !this.hasDefaultQuery && ((this._searchState = T()), (this.hasDefaultQuery = !0), !0);
+    }
+    getSearchState() {
+        return this._searchState;
+    }
+    isMemberIncludedInSearchResults(e) {
+        let {
+            query: t,
+            requireUnusualDmActivity: n,
+            requireCommunicationDisabled: i,
+            requireUnusualAccountActivity: r,
+            requireUsernameQuarantined: s,
+            selectedRoleIds: a,
+            selectedJoinDateOption: o,
+            selectedAccountAgeOption: l,
+            selectedSourceInviteCode: u,
+            selectedJoinSourceType: d,
+        } = this._searchState;
+        return (
+            !(
+                (t.length > 0 &&
+                    !(function (e, t) {
+                        if ("" === t.trim()) return !1;
+                        let [n, i] = (0, I.H)(t);
+                        for (let t of i) if (e.userId === t) return !0;
+                        for (let t of n) if (y(e.nick, t)) return !0;
+                        if (null == e.user) return !1;
+                        let { globalName: r, username: s } = e.user;
+                        for (let e of n) if (y(s, e)) return !0;
+                        for (let e of n) if (y(r, e)) return !0;
+                        return !1;
+                    })(e, t)) ||
+                (a.size > 0 && !(0 !== a.size && Array.from(a).every((t) => e.roles.includes(t)))) ||
+                (null != o.afterDate && e.joinedAtTimestamp < o.afterDate) ||
+                (null != o.beforeDate && e.joinedAtTimestamp > o.beforeDate) ||
+                (null != l.afterDate && c.default.extractTimestamp(e.userId) < l.afterDate) ||
+                (null != l.beforeDate && c.default.extractTimestamp(e.userId) > l.beforeDate) ||
+                (null != u && e.sourceInviteCode !== u) ||
+                (null != d && e.joinSourceType !== d)
+            ) &&
+            ((!n && !i && !r && !s) ||
+                !!(
+                    (n && e.hasUnusualDmActivity) ||
+                    (i && (0, A.Z)(e)) ||
+                    (r && e.hasUnusualAccountActivity) ||
+                    (s && (0, g.TR)(e))
+                ))
+        );
+    }
+}
+var N = n(230959);
+let v = 3 * _.A.Millis.SECOND;
+class R {
+    guildId;
+    lastRefreshTimestamp = 0;
+    lastCursorTimestamp = Date.now();
+    _initialized;
+    _pagination;
+    _search;
+    _members;
+    _lastRefreshTimer = null;
+    _defaultSearchTotalResultsCount;
+    constructor(e) {
+        (this.guildId = e),
+            (this._initialized = !1),
+            (this._members = null),
+            (this._pagination = null),
+            (this._search = null);
+    }
+    getSearchIndex() {
+        return null == this._search || this._search.hasDefaultQuery
+            ? f.Tu.CURRENT_GUILD_MEMBER
+            : f.Tu.INCLUDED_IN_SEARCH_RESULTS;
+    }
+    initialize() {
+        if (this._initialized) {
+            this.lastCursorTimestamp = Date.now();
+            return;
+        }
+        (this._initialized = !0),
+            (this._search = new C(this.guildId)),
+            (this._members = new f.z8(this.guildId)),
+            (this._pagination = new p.qi(this.guildId, this._members.values(this.getSearchIndex())));
+    }
+    get isInitialized() {
+        return this._initialized;
+    }
+    reset() {
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        this._initialized &&
+            (this._members?.reset(), this._pagination?.reset(), this._search?.reset(), e && this.initialize());
+    }
+    get searchChunkSize() {
+        return null != this._pagination && this._initialized ? (0, p.n4)(this._pagination.getPaginationState()) : 0;
+    }
+    getMember(e) {
+        return null != this._members && this._initialized ? (this._members.getMemberByUserId(e) ?? null) : null;
+    }
+    getMembersByIndex(e) {
+        return null != this._members && this._initialized ? [this._members.values(e), this._members.version] : [[], 0];
+    }
+    countMembersByIndex(e) {
+        return null != this._members && this._initialized ? this._members.count(e) : 0;
+    }
+    _checkUpdatesForPaginationUpdate(e, t) {
+        return (
+            (null != t.isIncludedInSearchResults && t.isIncludedInSearchResults !== e.isIncludedInSearchResults) ||
+            (null != t.isCurrentGuildMemberByTimestamp &&
+                t.isCurrentGuildMemberByTimestamp !== e.isCurrentGuildMemberByTimestamp)
+        );
+    }
+    _getIsIncludedInSearch(e, t) {
+        if (null == this._search || this._search.hasDefaultQuery) return [!1, !1];
+        let n = { ...e, ...t },
+            i = this._search.isMemberIncludedInSearchResults(n),
+            r = i !== e.isIncludedInSearchResults;
+        return [i, r];
+    }
+    updatePaginationChunks() {
+        if (null == this._pagination || null == this._members || !this._initialized) return !1;
+        let e = this._members.values(this.getSearchIndex());
+        return this._pagination.updateSortedMembers(e);
+    }
+    removeMember(e) {
+        if (null == this._members || !this._initialized || null == this._members.getMemberByUserId(e)) return !1;
+        let t = this._members.removeMember(e);
+        return t ? this.updatePaginationChunks() : t;
+    }
+    _rawUpdateMember(e, t) {
+        if (null == this._members) return [!1, !1];
+        let n = !1,
+            i = this._members.getMemberByUserId(e);
+        if (null == i) {
+            n = !0;
+            let r = a.Ay.getTrueMember(this.guildId, e);
+            if (null == r) return [!1, !1];
+            i = this._members.enhanceNewMember(r, this.getSearchState(), t);
+        }
+        if (null == t.isIncludedInSearchResults) {
+            let [e, r] = this._getIsIncludedInSearch(i, t);
+            r && ((n = !0), (t.isIncludedInSearchResults = e));
+        } else t.isIncludedInSearchResults !== i.isIncludedInSearchResults && (n = !0);
+        let r = this._members.updateMember(i, t);
+        return n || (n = this._checkUpdatesForPaginationUpdate(i, t)), [n, r];
+    }
+    isMemberInIndex(e) {
+        return null != this._members && !!this._initialized && this._members._membersMap.has(e);
+    }
+    isMemberIncludedInSearchResults(e) {
+        if (null == this._members || null == this._search || null == this._pagination || !this._initialized) return !1;
+        if (this._search.hasDefaultQuery) return this._pagination.isMemberInAnyChunk(e);
+        let t = this._members.getMemberByUserId(e);
+        if (null == t) {
+            let n = a.Ay.getTrueMember(this.guildId, e);
+            if (null == n) return !1;
+            t = this._members.enhanceNewMember(n, this.getSearchState());
+        } else if (t.isIncludedInSearchResults) return !0;
+        return this._search.isMemberIncludedInSearchResults(t);
+    }
+    updateMember(e, t) {
+        if (null == this._members || !this._initialized) return !1;
+        let [n, i] = this._rawUpdateMember(e, t);
+        return n ? this.updatePaginationChunks() : i;
+    }
+    updateClientMembers(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+        if (null == this._members || !this._initialized) return !1;
+        let i = !1,
+            r = !1;
+        for (let s of e) {
+            if (null == s.joinedAt) continue;
+            let e = s;
+            if ((t && (e = { ...e, isIncludedInSearchResults: !0 }), n)) {
+                let t = (0, h.vn)(s.joinedAt);
+                e = {
+                    ...e,
+                    isCurrentGuildMemberByTimestamp: t <= this._members.newMemberTimestamp,
+                    refreshTimestamp: this.lastRefreshTimestamp,
+                };
+            }
+            let [a, o] = this._rawUpdateMember(s.userId, e);
+            (i = a || i), (r = o || r);
+        }
+        return i ? this.updatePaginationChunks() : r;
+    }
+    updateServerMembers(e) {
+        if (null == this._members || !this._initialized) return !1;
+        let t = !1,
+            n = !1;
+        for (let i of e) {
+            let e = a.Ay.getTrueMember(this.guildId, i.user.id);
+            if (null == e) continue;
+            let [r, s] = this._rawUpdateMember(i.user.id, e);
+            (t = r || t), (n = s || n);
+        }
+        return t ? this.updatePaginationChunks() : n;
+    }
+    updateMembersByMemberIds(e) {
+        if (null == this._members || !this._initialized) return !1;
+        let t = e.reduce((e, t) => {
+            let n = a.Ay.getTrueMember(this.guildId, t);
+            return null != n && e.push(n), e;
+        }, []);
+        return this.updateClientMembers(t);
+    }
+    updateMembersSort(e) {
+        return new Promise((t) => {
+            [
+                ...(0, d.cloneDeep)(this.getMembersByIndex(f.Tu.CURRENT_GUILD_MEMBER)[0]),
+                ...(0, d.cloneDeep)(this.getMembersByIndex(f.Tu.NEW_GUILD_MEMBER)[0]),
+            ].forEach((t) => {
+                let n = (0, N.R)(t, e),
+                    i = this._search?.isMemberIncludedInSearchResults(t) ?? !1;
+                this._members?.updateMember(t, { sort: n, isIncludedInSearchResults: i });
+            }),
+                t();
+        });
+    }
+    sortMembersBySelectedSort(e) {
+        null != this._search &&
+            null != this._members &&
+            this._initialized &&
+            null != e &&
+            (this.updatePaginationState({ sort: e }, !0),
+            this.updateMembersSort(e).then(() => {
+                this.updatePaginationChunks();
+            }));
+    }
+    updateSearchedMembersByMemberIds(e) {
+        if (null == this._search || null == this._members || !this._initialized) return !1;
+        let t = e.reduce((e, t) => {
+            let n = a.Ay.getTrueMember(this.guildId, t);
+            return null != n && e.push(n), e;
+        }, []);
+        return this.updateClientMembers(t, this._search.requiresUsernameMatch, 0 !== this.lastRefreshTimestamp);
+    }
+    rebuildAllMembers() {
+        if (null == this._members || !this._initialized) return !1;
+        let e = a.Ay.getMembers(this.guildId);
+        return this.updateClientMembers(e);
+    }
+    _scheduleRefresh(e) {
+        (this.lastRefreshTimestamp = e),
+            (this.lastCursorTimestamp = Date.now()),
+            null != this._lastRefreshTimer && clearTimeout(this._lastRefreshTimer),
+            (this._lastRefreshTimer = setTimeout(() => {
+                (this._lastRefreshTimer = null), (this.lastRefreshTimestamp = 0);
+            }, v));
+    }
+    refreshNewMembersAndSearchResults() {
+        if (null == this._search || null == this._members || !this._initialized) return !1;
+        let e = Number(Date.now());
+        this._scheduleRefresh(e);
+        let t = (0, d.cloneDeep)(this._members.values(f.Tu.NEW_GUILD_MEMBER)),
+            n = !1;
+        for (let i of t)
+            n =
+                this._members.updateMember(i, {
+                    isCurrentGuildMemberByTimestamp: !0,
+                    refreshTimestamp: e,
+                    user: l.default.getUser(i.userId),
+                }) || n;
+        this._members.resetNewMemberTimestamp(), this.resetSearchState() && (n = !1);
+        let [i, r] = this.updatePaginationState({ currentPage: 1 }, !1);
+        return r && (n = !1), n && this.updatePaginationChunks(), !0;
+    }
+    getNewMemberTimestamp() {
+        return null != this._members && this._initialized ? this._members.newMemberTimestamp : 0;
+    }
+    updateSearchState(e) {
+        if (null == this._members || null == this._search || !this._initialized) return !1;
+        let t = !!this._search.hasDefaultQuery;
+        null != e.selectedSort &&
+            e.selectedSort !== this._search.getSearchState().selectedSort &&
+            this.sortMembersBySelectedSort(e.selectedSort);
+        let n = this._search.updateSearchState(e);
+        if (this._search.hasDefaultQuery && t) return this.updatePaginationChunks();
+        let i = (0, d.cloneDeep)(this._members.values(f.Tu.CURRENT_GUILD_MEMBER)),
+            r = t !== this._search.hasDefaultQuery;
+        for (let e of i) {
+            if (!e.isCurrentGuildMemberByTimestamp) continue;
+            let t = this._search.isMemberIncludedInSearchResults(e);
+            t !== e.isIncludedInSearchResults &&
+                ((r = !0), (n = !0), this._members.updateMember(e, { isIncludedInSearchResults: t }));
+        }
+        return r ? (this.updatePaginationChunks(), this.updatePaginationState({ currentPage: 1 }), !0) : n;
+    }
+    getSearchState() {
+        return null != this._search && this._initialized ? this._search.getSearchState() : T();
+    }
+    hasDefaultSearchState() {
+        return null == this._search || !this._initialized || this._search.hasDefaultQuery;
+    }
+    resetSearchState() {
+        return (
+            null != this._search &&
+            !!this._initialized &&
+            !!this._search.resetSearchState() &&
+            this.updatePaginationChunks()
+        );
+    }
+    getTotalResultsCount() {
+        return null != this._search && null != this._pagination && this._initialized
+            ? this._search.hasDefaultQuery && null != this._defaultSearchTotalResultsCount
+                ? this._defaultSearchTotalResultsCount
+                : this._pagination.getPaginationState().totalResultsCount
+            : 0;
+    }
+    updatePaginationState(e) {
+        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+        return null != this._search && null != this._pagination && this._initialized
+            ? (t && (this.lastRefreshTimestamp = 0),
+              this._search.hasDefaultQuery &&
+                  null != e.totalResultsCount &&
+                  (this._defaultSearchTotalResultsCount = e.totalResultsCount),
+              this._pagination.updatePaginationState(e))
+            : [!1, !1];
+    }
+    clearPaginationState() {
+        this._pagination?.reset();
+    }
+    getPaginationState() {
+        return null != this._pagination && this._initialized ? this._pagination.getPaginationState() : (0, p.vg)();
+    }
+    getPaginatedMembers() {
+        return null != this._pagination && this._initialized
+            ? [this._pagination.paginatedMembers, this._pagination.version]
+            : [{}, 0];
+    }
+    updatePaginationToken(e) {
+        return null != this._pagination && !!this._initialized && this._pagination.updatePaginationToken(e);
+    }
+    getElasticSearchPagination() {
+        return null != this._pagination && this._initialized ? this._pagination.getElasticSearchPagination() : null;
+    }
+    removeRoleFromSearchState(e) {
+        let t = new Set(this.getSearchState().selectedRoleIds);
+        return t.delete(e), this.updateSearchState({ selectedRoleIds: t });
+    }
+}
+var O = n(70738),
+    b = n(166233),
+    D = n(11541),
+    L = n(652215);
+let w = !1,
+    M = {};
+function P(e) {
+    return null == M[e] && (M[e] = new R(e)), M[e];
+}
+function x(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    P(e).reset(t);
+}
+function k() {
+    return !1;
+}
+function U(e) {
+    let t = !1,
+        n = P(e.guildId);
+    return "GUILD_ROLE_DELETE" === e.type && (t = n.removeRoleFromSearchState(e.roleId)), n.rebuildAllMembers() || t;
+}
+function G(e) {
+    let { guildId: t, userId: n } = e;
+    return P(t).updateMembersByMemberIds([n]);
+}
+class F extends i.Ay.Store {
+    static displayName = "MemberSafetyStore";
+    initialize() {
+        this.waitFor(s.default, a.Ay, o.A, l.default);
+    }
+    isInitialized(e) {
+        return P(e).isInitialized;
+    }
+    getMembersByGuildId(e, t) {
+        return P(e).getMembersByIndex(t);
+    }
+    getMembersCountByGuildId(e, t) {
+        return P(e).countMembersByIndex(t);
+    }
+    getEstimatedMemberSearchCountByGuildId(e) {
+        let t = P(e),
+            n = t.searchChunkSize,
+            i = t.countMembersByIndex(t.getSearchIndex()),
+            r = t.getTotalResultsCount();
+        return null == r || r < n ? i : r;
+    }
+    getKnownMemberSearchCountByGuildId(e) {
+        let t = P(e);
+        return t.countMembersByIndex(t.getSearchIndex());
+    }
+    getCurrentMemberSearchResultsByGuildId(e) {
+        let t = P(e);
+        return t.getMembersByIndex(t.getSearchIndex());
+    }
+    getSearchStateByGuildId(e) {
+        return P(e).getSearchState();
+    }
+    hasDefaultSearchStateByGuildId(e) {
+        return P(e).hasDefaultSearchState();
+    }
+    getPagedMembersByGuildId(e) {
+        return P(e).getPaginatedMembers();
+    }
+    getPaginationStateByGuildId(e) {
+        return P(e).getPaginationState();
+    }
+    getElasticSearchPaginationByGuildId(e) {
+        return P(e).getElasticSearchPagination();
+    }
+    getEnhancedMember(e, t) {
+        return P(e).getMember(t);
+    }
+    getNewMemberTimestamp(e) {
+        return P(e).getNewMemberTimestamp();
+    }
+    getLastRefreshTimestamp(e) {
+        return P(e).lastRefreshTimestamp;
+    }
+    getLastCursorTimestamp(e) {
+        return P(e).lastCursorTimestamp;
+    }
+}
+let V = new F(r.h, {
+    CONNECTION_OPEN: function (e) {
+        let t;
+        return (
+            w
+                ? (w = !1)
+                : (function () {
+                      let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                      for (let t in M) x(t, e);
+                  })(!0),
+            (t = !1),
+            e.guilds.forEach((e) => {
+                let { id: n, members: i } = e;
+                t = P(n).updateServerMembers(i) || t;
+            }),
+            t
+        );
+    },
+    CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
+        let t;
+        return (
+            (t = !1),
+            e.guilds.forEach((e) => {
+                let { id: n, activity_instances: i } = e,
+                    r = P(n),
+                    s = [];
+                i?.forEach((e) => {
+                    e.participants?.forEach((e) => {
+                        (0, u.Vq)(e.member) && s.push(e.member);
+                    });
+                }),
+                    (t = r.updateServerMembers(s) || t);
+            }),
+            t
+        );
+    },
+    LOCAL_MESSAGES_LOADED: function (e) {
+        let { guildId: t, members: n } = e;
+        if (null == t || null == o.A.getGuild(t)) return !1;
+        w = !0;
+        let i = P(t),
+            r = [];
+        for (let e of n) null == i.getMember(e.userId) && r.push(e);
+        return r.length > 0 && i.updateClientMembers(r);
+    },
+    CACHE_LOADED: function (e) {
+        let { guildMembers: t } = e,
+            n = !1;
+        return (
+            (w = !0),
+            c.default.entries(t).forEach((e) => {
+                let [t, i] = e;
+                n = P(t).updateClientMembers(Object.values(i)) || n;
+            }),
+            n
+        );
+    },
+    PASSIVE_UPDATE_V2: function (e) {
+        let { members: t, guildId: n } = e;
+        return t.length > 0 && P(n).updateServerMembers(t);
+    },
+    GUILD_CREATE: function (e) {
+        let { guild: t } = e,
+            n = P(t.id);
+        x(t.id, n.isInitialized);
+    },
+    GUILD_DELETE: function (e) {
+        let {
+            guild: { id: t },
+        } = e;
+        x(t);
+    },
+    GUILD_MEMBERS_CHUNK_BATCH: function (e) {
+        let { chunks: t } = e,
+            n = !1;
+        for (let e of t) n = P(e.guildId).updateServerMembers(e.members) || n;
+        return n;
+    },
+    GUILD_MEMBER_ADD: k,
+    GUILD_MEMBER_UPDATE: k,
+    GUILD_MEMBER_UPDATE_LOCAL: function (e) {
+        let { guildId: t } = e,
+            n = s.default.getId();
+        return P(t).updateMembersByMemberIds([n]);
+    },
+    GUILD_MEMBER_REMOVE: function (e) {
+        let { guildId: t, user: n } = e;
+        return P(t).removeMember(n.id);
+    },
+    GUILD_ROLE_UPDATE: U,
+    GUILD_ROLE_DELETE: U,
+    GUILD_MEMBER_PROFILE_UPDATE: function (e) {
+        let { guildId: t, guildMember: n } = e;
+        return P(t).updateMembersByMemberIds([n.user.id]);
+    },
+    GUILD_ROLE_MEMBER_REMOVE: G,
+    GUILD_ROLE_MEMBER_ADD: G,
+    THREAD_MEMBER_LIST_UPDATE: function (e) {
+        let { guildId: t, members: n } = e;
+        if (null == n || 0 === n.length) return !1;
+        let i = P(t),
+            r = n.reduce((e, t) => {
+                if (null != t.member) {
+                    let n = t.member.user.id;
+                    e.push(n);
+                }
+                return e;
+            }, []);
+        return i.updateMembersByMemberIds(r);
+    },
+    THREAD_MEMBERS_UPDATE: function (e) {
+        let { guildId: t, addedMembers: n } = e;
+        if (null == n || 0 === n.length) return !1;
+        let i = P(t),
+            r = n.reduce((e, t) => {
+                let n = t.userId;
+                return e.push(n), e;
+            }, []);
+        return i.updateMembersByMemberIds(r);
+    },
+    LOAD_ARCHIVED_THREADS_SUCCESS: function (e) {
+        let { guildId: t, members: n } = e;
+        if (null == n || 0 === n.length) return !1;
+        let i = P(t),
+            r = n.reduce((e, t) => {
+                let n = t.userId;
+                return e.push(n), e;
+            }, []);
+        return i.updateMembersByMemberIds(r);
+    },
+    LOAD_FORUM_POSTS: function (e) {
+        let { guildId: t, threads: n } = e,
+            i = Object.values(n);
+        if (0 === i.length) return !1;
+        let r = P(t),
+            s = i.reduce((e, t) => {
+                if (null != t.owner) {
+                    let n = t.owner.user.id;
+                    e.push(n);
+                }
+                return e;
+            }, []);
+        return r.updateMembersByMemberIds(s);
+    },
+    INITIALIZE_MEMBER_SAFETY_STORE: function (e) {
+        let { guildId: t } = e;
+        return P(t).initialize();
+    },
+    MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH: function (e) {
+        let { guildId: t } = e;
+        return P(t).refreshNewMembersAndSearchResults();
+    },
+    MEMBER_SAFETY_PAGINATION_UPDATE: function (e) {
+        let { guildId: t, pagination: n } = e,
+            [i] = P(t).updatePaginationState(n);
+        return i;
+    },
+    MEMBER_SAFETY_PAGINATION_TOKEN_UPDATE: function (e) {
+        let { guildId: t, continuationToken: n } = e;
+        return P(t).updatePaginationToken(n);
+    },
+    MEMBER_SAFETY_SEARCH_STATE_UPDATE: function (e) {
+        let { guildId: t, searchState: n } = e;
+        return P(t).updateSearchState(n);
+    },
+    FETCH_GUILD_MEMBER_SUPPLEMENTAL_SUCCESS: function (e) {
+        let { guildId: t, memberSupplementals: n } = e,
+            i = (0, b.Ob)(t, n);
+        return i && P(t).updateMembersByMemberIds(n.map((e) => e.userId)), i;
+    },
+    MEMBER_SAFETY_GUILD_MEMBER_SEARCH_SUCCESS: function (e) {
+        let t,
+            n,
+            { guildId: i, members: r, total_result_count: s } = e,
+            a = P(i),
+            { memberIds: o, memberSupplementals: l } = r.reduce(
+                (e, t) => {
+                    let {
+                            member: n,
+                            source_invite_code: i,
+                            join_source_type: r,
+                            join_source_application_id: s,
+                            join_source_channel_id: a,
+                            inviter_id: o,
+                        } = t,
+                        l = n.user;
+                    return (
+                        e.memberIds.push(l.id),
+                        e.memberSupplementals.push({
+                            userId: l.id,
+                            sourceInviteCode: i,
+                            joinSourceType: r,
+                            joinSourceApplicationId: s,
+                            joinSourceChannelId: a,
+                            inviterId: o,
+                        }),
+                        e
+                    );
+                },
+                { memberIds: [], memberSupplementals: [] },
+            ),
+            u = (0, b.Ob)(i, l);
+        (0, D.uY)(i, o);
+        let c = a.updateSearchedMembersByMemberIds(o);
+        r.length > 0 && ((t = r[0]), (n = r[r.length - 1]));
+        let [d] = a.updatePaginationState(
+            {
+                totalResultsCount: s,
+                elasticSearchCursor: {
+                    before: (0, O.vf)({ joinedAt: t?.member?.joined_at, userId: t?.member?.user.id ?? L.dJq }),
+                    after: (0, O.vf)({ joinedAt: n?.member?.joined_at, userId: n?.member?.user.id ?? L.dJq }),
+                },
+            },
+            !1,
+        );
+        return u || c || d;
+    },
+    MEMBER_SAFETY_GUILD_MEMBER_UPDATE_BATCH: function (e) {
+        let { guildId: t, userIds: n } = e;
+        return P(t).updateMembersByMemberIds(n);
+    },
+});

@@ -1,1 +1,11 @@
-"use strict";var i=n(439619),r=n(906046),s=n(741623),a=n(32561),o=i("%Reflect.apply%",!0)||r("Function.prototype.apply");e.exports=function(e,t){var n=arguments.length>2?arguments[2]:[];if(!a(n))throw new s("Assertion failed: optional `argumentsList`, if provided, must be a List");return o(e,t,n)}
+"use strict";
+var i = n(439619),
+    r = n(906046),
+    s = n(741623),
+    a = n(32561),
+    o = i("%Reflect.apply%", !0) || r("Function.prototype.apply");
+e.exports = function (e, t) {
+    var n = arguments.length > 2 ? arguments[2] : [];
+    if (!a(n)) throw new s("Assertion failed: optional `argumentsList`, if provided, must be a List");
+    return o(e, t, n);
+};

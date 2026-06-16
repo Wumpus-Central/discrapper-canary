@@ -1,1 +1,158 @@
-l.d(t,{Ii:()=>S,Ut:()=>p,WS:()=>T,cR:()=>C,tG:()=>A,u0:()=>g});var n=l(64700),r=l(835245),s=l(323889),i=l(345353),u=l(69114),a=l(174459),o=l(723702),d=l(507107),c=l(710969),E=l(561844),v=l(590202),_=l(971649),f=l(823784),m=l(652215);function g(){let e=(0,_.vU)();return n.useCallback(t=>{(0,E.av)({...t,properties:{...t.properties,impression_id:e?.getId()}})},[e])}function p(){let e=g();return n.useCallback(t=>{let{questId:l,questContent:n,questContentCTA:s,questContentPosition:a,questContentRowIndex:d,trackGuildAndChannelMetadata:E,sourceQuestContent:_}=t,g=(0,c.L4)(_),p=(0,c.Gp)(_,l);(0,i.N)((0,v.jO)(n)).then(t=>{e({questId:l,event:m.HAw.QUEST_CONTENT_CLICKED,properties:{...(0,v.fF)(n,a,d),...(0,u.A)(),cta_name:s,click_id:(0,r.A)(),apple_advertising_id:null!=t&&(0,o.isIOS)()?t.advertisingId:null,android_advertising_id:null!=t&&(0,o.isAndroid)()?t.advertisingId:null,metadata_sealed:null!=g?g:null,traffic_metadata_sealed:null!=p?p:null,search_session_id:(0,f.tv)()?.uuid??null},trackGuildAndChannelMetadata:E,shouldExtendSession:(0,c.xn)(n),sourceQuestContent:_})})},[e])}function T(){let e=(0,_.vU)();return n.useCallback(t=>{(0,E.Qg)({...t,properties:{...t.properties,impression_id:e?.getId()}})},[e])}function A(){let e=T();return n.useCallback(t=>{let{adContentId:l,relatedQuestId:n,adCreativeType:s,questContent:a,questContentCTA:d,questContentPosition:E,questContentRowIndex:_,trackGuildAndChannelMetadata:g,sourceQuestContent:p}=t;(0,i.N)((0,v.jO)(a)).then(t=>{e({adContentId:l,relatedQuestId:n,adCreativeType:s,event:m.HAw.QUEST_CONTENT_CLICKED,properties:{...(0,v.fF)(a,E,_),...(0,u.A)(),cta_name:d,click_id:(0,r.A)(),apple_advertising_id:null!=t&&(0,o.isIOS)()?t.advertisingId:null,android_advertising_id:null!=t&&(0,o.isAndroid)()?t.advertisingId:null,search_session_id:(0,f.tv)()?.uuid??null},trackGuildAndChannelMetadata:g,shouldExtendSession:(0,c.xn)(a),sourceQuestContent:p})})},[e])}function S(e,t){n.useEffect(()=>{(0,E.DZ)(t,e)},[e,t])}function C(e){let{questHomeHero:t,shouldShowQuestHomeHeroContent:l}=e,r=l?d.uF.QUEST_HOME_ENTRYPOINT_THEMED:d.uF.QUEST_HOME_ENTRYPOINT,i=n.useMemo(()=>{let e=(0,v.fF)(r);return delete e.row_index,e},[r]),u=n.useCallback(e=>{null!=t&&l?(0,E.Qg)({adContentId:t.id,adCreativeType:s.p.QUEST_HOME_HERO,event:e,properties:i,sourceQuestContent:r}):a.default.track(e,i)},[t,l,r,i]),o=n.useCallback(()=>{u(m.HAw.QUEST_HOVER)},[u]),c=n.useCallback(()=>{u(m.HAw.QUEST_HOVER_OFF)},[u]),_=n.useCallback(()=>{a.default.track(m.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED)},[]),f=n.useCallback(()=>{a.default.track(m.HAw.QUEST_CONTENT_CLICKED,{is_targeted:!1,...i,...null!=t?{ad_content_id:t.id}:{}})},[i,t]);return n.useMemo(()=>({handleMouseEnter:o,handleMouseLeave:c,handleOnboardingPopoutRender:_,handleEntrypointClick:f}),[o,c,_,f])}
+l.d(t, { Ii: () => S, Ut: () => p, WS: () => T, cR: () => C, tG: () => A, u0: () => g });
+var n = l(64700),
+    r = l(835245),
+    s = l(323889),
+    i = l(345353),
+    u = l(69114),
+    a = l(174459),
+    o = l(723702),
+    d = l(507107),
+    c = l(710969),
+    E = l(561844),
+    v = l(590202),
+    _ = l(971649),
+    f = l(823784),
+    m = l(652215);
+function g() {
+    let e = (0, _.vU)();
+    return n.useCallback(
+        (t) => {
+            (0, E.av)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
+        },
+        [e],
+    );
+}
+function p() {
+    let e = g();
+    return n.useCallback(
+        (t) => {
+            let {
+                    questId: l,
+                    questContent: n,
+                    questContentCTA: s,
+                    questContentPosition: a,
+                    questContentRowIndex: d,
+                    trackGuildAndChannelMetadata: E,
+                    sourceQuestContent: _,
+                } = t,
+                g = (0, c.L4)(_),
+                p = (0, c.Gp)(_, l);
+            (0, i.N)((0, v.jO)(n)).then((t) => {
+                e({
+                    questId: l,
+                    event: m.HAw.QUEST_CONTENT_CLICKED,
+                    properties: {
+                        ...(0, v.fF)(n, a, d),
+                        ...(0, u.A)(),
+                        cta_name: s,
+                        click_id: (0, r.A)(),
+                        apple_advertising_id: null != t && (0, o.isIOS)() ? t.advertisingId : null,
+                        android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
+                        metadata_sealed: null != g ? g : null,
+                        traffic_metadata_sealed: null != p ? p : null,
+                        search_session_id: (0, f.tv)()?.uuid ?? null,
+                    },
+                    trackGuildAndChannelMetadata: E,
+                    shouldExtendSession: (0, c.xn)(n),
+                    sourceQuestContent: _,
+                });
+            });
+        },
+        [e],
+    );
+}
+function T() {
+    let e = (0, _.vU)();
+    return n.useCallback(
+        (t) => {
+            (0, E.Qg)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
+        },
+        [e],
+    );
+}
+function A() {
+    let e = T();
+    return n.useCallback(
+        (t) => {
+            let {
+                adContentId: l,
+                relatedQuestId: n,
+                adCreativeType: s,
+                questContent: a,
+                questContentCTA: d,
+                questContentPosition: E,
+                questContentRowIndex: _,
+                trackGuildAndChannelMetadata: g,
+                sourceQuestContent: p,
+            } = t;
+            (0, i.N)((0, v.jO)(a)).then((t) => {
+                e({
+                    adContentId: l,
+                    relatedQuestId: n,
+                    adCreativeType: s,
+                    event: m.HAw.QUEST_CONTENT_CLICKED,
+                    properties: {
+                        ...(0, v.fF)(a, E, _),
+                        ...(0, u.A)(),
+                        cta_name: d,
+                        click_id: (0, r.A)(),
+                        apple_advertising_id: null != t && (0, o.isIOS)() ? t.advertisingId : null,
+                        android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
+                        search_session_id: (0, f.tv)()?.uuid ?? null,
+                    },
+                    trackGuildAndChannelMetadata: g,
+                    shouldExtendSession: (0, c.xn)(a),
+                    sourceQuestContent: p,
+                });
+            });
+        },
+        [e],
+    );
+}
+function S(e, t) {
+    n.useEffect(() => {
+        (0, E.DZ)(t, e);
+    }, [e, t]);
+}
+function C(e) {
+    let { questHomeHero: t, shouldShowQuestHomeHeroContent: l } = e,
+        r = l ? d.uF.QUEST_HOME_ENTRYPOINT_THEMED : d.uF.QUEST_HOME_ENTRYPOINT,
+        i = n.useMemo(() => {
+            let e = (0, v.fF)(r);
+            return delete e.row_index, e;
+        }, [r]),
+        u = n.useCallback(
+            (e) => {
+                null != t && l
+                    ? (0, E.Qg)({
+                          adContentId: t.id,
+                          adCreativeType: s.p.QUEST_HOME_HERO,
+                          event: e,
+                          properties: i,
+                          sourceQuestContent: r,
+                      })
+                    : a.default.track(e, i);
+            },
+            [t, l, r, i],
+        ),
+        o = n.useCallback(() => {
+            u(m.HAw.QUEST_HOVER);
+        }, [u]),
+        c = n.useCallback(() => {
+            u(m.HAw.QUEST_HOVER_OFF);
+        }, [u]),
+        _ = n.useCallback(() => {
+            a.default.track(m.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+        }, []),
+        f = n.useCallback(() => {
+            a.default.track(m.HAw.QUEST_CONTENT_CLICKED, {
+                is_targeted: !1,
+                ...i,
+                ...(null != t ? { ad_content_id: t.id } : {}),
+            });
+        }, [i, t]);
+    return n.useMemo(
+        () => ({ handleMouseEnter: o, handleMouseLeave: c, handleOnboardingPopoutRender: _, handleEntrypointClick: f }),
+        [o, c, _, f],
+    );
+}

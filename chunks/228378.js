@@ -1,1 +1,17 @@
-"use strict";n.r(t),n.d(t,{default:()=>a});var i=n(998280),r=n(29583),s=n(618027);function a(e,t){(0,s.A)(2,arguments);var n=(0,r.default)(e),a=(0,i.A)(t);if(isNaN(a))return new Date(NaN);if(!a)return n;var o=n.getDate(),l=new Date(n.getTime());return(l.setMonth(n.getMonth()+a+1,0),o>=l.getDate())?l:(n.setFullYear(l.getFullYear(),l.getMonth(),o),n)}
+"use strict";
+n.r(t), n.d(t, { default: () => a });
+var i = n(998280),
+    r = n(29583),
+    s = n(618027);
+function a(e, t) {
+    (0, s.A)(2, arguments);
+    var n = (0, r.default)(e),
+        a = (0, i.A)(t);
+    if (isNaN(a)) return new Date(NaN);
+    if (!a) return n;
+    var o = n.getDate(),
+        l = new Date(n.getTime());
+    return (l.setMonth(n.getMonth() + a + 1, 0), o >= l.getDate())
+        ? l
+        : (n.setFullYear(l.getFullYear(), l.getMonth(), o), n);
+}

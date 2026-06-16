@@ -1,1 +1,1 @@
-e.exports={NC:"buttonsContainer_ffefd9",DT:"removeButton_ffefd9",yj:"buttonHighlighted_ffefd9"}
+t.exports = { NC: "buttonsContainer_ffefd9", DT: "removeButton_ffefd9", yj: "buttonHighlighted_ffefd9" };

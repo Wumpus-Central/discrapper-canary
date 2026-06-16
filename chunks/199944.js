@@ -1,1 +1,15 @@
-"use strict";n.d(t,{A:()=>o});var i=n(439372),r=n(913612),s=n(935671);class a extends i.A{actions={POST_CONNECTION_OPEN:this.handlePostConnectionOpen,LOGOUT:this.handleLogout};handlePostConnectionOpen(){(0,r.C)(),(0,s.Tn)("startup")}handleLogout(){(0,s.AV)()}}let o=new a
+"use strict";
+n.d(t, { A: () => o });
+var i = n(439372),
+    r = n(913612),
+    s = n(935671);
+class a extends i.A {
+    actions = { POST_CONNECTION_OPEN: this.handlePostConnectionOpen, LOGOUT: this.handleLogout };
+    handlePostConnectionOpen() {
+        (0, r.C)(), (0, s.Tn)("startup");
+    }
+    handleLogout() {
+        (0, s.AV)();
+    }
+}
+let o = new a();

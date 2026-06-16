@@ -1,1 +1,13 @@
-IntlMessageFormat.__addLocaleData({locale:"sv",pluralRuleFunction:function(e,t){var n=String(e).split("."),i=!n[1],r=Number(n[0])==e,s=r&&n[0].slice(-1),a=r&&n[0].slice(-2);return t?(1==s||2==s)&&11!=a&&12!=a?"one":"other":1==e&&i?"one":"other"}}),IntlMessageFormat.__addLocaleData({locale:"sv-AX",parentLocale:"sv"}),IntlMessageFormat.__addLocaleData({locale:"sv-FI",parentLocale:"sv"})
+IntlMessageFormat.__addLocaleData({
+    locale: "sv",
+    pluralRuleFunction: function (e, t) {
+        var n = String(e).split("."),
+            i = !n[1],
+            r = Number(n[0]) == e,
+            s = r && n[0].slice(-1),
+            a = r && n[0].slice(-2);
+        return t ? ((1 == s || 2 == s) && 11 != a && 12 != a ? "one" : "other") : 1 == e && i ? "one" : "other";
+    },
+}),
+    IntlMessageFormat.__addLocaleData({ locale: "sv-AX", parentLocale: "sv" }),
+    IntlMessageFormat.__addLocaleData({ locale: "sv-FI", parentLocale: "sv" });

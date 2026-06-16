@@ -1,1 +1,30 @@
-r.d(o,{D:()=>c});var t=r(627968);r(64700);let d="https://cdn.discordapp.com/assets/content/4e02ee0451e556464805350795ce905d3f1fae8d476d249189c0d236fd312029.riv";var a=r(594639),s=r(105596);let i={"Boost Server":{reducedMotion:"boolean"},"Boost Crystal":{reducedMotion:"boolean"},"Crystal Side B":{},"Crystal Side A":{},"Boost Saved":{reducedMotion:"boolean"}};function c(e){let{artboard:o="Boost Server",stateMachine:r,...c}=e,{status:n,buffer:l}=(0,s.CE)(d),p=(0,s.m2)(d);return n===s.BW.Loading?null:(0,t.jsx)(a.w,{...p?{key:"override"}:{},buffer:l,artboard:o,stateMachine:r,artboardProperties:i,...c})}c.riveSrc=d
+r.d(o, { D: () => c });
+var t = r(627968);
+r(64700);
+let d =
+    "https://cdn.discordapp.com/assets/content/4e02ee0451e556464805350795ce905d3f1fae8d476d249189c0d236fd312029.riv";
+var a = r(594639),
+    s = r(105596);
+let i = {
+    "Boost Server": { reducedMotion: "boolean" },
+    "Boost Crystal": { reducedMotion: "boolean" },
+    "Crystal Side B": {},
+    "Crystal Side A": {},
+    "Boost Saved": { reducedMotion: "boolean" },
+};
+function c(e) {
+    let { artboard: o = "Boost Server", stateMachine: r, ...c } = e,
+        { status: n, buffer: l } = (0, s.CE)(d),
+        p = (0, s.m2)(d);
+    return n === s.BW.Loading
+        ? null
+        : (0, t.jsx)(a.w, {
+              ...(p ? { key: "override" } : {}),
+              buffer: l,
+              artboard: o,
+              stateMachine: r,
+              artboardProperties: i,
+              ...c,
+          });
+}
+c.riveSrc = d;

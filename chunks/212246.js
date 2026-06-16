@@ -1,1 +1,22 @@
-function n(e,t,r){var n=r.getRegistry(),i=n.addTarget(e,t);return[i,function(){return n.removeTarget(i)}]}function i(e,t,r){var n=r.getRegistry(),i=n.addSource(e,t);return[i,function(){return n.removeSource(i)}]}r.d(t,{V:()=>i,l:()=>n})
+"use strict";
+function i(e, t, n) {
+    var i = n.getRegistry(),
+        r = i.addTarget(e, t);
+    return [
+        r,
+        function () {
+            return i.removeTarget(r);
+        },
+    ];
+}
+function r(e, t, n) {
+    var i = n.getRegistry(),
+        r = i.addSource(e, t);
+    return [
+        r,
+        function () {
+            return i.removeSource(r);
+        },
+    ];
+}
+n.d(t, { V: () => r, l: () => i });

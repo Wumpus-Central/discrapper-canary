@@ -1,1 +1,1 @@
-e.exports={w:"header__36335"}
+p.exports = { w: "header__36335" };

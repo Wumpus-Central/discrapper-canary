@@ -1,1 +1,10 @@
-var i=n(670269),r=n(626756),s=n(495503),a=n(813206);e.exports=Object.getOwnPropertySymbols?function(e){for(var t=[];e;)i(t,s(e)),e=r(e);return t}:a
+var i = n(670269),
+    r = n(626756),
+    s = n(495503),
+    a = n(813206);
+e.exports = Object.getOwnPropertySymbols
+    ? function (e) {
+          for (var t = []; e; ) i(t, s(e)), (e = r(e));
+          return t;
+      }
+    : a;

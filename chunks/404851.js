@@ -1,1 +1,251 @@
-"use strict";n.d(t,{Ht:()=>en,as:()=>et,Vc:()=>ei}),n(321073);var i=n(835245),r=n(71931),s=n(17928),a=n(506774),o=n(228366),l=n(837152),u=n(626584),c=n(617710),d=n(495544),_=n(885576),h=n(763827),f=n(174459),p=n(927813),E=n(38405),m=n(70298),g=n(973522),A=n(952818),I=n(321034),T=n(789999),S=n(976860),y=n(569745);function N(){return!!__OVERLAY__||(0,y.Q)(window.location.pathname)}var v=n(604594);let C=(0,n(945810).mj)({name:"2026-02-client-heartbeat-skipped",kind:"user",defaultConfig:{logHeartbeatSkipped:!1},variations:{1:{logHeartbeatSkipped:!0}}});var R=n(652215);let O=15*p.A.Millis.MINUTE,b=p.A.Millis.SECOND,D="LAST_CLIENT_HEARTBEAT_SESSION",L="user",w=new u.A("SessionHeartbeatScheduler"),M=null,P=null,x=0,k=0,U={state:"uninitialized"},G=h.A.getState(),F=(0,T.R)(),V=N(),B=d.default.getToken();function H(){(function(){if(null==M)return!1;switch(M.type){case"timeout":clearTimeout(M.id);break;case"interval":clearInterval(M.id);break;default:M.type}return M=null,!0})()&&(E.A.addBreadcrumb({category:L,message:"Stopping Analytics Heartbeat"}),(0,l.p)())}async function j(){let e,t,n,i,r,s,a,o=Date.now(),u=await en(),c=Date.now();if(null==u)return void E.A.captureException(Error(`Null session when tracking session heartbeat. Waited ${c-o}ms`));E.A.addBreadcrumb({category:L,message:"Tracking Heartbeat",data:{initialized:u.createdAtTimestamp}});let d={client_heartbeat_initialization_timestamp:u.createdAtTimestamp,client_heartbeat_version:28,...{...(e={},null!=(t=I.A.getMemoryUsageElectronRenderer())&&(e.client_heartbeat_renderer_memory=t),null!=(n=I.A.getMemoryUsageElectronRendererUsedHeapSize())&&(e.client_heartbeat_renderer_memory_used_heap=n),null!=(i=I.A.getMemoryUsageElectronProcessTypeDetails())&&(e.electron_process_memory_private=[i.unknown?.wss_priv_kb??-1,i.main?.wss_priv_kb??-1,i.renderer?.wss_priv_kb??-1,i.gpu?.wss_priv_kb??-1,i.crashpad?.wss_priv_kb??-1,i.utility?.wss_priv_kb??-1,i.clips?.wss_priv_kb??-1],e.electron_process_memory_private_and_shared=[i.unknown?.wss_kb??-1,i.main?.wss_kb??-1,i.renderer?.wss_kb??-1,i.gpu?.wss_kb??-1,i.crashpad?.wss_kb??-1,i.utility?.wss_kb??-1,i.clips?.wss_kb??-1]),e),...(r={},null!=(s=A.Ay.getCurrentGameForAnalytics())&&(r.client_heartbeat_current_game_id=s.id,r.client_heartbeat_current_game_name=s.name,r.client_heartbeat_current_game_executable=(0,g.Ic)(s.exePath),r.client_heartbeat_current_game_distributor=s.distributor,r.uses_client_mods=(0,m.b)()),r)},...(a=_.A.getIdleSince()??0,{is_idle:_.A.isIdle(),idle_duration_ms:Date.now()-a,is_afk:_.A.isAFK(),is_system_suspended:_.A.getSystemSuspended(),is_system_locked:_.A.getSystemLocked()})};f.default.track(R.HAw.CLIENT_HEARTBEAT,d),k=performance.now(),(0,l.p)()}function Y(){let e=[];return null!=B&&V&&(F&&e.push("foregrounded"),G===R.S7L.RTC_CONNECTED&&e.push("rtc_connected")),{active:e.length>0,ver:28,reasons:e}}function W(){return Y().active}function K(){W()?function(){if(null!=M)return;let e=0===k?0:O-(performance.now()-k);E.A.addBreadcrumb({message:`Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ${e/1e3} seconds. Scheduling Heartbeat`}),M={type:"timeout",id:setTimeout(()=>{j(),M={type:"interval",id:setInterval(()=>{j()},O)}},e)}}():H(),c.A.getSocket()?.handleActiveStateChange(Y())}function $(e){return null==e?null:e.version!==v.Ir?(w.warn(`Throwing away client session with invalid version: ${e.version}, expected ${v.Ir}`),null):e}async function z(){let e=await en(!1);null!=e&&c.A.getSocket()?.handleUpdateTimeSpentSessionId(e.createdAtTimestamp,e.uuid,r.C)}function q(){let e=d.default.getToken();B!==e&&(B=e,a.w.remove(D),U={state:"loaded",session:null},H(),k=0),K()}function X(){let e=h.A.getState();G!==e&&(G=e,K())}function Z(e){let{focused:t}=e;F!==t&&(F=t,K())}function Q(){let e=N();V!==e&&(V=e,K())}function J(e){let{state:t}=e,n=t===R.g6G.ACTIVE;F!==n&&(F=n,K())}function ee(){G=h.A.getState(),F=(0,T.R)(),V=N(),q()}function et(){E.A.addBreadcrumb({message:"Initializing SessionHeartbeatScheduler"}),h.A.addChangeListener(X),d.default.addChangeListener(q),o.h.subscribe("WINDOW_FOCUS",Z),o.h.subscribe("APP_STATE_UPDATE",J),o.h.subscribe("CONNECTION_OPEN",z),(0,S.JK)().listen(Q),K(),null==P&&(P={id:setInterval(()=>{!(null!=B&&C.getConfig({location:"shouldLogClientHeartbeatSkipped"}).logHeartbeatSkipped)||performance.now()-k<=O||f.default.track(R.HAw.CLIENT_HEARTBEAT_SKIPPED,{client_heartbeat_version:28})},O),type:"interval"}),s.Ay.initialized.then(ee)}async function en(){let e=!(arguments.length>0)||void 0===arguments[0]||arguments[0],t=null,n="loaded"===U.state?U.session?.uuid:null;try{t="uninitialized"===U.state?$(await a.w.getAfterRefresh(D)):U.session}catch(e){E.A.captureException(e)}let s=Date.now();if(W()){(null==t||(0,v.aE)(t))&&(t={uuid:(0,i.A)(),createdAtTimestamp:s,lastUsedTimestamp:s,version:v.Ir},x=0),t.lastUsedTimestamp=s;var o=t;let e=performance.now();if(!(e-x<b))try{a.w.set(D,o),x=e}catch(e){E.A.captureException(e)}}else null!=t&&(0,v.aE)(t)&&(t=null);return U={state:"loaded",session:t},null!=t&&n!==t.uuid&&e&&c.A.getSocket()?.handleUpdateTimeSpentSessionId(t.createdAtTimestamp,t.uuid,r.C),t}function ei(){let e="uninitialized"===U.state?$(a.w.get(D)):U.session;return null==e||(0,v.aE)(e)?null:e}
+"use strict";
+n.d(t, { Ht: () => en, as: () => et, Vc: () => ei }), n(321073);
+var i = n(835245),
+    r = n(71931),
+    s = n(17928),
+    a = n(506774),
+    o = n(228366),
+    l = n(837152),
+    u = n(626584),
+    c = n(617710),
+    d = n(495544),
+    _ = n(885576),
+    h = n(763827),
+    f = n(174459),
+    p = n(927813),
+    E = n(38405),
+    m = n(70298),
+    g = n(973522),
+    A = n(952818),
+    I = n(321034),
+    T = n(789999),
+    S = n(976860),
+    y = n(569745);
+function C() {
+    return !!__OVERLAY__ || (0, y.Q)(window.location.pathname);
+}
+var N = n(604594);
+let v = (0, n(945810).mj)({
+    name: "2026-02-client-heartbeat-skipped",
+    kind: "user",
+    defaultConfig: { logHeartbeatSkipped: !1 },
+    variations: { 1: { logHeartbeatSkipped: !0 } },
+});
+var R = n(652215);
+let O = 15 * p.A.Millis.MINUTE,
+    b = p.A.Millis.SECOND,
+    D = "LAST_CLIENT_HEARTBEAT_SESSION",
+    L = "user",
+    w = new u.A("SessionHeartbeatScheduler"),
+    M = null,
+    P = null,
+    x = 0,
+    k = 0,
+    U = { state: "uninitialized" },
+    G = h.A.getState(),
+    F = (0, T.R)(),
+    V = C(),
+    B = d.default.getToken();
+function j() {
+    (function () {
+        if (null == M) return !1;
+        switch (M.type) {
+            case "timeout":
+                clearTimeout(M.id);
+                break;
+            case "interval":
+                clearInterval(M.id);
+                break;
+            default:
+                M.type;
+        }
+        return (M = null), !0;
+    })() && (E.A.addBreadcrumb({ category: L, message: "Stopping Analytics Heartbeat" }), (0, l.p)());
+}
+async function H() {
+    let e,
+        t,
+        n,
+        i,
+        r,
+        s,
+        a,
+        o = Date.now(),
+        u = await en(),
+        c = Date.now();
+    if (null == u)
+        return void E.A.captureException(Error(`Null session when tracking session heartbeat. Waited ${c - o}ms`));
+    E.A.addBreadcrumb({ category: L, message: "Tracking Heartbeat", data: { initialized: u.createdAtTimestamp } });
+    let d = {
+        client_heartbeat_initialization_timestamp: u.createdAtTimestamp,
+        client_heartbeat_version: 28,
+        ...{
+            ...((e = {}),
+            null != (t = I.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
+            null != (n = I.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
+                (e.client_heartbeat_renderer_memory_used_heap = n),
+            null != (i = I.A.getMemoryUsageElectronProcessTypeDetails()) &&
+                ((e.electron_process_memory_private = [
+                    i.unknown?.wss_priv_kb ?? -1,
+                    i.main?.wss_priv_kb ?? -1,
+                    i.renderer?.wss_priv_kb ?? -1,
+                    i.gpu?.wss_priv_kb ?? -1,
+                    i.crashpad?.wss_priv_kb ?? -1,
+                    i.utility?.wss_priv_kb ?? -1,
+                    i.clips?.wss_priv_kb ?? -1,
+                ]),
+                (e.electron_process_memory_private_and_shared = [
+                    i.unknown?.wss_kb ?? -1,
+                    i.main?.wss_kb ?? -1,
+                    i.renderer?.wss_kb ?? -1,
+                    i.gpu?.wss_kb ?? -1,
+                    i.crashpad?.wss_kb ?? -1,
+                    i.utility?.wss_kb ?? -1,
+                    i.clips?.wss_kb ?? -1,
+                ])),
+            e),
+            ...((r = {}),
+            null != (s = A.Ay.getCurrentGameForAnalytics()) &&
+                ((r.client_heartbeat_current_game_id = s.id),
+                (r.client_heartbeat_current_game_name = s.name),
+                (r.client_heartbeat_current_game_executable = (0, g.Ic)(s.exePath)),
+                (r.client_heartbeat_current_game_distributor = s.distributor),
+                (r.uses_client_mods = (0, m.b)())),
+            r),
+        },
+        ...((a = _.A.getIdleSince() ?? 0),
+        {
+            is_idle: _.A.isIdle(),
+            idle_duration_ms: Date.now() - a,
+            is_afk: _.A.isAFK(),
+            is_system_suspended: _.A.getSystemSuspended(),
+            is_system_locked: _.A.getSystemLocked(),
+        }),
+    };
+    f.default.track(R.HAw.CLIENT_HEARTBEAT, d), (k = performance.now()), (0, l.p)();
+}
+function Y() {
+    let e = [];
+    return (
+        null != B && V && (F && e.push("foregrounded"), G === R.S7L.RTC_CONNECTED && e.push("rtc_connected")),
+        { active: e.length > 0, ver: 28, reasons: e }
+    );
+}
+function W() {
+    return Y().active;
+}
+function K() {
+    W()
+        ? (function () {
+              if (null != M) return;
+              let e = 0 === k ? 0 : O - (performance.now() - k);
+              E.A.addBreadcrumb({
+                  message: `Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ${e / 1e3} seconds. Scheduling Heartbeat`,
+              }),
+                  (M = {
+                      type: "timeout",
+                      id: setTimeout(() => {
+                          H(),
+                              (M = {
+                                  type: "interval",
+                                  id: setInterval(() => {
+                                      H();
+                                  }, O),
+                              });
+                      }, e),
+                  });
+          })()
+        : j(),
+        c.A.getSocket()?.handleActiveStateChange(Y());
+}
+function $(e) {
+    return null == e
+        ? null
+        : e.version !== N.Ir
+          ? (w.warn(`Throwing away client session with invalid version: ${e.version}, expected ${N.Ir}`), null)
+          : e;
+}
+async function z() {
+    let e = await en(!1);
+    null != e && c.A.getSocket()?.handleUpdateTimeSpentSessionId(e.createdAtTimestamp, e.uuid, r.C);
+}
+function q() {
+    let e = d.default.getToken();
+    B !== e && ((B = e), a.w.remove(D), (U = { state: "loaded", session: null }), j(), (k = 0)), K();
+}
+function Z() {
+    let e = h.A.getState();
+    G !== e && ((G = e), K());
+}
+function X(e) {
+    let { focused: t } = e;
+    F !== t && ((F = t), K());
+}
+function Q() {
+    let e = C();
+    V !== e && ((V = e), K());
+}
+function J(e) {
+    let { state: t } = e,
+        n = t === R.g6G.ACTIVE;
+    F !== n && ((F = n), K());
+}
+function ee() {
+    (G = h.A.getState()), (F = (0, T.R)()), (V = C()), q();
+}
+function et() {
+    E.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
+        h.A.addChangeListener(Z),
+        d.default.addChangeListener(q),
+        o.h.subscribe("WINDOW_FOCUS", X),
+        o.h.subscribe("APP_STATE_UPDATE", J),
+        o.h.subscribe("CONNECTION_OPEN", z),
+        (0, S.JK)().listen(Q),
+        K(),
+        null == P &&
+            (P = {
+                id: setInterval(() => {
+                    !(null != B && v.getConfig({ location: "shouldLogClientHeartbeatSkipped" }).logHeartbeatSkipped) ||
+                        performance.now() - k <= O ||
+                        f.default.track(R.HAw.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 28 });
+                }, O),
+                type: "interval",
+            }),
+        s.Ay.initialized.then(ee);
+}
+async function en() {
+    let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
+        t = null,
+        n = "loaded" === U.state ? U.session?.uuid : null;
+    try {
+        t = "uninitialized" === U.state ? $(await a.w.getAfterRefresh(D)) : U.session;
+    } catch (e) {
+        E.A.captureException(e);
+    }
+    let s = Date.now();
+    if (W()) {
+        (null == t || (0, N.aE)(t)) &&
+            ((t = { uuid: (0, i.A)(), createdAtTimestamp: s, lastUsedTimestamp: s, version: N.Ir }), (x = 0)),
+            (t.lastUsedTimestamp = s);
+        var o = t;
+        let e = performance.now();
+        if (!(e - x < b))
+            try {
+                a.w.set(D, o), (x = e);
+            } catch (e) {
+                E.A.captureException(e);
+            }
+    } else null != t && (0, N.aE)(t) && (t = null);
+    return (
+        (U = { state: "loaded", session: t }),
+        null != t &&
+            n !== t.uuid &&
+            e &&
+            c.A.getSocket()?.handleUpdateTimeSpentSessionId(t.createdAtTimestamp, t.uuid, r.C),
+        t
+    );
+}
+function ei() {
+    let e = "uninitialized" === U.state ? $(a.w.get(D)) : U.session;
+    return null == e || (0, N.aE)(e) ? null : e;
+}

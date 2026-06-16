@@ -1,1 +1,18 @@
-"use strict";n.d(t,{Y:()=>o});var i=n(287809),r=n(486020),s=n(403362),a=n(652215);function o(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:32,n=arguments.length>2?arguments[2]:void 0;switch(e.type){case a.rbe.DM:let[o]=e.recipients.map(i.default.getUser).filter(s.Vq);if(null==o)return null;return o.getAvatarURL(void 0,t,n);case a.rbe.GROUP_DM:return r.Ay.getChannelIconURL({id:e.id,icon:e.icon,applicationId:e.getApplicationId(),size:t})}}
+"use strict";
+n.d(t, { Y: () => o });
+var i = n(287809),
+    r = n(486020),
+    s = n(403362),
+    a = n(652215);
+function o(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32,
+        n = arguments.length > 2 ? arguments[2] : void 0;
+    switch (e.type) {
+        case a.rbe.DM:
+            let [o] = e.recipients.map(i.default.getUser).filter(s.Vq);
+            if (null == o) return null;
+            return o.getAvatarURL(void 0, t, n);
+        case a.rbe.GROUP_DM:
+            return r.Ay.getChannelIconURL({ id: e.id, icon: e.icon, applicationId: e.getApplicationId(), size: t });
+    }
+}

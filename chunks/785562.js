@@ -1,1 +1,45 @@
-"use strict";n.d(t,{A:()=>E});var i=n(627968),r=n(64700),s=n(503698),a=n.n(s),o=n(990078),l=n(989349),u=n.n(l),c=n(27867),d=n(927813),_=n(379418);let h=[[2*d.A.Seconds.MINUTE,d.A.Seconds.SECOND],[5*d.A.Seconds.MINUTE,d.A.Seconds.MINUTE],[45*d.A.Seconds.MINUTE,2*d.A.Seconds.MINUTE],[21*d.A.Seconds.HOUR,5*d.A.Seconds.MINUTE]],f=2*d.A.Seconds.HOUR;var p=n(992595);function E(e){let t,{node:n,showTooltip:s=!0,className:l}=e,d=(t=(0,c.A)(),(r.useEffect(()=>{if("R"!==n.format)return;let e=1e3*f,i=Math.abs(n.parsed.diff(u()()));for(let[t,n]of h)if(i<1e3*t){e=1e3*n;break}let r=setInterval(()=>{t()},e);return()=>clearInterval(r)},[t,n.format,n.parsed]),"R"===n.format)?_.kx.R(n.parsed):n.formatted),E=(0,i.jsx)("span",{className:a()(p.vE,l),children:d});return!0!==s?E:(0,i.jsx)(o.m,{__unsupportedReactNodeAsText:n.full,ariaHidden:!0,children:E})}
+"use strict";
+n.d(t, { A: () => E });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(990078),
+    l = n(989349),
+    u = n.n(l),
+    c = n(27867),
+    d = n(927813),
+    _ = n(379418);
+let h = [
+        [2 * d.A.Seconds.MINUTE, d.A.Seconds.SECOND],
+        [5 * d.A.Seconds.MINUTE, d.A.Seconds.MINUTE],
+        [45 * d.A.Seconds.MINUTE, 2 * d.A.Seconds.MINUTE],
+        [21 * d.A.Seconds.HOUR, 5 * d.A.Seconds.MINUTE],
+    ],
+    f = 2 * d.A.Seconds.HOUR;
+var p = n(992595);
+function E(e) {
+    let t,
+        { node: n, showTooltip: s = !0, className: l } = e,
+        d =
+            ((t = (0, c.A)()),
+            (r.useEffect(() => {
+                if ("R" !== n.format) return;
+                let e = 1e3 * f,
+                    i = Math.abs(n.parsed.diff(u()()));
+                for (let [t, n] of h)
+                    if (i < 1e3 * t) {
+                        e = 1e3 * n;
+                        break;
+                    }
+                let r = setInterval(() => {
+                    t();
+                }, e);
+                return () => clearInterval(r);
+            }, [t, n.format, n.parsed]),
+            "R" === n.format)
+                ? _.kx.R(n.parsed)
+                : n.formatted),
+        E = (0, i.jsx)("span", { className: a()(p.vE, l), children: d });
+    return !0 !== s ? E : (0, i.jsx)(o.m, { __unsupportedReactNodeAsText: n.full, ariaHidden: !0, children: E });
+}

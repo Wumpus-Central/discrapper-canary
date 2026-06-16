@@ -1,1 +1,111 @@
-n.d(t,{default:()=>M,u:()=>T});var i=n(627968),s=n(64700),l=n(17928),a=n(116833),r=n(772707),o=n(331322),d=n(691885),u=n(683071),c=n(56562),A=n(626584),E=n(967198),h=n(594061),g=n(617617);function I(){return g.A.getDefaultGuildThemePreference()===c.tI.PERSONAL?c.tI.PERSONAL:c.tI.GUILD}async function _(e,t){let n=t?c.tI.PERSONAL:c.tI.GUILD;await (0,h.JM)(n),await (0,h.Sh)(e)}var N=n(244696),m=n(49999),C=n(375708),S=n(958961);let T="GUILD_THEME_NUX_MODAL",p=new A.A("GuildThemeNuxModal");function M(e){let{guildId:t,markAsDismissed:n,transitionState:A,onClose:h}=e,[g,T]=s.useState(I),[M,O]=s.useState(null),[L,f]=s.useState("init"),R=g===c.tI.PERSONAL,x=(0,l.bG)([E.A],()=>E.A.getGuildId()),G=(0,l.bG)([N.A],()=>{let e=N.A.getGuildThemeSnapshot(t);return null!=e&&e.enabled?e.themeSettings??null:null},[t]),U=R?null:G;s.useEffect(()=>{x!==t&&h()},[t,h,x]);let D=s.useCallback(e=>{O(null),T(e)},[]),b=s.useCallback(async()=>{if("init"===L){if(x!==t)return void await h();f("submitting"),O(null);try{await _(t,R)}catch(e){p.error("Failed to save guild theme NUX preference",e),O(C.intl.string(C.t.fEptJP)),f("init");return}f("submitted"),n(m.i.TAKE_ACTION),await h()}},[t,R,n,h,x,L]),y=s.useCallback(async()=>{"submitted"!==L&&n(m.i.USER_DISMISS),await h()},[n,h,L]),P=s.useMemo(()=>[{value:c.tI.GUILD,id:"guild",label:C.intl.string(C.t.aN3RNQ)},{value:c.tI.PERSONAL,id:"personal",label:C.intl.string(C.t.js8y7t)}],[]),v=R?C.intl.string(C.t.cvoikF):C.intl.string(C.t["cY+Oob"]);return(0,i.jsx)(r.k,{size:"md",transitionState:A,onClose:y,gradientColor:"blue",graphic:{type:"dynamic",component:a.DynamicGraphicComponent.GUILD_THEME_NUX_PREVIEW,aspectRatio:"16/9",props:{themeSettings:U}},title:C.intl.string(C.t.Q9zFy9),subtitle:C.intl.string(C.t.XLpBLj),actions:[{text:v,variant:R?"secondary":"primary",loading:"submitting"===L,disabled:"submitting"===L,onClick:b}],children:(0,i.jsxs)(o.B,{direction:"vertical",gap:16,className:S.r,children:[(0,i.jsx)(d.l,{selectionMode:"single",options:P,value:g,onSelectionChange:D,fullWidth:!0,label:C.intl.string(C.t.Q7mm4g),hideLabel:!0}),R&&(0,i.jsx)(u.w,{type:"warning",children:C.intl.string(C.t.tTHQAy)}),null!=M&&(0,i.jsx)(u.w,{type:"critical",children:M})]})})}
+n.d(t, { default: () => M, u: () => T });
+var i = n(627968),
+    s = n(64700),
+    l = n(17928),
+    a = n(116833),
+    r = n(772707),
+    o = n(331322),
+    d = n(691885),
+    u = n(683071),
+    c = n(56562),
+    A = n(626584),
+    E = n(967198),
+    h = n(594061),
+    g = n(617617);
+function I() {
+    return g.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
+}
+async function _(e, t) {
+    let n = t ? c.tI.PERSONAL : c.tI.GUILD;
+    await (0, h.JM)(n), await (0, h.Sh)(e);
+}
+var N = n(244696),
+    m = n(49999),
+    C = n(375708),
+    S = n(958961);
+let T = "GUILD_THEME_NUX_MODAL",
+    p = new A.A("GuildThemeNuxModal");
+function M(e) {
+    let { guildId: t, markAsDismissed: n, transitionState: A, onClose: h } = e,
+        [g, T] = s.useState(I),
+        [M, O] = s.useState(null),
+        [L, f] = s.useState("init"),
+        R = g === c.tI.PERSONAL,
+        x = (0, l.bG)([E.A], () => E.A.getGuildId()),
+        G = (0, l.bG)([N.A], () => {
+            let e = N.A.getGuildThemeSnapshot(t);
+            return null != e && e.enabled ? (e.themeSettings ?? null) : null;
+        }, [t]),
+        U = R ? null : G;
+    s.useEffect(() => {
+        x !== t && h();
+    }, [t, h, x]);
+    let D = s.useCallback((e) => {
+            O(null), T(e);
+        }, []),
+        b = s.useCallback(async () => {
+            if ("init" === L) {
+                if (x !== t) return void (await h());
+                f("submitting"), O(null);
+                try {
+                    await _(t, R);
+                } catch (e) {
+                    p.error("Failed to save guild theme NUX preference", e), O(C.intl.string(C.t.fEptJP)), f("init");
+                    return;
+                }
+                f("submitted"), n(m.i.TAKE_ACTION), await h();
+            }
+        }, [t, R, n, h, x, L]),
+        y = s.useCallback(async () => {
+            "submitted" !== L && n(m.i.USER_DISMISS), await h();
+        }, [n, h, L]),
+        P = s.useMemo(
+            () => [
+                { value: c.tI.GUILD, id: "guild", label: C.intl.string(C.t.aN3RNQ) },
+                { value: c.tI.PERSONAL, id: "personal", label: C.intl.string(C.t.js8y7t) },
+            ],
+            [],
+        ),
+        v = R ? C.intl.string(C.t.cvoikF) : C.intl.string(C.t["cY+Oob"]);
+    return (0, i.jsx)(r.k, {
+        size: "md",
+        transitionState: A,
+        onClose: y,
+        gradientColor: "blue",
+        graphic: {
+            type: "dynamic",
+            component: a.DynamicGraphicComponent.GUILD_THEME_NUX_PREVIEW,
+            aspectRatio: "16/9",
+            props: { themeSettings: U },
+        },
+        title: C.intl.string(C.t.Q9zFy9),
+        subtitle: C.intl.string(C.t.XLpBLj),
+        actions: [
+            {
+                text: v,
+                variant: R ? "secondary" : "primary",
+                loading: "submitting" === L,
+                disabled: "submitting" === L,
+                onClick: b,
+            },
+        ],
+        children: (0, i.jsxs)(o.B, {
+            direction: "vertical",
+            gap: 16,
+            className: S.r,
+            children: [
+                (0, i.jsx)(d.l, {
+                    selectionMode: "single",
+                    options: P,
+                    value: g,
+                    onSelectionChange: D,
+                    fullWidth: !0,
+                    label: C.intl.string(C.t.Q7mm4g),
+                    hideLabel: !0,
+                }),
+                R && (0, i.jsx)(u.w, { type: "warning", children: C.intl.string(C.t.tTHQAy) }),
+                null != M && (0, i.jsx)(u.w, { type: "critical", children: M }),
+            ],
+        }),
+    });
+}

@@ -1,1 +1,22 @@
-n.d(r,{E:()=>u,U:()=>o});var t=n(627968),l=n(64700),i=n(677313),a=n(363195);let s=l.createContext({theme:a.A.themePreferenceForSystemTheme((0,i.A)()),themeType:null,primaryColor:null,secondaryColor:null,userId:null});function o(e){let{theme:r,themeType:n,primaryColor:i,secondaryColor:a,userId:o,children:u}=e,d=l.useMemo(()=>({theme:r,themeType:n,primaryColor:i,secondaryColor:a,userId:o}),[r,n,i,a,o]);return(0,t.jsx)(s.Provider,{value:d,children:u})}let u=()=>l.useContext(s)
+"use strict";
+n.d(t, { E: () => u, U: () => l });
+var i = n(627968),
+    r = n(64700),
+    s = n(677313),
+    a = n(363195);
+let o = r.createContext({
+    theme: a.A.themePreferenceForSystemTheme((0, s.A)()),
+    themeType: null,
+    primaryColor: null,
+    secondaryColor: null,
+    userId: null,
+});
+function l(e) {
+    let { theme: t, themeType: n, primaryColor: s, secondaryColor: a, userId: l, children: u } = e,
+        c = r.useMemo(
+            () => ({ theme: t, themeType: n, primaryColor: s, secondaryColor: a, userId: l }),
+            [t, n, s, a, l],
+        );
+    return (0, i.jsx)(o.Provider, { value: c, children: u });
+}
+let u = () => r.useContext(o);

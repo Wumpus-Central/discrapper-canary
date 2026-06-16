@@ -1,1 +1,10 @@
-"use strict";n.d(t,{M:()=>r});var i,r=((i={}).INBOX="inbox",i.GAME_PROFILE="game_profile",i.RECENT_ACTIVITY="recent_activity",i.OVERLAY_INVITES="overlay_invites",i.ADMIN="admin",i)
+"use strict";
+n.d(t, { M: () => r });
+var i,
+    r =
+        (((i = {}).INBOX = "inbox"),
+        (i.GAME_PROFILE = "game_profile"),
+        (i.RECENT_ACTIVITY = "recent_activity"),
+        (i.OVERLAY_INVITES = "overlay_invites"),
+        (i.ADMIN = "admin"),
+        i);

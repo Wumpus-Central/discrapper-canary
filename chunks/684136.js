@@ -1,1 +1,33 @@
-t.d(l,{A:()=>E});var n,i=t(627968);t(64700);var r=t(503698),s=t.n(r),a=t(607399),o=t(939249),c=t(285796),d=t(789645),u=t(375708),h=t(589753),T=((n=T||{}).DEFAULT="",n.BOLD="Bold",n.SOLID="Solid",n);function E(e){let{closeAction:l,variant:t="",keybind:n,className:r}=e;return(0,i.jsxs)("div",{className:s()(h.kL,r),children:[(0,i.jsx)(o.D,{className:s()(h.b,{[h.EH]:"Bold"===t,[h.O3]:"Solid"===t}),onClick:l,"aria-label":u.intl.string(u.t.cpT0Cq),children:"Solid"===t?(0,i.jsx)(c.a,{size:"md",color:"currentColor","aria-hidden":!0}):(0,i.jsx)(d.P,{size:"sm",color:"currentColor","aria-hidden":!0})}),a.Fr?null:(0,i.jsx)("div",{className:h.P,"aria-hidden":!0,children:n})]})}E.Variants=T
+"use strict";
+n.d(t, { A: () => f });
+var i,
+    r = n(627968);
+n(64700);
+var s = n(503698),
+    a = n.n(s),
+    o = n(607399),
+    l = n(939249),
+    u = n(285796),
+    c = n(789645),
+    d = n(375708),
+    _ = n(589753),
+    h = (((i = h || {}).DEFAULT = ""), (i.BOLD = "Bold"), (i.SOLID = "Solid"), i);
+function f(e) {
+    let { closeAction: t, variant: n = "", keybind: i, className: s } = e;
+    return (0, r.jsxs)("div", {
+        className: a()(_.kL, s),
+        children: [
+            (0, r.jsx)(l.D, {
+                className: a()(_.b, { [_.EH]: "Bold" === n, [_.O3]: "Solid" === n }),
+                onClick: t,
+                "aria-label": d.intl.string(d.t.cpT0Cq),
+                children:
+                    "Solid" === n
+                        ? (0, r.jsx)(u.a, { size: "md", color: "currentColor", "aria-hidden": !0 })
+                        : (0, r.jsx)(c.P, { size: "sm", color: "currentColor", "aria-hidden": !0 }),
+            }),
+            o.Fr ? null : (0, r.jsx)("div", { className: _.P, "aria-hidden": !0, children: i }),
+        ],
+    });
+}
+f.Variants = h;

@@ -1,1 +1,110 @@
-n.d(t,{H6:()=>h,p3:()=>c,qv:()=>p,wP:()=>M}),n(321073);var r=n(64700),i=n(942381),a=n(265690),u=n(121894),l=n(913122),E=n(995786),A=n(904813),s=n(243277),S=n(652215);let o={},_=(0,a.h)((e,t)=>({rules:{},fetching:!1,error:null,updateRule:n=>{let{guildId:r,id:i,triggerType:a}=n,{rules:l}=t(),E=l[r]??{},s=E[a]??[],S=s.some(e=>e.id===i),o=s.filter(e=>!(0,A.R)(e.id)||e.triggerType!==a),_=S?o.map(e=>e.id===i?n:e):[...o,n];(0,u.r)(()=>{e({rules:{...l,[r]:{...E,[a]:_}},error:null})})},removeRule:(n,r)=>{let{rules:i}=t(),a=i[r],l=Object.keys(a).reduce((e,t)=>{let r=Number(t),i=a[r]??[];return e[r]=i.filter(e=>e.id!==n),e},{});(0,u.r)(()=>{e({rules:{...i,[r]:l},error:null})})},syncRules:async n=>{var r;let i;if(i=Date.now(),i-(o[n]??0)>2e4){o[n]=Date.now();try{let i,a=(r=await (0,E.H0)(n),i={[s.uh.KEYWORD]:[],[s.uh.ML_SPAM]:[],[s.uh.DEFAULT_KEYWORD_LIST]:[],[s.uh.MENTION_SPAM]:[],[s.uh.USER_PROFILE]:[],[s.uh.SERVER_POLICY]:[]},r.forEach(e=>{let{triggerType:t}=e;i[t]?.push(e)}),i),l=t().rules;(0,u.r)(()=>{e({rules:{...l,[n]:a},error:null})})}catch(n){let t=new l.LG(n);(0,u.r)(()=>{e({error:t})})}}}})),c=(e,t)=>{let n=_.getState().rules;return(n[e]?.[t]??[]).length};function h(e){let[t,n]=r.useState(!1),[a,u]=_(e=>[e.syncRules,e.fetching],i.x);return[t,r.useCallback(async()=>{if(!u&&null!=e)try{n(!0),await a(e)}finally{n(!1)}},[e,u,a])]}function p(e){let[t,n]=h(e);return r.useEffect(()=>{(async()=>{await n()})()},[e,n]),[t,n]}function M(e){return _(t=>({rulesByTriggerType:t.rules[e??S.dJq]??{},updateRule:t.updateRule,removeRule:t.removeRule}),i.x)}
+n.d(t, { H6: () => h, p3: () => c, qv: () => p, wP: () => M }), n(321073);
+var r = n(64700),
+    i = n(942381),
+    a = n(265690),
+    u = n(121894),
+    l = n(913122),
+    E = n(995786),
+    A = n(904813),
+    s = n(243277),
+    S = n(652215);
+let o = {},
+    _ = (0, a.h)((e, t) => ({
+        rules: {},
+        fetching: !1,
+        error: null,
+        updateRule: (n) => {
+            let { guildId: r, id: i, triggerType: a } = n,
+                { rules: l } = t(),
+                E = l[r] ?? {},
+                s = E[a] ?? [],
+                S = s.some((e) => e.id === i),
+                o = s.filter((e) => !(0, A.R)(e.id) || e.triggerType !== a),
+                _ = S ? o.map((e) => (e.id === i ? n : e)) : [...o, n];
+            (0, u.r)(() => {
+                e({ rules: { ...l, [r]: { ...E, [a]: _ } }, error: null });
+            });
+        },
+        removeRule: (n, r) => {
+            let { rules: i } = t(),
+                a = i[r],
+                l = Object.keys(a).reduce((e, t) => {
+                    let r = Number(t),
+                        i = a[r] ?? [];
+                    return (e[r] = i.filter((e) => e.id !== n)), e;
+                }, {});
+            (0, u.r)(() => {
+                e({ rules: { ...i, [r]: l }, error: null });
+            });
+        },
+        syncRules: async (n) => {
+            var r;
+            let i;
+            if (((i = Date.now()), i - (o[n] ?? 0) > 2e4)) {
+                o[n] = Date.now();
+                try {
+                    let i,
+                        a =
+                            ((r = await (0, E.H0)(n)),
+                            (i = {
+                                [s.uh.KEYWORD]: [],
+                                [s.uh.ML_SPAM]: [],
+                                [s.uh.DEFAULT_KEYWORD_LIST]: [],
+                                [s.uh.MENTION_SPAM]: [],
+                                [s.uh.USER_PROFILE]: [],
+                                [s.uh.SERVER_POLICY]: [],
+                            }),
+                            r.forEach((e) => {
+                                let { triggerType: t } = e;
+                                i[t]?.push(e);
+                            }),
+                            i),
+                        l = t().rules;
+                    (0, u.r)(() => {
+                        e({ rules: { ...l, [n]: a }, error: null });
+                    });
+                } catch (n) {
+                    let t = new l.LG(n);
+                    (0, u.r)(() => {
+                        e({ error: t });
+                    });
+                }
+            }
+        },
+    })),
+    c = (e, t) => {
+        let n = _.getState().rules;
+        return (n[e]?.[t] ?? []).length;
+    };
+function h(e) {
+    let [t, n] = r.useState(!1),
+        [a, u] = _((e) => [e.syncRules, e.fetching], i.x);
+    return [
+        t,
+        r.useCallback(async () => {
+            if (!u && null != e)
+                try {
+                    n(!0), await a(e);
+                } finally {
+                    n(!1);
+                }
+        }, [e, u, a]),
+    ];
+}
+function p(e) {
+    let [t, n] = h(e);
+    return (
+        r.useEffect(() => {
+            (async () => {
+                await n();
+            })();
+        }, [e, n]),
+        [t, n]
+    );
+}
+function M(e) {
+    return _(
+        (t) => ({ rulesByTriggerType: t.rules[e ?? S.dJq] ?? {}, updateRule: t.updateRule, removeRule: t.removeRule }),
+        i.x,
+    );
+}

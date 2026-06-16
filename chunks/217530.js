@@ -1,1 +1,71 @@
-t.d(l,{A:()=>x});var s=t(627968),a=t(64700),n=t(503698),r=t.n(n),i=t(607399),c=t(689175),d=t(834730),o=t(375708),h=t(883154);function u(e){let{text:l,hasScrolled:t}=e;return(0,s.jsxs)("div",{className:r()(h.kL,{[h.sz]:t}),children:[(0,s.jsx)("div",{className:h.lm,children:(0,s.jsx)(d.E,{className:h.__invalid_label,variant:"text-md/medium",color:"text-strong",children:l})}),(0,s.jsx)("div",{className:h._p})]})}var m=t(760967);function x(e){let{children:l,className:t}=e,{horizontalScrollNotice:n,handleScroll:d,handleSetScrollerRef:h,handleSetContainerRef:x}=function(){let[e,l]=a.useState(),[t,n]=a.useState(),[r,i]=a.useState(!1),[c,d]=a.useState(!1);return a.useEffect(()=>{null==e||null==t?i(!1):i(e<t)},[e,t]),{horizontalScrollNotice:a.useMemo(()=>r?(0,s.jsx)(u,{text:o.intl.string(o.t.RfAAH9),hasScrolled:c}):null,[r,c]),handleScroll:()=>d(!0),handleSetScrollerRef:e=>n(e?.getScrollerState()?.scrollWidth),handleSetContainerRef:e=>l(e?.clientWidth)}}(),S=(0,s.jsx)("div",{className:m.vi,children:(0,s.jsx)("div",{className:r()(m._s,t),children:l})});return i.Fr||(S=(0,s.jsxs)(s.Fragment,{children:[n,(0,s.jsx)(c.Ch,{className:m.XG,orientation:"horizontal",ref:h,onScroll:d,children:S})]})),(0,s.jsx)("div",{className:m.Rc,ref:x,children:S})}
+t.d(l, { A: () => x });
+var s = t(627968),
+    a = t(64700),
+    n = t(503698),
+    r = t.n(n),
+    i = t(607399),
+    c = t(689175),
+    d = t(834730),
+    o = t(375708),
+    h = t(883154);
+function u(e) {
+    let { text: l, hasScrolled: t } = e;
+    return (0, s.jsxs)("div", {
+        className: r()(h.kL, { [h.sz]: t }),
+        children: [
+            (0, s.jsx)("div", {
+                className: h.lm,
+                children: (0, s.jsx)(d.E, {
+                    className: h.__invalid_label,
+                    variant: "text-md/medium",
+                    color: "text-strong",
+                    children: l,
+                }),
+            }),
+            (0, s.jsx)("div", { className: h._p }),
+        ],
+    });
+}
+var m = t(760967);
+function x(e) {
+    let { children: l, className: t } = e,
+        {
+            horizontalScrollNotice: n,
+            handleScroll: d,
+            handleSetScrollerRef: h,
+            handleSetContainerRef: x,
+        } = (function () {
+            let [e, l] = a.useState(),
+                [t, n] = a.useState(),
+                [r, i] = a.useState(!1),
+                [c, d] = a.useState(!1);
+            return (
+                a.useEffect(() => {
+                    null == e || null == t ? i(!1) : i(e < t);
+                }, [e, t]),
+                {
+                    horizontalScrollNotice: a.useMemo(
+                        () => (r ? (0, s.jsx)(u, { text: o.intl.string(o.t.RfAAH9), hasScrolled: c }) : null),
+                        [r, c],
+                    ),
+                    handleScroll: () => d(!0),
+                    handleSetScrollerRef: (e) => n(e?.getScrollerState()?.scrollWidth),
+                    handleSetContainerRef: (e) => l(e?.clientWidth),
+                }
+            );
+        })(),
+        S = (0, s.jsx)("div", {
+            className: m.vi,
+            children: (0, s.jsx)("div", { className: r()(m._s, t), children: l }),
+        });
+    return (
+        i.Fr ||
+            (S = (0, s.jsxs)(s.Fragment, {
+                children: [
+                    n,
+                    (0, s.jsx)(c.Ch, { className: m.XG, orientation: "horizontal", ref: h, onScroll: d, children: S }),
+                ],
+            })),
+        (0, s.jsx)("div", { className: m.Rc, ref: x, children: S })
+    );
+}

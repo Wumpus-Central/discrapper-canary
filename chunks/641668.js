@@ -1,1 +1,32 @@
-"use strict";n.d(t,{G:()=>o});var i=n(64700),r=n(561392),s=n(716263),a=n(844222);function o(){let{reducedMotion:e}=i.useContext(a.C),{isOpen:t,setIsOpen:n,refs:o,floatingStyles:l,getReferenceProps:u,getFloatingProps:c,context:d}=(0,r.u)({placement:"bottom",matchReferenceWidth:!0,transform:e.enabled}),{styles:_}=(0,s.DL)(d,{common:{transformOrigin:"top center"},initial:{opacity:.5,transform:"scaleY(0.96)"},duration:100});return{isOpen:t,setIsOpen:n,refs:o,floatingStyles:l,getReferenceProps:u,getFloatingProps:c,transitionStyles:e.enabled?{}:_}}
+"use strict";
+n.d(t, { G: () => o });
+var i = n(64700),
+    r = n(561392),
+    s = n(716263),
+    a = n(844222);
+function o() {
+    let { reducedMotion: e } = i.useContext(a.C),
+        {
+            isOpen: t,
+            setIsOpen: n,
+            refs: o,
+            floatingStyles: l,
+            getReferenceProps: u,
+            getFloatingProps: c,
+            context: d,
+        } = (0, r.u)({ placement: "bottom", matchReferenceWidth: !0, transform: e.enabled }),
+        { styles: _ } = (0, s.DL)(d, {
+            common: { transformOrigin: "top center" },
+            initial: { opacity: 0.5, transform: "scaleY(0.96)" },
+            duration: 100,
+        });
+    return {
+        isOpen: t,
+        setIsOpen: n,
+        refs: o,
+        floatingStyles: l,
+        getReferenceProps: u,
+        getFloatingProps: c,
+        transitionStyles: e.enabled ? {} : _,
+    };
+}

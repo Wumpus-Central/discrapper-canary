@@ -1,1 +1,6 @@
-n.d(e,{A:()=>r});var i=n(702841),l=n(495544);function r(){return(0,i.bG)([l.default],()=>l.default.isAuthenticated())}
+n.d(e, { A: () => r });
+var i = n(702841),
+    l = n(495544);
+function r() {
+    return (0, i.bG)([l.default], () => l.default.isAuthenticated());
+}

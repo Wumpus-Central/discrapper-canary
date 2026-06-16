@@ -1,1 +1,4 @@
-r.d(t,{a:()=>s});var l=r(840251),n=r(688151);let s=new l.E([],n.$G.COLLECTIBLES_SHOP_OPEN,{location:"collectibles shop open"})
+r.d(t, { a: () => s });
+var l = r(840251),
+    n = r(688151);
+let s = new l.E([], n.$G.COLLECTIBLES_SHOP_OPEN, { location: "collectibles shop open" });

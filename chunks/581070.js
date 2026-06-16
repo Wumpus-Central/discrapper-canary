@@ -1,1 +1,5 @@
-"use strict";var i=n(640847);e.exports=function(){return i()&&!!Symbol.toStringTag}
+"use strict";
+var i = n(640847);
+e.exports = function () {
+    return i() && !!Symbol.toStringTag;
+};

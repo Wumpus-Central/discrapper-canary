@@ -1,1 +1,49 @@
-l.d(t,{default:()=>C});var a=l(627968),n=l(64700),i=l(192308),r=l(930932),d=l(612479),o=l(174459),u=l(652215),s=l(670455),b=l(375708);let c=["OTHER"];function C(e){let{analyticsData:t,transitionState:C,onClose:E}=e;return n.useEffect(()=>{o.default.track(u.HAw.OPEN_MODAL,{type:"Video Background Feedback"})},[]),(0,a.jsx)(d.A,{modalType:"video_background",header:b.intl.string(b.t.Wl8qXg),body:b.intl.string(b.t.vPw6j0),problemTitle:b.intl.string(b.t.UNFF85),problems:[{value:"BAD_OUTLINE",label:b.intl.string(b.t.pyhS3j)},{value:"BACKGROUND_DETECTION_ACCURACY",label:b.intl.string(b.t.cymRTb)},{value:"FLICKERING",label:b.intl.string(b.t.xZ60CB)},{value:"BACKGROUND_DETECTION_LAG",label:b.intl.string(b.t.DweTcb)},{value:"OTHER",label:b.intl.string(b.t.emlT91)}],freeformNeededProblems:c,onSubmit:function(e){var n;let{rating:d,problem:c,dontShowAgain:C,feedback:E}=e;C&&(0,r.n3)({feedbackType:s.MW.VIDEO_BACKGROUND,location:"VideoBackgroundFeedbackModal"}),null!=d&&(n=c?.value??null,o.default.track(u.HAw.VIDEO_BACKGROUND_FEEDBACK,{...t,reason:n,rating:d,feedback:E}),null!=c&&(0,i.openModalLazy)(async()=>{let{default:e}=await l.e("37836").then(l.bind(l,845671));return t=>(0,a.jsx)(e,{body:b.intl.string(b.t.aHB11f),...t})}))},onClose:E,transitionState:C,otherKey:"OTHER"})}
+l.d(t, { default: () => C });
+var a = l(627968),
+    n = l(64700),
+    i = l(192308),
+    r = l(930932),
+    d = l(612479),
+    o = l(174459),
+    u = l(652215),
+    s = l(670455),
+    b = l(375708);
+let c = ["OTHER"];
+function C(e) {
+    let { analyticsData: t, transitionState: C, onClose: E } = e;
+    return (
+        n.useEffect(() => {
+            o.default.track(u.HAw.OPEN_MODAL, { type: "Video Background Feedback" });
+        }, []),
+        (0, a.jsx)(d.A, {
+            modalType: "video_background",
+            header: b.intl.string(b.t.Wl8qXg),
+            body: b.intl.string(b.t.vPw6j0),
+            problemTitle: b.intl.string(b.t.UNFF85),
+            problems: [
+                { value: "BAD_OUTLINE", label: b.intl.string(b.t.pyhS3j) },
+                { value: "BACKGROUND_DETECTION_ACCURACY", label: b.intl.string(b.t.cymRTb) },
+                { value: "FLICKERING", label: b.intl.string(b.t.xZ60CB) },
+                { value: "BACKGROUND_DETECTION_LAG", label: b.intl.string(b.t.DweTcb) },
+                { value: "OTHER", label: b.intl.string(b.t.emlT91) },
+            ],
+            freeformNeededProblems: c,
+            onSubmit: function (e) {
+                var n;
+                let { rating: d, problem: c, dontShowAgain: C, feedback: E } = e;
+                C && (0, r.n3)({ feedbackType: s.MW.VIDEO_BACKGROUND, location: "VideoBackgroundFeedbackModal" }),
+                    null != d &&
+                        ((n = c?.value ?? null),
+                        o.default.track(u.HAw.VIDEO_BACKGROUND_FEEDBACK, { ...t, reason: n, rating: d, feedback: E }),
+                        null != c &&
+                            (0, i.openModalLazy)(async () => {
+                                let { default: e } = await l.e("37836").then(l.bind(l, 845671));
+                                return (t) => (0, a.jsx)(e, { body: b.intl.string(b.t.aHB11f), ...t });
+                            }));
+            },
+            onClose: E,
+            transitionState: C,
+            otherKey: "OTHER",
+        })
+    );
+}

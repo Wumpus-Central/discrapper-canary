@@ -1,1 +1,28 @@
-e.d(a,{A:()=>n});var r=e(627968);e(64700);var t=e(529689),i=e(696986),o=e(834730),l=e(305924);function n(s){let{attachment:a}=s,e=Math.round((a.size??0)/1024/1024*100)/100;return(0,r.jsxs)("div",{className:l.kL,children:[(0,r.jsx)(t.D,{size:"xs",color:"currentColor",className:l.Yg}),(0,r.jsx)(i.h,{size:8,horizontal:!0}),(0,r.jsx)(o.E,{variant:"text-sm/normal",color:"text-default",className:l.Md,children:a.filename}),(0,r.jsx)(i.h,{size:8,horizontal:!0}),(0,r.jsx)("div",{className:l.Om}),(0,r.jsx)(i.h,{size:8,horizontal:!0}),(0,r.jsxs)(o.E,{variant:"text-sm/normal",color:"text-muted",children:[e,"MB"]})]})}
+e.d(a, { A: () => n });
+var r = e(627968);
+e(64700);
+var t = e(529689),
+    i = e(696986),
+    o = e(834730),
+    l = e(305924);
+function n(s) {
+    let { attachment: a } = s,
+        e = Math.round(((a.size ?? 0) / 1024 / 1024) * 100) / 100;
+    return (0, r.jsxs)("div", {
+        className: l.kL,
+        children: [
+            (0, r.jsx)(t.D, { size: "xs", color: "currentColor", className: l.Yg }),
+            (0, r.jsx)(i.h, { size: 8, horizontal: !0 }),
+            (0, r.jsx)(o.E, {
+                variant: "text-sm/normal",
+                color: "text-default",
+                className: l.Md,
+                children: a.filename,
+            }),
+            (0, r.jsx)(i.h, { size: 8, horizontal: !0 }),
+            (0, r.jsx)("div", { className: l.Om }),
+            (0, r.jsx)(i.h, { size: 8, horizontal: !0 }),
+            (0, r.jsxs)(o.E, { variant: "text-sm/normal", color: "text-muted", children: [e, "MB"] }),
+        ],
+    });
+}

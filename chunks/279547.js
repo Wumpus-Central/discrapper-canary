@@ -1,1 +1,23 @@
-n.d(e,{d:()=>a});var i=n(64700),l=n(913122);function a(t){let{onError:e,onSuccess:n,report:a}=t,[s,r]=i.useState(!1);return{reportFalsePositive:i.useCallback(async()=>{if(!s){r(!0);try{await a(),n?.()}catch(n){let t=new l.LG(n);e?.(t)}finally{r(!1)}}},[s,e,n,a]),isReportFalsePositiveLoading:s}}
+n.d(e, { d: () => a });
+var i = n(64700),
+    l = n(913122);
+function a(t) {
+    let { onError: e, onSuccess: n, report: a } = t,
+        [s, r] = i.useState(!1);
+    return {
+        reportFalsePositive: i.useCallback(async () => {
+            if (!s) {
+                r(!0);
+                try {
+                    await a(), n?.();
+                } catch (n) {
+                    let t = new l.LG(n);
+                    e?.(t);
+                } finally {
+                    r(!1);
+                }
+            }
+        }, [s, e, n, a]),
+        isReportFalsePositiveLoading: s,
+    };
+}

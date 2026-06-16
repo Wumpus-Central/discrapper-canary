@@ -1,1 +1,1 @@
-e.exports={x:"confirmationText_cbd4f3"}
+e.exports = { x: "confirmationText_cbd4f3" };

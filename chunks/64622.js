@@ -1,1 +1,204 @@
-e.d(t,{A:()=>J});var l=e(627968),n=e(64700),s=e(503698),a=e.n(s),d=e(17928),o=e(342952),r=e(289873),c=e(939249),A=e(834730),u=e(111159),h=e(778712),x=e(140735),g=e(707554),m=e(730852),p=e(401843),j=e(475743),_=e(672979),C=e(717306),v=e(323073),N=e(793574),f=e(688810),O=e(47167),E=e(402216),I=e(450149),S=e(279250),y=e(734057),L=e(71393),D=e(576705),V=e(290863),b=e(607567),T=e(92240),M=e(257367),P=e(939496),w=e(584904),G=e(351638),U=e(316770),k=e(910607),F=e(70963),R=e(269587),z=e(652215),H=e(996988),B=e(375708),Q=e(514566),Y=e(478846),$=e(399162),q=e(181147);function J(i){let t,{user:e,currentUser:s,stream:J,className:X,onClose:Z}=i,{themeType:K,theme:W}=(0,P.E)(),ii=(0,d.bG)([L.A],()=>L.A.getGuild(J?.guildId)),it=(0,d.bG)([y.A],()=>y.A.getChannel(J?.channelId)),ie=(0,O.Ay)(it),il=(0,d.yK)([b.Ay],()=>null!=it?b.Ay.getVoiceStatesForChannel(it).map(i=>{let{user:t}=i;return t}):[]),is=(0,d.bG)([V.A],()=>V.A.findActivity(e.id,i=>(0,_.A)(i)&&!(0,C.A)(i))),{analyticsLocations:ia}=(0,f.Ay)(N.A.USER_PROFILE_LIVE_ACTIVITY_CARD),id=(0,T.A)({display:"live",voiceChannelId:it?.id,user:e,stream:J,analyticsLocations:ia}),io=(0,M.A)({userId:e.id,onAction:id}),{previewUrl:ir,isLoading:ic}=(0,I.A)(J?.guildId,J?.channelId,J?.ownerId),[iA,iu]=(0,S.zP)(it),ih=(0,v.a9)()&&(0,v.UK)(it?.id),ix=(0,d.bG)([D.A],()=>null!=it&&!ih&&D.A.canBasicChannel(z.hVb.CONNECT,it)),ig=(0,j.A)(ic?null:ir),im=ic||null==ir?ig:ir,ip=n.useId();if(null==ii||null==it||!1===J.discoverable)return null;let ij=()=>e.id===s.id?null:(0,l.jsx)("div",{className:Q.o1,children:(0,l.jsx)(F.Ay,{channel:it,onAction:id,onClose:Z})}),i_=null!=is?B.intl.formatToPlainString(B.t["4CQq9Q"],{name:is.name}):B.intl.string(B.t["Jpkr/q"]);return(0,l.jsx)(f.f5,{value:ia,children:(0,l.jsxs)(w.A,{ref:io,className:X,onAction:id,onClose:Z,"aria-labelledby":ip,children:[(0,l.jsx)(G.A,{text:i_,tags:(0,l.jsx)(E.Ay,{size:E.ed.SMALL}),contextMenu:(0,l.jsx)(R.A,{display:"live",user:e,onClose:Z})}),(0,l.jsx)(x.A,{children:(0,l.jsx)(g.H,{id:ip,children:`${i_}, ${ie}`})}),(0,l.jsxs)("div",{className:Q.rf,children:[(0,l.jsxs)("div",{className:Q.Qs,children:[(t=i=>{i.stopPropagation(),iA&&(id({action:"PRESS_IMAGE"}),m.default.selectVoiceChannel(J.channelId),(0,p.Nl)(J),Z?.())},null==im&&ic?(0,l.jsx)("div",{className:Y.VH,children:(0,l.jsx)(r.y,{})}):null==im||ih?(0,l.jsxs)(c.D,{className:a()(Y.VH,Y.Lw,iA?Y.vk:Y.r9),onClick:t,"aria-label":(0,S.CQ)(iu),"aria-disabled":!iA,children:[(0,l.jsx)("img",{alt:"",src:W===z.NJ8.LIGHT?q:$}),K!==H.d.MODAL&&K!==H.d.MODAL_V2&&(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(A.E,{className:Y.um,variant:"text-sm/medium",color:"always-white",children:(0,S.CT)(iu)}),(0,l.jsx)(A.E,{variant:"text-sm/medium",children:ix?B.intl.string(B.t.uQZTBV):B.intl.string(B.t.pgUTZC)})]})]}):(0,l.jsxs)(c.D,{className:a()(Y.VH,Y.Lw,iA?Y.vk:Y.r9),onClick:t,"aria-label":(0,S.CQ)(iu),"aria-disabled":!iA,children:[(0,l.jsx)("img",{alt:"",src:im,className:Y.Sl}),K!==H.d.MODAL&&K!==H.d.MODAL_V2&&(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(A.E,{className:Y.um,variant:"text-sm/medium",color:"always-white",children:(0,S.CT)(iu)}),(0,l.jsx)(u.p,{size:"xs",color:"currentColor",className:Y.wI})]})]})),K!==H.d.MODAL&&K!==H.d.MODAL_V2?null:(0,l.jsxs)("div",{className:Q.zH,children:[(0,l.jsx)(U.A,{channel:it,guild:ii,onAction:id,onClose:Z}),(0,l.jsx)(o.A,{users:il,guildId:ii.id,channelId:it.id,maxUsers:k.k,size:h._3.SIZE_16,onClickOverflow:i=>{i?.stopPropagation(),id?.({action:"PRESS_VOICE_CHANNEL_AVATARS"})},onUserClick:i=>i.stopPropagation(),disableUserPopout:i=>i===e.id,overflowCountColor:"text-muted","aria-label":B.intl.string(B.t["jNqDh/"])}),K===H.d.MODAL_V2&&ij()]}),K===H.d.MODAL&&ij()]}),K===H.d.MODAL||K===H.d.MODAL_V2?null:(0,l.jsx)(k.A,{user:e,guild:ii,channel:it,onAction:id,onClose:Z})]}),K!==H.d.MODAL&&K!==H.d.MODAL_V2&&ij()]})})}
+e.d(t, { A: () => J });
+var l = e(627968),
+    n = e(64700),
+    s = e(503698),
+    a = e.n(s),
+    d = e(17928),
+    o = e(342952),
+    r = e(289873),
+    c = e(939249),
+    A = e(834730),
+    u = e(111159),
+    h = e(778712),
+    x = e(140735),
+    g = e(707554),
+    m = e(730852),
+    p = e(401843),
+    j = e(475743),
+    _ = e(672979),
+    C = e(717306),
+    v = e(323073),
+    N = e(793574),
+    f = e(688810),
+    O = e(47167),
+    E = e(402216),
+    I = e(450149),
+    S = e(279250),
+    y = e(734057),
+    L = e(71393),
+    D = e(576705),
+    V = e(290863),
+    b = e(607567),
+    T = e(92240),
+    M = e(257367),
+    P = e(939496),
+    w = e(584904),
+    G = e(351638),
+    U = e(316770),
+    k = e(910607),
+    F = e(70963),
+    R = e(269587),
+    z = e(652215),
+    H = e(996988),
+    B = e(375708),
+    Q = e(514566),
+    Y = e(478846),
+    $ = e(399162),
+    q = e(181147);
+function J(i) {
+    let t,
+        { user: e, currentUser: s, stream: J, className: X, onClose: Z } = i,
+        { themeType: K, theme: W } = (0, P.E)(),
+        ii = (0, d.bG)([L.A], () => L.A.getGuild(J?.guildId)),
+        it = (0, d.bG)([y.A], () => y.A.getChannel(J?.channelId)),
+        ie = (0, O.Ay)(it),
+        il = (0, d.yK)([b.Ay], () =>
+            null != it
+                ? b.Ay.getVoiceStatesForChannel(it).map((i) => {
+                      let { user: t } = i;
+                      return t;
+                  })
+                : [],
+        ),
+        is = (0, d.bG)([V.A], () => V.A.findActivity(e.id, (i) => (0, _.A)(i) && !(0, C.A)(i))),
+        { analyticsLocations: ia } = (0, f.Ay)(N.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        id = (0, T.A)({ display: "live", voiceChannelId: it?.id, user: e, stream: J, analyticsLocations: ia }),
+        io = (0, M.A)({ userId: e.id, onAction: id }),
+        { previewUrl: ir, isLoading: ic } = (0, I.A)(J?.guildId, J?.channelId, J?.ownerId),
+        [iA, iu] = (0, S.zP)(it),
+        ih = (0, v.a9)() && (0, v.UK)(it?.id),
+        ix = (0, d.bG)([D.A], () => null != it && !ih && D.A.canBasicChannel(z.hVb.CONNECT, it)),
+        ig = (0, j.A)(ic ? null : ir),
+        im = ic || null == ir ? ig : ir,
+        ip = n.useId();
+    if (null == ii || null == it || !1 === J.discoverable) return null;
+    let ij = () =>
+            e.id === s.id
+                ? null
+                : (0, l.jsx)("div", {
+                      className: Q.o1,
+                      children: (0, l.jsx)(F.Ay, { channel: it, onAction: id, onClose: Z }),
+                  }),
+        i_ = null != is ? B.intl.formatToPlainString(B.t["4CQq9Q"], { name: is.name }) : B.intl.string(B.t["Jpkr/q"]);
+    return (0, l.jsx)(f.f5, {
+        value: ia,
+        children: (0, l.jsxs)(w.A, {
+            ref: io,
+            className: X,
+            onAction: id,
+            onClose: Z,
+            "aria-labelledby": ip,
+            children: [
+                (0, l.jsx)(G.A, {
+                    text: i_,
+                    tags: (0, l.jsx)(E.Ay, { size: E.ed.SMALL }),
+                    contextMenu: (0, l.jsx)(R.A, { display: "live", user: e, onClose: Z }),
+                }),
+                (0, l.jsx)(x.A, { children: (0, l.jsx)(g.H, { id: ip, children: `${i_}, ${ie}` }) }),
+                (0, l.jsxs)("div", {
+                    className: Q.rf,
+                    children: [
+                        (0, l.jsxs)("div", {
+                            className: Q.Qs,
+                            children: [
+                                ((t = (i) => {
+                                    i.stopPropagation(),
+                                        iA &&
+                                            (id({ action: "PRESS_IMAGE" }),
+                                            m.default.selectVoiceChannel(J.channelId),
+                                            (0, p.Nl)(J),
+                                            Z?.());
+                                }),
+                                null == im && ic
+                                    ? (0, l.jsx)("div", { className: Y.VH, children: (0, l.jsx)(r.y, {}) })
+                                    : null == im || ih
+                                      ? (0, l.jsxs)(c.D, {
+                                            className: a()(Y.VH, Y.Lw, iA ? Y.vk : Y.r9),
+                                            onClick: t,
+                                            "aria-label": (0, S.CQ)(iu),
+                                            "aria-disabled": !iA,
+                                            children: [
+                                                (0, l.jsx)("img", { alt: "", src: W === z.NJ8.LIGHT ? q : $ }),
+                                                K !== H.d.MODAL &&
+                                                    K !== H.d.MODAL_V2 &&
+                                                    (0, l.jsxs)(l.Fragment, {
+                                                        children: [
+                                                            (0, l.jsx)(A.E, {
+                                                                className: Y.um,
+                                                                variant: "text-sm/medium",
+                                                                color: "always-white",
+                                                                children: (0, S.CT)(iu),
+                                                            }),
+                                                            (0, l.jsx)(A.E, {
+                                                                variant: "text-sm/medium",
+                                                                children: ix
+                                                                    ? B.intl.string(B.t.uQZTBV)
+                                                                    : B.intl.string(B.t.pgUTZC),
+                                                            }),
+                                                        ],
+                                                    }),
+                                            ],
+                                        })
+                                      : (0, l.jsxs)(c.D, {
+                                            className: a()(Y.VH, Y.Lw, iA ? Y.vk : Y.r9),
+                                            onClick: t,
+                                            "aria-label": (0, S.CQ)(iu),
+                                            "aria-disabled": !iA,
+                                            children: [
+                                                (0, l.jsx)("img", { alt: "", src: im, className: Y.Sl }),
+                                                K !== H.d.MODAL &&
+                                                    K !== H.d.MODAL_V2 &&
+                                                    (0, l.jsxs)(l.Fragment, {
+                                                        children: [
+                                                            (0, l.jsx)(A.E, {
+                                                                className: Y.um,
+                                                                variant: "text-sm/medium",
+                                                                color: "always-white",
+                                                                children: (0, S.CT)(iu),
+                                                            }),
+                                                            (0, l.jsx)(u.p, {
+                                                                size: "xs",
+                                                                color: "currentColor",
+                                                                className: Y.wI,
+                                                            }),
+                                                        ],
+                                                    }),
+                                            ],
+                                        })),
+                                K !== H.d.MODAL && K !== H.d.MODAL_V2
+                                    ? null
+                                    : (0, l.jsxs)("div", {
+                                          className: Q.zH,
+                                          children: [
+                                              (0, l.jsx)(U.A, { channel: it, guild: ii, onAction: id, onClose: Z }),
+                                              (0, l.jsx)(o.A, {
+                                                  users: il,
+                                                  guildId: ii.id,
+                                                  channelId: it.id,
+                                                  maxUsers: k.k,
+                                                  size: h._3.SIZE_16,
+                                                  onClickOverflow: (i) => {
+                                                      i?.stopPropagation(),
+                                                          id?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                                                  },
+                                                  onUserClick: (i) => i.stopPropagation(),
+                                                  disableUserPopout: (i) => i === e.id,
+                                                  overflowCountColor: "text-muted",
+                                                  "aria-label": B.intl.string(B.t["jNqDh/"]),
+                                              }),
+                                              K === H.d.MODAL_V2 && ij(),
+                                          ],
+                                      }),
+                                K === H.d.MODAL && ij(),
+                            ],
+                        }),
+                        K === H.d.MODAL || K === H.d.MODAL_V2
+                            ? null
+                            : (0, l.jsx)(k.A, { user: e, guild: ii, channel: it, onAction: id, onClose: Z }),
+                    ],
+                }),
+                K !== H.d.MODAL && K !== H.d.MODAL_V2 && ij(),
+            ],
+        }),
+    });
+}

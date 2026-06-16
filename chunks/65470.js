@@ -1,1 +1,29 @@
-a.d(t,{A:()=>c});var s=a(627968);a(64700);var i=a(821609),n=a(597770),r=a(194509),l=a(783420);let c=e=>{let{subscriptionTier:t,premiumModalAnalyticsLocation:a,giftMessage:c,onClick:o,buttonTextOverride:d,...u}=e;return(0,s.jsx)(l.A,{isGift:!0,subscriptionTier:t,premiumModalAnalyticsLocation:a,giftMessage:c,onClick:o,children:e=>{let{onClick:a}=e,l=d??(0,r.U)(t);return(0,s.jsx)(i.$,{onClick:a,icon:n.o,...u,text:l})}})}
+a.d(t, { A: () => c });
+var s = a(627968);
+a(64700);
+var i = a(821609),
+    n = a(597770),
+    r = a(194509),
+    l = a(783420);
+let c = (e) => {
+    let {
+        subscriptionTier: t,
+        premiumModalAnalyticsLocation: a,
+        giftMessage: c,
+        onClick: o,
+        buttonTextOverride: d,
+        ...u
+    } = e;
+    return (0, s.jsx)(l.A, {
+        isGift: !0,
+        subscriptionTier: t,
+        premiumModalAnalyticsLocation: a,
+        giftMessage: c,
+        onClick: o,
+        children: (e) => {
+            let { onClick: a } = e,
+                l = d ?? (0, r.U)(t);
+            return (0, s.jsx)(i.$, { onClick: a, icon: n.o, ...u, text: l });
+        },
+    });
+};

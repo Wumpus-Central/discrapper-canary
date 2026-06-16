@@ -1,1 +1,51 @@
-"use strict";n.d(t,{A:()=>A}),n(938796);var i=n(665260),r=n(439372),s=n(976860),a=n(696451),o=n(71393),l=n(967198),u=n(927813),c=n(817818),d=n(591552),_=n(608401),h=n(652215),f=n(746080),p=n(340837);let E=null,m=null;class g extends r.A{actions={GUILD_DELETE:e=>this.handleGuildDelete(e),CHANNEL_SELECT:e=>this.handleChannelSelect(e),POST_CONNECTION_OPEN:e=>this.handleConnectionOpen(e)};handleConnectionOpen=e=>{null!=(E=E??l.A.getGuildId()??null)&&this._openOnboardingIfIncomplete(E)};handleChannelSelect=e=>{let{guildId:t,channelId:n}=e;if(E===t&&m===n||(E=t??null,m=n??null,null==E||null==m))return;let i=o.A.getGuild(t);null!=i&&i.features.has(h.GuildFeatures.COMMUNITY)&&d.A.shouldFetchPrompts(E,8*u.A.Millis.HOUR)&&(0,c.Tg)(E),this._openOnboardingIfIncomplete(E,n)};handleGuildDelete=e=>{let{guild:t}=e;(0,_.Jg)(t.id)};_openOnboardingIfIncomplete=async(e,t)=>{if((0,_.Ih)(e))return void(0,s.pX)(h.BVt.CHANNEL(e,f.VV.GUILD_ONBOARDING));let n=o.A.getGuild(e);if(null==n||!n.features.has(h.GuildFeatures.GUILD_ONBOARDING))return;let r=a.Ay.getSelfMember(e);!(null==r||(0,i.Lt)(r.flags??0,p.D.COMPLETED_ONBOARDING))&&(0,i.Lt)(r.flags??0,p.D.STARTED_ONBOARDING)&&(await (0,_.default)({guildId:e}),(0,s.pX)(h.BVt.CHANNEL(e,t)))}}let A=new g
+"use strict";
+n.d(t, { A: () => A }), n(938796);
+var i = n(665260),
+    r = n(439372),
+    s = n(976860),
+    a = n(696451),
+    o = n(71393),
+    l = n(967198),
+    u = n(927813),
+    c = n(817818),
+    d = n(591552),
+    _ = n(608401),
+    h = n(652215),
+    f = n(746080),
+    p = n(340837);
+let E = null,
+    m = null;
+class g extends r.A {
+    actions = {
+        GUILD_DELETE: (e) => this.handleGuildDelete(e),
+        CHANNEL_SELECT: (e) => this.handleChannelSelect(e),
+        POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
+    };
+    handleConnectionOpen = (e) => {
+        null != (E = E ?? l.A.getGuildId() ?? null) && this._openOnboardingIfIncomplete(E);
+    };
+    handleChannelSelect = (e) => {
+        let { guildId: t, channelId: n } = e;
+        if ((E === t && m === n) || ((E = t ?? null), (m = n ?? null), null == E || null == m)) return;
+        let i = o.A.getGuild(t);
+        null != i &&
+            i.features.has(h.GuildFeatures.COMMUNITY) &&
+            d.A.shouldFetchPrompts(E, 8 * u.A.Millis.HOUR) &&
+            (0, c.Tg)(E),
+            this._openOnboardingIfIncomplete(E, n);
+    };
+    handleGuildDelete = (e) => {
+        let { guild: t } = e;
+        (0, _.Jg)(t.id);
+    };
+    _openOnboardingIfIncomplete = async (e, t) => {
+        if ((0, _.Ih)(e)) return void (0, s.pX)(h.BVt.CHANNEL(e, f.VV.GUILD_ONBOARDING));
+        let n = o.A.getGuild(e);
+        if (null == n || !n.features.has(h.GuildFeatures.GUILD_ONBOARDING)) return;
+        let r = a.Ay.getSelfMember(e);
+        !(null == r || (0, i.Lt)(r.flags ?? 0, p.D.COMPLETED_ONBOARDING)) &&
+            (0, i.Lt)(r.flags ?? 0, p.D.STARTED_ONBOARDING) &&
+            (await (0, _.default)({ guildId: e }), (0, s.pX)(h.BVt.CHANNEL(e, t)));
+    };
+}
+let A = new g();

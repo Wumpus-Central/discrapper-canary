@@ -1,1 +1,7 @@
-var i=n(168110),r=1/0;e.exports=function(e){if("string"==typeof e||i(e))return e;var t=e+"";return"0"==t&&1/e==-r?"-0":t}
+var i = n(168110),
+    r = 1 / 0;
+e.exports = function (e) {
+    if ("string" == typeof e || i(e)) return e;
+    var t = e + "";
+    return "0" == t && 1 / e == -r ? "-0" : t;
+};

@@ -1,1 +1,1 @@
-_.exports={L:"toggle_a63120"}
+_.exports = { L: "toggle_a63120" };

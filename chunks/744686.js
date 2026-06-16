@@ -1,1 +1,2 @@
-"use strict";s.exports="/assets/e3ee79f55b67020e.png"
+"use strict";
+s.exports = "/assets/e3ee79f55b67020e.png";

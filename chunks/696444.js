@@ -1,1 +1,23 @@
-"use strict";n.d(t,{A:()=>r});var i=n(384726);class r{prices;type;premiumType;name;skuId;summary;constructor(e){this.prices=e.prices,this.type=e.type,this.premiumType=e.premiumType,this.name=e.name,this.skuId=e.skuId,this.summary=e.summary}static fromServer(e){let{prices:t,type:n,premium_type:s,name:a,sku_id:o,summary:l}=e;return new r({prices:(0,i.A)(t),type:n,premiumType:s,name:a,skuId:o,summary:l})}}
+"use strict";
+n.d(t, { A: () => r });
+var i = n(384726);
+class r {
+    prices;
+    type;
+    premiumType;
+    name;
+    skuId;
+    summary;
+    constructor(e) {
+        (this.prices = e.prices),
+            (this.type = e.type),
+            (this.premiumType = e.premiumType),
+            (this.name = e.name),
+            (this.skuId = e.skuId),
+            (this.summary = e.summary);
+    }
+    static fromServer(e) {
+        let { prices: t, type: n, premium_type: s, name: a, sku_id: o, summary: l } = e;
+        return new r({ prices: (0, i.A)(t), type: n, premiumType: s, name: a, skuId: o, summary: l });
+    }
+}

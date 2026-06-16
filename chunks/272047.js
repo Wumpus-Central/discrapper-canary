@@ -1,1 +1,12 @@
-s.d(i,{default:()=>d});var n=s(627968),r=s(189213),a=s(375708);function d(t){return(0,n.jsx)(r.Modal,{actions:[],title:a.intl.string(a.t.ULvRFd),subtitle:a.intl.string(a.t["HJJDr+"]),...t})}
+s.d(i, { default: () => d });
+var n = s(627968),
+    r = s(189213),
+    a = s(375708);
+function d(t) {
+    return (0, n.jsx)(r.Modal, {
+        actions: [],
+        title: a.intl.string(a.t.ULvRFd),
+        subtitle: a.intl.string(a.t["HJJDr+"]),
+        ...t,
+    });
+}

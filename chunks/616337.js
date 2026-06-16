@@ -1,1 +1,20 @@
-e.exports={kL:"container_a1cc72",QN:"heroContainerTopSpacing_a1cc72",gv:"heroContainer_a1cc72",ub:"thumbnailWrapper_a1cc72",UZ:"thumbnailPlayIcon_a1cc72",AJ:"heroFadeIn_a1cc72",Pp:"heroFadeOut_a1cc72",c8:"heroImage_a1cc72",wp:"heroArea_a1cc72",Jy:"heroPrevLayer_a1cc72",Db:"heroPrevImage_a1cc72",xn:"thumbnail_a1cc72",JS:"thumbnailClickable_a1cc72",Y4:"thumbnailSelected_a1cc72",ND:"trailerSection_a1cc72",HW:"haloCanvas_a1cc72",tN:"videoWrapper_a1cc72",T9:"trailerMediaPlayer_a1cc72"}
+e.exports = {
+    kL: "container_a1cc72",
+    QN: "heroContainerTopSpacing_a1cc72",
+    gv: "heroContainer_a1cc72",
+    ub: "thumbnailWrapper_a1cc72",
+    UZ: "thumbnailPlayIcon_a1cc72",
+    AJ: "heroFadeIn_a1cc72",
+    Pp: "heroFadeOut_a1cc72",
+    c8: "heroImage_a1cc72",
+    wp: "heroArea_a1cc72",
+    Jy: "heroPrevLayer_a1cc72",
+    Db: "heroPrevImage_a1cc72",
+    xn: "thumbnail_a1cc72",
+    JS: "thumbnailClickable_a1cc72",
+    Y4: "thumbnailSelected_a1cc72",
+    ND: "trailerSection_a1cc72",
+    HW: "haloCanvas_a1cc72",
+    tN: "videoWrapper_a1cc72",
+    T9: "trailerMediaPlayer_a1cc72",
+};

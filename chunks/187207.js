@@ -1,1 +1,30 @@
-"use strict";n.d(t,{n:()=>l});var i=n(824120),r=n.n(i),s=n(264572);function a(e){return 0|e.mod(0x100000000).toJSNumber()}function o(e){return 0|e.shiftRight(32).toJSNumber()}class l{_randomPrefix=0|Math.floor(0x100000000*Math.random());_creationTime=r()(Date.now());_sequenceNumber=0;generate(e){let t=r()(e),n=0|this._sequenceNumber++,i=new s.Buffer(24);return i.writeInt32LE(a(t),0,!0),i.writeInt32LE(o(t),4,!0),i.writeInt32LE(this._randomPrefix,8,!0),i.writeInt32LE(a(this._creationTime),12,!0),i.writeInt32LE(o(this._creationTime),16,!0),i.writeInt32LE(n,20,!0),i.toString("base64")}}
+"use strict";
+n.d(t, { n: () => l });
+var i = n(824120),
+    r = n.n(i),
+    s = n(264572);
+function a(e) {
+    return 0 | e.mod(0x100000000).toJSNumber();
+}
+function o(e) {
+    return 0 | e.shiftRight(32).toJSNumber();
+}
+class l {
+    _randomPrefix = 0 | Math.floor(0x100000000 * Math.random());
+    _creationTime = r()(Date.now());
+    _sequenceNumber = 0;
+    generate(e) {
+        let t = r()(e),
+            n = 0 | this._sequenceNumber++,
+            i = new s.Buffer(24);
+        return (
+            i.writeInt32LE(a(t), 0, !0),
+            i.writeInt32LE(o(t), 4, !0),
+            i.writeInt32LE(this._randomPrefix, 8, !0),
+            i.writeInt32LE(a(this._creationTime), 12, !0),
+            i.writeInt32LE(o(this._creationTime), 16, !0),
+            i.writeInt32LE(n, 20, !0),
+            i.toString("base64")
+        );
+    }
+}

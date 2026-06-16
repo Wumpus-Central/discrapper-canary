@@ -1,1 +1,40 @@
-n.d(t,{A:()=>o});var i=n(627968);n(64700);var l=n(503698),s=n.n(l),r=n(51183),a=n(729688);function o(e){let{activity:t,className:n,emojiClassName:l,textClassName:o,placeholderText:u,soloEmojiClassName:d,animate:c=!0,hideTooltip:h=!1,hideEmoji:g=!1,children:f}=e;if(null==t)return null;let{emoji:A}=t,E=null!=t.state&&""!==t.state?t.state:u;return(0,i.jsxs)("div",{className:s()(a.__invalid_container,n),children:[g||null==A?null:(0,i.jsx)(r.A,{emoji:A,className:s()(a.Z,l,null!=d?{[d]:null==E||""===E}:null),animate:c,hideTooltip:h}),null!=E&&E.length>0?(0,i.jsx)("span",{className:o,children:E}):null,f]})}
+"use strict";
+n.d(t, { A: () => l });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(51183),
+    o = n(729688);
+function l(e) {
+    let {
+        activity: t,
+        className: n,
+        emojiClassName: r,
+        textClassName: l,
+        placeholderText: u,
+        soloEmojiClassName: c,
+        animate: d = !0,
+        hideTooltip: _ = !1,
+        hideEmoji: h = !1,
+        children: f,
+    } = e;
+    if (null == t) return null;
+    let { emoji: p } = t,
+        E = null != t.state && "" !== t.state ? t.state : u;
+    return (0, i.jsxs)("div", {
+        className: s()(o.__invalid_container, n),
+        children: [
+            h || null == p
+                ? null
+                : (0, i.jsx)(a.A, {
+                      emoji: p,
+                      className: s()(o.Z, r, null != c ? { [c]: null == E || "" === E } : null),
+                      animate: d,
+                      hideTooltip: _,
+                  }),
+            null != E && E.length > 0 ? (0, i.jsx)("span", { className: l, children: E }) : null,
+            f,
+        ],
+    });
+}

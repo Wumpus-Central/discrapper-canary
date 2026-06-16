@@ -1,1 +1,7 @@
-n.d(t,{N:()=>r});var i=n(174459),l=n(652215);let r=(e,t)=>{i.default.track(l.HAw.SAFETY_SETTINGS_NOTICE_ACTION,{notice_type:e,action:t})}
+"use strict";
+n.d(t, { N: () => s });
+var i = n(174459),
+    r = n(652215);
+let s = (e, t) => {
+    i.default.track(r.HAw.SAFETY_SETTINGS_NOTICE_ACTION, { notice_type: e, action: t });
+};

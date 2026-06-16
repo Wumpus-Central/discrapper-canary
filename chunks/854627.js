@@ -1,1 +1,51 @@
-a.d(r,{A:()=>c});var n=a(64700),t=a(17928),l=a(778712),i=a(562819),o=a(963977),s=a(287809),u=a(62199);function c(e){let{userId:r,guildId:a,size:c,showPending:p=!1,animateOnHover:d=!1,avatarDecorationOverride:m,avatarOverride:f}=e,v=(0,t.bG)([s.default],()=>s.default.getUser(r)),{avatarSrc:g,isAvatarAnimating:A,eventHandlers:_}=(0,u.A)({user:v,guildId:a,size:(0,l.FT)(c),showPending:p,animateOnHover:d,avatarOverride:f}),{avatarPlaceholderSrc:b,avatarDecorationSrc:E,eventHandlers:h}=(0,o.A)({user:v,guildId:a,avatarDecorationOverride:m,size:(0,i.Te)(c),onlyAnimateOnHoverOrFocus:d});return{avatarPlaceholderSrc:b,avatarDecorationSrc:E,avatarSrc:g,isAnimating:A,eventHandlers:{onMouseEnter:n.useCallback(()=>{_.onMouseEnter(),h.onMouseEnter()},[_,h]),onMouseLeave:n.useCallback(()=>{_.onMouseLeave(),h.onMouseLeave()},[_,h])}}}
+"use strict";
+n.d(t, { A: () => c });
+var i = n(64700),
+    r = n(17928),
+    s = n(778712),
+    a = n(562819),
+    o = n(963977),
+    l = n(287809),
+    u = n(62199);
+function c(e) {
+    let {
+            userId: t,
+            guildId: n,
+            size: c,
+            showPending: d = !1,
+            animateOnHover: _ = !1,
+            avatarDecorationOverride: h,
+            avatarOverride: f,
+        } = e,
+        p = (0, r.bG)([l.default], () => l.default.getUser(t)),
+        {
+            avatarSrc: E,
+            isAvatarAnimating: m,
+            eventHandlers: g,
+        } = (0, u.A)({ user: p, guildId: n, size: (0, s.FT)(c), showPending: d, animateOnHover: _, avatarOverride: f }),
+        {
+            avatarPlaceholderSrc: A,
+            avatarDecorationSrc: I,
+            eventHandlers: T,
+        } = (0, o.A)({
+            user: p,
+            guildId: n,
+            avatarDecorationOverride: h,
+            size: (0, a.Te)(c),
+            onlyAnimateOnHoverOrFocus: _,
+        });
+    return {
+        avatarPlaceholderSrc: A,
+        avatarDecorationSrc: I,
+        avatarSrc: E,
+        isAnimating: m,
+        eventHandlers: {
+            onMouseEnter: i.useCallback(() => {
+                g.onMouseEnter(), T.onMouseEnter();
+            }, [g, T]),
+            onMouseLeave: i.useCallback(() => {
+                g.onMouseLeave(), T.onMouseLeave();
+            }, [g, T]),
+        },
+    };
+}

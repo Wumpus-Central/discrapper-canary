@@ -1,1 +1,9 @@
-var i=n(31289),r=n(752909),s=n(978260),a=n(646344);e.exports=function(e,t,n){if(!a(n))return!1;var o=typeof t;return("number"==o?!!(r(n)&&s(t,n.length)):"string"==o&&t in n)&&i(n[t],e)}
+var i = n(31289),
+    r = n(752909),
+    s = n(978260),
+    a = n(646344);
+e.exports = function (e, t, n) {
+    if (!a(n)) return !1;
+    var o = typeof t;
+    return ("number" == o ? !!(r(n) && s(t, n.length)) : "string" == o && t in n) && i(n[t], e);
+};

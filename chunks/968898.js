@@ -1,1 +1,160 @@
-n.d(t,{CS:()=>M,GQ:()=>k,O0:()=>D,Pl:()=>w,RE:()=>N,X1:()=>b,we:()=>O});var i=n(627968),s=n(64700),r=n(503698),l=n.n(r),a=n(17928),o=n(661531),d=n(990078),u=n(834730),c=n(939249),h=n(625903),m=n(31300),g=n(788120),p=n(391973),x=n(684013),f=n(964486),A=n(38502),E=n(810412),S=n(302614),I=n(489277),v=n(119191),T=n(581730),j=n(481484),C=n(375708),y=n(882387);function w(e){let{children:t}=e;return(0,i.jsx)("div",{className:y.oB,children:(0,i.jsx)(u.E,{variant:"text-xs/semibold",color:"text-strong",children:t})})}let b=7e3;function N(e,t){return _((0,a.bG)([A.A],()=>A.A.getWidget(e),[e]),t)}function _(e,t){let n=s.useRef(e?.showExtrasHintTimestamp),[i,r]=s.useState(!1),l=(0,j.A)(),a=s.useRef(void 0);return s.useEffect(()=>{let i=e?.showExtrasHintTimestamp;i!==n.current&&(n.current=i,r(!0),a.current=setTimeout(()=>{r(!1)},t))},[t,e?.showExtrasHintTimestamp]),(0,f.Ay)(()=>{let n=e?.showExtrasHintTimestamp;return null!=n&&Date.now()-n<t&&(r(!0),a.current=setTimeout(()=>{r(!1)},t)),()=>{null!=a.current&&clearTimeout(a.current)}}),i&&l}let R=8e3;function O(e){let{children:t,widgetId:n}=e,s=(0,a.bG)([A.A],()=>A.A.getWidget(n),[n]);return _(s,R)?(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(S.A,{className:y.Z,children:(0,i.jsx)(c.D,{className:y.SM,onClick:()=>{null!=s&&(x.A.setInputLocked(!1,I.A.getTargetPID()),(0,E.YX)(s.type,{type:E.Z5.KEYBIND_HINT,value:E.IP.OVERLAY_UNLOCKED}))},children:(0,i.jsx)(u.E,{variant:"text-xs/semibold",color:"text-strong",children:(0,v.sI)((0,T.Jn)(),C.t["1XA04X"],{useFlexboxLayout:!0,highlightAdminWarningIfElevated:!1,keybindClassName:y.P})})})}),(0,i.jsx)("div",{className:y.Xk})]}):(0,i.jsx)("div",{className:y.oB,children:(0,i.jsx)(u.E,{variant:"text-xs/semibold",color:"text-strong",children:t})})}function M(e){let{onClick:t}=e;if((0,j.A)())return null;let n=C.intl.string(C.t["3D5yo/"]);return(0,i.jsx)(d.m,{text:n,"aria-label":n,children:(0,i.jsx)(c.D,{className:y.x6,onClick:t,children:(0,i.jsx)(h.Z,{size:"xxs",color:o.A.colors.INTERACTIVE_TEXT_ACTIVE})})})}function k(e){let{widgetId:t,showAllStreams:n}=e,s=n?C.intl.string(C.t.q2B3rh):C.intl.string(C.t.JKGi6o);return(0,j.A)()?null:(0,i.jsx)(d.m,{text:s,"aria-label":s,children:(0,i.jsx)(c.D,{className:l()(y.x6,n&&y.vu),onClick:()=>{(0,p.cC)(t,{showAllStreams:!n})},children:(0,i.jsx)(m.k,{size:"xxs",color:n?o.A.colors.BACKGROUND_BRAND:o.A.colors.INTERACTIVE_TEXT_ACTIVE})})})}function D(e){let{id:t,pinned:n}=e,s=n?C.intl.string(C.t.cSu80j):C.intl.string(C.t.cM8Vnm),r=(0,j.A)();return(0,i.jsx)(d.m,{text:s,"aria-label":s,asContainer:!0,children:(0,i.jsx)(c.D,{className:l()(y.x6,n&&y.vu),onClick:()=>{r||(0,p.v0)(t)},children:(0,i.jsx)(g.q,{size:"xxs",color:n?o.A.colors.BACKGROUND_BRAND:o.A.colors.INTERACTIVE_TEXT_ACTIVE})})})}
+n.d(t, { CS: () => M, GQ: () => k, O0: () => D, Pl: () => w, RE: () => N, X1: () => b, we: () => O });
+var i = n(627968),
+    s = n(64700),
+    r = n(503698),
+    l = n.n(r),
+    a = n(17928),
+    o = n(661531),
+    d = n(990078),
+    u = n(834730),
+    c = n(939249),
+    h = n(625903),
+    m = n(31300),
+    g = n(788120),
+    p = n(391973),
+    x = n(684013),
+    f = n(964486),
+    A = n(38502),
+    E = n(810412),
+    S = n(302614),
+    I = n(489277),
+    v = n(119191),
+    T = n(581730),
+    j = n(481484),
+    C = n(375708),
+    y = n(882387);
+function w(e) {
+    let { children: t } = e;
+    return (0, i.jsx)("div", {
+        className: y.oB,
+        children: (0, i.jsx)(u.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
+    });
+}
+let b = 7e3;
+function N(e, t) {
+    return _(
+        (0, a.bG)([A.A], () => A.A.getWidget(e), [e]),
+        t,
+    );
+}
+function _(e, t) {
+    let n = s.useRef(e?.showExtrasHintTimestamp),
+        [i, r] = s.useState(!1),
+        l = (0, j.A)(),
+        a = s.useRef(void 0);
+    return (
+        s.useEffect(() => {
+            let i = e?.showExtrasHintTimestamp;
+            i !== n.current &&
+                ((n.current = i),
+                r(!0),
+                (a.current = setTimeout(() => {
+                    r(!1);
+                }, t)));
+        }, [t, e?.showExtrasHintTimestamp]),
+        (0, f.Ay)(() => {
+            let n = e?.showExtrasHintTimestamp;
+            return (
+                null != n &&
+                    Date.now() - n < t &&
+                    (r(!0),
+                    (a.current = setTimeout(() => {
+                        r(!1);
+                    }, t))),
+                () => {
+                    null != a.current && clearTimeout(a.current);
+                }
+            );
+        }),
+        i && l
+    );
+}
+let R = 8e3;
+function O(e) {
+    let { children: t, widgetId: n } = e,
+        s = (0, a.bG)([A.A], () => A.A.getWidget(n), [n]);
+    return _(s, R)
+        ? (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsx)(S.A, {
+                      className: y.Z,
+                      children: (0, i.jsx)(c.D, {
+                          className: y.SM,
+                          onClick: () => {
+                              null != s &&
+                                  (x.A.setInputLocked(!1, I.A.getTargetPID()),
+                                  (0, E.YX)(s.type, { type: E.Z5.KEYBIND_HINT, value: E.IP.OVERLAY_UNLOCKED }));
+                          },
+                          children: (0, i.jsx)(u.E, {
+                              variant: "text-xs/semibold",
+                              color: "text-strong",
+                              children: (0, v.sI)((0, T.Jn)(), C.t["1XA04X"], {
+                                  useFlexboxLayout: !0,
+                                  highlightAdminWarningIfElevated: !1,
+                                  keybindClassName: y.P,
+                              }),
+                          }),
+                      }),
+                  }),
+                  (0, i.jsx)("div", { className: y.Xk }),
+              ],
+          })
+        : (0, i.jsx)("div", {
+              className: y.oB,
+              children: (0, i.jsx)(u.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
+          });
+}
+function M(e) {
+    let { onClick: t } = e;
+    if ((0, j.A)()) return null;
+    let n = C.intl.string(C.t["3D5yo/"]);
+    return (0, i.jsx)(d.m, {
+        text: n,
+        "aria-label": n,
+        children: (0, i.jsx)(c.D, {
+            className: y.x6,
+            onClick: t,
+            children: (0, i.jsx)(h.Z, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+        }),
+    });
+}
+function k(e) {
+    let { widgetId: t, showAllStreams: n } = e,
+        s = n ? C.intl.string(C.t.q2B3rh) : C.intl.string(C.t.JKGi6o);
+    return (0, j.A)()
+        ? null
+        : (0, i.jsx)(d.m, {
+              text: s,
+              "aria-label": s,
+              children: (0, i.jsx)(c.D, {
+                  className: l()(y.x6, n && y.vu),
+                  onClick: () => {
+                      (0, p.cC)(t, { showAllStreams: !n });
+                  },
+                  children: (0, i.jsx)(m.k, {
+                      size: "xxs",
+                      color: n ? o.A.colors.BACKGROUND_BRAND : o.A.colors.INTERACTIVE_TEXT_ACTIVE,
+                  }),
+              }),
+          });
+}
+function D(e) {
+    let { id: t, pinned: n } = e,
+        s = n ? C.intl.string(C.t.cSu80j) : C.intl.string(C.t.cM8Vnm),
+        r = (0, j.A)();
+    return (0, i.jsx)(d.m, {
+        text: s,
+        "aria-label": s,
+        asContainer: !0,
+        children: (0, i.jsx)(c.D, {
+            className: l()(y.x6, n && y.vu),
+            onClick: () => {
+                r || (0, p.v0)(t);
+            },
+            children: (0, i.jsx)(g.q, {
+                size: "xxs",
+                color: n ? o.A.colors.BACKGROUND_BRAND : o.A.colors.INTERACTIVE_TEXT_ACTIVE,
+            }),
+        }),
+    });
+}

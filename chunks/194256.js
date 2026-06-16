@@ -1,1 +1,370 @@
-"use strict";n.d(t,{dL:()=>J,Ay:()=>en,oO:()=>ee}),n(321073);var l=n(627968),i=n(64700),r=n(575593),s=n(403581),a=n(278416),o=n(262427),u=n(376843),c=n(274971),d=n(214891),m=n(848584),h=n(241989),p=n(993408),f=n(287809),g=n(486020),E=n(428262),A=n(580630),C=n(284009),x=n.n(C),I=n(997101),_=n(17928),S=n(318254),y=n(821891),v=n(953689),T=n(10716),N=n(46225),j=n(20015),b=n(364995),R=n(31823),P=n(426398),L=n(427675),M=n(211159),O=n(977445),w=n(778307),D=n(218075),k=n(578942),U=n(615405),G=n(45938),F=n(937008),V=n(566980),B=n(944355),H=n(367921),W=n(908419),K=n(652215);function Y(e){let{paymentSourceType:t}=e,{isGift:n}=(0,F.Pv)(),{immediateDelivery:i}=(0,W.U)(),r=(0,H.Ro)({purchaseType:K.VVm.ONE_TIME,plan:null,premiumSubscription:null,isGift:n,planGroup:[],isPrepaidPaymentSource:!1});return(0,l.jsx)(B._P,{variant:n?{type:B.I0.GiftShop,purchaseButtonText:r}:{type:B.I0.Shop,purchaseButtonText:r},paymentSourceType:t,immediateDelivery:i})}var z=n(375708),Z=n(666995),q=n(319820),$=n(327105),X=n(594387);let J=e=>e.name,Q={[r.R.BUNDLE]:()=>z.intl.string($.default["jM8/71"]),[r.R.AVATAR_DECORATION]:()=>z.intl.string($.default.r29Oel),[r.R.PROFILE_EFFECT]:()=>z.intl.string($.default.eTYAvF),[r.R.NAMEPLATE]:()=>z.intl.string($.default.of9bom),[r.R.PROFILE_FRAME]:()=>z.intl.string($.default.HzDn6w)},ee=e=>{let t=z.intl.string($.default.iZe9Wy);if(null==e);else if(e.type in Q)return(0,Q[e.type])();return t},et=e=>{let{application:t,sku:n,invoicePreview:r,paymentMethodContent:u,legalContent:C,isGift:x,giftRecipient:I,upperInlineNoticeProps:_,footerInlineNoticeProps:y}=e,{product:v,isSocialLayerGameItem:T}=(0,q.AO)({sku:n}),{unifiedInvoiceSummaryProps:N,priceText:j}=i.useMemo(()=>(e=>{let{sku:t,invoicePreview:n}=e,l=[];if(null!=n){let{discount:e,basePrice:i,showTaxes:r}=(0,q.yh)({invoicePreview:n});return l.push({id:"sku",label:J(t),amount:i}),null!=e&&l.push({id:"discount",label:e.description,amount:e.amount>0?-1*e.amount:e.amount}),r&&l.push({id:"tax",label:z.intl.string(z.t["/I8zmP"]),amount:n.tax}),{unifiedInvoiceSummaryProps:{lineItems:l,label:z.intl.string($.default.eoXh7B),currency:n.currency},priceText:(0,A.$g)(i,n.currency),discount:e}}return{unifiedInvoiceSummaryProps:null,priceText:"",discount:null}})({sku:n,invoicePreview:r}),[n,r]),b=i.useMemo(()=>null!=N?(0,l.jsx)(m.Vm,{...N}):null,[N]),R=i.useMemo(()=>(e=>{let{sku:t,product:n,application:i,isSocialLayerGameItem:r,giftRecipient:o}=e,u=z.intl.string($.default.iZe9Wy);r?u=z.intl.string($.default.qwSlCO):null!=n?u=ee(n):t.productLine===K.EZt.GUILD_PRODUCT&&(u=z.intl.string($.default.hewwdA));let c=r?{header:i.name,headerIconSrc:g.Ay.getApplicationIconURL({id:i.id,icon:i.icon,size:16})}:{},d=(0,l.jsx)(h.WH,{sku:t,product:n}),m={};return null!=n&&(m=(e=>{let t=f.default.getCurrentUser(),n=E.Ay.canUseShopDiscounts(t),l=(0,p.xM)(t),i=(0,p.WD)(e,{hasShopDiscount:n,discount:(0,p.fT)(e,n)});if(null!=i&&!i.showDefaultPriceOnly&&i.showDiscountPrice){if(l===p.D0.NITRO)return{PriceIcon:s.t,priceTooltip:z.intl.string($.default.YUNJJa)};if(l===p.D0.THIRDPARTY)return{PriceIcon:a.g,priceTooltip:z.intl.string(X.default.DePOcS)}}return{}})(n)),{...c,...m,label:J(t),description:u,graphic:d,target:null!=o?{type:"gift",user:o}:void 0}})({sku:n,product:v,application:t,isSocialLayerGameItem:T,giftRecipient:I}),[n,v,t,T,I]),[P,L]=i.useMemo(()=>[z.intl.string($.default.Zxav97),null!=r?(0,A.$g)(r.total,r.currency):void 0],[r]),M=i.useMemo(()=>{let e=((e,t)=>{let{productLine:n,isGift:l}=t;if(null==e)return null;let i=e.orbsReward;if(null!=i&&i>0){let e=l?z.t["ZV+aS9"]:z.t["0StwHe"];return{Icon:S.C,text:z.intl.format(e,{orbCount:i}),gradientColor:n===K.EZt.SOCIAL_LAYER_GAME_ITEM?"green":"default"}}})(r,{productLine:n.productLine,isGift:x});return null!=e?(0,l.jsx)(o.J,{...e}):null},[r,x,n.productLine]),{setHeaderBadgeText:O,unsetHeaderBadgeText:w}=(0,d.v)();return i.useEffect(()=>(null!=M&&O(z.intl.string($.default.Fjpyfj)),()=>{w()}),[M,O,w]),(0,l.jsx)(c.T,{shouldShowGlobalNotices:!0,purchaseItemContent:(0,l.jsx)(h.f7,{...R,price:j}),invoiceSummaryContent:b,paymentMethodContent:u,legalContent:C,promotionalNoticeContent:M,upperInlineNoticeProps:_,footerInlineNoticeProps:y,invoiceTotalDueLabel:P,invoiceTotalDueValue:L})};function en(e){let{hasLegalTermsFlash:t,legalTermsNodeRef:n,handlePaymentSourceAdd:r}=e,{sku:s,application:a,invoicePreview:o,isGift:d,eligiblePaymentGateways:m,purchaseTermsAndLegalContent:h,isStepLoading:p,giftRecipient:f,warningAndErrorMessages:g,disabled:E}=(e=>{let{hasLegalTermsFlash:t,legalTermsNodeRef:n}=e,{selectedSkuId:r,setHasAcceptedTerms:s,purchaseState:a,checkoutInvoicePreview:o,paymentSourceId:u,purchasePreviewError:c,purchaseType:d}=(0,M.t4)(e=>({selectedSkuId:e.selectedSkuId,setHasAcceptedTerms:e.setHasAcceptedTerms,purchaseState:e.purchaseState,checkoutInvoicePreview:e.checkoutInvoicePreview,paymentSourceId:e.paymentSourceId,purchasePreviewError:e.purchasePreviewError,purchaseType:e.purchaseType})),{hasPaymentSources:m}=(0,P.jm)(),{application:h,isEmbeddedIAP:p}=(0,R.V)(),f=(0,_.bG)([T.A],()=>T.A.getFetchState()),{checkoutPaymentSources:g,hasInvoiceOrderContextLoaded:E}=(0,b.t)(),A=(0,L.gU)(),{isGift:C,giftRecipient:S}=(0,F.Pv)(),B=C&&(0,G.Ik)(S),{fetched:H,hasAlreadyLinked:W}=(0,N.RD)(h);x()(null!=r,"Expected selectedSkuId");let q=A[r],$=q?.eligiblePaymentGateways;x()(null!=q,"SKU must exist and be fetched."),x()(null!=h,"Application must exist.");let X=(0,O.uS)(h.id),J=I.M.EEA_COUNTRIES.has(U.A.ipCountryCodeWithFallback),Q=a===V.h.PURCHASING||a===V.h.COMPLETED,ee=g.find(e=>e.id===u)??null,et=null!=ee?ee.type:null,en=null!=$&&$.length>0&&(null==u||null===et)&&m?D.fU.SELECT_PAYMENT_METHOD:void 0,el=q.productLine===K.EZt.SOCIAL_LAYER_GAME_ITEM,ei=B&&!el,er=i.useMemo(()=>({testModeWarning:X?z.intl.string(z.t.OvMyMd):null,devShelfError:(0,j.n)(h,K.gfo.EMBEDDED)&&f===T.$.ERROR?z.intl.string(z.t.tAmECt):null,socialLayerGameItemDisclaimer:el&&H&&!W&&!C?(0,k.k3)(h):null}),[X,h,f,el,H,W,C]),es=i.useMemo(()=>q.productLine===K.EZt.COLLECTIBLES?(0,l.jsx)(Y,{paymentSourceType:et}):(0,l.jsx)(w.A,{isActive:t,ref:n,children:(0,l.jsx)(v.A,{onChange:s,forceShow:!0,showWithdrawalWaiver:J,disabled:Q,subscriptionPlan:null,finePrintClassname:Z.i,purchaseType:d,isGift:C,finePrint:(0,l.jsx)(y.A,{paymentSourceType:et,isEmbeddedIAP:p,purchaseType:d,productLine:q.productLine,isGift:C,applicationName:h.name,applicationId:h.id,hasAlreadyLinked:!H||W})})}),[t,n,s,J,Q,d,C,et,p,q.productLine,h.name,h.id,H,W]);return{sku:q,application:h,giftRecipient:S,isGift:C,invoicePreview:o,isEmbeddedIAP:p,shouldShowPurchaseReviewImage:ei,paymentRestrictionBannerType:en,devShelfFetchState:f,isStepLoading:!E&&null==c,purchasePreviewError:c,warningAndErrorMessages:er,purchaseTermsAndLegalContent:es,eligiblePaymentGateways:$,disabled:Q}})({hasLegalTermsFlash:t,legalTermsNodeRef:n}),A=i.useMemo(()=>({paymentGatewayRestrictions:m,shouldUseUnifiedCheckoutUI:!0}),[m]),C=(0,l.jsx)(u.N,{label:z.intl.string(z.t["u+Cw58"]),location:"OneTimeUnifiedCheckoutPurchaseReview",onPaymentSourceAdd:r,additionalPaymentSourceDropdownProps:A,disabled:E}),S=i.useMemo(()=>{let e=[];return null!=g.testModeWarning&&e.push({type:"warning",message:g.testModeWarning,key:"test-mode-warning-notice"}),null!=g.devShelfError&&e.push({type:"critical",message:g.devShelfError,key:"dev-shelf-error-notice"}),e.length>0?e:null},[g.testModeWarning,g.devShelfError]),B=i.useMemo(()=>{let e=[];return null!=g.socialLayerGameItemDisclaimer&&e.push({type:"info",message:g.socialLayerGameItemDisclaimer,key:"social-layer-game-item-disclaimer-notice"}),e.length>0?e:null},[g.socialLayerGameItemDisclaimer]);return p?(0,l.jsx)(c.E,{}):(0,l.jsx)(et,{application:a,giftRecipient:f,isGift:d,sku:s,invoicePreview:o,paymentMethodContent:C,legalContent:h,upperInlineNoticeProps:S,footerInlineNoticeProps:B})}
+"use strict";
+n.d(t, { dL: () => Q, Ay: () => en, oO: () => ee }), n(321073);
+var i = n(627968),
+    r = n(64700),
+    s = n(575593),
+    a = n(403581),
+    o = n(278416),
+    l = n(262427),
+    u = n(376843),
+    c = n(274971),
+    d = n(214891),
+    _ = n(848584),
+    h = n(241989),
+    f = n(993408),
+    p = n(287809),
+    E = n(486020),
+    m = n(428262),
+    g = n(580630),
+    A = n(284009),
+    I = n.n(A),
+    T = n(997101),
+    S = n(17928),
+    y = n(318254),
+    C = n(821891),
+    N = n(953689),
+    v = n(10716),
+    R = n(46225),
+    O = n(20015),
+    b = n(364995),
+    D = n(31823),
+    L = n(426398),
+    w = n(427675),
+    M = n(211159),
+    P = n(977445),
+    x = n(778307),
+    k = n(218075),
+    U = n(578942),
+    G = n(615405),
+    F = n(45938),
+    V = n(937008),
+    B = n(566980),
+    j = n(944355),
+    H = n(367921),
+    Y = n(908419),
+    W = n(652215);
+function K(e) {
+    let { paymentSourceType: t } = e,
+        { isGift: n } = (0, V.Pv)(),
+        { immediateDelivery: r } = (0, Y.U)(),
+        s = (0, H.Ro)({
+            purchaseType: W.VVm.ONE_TIME,
+            plan: null,
+            premiumSubscription: null,
+            isGift: n,
+            planGroup: [],
+            isPrepaidPaymentSource: !1,
+        });
+    return (0, i.jsx)(j._P, {
+        variant: n ? { type: j.I0.GiftShop, purchaseButtonText: s } : { type: j.I0.Shop, purchaseButtonText: s },
+        paymentSourceType: t,
+        immediateDelivery: r,
+    });
+}
+var $ = n(375708),
+    z = n(666995),
+    q = n(319820),
+    Z = n(327105),
+    X = n(594387);
+let Q = (e) => e.name,
+    J = {
+        [s.R.BUNDLE]: () => $.intl.string(Z.default["jM8/71"]),
+        [s.R.AVATAR_DECORATION]: () => $.intl.string(Z.default.r29Oel),
+        [s.R.PROFILE_EFFECT]: () => $.intl.string(Z.default.eTYAvF),
+        [s.R.NAMEPLATE]: () => $.intl.string(Z.default.of9bom),
+        [s.R.PROFILE_FRAME]: () => $.intl.string(Z.default.HzDn6w),
+    },
+    ee = (e) => {
+        let t = $.intl.string(Z.default.iZe9Wy);
+        if (null == e);
+        else if (e.type in J) return (0, J[e.type])();
+        return t;
+    },
+    et = (e) => {
+        let {
+                application: t,
+                sku: n,
+                invoicePreview: s,
+                paymentMethodContent: u,
+                legalContent: A,
+                isGift: I,
+                giftRecipient: T,
+                upperInlineNoticeProps: S,
+                footerInlineNoticeProps: C,
+            } = e,
+            { product: N, isSocialLayerGameItem: v } = (0, q.AO)({ sku: n }),
+            { unifiedInvoiceSummaryProps: R, priceText: O } = r.useMemo(
+                () =>
+                    ((e) => {
+                        let { sku: t, invoicePreview: n } = e,
+                            i = [];
+                        if (null != n) {
+                            let { discount: e, basePrice: r, showTaxes: s } = (0, q.yh)({ invoicePreview: n });
+                            return (
+                                i.push({ id: "sku", label: Q(t), amount: r }),
+                                null != e &&
+                                    i.push({
+                                        id: "discount",
+                                        label: e.description,
+                                        amount: e.amount > 0 ? -1 * e.amount : e.amount,
+                                    }),
+                                s && i.push({ id: "tax", label: $.intl.string($.t["/I8zmP"]), amount: n.tax }),
+                                {
+                                    unifiedInvoiceSummaryProps: {
+                                        lineItems: i,
+                                        label: $.intl.string(Z.default.eoXh7B),
+                                        currency: n.currency,
+                                    },
+                                    priceText: (0, g.$g)(r, n.currency),
+                                    discount: e,
+                                }
+                            );
+                        }
+                        return { unifiedInvoiceSummaryProps: null, priceText: "", discount: null };
+                    })({ sku: n, invoicePreview: s }),
+                [n, s],
+            ),
+            b = r.useMemo(() => (null != R ? (0, i.jsx)(_.Vm, { ...R }) : null), [R]),
+            D = r.useMemo(
+                () =>
+                    ((e) => {
+                        let { sku: t, product: n, application: r, isSocialLayerGameItem: s, giftRecipient: l } = e,
+                            u = $.intl.string(Z.default.iZe9Wy);
+                        s
+                            ? (u = $.intl.string(Z.default.qwSlCO))
+                            : null != n
+                              ? (u = ee(n))
+                              : t.productLine === W.EZt.GUILD_PRODUCT && (u = $.intl.string(Z.default.hewwdA));
+                        let c = s
+                                ? {
+                                      header: r.name,
+                                      headerIconSrc: E.Ay.getApplicationIconURL({ id: r.id, icon: r.icon, size: 16 }),
+                                  }
+                                : {},
+                            d = (0, i.jsx)(h.WH, { sku: t, product: n }),
+                            _ = {};
+                        return (
+                            null != n &&
+                                (_ = ((e) => {
+                                    let t = p.default.getCurrentUser(),
+                                        n = m.Ay.canUseShopDiscounts(t),
+                                        i = (0, f.xM)(t),
+                                        r = (0, f.WD)(e, { hasShopDiscount: n, discount: (0, f.fT)(e, n) });
+                                    if (null != r && !r.showDefaultPriceOnly && r.showDiscountPrice) {
+                                        if (i === f.D0.NITRO)
+                                            return { PriceIcon: a.t, priceTooltip: $.intl.string(Z.default.YUNJJa) };
+                                        if (i === f.D0.THIRDPARTY)
+                                            return { PriceIcon: o.g, priceTooltip: $.intl.string(X.default.DePOcS) };
+                                    }
+                                    return {};
+                                })(n)),
+                            {
+                                ...c,
+                                ..._,
+                                label: Q(t),
+                                description: u,
+                                graphic: d,
+                                target: null != l ? { type: "gift", user: l } : void 0,
+                            }
+                        );
+                    })({ sku: n, product: N, application: t, isSocialLayerGameItem: v, giftRecipient: T }),
+                [n, N, t, v, T],
+            ),
+            [L, w] = r.useMemo(
+                () => [$.intl.string(Z.default.Zxav97), null != s ? (0, g.$g)(s.total, s.currency) : void 0],
+                [s],
+            ),
+            M = r.useMemo(() => {
+                let e = ((e, t) => {
+                    let { productLine: n, isGift: i } = t;
+                    if (null == e) return null;
+                    let r = e.orbsReward;
+                    if (null != r && r > 0) {
+                        let e = i ? $.t["ZV+aS9"] : $.t["0StwHe"];
+                        return {
+                            Icon: y.C,
+                            text: $.intl.format(e, { orbCount: r }),
+                            gradientColor: n === W.EZt.SOCIAL_LAYER_GAME_ITEM ? "green" : "default",
+                        };
+                    }
+                })(s, { productLine: n.productLine, isGift: I });
+                return null != e ? (0, i.jsx)(l.J, { ...e }) : null;
+            }, [s, I, n.productLine]),
+            { setHeaderBadgeText: P, unsetHeaderBadgeText: x } = (0, d.v)();
+        return (
+            r.useEffect(
+                () => (
+                    null != M && P($.intl.string(Z.default.Fjpyfj)),
+                    () => {
+                        x();
+                    }
+                ),
+                [M, P, x],
+            ),
+            (0, i.jsx)(c.T, {
+                shouldShowGlobalNotices: !0,
+                purchaseItemContent: (0, i.jsx)(h.f7, { ...D, price: O }),
+                invoiceSummaryContent: b,
+                paymentMethodContent: u,
+                legalContent: A,
+                promotionalNoticeContent: M,
+                upperInlineNoticeProps: S,
+                footerInlineNoticeProps: C,
+                invoiceTotalDueLabel: L,
+                invoiceTotalDueValue: w,
+            })
+        );
+    };
+function en(e) {
+    let { hasLegalTermsFlash: t, legalTermsNodeRef: n, handlePaymentSourceAdd: s } = e,
+        {
+            sku: a,
+            application: o,
+            invoicePreview: l,
+            isGift: d,
+            eligiblePaymentGateways: _,
+            purchaseTermsAndLegalContent: h,
+            isStepLoading: f,
+            giftRecipient: p,
+            warningAndErrorMessages: E,
+            disabled: m,
+        } = ((e) => {
+            let { hasLegalTermsFlash: t, legalTermsNodeRef: n } = e,
+                {
+                    selectedSkuId: s,
+                    setHasAcceptedTerms: a,
+                    purchaseState: o,
+                    checkoutInvoicePreview: l,
+                    paymentSourceId: u,
+                    purchasePreviewError: c,
+                    purchaseType: d,
+                } = (0, M.t4)((e) => ({
+                    selectedSkuId: e.selectedSkuId,
+                    setHasAcceptedTerms: e.setHasAcceptedTerms,
+                    purchaseState: e.purchaseState,
+                    checkoutInvoicePreview: e.checkoutInvoicePreview,
+                    paymentSourceId: e.paymentSourceId,
+                    purchasePreviewError: e.purchasePreviewError,
+                    purchaseType: e.purchaseType,
+                })),
+                { hasPaymentSources: _ } = (0, L.jm)(),
+                { application: h, isEmbeddedIAP: f } = (0, D.V)(),
+                p = (0, S.bG)([v.A], () => v.A.getFetchState()),
+                { checkoutPaymentSources: E, hasInvoiceOrderContextLoaded: m } = (0, b.t)(),
+                g = (0, w.gU)(),
+                { isGift: A, giftRecipient: y } = (0, V.Pv)(),
+                j = A && (0, F.Ik)(y),
+                { fetched: H, hasAlreadyLinked: Y } = (0, R.RD)(h);
+            I()(null != s, "Expected selectedSkuId");
+            let q = g[s],
+                Z = q?.eligiblePaymentGateways;
+            I()(null != q, "SKU must exist and be fetched."), I()(null != h, "Application must exist.");
+            let X = (0, P.uS)(h.id),
+                Q = T.M.EEA_COUNTRIES.has(G.A.ipCountryCodeWithFallback),
+                J = o === B.h.PURCHASING || o === B.h.COMPLETED,
+                ee = E.find((e) => e.id === u) ?? null,
+                et = null != ee ? ee.type : null,
+                en = null != Z && Z.length > 0 && (null == u || null === et) && _ ? k.fU.SELECT_PAYMENT_METHOD : void 0,
+                ei = q.productLine === W.EZt.SOCIAL_LAYER_GAME_ITEM,
+                er = j && !ei,
+                es = r.useMemo(
+                    () => ({
+                        testModeWarning: X ? $.intl.string($.t.OvMyMd) : null,
+                        devShelfError:
+                            (0, O.n)(h, W.gfo.EMBEDDED) && p === v.$.ERROR ? $.intl.string($.t.tAmECt) : null,
+                        socialLayerGameItemDisclaimer: ei && H && !Y && !A ? (0, U.k3)(h) : null,
+                    }),
+                    [X, h, p, ei, H, Y, A],
+                ),
+                ea = r.useMemo(
+                    () =>
+                        q.productLine === W.EZt.COLLECTIBLES
+                            ? (0, i.jsx)(K, { paymentSourceType: et })
+                            : (0, i.jsx)(x.A, {
+                                  isActive: t,
+                                  ref: n,
+                                  children: (0, i.jsx)(N.A, {
+                                      onChange: a,
+                                      forceShow: !0,
+                                      showWithdrawalWaiver: Q,
+                                      disabled: J,
+                                      subscriptionPlan: null,
+                                      finePrintClassname: z.i,
+                                      purchaseType: d,
+                                      isGift: A,
+                                      finePrint: (0, i.jsx)(C.A, {
+                                          paymentSourceType: et,
+                                          isEmbeddedIAP: f,
+                                          purchaseType: d,
+                                          productLine: q.productLine,
+                                          isGift: A,
+                                          applicationName: h.name,
+                                          applicationId: h.id,
+                                          hasAlreadyLinked: !H || Y,
+                                      }),
+                                  }),
+                              }),
+                    [t, n, a, Q, J, d, A, et, f, q.productLine, h.name, h.id, H, Y],
+                );
+            return {
+                sku: q,
+                application: h,
+                giftRecipient: y,
+                isGift: A,
+                invoicePreview: l,
+                isEmbeddedIAP: f,
+                shouldShowPurchaseReviewImage: er,
+                paymentRestrictionBannerType: en,
+                devShelfFetchState: p,
+                isStepLoading: !m && null == c,
+                purchasePreviewError: c,
+                warningAndErrorMessages: es,
+                purchaseTermsAndLegalContent: ea,
+                eligiblePaymentGateways: Z,
+                disabled: J,
+            };
+        })({ hasLegalTermsFlash: t, legalTermsNodeRef: n }),
+        g = r.useMemo(() => ({ paymentGatewayRestrictions: _, shouldUseUnifiedCheckoutUI: !0 }), [_]),
+        A = (0, i.jsx)(u.N, {
+            label: $.intl.string($.t["u+Cw58"]),
+            location: "OneTimeUnifiedCheckoutPurchaseReview",
+            onPaymentSourceAdd: s,
+            additionalPaymentSourceDropdownProps: g,
+            disabled: m,
+        }),
+        y = r.useMemo(() => {
+            let e = [];
+            return (
+                null != E.testModeWarning &&
+                    e.push({ type: "warning", message: E.testModeWarning, key: "test-mode-warning-notice" }),
+                null != E.devShelfError &&
+                    e.push({ type: "critical", message: E.devShelfError, key: "dev-shelf-error-notice" }),
+                e.length > 0 ? e : null
+            );
+        }, [E.testModeWarning, E.devShelfError]),
+        j = r.useMemo(() => {
+            let e = [];
+            return (
+                null != E.socialLayerGameItemDisclaimer &&
+                    e.push({
+                        type: "info",
+                        message: E.socialLayerGameItemDisclaimer,
+                        key: "social-layer-game-item-disclaimer-notice",
+                    }),
+                e.length > 0 ? e : null
+            );
+        }, [E.socialLayerGameItemDisclaimer]);
+    return f
+        ? (0, i.jsx)(c.E, {})
+        : (0, i.jsx)(et, {
+              application: o,
+              giftRecipient: p,
+              isGift: d,
+              sku: a,
+              invoicePreview: l,
+              paymentMethodContent: A,
+              legalContent: h,
+              upperInlineNoticeProps: y,
+              footerInlineNoticeProps: j,
+          });
+}

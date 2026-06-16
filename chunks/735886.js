@@ -1,1 +1,1 @@
-e.exports={v:"clickable__8c853"}
+c.exports = { v: "clickable__8c853" };

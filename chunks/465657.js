@@ -1,1 +1,110 @@
-"use strict";n.d(t,{Y:()=>A});var i=n(627968),r=n(64700),s=n(284009),a=n.n(s),o=n(304072),l=n(606267),u=n(166532),c=n(166926),d=n(482132),_=n(615310),h=n(216641),f=n(364995),p=n(426398),E=n(666646),m=n(211159),g=n(26279);function A(e){let{customFooterProps:t,onFooterBackClick:n,isBackButtonEligible:s,subscriptionMetadata:A,renderStepBody:I,resolveInternalState:T,handleStepChange:S,openInvoiceId:y,analyticsData:C,analyticsLocation:N}=e,{activeSubscription:v,paymentSourceId:R,purchasePreviewError:O,customCheckoutFlow:b,contextMetadata:D,purchaseError:L,setCheckoutCurrency:w}=(0,m.t4)(e=>({activeSubscription:e.activeSubscription,customCheckoutFlow:e.customCheckoutFlow,contextMetadata:e.contextMetadata,paymentSourceId:e.paymentSourceId,purchasePreviewError:e.purchasePreviewError,purchaseError:e.purchaseError,setCheckoutCurrency:e.setCheckoutCurrency})),M=(0,_.bB)();a()(null!=M,"Step should be set");let P=r.useRef(null),[x,k]=(0,o.A)(!1,500),{paymentSources:U}=(0,p.jm)(),{checkoutPaymentSources:G,hasInvoiceOrderContextLoaded:F}=(0,f.t)(),V=(0,E.sw)(),B=(0,h.W)(U,R),j=r.useMemo(()=>{if(null==R)return!1;if(!F)return!0;let e=G.find(e=>e.id===R);return null!=e&&!e.enabled},[G,F,R]),H=(0,l.iB)({checkoutPaymentSources:G,paymentSourceId:R,location:"CheckoutBaseReviewStep"}),{disablePurchase:Y}=r.useMemo(()=>{let e={disablePurchase:H||b===g.uH.DEV_STORYBOOK_CHECKOUT};return null!=T?T(e,{paymentSource:B,paymentSourceId:R,isSelectedPaymentSourceDisabled:j,invoicePreview:V,purchasePreviewError:O}):e},[T,B,R,j,V,O,H,b]);r.useEffect(()=>{null!=L&&null!=P.current&&P.current.scrollIntoView({behavior:"smooth"})},[L]);let W=r.useRef(null),K=(0,E.mx)(),$=r.useCallback(()=>{w(void 0),n()},[w,n]),z=r.useCallback(()=>{S(u.pn.ADD_PAYMENT_STEPS)},[S]),q=r.useMemo(()=>({hasLegalTermsFlash:x,legalTermsNodeRef:W}),[x,W]),Z=r.useMemo(()=>I({handlePaymentSourceAdd:z},q),[I,z,q]),X=(0,i.jsx)(c.U,{premiumSubscription:v??null,invoiceError:K,onBack:$,legalTermsNodeRef:W,flashLegalTerms:()=>k(!0),flowStartTime:D.startTime,onPaymentSourceAdd:z,disablePurchase:Y,analyticsLocation:N,baseAnalyticsData:C,openInvoiceId:y,handleStepChange:S,postPurchaseStep:u.pn.CONFIRM,backButtonEligible:s,metadata:A,...t});return(0,i.jsxs)(i.Fragment,{children:[(0,i.jsx)(d.dZ,{children:Z}),(0,i.jsx)(d.UX,{children:X})]})}
+"use strict";
+n.d(t, { Y: () => A });
+var i = n(627968),
+    r = n(64700),
+    s = n(284009),
+    a = n.n(s),
+    o = n(304072),
+    l = n(606267),
+    u = n(166532),
+    c = n(166926),
+    d = n(482132),
+    _ = n(615310),
+    h = n(216641),
+    f = n(364995),
+    p = n(426398),
+    E = n(666646),
+    m = n(211159),
+    g = n(26279);
+function A(e) {
+    let {
+            customFooterProps: t,
+            onFooterBackClick: n,
+            isBackButtonEligible: s,
+            subscriptionMetadata: A,
+            renderStepBody: I,
+            resolveInternalState: T,
+            handleStepChange: S,
+            openInvoiceId: y,
+            analyticsData: C,
+            analyticsLocation: N,
+        } = e,
+        {
+            activeSubscription: v,
+            paymentSourceId: R,
+            purchasePreviewError: O,
+            customCheckoutFlow: b,
+            contextMetadata: D,
+            purchaseError: L,
+            setCheckoutCurrency: w,
+        } = (0, m.t4)((e) => ({
+            activeSubscription: e.activeSubscription,
+            customCheckoutFlow: e.customCheckoutFlow,
+            contextMetadata: e.contextMetadata,
+            paymentSourceId: e.paymentSourceId,
+            purchasePreviewError: e.purchasePreviewError,
+            purchaseError: e.purchaseError,
+            setCheckoutCurrency: e.setCheckoutCurrency,
+        })),
+        M = (0, _.bB)();
+    a()(null != M, "Step should be set");
+    let P = r.useRef(null),
+        [x, k] = (0, o.A)(!1, 500),
+        { paymentSources: U } = (0, p.jm)(),
+        { checkoutPaymentSources: G, hasInvoiceOrderContextLoaded: F } = (0, f.t)(),
+        V = (0, E.sw)(),
+        B = (0, h.W)(U, R),
+        j = r.useMemo(() => {
+            if (null == R) return !1;
+            if (!F) return !0;
+            let e = G.find((e) => e.id === R);
+            return null != e && !e.enabled;
+        }, [G, F, R]),
+        H = (0, l.iB)({ checkoutPaymentSources: G, paymentSourceId: R, location: "CheckoutBaseReviewStep" }),
+        { disablePurchase: Y } = r.useMemo(() => {
+            let e = { disablePurchase: H || b === g.uH.DEV_STORYBOOK_CHECKOUT };
+            return null != T
+                ? T(e, {
+                      paymentSource: B,
+                      paymentSourceId: R,
+                      isSelectedPaymentSourceDisabled: j,
+                      invoicePreview: V,
+                      purchasePreviewError: O,
+                  })
+                : e;
+        }, [T, B, R, j, V, O, H, b]);
+    r.useEffect(() => {
+        null != L && null != P.current && P.current.scrollIntoView({ behavior: "smooth" });
+    }, [L]);
+    let W = r.useRef(null),
+        K = (0, E.mx)(),
+        $ = r.useCallback(() => {
+            w(void 0), n();
+        }, [w, n]),
+        z = r.useCallback(() => {
+            S(u.pn.ADD_PAYMENT_STEPS);
+        }, [S]),
+        q = r.useMemo(() => ({ hasLegalTermsFlash: x, legalTermsNodeRef: W }), [x, W]),
+        Z = r.useMemo(() => I({ handlePaymentSourceAdd: z }, q), [I, z, q]),
+        X = (0, i.jsx)(c.U, {
+            premiumSubscription: v ?? null,
+            invoiceError: K,
+            onBack: $,
+            legalTermsNodeRef: W,
+            flashLegalTerms: () => k(!0),
+            flowStartTime: D.startTime,
+            onPaymentSourceAdd: z,
+            disablePurchase: Y,
+            analyticsLocation: N,
+            baseAnalyticsData: C,
+            openInvoiceId: y,
+            handleStepChange: S,
+            postPurchaseStep: u.pn.CONFIRM,
+            backButtonEligible: s,
+            metadata: A,
+            ...t,
+        });
+    return (0, i.jsxs)(i.Fragment, {
+        children: [(0, i.jsx)(d.dZ, { children: Z }), (0, i.jsx)(d.UX, { children: X })],
+    });
+}

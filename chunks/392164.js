@@ -1,1 +1,3 @@
-"use strict";n.d(t,{f:()=>i});let i="DISCORD_OutOfProcessOverlay"
+"use strict";
+n.d(t, { f: () => i });
+let i = "DISCORD_OutOfProcessOverlay";

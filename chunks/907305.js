@@ -1,1 +1,21 @@
-e.exports={fx:"containerDefault_c69b6d",mU:"containerDragAfter_c69b6d",TR:"containerDragBefore_c69b6d",ZS:"containerUserOver_c69b6d",LN:"iconBase_c69b6d",Xs:"iconItem_c69b6d iconBase_c69b6d",Tf:"alwaysShown_c69b6d",wH:"selected_c69b6d",UI:"iconNoChannelInfo_c69b6d",Ki:"iconVisibility_c69b6d",bw:"iconWithChannelInfo_c69b6d",r9:"disabled_c69b6d",gE:"actionIcon_c69b6d",yW:"channelInfo_c69b6d",Gj:"iconLive_c69b6d",rM:"selectedChannel_c69b6d",fy:"voiceChannelHighlightContainer_c69b6d",UQ:"voiceChannelHighlightBorder_c69b6d",l0:"voiceChannelHighlightGlow_c69b6d"}
+e.exports = {
+    fx: "containerDefault_c69b6d",
+    mU: "containerDragAfter_c69b6d",
+    TR: "containerDragBefore_c69b6d",
+    ZS: "containerUserOver_c69b6d",
+    LN: "iconBase_c69b6d",
+    Xs: "iconItem_c69b6d iconBase_c69b6d",
+    Tf: "alwaysShown_c69b6d",
+    wH: "selected_c69b6d",
+    UI: "iconNoChannelInfo_c69b6d",
+    Ki: "iconVisibility_c69b6d",
+    bw: "iconWithChannelInfo_c69b6d",
+    r9: "disabled_c69b6d",
+    gE: "actionIcon_c69b6d",
+    yW: "channelInfo_c69b6d",
+    Gj: "iconLive_c69b6d",
+    rM: "selectedChannel_c69b6d",
+    fy: "voiceChannelHighlightContainer_c69b6d",
+    UQ: "voiceChannelHighlightBorder_c69b6d",
+    l0: "voiceChannelHighlightGlow_c69b6d",
+};

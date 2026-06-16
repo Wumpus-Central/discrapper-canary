@@ -1,1 +1,1 @@
-p.exports={v:"buttonRow_da1bc3"}
+p.exports = { v: "buttonRow_da1bc3" };

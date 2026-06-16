@@ -1,1 +1,51 @@
-"use strict";n.d(t,{A:()=>_}),n(323874),n(14289),n(35956),n(321073);var i=n(439372),r=n(159273),s=n(734057),a=n(486020),o=n(690521),l=n(746080),u=n(732139);let c=new Worker(new URL("/assets/"+n.u("79908"),n.b));class d extends i.A{actions={CHANNEL_PRELOAD:this.handleChannelPreload};handleChannelPreload(e){let{channelId:t}=e;if((0,l.jq)(t))return;let n=s.A.getChannel(t);if(null!=n&&n.isForumLikeChannel()){let e,t;(e=[],t=n.defaultReactionEmoji,t?.emojiId!=null?e.push(a.Ay.getEmojiURL({id:t.emojiId,animated:r.Ay.getUsableCustomEmojiById(t.emojiId)?.animated??!1,size:u.Ec.reaction})):t?.emojiName!=null&&e.push(o.Ay.getURL(t.emojiName)),n.availableTags.forEach(t=>{null!=t.emojiId?e.push(a.Ay.getEmojiURL({id:t.emojiId,animated:!1,size:u.Ec.reaction})):null!=t.emojiName&&e.push(o.Ay.getURL(t.emojiName))}),e).forEach(e=>{null!=e&&0!==e.length&&new Promise(t=>{let n=i=>{let{data:{url:r}}=i;c?.removeEventListener("message",n),e===r&&t()};c?.addEventListener("message",n),c?.postMessage({url:e})})})}}}let _=new d
+"use strict";
+n.d(t, { A: () => _ }), n(323874), n(14289), n(35956), n(321073);
+var i = n(439372),
+    r = n(159273),
+    s = n(734057),
+    a = n(486020),
+    o = n(690521),
+    l = n(746080),
+    u = n(732139);
+let c = new Worker(new URL("/assets/" + n.u("79908"), n.b));
+class d extends i.A {
+    actions = { CHANNEL_PRELOAD: this.handleChannelPreload };
+    handleChannelPreload(e) {
+        let { channelId: t } = e;
+        if ((0, l.jq)(t)) return;
+        let n = s.A.getChannel(t);
+        if (null != n && n.isForumLikeChannel()) {
+            let e, t;
+            ((e = []),
+            (t = n.defaultReactionEmoji),
+            t?.emojiId != null
+                ? e.push(
+                      a.Ay.getEmojiURL({
+                          id: t.emojiId,
+                          animated: r.Ay.getUsableCustomEmojiById(t.emojiId)?.animated ?? !1,
+                          size: u.Ec.reaction,
+                      }),
+                  )
+                : t?.emojiName != null && e.push(o.Ay.getURL(t.emojiName)),
+            n.availableTags.forEach((t) => {
+                null != t.emojiId
+                    ? e.push(a.Ay.getEmojiURL({ id: t.emojiId, animated: !1, size: u.Ec.reaction }))
+                    : null != t.emojiName && e.push(o.Ay.getURL(t.emojiName));
+            }),
+            e).forEach((e) => {
+                null != e &&
+                    0 !== e.length &&
+                    new Promise((t) => {
+                        let n = (i) => {
+                            let {
+                                data: { url: r },
+                            } = i;
+                            c?.removeEventListener("message", n), e === r && t();
+                        };
+                        c?.addEventListener("message", n), c?.postMessage({ url: e });
+                    });
+            });
+        }
+    }
+}
+let _ = new d();

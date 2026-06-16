@@ -1,1 +1,1 @@
-e.exports={X:"sessionLogoutButton_fcf075"}
+e.exports = { X: "sessionLogoutButton_fcf075" };

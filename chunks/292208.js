@@ -1,1 +1,110 @@
-n.d(i,{default:()=>h});var l=n(627968),e=n(64700),s=n(189213),a=n(192308),r=n(691885),o=n(325278),d=n(375708),u=n(835806),g=n(726249),p=n(723702);function b(){return e.useEffect(()=>{p.isPlatformEmbedded||(0,g.iA)({messages:[d.intl.string(d.t.KIX3cl),d.intl.string(d.t["UbO+8i"]),d.intl.string(d.t.MbySu9)],interval:600,count:20,onlyWhenBlurred:!0})},[]),null}class c extends e.PureComponent{state={problem:null};handleChanged=t=>{this.setState({problem:t??null})};handleSubmit=()=>{let{stream:t,streamApplication:i,analyticsData:e,onClose:s}=this.props,{problem:r}=this.state;(0,u.A)({problem:r,stream:t,feedback:"",streamApplication:i,analyticsData:e,location:"Stream"}),s(),(0,a.openModalLazy)(async()=>{let{default:t}=await n.e("37836").then(n.bind(n,845671));return i=>(0,l.jsx)(t,{body:d.intl.string(d.t.mMTVnv),...i})})};render(){let{isStreamer:t,transitionState:i,onClose:n}=this.props,{problem:e}=this.state;return(0,l.jsxs)(s.Modal,{title:d.intl.string(d.t.qnJ9W3),subtitle:d.intl.string(d.t["7vw0h+"]),actions:[{text:d.intl.string(d.t["ETE/oC"]),variant:"secondary",onClick:n},{text:d.intl.string(d.t.E48BIc),variant:"primary",onClick:this.handleSubmit,disabled:null==e}],onClose:n,transitionState:i,children:[(0,l.jsx)(b,{}),(0,l.jsx)(r.l,{selectionMode:"single",label:d.intl.string(d.t["6Y1t5P"]),placeholder:d.intl.string(d.t.U0kGk6),options:function(t){let{isEndStream:i}=t;return[{id:"black-screen",value:o.pj.BLACK_SCREEN,label:i?d.intl.string(d.t["0X5Zbq"]):d.intl.string(d.t.fxiRNr)},{id:"blurry",value:o.pj.BLURRY,label:i?d.intl.string(d.t.VVPQyy):d.intl.string(d.t.E8jTMN)},{id:"lagging",value:o.pj.LAGGING,label:i?d.intl.string(d.t.ObEHd4):d.intl.string(d.t.VoSJEQ)},{id:"out-of-sync",value:o.pj.OUT_OF_SYNC,label:i?d.intl.string(d.t.mYmwD3):d.intl.string(d.t["+NluQm"])},{id:"audio-missing",value:o.pj.AUDIO_MISSING,label:i?d.intl.string(d.t["Xwv41+"]):d.intl.string(d.t.G2egzT)},{id:"audio-poor",value:o.pj.AUDIO_POOR,label:i?d.intl.string(d.t["fHey+d"]):d.intl.string(d.t.aHOfIo)},{id:"stream-stopped",value:o.pj.STREAM_STOPPED,label:d.intl.string(d.t.uEoqQp)},{id:"vibes-off",value:o.pj.VIBES_OFF,label:d.intl.string(d.t["++JLL0"])},{id:"other",value:o.pj.OTHER,label:d.intl.string(d.t.emlT91)}]}({isStreamer:t,isEndStream:!1}),onSelectionChange:this.handleChanged,value:e,maxOptionsVisible:4})]})}}let h=c
+n.d(i, { default: () => h });
+var l = n(627968),
+    e = n(64700),
+    s = n(189213),
+    a = n(192308),
+    r = n(691885),
+    o = n(325278),
+    d = n(375708),
+    u = n(835806),
+    g = n(726249),
+    p = n(723702);
+function b() {
+    return (
+        e.useEffect(() => {
+            p.isPlatformEmbedded ||
+                (0, g.iA)({
+                    messages: [d.intl.string(d.t.KIX3cl), d.intl.string(d.t["UbO+8i"]), d.intl.string(d.t.MbySu9)],
+                    interval: 600,
+                    count: 20,
+                    onlyWhenBlurred: !0,
+                });
+        }, []),
+        null
+    );
+}
+class c extends e.PureComponent {
+    state = { problem: null };
+    handleChanged = (t) => {
+        this.setState({ problem: t ?? null });
+    };
+    handleSubmit = () => {
+        let { stream: t, streamApplication: i, analyticsData: e, onClose: s } = this.props,
+            { problem: r } = this.state;
+        (0, u.A)({ problem: r, stream: t, feedback: "", streamApplication: i, analyticsData: e, location: "Stream" }),
+            s(),
+            (0, a.openModalLazy)(async () => {
+                let { default: t } = await n.e("37836").then(n.bind(n, 845671));
+                return (i) => (0, l.jsx)(t, { body: d.intl.string(d.t.mMTVnv), ...i });
+            });
+    };
+    render() {
+        let { isStreamer: t, transitionState: i, onClose: n } = this.props,
+            { problem: e } = this.state;
+        return (0, l.jsxs)(s.Modal, {
+            title: d.intl.string(d.t.qnJ9W3),
+            subtitle: d.intl.string(d.t["7vw0h+"]),
+            actions: [
+                { text: d.intl.string(d.t["ETE/oC"]), variant: "secondary", onClick: n },
+                {
+                    text: d.intl.string(d.t.E48BIc),
+                    variant: "primary",
+                    onClick: this.handleSubmit,
+                    disabled: null == e,
+                },
+            ],
+            onClose: n,
+            transitionState: i,
+            children: [
+                (0, l.jsx)(b, {}),
+                (0, l.jsx)(r.l, {
+                    selectionMode: "single",
+                    label: d.intl.string(d.t["6Y1t5P"]),
+                    placeholder: d.intl.string(d.t.U0kGk6),
+                    options: (function (t) {
+                        let { isEndStream: i } = t;
+                        return [
+                            {
+                                id: "black-screen",
+                                value: o.pj.BLACK_SCREEN,
+                                label: i ? d.intl.string(d.t["0X5Zbq"]) : d.intl.string(d.t.fxiRNr),
+                            },
+                            {
+                                id: "blurry",
+                                value: o.pj.BLURRY,
+                                label: i ? d.intl.string(d.t.VVPQyy) : d.intl.string(d.t.E8jTMN),
+                            },
+                            {
+                                id: "lagging",
+                                value: o.pj.LAGGING,
+                                label: i ? d.intl.string(d.t.ObEHd4) : d.intl.string(d.t.VoSJEQ),
+                            },
+                            {
+                                id: "out-of-sync",
+                                value: o.pj.OUT_OF_SYNC,
+                                label: i ? d.intl.string(d.t.mYmwD3) : d.intl.string(d.t["+NluQm"]),
+                            },
+                            {
+                                id: "audio-missing",
+                                value: o.pj.AUDIO_MISSING,
+                                label: i ? d.intl.string(d.t["Xwv41+"]) : d.intl.string(d.t.G2egzT),
+                            },
+                            {
+                                id: "audio-poor",
+                                value: o.pj.AUDIO_POOR,
+                                label: i ? d.intl.string(d.t["fHey+d"]) : d.intl.string(d.t.aHOfIo),
+                            },
+                            { id: "stream-stopped", value: o.pj.STREAM_STOPPED, label: d.intl.string(d.t.uEoqQp) },
+                            { id: "vibes-off", value: o.pj.VIBES_OFF, label: d.intl.string(d.t["++JLL0"]) },
+                            { id: "other", value: o.pj.OTHER, label: d.intl.string(d.t.emlT91) },
+                        ];
+                    })({ isStreamer: t, isEndStream: !1 }),
+                    onSelectionChange: this.handleChanged,
+                    value: e,
+                    maxOptionsVisible: 4,
+                }),
+            ],
+        });
+    }
+}
+let h = c;

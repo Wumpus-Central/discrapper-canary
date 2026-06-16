@@ -1,1 +1,13 @@
-d.d(s,{A:()=>a});var p=d(228366),t=d(931260),i=d(543465);let a={update(e){p.h.dispatch({type:"CHANNEL_COLLAPSE",channelId:e})},toggleCollapseGuild(e){t.A.saveUserGuildSettings(e,{hide_muted_channels:!i.Ay.isGuildCollapsed(e)}),p.h.dispatch({type:"GUILD_TOGGLE_COLLAPSE_MUTED",guildId:e})}}
+d.d(s, { A: () => a });
+var p = d(228366),
+    t = d(931260),
+    i = d(543465);
+let a = {
+    update(e) {
+        p.h.dispatch({ type: "CHANNEL_COLLAPSE", channelId: e });
+    },
+    toggleCollapseGuild(e) {
+        t.A.saveUserGuildSettings(e, { hide_muted_channels: !i.Ay.isGuildCollapsed(e) }),
+            p.h.dispatch({ type: "GUILD_TOGGLE_COLLAPSE_MUTED", guildId: e });
+    },
+};

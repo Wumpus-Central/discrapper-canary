@@ -1,1 +1,41 @@
-t.d(r,{i:()=>f});var a=t(627968);t(64700);var n=t(503698),l=t.n(n),s=t(97808),u=t(778712),i=t(19575),o=t(562819),c=t(963977),d=t(375708),m=t(628538);let A=i.Ay.getEnableHardwareAcceleration()?s.Js:s.eu,f=e=>{let{item:r,user:t,isHighlighted:n=!1,avatarSize:s=u._3.SIZE_152,avatarPlaceholderSrc:i,className:f}=e,T=(0,o.Te)(s),{avatarDecorationSrc:I,eventHandlers:p,avatarPlaceholderSrc:E}=(0,c.A)({user:t,avatarDecorationOverride:r,size:T,onlyAnimateOnHoverOrFocus:!n}),h=d.intl.formatToPlainString(d.t.Do2lxE,{a11y_text:r.label}),y=(0,u.FT)(u._3.SIZE_152);return(0,a.jsx)(A,{...p,avatarDecoration:I,src:n?t?.getAvatarURL(void 0,y,!0):i??E,imageClassName:n?m.WG:void 0,className:l()(f,m.my),size:s,"aria-label":h})}
+"use strict";
+n.d(t, { i: () => f });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(97808),
+    o = n(778712),
+    l = n(19575),
+    u = n(562819),
+    c = n(963977),
+    d = n(375708),
+    _ = n(628538);
+let h = l.Ay.getEnableHardwareAcceleration() ? a.Js : a.eu,
+    f = (e) => {
+        let {
+                item: t,
+                user: n,
+                isHighlighted: r = !1,
+                avatarSize: a = o._3.SIZE_152,
+                avatarPlaceholderSrc: l,
+                className: f,
+            } = e,
+            p = (0, u.Te)(a),
+            {
+                avatarDecorationSrc: E,
+                eventHandlers: m,
+                avatarPlaceholderSrc: g,
+            } = (0, c.A)({ user: n, avatarDecorationOverride: t, size: p, onlyAnimateOnHoverOrFocus: !r }),
+            A = d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: t.label }),
+            I = (0, o.FT)(o._3.SIZE_152);
+        return (0, i.jsx)(h, {
+            ...m,
+            avatarDecoration: E,
+            src: r ? n?.getAvatarURL(void 0, I, !0) : (l ?? g),
+            imageClassName: r ? _.WG : void 0,
+            className: s()(f, _.my),
+            size: a,
+            "aria-label": A,
+        });
+    };

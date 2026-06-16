@@ -1,1 +1,246 @@
-"use strict";n.d(t,{y$:()=>y,t4:()=>S,Ni:()=>I});var i=n(942381),r=n(265690),s=n(315069),a=n(570221),o=n(580630);class l extends s.A{id;quantity;price;total;addOnPlans;static createFromServer(e){return new l({id:e.id,quantity:e.quantity,price:e.price,total:e.total,addOnPlans:e.add_on_plans??[]})}constructor(e){super(),this.id=e.id,this.quantity=e.quantity,this.price=e.price,this.total=e.total,this.addOnPlans=e.addOnPlans??[]}getPlanQuantities(){let e=new Map([[this.id,this.quantity]]);for(let t of this.addOnPlans)e.set(t.id,(e.get(t.id)??0)+t.quantity);return e}matchesItems(e){var t=this.getPlanQuantities(),n=function(e){let t=new Map;for(let{planId:n,quantity:i}of e)t.set(n,(t.get(n)??0)+i);return t}(e);if(t.size!==n.size)return!1;for(let[e,i]of t)if(n.get(e)!==i)return!1;return!0}getPriceString(){var e;let t;return t=(e=this.total).amount/Math.pow(10,e.exponent),(0,o.$g)(t,e.currency,{convertToMajorUnits:!1})}}class u extends s.A{paymentSources;storeCountry;allowedCurrencies;availablePlans;static createFromOrder(e){let t=e?.checkout_context;return null==t?null:new u({paymentSources:t.payment_sources??[],storeCountry:null!=t.store_country?t.store_country.country:null,allowedCurrencies:t.allowed_currencies??[],availablePlans:(t.available_plans??[]).map(l.createFromServer)})}constructor(e){super(),this.paymentSources=e.paymentSources??[],this.storeCountry=e.storeCountry??null,this.allowedCurrencies=e.allowedCurrencies??[],this.availablePlans=e.availablePlans??[]}getAvailablePlanForItems(e){return this.availablePlans.find(t=>t.matchesItems(e))??null}}class c extends s.A{paymentGateway;paymentSourceId;invoicePreview;static createFromOrder(e){let t=e.billing_facet;return null==t?null:new c({paymentGateway:t.payment_gateway,paymentSourceId:t.payment_source_id??null,invoicePreview:a.Y.createInvoiceFromOrder(e)})}constructor(e){super(),this.paymentGateway=e.paymentGateway,this.paymentSourceId=e.paymentSourceId??null,this.invoicePreview=e.invoicePreview??null}}class d extends s.A{id;status;revision;orderLineItems;billingFacetRecord;giftingFacet;checkoutContextRecord;createdAt;unsatisfiedConstraints;static createFromServer(e){return new d({id:e.id,status:e.status,revision:e.revision,orderLineItems:e.order_line_items,billingFacetRecord:c.createFromOrder(e),giftingFacet:e.gifting_facet??null,checkoutContextRecord:u.createFromOrder(e),createdAt:e.created_at,unsatisfiedConstraints:e.unsatisfied_constraints??[]})}constructor(e){super(),this.id=e.id,this.status=e.status,this.revision=e.revision,this.orderLineItems=e.orderLineItems??[],this.billingFacetRecord=e.billingFacetRecord??null,this.giftingFacet=e.giftingFacet??null,this.checkoutContextRecord=e.checkoutContextRecord??null,this.createdAt=e.createdAt,this.unsatisfiedConstraints=e.unsatisfiedConstraints??[]}getInvoicePreview(){return null==this.billingFacetRecord?null:this.billingFacetRecord.invoicePreview}firstUnsatisfiedConstraintReasonCode(){return this.unsatisfiedConstraints.length>0?this.unsatisfiedConstraints[0].reason_code:null}}var _=n(566980),h=n(410516),f=n(815545),p=n(786300),E=n(428262),m=n(788868);let g=e=>null==e?{isPremiumPurchase:!0,isPremiumGroupPurchase:!1}:{isPremiumPurchase:(0,E.ys)(e),isPremiumGroupPurchase:e===m.gD.PREMIUM_GROUP_MONTH};var A=n(504275);let[I,T]=(0,p.A)();function S(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:i.x;return T()(e,t)}function y(e){let{checkoutInitParameters:t,startingValues:n,contextMetadata:s,order:a,initialPaymentSourceId:o,initialCurrency:l}=e;return(0,r.h)((e,i)=>{let r={isPremiumPurchase:()=>g(i().selectedPlanId).isPremiumPurchase,isPremiumGroupPurchase:()=>g(i().selectedPlanId).isPremiumGroupPurchase,selectedPlanAttributes:()=>g(i().selectedPlanId),premiumDiscountOffer:()=>i().premiumDiscountInfo.discountOffer??null,premiumDiscountPercent:()=>{let e=i().premiumDiscountInfo.discountOffer;return null!=e?e.discount.amount:null},isPremiumDiscountAppliedToCheckoutInvoice:()=>{let{discountOffer:e}=i().premiumDiscountInfo,t=i().checkoutInvoicePreview;return null!=e&&null!=e.discount&&null!=t&&(0,f.Ro)(t,e.discount.id)}};return{...(0,A.p)(e,i,t),...{startedPaymentFlowWithPaymentSources:n.startedPaymentFlowWithPaymentSources,startingPremiumSubscriptionPlanId:n.startingPremiumSubscriptionPlanId,startingFractionalPremiumEndsAt:null,captureStartingPremiumSubscriptionPlanId:t=>{null==i().startingPremiumSubscriptionPlanId&&e({startingPremiumSubscriptionPlanId:t})},captureStartingFractionalPremiumEndsAt:t=>{null==i().startingFractionalPremiumEndsAt&&e({startingFractionalPremiumEndsAt:t})}},get:e=>null!=r[e]?r[e]():null,contextMetadata:s,order:a,orderRecord:null!=a?d.createFromServer(a):null,setOrder:t=>e({order:t,orderRecord:d.createFromServer(t)}),selectedSkuId:void 0,selectedPlanId:void 0,setSelectedSkuId:t=>e({selectedSkuId:t??void 0}),setSelectedPlanId:t=>e({selectedPlanId:t??void 0}),fetchCheckoutInvoicePreviewRequest:null,setFetchCheckoutInvoicePreviewRequest:t=>e({fetchCheckoutInvoicePreviewRequest:t??null}),checkoutInvoicePreview:null,checkoutInvoiceError:null,setCheckoutInvoicePreview:(t,n)=>e({checkoutInvoicePreview:t??null,checkoutInvoiceError:n??null}),fetchRenewalInvoicePreviewRequest:null,setFetchRenewalInvoicePreviewRequest:t=>e({fetchRenewalInvoicePreviewRequest:t??null}),renewalInvoicePreview:null,renewalInvoiceError:null,setRenewalInvoicePreview:(t,n)=>e({renewalInvoicePreview:t??null,renewalInvoiceError:n??null}),premiumDiscountInfo:h.TI,setPremiumDiscountInfo:t=>e({premiumDiscountInfo:t}),entitlementsGranted:[],setEntitlementsGranted:t=>e({entitlementsGranted:t}),hasAcceptedTerms:!1,setHasAcceptedTerms:t=>e({hasAcceptedTerms:t}),paymentSourceId:o,setPaymentSourceId:t=>e({paymentSourceId:t??null}),checkoutPriceOptions:{paymentSourceId:o??void 0,currency:l,loaded:!1},setCheckoutPriceOptions:t=>e(e=>({checkoutPriceOptions:{...e.checkoutPriceOptions,...t}})),setCheckoutCurrency:t=>e(e=>({checkoutPriceOptions:{...e.checkoutPriceOptions,currency:t}})),purchaseState:_.h.WAITING,setPurchaseState:t=>e({purchaseState:t}),appliedUserDiscounts:[],setAppliedUserDiscounts:t=>e({appliedUserDiscounts:t}),purchaseError:null,setPurchaseError:t=>e({purchaseError:t??null}),purchasePreviewError:null,setPurchasePreviewError:t=>e({purchasePreviewError:t??null}),updatedSubscription:null,setUpdatedSubscription:t=>e({updatedSubscription:t}),readySlideId:null,setReadySlideId:t=>e({readySlideId:t??null})}},i.x)}
+"use strict";
+n.d(t, { y$: () => y, t4: () => S, Ni: () => I });
+var i = n(942381),
+    r = n(265690),
+    s = n(315069),
+    a = n(570221),
+    o = n(580630);
+class l extends s.A {
+    id;
+    quantity;
+    price;
+    total;
+    addOnPlans;
+    static createFromServer(e) {
+        return new l({
+            id: e.id,
+            quantity: e.quantity,
+            price: e.price,
+            total: e.total,
+            addOnPlans: e.add_on_plans ?? [],
+        });
+    }
+    constructor(e) {
+        super(),
+            (this.id = e.id),
+            (this.quantity = e.quantity),
+            (this.price = e.price),
+            (this.total = e.total),
+            (this.addOnPlans = e.addOnPlans ?? []);
+    }
+    getPlanQuantities() {
+        let e = new Map([[this.id, this.quantity]]);
+        for (let t of this.addOnPlans) e.set(t.id, (e.get(t.id) ?? 0) + t.quantity);
+        return e;
+    }
+    matchesItems(e) {
+        var t = this.getPlanQuantities(),
+            n = (function (e) {
+                let t = new Map();
+                for (let { planId: n, quantity: i } of e) t.set(n, (t.get(n) ?? 0) + i);
+                return t;
+            })(e);
+        if (t.size !== n.size) return !1;
+        for (let [e, i] of t) if (n.get(e) !== i) return !1;
+        return !0;
+    }
+    getPriceString() {
+        var e;
+        let t;
+        return (
+            (t = (e = this.total).amount / Math.pow(10, e.exponent)),
+            (0, o.$g)(t, e.currency, { convertToMajorUnits: !1 })
+        );
+    }
+}
+class u extends s.A {
+    paymentSources;
+    storeCountry;
+    allowedCurrencies;
+    availablePlans;
+    static createFromOrder(e) {
+        let t = e?.checkout_context;
+        return null == t
+            ? null
+            : new u({
+                  paymentSources: t.payment_sources ?? [],
+                  storeCountry: null != t.store_country ? t.store_country.country : null,
+                  allowedCurrencies: t.allowed_currencies ?? [],
+                  availablePlans: (t.available_plans ?? []).map(l.createFromServer),
+              });
+    }
+    constructor(e) {
+        super(),
+            (this.paymentSources = e.paymentSources ?? []),
+            (this.storeCountry = e.storeCountry ?? null),
+            (this.allowedCurrencies = e.allowedCurrencies ?? []),
+            (this.availablePlans = e.availablePlans ?? []);
+    }
+    getAvailablePlanForItems(e) {
+        return this.availablePlans.find((t) => t.matchesItems(e)) ?? null;
+    }
+}
+class c extends s.A {
+    paymentGateway;
+    paymentSourceId;
+    invoicePreview;
+    static createFromOrder(e) {
+        let t = e.billing_facet;
+        return null == t
+            ? null
+            : new c({
+                  paymentGateway: t.payment_gateway,
+                  paymentSourceId: t.payment_source_id ?? null,
+                  invoicePreview: a.Y.createInvoiceFromOrder(e),
+              });
+    }
+    constructor(e) {
+        super(),
+            (this.paymentGateway = e.paymentGateway),
+            (this.paymentSourceId = e.paymentSourceId ?? null),
+            (this.invoicePreview = e.invoicePreview ?? null);
+    }
+}
+class d extends s.A {
+    id;
+    status;
+    revision;
+    orderLineItems;
+    billingFacetRecord;
+    giftingFacet;
+    checkoutContextRecord;
+    createdAt;
+    unsatisfiedConstraints;
+    static createFromServer(e) {
+        return new d({
+            id: e.id,
+            status: e.status,
+            revision: e.revision,
+            orderLineItems: e.order_line_items,
+            billingFacetRecord: c.createFromOrder(e),
+            giftingFacet: e.gifting_facet ?? null,
+            checkoutContextRecord: u.createFromOrder(e),
+            createdAt: e.created_at,
+            unsatisfiedConstraints: e.unsatisfied_constraints ?? [],
+        });
+    }
+    constructor(e) {
+        super(),
+            (this.id = e.id),
+            (this.status = e.status),
+            (this.revision = e.revision),
+            (this.orderLineItems = e.orderLineItems ?? []),
+            (this.billingFacetRecord = e.billingFacetRecord ?? null),
+            (this.giftingFacet = e.giftingFacet ?? null),
+            (this.checkoutContextRecord = e.checkoutContextRecord ?? null),
+            (this.createdAt = e.createdAt),
+            (this.unsatisfiedConstraints = e.unsatisfiedConstraints ?? []);
+    }
+    getInvoicePreview() {
+        return null == this.billingFacetRecord ? null : this.billingFacetRecord.invoicePreview;
+    }
+    firstUnsatisfiedConstraintReasonCode() {
+        return this.unsatisfiedConstraints.length > 0 ? this.unsatisfiedConstraints[0].reason_code : null;
+    }
+}
+var _ = n(566980),
+    h = n(410516),
+    f = n(815545),
+    p = n(786300),
+    E = n(428262),
+    m = n(788868);
+let g = (e) =>
+    null == e
+        ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
+        : { isPremiumPurchase: (0, E.ys)(e), isPremiumGroupPurchase: e === m.gD.PREMIUM_GROUP_MONTH };
+var A = n(504275);
+let [I, T] = (0, p.A)();
+function S(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return T()(e, t);
+}
+function y(e) {
+    let {
+        checkoutInitParameters: t,
+        startingValues: n,
+        contextMetadata: s,
+        order: a,
+        initialPaymentSourceId: o,
+        initialCurrency: l,
+    } = e;
+    return (0, r.h)((e, i) => {
+        let r = {
+            isPremiumPurchase: () => g(i().selectedPlanId).isPremiumPurchase,
+            isPremiumGroupPurchase: () => g(i().selectedPlanId).isPremiumGroupPurchase,
+            selectedPlanAttributes: () => g(i().selectedPlanId),
+            premiumDiscountOffer: () => i().premiumDiscountInfo.discountOffer ?? null,
+            premiumDiscountPercent: () => {
+                let e = i().premiumDiscountInfo.discountOffer;
+                return null != e ? e.discount.amount : null;
+            },
+            isPremiumDiscountAppliedToCheckoutInvoice: () => {
+                let { discountOffer: e } = i().premiumDiscountInfo,
+                    t = i().checkoutInvoicePreview;
+                return null != e && null != e.discount && null != t && (0, f.Ro)(t, e.discount.id);
+            },
+        };
+        return {
+            ...(0, A.p)(e, i, t),
+            ...{
+                startedPaymentFlowWithPaymentSources: n.startedPaymentFlowWithPaymentSources,
+                startingPremiumSubscriptionPlanId: n.startingPremiumSubscriptionPlanId,
+                startingFractionalPremiumEndsAt: null,
+                captureStartingPremiumSubscriptionPlanId: (t) => {
+                    null == i().startingPremiumSubscriptionPlanId && e({ startingPremiumSubscriptionPlanId: t });
+                },
+                captureStartingFractionalPremiumEndsAt: (t) => {
+                    null == i().startingFractionalPremiumEndsAt && e({ startingFractionalPremiumEndsAt: t });
+                },
+            },
+            get: (e) => (null != r[e] ? r[e]() : null),
+            contextMetadata: s,
+            order: a,
+            orderRecord: null != a ? d.createFromServer(a) : null,
+            setOrder: (t) => e({ order: t, orderRecord: d.createFromServer(t) }),
+            selectedSkuId: void 0,
+            selectedPlanId: void 0,
+            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
+            setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0 }),
+            fetchCheckoutInvoicePreviewRequest: null,
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: t ?? null }),
+            checkoutInvoicePreview: null,
+            checkoutInvoiceError: null,
+            setCheckoutInvoicePreview: (t, n) =>
+                e({ checkoutInvoicePreview: t ?? null, checkoutInvoiceError: n ?? null }),
+            fetchRenewalInvoicePreviewRequest: null,
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: t ?? null }),
+            renewalInvoicePreview: null,
+            renewalInvoiceError: null,
+            setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
+            premiumDiscountInfo: h.TI,
+            setPremiumDiscountInfo: (t) => e({ premiumDiscountInfo: t }),
+            entitlementsGranted: [],
+            setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
+            hasAcceptedTerms: !1,
+            setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
+            paymentSourceId: o,
+            setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
+            checkoutPriceOptions: { paymentSourceId: o ?? void 0, currency: l, loaded: !1 },
+            setCheckoutPriceOptions: (t) => e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, ...t } })),
+            setCheckoutCurrency: (t) =>
+                e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, currency: t } })),
+            purchaseState: _.h.WAITING,
+            setPurchaseState: (t) => e({ purchaseState: t }),
+            appliedUserDiscounts: [],
+            setAppliedUserDiscounts: (t) => e({ appliedUserDiscounts: t }),
+            purchaseError: null,
+            setPurchaseError: (t) => e({ purchaseError: t ?? null }),
+            purchasePreviewError: null,
+            setPurchasePreviewError: (t) => e({ purchasePreviewError: t ?? null }),
+            updatedSubscription: null,
+            setUpdatedSubscription: (t) => e({ updatedSubscription: t }),
+            readySlideId: null,
+            setReadySlideId: (t) => e({ readySlideId: t ?? null }),
+        };
+    }, i.x);
+}

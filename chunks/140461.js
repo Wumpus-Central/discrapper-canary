@@ -1,1 +1,1 @@
-e.exports={m:"ctaContent__225ab"}
+e.exports = { m: "ctaContent__225ab" };

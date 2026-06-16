@@ -1,1 +1,39 @@
-r.d(t,{A:()=>R});var i=r(636537),n=r(626584),a=r(152007),l=r(867455),_=r(734057),S=r(232835),s=r(222823),u=r(287809),o=r(935208),d=r(652215);let I=new n.A("markUnread");async function R(e,t){let r=u.default.getCurrentUser();if(null==r)return;let n=S.A.getMessages(e),R=n.toArray().filter(e=>0>o.default.compare(e.id,t)).sort((e,t)=>o.default.compare(e.id,t.id)).reverse()[0],E=null==R?o.default.atPreviousMillisecond(t):R.id,C=0;n.forAll(e=>{o.default.compare(e.id,E)>0&&(0,s.Wm)(e,r)&&C++});let h=_.A.getChannel(e);null!=h&&h.isThread()&&(h.isArchivedThread()&&await l.A.unarchiveThread(h,!1),a.A.hasJoined(e)||await l.A.joinThread(h,"Mark Unread")),I.log("Marking unread",{channelId:e,messageId:t}),i.Bo.post({url:d.Rsh.MESSAGE_ACK(e,E),body:{manual:!0,mention_count:C},oldFormErrors:!0,rejectWithError:!0})}
+r.d(t, { A: () => R });
+var i = r(636537),
+    n = r(626584),
+    a = r(152007),
+    l = r(867455),
+    _ = r(734057),
+    S = r(232835),
+    s = r(222823),
+    u = r(287809),
+    o = r(935208),
+    d = r(652215);
+let I = new n.A("markUnread");
+async function R(e, t) {
+    let r = u.default.getCurrentUser();
+    if (null == r) return;
+    let n = S.A.getMessages(e),
+        R = n
+            .toArray()
+            .filter((e) => 0 > o.default.compare(e.id, t))
+            .sort((e, t) => o.default.compare(e.id, t.id))
+            .reverse()[0],
+        E = null == R ? o.default.atPreviousMillisecond(t) : R.id,
+        C = 0;
+    n.forAll((e) => {
+        o.default.compare(e.id, E) > 0 && (0, s.Wm)(e, r) && C++;
+    });
+    let h = _.A.getChannel(e);
+    null != h &&
+        h.isThread() &&
+        (h.isArchivedThread() && (await l.A.unarchiveThread(h, !1)),
+        a.A.hasJoined(e) || (await l.A.joinThread(h, "Mark Unread"))),
+        I.log("Marking unread", { channelId: e, messageId: t }),
+        i.Bo.post({
+            url: d.Rsh.MESSAGE_ACK(e, E),
+            body: { manual: !0, mention_count: C },
+            oldFormErrors: !0,
+            rejectWithError: !0,
+        });
+}

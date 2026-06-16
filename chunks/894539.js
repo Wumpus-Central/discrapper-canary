@@ -1,1 +1,6 @@
-"use strict";n.d(t,{A:()=>i});let i=new class{nativeMuteChanged(e){}updateNativeMute(){}}
+"use strict";
+n.d(t, { A: () => i });
+let i = new (class {
+    nativeMuteChanged(e) {}
+    updateNativeMute() {}
+})();

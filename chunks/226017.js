@@ -1,1 +1,9 @@
-"use strict";n.d(t,{A:()=>a});var i=n(287809),r=n(474090),s=n(788868);function a(){let e=i.default.getCurrentUser();return(0,r.ki)(e,s.PremiumTypes.TIER_2)}
+"use strict";
+n.d(t, { A: () => a });
+var i = n(287809),
+    r = n(474090),
+    s = n(788868);
+function a() {
+    let e = i.default.getCurrentUser();
+    return (0, r.ki)(e, s.PremiumTypes.TIER_2);
+}

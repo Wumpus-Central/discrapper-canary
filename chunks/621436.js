@@ -1,1 +1,6 @@
-i.d(t,{A:()=>n});var p=i(495544),s=i(652215);function n(e){return s.kvI.CALLABLE.has(e.type)?e.recipients?.length===1?e.recipients[0]:null:p.default.getId()}
+i.d(t, { A: () => n });
+var p = i(495544),
+    s = i(652215);
+function n(e) {
+    return s.kvI.CALLABLE.has(e.type) ? (e.recipients?.length === 1 ? e.recipients[0] : null) : p.default.getId();
+}

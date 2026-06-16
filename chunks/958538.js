@@ -1,1 +1,11 @@
-n.d(t,{A:()=>i});var l=n(64700);let a=Symbol();function i(e,t,n){let i,r,o=(i=(0,l.useRef)(!1),r=(0,l.useRef)(null),i.current||(i.current=!0,r.current=e()),r),u=(0,l.useRef)(a);return u.current===a?u.current=t:n(u.current,t)||(o.current=e(),u.current=t),o.current}
+"use strict";
+n.d(t, { A: () => s });
+var i = n(64700);
+let r = Symbol();
+function s(e, t, n) {
+    let s,
+        a,
+        o = ((s = (0, i.useRef)(!1)), (a = (0, i.useRef)(null)), s.current || ((s.current = !0), (a.current = e())), a),
+        l = (0, i.useRef)(r);
+    return l.current === r ? (l.current = t) : n(l.current, t) || ((o.current = e()), (l.current = t)), o.current;
+}

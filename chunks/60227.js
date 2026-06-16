@@ -1,1 +1,1 @@
-e.exports={z:"root_ccf174"}
+p.exports = { z: "root_ccf174" };

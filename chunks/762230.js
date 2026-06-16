@@ -1,1 +1,4 @@
-"use strict";n.d(t,{S:()=>r});var i,r=((i={})[i.DEFAULT=0]="DEFAULT",i[i.FORWARD=1]="FORWARD",i)
+"use strict";
+n.d(t, { S: () => r });
+var i,
+    r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.FORWARD = 1)] = "FORWARD"), i);

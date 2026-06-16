@@ -1,1 +1,36 @@
-t.d(l,{A:()=>N});var s=t(627968);t(64700);var i=t(503698),n=t.n(i),a=t(990078),r=t(261958),c=t(444570),d=t(939249),u=t(183555),o=t(612630),x=t(518477),h=t(375708),m=t(918613);function N(e){let{userId:l,isVisible:t,onOpenProfile:i}=e,{note:N}=(0,o.A)(l),j=null!=N&&""!==N,v=j?r.u:c.i,A=j?h.intl.string(h.t["gs+qcM"]):h.intl.string(h.t["1ZZtts"]),p=j?N:h.intl.string(h.t["1ZZtts"]),{trackUserProfileAction:g}=(0,u.NJ)();return(0,s.jsx)(a.m,{asContainer:!0,text:p,ariaHidden:!j,children:(0,s.jsx)(d.D,{"aria-label":A,onClick:()=>{g({action:"PRESS_ADD_NOTE"}),i?.({tabSection:x.RP.USER_INFO,scrollTarget:x.bk.NOTE})},className:n()(m.x,t&&m.R),children:(0,s.jsx)(v,{size:"xs",color:"currentColor"})})})}
+t.d(l, { A: () => N });
+var s = t(627968);
+t(64700);
+var i = t(503698),
+    n = t.n(i),
+    a = t(990078),
+    r = t(261958),
+    c = t(444570),
+    d = t(939249),
+    u = t(183555),
+    o = t(612630),
+    x = t(518477),
+    h = t(375708),
+    m = t(918613);
+function N(e) {
+    let { userId: l, isVisible: t, onOpenProfile: i } = e,
+        { note: N } = (0, o.A)(l),
+        j = null != N && "" !== N,
+        v = j ? r.u : c.i,
+        A = j ? h.intl.string(h.t["gs+qcM"]) : h.intl.string(h.t["1ZZtts"]),
+        p = j ? N : h.intl.string(h.t["1ZZtts"]),
+        { trackUserProfileAction: g } = (0, u.NJ)();
+    return (0, s.jsx)(a.m, {
+        asContainer: !0,
+        text: p,
+        ariaHidden: !j,
+        children: (0, s.jsx)(d.D, {
+            "aria-label": A,
+            onClick: () => {
+                g({ action: "PRESS_ADD_NOTE" }), i?.({ tabSection: x.RP.USER_INFO, scrollTarget: x.bk.NOTE });
+            },
+            className: n()(m.x, t && m.R),
+            children: (0, s.jsx)(v, { size: "xs", color: "currentColor" }),
+        }),
+    });
+}

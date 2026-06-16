@@ -1,1 +1,48 @@
-t.read=function(e,t,n,i,r){var s,a,o=8*r-i-1,l=(1<<o)-1,u=l>>1,c=-7,d=n?r-1:0,_=n?-1:1,h=e[t+d];for(d+=_,s=h&(1<<-c)-1,h>>=-c,c+=o;c>0;s=256*s+e[t+d],d+=_,c-=8);for(a=s&(1<<-c)-1,s>>=-c,c+=i;c>0;a=256*a+e[t+d],d+=_,c-=8);if(0===s)s=1-u;else{if(s===l)return a?NaN:1/0*(h?-1:1);a+=Math.pow(2,i),s-=u}return(h?-1:1)*a*Math.pow(2,s-i)},t.write=function(e,t,n,i,r,s){var a,o,l,u=8*s-r-1,c=(1<<u)-1,d=c>>1,_=5960464477539062e-23*(23===r),h=i?0:s-1,f=i?1:-1,p=+(t<0||0===t&&1/t<0);for(isNaN(t=Math.abs(t))||t===1/0?(o=+!!isNaN(t),a=c):(a=Math.floor(Math.log(t)/Math.LN2),t*(l=Math.pow(2,-a))<1&&(a--,l*=2),a+d>=1?t+=_/l:t+=_*Math.pow(2,1-d),t*l>=2&&(a++,l/=2),a+d>=c?(o=0,a=c):a+d>=1?(o=(t*l-1)*Math.pow(2,r),a+=d):(o=t*Math.pow(2,d-1)*Math.pow(2,r),a=0));r>=8;e[n+h]=255&o,h+=f,o/=256,r-=8);for(a=a<<r|o,u+=r;u>0;e[n+h]=255&a,h+=f,a/=256,u-=8);e[n+h-f]|=128*p}
+(t.read = function (e, t, n, i, r) {
+    var s,
+        a,
+        o = 8 * r - i - 1,
+        l = (1 << o) - 1,
+        u = l >> 1,
+        c = -7,
+        d = n ? r - 1 : 0,
+        _ = n ? -1 : 1,
+        h = e[t + d];
+    for (d += _, s = h & ((1 << -c) - 1), h >>= -c, c += o; c > 0; s = 256 * s + e[t + d], d += _, c -= 8);
+    for (a = s & ((1 << -c) - 1), s >>= -c, c += i; c > 0; a = 256 * a + e[t + d], d += _, c -= 8);
+    if (0 === s) s = 1 - u;
+    else {
+        if (s === l) return a ? NaN : (1 / 0) * (h ? -1 : 1);
+        (a += Math.pow(2, i)), (s -= u);
+    }
+    return (h ? -1 : 1) * a * Math.pow(2, s - i);
+}),
+    (t.write = function (e, t, n, i, r, s) {
+        var a,
+            o,
+            l,
+            u = 8 * s - r - 1,
+            c = (1 << u) - 1,
+            d = c >> 1,
+            _ = 5960464477539062e-23 * (23 === r),
+            h = i ? 0 : s - 1,
+            f = i ? 1 : -1,
+            p = +(t < 0 || (0 === t && 1 / t < 0));
+        for (
+            isNaN((t = Math.abs(t))) || t === 1 / 0
+                ? ((o = +!!isNaN(t)), (a = c))
+                : ((a = Math.floor(Math.log(t) / Math.LN2)),
+                  t * (l = Math.pow(2, -a)) < 1 && (a--, (l *= 2)),
+                  a + d >= 1 ? (t += _ / l) : (t += _ * Math.pow(2, 1 - d)),
+                  t * l >= 2 && (a++, (l /= 2)),
+                  a + d >= c
+                      ? ((o = 0), (a = c))
+                      : a + d >= 1
+                        ? ((o = (t * l - 1) * Math.pow(2, r)), (a += d))
+                        : ((o = t * Math.pow(2, d - 1) * Math.pow(2, r)), (a = 0)));
+            r >= 8;
+            e[n + h] = 255 & o, h += f, o /= 256, r -= 8
+        );
+        for (a = (a << r) | o, u += r; u > 0; e[n + h] = 255 & a, h += f, a /= 256, u -= 8);
+        e[n + h - f] |= 128 * p;
+    });

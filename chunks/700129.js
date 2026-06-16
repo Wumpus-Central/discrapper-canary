@@ -1,1 +1,4 @@
-d.d(s,{A:()=>p});let p="https://cdn.discordapp.com/assets/content/f31c853e48548df662485b963d7868cec6527fc9f2f50fdb727c438315924e61.svg"
+"use strict";
+n.d(t, { A: () => i });
+let i =
+    "https://cdn.discordapp.com/assets/content/f31c853e48548df662485b963d7868cec6527fc9f2f50fdb727c438315924e61.svg";

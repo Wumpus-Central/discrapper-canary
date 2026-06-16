@@ -1,1 +1,15 @@
-e.exports={HP:"destinationRow__85e39",r9:"disabled__85e39",D_:"identity__85e39",WD:"labels__85e39",Pf:"label__85e39",vr:"threadSubLabel__85e39",Q9:"subLabelIcon__85e39",Ql:"subLabelSeparator__85e39",P0:"iconWrapper__85e39",J2:"subLabel__85e39",kv:"checkbox__85e39",wV:"noResults__85e39",BJ:"noResultsImg__85e39"}
+e.exports = {
+    HP: "destinationRow__85e39",
+    r9: "disabled__85e39",
+    D_: "identity__85e39",
+    WD: "labels__85e39",
+    Pf: "label__85e39",
+    vr: "threadSubLabel__85e39",
+    Q9: "subLabelIcon__85e39",
+    Ql: "subLabelSeparator__85e39",
+    P0: "iconWrapper__85e39",
+    J2: "subLabel__85e39",
+    kv: "checkbox__85e39",
+    wV: "noResults__85e39",
+    BJ: "noResultsImg__85e39",
+};
