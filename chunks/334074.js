@@ -1,132 +1,133 @@
-t.d(s, { D3: () => m, SH: () => c, Yb: () => d, hj: () => p });
-var l = t(64700),
-    i = t(17928),
-    n = t(131607),
-    a = t(355898),
-    o = t(644103),
-    r = t(574560),
-    u = t(652215);
-let d = {
+"use strict";
+n.d(t, { D3: () => _, SH: () => d, Yb: () => c, hj: () => h });
+var i = n(64700),
+    r = n(17928),
+    s = n(131607),
+    a = n(355898),
+    o = n(644103),
+    l = n(574560),
+    u = n(652215);
+let c = {
         globalCooldownMs: 864e5,
         perGameInitialCooldownMs: 864e5,
         perGameCooldownBackoffBase: 2,
         perGameMaxCooldownMs: 24192e5,
     },
-    c = {
+    d = {
         globalCooldownMs: 6048e5,
         perGameInitialCooldownMs: 1 / 0,
         perGameCooldownBackoffBase: 1,
         perGameMaxCooldownMs: 1 / 0,
     };
-function m(e) {
+function _(e) {
     let {
-            application: s,
-            disabled: t = !1,
-            dismissibleContent: i,
-            dismissibleContentGroupName: n,
+            application: t,
+            disabled: n = !1,
+            dismissibleContent: r,
+            dismissibleContentGroupName: s,
             bypassAutoDismiss: a = !1,
             cooldownConfig: o,
         } = e,
-        { eligibleToShow: r, markAsDismissed: u } = p({
-            applications: (0, l.useMemo)(() => (null != s ? [s] : []), [s]),
-            disabled: t,
-            dismissibleContent: i,
-            dismissibleContentGroupName: n,
+        { eligibleToShow: l, markAsDismissed: u } = h({
+            applications: (0, i.useMemo)(() => (null != t ? [t] : []), [t]),
+            disabled: n,
+            dismissibleContent: r,
+            dismissibleContentGroupName: s,
             bypassAutoDismiss: a,
             cooldownConfig: o,
         });
     return {
-        shouldShow: r.length > 0,
+        shouldShow: l.length > 0,
         markAsDismissed: (e) => {
-            null != s && u([s.id], e);
+            null != t && u([t.id], e);
         },
     };
 }
-function p(e) {
+function h(e) {
     let {
-            applications: s,
-            disabled: t = !1,
-            dismissibleContent: d,
-            dismissibleContentGroupName: c,
-            bypassAutoDismiss: m = !1,
-            cooldownConfig: p,
+            applications: t,
+            disabled: n = !1,
+            dismissibleContent: c,
+            dismissibleContentGroupName: d,
+            bypassAutoDismiss: _ = !1,
+            cooldownConfig: h,
         } = e,
-        g = (0, i.yK)([r.A], () => s.map((e) => r.A.getGameUpsellDismissal(e.id, d))),
-        [f, h] = (0, l.useState)(() => new Set());
-    (0, l.useEffect)(() => {
-        let e = s.map((e, s) => {
-                var t;
+        f = (0, r.yK)([l.A], () => t.map((e) => l.A.getGameUpsellDismissal(e.id, c))),
+        [p, E] = (0, i.useState)(() => new Set());
+    (0, i.useEffect)(() => {
+        let e = t.map((e, t) => {
+                var n;
                 return {
                     id: e.id,
                     nextTime:
-                        ((t = g[s]),
-                        null == t
+                        ((n = f[t]),
+                        null == n
                             ? 0
-                            : t.dismissedAt +
+                            : n.dismissedAt +
                               Math.min(
-                                  p.perGameInitialCooldownMs *
-                                      Math.pow(p.perGameCooldownBackoffBase, t.timesDismissed - 1),
-                                  p.perGameMaxCooldownMs,
+                                  h.perGameInitialCooldownMs *
+                                      Math.pow(h.perGameCooldownBackoffBase, n.timesDismissed - 1),
+                                  h.perGameMaxCooldownMs,
                               )),
                 };
             }),
-            t = 0,
-            l = () => {
-                let s = Date.now();
-                h(
+            n = 0,
+            i = () => {
+                let t = Date.now();
+                E(
                     new Set(
                         e
                             .filter((e) => {
-                                let { nextTime: t } = e;
-                                return s >= t;
+                                let { nextTime: n } = e;
+                                return t >= n;
                             })
                             .map((e) => {
-                                let { id: s } = e;
-                                return s;
+                                let { id: t } = e;
+                                return t;
                             }),
                     ),
                 );
-                let i = e
+                let r = e
                     .map((e) => {
-                        let { nextTime: s } = e;
-                        return s;
+                        let { nextTime: t } = e;
+                        return t;
                     })
-                    .filter((e) => e > s);
-                i.length > 0 && (t = setTimeout(l, Math.min(Math.min(...i) - s, u.mnr)));
+                    .filter((e) => e > t);
+                r.length > 0 && (n = setTimeout(i, Math.min(Math.min(...r) - t, u.mnr)));
             };
-        return l(), () => clearTimeout(t);
-    }, [s, g, p]);
-    let S = t ? [] : s.filter((e) => f.has(e.id)).map((e) => e.id),
-        [w, M] = (0, n.Wl)(S.length > 0 ? d : null, { cooldownDurationMs: p.globalCooldownMs }, c, m),
-        E = w === d ? S : [],
-        I = s.map((e) => e.id).join(","),
-        A = E.join(",");
+        return i(), () => clearTimeout(n);
+    }, [t, f, h]);
+    let m = n ? [] : t.filter((e) => p.has(e.id)).map((e) => e.id),
+        [g, A] = (0, s.Wl)(m.length > 0 ? c : null, { cooldownDurationMs: h.globalCooldownMs }, d, _),
+        I = g === c ? m : [],
+        T = t.map((e) => e.id).join(","),
+        S = I.join(",");
     return (
-        (0, l.useEffect)(() => {
-            let e = I.length > 0 ? I.split(",") : [],
-                s = new Set(A.length > 0 ? A.split(",") : []),
-                l = w !== d,
-                i = {};
-            for (let n of e)
-                !s.has(n) &&
-                    (t
-                        ? (i[n] = "disabled")
-                        : f.has(n)
-                          ? l && (i[n] = "global-cooldown")
-                          : (i[n] = "per-game-cooldown"));
+        (0, i.useEffect)(() => {
+            let e = T.length > 0 ? T.split(",") : [],
+                t = new Set(S.length > 0 ? S.split(",") : []),
+                i = g !== c,
+                r = {};
+            for (let s of e)
+                !t.has(s) &&
+                    (n
+                        ? (r[s] = "disabled")
+                        : p.has(s)
+                          ? i && (r[s] = "global-cooldown")
+                          : (r[s] = "per-game-cooldown"));
             (0, o.v)({
                 timestamp: Date.now(),
                 applicationIds: e,
-                dismissibleContent: d,
-                eligibleToShow: [...s],
-                disabled: t,
-                excludedReasons: i,
+                dismissibleContent: c,
+                eligibleToShow: [...t],
+                disabled: n,
+                excludedReasons: r,
             });
-        }, [I, A, d, t, f, w]),
+        }, [T, S, c, n, p, g]),
         {
-            eligibleToShow: E,
-            markAsDismissed: (e, s) => {
-                (0, a.M)(e, d), M(s);
+            eligibleToShow: I,
+            markAsDismissed: (e, t) => {
+                (0, a.M)(e, c), A(t);
             },
         }
     );

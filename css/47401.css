@@ -352,8 +352,8 @@
     padding: 8px
 }
 
-.user-profile-sidebar .innerContainer_c2a763 {
-    padding: 12px
+.user-profile-sidebar:not(.user-profile-sidebar-redesign) .innerContainer_c2a763 {
+    padding: var(--space-12)
 }
 
 .icons_c2a763 {

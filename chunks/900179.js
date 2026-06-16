@@ -1,53 +1,54 @@
-n.d(t, { A: () => A });
-var l = n(627968),
+"use strict";
+n.d(t, { A: () => f });
+var i = n(627968),
     r = n(64700),
-    a = n(503698),
-    i = n.n(a),
-    s = n(534514),
-    o = n(834730),
+    s = n(503698),
+    a = n.n(s),
+    o = n(534514),
+    l = n(834730),
     u = n(707554),
     c = n(915089),
     d = n(94343),
-    f = n(716804),
+    _ = n(716804),
     h = n(87260);
-function A(e) {
+function f(e) {
     let {
             children: t,
             heading: n,
-            headingIcon: a,
-            introText: A,
-            className: m,
-            scrollTargetId: x,
-            headingClassName: g,
-            headingVariant: S = "text-xs/semibold",
-            headingColor: T = "text-default",
+            headingIcon: s,
+            introText: f,
+            className: p,
+            scrollTargetId: E,
+            headingClassName: m,
+            headingVariant: g = "text-xs/semibold",
+            headingColor: A = "text-default",
         } = e,
-        E = (0, c.GV)(),
-        p = r.useRef(null),
-        v = (0, f.g)(),
-        R = null != x && v === x;
+        I = (0, c.GV)(),
+        T = r.useRef(null),
+        S = (0, _.g)(),
+        y = null != E && S === E;
     return (
-        (0, d.A)(p, R),
-        (0, l.jsxs)("section", {
-            ref: R ? p : void 0,
-            className: i()(h.uW, m),
-            "aria-labelledby": null != n ? E : void 0,
+        (0, d.A)(T, y),
+        (0, i.jsxs)("section", {
+            ref: y ? T : void 0,
+            className: a()(h.uW, p),
+            "aria-labelledby": null != n ? I : void 0,
             children: [
                 null != n &&
-                    (0, l.jsxs)("div", {
+                    (0, i.jsxs)("div", {
                         className: h.so,
                         children: [
-                            (0, l.jsxs)("div", {
+                            (0, i.jsxs)("div", {
                                 className: h.wx,
                                 children: [
-                                    (0, l.jsx)(s.D, { variant: S, color: T, className: g, id: E, children: n }),
-                                    a,
+                                    (0, i.jsx)(o.D, { variant: g, color: A, className: m, id: I, children: n }),
+                                    s,
                                 ],
                             }),
-                            null != A && (0, l.jsx)(o.E, { variant: "text-xs/normal", children: A }),
+                            null != f && (0, i.jsx)(l.E, { variant: "text-xs/normal", children: f }),
                         ],
                     }),
-                (0, l.jsx)(u.F, { children: t }),
+                (0, i.jsx)(u.F, { children: t }),
             ],
         })
     );

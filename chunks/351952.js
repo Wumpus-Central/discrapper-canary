@@ -1,62 +1,63 @@
-l.d(t, { K: () => o, _: () => c });
-var a = l(64700),
-    s = l(736653),
-    r = l(88686),
-    n = l(780898),
-    u = l(818348);
-function o(e) {
-    let t = (0, s.Ay)(),
-        [l, r] = (0, a.useState)({});
+"use strict";
+n.d(t, { K: () => l, _: () => u });
+var i = n(64700),
+    r = n(736653),
+    s = n(88686),
+    a = n(780898),
+    o = n(818348);
+function l(e) {
+    let t = (0, r.Ay)(),
+        [n, s] = (0, i.useState)({});
     return (
-        (0, a.useEffect)(() => {
+        (0, i.useEffect)(() => {
             null == e ||
-                r({
+                s({
                     "--custom-nameplate":
-                        (t === u.NJ.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + "33",
+                        (t === o.NJ.LIGHT ? e.palette.lightBackground : e.palette.darkBackground) + "33",
                     "--custom-nameplate-neutral":
-                        t !== u.NJ.LIGHT ? "rgba(0, 0, 0, 0.22)" : "rgba(255, 255, 255  , 0.22)",
+                        t !== o.NJ.LIGHT ? "rgba(0, 0, 0, 0.22)" : "rgba(255, 255, 255  , 0.22)",
                     "--custom-nameplate-neutral-hovered":
-                        t !== u.NJ.LIGHT ? "rgba(0, 0, 0, 0.33)" : "rgba(255, 255, 255  , 0.33)",
+                        t !== o.NJ.LIGHT ? "rgba(0, 0, 0, 0.33)" : "rgba(255, 255, 255  , 0.33)",
                 });
         }, [e, t]),
-        l
+        n
     );
 }
-function c(e, t, l, o, c) {
-    let i = (0, s.Ay)(),
-        m = (0, a.useMemo)(
+function u(e, t, n, l, u) {
+    let c = (0, r.Ay)(),
+        d = (0, i.useMemo)(
             () =>
                 null == t
                     ? null
                     : (function (e) {
-                          let { palette: t, theme: l, hover: a, selected: s, placement: o } = e;
-                          if (!(0, n.wT)(t)) return;
-                          let c = l === u.NJ.LIGHT,
-                              i = c ? t.lightBackground : t.darkBackground;
-                          if (o === r.u.MEMBER_LIST || o === r.u.CHANNEL) {
-                              let e = `${s ? "80" : a && o === r.u.MEMBER_LIST ? "4D" : "33"}`;
-                              return `linear-gradient(90deg, transparent 0%, ${i}14 20%, ${i}14 50%, ${i}${e} 100%)`;
+                          let { palette: t, theme: n, hover: i, selected: r, placement: l } = e;
+                          if (!(0, a.wT)(t)) return;
+                          let u = n === o.NJ.LIGHT,
+                              c = u ? t.lightBackground : t.darkBackground;
+                          if (l === s.u.MEMBER_LIST || l === s.u.CHANNEL) {
+                              let e = `${r ? "80" : i && l === s.u.MEMBER_LIST ? "4D" : "33"}`;
+                              return `linear-gradient(90deg, transparent 0%, ${c}14 20%, ${c}14 50%, ${c}${e} 100%)`;
                           }
-                          let m = o === r.u.MINI_PREVIEW ? "33" : "1A";
-                          return `linear-gradient(90deg, ${i}${m} 0%, ${i}${c ? "4D" : "66"} 100%)`;
-                      })({ palette: t.palette, theme: i, hover: l, selected: o, placement: c }),
-            [t, l, o, i, c],
+                          let d = l === s.u.MINI_PREVIEW ? "33" : "1A";
+                          return `linear-gradient(90deg, ${c}${d} 0%, ${c}${u ? "4D" : "66"} 100%)`;
+                      })({ palette: t.palette, theme: c, hover: n, selected: l, placement: u }),
+            [t, n, l, c, u],
         ),
-        [d, g] = (0, a.useState)(null != m ? { background: m } : {}),
-        I = c === r.u.MEMBER_LIST;
+        [_, h] = (0, i.useState)(null != d ? { background: d } : {}),
+        f = u === s.u.MEMBER_LIST;
     return (
-        (0, a.useEffect)(() => {
-            if (null == m) return;
-            if (null == e || null == e.current) return void g({ background: m });
+        (0, i.useEffect)(() => {
+            if (null == d) return;
+            if (null == e || null == e.current) return void h({ background: d });
             let t = new ResizeObserver((e) => {
-                let t = e[0].contentRect.width + (I ? 10 : -5);
-                g({
-                    background: m,
+                let t = e[0].contentRect.width + (f ? 10 : -5);
+                h({
+                    background: d,
                     maskImage: `linear-gradient(to right, rgba(0, 0, 0, .3) ${t}px, rgba(0, 0, 0, 1) ${t + 50}px)`,
                 });
             });
             return t.observe(e.current), () => t.disconnect();
-        }, [e, m, I]),
-        d
+        }, [e, d, f]),
+        _
     );
 }

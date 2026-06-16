@@ -1,111 +1,112 @@
-e.d(n, { A: () => P, k: () => h });
-var i = e(627968);
-e(64700);
-var l = e(17928),
-    a = e(780645),
-    r = e(342952),
-    s = e(990078),
-    o = e(834730),
-    c = e(939249),
-    u = e(320448),
-    d = e(661531),
-    A = e(778712),
-    x = e(730852),
-    p = e(963027),
-    f = e(47167),
-    _ = e(548118),
-    m = e(378570),
-    T = e(345942),
-    E = e(576705),
-    N = e(575731),
-    g = e(21241),
-    C = e(939496),
-    I = e(10862),
-    j = e(652215),
-    y = e(996988),
-    S = e(375708),
-    O = e(514566);
-let h = 3;
-function P(t) {
-    let { user: n, guild: e, channel: P, onAction: v, onClose: L } = t,
-        { themeType: R } = (0, C.E)(),
-        U = (0, N.A)(P),
-        b = (0, f.Ay)(P),
-        { canViewChannel: M, canConnect: D } = (0, l.cf)([E.A], () => ({
-            canViewChannel: E.A.can(j.xBc.VIEW_CHANNEL, P),
-            canConnect: P.isPrivate() || E.A.can(j.xBc.CONNECT, P),
+"use strict";
+n.d(t, { A: () => b, k: () => O });
+var i = n(627968);
+n(64700);
+var r = n(17928),
+    s = n(780645),
+    a = n(342952),
+    o = n(990078),
+    l = n(834730),
+    u = n(939249),
+    c = n(320448),
+    d = n(661531),
+    _ = n(778712),
+    h = n(730852),
+    f = n(963027),
+    p = n(47167),
+    E = n(548118),
+    m = n(378570),
+    g = n(345942),
+    A = n(576705),
+    I = n(575731),
+    T = n(21241),
+    S = n(939496),
+    y = n(10862),
+    N = n(652215),
+    v = n(996988),
+    C = n(375708),
+    R = n(514566);
+let O = 3;
+function b(e) {
+    let { user: t, guild: n, channel: b, onAction: D, onClose: L } = e,
+        { themeType: w } = (0, S.E)(),
+        M = (0, I.A)(b),
+        P = (0, p.Ay)(b),
+        { canViewChannel: x, canConnect: k } = (0, r.cf)([A.A], () => ({
+            canViewChannel: A.A.can(N.xBc.VIEW_CHANNEL, b),
+            canConnect: b.isPrivate() || A.A.can(N.xBc.CONNECT, b),
         }));
-    if (!M) return null;
-    let G = R !== y.d.MODAL && R !== y.d.MODAL_V2 && R !== y.d.SIDEBAR;
+    if (!x) return null;
+    let U = w !== v.d.MODAL && w !== v.d.MODAL_V2 && w !== v.d.SIDEBAR;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(g.A, { className: O.Ph }),
+            (0, i.jsx)(T.A, { className: R.Ph }),
             (0, i.jsxs)("div", {
-                className: O.gx,
+                className: R.gx,
                 children: [
-                    (0, i.jsx)(s.m, {
+                    (0, i.jsx)(o.m, {
                         asContainer: !0,
-                        text: e.name,
+                        text: n.name,
                         "aria-label": !1,
-                        children: (0, i.jsx)(_.Ay, {
-                            guild: e,
-                            size: _.Ay.Sizes.SMOL,
-                            className: O.$f,
-                            onClick: (t) => {
-                                t.stopPropagation(), (0, T.u)(e.id), v?.({ action: "OPEN_VOICE_GUILD" }), L?.();
+                        children: (0, i.jsx)(E.Ay, {
+                            guild: n,
+                            size: E.Ay.Sizes.SMOL,
+                            className: R.$f,
+                            onClick: (e) => {
+                                e.stopPropagation(), (0, g.u)(n.id), D?.({ action: "OPEN_VOICE_GUILD" }), L?.();
                             },
                         }),
                     }),
-                    (0, i.jsx)(u._, { size: "xxs", color: d.A.colors.TEXT_SUBTLE }),
+                    (0, i.jsx)(c._, { size: "xxs", color: d.A.colors.TEXT_SUBTLE }),
                     (0, i.jsxs)("div", {
-                        className: O.FH,
+                        className: R.FH,
                         children: [
-                            (0, i.jsx)(I.A, {
-                                channel: P,
+                            (0, i.jsx)(y.A, {
+                                channel: b,
                                 size: "xxs",
                                 color: d.A.colors.TEXT_SUBTLE,
-                                className: O.Ow,
+                                className: R.Ow,
                             }),
-                            D
-                                ? (0, i.jsx)(c.D, {
-                                      onClick: (t) => {
-                                          t.stopPropagation(),
-                                              x.default.selectVoiceChannel(P.id),
-                                              (0, m.iN)(P.id),
-                                              v?.({ action: "OPEN_VOICE_CHANNEL" }),
+                            k
+                                ? (0, i.jsx)(u.D, {
+                                      onClick: (e) => {
+                                          e.stopPropagation(),
+                                              h.default.selectVoiceChannel(b.id),
+                                              (0, m.iN)(b.id),
+                                              D?.({ action: "OPEN_VOICE_CHANNEL" }),
                                               L?.();
                                       },
-                                      className: O.sd,
-                                      "aria-label": (0, p.Ay)({ channel: P }),
-                                      children: (0, i.jsx)(o.E, {
+                                      className: R.sd,
+                                      "aria-label": (0, f.Ay)({ channel: b }),
+                                      children: (0, i.jsx)(l.E, {
                                           variant: "text-xs/normal",
                                           color: "text-subtle",
                                           lineClamp: 1,
-                                          children: (0, i.jsx)(a.A, { children: b }),
+                                          children: (0, i.jsx)(s.A, { children: P }),
                                       }),
                                   })
-                                : (0, i.jsx)(o.E, {
+                                : (0, i.jsx)(l.E, {
                                       variant: "text-xs/normal",
                                       color: "text-subtle",
                                       lineClamp: 1,
-                                      children: (0, i.jsx)(a.A, { children: b }),
+                                      children: (0, i.jsx)(s.A, { children: P }),
                                   }),
                         ],
                     }),
-                    (0, i.jsx)(r.A, {
-                        users: U,
-                        guildId: e.id,
-                        channelId: P.id,
-                        maxUsers: h,
-                        size: A._3.SIZE_16,
+                    (0, i.jsx)(a.A, {
+                        users: M,
+                        guildId: n.id,
+                        channelId: b.id,
+                        maxUsers: O,
+                        size: _._3.SIZE_16,
                         overflowCountColor: "text-subtle",
-                        overflowCountClassName: O.NS,
-                        onClickOverflow: (t) => {
-                            t.stopPropagation(), v?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                        overflowCountClassName: R.NS,
+                        onClickOverflow: (e) => {
+                            e.stopPropagation(), D?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                         },
-                        onUserClick: (t) => t.stopPropagation(),
-                        disableUserPopout: !!G || ((t) => t === n.id),
-                        "aria-label": S.intl.string(S.t["jNqDh/"]),
+                        onUserClick: (e) => e.stopPropagation(),
+                        disableUserPopout: !!U || ((e) => e === t.id),
+                        "aria-label": C.intl.string(C.t["jNqDh/"]),
                     }),
                 ],
             }),

@@ -66,8 +66,8 @@
     position: relative
 }
 
-.user-profile-sidebar .card__39ec2 {
-    --custom-activity-card-padding: 12px
+.user-profile-sidebar:not(.user-profile-sidebar-redesign) .card__39ec2 {
+    --custom-activity-card-padding: var(--space-12)
 }
 
 .user-profile-modal-v2 .card__39ec2 {

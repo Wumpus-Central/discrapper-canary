@@ -1,17 +1,18 @@
-n.d(t, { K: () => s, R: () => o });
-var a = n(627968),
+"use strict";
+n.d(t, { K: () => o, R: () => l });
+var i = n(627968),
     r = n(192308),
-    l = n(892491),
-    i = n(700331);
-let s = "Media Viewer Modal";
-function o(e, t) {
-    let { location: o, contextKey: c, onClose: d, ...u } = e,
-        m = u.items[u.startingIndex ?? 0]?.sourceMetadata?.message;
-    i.l.markSessionStarted({
-        channelId: m?.channel_id,
-        numMediaItems: u.items.length,
-        source: o,
-        hasMediaOptions: !u.shouldHideMediaOptions,
+    s = n(892491),
+    a = n(700331);
+let o = "Media Viewer Modal";
+function l(e, t) {
+    let { location: l, contextKey: u, onClose: c, ...d } = e,
+        _ = d.items[d.startingIndex ?? 0]?.sourceMetadata?.message;
+    a.l.markSessionStarted({
+        channelId: _?.channel_id,
+        numMediaItems: d.items.length,
+        source: l,
+        hasMediaOptions: !d.shouldHideMediaOptions,
     }),
         (0, r.openModalLazy)(
             async () => {
@@ -186,20 +187,20 @@ function o(e, t) {
                     n.e("59459"),
                 ]).then(n.bind(n, 315790));
                 return function (t) {
-                    return (0, a.jsx)(e, {
+                    return (0, i.jsx)(e, {
                         ...t,
-                        ...u,
+                        ...d,
                         onClose: () => {
-                            d?.(), t.onClose();
+                            c?.(), t.onClose();
                         },
                     });
                 };
             },
             {
-                modalKey: s,
-                contextKey: c,
-                onCloseCallback: i.l.markSessionCompleted,
-                backdropStyle: l.F.LIGHTBOX,
+                modalKey: o,
+                contextKey: u,
+                onCloseCallback: a.l.markSessionCompleted,
+                backdropStyle: s.F.LIGHTBOX,
                 stackingBehavior: t,
             },
         );

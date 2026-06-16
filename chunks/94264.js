@@ -1,40 +1,41 @@
-a.d(r, { A: () => E });
-var s = a(627968);
-a(64700);
-var t = a(503698),
-    n = a.n(t),
-    l = a(892227),
-    _ = a(661531),
-    o = a(403581),
-    c = a(318254),
-    i = a(914410),
-    u = a(440005),
-    d = a(366505),
-    p = a(992501);
-let A = {
-        churning: { start: _.A.unsafe_rawColors.OPACITY_RED_80.css, end: _.A.unsafe_rawColors.RED_NEW_30.css },
-        active: { start: _.A.unsafe_rawColors.OPACITY_GREEN_80.css, end: _.A.unsafe_rawColors.GREEN_NEW_30.css },
+"use strict";
+n.d(t, { A: () => p });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(892227),
+    o = n(661531),
+    l = n(403581),
+    u = n(318254),
+    c = n(914410),
+    d = n(440005),
+    _ = n(366505),
+    h = n(992501);
+let f = {
+        churning: { start: o.A.unsafe_rawColors.OPACITY_RED_80.css, end: o.A.unsafe_rawColors.RED_NEW_30.css },
+        active: { start: o.A.unsafe_rawColors.OPACITY_GREEN_80.css, end: o.A.unsafe_rawColors.GREEN_NEW_30.css },
     },
-    E = (e) => {
-        let { className: r } = e,
-            { passesProgressBarInvariant: a, programReward: t, totalDays: _ } = (0, d.F)();
-        if (!a || null == t || null == _) return null;
-        let E = (0, l.default)(new Date(t.next_reward_date), new Date()),
-            R = t.program_current_state === u.L.PREMIUM_CHURNING,
-            v = R ? A.churning.start : A.active.start,
-            C = R ? A.churning.end : A.active.end;
-        return (0, s.jsxs)("div", {
-            className: n()(p.k, r),
+    p = (e) => {
+        let { className: t } = e,
+            { passesProgressBarInvariant: n, programReward: r, totalDays: o } = (0, _.F)();
+        if (!n || null == r || null == o) return null;
+        let p = (0, a.default)(new Date(r.next_reward_date), new Date()),
+            E = r.program_current_state === d.L.PREMIUM_CHURNING,
+            m = E ? f.churning.start : f.active.start,
+            g = E ? f.churning.end : f.active.end;
+        return (0, i.jsxs)("div", {
+            className: s()(h.k, t),
             children: [
-                (0, s.jsx)(i.Ay, {
-                    variant: i.qP.UNSET,
-                    progress: _ - E,
-                    maximum: _,
-                    override: { default: { gradientStart: v, gradientEnd: C } },
+                (0, i.jsx)(c.Ay, {
+                    variant: c.qP.UNSET,
+                    progress: o - p,
+                    maximum: o,
+                    override: { default: { gradientStart: m, gradientEnd: g } },
                 }),
-                R
-                    ? (0, s.jsx)(o.t, { size: "sm", color: "currentColor", className: p.K })
-                    : (0, s.jsx)(c.C, { size: "sm", color: "currentColor", className: p.K }),
+                E
+                    ? (0, i.jsx)(l.t, { size: "sm", color: "currentColor", className: h.K })
+                    : (0, i.jsx)(u.C, { size: "sm", color: "currentColor", className: h.K }),
             ],
         });
     };

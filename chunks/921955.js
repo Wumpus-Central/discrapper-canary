@@ -1,100 +1,101 @@
-let l;
-n.d(t, { A: () => N }), n(321073);
+"use strict";
+let i;
+n.d(t, { A: () => R }), n(321073);
 var r = n(17928),
-    i = n(228366),
+    s = n(228366),
     a = n(308368),
-    s = n(115718),
-    o = n(47167),
+    o = n(115718),
+    l = n(47167),
     u = n(734057),
-    d = n(71393),
-    c = n(480595),
-    h = n(290863),
-    A = n(994500),
+    c = n(71393),
+    d = n(480595),
+    _ = n(290863),
+    h = n(994500),
     f = n(287809),
-    y = n(567761),
-    g = n(652215);
-let m = [s.rD.TEXT_CHANNEL, s.rD.GROUP_DM, s.rD.USER],
-    x = null,
-    p = null,
-    v = [],
-    w = [];
-function E(e) {
-    (v = [...v, e]), (w = w.map((e) => ({ ...e, sent: v.includes(e.data.record.id) }))), C.emitChange();
+    p = n(567761),
+    E = n(652215);
+let m = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
+    g = null,
+    A = null,
+    I = [],
+    T = [];
+function S(e) {
+    (I = [...I, e]), (T = T.map((e) => ({ ...e, sent: I.includes(e.data.record.id) }))), C.emitChange();
 }
-function I() {
-    (x = null), null != l && (l.destroy(), (l = null)), null != p && p();
+function y() {
+    (g = null), null != i && (i.destroy(), (i = null)), null != A && A();
 }
-function _() {
-    let e = null != x && null != x.application_id ? c.A.getApplicationActivity(x.application_id) : null;
-    if (null != x && (null == e || null == e.party || null == e.party.id)) return I();
+function N() {
+    let e = null != g && null != g.application_id ? d.A.getApplicationActivity(g.application_id) : null;
+    if (null != g && (null == e || null == e.party || null == e.party.id)) return y();
 }
-class O extends r.Ay.Store {
+class v extends r.Ay.Store {
     static displayName = "ActivityInviteModalStore";
     initialize() {
-        this.waitFor(u.A, d.A, c.A, h.A, y.default, f.default);
+        this.waitFor(u.A, c.A, d.A, _.A, p.default, f.default);
     }
     getActivity() {
-        return x;
+        return g;
     }
     getQuery() {
-        return l?.query ?? "";
+        return i?.query ?? "";
     }
     getResults() {
-        return w;
+        return T;
     }
 }
-let C = new O(i.h, {
+let C = new v(s.h, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
-            (x = e.activity),
-                (p = e.resolve),
-                (v = []),
-                null == l &&
-                    (l = new s.Ay(
+            (g = e.activity),
+                (A = e.resolve),
+                (I = []),
+                null == i &&
+                    (i = new o.Ay(
                         (e, t) => {
                             let n;
-                            (w = (
+                            (T = (
                                 "" === t.trim()
                                     ? ((n = []),
-                                      y.default.getPrivateChannelIds().forEach((e) => {
+                                      p.default.getPrivateChannelIds().forEach((e) => {
                                           let t = u.A.getChannel(e);
                                           if (null != t)
-                                              if (t.type === g.rbe.DM) {
+                                              if (t.type === E.rbe.DM) {
                                                   let e = t.getRecipientId(),
-                                                      l = null != e ? f.default.getUser(e) : null;
-                                                  null != l && n.push({ type: s.rD.USER, record: l, score: 0 });
+                                                      i = null != e ? f.default.getUser(e) : null;
+                                                  null != i && n.push({ type: o.rD.USER, record: i, score: 0 });
                                               } else
                                                   t.isMultiUserDM() &&
-                                                      n.push({ type: s.rD.GROUP_DM, record: t, score: 0 });
+                                                      n.push({ type: o.rD.GROUP_DM, record: t, score: 0 });
                                       }),
                                       n)
                                     : e
                             )
                                 .map((e) => {
                                     switch (e.type) {
-                                        case s.rD.USER: {
+                                        case o.rD.USER: {
                                             let { record: t } = e;
                                             return {
-                                                type: s.rD.USER,
-                                                sent: v.includes(t.id),
-                                                status: h.A.getStatus(t.id),
+                                                type: o.rD.USER,
+                                                sent: I.includes(t.id),
+                                                status: _.A.getStatus(t.id),
                                                 data: e,
                                             };
                                         }
-                                        case s.rD.TEXT_CHANNEL: {
+                                        case o.rD.TEXT_CHANNEL: {
                                             let { record: t } = e,
                                                 n = u.A.getChannel(t.parent_id),
-                                                l = d.A.getGuild(t.guild_id);
+                                                i = c.A.getGuild(t.guild_id);
                                             return {
-                                                type: s.rD.TEXT_CHANNEL,
-                                                sent: v.includes(t.id),
-                                                categoryName: null != n ? (0, o.m1)(n, f.default, A.A) : "",
-                                                guildName: l?.name ?? "",
+                                                type: o.rD.TEXT_CHANNEL,
+                                                sent: I.includes(t.id),
+                                                categoryName: null != n ? (0, l.m1)(n, f.default, h.A) : "",
+                                                guildName: i?.name ?? "",
                                                 data: e,
                                             };
                                         }
-                                        case s.rD.GROUP_DM: {
+                                        case o.rD.GROUP_DM: {
                                             let { record: t } = e;
-                                            return { type: s.rD.GROUP_DM, sent: v.includes(t.id), data: e };
+                                            return { type: o.rD.GROUP_DM, sent: I.includes(t.id), data: e };
                                         }
                                         default:
                                             return null;
@@ -106,37 +107,37 @@ let C = new O(i.h, {
                         m,
                         100,
                     )),
-                l.search("");
+                i.search("");
         },
         ACTIVITY_INVITE_MODAL_QUERY: function (e) {
             let { query: t } = e;
-            null != l && l.search(t);
+            null != i && i.search(t);
         },
         ACTIVITY_INVITE_MODAL_SEND: function (e) {
-            if (null == x) return;
+            if (null == g) return;
             let t = e.channelId,
                 n = e.userId;
             null != t
                 ? a.A.sendActivityInvite({
                       channelId: t,
-                      type: g.xL.JOIN,
-                      activity: x,
+                      type: E.xL.JOIN,
+                      activity: g,
                       location: "Channel Text Area - Invite to Join Modal",
-                  }).then(() => E(t))
+                  }).then(() => S(t))
                 : null != n &&
                   a.A.sendActivityInviteUser({
                       userId: n,
-                      type: g.xL.JOIN,
-                      activity: x,
+                      type: E.xL.JOIN,
+                      activity: g,
                       location: "Channel Text Area - Invite to Join Modal",
-                  }).then(() => E(n));
+                  }).then(() => S(n));
         },
-        ACTIVITY_INVITE_MODAL_CLOSE: I,
+        ACTIVITY_INVITE_MODAL_CLOSE: y,
         OVERLAY_SET_INPUT_LOCKED: function (e) {
             let { locked: t } = e;
-            return !!t && null != x && (I(), !0);
+            return !!t && null != g && (y(), !0);
         },
-        LOCAL_ACTIVITY_UPDATE: _,
-        RPC_APP_DISCONNECTED: _,
+        LOCAL_ACTIVITY_UPDATE: N,
+        RPC_APP_DISCONNECTED: N,
     }),
-    N = 21552 == n.j ? C : null;
+    R = C;

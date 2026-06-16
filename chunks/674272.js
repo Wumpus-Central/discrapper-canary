@@ -1,17 +1,18 @@
-t.d(e, { A: () => s });
-var n = t(627968);
-t(64700);
-var o = t(192308),
-    r = t(892491);
-function s(a) {
-    let { source: e, onClose: s } = a;
-    (0, o.openModalLazy)(
+"use strict";
+n.d(t, { A: () => a });
+var i = n(627968);
+n(64700);
+var r = n(192308),
+    s = n(892491);
+function a(e) {
+    let { source: t, onClose: a } = e;
+    (0, r.openModalLazy)(
         async () => {
-            let { default: a } = await Promise.all([t.e("68011"), t.e("98199"), t.e("92223"), t.e("61376")]).then(
-                t.bind(t, 999235),
+            let { default: e } = await Promise.all([n.e("68011"), n.e("98199"), n.e("92223"), n.e("61376")]).then(
+                n.bind(n, 999235),
             );
-            return (t) => (0, n.jsx)(a, { ...t, source: e });
+            return (n) => (0, i.jsx)(e, { ...n, source: t });
         },
-        { onCloseCallback: s, backdropStyle: r.F.BLUR, stackingBehavior: "stack" },
+        { onCloseCallback: a, backdropStyle: s.F.BLUR, stackingBehavior: "stack" },
     );
 }

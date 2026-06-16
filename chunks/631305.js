@@ -1,56 +1,57 @@
-e.d(n, { A: () => f });
-var i = e(627968);
-e(64700);
-var s = e(231723),
-    l = e(192308),
-    r = e(869146),
-    o = e(709055),
-    c = e(174459),
-    a = e(652215);
-function f(t, n) {
-    let f = n ?? `${a.JJy.PREMIUM_GUILD_UPSELL_MODAL}`;
-    null != t.targetBoostedGuildTier && (f += ` - Tier ${t.targetBoostedGuildTier}`),
-        c.default.track(a.HAw.OPEN_MODAL, { type: f, location: t.analyticsSourceLocation });
-    let { openInPopoutEnabled: u, ...d } = t,
-        _ = r.A.getWindowOpen(a.MLl.CHANNEL_CALL_POPOUT) && null != u && u;
-    _ && (0, o.A)(a.MLl.CHANNEL_CALL_POPOUT);
-    let E = _ ? s.KX : s.SY;
-    (0, l.openModalLazy)(
+"use strict";
+n.d(t, { A: () => c });
+var i = n(627968);
+n(64700);
+var r = n(231723),
+    s = n(192308),
+    a = n(869146),
+    o = n(709055),
+    l = n(174459),
+    u = n(652215);
+function c(e, t) {
+    let c = t ?? `${u.JJy.PREMIUM_GUILD_UPSELL_MODAL}`;
+    null != e.targetBoostedGuildTier && (c += ` - Tier ${e.targetBoostedGuildTier}`),
+        l.default.track(u.HAw.OPEN_MODAL, { type: c, location: e.analyticsSourceLocation });
+    let { openInPopoutEnabled: d, ..._ } = e,
+        h = a.A.getWindowOpen(u.MLl.CHANNEL_CALL_POPOUT) && null != d && d;
+    h && (0, o.A)(u.MLl.CHANNEL_CALL_POPOUT);
+    let f = h ? r.KX : r.SY;
+    (0, s.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([
-                e.e("81804"),
-                e.e("19393"),
-                e.e("34784"),
-                e.e("76631"),
-                e.e("46334"),
-                e.e("70294"),
-                e.e("5093"),
-                e.e("52041"),
-                e.e("60235"),
-                e.e("68261"),
-                e.e("21335"),
-                e.e("3932"),
-                e.e("85404"),
-                e.e("38251"),
-                e.e("45959"),
-                e.e("39667"),
-                e.e("50417"),
-                e.e("23532"),
-                e.e("52557"),
-                e.e("4450"),
-                e.e("88003"),
-                e.e("56689"),
-                e.e("74907"),
-                e.e("71202"),
-                e.e("45210"),
-            ]).then(e.bind(e, 331617));
-            return (n) => (0, i.jsx)(t, { ...d, ...n });
+            let { default: e } = await Promise.all([
+                n.e("81804"),
+                n.e("19393"),
+                n.e("34784"),
+                n.e("76631"),
+                n.e("46334"),
+                n.e("70294"),
+                n.e("5093"),
+                n.e("52041"),
+                n.e("60235"),
+                n.e("68261"),
+                n.e("21335"),
+                n.e("3932"),
+                n.e("85404"),
+                n.e("38251"),
+                n.e("45959"),
+                n.e("39667"),
+                n.e("50417"),
+                n.e("23532"),
+                n.e("52557"),
+                n.e("4450"),
+                n.e("88003"),
+                n.e("56689"),
+                n.e("74907"),
+                n.e("71202"),
+                n.e("45210"),
+            ]).then(n.bind(n, 331617));
+            return (t) => (0, i.jsx)(e, { ..._, ...t });
         },
         {
             onCloseCallback: () => {
-                c.default.track(a.HAw.MODAL_DISMISSED, { type: f, location: t.analyticsSourceLocation });
+                l.default.track(u.HAw.MODAL_DISMISSED, { type: c, location: e.analyticsSourceLocation });
             },
-            contextKey: E,
+            contextKey: f,
         },
     );
 }

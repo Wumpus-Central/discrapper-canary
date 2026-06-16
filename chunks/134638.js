@@ -138,10 +138,11 @@ function R(e) {
                     if (c)
                         (y = (0, h.O7)(n, { amount: d, currency: l.currency })),
                             (N = (0, I.ib)(l.currency, { includeNowSuffix: !0 }));
-                    else if (u && n.interval === T.WT.YEAR && (0, S.xq)(n.id)) {
-                        N = E;
-                        let e = (0, S.VA)({ subscriptionPlan: n, isGift: u, priceOptions: r });
-                        (y = null != e ? (0, P.$g)(e, l.currency) : null), (f = !0);
+                    else if (u) {
+                        if (((N = E), n.interval === T.WT.YEAR && (0, S.xq)(n.id))) {
+                            let e = (0, S.VA)({ subscriptionPlan: n, isGift: u, priceOptions: r });
+                            (y = null != e ? (0, P.$g)(e, l.currency) : null), (f = !0);
+                        }
                     } else if (i) {
                         let e = (0, p.pg)(l, n.id);
                         if (null != a && a.getApplicableSubscriptionInterval() === n.interval && null != e) {

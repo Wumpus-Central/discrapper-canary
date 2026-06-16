@@ -1,18 +1,19 @@
-t.d(s, { A: () => o });
-var l = t(17928),
-    i = t(495544),
-    n = t(841595),
-    a = t(61881);
+"use strict";
+n.d(t, { A: () => o });
+var i = n(17928),
+    r = n(495544),
+    s = n(841595),
+    a = n(61881);
 function o(e) {
-    let s = (0, l.bG)([i.default], () => {
-            let s = i.default.getId();
-            return null != e && s === e;
+    let t = (0, i.bG)([r.default], () => {
+            let t = r.default.getId();
+            return null != e && t === e;
         }, [e]),
-        t = (0, l.bG)([a.A], () => a.A.getPendingWidgets()),
-        o = (0, l.yK)([n.A], () => {
+        n = (0, i.bG)([a.A], () => a.A.getPendingWidgets()),
+        o = (0, i.yK)([s.A], () => {
             if (null == e) return [];
-            let s = n.A.getUserProfile(e);
-            return s?.widgets ?? [];
+            let t = s.A.getUserProfile(e);
+            return t?.widgets ?? [];
         }, [e]);
-    return s && null !== t ? t : o;
+    return t && null !== n ? n : o;
 }

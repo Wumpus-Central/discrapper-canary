@@ -1,128 +1,129 @@
-t.d(r, { XD: () => A, sv: () => _, eh: () => g, sN: () => E, rM: () => h, d3: () => b });
-var a = t(627968);
-t(64700);
-var n = t(317097),
-    l = t(192308);
-t(494921);
-var i = t(77257),
-    o = t(61310),
-    s = t(101058),
-    u = t(486020),
-    c = t(453771),
-    p = t(427262),
-    d = t(228366),
-    f = t(478644),
-    m = t(339984),
-    v = t(375708);
-function A(e) {
-    let { uploadType: r, guildId: n, analyticsSource: u, filters: c, isTryItOut: p = !1, stackingBehavior: A } = e,
-        _ = (0, o.Y)(r, n),
+"use strict";
+n.d(t, { XD: () => E, sv: () => m, eh: () => g, sN: () => I, rM: () => A, d3: () => T });
+var i = n(627968);
+n(64700);
+var r = n(317097),
+    s = n(192308);
+n(494921);
+var a = n(77257),
+    o = n(61310),
+    l = n(101058),
+    u = n(486020),
+    c = n(453771),
+    d = n(427262),
+    _ = n(228366),
+    h = n(478644),
+    f = n(339984),
+    p = n(375708);
+function E(e) {
+    let { uploadType: t, guildId: r, analyticsSource: u, filters: c, isTryItOut: d = !1, stackingBehavior: E } = e,
+        m = (0, o.Y)(t, r),
         g = null;
-    (0, l.openModalLazy)(
+    (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                t.e("85426"),
-                t.e("95726"),
-                t.e("63232"),
-                t.e("50015"),
-                t.e("44695"),
-                t.e("31644"),
-                t.e("90244"),
-                t.e("33902"),
-                t.e("1555"),
-                t.e("99999"),
-                t.e("29666"),
-                t.e("80436"),
-                t.e("93513"),
-                t.e("47011"),
-                t.e("79149"),
-                t.e("90017"),
-                t.e("99150"),
-                t.e("60987"),
-            ]).then(t.bind(t, 902550));
-            return (t) =>
-                (0, a.jsx)(e, {
+                n.e("85426"),
+                n.e("95726"),
+                n.e("63232"),
+                n.e("50015"),
+                n.e("44695"),
+                n.e("31644"),
+                n.e("90244"),
+                n.e("33902"),
+                n.e("1555"),
+                n.e("99999"),
+                n.e("29666"),
+                n.e("80436"),
+                n.e("93513"),
+                n.e("47011"),
+                n.e("79149"),
+                n.e("90017"),
+                n.e("99150"),
+                n.e("60987"),
+            ]).then(n.bind(n, 902550));
+            return (n) =>
+                (0, i.jsx)(e, {
                     filters: c,
-                    maxFileSizeBytes: f.j,
-                    imageSpecifications: r === m.HL.BANNER ? v.intl.string(v.t.IhzZlo) : void 0,
+                    maxFileSizeBytes: h.j,
+                    imageSpecifications: t === f.HL.BANNER ? p.intl.string(p.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
-                        g = null != _ ? i.A.fromBlob(_, e) : null;
+                        g = null != m ? a.A.fromBlob(m, e) : null;
                     },
                     onComplete: async (e) => {
-                        let { assetOrigin: t, imageUri: a, file: l, originalAsset: o } = e;
-                        null == g && null != _ && (g = i.A.fromBlob(_, l));
+                        let { assetOrigin: n, imageUri: i, file: s, originalAsset: o } = e;
+                        null == g && null != m && (g = a.A.fromBlob(m, s));
                         let c = (await g?.getOriginalMd5()) ?? null,
-                            f = l.name.replace(/\.[^/.]+$/, ""),
-                            m = (0, s.Rh)({ filename: f, assetOrigin: t });
+                            h = s.name.replace(/\.[^/.]+$/, ""),
+                            f = (0, l.Rh)({ filename: h, assetOrigin: n });
                         !(function (e) {
                             let {
-                                image: r,
-                                file: t,
-                                uploadType: a,
-                                guildId: n,
-                                analyticsSource: l,
-                                isTryItOut: i = !1,
+                                image: t,
+                                file: n,
+                                uploadType: i,
+                                guildId: r,
+                                analyticsSource: s,
+                                isTryItOut: a = !1,
                             } = e;
-                            d.h.dispatch({
+                            _.h.dispatch({
                                 type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
-                                image: r,
-                                file: t,
-                                uploadType: a,
-                                guildId: n,
-                                analyticsSource: l,
-                                isTryItOut: i,
+                                image: t,
+                                file: n,
+                                uploadType: i,
+                                guildId: r,
+                                analyticsSource: s,
+                                isTryItOut: a,
                             });
                         })({
-                            image: (0, s.XB)({
-                                assetOrigin: t,
-                                imageUri: a,
-                                description: m,
+                            image: (0, l.XB)({
+                                assetOrigin: n,
+                                imageUri: i,
+                                description: f,
                                 originalAsset: o,
                                 originalMd5: c,
                             }),
-                            file: l,
-                            uploadType: r,
-                            guildId: n,
+                            file: s,
+                            uploadType: t,
+                            guildId: r,
                             analyticsSource: u,
-                            isTryItOut: p,
+                            isTryItOut: d,
                         });
                     },
-                    uploadType: r,
+                    uploadType: t,
                     showUpsellHeader: !0,
-                    ...t,
+                    ...n,
                 });
         },
-        { stackingBehavior: A },
+        { stackingBehavior: E },
     );
 }
-function _(e, r, t) {
-    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function m(e, t, n) {
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
-    let { size: n = 80, canAnimate: l = !0 } = a,
-        i = null === e;
-    return i && null == r
-        ? u.Ay.getDefaultAvatarURL(t.id, t.discriminator)
-        : i || r?.avatar == null
-          ? t.getAvatarURL(void 0, n, l)
-          : t.getAvatarURL(r?.guildId, n, l);
+    let { size: r = 80, canAnimate: s = !0 } = i,
+        a = null === e;
+    return a && null == t
+        ? u.Ay.getDefaultAvatarURL(n.id, n.discriminator)
+        : a || t?.avatar == null
+          ? n.getAvatarURL(void 0, r, s)
+          : n.getAvatarURL(t?.guildId, r, s);
 }
 function g(e) {
-    let { pendingNickname: r, pendingGlobalName: t, user: a, guildMember: n } = e,
-        l = "" === r ? null : (r ?? n?.nick),
-        i = "" === t ? a.username : t;
-    return l ?? i ?? p.Ay.getName(a);
+    let { pendingNickname: t, pendingGlobalName: n, user: i, guildMember: r } = e,
+        s = "" === t ? null : (t ?? r?.nick),
+        a = "" === n ? i.username : n;
+    return s ?? a ?? d.Ay.getName(i);
 }
-function h(e, r, t) {
-    t(e ?? (null != r ? null : void 0));
+function A(e, t, n) {
+    n(e ?? (null != t ? null : void 0));
 }
-function E(e) {
-    return (null != e ? (0, n.OK)(e) : 1) > 0.25;
+function I(e) {
+    return (null != e ? (0, r.OK)(e) : 1) > 0.25;
 }
-function b(e) {
+function T(e) {
     return null == e
         ? e
         : e.replace(/[0-9.,]+ ?kb/gi, (e) => {
-              let r = 1024 * parseInt(e, 10);
-              return isNaN(r) ? e : (0, c.Hb)(r);
+              let t = 1024 * parseInt(e, 10);
+              return isNaN(t) ? e : (0, c.Hb)(t);
           });
 }
