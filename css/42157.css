@@ -37,6 +37,7 @@
     mask-repeat: repeat-y;
     -webkit-mask-size: 100% 32px;
     mask-size: 100% 32px;
+    opacity: var(--custom-guild-official-message-dither-opacity, 1);
     pointer-events: none;
     position: absolute;
     z-index: -1
