@@ -153,7 +153,8 @@
 .container_a4e9ae {
     --custom-avatar-size: 56px;
     flex-direction: row;
-    gap: var(--space-16)
+    gap: var(--space-16);
+    width: 100%
 }
 
 .avatar_a4e9ae,
@@ -693,13 +694,12 @@
 }
 
 .treatmentCContent__101ad {
+    flex-wrap: wrap;
     width: 100%
 }
 
 .treatmentCContentColumn__101ad {
-    flex-grow: 1;
-    flex-shrink: 0;
-    min-width: 300px;
+    flex: 1;
     text-align: start
 }
 
