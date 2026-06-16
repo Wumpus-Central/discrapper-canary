@@ -1,2 +1,1 @@
-"use strict";
-t.exports = e(683570)("document", "documentElement");
+"use strict";t.exports=e(683570)("document","documentElement")

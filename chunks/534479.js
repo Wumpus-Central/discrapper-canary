@@ -1,8 +1,1 @@
-n.d(t, { A: () => a });
-var l = n(627968);
-n(64700);
-var i = n(289873),
-    r = n(749114);
-function a() {
-    return (0, l.jsx)(i.y, { className: r.u });
-}
+n.d(t,{A:()=>i});var r=n(627968);n(64700);var l=n(289873),a=n(749114);function i(){return(0,r.jsx)(l.y,{className:a.u})}

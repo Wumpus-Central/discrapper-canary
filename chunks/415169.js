@@ -1,11 +1,1 @@
-var i = n(842595),
-    r = n(850361);
-(e.exports = function (e, t, n) {
-    if (i()) return Reflect.construct.apply(null, arguments);
-    var s = [null];
-    s.push.apply(s, t);
-    var a = new (e.bind.apply(e, s))();
-    return n && r(a, n.prototype), a;
-}),
-    (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+var i=n(842595),r=n(850361);e.exports=function(e,t,n){if(i())return Reflect.construct.apply(null,arguments);var s=[null];s.push.apply(s,t);var a=new(e.bind.apply(e,s));return n&&r(a,n.prototype),a},e.exports.__esModule=!0,e.exports.default=e.exports

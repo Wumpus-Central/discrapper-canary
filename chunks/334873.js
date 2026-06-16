@@ -1,2 +1,1 @@
-"use strict";
-e.exports = "u" > typeof Reflect && Reflect && Reflect.apply;
+"use strict";e.exports="u">typeof Reflect&&Reflect&&Reflect.apply

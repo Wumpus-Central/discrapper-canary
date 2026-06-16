@@ -1,2 +1,1 @@
-let i = n(481558);
-e.exports = (e, t) => i(e, t, !0);
+let i=n(481558);e.exports=(e,t)=>i(e,t,!0)

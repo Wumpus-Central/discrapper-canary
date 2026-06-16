@@ -1,2 +1,1 @@
-"use strict";
-e.exports = function () {};
+"use strict";e.exports=function(){}

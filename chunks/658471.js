@@ -1,2 +1,1 @@
-"use strict";
-e.exports = Math.min;
+"use strict";e.exports=Math.min

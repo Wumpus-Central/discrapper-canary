@@ -1,7 +1,1 @@
-"use strict";
-n.d(t, { A: () => s, U: () => r });
-let i = "@silent",
-    r = RegExp(`^${i}(\\s|$)`);
-function s(e) {
-    return null == e ? [!1, ""] : null == e.match(r) ? [!1, e] : [!0, e.substring(i.length).trim()];
-}
+"use strict";n.d(t,{A:()=>s,U:()=>r});let i="@silent",r=RegExp(`^${i}(\\s|$)`);function s(e){return null==e?[!1,""]:null==e.match(r)?[!1,e]:[!0,e.substring(i.length).trim()]}

@@ -1,12 +1,1 @@
-"use strict";
-e.exports = function (e, t) {
-    var n = t.length,
-        i = e.length;
-    if (i > n) return !1;
-    if (i === n) return e === t;
-    n: for (var r = 0, s = 0; r < i; r++) {
-        for (var a = e.charCodeAt(r); s < n; ) if (t.charCodeAt(s++) === a) continue n;
-        return !1;
-    }
-    return !0;
-};
+"use strict";e.exports=function(e,t){var n=t.length,i=e.length;if(i>n)return!1;if(i===n)return e===t;n:for(var r=0,s=0;r<i;r++){for(var a=e.charCodeAt(r);s<n;)if(t.charCodeAt(s++)===a)continue n;return!1}return!0}

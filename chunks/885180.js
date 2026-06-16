@@ -1,8 +1,1 @@
-n.d(t, { A: () => r, _: () => l });
-let l = (0, n(945810).mj)({
-        name: "2025-10-payment-elements-launch",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    }),
-    r = l;
+n.d(t,{A:()=>r,_:()=>l});let l=(0,n(945810).mj)({name:"2025-10-payment-elements-launch",kind:"user",defaultConfig:{enabled:!1},variations:{1:{enabled:!0}}}),r=l

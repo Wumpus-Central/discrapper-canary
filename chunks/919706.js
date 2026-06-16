@@ -1,17 +1,1 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
-var r = n(235986),
-    s = n(200749),
-    a = n(129477);
-function o(e) {
-    let { mainText: t, supportingText: n, errorCodeText: o, children: l, size: u } = e;
-    return (0, i.jsxs)(r.A, {
-        className: a.z,
-        justify: r.A.Justify.CENTER,
-        align: r.A.Align.CENTER,
-        direction: r.A.Direction.VERTICAL,
-        children: [(0, i.jsx)(s.A, { header: t, description: n, errorCodeMessage: o, size: u }), l],
-    });
-}
+"use strict";n.d(t,{A:()=>o});var i=n(627968);n(64700);var r=n(235986),s=n(200749),a=n(129477);function o(e){let{mainText:t,supportingText:n,errorCodeText:o,children:l,size:u}=e;return(0,i.jsxs)(r.A,{className:a.z,justify:r.A.Justify.CENTER,align:r.A.Align.CENTER,direction:r.A.Direction.VERTICAL,children:[(0,i.jsx)(s.A,{header:t,description:n,errorCodeMessage:o,size:u}),l]})}

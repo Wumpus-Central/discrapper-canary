@@ -1,2 +1,1 @@
-"use strict";
-n(318613), (e.exports = n(452162).parseInt);
+"use strict";n(318613),e.exports=n(452162).parseInt

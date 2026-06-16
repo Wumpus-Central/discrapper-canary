@@ -1,2 +1,1 @@
-"use strict";
-e.exports = RangeError;
+"use strict";e.exports=RangeError

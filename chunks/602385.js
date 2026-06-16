@@ -1,7 +1,1 @@
-var i = n(791929),
-    r = n(622134),
-    s = n(533786),
-    a = n(64061);
-e.exports = function (e, t, n) {
-    return ((e = s(e)), void 0 === (t = n ? void 0 : t)) ? (r(e) ? a(e) : i(e)) : e.match(t) || [];
-};
+var i=n(791929),r=n(622134),s=n(533786),a=n(64061);e.exports=function(e,t,n){return(e=s(e),void 0===(t=n?void 0:t))?r(e)?a(e):i(e):e.match(t)||[]}

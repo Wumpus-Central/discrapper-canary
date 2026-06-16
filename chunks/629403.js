@@ -1,6 +1,1 @@
-n.d(l, { A: () => r });
-var t = n(636537),
-    i = n(652215);
-let r = {
-    updateNote: (e, l) => t.Bo.put({ url: i.Rsh.NOTE(e), body: { note: l }, oldFormErrors: !0, rejectWithError: !0 }),
-};
+n.d(l,{A:()=>r});var t=n(636537),i=n(652215);let r={updateNote:(e,l)=>t.Bo.put({url:i.Rsh.NOTE(e),body:{note:l},oldFormErrors:!0,rejectWithError:!0})}

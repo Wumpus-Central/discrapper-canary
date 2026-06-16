@@ -1,1 +1,1 @@
-e.exports = { h: "contentContainer__77062" };
+e.exports={h:"contentContainer__77062"}

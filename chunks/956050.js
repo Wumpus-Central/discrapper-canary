@@ -1,15 +1,1 @@
-"use strict";
-n.d(t, { m: () => r });
-var i = n(696016);
-async function r(e, t) {
-    let n = document.createElement("video");
-    (n.volume = 0), (n.src = e), (n.currentTime = t), await n.play(), n.pause();
-    let r = Math.min(i.vZ / n.videoWidth, i.s3 / n.videoHeight),
-        s = n.videoWidth * r,
-        a = n.videoHeight * r,
-        o = document.createElement("canvas");
-    (o.width = s), (o.height = a);
-    let l = o.getContext("2d");
-    if (null == l) throw Error("Could not create canvas context");
-    return l.drawImage(n, 0, 0, n.videoWidth, n.videoHeight, 0, 0, s, a), o.toDataURL("image/jpeg", 0.9);
-}
+"use strict";n.d(t,{m:()=>r});var i=n(696016);async function r(e,t){let n=document.createElement("video");n.volume=0,n.src=e,n.currentTime=t,await n.play(),n.pause();let r=Math.min(i.vZ/n.videoWidth,i.s3/n.videoHeight),s=n.videoWidth*r,a=n.videoHeight*r,o=document.createElement("canvas");o.width=s,o.height=a;let l=o.getContext("2d");if(null==l)throw Error("Could not create canvas context");return l.drawImage(n,0,0,n.videoWidth,n.videoHeight,0,0,s,a),o.toDataURL("image/jpeg",.9)}

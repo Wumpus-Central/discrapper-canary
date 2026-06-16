@@ -1,18 +1,1 @@
-e.exports = {
-    J1: "prompt_fe70ca",
-    mK: "promptContent_fe70ca",
-    gT: "scrollerContent_fe70ca",
-    q: "questionHeader_fe70ca",
-    DD: "title_fe70ca",
-    HE: "headerSeparator_fe70ca",
-    vS: "promptOptions_fe70ca",
-    BK: "helpText_fe70ca",
-    a1: "helpTextItem_fe70ca",
-    N3: "navButtons_fe70ca",
-    qE: "termsFieldBody_fe70ca",
-    gJ: "termsRow_fe70ca",
-    RQ: "termsRowContent_fe70ca",
-    X1: "leftButtons_fe70ca",
-    Oh: "rightButtons_fe70ca",
-    Lw: "overlay_fe70ca",
-};
+e.exports={J1:"prompt_fe70ca",mK:"promptContent_fe70ca",gT:"scrollerContent_fe70ca",q:"questionHeader_fe70ca",DD:"title_fe70ca",HE:"headerSeparator_fe70ca",vS:"promptOptions_fe70ca",BK:"helpText_fe70ca",a1:"helpTextItem_fe70ca",N3:"navButtons_fe70ca",qE:"termsFieldBody_fe70ca",gJ:"termsRow_fe70ca",RQ:"termsRowContent_fe70ca",X1:"leftButtons_fe70ca",Oh:"rightButtons_fe70ca",Lw:"overlay_fe70ca"}

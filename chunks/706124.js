@@ -1,2 +1,1 @@
-"use strict";
-e.exports = Object.getOwnPropertyDescriptor;
+"use strict";e.exports=Object.getOwnPropertyDescriptor

@@ -1,10 +1,1 @@
-n.d(t, { G: () => l });
-let i = (0, n(240921).Ay)({
-    kind: "user",
-    name: "2026-05-frictionless-gdms",
-    defaultConfig: { enabled: !1 },
-    variations: { 1: { enabled: !0 } },
-});
-function l(e) {
-    return i.getConfig({ location: e }).enabled;
-}
+n.d(t,{G:()=>l});let i=(0,n(240921).Ay)({kind:"user",name:"2026-05-frictionless-gdms",defaultConfig:{enabled:!1},variations:{1:{enabled:!0}}});function l(e){return i.getConfig({location:e}).enabled}

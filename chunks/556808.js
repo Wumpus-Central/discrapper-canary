@@ -1,18 +1,1 @@
-e.d(l, { L: () => t, l: () => s });
-var i = e(627968),
-    n = e(192308);
-let o = "slayer-eligibility-check-modal";
-function t(a) {
-    let { guildId: l, applicationId: t, skuId: s, analyticsLocations: c, onContinue: d, onClose: u } = a;
-    (0, n.openModalLazy)(
-        async () => {
-            let { default: a } = await Promise.all([e.e("42211"), e.e("62754")]).then(e.bind(e, 424185));
-            return (e) =>
-                (0, i.jsx)(a, { ...e, skuId: s, guildId: l, applicationId: t, analyticsLocations: c, onContinue: d });
-        },
-        { modalKey: o, onCloseCallback: u },
-    );
-}
-function s() {
-    (0, n.closeModal)(o);
-}
+e.d(l,{L:()=>t,l:()=>s});var i=e(627968),n=e(192308);let o="slayer-eligibility-check-modal";function t(a){let{guildId:l,applicationId:t,skuId:s,analyticsLocations:c,onContinue:d,onClose:u}=a;(0,n.openModalLazy)(async()=>{let{default:a}=await Promise.all([e.e("42211"),e.e("62754")]).then(e.bind(e,424185));return e=>(0,i.jsx)(a,{...e,skuId:s,guildId:l,applicationId:t,analyticsLocations:c,onContinue:d})},{modalKey:o,onCloseCallback:u})}function s(){(0,n.closeModal)(o)}

@@ -1,7 +1,1 @@
-"use strict";
-n.d(t, { g: () => r });
-var i,
-    r =
-        (((i = {})[(i.INDIVIDUAL_PRODUCTS = 1)] = "INDIVIDUAL_PRODUCTS"),
-        (i[(i.VARIANTS_GROUP = 2)] = "VARIANTS_GROUP"),
-        i);
+"use strict";n.d(t,{g:()=>r});var i,r=((i={})[i.INDIVIDUAL_PRODUCTS=1]="INDIVIDUAL_PRODUCTS",i[i.VARIANTS_GROUP=2]="VARIANTS_GROUP",i)

@@ -1,2 +1,1 @@
-"use strict";
-n(743254);
+"use strict";n(743254)

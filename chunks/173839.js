@@ -1,16 +1,1 @@
-e.exports = {
-    iE: "wrapper__8c034",
-    Tu: "opaqueExpandedBackground__8c034",
-    Ht: "rewardHighlightWrapper__8c034",
-    tT: "interactable__8c034",
-    uJ: "rightContent__8c034",
-    rb: "submenuWrapper__8c034",
-    Bx: "submenuIcon__8c034",
-    ON: "white__8c034",
-    P0: "promotedBadgeWrapper__8c034",
-    wm: "logo__8c034",
-    vk: "clickable__8c034",
-    y8: "promotedBadge__8c034",
-    P$: "promotedBadgeIcon__8c034",
-    Iu: "partnerBranding__8c034",
-};
+e.exports={iE:"wrapper__8c034",Tu:"opaqueExpandedBackground__8c034",Ht:"rewardHighlightWrapper__8c034",tT:"interactable__8c034",uJ:"rightContent__8c034",rb:"submenuWrapper__8c034",Bx:"submenuIcon__8c034",ON:"white__8c034",P0:"promotedBadgeWrapper__8c034",wm:"logo__8c034",vk:"clickable__8c034",y8:"promotedBadge__8c034",P$:"promotedBadgeIcon__8c034",Iu:"partnerBranding__8c034"}

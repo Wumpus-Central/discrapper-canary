@@ -1,1 +1,1 @@
-_.exports = { I: "inputWrapper_b4ebc8" };
+_.exports={I:"inputWrapper_b4ebc8"}

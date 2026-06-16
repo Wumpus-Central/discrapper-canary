@@ -1,1 +1,1 @@
-p.exports = { j: "child__8d0ee" };
+p.exports={j:"child__8d0ee"}

@@ -1,6 +1,1 @@
-p.d(i, { t: () => c });
-var s = p(371794),
-    a = p(998218);
-function c(t, i, p) {
-    return a.A.toURLSafe((0, s.YE)(t, i, p)) ?? void 0;
-}
+p.d(i,{t:()=>c});var s=p(371794),a=p(998218);function c(t,i,p){return a.A.toURLSafe((0,s.YE)(t,i,p))??void 0}

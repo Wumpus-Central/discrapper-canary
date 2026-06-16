@@ -1,17 +1,1 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(29583),
-    r = n(618027),
-    s = n(576103);
-function a(e) {
-    (0, r.A)(1, arguments);
-    var t = (0, i.default)(e),
-        n = t.getUTCFullYear(),
-        a = new Date(0);
-    a.setUTCFullYear(n + 1, 0, 4), a.setUTCHours(0, 0, 0, 0);
-    var o = (0, s.A)(a),
-        l = new Date(0);
-    l.setUTCFullYear(n, 0, 4), l.setUTCHours(0, 0, 0, 0);
-    var u = (0, s.A)(l);
-    return t.getTime() >= o.getTime() ? n + 1 : t.getTime() >= u.getTime() ? n : n - 1;
-}
+"use strict";n.d(t,{A:()=>a});var i=n(29583),r=n(618027),s=n(576103);function a(e){(0,r.A)(1,arguments);var t=(0,i.default)(e),n=t.getUTCFullYear(),a=new Date(0);a.setUTCFullYear(n+1,0,4),a.setUTCHours(0,0,0,0);var o=(0,s.A)(a),l=new Date(0);l.setUTCFullYear(n,0,4),l.setUTCHours(0,0,0,0);var u=(0,s.A)(l);return t.getTime()>=o.getTime()?n+1:t.getTime()>=u.getTime()?n:n-1}

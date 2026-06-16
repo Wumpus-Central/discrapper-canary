@@ -1,5 +1,1 @@
-var i = n(389528),
-    r = n(91089),
-    s = n(486413),
-    a = s && s.isMap;
-e.exports = a ? r(a) : i;
+var i=n(389528),r=n(91089),s=n(486413),a=s&&s.isMap;e.exports=a?r(a):i

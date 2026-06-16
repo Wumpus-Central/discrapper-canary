@@ -1,1 +1,1 @@
-_.exports = { Y: "videoPaused_afb275", p: "warningCircle_afb275" };
+_.exports={Y:"videoPaused_afb275",p:"warningCircle_afb275"}

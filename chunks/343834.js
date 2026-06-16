@@ -1,12 +1,1 @@
-n.d(t, { A: () => o });
-var l = n(627968);
-n(64700);
-var r = n(891197),
-    i = n(69494),
-    a = n(482132),
-    s = n(293035);
-function o() {
-    return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(i.A, {}), (0, l.jsx)(a.dZ, { children: (0, l.jsx)(r.N, { className: s.D }) })],
-    });
-}
+n.d(t,{A:()=>o});var l=n(627968);n(64700);var r=n(891197),i=n(69494),a=n(482132),s=n(293035);function o(){return(0,l.jsxs)(l.Fragment,{children:[(0,l.jsx)(i.A,{}),(0,l.jsx)(a.dZ,{children:(0,l.jsx)(r.N,{className:s.D})})]})}

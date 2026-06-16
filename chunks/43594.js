@@ -1,10 +1,1 @@
-e.d(a, { D: () => n });
-let i = (0, e(240921).Ay)({
-    name: "2026-02-boosting-refresh-modals",
-    kind: "user",
-    defaultConfig: { variant: "control" },
-    variations: { 0: { variant: "control" }, 1: { variant: "refresh" }, 2: { variant: "refresh_expressive_cta" } },
-});
-function n(r) {
-    return i.useConfig({ location: r }).variant;
-}
+e.d(a,{D:()=>n});let i=(0,e(240921).Ay)({name:"2026-02-boosting-refresh-modals",kind:"user",defaultConfig:{variant:"control"},variations:{0:{variant:"control"},1:{variant:"refresh"},2:{variant:"refresh_expressive_cta"}}});function n(r){return i.useConfig({location:r}).variant}

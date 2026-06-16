@@ -1,1 +1,1 @@
-p.exports = { p: "list__20827" };
+_.exports={p:"list__20827"}

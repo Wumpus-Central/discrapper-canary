@@ -1,4 +1,1 @@
-"use strict";
-var i = n(641797),
-    r = n(466107);
-e.exports = { formats: n(404312), parse: r, stringify: i };
+"use strict";var i=n(641797),r=n(466107);e.exports={formats:n(404312),parse:r,stringify:i}

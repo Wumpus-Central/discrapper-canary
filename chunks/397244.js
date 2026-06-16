@@ -1,10 +1,1 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(652215),
-    r = n(818348);
-function s(e) {
-    let { activities: t, status: n, applicationStream: s, voiceChannel: a } = e;
-    if (n === r.cl.OFFLINE || n === r.cl.INVISIBLE) return !1;
-    let o = t?.filter((e) => e.type !== i.$pd.HANG_STATUS);
-    return null != s || null != a || (o?.length ?? 0) > 0;
-}
+"use strict";n.d(t,{A:()=>s});var i=n(652215),r=n(818348);function s(e){let{activities:t,status:n,applicationStream:s,voiceChannel:a}=e;if(n===r.cl.OFFLINE||n===r.cl.INVISIBLE)return!1;let o=t?.filter(e=>e.type!==i.$pd.HANG_STATUS);return null!=s||null!=a||(o?.length??0)>0}

@@ -1,1 +1,1 @@
-e.exports = n(354729);
+e.exports=n(354729)

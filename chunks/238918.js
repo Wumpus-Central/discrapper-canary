@@ -1,1 +1,1 @@
-e.exports = { O: "nowrap__5db79" };
+e.exports={O:"nowrap__5db79"}

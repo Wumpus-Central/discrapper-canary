@@ -1,1 +1,1 @@
-e.exports = { q: "badge_dd79c2" };
+e.exports={q:"badge_dd79c2"}

@@ -1,4 +1,1 @@
-u.d(s, { A: () => c });
-function c() {
-    return null;
-}
+u.d(s,{A:()=>c});function c(){return null}

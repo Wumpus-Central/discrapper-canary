@@ -1,6 +1,1 @@
-var i = s(59221),
-    r = s(400095),
-    l = Object.prototype.hasOwnProperty;
-e.exports = r(function (e, t, s) {
-    l.call(e, s) ? ++e[s] : i(e, s, 1);
-});
+var i=s(59221),r=s(400095),l=Object.prototype.hasOwnProperty;e.exports=r(function(e,t,s){l.call(e,s)?++e[s]:i(e,s,1)})

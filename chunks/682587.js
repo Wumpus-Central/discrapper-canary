@@ -1,2 +1,1 @@
-"use strict";
-e.exports = Math.round;
+"use strict";e.exports=Math.round

@@ -1,9 +1,1 @@
-n.d(e, { A: () => u });
-var r = n(455207),
-    a = n(943667);
-function u(l) {
-    return (
-        !((0, r.MZ)(l) || ((0, a.A)(l) && l.messageReference?.guild_id != null)) &&
-        (null == l.interaction || "SENDING" !== l.state)
-    );
-}
+n.d(l,{A:()=>t});var r=n(455207),u=n(943667);function t(e){return!((0,r.MZ)(e)||(0,u.A)(e)&&e.messageReference?.guild_id!=null)&&(null==e.interaction||"SENDING"!==e.state)}

@@ -1,1 +1,1 @@
-e.exports = { K: "pendingIncoming_d2fc4f" };
+_.exports={K:"pendingIncoming_d2fc4f"}

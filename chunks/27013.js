@@ -1,1 +1,1 @@
-p.exports = { M: "flagIcon_c98db5" };
+p.exports={M:"flagIcon_c98db5"}

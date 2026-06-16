@@ -1,5 +1,1 @@
-"use strict";
-var i = n(953789);
-e.exports = function (e, t) {
-    return i(e, t);
-};
+"use strict";var i=n(953789);e.exports=function(e,t){return i(e,t)}

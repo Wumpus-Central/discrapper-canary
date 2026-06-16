@@ -1,2 +1,1 @@
-"use strict";
-e.exports = n(265555);
+"use strict";e.exports=n(265555)

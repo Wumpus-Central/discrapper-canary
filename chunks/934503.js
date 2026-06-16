@@ -1,7 +1,1 @@
-var i = n(933370);
-e.exports = (function () {
-    try {
-        var e = i(Object, "defineProperty");
-        return e({}, "", {}), e;
-    } catch (e) {}
-})();
+var i=n(933370);e.exports=function(){try{var e=i(Object,"defineProperty");return e({},"",{}),e}catch(e){}}()

@@ -1,18 +1,1 @@
-"use strict";
-n.d(t, { C: () => a });
-var i = n(627968);
-n(64700);
-var r = n(267889),
-    s = n(307731);
-function a(e) {
-    let { channel: t, closePopout: n, analyticsOverride: a, onSelectEmoji: o, messageId: l } = e;
-    return (0, i.jsx)(r.A, {
-        closePopout: n,
-        channel: t,
-        onSelectEmoji: o,
-        pickerIntention: s.EmojiIntention.REACTION,
-        showAddEmojiButton: null == t || null != t.guild_id,
-        analyticsOverride: a,
-        messageId: l,
-    });
-}
+"use strict";n.d(t,{C:()=>a});var i=n(627968);n(64700);var r=n(267889),s=n(307731);function a(e){let{channel:t,closePopout:n,analyticsOverride:a,onSelectEmoji:o,messageId:l}=e;return(0,i.jsx)(r.A,{closePopout:n,channel:t,onSelectEmoji:o,pickerIntention:s.EmojiIntention.REACTION,showAddEmojiButton:null==t||null!=t.guild_id,analyticsOverride:a,messageId:l})}

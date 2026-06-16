@@ -1,4 +1,1 @@
-"use strict";
-var i = n(237164),
-    r = n(867016);
-i.default.__addLocaleData(r.default), (i.default.defaultLocale = "en"), (t.default = i.default);
+"use strict";var i=n(237164),r=n(867016);i.default.__addLocaleData(r.default),i.default.defaultLocale="en",t.default=i.default

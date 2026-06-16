@@ -1,1 +1,1 @@
-a.exports = { T: "classificationEvidenceContainer_a2ffaf" };
+a.exports={T:"classificationEvidenceContainer_a2ffaf"}

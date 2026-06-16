@@ -1,15 +1,1 @@
-"use strict";
-var t = (function () {
-    for (var e, t = [], n = 0; n < 256; n++) {
-        e = n;
-        for (var i = 0; i < 8; i++) e = 1 & e ? 0xedb88320 ^ (e >>> 1) : e >>> 1;
-        t[n] = e;
-    }
-    return t;
-})();
-e.exports = function (e, n, i, r) {
-    var s = r + i;
-    e ^= -1;
-    for (var a = r; a < s; a++) e = (e >>> 8) ^ t[(e ^ n[a]) & 255];
-    return -1 ^ e;
-};
+"use strict";var t=function(){for(var e,t=[],n=0;n<256;n++){e=n;for(var i=0;i<8;i++)e=1&e?0xedb88320^e>>>1:e>>>1;t[n]=e}return t}();e.exports=function(e,n,i,r){var s=r+i;e^=-1;for(var a=r;a<s;a++)e=e>>>8^t[(e^n[a])&255];return -1^e}

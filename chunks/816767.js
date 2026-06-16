@@ -1,6 +1,1 @@
-"use strict";
-var i = n(949893);
-e.exports = function (e, t) {
-    var n = e % t;
-    return i(n >= 0 ? n : n + t);
-};
+"use strict";var i=n(949893);e.exports=function(e,t){var n=e%t;return i(n>=0?n:n+t)}

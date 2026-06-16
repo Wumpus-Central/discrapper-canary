@@ -1,8 +1,1 @@
-e.exports = {
-    mu: "shelfBlock__07a06",
-    VA: "withBackground__07a06",
-    iL: "backgroundImage__07a06",
-    Qs: "content__07a06",
-    wx: "header__07a06",
-    Ti: "withoutBackground__07a06",
-};
+e.exports={mu:"shelfBlock__07a06",VA:"withBackground__07a06",iL:"backgroundImage__07a06",Qs:"content__07a06",wx:"header__07a06",Ti:"withoutBackground__07a06"}

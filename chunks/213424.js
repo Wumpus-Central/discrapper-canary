@@ -1,1 +1,1 @@
-e.exports = { H: "optionIcon__889e3" };
+e.exports={H:"optionIcon__889e3"}

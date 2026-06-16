@@ -1,1 +1,1 @@
-_.exports = { d: "star_a54554" };
+e.exports={d:"star_a54554"}

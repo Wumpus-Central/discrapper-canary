@@ -1,15 +1,1 @@
-"use strict";
-n.d(t, { V: () => o });
-var i = n(287809),
-    r = n(159273),
-    s = n(354430),
-    a = n(451731);
-function o(e) {
-    if (null == e || null == i.default.getCurrentUser()) return;
-    let t = r.Ay.getTopEmojisMetadata(e);
-    if (null != t) {
-        let { topEmojisTTL: e } = t;
-        if (null == e || Date.now() < e) return;
-    }
-    s.A.getIsFetching(e) || (0, a.l2)(e);
-}
+"use strict";n.d(t,{V:()=>o});var i=n(287809),r=n(159273),s=n(354430),a=n(451731);function o(e){if(null==e||null==i.default.getCurrentUser())return;let t=r.Ay.getTopEmojisMetadata(e);if(null!=t){let{topEmojisTTL:e}=t;if(null==e||Date.now()<e)return}s.A.getIsFetching(e)||(0,a.l2)(e)}

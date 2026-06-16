@@ -1,2 +1,1 @@
-"use strict";
-e.exports = "/assets/ad11c241f1deafbb.svg";
+"use strict";e.exports="/assets/ad11c241f1deafbb.svg"

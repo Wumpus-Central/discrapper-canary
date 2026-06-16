@@ -1,17 +1,1 @@
-"use strict";
-n.d(t, { P: () => a, v: () => o });
-var i = n(95701),
-    r = n(860689),
-    s = n(652215);
-function a(e, t) {
-    if (null == e || "" === e) return null;
-    let n = new Date(e);
-    return !(n instanceof Date) || isNaN(n.getTime())
-        ? null
-        : n.toLocaleDateString(t, { year: "numeric", month: "short" });
-}
-function o(e) {
-    if (null == e.guild || (0, r.DY)(e.guild).features.has(s.GuildFeatures.HUB)) return !1;
-    let t = e?.channel != null ? (0, i.OY)(e.channel) : null;
-    return !t?.isGuildVoiceOrThread();
-}
+"use strict";n.d(t,{P:()=>a,v:()=>o});var i=n(95701),r=n(860689),s=n(652215);function a(e,t){if(null==e||""===e)return null;let n=new Date(e);return!(n instanceof Date)||isNaN(n.getTime())?null:n.toLocaleDateString(t,{year:"numeric",month:"short"})}function o(e){if(null==e.guild||(0,r.DY)(e.guild).features.has(s.GuildFeatures.HUB))return!1;let t=e?.channel!=null?(0,i.OY)(e.channel):null;return!t?.isGuildVoiceOrThread()}

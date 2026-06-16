@@ -1,2 +1,1 @@
-"use strict";
-e(926082)("metadata");
+"use strict";e(926082)("metadata")

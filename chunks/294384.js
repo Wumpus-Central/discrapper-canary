@@ -1,7 +1,1 @@
-function u(e, t, n) {
-    return !1;
-}
-function l(e, t, n) {
-    return !1;
-}
-n.d(t, { A: () => u, t: () => l });
+function u(e,t,n){return!1}function l(e,t,n){return!1}n.d(t,{A:()=>u,t:()=>l})

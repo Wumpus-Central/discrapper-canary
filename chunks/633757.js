@@ -1,1 +1,1 @@
-a.exports = { j: "modalContent__2379f", e: "disclaimer__2379f" };
+a.exports={j:"modalContent__2379f",e:"disclaimer__2379f"}

@@ -1,1 +1,1 @@
-e.exports = { z: "videoBackgroundArt__2b87f" };
+e.exports={z:"videoBackgroundArt__2b87f"}

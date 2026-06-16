@@ -1,6 +1,1 @@
-"use strict";
-n.d(t, { A: () => r });
-let i = /\\/g;
-function r(e) {
-    return e.replace(i, "/");
-}
+"use strict";n.d(t,{A:()=>r});let i=/\\/g;function r(e){return e.replace(i,"/")}

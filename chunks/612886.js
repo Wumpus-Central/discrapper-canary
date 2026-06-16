@@ -1,8 +1,1 @@
-var i = n(850714),
-    r = n(934503),
-    s = n(240820);
-e.exports = r
-    ? function (e, t) {
-          return r(e, "toString", { configurable: !0, enumerable: !1, value: i(t), writable: !0 });
-      }
-    : s;
+var i=n(850714),r=n(934503),s=n(240820);e.exports=r?function(e,t){return r(e,"toString",{configurable:!0,enumerable:!1,value:i(t),writable:!0})}:s

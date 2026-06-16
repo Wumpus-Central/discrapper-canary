@@ -1,14 +1,1 @@
-n.d(t, { A: () => o });
-var l = n(627968);
-n(64700);
-var i = n(487329),
-    s = n(958713),
-    r = n(93067),
-    a = n(375708);
-function o(e) {
-    let { userId: t, className: n } = e,
-        o = (0, s.A)(t);
-    if (null == o) return null;
-    let u = o === i.iy.CAMERA_SEND_LOW_FPS ? a.intl.string(a.t["1NyoVt"]) : void 0;
-    return null != u ? (0, l.jsx)(r.A, { className: n, errorMessage: u, avError: o }) : null;
-}
+n.d(t,{A:()=>o});var l=n(627968);n(64700);var i=n(487329),s=n(958713),r=n(93067),a=n(375708);function o(e){let{userId:t,className:n}=e,o=(0,s.A)(t);if(null==o)return null;let u=o===i.iy.CAMERA_SEND_LOW_FPS?a.intl.string(a.t["1NyoVt"]):void 0;return null!=u?(0,l.jsx)(r.A,{className:n,errorMessage:u,avError:o}):null}

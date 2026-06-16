@@ -1,13 +1,1 @@
-i.d(n, { A: () => e });
-var s = i(627968);
-i(64700);
-var r = i(609731),
-    c = i(788120),
-    p = i(204651),
-    a = i(375708);
-function e(t) {
-    let { popoutWindowAlwaysOnTop: n, onToggleStayOnTop: i, ...e } = t,
-        o = n ? a.intl.string(a.t.YdyDM9) : a.intl.string(a.t.ZVGHwP),
-        d = n ? r.h : c.q;
-    return (0, s.jsx)(p.A, { onClick: () => i(!n), label: o, iconComponent: d, ...e });
-}
+i.d(n,{A:()=>e});var s=i(627968);i(64700);var r=i(609731),c=i(788120),p=i(204651),a=i(375708);function e(t){let{popoutWindowAlwaysOnTop:n,onToggleStayOnTop:i,...e}=t,o=n?a.intl.string(a.t.YdyDM9):a.intl.string(a.t.ZVGHwP),d=n?r.h:c.q;return(0,s.jsx)(p.A,{onClick:()=>i(!n),label:o,iconComponent:d,...e})}

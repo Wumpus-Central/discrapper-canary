@@ -1,2 +1,1 @@
-"use strict";
-e.exports = Function.prototype.call;
+"use strict";e.exports=Function.prototype.call

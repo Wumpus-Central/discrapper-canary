@@ -1,1 +1,1 @@
-p.exports = { A: "giftCardModalRoot__49ae9" };
+p.exports={A:"giftCardModalRoot__49ae9"}

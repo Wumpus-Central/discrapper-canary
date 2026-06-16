@@ -1,1 +1,1 @@
-_.exports = { P: "premiumIcon__7b750" };
+_.exports={P:"premiumIcon__7b750"}

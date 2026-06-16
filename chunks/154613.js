@@ -1,9 +1,1 @@
-"use strict";
-var i = n(741623),
-    r = n(227106),
-    s = n(732937);
-e.exports = function (e, t) {
-    if (!r(e)) throw new i("Assertion failed: `O` must be an Object");
-    if (!s(t)) throw new i("Assertion failed: `P` must be a Property Key");
-    return t in e;
-};
+"use strict";var i=n(741623),r=n(227106),s=n(732937);e.exports=function(e,t){if(!r(e))throw new i("Assertion failed: `O` must be an Object");if(!s(t))throw new i("Assertion failed: `P` must be a Property Key");return t in e}

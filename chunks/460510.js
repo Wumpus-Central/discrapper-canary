@@ -1,1 +1,1 @@
-e.exports = { C: "modalRoot_ab2984", j: "modalContent_ab2984" };
+e.exports={C:"modalRoot_ab2984",j:"modalContent_ab2984"}

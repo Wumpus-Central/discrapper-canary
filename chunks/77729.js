@@ -1,3 +1,1 @@
-"use strict";
-n.d(t, { A: () => i });
-let i = window.DiscordNative;
+"use strict";n.d(t,{A:()=>i});let i=window.DiscordNative

@@ -1,1 +1,1 @@
-e.exports = { G: "unownedStickerLockContainer_ced283", I: "unownedStickerLockIcon_ced283" };
+e.exports={G:"unownedStickerLockContainer_ced283",I:"unownedStickerLockIcon_ced283"}

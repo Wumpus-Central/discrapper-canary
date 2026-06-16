@@ -1,15 +1,1 @@
-t.d(c, { A: () => s });
-var n = t(627968);
-t(64700);
-var p = t(820284);
-function s(e, c) {
-    return function (t) {
-        return (0, n.jsx)(p.A, {
-            page: c.page,
-            section: c.section,
-            object: c.object,
-            objectType: c.objectType,
-            children: (0, n.jsx)(e, { ...t }),
-        });
-    };
-}
+t.d(c,{A:()=>s});var n=t(627968);t(64700);var p=t(820284);function s(e,c){return function(t){return(0,n.jsx)(p.A,{page:c.page,section:c.section,object:c.object,objectType:c.objectType,children:(0,n.jsx)(e,{...t})})}}

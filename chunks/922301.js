@@ -1,4 +1,1 @@
-"use strict";
-n.d(t, { G: () => r });
-var i,
-    r = (((i = {})[(i.PLAIN = 0)] = "PLAIN"), (i[(i.STATIC = 1)] = "STATIC"), (i[(i.ANIMATED = 2)] = "ANIMATED"), i);
+"use strict";n.d(t,{G:()=>r});var i,r=((i={})[i.PLAIN=0]="PLAIN",i[i.STATIC=1]="STATIC",i[i.ANIMATED=2]="ANIMATED",i)

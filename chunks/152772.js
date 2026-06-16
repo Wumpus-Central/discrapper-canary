@@ -1,12 +1,1 @@
-"use strict";
-Object.defineProperty(t, "__esModule", { value: !0 }),
-    (t.default = function (e, t, n) {
-        let i = 0,
-            r = e.length;
-        for (; r > 0; ) {
-            let s = (r / 2) | 0,
-                a = i + s;
-            0 >= n(e[a], t) ? ((i = ++a), (r -= s + 1)) : (r = s);
-        }
-        return i;
-    });
+"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default=function(e,t,n){let i=0,r=e.length;for(;r>0;){let s=r/2|0,a=i+s;0>=n(e[a],t)?(i=++a,r-=s+1):r=s}return i}

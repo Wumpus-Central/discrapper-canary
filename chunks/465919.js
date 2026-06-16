@@ -1,1 +1,1 @@
-e.exports = { U: "upsell__3b4ae" };
+e.exports={U:"upsell__3b4ae"}

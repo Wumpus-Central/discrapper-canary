@@ -1,6 +1,1 @@
-"use strict";
-n.r(t);
-var i = n(410075),
-    r = {};
-for (let e in i) "default" !== e && (r[e] = () => i[e]);
-n.d(t, r);
+"use strict";n.r(t);var i=n(410075),r={};for(let e in i)"default"!==e&&(r[e]=()=>i[e]);n.d(t,r)

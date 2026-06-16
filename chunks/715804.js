@@ -1,2 +1,1 @@
-"use strict";
-t.exports = e(675879)({}.isPrototypeOf);
+"use strict";t.exports=e(675879)({}.isPrototypeOf)

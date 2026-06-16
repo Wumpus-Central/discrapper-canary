@@ -1,4 +1,1 @@
-"use strict";
-e.exports = function (e) {
-    return !!e;
-};
+"use strict";e.exports=function(e){return!!e}

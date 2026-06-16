@@ -1,4 +1,1 @@
-var i = n(296989);
-e.exports = function (e) {
-    return (null == e ? 0 : e.length) ? i(e, 1) : [];
-};
+var i=n(296989);e.exports=function(e){return(null==e?0:e.length)?i(e,1):[]}

@@ -1,1 +1,1 @@
-e.exports = { K: "icon__49777" };
+e.exports={K:"icon__49777"}

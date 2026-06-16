@@ -1,1 +1,1 @@
-e.exports = { u: "spinner_ca0af2" };
+e.exports={u:"spinner_ca0af2"}

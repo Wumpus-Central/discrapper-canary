@@ -1,1 +1,1 @@
-e.exports = { D: "awaitingAuthenticationStep__4ede8" };
+e.exports={D:"awaitingAuthenticationStep__4ede8"}

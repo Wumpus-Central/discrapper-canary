@@ -1,18 +1,1 @@
-e.exports = {
-    RA: "previewsContainerInner__4e635",
-    hZ: "profileEffectPreviewsContainerInner__4e635 previewsContainerInner__4e635",
-    Zj: "nameplatePreviewContainerInner__4e635 previewsContainerInner__4e635",
-    oB: "profilePreviewWithChat__4e635",
-    M4: "nameplatePreview__4e635",
-    nJ: "nameplateRightPanePreviewContainer__4e635",
-    mV: "nameplateRightPanePreviewAvatarContainer__4e635",
-    $L: "nameplateRightPanePreviewAvatarInner__4e635",
-    ab: "userBlue__4e635",
-    e9: "userPink__4e635",
-    bD: "userGreen__4e635",
-    OS: "nameplateRightPanePreviewSectionGroup__4e635",
-    f7: "chatPreview__4e635",
-    G5: "mockMessage__4e635",
-    lG: "mockInput__4e635",
-    hq: "mockInputButton__4e635",
-};
+e.exports={RA:"previewsContainerInner__4e635",hZ:"profileEffectPreviewsContainerInner__4e635 previewsContainerInner__4e635",Zj:"nameplatePreviewContainerInner__4e635 previewsContainerInner__4e635",oB:"profilePreviewWithChat__4e635",M4:"nameplatePreview__4e635",nJ:"nameplateRightPanePreviewContainer__4e635",mV:"nameplateRightPanePreviewAvatarContainer__4e635",$L:"nameplateRightPanePreviewAvatarInner__4e635",ab:"userBlue__4e635",e9:"userPink__4e635",bD:"userGreen__4e635",OS:"nameplateRightPanePreviewSectionGroup__4e635",f7:"chatPreview__4e635",G5:"mockMessage__4e635",lG:"mockInput__4e635",hq:"mockInputButton__4e635"}

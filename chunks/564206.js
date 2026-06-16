@@ -1,1 +1,1 @@
-e.exports = { a: "nowPlayingAdd__1f52c" };
+e.exports={a:"nowPlayingAdd__1f52c"}

@@ -1,1 +1,1 @@
-e.exports = t(386870)();
+e.exports=t(386870)()

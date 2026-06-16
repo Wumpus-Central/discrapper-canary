@@ -1,10 +1,1 @@
-i.d(t, { A: () => u });
-var n = i(64700),
-    l = i(17928),
-    s = i(159273),
-    r = i(492494);
-let a = [];
-function u(e) {
-    let t = (0, l.bG)([s.Ay], () => s.Ay.getGuildEmoji(e), [e]);
-    return n.useMemo(() => (null == t ? a : t.filter((t) => (0, r.Eg)(t, e))), [t, e]);
-}
+n.d(t,{A:()=>o});var r=n(64700),l=n(17928),a=n(159273),i=n(492494);let s=[];function o(e){let t=(0,l.bG)([a.Ay],()=>a.Ay.getGuildEmoji(e),[e]);return r.useMemo(()=>null==t?s:t.filter(t=>(0,i.Eg)(t,e)),[t,e])}

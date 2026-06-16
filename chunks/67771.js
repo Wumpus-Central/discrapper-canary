@@ -1,7 +1,1 @@
-var i = n(317281),
-    r = n(792523),
-    s = n(709670),
-    a = n(983249);
-e.exports = function (e) {
-    return s(e) ? i(a(e)) : r(e);
-};
+var i=n(317281),r=n(792523),s=n(709670),a=n(983249);e.exports=function(e){return s(e)?i(a(e)):r(e)}

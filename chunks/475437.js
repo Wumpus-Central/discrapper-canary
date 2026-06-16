@@ -1,1 +1,1 @@
-e.exports = { O: "customConfetti__69c6c" };
+e.exports={O:"customConfetti__69c6c"}

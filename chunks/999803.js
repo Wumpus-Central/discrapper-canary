@@ -1,7 +1,1 @@
-e.exports = {
-    dU: "offTopic__20a4b",
-    yZ: "collapsed__20a4b",
-    JN: "offTopicInner__20a4b",
-    Lq: "offtopic-collapse__20a4b",
-    oN: "offtopic-expand__20a4b",
-};
+e.exports={dU:"offTopic__20a4b",yZ:"collapsed__20a4b",JN:"offTopicInner__20a4b",Lq:"offtopic-collapse__20a4b",oN:"offtopic-expand__20a4b"}

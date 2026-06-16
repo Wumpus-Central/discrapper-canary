@@ -1,7 +1,1 @@
-"use strict";
-var i = n(147205),
-    r = "u" < typeof globalThis ? n.g : globalThis;
-e.exports = function () {
-    for (var e = [], t = 0; t < i.length; t++) "function" == typeof r[i[t]] && (e[e.length] = i[t]);
-    return e;
-};
+"use strict";var i=n(147205),r="u"<typeof globalThis?n.g:globalThis;e.exports=function(){for(var e=[],t=0;t<i.length;t++)"function"==typeof r[i[t]]&&(e[e.length]=i[t]);return e}

@@ -1,2 +1,1 @@
-"use strict";
-e.exports = n.p + "b598312a5e479904.woff2";
+"use strict";e.exports=n.p+"b598312a5e479904.woff2"

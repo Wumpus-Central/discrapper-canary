@@ -1,1 +1,1 @@
-e.exports = { T: "tidaBulletList__9a831" };
+e.exports={T:"tidaBulletList__9a831"}

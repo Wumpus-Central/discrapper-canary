@@ -1,1 +1,1 @@
-e.exports = { W: "subtext_beaa93" };
+e.exports={W:"subtext_beaa93"}

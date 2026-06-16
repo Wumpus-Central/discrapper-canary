@@ -1,8 +1,1 @@
-"use strict";
-n.d(t, { e: () => s });
-var i = n(218394),
-    r = n(471107);
-function s(e) {
-    let t = (0, i.j)();
-    return (0, r.G)({ hovered: e, isAppFocused: t });
-}
+"use strict";n.d(t,{e:()=>s});var i=n(218394),r=n(471107);function s(e){let t=(0,i.j)();return(0,r.G)({hovered:e,isAppFocused:t})}

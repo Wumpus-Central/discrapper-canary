@@ -1,12 +1,1 @@
-"use strict";
-n.d(t, { Ay: () => o, F0: () => a, H7: () => r, zG: () => s });
-var i = n(945810);
-let r = 15,
-    s = 20,
-    a = 20,
-    o = (0, i.mj)({
-        name: "2026-03-steelseries-3p-recurring",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-    });
+"use strict";n.d(t,{Ay:()=>o,F0:()=>a,H7:()=>r,zG:()=>s});var i=n(945810);let r=15,s=20,a=20,o=(0,i.mj)({name:"2026-03-steelseries-3p-recurring",kind:"user",defaultConfig:{enabled:!1},variations:{0:{enabled:!1},1:{enabled:!0}}})

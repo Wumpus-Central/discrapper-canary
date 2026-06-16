@@ -1,1 +1,1 @@
-e.exports = { o: "actions_ad13b1" };
+e.exports={o:"actions_ad13b1"}

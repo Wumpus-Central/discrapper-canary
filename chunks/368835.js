@@ -1,2 +1,1 @@
-"use strict";
-e(188701), (t.exports = e(793311)("Array", "push"));
+"use strict";e(188701),t.exports=e(793311)("Array","push")

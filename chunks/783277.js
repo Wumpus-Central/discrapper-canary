@@ -1,2 +1,1 @@
-"use strict";
-e.exports = Math.max;
+"use strict";e.exports=Math.max

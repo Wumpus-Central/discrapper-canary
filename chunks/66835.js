@@ -1,15 +1,1 @@
-e.exports = {
-    b3: "permissionsGroupContainer__3f11f",
-    wT: "permissionItemContainer__3f11f",
-    xV: "permissionsItemContainer__3f11f",
-    aE: "elevatedPermission__3f11f",
-    iY: "permissionItemHeader__3f11f",
-    OQ: "permissionItemSubheader__3f11f",
-    Dc: "elevatedPermissionContainer__3f11f",
-    Dp: "permissionItemDescription__3f11f",
-    SY: "permissionItemRoleContainer__3f11f",
-    gH: "permissionTitle__3f11f",
-    Zf: "roleTooltipItem__3f11f",
-    LL: "editable__3f11f",
-    o9: "roleChiplet__3f11f",
-};
+e.exports={b3:"permissionsGroupContainer__3f11f",wT:"permissionItemContainer__3f11f",xV:"permissionsItemContainer__3f11f",aE:"elevatedPermission__3f11f",iY:"permissionItemHeader__3f11f",OQ:"permissionItemSubheader__3f11f",Dc:"elevatedPermissionContainer__3f11f",Dp:"permissionItemDescription__3f11f",SY:"permissionItemRoleContainer__3f11f",gH:"permissionTitle__3f11f",Zf:"roleTooltipItem__3f11f",LL:"editable__3f11f",o9:"roleChiplet__3f11f"}

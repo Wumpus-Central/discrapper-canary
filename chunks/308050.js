@@ -1,5 +1,1 @@
-"use strict";
-n.d(t, { A: () => s });
-let i = String.raw,
-    r = i`\p{Emoji}(?:\p{EMod}|[\u{E0020}-\u{E007E}]+\u{E007F}|\uFE0F?\u20E3?)`,
-    s = () => RegExp(i`\p{RI}{2}|(?![#*\d](?!\uFE0F?\u20E3))${r}(?:\u200D${r})*`, "gu");
+"use strict";n.d(t,{A:()=>s});let i=String.raw,r=i`\p{Emoji}(?:\p{EMod}|[\u{E0020}-\u{E007E}]+\u{E007F}|\uFE0F?\u20E3?)`,s=()=>RegExp(i`\p{RI}{2}|(?![#*\d](?!\uFE0F?\u20E3))${r}(?:\u200D${r})*`,"gu")

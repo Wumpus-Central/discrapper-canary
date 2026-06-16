@@ -1,1 +1,1 @@
-p.exports = c.p + "c8656640e565c2fa.lottie";
+p.exports=c.p+"c8656640e565c2fa.lottie"

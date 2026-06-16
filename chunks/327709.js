@@ -1,2 +1,1 @@
-"use strict";
-e.exports = Math.pow;
+"use strict";e.exports=Math.pow

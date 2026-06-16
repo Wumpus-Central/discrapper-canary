@@ -1,13 +1,1 @@
-"use strict";
-n.d(t, { A: () => i });
-let i = (0, n(240921).Ay)({
-    kind: "user",
-    name: "2025-12-proportional-vad-indicator",
-    defaultConfig: { enabled: !1 },
-    variations: {
-        1: { enabled: !0 },
-        2: { enabled: !0, disableUI: !0 },
-        3: { enabled: !0, disableUI: !0, swallowVolumeOnlySpeakingEvents: !0 },
-        4: { enabled: !0, disableUI: !0, dontEmitVolumeOnlySpeakingEvents: !0 },
-    },
-});
+"use strict";n.d(t,{A:()=>i});let i=(0,n(240921).Ay)({kind:"user",name:"2025-12-proportional-vad-indicator",defaultConfig:{enabled:!1},variations:{1:{enabled:!0},2:{enabled:!0,disableUI:!0},3:{enabled:!0,disableUI:!0,swallowVolumeOnlySpeakingEvents:!0},4:{enabled:!0,disableUI:!0,dontEmitVolumeOnlySpeakingEvents:!0}}})

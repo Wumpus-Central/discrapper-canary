@@ -1,1 +1,1 @@
-e.exports = { M: "externalProductProfilePreview__88259" };
+e.exports={M:"externalProductProfilePreview__88259"}

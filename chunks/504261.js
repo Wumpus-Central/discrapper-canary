@@ -1,17 +1,1 @@
-n.d(t, { A: () => l });
-var s = n(64700);
-let l = (e) => {
-    let [t, n] = s.useState(!1);
-    return {
-        isFocused: t,
-        handleFocus: s.useCallback(
-            (t) => {
-                e(t), n(!0);
-            },
-            [e, n],
-        ),
-        handleBlur: () => {
-            n(!1);
-        },
-    };
-};
+n.d(t,{A:()=>l});var s=n(64700);let l=e=>{let[t,n]=s.useState(!1);return{isFocused:t,handleFocus:s.useCallback(t=>{e(t),n(!0)},[e,n]),handleBlur:()=>{n(!1)}}}

@@ -1,1 +1,1 @@
-c.r((p.exports = {}));
+c.r(p.exports={})

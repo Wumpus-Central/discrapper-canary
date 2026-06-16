@@ -1,10 +1,1 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(531651),
-    r = n(618027),
-    s = n(998280);
-function a(e, t) {
-    (0, r.A)(2, arguments);
-    var n = (0, s.A)(t);
-    return (0, i.A)(e, -n);
-}
+"use strict";n.d(t,{A:()=>a});var i=n(531651),r=n(618027),s=n(998280);function a(e,t){(0,r.A)(2,arguments);var n=(0,s.A)(t);return(0,i.A)(e,-n)}

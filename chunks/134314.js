@@ -1,1 +1,1 @@
-e.exports = { b: "friendRequestsButton__523aa" };
+_.exports={b:"friendRequestsButton__523aa"}

@@ -1,1 +1,1 @@
-e.exports = { X: "noBoxShadowMargin_d0aeea" };
+e.exports={X:"noBoxShadowMargin_d0aeea"}

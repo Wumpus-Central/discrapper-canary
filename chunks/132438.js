@@ -1,9 +1,1 @@
-e.exports = {
-    VD: "stackedIconsContainer__99961",
-    hU: "frontIcon__99961",
-    j2: "backIcon__99961",
-    Gt: "frame__99961",
-    Nb: "frameRounded__99961",
-    pU: "squircleIconWrapper__99961",
-    v9: "squircleBorder__99961",
-};
+e.exports={VD:"stackedIconsContainer__99961",hU:"frontIcon__99961",j2:"backIcon__99961",Gt:"frame__99961",Nb:"frameRounded__99961",pU:"squircleIconWrapper__99961",v9:"squircleBorder__99961"}

@@ -1,13 +1,1 @@
-"use strict";
-n.d(t, { Bc: () => a, w6: () => o });
-var i = n(627968),
-    r = n(64700);
-let s = r.createContext({ isRichTooltip: !1 });
-function a(e) {
-    let { children: t, isRichTooltip: n = !1, richTooltipPadding: a } = e,
-        o = r.useMemo(() => ({ isRichTooltip: n, richTooltipPadding: a }), [n, a]);
-    return (0, i.jsx)(s.Provider, { value: o, children: t });
-}
-function o() {
-    return r.useContext(s);
-}
+"use strict";n.d(t,{Bc:()=>a,w6:()=>o});var i=n(627968),r=n(64700);let s=r.createContext({isRichTooltip:!1});function a(e){let{children:t,isRichTooltip:n=!1,richTooltipPadding:a}=e,o=r.useMemo(()=>({isRichTooltip:n,richTooltipPadding:a}),[n,a]);return(0,i.jsx)(s.Provider,{value:o,children:t})}function o(){return r.useContext(s)}

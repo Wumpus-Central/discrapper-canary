@@ -1,4 +1,1 @@
-"use strict";
-e.exports = function (e, t, n) {
-    for (var i = 0; i < e.length; ++i) this.bindSingle(e[i], t, n);
-};
+"use strict";e.exports=function(e,t,n){for(var i=0;i<e.length;++i)this.bindSingle(e[i],t,n)}

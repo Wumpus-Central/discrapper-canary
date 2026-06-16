@@ -1,9 +1,1 @@
-a.d(s, { A: () => t });
-var c = a(492462),
-    p = a(873263),
-    r = a(758836);
-let t = () => {
-    let e = (0, p.zy)(),
-        { tab: s } = (0, c.parse)(e.search);
-    if (Object.values(r.G2).includes(s)) return s;
-};
+s.d(t,{A:()=>l});var n=s(492462),a=s(873263),i=s(758836);let l=()=>{let e=(0,a.zy)(),{tab:t}=(0,n.parse)(e.search);if(Object.values(i.G2).includes(t))return t}

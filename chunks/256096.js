@@ -1,7 +1,1 @@
-e.exports = {
-    kL: "container__4b182",
-    DD: "title__4b182",
-    VA: "subtitle__4b182",
-    oL: "methodSelectSlot__4b182",
-    WJ: "leftCtaSlot__4b182",
-};
+e.exports={kL:"container__4b182",DD:"title__4b182",VA:"subtitle__4b182",oL:"methodSelectSlot__4b182",WJ:"leftCtaSlot__4b182"}

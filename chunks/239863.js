@@ -1,1 +1,1 @@
-c.exports = { k: "checkbox_cc7654" };
+c.exports={k:"checkbox_cc7654"}

@@ -1,1 +1,1 @@
-e.exports = { A: "topRadius_a25167" };
+e.exports={A:"topRadius_a25167"}

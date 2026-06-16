@@ -1,1 +1,1 @@
-e.exports = { h: "paymentSections__72707" };
+e.exports={h:"paymentSections__72707"}

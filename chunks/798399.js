@@ -1,1 +1,1 @@
-e.exports = { u: "closeIcon__3decc" };
+e.exports={u:"closeIcon__3decc"}

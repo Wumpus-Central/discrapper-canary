@@ -1,1 +1,1 @@
-p.exports = { q: "placeholder__84ae7" };
+p.exports={q:"placeholder__84ae7"}

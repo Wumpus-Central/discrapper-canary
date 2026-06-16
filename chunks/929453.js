@@ -1,1 +1,1 @@
-_.exports = { S: "modalBody__94f78" };
+_.exports={S:"modalBody__94f78"}

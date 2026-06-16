@@ -1,1 +1,1 @@
-c.exports = { H: "variants_f72374", N: "card_f72374" };
+c.exports={H:"variants_f72374",N:"card_f72374"}

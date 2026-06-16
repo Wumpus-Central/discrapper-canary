@@ -1,1 +1,1 @@
-e.exports = { T: "tag_ed9123" };
+_.exports={T:"tag_ed9123"}

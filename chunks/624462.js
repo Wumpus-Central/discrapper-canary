@@ -1,2 +1,1 @@
-"use strict";
-e.exports = Object;
+"use strict";e.exports=Object

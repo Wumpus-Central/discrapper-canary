@@ -1,6 +1,1 @@
-r.d(e, { b: () => a });
-var s = r(17928),
-    u = r(287809);
-function a() {
-    return (0, s.bG)([u.default], () => u.default.getCurrentUser()?.isStaff() ?? !1);
-}
+r.d(e,{b:()=>a});var s=r(17928),u=r(287809);function a(){return(0,s.bG)([u.default],()=>u.default.getCurrentUser()?.isStaff()??!1)}

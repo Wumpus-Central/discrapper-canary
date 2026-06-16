@@ -1,13 +1,1 @@
-"use strict";
-n.d(t, { j: () => s, y: () => i });
-let i = "EMOJI_STUDIO_MODAL_KEY";
-var r,
-    s =
-        (((r = {}).ANIMATED_CROPPING = "ANIMATED_CROPPING"),
-        (r.IMAGE_LOAD = "IMAGE_LOAD"),
-        (r.MISSING_GUILD = "MISSING_GUILD"),
-        (r.MISSING_IMAGE_DATA = "MISSING_IMAGE_DATA"),
-        (r.NO_PERMISSIONS = "NO_PERMISSIONS"),
-        (r.TOO_BIG = "TOO_BIG"),
-        (r.UNKNOWN = "UNKNOWN"),
-        r);
+"use strict";n.d(t,{j:()=>s,y:()=>l});let l="EMOJI_STUDIO_MODAL_KEY";var i,s=((i={}).ANIMATED_CROPPING="ANIMATED_CROPPING",i.IMAGE_LOAD="IMAGE_LOAD",i.MISSING_GUILD="MISSING_GUILD",i.MISSING_IMAGE_DATA="MISSING_IMAGE_DATA",i.NO_PERMISSIONS="NO_PERMISSIONS",i.TOO_BIG="TOO_BIG",i.UNKNOWN="UNKNOWN",i)

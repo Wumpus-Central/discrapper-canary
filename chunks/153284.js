@@ -1,2 +1,1 @@
-"use strict";
-e.exports = n.p + "600991ad4560f288.mp3";
+"use strict";e.exports=n.p+"600991ad4560f288.mp3"

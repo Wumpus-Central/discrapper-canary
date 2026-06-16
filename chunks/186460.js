@@ -1,1 +1,1 @@
-e.exports = { K: "giftRedemptionLink__9aa63" };
+e.exports={K:"giftRedemptionLink__9aa63"}

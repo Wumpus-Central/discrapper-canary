@@ -1,1 +1,1 @@
-_.exports = { _: "accountLinkBanner__87431", d: "accountLinkBannerBodyText__87431" };
+_.exports={_:"accountLinkBanner__87431",d:"accountLinkBannerBodyText__87431"}

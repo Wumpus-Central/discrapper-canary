@@ -1,1 +1,1 @@
-_.exports = { f: "eventPrompt_a5e25b" };
+e.exports={f:"eventPrompt_a5e25b"}

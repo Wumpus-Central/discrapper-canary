@@ -1,1 +1,1 @@
-e.exports = { C: "learnMore__7b2a3" };
+e.exports={C:"learnMore__7b2a3"}

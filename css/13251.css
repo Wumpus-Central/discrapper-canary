@@ -1,34 +1,3 @@
-.body_c93be2 {
-    margin-bottom: 40px;
-    margin-top: 40px
-}
-
-.textArea_c93be2 {
-    --channel-text-area-placeholder: var(--input-placeholder-text-default);
-    height: 136px;
-    transition: border-color .2s ease-in-out
-}
-
-.textArea_c93be2:focus-within {
-    border-color: var(--text-link)
-}
-
-.textArea_c93be2>div {
-    height: 100%
-}
-
-.editorTextArea_c93be2 {
-    height: 136px
-}
-
-.theme-dark .textArea_c93be2 *>span {
-    color: var(--white)
-}
-
-.theme-light .textArea_c93be2 *>span {
-    color: var(--text-default)
-}
-
 .container__8564e {
     align-items: center;
     background-color: var(--primary-860);

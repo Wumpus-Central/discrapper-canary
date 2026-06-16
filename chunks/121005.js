@@ -1,14 +1,1 @@
-n.d(t, { A: () => s });
-var l = n(64700),
-    r = n(17928),
-    i = n(753390),
-    a = n(166403);
-function s() {
-    let e = (0, r.bG)([a.A], () => a.A.hasFetchedSubscriptions());
-    return (
-        l.useEffect(() => {
-            e || (0, i.hP)();
-        }, [e]),
-        e
-    );
-}
+n.d(t,{A:()=>s});var l=n(64700),r=n(17928),i=n(753390),a=n(166403);function s(){let e=(0,r.bG)([a.A],()=>a.A.hasFetchedSubscriptions());return l.useEffect(()=>{e||(0,i.hP)()},[e]),e}

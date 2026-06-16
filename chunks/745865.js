@@ -1,1 +1,1 @@
-e.exports = { H: "narrowContent__5a180" };
+e.exports={H:"narrowContent__5a180"}

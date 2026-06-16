@@ -1,7 +1,1 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(360469),
-    r = n(652215);
-function s(e) {
-    return e?.application_id === i.$W || e?.platform === r.yTV.XBOX;
-}
+"use strict";n.d(t,{A:()=>s});var i=n(360469),r=n(652215);function s(e){return e?.application_id===i.$W||e?.platform===r.yTV.XBOX}

@@ -1,2 +1,1 @@
-"use strict";
-e.exports = Math.abs;
+"use strict";e.exports=Math.abs

@@ -1,2 +1,1 @@
-"use strict";
-e.exports = SyntaxError;
+"use strict";e.exports=SyntaxError

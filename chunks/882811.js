@@ -1,1 +1,1 @@
-s.exports = "/assets/6e6818d602adac8a.png";
+s.exports="/assets/6e6818d602adac8a.png"

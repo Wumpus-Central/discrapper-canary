@@ -1,3 +1,1 @@
-n.d(t, { Y: () => r });
-var l = n(885180);
-let r = (e) => ({ enabled: l.A.getConfig(e).enabled });
+n.d(t,{Y:()=>r});var l=n(885180);let r=e=>({enabled:l.A.getConfig(e).enabled})

@@ -1,8 +1,1 @@
-"use strict";
-var i = n(46990),
-    r = n(741623);
-e.exports = function (e) {
-    if ("number" != typeof e && "bigint" != typeof e) throw new r("argument must be a Number or a BigInt");
-    var t = e < 0 ? -i(-e) : i(e);
-    return 0 === t ? 0 : t;
-};
+"use strict";var i=n(46990),r=n(741623);e.exports=function(e){if("number"!=typeof e&&"bigint"!=typeof e)throw new r("argument must be a Number or a BigInt");var t=e<0?-i(-e):i(e);return 0===t?0:t}

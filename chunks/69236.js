@@ -1,12 +1,1 @@
-n.d(t, { o: () => u });
-var i = n(17928),
-    a = n(309954),
-    r = n(287809),
-    s = n(681064);
-function u(e) {
-    let { orbPriceAmount: t, location: n } = e,
-        u = (0, s.R)({ location: n }),
-        l = (0, i.bG)([r.default], () => r.default.getCurrentUser()?.hasPaidTier2Subscription() ?? !1),
-        { balance: _ } = (0, a.W)({ disableFetch: !u || null == t || !l });
-    return u && null != t ? (l ? (null == _ || _ < t ? "NOT_ENOUGH_ORBS" : "CAN_CHECKOUT") : "NEEDS_NITRO") : "HIDDEN";
-}
+n.d(t,{o:()=>u});var i=n(17928),a=n(309954),r=n(287809),s=n(681064);function u(e){let{orbPriceAmount:t,location:n}=e,u=(0,s.R)({location:n}),l=(0,i.bG)([r.default],()=>r.default.getCurrentUser()?.hasPaidTier2Subscription()??!1),{balance:_}=(0,a.W)({disableFetch:!u||null==t||!l});return u&&null!=t?l?null==_||_<t?"NOT_ENOUGH_ORBS":"CAN_CHECKOUT":"NEEDS_NITRO":"HIDDEN"}

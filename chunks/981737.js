@@ -1,17 +1,1 @@
-"use strict";
-function i(e) {
-    return function (t, n) {
-        var i;
-        if ("formatting" === (null != n && n.context ? String(n.context) : "standalone") && e.formattingValues) {
-            var r = e.defaultFormattingWidth || e.defaultWidth,
-                s = null != n && n.width ? String(n.width) : r;
-            i = e.formattingValues[s] || e.formattingValues[r];
-        } else {
-            var a = e.defaultWidth,
-                o = null != n && n.width ? String(n.width) : e.defaultWidth;
-            i = e.values[o] || e.values[a];
-        }
-        return i[e.argumentCallback ? e.argumentCallback(t) : t];
-    };
-}
-n.d(t, { A: () => i });
+"use strict";function i(e){return function(t,n){var i;if("formatting"===(null!=n&&n.context?String(n.context):"standalone")&&e.formattingValues){var r=e.defaultFormattingWidth||e.defaultWidth,s=null!=n&&n.width?String(n.width):r;i=e.formattingValues[s]||e.formattingValues[r]}else{var a=e.defaultWidth,o=null!=n&&n.width?String(n.width):e.defaultWidth;i=e.values[o]||e.values[a]}return i[e.argumentCallback?e.argumentCallback(t):t]}}n.d(t,{A:()=>i})

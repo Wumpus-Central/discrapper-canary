@@ -1,1 +1,1 @@
-e.exports = { kL: "container_a4e9ae", my: "avatar_a4e9ae", QC: "displayName_a4e9ae" };
+e.exports={kL:"container_a4e9ae",my:"avatar_a4e9ae",QC:"displayName_a4e9ae"}

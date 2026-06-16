@@ -1,17 +1,1 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(627968);
-n(64700);
-var r = n(289873),
-    s = n(935462),
-    a = n(375708),
-    o = n(889277);
-function l(e) {
-    return (0, i.jsx)(s.EO, {
-        ...e,
-        "aria-label": a.intl.string(a.t.ZTNur7),
-        size: s.rI.SMALL,
-        parentComponent: "renderModalSpinner",
-        children: (0, i.jsx)("div", { className: o.dc, children: (0, i.jsx)(r.y, {}) }),
-    });
-}
+"use strict";n.d(t,{A:()=>l});var i=n(627968);n(64700);var r=n(289873),s=n(935462),a=n(375708),o=n(889277);function l(e){return(0,i.jsx)(s.EO,{...e,"aria-label":a.intl.string(a.t.ZTNur7),size:s.rI.SMALL,parentComponent:"renderModalSpinner",children:(0,i.jsx)("div",{className:o.dc,children:(0,i.jsx)(r.y,{})})})}

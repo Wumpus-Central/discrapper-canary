@@ -1,9 +1,1 @@
-"use strict";
-n.d(t, { M8: () => r, kF: () => s, sY: () => i });
-let i = (0, n(353640).v)(() => ({ isOpen: !1, openedAt: null, applicationId: null }));
-function r(e) {
-    i.setState({ isOpen: !0, openedAt: Date.now(), applicationId: e });
-}
-function s() {
-    i.setState({ isOpen: !1, openedAt: null, applicationId: null });
-}
+"use strict";n.d(t,{M8:()=>r,kF:()=>s,sY:()=>i});let i=(0,n(353640).v)(()=>({isOpen:!1,openedAt:null,applicationId:null}));function r(e){i.setState({isOpen:!0,openedAt:Date.now(),applicationId:e})}function s(){i.setState({isOpen:!1,openedAt:null,applicationId:null})}

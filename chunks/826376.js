@@ -1,2 +1,1 @@
-"use strict";
-e(926082)("species");
+"use strict";e(926082)("species")

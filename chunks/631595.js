@@ -1,6 +1,1 @@
-var i = n(526252),
-    r = n(467957);
-e.exports = function (e, t, n) {
-    var s = t(e);
-    return r(e) ? s : i(s, n(e));
-};
+var i=n(526252),r=n(467957);e.exports=function(e,t,n){var s=t(e);return r(e)?s:i(s,n(e))}

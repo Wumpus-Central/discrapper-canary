@@ -1,1 +1,1 @@
-e.exports = { i: "wrapper_cdf8a9" };
+e.exports={i:"wrapper_cdf8a9"}

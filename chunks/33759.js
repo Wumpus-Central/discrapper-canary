@@ -1,1 +1,1 @@
-p.exports = { K: "video__6b794" };
+p.exports={K:"video__6b794"}

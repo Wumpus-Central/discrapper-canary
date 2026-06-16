@@ -1,1 +1,1 @@
-e.exports = { XG: "scroller_ac477d", Ci: "activityList_ac477d" };
+_.exports={XG:"scroller_ac477d",Ci:"activityList_ac477d"}

@@ -1,6 +1,1 @@
-var i = n(435815);
-e.exports = function (e, t) {
-    var n = i(this, e),
-        r = n.size;
-    return n.set(e, t), (this.size += +(n.size != r)), this;
-};
+var i=n(435815);e.exports=function(e,t){var n=i(this,e),r=n.size;return n.set(e,t),this.size+=+(n.size!=r),this}

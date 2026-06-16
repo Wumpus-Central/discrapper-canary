@@ -1,9 +1,1 @@
-"use strict";
-var i = n(94867),
-    r = n(741623),
-    s = n(357522),
-    a = n(457846);
-e.exports = function (e) {
-    if (e.length < 1 || "function" != typeof e[0]) throw new r("a function is required");
-    return a(i, s, e);
-};
+"use strict";var i=n(94867),r=n(741623),s=n(357522),a=n(457846);e.exports=function(e){if(e.length<1||"function"!=typeof e[0])throw new r("a function is required");return a(i,s,e)}

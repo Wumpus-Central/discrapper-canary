@@ -1,4 +1,1 @@
-var i = n(646344);
-e.exports = function (e) {
-    return e == e && !i(e);
-};
+var i=n(646344);e.exports=function(e){return e==e&&!i(e)}

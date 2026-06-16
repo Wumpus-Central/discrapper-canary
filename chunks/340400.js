@@ -1,9 +1,1 @@
-e.exports = function (e) {
-    return function (t, n, i) {
-        for (var r = -1, s = Object(t), a = i(t), o = a.length; o--; ) {
-            var l = a[e ? o : ++r];
-            if (!1 === n(s[l], l, s)) break;
-        }
-        return t;
-    };
-};
+e.exports=function(e){return function(t,n,i){for(var r=-1,s=Object(t),a=i(t),o=a.length;o--;){var l=a[e?o:++r];if(!1===n(s[l],l,s))break}return t}}

@@ -1,4 +1,1 @@
-"use strict";
-t.exports = function (t) {
-    return { iterator: t, next: t.next, done: !1 };
-};
+"use strict";t.exports=function(t){return{iterator:t,next:t.next,done:!1}}

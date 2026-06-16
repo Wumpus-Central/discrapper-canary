@@ -1,1 +1,1 @@
-e.exports = { g: "keyRecorder__4d8f3" };
+a.exports={g:"keyRecorder__4d8f3"}

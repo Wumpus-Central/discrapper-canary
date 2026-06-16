@@ -1,13 +1,1 @@
-n.d(e, { A: () => l });
-var s = n(945810);
-let i = { enabled: !1, buttonVariant: "primary" },
-    a = (0, s.mj)({
-        name: "2026-05-quest-primary-cta-white-desktop",
-        kind: "user",
-        defaultConfig: i,
-        variations: { 1: { enabled: !0, buttonVariant: "overlay-primary" } },
-    });
-function l(t) {
-    let e = a.useConfig({ location: t ? "quest bar cta experiment: enabled" : "quest bar cta experiment: disabled" });
-    return t ? e : i;
-}
+n.d(e,{A:()=>l});var s=n(945810);let i={enabled:!1,buttonVariant:"primary"},a=(0,s.mj)({name:"2026-05-quest-primary-cta-white-desktop",kind:"user",defaultConfig:i,variations:{1:{enabled:!0,buttonVariant:"overlay-primary"}}});function l(t){let e=a.useConfig({location:t?"quest bar cta experiment: enabled":"quest bar cta experiment: disabled"});return t?e:i}

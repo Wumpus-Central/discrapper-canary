@@ -1,8 +1,1 @@
-"use strict";
-var i = n(184389),
-    r = n(143320);
-e.exports =
-    Object.keys ||
-    function (e) {
-        return i(e, r);
-    };
+"use strict";var i=n(184389),r=n(143320);e.exports=Object.keys||function(e){return i(e,r)}

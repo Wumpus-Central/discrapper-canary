@@ -1,1 +1,1 @@
-e.exports = { Q: "effect__68185" };
+e.exports={Q:"effect__68185"}

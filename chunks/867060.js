@@ -1,10 +1,1 @@
-n.d(t, { A: () => o });
-var u = n(64700),
-    l = n(691540),
-    r = n(857250),
-    i = n(97483);
-function o(e) {
-    u.useEffect(() => {
-        null != e && (0, l.P0)((0, r.o)(e, i.Ck.FAILURE));
-    }, [e]);
-}
+n.d(t,{A:()=>o});var u=n(64700),l=n(691540),r=n(857250),i=n(97483);function o(e){u.useEffect(()=>{null!=e&&(0,l.P0)((0,r.o)(e,i.Ck.FAILURE))},[e])}

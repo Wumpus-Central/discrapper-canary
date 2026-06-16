@@ -1,6 +1,1 @@
-var i = n(659671),
-    r = /[\\^$.*+?()[\]{}|]/g,
-    s = RegExp(r.source);
-e.exports = function (e) {
-    return (e = i(e)) && s.test(e) ? e.replace(r, "\\$&") : e;
-};
+var i=n(659671),r=/[\\^$.*+?()[\]{}|]/g,s=RegExp(r.source);e.exports=function(e){return(e=i(e))&&s.test(e)?e.replace(r,"\\$&"):e}

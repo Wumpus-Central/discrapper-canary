@@ -1,18 +1,1 @@
-"use strict";
-var i = n(381265),
-    r = n(189891);
-e.exports = function () {
-    var e = r();
-    return (
-        i(
-            Array.prototype,
-            { map: e },
-            {
-                map: function () {
-                    return Array.prototype.map !== e;
-                },
-            },
-        ),
-        e
-    );
-};
+"use strict";var i=n(381265),r=n(189891);e.exports=function(){var e=r();return i(Array.prototype,{map:e},{map:function(){return Array.prototype.map!==e}}),e}

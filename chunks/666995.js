@@ -1,1 +1,1 @@
-e.exports = { i: "fineprint_b44961" };
+e.exports={i:"fineprint_b44961"}

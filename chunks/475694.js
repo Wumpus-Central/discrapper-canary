@@ -1,11 +1,1 @@
-"use strict";
-var i = n(746500),
-    r = n(557982),
-    s = n(148820),
-    a = n(862400);
-e.exports = function (e) {
-    var t = r(e);
-    if (!a(t) || 0 === t) return 0;
-    var n = i(s(t), 0x100000000);
-    return 0 === n ? 0 : n;
-};
+"use strict";var i=n(746500),r=n(557982),s=n(148820),a=n(862400);e.exports=function(e){var t=r(e);if(!a(t)||0===t)return 0;var n=i(s(t),0x100000000);return 0===n?0:n}

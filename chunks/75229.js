@@ -1,6 +1,1 @@
-var i = n(587779);
-e.exports = function (e, t) {
-    return i(t, function (t) {
-        return e[t];
-    });
-};
+var i=n(587779);e.exports=function(e,t){return i(t,function(t){return e[t]})}

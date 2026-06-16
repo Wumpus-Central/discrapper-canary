@@ -1,1 +1,1 @@
-e.exports = { k: "container_f85df1", O: "singleGameContainer_f85df1 " + t(334488).H };
+e.exports={k:"container_f85df1",O:"singleGameContainer_f85df1 "+t(334488).H}

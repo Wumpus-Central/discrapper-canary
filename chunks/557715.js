@@ -1,1 +1,1 @@
-p.exports = a.p + "f75115b65a230189.woff2";
+p.exports=a.p+"f75115b65a230189.woff2"

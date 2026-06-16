@@ -1,15 +1,1 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(439372),
-    r = n(966597),
-    s = n(216623);
-class a extends i.A {
-    actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
-    handlePostConnectionOpen = () => {
-        !(function () {
-            let { enabled: e } = r.A.getConfig({ location: "saved_messages_manager" });
-            e && (0, s.AX)();
-        })();
-    };
-}
-let o = new a();
+"use strict";n.d(t,{A:()=>o});var i=n(439372),r=n(966597),s=n(216623);class a extends i.A{actions={POST_CONNECTION_OPEN:()=>this.handlePostConnectionOpen()};handlePostConnectionOpen=()=>{!function(){let{enabled:e}=r.A.getConfig({location:"saved_messages_manager"});e&&(0,s.AX)()}()}}let o=new a

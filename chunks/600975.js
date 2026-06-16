@@ -1,3 +1,1 @@
-"use strict";
-n.d(t, { C: () => i.A });
-var i = n(880006);
+"use strict";n.d(t,{C:()=>i.A});var i=n(880006)

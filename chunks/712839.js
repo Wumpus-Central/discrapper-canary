@@ -1,16 +1,1 @@
-e.exports = {
-    kL: "container__1df30",
-    kj: "circular__1df30",
-    u1: "spinner__1df30",
-    AU: "recentAvatarContainer__1df30",
-    JD: "hasError__1df30",
-    mE: "recentAvatarSlots__1df30",
-    xL: "recentAvatarList__1df30",
-    ge: "recentAvatarButtonContainer__1df30",
-    Hk: "recentAvatarButton__1df30 circular__1df30",
-    Hc: "recentAvatar__1df30 circular__1df30",
-    G5: "deleteButton__1df30",
-    fy: "deleteIcon__1df30",
-    wh: "emptyAvatarSlots__1df30",
-    rZ: "avatarPlaceholder__1df30 circular__1df30",
-};
+e.exports={kL:"container__1df30",kj:"circular__1df30",u1:"spinner__1df30",AU:"recentAvatarContainer__1df30",JD:"hasError__1df30",mE:"recentAvatarSlots__1df30",xL:"recentAvatarList__1df30",ge:"recentAvatarButtonContainer__1df30",Hk:"recentAvatarButton__1df30 circular__1df30",Hc:"recentAvatar__1df30 circular__1df30",G5:"deleteButton__1df30",fy:"deleteIcon__1df30",wh:"emptyAvatarSlots__1df30",rZ:"avatarPlaceholder__1df30 circular__1df30"}

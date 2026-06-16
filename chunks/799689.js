@@ -1,9 +1,1 @@
-"use strict";
-e.exports = function () {
-    var e,
-        t = this.constructor;
-    if (!t.REVERSE_MAP)
-        for (var i in ((t.REVERSE_MAP = {}), (e = n(883134))))
-            (i > 95 && i < 112) || (e.hasOwnProperty(i) && (t.REVERSE_MAP[e[i]] = i));
-    return t.REVERSE_MAP;
-};
+"use strict";e.exports=function(){var e,t=this.constructor;if(!t.REVERSE_MAP)for(var i in t.REVERSE_MAP={},e=n(883134))i>95&&i<112||e.hasOwnProperty(i)&&(t.REVERSE_MAP[e[i]]=i);return t.REVERSE_MAP}

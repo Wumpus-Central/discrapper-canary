@@ -1,1 +1,1 @@
-e.exports = { i: "brokenImageIcon_f68fcb" };
+e.exports={i:"brokenImageIcon_f68fcb"}

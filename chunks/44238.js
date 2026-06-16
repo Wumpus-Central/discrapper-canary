@@ -1,9 +1,1 @@
-var u = t(971886);
-r.exports = function (r, n, t, o) {
-    return (
-        u(r, function (r, u, e) {
-            n(o, r, t(r), e);
-        }),
-        o
-    );
-};
+var u=t(971886);r.exports=function(r,n,t,o){return u(r,function(r,u,e){n(o,r,t(r),e)}),o}

@@ -1,5 +1,1 @@
-"use strict";
-var i = n(591082);
-e.exports = function (e, t) {
-    return e === t ? 0 !== e || 1 / e == 1 / t : i(e) && i(t);
-};
+"use strict";var i=n(591082);e.exports=function(e,t){return e===t?0!==e||1/e==1/t:i(e)&&i(t)}

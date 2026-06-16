@@ -1,1 +1,1 @@
-_.exports = { X: "scroller__23746" };
+_.exports={X:"scroller__23746"}

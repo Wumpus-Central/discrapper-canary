@@ -1,1 +1,1 @@
-e.exports = { $P: "search__49676" };
+e.exports={$P:"search__49676"}

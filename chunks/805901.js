@@ -1,14 +1,1 @@
-"use strict";
-n.d(t, { c: () => o });
-var i = n(627968),
-    r = n(64700),
-    s = n(922139),
-    a = n(844222);
-function o(e) {
-    let { shouldAnimate: t = "respect-motion-settings", ...n } = e,
-        o = r.useContext(a.C).reducedMotion.enabled;
-    return (0, i.jsx)(s.Spring, {
-        ...n,
-        immediate: !("animate-always" === t || ("respect-motion-settings" === t && !o)),
-    });
-}
+"use strict";n.d(t,{c:()=>o});var i=n(627968),r=n(64700),s=n(922139),a=n(844222);function o(e){let{shouldAnimate:t="respect-motion-settings",...n}=e,o=r.useContext(a.C).reducedMotion.enabled;return(0,i.jsx)(s.Spring,{...n,immediate:!("animate-always"===t||"respect-motion-settings"===t&&!o)})}

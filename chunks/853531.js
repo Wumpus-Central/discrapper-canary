@@ -1,1 +1,1 @@
-e.exports = n(996659)(Object.getPrototypeOf, Object);
+e.exports=n(996659)(Object.getPrototypeOf,Object)

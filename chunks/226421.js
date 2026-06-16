@@ -1,14 +1,1 @@
-c.d(s, { A: () => d });
-var e = c(627968);
-c(64700);
-var i = c(503698),
-    a = c.n(i),
-    n = c(176781),
-    t = c(870386);
-function d(r) {
-    let { className: s } = r;
-    return (0, e.jsx)("div", {
-        className: a()(t.L, s),
-        children: (0, e.jsx)(n.x, { size: "lg", color: "currentColor" }),
-    });
-}
+l.d(t,{A:()=>o});var a=l(627968);l(64700);var n=l(503698),i=l.n(n),r=l(176781),s=l(870386);function o(e){let{className:t}=e;return(0,a.jsx)("div",{className:i()(s.L,t),children:(0,a.jsx)(r.x,{size:"lg",color:"currentColor"})})}

@@ -1,1 +1,1 @@
-a.exports = { R: "avatarWrapper_d8a370", h: "ring_d8a370" };
+_.exports={R:"avatarWrapper_d8a370",h:"ring_d8a370"}

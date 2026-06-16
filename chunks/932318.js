@@ -1,13 +1,1 @@
-"use strict";
-e.exports = function (e, t) {
-    var i,
-        r,
-        s,
-        a,
-        o,
-        l,
-        u = [];
-    for (s = 0, i = n(246734)(e), a = n(976617), o = n(577360), l = n(921194); s < i.length; ++s)
-        a[(r = i[s])] && (r = a[r]), t && "keypress" !== t && o[r] && ((r = o[r]), u.push("shift")), l(r) && u.push(r);
-    return (t = this.pickBestAction(r, u, t)), { key: r, modifiers: u, action: t };
-};
+"use strict";e.exports=function(e,t){var i,r,s,a,o,l,u=[];for(s=0,i=n(246734)(e),a=n(976617),o=n(577360),l=n(921194);s<i.length;++s)a[r=i[s]]&&(r=a[r]),t&&"keypress"!==t&&o[r]&&(r=o[r],u.push("shift")),l(r)&&u.push(r);return t=this.pickBestAction(r,u,t),{key:r,modifiers:u,action:t}}

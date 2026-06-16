@@ -1,1 +1,1 @@
-s.exports = { O: "messageInput__8ff3e" };
+s.exports={O:"messageInput__8ff3e"}

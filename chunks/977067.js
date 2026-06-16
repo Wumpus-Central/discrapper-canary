@@ -1,9 +1,1 @@
-"use strict";
-n.d(t, { C: () => a, Z: () => s });
-var i = n(64700);
-let r = { size: void 0, fullWidth: void 0 },
-    s = i.createContext(r),
-    a = () => {
-        let e = i.useContext(s);
-        return null == e ? r : e;
-    };
+"use strict";n.d(t,{C:()=>a,Z:()=>s});var i=n(64700);let r={size:void 0,fullWidth:void 0},s=i.createContext(r),a=()=>{let e=i.useContext(s);return null==e?r:e}

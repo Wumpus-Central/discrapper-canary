@@ -1,1 +1,1 @@
-e.exports = { _: "taskChecklist__28714" };
+e.exports={_:"taskChecklist__28714"}

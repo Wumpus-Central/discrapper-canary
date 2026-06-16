@@ -1,1 +1,1 @@
-e.exports = { u: "section__25879" };
+e.exports={u:"section__25879"}

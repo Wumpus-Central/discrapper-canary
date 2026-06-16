@@ -1,4 +1,1 @@
-var i = n(571803);
-e.exports = function (e) {
-    return i(e, 4);
-};
+var i=n(571803);e.exports=function(e){return i(e,4)}

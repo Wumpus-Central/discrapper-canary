@@ -1,18 +1,1 @@
-_.exports = {
-    kL: "container__350af",
-    tR: "clickBlocker__350af",
-    Qs: "content__350af",
-    zH: "details__350af",
-    dx: "hintText__350af",
-    vk: "clickable__350af",
-    r: "dismissButton__350af",
-    MW: "dismissIcon__350af",
-    my: "avatar__350af",
-    DD: "title__350af",
-    rf: "body__350af",
-    yF: "divider__350af",
-    qD: "keybindMessage__350af",
-    P: "keybind__350af",
-    g2: "hintSubtleText__350af",
-    gr: "themePrimary__350af",
-};
+_.exports={kL:"container__350af",tR:"clickBlocker__350af",Qs:"content__350af",zH:"details__350af",dx:"hintText__350af",vk:"clickable__350af",r:"dismissButton__350af",MW:"dismissIcon__350af",my:"avatar__350af",DD:"title__350af",rf:"body__350af",yF:"divider__350af",qD:"keybindMessage__350af",P:"keybind__350af",g2:"hintSubtleText__350af",gr:"themePrimary__350af"}

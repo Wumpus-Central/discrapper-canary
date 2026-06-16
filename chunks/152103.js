@@ -1,1 +1,1 @@
-e.exports = { N: "buttonsContainer__4962e" };
+e.exports={N:"buttonsContainer__4962e"}

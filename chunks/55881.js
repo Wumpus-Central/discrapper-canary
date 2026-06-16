@@ -1,1 +1,1 @@
-e.exports = { U: "fileUpload__8b203" };
+e.exports={U:"fileUpload__8b203"}

@@ -1,12 +1,1 @@
-var i = n(390446),
-    r = n(552982),
-    s = n(708996),
-    a = n(533786);
-e.exports = function (e) {
-    return function (t) {
-        var n = r((t = a(t))) ? s(t) : void 0,
-            o = n ? n[0] : t.charAt(0),
-            l = n ? i(n, 1).join("") : t.slice(1);
-        return o[e]() + l;
-    };
-};
+var i=n(390446),r=n(552982),s=n(708996),a=n(533786);e.exports=function(e){return function(t){var n=r(t=a(t))?s(t):void 0,o=n?n[0]:t.charAt(0),l=n?i(n,1).join(""):t.slice(1);return o[e]()+l}}

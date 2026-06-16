@@ -1,15 +1,1 @@
-"use strict";
-n.d(t, { Si: () => o, a$: () => u, sm: () => l });
-var i = n(284009),
-    r = n.n(i),
-    s = n(565150),
-    a = n(292348);
-function o(e, t) {
-    r()(e.item.platform === s.xz.WEB, "Upload must be in the Web format");
-    let n = (0, a.OW)(e, t);
-    return Promise.resolve({ file: e.item.file, name: n.filename ?? "" });
-}
-async function l(e) {}
-function u(e) {
-    return !1;
-}
+"use strict";n.d(t,{Si:()=>o,a$:()=>u,sm:()=>l});var i=n(284009),r=n.n(i),s=n(565150),a=n(292348);function o(e,t){r()(e.item.platform===s.xz.WEB,"Upload must be in the Web format");let n=(0,a.OW)(e,t);return Promise.resolve({file:e.item.file,name:n.filename??""})}async function l(e){}function u(e){return!1}

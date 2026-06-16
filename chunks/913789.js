@@ -1,2 +1,1 @@
-"use strict";
-e.exports = URIError;
+"use strict";e.exports=URIError

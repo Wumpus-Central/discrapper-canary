@@ -1,14 +1,1 @@
-"use strict";
-var i = n(381265),
-    r = n(854970),
-    s = n(142896),
-    a = n(906046),
-    o = n(691162),
-    l = n(189891),
-    u = s.apply(l()),
-    c = n(255733),
-    d = a("Array.prototype.slice"),
-    _ = function (e, t) {
-        return r(e), u(e, d(arguments, 1));
-    };
-i(_, { getPolyfill: l, implementation: o, shim: c }), (e.exports = _);
+"use strict";var i=n(381265),r=n(854970),s=n(142896),a=n(906046),o=n(691162),l=n(189891),u=s.apply(l()),c=n(255733),d=a("Array.prototype.slice"),_=function(e,t){return r(e),u(e,d(arguments,1))};i(_,{getPolyfill:l,implementation:o,shim:c}),e.exports=_

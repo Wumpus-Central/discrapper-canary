@@ -1,17 +1,1 @@
-l.d(a, { A: () => p });
-var o = l(231723),
-    d = l(192308),
-    s = l(267102),
-    t = l(70456),
-    n = l(652215);
-let c = "guild-event-modal",
-    p = () => {
-        let e = (0, s.Us)() === n.BRT.POPOUT ? o.KX : o.SY;
-        return {
-            modalKey: c,
-            contextKey: e,
-            onCloseRequest: () => {
-                t.N.getState().canCloseModal && (0, d.closeModal)(c, e);
-            },
-        };
-    };
+l.d(a,{A:()=>p});var o=l(231723),d=l(192308),s=l(267102),t=l(70456),n=l(652215);let c="guild-event-modal",p=()=>{let e=(0,s.Us)()===n.BRT.POPOUT?o.KX:o.SY;return{modalKey:c,contextKey:e,onCloseRequest:()=>{t.N.getState().canCloseModal&&(0,d.closeModal)(c,e)}}}

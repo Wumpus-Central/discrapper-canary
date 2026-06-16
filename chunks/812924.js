@@ -1,15 +1,1 @@
-e.exports = {
-    oK: "overlayHeader__0a5bd",
-    aS: "isFullscreen__0a5bd",
-    Lu: "overlayGradient__0a5bd",
-    pd: "minimized__0a5bd",
-    s$: "overlayContent__0a5bd",
-    yR: "textInfo__0a5bd",
-    $: "titleRow__0a5bd",
-    gr: "titleIcon__0a5bd",
-    yu: "metadata__0a5bd",
-    DD: "title__0a5bd",
-    On: "clickableGameName__0a5bd",
-    HD: "avatars__0a5bd",
-    RB: "participantAvatar__0a5bd",
-};
+e.exports={oK:"overlayHeader__0a5bd",aS:"isFullscreen__0a5bd",Lu:"overlayGradient__0a5bd",pd:"minimized__0a5bd",s$:"overlayContent__0a5bd",yR:"textInfo__0a5bd",$:"titleRow__0a5bd",gr:"titleIcon__0a5bd",yu:"metadata__0a5bd",DD:"title__0a5bd",On:"clickableGameName__0a5bd",HD:"avatars__0a5bd",RB:"participantAvatar__0a5bd"}

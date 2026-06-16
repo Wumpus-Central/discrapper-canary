@@ -1,1 +1,1 @@
-e.exports = { D: "gradient_ce200f" };
+e.exports={D:"gradient_ce200f"}

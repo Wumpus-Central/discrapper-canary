@@ -1,1 +1,1 @@
-p.exports = { p: "channelIcon_f08fc1" };
+p.exports={p:"channelIcon_f08fc1"}

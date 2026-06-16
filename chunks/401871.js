@@ -1,1 +1,1 @@
-e.exports = { S: "loadingSpinner__5b1b2" };
+e.exports={S:"loadingSpinner__5b1b2"}

@@ -1,18 +1,1 @@
-s.d(t, { x: () => n });
-var a = s(627968);
-s(64700);
-let e =
-    "https://cdn.discordapp.com/assets/content/9acc3844a9e6540e7cd86c1a0a04f3b97753c0ecdcdb55ccbee989f09a985882.png";
-var c = s(977544);
-function n(i) {
-    let { alt: t, ariaLabel: s, ariaHidden: n, role: r, width: l = 288, height: d = 192 } = i;
-    return (0, a.jsx)("img", {
-        style: { width: l, height: d },
-        src: e,
-        srcSet: `${e} 1x, ${c.A} 2x`,
-        alt: t,
-        "aria-label": s,
-        "aria-hidden": n,
-        role: r ?? "img",
-    });
-}
+s.d(t,{x:()=>n});var a=s(627968);s(64700);let e="https://cdn.discordapp.com/assets/content/9acc3844a9e6540e7cd86c1a0a04f3b97753c0ecdcdb55ccbee989f09a985882.png";var c=s(977544);function n(i){let{alt:t,ariaLabel:s,ariaHidden:n,role:r,width:l=288,height:d=192}=i;return(0,a.jsx)("img",{style:{width:l,height:d},src:e,srcSet:`${e} 1x, ${c.A} 2x`,alt:t,"aria-label":s,"aria-hidden":n,role:r??"img"})}

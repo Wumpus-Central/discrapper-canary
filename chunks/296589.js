@@ -1,1 +1,1 @@
-e.exports = { z: "paymentNote__56a21" };
+e.exports={z:"paymentNote__56a21"}

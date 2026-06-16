@@ -1,9 +1,1 @@
-var i = n(296989),
-    r = n(45218),
-    s = n(637925),
-    a = n(841891);
-e.exports = s(function (e, t) {
-    if (null == e) return [];
-    var n = t.length;
-    return n > 1 && a(e, t[0], t[1]) ? (t = []) : n > 2 && a(t[0], t[1], t[2]) && (t = [t[0]]), r(e, i(t, 1), []);
-});
+var i=n(296989),r=n(45218),s=n(637925),a=n(841891);e.exports=s(function(e,t){if(null==e)return[];var n=t.length;return n>1&&a(e,t[0],t[1])?t=[]:n>2&&a(t[0],t[1],t[2])&&(t=[t[0]]),r(e,i(t,1),[])})

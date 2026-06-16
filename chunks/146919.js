@@ -1,11 +1,4 @@
-r.d(t, { jP: () => i, gB: () => u, yB: () => d });
-var l = r(64700),
-    n = r(17928),
-    s = r(775602),
-    a = r(652525);
-let o = "custom-cursors-styles",
-    i = "custom-cursors",
-    c = `
+r.d(t,{jP:()=>i,gB:()=>u,yB:()=>d});var l=r(64700),n=r(17928),s=r(775602),a=r(652525);let o="custom-cursors-styles",i="custom-cursors",c=`
   :root {
     --custom-cursor: url(https://cdn.discordapp.com/assets/content/9f04e9b5b7689dbbecc8fbd15acc438f7f4af98592ee506716a71b2fcdc94e53.png) 8 4, auto;
     --custom-cursor-pointer: url(https://cdn.discordapp.com/assets/content/56cf15abd8c5bb2692721be700d1e934d6626590a316b1c23fdce48d5be6c225.png) 4 4, pointer;
@@ -61,23 +54,4 @@ let o = "custom-cursors-styles",
   .${i} [class*='labelClickable'] {
     cursor: var(--custom-cursor-pointer) !important;
   }
-`;
-function u() {
-    let e = d("useCustomCursorsCSS");
-    l.useLayoutEffect(() => {
-        if (!e) return;
-        let t = document.getElementById(o);
-        return (
-            null == t && (((t = document.createElement("style")).id = o), document.head.appendChild(t)),
-            (t.textContent = c),
-            () => {
-                t.textContent = "";
-            }
-        );
-    }, [e]);
-}
-function d(e) {
-    let t = (0, a.t)(e),
-        r = (0, n.bG)([s.Ay], () => s.Ay.enableCustomCursor ?? !0);
-    return t && r;
-}
+`;function u(){let e=d("useCustomCursorsCSS");l.useLayoutEffect(()=>{if(!e)return;let t=document.getElementById(o);return null==t&&((t=document.createElement("style")).id=o,document.head.appendChild(t)),t.textContent=c,()=>{t.textContent=""}},[e])}function d(e){let t=(0,a.t)(e),r=(0,n.bG)([s.Ay],()=>s.Ay.enableCustomCursor??!0);return t&&r}

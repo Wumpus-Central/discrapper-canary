@@ -1,2 +1,1 @@
-"use strict";
-e.exports = 0xffffffff;
+"use strict";e.exports=0xffffffff

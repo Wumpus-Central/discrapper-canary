@@ -1,4 +1,1 @@
-var i = n(381885);
-e.exports = function () {
-    (this.__data__ = i ? i(null) : {}), (this.size = 0);
-};
+var i=n(381885);e.exports=function(){this.__data__=i?i(null):{},this.size=0}

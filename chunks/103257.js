@@ -1,1 +1,1 @@
-e.exports = { A: "questEmbedCard__4d6dc" };
+e.exports={A:"questEmbedCard__4d6dc"}

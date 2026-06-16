@@ -1,11 +1,1 @@
-var u = t(218008),
-    o = t(44238),
-    e = t(876666),
-    p = t(926226);
-r.exports = function (r, n) {
-    return function (t, a) {
-        var c = p(t) ? u : o,
-            i = n ? n() : {};
-        return c(t, r, e(a, 2), i);
-    };
-};
+var u=t(218008),o=t(44238),e=t(876666),p=t(926226);r.exports=function(r,n){return function(t,a){var c=p(t)?u:o,i=n?n():{};return c(t,r,e(a,2),i)}}

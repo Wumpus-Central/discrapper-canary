@@ -1,1 +1,1 @@
-s.exports = { u: "forumPost__02068" };
+s.exports={u:"forumPost__02068"}

@@ -1,9 +1,1 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(587895);
-function r(e) {
-    let { applicationId: t, activityConfigs: n, applications: r } = e,
-        s = r?.find((e) => e.id === t) ?? i.A.getApplication(t),
-        a = n.find((e) => e.application_id === t);
-    return null == a || null == s ? null : { activity: a, application: s };
-}
+"use strict";n.d(t,{A:()=>r});var i=n(587895);function r(e){let{applicationId:t,activityConfigs:n,applications:r}=e,s=r?.find(e=>e.id===t)??i.A.getApplication(t),a=n.find(e=>e.application_id===t);return null==a||null==s?null:{activity:a,application:s}}

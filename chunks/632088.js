@@ -1,11 +1,1 @@
-n.d(t, { A: () => i, h: () => a });
-var l = n(627968);
-n(64700);
-var r = n(722647);
-let a = "cash-app-pay-container";
-function s() {
-    return (0, l.jsx)("div", { id: a, className: r.w });
-}
-function i() {
-    return (0, l.jsx)(s, {});
-}
+n.d(t,{A:()=>i,h:()=>a});var l=n(627968);n(64700);var r=n(722647);let a="cash-app-pay-container";function s(){return(0,l.jsx)("div",{id:a,className:r.w})}function i(){return(0,l.jsx)(s,{})}

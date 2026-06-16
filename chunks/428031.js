@@ -1,7 +1,1 @@
-i.d(t, { K: () => s });
-var l = i(885386);
-let s = () => {
-    let e = l.Zt.useSetting(),
-        t = l.n6.useSetting();
-    return null != t ? t : !!e || e;
-};
+i.d(t,{K:()=>s});var l=i(885386);let s=()=>{let e=l.Zt.useSetting(),t=l.n6.useSetting();return null!=t?t:!!e||e}

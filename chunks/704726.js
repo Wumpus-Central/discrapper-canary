@@ -1,9 +1,1 @@
-"use strict";
-n.d(t, { Ay: () => a, VC: () => s });
-var i = n(791332),
-    r = n.n(i);
-let s = (e) => RegExp(`^[\\s\\S]+?(?=${e}|[^0-9A-Za-z\\s\\u00ff-\\uffff]|\\n\\n| {2,}\\n|\\w+:\\S|[0-9]+\\.|$)`),
-    a = {
-        ...r().defaultRules.text,
-        match: (0, i.anyScopeRegex)(/^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/),
-    };
+"use strict";n.d(t,{Ay:()=>a,VC:()=>s});var i=n(791332),r=n.n(i);let s=e=>RegExp(`^[\\s\\S]+?(?=${e}|[^0-9A-Za-z\\s\\u00ff-\\uffff]|\\n\\n| {2,}\\n|\\w+:\\S|[0-9]+\\.|$)`),a={...r().defaultRules.text,match:(0,i.anyScopeRegex)(/^[\s\S]+?(?=[^0-9A-Za-z\s\u00c0-\uffff]|\n\n| {2,}\n|\w+:\S|[0-9]+\.|$)/)}

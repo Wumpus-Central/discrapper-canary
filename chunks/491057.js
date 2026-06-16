@@ -1,8 +1,1 @@
-n.d(t, { Qt: () => a, cG: () => i });
-var l = n(627968);
-n(64700);
-let [r, i] = (0, n(786300).A)();
-function a(e) {
-    let { children: t, ...n } = e;
-    return (0, l.jsx)(r.Provider, { value: n, children: t });
-}
+n.d(t,{Qt:()=>a,cG:()=>i});var l=n(627968);n(64700);let[r,i]=(0,n(786300).A)();function a(e){let{children:t,...n}=e;return(0,l.jsx)(r.Provider,{value:n,children:t})}

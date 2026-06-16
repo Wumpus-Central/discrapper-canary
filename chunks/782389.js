@@ -1,1 +1,1 @@
-p.exports = { m: "qrCodeWrapper__88af3" };
+p.exports={m:"qrCodeWrapper__88af3"}

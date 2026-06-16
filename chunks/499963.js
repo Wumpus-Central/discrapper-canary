@@ -1,1 +1,1 @@
-s.exports = { O: "fields__12532" };
+s.exports={O:"fields__12532"}

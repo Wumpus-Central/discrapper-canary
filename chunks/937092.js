@@ -1,7 +1,1 @@
-var i = n(37946),
-    r = n(832282);
-(e.exports = function (e, t, n, s, a) {
-    return new r(i().w(e, t, n, s), a || Promise);
-}),
-    (e.exports.__esModule = !0),
-    (e.exports.default = e.exports);
+var i=n(37946),r=n(832282);e.exports=function(e,t,n,s,a){return new r(i().w(e,t,n,s),a||Promise)},e.exports.__esModule=!0,e.exports.default=e.exports

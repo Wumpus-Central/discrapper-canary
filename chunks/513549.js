@@ -1,2 +1,1 @@
-"use strict";
-e.exports = n.p + "cb2006dbced0e246.woff2";
+"use strict";e.exports=n.p+"cb2006dbced0e246.woff2"

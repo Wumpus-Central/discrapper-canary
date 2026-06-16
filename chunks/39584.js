@@ -1,1 +1,1 @@
-a.exports = { n: "link__6a22b" };
+a.exports={n:"link__6a22b"}

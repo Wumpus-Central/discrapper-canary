@@ -1,1 +1,1 @@
-_.exports = { Qs: "content__21615", DD: "title__21615" };
+_.exports={Qs:"content__21615",DD:"title__21615"}
