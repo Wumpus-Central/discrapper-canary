@@ -188,3 +188,8 @@
 .nameplatePreview__349b1 {
     width: 100%
 }
+
+.nameplatePreview__349b1>div:first-child img,
+.nameplatePreview__349b1>div:first-child video {
+    inset-inline-end: -1px
+}
