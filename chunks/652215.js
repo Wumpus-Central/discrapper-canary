@@ -3447,6 +3447,7 @@ var i2 =
         (((eI = {}).TOGGLE_REACTION_POPOUT = "TOGGLE_REACTION_POPOUT"),
         (eI.ANIMATE_CHAT_AVATAR = "ANIMATE_CHAT_AVATAR"),
         (eI.VOICE_MESSAGE_SEND = "VOICE_MESSAGE_SEND"),
+        (eI.CLIP_SEEK_VIDEO = "CLIP_SEEK_VIDEO"),
         eI);
 let rt = 50;
 var rn =

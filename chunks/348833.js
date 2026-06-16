@@ -522,93 +522,108 @@ let ey = (0, c.Fe)({
     renderLoader: () => (0, i.jsx)("div", { className: eS.Lq }),
 });
 function eC(e) {
+    var t;
     let {
-            attachment: t,
-            posterUrl: n,
-            className: s,
-            autoPlay: c,
-            src: p,
-            fillContainer: m = !1,
-            minWidth: g = 500,
-            maxWidth: A = 1 / 0,
-            maxHeight: I = 1 / 0,
-            channelId: T,
-            messageId: S,
-            showTextContent: y = A >= 250,
-            showParticipants: C = !0,
-            volume: N,
-            autoMute: v,
-            onVolumeChange: R,
-            onMutedChange: O,
-            onClick: b,
-            onContextMenu: D,
-            onPlay: L,
-            allowFullScreen: w = !0,
+            attachment: n,
+            posterUrl: s,
+            className: c,
+            autoPlay: p,
+            src: m,
+            fillContainer: g = !1,
+            minWidth: A = 500,
+            maxWidth: I = 1 / 0,
+            maxHeight: T = 1 / 0,
+            channelId: S,
+            messageId: y,
+            showTextContent: C = I >= 250,
+            showParticipants: N = !0,
+            volume: v,
+            autoMute: R,
+            onVolumeChange: O,
+            onMutedChange: b,
+            onClick: D,
+            onContextMenu: L,
+            onPlay: w,
+            allowFullScreen: M = !0,
         } = e,
-        M = t.width ?? 0,
-        P = t.height ?? 0,
-        x = (0, o.bG)([f.A], () => f.A.getBasicChannel(T)?.guild_id, [T]),
-        k = M > 0 && P > 0 ? M / P : 16 / 9,
-        U = Math.min(M > 0 ? M : g, A),
-        G = U / k;
-    G > I && (U = (G = I) * k), U < g && (G = (U = g) / k);
-    let F = Math.round(Math.min(U, A)),
-        V = Math.round(Math.min(G, I)),
-        B = M > 0 && P > 0 ? Math.min(F / M, V / P, 1) : 1,
-        j = (0, d.AE)({ src: n, width: Math.round(M * B), height: Math.round(P * B) }),
-        [W, K] = r.useState(!1),
-        [$, z] = r.useState(!0),
-        [q, Z] = r.useState(0),
-        X = r.useRef(0),
-        Q = r.useCallback(
+        x = n.width ?? 0,
+        k = n.height ?? 0,
+        U = (0, o.bG)([f.A], () => f.A.getBasicChannel(S)?.guild_id, [S]),
+        G = x > 0 && k > 0 ? x / k : 16 / 9,
+        V = r.useRef(null);
+    (t = n.id),
+        r.useEffect(() => {
+            function e(e) {
+                let { timestampMs: t } = e;
+                null != V.current && (V.current.seek(t / 1e3), V.current.play());
+            }
+            return (
+                F._.subscribeKeyed(P.zOV.CLIP_SEEK_VIDEO, t, e),
+                () => {
+                    F._.unsubscribeKeyed(P.zOV.CLIP_SEEK_VIDEO, t, e);
+                }
+            );
+        }, [t, V]);
+    let B = Math.min(x > 0 ? x : A, I),
+        j = B / G;
+    j > T && (B = (j = T) * G), B < A && (j = (B = A) / G);
+    let W = Math.round(Math.min(B, I)),
+        K = Math.round(Math.min(j, T)),
+        $ = x > 0 && k > 0 ? Math.min(W / x, K / k, 1) : 1,
+        z = (0, d.AE)({ src: s, width: Math.round(x * $), height: Math.round(k * $) }),
+        [q, Z] = r.useState(!1),
+        [X, Q] = r.useState(!0),
+        [J, ee] = r.useState(0),
+        et = r.useRef(0),
+        en = r.useCallback(
             (e, t) => {
-                t !== l.KB.BUFFERING_RECOVERY && e === l.Q6.PLAYING && L?.(t !== l.KB.USER, 1e3 * X.current, 1e3 * q);
+                t !== l.KB.BUFFERING_RECOVERY && e === l.Q6.PLAYING && w?.(t !== l.KB.USER, 1e3 * et.current, 1e3 * J);
             },
-            [q, L],
+            [J, w],
         ),
-        J = r.useCallback((e, t) => {
-            (X.current = e), Number.isFinite(t) && t > 0 && Z((e) => (e === t ? e : t));
+        ei = r.useCallback((e, t) => {
+            (et.current = e), Number.isFinite(t) && t > 0 && ee((e) => (e === t ? e : t));
         }, []),
-        ee = r.useMemo(() => t.clip_events_timeline?.some((e) => null != e.speaking) ?? !1, [t.clip_events_timeline]),
-        et = r.useMemo(() => {
-            if (ee)
+        er = r.useMemo(() => n.clip_events_timeline?.some((e) => null != e.speaking) ?? !1, [n.clip_events_timeline]),
+        es = r.useMemo(() => {
+            if (er)
                 return [
                     {
                         id: "speaking-indicators",
                         iconComponent: u.r,
                         label: Y.intl.string(H.default.hFWVZQ),
-                        active: $,
-                        onClick: () => z((e) => !e),
+                        active: X,
+                        onClick: () => Q((e) => !e),
                         "data-testid": "clips-player-speaking-indicators-toggle",
                     },
                 ];
-        }, [ee, $]),
-        en = (0, h._)({ location: eT.Mu }).externalAnalyticsEnabled,
-        ei = r.useMemo(
+        }, [er, X]),
+        ea = (0, h._)({ location: eT.Mu }).externalAnalyticsEnabled,
+        eo = r.useMemo(
             () =>
-                en
+                ea
                     ? {
-                          contentId: p,
-                          videoStreamType: _.u.isHlsUrl(p) ? "hls" : "mp4",
+                          contentId: m,
+                          videoStreamType: _.u.isHlsUrl(m) ? "hls" : "mp4",
                           contentType: "clips",
-                          title: t.title,
+                          title: n.title,
                       }
                     : void 0,
-            [en, p, t.title],
+            [ea, m, n.title],
         ),
-        er = r.useMemo(
+        el = r.useMemo(
             () =>
-                t.clip_participants?.map((e) => {
+                n.clip_participants?.map((e) => {
                     let { id: t } = e;
                     return t;
                 }) ?? [],
-            [t.clip_participants],
+            [n.clip_participants],
         ),
-        { enableScrubPreview: es } = E.useConfig({ location: "ClipsPlayer" }),
-        ea = r.useCallback(
+        { enableScrubPreview: eu } = E.useConfig({ location: "ClipsPlayer" }),
+        ec = r.useCallback(
             (e) => {
                 let {
-                    playerState: n,
+                    playerState: t,
                     isControlBarExpanded: r,
                     videoRef: s,
                     isActive: a,
@@ -616,63 +631,64 @@ function eC(e) {
                     controlBarAnimationSpring: l,
                 } = e;
                 return (0, i.jsx)(eI, {
-                    attachment: t,
+                    attachment: n,
                     controlBarAnimationSpring: l,
-                    guildId: x,
-                    isFullScreen: W,
-                    showParticipants: C,
-                    showTextContent: y,
-                    channelId: T,
-                    messageId: S,
-                    showSpeakingIndicators: $,
-                    clipUserIds: er,
-                    durationSeconds: q,
-                    playerState: n,
+                    guildId: U,
+                    isFullScreen: q,
+                    showParticipants: N,
+                    showTextContent: C,
+                    channelId: S,
+                    messageId: y,
+                    showSpeakingIndicators: X,
+                    clipUserIds: el,
+                    durationSeconds: J,
+                    playerState: t,
                     isControlBarExpanded: r,
                     videoRef: s,
                     isActive: a,
                     isVolumeExpanded: o,
                 });
             },
-            [t, x, W, C, y, T, S, $, er, q],
+            [n, U, q, N, C, S, y, X, el, J],
         );
     return (0, i.jsx)("div", {
-        className: a()(eS.kL, { [eS.HA]: m }, s),
+        className: a()(eS.kL, { [eS.HA]: g }, c),
         onClick: (e) => e.stopPropagation(),
-        onContextMenu: D,
-        style: m ? void 0 : { width: F, height: V },
+        onContextMenu: L,
+        style: g ? void 0 : { width: W, height: K },
         children: (0, i.jsx)(ey, {
-            src: p,
-            downloadUrl: t.url,
-            downloadContentType: t.content_type,
-            extraButtons: et,
-            poster: j,
-            posterPlaceholder: t.placeholder,
-            posterPlaceholderVersion: t.placeholder_version,
-            autoplay: c,
+            src: m,
+            downloadUrl: n.url,
+            downloadContentType: n.content_type,
+            extraButtons: es,
+            poster: z,
+            posterPlaceholder: n.placeholder,
+            posterPlaceholderVersion: n.placeholder_version,
+            autoplay: p,
             initialActive: !1,
-            initialVolume: N,
-            initialMuted: v,
-            onVolumeChange: R,
-            onMutedChange: O,
-            onProgressUpdate: J,
+            initialVolume: v,
+            initialMuted: R,
+            onVolumeChange: O,
+            onMutedChange: b,
+            onProgressUpdate: ei,
             orientation: "landscape",
             loadingSpinnerPosition: "center",
-            renderPersistentOverlay: ea,
+            renderPersistentOverlay: ec,
             parentTransitionState: null,
-            onFullscreenChange: K,
-            onClick: b,
-            onPlayerStateChange: Q,
+            onFullscreenChange: Z,
+            onClick: D,
+            onPlayerStateChange: en,
             withVideoHalo: !0,
-            objectFit: m ? "cover" : void 0,
-            muxContentMetadata: ei,
-            hideFullScreenBtn: !w,
+            objectFit: g ? "cover" : void 0,
+            muxContentMetadata: eo,
+            hideFullScreenBtn: !M,
             hideSkipButtons: !0,
             compactTimeDisplay: !0,
             autoHideVolumeSlider: !0,
             hidePlaybackSpeedBtn: !0,
-            scrubPreviewVttUrl: es ? t.spritesheet_vtt_url : void 0,
-            scrubPreviewImageUrl: es ? t.spritesheet_image_url : void 0,
+            playerRef: V,
+            scrubPreviewVttUrl: eu ? n.spritesheet_vtt_url : void 0,
+            scrubPreviewImageUrl: eu ? n.spritesheet_image_url : void 0,
         }),
     });
 }

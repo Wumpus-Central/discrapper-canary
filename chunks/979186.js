@@ -385,21 +385,16 @@ class eS extends r.Component {
 let ey = r.forwardRef(function (e, t) {
         let { guestWindow: n, className: s, children: o } = e,
             { lang: u, style: c, className: d } = (0, eh.xb)();
-        r.useEffect(() => {
-            let e = n.document.documentElement;
-            l()(null != e, "Window document element was null"), e.setAttribute("style", c);
-        }, [n, c]),
+        return (
+            r.useEffect(() => {
+                let e = n.document.documentElement;
+                l()(null != e, "Window document element was null"), e.setAttribute("style", c);
+            }, [n, c]),
             r.useEffect(() => {
                 let e = n.document.documentElement;
                 l()(null != e, "Window document element was null"), e.setAttribute("lang", u);
-            }, [n, u]);
-        let _ = a()(d, s, "in-popout");
-        return (
-            r.useLayoutEffect(() => {
-                let e = n.document.documentElement;
-                l()(null != e, "Window document element was null"), e.setAttribute("class", _);
-            }, [n, _]),
-            (0, i.jsx)("div", { "data-popout-root": !0, ref: t, children: o })
+            }, [n, u]),
+            (0, i.jsx)("div", { "data-popout-root": !0, ref: t, className: a()(d, s), children: o })
         );
     }),
     eC = r.forwardRef(function (e, t) {

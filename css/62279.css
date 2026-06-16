@@ -37,5 +37,6 @@
 }
 
 .timestamp_eece5a {
+    cursor: pointer;
     margin-inline-end: var(--space-4)
 }
