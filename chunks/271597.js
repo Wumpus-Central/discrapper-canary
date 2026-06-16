@@ -1,16 +1,17 @@
-n.d(t, { p: () => r });
+"use strict";
+n.d(t, { p: () => o });
 var i = n(627968);
 n(64700);
-var l = n(192308),
+var r = n(192308),
     s = n(792852),
     a = n(696016);
-let r = function () {
+let o = function () {
     let { initialEditingClipId: e, selectedGameId: t } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { resetAll: r, setGameFacet: o } = s.P.getState();
-    r(),
-        null != t && o(t),
-        (0, l.openModalLazy)(
+        { resetAll: o, setGameFacet: l } = s.P.getState();
+    o(),
+        null != t && l(t),
+        (0, r.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.all([
                     n.e("38873"),

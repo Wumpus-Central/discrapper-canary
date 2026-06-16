@@ -1,12 +1,13 @@
-r.d(t, { w: () => n });
-var s = r(375708);
-function n(e) {
+"use strict";
+n.d(t, { w: () => r });
+var i = n(375708);
+function r(e) {
     switch (e) {
         case "giphy":
-            return s.intl.string(s.t.DFoK1a);
+            return i.intl.string(i.t.DFoK1a);
         case "klipy":
-            return s.intl.string(s.t.T1Frnm);
+            return i.intl.string(i.t.T1Frnm);
         default:
-            return s.intl.string(s.t.TnYqke);
+            return i.intl.string(i.t.TnYqke);
     }
 }

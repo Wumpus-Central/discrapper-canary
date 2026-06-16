@@ -1,42 +1,43 @@
-l.d(e, { A: () => E });
-var a = l(478437),
-    u = l(17928),
-    s = l(228366),
-    i = l(617710);
-let n = new Set(),
-    d = {};
-function c() {
-    n.clear();
+"use strict";
+n.d(t, { A: () => _ });
+var i = n(478437),
+    r = n(17928),
+    s = n(228366),
+    a = n(617710);
+let o = new Set(),
+    l = {};
+function u() {
+    o.clear();
 }
-function A(t) {
-    n.delete(t.guild.id);
+function c(e) {
+    o.delete(e.guild.id);
 }
-class C extends u.Ay.Store {
+class d extends r.Ay.Store {
     initialize() {
-        this.waitFor(i.A);
+        this.waitFor(a.A);
     }
     static displayName = "ChannelStatusStore";
-    getChannelStatus(t) {
-        if (null != t && null != t.guild_id && t.type === a.r.GUILD_VOICE) return d[t.guild_id]?.[t.id];
+    getChannelStatus(e) {
+        if (null != e && null != e.guild_id && e.type === i.r.GUILD_VOICE) return l[e.guild_id]?.[e.id];
     }
-    hasRequestedStatuses(t) {
-        return n.has(t);
+    hasRequestedStatuses(e) {
+        return o.has(e);
     }
 }
-let E = new C(s.h, {
-    GUILD_CREATE: A,
-    GUILD_DELETE: A,
-    CONNECTION_RESUMED: c,
-    CONNECTION_OPEN: c,
-    VOICE_CHANNEL_STATUS_UPDATE: function (t) {
-        null == d[t.guildId] && (d[t.guildId] = {}), (d[t.guildId][t.id] = t.status);
+let _ = new d(s.h, {
+    GUILD_CREATE: c,
+    GUILD_DELETE: c,
+    CONNECTION_RESUMED: u,
+    CONNECTION_OPEN: u,
+    VOICE_CHANNEL_STATUS_UPDATE: function (e) {
+        null == l[e.guildId] && (l[e.guildId] = {}), (l[e.guildId][e.id] = e.status);
     },
-    CHANNEL_INFO: function (t) {
-        let { guildId: e, channels: l } = t;
-        for (let { id: t, status: a } of ((d[e] = {}), l)) d[e][t] = a;
+    CHANNEL_INFO: function (e) {
+        let { guildId: t, channels: n } = e;
+        for (let { id: e, status: i } of ((l[t] = {}), n)) l[t][e] = i;
     },
-    FETCH_CHANNEL_INFO: function (t) {
-        let { guildId: e } = t;
-        n.add(e);
+    FETCH_CHANNEL_INFO: function (e) {
+        let { guildId: t } = e;
+        o.add(t);
     },
 });

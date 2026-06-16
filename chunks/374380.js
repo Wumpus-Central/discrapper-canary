@@ -1,3 +1,4 @@
-t.d(r, { O: () => n });
-var a,
-    n = (((a = {}).STAPLE = "staple"), (a.RAIL = "rail"), (a.BORDER = "border"), a);
+"use strict";
+n.d(t, { O: () => r });
+var i,
+    r = (((i = {}).STAPLE = "staple"), (i.RAIL = "rail"), (i.BORDER = "border"), i);

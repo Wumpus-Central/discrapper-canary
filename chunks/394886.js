@@ -1,18 +1,19 @@
-r.d(t, { G: () => u });
-var n = r(321733);
-function i(e, t, r) {
+"use strict";
+n.d(t, { G: () => o });
+var i = n(321733);
+function r(e, t, n) {
     return (
-        t in e ? Object.defineProperty(e, t, { value: r, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = r),
+        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
         e
     );
 }
-var o = !1,
+var s = !1,
     a = !1,
-    u = (function () {
+    o = (function () {
         var e;
         function t(e) {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            i(this, "internalMonitor", void 0), i(this, "sourceId", null), (this.internalMonitor = e.getMonitor());
+            r(this, "internalMonitor", void 0), r(this, "sourceId", null), (this.internalMonitor = e.getMonitor());
         }
         return (
             (e = [
@@ -31,14 +32,14 @@ var o = !1,
                 {
                     key: "canDrag",
                     value: function () {
-                        (0, n.V)(
-                            !o,
+                        (0, i.V)(
+                            !s,
                             "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
                         try {
-                            return (o = !0), this.internalMonitor.canDragSource(this.sourceId);
+                            return (s = !0), this.internalMonitor.canDragSource(this.sourceId);
                         } finally {
-                            o = !1;
+                            s = !1;
                         }
                     },
                 },
@@ -46,7 +47,7 @@ var o = !1,
                     key: "isDragging",
                     value: function () {
                         if (!this.sourceId) return !1;
-                        (0, n.V)(
+                        (0, i.V)(
                             !a,
                             "You may not call monitor.isDragging() inside your isDragging() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
@@ -167,12 +168,12 @@ var o = !1,
                 },
             ]),
             (function (e, t) {
-                for (var r = 0; r < t.length; r++) {
-                    var n = t[r];
-                    (n.enumerable = n.enumerable || !1),
-                        (n.configurable = !0),
-                        "value" in n && (n.writable = !0),
-                        Object.defineProperty(e, n.key, n);
+                for (var n = 0; n < t.length; n++) {
+                    var i = t[n];
+                    (i.enumerable = i.enumerable || !1),
+                        (i.configurable = !0),
+                        "value" in i && (i.writable = !0),
+                        Object.defineProperty(e, i.key, i);
                 }
             })(t.prototype, e),
             t

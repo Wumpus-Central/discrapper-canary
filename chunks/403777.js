@@ -1,38 +1,39 @@
-n.d(t, { A: () => T, n: () => m });
-var l = n(627968);
+"use strict";
+n.d(t, { A: () => A, n: () => p });
+var i = n(627968);
 n(64700);
 var r = n(192308),
-    a = n(228366),
-    i = n(272355),
-    s = n(267102),
-    o = n(287809),
+    s = n(228366),
+    a = n(272355),
+    o = n(267102),
+    l = n(287809),
     u = n(207803),
     c = n(958805),
     d = n(591179),
-    f = n(485745),
+    _ = n(485745),
     h = n(652215);
-let A = new Set();
-function m(e, t) {
+let f = new Set();
+function p(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
-async function x(e) {
+async function E(e) {
     let {
             userId: t,
-            tabSection: a,
-            scrollTarget: i,
-            guildId: x,
-            originGuildId: g,
-            channelId: S,
-            appContext: T,
-            customStatusPrompt: E,
-            ...p
+            tabSection: s,
+            scrollTarget: a,
+            guildId: E,
+            originGuildId: m,
+            channelId: g,
+            appContext: A,
+            customStatusPrompt: I,
+            ...T
         } = e,
-        v = o.default.getUser(t);
-    if (null == v) return;
-    let R = o.default.getCurrentUser();
-    if (null == R) return;
-    let y = m(t, x);
-    A.add(
+        S = l.default.getUser(t);
+    if (null == S) return;
+    let y = l.default.getCurrentUser();
+    if (null == y) return;
+    let N = p(t, E);
+    f.add(
         await (0, r.openModalLazy)(
             async () => {
                 let e = (
@@ -307,44 +308,44 @@ async function x(e) {
                     ]).then(n.bind(n, 438857))
                 ).default;
                 return (t) =>
-                    (0, l.jsx)(e, {
-                        user: v,
-                        currentUser: R,
-                        guildId: x,
-                        originGuildId: g ?? x,
-                        initialTabSection: a,
-                        initialScrollTarget: i,
-                        channelId: S,
-                        customStatusPrompt: E,
+                    (0, i.jsx)(e, {
+                        user: S,
+                        currentUser: y,
+                        guildId: E,
+                        originGuildId: m ?? E,
+                        initialTabSection: s,
+                        initialScrollTarget: a,
+                        channelId: g,
+                        customStatusPrompt: I,
                         ...t,
-                        ...p,
+                        ...T,
                     });
             },
             {
-                modalKey: y,
-                contextKey: (0, r.modalContextFromAppContext)(T ?? (0, s.zd)() ?? h.BRT.APP),
+                modalKey: N,
+                contextKey: (0, r.modalContextFromAppContext)(A ?? (0, o.zd)() ?? h.BRT.APP),
                 onCloseRequest: () => {
                     let e = !(0, d.E)("UserProfileModalManager");
-                    t === R.id && (0, f.b)(e)
+                    t === y.id && (0, _.b)(e)
                         ? (0, u.VQ)()
-                        : ((0, r.closeModal)(y), A.delete(y), c.A.clearPendingWidgets(), e || (0, u.XQ)());
+                        : ((0, r.closeModal)(N), f.delete(N), c.A.clearPendingWidgets(), e || (0, u.XQ)());
                 },
             },
         ),
     );
 }
-function g() {
-    if (0 !== A.size) {
-        for (let e of A) (0, r.closeModal)(e);
-        A.clear(), c.A.clearPendingWidgets(), (0, d.E)("UserProfileModalManager") && (0, u.XQ)();
+function m() {
+    if (0 !== f.size) {
+        for (let e of f) (0, r.closeModal)(e);
+        f.clear(), c.A.clearPendingWidgets(), (0, d.E)("UserProfileModalManager") && (0, u.XQ)();
     }
 }
-class S extends i.A {
+class g extends a.A {
     _initialize() {
-        a.h.subscribe("USER_PROFILE_MODAL_OPEN", x), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", g);
+        s.h.subscribe("USER_PROFILE_MODAL_OPEN", E), s.h.subscribe("USER_PROFILE_MODAL_CLOSE", m);
     }
     _terminate() {
-        a.h.unsubscribe("USER_PROFILE_MODAL_OPEN", x), a.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", g);
+        s.h.unsubscribe("USER_PROFILE_MODAL_OPEN", E), s.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", m);
     }
 }
-let T = new S();
+let A = new g();

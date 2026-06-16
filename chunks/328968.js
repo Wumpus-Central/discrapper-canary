@@ -1,100 +1,101 @@
+"use strict";
 let i;
-l.d(t, { A: () => k });
-var n = l(17928),
-    r = l(228366),
-    s = l(773669),
-    u = l(112589),
-    a = l(403362);
-let o = {},
-    d = {},
-    h = {},
+n.d(t, { A: () => A });
+var r = n(17928),
+    s = n(228366),
+    a = n(773669),
+    o = n(112589),
+    l = n(403362);
+let u = {},
     c = {},
-    g = new Set();
-function m(e) {
+    d = {},
+    _ = {},
+    h = new Set();
+function f(e) {
     let t = e.id,
-        l = e.sku.id,
-        i = o[t],
-        n = u.A.createFromServer(e);
-    (null != i && !i.isSlimDirectoryVersion() && n.isSlimDirectoryVersion()) ||
-        (!1 === e.published ? (null == h[l] && (h[l] = new Set()), h[l].add(t)) : (c[l] = t),
-        (o[t] = n),
-        g.delete(e.sku.id));
+        n = e.sku.id,
+        i = u[t],
+        r = o.A.createFromServer(e);
+    (null != i && !i.isSlimDirectoryVersion() && r.isSlimDirectoryVersion()) ||
+        (!1 === e.published ? (null == d[n] && (d[n] = new Set()), d[n].add(t)) : (_[n] = t),
+        (u[t] = r),
+        h.delete(e.sku.id));
 }
-function _(e, t) {
+function p(e, t) {
     return `${e}:${t}`;
 }
-function p() {
-    (o = {}), (c = {}), (h = {}), (d = {}), (g = new Set());
+function E() {
+    (u = {}), (_ = {}), (d = {}), (c = {}), (h = new Set());
 }
-function S() {
-    if (i === s.default.locale) return !1;
-    p(), (i = s.default.locale);
+function m() {
+    if (i === a.default.locale) return !1;
+    E(), (i = a.default.locale);
 }
-class f extends n.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "StoreListingStore";
     initialize() {
-        this.waitFor(s.default), this.syncWith([s.default], S), (i = s.default.locale);
+        this.waitFor(a.default), this.syncWith([a.default], m), (i = a.default.locale);
     }
     get(e) {
-        return o[e];
+        return u[e];
     }
     getForSKU(e, t) {
-        let l = c[e];
-        return null != t ? d[_(t, e)] : null != l ? o[l] : null;
+        let n = _[e];
+        return null != t ? c[p(t, e)] : null != n ? u[n] : null;
     }
     getUnpublishedForSKU(e) {
-        let t = h[e];
+        let t = d[e];
         return null == t
             ? []
             : Array.from(t)
-                  .map((e) => o[e])
-                  .filter(a.Vq);
+                  .map((e) => u[e])
+                  .filter(l.Vq);
     }
     getForChannel(e, t) {
-        return d[_(e, t)];
+        return c[p(e, t)];
     }
     isFetchingForSKU(e) {
-        return g.has(e);
+        return h.has(e);
     }
     getStoreListing(e) {
-        let { storeListingId: t, skuId: l, channelId: i, isTestMode: n } = e;
-        if (n && null != l) {
-            let e = this.getUnpublishedForSKU(l);
+        let { storeListingId: t, skuId: n, channelId: i, isTestMode: r } = e;
+        if (r && null != n) {
+            let e = this.getUnpublishedForSKU(n);
             if (null != e && e.length > 0) return e[0];
         }
         if (null != t) return this.get(t);
         if (null != i) {
-            if (null == l) throw Error("getStoreListing with channel expects a skuId");
-            return this.getForChannel(i, l);
+            if (null == n) throw Error("getStoreListing with channel expects a skuId");
+            return this.getForChannel(i, n);
         }
-        return null != l ? this.getForSKU(l) : null;
+        return null != n ? this.getForSKU(n) : null;
     }
 }
-let k = new f(r.h, {
+let A = new g(s.h, {
     STORE_LISTINGS_FETCH_START: function (e) {
         let { skuId: t } = e;
-        g.add(t);
+        h.add(t);
     },
     STORE_LISTINGS_FETCH_FAIL: function (e) {
         let { skuId: t } = e;
-        g.delete(t);
+        h.delete(t);
     },
     STORE_LISTINGS_FETCH_SUCCESS: function (e) {
         let { storeListings: t } = e;
-        for (let e of t) m(e);
+        for (let e of t) f(e);
     },
     STORE_LISTING_FETCH_SUCCESS: function (e) {
-        let { storeListing: t, channelId: l } = e;
-        if (null != l) {
-            let e = u.A.createFromServer(t);
-            (d[_(l, e.skuId)] = e), (c[e.skuId] = e.id);
-        } else m(t);
+        let { storeListing: t, channelId: n } = e;
+        if (null != n) {
+            let e = o.A.createFromServer(t);
+            (c[p(n, e.skuId)] = e), (_[e.skuId] = e.id);
+        } else f(t);
     },
-    USER_SETTINGS_PROTO_UPDATE: S,
-    APPLICATION_STORE_CLEAR_DATA: p,
+    USER_SETTINGS_PROTO_UPDATE: m,
+    APPLICATION_STORE_CLEAR_DATA: E,
     GIFT_CODE_RESOLVE_SUCCESS: function (e) {
         let { giftCode: t } = e;
         if (null == t.store_listing) return !1;
-        m(t.store_listing);
+        f(t.store_listing);
     },
 });
