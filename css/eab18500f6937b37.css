@@ -5,7 +5,13 @@
 }
 
 .heading__848b5 {
-    margin-bottom: 0
+    display: -webkit-box;
+    margin-bottom: 0;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+    text-overflow: ellipsis
 }
 
 .bundleContents__848b5 {
@@ -125,7 +131,6 @@
 
 .activeItemNameText__848b5 {
     flex: 0 1 auto;
-    font-weight: var(--font-weight-semibold);
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -133,7 +138,7 @@
 }
 
 .activeItemTypeText__848b5 {
-    color: var(--text-subtle);
+    color: var(--text-muted);
     flex: 0 0 auto
 }
 
@@ -157,11 +162,21 @@
     width: 113px
 }
 
+.pfxPreviewContainerSolo__349b1 {
+    height: 246px;
+    width: 127px
+}
+
 .profileFramePreviewContainer__349b1 {
     align-self: center;
     height: 220px;
     position: relative;
     width: 118px
+}
+
+.profileFramePreviewContainerSolo__349b1 {
+    height: 246px;
+    width: 132px
 }
 
 .nameplatePreviewContainer__349b1 {

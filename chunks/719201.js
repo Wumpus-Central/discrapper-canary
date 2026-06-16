@@ -1,1 +1,1 @@
-e.exports={h1:"avatarPreviewContainer__349b1",sm:"pfxPreviewContainer__349b1",ob:"profileFramePreviewContainer__349b1",Dz:"nameplatePreviewContainer__349b1",M4:"nameplatePreview__349b1"}
+e.exports={h1:"avatarPreviewContainer__349b1",sm:"pfxPreviewContainer__349b1",VY:"pfxPreviewContainerSolo__349b1 pfxPreviewContainer__349b1",ob:"profileFramePreviewContainer__349b1",fE:"profileFramePreviewContainerSolo__349b1 profileFramePreviewContainer__349b1",Dz:"nameplatePreviewContainer__349b1",M4:"nameplatePreview__349b1"}
