@@ -1,13 +1,10 @@
 .profileEffects__0dd08 {
     border-radius: inherit;
-    height: 100%;
-    inset-inline-start: 0;
+    inset: var(--custom-user-profile-theme-padding, 0);
     overflow: hidden;
     pointer-events: none;
     position: absolute;
-    top: 0;
     transition: opacity .6s ease-in-out;
-    width: 100%;
     z-index: var(--custom-user-profile-middle-layer-z-index, 2)
 }
 
