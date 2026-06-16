@@ -269,7 +269,7 @@ async function Y(e, t, i, r) {
                         }),
                             (c = e.id),
                             (0, p.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("42478"), n.e("73384"), n.e("66009")]).then(
+                                let { default: e } = await Promise.all([n.e("9662"), n.e("73384"), n.e("66009")]).then(
                                     n.bind(n, 33216),
                                 );
                                 return (n) => (0, f.jsx)(e, { ...n, channelId: c, messageId: t });

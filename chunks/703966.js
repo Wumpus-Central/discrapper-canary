@@ -22,9 +22,9 @@ var l,
     I = n(406704),
     j = n(885386),
     y = n(951260),
-    T = n(629016),
-    N = n(576705),
-    b = n(461213),
+    b = n(629016),
+    T = n(576705),
+    N = n(461213),
     v = n(625494),
     M = n(723702),
     R = n(518960),
@@ -376,12 +376,12 @@ let ex = s.memo(function (e) {
         w = (0, x.Us)(),
         F = s.useRef(null),
         H = s.useRef(null),
-        B = (0, o.bG)([b.A], () => b.A.getActivities()),
+        B = (0, o.bG)([N.A], () => N.A.getActivities()),
         V = (0, f.Et)(),
         K = (0, o.yK)([A.Ay], () => A.Ay.getNewClipIds()),
         z = (0, o.yK)(
-            [T.A],
-            () => (l.type === eu.rbe.DM ? B.filter((e) => !T.A.getParty(e.party?.id)?.has(l.getRecipientId())) : B),
+            [b.A],
+            () => (l.type === eu.rbe.DM ? B.filter((e) => !b.A.getParty(e.party?.id)?.has(l.getRecipientId())) : B),
             [B, l],
         ),
         { onShareClick: W } = (0, E.A)(l.id),
@@ -389,14 +389,14 @@ let ex = s.memo(function (e) {
         [$, J] = s.useState(null),
         em = (0, p.sw)() && (V || q),
         eg = l.isPrivate(),
-        ep = (0, o.bG)([N.A], () => eg || (N.A.can(eu.xBc.ATTACH_FILES, l) && N.A.can(eu.xBc.SEND_MESSAGES, l)));
+        ep = (0, o.bG)([T.A], () => eg || (T.A.can(eu.xBc.ATTACH_FILES, l) && T.A.can(eu.xBc.SEND_MESSAGES, l)));
     function eA() {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("11352"),
+                    n.e("38873"),
                     n.e("23887"),
-                    n.e("24554"),
+                    n.e("9662"),
                     n.e("29244"),
                     n.e("17095"),
                     n.e("45043"),
@@ -449,7 +449,7 @@ let ex = s.memo(function (e) {
         eI = (0, S.I7)(l ?? void 0),
         ej = (0, _.Sc)(),
         ey = (0, g.b)(),
-        eT = (function (e) {
+        eb = (function (e) {
             let {
                     canAttachFiles: t,
                     canStartThreads: n,
@@ -545,9 +545,9 @@ let ex = s.memo(function (e) {
             canSummarizeThreads: ey,
             isAppsButtonEnabled: !G || U,
         });
-    if (0 === eT.length) return null;
-    let eN = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eE.dW }),
-        eb = (0, i.jsx)(u.Y, {
+    if (0 === eb.length) return null;
+    let eT = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eE.dW }),
+        eN = (0, i.jsx)(u.Y, {
             targetElementRef: H,
             shouldShow: null != $,
             animation: u.Y.Animation.NONE,
@@ -565,7 +565,7 @@ let ex = s.memo(function (e) {
                     return (0, i.jsx)(ef, {
                         ...e,
                         onClose: () => J(null),
-                        options: eT,
+                        options: eb,
                         channel: l,
                         onFileUpload: () => F.current?.activateUploadDialogue(),
                         draftType: a,
@@ -586,7 +586,7 @@ let ex = s.memo(function (e) {
                     onDoubleClick: ep ? () => F.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
-                    children: eN,
+                    children: eT,
                 }),
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -609,7 +609,7 @@ let ex = s.memo(function (e) {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, i.jsx)("div", { className: eE.Jd, children: eb }),
+            (0, i.jsx)("div", { className: eE.Jd, children: eN }),
         ],
     });
 });

@@ -1,3 +1,16 @@
+.card_b651ff {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    margin-top: 16px;
+    padding: 16px
+}
+
+.label_b651ff {
+    flex: 1;
+    margin: 0 10px
+}
+
 .easyModeContainer__1a4ef {
     padding: 0
 }

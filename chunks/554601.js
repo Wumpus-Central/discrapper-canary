@@ -552,19 +552,19 @@ function eJ(e) {
                                                         n.e("76631"),
                                                         n.e("72451"),
                                                         n.e("11819"),
-                                                        n.e("15931"),
+                                                        n.e("30260"),
                                                         n.e("46334"),
                                                         n.e("26963"),
                                                         n.e("38805"),
-                                                        n.e("82216"),
+                                                        n.e("9662"),
                                                         n.e("80653"),
                                                         n.e("51692"),
                                                         n.e("17095"),
-                                                        n.e("40989"),
+                                                        n.e("21277"),
                                                         n.e("8981"),
                                                         n.e("87028"),
                                                         n.e("96130"),
-                                                        n.e("99474"),
+                                                        n.e("24410"),
                                                         n.e("41475"),
                                                         n.e("91888"),
                                                         n.e("6324"),
@@ -630,7 +630,7 @@ function eJ(e) {
                                                         n.e("89088"),
                                                         n.e("52548"),
                                                         n.e("15186"),
-                                                        n.e("54703"),
+                                                        n.e("77084"),
                                                         n.e("28152"),
                                                         n.e("75361"),
                                                         n.e("23532"),
@@ -658,7 +658,7 @@ function eJ(e) {
                                                         n.e("63213"),
                                                         n.e("30938"),
                                                         n.e("17859"),
-                                                        n.e("30301"),
+                                                        n.e("91528"),
                                                         n.e("48720"),
                                                         n.e("25279"),
                                                         n.e("72539"),
@@ -869,10 +869,10 @@ function e8(e) {
 }
 var e4 = n(34188),
     e2 = n(700623),
-    e3 = n(177953),
-    e7 = n(825484),
-    e5 = n(512950),
-    e6 = n(900797),
+    e7 = n(177953),
+    e3 = n(825484),
+    e6 = n(512950),
+    e5 = n(900797),
     e9 = n(847374),
     te = n(10716),
     tt = n(702841),
@@ -1209,7 +1209,7 @@ function tR(e) {
         className: tv.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e7.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1245,7 +1245,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e7.e, {
+            ? (0, r.jsxs)(e3.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tI, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1255,9 +1255,9 @@ function tO(e) {
                   ],
               })
             : s && !i && (0, I.Ag)(n)
-              ? (0, r.jsx)(e5.p, {
+              ? (0, r.jsx)(e6.p, {
                     className: tv.ai,
-                    messageType: e5.Y.WARNING,
+                    messageType: e6.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1320,7 +1320,7 @@ function tk(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e6.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(e9.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1431,14 +1431,14 @@ var tQ = n(111042),
     t8 = n(824552),
     t4 = n(168186),
     t2 = n(594061),
-    t3 = n(935208),
-    t7 = n(630248),
-    t5 = n(355097);
-function t6(e, t) {
+    t7 = n(935208),
+    t3 = n(630248),
+    t6 = n(355097);
+function t5(e, t) {
     o.useEffect(() => {
-        t2.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t6.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t7.A], () => t7.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -1449,7 +1449,7 @@ function t6(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             i?.forEach((e) => {
-                let t = t3.default.extractTimestamp(e.id);
+                let t = t7.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
@@ -1467,7 +1467,7 @@ function t6(e, t) {
     return o.useMemo(() => {
         let e, i;
         t?.forEach((t) => {
-            let n = t3.default.extractTimestamp(t.id);
+            let n = t7.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1870,7 +1870,7 @@ function nV(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t3.default.extractTimestamp(n);
+                        return -t7.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2092,7 +2092,7 @@ var nZ = n(984516),
     n8 = n(994369),
     n4 = n(240591),
     n2 = n(46477);
-function n3(e, t) {
+function n7(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2142,16 +2142,16 @@ function n3(e, t) {
         i,
     ).slice(0, i);
 }
-function n7(e, t) {
-    let n = t7.A.getScoreWithoutLoadingLatest(e.id);
-    return t7.A.getScoreWithoutLoadingLatest(t.id) - n;
+function n3(e, t) {
+    let n = t3.A.getScoreWithoutLoadingLatest(e.id);
+    return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n5(e, t) {
+function n6(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
 }
-function n6(e, t) {
+function n5(e, t) {
     return (0, g.RF)(e.displayName, t.displayName);
 }
 n(827669);
@@ -2390,7 +2390,7 @@ function lm(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n3(c, {
+                    return n7(c, {
                         limit: l,
                         filterPredicates: [
                             ((m = (0, n4.Bh)("channel" === t.type ? t.channel : void 0, [k.kc.CHAT])),
@@ -2485,7 +2485,7 @@ function lm(e) {
                                 let n = $.Ay.getScoreWithoutLoadingLatest(u, e);
                                 return $.Ay.getScoreWithoutLoadingLatest(u, t) - n;
                             }),
-                            n6,
+                            n5,
                         ],
                     });
                 }, [s, c, l, t, n]),
@@ -2527,7 +2527,7 @@ function lm(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n3(u, {
+                    return n7(u, {
                         limit: i,
                         filterPredicates: [
                             ((d = (0, n4.Bh)("channel" === t.type ? t.channel : void 0, [
@@ -2574,7 +2574,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n7, n5],
+                        sortComparers: [n3, n6],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3078,7 +3078,7 @@ function lv(e) {
                             let e = [];
                             return c && e.push(ns.gq), e;
                         }, [c]),
-                        u = t6(r, a),
+                        u = t5(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         let e = (e) => !(!1 === m && (0, t9.A)(e.id));
@@ -3255,7 +3255,7 @@ function lS(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t6(
+                c = t5(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})

@@ -1,9 +1,10 @@
-l.d(t, { Cl: () => s, Y_: () => i });
-var a = l(627968),
-    r = l(64700);
-let n = r.createContext(null),
-    i = () => r.useContext(n),
-    s = (e) => {
-        let { clip: t, children: l } = e;
-        return (0, a.jsx)(n.Provider, { value: t, children: l });
+"use strict";
+n.d(t, { Cl: () => o, Y_: () => a });
+var i = n(627968),
+    r = n(64700);
+let s = r.createContext(null),
+    a = () => r.useContext(s),
+    o = (e) => {
+        let { clip: t, children: n } = e;
+        return (0, i.jsx)(s.Provider, { value: t, children: n });
     };

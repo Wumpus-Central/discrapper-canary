@@ -1,112 +1,113 @@
-a.d(t, { P: () => b, ThirdPartyPromotionsModal: () => T });
-var s = a(627968);
-a(64700);
-var i = a(289873),
-    n = a(189213),
-    r = a(834730),
-    l = a(17928),
-    c = a(192308),
-    o = a(793574),
-    d = a(174459),
-    u = a(975571),
-    m = a(962644),
-    A = a(35587),
-    N = a(374200),
-    g = a(772167),
-    p = a(881373);
-let x = (e) => {
-    let { promotion: t, analyticsLocations: a } = e;
-    return (0, s.jsx)(g.wx, {
+"use strict";
+n.d(t, { P: () => C, ThirdPartyPromotionsModal: () => v });
+var i = n(627968);
+n(64700);
+var r = n(289873),
+    s = n(189213),
+    a = n(834730),
+    o = n(17928),
+    l = n(192308),
+    u = n(793574),
+    c = n(174459),
+    d = n(975571),
+    _ = n(962644),
+    h = n(35587),
+    f = n(374200),
+    p = n(772167),
+    E = n(881373);
+let m = (e) => {
+    let { promotion: t, analyticsLocations: n } = e;
+    return (0, i.jsx)(p.wx, {
         recurrence: t,
         titleVariant: "secondary",
         showPartnerLogo: !1,
         showPartnerImage: !1,
-        analyticsLocations: a,
+        analyticsLocations: n,
     });
 };
-var E = a(652215),
-    h = a(962995),
-    f = a(375708),
-    C = a(75662);
-let R = {
-        "Logitech G": { title: h.default.jkdhZq, titleParams: { discountPercent: p.aW }, body: h.default.mH30Yx },
+var g = n(652215),
+    A = n(962995),
+    I = n(375708),
+    T = n(75662);
+let S = {
+        "Logitech G": { title: A.default.jkdhZq, titleParams: { discountPercent: E.aW }, body: A.default.mH30Yx },
         "Logitech 5%": {
-            title: h.default.zeBjoX,
-            titleParams: { discountPercent: p.y$ },
-            body: h.default.fC4abC,
+            title: A.default.zeBjoX,
+            titleParams: { discountPercent: E.y$ },
+            body: A.default.fC4abC,
             bodyParams: { months: 6 },
         },
         "Logitech PRO Series Sim": {
-            title: h.default.pSBCjv,
-            titleParams: { discountPercent: p.K2 },
-            body: h.default.lsRjfl,
+            title: A.default.pSBCjv,
+            titleParams: { discountPercent: E.K2 },
+            body: A.default.lsRjfl,
         },
     },
-    _ = {
+    y = {
         logitech: {
-            modalTitle: h.default["2I7nK+"],
+            modalTitle: A.default["2I7nK+"],
             modalSubtitle: {
-                message: h.default.W8jOD0,
-                values: { termsUrl: u.A.getArticleURL(E.MVz.LOGITECH_PROMOTION) },
+                message: A.default.W8jOD0,
+                values: { termsUrl: d.A.getArticleURL(g.MVz.LOGITECH_PROMOTION) },
             },
             landingUrl: "https://www.logitech.com/",
         },
     },
-    I = (e, t) => {
-        let a = R[e.outboundTitle];
+    N = (e, t) => {
+        let n = S[e.outboundTitle];
         return {
             id: e.id,
             partnerId: e.partnerId ?? "",
-            title: null != a ? f.intl.formatToPlainString(a.title, a.titleParams ?? {}) : "",
+            title: null != n ? I.intl.formatToPlainString(n.title, n.titleParams ?? {}) : "",
             outboundTitle: e.outboundTitle,
-            body: null != a && null != a.body ? f.intl.formatToPlainString(a.body, a.bodyParams ?? {}) : "",
+            body: null != n && null != n.body ? I.intl.formatToPlainString(n.body, n.bodyParams ?? {}) : "",
             startDate: e.startDate,
             endDate: e.endDate,
             redemptionURL: e.outboundRedemptionPageLink,
             code: t,
         };
     },
-    T = (e) => {
-        let { partnerId: t, transitionState: a, onClose: c } = e,
-            d = _[t],
-            [u, m] = (0, l.yK)([N.A], () => {
-                let { recurring: e, oneTime: a } = N.A.getPromotionsByPartner(t);
-                return [e.filter((e) => null != R[e.outboundTitle]), a.filter((e) => null != R[e.outboundTitle])];
+    v = (e) => {
+        let { partnerId: t, transitionState: n, onClose: l } = e,
+            c = y[t],
+            [d, _] = (0, o.yK)([f.A], () => {
+                let { recurring: e, oneTime: n } = f.A.getPromotionsByPartner(t);
+                return [e.filter((e) => null != S[e.outboundTitle]), n.filter((e) => null != S[e.outboundTitle])];
             }),
-            { promotionsLoaded: p, claimedOutboundPromotionCodeMap: E } = (0, A.y7)();
-        if (!p) return (0, s.jsx)(i.y, {});
-        let T = d?.modalSubtitle != null ? f.intl.format(d.modalSubtitle.message, d.modalSubtitle.values) : void 0,
-            b = null == d ? t : f.intl.string(d.modalTitle);
-        return (0, s.jsx)(n.Modal, {
-            title: b,
-            subtitle: T,
+            { promotionsLoaded: E, claimedOutboundPromotionCodeMap: g } = (0, h.y7)();
+        if (!E) return (0, i.jsx)(r.y, {});
+        let v = c?.modalSubtitle != null ? I.intl.format(c.modalSubtitle.message, c.modalSubtitle.values) : void 0,
+            C = null == c ? t : I.intl.string(c.modalTitle);
+        return (0, i.jsx)(s.Modal, {
+            title: C,
+            subtitle: v,
             actions: [],
-            transitionState: a,
-            onClose: c,
-            children: (0, s.jsxs)("div", {
-                className: C.kL,
+            transitionState: n,
+            onClose: l,
+            children: (0, i.jsxs)("div", {
+                className: T.kL,
                 children: [
-                    u.length > 0 &&
-                        (0, s.jsxs)(s.Fragment, {
+                    d.length > 0 &&
+                        (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, s.jsx)(r.E, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: f.intl.string(h.default["9Y2p6p"]),
+                                    children: I.intl.string(A.default["9Y2p6p"]),
                                 }),
-                                (0, s.jsx)("div", {
-                                    className: C.kR,
-                                    children: u.map((e) =>
-                                        (0, s.jsx)(
-                                            g.wx,
+                                (0, i.jsx)("div", {
+                                    className: T.kR,
+                                    children: d.map((e) =>
+                                        (0, i.jsx)(
+                                            p.wx,
                                             {
                                                 recurrence: {
-                                                    ...I(e, E[e.id] ?? null),
-                                                    asset: (0, g.Cf)()[e.partnerId ?? ""]?.asset ?? "",
+                                                    ...N(e, g[e.id] ?? null),
+                                                    asset: (0, p.Cf)()[e.partnerId ?? ""]?.asset ?? "",
                                                 },
                                                 showPartnerImage: !0,
                                                 displayCTAInDedicatedFooter: !0,
-                                                analyticsLocations: [o.A.THIRD_PARTY_PROMOTIONS_MODAL],
+                                                analyticsLocations: [u.A.THIRD_PARTY_PROMOTIONS_MODAL],
                                             },
                                             e.id,
                                         ),
@@ -114,23 +115,23 @@ let R = {
                                 }),
                             ],
                         }),
-                    m.length > 0 &&
-                        (0, s.jsxs)("div", {
-                            className: C.E7,
+                    _.length > 0 &&
+                        (0, i.jsxs)("div", {
+                            className: T.E7,
                             children: [
-                                (0, s.jsx)(r.E, {
+                                (0, i.jsx)(a.E, {
                                     variant: "text-md/medium",
                                     color: "text-subtle",
-                                    children: f.intl.string(h.default.Wm58LR),
+                                    children: I.intl.string(A.default.Wm58LR),
                                 }),
-                                (0, s.jsx)("div", {
-                                    className: C.kR,
-                                    children: m.map((e) =>
-                                        (0, s.jsx)(
-                                            x,
+                                (0, i.jsx)("div", {
+                                    className: T.kR,
+                                    children: _.map((e) =>
+                                        (0, i.jsx)(
+                                            m,
                                             {
-                                                promotion: I(e, E[e.id] ?? null),
-                                                analyticsLocations: [o.A.THIRD_PARTY_PROMOTIONS_MODAL],
+                                                promotion: N(e, g[e.id] ?? null),
+                                                analyticsLocations: [u.A.THIRD_PARTY_PROMOTIONS_MODAL],
                                             },
                                             e.id,
                                         ),
@@ -142,16 +143,16 @@ let R = {
             }),
         });
     },
-    b = (e) => {
-        let { partnerId: t, analyticsLocations: i } = e;
-        d.default.track(E.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, {
+    C = (e) => {
+        let { partnerId: t, analyticsLocations: r } = e;
+        c.default.track(g.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, {
             partner_ids: [t],
             partner_id: t,
-            location_stack: i,
+            location_stack: r,
         }),
-            m.Ay.fetchActivePromotions(),
-            (0, c.openModalLazy)(async () => {
-                let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(a.bind(a, 581921));
-                return (a) => (0, s.jsx)(e, { ...a, partnerId: t });
+            _.Ay.fetchActivePromotions(),
+            (0, l.openModalLazy)(async () => {
+                let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(n.bind(n, 581921));
+                return (n) => (0, i.jsx)(e, { ...n, partnerId: t });
             });
     };

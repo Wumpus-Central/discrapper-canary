@@ -38,10 +38,10 @@ let E = (0, g.A)(
                             if (e?.id == null) return null;
                             (0, s.openModalLazy)(async () => {
                                 let { default: i } = await Promise.all([
-                                    n.e("82216"),
+                                    n.e("9662"),
                                     n.e("2677"),
                                     n.e("60909"),
-                                    n.e("77084"),
+                                    n.e("34796"),
                                     n.e("8555"),
                                     n.e("20287"),
                                     n.e("83952"),

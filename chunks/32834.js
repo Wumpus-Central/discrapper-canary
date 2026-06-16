@@ -1111,7 +1111,7 @@ var nT = t(268218),
     nM = t(938764),
     nD = t(519480),
     nP = t(352123),
-    nk = t(222983),
+    nk = t(328857),
     nw = t(478927);
 let nG = (e) => {
     let { guild: n, onAddGuild: i } = e,
@@ -4822,7 +4822,7 @@ let rY = () => (0, l.jsx)("div", { className: rW.wG, children: (0, l.jsx)(x.y, {
             t.e("6683"),
             t.e("33063"),
             t.e("4981"),
-            t.e("24554"),
+            t.e("9662"),
             t.e("43788"),
             t.e("28130"),
             t.e("2677"),
@@ -4864,7 +4864,7 @@ let rY = () => (0, l.jsx)("div", { className: rW.wG, children: (0, l.jsx)(x.y, {
     rq = (0, nT.Fe)({ createPromise: rK, webpackId: 540462, name: "ChannelCall", renderLoader: rY }),
     rX = () =>
         Promise.all([
-            t.e("24554"),
+            t.e("9662"),
             t.e("34796"),
             t.e("33063"),
             t.e("4981"),
@@ -4935,7 +4935,7 @@ let rY = () => (0, l.jsx)("div", { className: rW.wG, children: (0, l.jsx)(x.y, {
                 t.e("26846"),
                 t.e("4460"),
                 t.e("43943"),
-                t.e("24554"),
+                t.e("9662"),
                 t.e("6683"),
                 t.e("49681"),
                 t.e("28136"),

@@ -1,10 +1,11 @@
-var n = e(557939),
-    o = e(250594),
-    i = e(503199),
-    a = e(496538),
-    f = e(762503),
-    p = e(732376);
-n(
+"use strict";
+var i = n(557939),
+    r = n(250594),
+    s = n(503199),
+    a = n(496538),
+    o = n(762503),
+    l = n(732376);
+i(
     {
         target: "Array",
         proto: !0,
@@ -14,25 +15,25 @@ n(
             !(function () {
                 try {
                     Object.defineProperty([], "length", { writable: !1 }).unshift();
-                } catch (r) {
-                    return r instanceof TypeError;
+                } catch (e) {
+                    return e instanceof TypeError;
                 }
             })(),
     },
     {
-        unshift: function (r) {
-            var t = o(this),
-                e = i(t),
-                n = arguments.length;
-            if (n) {
-                p(e + n);
-                for (var c = e; c--; ) {
-                    var h = c + n;
-                    c in t ? (t[h] = t[c]) : f(t, h);
+        unshift: function (e) {
+            var t = r(this),
+                n = s(t),
+                i = arguments.length;
+            if (i) {
+                l(n + i);
+                for (var u = n; u--; ) {
+                    var c = u + i;
+                    u in t ? (t[c] = t[u]) : o(t, c);
                 }
-                for (var s = 0; s < n; s++) t[s] = arguments[s];
+                for (var d = 0; d < i; d++) t[d] = arguments[d];
             }
-            return a(t, e + n);
+            return a(t, n + i);
         },
     },
 );

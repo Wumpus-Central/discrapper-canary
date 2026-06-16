@@ -1,37 +1,38 @@
-n.d(r, { Nx: () => a, Qq: () => h, Wd: () => s, Zt: () => d });
-var l = n(353640),
-    t = n(462887),
-    i = n(736653),
-    o = n(543699),
-    u = n(652215);
-let d = (0, l.v)()((e) => ({
+"use strict";
+n.d(t, { Nx: () => c, Qq: () => d, Wd: () => u, Zt: () => l });
+var i = n(353640),
+    r = n(462887),
+    s = n(736653),
+    a = n(543699),
+    o = n(652215);
+let l = (0, i.v)()((e) => ({
     themeOverride: null,
     savedClientTheme: null,
-    setThemeOverride: (r) => e({ themeOverride: r }),
-    setSavedClientTheme: (r) => e({ savedClientTheme: r }),
+    setThemeOverride: (t) => e({ themeOverride: t }),
+    setSavedClientTheme: (t) => e({ savedClientTheme: t }),
 }));
-function s() {
+function u() {
     let e,
-        r = d((e) => e.themeOverride),
-        n = (0, i.Ay)();
-    if (null == r) return null;
-    let l = null,
-        s = null;
+        t = l((e) => e.themeOverride),
+        n = (0, s.Ay)();
+    if (null == t) return null;
+    let i = null,
+        u = null;
     return (
-        "nitro" === r.mode
-            ? ((l = r.themeColors?.[0] ?? null),
-              (s = r.themeColors?.[1] ?? null),
-              (e = null != l && null != s ? ((0, o.tM)(l) ?? n) : n))
-            : (e = r.themeType ?? n),
-        e === u.NJ8.DARK && (0, t.M)(n) ? (e = n) : e === u.NJ8.DARK && (0, t.q)(n) && (e = u.NJ8.DARKER),
-        { theme: e, primaryColor: l, secondaryColor: s }
+        "nitro" === t.mode
+            ? ((i = t.themeColors?.[0] ?? null),
+              (u = t.themeColors?.[1] ?? null),
+              (e = null != i && null != u ? ((0, a.tM)(i) ?? n) : n))
+            : (e = t.themeType ?? n),
+        e === o.NJ8.DARK && (0, r.M)(n) ? (e = n) : e === o.NJ8.DARK && (0, r.q)(n) && (e = o.NJ8.DARKER),
+        { theme: e, primaryColor: i, secondaryColor: u }
     );
 }
-function a() {
-    let e = d((e) => e.themeOverride);
+function c() {
+    let e = l((e) => e.themeOverride);
     return null != e && ("non-nitro" === e.mode || !0 === e.disableBanner);
 }
-function h() {
-    let e = d((e) => e.themeOverride);
+function d() {
+    let e = l((e) => e.themeOverride);
     return null != e && "non-nitro" === e.mode;
 }

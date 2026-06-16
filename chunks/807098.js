@@ -1,10 +1,11 @@
+"use strict";
 n.d(t, { T: () => o });
-var l = n(17928),
-    i = n(462887),
-    a = n(736653),
-    r = n(775602);
+var i = n(17928),
+    r = n(462887),
+    s = n(736653),
+    a = n(775602);
 function o(e, t) {
-    let n = (0, a.Ay)(),
-        o = (0, l.bG)([r.Ay], () => r.Ay.useReducedMotion);
-    return null == e ? null : (0, i.M)(n) || t ? (o ? e.darkStaticUrl : e.darkUrl) : o ? e.lightStaticUrl : e.lightUrl;
+    let n = (0, s.Ay)(),
+        o = (0, i.bG)([a.Ay], () => a.Ay.useReducedMotion);
+    return null == e ? null : (0, r.M)(n) || t ? (o ? e.darkStaticUrl : e.darkUrl) : o ? e.lightStaticUrl : e.lightUrl;
 }

@@ -287,7 +287,7 @@ var eL = n(875317),
     e1 = n(468689),
     e6 = n(375708),
     e3 = n(330766);
-function e4(e) {
+function e2(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
         s = (0, eJ.bG)([V.A, eN.default], () => {
             let e = eN.default.getCurrentUser(),
@@ -321,7 +321,7 @@ function e4(e) {
     );
 }
 var e8 = n(338854);
-function e2(e) {
+function e4(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e;
     return (0, l.jsx)(e8.H, {
         targetElementRef: i,
@@ -461,7 +461,7 @@ let ts = a.memo(function (e) {
                 }
                 case u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL:
                     return (0, l.jsx)(ti, {
-                        renderPopout: (e) => (0, l.jsx)(e4, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e2, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 case u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL:
@@ -476,7 +476,7 @@ let ts = a.memo(function (e) {
                     });
                 case u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL:
                     return (0, l.jsx)(ti, {
-                        renderPopout: (e) => (0, l.jsx)(e2, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
+                        renderPopout: (e) => (0, l.jsx)(e4, { guildId: n.id, markAsDismissed: r, targetElementRef: e }),
                         renderGuildHeaderDropdownButton: i,
                     });
                 default:
@@ -751,9 +751,9 @@ var tK = n(503698),
     t1 = n(713654),
     t6 = n(976860),
     t3 = n(790535),
-    t4 = n(110618),
+    t2 = n(110618),
     t8 = n(495544),
-    t2 = n(309010),
+    t4 = n(309010),
     t5 = n(312006),
     t9 = n(403362),
     t7 = n(707592),
@@ -1053,9 +1053,9 @@ function nN(e) {
         u = (0, d.bG)([R.A], () => R.A.can(v.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([t8.default, t2.A, t5.Ay], () => {
+            (0, d.bG)([t8.default, t4.A, t5.Ay], () => {
                 let e = t8.default.getId();
-                return t2.A.getVoiceChannelId() === t ? t5.Ay.getPermissionsForUser(e, t) : null;
+                return t4.A.getVoiceChannelId() === t ? t5.Ay.getPermissionsForUser(e, t) : null;
             }, [t])),
         A = e6.intl.string(e6.t.VJlc0S);
     switch (s) {
@@ -1085,7 +1085,7 @@ function nN(e) {
                                     color: "none",
                                     variant: "text-xs/normal",
                                     className: no.c8,
-                                    children: (0, t4.c)(r, o, n?.id, i.length),
+                                    children: (0, t2.c)(r, o, n?.id, i.length),
                                 }),
                             ],
                         })
@@ -1324,7 +1324,7 @@ class nw extends a.PureComponent {
         });
     };
     handleClose = () => {
-        let e = t2.A.getChannelId(),
+        let e = t4.A.getChannelId(),
             t = e6.intl.formatToPlainString(e6.t.DEn7nu, { invitePeople: e6.intl.string(e6.t.Sd8Ixw) });
         this.props.markAsDismissed(eE.i.UNKNOWN), null != e && nB.A.sendBotMessage(e, t);
     };
@@ -1430,11 +1430,11 @@ let n0 = new nJ(_.h),
         { type: v.n5X.GAME_CLAIM, dismissibleContentType: u.M.GAME_CLAIM_COACHMARK },
     ],
     n3 = n6.map((e) => e.store).filter(t9.Vq),
-    n4 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
+    n2 = new Set([u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, u.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n8(e) {
     e.stopPropagation();
 }
-let n2 = [];
+let n4 = [];
 function n5(e) {
     var t, n;
     let i,
@@ -1458,7 +1458,7 @@ function n5(e) {
             (c = r && o),
             a.useMemo(() => {
                 let e = [];
-                return c && e.push(u.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n2;
+                return c && e.push(u.M.GAME_CLAIM_COACHMARK), e.length > 0 ? e : n4;
             }, [c])),
         [I, _] = (0, ei.ww)(g, A.id, eE.m.CHANNEL_NOTICES, !0),
         N = null != I,
@@ -1470,7 +1470,7 @@ function n5(e) {
                     : n6
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
-                              return !0 === n?.channelNoticePredicate(A, E) && !n4.has(t);
+                              return !0 === n?.channelNoticePredicate(A, E) && !n2.has(t);
                           })
                           .map((e) => e.dismissibleContentType),
             [A, E, N],
@@ -1619,9 +1619,9 @@ class ir extends a.PureComponent {
                     n.e("45333"),
                     n.e("47141"),
                     n.e("2677"),
-                    n.e("77084"),
+                    n.e("34796"),
                     n.e("51692"),
-                    n.e("24554"),
+                    n.e("9662"),
                     n.e("96575"),
                     n.e("28130"),
                     n.e("99961"),
@@ -1635,7 +1635,7 @@ class ir extends a.PureComponent {
                     n.e("76631"),
                     n.e("72451"),
                     n.e("11819"),
-                    n.e("34784"),
+                    n.e("30260"),
                     n.e("46334"),
                     n.e("26963"),
                     n.e("38805"),
@@ -1656,11 +1656,11 @@ class ir extends a.PureComponent {
                     n.e("52033"),
                     n.e("85791"),
                     n.e("57006"),
-                    n.e("54389"),
+                    n.e("21277"),
                     n.e("83566"),
                     n.e("58376"),
                     n.e("4460"),
-                    n.e("49297"),
+                    n.e("60389"),
                     n.e("88712"),
                     n.e("83185"),
                     n.e("2892"),
@@ -2335,10 +2335,10 @@ function io(e) {
     it.A.useConfig({ guildId: L, location: "guild_sidebar" });
     let e6 = (0, eG.C$)(L, "GuildSidebar"),
         e3 = (0, d.bG)([V.A], () => V.A.getGuild(L)?.features.has(v.GuildFeatures.GAME_SERVERS) ?? !1, [L]),
-        e4 = e6 && !e3 && !1 === e1,
+        e2 = e6 && !e3 && !1 === e1,
         e8 = (0, eD.J)("GuildSidebar"),
-        e2 = (0, eU.S)(L, "GuildSidebar"),
-        e5 = e6 && !e3 && e2 && !1 === e1,
+        e4 = (0, eU.S)(L, "GuildSidebar"),
+        e5 = e6 && !e3 && e4 && !1 === e1,
         e9 = (0, ej.A)(),
         e7 = (0, eP.A)(L),
         te = !1 === e1 && e9 && null != e7,
@@ -2349,7 +2349,7 @@ function io(e) {
         eT && ti.push(u.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
         eM && ti.push(u.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === e1 && ti.push(u.M.GUILD_POWERUP_PERKS_COACHMARK),
-        e4 && ti.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        e2 && ti.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         e5 && ti.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
         e$ && ti.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [ts, tl] = (0, ei.kn)(ti, eE.m.GUILD_HEADER_TOOLTIPS),

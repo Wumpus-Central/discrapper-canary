@@ -1,18 +1,19 @@
-n.d(t, { g: () => s, t: () => c });
-var l = n(64700),
-    a = n(155718),
-    i = n(587895),
-    r = n(429913),
+"use strict";
+n.d(t, { g: () => c, t: () => u });
+var i = n(64700),
+    r = n(155718),
+    s = n(587895),
+    a = n(429913),
     o = n(395671),
-    u = n(705751);
-function c(e) {
+    l = n(705751);
+function u(e) {
     if (null == e) return null;
-    if (e.type !== u.S7.GAME) return e;
-    let t = e.linkedGames?.find((e) => e.type === a.Mh.OFFICIAL);
-    return t?.application ?? i.A.getApplication(t?.id) ?? null;
+    if (e.type !== l.S7.GAME) return e;
+    let t = e.linkedGames?.find((e) => e.type === r.Mh.OFFICIAL);
+    return t?.application ?? s.A.getApplication(t?.id) ?? null;
 }
-function s(e) {
+function c(e) {
     let t = null == e || e instanceof o.Ay ? void 0 : e.getOfficialApplicationId(),
-        n = (0, r.h)(t);
-    return l.useMemo(() => (null == e ? null : e instanceof o.Ay ? c(e) : (n ?? null)), [e, n]);
+        n = (0, a.h)(t);
+    return i.useMemo(() => (null == e ? null : e instanceof o.Ay ? u(e) : (n ?? null)), [e, n]);
 }

@@ -19,8 +19,8 @@ var n = t(627968),
     x = t(834757),
     S = t(566668),
     _ = t(832163),
-    E = t(565688),
-    N = t(533562),
+    N = t(565688),
+    E = t(533562),
     y = t(854627),
     C = t(616356),
     b = t(495544),
@@ -29,8 +29,8 @@ var n = t(627968),
     O = t(576705),
     G = t(290863),
     k = t(977997),
-    V = t(174459),
-    P = t(927813),
+    P = t(174459),
+    V = t(927813),
     R = t(427262),
     w = t(329554),
     D = t(402313),
@@ -43,7 +43,7 @@ let F = (0, I.Fe)({
             t.e("38805"),
             t.e("38123"),
             t.e("48898"),
-            t.e("99474"),
+            t.e("24410"),
             t.e("81804"),
             t.e("19393"),
             t.e("4355"),
@@ -52,14 +52,14 @@ let F = (0, I.Fe)({
             t.e("76631"),
             t.e("72451"),
             t.e("11819"),
-            t.e("34784"),
+            t.e("30260"),
             t.e("46334"),
             t.e("26963"),
-            t.e("24554"),
+            t.e("9662"),
             t.e("80653"),
             t.e("51692"),
             t.e("17095"),
-            t.e("54389"),
+            t.e("21277"),
             t.e("8981"),
             t.e("87028"),
             t.e("96130"),
@@ -124,7 +124,7 @@ let F = (0, I.Fe)({
             t.e("34530"),
             t.e("9233"),
             t.e("28662"),
-            t.e("54703"),
+            t.e("77084"),
             t.e("71133"),
             t.e("28152"),
             t.e("75361"),
@@ -155,7 +155,7 @@ let F = (0, I.Fe)({
             t.e("63213"),
             t.e("30938"),
             t.e("17859"),
-            t.e("30301"),
+            t.e("91528"),
             t.e("48720"),
             t.e("25279"),
             t.e("72539"),
@@ -236,7 +236,7 @@ function z(e) {
             activities: G.A.getActivities(i.id, t),
         })),
         x = (0, s.bG)([k.A], () => k.A.getVoiceStateForChannel(l, i.id)?.connectedAt),
-        S = null != x ? new Date(x * P.A.Millis.SECOND).getTime() : null;
+        S = null != x ? new Date(x * V.A.Millis.SECOND).getTime() : null;
     return (0, n.jsxs)("div", {
         className: M.aq,
         children: [
@@ -266,7 +266,7 @@ function K(e) {
         I = l.useMemo(() => ({ [a.guild_id]: [r.id] }), [a.guild_id, r.id]);
     (0, o.Eq)(I, "VoiceUserActivities");
     let { enabled: y } = D.A.useExperiment({ guildId: a.guild_id, location: "VoiceUserPopout" }),
-        [j, P] = (0, s.yK)(
+        [j, V] = (0, s.yK)(
             [C.A],
             () => [C.A.getStreamForUser(r.id, a.getGuildId()), C.A.getActiveStreamForUser(r.id, a.getGuildId())],
             [a, r.id],
@@ -279,8 +279,8 @@ function K(e) {
             ((i = (0, A.Ay)(a)),
             (t = l.useMemo(() => i.filter((e) => e.embeddedActivity.userIds.has(r.id)), [i, r.id])),
             [...(0, A.Rz)(t).values()]),
-        q = (0, N.W)(),
-        H = (0, E.m)({ location: "voice_channel_activities" }),
+        q = (0, E.W)(),
+        H = (0, N.m)({ location: "voice_channel_activities" }),
         $ = (0, s.bG)([_.A], () => _.A.getDetectableIdsToApplicationIds()),
         W = g ?? K,
         Z = (0, m.m)(r, W),
@@ -290,7 +290,7 @@ function K(e) {
     if (
         (l.useEffect(() => {
             Q &&
-                V.default.track(d.HAw.OPEN_POPOUT, {
+                P.default.track(d.HAw.OPEN_POPOUT, {
                     type: "Voice User Activities",
                     channel_id: a.id,
                     other_user_id: r.id,
@@ -304,7 +304,7 @@ function K(e) {
             J &&
                 (0, n.jsx)(S.P, {
                     stream: j,
-                    activeStream: P,
+                    activeStream: V,
                     streamActivity: K,
                     user: r,
                     currentUserId: F,
