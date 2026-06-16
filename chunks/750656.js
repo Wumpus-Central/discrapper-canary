@@ -1,19 +1,9 @@
 "use strict";
-n.d(t, { Jl: () => l, Wf: () => u, rA: () => a, re: () => s, sO: () => o });
+n.d(t, { Jl: () => o, Wf: () => l, re: () => s, sO: () => a });
 var i = n(508425),
     r = n(559949);
 let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
-    a = [
-        r.x.DEFAULT,
-        r.x.ZILLA_SLAB,
-        r.x.CHERRY_BOMB,
-        r.x.CHICLE,
-        r.x.MUSEO_MODERNO,
-        r.x.NEO_CASTEL,
-        r.x.PIXELIFY,
-        r.x.SINISTRE,
-    ],
-    o = new Map([
+    a = new Map([
         [r.x.SINISTRE, 19.85],
         [r.x.NEO_CASTEL, 19.03],
         [r.x.CHERRY_BOMB, 18.54],
@@ -23,10 +13,10 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         [r.x.MUSEO_MODERNO, 6.82],
         [r.x.DEFAULT, 4.29],
     ]),
-    l = [
+    o = [
         1628845, 2417517, 1874155, 0xc32aff, 0xfc1965, 0xc6a615, 695675, 1027403, 747943, 0xa913e5, 0xda0149, 0xf93722,
     ],
-    u = [
+    l = [
         [2797222, 16762e3],
         [2535780, 9497343],
         [0xe45eff, 2522592],

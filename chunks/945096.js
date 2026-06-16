@@ -31,22 +31,22 @@ function l(e) {
 function u(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
-function c() {
-    let e,
-        t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        n = a.re[Math.floor(Math.random() * a.re.length)],
-        i = t
-            ? (function () {
-                  let e = Math.random() * a.rA.reduce((e, t) => e + (a.sO.get(t) ?? 0), 0);
-                  for (let t of a.rA) if ((e -= a.sO.get(t) ?? 0) <= 0) return t;
-                  return a.rA[a.rA.length - 1];
-              })()
-            : a.rA[Math.floor(Math.random() * a.rA.length)];
-    if (o(n) > 1) {
-        let t = a.Wf[Math.floor(Math.random() * a.Wf.length)];
-        e = [t.start, t.end];
-    } else e = [a.Jl[Math.floor(Math.random() * a.Jl.length)]];
-    return { fontId: i, effectId: n, colors: e };
+function c(e) {
+    let t,
+        n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        i = a.re[Math.floor(Math.random() * a.re.length)],
+        r = n
+            ? (function (e) {
+                  let t = Math.random() * e.reduce((e, t) => e + (a.sO.get(t) ?? 0), 0);
+                  for (let n of e) if ((t -= a.sO.get(n) ?? 0) <= 0) return n;
+                  return e[e.length - 1];
+              })(e)
+            : e[Math.floor(Math.random() * e.length)];
+    if (o(i) > 1) {
+        let e = a.Wf[Math.floor(Math.random() * a.Wf.length)];
+        t = [e.start, e.end];
+    } else t = [a.Jl[Math.floor(Math.random() * a.Jl.length)]];
+    return { fontId: r, effectId: i, colors: t };
 }
 function d(e) {
     if (null == e) return !1;

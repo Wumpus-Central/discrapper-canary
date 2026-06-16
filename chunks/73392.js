@@ -16,6 +16,7 @@ let c = {
     [s.x.PIXELIFY]: u.f,
     [s.x.SINISTRE]: u.yH,
     [s.x.ZILLA_SLAB]: u.FR,
+    [s.x.PLAYPEN_SANS]: u.R_,
 };
 function d(e) {
     return { name: (0, o.A)(e), className: c[e] ?? "" };

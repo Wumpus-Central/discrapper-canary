@@ -8,4 +8,5 @@ n.exports = {
     f: "pixelify__89a31",
     yH: "sinistre__89a31",
     FR: "zillaSlab__89a31",
+    R_: "playpenSans__89a31",
 };
