@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(492462),
-    r = n(976860),
-    s = n(568065),
-    a = n(652215),
-    o = n(746080);
-function l(e, t, n) {
-    let l = null != n ? { search: (0, i.stringify)({ [s.G0]: n }) } : void 0;
-    (0, r.pX)(a.BVt.CHANNEL(e, o.VV.GUILD_BOOSTS), { ...l, source: t });
+r.d(t, { A: () => s });
+var n = r(492462),
+    a = r(976860),
+    o = r(568065),
+    i = r(652215),
+    l = r(746080);
+function s(e, t, r) {
+    let s = null != r ? { search: (0, n.stringify)({ [o.G0]: r }) } : void 0;
+    (0, a.pX)(i.BVt.CHANNEL(e, l.VV.GUILD_BOOSTS), { ...s, source: t });
 }

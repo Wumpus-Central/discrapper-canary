@@ -1,31 +1,30 @@
-"use strict";
-n.d(t, { A: () => u });
-var i = n(627968),
-    r = n(284009),
-    s = n.n(r),
-    a = n(192308),
+n.d(t, { A: () => c });
+var l = n(627968),
+    a = n(284009),
+    i = n.n(a),
+    r = n(192308),
     o = n(228366);
-function l(e) {
+function u(e) {
     o.h.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: e });
 }
-let u = {
+let c = {
     openGameProfileModal: function (e) {
-        let { gameId: t, gameProfileModalChecks: r, source: o, sourceUserId: l, appContext: u } = e;
-        s()(
-            r.shouldOpenGameProfile,
+        let { gameId: t, gameProfileModalChecks: a, source: o, sourceUserId: u, appContext: c } = e;
+        i()(
+            a.shouldOpenGameProfile,
             "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?",
         ),
-            s()(
-                r.gameId === t,
+            i()(
+                a.gameId === t,
                 "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?",
             ),
-            (0, a.openModalLazy)(
+            (0, r.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
                         n.e("38873"),
                         n.e("11619"),
                         n.e("2677"),
-                        n.e("54389"),
+                        n.e("21277"),
                         n.e("17095"),
                         n.e("96575"),
                         n.e("89729"),
@@ -38,7 +37,7 @@ let u = {
                         n.e("32993"),
                         n.e("6330"),
                         n.e("22274"),
-                        n.e("77084"),
+                        n.e("34796"),
                         n.e("87550"),
                         n.e("77688"),
                         n.e("29312"),
@@ -254,7 +253,7 @@ let u = {
                         n.e("92731"),
                         n.e("96325"),
                         n.e("28662"),
-                        n.e("54703"),
+                        n.e("77084"),
                         n.e("85901"),
                         n.e("5131"),
                         n.e("71133"),
@@ -287,7 +286,7 @@ let u = {
                         n.e("63213"),
                         n.e("30938"),
                         n.e("17859"),
-                        n.e("30301"),
+                        n.e("91528"),
                         n.e("48720"),
                         n.e("25279"),
                         n.e("72539"),
@@ -358,20 +357,20 @@ let u = {
                         n.e("83295"),
                         n.e("99215"),
                     ]).then(n.bind(n, 252046));
-                    return (n) => (0, i.jsx)(e, { gameId: t, source: o, sourceUserId: l, ...n, appContext: u });
+                    return (n) => (0, l.jsx)(e, { gameId: t, source: o, sourceUserId: u, ...n, appContext: c });
                 },
-                { contextKey: null != u ? (0, a.modalContextFromAppContext)(u) : void 0 },
+                { contextKey: null != c ? (0, r.modalContextFromAppContext)(c) : void 0 },
             );
     },
     returnToGameProfile: function (e) {
-        let { gameId: t, source: r, initialScrollOffset: s } = e;
-        l(t),
-            (0, a.openModalLazy)(async () => {
+        let { gameId: t, source: a, initialScrollOffset: i } = e;
+        u(t),
+            (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     n.e("38873"),
                     n.e("11619"),
                     n.e("2677"),
-                    n.e("54389"),
+                    n.e("21277"),
                     n.e("17095"),
                     n.e("96575"),
                     n.e("89729"),
@@ -384,7 +383,7 @@ let u = {
                     n.e("32993"),
                     n.e("6330"),
                     n.e("22274"),
-                    n.e("77084"),
+                    n.e("34796"),
                     n.e("87550"),
                     n.e("77688"),
                     n.e("29312"),
@@ -600,7 +599,7 @@ let u = {
                     n.e("92731"),
                     n.e("96325"),
                     n.e("28662"),
-                    n.e("54703"),
+                    n.e("77084"),
                     n.e("85901"),
                     n.e("5131"),
                     n.e("71133"),
@@ -633,7 +632,7 @@ let u = {
                     n.e("63213"),
                     n.e("30938"),
                     n.e("17859"),
-                    n.e("30301"),
+                    n.e("91528"),
                     n.e("48720"),
                     n.e("25279"),
                     n.e("72539"),
@@ -704,12 +703,12 @@ let u = {
                     n.e("83295"),
                     n.e("99215"),
                 ]).then(n.bind(n, 252046));
-                return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: s, ...n });
+                return (n) => (0, l.jsx)(e, { gameId: t, source: a, initialScrollOffset: i, ...n });
             });
     },
     setGameProfilePendingReturn: function (e) {
-        let { gameId: t, channelId: n, initialScrollOffset: i } = e;
-        o.h.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId: t, channelId: n, initialScrollOffset: i });
+        let { gameId: t, channelId: n, initialScrollOffset: l } = e;
+        o.h.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId: t, channelId: n, initialScrollOffset: l });
     },
-    clearGameProfilePendingReturn: l,
+    clearGameProfilePendingReturn: u,
 };

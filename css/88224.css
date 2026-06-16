@@ -1,0 +1,7 @@
+.fauxDisabled__666fa {
+    opacity: .5
+}
+
+.enable-forced-colors .fauxDisabled__666fa {
+    opacity: 1
+}

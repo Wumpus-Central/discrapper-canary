@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { K: () => o, R: () => l });
-var i = n(627968),
+n.d(t, { K: () => s, R: () => o });
+var a = n(627968),
     r = n(192308),
-    s = n(892491),
-    a = n(700331);
-let o = "Media Viewer Modal";
-function l(e, t) {
-    let { location: l, contextKey: u, onClose: c, ...d } = e,
-        _ = d.items[d.startingIndex ?? 0]?.sourceMetadata?.message;
-    a.l.markSessionStarted({
-        channelId: _?.channel_id,
-        numMediaItems: d.items.length,
-        source: l,
-        hasMediaOptions: !d.shouldHideMediaOptions,
+    l = n(892491),
+    i = n(700331);
+let s = "Media Viewer Modal";
+function o(e, t) {
+    let { location: o, contextKey: c, onClose: d, ...u } = e,
+        m = u.items[u.startingIndex ?? 0]?.sourceMetadata?.message;
+    i.l.markSessionStarted({
+        channelId: m?.channel_id,
+        numMediaItems: u.items.length,
+        source: o,
+        hasMediaOptions: !u.shouldHideMediaOptions,
     }),
         (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("54389"),
+                    n.e("21277"),
                     n.e("2677"),
                     n.e("76631"),
                     n.e("96575"),
@@ -30,7 +29,7 @@ function l(e, t) {
                     n.e("32993"),
                     n.e("6330"),
                     n.e("22274"),
-                    n.e("77084"),
+                    n.e("34796"),
                     n.e("87550"),
                     n.e("77688"),
                     n.e("71934"),
@@ -165,7 +164,7 @@ function l(e, t) {
                     n.e("51130"),
                     n.e("32823"),
                     n.e("34691"),
-                    n.e("54703"),
+                    n.e("77084"),
                     n.e("85901"),
                     n.e("76428"),
                     n.e("96137"),
@@ -187,20 +186,20 @@ function l(e, t) {
                     n.e("59459"),
                 ]).then(n.bind(n, 315790));
                 return function (t) {
-                    return (0, i.jsx)(e, {
+                    return (0, a.jsx)(e, {
                         ...t,
-                        ...d,
+                        ...u,
                         onClose: () => {
-                            c?.(), t.onClose();
+                            d?.(), t.onClose();
                         },
                     });
                 };
             },
             {
-                modalKey: o,
-                contextKey: u,
-                onCloseCallback: a.l.markSessionCompleted,
-                backdropStyle: s.F.LIGHTBOX,
+                modalKey: s,
+                contextKey: c,
+                onCloseCallback: i.l.markSessionCompleted,
+                backdropStyle: l.F.LIGHTBOX,
                 stackingBehavior: t,
             },
         );

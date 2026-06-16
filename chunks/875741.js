@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => s, i: () => r }), n(64700);
+n.d(t, { A: () => s, i: () => l }), n(64700);
 var i = n(77157);
-function r(e) {
+function l(e) {
     return {
         profileFrameStyle: {
             "--custom-profile-frame-container-width": e.innerWidth,
@@ -14,5 +13,5 @@ function r(e) {
 }
 function s(e) {
     let t = (0, i.A)(e);
-    return null == t ? { profileFrameStyle: void 0, profileFrameClassName: void 0 } : r(t);
+    return null == t ? { profileFrameStyle: void 0, profileFrameClassName: void 0 } : l(t);
 }

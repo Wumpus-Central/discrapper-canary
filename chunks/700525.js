@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => h, d: () => d });
-var i = n(627968),
-    r = n(64700),
-    s = n(3745),
-    a = n(462887),
-    o = n(289873),
-    l = n(174459);
-class u {
+a.d(t, { A: () => o, d: () => h });
+var c = a(627968),
+    r = a(64700),
+    i = a(3745),
+    l = a(462887),
+    n = a(289873),
+    s = a(174459);
+class d {
     static getSiteKey(e) {
         return null != e
             ? e
@@ -14,68 +13,68 @@ class u {
               ? "6LeYqFcqAAAAAD6iZesmNgVulsO4PkpBdr6NVG6M"
               : "6LdtfVMqAAAAAMurhtf2pDhK0oqD4eLqeQPh025y";
     }
-    static loadRecaptchaScript(e, t, n) {
+    static loadRecaptchaScript(e, t, a) {
         if (null != document.getElementById(`recaptcha-script-${this.getSiteKey(e)}`)) {
-            null != t && (n?.("recaptcha-element-exists-callback"), t());
+            null != t && (a?.("recaptcha-element-exists-callback"), t());
             return;
         }
-        let i = document.createElement("script");
-        (i.src = `https://www.google.com/recaptcha/enterprise.js?render=${this.getSiteKey(e)}`),
-            (i.id = `recaptcha-script-${this.getSiteKey(e)}`),
-            (i.async = !0),
-            (i.defer = !0),
-            document.body.appendChild(i),
+        let c = document.createElement("script");
+        (c.src = `https://www.google.com/recaptcha/enterprise.js?render=${this.getSiteKey(e)}`),
+            (c.id = `recaptcha-script-${this.getSiteKey(e)}`),
+            (c.async = !0),
+            (c.defer = !0),
+            document.body.appendChild(c),
             null != t &&
-                (i.onload = () => {
-                    n?.("recaptcha-script-onload-callback"), t();
+                (c.onload = () => {
+                    a?.("recaptcha-script-onload-callback"), t();
                 });
     }
 }
-var c = n(652215);
-function d(e) {
-    let { sitekey: t, action: n, onVerify: s } = e,
-        [a, d] = r.useState("uninitialized"),
-        _ = r.useCallback((e) => {
-            l.default.track(c.HAw.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
+var p = a(652215);
+function h(e) {
+    let { sitekey: t, action: a, onVerify: i } = e,
+        [l, h] = r.useState("uninitialized"),
+        u = r.useCallback((e) => {
+            s.default.track(p.HAw.RECAPTCHA_MODAL_EVENT, { recaptcha_event_name: e });
         }, []),
-        h = r.useCallback(
+        o = r.useCallback(
             (e) => {
-                _("handle-verify"), s(e);
+                u("handle-verify"), i(e);
             },
-            [s, _],
+            [i, u],
         ),
-        f = r.useCallback(() => {
+        A = r.useCallback(() => {
             window?.grecaptcha?.enterprise?.ready(async () => {
-                _("recaptcha-ready"),
-                    h(await (window?.grecaptcha).enterprise.execute(t, null != n ? { action: n } : void 0)),
-                    d("loaded");
+                u("recaptcha-ready"),
+                    o(await (window?.grecaptcha).enterprise.execute(t, null != a ? { action: a } : void 0)),
+                    h("loaded");
             });
-        }, [t, n, h, _]),
-        p = r.useCallback(() => {
-            d("running"), _("recaptcha-loading"), u.loadRecaptchaScript(t, f, _);
-        }, [t, f, _]);
+        }, [t, a, o, u]),
+        g = r.useCallback(() => {
+            h("running"), u("recaptcha-loading"), d.loadRecaptchaScript(t, A, u);
+        }, [t, A, u]);
     return (
         r.useEffect(() => {
-            "uninitialized" === a && p();
-        }, [p, a]),
+            "uninitialized" === l && g();
+        }, [g, l]),
         r.useEffect(
             () => () => {
-                _("recaptcha-unloading"),
+                u("recaptcha-unloading"),
                     document
                         .querySelectorAll('script[src*="recaptcha/enterprise.js"],.grecaptcha-badge')
                         .forEach((e) => e.parentNode?.removeChild(e)),
                     null != window.grecaptcha && delete window.grecaptcha;
             },
-            [_],
+            [u],
         ),
-        (0, i.jsx)(o.y, {})
+        (0, c.jsx)(n.y, {})
     );
 }
-let _ = (e) => {
-    let { theme: t, ...n } = e,
-        r = (0, a.M)(t) ? "dark" : "light";
-    return (0, i.jsx)(s.A, { sitekey: c._Ak, ...n, theme: r });
+let u = (e) => {
+    let { theme: t, ...a } = e,
+        r = (0, l.M)(t) ? "dark" : "light";
+    return (0, c.jsx)(i.A, { sitekey: p._Ak, ...a, theme: r });
 };
-(_.Themes = { LIGHT: "light", DARK: "dark" }),
-    (_.Sizes = { COMPACT: "compact", NORMAL: "normal", INVISIBLE: "invisible" });
-let h = _;
+(u.Themes = { LIGHT: "light", DARK: "dark" }),
+    (u.Sizes = { COMPACT: "compact", NORMAL: "normal", INVISIBLE: "invisible" });
+let o = u;

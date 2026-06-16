@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { $: () => h });
-var i = n(64700),
-    r = n(532794),
-    s = n(561794),
-    a = n(627968),
+n.d(t, { $: () => A });
+var l = n(64700),
+    i = n(532794),
+    a = n(561794),
+    r = n(627968),
     o = n(192308),
-    l = n(945810);
-let u = (0, l.mj)({
+    s = n(945810);
+let c = (0, s.mj)({
         name: "2026-02-gifting-modal-redesign",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    c = (0, l.mj)({
+    u = (0, s.mj)({
         name: "2026-02-non-dm-gifting-modal-redesign",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -21,12 +20,12 @@ let u = (0, l.mj)({
 function d(e) {
     let {
         giftRecipient: t,
-        onClose: i,
-        analyticsLocations: r,
-        analyticsLocation: s,
-        analyticsObject: l,
-        giftMessage: u,
-        giftingOrigin: c,
+        onClose: l,
+        analyticsLocations: i,
+        analyticsLocation: a,
+        analyticsObject: s,
+        giftMessage: c,
+        giftingOrigin: u,
     } = e;
     return (0, o.openModalLazy)(
         async () => {
@@ -47,7 +46,7 @@ function d(e) {
                 n.e("26963"),
                 n.e("38805"),
                 n.e("17095"),
-                n.e("54389"),
+                n.e("21277"),
                 n.e("89729"),
                 n.e("32285"),
                 n.e("6683"),
@@ -57,7 +56,7 @@ function d(e) {
                 n.e("32993"),
                 n.e("6330"),
                 n.e("22274"),
-                n.e("77084"),
+                n.e("34796"),
                 n.e("87550"),
                 n.e("77688"),
                 n.e("29312"),
@@ -221,7 +220,7 @@ function d(e) {
                 n.e("15754"),
                 n.e("90191"),
                 n.e("28662"),
-                n.e("54703"),
+                n.e("77084"),
                 n.e("71133"),
                 n.e("28152"),
                 n.e("75361"),
@@ -252,7 +251,7 @@ function d(e) {
                 n.e("63213"),
                 n.e("30938"),
                 n.e("17859"),
-                n.e("30301"),
+                n.e("91528"),
                 n.e("48720"),
                 n.e("25279"),
                 n.e("72539"),
@@ -297,65 +296,65 @@ function d(e) {
                 n.e("13081"),
             ]).then(n.bind(n, 631808));
             return (n) =>
-                (0, a.jsx)(e, {
+                (0, r.jsx)(e, {
                     ...n,
                     giftRecipient: t,
-                    analyticsLocations: r,
-                    analyticsLocation: s,
-                    analyticsObject: l,
-                    giftMessage: u,
-                    giftingOrigin: c,
+                    analyticsLocations: i,
+                    analyticsLocation: a,
+                    analyticsObject: s,
+                    giftMessage: c,
+                    giftingOrigin: u,
                 });
         },
-        { modalKey: null != t ? `gift-selection-modal-${t.id}` : "gift-selection-modal", onCloseCallback: i },
+        { modalKey: null != t ? `gift-selection-modal-${t.id}` : "gift-selection-modal", onCloseCallback: l },
     );
 }
-var _ = n(788868);
-function h(e) {
+var C = n(788868);
+function A(e) {
     let {
             giftRecipient: t,
-            analyticsLocations: l,
-            analyticsObject: h,
-            wishlistAnalyticsObject: f,
-            premiumAnalyticsObject: p,
-            analyticsLocation: E,
+            analyticsLocations: s,
+            analyticsObject: A,
+            wishlistAnalyticsObject: g,
+            premiumAnalyticsObject: f,
+            analyticsLocation: N,
             giftMessage: m,
-            location: g,
+            location: p,
         } = e,
-        { enabled: A } = u.useConfig({ location: g }),
-        { enabled: I } = c.useConfig({ location: g }),
-        T = (0, s.tA)({ isGift: !0, giftRecipient: t }),
-        S = A && null != t,
-        y = I && null == t,
-        N = S || y,
-        v = T && null != t;
+        { enabled: T } = c.useConfig({ location: p }),
+        { enabled: _ } = u.useConfig({ location: p }),
+        I = (0, a.tA)({ isGift: !0, giftRecipient: t }),
+        h = T && null != t,
+        b = _ && null == t,
+        R = h || b,
+        O = I && null != t;
     return {
-        openGiftModal: i.useCallback(() => {
-            S && null != t
+        openGiftModal: l.useCallback(() => {
+            h && null != t
                 ? d({
                       giftRecipient: t,
-                      analyticsLocations: l,
-                      analyticsLocation: E,
-                      analyticsObject: f ?? h,
+                      analyticsLocations: s,
+                      analyticsLocation: N,
+                      analyticsObject: g ?? A,
                       giftMessage: m,
                   })
-                : y
+                : b
                   ? d({
-                        analyticsLocations: l,
-                        analyticsLocation: E,
-                        analyticsObject: f ?? h,
+                        analyticsLocations: s,
+                        analyticsLocation: N,
+                        analyticsObject: g ?? A,
                         giftMessage: m,
-                        giftingOrigin: _.vQ.GUILD_CHANNEL,
+                        giftingOrigin: C.vQ.GUILD_CHANNEL,
                     })
-                  : v && null != t
+                  : O && null != t
                     ? (function (e) {
                           let {
                               giftRecipient: t,
-                              onClose: i,
-                              analyticsLocations: r,
-                              analyticsLocation: s,
-                              analyticsObject: l,
-                              giftMessage: u,
+                              onClose: l,
+                              analyticsLocations: i,
+                              analyticsLocation: a,
+                              analyticsObject: s,
+                              giftMessage: c,
                           } = e;
                           (0, o.openModalLazy)(
                               async () => {
@@ -379,7 +378,7 @@ function h(e) {
                                       n.e("26963"),
                                       n.e("38805"),
                                       n.e("17095"),
-                                      n.e("54389"),
+                                      n.e("21277"),
                                       n.e("89729"),
                                       n.e("32285"),
                                       n.e("6683"),
@@ -389,7 +388,7 @@ function h(e) {
                                       n.e("32993"),
                                       n.e("6330"),
                                       n.e("22274"),
-                                      n.e("77084"),
+                                      n.e("34796"),
                                       n.e("87550"),
                                       n.e("77688"),
                                       n.e("29312"),
@@ -550,7 +549,7 @@ function h(e) {
                                       n.e("15754"),
                                       n.e("90191"),
                                       n.e("28662"),
-                                      n.e("54703"),
+                                      n.e("77084"),
                                       n.e("71133"),
                                       n.e("28152"),
                                       n.e("75361"),
@@ -581,7 +580,7 @@ function h(e) {
                                       n.e("63213"),
                                       n.e("30938"),
                                       n.e("17859"),
-                                      n.e("30301"),
+                                      n.e("91528"),
                                       n.e("48720"),
                                       n.e("25279"),
                                       n.e("72539"),
@@ -628,35 +627,35 @@ function h(e) {
                                       n.e("67730"),
                                   ]).then(n.bind(n, 746793));
                                   return (n) =>
-                                      (0, a.jsx)(e, {
+                                      (0, r.jsx)(e, {
                                           ...n,
                                           giftRecipient: t,
-                                          analyticsLocations: r,
-                                          analyticsLocation: s,
-                                          analyticsObject: l,
-                                          giftMessage: u,
+                                          analyticsLocations: i,
+                                          analyticsLocation: a,
+                                          analyticsObject: s,
+                                          giftMessage: c,
                                       });
                               },
-                              { modalKey: `gift-option-select-modal-${t.id}`, onCloseCallback: i },
+                              { modalKey: `gift-option-select-modal-${t.id}`, onCloseCallback: l },
                           );
                       })({
                           giftRecipient: t,
-                          analyticsLocations: l,
-                          analyticsLocation: E,
-                          analyticsObject: f ?? h,
+                          analyticsLocations: s,
+                          analyticsLocation: N,
+                          analyticsObject: g ?? A,
                           giftMessage: m,
                       })
-                    : (0, r.A)({
+                    : (0, i.A)({
                           isGift: !0,
                           giftRecipient: t ?? void 0,
                           initialPlanId: null,
-                          analyticsLocations: l,
-                          analyticsLocation: E,
-                          analyticsObject: p ?? h,
+                          analyticsLocations: s,
+                          analyticsLocation: N,
+                          analyticsObject: f ?? A,
                           giftMessage: m,
                       });
-        }, [S, y, v, t, l, E, h, f, p, m]),
-        shouldShowWishlistModal: v,
-        shouldShowGiftSelectionModal: N,
+        }, [h, b, O, t, s, N, A, g, f, m]),
+        shouldShowWishlistModal: O,
+        shouldShowGiftSelectionModal: R,
     };
 }

@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(439818),
-    r = n(696016);
-function s(e, t) {
-    let n = (0, i.A)((0, r.cM)(e.createdAt)),
-        s = (0, i.A)(null != e.name && "" !== e.name ? e.name : n),
-        a = "" !== s ? s : n;
-    return `${a}.${t}`;
+a.d(t, { A: () => i });
+var s = a(439818),
+    n = a(696016);
+function i(e, t) {
+    let a = (0, s.A)((0, n.cM)(e.createdAt)),
+        i = (0, s.A)(null != e.name && "" !== e.name ? e.name : a),
+        r = "" !== i ? i : a;
+    return `${r}.${t}`;
 }
