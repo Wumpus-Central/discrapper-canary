@@ -531,15 +531,6 @@
     background: var(--background-gradient-lower, var(--background-base-lower))
 }
 
-.themeScope__0d616.theme-dark {
-    --custom-premium-reward-gradient-glow-opacity: 0.4;
-    --custom-premium-reward-gradient-fill-opacity: 0.3
-}
-
-.themeScope__0d616.theme-dark .wrapper__0d616 {
-    background: var(--background-gradient-low, var(--background-base-lower))
-}
-
 .wrapperInvisible__0d616 {
     opacity: 0
 }
