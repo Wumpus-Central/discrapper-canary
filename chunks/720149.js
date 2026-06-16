@@ -1240,7 +1240,7 @@ ${s}`),
                                                 null != a &&
                                                     b.default.track(D.HAw.CLIP_SHARED, {
                                                         ...g.Zy(a),
-                                                        ...g.lc(),
+                                                        ...g.lc("trackClipsShared"),
                                                         channel_id: t,
                                                         guild_id: s.getGuildId(),
                                                         channel_type: s.type,

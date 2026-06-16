@@ -305,8 +305,8 @@ async function Y(e) {
     let { allowVoiceRecording: t } = e;
     await a.Q$.updateSetting(t),
         g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, {
+            ...I.lc("updateAllowVoiceRecording"),
             allow_voice_recording: t,
-            clip_runtime: (0, C.GN)("updateAllowVoiceRecording"),
         }),
         r.h.dispatch({ type: "CLIPS_ALLOW_VOICE_RECORDING_UPDATE" });
 }
@@ -319,10 +319,10 @@ async function W(e) {
     }),
         i &&
             g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, {
+                ...I.lc("updateClipsEnabled"),
                 clips_enabled: t,
                 guild_id: n,
                 ...(s && { decoupled_clips_enabled: !1 }),
-                clip_runtime: (0, C.GN)("updateClipsEnabled"),
             });
 }
 function K(e) {
@@ -333,9 +333,9 @@ function K(e) {
     }),
         n &&
             g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, {
+                ...I.lc("updateDecoupledClipsEnabled"),
                 ...(t && { clips_enabled: !0 }),
                 decoupled_clips_enabled: t,
-                clip_runtime: (0, C.GN)("updateDecoupledClipsEnabled"),
             });
 }
 function $(e) {
@@ -343,10 +343,7 @@ function $(e) {
 }
 function z(e) {
     r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { remindersEnabled: e } }),
-        g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, {
-            reminders_enabled: e,
-            clip_runtime: (0, C.GN)("updateRemindersEnabled"),
-        });
+        g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, { ...I.lc("updateRemindersEnabled"), reminders_enabled: e });
 }
 function q(e) {
     r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { showPovClipsInGallery: e } });
@@ -395,11 +392,11 @@ async function J(e) {
             });
             null != t && (await er(e.id, { remoteClipId: t }, !1)),
                 g.default.track(u.HAw.CLIP_REMOTE_TRIGGER_SENT, {
+                    ...I.lc("maybeSendRemoteClipTrigger"),
                     remote_clip_id: t,
                     clip_trigger_type: e.decision?.signal.type,
                     num_clip_participants: e.users.length,
                     application_id: e.applicationId,
-                    clip_runtime: (0, C.GN)("maybeSendRemoteClipTrigger"),
                 });
         } catch (e) {
             D.nx.warn("Failed to send remote clip trigger", e);
@@ -431,7 +428,7 @@ async function et(e) {
         A = JSON.stringify(d),
         T = I.TX(d);
     o && r.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE", clip: { ...d, pending: !0, filepath: p } });
-    let N = n.trimStartMs;
+    let C = n.trimStartMs;
     try {
         let e,
             {
@@ -444,7 +441,7 @@ async function et(e) {
                       userID: f.default.getId(),
                       filepath: p,
                       metadata: A,
-                      thumbnailMs: N,
+                      thumbnailMs: C,
                       startMs: n.startMs,
                       endMs: n.endMs,
                       trimStartMs: n.trimStartMs,
@@ -453,7 +450,7 @@ async function et(e) {
                 : m.saveClip({
                       filepath: p,
                       metadata: A,
-                      thumbnailMs: N,
+                      thumbnailMs: C,
                       startMs: n.startMs,
                       endMs: n.endMs,
                       trimStartMs: n.trimStartMs,
@@ -492,7 +489,7 @@ async function et(e) {
         );
     } catch (t) {
         if ((o && r.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE_ERROR", clipId: d.id }), !("errorMessage" in t)))
-            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...T, clip_runtime: (0, C.GN)("doSaveClip") }), t);
+            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...T, ...I.lc("doSaveClip") }), t);
         let e = I.kY(T, t);
         throw (
             ((e.error_at = t.errorAt),
@@ -627,7 +624,7 @@ async function er(e, t) {
     let s = { ...i, ...t };
     null != (await M(s)) &&
         (await E.Ay.getMediaEngine().updateClipMetadata(s.filepath, JSON.stringify(s)),
-        n && g.default.track(u.HAw.CLIP_EDITED, { clip_uuid: s.id, ...I.lc() }),
+        n && g.default.track(u.HAw.CLIP_EDITED, { clip_uuid: s.id, ...I.lc("updateClipMetadata") }),
         r.h.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: s }));
 }
 async function es(e) {
@@ -643,7 +640,7 @@ async function eo() {
     let t = S.Ay.getHistoricalClipsSessionById(e);
     null != t &&
         g.default.track(u.HAw.CLIPS_SESSION_ENDED, {
-            ...I.lc(),
+            ...I.lc("stopClipsSession"),
             current_clip_session_id: t.id,
             application_id: t.gameId,
             application_name: d.A.getGame(t.gameId)?.name,
@@ -655,7 +652,7 @@ async function eo() {
 function el(e, t) {
     r.h.dispatch({ type: "CLIPS_SESSION_START", sessionId: e, gameId: t }),
         g.default.track(u.HAw.CLIPS_SESSION_STARTED, {
-            ...I.lc(),
+            ...I.lc("startClipsSession"),
             current_clip_session_id: e,
             application_id: t,
             application_name: d.A.getGame(t)?.name,
@@ -680,7 +677,12 @@ async function ed(e) {
 function e_(e, t) {
     er(e.id, { isCandidate: !1 }),
         r.h.dispatch({ type: "CLIPS_PROMOTE_CLIP_CANDIDATE", clip: { ...e, isCandidate: !1 } }),
-        g.default.track(u.HAw.CLIP_PROMOTED, { ...I.lc(), ...I.Zy(e), clip_uuid: e.id, clip_auto_clip_score: t });
+        g.default.track(u.HAw.CLIP_PROMOTED, {
+            ...I.lc("promoteClipCandidate"),
+            ...I.Zy(e),
+            clip_uuid: e.id,
+            clip_auto_clip_score: t,
+        });
 }
 async function eh(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
@@ -690,7 +692,7 @@ async function eh(e) {
         r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n }),
         t &&
             g.default.track(u.HAw.CLIP_DELETED, {
-                ...I.lc(),
+                ...I.lc("deleteClip"),
                 ...I.Zy(e),
                 application_name: e.applicationName,
                 application_id: e.applicationId,
@@ -745,7 +747,13 @@ function em(e) {
     r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { maxAutoClips: e } });
 }
 function eg(e) {
-    r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } });
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } }),
+        t &&
+            g.default.track(u.HAw.CLIPS_SETTINGS_UPDATED, {
+                ...I.lc("updateEnableAutoclipping"),
+                autoclips_enabled: e,
+            });
 }
 function eA(e) {
     r.h.dispatch({

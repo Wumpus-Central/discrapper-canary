@@ -29,11 +29,8 @@ function _(e) {
         is_candidate: e.isCandidate,
     };
 }
-function h() {
-    return {
-        clip_runtime: (0, c.GN)("getClipContextProperties"),
-        current_clip_session_id: l.Ay.getCurrentClipsSession()?.id,
-    };
+function h(e) {
+    return { clip_runtime: (0, c.GN)(e), current_clip_session_id: l.Ay.getCurrentClipsSession()?.id };
 }
 function f(e) {
     let t = [];
@@ -58,7 +55,7 @@ function p(e) {
         n = null != t ? o.A.getRTCConnection((0, r._z)(t)) : null;
     return {
         ..._(e),
-        ...h(),
+        ...h("getPreSaveClipAnalytics"),
         rtc_connection_id: n?.getRTCConnectionId(),
         media_session_id: n?.getMediaSessionId(),
         parent_media_session_id: n?.parentMediaSessionId,
