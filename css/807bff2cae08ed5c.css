@@ -24,8 +24,9 @@
 }
 
 .roleIcon_af3987 {
-    margin-inline-start: 4px;
-    vertical-align: middle
+    display: block;
+    line-height: 0;
+    margin-inline-start: 4px
 }
 
 .roleTag_af3987 {
