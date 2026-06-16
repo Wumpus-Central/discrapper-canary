@@ -1,78 +1,77 @@
-"use strict";
-n.d(t, {
+r.d(t, {
     transitionToGlobalDiscovery: () =>
         function e(t) {
-            let n = t.tab;
-            switch ((c.A.setState({ selectedTab: n }), n)) {
-                case d.GlobalDiscoveryTab.SERVERS:
-                    let p = t.selectedServersTab;
+            let r = t.tab;
+            switch ((u.A.setState({ selectedTab: r }), r)) {
+                case S.GlobalDiscoveryTab.SERVERS:
+                    let b = t.selectedServersTab;
                     return (
-                        null != p
-                            ? s.A.setState({ selectedTab: p, entrypoint: t.entrypoint ?? f.J8.UNKNOWN })
-                            : s.A.setState({ entrypoint: t.entrypoint ?? f.J8.UNKNOWN }),
-                        (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_SERVERS, t.extra)
+                        null != b
+                            ? n.A.setState({ selectedTab: b, entrypoint: t.entrypoint ?? y.J8.UNKNOWN })
+                            : n.A.setState({ entrypoint: t.entrypoint ?? y.J8.UNKNOWN }),
+                        (0, s.pX)(d.BVt.GLOBAL_DISCOVERY_SERVERS, t.extra)
                     );
-                case d.GlobalDiscoveryTab.APPS:
+                case S.GlobalDiscoveryTab.APPS:
                     if (null != t.newSessionState) {
-                        let n = (0, r.YP)(),
-                            { guildId: s, entrypoint: a } = t.newSessionState;
+                        let r = (0, o.YP)(),
+                            { guildId: n, entrypoint: i } = t.newSessionState;
                         if (
-                            (i.h.setState({
-                                sessionId: n,
-                                guildId: s ?? null,
-                                entrypoint: a,
+                            (a.h.setState({
+                                sessionId: r,
+                                guildId: n ?? null,
+                                entrypoint: i,
                                 trackedOpenedFromExternalEntrypoint: !1,
                             }),
-                            u.default.track(_.HAw.APP_DIRECTORY_OPENED, {
-                                source: a?.name,
-                                session_id: n,
-                                guild_id: s,
+                            c.default.track(d.HAw.APP_DIRECTORY_OPENED, {
+                                source: i?.name,
+                                session_id: r,
+                                guild_id: n,
                                 user_id: l.default.getCurrentUser()?.id,
                             }),
                             t.newSessionState.restorePreviousView)
                         )
                             return e(
                                 (function () {
-                                    let { lastItem: e } = i.tS.getState();
+                                    let { lastItem: e } = a.tS.getState();
                                     if (null != e)
                                         switch (e.type) {
-                                            case i.ev.APPLICATION:
+                                            case a.ev.APPLICATION:
                                                 return {
-                                                    tab: d.GlobalDiscoveryTab.APPS,
+                                                    tab: S.GlobalDiscoveryTab.APPS,
                                                     applicationId: e.applicationId,
                                                     section: e.section,
                                                 };
-                                            case i.ev.CATEGORY:
+                                            case a.ev.CATEGORY:
                                                 return {
-                                                    tab: d.GlobalDiscoveryTab.APPS,
+                                                    tab: S.GlobalDiscoveryTab.APPS,
                                                     categoryId: Number(e.categoryId),
                                                 };
-                                            case i.ev.SEARCH:
+                                            case a.ev.SEARCH:
                                                 return {
-                                                    tab: d.GlobalDiscoveryTab.APPS,
+                                                    tab: S.GlobalDiscoveryTab.APPS,
                                                     query: e.query ?? "",
                                                     page: e.page,
                                                     categoryId: null != e.categoryId ? Number(e.categoryId) : void 0,
                                                 };
                                         }
-                                    return { tab: d.GlobalDiscoveryTab.APPS };
+                                    return { tab: S.GlobalDiscoveryTab.APPS };
                                 })(),
                             );
                     }
                     if (null != t.applicationId) {
-                        if (t.section === h.GlobalDiscoveryAppsSections.STORE)
+                        if (t.section === p.GlobalDiscoveryAppsSections.STORE)
                             if (null != t.skuId)
-                                return (0, o.pX)(
-                                    _.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId),
+                                return (0, s.pX)(
+                                    d.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t.applicationId, t.skuId),
                                 );
                             else
-                                return (0, o.pX)(
-                                    _.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
+                                return (0, s.pX)(
+                                    d.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(
                                         t.applicationId,
-                                        h.GlobalDiscoveryAppsSections.STORE,
+                                        p.GlobalDiscoveryAppsSections.STORE,
                                     ),
                                 );
-                        return (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
+                        return (0, s.pX)(d.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(t.applicationId));
                     }
                     if (null != t.query) {
                         let e = new URLSearchParams();
@@ -80,35 +79,35 @@ n.d(t, {
                             "" !== t.query && e.set("q", t.query),
                             null != t.categoryId && e.set("category_id", t.categoryId.toString()),
                             null != t.page && e.set("page", t.page.toString()),
-                            (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() })
+                            (0, s.pX)(d.BVt.GLOBAL_DISCOVERY_APPS_SEARCH, { search: e.toString() })
                         );
                     }
                     if (null != t.categoryId)
-                        return (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
-                    else return (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_APPS);
-                case d.GlobalDiscoveryTab.QUESTS:
-                    return (0, a.navigateToQuestHome)({
+                        return (0, s.pX)(d.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
+                    else return (0, s.pX)(d.BVt.GLOBAL_DISCOVERY_APPS);
+                case S.GlobalDiscoveryTab.QUESTS:
+                    return (0, i.navigateToQuestHome)({
                         fromContent: t.questContent,
                         questId: t.questId,
                         forceDiscoveryQuestHomeRoute: !0,
                     });
                 default:
-                    throw Error(`[transitionToGlobalDiscovery] Unhandled tab type: ${n}`);
+                    throw Error(`[transitionToGlobalDiscovery] Unhandled tab type: ${r}`);
             }
         },
 }),
-    n(323874),
-    n(14289),
-    n(35956);
-var i = n(310419),
-    r = n(965660),
-    s = n(601193),
-    a = n(617986),
-    o = n(976860),
-    l = n(287809),
-    u = n(174459),
-    c = n(726845),
-    d = n(488995),
-    _ = n(652215),
-    h = n(435220),
-    f = n(324580);
+    r(323874),
+    r(14289),
+    r(35956);
+var a = r(310419),
+    o = r(965660),
+    n = r(601193),
+    i = r(617986),
+    s = r(976860),
+    l = r(287809),
+    c = r(174459),
+    u = r(726845),
+    S = r(488995),
+    d = r(652215),
+    p = r(435220),
+    y = r(324580);

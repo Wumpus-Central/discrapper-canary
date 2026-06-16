@@ -1,69 +1,68 @@
-"use strict";
-n.d(t, { A: () => f, E: () => s });
-var i = n(17928),
-    r = n(228366);
-let s = {},
-    a = {},
-    o = {},
-    l = !1,
-    u = !1,
-    c = !1;
-function d(e) {
+l.d(t, { A: () => u, E: () => a });
+var i = l(17928),
+    n = l(228366);
+let a = {},
+    r = {},
+    s = {},
+    E = !1,
+    d = !1,
+    h = !1;
+function c(e) {
     let { guild: t } = e.invite;
-    return t?.welcome_screen != null && ((a[t.id] = t.welcome_screen), !0);
+    return t?.welcome_screen != null && ((r[t.id] = t.welcome_screen), !0);
 }
-function _(e) {
-    let { welcomeScreen: t, guildId: n } = e;
-    a[n] = t ?? s;
+function o(e) {
+    let { welcomeScreen: t, guildId: l } = e;
+    r[l] = t ?? a;
 }
-class h extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "WelcomeScreenStore";
     get(e) {
-        if (null != e) return a[e];
+        if (null != e) return r[e];
     }
     isFetching() {
-        return u;
+        return d;
     }
     hasError() {
-        return c;
+        return h;
     }
     hasSeen(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-        return null != e && (t ? l : o[e] || !1);
+        return null != e && (t ? E : s[e] || !1);
     }
     isEmpty(e) {
         if (null == e) return !0;
-        let t = a[e];
+        let t = r[e];
         return null == t || 0 === t.welcome_channels.length;
     }
 }
-let f = new h(r.h, {
-    INVITE_RESOLVE_SUCCESS: d,
-    INVITE_ACCEPT_SUCCESS: d,
-    WELCOME_SCREEN_SUBMIT_SUCCESS: _,
-    WELCOME_SCREEN_UPDATE: _,
+let u = new g(n.h, {
+    INVITE_RESOLVE_SUCCESS: c,
+    INVITE_ACCEPT_SUCCESS: c,
+    WELCOME_SCREEN_SUBMIT_SUCCESS: o,
+    WELCOME_SCREEN_UPDATE: o,
     WELCOME_SCREEN_VIEW: function (e) {
-        let { guildId: t, isLurking: n } = e;
-        (o[t] = !0), n && (l = !0);
+        let { guildId: t, isLurking: l } = e;
+        (s[t] = !0), l && (E = !0);
     },
     GUILD_STOP_LURKING: function () {
-        l = !1;
+        E = !1;
     },
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },
         } = e;
-        o[t] = !1;
+        s[t] = !1;
     },
     WELCOME_SCREEN_FETCH_START: function () {
-        (u = !0), (c = !1);
+        (d = !0), (h = !1);
     },
     WELCOME_SCREEN_FETCH_SUCCESS: function (e) {
-        (u = !1), (c = !1);
-        let { welcomeScreen: t, guildId: n } = e;
-        a[n] = t ?? s;
+        (d = !1), (h = !1);
+        let { welcomeScreen: t, guildId: l } = e;
+        r[l] = t ?? a;
     },
     WELCOME_SCREEN_FETCH_FAIL: function () {
-        (u = !1), (c = !0);
+        (d = !1), (h = !0);
     },
 });

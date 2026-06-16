@@ -1,83 +1,82 @@
-"use strict";
-n.d(t, { A: () => g });
+n.d(e, { A: () => f });
 var i = n(627968),
-    r = n(64700),
-    s = n(735438),
-    a = n(451988),
-    o = n(781696),
-    l = n(568602),
-    u = n(174459),
-    c = n(957565),
-    d = n(927813),
-    _ = n(652215),
-    h = n(375708);
-let f = d.A.Millis.SECOND,
-    p = 2 * f,
-    E = d.A.Millis.HALF_SECOND,
-    m = [
-        () => h.intl.string(h.t.MSaeTe),
-        () => h.intl.string(h.t.UmrCw7),
-        () => h.intl.string(h.t.gKE0Jq),
-        () => h.intl.string(h.t["4DSKbi"]),
-        () => h.intl.string(h.t["+8ENdT"]),
-        () => h.intl.string(h.t.GlWHv8),
-        () => h.intl.string(h.t.hIzxU9),
-        () => h.intl.string(h.t["26uMPL"]),
-        () => h.intl.string(h.t.uFs7R2),
-        () => h.intl.string(h.t.bLXdcY),
-        () => h.intl.string(h.t.gPg9fS),
+    s = n(64700),
+    r = n(735438),
+    l = n(451988),
+    a = n(781696),
+    u = n(568602),
+    g = n(174459),
+    o = n(957565),
+    c = n(927813),
+    p = n(652215),
+    E = n(375708);
+let d = c.A.Millis.SECOND,
+    h = 2 * d,
+    S = c.A.Millis.HALF_SECOND,
+    M = [
+        () => E.intl.string(E.t.MSaeTe),
+        () => E.intl.string(E.t.UmrCw7),
+        () => E.intl.string(E.t.gKE0Jq),
+        () => E.intl.string(E.t["4DSKbi"]),
+        () => E.intl.string(E.t["+8ENdT"]),
+        () => E.intl.string(E.t.GlWHv8),
+        () => E.intl.string(E.t.hIzxU9),
+        () => E.intl.string(E.t["26uMPL"]),
+        () => E.intl.string(E.t.uFs7R2),
+        () => E.intl.string(E.t.bLXdcY),
+        () => E.intl.string(E.t.gPg9fS),
     ];
-function g(e) {
-    let { text: t, copyValue: n, children: d, onCopy: h, "aria-label": g, delay: A = E, dataMeticulousIgnore: I } = e,
-        [T, S] = r.useState(0),
-        [y, N] = r.useState(!1),
-        [v, C] = r.useState(!1),
-        [R] = r.useState(() => new a.Ep()),
-        [O] = r.useState(() => new a.Ep());
+function f(t) {
+    let { text: e, copyValue: n, children: c, onCopy: E, "aria-label": f, delay: A = S, dataMeticulousIgnore: C } = t,
+        [b, k] = s.useState(0),
+        [w, x] = s.useState(!1),
+        [L, R] = s.useState(!1),
+        [T] = s.useState(() => new l.Ep()),
+        [m] = s.useState(() => new l.Ep());
     if (
-        (r.useEffect(
+        (s.useEffect(
             () => () => {
-                R.stop(), O.stop();
+                T.stop(), m.stop();
             },
-            [R, O],
+            [T, m],
         ),
-        !c.p5)
+        !o.p5)
     )
-        return (0, i.jsx)(i.Fragment, { children: d({}) });
-    let b = T >= m.length - 1,
-        D = y ? o.oM.GREEN : o.oM.PRIMARY;
-    return (0, i.jsx)(o.ST, {
+        return (0, i.jsx)(i.Fragment, { children: c({}) });
+    let D = b >= M.length - 1,
+        I = w ? a.oM.GREEN : a.oM.PRIMARY;
+    return (0, i.jsx)(a.ST, {
         text: (() => {
-            if (!y) return t;
-            let e = (0, s.clamp)(T - 1, 0, m.length - 1),
-                n = m[e] ?? m[0];
-            return (0, i.jsx)(l.b, { isShaking: b, children: n() });
+            if (!w) return e;
+            let t = (0, r.clamp)(b - 1, 0, M.length - 1),
+                n = M[t] ?? M[0];
+            return (0, i.jsx)(u.b, { isShaking: D, children: n() });
         })(),
         delay: A,
-        "aria-label": g,
-        dataMeticulousIgnore: I,
-        color: D,
-        forceOpen: v,
-        onAnimationRest: (e, t) => {
-            !v && y && t.phase === _.lLE.LEAVE && N(!1);
+        "aria-label": f,
+        dataMeticulousIgnore: C,
+        color: I,
+        forceOpen: L,
+        onAnimationRest: (t, e) => {
+            !L && w && e.phase === p.lLE.LEAVE && x(!1);
         },
-        children: (e) => {
-            let { onClick: t, onMouseEnter: i, ...r } = e;
-            return d({
-                ...r,
+        children: (t) => {
+            let { onClick: e, onMouseEnter: i, ...s } = t;
+            return c({
+                ...s,
                 onClick: () => {
-                    t?.(),
-                        h?.(),
-                        (0, c.C)(n),
-                        u.default.track(_.HAw.TEXT_COPIED),
-                        v || S(T + 1),
-                        C(!0),
-                        N(!0),
-                        R.start(f, () => C(!1)),
-                        O.start(p, () => S(0));
+                    e?.(),
+                        E?.(),
+                        (0, o.C)(n),
+                        g.default.track(p.HAw.TEXT_COPIED),
+                        L || k(b + 1),
+                        R(!0),
+                        x(!0),
+                        T.start(d, () => R(!1)),
+                        m.start(h, () => k(0));
                 },
                 onMouseEnter: () => {
-                    y ? (R.stop(), C(!1)) : i?.();
+                    w ? (T.stop(), R(!1)) : i?.();
                 },
             });
         },

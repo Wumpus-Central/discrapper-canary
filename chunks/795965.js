@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { D: () => g });
-var i = n(64700),
-    r = n(323889),
-    s = n(274670),
-    a = n(144779),
-    o = n(793574),
-    l = n(564064),
-    u = n(104886);
+n.d(t, { D: () => x });
+var r = n(64700),
+    l = n(323889),
+    a = n(274670),
+    i = n(144779),
+    s = n(793574),
+    u = n(564064),
+    o = n(104886);
 let c = (0, n(945810).mj)({
     name: "2026-05-quest-home-reward-claim",
     kind: "user",
@@ -14,71 +13,71 @@ let c = (0, n(945810).mj)({
     variations: { 1: { enabled: !0 } },
 });
 var d = n(18437),
-    _ = n(590202),
-    h = n(971649),
-    f = n(801365),
+    m = n(590202),
+    f = n(971649),
+    h = n(801365),
     p = n(371912),
-    E = n(617986),
-    m = n(758836);
-function g(e) {
+    v = n(617986),
+    g = n(758836);
+function x(e) {
     let {
             quest: t,
             questContent: n,
-            sourceQuestContent: g,
-            questContentPosition: A,
-            questContentRowIndex: I,
-            experimentLocation: T,
+            sourceQuestContent: x,
+            questContentPosition: E,
+            questContentRowIndex: b,
+            experimentLocation: C,
             shouldShowShopIfAlreadyClaimed: S = !0,
-            onBeforeClaim: y,
-            onCloseModal: N,
+            onBeforeClaim: A,
+            onCloseModal: w,
         } = e,
-        v = (function (e) {
+        y = (function (e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
                 n = c.useConfig({ location: t && null != e ? e : "quest home reward claim experiment: disabled" });
             return !!t && null != e && n.enabled;
-        })(T, t.userStatus?.completedAt != null && t.userStatus?.claimedAt == null),
-        C = (0, d.Ut)(),
-        R = (0, h.go)(),
-        O = (0, p.ix)({
+        })(C, t.userStatus?.completedAt != null && t.userStatus?.claimedAt == null),
+        N = (0, d.Ut)(),
+        T = (0, f.go)(),
+        R = (0, p.ix)({
             quest: t,
             questContent: n,
-            questContentPosition: A,
-            questContentRowIndex: I,
-            sourceQuestContent: g,
+            questContentPosition: E,
+            questContentRowIndex: b,
+            sourceQuestContent: x,
         });
-    return i.useCallback(
+    return r.useCallback(
         (e) => {
-            if ((null != e && y?.(e), S && (0, f.ks)(t.config) && t.userStatus?.claimedAt != null)) {
-                N?.(), (0, l.Cz)({ tab: m.G2.ORBS, analyticsLocations: [], analyticsSource: o.A.QUEST_HOME_PAGE });
+            if ((null != e && A?.(e), S && (0, h.ks)(t.config) && t.userStatus?.claimedAt != null)) {
+                w?.(), (0, u.Cz)({ tab: g.G2.ORBS, analyticsLocations: [], analyticsSource: s.A.QUEST_HOME_PAGE });
                 return;
             }
-            v &&
-                (N?.(),
-                (0, f.K9)(t.config) ||
-                    ((0, u.E5)(u.kI.STEP_2_CLICKED_INTERNAL, "completed_quest_claim_click")
-                        ? (0, s.r)({
-                              type: a.F.CLICK_INTERNAL,
-                              adCreativeType: r.p.QUEST,
+            y &&
+                (w?.(),
+                (0, h.K9)(t.config) ||
+                    ((0, o.E5)(o.kI.STEP_2_CLICKED_INTERNAL, "completed_quest_claim_click")
+                        ? (0, a.r)({
+                              type: i.F.CLICK_INTERNAL,
+                              adCreativeType: l.p.QUEST,
                               adCreativeId: t.id,
-                              questContentCTA: _.Cy.OPEN_QUEST_HOME_TO_CLAIM,
+                              questContentCTA: m.Cy.OPEN_QUEST_HOME_TO_CLAIM,
                               surfaceId: n,
-                              sourceQuestContent: g,
-                              impressionId: R,
-                              questContentPosition: A,
-                              questContentRowIndex: I,
+                              sourceQuestContent: x,
+                              impressionId: T,
+                              questContentPosition: E,
+                              questContentRowIndex: b,
                           })
-                        : C({
+                        : N({
                               questId: t.id,
                               questContent: n,
-                              questContentCTA: _.Cy.OPEN_QUEST_HOME_TO_CLAIM,
-                              sourceQuestContent: g,
-                              questContentPosition: A,
-                              questContentRowIndex: I,
+                              questContentCTA: m.Cy.OPEN_QUEST_HOME_TO_CLAIM,
+                              sourceQuestContent: x,
+                              questContentPosition: E,
+                              questContentRowIndex: b,
                           }),
-                    (0, E.navigateToQuestHome)({ questId: t.id, fromContent: n }))),
-                !v && (0, f.K9)(t.config) && N?.(),
-                O();
+                    (0, v.navigateToQuestHome)({ questId: t.id, fromContent: n }))),
+                !y && (0, h.K9)(t.config) && w?.(),
+                R();
         },
-        [y, N, t.config, t.userStatus?.claimedAt, O, S, v, t.id, n, g, A, I, C, R],
+        [A, w, t.config, t.userStatus?.claimedAt, R, S, y, t.id, n, x, E, b, N, T],
     );
 }

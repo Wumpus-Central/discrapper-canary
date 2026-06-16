@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(627968);
-n(64700);
-var r = n(953727);
-function s(e) {
-    let { width: t = 24, height: n = 24, ...s } = e;
+e.d(n, { A: () => l });
+var i = e(627968);
+e(64700);
+var s = e(953727);
+function l(t) {
+    let { width: n = 24, height: e = 24, ...l } = t;
     return (0, i.jsxs)("svg", {
-        ...(0, r.A)(s),
-        height: n,
-        width: t,
+        ...(0, s.A)(l),
+        height: e,
+        width: n,
         viewBox: "0 0 24 24",
         children: [
             (0, i.jsx)("path", {

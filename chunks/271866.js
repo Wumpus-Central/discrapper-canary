@@ -1,29 +1,28 @@
-"use strict";
-n.d(t, { SH: () => p, cL: () => f, q1: () => h });
+n.d(t, { SH: () => d, cL: () => T, q1: () => A });
 var i = n(228366),
-    r = n(795816),
-    s = n(627363),
-    a = n(587895),
-    o = n(20015),
-    l = n(793943),
-    u = n(395671),
+    l = n(795816),
+    r = n(627363),
+    s = n(587895),
+    a = n(20015),
+    E = n(793943),
+    o = n(395671),
     c = n(998218),
-    d = n(110782),
-    _ = n(652215);
-async function h(e, t) {
+    _ = n(110782),
+    u = n(652215);
+async function A(e, t) {
     i.h.dispatch({ applicationId: e, type: "DEVELOPER_TEST_MODE_AUTHORIZATION_START" });
     try {
-        if (!(await (0, r.Ir)(e))) throw Error("Do not have access!");
-        let n = a.A.getApplication(e);
-        null == n && (n = u.Ay.createFromServer(await s.Ay.fetchApplication(e)));
-        let l = (0, o.n)(n, _.gfo.EMBEDDED);
-        if (l && (null == t || !c.A.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
+        if (!(await (0, l.Ir)(e))) throw Error("Do not have access!");
+        let n = s.A.getApplication(e);
+        null == n && (n = o.Ay.createFromServer(await r.Ay.fetchApplication(e)));
+        let E = (0, a.n)(n, u.gfo.EMBEDDED);
+        if (E && (null == t || !c.A.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
         return (
-            l || d.Cd(n),
+            E || _.Cd(n),
             i.h.dispatch({
                 type: "DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS",
                 applicationId: e,
-                originURL: l ? t : null,
+                originURL: E ? t : null,
             }),
             n
         );
@@ -33,11 +32,11 @@ async function h(e, t) {
         );
     }
 }
-function f() {
-    l.fy.getState().activePanel === l.HP.APPLICATION_TEST_MODE_DEBUG && (0, l.Jp)(),
+function T() {
+    E.fy.getState().activePanel === E.HP.APPLICATION_TEST_MODE_DEBUG && (0, E.Jp)(),
         i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" });
 }
-function p() {
-    l.fy.getState().activePanel === l.HP.APPLICATION_TEST_MODE_DEBUG && (0, l.Jp)(),
+function d() {
+    E.fy.getState().activePanel === E.HP.APPLICATION_TEST_MODE_DEBUG && (0, E.Jp)(),
         i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" });
 }

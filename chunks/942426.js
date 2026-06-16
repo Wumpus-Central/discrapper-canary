@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { A: () => u });
-var i = n(64700),
-    r = n(17928),
-    s = n(564064),
-    a = n(590180),
-    o = n(4227),
-    l = n(203632);
+r.d(t, { A: () => u });
+var n = r(64700),
+    l = r(17928),
+    a = r(564064),
+    s = r(590180),
+    i = r(4227),
+    o = r(203632);
 function u(e) {
-    let t = (0, r.bG)([a.A, o.A], () => {
+    let t = (0, l.bG)([s.A, i.A], () => {
             if (null == e) return;
-            let t = a.A.getProduct(e);
-            if ((0, l.C3)(t?.items[0])) return t.items[0];
-            let n = o.A.getPurchase(e);
-            if ((0, l.C3)(n?.items[0])) return n.items[0];
+            let t = s.A.getProduct(e);
+            if ((0, o.C3)(t?.items[0])) return t.items[0];
+            let r = i.A.getPurchase(e);
+            if ((0, o.C3)(r?.items[0])) return r.items[0];
         }),
-        n = null != e && null == t;
+        r = null != e && null == t;
     return (
-        i.useEffect(() => {
-            n && (0, s.RE)(e);
-        }, [n, e]),
+        n.useEffect(() => {
+            r && (0, a.RE)(e);
+        }, [r, e]),
         t
     );
 }

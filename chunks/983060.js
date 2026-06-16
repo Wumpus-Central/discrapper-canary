@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { MM: () => u, X8: () => o, xA: () => l });
-var i = n(913290),
-    r = n(975571),
-    s = n(777376),
-    a = n(652215);
-let o = "1476683556242718862";
-function l() {
-    return r.A.getArticleURL(a.MVz.NITRO_2_POINT_0);
+a.d(t, { MM: () => o, X8: () => l, xA: () => c });
+var s = a(913290),
+    i = a(975571),
+    n = a(777376),
+    r = a(652215);
+let l = "1476683556242718862";
+function c() {
+    return i.A.getArticleURL(r.MVz.NITRO_2_POINT_0);
 }
-function u(e) {
-    if (e.sku_id !== o || e.deleted) return null;
-    if (null == e.ends_at || new Date(e.ends_at) > new Date()) return s.gR.ACTIVATED;
+function o(e) {
+    if (e.sku_id !== l || e.deleted) return null;
+    if (null == e.ends_at || new Date(e.ends_at) > new Date()) return n.gR.ACTIVATED;
     let t = e.fulfillment_status;
-    return t === i.w.FULFILLED || t === i.w.UNFULFILLMENT_NEEDED || t === i.w.UNFULFILLMENT_NEEDED_MANUAL
-        ? s.gR.CANCELLATION_PENDING
+    return t === s.w.FULFILLED || t === s.w.UNFULFILLMENT_NEEDED || t === s.w.UNFULFILLMENT_NEEDED_MANUAL
+        ? n.gR.CANCELLATION_PENDING
         : null;
 }

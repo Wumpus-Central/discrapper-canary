@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { h: () => _ });
-var i = n(627968);
+n.d(e, { h: () => E });
+var s = n(627968);
 n(64700);
-var r = n(192308),
-    s = n(287809),
-    a = n(166403),
+var i = n(192308),
+    a = n(287809),
+    l = n(166403),
     o = n(625494),
-    l = n(428262),
+    r = n(428262),
     u = n(598653),
     c = n(788868),
-    d = n(652215);
-function _(e) {
-    let { processedCode: t, channelContext: _, customGiftMessage: h, giftInfo: f } = e,
-        p = !1,
-        E = null,
-        m = s.default.getCurrentUser(),
-        g = (0, l.CC)(m?.premiumType, c.PremiumTypes.TIER_0);
-    (0, r.openModalLazy)(
+    C = n(652215);
+function E(t) {
+    let { processedCode: e, channelContext: E, customGiftMessage: d, giftInfo: A } = t,
+        T = !1,
+        _ = null,
+        x = a.default.getCurrentUser(),
+        I = (0, r.CC)(x?.premiumType, c.PremiumTypes.TIER_0);
+    (0, i.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([
+            let { default: t } = await Promise.all([
                 n.e("18240"),
                 n.e("73646"),
                 n.e("10471"),
@@ -29,27 +28,27 @@ function _(e) {
                 n.e("7200"),
             ]).then(n.bind(n, 361845));
             return (n) =>
-                (0, i.jsx)(e, {
-                    code: t,
-                    channelContext: _,
-                    customGiftMessage: h,
-                    emojiName: f?.emoji?.name,
-                    soundId: f?.sound?.id,
-                    onComplete: (e, t) => {
-                        (E = e),
-                            t && ((p = t), e.isSubscription && null == a.A.getPremiumSubscription(!1) && (0, u.o)(!0));
+                (0, s.jsx)(t, {
+                    code: e,
+                    channelContext: E,
+                    customGiftMessage: d,
+                    emojiName: A?.emoji?.name,
+                    soundId: A?.sound?.id,
+                    onComplete: (t, e) => {
+                        (_ = t),
+                            e && ((T = e), t.isSubscription && null == l.A.getPremiumSubscription(!1) && (0, u.o)(!0));
                     },
                     ...n,
                 });
         },
         {
             onCloseCallback: () => {
-                p &&
-                    null != E &&
-                    !g &&
-                    E.isSubscription &&
-                    E?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
-                    o._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);
+                T &&
+                    null != _ &&
+                    !I &&
+                    _.isSubscription &&
+                    _?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
+                    o._.dispatch(C.jej.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },
     );

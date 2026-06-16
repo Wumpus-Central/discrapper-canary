@@ -1,51 +1,50 @@
-"use strict";
-n.d(t, { A: () => E });
-var i = n(17928),
-    r = n(228366),
-    s = n(723702),
-    a = n(19575);
-let o = new Set(["nvidia"]);
-var l = n(299855),
-    u = n.n(l);
-let c = { [s.PlatformTypes.WINDOWS]: { nvidia: "<=537.58.0 || >=546.31" } },
-    d = { [s.PlatformTypes.WINDOWS]: { nvidia: ">=397.93.0" } },
-    _ = !1,
-    h = !0,
-    f = !1;
-class p extends i.Ay.Store {
+a.d(t, { A: () => S });
+var r = a(17928),
+    l = a(228366),
+    i = a(723702),
+    n = a(19575);
+let s = new Set(["nvidia"]);
+var u = a(299855),
+    o = a.n(u);
+let A = { [i.PlatformTypes.WINDOWS]: { nvidia: "<=537.58.0 || >=546.31" } },
+    d = { [i.PlatformTypes.WINDOWS]: { nvidia: ">=397.93.0" } },
+    g = !1,
+    c = !0,
+    m = !1;
+class f extends r.Ay.Store {
     static displayName = "StreamingCapabilitiesStore";
     initialize() {
-        !s.isPlatformEmbedded ||
+        !i.isPlatformEmbedded ||
             __OVERLAY__ ||
-            a.Ay.getGPUDriverVersions().then((e) => {
-                (_ = (function (e) {
-                    let t = d[(0, s.getPlatform)()];
+            n.Ay.getGPUDriverVersions().then((e) => {
+                (g = (function (e) {
+                    let t = d[(0, i.getPlatform)()];
                     if (null == t) return !1;
-                    for (let n of Object.keys(e)) {
-                        let i = e[n],
-                            r = t[n];
-                        if (null == i || null == r || null != i.error) continue;
-                        let s = `${i.major ?? 0}.${i.minor ?? 0}.0`;
-                        if (!u().satisfies(s, r)) return !0;
+                    for (let a of Object.keys(e)) {
+                        let r = e[a],
+                            l = t[a];
+                        if (null == r || null == l || null != r.error) continue;
+                        let i = `${r.major ?? 0}.${r.minor ?? 0}.0`;
+                        if (!o().satisfies(i, l)) return !0;
                     }
                     return !1;
                 })(e)),
-                    (h = (function (e) {
+                    (c = (function (e) {
                         for (let t of Object.keys(e)) {
-                            let n = e[t];
-                            if (null != n && null == n.error && o.has(t)) return !0;
+                            let a = e[t];
+                            if (null != a && null == a.error && s.has(t)) return !0;
                         }
                         return !1;
                     })(e)),
-                    (f = (function (e) {
-                        let t = c[(0, s.getPlatform)()];
+                    (m = (function (e) {
+                        let t = A[(0, i.getPlatform)()];
                         if (null == t) return !1;
-                        for (let n of Object.keys(e)) {
-                            let i = e[n],
-                                r = t[n];
-                            if (null == i || null == r || null != i.error) continue;
-                            let s = `${i.major ?? 0}.${i.minor ?? 0}.0`;
-                            if (!u().satisfies(s, r)) return !0;
+                        for (let a of Object.keys(e)) {
+                            let r = e[a],
+                                l = t[a];
+                            if (null == r || null == l || null != r.error) continue;
+                            let i = `${r.major ?? 0}.${r.minor ?? 0}.0`;
+                            if (!o().satisfies(i, l)) return !0;
                         }
                         return !1;
                     })(e)),
@@ -53,21 +52,21 @@ class p extends i.Ay.Store {
             });
     }
     get GPUDriversOutdated() {
-        return _;
+        return g;
     }
     get canUseHardwareAcceleration() {
-        return h;
+        return c;
     }
     get problematicGPUDriver() {
-        return f;
+        return m;
     }
     getState() {
-        return { GPUDriversOutdated: _, canUseHardwareAcceleration: h, problematicGPUDriver: f };
+        return { GPUDriversOutdated: g, canUseHardwareAcceleration: c, problematicGPUDriver: m };
     }
 }
-let E = new p(r.h, {
+let S = new f(l.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { streamingCapabilitiesStoreState: t } = e;
-        (_ = t.GPUDriversOutdated), (h = t.canUseHardwareAcceleration);
+        (g = t.GPUDriversOutdated), (c = t.canUseHardwareAcceleration);
     },
 });

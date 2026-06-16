@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(64700),
-    r = n(564064),
-    s = n(32206),
-    a = n(77157);
-function o(e, t) {
-    let n = (0, s.c)(t),
-        o = (0, a.A)(e),
-        l = n && null != e && null == o;
+s.d(c, { A: () => p });
+var t = s(64700),
+    e = s(564064),
+    i = s(32206),
+    n = s(77157);
+function p(u, c) {
+    let s = (0, i.c)(c),
+        p = (0, n.A)(u),
+        d = s && null != u && null == p;
     return (
-        i.useEffect(() => {
-            l && (0, r.RE)(e);
-        }, [l, e]),
-        n ? o : void 0
+        t.useEffect(() => {
+            d && (0, e.RE)(u);
+        }, [d, u]),
+        s ? p : void 0
     );
 }

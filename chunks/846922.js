@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { h: () => a, y: () => o });
-var i,
-    r = n(353640),
-    s = n(121894),
-    a =
-        (((i = {})[(i.ALL_CHANNELS_ACCESS = 0)] = "ALL_CHANNELS_ACCESS"),
-        (i[(i.SOME_CHANNELS_ACCESS = 1)] = "SOME_CHANNELS_ACCESS"),
-        i);
-let o = (0, r.v)((e) => ({
+i.d(t, { h: () => r, y: () => s });
+var n,
+    a = i(353640),
+    l = i(121894),
+    r =
+        (((n = {})[(n.ALL_CHANNELS_ACCESS = 0)] = "ALL_CHANNELS_ACCESS"),
+        (n[(n.SOME_CHANNELS_ACCESS = 1)] = "SOME_CHANNELS_ACCESS"),
+        n);
+let s = (0, a.v)((e) => ({
     listings: {},
-    setListing: (t, n) => (0, s.r)(() => e((e) => ({ listings: { ...e.listings, [t]: n(e.listings[t]) } }))),
+    setListing: (t, i) => (0, l.r)(() => e((e) => ({ listings: { ...e.listings, [t]: i(e.listings[t]) } }))),
     editStateIdsForGroup: {},
-    setEditStateIdsForGroup: (t, n) =>
-        (0, s.r)(() => {
-            e((e) => ({ editStateIdsForGroup: { ...e.editStateIdsForGroup, [t]: n(e.editStateIdsForGroup[t]) } }));
+    setEditStateIdsForGroup: (t, i) =>
+        (0, l.r)(() => {
+            e((e) => ({ editStateIdsForGroup: { ...e.editStateIdsForGroup, [t]: i(e.editStateIdsForGroup[t]) } }));
         }),
 }));

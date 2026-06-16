@@ -1,32 +1,31 @@
-"use strict";
-n.d(t, { E: () => S, A: () => T });
-var i = n(627968),
+n.d(t, { E: () => j, A: () => E });
+var l = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(834730),
-    l = n(140735),
-    u = n(707554),
-    c = n(349288),
-    d = n(174459),
-    _ = n(559868),
-    h = n(652215),
+    i = n(503698),
+    a = n.n(i),
+    s = n(834730),
+    o = n(140735),
+    d = n(707554),
+    u = n(349288),
+    c = n(174459),
+    m = n(559868),
+    g = n(652215),
     f = n(375708);
 let p = () => {
-    d.default.track(h.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: _.Do });
+    c.default.track(g.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: m.Do });
 };
-function E() {
-    return (0, i.jsxs)(i.Fragment, {
+function h() {
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsx)("span", { children: f.intl.string(f.t.OJmNR9) }),
-            (0, i.jsx)("br", {}),
-            (0, i.jsx)("br", {}),
-            (0, i.jsx)("span", {
+            (0, l.jsx)("span", { children: f.intl.string(f.t.OJmNR9) }),
+            (0, l.jsx)("br", {}),
+            (0, l.jsx)("br", {}),
+            (0, l.jsx)("span", {
                 children: f.intl.format(f.t.RCYeBL, {
                     blogHook: (e, t) =>
-                        (0, i.jsx)(
-                            c.Anchor,
-                            { onClick: p, target: "_blank", rel: "noreferrer noopener", href: _.Do, children: e },
+                        (0, l.jsx)(
+                            u.Anchor,
+                            { onClick: p, target: "_blank", rel: "noreferrer noopener", href: m.Do, children: e },
                             t,
                         ),
                 }),
@@ -34,49 +33,49 @@ function E() {
         ],
     });
 }
-var m = n(311016),
-    g = n(692051),
-    A = n(713804),
-    I = n(992595);
-function T(e) {
+var _ = n(311016),
+    x = n(692051),
+    v = n(713804),
+    b = n(992595);
+function E(e) {
     let {
             userBio: t,
             className: n,
-            animateOnHoverOrFocusOnly: s = !1,
-            isHoveringOrFocusing: l = !1,
-            lineClamp: u = 6,
-            setLineClamp: c = !0,
-            textColor: d,
-            userId: _,
+            animateOnHoverOrFocusOnly: i = !1,
+            isHoveringOrFocusing: o = !1,
+            lineClamp: d = 6,
+            setLineClamp: u = !0,
+            textColor: c,
+            userId: m,
         } = e,
-        h = r.useMemo(
-            () => ((0, m.A)(_) ? (0, i.jsx)(E, {}) : null == t || "" === t ? null : (0, A.parseBioReact)(t)),
-            [_, t],
+        g = r.useMemo(
+            () => ((0, _.A)(m) ? (0, l.jsx)(h, {}) : null == t || "" === t ? null : (0, v.parseBioReact)(t)),
+            [m, t],
         );
-    return null == h
+    return null == g
         ? null
-        : (0, i.jsx)("div", {
-              className: a()(n, I.PT),
-              children: (0, i.jsx)(o.E, {
+        : (0, l.jsx)("div", {
+              className: a()(n, b.PT),
+              children: (0, l.jsx)(s.E, {
                   variant: "text-sm/normal",
-                  lineClamp: c ? u : void 0,
-                  color: void 0 !== d ? d : void 0,
-                  children: (0, i.jsx)(g.Y.Provider, {
-                      value: { disableAnimations: s && !l, disableInteractions: !1 },
-                      children: h,
+                  lineClamp: u ? d : void 0,
+                  color: void 0 !== c ? c : void 0,
+                  children: (0, l.jsx)(x.Y.Provider, {
+                      value: { disableAnimations: i && !o, disableInteractions: !1 },
+                      children: g,
                   }),
               }),
           });
 }
-function S(e) {
+function j(e) {
     let t = r.useId(),
-        { userBio: n, userId: s } = e;
-    return (0, m.A)(s) || (null != n && "" !== n)
-        ? (0, i.jsxs)("section", {
+        { userBio: n, userId: i } = e;
+    return (0, _.A)(i) || (null != n && "" !== n)
+        ? (0, l.jsxs)("section", {
               "aria-labelledby": t,
               children: [
-                  (0, i.jsx)(l.A, { children: (0, i.jsx)(u.H, { id: t, children: f.intl.string(f.t.ZzAR2Y) }) }),
-                  (0, i.jsx)(T, { ...e }),
+                  (0, l.jsx)(o.A, { children: (0, l.jsx)(d.H, { id: t, children: f.intl.string(f.t.ZzAR2Y) }) }),
+                  (0, l.jsx)(E, { ...e }),
               ],
           })
         : null;

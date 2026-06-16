@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { U: () => s });
-var i = n(64700),
-    r = n(172218);
-let s = function () {
+a.d(t, { U: () => n });
+var s = a(64700),
+    i = a(172218);
+let n = function () {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
-        [t, n] = (0, i.useState)(1),
-        s = (0, i.useMemo)(() => ({ threshold: Array.from({ length: 101 }, (e, t) => t / 100) }), []);
+        [t, a] = (0, s.useState)(1),
+        n = (0, s.useMemo)(() => ({ threshold: Array.from({ length: 101 }, (e, t) => t / 100) }), []);
     return {
-        visibilityPercentageRef: (0, r.B)(
+        visibilityPercentageRef: (0, i.B)(
             (e) => {
-                n(e.intersectionRatio);
+                a(e.intersectionRatio);
             },
-            s,
+            n,
             e,
         ),
         visibilityPercentage: t,

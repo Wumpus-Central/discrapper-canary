@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { B8: () => _, wb: () => h, z5: () => d }), n(321073);
-var i = n(627968),
-    r = n(64700),
-    s = n(61491),
-    a = n(834730),
-    o = n(984212),
-    l = n(875699);
-let u = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
+n.d(t, { B8: () => m, wb: () => f, z5: () => d }), n(321073);
+var r = n(627968),
+    l = n(64700),
+    a = n(61491),
+    i = n(834730),
+    s = n(984212),
+    u = n(875699);
+let o = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
     c = [];
-function d(e, t, n, i) {
-    let [s, a] = r.useState(null),
-        [l, d] = r.useState(null);
+function d(e, t, n, r) {
+    let [a, i] = l.useState(null),
+        [u, d] = l.useState(null);
     return (
-        r.useEffect(() => {
+        l.useEffect(() => {
             if (null == n || 0 === n.length || !e) return;
-            let i = t.current;
-            if (null == i) return;
-            i.track.mode = "hidden";
-            let r = () => {
-                let e = i.track.cues ?? [],
+            let r = t.current;
+            if (null == r) return;
+            r.track.mode = "hidden";
+            let l = () => {
+                let e = r.track.cues ?? [],
                     t = [];
                 for (let n = 0; n < e.length; n++) {
-                    let i = e[n];
-                    if (!(0, o.C)(i)) continue;
-                    let r = (function (e) {
-                        let t = e.match(u);
+                    let r = e[n];
+                    if (!(0, s.C)(r)) continue;
+                    let l = (function (e) {
+                        let t = e.match(o);
                         if (null == t) return null;
                         let n = e.split("#")[0];
                         return 0 === n.length
@@ -36,60 +35,60 @@ function d(e, t, n, i) {
                                   w: parseInt(t[3], 10),
                                   h: parseInt(t[4], 10),
                               };
-                    })(i.text);
-                    null != r && t.push({ startSec: i.startTime, endSec: i.endTime, ...r });
+                    })(r.text);
+                    null != l && t.push({ startSec: r.startTime, endSec: r.endTime, ...l });
                 }
-                t.sort((e, t) => e.startSec - t.startSec), a({ url: n, cues: t });
+                t.sort((e, t) => e.startSec - t.startSec), i({ url: n, cues: t });
             };
             return (
-                i.addEventListener("load", r),
-                i.readyState === HTMLTrackElement.LOADED && r(),
-                () => i.removeEventListener("load", r)
+                r.addEventListener("load", l),
+                r.readyState === HTMLTrackElement.LOADED && l(),
+                () => r.removeEventListener("load", l)
             );
         }, [n, t, e]),
-        r.useEffect(() => {
-            if (null == i || 0 === i.length || !e) return;
+        l.useEffect(() => {
+            if (null == r || 0 === r.length || !e) return;
             let t = new Image();
             return (
-                (t.onload = () => d(i)),
-                (t.src = i),
+                (t.onload = () => d(r)),
+                (t.src = r),
                 () => {
                     t.onload = null;
                 }
             );
-        }, [i, e]),
-        null != s && s?.url === n && l === i ? s.cues : c
+        }, [r, e]),
+        null != a && a?.url === n && u === r ? a.cues : c
     );
 }
-function _(e, t) {
+function m(e, t) {
     if (0 === e.length) return null;
     let n = 0,
-        i = e.length - 1;
-    for (; n <= i; ) {
-        let r = (n + i) >> 1,
-            s = e[r];
-        if (t < s.startSec) i = r - 1;
+        r = e.length - 1;
+    for (; n <= r; ) {
+        let l = (n + r) >> 1,
+            a = e[l];
+        if (t < a.startSec) r = l - 1;
         else {
-            if (!(t >= s.endSec)) return s;
-            n = r + 1;
+            if (!(t >= a.endSec)) return a;
+            n = l + 1;
         }
     }
     return e[Math.max(0, Math.min(n, e.length - 1))];
 }
-function h(e) {
-    let { cue: t, timeSec: n, cursorXPx: r, timelineWidthPx: o } = e;
+function f(e) {
+    let { cue: t, timeSec: n, cursorXPx: l, timelineWidthPx: s } = e;
     if (t.w <= 0 || t.h <= 0) return null;
-    let u = t.w / 2,
-        c = 8 + u,
-        d = Math.max(c, o - 8 - u),
-        _ = Math.max(c, Math.min(r, d));
-    return (0, i.jsxs)("div", {
-        className: l.kL,
+    let o = t.w / 2,
+        c = 8 + o,
+        d = Math.max(c, s - 8 - o),
+        m = Math.max(c, Math.min(l, d));
+    return (0, r.jsxs)("div", {
+        className: u.kL,
         "aria-hidden": !0,
-        style: { left: `${_}px`, bottom: "16px", width: `${t.w}px` },
+        style: { left: `${m}px`, bottom: "16px", width: `${t.w}px` },
         children: [
-            (0, i.jsx)("div", {
-                className: l.FF,
+            (0, r.jsx)("div", {
+                className: u.FF,
                 style: {
                     width: `${t.w}px`,
                     height: `${t.h}px`,
@@ -98,12 +97,12 @@ function h(e) {
                     backgroundRepeat: "no-repeat",
                 },
             }),
-            (0, i.jsx)(a.E, {
-                className: l.Sp,
+            (0, r.jsx)(i.E, {
+                className: u.Sp,
                 variant: "text-xs/normal",
                 color: "always-white",
                 tabularNumbers: !0,
-                children: (0, s.rB)(n),
+                children: (0, a.rB)(n),
             }),
         ],
     });

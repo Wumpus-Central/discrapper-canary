@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { Z: () => a });
-var i = n(630449),
-    r = n(272469),
-    s = n(83220);
-function a(e, t) {
-    let n = (0, i.KU)(),
-        a = (0, i.rm)();
-    if (!n) return;
-    let { beforeBreadcrumb: o = null, maxBreadcrumbs: l = 100 } = n.getOptions();
-    if (l <= 0) return;
-    let u = { timestamp: (0, s.lu)(), ...e },
-        c = o ? (0, r.pq)(() => o(u, t)) : u;
-    null !== c && (n.emit && n.emit("beforeAddBreadcrumb", c, t), a.addBreadcrumb(c, l));
+s.d(e, { Z: () => o });
+var i = s(630449),
+    n = s(272469),
+    r = s(83220);
+function o(t, e) {
+    let s = (0, i.KU)(),
+        o = (0, i.rm)();
+    if (!s) return;
+    let { beforeBreadcrumb: a = null, maxBreadcrumbs: c = 100 } = s.getOptions();
+    if (c <= 0) return;
+    let h = { timestamp: (0, r.lu)(), ...t },
+        u = a ? (0, n.pq)(() => a(h, e)) : h;
+    null !== u && (s.emit && s.emit("beforeAddBreadcrumb", u, e), o.addBreadcrumb(u, c));
 }
