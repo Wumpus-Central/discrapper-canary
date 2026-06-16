@@ -62,18 +62,20 @@
     transform-origin: center
 }
 
-.user-profile-sidebar-redesign .scaledSkuPreview__73abe {
-    transform: scale(.518)
-}
-
-.scaledSkuPreview__73abe.avatarDecorationPreview__73abe {
+.scaledSkuPreview__73abe.avatarDecoration__73abe {
     height: auto;
     width: auto
 }
 
-.collectiblesSkuPreview__73abe>div {
-    height: 136px;
-    width: 106px
+.scaledSkuPreview__73abe.bundle__73abe,
+.scaledSkuPreview__73abe.nameplate__73abe,
+.scaledSkuPreview__73abe.profileEffect__73abe,
+.scaledSkuPreview__73abe.profileFrame__73abe {
+    transform: scale(1)
+}
+
+.user-profile-sidebar-redesign .scaledSkuPreview__73abe.nameplate__73abe {
+    transform: scale(.92)
 }
 
 .container__06b03 {
