@@ -1,1 +1,1 @@
-"use strict";n.d(t,{A:()=>s});var i=n(360469),r=n(652215);function s(e){return e?.application_id===i.D4&&(e?.platform===r.yTV.ANDROID||e?.platform===r.yTV.IOS)}
+e.d(l,{A:()=>a});var n=e(360469),r=e(652215);function a(t){return t?.application_id===n.D4&&(t?.platform===r.yTV.ANDROID||t?.platform===r.yTV.IOS)}

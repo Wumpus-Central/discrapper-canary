@@ -1,0 +1,33 @@
+.panel_ef5082 {
+    gap: 16px;
+    padding: 8px
+}
+
+.panel_ef5082,
+.panelGroup_ef5082 {
+    display: flex;
+    flex-direction: column
+}
+
+.panelGroup_ef5082 {
+    background: var(--background-base-lower);
+    border-radius: 8px;
+    gap: 4px;
+    padding: 12px
+}
+
+.panelGroup_ef5082 span {
+    transition: color .4s ease-in-out
+}
+
+.bottomPanelButton_ef5082 {
+    padding-top: 12px
+}
+
+.topPanelToggle_ef5082 {
+    padding-bottom: 12px
+}
+
+.secondaryInfoText_ef5082 {
+    margin-inline-start: 8px
+}

@@ -1,0 +1,96 @@
+.root_b92f52 {
+    --custom-modal-v2-width: 100vw;
+    --custom-modal-v2-max-width: none;
+    --custom-modal-v2-height: 100vh;
+    --custom-modal-v2-min-height: 550px;
+    --custom-modal-v2-system-bar-padding: 0px;
+    --custom-modal-v2-private-banner-height: 0px;
+    --custom-modal-v2-header-button-top: var(--space-8);
+    --custom-modal-v2-padding: var(--space-32);
+    --custom-modal-v2-gutter: var(--space-32);
+    --custom-modal-v2-tabpanel-scrollbar-offset: var(--space-16);
+    --custom-modal-v2-profile-width: min(max(300px, 45.5vw), 400px);
+    --custom-modal-v2-profile-card-padding: var(--space-32);
+    --custom-modal-v2-editing-panel-inner-width: 240px;
+    --custom-modal-v2-editing-panel-width: calc(var(--custom-modal-v2-editing-panel-inner-width) + 1px);
+    background: none;
+    border: none;
+    margin-block: calc(var(--space-24)*-1);
+    max-height: 100vh;
+    position: relative;
+    width: 100%
+}
+
+@media (min-width:929px) {
+    .root_b92f52 {
+        --custom-modal-v2-width: 962px;
+        --custom-modal-v2-max-width: calc(100vw - var(--space-48)*2);
+        --custom-modal-v2-profile-width: min(max(300px, calc(45.5vw - var(--space-48)*0.91)), 400px)
+    }
+}
+
+@media (min-width:1169px) {
+    .root_b92f52 {
+        --custom-modal-v2-editing-panel-width: calc(var(--custom-modal-v2-editing-panel-inner-width) + 2px)
+    }
+}
+
+@media (min-height:785px) {
+    .root_b92f52 {
+        --custom-modal-v2-height: min(800px, calc(100vh - var(--space-48)*2));
+        margin-block: 0
+    }
+}
+
+.root_b92f52.hasPrivateBanner_b92f52 {
+    --custom-modal-v2-private-banner-height: var(--space-48)
+}
+
+.platform-linux .root_b92f52,
+.platform-osx .root_b92f52,
+.platform-win .root_b92f52 {
+    --custom-modal-v2-system-bar-padding: var(--custom-app-top-bar-height);
+    --custom-modal-v2-header-button-top: calc(var(--space-8) + max(var(--custom-modal-v2-system-bar-padding), var(--custom-modal-v2-private-banner-height)))
+}
+
+@media (min-height:785px) {
+
+    .platform-linux .root_b92f52,
+    .platform-osx .root_b92f52,
+    .platform-win .root_b92f52 {
+        --custom-modal-v2-system-bar-padding: 0px;
+        --custom-modal-v2-header-button-top: var(--space-8)
+    }
+}
+
+@media (min-width:929px) {
+    .outer_b92f52 {
+        border-inline: 1px solid var(--border-normal)
+    }
+}
+
+@media (min-height:785px) {
+    .outer_b92f52 {
+        border-block: 1px solid var(--border-normal)
+    }
+}
+
+@media (min-height:785px) and (min-width:929px) {
+    .outer_b92f52 {
+        border-radius: var(--radius-lg)
+    }
+}
+
+.enable-forced-colors .outer_b92f52 {
+    border-color: CanvasText
+}
+
+.modalHeaderButtons_b92f52 {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: var(--space-8);
+    inset-block-start: var(--custom-modal-v2-header-button-top);
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    z-index: 3
+}

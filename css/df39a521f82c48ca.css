@@ -1,0 +1,94 @@
+.container__2af41 {
+    background-color: rgba(19, 19, 24, .95);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-border) var(--shadow-high);
+    box-sizing: border-box;
+    flex: 1;
+    height: 100%;
+    max-width: 300px;
+    padding: var(--space-12)
+}
+
+.activityCard__2af41 {
+    background-color: transparent;
+    flex: 1;
+    padding: 0 !important
+}
+
+.contentInventoryContainer__2af41 {
+    border-top: 1px solid var(--background-mod-strong);
+    margin-top: var(--space-12);
+    padding-top: var(--space-12)
+}
+
+.contentInventoryHeader__2af41 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4);
+    padding-bottom: var(--space-8)
+}
+
+.activityCard__2af41+.row__2af41,
+.inviteFriendsButton__2af41+.row__2af41 {
+    border-top: 1px solid var(--background-mod-strong);
+    margin-top: var(--space-12);
+    padding-top: var(--space-12)
+}
+
+.title__2af41 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.avatar__2af41 {
+    flex-shrink: 0
+}
+
+.row__2af41 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.row__2af41+.row__2af41 {
+    margin-top: var(--space-12)
+}
+
+.details__2af41 {
+    flex-grow: 1;
+    margin: 0 var(--space-12);
+    overflow: hidden
+}
+
+.usernameWrapper__2af41 {
+    align-items: center;
+    display: flex
+}
+
+.username__2af41 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.inviteButtons__2af41 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.inviteFriendsButton__2af41 {
+    margin-top: var(--space-12);
+    margin-inline-start: 68px
+}
+
+.liveIndicator__2af41 {
+    margin-inline-start: var(--space-8)
+}
+
+.badgesContainer__2af41 {
+    flex-wrap: wrap
+}

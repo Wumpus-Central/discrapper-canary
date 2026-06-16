@@ -1,0 +1,270 @@
+.container__9bfb9 {
+    gap: 16px;
+    width: 100%
+}
+
+.connectionList__9bfb9,
+.container__9bfb9 {
+    display: flex;
+    flex-direction: column
+}
+
+.connectionList__9bfb9 {
+    gap: var(--space-16)
+}
+
+.addConnectionButton__9bfb9 {
+    align-items: center;
+    align-self: flex-start;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    gap: 2px;
+    transition: color 50ms ease-in
+}
+
+.addConnectionButton__9bfb9:hover {
+    color: var(--interactive-text-hover);
+    transition: color .15s ease-out
+}
+
+.connection__9bfb9 {
+    display: flex;
+    gap: 8px
+}
+
+.connectionInfo__9bfb9 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center
+}
+
+.platformIconContainer__9bfb9 {
+    align-items: center;
+    background-color: var(--white);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    color: var(--neutral-69);
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.platformIcon__9bfb9 {
+    height: 18px;
+    width: 18px
+}
+
+.applicationConnectionIcon__9bfb9 {
+    border-radius: 18px
+}
+
+.accountName__9bfb9 {
+    align-items: center;
+    display: flex;
+    gap: 2px
+}
+
+.accountNameText__9bfb9 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    white-space: nowrap
+}
+
+.platformUrlAnchor__9bfb9 {
+    color: var(--text-default)
+}
+
+.platformUrlAnchor__9bfb9:hover {
+    text-decoration: underline
+}
+
+.metadata__9bfb9 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: hidden
+}
+
+.metadata__9bfb9:empty {
+    display: none
+}
+
+.connectedAppRoleAccountClickable__9bfb9 {
+    cursor: pointer;
+    margin-bottom: 2px
+}
+
+.connectedAppRoleAccountPoweredBy__9bfb9 {
+    display: inline
+}
+
+.container__9c314 {
+    --custom-preview-inline-padding: 6px;
+    --custom-preview-block-padding: 0;
+    margin-inline: calc((var(--custom-preview-inline-padding) + 1px)*-1);
+    position: relative
+}
+
+.custom-user-profile-theme .container__9c314 {
+    --text-feedback-warning: var(--text-default)
+}
+
+.container__9c314.compact__9c314 {
+    --custom-preview-inline-padding: var(--space-4);
+    --custom-preview-block-padding: var(--space-4)
+}
+
+.container__9c314.multiline__9c314 {
+    --custom-preview-block-padding: var(--space-8)
+}
+
+@keyframes fadeIn__9c314 {
+    0% {
+        opacity: 0
+    }
+}
+
+.fadeIn__9c314 {
+    animation: fadeIn__9c314 .25s ease-out
+}
+
+.preview__9c314 {
+    align-items: stretch;
+    display: flex;
+    min-height: var(--control-input-height-md)
+}
+
+.multiline__9c314 .preview__9c314 {
+    min-height: 0
+}
+
+.editable__9c314 {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    padding: var(--custom-preview-block-padding) var(--custom-preview-inline-padding);
+    transition: border-color .1s ease, background-color .1s ease
+}
+
+.compact__9c314 .editable__9c314 {
+    align-self: center;
+    min-width: 0
+}
+
+.multiline__9c314 .editable__9c314 {
+    align-items: flex-start;
+    flex-grow: 1;
+    min-width: 0
+}
+
+.multiline__9c314 .editable__9c314>* {
+    min-width: 0
+}
+
+.editable__9c314:hover,
+.keyboard-mode .editable__9c314:has(:focus) {
+    background-color: var(--input-background-default);
+    border-color: var(--border-strong)
+}
+
+.editable__9c314.disabled__9c314 {
+    cursor: default
+}
+
+.editable__9c314.disabled__9c314:hover,
+.keyboard-mode .editable__9c314.disabled__9c314:has(:focus) {
+    background-color: transparent;
+    border-color: transparent
+}
+
+.editable__9c314.hasError__9c314 {
+    background-color: var(--input-background-error-default);
+    outline: 2px solid var(--input-border-error-default);
+    outline-offset: -2px
+}
+
+.container__9c314:not(.compact__9c314) .editable__9c314.hasError__9c314 {
+    flex-grow: 1
+}
+
+.editable__9c314.hasError__9c314:has(:focus),
+.editable__9c314.hasError__9c314:hover {
+    background-color: var(--input-background-error-default);
+    border-color: transparent
+}
+
+.editable__9c314.hasWarning__9c314 {
+    background-color: var(--background-feedback-warning);
+    border-color: var(--border-feedback-warning)
+}
+
+.container__9c314:not(.compact__9c314) .editable__9c314.hasWarning__9c314 {
+    flex-grow: 1
+}
+
+.editable__9c314.hasWarning__9c314:has(:focus),
+.editable__9c314.hasWarning__9c314:hover {
+    background-color: var(--background-feedback-warning);
+    border-color: var(--border-feedback-warning);
+    outline: 2px solid var(--border-feedback-warning);
+    outline-offset: -2px
+}
+
+.placeholder__9c314 {
+    font-style: italic
+}
+
+.errorIcon__9c314 {
+    color: var(--icon-feedback-critical)
+}
+
+.warningIcon__9c314 {
+    color: var(--icon-feedback-warning)
+}
+
+.previewError__9c314 {
+    align-items: start;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: auto 1fr;
+    padding-block-start: var(--space-4)
+}
+
+.previewTrailingAccessory__9c314 {
+    align-self: stretch;
+    display: flex;
+    margin-inline-end: var(--space-4);
+    margin-inline-start: var(--space-12);
+    opacity: 0;
+    transition: opacity 50ms ease-in
+}
+
+.editable__9c314:hover .previewTrailingAccessory__9c314,
+.keyboard-mode .editable__9c314:has(:focus) .previewTrailingAccessory__9c314 {
+    opacity: 1;
+    transition: opacity .15s ease-out
+}
+
+.hasError__9c314 .previewTrailingAccessory__9c314,
+.hasWarning__9c314 .previewTrailingAccessory__9c314 {
+    margin-inline-start: auto
+}
+
+.trailingAccessoryButton__9c314 {
+    --control-icon-only-background-hover: var(--control-secondary-background-default);
+    --control-icon-only-border-hover: var(--control-secondary-border-default);
+    margin-block: 2px;
+    margin-inline-end: calc((var(--custom-preview-inline-padding) + 1px)*-1)
+}

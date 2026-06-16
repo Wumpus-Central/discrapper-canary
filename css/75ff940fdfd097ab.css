@@ -1,0 +1,80 @@
+.permissionsGroupContainer__3f11f {
+    padding: 16px
+}
+
+.permissionItemContainer__3f11f,
+.permissionsItemContainer__3f11f {
+    display: flex;
+    flex-direction: column;
+    gap: 12px
+}
+
+.permissionItemContainer__3f11f {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    box-shadow: none;
+    padding: 12px
+}
+
+.permissionItemContainer__3f11f.elevatedPermission__3f11f {
+    box-shadow: var(--elevation-stroke)
+}
+
+.permissionItemHeader__3f11f {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.permissionItemSubheader__3f11f {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.elevatedPermissionContainer__3f11f {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 2px
+}
+
+.permissionItemDescription__3f11f {
+    flex: 1
+}
+
+.permissionItemRoleContainer__3f11f {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.permissionTitle__3f11f {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: top
+}
+
+.roleTooltipItem__3f11f {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0
+}
+
+.roleTooltipItem__3f11f.editable__3f11f {
+    cursor: pointer
+}
+
+.roleChiplet__3f11f {
+    background-color: var(--background-mod-strong);
+    border-radius: 4px;
+    height: auto;
+    margin: 0;
+    padding: 4px
+}

@@ -1,0 +1,24 @@
+.container__3f0b7 {
+    align-items: flex-start;
+    background: linear-gradient(90deg, rgba(180, 115, 245, .1), rgba(226, 146, 170, .1));
+    border: 2px solid var(--redesign-button-premium-primary-purple-for-gradient-2);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    padding: 32px
+}
+
+.header__3f0b7 {
+    margin-bottom: var(--space-4)
+}
+
+.wordmark__3f0b7 {
+    font-size: 24px;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase
+}
+
+.subheader__3f0b7 {
+    margin-bottom: var(--space-16)
+}

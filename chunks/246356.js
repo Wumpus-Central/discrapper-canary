@@ -1,1 +1,1 @@
-"use strict";n.d(t,{A:()=>s});var i=n(64700),r=n(447404);function s(e){let{children:t}=e,{preventIdle:n,allowIdle:s}=(0,r.o)("popup");return i.useEffect(()=>(n(),()=>s()),[s,n]),t}
+n.d(e,{A:()=>a});var s=n(64700),i=n(447404);function a(t){let{children:e}=t,{preventIdle:n,allowIdle:a}=(0,i.o)("popup");return s.useEffect(()=>(n(),()=>a()),[a,n]),e}

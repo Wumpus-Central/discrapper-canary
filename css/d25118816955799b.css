@@ -1,0 +1,80 @@
+.grid_eb8860 {
+    display: grid;
+    gap: var(--space-16);
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(auto-fill, 133px);
+    justify-content: start;
+    padding: var(--space-12) 0;
+    width: 100%
+}
+
+.dragAndDropContainer_eb8860 {
+    position: relative
+}
+
+.dragHandleContainer_eb8860 {
+    border-radius: var(--radius-md);
+    color: var(--white);
+    cursor: grab;
+    position: relative
+}
+
+.dragHandleContainer_eb8860:has(.dragHandle_eb8860:focus-visible):after {
+    background: var(--opacity-black-72);
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    position: absolute;
+    z-index: 1
+}
+
+.dragHandle_eb8860 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: flex-start;
+    opacity: 0;
+    padding-inline-start: 2px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 2
+}
+
+.dragHandle_eb8860:focus-visible {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.isDragging_eb8860 {
+    opacity: .15
+}
+
+.isDragging_eb8860>.dragHandleContainer_eb8860>:not(.dragHandle_eb8860) {
+    pointer-events: none
+}
+
+.dropIndicatorBefore_eb8860:before {
+    background-color: var(--icon-strong);
+    border-radius: 4px;
+    bottom: 0;
+    content: "";
+    display: block;
+    inset-inline-start: -8px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    z-index: 1
+}
+
+.dropIndicatorAfter_eb8860:after {
+    background-color: var(--icon-strong);
+    border-radius: 4px;
+    bottom: 0;
+    content: "";
+    display: block;
+    inset-inline-end: -8px;
+    position: absolute;
+    top: 0;
+    width: 2px;
+    z-index: 1
+}

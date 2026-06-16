@@ -1,0 +1,89 @@
+.cameraWrapper__92346 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 220px;
+    position: relative;
+    width: 100%
+}
+
+.camera__92346 {
+    position: relative;
+    transform: scaleX(-1)
+}
+
+.autoThresholdSlider__0fc79 {
+    height: auto
+}
+
+.noInputDevicesDetectedWarning__0fc79 {
+    margin-top: 8px
+}
+
+.theme-light .sliderBar__0fc79 {
+    background-color: var(--primary-200)
+}
+
+.theme-dark .sliderBar__0fc79 {
+    background-color: var(--primary-400)
+}
+
+.sliderBar__0fc79.disabled__0fc79 {
+    opacity: .6
+}
+
+.sliderBar__0fc79.speaking__0fc79 {
+    background-color: var(--green-230)
+}
+
+.inputSensitivityToggle__0fc79 .sliderBar__0fc79 {
+    transition: background-color .2s linear
+}
+
+.inputSensitivityToggle__0fc79.manual__0fc79 .microphone__0fc79 {
+    position: absolute;
+    width: 100%
+}
+
+.inputSensitivityToggle__0fc79.manual__0fc79 .microphone__0fc79 .fill__0fc79 {
+    background-color: var(--opacity-black-24);
+    height: 100%;
+    transition: width 35ms ease
+}
+
+.inputSensitivitySlider__0fc79 {
+    height: 40px;
+    position: relative;
+    width: 100%
+}
+
+.inputSensitivityBar__0fc79 {
+    border-radius: var(--radius-xs);
+    display: block;
+    height: 8px;
+    overflow: hidden;
+    position: relative
+}
+
+.inputSensitivityBarFill__0fc79 {
+    background: var(--brand-500);
+    height: 100%
+}
+
+.inputSensitivityToggle__0fc79.manual__0fc79 .microphone__0fc79 {
+    background-color: transparent
+}
+
+.inputSensitivityToggle__0fc79:not(.manual__0fc79) {
+    padding-top: 8px
+}
+
+.keybindContainer__28cca {
+    display: grid;
+    min-width: 0;
+    width: clamp(160px, 30vw, 300px)
+}

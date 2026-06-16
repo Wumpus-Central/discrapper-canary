@@ -1,0 +1,18 @@
+.guildSelectOptionIcon__41a02 {
+    border-radius: 4px
+}
+
+.speakerIcon__41a02 {
+    height: 16px;
+    margin-inline-end: 4px;
+    width: 16px
+}
+
+.suffixNode__41a02 {
+    align-items: center;
+    display: flex
+}
+
+.disabledOption__41a02 {
+    opacity: .6
+}

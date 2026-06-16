@@ -1,1 +1,1 @@
-"use strict";n.d(t,{O:()=>a,c:()=>o});var i=n(17928),r=n(380335),s=n(157550);function a(e){return(0,i.bG)([r.A],()=>r.A.isMessageRequest(e),[e])}function o(e){return(0,i.bG)([r.A,s.A],()=>null!=e&&(r.A.isMessageRequest(e)||s.A.isSpam(e)))}
+n.d(t,{O:()=>s,c:()=>u});var r=n(17928),i=n(380335),a=n(157550);function s(e){return(0,r.bG)([i.A],()=>i.A.isMessageRequest(e),[e])}function u(e){return(0,r.bG)([i.A,a.A],()=>null!=e&&(i.A.isMessageRequest(e)||a.A.isSpam(e)))}

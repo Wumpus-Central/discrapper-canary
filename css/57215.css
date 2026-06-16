@@ -1,0 +1,121 @@
+.container_e21ed7 {
+    background-color: var(--input-background-default);
+    border: 1px solid var(--input-border-default);
+    border-radius: var(--radius-sm);
+    transition: background-color .1s ease-in-out
+}
+
+.dropping_e21ed7 {
+    background-color: var(--background-surface-highest)
+}
+
+.error_e21ed7 {
+    border-color: var(--border-feedback-critical)
+}
+
+.mainWrapper_e21ed7 {
+    margin: var(--space-xl) var(--space-sm);
+    position: relative
+}
+
+.mainBody_e21ed7 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    justify-content: center
+}
+
+.hidden_e21ed7 {
+    visibility: hidden
+}
+
+.absolutelyPositioned_e21ed7 {
+    inset: 0;
+    position: absolute
+}
+
+.files_e21ed7 {
+    display: grid;
+    gap: var(--space-xs);
+    grid-template-columns: 1fr 1fr;
+    margin: var(--space-sm)
+}
+
+.file_e21ed7 {
+    align-items: center;
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: var(--space-sm);
+    padding: var(--space-xs);
+    position: relative
+}
+
+.file_e21ed7:focus-within .miniPopover_e21ed7,
+.file_e21ed7:hover .miniPopover_e21ed7 {
+    opacity: 1
+}
+
+.singleFileInput_e21ed7 {
+    background-color: var(--background-surface-highest)
+}
+
+.filename_e21ed7 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden
+}
+
+.miniPopover_e21ed7 {
+    background-color: var(--background-surface-high);
+    border-radius: var(--radius-sm);
+    height: unset;
+    inset-inline-end: -6px;
+    opacity: 0;
+    outline: 1px solid var(--border-subtle);
+    position: absolute;
+    top: -6px;
+    transition: opacity .1s ease-in-out
+}
+
+.action_e21ed7 {
+    height: unset;
+    min-width: unset;
+    padding: var(--space-6)
+}
+
+.action_e21ed7:active {
+    padding-bottom: 5px;
+    padding-top: 7px
+}
+
+.actionIcon_e21ed7 {
+    height: unset;
+    width: unset
+}
+
+.fileInput_e21ed7 {
+    display: none
+}
+
+.clearButtonContainer__6d62c {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4px;
+    max-height: 100px;
+    opacity: 1;
+    overflow: hidden
+}
+
+.full-motion .clearButtonContainer__6d62c {
+    transition: all .2s ease-in-out
+}
+
+.clearButtonContainerHidden__6d62c {
+    margin-top: 0;
+    max-height: 0;
+    opacity: 0
+}

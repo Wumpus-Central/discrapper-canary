@@ -1,0 +1,135 @@
+.header__9f397 {
+    padding: 24px 16px 0
+}
+
+.channelPrompt__9f397 {
+    flex-grow: 0;
+    margin-bottom: 16px;
+    margin-top: 8px;
+    padding: 16px
+}
+
+.closeButton__9f397 {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px
+}
+
+.guildName__9f397 {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 8px
+}
+
+.title__9f397 {
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+    line-height: 30px
+}
+
+.subtitle__9f397 {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 8px
+}
+
+.skipButton__9f397 {
+    color: var(--text-strong);
+    margin-inline-end: 16px
+}
+
+.container_eb2cd2 {
+    align-items: center;
+    background-color: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 8px;
+    padding: 0;
+    width: 100%
+}
+
+.container_eb2cd2:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.keyboard-mode .container_eb2cd2:focus {
+    background-color: var(--interactive-background-selected)
+}
+
+.container_eb2cd2:active {
+    background-color: var(--interactive-background-active)
+}
+
+.icon_eb2cd2 {
+    filter: saturate(var(--saturation-factor, 1));
+    margin-block: var(--space-16) var(--space-16);
+    margin-inline: var(--space-16) var(--space-16)
+}
+
+.text_eb2cd2 {
+    font-weight: var(--font-weight-normal);
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.arrow_eb2cd2 {
+    margin-inline: auto 16px
+}
+
+.header__78f69 {
+    overflow: hidden;
+    padding: 24px 16px 0
+}
+
+.closeButton__78f69 {
+    inset-inline-end: 12px;
+    position: absolute;
+    top: 12px
+}
+
+.title__78f69 {
+    font-weight: var(--font-weight-bold)
+}
+
+.subtitle__78f69,
+.title__78f69 {
+    text-align: center
+}
+
+.subtitle__78f69 {
+    margin-top: 8px
+}
+
+.optionsList__78f69 {
+    margin-top: 24px;
+    padding: 0 16px 8px
+}
+
+.backButton__78f69 {
+    color: var(--text-default);
+    height: 38px;
+    margin-inline-end: auto
+}
+
+.skip__78f69 {
+    margin-bottom: 16px;
+    margin-top: 18px;
+    text-align: center
+}
+
+.optionHeader__1f657 {
+    margin-bottom: 8px;
+    margin-top: 16px;
+    text-transform: uppercase
+}
+
+.scroller__1f657 {
+    height: 330px;
+    margin: 12px -12px 0
+}
+
+.templatesList__1f657 {
+    padding: 0 12px
+}

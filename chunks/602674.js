@@ -1,1 +1,1 @@
-"use strict";n.d(t,{v:()=>r});let i=null;function r(){if(null==i)try{i=new AudioContext}catch(e){}return i}
+u.d(n,{v:()=>i});let c=null;function i(){if(null==c)try{c=new AudioContext}catch(t){}return c}

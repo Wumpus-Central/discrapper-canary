@@ -1,12 +1,35 @@
-.calendarContainer__9bb02 {
-    box-shadow: var(--legacy-elevation-border), var(--legacy-elevation-high)
+@value traitMaxWidth: 268px;
+
+.container_a2b4d3 {
+    flex-wrap: wrap
 }
 
-.container__9bb02 {
-    cursor: pointer;
-    display: grid;
-    gap: var(--space-8);
-    grid-template-columns: 1fr auto;
-    min-height: var(--control-input-height-md);
-    padding: var(--space-8) var(--space-12)
+.container_a2b4d3,
+.trait_a2b4d3 {
+    display: flex;
+    gap: 4px
+}
+
+.trait_a2b4d3 {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    max-width: 268px;
+    padding: 4px 8px;
+    transition: border-color .2s ease
+}
+
+.trait_a2b4d3:hover {
+    border-color: var(--border-strong)
+}
+
+.traitEmoji_a2b4d3 {
+    height: 16px;
+    width: 16px
+}
+
+.ellipsize_a2b4d3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }

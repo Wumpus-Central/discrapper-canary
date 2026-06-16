@@ -1,1 +1,1 @@
-"use strict";n.d(t,{C:()=>i});let i="ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL"
+t.d(n,{C:()=>r});let r="ACCEPT_FRIEND_REQUEST_CONFIRMATION_MODAL"

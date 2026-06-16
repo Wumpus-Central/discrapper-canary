@@ -1,0 +1,131 @@
+.formText_ddd181 a:hover {
+    text-decoration: underline
+}
+
+.formText_ddd181 strong {
+    font-weight: var(--font-weight-semibold)
+}
+
+.default_ddd181,
+.labelDescriptor_ddd181,
+.labelSelected_ddd181,
+.placeholder_ddd181 {}
+
+.labelSelected_ddd181 {
+    font-weight: var(--font-weight-normal)
+}
+
+@media (-webkit-max-device-pixel-ratio:1) {
+    .theme-light .labelSelected_ddd181 {
+        font-weight: var(--font-weight-medium)
+    }
+}
+
+.labelBold_ddd181 {
+    font-weight: var(--font-weight-semibold)
+}
+
+.description_ddd181 {
+    font-size: 14px;
+    font-weight: var(--font-weight-normal);
+    line-height: 20px
+}
+
+@media (-webkit-max-device-pixel-ratio:1) {
+    .theme-light .description_ddd181 {
+        font-weight: var(--font-weight-medium)
+    }
+}
+
+.modeDefault_ddd181 {
+    cursor: default
+}
+
+.modeSelectable_ddd181 {
+    cursor: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.modeDisabled_ddd181 {
+    cursor: not-allowed;
+    opacity: .3
+}
+
+.description_ddd181,
+.labelDescriptor_ddd181 {
+    color: var(--text-default)
+}
+
+.placeholder_ddd181 {
+    color: var(--text-muted)
+}
+
+.error_ddd181 {
+    color: var(--text-feedback-critical)
+}
+
+.error_ddd181,
+.success_ddd181 {}
+
+.success_ddd181 {
+    color: var(--text-feedback-positive)
+}
+
+.enable-forced-colors .modeDisabled_ddd181 {
+    color: GrayText;
+    opacity: 1
+}
+
+.description_cd2e37 {
+    margin-bottom: var(--space-8)
+}
+
+.section_c3d3d9 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.children_c3d3d9 {
+    display: flex;
+    gap: var(--space-12);
+    justify-content: space-between
+}
+
+.textChildren_c3d3d9 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    row-gap: var(--space-4)
+}
+
+.textChildren_c3d3d9.verticallyCenterAlign_c3d3d9 {
+    justify-content: center
+}
+
+.accessory_c3d3d9 {
+    align-items: flex-start;
+    display: flex;
+    min-width: 0
+}
+
+.accessory_c3d3d9.restrictWidth_c3d3d9 {
+    max-width: calc(50% - var(--space-12))
+}
+
+.container__5e208 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    width: 100%
+}
+
+.container__5e208.isComponentsV2__5e208 {
+    align-items: stretch;
+    max-width: min(600px, 100%);
+    row-gap: var(--space-8);
+    width: -moz-fit-content;
+    width: fit-content
+}

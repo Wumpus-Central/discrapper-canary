@@ -1,0 +1,14 @@
+.image__74f72 {
+    border-radius: 8px;
+    margin-bottom: 16px;
+    width: 100%
+}
+
+.header__74f72 {
+    margin-bottom: 8px
+}
+
+.usagePill__74f72 {
+    background-color: var(--background-base-low);
+    display: inline-block
+}

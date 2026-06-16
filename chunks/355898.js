@@ -1,1 +1,1 @@
-"use strict";n.d(t,{M:()=>s,e:()=>r});var i=n(228366);function r(e,t){i.h.dispatch({type:"GAME_UPSELL_DISMISS_CLEAR",applicationId:e,dismissibleContent:t})}function s(e,t){i.h.dispatch({type:"GAME_UPSELL_DISMISS",applicationIds:e,dismissedAt:Date.now(),dismissibleContent:t})}
+t.d(s,{M:()=>n,e:()=>i});var l=t(228366);function i(e,s){l.h.dispatch({type:"GAME_UPSELL_DISMISS_CLEAR",applicationId:e,dismissibleContent:s})}function n(e,s){l.h.dispatch({type:"GAME_UPSELL_DISMISS",applicationIds:e,dismissedAt:Date.now(),dismissibleContent:s})}

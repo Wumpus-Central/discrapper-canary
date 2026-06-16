@@ -1,0 +1,90 @@
+.container_b5010b {
+    display: flex;
+    flex-direction: column
+}
+
+.eventName_b5010b {
+    max-width: 534px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.eventName_b5010b:hover {
+    text-decoration: underline
+}
+
+.description_b5010b {
+    margin-top: 8px
+}
+
+.descriptionWithThumbnail_b5010b {
+    max-width: 288px
+}
+
+.spacer_b5010b {
+    margin-inline-start: auto
+}
+
+.rsvpCount_b5010b {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: 12px;
+    display: flex;
+    flex-shrink: 0;
+    height: 20px;
+    margin-bottom: auto;
+    padding-inline: 8px
+}
+
+.rsvpIcon_b5010b {
+    color: var(--text-default);
+    margin-inline-end: 4px
+}
+
+.creator_b5010b {
+    margin-inline-end: 8px
+}
+
+.inline_b5010b {
+    align-items: center;
+    display: flex
+}
+
+.eventInfoStatusContainer_b5010b {
+    margin-bottom: 12px
+}
+
+.statusContainer_b5010b {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4px
+}
+
+.withThumbnail_b5010b {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.thumbnailContainer_b5010b {
+    align-items: center;
+    height: auto
+}
+
+.thumbnail_b5010b {
+    border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+    height: 120px;
+    margin-block: 0;
+    margin-top: -16px;
+    margin-inline: -16px;
+    margin-bottom: 16px;
+    width: calc(100% + 32px)
+}
+
+.enable-forced-colors .eventName_b5010b {
+    color: ButtonText;
+    text-decoration: underline
+}

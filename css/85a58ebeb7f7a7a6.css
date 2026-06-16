@@ -1,0 +1,23 @@
+.scroller__764cd {
+    gap: 24px
+}
+
+.cards__764cd {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.loadingItem__764cd {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    padding: 12px
+}
+
+.loadingItem__764cd>:first-child {
+    border-radius: var(--radius-lg);
+    height: 60px;
+    margin: 0
+}

@@ -1,0 +1,11 @@
+.banner__24928 {
+    padding: var(--space-12)
+}
+
+.container__581dd {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8);
+    padding: var(--space-16)
+}

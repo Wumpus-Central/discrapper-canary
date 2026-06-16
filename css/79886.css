@@ -1,0 +1,26 @@
+.editableGdmIcon_ec5bef {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: -moz-max-content;
+    width: max-content
+}
+
+.editableGdmIcon_ec5bef .editableGdmIconIndicator_ec5bef {
+    display: none
+}
+
+.editableGdmIcon_ec5bef:hover>:not(.editableGdmIconIndicator_ec5bef) {
+    opacity: .2
+}
+
+.editableGdmIcon_ec5bef:hover .editableGdmIconIndicator_ec5bef {
+    align-items: center;
+    color: var(--interactive-text-active);
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    position: absolute
+}

@@ -1,0 +1,6 @@
+.scroller__23746 {
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}

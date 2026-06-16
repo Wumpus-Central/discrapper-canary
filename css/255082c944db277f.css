@@ -1,0 +1,20 @@
+.emptyWidgetContainer_cc1cc5 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 32px);
+    justify-content: center;
+    padding: 16px;
+    width: calc(100% - 32px)
+}
+
+.emptyWidgetContainer_cc1cc5.absolute_cc1cc5 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.emptyWidgetIcon_cc1cc5 {
+    opacity: .24
+}

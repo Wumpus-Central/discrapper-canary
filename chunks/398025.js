@@ -1,1 +1,1 @@
-"use strict";function i(e){return e}function r(e){return e}n.d(t,{Q:()=>r,a:()=>i})
+function r(e){return e}function l(e){return e}n.d(t,{Q:()=>l,a:()=>r})

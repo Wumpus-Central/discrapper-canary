@@ -1,0 +1,185 @@
+.container__81a06 {
+    align-items: center;
+    display: flex;
+    width: 100%
+}
+
+.select__81a06 {
+    max-width: 100%;
+    width: 400px
+}
+
+.inModal__81a06 {
+    max-width: 100%;
+    width: 100%
+}
+
+.iconContainer__81a06 {
+    align-items: center;
+    display: flex
+}
+
+.hidden__81a06 {
+    opacity: 0;
+    width: 0
+}
+
+.container__28e94 {
+    align-items: center;
+    display: flex;
+    width: 100%
+}
+
+.select__28e94 {
+    max-width: 100%;
+    width: 400px
+}
+
+.inModal__28e94 {
+    max-width: 100%;
+    width: 100%
+}
+
+.selectOption__28e94.selectOption__28e94 {
+    padding: 8px
+}
+
+.disabled__28e94 {
+    opacity: .6
+}
+
+.emoji__28e94,
+.smallEmoji__28e94 {
+    margin-inline-end: 8px
+}
+
+.smallEmoji__28e94 {
+    height: 16px;
+    width: 16px
+}
+
+.offset__28e94 {
+    margin-inline-start: 27px
+}
+
+.optionTag__28e94 {
+    align-items: center;
+    background: var(--background-base-low);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--interactive-text-active);
+    display: flex;
+    flex-shrink: 0;
+    max-width: 230px;
+    padding: 6px 8px
+}
+
+.labelContainer__28e94 {
+    font-size: 14px;
+    line-height: 18px;
+    overflow: hidden
+}
+
+.label__28e94 {
+    color: var(--text-strong);
+    margin-bottom: 4px
+}
+
+.description__28e94 {
+    color: var(--interactive-text-default)
+}
+
+.label__28e94,
+.singleValueLabel__28e94,
+.tag__28e94 {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.tag__28e94 {
+    align-items: center;
+    display: flex;
+    height: 20px
+}
+
+.option__28e94 {
+    font-size: 16px
+}
+
+.option__28e94,
+.value__28e94 {
+    align-items: center;
+    display: flex;
+    overflow: hidden
+}
+
+.value__28e94 {
+    flex-wrap: wrap;
+    gap: 4px
+}
+
+.singleValue__28e94 {
+    font-size: 16px;
+    gap: 0
+}
+
+.singleValueLabel__28e94 {
+    flex: 1
+}
+
+.error__28e94 {
+    align-items: center;
+    display: flex;
+    margin-top: 8px
+}
+
+.errorIcon__28e94 {
+    color: var(--icon-feedback-critical);
+    display: block;
+    margin-inline-end: 8px
+}
+
+.discriminator__78c91,
+.username__78c91 {
+    color: var(--text-muted)
+}
+
+.tag__78c91 {
+    align-items: center
+}
+
+.tag__78c91 .bot__78c91 {
+    margin-top: 0
+}
+
+.label__78c91 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    min-width: 100%;
+    overflow: hidden;
+    width: 0
+}
+
+.labelText__78c91 {
+    display: flex;
+    line-height: 1.2;
+    white-space: nowrap
+}
+
+.roleCountContainer__78c91 {
+    align-items: center;
+    display: flex
+}
+
+.roleCountIcon__78c91,
+.roleCountText__78c91 {
+    color: var(--text-muted)
+}
+
+.roleCountText__78c91 {
+    margin: 0 4px
+}

@@ -1,0 +1,61 @@
+.card_e60808 {
+    background-color: var(--background-surface-highest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    justify-content: space-between;
+    padding: var(--space-16)
+}
+
+.card_e60808,
+.leftContent_e60808 {
+    align-items: center;
+    display: flex
+}
+
+.leftContent_e60808 {
+    flex: 1;
+    gap: var(--space-12);
+    min-width: 0
+}
+
+.icon_e60808 {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 40px;
+    overflow: hidden;
+    width: 40px
+}
+
+.icon_e60808,
+.textContent_e60808 {
+    display: flex;
+    justify-content: center
+}
+
+.textContent_e60808 {
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.name_e60808 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.requiredBadge_e60808 {
+    background: var(--brand-500-alpha-10);
+    border-radius: var(--radius-xs);
+    font-size: 12px;
+    line-height: 16px;
+    padding: 1px 6px
+}
+
+.connectedStatus_e60808 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}

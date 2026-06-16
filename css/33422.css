@@ -1,0 +1,108 @@
+.guildBoostingSubscriptionRow__3cf9f {
+    align-items: flex-start;
+    border-radius: 4px;
+    color: var(--white);
+    display: flex;
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: var(--space-16);
+    padding: var(--space-16);
+    position: relative
+}
+
+.guildBoostingSubscriptionRowActive__3cf9f {
+    background-image: linear-gradient(90deg, var(--guild-boosting-blue-for-gradients) 0, var(--guild-boosting-purple-for-gradients) 100%)
+}
+
+.guildBoostingSubscriptionRowActive__3cf9f .guildBoostingSubscriptionRowBackground__3cf9f {
+    background-image: url(/assets/257849697e9ea2a8.svg)
+}
+
+.guildBoostingSubscriptionRowActive__3cf9f .guildBoostingImage__3cf9f {
+    background-image: url(/assets/b5b61f59756386fc.svg)
+}
+
+.guildBoostingSubscriptionRowPaused__3cf9f {
+    background: var(--primary-500)
+}
+
+.guildBoostingSubscriptionRowPaused__3cf9f .guildBoostingSubscriptionRowBackground__3cf9f {
+    background-image: url(/assets/858f6789052dceec.svg)
+}
+
+.guildBoostingSubscriptionRowPaused__3cf9f .guildBoostingImage__3cf9f {
+    background-image: url(/assets/3c2c35373162aa43.svg)
+}
+
+.guildBoostingSubscriptionRowCanceled__3cf9f {
+    background-image: linear-gradient(90deg, #f18623, #f6a12a 56%, #fab930);
+    color: var(--black)
+}
+
+.guildBoostingSubscriptionRowCanceled__3cf9f .guildBoostingSubscriptionRowBackground__3cf9f {
+    background-image: url(/assets/874b60b1d3997aa5.svg)
+}
+
+.guildBoostingSubscriptionRowCanceled__3cf9f .guildBoostingImage__3cf9f {
+    background-image: url(/assets/3c2c35373162aa43.svg)
+}
+
+.guildBoostingSubscriptionRowFailedPayment__3cf9f {
+    background-image: linear-gradient(90deg, #f25a5d, #f14e76 77%, #f04a7f)
+}
+
+.guildBoostingSubscriptionRowFailedPayment__3cf9f .guildBoostingSubscriptionRowBackground__3cf9f {
+    background-image: url(/assets/87055dac44c4340f.svg)
+}
+
+.guildBoostingSubscriptionRowFailedPayment__3cf9f .guildBoostingImage__3cf9f {
+    background-image: url(/assets/af24ad118c39d6aa.svg)
+}
+
+.guildBoostingSubscriptionRowBackground__3cf9f {
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    inset-inline: 0
+}
+
+.guildBoostingImage__3cf9f {
+    flex-shrink: 0;
+    height: 54px;
+    margin-inline-end: 8px;
+    position: relative;
+    width: 96px
+}
+
+.guildBoostingSubscriptionRowBody__3cf9f {
+    flex-grow: 1;
+    position: relative
+}
+
+.guildBoostingWordmark__3cf9f {
+    background-image: url(/assets/5f0d3753df69ebf7.svg);
+    height: 17px;
+    margin-bottom: 16px;
+    width: 184px
+}
+
+.guildBoostingWordmark__3cf9f.canceled__3cf9f {
+    background-image: url(/assets/7641e347e1ace434.svg)
+}
+
+.guildBoostingButtonsContainer__3cf9f {
+    display: flex;
+    gap: var(--space-12)
+}
+
+.cancelButton__3cf9f {
+    align-self: center;
+    z-index: 1
+}
+
+.boostingDesktopAppBlurb__3cf9f {
+    margin-top: var(--space-8)
+}

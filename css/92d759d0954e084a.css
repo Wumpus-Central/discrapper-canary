@@ -1,0 +1,19 @@
+.doubleInput__6dc4b {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    position: relative
+}
+
+.doubleInput__6dc4b>div {
+    flex: 1 1 0;
+    width: 0
+}
+
+.doubleInput__6dc4b>div:first-child {
+    margin-inline-end: 8px
+}
+
+.doubleInput__6dc4b>div:nth-child(2) {
+    margin-inline-start: 8px
+}

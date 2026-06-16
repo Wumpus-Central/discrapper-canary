@@ -1,0 +1,82 @@
+.optionButtonWrapper__270d7 {
+    align-items: center;
+    background-color: var(--background-mod-muted);
+    border: 1px solid var(--border-subtle);
+    border-radius: 12px;
+    display: flex;
+    position: relative
+}
+
+.optionButtonWrapper__270d7:hover {
+    background-color: var(--background-mod-subtle);
+    border-color: var(--border-muted)
+}
+
+.optionButtonWrapper__270d7.selected__270d7 {
+    background-color: var(--opacity-blurple-8);
+    border-color: var(--background-brand)
+}
+
+.optionButtonWrapper__270d7.selected__270d7.pressed__270d7 {
+    background-color: var(--opacity-blurple-12)
+}
+
+.optionButtonWrapper__270d7.pressed__270d7 {
+    background-color: var(--background-mod-normal);
+    transform: none
+}
+
+.optionButton__270d7 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    padding: 12px 16px
+}
+
+.full-motion .optionButton__270d7 {
+    transition: all .2s ease-in-out
+}
+
+.checkIcon__270d7 {
+    border-radius: 50%;
+    inset-inline-end: -10px;
+    width: 20px
+}
+
+.checkIcon__270d7,
+.memberCount__270d7 {
+    align-items: center;
+    background-color: var(--brand-500);
+    box-sizing: border-box;
+    display: flex;
+    height: 20px;
+    justify-content: center;
+    position: absolute;
+    top: -10px
+}
+
+.memberCount__270d7 {
+    border-radius: 10px;
+    inset-inline-end: 20px;
+    padding: 0 8px;
+    white-space: nowrap
+}
+
+.buttonEmoji__270d7 {
+    align-self: center;
+    margin-inline-end: 12px
+}
+
+.buttonText__270d7 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.newBadge__270d7 {
+    color: var(--brand-560);
+    inset-inline-end: -10px;
+    position: absolute;
+    top: -10px
+}

@@ -1,0 +1,12 @@
+.container__7fab2 {
+    display: flex;
+    flex-direction: column;
+    max-height: 880px;
+    width: 500px
+}
+
+@media (max-width:500px) {
+    .container__7fab2 {
+        width: 100%
+    }
+}

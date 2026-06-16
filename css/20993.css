@@ -1,0 +1,56 @@
+.playButton__0cb56 {
+    padding-inline: 0
+}
+
+.playButtonContents__0cb56 {
+    align-items: center;
+    display: flex;
+    flex-grow: 1
+}
+
+.disabledButtonWrapper__0cb56 {
+    position: relative
+}
+
+.disabledButtonOverlay__0cb56 {
+    inset: 0;
+    position: absolute
+}
+
+.disabledButtonColor__0cb56 {
+    background-color: hsl(var(--primary-800-hsl)/.5);
+    color: hsl(var(--primary-100-hsl)/.5);
+    opacity: 1
+}
+
+.buttonText__0cb56 {
+    flex-grow: 1;
+    padding: 2px 16px
+}
+
+.dropdownArrowHitbox__0cb56 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    width: 32px;
+    z-index: 2
+}
+
+.arrowSeparator__0cb56 {
+    background-color: currentColor;
+    height: 24px;
+    opacity: .2;
+    width: 1px
+}
+
+.dropdownArrow__0cb56 {
+    flex: 1;
+    height: 24px;
+    opacity: .2;
+    transition: opacity .2s ease;
+    width: 24px
+}
+
+.dropdownArrowHitbox__0cb56:hover .dropdownArrow__0cb56 {
+    opacity: 1
+}

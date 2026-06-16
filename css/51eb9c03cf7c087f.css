@@ -1,0 +1,74 @@
+.availabilityIndicator__40463 {
+    display: flex;
+    margin-top: -1px
+}
+
+.icon__40463 {
+    flex: 0 0 auto;
+    height: 14px;
+    margin-inline-end: 3px;
+    position: relative;
+    top: 1px;
+    width: 14px
+}
+
+.lockedIcon__40463 {
+    color: var(--interactive-text-default)
+}
+
+.unlockedIcon__40463 {
+    color: var(--guild-boosting-pink)
+}
+
+.description__40463 {
+    color: inherit;
+    margin-inline-end: 4px
+}
+
+.clickable__40463 {
+    cursor: pointer
+}
+
+.avatarUploader_e04502 .avatarUploaderInner_e04502,
+.avatarUploaderDisabled_e04502 .avatarUploaderInner_e04502 {
+    background-size: 100% 100%;
+    height: 100px;
+    width: 100px
+}
+
+.avatarUploaderInnerSquare_e04502 {
+    background-image: linear-gradient(45deg, var(--guild-boosting-blue) 0, var(--guild-boosting-purple) 100%);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+    width: 100%
+}
+
+.avatarUploaderInnerSquareDisabled_e04502 {
+    background-color: var(--primary-500);
+    background-image: none
+}
+
+.avatarUploadIcon_e04502 {
+    inset-inline-end: 16px;
+    top: 16px
+}
+
+.avatarUploaderDisabled_e04502 {
+    cursor: not-allowed
+}
+
+.avatarUploader_e04502 .avatarUploaderInner_e04502,
+.avatarUploaderDisabled_e04502 .avatarUploaderInner_e04502 {
+    box-shadow: var(--shadow-border), var(--shadow-high)
+}
+
+.avatarUploader_e04502 .avatarUploaderInner_e04502:hover {
+    box-shadow: var(--elevation-high), inset 0 0 120px rgba(0, 0, 0, .6)
+}
+
+.avatarUploadIcon_e04502.hideDefaultIcon_e04502 {
+    background-color: var(--white);
+    background-image: none
+}

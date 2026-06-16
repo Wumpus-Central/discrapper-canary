@@ -1,0 +1,189 @@
+.loadingContainer__9b0f4 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+    width: 100%
+}
+
+.modalContainer__9b0f4 {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: calc(var(--custom-modal-padding-md)*-1);
+    margin-top: calc(var(--custom-modal-padding-top)*-1);
+    min-width: 0;
+    overflow: hidden;
+    width: 100%
+}
+
+.contentWrapper__9b0f4 {
+    flex-grow: 1;
+    min-width: 0
+}
+
+.acceptUsername__9b0f4 {
+    overflow-wrap: anywhere
+}
+
+.inviterContainer__9b0f4 {
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    gap: var(--space-8);
+    justify-content: center;
+    padding: var(--space-16)
+}
+
+.noThanksContainer__9b0f4 {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-8)
+}
+
+.noThanksButton__9b0f4 {
+    height: 32px
+}
+
+.stage__9b0f4 {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.inviteContent__9b0f4 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-48);
+    justify-content: space-between;
+    min-height: 340px;
+    padding: var(--space-24);
+    padding-top: var(--space-48);
+    position: relative;
+    text-align: center
+}
+
+.inviteSplash__9b0f4 {
+    background-position: 100%;
+    background-size: cover;
+    border-radius: 0 5px 5px 0;
+    width: 520px
+}
+
+@media (max-width:940px) {
+    .inviteSplash__9b0f4 {
+        width: 300px
+    }
+}
+
+@media (max-width:720px) {
+    .inviteSplash__9b0f4 {
+        display: none
+    }
+}
+
+.buttonGroup__9b0f4 {
+    display: flex
+}
+
+.buttonGroup__9b0f4>* {
+    margin: 4px
+}
+
+.experimentUpsellError__9b0f4 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    border-radius: var(--space-4);
+    cursor: pointer;
+    display: flex;
+    margin-top: var(--space-16);
+    padding: var(--space-8)
+}
+
+.experimentUpsellError__9b0f4:hover {
+    background-color: var(--background-surface-high)
+}
+
+.experimentUpsellIcon__9b0f4 {
+    flex: 0 0 auto;
+    margin-inline-end: 8px;
+    min-width: 0
+}
+
+.experimentUpsellText__9b0f4 {
+    color: var(--text-default);
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: start
+}
+
+.experimentGetNitro__9b0f4,
+.experimentUpsellText__9b0f4 {
+    display: block;
+    font-size: 12px;
+    line-height: 16px
+}
+
+.experimentGetNitro__9b0f4 {
+    color: var(--text-link);
+    flex: 0 0 auto;
+    margin-inline-start: 12px;
+    max-width: 106px;
+    padding: 0 8px
+}
+
+.errorContent__9b0f4 {
+    padding-bottom: 20px;
+    padding-inline: 20px;
+    text-align: center
+}
+
+.errorImage__9b0f4 {
+    margin-bottom: 35px;
+    margin-top: 45px
+}
+
+.errorBody__9b0f4 {
+    color: var(--text-default);
+    margin-bottom: 40px;
+    margin-top: 10px
+}
+
+.iconContainer__9b0f4 {
+    display: inline-flex;
+    flex-direction: column
+}
+
+.iconSparklePlus__9b0f4 {
+    align-self: flex-end;
+    color: #5ae6dc;
+    height: 20px;
+    margin-bottom: -10px;
+    margin-inline-end: -20px;
+    width: 20px
+}
+
+.iconLink__9b0f4 {
+    background-color: var(--background-base-lowest);
+    border-radius: 50%;
+    color: var(--text-default);
+    padding: 20px
+}
+
+.iconSparkleStar__9b0f4 {
+    color: var(--platform-gold);
+    height: 14px;
+    margin-inline-start: -20px;
+    margin-top: -10px;
+    transform: rotate(45deg);
+    width: 14px
+}
+
+.acceptAsName__9b0f4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.acceptAsAvatar__9b0f4 {
+    min-width: 16px
+}

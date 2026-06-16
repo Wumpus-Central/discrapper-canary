@@ -1,1 +1,1 @@
-"use strict";e.exports="/assets/abb34f718cdc1ace.png"
+e.exports="/assets/abb34f718cdc1ace.png"

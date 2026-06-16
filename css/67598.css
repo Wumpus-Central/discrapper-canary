@@ -1,0 +1,23 @@
+.clipsEnabledIndicator__8c88a {
+    display: flex;
+    margin: 0 8px
+}
+
+.clipBadgeText__8c88a {}
+
+.clipBadgeIcon__8c88a {
+    padding-inline-start: 4px;
+    width: var(--custom-clips-enabled-indicator-badge-icon-dimension-override)
+}
+
+@media (max-width:920px) {
+    .clipBadgeText__8c88a {
+        display: none
+    }
+
+    .clipBadgeIcon__8c88a {
+        border-radius: var(--radius-sm);
+        height: var(--custom-clips-enabled-indicator-badge-icon-dimension-override);
+        padding: 2px
+    }
+}

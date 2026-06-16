@@ -1,0 +1,70 @@
+.paymentPane__01014 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-strong);
+    overflow: hidden
+}
+
+.paymentRow__01014 {
+    cursor: default
+}
+
+.paymentRowHeader__01014 {
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    margin-inline-end: 44px;
+    padding: 20px
+}
+
+.paymentRowHeaderDescription__01014 {
+    display: flex;
+    flex: 1 1 50%;
+    margin-inline-start: 8px
+}
+
+.tab__01014 {
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    margin-inline-start: 12px;
+    padding-bottom: 12px
+}
+
+.tab__01014:first-child {
+    margin-inline-start: 0
+}
+
+.externalRow__01014 {
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px
+}
+
+.externalRowHeader__01014 {
+    color: var(--text-default);
+    font-size: 16px
+}
+
+.externalRowBody__01014 {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 8px
+}
+
+.bottomDivider__01014 {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.bottomDivider__01014:last-child {
+    border-bottom: none
+}
+
+.verticalFit__01014 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    overflow: hidden
+}

@@ -1,0 +1,13 @@
+.iconContainer__98cf7 {
+    filter: saturate(var(--saturation-factor, 1));
+    height: 80px;
+    position: relative;
+    width: 80px
+}
+
+.filledIcon__98cf7 {
+    background-color: var(--background-mod-normal);
+    border-radius: 80px;
+    height: 80px;
+    width: 80px
+}

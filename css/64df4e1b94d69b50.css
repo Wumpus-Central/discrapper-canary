@@ -1,0 +1,18 @@
+.container__05cdc {
+    display: flex
+}
+
+.sparkleIcon__05cdc {
+    height: 12px;
+    width: 12px
+}
+
+.sparkleTop__05cdc {
+    align-self: flex-start;
+    margin-inline-end: auto
+}
+
+.sparkleBottom__05cdc {
+    align-self: flex-end;
+    margin-inline-start: auto
+}

@@ -1,0 +1,43 @@
+.eventStatusContainer__29021 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.isRecurring__29021 {
+    align-items: flex-start
+}
+
+.eventStatusGreen__29021 {
+    color: var(--text-feedback-positive)
+}
+
+.eventStatusBrand__29021 {
+    color: var(--text-brand)
+}
+
+.eventStatusLabel__29021 {
+    margin-inline-start: 8px
+}
+
+.liveEventEndTime__29021 {
+    display: inline-block
+}
+
+.newBadge__29021 {
+    align-items: center;
+    background-color: var(--brand-260);
+    border-radius: 12px;
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 20px;
+    justify-content: center;
+    margin-inline-end: 8px;
+    padding: 0 6px;
+    vertical-align: text-top
+}
+
+.newBadgeText__29021 {
+    color: var(--brand-560);
+    text-transform: uppercase
+}

@@ -1,0 +1,73 @@
+.wrapper__48b20 {
+    background-color: var(--black);
+    overflow: hidden;
+    position: relative
+}
+
+.video__48b20,
+.wrapper__48b20 {
+    height: 100%;
+    width: 100%
+}
+
+.video__48b20 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.videoCover__48b20,
+.videoCover__48b20 video {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.videoContain__48b20,
+.videoContain__48b20 video {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.mirror__48b20 {
+    transform: scaleX(-1)
+}
+
+.previewWrapper__48b20 {
+    align-content: center;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .5s ease
+}
+
+.previewWrapper__48b20.loading__48b20 {
+    opacity: 1
+}
+
+.previewImage__48b20 {
+    filter: blur(10px);
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.emptyPreviewWrapper__48b20 {
+    aspect-ratio: 16/9;
+    margin: auto;
+    width: 100%
+}
+
+.emptyPreview__48b20 {
+    background: linear-gradient(120deg, var(--primary-730) 0, var(--primary-660) 100%);
+    height: 100%;
+    opacity: .6;
+    width: 100%
+}
+
+.spinner__48b20 {
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}

@@ -1,0 +1,474 @@
+.container__29506 {
+    align-items: flex-start;
+    display: flex
+}
+
+.mainContent__29506 {
+    flex-basis: var(--custom-guild-settings-role-subscriptions-overview-settings-max-width);
+    flex-grow: 0
+}
+
+.tabBarContainer__29506 {
+    align-items: flex-start;
+    display: flex
+}
+
+.previewButton__29506 {
+    flex-shrink: 0;
+    margin-inline-start: auto;
+    margin-top: 16px;
+    padding-inline-start: 32px
+}
+
+.tabBar__29506 {
+    border-bottom: 2px solid var(--border-subtle);
+    gap: 32px;
+    margin-bottom: 32px;
+    margin-top: 24px
+}
+
+.container_fc2e20 {
+    max-width: 660px;
+    text-align: center
+}
+
+.sectionDivider_fc2e20 {
+    margin: 32px auto
+}
+
+.card_fc2e20 {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.ctaContainer_d6d601 {}
+
+.heroBanner_d6d601 {
+    width: 100%
+}
+
+.ctaContent_d6d601 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 40px
+}
+
+.creatorBenefitsContainer__02e4c {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr)
+}
+
+.creatorBenefitCard__02e4c {
+    background-color: var(--background-mod-normal);
+    padding: 24px 20px;
+    text-align: start
+}
+
+.earningBenefitCard__02e4c {
+    grid-column: 1/3;
+    grid-row: 1/3
+}
+
+.followerBenefitCard__02e4c {
+    grid-row: 1;
+    position: relative
+}
+
+.followerBenefitCard__02e4c,
+.revenueShareBenefitCard__02e4c {
+    grid-column: 3/span 3
+}
+
+.revenueShareBenefitCard__02e4c {
+    display: flex;
+    flex-direction: column;
+    grid-row: 2;
+    justify-content: space-between
+}
+
+.earningsPreviewContainer__02e4c {
+    border-radius: 8px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 18px
+}
+
+.avatarGridContainer__02e4c {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2, 1fr)
+}
+
+.avatarCard__02e4c {
+    align-content: center;
+    background-color: var(--background-base-low);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    padding: 18px;
+    position: relative
+}
+
+.roundAvatar__02e4c {
+    border-radius: 50%;
+    height: 42px;
+    width: 42px
+}
+
+.verticalConnector__02e4c {
+    bottom: 100%;
+    inset-inline-start: 50%;
+    position: absolute;
+    width: 0
+}
+
+.horizontalConnector__02e4c {
+    height: 0;
+    inset-inline-start: 100%;
+    position: absolute;
+    top: 50%
+}
+
+.followerBenefitText__02e4c {
+    max-width: 200px
+}
+
+.roleSubscriptionSocial__02e4c {
+    bottom: 0;
+    max-width: 30%;
+    position: absolute
+}
+
+.roleSubscriptionLanyardIllo__02e4c {
+    inset-inline-end: 0;
+    max-width: 50%;
+    position: absolute;
+    top: 30%
+}
+
+.revenueSharePercentageDark__02e4c {
+    color: var(--green-230)
+}
+
+.revenueSharePercentageLight__02e4c {
+    color: var(--green-400)
+}
+
+.roleSubscriptionEarningIllo__02e4c {
+    align-self: flex-end;
+    max-width: 92px
+}
+
+.animator__52de8 {
+    display: block;
+    position: relative
+}
+
+.item__52de8 {
+    inset-inline: 0;
+    bottom: 0;
+    padding: 0 10px;
+    position: absolute;
+    top: 0
+}
+
+.root__759ac {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.carouselCaret__759ac {
+    color: var(--interactive-text-hover);
+    cursor: pointer
+}
+
+.carousel__759ac {
+    overflow-x: hidden
+}
+
+.pagination__759ac {
+    height: 64px;
+    pointer-events: none
+}
+
+.creatorGuildCarousel__2485e {
+    border-radius: 8px;
+    height: 385px;
+    width: 526px
+}
+
+.guildCard__2485e {
+    background-color: var(--background-mod-normal);
+    height: 100%;
+    overflow: auto;
+    padding: 24px;
+    text-align: start;
+    width: 100%
+}
+
+.no-webkit-scrollbar .guildCard__2485e {
+    scrollbar-width: none
+}
+
+.guildCard__2485e::-webkit-scrollbar {
+    width: 0
+}
+
+.guildCardHeader__2485e {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 24px
+}
+
+.guildCardHeaderAvatar__2485e {
+    border-radius: 6px;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, .24));
+    height: 76px;
+    width: 76px
+}
+
+.guildCardHeaderTitle__2485e {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center
+}
+
+.guildSubscriberCount__2485e {
+    display: flex
+}
+
+.subscriberCountValue__2485e {
+    background-color: var(--brand-630);
+    border-radius: 4px 0 0 4px;
+    font-style: italic
+}
+
+.subscriberCountText__2485e,
+.subscriberCountValue__2485e {
+    align-items: center;
+    display: flex;
+    padding: 4px 8px
+}
+
+.subscriberCountText__2485e {
+    background-color: var(--brand-530);
+    border-radius: 0 4px 4px 0;
+    gap: 6px
+}
+
+.guildCardQuote__2485e {
+    margin-bottom: 48px
+}
+
+.guildCardQuote__2485e,
+.guildPremiumEmojis__2485e {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.premiumEmojisTitle__2485e {
+    padding: 0 8px;
+    text-transform: uppercase
+}
+
+.premiumEmojisRow__2485e {
+    align-items: stretch;
+    border-radius: 4px;
+    display: flex;
+    overflow: hidden
+}
+
+.emojisContainer__2485e {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 4px 0 0 4px;
+    display: flex;
+    flex-grow: 1;
+    gap: 16px;
+    justify-content: flex-start;
+    padding: 8px 16px
+}
+
+.fullEmojisContainer__2485e {
+    justify-content: space-between
+}
+
+.emoji__2485e {
+    height: 26px;
+    width: 26px
+}
+
+.extraEmojiCount__2485e {
+    background-color: var(--background-mod-normal);
+    border-radius: 4px;
+    padding: 4px 8px
+}
+
+.viewServerButtonContainer__2485e {
+    display: flex;
+    justify-content: center
+}
+
+.howItWorksContainer_dd30dc {
+    background-color: var(--background-mod-normal);
+    border-radius: 8px;
+    display: flex;
+    gap: 24px;
+    padding: 24px
+}
+
+.howItWorksCard_dd30dc {
+    flex: 1
+}
+
+.howItWorksImageContainer_dd30dc {
+    align-items: center;
+    background-color: var(--background-base-low);
+    display: flex;
+    justify-content: center;
+    padding: 24px 48px
+}
+
+.howItWorksImage_dd30dc {
+    max-height: 52px
+}
+
+.howItWorksDescription_dd30dc {
+    padding: 8px 18px
+}
+
+.container__8475b {
+    max-width: 620px
+}
+
+.settingsColumn_b454a6 {
+    max-width: var(--custom-guild-settings-role-subscriptions-max-width)
+}
+
+.settingsContainer_b454a6 {}
+
+.settingsScroller_b454a6 {}
+
+.settingsContent_b454a6 {
+    margin-inline-end: 55px;
+    padding-bottom: 60px
+}
+
+.enableSwitch__3c9fa {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 26px 16px
+}
+
+.divider__3c9fa {
+    margin-bottom: 24px;
+    margin-top: 24px
+}
+
+.openPageButton__3c9fa {
+    margin-top: 16px
+}
+
+.accentColorContainer__3c9fa {
+    display: flex;
+    gap: 24px
+}
+
+.buttonPreview__3c9fa {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    color: var(--white);
+    cursor: pointer;
+    display: flex;
+    flex-grow: 1;
+    height: auto;
+    justify-content: center
+}
+
+.hideColorButtons__3c9fa {
+    display: none
+}
+
+.trailerInputWrapper__3c9fa {
+    margin-top: 8px;
+    position: relative
+}
+
+.trailerInput__3c9fa {
+    text-overflow: ellipsis
+}
+
+.trailerInput__3c9fa.error__3c9fa {
+    border: 1px solid var(--border-feedback-critical)
+}
+
+.trailerInput__3c9fa.trailerInputWithCheckmark__3c9fa {
+    padding-inline-end: 50px
+}
+
+.inputCheckmark__3c9fa {
+    inset-inline-end: 8px;
+    position: absolute;
+    top: 8px
+}
+
+.iconSwitchLabel__3c9fa {
+    display: flex;
+    flex-direction: row
+}
+
+.iconContainer__3c9fa {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: 100px;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin-inline-end: 16px;
+    width: 40px
+}
+
+.premiumMemberCountIcon__3c9fa {
+    color: var(--interactive-text-default)
+}
+
+.premiumMemberCountSwitchContainer__3c9fa {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    margin-top: 16px;
+    padding: 12px 16px
+}
+
+.contentRegion__3c9fa {
+    bottom: 20px;
+    position: fixed;
+    width: 480px;
+    z-index: 2
+}
+
+.disabled__3c9fa {
+    opacity: .5
+}
+
+.linkIcon_a4b5f8 {
+    color: var(--interactive-text-default)
+}
+
+.rowContainer_a4b5f8 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}

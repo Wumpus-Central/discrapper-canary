@@ -1,0 +1,24 @@
+.toast__1562f {
+    gap: var(--space-8)
+}
+
+.image_d93468 {
+    border-radius: var(--radius-xs)
+}
+
+.image_d93468,
+.video_d93468 {
+    width: 100%
+}
+
+.media_d93468,
+.mediaContainer_d93468 {
+    border-radius: var(--radius-xs)
+}
+
+.mediaContainer_d93468 {
+    background-color: var(--background-base-lower);
+    margin-bottom: var(--space-16);
+    margin-top: var(--space-12);
+    padding: var(--space-16)
+}

@@ -1,0 +1,545 @@
+.reactions_f8896c {
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    margin-bottom: -8px;
+    padding-bottom: 6px;
+    padding-top: 1px
+}
+
+.icon_f8896c {
+    height: 18px;
+    width: 18px
+}
+
+.reactionBtn_f8896c {
+    background-color: var(--reaction-background-default);
+    color: var(--reaction-text-default);
+    cursor: pointer;
+    height: 18px;
+    margin-inline: 4px;
+    margin-bottom: 2px;
+    opacity: 0
+}
+
+.reactionBtn_f8896c:hover .icon_f8896c {
+    color: var(--reaction-text-hover)
+}
+
+.reactionBtn_f8896c.active_f8896c .icon_f8896c,
+.reactionBtn_f8896c:active .icon_f8896c {
+    color: var(--reaction-text-active)
+}
+
+.reactionBtn_f8896c:hover {
+    background-color: var(--reaction-background-hover)
+}
+
+.reactionBtn_f8896c.active_f8896c,
+.reactionBtn_f8896c.visible_f8896c,
+.reactions_f8896c:hover .reactionBtn_f8896c {
+    opacity: 1
+}
+
+.reactionBtn_f8896c.forceShow_f8896c {
+    background-color: var(--background-base-lower);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-inline-start: 0;
+    margin-bottom: 4px;
+    opacity: 1;
+    padding: 5px 7px
+}
+
+.reactionBtn_f8896c.forceShow_f8896c:hover {
+    background-color: var(--background-base-low);
+    border-color: var(--opacity-white-20)
+}
+
+.hideEmoji_f8896c {
+    opacity: 0
+}
+
+.reaction_f8896c {
+    background-color: var(--reaction-background-default);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-inline-end: 4px;
+    margin-bottom: 4px;
+    transition: none .1s ease;
+    transition-property: background-color, border-color;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.full-motion .reaction_f8896c.shakeReaction_f8896c {
+    animation: shake_f8896c .5s;
+    animation-iteration-count: 1
+}
+
+.reaction_f8896c.reactionReadOnly_f8896c {
+    cursor: not-allowed
+}
+
+.reaction_f8896c .emoji {
+    height: 20px;
+    margin: 2px 0;
+    min-height: auto;
+    min-width: auto;
+    width: 20px
+}
+
+.reaction_f8896c .emoji-text {
+    color: var(--text-default);
+    display: inline-block;
+    font-size: 20px;
+    font-variant-emoji: emoji;
+    vertical-align: -2px
+}
+
+.reaction_f8896c:hover {
+    background-color: var(--reaction-background-hover);
+    border-color: var(--reaction-border-hover)
+}
+
+.reaction_f8896c:hover .reactionCount_f8896c {
+    color: var(--reaction-text-hover)
+}
+
+.reaction_f8896c:active {
+    background-color: var(--reaction-background-active);
+    border-color: var(--reaction-border-active)
+}
+
+.reaction_f8896c:active .reactionCount_f8896c {
+    color: var(--reaction-text-active)
+}
+
+.reaction_f8896c.reactionMe_f8896c {
+    background-color: var(--reaction-background-reacted-default);
+    border-color: var(--reaction-border-reacted-default)
+}
+
+.reaction_f8896c.reactionMe_f8896c .reactionCount_f8896c {
+    color: var(--reaction-text-reacted-default)
+}
+
+.low-contrast .reaction_f8896c.reactionMe_f8896c {
+    background-color: var(--brand-15a);
+    border-color: var(--brand-50a)
+}
+
+.low-contrast .reaction_f8896c.reactionMe_f8896c .reactionCount_f8896c {
+    color: var(--brand-300)
+}
+
+.reactionInner_f8896c {
+    align-items: center;
+    display: flex;
+    padding: 2px 6px;
+    position: relative
+}
+
+.reactionCount_f8896c {
+    color: var(--text-subtle);
+    font-size: 14px;
+    font-weight: var(--font-weight-semibold);
+    margin-inline-start: 6px;
+    text-align: center
+}
+
+.remainingReactions_f8896c {
+    align-self: stretch;
+    display: flex
+}
+
+.background-opacity-high .reaction_f8896c,
+.background-opacity-low .reaction_f8896c,
+.background-opacity-medium .reaction_f8896c {
+    background-color: hsl(var(--primary-660-hsl)/.2)
+}
+
+.background-opacity-high .reactionCount_f8896c,
+.background-opacity-low .reactionCount_f8896c,
+.background-opacity-medium .reactionCount_f8896c {
+    color: var(--white)
+}
+
+.background-opacity-high .reaction_f8896c.reactionMe_f8896c,
+.background-opacity-low .reaction_f8896c.reactionMe_f8896c,
+.background-opacity-medium .reaction_f8896c.reactionMe_f8896c {
+    background-color: var(--brand-50a)
+}
+
+.enable-forced-colors .reaction_f8896c.reactionMe_f8896c {
+    border-color: Highlight;
+    outline: 2px solid Highlight
+}
+
+.premiumIcon_f8896c {
+    margin-inline-end: 4px
+}
+
+.sparkles_f8896c {
+    height: 32px;
+    inset-inline-start: -8px;
+    top: -8px;
+    width: 32px
+}
+
+.burstGlow_f8896c {
+    border-radius: 8px;
+    inset-inline: 0;
+    bottom: 0;
+    opacity: .35;
+    position: absolute;
+    top: 0;
+    z-index: -1
+}
+
+@keyframes shake_f8896c {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg)
+    }
+
+    10% {
+        transform: translate(-1px, -1px) rotate(-1deg)
+    }
+
+    20% {
+        transform: translate(-2px) rotate(1deg)
+    }
+
+    30% {
+        transform: translate(2px, 1px) rotate(0deg)
+    }
+
+    40% {
+        transform: translate(1px, -1px) rotate(1deg)
+    }
+
+    50% {
+        transform: translate(-1px, 1px) rotate(-1deg)
+    }
+
+    60% {
+        transform: translate(-2px, 1px) rotate(0deg)
+    }
+
+    70% {
+        transform: translate(2px, 1px) rotate(-1deg)
+    }
+
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg)
+    }
+
+    90% {
+        transform: translate(1px, 1px) rotate(0deg)
+    }
+
+    to {
+        transform: translate(1px, -1px) rotate(-1deg)
+    }
+}
+
+.reactions__23977 {
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+    flex-wrap: wrap;
+    margin-bottom: -.5rem;
+    padding-bottom: .375rem;
+    padding-top: .125rem
+}
+
+.icon__23977 {
+    height: 1.125rem;
+    width: 1.125rem
+}
+
+.reactionBtn__23977 {
+    background-color: var(--reaction-background-default);
+    color: var(--reaction-text-default);
+    cursor: pointer;
+    height: 1.125rem;
+    margin-inline: .25rem;
+    margin-bottom: .125rem;
+    opacity: 0
+}
+
+.reactionBtn__23977:hover .icon__23977 {
+    color: var(--reaction-text-hover)
+}
+
+.reactionBtn__23977.active__23977 .icon__23977,
+.reactionBtn__23977:active .icon__23977 {
+    color: var(--reaction-text-active)
+}
+
+.reactionBtn__23977:hover {
+    background-color: var(--reaction-background-hover);
+    border: 1px solid var(--reaction-border-hover)
+}
+
+.reactionBtn__23977.active__23977,
+.reactionBtn__23977.visible__23977,
+.reactions__23977:hover .reactionBtn__23977 {
+    opacity: 1
+}
+
+.reactionBtn__23977.forceShow__23977 {
+    border: .0625rem solid transparent;
+    border-radius: .5rem;
+    margin-inline-start: 0;
+    margin-bottom: .25rem;
+    opacity: 1;
+    padding: .3125rem .4375rem
+}
+
+.high-contrast-mode .reactionBtn__23977.forceShow__23977 {
+    border-color: var(--border-subtle)
+}
+
+.high-contrast-mode .reactionBtn__23977.forceShow__23977:hover {
+    border-color: var(--border-strong)
+}
+
+.hideEmoji__23977 {
+    opacity: 0
+}
+
+.reaction__23977,
+.reactionBtn__23977 {
+    background-color: var(--reaction-background-default)
+}
+
+.reaction__23977:hover,
+.reactionBtn__23977:hover {
+    background-color: var(--reaction-background-hover);
+    border-color: var(--reaction-border-hover)
+}
+
+.reaction__23977:active,
+.reactionBtn__23977:active {
+    background-color: var(--reaction-background-active);
+    border-color: var(--reaction-border-active)
+}
+
+.reaction__23977:active .reactionCount__23977,
+.reactionBtn__23977:active .reactionCount__23977 {
+    color: var(--reaction-text-active)
+}
+
+.reaction__23977 {
+    background-color: var(--reaction-background-default);
+    border: .0625rem solid transparent;
+    border-radius: .5rem;
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-inline-end: .25rem;
+    margin-bottom: .25rem;
+    transition: none .1s ease;
+    transition-property: background-color, border-color;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.high-contrast-mode .reaction__23977 {
+    border-color: var(--border-subtle)
+}
+
+.high-contrast-mode .reaction__23977:hover {
+    border-color: var(--border-strong)
+}
+
+.full-motion .reaction__23977.shakeReaction__23977 {
+    animation: shake__23977 .5s;
+    animation-iteration-count: 1
+}
+
+.reaction__23977.reactionReadOnly__23977 {
+    cursor: not-allowed
+}
+
+.reaction__23977 .emoji {
+    height: 1.25rem;
+    margin: .125rem 0;
+    min-height: auto;
+    min-width: auto;
+    width: 1.25rem
+}
+
+.reaction__23977 .emoji-text {
+    color: var(--text-default);
+    display: inline-block;
+    font-size: 1.25rem;
+    font-variant-emoji: emoji;
+    vertical-align: -.125rem
+}
+
+.reaction__23977:hover .reactionCount__23977 {
+    color: var(--reaction-text-hover)
+}
+
+.reaction__23977.reactionMe__23977 {
+    background-color: var(--reaction-background-reacted-default);
+    border-color: var(--reaction-border-reacted-default)
+}
+
+.reaction__23977.reactionMe__23977 .reactionCount__23977 {
+    color: var(--reaction-text-reacted-default)
+}
+
+.low-contrast .reaction__23977.reactionMe__23977 {
+    background-color: var(--brand-15a);
+    border-color: var(--brand-50a)
+}
+
+.low-contrast .reaction__23977.reactionMe__23977 .reactionCount__23977 {
+    color: var(--brand-300)
+}
+
+.reactionInner__23977 {
+    align-items: center;
+    display: flex;
+    padding: .125rem .375rem;
+    position: relative
+}
+
+.reactionCount__23977 {
+    color: var(--text-subtle);
+    font-weight: var(--font-weight-semibold);
+    margin-inline-start: .375rem;
+    text-align: center
+}
+
+.remainingReactions__23977 {
+    align-self: stretch;
+    display: flex
+}
+
+.theme-light .reaction__23977.reactionMe__23977 {
+    background-color: var(--brand-160);
+    border-color: var(--brand-500)
+}
+
+.theme-light .reaction__23977.reactionMe__23977 .reactionCount__23977 {
+    color: var(--brand-560)
+}
+
+.background-opacity-high .reaction__23977,
+.background-opacity-low .reaction__23977,
+.background-opacity-medium .reaction__23977 {
+    background-color: hsl(var(--primary-660-hsl)/.2)
+}
+
+.background-opacity-high .reactionCount__23977,
+.background-opacity-low .reactionCount__23977,
+.background-opacity-medium .reactionCount__23977 {
+    color: var(--white)
+}
+
+.background-opacity-high .reaction__23977.reactionMe__23977,
+.background-opacity-low .reaction__23977.reactionMe__23977,
+.background-opacity-medium .reaction__23977.reactionMe__23977 {
+    background-color: var(--brand-50a)
+}
+
+.enable-forced-colors .reaction__23977.reactionMe__23977 {
+    border-color: Highlight;
+    outline: .125rem solid Highlight
+}
+
+.premiumIcon__23977 {
+    margin-inline-end: .25rem
+}
+
+.sparkles__23977 {
+    height: 2rem;
+    inset-inline-start: -.5rem;
+    top: -.5rem;
+    width: 2rem
+}
+
+.burstGlow__23977 {
+    border-radius: .5rem;
+    inset-inline: 0;
+    bottom: 0;
+    opacity: .35;
+    position: absolute;
+    top: 0;
+    z-index: -1
+}
+
+@keyframes shake__23977 {
+    0% {
+        transform: translate(.0625rem, .0625rem) rotate(0deg)
+    }
+
+    10% {
+        transform: translate(-.0625rem, -.0625rem) rotate(-1deg)
+    }
+
+    20% {
+        transform: translate(-.125rem) rotate(1deg)
+    }
+
+    30% {
+        transform: translate(.125rem, .0625rem) rotate(0deg)
+    }
+
+    40% {
+        transform: translate(.0625rem, -.0625rem) rotate(1deg)
+    }
+
+    50% {
+        transform: translate(-.0625rem, .0625rem) rotate(-1deg)
+    }
+
+    60% {
+        transform: translate(-.125rem, .0625rem) rotate(0deg)
+    }
+
+    70% {
+        transform: translate(.125rem, .0625rem) rotate(-1deg)
+    }
+
+    80% {
+        transform: translate(-.0625rem, -.0625rem) rotate(1deg)
+    }
+
+    90% {
+        transform: translate(.0625rem, .0625rem) rotate(0deg)
+    }
+
+    to {
+        transform: translate(.0625rem, -.0625rem) rotate(-1deg)
+    }
+}
+
+.custom-theme-background .reaction__23977 {
+    background-color: var(--background-mod-subtle);
+    border-color: var(--border-strong)
+}
+
+.custom-theme-background .reaction__23977.reactionMe__23977 {
+    background-color: hsla(var(--brand-500-hsl)/.15);
+    border-color: var(--brand-500)
+}
+
+.custom-theme-background .reaction__23977.reactionMe__23977 .reactionCount__23977 {
+    color: var(--text-brand)
+}
+
+.custom-theme-background .reactionBtn__23977 {
+    background-color: var(--background-mod-subtle);
+    border-color: var(--border-strong)
+}

@@ -1,0 +1,379 @@
+.ephemeral__5126c {
+    background: var(--brand-05a);
+    position: relative
+}
+
+.nitroMessage__5126c.nitroMessage__5126c {
+    background: linear-gradient(to right, hsl(var(--premium-tier-2-purple-for-gradients-hsl)/.08), hsl(var(--premium-tier-2-pink-for-gradients-hsl)/.08))
+}
+
+.nitroMessage__5126c.nitroMessage__5126c a {
+    color: var(--text-link)
+}
+
+.automodMessage__5126c {
+    background: var(--message-automod-background-default)
+}
+
+.mentioned__5126c {
+    background: var(--message-mentioned-background-default);
+    position: relative
+}
+
+.guildOfficialMessage__5126c {
+    background: transparent;
+    isolation: isolate;
+    position: relative;
+    --custom-message-content-color: var(--custom-guild-official-message-text)
+}
+
+.guildOfficialMessage__5126c:after {
+    background: hsl(var(--custom-guild-official-message-hsl));
+    content: "";
+    inset: 0;
+    -webkit-mask-image: url(/assets/13460a65f1622591.png);
+    mask-image: url(/assets/13460a65f1622591.png);
+    -webkit-mask-repeat: repeat-y;
+    mask-repeat: repeat-y;
+    -webkit-mask-size: 100% 32px;
+    mask-size: 100% 32px;
+    pointer-events: none;
+    position: absolute;
+    z-index: -1
+}
+
+.message__5126c.guildOfficialMessage__5126c .guildOfficialMessageContent__5126c,
+.message__5126c.guildOfficialMessage__5126c .guildOfficialMessageContent__5126c :is(h1, h2, h3, h4, h5, h6, small) {
+    color: var(--custom-message-content-color, var(--text-default))
+}
+
+.highlighted__5126c,
+.replying__5126c {
+    background: var(--message-highlight-background-default);
+    position: relative
+}
+
+.automodMessage__5126c:before,
+.ephemeral__5126c:before,
+.highlighted__5126c:before,
+.mentioned__5126c:before,
+.nitroMessage__5126c:before,
+.replying__5126c:before {
+    bottom: 0;
+    content: "";
+    display: block;
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 2px
+}
+
+.ephemeral__5126c:before {
+    background: var(--brand-500)
+}
+
+.nitroMessage__5126c:before {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color-vertical)
+}
+
+.automodMessage__5126c:before {
+    background: var(--text-feedback-critical)
+}
+
+.mentioned__5126c:before {
+    background: var(--icon-feedback-warning)
+}
+
+.highlighted__5126c:before {
+    background: var(--text-brand)
+}
+
+.replying__5126c:before {
+    background: var(--brand-500)
+}
+
+.messageListItem__5126c {
+    outline: none;
+    position: relative
+}
+
+.message__5126c {
+    border-end-end-radius: var(--radius-xs);
+    border-start-end-radius: var(--radius-xs);
+    padding-inline-end: var(--space-xl) !important
+}
+
+.theme-dark .message__5126c.selected__5126c,
+.theme-dark.mouse-mode.full-motion .message__5126c:hover {
+    background: var(--message-background-hover)
+}
+
+.theme-light .message__5126c.selected__5126c,
+.theme-light.mouse-mode.full-motion .message__5126c:hover {
+    background: var(--message-background-hover)
+}
+
+.message__5126c.mentioned__5126c.selected__5126c,
+.mouse-mode.full-motion .message__5126c.mentioned__5126c:hover {
+    background: var(--message-mentioned-background-hover)
+}
+
+.message__5126c.highlighted__5126c.selected__5126c,
+.mouse-mode.full-motion .message__5126c.highlighted__5126c:hover {
+    background: var(--message-highlight-background-hover)
+}
+
+.message__5126c.ephemeral__5126c.selected__5126c,
+.mouse-mode.full-motion .message__5126c.ephemeral__5126c:hover {
+    background: var(--brand-10a)
+}
+
+.message__5126c.nitroMessage__5126c.selected__5126c,
+.mouse-mode.full-motion .message__5126c.nitroMessage__5126c:hover {
+    background: linear-gradient(to right, hsl(var(--premium-tier-2-purple-for-gradients-hsl)/.2), hsl(var(--premium-tier-2-pink-for-gradients-hsl)/.2))
+}
+
+.message__5126c.automodMessage__5126c.selected__5126c,
+.mouse-mode.full-motion .message__5126c.automodMessage__5126c:hover {
+    background: var(--message-automod-background-hover)
+}
+
+.message__5126c.guildOfficialMessage__5126c.selected__5126c,
+.mouse-mode.full-motion .message__5126c.guildOfficialMessage__5126c:hover {
+    background: hsl(var(--custom-guild-official-message-hsl)/var(--custom-guild-official-message-selected-alpha))
+}
+
+.message__5126c.guildOfficialMessage__5126c.highlighted__5126c:after,
+.message__5126c.guildOfficialMessage__5126c.replying__5126c:after,
+.message__5126c.guildOfficialMessage__5126c.selected__5126c:after,
+.mouse-mode.full-motion .message__5126c.guildOfficialMessage__5126c:hover:after {
+    content: none
+}
+
+.message__5126c.replying__5126c.selected__5126c,
+.mouse-mode.full-motion .message__5126c.replying__5126c:hover {
+    background: var(--brand-10a)
+}
+
+.quotedChatMessage__5126c {
+    position: relative
+}
+
+.highlightContainer__5126c {
+    align-items: center;
+    display: flex;
+    margin-bottom: 4px
+}
+
+.highlightIcon__5126c {
+    margin-inline-end: 4px
+}
+
+.jump__5126c {
+    background-color: var(--background-base-lowest);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: var(--text-default);
+    cursor: pointer;
+    display: none;
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    height: 24px;
+    inset-inline-end: 16px;
+    line-height: 16px;
+    margin-inline-start: 6px;
+    padding: 4px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    z-index: 1
+}
+
+.quotedChatMessage__5126c:hover .jump__5126c {
+    display: block
+}
+
+.jump__5126c:hover {
+    color: var(--interactive-text-hover)
+}
+
+.jump__5126c:active {
+    color: var(--interactive-text-active);
+    transform: translate3d(0, 1px, 0)
+}
+
+.buttons__5126c {
+    opacity: 0;
+    pointer-events: none
+}
+
+.message__5126c.selected__5126c .buttons__5126c,
+.mouse-mode .message__5126c:hover .buttons__5126c {
+    opacity: 1
+}
+
+.message__5126c.selected__5126c .buttonsInner__5126c,
+.mouse-mode .message__5126c:hover .buttonsInner__5126c {
+    pointer-events: auto
+}
+
+.hideIfMessageNotFocused__5126c {
+    opacity: 0
+}
+
+.message__5126c.selected__5126c .hideIfMessageNotFocused__5126c,
+.mouse-mode .message__5126c:hover .hideIfMessageNotFocused__5126c {
+    opacity: 1
+}
+
+.cozyMessage__5126c.groupStart__5126c {
+    min-height: 2.75rem
+}
+
+.systemMessage__5126c.groupStart__5126c {
+    min-height: 1.375rem
+}
+
+.backgroundFlash__5126c {
+    flex: 0 0 auto
+}
+
+.channelTextArea__5126c {
+    margin-top: 8px
+}
+
+.divider__5126c {
+    margin-inline: 1rem .875rem
+}
+
+.disableInteraction__5126c:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.groupStart__5126c {
+    margin-top: var(--custom-group-spacing-start)
+}
+
+.group-spacing-0 .groupStart__5126c {
+    --custom-group-spacing-start: 0.0625rem
+}
+
+.group-spacing-0 .divider__5126c {
+    margin-bottom: -1px;
+    margin-top: 0
+}
+
+.group-spacing-0 .divider__5126c.hasContent__5126c {
+    margin-bottom: 1.5rem;
+    margin-top: 1.5rem
+}
+
+.group-spacing-4 .groupStart__5126c {
+    --custom-group-spacing-start: 0.3125rem
+}
+
+.group-spacing-4 .divider__5126c {
+    margin-bottom: 0;
+    margin-top: -1px
+}
+
+.group-spacing-4 .divider__5126c.beforeGroup__5126c {
+    margin-bottom: -1px;
+    margin-top: 0;
+    top: .125rem
+}
+
+.group-spacing-4 .divider__5126c.hasContent__5126c {
+    margin-bottom: 1.25rem;
+    margin-top: 1.5rem
+}
+
+.group-spacing-8 .groupStart__5126c {
+    --custom-group-spacing-start: 0.5625rem
+}
+
+.group-spacing-8 .divider__5126c {
+    margin-bottom: 2px;
+    margin-top: 2px
+}
+
+.group-spacing-8 .divider__5126c.beforeGroup__5126c {
+    margin-bottom: -1px;
+    margin-top: 0;
+    top: .25rem
+}
+
+.group-spacing-8 .divider__5126c.hasContent__5126c {
+    margin-bottom: 1rem;
+    margin-top: 1.5rem
+}
+
+.group-spacing-16 .groupStart__5126c {
+    --custom-group-spacing-start: 1.0625rem
+}
+
+.group-spacing-16 .divider__5126c {
+    margin-bottom: 4px;
+    margin-top: 4px
+}
+
+.group-spacing-16 .divider__5126c.beforeGroup__5126c {
+    margin-bottom: -1px;
+    margin-top: 0;
+    top: .5rem
+}
+
+.group-spacing-16 .divider__5126c.hasContent__5126c {
+    margin-bottom: .5rem;
+    margin-top: 1.5rem
+}
+
+.group-spacing-24 .groupStart__5126c {
+    --custom-group-spacing-start: 1.5625rem
+}
+
+.group-spacing-24 .divider__5126c {
+    margin-bottom: 4px;
+    margin-top: 4px
+}
+
+.group-spacing-24 .divider__5126c.beforeGroup__5126c {
+    margin-bottom: -1px;
+    margin-top: 0;
+    top: .75rem
+}
+
+.group-spacing-24 .divider__5126c.hasContent__5126c {
+    margin-bottom: 0;
+    margin-top: 1.5rem
+}
+
+.backgroundFlash__5126c .groupStart__5126c {
+    margin-top: 0 !important
+}
+
+.interactionSending__5126c {
+    opacity: .5
+}
+
+.enable-forced-colors .automodMessage__5126c:before,
+.enable-forced-colors .ephemeral__5126c:before,
+.enable-forced-colors .highlighted__5126c:before,
+.enable-forced-colors .mentioned__5126c:before,
+.enable-forced-colors .replying__5126c:before {
+    forced-color-adjust: none;
+    width: 4px
+}
+
+.mentioned__5126c .mention.interactive:hover {
+    text-decoration: underline
+}

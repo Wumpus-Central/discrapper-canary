@@ -1,0 +1,195 @@
+.container_fb1896 {
+    align-items: center;
+    border: 2px dashed var(--border-subtle);
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: center;
+    padding: 12px 24px
+}
+
+.container_fb1896:hover {
+    border: 2px dashed var(--border-strong)
+}
+
+.icon_fb1896 {
+    color: var(--interactive-text-active)
+}
+
+.container__33d66 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px
+}
+
+.pill__33d66 {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-round);
+    cursor: pointer;
+    flex-shrink: 0;
+    padding: 8px 12px
+}
+
+.pill__33d66:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.pill__33d66.disabled__33d66 {
+    cursor: not-allowed;
+    opacity: .8
+}
+
+.examplesHeader_d520fc,
+.title_d520fc {
+    text-transform: uppercase
+}
+
+.examplesHeader_d520fc {
+    margin-bottom: 8px;
+    margin-top: 24px
+}
+
+.addQuestionsContainer_d520fc {
+    margin-top: 8px
+}
+
+.previewButton__50a36 {
+    align-items: center;
+    color: var(--text-brand);
+    cursor: pointer;
+    display: inline-flex;
+    gap: 4px
+}
+
+.previewButton__50a36:hover {
+    text-decoration: underline
+}
+
+.applicationBody__864b0 {
+    margin: 8px 0
+}
+
+.form__864b0 {
+    margin: 24px 0
+}
+
+.twoColumnContainer__864b0 {
+    display: flex;
+    flex-direction: row;
+    gap: 32px
+}
+
+.column__864b0 {
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    gap: 8px
+}
+
+.divider__864b0 {
+    background-color: var(--border-strong);
+    height: 1px;
+    margin: 32px 0;
+    width: 100%
+}
+
+.previewWrapper__864b0 {
+    height: 100px;
+    overflow: hidden;
+    position: relative
+}
+
+.preview__864b0 {
+    pointer-events: none
+}
+
+.gradient__864b0,
+.preview__864b0 {
+    bottom: 0;
+    inset-inline: 0;
+    position: absolute
+}
+
+.gradient__864b0 {
+    background: linear-gradient(180deg, var(--background-base-low) 0, transparent 70%);
+    display: block;
+    top: 0;
+    z-index: 2
+}
+
+.container__99871 {
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-medium);
+    overflow: hidden
+}
+
+.loaderContainer__99871 {
+    padding: 64px 0
+}
+
+.loadingText__99871 {
+    margin-bottom: 24px;
+    text-align: center
+}
+
+.header__99871 {
+    align-items: center;
+    background-color: var(--background-base-lowest);
+    display: flex;
+    padding: 16px
+}
+
+.headerIcon__99871 {
+    margin-inline-end: 16px
+}
+
+.checklistItem__99871 {
+    display: flex;
+    padding: 16px
+}
+
+.separator__99871 {
+    background-color: var(--border-muted);
+    border: none;
+    content: "";
+    display: block;
+    height: 1px;
+    margin: 0 16px;
+    position: relative
+}
+
+.checklistIcon__99871 {
+    flex: 0 0 20px;
+    margin-inline-end: 16px
+}
+
+.checklistText__99871 {
+    flex: 1 1 auto
+}
+
+.detailsButton__99871 {
+    font-weight: var(--font-weight-normal);
+    padding: 0
+}
+
+.doesNot__99871 {
+    color: var(--text-feedback-critical)
+}
+
+.healthPending__99871 {
+    color: var(--text-feedback-warning)
+}
+
+.healthFailingDescription__99871 {
+    margin-bottom: 8px
+}
+
+.indent__99871 {
+    margin-inline-start: 16px
+}

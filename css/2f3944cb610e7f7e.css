@@ -1,0 +1,36 @@
+.container__3cdae {
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    height: 100%;
+    min-height: inherit;
+    position: relative;
+    width: 100%
+}
+
+.videoBanner__3cdae {
+    border-radius: inherit;
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    z-index: 0
+}
+
+.card__2cf1c {
+    border-radius: var(--radius-lg);
+    box-sizing: border-box;
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    transition: filter .15s ease-in-out
+}
+
+.card__2cf1c:hover {
+    filter: drop-shadow(0 8px 10px rgba(0, 0, 0, .14))
+}
+
+.overflowable__2cf1c {
+    overflow: visible
+}

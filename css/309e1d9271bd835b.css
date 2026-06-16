@@ -1,0 +1,49 @@
+.panel__2f37f {
+    gap: 16px;
+    padding: 8px
+}
+
+.panel__2f37f,
+.panelGroup__2f37f {
+    display: flex;
+    flex-direction: column
+}
+
+.panelGroup__2f37f {
+    border-radius: 8px;
+    gap: 4px;
+    padding: 12px;
+    width: 300px
+}
+
+.panelGroup__2f37f span {
+    transition: color .4s ease-in-out
+}
+
+.rightAligned__2f37f {
+    align-items: flex-end
+}
+
+.measurement__2f37f {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.measurementText__2f37f {
+    flex: 1;
+    text-shadow: 0 0 2px #000
+}
+
+.measurementCheckbox__2f37f {
+    flex: 0
+}
+
+.bottomPanelButton__2f37f {
+    padding-top: 12px
+}
+
+.secondaryInfoText__2f37f {
+    margin-inline-start: 8px
+}

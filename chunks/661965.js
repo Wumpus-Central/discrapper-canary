@@ -1,1 +1,1 @@
-"use strict";e.exports="/assets/902087e396aa9987.svg"
+s.exports="/assets/902087e396aa9987.svg"

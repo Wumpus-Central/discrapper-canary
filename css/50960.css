@@ -1,0 +1,30 @@
+.chatIcon__233f8 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.chatIcon__233f8 svg {
+    flex-shrink: 0
+}
+
+.chatIcon__233f8:hover .unreadCount__233f8 {
+    background: var(--white)
+}
+
+.chatIcon__233f8:hover .unreadCount__233f8.mention__233f8 {
+    background: var(--red-360)
+}
+
+.upArrow__233f8 {
+    transform: rotate(180deg)
+}
+
+.downArrow__233f8 {
+    transform: rotate(0deg)
+}
+
+.badge__233f8 {
+    margin-top: 14px
+}

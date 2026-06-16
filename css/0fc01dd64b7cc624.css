@@ -1,0 +1,226 @@
+.product__339ad {
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    flex-grow: 1;
+    height: 48px
+}
+
+.productContent__339ad {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    z-index: 1
+}
+
+.hero__81227 {
+    --custom-hero-min-height: 150px;
+    height: 100%;
+    min-height: var(--custom-hero-min-height);
+    width: 100%
+}
+
+.content__81227 {
+    flex-direction: column;
+    height: 100%
+}
+
+.content__81227,
+.headerContent__81227 {
+    display: flex;
+    position: relative;
+    z-index: 1
+}
+
+.headerContent__81227 {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.logo__81227 {
+    align-self: flex-start;
+    justify-self: center
+}
+
+.logo__81227 img,
+.logo__81227 video {
+    display: block;
+    height: auto;
+    max-height: calc(var(--custom-hero-min-height) - var(--space-8)*2);
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: auto
+}
+
+.children__81227 {
+    padding-top: var(--space-24);
+    position: relative;
+    z-index: 1
+}
+
+.hero__56f88 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%
+}
+
+.banner__56f88 {
+    display: flex;
+    height: 350px;
+    inset-inline: 0;
+    -webkit-mask-image: linear-gradient(180deg, #000 40%, rgba(0, 0, 0, .8) 60%, rgba(0, 0, 0, .4) 80%, transparent);
+    mask-image: linear-gradient(180deg, #000 40%, rgba(0, 0, 0, .8) 60%, rgba(0, 0, 0, .4) 80%, transparent);
+    position: absolute
+}
+
+.banner__56f88 img,
+.banner__56f88 video {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.content__56f88 {
+    box-sizing: border-box;
+    max-width: 1080px;
+    padding-bottom: var(--space-24);
+    padding-inline: var(--space-32);
+    position: relative;
+    width: 100%;
+    z-index: 1
+}
+
+.header__56f88 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 255px;
+    justify-content: space-between;
+    padding-top: 3px
+}
+
+.logo__56f88 {
+    height: 100%;
+    margin-bottom: var(--space-12);
+    min-height: 0
+}
+
+.logo__56f88,
+.logo__56f88 img,
+.logo__56f88 video {
+    max-height: 90px;
+    max-width: 540px
+}
+
+.logo__56f88 img,
+.logo__56f88 video {
+    display: block;
+    height: auto;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: auto
+}
+
+.children__56f88 {
+    position: relative;
+    z-index: 1
+}
+
+.layoutEditorContainer_f6350f {
+    border: 1px solid var(--border-subtle);
+    border-radius: 4px;
+    font-family: Consolas, Monaco, Courier New, monospace;
+    font-size: 14px;
+    height: 400px;
+    line-height: 1.5;
+    overflow: hidden;
+    position: relative;
+    -moz-tab-size: 2;
+    -o-tab-size: 2;
+    tab-size: 2;
+    width: 100%
+}
+
+.highlightLayer_f6350f {
+    height: 100%;
+    inset-inline-start: 0;
+    overflow: auto;
+    padding: 12px;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    white-space: pre-wrap;
+    width: 100%;
+    word-wrap: break-word;
+    background-color: transparent;
+    border: 1px solid transparent;
+    box-sizing: border-box;
+    color: transparent;
+    letter-spacing: normal;
+    overflow-wrap: break-word
+}
+
+.highlightLayer_f6350f,
+.highlightLayer_f6350f code {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    margin: 0;
+    -moz-tab-size: inherit;
+    -o-tab-size: inherit;
+    tab-size: inherit
+}
+
+.highlightLayer_f6350f code {
+    display: block;
+    white-space: inherit;
+    word-wrap: inherit;
+    background: transparent;
+    letter-spacing: inherit;
+    overflow-wrap: inherit;
+    padding: 0
+}
+
+.textareaLayer_f6350f {
+    background-color: transparent;
+    border: 1px solid transparent;
+    caret-color: var(--text-link);
+    color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    height: 100%;
+    inset-inline-start: 0;
+    letter-spacing: normal;
+    line-height: inherit;
+    margin: 0;
+    outline: none;
+    overflow: auto;
+    padding: 12px;
+    position: absolute;
+    resize: none;
+    -moz-tab-size: inherit;
+    -o-tab-size: inherit;
+    tab-size: inherit;
+    top: 0;
+    white-space: pre-wrap;
+    width: 100%;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    overflow-wrap: break-word
+}
+
+.textareaLayer_f6350f::-moz-placeholder {
+    color: var(--text-muted);
+    opacity: .5
+}
+
+.textareaLayer_f6350f::placeholder {
+    color: var(--text-muted);
+    opacity: .5
+}

@@ -1,0 +1,110 @@
+.safetyBanner__51e4d {
+    align-items: center;
+    background: var(--background-surface-high);
+    border-radius: 6px;
+    box-shadow: var(--elevation-low);
+    display: flex;
+    flex-wrap: nowrap;
+    gap: var(--space-16);
+    margin: var(--space-16) var(--space-16) calc(var(--space-8)*-1);
+    padding-block: var(--space-8) var(--space-8);
+    padding-inline: var(--space-16) var(--space-12);
+    z-index: 2
+}
+
+.safetyShieldIcon__51e4d {
+    height: 32px;
+    width: 27px
+}
+
+.buttons__51e4d {
+    align-items: center;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: flex-end
+}
+
+@media (max-width:500px) {
+    .buttons__51e4d {
+        flex-grow: 1
+    }
+}
+
+.shieldAndHeading__51e4d {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+    gap: var(--space-16)
+}
+
+.closeButton__51e4d {
+    cursor: pointer;
+    opacity: .5;
+    transition: opacity .2s;
+    -webkit-app-region: no-drag;
+    color: var(--text-default)
+}
+
+.closeButton__51e4d:hover {
+    opacity: 1
+}
+
+@media (max-width:860px) {
+    .safetyBanner__51e4d {
+        flex-basis: min-content;
+        flex-wrap: wrap;
+        padding: var(--space-16)
+    }
+
+    .safetyShieldIcon__51e4d {
+        height: 51px;
+        width: 43px
+    }
+
+    .shieldAndHeading__51e4d {
+        flex-basis: min-content
+    }
+
+    .closeButton__51e4d {
+        align-self: flex-start;
+        margin-inline-start: auto
+    }
+
+    .buttons__51e4d {
+        order: 4;
+        width: 100%
+    }
+
+    .ctaButton__51e4d {
+        width: 50%
+    }
+}
+
+.outer_bf9399 {
+    border: 1px solid var(--border-subtle);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    margin-top: 1rem;
+    margin-inline-end: 0;
+    margin-inline-start: 4px;
+    position: relative
+}
+
+.outer_bf9399:after {
+    background: linear-gradient(to bottom, var(--background-surface-higher), transparent);
+    content: "";
+    height: 20px;
+    inset-inline-end: -1px;
+    inset-inline-start: -1px;
+    pointer-events: none;
+    position: absolute;
+    top: 100%
+}
+
+.custom-theme-background .outer_bf9399:after {
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    -webkit-mask-image: linear-gradient(180deg, #000, transparent);
+    mask-image: linear-gradient(180deg, #000, transparent)
+}

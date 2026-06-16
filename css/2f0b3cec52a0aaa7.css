@@ -1,0 +1,157 @@
+.benefits__25f6c {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.container__0ab43 {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.headerContainer__0ab43 {
+    align-items: center;
+    cursor: pointer;
+    display: flex
+}
+
+.headerTextContainer__0ab43 {
+    flex: 1;
+    margin-inline-start: 16px
+}
+
+.guildName__0ab43 {
+    color: var(--interactive-text-active);
+    margin-bottom: 2px
+}
+
+.arrowIcon__0ab43,
+.tierName__0ab43 {
+    color: var(--interactive-text-default)
+}
+
+.arrowIcon__0ab43 {
+    height: 24px;
+    width: 24px
+}
+
+.arrowIconExpanded__0ab43 {
+    transform: rotate(180deg)
+}
+
+.headerSubtitleContainer__0ab43 {
+    align-items: center;
+    display: flex;
+    gap: 6px
+}
+
+.divider__0ab43 {
+    border-bottom: 1px solid var(--opacity-white-4);
+    margin: 16px 0
+}
+
+.changePlanNotice__0ab43 {
+    background-color: var(--background-mod-normal);
+    margin-bottom: 16px
+}
+
+.subscriptionInfoCards__0ab43 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px
+}
+
+.container__0ab43 .paymentSourceDropdown__0ab43 {
+    margin-bottom: 16px
+}
+
+.container__0ab43 .paymentSourceDropdown__0ab43,
+.paymentSourceDropdownOption__0ab43 {
+    background-color: var(--background-mod-normal)
+}
+
+.infoCard__0ab43 {
+    background-color: var(--card-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    flex: 1;
+    padding: 16px
+}
+
+.infoCardLabel__0ab43 {
+    color: var(--interactive-text-default);
+    margin-bottom: 16px;
+    text-transform: uppercase
+}
+
+.infoCardLabelContainer__0ab43 {
+    display: flex;
+    flex-direction: row
+}
+
+.infoCardIcon__0ab43 {
+    color: var(--interactive-text-default);
+    height: 16px;
+    margin-inline-start: 8px;
+    width: 16px
+}
+
+.infoCardValue__0ab43 {
+    color: var(--text-strong);
+    font-weight: var(--font-weight-normal)
+}
+
+.rowButton__0ab43 {
+    background-color: var(--background-mod-normal);
+    cursor: pointer
+}
+
+.rowButton__0ab43:first-child {
+    border-radius: 8px 8px 0 0
+}
+
+.rowButton__0ab43:last-child {
+    border-radius: 0 0 8px 8px
+}
+
+.rowButton__0ab43:last-child .rowButtonContent__0ab43 {
+    border-bottom: none
+}
+
+.rowButtonContent__0ab43 {
+    align-items: center;
+    border-bottom: 1px solid var(--opacity-white-4);
+    display: flex;
+    justify-content: space-between;
+    margin-inline-start: 16px;
+    padding-block: 16px;
+    padding-inline: 0 16px
+}
+
+.rowButtonArrow__0ab43 {
+    color: var(--interactive-text-default);
+    height: 24px;
+    transform: rotate(-90deg);
+    width: 24px
+}
+
+.rowButtonLabel__0ab43 {
+    color: var(--interactive-text-active);
+    font-weight: var(--font-weight-medium)
+}
+
+.paymentDueBadge__0ab43 {
+    color: var(--primary-860);
+    letter-spacing: .02em
+}
+
+.pageDescription__8f372 {
+    margin-bottom: 40px
+}
+
+.subscriptionsContainer__8f372 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}

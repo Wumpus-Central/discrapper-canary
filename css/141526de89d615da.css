@@ -1,0 +1,221 @@
+.uploadInput__94439 {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    height: var(--custom-forum-composer-attachments-attachment-size);
+    justify-content: center;
+    position: relative;
+    transition: background-color .1s ease-in-out;
+    width: var(--custom-forum-composer-attachments-attachment-size)
+}
+
+.uploadInput__94439:hover {
+    background-color: var(--background-mod-strong)
+}
+
+.uploadInput__94439:hover .uploadIcon__94439 {
+    color: var(--interactive-text-hover)
+}
+
+.uploadInput__94439:active .uploadIcon__94439 {
+    color: var(--interactive-text-active)
+}
+
+.fileInput__94439 {
+    height: 0;
+    position: relative;
+    width: 0
+}
+
+.uploadIcon__94439 {
+    color: var(--interactive-text-default)
+}
+
+.uploadIcon__94439:hover {
+    color: var(--interactive-text-hover)
+}
+
+.uploadIcon__94439:active {
+    color: var(--interactive-text-active)
+}
+
+.container__94439 {
+    align-self: flex-start;
+    height: var(--custom-forum-composer-attachments-attachment-size);
+    position: relative;
+    width: var(--custom-forum-composer-attachments-attachment-size)
+}
+
+.collapsedAttachment__94439 {
+    cursor: pointer;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.popoutContainer__94439 {
+    inset-inline-end: -24px;
+    padding: 16px;
+    position: absolute;
+    top: -24px
+}
+
+.popout__94439 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--elevation-medium);
+    display: flex;
+    flex-direction: row;
+    height: calc(var(--custom-forum-composer-attachments-attachment-size) + 20px);
+    max-width: calc(var(--custom-forum-composer-attachments-attachment-size)*5 + 50px + var(--custom-forum-composer-attachments-attachment-size)/2);
+    padding: 8px
+}
+
+.uploads__94439 {
+    display: flex;
+    gap: 8px;
+    padding-inline-end: 8px
+}
+
+.image__94439 {
+    border-radius: var(--radius-md);
+    height: var(--custom-forum-composer-attachments-attachment-size);
+    width: var(--custom-forum-composer-attachments-attachment-size)
+}
+
+.badge__94439 {
+    align-items: center;
+    background-color: var(--brand-500);
+    border: 2px solid var(--background-base-low);
+    border-radius: var(--radius-lg);
+    color: var(--white);
+    display: flex;
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    height: 16px;
+    inset-inline-end: -4px;
+    justify-content: center;
+    min-width: 8px;
+    padding: 0 4px;
+    position: absolute;
+    top: -4px
+}
+
+.container__16689 {
+    background-color: var(--background-base-lower);
+    padding-top: 24px;
+    padding-inline: var(--custom-media-post-attachments-horizontal-padding);
+    padding-bottom: 16px;
+    position: relative
+}
+
+.uploads__16689 {
+    flex-direction: row;
+    gap: 8px;
+    padding-top: 16px
+}
+
+.uploads__16689,
+.uploadsContainer__16689 {
+    display: flex
+}
+
+.thumbnailContainer__8bb30 {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    position: relative
+}
+
+.thumbnailContainer__8bb30,
+.uploadThumbnailContainer__8bb30 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.uploadThumbnailContainer__8bb30 {
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.uploadFileInputContainer__8bb30 {
+    border-radius: 8px;
+    color: var(--background-base-lower);
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.uploadFileInputContainer__8bb30:hover>.uploadThumbnailContainer__8bb30>.changeThumbnailLabelContainer__8bb30 {
+    background-color: var(--opacity-black-80);
+    visibility: visible
+}
+
+.editIcon__8bb30 {
+    margin-inline-start: 4px
+}
+
+.editIcon__8bb30,
+.uploadIcon__8bb30 {
+    color: var(--interactive-text-default)
+}
+
+.uploadIcon__8bb30 {
+    margin-bottom: 8px
+}
+
+.thumbnail__8bb30 {
+    border-radius: 8px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    overflow: hidden;
+    width: 100%
+}
+
+.attachmentListItem__8bb30 {
+    display: flex;
+    height: 86px;
+    max-height: 86px;
+    max-width: 153px;
+    min-height: 86px;
+    min-width: 153px;
+    padding: 0;
+    width: 153px
+}
+
+.action__8bb30 {
+    height: 16px;
+    min-width: 18px;
+    padding: 4px
+}
+
+.changeThumbnailLabelContainer__8bb30 {
+    align-items: center;
+    border-radius: 8px;
+    display: flex;
+    height: 100%;
+    inset-inline-start: 0;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+    width: 100%
+}
+
+.changeThumbnailLabelOverflow__8bb30 {
+    padding-bottom: 1px
+}

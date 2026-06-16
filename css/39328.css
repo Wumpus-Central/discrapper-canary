@@ -1,0 +1,232 @@
+.author_d3eee8 {
+    flex-shrink: 0
+}
+
+.author_d3eee8 a {
+    color: var(--text-muted)
+}
+
+.author_d3eee8.hasUnreads_d3eee8 a {
+    color: var(--text-strong)
+}
+
+.pill_a2c9e8 {
+    align-items: center;
+    background-color: var(--control-secondary-background-default);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    box-sizing: border-box;
+    color: var(--control-secondary-text-default);
+    display: inline-flex;
+    height: 32px;
+    overflow: hidden;
+    padding: 0 12px
+}
+
+.pill_a2c9e8.clickable_a2c9e8:not(.disabled_a2c9e8):hover {
+    background-color: var(--control-secondary-background-hover);
+    cursor: pointer
+}
+
+.pill_a2c9e8.disabled_a2c9e8 {
+    cursor: not-allowed;
+    opacity: .5
+}
+
+.pill_a2c9e8.small_a2c9e8 {
+    height: 24px;
+    padding: 0 8px
+}
+
+.pill_a2c9e8.clickable_a2c9e8:not(.disabled_a2c9e8):active {
+    background-color: var(--control-secondary-background-active);
+    cursor: pointer
+}
+
+.pill_a2c9e8.selected_a2c9e8 {
+    background-color: var(--reaction-background-reacted-default);
+    color: var(--reaction-text-reacted-default)
+}
+
+.pill_a2c9e8.selected_a2c9e8:not(.disabled_a2c9e8):hover {
+    background-color: var(--opacity-blurple-32)
+}
+
+.pill_a2c9e8.selected_a2c9e8:not(.disabled_a2c9e8):active {
+    background-color: var(--opacity-blurple-12)
+}
+
+.pill_a2c9e8.danger_a2c9e8 {
+    background-color: var(--background-feedback-critical);
+    border-color: var(--border-feedback-critical);
+    color: var(--text-feedback-critical)
+}
+
+.pill_a2c9e8.success_a2c9e8 {
+    background-color: var(--background-feedback-positive);
+    color: var(--text-feedback-positive)
+}
+
+.pill_a2c9e8.success_a2c9e8,
+.pill_a2c9e8.warning_a2c9e8 {
+    border-color: var(--border-subtle)
+}
+
+.pill_a2c9e8.warning_a2c9e8 {
+    background-color: var(--background-feedback-warning);
+    color: var(--text-feedback-warning)
+}
+
+.theme-light .pill_a2c9e8.selected_a2c9e8 {
+    background-color: var(--brand-160);
+    border-color: var(--brand-500)
+}
+
+.theme-dark .pill_a2c9e8.selected_a2c9e8 {
+    background-color: var(--brand-15a);
+    border-color: var(--brand-500)
+}
+
+.emoji_a2c9e8 {
+    height: 14px;
+    margin-inline-end: 6px;
+    width: 14px
+}
+
+.emoji_a2c9e8.small_a2c9e8 {
+    height: 12px;
+    width: 12px
+}
+
+.closeCircle_a2c9e8 {
+    align-items: center;
+    background-color: var(--background-surface-high);
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center
+}
+
+.close_a2c9e8 {
+    color: var(--text-strong);
+    height: 12px;
+    width: 12px
+}
+
+.tooltipPill_a2c9e8 {
+    margin: 4px 2px
+}
+
+.full-motion .pill_a2c9e8 {
+    transition: background-color .2s ease
+}
+
+.tags_e5a45e {
+    align-items: center;
+    gap: var(--space-8);
+    justify-content: center;
+    overflow: hidden
+}
+
+.tags_e5a45e,
+.wrap_e5a45e {
+    display: flex
+}
+
+.wrap_e5a45e {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    overflow: auto
+}
+
+.container__7e6bb {
+    align-items: flex-start;
+    margin-bottom: 24px
+}
+
+.iconWrapper__7e6bb {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 50%;
+    display: flex;
+    height: 64px;
+    justify-content: center;
+    margin-top: 16px;
+    width: 64px
+}
+
+.icon__7e6bb {
+    color: var(--text-strong);
+    height: 40px;
+    width: 40px
+}
+
+.header__7e6bb {
+    font-weight: var(--font-weight-medium);
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.buttons_bb2295 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.container__143a4 {
+    align-items: flex-start;
+    max-width: 650px
+}
+
+.formContainer__143a4 {
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: break-word
+}
+
+.formContainer__143a4,
+.summaryContainer__143a4 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.summaryContainer__143a4 {
+    background-color: var(--background-base-lower);
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.summaryHeader__143a4 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}
+
+.summaryHeaderClanInfo__143a4 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    justify-content: flex-start
+}
+
+.guildIcon__143a4 {
+    border-radius: 16px
+}
+
+.summarySeparator__143a4 {
+    background-color: var(--border-subtle);
+    border: none;
+    height: 1px;
+    margin: 0
+}
+
+.formResponseContainer__143a4 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px
+}

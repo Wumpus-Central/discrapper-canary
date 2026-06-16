@@ -1,0 +1,299 @@
+.fieldWrapper_ce6bbd {
+    padding-top: 4px;
+    position: relative
+}
+
+.formItem__1b11b {
+    width: 100%
+}
+
+.noDrag_e9ca56 {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.container_e9ca56 {
+    position: relative;
+    width: 380px
+}
+
+.card_e9ca56 {
+    gap: 8px
+}
+
+.card_e9ca56,
+.footer_e9ca56 {
+    display: flex;
+    padding: var(--space-8)
+}
+
+.footer_e9ca56 {
+    justify-content: space-between
+}
+
+.title_e9ca56 {
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase
+}
+
+.asset_e9ca56,
+.title_e9ca56 {}
+
+.asset_e9ca56 {
+    background-blend-mode: color-burn;
+    background-image: url(https://cdn.discordapp.com/assets/content/7f5bafad92c161f4e3f0aead83b84dfafeacea91a5eb442f49ed5711470b7887.png);
+    background-size: cover;
+    height: 120px;
+    padding-inline: var(--space-8);
+    padding-bottom: var(--space-16);
+    padding-top: var(--space-16)
+}
+
+.stats_e9ca56 {
+    flex-direction: column;
+    overflow: hidden
+}
+
+.stat_e9ca56,
+.stats_e9ca56 {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.stat_e9ca56 {
+    align-items: center
+}
+
+.statImage_e9ca56 {
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 0;
+    flex-shrink: 0;
+    height: 14px;
+    width: 14px
+}
+
+.statText_e9ca56 {
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.cta_e9ca56 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.ctaText_e9ca56 {
+    color: #000;
+    text-transform: uppercase
+}
+
+.powerContainer_e9ca56 {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    inset-inline-start: 0;
+    padding-inline-end: var(--space-12);
+    padding-bottom: var(--space-4);
+    padding-top: var(--space-8);
+    padding-inline-start: var(--space-8);
+    position: absolute;
+    top: 0
+}
+
+.powerText_e9ca56 {
+    display: flex;
+    gap: 4px
+}
+
+.powerBar_e9ca56 {
+    display: flex;
+    gap: 2px
+}
+
+.inline__6c706 {
+    opacity: 1
+}
+
+.full-motion .inline__6c706 {
+    transition: all .1s ease
+}
+
+.inline__6c706.hiddenMosaicItem__6c706 {
+    visibility: hidden
+}
+
+.full-motion .obscured__6c706 {
+    transition: all .1s ease
+}
+
+.obscured__6c706.hiddenMosaicItem__6c706 {
+    pointer-events: none
+}
+
+.obscured__6c706.hiddenMosaicItem__6c706.hiddenSpoiler__6c706 {
+    filter: blur(var(--custom-message-attachment-spoiler-blur-radius))
+}
+
+.obscured__6c706.hiddenMosaicItem__6c706.hiddenExplicit__6c706 {
+    filter: blur(var(--__obscured-background-blur-radius)) brightness(var(--__obscured-background-brightness))
+}
+
+.obscureVideoSpacing__6c706 {
+    bottom: 36px;
+    transition: bottom .1s ease-in-out
+}
+
+.mosaicItemContent__6c706 {
+    flex: auto
+}
+
+.removeMosaicItemButton__6c706 {
+    align-self: flex-start;
+    cursor: pointer;
+    flex: 0 0 auto;
+    opacity: 0;
+    padding: 2px
+}
+
+.spoilerRemoveMosaicItemButton__6c706 {
+    inset-inline-end: -20px;
+    position: absolute;
+    top: -2px
+}
+
+.mosaicItem__6c706 {
+    align-items: start;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    max-width: 100%
+}
+
+.mosaicItemNoJustify__6c706 {
+    justify-self: auto !important
+}
+
+.mosaicItemFullWidth__6c706 {
+    align-items: center;
+    width: 100%
+}
+
+.mosaicItemMediaMosaic__6c706 {
+    border-radius: 2px;
+    max-height: inherit;
+    position: relative
+}
+
+.hideOverflow__6c706 {
+    overflow: hidden
+}
+
+.removeMosaicItemButton__6c706:focus-within,
+.removeMosaicItemButton__6c706:hover {
+    color: var(--interactive-text-hover)
+}
+
+.nonMediaMosaicItem__6c706 {
+    inset-inline-end: -8px;
+    outline: 1px solid var(--background-base-lower);
+    top: -8px
+}
+
+.removeMosaicItemHoverButton__6c706:hover,
+.keyboard-mode .removeMosaicItemHoverButton__6c706:focus {
+    background-color: var(--control-critical-primary-background-default) !important;
+    color: var(--control-critical-primary-text-default) !important
+}
+
+.removeMosaicItemHoverButton__6c706:active {
+    background-color: var(--control-critical-primary-background-active);
+    color: var(--white)
+}
+
+.downloadHoverButtonIcon__6c706 {
+    height: 20px;
+    width: 20px
+}
+
+.enable-forced-colors .removeMosaicItemButton__6c706 {
+    background-color: ButtonFace;
+    border: 1px solid ButtonFace;
+    color: ButtonText;
+    opacity: 1
+}
+
+.enable-forced-colors .removeMosaicItemButton__6c706:focus,
+.enable-forced-colors .removeMosaicItemButton__6c706:hover {
+    border-color: ButtonText
+}
+
+.hoverButtonGroup__06ab4:hover,
+.keyboard-mode .hoverButtonGroup__06ab4:focus-within,
+:hover+.hoverButtonGroup__06ab4 {
+    opacity: 1
+}
+
+.hoverButton__06ab4 {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    padding: 6px
+}
+
+.hoverButton__06ab4.selected__06ab4,
+.hoverButton__06ab4:hover,
+.keyboard-mode .hoverButton__06ab4:focus {
+    background-color: var(--interactive-background-hover);
+    color: var(--interactive-text-hover)
+}
+
+.hoverButton__06ab4:active {
+    background-color: var(--interactive-background-active);
+    color: var(--interactive-text-active)
+}
+
+.hoverButtonGroup__06ab4 {
+    background-color: var(--background-base-low);
+    border-radius: 5px;
+    display: flex;
+    inset-inline-end: 4px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 4px;
+    z-index: 2
+}
+
+.nonMediaMosaicItem__06ab4 {
+    inset-inline-end: -8px;
+    outline: 1px solid var(--background-base-lower);
+    top: -8px
+}
+
+.sizer__06ab4 {
+    height: 0;
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.fileDisplayContainer__55ed7 {
+    width: -moz-min-content;
+    width: min-content
+}
+
+.fileHidden__55ed7 {
+    opacity: 0;
+    pointer-events: none
+}

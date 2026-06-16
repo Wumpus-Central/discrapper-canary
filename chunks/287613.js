@@ -1,1 +1,1 @@
-"use strict";function i(e){let{partySize:t,maxPartySize:n}=e;return t>-1&&n>-1}n.d(t,{A:()=>i})
+n.d(e,{A:()=>i});function i(t){let{partySize:e,maxPartySize:n}=t;return e>-1&&n>-1}

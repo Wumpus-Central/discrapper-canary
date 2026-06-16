@@ -1,0 +1,16 @@
+.container__32c39 {
+    border-top: 1px solid var(--background-mod-strong);
+    margin-top: var(--space-12);
+    padding-top: var(--space-12);
+    width: 100%
+}
+
+.button__32c39 {
+    border-radius: var(--radius-sm)
+}
+
+.title__32c39 {
+    color: var(--text-default);
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold)
+}

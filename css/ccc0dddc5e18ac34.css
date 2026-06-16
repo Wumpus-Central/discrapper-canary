@@ -1,0 +1,32 @@
+.container__44ee9 {
+    position: relative
+}
+
+.cardContainer__44ee9 {
+    margin-top: 8px;
+    position: absolute;
+    z-index: 1000
+}
+
+.alignLeft__44ee9 {
+    inset-inline-start: 0
+}
+
+.alignRight__44ee9 {
+    inset-inline-end: 0
+}
+
+.coachmarkContainer__44ee9 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 20px
+}
+
+.hidden__44ee9 {
+    visibility: hidden
+}
+
+.visible__44ee9 {
+    visibility: visible
+}

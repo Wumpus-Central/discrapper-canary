@@ -1,0 +1,227 @@
+.clickable_dd2e7c {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-round);
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    padding: var(--space-4);
+    width: 24px
+}
+
+.clickable_dd2e7c:hover {
+    background-color: var(--background-mod-strong);
+    color: var(--interactive-text-active)
+}
+
+.serverDetailsContainer__9ca53 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-16);
+    padding: var(--space-16)
+}
+
+.imageBackground__9ca53 {
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -99
+}
+
+.serverHeader__9ca53 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-16)
+}
+
+.gameIcon__9ca53 {
+    flex-shrink: 0
+}
+
+.gameImage__9ca53 {
+    border-radius: var(--radius-sm);
+    height: 70px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 53px
+}
+
+.serverInfo__9ca53 {
+    flex: 1
+}
+
+.detailsGrid__9ca53 {
+    display: grid;
+    gap: var(--space-16);
+    grid-template-columns: 1fr 1fr
+}
+
+.detailItem__9ca53 {
+    display: flex;
+    flex-direction: column;
+    gap: 3px
+}
+
+.serverIpContainer__9ca53 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.copyButton__9ca53 {
+    border-radius: var(--radius-sm);
+    color: var(--interactive-text-default);
+    cursor: pointer
+}
+
+.copyButton__9ca53:hover {
+    color: var(--interactive-text-active)
+}
+
+.statusContainer__9ca53 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.statusLoading__9ca53 {
+    height: 14px;
+    width: 14px
+}
+
+.statusTooltipIcon__9ca53 {
+    cursor: pointer
+}
+
+.statusIndicator__9ca53 {
+    border-radius: 50%;
+    height: 8px;
+    width: 8px
+}
+
+.statusIndicator__9ca53,
+.statusIndicator__9ca53.starting__9ca53 {
+    background-color: var(--brand-500)
+}
+
+.statusIndicator__9ca53.startup_failed__9ca53 {
+    background-color: var(--icon-feedback-critical)
+}
+
+.statusIndicator__9ca53.offline__9ca53 {
+    background-color: var(--icon-muted)
+}
+
+.statusIndicator__9ca53.online__9ca53 {
+    background-color: var(--icon-feedback-positive)
+}
+
+.statusIndicator__9ca53.deleted__9ca53,
+.statusIndicator__9ca53.missing_stock__9ca53,
+.statusIndicator__9ca53.provider_errored__9ca53 {
+    background-color: var(--icon-feedback-critical)
+}
+
+.statusIndicator__9ca53.sleeping__9ca53 {
+    background-color: var(--icon-muted)
+}
+
+.overflowMenu__9ca53 {
+    display: flex;
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    top: var(--space-16);
+    z-index: 2
+}
+
+.full-motion .copyButton__9ca53 {
+    transition: all .2s ease
+}
+
+.game_f74169 {
+    align-self: start;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-8)
+}
+
+.game_f74169:hover {
+    background-color: var(--background-mod-muted)
+}
+
+.disabled_f74169 {
+    cursor: not-allowed;
+    opacity: .5
+}
+
+.viewable_f74169 {
+    pointer-events: none
+}
+
+.gameImageContainer_f74169 {
+    border-radius: var(--radius-sm);
+    height: 175px;
+    overflow: hidden;
+    position: relative;
+    width: 130px
+}
+
+.gameImageBorder_f74169 {
+    border: 1.5px solid hsla(0, 0%, 100%, .1);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box
+}
+
+.gameImageBorder_f74169,
+.gameImageOverlay_f74169 {
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.gameImageOverlay_f74169 {
+    background: linear-gradient(156deg, #fff, hsla(0, 0%, 100%, 0) 35.29%);
+    opacity: .2
+}
+
+.gameImageOverlay_f74169:hover {
+    opacity: .4
+}
+
+&.full-motion .gameImageOverlay_f74169 {
+    transition: opacity .2s ease
+}
+
+.textContainer_f74169 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    width: 130px
+}
+
+.image_f74169 {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.boostContainer_f74169 {
+    display: flex;
+    flex-direction: row;
+    margin-inline-start: -4px
+}
+
+.full-motion .game_f74169 {
+    transition: background-color .1s ease
+}

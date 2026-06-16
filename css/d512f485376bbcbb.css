@@ -1,0 +1,6 @@
+.warning__1310b {
+    background: var(--background-base-lowest);
+    border: 3px dashed var(--input-border-error-default);
+    border-radius: var(--radius-md);
+    padding: 16px
+}
