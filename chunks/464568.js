@@ -1,1 +1,1 @@
-e.exports="/assets/3de97fb87787f20b.svg"
+"use strict";e.exports="/assets/3de97fb87787f20b.svg"

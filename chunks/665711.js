@@ -1,1 +1,1 @@
-l.d(t,{W:()=>i});var s=l(627968),a=l(64700),n=l(486020),r=l(236536);let i=e=>{let{application:t,iconSize:l=20}=e,i=a.useMemo(()=>n.Ay.getApplicationIconURL({id:t.id,icon:t.icon,size:l}),[t,l]);return(0,s.jsx)("img",{className:r.I,src:i,alt:"",height:l,width:l})}
+"use strict";n.d(t,{W:()=>o});var i=n(627968),r=n(64700),s=n(486020),a=n(236536);let o=e=>{let{application:t,iconSize:n=20}=e,o=r.useMemo(()=>s.Ay.getApplicationIconURL({id:t.id,icon:t.icon,size:n}),[t,n]);return(0,i.jsx)("img",{className:a.I,src:o,alt:"",height:n,width:n})}

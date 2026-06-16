@@ -1,0 +1,257 @@
+.monitor__7eeec {
+    height: 24px;
+    width: 100%
+}
+
+.overflowContainer__7eeec {
+    -webkit-mask: linear-gradient(90deg, transparent, #000 50%, #000 97%, transparent);
+    mask: linear-gradient(90deg, transparent, #000 50%, #000 97%, transparent);
+    overflow: hidden;
+    width: 100%
+}
+
+.text__7eeec {
+    font-size: 10px;
+    line-height: 12px;
+    margin-inline-end: 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: 70px
+}
+
+.title__7eeec {
+    color: currentColor;
+    font-weight: var(--font-weight-semibold)
+}
+
+.rate__7eeec {
+    font-weight: var(--font-weight-medium)
+}
+
+.sparkChart__7eeec {
+    height: 24px
+}
+
+.theme-dark .rate__7eeec {
+    color: var(--primary-400)
+}
+
+.table__49035 {
+    width: 100%
+}
+
+.gameUpdates__49035 {
+    background-color: var(--background-base-lowest);
+    transform: translateZ(0)
+}
+
+.headerRow__49035 {
+    display: flex;
+    padding: 20px 28px 12px
+}
+
+.headerCell__49035 {
+    box-sizing: border-box;
+    margin-inline-end: 40px
+}
+
+.headerCell__49035:last-child {
+    margin-inline-end: 0
+}
+
+.diskProgress__49035 {
+    color: var(--text-link)
+}
+
+.networkProgress__49035 {
+    color: var(--text-feedback-positive)
+}
+
+.row__49035 {
+    border-bottom: 1px solid var(--border-subtle);
+    margin: 0 28px;
+    padding: 16px 0 10px
+}
+
+.row__49035:last-child {
+    border-bottom: none
+}
+
+.cell__49035 {
+    box-sizing: border-box;
+    padding-block: 8px;
+    padding-inline: 20px 8px
+}
+
+.nameCell__49035 {
+    cursor: pointer;
+    flex-shrink: 0;
+    padding-inline-start: 8px;
+    width: 30%
+}
+
+.progressCell__49035 {
+    width: 60%
+}
+
+.actionsCell__49035 {
+    min-width: 98px;
+    padding-inline: 12px;
+    width: 10%
+}
+
+.nameCellText__49035 {
+    color: var(--text-strong);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.25;
+    margin-inline-start: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.progressCellHeader__49035 {
+    display: block;
+    padding-block: 8px;
+    padding-inline: 20px 8px
+}
+
+.progressCellBody__49035 {
+    align-items: center;
+    display: flex;
+    padding-inline-start: 13px
+}
+
+.progressCellText__49035 {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-weight: var(--font-weight-medium);
+    margin-top: 4px;
+    text-transform: uppercase
+}
+
+.actionButtonGroup__49035 {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: end
+}
+
+.container__4a84a {
+    position: relative
+}
+
+.scroller__4a84a {
+    background: var(--background-gradient-chat, var(--background-base-low));
+    contain: layout size
+}
+
+.wrapper__27106 {
+    flex-shrink: 0;
+    height: 50px;
+    position: relative;
+    width: 50px
+}
+
+.svg__27106 {
+    transform: rotate(-86deg)
+}
+
+.path__27106 {
+    fill: none;
+    stroke-width: 4px
+}
+
+.background__27106 {
+    stroke: var(--text-muted)
+}
+
+.foreground__27106 {
+    stroke-dashoffset: 0;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    transition: stroke .3s ease, stroke-dasharray .3s ease-out
+}
+
+.usageInfo__27106 {
+    color: var(--text-default);
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    inset-inline-start: 11px;
+    line-height: 12px;
+    overflow: hidden;
+    position: absolute;
+    text-align: center;
+    top: 19px;
+    width: 30px
+}
+
+.wrapper_a6f654 {
+    margin-top: 60px
+}
+
+.installationPath_a6f654 {
+    padding: var(--custom-game-install-locations-item-padding) 0
+}
+
+.installationPathEditing_a6f654 {
+    margin-inline: calc(var(--custom-game-install-locations-item-padding)*-1);
+    padding: calc(var(--custom-game-install-locations-item-padding) - 1px)
+}
+
+.separator_a6f654 {
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.defaultIndicator_a6f654 {
+    align-items: center;
+    background-color: var(--primary-500);
+    border-radius: 3px;
+    color: var(--white);
+    display: flex;
+    font-size: 11px;
+    font-weight: var(--font-weight-bold);
+    height: 14px;
+    letter-spacing: .4px;
+    margin-inline-start: 8px;
+    padding: 0 4px;
+    text-align: center;
+    text-transform: uppercase
+}
+
+.rowBody_a6f654 {
+    font-size: 14px;
+    height: 16px;
+    margin-top: 4px
+}
+
+.buttonRowWrapper_a6f654 {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px
+}
+
+.defaultLocationCheckbox_a6f654 {
+    margin-top: var(--space-12)
+}
+
+.theme-dark .installationPath_a6f654 {
+    box-shadow: 0 1px 0 0 var(--primary-500)
+}
+
+.theme-dark .rowBody_a6f654 {
+    color: var(--primary-400)
+}
+
+.theme-light .installationPath_a6f654 {
+    box-shadow: 0 1px 0 0 var(--primary-200)
+}
+
+.theme-light .rowBody_a6f654 {
+    color: hsl(var(--primary-400-hsl)/.6)
+}
+
+.rowTitle_a6f654 {
+    color: var(--text-default)
+}

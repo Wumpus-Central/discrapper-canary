@@ -1,1 +1,1 @@
-r.d(t,{A:()=>i});var n=r(64700),u=r(739508),l=r(71532);function i(){let[e,t]=n.useState(null);return n.useEffect(()=>{(0,l.Cv)().then(e=>t(e)).catch(e=>{(0,u.pM)(e)})},[]),e}
+"use strict";n.d(t,{A:()=>s});var l=n(64700),i=n(739508),r=n(71532);function s(){let[e,t]=l.useState(null);return l.useEffect(()=>{(0,r.Cv)().then(e=>t(e)).catch(e=>{(0,i.pM)(e)})},[]),e}

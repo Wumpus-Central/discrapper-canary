@@ -1,1 +1,1 @@
-"use strict";n.d(t,{c:()=>r});var i=n(734057);function r(e,t){let n=i.A.getChannel(t);return null!=n&&e.bot&&n.isPrivate()&&null==n.rawRecipients.find(t=>t.id===e.id)}
+t.d(n,{c:()=>l});var i=t(734057);function l(e,n){let t=i.A.getChannel(n);return null!=t&&e.bot&&t.isPrivate()&&null==t.rawRecipients.find(n=>n.id===e.id)}

@@ -1,0 +1,21 @@
+.tile_ba65b0 {
+    height: 100%;
+    width: 100%
+}
+
+.tileSizer_ba65b0 {
+    height: 112px;
+    width: 195px
+}
+
+.tileSizer_ba65b0:not(:first-child) {
+    margin-inline-start: 8px
+}
+
+.root_ba65b0 {
+    box-sizing: border-box;
+    display: flex;
+    height: 112px;
+    justify-content: center;
+    width: 100%
+}
