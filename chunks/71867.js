@@ -1,34 +1,35 @@
-n.d(t, { P: () => M });
+n.d(t, { P: () => b });
 var l = n(627968);
 n(64700);
 var r = n(877624),
-    i = n(234419),
-    a = n(549996),
-    s = n(562708),
-    o = n(144165),
-    u = n(262427),
-    c = n(139286),
-    d = n(432029);
-let p = (e) => {
+    i = n(211159),
+    a = n(234419),
+    s = n(549996),
+    o = n(562708),
+    u = n(144165),
+    c = n(262427),
+    d = n(139286),
+    p = n(432029);
+let m = (e) => {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e;
-    (0, c.A)({
-        type: s.ImpressionTypes.VIEW,
-        name: s.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+    (0, d.A)({
+        type: o.ImpressionTypes.VIEW,
+        name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_type: r.C.PAYMENT_MODAL_BANNER, component_id: t },
     });
-    let i = (0, l.jsx)(o._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
-    return (0, l.jsx)(u.J, { className: d.No, customGraphic: i, text: n.body });
+    let i = (0, l.jsx)(u._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
+    return (0, l.jsx)(c.J, { className: p.No, customGraphic: i, text: n.body });
 };
-var m = n(503698),
-    h = n.n(m),
-    A = n(462887),
-    E = n(97808),
-    C = n(834730),
-    y = n(736653),
-    _ = n(854627),
-    S = n(427262),
-    P = n(236834);
-let I = (e) => {
+var h = n(503698),
+    A = n.n(h),
+    E = n(462887),
+    C = n(97808),
+    y = n(834730),
+    _ = n(736653),
+    S = n(854627),
+    P = n(427262),
+    I = n(236834);
+let f = (e) => {
         let { className: t, width: n = 83, height: r = 45 } = e;
         return (0, l.jsxs)("svg", {
             width: n,
@@ -298,7 +299,7 @@ let I = (e) => {
             ],
         });
     },
-    f = (e) => {
+    T = (e) => {
         let { className: t, width: n = 83, height: r = 45 } = e;
         return (0, l.jsxs)("svg", {
             width: n,
@@ -568,49 +569,50 @@ let I = (e) => {
             ],
         });
     };
-var T = n(778712),
-    N = n(375708),
+var N = n(778712),
+    v = n(375708),
     g = n(577454);
-let v = (e) => {
+let x = (e) => {
     let { className: t } = e,
-        n = (0, P.A)(),
-        { avatarSrc: r, eventHandlers: i } = (0, _.A)({ userId: n?.id, size: T._3.SIZE_32, animateOnHover: !0 }),
-        a = (0, y.DP)(),
-        s = (0, A.q)(a),
-        o = S.Ay.getName(n);
+        n = (0, I.A)(),
+        { avatarSrc: r, eventHandlers: i } = (0, S.A)({ userId: n?.id, size: N._3.SIZE_32, animateOnHover: !0 }),
+        a = (0, _.DP)(),
+        s = (0, E.q)(a),
+        o = P.Ay.getName(n);
     return null == n
         ? null
         : (0, l.jsxs)("div", {
-              className: h()(g.$6, t),
+              className: A()(g.$6, t),
               children: [
                   (0, l.jsx)("div", {
                       className: g.H,
-                      children: (0, l.jsx)(E.eu, { src: r, "aria-label": n.username, size: T._3.SIZE_32, ...i }),
+                      children: (0, l.jsx)(C.eu, { src: r, "aria-label": n.username, size: N._3.SIZE_32, ...i }),
                   }),
-                  (0, l.jsx)(C.E, {
+                  (0, l.jsx)(y.E, {
                       variant: "text-xs/bold",
                       className: g.U_,
-                      children: N.intl.format(N.t.oxhCOl, { userName: o }),
+                      children: v.intl.format(v.t.oxhCOl, { userName: o }),
                   }),
-                  (0, l.jsx)(s ? I : f, { className: g.q3 }),
+                  (0, l.jsx)(s ? f : T, { className: g.q3 }),
               ],
           });
 };
-var x = n(937008),
-    R = n(788868);
-function M(e) {
-    let { planSkuId: t, referralTrialOfferId: n, className: s } = e,
-        { isGift: o } = (0, x.Pv)(),
-        u = (0, i.V)(n),
-        c = (0, a.c)(r.C.PAYMENT_MODAL_BANNER);
-    return o || t !== R.pe.TIER_2
+var R = n(937008),
+    M = n(788868);
+function b(e) {
+    let { planSkuId: t, className: n } = e,
+        { isGift: o } = (0, R.Pv)(),
+        u = (0, i.t4)((e) => e.referralTrialOfferId ?? void 0),
+        c = (0, a.V)(u),
+        d = (0, s.c)(r.C.PAYMENT_MODAL_BANNER);
+    return o || t !== M.pe.TIER_2
         ? null
-        : null != c && "paymentModalBanner" === c.properties.properties.oneofKind
-          ? (0, l.jsx)(p, {
-                componentId: c.id,
-                promotionBannerMarketingComponentFields: c.properties.properties.paymentModalBanner,
+        : null != d && "paymentModalBanner" === d.properties.properties.oneofKind
+          ? (0, l.jsx)(m, {
+                componentId: d.id,
+                promotionBannerMarketingComponentFields: d.properties.properties.paymentModalBanner,
             })
-          : u?.referrer_id != null
-            ? (0, l.jsx)(v, { className: s })
+          : c?.referrer_id != null
+            ? (0, l.jsx)(x, { className: n })
             : null;
 }

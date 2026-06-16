@@ -1125,7 +1125,6 @@
     line-height: 16px;
     margin: 0 2px;
     min-width: 32px;
-    opacity: 1;
     padding: 2px 0;
     width: auto
 }
@@ -1144,6 +1143,10 @@
     background-color: var(--control-secondary-background-active);
     border-color: var(--control-secondary-border-active);
     color: var(--control-secondary-text-active)
+}
+
+.addReactButton__34c2c.addReactButton__34c2c {
+    opacity: 1
 }
 
 .reactions__34c2c {

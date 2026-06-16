@@ -429,7 +429,6 @@ function O(e) {
                         planGroup: R.LE,
                         openInvoiceId: j,
                         applicationId: Y,
-                        referralTrialOfferId: W,
                         returnRef: $,
                         subscriptionTier: V,
                         skipConfirm: !!q,

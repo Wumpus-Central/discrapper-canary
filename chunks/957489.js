@@ -16,14 +16,15 @@ var l = n(627968),
     C = n(375708),
     y = n(634378);
 function _(e) {
-    let { handleStepChange: t, referralTrialOfferId: n } = e,
+    let { handleStepChange: t } = e,
         {
-            setSelectedSkuId: r,
-            setSelectedPlanId: i,
-            priceOptions: u,
-            activeSubscription: c,
-            defaultPlanId: C,
-            startedPaymentFlowWithPaymentSources: y,
+            setSelectedSkuId: n,
+            setSelectedPlanId: r,
+            priceOptions: i,
+            activeSubscription: u,
+            defaultPlanId: c,
+            startedPaymentFlowWithPaymentSources: C,
+            referralTrialOfferId: y,
         } = (0, s.t4)((e) => ({
             setSelectedSkuId: e.setSelectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
@@ -31,11 +32,12 @@ function _(e) {
             activeSubscription: e.activeSubscription,
             defaultPlanId: e.defaultPlanId,
             startedPaymentFlowWithPaymentSources: e.startedPaymentFlowWithPaymentSources,
+            referralTrialOfferId: e.referralTrialOfferId ?? void 0,
         })),
         { hasPaymentSources: _ } = (0, a.jm)(),
         { isGift: P, claimableRewards: I } = (0, p.Pv)(),
         f = P && null != I && I.length > 0,
-        T = (0, o.V)(n);
+        T = (0, o.V)(y);
     return (0, l.jsx)(S, {
         selectSku: (e) =>
             (function (e) {
@@ -59,15 +61,15 @@ function _(e) {
                 c !== m.pn.WHAT_YOU_LOSE && y && ((c = m.pn.REVIEW), s((0, h.xT)(n, t, u))),
                     r(c, { analyticsDataOverride: { sku_id: n } });
             })({
-                activeSubscription: c,
+                activeSubscription: u,
                 newSkuId: e,
-                setSelectedSkuId: r,
+                setSelectedSkuId: n,
                 handleStepChange: t,
                 isGift: P,
                 userTrialOffer: T,
-                startedPaymentFlowWithPaymentSources: y,
-                setSelectedPlanId: i,
-                defaultPlanId: C,
+                startedPaymentFlowWithPaymentSources: C,
+                setSelectedPlanId: r,
+                defaultPlanId: c,
             }),
         onSelectPremiumGroup: () =>
             (function (e) {
@@ -75,9 +77,9 @@ function _(e) {
                 r((0, d.mH)(E.pe.TIER_2)),
                     t(E.gD.PREMIUM_GROUP_MONTH),
                     n(l ? m.pn.REVIEW : m.pn.ADD_PAYMENT_STEPS, { analyticsDataOverride: { sku_id: E.pe.TIER_2 } });
-            })({ setSelectedPlanId: i, handleStepChange: t, hasPaymentSources: _, setSelectedSkuId: r }),
+            })({ setSelectedPlanId: r, handleStepChange: t, hasPaymentSources: _, setSelectedSkuId: n }),
         isGift: P,
-        priceOptions: u,
+        priceOptions: i,
         showPromotionalGiftBanner: f,
     });
 }
