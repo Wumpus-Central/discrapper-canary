@@ -26,6 +26,11 @@
     gap: var(--space-8)
 }
 
+.descriptionEditor__269fe {
+    min-height: 80px;
+    padding-inline-end: 28px
+}
+
 .obscuredIcon__43090 {
     height: 32px;
     width: 32px
