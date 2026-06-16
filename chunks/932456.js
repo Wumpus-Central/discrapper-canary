@@ -3439,13 +3439,14 @@ class to extends m.A {
         h.setCalcMaxBitrateFunc((e) => {
             let { height: t, framerate: n, videoCodec: i } = e,
                 r = t > 0 && t <= 720,
-                s = n <= 30,
-                a = "AV1" === i;
+                s = n <= 30;
             if (p && !m && r && !s) {
-                let { enabled: e, bitrate: t } = H.getConfig({ location: "RTCConnection" });
-                return e && a ? 3e6 : t;
+                let { bitrate: e } = H.getConfig({ location: "RTCConnection" });
+                return e;
             }
-            return a && ((0 === t && n < 10) || (r && s)) ? x.getConfig({ location: "RTCConnection" }).bitrate : null;
+            return "AV1" === i && ((0 === t && n < 10) || (r && s))
+                ? x.getConfig({ location: "RTCConnection" }).bitrate
+                : null;
         }),
             Q.Ay.supports(B.O5.IMAGE_QUALITY_MEASUREMENT) &&
                 h.setVideoQualityMeasurement("imageQualityWebrtcPsnrDb:5000,imageQualityVmaf_v061:5000,hwdec"),
