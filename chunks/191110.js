@@ -840,7 +840,7 @@ function eO(e) {
                     errorMessage: G?.getFirstFieldErrorMessage("volume"),
                     helperText: null != Z ? Z : void 0,
                     initialValue: k,
-                    onValueChange: (e) => A(e),
+                    onValueChange: (e) => A(Math.round(100 * e) / 100),
                     minValue: 0,
                     maxValue: _,
                 }),
