@@ -62,4 +62,5 @@ let p = new f(r.h, {
         let { priceId: t } = e;
         _(t, { type: "error", fetchedAt: Date.now() });
     },
+    STOREFRONT_PROMOTION_ID_OVERRIDE_SET: h,
 });
