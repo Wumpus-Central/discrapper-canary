@@ -1,4 +1,4 @@
-i.d(t, { A: () => em, u: () => eu });
+i.d(t, { A: () => eg, u: () => ec });
 var n = i(627968),
     l = i(64700),
     s = i(503698),
@@ -26,8 +26,8 @@ var n = i(627968),
     O = i(600761),
     C = i(605694),
     R = i(990078),
-    b = i(657718),
-    k = i(789645),
+    k = i(657718),
+    b = i(789645),
     D = i(478016),
     G = i(183555),
     L = i(735321),
@@ -58,10 +58,10 @@ function F(e) {
                     (0, n.jsx)(R.m, {
                         text: M.intl.string(M.t.WAI6xu),
                         ariaHidden: !0,
-                        children: (0, n.jsx)(b.S, {
+                        children: (0, n.jsx)(k.S, {
                             variant: "secondary",
                             size: "sm",
-                            icon: k.P,
+                            icon: b.P,
                             "aria-label": M.intl.string(M.t.WAI6xu),
                             onClick: () => {
                                 s(y.i.USER_DISMISS);
@@ -71,7 +71,7 @@ function F(e) {
                     (0, n.jsx)(R.m, {
                         text: M.intl.string(M.t["lBG2s/"]),
                         ariaHidden: !0,
-                        children: (0, n.jsx)(b.S, {
+                        children: (0, n.jsx)(k.S, {
                             variant: "primary",
                             size: "sm",
                             icon: D.U,
@@ -89,53 +89,49 @@ function F(e) {
 var U = i(192308),
     W = i(821609),
     H = i(307301),
-    B = i(773669),
-    V = i(79284);
-function X(e) {
+    B = i(79284);
+function V(e) {
     let { className: t } = e,
-        s = ["en-US", "en-GB"].includes((0, r.bG)([B.default], () => B.default.locale))
-            ? M.intl.string(M.t.OYlggR)
-            : M.intl.string(M.t.Y55Tua),
-        { trackUserProfileEditAction: c } = (0, G.NJ)(),
-        o = l.useCallback(() => {
-            c({ action: "PRESS_ADD_WIDGET" }),
+        { trackUserProfileEditAction: s } = (0, G.NJ)(),
+        r = l.useCallback(() => {
+            s({ action: "PRESS_ADD_WIDGET" }),
                 (0, U.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([i.e("8978"), i.e("87591")]).then(i.bind(i, 333114));
-                        return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: c });
+                        return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: s });
                     },
                     { stackingBehavior: "stack" },
                 );
-        }, [c]);
+        }, [s]);
     return (0, n.jsxs)("div", {
-        className: a()(V.w, t),
+        className: a()(B.w, t),
         children: [
-            (0, n.jsx)(u.E, { variant: "text-xs/semibold", color: "text-subtle", children: s }),
+            (0, n.jsx)(u.E, { variant: "text-xs/semibold", color: "text-subtle", children: M.intl.string(M.t.OYlggR) }),
             (0, n.jsx)(W.$, {
                 icon: H.j,
                 text: M.intl.string(M.t["lBG2s/"]),
                 size: "sm",
                 variant: "secondary",
-                onClick: o,
+                onClick: r,
             }),
         ],
     });
 }
-var z = i(192),
+var X = i(192),
     K = i(554146),
-    Y = i(382483),
-    q = i(385113),
-    Q = i(334074);
-function J() {
+    z = i(382483),
+    Y = i(385113),
+    q = i(334074);
+function Q() {
     let {
         isLoading: e,
         currentUser: t,
         eligibleApplications: i,
         markAsDismissed: s,
     } = (function () {
-        let e = (0, r.yK)([q.A], () => q.A.getFeaturedApplicationIds());
+        let e = (0, r.yK)([Y.A], () => Y.A.getFeaturedApplicationIds());
         l.useEffect(() => {
-            (0, Y.Wq)();
+            (0, z.Wq)();
         }, []);
         let t = (0, r.bG)([p.default], () => p.default.getCurrentUser()),
             i = (0, m.A)(e),
@@ -153,10 +149,10 @@ function J() {
                           ),
                 [c, i, n, a],
             ),
-            { eligibleToShow: o, markAsDismissed: d } = (0, Q.hj)({
+            { eligibleToShow: o, markAsDismissed: d } = (0, q.hj)({
                 applications: u,
                 dismissibleContent: K.M.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
-                cooldownConfig: Q.SH,
+                cooldownConfig: q.SH,
             }),
             I = l.useMemo(() => u.filter((e) => o.includes(e.id)), [u, o]);
         return c
@@ -167,32 +163,32 @@ function J() {
     let a = i[0];
     return null == a ? null : (0, n.jsx)(F, { user: t, application: a, onDismiss: (e) => s([a.id], e) }, a.id);
 }
-var Z = i(128988),
-    $ = i(939318),
-    ee = i(982599),
-    et = i(515054),
-    ei = i(534514),
-    en = i(841595),
-    el = i(725386),
-    es = i(527139),
-    ea = i(215538);
-function er(e) {
+var J = i(128988),
+    Z = i(939318),
+    $ = i(982599),
+    ee = i(515054),
+    et = i(534514),
+    ei = i(841595),
+    en = i(725386),
+    el = i(527139),
+    es = i(215538);
+function ea(e) {
     let { userId: t } = e,
         { trackUserProfileAction: i, trackUserProfileEditAction: s } = (0, G.NJ)(),
         a = l.useRef(!1),
-        c = (0, r.bG)([en.A], () => en.A.getUserProfile(t)?.fetchError != null, [t]),
-        o = (0, el.A)({ location: "UserProfileModalV2WidgetsEmptyState" });
+        c = (0, r.bG)([ei.A], () => ei.A.getUserProfile(t)?.fetchError != null, [t]),
+        o = (0, en.A)({ location: "UserProfileModalV2WidgetsEmptyState" });
     return (
         l.useEffect(() => {
             a.current || c || (i({ action: "VIEW_WIDGETS_EMPTY_STATE" }), (a.current = !0));
         }, [c, i]),
         (0, n.jsxs)("div", {
-            className: ea.Ie,
+            className: es.Ie,
             children: [
                 (0, n.jsxs)("div", {
-                    className: ea.FS,
+                    className: es.FS,
                     children: [
-                        (0, n.jsx)(ei.D, {
+                        (0, n.jsx)(et.D, {
                             variant: "heading-md/medium",
                             color: "text-strong",
                             children: M.intl.string(M.t["oqalC+"]),
@@ -200,19 +196,19 @@ function er(e) {
                         (0, n.jsx)(u.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            children: c ? M.intl.string(M.t["rTU7/z"]) : M.intl.string(M.t.O9SQ1c),
+                            children: c ? M.intl.string(M.t["+W59o5"]) : M.intl.string(M.t.O9SQ1c),
                         }),
                     ],
                 }),
                 !c &&
                     (0, n.jsx)("ul", {
-                        className: ea.ZW,
+                        className: es.ZW,
                         "aria-label": M.intl.string(M.t["+EIBSA"]),
                         children: o.map((e) =>
                             (0, n.jsx)(
                                 "li",
                                 {
-                                    children: (0, n.jsx)(es.A, {
+                                    children: (0, n.jsx)(el.A, {
                                         widget: e,
                                         size: "small",
                                         trackUserProfileEditAction: s,
@@ -226,18 +222,18 @@ function er(e) {
         })
     );
 }
-var ec = i(117444);
-function eu(e) {
+var er = i(117444);
+function ec(e) {
     let { widget: t, ...i } = e;
     return t instanceof f.R
         ? (0, n.jsx)(C.A, { widget: t, ...i })
         : (0, _.fu)(t)
-          ? (0, n.jsx)($.A, { widget: t, ...i })
+          ? (0, n.jsx)(Z.A, { widget: t, ...i })
           : null;
 }
-function eo() {
+function eu() {
     return (0, n.jsxs)("div", {
-        className: ec.mJ,
+        className: er.mJ,
         children: [
             (0, n.jsx)(c.m, { size: "xs" }),
             (0, n.jsx)(u.E, {
@@ -249,7 +245,7 @@ function eo() {
         ],
     });
 }
-function ed() {
+function eo() {
     let {
         isLoading: e,
         suggestions: t,
@@ -299,7 +295,7 @@ function ed() {
               },
           });
 }
-function eg(e) {
+function ed(e) {
     let { user: t, guildId: i, channelId: s } = e,
         a = (0, x.A)(t.id),
         c = (0, r.bG)([T.default], () => T.default.getId() === t.id),
@@ -334,28 +330,28 @@ function eg(e) {
                 c &&
                     (0, n.jsxs)(n.Fragment, {
                         children: [
-                            (0, n.jsx)(X, { className: ec.cG }),
-                            u && (0, n.jsx)(eo, {}),
-                            p ? (0, n.jsx)(J, {}) : g && (0, n.jsx)(ed, {}),
+                            (0, n.jsx)(V, { className: er.cG }),
+                            u && (0, n.jsx)(eu, {}),
+                            p ? (0, n.jsx)(Q, {}) : g && (0, n.jsx)(eo, {}),
                         ],
                     }),
                 a.map((e, l) =>
-                    (0, n.jsx)(eu, { widget: e, user: t, guildId: i, channelId: s, index: l }, e.getUniqueKey()),
+                    (0, n.jsx)(ec, { widget: e, user: t, guildId: i, channelId: s, index: l }, e.getUniqueKey()),
                 ),
             ],
         });
-    return I ? (0, n.jsx)(er, { userId: t.id }) : c ? (0, n.jsx)(z.D, { children: O() }) : O();
+    return I ? (0, n.jsx)(ea, { userId: t.id }) : c ? (0, n.jsx)(X.D, { children: O() }) : O();
 }
-function em(e) {
+function eg(e) {
     let { user: t, ...i } = e,
         s = l.useRef(null);
     (0, O.i)({ containerRef: s });
-    let r = (0, ee.k)(t.id);
-    return (0, n.jsxs)(et.K, {
+    let r = (0, $.k)(t.id);
+    return (0, n.jsxs)(ee.K, {
         "data-scroller": !0,
         scrollerRef: s,
-        className: a()(ec.XG, { [ec.az]: r }),
+        className: a()(er.XG, { [er.az]: r }),
         fade: !0,
-        children: [(0, n.jsx)(Z.A, { scrollerRef: s }), (0, n.jsx)(eg, { user: t, ...i })],
+        children: [(0, n.jsx)(J.A, { scrollerRef: s }), (0, n.jsx)(ed, { user: t, ...i })],
     });
 }

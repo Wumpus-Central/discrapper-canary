@@ -122,7 +122,7 @@
     border: 1px solid var(--border-subtle);
     border-radius: 20px;
     container-type: inline-size;
-    margin: 24px auto 45px;
+    margin: auto;
     max-width: 1080px;
     min-height: 280px;
     overflow: hidden;
