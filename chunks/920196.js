@@ -2777,8 +2777,7 @@ class rb extends r.PureComponent {
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     n.e("26913"),
-                    n.e("35790"),
-                    n.e("31911"),
+                    n.e("49905"),
                     n.e("86896"),
                     n.e("14144"),
                     n.e("97407"),

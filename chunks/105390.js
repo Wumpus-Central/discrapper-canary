@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ag: () => A, MA: () => T, fY: () => I });
+n.d(t, { Ag: () => S, MA: () => C, fY: () => y });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -7,72 +7,77 @@ var i = n(627968),
     o = n(990078),
     l = n(406810),
     u = n(834730),
-    c = n(496431),
-    d = n(58703),
-    _ = n(428262),
-    h = n(234419),
-    f = n(99462),
-    p = n(788868),
-    E = n(375708),
-    m = n(386667);
-function g(e) {
+    c = n(508770),
+    d = n(496431),
+    _ = n(58703),
+    h = n(428262),
+    f = n(236056),
+    p = n(872725),
+    E = n(234419),
+    m = n(99462),
+    g = n(788868),
+    A = n(375708),
+    I = n(386667);
+function T(e) {
     let {
             isTabSelected: t,
             expiresAt: n,
             badgeCopy: s,
-            className: _,
+            className: c,
             tooltipTextOverride: h,
             tooltipPosition: f,
             hideTooltip: p = !1,
         } = e,
-        g = r.useMemo(() => Date.parse(n), [n]),
-        A = (0, c.A)(g, 6e4);
-    if (Object.values(A).every((e) => 0 === e)) return null;
-    let I = (0, i.jsxs)("div", {
-        className: a()(m.Fg, m.C8, _, { [m.WO]: t }),
+        E = r.useMemo(() => Date.parse(n), [n]),
+        m = (0, d.A)(E, 6e4);
+    if (Object.values(m).every((e) => 0 === e)) return null;
+    let g = (0, i.jsxs)("div", {
+        className: a()(I.Fg, I.C8, c, { [I.WO]: t }),
         children: [
-            (0, i.jsx)(l.O, { size: "custom", width: 16, height: 16, color: "currentColor", className: m._q }),
+            (0, i.jsx)(l.O, { size: "custom", width: 16, height: 16, color: "currentColor", className: I._q }),
             (0, i.jsx)(u.E, { variant: "eyebrow", color: "text-strong", children: s }),
         ],
     });
     return p
-        ? I
+        ? g
         : (0, i.jsx)(o.m, {
-              text: null != h ? h : (0, d.uN)(A, { days: E.t.qVGNkU, hours: E.t.wyg9a9, minutes: E.t.IzmIlV }),
+              text: null != h ? h : (0, _.uN)(m, { days: A.t.qVGNkU, hours: A.t.wyg9a9, minutes: A.t.IzmIlV }),
               position: null != f ? f : "top",
-              children: I,
+              children: g,
           });
 }
-function A(e) {
-    let { isTabSelected: t, trialOffer: n } = e,
-        r = (0, h.V)()?.subscription_trial,
-        s = (0, _.tS)({ intervalType: r?.interval, intervalCount: r?.interval_count }),
-        a = n.trial_id === p.Tt,
-        o = (0, f.Fu)(n);
-    return (0, i.jsx)(T, {
-        isTabSelected: t,
-        badgeCopy: s,
-        offerExpiresAt: n.expires_at,
-        tooltipTextOverride: o,
-        tooltipPosition: "right",
-        hideTooltip: a,
-    });
-}
-function I(e) {
-    let { isTabSelected: t, userDiscount: n, includesAmountOff: r } = e,
-        s = E.intl.formatToPlainString(E.t.iiLbvu, { percent: n.discount.amount }),
-        a = r ? s : E.intl.string(E.t["/DTtr6"]),
-        o = n.expiresAt?.toISOString() ?? null,
-        l = (0, f.__)(n);
-    return (0, i.jsx)(T, {
+function S(e) {
+    let { isTabSelected: t, trialOffer: n, badgeStyle: r } = e,
+        s = (0, E.V)()?.subscription_trial,
+        a = (0, h.tS)({ intervalType: s?.interval, intervalCount: s?.interval_count }),
+        o = n.trial_id === g.Tt,
+        l = (0, m.Fu)(n);
+    return (0, i.jsx)(C, {
         isTabSelected: t,
         badgeCopy: a,
-        offerExpiresAt: o,
+        offerExpiresAt: n.expires_at,
         tooltipTextOverride: l,
         tooltipPosition: "right",
+        hideTooltip: o,
+        unackedBadgeStyle: r,
     });
 }
-function T(e) {
+function y(e) {
+    let { isTabSelected: t, userDiscount: n, includesAmountOff: r, badgeStyle: s } = e,
+        a = A.intl.formatToPlainString(A.t.iiLbvu, { percent: n.discount.amount }),
+        o = r ? a : A.intl.string(A.t["/DTtr6"]),
+        l = n.expiresAt?.toISOString() ?? null,
+        u = (0, m.__)(n);
+    return (0, i.jsx)(C, {
+        isTabSelected: t,
+        badgeCopy: o,
+        offerExpiresAt: l,
+        tooltipTextOverride: u,
+        tooltipPosition: "right",
+        unackedBadgeStyle: s,
+    });
+}
+function C(e) {
     let {
         isTabSelected: t,
         badgeCopy: n,
@@ -80,9 +85,10 @@ function T(e) {
         tooltipTextOverride: s,
         tooltipPosition: o,
         hideTooltip: l,
+        unackedBadgeStyle: d,
     } = e;
     return null != r
-        ? (0, i.jsx)(g, {
+        ? (0, i.jsx)(T, {
               expiresAt: r,
               isTabSelected: t,
               badgeCopy: n,
@@ -90,8 +96,20 @@ function T(e) {
               tooltipPosition: o,
               hideTooltip: l,
           })
-        : (0, i.jsx)("div", {
-              className: a()(m.Fg, m.AT),
-              children: (0, i.jsx)(u.E, { variant: "eyebrow", className: m.md, children: n }),
-          });
+        : d === f.v.EXPRESSIVE
+          ? (0, i.jsx)(c.E, { type: { text: n }, variant: "expressive" })
+          : d === f.v.GLOWING
+            ? (0, i.jsx)(p.A, {
+                  glowing: !0,
+                  fit: "cover",
+                  glowAmount: 1,
+                  blurAmount: 4,
+                  hueRotate: 25,
+                  cardStyle: { background: "transparent", border: "none" },
+                  children: (0, i.jsx)(c.E, { type: { text: n }, variant: "expressive" }),
+              })
+            : (0, i.jsx)("div", {
+                  className: a()(I.Fg, I.AT),
+                  children: (0, i.jsx)(u.E, { variant: "eyebrow", className: I.md, children: n }),
+              });
 }
