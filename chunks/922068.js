@@ -764,7 +764,7 @@ let e1 = r.memo(function (e) {
             ],
         });
     }),
-    e2 = r.memo(function (e) {
+    e3 = r.memo(function (e) {
         let t,
             { items: n } = e,
             s = O.ns.useSetting();
@@ -784,7 +784,7 @@ let e1 = r.memo(function (e) {
             (0, i.jsx)(i.Fragment, { children: n.map((e) => (0, i.jsx)(e1, { item: e, ackedBeforeId: s }, e.id)) })
         );
     });
-var e3 = n(523396);
+var e2 = n(523396);
 function e7(e) {
     let { initialized: t, items: n, loading: s, loadMore: l } = e,
         a = r.useRef(null),
@@ -811,21 +811,21 @@ function e7(e) {
                       children: (e) => {
                           let { ref: t, ...l } = e;
                           return (0, i.jsxs)(Q.Ch, {
-                              className: e3.kL,
+                              className: e2.kL,
                               ref: (e) => {
                                   (a.current = e), (t.current = e?.getScrollerNode() ?? null);
                               },
                               ...l,
                               onScroll: c,
                               children: [
-                                  (0, i.jsx)(e2, { items: n }),
-                                  s ? (0, i.jsx)(X.y, { className: e3.u1 }) : null,
+                                  (0, i.jsx)(e3, { items: n }),
+                                  s ? (0, i.jsx)(X.y, { className: e2.u1 }) : null,
                               ],
                           });
                       },
                   }),
               })
-        : (0, i.jsx)(X.y, { className: e3.k$ });
+        : (0, i.jsx)(X.y, { className: e2.k$ });
 }
 function e8() {
     let { initialized: e, items: t, loading: n, loadMore: s } = J(),
@@ -838,7 +838,7 @@ function e8() {
 function e5(e, t) {
     return r.useMemo(() => [...[...e, ...t].sort((e, t) => -1 * k.default.compare(e.id, t.id))], [e, t]);
 }
-function e9() {
+function e4() {
     let { items: e } = J(),
         t = e.length > 0 ? e[0] : null,
         n = e5(
@@ -870,7 +870,7 @@ function e9() {
           })
         : null;
 }
-var e4 = n(815021),
+var e9 = n(815021),
     e6 = n(935063),
     te = n(378939),
     tt = n(964486),
@@ -912,7 +912,7 @@ var tA = n(187322),
     tx = n(548118),
     tT = n(616356),
     ty = n(290863),
-    tj = n(222823),
+    tj = n(568548),
     tO = n(147925),
     tD = n(110357);
 let tM = { top: 8, bottom: 8, left: -4, right: -4 };
@@ -1075,7 +1075,7 @@ function tk(e) {
                 applicationStream: null != e ? tT.A.getAnyStreamForUser(e.id) : null,
             };
         }),
-        { voiceChannel: r } = (0, t_.A)({ userId: n?.id });
+        { voiceChannel: r } = (0, t_.Ay)({ userId: n?.id });
     return (0, tN.A)({ activities: l, status: s, applicationStream: a, voiceChannel: r })
         ? (0, i.jsx)(tf.A, { user: n, activities: l, applicationStream: a, voiceChannel: r, hideTooltip: !0 })
         : null;
@@ -1202,7 +1202,7 @@ function tX(e) {
                 channel: l,
                 gotoChannel: n,
                 children:
-                    null != s ? (0, i.jsx)(e4.J, { size: "sm", onClick: () => te.A.deleteRecentMention(t.id) }) : null,
+                    null != s ? (0, i.jsx)(e9.J, { size: "sm", onClick: () => te.A.deleteRecentMention(t.id) }) : null,
             }),
             (0, i.jsxs)("div", {
                 className: tH.zC,
@@ -1237,17 +1237,17 @@ var tV = n(702841),
     tZ = n(85109),
     t0 = n(214947),
     t1 = n(711950),
-    t2 = n(912309),
-    t3 = n(134314);
+    t3 = n(912309),
+    t2 = n(134314);
 function t7(e) {
     let { closePopout: t } = e,
-        n = (0, t2.kX)();
+        n = (0, t3.kX)();
     return (0, i.jsx)(E.m, {
         asContainer: !0,
         text: $.intl.string($.t["lMR96+"]),
         children: (0, i.jsxs)(tu.D, {
             "aria-label": `${$.intl.string($.t["lMR96+"])}, ${n}`,
-            className: t3.b,
+            className: t2.b,
             onClick: () => {
                 eA.default.track(M.HAw.NOTIFICATION_CENTER_ACTION, { action_type: I.e1.FRIEND_REQUESTS_BUTTON_CLICK }),
                     t1.A.transitionToSection(M.m3P.PENDING, { explicit: !0 }),
@@ -1310,7 +1310,7 @@ function t5(e) {
         ],
     });
 }
-function t9() {
+function t4() {
     let e = r.useRef(null);
     return (0, i.jsx)(eX.Y, {
         targetElementRef: e,
@@ -1337,8 +1337,8 @@ function t9() {
         },
     });
 }
-var t4 = n(481613),
-    t6 = n.n(t4),
+var t9 = n(481613),
+    t6 = n.n(t9),
     ne = n(621466),
     nt = n(775602),
     nn = n(625494),
@@ -1531,8 +1531,8 @@ var nj = n(989349),
     nZ = n(268719),
     n0 = n(234957),
     n1 = n(888675),
-    n2 = n(21623),
-    n3 = n(701628);
+    n3 = n(21623),
+    n2 = n(701628);
 let n7 = r.memo(function e(t) {
     let n,
         {
@@ -1594,7 +1594,7 @@ let n7 = r.memo(function e(t) {
           ? (0, i.jsx)(n8, { className: r, compact: a, count: 1, collapsedReason: n })
           : (0, i.jsx)(nJ.A, {
                 compact: a,
-                className: c()(r, { [n3.M1]: (0, nK.ec)(l), [n3.XN]: u, [n3._A]: t.isGroupStart }),
+                className: c()(r, { [n2.M1]: (0, nK.ec)(l), [n2.XN]: u, [n2._A]: t.isGroupStart }),
                 childrenRepliedMessage: (0, n0.A)(l, s, A, E, a),
                 childrenHeader: (0, n$.A)({ ...t, author: j, guildId: s.guild_id }),
                 childrenAccessories: (0, i.jsx)(nX.iV, {
@@ -1643,15 +1643,15 @@ function n8(e) {
         role: "group",
         childrenMessageContent: (0, i.jsx)(n1.A, {
             compact: s,
-            className: n2.L9,
-            iconNode: (0, i.jsx)(nF.P, { size: "md", color: "currentColor", className: n2.Q6 }),
-            children: (0, i.jsx)("div", { className: n2.Fo, children: $.intl.format(l, { count: n }) }),
+            className: n3.L9,
+            iconNode: (0, i.jsx)(nF.P, { size: "md", color: "currentColor", className: n3.Q6 }),
+            children: (0, i.jsx)("div", { className: n3.Fo, children: $.intl.format(l, { count: n }) }),
         }),
     });
 }
 var n5 = n(495544),
-    n9 = n(58703),
-    n4 = n(143236),
+    n4 = n(58703),
+    n9 = n(143236),
     n6 = n(720149),
     se = n(181079),
     st = n(567035),
@@ -1679,7 +1679,7 @@ var n5 = n(495544),
         (s[(s.ReallyOldChannel = 8)] = "ReallyOldChannel"),
         s),
     sg = (((l = {}).Loading = "loading"), (l.Loaded = "loaded"), (l.Done = "done"), l);
-class sE extends n4.EventEmitter {
+class sE extends n9.EventEmitter {
     state;
     scrollerRef;
     undoStack = [];
@@ -2066,7 +2066,7 @@ function sT(e) {
             m = t.messages.slice(0, 25);
         m.forEach((t) => {
             if (!c && (null == e || !e.isSame(t.timestamp, "day"))) {
-                let n = (0, n9.i$)(t.timestamp, "LL");
+                let n = (0, n4.i$)(t.timestamp, "LL");
                 u.push((0, i.jsx)(nd.A, { className: sC.yF, children: n }, n)), (e = nO()(t.timestamp));
             }
             let m = null == h || (0, nv.A)(n, h, t);
@@ -2587,11 +2587,11 @@ function sk(e) {
 function sw(e) {
     let { tab: t } = e;
     return t === u.Y2.FOR_YOU
-        ? (0, i.jsx)(e9, {})
+        ? (0, i.jsx)(e4, {})
         : t === u.Y2.UNREADS
           ? (0, i.jsx)(sU, {})
           : t === u.Y2.MENTIONS
-            ? (0, i.jsx)(t9, {})
+            ? (0, i.jsx)(t4, {})
             : null;
 }
 var sP = n(406810),

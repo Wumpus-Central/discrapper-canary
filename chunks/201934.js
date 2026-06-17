@@ -29,14 +29,14 @@ let b = l._3.SIZE_40,
     N = x.Ay.getEnableHardwareAcceleration();
 function _(e) {
     let { user: s, status: l, guildId: x, channelId: _, onSelect: k } = e,
-        { theme: E, themeType: y } = (0, M.E)(),
+        { theme: y, themeType: E } = (0, M.E)(),
         F = a.useMemo(() => s.isNonUserBot() || (0, h.c)(s, _), [s, _]),
         { activities: S, isMobileOnline: w } = (0, n.cf)([v.A], () => ({
             activities: v.A.getActivities(s.id),
             isMobileOnline: v.A.isMobileOnline(s.id),
         })),
         D = (0, m.A)(s.id),
-        { voiceChannel: L } = (0, f.A)({ userId: s.id, guildId: x }),
+        { voiceChannel: L } = (0, f.Ay)({ userId: s.id, guildId: x }),
         U = (function (e) {
             let { enabled: s } = g.useConfig({ location: e });
             return s;
@@ -49,7 +49,7 @@ function _(e) {
         H = N && U ? r.Js : r.eu;
     return (0, t.jsxs)(o.D, {
         ...(U ? R : {}),
-        focusProps: y === p.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+        focusProps: E === p.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: I.nM,
         onClick: k,
         onContextMenu: (e) => {
@@ -89,7 +89,7 @@ function _(e) {
                 "aria-label": s.username,
                 size: b,
                 status: F ? j.clD.UNKNOWN : l,
-                statusBackdropColor: F ? void 0 : (0, d.C$)(E),
+                statusBackdropColor: F ? void 0 : (0, d.C$)(y),
                 isMobile: w,
                 className: I.my,
             }),

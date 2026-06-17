@@ -151,7 +151,7 @@ function W(e) {
             let e = J.find((e) => e.type !== I.$pd.CUSTOM_STATUS && e.type !== I.$pd.HANG_STATUS);
             return { activityStatusText: (0, E.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, b.f)(e) };
         }, [J]),
-        { voiceChannel: ee } = (0, y.A)({ userId: t.id }),
+        { voiceChannel: ee } = (0, y.Ay)({ userId: t.id }),
         ei = (0, G.Ay)(ee),
         et = (0, p.S3)(I.clD.ONLINE),
         en = "success" === h || "sending" === h,

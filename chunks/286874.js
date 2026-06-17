@@ -1776,7 +1776,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 564639, Version Hash: 154eb36de52de4bb185dce0d85b0e7fbb87cea13`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 564655, Version Hash: e71c14a23a8c6bf4759b62f603c25df9fe2815bb`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -7544,7 +7544,7 @@ var uw = n(123292),
     uq = n(501859);
 let uZ = function (e) {
     let { hovered: t, activities: n, applicationStream: i, status: r, user: s, userIgnored: a } = e,
-        { voiceChannel: o } = (0, u$.A)({ userId: s?.id });
+        { voiceChannel: o } = (0, u$.Ay)({ userId: s?.id });
     return a
         ? (0, F.jsx)("div", { className: uq.Q, children: nl.intl.string(nl.t.tFY5Zb) })
         : (0, uK.A)({ activities: n, status: r, applicationStream: i, voiceChannel: o })
@@ -18396,7 +18396,7 @@ let SC = "isHideDevBanner",
                     className: t6()(Sy.Wz, Sy.mr),
                     children: [
                         (0, F.jsx)(SS, { className: Sy.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "564639" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "564655" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -36696,8 +36696,8 @@ let xV = (0, nv.Fe)({
             n.e("95841"),
             n.e("24240"),
             n.e("96680"),
-            n.e("63874"),
             n.e("20491"),
+            n.e("63874"),
             n.e("93907"),
             n.e("1922"),
             n.e("68214"),
@@ -36886,8 +36886,8 @@ let xV = (0, nv.Fe)({
             n.e("24805"),
             n.e("67876"),
             n.e("99487"),
+            n.e("43630"),
             n.e("98279"),
-            n.e("60439"),
             n.e("6286"),
             n.e("84846"),
             n.e("14124"),

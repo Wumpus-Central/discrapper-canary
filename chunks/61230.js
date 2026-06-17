@@ -153,7 +153,7 @@ function G(e) {
 }
 function O(e) {
     let { guild: l, message: n } = e,
-        { voiceState: i, voiceChannel: s } = (0, o.A)({ userId: n.author.id, guildId: l.id }),
+        { voiceState: i, voiceChannel: s } = (0, o.Ay)({ userId: n.author.id, guildId: l.id }),
         r = (0, a.bG)([u.A], () => u.A.getChannel(n.channel_id)?.isVocal()),
         h = (0, a.bG)([m.A], () => {
             if (null == s) return !1;

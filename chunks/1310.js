@@ -444,7 +444,7 @@ let e9 = d.memo(
                 let e = T.find((e) => e.type !== F.$pd.CUSTOM_STATUS && e.type !== F.$pd.HANG_STATUS);
                 return { activityStatusText: (0, eK.A)(e, !1), activityStatusIcon: null == e ? void 0 : (0, eW.f)(e) };
             }, [T]),
-            { voiceChannel: j } = (0, eq.A)({ userId: n?.id }),
+            { voiceChannel: j } = (0, eq.Ay)({ userId: n?.id }),
             R = (0, et.Ay)(j),
             w = (0, x.bG)([ez.A], () => (null != c && null != n ? ez.A.getParticipant(c.id, n.id) : null)),
             G = o && null != w && w.type === e4.lp.USER && w.ringing,

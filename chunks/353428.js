@@ -280,7 +280,7 @@ function W(e) {
         [a, c, o] = (0, r.yK)([S.default, k.A], () => [S.default.getUser(s), k.A.getActivities(s), k.A.getStatus(s)], [
             s,
         ]),
-        { voiceChannel: h } = (0, j.A)({ userId: s }),
+        { voiceChannel: h } = (0, j.Ay)({ userId: s }),
         m = (0, g.A)({ activities: c, status: o, applicationStream: null, voiceChannel: h }),
         p = i.useMemo(
             () =>

@@ -327,7 +327,7 @@ let et = s.memo(function (e) {
             [e_, eh] = s.useState(!1),
             [ef, ep] = s.useState(!1),
             [eE, em] = s.useState(null),
-            { voiceChannel: eg } = (0, T.A)({ userId: el, guildId: D }),
+            { voiceChannel: eg } = (0, T.Ay)({ userId: el, guildId: D }),
             {
                 avatarDecorationSrc: eA,
                 avatarSrc: eI,

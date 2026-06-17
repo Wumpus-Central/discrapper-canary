@@ -692,7 +692,7 @@ let eH = function (e) {
                 isVR: null != a && ev.A.isVROnline(a),
             };
         }, [t, a]),
-        { voiceChannel: l } = (0, G.A)({ userId: a }),
+        { voiceChannel: l } = (0, G.Ay)({ userId: a }),
         u = (0, ec.r)({ user: s }),
         c = (0, m.bG)(
             [eD.default, eO.A],
