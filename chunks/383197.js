@@ -14,29 +14,37 @@ let c = {
         [r.z.TOON]: l.default.otpeeM,
         [r.z.POP]: l.default.cjQOKb,
         [r.z.GUMMY]: l.default.x9Gtie,
+        [r.z.PRISM]: l.default["/M7psm"],
     },
-    d = { [r.z.SOLID]: 3, [r.z.GRADIENT]: 2.5, [r.z.GLOW]: 2.5, [r.z.NEON]: 3, [r.z.TOON]: 3, [r.z.POP]: 3 };
+    d = {
+        [r.z.SOLID]: 3,
+        [r.z.GRADIENT]: 2.5,
+        [r.z.GLOW]: 2.5,
+        [r.z.PRISM]: 2.5,
+        [r.z.NEON]: 3,
+        [r.z.TOON]: 3,
+        [r.z.POP]: 3,
+    };
 function _(e) {
     let t,
-        n =
-            ((t = (0, a.r)(o.A.colors.TEXT_DEFAULT).int()),
-            i.useMemo(() => {
-                switch (e) {
-                    case r.z.GRADIENT:
-                    case r.z.GLOW:
-                    case r.z.GUMMY:
-                        return [7183099, 6082490];
-                    case r.z.TOON:
-                        return [0xf42098];
-                    case r.z.NEON:
-                        return [6888941];
-                    case r.z.POP:
-                        return [1036166];
-                    case r.z.SOLID:
-                    default:
-                        return [t];
-                }
-            }, [t, e]));
+        n = ((t = (0, a.r)(o.A.colors.TEXT_DEFAULT).int()),
+        i.useMemo(
+            () => ({
+                [r.z.SOLID]: [t],
+                [r.z.GRADIENT]: [7183099, 6082490],
+                [r.z.GLOW]: [7183099, 6082490],
+                [r.z.GUMMY]: [7183099, 6082490],
+                [r.z.PRISM]: [7183099, 6082490],
+                [r.z.TOON]: [0xf42098],
+                [r.z.NEON]: [6888941],
+                [r.z.POP]: [1036166],
+                [r.z.TEST_1]: [t],
+                [r.z.TEST_2]: [t],
+                [r.z.TEST_3]: [t],
+                [r.z.TEST_4]: [t],
+            }),
+            [t],
+        ))[e];
     return i.useMemo(
         () => ({
             name: u.intl.string(c[e] ?? l.default.OpWJ3f),

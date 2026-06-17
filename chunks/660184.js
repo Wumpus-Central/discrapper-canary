@@ -92,7 +92,7 @@ let b = [l.x.CHERRY_BOMB, l.x.CHICLE],
                               ),
                     [t, s, a.minContrastRatio, i, n],
                 );
-            })({ displayNameStyles: P ? n : null, backgroundColor: x });
+            })({ displayNameStyles: P ? n : null, backgroundColor: x }).slice(0, 2);
         if (!P || null == n) return (0, i.jsxs)(i.Fragment, { children: [t, " ", L] });
         let V = (function (e, t) {
                 let { shouldWrap: n = !1, fontOpacity: i = 1 } =
@@ -101,6 +101,7 @@ let b = [l.x.CHERRY_BOMB, l.x.CHICLE],
                 switch (e) {
                     case o.z.GRADIENT:
                     case o.z.GLOW:
+                    case o.z.PRISM:
                         r =
                             0 === t.length
                                 ? {}
@@ -148,6 +149,7 @@ let b = [l.x.CHERRY_BOMB, l.x.CHICLE],
                 switch (e) {
                     case o.z.GRADIENT:
                     case o.z.GLOW:
+                    case o.z.PRISM:
                         return O.D7;
                     case o.z.NEON:
                         return O.lw;

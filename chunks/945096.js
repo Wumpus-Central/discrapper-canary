@@ -7,8 +7,11 @@ var i = n(310784),
 function o(e) {
     switch (e) {
         case s.z.GRADIENT:
-        case s.z.GUMMY:
             return 2;
+        case s.z.GUMMY:
+            return 4;
+        case s.z.PRISM:
+            return 5;
         default:
             return 1;
     }
@@ -32,21 +35,17 @@ function u(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
 function c(e) {
-    let t,
-        n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        i = a.re[Math.floor(Math.random() * a.re.length)],
-        r = n
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = a.re[Math.floor(Math.random() * a.re.length)],
+        i = t
             ? (function (e) {
                   let t = Math.random() * e.reduce((e, t) => e + (a.sO.get(t) ?? 0), 0);
                   for (let n of e) if ((t -= a.sO.get(n) ?? 0) <= 0) return n;
                   return e[e.length - 1];
               })(e)
-            : e[Math.floor(Math.random() * e.length)];
-    if (o(i) > 1) {
-        let e = a.Wf[Math.floor(Math.random() * a.Wf.length)];
-        t = [e.start, e.end];
-    } else t = [a.Jl[Math.floor(Math.random() * a.Jl.length)]];
-    return { fontId: r, effectId: i, colors: t };
+            : e[Math.floor(Math.random() * e.length)],
+        r = (0, a.ii)(n);
+    return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
 }
 function d(e) {
     if (null == e) return !1;
