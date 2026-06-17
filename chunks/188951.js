@@ -14,14 +14,14 @@ function u(e) {
         d = (0, r.yK)([l.A], () => e.map((e) => l.A.getConfig(e)).filter(a.Vq));
     return (
         i.useEffect(() => {
-            (0, o.Wq)();
+            (0, o.Wq)().catch(() => {});
         }, []),
         i.useEffect(() => {
-            t && (0, o.i$)();
+            t && (0, o.i$)().catch(() => {});
         }, [t]),
         i.useEffect(() => {
             if (n !== l.e.NOT_FETCHED && n !== l.e.FETCHING && (!t || (u !== l.e.NOT_FETCHED && u !== l.e.FETCHING)))
-                for (let e of c) (0, o.un)(e);
+                for (let e of c) (0, o.un)(e).catch(() => {});
         }, [u, n, c, t]),
         d
     );

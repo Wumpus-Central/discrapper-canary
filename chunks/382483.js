@@ -16,7 +16,7 @@ async function u() {
             configs: e.body.configs,
         });
     } catch (e) {
-        s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" }), a.A.captureException(e);
+        throw (s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE" }), a.A.captureException(e), e);
     }
 }
 let c = new i.Zy();
@@ -34,7 +34,7 @@ async function _() {
             configs: e.body.configs,
         });
     } catch (e) {
-        s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE" }), a.A.captureException(e);
+        throw (s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_FAILURE" }), a.A.captureException(e), e);
     }
 }
 let h = new i.Zy();
@@ -57,7 +57,11 @@ async function p(e) {
             configs: t,
         });
     } catch (t) {
-        s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: e }), a.A.captureException(t);
+        throw (
+            (s.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_FETCH_FAILURE", applicationId: e }),
+            a.A.captureException(t),
+            t)
+        );
     }
 }
 let E = new i.Zy();

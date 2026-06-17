@@ -25,7 +25,7 @@ function A(e) {
         T = (0, a.bG)([c.A], () => c.A.getDeveloperApplicationIds());
     return (
         n.useEffect(() => {
-            t && ((0, r.Wq)(), i && (0, r.i$)());
+            t && ((0, r.Wq)().catch(() => {}), i && (0, r.i$)().catch(() => {}));
         }, [t, i]),
         n.useMemo(() => {
             let e = new Set(E.filter((e) => e instanceof f.R).map((e) => e.applicationId)),

@@ -3634,7 +3634,7 @@ var sk = t(210714),
     sF = t(562153),
     sH = t(628779),
     sB = t(215530),
-    sV = t(454719),
+    sV = t(148411),
     sW = t(736653),
     sY = t(311016),
     sz = t(480335),
@@ -3941,7 +3941,7 @@ var ah = t(242841),
     aw = t(931481),
     aG = t(501193),
     aU = t(383448),
-    aF = t(456285),
+    aF = t(646986),
     aH = t(243166),
     aB = t(360563),
     aV = t(123292),
@@ -4004,7 +4004,7 @@ function rn(e) {
             singleCardInfo: g,
         } = e,
         { trackUserProfileWishlistAction: m } = (0, sK.NJ)(),
-        x = (0, sH.$)("DMSidePanelWishlistItemCard") ? a5.y.SIZE_76 : a5.y.SIZE_90,
+        x = (0, sH.$)("DMSidePanelWishlistItemCard") ? a5.y.SIZE_78 : a5.y.SIZE_90,
         p = a5.Z[x],
         f = s.useCallback(() => {
             m({
@@ -4710,13 +4710,14 @@ function ry(e) {
         c = (0, sH.$)("UserProfileSidebarRenderer");
     if (
         (s.useEffect(() => {
-            (0, sV.A)(i ?? t, {
+            let e = {
                 type: "sidebar",
                 withMutualFriendsCount: i?.bot !== !0,
                 withMutualFriends: i?.bot !== !0 && c,
                 withMutualGuilds: !0,
                 channelId: n.id,
-            });
+            };
+            null != i ? (0, sV.A)(i, e) : (0, sV.A)(t, void 0, e);
         }, [i, t, n.id, c]),
         null == i || null == a || !r)
     )
