@@ -1016,6 +1016,7 @@ let eD = (0, X.L_)((e, t, n) => {
                 .map((r) => ({
                     game: r,
                     score: (function (r) {
+                        if (!(0, w.XX)(r)) return 0;
                         let a = 0,
                             o = (0, er.sS)(r.name.toLowerCase()),
                             l = n ? o.replaceAll("_", " ") : o;
