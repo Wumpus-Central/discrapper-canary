@@ -563,7 +563,7 @@ let r = {
             "CLIPS_SAVE_CLIP",
             "CLIPS_PROMOTE_CLIP_CANDIDATE",
         ],
-        inlineRequire: () => n(363222).A,
+        inlineRequire: () => n(95844).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     ClipDecisionEngineManager: {

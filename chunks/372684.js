@@ -20,7 +20,11 @@ var i,
         (r.MEETS_MINIMUM = "meets_minimum"),
         (r.MEETS_AUTO_ENABLE = "meets_auto_enable"),
         r),
-    c = (((s = {}).MAX_CONCURRENT_SAVES = "max_concurrent_saves"), (s.NO_ELIGIBLE_SOURCE = "no_eligible_source"), s),
+    c =
+        (((s = {}).MAX_CONCURRENT_SAVES = "max_concurrent_saves"),
+        (s.NO_ELIGIBLE_SOURCE = "no_eligible_source"),
+        (s.MODULE_NOT_LOADED = "module_not_loaded"),
+        s),
     d = (((a = {}).CLIP = "clip"), (a.SCREENSHOT = "screenshot"), (a.VOICE_CLIP = "voice_clip"), a),
     _ =
         (((o = {}).UNCLASSIFIED = "unclassified"),

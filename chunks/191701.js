@@ -10,22 +10,22 @@ var n = i(284009),
     d = i(274372),
     A = i(952818),
     f = i(320095),
-    p = i(938005),
+    p = i(944043),
     y = i(885386),
     m = i(164891),
     g = i(616356),
     I = i(495544),
     E = i(734057),
     S = i(232835),
-    N = i(803224),
-    _ = i(783592),
+    _ = i(803224),
+    N = i(783592),
     C = i(290863),
     T = i(763827),
     h = i(994500),
     v = i(309010),
     O = i(461213),
-    b = i(351906),
-    L = i(287809),
+    L = i(351906),
+    b = i(287809),
     x = i(977997),
     D = i(90165),
     R = i(530789),
@@ -94,15 +94,15 @@ var tu = i(387755),
     tI = i(562153),
     tE = i(41984),
     tS = i(222506),
-    tN = i(145567),
-    t_ = i(774610),
+    t_ = i(145567),
+    tN = i(774610),
     tC = i(308368),
     tT = i(334738),
     th = i(481484),
     tv = i(258585),
     tO = i(560595),
-    tb = i(929921),
-    tL = i(753070),
+    tL = i(929921),
+    tb = i(753070),
     tx = i(783198),
     tD = i(941971),
     tR = i(465364),
@@ -303,7 +303,7 @@ function em(t, e) {
 }
 function eg() {
     if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return !1;
-    let t = _.A.usersPlaying,
+    let t = N.A.usersPlaying,
         e = new Set(),
         i = (function () {
             let t = [];
@@ -320,9 +320,9 @@ function eg() {
                 let a = e.gameId;
                 if (null == a) return !1;
                 let r = (function (t) {
-                    let e = _.A.getUserGame(t);
+                    let e = N.A.getUserGame(t);
                     if (null == e) return null;
-                    let i = _.A.getNowPlaying(e.gameId)[t]?.activity;
+                    let i = N.A.getNowPlaying(e.gameId)[t]?.activity;
                     return null == i || i.type !== z.$pd.PLAYING ? null : i;
                 })(t);
                 if (
@@ -348,7 +348,7 @@ function eg() {
                         ? (null !=
                               (l = (function (t, e, i) {
                                   if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return null;
-                                  let n = L.default.getUser(t);
+                                  let n = b.default.getUser(t);
                                   if (null == n) return null;
                                   let l = v.A.getCurrentlySelectedChannelId(),
                                       a = E.A.getChannel(l),
@@ -358,10 +358,10 @@ function eg() {
                                       d = (0, tI.mG)(a?.guild_id, a?.id, n);
                                   if (null == c || 0 === c.trim().length) return null;
                                   let f = (0, $.jsxs)("div", {
-                                          className: t_.Ql,
+                                          className: tN.Ql,
                                           children: [
                                               (0, $.jsx)("div", {
-                                                  className: t_.bf,
+                                                  className: tN.bf,
                                                   children: (0, $.jsx)(tm.A, {
                                                       user: n,
                                                       "aria-hidden": !0,
@@ -369,11 +369,11 @@ function eg() {
                                                   }),
                                               }),
                                               (0, $.jsx)("div", {
-                                                  className: t_.rf,
+                                                  className: tN.rf,
                                                   children: (0, $.jsx)(ty.E, {
                                                       variant: "text-sm/medium",
                                                       color: "interactive-text-default",
-                                                      className: t_.G3,
+                                                      className: tN.G3,
                                                       children: J.intl.format(J.t["q7/rgv"], {
                                                           username: d ?? n.username,
                                                           gameName: c,
@@ -383,7 +383,7 @@ function eg() {
                                                                         game: r,
                                                                         pid: s?.pid,
                                                                         size: tg.M.XSMALL,
-                                                                        className: t_.Gt,
+                                                                        className: tN.Gt,
                                                                     })
                                                                   : null,
                                                       }),
@@ -400,10 +400,10 @@ function eg() {
                                       { hasChat: m } = (0, V.NI)("nowPlayingNotification");
                                   return {
                                       body: f,
-                                      className: t_.dn,
-                                      wrapperClassName: t_.P6,
-                                      animationWrapperClassName: t_.VG,
-                                      clickZoneClassName: t_.EO,
+                                      className: tN.dn,
+                                      wrapperClassName: tN.P6,
+                                      animationWrapperClassName: tN.VG,
+                                      clickZoneClassName: tN.EO,
                                       maxBodyLines: 1,
                                       disableClickableRegions: !m,
                                       onNotificationShow: () => {
@@ -413,9 +413,9 @@ function eg() {
                                           m &&
                                               (async () => {
                                                   try {
-                                                      await (0, tN.D$)({
+                                                      await (0, t_.D$)({
                                                           target: {
-                                                              kind: tN.bB.DM_USER,
+                                                              kind: t_.bB.DM_USER,
                                                               userId: n.id,
                                                               messageId: null,
                                                           },
@@ -482,7 +482,7 @@ function eI(t) {
     null != a && ep(a.id),
         em(
             (function (t) {
-                let e = (0, tA.m1)(t, L.default, h.A),
+                let e = (0, tA.m1)(t, b.default, h.A),
                     i = J.intl.string(J.t.ssrVzG),
                     n = (0, td.Y)(t),
                     l = (0, tf.A)(t),
@@ -539,8 +539,8 @@ class eE extends r.Ay.Store {
             d.Ay,
             D.A,
             S.A,
-            N.A,
             _.A,
+            N.A,
             j.default,
             P.A,
             w.A,
@@ -550,11 +550,11 @@ class eE extends r.Ay.Store {
             A.Ay,
             v.A,
             O.A,
-            b.A,
-            L.default,
+            L.A,
+            b.default,
             x.A,
         ),
-            this.syncWith([_.A], eg);
+            this.syncWith([N.A], eg);
     }
     getNotifications() {
         return el;
@@ -688,7 +688,7 @@ let eS = new eE(s.h, {
     MESSAGE_CREATE: function (t) {
         let { channelId: e, message: i } = t,
             n = E.A.getChannel(e),
-            a = L.default.getUser(i.author?.id);
+            a = b.default.getUser(i.author?.id);
         if (null == n || null == a) return !1;
         if ([z.xL.JOIN, z.xL.JOIN_REQUEST, z.xL.STREAM_REQUEST].includes(i.activity?.type)) {
             if (!(0, p.lx)(i, e, !0, !0)) return !1;
@@ -844,12 +844,12 @@ let eS = new eE(s.h, {
                                     s();
                                 },
                                 onConfirmClick: (t, e) => {
-                                    let i = tb.A.getState().preset;
-                                    if (i === tL.jQ.PRESET_DOCUMENTS) {
+                                    let i = tL.A.getState().preset;
+                                    if (i === tb.jQ.PRESET_DOCUMENTS) {
                                         let { allowAutoQuality: t } = (0, tv.eO)({
                                             location: "requestToStreamNotification",
                                         });
-                                        i = t ? tL.jQ.PRESET_AUTO : tL.jQ.PRESET_VIDEO;
+                                        i = t ? tb.jQ.PRESET_AUTO : tb.jQ.PRESET_VIDEO;
                                     }
                                     (0, tO.A)(w.A.getTargetPID(), { preset: i }),
                                         u("request-to-stream"),
@@ -890,8 +890,8 @@ let eS = new eE(s.h, {
             })(n, i, a);
             if (!1 !== t) return t;
         }
-        if (P.A.isNotificationDisabled(H.KS.TextChat) || b.A.disableNotifications || !(0, p.lx)(i, e)) return !1;
-        let r = !N.A.isSoundDisabled(R.cH),
+        if (P.A.isNotificationDisabled(H.KS.TextChat) || L.A.disableNotifications || !(0, p.lx)(i, e)) return !1;
+        let r = !_.A.isSoundDisabled(R.cH),
             s = (function (t, e, i, n) {
                 let { hasChat: l } = (0, V.NI)("textChatNotification");
                 if (P.A.isNotificationDisabled(H.KS.TextChat)) return tq(!0), null;
@@ -941,9 +941,9 @@ let eS = new eE(s.h, {
                             ),
                             l)
                         ) {
-                            (0, tN.D$)({
+                            (0, t_.D$)({
                                 target: {
-                                    kind: tN.bB.CHANNEL,
+                                    kind: t_.bB.CHANNEL,
                                     channelId: t.id,
                                     guildId: t.guild_id ?? null,
                                     messageId: e.id,
@@ -1121,6 +1121,8 @@ let eS = new eE(s.h, {
 \u{2022} GoLive \u{2014} ${t}
 \u{2022} Decoupled \u{2014} ${n}`)
                                 : "No capture source available. Need an active stream, a decoupled game capture, or a voice channel.";
+                        case q.RC.MODULE_NOT_LOADED:
+                            return "discord_clips is still downloading. Try again once the module finishes installing.";
                     }
                 })()),
                 { ...tn(H.KS.ClipsDebugSaveNoOp), title: "Clip hotkey ignored", body: n, maxBodyLines: 8 }),
