@@ -1,5 +1,5 @@
 s.d(t, {
-    H9: () => S,
+    H9: () => d,
     J$: () => C,
     L6: () => A,
     TJ: () => b,
@@ -14,9 +14,9 @@ s.d(t, {
     oK: () => g,
     oR: () => w,
     pY: () => y,
-    rE: () => m,
+    rE: () => W,
     uZ: () => H,
-    vy: () => W,
+    vy: () => m,
     wU: () => I,
 });
 var n,
@@ -33,11 +33,11 @@ function _(e) {
 function h(e) {
     return (0, o.dX)(e)?.trim()?.length ?? 0;
 }
-function d(e) {
+function S(e) {
     let t = (0, o.bS)(e);
     return c.A.getAnalyticsId(t);
 }
-function S(e) {
+function d(e) {
     let {
         searchContext: t,
         searchRequestAnalyticsId: s,
@@ -46,8 +46,8 @@ function S(e) {
         limit: a,
         offset: c,
         page: o,
-        totalResults: d,
-        pageResults: S,
+        totalResults: S,
+        pageResults: d,
         isIndexing: E,
         pageNumMessages: A,
         pageNumLinks: f,
@@ -66,8 +66,8 @@ function S(e) {
         limit: a,
         offset: c,
         page: o,
-        total_results: d,
-        page_results: S,
+        total_results: S,
+        page_results: d,
         is_indexing: E,
         page_num_messages: A,
         page_num_links: f,
@@ -86,8 +86,8 @@ function E(e) {
         channelId: i,
         pageResults: c,
         totalResults: o,
-        page: d,
-        limit: S,
+        page: S,
+        limit: d,
         offset: E,
         index: A,
         searchQueryString: f,
@@ -103,8 +103,8 @@ function E(e) {
         channel_id: i,
         page_results: c,
         total_results: o,
-        page: d,
-        limit: S,
+        page: S,
+        limit: d,
         offset: E,
         index_num: A,
         search_query_length: _(f),
@@ -146,7 +146,7 @@ function y(e) {
     let { searchContext: t } = e;
     l.A.initialize(t),
         r.Ay.trackWithMetadata(u.HAw.SEARCH_OPENED, {
-            search_id: d(t),
+            search_id: S(t),
             search_session_id: l.A.getSessionId(t),
             search_type: t.type,
         });
@@ -154,7 +154,7 @@ function y(e) {
 function p(e) {
     let { searchContext: t } = e;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_CLOSED, {
-        search_id: d(t),
+        search_id: S(t),
         search_session_id: l.A.getSessionId(t),
         search_query_id: l.A.getQueryId(t),
         search_type: t.type,
@@ -164,7 +164,7 @@ function p(e) {
 function R(e) {
     let { searchContext: t } = e;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_INPUT_CLEARED, {
-        search_id: d(t),
+        search_id: S(t),
         search_session_id: l.A.getSessionId(t),
         search_query_id: l.A.getQueryId(t),
         search_type: t.type,
@@ -172,74 +172,61 @@ function R(e) {
 }
 function T(e) {
     let { searchContext: t, query: s, queryString: n, searchQuerySource: i } = e,
-        a = Object.keys(s),
-        c = a.reduce((e, t) => {
-            let n = s[t];
-            return (e[t] = Array.isArray(n) ? n.length : 1), e;
-        }, {}),
-        S = null != n ? (0, o._o)(n) : [],
+        a = null != n ? (0, o._o)(n) : [],
+        c = 0,
+        d = 0,
         E = 0,
         A = 0,
         f = 0,
         g = 0,
         y = 0,
         p = 0,
-        R = 0,
-        T = 0,
-        I = 0;
-    S.forEach((e) => {
+        R = 0;
+    a.forEach((e) => {
         e.type === u.LWr.ANSWER_IN
-            ? E++
+            ? c++
             : e.type === u.LWr.ANSWER_USERNAME_FROM
-              ? A++
+              ? d++
               : e.type === u.LWr.ANSWER_USERNAME_MENTIONS
-                ? f++
+                ? E++
                 : e.type === u.LWr.ANSWER_HAS
-                  ? g++
+                  ? A++
                   : e.type === u.LWr.ANSWER_BEFORE
-                    ? y++
+                    ? f++
                     : e.type === u.LWr.ANSWER_ON
-                      ? p++
+                      ? g++
                       : e.type === u.LWr.ANSWER_AFTER
-                        ? R++
+                        ? y++
                         : e.type === u.LWr.ANSWER_PINNED
-                          ? T++
-                          : e.type === u.LWr.ANSWER_AUTHOR_TYPE && I++;
+                          ? p++
+                          : e.type === u.LWr.ANSWER_AUTHOR_TYPE && R++;
     });
-    let C = l.A.getQueryId(t);
+    let T = l.A.getQueryId(t);
     r.Ay.trackWithMetadata(u.HAw.MESSAGES_SEARCH_STARTED, {
-        search_id: d(t),
+        search_id: S(t),
         search_session_id: l.A.getSessionId(t),
-        search_query_id: C,
+        search_query_id: T,
         search_type: t.type,
         search_query_length: _(n),
         search_query_content_length: h(s),
         sort_type: (0, o.XC)(s),
-        filter_in_count: E,
-        filter_from_count: A,
-        filter_mentions_count: f,
-        filter_has_count: g,
-        filter_before_count: y,
-        filter_during_count: p,
-        filter_after_count: R,
-        filter_pinned_count: T,
-        filter_author_type_count: I,
+        filter_in_count: c,
+        filter_from_count: d,
+        filter_mentions_count: E,
+        filter_has_count: A,
+        filter_before_count: f,
+        filter_during_count: g,
+        filter_after_count: y,
+        filter_pinned_count: p,
+        filter_author_type_count: R,
         search_query_source: i,
-    }),
-        r.Ay.trackWithMetadata(u.HAw.SEARCH_STARTED, {
-            search_id: d(t),
-            search_session_id: l.A.getSessionId(t),
-            search_query_id: l.A.getQueryId(t),
-            search_type: t.type,
-            num_modifiers: a.length,
-            modifiers: c,
-        });
+    });
 }
 function I(e) {
     let { rating: t, searchContext: s } = e;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_RESULTS_FEEDBACK_MODAL_VIEWED, {
         rating: t,
-        search_id: d(s),
+        search_id: S(s),
         search_type: s.type,
         search_session_id: l.A.getSessionId(s),
         search_query_id: l.A.getQueryId(s),
@@ -248,7 +235,7 @@ function I(e) {
 function C(e) {
     let { searchContext: t } = e;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_RESULTS_FEEDBACK_ENTRYPOINT_VIEWED, {
-        search_id: d(t),
+        search_id: S(t),
         search_type: t.type,
         search_session_id: l.A.getSessionId(t),
         search_query_id: l.A.getQueryId(t),
@@ -264,7 +251,7 @@ function H(e) {
         describeSearchQuestionText: c,
     } = e;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_RESULTS_FEEDBACK_SUBMITTED, {
-        search_id: d(s),
+        search_id: S(s),
         search_type: s.type,
         search_session_id: l.A.getSessionId(s),
         search_query_id: l.A.getQueryId(s),
@@ -280,7 +267,7 @@ function L(e) {
     l.A.enqueueEvent(t, () => {
         r.Ay.trackWithMetadata(u.HAw.SEARCH_MESSAGES_CHANNEL_PREFILL, {
             search_type: t.type,
-            search_id: d(t),
+            search_id: S(t),
             search_session_id: l.A.getSessionId(t),
         });
     });
@@ -311,7 +298,7 @@ let M = new Map([
 function w(e) {
     let { searchContext: t, searchHistoryIndex: s, searchHistoryTotalResults: n } = e;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_HISTORY_CLICKED, {
-        search_id: d(t),
+        search_id: S(t),
         search_type: t.type,
         search_session_id: l.A.getSessionId(t),
         search_history_index: s,
@@ -327,7 +314,7 @@ function N(e) {
         searchAutocompleteTotalResults: a,
         searchTokenType: c,
         searchAutocompleteGroup: o,
-        isSearchFilterPrefix: S,
+        isSearchFilterPrefix: d,
         isSearchFilterAnswer: E,
         isSearchFilterComplete: A,
         isInFilterForSelectedChannel: f,
@@ -337,7 +324,7 @@ function N(e) {
     let y = M.get(o) ?? O.get(o),
         p = null != c ? M.get(c) : null;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_MESSAGES_AUTOCOMPLETE_CLICKED, {
-        search_id: d(t),
+        search_id: S(t),
         search_type: t.type,
         search_session_id: l.A.getSessionId(t),
         search_query_id: l.A.getQueryId(t),
@@ -347,28 +334,28 @@ function N(e) {
         search_autocomplete_total_results: a,
         search_autocomplete_group: y,
         search_autocomplete_filter_type: p,
-        is_search_filter_prefix: S,
+        is_search_filter_prefix: d,
         is_search_filter_answer: E,
         is_search_filter_complete: A,
         is_in_filter_for_selected_channel: f,
         search_autocomplete_select_action: g,
     });
 }
-function m(e) {
+function W(e) {
     let { searchContext: t, searchAutocompleteSelectAction: s } = e;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_MESSAGES_SELECTED_CHANNEL_FILTER_CLICKED, {
-        search_id: d(t),
+        search_id: S(t),
         search_type: t.type,
         search_session_id: l.A.getSessionId(t),
         search_query_id: l.A.getQueryId(t),
         search_autocomplete_select_action: s,
     });
 }
-var W = (((n = {}).SEARCH_HEADER = "search_header"), (n.USER_SETTINGS = "user_settings"), n);
+var m = (((n = {}).SEARCH_HEADER = "search_header"), (n.USER_SETTINGS = "user_settings"), n);
 function k(e) {
     let { searchContext: t, prevIsCrossDMSettingEnabled: s, isCrossDMSettingEnabled: n, location: i } = e;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_CROSS_DM_SETTING_UPDATE, {
-        search_id: null != t ? d(t) : null,
+        search_id: null != t ? S(t) : null,
         search_type: t?.type,
         search_session_id: null != t ? l.A.getSessionId(t) : null,
         search_query_id: null != t ? l.A.getQueryId(t) : null,
@@ -380,7 +367,7 @@ function k(e) {
 function b(e) {
     let { searchContext: t } = e;
     r.Ay.trackWithMetadata(u.HAw.SEARCH_FILTERS_MODAL_OPENED, {
-        search_id: d(t),
+        search_id: S(t),
         search_type: t.type,
         search_session_id: l.A.getSessionId(t),
         search_query_id: l.A.getQueryId(t),
