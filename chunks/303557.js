@@ -26,11 +26,13 @@ function _() {
                     return d.pW.has(t);
                 })?.planId ?? d.gD.PREMIUM_MONTH_GUILD,
             [f],
-        );
+        ),
+        E = null == e || (n && _);
     return {
         newAdditionalPlans: f,
         currentPremiumSubscriptionPlan: h,
         hasFetchedPremiumSubscriptionPlan: n,
+        hasFetchedAdditionalPlans: E,
         premiumGuildSubscriptionPlanId: p,
     };
 }

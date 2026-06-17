@@ -119,10 +119,13 @@ function C(e) {
         } = e,
         _ = JSON.stringify(d.skuIDs),
         h = r.useMemo(() => d.skuIDs, [_]),
-        p = (0, a.$w)(),
-        E = r.useMemo(
+        p = JSON.stringify(d.currencySkuIDs ?? []),
+        E = r.useMemo(() => d.currencySkuIDs ?? [], [p]),
+        m = (0, a.$w)(),
+        g = r.useMemo(
             () => ({
                 skuIds: h,
+                currencySkuIds: E,
                 isGift: d.isGift ?? !1,
                 referralTrialOfferId: d.referralTrialOfferId ?? null,
                 activeSubscription: d.activeSubscription ?? null,
@@ -130,13 +133,14 @@ function C(e) {
                 purchaseType: u,
                 defaultPlanId: d.defaultPlanId,
                 referralCode: d.referralCode,
-                customCheckoutFlow: c ?? p,
+                customCheckoutFlow: c ?? m,
                 unifiedCheckoutFlow: d.unifiedCheckoutFlow,
                 paymentGateway: d.paymentGateway,
                 applicationId: d.applicationId ?? y.tv,
             }),
             [
                 h,
+                E,
                 u,
                 d.isGift,
                 d.referralTrialOfferId,
@@ -146,7 +150,7 @@ function C(e) {
                 d.defaultPlanId,
                 d.referralCode,
                 c,
-                p,
+                m,
                 d.unifiedCheckoutFlow,
                 d.paymentGateway,
             ],
@@ -157,7 +161,7 @@ function C(e) {
         children: (0, i.jsx)(T.P, {
             loadId: s,
             discoverySessionId: l,
-            checkoutInitParameters: E,
+            checkoutInitParameters: g,
             children: (0, i.jsx)(N, { ...d, skuIDs: h, purchaseType: u }),
         }),
     });

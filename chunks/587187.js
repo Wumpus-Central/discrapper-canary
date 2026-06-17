@@ -1,67 +1,68 @@
 "use strict";
-n.d(t, { d: () => Y });
+n.d(t, { d: () => W });
 var i = n(627968),
     r = n(64700),
     s = n(284009),
     a = n.n(s),
     o = n(17928),
-    l = n(211159),
-    u = n(166532),
-    c = n(97352),
-    d = n(615396),
-    _ = n(503698),
-    h = n.n(_),
-    f = n(364840),
-    p = n(104510),
-    E = n(661531),
-    m = n(460905),
-    g = n(183623),
-    A = n(95635),
-    I = n(935462),
-    T = n(430993),
-    S = n(331322),
-    y = n(123292),
-    C = n(821609),
-    N = n(793574),
-    v = n(688810),
-    R = n(532794),
-    O = n(234419),
-    b = n(811611),
-    D = n(901017),
-    L = n(773669),
-    w = n(174459),
-    M = n(252424),
-    P = n(428262),
-    x = n(580630),
-    k = n(652215),
-    U = n(788868),
-    G = n(375708),
-    F = n(403052);
-function V(e) {
+    l = n(655857),
+    u = n(211159),
+    c = n(166532),
+    d = n(97352),
+    _ = n(615396),
+    h = n(503698),
+    f = n.n(h),
+    p = n(364840),
+    E = n(104510),
+    m = n(661531),
+    g = n(460905),
+    A = n(183623),
+    I = n(95635),
+    T = n(935462),
+    S = n(430993),
+    y = n(331322),
+    C = n(123292),
+    N = n(821609),
+    v = n(793574),
+    R = n(688810),
+    O = n(532794),
+    b = n(234419),
+    D = n(811611),
+    L = n(901017),
+    w = n(773669),
+    M = n(174459),
+    P = n(252424),
+    x = n(428262),
+    k = n(580630),
+    U = n(652215),
+    G = n(788868),
+    F = n(375708),
+    V = n(403052);
+function B(e) {
     let { shouldUpsellFromNoneTier: t } = e,
-        n = (0, o.bG)([L.default], () => L.default.locale);
+        n = (0, o.bG)([w.default], () => w.default.locale);
     return (0, i.jsxs)("div", {
-        className: F.mH,
+        className: V.mH,
         children: [
-            (0, i.jsx)(D.A, {
-                icon: p._,
-                iconClassName: F.pl,
-                description: G.intl.formatToPlainString(G.t.sQBgs2, { numFreeGuildSubscriptions: U.M4 }),
-                color: E.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
+            (0, i.jsx)(L.A, {
+                icon: E._,
+                iconClassName: V.pl,
+                description: F.intl.formatToPlainString(F.t.sQBgs2, { numFreeGuildSubscriptions: G.M4 }),
+                color: m.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
-            (0, i.jsx)(D.A, {
-                icon: p._,
-                iconClassName: F.pl,
-                description: G.intl.formatToPlainString(G.t["1A6vXi"], { percent: (0, M.l9)(n, U.oX / 100) }),
-                color: E.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
+            (0, i.jsx)(L.A, {
+                icon: E._,
+                iconClassName: V.pl,
+                description: F.intl.formatToPlainString(F.t["1A6vXi"], { percent: (0, P.l9)(n, G.oX / 100) }),
+                color: m.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
-            t ? (0, i.jsx)(D.A, { icon: m.n, iconClassName: F.zO, description: G.intl.string(G.t.Z9b2x2) }) : null,
-            (0, i.jsx)(D.A, { icon: g.F, iconClassName: F.Kg, description: G.intl.string(G.t["8dqG5E"]) }),
-            (0, i.jsx)(D.A, { icon: A.J, iconClassName: F.$z, description: G.intl.string(G.t.cBorIy) }),
+            t ? (0, i.jsx)(L.A, { icon: g.n, iconClassName: V.zO, description: F.intl.string(F.t.Z9b2x2) }) : null,
+            (0, i.jsx)(L.A, { icon: A.F, iconClassName: V.Kg, description: F.intl.string(F.t["8dqG5E"]) }),
+            (0, i.jsx)(L.A, { icon: I.J, iconClassName: V.$z, description: F.intl.string(F.t.cBorIy) }),
         ],
     });
 }
-function B(e) {
+function j(e) {
     let {
             premiumSubscriptionPlan: t,
             onClose: n,
@@ -72,65 +73,65 @@ function B(e) {
             analyticsSourceLocation: u,
             priceOptions: c,
         } = e,
-        { analyticsLocations: d, sourceAnalyticsLocations: _ } = (0, v.Ay)(N.A.GUILD_BOOSTING_PREMIUM_UPSELL),
-        p = null == t || null == t.premiumSubscriptionType,
-        E = P.Ay.getPrice(U.gD.PREMIUM_MONTH_TIER_2, !1, !1, c),
-        m = (0, x.$g)(E.amount, E.currency),
-        g = (0, O.V)(),
+        { analyticsLocations: d, sourceAnalyticsLocations: _ } = (0, R.Ay)(v.A.GUILD_BOOSTING_PREMIUM_UPSELL),
+        h = null == t || null == t.premiumSubscriptionType,
+        E = x.Ay.getPrice(G.gD.PREMIUM_MONTH_TIER_2, !1, !1, c),
+        m = (0, k.$g)(E.amount, E.currency),
+        g = (0, b.V)(),
         A = g?.trial_id,
-        D = g?.subscription_trial?.sku_id === U.pe.TIER_2;
+        I = g?.subscription_trial?.sku_id === G.pe.TIER_2;
     return (
         r.useEffect(() => {
-            w.default.track(k.HAw.PREMIUM_UPSELL_VIEWED, { type: U.e.GUILD_PREMIUM_UPSELL_MODAL, location_stack: _ });
+            M.default.track(U.HAw.PREMIUM_UPSELL_VIEWED, { type: G.e.GUILD_PREMIUM_UPSELL_MODAL, location_stack: _ });
         }, [_]),
         (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(I.s_, { "data-migration-pending": !0, onClick: n, className: F.b }),
-                (0, i.jsxs)(T.c, {
+                (0, i.jsx)(T.s_, { "data-migration-pending": !0, onClick: n, className: V.b }),
+                (0, i.jsxs)(S.c, {
                     children: [
-                        D && (0, i.jsx)(b.Vq, { className: F.Fg }),
-                        (0, i.jsx)("div", { className: h()(F.Tn, { [F.NH]: D }) }),
+                        I && (0, i.jsx)(D.Vq, { className: V.Fg }),
+                        (0, i.jsx)("div", { className: f()(V.Tn, { [V.NH]: I }) }),
                         (0, i.jsx)("div", {
-                            className: F.G3,
+                            className: V.G3,
                             children:
                                 null != A
-                                    ? G.intl.string(G.t.AoSzEr)
-                                    : G.intl.format(G.t["7vePZb"], { monthlyPrice: m }),
+                                    ? F.intl.string(F.t.AoSzEr)
+                                    : F.intl.format(F.t["7vePZb"], { monthlyPrice: m }),
                         }),
-                        (0, i.jsx)(V, { shouldUpsellFromNoneTier: p }),
+                        (0, i.jsx)(B, { shouldUpsellFromNoneTier: h }),
                     ],
                 }),
-                (0, i.jsx)(f.j, {
-                    children: (0, i.jsxs)(S.B, {
+                (0, i.jsx)(p.j, {
+                    children: (0, i.jsxs)(y.B, {
                         direction: "horizontal",
                         align: "center",
                         justify: "space-between",
                         fullWidth: !0,
                         children: [
-                            (0, i.jsx)(y.Q, { text: G.intl.string(G.t["13/7kX"]), onClick: s, variant: "secondary" }),
-                            (0, i.jsxs)(S.B, {
+                            (0, i.jsx)(C.Q, { text: F.intl.string(F.t["13/7kX"]), onClick: s, variant: "secondary" }),
+                            (0, i.jsxs)(y.B, {
                                 direction: "horizontal",
                                 align: "center",
                                 fullWidth: !1,
                                 children: [
-                                    (0, i.jsx)(y.Q, {
-                                        text: G.intl.string(G.t["SI/adm"]),
+                                    (0, i.jsx)(C.Q, {
+                                        text: F.intl.string(F.t["SI/adm"]),
                                         onClick: a,
                                         variant: "secondary",
                                     }),
-                                    (0, i.jsx)(C.$, {
+                                    (0, i.jsx)(N.$, {
                                         variant: "active",
-                                        text: null != A ? G.intl.string(G.t["Gd/XHF"]) : G.intl.string(G.t.p2moip),
+                                        text: null != A ? F.intl.string(F.t["Gd/XHF"]) : F.intl.string(F.t.p2moip),
                                         type: "submit",
                                         onClick: () => {
                                             n(),
-                                                (0, R.A)({
+                                                (0, O.A)({
                                                     initialPlanId: null,
-                                                    subscriptionTier: U.pe.TIER_2,
+                                                    subscriptionTier: G.pe.TIER_2,
                                                     analyticsLocations: d,
                                                     analyticsObject: {
                                                         ...l,
-                                                        section: k.JJy.PREMIUM_GUILD_PURCHASE_MODAL,
+                                                        section: U.JJy.PREMIUM_GUILD_PURCHASE_MODAL,
                                                     },
                                                     analyticsSourceLocation: u,
                                                     onSubscriptionConfirmation: o,
@@ -147,31 +148,32 @@ function B(e) {
         })
     );
 }
-var j = n(526151),
-    H = n(469633);
-function Y(e) {
+var H = n(526151),
+    Y = n(469633);
+function W(e) {
     let { handleClose: t, handleStepChange: n, onSubscriptionConfirmation: s } = e,
-        { currency: _, paymentModalArgs: h, analyticsLocation: f, analyticsSourceLocation: p } = (0, j.Oe)(),
-        { paymentSourceId: E, activeSubscription: m } = (0, l.t4)((e) => ({
+        { paymentModalArgs: h, analyticsLocation: f, analyticsSourceLocation: p } = (0, H.Oe)(),
+        { paymentSourceId: E, activeSubscription: m } = (0, u.t4)((e) => ({
             paymentSourceId: e.paymentSourceId,
             activeSubscription: e.activeSubscription,
         })),
-        g = (0, o.bG)([c.A], () => (null != m ? (0, d.c9)(m.planId) : null)),
-        A = (0, o.bG)([c.A], () => (null == g ? c.A.get(H.Z) : g));
-    a()(null != A, "Missing nextPremiumSubscriptionPlan"), a()(null != _ && "" !== _, "Currency not defined");
-    let { paymentSources: I } = h,
-        T = null != m ? m.paymentSourceId : null,
-        S = Object.keys(I).length > 0,
-        y = r.useCallback(() => n(u.pn.PLAN_SELECT), [n]),
-        C = r.useCallback(() => n(null != T || S ? u.pn.REVIEW : u.pn.ADD_PAYMENT_STEPS), [n, T, S]);
-    return (0, i.jsx)(B, {
-        premiumSubscriptionPlan: A,
+        { displayCurrency: g } = (0, l.Jn)(),
+        A = (0, o.bG)([d.A], () => (null != m ? (0, _.c9)(m.planId) : null)),
+        I = (0, o.bG)([d.A], () => (null == A ? d.A.get(Y.Z) : A));
+    a()(null != I, "Missing nextPremiumSubscriptionPlan"), a()(null != g && "" !== g, "Currency not defined");
+    let { paymentSources: T } = h,
+        S = null != m ? m.paymentSourceId : null,
+        y = Object.keys(T).length > 0,
+        C = r.useCallback(() => n(c.pn.PLAN_SELECT), [n]),
+        N = r.useCallback(() => n(null != S || y ? c.pn.REVIEW : c.pn.ADD_PAYMENT_STEPS), [n, S, y]);
+    return (0, i.jsx)(j, {
+        premiumSubscriptionPlan: I,
         analyticsLocation: f,
         analyticsSourceLocation: p,
         onClose: t,
-        onBack: y,
-        onSkip: C,
+        onBack: C,
+        onSkip: N,
         onSubscriptionConfirmation: s,
-        priceOptions: null != E ? { paymentSourceId: E, currency: _ } : { currency: _ },
+        priceOptions: null != E ? { paymentSourceId: E, currency: g } : { currency: g },
     });
 }
