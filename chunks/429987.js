@@ -16,7 +16,7 @@ var n,
     S = i(64700),
     T = i(627363),
     x = i(587895),
-    p = i(137177),
+    p = i(769015),
     f = i(751075),
     N = i(403362);
 i(321073);
@@ -152,32 +152,47 @@ var H = i(873298),
     K = i(192308),
     W = i(365258);
 let Z = (0, a.Qx)(u.X.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING, {
-    useTitle: () =>
-        z("GuildActivitySharingDefaultSetting") ? j.intl.string(j.t.vpgck1) : j.intl.string(L.default["/LHVbt"]),
+    useTitle: () => {
+        let e = (0, o.SV)("GuildActivitySharingDefaultSetting");
+        return z("GuildActivitySharingDefaultSetting") && !e
+            ? j.intl.string(j.t.vpgck1)
+            : j.intl.string(L.default["/LHVbt"]);
+    },
+    useSubtitle: () => ((0, o.SV)("GuildActivitySharingDefaultSetting") ? j.intl.string(j.t.L5IdzV) : null),
     useOptions: function () {
-        let e = z("GuildActivitySharingDefaultSetting");
+        let e = (0, o.SV)("GuildActivitySharingDefaultSetting"),
+            t = z("GuildActivitySharingDefaultSetting");
         return S.useMemo(
             () =>
                 e
                     ? [
-                          {
-                              value: H.Qd.ACTIVITY_STATUS_OFF,
-                              name: j.intl.string(j.t.FzgQna),
-                              desc: j.intl.string(j.t.SQxoyc),
-                          },
-                          {
-                              value: H.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
-                              name: j.intl.string(j.t["1hvuGH"]),
-                              desc: j.intl.string(j.t.odUCPE),
-                          },
-                          { value: H.Qd.ACTIVITY_STATUS_ON, name: j.intl.string(j.t.fQc5la) },
-                      ]
-                    : [
-                          { value: H.Qd.ACTIVITY_STATUS_ON, name: j.intl.string(j.t.UzGMH9) },
-                          { value: H.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, name: j.intl.string(L.default["/sAeRY"]) },
                           { value: H.Qd.ACTIVITY_STATUS_OFF, name: j.intl.string(L.default.m3oL7Q) },
-                      ],
-            [e],
+                          { value: H.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS, name: j.intl.string(L.default["5+lnTA"]) },
+                          { value: H.Qd.ACTIVITY_STATUS_ON, name: j.intl.string(L.default["egr+VZ"]) },
+                      ]
+                    : t
+                      ? [
+                            {
+                                value: H.Qd.ACTIVITY_STATUS_OFF,
+                                name: j.intl.string(j.t.FzgQna),
+                                desc: j.intl.string(j.t.SQxoyc),
+                            },
+                            {
+                                value: H.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
+                                name: j.intl.string(j.t["1hvuGH"]),
+                                desc: j.intl.string(j.t.odUCPE),
+                            },
+                            { value: H.Qd.ACTIVITY_STATUS_ON, name: j.intl.string(j.t.fQc5la) },
+                        ]
+                      : [
+                            { value: H.Qd.ACTIVITY_STATUS_ON, name: j.intl.string(j.t.UzGMH9) },
+                            {
+                                value: H.Qd.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS,
+                                name: j.intl.string(L.default["/sAeRY"]),
+                            },
+                            { value: H.Qd.ACTIVITY_STATUS_OFF, name: j.intl.string(L.default.m3oL7Q) },
+                        ],
+            [t, e],
         );
     },
     useValue: D._Z.useSetting,
@@ -503,11 +518,7 @@ let ex = (0, a.E2)(u.X.ACTIVITY_PRIVACY_PER_GUILD_SETTING, {
         useTitle: () => {
             let e = (0, o.SV)("GuildActivitySharingCategory"),
                 t = z("GuildActivitySharingCategory");
-            return e
-                ? j.intl.string(j.t["ymulT+"])
-                : t
-                  ? j.intl.string(j.t.VDcvrR)
-                  : j.intl.string(L.default["1PougL"]);
+            return e ? j.intl.string(j.t.bwqjL9) : t ? j.intl.string(j.t.VDcvrR) : j.intl.string(L.default["1PougL"]);
         },
         useSubtitle: () => {
             let e = z("GuildActivitySharingCategory");
