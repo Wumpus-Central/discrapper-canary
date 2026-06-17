@@ -1,4 +1,4 @@
-l.d(e, { x: () => ty, A: () => tD });
+l.d(e, { x: () => ty, A: () => tP });
 var i = l(627968),
     n = l(64700),
     s = l(503698),
@@ -22,46 +22,46 @@ var i = l(627968),
     N = l(500345),
     I = l(599941),
     E = l(915869),
-    S = l(700206),
-    C = l(320137),
+    C = l(700206),
+    S = l(320137),
     T = l(881288),
-    L = l(417360),
+    k = l(417360),
     y = l(792105),
-    k = l(35275),
-    D = l(939249),
-    G = l(807973),
-    R = l(898612),
-    P = l(232492),
-    U = l(41068);
-function M(t) {
+    L = l(35275),
+    P = l(939249),
+    D = l(807973),
+    G = l(898612),
+    R = l(232492),
+    M = l(41068);
+function U(t) {
     let { benefit: e, guildId: l } = t,
-        n = (0, P.A)(l, e.ref_id),
-        s = (0, i.jsx)(G.A, { guildId: l, emojiId: e.emoji_id, emojiName: e.emoji_name }),
+        n = (0, R.A)(l, e.ref_id),
+        s = (0, i.jsx)(D.A, { guildId: l, emojiId: e.emoji_id, emojiName: e.emoji_name }),
         r =
             null != n
-                ? (0, i.jsx)(D.D, {
-                      className: U.__invalid_channelLink,
+                ? (0, i.jsx)(P.D, {
+                      className: M.__invalid_channelLink,
                       onClick: n.navigateToChannel,
                       "aria-label": n.ariaLabel,
                       role: "link",
                       children: (0, i.jsx)(v.E, {
                           variant: "text-md/medium",
                           color: "text-strong",
-                          className: a()(U.UU, U.F$),
-                          children: (0, R.A)(e),
+                          className: a()(M.UU, M.F$),
+                          children: (0, G.A)(e),
                       }),
                   })
                 : (0, i.jsx)(v.E, {
                       variant: "text-md/medium",
                       color: "text-strong",
-                      className: U.UU,
-                      children: (0, R.A)(e),
+                      className: M.UU,
+                      children: (0, G.A)(e),
                   });
     return (0, i.jsxs)("div", {
-        className: U.kL,
+        className: M.kL,
         children: [
             (0, i.jsxs)("div", {
-                className: U.op,
+                className: M.op,
                 children: [
                     r,
                     (0, i.jsx)(v.E, {
@@ -71,7 +71,7 @@ function M(t) {
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: U.qq, children: s }),
+            (0, i.jsx)("div", { className: M.qq, children: s }),
         ],
     });
 }
@@ -164,7 +164,7 @@ let tt = (t) => {
                     }),
                 ],
             }),
-            (0, i.jsx)(D.D, {
+            (0, i.jsx)(P.D, {
                 onClick: s,
                 children: n
                     ? (0, i.jsx)(q.t, { size: "md", color: "currentColor", className: J.Rm })
@@ -236,7 +236,7 @@ let tI = (t) => {
                 a = 0;
             for (let t of l.role_benefits.benefits) (0, N.B1)(t) ? (s += 1) : (0, N.b1)(t) && (a += 1);
             let r = l.role_id,
-                c = (0, C.A)(i).filter((t) => t.roles.includes(r)).length;
+                c = (0, S.A)(i).filter((t) => t.roles.includes(r)).length;
             return n.useMemo(() => {
                 let t = [];
                 return (
@@ -284,8 +284,8 @@ let tI = (t) => {
     });
 };
 var tE = l(354033),
-    tS = l(652215),
-    tC = l(277760);
+    tC = l(652215),
+    tS = l(277760);
 let tT = (t) => {
         let { benefits: e, header: l, guildId: s } = t,
             [a, r] = n.useState(!1),
@@ -297,50 +297,50 @@ let tT = (t) => {
         return 0 === e.length
             ? null
             : (0, i.jsxs)("div", {
-                  className: tC.uO,
+                  className: tS.uO,
                   children: [
                       (0, i.jsx)(d.D, {
                           variant: "text-xs/bold",
                           color: "text-default",
-                          className: tC.bV,
+                          className: tS.bV,
                           id: h,
                           children: l,
                       }),
                       (0, i.jsx)(o.h, { size: 12 }),
                       (0, i.jsx)("ul", {
-                          className: tC.Pp,
+                          className: tS.Pp,
                           "aria-labelledby": h,
                           children: c.map((t, e) =>
                               (0, i.jsx)(
                                   "li",
-                                  { children: (0, i.jsx)(M, { guildId: s, benefit: t }, (0, N.nh)(t)) },
+                                  { children: (0, i.jsx)(U, { guildId: s, benefit: t }, (0, N.nh)(t)) },
                                   e,
                               ),
                           ),
                       }),
-                      u && (0, i.jsx)(tk, { isViewAll: a, onToggle: () => r((t) => !t), showMoreText: x }),
+                      u && (0, i.jsx)(tL, { isViewAll: a, onToggle: () => r((t) => !t), showMoreText: x }),
                   ],
               });
     },
-    tL = (t) => {
+    tk = (t) => {
         let { guildId: e, listingId: l } = t,
-            n = (0, C.A)(e),
+            n = (0, S.A)(e),
             [s] = E.UN(l, e),
             a = n.filter((t) => s.has(t.id));
         return 0 === a.length
             ? null
             : (0, i.jsxs)("div", {
-                  className: tC.uO,
+                  className: tS.uO,
                   children: [
                       (0, i.jsx)(d.D, {
                           variant: "text-xs/bold",
                           color: "text-default",
-                          className: tC.bV,
+                          className: tS.bV,
                           children: W.intl.format(W.t.NAnXEo, { count: a.length }),
                       }),
                       (0, i.jsx)(o.h, { size: 12 }),
                       (0, i.jsx)("div", {
-                          className: tC.vX,
+                          className: tS.vX,
                           children: a.map((t, e) =>
                               (0, i.jsx)(
                                   c.m,
@@ -348,7 +348,7 @@ let tT = (t) => {
                                       text: t.name,
                                       "aria-label": !1,
                                       children: (0, i.jsx)("img", {
-                                          className: tC.x6,
+                                          className: tS.x6,
                                           src: A.Ay.getEmojiURL({ id: t.id, animated: t.animated, size: 24 }),
                                           width: 24,
                                           height: 24,
@@ -366,47 +366,47 @@ let tT = (t) => {
         let { listingId: e, guildId: l, className: n } = t,
             s = (0, T.A)(l, e),
             [r] = E.lZ(e),
-            c = (0, L.A)(r),
+            c = (0, k.A)(r),
             [m] = E.$O(e),
             x = E.It(e, l),
             [h] = E.UN(e, l);
         return null == s && 0 === c.length && 0 === m.length && 0 === h.size
             ? null
             : (0, i.jsxs)("div", {
-                  className: a()(tC.bp, n),
+                  className: a()(tS.bp, n),
                   children: [
                       null != s &&
                           (0, i.jsxs)(u.F, {
                               component: (0, i.jsx)(d.D, {
                                   variant: "text-xs/bold",
                                   color: "text-default",
-                                  className: tC.bV,
+                                  className: tS.bV,
                                   children: W.intl.string(W.t.FJZmYx),
                               }),
                               children: [
                                   (0, i.jsx)(o.h, { size: 8 }),
-                                  (0, i.jsx)(y.A, { role: x, guildId: l, className: tC.gP }),
+                                  (0, i.jsx)(y.A, { role: x, guildId: l, className: tS.gP }),
                               ],
                           }),
                       (0, i.jsx)(tT, { header: W.intl.string(W.t.LtfhAj), benefits: c, guildId: l }),
                       (0, i.jsx)(tT, { header: W.intl.string(W.t["8oxWpO"]), benefits: m, guildId: l }),
-                      (0, i.jsx)(tL, { guildId: l, listingId: e }),
+                      (0, i.jsx)(tk, { guildId: l, listingId: e }),
                   ],
               });
     },
-    tk = (t) => {
+    tL = (t) => {
         let { onToggle: e, isViewAll: l, showMoreText: n } = t,
             s = l ? W.intl.string(W.t["r/xxPU"]) : n;
         return (0, i.jsx)(m.Q, { text: s, onClick: e, textVariant: "text-xs/medium", variant: "secondary" });
     },
-    tD = (t) => {
+    tP = (t) => {
         let e,
             { listingId: l, guildId: s, groupListingId: d, analyticsLocation: o } = t,
             m = (0, I.dB)(l),
             {
                 openModal: p,
                 canOpenModal: A,
-                cannotOpenReason: C,
+                cannotOpenReason: S,
                 isCheckingTrialEligibility: T,
             } = ((t, e, l, s) => {
                 let a,
@@ -419,13 +419,13 @@ let tT = (t) => {
                     h = t?.published === !0,
                     g = m?.sku_id,
                     j = (0, r.bG)([th.A], () => (null != x ? th.A.get(x) : null)),
-                    { activeSubscription: v, activeSubscriptionPlanFromStore: p } = (0, S.A)(l),
+                    { activeSubscription: v, activeSubscriptionPlanFromStore: p } = (0, C.A)(l),
                     f = null == v || null != p,
                     b = (0, I.cY)(l, { includeSoftDeleted: !0 }).map((t) => t.subscription_plans[0].id),
                     A = (0, tg.l)(v),
                     N = null != A,
                     E = !!v?.hasActiveTrial,
-                    { loading: C, getTrialPurchaseEligibility: T } = (() => {
+                    { loading: S, getTrialPurchaseEligibility: T } = (() => {
                         let [t, e] = n.useState(!1),
                             [l, i] = n.useState(null);
                         return {
@@ -443,10 +443,10 @@ let tT = (t) => {
                             }, []),
                         };
                     })(),
-                    L = (0, I.dL)(t?.id),
+                    k = (0, I.dL)(t?.id),
                     { analyticsLocations: y } = (0, tr.Ay)(),
-                    k = v?.isPurchasedViaAppleGeneric,
-                    D = !c && null != j && f && !u && !N && !E && !k;
+                    L = v?.isPurchasedViaAppleGeneric,
+                    P = !c && null != j && f && !u && !N && !E && !L;
                 u || (c && !d)
                     ? (a = W.intl.string(W.t.pQK5ho))
                     : A === x
@@ -457,8 +457,8 @@ let tT = (t) => {
                         ? (a = W.intl.string(W.t.ePFYOS))
                         : E
                           ? (a = W.intl.string(W.t["0lPoT2"]))
-                          : k && (a = W.intl.string(W.t.cEMaCt));
-                let G = (0, _.A)(Y.Yl);
+                          : L && (a = W.intl.string(W.t.cEMaCt));
+                let D = (0, _.A)(Y.Yl);
                 n.useEffect(() => {
                     h &&
                         null != g &&
@@ -466,16 +466,16 @@ let tT = (t) => {
                             (0, ta.ur)(g);
                         });
                 }, [h, g]);
-                let R = n.useCallback(async () => {
+                let G = n.useCallback(async () => {
                         let l, n;
                         if (
                             (tl()(null != t, "No subscription listing"),
                             tl()(null != m, "No subscription plan"),
                             tl()(h, "Cannot purchase this unpublished plan"),
-                            L?.active_trial != null)
+                            k?.active_trial != null)
                         ) {
-                            let i = await T(e, t.id, L.active_trial.id);
-                            i?.is_eligible === !0 ? (l = L?.active_trial?.id) : (n = W.intl.string(W.t.vuvsK5));
+                            let i = await T(e, t.id, k.active_trial.id);
+                            i?.is_eligible === !0 ? (l = k?.active_trial?.id) : (n = W.intl.string(W.t.vuvsK5));
                         }
                         !(function (t) {
                             let {
@@ -497,24 +497,25 @@ let tT = (t) => {
                             tx.UnifiedCheckoutFlowManagerSingletons[tx.CL.GUILD_ROLE_CHECKOUT]
                                 .get()
                                 .openCheckoutModal({
-                                    skuId: a,
-                                    initialPlanId: e,
-                                    activeSubscription: l,
-                                    onClose: i,
-                                    analyticsObject: n,
-                                    analyticsLocations: s,
+                                    checkoutConfiguration: { skuId: a, activeSubscription: l },
+                                    unifiedCheckoutProviderProps: { analyticsLocations: s },
+                                    forwardedPaymentModalProps: {
+                                        trialId: d,
+                                        initialPlanId: e,
+                                        analyticsObject: n,
+                                        analyticsLocation: o,
+                                        analyticsSubscriptionType: u,
+                                        renderPurchaseConfirmation: m,
+                                        planGroup: x,
+                                        reviewWarningMessage: h,
+                                    },
+                                    checkoutHandlers: { onClose: i },
                                     modalAPIOptions: { modalKey: "guild-role-subscription-payment-modal" },
                                     tenantParams: { listing: r, guildId: c },
-                                    trialId: d,
-                                    analyticsLocation: o,
-                                    analyticsSubscriptionType: u,
-                                    renderPurchaseConfirmation: m,
-                                    planGroup: x,
-                                    reviewWarningMessage: h,
                                 });
                         })({
                             activeSubscription: v,
-                            analyticsSubscriptionType: tS.rzx.GUILD,
+                            analyticsSubscriptionType: tC.rzx.GUILD,
                             trialId: l,
                             analyticsLocations: y,
                             analyticsLocation: s,
@@ -522,25 +523,25 @@ let tT = (t) => {
                             skuId: m.sku_id,
                             planGroup: b,
                             renderPurchaseConfirmation: (l, n) =>
-                                G
+                                D
                                     ? (0, i.jsx)(tI, { listing: t, onClose: n, guildId: e })
                                     : (0, i.jsx)(tE.X, { listing: t, onClose: n, guildId: e }),
                             reviewWarningMessage: n,
                             listing: t,
                             guildId: e,
                         });
-                    }, [h, t, m, v, b, e, y, s, T, L, G]),
-                    P = n.useCallback(() => {
+                    }, [h, t, m, v, b, e, y, s, T, k, D]),
+                    R = n.useCallback(() => {
                         (0, tc.Ze)(e);
                     }, [e]);
-                return { openModal: d ? P : R, canOpenModal: D, cannotOpenReason: a, isCheckingTrialEligibility: C };
+                return { openModal: d ? R : G, canOpenModal: P, cannotOpenReason: a, isCheckingTrialEligibility: S };
             })(m, s, d, o),
-            L = (0, r.bG)([b.A], () => b.A.isSyncing),
-            { activeSubscription: y, activeSubscriptionListing: D } = (0, S.A)(d),
-            G = D?.id === l,
-            R = y?.status === tS.Dmq.CANCELED,
-            [P, U] = n.useState(!1),
-            [M, O] = n.useState(!1),
+            k = (0, r.bG)([b.A], () => b.A.isSyncing),
+            { activeSubscription: y, activeSubscriptionListing: P } = (0, C.A)(d),
+            D = P?.id === l,
+            G = y?.status === tC.Dmq.CANCELED,
+            [R, M] = n.useState(!1),
+            [U, O] = n.useState(!1),
             F = n.useCallback((t) => {
                 let e = !1;
                 null != t && (e = t.scrollHeight - t.clientHeight > 1), O(e);
@@ -568,12 +569,12 @@ let tT = (t) => {
             tv = W.intl.string(W.t.KzmEA9);
         return (te || J) && !ti
             ? (0, i.jsxs)("article", {
-                  className: tC.kL,
+                  className: tS.kL,
                   "aria-label": w,
                   children: [
                       X &&
                           (0, i.jsxs)("div", {
-                              className: a()(tC.G_, tC.rF),
+                              className: a()(tS.G_, tS.rF),
                               children: [
                                   W.intl.format(W.t.L2ouip, {
                                       trialPeriodDuration: (0, N.Gg)({
@@ -586,16 +587,16 @@ let tT = (t) => {
                                       children: (0, i.jsx)(x.m, {
                                           size: "xs",
                                           color: "currentColor",
-                                          className: tC.Xz,
+                                          className: tS.Xz,
                                       }),
                                   }),
                               ],
                           }),
                       (0, i.jsxs)("div", {
-                          className: X ? void 0 : tC.e1,
+                          className: X ? void 0 : tS.e1,
                           children: [
                               (0, i.jsxs)("div", {
-                                  className: tC.Og,
+                                  className: tS.Og,
                                   children: [
                                       H
                                           ? (0, i.jsx)(tt, {
@@ -609,13 +610,13 @@ let tT = (t) => {
                                           (0, i.jsxs)(h.B, {
                                               gap: 16,
                                               children: [
-                                                  H && (0, i.jsx)("div", { className: tC.yF }),
-                                                  G
+                                                  H && (0, i.jsx)("div", { className: tS.yF }),
+                                                  D
                                                       ? (0, i.jsx)(g.$, {
                                                             disabled: !0,
                                                             fullWidth: !0,
-                                                            variant: R ? "secondary" : "primary",
-                                                            text: R
+                                                            variant: G ? "secondary" : "primary",
+                                                            text: G
                                                                 ? W.intl.string(W.t.iKHmu0)
                                                                 : W.intl.string(W.t.XvAuMo),
                                                         })
@@ -624,17 +625,17 @@ let tT = (t) => {
                                                                 A
                                                                     ? null
                                                                     : (0, i.jsx)(j.p, {
-                                                                          className: tC.Ht,
+                                                                          className: tS.Ht,
                                                                           messageType: j.Y.INFO,
-                                                                          children: C,
+                                                                          children: S,
                                                                       }),
                                                                 (0, i.jsx)(g.$, {
                                                                     fullWidth: !0,
                                                                     text: W.intl.string(W.t.fM5ZsX),
-                                                                    disabled: !A || L,
+                                                                    disabled: !A || k,
                                                                     loading: T,
                                                                     onClick: p,
-                                                                    icon: k.A,
+                                                                    icon: L.A,
                                                                     variant: "primary",
                                                                 }),
                                                             ],
@@ -646,13 +647,13 @@ let tT = (t) => {
                                                           (0, i.jsx)(v.E, {
                                                               variant: "text-sm/normal",
                                                               color: "text-default",
-                                                              className: a()((!M || !P) && tC.Zp),
+                                                              className: a()((!U || !R) && tS.Zp),
                                                               children: (0, i.jsx)("div", { ref: F, children: V }),
                                                           }),
-                                                          M &&
-                                                              (0, i.jsx)(tk, {
-                                                                  isViewAll: P,
-                                                                  onToggle: () => U((t) => !t),
+                                                          U &&
+                                                              (0, i.jsx)(tL, {
+                                                                  isViewAll: R,
+                                                                  onToggle: () => M((t) => !t),
                                                                   showMoreText: tv,
                                                               }),
                                                       ],

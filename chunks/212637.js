@@ -51,17 +51,14 @@ async function g(e) {
     };
     if ((0, u.T)() && null != I)
         return c.UnifiedCheckoutFlowManagerSingletons[c.CL.GUILD_BOOST_CHECKOUT].get().openCheckoutModal({
-            skuId: p.pe.GUILD,
-            guildId: I,
-            applicationId: O,
-            activeSubscription: L,
-            onClose: (e) => {
-                null != S && S(e);
+            checkoutConfiguration: { skuId: p.pe.GUILD, applicationId: O, activeSubscription: L },
+            forwardedPaymentModalProps: { guildId: I, onSubscriptionConfirmation: v, analyticsObject: g },
+            checkoutHandlers: {
+                onClose: (e) => {
+                    null != S && S(e);
+                },
             },
-            onSubscriptionConfirmation: v,
-            analyticsObject: g,
-            analyticsLocations: t,
-            analyticsSourceLocation: A ?? g,
+            unifiedCheckoutProviderProps: { analyticsLocations: t, analyticsSourceLocation: A ?? g },
             modalAPIOptions: { modalKey: m, contextKey: D, onCloseCallback: w },
             tenantParams: {
                 guildId: I,

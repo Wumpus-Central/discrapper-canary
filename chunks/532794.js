@@ -258,7 +258,7 @@ function S(e) {
         n.e("32606"),
         n.e("28154"),
         n.e("4369"),
-        n.e("34530"),
+        n.e("34236"),
         n.e("11523"),
         n.e("4361"),
         n.e("77473"),
@@ -332,7 +332,7 @@ function S(e) {
         n.e("32551"),
         n.e("62680"),
         n.e("26171"),
-        n.e("26803"),
+        n.e("43426"),
         n.e("96443"),
         n.e("65743"),
         n.e("87079"),
@@ -374,51 +374,50 @@ function S(e) {
         .then((e) => {
             let { UnifiedCheckoutFlowManagerSingletons: n } = e;
             return n[c.C.PREMIUM_CHECKOUT].get().openCheckoutModal({
-                skuId: W ?? null,
-                analyticsObject: v,
-                analyticsSourceLocation: O,
-                analyticsLocations: N,
-                onClose: S,
-                onComplete: y,
-                initialPlanId: t,
-                analyticsLocation: R,
-                followupSKUInfo: i,
-                onSubscriptionConfirmation: C,
-                postSuccessGuild: k,
-                trialId: x,
-                planGroup: T.LE,
-                openInvoiceId: U,
-                applicationId: G,
-                returnRef: B,
-                subscriptionTier: P,
-                skipConfirm: !!H,
-                paymentModalOnClose: (e) =>
-                    ((e, t) => {
-                        if (z) return;
-                        (z = !0), E._.dispatch(A.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED);
-                        let n = async () => {
-                            if (
-                                (null != t && t(),
-                                a.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
-                                e && null != $ && K.endDate >= new Date())
-                            ) {
-                                await (0, d.RE)($);
-                                let e = _.A.getProduct($);
-                                null != e &&
-                                    (0, h.A)({
-                                        product: e,
-                                        analyticsLocations: N ?? [],
-                                        purchaseType: I.gs.PROMOTIONAL,
-                                        overrideGradientColor: "nitro-pink",
-                                    });
-                            }
-                        };
-                        f.A.isDisplayingWowMomentConfirmation && f.A.isAnimated
-                            ? setTimeout(() => {
-                                  n();
-                              }, g.K)
-                            : n();
-                    })(e, X),
+                checkoutConfiguration: { applicationId: G, skuId: W ?? null },
+                forwardedPaymentModalProps: {
+                    analyticsObject: v,
+                    initialPlanId: t,
+                    analyticsLocation: R,
+                    followupSKUInfo: i,
+                    onSubscriptionConfirmation: C,
+                    postSuccessGuild: k,
+                    trialId: x,
+                    planGroup: T.LE,
+                    openInvoiceId: U,
+                    returnRef: B,
+                    subscriptionTier: P,
+                    skipConfirm: !!H,
+                    paymentModalOnClose: (e) =>
+                        ((e, t) => {
+                            if (z) return;
+                            (z = !0), E._.dispatch(A.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED);
+                            let n = async () => {
+                                if (
+                                    (null != t && t(),
+                                    a.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
+                                    e && null != $ && K.endDate >= new Date())
+                                ) {
+                                    await (0, d.RE)($);
+                                    let e = _.A.getProduct($);
+                                    null != e &&
+                                        (0, h.A)({
+                                            product: e,
+                                            analyticsLocations: N ?? [],
+                                            purchaseType: I.gs.PROMOTIONAL,
+                                            overrideGradientColor: "nitro-pink",
+                                        });
+                                }
+                            };
+                            f.A.isDisplayingWowMomentConfirmation && f.A.isAnimated
+                                ? setTimeout(() => {
+                                      n();
+                                  }, g.K)
+                                : n();
+                        })(e, X),
+                },
+                unifiedCheckoutProviderProps: { analyticsSourceLocation: O, analyticsLocations: N },
+                checkoutHandlers: { onClose: S, onComplete: y },
                 giftContextProps: { isGift: D, giftMessage: L, giftStyle: w, giftingOrigin: M, giftRecipient: V },
                 tenantParams: {
                     confirmationFooter: b,

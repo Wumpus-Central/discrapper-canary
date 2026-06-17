@@ -32,10 +32,9 @@ function p(e) {
                         return m.UnifiedCheckoutFlowManagerSingletons[u.C.GUILD_PRODUCT_CHECKOUT]
                             .get()
                             .openCheckoutModal({
-                                skuId: l,
-                                applicationId: t.application_id,
+                                checkoutConfiguration: { skuId: l, applicationId: t.application_id },
                                 tenantParams: { guildId: n },
-                                analyticsLocations: Array.isArray(i) ? i : [i],
+                                unifiedCheckoutProviderProps: { analyticsLocations: Array.isArray(i) ? i : [i] },
                                 modalAPIOptions: {
                                     modalKey: "guild-product-purchase-modal",
                                     onCloseCallback() {

@@ -673,7 +673,6 @@ let tx = (0, s.createContext)({
         confettiCanvas: null,
         hideConfirmStepConfetti: !1,
         skuIDs: [],
-        onStepChange: void 0,
     }),
     tk = () => (0, s.useContext)(tx),
     tU = (e) => {
@@ -808,15 +807,15 @@ let tx = (0, s.createContext)({
         TENANT_PROVIDER_CONFIGS: {
             tenantProvidesCheckoutRoot: !0,
             CustomTenantProvider: (e) => {
-                let { skuId: t, additionalOptions: n, children: i, ...a } = e,
+                let { skuId: t, children: n, ...i } = e,
                     {
-                        environment: o,
-                        confettiCanvas: l,
-                        setConfettiCanvas: u,
-                        customConfettiVisible: c,
-                        setCustomConfettiVisible: d,
-                        customConfettiDisplayOptions: _,
-                        hideConfirmStepConfetti: h,
+                        environment: a,
+                        confettiCanvas: o,
+                        setConfettiCanvas: l,
+                        customConfettiVisible: u,
+                        setCustomConfettiVisible: c,
+                        customConfettiDisplayOptions: d,
+                        hideConfirmStepConfetti: _,
                     } = ((e) => {
                         let { skuId: t } = e,
                             n = s.useRef(new eP.OH()),
@@ -833,50 +832,48 @@ let tx = (0, s.createContext)({
                             hideConfirmStepConfetti: null != l,
                         };
                     })({ skuId: t }),
-                    f = ((e) => {
+                    h = ((e) => {
                         let { skuId: t } = e;
                         return null != t ? [t] : [];
                     })({ skuId: t }),
-                    p = null != n ? n.onStepChange : void 0,
-                    E = (0, s.useMemo)(
+                    f = (0, s.useMemo)(
                         () => ({
-                            skuIDs: f,
-                            setCustomConfettiVisible: d,
-                            hideConfirmStepConfetti: h,
-                            confettiCanvas: l,
-                            onStepChange: p,
+                            skuIDs: h,
+                            setCustomConfettiVisible: c,
+                            hideConfirmStepConfetti: _,
+                            confettiCanvas: o,
                         }),
-                        [f, d, h, l, p],
+                        [h, c, _, o],
                     );
                 return (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)(eB, {
-                            environment: o,
-                            setConfettiCanvas: u,
-                            customConfettiDisplayOptions: _,
-                            customConfettiVisible: c,
+                            environment: a,
+                            setConfettiCanvas: l,
+                            customConfettiDisplayOptions: d,
+                            customConfettiVisible: u,
                         }),
                         (0, r.jsx)(y.M, {
-                            ...a,
-                            skuIDs: f,
-                            stepConfigs: a.stepConfigs,
+                            ...i,
+                            skuIDs: h,
+                            stepConfigs: i.stepConfigs,
                             activeSubscription: null,
                             purchaseType: tP.VV.ONE_TIME,
                             excludeSubscriptionPlansBySKU: !0,
-                            children: (0, r.jsx)(tx.Provider, { value: E, children: i }),
+                            children: (0, r.jsx)(tx.Provider, { value: f, children: n }),
                         }),
                     ],
                 });
             },
             TenantPaymentModalRenderer: (e) => {
                 let { originalPaymentModalProps: t, renderPaymentModal: n } = e,
-                    { skuIDs: i, setCustomConfettiVisible: r, onStepChange: a } = tk(),
-                    { isGift: o } = (0, eM.Pv)(),
-                    l = (0, ew.J)(),
+                    { skuIDs: i, setCustomConfettiVisible: r } = tk(),
+                    { isGift: a } = (0, eM.Pv)(),
+                    o = (0, ew.J)(),
                     {
-                        paymentModalSkuId: u,
-                        paymentModalOnClose: c,
-                        paymentModalOnComplete: d,
+                        paymentModalSkuId: l,
+                        paymentModalOnClose: u,
+                        paymentModalOnComplete: c,
                     } = ((e) => {
                         let { skuIDs: t, onClose: n, onComplete: i, setCustomConfettiVisible: r } = e,
                             a = t[0] ?? null,
@@ -894,13 +891,13 @@ let tx = (0, s.createContext)({
                             paymentModalOnComplete: o,
                         };
                     })({ onClose: t.onClose, onComplete: t.onComplete, skuIDs: i, setCustomConfettiVisible: r }),
-                    _ = s.useCallback(
+                    d = s.useCallback(
                         (e) => {
-                            c(e), e && o && l();
+                            u(e), e && a && o();
                         },
-                        [c, o, l],
+                        [u, a, o],
                     );
-                return n({ ...t, skuId: u, onClose: _, onComplete: d, applicationId: q.FYj, onStepChange: a });
+                return n({ ...t, skuId: l, onClose: d, onComplete: c, applicationId: q.FYj });
             },
             tenantAnalyticsLocation: T.A.COLLECTIBLES_PAYMENT_MODAL,
         },
@@ -3547,8 +3544,8 @@ let rq = { key: null, renderStep: (e) => (0, r.jsx)(rF, { ...e }), options: { mo
         [h.C.GUILD_ROLE_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
     },
     r0 = (0, s.lazy)(() =>
-        Promise.all([n.e("17072"), n.e("93438"), n.e("54791"), n.e("25246"), n.e("33319"), n.e("87298")])
-            .then(n.bind(n, 246681))
+        Promise.all([n.e("17072"), n.e("93438"), n.e("54791"), n.e("25246"), n.e("33319"), n.e("8430")])
+            .then(n.bind(n, 427325))
             .then((e) => {
                 let { UnifiedCheckoutInstance: t } = e;
                 return { default: t };
@@ -3686,57 +3683,54 @@ class r2 {
     }
     renderCheckoutInstance(e) {
         let {
-                additionalOptions: t,
-                giftContextProps: i,
-                onComplete: u,
-                onClose: d,
-                skuId: _,
-                skuProductLine: f,
-                discoverySessionId: p,
-                applicationId: E,
-                analyticsSourceLocation: g,
-                analyticsLocations: A,
-                analyticsObject: I,
-                tenantParams: T,
-                activeSubscription: S = null,
-                ...y
+                giftContextProps: t,
+                checkoutHandlers: { onComplete: i, onClose: u } = {},
+                checkoutConfiguration: {
+                    skuId: d,
+                    skuProductLine: _,
+                    discoverySessionId: f,
+                    applicationId: p,
+                    activeSubscription: E,
+                },
+                unifiedCheckoutProviderProps: { analyticsLocations: g, analyticsSourceLocation: A },
+                forwardedPaymentModalProps: { analyticsObject: I, ...T } = {},
+                tenantParams: S,
             } = e,
-            C = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
-            v = arguments.length > 2 ? arguments[2] : void 0,
-            R = { current: (this.checkoutFlow === h.C.PREMIUM_CHECKOUT ? (0, c.A)() : null) ?? (0, a.A)() },
-            O = { current: null },
-            { modalKey: b } = v,
-            D = this.generateRenderHeader(),
-            L = E ?? this.getApplicationId(_),
-            w = !!(null != i && i.isGift),
-            M = !1,
-            P = {
-                ...y,
+            y = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
+            C = arguments.length > 2 ? arguments[2] : void 0,
+            v = { current: (this.checkoutFlow === h.C.PREMIUM_CHECKOUT ? (0, c.A)() : null) ?? (0, a.A)() },
+            R = { current: null },
+            { modalKey: O } = C,
+            b = this.generateRenderHeader(),
+            D = p ?? this.getApplicationId(d),
+            L = !!(null != t && t.isGift),
+            w = !1,
+            M = {
+                ...T,
                 checkoutFlow: this.checkoutFlow,
                 checkoutFlowConfiguration: this.checkoutFlowConfiguration,
                 tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
-                stepConfigs: this.generateCheckoutStepConfigs({ isGift: w }),
+                stepConfigs: this.generateCheckoutStepConfigs({ isGift: L }),
                 onComplete: (e) => {
-                    null != u && u(e), (M = !0);
+                    null != i && i(e), (w = !0);
                 },
-                onClose: d,
-                renderHeader: D,
-                skuId: _ ?? null,
-                tenantParams: T ?? {},
-                loadId: R.current,
+                onClose: u,
+                renderHeader: b,
+                skuId: d ?? null,
+                tenantParams: S ?? {},
+                loadId: v.current,
                 onOrderCreated: (e) => {
-                    (R.current = e.id), (O.current = e);
+                    (v.current = e.id), (R.current = e);
                 },
-                discoverySessionId: p,
-                activeSubscription: S,
-                applicationId: L,
-                analyticsLocations: A,
+                discoverySessionId: f,
+                activeSubscription: E ?? null,
+                applicationId: D,
+                analyticsLocations: g,
                 analyticsObject: I,
-                analyticsSourceLocation: g,
-                giftContextProps: i,
-                additionalOptions: t,
+                analyticsSourceLocation: A,
+                giftContextProps: t,
             };
-        if ("modal" === C)
+        if ("modal" === y)
             return (0, o.openModalLazy)(
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.all([
@@ -3745,40 +3739,40 @@ class r2 {
                         n.e("54791"),
                         n.e("25246"),
                         n.e("33319"),
-                        n.e("87298"),
-                    ]).then(n.bind(n, 246681));
-                    return (t) => (0, r.jsx)(e, { ...P, renderModalProps: t });
+                        n.e("8430"),
+                    ]).then(n.bind(n, 427325));
+                    return (t) => (0, r.jsx)(e, { ...M, renderModalProps: t });
                 },
                 {
-                    ...v,
+                    ...C,
                     onCloseRequest: () => {
-                        null != v.onCloseRequest && v.onCloseRequest(M, R.current),
-                            v.skipCloseModalOnCloseRequest || (0, o.closeModal)(b);
+                        null != C.onCloseRequest && C.onCloseRequest(w, v.current),
+                            C.skipCloseModalOnCloseRequest || (0, o.closeModal)(O);
                     },
                     onCloseCallback: () => {
-                        M ||
-                            (m({ checkoutSucceeded: M, order: O.current }),
+                        w ||
+                            (m({ checkoutSucceeded: w, order: R.current }),
                             this.trackPaymentFlowCanceled({
-                                loadId: R.current,
-                                skuId: _,
-                                skuProductLine: f,
-                                applicationId: L,
-                                discoverySessionId: p,
-                                analyticsLocation: y.analyticsLocation,
-                                analyticsLocations: A,
+                                loadId: v.current,
+                                skuId: d,
+                                skuProductLine: _,
+                                applicationId: D,
+                                discoverySessionId: f,
+                                analyticsLocation: T.analyticsLocation,
+                                analyticsLocations: g,
                                 analyticsObject: I,
-                                analyticsSourceLocation: g,
-                                isGift: w,
-                                eligibleForTrial: null != y.trialId,
+                                analyticsSourceLocation: A,
+                                isGift: L,
+                                eligibleForTrial: null != T.trialId,
                             })),
-                            null != v.onCloseCallback && v.onCloseCallback(M),
-                            null != d && d(M, _);
+                            null != C.onCloseCallback && C.onCloseCallback(w),
+                            null != u && u(w, d);
                     },
-                    modalKey: b,
+                    modalKey: O,
                 },
             );
         {
-            let e = y.paymentModalOnClose ?? d,
+            let e = T.paymentModalOnClose ?? u,
                 t = { transitionState: l.ip.ENTERED, onClose: () => (null != e && e(!1), Promise.resolve()) };
             return (0, r.jsx)(s.Suspense, {
                 fallback: (0, r.jsx)(N.Jg, {
@@ -3787,7 +3781,7 @@ class r2 {
                     size: "md",
                     isModalContentLoading: !0,
                 }),
-                children: (0, r.jsx)(r1, { ...P, paymentModalOnClose: e, renderModalProps: t }),
+                children: (0, r.jsx)(r1, { ...M, paymentModalOnClose: e, renderModalProps: t }),
             });
         }
     }

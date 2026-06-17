@@ -1,75 +1,75 @@
 e.d(t, {
     a: () =>
         function i(t, e) {
-            let { isGift: l, giftRecipient: p, giftingOrigin: u, additionalUserIds: h } = e,
+            let { isGift: o, giftRecipient: u, giftingOrigin: p, additionalUserIds: h } = e,
                 {
-                    discoverySessionId: _,
-                    analyticsLocations: k,
+                    discoverySessionId: k,
+                    analyticsLocations: _,
                     guildId: g,
                     isEligibilityCheckContinuation: C,
                     checkoutState: I,
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
                 E = s.A.getSKUEligibilityEntry(t.id),
-                y = E?.state,
-                L = !l && (null == y || "checking" === y || "ineligible" === y);
-            if (!L && !C) {
+                f = E?.state,
+                y = !o && (null == f || "checking" === f || "ineligible" === f);
+            if (!y && !C) {
                 let i = "none";
-                l ? (i = "gift") : "eligible" === y ? (i = "already_eligible") : "error" === y && (i = "prior_error"),
-                    o.default.track(r.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
+                o ? (i = "gift") : "eligible" === f ? (i = "already_eligible") : "error" === f && (i = "prior_error"),
+                    l.default.track(r.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
                         sku_id: t.id,
                         guild_id: g ?? null,
                         application_id: t.applicationId,
-                        is_gift: l,
-                        eligibility_state: y ?? "none",
+                        is_gift: o,
+                        eligibility_state: f ?? "none",
                         skip_reason: i,
                         error_http_status: E?.state === "error" ? (E.httpStatus ?? null) : null,
-                        location_stack: k,
+                        location_stack: _,
                     });
             }
-            let S = I ?? { hasFinished: !1 };
-            L
+            let L = I ?? { hasFinished: !1 };
+            y
                 ? (0, d.L)({
                       guildId: g,
                       applicationId: t.applicationId,
                       skuId: t.id,
-                      analyticsLocations: k ?? [],
+                      analyticsLocations: _ ?? [],
                       onContinue: () => {
-                          if (!S.hasFinished)
+                          if (!L.hasFinished)
                               return i(
                                   t,
-                                  { isGift: l, giftRecipient: p, giftingOrigin: u, additionalUserIds: h },
+                                  { isGift: o, giftRecipient: u, giftingOrigin: p, additionalUserIds: h },
                                   {
-                                      discoverySessionId: _,
-                                      analyticsLocations: k,
+                                      discoverySessionId: k,
+                                      analyticsLocations: _,
                                       guildId: g,
                                       isEligibilityCheckContinuation: !0,
-                                      checkoutState: S,
+                                      checkoutState: L,
                                   },
                               );
                       },
                   })
                 : c({
-                      discoverySessionId: _,
+                      discoverySessionId: k,
                       sku: t,
-                      analyticsLocations: k ?? [],
-                      isGift: l,
-                      giftRecipient: p,
-                      giftingOrigin: u,
+                      analyticsLocations: _ ?? [],
+                      isGift: o,
+                      giftRecipient: u,
+                      giftingOrigin: p,
                       additionalUserIds: h,
                       onCloseCallback: () => {
-                          (0, a.ET)(), (0, n.z)(), (0, d.l)(), (S.hasFinished = !0);
+                          (0, n.ET)(), (0, a.z)(), (0, d.l)(), (L.hasFinished = !0);
                       },
                       onComplete: () => {
-                          S.hasFinished = !0;
+                          L.hasFinished = !0;
                       },
                       modalKey: "slayer-payment-modal",
                   });
         },
 });
-var a = e(391048),
-    n = e(636099),
-    l = e(529427),
-    o = e(174459),
+var n = e(391048),
+    a = e(636099),
+    o = e(529427),
+    l = e(174459),
     s = e(832163),
     d = e(556808),
     r = e(652215);
@@ -77,25 +77,27 @@ let c = (i) => {
     let {
         discoverySessionId: t,
         sku: e,
-        analyticsLocations: a,
-        isGift: n,
-        giftRecipient: o,
+        analyticsLocations: n,
+        isGift: a,
+        giftRecipient: l,
         additionalUserIds: s,
         giftingOrigin: d,
         onCloseCallback: r,
         onComplete: c,
-        modalKey: p,
+        modalKey: u,
     } = i;
-    return l.UnifiedCheckoutFlowManagerSingletons[l.CL.SLAYER_STOREFRONT_CHECKOUT]
+    return o.UnifiedCheckoutFlowManagerSingletons[o.CL.SLAYER_STOREFRONT_CHECKOUT]
         .get()
         .openCheckoutModal({
-            discoverySessionId: t,
-            applicationId: e.applicationId,
-            skuId: e.id,
-            skuProductLine: e.productLine,
-            analyticsLocations: a,
-            onComplete: c,
-            giftContextProps: { isGift: n, giftRecipient: o, giftingOrigin: d, additionalUserIds: s },
-            modalAPIOptions: { modalKey: p, onCloseCallback: r },
+            checkoutConfiguration: {
+                discoverySessionId: t,
+                applicationId: e.applicationId,
+                skuId: e.id,
+                skuProductLine: e.productLine,
+            },
+            unifiedCheckoutProviderProps: { analyticsLocations: n },
+            checkoutHandlers: { onComplete: c },
+            giftContextProps: { isGift: a, giftRecipient: l, giftingOrigin: d, additionalUserIds: s },
+            modalAPIOptions: { modalKey: u, onCloseCallback: r },
         });
 };
