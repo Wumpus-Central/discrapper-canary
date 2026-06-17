@@ -99,9 +99,8 @@ let N = (e, t, n, r) => {
                 subscriptionId: n?.id,
                 items: null != e ? [{ planId: e, quantity: 1 }] : [],
                 renewal: null != n,
-                preventFetch: !g || r,
+                preventFetch: !g || r || !m.loaded,
                 paymentSourceId: u,
-                currency: m.currency,
                 userDiscountOfferId: t?.id,
             });
         return { priceOptions: m, discountAmountOff: null != e ? C(A, e) : null };

@@ -5,8 +5,8 @@ var i = e(627968),
     a = e.n(l),
     u = e(189213),
     c = e(17928),
-    s = e(834730),
-    o = e(289873),
+    o = e(834730),
+    s = e(289873),
     d = e(158032),
     m = e(155718),
     p = e(793574),
@@ -20,12 +20,12 @@ var i = e(627968),
     P = e(174459),
     L = e(428262),
     b = e(580630),
-    E = e(83617),
-    M = e(615396),
-    U = e(543767),
-    _ = e(137728),
-    g = e(771566),
-    h = e(788868),
+    h = e(83617),
+    E = e(615396),
+    M = e(543767),
+    U = e(137728),
+    _ = e(771566),
+    g = e(788868),
     T = e(652215),
     k = e(375708);
 let v = (t) => {
@@ -38,32 +38,32 @@ let v = (t) => {
         }),
         G = (0, c.bG)([S.A], () => (l?.paymentSourceId != null ? S.A.getPaymentSource(l.paymentSourceId) : null), [l]),
         W = l.items[0].planId,
-        B = (0, L.mH)(h.hd[W].skuId),
+        B = (0, L.mH)(g.hd[W].skuId),
         { priceOptions: K } = (0, I.A)({
             activeSubscription: null,
             skuIDs: [B],
             paymentSourceId: l?.paymentSourceId,
             isGift: !1,
         }),
-        [z] = (0, U.YV)({
+        [z] = (0, M.YV)({
             subscriptionId: l.id,
             items: [{ planId: W, quantity: 1 }],
             renewal: !0,
+            preventFetch: !K.loaded,
             paymentSourceId: l?.paymentSourceId,
-            currency: K.currency,
             analyticsLocations: (0, y.Ay)(p.A.PREMIUM_UNCANCEL_MODAL),
             analyticsLocation: p.A.PREMIUM_UNCANCEL_MODAL,
         }),
-        H = (0, c.bG)([N.A], () => (0, M.c9)(W), [W]),
-        X = (0, c.bG)([N.A], () => N.A.isFetchingForSKU(B)),
-        $ = z?.invoiceItems
+        F = (0, c.bG)([N.A], () => (0, E.c9)(W), [W]),
+        H = (0, c.bG)([N.A], () => N.A.isFetchingForSKU(B)),
+        X = z?.invoiceItems
             ?.find((t) => t.subscriptionPlanId === W)
             ?.discounts?.find((t) => t.type === m.iS.SUBSCRIPTION_PLAN)?.amount,
-        F = null != H ? (0, L.y8)(H.id, !1, !1, K) : null,
-        J = null != F && null != $ ? (0, b.$g)(F.amount - ($ ?? 0), F.currency) : null,
+        $ = null != F ? (0, L.y8)(F.id, !1, !1, K) : null,
+        J = null != $ && null != X ? (0, b.$g)($.amount - (X ?? 0), $.currency) : null,
         { intervalType: Y, intervalCount: Z } = L.Ay.getInterval(W),
-        q = e === h.PremiumTypes.TIER_1,
-        V = null != F ? (0, b.$g)(F.amount, F.currency) : null;
+        q = e === g.PremiumTypes.TIER_1,
+        V = null != $ ? (0, b.$g)($.amount, $.currency) : null;
     return (r.useEffect(() => {
         P.default.track(T.HAw.OPEN_MODAL, { type: "Premium Uncancel Winback", source: v });
     }, [v]),
@@ -77,7 +77,7 @@ let v = (t) => {
                   activeSubscription: l,
                   stepConfigs: [],
                   skuIDs: [],
-                  children: (0, i.jsx)(g.Ay, { planId: W, onClose: w, paymentSourceType: G?.type }),
+                  children: (0, i.jsx)(_.Ay, { planId: W, onClose: w, paymentSourceType: G?.type }),
               }),
           })
         : (0, i.jsx)(u.Modal, {
@@ -89,15 +89,15 @@ let v = (t) => {
               onClose: w,
               preview:
                   null !== V
-                      ? (0, i.jsx)(s.E, {
+                      ? (0, i.jsx)(o.E, {
                             variant: "text-sm/normal",
                             children: (function (t) {
                                 switch (Y) {
-                                    case h.WT.YEAR:
+                                    case g.WT.YEAR:
                                         return q
                                             ? k.intl.format(k.t.O7JRza, { price: t })
                                             : k.intl.format(k.t["0y5kAG"], { price: t });
-                                    case h.WT.MONTH:
+                                    case g.WT.MONTH:
                                         if (null != J)
                                             return k.intl.format(k.t["1/ucvu"], { discountPrice: J, defaultPrice: t });
                                         if (q) return k.intl.format(k.t.rbwRlf, { price: t });
@@ -108,16 +108,16 @@ let v = (t) => {
                                 }
                             })(V),
                         })
-                      : (0, i.jsx)(o.y, { type: o.t.SPINNING_CIRCLE }),
+                      : (0, i.jsx)(s.y, { type: s.t.SPINNING_CIRCLE }),
               actions: [
                   { text: k.intl.string(k.t.XDpS4K), variant: "secondary", onClick: w },
                   {
                       text: k.intl.string(k.t["2+luBl"]),
                       variant: "primary",
-                      disabled: X,
+                      disabled: H,
                       onClick: async () => {
                           if (null != l) {
-                              let t = (0, E.jJ)(W, l.currency, G?.id);
+                              let t = (0, h.jJ)(W, l.currency, G?.id);
                               null != G && G.id === l.paymentSourceId && t
                                   ? (await d.Ir(l, O, l.currency, G, T.ThZ.UNCANCEL_WINBACK_MODAL), D(!0))
                                   : (w(),
@@ -131,7 +131,7 @@ let v = (t) => {
                   },
               ],
               transitionState: x,
-              children: (0, i.jsx)(_.l, {
+              children: (0, i.jsx)(U.l, {
                   currentUser: j,
                   premiumType: e,
                   onClose: w,
