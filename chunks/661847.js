@@ -18,7 +18,7 @@ var n = e(627968),
     I = e(561769),
     k = e(758836),
     f = e(375708),
-    R = e(952769);
+    R = e(209921);
 let V = (t) => {
         let {
                 product: a,
@@ -52,11 +52,12 @@ let V = (t) => {
                 },
                 [a],
             ),
-            f = (0, g.A)(`shop-variants-group-${a.storeListingId}`, o.Gl.HORIZONTAL);
+            f = r.useId(),
+            V = (0, g.A)(`shop-variants-group-${a.storeListingId}-${f}`, o.Gl.HORIZONTAL);
         return 0 === C.length
             ? null
             : (0, n.jsx)(i.hD, {
-                  navigator: f,
+                  navigator: V,
                   children: (0, n.jsx)(i.PR, {
                       children: (t) => {
                           let { ref: r, ...i } = t;
