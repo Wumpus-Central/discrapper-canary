@@ -1007,6 +1007,9 @@
     --profile-gradient-section-box: hsl(var(--black-hsl)/0.45);
     --progressbar-indicator-background: var(--blurple-50);
     --progressbar-track-background: hsl(var(--opacity-20-hsl)/0.2);
+    --quest-home-tab-gradient-blurple-center: var(--blurple-50);
+    --quest-home-tab-gradient-blurple-inner: hsl(var(--blurple-50-hsl)/0.5);
+    --quest-home-tab-gradient-blurple-outer: hsl(var(--blurple-50-hsl)/0);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --radio-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
@@ -1880,6 +1883,9 @@
     --profile-gradient-section-box: hsl(var(--white-hsl)/0.45);
     --progressbar-indicator-background: var(--blurple-50);
     --progressbar-track-background: hsl(var(--opacity-24-hsl)/0.23921568627450981);
+    --quest-home-tab-gradient-blurple-center: var(--blurple-50);
+    --quest-home-tab-gradient-blurple-inner: hsl(var(--blurple-50-hsl)/0.5);
+    --quest-home-tab-gradient-blurple-outer: hsl(var(--blurple-50-hsl)/0);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --radio-background-hover: hsl(var(--opacity-4-hsl)/0.0392156862745098);
@@ -2753,6 +2759,9 @@
     --profile-gradient-section-box: hsl(var(--black-hsl)/0.45);
     --progressbar-indicator-background: var(--blurple-50);
     --progressbar-track-background: hsl(var(--opacity-24-hsl)/0.23921568627450981);
+    --quest-home-tab-gradient-blurple-center: var(--blurple-50);
+    --quest-home-tab-gradient-blurple-inner: hsl(var(--blurple-50-hsl)/0.5);
+    --quest-home-tab-gradient-blurple-outer: hsl(var(--blurple-50-hsl)/0);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --radio-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
@@ -3626,6 +3635,9 @@
     --profile-gradient-section-box: hsl(var(--black-hsl)/0.45);
     --progressbar-indicator-background: var(--blurple-50);
     --progressbar-track-background: hsl(var(--opacity-20-hsl)/0.2);
+    --quest-home-tab-gradient-blurple-center: var(--blurple-50);
+    --quest-home-tab-gradient-blurple-inner: hsl(var(--blurple-50-hsl)/0.5);
+    --quest-home-tab-gradient-blurple-outer: hsl(var(--blurple-50-hsl)/0);
     --radio-background-active: var(--blurple-65);
     --radio-background-default: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --radio-background-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);

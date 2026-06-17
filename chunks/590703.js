@@ -46,28 +46,8 @@ function g() {
                 if (null == e) return null;
                 let t = f.A.getLinearGradient();
                 return null == t ? null : (0, p.hm)(e, t);
-            }, [e]));
-    return (function (e) {
-        let {
-            guildCSS: t,
-            guildClassName: n,
-            customThemeColorCSS: i,
-            backgroundGradientCSS: r,
-            isCustomThemePreviewActive: s,
-        } = e;
-        return s && null != i
-            ? m(i)
-            : null != t
-              ? { clientThemesCSS: t, clientThemesClassName: n }
-              : null != i
-                ? m(i)
-                : null == r
-                  ? { clientThemesCSS: "", clientThemesClassName: "" }
-                  : { clientThemesCSS: r, clientThemesClassName: p.Gc };
-    })({
-        guildCSS: r,
-        guildClassName: E,
-        customThemeColorCSS: (function () {
+            }, [e])),
+        A = (function () {
             let e = (0, o.bG)([d.A], () => d.A.theme),
                 { colors: t, chassisMixAmount: n, gradientAngle: r, setAll: s } = (0, h.ko)(),
                 l = (0, o.bG)([_.A], () => _.A.settings.appearance?.clientThemeSettings?.customUserThemeSettings),
@@ -84,8 +64,33 @@ function g() {
                 }, [l, s]),
                 i.useMemo(() => (0 === t.length ? null : (0, p.dY)(t, r, n, e)), [t, n, r, e])
             );
-        })(),
+        })();
+    return (function (e) {
+        let {
+            guildCSS: t,
+            guildClassName: n,
+            customThemeColorCSS: i,
+            backgroundGradientCSS: r,
+            isCustomThemePreviewActive: s,
+            isClientThemesEditorPreviewActive: a,
+        } = e;
+        return s && null != i
+            ? m(i)
+            : a && null != r
+              ? { clientThemesCSS: r, clientThemesClassName: p.Gc }
+              : null != t
+                ? { clientThemesCSS: t, clientThemesClassName: n }
+                : null != i
+                  ? m(i)
+                  : null == r
+                    ? { clientThemesCSS: "", clientThemesClassName: "" }
+                    : { clientThemesCSS: r, clientThemesClassName: p.Gc };
+    })({
+        guildCSS: r,
+        guildClassName: E,
+        customThemeColorCSS: A,
         backgroundGradientCSS: g,
         isCustomThemePreviewActive: (0, l.fy)((e) => e.activePanel === l.HP.CUSTOM_THEME),
+        isClientThemesEditorPreviewActive: (0, l.fy)((e) => e.activePanel === l.HP.CLIENT_THEMES),
     });
 }

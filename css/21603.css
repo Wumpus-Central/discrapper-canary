@@ -20,47 +20,17 @@
     color: var(--icon-strong) !important
 }
 
-.withGradient__553bf.withQuestHomeHeroContent__553bf:before,
-.withGradient__553bf:after {
+.withOnboardingContent__553bf:after {
+    background-image: linear-gradient(90deg, #394aff, #e901d9);
     border-radius: inherit;
     bottom: 1px;
     content: "";
     inset-inline: 0;
+    opacity: .16;
     position: absolute;
     top: 1px;
     transition: opacity .125s;
     z-index: 0
-}
-
-.questHomeHeroBackgroundImage__553bf,
-.withGradient__553bf.withQuestHomeHeroContent__553bf:after,
-.withGradient__553bf.withQuestHomeHeroContent__553bf:before {
-    opacity: 0
-}
-
-.withGradient__553bf.withQuestHomeHeroContent__553bf:before {
-    background-image: linear-gradient(90deg, var(--custom-quest-home-hero-linear-gradient-start), var(--custom-quest-home-hero-linear-gradient-end))
-}
-
-.withGradient__553bf.withQuestHomeHeroContent__553bf:after {
-    background-image: radial-gradient(100% 80px at center 230%, var(--custom-quest-home-hero-radial-gradient-start), var(--custom-quest-home-hero-radial-gradient-end))
-}
-
-.withGradient__553bf.withQuestHomeHeroContent__553bf:focus-within:before,
-.withGradient__553bf.withQuestHomeHeroContent__553bf:hover:before {
-    opacity: .4
-}
-
-.withGradient__553bf.withQuestHomeHeroContent__553bf:focus-within:after,
-.withGradient__553bf.withQuestHomeHeroContent__553bf:hover:after,
-.withQuestHomeHeroContent__553bf:focus-within .questHomeHeroBackgroundImage__553bf,
-.withQuestHomeHeroContent__553bf:hover .questHomeHeroBackgroundImage__553bf {
-    opacity: 1
-}
-
-.withOnboardingContent__553bf:after {
-    background-image: linear-gradient(90deg, #394aff, #e901d9);
-    opacity: .16
 }
 
 .withOnboardingContent__553bf:focus-within:after,
@@ -114,10 +84,16 @@
     object-fit: contain;
     -o-object-position: right;
     object-position: right;
+    opacity: 0;
     position: absolute;
     top: 0;
     transition: .125s;
     width: auto
+}
+
+.withQuestHomeHeroContent__553bf:focus-within .questHomeHeroBackgroundImage__553bf,
+.withQuestHomeHeroContent__553bf:hover .questHomeHeroBackgroundImage__553bf {
+    opacity: 1
 }
 
 .devBanner__56d75 {
