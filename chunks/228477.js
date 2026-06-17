@@ -4115,6 +4115,12 @@ function n1() {
                     color: "text-strong",
                     children: "Application Widget Configs",
                 }),
+                (0, r.jsx)(m.$, {
+                    size: "sm",
+                    variant: "critical-secondary",
+                    text: "Reset store",
+                    onClick: () => tP.h.dispatch({ type: "APPLICATION_WIDGET_CONFIG_DEBUG_RESET" }),
+                }),
                 (0, r.jsx)(nJ, {}),
                 (0, r.jsx)(j.c, {}),
                 (0, r.jsx)(nQ, {}),

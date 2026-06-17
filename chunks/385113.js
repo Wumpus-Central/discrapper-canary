@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E, e: () => a });
+n.d(t, { A: () => m, e: () => a });
 var i,
     r = n(17928),
     s = n(228366),
@@ -26,7 +26,10 @@ function f(e) {
         (l = { ...l }), (u = { ...u, ...Object.fromEntries(Object.keys(e).map((e) => [e, "SUCCESS"])) });
     }
 }
-class p extends r.Ay.Store {
+function p() {
+    (l = {}), (u = {}), (c = "NOT_FETCHED"), (d = []), (_ = "NOT_FETCHED"), (h = []);
+}
+class E extends r.Ay.Store {
     static displayName = "ApplicationWidgetConfigStore";
     getConfig(e) {
         return l[e]?.[0] ?? void 0;
@@ -53,10 +56,9 @@ class p extends r.Ay.Store {
         return h;
     }
 }
-let E = new p(s.h, {
-    LOGOUT: function () {
-        (l = {}), (u = {}), (c = "NOT_FETCHED"), (d = []), (_ = "NOT_FETCHED"), (h = []);
-    },
+let m = new E(s.h, {
+    LOGOUT: p,
+    APPLICATION_WIDGET_CONFIG_DEBUG_RESET: p,
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_START: function (e) {
         c = "FETCHING";
     },
@@ -66,7 +68,7 @@ let E = new p(s.h, {
     APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_FAILURE: function () {
         c = "FAILURE";
     },
-    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START: function (e) {
+    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_START: function () {
         _ = "FETCHING";
     },
     APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: function (e) {

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => I }), n(321073);
+n.d(t, { A: () => T }), n(321073);
 var i = n(17928),
     r = n(228366),
     s = n(395671);
@@ -52,12 +52,18 @@ function m(e) {
         }
 }
 function g(e) {
+    let { applications: t } = e;
+    if (0 === t.length) return !1;
+    for (let e of t) f(s.Ay.createFromServer(e));
+    return !0;
+}
+function A(e) {
     let { entitlements: t } = e,
         n = !1;
     for (let { sku: e } of t) e?.application != null && (f(s.Ay.createFromServer(e.application)), (n = !0));
     return n;
 }
-class A extends i.Ay.PersistedStore {
+class I extends i.Ay.PersistedStore {
     static displayName = "ApplicationStore";
     static persistKey = "ApplicationStore";
     initialize(e) {
@@ -114,7 +120,7 @@ class A extends i.Ay.PersistedStore {
         if (null != e) return h.botUserIdToAppUsage[e]?.applicationId;
     }
 }
-let I = new A(r.h, {
+let T = new I(r.h, {
     LOGOUT: function () {
         o.clear(), l.clear(), u.clear(), c.clear(), d.clear(), _.clear();
     },
@@ -162,9 +168,9 @@ let I = new A(r.h, {
         let { application: t } = e;
         E(t);
     },
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: g,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: g,
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: g,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: A,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: A,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: A,
     GUILD_APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { guildId: t, applications: n } = e,
             i = [];
@@ -260,4 +266,7 @@ let I = new A(r.h, {
         if (null == t || 0 === t.length) return !1;
         for (let e of t) f(e);
     },
+    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: g,
+    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: g,
+    APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: g,
 });
