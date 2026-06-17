@@ -752,6 +752,7 @@ function tU(e) {
         m = (0, et.SD)(t, d);
     return (0, r.jsxs)("div", {
         ref: c,
+        className: tQ.qr,
         children: [
             (0, r.jsx)(ty, { quest: t, questContent: s, sourceQuestContent: i, isHovering: n }),
             (0, r.jsxs)("div", {

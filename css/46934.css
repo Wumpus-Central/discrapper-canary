@@ -716,6 +716,12 @@
     color: #9d9ea5
 }
 
+.footer__44846 {
+    inset-inline: 0;
+    bottom: 0;
+    position: absolute
+}
+
 .footerDescription__44846 {
     padding: 0 var(--space-20);
     padding-top: 0
@@ -909,7 +915,8 @@
     align-items: flex-start;
     display: flex;
     justify-content: space-between;
-    padding: var(--space-12)
+    padding: var(--space-12);
+    z-index: 1
 }
 
 .headerActions__6d3d8 {

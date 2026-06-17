@@ -1,4 +1,5 @@
 e.exports = {
+    qr: "footer__44846",
     yM: "footerDescription__44846",
     Wj: "questDescriptionText__44846",
     Wi: "descriptionWrapper__44846",
