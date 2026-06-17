@@ -9,7 +9,7 @@ var i = n(64700),
     u = n(89366),
     c = n(881489),
     d = n(945960),
-    _ = n(504836),
+    _ = n(432779),
     h = n(422936),
     f = n(234419),
     p = n(788868);
@@ -56,34 +56,37 @@ let m = () => {
         }
     },
     A = (e) => {
-        let [t, n] = i.useState(!1),
+        let t = (0, _.A)(p.q),
+            n = (0, _.A)(p.EG),
             [r, s] = i.useState(!1),
-            [a, o] = i.useState(null);
-        if (e) return { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: r };
-        let l = () => {
-            n(!0), s(!1);
+            [a, o] = i.useState(!1),
+            [l, u] = i.useState(null),
+            c = t ?? n ?? null;
+        if (null != c) return { churnUserDiscountOffer: c, isFetchingChurnDiscountOffer: !1 };
+        if (e) return { churnUserDiscountOffer: l, isFetchingChurnDiscountOffer: a };
+        let h = () => {
+            s(!0), o(!1);
         };
         return (
-            r ||
-                t ||
-                (s(!0),
+            a ||
+                r ||
+                (o(!0),
                 (0, d.qz)()
                     .then((e) => {
-                        o(e), l();
+                        u(e), h();
                     })
                     .catch((e) => {
-                        l();
+                        h();
                     })),
-            { churnUserDiscountOffer: a, isFetchingChurnDiscountOffer: r }
+            { churnUserDiscountOffer: l, isFetchingChurnDiscountOffer: a }
         );
     },
     I = () => {
         let e = (0, a.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
             t = m(),
-            n = (0, _.Z)({ location: "churn_offer" }),
-            i = null !== e && e.hasPremiumNitroMonthly,
-            r = !!e?.hasActiveTrial;
-        return i && !t && (!r || n);
+            n = null !== e && e.hasPremiumNitroMonthly,
+            i = !!e?.hasActiveTrial;
+        return n && !t && !i;
     },
     T = (e) => {
         for (let t of e.invoiceItems) {

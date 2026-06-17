@@ -3799,3 +3799,14 @@
 .countryTransitionArrow_ebbc17 {
     margin: 0 2px
 }
+
+.loadingContainer_ebbc17 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 480px
+}
+
+.spinnerColor_ebbc17 {
+    background-color: var(--interactive-text-default) !important
+}

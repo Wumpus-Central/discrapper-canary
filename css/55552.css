@@ -30,14 +30,7 @@
 }
 
 .loadingContainer_bb5449 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     min-height: 200px
-}
-
-.spinnerColor_bb5449 {
-    background-color: var(--interactive-text-default) !important
 }
 
 .totalDueReviewStep_bb5449 {
