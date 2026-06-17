@@ -43,7 +43,7 @@ function u(e) {
         "aria-hidden": "true",
         className: t,
         "data-testid": r,
-        children: (0, s.jsx)(i.r, { size: "xxs", color: "var(--icon-default)" }),
+        children: (0, s.jsx)(i.r, { size: "xxs", color: "var(--white)" }),
     });
 }
 function c(e) {
@@ -55,9 +55,9 @@ function c(e) {
         label: l,
         theme: c,
         buttonClassName: o,
-        graphicClassName: f,
-        selectedIndicatorClassName: h,
-        selectedIndicatorTestId: x,
+        graphicClassName: h,
+        selectedIndicatorClassName: x,
+        selectedIndicatorTestId: f,
     } = e;
     return (0, s.jsx)(a.m, {
         text: l,
@@ -69,8 +69,8 @@ function c(e) {
             "aria-pressed": r,
             onClick: i,
             children: [
-                (0, s.jsx)(d, { preset: t, theme: c, className: f }),
-                r && (0, s.jsx)(u, { className: h, testId: x }),
+                (0, s.jsx)(d, { preset: t, theme: c, className: h }),
+                r && (0, s.jsx)(u, { className: x, testId: f }),
             ],
         }),
     });
