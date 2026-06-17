@@ -3655,16 +3655,16 @@ let lG = (e) => {
             })(),
             { currentTab: r, hasFilters: i } = (0, K.v)(),
             o = d.useMemo(() => (t === R.G2.HOME && null != r && i() ? r : t), [t, r, i]),
-            { categories: u, refreshCategories: E } = (0, z.Ay)({ logPerf: !0 }, { sessionId: s, tab: o }),
-            N = d.useMemo(() => [...u.values()], [u]),
-            [T, F] = d.useState(),
-            Y = (0, h.bG)([j.A], () => j.A.getCategory(T)?.name),
-            [$, q] = d.useState();
+            { categories: u, refreshCategories: N } = (0, z.Ay)({ logPerf: !0 }, { sessionId: s, tab: o }),
+            T = d.useMemo(() => [...u.values()], [u]),
+            [F, Y] = d.useState(),
+            $ = (0, h.bG)([j.A], () => j.A.getCategory(F)?.name),
+            [q, Z] = d.useState();
         (0, eK.XU)(s);
-        let Z = d.useCallback((e, t) => {
-                q(e), F(t);
+        let J = d.useCallback((e, t) => {
+                Z(e), Y(t);
             }, []),
-            { selectedTab: J, transitionState: Q, transitionToTab: X } = (0, W.o)(o);
+            { selectedTab: Q, transitionState: X, transitionToTab: ee } = (0, W.o)(o);
         (0, S.HU)({ location: G.intl.string(G.t.pWG4ze) }),
             ((e, t, s, l, n) => {
                 let {
@@ -3684,7 +3684,7 @@ let lG = (e) => {
                         category: t === R.G2.HOME ? void 0 : s,
                     });
                 }, [a, e, t, s, i, l, n, r, o]);
-            })(s, J, Y, Q, $),
+            })(s, Q, $, X, q),
             ((e, t) => {
                 let { analyticsLocations: s } = M(e);
                 d.useEffect(() => {
@@ -3695,23 +3695,24 @@ let lG = (e) => {
                             location_stack: s,
                         });
                 }, [s, t]);
-            })(J, l);
-        let { dismissShopButtonDC: ee } = (0, lF.A)();
+            })(Q, l);
+        let { dismissShopButtonDC: et } = (0, lF.A)();
         d.useEffect(() => {
-            ee();
-        }, [ee]),
+            et();
+        }, [et]),
             d.useEffect(() => {
                 (0, p.I)(B.BVt.COLLECTIBLES_SHOP);
             }, []);
-        let et = d.useRef(null),
-            es = d.useRef(null);
-        (0, x.t)(et),
-            d.useEffect(() => {
-                es.current?.focus();
-            }, []),
+        let es = d.useRef(null),
+            el = d.useRef(null);
+        (0, x.t)(es);
+        let en = (0, E.useHasAnyModalOpen)();
+        d.useEffect(() => {
+            el.current?.focus();
+        }, []),
             (0, eZ.gB)();
-        let { analyticsLocations: el } = M(J),
-            en = (function (e, t) {
+        let { analyticsLocations: ea } = M(Q),
+            er = (function (e, t) {
                 let s = (0, O.bG)([H.A], () => H.A.getUserDiscount(P.tU)),
                     l = (0, O.bG)([D.default], () => D.default.locale),
                     n = w.useConfig({ location: t }).enabled;
@@ -3722,43 +3723,44 @@ let lG = (e) => {
                             : void 0;
                     return { type: 0, countdownEndDate: s?.expiresAt, message: G.intl.format(G.t.RCo9MF, { date: e }) };
                 }
-            })(J, "collectibles_shop");
+            })(Q, "collectibles_shop");
         return (0, c.jsx)(f.f5, {
-            value: el,
+            value: ea,
             children: (0, c.jsx)(v.R9, {
-                newValue: { sessionId: s, pageCategory: Y, pageSize: R.l5 },
+                newValue: { sessionId: s, pageCategory: $, pageSize: R.l5 },
                 children: (0, c.jsx)(I.iM, {
-                    tab: J,
+                    tab: Q,
                     children: (0, c.jsx)(lG, {
                         onClose: a,
                         shouldAddEventListener: !1,
                         children: (0, c.jsxs)("div", {
                             className: g()(eM.bx, { [eZ.jP]: n }),
-                            ref: es,
+                            ref: el,
+                            inert: en,
                             tabIndex: -1,
                             children: [
-                                (0, c.jsx)(lT.G, { handleTransition: X, selectedTab: J }),
-                                null != en &&
-                                    en.type === U.COUNTDOWN &&
+                                (0, c.jsx)(lT.G, { handleTransition: ee, selectedTab: Q }),
+                                null != er &&
+                                    er.type === U.COUNTDOWN &&
                                     (0, c.jsx)(lH, {
-                                        message: en.message,
-                                        onClick: () => X(R.G2.HOME),
+                                        message: er.message,
+                                        onClick: () => ee(R.G2.HOME),
                                         variant: "pink",
-                                        countdownEndDate: en.countdownEndDate,
+                                        countdownEndDate: er.countdownEndDate,
                                     }),
                                 (0, c.jsx)("div", {
                                     className: g()(eM.td, {
-                                        [eM.RK]: Q === R.Pf.VISIBLE,
-                                        [eM.in]: Q === R.Pf.IN,
-                                        [eM.FD]: Q === R.Pf.OUT,
+                                        [eM.RK]: X === R.Pf.VISIBLE,
+                                        [eM.in]: X === R.Pf.IN,
+                                        [eM.FD]: X === R.Pf.OUT,
                                     }),
                                     children: (0, c.jsx)(lN, {
-                                        tab: J,
-                                        refreshCategories: E,
-                                        transitionToTab: X,
-                                        transitionState: Q,
-                                        categories: N,
-                                        updateAnalyticsState: Z,
+                                        tab: Q,
+                                        refreshCategories: N,
+                                        transitionToTab: ee,
+                                        transitionState: X,
+                                        categories: T,
+                                        updateAnalyticsState: J,
                                     }),
                                 }),
                             ],
