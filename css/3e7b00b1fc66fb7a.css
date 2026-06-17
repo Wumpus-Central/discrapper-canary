@@ -3898,6 +3898,9 @@
     --profile-gradient-section-box: rgba(0, 0, 0, .45);
     --progressbar-indicator-background: #5966f2;
     --progressbar-track-background: hsla(240, 4%, 61%, .2);
+    --quest-home-tab-gradient-blurple-center: #5966f2;
+    --quest-home-tab-gradient-blurple-inner: rgba(89, 102, 242, .5);
+    --quest-home-tab-gradient-blurple-outer: rgba(89, 102, 242, 0);
     --radio-background-active: #3b47a3;
     --radio-background-default: rgba(0, 0, 0, .08);
     --radio-background-hover: rgba(0, 0, 0, .08);
@@ -4545,6 +4548,9 @@
     --profile-gradient-section-box: hsla(0, 0%, 100%, .45);
     --progressbar-indicator-background: #5966f2;
     --progressbar-track-background: hsla(240, 4%, 61%, .24);
+    --quest-home-tab-gradient-blurple-center: #5966f2;
+    --quest-home-tab-gradient-blurple-inner: rgba(89, 102, 242, .5);
+    --quest-home-tab-gradient-blurple-outer: rgba(89, 102, 242, 0);
     --radio-background-active: #3b47a3;
     --radio-background-default: hsla(240, 4%, 61%, .04);
     --radio-background-hover: hsla(240, 4%, 61%, .04);
@@ -5192,6 +5198,9 @@
     --profile-gradient-section-box: rgba(0, 0, 0, .45);
     --progressbar-indicator-background: #5966f2;
     --progressbar-track-background: hsla(240, 4%, 61%, .24);
+    --quest-home-tab-gradient-blurple-center: #5966f2;
+    --quest-home-tab-gradient-blurple-inner: rgba(89, 102, 242, .5);
+    --quest-home-tab-gradient-blurple-outer: rgba(89, 102, 242, 0);
     --radio-background-active: #3b47a3;
     --radio-background-default: rgba(0, 0, 0, .08);
     --radio-background-hover: rgba(0, 0, 0, .08);
@@ -5839,6 +5848,9 @@
     --profile-gradient-section-box: rgba(0, 0, 0, .45);
     --progressbar-indicator-background: #5966f2;
     --progressbar-track-background: hsla(240, 4%, 61%, .2);
+    --quest-home-tab-gradient-blurple-center: #5966f2;
+    --quest-home-tab-gradient-blurple-inner: rgba(89, 102, 242, .5);
+    --quest-home-tab-gradient-blurple-outer: rgba(89, 102, 242, 0);
     --radio-background-active: #3b47a3;
     --radio-background-default: rgba(0, 0, 0, .08);
     --radio-background-hover: rgba(0, 0, 0, .08);
