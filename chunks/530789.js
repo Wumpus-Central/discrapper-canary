@@ -22,7 +22,7 @@ var i = n(731738),
     S = n(320095),
     y = n(807393),
     C = n(535586),
-    N = n(938005),
+    N = n(944043),
     v = n(571524),
     R = n(181370),
     O = n.n(R),
@@ -40,7 +40,7 @@ var i = n(731738),
     V = n(232835),
     B = n(803224),
     j = n(576705),
-    H = n(222823),
+    H = n(568548),
     Y = n(994500),
     W = n(309010),
     K = n(461213),
@@ -473,9 +473,11 @@ new eA(
                   let { icon: t, title: n, body: i, route: r, trackingType: s, message: a, reactorUserId: o } = e;
                   if (eE() || null == n || null == i || null == s) return !1;
                   let l = a.channel_id;
-                  if (null == l || (W.A.getCurrentlySelectedChannelId() === l && ed)) return !1;
+                  if (null == l) return !1;
                   let u = G.A.getChannel(l);
                   if (null == u) return !1;
+                  let c = q.default.getUser(o);
+                  if (!(0, N.nR)({ message: a, channel: u, reactor: c, includeSelectedChannel: !ed })) return !1;
                   if (u.type === en.rbe.GROUP_DM) {
                       let e = q.default.getCurrentUser();
                       if (
