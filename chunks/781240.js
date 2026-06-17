@@ -1,17 +1,3 @@
-a.exports = {
-    "6/dkHh": ["Fechar transcrição"],
-    XiLvuG: ["Alterar volume"],
-    ZwPhbB: ["Velocidade de reprodução"],
-    "dRVF+Z": ["Voltar 10 segundos"],
-    yV2FLL: ["Pular 10 segundos à frente"],
-    YWbiPw: ["Não é possível pular seções ainda não assistidas"],
-    "0DbPcL": ["Ativar/desativar legendas"],
-    z9Cnzv: ["Alternar tela cheia"],
-    "6EjGUv": ["Ativar/desativar transcrição"],
-    "kX3+aM": ["Carregando vídeo..."],
-    c7IRfm: ["Vídeo pausado porque a janela desfocou"],
-    "9St/zK": ["Vídeo pausado porque a janela não está visível"],
-    "VZkd/n": ["Transcrição"],
-    E527vj: ["Thumbnail de vídeo"],
-    "5L6uDs": [[1, "percent"], " por cento"],
-};
+a.exports = JSON.parse(
+    '{"6/dkHh":["Fechar transcri\xe7\xe3o"],"XiLvuG":["Alterar volume"],"ZwPhbB":["Velocidade de reprodu\xe7\xe3o"],"dRVF+Z":["Voltar 10\xa0segundos"],"yV2FLL":["Pular 10 segundos \xe0 frente"],"YWbiPw":["N\xe3o \xe9 poss\xedvel pular se\xe7\xf5es ainda n\xe3o assistidas"],"0DbPcL":["Ativar/desativar legendas"],"z9Cnzv":["Alternar tela cheia"],"6EjGUv":["Ativar/desativar transcri\xe7\xe3o"],"kX3+aM":["Carregando v\xeddeo..."],"c7IRfm":["V\xeddeo pausado porque a janela desfocou"],"9St/zK":["V\xeddeo pausado porque a janela n\xe3o est\xe1 vis\xedvel"],"VZkd/n":["Transcri\xe7\xe3o"],"E527vj":["Thumbnail de v\xeddeo"],"5L6uDs":[[1,"percent"]," por cento"]}',
+);

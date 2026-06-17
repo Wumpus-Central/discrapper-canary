@@ -1,31 +1,3 @@
-n.exports = {
-    uG6teD: ["Tài Khoản Đã Được Liên Kết Thành Công"],
-    JgM2xu: ["Khám phá tất cả các tính năng mới mà bạn đã mở khóa."],
-    ublzTG: ["Đã kết nối tài khoản và nhận được 200 Orb!"],
-    jR3bbS: [
-        "Mở khóa các tính năng cộng đồng trong trò chơi như danh sách bạn bè hợp nhất, lời mời tổ đội trực tiếp và nhiều tính năng khác!",
-    ],
-    "2cOIOr": ["Liên kết tài khoản"],
-    dPuaZE: ["Nhận 200 Discord Orb khi bạn liên kết tài khoản ", [1, "applicationName"], " của mình"],
-    kxF9br: ["SDK kết nối qua RPC"],
-    "8a7IrV": ["Đã đăng ký URL điểm vào kết nối"],
-    "9iLeL2": ["URL được cấu hình là ", [1, "url"]],
-    AGLx00: ["Luồng trò chơi đã kết nối:"],
-    w0pN4R: ["Liên kết tài khoản"],
-    yKwZc2: ["Quản lý liên kết tài khoản"],
-    aTULMB: [
-        "Không phát hiện được lệnh gọi lại xác thực. Nếu bạn đã gọi hàm và vẫn thấy tình huống này, hãy kiểm tra nhật ký để biết thông tin chi tiết",
-    ],
-    eg0mNa: ["Không thể liên kết vì không có luồng liên kết hợp lệ nào"],
-    cCvdJy: ["Mở Hồ Sơ Trò Chơi"],
-    OEkrCx: ["Luồng này sẽ được sử dụng"],
-    "no+FQS": ["Luồng liên kết sẵn sàng đầu tiên sẽ được sử dụng, bắt đầu từ trên cùng"],
-    PFxxJa: [
-        "Nếu trò chơi của bạn đang chạy và không thể Kết nối với Discord, hãy thử xem nhật ký trò chơi của bạn để sửa lỗi",
-    ],
-    S94dzs: ["Đã gọi RegisterAuthorizeRequestCallback và lệnh hoạt động chính xác"],
-    vR0zs6: ["Liên Kết Tài Khoản"],
-    KoK4J9: ["Devtools: ", [1, "appName"]],
-    tkIymA: ["Gỡ liên kết"],
-    K3ObrU: ["Luồng web:"],
-};
+n.exports = JSON.parse(
+    '{"uG6teD":["T\xe0i Kho\u1EA3n \u0110\xe3 \u0110\u01B0\u1EE3c Li\xean K\u1EBFt Th\xe0nh C\xf4ng"],"JgM2xu":["Kh\xe1m ph\xe1 t\u1EA5t c\u1EA3 c\xe1c t\xednh n\u0103ng m\u1EDBi m\xe0 b\u1EA1n \u0111\xe3 m\u1EDF kh\xf3a."],"ublzTG":["\u0110\xe3 k\u1EBFt n\u1ED1i t\xe0i kho\u1EA3n v\xe0 nh\u1EADn \u0111\u01B0\u1EE3c 200 Orb!"],"jR3bbS":["M\u1EDF kh\xf3a c\xe1c t\xednh n\u0103ng c\u1ED9ng \u0111\u1ED3ng trong tr\xf2 ch\u01A1i nh\u01B0 danh s\xe1ch b\u1EA1n b\xe8 h\u1EE3p nh\u1EA5t, l\u1EDDi m\u1EDDi t\u1ED5 \u0111\u1ED9i tr\u1EF1c ti\u1EBFp v\xe0 nhi\u1EC1u t\xednh n\u0103ng kh\xe1c!"],"2cOIOr":["Li\xean k\u1EBFt t\xe0i kho\u1EA3n"],"dPuaZE":["Nh\u1EADn 200 Discord Orb khi b\u1EA1n li\xean k\u1EBFt t\xe0i kho\u1EA3n ",[1,"applicationName"]," c\u1EE7a m\xecnh"],"kxF9br":["SDK k\u1EBFt n\u1ED1i qua RPC"],"8a7IrV":["\u0110\xe3 \u0111\u0103ng k\xfd URL \u0111i\u1EC3m v\xe0o k\u1EBFt n\u1ED1i"],"9iLeL2":["URL \u0111\u01B0\u1EE3c c\u1EA5u h\xecnh l\xe0 ",[1,"url"]],"AGLx00":["Lu\u1ED3ng tr\xf2 ch\u01A1i \u0111\xe3 k\u1EBFt n\u1ED1i:"],"w0pN4R":["Li\xean k\u1EBFt t\xe0i kho\u1EA3n"],"yKwZc2":["Qu\u1EA3n l\xfd li\xean k\u1EBFt t\xe0i kho\u1EA3n"],"aTULMB":["Kh\xf4ng ph\xe1t hi\u1EC7n \u0111\u01B0\u1EE3c l\u1EC7nh g\u1ECDi l\u1EA1i x\xe1c th\u1EF1c. N\u1EBFu b\u1EA1n \u0111\xe3 g\u1ECDi h\xe0m v\xe0 v\u1EABn th\u1EA5y t\xecnh hu\u1ED1ng n\xe0y, h\xe3y ki\u1EC3m tra nh\u1EADt k\xfd \u0111\u1EC3 bi\u1EBFt th\xf4ng tin chi ti\u1EBFt"],"eg0mNa":["Kh\xf4ng th\u1EC3 li\xean k\u1EBFt v\xec kh\xf4ng c\xf3 lu\u1ED3ng li\xean k\u1EBFt h\u1EE3p l\u1EC7 n\xe0o"],"cCvdJy":["M\u1EDF H\u1ED3 S\u01A1 Tr\xf2 Ch\u01A1i"],"OEkrCx":["Lu\u1ED3ng n\xe0y s\u1EBD \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng"],"no+FQS":["Lu\u1ED3ng li\xean k\u1EBFt s\u1EB5n s\xe0ng \u0111\u1EA7u ti\xean s\u1EBD \u0111\u01B0\u1EE3c s\u1EED d\u1EE5ng, b\u1EAFt \u0111\u1EA7u t\u1EEB tr\xean c\xf9ng"],"PFxxJa":["N\u1EBFu tr\xf2 ch\u01A1i c\u1EE7a b\u1EA1n \u0111ang ch\u1EA1y v\xe0 kh\xf4ng th\u1EC3 K\u1EBFt n\u1ED1i v\u1EDBi Discord, h\xe3y th\u1EED xem nh\u1EADt k\xfd tr\xf2 ch\u01A1i c\u1EE7a b\u1EA1n \u0111\u1EC3 s\u1EEDa l\u1ED7i"],"S94dzs":["\u0110\xe3 g\u1ECDi RegisterAuthorizeRequestCallback v\xe0 l\u1EC7nh ho\u1EA1t \u0111\u1ED9ng ch\xednh x\xe1c"],"vR0zs6":["Li\xean K\u1EBFt T\xe0i Kho\u1EA3n"],"KoK4J9":["Devtools: ",[1,"appName"]],"tkIymA":["G\u1EE1 li\xean k\u1EBFt"],"K3ObrU":["Lu\u1ED3ng web:"]}',
+);

@@ -1,25 +1,3 @@
-e.exports = {
-    "0LL6FX": ["Dette oppdaterer serverens utseende for alle medlemmer. Temaet tilpasses lys og mørk modus."],
-    H8idcP: ["Bruke servertema?"],
-    odtr7f: [
-        "Velg et standardtema eller lag et eget. Alle medlemmene ser dette temaet når de åpner serveren, og det tilpasser seg lys og mørk modus. ",
-        [8, "$link", ["Mer info"], [[1, "articleUrl"]]],
-    ],
-    XhiIAu: ["Dette styrer hvordan servere ser ut for medlemmer."],
-    aZpFFn: ["Slå på servertema"],
-    jSrqR2: ["Forhåndsinnstillinger"],
-    XyrxOp: ["Blurple"],
-    tXRcxU: ["Denim"],
-    "S8/OZA": ["Ild"],
-    nCbxEN: ["Gullstøv"],
-    "6ZeQDd": ["Jade"],
-    TiGQro: ["Mose"],
-    "x3h/OV": ["Obsidian"],
-    qn90j5: ["Hav"],
-    tTJY6S: ["Plomme"],
-    "+k8Q/o": ["Skumring"],
-    HkvkHP: ["Det tas hensyn til om brukerne har valgt lys eller mørk modus."],
-    zry4l5: ["Forhåndsvis tema"],
-    Ck5zxP: ["Velg tema"],
-    "/6NbRv": ["Servertema"],
-};
+e.exports = JSON.parse(
+    '{"0LL6FX":["Dette oppdaterer serverens utseende for alle medlemmer. Temaet tilpasses lys og m\xf8rk modus."],"H8idcP":["Bruke servertema?"],"odtr7f":["Velg et standardtema eller lag et eget. Alle medlemmene ser dette temaet n\xe5r de \xe5pner serveren, og det tilpasser seg lys og m\xf8rk modus. ",[8,"$link",["Mer info"],[[1,"articleUrl"]]]],"XhiIAu":["Dette styrer hvordan servere ser ut for medlemmer."],"aZpFFn":["Sl\xe5 p\xe5 servertema"],"jSrqR2":["Forh\xe5ndsinnstillinger"],"XyrxOp":["Blurple"],"tXRcxU":["Denim"],"S8/OZA":["Ild"],"nCbxEN":["Gullst\xf8v"],"6ZeQDd":["Jade"],"TiGQro":["Mose"],"x3h/OV":["Obsidian"],"qn90j5":["Hav"],"tTJY6S":["Plomme"],"+k8Q/o":["Skumring"],"HkvkHP":["Det tas hensyn til om brukerne har valgt lys eller m\xf8rk modus."],"zry4l5":["Forh\xe5ndsvis tema"],"Ck5zxP":["Velg tema"],"/6NbRv":["Servertema"]}',
+);

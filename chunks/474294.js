@@ -1,15 +1,3 @@
-s.exports = {
-    u72Prd: ["A Nitróval HD-felbontásban közvetíthetsz"],
-    uwMBDo: ["Alkalmazás hangjának megosztása"],
-    "3wwZ/Q": ["Élő közvetítés indítása"],
-    OsS9Ll: ["Élő közvetítésed leállítása"],
-    "j+eAMQ": ["Hangközvetítés"],
-    "/XSr8v": ["Közvetítési mód"],
-    ibH7vy: ["Kiegyensúlyozott minőség és teljesítmény (", [1, "resolution"], "p, ", [1, "fps"], " fps)"],
-    "2qmQ8N": ["Alapértelmezett"],
-    q4gYBi: ["Videókhoz és játékokhoz (", [1, "resolution"], " p, ", [1, "fps"], " fps)"],
-    nMcXo1: ["Kiemelkedő minőség"],
-    fN0UQY: ["Lassabb eszközökre optimalizálva (", [1, "resolution"], "p, ", [1, "fps"], " fps)"],
-    "5eO4/m": ["Teljesítmény"],
-    CrNjqp: ["Közvetítés beállításai"],
-};
+s.exports = JSON.parse(
+    '{"u72Prd":["A Nitr\xf3val HD-felbont\xe1sban k\xf6zvet\xedthetsz"],"uwMBDo":["Alkalmaz\xe1s hangj\xe1nak megoszt\xe1sa"],"3wwZ/Q":["\xc9l\u0151 k\xf6zvet\xedt\xe9s ind\xedt\xe1sa"],"OsS9Ll":["\xc9l\u0151 k\xf6zvet\xedt\xe9sed le\xe1ll\xedt\xe1sa"],"j+eAMQ":["Hangk\xf6zvet\xedt\xe9s"],"/XSr8v":["K\xf6zvet\xedt\xe9si m\xf3d"],"ibH7vy":["Kiegyens\xfalyozott min\u0151s\xe9g \xe9s teljes\xedtm\xe9ny (",[1,"resolution"],"p, ",[1,"fps"]," fps)"],"2qmQ8N":["Alap\xe9rtelmezett"],"q4gYBi":["Vide\xf3khoz \xe9s j\xe1t\xe9kokhoz (",[1,"resolution"]," p, ",[1,"fps"]," fps)"],"nMcXo1":["Kiemelked\u0151 min\u0151s\xe9g"],"fN0UQY":["Lassabb eszk\xf6z\xf6kre optimaliz\xe1lva (",[1,"resolution"],"p, ",[1,"fps"]," fps)"],"5eO4/m":["Teljes\xedtm\xe9ny"],"CrNjqp":["K\xf6zvet\xedt\xe9s be\xe1ll\xedt\xe1sai"]}',
+);

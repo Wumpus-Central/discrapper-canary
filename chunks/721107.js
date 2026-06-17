@@ -1,4 +1,3 @@
-a.exports = {
-    F3llsQ: ["Compartilhar quando eu atualizar meu perfil"],
-    "6goWcz": ["Permita que seus amigos recebam uma notificação quando você atualizar o seu perfil."],
-};
+a.exports = JSON.parse(
+    '{"F3llsQ":["Compartilhar quando eu atualizar meu perfil"],"6goWcz":["Permita que seus amigos recebam uma notifica\xe7\xe3o quando voc\xea atualizar o seu perfil."]}',
+);

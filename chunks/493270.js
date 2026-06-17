@@ -1,17 +1,3 @@
-e.exports = {
-    "/cp93l": ["Nächster Monat"],
-    raS6yf: ["Vorheriger Monat"],
-    JA5C7L: ["Löschen"],
-    I8kUqR: ["Kalender öffnen"],
-    db85vU: ["Keine Artikel zum Anzeigen"],
-    bPKiId: ["Keine Ergebnisse für „", [1, "query"], "“"],
-    WfH9in: ["Schließen"],
-    m3Vfcs: ["Nicht erneut anzeigen"],
-    cgdAs2: ["(Wird in einem neuen Tab geöffnet)"],
-    "2L/ygS": [[1, "percent"], " % abgeschlossen"],
-    "/Y7vRd": ["Klicke zum Entfernen auf „Löschen“."],
-    VMNfsY: ["Ausgewählt"],
-    "A+pfVR": ["Auswählen …"],
-    "v2YSk/": ["Schritt ", [1, "stepNumber"], " von ", [1, "stepCount"]],
-    YpT3kk: ["Video vergrößern und abspielen"],
-};
+e.exports = JSON.parse(
+    '{"/cp93l":["N\xe4chster Monat"],"raS6yf":["Vorheriger Monat"],"JA5C7L":["L\xf6schen"],"I8kUqR":["Kalender \xf6ffnen"],"db85vU":["Keine Artikel zum Anzeigen"],"bPKiId":["Keine Ergebnisse f\xfcr \u201E",[1,"query"],"\u201C"],"WfH9in":["Schlie\xdfen"],"m3Vfcs":["Nicht erneut anzeigen"],"cgdAs2":["(Wird in einem neuen Tab ge\xf6ffnet)"],"2L/ygS":[[1,"percent"],"\xa0% abgeschlossen"],"/Y7vRd":["Klicke zum Entfernen auf \u201EL\xf6schen\u201C."],"VMNfsY":["Ausgew\xe4hlt"],"A+pfVR":["Ausw\xe4hlen\xa0\u2026"],"v2YSk/":["Schritt\xa0",[1,"stepNumber"]," von\xa0",[1,"stepCount"]],"YpT3kk":["Video vergr\xf6\xdfern und abspielen"]}',
+);

@@ -1,5 +1,3 @@
-p.exports = {
-    yfwZuy: ["查看我的徽章"],
-    UnPGii: ["该徽章已被添加至您的个人资料。"],
-    nvaTQq: ["您获得了 Orb 个人资料徽章！"],
-};
+p.exports = JSON.parse(
+    '{"yfwZuy":["\u67E5\u770B\u6211\u7684\u5FBD\u7AE0"],"UnPGii":["\u8BE5\u5FBD\u7AE0\u5DF2\u88AB\u6DFB\u52A0\u81F3\u60A8\u7684\u4E2A\u4EBA\u8D44\u6599\u3002"],"nvaTQq":["\u60A8\u83B7\u5F97\u4E86 Orb \u4E2A\u4EBA\u8D44\u6599\u5FBD\u7AE0\uFF01"]}',
+);

@@ -1,31 +1,3 @@
-i.exports = {
-    uG6teD: ["Paskyra susieta"],
-    JgM2xu: ["Peržiūrėk visas naujas funkcijas, kurias gavai."],
-    ublzTG: ["Paskyra susieta ir atsiimta 200 Orbs!"],
-    jR3bbS: [
-        "Gauk socialinių funkcijų žaidimuose, pvz., suvienodintą draugų sąrašą, tiesioginius kvietimus į vakarėlį ir kt.!",
-    ],
-    "2cOIOr": ["Susieti paskyrą"],
-    dPuaZE: ["Susiek savo ", [1, "applicationName"], " paskyrą ir gauk 200 Discord Orbs"],
-    kxF9br: ["SDK susietas per RPC"],
-    "8a7IrV": ["Susiejimo pradžios taško URL užregistruotas"],
-    "9iLeL2": ["URL sukonfigūruotas kaip ", [1, "url"]],
-    AGLx00: ["Susieto žaidimo eiga:"],
-    w0pN4R: ["Susieti paskyrą"],
-    yKwZc2: ["Tvarkyti paskyros susiejimą"],
-    aTULMB: [
-        "Autentiškumo patvirtinimo atsakas neaptiktas. Jei iškvietėte funkciją ir vis tiek matote šį pranešimą, patikrinkite žurnalus, kad gautumėte išsamią informaciją",
-    ],
-    eg0mNa: ["Nepavyksta susieti, nes nėra galiojančių susiejimo eigų"],
-    cCvdJy: ["Atidaryti žaidimo profilį"],
-    OEkrCx: ["Bus naudojama ši eiga"],
-    "no+FQS": ["Bus naudojama pirma pasiekiama susiejimo eiga, pradedant nuo viršaus"],
-    PFxxJa: [
-        "Jei žaidimas yra paleistas ir jo nepavyksta susieti su Discord, pabandyk peržiūrėti žaidimo žurnalus, kad rastum problemą",
-    ],
-    S94dzs: ["RegisterAuthorizeRequestCallback pateiktas ir veikia tinkamai"],
-    vR0zs6: ["Paskyros susiejimas"],
-    KoK4J9: ["Kūrėjo įrankiai: ", [1, "appName"]],
-    tkIymA: ["Atsieti"],
-    K3ObrU: ["Tinklalapių eiga:"],
-};
+i.exports = JSON.parse(
+    '{"uG6teD":["Paskyra susieta"],"JgM2xu":["Per\u017Ei\u016Br\u0117k visas naujas funkcijas, kurias gavai."],"ublzTG":["Paskyra susieta ir atsiimta 200 Orbs!"],"jR3bbS":["Gauk socialini\u0173 funkcij\u0173 \u017Eaidimuose, pvz., suvienodint\u0105 draug\u0173 s\u0105ra\u0161\u0105, tiesioginius kvietimus \u012F vakar\u0117l\u012F ir kt.!"],"2cOIOr":["Susieti paskyr\u0105"],"dPuaZE":["Susiek savo ",[1,"applicationName"]," paskyr\u0105 ir gauk 200 Discord Orbs"],"kxF9br":["SDK susietas per RPC"],"8a7IrV":["Susiejimo prad\u017Eios ta\u0161ko URL u\u017Eregistruotas"],"9iLeL2":["URL sukonfig\u016Bruotas kaip ",[1,"url"]],"AGLx00":["Susieto \u017Eaidimo eiga:"],"w0pN4R":["Susieti paskyr\u0105"],"yKwZc2":["Tvarkyti paskyros susiejim\u0105"],"aTULMB":["Autenti\u0161kumo patvirtinimo atsakas neaptiktas. Jei i\u0161kviet\u0117te funkcij\u0105 ir vis tiek matote \u0161\u012F prane\u0161im\u0105, patikrinkite \u017Eurnalus, kad gautum\u0117te i\u0161sami\u0105 informacij\u0105"],"eg0mNa":["Nepavyksta susieti, nes n\u0117ra galiojan\u010Di\u0173 susiejimo eig\u0173"],"cCvdJy":["Atidaryti \u017Eaidimo profil\u012F"],"OEkrCx":["Bus naudojama \u0161i eiga"],"no+FQS":["Bus naudojama pirma pasiekiama susiejimo eiga, pradedant nuo vir\u0161aus"],"PFxxJa":["Jei \u017Eaidimas yra paleistas ir jo nepavyksta susieti su Discord, pabandyk per\u017Ei\u016Br\u0117ti \u017Eaidimo \u017Eurnalus, kad rastum problem\u0105"],"S94dzs":["RegisterAuthorizeRequestCallback pateiktas ir veikia tinkamai"],"vR0zs6":["Paskyros susiejimas"],"KoK4J9":["K\u016Br\u0117jo \u012Frankiai: ",[1,"appName"]],"tkIymA":["Atsieti"],"K3ObrU":["Tinklalapi\u0173 eiga:"]}',
+);

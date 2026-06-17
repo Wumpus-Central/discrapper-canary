@@ -1,1 +1,3 @@
-s.exports = { F3llsQ: ["更新个人资料时自动分享动态"], "6goWcz": ["好友可在您更新个人资料时收到推送通知。"] };
+s.exports = JSON.parse(
+    '{"F3llsQ":["\u66F4\u65B0\u4E2A\u4EBA\u8D44\u6599\u65F6\u81EA\u52A8\u5206\u4EAB\u52A8\u6001"],"6goWcz":["\u597D\u53CB\u53EF\u5728\u60A8\u66F4\u65B0\u4E2A\u4EBA\u8D44\u6599\u65F6\u6536\u5230\u63A8\u9001\u901A\u77E5\u3002"]}',
+);

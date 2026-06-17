@@ -1,1 +1,1 @@
-r.exports = { amp: "&", apos: "'", gt: ">", lt: "<", quot: '"' };
+r.exports = JSON.parse('{"amp":"&","apos":"\'","gt":">","lt":"<","quot":"\\""}');

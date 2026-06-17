@@ -1,31 +1,3 @@
-e.exports = {
-    uG6teD: ["Cuenta vinculada con éxito"],
-    JgM2xu: ["Descubre las nuevas funciones que has desbloqueado."],
-    ublzTG: ["¡Cuenta conectada y 200 Orbs obtenidos!"],
-    jR3bbS: [
-        "¡Desbloquea funciones sociales del juego, como una lista de amigos unificada, invitaciones a grupo directas y mucho más!",
-    ],
-    "2cOIOr": ["Vincular cuenta"],
-    dPuaZE: ["Consigue 200 Discord Orbs al vincular tu cuenta de ", [1, "applicationName"]],
-    kxF9br: ["SDK conectado vía RPC"],
-    "8a7IrV": ["URL del punto de entrada de conexión registrada"],
-    "9iLeL2": ["URL configurada como ", [1, "url"]],
-    AGLx00: ["Flujo de juego conectado:"],
-    w0pN4R: ["Vincular cuenta"],
-    yKwZc2: ["Gestionar el vínculo de la cuenta"],
-    aTULMB: [
-        "Callback de autorización no detectado. Si has llamado a la función y sigues viendo esto, consulta los registros para obtener más detalles",
-    ],
-    eg0mNa: ["No se puede enlazar porque no hay flujos de enlace válidos disponibles"],
-    cCvdJy: ["Abrir perfil de juego"],
-    OEkrCx: ["Se usará este flujo"],
-    "no+FQS": ["Se usará el primer flujo de enlace disponible, comenzando por la parte superior"],
-    PFxxJa: [
-        "Si tu juego se está ejecutando y no se puede conectar a Discord, consulta los registros del juego para buscar el error",
-    ],
-    S94dzs: ["RegisterAuthorizeRequestCallback llamado y funcionando correctamente"],
-    vR0zs6: ["Vincular cuenta"],
-    KoK4J9: ["Herramientas de desarrollo: ", [1, "appName"]],
-    tkIymA: ["Desvincular"],
-    K3ObrU: ["Flujo web:"],
-};
+e.exports = JSON.parse(
+    '{"uG6teD":["Cuenta vinculada con \xe9xito"],"JgM2xu":["Descubre las nuevas funciones que has desbloqueado."],"ublzTG":["\xa1Cuenta conectada y 200 Orbs obtenidos!"],"jR3bbS":["\xa1Desbloquea funciones sociales del juego, como una lista de amigos unificada, invitaciones a grupo directas y mucho m\xe1s!"],"2cOIOr":["Vincular cuenta"],"dPuaZE":["Consigue 200 Discord Orbs al vincular tu cuenta de ",[1,"applicationName"]],"kxF9br":["SDK conectado v\xeda RPC"],"8a7IrV":["URL del punto de entrada de conexi\xf3n registrada"],"9iLeL2":["URL configurada como ",[1,"url"]],"AGLx00":["Flujo de juego conectado:"],"w0pN4R":["Vincular cuenta"],"yKwZc2":["Gestionar el v\xednculo de la cuenta"],"aTULMB":["Callback de autorizaci\xf3n no detectado. Si has llamado a la funci\xf3n y sigues viendo esto, consulta los registros para obtener m\xe1s detalles"],"eg0mNa":["No se puede enlazar porque no hay flujos de enlace v\xe1lidos disponibles"],"cCvdJy":["Abrir perfil de juego"],"OEkrCx":["Se usar\xe1 este flujo"],"no+FQS":["Se usar\xe1 el primer flujo de enlace disponible, comenzando por la parte superior"],"PFxxJa":["Si tu juego se est\xe1 ejecutando y no se puede conectar a Discord, consulta los registros del juego para buscar el error"],"S94dzs":["RegisterAuthorizeRequestCallback llamado y funcionando correctamente"],"vR0zs6":["Vincular cuenta"],"KoK4J9":["Herramientas de desarrollo: ",[1,"appName"]],"tkIymA":["Desvincular"],"K3ObrU":["Flujo web:"]}',
+);

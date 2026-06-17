@@ -1,29 +1,3 @@
-o.exports = {
-    uG6teD: ["Konto pomyślnie połączono"],
-    JgM2xu: ["Sprawdź wszystkie nowe funkcje, które udało Ci się odblokować."],
-    ublzTG: ["Konto połączone – zdobyto 200 Orbs!"],
-    jR3bbS: [
-        "Odblokuj funkcje społecznościowe w grze, takie jak ujednolicona lista znajomych, bezpośrednie zaproszenia do drużyny i nie tylko!",
-    ],
-    "2cOIOr": ["Połącz konto"],
-    dPuaZE: ["Zdobądź 200 Discord Orbs po połączeniu konta ", [1, "applicationName"]],
-    kxF9br: ["SDK połączone przez RPC"],
-    "8a7IrV": ["Zarejestrowano adres URL punktu wejścia połączenia"],
-    "9iLeL2": ["Adres URL skonfigurowany jako ", [1, "url"]],
-    AGLx00: ["Przepływ połączonej gry:"],
-    w0pN4R: ["Połącz konto"],
-    yKwZc2: ["Zarządzaj łączeniem kont"],
-    aTULMB: [
-        "Nie wykryto wywołania zwrotnego autoryzacji. Jeśli funkcja została wywołana, a ten komunikat nadal się wyświetla, sprawdź dzienniki.",
-    ],
-    eg0mNa: ["Nie można połączyć – brak dostępnych prawidłowych przepływów łączenia"],
-    cCvdJy: ["Otwórz profil gry"],
-    OEkrCx: ["Ten przepływ zostanie użyty"],
-    "no+FQS": ["Zostanie użyty pierwszy dostępny przepływ łączenia, zaczynając od góry"],
-    PFxxJa: ["Jeśli gra działa, ale nie może połączyć się z Discordem, sprawdź dzienniki gry w celu debugowania"],
-    S94dzs: ["RegisterAuthorizeRequestCallback wywołane i działa poprawnie"],
-    vR0zs6: ["Łączenie kont"],
-    KoK4J9: ["Narzędzia deweloperskie: ", [1, "appName"]],
-    tkIymA: ["Odłącz"],
-    K3ObrU: ["Przepływ webowy:"],
-};
+o.exports = JSON.parse(
+    '{"uG6teD":["Konto pomy\u015Blnie po\u0142\u0105czono"],"JgM2xu":["Sprawd\u017A wszystkie nowe funkcje, kt\xf3re uda\u0142o Ci si\u0119 odblokowa\u0107."],"ublzTG":["Konto po\u0142\u0105czone \u2013 zdobyto 200 Orbs!"],"jR3bbS":["Odblokuj funkcje spo\u0142eczno\u015Bciowe w grze, takie jak ujednolicona lista znajomych, bezpo\u015Brednie zaproszenia do dru\u017Cyny i nie tylko!"],"2cOIOr":["Po\u0142\u0105cz konto"],"dPuaZE":["Zdob\u0105d\u017A 200 Discord Orbs po po\u0142\u0105czeniu konta ",[1,"applicationName"]],"kxF9br":["SDK po\u0142\u0105czone przez RPC"],"8a7IrV":["Zarejestrowano adres URL punktu wej\u015Bcia po\u0142\u0105czenia"],"9iLeL2":["Adres URL skonfigurowany jako ",[1,"url"]],"AGLx00":["Przep\u0142yw po\u0142\u0105czonej gry:"],"w0pN4R":["Po\u0142\u0105cz konto"],"yKwZc2":["Zarz\u0105dzaj \u0142\u0105czeniem kont"],"aTULMB":["Nie wykryto wywo\u0142ania zwrotnego autoryzacji. Je\u015Bli funkcja zosta\u0142a wywo\u0142ana, a ten komunikat nadal si\u0119 wy\u015Bwietla, sprawd\u017A dzienniki."],"eg0mNa":["Nie mo\u017Cna po\u0142\u0105czy\u0107 \u2013 brak dost\u0119pnych prawid\u0142owych przep\u0142yw\xf3w \u0142\u0105czenia"],"cCvdJy":["Otw\xf3rz profil gry"],"OEkrCx":["Ten przep\u0142yw zostanie u\u017Cyty"],"no+FQS":["Zostanie u\u017Cyty pierwszy dost\u0119pny przep\u0142yw \u0142\u0105czenia, zaczynaj\u0105c od g\xf3ry"],"PFxxJa":["Je\u015Bli gra dzia\u0142a, ale nie mo\u017Ce po\u0142\u0105czy\u0107 si\u0119 z Discordem, sprawd\u017A dzienniki gry w celu debugowania"],"S94dzs":["RegisterAuthorizeRequestCallback wywo\u0142ane i dzia\u0142a poprawnie"],"vR0zs6":["\u0141\u0105czenie kont"],"KoK4J9":["Narz\u0119dzia deweloperskie: ",[1,"appName"]],"tkIymA":["Od\u0142\u0105cz"],"K3ObrU":["Przep\u0142yw webowy:"]}',
+);

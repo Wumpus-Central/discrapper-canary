@@ -1,25 +1,3 @@
-e.exports = {
-    "o/An3l": [[1, "username"], " megkért, hogy közvetítsd a következőt: ", [1, "applicationName"]],
-    DKHhec: ["Közvetítés kérése"],
-    "8qq+H7": [[1, "applicationName"], " közvetítésének kérése"],
-    s7bMT0: [[1, "username"], " arra kér, hogy közvetítsd a következőt: ", [1, "applicationName"]],
-    "7pndSl": ["Felkértél valakit a következő közvetítésére: ", [1, "applicationName"]],
-    P0wwmM: ["Már zajlik a közvetítés"],
-    u4QmWl: ["A kérés lejárt"],
-    qRXats: ["Nincs a hangcsatornában"],
-    "43zohO": ["Nem futó játék"],
-    "fac+eE": ["Nincs jogosultság"],
-    mVFTUg: ["A kérést túl kevés ideje küldted el"],
-    "8HU1M2": ["Kérés elküldve"],
-    "5+172e": ["Élő közvetítés"],
-    nAyuPp: ["Közvetítési kérés"],
-    "d/qbC0": [[1, "username"], " megkért, hogy közvetíts"],
-    "8B3U5O": ["Megkértél valakit, hogy közvetítsen"],
-    UGbmBp: ["Élő közvetítés"],
-    jTbTAF: [
-        [8, "$b", [[1, "username"]]],
-        " nézni szeretné, ahogy játszol a következővel: ",
-        [8, "$b", [[1, "game"]]],
-        ".",
-    ],
-};
+e.exports = JSON.parse(
+    '{"o/An3l":[[1,"username"]," megk\xe9rt, hogy k\xf6zvet\xedtsd a k\xf6vetkez\u0151t: ",[1,"applicationName"]],"DKHhec":["K\xf6zvet\xedt\xe9s k\xe9r\xe9se"],"8qq+H7":[[1,"applicationName"]," k\xf6zvet\xedt\xe9s\xe9nek k\xe9r\xe9se"],"s7bMT0":[[1,"username"]," arra k\xe9r, hogy k\xf6zvet\xedtsd a k\xf6vetkez\u0151t: ",[1,"applicationName"]],"7pndSl":["Felk\xe9rt\xe9l valakit a k\xf6vetkez\u0151 k\xf6zvet\xedt\xe9s\xe9re: ",[1,"applicationName"]],"P0wwmM":["M\xe1r zajlik a k\xf6zvet\xedt\xe9s"],"u4QmWl":["A k\xe9r\xe9s lej\xe1rt"],"qRXats":["Nincs a hangcsatorn\xe1ban"],"43zohO":["Nem fut\xf3 j\xe1t\xe9k"],"fac+eE":["Nincs jogosults\xe1g"],"mVFTUg":["A k\xe9r\xe9st t\xfal kev\xe9s ideje k\xfcldted el"],"8HU1M2":["K\xe9r\xe9s elk\xfcldve"],"5+172e":["\xc9l\u0151 k\xf6zvet\xedt\xe9s"],"nAyuPp":["K\xf6zvet\xedt\xe9si k\xe9r\xe9s"],"d/qbC0":[[1,"username"]," megk\xe9rt, hogy k\xf6zvet\xedts"],"8B3U5O":["Megk\xe9rt\xe9l valakit, hogy k\xf6zvet\xedtsen"],"UGbmBp":["\xc9l\u0151 k\xf6zvet\xedt\xe9s"],"jTbTAF":[[8,"$b",[[1,"username"]]]," n\xe9zni szeretn\xe9, ahogy j\xe1tszol a k\xf6vetkez\u0151vel: ",[8,"$b",[[1,"game"]]],"."]}',
+);

@@ -1,31 +1,3 @@
-a.exports = {
-    uG6teD: ["Kontot har länkats"],
-    JgM2xu: ["Kolla in alla nya funktioner som du har låst upp."],
-    ublzTG: ["Konto anslutet och 200 Orbs hämtade!"],
-    jR3bbS: [
-        "Lås upp sociala funktioner i spel som en sammanslagen vänlista, direktinbjudningar till grupper och annat!",
-    ],
-    "2cOIOr": ["Länka konto"],
-    dPuaZE: ["Få 200 Discord Orbs när du länkar ditt ", [1, "applicationName"], "-konto"],
-    kxF9br: ["SDK anslutet via RPC"],
-    "8a7IrV": ["Anslutningspunkts-URL registrerad"],
-    "9iLeL2": ["URL konfigurerad som ", [1, "url"]],
-    AGLx00: ["Flöde för spelanslutning:"],
-    w0pN4R: ["Länka konto"],
-    yKwZc2: ["Hantera kontolänkning"],
-    aTULMB: [
-        "Auth-återkoppling kunde inte hittas. Kontrollera loggarna för mer information om du har anropat funktionen och fortfarande ser det här",
-    ],
-    eg0mNa: ["Kan inte länka eftersom inga giltiga länkningsflöden är tillgängliga"],
-    cCvdJy: ["Öppna spelprofilen"],
-    OEkrCx: ["Detta flöde kommer att användas"],
-    "no+FQS": ["Det första tillgängliga länkningsflödet kommer att användas, med början högst upp"],
-    PFxxJa: [
-        "Om ditt spel körs och det inte går att ansluta till Discord, kan du prova att kolla spelets loggar för att felsöka",
-    ],
-    S94dzs: ["RegisterAuthorizeRequestCallback anropades och fungerar korrekt"],
-    vR0zs6: ["Kontolänkning"],
-    KoK4J9: ["Devtools: ", [1, "appName"]],
-    tkIymA: ["Koppla bort"],
-    K3ObrU: ["Webbflöde:"],
-};
+a.exports = JSON.parse(
+    '{"uG6teD":["Kontot har l\xe4nkats"],"JgM2xu":["Kolla in alla nya funktioner som du har l\xe5st upp."],"ublzTG":["Konto anslutet och 200 Orbs h\xe4mtade!"],"jR3bbS":["L\xe5s upp sociala funktioner i spel som en sammanslagen v\xe4nlista, direktinbjudningar till grupper och annat!"],"2cOIOr":["L\xe4nka konto"],"dPuaZE":["F\xe5 200 Discord Orbs n\xe4r du l\xe4nkar ditt ",[1,"applicationName"],"-konto"],"kxF9br":["SDK anslutet via RPC"],"8a7IrV":["Anslutningspunkts-URL registrerad"],"9iLeL2":["URL konfigurerad som ",[1,"url"]],"AGLx00":["Fl\xf6de f\xf6r spelanslutning:"],"w0pN4R":["L\xe4nka konto"],"yKwZc2":["Hantera kontol\xe4nkning"],"aTULMB":["Auth-\xe5terkoppling kunde inte hittas. Kontrollera loggarna f\xf6r mer information om du har anropat funktionen och fortfarande ser det h\xe4r"],"eg0mNa":["Kan inte l\xe4nka eftersom inga giltiga l\xe4nkningsfl\xf6den \xe4r tillg\xe4ngliga"],"cCvdJy":["\xd6ppna spelprofilen"],"OEkrCx":["Detta fl\xf6de kommer att anv\xe4ndas"],"no+FQS":["Det f\xf6rsta tillg\xe4ngliga l\xe4nkningsfl\xf6det kommer att anv\xe4ndas, med b\xf6rjan h\xf6gst upp"],"PFxxJa":["Om ditt spel k\xf6rs och det inte g\xe5r att ansluta till Discord, kan du prova att kolla spelets loggar f\xf6r att fels\xf6ka"],"S94dzs":["RegisterAuthorizeRequestCallback anropades och fungerar korrekt"],"vR0zs6":["Kontol\xe4nkning"],"KoK4J9":["Devtools: ",[1,"appName"]],"tkIymA":["Koppla bort"],"K3ObrU":["Webbfl\xf6de:"]}',
+);

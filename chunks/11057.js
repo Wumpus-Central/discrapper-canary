@@ -1,23 +1,3 @@
-e.exports = {
-    q5M7HV: ["Razno"],
-    zRKbpz: ["Server"],
-    "UzRF+8": ["Društveno"],
-    NGdNZb: ["Direktne poruke"],
-    zJlwvV: ["Discordove sistemske poruke"],
-    "40TIqW": ["Obavijesti o događaju"],
-    HibKoy: ["Obavijesti na forumu"],
-    vcrTV5: ["Aktivnost prijatelja"],
-    NxgGZA: ["Zahtjevi za prijateljstvom"],
-    "9EDo+/": ["Gaming"],
-    "IUH/Oe": ["Dolazni pozivi"],
-    "4qWUAO": ["Poruke"],
-    n0Wp6j: ["Propuštene poruke"],
-    "T+79Eo": ["Ostalo"],
-    kIrLfg: ["Druge obavijesti na serveru"],
-    MOjygY: ["Ankete"],
-    wv4QHR: ["Obavijesti o reakcijama"],
-    S5cB9e: ["U stvarnom vremenu"],
-    "4n388K": ["Obavijesti na pozornici"],
-    Iy9grw: ["Glas i aktivnost uživo"],
-    VeBD1N: ["Glas povezan"],
-};
+e.exports = JSON.parse(
+    '{"q5M7HV":["Razno"],"zRKbpz":["Server"],"UzRF+8":["Dru\u0161tveno"],"NGdNZb":["Direktne poruke"],"zJlwvV":["Discordove sistemske poruke"],"40TIqW":["Obavijesti o doga\u0111aju"],"HibKoy":["Obavijesti na forumu"],"vcrTV5":["Aktivnost prijatelja"],"NxgGZA":["Zahtjevi za prijateljstvom"],"9EDo+/":["Gaming"],"IUH/Oe":["Dolazni pozivi"],"4qWUAO":["Poruke"],"n0Wp6j":["Propu\u0161tene poruke"],"T+79Eo":["Ostalo"],"kIrLfg":["Druge obavijesti na serveru"],"MOjygY":["Ankete"],"wv4QHR":["Obavijesti o reakcijama"],"S5cB9e":["U stvarnom vremenu"],"4n388K":["Obavijesti na pozornici"],"Iy9grw":["Glas i aktivnost u\u017Eivo"],"VeBD1N":["Glas povezan"]}',
+);

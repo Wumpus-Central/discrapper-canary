@@ -1,4 +1,3 @@
-p.exports = {
-    F3llsQ: ["Dela när jag uppdaterar min profil"],
-    "6goWcz": ["Låt vänner få en push-avisering när du uppdaterar din profil."],
-};
+p.exports = JSON.parse(
+    '{"F3llsQ":["Dela n\xe4r jag uppdaterar min profil"],"6goWcz":["L\xe5t v\xe4nner f\xe5 en push-avisering n\xe4r du uppdaterar din profil."]}',
+);

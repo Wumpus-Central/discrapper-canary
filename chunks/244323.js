@@ -1,4 +1,3 @@
-i.exports = {
-    F3llsQ: ["Jaa tieto profiilini päivityksestä"],
-    "6goWcz": ["Salli push-ilmoituksen lähetys kavereille, kun päivität profiiliasi."],
-};
+i.exports = JSON.parse(
+    '{"F3llsQ":["Jaa tieto profiilini p\xe4ivityksest\xe4"],"6goWcz":["Salli push-ilmoituksen l\xe4hetys kavereille, kun p\xe4ivit\xe4t profiiliasi."]}',
+);

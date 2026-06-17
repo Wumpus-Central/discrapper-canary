@@ -1,17 +1,3 @@
-e.exports = {
-    "6/dkHh": ["Fermer la transcription"],
-    XiLvuG: ["Changer le volume"],
-    ZwPhbB: ["Vitesse de lecture"],
-    "dRVF+Z": ["Revenir 10 s en arrière"],
-    yV2FLL: ["Avancer de 10 secondes"],
-    YWbiPw: ["Impossible de passer les sections non regardées pour le moment"],
-    "0DbPcL": ["Activer/Désactiver les sous-titres"],
-    z9Cnzv: ["Activer/Désactiver le plein écran"],
-    "6EjGUv": ["Activer/Désactiver la transcription"],
-    "kX3+aM": ["Chargement de la vidéo…"],
-    c7IRfm: ["Vidéo mise en pause car la fenêtre n'est plus au premier plan"],
-    "9St/zK": ["Vidéo mise en pause car la fenêtre n'est pas visible"],
-    "VZkd/n": ["Transcription"],
-    E527vj: ["Vignette de la vidéo"],
-    "5L6uDs": [[1, "percent"], " %"],
-};
+e.exports = JSON.parse(
+    '{"6/dkHh":["Fermer la transcription"],"XiLvuG":["Changer le volume"],"ZwPhbB":["Vitesse de lecture"],"dRVF+Z":["Revenir 10\xa0s en arri\xe8re"],"yV2FLL":["Avancer de 10\xa0secondes"],"YWbiPw":["Impossible de passer les sections non regard\xe9es pour le moment"],"0DbPcL":["Activer/D\xe9sactiver les sous-titres"],"z9Cnzv":["Activer/D\xe9sactiver le plein \xe9cran"],"6EjGUv":["Activer/D\xe9sactiver la transcription"],"kX3+aM":["Chargement de la vid\xe9o\u2026"],"c7IRfm":["Vid\xe9o mise en pause car la fen\xeatre n\'est plus au premier plan"],"9St/zK":["Vid\xe9o mise en pause car la fen\xeatre n\'est pas visible"],"VZkd/n":["Transcription"],"E527vj":["Vignette de la vid\xe9o"],"5L6uDs":[[1,"percent"],"\xa0%"]}',
+);

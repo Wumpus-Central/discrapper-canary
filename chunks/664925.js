@@ -1,17 +1,3 @@
-e.exports = {
-    "/cp93l": ["Luna viitoare"],
-    raS6yf: ["Luna trecută"],
-    JA5C7L: ["Șterge"],
-    I8kUqR: ["Deschide calendarul"],
-    db85vU: ["Nimic de afișat"],
-    bPKiId: ["Niciun rezultat pentru „", [1, "query"], "”"],
-    WfH9in: ["Închide"],
-    m3Vfcs: ["Nu mai afișa"],
-    cgdAs2: ["(Va deschide o filă nouă)"],
-    "2L/ygS": [[1, "percent"], "% realizat"],
-    "/Y7vRd": ["Apasă „Șterge” pentru a elimina."],
-    VMNfsY: ["Selected"],
-    "A+pfVR": ["Selectează..."],
-    "v2YSk/": ["Pasul ", [1, "stepNumber"], " din ", [1, "stepCount"]],
-    YpT3kk: ["Mărește și redă clipul video"],
-};
+e.exports = JSON.parse(
+    '{"/cp93l":["Luna viitoare"],"raS6yf":["Luna trecut\u0103"],"JA5C7L":["\u0218terge"],"I8kUqR":["Deschide calendarul"],"db85vU":["Nimic de afi\u0219at"],"bPKiId":["Niciun rezultat pentru \u201E",[1,"query"],"\u201D"],"WfH9in":["\xcenchide"],"m3Vfcs":["Nu mai afi\u0219a"],"cgdAs2":["(Va deschide o fil\u0103 nou\u0103)"],"2L/ygS":[[1,"percent"],"% realizat"],"/Y7vRd":["Apas\u0103 \u201E\u0218terge\u201D pentru a elimina."],"VMNfsY":["Selected"],"A+pfVR":["Selecteaz\u0103..."],"v2YSk/":["Pasul ",[1,"stepNumber"]," din ",[1,"stepCount"]],"YpT3kk":["M\u0103re\u0219te \u0219i red\u0103 clipul video"]}',
+);

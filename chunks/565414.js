@@ -1,21 +1,3 @@
-o.exports = {
-    578719: ["Pomoz hráčům najít relace odpovídající jejich náladě výběrem z předdefinovaných štítků"],
-    QwW8zd: ["Vytvořit příspěvek"],
-    DxwBMf: ["Vytvoř místo a pozvi sem ostatní."],
-    "7aCPJG": ["Už přidáno"],
-    F5YBmi: ["Vybrat vše"],
-    JWRsCC: ["Přidat doporučené štítky"],
-    "h/GwWL": ["LFG"],
-    "MKZ+Ky": ["Pomoz hráčům najít relace odpovídající jejich náladě výběrem z předdefinovaných štítků"],
-    "5a7Pjb": ["Přidej doporučené štítky"],
-    "/mEbGf": ["Popis"],
-    "SU/IAE": ["Přidej více podrobností o své herní relaci"],
-    UHF2Zn: ["Propoj svůj účet, aby hráči mohli vidět volná místa ve tvém týmu a požádat o připojení!"],
-    EBSaL4: ["Připojit účet"],
-    vznMVa: [[8, "$link", ["Propoj svůj účet"], [[1, "onClick"]]], ", aby hráči mohli vidět volná místa ve tvém týmu!"],
-    "yoIAe/": ["Přidej štítky pro vyjádření nálady a toho, co právě hledáš"],
-    tOsHsu: ["Vytvořit příspěvek"],
-    G91SYQ: ["Můžeš zahájit hovor, ke kterému se ostatní mohou přidat"],
-    "0s2ICk": ["Přidej štítek „", [1, "noMicTagName"], "“ do tohoto kanálu, aby se tento přepínač povolil"],
-    Xd2NFi: ["Hlasový chat"],
-};
+o.exports = JSON.parse(
+    '{"QwW8zd":["Vytvo\u0159it p\u0159\xedsp\u011Bvek"],"DxwBMf":["Vytvo\u0159 m\xedsto a\xa0pozvi sem ostatn\xed."],"7aCPJG":["U\u017E p\u0159id\xe1no"],"F5YBmi":["Vybrat v\u0161e"],"578719":["Pomoz hr\xe1\u010D\u016Fm naj\xedt relace odpov\xeddaj\xedc\xed jejich n\xe1lad\u011B v\xfdb\u011Brem z\xa0p\u0159eddefinovan\xfdch \u0161t\xedtk\u016F"],"JWRsCC":["P\u0159idat doporu\u010Den\xe9 \u0161t\xedtky"],"h/GwWL":["LFG"],"MKZ+Ky":["Pomoz hr\xe1\u010D\u016Fm naj\xedt relace odpov\xeddaj\xedc\xed jejich n\xe1lad\u011B v\xfdb\u011Brem z\xa0p\u0159eddefinovan\xfdch \u0161t\xedtk\u016F"],"5a7Pjb":["P\u0159idej doporu\u010Den\xe9 \u0161t\xedtky"],"/mEbGf":["Popis"],"SU/IAE":["P\u0159idej v\xedce podrobnost\xed o\xa0sv\xe9 hern\xed relaci"],"UHF2Zn":["Propoj sv\u016Fj \xfa\u010Det, aby hr\xe1\u010Di mohli vid\u011Bt voln\xe1 m\xedsta ve tv\xe9m t\xfdmu a\xa0po\u017E\xe1dat o\xa0p\u0159ipojen\xed!"],"EBSaL4":["P\u0159ipojit \xfa\u010Det"],"vznMVa":[[8,"$link",["Propoj sv\u016Fj \xfa\u010Det"],[[1,"onClick"]]],", aby hr\xe1\u010Di mohli vid\u011Bt voln\xe1 m\xedsta ve tv\xe9m t\xfdmu!"],"yoIAe/":["P\u0159idej \u0161t\xedtky pro vyj\xe1d\u0159en\xed n\xe1lady a\xa0toho, co pr\xe1v\u011B hled\xe1\u0161"],"tOsHsu":["Vytvo\u0159it p\u0159\xedsp\u011Bvek"],"G91SYQ":["M\u016F\u017Ee\u0161 zah\xe1jit hovor, ke kter\xe9mu se ostatn\xed mohou p\u0159idat"],"0s2ICk":["P\u0159idej \u0161t\xedtek \u201E",[1,"noMicTagName"],"\u201C do tohoto kan\xe1lu, aby se tento p\u0159ep\xedna\u010D povolil"],"Xd2NFi":["Hlasov\xfd chat"]}',
+);

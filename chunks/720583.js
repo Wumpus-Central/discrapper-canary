@@ -1,17 +1,3 @@
-p.exports = {
-    "6/dkHh": ["关闭文字转录"],
-    XiLvuG: ["调整音量"],
-    ZwPhbB: ["回放速度"],
-    "dRVF+Z": ["倒回 10 秒"],
-    yV2FLL: ["向前跳过 10 秒"],
-    YWbiPw: ["目前无法跳过未观看的区域"],
-    "0DbPcL": ["切换字幕"],
-    z9Cnzv: ["切换全屏"],
-    "6EjGUv": ["切换转录"],
-    "kX3+aM": ["正在加载视频……"],
-    c7IRfm: ["因窗口失去焦点，视频已暂停"],
-    "9St/zK": ["因窗口不可见，视频已暂停"],
-    "VZkd/n": ["文字记录"],
-    E527vj: ["视频缩略图"],
-    "5L6uDs": [[1, "percent"], "%"],
-};
+p.exports = JSON.parse(
+    '{"6/dkHh":["\u5173\u95ED\u6587\u5B57\u8F6C\u5F55"],"XiLvuG":["\u8C03\u6574\u97F3\u91CF"],"ZwPhbB":["\u56DE\u653E\u901F\u5EA6"],"dRVF+Z":["\u5012\u56DE 10 \u79D2"],"yV2FLL":["\u5411\u524D\u8DF3\u8FC7 10 \u79D2"],"YWbiPw":["\u76EE\u524D\u65E0\u6CD5\u8DF3\u8FC7\u672A\u89C2\u770B\u7684\u533A\u57DF"],"0DbPcL":["\u5207\u6362\u5B57\u5E55"],"z9Cnzv":["\u5207\u6362\u5168\u5C4F"],"6EjGUv":["\u5207\u6362\u8F6C\u5F55"],"kX3+aM":["\u6B63\u5728\u52A0\u8F7D\u89C6\u9891\u2026\u2026"],"c7IRfm":["\u56E0\u7A97\u53E3\u5931\u53BB\u7126\u70B9\uFF0C\u89C6\u9891\u5DF2\u6682\u505C"],"9St/zK":["\u56E0\u7A97\u53E3\u4E0D\u53EF\u89C1\uFF0C\u89C6\u9891\u5DF2\u6682\u505C"],"VZkd/n":["\u6587\u5B57\u8BB0\u5F55"],"E527vj":["\u89C6\u9891\u7F29\u7565\u56FE"],"5L6uDs":[[1,"percent"],"%"]}',
+);

@@ -1,15 +1,3 @@
-p.exports = {
-    u72Prd: ["使用 Nitro 进行高清直播"],
-    uwMBDo: ["分享 APP 音频"],
-    "3wwZ/Q": ["开始直播"],
-    OsS9Ll: ["停止直播"],
-    "j+eAMQ": ["直播音频"],
-    "/XSr8v": ["直播模式"],
-    ibH7vy: ["平衡画质和性能（", [1, "resolution"], "p，", [1, "fps"], "fps）"],
-    "2qmQ8N": ["默认"],
-    q4gYBi: ["视频和游戏优化（", [1, "resolution"], "p，", [1, "fps"], "fps）"],
-    nMcXo1: ["高画质"],
-    fN0UQY: ["为低配设备优化（", [1, "resolution"], "p，", [1, "fps"], "fps）"],
-    "5eO4/m": ["性能"],
-    CrNjqp: ["直播设置"],
-};
+p.exports = JSON.parse(
+    '{"u72Prd":["\u4F7F\u7528 Nitro \u8FDB\u884C\u9AD8\u6E05\u76F4\u64AD"],"uwMBDo":["\u5206\u4EAB APP \u97F3\u9891"],"3wwZ/Q":["\u5F00\u59CB\u76F4\u64AD"],"OsS9Ll":["\u505C\u6B62\u76F4\u64AD"],"j+eAMQ":["\u76F4\u64AD\u97F3\u9891"],"/XSr8v":["\u76F4\u64AD\u6A21\u5F0F"],"ibH7vy":["\u5E73\u8861\u753B\u8D28\u548C\u6027\u80FD\uFF08",[1,"resolution"],"p\uFF0C",[1,"fps"],"fps\uFF09"],"2qmQ8N":["\u9ED8\u8BA4"],"q4gYBi":["\u89C6\u9891\u548C\u6E38\u620F\u4F18\u5316\uFF08",[1,"resolution"],"p\uFF0C",[1,"fps"],"fps\uFF09"],"nMcXo1":["\u9AD8\u753B\u8D28"],"fN0UQY":["\u4E3A\u4F4E\u914D\u8BBE\u5907\u4F18\u5316\uFF08",[1,"resolution"],"p\uFF0C",[1,"fps"],"fps\uFF09"],"5eO4/m":["\u6027\u80FD"],"CrNjqp":["\u76F4\u64AD\u8BBE\u7F6E"]}',
+);

@@ -1,31 +1,3 @@
-e.exports = {
-    uG6teD: ["Account erfolgreich verknüpft"],
-    JgM2xu: ["Sieh dir alle neuen Features an, die du freigeschaltet hast."],
-    ublzTG: ["Account verknüpft und 200 Orbs beansprucht!"],
-    jR3bbS: [
-        "Schalte soziale Features im Spiel frei, darunter eine einheitliche Freundesliste, direkte Gruppeneinladungen und mehr!",
-    ],
-    "2cOIOr": ["Account verknüpfen"],
-    dPuaZE: ["Erhalte 200 Discord Orbs, wenn du deinen ", [1, "applicationName"], "-Account verknüpfst"],
-    kxF9br: ["SDK über RPC verbunden"],
-    "8a7IrV": ["URL des Verbindungseinstiegspunkts registriert"],
-    "9iLeL2": ["URL als ", [1, "url"], " konfiguriert"],
-    AGLx00: ["Spielverbindungsfortschritt:"],
-    w0pN4R: ["Account verknüpfen"],
-    yKwZc2: ["Account-Verknüpfung verwalten"],
-    aTULMB: [
-        "Auth-Callback nicht erkannt. Wenn du die Funktion aufgerufen hast und dies noch siehst, suche in den Protokollen nach dem Grund.",
-    ],
-    eg0mNa: ["Verknüpfung nicht möglich, da keine gültigen Verknüpfungs-Flows verfügbar sind"],
-    cCvdJy: ["Spielprofil öffnen"],
-    OEkrCx: ["Dieser Flow wird verwendet werden."],
-    "no+FQS": ["Der zuerst verfügbare Verknüpfungsablauf wird verwendet, beginnend ganz oben."],
-    PFxxJa: [
-        "Wenn dein Spiel läuft und keine Verbindung zu Discord herstellen kann, sieh dir die Logs deines Spiels an, um das Problem zu untersuchen.",
-    ],
-    S94dzs: ["RegisterAuthorizeRequestCallback wurde aufgerufen und funktioniert korrekt."],
-    vR0zs6: ["Accountverknüpfung"],
-    KoK4J9: ["Entwickler-Tools: ", [1, "appName"]],
-    tkIymA: ["Trennen"],
-    K3ObrU: ["Web-Flow:"],
-};
+e.exports = JSON.parse(
+    '{"uG6teD":["Account erfolgreich verkn\xfcpft"],"JgM2xu":["Sieh dir alle neuen Features an, die du freigeschaltet hast."],"ublzTG":["Account verkn\xfcpft und 200\xa0Orbs beansprucht!"],"jR3bbS":["Schalte soziale Features im Spiel frei, darunter eine einheitliche Freundesliste, direkte Gruppeneinladungen und mehr!"],"2cOIOr":["Account verkn\xfcpfen"],"dPuaZE":["Erhalte 200\xa0Discord Orbs, wenn du deinen ",[1,"applicationName"],"-Account verkn\xfcpfst"],"kxF9br":["SDK \xfcber RPC verbunden"],"8a7IrV":["URL des Verbindungseinstiegspunkts registriert"],"9iLeL2":["URL als ",[1,"url"]," konfiguriert"],"AGLx00":["Spielverbindungsfortschritt:"],"w0pN4R":["Account verkn\xfcpfen"],"yKwZc2":["Account-Verkn\xfcpfung verwalten"],"aTULMB":["Auth-Callback nicht erkannt. Wenn du die Funktion aufgerufen hast und dies noch siehst, suche in den Protokollen nach dem Grund."],"eg0mNa":["Verkn\xfcpfung nicht m\xf6glich, da keine g\xfcltigen Verkn\xfcpfungs-Flows verf\xfcgbar sind"],"cCvdJy":["Spielprofil \xf6ffnen"],"OEkrCx":["Dieser Flow wird verwendet werden."],"no+FQS":["Der zuerst verf\xfcgbare Verkn\xfcpfungsablauf wird verwendet, beginnend ganz oben."],"PFxxJa":["Wenn dein Spiel l\xe4uft und keine Verbindung zu Discord herstellen kann, sieh dir die Logs deines Spiels an, um das Problem zu untersuchen."],"S94dzs":["RegisterAuthorizeRequestCallback wurde aufgerufen und funktioniert korrekt."],"vR0zs6":["Accountverkn\xfcpfung"],"KoK4J9":["Entwickler-Tools: ",[1,"appName"]],"tkIymA":["Trennen"],"K3ObrU":["Web-Flow:"]}',
+);

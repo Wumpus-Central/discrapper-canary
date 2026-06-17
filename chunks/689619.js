@@ -1,24 +1,3 @@
-e.exports = {
-    578719: ["Spillerne kan velge ulike tagger for å finne det de ønsker seg"],
-    QwW8zd: ["Opprett innlegg"],
-    DxwBMf: ["Opprett et rom du kan invitere andre til."],
-    "7aCPJG": ["Allerede lagt til"],
-    F5YBmi: ["Velg alle"],
-    JWRsCC: ["Legg til anbefalte tagger"],
-    "h/GwWL": ["LFG"],
-    "MKZ+Ky": ["Spillerne kan velge ulike tagger for å finne det de ønsker seg"],
-    "5a7Pjb": ["Legg til anbefalte tagger"],
-    "/mEbGf": ["Beskrivelse"],
-    "SU/IAE": ["Legg til mer info om spilløkten"],
-    UHF2Zn: ["Knytt til kontoen din, slik at andre kan se ledige plasser på laget og be om å få bli med!"],
-    EBSaL4: ["Lenke til konto"],
-    vznMVa: [
-        [8, "$link", ["Knytt til kontoen din"], [[1, "onClick"]]],
-        ", slik at andre kan se ledige plasser på laget!",
-    ],
-    "yoIAe/": ["Legg til tagger for stemning og det du leter etter"],
-    tOsHsu: ["Opprett innlegg"],
-    G91SYQ: ["Start en samtale som andre kan bli med i"],
-    "0s2ICk": ["Bruk en «", [1, "noMicTagName"], "»-tagg i kanalen for å aktivere bryteren"],
-    Xd2NFi: ["Talechat"],
-};
+e.exports = JSON.parse(
+    '{"QwW8zd":["Opprett innlegg"],"DxwBMf":["Opprett et rom du kan invitere andre til."],"7aCPJG":["Allerede lagt til"],"F5YBmi":["Velg alle"],"578719":["Spillerne kan velge ulike tagger for \xe5 finne det de \xf8nsker seg"],"JWRsCC":["Legg til anbefalte tagger"],"h/GwWL":["LFG"],"MKZ+Ky":["Spillerne kan velge ulike tagger for \xe5 finne det de \xf8nsker seg"],"5a7Pjb":["Legg til anbefalte tagger"],"/mEbGf":["Beskrivelse"],"SU/IAE":["Legg til mer info om spill\xf8kten"],"UHF2Zn":["Knytt til kontoen din, slik at andre kan se ledige plasser p\xe5 laget og be om \xe5 f\xe5 bli med!"],"EBSaL4":["Lenke til konto"],"vznMVa":[[8,"$link",["Knytt til kontoen din"],[[1,"onClick"]]],", slik at andre kan se ledige plasser p\xe5 laget!"],"yoIAe/":["Legg til tagger for stemning og det du leter etter"],"tOsHsu":["Opprett innlegg"],"G91SYQ":["Start en samtale som andre kan bli med i"],"0s2ICk":["Bruk en \xab",[1,"noMicTagName"],"\xbb-tagg i kanalen for \xe5 aktivere bryteren"],"Xd2NFi":["Talechat"]}',
+);

@@ -1,15 +1,3 @@
-p.exports = {
-    u72Prd: ["NitroでHD解像度の配信を楽しもう"],
-    uwMBDo: ["アプリ音声を共有"],
-    "3wwZ/Q": ["配信を開始"],
-    OsS9Ll: ["配信を中止"],
-    "j+eAMQ": ["配信の音声"],
-    "/XSr8v": ["配信モード"],
-    ibH7vy: ["画質とパフォーマンスのバランス（", [1, "resolution"], "p、", [1, "fps"], "fps）"],
-    "2qmQ8N": ["デフォルト"],
-    q4gYBi: ["動画やゲーム用（", [1, "resolution"], "p、", [1, "fps"], "fps）"],
-    nMcXo1: ["高画質"],
-    fN0UQY: ["低速デバイス向けに最適化（", [1, "resolution"], "p、", [1, "fps"], "fps）"],
-    "5eO4/m": ["パフォーマンス"],
-    CrNjqp: ["配信設定"],
-};
+p.exports = JSON.parse(
+    '{"u72Prd":["Nitro\u3067HD\u89E3\u50CF\u5EA6\u306E\u914D\u4FE1\u3092\u697D\u3057\u3082\u3046"],"uwMBDo":["\u30A2\u30D7\u30EA\u97F3\u58F0\u3092\u5171\u6709"],"3wwZ/Q":["\u914D\u4FE1\u3092\u958B\u59CB"],"OsS9Ll":["\u914D\u4FE1\u3092\u4E2D\u6B62"],"j+eAMQ":["\u914D\u4FE1\u306E\u97F3\u58F0"],"/XSr8v":["\u914D\u4FE1\u30E2\u30FC\u30C9"],"ibH7vy":["\u753B\u8CEA\u3068\u30D1\u30D5\u30A9\u30FC\u30DE\u30F3\u30B9\u306E\u30D0\u30E9\u30F3\u30B9\uFF08",[1,"resolution"],"p\u3001",[1,"fps"],"fps\uFF09"],"2qmQ8N":["\u30C7\u30D5\u30A9\u30EB\u30C8"],"q4gYBi":["\u52D5\u753B\u3084\u30B2\u30FC\u30E0\u7528\uFF08",[1,"resolution"],"p\u3001",[1,"fps"],"fps\uFF09"],"nMcXo1":["\u9AD8\u753B\u8CEA"],"fN0UQY":["\u4F4E\u901F\u30C7\u30D0\u30A4\u30B9\u5411\u3051\u306B\u6700\u9069\u5316\uFF08",[1,"resolution"],"p\u3001",[1,"fps"],"fps\uFF09"],"5eO4/m":["\u30D1\u30D5\u30A9\u30FC\u30DE\u30F3\u30B9"],"CrNjqp":["\u914D\u4FE1\u8A2D\u5B9A"]}',
+);

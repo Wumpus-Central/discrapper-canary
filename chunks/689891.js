@@ -1,27 +1,3 @@
-e.exports = {
-    "0LL6FX": [
-        "Cela mettra à jour l'apparence du serveur pour tous les membres. Le thème s'adapte à leur mode clair ou sombre.",
-    ],
-    H8idcP: ["Appliquer le thème de serveur ?"],
-    odtr7f: [
-        "Choisis un thème prédéfini ou crée le tien. Chaque membre voit ce thème lorsqu'il ouvre le serveur, et il s'adapte à son mode clair ou sombre. ",
-        [8, "$link", ["En savoir plus"], [[1, "articleUrl"]]],
-    ],
-    XhiIAu: ["Cela change l'apparence de ton serveur pour tous les membres."],
-    aZpFFn: ["Activer le thème du serveur"],
-    jSrqR2: ["Prédéfinis"],
-    XyrxOp: ["Bleu-violet"],
-    tXRcxU: ["Denim"],
-    "S8/OZA": ["Feu"],
-    nCbxEN: ["Poussière d'or"],
-    "6ZeQDd": ["Jade"],
-    TiGQro: ["Mousse"],
-    "x3h/OV": ["Obsidienne"],
-    qn90j5: ["Océan"],
-    tTJY6S: ["Prune"],
-    "+k8Q/o": ["Crépuscule"],
-    HkvkHP: ["La préférence de mode clair ou sombre de chaque membre sera affichée pour celui ou celle-ci."],
-    zry4l5: ["Aperçu du thème"],
-    Ck5zxP: ["Sélectionne ton thème"],
-    "/6NbRv": ["Thème du serveur"],
-};
+e.exports = JSON.parse(
+    '{"0LL6FX":["Cela mettra \xe0 jour l\'apparence du serveur pour tous les membres. Le th\xe8me s\'adapte \xe0 leur mode clair ou sombre."],"H8idcP":["Appliquer le th\xe8me de serveur\xa0?"],"odtr7f":["Choisis un th\xe8me pr\xe9d\xe9fini ou cr\xe9e le tien. Chaque membre voit ce th\xe8me lorsqu\'il ouvre le serveur, et il s\'adapte \xe0 son mode clair ou sombre. ",[8,"$link",["En savoir plus"],[[1,"articleUrl"]]]],"XhiIAu":["Cela change l\'apparence de ton serveur pour tous les membres."],"aZpFFn":["Activer le th\xe8me du serveur"],"jSrqR2":["Pr\xe9d\xe9finis"],"XyrxOp":["Bleu-violet"],"tXRcxU":["Denim"],"S8/OZA":["Feu"],"nCbxEN":["Poussi\xe8re d\'or"],"6ZeQDd":["Jade"],"TiGQro":["Mousse"],"x3h/OV":["Obsidienne"],"qn90j5":["Oc\xe9an"],"tTJY6S":["Prune"],"+k8Q/o":["Cr\xe9puscule"],"HkvkHP":["La pr\xe9f\xe9rence de mode clair ou sombre de chaque membre sera affich\xe9e pour celui ou celle-ci."],"zry4l5":["Aper\xe7u du th\xe8me"],"Ck5zxP":["S\xe9lectionne ton th\xe8me"],"/6NbRv":["Th\xe8me du serveur"]}',
+);

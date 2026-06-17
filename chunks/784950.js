@@ -1,21 +1,3 @@
-s.exports = {
-    578719: ["勾选预设标签，方便其他玩家找到风格契合的组队房间"],
-    QwW8zd: ["创建帖子"],
-    DxwBMf: ["创建一个空间以邀请他人。"],
-    "7aCPJG": ["已添加"],
-    F5YBmi: ["全选"],
-    JWRsCC: ["添加推荐标签"],
-    "h/GwWL": ["找同好（LFG）"],
-    "MKZ+Ky": ["勾选预设标签，方便其他玩家找到风格契合的组队房间"],
-    "5a7Pjb": ["添加推荐标签"],
-    "/mEbGf": ["描述"],
-    "SU/IAE": ["添加更多您的游戏详情"],
-    UHF2Zn: ["关联账号后，其他玩家就能查看队伍空位并申请入队！"],
-    EBSaL4: ["关联账号"],
-    vznMVa: [[8, "$link", ["关联您的账号"], [[1, "onClick"]]], "，让其他玩家能够查看您小队的空位！"],
-    "yoIAe/": ["添加标签，描述氛围和您的目标"],
-    tOsHsu: ["创建帖子"],
-    G91SYQ: ["您可以发起其他用户可加入的语音聊天"],
-    "0s2ICk": ["在此频道添加“", [1, "noMicTagName"], "”标签以启用此开关"],
-    Xd2NFi: ["语音聊天"],
-};
+s.exports = JSON.parse(
+    '{"QwW8zd":["\u521B\u5EFA\u5E16\u5B50"],"DxwBMf":["\u521B\u5EFA\u4E00\u4E2A\u7A7A\u95F4\u4EE5\u9080\u8BF7\u4ED6\u4EBA\u3002"],"7aCPJG":["\u5DF2\u6DFB\u52A0"],"F5YBmi":["\u5168\u9009"],"578719":["\u52FE\u9009\u9884\u8BBE\u6807\u7B7E\uFF0C\u65B9\u4FBF\u5176\u4ED6\u73A9\u5BB6\u627E\u5230\u98CE\u683C\u5951\u5408\u7684\u7EC4\u961F\u623F\u95F4"],"JWRsCC":["\u6DFB\u52A0\u63A8\u8350\u6807\u7B7E"],"h/GwWL":["\u627E\u540C\u597D\uFF08LFG\uFF09"],"MKZ+Ky":["\u52FE\u9009\u9884\u8BBE\u6807\u7B7E\uFF0C\u65B9\u4FBF\u5176\u4ED6\u73A9\u5BB6\u627E\u5230\u98CE\u683C\u5951\u5408\u7684\u7EC4\u961F\u623F\u95F4"],"5a7Pjb":["\u6DFB\u52A0\u63A8\u8350\u6807\u7B7E"],"/mEbGf":["\u63CF\u8FF0"],"SU/IAE":["\u6DFB\u52A0\u66F4\u591A\u60A8\u7684\u6E38\u620F\u8BE6\u60C5"],"UHF2Zn":["\u5173\u8054\u8D26\u53F7\u540E\uFF0C\u5176\u4ED6\u73A9\u5BB6\u5C31\u80FD\u67E5\u770B\u961F\u4F0D\u7A7A\u4F4D\u5E76\u7533\u8BF7\u5165\u961F\uFF01"],"EBSaL4":["\u5173\u8054\u8D26\u53F7"],"vznMVa":[[8,"$link",["\u5173\u8054\u60A8\u7684\u8D26\u53F7"],[[1,"onClick"]]],"\uFF0C\u8BA9\u5176\u4ED6\u73A9\u5BB6\u80FD\u591F\u67E5\u770B\u60A8\u5C0F\u961F\u7684\u7A7A\u4F4D\uFF01"],"yoIAe/":["\u6DFB\u52A0\u6807\u7B7E\uFF0C\u63CF\u8FF0\u6C1B\u56F4\u548C\u60A8\u7684\u76EE\u6807"],"tOsHsu":["\u521B\u5EFA\u5E16\u5B50"],"G91SYQ":["\u60A8\u53EF\u4EE5\u53D1\u8D77\u5176\u4ED6\u7528\u6237\u53EF\u52A0\u5165\u7684\u8BED\u97F3\u804A\u5929"],"0s2ICk":["\u5728\u6B64\u9891\u9053\u6DFB\u52A0\u201C",[1,"noMicTagName"],"\u201D\u6807\u7B7E\u4EE5\u542F\u7528\u6B64\u5F00\u5173"],"Xd2NFi":["\u8BED\u97F3\u804A\u5929"]}',
+);

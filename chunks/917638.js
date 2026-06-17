@@ -1,28 +1,3 @@
-o.exports = {
-    578719: ["Pomozi igračima da pronađu sesije koje odgovaraju njihovoj vibri odabirom unaprijed definiranih tagova"],
-    QwW8zd: ["Kreiraj post"],
-    DxwBMf: ["Napravi prostor u koji ćeš pozvati druge."],
-    "7aCPJG": ["Već dodano"],
-    F5YBmi: ["Odaberi sve"],
-    JWRsCC: ["Dodaj preporučene tagove"],
-    "h/GwWL": ["LFG"],
-    "MKZ+Ky": [
-        "Pomozi igračima da pronađu sesije koje odgovaraju njihovoj vibri odabirom unaprijed definiranih tagova",
-    ],
-    "5a7Pjb": ["Dodaj preporučene tagove"],
-    "/mEbGf": ["Opis"],
-    "SU/IAE": ["Dodaj više pojedinosti o svojoj sesiji igranja"],
-    UHF2Zn: [
-        "Poveži svoj račun kako bi igrači mogli vidjeti slobodna mjesta u tvojoj ekipi i zatražiti pridruživanje!",
-    ],
-    EBSaL4: ["Poveži račun"],
-    vznMVa: [
-        [8, "$link", ["Poveži svoj račun"], [[1, "onClick"]]],
-        " kako bi igrači mogli vidjeti otvorena mjesta u tvojoj ekipi!",
-    ],
-    "yoIAe/": ["Dodaj tagove za vajboloženje i što već hoćeš"],
-    tOsHsu: ["Izradi post"],
-    G91SYQ: ["Možeš započeti poziv kojem se drugi mogu pridružiti"],
-    "0s2ICk": ["Dodaj tag „", [1, "noMicTagName"], "” na ovaj kanal da omogućiš ovaj prekidač"],
-    Xd2NFi: ["Glasovni chat"],
-};
+o.exports = JSON.parse(
+    '{"QwW8zd":["Kreiraj post"],"DxwBMf":["Napravi prostor u koji \u0107e\u0161 pozvati druge."],"7aCPJG":["Ve\u0107 dodano"],"F5YBmi":["Odaberi sve"],"578719":["Pomozi igra\u010Dima da prona\u0111u sesije koje odgovaraju njihovoj vibri odabirom unaprijed definiranih tagova"],"JWRsCC":["Dodaj preporu\u010Dene tagove"],"h/GwWL":["LFG"],"MKZ+Ky":["Pomozi igra\u010Dima da prona\u0111u sesije koje odgovaraju njihovoj vibri odabirom unaprijed definiranih tagova"],"5a7Pjb":["Dodaj preporu\u010Dene tagove"],"/mEbGf":["Opis"],"SU/IAE":["Dodaj vi\u0161e pojedinosti o svojoj sesiji igranja"],"UHF2Zn":["Pove\u017Ei svoj ra\u010Dun kako bi igra\u010Di mogli vidjeti slobodna mjesta u tvojoj ekipi i zatra\u017Eiti pridru\u017Eivanje!"],"EBSaL4":["Pove\u017Ei ra\u010Dun"],"vznMVa":[[8,"$link",["Pove\u017Ei svoj ra\u010Dun"],[[1,"onClick"]]]," kako bi igra\u010Di mogli vidjeti otvorena mjesta u tvojoj ekipi!"],"yoIAe/":["Dodaj tagove za vajbolo\u017Eenje i \u0161to ve\u0107 ho\u0107e\u0161"],"tOsHsu":["Izradi post"],"G91SYQ":["Mo\u017Ee\u0161 zapo\u010Deti poziv kojem se drugi mogu pridru\u017Eiti"],"0s2ICk":["Dodaj tag \u201E",[1,"noMicTagName"],"\u201D na ovaj kanal da omogu\u0107i\u0161 ovaj prekida\u010D"],"Xd2NFi":["Glasovni chat"]}',
+);

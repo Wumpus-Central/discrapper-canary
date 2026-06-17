@@ -1,31 +1,3 @@
-e.exports = {
-    uG6teD: ["Račun je uspješno povezan"],
-    JgM2xu: ["Pogledaj sve nove značajke koje si otključao/la."],
-    ublzTG: ["Račun je povezan i uzeto je 200 orbova!"],
-    jR3bbS: [
-        "Otključaj društvene značajke u igri, kao što su jedinstveni popis prijatelja, izravne pozivnice za party i još mnogo toga!",
-    ],
-    "2cOIOr": ["Poveži račun"],
-    dPuaZE: ["Dobivaš 200 Discord orbova kada povežeš svoj ", [1, "applicationName"], " račun"],
-    kxF9br: ["SDK je povezan putem RPC-a"],
-    "8a7IrV": ["Registriran je URL ulazne točke veze"],
-    "9iLeL2": ["URL je konfiguriran kao ", [1, "url"]],
-    AGLx00: ["Tijek povezane igre:"],
-    w0pN4R: ["Poveži račun"],
-    yKwZc2: ["Upravljaj povezivanjem računa"],
-    aTULMB: [
-        "Dozivanje provjere autentičnosti nije otkriveno. Ako si pozvao/la funkciju i dalje ti se ovo prikazuje, potraži pojedinosti u zapisnicima",
-    ],
-    eg0mNa: ["Nije moguće povezati jer nema važećih tijekova za povezivanje"],
-    cCvdJy: ["Otvori profil igre"],
-    OEkrCx: ["Ovaj će se tijek upotrijebiti"],
-    "no+FQS": ["Upotrijebit će se prvi dostupan tijek za povezivanje, počevši od vrha"],
-    PFxxJa: [
-        "Ako tvoja igra radi i ne može se povezati s Discordom, pregledaj zapisnike igre da ukloniš programske pogreške",
-    ],
-    S94dzs: ["Pozvana je funkcija RegisterAuthorizeRequestCallback i radi ispravno"],
-    vR0zs6: ["Povezivanje računa"],
-    KoK4J9: ["Alati developera: ", [1, "appName"]],
-    tkIymA: ["Ukloni vezu"],
-    K3ObrU: ["Tijek weba:"],
-};
+e.exports = JSON.parse(
+    '{"uG6teD":["Ra\u010Dun je uspje\u0161no povezan"],"JgM2xu":["Pogledaj sve nove zna\u010Dajke koje si otklju\u010Dao/la."],"ublzTG":["Ra\u010Dun je povezan i uzeto je 200 orbova!"],"jR3bbS":["Otklju\u010Daj dru\u0161tvene zna\u010Dajke u igri, kao \u0161to su jedinstveni popis prijatelja, izravne pozivnice za party i jo\u0161 mnogo toga!"],"2cOIOr":["Pove\u017Ei ra\u010Dun"],"dPuaZE":["Dobiva\u0161 200 Discord orbova kada pove\u017Ee\u0161 svoj ",[1,"applicationName"]," ra\u010Dun"],"kxF9br":["SDK je povezan putem RPC-a"],"8a7IrV":["Registriran je URL ulazne to\u010Dke veze"],"9iLeL2":["URL je konfiguriran kao ",[1,"url"]],"AGLx00":["Tijek povezane igre:"],"w0pN4R":["Pove\u017Ei ra\u010Dun"],"yKwZc2":["Upravljaj povezivanjem ra\u010Duna"],"aTULMB":["Dozivanje provjere autenti\u010Dnosti nije otkriveno. Ako si pozvao/la funkciju i dalje ti se ovo prikazuje, potra\u017Ei pojedinosti u zapisnicima"],"eg0mNa":["Nije mogu\u0107e povezati jer nema va\u017Ee\u0107ih tijekova za povezivanje"],"cCvdJy":["Otvori profil igre"],"OEkrCx":["Ovaj \u0107e se tijek upotrijebiti"],"no+FQS":["Upotrijebit \u0107e se prvi dostupan tijek za povezivanje, po\u010Dev\u0161i od vrha"],"PFxxJa":["Ako tvoja igra radi i ne mo\u017Ee se povezati s Discordom, pregledaj zapisnike igre da ukloni\u0161 programske pogre\u0161ke"],"S94dzs":["Pozvana je funkcija RegisterAuthorizeRequestCallback i radi ispravno"],"vR0zs6":["Povezivanje ra\u010Duna"],"KoK4J9":["Alati developera: ",[1,"appName"]],"tkIymA":["Ukloni vezu"],"K3ObrU":["Tijek weba:"]}',
+);

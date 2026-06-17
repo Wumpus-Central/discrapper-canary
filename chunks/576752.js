@@ -1,4 +1,3 @@
-i.exports = {
-    F3llsQ: ["Profilimi güncellediğimde paylaş"],
-    "6goWcz": ["Profilini güncellediğinde arkadaşlarına anlık bildirim gönder."],
-};
+i.exports = JSON.parse(
+    '{"F3llsQ":["Profilimi g\xfcncelledi\u011Fimde payla\u015F"],"6goWcz":["Profilini g\xfcncelledi\u011Finde arkada\u015Flar\u0131na anl\u0131k bildirim g\xf6nder."]}',
+);

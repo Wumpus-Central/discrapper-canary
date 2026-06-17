@@ -1,25 +1,3 @@
-a.exports = {
-    uG6teD: ["帳號已成功連結"],
-    JgM2xu: ["查看已解鎖的所有新功能。"],
-    ublzTG: ["已連接帳號並領取 200 個 Orb！"],
-    jR3bbS: ["解鎖遊戲內的社交功能，如綜合好友名單、直接傳送組隊邀請等！"],
-    "2cOIOr": ["連結帳號"],
-    dPuaZE: ["連結 ", [1, "applicationName"], " 帳號後，即可獲得 200 個 Discord Orb"],
-    kxF9br: ["SDK 透過 RPC 連接"],
-    "8a7IrV": ["已註冊連接進入點網址"],
-    "9iLeL2": ["網址已設定為 ", [1, "url"]],
-    AGLx00: ["已連接的遊戲流程："],
-    w0pN4R: ["連結帳號"],
-    yKwZc2: ["管理帳號連結"],
-    aTULMB: ["未偵測到認證回呼。如果您已呼叫該函式但仍看到此情況，請檢查記錄以取得詳細資訊"],
-    eg0mNa: ["目前沒有可用的有效連結流程，因此無法連結"],
-    cCvdJy: ["開啟遊戲個人資料"],
-    OEkrCx: ["將使用此流程"],
-    "no+FQS": ["將使用第一個可用的連結流程，從最上方開始"],
-    PFxxJa: ["如果您的遊戲正在執行且無法連接 Discord，請嘗試檢視您的遊戲記錄以進行偵錯"],
-    S94dzs: ["呼叫 RegisterAuthorizeRequestCallback 並已正確執行"],
-    vR0zs6: ["帳號連結"],
-    KoK4J9: ["開發工具：", [1, "appName"]],
-    tkIymA: ["取消連結"],
-    K3ObrU: ["網頁流程"],
-};
+a.exports = JSON.parse(
+    '{"uG6teD":["\u5E33\u865F\u5DF2\u6210\u529F\u9023\u7D50"],"JgM2xu":["\u67E5\u770B\u5DF2\u89E3\u9396\u7684\u6240\u6709\u65B0\u529F\u80FD\u3002"],"ublzTG":["\u5DF2\u9023\u63A5\u5E33\u865F\u4E26\u9818\u53D6 200 \u500B Orb\uFF01"],"jR3bbS":["\u89E3\u9396\u904A\u6232\u5167\u7684\u793E\u4EA4\u529F\u80FD\uFF0C\u5982\u7D9C\u5408\u597D\u53CB\u540D\u55AE\u3001\u76F4\u63A5\u50B3\u9001\u7D44\u968A\u9080\u8ACB\u7B49\uFF01"],"2cOIOr":["\u9023\u7D50\u5E33\u865F"],"dPuaZE":["\u9023\u7D50 ",[1,"applicationName"]," \u5E33\u865F\u5F8C\uFF0C\u5373\u53EF\u7372\u5F97 200 \u500B Discord Orb"],"kxF9br":["SDK \u900F\u904E RPC \u9023\u63A5"],"8a7IrV":["\u5DF2\u8A3B\u518A\u9023\u63A5\u9032\u5165\u9EDE\u7DB2\u5740"],"9iLeL2":["\u7DB2\u5740\u5DF2\u8A2D\u5B9A\u70BA ",[1,"url"]],"AGLx00":["\u5DF2\u9023\u63A5\u7684\u904A\u6232\u6D41\u7A0B\uFF1A"],"w0pN4R":["\u9023\u7D50\u5E33\u865F"],"yKwZc2":["\u7BA1\u7406\u5E33\u865F\u9023\u7D50"],"aTULMB":["\u672A\u5075\u6E2C\u5230\u8A8D\u8B49\u56DE\u547C\u3002\u5982\u679C\u60A8\u5DF2\u547C\u53EB\u8A72\u51FD\u5F0F\u4F46\u4ECD\u770B\u5230\u6B64\u60C5\u6CC1\uFF0C\u8ACB\u6AA2\u67E5\u8A18\u9304\u4EE5\u53D6\u5F97\u8A73\u7D30\u8CC7\u8A0A"],"eg0mNa":["\u76EE\u524D\u6C92\u6709\u53EF\u7528\u7684\u6709\u6548\u9023\u7D50\u6D41\u7A0B\uFF0C\u56E0\u6B64\u7121\u6CD5\u9023\u7D50"],"cCvdJy":["\u958B\u555F\u904A\u6232\u500B\u4EBA\u8CC7\u6599"],"OEkrCx":["\u5C07\u4F7F\u7528\u6B64\u6D41\u7A0B"],"no+FQS":["\u5C07\u4F7F\u7528\u7B2C\u4E00\u500B\u53EF\u7528\u7684\u9023\u7D50\u6D41\u7A0B\uFF0C\u5F9E\u6700\u4E0A\u65B9\u958B\u59CB"],"PFxxJa":["\u5982\u679C\u60A8\u7684\u904A\u6232\u6B63\u5728\u57F7\u884C\u4E14\u7121\u6CD5\u9023\u63A5 Discord\uFF0C\u8ACB\u5617\u8A66\u6AA2\u8996\u60A8\u7684\u904A\u6232\u8A18\u9304\u4EE5\u9032\u884C\u5075\u932F"],"S94dzs":["\u547C\u53EB RegisterAuthorizeRequestCallback \u4E26\u5DF2\u6B63\u78BA\u57F7\u884C"],"vR0zs6":["\u5E33\u865F\u9023\u7D50"],"KoK4J9":["\u958B\u767C\u5DE5\u5177\uFF1A",[1,"appName"]],"tkIymA":["\u53D6\u6D88\u9023\u7D50"],"K3ObrU":["\u7DB2\u9801\u6D41\u7A0B"]}',
+);

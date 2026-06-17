@@ -1,27 +1,3 @@
-e.exports = {
-    "0LL6FX": [
-        "This will update the look of the server for all members. The theme adapts to their light or dark mode.",
-    ],
-    H8idcP: ["Apply Server Theme?"],
-    odtr7f: [
-        "Pick a preset theme or build your own. Every member sees this theme when they open the server and it adapts to their light or dark mode. ",
-        [8, "$link", ["Learn more"], [[1, "articleUrl"]]],
-    ],
-    XhiIAu: ["This changes how your server looks for all members."],
-    aZpFFn: ["Enable Server Theme"],
-    jSrqR2: ["Presets"],
-    XyrxOp: ["Blurple"],
-    tXRcxU: ["Denim"],
-    "S8/OZA": ["Fire"],
-    nCbxEN: ["Gold Dust"],
-    "6ZeQDd": ["Jade"],
-    TiGQro: ["Moss"],
-    "x3h/OV": ["Obsidian"],
-    qn90j5: ["Ocean"],
-    tTJY6S: ["Plum"],
-    "+k8Q/o": ["Twilight"],
-    HkvkHP: ["Each member’s light or dark mode preference will be shown for them."],
-    zry4l5: ["Preview Theme"],
-    Ck5zxP: ["Select your theme"],
-    "/6NbRv": ["Server Theme"],
-};
+e.exports = JSON.parse(
+    '{"0LL6FX":["This will update the look of the server for all members. The theme adapts to their light or dark mode."],"H8idcP":["Apply Server Theme?"],"odtr7f":["Pick a preset theme or build your own. Every member sees this theme when they open the server and it adapts to their light or dark mode. ",[8,"$link",["Learn more"],[[1,"articleUrl"]]]],"XhiIAu":["This changes how your server looks for all members."],"aZpFFn":["Enable Server Theme"],"jSrqR2":["Presets"],"XyrxOp":["Blurple"],"tXRcxU":["Denim"],"S8/OZA":["Fire"],"nCbxEN":["Gold Dust"],"6ZeQDd":["Jade"],"TiGQro":["Moss"],"x3h/OV":["Obsidian"],"qn90j5":["Ocean"],"tTJY6S":["Plum"],"+k8Q/o":["Twilight"],"HkvkHP":["Each member\u2019s light or dark mode preference will be shown for them."],"zry4l5":["Preview Theme"],"Ck5zxP":["Select your theme"],"/6NbRv":["Server Theme"]}',
+);

@@ -1,4 +1,3 @@
-s.exports = {
-    F3llsQ: ["Udostępnij, gdy zaktualizuję swój profil"],
-    "6goWcz": ["Zezwól znajomym na otrzymywanie powiadomień push, gdy aktualizujesz swój profil."],
-};
+s.exports = JSON.parse(
+    '{"F3llsQ":["Udost\u0119pnij, gdy zaktualizuj\u0119 sw\xf3j profil"],"6goWcz":["Zezw\xf3l znajomym na otrzymywanie powiadomie\u0144 push, gdy aktualizujesz sw\xf3j profil."]}',
+);

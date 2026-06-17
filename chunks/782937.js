@@ -1,15 +1,3 @@
-i.exports = {
-    u72Prd: ["Transmite en resolución HD con Nitro"],
-    uwMBDo: ["Compartir el audio de la aplicación"],
-    "3wwZ/Q": ["Empezar a transmitir"],
-    OsS9Ll: ["Dejar de transmitir"],
-    "j+eAMQ": ["Audio de la transmisión"],
-    "/XSr8v": ["Modo de transmisión"],
-    ibH7vy: ["Calidad y rendimiento equilibrados (", [1, "resolution"], "p, ", [1, "fps"], "fps)"],
-    "2qmQ8N": ["Predeterminado"],
-    q4gYBi: ["Para video y juegos (", [1, "resolution"], "p, ", [1, "fps"], "fps)"],
-    nMcXo1: ["Alta calidad"],
-    fN0UQY: ["Optimizado para dispositivos más lentos (", [1, "resolution"], "p, ", [1, "fps"], "fps)"],
-    "5eO4/m": ["Rendimiento"],
-    CrNjqp: ["Ajustes de la transmisión"],
-};
+i.exports = JSON.parse(
+    '{"u72Prd":["Transmite en resoluci\xf3n HD con Nitro"],"uwMBDo":["Compartir el audio de la aplicaci\xf3n"],"3wwZ/Q":["Empezar a transmitir"],"OsS9Ll":["Dejar de transmitir"],"j+eAMQ":["Audio de la transmisi\xf3n"],"/XSr8v":["Modo de transmisi\xf3n"],"ibH7vy":["Calidad y rendimiento equilibrados (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"2qmQ8N":["Predeterminado"],"q4gYBi":["Para video y juegos (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"nMcXo1":["Alta\xa0calidad"],"fN0UQY":["Optimizado para dispositivos m\xe1s lentos (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"5eO4/m":["Rendimiento"],"CrNjqp":["Ajustes de la transmisi\xf3n"]}',
+);

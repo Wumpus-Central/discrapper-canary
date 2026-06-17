@@ -1,29 +1,3 @@
-e.exports = {
-    uG6teD: ["Cont asociat cu succes"],
-    JgM2xu: ["Vezi toate funcțiile noi pe care le-ai deblocat."],
-    ublzTG: ["Ai conectat contul și ai revendicat 200 de Orbs!"],
-    jR3bbS: [
-        "Deblochează funcțiile de socializare din joc, cum ar fi o listă de prieteni unificată, invitații directe în grup și nu numai!",
-    ],
-    "2cOIOr": ["Asociază-ți contul"],
-    dPuaZE: ["Primește 200 de Orbs Discord când îți asociezi contul ", [1, "applicationName"]],
-    kxF9br: ["SDK conectat prin RPC"],
-    "8a7IrV": ["URL-ul punctului de acces pentru autentificare a fost înregistrat"],
-    "9iLeL2": ["URL configurat ca ", [1, "url"]],
-    AGLx00: ["Flux joc conectat:"],
-    w0pN4R: ["Asociază-ți contul"],
-    yKwZc2: ["Gestionează asocierea conturilor"],
-    aTULMB: [
-        "Nu s-a detectat callback de autentificare. Dacă ai invocat funcția și mesajul persistă, verifică jurnalele pentru detalii",
-    ],
-    eg0mNa: ["Nu se poate realiza asocierea, nu e disponibil niciun flux de asociere valid"],
-    cCvdJy: ["Deschide profilul pentru jocuri"],
-    OEkrCx: ["Se va utiliza acest flux"],
-    "no+FQS": ["Se va utiliza primul flux de asociere disponibil, începând de sus"],
-    PFxxJa: ["Dacă jocul rulează dar nu se conectează la Discord, verifică jurnalele jocului pentru depanare"],
-    S94dzs: ["RegisterAuthorizeRequestCallback a fost invocat și funcționează corect"],
-    vR0zs6: ["Asocierea conturilor"],
-    KoK4J9: ["Instrumente pentru dezvoltatori: ", [1, "appName"]],
-    tkIymA: ["Deconectează"],
-    K3ObrU: ["Flux web:"],
-};
+e.exports = JSON.parse(
+    '{"uG6teD":["Cont asociat cu succes"],"JgM2xu":["Vezi toate func\u021Biile noi pe care le-ai deblocat."],"ublzTG":["Ai conectat contul \u0219i ai revendicat 200 de Orbs!"],"jR3bbS":["Deblocheaz\u0103 func\u021Biile de socializare din joc, cum ar fi o list\u0103 de prieteni unificat\u0103, invita\u021Bii directe \xeen grup \u0219i nu numai!"],"2cOIOr":["Asociaz\u0103-\u021Bi contul"],"dPuaZE":["Prime\u0219te 200 de Orbs Discord c\xe2nd \xee\u021Bi asociezi contul ",[1,"applicationName"]],"kxF9br":["SDK conectat prin RPC"],"8a7IrV":["URL-ul punctului de acces pentru autentificare a fost \xeenregistrat"],"9iLeL2":["URL configurat ca ",[1,"url"]],"AGLx00":["Flux joc conectat:"],"w0pN4R":["Asociaz\u0103-\u021Bi contul"],"yKwZc2":["Gestioneaz\u0103 asocierea conturilor"],"aTULMB":["Nu s-a detectat callback de autentificare. Dac\u0103 ai invocat func\u021Bia \u0219i mesajul persist\u0103, verific\u0103 jurnalele pentru detalii"],"eg0mNa":["Nu se poate realiza asocierea, nu e disponibil niciun flux de asociere valid"],"cCvdJy":["Deschide profilul pentru jocuri"],"OEkrCx":["Se va utiliza acest flux"],"no+FQS":["Se va utiliza primul flux de asociere disponibil, \xeencep\xe2nd de sus"],"PFxxJa":["Dac\u0103 jocul ruleaz\u0103 dar nu se conecteaz\u0103 la Discord, verific\u0103 jurnalele jocului pentru depanare"],"S94dzs":["RegisterAuthorizeRequestCallback a fost invocat \u0219i func\u021Bioneaz\u0103 corect"],"vR0zs6":["Asocierea conturilor"],"KoK4J9":["Instrumente pentru dezvoltatori: ",[1,"appName"]],"tkIymA":["Deconecteaz\u0103"],"K3ObrU":["Flux web:"]}',
+);

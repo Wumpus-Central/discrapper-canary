@@ -1,4 +1,3 @@
-s.exports = {
-    F3llsQ: ["Sdílet aktualizace mého profilu"],
-    "6goWcz": ["Dovolit přátelům dostávat nabízená oznámení, když si aktualizuješ svůj profil."],
-};
+s.exports = JSON.parse(
+    '{"F3llsQ":["Sd\xedlet aktualizace m\xe9ho profilu"],"6goWcz":["Dovolit p\u0159\xe1tel\u016Fm dost\xe1vat nab\xedzen\xe1 ozn\xe1men\xed, kdy\u017E si aktualizuje\u0161 sv\u016Fj profil."]}',
+);

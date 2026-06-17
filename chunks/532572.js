@@ -1,17 +1,3 @@
-e.exports = {
-    "6/dkHh": ["Átirat bezárása"],
-    XiLvuG: ["Hangerő módosítása"],
-    ZwPhbB: ["Visszajátszási sebesség"],
-    "dRVF+Z": ["Visszatekerés 10 másodperccel"],
-    yV2FLL: ["Előretekerés 10 másodperccel"],
-    YWbiPw: ["Egyelőre nem tudod átugrani a meg nem tekintett részeket"],
-    "0DbPcL": ["Felirat váltógombja"],
-    z9Cnzv: ["Teljes képernyő váltógombja"],
-    "6EjGUv": ["Átirat váltógombja"],
-    "kX3+aM": ["Videó betöltése…"],
-    c7IRfm: ["Videó szüneteltetve, mert az ablak elvesztette a fókuszt"],
-    "9St/zK": ["Videó szüneteltetve, mert az ablak nem látható"],
-    "VZkd/n": ["Leirat"],
-    E527vj: ["Videó bélyegképe"],
-    "5L6uDs": [[1, "percent"], " százalék"],
-};
+e.exports = JSON.parse(
+    '{"6/dkHh":["\xc1tirat bez\xe1r\xe1sa"],"XiLvuG":["Hanger\u0151 m\xf3dos\xedt\xe1sa"],"ZwPhbB":["Visszaj\xe1tsz\xe1si sebess\xe9g"],"dRVF+Z":["Visszateker\xe9s 10\xa0m\xe1sodperccel"],"yV2FLL":["El\u0151reteker\xe9s 10\xa0m\xe1sodperccel"],"YWbiPw":["Egyel\u0151re nem tudod \xe1tugrani a meg nem tekintett r\xe9szeket"],"0DbPcL":["Felirat v\xe1lt\xf3gombja"],"z9Cnzv":["Teljes k\xe9perny\u0151 v\xe1lt\xf3gombja"],"6EjGUv":["\xc1tirat v\xe1lt\xf3gombja"],"kX3+aM":["Vide\xf3 bet\xf6lt\xe9se\u2026"],"c7IRfm":["Vide\xf3 sz\xfcneteltetve, mert az ablak elvesztette a f\xf3kuszt"],"9St/zK":["Vide\xf3 sz\xfcneteltetve, mert az ablak nem l\xe1that\xf3"],"VZkd/n":["Leirat"],"E527vj":["Vide\xf3 b\xe9lyegk\xe9pe"],"5L6uDs":[[1,"percent"]," sz\xe1zal\xe9k"]}',
+);

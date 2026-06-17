@@ -1,30 +1,3 @@
-i.exports = {
-    578719: [
-        "Aiuta i giocatori a trovare sessioni che rispecchiano la loro atmosfera selezionando tra i tag predefiniti",
-    ],
-    QwW8zd: ["Crea post"],
-    DxwBMf: ["Crea uno spazio per invitare gli altri."],
-    "7aCPJG": ["Già aggiunto"],
-    F5YBmi: ["Seleziona tutto"],
-    JWRsCC: ["Aggiungi tag consigliati"],
-    "h/GwWL": ["LFG"],
-    "MKZ+Ky": [
-        "Aiuta i giocatori a trovare sessioni che rispecchiano la loro atmosfera selezionando tra i tag predefiniti",
-    ],
-    "5a7Pjb": ["Aggiungi tag consigliati"],
-    "/mEbGf": ["Descrizione"],
-    "SU/IAE": ["Aggiungi più dettagli sulla tua sessione di gioco"],
-    UHF2Zn: [
-        "Collega il tuo account così i giocatori possono vedere i posti liberi nella tua squadra e chiedere di unirsi!",
-    ],
-    EBSaL4: ["Collega account"],
-    vznMVa: [
-        [8, "$link", ["Collega il tuo account"], [[1, "onClick"]]],
-        " così i giocatori possono vedere i posti liberi nella tua squadra!",
-    ],
-    "yoIAe/": ["Aggiungi tag per evidenziare l'atmosfera e ciò che cerchi"],
-    tOsHsu: ["Crea post"],
-    G91SYQ: ["Puoi avviare una chiamata a cui gli altri potranno unirsi"],
-    "0s2ICk": ['Aggiungi un tag "', [1, "noMicTagName"], '" a questo canale per attivare questa opzione'],
-    Xd2NFi: ["Chat vocale"],
-};
+i.exports = JSON.parse(
+    '{"QwW8zd":["Crea post"],"DxwBMf":["Crea uno spazio per invitare gli altri."],"7aCPJG":["Gi\xe0 aggiunto"],"F5YBmi":["Seleziona tutto"],"578719":["Aiuta i giocatori a trovare sessioni che rispecchiano la loro atmosfera selezionando tra i tag predefiniti"],"JWRsCC":["Aggiungi tag consigliati"],"h/GwWL":["LFG"],"MKZ+Ky":["Aiuta i giocatori a trovare sessioni che rispecchiano la loro atmosfera selezionando tra i tag predefiniti"],"5a7Pjb":["Aggiungi tag consigliati"],"/mEbGf":["Descrizione"],"SU/IAE":["Aggiungi pi\xf9 dettagli sulla tua sessione di gioco"],"UHF2Zn":["Collega il tuo account cos\xec i giocatori possono vedere i posti liberi nella tua squadra e chiedere di unirsi!"],"EBSaL4":["Collega account"],"vznMVa":[[8,"$link",["Collega il tuo account"],[[1,"onClick"]]]," cos\xec i giocatori possono vedere i posti liberi nella tua squadra!"],"yoIAe/":["Aggiungi tag per evidenziare l\'atmosfera e ci\xf2 che cerchi"],"tOsHsu":["Crea post"],"G91SYQ":["Puoi avviare una chiamata a cui gli altri potranno unirsi"],"0s2ICk":["Aggiungi un tag \\"",[1,"noMicTagName"],"\\" a questo canale per attivare questa opzione"],"Xd2NFi":["Chat vocale"]}',
+);

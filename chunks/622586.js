@@ -1,17 +1,3 @@
-p.exports = {
-    "/cp93l": ["เดือนถัดไป"],
-    raS6yf: ["เดือนก่อนหน้า"],
-    JA5C7L: ["ล้าง"],
-    I8kUqR: ["เปิดปฏิทิน"],
-    db85vU: ["ไม่มีรายการที่จะแสดง"],
-    bPKiId: ["ไม่มีผลลัพธ์สำหรับ “", [1, "query"], "”"],
-    WfH9in: ["ปิด"],
-    m3Vfcs: ["อย่าแสดงสิ่งนี้อีก"],
-    cgdAs2: ["(จะเปิดในแท็บใหม่)"],
-    "2L/ygS": ["เสร็จแล้ว ", [1, "percent"], " เปอร์เซ็นต์"],
-    "/Y7vRd": ["กดลบเพื่อลบ"],
-    VMNfsY: ["เลือกแล้ว"],
-    "A+pfVR": ["เลือก..."],
-    "v2YSk/": ["ขั้นที่ ", [1, "stepNumber"], " จาก ", [1, "stepCount"]],
-    YpT3kk: ["ขยายและเล่นวิดีโอ"],
-};
+p.exports = JSON.parse(
+    '{"/cp93l":["\u0E40\u0E14\u0E37\u0E2D\u0E19\u0E16\u0E31\u0E14\u0E44\u0E1B"],"raS6yf":["\u0E40\u0E14\u0E37\u0E2D\u0E19\u0E01\u0E48\u0E2D\u0E19\u0E2B\u0E19\u0E49\u0E32"],"JA5C7L":["\u0E25\u0E49\u0E32\u0E07"],"I8kUqR":["\u0E40\u0E1B\u0E34\u0E14\u0E1B\u0E0F\u0E34\u0E17\u0E34\u0E19"],"db85vU":["\u0E44\u0E21\u0E48\u0E21\u0E35\u0E23\u0E32\u0E22\u0E01\u0E32\u0E23\u0E17\u0E35\u0E48\u0E08\u0E30\u0E41\u0E2A\u0E14\u0E07"],"bPKiId":["\u0E44\u0E21\u0E48\u0E21\u0E35\u0E1C\u0E25\u0E25\u0E31\u0E1E\u0E18\u0E4C\u0E2A\u0E33\u0E2B\u0E23\u0E31\u0E1A \u201C",[1,"query"],"\u201D"],"WfH9in":["\u0E1B\u0E34\u0E14"],"m3Vfcs":["\u0E2D\u0E22\u0E48\u0E32\u0E41\u0E2A\u0E14\u0E07\u0E2A\u0E34\u0E48\u0E07\u0E19\u0E35\u0E49\u0E2D\u0E35\u0E01"],"cgdAs2":["(\u0E08\u0E30\u0E40\u0E1B\u0E34\u0E14\u0E43\u0E19\u0E41\u0E17\u0E47\u0E1A\u0E43\u0E2B\u0E21\u0E48)"],"2L/ygS":["\u0E40\u0E2A\u0E23\u0E47\u0E08\u0E41\u0E25\u0E49\u0E27 ",[1,"percent"]," \u0E40\u0E1B\u0E2D\u0E23\u0E4C\u0E40\u0E0B\u0E47\u0E19\u0E15\u0E4C"],"/Y7vRd":["\u0E01\u0E14\u0E25\u0E1A\u0E40\u0E1E\u0E37\u0E48\u0E2D\u0E25\u0E1A"],"VMNfsY":["\u0E40\u0E25\u0E37\u0E2D\u0E01\u0E41\u0E25\u0E49\u0E27"],"A+pfVR":["\u0E40\u0E25\u0E37\u0E2D\u0E01..."],"v2YSk/":["\u0E02\u0E31\u0E49\u0E19\u0E17\u0E35\u0E48 ",[1,"stepNumber"]," \u0E08\u0E32\u0E01 ",[1,"stepCount"]],"YpT3kk":["\u0E02\u0E22\u0E32\u0E22\u0E41\u0E25\u0E30\u0E40\u0E25\u0E48\u0E19\u0E27\u0E34\u0E14\u0E35\u0E42\u0E2D"]}',
+);

@@ -1,17 +1,3 @@
-p.exports = {
-    "/cp93l": ["来月"],
-    raS6yf: ["前月"],
-    JA5C7L: ["クリア"],
-    I8kUqR: ["カレンダーを開く"],
-    db85vU: ["表示するアイテムがありません"],
-    bPKiId: ["「", [1, "query"], "」の結果が見つかりません"],
-    WfH9in: ["閉じる"],
-    m3Vfcs: ["次回から表示しない"],
-    cgdAs2: ["（新しいタブで開きます）"],
-    "2L/ygS": [[1, "percent"], "パーセント完了"],
-    "/Y7vRd": ["削除するには削除マークを押します。"],
-    VMNfsY: ["選択済み"],
-    "A+pfVR": ["選択..."],
-    "v2YSk/": ["ステップ ", [1, "stepNumber"], " / ", [1, "stepCount"]],
-    YpT3kk: ["拡大して動画を再生"],
-};
+p.exports = JSON.parse(
+    '{"/cp93l":["\u6765\u6708"],"raS6yf":["\u524D\u6708"],"JA5C7L":["\u30AF\u30EA\u30A2"],"I8kUqR":["\u30AB\u30EC\u30F3\u30C0\u30FC\u3092\u958B\u304F"],"db85vU":["\u8868\u793A\u3059\u308B\u30A2\u30A4\u30C6\u30E0\u304C\u3042\u308A\u307E\u305B\u3093"],"bPKiId":["\u300C",[1,"query"],"\u300D\u306E\u7D50\u679C\u304C\u898B\u3064\u304B\u308A\u307E\u305B\u3093"],"WfH9in":["\u9589\u3058\u308B"],"m3Vfcs":["\u6B21\u56DE\u304B\u3089\u8868\u793A\u3057\u306A\u3044"],"cgdAs2":["\uFF08\u65B0\u3057\u3044\u30BF\u30D6\u3067\u958B\u304D\u307E\u3059\uFF09"],"2L/ygS":[[1,"percent"],"\u30D1\u30FC\u30BB\u30F3\u30C8\u5B8C\u4E86"],"/Y7vRd":["\u524A\u9664\u3059\u308B\u306B\u306F\u524A\u9664\u30DE\u30FC\u30AF\u3092\u62BC\u3057\u307E\u3059\u3002"],"VMNfsY":["\u9078\u629E\u6E08\u307F"],"A+pfVR":["\u9078\u629E..."],"v2YSk/":["\u30B9\u30C6\u30C3\u30D7 ",[1,"stepNumber"]," / ",[1,"stepCount"]],"YpT3kk":["\u62E1\u5927\u3057\u3066\u52D5\u753B\u3092\u518D\u751F"]}',
+);

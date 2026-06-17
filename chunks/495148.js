@@ -1,12 +1,3 @@
-i.exports = {
-    bGygJZ: [
-        "Wygląda na to, że przez całą rozmowę mogłeś(-aś) mieć wyciszony mikrofon. Chcesz dowiedzieć się, jak wyłączyć wyciszenie, aby inni mogli Cię słyszeć?",
-    ],
-    "8VIRzR": [
-        "Aby inni mogli Cię słyszeć, naciśnij ten przycisk, aby wyłączyć wyciszenie mikrofonu. Następnie możesz nacisnąć go ponownie, aby ponownie wyciszyć mikrofon.",
-    ],
-    VG4zAf: ["Wyłącz wyciszenie mikrofonu"],
-    "5wYjyW": ["Samouczek wyciszania"],
-    "01Jl9Z": ["Nie, dziękuję"],
-    DxcYYG: ["Pokaż!"],
-};
+i.exports = JSON.parse(
+    '{"bGygJZ":["Wygl\u0105da na to, \u017Ce przez ca\u0142\u0105 rozmow\u0119 mog\u0142e\u015B(-a\u015B) mie\u0107 wyciszony mikrofon. Chcesz dowiedzie\u0107 si\u0119, jak wy\u0142\u0105czy\u0107 wyciszenie, aby inni mogli Ci\u0119 s\u0142ysze\u0107?"],"8VIRzR":["Aby inni mogli Ci\u0119 s\u0142ysze\u0107, naci\u015Bnij ten przycisk, aby wy\u0142\u0105czy\u0107 wyciszenie mikrofonu. Nast\u0119pnie mo\u017Cesz nacisn\u0105\u0107 go ponownie, aby ponownie wyciszy\u0107 mikrofon."],"VG4zAf":["Wy\u0142\u0105cz wyciszenie mikrofonu"],"5wYjyW":["Samouczek wyciszania"],"01Jl9Z":["Nie, dzi\u0119kuj\u0119"],"DxcYYG":["Poka\u017C!"]}',
+);

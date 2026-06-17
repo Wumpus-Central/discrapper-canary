@@ -1,27 +1,3 @@
-h.exports = {
-    "0LL6FX": [
-        "Cài đặt này sẽ cập nhật giao diện của máy chủ cho tất cả các thành viên. Chủ đề thích ứng với chế độ sáng hoặc tối của họ.",
-    ],
-    H8idcP: ["Áp Dụng Chủ Đề Máy Chủ?"],
-    odtr7f: [
-        "Chọn một chủ đề có sẵn hoặc tự xây dựng. Mọi thành viên đều thấy chủ đề này khi họ mở máy chủ và nó thích ứng với chế độ sáng hoặc tối của họ. ",
-        [8, "$link", ["Tìm hiểu thêm"], [[1, "articleUrl"]]],
-    ],
-    XhiIAu: ["Cài đặt này thay đổi giao diện máy chủ của bạn đối với tất cả thành viên."],
-    aZpFFn: ["Bật Chủ Đề Máy Chủ"],
-    jSrqR2: ["Mẫu"],
-    XyrxOp: ["Blurple"],
-    tXRcxU: ["Vải Bò"],
-    "S8/OZA": ["Lửa"],
-    nCbxEN: ["Bụi Vàng"],
-    "6ZeQDd": ["Ngọc Bích"],
-    TiGQro: ["Rêu"],
-    "x3h/OV": ["Hắc Thạch"],
-    qn90j5: ["Đại Dương"],
-    tTJY6S: ["Tím Mận"],
-    "+k8Q/o": ["Hoàng Hôn"],
-    HkvkHP: ["Tùy chọn chế độ sáng hoặc tối của mỗi thành viên sẽ được hiển thị cho họ."],
-    zry4l5: ["Xem Trước Chủ Đề"],
-    Ck5zxP: ["Chọn chủ đề của bạn"],
-    "/6NbRv": ["Chủ Đề Máy Chủ"],
-};
+h.exports = JSON.parse(
+    '{"0LL6FX":["C\xe0i \u0111\u1EB7t n\xe0y s\u1EBD c\u1EADp nh\u1EADt giao di\u1EC7n c\u1EE7a m\xe1y ch\u1EE7 cho t\u1EA5t c\u1EA3 c\xe1c th\xe0nh vi\xean. Ch\u1EE7 \u0111\u1EC1 th\xedch \u1EE9ng v\u1EDBi ch\u1EBF \u0111\u1ED9 s\xe1ng ho\u1EB7c t\u1ED1i c\u1EE7a h\u1ECD."],"H8idcP":["\xc1p D\u1EE5ng Ch\u1EE7 \u0110\u1EC1 M\xe1y Ch\u1EE7?"],"odtr7f":["Ch\u1ECDn m\u1ED9t ch\u1EE7 \u0111\u1EC1 c\xf3 s\u1EB5n ho\u1EB7c t\u1EF1 x\xe2y d\u1EF1ng. M\u1ECDi th\xe0nh vi\xean \u0111\u1EC1u th\u1EA5y ch\u1EE7 \u0111\u1EC1 n\xe0y khi h\u1ECD m\u1EDF m\xe1y ch\u1EE7 v\xe0 n\xf3 th\xedch \u1EE9ng v\u1EDBi ch\u1EBF \u0111\u1ED9 s\xe1ng ho\u1EB7c t\u1ED1i c\u1EE7a h\u1ECD. ",[8,"$link",["T\xecm hi\u1EC3u th\xeam"],[[1,"articleUrl"]]]],"XhiIAu":["C\xe0i \u0111\u1EB7t n\xe0y thay \u0111\u1ED5i giao di\u1EC7n m\xe1y ch\u1EE7 c\u1EE7a b\u1EA1n \u0111\u1ED1i v\u1EDBi t\u1EA5t c\u1EA3 th\xe0nh vi\xean."],"aZpFFn":["B\u1EADt Ch\u1EE7 \u0110\u1EC1 M\xe1y Ch\u1EE7"],"jSrqR2":["M\u1EABu"],"XyrxOp":["Blurple"],"tXRcxU":["V\u1EA3i B\xf2"],"S8/OZA":["L\u1EEDa"],"nCbxEN":["B\u1EE5i V\xe0ng"],"6ZeQDd":["Ng\u1ECDc B\xedch"],"TiGQro":["R\xeau"],"x3h/OV":["H\u1EAFc Th\u1EA1ch"],"qn90j5":["\u0110\u1EA1i D\u01B0\u01A1ng"],"tTJY6S":["T\xedm M\u1EADn"],"+k8Q/o":["Ho\xe0ng H\xf4n"],"HkvkHP":["T\xf9y ch\u1ECDn ch\u1EBF \u0111\u1ED9 s\xe1ng ho\u1EB7c t\u1ED1i c\u1EE7a m\u1ED7i th\xe0nh vi\xean s\u1EBD \u0111\u01B0\u1EE3c hi\u1EC3n th\u1ECB cho h\u1ECD."],"zry4l5":["Xem Tr\u01B0\u1EDBc Ch\u1EE7 \u0110\u1EC1"],"Ck5zxP":["Ch\u1ECDn ch\u1EE7 \u0111\u1EC1 c\u1EE7a b\u1EA1n"],"/6NbRv":["Ch\u1EE7 \u0110\u1EC1 M\xe1y Ch\u1EE7"]}',
+);

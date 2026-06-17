@@ -1,20 +1,3 @@
-e.exports = {
-    "o/An3l": [[1, "username"], " heeft je gevraagd om ", [1, "applicationName"], " te streamen"],
-    DKHhec: ["Vragen om te streamen"],
-    "8qq+H7": ["Vragen om ", [1, "applicationName"], " te streamen"],
-    s7bMT0: [[1, "username"], " vraagt je om ", [1, "applicationName"], " te streamen"],
-    "7pndSl": ["Je hebt iemand gevraagd om ", [1, "applicationName"], " te streamen"],
-    P0wwmM: ["Al aan het streamen"],
-    u4QmWl: ["Verzoek verlopen"],
-    qRXats: ["Niet in spraakkanaal"],
-    "43zohO": ["Game niet actief"],
-    "fac+eE": ["Geen machtiging"],
-    mVFTUg: ["Verzoek te recent verstuurd"],
-    "8HU1M2": ["Aanvraag verstuurd"],
-    "5+172e": ["Streamen"],
-    nAyuPp: ["Streamverzoek"],
-    "d/qbC0": [[1, "username"], " heeft je gevraagd om te streamen"],
-    "8B3U5O": ["Je hebt iemand gevraagd om te streamen"],
-    UGbmBp: ["Streamen"],
-    jTbTAF: [[8, "$b", [[1, "username"]]], " wil je ", [8, "$b", [[1, "game"]]], " zien spelen."],
-};
+e.exports = JSON.parse(
+    '{"o/An3l":[[1,"username"]," heeft je gevraagd om ",[1,"applicationName"]," te streamen"],"DKHhec":["Vragen om te streamen"],"8qq+H7":["Vragen om ",[1,"applicationName"]," te streamen"],"s7bMT0":[[1,"username"]," vraagt je om ",[1,"applicationName"]," te streamen"],"7pndSl":["Je hebt iemand gevraagd om ",[1,"applicationName"]," te streamen"],"P0wwmM":["Al aan het streamen"],"u4QmWl":["Verzoek verlopen"],"qRXats":["Niet in spraakkanaal"],"43zohO":["Game niet actief"],"fac+eE":["Geen machtiging"],"mVFTUg":["Verzoek te recent verstuurd"],"8HU1M2":["Aanvraag verstuurd"],"5+172e":["Streamen"],"nAyuPp":["Streamverzoek"],"d/qbC0":[[1,"username"]," heeft je gevraagd om te streamen"],"8B3U5O":["Je hebt iemand gevraagd om te streamen"],"UGbmBp":["Streamen"],"jTbTAF":[[8,"$b",[[1,"username"]]]," wil je ",[8,"$b",[[1,"game"]]]," zien spelen."]}',
+);

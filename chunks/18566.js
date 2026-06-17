@@ -1,9 +1,3 @@
-p.exports = {
-    klSpfs: ["編輯設定"],
-    NzUuLD: ["+", [1, "count"], " 則訊息"],
-    "O+racd": ["無通知。"],
-    "5H2Jd6": ["顯示全部"],
-    Ko8NGn: ["顯示書籤"],
-    dcpdhC: ["選擇一則訊息跳到該處。"],
-    "VAK+h9": ["歡迎來到通知中心！"],
-};
+p.exports = JSON.parse(
+    '{"klSpfs":["\u7DE8\u8F2F\u8A2D\u5B9A"],"NzUuLD":["+",[1,"count"]," \u5247\u8A0A\u606F"],"O+racd":["\u7121\u901A\u77E5\u3002"],"5H2Jd6":["\u986F\u793A\u5168\u90E8"],"Ko8NGn":["\u986F\u793A\u66F8\u7C64"],"dcpdhC":["\u9078\u64C7\u4E00\u5247\u8A0A\u606F\u8DF3\u5230\u8A72\u8655\u3002"],"VAK+h9":["\u6B61\u8FCE\u4F86\u5230\u901A\u77E5\u4E2D\u5FC3\uFF01"]}',
+);

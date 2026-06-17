@@ -1,28 +1,3 @@
-a.exports = {
-    578719: ["Ajude jogadores a encontrar sessões que correspondam à sua vibe fazendo a seleção de tags predefinidas"],
-    QwW8zd: ["Criar postagem"],
-    DxwBMf: ["Crie um espaço para convidar mais pessoas."],
-    "7aCPJG": ["Já adicionado"],
-    F5YBmi: ["Selecionar tudo"],
-    JWRsCC: ["Adicionar tags recomendadas"],
-    "h/GwWL": ["PG"],
-    "MKZ+Ky": [
-        "Ajude jogadores a encontrar sessões que correspondam à sua vibe fazendo a seleção de tags predefinidas",
-    ],
-    "5a7Pjb": ["Adicionar tags recomendadas"],
-    "/mEbGf": ["Descrição"],
-    "SU/IAE": ["Adicione mais detalhes sobre a sua sessão de jogo"],
-    UHF2Zn: [
-        "Vincule sua conta para que os jogadores possam ver as vagas disponíveis no seu esquadrão e solicitar para se juntar a você!",
-    ],
-    EBSaL4: ["Vincular conta"],
-    vznMVa: [
-        [8, "$link", ["Vincule sua conta"], [[1, "onClick"]]],
-        " para que os jogadores possam ver as vagas disponíveis no seu esquadrão!",
-    ],
-    "yoIAe/": ["Adicione tags para vibes e o que você está procurando"],
-    tOsHsu: ["Criar postagem"],
-    G91SYQ: ["Você pode iniciar uma chamada à qual outros podem se juntar"],
-    "0s2ICk": ["Adicionar uma tag “", [1, "noMicTagName"], "” a este canal para ativar a opção"],
-    Xd2NFi: ["Chat de voz"],
-};
+a.exports = JSON.parse(
+    '{"QwW8zd":["Criar postagem"],"DxwBMf":["Crie um espa\xe7o para convidar mais pessoas."],"7aCPJG":["J\xe1 adicionado"],"F5YBmi":["Selecionar tudo"],"578719":["Ajude jogadores a encontrar sess\xf5es que correspondam \xe0 sua vibe fazendo a sele\xe7\xe3o de tags predefinidas"],"JWRsCC":["Adicionar tags recomendadas"],"h/GwWL":["PG"],"MKZ+Ky":["Ajude jogadores a encontrar sess\xf5es que correspondam \xe0 sua vibe fazendo a sele\xe7\xe3o de tags predefinidas"],"5a7Pjb":["Adicionar tags recomendadas"],"/mEbGf":["Descri\xe7\xe3o"],"SU/IAE":["Adicione mais detalhes sobre a sua sess\xe3o de jogo"],"UHF2Zn":["Vincule sua conta para que os jogadores possam ver as vagas dispon\xedveis no seu esquadr\xe3o e solicitar para se juntar a voc\xea!"],"EBSaL4":["Vincular conta"],"vznMVa":[[8,"$link",["Vincule sua conta"],[[1,"onClick"]]]," para que os jogadores possam ver as vagas dispon\xedveis no seu esquadr\xe3o!"],"yoIAe/":["Adicione tags para vibes e o que voc\xea est\xe1 procurando"],"tOsHsu":["Criar postagem"],"G91SYQ":["Voc\xea pode iniciar uma chamada \xe0 qual outros podem se juntar"],"0s2ICk":["Adicionar uma tag \u201C",[1,"noMicTagName"],"\u201D a este canal para ativar a op\xe7\xe3o"],"Xd2NFi":["Chat de voz"]}',
+);

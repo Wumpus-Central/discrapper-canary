@@ -1,17 +1,3 @@
-e.exports = {
-    "/cp93l": ["Következő hónap"],
-    raS6yf: ["Előző hónap"],
-    JA5C7L: ["Törlés"],
-    I8kUqR: ["Naptár megnyitása"],
-    db85vU: ["Nincsenek megjeleníthető elemek"],
-    bPKiId: ["Nincs találat a következőre: „", [1, "query"], "”"],
-    WfH9in: ["Bezárás"],
-    m3Vfcs: ["Ne jelenjen meg többször"],
-    cgdAs2: ["(Új lapon nyílik meg)"],
-    "2L/ygS": [[1, "percent"], " százalékban kész"],
-    "/Y7vRd": ["Az eltávolításhoz nyomd meg a Törlés gombot."],
-    VMNfsY: ["Kiválasztva"],
-    "A+pfVR": ["Kiválasztás…"],
-    "v2YSk/": [[1, "stepNumber"], "/", [1, "stepCount"], ". lépés"],
-    YpT3kk: ["Nagyítás és videó lejátszása"],
-};
+e.exports = JSON.parse(
+    '{"/cp93l":["K\xf6vetkez\u0151 h\xf3nap"],"raS6yf":["El\u0151z\u0151 h\xf3nap"],"JA5C7L":["T\xf6rl\xe9s"],"I8kUqR":["Napt\xe1r megnyit\xe1sa"],"db85vU":["Nincsenek megjelen\xedthet\u0151 elemek"],"bPKiId":["Nincs tal\xe1lat a k\xf6vetkez\u0151re: \u201E",[1,"query"],"\u201D"],"WfH9in":["Bez\xe1r\xe1s"],"m3Vfcs":["Ne jelenjen meg t\xf6bbsz\xf6r"],"cgdAs2":["(\xdaj lapon ny\xedlik meg)"],"2L/ygS":[[1,"percent"]," sz\xe1zal\xe9kban k\xe9sz"],"/Y7vRd":["Az elt\xe1vol\xedt\xe1shoz nyomd meg a T\xf6rl\xe9s gombot."],"VMNfsY":["Kiv\xe1lasztva"],"A+pfVR":["Kiv\xe1laszt\xe1s\u2026"],"v2YSk/":[[1,"stepNumber"],"/",[1,"stepCount"],". l\xe9p\xe9s"],"YpT3kk":["Nagy\xedt\xe1s \xe9s vide\xf3 lej\xe1tsz\xe1sa"]}',
+);

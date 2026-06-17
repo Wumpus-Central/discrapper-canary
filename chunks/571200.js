@@ -1,17 +1,3 @@
-o.exports = {
-    RPb8Zk: ["Tvoje zpětná vazba nám pomůže vylepšit funkce pro zabezpečení Discordu."],
-    cDP3b4: ["Zpětná vazba odeslána"],
-    KZw6kn: ["Co nefungovalo dobře?"],
-    eSP1F9: ["Změnil/a jsem názor na to, že vidím tento obsah"],
-    bC0QVX: ["Pokyny byly matoucí"],
-    "8JFGXc": ["Snažil/a jsem se projít kroky, ale nefungovalo to"],
-    "Dl4A+U": ["Neměl/a jsem u sebe správné dokumenty"],
-    ZsnNgz: ["Mám obavy ze sdílení osobních údajů"],
-    ep5SQp: ["Něco jiného"],
-    kkKhVJ: ["Zabírá to příliš mnoho času"],
-    maxf2S: ["Nevím, proč je to nezbytné"],
-    Q5cQ46: ["Popiš svůj problém"],
-    zApKaR: ["Chceš nám k tomu sdělit víc?"],
-    "4djgO/": ["Děkujeme za zpětnou vazbu!"],
-    RqoA4v: ["Jaká byla tvá zkušenost s ověřením věku?"],
-};
+o.exports = JSON.parse(
+    '{"RPb8Zk":["Tvoje zp\u011Btn\xe1 vazba n\xe1m pom\u016F\u017Ee vylep\u0161it funkce pro zabezpe\u010Den\xed Discordu."],"cDP3b4":["Zp\u011Btn\xe1 vazba odesl\xe1na"],"KZw6kn":["Co nefungovalo dob\u0159e?"],"eSP1F9":["Zm\u011Bnil/a jsem n\xe1zor na to, \u017Ee vid\xedm tento obsah"],"bC0QVX":["Pokyny byly matouc\xed"],"8JFGXc":["Sna\u017Eil/a jsem se proj\xedt kroky, ale nefungovalo to"],"Dl4A+U":["Nem\u011Bl/a jsem u\xa0sebe spr\xe1vn\xe9 dokumenty"],"ZsnNgz":["M\xe1m obavy ze sd\xedlen\xed osobn\xedch \xfadaj\u016F"],"ep5SQp":["N\u011Bco jin\xe9ho"],"kkKhVJ":["Zab\xedr\xe1 to p\u0159\xedli\u0161 mnoho \u010Dasu"],"maxf2S":["Nev\xedm, pro\u010D je to nezbytn\xe9"],"Q5cQ46":["Popi\u0161 sv\u016Fj probl\xe9m"],"zApKaR":["Chce\u0161 n\xe1m k\xa0tomu sd\u011Blit v\xedc?"],"4djgO/":["D\u011Bkujeme za zp\u011Btnou vazbu!"],"RqoA4v":["Jak\xe1 byla tv\xe1 zku\u0161enost s\xa0ov\u011B\u0159en\xedm v\u011Bku?"]}',
+);

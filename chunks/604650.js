@@ -1,32 +1,3 @@
-a.exports = {
-    "5h8p5P": ["不支持 ", [1, "platforms"], "。"],
-    vyAtfo: ["关联您的《", [1, "applicationName"], "》和 Discord 账号以接受这份礼物。", [1, "platforms_info"]],
-    yqAKVO: ["账号已关联至《", [1, "applicationName"], "》。请在下方领取您的礼物。", [1, "platforms_info"]],
-    Ufm9XX: [
-        "点击“",
-        [1, "buyButtonLabel"],
-        "”即表示您同意",
-        [8, "$link", ["付费服务条款"], [[1, "paidServiceTermURL"]]],
-        "。",
-        [8, "$b", ["从", [1, "applicationName"], " 游戏商店购买物品即表示您购买了在所列游戏中使用该物品的有限许可。"]],
-        "此购买不可退款。该物品将由开发者直接在游戏中交付。",
-    ],
-    Q0dHYO: ["兑换需要关联账号。", [1, "platforms_info"]],
-    "3ah/a2": [
-        [
-            8,
-            "$b",
-            ["从《", [1, "applicationName"], "》游戏商店购买物品意味着您购买的是在所列游戏中使用该物品的有限许可。"],
-        ],
-        "此购买不可退款。该物品将由开发者直接在游戏中交付。",
-        [1, "platforms_info"],
-    ],
-    fO4b1C: ["关联您的《", [1, "applicationName"], "》和 Discord 账号以购买。", [1, "platforms_info"]],
-    "Sy7D+/": ["该商店暂无商品，请稍后再来查看！"],
-    OvBwPV: ["无可用商店"],
-    BMMo2K: ["请在桌面端的 Discord 设置中关联您的 ", [1, "applicationName"], " 与 Discord 账号，以接受该礼物。"],
-    eNNnIG: ["请在桌面端的 Discord 设置中关联您的 ", [1, "applicationName"], "与 Discord 账号，以接受此次购买。"],
-    gndWN7: ["在桌面端打开 Discord 以购买。"],
-    bRPsNX: ["兑换您购买的商品"],
-    BKf0MM: ["查看详情"],
-};
+a.exports = JSON.parse(
+    '{"5h8p5P":["\u4E0D\u652F\u6301 ",[1,"platforms"],"\u3002"],"vyAtfo":["\u5173\u8054\u60A8\u7684\u300A",[1,"applicationName"],"\u300B\u548C Discord \u8D26\u53F7\u4EE5\u63A5\u53D7\u8FD9\u4EFD\u793C\u7269\u3002",[1,"platforms_info"]],"yqAKVO":["\u8D26\u53F7\u5DF2\u5173\u8054\u81F3\u300A",[1,"applicationName"],"\u300B\u3002\u8BF7\u5728\u4E0B\u65B9\u9886\u53D6\u60A8\u7684\u793C\u7269\u3002",[1,"platforms_info"]],"Ufm9XX":["\u70B9\u51FB\u201C",[1,"buyButtonLabel"],"\u201D\u5373\u8868\u793A\u60A8\u540C\u610F",[8,"$link",["\u4ED8\u8D39\u670D\u52A1\u6761\u6B3E"],[[1,"paidServiceTermURL"]]],"\u3002",[8,"$b",["\u4ECE",[1,"applicationName"]," \u6E38\u620F\u5546\u5E97\u8D2D\u4E70\u7269\u54C1\u5373\u8868\u793A\u60A8\u8D2D\u4E70\u4E86\u5728\u6240\u5217\u6E38\u620F\u4E2D\u4F7F\u7528\u8BE5\u7269\u54C1\u7684\u6709\u9650\u8BB8\u53EF\u3002"]],"\u6B64\u8D2D\u4E70\u4E0D\u53EF\u9000\u6B3E\u3002\u8BE5\u7269\u54C1\u5C06\u7531\u5F00\u53D1\u8005\u76F4\u63A5\u5728\u6E38\u620F\u4E2D\u4EA4\u4ED8\u3002"],"Q0dHYO":["\u5151\u6362\u9700\u8981\u5173\u8054\u8D26\u53F7\u3002",[1,"platforms_info"]],"3ah/a2":[[8,"$b",["\u4ECE\u300A",[1,"applicationName"],"\u300B\u6E38\u620F\u5546\u5E97\u8D2D\u4E70\u7269\u54C1\u610F\u5473\u7740\u60A8\u8D2D\u4E70\u7684\u662F\u5728\u6240\u5217\u6E38\u620F\u4E2D\u4F7F\u7528\u8BE5\u7269\u54C1\u7684\u6709\u9650\u8BB8\u53EF\u3002"]],"\u6B64\u8D2D\u4E70\u4E0D\u53EF\u9000\u6B3E\u3002\u8BE5\u7269\u54C1\u5C06\u7531\u5F00\u53D1\u8005\u76F4\u63A5\u5728\u6E38\u620F\u4E2D\u4EA4\u4ED8\u3002",[1,"platforms_info"]],"fO4b1C":["\u5173\u8054\u60A8\u7684\u300A",[1,"applicationName"],"\u300B\u548C Discord \u8D26\u53F7\u4EE5\u8D2D\u4E70\u3002",[1,"platforms_info"]],"Sy7D+/":["\u8BE5\u5546\u5E97\u6682\u65E0\u5546\u54C1\uFF0C\u8BF7\u7A0D\u540E\u518D\u6765\u67E5\u770B\uFF01"],"OvBwPV":["\u65E0\u53EF\u7528\u5546\u5E97"],"BMMo2K":["\u8BF7\u5728\u684C\u9762\u7AEF\u7684 Discord \u8BBE\u7F6E\u4E2D\u5173\u8054\u60A8\u7684 ",[1,"applicationName"]," \u4E0E Discord \u8D26\u53F7\uFF0C\u4EE5\u63A5\u53D7\u8BE5\u793C\u7269\u3002"],"eNNnIG":["\u8BF7\u5728\u684C\u9762\u7AEF\u7684 Discord \u8BBE\u7F6E\u4E2D\u5173\u8054\u60A8\u7684 ",[1,"applicationName"],"\u4E0E Discord \u8D26\u53F7\uFF0C\u4EE5\u63A5\u53D7\u6B64\u6B21\u8D2D\u4E70\u3002"],"gndWN7":["\u5728\u684C\u9762\u7AEF\u6253\u5F00 Discord \u4EE5\u8D2D\u4E70\u3002"],"bRPsNX":["\u5151\u6362\u60A8\u8D2D\u4E70\u7684\u5546\u54C1"],"BKf0MM":["\u67E5\u770B\u8BE6\u60C5"]}',
+);

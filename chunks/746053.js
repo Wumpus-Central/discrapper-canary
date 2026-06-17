@@ -1,25 +1,3 @@
-e.exports = {
-    "0LL6FX": ["Bu, tüm üyeler için sunucu görünümünü güncelleyecek. Tema, onların çık veya koyu moduna uyum sağlar."],
-    H8idcP: ["Sunucu Teması Uygulansın mı?"],
-    odtr7f: [
-        "Bir hazır tema seç ya da kendi temanı oluştur. Her üye, sunucuyu açtığında bu temayı görür ve açık ya da koyu moduna uyum sağlar ",
-        [8, "$link", ["Daha Fazla Bilgi Edin"], [[1, "articleUrl"]]],
-    ],
-    XhiIAu: ["Bu, sunucunun tüm üyeler için nasıl görüneceğini değiştirir."],
-    aZpFFn: ["Sunucu Temasını Etkinleştir"],
-    jSrqR2: ["Mevcut Renkler"],
-    XyrxOp: ["Mavimor"],
-    tXRcxU: ["Denim"],
-    "S8/OZA": ["Ateş"],
-    nCbxEN: ["Altın Tozu"],
-    "6ZeQDd": ["Yeşim"],
-    TiGQro: ["Yosun"],
-    "x3h/OV": ["Obsidiyen"],
-    qn90j5: ["Okyanus"],
-    tTJY6S: ["Mürdüm"],
-    "+k8Q/o": ["Alaca Karanlık"],
-    HkvkHP: ["Her üyenin açık veya koyu mod tercihi onlar için gösterilecek."],
-    zry4l5: ["Temayı Önizle"],
-    Ck5zxP: ["Temanı seç"],
-    "/6NbRv": ["Sunucu Teması"],
-};
+e.exports = JSON.parse(
+    '{"0LL6FX":["Bu, t\xfcm \xfcyeler i\xe7in sunucu g\xf6r\xfcn\xfcm\xfcn\xfc g\xfcncelleyecek. Tema, onlar\u0131n \xe7\u0131k veya koyu moduna uyum sa\u011Flar."],"H8idcP":["Sunucu Temas\u0131 Uygulans\u0131n m\u0131?"],"odtr7f":["Bir haz\u0131r tema se\xe7 ya da kendi teman\u0131 olu\u015Ftur. Her \xfcye, sunucuyu a\xe7t\u0131\u011F\u0131nda bu temay\u0131 g\xf6r\xfcr ve a\xe7\u0131k ya da koyu moduna uyum sa\u011Flar ",[8,"$link",["Daha Fazla Bilgi Edin"],[[1,"articleUrl"]]]],"XhiIAu":["Bu, sunucunun t\xfcm \xfcyeler i\xe7in nas\u0131l g\xf6r\xfcnece\u011Fini de\u011Fi\u015Ftirir."],"aZpFFn":["Sunucu Temas\u0131n\u0131 Etkinle\u015Ftir"],"jSrqR2":["Mevcut Renkler"],"XyrxOp":["Mavimor"],"tXRcxU":["Denim"],"S8/OZA":["Ate\u015F"],"nCbxEN":["Alt\u0131n Tozu"],"6ZeQDd":["Ye\u015Fim"],"TiGQro":["Yosun"],"x3h/OV":["Obsidiyen"],"qn90j5":["Okyanus"],"tTJY6S":["M\xfcrd\xfcm"],"+k8Q/o":["Alaca Karanl\u0131k"],"HkvkHP":["Her \xfcyenin a\xe7\u0131k veya koyu mod tercihi onlar i\xe7in g\xf6sterilecek."],"zry4l5":["Temay\u0131 \xd6nizle"],"Ck5zxP":["Teman\u0131 se\xe7"],"/6NbRv":["Sunucu Temas\u0131"]}',
+);

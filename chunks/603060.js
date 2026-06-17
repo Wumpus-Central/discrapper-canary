@@ -1,23 +1,3 @@
-e.exports = {
-    q5M7HV: ["Diverse"],
-    zRKbpz: ["Server"],
-    "UzRF+8": ["Sosialt"],
-    NGdNZb: ["Direktemeldinger"],
-    zJlwvV: ["Discord-systemmeldinger"],
-    "40TIqW": ["Eventvarsler"],
-    HibKoy: ["Forumvarsler"],
-    vcrTV5: ["Venners aktivitet"],
-    NxgGZA: ["Venneforespørsler"],
-    "9EDo+/": ["Gaming"],
-    "IUH/Oe": ["Innkommende anrop"],
-    "4qWUAO": ["Meldinger"],
-    n0Wp6j: ["Uleste meldinger"],
-    "T+79Eo": ["Annet"],
-    kIrLfg: ["Andre servervarsler"],
-    MOjygY: ["Meningsmålinger"],
-    wv4QHR: ["Varsler om reaksjoner"],
-    S5cB9e: ["Sanntid"],
-    "4n388K": ["Scenevarsler"],
-    Iy9grw: ["Tale- og Live-aktivitet"],
-    VeBD1N: ["Aktiv talechat"],
-};
+e.exports = JSON.parse(
+    '{"q5M7HV":["Diverse"],"zRKbpz":["Server"],"UzRF+8":["Sosialt"],"NGdNZb":["Direktemeldinger"],"zJlwvV":["Discord-systemmeldinger"],"40TIqW":["Eventvarsler"],"HibKoy":["Forumvarsler"],"vcrTV5":["Venners aktivitet"],"NxgGZA":["Venneforesp\xf8rsler"],"9EDo+/":["Gaming"],"IUH/Oe":["Innkommende anrop"],"4qWUAO":["Meldinger"],"n0Wp6j":["Uleste meldinger"],"T+79Eo":["Annet"],"kIrLfg":["Andre servervarsler"],"MOjygY":["Meningsm\xe5linger"],"wv4QHR":["Varsler om reaksjoner"],"S5cB9e":["Sanntid"],"4n388K":["Scenevarsler"],"Iy9grw":["Tale- og Live-aktivitet"],"VeBD1N":["Aktiv talechat"]}',
+);

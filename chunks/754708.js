@@ -1,15 +1,3 @@
-a.exports = {
-    u72Prd: ["Streamaj u HD razlučivosti s Nitrom"],
-    uwMBDo: ["Podijeli zvuk aplikacije"],
-    "3wwZ/Q": ["Pokreni streaming"],
-    OsS9Ll: ["Zaustavi streaming"],
-    "j+eAMQ": ["Zvuk streama"],
-    "/XSr8v": ["Način rada za streamanje"],
-    ibH7vy: ["Uravnotežena kvaliteta i izvedba (", [1, "resolution"], " p, ", [1, "fps"], " fps)"],
-    "2qmQ8N": ["Zadano"],
-    q4gYBi: ["Za video i igre (", [1, "resolution"], " p, ", [1, "fps"], " fps)"],
-    nMcXo1: ["Visoka kvaliteta"],
-    fN0UQY: ["Optimizirano za sporije uređaje (", [1, "resolution"], " p, ", [1, "fps"], " fps)"],
-    "5eO4/m": ["Performanse"],
-    CrNjqp: ["Postavke streaminga"],
-};
+a.exports = JSON.parse(
+    '{"u72Prd":["Streamaj u HD razlu\u010Divosti s Nitrom"],"uwMBDo":["Podijeli zvuk aplikacije"],"3wwZ/Q":["Pokreni streaming"],"OsS9Ll":["Zaustavi streaming"],"j+eAMQ":["Zvuk streama"],"/XSr8v":["Na\u010Din rada za streamanje"],"ibH7vy":["Uravnote\u017Eena kvaliteta i izvedba (",[1,"resolution"]," p, ",[1,"fps"]," fps)"],"2qmQ8N":["Zadano"],"q4gYBi":["Za video i igre (",[1,"resolution"]," p, ",[1,"fps"]," fps)"],"nMcXo1":["Visoka kvaliteta"],"fN0UQY":["Optimizirano za sporije ure\u0111aje (",[1,"resolution"]," p, ",[1,"fps"]," fps)"],"5eO4/m":["Performanse"],"CrNjqp":["Postavke streaminga"]}',
+);

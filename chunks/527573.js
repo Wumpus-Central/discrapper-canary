@@ -1,20 +1,3 @@
-a.exports = {
-    "o/An3l": [[1, "username"], " tě požádal/a o streamování aplikace ", [1, "applicationName"]],
-    DKHhec: ["Požádat o streamování"],
-    "8qq+H7": ["Požádat o streamování aplikace ", [1, "applicationName"]],
-    s7bMT0: [[1, "username"], " tě žádá o streamování aplikace ", [1, "applicationName"]],
-    "7pndSl": ["Požádal/a jsi někoho o streamování aplikace ", [1, "applicationName"]],
-    P0wwmM: ["Už streamuješ"],
-    u4QmWl: ["Žádost vypršela"],
-    qRXats: ["Není v hlasovém kanálu"],
-    "43zohO": ["Hra není spuštěna"],
-    "fac+eE": ["Žádné oprávnění"],
-    mVFTUg: ["Žádost byla odeslána příliš nedávno"],
-    "8HU1M2": ["Žádost odeslána"],
-    "5+172e": ["Stream"],
-    nAyuPp: ["Žádost o streamování"],
-    "d/qbC0": [[1, "username"], " tě žádá o streamování"],
-    "8B3U5O": ["Požádal/a jsi někoho o streamování"],
-    UGbmBp: ["Stream"],
-    jTbTAF: [[8, "$b", [[1, "username"]]], " chce sledovat, jak hraješ hru ", [8, "$b", [[1, "game"]]], "."],
-};
+a.exports = JSON.parse(
+    '{"o/An3l":[[1,"username"]," t\u011B po\u017E\xe1dal/a o streamov\xe1n\xed aplikace ",[1,"applicationName"]],"DKHhec":["Po\u017E\xe1dat o\xa0streamov\xe1n\xed"],"8qq+H7":["Po\u017E\xe1dat o\xa0streamov\xe1n\xed aplikace ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," t\u011B \u017E\xe1d\xe1 o streamov\xe1n\xed aplikace ",[1,"applicationName"]],"7pndSl":["Po\u017E\xe1dal/a jsi n\u011Bkoho o streamov\xe1n\xed aplikace ",[1,"applicationName"]],"P0wwmM":["U\u017E streamuje\u0161"],"u4QmWl":["\u017D\xe1dost vypr\u0161ela"],"qRXats":["Nen\xed v hlasov\xe9m kan\xe1lu"],"43zohO":["Hra nen\xed spu\u0161t\u011Bna"],"fac+eE":["\u017D\xe1dn\xe9 opr\xe1vn\u011Bn\xed"],"mVFTUg":["\u017D\xe1dost byla odesl\xe1na p\u0159\xedli\u0161 ned\xe1vno"],"8HU1M2":["\u017D\xe1dost odesl\xe1na"],"5+172e":["Stream"],"nAyuPp":["\u017D\xe1dost o\xa0streamov\xe1n\xed"],"d/qbC0":[[1,"username"]," t\u011B \u017E\xe1d\xe1 o\xa0streamov\xe1n\xed"],"8B3U5O":["Po\u017E\xe1dal/a jsi n\u011Bkoho o\xa0streamov\xe1n\xed"],"UGbmBp":["Stream"],"jTbTAF":[[8,"$b",[[1,"username"]]]," chce sledovat, jak hraje\u0161 hru ",[8,"$b",[[1,"game"]]],"."]}',
+);
