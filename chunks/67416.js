@@ -21,7 +21,7 @@ var i = n(627968),
     v = n(935208),
     _ = n(820672),
     j = n(768349),
-    N = n(783198),
+    N = n(244957),
     T = n(375708);
 function y(e) {
     let { currentUserId: t, message: l, application: r, channel: a, analyticsLocations: y, onView: S } = e,
@@ -72,9 +72,9 @@ function y(e) {
                                           ? (0, A.A)(M.pid)
                                           : (0, o.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("64379"),
-                                                    n.e("75973"),
-                                                    n.e("41686"),
+                                                    n.e("4615"),
+                                                    n.e("12932"),
+                                                    n.e("65438"),
                                                     n.e("76171"),
                                                     n.e("38601"),
                                                     n.e("36946"),
@@ -83,8 +83,8 @@ function y(e) {
                                                     n.e("44727"),
                                                     n.e("59778"),
                                                     n.e("25241"),
-                                                    n.e("6565"),
-                                                    n.e("14304"),
+                                                    n.e("28724"),
+                                                    n.e("82013"),
                                                     n.e("76229"),
                                                     n.e("91782"),
                                                     n.e("90088"),
@@ -180,7 +180,7 @@ var eA = n(939249),
     ef = n(780907),
     eE = n(140651),
     eI = n(878831),
-    eC = n(193018);
+    eC = n(378);
 function ev(e) {
     let { applicationName: t, iconSrc: n, viewAction: l } = e,
         { primaryColor: s, secondaryColor: a } = (0, eE.A)(n),

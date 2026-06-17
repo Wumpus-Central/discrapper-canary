@@ -3,7 +3,7 @@ var n = i(627968),
     l = i(64700),
     s = i(503698),
     a = i.n(s),
-    r = i(922139),
+    r = i(242841),
     d = i(17928),
     o = i(866323),
     c = i(765178),
@@ -17,8 +17,8 @@ var n = i(627968),
     f = i(56348),
     A = i(207803),
     I = i(183555),
-    v = i(289173),
-    S = i(836602),
+    S = i(289173),
+    v = i(836602),
     b = i(958805),
     y = i(61881),
     E = i(591179),
@@ -27,7 +27,7 @@ var n = i(627968),
     N = i(518477),
     T = i(652215),
     R = i(375708),
-    k = i(381280);
+    k = i(82784);
 let O = "user-profile-save-reset-toolbar-label";
 function L(e) {
     let { className: t, guildId: i } = e,
@@ -52,14 +52,14 @@ function L(e) {
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: i, hasUnsavedWidgets: n, canSaveWidgets: l };
         })(),
         V = (0, E.X)("UserProfileModalV2SaveBar"),
-        { hasUnsavedProfileChanges: B, canSubmitProfileChanges: z } = (0, d.cf)([S.A], () => ({
-            hasUnsavedProfileChanges: S.A.hasUnsavedChanges(),
-            canSubmitProfileChanges: S.A.canSubmit(),
+        { hasUnsavedProfileChanges: B, canSubmitProfileChanges: z } = (0, d.cf)([v.A], () => ({
+            hasUnsavedProfileChanges: v.A.hasUnsavedChanges(),
+            canSubmitProfileChanges: v.A.canSubmit(),
         })),
-        Y = V && B,
-        X = F || Y,
+        X = V && B,
+        Y = F || X,
         q = !(F && !H) && (!V || z),
-        Q = (0, o.p)(X, {
+        Q = (0, o.p)(Y, {
             from: { opacity: 0, y: 80 * !L },
             enter: { opacity: 1, y: 0 },
             leave: { opacity: 0, y: 80 * !L },
@@ -68,13 +68,13 @@ function L(e) {
             b.A.clearPendingWidgets(), V && (0, A.XQ)();
         }, [V]),
         $ = l.useCallback(async () => {
-            if (V && !S.A.canSubmit()) return;
+            if (V && !v.A.canSubmit()) return;
             _(!0);
             let e = !0;
-            if (Y)
+            if (X)
                 try {
                     if (null == i) {
-                        let t = S.A.getPendingChanges(),
+                        let t = v.A.getPendingChanges(),
                             i = (0, f.Sk)(t),
                             n = (0, f.yX)(t);
                         if (Object.keys(i).length > 0) {
@@ -95,7 +95,7 @@ function L(e) {
                             (e = e && (l?.ok ?? !1)), l?.ok && (0, A.RE)();
                         }
                     } else {
-                        let t = S.A.getPendingChanges(i),
+                        let t = v.A.getPendingChanges(i),
                             n = (0, f.C5)(t),
                             l = (0, f.yX)(t, i);
                         if (Object.keys(n).length > 0) {
@@ -117,7 +117,7 @@ function L(e) {
                             (e = e && (s?.ok ?? !1)), s?.ok && (0, A.RE)();
                         }
                     }
-                    let t = (0, f.yg)(S.A.getPendingChanges());
+                    let t = (0, f.yg)(v.A.getPendingChanges());
                     if (Object.keys(t).length > 0) {
                         let { primaryGuildId: i } = t;
                         if (void 0 !== i) {
@@ -132,7 +132,7 @@ function L(e) {
                 try {
                     for (let e of (await b.A.savePendingWidgets(U), D)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
-                        (0, v.fu)(e) &&
+                        (0, S.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.applicationId)),
                             (t.tags = e.games.flatMap((e) => e.tags ?? []).map((e) => e.toString())),
                             (t.numCharactersCommentary = e.games.reduce((e, t) => e + (t.comment?.length ?? 0), 0))),
@@ -143,7 +143,7 @@ function L(e) {
                     e = !1;
                 }
             e ? (0, m.x8)() : (0, w.XA)(N.jM.PROFILE_SAVE_GENERIC_FAILURE), _(!1);
-        }, [V, Y, F, U, D, W, s, i]);
+        }, [V, X, F, U, D, W, s, i]);
     return (
         l.useEffect(() => {
             let e = null;
@@ -158,8 +158,8 @@ function L(e) {
             );
         }, []),
         l.useEffect(() => {
-            X && c.O.announce(R.intl.string(R.t["0Y/qkL"]));
-        }, [X]),
+            Y && c.O.announce(R.intl.string(R.t["0Y/qkL"]));
+        }, [Y]),
         Q((e, i) =>
             i
                 ? (0, n.jsx)(r.animated.div, {
@@ -184,7 +184,7 @@ function L(e) {
                                           variant: "secondary",
                                           text: R.intl.string(R.t.yBZMsQ),
                                           onClick: K,
-                                          disabled: !X || M,
+                                          disabled: !Y || M,
                                       }),
                                       (0, n.jsx)(g.$, {
                                           size: "sm",
@@ -192,7 +192,7 @@ function L(e) {
                                           text: R.intl.string(R.t["R3BPH+"]),
                                           onClick: $,
                                           loading: M,
-                                          disabled: !q || !X,
+                                          disabled: !q || !Y,
                                       }),
                                   ],
                               }),

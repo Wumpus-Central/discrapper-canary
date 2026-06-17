@@ -12,7 +12,7 @@ n(234419), n(735164);
 var u = n(375708);
 n(815545);
 var c = n(652215);
-n(47463);
+n(348519);
 let d = (e) => (e.currency === c.Yri.USD ? (0, l.$g)(e.total, e.currency) : `${(0, l.$g)(e.total, e.currency)}*`);
 function _(e) {
     let { invoice: t, isPrepaidPaymentSource: n } = e,

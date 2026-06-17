@@ -2,8 +2,8 @@
 n.d(t, { Ay: () => m, Ur: () => d, mk: () => c });
 var l = n(143236),
     i = n(721768),
-    r = n(612394),
-    s = n(820066),
+    s = n(612394),
+    r = n(820066),
     a = n(885386),
     o = n(38405),
     u = n(597184);
@@ -120,14 +120,14 @@ class m extends l.EventEmitter {
                 findCommandOptionAutocompleteType: o,
                 findMatchingAutocompleteType: d,
                 getOptions: m,
-            } = await Promise.all([n.e("84253"), n.e("73220"), n.e("93993"), n.e("98866")]).then(n.bind(n, 157417));
+            } = await Promise.all([n.e("3325"), n.e("50839"), n.e("93993"), n.e("98866")]).then(n.bind(n, 157417));
         if (null == this.props.editorRef.current) return;
         let h = m(this.props),
             p = this.props.editorRef.current.getSlateEditor();
         null != p &&
             (t =
-                null != (e = s.VW.getSelectedParentOfType(p, c))
-                    ? s.VW.getTextFromRange(p, s.VW.range(p, e[1]))
+                null != (e = r.VW.getSelectedParentOfType(p, c))
+                    ? r.VW.getTextFromRange(p, r.VW.range(p, e[1]))
                     : null);
         let f = d({
                 channel: this.props.channel,
@@ -156,7 +156,7 @@ class m extends l.EventEmitter {
             N = this.shouldShow(v, T, A),
             j = this.state.selectedIndex;
         !N || T ? (j = null) : null != j && j >= v && (j = v - 1),
-            N && !this.state.isVisible && (0, r.uA)(E, this.props.channel, y),
+            N && !this.state.isVisible && (0, s.uA)(E, this.props.channel, y),
             this.setState({
                 query: { type: E, typeInfo: A, queryText: C, results: S, resultCount: v, options: h, isLoading: T },
                 isVisible: N,
@@ -170,10 +170,10 @@ class m extends l.EventEmitter {
     }
     selectResult(e, t, n) {
         if (!this.state.isVisible) return !1;
-        let { type: l, typeInfo: i, results: s, resultCount: a, options: o } = this.state.query;
+        let { type: l, typeInfo: i, results: r, resultCount: a, options: o } = this.state.query;
         if (e >= a) return !1;
         let c = i.onSelect?.({
-            results: s,
+            results: r,
             index: e,
             type: t ? u.lg.SEND : u.lg.INSERT,
             options: o,
@@ -182,7 +182,7 @@ class m extends l.EventEmitter {
             tabOrEnter: n,
             queryText: this.state.query?.queryText,
         });
-        return null != c && (0, r.So)(l, c.type ?? null, this.props.channel, c.metadata), !0;
+        return null != c && (0, s.So)(l, c.type ?? null, this.props.channel, c.metadata), !0;
     }
     setState(e) {
         for (let t in e)

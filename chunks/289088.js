@@ -1,3 +1,22 @@
-s.exports = JSON.parse(
-    '{"F3llsQ":["\u66F4\u65B0\u4E2A\u4EBA\u8D44\u6599\u65F6\u81EA\u52A8\u5206\u4EAB\u52A8\u6001"],"6goWcz":["\u597D\u53CB\u53EF\u5728\u60A8\u66F4\u65B0\u4E2A\u4EBA\u8D44\u6599\u65F6\u6536\u5230\u63A8\u9001\u901A\u77E5\u3002"]}',
-);
+e.exports = {
+    Fv: "categoryRow_e4503a",
+    d0: "uncategorized_e4503a",
+    O1: "categoryText_e4503a",
+    be: "channelText_e4503a",
+    wD: "titleBadge_e4503a",
+    PC: "premiumIcon_e4503a",
+    WG: "channelRow_e4503a",
+    r9: "disabled_e4503a",
+    Qn: "firstChannel_e4503a",
+    wp: "lastChannel_e4503a",
+    yW: "channelInfo_e4503a",
+    tN: "channelActions_e4503a",
+    Ze: "channelSubtitles_e4503a",
+    qy: "channelSubtitle_e4503a",
+    Ks: "subtitleSeparator_e4503a",
+    At: "topic_e4503a",
+    HA: "channelName_e4503a",
+    me: "separator_e4503a",
+    Kx: "viewChannelButtonWrapper_e4503a",
+    bv: "scrollerInner_e4503a",
+};

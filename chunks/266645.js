@@ -108,7 +108,7 @@ function T(e) {
     }
 }
 var S = n(679621),
-    y = n(412460);
+    y = n(46060);
 let C = function (e) {
     let { gameId: t, channelId: p, authorId: m, gameName: g, gameIconHash: A } = e,
         I = (0, s.bG)([d.A], () => d.A.getChannel(p)),

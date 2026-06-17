@@ -1,6 +1,0 @@
-o.exports = {
-    P6: "bodyColumn_fa6a46",
-    LC: "skuImage_fa6a46",
-    iX: "customGiftMessageWrapper_fa6a46",
-    pt: "customGiftMessage_fa6a46",
-};

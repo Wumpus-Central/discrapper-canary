@@ -24,9 +24,9 @@ var i = a(627968),
     g = a(751877),
     C = a(88001),
     E = a(652215),
-    L = a(466919),
+    L = a(963458),
     h = a(375708),
-    G = a(651702);
+    G = a(86582);
 let x = {
     [C.Hy.BILLING_SUBSCRIPTION_GROUP_USER_ON_COOLDOWN]: 1,
     [C.Hy.BILLING_SUBSCRIPTION_GROUP_USER_ACTIVE_BOOSTS]: 2,

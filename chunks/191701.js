@@ -95,7 +95,7 @@ var tu = i(387755),
     tE = i(41984),
     t_ = i(222506),
     tN = i(145567),
-    tS = i(774610),
+    tS = i(658194),
     tC = i(308368),
     tT = i(334738),
     th = i(481484),
@@ -103,7 +103,7 @@ var tu = i(387755),
     tO = i(560595),
     tL = i(929921),
     tb = i(753070),
-    tx = i(783198),
+    tx = i(244957),
     tD = i(941971),
     tR = i(465364),
     tk = i(976860),
@@ -111,7 +111,7 @@ var tu = i(387755),
     tM = i(625494),
     tV = i(723702),
     tj = i(19575),
-    tP = i(720149),
+    tP = i(493336),
     tw = i(964486),
     tK = i(480870),
     tG = i(355622),
@@ -120,7 +120,7 @@ var tu = i(387755),
     tH = i(451909),
     tJ = i(135621),
     tB = i(381941),
-    tz = i(267475);
+    tz = i(42387);
 function t$(t) {
     let { id: e, replyToMessageId: i, channel: n, onSend: l } = t,
         a = (0, tJ.A)(),
@@ -186,7 +186,7 @@ function t$(t) {
     });
 }
 var tX = i(119191),
-    tW = i(499214);
+    tW = i(21197);
 let tq = (t) => {
     t && (0, tU.Ak)(R.cH, R.pD, void 0, void 0, { trackNotificationFailure: !0 });
 };
@@ -198,9 +198,9 @@ var tQ = i(554146),
     t7 = i(308726),
     t9 = i(46282),
     t8 = i(360469),
-    t5 = i(70617),
-    t6 = i(881732);
-function t3(t) {
+    t5 = i(12377),
+    t3 = i(167684);
+function t6(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
     return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t8.iu.LARGE), size: 40 });
@@ -638,7 +638,7 @@ let e_ = new eE(s.h, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
-                                    className: t6.kL,
+                                    className: t3.kL,
                                 }));
                 }
             let r = (0, t2.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
@@ -646,7 +646,7 @@ let e_ = new eE(s.h, {
             return {
                 icon:
                     null != t
-                        ? (0, $.jsx)(t3, { game: t })
+                        ? (0, $.jsx)(t6, { game: t })
                         : (0, $.jsx)("img", { src: i(513653), className: t5.Kk, alt: "" }),
                 title: s,
                 hint: () => (0, tX.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 }),

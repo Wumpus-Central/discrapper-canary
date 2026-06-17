@@ -27,7 +27,7 @@ var l = n(627968),
     y = n(228366),
     T = n(51092),
     w = n(40056),
-    D = n(926613);
+    D = n(707285);
 function R(e) {
     return (1 & e.buttons) == 1;
 }
@@ -207,7 +207,7 @@ var L = n(919706),
     W = n(834730),
     $ = n(1215),
     B = n(375708),
-    Y = n(391308);
+    Y = n(24908);
 function Z(e) {
     let { stream: t, isSmall: n, selected: i, isSelfStream: s } = e;
     return (0, l.jsxs)(l.Fragment, {

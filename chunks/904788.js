@@ -7,7 +7,7 @@ var r = n(503698),
     a = n(812993),
     o = n(953727),
     l = n(771104),
-    u = n(910372);
+    u = n(167524);
 function c(e) {
     let { className: t, children: n, forceUseColor: r = !1, hideStars: a } = e;
     return (0, i.jsxs)("span", {
@@ -27,7 +27,7 @@ function c(e) {
     });
 }
 var d = n(375708),
-    _ = n(988460);
+    _ = n(59756);
 function h(e) {
     return (0, i.jsx)("svg", {
         ...(0, o.A)({ ...e }),

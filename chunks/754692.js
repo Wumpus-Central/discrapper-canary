@@ -13,7 +13,7 @@ var i = n(627968),
     h = n(834730),
     f = n(64585),
     p = n(906688),
-    E = n(60828);
+    E = n(873820);
 let m = (e) => {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {

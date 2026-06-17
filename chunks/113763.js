@@ -11,12 +11,12 @@ var n = i(627968),
     g = i(201934),
     m = i(782505),
     h = i(515054),
-    x = i(851284);
+    x = i(63060);
 function p(e) {
     let { user: t, guildId: i, channelId: p, onClose: j } = e,
         { analyticsLocations: f } = (0, a.Ay)(),
         { context: A, trackUserProfileAction: I } = (0, d.NJ)(),
-        { mutualFriends: v, mutualFriendsCount: S } = (0, o.A)(t),
+        { mutualFriends: S, mutualFriendsCount: v } = (0, o.A)(t),
         b = (0, s.A)();
     return (
         l.useEffect(() => {
@@ -25,8 +25,8 @@ function p(e) {
         (0, n.jsx)(h.K, {
             className: x.XG,
             children:
-                null == v
-                    ? Array.from({ length: S ?? 10 }).map((e, t) =>
+                null == S
+                    ? Array.from({ length: v ?? 10 }).map((e, t) =>
                           (0, n.jsxs)(
                               "div",
                               {
@@ -39,9 +39,9 @@ function p(e) {
                               t,
                           ),
                       )
-                    : 0 === v.length
+                    : 0 === S.length
                       ? (0, n.jsx)(m.IA, {})
-                      : v.map((e) => {
+                      : S.map((e) => {
                             let { key: t, user: l, status: s } = e;
                             return (0, n.jsx)(
                                 g.A,

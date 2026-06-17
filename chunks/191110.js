@@ -100,7 +100,7 @@ async function ee(e) {
     return (await $.decodeAudioData(l)).getChannelData(0);
 }
 let el = { ...O.Jh };
-var et = t(455141);
+var et = t(952421);
 let en = a.memo(function (e) {
         let { file: l, audio: t, className: s, waveformSettings: i } = e,
             [r, u] = a.useState({ width: 0, height: 0 }),
@@ -216,7 +216,7 @@ let en = a.memo(function (e) {
             waveformSettings: { fineTuning: l, fineTuningResolution: t, duration: a },
         });
     });
-var es = t(346973);
+var es = t(844253);
 let ei = a.memo(function (e) {
     let { playing: l, onPausePlayback: t, onPlaybackChange: s, onChangePosition: i, disabled: r = !1 } = e,
         u = { ...O.Jh },
@@ -428,7 +428,7 @@ let ei = a.memo(function (e) {
     );
 });
 var er = t(980504),
-    eu = t(418230);
+    eu = t(40566);
 let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), playheadPositionMs: 0 },
     ed = a.memo(function (e) {
         let { className: l, volume: t, disabled: s = !1, onChange: i } = e,
@@ -507,7 +507,7 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
         });
     });
 var ec = t(102597),
-    em = t(919195);
+    em = t(416475);
 let ef = a.memo(function (e) {
     let { sound: l, volume: t, disabled: s } = e,
         [i, r] = a.useState(!1),
@@ -548,7 +548,7 @@ let ef = a.memo(function (e) {
         })
     );
 });
-var eh = t(252642);
+var eh = t(358626);
 let eg = a.memo(function (e) {
     let { sound: l, volume: t, disabled: a = !1, onChange: s } = e,
         { file: i } = z();
@@ -577,7 +577,7 @@ var ex = t(983069),
     eE = t(935208),
     ek = t(209932),
     eA = t(652215),
-    eT = t(103987);
+    eT = t(246323);
 function eF(e) {
     let { availableSlots: l, className: t } = e;
     return (0, n.jsxs)(k.E, {

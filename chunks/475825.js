@@ -2,7 +2,7 @@
 n.d(t, { Ei: () => o, OZ: () => a });
 var i = n(446837),
     r = n(201001),
-    s = n(45596);
+    s = n(340380);
 let a = (0, r.$)(s.yL, s.Rv, "", window.ResizeObserver ?? i.t),
     o = (0, r.$)(s.qZ, s.Rv, "", window.ResizeObserver ?? i.t);
 (0, r.$)(s.dv, s.Rv, "", window.ResizeObserver ?? i.t);

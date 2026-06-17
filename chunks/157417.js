@@ -82,7 +82,7 @@ function _(e) {
 }
 var L = n(827669),
     R = n(73510),
-    k = n(905636);
+    k = n(495204);
 let x = { results: { entries: [] } };
 function Y() {
     (0, p.openModalLazy)(async () => {
@@ -187,7 +187,7 @@ var B = n(735438),
     U = n(166862),
     j = n(545152),
     H = n(768038),
-    W = n(2717),
+    W = n(229853),
     b = n(911385);
 let P = { results: { choices: [] } },
     Q = { results: { choices: [], isLoading: !0 } },
@@ -429,7 +429,7 @@ var ea = n(478437),
     eC = n(71393),
     ef = n(174459),
     eT = n(652215),
-    eD = n(111995);
+    eD = n(965819);
 function eO(e, t) {
     return (0, m.jsx)(T.A, { sticker: e, isInteracting: t, size: 40 });
 }
@@ -649,7 +649,7 @@ let ev = new eB(eR.h, {
     };
 var eU = n(95561),
     ej = n(235986),
-    eH = n(331691);
+    eH = n(596843);
 let eW = { results: { command: null, integrations: [], isLoading: !1 } };
 function eb(e, t, n) {
     let l;
@@ -1063,9 +1063,9 @@ let e1 = {
         return { type: I };
     },
 };
-var e7 = n(307731);
-let e2 = { results: { command: null, stickers: [] } };
-function e6(e, t) {
+var e2 = n(307731);
+let e6 = { results: { command: null, stickers: [] } };
+function e7(e, t) {
     return (0, m.jsx)(T.A, { sticker: e, isInteracting: t, size: 40 });
 }
 let e4 = {
@@ -1077,7 +1077,7 @@ let e4 = {
         I.A.getOptionStates(e.id).query.hasValue,
     queryResults(e, t, n, l) {
         let i = I.A.getActiveCommand(e.id)?.untranslatedName;
-        if (null == i) return e2;
+        if (null == i) return e6;
         let r = [];
         return (
             (0, eN.YB)(),
@@ -1111,7 +1111,7 @@ let e4 = {
                 getProps: (e) => {
                     let { comparator: t, sticker: n } = e;
                     return {
-                        renderSticker: e6,
+                        renderSticker: e7,
                         queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                         sticker: n,
                         key: n.id,
@@ -1339,7 +1339,7 @@ let tp = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                 let { emojis: r } = H.Ay.queryEmojiResults({
                     query: n,
                     channel: e,
-                    intention: e7.EmojiIntention.REACTION,
+                    intention: e2.EmojiIntention.REACTION,
                     maxCount: 50,
                 });
                 return { results: { emojis: r.unlocked } };
@@ -1669,7 +1669,7 @@ function tI(e) {
                 }
             } else if (e === a.DB.EMOJIS_AND_STICKERS) {
                 if (
-                    (null != r && r.length > 0 && (0, u.K)(e7.EmojiInteractionPoint.AutocompleteTyped),
+                    (null != r && r.length > 0 && (0, u.K)(e2.EmojiInteractionPoint.AutocompleteTyped),
                     null != r && tM({ type: e, channel: t, guild: n, query: r, isAtStart: s, options: l }))
                 ) {
                     p = { type: e, typeInfo: y, query: r.substring(y.sentinel?.length ?? 0) };

@@ -41,8 +41,8 @@ var n = t(627968),
     z = t(427262),
     K = t(582904),
     B = t(375708),
-    Y = t(176277),
-    q = t(518229);
+    Y = t(869397),
+    q = t(813013);
 let H = "VoiceInviteSuggestionsPopover";
 function $(e) {
     let { channel: i, onHoverOrFocus: s, setPopoutRef: r, closePopout: c } = e,
@@ -67,8 +67,8 @@ function $(e) {
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, m.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
-                    t.e("82314"),
-                    t.e("80339"),
+                    t.e("7266"),
+                    t.e("26903"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),

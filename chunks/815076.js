@@ -36,7 +36,7 @@ var i,
     w = t(534514),
     M = t(456839),
     F = t(375708),
-    U = t(701180);
+    U = t(774588);
 let H = (e) => {
         let { name: s, typeLabel: t } = e;
         return (0, l.jsxs)(B.E, {
@@ -71,7 +71,7 @@ var V = t(442759),
     W = t(139136),
     Z = t(395744),
     K = t(929283),
-    Y = t(719201);
+    Y = t(693985);
 let q = (e) => {
         let { item: s, user: t, bundleFirstAvatarDecoration: i, isBundle: r } = e;
         switch (s.type) {
@@ -130,7 +130,7 @@ var ee = t(346055),
     el = t(661847),
     er = t(758836),
     ea = t(652215),
-    en = t(630709);
+    en = t(326133);
 let ec = (e) => {
         let { skuId: s } = e;
         return (0, er.EZ)(s)
@@ -215,7 +215,7 @@ var eo =
     ef = t(836602),
     eC = t(428262),
     ek = t(780898),
-    eL = t(180129);
+    eL = t(925217);
 let e_ = (e) => {
         let { user: s, innerClassName: t } = e;
         return (0, l.jsx)("div", {
@@ -362,7 +362,7 @@ let e_ = (e) => {
     };
 var eD = t(231540),
     eb = t(184659),
-    eS = t(197952);
+    eS = t(290899);
 let eB = (e) => {
         let { user: s, productRecord: t, isClosing: i, isOrbCheckoutModalOpen: r } = e;
         return t.skuId === er.Dp.ORB_PROFILE_BADGE
@@ -474,7 +474,7 @@ let eB = (e) => {
 var eF = t(13875),
     eU = t(110629),
     eH = t(268959),
-    eG = t(958942);
+    eG = t(609118);
 let ez = (e) => {
     let { productRecord: s, selectedProduct: t } = e,
         i = (0, eF.Do)("CollectiblesShopProductDetailsModal") && t.type === b.R.PROFILE_FRAME;
@@ -497,14 +497,14 @@ var eV = t(990078),
     eQ = t(757036),
     e0 = t(761705),
     e5 = t(580630),
-    e1 = t(4227),
-    e6 = t(940980),
+    e6 = t(4227),
+    e1 = t(940980),
     e8 = t(466459),
-    e4 = t(395068),
-    e2 = t(49620),
-    e9 = t(878112),
-    e7 = t(572595),
-    e3 = t(641405),
+    e2 = t(395068),
+    e9 = t(49620),
+    e3 = t(878112),
+    e4 = t(572595),
+    e7 = t(641405),
     se = t(839863),
     ss = t(561769),
     st = t(680262),
@@ -514,7 +514,7 @@ var eV = t(990078),
     sa = t(61750),
     sn = t(788868),
     sc = t(818348),
-    sd = t(237309);
+    sd = t(153213);
 let so = (e) => {
     let {
             user: s,
@@ -539,7 +539,7 @@ let so = (e) => {
         { isPurchased: _, isPartiallyOwnedBundle: T } = (0, e8.h)(i),
         { isDisabled: O } = (0, ei.I)(i.skuId),
         y = (0, N.Zu)({ product: i, isPartiallyOwnedBundle: T, isPurchased: _ }),
-        P = (0, o.bG)([e1.A], () => e1.A.isClaiming === i?.skuId),
+        P = (0, o.bG)([e6.A], () => e6.A.isClaiming === i?.skuId),
         S = (0, eq.Ay)(),
         w = (0, eX.M)(S),
         M = (0, N.G0)(i),
@@ -549,7 +549,7 @@ let so = (e) => {
         z = (0, sl.X)(i),
         V = (0, si.V_)(t),
         X = null != V,
-        W = (0, e6.W)("CollectiblesShopProductDetailsModal"),
+        W = (0, e1.W)("CollectiblesShopProductDetailsModal"),
         Z = c === er.G2.ORBS && n ? ss.Hi.ORBS : W ? ss.Hi.FIAT : void 0,
         { checkoutEligiblePrices: K, hasSufficientOrbs: Y } = (0, sr.F)({
             product: i,
@@ -557,7 +557,7 @@ let so = (e) => {
             hasDiscountOffer: X,
             prioritizedCurrency: Z,
         }),
-        q = (0, e4.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
+        q = (0, e2.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
         $ = r.useMemo(() => K.some((e) => e.currency === sc.Yr.DISCORD_ORB), [K]);
     (0, e0.W)({ disableFetch: !$ });
     let J = r.useCallback(() => {
@@ -571,10 +571,10 @@ let so = (e) => {
                     fullWidth: !0,
                     buttonTextOverride: e,
                     onClick: () => {
-                        E(er.sH.UNLOCK_WITH_NITRO), (0, e7.M)();
+                        E(er.sH.UNLOCK_WITH_NITRO), (0, e4.M)();
                     },
                     onSubscribeModalClose: () => {
-                        (0, e7.t)({
+                        (0, e4.t)({
                             product: t,
                             category: a,
                             shouldCheckoutWithOrbs: n,
@@ -595,7 +595,7 @@ let so = (e) => {
         className: sd.iw,
         children: [
             L.isPurchased || L.isPartiallyOwnedBundle
-                ? (0, l.jsx)(e2.c, { className: sd.On, isPartiallyPurchased: T })
+                ? (0, l.jsx)(e9.c, { className: sd.On, isPartiallyPurchased: T })
                 : M
                   ? (0, l.jsxs)("div", {
                         className: sd.pq,
@@ -632,8 +632,8 @@ let so = (e) => {
                                           wrap: !1,
                                           fullWidth: !0,
                                           children: [
-                                              (0, l.jsx)(e3.A, { product: i, onSuccess: h, onTrackClick: E }),
-                                              (0, l.jsx)(e9.A, {
+                                              (0, l.jsx)(e7.A, { product: i, onSuccess: h, onTrackClick: E }),
+                                              (0, l.jsx)(e3.A, {
                                                   primary: !0,
                                                   product: i,
                                                   onSuccess: h,
@@ -643,7 +643,7 @@ let so = (e) => {
                                               }),
                                           ],
                                       })
-                                    : (0, l.jsx)(e3.A, { product: i, onSuccess: h, onTrackClick: E })
+                                    : (0, l.jsx)(e7.A, { product: i, onSuccess: h, onTrackClick: E })
                                 : q
                                   ? Q(F.intl.string(F.t["9wfL34"]), !0)
                                   : M
@@ -740,7 +740,7 @@ let so = (e) => {
                                                                         fullWidth: !0,
                                                                     }),
                                                                     z &&
-                                                                        (0, l.jsx)(e9.A, {
+                                                                        (0, l.jsx)(e3.A, {
                                                                             primary: x,
                                                                             product: i,
                                                                             onSuccess: h,
@@ -754,7 +754,7 @@ let so = (e) => {
                                           }),
                                       })
                             : z
-                              ? (0, l.jsx)(e9.A, {
+                              ? (0, l.jsx)(e3.A, {
                                     primary: !0,
                                     product: i,
                                     onSuccess: h,
@@ -769,7 +769,7 @@ let so = (e) => {
         ],
     });
 };
-var su = t(18967);
+var su = t(313751);
 let sm = (e) => {
     let { productRecord: s, selectedProduct: t, previewingProduct: i, user: r, selectedBundleSlide: a } = e,
         n = eM(s);
@@ -799,7 +799,7 @@ var sx = t(408278),
     sp = t(139146),
     sA = t(668953),
     sv = t(881636),
-    sj = t(428445);
+    sj = t(570845);
 let sR = (e) => {
     let { goPrev: s, goNext: t } = e;
     return (0, l.jsxs)(l.Fragment, {
@@ -827,7 +827,7 @@ let sR = (e) => {
         ],
     });
 };
-var sI = t(742441);
+var sI = t(596265);
 let sg = (e) => {
     let {
             user: s,
@@ -923,7 +923,7 @@ let sg = (e) => {
         })
     );
 };
-var sN = t(460510);
+var sN = t(271646);
 let sf = (e) => {
     let {
             transitionState: s,

@@ -277,7 +277,7 @@ async function eR(e) {
     (0, eb.pX)(ep.BVt.CHANNEL(l, n, i), { sourceLocationStack: a });
 }
 var eT = l(320448),
-    ey = l(274119);
+    ey = l(485895);
 function ek(e) {
     let { children: t, title: l, onClickViewAll: n } = e;
     return (0, i.jsxs)("div", {
@@ -302,8 +302,8 @@ function ek(e) {
         ],
     });
 }
-var eL = l(468489),
-    eO = l(992595);
+var eL = l(893705),
+    eO = l(168147);
 function e_(e, t) {
     return Q.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
 }
@@ -694,8 +694,8 @@ var eK = l(998445),
     e0 = l(72265),
     e1 = l(454346),
     e8 = l(37948),
-    e4 = l(262420);
-let e3 = { size: "xs", colorClass: e4.wP };
+    e4 = l(368340);
+let e5 = { size: "xs", colorClass: e4.wP };
 function e2(e) {
     let { website: t, trackAction: l } = e,
         n = (0, e8.A)(),
@@ -752,7 +752,7 @@ function e2(e) {
                 default:
                     throw Error("Unknown website category");
             }
-        })(t, e3),
+        })(t, e5),
         o = a.useCallback(() => {
             l(s), n(t.url);
         }, [s, n, l, t.url]);
@@ -761,20 +761,20 @@ function e2(e) {
         children: (0, i.jsx)(K.D, { onClick: o, className: e4.yO, title: c, children: r }),
     });
 }
-var e5 = l(31300),
-    e6 = l(802516),
-    e7 = l(22363),
+var e3 = l(31300),
+    e7 = l(802516),
+    e6 = l(22363),
     e9 = l(418524),
-    te = l(141535);
+    te = l(923487);
 function tt(e) {
     let { platform: t, ...l } = e;
     switch (t) {
         case eY.Y.DESKTOP:
-            return (0, i.jsx)(e5.k, { size: "xs", ...l });
+            return (0, i.jsx)(e3.k, { size: "xs", ...l });
         case eY.Y.XBOX:
-            return (0, i.jsx)(e6.Y, { size: "xs", ...l });
+            return (0, i.jsx)(e7.Y, { size: "xs", ...l });
         case eY.Y.PLAYSTATION:
-            return (0, i.jsx)(e7.X, { size: "xs", ...l });
+            return (0, i.jsx)(e6.X, { size: "xs", ...l });
         case eY.Y.NINTENDO:
             return (0, i.jsx)(e9.M, { size: "xs", ...l });
         default:
@@ -806,7 +806,7 @@ function tl(e) {
     );
 }
 var tn = l(424994),
-    ti = l(60541);
+    ti = l(287677);
 function ta() {
     return (0, i.jsx)(J.E, { variant: "text-sm/normal", color: "text-subtle", children: eo.intl.string(eo.t.GruYxV) });
 }
@@ -981,7 +981,7 @@ let ts = function (e) {
 };
 var tr = l(714991),
     tc = l(486020),
-    to = l(552523);
+    to = l(779659);
 function tu(e) {
     let { trackAction: t } = e,
         { canStartAuthorization: l, hasAlreadyLinked: n, invite: s, isMember: r, closeModal: c } = H(),
@@ -1391,7 +1391,7 @@ function tU(e) {
         ],
     });
 }
-var tY = l(8208);
+var tY = l(150544);
 function tF(e) {
     let { game: t, show: l, trackAction: n } = e,
         a = t.name,
@@ -1510,7 +1510,7 @@ let tJ = function (e) {
 };
 var t$ = l(141628),
     tq = l(289363),
-    tZ = l(448682);
+    tZ = l(192170);
 function tQ(e) {
     let { trackAction: t, analyticsLocations: l } = e,
         {
@@ -1578,28 +1578,28 @@ var t0 = l(80687),
     t1 = l(775602),
     t8 = l(248643),
     t4 = l(256905),
-    t3 = l(34337),
+    t5 = l(34337),
     t2 = l(191096),
-    t5 = l(90721),
-    t6 = l(616337);
-let t7 = a.memo(function (e) {
+    t3 = l(90721),
+    t7 = l(722257);
+let t6 = a.memo(function (e) {
         let { item: t, index: l, isSelected: n, isPlaying: s, onSelect: c, gameName: o } = e,
             u = a.useCallback(() => c(l), [c, l]);
         return (0, i.jsx)(K.D, {
-            className: r()(t6.JS, n && t6.Y4),
+            className: r()(t7.JS, n && t7.Y4),
             onClick: u,
             children: (0, i.jsxs)("div", {
-                className: t6.ub,
+                className: t7.ub,
                 children: [
                     (0, i.jsx)("img", {
                         src: "VIDEO" === t.type ? (t.poster ?? t.url) : t.url,
-                        className: t6.xn,
+                        className: t7.xn,
                         alt: eo.intl.formatToPlainString(eo.t.COYYrn, { game: o }),
                         draggable: !1,
                     }),
                     "VIDEO" === t.type &&
                         (0, i.jsx)("div", {
-                            className: t6.UZ,
+                            className: t7.UZ,
                             children: (0, i.jsx)(t0.D, { playing: n && s, size: "sm" }),
                         }),
                 ],
@@ -1619,12 +1619,12 @@ let t7 = a.memo(function (e) {
             } = e,
             d = a.useRef(null);
         return (
-            (0, t5.A)({ videoRef: s, canvasRef: d, enabled: !l }),
+            (0, t3.A)({ videoRef: s, canvasRef: d, enabled: !l }),
             (0, i.jsxs)(i.Fragment, {
                 children: [
-                    !l && (0, i.jsx)("canvas", { ref: d, className: t6.HW, "aria-hidden": "true" }),
+                    !l && (0, i.jsx)("canvas", { ref: d, className: t7.HW, "aria-hidden": "true" }),
                     (0, i.jsx)("div", {
-                        className: t6.tN,
+                        className: t7.tN,
                         children: (0, i.jsx)(t8.A, {
                             src: t.url,
                             poster: t.poster ?? "",
@@ -1638,11 +1638,11 @@ let t7 = a.memo(function (e) {
                             autoMute: !0,
                             useFullWidth: !0,
                             responsive: !0,
-                            renderLinkComponent: t3.bU,
+                            renderLinkComponent: t5.bU,
                             onPlay: c,
                             onPause: o,
                             onFullscreenChange: u,
-                            mediaPlayerClassName: t6.T9,
+                            mediaPlayerClassName: t7.T9,
                             videoRef: s,
                             mediaPlayerRef: r,
                         }),
@@ -1736,11 +1736,11 @@ function le(e) {
     return 0 === f.length
         ? null
         : (0, i.jsxs)("div", {
-              className: t6.kL,
+              className: t7.kL,
               children: [
                   v
                       ? (0, i.jsx)("div", {
-                            className: t6.ND,
+                            className: t7.ND,
                             children: (0, i.jsx)(
                                 t9,
                                 {
@@ -1757,28 +1757,28 @@ function le(e) {
                             ),
                         })
                       : (0, i.jsxs)("div", {
-                            className: t6.wp,
+                            className: t7.wp,
                             children: [
                                 null != r &&
                                     !h &&
                                     (0, i.jsx)(
                                         "div",
                                         {
-                                            className: t6.Jy,
+                                            className: t7.Jy,
                                             onAnimationEnd: R,
-                                            children: (0, i.jsx)("img", { src: r, className: t6.Db, alt: "" }),
+                                            children: (0, i.jsx)("img", { src: r, className: t7.Db, alt: "" }),
                                         },
                                         r,
                                     ),
-                                (0, i.jsx)("div", { className: t6.QN }),
+                                (0, i.jsx)("div", { className: t7.QN }),
                                 (0, i.jsx)(K.D, {
-                                    className: t6.gv,
+                                    className: t7.gv,
                                     onClick: b,
                                     children: (0, i.jsx)(
                                         "img",
                                         {
                                             src: j.url,
-                                            className: t6.c8,
+                                            className: t7.c8,
                                             alt: eo.intl.formatToPlainString(eo.t.COYYrn, { game: t.name }),
                                         },
                                         j.url,
@@ -1791,7 +1791,7 @@ function le(e) {
                       iconButtonSize: "sm",
                       children: f.map((e, l) =>
                           (0, i.jsx)(
-                              t7,
+                              t6,
                               { item: e, index: l, isPlaying: A, isSelected: l === p, onSelect: E, gameName: t.name },
                               `${l}-${e.url}`,
                           ),
@@ -1866,7 +1866,7 @@ function lc(e) {
         }),
     });
 }
-var lo = l(99392);
+var lo = l(241728);
 function lu(e) {
     let { url: t, trackAction: l, title: n, rating: s, ratingCount: r, tooltipVariant: c = "all" } = e,
         o = (0, e8.A)(),
@@ -2155,7 +2155,7 @@ var lg = l(564064),
     lp = l(828614),
     lj = l(561769),
     lv = l(758836),
-    lE = l(804163);
+    lE = l(687747);
 let lA = a.createContext({ trackAction: () => {} }),
     lI = (e) => {
         let { skuId: t, aspectRatio: l } = e,
@@ -2228,7 +2228,7 @@ function lN(e) {
 var lb = l(871123),
     lS = l(317560),
     lC = l(328100),
-    lR = l(627771);
+    lR = l(481595);
 function lT(e) {
     let { skuIds: t, analyticsLocations: l, onCardClick: n } = e,
         s = a.useMemo(() => {
@@ -2354,7 +2354,7 @@ let lD = function (e) {
             };
         case "XBOX_GAME_PASS":
             return {
-                icon: e6.Y,
+                icon: e7.Y,
                 text: eo.intl.string(eo.t["QpN/Iz"]),
                 ariaLabel: eo.intl.string(eo.t["8JZmmF"]),
                 action: _.Ws.XboxGamePassStoreLink,
@@ -2367,7 +2367,7 @@ var lV = l(192308);
 function lW(e) {
     return (0, i.jsx)(h.$, { ...e, variant: "secondary", fullWidth: !0, role: "link" });
 }
-var lU = l(352639);
+var lU = l(271167);
 function lY(e) {
     let t,
         l,

@@ -25,7 +25,7 @@ var n = i(627968),
     _ = i(384684),
     y = i(652215),
     N = i(375708),
-    R = i(228624);
+    R = i(64848);
 let k = (e) => {
     let { className: t, onChange: i, textVariant: l = "text-md/normal", label: a, value: r, isArchived: o = !1 } = e;
     return (0, n.jsx)(m.Kj, {

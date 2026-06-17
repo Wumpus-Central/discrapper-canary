@@ -19,7 +19,7 @@ var r = n(503698),
     g = n(323384),
     A = n(513461),
     I = n(791606),
-    T = n(266062);
+    T = n(29774);
 function S(e, t, n) {
     return (0, i.jsx)(d.hV, { count: e, color: t, "aria-hidden": n });
 }

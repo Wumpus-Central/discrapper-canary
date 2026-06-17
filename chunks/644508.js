@@ -12,7 +12,7 @@ let u = async (e) => {
         await (0, r.openModalLazy)(
             async () => {
                 let { EmojiStudioModal: e } = await Promise.all([
-                    n.e("91766"),
+                    n.e("5270"),
                     n.e("50342"),
                     n.e("7406"),
                     n.e("55524"),

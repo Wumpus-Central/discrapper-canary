@@ -87,12 +87,12 @@ var ei =
         (i.PLANS = "plans"),
         (i.COMPARE = "compare"),
         i),
-    ea = t(922139),
+    ea = t(242841),
     el = t(717421),
     en = t(65470),
     er = t(792656),
     ec = t(652215),
-    eo = t(870408);
+    eo = t(298203);
 let ed = function (e) {
     let { isVisible: s, subscriptionTier: t, isEligibleForBogoPromotion: i } = e,
         l = (0, el.z)({
@@ -124,7 +124,7 @@ var em = t(534514),
     eu = t(702841),
     ex = t(652533),
     eg = t(20458),
-    eh = t(80933),
+    eh = t(999461),
     eN = t(180894);
 let ej = () => {
     let e = (0, eu.bG)([F.Ay], () => F.Ay.useReducedMotion);
@@ -157,7 +157,7 @@ let ej = () => {
     });
 };
 var ep = t(375708),
-    ef = t(296725);
+    ef = t(901013);
 let eA = l.forwardRef((e, s) => {
     let { analyticsLocations: t } = (0, N.Ay)(h.A.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, a.jsx)(N.f5, {
@@ -188,7 +188,7 @@ var ev = t(403581),
     eI = t(909536),
     eT = t(400669),
     eR = t(876587),
-    e_ = t(503255);
+    e_ = t(680023);
 let eS = (e) => {
     let { navBarSections: s, activeSectionId: t, isAnimationComplete: i } = e,
         n = {
@@ -267,8 +267,8 @@ var eM = t(31502),
     eL = t(985603),
     eB = t(983060),
     eU = t(788868),
-    eH = t(237146),
-    ez = t(56598);
+    eH = t(151001),
+    ez = t(869590);
 function eF() {
     let { sectionRef: e, handleVisibilityChange: s } = (0, ew.A)({ boxType: eL.XQ, thirdPartyPartner: eL.FZ }),
         t = [
@@ -384,7 +384,7 @@ function eF() {
 }
 var eK = t(750338),
     eV = t(280041),
-    eQ = t(856556);
+    eQ = t(506732);
 function eW(e) {
     let {
         className: s,
@@ -458,22 +458,22 @@ var eY = t(877624),
     e8 = t(97808),
     e6 = t(854627),
     e7 = t(778712),
-    e5 = t(45861);
-function e3(e) {
+    e4 = t(331813);
+function e5(e) {
     let { referrer: s } = e,
         { avatarSrc: t, eventHandlers: i } = (0, e6.A)({ userId: s?.id, size: e7._3.SIZE_24, animateOnHover: !0 });
     return (0, a.jsx)("div", {
-        className: e5.$6,
+        className: e4.$6,
         children: (0, a.jsxs)("div", {
-            className: e5.sc,
+            className: e4.sc,
             children: [
                 (0, a.jsx)("div", {
-                    className: e5.kR,
+                    className: e4.kR,
                     children: (0, a.jsx)(e8.eu, { src: t, "aria-label": s.username, size: e7._3.SIZE_32, ...i }),
                 }),
                 (0, a.jsx)(em.D, {
                     variant: "heading-sm/normal",
-                    className: e5.FS,
+                    className: e4.FS,
                     color: "text-strong",
                     children: ep.intl.format(ep.t.IqxblS, {
                         username: null != s.globalName ? s.globalName : s.username,
@@ -483,7 +483,7 @@ function e3(e) {
         }),
     });
 }
-var e4 = t(579245),
+var e3 = t(579245),
     e9 = t(175569),
     se = t(369805);
 let ss = () => {
@@ -496,7 +496,7 @@ function si() {
     return null != e ? (0, W.sS)(e) : "\u2026";
 }
 var sa = t(141502),
-    sl = t(188393);
+    sl = t(512105);
 let sn = (e) => {
     let { containerVisibilityPercentage: s } = e,
         t = (0, eu.bG)([F.Ay], () => F.Ay.useReducedMotion),
@@ -529,7 +529,7 @@ let sn = (e) => {
         ],
     });
 };
-var sr = t(469408);
+var sr = t(214496);
 let sc = l.memo(
     l.forwardRef((e, s) => {
         let { className: t, subscriptionTier: i, isEligibleForBogoPromotion: l } = e,
@@ -577,12 +577,12 @@ let sc = l.memo(
                                     m &&
                                         (0, a.jsx)("div", {
                                             className: sr.eZ,
-                                            children: (0, a.jsx)(e3, { referrer: d }),
+                                            children: (0, a.jsx)(e5, { referrer: d }),
                                         }),
                                     p &&
                                         (0, a.jsx)("div", {
                                             className: sr.Qn,
-                                            children: (0, a.jsx)(e4.A, {
+                                            children: (0, a.jsx)(e3.A, {
                                                 textColor: "text-strong",
                                                 smallerText: !1,
                                                 isApplicationHome: !0,
@@ -640,10 +640,10 @@ var sN = t(773669),
     sf = t(881373),
     sA = t(84483),
     sv = t(190107),
-    sb = t(962995),
-    sE = t(490285),
-    sC = t(864386),
-    sI = t(799642),
+    sb = t(778414),
+    sE = t(587416),
+    sC = t(745699),
+    sI = t(746458),
     sT = t(202600);
 let sR = (e) => {
         let { includes: s } = e;
@@ -1081,7 +1081,7 @@ let sR = (e) => {
         );
     };
 var sk = t(818348),
-    sO = t(808557);
+    sO = t(94509);
 let sG = () => {
     let e = (0, c.zy)();
     (0, b.P)(v.b);
@@ -1209,7 +1209,7 @@ var sw = t(462887),
     sK = t(695366),
     sV = t(780964),
     sQ = t(766075),
-    sW = t(835968);
+    sW = t(238272);
 let sX = (e) => {
     let s,
         t,
@@ -1253,7 +1253,7 @@ let sX = (e) => {
         })
     );
 };
-var sJ = t(147935);
+var sJ = t(442015);
 let sY = (e) => {
     let { lifted: s = !1 } = e;
     return (0, a.jsxs)("svg", {
@@ -1292,7 +1292,7 @@ let sY = (e) => {
 var sZ = t(900797),
     sq = t(847374),
     s$ = t(812993),
-    s0 = t(464769);
+    s0 = t(837761);
 function s2(e) {
     let { className: s } = e;
     return (0, a.jsx)(s$.Lp, { className: r()(s0.T, s), text: ep.intl.string(ep.t.EYxi0o) });
@@ -1301,13 +1301,13 @@ var s1 = t(904788),
     s8 = t(507553),
     s6 = t(591179),
     s7 = t(255438),
-    s5 = t(355097);
-let s3 = "/assets/5b4fec8511c3676a.svg",
-    s4 = "/assets/0838bda6ecd20d91.svg";
+    s4 = t(355097);
+let s5 = "/assets/5b4fec8511c3676a.svg",
+    s3 = "/assets/0838bda6ecd20d91.svg";
 var s9 = t(64514),
     te = t(121818);
 let ts = (e, s, t) => ((0, sw.M)(e) ? s : t);
-var tt = t(446278);
+var tt = t(259270);
 let ti = (e) => {
         let { isShowingAll: s, onClick: t } = e;
         return (0, a.jsxs)(eb.D, {
@@ -1420,7 +1420,7 @@ let ti = (e) => {
                             let s = () => {
                                 {
                                     let { openUserSettings: s } = t(766075);
-                                    s8.A.setState({ scrollPosition: s5._F.TRY_IT_OUT }),
+                                    s8.A.setState({ scrollPosition: s4._F.TRY_IT_OUT }),
                                         s(sV.X.PROFILE_PANEL, { analyticsLocations: e });
                                 }
                             };
@@ -1458,19 +1458,19 @@ let ti = (e) => {
                     stickers: {
                         title: ep.intl.string(ep.t["1c+xwT"]),
                         description: ep.intl.string(ep.t.hJG8ZN),
-                        imageSource: ts(i, s4, s3),
+                        imageSource: ts(i, s3, s5),
                         imageClassName: s.stickersImage,
                     },
                     stickersBurst: {
                         title: ep.intl.string(ep.t.tzdIwI),
                         description: ep.intl.string(ep.t.hJG8ZN),
-                        imageSource: ts(i, s4, s3),
+                        imageSource: ts(i, s3, s5),
                         imageClassName: s.stickersImage,
                     },
                     stickersPremiumPerk: {
                         title: ep.intl.string(ep.t.tzdIwI),
                         description: ep.intl.string(ep.t.hJG8ZN),
-                        imageSource: ts(i, s4, s3),
+                        imageSource: ts(i, s3, s5),
                         imageClassName: s.stickersImage,
                     },
                     streaming: {
@@ -1551,7 +1551,7 @@ let ti = (e) => {
         });
     };
 var tn = t(194509),
-    tr = t(14238);
+    tr = t(618526);
 let tc = function (e) {
     let { isVisible: s, subscriptionTier: t, isApplicationHome: i, isEligibleForBogoPromotion: l } = e,
         n = (0, el.z)({
@@ -1583,7 +1583,7 @@ let tc = function (e) {
     });
 };
 var to = t(89366),
-    td = t(360101);
+    td = t(762405);
 let tm = (e) => {
         let {
                 inOfferExperience: s,
@@ -1658,7 +1658,7 @@ let tg = l.forwardRef((e, s) => {
                         u
                             ? (0, a.jsx)("div", {
                                   className: td.DF,
-                                  children: (0, a.jsx)(e4.A, { textColor: "always-white", smallerText: !d }),
+                                  children: (0, a.jsx)(e3.A, { textColor: "always-white", smallerText: !d }),
                               })
                             : (0, a.jsx)(tx, {}),
                         m || o
@@ -1681,8 +1681,8 @@ let tg = l.forwardRef((e, s) => {
     });
 });
 var th = t(22118),
-    tN = t(111932),
-    tj = t(16939),
+    tN = t(406012),
+    tj = t(302891),
     tp = t(79119);
 let tf = (e) => {
         let { inOfferExperience: s } = e;
@@ -1854,7 +1854,7 @@ let tf = (e) => {
               ? (0, a.jsx)(sG, {})
               : null;
     };
-var tb = t(972119);
+var tb = t(78103);
 let tE = function (e) {
     let { entrypoint: s = eU.Mf.UserSettings } = e;
     (0, b.P)(v.b);

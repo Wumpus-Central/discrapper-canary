@@ -5,7 +5,7 @@ n(64700);
 var r = n(503698),
     s = n.n(r),
     a = n(834730),
-    o = n(67468);
+    o = n(911372);
 function l(e) {
     let { text: t, className: n, disableGradient: r = !1 } = e;
     return (0, i.jsx)("div", {

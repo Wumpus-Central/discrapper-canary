@@ -16,8 +16,8 @@ var l = n(627968),
     f = n(531685),
     j = n(625494),
     v = n(140735),
-    b = n(534514),
-    A = n(707554),
+    A = n(534514),
+    b = n(707554),
     p = n(964486);
 n(667532), n(134528), n(947204);
 var N = n(503698),
@@ -63,7 +63,7 @@ let U = function (e) {
     }
 };
 var V = n(375708),
-    W = n(508891);
+    W = n(213659);
 function $(e) {
     let { node: t, isLast: n } = e,
         r = t.useTitle(),
@@ -117,7 +117,7 @@ function H(e) {
         }),
     });
 }
-var Q = n(441562);
+var Q = n(454298);
 function Y(e) {
     let { icon: t, label: n, onClick: r } = e;
     return (0, l.jsx)(E.K, { onClick: r, icon: t, size: "sm", variant: "icon-only", "aria-label": n });
@@ -204,12 +204,12 @@ let eu = function (e) {
 };
 var eo = n(284009),
     ec = n.n(eo),
-    ed = n(922139),
+    ed = n(242841),
     eh = n(935399),
     em = n(319354),
     eg = n(717421),
     ex = n(885386),
-    ey = n(429566);
+    ey = n(571902);
 function ef(e) {
     let { category: t, onClick: n, active: s, dismissibleBadge: i } = e,
         { useTitle: a, useSubnavLabel: u, key: o, usePersistentBadge: c } = t,
@@ -424,7 +424,7 @@ function ev(e) {
                 "--custom-nav-count": s.length,
                 "--custom-nav-index": Math.max(t, 0),
                 "--custom-nav-width": "2px",
-                "--custom-icon-size": `${em.E[eA]}px`,
+                "--custom-icon-size": `${em.E[eb]}px`,
             },
             children: [
                 (0, l.jsx)("div", {
@@ -458,8 +458,8 @@ function ev(e) {
         })
     );
 }
-var eb = n(585635);
-let eA = "refresh_sm";
+var eA = n(598371);
+let eb = "refresh_sm";
 function ep(e) {
     let { onClick: t, active: n, node: s, dismissibleBadge: i, panelKey: u, listItemProps: o, children: c } = e,
         {
@@ -487,7 +487,7 @@ function ep(e) {
             }
         })(x),
         v = m?.(n),
-        b = r.useMemo(
+        A = r.useMemo(
             () =>
                 null != i
                     ? n
@@ -500,25 +500,25 @@ function ep(e) {
         );
     return (0, l.jsxs)("li", {
         "data-settings-sidebar-item": u,
-        className: eb.DB,
+        className: eA.DB,
         children: [
             (0, l.jsxs)(O.D, {
                 ...o,
                 role: "link",
                 "aria-current": n ? "page" : void 0,
-                className: C()(eb.AS, { [eb.vu]: n, [eb.RD]: "destructive" === x }),
+                className: C()(eA.AS, { [eA.vu]: n, [eA.RD]: "destructive" === x }),
                 onClick: t,
                 children: [
                     null != h
                         ? (0, l.jsx)(h, {})
                         : (0, l.jsxs)("div", {
-                              className: eb.Ly,
+                              className: eA.Ly,
                               children: [
-                                  (0, l.jsx)(d, { color: j, size: eA, className: eb.Kk }),
+                                  (0, l.jsx)(d, { color: j, size: eb, className: eA.Kk }),
                                   (0, l.jsx)(a.E, { variant: "text-md/medium", color: f, children: y }),
                               ],
                           }),
-                    b,
+                    A,
                 ],
             }),
             c,
@@ -589,7 +589,7 @@ function eN(e) {
 }
 var eC = n(826673),
     eS = n(49999),
-    eE = n(443263);
+    eE = n(455999);
 function ek(e) {
     let { currentPanelKey: t, root: n, onClose: s, footer: i, emptyState: a, searchBar: u } = e,
         o = _.A.useField("showNavigationMobile"),
@@ -696,13 +696,13 @@ function ek(e) {
                 className: C()(eE.pz, e, { [eE.Hw]: S.Fr, [eE.n7]: o }),
                 children: [
                     (0, l.jsx)(v.A, {
-                        children: (0, l.jsx)(b.D, {
+                        children: (0, l.jsx)(A.D, {
                             variant: "text-sm/bold",
                             id: M,
                             children: V.intl.string(V.t["ZU3/B4"]),
                         }),
                     }),
-                    (0, l.jsxs)(A.F, {
+                    (0, l.jsxs)(b.F, {
                         children: [
                             (0, l.jsxs)("div", {
                                 className: C()(eE.gM, { [eE.to]: p }),
@@ -793,10 +793,10 @@ function eM(e) {
         "aria-labelledby": a,
         children: [
             t.hideTitle
-                ? (0, l.jsx)(v.A, { children: (0, l.jsx)(b.D, { id: a, variant: "heading-sm/medium", children: i }) })
+                ? (0, l.jsx)(v.A, { children: (0, l.jsx)(A.D, { id: a, variant: "heading-sm/medium", children: i }) })
                 : (0, l.jsx)("div", {
                       className: eE.a9,
-                      children: (0, l.jsx)(b.D, {
+                      children: (0, l.jsx)(A.D, {
                           id: a,
                           className: eE.Pf,
                           variant: "heading-sm/medium",
@@ -815,7 +815,7 @@ function eM(e) {
 }
 var eR = n(823092),
     eT = n(581298),
-    ew = n(910772);
+    ew = n(16756);
 function eK(e) {
     let {
             partialRoot: t,
@@ -867,8 +867,8 @@ function eK(e) {
         children: (0, l.jsxs)("div", {
             className: ew.k,
             children: [
-                (0, l.jsx)(v.A, { children: (0, l.jsx)(b.D, { variant: "text-sm/bold", children: R }) }),
-                (0, l.jsxs)(A.F, {
+                (0, l.jsx)(v.A, { children: (0, l.jsx)(A.D, { variant: "text-sm/bold", children: R }) }),
+                (0, l.jsxs)(b.F, {
                     children: [
                         (0, l.jsx)(ek, {
                             currentPanelKey: m,
@@ -902,8 +902,8 @@ function eD(e) {
             searchBar: d,
             ...h
         } = e,
-        [v, b] = r.useState(!1),
-        [A, p] = r.useState(1.4),
+        [v, A] = r.useState(!1),
+        [b, p] = r.useState(1.4),
         N = r.useRef(null),
         C = (0, m.bG)([y.Ay], () => y.Ay.useReducedMotion),
         S = (0, m.bG)([f.A], () => f.A.isFocused());
@@ -913,7 +913,7 @@ function eD(e) {
                 let { intensity: t, duration: n } = e;
                 !C &&
                     S &&
-                    (b(!0), p(t ?? 1.4), clearTimeout(N.current), (N.current = setTimeout(() => b(!1), n ?? 1e3)));
+                    (A(!0), p(t ?? 1.4), clearTimeout(N.current), (N.current = setTimeout(() => A(!1), n ?? 1e3)));
             };
             return (
                 j._.subscribe(eB.jej.SHAKE_SETTINGS_MODAL, e),
@@ -924,7 +924,7 @@ function eD(e) {
         }, [C, S]),
         (0, l.jsx)(x.b, {
             isShaking: v,
-            intensity: A,
+            intensity: b,
             children: (0, l.jsx)(g.N, {
                 ...h,
                 children: (0, l.jsx)(e_, {
@@ -962,12 +962,12 @@ var eO = n(495544),
     eJ = n(915089),
     e0 = n(206845),
     e1 = n(19575),
-    e7 = n(763224);
-function e9() {
+    e9 = n(775960);
+function e7() {
     let e = (0, eJ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "564083",
-        r = "ca7cb477e5f46133bb3f0eba97731ee2d4b4b463".substring(0, 7),
+        n = "564948",
+        r = "6028dd2604a1b6d04288f57cc5c26f2d1b4174b3".substring(0, 7),
         s = eY.A?.app.getVersion(),
         i = eY.A?.app.getBuildNumber(),
         u = eY.A?.app.getAppArch(),
@@ -999,10 +999,10 @@ function e9() {
                         (0, l.jsxs)(O.D, {
                             ...c,
                             "aria-describedby": e,
-                            className: C()(e7.vk, e7.oE),
+                            className: C()(e9.vk, e9.oE),
                             children: [
                                 (0, l.jsxs)("div", {
-                                    className: e7.Cr,
+                                    className: e9.Cr,
                                     "data-mtctest-ignore": "true",
                                     children: [
                                         (0, l.jsxs)(a.E, {
@@ -1014,7 +1014,7 @@ function e9() {
                                                 " ",
                                                 n,
                                                 " ",
-                                                (0, l.jsxs)("span", { className: e7.Pc, children: ["(", r, ")"] }),
+                                                (0, l.jsxs)("span", { className: e9.Pc, children: ["(", r, ")"] }),
                                             ],
                                         }),
                                         null != s &&
@@ -1026,7 +1026,7 @@ function e9() {
                                                     s,
                                                     null != u &&
                                                         (0, l.jsxs)("span", {
-                                                            className: e7.GI,
+                                                            className: e9.GI,
                                                             children: [" ", u.toLowerCase()],
                                                         }),
                                                     null != i && (0, l.jsxs)("span", { children: [" (", i, ")"] }),
@@ -1040,7 +1040,7 @@ function e9() {
                                         variant: "text-xxs/normal",
                                         color: "text-muted",
                                         children: (0, l.jsxs)("span", {
-                                            className: e7.Pc,
+                                            className: e9.Pc,
                                             children: ["Build Override: ", o.id],
                                         }),
                                     }),
@@ -1052,8 +1052,8 @@ function e9() {
         })
     );
 }
-var e2 = n(779801);
-function e3(e) {
+var e2 = n(792537);
+function e5(e) {
     let { onClose: t } = e;
     return (0, l.jsx)(eX.W, {
         "data-menu-migrated-auto": !0,
@@ -1078,11 +1078,11 @@ function e3(e) {
         }),
     });
 }
-function e5() {
+function e8() {
     let e = r.useRef(null);
     return (0, l.jsxs)("div", {
         children: [
-            (0, l.jsx)(e9, {}),
+            (0, l.jsx)(e7, {}),
             (0, l.jsxs)("div", {
                 className: e2.yJ,
                 children: [
@@ -1114,7 +1114,7 @@ function e5() {
                         animation: eU.Y.Animation.NONE,
                         renderPopout: (e) => {
                             let { closePopout: t } = e;
-                            return (0, l.jsx)(e3, { onClose: t });
+                            return (0, l.jsx)(e5, { onClose: t });
                         },
                         children: (t, n) =>
                             (0, l.jsx)(ez.Anchor, {
@@ -1135,10 +1135,10 @@ function e5() {
         ],
     });
 }
-var e4 = n(402651),
-    e8 = n(669067),
+var e3 = n(402651),
+    e4 = n(669067),
     e6 = n(830543),
-    te = n(466745);
+    te = n(725305);
 let tt = new Set([eP.X.PROFILE_PANEL, eP.X.SUBSCRIPTIONS_PANEL, eP.X.FAMILY_CENTER_PANEL, eP.X.POGGERMODE_PANEL]),
     tn = new Map([
         [eP.X.CONNECTIONS_PANEL, s.ImpressionNames.USER_SETTINGS_CONNECTIONS],
@@ -1158,7 +1158,7 @@ function tl(e) {
         return (
             eO.default.addChangeListener(e),
             () => {
-                eO.default.removeChangeListener(e), e4.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+                eO.default.removeChangeListener(e), e3.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
             }
         );
     }, []),
@@ -1168,17 +1168,17 @@ function tl(e) {
               partialRoot: eG.D,
               searchBar: tr,
               emptyState: ts,
-              sidebarFooter: e5,
+              sidebarFooter: e8,
               onViewChange: (e) => {
-                  tt.has(e) || (0, e8._)(e);
+                  tt.has(e) || (0, e4._)(e);
                   let t = tn.get(e);
                   null != t &&
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e4.A.getField("source") },
+                          properties: { source: e3.A.getField("source") },
                       }),
-                      e4.A.setState({ source: void 0 });
+                      e3.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: eP.X.ACCOUNT_PANEL,

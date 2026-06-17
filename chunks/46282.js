@@ -16,9 +16,9 @@ var n = i(627968),
     g = i(941327),
     I = i(576705),
     E = i(309010),
-    S = i(287809),
+    _ = i(287809),
     N = i(652215),
-    _ = i(753070),
+    S = i(753070),
     C = i(375708);
 function T(t) {
     let {
@@ -31,7 +31,7 @@ function T(t) {
         } = t,
         u = (0, a.bG)([E.A], () => E.A.getVoiceChannelId()),
         c = (0, a.bG)([y.A], () => y.A.getChannel(u), [u]),
-        f = (0, a.bG)([S.default], () => S.default.getCurrentUser()),
+        f = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
         p = (0, a.bG)([g.Ay], () => (0, A.A)(g.Ay)),
         N = (0, a.bG)([m.A, I.A], () => null != c && (0, d.vz)(c, m.A, I.A));
     return l.useCallback(async () => {
@@ -60,7 +60,7 @@ async function h(t) {
         } = t,
         s = E.A.getVoiceChannelId(),
         o = y.A.getChannel(s),
-        u = S.default.getCurrentUser(),
+        u = _.default.getCurrentUser(),
         c = null != o && (0, d.vz)(o, m.A, I.A),
         f = (0, A.A)(g.Ay);
     await v({
@@ -91,9 +91,9 @@ async function v(t) {
     if (d && A) {
         if (y && null !== l) {
             let t = p.A.getState().preset;
-            if (t === _.jQ.PRESET_DOCUMENTS) {
+            if (t === S.jQ.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, c.eO)({ location: "overlay _goLive" });
-                t = e ? _.jQ.PRESET_AUTO : _.jQ.PRESET_VIDEO;
+                t = e ? S.jQ.PRESET_AUTO : S.jQ.PRESET_VIDEO;
             }
             let [i] = await (0, f.A)(e, { preset: t });
             if (i) return void g?.();
@@ -104,9 +104,9 @@ async function v(t) {
             (0, u.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
-                        i.e("64379"),
-                        i.e("75973"),
-                        i.e("41686"),
+                        i.e("4615"),
+                        i.e("12932"),
+                        i.e("65438"),
                         i.e("76171"),
                         i.e("58337"),
                         i.e("38601"),
@@ -116,8 +116,8 @@ async function v(t) {
                         i.e("44727"),
                         i.e("59778"),
                         i.e("25241"),
-                        i.e("6565"),
-                        i.e("14304"),
+                        i.e("28724"),
+                        i.e("82013"),
                         i.e("76229"),
                         i.e("91782"),
                         i.e("90088"),
