@@ -34,4 +34,3 @@ function r(e, n) {
               leadingAccessory: { type: "icon", icon: s.E },
           });
 }
-,icon:o.E}})}
