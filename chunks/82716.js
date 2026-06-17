@@ -33,3 +33,5 @@ let m = () => {
         `${e.id}:favorite:${e.isFavorite}`,
     );
 };
+sFavorite;
+}`)}
