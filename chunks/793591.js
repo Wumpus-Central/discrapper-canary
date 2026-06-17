@@ -3089,7 +3089,9 @@ let rC = (0, s.createContext)({
                                                       ? Z.intl.string(Z.t.keFvXM)
                                                       : e.code === ro.tG.ALREADY_PURCHASED
                                                         ? Z.intl.string(Z.t.m371Mx)
-                                                        : Z.intl.string(Z.t.fqJZ11);
+                                                        : e.code === ro.tG.BILLING_ORDER_NOT_SIGNABLE
+                                                          ? Z.intl.string(Z.t.ZHgEG7)
+                                                          : Z.intl.string(Z.t.fqJZ11);
                                             })(i, p),
                                         [i, p],
                                     ),
