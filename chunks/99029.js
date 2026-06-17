@@ -6,10 +6,10 @@ var i = n(627968),
     a = n(834730),
     o = n(20742),
     l = n(534479),
-    u = n(211287),
-    c = n(739508),
-    d = n(624210),
-    _ = n(573582),
+    u = n(624210),
+    c = n(573582),
+    d = n(211287),
+    _ = n(739508),
     h = n(818348),
     f = n(480642),
     p = n(375708);
@@ -29,8 +29,8 @@ function A(e) {
             shouldBlockOnOrderCreation: S,
         } = (function (e) {
             let { skuIDs: t, paymentGateway: n, loadId: i, onOrderCreated: s } = e,
-                a = _.A.useConfig({ location: "payment_modal" }).enabled,
-                o = u.A.useConfig({ location: "payment_modal" }).enabled,
+                a = c.A.useConfig({ location: "payment_modal" }).enabled,
+                o = d.A.useConfig({ location: "payment_modal" }).enabled,
                 l = n === h.kM.VIRTUAL_CURRENCY,
                 f = l ? o : a,
                 p = l && o,
@@ -44,12 +44,12 @@ function A(e) {
                         let { skuId: t } = e;
                         S(!0);
                         try {
-                            let e = await (0, d.fS)({ skuId: t, paymentGateway: n, loadId: i });
+                            let e = await (0, u.fS)({ skuId: t, paymentGateway: n, loadId: i });
                             g(e), null != s && s(e);
                         } catch (r) {
                             let e = r instanceof Error ? r : Error(String(r));
-                            (0, c.gr)(r) ||
-                                (0, c.pM)(e, {
+                            (0, _.gr)(r) ||
+                                (0, _.pM)(e, {
                                     tags: { source: "create_order" },
                                     extra: { skuId: t, paymentGateway: String(n), loadId: i },
                                 }),

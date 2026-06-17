@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y$: () => y, t4: () => S, Ni: () => I });
+n.d(t, { y$: () => C, t4: () => S, Ni: () => I });
 var i = n(942381),
     r = n(265690),
     s = n(315069),
@@ -159,7 +159,13 @@ function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return T()(e, t);
 }
-function y(e) {
+let y = (e, t) => {
+    if (null == e) return null;
+    if ("premium_checkout_invoice_get_request" === e.type) return e;
+    let n = t().contextMetadata.loadId;
+    return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
+};
+function C(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -207,13 +213,13 @@ function y(e) {
             setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
             setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0 }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: t ?? null }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: y(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
                 e({ checkoutInvoicePreview: t ?? null, checkoutInvoiceError: n ?? null }),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: t ?? null }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: y(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),

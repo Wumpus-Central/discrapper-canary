@@ -12,7 +12,7 @@ var i = n(627968),
     _ = n(834730),
     h = n(428644),
     f = n(444927),
-    p = n(274971),
+    p = n(38785),
     E = n(463376),
     m = n(558620),
     g = n(699595),
@@ -80,27 +80,27 @@ var M = n(410516),
     F = n(428262),
     V = n(166532),
     B = n(69494),
-    j = n(482132),
-    H = n(615310),
-    Y = n(622631),
-    W = n(597770),
-    K = n(102741),
-    $ = n(296589);
-function z(e) {
+    j = n(901930),
+    H = n(482132),
+    Y = n(615310),
+    W = n(622631),
+    K = n(597770),
+    $ = n(102741),
+    z = n(296589);
+function q(e) {
     let { giftMessage: t = D.intl.string(D.t["DrgnS+"]) } = e,
         { isGift: n, giftRecipient: r } = (0, v.Pv)();
     return !n || (0, U.Ik)(r)
         ? null
-        : (0, i.jsx)(K.A, {
-              className: $.z,
-              iconSize: K.A.Sizes.SMALL,
-              icon: W.o,
-              color: null == t ? K.A.Colors.PRIMARY : K.A.Colors.SECONDARY,
+        : (0, i.jsx)($.A, {
+              className: z.z,
+              iconSize: $.A.Sizes.SMALL,
+              icon: K.o,
+              color: null == t ? $.A.Colors.PRIMARY : $.A.Colors.SECONDARY,
               children: t,
           });
 }
-var q = n(921925),
-    Z = n(71867),
+var Z = n(71867),
     X = n(652215),
     Q = n(788868),
     J = n(249872);
@@ -117,10 +117,10 @@ function ee(e) {
             activeSubscription: e.activeSubscription,
             defaultPlanId: e.defaultPlanId,
         })),
-        { isPremium: W, isEligibleForTrial: K, isEligibleForDiscount: $, discountOffer: ee } = (0, E.i)(),
+        { isPremium: K, isEligibleForTrial: $, isEligibleForDiscount: z, discountOffer: ee } = (0, E.i)(),
         et = (0, M.YJ)(ee),
         en = (0, m.A)(),
-        ei = (0, H.bB)(),
+        ei = (0, Y.bB)(),
         { isGift: er, giftRecipient: es, giftMessage: ea, claimableRewards: eo } = (0, v.Pv)(),
         el = (0, S.Mq)(en),
         eu = (0, c.bG)([O.A], () => {
@@ -128,16 +128,16 @@ function ee(e) {
             return null != e && "giftCustomizationBanner" === e.properties.properties.oneofKind;
         }),
         ec = er && el && null != eo && eo.length > 0 && eu,
-        ed = (K || $) ?? !1,
+        ed = ($ || z) ?? !1,
         { monthlyDefaultSelected: e_ } = T.A.useConfig({
             location: `PremiumPaymentPlanSelectStep${er ? "" : " - DO NOT USE"}`,
         }),
         eh = (0, f.A)(e_),
         ef = r.useMemo(() => {
             let e = L;
-            return er && eh && null != N && (e = Q.En[N]), (0, F.Tm)({ skuId: N, isPremium: W, defaultPlanId: e });
-        }, [N, W, L, er, eh]),
-        ep = $ && null != et && ef.includes(et) ? et : ef[0],
+            return er && eh && null != N && (e = Q.En[N]), (0, F.Tm)({ skuId: N, isPremium: K, defaultPlanId: e });
+        }, [N, K, L, er, eh]),
+        ep = z && null != et && ef.includes(et) ? et : ef[0],
         eE = (0, c.bG)([k.A], () => k.A.get(ep)),
         em = [{ planId: eE?.id, quantity: 1 }],
         [eg, eA] = r.useState(ed),
@@ -180,15 +180,15 @@ function ee(e) {
     l()(null != ei, "Step should be set"), l()(ef.length > 0, "Premium plan options should be set");
     let eR = er
         ? (0, i.jsx)(x.$p, { ...ev })
-        : (0, i.jsx)(Y.X, { ...ev, isInPlanSelectStep: !0, showPlanStatusSubText: !0 });
+        : (0, i.jsx)(W.X, { ...ev, isInPlanSelectStep: !0, showPlanStatusSubText: !0 });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(z, { giftMessage: ea }),
-            !(er && (0, U.Ik)(es)) && (0, i.jsx)(B.A, { isEligibleForTrial: K }),
-            (0, i.jsxs)(j.dZ, {
+            (0, i.jsx)(q, { giftMessage: ea }),
+            !(er && (0, U.Ik)(es)) && (0, i.jsx)(B.A, { isEligibleForTrial: $ }),
+            (0, i.jsxs)(H.dZ, {
                 children: [
                     (0, i.jsx)(Z.P, { className: J.ZB, planSkuId: eE?.skuId }),
-                    (0, i.jsx)(q.A, {}),
+                    (0, i.jsx)(j.A, {}),
                     eC ? (0, i.jsx)(d.w, { type: "critical", children: eS }) : eR,
                     ey &&
                         (0, i.jsxs)(i.Fragment, {
@@ -204,7 +204,7 @@ function ee(e) {
                         }),
                 ],
             }),
-            (0, i.jsxs)(j.UX, {
+            (0, i.jsxs)(H.UX, {
                 children: [
                     ec && (0, i.jsx)(w, {}),
                     (0, i.jsx)(P.Z, {
@@ -213,7 +213,7 @@ function ee(e) {
                         showBackButton: null == n && null == o,
                         planOptions: ef,
                         shouldRenderUpdatedPaymentModal: ey,
-                        isTrial: K,
+                        isTrial: $,
                     }),
                 ],
             }),

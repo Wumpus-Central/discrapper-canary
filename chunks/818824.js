@@ -3,14 +3,14 @@ n.d(t, { U: () => l });
 var i = n(64700),
     r = n(997101),
     s = n(17928),
-    a = n(211159),
-    o = n(615405);
+    a = n(615405),
+    o = n(211159);
 function l() {
-    let { hasAcceptedTerms: e, setHasAcceptedTerms: t } = (0, a.t4)((e) => ({
+    let { hasAcceptedTerms: e, setHasAcceptedTerms: t } = (0, o.t4)((e) => ({
             hasAcceptedTerms: e.hasAcceptedTerms,
             setHasAcceptedTerms: e.setHasAcceptedTerms,
         })),
-        n = (0, s.bG)([o.A], () => r.M.EEA_COUNTRIES.has(o.A.ipCountryCodeWithFallback));
+        n = (0, s.bG)([a.A], () => r.M.EEA_COUNTRIES.has(a.A.ipCountryCodeWithFallback));
     return (
         i.useLayoutEffect(() => {
             t(!n);

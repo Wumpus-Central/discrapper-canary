@@ -1,38 +1,39 @@
 "use strict";
-n.d(t, { Gm: () => o, yv: () => u });
-var i = n(627968),
-    r = n(64700),
+n.d(t, { Gm: () => o, yv: () => c });
+var l = n(627968),
+    i = n(64700),
+    r = n(786300),
     s = n(211159);
-let [a, o, l] = (0, n(786300).A)();
-function u(e) {
+let [a, o, u] = (0, r.A)();
+function c(e) {
     let { children: t } = e,
         { purchaseErrorBlockRef: n } = (function () {
-            let e = r.useRef(null),
+            let e = i.useRef(null),
                 { purchaseError: t, setPurchaseError: n } = (0, s.t4)((e) => ({
                     purchaseError: e.purchaseError,
                     setPurchaseError: e.setPurchaseError,
                 }));
             return (
-                r.useEffect(() => {
+                i.useEffect(() => {
                     null != t && null != e.current && e.current.scrollIntoView({ behavior: "smooth" });
                 }, [t]),
                 { purchaseError: t, setPurchaseError: n, purchaseErrorBlockRef: e }
             );
         })(),
-        [o, l] = r.useState(null),
-        [u, c] = r.useState(null),
-        [d, _] = r.useState(null),
-        h = r.useMemo(
+        [r, o] = i.useState(null),
+        [u, c] = i.useState(null),
+        [d, m] = i.useState(null),
+        h = i.useMemo(
             () => ({
                 purchaseErrorBlockRef: n,
-                bodyNode: o,
-                setBodyNode: l,
+                bodyNode: r,
+                setBodyNode: o,
                 footerNode: u,
                 setFooterNode: c,
                 modalOverlayNode: d,
-                setModalOverlayNode: _,
+                setModalOverlayNode: m,
             }),
-            [n, o, u, d],
+            [n, r, u, d],
         );
-    return (0, i.jsx)(a, { value: h, children: t });
+    return (0, l.jsx)(a, { value: h, children: t });
 }
