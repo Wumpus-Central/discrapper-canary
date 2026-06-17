@@ -12,6 +12,7 @@ function o(e, t, n) {
         num_emoji_results: n?.numEmojiResults ?? 0,
         num_locked_emoji_results: n?.numLockedEmojiResults ?? 0,
         num_sticker_results: n?.numStickerResults ?? 0,
+        game_mentions_available: n?.gameMentionsAvailable,
     });
 }
 function l(e, t, n, r) {

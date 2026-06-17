@@ -920,7 +920,7 @@ let e1 = {
                 l.mentions.otherGlobals &&
                 n.length > 0 &&
                 (h = (er(n, "MentionAutocompletes") ?? H.Ay.queryGames(n).map(X.Sj)).slice(0, 3)),
-            { results: { users: d, globals: p, roles: y, games: h } }
+            { results: { users: d, globals: p, roles: y, games: h }, metadata: { gameMentionsAvailable: g.enabled } }
         );
     },
     renderResults(e) {
