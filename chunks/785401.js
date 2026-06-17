@@ -2442,6 +2442,7 @@ class ti extends A.G {
             { no: 30, name: "debug_config", kind: "message", T: () => td },
             { no: 31, name: "expected_end_date", kind: "message", T: () => e1.D },
             { no: 32, name: "is_automated_change", kind: "scalar", T: 8 },
+            { no: 44, name: "suppress_editor_mention", kind: "scalar", T: 8 },
             { no: 33, name: "archive_at", kind: "message", T: () => e1.D },
             { no: 35, name: "guild_experiment_version", kind: "message", T: () => I.as },
             {
@@ -2494,6 +2495,7 @@ class ti extends A.G {
             fieldNumbersToCopy: [],
             engineFeatureFlags: [],
             isAutomatedChange: !1,
+            suppressEditorMention: !1,
             customUnitPrefix: 0,
             growthbookTags: [],
             allocateRightToLeft: !1,
@@ -2612,6 +2614,9 @@ class ti extends A.G {
                 case 32:
                     r.isAutomatedChange = e.bool();
                     break;
+                case 44:
+                    r.suppressEditorMention = e.bool();
+                    break;
                 case 33:
                     r.archiveAt = e1.D.internalBinaryRead(e, e.uint32(), n, r.archiveAt);
                     break;
@@ -2693,6 +2698,7 @@ class ti extends A.G {
             e.expectedEndDate &&
                 e1.D.internalBinaryWrite(e.expectedEndDate, t.tag(31, E.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.isAutomatedChange && t.tag(32, E.O0.Varint).bool(e.isAutomatedChange),
+            !1 !== e.suppressEditorMention && t.tag(44, E.O0.Varint).bool(e.suppressEditorMention),
             e.archiveAt && e1.D.internalBinaryWrite(e.archiveAt, t.tag(33, E.O0.LengthDelimited).fork(), n).join(),
             e.guildExperimentVersion &&
                 I.as.internalBinaryWrite(e.guildExperimentVersion, t.tag(35, E.O0.LengthDelimited).fork(), n).join(),
