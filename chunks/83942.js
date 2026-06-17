@@ -19,5 +19,3 @@ function a() {
         return null == e || l(e, E.default.getId());
     });
 }
-t.getId();
-)})}
