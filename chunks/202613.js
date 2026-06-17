@@ -5,6 +5,7 @@ n.d(t, {
     EE: () => f,
     FQ: () => y,
     F_: () => E,
+    IE: () => v,
     LQ: () => N,
     Pw: () => C,
     Qh: () => d,
@@ -100,6 +101,8 @@ class o extends r.A {
                 return new y({ ...n, username: e.username });
             case a.hes.TDS_WALLET:
                 return new N({ ...n });
+            case a.hes.PIX:
+                return new v({ ...n });
             default:
                 (0, s.xb)(e);
         }
@@ -142,6 +145,8 @@ class o extends r.A {
                 return new y(e);
             case a.hes.TDS_WALLET:
                 return new N(e);
+            case a.hes.PIX:
+                return new v(e);
             default:
                 (0, s.xb)(t);
         }
@@ -309,5 +314,11 @@ class N extends o {
     constructor(e) {
         if ((super(e), e.type !== a.hes.TDS_WALLET))
             throw Error(`Cannot instantiate TDSWalletSourceRecord with type: ${e.type}, must be ${a.hes.TDS_WALLET}`);
+    }
+}
+class v extends o {
+    constructor(e) {
+        if ((super(e), e.type !== a.hes.PIX))
+            throw Error(`Cannot instantiate PixSourceRecord with type: ${e.type}, must be ${a.hes.PIX}`);
     }
 }

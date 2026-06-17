@@ -20,9 +20,9 @@ var i = n(627968),
     I = n(652215),
     T = n(818348),
     S = n(375708),
-    y = n(327105),
-    C = n(776409),
-    N = n(714246);
+    y = n(982772),
+    C = n(743292),
+    N = n(971398);
 let v = "***@***.***",
     R = new E.YS({ id: h.a, brand: p.Ay.Types.UNKNOWN, type: I.hes.CARD });
 function O(e, t, n) {
@@ -69,6 +69,7 @@ function O(e, t, n) {
                     ? S.intl.formatToPlainString(C.default["Jz6+Oj"], { amount: n })
                     : S.intl.string(C.default["/FQWfA"]),
         };
+    else if (e instanceof E.IE) return { brand: p.Ay.Types.UNKNOWN, label: S.intl.string(S.t.JG3WQU) };
     throw Error("Invalid Payment Source");
 }
 function b(e) {
