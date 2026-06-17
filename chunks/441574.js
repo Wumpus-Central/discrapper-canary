@@ -1142,6 +1142,9 @@ var V =
         (o[(o.SINISTRE = 10)] = "SINISTRE"),
         (o[(o.ZILLA_SLAB = 12)] = "ZILLA_SLAB"),
         (o[(o.PLAYPEN_SANS = 13)] = "PLAYPEN_SANS"),
+        (o[(o.ORBITRON = 14)] = "ORBITRON"),
+        (o[(o.NEW_ROCKER = 15)] = "NEW_ROCKER"),
+        (o[(o.KALAM = 16)] = "KALAM"),
         o),
     j =
         (((l = {})[(l.UNSPECIFIED = 0)] = "UNSPECIFIED"),

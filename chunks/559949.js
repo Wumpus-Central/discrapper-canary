@@ -15,4 +15,7 @@ var i,
         (i[(i.SINISTRE = 10)] = "SINISTRE"),
         (i[(i.ZILLA_SLAB = 12)] = "ZILLA_SLAB"),
         (i[(i.PLAYPEN_SANS = 13)] = "PLAYPEN_SANS"),
+        (i[(i.ORBITRON = 14)] = "ORBITRON"),
+        (i[(i.NEW_ROCKER = 15)] = "NEW_ROCKER"),
+        (i[(i.KALAM = 16)] = "KALAM"),
         i);
