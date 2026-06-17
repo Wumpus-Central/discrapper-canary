@@ -65,6 +65,7 @@ function c(e) {
                 ? {
                       linearGradient: (n = i.quest_home_entrypoint).linear_gradient,
                       radialGradient: n.radial_gradient,
+                      gradientPreset: n.gradient_preset,
                       image: (0, u.dv)(n.image),
                       tooltipImage: (0, u.dv)(n.tooltip_image),
                       tooltipTitle: n.tooltip_title,

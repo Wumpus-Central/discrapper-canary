@@ -1776,7 +1776,7 @@ if (
     n.e("7451").then(n.t.bind(n, 121014, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 564948, Version Hash: 6028dd2604a1b6d04288f57cc5c26f2d1b4174b3`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 565004, Version Hash: ff10fc76ef95efbd034a56c6b68c2cf23069d984`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -17440,8 +17440,8 @@ var TA = n(242841),
     TC = n(194526),
     TN = (((g = {})[(g.NONE = 0)] = "NONE"), (g[(g.BLURPLE = 1)] = "BLURPLE"), g);
 let Tv = {
-    0: null,
-    1: {
+    [TN.NONE]: null,
+    [TN.BLURPLE]: {
         start: rI.A.colors.QUEST_HOME_TAB_GRADIENT_BLURPLE_CENTER,
         middle: rI.A.colors.QUEST_HOME_TAB_GRADIENT_BLURPLE_INNER,
         end: rI.A.colors.QUEST_HOME_TAB_GRADIENT_BLURPLE_OUTER,
@@ -17533,13 +17533,15 @@ let TL = Math.ceil(Math.sqrt(115200)),
             y = !o && s,
             C = !o && r,
             N = o && u?.questHomeEntrypoint?.tooltipTitle != null,
-            v = te.useMemo(() => {
-                let e = u?.questHomeEntrypoint,
-                    t = e?.linearGradient?.start != null && e?.linearGradient?.end != null,
-                    n = e?.radialGradient?.start != null && e?.radialGradient?.end != null;
-                return o && (t || n);
-            }, [o, u]),
-            R = Tv[TN.BLURPLE],
+            v = te.useMemo(
+                () =>
+                    (function () {
+                        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : TN.NONE;
+                        return Tv[e];
+                    })(u?.questHomeEntrypoint?.gradientPreset),
+                [u?.questHomeEntrypoint?.gradientPreset],
+            ),
+            R = te.useMemo(() => null != v, [v]),
             O = (0, F.jsx)("div", {
                 className: TD.iE,
                 onMouseEnter: E,
@@ -17549,11 +17551,11 @@ let TL = Math.ceil(Math.sqrt(115200)),
                 ref: S,
                 style: Tw,
                 children: (0, F.jsxs)(cL.z9, {
-                    showHoverGradient: v,
-                    hoverGradientStart: R?.start,
-                    hoverGradientMiddle: R?.middle,
-                    hoverGradientEnd: R?.end,
-                    className: t6()({ [TD.VU]: y || v, [TD.jR]: y, [TD.XO]: o }),
+                    showHoverGradient: R,
+                    hoverGradientStart: v?.start,
+                    hoverGradientMiddle: v?.middle,
+                    hoverGradientEnd: v?.end,
+                    className: t6()({ [TD.VU]: y || R, [TD.jR]: y, [TD.XO]: o }),
                     icon: rQ.r,
                     listItemRef: i,
                     onClick: d,
@@ -18046,7 +18048,7 @@ let Sr = "isHideDevBanner",
                     className: t6()(Si.Wz, Si.mr),
                     children: [
                         (0, F.jsx)(Sn, { className: Si.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "564948" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "565004" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
