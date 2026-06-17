@@ -5,4 +5,5 @@ r.exports = {
     D7: "gradient_c08b38",
     m6: "bottomCenterContent_c08b38",
     Iv: "cover_c08b38",
+    hM: "privacyPolicy_c08b38",
 };

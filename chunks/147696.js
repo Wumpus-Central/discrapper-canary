@@ -1,79 +1,82 @@
-s.r(t), s.d(t, { default: () => A });
-var a = s(627968),
-    l = s(64700),
-    n = s(735438),
-    i = s.n(n),
-    r = s(189213),
-    c = s(17928),
-    o = s(834730),
-    d = s(276293),
-    m = s(939249),
-    x = s(658675),
-    h = s(150934),
-    u = s(702805),
-    j = s(565645),
-    g = s(148719),
-    v = s(47167),
-    N = s(713654),
-    C = s(495273),
-    k = s(7584),
-    p = s(808728),
-    y = s(375708),
-    b = s(734157);
+a.r(t), a.d(t, { default: () => A });
+var s = a(627968),
+    l = a(64700),
+    n = a(735438),
+    i = a.n(n),
+    r = a(189213),
+    c = a(17928),
+    o = a(834730),
+    d = a(276293),
+    m = a(939249),
+    x = a(658675),
+    h = a(150934),
+    u = a(702805),
+    j = a(565645),
+    g = a(148719),
+    v = a(47167),
+    N = a(713654),
+    C = a(495273),
+    k = a(7584),
+    p = a(808728),
+    y = a(375708),
+    b = a(734157);
 function E(e) {
-    let { onClose: t, handleReviewPermissions: s, transitionState: n } = e,
-        i = (e) => (0, a.jsx)(o.E, { tag: "span", variant: "text-md/medium", color: "text-strong", children: e }),
+    let { onClose: t, handleReviewPermissions: a, transitionState: n } = e,
+        i = (e) => (0, s.jsx)(o.E, { tag: "span", variant: "text-md/medium", color: "text-strong", children: e }),
         c = l.useMemo(
             () => [
                 { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: t },
-                { variant: "primary", text: y.intl.string(y.t.bEnleq), onClick: s },
+                { variant: "primary", text: y.intl.string(y.t.bEnleq), onClick: a },
             ],
-            [s, t],
+            [a, t],
         );
-    return (0, a.jsx)(r.Modal, {
+    return (0, s.jsx)(r.Modal, {
         title: y.intl.string(y.t.PJOCL6),
         actions: c,
         onClose: t,
         transitionState: n,
-        children: (0, a.jsxs)("ul", {
+        children: (0, s.jsxs)("ul", {
             className: b.Dj,
             children: [
-                (0, a.jsxs)("li", {
+                (0, s.jsxs)("li", {
                     className: b.KN,
                     children: [
-                        (0, a.jsx)("div", {
+                        (0, s.jsx)("div", {
                             className: b.P0,
-                            children: (0, a.jsx)(j.A, { emojiName: k.Ay.getByName("eyes")?.surrogates }),
+                            children: (0, s.jsx)(j.A, { emojiName: k.Ay.getByName("eyes")?.surrogates, alt: "" }),
                         }),
-                        (0, a.jsx)(o.E, {
+                        (0, s.jsx)(o.E, {
                             variant: "text-md/normal",
                             color: "text-muted",
                             children: y.intl.format(y.t["8JzOBn"], { emphasisHook: i }),
                         }),
                     ],
                 }),
-                (0, a.jsxs)("li", {
+                (0, s.jsxs)("li", {
                     className: b.KN,
                     children: [
-                        (0, a.jsx)("div", {
+                        (0, s.jsx)("div", {
                             className: b.P0,
-                            children: (0, a.jsx)(j.A, { emojiName: k.Ay.getByName("star_struck")?.surrogates }),
+                            children: (0, s.jsx)(j.A, {
+                                emojiName: k.Ay.getByName("star_struck")?.surrogates,
+                                alt: "",
+                            }),
                         }),
-                        (0, a.jsx)(o.E, {
+                        (0, s.jsx)(o.E, {
                             variant: "text-md/normal",
                             color: "text-muted",
                             children: y.intl.format(y.t.UcGDkt, { emphasisHook: i }),
                         }),
                     ],
                 }),
-                (0, a.jsxs)("li", {
+                (0, s.jsxs)("li", {
                     className: b.KN,
                     children: [
-                        (0, a.jsx)("div", {
+                        (0, s.jsx)("div", {
                             className: b.P0,
-                            children: (0, a.jsx)(j.A, { emojiName: k.Ay.getByName("books")?.surrogates }),
+                            children: (0, s.jsx)(j.A, { emojiName: k.Ay.getByName("books")?.surrogates, alt: "" }),
                         }),
-                        (0, a.jsx)(o.E, {
+                        (0, s.jsx)(o.E, {
                             variant: "text-md/normal",
                             color: "text-muted",
                             children: y.intl.format(y.t.kALJ5q, { emphasisHook: i }),
@@ -85,23 +88,23 @@ function E(e) {
     });
 }
 function f(e) {
-    let { channel: t, selected: s, onChange: n } = e,
+    let { channel: t, selected: a, onChange: n } = e,
         i = (0, v.Ay)(t),
         r = (0, N.gU)(t) ?? d.N,
         c = l.useCallback(() => {
             n(t);
         }, [t, n]);
-    return (0, a.jsxs)(m.D, {
+    return (0, s.jsxs)(m.D, {
         "aria-label": i ?? void 0,
-        "aria-checked": s,
+        "aria-checked": a,
         className: b.qC,
         onClick: c,
         children: [
-            (0, a.jsxs)("div", {
+            (0, s.jsxs)("div", {
                 className: b.yB,
                 children: [
-                    (0, a.jsx)(r, { className: b.p, size: "xs", color: "currentColor" }),
-                    (0, a.jsx)(o.E, {
+                    (0, s.jsx)(r, { className: b.p, size: "xs", color: "currentColor" }),
+                    (0, s.jsx)(o.E, {
                         className: b.HA,
                         variant: "text-md/medium",
                         color: "text-default",
@@ -110,12 +113,12 @@ function f(e) {
                     }),
                 ],
             }),
-            (0, a.jsx)("div", { className: b.Mv, children: (0, a.jsx)(x.P, { checked: s }) }),
+            (0, s.jsx)("div", { className: b.Mv, children: (0, s.jsx)(x.P, { checked: a }) }),
         ],
     });
 }
 function A(e) {
-    let { transitionState: t, onClose: s, guildId: n, startingChannelId: d } = e,
+    let { transitionState: t, onClose: a, guildId: n, startingChannelId: d } = e,
         m = (0, c.yK)([p.Ay], () => {
             let e = p.Ay.getChannels(n);
             return (e[p.I6] ?? [])
@@ -142,36 +145,36 @@ function A(e) {
         K = l.useCallback(() => {
             N.forEach((e) => {
                 let t = (0, C.es)(e, e.accessPermissions, !0);
-                (0, u.R$)(e.id, [t]), s();
+                (0, u.R$)(e.id, [t]), a();
             });
-        }, [N, s]),
+        }, [N, a]),
         M = l.useMemo(
             () => [
-                { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: s },
+                { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: a },
                 { variant: "primary", text: y.intl.string(y.t.PggHmu), onClick: K, disabled: 0 === N.length },
             ],
-            [K, s, N.length],
+            [K, a, N.length],
         );
     return 0 === x
-        ? (0, a.jsx)(E, { handleReviewPermissions: P, onClose: s, transitionState: t })
-        : (0, a.jsxs)(r.Modal, {
+        ? (0, s.jsx)(E, { handleReviewPermissions: P, onClose: a, transitionState: t })
+        : (0, s.jsxs)(r.Modal, {
               title: y.intl.string(y.t.y77PiT),
               subtitle: y.intl.string(y.t.ZSzBe5),
               actions: M,
-              onClose: s,
+              onClose: a,
               transitionState: t,
-              input: (0, a.jsxs)("div", {
+              input: (0, s.jsxs)("div", {
                   className: b.TY,
                   children: [
-                      (0, a.jsx)(o.E, {
+                      (0, s.jsx)(o.E, {
                           className: b.ko,
                           variant: "text-xs/semibold",
                           color: "text-muted",
                           children: y.intl.format(y.t.rrYCq2, { count: m.length }),
                       }),
-                      (0, a.jsx)("div", {
+                      (0, s.jsx)("div", {
                           className: b.L7,
-                          children: (0, a.jsx)(h.S, {
+                          children: (0, s.jsx)(h.S, {
                               onChange: B,
                               checked: A,
                               label: y.intl.string(y.t.l4rqaz),
@@ -181,25 +184,25 @@ function A(e) {
                   ],
               }),
               children: [
-                  (0, a.jsx)("div", {
+                  (0, s.jsx)("div", {
                       className: b.XK,
-                      children: m.map((e) => (0, a.jsx)(f, { channel: e, selected: N.includes(e), onChange: S }, e.id)),
+                      children: m.map((e) => (0, s.jsx)(f, { channel: e, selected: N.includes(e), onChange: S }, e.id)),
                   }),
-                  (0, a.jsx)("div", {
+                  (0, s.jsx)("div", {
                       className: b.PE,
-                      children: (0, a.jsx)(o.E, {
+                      children: (0, s.jsx)(o.E, {
                           variant: "text-xs/normal",
                           color: "text-muted",
                           children: y.intl.format(y.t["OP/pKr"], {
                               emphasisHook: (e) =>
-                                  (0, a.jsx)(o.E, {
+                                  (0, s.jsx)(o.E, {
                                       tag: "span",
                                       variant: "text-xs/medium",
                                       color: "interactive-text-active",
                                       children: e,
                                   }),
                               brandHook: (e) =>
-                                  (0, a.jsx)(o.E, {
+                                  (0, s.jsx)(o.E, {
                                       tag: "span",
                                       variant: "text-xs/normal",
                                       color: "text-brand",

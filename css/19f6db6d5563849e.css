@@ -98,3 +98,8 @@
     -o-object-fit: cover;
     object-fit: cover
 }
+
+.privacyPolicy_c08b38 a {
+    color: var(--text-default);
+    text-decoration: underline
+}

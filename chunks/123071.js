@@ -39,7 +39,7 @@ var i = n(627968),
     $ = n(652215),
     q = n(375708),
     F = n(576002);
-function U(e) {
+function M(e) {
     let { guildId: t, onComplete: n, isLastStep: l, isSubmitting: r = !1, disableTracking: a } = e,
         d = s.useRef(!1),
         { onboardingConnections: u, isLoading: m } = (0, o.cf)([C.A], () => ({
@@ -184,8 +184,8 @@ function U(e) {
               }),
           });
 }
-var B = n(201991),
-    M = n(702841),
+var U = n(201991),
+    B = n(702841),
     K = n(990078),
     W = n(364522),
     X = n(548411),
@@ -214,7 +214,7 @@ function ei(e) {
             gotoNextPrompt: x,
             completeOnboarding: g,
         } = e,
-        h = (0, M.yK)([C.A], () => C.A.getOnboardingResponsesForPrompt(n.id, a.id)),
+        h = (0, B.yK)([C.A], () => C.A.getOnboardingResponsesForPrompt(n.id, a.id)),
         p = 0 === h.length && a?.required,
         v = a?.options.filter((e) => h.includes(e.id)),
         A = (0, D.a)(v),
@@ -357,7 +357,7 @@ function es(e) {
             gotoNextPrompt: x,
             completeOnboarding: g,
         } = e,
-        h = (0, M.yK)([C.A], () => C.A.getOnboardingResponsesForPrompt(n.id, a.id)),
+        h = (0, B.yK)([C.A], () => C.A.getOnboardingResponsesForPrompt(n.id, a.id)),
         p = 0 === h.length && a?.required,
         v = a?.options.filter((e) => h.includes(e.id)),
         A = (0, D.a)(v),
@@ -491,8 +491,8 @@ function el(e) {
             disableTracking: c,
         } = e,
         [u, m] = s.useState(!1),
-        x = (0, M.bG)([p.A], () => p.A.getRulesPrompt(t.id)),
-        g = (0, M.bG)([C.A], () => C.A.getConnections(t.id)),
+        x = (0, B.bG)([p.A], () => p.A.getRulesPrompt(t.id)),
+        g = (0, B.bG)([C.A], () => C.A.getConnections(t.id)),
         h = s.useCallback(() => {
             m(!0), a();
         }, [a]);
@@ -593,10 +593,10 @@ function eo(e) {
             previousPromptIndex: o,
         } = e,
         d = s.useRef(null),
-        u = (0, M.bG)([p.A], () => p.A.getRulesPrompt(t.id)),
+        u = (0, B.bG)([p.A], () => p.A.getRulesPrompt(t.id)),
         [m, x] = s.useState(u?.response ?? !1),
         [g, h] = s.useState(!1),
-        v = (0, M.bG)([p.A], () => p.A.get(t.id)),
+        v = (0, B.bG)([p.A], () => p.A.get(t.id)),
         A = s.useRef(null),
         N = s.useRef(null),
         j = s.useCallback(async () => {
@@ -763,14 +763,14 @@ function ec(e) {
             },
             [w],
         ),
-        M = (0, o.bG)([O.Ay], () => O.Ay.getCurrentOnboardingStep(t)),
+        B = (0, o.bG)([O.Ay], () => O.Ay.getCurrentOnboardingStep(t)),
         [K, W] = s.useState(null != w ? null : "cover"),
         [X, z] = s.useState(!1),
         J = s.useCallback(
             (e) => {
-                W(M), b.A.setUserOnboardingStep(t, e);
+                W(B), b.A.setUserOnboardingStep(t, e);
             },
-            [t, M],
+            [t, B],
         ),
         Z = (0, o.bG)([A.A], () => A.A.isFullServerPreview(t)),
         Q = (0, o.bG)([O.Ay], () => O.Ay.getOnboardingStatus(t)),
@@ -783,7 +783,7 @@ function ec(e) {
         (0, v.L)(t);
     }, [t]);
     let et = (0, d.p)(
-            M,
+            B,
             { config: a.config.default, from: { scale: 0.8, opacity: 0 }, enter: { scale: 1, opacity: 1 } },
             "cover" !== K && null !== K ? "animate-never" : "respect-motion-settings",
         ),
@@ -824,16 +824,16 @@ function ec(e) {
                                   {
                                       style: e,
                                       children: (() => {
-                                          switch (M) {
+                                          switch (B) {
                                               case "cover":
-                                                  return (0, i.jsx)(B.Ay, {
+                                                  return (0, i.jsx)(U.Ay, {
                                                       guild: R,
                                                       onboardingStatus: O.$o.READY,
                                                       onStart: ee,
                                                       disableTracking: Z,
                                                   });
                                               case "connections":
-                                                  return (0, i.jsx)(U, {
+                                                  return (0, i.jsx)(M, {
                                                       guildId: t,
                                                       isLastStep: 0 === P.length && !(0, D.L1)(R, y),
                                                       isSubmitting: X,
@@ -866,7 +866,7 @@ function ec(e) {
                                                   return (0, i.jsx)(el, {
                                                       guild: R,
                                                       prompts: P,
-                                                      step: M,
+                                                      step: B,
                                                       selectOption: T,
                                                       completeOnboarding: L,
                                                       setCurrentStep: J,
@@ -878,12 +878,13 @@ function ec(e) {
                                   l,
                               );
                           }),
-                          "cover" === M &&
+                          "cover" === B &&
                               (0, i.jsx)("div", {
                                   className: ed.m6,
                                   children: (0, i.jsx)(c.D, {
                                       variant: "heading-sm/normal",
                                       color: "text-default",
+                                      className: ed.hM,
                                       children: q.intl.format(q.t.kI6UoD, { privacyLink: $.X7G.PRIVACY }),
                                   }),
                               }),

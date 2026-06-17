@@ -72,7 +72,7 @@ function j(t) {
                 className: x.nI,
                 children: (0, i.jsx)(A.F, { items: [o], renderItem: c, getItemKey: (t) => t.adminTitle }),
             }),
-            (0, i.jsx)(u.E, { variant: "text-lg/bold", className: x.wV, children: "\u201C" }),
+            (0, i.jsx)(u.E, { variant: "text-lg/bold", className: x.wV, "aria-hidden": !0, children: "\u201C" }),
             (0, i.jsxs)("div", {
                 className: x.Jv,
                 children: [

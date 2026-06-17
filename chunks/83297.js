@@ -20,26 +20,26 @@ var n = s(627968),
     v = s(5180),
     C = s(922016),
     A = s(499373),
-    y = s(789645),
-    I = s(976860),
+    I = s(789645),
+    y = s(976860),
     k = s(313281),
     M = s(652215),
     E = s(335993),
-    L = s(375708);
-let R = i.lazy(() => s.e("60497").then(s.bind(s, 908424)));
-function S(e) {
+    S = s(375708);
+let L = i.lazy(() => s.e("60497").then(s.bind(s, 908424)));
+function R(e) {
     let { className: t } = e,
         { hasAccess: s } = (0, k.TW)("FavoriteGuildHeaderActionButton"),
         a = i.useRef(null),
-        r = s ? L.intl.string(E.default.G9fGlP) : L.intl.string(L.t.ojM1xJ),
+        r = s ? S.intl.string(E.default.G9fGlP) : S.intl.string(S.t.ojM1xJ),
         l = i.useCallback(() => {
-            (0, I.pX)(M.BVt.ME);
+            (0, y.pX)(M.BVt.ME);
         }, []),
         o = i.useCallback((e) => {
             let { closePopout: t } = e;
             return (0, n.jsx)(i.Suspense, {
                 fallback: null,
-                children: (0, n.jsx)(R, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
+                children: (0, n.jsx)(L, { navId: "favorite-guild-header-add-context", onClose: t, onSelect: t }),
             });
         }, []);
     return s
@@ -74,7 +74,7 @@ function S(e) {
                   className: t,
                   "aria-label": r,
                   onClick: l,
-                  children: (0, n.jsx)(y.P, { color: "currentColor", size: "refresh_sm" }),
+                  children: (0, n.jsx)(I.P, { color: "currentColor", size: "refresh_sm" }),
               }),
           });
 }
@@ -127,73 +127,73 @@ function P(e) {
     });
 }
 var T = s(606096),
-    G = s(997146),
-    w = s(935063),
+    w = s(997146),
+    G = s(935063),
     U = s(143838),
     _ = s(334738),
-    Y = s(222823),
-    K = s(932883),
-    W = s(599486),
-    $ = s(394953),
-    H = s(849077);
+    Y = s(568548),
+    H = s(932883),
+    K = s(599486),
+    W = s(394953),
+    $ = s(849077);
 function q() {
-    let e = (0, K.op)(),
-        t = (0, $.i3)(),
-        { selectedFilter: s, setSelectedFilter: i } = (0, W.A)();
+    let e = (0, H.op)(),
+        t = (0, W.i3)(),
+        { selectedFilter: s, setSelectedFilter: i } = (0, K.A)();
     if (!t) return null;
-    let a = s === H.Io.BOOKMARKS,
-        r = a ? L.intl.string(L.t.HcoRu0) : L.intl.string(L.t["2pAkDA"]);
+    let a = s === $.Io.BOOKMARKS,
+        r = a ? S.intl.string(S.t.HcoRu0) : S.intl.string(S.t["2pAkDA"]);
     return (0, n.jsx)(d.m, {
         position: "bottom",
         text: r,
         asContainer: !0,
         children: (0, n.jsx)(P, {
-            icon: a ? T.c : G.c,
+            icon: a ? T.c : w.c,
             pressed: a,
             variant: "tertiary",
             size: "sm",
             "aria-label": r,
             onClick: () => {
-                let t = a ? H.Io.ALL : H.Io.BOOKMARKS;
-                i(t), (0, K.Ut)({ section: t, enabled: !0, viewId: e });
+                let t = a ? $.Io.ALL : $.Io.BOOKMARKS;
+                i(t), (0, H.Ut)({ section: t, enabled: !0, viewId: e });
             },
         }),
     });
 }
 function Q() {
-    let e = (0, K.op)(),
-        { selectedFilter: t, setSelectedFilter: s } = (0, W.A)(),
-        i = t === H.Io.MENTIONS,
-        a = i ? L.intl.string(L.t.HcoRu0) : L.intl.string(L.t.jbV6MM);
+    let e = (0, H.op)(),
+        { selectedFilter: t, setSelectedFilter: s } = (0, K.A)(),
+        i = t === $.Io.MENTIONS,
+        a = i ? S.intl.string(S.t.HcoRu0) : S.intl.string(S.t.jbV6MM);
     return (0, n.jsx)(d.m, {
         position: "bottom",
         text: a,
         asContainer: !0,
         children: (0, n.jsx)(P, {
-            icon: w.X,
+            icon: G.X,
             pressed: i,
             variant: "tertiary",
             size: "sm",
             "aria-label": a,
             onClick: () => {
-                let t = i ? H.Io.ALL : H.Io.MENTIONS;
-                s(t), (0, K.Ut)({ section: t, enabled: !0, viewId: e });
+                let t = i ? $.Io.ALL : $.Io.MENTIONS;
+                s(t), (0, H.Ut)({ section: t, enabled: !0, viewId: e });
             },
         }),
     });
 }
 function X() {
-    let { unreadChannelIds: e } = (0, $.U4)();
+    let { unreadChannelIds: e } = (0, W.U4)();
     return (0, n.jsx)(d.m, {
         position: "bottom",
-        text: L.intl.string(L.t["8k+6QY"]),
+        text: S.intl.string(S.t["8k+6QY"]),
         asContainer: !0,
         children: (0, n.jsx)(P, {
             icon: U.i,
             pressed: !1,
             variant: "tertiary",
             size: "sm",
-            "aria-label": L.intl.string(L.t["8k+6QY"]),
+            "aria-label": S.intl.string(S.t["8k+6QY"]),
             onClick: () => {
                 let t = e
                     .map((e) => ({ channelId: e, messageId: Y.Ay.lastMessageId(e) }))
@@ -239,7 +239,7 @@ function el(e) {
             children:
                 c &&
                 (0, n.jsx)(d.m, {
-                    text: L.intl.string(L.t.O8lDI2),
+                    text: S.intl.string(S.t.O8lDI2),
                     position: "right",
                     children: (0, n.jsxs)("div", {
                         className: ea.Pl,
@@ -254,7 +254,7 @@ function el(e) {
                             (0, n.jsx)(x.E, {
                                 variant: "text-xs/normal",
                                 color: "none",
-                                children: L.intl.string(L.t["B/vjCu"]),
+                                children: S.intl.string(S.t["B/vjCu"]),
                             }),
                         ],
                     }),
@@ -318,20 +318,22 @@ function eu(e) {
                 ? (0, n.jsx)("div", { className: ea.Bd, children: b })
                 : (0, n.jsx)(f.D, {
                       className: ea.Vm,
-                      "aria-label": L.intl.formatToPlainString(L.t.xMXpl3, { guildName: m }),
+                      "aria-label": S.intl.formatToPlainString(S.t.xMXpl3, { guildName: m }),
                       "aria-controls": o,
                       "aria-expanded": u,
                       onContextMenu: l,
                       onClick: r,
                       children: b,
                   }),
-            a.id === ei.Vc && (0, n.jsx)(S, { className: ea.sq }),
+            a.id === ei.Vc && (0, n.jsx)(R, { className: ea.sq }),
             !ed.includes(a.id) &&
                 (0, n.jsx)(d.m, {
-                    text: L.intl.string(L.t.Sd8Ixw),
+                    text: S.intl.string(S.t.Sd8Ixw),
                     position: "bottom",
                     asContainer: !0,
+                    ariaHidden: !0,
                     children: (0, n.jsx)(f.D, {
+                        "aria-label": S.intl.string(S.t.Sd8Ixw),
                         className: ea.ak,
                         onClick: () => {
                             g();
@@ -367,12 +369,12 @@ let ex = i.memo(function (e) {
             communityInfoVisible: C,
             hasSubheader: A,
         } = e,
-        y = f.features.has(M.GuildFeatures.ANIMATED_BANNER),
-        I = (0, D.A)(f),
-        k = !I && (0, es.A)(f),
-        E = !I && C,
-        L = (0, et.VI)(p) && y && !m,
-        [R, S] = i.useState(!1),
+        I = f.features.has(M.GuildFeatures.ANIMATED_BANNER),
+        y = (0, D.A)(f),
+        k = !y && (0, es.A)(f),
+        E = !y && C,
+        S = (0, et.VI)(p) && I && !m,
+        [L, R] = i.useState(!1),
         B = i.useRef(!1),
         F = i.useRef(null),
         O = t ?? F,
@@ -380,17 +382,17 @@ let ex = i.memo(function (e) {
         z = Z.kt.getSetting(),
         P = (0, c.bG)([J.A], () => J.A.theme);
     i.useEffect(() => {
-        if (L && s && !B.current && z)
+        if (S && s && !B.current && z)
             return (
-                S(!0),
+                R(!0),
                 (V.current = setTimeout(() => {
-                    S(!1);
+                    R(!1);
                 }, 5e3)),
                 () => {
                     clearTimeout(V.current);
                 }
             );
-    }, [L, s, z]),
+    }, [S, s, z]),
         i.useEffect(() => {
             B.current = s;
         }, [s]);
@@ -435,17 +437,17 @@ let ex = i.memo(function (e) {
                                         }),
                                 ],
                             }),
-                            null != p ? (0, n.jsx)(er, { guild: f, controller: a, guildBanner: p, animate: R }) : null,
+                            null != p ? (0, n.jsx)(er, { guild: f, controller: a, guildBanner: p, animate: L }) : null,
                             (0, n.jsx)(em, { controller: a }),
                         ],
                     }),
-                    L && T()
+                    S && T()
                         ? (0, n.jsx)("div", {
                               className: ea.rt,
                               onMouseEnter: () => {
-                                  S(!0), clearTimeout(V.current);
+                                  R(!0), clearTimeout(V.current);
                               },
-                              onMouseLeave: () => S(!1),
+                              onMouseLeave: () => R(!1),
                               style: { height: b },
                           })
                         : null,

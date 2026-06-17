@@ -176,6 +176,54 @@
     margin-inline-end: 0
 }
 
+@media (max-width:780px) {
+    .sidebarRegion__23e6b {
+        flex-basis: 30%;
+        flex-shrink: 1;
+        min-width: 0
+    }
+
+    .contentRegion__23e6b {
+        flex-basis: 70%;
+        flex-shrink: 1;
+        min-width: 0
+    }
+
+    .sidebar__23e6b,
+    .sidebarRegionScroller__23e6b {
+        max-width: 100%;
+        width: 100%
+    }
+
+    .contentColumn__23e6b,
+    .contentColumnScrollable__23e6b,
+    .customColumn__23e6b {
+        flex-basis: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+        max-width: 100% !important;
+        min-width: unset
+    }
+
+    .contentRegionScroller__23e6b,
+    .customScroller__23e6b {
+        overflow: auto !important
+    }
+
+    .customContainer__23e6b {
+        max-width: 100%;
+        position: static;
+        width: 100%
+    }
+
+    .toolsContainer__23e6b {
+        inset-inline-end: 0;
+        margin-inline-end: 0 !important;
+        position: absolute;
+        width: 36px
+    }
+}
+
 .theme-light .customContainer__23e6b:before {
     border-bottom: 1px solid var(--opacity-black-8);
     box-shadow: 0 1px 4px var(--opacity-black-8)

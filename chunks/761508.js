@@ -14,16 +14,26 @@ var i = n(627968),
 let f = { side: h.Cf, top: h.Mn, "top-pill": h.vO },
     p = r.forwardRef(function (e, t) {
         let { className: n, onClick: r, children: s, "aria-expanded": o, "aria-controls": l } = e;
-        return (0, i.jsx)(c.D, {
-            innerRef: t,
-            tabIndex: null == r ? -1 : 0,
-            className: a()(h.wx, n),
-            onClick: r,
-            "aria-expanded": o,
-            "aria-controls": l,
-            focusProps: { offset: { top: -6 } },
-            children: (0, i.jsx)(d.E, { variant: "eyebrow", color: "none", className: h.TK, children: s }),
-        });
+        return null == r
+            ? (0, i.jsx)("div", {
+                  className: a()(h.wx, n),
+                  children: (0, i.jsx)(d.E, {
+                      variant: "eyebrow",
+                      color: "none",
+                      className: h.TK,
+                      ref: t,
+                      children: s,
+                  }),
+              })
+            : (0, i.jsx)(c.D, {
+                  innerRef: t,
+                  className: a()(h.wx, n),
+                  onClick: r,
+                  "aria-expanded": o,
+                  "aria-controls": l,
+                  focusProps: { offset: { top: -6 } },
+                  children: (0, i.jsx)(d.E, { variant: "eyebrow", color: "none", className: h.TK, children: s }),
+              });
     });
 function E(e) {
     let { style: t } = e;
