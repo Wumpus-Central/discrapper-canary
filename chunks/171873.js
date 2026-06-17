@@ -2343,13 +2343,17 @@ let sR = d.memo(function (e) {
                                         v.R9,
                                         {
                                             newValue: { tilePosition: t, pageSection: "top 4", categoryPosition: 0 },
-                                            children: (0, c.jsx)(eF.A, {
-                                                skuId: e.skuId,
-                                                prioritizedCurrency:
-                                                    a === R.G2.ORBS ? ew.Hi.ORBS : r ? ew.Hi.FIAT : void 0,
-                                            }),
+                                            children: (0, c.jsx)(
+                                                eF.A,
+                                                {
+                                                    skuId: e?.skuId,
+                                                    prioritizedCurrency:
+                                                        a === R.G2.ORBS ? ew.Hi.ORBS : r ? ew.Hi.FIAT : void 0,
+                                                },
+                                                e.skuId,
+                                            ),
                                         },
-                                        e.skuId,
+                                        e?.skuId,
                                     );
                           }),
                       ],
