@@ -209,9 +209,8 @@
 
 .tag__25a50 {
     align-items: center;
-    background: var(--background-mod-subtle);
-    border: 1px solid var(--border-strong);
-    border-radius: 58px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
     display: flex;
     flex-direction: row;
     gap: 4px;
@@ -219,58 +218,42 @@
     padding-inline: 6px 8px
 }
 
-.custom-user-profile-theme.theme-light .tag__25a50 {
-    background: var(--opacity-white-16)
-}
-
 .button__25a50 {
     color: var(--text-subtle);
+    cursor: pointer;
     transition: background 50ms ease-in, border-style 50ms ease-in, color 50ms ease-in
 }
 
-.button__25a50:hover {
+.button__25a50:not(.disabled__25a50):hover {
     background: var(--background-mod-normal);
     color: var(--text-strong);
     transition: background .15s ease-out, border-style .15s ease-out, color .15s ease-out
 }
 
-.custom-user-profile-theme.theme-light .button__25a50:hover {
+.custom-user-profile-theme.theme-light .button__25a50:not(.disabled__25a50):hover {
     background: var(--opacity-white-32)
 }
 
-.buttonContainer__25a50 {
-    cursor: pointer;
-    position: relative;
-    z-index: 1
+.disabled__25a50 {
+    cursor: default;
+    transition: none
 }
 
-.expandButton__25a50 {
-    padding-block: 3px;
-    padding-inline: 6px 8px
-}
+.collapseButton__25a50,
+.expandButton__25a50 {}
 
 .collapseButton__25a50 {
     box-sizing: border-box;
-    display: flex;
     padding: 3px 4px
-}
-
-.addButton__25a50,
-.collapseButton__25a50 {
-    cursor: pointer
 }
 
 .addButton__25a50 {
     background: transparent;
-    border: 1px dashed var(--border-strong)
+    border: 1px dashed var(--border-subtle)
 }
 
 .addButton__25a50:hover {
     border-style: solid
-}
-
-.custom-user-profile-theme.theme-light .addButton__25a50 {
-    background: transparent
 }
 
 .caret__25a50 {
@@ -297,6 +280,25 @@
 .gameTagsMenu__25a50 {
     max-height: 400px;
     overflow-y: auto
+}
+
+.enable-forced-colors .removeButton__25a50 {
+    color: ButtonText
+}
+
+.enable-forced-colors .button__25a50,
+.enable-forced-colors .button__25a50:hover {
+    border-color: ButtonText;
+    color: ButtonText
+}
+
+.enable-forced-colors .button__25a50.disabled__25a50 {
+    border-color: GrayText;
+    color: GrayText
+}
+
+.enable-forced-colors .caret__25a50 {
+    color: ButtonText
 }
 
 .clickable__65fc9 {

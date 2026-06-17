@@ -27,9 +27,9 @@ var c = i(534514),
     O = i(492280),
     C = i(990078),
     R = i(789645),
-    b = i(147925);
+    k = i(147925);
 i(321073);
-var k = i(477782),
+var b = i(477782),
     D = i(980707),
     G = i(922016),
     L = i(761915),
@@ -100,7 +100,7 @@ let X = s.memo(function (e) {
                     r.type === H.RADIO &&
                         s.push(
                             (0, l.jsx)(
-                                k.iD,
+                                b.iD,
                                 {
                                     id: `${a}-none`,
                                     group: a,
@@ -117,7 +117,7 @@ let X = s.memo(function (e) {
                             (r.type === H.RADIO
                                 ? s.push(
                                       (0, l.jsx)(
-                                          k.iD,
+                                          b.iD,
                                           {
                                               id: e,
                                               group: a,
@@ -130,18 +130,18 @@ let X = s.memo(function (e) {
                                   )
                                 : s.push(
                                       (0, l.jsx)(
-                                          k.sL,
+                                          b.sL,
                                           { id: e, label: n.getText(), checked: t.includes(e), action: () => i(e, !1) },
                                           e,
                                       ),
                                   ));
                     }),
                     s);
-            return (0, l.jsx)(k.rX, { label: r.getLabel(), children: c }, a);
+            return (0, l.jsx)(b.rX, { label: r.getLabel(), children: c }, a);
         }),
     });
 });
-function z(e) {
+function K(e) {
     let { tags: t, widgetType: i, applicationId: n, ref: a } = e,
         r = (0, s.useRef)(null),
         { trackUserProfileEditAction: c } = (0, N.NJ)(),
@@ -209,7 +209,7 @@ function z(e) {
             }),
     });
 }
-function K(e) {
+function z(e) {
     let { tags: t, isCurrentUser: i, widgetType: n, applicationId: a, className: c, disableInteraction: u = !1 } = e,
         o = t?.filter((e) => null != W(e)) ?? [],
         d = o.length > 0,
@@ -277,7 +277,7 @@ function K(e) {
                             }),
                     ],
                 }),
-            g && (0, l.jsx)(z, { tags: t, widgetType: n, applicationId: a, ref: p }),
+            g && (0, l.jsx)(K, { tags: t, widgetType: n, applicationId: a, ref: p }),
         ],
     });
 }
@@ -315,7 +315,7 @@ function q(e) {
     return (0, l.jsx)(d.E, { variant: "text-xxs/medium", color: "none", children: `+${t}` });
 }
 function Q() {
-    return (0, l.jsx)(b.A, { direction: b.A.Directions.LEFT, width: 12, height: 12, className: V.OW });
+    return (0, l.jsx)(k.A, { direction: k.A.Directions.LEFT, width: 12, height: 12, className: V.OW });
 }
 function J(e) {
     let {
@@ -324,19 +324,23 @@ function J(e) {
             onExpandTags: n,
             onCollapseTags: s,
             disableInteraction: a,
-            buttonRef: r,
+            buttonRef: c,
         } = e,
-        c = t ? F.intl.string(F.t.z9VPrQ) : F.intl.string(F.t.mriLXL),
-        o = t ? F.intl.string(F.t.z9VPrQ) : F.intl.formatToPlainString(F.t.F6iMs4, { count: i });
+        o = t ? F.intl.string(F.t.z9VPrQ) : F.intl.string(F.t.mriLXL),
+        d = t ? F.intl.string(F.t.z9VPrQ) : F.intl.formatToPlainString(F.t.F6iMs4, { count: i });
     return a
-        ? (0, l.jsx)("div", { className: V.X1, ref: r, children: (0, l.jsx)(q, { numberOfOverflowingTags: i }) })
+        ? (0, l.jsx)("div", {
+              className: r()(V.X1, V.r9),
+              ref: c,
+              children: (0, l.jsx)(q, { numberOfOverflowingTags: i }),
+          })
         : (0, l.jsx)(C.m, {
-              text: c,
+              text: o,
               ariaHidden: t,
               children: (0, l.jsx)(u.D, {
-                  innerRef: r,
+                  innerRef: c,
                   onClick: t ? s : n,
-                  "aria-label": o,
+                  "aria-label": d,
                   className: t ? V.cS : V.X1,
                   children: t ? (0, l.jsx)(Q, {}) : (0, l.jsx)(q, { numberOfOverflowingTags: i }),
               }),
@@ -440,14 +444,14 @@ function er(e) {
         R = s.useCallback(() => {
             A({ action: "PRESS_ADD_COMMENTARY", widgetEdited: c }), h("editing");
         }, [c, A]),
-        b = s.useCallback(() => {
+        k = s.useCallback(() => {
             let e = j.trim(),
                 i = e !== (t ?? "").trim();
             (0, T.oc)(c, d, "" !== e ? e : void 0),
                 h("completed"),
                 i && A({ action: "COMMENTARY_EDITED", widgetEdited: c, gameId: d });
         }, [c, d, j, t, A]),
-        k = s.useCallback((e) => {
+        b = s.useCallback((e) => {
             v(e);
         }, []);
     return (
@@ -466,12 +470,12 @@ function er(e) {
                           id: g,
                           value: j,
                           placeholder: O,
-                          onChange: k,
-                          onBlur: b,
+                          onChange: b,
+                          onBlur: k,
                           rows: 3,
                           autoFocus: "editing" === E,
                           onKeyDown: (e) => {
-                              "Enter" !== e.key || e.shiftKey || (e.preventDefault(), b());
+                              "Enter" !== e.key || e.shiftKey || (e.preventDefault(), k());
                           },
                           maxLength: 200,
                       }),
@@ -516,10 +520,10 @@ function ec(e) {
         { applicationId: p, comment: I, tags: A } = a,
         { coverImageUrl: j, gameName: N, isLoading: C } = (0, E.A)(p),
         R = { variant: "heading-sm/medium", color: "text-default" },
-        b = h.default.getCurrentUser(),
-        k = b?.id === t.id,
+        k = h.default.getCurrentUser(),
+        b = k?.id === t.id,
         D = 1 === (0, T.cv)(u),
-        G = !o && k,
+        G = !o && b,
         L = G && (0, T.y9)(u),
         P = G && !D,
         { registerDragHandleRef: w } = (0, _.r)();
@@ -562,9 +566,9 @@ function ec(e) {
                                       applicationId: p,
                                   })
                                 : (0, l.jsx)(ea, { text: I, user: t, guildId: i, channelId: n }),
-                            (0, l.jsx)(K, {
+                            (0, l.jsx)(z, {
                                 tags: A,
-                                isCurrentUser: k,
+                                isCurrentUser: b,
                                 widgetType: u,
                                 applicationId: p,
                                 disableInteraction: o,
@@ -573,7 +577,7 @@ function ec(e) {
                         ],
                     }),
                     !o &&
-                        k &&
+                        b &&
                         (0, l.jsx)($.A, {
                             game: a,
                             widgetType: u,

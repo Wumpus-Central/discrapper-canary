@@ -1,7 +1,7 @@
 .role_af3987 {
     align-items: center;
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-round);
+    border-radius: var(--radius-sm);
     box-sizing: border-box;
     display: flex;
     min-height: 24px;
@@ -30,7 +30,7 @@
 }
 
 .roleTag_af3987 {
-    border-radius: var(--radius-round);
+    border-radius: var(--radius-sm);
     max-width: 100%;
     outline: none
 }
@@ -110,7 +110,7 @@
 
 .addButton_af3987 {
     align-items: center;
-    border-radius: var(--radius-round);
+    border-radius: var(--radius-sm);
     box-sizing: border-box;
     color: var(--interactive-text-default);
     cursor: pointer;
@@ -132,14 +132,14 @@
 }
 
 .enable-forced-colors .role_af3987 {
-    border: 1px solid CanvasText !important
+    border: 1px solid CanvasText
 }
 
 .enable-forced-colors .removeButton_af3987 {
     background-color: ButtonFace;
     border: 1px solid CanvasText;
     border-inline-start: none;
-    border-radius: 0 var(--radius-round) var(--radius-round) 0;
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
     color: ButtonText;
     margin-inline-start: 4px
 }
@@ -148,11 +148,16 @@
     color: ButtonText
 }
 
-.enable-forced-colors .addButton_af3987,
-.enable-forced-colors .addButton_af3987:hover,
 .enable-forced-colors .pillButton_af3987,
 .enable-forced-colors .pillButton_af3987:hover {
     background-color: ButtonFace;
-    border: 1px solid CanvasText;
+    border: 1px solid ButtonText;
+    color: ButtonText
+}
+
+.enable-forced-colors .addButton_af3987,
+.enable-forced-colors .addButton_af3987:hover {
+    background-color: ButtonFace;
+    border: 1px solid ButtonText;
     color: ButtonText
 }
