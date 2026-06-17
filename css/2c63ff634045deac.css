@@ -114,9 +114,10 @@
 
 .tabListScroller__37bfc {
     flex: 0 1 auto;
-    margin: -4px -4px -14px;
+    margin-block: -4px -14px;
+    margin-inline: calc(-4px + var(--custom-modal-v2-gutter)) -4px;
     padding-block: 4px;
-    padding-inline: calc(4px + var(--custom-modal-v2-gutter)) calc(4px + var(--custom-modal-v2-tabpanel-scrollbar-offset));
+    padding-inline: 4px calc(4px + var(--custom-modal-v2-tabpanel-scrollbar-offset));
     position: relative;
     z-index: 1
 }

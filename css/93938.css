@@ -301,13 +301,28 @@
     color: var(--text-subtle);
     list-style-position: inside;
     list-style-type: disc;
-    margin-bottom: 8px
+    margin-bottom: 12px
 }
 
+.assetSection__5d321,
 .modalContent__5d321 {
     display: flex;
     flex-direction: column;
-    gap: 8px
+    gap: 12px
+}
+
+.assetSection__5d321 {
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 16px
+}
+
+.assetSection__5d321,
+.subLabel__5d321 {
+    margin-top: 8px
+}
+
+.toolPath__5d321 {
+    font-style: italic
 }
 
 .wrapper_dae93f {

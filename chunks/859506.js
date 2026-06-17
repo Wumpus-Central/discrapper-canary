@@ -174,16 +174,16 @@ function H(e) {
     e.includes("message") ? U(e, t, n) : k(e, t, n);
 }
 async function Y(e, t, n, i, r) {
-    var s;
-    let a,
-        o,
-        u = await w(),
-        c = u?.authorizationStatus === "authorized" || u?.authorizationStatus === "provisional",
-        h = null != u ? c : await B(),
-        f = A.A.disableNotifications && null == r.overrideStreamerMode,
-        p = !C.isPlatformEmbedded || ((0, C.isMac)() && c) || N.Ay.shouldDisplayNotifications(),
-        O = { ...i, action: void 0, ping: void 0, banner: void 0, badge: void 0 };
-    if (((i.banner = await (0, _.N)()), !(!f && h && p))) {
+    var s, a;
+    let o,
+        u,
+        c = await w(),
+        h = c?.authorizationStatus === "authorized" || c?.authorizationStatus === "provisional",
+        f = null != c ? h : await B(),
+        p = A.A.disableNotifications && null == r.overrideStreamerMode,
+        O = !C.isPlatformEmbedded || ((0, C.isMac)() && h) || N.Ay.shouldDisplayNotifications(),
+        M = { ...i, action: void 0, ping: void 0, banner: void 0, badge: void 0 };
+    if (((i.banner = await (0, _.N)()), !(!p && f && O))) {
         null != r.sound &&
             !1 !== r.playSoundIfDisabled &&
             (H(r.sound, r.volume ?? 1, r.soundpack),
@@ -193,49 +193,49 @@ async function Y(e, t, n, i, r) {
     }
     t.includes("\0") && (D.warn("Notification title contains null character, setting to empty string"), (t = "")),
         n.includes("\0") && (D.warn("Notification body contains null character, setting to empty string"), (n = ""));
-    let M = r?.tag ?? null,
-        P = c && u?.sound === !0 && u?.authorizationStatus === "authorized",
-        k = (e, t) => {
+    let P = r?.tag ?? null,
+        k = h && c?.sound === !0 && c?.authorizationStatus === "authorized",
+        U = (e, t) => {
             r.onShown?.(),
                 r.omitViewTracking ||
                     (T.default.track(v.HAw.NOTIFICATION_ACTION, { action: "VIEW", ...t }),
-                    T.default.track(v.HAw.NOTIFICATION_VIEWED, O)),
+                    T.default.track(v.HAw.NOTIFICATION_VIEWED, M)),
                 L && setTimeout(() => e.close(), 5e3);
         };
     if (
-        (null == r.sound || P || (H(r.sound, r.volume ?? 1, r.soundpack), (i.ping = !0)),
+        (null == r.sound || k || (H(r.sound, r.volume ?? 1, r.soundpack), (i.ping = !0)),
         r.isUserAvatar &&
             null != e &&
             (e = await ((s = e),
-            ((o = new Image()).src = s),
-            (o.crossOrigin = "anonymous"),
+            ((u = new Image()).src = s),
+            (u.crossOrigin = "anonymous"),
             new Promise((e) => {
-                (o.onload = () => {
+                (u.onload = () => {
                     var t;
                     let n, i, r, s;
-                    "" !== o.src &&
+                    "" !== u.src &&
                         e(
                             ((i = (n = document.createElement("canvas")).getContext("2d")),
-                            (n.width = r = Math.min(o.width, o.height)),
+                            (n.width = r = Math.min(u.width, u.height)),
                             (n.height = r),
                             null != i &&
                                 ((t = i).beginPath(),
                                 t.arc(r / 2, r / 2, r / 2, 0, 2 * Math.PI),
                                 t.closePath(),
                                 t.clip(),
-                                t.drawImage(o, 0, 0, r, r, 0, 0, r, r),
+                                t.drawImage(u, 0, 0, r, r, 0, 0, r, r),
                                 (i = t)),
                             (s = n.toDataURL()),
                             n.remove(),
                             s),
                         );
                 }),
-                    (o.onerror = () => {
-                        e(o.src);
+                    (u.onerror = () => {
+                        e(u.src);
                     });
             }))),
         R && m.A.taskbarFlash && N.Ay.flashFrame(!0),
-        c)
+        h)
     ) {
         let s = { title: t, body: n };
         if (
@@ -260,43 +260,48 @@ async function Y(e, t, n, i, r) {
                     (s.emoji = r.emoji.map((e) => ({ url: (0, S._O)({ id: e.id, animated: !1, size: 96 }), ...e })));
         }
         try {
-            let e = await N.Ay.invoke("NOTIFICATIONS_SEND_NOTIFICATION", s);
-            V[e] = { options: r, trackingProps: i, clickTrackingProps: O };
-            let t = {
-                close() {
-                    try {
-                        N.Ay.invoke("NOTIFICATIONS_REMOVE_NOTIFICATIONS", [e]);
-                    } catch (e) {
-                        D.warn("Native notification removal failed with error: ", e);
-                    }
-                },
-            };
-            return k(t, i), { notification: t, trackingProps: i };
+            let e =
+                ((a = await N.Ay.invoke("NOTIFICATIONS_SEND_NOTIFICATION", s)),
+                "string" == typeof a ? { identifier: a, delivered: !0 } : a);
+            if (e.delivered) {
+                let t = e.identifier;
+                V[t] = { options: r, trackingProps: i, clickTrackingProps: M };
+                let n = {
+                    close() {
+                        try {
+                            N.Ay.invoke("NOTIFICATIONS_REMOVE_NOTIFICATIONS", [t]);
+                        } catch (e) {
+                            D.warn("Native notification removal failed with error: ", e);
+                        }
+                    },
+                };
+                return U(n, i), { notification: n, trackingProps: i };
+            }
         } catch (e) {
             D.warn("Native notification failed with error: ", e);
         }
     }
-    null != r.sound && c && (H(r.sound, r.volume ?? 1, r.soundpack), (i.ping = !0));
-    let U = { icon: e, body: n, tag: M, silent: !0 };
+    null != r.sound && h && (H(r.sound, r.volume ?? 1, r.soundpack), (i.ping = !0));
+    let G = { icon: e, body: n, tag: P, silent: !0 };
     try {
-        a = new F(t, U);
+        o = new F(t, G);
     } catch (e) {
         return;
     }
-    return (k(a, i),
-    (a.onclick = (e) => {
-        C.isPlatformEmbedded ? N.Ay.focus() : (window.focus(), a.close()),
+    return (U(o, i),
+    (o.onclick = (e) => {
+        C.isPlatformEmbedded ? N.Ay.focus() : (window.focus(), o.close()),
             r.omitClickTracking ||
                 (T.default.track(v.HAw.NOTIFICATION_ACTION, { action: "CLICK", ...i }),
-                T.default.track(v.HAw.NOTIFICATION_CLICKED, O)),
+                T.default.track(v.HAw.NOTIFICATION_CLICKED, M)),
             r.onClick?.("");
     }),
     b)
-        ? { notification: a, trackingProps: i }
+        ? { notification: o, trackingProps: i }
         : {
               notification: {
                   close() {
-                      a?.onclose?.();
+                      o?.onclose?.();
                   },
               },
               trackingProps: i,
