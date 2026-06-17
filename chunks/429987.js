@@ -6944,7 +6944,7 @@ let dX = [
                 values: { expirationDate: u },
                 errors: null != a ? { expirationDate: a } : {},
                 formError: s,
-                onFieldChange: (e) => {
+                onFieldChange: function (e) {
                     l || "" === e || r(!0),
                         (l && "" === e) || !(0, dV.So)(e) ? o(j.intl.string(j.t["9/zZdl"])) : o(null),
                         d(e);
@@ -7299,7 +7299,7 @@ let d2 = S.memo(function (e) {
                                             ? (0, E.jsx)(df.y, { type: df.y.Type.SPINNING_CIRCLE })
                                             : (0, E.jsx)(es.E, {
                                                   variant: "text-sm/medium",
-                                                  children: (() => {
+                                                  children: (function () {
                                                       let { amount: e, currency: t } = r ?? {},
                                                           i = t ?? d,
                                                           n = String(i).toUpperCase(),

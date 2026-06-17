@@ -135,7 +135,7 @@ let O = l.Ay.connectStores([g.A, m.A, f.A], () => {
         firstApplication: e.length > 0 ? f.A.getApplication(e[0].applicationId) : null,
         firstState: t.length > 0 ? t[0] : null,
     };
-})((e) => {
+})(function (e) {
     let { determineOwnVisibility: t = !0, ...n } = e;
     return t
         ? (0, i.jsx)(c.F, {

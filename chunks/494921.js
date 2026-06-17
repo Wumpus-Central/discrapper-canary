@@ -52,7 +52,7 @@ function g(e) {
         return (0, i.jsx)(p, {
             transitionState: u,
             onClose: c,
-            handleLearnMore: () => {
+            handleLearnMore: function () {
                 (0, a.A)(),
                     c(),
                     m.default.track(h.HAw.PREMIUM_PROMOTION_OPENED, {

@@ -12,7 +12,7 @@ var i = n(636537),
     _ = n(378570),
     h = n(95701),
     f = n(734057),
-    p = n(222823),
+    p = n(568548),
     E = n(174459),
     m = n(371794),
     g = n(387755),
@@ -29,10 +29,10 @@ let S = {
                 onBeforeTransition: a,
                 navigateToChannel: o = !0,
             } = e,
-            l = this._getRecipients(t),
-            u = (e) => {
-                n && g.A.call(e.id, r, !0, e.isDM() ? e.getRecipientId() : null);
-            };
+            l = this._getRecipients(t);
+        function u(e) {
+            n && g.A.call(e.id, r, !0, e.isDM() ? e.getRecipientId() : null);
+        }
         if (1 === l.length) {
             let [e] = l,
                 t = this._openCachedDMChannel(e, a, o);

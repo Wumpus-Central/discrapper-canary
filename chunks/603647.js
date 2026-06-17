@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => M });
+n.d(t, { A: () => F });
 var l = n(627968),
     r = n(64700),
     s = n(873263),
@@ -49,9 +49,8 @@ let V = n(843020),
 function L(e) {
     return T.some((t) => e.startsWith(t));
 }
-let R = (e) => ((i = e), e),
-    N = [m.BVt.VERIFY, m.BVt.VERIFY_HUB_EMAIL],
-    w = [m.BVt.GIFT_CARD_REDEEM];
+let R = [m.BVt.VERIFY, m.BVt.VERIFY_HUB_EMAIL],
+    N = [m.BVt.GIFT_CARD_REDEEM];
 function f(e) {
     let { children: t } = e,
         n = (function () {
@@ -61,14 +60,14 @@ function f(e) {
             return ((0, h.A)(() => {}, 300), void 0 !== i)
                 ? i
                 : !n && s
-                  ? (e || t(!0), R("default"))
+                  ? (e || t(!0), (i = "default"), "default")
                   : n
-                    ? R("default")
+                    ? ((i = "default"), "default")
                     : "loading";
         })(),
         a = (0, s.zy)(),
-        d = w.includes(a.pathname),
-        u = N.includes(a.pathname);
+        d = N.includes(a.pathname),
+        u = R.includes(a.pathname);
     if (d) return t;
     switch (n) {
         case "default":
@@ -84,7 +83,7 @@ function f(e) {
             return null;
     }
 }
-class F extends r.Component {
+class w extends r.Component {
     constructor(e) {
         super(e), (this.state = { isMobileWidth: window.innerWidth <= 485 });
     }
@@ -145,4 +144,4 @@ class F extends r.Component {
         return e || a.Fr || a.v1 || t ? this.renderMobile() : this.renderDefault();
     }
 }
-let M = F;
+let F = w;

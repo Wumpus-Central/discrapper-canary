@@ -549,36 +549,36 @@ function el(e) {
     return null;
 }
 var ei = n(723429);
-let er = (e) => {
-        let { billingError: t, onCardInfoChange: n } = e,
-            l = null != t && (null == t.code || el(t) === en.CREDIT_CARD_INFORMATION);
-        return (0, r.jsxs)(s.Fragment, {
-            children: [
-                l
-                    ? (0, r.jsx)("div", {
-                          className: ei.QK,
-                          children: (0, r.jsx)(f.w, { type: "critical", children: M.intl.string(M.t["4vnhKV"]) }),
-                      })
-                    : null,
-                (0, r.jsx)(et, { onCardInfoChange: n, error: t }),
-            ],
-        });
-    },
-    es = (e) => {
-        let { className: t, submitting: n, stripePaymentMethod: l } = e,
-            { card: i } = l ?? {},
-            s = null != i ? P.Ay.getType(i.brand) : P.Ay.Types.UNKNOWN;
-        return (0, r.jsx)("div", {
-            className: t,
-            children: (0, r.jsx)(R.k, {
-                label: M.intl.string(M.t["mmDvV+"]),
-                leading: { type: "image", src: (0, P.Nj)(s) },
-                value: n && null != i ? M.intl.formatToPlainString(M.t.bCynoK, i) : void 0,
-                readOnly: !0,
-                placeholder: M.intl.string(M.t.bWMH78),
-            }),
-        });
-    };
+function er(e) {
+    let { billingError: t, onCardInfoChange: n } = e,
+        l = null != t && (null == t.code || el(t) === en.CREDIT_CARD_INFORMATION);
+    return (0, r.jsxs)(s.Fragment, {
+        children: [
+            l
+                ? (0, r.jsx)("div", {
+                      className: ei.QK,
+                      children: (0, r.jsx)(f.w, { type: "critical", children: M.intl.string(M.t["4vnhKV"]) }),
+                  })
+                : null,
+            (0, r.jsx)(et, { onCardInfoChange: n, error: t }),
+        ],
+    });
+}
+function es(e) {
+    let { className: t, submitting: n, stripePaymentMethod: l } = e,
+        { card: i } = l ?? {},
+        s = null != i ? P.Ay.getType(i.brand) : P.Ay.Types.UNKNOWN;
+    return (0, r.jsx)("div", {
+        className: t,
+        children: (0, r.jsx)(R.k, {
+            label: M.intl.string(M.t["mmDvV+"]),
+            leading: { type: "image", src: (0, P.Nj)(s) },
+            value: n && null != i ? M.intl.formatToPlainString(M.t.bCynoK, i) : void 0,
+            readOnly: !0,
+            placeholder: M.intl.string(M.t.bWMH78),
+        }),
+    });
+}
 var ea = n(964486),
     eo = n(475743),
     eu = n(446044),
@@ -2088,11 +2088,10 @@ function tJ(e) {
                                     : null != C.A.getClient()
                                       ? e()
                                       : setTimeout(l, 1e3);
-                            },
-                            i = () => {
-                                g.h.unsubscribe("BRAINTREE_CREATE_CLIENT_SUCCESS", i), setTimeout(l, 0);
                             };
-                        g.h.subscribe("BRAINTREE_CREATE_CLIENT_SUCCESS", i);
+                        g.h.subscribe("BRAINTREE_CREATE_CLIENT_SUCCESS", function e() {
+                            g.h.unsubscribe("BRAINTREE_CREATE_CLIENT_SUCCESS", e), setTimeout(l, 0);
+                        });
                     })
                         .then(() => {
                             v(), y();

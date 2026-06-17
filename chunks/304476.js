@@ -574,7 +574,7 @@ var eX = n(842241),
     e0 = n(993077),
     e1 = n(235986),
     e2 = n(592743);
-function e3(e) {
+function e8(e) {
     let { text: t, buttonCta: i, onClick: l } = e;
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -611,9 +611,9 @@ function e3(e) {
         ],
     });
 }
-function e8(e) {
+function e3(e) {
     let { text: t, buttonCta: n, theme: i = y.NJ8.DARK, onClick: l } = e;
-    return (0, a.jsx)(P.Ay, { theme: i, children: (0, a.jsx)(e3, { text: t, buttonCta: n, onClick: l }) });
+    return (0, a.jsx)(P.Ay, { theme: i, children: (0, a.jsx)(e8, { text: t, buttonCta: n, onClick: l }) });
 }
 var e7 = n(765671),
     e4 = n(9994),
@@ -1018,8 +1018,8 @@ function tF(e) {
 function tW(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return t?.state === y.elq.BANNED
-        ? (0, a.jsx)(e3, { text: H.intl.string(H.t["5AkWAd"]), buttonCta: H.intl.string(H.t["8osdkn"]), onClick: n })
-        : (0, a.jsx)(e3, { text: H.intl.string(H.t["usP+Mb"]), buttonCta: H.intl.string(H.t["8osdkn"]), onClick: n });
+        ? (0, a.jsx)(e8, { text: H.intl.string(H.t["5AkWAd"]), buttonCta: H.intl.string(H.t["8osdkn"]), onClick: n })
+        : (0, a.jsx)(e8, { text: H.intl.string(H.t["usP+Mb"]), buttonCta: H.intl.string(H.t["8osdkn"]), onClick: n });
 }
 function tz(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, sectionClassName: l, inviteCardClassName: s = tD.qF } = e,
@@ -1237,8 +1237,8 @@ let t1 = (e) => {
     });
 };
 var t2 = n(463347),
-    t3 = n(189213),
-    t8 = n(192308),
+    t8 = n(189213),
+    t3 = n(192308),
     t7 = n(347704),
     t4 = n(803306),
     t6 = n(17372),
@@ -1286,7 +1286,7 @@ function nn(e, t) {
                             (0, ne._Y)(l, t);
                     }
                 };
-            (0, t8.openModalLazy)(
+            (0, t3.openModalLazy)(
                 async () => {
                     let { default: e } = await n.e("19840").then(n.bind(n, 79779));
                     return (t) =>
@@ -1304,9 +1304,9 @@ function nn(e, t) {
             );
         };
     return () => {
-        (0, t8.closeAllModals)();
+        (0, t3.closeAllModals)();
         let t = (t) => nt(e, t);
-        (0, t8.openModalLazy)(
+        (0, t3.openModalLazy)(
             async () => {
                 let { default: i } = await n.e("29232").then(n.bind(n, 180275));
                 return (n) =>
@@ -1535,7 +1535,7 @@ let nf = (e) => {
             _ || A || p || n();
         }, [_, A, p, n]);
         let j = o.useCallback(() => {
-                (0, t8.openModalLazy)(() => Promise.resolve((e) => (0, a.jsx)(nf, { ...e })), { dismissable: !1 });
+                (0, t3.openModalLazy)(() => Promise.resolve((e) => (0, a.jsx)(nf, { ...e })), { dismissable: !1 });
             }, []),
             N = o.useCallback((e, t) => {
                 "selection" !== t && "selection" !== e ? d("selection") : d(e);
@@ -1543,7 +1543,7 @@ let nf = (e) => {
             v = o.useMemo(() => nn(t6.tY.MEDIA_TAKEDOWN, j), [j]),
             T = c ?? (E ? "selection" : A ? "dsa" : "tida");
         if (_ || (!A && !p))
-            return (0, a.jsx)(t3.Modal, {
+            return (0, a.jsx)(t8.Modal, {
                 title: "",
                 actions: [],
                 transitionState: t,
@@ -1559,7 +1559,7 @@ let nf = (e) => {
             });
         if (!E) {
             if (A)
-                return (0, a.jsx)(t3.Modal, {
+                return (0, a.jsx)(t8.Modal, {
                     title: H.intl.string(H.t.Z11w18),
                     subtitle: H.intl.format(H.t["532l+q"], {
                         supportURL: t9.A.getArticleURL(y.MVz.COPYRIGHT_AND_IP_POLICY),
@@ -1571,7 +1571,7 @@ let nf = (e) => {
                     children: (0, a.jsx)(no, { dsaCapabilities: f, onReopen: j }),
                 });
             if (p)
-                return (0, a.jsx)(t3.Modal, {
+                return (0, a.jsx)(t8.Modal, {
                     title: H.intl.string(H.t.YignUm),
                     actions: [{ text: H.intl.string(H.t.D5Czbu), variant: "primary", onClick: v }],
                     transitionState: t,
@@ -1614,7 +1614,7 @@ let nf = (e) => {
     },
     np = () => (
         o.useEffect(() => {
-            (0, t8.openModalLazy)(() => Promise.resolve((e) => (0, a.jsx)(nf, { ...e })), { dismissable: !1 });
+            (0, t3.openModalLazy)(() => Promise.resolve((e) => (0, a.jsx)(nf, { ...e })), { dismissable: !1 });
         }, []),
         null
     );
@@ -1901,7 +1901,7 @@ let n1 = h.Ay.connectStores([nH.A, nK.A, n$.A, nq.default], (e) => {
         application: nK.A.getApplication(n.applicationId),
         gifter: nq.default.getUser(t.userId),
     };
-})((e) => {
+})(function (e) {
     let { error: t, giftCode: n, gifter: i, sku: l, application: s, subscriptionPlan: r } = e,
         c = null == i ? H.intl.string(H.t.lTGZAl) : H.intl.formatToPlainString(H.t.TjWdPc, { username: i.username }),
         d = l.name;
@@ -1950,8 +1950,8 @@ let n1 = h.Ay.connectStores([nH.A, nK.A, n$.A, nq.default], (e) => {
     );
 });
 var n2 = n(935399),
-    n3 = n(475743),
-    n8 = n(707554),
+    n8 = n(475743),
+    n3 = n(707554),
     n7 = n(379154);
 function n4(e) {
     let { loginStatus: t, authBoxClassName: n, onSubmit: i, onCancelAccountDeletion: l } = e,
@@ -1962,7 +1962,7 @@ function n4(e) {
         tag: "form",
         onSubmit: i,
         className: n,
-        children: (0, a.jsxs)(n8.F, {
+        children: (0, a.jsxs)(n3.F, {
             component: (0, a.jsx)(P.hE, { className: K.QB, children: r }),
             children: [
                 (0, a.jsx)(P.tK, { className: K.SX, children: o }),
@@ -2270,7 +2270,7 @@ function iv(e) {
         L = null == g.email && null != g.password,
         k = o.useRef(null),
         G = o.useRef(null),
-        D = (0, n3.A)(g);
+        D = (0, n8.A)(g);
     o.useEffect(() => {
         let e = (e) => null != g[e];
         null != D && D !== g && (e("password") ? G.current?.focus() : (e("email") || e("login")) && k.current?.focus());
@@ -2304,7 +2304,7 @@ function iv(e) {
                     }),
                 }),
             t,
-            (0, a.jsx)(n8.F, {
+            (0, a.jsx)(n3.F, {
                 children: (0, a.jsxs)(P.eB, {
                     className: K.QX,
                     children: [
@@ -2632,7 +2632,7 @@ function ik(e) {
                             let e = await x.A.forgotPassword(t);
                             if (!1 === e) return;
                             e === iC.D.ONE_TIME_LOGIN
-                                ? (0, t8.openModal)((e) => {
+                                ? (0, t3.openModal)((e) => {
                                       let t = [
                                           {
                                               variant: "primary",
@@ -2641,7 +2641,7 @@ function ik(e) {
                                               fullWidth: !0,
                                           },
                                       ];
-                                      return (0, a.jsx)(t3.Modal, {
+                                      return (0, a.jsx)(t8.Modal, {
                                           title: H.intl.string(H.t["6Ecyts"]),
                                           actions: t,
                                           ...e,
@@ -2743,7 +2743,7 @@ function ik(e) {
             x.A.getLocationMetadata(),
             (0, G.d)("login");
     });
-    let ee = (0, n3.A)(g);
+    let ee = (0, n8.A)(g);
     if (
         (o.useEffect(() => {
             let e = j && (f || N);
@@ -2906,9 +2906,9 @@ var iZ = n(153488),
     i0 = n(989349),
     i1 = n.n(i0),
     i2 = n(955437),
-    i3 = n(888548);
+    i8 = n(888548);
 n(861807);
-var i8 = n(569717);
+var i3 = n(569717);
 function i7(e) {
     let {
         email: t,
@@ -2926,7 +2926,7 @@ function i7(e) {
     } = e;
     if ((g.h.dispatch({ type: "REGISTER" }), null != o)) {
         let e;
-        (0, i8.A)(o, y.JJy.REGISTER),
+        (0, i3.A)(o, y.JJy.REGISTER),
             S.default.track(y.HAw.AGE_GATE_ACTION, { source: iD.w_.REGISTER, action: iD.AM.AGE_GATE_SUBMITTED }),
             (e = i1()().diff(o, "years")) < 13 ||
                 S.default.track(y.HAw.USER_AGE_SUBMITTED, {
@@ -2970,7 +2970,7 @@ function i7(e) {
                 S.default.track(y.HAw.AGE_GATE_ACTION, { source: iD.w_.REGISTER, action: iD.AM.AGE_GATE_SUCCESS });
         },
         (e) => {
-            if (e instanceof i3.CaptchaCancelError) throw e;
+            if (e instanceof i8.CaptchaCancelError) throw e;
             let t = new B.A(e);
             throw (
                 (null != t.getFieldErrors("date_of_birth") && i2.Xv(iD.w_.REGISTER),
@@ -3149,7 +3149,7 @@ function lo(e) {
         eh = null != E && B;
     !(function (e) {
         let { apiErrors: t, emailRef: n, usernameRef: i, globalNameRef: l, passwordRef: s } = e,
-            r = (0, n3.A)(t);
+            r = (0, n8.A)(t);
         o.useEffect(() => {
             null == r ||
                 (r !== t &&
@@ -3636,7 +3636,7 @@ function lv(e) {
         j = null != e.location ? (0, c.parse)(e.location.search) : {},
         [N, v] = o.useState(j.email ?? ""),
         [T, I] = o.useState({}),
-        C = (0, n3.A)(A),
+        C = (0, n8.A)(A),
         b = (function (e, t, n) {
             if (null != e) return "gift";
             if (null != t) return "guild_template";
@@ -3968,34 +3968,33 @@ class lT extends o.PureComponent {
     }
 }
 let lI = h.Ay.connectStores([nA.A, nz.A, eK.default, nH.A, eu.A, nF.A], (e) => {
-        let t = e.match.params.giftCode,
-            n = nA.A.get(t),
-            i = null != n ? nH.A.get(n.skuId) : null;
-        return {
-            giftCode: n,
-            sku: i,
-            libraryApplication:
-                null != i && n?.entitlementBranches != null ? nQ.YI(n.entitlementBranches, i, nz.A) : null,
-            authenticated: eK.default.isAuthenticated(),
-            defaultRoute: eu.A.defaultRoute,
-            isResolved: nA.A.getIsResolved(t),
-            isAccepting: nA.A.getIsAccepting(t),
-            libraryApplicationsFetched: nz.A.fetched,
-            nativeAppState: nF.A.getState(t),
-        };
-    })(lT),
-    lC = (e) => {
-        let { sku: t, children: n, giftCodeCode: i, transitionTo: l } = e,
-            s = (0, nW.bF)(t);
-        return (o.useEffect(() => {
-            null != i && s && l(y.BVt.APP_WITH_GIFT_CODE(i));
-        }, [s, i, l]),
-        s)
-            ? (0, a.jsxs)(P.Ay, {
-                  children: [(0, a.jsx)(P.hE, { children: H.intl.string(H.t.b3lf1c) }), (0, a.jsx)(P.CK, {})],
-              })
-            : n;
+    let t = e.match.params.giftCode,
+        n = nA.A.get(t),
+        i = null != n ? nH.A.get(n.skuId) : null;
+    return {
+        giftCode: n,
+        sku: i,
+        libraryApplication: null != i && n?.entitlementBranches != null ? nQ.YI(n.entitlementBranches, i, nz.A) : null,
+        authenticated: eK.default.isAuthenticated(),
+        defaultRoute: eu.A.defaultRoute,
+        isResolved: nA.A.getIsResolved(t),
+        isAccepting: nA.A.getIsAccepting(t),
+        libraryApplicationsFetched: nz.A.fetched,
+        nativeAppState: nF.A.getState(t),
     };
+})(lT);
+function lC(e) {
+    let { sku: t, children: n, giftCodeCode: i, transitionTo: l } = e,
+        s = (0, nW.bF)(t);
+    return (o.useEffect(() => {
+        null != i && s && l(y.BVt.APP_WITH_GIFT_CODE(i));
+    }, [s, i, l]),
+    s)
+        ? (0, a.jsxs)(P.Ay, {
+              children: [(0, a.jsx)(P.hE, { children: H.intl.string(H.t.b3lf1c) }), (0, a.jsx)(P.CK, {})],
+          })
+        : n;
+}
 var lS = n(871194),
     lb = n(799365),
     ly = n(894778),
@@ -4138,7 +4137,7 @@ function lD(e) {
                     }),
                 ],
             })
-          : (0, a.jsx)(e8, {
+          : (0, a.jsx)(e3, {
                 text: H.intl.string(H.t["e/rZ2n"]),
                 buttonCta: H.intl.string(H.t.HAvYn0),
                 onClick: (e) => lG(e, t, n),
@@ -4221,7 +4220,7 @@ function lY(e) {
                               className: K.QX,
                               children: (0, a.jsx)(M.$, {
                                   text: H.intl.string(H.t.UQvCf7),
-                                  onClick: () => {
+                                  onClick: function () {
                                       S.default.track(y.HAw.INVITE_CTA_CLICKED, {
                                           action: "open_app",
                                           invite_code: t.code,
@@ -4237,7 +4236,7 @@ function lY(e) {
                               className: K.Ot,
                               children: (0, a.jsx)(M.$, {
                                   text: H.intl.string(H.t["2ixEBi"]),
-                                  onClick: () => {
+                                  onClick: function () {
                                       S.default.track(y.HAw.INVITE_CTA_CLICKED, {
                                           action: "continue_in_browser",
                                           invite_code: t.code,
@@ -4307,8 +4306,8 @@ function l2(e) {
     n.g.location.assign(e);
 }
 h.Ay.initialize(), n(426620), h.Ay.initialize();
-let l3 = nL(ik),
-    l8 = nL(function (e) {
+let l8 = nL(ik),
+    l3 = nL(function (e) {
         let t = o.useCallback(
                 (t) => {
                     let n;
@@ -4416,8 +4415,8 @@ let l3 = nL(ik),
                         handleContinue: a,
                         transitionTo: c,
                     } = e,
-                    d = (0, n3.A)(i),
-                    u = (0, n3.A)(l);
+                    d = (0, n8.A)(i),
+                    u = (0, n8.A)(l);
                 o.useEffect(() => {
                     if (s === lH && i && !1 === d) {
                         let e = eK.default.getFingerprint();
@@ -4519,7 +4518,7 @@ let l3 = nL(ik),
                     ? (0, a.jsx)(ik, { invite: s, transitionTo: i, location: n })
                     : (0, a.jsx)(lv, {
                           invite: s,
-                          onLoginStart: () => {
+                          onLoginStart: function () {
                               S.default.track(y.HAw.INVITE_LOGIN, {
                                   invite_code: s?.code,
                                   guild_id: s?.guild?.id,
@@ -4859,67 +4858,67 @@ let l3 = nL(ik),
                   });
     }),
     so = nL(function (e) {
-        let { match: t, location: n } = e,
-            i = async (e, t) => {
-                await (0, nk.W)(t0.XK.CHANNEL, {
-                    guildId: e.params.guildId,
-                    channelId: e.params.channelId,
-                    messageId: e.params.messageId,
-                    search: t.search,
-                });
-            };
+        let { match: t, location: n } = e;
+        async function i(e, t) {
+            await (0, nk.W)(t0.XK.CHANNEL, {
+                guildId: e.params.guildId,
+                channelId: e.params.channelId,
+                messageId: e.params.messageId,
+                search: t.search,
+            });
+        }
         return (0, a.jsx)(nw, { match: t, location: n, attemptDeepLink: i });
     }),
     sc = nL(function (e) {
-        let { match: t, location: n } = e,
-            i = async (e) => {
-                await (0, nk.W)(t0.XK.GAME_SHOP, {
-                    guildId: e.params.guildId,
-                    pageIndex: e.params.pageIndex,
-                    skuId: e.params.skuId,
-                    slug: e.params.slug,
-                });
-            };
+        let { match: t, location: n } = e;
+        async function i(e) {
+            await (0, nk.W)(t0.XK.GAME_SHOP, {
+                guildId: e.params.guildId,
+                pageIndex: e.params.pageIndex,
+                skuId: e.params.skuId,
+                slug: e.params.slug,
+            });
+        }
         return (0, a.jsx)(nw, { match: t, location: n, attemptDeepLink: i });
     }),
     sd = nL(function (e) {
-        let { match: t, location: n } = e,
-            i = async (e, t) => {
-                await (0, nk.W)(t0.XK.PICK_GUILD_SETTINGS, {
-                    section: e.params.section,
-                    subsection: e.params.subsection,
-                    search: t.search,
-                });
-            };
+        let { match: t, location: n } = e;
+        async function i(e, t) {
+            await (0, nk.W)(t0.XK.PICK_GUILD_SETTINGS, {
+                section: e.params.section,
+                subsection: e.params.subsection,
+                search: t.search,
+            });
+        }
         return (0, a.jsx)(nw, { match: t, location: n, attemptDeepLink: i });
     }),
-    su = nL((e) => {
+    su = nL(function (e) {
         let { location: t } = e,
             n = (0, h.bG)([eK.default], () => eK.default.isAuthenticated()),
             i = (0, h.bG)([eT.A], () => eT.A.hasLoadedExperiments),
             l = lJ.useExperiment({ location: "RSL - Landing Page" }, { autoTrackExposure: !0 }).enabled,
             [s, r] = o.useState(!1),
             [c, d] = o.useState(H.intl.string(H.t["9exy+V"])),
-            [u, m] = o.useState(!0),
-            g = (e) => {
-                switch (e) {
-                    case y.t02.INVALID_FORM_BODY:
-                    case y.t02.DSA_RSL_REPORT_NOT_FOUND:
-                        d(H.intl.string(H.t.bzXDfc));
-                        break;
-                    case y.t02.DSA_RSL_ALREADY_REQUESTED:
-                        d(H.intl.string(H.t.rV00wq));
-                        break;
-                    case y.t02.DSA_RSL_LIMITED_TIME:
-                        d(H.intl.string(H.t["0dI29h"]));
-                        break;
-                    case y.t02.DSA_RSL_REPORT_INELIGIBLE:
-                        d(H.intl.string(H.t["RGa/Gb"]));
-                        break;
-                    default:
-                        d(H.intl.string(H.t["0QLzfv"]));
-                }
-            };
+            [u, m] = o.useState(!0);
+        function g(e) {
+            switch (e) {
+                case y.t02.INVALID_FORM_BODY:
+                case y.t02.DSA_RSL_REPORT_NOT_FOUND:
+                    d(H.intl.string(H.t.bzXDfc));
+                    break;
+                case y.t02.DSA_RSL_ALREADY_REQUESTED:
+                    d(H.intl.string(H.t.rV00wq));
+                    break;
+                case y.t02.DSA_RSL_LIMITED_TIME:
+                    d(H.intl.string(H.t["0dI29h"]));
+                    break;
+                case y.t02.DSA_RSL_REPORT_INELIGIBLE:
+                    d(H.intl.string(H.t["RGa/Gb"]));
+                    break;
+                default:
+                    d(H.intl.string(H.t["0QLzfv"]));
+            }
+        }
         return (
             o.useEffect(() => {
                 n
@@ -4934,7 +4933,7 @@ let l3 = nL(ik),
                 i || l || x.A.getExperiments();
             }, [i, l]),
             o.useEffect(() => {
-                let e = async (e) => {
+                async function e(e) {
                     try {
                         let t = null != e ? await (0, t5.q)(e) : void 0;
                         null != t ? d(H.intl.string(H.t.e6mZMt)) : g(t.body?.code);
@@ -4943,7 +4942,7 @@ let l3 = nL(ik),
                     } finally {
                         r(!1);
                     }
-                };
+                }
                 r(!0), e((0, eh.A)(t)), (0, G.d)("report_second_look");
             }, [t]),
             l &&
@@ -5165,12 +5164,12 @@ class sg extends o.PureComponent {
         return (0, a.jsxs)(nP.A, {
             splash: e,
             children: [
-                (0, a.jsx)(en.A, { path: y.BVt.LOGIN_HANDOFF, render: (e) => (0, a.jsx)(l8, { ...e, redirectTo: t }) }),
+                (0, a.jsx)(en.A, { path: y.BVt.LOGIN_HANDOFF, render: (e) => (0, a.jsx)(l3, { ...e, redirectTo: t }) }),
                 (0, a.jsx)(en.A, { path: y.BVt.LOGIN_ONE_TIME, render: (e) => (0, a.jsx)(sh, { ...e }) }),
                 (0, a.jsx)(en.A, {
                     impressionName: d.ImpressionNames.USER_LOGIN,
                     path: y.BVt.LOGIN,
-                    render: (e) => (0, a.jsx)(l3, { ...e, redirectTo: t }),
+                    render: (e) => (0, a.jsx)(l8, { ...e, redirectTo: t }),
                 }),
                 (0, a.jsx)(en.A, {
                     impressionName: d.ImpressionNames.USER_REGISTRATION,

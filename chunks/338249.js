@@ -1,7 +1,7 @@
 s.r(e), s.d(e, { default: () => H });
 var n = s(627968),
-    r = s(64700),
-    i = s(873263),
+    i = s(64700),
+    r = s(873263),
     o = s(17928),
     a = s(228366);
 function l(t) {
@@ -26,40 +26,40 @@ var T = s(775121),
     N = s(235986),
     R = s(741046),
     S = s(287809),
-    g = s(107834),
-    m = s(788868),
-    f = s(50596);
+    f = s(107834),
+    g = s(788868),
+    m = s(50596);
 let B = o.Ay.connectStores([S.default], () => ({ user: S.default.getCurrentUser() }))(
-        (0, E.A)((t) => {
+        (0, E.A)(function (t) {
             let { user: e } = t,
                 s = (0, o.bG)([_.default], () => _.default.isAuthenticated()),
-                { analyticsLocations: r } = (0, L.Ay)(j.A.HOME_PAGE_PREMIUM_TAB);
+                { analyticsLocations: i } = (0, L.Ay)(j.A.HOME_PAGE_PREMIUM_TAB);
             return s
                 ? (0, n.jsxs)("div", {
-                      className: f.ql,
+                      className: m.ql,
                       children: [
-                          null == e && (0, n.jsx)(g.A, {}),
+                          null == e && (0, n.jsx)(f.A, {}),
                           (0, n.jsx)(L.f5, {
-                              value: r,
+                              value: i,
                               children:
                                   null == e
                                       ? (0, n.jsx)(N.A, {
                                             align: N.A.Align.CENTER,
                                             justify: N.A.Justify.CENTER,
-                                            children: (0, n.jsx)(x.y, { className: f.u1 }),
+                                            children: (0, n.jsx)(x.y, { className: m.u1 }),
                                         })
-                                      : (0, n.jsx)(R.A, { entrypoint: m.Mf.ApplicationStoreHome }),
+                                      : (0, n.jsx)(R.A, { entrypoint: g.Mf.ApplicationStoreHome }),
                           }),
                       ],
                   })
-                : (0, n.jsx)(i.rd, { to: c.BVt.LOGIN });
+                : (0, n.jsx)(r.rd, { to: c.BVt.LOGIN });
         }),
     ),
     y = (0, E.A)(function () {
-        return (0, n.jsxs)(i.dO, {
+        return (0, n.jsxs)(r.dO, {
             children: [
-                (0, n.jsx)(i.qh, { path: c.BVt.APPLICATION_STORE, exact: !0, render: () => (0, n.jsx)(B, {}) }),
-                (0, n.jsx)(i.rd, { to: c.BVt.APP }),
+                (0, n.jsx)(r.qh, { path: c.BVt.APPLICATION_STORE, exact: !0, render: () => (0, n.jsx)(B, {}) }),
+                (0, n.jsx)(r.rd, { to: c.BVt.APP }),
             ],
         });
     });
@@ -79,7 +79,7 @@ let v = (0, P.Fe)({
     webpackId: 673809,
 });
 o.Ay.initialize();
-class G extends r.PureComponent {
+class G extends i.PureComponent {
     stopListeningToHistory;
     componentDidMount() {
         l(this.props.location),
@@ -99,28 +99,28 @@ class G extends r.PureComponent {
             T.A.enable();
     }
     renderContent = () =>
-        (0, n.jsxs)(i.dO, {
+        (0, n.jsxs)(r.dO, {
             children: [
-                (0, n.jsx)(i.qh, {
+                (0, n.jsx)(r.qh, {
                     path: c.BVt.APPLICATION_STORE,
                     exact: !0,
                     render: () =>
                         (0, n.jsx)(d.A, { page: c.liQ.STORE_DIRECTORY_HOME, root: !0, children: (0, n.jsx)(y, {}) }),
                 }),
-                (0, n.jsx)(i.rd, {
+                (0, n.jsx)(r.rd, {
                     from: c.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId", ":slug"),
                     to: c.BVt.APPLICATION_STORE,
                 }),
-                (0, n.jsx)(i.rd, {
+                (0, n.jsx)(r.rd, {
                     from: c.BVt.APPLICATION_STORE_LISTING_APPLICATION(":applicationId"),
                     to: c.BVt.APPLICATION_STORE,
                 }),
-                (0, n.jsx)(i.rd, {
+                (0, n.jsx)(r.rd, {
                     from: c.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug"),
                     to: c.BVt.APPLICATION_STORE,
                 }),
-                (0, n.jsx)(i.rd, { from: c.BVt.APPLICATION_STORE_LISTING_SKU(":skuId"), to: c.BVt.APPLICATION_STORE }),
-                (0, n.jsx)(i.rd, { to: c.BVt.APP }),
+                (0, n.jsx)(r.rd, { from: c.BVt.APPLICATION_STORE_LISTING_SKU(":skuId"), to: c.BVt.APPLICATION_STORE }),
+                (0, n.jsx)(r.rd, { to: c.BVt.APP }),
             ],
         });
     renderCustomErrorMessage() {
@@ -140,7 +140,7 @@ class G extends r.PureComponent {
     }
 }
 let H = function (t) {
-    let e = (0, i.zy)(),
+    let e = (0, r.zy)(),
         s = (0, o.bG)([_.default], () => _.default.isAuthenticated());
     return (0, n.jsx)(G, { ...t, location: e, isAuthenticated: s });
 };

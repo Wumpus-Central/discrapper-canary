@@ -34,7 +34,7 @@ function c(e, t, n, i) {
         config: { context: __OVERLAY__ ? o.BRT.OVERLAY : ((0, r.zd)() ?? o.BRT.APP), ...n },
     };
     if (n?.enableSpellCheck && (0, s.isDesktop)()) {
-        let e = (0, a.nL)(() => {
+        let e = (0, a.nL)(function () {
             e(), l(d);
         });
     } else e.preventDefault(), l(d);

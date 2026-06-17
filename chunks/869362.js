@@ -799,63 +799,67 @@ let ts = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${O.NzX}`,
     ti = { width: 640, height: 360, margin: 15 },
     ta = { width: 880, height: 495, margin: 20 },
     tn = { width: 1920, height: 1080 },
-    tr = { width: 1280, height: 720 },
-    to = (e) => (0, eJ.$o)({ ...e, className: tl.tN, mediaPlayerClassName: tl.yf }),
-    tc = (e) => (0, i.jsx)(eq.Ay, { ...e }),
-    td = (e) => {
-        let t,
-            l,
-            s,
-            {
-                item: a,
-                size: n,
-                onPlay: r,
-                onEnded: o,
-                onClick: c,
-                playable: d,
-                volume: u,
-                isMuted: h,
-                onVolumeChange: m,
-                onMute: p,
-            } = e;
-        if (a.type === O.geh.YOUTUBE_VIDEO)
-            (t = { url: (0, O.PE$)(a.youtubeVideoId), ...tn }),
-                (l = { url: `${(0, O.uJ2)(a.youtubeVideoId)}?${ts}`, ...tr }),
-                (s = eM.m.YOUTUBE);
-        else {
-            let e = null != a.width ? a.width : 0,
-                s = null != a.height ? a.height : 0;
-            (t = { url: a.thumbnailSrc, width: e, height: s }),
-                (l = { url: a.src, proxyURL: a.src, width: e, height: s });
-        }
-        let g = (0, i.jsx)(eG.rr, {
-            href: null,
-            thumbnail: t,
-            video: l,
-            provider: s,
-            allowFullScreen: !0,
-            maxHeight: n.height,
-            maxWidth: n.width,
+    tr = { width: 1280, height: 720 };
+function to(e) {
+    return (0, eJ.$o)({ ...e, className: tl.tN, mediaPlayerClassName: tl.yf });
+}
+function tc(e) {
+    return (0, i.jsx)(eq.Ay, { ...e });
+}
+let td = (e) => {
+    let t,
+        l,
+        s,
+        {
+            item: a,
+            size: n,
             onPlay: r,
             onEnded: o,
+            onClick: c,
             playable: d,
-            className: tl.Ki,
             volume: u,
+            isMuted: h,
             onVolumeChange: m,
-            autoMute: h,
             onMute: p,
-            autoPlay: d,
-            renderVideoComponent: to,
-            renderImageComponent: tc,
-            renderLinkComponent: eJ.bU,
-        });
-        return d ? g : (0, i.jsx)(ek.D, { className: tl.AU, onClick: c, children: g });
-    },
-    tu = () =>
-        (0, i.jsx)("div", {
-            className: tl.eM,
-            children: (0, i.jsx)(tt.A, { inactive: !0, className: tl.J6, renderLinkComponent: eJ.bU }),
-        });
+        } = e;
+    if (a.type === O.geh.YOUTUBE_VIDEO)
+        (t = { url: (0, O.PE$)(a.youtubeVideoId), ...tn }),
+            (l = { url: `${(0, O.uJ2)(a.youtubeVideoId)}?${ts}`, ...tr }),
+            (s = eM.m.YOUTUBE);
+    else {
+        let e = null != a.width ? a.width : 0,
+            s = null != a.height ? a.height : 0;
+        (t = { url: a.thumbnailSrc, width: e, height: s }), (l = { url: a.src, proxyURL: a.src, width: e, height: s });
+    }
+    let g = (0, i.jsx)(eG.rr, {
+        href: null,
+        thumbnail: t,
+        video: l,
+        provider: s,
+        allowFullScreen: !0,
+        maxHeight: n.height,
+        maxWidth: n.width,
+        onPlay: r,
+        onEnded: o,
+        playable: d,
+        className: tl.Ki,
+        volume: u,
+        onVolumeChange: m,
+        autoMute: h,
+        onMute: p,
+        autoPlay: d,
+        renderVideoComponent: to,
+        renderImageComponent: tc,
+        renderLinkComponent: eJ.bU,
+    });
+    return d ? g : (0, i.jsx)(ek.D, { className: tl.AU, onClick: c, children: g });
+};
+function tu() {
+    return (0, i.jsx)("div", {
+        className: tl.eM,
+        children: (0, i.jsx)(tt.A, { inactive: !0, className: tl.J6, renderLinkComponent: eJ.bU }),
+    });
+}
 class th extends a.PureComponent {
     static defaultProps = { autoplayInterval: 8e3, paused: !1 };
     state = {
@@ -1049,20 +1053,20 @@ class th extends a.PureComponent {
 }
 (0, e1.A)(th);
 var tm = l(665513);
-let tp = (e) => {
-        let { className: t, ...l } = e;
-        return (0, i.jsx)(eQ.A, {
-            ...l,
-            className: r()(tm.Zy, t),
-            mediaPlayerClassName: tm.Zy,
-            renderLinkComponent: eJ.bU,
-        });
-    },
-    tg = (e) => {
-        let { containerClassName: t, className: l, ...s } = e;
-        return (0, i.jsx)(eq.Ay, { ...s, className: r()(l, t) });
-    },
-    tx = { width: 1280, height: 720 },
+function tp(e) {
+    let { className: t, ...l } = e;
+    return (0, i.jsx)(eQ.A, {
+        ...l,
+        className: r()(tm.Zy, t),
+        mediaPlayerClassName: tm.Zy,
+        renderLinkComponent: eJ.bU,
+    });
+}
+function tg(e) {
+    let { containerClassName: t, className: l, ...s } = e;
+    return (0, i.jsx)(eq.Ay, { ...s, className: r()(l, t) });
+}
+let tx = { width: 1280, height: 720 },
     tA = { width: 640, height: 360 },
     tj = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${O.NzX}`,
     tv = (e) => {

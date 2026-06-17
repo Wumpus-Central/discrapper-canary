@@ -139,7 +139,7 @@ function eS(e) {
         [a, r] = i.useState(!1);
     return (0, eC.x)(s, t)
         ? (0, n.jsx)(N.D, {
-              onClick: (e) => {
+              onClick: function (e) {
                   r(!0),
                       (0, ep.L3)(
                           e,

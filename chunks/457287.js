@@ -82,7 +82,7 @@ let o = function (e) {
         label: t,
         value: o,
         options: u,
-        onSelectionChange: (e) => {
+        onSelectionChange: function (e) {
             null != e && a(e);
         },
         disabled: l,

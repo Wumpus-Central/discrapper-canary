@@ -183,7 +183,7 @@ var eS = n(71393),
     eC = n(232835),
     eN = n(576705),
     ev = n(290863),
-    eR = n(222823),
+    eR = n(568548),
     eO = n(101392),
     eb = n(287809),
     eD = n(927813),
@@ -764,19 +764,20 @@ let eK = {
             let r = await e_(e);
             if (null != r) return e$.sendMessage(r, t, n, i);
             let s = i.nonce ?? (0, es.m)();
-            return (
-                (i = { ...i, nonce: s }),
-                (en.recordMessageSendAttempt(e, s, i), eC.A.isReady(e))
-                    ? e$._sendMessage(e, t, i)
-                    : n && e !== m.E
-                      ? (ej.info(`Waiting for channel ${e} to be ready before sending.`),
-                        new Promise((n, r) => {
-                            eC.A.whenReady(e, () => {
-                                ej.info(`Channel ${e} is ready for sending now.`), e$._sendMessage(e, t, i).then(n, r);
-                            });
-                        }))
-                      : e$._sendMessage(e, t, i)
-            );
+            i = { ...i, nonce: s };
+            let a = function () {
+                return e$._sendMessage(e, t, i);
+            };
+            return (en.recordMessageSendAttempt(e, s, i), eC.A.isReady(e))
+                ? a()
+                : n && e !== m.E
+                  ? (ej.info(`Waiting for channel ${e} to be ready before sending.`),
+                    new Promise((t, n) => {
+                        eC.A.whenReady(e, () => {
+                            ej.info(`Channel ${e} is ready for sending now.`), a().then(t, n);
+                        });
+                    }))
+                  : a();
         },
         getSendMessageOptionsForReply: (e) =>
             null == e
@@ -1426,12 +1427,12 @@ ${s}`),
                 });
         },
         async deleteMessage(e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-                i = () => {
-                    l.h.dispatch({ type: "MESSAGE_DELETE", id: t, channelId: e }).then(() => {
-                        o.O.announce(eV.intl.string(eV.t.RYMs7s));
-                    });
-                };
+            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+            function i() {
+                l.h.dispatch({ type: "MESSAGE_DELETE", id: t, channelId: e }).then(() => {
+                    o.O.announce(eV.intl.string(eV.t.RYMs7s));
+                });
+            }
             n
                 ? i()
                 : (await eg.A.unarchiveThreadIfNecessary(e),

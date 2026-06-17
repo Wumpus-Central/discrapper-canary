@@ -387,17 +387,17 @@ var ex = i(137177),
 let eW = (e) => `https://${M.XlF}/hc/${e.toLowerCase()}/requests/new?ticket_form_id=360000118612`,
     eZ = [M.Puh.DURABLE_PRIMARY, M.Puh.DURABLE, M.Puh.CONSUMABLE],
     eQ = [M.__0.FAILED, M.__0.REVERSED, M.__0.CANCELED],
-    eq = [eh.kM.APPLE],
-    eJ = (e) => {
-        let { description: t, cost: i } = e;
-        return (0, n.jsx)("li", {
-            className: eE.mg,
-            children: (0, n.jsxs)(f.A, {
-                justify: f.A.Justify.BETWEEN,
-                children: [(0, n.jsx)("div", { children: t }), (0, n.jsx)("div", { children: i })],
-            }),
-        });
-    };
+    eq = [eh.kM.APPLE];
+function eJ(e) {
+    let { description: t, cost: i } = e;
+    return (0, n.jsx)("li", {
+        className: eE.mg,
+        children: (0, n.jsxs)(f.A, {
+            justify: f.A.Justify.BETWEEN,
+            children: [(0, n.jsx)("div", { children: t }), (0, n.jsx)("div", { children: i })],
+        }),
+    });
+}
 function e$(e) {
     let { value: t, copyText: i, copyFeedbackText: l } = e,
         [r, a] = s.useState(!1),
@@ -412,7 +412,7 @@ function e$(e) {
             onMouseLeave: () => {
                 u(!1);
             },
-            onClick: () => {
+            onClick: function () {
                 (0, ez.C)(t, () => {
                     u(!0), a(!0);
                 });
@@ -421,7 +421,7 @@ function e$(e) {
         }),
     });
 }
-let e0 = (e) => {
+function e0(e) {
     let { description: t, detail: i } = e;
     return (0, n.jsx)("li", {
         className: eE.Iu,
@@ -430,7 +430,7 @@ let e0 = (e) => {
             children: [(0, n.jsx)("div", { children: t }), (0, n.jsx)("div", { children: i })],
         }),
     });
-};
+}
 function e1(e) {
     let { guildId: t, guildProductListingId: i } = e,
         l = (0, ep.Qi)(t, i, { requireCurrentGuild: !1 }),

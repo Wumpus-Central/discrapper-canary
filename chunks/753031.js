@@ -76,22 +76,23 @@ function L(e) {
     }
     (0, A.A)({ type: r.ImpressionTypes.MODAL, name: r.ImpressionNames.GUILD_TRANSFER_OWNERSHIP });
     let D = j.Ay.getNickname(s.id, void 0, i),
-        H = i.hasAvatarForGuild(s.id),
-        V = () =>
-            (0, n.jsxs)("span", {
-                className: b.v_,
-                children: [
-                    null != s.icon
-                        ? (0, n.jsx)(d.eu, {
-                              src: R.Ay.getGuildIconURL({ id: s.id, icon: s.icon, size: 16 }),
-                              size: u._3.SIZE_16,
-                              className: b.sD,
-                              "aria-hidden": !0,
-                          })
-                        : null,
-                    (0, n.jsx)(m.E, { className: b.J5, variant: "text-sm/bold", children: s.name }),
-                ],
-            });
+        H = i.hasAvatarForGuild(s.id);
+    function V() {
+        return (0, n.jsxs)("span", {
+            className: b.v_,
+            children: [
+                null != s.icon
+                    ? (0, n.jsx)(d.eu, {
+                          src: R.Ay.getGuildIconURL({ id: s.id, icon: s.icon, size: 16 }),
+                          size: u._3.SIZE_16,
+                          className: b.sD,
+                          "aria-hidden": !0,
+                      })
+                    : null,
+                (0, n.jsx)(m.E, { className: b.J5, variant: "text-sm/bold", children: s.name }),
+            ],
+        });
+    }
     return (0, n.jsx)("form", {
         onSubmit: Z,
         children: (0, n.jsxs)(c.Modal, {

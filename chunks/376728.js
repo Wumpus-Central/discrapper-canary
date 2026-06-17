@@ -176,37 +176,37 @@ function ec(e) {
             r,
         )(I);
 }
-let ed = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
-        V.A.addConditionalChangeListener(() => {
-            let i = V.A.getChannel(e),
-                r = $.default.getCurrentUser();
-            return (
-                null == i ||
-                null == r ||
-                (!(
-                    (i.nsfw && !r.nsfwAllowed) ||
-                    (i.isGuildVocalOrThread() && (0, T.Tv)(e)) ||
-                    (i.isGuildVocalOrThread() && 0)
-                ) &&
-                    (t?.guildScheduledEvent != null
-                        ? !(function (e) {
-                              let { guildScheduledEvent: t, welcomeModalChannelId: n } = e;
-                              null != t &&
-                                  (0, C.B)(() => {
-                                      let e = { guildScheduledEventId: t.id };
-                                      null != n && (e.welcomeModalChannelId = n), (0, O.Ul)(t, e);
-                                  });
-                          })(t)
-                        : ec({ guildId: i.getGuildId() ?? et.ME, channel: i, options: t, analyticsLocations: n }),
-                    !1))
-            );
-        });
-    },
-    e_ = async (e) => {
-        let { guild_id: t, channel_id: n } = e;
-        (0, b.Fd)(e) && null != n ? ed(n) : await J.A.transitionToGuildSync(t);
-    };
+function ed(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
+    V.A.addConditionalChangeListener(() => {
+        let i = V.A.getChannel(e),
+            r = $.default.getCurrentUser();
+        return (
+            null == i ||
+            null == r ||
+            (!(
+                (i.nsfw && !r.nsfwAllowed) ||
+                (i.isGuildVocalOrThread() && (0, T.Tv)(e)) ||
+                (i.isGuildVocalOrThread() && 0)
+            ) &&
+                (t?.guildScheduledEvent != null
+                    ? !(function (e) {
+                          let { guildScheduledEvent: t, welcomeModalChannelId: n } = e;
+                          null != t &&
+                              (0, C.B)(() => {
+                                  let e = { guildScheduledEventId: t.id };
+                                  null != n && (e.welcomeModalChannelId = n), (0, O.Ul)(t, e);
+                              });
+                      })(t)
+                    : ec({ guildId: i.getGuildId() ?? et.ME, channel: i, options: t, analyticsLocations: n }),
+                !1))
+        );
+    });
+}
+async function e_(e) {
+    let { guild_id: t, channel_id: n } = e;
+    (0, b.Fd)(e) && null != n ? ed(n) : await J.A.transitionToGuildSync(t);
+}
 function eh(e, t) {
     let {
         invite: n,

@@ -31,15 +31,12 @@ var i = n(562708),
     L = n(652215),
     w = n(204925),
     M = n(375708);
-let P = (e) => {
-        D.A.show({
-            title: M.intl.string(M.t.cTaRxF),
-            body: M.intl.formatToPlainString(M.t["VSd+Aj"], { quantity: e }),
-        });
-    },
-    x = (e) => {
-        a.h.dispatch({ type: "GUILD_DELETE", guild: { id: e } });
-    };
+function P(e) {
+    D.A.show({ title: M.intl.string(M.t.cTaRxF), body: M.intl.formatToPlainString(M.t["VSd+Aj"], { quantity: e }) });
+}
+function x(e) {
+    a.h.dispatch({ type: "GUILD_DELETE", guild: { id: e } });
+}
 function k(e) {
     return new Promise((t) =>
         y.A.addConditionalChangeListener(() => {

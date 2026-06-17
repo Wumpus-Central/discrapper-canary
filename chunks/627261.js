@@ -1,4 +1,4 @@
-n.d(i, { default: () => x });
+n.d(l, { default: () => x });
 var r = n(627968);
 n(64700);
 var t = n(17928),
@@ -12,16 +12,16 @@ var t = n(17928),
     h = n(975571),
     p = n(375708),
     j = n(663630);
-let x = (l) => {
-    let { onClose: i, transitionState: n } = l,
+let x = (i) => {
+    let { onClose: l, transitionState: n } = i,
         { error: x, applicationName: g } = (0, t.cf)([u.A, c.A], () => {
-            let l = u.A.getLastError(),
-                i = null;
-            if (null != l && null != l.applicationId) {
-                let n = c.A.getApplication(l.applicationId);
-                null != n && (i = n.name);
+            let i = u.A.getLastError(),
+                l = null;
+            if (null != i && null != i.applicationId) {
+                let n = c.A.getApplication(i.applicationId);
+                null != n && (l = n.name);
             }
-            return { error: l, applicationName: i };
+            return { error: i, applicationName: l };
         });
     return (0, r.jsxs)(a.EO, {
         transitionState: n,
@@ -40,7 +40,7 @@ let x = (l) => {
                             children: p.intl.string(p.t["6kHRYP"]),
                         }),
                     }),
-                    (0, r.jsx)(o.A.Child, { grow: 0, children: (0, r.jsx)(a.s_, { onClick: i }) }),
+                    (0, r.jsx)(o.A.Child, { grow: 0, children: (0, r.jsx)(a.s_, { onClick: l }) }),
                 ],
             }),
             (0, r.jsx)(a.$m, {
@@ -84,13 +84,13 @@ let x = (l) => {
                     (0, r.jsx)(d.$, {
                         variant: "primary",
                         text: p.intl.string(p.t.VdyWmB),
-                        onClick: () => {
+                        onClick: function () {
                             window.open(h.A.getSubmitRequestURL());
                         },
                     }),
                     (0, r.jsx)(s.$n, {
                         look: s.$n.Looks.LINK,
-                        onClick: i,
+                        onClick: l,
                         color: j.bE,
                         children: p.intl.string(p.t.cpT0Cq),
                     }),

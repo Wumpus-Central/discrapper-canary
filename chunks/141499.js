@@ -1776,7 +1776,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 564301, Version Hash: d71938dc20f9e826e9ed9ca7b1734e2b02aa1230`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 564331, Version Hash: 631353b05e0af69630e6e39a110c08c0c657dce9`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -2090,7 +2090,7 @@ var nA = n(488428),
 let nC = e5.Ay.connectStores([ez.A, e$.default], () => {
     let e = e$.default.getToken();
     return { token: e, hasLoadedExperiments: null != e || ez.A.hasLoadedExperiments };
-})((e) => {
+})(function (e) {
     let { hasLoadedExperiments: t, token: n } = e;
     return null != n
         ? (0, F.jsx)(nI.rd, { to: eM.BVt.APP })
@@ -7276,7 +7276,7 @@ function uC(e) {
                 n.current.focus());
         }, [u, n]),
         (0, F.jsxs)("form", {
-            onSubmit: (e) => {
+            onSubmit: function (e) {
                 e.preventDefault(), tz()(null != n.current, "Input is submitted when not mounted");
                 let t = n.current.value.trim();
                 !t.includes("#") && t.startsWith("@") && (t = t.substring(1));
@@ -7328,7 +7328,7 @@ function uC(e) {
                                         inputRef: n,
                                         className: uE.QP,
                                         inputClassName: uE.hF,
-                                        onKeyPress: (e) => {
+                                        onKeyPress: function (e) {
                                             let t = e.currentTarget.value;
                                             if (e.key !== up.N$.Enter && t.includes("#")) {
                                                 tz()(null != n.current, "Input is handling keypress when not mounted");
@@ -7344,7 +7344,7 @@ function uC(e) {
                                                     : null == r || !(r > i) || a || s || e.preventDefault();
                                             }
                                         },
-                                        onChange: (e) => {
+                                        onChange: function (e) {
                                             if (e.length <= 0) return void s({ type: "RESET" });
                                             let t = "",
                                                 [, n] = e.split("#");
@@ -7380,12 +7380,12 @@ function uC(e) {
                                         (0, F.jsx)(uu.d, {
                                             className: uE.xh,
                                             value: d,
-                                            onChange: (e) => {
+                                            onChange: function (e) {
                                                 _(e.target.value.replace(/\n/g, ""));
                                             },
                                             placeholder: nl.intl.string(nl.t.Yi6Mpu),
                                             maxLength: 120,
-                                            onKeyDown: (e) => {
+                                            onKeyDown: function (e) {
                                                 if (e.key === up.N$.Enter) return void e.preventDefault();
                                             },
                                         }),
@@ -18290,15 +18290,16 @@ let Sm = "isHideDevBanner",
             n = (0, e5.bG)([Sh.A], () => ((0, Sf.kK)() ? Sh.A.getCurrentBuildOverride().overrides?.discord_web : null));
         if (e) return null;
         let i = () => {
-                tT.w.set(Sm, !0), t(!0);
-            },
-            r = () =>
-                (0, F.jsx)(t4.D, {
-                    onClick: i,
-                    className: SE.b,
-                    "aria-label": nl.intl.string(nl.t.WAI6xu),
-                    children: (0, F.jsx)(ca.P, { size: "md", color: "currentColor", className: SE.ut }),
-                });
+            tT.w.set(Sm, !0), t(!0);
+        };
+        function r() {
+            return (0, F.jsx)(t4.D, {
+                onClick: i,
+                className: SE.b,
+                "aria-label": nl.intl.string(nl.t.WAI6xu),
+                children: (0, F.jsx)(ca.P, { size: "md", color: "currentColor", className: SE.ut }),
+            });
+        }
         return null != n
             ? (0, F.jsxs)("div", {
                   className: t6()(SE.Wz, SE.DM),
@@ -18309,7 +18310,7 @@ let Sm = "isHideDevBanner",
                     className: t6()(SE.Wz, SE.mr),
                     children: [
                         (0, F.jsx)(Sp, { className: SE.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "564301" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "564331" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })

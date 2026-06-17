@@ -232,7 +232,7 @@ class B extends r.Component {
         });
     }
 }
-let j = (e) => {
+let j = function (e) {
     let { density: t } = (0, f.wR)(),
         { version: n, theme: s, children: a, listScrollerRef: c } = e,
         d = r.Children.count(a),

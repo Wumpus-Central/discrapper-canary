@@ -71,42 +71,42 @@ function O(e, t, n) {
         };
     throw Error("Invalid Payment Source");
 }
-let b = (e) => {
-        let {
-                onPaymentSourceAdd: t,
-                dropdownLoading: n,
-                disabled: s,
-                handleChange: a,
-                paymentSourceOptions: o,
-                selectedPaymentSourceId: l,
-                newPaymentMethodOptionLabel: u,
-                noticeMessage: c,
-            } = e,
-            d = r.useMemo(
-                () =>
-                    o.map((e) => {
-                        let { label: t, brand: n, ...i } = e;
-                        return { id: null != i.key ? `${i.key}` : i.value, label: t ?? "", icon: n ?? void 0, ...i };
-                    }),
-                [o],
-            ),
-            _ = r.useMemo(
-                () => ({
-                    value: l ?? null,
-                    options: d,
-                    onChange: a,
-                    onNew: null != t ? t : () => {},
-                    disabled: s || n,
-                    newPaymentMethodOptionLabel: u,
+function b(e) {
+    let {
+            onPaymentSourceAdd: t,
+            dropdownLoading: n,
+            disabled: s,
+            handleChange: a,
+            paymentSourceOptions: o,
+            selectedPaymentSourceId: l,
+            newPaymentMethodOptionLabel: u,
+            noticeMessage: c,
+        } = e,
+        d = r.useMemo(
+            () =>
+                o.map((e) => {
+                    let { label: t, brand: n, ...i } = e;
+                    return { id: null != i.key ? `${i.key}` : i.value, label: t ?? "", icon: n ?? void 0, ...i };
                 }),
-                [l, d, a, t, s, n, u],
-            );
-        return (0, i.jsx)(h.v, { ..._, noticeMessage: c });
-    },
-    D = (e) => {
-        let { onClick: t } = e;
-        return (0, i.jsx)(o.$, { variant: "primary", fullWidth: !0, onClick: t, text: S.intl.string(S.t.eQ2bLp) });
-    };
+            [o],
+        ),
+        _ = r.useMemo(
+            () => ({
+                value: l ?? null,
+                options: d,
+                onChange: a,
+                onNew: null != t ? t : () => {},
+                disabled: s || n,
+                newPaymentMethodOptionLabel: u,
+            }),
+            [l, d, a, t, s, n, u],
+        );
+    return (0, i.jsx)(h.v, { ..._, noticeMessage: c });
+}
+function D(e) {
+    let { onClick: t } = e;
+    return (0, i.jsx)(o.$, { variant: "primary", fullWidth: !0, onClick: t, text: S.intl.string(S.t.eQ2bLp) });
+}
 function L(e) {
     let {
             selectedPaymentSourceId: t,
@@ -130,7 +130,7 @@ function L(e) {
             paymentSourceOptions: F,
             selectedPaymentSourceId: V,
             isStoreCountryEnabled: B,
-        } = ((e) => {
+        } = (function (e) {
             let {
                     selectedPaymentSourceId: t,
                     paymentSources: n,

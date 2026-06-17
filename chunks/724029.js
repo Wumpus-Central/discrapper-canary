@@ -85,51 +85,57 @@ var em = n(824994),
     eC = n(854627),
     eN = n(616356),
     ev = n(290863),
-    eR = n(222823),
+    eR = n(568548),
     eO = n(741961),
     eb = n(543465),
     eD = n(287809),
     eL = n(19575),
     ew = n(330076);
 let eM = eL.Ay.getEnableHardwareAcceleration() ? I.Js : I.eu,
-    eP = { offset: { top: 2, bottom: 2, right: 4 } },
-    ex = (e) => {
-        let { nameplate: t, icon: n, forceShow: r = !1, reducedClickTarget: s = !1, visibleElementRef: o, ...l } = e,
-            u = (0, ed.K)(t);
-        return (0, i.jsx)(T.D, {
-            className: a()(ew.b, { [ew.DQ]: null != t, [ew.by]: r, [ew.wY]: s }),
-            style: u,
-            ...l,
-            focusProps: { offset: { top: -2, bottom: -2, left: -2, right: 6 } },
-            children: (0, i.jsx)("div", {
-                ref: o,
-                className: a()({ [ew.PJ]: null != t }),
-                children: (0, i.jsx)(n, {
-                    size: "sm",
-                    color: "currentColor",
-                    className: a()(ew.ut, { [ew.Uq]: null != t }),
-                }),
+    eP = { offset: { top: 2, bottom: 2, right: 4 } };
+function ex(e) {
+    let { nameplate: t, icon: n, forceShow: r = !1, reducedClickTarget: s = !1, visibleElementRef: o, ...l } = e,
+        u = (0, ed.K)(t);
+    return (0, i.jsx)(T.D, {
+        className: a()(ew.b, { [ew.DQ]: null != t, [ew.by]: r, [ew.wY]: s }),
+        style: u,
+        ...l,
+        focusProps: { offset: { top: -2, bottom: -2, left: -2, right: 6 } },
+        children: (0, i.jsx)("div", {
+            ref: o,
+            className: a()({ [ew.PJ]: null != t }),
+            children: (0, i.jsx)(n, {
+                size: "sm",
+                color: "currentColor",
+                className: a()(ew.ut, { [ew.Uq]: null != t }),
             }),
-        });
-    },
-    ek = (e) => {
-        let { onClick: t, channelName: n, showNameplate: r } = e;
-        return (0, i.jsx)("div", {
-            className: ew.KQ,
-            children: (0, i.jsx)(A.m, {
-                text: eu.intl.formatToPlainString(eu.t.m0zYbV, { username: n }),
-                children: (0, i.jsx)(S.$, {
-                    size: "sm",
-                    variant: r ? "overlay-secondary" : "secondary",
-                    onClick: t,
-                    text: eu.intl.string(eu.t.pVlP58),
-                }),
+        }),
+    });
+}
+function ek(e) {
+    let { onClick: t, channelName: n, showNameplate: r } = e;
+    return (0, i.jsx)("div", {
+        className: ew.KQ,
+        children: (0, i.jsx)(A.m, {
+            text: eu.intl.formatToPlainString(eu.t.m0zYbV, { username: n }),
+            children: (0, i.jsx)(S.$, {
+                size: "sm",
+                variant: r ? "overlay-secondary" : "secondary",
+                onClick: t,
+                text: eu.intl.string(eu.t.pVlP58),
             }),
-        });
-    },
-    eU = () => (0, i.jsx)(y.t, { size: "xs", color: "currentColor", className: ew.wB }),
-    eG = () => (0, i.jsx)(C.G, { size: "xs", color: "currentColor", className: ew.wB }),
-    eF = () => (0, i.jsx)(N.K, { size: "xs", color: "currentColor", className: ew.wB });
+        }),
+    });
+}
+function eU() {
+    return (0, i.jsx)(y.t, { size: "xs", color: "currentColor", className: ew.wB });
+}
+function eG() {
+    return (0, i.jsx)(C.G, { size: "xs", color: "currentColor", className: ew.wB });
+}
+function eF() {
+    return (0, i.jsx)(N.K, { size: "xs", color: "currentColor", className: ew.wB });
+}
 function eV(e) {
     let {
             eventTargetRef: t,
@@ -165,7 +171,7 @@ function eV(e) {
         );
     return (0, i.jsx)(R.U, { eventTargetRef: t, className: ew.a1, dataBinding: { ...u, DimmerWidth: (s ?? 0) + 32 } });
 }
-let eB = (e) => {
+function eB(e) {
     let {
             route: t,
             selected: n,
@@ -235,7 +241,7 @@ let eB = (e) => {
             ],
         }),
     });
-};
+}
 function ej(e) {
     let {
             channel: t,
@@ -295,128 +301,128 @@ function ej(e) {
         e5 = (0, m.bG)([eR.Ay], () => eR.Ay.getMentionCount(t.id) > 0),
         e7 = (0, K.Ay)(t),
         e8 = r.useRef(null),
-        e9 = null != N && (s || x || ed),
-        te = () => {
-            G(!0);
-        },
-        tt = () => {
-            G(!1);
-        },
-        tn = () => {
-            ec(!0);
-        },
-        ti = () => {
-            ec(!1);
-        },
-        tr = function (e) {
-            let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, s, n);
-        },
-        ts = () => {
-            M.A.preload(eo.ME, t.id);
-        },
-        ta = (e) => {
-            e.stopPropagation();
-        },
-        to = (e) => {
-            e.target === e.currentTarget && ep.current?.click();
-        },
-        tl = (e) => {
-            let r =
-                "contextmenu" === e.type
-                    ? c.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN
-                    : c.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
-            ef(!0),
-                t.isMultiUserDM()
-                    ? (0, P.L3)(
-                          e,
-                          async () => {
-                              let { default: e } = await Promise.all([
-                                  n.e("26132"),
-                                  n.e("46652"),
-                                  n.e("93190"),
-                                  n.e("91763"),
-                                  n.e("38730"),
-                                  n.e("34971"),
-                                  n.e("42339"),
-                                  n.e("12520"),
-                                  n.e("17244"),
-                                  n.e("46149"),
-                                  n.e("53416"),
-                                  n.e("60200"),
-                              ]).then(n.bind(n, 4027));
-                              return (n) => (0, i.jsx)(e, { ...n, channel: t, selected: s });
-                          },
-                          { impressionName: r, noBlurEvent: !0, onClose: () => ef(!1) },
-                      )
-                    : (0, P.L3)(
-                          e,
-                          async () => {
-                              let { default: e } = await Promise.all([
-                                  n.e("71406"),
-                                  n.e("86896"),
-                                  n.e("76900"),
-                                  n.e("88429"),
-                                  n.e("94881"),
-                                  n.e("26132"),
-                                  n.e("46652"),
-                                  n.e("93190"),
-                                  n.e("93103"),
-                                  n.e("34552"),
-                                  n.e("91763"),
-                                  n.e("8757"),
-                                  n.e("85968"),
-                                  n.e("89673"),
-                                  n.e("68403"),
-                                  n.e("29787"),
-                                  n.e("71210"),
-                                  n.e("38730"),
-                                  n.e("88342"),
-                                  n.e("82073"),
-                                  n.e("97558"),
-                                  n.e("91994"),
-                                  n.e("89421"),
-                                  n.e("98965"),
-                                  n.e("76665"),
-                                  n.e("35313"),
-                                  n.e("76273"),
-                                  n.e("36564"),
-                                  n.e("34971"),
-                                  n.e("52229"),
-                                  n.e("45996"),
-                                  n.e("792"),
-                                  n.e("92822"),
-                                  n.e("23427"),
-                                  n.e("29422"),
-                                  n.e("38056"),
-                                  n.e("9291"),
-                                  n.e("7059"),
-                                  n.e("8829"),
-                                  n.e("42339"),
-                                  n.e("17244"),
-                                  n.e("98199"),
-                                  n.e("41175"),
-                                  n.e("60816"),
-                                  n.e("39778"),
-                              ]).then(n.bind(n, 385913));
-                              return (n) => (0, i.jsx)(e, { ...n, user: o, channel: t, channelSelected: s });
-                          },
-                          { impressionName: r, onClose: () => ef(!1) },
-                      );
-        },
-        tu = (e) => {
-            e.preventDefault(), e.stopPropagation();
-            let r = eu.intl.formatToPlainString(eu.t.hJ5Ap4, { name: e7 }),
-                s = eu.intl.format(eu.t.SSIVOu, { name: e7 });
-            t.isManaged() &&
-                ((r = eu.intl.formatToPlainString(eu.t.hVGjEW, { name: e7 })),
-                (s = eu.intl.format(eu.t.IK1Qvs, { name: e7 }))),
-                (0, L.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("70588"), n.e("37803")]).then(n.bind(n, 148166));
-                    return (t) => (0, i.jsx)(e, { title: r, body: s, onSubmit: tr, ...t });
-                });
-        },
-        tc = (0, i.jsx)(eA.A, {
+        e9 = null != N && (s || x || ed);
+    function te() {
+        G(!0);
+    }
+    function tt() {
+        G(!1);
+    }
+    function tn() {
+        ec(!0);
+    }
+    function ti() {
+        ec(!1);
+    }
+    function tr(e) {
+        let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+        null != e && (e.preventDefault(), e.stopPropagation()), M.A.closePrivateChannel(t.id, s, n);
+    }
+    function ts() {
+        M.A.preload(eo.ME, t.id);
+    }
+    function ta(e) {
+        e.stopPropagation();
+    }
+    function to(e) {
+        e.target === e.currentTarget && ep.current?.click();
+    }
+    let tl = (e) => {
+        let r =
+            "contextmenu" === e.type
+                ? c.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN
+                : c.ImpressionNames.DM_LIST_KEBAB_MENU_SHOWN;
+        ef(!0),
+            t.isMultiUserDM()
+                ? (0, P.L3)(
+                      e,
+                      async () => {
+                          let { default: e } = await Promise.all([
+                              n.e("26132"),
+                              n.e("46652"),
+                              n.e("93190"),
+                              n.e("91763"),
+                              n.e("38730"),
+                              n.e("34971"),
+                              n.e("42339"),
+                              n.e("12520"),
+                              n.e("17244"),
+                              n.e("46149"),
+                              n.e("53416"),
+                              n.e("60200"),
+                          ]).then(n.bind(n, 4027));
+                          return (n) => (0, i.jsx)(e, { ...n, channel: t, selected: s });
+                      },
+                      { impressionName: r, noBlurEvent: !0, onClose: () => ef(!1) },
+                  )
+                : (0, P.L3)(
+                      e,
+                      async () => {
+                          let { default: e } = await Promise.all([
+                              n.e("71406"),
+                              n.e("86896"),
+                              n.e("76900"),
+                              n.e("88429"),
+                              n.e("94881"),
+                              n.e("26132"),
+                              n.e("46652"),
+                              n.e("93190"),
+                              n.e("93103"),
+                              n.e("34552"),
+                              n.e("91763"),
+                              n.e("8757"),
+                              n.e("85968"),
+                              n.e("89673"),
+                              n.e("68403"),
+                              n.e("29787"),
+                              n.e("71210"),
+                              n.e("38730"),
+                              n.e("88342"),
+                              n.e("82073"),
+                              n.e("97558"),
+                              n.e("91994"),
+                              n.e("89421"),
+                              n.e("98965"),
+                              n.e("76665"),
+                              n.e("35313"),
+                              n.e("76273"),
+                              n.e("36564"),
+                              n.e("34971"),
+                              n.e("52229"),
+                              n.e("45996"),
+                              n.e("792"),
+                              n.e("92822"),
+                              n.e("23427"),
+                              n.e("29422"),
+                              n.e("38056"),
+                              n.e("9291"),
+                              n.e("7059"),
+                              n.e("8829"),
+                              n.e("42339"),
+                              n.e("17244"),
+                              n.e("98199"),
+                              n.e("41175"),
+                              n.e("60816"),
+                              n.e("39778"),
+                          ]).then(n.bind(n, 385913));
+                          return (n) => (0, i.jsx)(e, { ...n, user: o, channel: t, channelSelected: s });
+                      },
+                      { impressionName: r, onClose: () => ef(!1) },
+                  );
+    };
+    function tu(e) {
+        e.preventDefault(), e.stopPropagation();
+        let r = eu.intl.formatToPlainString(eu.t.hJ5Ap4, { name: e7 }),
+            s = eu.intl.format(eu.t.SSIVOu, { name: e7 });
+        t.isManaged() &&
+            ((r = eu.intl.formatToPlainString(eu.t.hVGjEW, { name: e7 })),
+            (s = eu.intl.format(eu.t.IK1Qvs, { name: e7 }))),
+            (0, L.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([n.e("70588"), n.e("37803")]).then(n.bind(n, 148166));
+                return (t) => (0, i.jsx)(e, { title: r, body: s, onSubmit: tr, ...t });
+            });
+    }
+    let tc = (0, i.jsx)(eA.A, {
             userName: e7,
             displayNameStyles: o?.displayNameStyles,
             effectDisplayType: x || s || ed ? eg.G.ANIMATED : eg.G.PLAIN,
@@ -668,7 +674,7 @@ function ej(e) {
         })
     );
 }
-let eH = (e) => {
+let eH = function (e) {
     let { channel: t, selected: n, ...r } = e,
         s = (0, m.bG)([eD.default], () => eD.default.getUser(t.getRecipientId())),
         a = s?.id,

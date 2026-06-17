@@ -19,7 +19,7 @@ var i = t(627968),
     A = t(788868),
     v = t(375708),
     b = t(50596);
-let E = l.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser() }))((e) => {
+let E = l.Ay.connectStores([j.default], () => ({ user: j.default.getCurrentUser() }))(function (e) {
     let { user: s } = e,
         t = (0, l.bG)([N.default], () => N.default.isAuthenticated()),
         j = (0, p.TW)(s, A.PremiumTypes.TIER_2),

@@ -141,7 +141,7 @@ function m(e) {
                 willRelocateStoreCountry: e.willRelocateStoreCountry,
             });
         I ||
-            (i = ((e, t, n, i) => {
+            (i = (function (e, t, n, i) {
                 if (null == e || null == t || null == n) {
                     let e = Error("Missing base rate for legal fine print");
                     return (0, o.pM)(e, { tags: { planId: i ?? "none" } }), null;

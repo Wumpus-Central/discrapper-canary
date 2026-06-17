@@ -11,7 +11,14 @@ s(988665);
 var c = s(822382),
     o = s(304578);
 s(504531), s(652215);
-let l = { [o.v1.FILTER]: (e) => a(e, i.nM), [o.v1.ANSWER]: (e) => a(e, i.pB) };
+let l = {
+    [o.v1.FILTER]: function (e) {
+        return a(e, i.nM);
+    },
+    [o.v1.ANSWER]: function (e) {
+        return a(e, i.pB);
+    },
+};
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = [];
