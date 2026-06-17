@@ -335,7 +335,6 @@ var R = n(315240),
 class b extends s.A {
     timeline;
     scheduledClips = [];
-    pendingCandidateDiscards = new Set();
     decisionSignals = A();
     sessionEndTimeout = new r.Ep();
     currentSessionGameKey = null;
@@ -350,7 +349,6 @@ class b extends s.A {
         GUILD_SOUNDBOARD_SOUND_PLAY_START: (e) => this.handleSoundboardPlayStart(e),
         GUILD_SOUNDBOARD_SOUND_PLAY_END: (e) => this.handleSoundboardPlayEnd(e),
         RUNNING_GAMES_CHANGE: () => this.handleRunningGamesChange(),
-        CLIPS_SAVE_CLIP: (e) => this.handleLateCandidateSave(e),
         VOICE_CHANNEL_SELECT: () => this.handleVoiceChannelSelect(),
         CLIPS_SETTINGS_UPDATE: () => this.handleSettingsUpdate(),
     };
@@ -471,7 +469,7 @@ class b extends s.A {
     }
     clear() {
         O.nx.info(
-            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${h.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} pendingCandidates=${h.Ay.getPendingClipCandidates().length} candidates=${h.Ay.getClipCandidates().length}`,
+            `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${h.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} candidates=${h.Ay.getClipCandidates().length}`,
         ),
             this.unscheduleClip(),
             this.sessionEndTimeout.stop(),
@@ -591,13 +589,11 @@ class b extends s.A {
               }));
     }
     async debugStashDeciderData() {
-        if (h.Ay.getPendingClipCandidates().length > 0)
-            return void alert("wait for pending candidates to finish saving!");
         let e = h.Ay.getClipCandidates();
         if (0 === e.length) return void alert("no candidates to stash");
         let t = {
             decisionSignals: this.decisionSignals,
-            clipCandidates: e,
+            clipCandidates: [...e],
             localUserId: c.default.getId(),
             gameId: h.Ay.getCurrentClipsSession()?.gameId ?? void 0,
         };
@@ -620,12 +616,7 @@ class b extends s.A {
         let n = new Set();
         for (let e of t.selected) (0, R.K7)(e.clip, e.score), n.add(e.clip.id);
         for (let t of e) n.has(t.id) || (0, R.oH)(t, !1);
-        for (let e of h.Ay.getPendingClipCandidates()) this.pendingCandidateDiscards.add(e.id);
         this.decisionSignals = A();
-    }
-    handleLateCandidateSave(e) {
-        let { clip: t } = e;
-        this.pendingCandidateDiscards.has(t.id) && (this.pendingCandidateDiscards.delete(t.id), (0, R.oH)(t));
     }
     handleSettingsUpdate() {
         this.timeline.updateLength(h.Ay.getSettings().clipsLength);

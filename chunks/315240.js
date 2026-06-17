@@ -418,17 +418,16 @@ function ee(e) {
           : {};
 }
 async function et(e) {
-    let { clipMethod: t, request: n, timeline: i, decision: a, isCandidate: o, gameSessionId: l } = e,
-        c = S.Ay.getSettings().storageLocation,
-        d = H(t, y.nQ.CLIP, i, a, l);
-    d.isCandidate = o ?? !1;
-    let _ = `${(0, v.A)(d.applicationName.substring(0, 20))}_${d.id}.mp4`,
-        p = s.A.fileManager.join(c, _),
-        m = E.Ay.getMediaEngine(),
-        A = JSON.stringify(d),
-        T = I.TX(d);
-    o && r.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE", clip: { ...d, pending: !0, filepath: p } });
-    let C = n.trimStartMs;
+    let { clipMethod: t, request: n, timeline: i, decision: r, isCandidate: a, gameSessionId: o } = e,
+        l = S.Ay.getSettings().storageLocation,
+        c = H(t, y.nQ.CLIP, i, r, o);
+    c.isCandidate = a ?? !1;
+    let d = `${(0, v.A)(c.applicationName.substring(0, 20))}_${c.id}.mp4`,
+        _ = s.A.fileManager.join(l, d),
+        p = E.Ay.getMediaEngine(),
+        m = JSON.stringify(c),
+        A = I.TX(c),
+        T = n.trimStartMs;
     try {
         let e,
             {
@@ -437,26 +436,26 @@ async function et(e) {
                 thumbnail: r,
                 metadata: a,
             } = await (null != h.A.getCurrentUserActiveStream()
-                ? m.saveClipForUser({
+                ? p.saveClipForUser({
                       userID: f.default.getId(),
-                      filepath: p,
-                      metadata: A,
-                      thumbnailMs: C,
+                      filepath: _,
+                      metadata: m,
+                      thumbnailMs: T,
                       startMs: n.startMs,
                       endMs: n.endMs,
                       trimStartMs: n.trimStartMs,
                       trimEndMs: n.trimEndMs,
                   })
-                : m.saveClip({
-                      filepath: p,
-                      metadata: A,
-                      thumbnailMs: C,
+                : p.saveClip({
+                      filepath: _,
+                      metadata: m,
+                      thumbnailMs: T,
                       startMs: n.startMs,
                       endMs: n.endMs,
                       trimStartMs: n.trimStartMs,
                       trimEndMs: n.trimEndMs,
                   })),
-            o = I.kY(T, i);
+            o = I.kY(A, i);
         if (
             ((o.clip_save_time_ms = i.clipSaveTimeMs),
             (o.clip_size_bytes = i.clipSizeBytes),
@@ -464,33 +463,33 @@ async function et(e) {
                 ((o.decode_fps_during_clip = i.viewerDecodeFps),
                 (o.encode_fps_during_clip = i.viewerEncodeFps),
                 (o.target_fps = null),
-                (o.remote_clip_id = d.remoteClipId)),
-            (o.clip_signal_types = I.Gb(d)),
+                (o.remote_clip_id = c.remoteClipId)),
+            (o.clip_signal_types = I.Gb(c)),
             null != a)
         )
             e = JSON.parse(a);
         else {
-            if (((d.length = t), void 0 !== r)) d.thumbnail = r;
+            if (((c.length = t), void 0 !== r)) c.thumbnail = r;
             else {
                 let e = "";
                 try {
-                    e = await (0, U.m)(s.A.clips.getClipProtocolURLFromPath(p), 0);
+                    e = await (0, U.m)(s.A.clips.getClipProtocolURLFromPath(_), 0);
                 } catch (e) {
                     D.nx.warn("Failed to generate clip thumbnail:", e);
                 }
-                (d.thumbnail = e), await m.updateClipMetadata(p, JSON.stringify(d));
+                (c.thumbnail = e), await p.updateClipMetadata(_, JSON.stringify(c));
             }
-            e = d;
+            e = c;
         }
         return (
             g.default.track(u.HAw.CLIP_SAVED, o),
             D.nx.info(`Clip save succeeded with ${t}ms and thumbnail ${e.thumbnail.length} bytes thumbnail.`),
-            { ...e, filepath: p }
+            { ...e, filepath: _ }
         );
     } catch (t) {
-        if ((o && r.h.dispatch({ type: "CLIPS_SAVE_CLIP_CANDIDATE_ERROR", clipId: d.id }), !("errorMessage" in t)))
-            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...T, ...I.lc("doSaveClip") }), t);
-        let e = I.kY(T, t);
+        if (!("errorMessage" in t))
+            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...A, ...I.lc("doSaveClip") }), t);
+        let e = I.kY(A, t);
         throw (
             ((e.error_at = t.errorAt),
             (e.error_message = t.errorMessage),
@@ -538,26 +537,21 @@ async function en(e) {
     try {
         if ("auto" === t && !a) {
             let e = S.Ay.getSettings().maxAutoClips,
-                t = S.Ay.getClips().filter((e) => !0 === e.isTemporary),
-                n = t.length - e + 1;
-            if (n > 0) {
-                let i = t.sort((e, t) => e.createdAt - t.createdAt).slice(0, n);
-                for (let t of (D.nx.info(`Deleting ${i.length} temporary clips to stay within limit of ${e}`), i))
+                t = S.Ay.getClips(),
+                n = Object.values(t).filter((e) => !0 === e.isTemporary),
+                i = n.length - e + 1;
+            if (i > 0) {
+                let t = n.sort((e, t) => e.createdAt - t.createdAt).slice(0, i);
+                for (let n of (D.nx.info(`Deleting ${t.length} temporary clips to stay within limit of ${e}`), t))
                     try {
-                        await eh(t, !1);
+                        await eh(n, !1);
                     } catch (e) {
                         D.nx.error("Failed to delete temporary clip", e);
                     }
             }
         }
         let e = await et({ clipMethod: t, request: n, timeline: i, decision: s, isCandidate: a, gameSessionId: o });
-        if (
-            a &&
-            !S.Ay.getPendingClipCandidates().some((t) => {
-                let { id: n } = t;
-                return n === e.id;
-            })
-        ) {
+        if (a && null != e.gameSessionId && S.Ay.getCurrentClipsSession()?.id !== e.gameSessionId) {
             r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }), eh(e);
             return;
         }

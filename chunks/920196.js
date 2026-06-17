@@ -411,32 +411,31 @@ var to = n(652215),
 function td(e) {
     let { onOpenGallery: t, onOpenSettings: n, onClose: s, setPopoutRef: a } = e;
     (0, e4.A)();
-    let o = (0, c.yK)([eB.Ay], () => eB.Ay.getClips()),
-        l = (0, c.bG)([eB.Ay], () => eB.Ay.getPendingClips()),
-        u = (0, c.bG)([eB.Ay], () => eB.Ay.getSettings()),
-        d = (0, c.bG)([eB.Ay], () => eB.Ay.getNewClipIds()),
-        _ = (0, e2.aJ)("ClipsPopout"),
-        h = (0, c.bG)([eB.Ay], () => eB.Ay.getEnableAutoclipping()),
-        f = (0, c.bG)([eX.Ay], () => eX.Ay.getKeybindForAction(to.hCu.SAVE_CLIP)),
-        p = r.useRef(null),
-        E = r.useMemo(() => {
-            let e = [...l, ...o].filter((e) => e.type === e1.nQ.CLIP && "" !== e.thumbnail);
+    let o = (0, c.yK)([eB.Ay], () => Object.values(eB.Ay.getClips())),
+        l = (0, c.bG)([eB.Ay], () => eB.Ay.getSettings()),
+        u = (0, c.bG)([eB.Ay], () => eB.Ay.getNewClipIds()),
+        d = (0, e2.aJ)("ClipsPopout"),
+        _ = (0, c.bG)([eB.Ay], () => eB.Ay.getEnableAutoclipping()),
+        h = (0, c.bG)([eX.Ay], () => eX.Ay.getKeybindForAction(to.hCu.SAVE_CLIP)),
+        f = r.useRef(null),
+        p = r.useMemo(() => {
+            let e = o.filter((e) => e.type === e1.nQ.CLIP && "" !== e.thumbnail);
             return e.sort((e, t) => t.createdAt - e.createdAt), e;
-        }, [o, l]),
-        m = r.useMemo(() => E.slice(0, 16), [E]),
-        g = E.length > 16,
-        A = null != f ? e0.dI(f.shortcut, !0) : null;
-    (0, eY.t)(p);
-    let I = [
-        (0, eJ.$)(u.clipsLength / eQ.A.Millis.SECOND),
-        (0, tl.zr)(u.clipsQuality.resolution),
-        eh.intl.formatToPlainString(eh.t.Qb44XH, { fps: u.clipsQuality.frameRate }),
+        }, [o]),
+        E = r.useMemo(() => p.slice(0, 16), [p]),
+        m = p.length > 16,
+        g = null != h ? e0.dI(h.shortcut, !0) : null;
+    (0, eY.t)(f);
+    let A = [
+        (0, eJ.$)(l.clipsLength / eQ.A.Millis.SECOND),
+        (0, tl.zr)(l.clipsQuality.resolution),
+        eh.intl.formatToPlainString(eh.t.Qb44XH, { fps: l.clipsQuality.frameRate }),
     ];
     return (
-        _ && I.push(eh.intl.string(tu.default.XWkJoi)),
+        d && A.push(eh.intl.string(tu.default.XWkJoi)),
         (0, i.jsxs)("div", {
             ref: (e) => {
-                (p.current = e), a?.(e);
+                (f.current = e), a?.(e);
             },
             className: tc.SW,
             role: "dialog",
@@ -453,7 +452,7 @@ function td(e) {
                                     color: "text-strong",
                                     children: eh.intl.string(eh.t.z2jK6X),
                                 }),
-                                null != A && (0, i.jsx)(eW.e, { className: tc.P, shortcut: A }),
+                                null != g && (0, i.jsx)(eW.e, { className: tc.P, shortcut: g }),
                             ],
                         }),
                         (0, i.jsxs)("div", {
@@ -486,7 +485,7 @@ function td(e) {
                 (0, i.jsxs)("div", {
                     className: tc.ov,
                     children: [
-                        I.map((e, t) =>
+                        A.map((e, t) =>
                             (0, i.jsxs)(
                                 r.Fragment,
                                 {
@@ -504,25 +503,25 @@ function td(e) {
                                 e,
                             ),
                         ),
-                        _ &&
+                        d &&
                             (0, i.jsx)(J.E, {
                                 variant: "text-xs/semibold",
-                                color: h ? "text-strong" : "text-feedback-critical",
+                                color: _ ? "text-strong" : "text-feedback-critical",
                                 tag: "span",
                                 className: tc.wS,
-                                children: h ? eh.intl.string(tu.default.lTwKmt) : eh.intl.string(tu.default.GNDqtf),
+                                children: _ ? eh.intl.string(tu.default.lTwKmt) : eh.intl.string(tu.default.GNDqtf),
                             }),
                     ],
                 }),
                 (0, i.jsx)(ez.c, {}),
-                m.length > 0
+                E.length > 0
                     ? (0, i.jsxs)(eq.Ch, {
                           className: tc.Vg,
                           fade: !0,
                           disableFocusRingScope: !0,
                           children: [
-                              m.map((e) => (0, i.jsx)(ta, { clip: e, isNew: d.includes(e.id), onClose: s }, e.id)),
-                              g &&
+                              E.map((e) => (0, i.jsx)(ta, { clip: e, isNew: u.includes(e.id), onClose: s }, e.id)),
+                              m &&
                                   (0, i.jsx)("div", {
                                       className: tc.qr,
                                       children: (0, i.jsx)(eZ.$, {
@@ -534,7 +533,7 @@ function td(e) {
                                   }),
                           ],
                       })
-                    : (0, i.jsx)(t_, { keybindString: A }),
+                    : (0, i.jsx)(t_, { keybindString: g }),
             ],
         })
     );

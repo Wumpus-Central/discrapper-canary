@@ -111,7 +111,7 @@ function P() {
         t = (0, I.sY)((e) => e.isOpen),
         [a, n] = o.useState(3),
         l = o.useCallback((e) => {
-            let t = C.Ay.getClips(),
+            let t = Object.values(C.Ay.getClips()),
                 a = t.find((e) => null != e.applicationId);
             if (a?.applicationId == null) return;
             let n = a.applicationId,
@@ -130,7 +130,7 @@ function P() {
             [l, a],
         ),
         i = o.useCallback(() => {
-            let e = C.Ay.getClips(),
+            let e = Object.values(C.Ay.getClips()),
                 t = (0, y.A)(f.Ay, E.A),
                 a =
                     (t?.id != null ? e.find((e) => e.applicationId === t.id) : void 0) ??
@@ -659,7 +659,7 @@ var ek = a(835245),
     eI = a(157559),
     eD = a(780777),
     eT = a(993408),
-    eR = a(579151),
+    eR = a(315949),
     eO = a(559474),
     ew = a(816866),
     eM = a(87558),
@@ -7572,7 +7572,7 @@ let rE = {
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-action.lottiejson": () =>
         a.e("19534").then(a.t.bind(a, 87037, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-idle.lottiejson": () =>
-        a.e("12250").then(a.t.bind(a, 331617, 19)),
+        a.e("12250").then(a.t.bind(a, 553998, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-loop.lottiejson": () =>
         a.e("58526").then(a.t.bind(a, 138157, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/cake/cake-action.lottiejson": () =>
