@@ -12,5 +12,3 @@ function o(e) {
         if ((0, i.s)(a?.items[0])) return a.items[0];
     });
 }
-n.items[0];
-})}

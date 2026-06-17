@@ -22,7 +22,7 @@ var i = n(835245),
     S = n(976860),
     y = n(569745);
 function C() {
-    return !!__OVERLAY__ || (0, y.Q)(window.location.pathname);
+    return !__OVERLAY__ && (0, y.Q)(window.location.pathname);
 }
 var N = n(604594);
 let v = (0, n(945810).mj)({
@@ -78,7 +78,7 @@ async function H() {
     E.A.addBreadcrumb({ category: L, message: "Tracking Heartbeat", data: { initialized: u.createdAtTimestamp } });
     let d = {
         client_heartbeat_initialization_timestamp: u.createdAtTimestamp,
-        client_heartbeat_version: 28,
+        client_heartbeat_version: 29,
         ...{
             ...((e = {}),
             null != (t = I.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
@@ -128,7 +128,7 @@ function Y() {
     let e = [];
     return (
         null != B && V && (F && e.push("foregrounded"), G === R.S7L.RTC_CONNECTED && e.push("rtc_connected")),
-        { active: e.length > 0, ver: 28, reasons: e }
+        { active: e.length > 0, ver: 29, reasons: e }
     );
 }
 function W() {
@@ -207,7 +207,7 @@ function et() {
                 id: setInterval(() => {
                     !(null != B && v.getConfig({ location: "shouldLogClientHeartbeatSkipped" }).logHeartbeatSkipped) ||
                         performance.now() - k <= O ||
-                        f.default.track(R.HAw.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 28 });
+                        f.default.track(R.HAw.CLIENT_HEARTBEAT_SKIPPED, { client_heartbeat_version: 29 });
                 }, O),
                 type: "interval",
             }),
