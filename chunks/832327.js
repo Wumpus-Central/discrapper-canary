@@ -713,7 +713,7 @@ function tk(e) {
         imageMarginX: 22,
     });
 }
-var tX = n(509536);
+var tX = n(85829);
 class tV extends a.PureComponent {
     handleButtonClick = () => {
         let { guild: e } = this.props;

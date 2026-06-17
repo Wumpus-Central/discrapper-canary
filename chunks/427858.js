@@ -404,7 +404,7 @@ let q = (e) => {
         promotionalNoticeContent: k,
     });
 };
-var Z = n(814304);
+var Z = n(207715);
 function X(e) {
     let {
             premiumSubscription: t,
@@ -548,7 +548,7 @@ function X(e) {
         ed = t?.eligiblePaymentGateways,
         e_ = null != ed && ed.length > 0 && (null == L || null === K) && b ? S.fU.SELECT_PAYMENT_METHOD : void 0,
         eh = r.useMemo(
-            () => ({ paymentGatewayRestrictions: t?.eligiblePaymentGateways, className: a()({ [Z.E4]: U }) }),
+            () => ({ paymentGatewayRestrictions: t?.eligiblePaymentGateways, className: a()({ [Z.E]: U }) }),
             [t?.eligiblePaymentGateways, U],
         ),
         ef = null != x || null != k,

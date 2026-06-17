@@ -1,0 +1,69 @@
+.awaitingAuthenticationStep__4ede8 {
+    padding-bottom: 16px;
+    padding-top: 16px
+}
+
+.awaitingWrapper__8a7af {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center
+}
+
+.body__96722 {
+    padding-bottom: 16px;
+    padding-top: 16px
+}
+
+.shaker_e5f3a9 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 100%;
+    justify-content: center;
+    max-height: inherit
+}
+
+.root_e5f3a9>:last-child {
+    border-end-end-radius: var(--radius-sm);
+    border-end-start-radius: var(--radius-sm)
+}
+
+.root_e5f3a9.withHeader_e5f3a9>:first-child {
+    background-color: transparent
+}
+
+@media (max-width:485px) {
+    .shaker_e5f3a9 {
+        position: absolute;
+        top: 0;
+        inset-inline: 0;
+        bottom: 0;
+        max-height: none
+    }
+
+    .root_e5f3a9,
+    .shaker_e5f3a9 {
+        justify-content: center
+    }
+
+    .root_e5f3a9 {
+        border-radius: 0;
+        width: 100vw
+    }
+}
+
+.halloweenModalHeight_e5f3a9 {
+    max-height: 800px
+}
+
+.stepBody_a3d32e {
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px
+}
+
+.stepBody_a3d32e>* {
+    width: 50%
+}

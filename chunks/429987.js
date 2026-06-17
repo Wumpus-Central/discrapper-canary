@@ -194,7 +194,7 @@ let Z = (0, a.Qx)(u.X.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING, {
         if (null == s) return;
         let l = (0, W.Xc)(e);
         (0, K.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([i.e("35790"), i.e("36281"), i.e("62041"), i.e("41996")]).then(
+            let { default: e } = await Promise.all([i.e("92164"), i.e("36281"), i.e("62041"), i.e("41996")]).then(
                 i.bind(i, 32167),
             );
             return (t) =>
@@ -8983,7 +8983,7 @@ let g5 = function (e) {
     });
 };
 var g8 = i(548118),
-    g9 = i(509536),
+    g9 = i(85829),
     me = i(944304),
     mt = i(864310),
     mi = i(245390);
@@ -20123,7 +20123,7 @@ let Ch = {
             null != n &&
                 (0, K.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        i.e("35790"),
+                        i.e("92164"),
                         i.e("36281"),
                         i.e("62041"),
                         i.e("63786"),
