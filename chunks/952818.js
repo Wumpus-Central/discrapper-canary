@@ -495,13 +495,13 @@ if (H) {
                     }
                     (eA = { timestamp: Date.now(), totalFromNative: o, entries: a }), (e = l);
                     let u = n.filter(ev).length;
-                    u !== ec && ((ec = u), d.h.dispatch({ type: "RUNNING_STREAMER_TOOLS_CHANGE", count: ec })),
-                        (Q = null != J ? [J, ...e] : e),
-                        (ee = s),
-                        (ei = n),
-                        (i = r),
-                        eR(),
-                        (en = ee.length > 0 ? ee[0] : null);
+                    for (let t of (u !== ec &&
+                        ((ec = u), d.h.dispatch({ type: "RUNNING_STREAMER_TOOLS_CHANGE", count: ec })),
+                    (Q = null != J ? [J, ...e] : e))) {
+                        let e = ea.gameOverrides[eO(t)];
+                        e?.add === !0 && t.hidden && ((es[eO(t)] = !0), (t.hidden = !1));
+                    }
+                    (ee = s), (ei = n), (i = r), eR(), (en = ee.length > 0 ? ee[0] : null);
                     let c = [];
                     for (let e of ee) e.pid in ef || ((ef[e.pid] = e), c.push(e));
                     let _ = [];
