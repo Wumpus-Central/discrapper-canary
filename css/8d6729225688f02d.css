@@ -1,0 +1,110 @@
+.centeredSection_b558e5 {
+    box-sizing: border-box;
+    max-width: 1144px;
+    padding-inline: var(--space-32);
+    position: relative;
+    width: 100%
+}
+
+.container_b558e5 {
+    background-color: var(--background-base-low);
+    border-radius: var(--radius-lg);
+    container-type: inline-size;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24);
+    padding: var(--space-24);
+    position: relative
+}
+
+.gradient_b558e5 {
+    border-radius: inherit;
+    inset: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.logo_b558e5 {
+    align-self: flex-start;
+    height: 32px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    position: relative
+}
+
+.closeButton_b558e5 {
+    inset-inline-end: var(--space-4);
+    position: absolute;
+    top: var(--space-4);
+    z-index: 1
+}
+
+.closeButton_b558e5>button {
+    color: hsla(0, 0%, 100%, .5)
+}
+
+.closeButton_b558e5>button:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: #fff
+}
+
+.promoSection_b558e5 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    position: relative
+}
+
+.headingRow_b558e5 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-16)
+}
+
+.heading_b558e5 {
+    flex: 1;
+    min-width: 0
+}
+
+.headingActions_b558e5 {
+    flex-shrink: 0;
+    gap: var(--space-16)
+}
+
+.headingActions_b558e5,
+.timeLeft_b558e5 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.timeLeft_b558e5 {
+    color: var(--text-subtle);
+    gap: var(--space-8);
+    white-space: nowrap
+}
+
+.cardGrid_b558e5 {
+    display: grid;
+    gap: var(--space-12);
+    grid-template-columns: 1fr;
+    position: relative
+}
+
+.cardGrid_b558e5>div {
+    border: none
+}
+
+@container (min-width: 472px) {
+    .cardGrid_b558e5 {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@container (min-width: 956px) {
+    .cardGrid_b558e5 {
+        grid-template-columns: repeat(4, 1fr)
+    }
+}

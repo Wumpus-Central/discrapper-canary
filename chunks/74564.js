@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     YB: "centeredSection_b558e5",
     kL: "container_b558e5",
     D7: "gradient_b558e5",
@@ -6,5 +6,8 @@ _.exports = {
     b: "closeButton_b558e5",
     xf: "promoSection_b558e5",
     B5: "headingRow_b558e5",
+    R_: "heading_b558e5",
+    U9: "headingActions_b558e5",
+    f$: "timeLeft_b558e5",
     $2: "cardGrid_b558e5",
 };

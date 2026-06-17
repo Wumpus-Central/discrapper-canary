@@ -535,6 +535,8 @@ class z {
     gradientAngle;
     skuIds;
     endTime;
+    ctaType;
+    logoUrl;
     constructor(e) {
         (this.type = k.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER),
             (this.applicationId = e.application_id),
@@ -542,7 +544,9 @@ class z {
             (this.gradientColors = e.gradient_colors),
             (this.gradientAngle = e.gradient_angle),
             (this.skuIds = e.sku_ids),
-            (this.endTime = e.end_time);
+            (this.endTime = e.end_time),
+            (this.ctaType = e.cta_type),
+            (this.logoUrl = e.logo_url);
     }
     static fromServer(e) {
         return new z(e);
