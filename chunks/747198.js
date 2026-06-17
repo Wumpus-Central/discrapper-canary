@@ -1,14 +1,15 @@
 "use strict";
-n.d(t, { i: () => u });
+n.d(t, { i: () => c });
 var i = n(64700),
     r = n(635358),
     s = n(17928),
     a = n(736056),
     o = n(564064),
-    l = n(590180);
-function u(e, t, n) {
-    let u = (0, s.bG)([a.A], () => a.A.hasLoadedExperiments),
-        [c, d, _, h, f, p, E] = (0, s.yK)([l.A], () => [
+    l = n(590180),
+    u = n(758836);
+function c(e, t, n) {
+    let c = (0, s.bG)([a.A], () => a.A.hasLoadedExperiments),
+        [d, _, h, f, p, E, m] = (0, s.yK)([l.A], () => [
             l.A.isFetchingCategories,
             l.A.lastFetchOptions,
             l.A.error,
@@ -19,22 +20,22 @@ function u(e, t, n) {
         ]);
     return (
         (0, i.useEffect)(() => {
-            if (!u || l.A.isFetchingCategories) return;
-            let i = Date.now() - h < 6e5;
-            if (_ && i) return;
-            let s = { ...e, variantsReturnStyle: r.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: E },
-                a = !(0, o.gn)(d, s),
-                c = Date.now() - f < 6e5;
-            (a || !c) && (0, o.CK)(s, t, n);
-        }, [u, d, f, e, _, h, t, n, E]),
+            if (!c || l.A.isFetchingCategories) return;
+            let i = Date.now() - f < u.Zq;
+            if (h && i) return;
+            let s = { ...e, variantsReturnStyle: r.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: m },
+                a = !(0, o.gn)(_, s),
+                d = Date.now() - p < u.i0;
+            (a || !d) && (0, o.CK)(s, t, n);
+        }, [c, _, p, e, h, f, t, n, m]),
         {
-            isFetching: c,
-            categories: p,
-            fetchCategoriesError: _,
+            isFetching: d,
+            categories: E,
+            fetchCategoriesError: h,
             refreshCategories: (0, i.useCallback)(() => {
-                let t = { ...e, variantsReturnStyle: r.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: E };
+                let t = { ...e, variantsReturnStyle: r.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: m };
                 (0, o.CK)(t, void 0, n);
-            }, [e, n, E]),
+            }, [e, n, m]),
         }
     );
 }

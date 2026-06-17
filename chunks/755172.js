@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y: () => _ });
+n.d(t, { y: () => h });
 var i = n(64700),
     r = n(635358),
     s = n(17928),
@@ -8,12 +8,13 @@ var i = n(64700),
     l = n(590180),
     u = n(295811),
     c = n(651162),
-    d = n(652215);
-function _(e, t, n) {
-    let _ = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        h = (0, s.bG)([a.A], () => a.A.hasLoadedExperiments),
-        f = (0, s.bG)([l.A], () => l.A.skipNumCategories),
-        [p, E, m, g, A, I, T, S] = (0, s.yK)([u.A], () => [
+    d = n(652215),
+    _ = n(758836);
+function h(e, t, n) {
+    let h = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        f = (0, s.bG)([a.A], () => a.A.hasLoadedExperiments),
+        p = (0, s.bG)([l.A], () => l.A.skipNumCategories),
+        [E, m, g, A, I, T, S, y] = (0, s.yK)([u.A], () => [
             u.A.getShopBlocks(e),
             u.A.getLastSuccessfulFetch(e) ?? 0,
             u.A.getLastErrorTimestamp(e) ?? 0,
@@ -23,19 +24,19 @@ function _(e, t, n) {
             u.A.getHasKnownStaleData(e),
             u.A.getShopHomeConfigOverride(),
         ]),
-        y = (0, i.useMemo)(
+        C = (0, i.useMemo)(
             () => ({
                 ...t,
                 variantsReturnStyle: r.g.VARIANTS_GROUP,
                 includeBundles: !0,
                 includeDynamicBlocks: !0,
-                shopHomeConfig: S,
-                skipNumCategories: f,
+                shopHomeConfig: y,
+                skipNumCategories: p,
             }),
-            [t, S, f],
+            [t, y, p],
         ),
-        C = (0, i.useMemo)(() => !(0, o.gn)(g, y), [g, y]),
-        N = ((e, t, n) => {
+        N = (0, i.useMemo)(() => !(0, o.gn)(A, C), [A, C]),
+        v = ((e, t, n) => {
             let [r, s] = (0, i.useState)(!1);
             return (
                 (0, i.useEffect)(() => {
@@ -64,21 +65,21 @@ function _(e, t, n) {
                 }, [t, n, e]),
                 r
             );
-        })(p, I ?? !1, _),
-        v = (0, i.useMemo)(() => !N && Date.now() - E < 6e5, [E, N]);
+        })(E, T ?? !1, h),
+        R = (0, i.useMemo)(() => !v && Date.now() - m < _.i0, [m, v]);
     return (
         (0, i.useEffect)(() => {
-            if (!h || I) return;
-            let t = Date.now() - m < 6e5;
-            (null != A && t) || ((C || !v || T) && (0, o.h$)(e, y, n));
-        }, [h, I, A, m, v, T, C, y, e, n]),
+            if (!f || T) return;
+            let t = Date.now() - g < _.Zq;
+            (null != I && t) || ((N || !R || S) && (0, o.h$)(e, C, n));
+        }, [f, T, I, g, R, S, N, C, e, n]),
         {
-            isFetchingShopHome: I,
-            fetchShopHomeError: A,
-            shopBlocks: p,
+            isFetchingShopHome: T,
+            fetchShopHomeError: I,
+            shopBlocks: E,
             refreshShopHome: (0, i.useCallback)(() => {
-                (0, o.h$)(e, y, n);
-            }, [e, y, n]),
+                (0, o.h$)(e, C, n);
+            }, [e, C, n]),
         }
     );
 }
