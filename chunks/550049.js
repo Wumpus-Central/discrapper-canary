@@ -1,3 +1,4 @@
-s.exports = JSON.parse(
-    '{"F3llsQ":["Megoszt\xe1s, amikor friss\xedtem a profilomat"],"6goWcz":["Annak enged\xe9lyez\xe9se, hogy a bar\xe1tok lek\xfcld\xe9ses \xe9rtes\xedt\xe9st kapjanak, amikor friss\xedted a profilodat."]}',
-);
+s.exports = {
+    F3llsQ: ["Megosztás, amikor frissítem a profilomat"],
+    "6goWcz": ["Annak engedélyezése, hogy a barátok leküldéses értesítést kapjanak, amikor frissíted a profilodat."],
+};

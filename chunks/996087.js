@@ -1,3 +1,27 @@
-e.exports = JSON.parse(
-    '{"0LL6FX":["Det h\xe4r kommer att uppdatera serverns utseende f\xf6r alla medlemmar. Temat anpassar sig efter deras ljusa eller m\xf6rka l\xe4ge."],"H8idcP":["Anv\xe4nd servertema?"],"odtr7f":["V\xe4lj ett f\xf6rinst\xe4llt tema eller skapa ditt eget. Varje medlem ser detta tema n\xe4r de \xf6ppnar servern och det anpassar sig till deras ljusa eller m\xf6rka l\xe4ge. ",[8,"$link",["L\xe4s mer"],[[1,"articleUrl"]]]],"XhiIAu":["Det h\xe4r \xe4ndrar hur din server ser ut f\xf6r alla medlemmar."],"aZpFFn":["Aktivera servertema"],"jSrqR2":["F\xe4rginst\xe4llningar"],"XyrxOp":["Bl\xe5lila"],"tXRcxU":["Denim"],"S8/OZA":["Eld"],"nCbxEN":["Guldstoft"],"6ZeQDd":["Jade"],"TiGQro":["Mossa"],"x3h/OV":["Obsidian"],"qn90j5":["Havsbl\xe5"],"tTJY6S":["M\xf6rklila"],"+k8Q/o":["Skymning"],"HkvkHP":["Varje medlems ljusa eller m\xf6rka l\xe4ge kommer att visas f\xf6r dem."],"zry4l5":["F\xf6rhandsgranska tema"],"Ck5zxP":["V\xe4lj ditt tema"],"/6NbRv":["Servertema"]}',
-);
+e.exports = {
+    "0LL6FX": [
+        "Det här kommer att uppdatera serverns utseende för alla medlemmar. Temat anpassar sig efter deras ljusa eller mörka läge.",
+    ],
+    H8idcP: ["Använd servertema?"],
+    odtr7f: [
+        "Välj ett förinställt tema eller skapa ditt eget. Varje medlem ser detta tema när de öppnar servern och det anpassar sig till deras ljusa eller mörka läge. ",
+        [8, "$link", ["Läs mer"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["Det här ändrar hur din server ser ut för alla medlemmar."],
+    aZpFFn: ["Aktivera servertema"],
+    jSrqR2: ["Färginställningar"],
+    XyrxOp: ["Blålila"],
+    tXRcxU: ["Denim"],
+    "S8/OZA": ["Eld"],
+    nCbxEN: ["Guldstoft"],
+    "6ZeQDd": ["Jade"],
+    TiGQro: ["Mossa"],
+    "x3h/OV": ["Obsidian"],
+    qn90j5: ["Havsblå"],
+    tTJY6S: ["Mörklila"],
+    "+k8Q/o": ["Skymning"],
+    HkvkHP: ["Varje medlems ljusa eller mörka läge kommer att visas för dem."],
+    zry4l5: ["Förhandsgranska tema"],
+    Ck5zxP: ["Välj ditt tema"],
+    "/6NbRv": ["Servertema"],
+};

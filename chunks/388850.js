@@ -1,3 +1,78 @@
-o.exports = JSON.parse(
-    '{"5h8p5P":[[6,"count",{"one":["Platforma ",[1,"platforms"]," nen\xed podporov\xe1na."],"other":["Platformy ",[1,"platforms"]," nejsou podporov\xe1ny."]},0,"cardinal"]],"vyAtfo":["Propoj sv\u016Fj \xfa\u010Det ve h\u0159e ",[1,"applicationName"]," s\xa0\xfa\u010Dtem na Discordu a\xa0p\u0159ijmi tento d\xe1rek. ",[1,"platforms_info"]],"yqAKVO":["\xda\u010Det je propojen\xfd s\xa0hrou ",[1,"applicationName"],". N\xed\u017Ee si vyzvedni sv\u016Fj d\xe1rek. ",[1,"platforms_info"]],"Ufm9XX":["Kliknut\xedm na tla\u010D\xedtko \u201E",[1,"buyButtonLabel"],"\u201C vyjad\u0159uje\u0161 souhlas s\xa0",[8,"$link",["podm\xednkami placen\xfdch slu\u017Eeb"],[[1,"paidServiceTermURL"]]],". ",[8,"$b",["Koup\xed polo\u017Eky z\xa0hern\xedho obchodu ",[1,"applicationName"]," si kupuje\u0161 omezenou licenci k\xa0pou\u017E\xedv\xe1n\xed t\xe9to polo\u017Eky v\xa0uveden\xe9 h\u0159e."]]," Tento n\xe1kup nelze refundovat. Tuto polo\u017Eku doru\u010D\xed v\xfdvoj\xe1\u0159 p\u0159\xedmo ve h\u0159e."],"Q0dHYO":["Pro uplatn\u011Bn\xed je vy\u017Eadov\xe1n odkaz na \xfa\u010Det. ",[1,"platforms_info"]],"3ah/a2":[[8,"$b",["Koup\xed polo\u017Eky z\xa0hern\xedho obchodu ",[1,"applicationName"]," si kupuje\u0161 omezenou licenci k\xa0pou\u017E\xedv\xe1n\xed t\xe9to polo\u017Eky v\xa0uveden\xe9 h\u0159e."]]," Tento n\xe1kup nelze vr\xe1tit. Tuto polo\u017Eku doru\u010D\xed v\xfdvoj\xe1\u0159 p\u0159\xedmo ve h\u0159e. ",[1,"platforms_info"]],"fO4b1C":["Propoj sv\u016Fj \xfa\u010Det ve h\u0159e ",[1,"applicationName"]," s\xa0\xfa\u010Dtem na Discordu a\xa0p\u0159ijmi tento n\xe1kup. ",[1,"platforms_info"]],"Sy7D+/":["Tento obchod zat\xedm nem\xe1 \u017E\xe1dn\xe9 polo\u017Eky. Vra\u0165 se pozd\u011Bji!"],"OvBwPV":["Nen\xed dostupn\xe1 \u017E\xe1dn\xe1 v\xfdloha"],"BMMo2K":["P\u0159ed p\u0159ijet\xedm tohoto d\xe1rku propoj svou aplikaci ",[1,"applicationName"]," a\xa0\xfa\u010Det na Discordu v\xa0nastaven\xed Discordu na po\u010D\xedta\u010Di."],"eNNnIG":["P\u0159ed p\u0159ijet\xedm tohoto n\xe1kupu propoj svou aplikaci ",[1,"applicationName"]," a\xa0\xfa\u010Det na Discordu v\xa0nastaven\xed Discordu na po\u010D\xedta\u010Di."],"gndWN7":["P\u0159ed n\xe1kupem mus\xed\u0161 otev\u0159\xedt Discord na po\u010D\xedta\u010Di."],"bRPsNX":["Z\xedskej sv\u016Fj n\xe1kup"],"BKf0MM":["Zobrazit podrobnosti"]}',
-);
+o.exports = {
+    "5h8p5P": [
+        [
+            6,
+            "count",
+            {
+                one: ["Platforma ", [1, "platforms"], " není podporována."],
+                other: ["Platformy ", [1, "platforms"], " nejsou podporovány."],
+            },
+            0,
+            "cardinal",
+        ],
+    ],
+    vyAtfo: [
+        "Propoj svůj účet ve hře ",
+        [1, "applicationName"],
+        " s účtem na Discordu a přijmi tento dárek. ",
+        [1, "platforms_info"],
+    ],
+    yqAKVO: [
+        "Účet je propojený s hrou ",
+        [1, "applicationName"],
+        ". Níže si vyzvedni svůj dárek. ",
+        [1, "platforms_info"],
+    ],
+    Ufm9XX: [
+        "Kliknutím na tlačítko „",
+        [1, "buyButtonLabel"],
+        "“ vyjadřuješ souhlas s ",
+        [8, "$link", ["podmínkami placených služeb"], [[1, "paidServiceTermURL"]]],
+        ". ",
+        [
+            8,
+            "$b",
+            [
+                "Koupí položky z herního obchodu ",
+                [1, "applicationName"],
+                " si kupuješ omezenou licenci k používání této položky v uvedené hře.",
+            ],
+        ],
+        " Tento nákup nelze refundovat. Tuto položku doručí vývojář přímo ve hře.",
+    ],
+    Q0dHYO: ["Pro uplatnění je vyžadován odkaz na účet. ", [1, "platforms_info"]],
+    "3ah/a2": [
+        [
+            8,
+            "$b",
+            [
+                "Koupí položky z herního obchodu ",
+                [1, "applicationName"],
+                " si kupuješ omezenou licenci k používání této položky v uvedené hře.",
+            ],
+        ],
+        " Tento nákup nelze vrátit. Tuto položku doručí vývojář přímo ve hře. ",
+        [1, "platforms_info"],
+    ],
+    fO4b1C: [
+        "Propoj svůj účet ve hře ",
+        [1, "applicationName"],
+        " s účtem na Discordu a přijmi tento nákup. ",
+        [1, "platforms_info"],
+    ],
+    "Sy7D+/": ["Tento obchod zatím nemá žádné položky. Vrať se později!"],
+    OvBwPV: ["Není dostupná žádná výloha"],
+    BMMo2K: [
+        "Před přijetím tohoto dárku propoj svou aplikaci ",
+        [1, "applicationName"],
+        " a účet na Discordu v nastavení Discordu na počítači.",
+    ],
+    eNNnIG: [
+        "Před přijetím tohoto nákupu propoj svou aplikaci ",
+        [1, "applicationName"],
+        " a účet na Discordu v nastavení Discordu na počítači.",
+    ],
+    gndWN7: ["Před nákupem musíš otevřít Discord na počítači."],
+    bRPsNX: ["Získej svůj nákup"],
+    BKf0MM: ["Zobrazit podrobnosti"],
+};

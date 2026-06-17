@@ -1,3 +1,17 @@
-i.exports = JSON.parse(
-    '{"RPb8Zk":["Geri bildirimin Discord g\xfcvenlik \xf6zelliklerini geli\u015Ftirmemize yard\u0131mc\u0131 oluyor."],"cDP3b4":["Geri bildirim g\xf6nderildi"],"KZw6kn":["Hangi \xf6zellik gerekti\u011Fi gibi \xe7al\u0131\u015Fm\u0131yor?"],"eSP1F9":["Bu i\xe7eri\u011Fi g\xf6rmek hakk\u0131ndaki fikrimi de\u011Fi\u015Ftirdim"],"bC0QVX":["Talimatlar kafa kar\u0131\u015Ft\u0131r\u0131c\u0131yd\u0131"],"8JFGXc":["Ad\u0131mlar\u0131 takip etmeye \xe7al\u0131\u015Ft\u0131m ama i\u015Fe yaramad\u0131"],"Dl4A+U":["Yan\u0131mda gerekli belgeler yoktu"],"ZsnNgz":["Ki\u015Fisel bilgi payla\u015Fma konusunda endi\u015Feliyim"],"ep5SQp":["Ba\u015Fka bir \u015Fey"],"kkKhVJ":["Bu \xe7ok zaman al\u0131yor"],"maxf2S":["Bunun neden gerekli oldu\u011Fundan emin de\u011Fildim"],"Q5cQ46":["Sorununu a\xe7\u0131kla"],"zApKaR":["Bize daha fazla bilgi vermek ister misin?"],"4djgO/":["Geribildirimin i\xe7in te\u015Fekk\xfcrler!"],"RqoA4v":["Ya\u015F do\u011Frulama deneyimin nas\u0131ld\u0131?"]}',
-);
+i.exports = {
+    RPb8Zk: ["Geri bildirimin Discord güvenlik özelliklerini geliştirmemize yardımcı oluyor."],
+    cDP3b4: ["Geri bildirim gönderildi"],
+    KZw6kn: ["Hangi özellik gerektiği gibi çalışmıyor?"],
+    eSP1F9: ["Bu içeriği görmek hakkındaki fikrimi değiştirdim"],
+    bC0QVX: ["Talimatlar kafa karıştırıcıydı"],
+    "8JFGXc": ["Adımları takip etmeye çalıştım ama işe yaramadı"],
+    "Dl4A+U": ["Yanımda gerekli belgeler yoktu"],
+    ZsnNgz: ["Kişisel bilgi paylaşma konusunda endişeliyim"],
+    ep5SQp: ["Başka bir şey"],
+    kkKhVJ: ["Bu çok zaman alıyor"],
+    maxf2S: ["Bunun neden gerekli olduğundan emin değildim"],
+    Q5cQ46: ["Sorununu açıkla"],
+    zApKaR: ["Bize daha fazla bilgi vermek ister misin?"],
+    "4djgO/": ["Geribildirimin için teşekkürler!"],
+    RqoA4v: ["Yaş doğrulama deneyimin nasıldı?"],
+};

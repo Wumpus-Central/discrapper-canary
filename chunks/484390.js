@@ -1,3 +1,5 @@
-i.exports = JSON.parse(
-    '{"yfwZuy":["Ver mi insignia"],"UnPGii":["La insignia se ha a\xf1adido a tu perfil."],"nvaTQq":["\xa1Has conseguido la insignia de perfil de Orbs!"]}',
-);
+i.exports = {
+    yfwZuy: ["Ver mi insignia"],
+    UnPGii: ["La insignia se ha añadido a tu perfil."],
+    nvaTQq: ["¡Has conseguido la insignia de perfil de Orbs!"],
+};

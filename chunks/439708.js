@@ -1,3 +1,57 @@
-n.exports = JSON.parse(
-    '{"LsJ9hj":["Sleva ",[1,"discountPercent"],"\xa0% na Logitech"],"8Gl8gP":["Postav si svou vysn\u011Bnou sestavu s\xa0exkluzivn\xedmi slevov\xfdmi k\xf3dy ka\u017Ed\xfd m\u011Bs\xedc. Pouze s\xa0p\u0159edplatn\xfdm Discord Nitro."],"HINTfJ":["Zobrazit nab\xeddky"],"Yl5ww1":["Plat\xed na v\u0161echny produkty Logitech\xa0G, s\xa0v\xfdjimkou nov\xfdch produkt\u016F a\xa0vybaven\xed \u0159ady PRO."],"mH30Yx":["Plat\xed na v\u0161echny produkty Logitech\xa0G, s\xa0v\xfdjimkou nov\xfdch produkt\u016F a\xa0vybaven\xed \u0159ady PRO pro simul\xe1tory."],"jkdhZq":["Sleva ",[1,"discountPercent"],"\xa0% na v\u0161echny produkty"],"fC4abC":["Plat\xed na nov\xe9 produkty b\u011Bhem ",[6,"months",{"one":["prvn\xedho ",[7],"\xa0m\u011Bs\xedce"],"other":["prvn\xedch ",[7],"\xa0m\u011Bs\xedc\u016F"]},0,"cardinal"]," dostupnosti."],"zeBjoX":[[1,"discountPercent"],"% sleva na nov\xe9 produkty"],"lsRjfl":["Plat\xed na z\xe1vodn\xed vybaven\xed \u0159ady PRO pro simul\xe1tory."],"pSBCjv":[[1,"discountPercent"],"% sleva na \u0159adu PRO pro simul\xe1tory"],"ogcfac":[[1,"discountPercent"],"% sleva na kolekci \u0159ady PRO"],"65EEvD":["Nov\xfd k\xf3d tu bude za ",[6,"days",{"one":[[7],"\xa0den"],"few":[[7],"\xa0dny"],"other":[[7],"\xa0dn\xed"]},0,"cardinal"]],"W8jOD0":["Jeden k\xf3d na n\xe1kup. ",[8,"$link",["Plat\xed podm\xednky"],[[1,"termsUrl"]]],"."],"2I7nK+":["Slevy Logitech"],"/UNTlE":["Vyzvedni si ka\u017Ed\xfd m\u011Bs\xedc slevu ",[1,"discountPercent"],"\xa0% na produkty \u202FLogitech\xa0G a\xa0vyu\u017Eij jednor\xe1zov\xe9 slevy na vybaven\xed \u0159ady PRO a\xa0na nov\xe9 produkt. ",[8,"$link",["Plat\xed podm\xednky"],[[1,"termsUrl"]]],"."],"bZLaD+":["Odemknout odm\u011Bny"],"ZGOJ8R":["Vyzvedni si ka\u017Ed\xfd m\u011Bs\xedc slevu ",[1,"discountPercent"],"\xa0% na produkty \u202FLogitech\xa0G a\xa0vyu\u017Eij jednor\xe1zov\xe9 slevy na vybaven\xed \u0159ady PRO pro z\xe1vodn\xed simul\xe1tory a\xa0na nov\xe9 produkty. ",[8,"$link",["Plat\xed podm\xednky"],[[1,"termsUrl"]]],"."],"6KjkUa":["Vztahuje se na jak\xfdkoli produkt na webu Logitech, s\xa0v\xfdjimkou \u0159ady G a\xa0nov\xfdch produkt\u016F. Plat\xed do ",[3,"date","short"],"."],"zinfZi":["Vyzvedni si ka\u017Ed\xfd m\u011Bs\xedc slevu ",[1,"discountPercent"],"\xa0% na vybaven\xed Logitech G."],"OlObRa":["Upgraduj svou sestavu levn\u011Bji"],"A+56/R":["Vyzvedni si ",[1,"discountPercent"],"% slevu na vybaven\xed Logitech\u202FG ka\u017Ed\xfd m\u011Bs\xedc, pouze s\xa0p\u0159edplatn\xfdm Discord Nitro."],"gc2sa/":["Ka\u017Ed\xfd m\u011Bs\xedc sleva u\xa0Logitech\xa0G"],"KoKwMn":["Ka\u017Ed\xfd m\u011Bs\xedc sleva na v\u011Bt\u0161inu za\u0159\xedzen\xed Logitech\xa0G. Plat\xed ur\u010Dit\xe9 v\xfdjimky."],"PF1aT5":["Sleva ",[1,"discountPercentage"],"\xa0% na Logitech G"],"9Y2p6p":["Ka\u017Ed\xfd m\u011Bs\xedc odm\u011Bna"],"Wm58LR":["Jednor\xe1zov\xe9 slevy"]}',
-);
+n.exports = {
+    LsJ9hj: ["Sleva ", [1, "discountPercent"], " % na Logitech"],
+    "8Gl8gP": [
+        "Postav si svou vysněnou sestavu s exkluzivními slevovými kódy každý měsíc. Pouze s předplatným Discord Nitro.",
+    ],
+    HINTfJ: ["Zobrazit nabídky"],
+    Yl5ww1: ["Platí na všechny produkty Logitech G, s výjimkou nových produktů a vybavení řady PRO."],
+    mH30Yx: ["Platí na všechny produkty Logitech G, s výjimkou nových produktů a vybavení řady PRO pro simulátory."],
+    jkdhZq: ["Sleva ", [1, "discountPercent"], " % na všechny produkty"],
+    fC4abC: [
+        "Platí na nové produkty během ",
+        [6, "months", { one: ["prvního ", [7], " měsíce"], other: ["prvních ", [7], " měsíců"] }, 0, "cardinal"],
+        " dostupnosti.",
+    ],
+    zeBjoX: [[1, "discountPercent"], "% sleva na nové produkty"],
+    lsRjfl: ["Platí na závodní vybavení řady PRO pro simulátory."],
+    pSBCjv: [[1, "discountPercent"], "% sleva na řadu PRO pro simulátory"],
+    ogcfac: [[1, "discountPercent"], "% sleva na kolekci řady PRO"],
+    "65EEvD": [
+        "Nový kód tu bude za ",
+        [6, "days", { one: [[7], " den"], few: [[7], " dny"], other: [[7], " dní"] }, 0, "cardinal"],
+    ],
+    W8jOD0: ["Jeden kód na nákup. ", [8, "$link", ["Platí podmínky"], [[1, "termsUrl"]]], "."],
+    "2I7nK+": ["Slevy Logitech"],
+    "/UNTlE": [
+        "Vyzvedni si každý měsíc slevu ",
+        [1, "discountPercent"],
+        " % na produkty  Logitech G a využij jednorázové slevy na vybavení řady PRO a na nové produkt. ",
+        [8, "$link", ["Platí podmínky"], [[1, "termsUrl"]]],
+        ".",
+    ],
+    "bZLaD+": ["Odemknout odměny"],
+    ZGOJ8R: [
+        "Vyzvedni si každý měsíc slevu ",
+        [1, "discountPercent"],
+        " % na produkty  Logitech G a využij jednorázové slevy na vybavení řady PRO pro závodní simulátory a na nové produkty. ",
+        [8, "$link", ["Platí podmínky"], [[1, "termsUrl"]]],
+        ".",
+    ],
+    "6KjkUa": [
+        "Vztahuje se na jakýkoli produkt na webu Logitech, s výjimkou řady G a nových produktů. Platí do ",
+        [3, "date", "short"],
+        ".",
+    ],
+    zinfZi: ["Vyzvedni si každý měsíc slevu ", [1, "discountPercent"], " % na vybavení Logitech G."],
+    OlObRa: ["Upgraduj svou sestavu levněji"],
+    "A+56/R": [
+        "Vyzvedni si ",
+        [1, "discountPercent"],
+        "% slevu na vybavení Logitech G každý měsíc, pouze s předplatným Discord Nitro.",
+    ],
+    "gc2sa/": ["Každý měsíc sleva u Logitech G"],
+    KoKwMn: ["Každý měsíc sleva na většinu zařízení Logitech G. Platí určité výjimky."],
+    PF1aT5: ["Sleva ", [1, "discountPercentage"], " % na Logitech G"],
+    "9Y2p6p": ["Každý měsíc odměna"],
+    Wm58LR: ["Jednorázové slevy"],
+};

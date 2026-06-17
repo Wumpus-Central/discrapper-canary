@@ -1,3 +1,27 @@
-e.exports = JSON.parse(
-    '{"0LL6FX":["Aceast\u0103 ac\u021Biune va actualiza aspectul serverului pentru to\u021Bi membri. Tema respect\u0103 preferin\u021Ba fiec\u0103rui membru pentru modul luminos sau \xeentunecat."],"H8idcP":["Aplici tema serverului?"],"odtr7f":["Alege o tem\u0103 prestabilit\u0103 sau creeaz\u0103 una personalizat\u0103. To\u021Bi membrii o vor vedea c\xe2nd intr\u0103 pe server. \xcen plus, tema se adapteaz\u0103 automat la modul luminos sau \xeentunecat. ",[8,"$link",["Afl\u0103 mai multe"],[[1,"articleUrl"]]]],"XhiIAu":["Aceast\u0103 ac\u021Biune modific\u0103 aspectul serverului pentru to\u021Bi membrii."],"aZpFFn":["Activeaz\u0103 tema serverului"],"jSrqR2":["Presetate"],"XyrxOp":["Albastrolet"],"tXRcxU":["Denim"],"S8/OZA":["Foc"],"nCbxEN":["Pulbere de aur"],"6ZeQDd":["Jad"],"TiGQro":["Mu\u0219chi"],"x3h/OV":["Obsidian"],"qn90j5":["Ocean"],"tTJY6S":["Mov \xeenchis"],"+k8Q/o":["Amurg"],"HkvkHP":["Tema respect\u0103 preferin\u021Ba fiec\u0103rui membru pentru modul luminos sau \xeentunecat."],"zry4l5":["Previzualizeaz\u0103 tema"],"Ck5zxP":["Selecteaz\u0103-\u021Bi tema"],"/6NbRv":["Tema serverului"]}',
-);
+e.exports = {
+    "0LL6FX": [
+        "Această acțiune va actualiza aspectul serverului pentru toți membri. Tema respectă preferința fiecărui membru pentru modul luminos sau întunecat.",
+    ],
+    H8idcP: ["Aplici tema serverului?"],
+    odtr7f: [
+        "Alege o temă prestabilită sau creează una personalizată. Toți membrii o vor vedea când intră pe server. În plus, tema se adaptează automat la modul luminos sau întunecat. ",
+        [8, "$link", ["Află mai multe"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["Această acțiune modifică aspectul serverului pentru toți membrii."],
+    aZpFFn: ["Activează tema serverului"],
+    jSrqR2: ["Presetate"],
+    XyrxOp: ["Albastrolet"],
+    tXRcxU: ["Denim"],
+    "S8/OZA": ["Foc"],
+    nCbxEN: ["Pulbere de aur"],
+    "6ZeQDd": ["Jad"],
+    TiGQro: ["Mușchi"],
+    "x3h/OV": ["Obsidian"],
+    qn90j5: ["Ocean"],
+    tTJY6S: ["Mov închis"],
+    "+k8Q/o": ["Amurg"],
+    HkvkHP: ["Tema respectă preferința fiecărui membru pentru modul luminos sau întunecat."],
+    zry4l5: ["Previzualizează tema"],
+    Ck5zxP: ["Selectează-ți tema"],
+    "/6NbRv": ["Tema serverului"],
+};

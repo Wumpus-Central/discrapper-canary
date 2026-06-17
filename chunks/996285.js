@@ -1,3 +1,46 @@
-s.exports = JSON.parse(
-    '{"mXY4Rb":["U\u017E pat\u0159\xed\u0161 mezi \u010Dleny Game Passu? ",[8,"$link",["Propoj sv\u016Fj \xfa\u010Det"],[[1,"onConnect"]]]," a\xa0odemkni dal\u0161\xed odm\u011Bny za Orbs a\xa0slevy v\xa0Obchod\u011B."],"oBYFF3":["Z\xedskat v\u0161echny v\xfdhody Nitra"],"HZz88k":["M\u011Bs\xed\u010Dn\xed p\u0159\xedd\u011Bly Orbs"],"Aau2G1":["Multiplik\xe1tor Orbs"],"6Udfv9":["Sleva v\xa0Obchod\u011B"],"f1ygW4":["Tv\u016Fj Xbox Game Pass p\u0159in\xe1\u0161\xed ochutn\xe1vku Nitra"],"cRLw2a":["Tv\u016Fj Xbox Game Pass p\u0159in\xe1\u0161\xed ochutn\xe1vku Nitra"],"ZYc6Hv":["Z\xedskej ka\u017Ed\xfd m\u011Bs\xedc ",[1,"orbAmount"],"\xa0Orbs nav\xedc. Dal\u0161\xed p\u0159\xedd\u011Bl bude za p\xe1r dn\xed \u2013 celkem ",[1,"days"],"."],"+tdDeK":["M\u011Bs\xed\u010Dn\xed p\u0159\xedd\u011Bly Orbs"],"kc3Kvs":["Prom\u011B\u0148 sv\xe9 v\xfdhry v \xfakolech na mega v\xfdhry d\xedky multiplik\xe1toru ",[1,"multiplier"],"\xd7 Orbs za odm\u011Bnu."],"++kzl5":["Multiplik\xe1tor Orbs"],"WgkpKK":["U\u017Eij si skv\u011Bl\xe9 slevy na vybran\xe9 polo\u017Eky v\xa0Obchod\u011B Discordu. ",[8,"$link",["Nav\u0161t\xedvit Obchod"],[[1,"onClick"]]]],"a+PtZt":["Sleva v\xa0Obchod\u011B"],"70kyQr":["Tv\xe9 \u010Dlenstv\xed v\xa0Xbox Game Pass p\u0159in\xe1\u0161\xed ochutn\xe1vku Nitra. U\u017E\xedvej si tyto 3\xa0v\xfdhody Nitra. ",[8,"$link",["Zjistit v\xedce"],[[1,"learnMoreLink"]]]],"4CdlUW":["Odemkni v\u0161echny v\xfdhody Nitra"],"c5usUr":["Z\xedskej v\xedce Orbs"],"UkrcSH":["D\xedky sv\xe9mu \u010Dlenstv\xed v\xa0Xbox Game Pass si m\u016F\u017Ee\u0161 vychutnat Nitro a\xa0k tomu z\xedskat ",[2,"bonusOrbMultiplier"],"\xd7 v\xedce Orbs za pln\u011Bn\xed \xfakol\u016F"],"D+kUbg":["U\u017Eivatel\xe9 Xbox Game Pass nyn\xed za odm\u011Bnu z\xedsk\xe1vaj\xed dal\u0161\xed Orbs a\xa0slevy v\xa0obchod\u011B na Discordu. Znovu propoj sv\u016Fj Xbox a\xa0odemkni si cestu k\xa0odm\u011Bn\xe1m. ",[8,"$link",["Zjistit v\xedce"],[[1,"learnMoreLink"]]]],"9cLtDI":["Nov\xe9! Ochutnej Discord Nitro s Xbox Game Pass"],"DePOcS":["Sleva v\xa0Obchod\u011B je sou\u010D\xe1st\xed Xbox Game Pass"],"Urtyu9":["Dal\u0161\xed m\u011Bs\xed\u010Dn\xed p\u0159\xedd\u011Bl Orbs z\xedsk\xe1\u0161 ",[1,"days"],"\xa0d po za\u010D\xe1tku sv\xe9ho p\u0159edplatn\xe9ho Discord Nitro."]}',
-);
+s.exports = {
+    mXY4Rb: [
+        "Už patříš mezi členy Game Passu? ",
+        [8, "$link", ["Propoj svůj účet"], [[1, "onConnect"]]],
+        " a odemkni další odměny za Orbs a slevy v Obchodě.",
+    ],
+    oBYFF3: ["Získat všechny výhody Nitra"],
+    HZz88k: ["Měsíční příděly Orbs"],
+    Aau2G1: ["Multiplikátor Orbs"],
+    "6Udfv9": ["Sleva v Obchodě"],
+    f1ygW4: ["Tvůj Xbox Game Pass přináší ochutnávku Nitra"],
+    cRLw2a: ["Tvůj Xbox Game Pass přináší ochutnávku Nitra"],
+    ZYc6Hv: [
+        "Získej každý měsíc ",
+        [1, "orbAmount"],
+        " Orbs navíc. Další příděl bude za pár dní – celkem ",
+        [1, "days"],
+        ".",
+    ],
+    "+tdDeK": ["Měsíční příděly Orbs"],
+    kc3Kvs: ["Proměň své výhry v úkolech na mega výhry díky multiplikátoru ", [1, "multiplier"], "× Orbs za odměnu."],
+    "++kzl5": ["Multiplikátor Orbs"],
+    WgkpKK: [
+        "Užij si skvělé slevy na vybrané položky v Obchodě Discordu. ",
+        [8, "$link", ["Navštívit Obchod"], [[1, "onClick"]]],
+    ],
+    "a+PtZt": ["Sleva v Obchodě"],
+    "70kyQr": [
+        "Tvé členství v Xbox Game Pass přináší ochutnávku Nitra. Užívej si tyto 3 výhody Nitra. ",
+        [8, "$link", ["Zjistit více"], [[1, "learnMoreLink"]]],
+    ],
+    "4CdlUW": ["Odemkni všechny výhody Nitra"],
+    c5usUr: ["Získej více Orbs"],
+    UkrcSH: [
+        "Díky svému členství v Xbox Game Pass si můžeš vychutnat Nitro a k tomu získat ",
+        [2, "bonusOrbMultiplier"],
+        "× více Orbs za plnění úkolů",
+    ],
+    "D+kUbg": [
+        "Uživatelé Xbox Game Pass nyní za odměnu získávají další Orbs a slevy v obchodě na Discordu. Znovu propoj svůj Xbox a odemkni si cestu k odměnám. ",
+        [8, "$link", ["Zjistit více"], [[1, "learnMoreLink"]]],
+    ],
+    "9cLtDI": ["Nové! Ochutnej Discord Nitro s Xbox Game Pass"],
+    DePOcS: ["Sleva v Obchodě je součástí Xbox Game Pass"],
+    Urtyu9: ["Další měsíční příděl Orbs získáš ", [1, "days"], " d po začátku svého předplatného Discord Nitro."],
+};

@@ -1,3 +1,25 @@
-r.exports = JSON.parse(
-    '{"0LL6FX":["\u9019\u9EBC\u505A\u6703\u66F4\u65B0\u6240\u6709\u6210\u54E1\u7684\u4F3A\u670D\u5668\u5916\u89C0\uFF0C\u4E26\u6839\u64DA\u5176\u8A2D\u5B9A\u81EA\u52D5\u8ABF\u6574\u70BA\u660E\u4EAE\u6216\u7070\u6697\u6A21\u5F0F\u3002"],"H8idcP":["\u662F\u5426\u8981\u5957\u7528\u4F3A\u670D\u5668\u4E3B\u984C\uFF1F"],"odtr7f":["\u9078\u64C7\u9810\u8A2D\u4E3B\u984C\u6216\u5EFA\u7ACB\u5C08\u5C6C\u4E3B\u984C\u3002\u6BCF\u4F4D\u6210\u54E1\u958B\u555F\u4F3A\u670D\u5668\u6642\u90FD\u6703\u770B\u5230\u6B64\u4E3B\u984C\uFF0C\u4E26\u6703\u6839\u64DA\u5176\u8A2D\u5B9A\u81EA\u52D5\u8ABF\u6574\u70BA\u660E\u4EAE\u6216\u7070\u6697\u6A21\u5F0F\u3002",[8,"$link",["\u77AD\u89E3\u66F4\u591A"],[[1,"articleUrl"]]]],"XhiIAu":["\u8ABF\u6574\u9019\u9805\u8A2D\u5B9A\u5F8C\uFF0C\u6240\u6709\u6210\u54E1\u770B\u5230\u7684\u4F3A\u670D\u5668\u5916\u89C0\u5C31\u6703\u6539\u8B8A\u3002"],"aZpFFn":["\u555F\u7528\u4F3A\u670D\u5668\u4E3B\u984C"],"jSrqR2":["\u9810\u8A2D\u984F\u8272"],"XyrxOp":["\u85CD\u7D2B"],"tXRcxU":["\u725B\u4ED4\u5E03"],"S8/OZA":["\u706B"],"nCbxEN":["\u91D1\u5875"],"6ZeQDd":["\u7389\u77F3"],"TiGQro":["\u82D4\u861A"],"x3h/OV":["\u9ED1\u66DC\u77F3"],"qn90j5":["\u6D77\u6D0B"],"tTJY6S":["\u7D2B\u7D05"],"+k8Q/o":["\u66AE\u5149"],"HkvkHP":["\u7CFB\u7D71\u6703\u986F\u793A\u6BCF\u4F4D\u6210\u54E1\u660E\u4EAE/\u7070\u6697\u6A21\u5F0F\u7684\u504F\u597D\u8A2D\u5B9A\u3002"],"zry4l5":["\u9810\u89BD\u4E3B\u984C"],"Ck5zxP":["\u9078\u64C7\u4E3B\u984C"],"/6NbRv":["\u4F3A\u670D\u5668\u4E3B\u984C"]}',
-);
+r.exports = {
+    "0LL6FX": ["這麼做會更新所有成員的伺服器外觀，並根據其設定自動調整為明亮或灰暗模式。"],
+    H8idcP: ["是否要套用伺服器主題？"],
+    odtr7f: [
+        "選擇預設主題或建立專屬主題。每位成員開啟伺服器時都會看到此主題，並會根據其設定自動調整為明亮或灰暗模式。",
+        [8, "$link", ["瞭解更多"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["調整這項設定後，所有成員看到的伺服器外觀就會改變。"],
+    aZpFFn: ["啟用伺服器主題"],
+    jSrqR2: ["預設顏色"],
+    XyrxOp: ["藍紫"],
+    tXRcxU: ["牛仔布"],
+    "S8/OZA": ["火"],
+    nCbxEN: ["金塵"],
+    "6ZeQDd": ["玉石"],
+    TiGQro: ["苔蘚"],
+    "x3h/OV": ["黑曜石"],
+    qn90j5: ["海洋"],
+    tTJY6S: ["紫紅"],
+    "+k8Q/o": ["暮光"],
+    HkvkHP: ["系統會顯示每位成員明亮/灰暗模式的偏好設定。"],
+    zry4l5: ["預覽主題"],
+    Ck5zxP: ["選擇主題"],
+    "/6NbRv": ["伺服器主題"],
+};

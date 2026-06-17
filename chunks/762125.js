@@ -1,3 +1,17 @@
-p.exports = JSON.parse(
-    '{"6/dkHh":["\uC2A4\uD06C\uB9BD\uD2B8 \uB2EB\uAE30"],"XiLvuG":["\uC74C\uB7C9 \uC870\uC808\uD558\uAE30"],"ZwPhbB":["\uC7AC\uC0DD \uC18D\uB3C4"],"dRVF+Z":["10\uCD08 \uB418\uAC10\uAE30"],"yV2FLL":["10\uCD08 \uC55E\uC73C\uB85C \uAC74\uB108\uB6F0\uAE30"],"YWbiPw":["\uC544\uC9C1 \uC2DC\uCCAD\uD558\uC9C0 \uC54A\uC740 \uBD80\uBD84\uC740 \uAC74\uB108\uB6F8 \uC218 \uC5C6\uC5B4\uC694"],"0DbPcL":["\uC790\uB9C9 \uC804\uD658"],"z9Cnzv":["\uC804\uCCB4 \uD654\uBA74\uC73C\uB85C \uC804\uD658"],"6EjGUv":["\uB300\uBCF8 \uC804\uD658"],"kX3+aM":["\uC601\uC0C1 \uBD88\uB7EC\uC624\uB294 \uC911..."],"c7IRfm":["\uCC3D\uC758 \uD3EC\uCEE4\uC2A4\uAC00 \uD574\uC81C\uB418\uC5B4 \uB3D9\uC601\uC0C1\uC774 \uC77C\uC2DC \uC911\uC9C0\uB418\uC5C8\uC5B4\uC694"],"9St/zK":["\uCC3D\uC774 \uD654\uBA74\uC5D0 \uD45C\uC2DC\uB418\uC9C0 \uC54A\uC544 \uB3D9\uC601\uC0C1\uC774 \uC77C\uC2DC \uC911\uC9C0\uB418\uC5C8\uC5B4\uC694"],"VZkd/n":["\uB300\uBCF8"],"E527vj":["\uC601\uC0C1 \uC12C\uB124\uC77C"],"5L6uDs":[[1,"percent"],"%"]}',
-);
+p.exports = {
+    "6/dkHh": ["스크립트 닫기"],
+    XiLvuG: ["음량 조절하기"],
+    ZwPhbB: ["재생 속도"],
+    "dRVF+Z": ["10초 되감기"],
+    yV2FLL: ["10초 앞으로 건너뛰기"],
+    YWbiPw: ["아직 시청하지 않은 부분은 건너뛸 수 없어요"],
+    "0DbPcL": ["자막 전환"],
+    z9Cnzv: ["전체 화면으로 전환"],
+    "6EjGUv": ["대본 전환"],
+    "kX3+aM": ["영상 불러오는 중..."],
+    c7IRfm: ["창의 포커스가 해제되어 동영상이 일시 중지되었어요"],
+    "9St/zK": ["창이 화면에 표시되지 않아 동영상이 일시 중지되었어요"],
+    "VZkd/n": ["대본"],
+    E527vj: ["영상 섬네일"],
+    "5L6uDs": [[1, "percent"], "%"],
+};

@@ -1,3 +1,23 @@
-p.exports = JSON.parse(
-    '{"q5M7HV":["\u96DC\u9805"],"zRKbpz":["\u4F3A\u670D\u5668"],"UzRF+8":["\u793E\u7FA4\u5A92\u9AD4"],"NGdNZb":["\u79C1\u4EBA\u8A0A\u606F"],"zJlwvV":["Discord \u7CFB\u7D71\u8A0A\u606F"],"40TIqW":["\u6D3B\u52D5\u901A\u77E5"],"HibKoy":["\u8AD6\u58C7\u901A\u77E5"],"vcrTV5":["\u597D\u53CB\u52D5\u614B"],"NxgGZA":["\u597D\u53CB\u8ACB\u6C42"],"9EDo+/":["\u904A\u6232"],"IUH/Oe":["\u4F86\u96FB"],"4qWUAO":["\u8A0A\u606F"],"n0Wp6j":["\u932F\u904E\u7684\u8A0A\u606F"],"T+79Eo":["\u5176\u4ED6"],"kIrLfg":["\u5176\u4ED6\u4F3A\u670D\u5668\u901A\u77E5"],"MOjygY":["\u6295\u7968"],"wv4QHR":["\u53CD\u61C9\u901A\u77E5"],"S5cB9e":["\u5373\u6642"],"4n388K":["\u821E\u53F0\u901A\u77E5"],"Iy9grw":["\u8A9E\u97F3\u548C\u76F4\u64AD\u52D5\u614B"],"VeBD1N":["\u8A9E\u97F3\u5DF2\u9023\u7DDA"]}',
-);
+p.exports = {
+    q5M7HV: ["雜項"],
+    zRKbpz: ["伺服器"],
+    "UzRF+8": ["社群媒體"],
+    NGdNZb: ["私人訊息"],
+    zJlwvV: ["Discord 系統訊息"],
+    "40TIqW": ["活動通知"],
+    HibKoy: ["論壇通知"],
+    vcrTV5: ["好友動態"],
+    NxgGZA: ["好友請求"],
+    "9EDo+/": ["遊戲"],
+    "IUH/Oe": ["來電"],
+    "4qWUAO": ["訊息"],
+    n0Wp6j: ["錯過的訊息"],
+    "T+79Eo": ["其他"],
+    kIrLfg: ["其他伺服器通知"],
+    MOjygY: ["投票"],
+    wv4QHR: ["反應通知"],
+    S5cB9e: ["即時"],
+    "4n388K": ["舞台通知"],
+    Iy9grw: ["語音和直播動態"],
+    VeBD1N: ["語音已連線"],
+};

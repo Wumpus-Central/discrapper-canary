@@ -1,3 +1,33 @@
-s.exports = JSON.parse(
-    '{"mXY4Rb":["\u3059\u3067\u306BGame Pass\u306E\u30E1\u30F3\u30D0\u30FC\u306A\u3089\u3001",[8,"$link",["\u30A2\u30AB\u30A6\u30F3\u30C8\u3092\u9023\u643A"],[[1,"onConnect"]]],"\u3057\u3066\u3001\u8FFD\u52A0\u306EOrbs\u5831\u916C\u3068\u30B7\u30E7\u30C3\u30D7\u306E\u5272\u5F15\u3092\u30A2\u30F3\u30ED\u30C3\u30AF\u3067\u304D\u307E\u3059\u3002"],"oBYFF3":["\u3059\u3079\u3066\u306ENitro\u7279\u5178\u3092\u5165\u624B"],"HZz88k":["\u6708\u6B21Orbs\u30C9\u30ED\u30C3\u30D7"],"Aau2G1":["Orbs\u30DE\u30EB\u30C1\u30D7\u30E9\u30A4\u30E4\u30FC"],"6Udfv9":["\u30B7\u30E7\u30C3\u30D7\u5272\u5F15"],"f1ygW4":["Xbox Game Pass\u306BNitro\u306E\u304A\u305F\u3081\u3057\u304C\u3064\u3044\u3066\u304F\u308B"],"cRLw2a":["Xbox Game Pass\u306BNitro\u306E\u304A\u305F\u3081\u3057\u304C\u3064\u3044\u3066\u304F\u308B"],"ZYc6Hv":["\u6BCE\u6708",[1,"orbAmount"],"\u500B\u306E\u8FFD\u52A0Orbs\u3092\u7372\u5F97\u3067\u304D\u307E\u3059\u3002\u6B21\u306E\u30C9\u30ED\u30C3\u30D7\u306F",[1,"days"],"\u65E5\u5F8C\u3067\u3059\u3002"],"+tdDeK":["\u6708\u6B21Orbs\u30C9\u30ED\u30C3\u30D7"],"kc3Kvs":["\u30AF\u30A8\u30B9\u30C8\u306E\u52DD\u5229\u3092\u30E1\u30AC\u52DD\u5229\u306B\u3057\u3066\u3001Orb\u5831\u916C\u3092",[1,"multiplier"],"\u500D\u306B\u3057\u307E\u3057\u3087\u3046\u3002"],"++kzl5":["Orbs\u30DE\u30EB\u30C1\u30D7\u30E9\u30A4\u30E4\u30FC"],"WgkpKK":["Discord\u30B7\u30E7\u30C3\u30D7\u3067\u53B3\u9078\u30A2\u30A4\u30C6\u30E0\u306E\u5272\u5F15\u958B\u50AC\u4E2D\u3002",[8,"$link",["\u30B7\u30E7\u30C3\u30D7\u3092\u898B\u3066\u307F\u308B"],[[1,"onClick"]]]],"a+PtZt":["\u30B7\u30E7\u30C3\u30D7\u5272\u5F15"],"70kyQr":["Xbox Game Pass\u306E\u30E1\u30F3\u30D0\u30FC\u30B7\u30C3\u30D7\u306B\u306FNitro\u306E\u304A\u305F\u3081\u3057\u304C\u3064\u3044\u3066\u304D\u307E\u3059\u30023\u3064\u306ENitro\u7279\u5178\u3092\u304A\u697D\u3057\u307F\u304F\u3060\u3055\u3044\u3002",[8,"$link",["\u8A73\u3057\u304F\u306F\u3053\u3061\u3089"],[[1,"learnMoreLink"]]]],"4CdlUW":["\u3059\u3079\u3066\u306ENitro\u7279\u5178\u3092\u30A2\u30F3\u30ED\u30C3\u30AF"],"c5usUr":["Orbs\u3092\u3082\u3063\u3068\u7372\u5F97"],"UkrcSH":["Xbox Game Pass\u30E1\u30F3\u30D0\u30FC\u30B7\u30C3\u30D7\u3067Nitro\u3092\u5473\u308F\u304A\u3046\u3002\u30AF\u30A8\u30B9\u30C8\u306EOrbs\u304C",[2,"bonusOrbMultiplier"],"\u500D\u306B"],"D+kUbg":["Xbox Game Pass\u30E1\u30F3\u30D0\u30FC\u306F\u3001Discord\u3067\u8FFD\u52A0\u306EOrbs\u5831\u916C\u3084\u30B7\u30E7\u30C3\u30D7\u306E\u5272\u5F15\u3092\u53D7\u3051\u53D6\u308C\u308B\u3088\u3046\u306B\u306A\u308A\u307E\u3057\u305F\u3002Xbox\u3092\u518D\u9023\u643A\u3057\u3066\u30A2\u30F3\u30ED\u30C3\u30AF\u3057\u307E\u3057\u3087\u3046\u3002",[8,"$link",["\u8A73\u3057\u304F\u306F\u3053\u3061\u3089"],[[1,"learnMoreLink"]]]],"9cLtDI":["NEW\uFF01Xbox Game Pass\u3067Nitro\u3092\u304A\u305F\u3081\u3057"],"DePOcS":["Xbox Game Pass\u306B\u306F\u30B7\u30E7\u30C3\u30D7\u306E\u5272\u5F15\u304C\u542B\u307E\u308C\u3066\u3044\u307E\u3059"],"Urtyu9":["\u6B21\u306E\u6708\u3054\u3068\u306EOrbs\u30C9\u30ED\u30C3\u30D7\u306F\u3001Nitro\u30B5\u30D6\u30B9\u30AF\u30EA\u30D7\u30B7\u30E7\u30F3\u958B\u59CB\u304B\u3089",[1,"days"],"\u65E5\u5F8C\u306B\u53D7\u3051\u53D6\u308C\u307E\u3059\u3002"]}',
-);
+s.exports = {
+    mXY4Rb: [
+        "すでにGame Passのメンバーなら、",
+        [8, "$link", ["アカウントを連携"], [[1, "onConnect"]]],
+        "して、追加のOrbs報酬とショップの割引をアンロックできます。",
+    ],
+    oBYFF3: ["すべてのNitro特典を入手"],
+    HZz88k: ["月次Orbsドロップ"],
+    Aau2G1: ["Orbsマルチプライヤー"],
+    "6Udfv9": ["ショップ割引"],
+    f1ygW4: ["Xbox Game PassにNitroのおためしがついてくる"],
+    cRLw2a: ["Xbox Game PassにNitroのおためしがついてくる"],
+    ZYc6Hv: ["毎月", [1, "orbAmount"], "個の追加Orbsを獲得できます。次のドロップは", [1, "days"], "日後です。"],
+    "+tdDeK": ["月次Orbsドロップ"],
+    kc3Kvs: ["クエストの勝利をメガ勝利にして、Orb報酬を", [1, "multiplier"], "倍にしましょう。"],
+    "++kzl5": ["Orbsマルチプライヤー"],
+    WgkpKK: ["Discordショップで厳選アイテムの割引開催中。", [8, "$link", ["ショップを見てみる"], [[1, "onClick"]]]],
+    "a+PtZt": ["ショップ割引"],
+    "70kyQr": [
+        "Xbox Game PassのメンバーシップにはNitroのおためしがついてきます。3つのNitro特典をお楽しみください。",
+        [8, "$link", ["詳しくはこちら"], [[1, "learnMoreLink"]]],
+    ],
+    "4CdlUW": ["すべてのNitro特典をアンロック"],
+    c5usUr: ["Orbsをもっと獲得"],
+    UkrcSH: ["Xbox Game PassメンバーシップでNitroを味わおう。クエストのOrbsが", [2, "bonusOrbMultiplier"], "倍に"],
+    "D+kUbg": [
+        "Xbox Game Passメンバーは、Discordで追加のOrbs報酬やショップの割引を受け取れるようになりました。Xboxを再連携してアンロックしましょう。",
+        [8, "$link", ["詳しくはこちら"], [[1, "learnMoreLink"]]],
+    ],
+    "9cLtDI": ["NEW！Xbox Game PassでNitroをおためし"],
+    DePOcS: ["Xbox Game Passにはショップの割引が含まれています"],
+    Urtyu9: ["次の月ごとのOrbsドロップは、Nitroサブスクリプション開始から", [1, "days"], "日後に受け取れます。"],
+};

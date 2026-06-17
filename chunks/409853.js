@@ -1,3 +1,12 @@
-n.exports = JSON.parse(
-    '{"bGygJZ":["C\xf3 v\u1EBB nh\u01B0 b\u1EA1n \u0111\xe3 b\u1ECB t\u1EAFt \xe2m su\u1ED1t cu\u1ED9c g\u1ECDi. B\u1EA1n c\xf3 mu\u1ED1n t\xecm hi\u1EC3u c\xe1ch b\u1EADt ti\u1EBFng cho b\u1EA3n th\xe2n \u0111\u1EC3 ng\u01B0\u1EDDi kh\xe1c c\xf3 th\u1EC3 nghe th\u1EA5y b\u1EA1n kh\xf4ng?"],"8VIRzR":["\u0110\u1EC3 ng\u01B0\u1EDDi kh\xe1c nghe th\u1EA5y b\u1EA1n, h\xe3y nh\u1EA5n n\xfat n\xe0y \u0111\u1EC3 b\u1EADt ti\u1EBFng cho mic c\u1EE7a b\u1EA1n. Sau \u0111\xf3, b\u1EA1n c\xf3 th\u1EC3 nh\u1EA5n l\u1EA1i \u0111\u1EC3 t\u1EAFt \xe2m mic."],"VG4zAf":["B\u1EADt Ti\u1EBFng Mic C\u1EE7a B\u1EA1n"],"5wYjyW":["H\u01B0\u1EDBng D\u1EABn T\u1EAFt \xc2m"],"01Jl9Z":["Kh\xf4ng, c\u1EA3m \u01A1n"],"DxcYYG":["Ch\u1EC9 cho t\xf4i!"]}',
-);
+n.exports = {
+    bGygJZ: [
+        "Có vẻ như bạn đã bị tắt âm suốt cuộc gọi. Bạn có muốn tìm hiểu cách bật tiếng cho bản thân để người khác có thể nghe thấy bạn không?",
+    ],
+    "8VIRzR": [
+        "Để người khác nghe thấy bạn, hãy nhấn nút này để bật tiếng cho mic của bạn. Sau đó, bạn có thể nhấn lại để tắt âm mic.",
+    ],
+    VG4zAf: ["Bật Tiếng Mic Của Bạn"],
+    "5wYjyW": ["Hướng Dẫn Tắt Âm"],
+    "01Jl9Z": ["Không, cảm ơn"],
+    DxcYYG: ["Chỉ cho tôi!"],
+};

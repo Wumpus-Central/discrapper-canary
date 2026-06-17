@@ -1,3 +1,73 @@
-a.exports = JSON.parse(
-    '{"5h8p5P":[[6,"count",{"one":["Platforma ",[1,"platforms"]," nepalaikoma."],"other":["Platformos ",[1,"platforms"]," nepalaikomos."]},0,"cardinal"]],"vyAtfo":["Susiek savo ",[1,"applicationName"]," ir Discord paskyras, kad gal\u0117tum priimti \u0161i\u0105 dovan\u0105. ",[1,"platforms_info"]],"yqAKVO":["Paskyra susieta su ",[1,"applicationName"],". Atsiimk savo dovan\u0105 toliau. ",[1,"platforms_info"]],"Ufm9XX":["Spustel\u0117damas (-a) \u201E",[1,"buyButtonLabel"],"\u201C sutinki su ",[8,"$link",["mokam\u0173 paslaug\u0173 teikimo s\u0105lygomis"],[[1,"paidServiceTermURL"]]],". ",[8,"$b",["Pirkdamas (-a) element\u0105 ",[1,"applicationName"]," \u017Eaidimo parduotuv\u0117je \u012Fsigyji ribot\u0105j\u0105 licencij\u0105 naudoti \u0161\u012F element\u0105 nurodytame \u017Eaidime."]]," \u0160is pirkimas negr\u0105\u017Einamas. Element\u0105 pateiks k\u016Br\u0117jas pa\u010Diame \u017Eaidime."],"Q0dHYO":["Norint atsiimti, reikalinga paskyros nuoroda. ",[1,"platforms_info"]],"3ah/a2":[[8,"$b",["Pirkdamas (-a) element\u0105 ",[1,"applicationName"]," \u017Eaidimo parduotuv\u0117je \u012Fsigyji ribot\u0105j\u0105 licencij\u0105 naudoti \u0161\u012F element\u0105 nurodytame \u017Eaidime."]]," \u0160is pirkimas negr\u0105\u017Einamas. Element\u0105 pateiks k\u016Br\u0117jas pa\u010Diame \u017Eaidime. ",[1,"platforms_info"]],"fO4b1C":["Susiek savo ",[1,"applicationName"]," ir Discord paskyras, kad gal\u0117tum priimti \u0161\u012F pirkin\u012F. ",[1,"platforms_info"]],"Sy7D+/":["\u0160ioje parduotuv\u0117je dar nieko n\u0117ra. Sugr\u012F\u017Ek v\u0117liau!"],"OvBwPV":["Nieko n\u0117ra"],"BMMo2K":["Susiek savo ",[1,"applicationName"]," ir Discord paskyras Discord nustatymuose kompiuteryje, kad gal\u0117tum priimti \u0161i\u0105 dovan\u0105."],"eNNnIG":["Susiek savo ",[1,"applicationName"]," ir Discord paskyras Discord nustatymuose kompiuteryje, kad priimtum \u0161\u012F pirkim\u0105."],"gndWN7":["Nor\u0117damas (-a) pirkti, atsidaryk Discord kompiuteryje."],"bRPsNX":["Panaudok savo pirkin\u012F"],"BKf0MM":["Per\u017Ei\u016Br\u0117ti i\u0161sami\u0105 informacij\u0105"]}',
-);
+a.exports = {
+    "5h8p5P": [
+        [
+            6,
+            "count",
+            {
+                one: ["Platforma ", [1, "platforms"], " nepalaikoma."],
+                other: ["Platformos ", [1, "platforms"], " nepalaikomos."],
+            },
+            0,
+            "cardinal",
+        ],
+    ],
+    vyAtfo: [
+        "Susiek savo ",
+        [1, "applicationName"],
+        " ir Discord paskyras, kad galėtum priimti šią dovaną. ",
+        [1, "platforms_info"],
+    ],
+    yqAKVO: ["Paskyra susieta su ", [1, "applicationName"], ". Atsiimk savo dovaną toliau. ", [1, "platforms_info"]],
+    Ufm9XX: [
+        "Spustelėdamas (-a) „",
+        [1, "buyButtonLabel"],
+        "“ sutinki su ",
+        [8, "$link", ["mokamų paslaugų teikimo sąlygomis"], [[1, "paidServiceTermURL"]]],
+        ". ",
+        [
+            8,
+            "$b",
+            [
+                "Pirkdamas (-a) elementą ",
+                [1, "applicationName"],
+                " žaidimo parduotuvėje įsigyji ribotąją licenciją naudoti šį elementą nurodytame žaidime.",
+            ],
+        ],
+        " Šis pirkimas negrąžinamas. Elementą pateiks kūrėjas pačiame žaidime.",
+    ],
+    Q0dHYO: ["Norint atsiimti, reikalinga paskyros nuoroda. ", [1, "platforms_info"]],
+    "3ah/a2": [
+        [
+            8,
+            "$b",
+            [
+                "Pirkdamas (-a) elementą ",
+                [1, "applicationName"],
+                " žaidimo parduotuvėje įsigyji ribotąją licenciją naudoti šį elementą nurodytame žaidime.",
+            ],
+        ],
+        " Šis pirkimas negrąžinamas. Elementą pateiks kūrėjas pačiame žaidime. ",
+        [1, "platforms_info"],
+    ],
+    fO4b1C: [
+        "Susiek savo ",
+        [1, "applicationName"],
+        " ir Discord paskyras, kad galėtum priimti šį pirkinį. ",
+        [1, "platforms_info"],
+    ],
+    "Sy7D+/": ["Šioje parduotuvėje dar nieko nėra. Sugrįžk vėliau!"],
+    OvBwPV: ["Nieko nėra"],
+    BMMo2K: [
+        "Susiek savo ",
+        [1, "applicationName"],
+        " ir Discord paskyras Discord nustatymuose kompiuteryje, kad galėtum priimti šią dovaną.",
+    ],
+    eNNnIG: [
+        "Susiek savo ",
+        [1, "applicationName"],
+        " ir Discord paskyras Discord nustatymuose kompiuteryje, kad priimtum šį pirkimą.",
+    ],
+    gndWN7: ["Norėdamas (-a) pirkti, atsidaryk Discord kompiuteryje."],
+    bRPsNX: ["Panaudok savo pirkinį"],
+    BKf0MM: ["Peržiūrėti išsamią informaciją"],
+};

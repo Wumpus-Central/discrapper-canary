@@ -1,3 +1,58 @@
-t.exports = JSON.parse(
-    '{"5Mi5TE":["Megv\xe1ltoztatod, hogyan t\xe1rs\xedtjuk hozz\xe1d az \xe9letkorodat?"],"lG69e1":[[8,"$link",["Tov\xe1bbi t\xe1j\xe9koztat\xe1s"],[[1,"handleOnHelpUrlHook"]]]," a korcsoportokr\xf3l"],"V822Mp":["Korcsoport elt\xe1vol\xedt\xe1sa"],"FbTAmI":["\xcdgy Feln\u0151tt be\xe1ll\xedt\xe1sr\xf3l Meg nem er\u0151s\xedtett be\xe1ll\xedt\xe1sra v\xe1ltozik a korcsoportod, \xe9s nem fogsz tudni hozz\xe1f\xe9rni korhat\xe1ros \xe9lm\xe9nyekhez. A feln\u0151tt hozz\xe1f\xe9r\xe9s visszaszerz\xe9s\xe9hez m\xe1sik m\xf3dszerrel kell meger\u0151s\xedtened a korcsoportodat."],"g7/14g":["Elt\xe1vol\xedtod a hozz\xe1d t\xe1rs\xedtott korcsoportot?"],"Gn0SAj":["Meg nem er\u0151s\xedtett be\xe1ll\xedt\xe1s megad\xe1sa a korcsoportodn\xe1l"],"bD//cU":["T\xe1rs\xedtott korcsoport elt\xe1vol\xedt\xe1sa"],"rJiO86":["M\xe1sik m\xf3dszer v\xe1laszt\xe1sa a korcsoportod meger\u0151s\xedt\xe9s\xe9hez"],"SH6Tcv":["Korcsoport meger\u0151s\xedt\xe9se"],"1DN29p":["Olyan technol\xf3gi\xe1kat haszn\xe1lunk, amelyek magatart\xe1si mint\xe1zatok \xe9s m\xe1s, a Discordon l\xe9trehozott felhaszn\xe1l\xf3i fi\xf3kokhoz kapcsol\xf3d\xf3 jelek alapj\xe1n m\xe9rik fel a felhaszn\xe1l\xf3i korcsoportokat. ",[8,"$link",["Tov\xe1bbi t\xe1j\xe9koztat\xe1s"],[[1,"handleOnHelpUrlHook"]]]],"PY4MA0":["A Discord a Feln\u0151tt korcsoportba sorolt t\xe9ged"],"FTawSP":["A Discord \xe1ltal hozz\xe1rendelve"],"WM5adV":["A Discord \xe1ltal hozz\xe1rendelve. ",[8,"$link",["Tov\xe1bbi t\xe1j\xe9koztat\xe1s"],[[1,"handleOnHelpUrlHook"]]]],"b7Oqdu":["M\xe1sik m\xf3dszer v\xe1laszt\xe1sa"],"ar3a3q":["Az \xe1ltalad megadott inform\xe1ci\xf3kat csak a korcsoportod meger\u0151s\xedt\xe9s\xe9re haszn\xe1ljuk, majd t\xf6r\xf6lj\xfck \u0151ket."],"0vTx7j":["\xdajrat\xf6lt\xe9s"],"yBHwMy":["Ez a l\xe9p\xe9s nem t\xe1mogatott VR-k\xf6rnyezetben. V\xe9gezd el m\xe1sik eszk\xf6z\xf6n, mi pedig automatikusan friss\xedteni fogjuk a haszn\xe1lati \xe9lm\xe9nyedet itt."],"gUqXQN":["Az \xe9letkorod meger\u0151s\xedt\xe9se m\xe1sik eszk\xf6z\xf6n"],"XYYm+1":["M\xe1sik m\xf3dszer v\xe1laszt\xe1sa a korhiteles\xedt\xe9shez"],"rVLCwM":["M\xe1sik m\xf3dszer v\xe1laszt\xe1sa"],"RpMIT0":["V\xe1lassz egy m\xf3dszert annak meger\u0151s\xedt\xe9s\xe9hez, hogy feln\u0151tt vagy. A meger\u0151s\xedt\xe9st k\xf6vet\u0151en korhat\xe1ros tartalmakhoz \xe9s be\xe1ll\xedt\xe1sokhoz fogsz hozz\xe1f\xe9rni. ",[8,"$link",["Tov\xe1bbi t\xe1j\xe9koztat\xe1s"],[[1,"handleOnHelpUrlHook"]]],"."],"h7qzoa":["Helyre\xe1ll\xedthatod a hozz\xe1f\xe9r\xe9sedet a Discordhoz, ha az al\xe1bbi lehet\u0151s\xe9gek egyik\xe9vel meger\u0151s\xedted az \xe9letkorodat."],"eJmat5":["Megbecs\xfcltetheted az \xe9letkorodat egy vide\xf3s szelfivel. A vide\xf3 az eszk\xf6z\xf6d\xf6n marad; nem ker\xfcl sor biometrikus adatok megoszt\xe1s\xe1ra."],"2yLvkS":["Vide\xf3s szelfi a k-ID szolg\xe1ltat\xf3n kereszt\xfcl"],"+pwfOA":["Hiba t\xf6rt\xe9nt a Google Wallet haszn\xe1lat\xe1val t\xf6rt\xe9n\u0151 hiteles\xedt\xe9s sor\xe1n. Pr\xf3b\xe1lkozz m\xe1s m\xf3dszerrel."],"dah4bF":["Szem\xe9lyazonos\xedt\xf3 igazolv\xe1ny haszn\xe1lata az \xfatlev\xe9ladataid alapj\xe1n. A szem\xe9lyazonos\xedt\xf3 adataidat a Google Wallet szolg\xe1ltat\xe1s t\xe1rolja."],"Y9sLpR":["Google Wallet szolg\xe1ltat\xe1son bel\xfcli szem\xe9lyazonos\xedt\xf3 igazolv\xe1ny"],"fEUKEv":["Pr\xf3b\xe1lkoz\xe1s m\xe1sik m\xf3dszerrel"],"Pf5xUq":["Az azonos\xedt\xf3dat olyan orsz\xe1gban \xe1ll\xedtott\xe1k ki, amelyet m\xe9g nem t\xe1mogatunk. Pr\xf3b\xe1lkozz m\xe1s hiteles\xedt\xe9si m\xf3dszerrel."],"MlFuBI":["Az \xe9letkorod hiteles\xedt\xe9se\u2026"],"ZdmRwW":["Olvasd be a szem\xe9lyazonos\xedt\xf3 igazolv\xe1nyodat \xe9s k\xe9sz\xedts szelfit, hogy meger\u0151s\xedtsd, val\xf3ban te vagy az. A rendszer mindkett\u0151t t\xf6rli k\xf6zvetlen\xfcl a meger\u0151s\xedt\xe9st k\xf6vet\u0151en, \xe9s soha nem lesznek a fi\xf3kodhoz t\xe1rs\xedtva."],"dwkwo0":["Szem\xe9lyazonos\xedt\xf3 okm\xe1ny beolvas\xe1sa a k-ID szolg\xe1ltat\xe1son kereszt\xfcl"],"htWh1G":[[8,"$link",["Tov\xe1bbi t\xe1j\xe9koztat\xe1st"],[[1,"handleOnHelpUrlHook"]]]," a S\xfag\xf3k\xf6zpontban tal\xe1lsz"],"cR6336":["Nincsenek el\xe9rhet\u0151 korhiteles\xedt\xe9si m\xf3dszerek. Lehets\xe9ges, hogy ez hiba."],"hDvmYP":["\xdajrat\xf6lt\xe9s"]}',
-);
+t.exports = {
+    "5Mi5TE": ["Megváltoztatod, hogyan társítjuk hozzád az életkorodat?"],
+    lG69e1: [[8, "$link", ["További tájékoztatás"], [[1, "handleOnHelpUrlHook"]]], " a korcsoportokról"],
+    V822Mp: ["Korcsoport eltávolítása"],
+    FbTAmI: [
+        "Így Felnőtt beállításról Meg nem erősített beállításra változik a korcsoportod, és nem fogsz tudni hozzáférni korhatáros élményekhez. A felnőtt hozzáférés visszaszerzéséhez másik módszerrel kell megerősítened a korcsoportodat.",
+    ],
+    "g7/14g": ["Eltávolítod a hozzád társított korcsoportot?"],
+    Gn0SAj: ["Meg nem erősített beállítás megadása a korcsoportodnál"],
+    "bD//cU": ["Társított korcsoport eltávolítása"],
+    rJiO86: ["Másik módszer választása a korcsoportod megerősítéséhez"],
+    SH6Tcv: ["Korcsoport megerősítése"],
+    "1DN29p": [
+        "Olyan technológiákat használunk, amelyek magatartási mintázatok és más, a Discordon létrehozott felhasználói fiókokhoz kapcsolódó jelek alapján mérik fel a felhasználói korcsoportokat. ",
+        [8, "$link", ["További tájékoztatás"], [[1, "handleOnHelpUrlHook"]]],
+    ],
+    PY4MA0: ["A Discord a Felnőtt korcsoportba sorolt téged"],
+    FTawSP: ["A Discord által hozzárendelve"],
+    WM5adV: ["A Discord által hozzárendelve. ", [8, "$link", ["További tájékoztatás"], [[1, "handleOnHelpUrlHook"]]]],
+    b7Oqdu: ["Másik módszer választása"],
+    ar3a3q: ["Az általad megadott információkat csak a korcsoportod megerősítésére használjuk, majd töröljük őket."],
+    "0vTx7j": ["Újratöltés"],
+    yBHwMy: [
+        "Ez a lépés nem támogatott VR-környezetben. Végezd el másik eszközön, mi pedig automatikusan frissíteni fogjuk a használati élményedet itt.",
+    ],
+    gUqXQN: ["Az életkorod megerősítése másik eszközön"],
+    "XYYm+1": ["Másik módszer választása a korhitelesítéshez"],
+    rVLCwM: ["Másik módszer választása"],
+    RpMIT0: [
+        "Válassz egy módszert annak megerősítéséhez, hogy felnőtt vagy. A megerősítést követően korhatáros tartalmakhoz és beállításokhoz fogsz hozzáférni. ",
+        [8, "$link", ["További tájékoztatás"], [[1, "handleOnHelpUrlHook"]]],
+        ".",
+    ],
+    h7qzoa: [
+        "Helyreállíthatod a hozzáférésedet a Discordhoz, ha az alábbi lehetőségek egyikével megerősíted az életkorodat.",
+    ],
+    eJmat5: [
+        "Megbecsültetheted az életkorodat egy videós szelfivel. A videó az eszközödön marad; nem kerül sor biometrikus adatok megosztására.",
+    ],
+    "2yLvkS": ["Videós szelfi a k-ID szolgáltatón keresztül"],
+    "+pwfOA": ["Hiba történt a Google Wallet használatával történő hitelesítés során. Próbálkozz más módszerrel."],
+    dah4bF: [
+        "Személyazonosító igazolvány használata az útlevéladataid alapján. A személyazonosító adataidat a Google Wallet szolgáltatás tárolja.",
+    ],
+    Y9sLpR: ["Google Wallet szolgáltatáson belüli személyazonosító igazolvány"],
+    fEUKEv: ["Próbálkozás másik módszerrel"],
+    Pf5xUq: [
+        "Az azonosítódat olyan országban állították ki, amelyet még nem támogatunk. Próbálkozz más hitelesítési módszerrel.",
+    ],
+    MlFuBI: ["Az életkorod hitelesítése…"],
+    ZdmRwW: [
+        "Olvasd be a személyazonosító igazolványodat és készíts szelfit, hogy megerősítsd, valóban te vagy az. A rendszer mindkettőt törli közvetlenül a megerősítést követően, és soha nem lesznek a fiókodhoz társítva.",
+    ],
+    dwkwo0: ["Személyazonosító okmány beolvasása a k-ID szolgáltatáson keresztül"],
+    htWh1G: [[8, "$link", ["További tájékoztatást"], [[1, "handleOnHelpUrlHook"]]], " a Súgóközpontban találsz"],
+    cR6336: ["Nincsenek elérhető korhitelesítési módszerek. Lehetséges, hogy ez hiba."],
+    hDvmYP: ["Újratöltés"],
+};

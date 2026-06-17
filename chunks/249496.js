@@ -1,3 +1,73 @@
-e.exports = JSON.parse(
-    '{"5h8p5P":[[6,"count",{"one":["Platforma ",[1,"platforms"]," nie jest obs\u0142ugiwana."],"other":["Platformy ",[1,"platforms"]," nie s\u0105 obs\u0142ugiwane."]},0,"cardinal"]],"vyAtfo":["Po\u0142\u0105cz swoje konta ",[1,"applicationName"]," i Discord, aby zaakceptowa\u0107 ten prezent. ",[1,"platforms_info"]],"yqAKVO":["Konto po\u0142\u0105czone z ",[1,"applicationName"],". Odbierz prezent poni\u017Cej. ",[1,"platforms_info"]],"Ufm9XX":["Klikaj\u0105c \u201E",[1,"buyButtonLabel"],"\u201D, akceptujesz ",[8,"$link",["Warunki korzystania z p\u0142atnych us\u0142ug"],[[1,"paidServiceTermURL"]]],". ",[8,"$b",["Kupuj\u0105c przedmiot ze sklepu gry ",[1,"applicationName"],", nabywasz ograniczon\u0105 licencj\u0119 na u\u017Cywanie tego przedmiotu w wymienionej grze."]]," Ten zakup nie podlega zwrotowi. Przedmiot zostanie dostarczony przez dewelopera bezpo\u015Brednio w grze."],"Q0dHYO":["Wymagane po\u0142\u0105czenie konta w celu realizacji. ",[1,"platforms_info"]],"3ah/a2":[[8,"$b",["Kupuj\u0105c przedmiot ze sklepu gry ",[1,"applicationName"],", nabywasz ograniczon\u0105 licencj\u0119 na u\u017Cywanie tego przedmiotu w wymienionej grze."]]," Ten zakup nie podlega zwrotowi. Przedmiot zostanie dostarczony przez dewelopera bezpo\u015Brednio w grze. ",[1,"platforms_info"]],"fO4b1C":["Po\u0142\u0105cz swoje konta ",[1,"applicationName"]," i Discord, aby zaakceptowa\u0107 ten zakup. ",[1,"platforms_info"]],"Sy7D+/":["Ten sklep nie ma jeszcze \u017Cadnych przedmiot\xf3w. Wr\xf3\u0107 p\xf3\u017Aniej!"],"OvBwPV":["Brak dost\u0119pnego sklepu"],"BMMo2K":["Po\u0142\u0105cz swoje konto ",[1,"applicationName"]," i konto Discord w ustawieniach Discorda na komputerze, aby odebra\u0107 ten prezent."],"eNNnIG":["Po\u0142\u0105cz swoje konto ",[1,"applicationName"]," i konto Discord w ustawieniach Discorda na komputerze, aby zaakceptowa\u0107 ten zakup."],"gndWN7":["Otw\xf3rz Discorda na komputerze, aby dokona\u0107 zakupu."],"bRPsNX":["Zrealizuj sw\xf3j zakup"],"BKf0MM":["Zobacz szczeg\xf3\u0142y"]}',
-);
+e.exports = {
+    "5h8p5P": [
+        [
+            6,
+            "count",
+            {
+                one: ["Platforma ", [1, "platforms"], " nie jest obsługiwana."],
+                other: ["Platformy ", [1, "platforms"], " nie są obsługiwane."],
+            },
+            0,
+            "cardinal",
+        ],
+    ],
+    vyAtfo: [
+        "Połącz swoje konta ",
+        [1, "applicationName"],
+        " i Discord, aby zaakceptować ten prezent. ",
+        [1, "platforms_info"],
+    ],
+    yqAKVO: ["Konto połączone z ", [1, "applicationName"], ". Odbierz prezent poniżej. ", [1, "platforms_info"]],
+    Ufm9XX: [
+        "Klikając „",
+        [1, "buyButtonLabel"],
+        "”, akceptujesz ",
+        [8, "$link", ["Warunki korzystania z płatnych usług"], [[1, "paidServiceTermURL"]]],
+        ". ",
+        [
+            8,
+            "$b",
+            [
+                "Kupując przedmiot ze sklepu gry ",
+                [1, "applicationName"],
+                ", nabywasz ograniczoną licencję na używanie tego przedmiotu w wymienionej grze.",
+            ],
+        ],
+        " Ten zakup nie podlega zwrotowi. Przedmiot zostanie dostarczony przez dewelopera bezpośrednio w grze.",
+    ],
+    Q0dHYO: ["Wymagane połączenie konta w celu realizacji. ", [1, "platforms_info"]],
+    "3ah/a2": [
+        [
+            8,
+            "$b",
+            [
+                "Kupując przedmiot ze sklepu gry ",
+                [1, "applicationName"],
+                ", nabywasz ograniczoną licencję na używanie tego przedmiotu w wymienionej grze.",
+            ],
+        ],
+        " Ten zakup nie podlega zwrotowi. Przedmiot zostanie dostarczony przez dewelopera bezpośrednio w grze. ",
+        [1, "platforms_info"],
+    ],
+    fO4b1C: [
+        "Połącz swoje konta ",
+        [1, "applicationName"],
+        " i Discord, aby zaakceptować ten zakup. ",
+        [1, "platforms_info"],
+    ],
+    "Sy7D+/": ["Ten sklep nie ma jeszcze żadnych przedmiotów. Wróć później!"],
+    OvBwPV: ["Brak dostępnego sklepu"],
+    BMMo2K: [
+        "Połącz swoje konto ",
+        [1, "applicationName"],
+        " i konto Discord w ustawieniach Discorda na komputerze, aby odebrać ten prezent.",
+    ],
+    eNNnIG: [
+        "Połącz swoje konto ",
+        [1, "applicationName"],
+        " i konto Discord w ustawieniach Discorda na komputerze, aby zaakceptować ten zakup.",
+    ],
+    gndWN7: ["Otwórz Discorda na komputerze, aby dokonać zakupu."],
+    bRPsNX: ["Zrealizuj swój zakup"],
+    BKf0MM: ["Zobacz szczegóły"],
+};

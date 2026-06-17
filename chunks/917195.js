@@ -1,3 +1,15 @@
-i.exports = JSON.parse(
-    '{"u72Prd":["Trasmetti in risoluzione HD con Nitro"],"uwMBDo":["Condividi audio dell\'app"],"3wwZ/Q":["Inizia lo streaming"],"OsS9Ll":["Interrompi lo streaming"],"j+eAMQ":["Audio dello streaming"],"/XSr8v":["Modalit\xe0 streaming"],"ibH7vy":["Qualit\xe0 e prestazioni equilibrate (",[1,"resolution"],"p, ",[1,"fps"]," fps)"],"2qmQ8N":["Predefinito"],"q4gYBi":["Per video e gaming (",[1,"resolution"],"p, ",[1,"fps"]," fps)"],"nMcXo1":["Qualit\xe0 alta"],"fN0UQY":["Ottimizzate per dispositivi pi\xf9 lenti (",[1,"resolution"],"p, ",[1,"fps"]," fps)"],"5eO4/m":["Prestazioni"],"CrNjqp":["Impostazioni streaming"]}',
-);
+i.exports = {
+    u72Prd: ["Trasmetti in risoluzione HD con Nitro"],
+    uwMBDo: ["Condividi audio dell'app"],
+    "3wwZ/Q": ["Inizia lo streaming"],
+    OsS9Ll: ["Interrompi lo streaming"],
+    "j+eAMQ": ["Audio dello streaming"],
+    "/XSr8v": ["Modalità streaming"],
+    ibH7vy: ["Qualità e prestazioni equilibrate (", [1, "resolution"], "p, ", [1, "fps"], " fps)"],
+    "2qmQ8N": ["Predefinito"],
+    q4gYBi: ["Per video e gaming (", [1, "resolution"], "p, ", [1, "fps"], " fps)"],
+    nMcXo1: ["Qualità alta"],
+    fN0UQY: ["Ottimizzate per dispositivi più lenti (", [1, "resolution"], "p, ", [1, "fps"], " fps)"],
+    "5eO4/m": ["Prestazioni"],
+    CrNjqp: ["Impostazioni streaming"],
+};

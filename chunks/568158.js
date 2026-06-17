@@ -1,3 +1,26 @@
-e.exports = JSON.parse(
-    '{"QwW8zd":["Post maken"],"DxwBMf":["Cre\xeber een ruimte en nodig anderen uit."],"7aCPJG":["Al toegevoegd"],"F5YBmi":["Alles selecteren"],"578719":["Help spelers sessies te vinden die bij hun vibe passen door te kiezen uit vooraf gedefinieerde tags"],"JWRsCC":["Aanbevolen tags toevoegen"],"h/GwWL":["LFG"],"MKZ+Ky":["Help spelers sessies te vinden die bij hun vibe passen door te kiezen uit vooraf gedefinieerde tags"],"5a7Pjb":["Aanbevolen tags toevoegen"],"/mEbGf":["Beschrijving"],"SU/IAE":["Voeg meer details toe over je gamesessie"],"UHF2Zn":["Koppel je account, zodat spelers de beschikbare posities in je team kunnen zien en kunnen vragen of ze mee mogen doen!"],"EBSaL4":["Koppel je account"],"vznMVa":[[8,"$link",["Koppel je account"],[[1,"onClick"]]],", zodat spelers de beschikbare posities in je team kunnen zien!"],"yoIAe/":["Voeg tags toe voor de vibes en om te vinden wat je zoekt"],"tOsHsu":["Post maken"],"G91SYQ":["Je kunt een oproep starten waaraan anderen kunnen deelnemen"],"0s2ICk":["Voeg een \'",[1,"noMicTagName"],"\'-tag toe aan dit kanaal om deze schakelaar te activeren"],"Xd2NFi":["Voicechat"]}',
-);
+e.exports = {
+    578719: ["Help spelers sessies te vinden die bij hun vibe passen door te kiezen uit vooraf gedefinieerde tags"],
+    QwW8zd: ["Post maken"],
+    DxwBMf: ["Creëer een ruimte en nodig anderen uit."],
+    "7aCPJG": ["Al toegevoegd"],
+    F5YBmi: ["Alles selecteren"],
+    JWRsCC: ["Aanbevolen tags toevoegen"],
+    "h/GwWL": ["LFG"],
+    "MKZ+Ky": ["Help spelers sessies te vinden die bij hun vibe passen door te kiezen uit vooraf gedefinieerde tags"],
+    "5a7Pjb": ["Aanbevolen tags toevoegen"],
+    "/mEbGf": ["Beschrijving"],
+    "SU/IAE": ["Voeg meer details toe over je gamesessie"],
+    UHF2Zn: [
+        "Koppel je account, zodat spelers de beschikbare posities in je team kunnen zien en kunnen vragen of ze mee mogen doen!",
+    ],
+    EBSaL4: ["Koppel je account"],
+    vznMVa: [
+        [8, "$link", ["Koppel je account"], [[1, "onClick"]]],
+        ", zodat spelers de beschikbare posities in je team kunnen zien!",
+    ],
+    "yoIAe/": ["Voeg tags toe voor de vibes en om te vinden wat je zoekt"],
+    tOsHsu: ["Post maken"],
+    G91SYQ: ["Je kunt een oproep starten waaraan anderen kunnen deelnemen"],
+    "0s2ICk": ["Voeg een '", [1, "noMicTagName"], "'-tag toe aan dit kanaal om deze schakelaar te activeren"],
+    Xd2NFi: ["Voicechat"],
+};

@@ -1,3 +1,9 @@
-p.exports = JSON.parse(
-    '{"klSpfs":["\u7F16\u8F91\u8BBE\u7F6E"],"NzUuLD":["+",[1,"count"]," \u6761\u6D88\u606F"],"O+racd":["\u6682\u65E0\u901A\u77E5\u3002"],"5H2Jd6":["\u663E\u793A\u5168\u90E8"],"Ko8NGn":["\u663E\u793A\u6807\u8BB0"],"dcpdhC":["\u9009\u62E9\u4E00\u6761\u6D88\u606F\u5E76\u8DF3\u8F6C\u81F3\u8BE5\u4F4D\u7F6E\u3002"],"VAK+h9":["\u6B22\u8FCE\u6765\u5230\u901A\u77E5\u4E2D\u5FC3\uFF01"]}',
-);
+p.exports = {
+    klSpfs: ["编辑设置"],
+    NzUuLD: ["+", [1, "count"], " 条消息"],
+    "O+racd": ["暂无通知。"],
+    "5H2Jd6": ["显示全部"],
+    Ko8NGn: ["显示标记"],
+    dcpdhC: ["选择一条消息并跳转至该位置。"],
+    "VAK+h9": ["欢迎来到通知中心！"],
+};

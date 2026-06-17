@@ -1,3 +1,15 @@
-p.exports = JSON.parse(
-    '{"u72Prd":["\u900F\u904E Nitro \u8A02\u95B1\u4EE5 HD \u89E3\u6790\u5EA6\u9032\u884C\u76F4\u64AD"],"uwMBDo":["\u5206\u4EAB\u61C9\u7528\u7A0B\u5F0F\u97F3\u8A0A"],"3wwZ/Q":["\u958B\u59CB\u76F4\u64AD"],"OsS9Ll":["\u505C\u6B62\u76F4\u64AD"],"j+eAMQ":["\u76F4\u64AD\u97F3\u8A0A"],"/XSr8v":["\u76F4\u64AD\u6A21\u5F0F"],"ibH7vy":["\u5E73\u8861\u756B\u8CEA\u548C\u6548\u80FD (",[1,"resolution"],"p\u3001",[1,"fps"],"fps)"],"2qmQ8N":["\u9810\u8A2D"],"q4gYBi":["\u770B\u5F71\u7247\u548C\u73A9\u904A\u6232\u6240\u4F7F\u7528\u7684\u6A21\u5F0F (",[1,"resolution"],"p\u3001",[1,"fps"],"fps)"],"nMcXo1":["\u9AD8\u756B\u8CEA"],"fN0UQY":["\u5DF2\u70BA\u904B\u4F5C\u901F\u5EA6\u8F03\u6162\u7684\u88DD\u7F6E\u9032\u884C\u6700\u4F73\u5316 (",[1,"resolution"],"p\u3001",[1,"fps"],"fps)"],"5eO4/m":["\u6548\u80FD"],"CrNjqp":["\u76F4\u64AD\u8A2D\u5B9A"]}',
-);
+p.exports = {
+    u72Prd: ["透過 Nitro 訂閱以 HD 解析度進行直播"],
+    uwMBDo: ["分享應用程式音訊"],
+    "3wwZ/Q": ["開始直播"],
+    OsS9Ll: ["停止直播"],
+    "j+eAMQ": ["直播音訊"],
+    "/XSr8v": ["直播模式"],
+    ibH7vy: ["平衡畫質和效能 (", [1, "resolution"], "p、", [1, "fps"], "fps)"],
+    "2qmQ8N": ["預設"],
+    q4gYBi: ["看影片和玩遊戲所使用的模式 (", [1, "resolution"], "p、", [1, "fps"], "fps)"],
+    nMcXo1: ["高畫質"],
+    fN0UQY: ["已為運作速度較慢的裝置進行最佳化 (", [1, "resolution"], "p、", [1, "fps"], "fps)"],
+    "5eO4/m": ["效能"],
+    CrNjqp: ["直播設定"],
+};

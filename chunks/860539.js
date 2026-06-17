@@ -1,3 +1,37 @@
-r.exports = JSON.parse(
-    '{"mXY4Rb":["\u5DF2\u662FGame Pass\u4F1A\u5458\uFF1F",[8,"$link",["\u5173\u8054\u8D26\u53F7"],[[1,"onConnect"]]],"\u5373\u53EF\u89E3\u9501\u989D\u5916 Orb \u5956\u52B1\u4E0E\u5546\u5E97\u4F18\u60E0\u3002"],"oBYFF3":["\u83B7\u53D6\u6240\u6709 Nitro \u7279\u6743"],"HZz88k":["\u6BCF\u6708 Orb \u6389\u843D"],"Aau2G1":["Orb \u589E\u500D\u5668"],"6Udfv9":["\u5546\u5E97\u6298\u6263"],"f1ygW4":["\u60A8\u7684 Xbox Game Pass \u9644\u8D60\u4E86 Nitro \u4F53\u9A8C"],"cRLw2a":["\u60A8\u7684 Xbox Game Pass \u9644\u8D60\u4E86 Nitro \u4F53\u9A8C"],"ZYc6Hv":["\u6BCF\u6708\u53EF\u989D\u5916\u83B7\u5F97 ",[1,"orbAmount"]," Orb\u3002\u4E0B\u4E00\u8F6E\u5956\u52B1\u5C06\u4E8E ",[1,"days"]," \u5929\u540E\u4E0A\u7EBF\u3002"],"+tdDeK":["\u6BCF\u6708 Orb \u6389\u843D"],"kc3Kvs":["\u5C06\u4EFB\u52A1\u80DC\u5229\u5347\u7EA7\u4E3A\u201C\u5927\u4E58\u80DC\u5229\u201D\uFF0COrb \u5956\u52B1\u5C06\u4EAB ",[1,"multiplier"]," \u500D\u52A0\u6210\u3002"],"++kzl5":["Orb \u589E\u500D\u5668"],"WgkpKK":["\u5728 Discord \u5546\u5E97\u4E2D\u4EAB\u53D7\u7CBE\u9009\u7269\u54C1\u7684\u8D85\u503C\u6298\u6263\u3002",[8,"$link",["\u8BBF\u95EE\u5546\u5E97"],[[1,"onClick"]]]],"a+PtZt":["\u5546\u5E97\u6298\u6263"],"70kyQr":["\u60A8\u7684 Xbox Game Pass \u4F1A\u5458\u9644\u8D60 Nitro \u4F53\u9A8C\u3002\u5373\u523B\u7545\u4EAB\u8FD9\u4E09\u9879 Nitro \u7279\u6743\u3002",[8,"$link",["\u4E86\u89E3\u66F4\u591A"],[[1,"learnMoreLink"]]]],"4CdlUW":["\u89E3\u9501\u5168\u90E8 Nitro \u7279\u6743"],"c5usUr":["\u83B7\u53D6\u66F4\u591A Orb"],"UkrcSH":["\u6301\u6709 Xbox Game Pass \u4F1A\u5458\uFF0C\u5373\u53EF\u89E3\u9501 Nitro \u4E13\u5C5E\u798F\u5229\uFF0C\u5E76\u5728\u4EFB\u52A1\u4E2D\u989D\u5916\u83B7\u5F97 ",[2,"bonusOrbMultiplier"]," \u500D Orb"],"D+kUbg":["Xbox Game Pass \u4F1A\u5458\u73B0\u5728\u53EF\u5728 Discord \u4E0A\u83B7\u5F97\u989D\u5916\u7684 Orb \u5956\u52B1\u548C\u5546\u5E97\u6298\u6263\u3002\u91CD\u65B0\u5173\u8054 Xbox \u4EE5\u89E3\u9501\u3002",[8,"$link",["\u4E86\u89E3\u66F4\u591A"],[[1,"learnMoreLink"]]]],"9cLtDI":["\u65B0\u798F\u5229\uFF01\u7528 Xbox Game Pass \u4F53\u9A8C Nitro \u7684\u9B45\u529B"],"DePOcS":["Xbox Game Pass \u4F1A\u5458\u5C0A\u4EAB\u5546\u5E97\u4E13\u5C5E\u6298\u6263"],"Urtyu9":["Nitro \u8BA2\u9605\u5F00\u901A ",[1,"days"]," \u5929\u540E\uFF0C\u60A8\u5C06\u6536\u5230\u6BCF\u6708\u4E13\u5C5E Orb \u6389\u843D\u3002"]}',
-);
+r.exports = {
+    mXY4Rb: [
+        "已是Game Pass会员？",
+        [8, "$link", ["关联账号"], [[1, "onConnect"]]],
+        "即可解锁额外 Orb 奖励与商店优惠。",
+    ],
+    oBYFF3: ["获取所有 Nitro 特权"],
+    HZz88k: ["每月 Orb 掉落"],
+    Aau2G1: ["Orb 增倍器"],
+    "6Udfv9": ["商店折扣"],
+    f1ygW4: ["您的 Xbox Game Pass 附赠了 Nitro 体验"],
+    cRLw2a: ["您的 Xbox Game Pass 附赠了 Nitro 体验"],
+    ZYc6Hv: ["每月可额外获得 ", [1, "orbAmount"], " Orb。下一轮奖励将于 ", [1, "days"], " 天后上线。"],
+    "+tdDeK": ["每月 Orb 掉落"],
+    kc3Kvs: ["将任务胜利升级为“大乘胜利”，Orb 奖励将享 ", [1, "multiplier"], " 倍加成。"],
+    "++kzl5": ["Orb 增倍器"],
+    WgkpKK: ["在 Discord 商店中享受精选物品的超值折扣。", [8, "$link", ["访问商店"], [[1, "onClick"]]]],
+    "a+PtZt": ["商店折扣"],
+    "70kyQr": [
+        "您的 Xbox Game Pass 会员附赠 Nitro 体验。即刻畅享这三项 Nitro 特权。",
+        [8, "$link", ["了解更多"], [[1, "learnMoreLink"]]],
+    ],
+    "4CdlUW": ["解锁全部 Nitro 特权"],
+    c5usUr: ["获取更多 Orb"],
+    UkrcSH: [
+        "持有 Xbox Game Pass 会员，即可解锁 Nitro 专属福利，并在任务中额外获得 ",
+        [2, "bonusOrbMultiplier"],
+        " 倍 Orb",
+    ],
+    "D+kUbg": [
+        "Xbox Game Pass 会员现在可在 Discord 上获得额外的 Orb 奖励和商店折扣。重新关联 Xbox 以解锁。",
+        [8, "$link", ["了解更多"], [[1, "learnMoreLink"]]],
+    ],
+    "9cLtDI": ["新福利！用 Xbox Game Pass 体验 Nitro 的魅力"],
+    DePOcS: ["Xbox Game Pass 会员尊享商店专属折扣"],
+    Urtyu9: ["Nitro 订阅开通 ", [1, "days"], " 天后，您将收到每月专属 Orb 掉落。"],
+};

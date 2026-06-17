@@ -1,3 +1,30 @@
-c.exports = JSON.parse(
-    '{"QwW8zd":["T\u1EA1o b\xe0i \u0111\u0103ng"],"DxwBMf":["T\u1EA1o m\u1ED9t kh\xf4ng gian \u0111\u1EC3 m\u1EDDi ng\u01B0\u1EDDi kh\xe1c."],"7aCPJG":["\u0110\xe3 th\xeam"],"F5YBmi":["Ch\u1ECDn T\u1EA5t C\u1EA3"],"578719":["Gi\xfap ng\u01B0\u1EDDi ch\u01A1i t\xecm th\u1EA5y c\xe1c phi\xean ph\xf9 h\u1EE3p v\u1EDBi s\u1EDF th\xedch c\u1EE7a h\u1ECD b\u1EB1ng c\xe1ch ch\u1ECDn t\u1EEB c\xe1c tag \u0111\u01B0\u1EE3c x\xe1c \u0111\u1ECBnh tr\u01B0\u1EDBc"],"JWRsCC":["Th\xeam Tag \u0110\u01B0\u1EE3c \u0110\u1EC1 Xu\u1EA5t"],"h/GwWL":["LFG"],"MKZ+Ky":["Gi\xfap ng\u01B0\u1EDDi ch\u01A1i t\xecm th\u1EA5y c\xe1c phi\xean ph\xf9 h\u1EE3p v\u1EDBi s\u1EDF th\xedch c\u1EE7a h\u1ECD b\u1EB1ng c\xe1ch ch\u1ECDn t\u1EEB c\xe1c tag \u0111\u01B0\u1EE3c x\xe1c \u0111\u1ECBnh tr\u01B0\u1EDBc"],"5a7Pjb":["Th\xeam tag \u0111\u01B0\u1EE3c \u0111\u1EC1 xu\u1EA5t"],"/mEbGf":["M\xf4 t\u1EA3"],"SU/IAE":["Th\xeam th\xf4ng tin chi ti\u1EBFt v\u1EC1 phi\xean tr\xf2 ch\u01A1i c\u1EE7a b\u1EA1n"],"UHF2Zn":["Li\xean k\u1EBFt t\xe0i kho\u1EA3n c\u1EE7a b\u1EA1n \u0111\u1EC3 ng\u01B0\u1EDDi ch\u01A1i c\xf3 th\u1EC3 xem c\xe1c v\u1ECB tr\xed tr\u1ED1ng trong t\u1ED5 \u0111\u1ED9i c\u1EE7a b\u1EA1n v\xe0 y\xeau c\u1EA7u tham gia!"],"EBSaL4":["Li\xean k\u1EBFt t\xe0i kho\u1EA3n"],"vznMVa":[[8,"$link",["Li\xean k\u1EBFt t\xe0i kho\u1EA3n c\u1EE7a b\u1EA1n"],[[1,"onClick"]]]," \u0111\u1EC3 ng\u01B0\u1EDDi ch\u01A1i c\xf3 th\u1EC3 xem c\xe1c v\u1ECB tr\xed tr\u1ED1ng trong t\u1ED5 \u0111\u1ED9i c\u1EE7a b\u1EA1n!"],"yoIAe/":["Th\xeam th\u1EBB cho c\u1EA3m nh\u1EADn v\xe0 nh\u1EEFng g\xec b\u1EA1n \u0111ang t\xecm ki\u1EBFm"],"tOsHsu":["T\u1EA1o b\xe0i \u0111\u0103ng"],"G91SYQ":["B\u1EA1n c\xf3 th\u1EC3 b\u1EAFt \u0111\u1EA7u m\u1ED9t cu\u1ED9c g\u1ECDi m\xe0 ng\u01B0\u1EDDi kh\xe1c c\xf3 th\u1EC3 tham gia"],"0s2ICk":["Th\xeam th\u1EBB \\"",[1,"noMicTagName"],"\\" v\xe0o k\xeanh n\xe0y \u0111\u1EC3 b\u1EADt c\xf4ng t\u1EAFc n\xe0y"],"Xd2NFi":["Tr\xf2 chuy\u1EC7n tho\u1EA1i"]}',
-);
+c.exports = {
+    578719: [
+        "Giúp người chơi tìm thấy các phiên phù hợp với sở thích của họ bằng cách chọn từ các tag được xác định trước",
+    ],
+    QwW8zd: ["Tạo bài đăng"],
+    DxwBMf: ["Tạo một không gian để mời người khác."],
+    "7aCPJG": ["Đã thêm"],
+    F5YBmi: ["Chọn Tất Cả"],
+    JWRsCC: ["Thêm Tag Được Đề Xuất"],
+    "h/GwWL": ["LFG"],
+    "MKZ+Ky": [
+        "Giúp người chơi tìm thấy các phiên phù hợp với sở thích của họ bằng cách chọn từ các tag được xác định trước",
+    ],
+    "5a7Pjb": ["Thêm tag được đề xuất"],
+    "/mEbGf": ["Mô tả"],
+    "SU/IAE": ["Thêm thông tin chi tiết về phiên trò chơi của bạn"],
+    UHF2Zn: [
+        "Liên kết tài khoản của bạn để người chơi có thể xem các vị trí trống trong tổ đội của bạn và yêu cầu tham gia!",
+    ],
+    EBSaL4: ["Liên kết tài khoản"],
+    vznMVa: [
+        [8, "$link", ["Liên kết tài khoản của bạn"], [[1, "onClick"]]],
+        " để người chơi có thể xem các vị trí trống trong tổ đội của bạn!",
+    ],
+    "yoIAe/": ["Thêm thẻ cho cảm nhận và những gì bạn đang tìm kiếm"],
+    tOsHsu: ["Tạo bài đăng"],
+    G91SYQ: ["Bạn có thể bắt đầu một cuộc gọi mà người khác có thể tham gia"],
+    "0s2ICk": ['Thêm thẻ "', [1, "noMicTagName"], '" vào kênh này để bật công tắc này'],
+    Xd2NFi: ["Trò chuyện thoại"],
+};

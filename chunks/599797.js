@@ -1,3 +1,25 @@
-r.exports = JSON.parse(
-    '{"0LL6FX":["\uBAA8\uB4E0 \uBA64\uBC84\uC758 \uC11C\uBC84 \uC678\uAD00\uC774 \uC5C5\uB370\uC774\uD2B8\uB3FC\uC694. \uD14C\uB9C8\uB294 \uAC01\uC790\uC758 \uB77C\uC774\uD2B8 \uB610\uB294 \uB2E4\uD06C \uBAA8\uB4DC\uC5D0 \uB9DE\uAC8C \uC801\uC6A9\uB3FC\uC694."],"H8idcP":["\uC11C\uBC84 \uD14C\uB9C8\uB97C \uC801\uC6A9\uD560\uAE4C\uC694?"],"odtr7f":["\uC0AC\uC804 \uC124\uC815\uB41C \uD14C\uB9C8\uB97C \uC120\uD0DD\uD558\uAC70\uB098 \uC9C1\uC811 \uB9CC\uB4E4\uC5B4 \uBCF4\uC138\uC694. \uBAA8\uB4E0 \uBA64\uBC84\uAC00 \uC11C\uBC84\uB97C \uC5F4 \uB54C \uC774 \uD14C\uB9C8\uB97C \uBCF4\uAC8C \uB418\uBA70, \uBC1D\uC740 \uBAA8\uB4DC \uB610\uB294 \uC5B4\uB450\uC6B4 \uBAA8\uB4DC\uC5D0 \uB9DE\uAC8C \uC801\uC6A9\uB3FC\uC694. ",[8,"$link",["\uC790\uC138\uD788 \uC54C\uC544\uBCF4\uAE30"],[[1,"articleUrl"]]]],"XhiIAu":["\uC11C\uBC84\uC758 \uBAA8\uB4E0 \uBA64\uBC84\uC5D0\uAC8C \uD45C\uC2DC\uB418\uB294 \uC11C\uBC84\uC758 \uB514\uC790\uC778\uC744 \uBCC0\uACBD\uD574\uC694."],"aZpFFn":["\uC11C\uBC84 \uD14C\uB9C8 \uD65C\uC131\uD654"],"jSrqR2":["\uD504\uB9AC\uC14B"],"XyrxOp":["\uD30C\uB791\uBCF4\uB77C"],"tXRcxU":["\uB370\uB2D8"],"S8/OZA":["\uBD88"],"nCbxEN":["\uB354\uC2A4\uD2B8"],"6ZeQDd":["\uC81C\uC774\uB4DC"],"TiGQro":["\uBAA8\uC2A4"],"x3h/OV":["\uC635\uC2DC\uB514\uC5B8"],"qn90j5":["\uC624\uC158"],"tTJY6S":["\uC790\uB450\uC0C9"],"+k8Q/o":["\uD669\uD63C"],"HkvkHP":["\uAC01 \uBA64\uBC84\uAC00 \uC120\uD638\uD558\uB294 \uBC1D\uC740 \uBAA8\uB4DC \uB610\uB294 \uC5B4\uB450\uC6B4 \uBAA8\uB4DC \uC124\uC815\uC5D0 \uB9DE\uCDB0 \uD45C\uC2DC\uB3FC\uC694."],"zry4l5":["\uD14C\uB9C8 \uBBF8\uB9AC \uBCF4\uAE30"],"Ck5zxP":["\uD14C\uB9C8 \uC120\uD0DD"],"/6NbRv":["\uC11C\uBC84 \uD14C\uB9C8"]}',
-);
+r.exports = {
+    "0LL6FX": ["모든 멤버의 서버 외관이 업데이트돼요. 테마는 각자의 라이트 또는 다크 모드에 맞게 적용돼요."],
+    H8idcP: ["서버 테마를 적용할까요?"],
+    odtr7f: [
+        "사전 설정된 테마를 선택하거나 직접 만들어 보세요. 모든 멤버가 서버를 열 때 이 테마를 보게 되며, 밝은 모드 또는 어두운 모드에 맞게 적용돼요. ",
+        [8, "$link", ["자세히 알아보기"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["서버의 모든 멤버에게 표시되는 서버의 디자인을 변경해요."],
+    aZpFFn: ["서버 테마 활성화"],
+    jSrqR2: ["프리셋"],
+    XyrxOp: ["파랑보라"],
+    tXRcxU: ["데님"],
+    "S8/OZA": ["불"],
+    nCbxEN: ["더스트"],
+    "6ZeQDd": ["제이드"],
+    TiGQro: ["모스"],
+    "x3h/OV": ["옵시디언"],
+    qn90j5: ["오션"],
+    tTJY6S: ["자두색"],
+    "+k8Q/o": ["황혼"],
+    HkvkHP: ["각 멤버가 선호하는 밝은 모드 또는 어두운 모드 설정에 맞춰 표시돼요."],
+    zry4l5: ["테마 미리 보기"],
+    Ck5zxP: ["테마 선택"],
+    "/6NbRv": ["서버 테마"],
+};

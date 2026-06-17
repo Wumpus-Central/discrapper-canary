@@ -1,3 +1,17 @@
-p.exports = JSON.parse(
-    '{"6/dkHh":["\u30C8\u30E9\u30F3\u30B9\u30AF\u30EA\u30D7\u30C8\u3092\u9589\u3058\u308B"],"XiLvuG":["\u97F3\u91CF\u3092\u5909\u66F4"],"ZwPhbB":["\u30D7\u30EC\u30A4\u30D0\u30C3\u30AF\u901F\u5EA6"],"dRVF+Z":["10\u79D2\u5DFB\u304D\u623B\u3057"],"yV2FLL":["10\u79D2\u5148\u3078\u30B9\u30AD\u30C3\u30D7"],"YWbiPw":["\u672A\u8996\u8074\u306E\u30BB\u30AF\u30B7\u30E7\u30F3\u306F\u307E\u3060\u30B9\u30AD\u30C3\u30D7\u3067\u304D\u307E\u305B\u3093"],"0DbPcL":["\u30AD\u30E3\u30D7\u30B7\u30E7\u30F3\u3092\u5207\u308A\u66FF\u3048"],"z9Cnzv":["\u30D5\u30EB\u30B9\u30AF\u30EA\u30FC\u30F3\u5207\u66FF"],"6EjGUv":["\u30C8\u30E9\u30F3\u30B9\u30AF\u30EA\u30D7\u30C8\u3092\u5207\u308A\u66FF\u3048"],"kX3+aM":["\u52D5\u753B\u3092\u8AAD\u307F\u8FBC\u307F\u4E2D..."],"c7IRfm":["\u30A6\u30A3\u30F3\u30C9\u30A6\u304C\u30D5\u30A9\u30FC\u30AB\u30B9\u3092\u5931\u3063\u305F\u305F\u3081\u3001\u52D5\u753B\u304C\u4E00\u6642\u505C\u6B62\u3057\u307E\u3057\u305F"],"9St/zK":["\u30A6\u30A3\u30F3\u30C9\u30A6\u304C\u8868\u793A\u3055\u308C\u3066\u3044\u306A\u3044\u305F\u3081\u3001\u52D5\u753B\u304C\u4E00\u6642\u505C\u6B62\u3057\u307E\u3057\u305F"],"VZkd/n":["\u30C8\u30E9\u30F3\u30B9\u30AF\u30EA\u30D7\u30C8"],"E527vj":["\u52D5\u753B\u30B5\u30E0\u30CD\u30A4\u30EB"],"5L6uDs":[[1,"percent"],"\u30D1\u30FC\u30BB\u30F3\u30C8"]}',
-);
+p.exports = {
+    "6/dkHh": ["トランスクリプトを閉じる"],
+    XiLvuG: ["音量を変更"],
+    ZwPhbB: ["プレイバック速度"],
+    "dRVF+Z": ["10秒巻き戻し"],
+    yV2FLL: ["10秒先へスキップ"],
+    YWbiPw: ["未視聴のセクションはまだスキップできません"],
+    "0DbPcL": ["キャプションを切り替え"],
+    z9Cnzv: ["フルスクリーン切替"],
+    "6EjGUv": ["トランスクリプトを切り替え"],
+    "kX3+aM": ["動画を読み込み中..."],
+    c7IRfm: ["ウィンドウがフォーカスを失ったため、動画が一時停止しました"],
+    "9St/zK": ["ウィンドウが表示されていないため、動画が一時停止しました"],
+    "VZkd/n": ["トランスクリプト"],
+    E527vj: ["動画サムネイル"],
+    "5L6uDs": [[1, "percent"], "パーセント"],
+};

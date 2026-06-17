@@ -1,3 +1,23 @@
-i.exports = JSON.parse(
-    '{"q5M7HV":["\u012Evair\u016Bs"],"zRKbpz":["Serveris"],"UzRF+8":["Socialin\u0117s medijos"],"NGdNZb":["Asmenin\u0117s \u017Einut\u0117s"],"zJlwvV":["Discord sistemos \u017Einut\u0117s"],"40TIqW":["Rengini\u0173 prane\u0161imai"],"HibKoy":["Forumo prane\u0161imai"],"vcrTV5":["Draug\u0173 veikla"],"NxgGZA":["Pra\u0161ymai draugauti"],"9EDo+/":["\u017Daidimai"],"IUH/Oe":["Gaunami skambu\u010Diai"],"4qWUAO":["\u017Dinut\u0117s"],"n0Wp6j":["Praleistos \u017Einut\u0117s"],"T+79Eo":["Kita"],"kIrLfg":["Kiti serveri\u0173 prane\u0161imai"],"MOjygY":["Apklausos"],"wv4QHR":["Prane\u0161imai apie reakcijas"],"S5cB9e":["Realiuoju laiku"],"4n388K":["Scenos prane\u0161imai"],"Iy9grw":["Balso ir tiesiogin\u0117s transliacijos veikla"],"VeBD1N":["Prisijungta prie balso ry\u0161io"]}',
-);
+i.exports = {
+    q5M7HV: ["Įvairūs"],
+    zRKbpz: ["Serveris"],
+    "UzRF+8": ["Socialinės medijos"],
+    NGdNZb: ["Asmeninės žinutės"],
+    zJlwvV: ["Discord sistemos žinutės"],
+    "40TIqW": ["Renginių pranešimai"],
+    HibKoy: ["Forumo pranešimai"],
+    vcrTV5: ["Draugų veikla"],
+    NxgGZA: ["Prašymai draugauti"],
+    "9EDo+/": ["Žaidimai"],
+    "IUH/Oe": ["Gaunami skambučiai"],
+    "4qWUAO": ["Žinutės"],
+    n0Wp6j: ["Praleistos žinutės"],
+    "T+79Eo": ["Kita"],
+    kIrLfg: ["Kiti serverių pranešimai"],
+    MOjygY: ["Apklausos"],
+    wv4QHR: ["Pranešimai apie reakcijas"],
+    S5cB9e: ["Realiuoju laiku"],
+    "4n388K": ["Scenos pranešimai"],
+    Iy9grw: ["Balso ir tiesioginės transliacijos veikla"],
+    VeBD1N: ["Prisijungta prie balso ryšio"],
+};

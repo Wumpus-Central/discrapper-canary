@@ -1,3 +1,20 @@
-a.exports = JSON.parse(
-    '{"o/An3l":[[1,"username"],", ",[1,"applicationName"]," yay\u0131n\u0131 yapman\u0131 istedi"],"DKHhec":["Yay\u0131n Yapma \u0130zni \u0130ste"],"8qq+H7":[[1,"applicationName"]," Yay\u0131n\u0131n\u0131 Yapma \u0130zni \u0130ste"],"s7bMT0":[[1,"username"],", ",[1,"applicationName"]," yay\u0131n\u0131 yapman\u0131 istiyor"],"7pndSl":["Birinden ",[1,"applicationName"]," yay\u0131n yapmas\u0131n\u0131 istedin"],"P0wwmM":["Zaten yay\u0131n yap\u0131yorsun"],"u4QmWl":["Talebin s\xfcresi doldu"],"qRXats":["Ses kanal\u0131nda de\u011Fil"],"43zohO":["Oyun \xe7al\u0131\u015Fm\u0131yor"],"fac+eE":["\u0130zin yok"],"mVFTUg":["Talep \xe7ok yak\u0131n zamanda g\xf6nderildi"],"8HU1M2":["Talep g\xf6nderildi"],"5+172e":["Yay\u0131n yap"],"nAyuPp":["Yay\u0131n Talebi"],"d/qbC0":[[1,"username"]," yay\u0131n yapman\u0131 istedi"],"8B3U5O":["Birinden yay\u0131n yapmas\u0131n\u0131 istedin"],"UGbmBp":["Yay\u0131n yap"],"jTbTAF":[[8,"$b",[[1,"username"]]],", seni ",[8,"$b",[[1,"game"]]]," oynarken izlemek istiyor."]}',
-);
+a.exports = {
+    "o/An3l": [[1, "username"], ", ", [1, "applicationName"], " yayını yapmanı istedi"],
+    DKHhec: ["Yayın Yapma İzni İste"],
+    "8qq+H7": [[1, "applicationName"], " Yayınını Yapma İzni İste"],
+    s7bMT0: [[1, "username"], ", ", [1, "applicationName"], " yayını yapmanı istiyor"],
+    "7pndSl": ["Birinden ", [1, "applicationName"], " yayın yapmasını istedin"],
+    P0wwmM: ["Zaten yayın yapıyorsun"],
+    u4QmWl: ["Talebin süresi doldu"],
+    qRXats: ["Ses kanalında değil"],
+    "43zohO": ["Oyun çalışmıyor"],
+    "fac+eE": ["İzin yok"],
+    mVFTUg: ["Talep çok yakın zamanda gönderildi"],
+    "8HU1M2": ["Talep gönderildi"],
+    "5+172e": ["Yayın yap"],
+    nAyuPp: ["Yayın Talebi"],
+    "d/qbC0": [[1, "username"], " yayın yapmanı istedi"],
+    "8B3U5O": ["Birinden yayın yapmasını istedin"],
+    UGbmBp: ["Yayın yap"],
+    jTbTAF: [[8, "$b", [[1, "username"]]], ", seni ", [8, "$b", [[1, "game"]]], " oynarken izlemek istiyor."],
+};

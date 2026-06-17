@@ -1,3 +1,12 @@
-a.exports = JSON.parse(
-    '{"bGygJZ":["Lehets\xe9ges, hogy az eg\xe9sz h\xedv\xe1s alatt n\xe9m\xedtva volt\xe1l. Szeretn\xe9d megtudni, hogyan kapcsolhatod ki a n\xe9m\xedt\xe1st, hogy \xfajra halljanak m\xe1sok?"],"8VIRzR":["Ha szeretn\xe9d, hogy m\xe1sok halljanak, nyomd meg ezt a gombot a mikrofonod n\xe9m\xedt\xe1s\xe1nak kikapcsol\xe1s\xe1hoz. Ezt k\xf6vet\u0151en \xfajra megnyomhatod, \xe9s ism\xe9t n\xe9m\xedthatod a mikrofonodat."],"VG4zAf":["A mikrofonod n\xe9m\xedt\xe1s\xe1nak kikapcsol\xe1sa"],"5wYjyW":["N\xe9m\xedt\xe1si oktat\xf3anyag"],"01Jl9Z":["K\xf6sz\xf6n\xf6m, nem"],"DxcYYG":["L\xe1tni szeretn\xe9m!"]}',
-);
+a.exports = {
+    bGygJZ: [
+        "Lehetséges, hogy az egész hívás alatt némítva voltál. Szeretnéd megtudni, hogyan kapcsolhatod ki a némítást, hogy újra halljanak mások?",
+    ],
+    "8VIRzR": [
+        "Ha szeretnéd, hogy mások halljanak, nyomd meg ezt a gombot a mikrofonod némításának kikapcsolásához. Ezt követően újra megnyomhatod, és ismét némíthatod a mikrofonodat.",
+    ],
+    VG4zAf: ["A mikrofonod némításának kikapcsolása"],
+    "5wYjyW": ["Némítási oktatóanyag"],
+    "01Jl9Z": ["Köszönöm, nem"],
+    DxcYYG: ["Látni szeretném!"],
+};

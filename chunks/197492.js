@@ -1,3 +1,27 @@
-e.exports = JSON.parse(
-    '{"0LL6FX":["Dette vil opdatere serverens udseende for alle medlemmer. Temaet tilpasser sig hvert medlems pr\xe6ference for Lys eller M\xf8rk tilstand."],"H8idcP":["Anvend servertema?"],"odtr7f":["V\xe6lg et forudindstillet tema, eller skab dit eget. Hvert medlem ser dette tema, n\xe5r de hopper p\xe5 serveren, og det tilpasser sig deres indstilling for Lys eller M\xf8rk tilstand. ",[8,"$link",["F\xe5 mere at vide"],[[1,"articleUrl"]]]],"XhiIAu":["Dette \xe6ndrer, hvordan din server ser ud for alle medlemmer."],"aZpFFn":["Aktiv\xe9r servertema"],"jSrqR2":["Forudindstillinger"],"XyrxOp":["Bl\xe5violet"],"tXRcxU":["Denim"],"S8/OZA":["Ild"],"nCbxEN":["Guldst\xf8v"],"6ZeQDd":["Jade"],"TiGQro":["Mos"],"x3h/OV":["Obsidian"],"qn90j5":["Ocean"],"tTJY6S":["Blomme"],"+k8Q/o":["Tusm\xf8rke"],"HkvkHP":["Temaet tilpasser sig hvert medlems pr\xe6ference for Lys eller M\xf8rk tilstand."],"zry4l5":["Se eksempel p\xe5 tema"],"Ck5zxP":["V\xe6lg dit tema"],"/6NbRv":["Servertema"]}',
-);
+e.exports = {
+    "0LL6FX": [
+        "Dette vil opdatere serverens udseende for alle medlemmer. Temaet tilpasser sig hvert medlems præference for Lys eller Mørk tilstand.",
+    ],
+    H8idcP: ["Anvend servertema?"],
+    odtr7f: [
+        "Vælg et forudindstillet tema, eller skab dit eget. Hvert medlem ser dette tema, når de hopper på serveren, og det tilpasser sig deres indstilling for Lys eller Mørk tilstand. ",
+        [8, "$link", ["Få mere at vide"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["Dette ændrer, hvordan din server ser ud for alle medlemmer."],
+    aZpFFn: ["Aktivér servertema"],
+    jSrqR2: ["Forudindstillinger"],
+    XyrxOp: ["Blåviolet"],
+    tXRcxU: ["Denim"],
+    "S8/OZA": ["Ild"],
+    nCbxEN: ["Guldstøv"],
+    "6ZeQDd": ["Jade"],
+    TiGQro: ["Mos"],
+    "x3h/OV": ["Obsidian"],
+    qn90j5: ["Ocean"],
+    tTJY6S: ["Blomme"],
+    "+k8Q/o": ["Tusmørke"],
+    HkvkHP: ["Temaet tilpasser sig hvert medlems præference for Lys eller Mørk tilstand."],
+    zry4l5: ["Se eksempel på tema"],
+    Ck5zxP: ["Vælg dit tema"],
+    "/6NbRv": ["Servertema"],
+};

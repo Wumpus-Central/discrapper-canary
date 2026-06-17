@@ -1,3 +1,27 @@
-t.exports = JSON.parse(
-    '{"0LL6FX":["Ez minden tagn\xe1l friss\xedti a szerver megjelen\xe9s\xe9t. A t\xe9ma igazodik a vil\xe1gos vagy a s\xf6t\xe9t m\xf3dhoz a felhaszn\xe1l\xf3kn\xe1l."],"H8idcP":["Alkalmazod a szervert\xe9m\xe1t?"],"odtr7f":["El\u0151re be\xe1ll\xedtott t\xe9m\xe1t v\xe1laszthatsz, vagy saj\xe1tot is \xf6ssze\xe1ll\xedthatsz. Minden tag l\xe1tni fogja ezt a t\xe9m\xe1t, amikor megnyitja a szervert, \xe9s igazodni fog az illet\u0151 \xe1ltal haszn\xe1lt vagy S\xf6t\xe9t m\xf3dhoz. ",[8,"$link",["Tov\xe1bbi t\xe1j\xe9koztat\xe1s"],[[1,"articleUrl"]]]],"XhiIAu":["Ez minden tagn\xe1l megv\xe1ltoztatja a szervered megjelen\xe9s\xe9t."],"aZpFFn":["Szervert\xe9ma enged\xe9lyez\xe9se"],"jSrqR2":["El\u0151be\xe1ll\xedt\xe1sok"],"XyrxOp":["K\xe9kla"],"tXRcxU":["Farmer"],"S8/OZA":["T\u0171z"],"nCbxEN":["Aranypor"],"6ZeQDd":["J\xe1de"],"TiGQro":["Moha"],"x3h/OV":["Obszidi\xe1n"],"qn90j5":["\xd3ce\xe1n"],"tTJY6S":["Szilva"],"+k8Q/o":["Alkonyat"],"HkvkHP":["Minden tagn\xe1l az \xe1ltala el\u0151nyben r\xe9szes\xedtett Vil\xe1gos vagy S\xf6t\xe9t m\xf3d fog megjelenni."],"zry4l5":["T\xe9ma el\u0151n\xe9zet\xe9nek megtekint\xe9se"],"Ck5zxP":["V\xe1laszd ki a t\xe9m\xe1dat"],"/6NbRv":["Szervert\xe9ma"]}',
-);
+t.exports = {
+    "0LL6FX": [
+        "Ez minden tagnál frissíti a szerver megjelenését. A téma igazodik a világos vagy a sötét módhoz a felhasználóknál.",
+    ],
+    H8idcP: ["Alkalmazod a szervertémát?"],
+    odtr7f: [
+        "Előre beállított témát választhatsz, vagy sajátot is összeállíthatsz. Minden tag látni fogja ezt a témát, amikor megnyitja a szervert, és igazodni fog az illető által használt vagy Sötét módhoz. ",
+        [8, "$link", ["További tájékoztatás"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["Ez minden tagnál megváltoztatja a szervered megjelenését."],
+    aZpFFn: ["Szervertéma engedélyezése"],
+    jSrqR2: ["Előbeállítások"],
+    XyrxOp: ["Kékla"],
+    tXRcxU: ["Farmer"],
+    "S8/OZA": ["Tűz"],
+    nCbxEN: ["Aranypor"],
+    "6ZeQDd": ["Jáde"],
+    TiGQro: ["Moha"],
+    "x3h/OV": ["Obszidián"],
+    qn90j5: ["Óceán"],
+    tTJY6S: ["Szilva"],
+    "+k8Q/o": ["Alkonyat"],
+    HkvkHP: ["Minden tagnál az általa előnyben részesített Világos vagy Sötét mód fog megjelenni."],
+    zry4l5: ["Téma előnézetének megtekintése"],
+    Ck5zxP: ["Válaszd ki a témádat"],
+    "/6NbRv": ["Szervertéma"],
+};

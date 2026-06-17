@@ -1,4 +1,32 @@
 o.r(t), o.d(t, { default: () => s });
-let s = JSON.parse(
-    '{"QwW8zd":["Create Post"],"DxwBMf":["Create a space to invite others."],"y5Bork":["Browse open lobbies or post your own. Filter by vibe, mode, and playstyle."],"b77nl3":["Chat and hop on voice with your team, all from inside the post."],"BSPpd4":["Show live squad info and open spots."],"XZapWG":[[8,"$link",["Link your account"],[[1,"onClick"]]]," to show live squad info and open spots."],"NQechc":["Get in the game with the right squad"],"nJzi8D":["Be the first to create a game session with ",[6,"numTags",{"one":["this tag"],"other":["these tags"]},0,"cardinal"]],"ficpp7":["Join Voice Chat"],"7aCPJG":["Already added"],"F5YBmi":["Select All"],"578719":["Help players find sessions that match their vibe by selecting from pre-defined tags"],"JWRsCC":["Add Recommended Tags"],"h/GwWL":["LFG"],"MKZ+Ky":["Help players find sessions that match their vibe by selecting from pre-defined tags"],"5a7Pjb":["Add recommended tags"],"/mEbGf":["Description"],"SU/IAE":["Add more detail about your game session"],"UHF2Zn":["Link your account so players can see your squad\'s open spots and request to join!"],"EBSaL4":["Link Account"],"vznMVa":[[8,"$link",["Link your account"],[[1,"onClick"]]]," so players can see your squad\'s open spots!"],"yoIAe/":["Add tags for vibes and what you\u2019re looking for"],"tOsHsu":["Create post"],"G91SYQ":["You can start a call that others can join"],"0s2ICk":["Add a \\"",[1,"noMicTagName"],"\\" tag to this channel to enable this toggle"],"Xd2NFi":["Voice Chat"]}',
-);
+let s = {
+    578719: ["Help players find sessions that match their vibe by selecting from pre-defined tags"],
+    QwW8zd: ["Create Post"],
+    DxwBMf: ["Create a space to invite others."],
+    y5Bork: ["Browse open lobbies or post your own. Filter by vibe, mode, and playstyle."],
+    b77nl3: ["Chat and hop on voice with your team, all from inside the post."],
+    BSPpd4: ["Show live squad info and open spots."],
+    XZapWG: [[8, "$link", ["Link your account"], [[1, "onClick"]]], " to show live squad info and open spots."],
+    NQechc: ["Get in the game with the right squad"],
+    nJzi8D: [
+        "Be the first to create a game session with ",
+        [6, "numTags", { one: ["this tag"], other: ["these tags"] }, 0, "cardinal"],
+    ],
+    ficpp7: ["Join Voice Chat"],
+    "7aCPJG": ["Already added"],
+    F5YBmi: ["Select All"],
+    JWRsCC: ["Add Recommended Tags"],
+    "h/GwWL": ["LFG"],
+    "MKZ+Ky": ["Help players find sessions that match their vibe by selecting from pre-defined tags"],
+    "5a7Pjb": ["Add recommended tags"],
+    "/mEbGf": ["Description"],
+    "SU/IAE": ["Add more detail about your game session"],
+    UHF2Zn: ["Link your account so players can see your squad's open spots and request to join!"],
+    EBSaL4: ["Link Account"],
+    vznMVa: [[8, "$link", ["Link your account"], [[1, "onClick"]]], " so players can see your squad's open spots!"],
+    "yoIAe/": ["Add tags for vibes and what you’re looking for"],
+    tOsHsu: ["Create post"],
+    G91SYQ: ["You can start a call that others can join"],
+    "0s2ICk": ['Add a "', [1, "noMicTagName"], '" tag to this channel to enable this toggle'],
+    Xd2NFi: ["Voice Chat"],
+};

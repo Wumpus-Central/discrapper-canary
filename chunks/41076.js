@@ -1,3 +1,17 @@
-e.exports = JSON.parse(
-    '{"/cp93l":["Gelecek ay"],"raS6yf":["\xd6nceki ay"],"JA5C7L":["Temizle"],"I8kUqR":["Takvimi a\xe7"],"db85vU":["G\xf6sterilecek \xf6\u011Fe yok"],"bPKiId":["\\"",[1,"query"],"\\" i\xe7in sonu\xe7 bulunamad\u0131"],"WfH9in":["Kapat"],"m3Vfcs":["Bir daha g\xf6sterme"],"cgdAs2":["(Yeni bir sekmede a\xe7\u0131l\u0131r)"],"2L/ygS":[[1,"percent"]," tamamland\u0131"],"/Y7vRd":["Kald\u0131rmak i\xe7in sil butonuna bas."],"VMNfsY":["Se\xe7ilenler"],"A+pfVR":["Se\xe7..."],"v2YSk/":["Ad\u0131m ",[1,"stepNumber"]," / ",[1,"stepCount"]],"YpT3kk":["G\xf6r\xfcnt\xfcy\xfc b\xfcy\xfct ve videoyu oynat"]}',
-);
+e.exports = {
+    "/cp93l": ["Gelecek ay"],
+    raS6yf: ["Önceki ay"],
+    JA5C7L: ["Temizle"],
+    I8kUqR: ["Takvimi aç"],
+    db85vU: ["Gösterilecek öğe yok"],
+    bPKiId: ['"', [1, "query"], '" için sonuç bulunamadı'],
+    WfH9in: ["Kapat"],
+    m3Vfcs: ["Bir daha gösterme"],
+    cgdAs2: ["(Yeni bir sekmede açılır)"],
+    "2L/ygS": [[1, "percent"], " tamamlandı"],
+    "/Y7vRd": ["Kaldırmak için sil butonuna bas."],
+    VMNfsY: ["Seçilenler"],
+    "A+pfVR": ["Seç..."],
+    "v2YSk/": ["Adım ", [1, "stepNumber"], " / ", [1, "stepCount"]],
+    YpT3kk: ["Görüntüyü büyüt ve videoyu oynat"],
+};

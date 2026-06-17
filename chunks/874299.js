@@ -1,3 +1,15 @@
-h.exports = JSON.parse(
-    '{"u72Prd":["Stream \u1EDF \u0111\u1ED9 ph\xe2n gi\u1EA3i HD v\u1EDBi Nitro"],"uwMBDo":["Chia S\u1EBB \xc2m Thanh \u1EE8ng D\u1EE5ng"],"3wwZ/Q":["B\u1EAFt \u0110\u1EA7u Stream"],"OsS9Ll":["Ng\u1EEBng Stream"],"j+eAMQ":["\xc2m thanh c\u1EE7a stream"],"/XSr8v":["Ch\u1EBF \u0110\u1ED9 Stream"],"ibH7vy":["C\xe2n b\u1EB1ng ch\u1EA5t l\u01B0\u1EE3ng v\xe0 hi\u1EC7u n\u0103ng (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"2qmQ8N":["M\u1EB7c \u0111\u1ECBnh"],"q4gYBi":["D\xe0nh cho video v\xe0 ch\u01A1i game (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"nMcXo1":["Ch\u1EA5t L\u01B0\u1EE3ng Cao"],"fN0UQY":["T\u1ED1i \u01B0u cho c\xe1c thi\u1EBFt b\u1ECB ch\u1EADm h\u01A1n (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"5eO4/m":["Hi\u1EC7u N\u0103ng"],"CrNjqp":["C\xe0i \u0110\u1EB7t Stream"]}',
-);
+h.exports = {
+    u72Prd: ["Stream ở độ phân giải HD với Nitro"],
+    uwMBDo: ["Chia Sẻ Âm Thanh Ứng Dụng"],
+    "3wwZ/Q": ["Bắt Đầu Stream"],
+    OsS9Ll: ["Ngừng Stream"],
+    "j+eAMQ": ["Âm thanh của stream"],
+    "/XSr8v": ["Chế Độ Stream"],
+    ibH7vy: ["Cân bằng chất lượng và hiệu năng (", [1, "resolution"], "p, ", [1, "fps"], "fps)"],
+    "2qmQ8N": ["Mặc định"],
+    q4gYBi: ["Dành cho video và chơi game (", [1, "resolution"], "p, ", [1, "fps"], "fps)"],
+    nMcXo1: ["Chất Lượng Cao"],
+    fN0UQY: ["Tối ưu cho các thiết bị chậm hơn (", [1, "resolution"], "p, ", [1, "fps"], "fps)"],
+    "5eO4/m": ["Hiệu Năng"],
+    CrNjqp: ["Cài Đặt Stream"],
+};

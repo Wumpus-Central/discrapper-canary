@@ -1,3 +1,27 @@
-a.exports = JSON.parse(
-    '{"0LL6FX":["Bus atnaujinta serverio i\u0161vaizda visiems nariams. Tema pritaikoma prie j\u0173 pasirinkto \u0161viesaus arba tamsaus re\u017Eimo."],"H8idcP":["Taikyti serverio tem\u0105?"],"odtr7f":["Pasirink i\u0161 anksto nustatyt\u0105 tem\u0105 arba sukurk savo. Kiekvienas narys matys \u0161i\u0105 tem\u0105, kai atidarys server\u012F, ji bus pritaikyta prie nario naudojamo \u0161viesaus arba tamsaus re\u017Eimo. ",[8,"$link",["Su\u017Einoti daugiau"],[[1,"articleUrl"]]]],"XhiIAu":["Pakei\u010Diama, kaip tavo serveris atrodys, visiems nariams."],"aZpFFn":["\u012Ejungti serverio tem\u0105"],"jSrqR2":["I\u0161 anksto nustatytos spalvos"],"XyrxOp":["Blurple"],"tXRcxU":["D\u017Einsin\u0117"],"S8/OZA":["Ugnis"],"nCbxEN":["Aukso dulk\u0117s"],"6ZeQDd":["Nefritin\u0117"],"TiGQro":["Samanos"],"x3h/OV":["Obsidianas"],"qn90j5":["Vandenynas"],"tTJY6S":["Slyvin\u0117"],"+k8Q/o":["Prieblanda"],"HkvkHP":["Kiekvienam nariui bus rodomas jo pageidaujamas \u0161viesus arba tamsus re\u017Eimas."],"zry4l5":["Per\u017Ei\u016Br\u0117ti tem\u0105"],"Ck5zxP":["I\u0161sirink tem\u0105"],"/6NbRv":["Serverio tema"]}',
-);
+a.exports = {
+    "0LL6FX": [
+        "Bus atnaujinta serverio išvaizda visiems nariams. Tema pritaikoma prie jų pasirinkto šviesaus arba tamsaus režimo.",
+    ],
+    H8idcP: ["Taikyti serverio temą?"],
+    odtr7f: [
+        "Pasirink iš anksto nustatytą temą arba sukurk savo. Kiekvienas narys matys šią temą, kai atidarys serverį, ji bus pritaikyta prie nario naudojamo šviesaus arba tamsaus režimo. ",
+        [8, "$link", ["Sužinoti daugiau"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["Pakeičiama, kaip tavo serveris atrodys, visiems nariams."],
+    aZpFFn: ["Įjungti serverio temą"],
+    jSrqR2: ["Iš anksto nustatytos spalvos"],
+    XyrxOp: ["Blurple"],
+    tXRcxU: ["Džinsinė"],
+    "S8/OZA": ["Ugnis"],
+    nCbxEN: ["Aukso dulkės"],
+    "6ZeQDd": ["Nefritinė"],
+    TiGQro: ["Samanos"],
+    "x3h/OV": ["Obsidianas"],
+    qn90j5: ["Vandenynas"],
+    tTJY6S: ["Slyvinė"],
+    "+k8Q/o": ["Prieblanda"],
+    HkvkHP: ["Kiekvienam nariui bus rodomas jo pageidaujamas šviesus arba tamsus režimas."],
+    zry4l5: ["Peržiūrėti temą"],
+    Ck5zxP: ["Išsirink temą"],
+    "/6NbRv": ["Serverio tema"],
+};

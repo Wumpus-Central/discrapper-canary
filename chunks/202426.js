@@ -1,3 +1,21 @@
-a.exports = JSON.parse(
-    '{"QwW8zd":["Skapa post"],"DxwBMf":["Skapa ett utrymme f\xf6r att bjuda in andra."],"7aCPJG":["Redan tillagd"],"F5YBmi":["V\xe4lj alla"],"578719":["Hj\xe4lp spelare att hitta sessioner som passar deras stil genom att v\xe4lja fr\xe5n f\xf6rdefinierade taggar"],"JWRsCC":["L\xe4gg till rekommenderade taggar"],"h/GwWL":["Letar efter grupp (LFG)"],"MKZ+Ky":["Hj\xe4lp spelare att hitta sessioner som passar deras stil genom att v\xe4lja fr\xe5n f\xf6rdefinierade taggar"],"5a7Pjb":["L\xe4gg till rekommenderade taggar"],"/mEbGf":["Beskrivning"],"SU/IAE":["L\xe4gg till fler detaljer om din spelsession"],"UHF2Zn":["L\xe4nka ditt konto s\xe5 att spelare kan se din squads lediga platser och be om att g\xe5 med!"],"EBSaL4":["L\xe4nka konto"],"vznMVa":[[8,"$link",["L\xe4nka ditt konto"],[[1,"onClick"]]]," s\xe5 att spelare kan se din squads lediga platser!"],"yoIAe/":["L\xe4gg till taggar f\xf6r k\xe4nsla och vad du letar efter"],"tOsHsu":["Skapa post"],"G91SYQ":["Du kan starta ett samtal som andra kan g\xe5 med i"],"0s2ICk":["L\xe4gg till en \u201D",[1,"noMicTagName"],"\u201D-tagg i den h\xe4r kanalen f\xf6r att aktivera det h\xe4r reglaget"],"Xd2NFi":["R\xf6stchatt"]}',
-);
+a.exports = {
+    578719: ["Hjälp spelare att hitta sessioner som passar deras stil genom att välja från fördefinierade taggar"],
+    QwW8zd: ["Skapa post"],
+    DxwBMf: ["Skapa ett utrymme för att bjuda in andra."],
+    "7aCPJG": ["Redan tillagd"],
+    F5YBmi: ["Välj alla"],
+    JWRsCC: ["Lägg till rekommenderade taggar"],
+    "h/GwWL": ["Letar efter grupp (LFG)"],
+    "MKZ+Ky": ["Hjälp spelare att hitta sessioner som passar deras stil genom att välja från fördefinierade taggar"],
+    "5a7Pjb": ["Lägg till rekommenderade taggar"],
+    "/mEbGf": ["Beskrivning"],
+    "SU/IAE": ["Lägg till fler detaljer om din spelsession"],
+    UHF2Zn: ["Länka ditt konto så att spelare kan se din squads lediga platser och be om att gå med!"],
+    EBSaL4: ["Länka konto"],
+    vznMVa: [[8, "$link", ["Länka ditt konto"], [[1, "onClick"]]], " så att spelare kan se din squads lediga platser!"],
+    "yoIAe/": ["Lägg till taggar för känsla och vad du letar efter"],
+    tOsHsu: ["Skapa post"],
+    G91SYQ: ["Du kan starta ett samtal som andra kan gå med i"],
+    "0s2ICk": ["Lägg till en ”", [1, "noMicTagName"], "”-tagg i den här kanalen för att aktivera det här reglaget"],
+    Xd2NFi: ["Röstchatt"],
+};

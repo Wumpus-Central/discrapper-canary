@@ -1,3 +1,29 @@
-a.exports = JSON.parse(
-    '{"uG6teD":["Hesap Ba\u015Far\u0131yla Ba\u011Fland\u0131"],"JgM2xu":["A\xe7t\u0131\u011F\u0131n t\xfcm yeni \xf6zelliklere g\xf6z at."],"ublzTG":["Hesap ba\u011Fland\u0131 ve 200 Orbs al\u0131nd\u0131!"],"jR3bbS":["Birle\u015Fik arkada\u015F istesi, do\u011Frudan parti davetleri ve daha fazlas\u0131 gibi oyun i\xe7i sosyal \xf6zelliklerin kilidini a\xe7!"],"2cOIOr":["Hesab\u0131 Ba\u011Fla"],"dPuaZE":[[1,"applicationName"]," hesab\u0131n\u0131 ba\u011Flad\u0131\u011F\u0131nda 200 Discord Orbs al"],"kxF9br":["RPC \xfczerinden ba\u011Flanan SDK"],"8a7IrV":["Ba\u011Flant\u0131 giri\u015F noktas\u0131 URL\'si kaydedildi"],"9iLeL2":["URL, ",[1,"url"]," olarak yap\u0131land\u0131r\u0131ld\u0131"],"AGLx00":["Ba\u011Fl\u0131 oyun ak\u0131\u015F\u0131:"],"w0pN4R":["Hesab\u0131 ba\u011Fla"],"yKwZc2":["Hesap ba\u011Flant\u0131s\u0131n\u0131 y\xf6net"],"aTULMB":["Do\u011Frulama geri \xe7a\u011Fr\u0131s\u0131 tespit edilmedi. E\u011Fer fonksiyonu arad\u0131ysan ve hala bunu g\xf6r\xfcyorsan, detaylar i\xe7in g\xfcnl\xfckleri kontrol et"],"eg0mNa":["Ge\xe7erli bir ba\u011Flant\u0131 ak\u0131\u015F\u0131 olmad\u0131\u011F\u0131 i\xe7in ba\u011Flan\u0131lam\u0131yor"],"cCvdJy":["Oyun Profilini A\xe7"],"OEkrCx":["Bu ak\u0131\u015F kullan\u0131lacak"],"no+FQS":["En \xfcstten ba\u015Flayarak ilk kullan\u0131labilir ba\u011Flant\u0131 ak\u0131\u015F\u0131 kullan\u0131lacak"],"PFxxJa":["Oyunun \xe7al\u0131\u015F\u0131yorsa ve Discord\'a ba\u011Flanam\u0131yorsa, oyunun g\xfcnl\xfcklerini g\xf6r\xfcnt\xfcleyerek hata ay\u0131klamay\u0131 dene"],"S94dzs":["RegisterAuthorizeRequestCallback \xe7a\u011Fr\u0131ld\u0131 ve do\u011Fru \xe7al\u0131\u015F\u0131yor"],"vR0zs6":["Hesap Ba\u011Flant\u0131s\u0131"],"KoK4J9":["Geli\u015Ftirici Ara\xe7lar\u0131: ",[1,"appName"]],"tkIymA":["Ba\u011Flant\u0131y\u0131 kes"],"K3ObrU":["Web ak\u0131\u015F\u0131:"]}',
-);
+a.exports = {
+    uG6teD: ["Hesap Başarıyla Bağlandı"],
+    JgM2xu: ["Açtığın tüm yeni özelliklere göz at."],
+    ublzTG: ["Hesap bağlandı ve 200 Orbs alındı!"],
+    jR3bbS: [
+        "Birleşik arkadaş istesi, doğrudan parti davetleri ve daha fazlası gibi oyun içi sosyal özelliklerin kilidini aç!",
+    ],
+    "2cOIOr": ["Hesabı Bağla"],
+    dPuaZE: [[1, "applicationName"], " hesabını bağladığında 200 Discord Orbs al"],
+    kxF9br: ["RPC üzerinden bağlanan SDK"],
+    "8a7IrV": ["Bağlantı giriş noktası URL'si kaydedildi"],
+    "9iLeL2": ["URL, ", [1, "url"], " olarak yapılandırıldı"],
+    AGLx00: ["Bağlı oyun akışı:"],
+    w0pN4R: ["Hesabı bağla"],
+    yKwZc2: ["Hesap bağlantısını yönet"],
+    aTULMB: [
+        "Doğrulama geri çağrısı tespit edilmedi. Eğer fonksiyonu aradıysan ve hala bunu görüyorsan, detaylar için günlükleri kontrol et",
+    ],
+    eg0mNa: ["Geçerli bir bağlantı akışı olmadığı için bağlanılamıyor"],
+    cCvdJy: ["Oyun Profilini Aç"],
+    OEkrCx: ["Bu akış kullanılacak"],
+    "no+FQS": ["En üstten başlayarak ilk kullanılabilir bağlantı akışı kullanılacak"],
+    PFxxJa: ["Oyunun çalışıyorsa ve Discord'a bağlanamıyorsa, oyunun günlüklerini görüntüleyerek hata ayıklamayı dene"],
+    S94dzs: ["RegisterAuthorizeRequestCallback çağrıldı ve doğru çalışıyor"],
+    vR0zs6: ["Hesap Bağlantısı"],
+    KoK4J9: ["Geliştirici Araçları: ", [1, "appName"]],
+    tkIymA: ["Bağlantıyı kes"],
+    K3ObrU: ["Web akışı:"],
+};

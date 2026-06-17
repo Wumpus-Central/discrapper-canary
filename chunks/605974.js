@@ -1,3 +1,4 @@
-i.exports = JSON.parse(
-    '{"F3llsQ":["Partajeaz\u0103 c\xe2nd \xeemi actualizez profilul"],"6goWcz":["Permite-le prietenilor s\u0103 primeasc\u0103 o notificare push c\xe2nd \xee\u021Bi actualizezi profilul."]}',
-);
+i.exports = {
+    F3llsQ: ["Partajează când îmi actualizez profilul"],
+    "6goWcz": ["Permite-le prietenilor să primească o notificare push când îți actualizezi profilul."],
+};

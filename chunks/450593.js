@@ -1,3 +1,23 @@
-e.exports = JSON.parse(
-    '{"q5M7HV":["R\u016Fzn\xe9"],"zRKbpz":["Server"],"UzRF+8":["Soci\xe1ln\xed"],"NGdNZb":["P\u0159\xedm\xe9 zpr\xe1vy"],"zJlwvV":["Syst\xe9mov\xe9 zpr\xe1vy Discordu"],"40TIqW":["Ozn\xe1men\xed v\xa0ud\xe1losti"],"HibKoy":["Ozn\xe1men\xed ve f\xf3ru"],"vcrTV5":["Aktivita p\u0159\xe1tel"],"NxgGZA":["\u017D\xe1dosti o\xa0p\u0159\xe1telstv\xed"],"9EDo+/":["Hran\xed"],"IUH/Oe":["P\u0159\xedchoz\xed hovory"],"4qWUAO":["Zpr\xe1vy"],"n0Wp6j":["Zme\u0161kan\xe9 zpr\xe1vy"],"T+79Eo":["Jin\xe9"],"kIrLfg":["Ozn\xe1men\xed na jin\xe9m serveru"],"MOjygY":["Pr\u016Fzkumy"],"wv4QHR":["Ozn\xe1men\xed o\xa0reakc\xedch"],"S5cB9e":["V\xa0re\xe1ln\xe9m \u010Dase"],"4n388K":["Ozn\xe1men\xed na p\xf3diu"],"Iy9grw":["Hlas a\xa0\u017Eiv\xe1 aktivita"],"VeBD1N":["Hlas p\u0159ipojen"]}',
-);
+e.exports = {
+    q5M7HV: ["Různé"],
+    zRKbpz: ["Server"],
+    "UzRF+8": ["Sociální"],
+    NGdNZb: ["Přímé zprávy"],
+    zJlwvV: ["Systémové zprávy Discordu"],
+    "40TIqW": ["Oznámení v události"],
+    HibKoy: ["Oznámení ve fóru"],
+    vcrTV5: ["Aktivita přátel"],
+    NxgGZA: ["Žádosti o přátelství"],
+    "9EDo+/": ["Hraní"],
+    "IUH/Oe": ["Příchozí hovory"],
+    "4qWUAO": ["Zprávy"],
+    n0Wp6j: ["Zmeškané zprávy"],
+    "T+79Eo": ["Jiné"],
+    kIrLfg: ["Oznámení na jiném serveru"],
+    MOjygY: ["Průzkumy"],
+    wv4QHR: ["Oznámení o reakcích"],
+    S5cB9e: ["V reálném čase"],
+    "4n388K": ["Oznámení na pódiu"],
+    Iy9grw: ["Hlas a živá aktivita"],
+    VeBD1N: ["Hlas připojen"],
+};

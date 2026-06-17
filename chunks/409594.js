@@ -1,4 +1,32 @@
 t.r(a), t.d(a, { default: () => o });
-let o = JSON.parse(
-    '{"9Nb9Bz":[[1,"amount"]," available"],"febr+T":["Gift card balance"],"ccWIdu":["Your balance must cover the total due"],"66Wi6B":[[1,"price"]," added to your account"],"uo9YsP":["This gift card has already been redeemed."],"/FQWfA":["Gift Card Balance"],"Jz6+Oj":["Gift Card Balance (",[1,"amount"],")"],"V3DI1E":["You\'ll need to use the desktop or web app to make a purchase with your gift card balance."],"YZePWx":["I understand"],"9OxfNK":["Explore Shop"],"VJXTzd":["Treat yourself to something in the Shop, or put it toward anything else on Discord."],"+fIPjg":["Treat yourself to Nitro, or explore the Shop to find something you love."],"Afx5yS":[[1,"price"]," was added to your account"],"hnRau6":["Redeem"],"EUKPip":["Something went wrong. Check your details and try again."],"iBFPMf":["Redeem gift card"],"CCVlIb":["By clicking \'Redeem\', you agree to the ",[8,"$link",["Gift Card Terms"],[[1,"giftCardTermsUrl"]]]," and ",[8,"$link",["Wallet Terms"],[[1,"walletTermsUrl"]]],"."],"Bn/CZQ":["Code"],"dSPkHo":["Enter code"],"3jjweL":["ZIP/Postal Code"],"B+/GvM":["Enter ZIP/postal code"],"26tjwd":["Redeem Gift Card"],"PZDPvQ":["Gift card code is required"]}',
-);
+let o = {
+    "9Nb9Bz": [[1, "amount"], " available"],
+    "febr+T": ["Gift card balance"],
+    ccWIdu: ["Your balance must cover the total due"],
+    "66Wi6B": [[1, "price"], " added to your account"],
+    uo9YsP: ["This gift card has already been redeemed."],
+    "/FQWfA": ["Gift Card Balance"],
+    "Jz6+Oj": ["Gift Card Balance (", [1, "amount"], ")"],
+    V3DI1E: ["You'll need to use the desktop or web app to make a purchase with your gift card balance."],
+    YZePWx: ["I understand"],
+    "9OxfNK": ["Explore Shop"],
+    VJXTzd: ["Treat yourself to something in the Shop, or put it toward anything else on Discord."],
+    "+fIPjg": ["Treat yourself to Nitro, or explore the Shop to find something you love."],
+    Afx5yS: [[1, "price"], " was added to your account"],
+    hnRau6: ["Redeem"],
+    EUKPip: ["Something went wrong. Check your details and try again."],
+    iBFPMf: ["Redeem gift card"],
+    CCVlIb: [
+        "By clicking 'Redeem', you agree to the ",
+        [8, "$link", ["Gift Card Terms"], [[1, "giftCardTermsUrl"]]],
+        " and ",
+        [8, "$link", ["Wallet Terms"], [[1, "walletTermsUrl"]]],
+        ".",
+    ],
+    "Bn/CZQ": ["Code"],
+    dSPkHo: ["Enter code"],
+    "3jjweL": ["ZIP/Postal Code"],
+    "B+/GvM": ["Enter ZIP/postal code"],
+    "26tjwd": ["Redeem Gift Card"],
+    PZDPvQ: ["Gift card code is required"],
+};

@@ -1,3 +1,17 @@
-a.exports = JSON.parse(
-    '{"6/dkHh":["Transkripti kapat"],"XiLvuG":["Ses d\xfczeyini ayarla"],"ZwPhbB":["Oynatma h\u0131z\u0131"],"dRVF+Z":["10 saniye geri sar"],"yV2FLL":["10 saniye ileri atla"],"YWbiPw":["Hen\xfcz izlenmemi\u015F b\xf6l\xfcmleri atlayam\u0131yorum"],"0DbPcL":["Alt yaz\u0131lar\u0131 a\xe7/kapat"],"z9Cnzv":["Tam ekrana ge\xe7"],"6EjGUv":["Transkripti a\xe7/kapat"],"kX3+aM":["Video y\xfckleniyor..."],"c7IRfm":["Pencere odak kaybetti\u011Fi i\xe7in video duraklat\u0131ld\u0131"],"9St/zK":["Pencere g\xf6r\xfcn\xfcr olmad\u0131\u011F\u0131ndan video duraklat\u0131ld\u0131"],"VZkd/n":["Transkript"],"E527vj":["Video k\xfc\xe7\xfck resmi"],"5L6uDs":["Y\xfczde ",[1,"percent"]]}',
-);
+a.exports = {
+    "6/dkHh": ["Transkripti kapat"],
+    XiLvuG: ["Ses düzeyini ayarla"],
+    ZwPhbB: ["Oynatma hızı"],
+    "dRVF+Z": ["10 saniye geri sar"],
+    yV2FLL: ["10 saniye ileri atla"],
+    YWbiPw: ["Henüz izlenmemiş bölümleri atlayamıyorum"],
+    "0DbPcL": ["Alt yazıları aç/kapat"],
+    z9Cnzv: ["Tam ekrana geç"],
+    "6EjGUv": ["Transkripti aç/kapat"],
+    "kX3+aM": ["Video yükleniyor..."],
+    c7IRfm: ["Pencere odak kaybettiği için video duraklatıldı"],
+    "9St/zK": ["Pencere görünür olmadığından video duraklatıldı"],
+    "VZkd/n": ["Transkript"],
+    E527vj: ["Video küçük resmi"],
+    "5L6uDs": ["Yüzde ", [1, "percent"]],
+};

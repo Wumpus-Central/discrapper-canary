@@ -1,3 +1,17 @@
-p.exports = JSON.parse(
-    '{"/cp93l":["\u4E0B\u4E2A\u6708"],"raS6yf":["\u4E0A\u4E2A\u6708"],"JA5C7L":["\u6E05\u9664"],"I8kUqR":["\u6253\u5F00\u65E5\u5386"],"db85vU":["\u6CA1\u6709\u53EF\u663E\u793A\u7684\u7269\u54C1"],"bPKiId":["\u201C",[1,"query"],"\u201D\u65E0\u7ED3\u679C"],"WfH9in":["\u5173\u95ED"],"m3Vfcs":["\u4E0D\u518D\u63D0\u793A"],"cgdAs2":["\uFF08\u5C06\u5728\u65B0\u7684\u6807\u7B7E\u4E2D\u6253\u5F00\uFF09"],"2L/ygS":["\u5B8C\u6210 ",[1,"percent"],"%"],"/Y7vRd":["\u6309\u4E0B\u5220\u9664\u952E\u4EE5\u79FB\u9664\u3002"],"VMNfsY":["Selected"],"A+pfVR":["\u9009\u62E9\u2026\u2026"],"v2YSk/":["\u7B2C ",[1,"stepNumber"]," \u6B65\uFF0C\u5171 ",[1,"stepCount"]," \u6B65"],"YpT3kk":["\u653E\u5927\u5E76\u64AD\u653E\u89C6\u9891"]}',
-);
+p.exports = {
+    "/cp93l": ["下个月"],
+    raS6yf: ["上个月"],
+    JA5C7L: ["清除"],
+    I8kUqR: ["打开日历"],
+    db85vU: ["没有可显示的物品"],
+    bPKiId: ["“", [1, "query"], "”无结果"],
+    WfH9in: ["关闭"],
+    m3Vfcs: ["不再提示"],
+    cgdAs2: ["（将在新的标签中打开）"],
+    "2L/ygS": ["完成 ", [1, "percent"], "%"],
+    "/Y7vRd": ["按下删除键以移除。"],
+    VMNfsY: ["Selected"],
+    "A+pfVR": ["选择……"],
+    "v2YSk/": ["第 ", [1, "stepNumber"], " 步，共 ", [1, "stepCount"], " 步"],
+    YpT3kk: ["放大并播放视频"],
+};

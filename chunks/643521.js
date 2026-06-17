@@ -1,3 +1,17 @@
-e.exports = JSON.parse(
-    '{"RPb8Zk":["A visszajelz\xe9seddel jav\xedthatunk a Discord biztons\xe1gi funkci\xf3in."],"cDP3b4":["Visszajelz\xe9s bek\xfcldve"],"KZw6kn":["Mi nem m\u0171k\xf6dik j\xf3l?"],"eSP1F9":["Meggondoltam magam a tartalom megtekint\xe9s\xe9vel kapcsolatban"],"bC0QVX":["\xd6sszezavar\xf3nak tal\xe1ltam az utas\xedt\xe1sokat"],"8JFGXc":["Pr\xf3b\xe1ltam elv\xe9gezni a l\xe9p\xe9seket, de nem m\u0171k\xf6d\xf6tt"],"Dl4A+U":["Nem rendelkeztem megfelel\u0151 okm\xe1nyokkal"],"ZsnNgz":["Aggaszt a szem\xe9lyes adatok megad\xe1sa"],"ep5SQp":["Valami m\xe1s"],"kkKhVJ":["T\xfal sok id\u0151be telik"],"maxf2S":["Nem \xe9rtettem, mi\xe9rt van r\xe1 sz\xfcks\xe9g"],"Q5cQ46":["A probl\xe9ma le\xedr\xe1sa"],"zApKaR":["Sz\xedvesen megosztan\xe1l vel\xfcnk n\xe9h\xe1ny tov\xe1bbi r\xe9szletet?"],"4djgO/":["K\xf6sz\xf6nj\xfck a visszajelz\xe9st!"],"RqoA4v":["Milyennek tal\xe1ltad az \xe9letkor-ellen\u0151rz\xe9si \xe9lm\xe9nyt?"]}',
-);
+e.exports = {
+    RPb8Zk: ["A visszajelzéseddel javíthatunk a Discord biztonsági funkcióin."],
+    cDP3b4: ["Visszajelzés beküldve"],
+    KZw6kn: ["Mi nem működik jól?"],
+    eSP1F9: ["Meggondoltam magam a tartalom megtekintésével kapcsolatban"],
+    bC0QVX: ["Összezavarónak találtam az utasításokat"],
+    "8JFGXc": ["Próbáltam elvégezni a lépéseket, de nem működött"],
+    "Dl4A+U": ["Nem rendelkeztem megfelelő okmányokkal"],
+    ZsnNgz: ["Aggaszt a személyes adatok megadása"],
+    ep5SQp: ["Valami más"],
+    kkKhVJ: ["Túl sok időbe telik"],
+    maxf2S: ["Nem értettem, miért van rá szükség"],
+    Q5cQ46: ["A probléma leírása"],
+    zApKaR: ["Szívesen megosztanál velünk néhány további részletet?"],
+    "4djgO/": ["Köszönjük a visszajelzést!"],
+    RqoA4v: ["Milyennek találtad az életkor-ellenőrzési élményt?"],
+};

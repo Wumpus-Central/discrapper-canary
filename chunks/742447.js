@@ -1,3 +1,5 @@
-s.exports = JSON.parse(
-    '{"yfwZuy":["\uB0B4 \uBC30\uC9C0 \uBCF4\uAE30"],"UnPGii":["\uBC30\uC9C0\uAC00 \uD504\uB85C\uD544\uC5D0 \uCD94\uAC00\uB418\uC5C8\uC5B4\uC694."],"nvaTQq":["Orbs \uD504\uB85C\uD544 \uBC30\uC9C0\uB97C \uC218\uC9D1\uD588\uC5B4\uC694!"]}',
-);
+s.exports = {
+    yfwZuy: ["내 배지 보기"],
+    UnPGii: ["배지가 프로필에 추가되었어요."],
+    nvaTQq: ["Orbs 프로필 배지를 수집했어요!"],
+};

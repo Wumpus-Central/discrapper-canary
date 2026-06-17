@@ -1,3 +1,17 @@
-e.exports = JSON.parse(
-    '{"RPb8Zk":["Met jouw feedback kunnen we de veiligheidsfuncties van Discord verbeteren."],"cDP3b4":["Feedback verzonden"],"KZw6kn":["Wat werkt er niet goed?"],"eSP1F9":["Ik ben van gedachten veranderd over het zien van deze content"],"bC0QVX":["De instructies waren verwarrend"],"8JFGXc":["Ik probeerde de stappen te volgen, maar het werkte niet"],"Dl4A+U":["Ik had de juiste documenten niet"],"ZsnNgz":["Ik maak me zorgen over het delen van persoonlijke informatie"],"ep5SQp":["Iets anders"],"kkKhVJ":["Dit kost te veel tijd"],"maxf2S":["Ik wist niet waarom dit nodig was"],"Q5cQ46":["Beschrijf je probleem"],"zApKaR":["Wil je er meer over vertellen?"],"4djgO/":["Bedankt voor de feedback!"],"RqoA4v":["Hoe heb je de leeftijdsverificatie ervaren?"]}',
-);
+e.exports = {
+    RPb8Zk: ["Met jouw feedback kunnen we de veiligheidsfuncties van Discord verbeteren."],
+    cDP3b4: ["Feedback verzonden"],
+    KZw6kn: ["Wat werkt er niet goed?"],
+    eSP1F9: ["Ik ben van gedachten veranderd over het zien van deze content"],
+    bC0QVX: ["De instructies waren verwarrend"],
+    "8JFGXc": ["Ik probeerde de stappen te volgen, maar het werkte niet"],
+    "Dl4A+U": ["Ik had de juiste documenten niet"],
+    ZsnNgz: ["Ik maak me zorgen over het delen van persoonlijke informatie"],
+    ep5SQp: ["Iets anders"],
+    kkKhVJ: ["Dit kost te veel tijd"],
+    maxf2S: ["Ik wist niet waarom dit nodig was"],
+    Q5cQ46: ["Beschrijf je probleem"],
+    zApKaR: ["Wil je er meer over vertellen?"],
+    "4djgO/": ["Bedankt voor de feedback!"],
+    RqoA4v: ["Hoe heb je de leeftijdsverificatie ervaren?"],
+};

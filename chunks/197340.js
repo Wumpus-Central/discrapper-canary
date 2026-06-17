@@ -1,3 +1,52 @@
-e.exports = JSON.parse(
-    '{"5Mi5TE":["\xc6ndr, hvordan vi tildeler din aldersgruppe?"],"lG69e1":[[8,"$link",["F\xe5 mere at vide"],[[1,"handleOnHelpUrlHook"]]]," om aldersgrupper"],"V822Mp":["Fjern aldersgruppe"],"FbTAmI":["Dette vil \xe6ndre din aldersgruppe fra Voksen til Ubekr\xe6ftet, og du vil ikke have adgang til aldersbegr\xe6nset indhold. Hvis du igen vil se voksenindhold, skal du bekr\xe6fte din aldersgruppe ved at v\xe6lge en anden metode."],"g7/14g":["Vil du fjerne din tildelte aldersgruppe?"],"Gn0SAj":["Indstil din aldersgruppe til Ubekr\xe6ftet"],"bD//cU":["Fjern tildelt aldersgruppe"],"rJiO86":["V\xe6lg at bekr\xe6fte din aldersgruppe med en anden metode"],"SH6Tcv":["Bekr\xe6ft aldersgruppe"],"1DN29p":["Vi bruger teknologier, der vurderer en brugers aldersgruppe baseret p\xe5 adf\xe6rdsm\xf8nstre og andre signaler forbundet med brugerkonti p\xe5 Discord. ",[8,"$link",["F\xe5 mere at vide"],[[1,"handleOnHelpUrlHook"]]]],"PY4MA0":["Du er blevet tildelt aldersgruppen Voksen af Discord"],"FTawSP":["Tildelt af Discord"],"WM5adV":["Tildelt af Discord. ",[8,"$link",["F\xe5 mere at vide"],[[1,"handleOnHelpUrlHook"]]]],"b7Oqdu":["V\xe6lg en anden metode"],"ar3a3q":["De oplysninger, du indsender, bruges udelukkende til at bekr\xe6fte din aldersgruppe, hvorefter de slettes."],"0vTx7j":["Genindl\xe6s"],"yBHwMy":["Dette trin underst\xf8ttes ikke p\xe5 VR. Du skal gennemf\xf8re trinnet p\xe5 en anden enhed, s\xe5 opdaterer vi automatisk din oplevelse her."],"gUqXQN":["Bekr\xe6ft din alder p\xe5 en anden enhed"],"XYYm+1":["V\xe6lg en anden metode til at bekr\xe6fte din alder"],"rVLCwM":["V\xe6lg en anden metode"],"RpMIT0":["V\xe6lg en metode til at bekr\xe6fte, at du er voksen. N\xe5r det er bekr\xe6ftet, kan du f\xe5 adgang til aldersbegr\xe6nset indhold og indstillinger. ",[8,"$link",["F\xe5 mere at vide"],[[1,"handleOnHelpUrlHook"]]],"."],"h7qzoa":["Bruge en af valgmulighederne nedenfor til at bekr\xe6fte din alder for at gendanne din adgang til Discord."],"eJmat5":["Estimer din alder med en videoselfie. Videoen forbliver p\xe5 enheden, ingen biometriske data deles."],"2yLvkS":["Videoselfie via k-ID"],"+pwfOA":["Noget gik galt med Google Wallet-bekr\xe6ftelsen. Pr\xf8v en anden metode."],"dah4bF":["Brug et ID-pas baseret p\xe5 dine pasoplysninger. Dine ID-oplysninger forbliver i Google Wallet."],"Y9sLpR":["Id-pas i Google Wallet"],"fEUKEv":["Pr\xf8v en anden metode"],"Pf5xUq":["Dit ID blev udstedt i et land, der endnu ikke er med i ordningen. Pr\xf8v en anden bekr\xe6ftelsesmetode."],"MlFuBI":["Bekr\xe6fter din alder \u2026"],"ZdmRwW":["Scan dit ID, og tag en selfie for at bekr\xe6fte, at det er dig. Begge slettes lige efter bekr\xe6ftelse og er aldrig knyttet til din konto."],"dwkwo0":["ID-scan via k-ID"],"htWh1G":[[8,"$link",["F\xe5 mere at vide"],[[1,"handleOnHelpUrlHook"]]]," i vores hj\xe6lpecenter"],"cR6336":["Ingen aldersbekr\xe6ftelsesmetoder er tilg\xe6ngelige. Dette kan v\xe6re en fejl."],"hDvmYP":["Genindl\xe6s"]}',
-);
+e.exports = {
+    "5Mi5TE": ["Ændr, hvordan vi tildeler din aldersgruppe?"],
+    lG69e1: [[8, "$link", ["Få mere at vide"], [[1, "handleOnHelpUrlHook"]]], " om aldersgrupper"],
+    V822Mp: ["Fjern aldersgruppe"],
+    FbTAmI: [
+        "Dette vil ændre din aldersgruppe fra Voksen til Ubekræftet, og du vil ikke have adgang til aldersbegrænset indhold. Hvis du igen vil se voksenindhold, skal du bekræfte din aldersgruppe ved at vælge en anden metode.",
+    ],
+    "g7/14g": ["Vil du fjerne din tildelte aldersgruppe?"],
+    Gn0SAj: ["Indstil din aldersgruppe til Ubekræftet"],
+    "bD//cU": ["Fjern tildelt aldersgruppe"],
+    rJiO86: ["Vælg at bekræfte din aldersgruppe med en anden metode"],
+    SH6Tcv: ["Bekræft aldersgruppe"],
+    "1DN29p": [
+        "Vi bruger teknologier, der vurderer en brugers aldersgruppe baseret på adfærdsmønstre og andre signaler forbundet med brugerkonti på Discord. ",
+        [8, "$link", ["Få mere at vide"], [[1, "handleOnHelpUrlHook"]]],
+    ],
+    PY4MA0: ["Du er blevet tildelt aldersgruppen Voksen af Discord"],
+    FTawSP: ["Tildelt af Discord"],
+    WM5adV: ["Tildelt af Discord. ", [8, "$link", ["Få mere at vide"], [[1, "handleOnHelpUrlHook"]]]],
+    b7Oqdu: ["Vælg en anden metode"],
+    ar3a3q: [
+        "De oplysninger, du indsender, bruges udelukkende til at bekræfte din aldersgruppe, hvorefter de slettes.",
+    ],
+    "0vTx7j": ["Genindlæs"],
+    yBHwMy: [
+        "Dette trin understøttes ikke på VR. Du skal gennemføre trinnet på en anden enhed, så opdaterer vi automatisk din oplevelse her.",
+    ],
+    gUqXQN: ["Bekræft din alder på en anden enhed"],
+    "XYYm+1": ["Vælg en anden metode til at bekræfte din alder"],
+    rVLCwM: ["Vælg en anden metode"],
+    RpMIT0: [
+        "Vælg en metode til at bekræfte, at du er voksen. Når det er bekræftet, kan du få adgang til aldersbegrænset indhold og indstillinger. ",
+        [8, "$link", ["Få mere at vide"], [[1, "handleOnHelpUrlHook"]]],
+        ".",
+    ],
+    h7qzoa: ["Bruge en af valgmulighederne nedenfor til at bekræfte din alder for at gendanne din adgang til Discord."],
+    eJmat5: ["Estimer din alder med en videoselfie. Videoen forbliver på enheden, ingen biometriske data deles."],
+    "2yLvkS": ["Videoselfie via k-ID"],
+    "+pwfOA": ["Noget gik galt med Google Wallet-bekræftelsen. Prøv en anden metode."],
+    dah4bF: ["Brug et ID-pas baseret på dine pasoplysninger. Dine ID-oplysninger forbliver i Google Wallet."],
+    Y9sLpR: ["Id-pas i Google Wallet"],
+    fEUKEv: ["Prøv en anden metode"],
+    Pf5xUq: ["Dit ID blev udstedt i et land, der endnu ikke er med i ordningen. Prøv en anden bekræftelsesmetode."],
+    MlFuBI: ["Bekræfter din alder …"],
+    ZdmRwW: [
+        "Scan dit ID, og tag en selfie for at bekræfte, at det er dig. Begge slettes lige efter bekræftelse og er aldrig knyttet til din konto.",
+    ],
+    dwkwo0: ["ID-scan via k-ID"],
+    htWh1G: [[8, "$link", ["Få mere at vide"], [[1, "handleOnHelpUrlHook"]]], " i vores hjælpecenter"],
+    cR6336: ["Ingen aldersbekræftelsesmetoder er tilgængelige. Dette kan være en fejl."],
+    hDvmYP: ["Genindlæs"],
+};

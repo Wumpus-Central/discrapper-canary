@@ -1,3 +1,23 @@
-e.exports = JSON.parse(
-    '{"q5M7HV":["Egy\xe9b"],"zRKbpz":["Szerver"],"UzRF+8":["K\xf6z\xf6ss\xe9gi m\xe9dia"],"NGdNZb":["K\xf6zvetlen \xfczenetek"],"zJlwvV":["Discord-rendszer\xfczenetek"],"40TIqW":["Esem\xe9ny\xe9rtes\xedt\xe9sek"],"HibKoy":["F\xf3rum\xe9rtes\xedt\xe9sek"],"vcrTV5":["Bar\xe1tok tev\xe9kenys\xe9ge"],"NxgGZA":["Bar\xe1tk\xe9relmek"],"9EDo+/":["J\xe1t\xe9k"],"IUH/Oe":["Bej\xf6v\u0151 h\xedv\xe1sok"],"4qWUAO":["\xdczenetek"],"n0Wp6j":["Olvasatlan \xfczenetek"],"T+79Eo":["Egy\xe9b"],"kIrLfg":["Egy\xe9b szerver\xe9rtes\xedt\xe9sek"],"MOjygY":["Szavaz\xe1sok"],"wv4QHR":["Reakci\xf3\xe9rtes\xedt\xe9sek"],"S5cB9e":["Val\xf3s idej\u0171"],"4n388K":["P\xf3dium\xe9rtes\xedt\xe9sek"],"Iy9grw":["Hangcsatorna- \xe9s \xe9l\u0151 tev\xe9kenys\xe9g"],"VeBD1N":["Hang csatlakoztatva"]}',
-);
+e.exports = {
+    q5M7HV: ["Egyéb"],
+    zRKbpz: ["Szerver"],
+    "UzRF+8": ["Közösségi média"],
+    NGdNZb: ["Közvetlen üzenetek"],
+    zJlwvV: ["Discord-rendszerüzenetek"],
+    "40TIqW": ["Eseményértesítések"],
+    HibKoy: ["Fórumértesítések"],
+    vcrTV5: ["Barátok tevékenysége"],
+    NxgGZA: ["Barátkérelmek"],
+    "9EDo+/": ["Játék"],
+    "IUH/Oe": ["Bejövő hívások"],
+    "4qWUAO": ["Üzenetek"],
+    n0Wp6j: ["Olvasatlan üzenetek"],
+    "T+79Eo": ["Egyéb"],
+    kIrLfg: ["Egyéb szerverértesítések"],
+    MOjygY: ["Szavazások"],
+    wv4QHR: ["Reakcióértesítések"],
+    S5cB9e: ["Valós idejű"],
+    "4n388K": ["Pódiumértesítések"],
+    Iy9grw: ["Hangcsatorna- és élő tevékenység"],
+    VeBD1N: ["Hang csatlakoztatva"],
+};

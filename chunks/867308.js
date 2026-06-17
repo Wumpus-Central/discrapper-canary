@@ -1,3 +1,4 @@
-s.exports = JSON.parse(
-    '{"F3llsQ":["\uD504\uB85C\uD544\uC744 \uC5C5\uB370\uC774\uD2B8\uD560 \uB54C \uACF5\uC720"],"6goWcz":["\uD504\uB85C\uD544\uC744 \uC5C5\uB370\uC774\uD2B8\uD560 \uB54C \uCE5C\uAD6C\uAC00 \uD478\uC2DC \uC54C\uB9BC\uC744 \uBC1B\uC744 \uC218 \uC788\uB3C4\uB85D \uD5C8\uC6A9\uD574\uC694."]}',
-);
+s.exports = {
+    F3llsQ: ["프로필을 업데이트할 때 공유"],
+    "6goWcz": ["프로필을 업데이트할 때 친구가 푸시 알림을 받을 수 있도록 허용해요."],
+};

@@ -1,3 +1,29 @@
-a.exports = JSON.parse(
-    '{"QwW8zd":["G\xf6nderi Olu\u015Ftur"],"DxwBMf":["Ba\u015Fkalar\u0131n\u0131 davet etmek i\xe7in bir alan olu\u015Ftur."],"7aCPJG":["Zaten eklendi"],"F5YBmi":["Hepsini Se\xe7"],"578719":["Oyuncular\u0131n \xf6nceden tan\u0131mlanm\u0131\u015F etiketler aras\u0131ndan se\xe7erek tarzlar\u0131na uygun oturumlar\u0131 bulmalar\u0131na yard\u0131mc\u0131 ol"],"JWRsCC":["\xd6nerilen Etiketleri Ekle"],"h/GwWL":["Grup Arama"],"MKZ+Ky":["Oyuncular\u0131n \xf6nceden tan\u0131mlanm\u0131\u015F etiketler aras\u0131ndan se\xe7erek tarzlar\u0131na uygun oturumlar\u0131 bulmalar\u0131na yard\u0131mc\u0131 ol"],"5a7Pjb":["\xd6nerilen etiketleri ekle"],"/mEbGf":["A\xe7\u0131klama"],"SU/IAE":["Oyun oturumun hakk\u0131nda daha fazla ayr\u0131nt\u0131 ekle"],"UHF2Zn":["Oyuncular\u0131n tak\u0131m\u0131ndaki bo\u015F yerleri g\xf6r\xfcp kat\u0131lma iste\u011Fi g\xf6nderebilmesi i\xe7in hesab\u0131n\u0131 ba\u011Fla!"],"EBSaL4":["Hesab\u0131 Ba\u011Fla"],"vznMVa":["Oyuncular\u0131n tak\u0131m\u0131ndaki bo\u015F yerleri g\xf6rebilmesi i\xe7in ",[8,"$link",["hesab\u0131n\u0131 ba\u011Fla"],[[1,"onClick"]]],"!"],"yoIAe/":["Arad\u0131\u011F\u0131n i\xe7eriklere ve ortama dair etiketler ekle"],"tOsHsu":["G\xf6nderi olu\u015Ftur"],"G91SYQ":["Ba\u015Fkalar\u0131n\u0131n kat\u0131labilece\u011Fi bir arama ba\u015Flatabilirsin"],"0s2ICk":["Bu kanalda bu ayar\u0131 etkinle\u015Ftirmek i\xe7in \\"",[1,"noMicTagName"],"\\" etiketi ekle"],"Xd2NFi":["Sesli Sohbet"]}',
-);
+a.exports = {
+    578719: [
+        "Oyuncuların önceden tanımlanmış etiketler arasından seçerek tarzlarına uygun oturumları bulmalarına yardımcı ol",
+    ],
+    QwW8zd: ["Gönderi Oluştur"],
+    DxwBMf: ["Başkalarını davet etmek için bir alan oluştur."],
+    "7aCPJG": ["Zaten eklendi"],
+    F5YBmi: ["Hepsini Seç"],
+    JWRsCC: ["Önerilen Etiketleri Ekle"],
+    "h/GwWL": ["Grup Arama"],
+    "MKZ+Ky": [
+        "Oyuncuların önceden tanımlanmış etiketler arasından seçerek tarzlarına uygun oturumları bulmalarına yardımcı ol",
+    ],
+    "5a7Pjb": ["Önerilen etiketleri ekle"],
+    "/mEbGf": ["Açıklama"],
+    "SU/IAE": ["Oyun oturumun hakkında daha fazla ayrıntı ekle"],
+    UHF2Zn: ["Oyuncuların takımındaki boş yerleri görüp katılma isteği gönderebilmesi için hesabını bağla!"],
+    EBSaL4: ["Hesabı Bağla"],
+    vznMVa: [
+        "Oyuncuların takımındaki boş yerleri görebilmesi için ",
+        [8, "$link", ["hesabını bağla"], [[1, "onClick"]]],
+        "!",
+    ],
+    "yoIAe/": ["Aradığın içeriklere ve ortama dair etiketler ekle"],
+    tOsHsu: ["Gönderi oluştur"],
+    G91SYQ: ["Başkalarının katılabileceği bir arama başlatabilirsin"],
+    "0s2ICk": ['Bu kanalda bu ayarı etkinleştirmek için "', [1, "noMicTagName"], '" etiketi ekle'],
+    Xd2NFi: ["Sesli Sohbet"],
+};

@@ -1,3 +1,20 @@
-a.exports = JSON.parse(
-    '{"o/An3l":[[1,"username"]," \u5DF2\u8BF7\u6C42\u60A8\u76F4\u64AD ",[1,"applicationName"]],"DKHhec":["\u8BF7\u6C42\u76F4\u64AD"],"8qq+H7":["\u8BF7\u6C42\u76F4\u64AD ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," \u6B63\u5728\u8BF7\u6C42\u60A8\u76F4\u64AD ",[1,"applicationName"]],"7pndSl":["\u60A8\u66FE\u8BF7\u6C42\u67D0\u4EBA\u76F4\u64AD ",[1,"applicationName"]],"P0wwmM":["\u5DF2\u5728\u76F4\u64AD"],"u4QmWl":["\u8BF7\u6C42\u5DF2\u8FC7\u671F"],"qRXats":["\u4E0D\u5728\u8BED\u97F3\u9891\u9053\u4E2D"],"43zohO":["\u672A\u8FD0\u884C\u6E38\u620F"],"fac+eE":["\u65E0\u6743\u9650"],"mVFTUg":["\u64CD\u4F5C\u8BF7\u6C42\u53D1\u9001\u8FC7\u4E8E\u9891\u7E41"],"8HU1M2":["\u8BF7\u6C42\u5DF2\u53D1\u9001"],"5+172e":["\u76F4\u64AD"],"nAyuPp":["\u76F4\u64AD\u8BF7\u6C42"],"d/qbC0":[[1,"username"]," \u5DF2\u8BF7\u6C42\u60A8\u76F4\u64AD"],"8B3U5O":["\u60A8\u66FE\u8BF7\u6C42\u67D0\u4EBA\u76F4\u64AD"],"UGbmBp":["\u76F4\u64AD"],"jTbTAF":[[8,"$b",[[1,"username"]]]," \u60F3\u8981\u89C2\u770B\u60A8\u6E38\u73A9 ",[8,"$b",[[1,"game"]]],"\u3002"]}',
-);
+a.exports = {
+    "o/An3l": [[1, "username"], " 已请求您直播 ", [1, "applicationName"]],
+    DKHhec: ["请求直播"],
+    "8qq+H7": ["请求直播 ", [1, "applicationName"]],
+    s7bMT0: [[1, "username"], " 正在请求您直播 ", [1, "applicationName"]],
+    "7pndSl": ["您曾请求某人直播 ", [1, "applicationName"]],
+    P0wwmM: ["已在直播"],
+    u4QmWl: ["请求已过期"],
+    qRXats: ["不在语音频道中"],
+    "43zohO": ["未运行游戏"],
+    "fac+eE": ["无权限"],
+    mVFTUg: ["操作请求发送过于频繁"],
+    "8HU1M2": ["请求已发送"],
+    "5+172e": ["直播"],
+    nAyuPp: ["直播请求"],
+    "d/qbC0": [[1, "username"], " 已请求您直播"],
+    "8B3U5O": ["您曾请求某人直播"],
+    UGbmBp: ["直播"],
+    jTbTAF: [[8, "$b", [[1, "username"]]], " 想要观看您游玩 ", [8, "$b", [[1, "game"]]], "。"],
+};

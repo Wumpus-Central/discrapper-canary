@@ -1,3 +1,54 @@
-e.exports = JSON.parse(
-    '{"LsJ9hj":[[1,"discountPercent"],"% de descuento en Logitech"],"8Gl8gP":["Crea tu equipo so\xf1ado con c\xf3digos de descuento exclusivos cada mes. Solo con Nitro."],"HINTfJ":["Ver ofertas"],"Yl5ww1":["V\xe1lido en cualquier producto Logitech G, excepto en los productos nuevos y el equipo PRO Series."],"mH30Yx":["V\xe1lido en cualquier producto Logitech\xa0G, excepto en los productos nuevos y en el equipamiento de la l\xednea de simulaci\xf3n PRO Series."],"jkdhZq":[[1,"discountPercent"],"% de descuento en todos los productos"],"fC4abC":["V\xe1lido en los nuevos productos dentro de ",[6,"months",{"one":[[7]," mes"],"other":[[7]," meses"]},0,"cardinal"]," de disponibilidad."],"zeBjoX":[[1,"discountPercent"],"% de descuento en nuevos productos"],"lsRjfl":["V\xe1lido en el equipamiento de carreras de la l\xednea de simulaci\xf3n PRO."],"pSBCjv":[[1,"discountPercent"],"% de descuento en la l\xednea de simulaci\xf3n PRO Series"],"ogcfac":[[1,"discountPercent"],"% de descuento en la colecci\xf3n PRO Series"],"65EEvD":["Habr\xe1 nuevos c\xf3digos en ",[6,"days",{"one":[[7]," d\xeda"],"other":[[7]," d\xedas"]},0,"cardinal"]],"W8jOD0":["Un c\xf3digo por compra. ",[8,"$link",["Se aplican condiciones"],[[1,"termsUrl"]]],"."],"2I7nK+":["Descuentos en Logitech"],"/UNTlE":["Obt\xe9n un ",[1,"discountPercent"],"% de descuento en Logitech G cada mes, adem\xe1s de descuentos \xfanicos en el equipo PRO Series y en los productos nuevos. ",[8,"$link",["Se aplican condiciones"],[[1,"termsUrl"]]],"."],"bZLaD+":["Desbloquear recompensas"],"ZGOJ8R":["Obt\xe9n un ",[1,"discountPercent"],"% de descuento en Logitech G cada mes, adem\xe1s de descuentos \xfanicos en el equipamiento de carreras de la l\xednea de simulaci\xf3n PRO Series y en los productos nuevos. ",[8,"$link",["Se aplican condiciones"],[[1,"termsUrl"]]],"."],"6KjkUa":["V\xe1lido en cualquier producto del sitio de Logitech, excepto la Serie G y nuevos productos. Expira el ",[3,"date","short"],"."],"zinfZi":["Obt\xe9n un ",[1,"discountPercent"],"% de descuento en productos Logitech G con un c\xf3digo nuevo cada mes."],"OlObRa":["Mejora tu equipo por menos"],"A+56/R":["Obt\xe9n un ",[1,"discountPercent"],"% de descuento en productos Logitech G cada mes, solo con Nitro."],"gc2sa/":["Descuentos mensuales en Logitech G"],"KoKwMn":["Descuento mensual en la mayor\xeda de los productos Logitech G. Se aplican algunas exclusiones."],"PF1aT5":[[1,"discountPercentage"],"% de descuento en Logitech"],"9Y2p6p":["Recompensa mensual"],"Wm58LR":["Descuentos \xfanicos"]}',
-);
+e.exports = {
+    LsJ9hj: [[1, "discountPercent"], "% de descuento en Logitech"],
+    "8Gl8gP": ["Crea tu equipo soñado con códigos de descuento exclusivos cada mes. Solo con Nitro."],
+    HINTfJ: ["Ver ofertas"],
+    Yl5ww1: ["Válido en cualquier producto Logitech G, excepto en los productos nuevos y el equipo PRO Series."],
+    mH30Yx: [
+        "Válido en cualquier producto Logitech G, excepto en los productos nuevos y en el equipamiento de la línea de simulación PRO Series.",
+    ],
+    jkdhZq: [[1, "discountPercent"], "% de descuento en todos los productos"],
+    fC4abC: [
+        "Válido en los nuevos productos dentro de ",
+        [6, "months", { one: [[7], " mes"], other: [[7], " meses"] }, 0, "cardinal"],
+        " de disponibilidad.",
+    ],
+    zeBjoX: [[1, "discountPercent"], "% de descuento en nuevos productos"],
+    lsRjfl: ["Válido en el equipamiento de carreras de la línea de simulación PRO."],
+    pSBCjv: [[1, "discountPercent"], "% de descuento en la línea de simulación PRO Series"],
+    ogcfac: [[1, "discountPercent"], "% de descuento en la colección PRO Series"],
+    "65EEvD": ["Habrá nuevos códigos en ", [6, "days", { one: [[7], " día"], other: [[7], " días"] }, 0, "cardinal"]],
+    W8jOD0: ["Un código por compra. ", [8, "$link", ["Se aplican condiciones"], [[1, "termsUrl"]]], "."],
+    "2I7nK+": ["Descuentos en Logitech"],
+    "/UNTlE": [
+        "Obtén un ",
+        [1, "discountPercent"],
+        "% de descuento en Logitech G cada mes, además de descuentos únicos en el equipo PRO Series y en los productos nuevos. ",
+        [8, "$link", ["Se aplican condiciones"], [[1, "termsUrl"]]],
+        ".",
+    ],
+    "bZLaD+": ["Desbloquear recompensas"],
+    ZGOJ8R: [
+        "Obtén un ",
+        [1, "discountPercent"],
+        "% de descuento en Logitech G cada mes, además de descuentos únicos en el equipamiento de carreras de la línea de simulación PRO Series y en los productos nuevos. ",
+        [8, "$link", ["Se aplican condiciones"], [[1, "termsUrl"]]],
+        ".",
+    ],
+    "6KjkUa": [
+        "Válido en cualquier producto del sitio de Logitech, excepto la Serie G y nuevos productos. Expira el ",
+        [3, "date", "short"],
+        ".",
+    ],
+    zinfZi: [
+        "Obtén un ",
+        [1, "discountPercent"],
+        "% de descuento en productos Logitech G con un código nuevo cada mes.",
+    ],
+    OlObRa: ["Mejora tu equipo por menos"],
+    "A+56/R": ["Obtén un ", [1, "discountPercent"], "% de descuento en productos Logitech G cada mes, solo con Nitro."],
+    "gc2sa/": ["Descuentos mensuales en Logitech G"],
+    KoKwMn: ["Descuento mensual en la mayoría de los productos Logitech G. Se aplican algunas exclusiones."],
+    PF1aT5: [[1, "discountPercentage"], "% de descuento en Logitech"],
+    "9Y2p6p": ["Recompensa mensual"],
+    Wm58LR: ["Descuentos únicos"],
+};

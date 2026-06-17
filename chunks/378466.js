@@ -1,3 +1,75 @@
-a.exports = JSON.parse(
-    '{"5h8p5P":[[6,"count",{"one":[[1,"platforms"]," nije podr\u017Eana."],"other":[[1,"platforms"]," nisu podr\u017Eane."]},0,"cardinal"]],"vyAtfo":["Pove\u017Ei svoj aplikaciju ",[1,"applicationName"]," i svoje Discord ra\u010Dune kako bi mogao/la prihvatiti ovaj dar. ",[1,"platforms_info"]],"yqAKVO":["Ra\u010Dun je povezan s aplikacijom ",[1,"applicationName"],". Uzmi svoj dar u nastavku. ",[1,"platforms_info"]],"Ufm9XX":["Klikne\u0161 li \u201E",[1,"buyButtonLabel"],"\u201D, to zna\u010Di da prihva\u0107a\u0161 ",[8,"$link",["Uvjete komercijalno pru\u017Eenih usluga"],[[1,"paidServiceTermURL"]]],". ",[8,"$b",["Kupnja predmeta iz ",[1,"applicationName"]," trgovine igara zna\u010Di da kupuje\u0161 ograni\u010Denu licencu za kori\u0161tenje ovog predmeta u navedenoj igri."]]," Ova je kupnja nepovratna. Ovaj \u0107e predmet isporu\u010Diti developer izravno u igri."],"Q0dHYO":["Za iskori\u0161tavanje je potreban link ra\u010Duna. ",[1,"platforms_info"]],"3ah/a2":[[8,"$b",["Kupnja predmeta u trgovini u igri ",[1,"applicationName"]," zna\u010Di da kupuje\u0161 ograni\u010Denu licencu za kori\u0161tenje tog predmeta u navedenoj igri."]]," Ta je kupnja nepovratna. Taj \u0107e predmet isporu\u010Diti developer izravno u igri. ",[1,"platforms_info"]],"fO4b1C":["Pove\u017Ei svoju aplikaciju ",[1,"applicationName"]," i svoje Discord ra\u010Dune da prihvati\u0161 ovu kupnju. ",[1,"platforms_info"]],"Sy7D+/":["U ovoj trgovini jo\u0161 nema predmeta. Navrati kasnije!"],"OvBwPV":["Nema dostupnog izloga trgovine"],"BMMo2K":["Pove\u017Ei svoju aplikaciju ",[1,"applicationName"]," i Discord ra\u010Dune u Discord postavkama na ra\u010Dunalu da mo\u017Ee\u0161 prihvatiti ovaj dar."],"eNNnIG":["Pove\u017Ei svoj ",[1,"applicationName"]," i Discord ra\u010Dun iz Discord postavki na ra\u010Dunalu da mo\u017Ee\u0161 prihvatiti ovu kupnju."],"gndWN7":["Otvori Discord na ra\u010Dunalu da izvr\u0161i\u0161 kupnju."],"bRPsNX":["Iskoristi svoju kupnju"],"BKf0MM":["Prika\u017Ei detaljnije podatke"]}',
-);
+a.exports = {
+    "5h8p5P": [
+        [
+            6,
+            "count",
+            { one: [[1, "platforms"], " nije podržana."], other: [[1, "platforms"], " nisu podržane."] },
+            0,
+            "cardinal",
+        ],
+    ],
+    vyAtfo: [
+        "Poveži svoj aplikaciju ",
+        [1, "applicationName"],
+        " i svoje Discord račune kako bi mogao/la prihvatiti ovaj dar. ",
+        [1, "platforms_info"],
+    ],
+    yqAKVO: [
+        "Račun je povezan s aplikacijom ",
+        [1, "applicationName"],
+        ". Uzmi svoj dar u nastavku. ",
+        [1, "platforms_info"],
+    ],
+    Ufm9XX: [
+        "Klikneš li „",
+        [1, "buyButtonLabel"],
+        "”, to znači da prihvaćaš ",
+        [8, "$link", ["Uvjete komercijalno pruženih usluga"], [[1, "paidServiceTermURL"]]],
+        ". ",
+        [
+            8,
+            "$b",
+            [
+                "Kupnja predmeta iz ",
+                [1, "applicationName"],
+                " trgovine igara znači da kupuješ ograničenu licencu za korištenje ovog predmeta u navedenoj igri.",
+            ],
+        ],
+        " Ova je kupnja nepovratna. Ovaj će predmet isporučiti developer izravno u igri.",
+    ],
+    Q0dHYO: ["Za iskorištavanje je potreban link računa. ", [1, "platforms_info"]],
+    "3ah/a2": [
+        [
+            8,
+            "$b",
+            [
+                "Kupnja predmeta u trgovini u igri ",
+                [1, "applicationName"],
+                " znači da kupuješ ograničenu licencu za korištenje tog predmeta u navedenoj igri.",
+            ],
+        ],
+        " Ta je kupnja nepovratna. Taj će predmet isporučiti developer izravno u igri. ",
+        [1, "platforms_info"],
+    ],
+    fO4b1C: [
+        "Poveži svoju aplikaciju ",
+        [1, "applicationName"],
+        " i svoje Discord račune da prihvatiš ovu kupnju. ",
+        [1, "platforms_info"],
+    ],
+    "Sy7D+/": ["U ovoj trgovini još nema predmeta. Navrati kasnije!"],
+    OvBwPV: ["Nema dostupnog izloga trgovine"],
+    BMMo2K: [
+        "Poveži svoju aplikaciju ",
+        [1, "applicationName"],
+        " i Discord račune u Discord postavkama na računalu da možeš prihvatiti ovaj dar.",
+    ],
+    eNNnIG: [
+        "Poveži svoj ",
+        [1, "applicationName"],
+        " i Discord račun iz Discord postavki na računalu da možeš prihvatiti ovu kupnju.",
+    ],
+    gndWN7: ["Otvori Discord na računalu da izvršiš kupnju."],
+    bRPsNX: ["Iskoristi svoju kupnju"],
+    BKf0MM: ["Prikaži detaljnije podatke"],
+};

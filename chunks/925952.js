@@ -1,3 +1,27 @@
-a.exports = JSON.parse(
-    '{"0LL6FX":["Isso atualizar\xe1 a apar\xeancia do servidor para todos os assinantes. O tema vai se adaptar ao modo deles (claro ou escuro)."],"H8idcP":["Aplicar tema do servidor?"],"odtr7f":["Escolha um tema predefinido ou crie o seu pr\xf3prio. Membros veem esse tema ao abrir o servidor, e ele se adapta aos modos claro ou escuro. ",[8,"$link",["Saiba mais"],[[1,"articleUrl"]]]],"XhiIAu":["Isso altera a apar\xeancia do seu servidor para todos os assinantes."],"aZpFFn":["Ativar tema do servidor"],"jSrqR2":["Predefini\xe7\xf5es"],"XyrxOp":["Azoxo"],"tXRcxU":["Jeans"],"S8/OZA":["Fogo"],"nCbxEN":["P\xf3 de Ouro"],"6ZeQDd":["Jade"],"TiGQro":["Musgo"],"x3h/OV":["Obsidiana"],"qn90j5":["Oceano"],"tTJY6S":["Ameixa"],"+k8Q/o":["Crep\xfasculo"],"HkvkHP":["A prefer\xeancia de modo de cada membro (claro ou escuro) definir\xe1 a exibi\xe7\xe3o."],"zry4l5":["Pr\xe9-visualizar tema"],"Ck5zxP":["Selecione o seu tema"],"/6NbRv":["Tema do servidor"]}',
-);
+a.exports = {
+    "0LL6FX": [
+        "Isso atualizará a aparência do servidor para todos os assinantes. O tema vai se adaptar ao modo deles (claro ou escuro).",
+    ],
+    H8idcP: ["Aplicar tema do servidor?"],
+    odtr7f: [
+        "Escolha um tema predefinido ou crie o seu próprio. Membros veem esse tema ao abrir o servidor, e ele se adapta aos modos claro ou escuro. ",
+        [8, "$link", ["Saiba mais"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["Isso altera a aparência do seu servidor para todos os assinantes."],
+    aZpFFn: ["Ativar tema do servidor"],
+    jSrqR2: ["Predefinições"],
+    XyrxOp: ["Azoxo"],
+    tXRcxU: ["Jeans"],
+    "S8/OZA": ["Fogo"],
+    nCbxEN: ["Pó de Ouro"],
+    "6ZeQDd": ["Jade"],
+    TiGQro: ["Musgo"],
+    "x3h/OV": ["Obsidiana"],
+    qn90j5: ["Oceano"],
+    tTJY6S: ["Ameixa"],
+    "+k8Q/o": ["Crepúsculo"],
+    HkvkHP: ["A preferência de modo de cada membro (claro ou escuro) definirá a exibição."],
+    zry4l5: ["Pré-visualizar tema"],
+    Ck5zxP: ["Selecione o seu tema"],
+    "/6NbRv": ["Tema do servidor"],
+};

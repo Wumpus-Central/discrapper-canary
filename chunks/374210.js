@@ -1,3 +1,46 @@
-a.exports = JSON.parse(
-    '{"mXY4Rb":["Oletko jo Game Pass \u2011j\xe4sen? ",[8,"$link",["Yhdist\xe4 tilisi"],[[1,"onConnect"]]],", niin saat lis\xe4orbseja palkinnoista ja alennuksia kaupasta."],"oBYFF3":["Hanki kaikki Nitro-edut"],"HZz88k":["Kuukausittainen orbs-droppi"],"Aau2G1":["Orbs-kerroin"],"6Udfv9":["Alennus kauppaan"],"f1ygW4":["Xbox Game Pass \u2011j\xe4senyytesi antaa maistiaisen Nitrosta"],"cRLw2a":["Xbox Game Pass \u2011j\xe4senyytesi antaa maistiaisen Nitrosta"],"ZYc6Hv":["Saat ",[1,"orbAmount"]," orbsia lis\xe4\xe4 joka kuukausi. Seuraavaan droppiin on ",[1,"days"]," p\xe4iv\xe4\xe4."],"+tdDeK":["Kuukausittainen orbs-droppi"],"kc3Kvs":["Muunna teht\xe4v\xe4palkintosi megavoitoiksi orbs-palkintojen x",[1,"multiplier"],"-kertoimella."],"++kzl5":["Orbs-kerroin"],"WgkpKK":["Nauti makeista alennuksista Discordin kaupan tuotteista. ",[8,"$link",["Siirry kauppaan"],[[1,"onClick"]]]],"a+PtZt":["Alennus kauppaan"],"70kyQr":["Xbox Game Pass \u2011j\xe4senyytesi antaa maistiaisen Nitrosta. Nauti seuraavista kolmesta Nitro-edusta. ",[8,"$link",["Lue lis\xe4\xe4"],[[1,"learnMoreLink"]]]],"4CdlUW":["Avaa kaikki Nitro-edut"],"c5usUr":["Ansaitse lis\xe4\xe4 Orbseja"],"UkrcSH":["Xbox Game Pass \u2011j\xe4senyytesi antaa maistiaisen Nitron eduista lis\xe4\xe4m\xe4ll\xe4 ",[2,"bonusOrbMultiplier"],"x-kertoimen teht\xe4vist\xe4 ansaittaviin orbseihin"],"D+kUbg":["Xbox Game Pass \u2011j\xe4senet saavat nyt orb-lis\xe4palkintoja ja kaupan alennuksia Discordissa. Yhdist\xe4 Xbox uudelleen, niin p\xe4\xe4set lunastamaan niit\xe4. ",[8,"$link",["Lue lis\xe4\xe4"],[[1,"learnMoreLink"]]]],"9cLtDI":["Uutta! Saat esimakua Nitrosta Xbox Game Passin avulla"],"DePOcS":["Kaupan alennus sis\xe4ltyy Xbox Game Passiin"],"Urtyu9":["Saat seuraavan kuukausittaisen orbs-droppisi ",[1,"days"]," p\xe4iv\xe4\xe4 Nitro-tilauksesi alkamisesta."]}',
-);
+a.exports = {
+    mXY4Rb: [
+        "Oletko jo Game Pass ‑jäsen? ",
+        [8, "$link", ["Yhdistä tilisi"], [[1, "onConnect"]]],
+        ", niin saat lisäorbseja palkinnoista ja alennuksia kaupasta.",
+    ],
+    oBYFF3: ["Hanki kaikki Nitro-edut"],
+    HZz88k: ["Kuukausittainen orbs-droppi"],
+    Aau2G1: ["Orbs-kerroin"],
+    "6Udfv9": ["Alennus kauppaan"],
+    f1ygW4: ["Xbox Game Pass ‑jäsenyytesi antaa maistiaisen Nitrosta"],
+    cRLw2a: ["Xbox Game Pass ‑jäsenyytesi antaa maistiaisen Nitrosta"],
+    ZYc6Hv: [
+        "Saat ",
+        [1, "orbAmount"],
+        " orbsia lisää joka kuukausi. Seuraavaan droppiin on ",
+        [1, "days"],
+        " päivää.",
+    ],
+    "+tdDeK": ["Kuukausittainen orbs-droppi"],
+    kc3Kvs: ["Muunna tehtäväpalkintosi megavoitoiksi orbs-palkintojen x", [1, "multiplier"], "-kertoimella."],
+    "++kzl5": ["Orbs-kerroin"],
+    WgkpKK: [
+        "Nauti makeista alennuksista Discordin kaupan tuotteista. ",
+        [8, "$link", ["Siirry kauppaan"], [[1, "onClick"]]],
+    ],
+    "a+PtZt": ["Alennus kauppaan"],
+    "70kyQr": [
+        "Xbox Game Pass ‑jäsenyytesi antaa maistiaisen Nitrosta. Nauti seuraavista kolmesta Nitro-edusta. ",
+        [8, "$link", ["Lue lisää"], [[1, "learnMoreLink"]]],
+    ],
+    "4CdlUW": ["Avaa kaikki Nitro-edut"],
+    c5usUr: ["Ansaitse lisää Orbseja"],
+    UkrcSH: [
+        "Xbox Game Pass ‑jäsenyytesi antaa maistiaisen Nitron eduista lisäämällä ",
+        [2, "bonusOrbMultiplier"],
+        "x-kertoimen tehtävistä ansaittaviin orbseihin",
+    ],
+    "D+kUbg": [
+        "Xbox Game Pass ‑jäsenet saavat nyt orb-lisäpalkintoja ja kaupan alennuksia Discordissa. Yhdistä Xbox uudelleen, niin pääset lunastamaan niitä. ",
+        [8, "$link", ["Lue lisää"], [[1, "learnMoreLink"]]],
+    ],
+    "9cLtDI": ["Uutta! Saat esimakua Nitrosta Xbox Game Passin avulla"],
+    DePOcS: ["Kaupan alennus sisältyy Xbox Game Passiin"],
+    Urtyu9: ["Saat seuraavan kuukausittaisen orbs-droppisi ", [1, "days"], " päivää Nitro-tilauksesi alkamisesta."],
+};

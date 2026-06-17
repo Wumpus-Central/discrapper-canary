@@ -1,3 +1,45 @@
-e.exports = JSON.parse(
-    '{"mXY4Rb":["Allerede et Game Pass-medlem? ",[8,"$link",["Forbind din Konto"],[[1,"onConnect"]]]," for at l\xe5se op for ekstra Orb-bel\xf8nninger og rabatter i shoppen."],"oBYFF3":["F\xe5 alle Nitro-fordele"],"HZz88k":["M\xe5nedsvise Orbs-drops"],"Aau2G1":["Orbs-multiplikator"],"6Udfv9":["Shop-rabat"],"f1ygW4":["Dit Xbox Game Pass leveres med en pr\xf8vesmag p\xe5 Nitro"],"cRLw2a":["Dit Xbox Game Pass leveres med en pr\xf8vesmag p\xe5 Nitro"],"ZYc6Hv":["F\xe5 ",[1,"orbAmount"]," ekstra Orbs hver m\xe5ned. N\xe6ste drop er om ",[1,"days"]," dage."],"+tdDeK":["M\xe5nedsvise Orbs-drops"],"kc3Kvs":["Forvandl dine gevinster fra missioner til megagevinster med en multiplikator p\xe5 x",[1,"multiplier"]," p\xe5 Orbs-bel\xf8nninger."],"++kzl5":["Orbs-multiplikator"],"WgkpKK":["F\xe5 l\xe6kre rabatter p\xe5 udvalgte varer i Discord Shop. ",[8,"$link",["Bes\xf8g shoppen"],[[1,"onClick"]]]],"a+PtZt":["Shop-rabat"],"70kyQr":["Med i dit Xbox Game Pass-medlemskab f\xf8lger en smagspr\xf8ve p\xe5 Nitro. Nyd disse tre Nitro-fordele. ",[8,"$link",["F\xe5 mere at vide"],[[1,"learnMoreLink"]]]],"4CdlUW":["L\xe5s op for alle Nitro-fordelene"],"c5usUr":["Optjen flere Orbs"],"UkrcSH":["Dit Xbox Game Pass-medlemskab giver dig en pr\xf8vesmag p\xe5 Nitro med ",[2,"bonusOrbMultiplier"],"x flere Orbs fra missioner"],"D+kUbg":["Medlemmer med Xbox Game Pass f\xe5r nu ekstra Orb-bel\xf8nninger og rabatter i shoppen p\xe5 Discord. Forbind din Xbox igen for at l\xe5se op for disse fordele. ",[8,"$link",["F\xe5 mere at vide"],[[1,"learnMoreLink"]]]],"9cLtDI":["Nyhed! F\xe5 en smagspr\xf8ve p\xe5 Nitro med Xbox Game Pass"],"DePOcS":["Rabat i shoppen er inkluderet med Xbox Game Pass"],"Urtyu9":["Du vil modtage dit n\xe6ste m\xe5nedlige Orbs-drop, ",[1,"days"]," dage efter dit Nitro-abonnement begynder."]}',
-);
+e.exports = {
+    mXY4Rb: [
+        "Allerede et Game Pass-medlem? ",
+        [8, "$link", ["Forbind din Konto"], [[1, "onConnect"]]],
+        " for at låse op for ekstra Orb-belønninger og rabatter i shoppen.",
+    ],
+    oBYFF3: ["Få alle Nitro-fordele"],
+    HZz88k: ["Månedsvise Orbs-drops"],
+    Aau2G1: ["Orbs-multiplikator"],
+    "6Udfv9": ["Shop-rabat"],
+    f1ygW4: ["Dit Xbox Game Pass leveres med en prøvesmag på Nitro"],
+    cRLw2a: ["Dit Xbox Game Pass leveres med en prøvesmag på Nitro"],
+    ZYc6Hv: ["Få ", [1, "orbAmount"], " ekstra Orbs hver måned. Næste drop er om ", [1, "days"], " dage."],
+    "+tdDeK": ["Månedsvise Orbs-drops"],
+    kc3Kvs: [
+        "Forvandl dine gevinster fra missioner til megagevinster med en multiplikator på x",
+        [1, "multiplier"],
+        " på Orbs-belønninger.",
+    ],
+    "++kzl5": ["Orbs-multiplikator"],
+    WgkpKK: ["Få lækre rabatter på udvalgte varer i Discord Shop. ", [8, "$link", ["Besøg shoppen"], [[1, "onClick"]]]],
+    "a+PtZt": ["Shop-rabat"],
+    "70kyQr": [
+        "Med i dit Xbox Game Pass-medlemskab følger en smagsprøve på Nitro. Nyd disse tre Nitro-fordele. ",
+        [8, "$link", ["Få mere at vide"], [[1, "learnMoreLink"]]],
+    ],
+    "4CdlUW": ["Lås op for alle Nitro-fordelene"],
+    c5usUr: ["Optjen flere Orbs"],
+    UkrcSH: [
+        "Dit Xbox Game Pass-medlemskab giver dig en prøvesmag på Nitro med ",
+        [2, "bonusOrbMultiplier"],
+        "x flere Orbs fra missioner",
+    ],
+    "D+kUbg": [
+        "Medlemmer med Xbox Game Pass får nu ekstra Orb-belønninger og rabatter i shoppen på Discord. Forbind din Xbox igen for at låse op for disse fordele. ",
+        [8, "$link", ["Få mere at vide"], [[1, "learnMoreLink"]]],
+    ],
+    "9cLtDI": ["Nyhed! Få en smagsprøve på Nitro med Xbox Game Pass"],
+    DePOcS: ["Rabat i shoppen er inkluderet med Xbox Game Pass"],
+    Urtyu9: [
+        "Du vil modtage dit næste månedlige Orbs-drop, ",
+        [1, "days"],
+        " dage efter dit Nitro-abonnement begynder.",
+    ],
+};

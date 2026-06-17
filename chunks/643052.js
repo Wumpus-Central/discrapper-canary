@@ -1,3 +1,50 @@
-e.exports = JSON.parse(
-    '{"5Mi5TE":["\xc4ndra hur vi tilldelar din \xe5lder?"],"lG69e1":[[8,"$link",["L\xe4s mer"],[[1,"handleOnHelpUrlHook"]]]," om \xe5ldersgrupper"],"V822Mp":["Ta bort \xe5ldersgrupp"],"FbTAmI":["Detta kommer att \xe4ndra din \xe5ldersgrupp fr\xe5n vuxen till obekr\xe4ftad och du kommer inte att kunna f\xe5 \xe5tkomst till \xe5ldersbegr\xe4nsade upplevelser. F\xf6r att \xe5terf\xe5 vuxen\xe5tkomst m\xe5ste du bekr\xe4fta din \xe5ldersgrupp med en annan metod."],"g7/14g":["Ta bort din tilldelade \xe5ldersgrupp?"],"Gn0SAj":["St\xe4ll in din \xe5ldersgrupp till obekr\xe4ftad"],"bD//cU":["Ta bort tilldelad \xe5ldersgrupp"],"rJiO86":["V\xe4lj att bekr\xe4fta din \xe5ldersgrupp med en annan metod"],"SH6Tcv":["Bekr\xe4fta \xe5ldersgrupp"],"1DN29p":["Vi anv\xe4nder tekniker som bed\xf6mer anv\xe4ndares \xe5ldersgrupper baserat p\xe5 beteendem\xf6nster och andra signaler som \xe4r kopplade till anv\xe4ndarkonton p\xe5 Discord. ",[8,"$link",["L\xe4s mer"],[[1,"handleOnHelpUrlHook"]]]],"PY4MA0":["Du har tilldelats \xe5ldersgruppen vuxen av Discord"],"FTawSP":["Tilldelad av Discord"],"WM5adV":["Tilldelad av Discord. ",[8,"$link",["L\xe4s mer"],[[1,"handleOnHelpUrlHook"]]]],"b7Oqdu":["V\xe4lj en annan metod"],"ar3a3q":["Informationen du l\xe4mnar anv\xe4nds endast f\xf6r att bekr\xe4fta din \xe5ldersgrupp och raderas sedan."],"0vTx7j":["Ladda om"],"yBHwMy":["Det h\xe4r steget st\xf6ds inte p\xe5 VR. Slutf\xf6r det p\xe5 en annan enhet s\xe5 uppdaterar vi din upplevelse h\xe4r automatiskt."],"gUqXQN":["Bekr\xe4fta din \xe5lder p\xe5 en annan enhet"],"XYYm+1":["V\xe4lj en annan metod f\xf6r att verifiera din \xe5lder"],"rVLCwM":["V\xe4lj en annan metod"],"RpMIT0":["V\xe4lj en metod f\xf6r att bekr\xe4fta att du \xe4r vuxen. N\xe4r du har bekr\xe4ftat kan du f\xe5 \xe5tkomst till \xe5ldersbegr\xe4nsat inneh\xe5ll och inst\xe4llningar. ",[8,"$link",["L\xe4s mer"],[[1,"handleOnHelpUrlHook"]]],"."],"h7qzoa":["\xc5terst\xe4ll \xe5tkomst till Discord genom att bekr\xe4fta din \xe5lder med ett av alternativen nedan."],"eJmat5":["Uppskatta din \xe5lder med en videoselfie. Videon stannar p\xe5 enheten, inga biometriska data delas."],"2yLvkS":["Videoselfie via k-ID"],"+pwfOA":["N\xe5got gick fel med Google Wallet-verifieringen. F\xf6rs\xf6k med en annan metod."],"dah4bF":["Anv\xe4nd ett ID-pass baserat p\xe5 din passinformation. Dina ID-uppgifter stannar i Google Wallet."],"Y9sLpR":["Google Wallet ID-pass"],"fEUKEv":["F\xf6rs\xf6k med en annan metod"],"Pf5xUq":["Ditt ID har utf\xe4rdats i ett land som \xe4nnu inte st\xf6ds. F\xf6rs\xf6k med en annan verifieringsmetod."],"MlFuBI":["Verifierar din \xe5lder ..."],"ZdmRwW":["Skanna ditt ID och ta en selfie f\xf6r att bekr\xe4fta att det \xe4r du. B\xe5da tas bort direkt efter bekr\xe4ftelsen och l\xe4nkas aldrig till ditt konto."],"dwkwo0":["ID-skanning via k-ID"],"htWh1G":[[8,"$link",["L\xe4s mer"],[[1,"handleOnHelpUrlHook"]]]," i v\xe5rt Hj\xe4lpcenter"],"cR6336":["Inga metoder f\xf6r \xe5ldersverifiering finns tillg\xe4ngliga. Detta kan vara ett fel."],"hDvmYP":["Ladda om"]}',
-);
+e.exports = {
+    "5Mi5TE": ["Ändra hur vi tilldelar din ålder?"],
+    lG69e1: [[8, "$link", ["Läs mer"], [[1, "handleOnHelpUrlHook"]]], " om åldersgrupper"],
+    V822Mp: ["Ta bort åldersgrupp"],
+    FbTAmI: [
+        "Detta kommer att ändra din åldersgrupp från vuxen till obekräftad och du kommer inte att kunna få åtkomst till åldersbegränsade upplevelser. För att återfå vuxenåtkomst måste du bekräfta din åldersgrupp med en annan metod.",
+    ],
+    "g7/14g": ["Ta bort din tilldelade åldersgrupp?"],
+    Gn0SAj: ["Ställ in din åldersgrupp till obekräftad"],
+    "bD//cU": ["Ta bort tilldelad åldersgrupp"],
+    rJiO86: ["Välj att bekräfta din åldersgrupp med en annan metod"],
+    SH6Tcv: ["Bekräfta åldersgrupp"],
+    "1DN29p": [
+        "Vi använder tekniker som bedömer användares åldersgrupper baserat på beteendemönster och andra signaler som är kopplade till användarkonton på Discord. ",
+        [8, "$link", ["Läs mer"], [[1, "handleOnHelpUrlHook"]]],
+    ],
+    PY4MA0: ["Du har tilldelats åldersgruppen vuxen av Discord"],
+    FTawSP: ["Tilldelad av Discord"],
+    WM5adV: ["Tilldelad av Discord. ", [8, "$link", ["Läs mer"], [[1, "handleOnHelpUrlHook"]]]],
+    b7Oqdu: ["Välj en annan metod"],
+    ar3a3q: ["Informationen du lämnar används endast för att bekräfta din åldersgrupp och raderas sedan."],
+    "0vTx7j": ["Ladda om"],
+    yBHwMy: [
+        "Det här steget stöds inte på VR. Slutför det på en annan enhet så uppdaterar vi din upplevelse här automatiskt.",
+    ],
+    gUqXQN: ["Bekräfta din ålder på en annan enhet"],
+    "XYYm+1": ["Välj en annan metod för att verifiera din ålder"],
+    rVLCwM: ["Välj en annan metod"],
+    RpMIT0: [
+        "Välj en metod för att bekräfta att du är vuxen. När du har bekräftat kan du få åtkomst till åldersbegränsat innehåll och inställningar. ",
+        [8, "$link", ["Läs mer"], [[1, "handleOnHelpUrlHook"]]],
+        ".",
+    ],
+    h7qzoa: ["Återställ åtkomst till Discord genom att bekräfta din ålder med ett av alternativen nedan."],
+    eJmat5: ["Uppskatta din ålder med en videoselfie. Videon stannar på enheten, inga biometriska data delas."],
+    "2yLvkS": ["Videoselfie via k-ID"],
+    "+pwfOA": ["Något gick fel med Google Wallet-verifieringen. Försök med en annan metod."],
+    dah4bF: ["Använd ett ID-pass baserat på din passinformation. Dina ID-uppgifter stannar i Google Wallet."],
+    Y9sLpR: ["Google Wallet ID-pass"],
+    fEUKEv: ["Försök med en annan metod"],
+    Pf5xUq: ["Ditt ID har utfärdats i ett land som ännu inte stöds. Försök med en annan verifieringsmetod."],
+    MlFuBI: ["Verifierar din ålder ..."],
+    ZdmRwW: [
+        "Skanna ditt ID och ta en selfie för att bekräfta att det är du. Båda tas bort direkt efter bekräftelsen och länkas aldrig till ditt konto.",
+    ],
+    dwkwo0: ["ID-skanning via k-ID"],
+    htWh1G: [[8, "$link", ["Läs mer"], [[1, "handleOnHelpUrlHook"]]], " i vårt Hjälpcenter"],
+    cR6336: ["Inga metoder för åldersverifiering finns tillgängliga. Detta kan vara ett fel."],
+    hDvmYP: ["Ladda om"],
+};

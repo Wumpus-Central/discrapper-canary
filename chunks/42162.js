@@ -1,3 +1,17 @@
-i.exports = JSON.parse(
-    '{"/cp93l":["Nast\u0119pny miesi\u0105c"],"raS6yf":["Poprzedni miesi\u0105c"],"JA5C7L":["Wyczy\u015B\u0107"],"I8kUqR":["Otw\xf3rz kalendarz"],"db85vU":["Brak przedmiot\xf3w do wy\u015Bwietlenia"],"bPKiId":["Brak wynik\xf3w dla \u201E",[1,"query"],"\u201D"],"WfH9in":["Zamknij"],"m3Vfcs":["Nie pokazuj ponownie"],"cgdAs2":["(Strona otworzy si\u0119 w nowej karcie)"],"2L/ygS":[[1,"percent"]," procent uko\u0144czono"],"/Y7vRd":["Naci\u015Bnij X, aby usun\u0105\u0107."],"VMNfsY":["Zaznaczone"],"A+pfVR":["Wybierz..."],"v2YSk/":["Krok ",[1,"stepNumber"]," z ",[1,"stepCount"]],"YpT3kk":["Powi\u0119ksz i odtw\xf3rz wideo"]}',
-);
+i.exports = {
+    "/cp93l": ["Następny miesiąc"],
+    raS6yf: ["Poprzedni miesiąc"],
+    JA5C7L: ["Wyczyść"],
+    I8kUqR: ["Otwórz kalendarz"],
+    db85vU: ["Brak przedmiotów do wyświetlenia"],
+    bPKiId: ["Brak wyników dla „", [1, "query"], "”"],
+    WfH9in: ["Zamknij"],
+    m3Vfcs: ["Nie pokazuj ponownie"],
+    cgdAs2: ["(Strona otworzy się w nowej karcie)"],
+    "2L/ygS": [[1, "percent"], " procent ukończono"],
+    "/Y7vRd": ["Naciśnij X, aby usunąć."],
+    VMNfsY: ["Zaznaczone"],
+    "A+pfVR": ["Wybierz..."],
+    "v2YSk/": ["Krok ", [1, "stepNumber"], " z ", [1, "stepCount"]],
+    YpT3kk: ["Powiększ i odtwórz wideo"],
+};

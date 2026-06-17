@@ -1,3 +1,56 @@
-e.exports = JSON.parse(
-    '{"5Mi5TE":["Vrei s\u0103 schimbi modul \xeen care \xee\u021Bi atribuim v\xe2rsta?"],"lG69e1":[[8,"$link",["Afl\u0103 mai multe"],[[1,"handleOnHelpUrlHook"]]]," despre grupele de v\xe2rst\u0103"],"V822Mp":["Elimin\u0103 grupa de v\xe2rst\u0103"],"FbTAmI":["Aceast\u0103 ac\u021Biune \xee\u021Bi va schimba grupa de v\xe2rst\u0103 de la adult la neconfirmat\u0103 \u0219i nu vei mai putea accesa con\u021Binut restric\u021Bionat pe criterii de v\xe2rst\u0103. Pentru a redob\xe2ndi accesul, va trebui s\u0103 \xee\u021Bi confirmi grupa de v\xe2rst\u0103 printr-o alt\u0103 metod\u0103."],"g7/14g":["Vrei s\u0103 elimini grupa de v\xe2rst\u0103 care \u021Bi-a fost atribuit\u0103?"],"Gn0SAj":["Seteaz\u0103 grupa de v\xe2rst\u0103 ca neconfirmat\u0103"],"bD//cU":["Elimin\u0103 grupa de v\xe2rst\u0103 atribuit\u0103"],"rJiO86":["Alege s\u0103-\u021Bi confirmi grupa de v\xe2rst\u0103 cu o metod\u0103 diferit\u0103"],"SH6Tcv":["Confirm\u0103 grupa de v\xe2rst\u0103"],"1DN29p":["Folosim tehnologii care evalueaz\u0103 grupele de v\xe2rst\u0103 ale utilizatorilor pe baza tiparelor de comportament \u0219i a altor indicatori asocia\u021Bi conturilor Discord. ",[8,"$link",["Afl\u0103 mai multe"],[[1,"handleOnHelpUrlHook"]]]],"PY4MA0":["Discord te-a plasat \xeen grupa de v\xe2rst\u0103 Adult"],"FTawSP":["Atribuit\u0103 de Discord"],"WM5adV":["Atribuit\u0103 de Discord. ",[8,"$link",["Afl\u0103 mai multe"],[[1,"handleOnHelpUrlHook"]]]],"b7Oqdu":["Alege o alt\u0103 metod\u0103"],"ar3a3q":["Folosim informa\u021Biile transmise doar pentru a-\u021Bi confirma grupa de v\xe2rst\u0103, apoi le \u0219tergem."],"0vTx7j":["Re\xeencarc\u0103"],"yBHwMy":["Acest pas nu este acceptat pe VR. Finalizeaz\u0103-l pe alt dispozitiv \u0219i \xee\u021Bi vom actualiza automat experien\u021Ba aici."],"gUqXQN":["Confirm\u0103-\u021Bi v\xe2rsta pe alt dispozitiv"],"XYYm+1":["Alege o alt\u0103 metod\u0103 pentru a-\u021Bi verifica v\xe2rsta"],"rVLCwM":["Alege o alt\u0103 metod\u0103"],"RpMIT0":["Alege o metod\u0103 prin care s\u0103-\u021Bi confirmi v\xe2rsta. Dup\u0103 confirmare, vei putea accesa con\u021Binutul \u0219i set\u0103rile restric\u021Bionate \xeen func\u021Bie de v\xe2rst\u0103. ",[8,"$link",["Afl\u0103 mai multe"],[[1,"handleOnHelpUrlHook"]]],"."],"h7qzoa":["Prime\u0219te din nou acces la Discord confirm\xe2ndu-\u021Bi v\xe2rsta printr-una dintre op\u021Biunile de mai jos."],"eJmat5":["Estimeaz\u0103-\u021Bi v\xe2rsta printr-un selfie video. \xcenregistrarea r\u0103m\xe2ne pe dispozitiv \u0219i nu se partajeaz\u0103 date biometrice."],"2yLvkS":["Selfie video prin k-ID"],"+pwfOA":["Ceva nu a mers bine la verificarea cu Google Wallet. \xcencearc\u0103 alt\u0103 metod\u0103."],"dah4bF":["Folose\u0219te un ID Pass \xeen baza datelor din pa\u0219aport. Informa\u021Biile de identificare r\u0103m\xe2n stocate \xeen Google Wallet."],"Y9sLpR":["ID Pass din Google Wallet"],"fEUKEv":["\xcencearc\u0103 alt\u0103 metod\u0103"],"Pf5xUq":["Actul t\u0103u de identitate a fost emis \xeentr-o \u021Bar\u0103 care nu este \xeenc\u0103 acceptat\u0103. \xcencearc\u0103 alt\u0103 metod\u0103 de verificare."],"MlFuBI":["Se verific\u0103 v\xe2rsta..."],"ZdmRwW":["Scaneaz\u0103-\u021Bi actul de identitate \u0219i f\u0103 un selfie pentru a-\u021Bi confirma identitatea. Ambele sunt \u0219terse imediat dup\u0103 confirmare \u0219i nu vor fi niciodat\u0103 asociate contului t\u0103u."],"dwkwo0":["Scanarea actului de identitate prin k-ID"],"htWh1G":[[8,"$link",["Afl\u0103 mai multe"],[[1,"handleOnHelpUrlHook"]]]," din Centrul de asisten\u021B\u0103"],"cR6336":["Nu sunt disponibile metode de verificare a v\xe2rstei. S-ar putea s\u0103 fie o eroare."],"hDvmYP":["Re\xeencarc\u0103"]}',
-);
+e.exports = {
+    "5Mi5TE": ["Vrei să schimbi modul în care îți atribuim vârsta?"],
+    lG69e1: [[8, "$link", ["Află mai multe"], [[1, "handleOnHelpUrlHook"]]], " despre grupele de vârstă"],
+    V822Mp: ["Elimină grupa de vârstă"],
+    FbTAmI: [
+        "Această acțiune îți va schimba grupa de vârstă de la adult la neconfirmată și nu vei mai putea accesa conținut restricționat pe criterii de vârstă. Pentru a redobândi accesul, va trebui să îți confirmi grupa de vârstă printr-o altă metodă.",
+    ],
+    "g7/14g": ["Vrei să elimini grupa de vârstă care ți-a fost atribuită?"],
+    Gn0SAj: ["Setează grupa de vârstă ca neconfirmată"],
+    "bD//cU": ["Elimină grupa de vârstă atribuită"],
+    rJiO86: ["Alege să-ți confirmi grupa de vârstă cu o metodă diferită"],
+    SH6Tcv: ["Confirmă grupa de vârstă"],
+    "1DN29p": [
+        "Folosim tehnologii care evaluează grupele de vârstă ale utilizatorilor pe baza tiparelor de comportament și a altor indicatori asociați conturilor Discord. ",
+        [8, "$link", ["Află mai multe"], [[1, "handleOnHelpUrlHook"]]],
+    ],
+    PY4MA0: ["Discord te-a plasat în grupa de vârstă Adult"],
+    FTawSP: ["Atribuită de Discord"],
+    WM5adV: ["Atribuită de Discord. ", [8, "$link", ["Află mai multe"], [[1, "handleOnHelpUrlHook"]]]],
+    b7Oqdu: ["Alege o altă metodă"],
+    ar3a3q: ["Folosim informațiile transmise doar pentru a-ți confirma grupa de vârstă, apoi le ștergem."],
+    "0vTx7j": ["Reîncarcă"],
+    yBHwMy: [
+        "Acest pas nu este acceptat pe VR. Finalizează-l pe alt dispozitiv și îți vom actualiza automat experiența aici.",
+    ],
+    gUqXQN: ["Confirmă-ți vârsta pe alt dispozitiv"],
+    "XYYm+1": ["Alege o altă metodă pentru a-ți verifica vârsta"],
+    rVLCwM: ["Alege o altă metodă"],
+    RpMIT0: [
+        "Alege o metodă prin care să-ți confirmi vârsta. După confirmare, vei putea accesa conținutul și setările restricționate în funcție de vârstă. ",
+        [8, "$link", ["Află mai multe"], [[1, "handleOnHelpUrlHook"]]],
+        ".",
+    ],
+    h7qzoa: ["Primește din nou acces la Discord confirmându-ți vârsta printr-una dintre opțiunile de mai jos."],
+    eJmat5: [
+        "Estimează-ți vârsta printr-un selfie video. Înregistrarea rămâne pe dispozitiv și nu se partajează date biometrice.",
+    ],
+    "2yLvkS": ["Selfie video prin k-ID"],
+    "+pwfOA": ["Ceva nu a mers bine la verificarea cu Google Wallet. Încearcă altă metodă."],
+    dah4bF: [
+        "Folosește un ID Pass în baza datelor din pașaport. Informațiile de identificare rămân stocate în Google Wallet.",
+    ],
+    Y9sLpR: ["ID Pass din Google Wallet"],
+    fEUKEv: ["Încearcă altă metodă"],
+    Pf5xUq: [
+        "Actul tău de identitate a fost emis într-o țară care nu este încă acceptată. Încearcă altă metodă de verificare.",
+    ],
+    MlFuBI: ["Se verifică vârsta..."],
+    ZdmRwW: [
+        "Scanează-ți actul de identitate și fă un selfie pentru a-ți confirma identitatea. Ambele sunt șterse imediat după confirmare și nu vor fi niciodată asociate contului tău.",
+    ],
+    dwkwo0: ["Scanarea actului de identitate prin k-ID"],
+    htWh1G: [[8, "$link", ["Află mai multe"], [[1, "handleOnHelpUrlHook"]]], " din Centrul de asistență"],
+    cR6336: ["Nu sunt disponibile metode de verificare a vârstei. S-ar putea să fie o eroare."],
+    hDvmYP: ["Reîncarcă"],
+};

@@ -1,3 +1,30 @@
-e.exports = JSON.parse(
-    '{"QwW8zd":["Post erstellen"],"DxwBMf":["Erstelle einen Ort, um andere einzuladen."],"7aCPJG":["Bereits hinzugef\xfcgt"],"F5YBmi":["Alles ausw\xe4hlen"],"578719":["Hilf Spielern, Sitzungen zu finden, die zu ihrer Stimmung passen, indem du aus vordefinierten Tags ausw\xe4hlst"],"JWRsCC":["Empfohlene Tags hinzuf\xfcgen"],"h/GwWL":["Gruppensuche"],"MKZ+Ky":["Hilf Spielern, Sitzungen zu finden, die zu ihrer Stimmung passen, indem du aus vordefinierten Tags ausw\xe4hlst"],"5a7Pjb":["Empfohlene Tags hinzuf\xfcgen"],"/mEbGf":["Beschreibung"],"SU/IAE":["F\xfcge mehr Details \xfcber deine Spielsitzung hinzu."],"UHF2Zn":["Verbinde deinen Account, damit Spieler die freien Pl\xe4tze deines Squads sehen und eine Beitrittsanfrage stellen k\xf6nnen!"],"EBSaL4":["Account verkn\xfcpfen"],"vznMVa":[[8,"$link",["Verbinde deinen Account"],[[1,"onClick"]]],", damit Spieler die freien Pl\xe4tze deines Squads sehen k\xf6nnen!"],"yoIAe/":["F\xfcge Tags hinzu, um die Stimmung zu vermitteln und anzugeben, wonach du suchst."],"tOsHsu":["Post erstellen"],"G91SYQ":["Du kannst einen Anruf starten, dem andere beitreten k\xf6nnen."],"0s2ICk":["F\xfcge diesem Kanal den Tag \u201E",[1,"noMicTagName"],"\u201C hinzu, um diese Umschaltfunktion zu aktivieren."],"Xd2NFi":["Sprachchat"]}',
-);
+e.exports = {
+    578719: [
+        "Hilf Spielern, Sitzungen zu finden, die zu ihrer Stimmung passen, indem du aus vordefinierten Tags auswählst",
+    ],
+    QwW8zd: ["Post erstellen"],
+    DxwBMf: ["Erstelle einen Ort, um andere einzuladen."],
+    "7aCPJG": ["Bereits hinzugefügt"],
+    F5YBmi: ["Alles auswählen"],
+    JWRsCC: ["Empfohlene Tags hinzufügen"],
+    "h/GwWL": ["Gruppensuche"],
+    "MKZ+Ky": [
+        "Hilf Spielern, Sitzungen zu finden, die zu ihrer Stimmung passen, indem du aus vordefinierten Tags auswählst",
+    ],
+    "5a7Pjb": ["Empfohlene Tags hinzufügen"],
+    "/mEbGf": ["Beschreibung"],
+    "SU/IAE": ["Füge mehr Details über deine Spielsitzung hinzu."],
+    UHF2Zn: [
+        "Verbinde deinen Account, damit Spieler die freien Plätze deines Squads sehen und eine Beitrittsanfrage stellen können!",
+    ],
+    EBSaL4: ["Account verknüpfen"],
+    vznMVa: [
+        [8, "$link", ["Verbinde deinen Account"], [[1, "onClick"]]],
+        ", damit Spieler die freien Plätze deines Squads sehen können!",
+    ],
+    "yoIAe/": ["Füge Tags hinzu, um die Stimmung zu vermitteln und anzugeben, wonach du suchst."],
+    tOsHsu: ["Post erstellen"],
+    G91SYQ: ["Du kannst einen Anruf starten, dem andere beitreten können."],
+    "0s2ICk": ["Füge diesem Kanal den Tag „", [1, "noMicTagName"], "“ hinzu, um diese Umschaltfunktion zu aktivieren."],
+    Xd2NFi: ["Sprachchat"],
+};

@@ -1,3 +1,17 @@
-e.exports = JSON.parse(
-    '{"6/dkHh":["\xcenchide transcrierea"],"XiLvuG":["Schimb\u0103 volumul"],"ZwPhbB":["Vitez\u0103 de redare"],"dRVF+Z":["Deruleaz\u0103 \xeenapoi 10 secunde"],"yV2FLL":["Sari \xeenainte 10 secunde"],"YWbiPw":["Nu po\u021Bi ignora sec\u021Biunile pe care nu le-ai urm\u0103rit \xeenc\u0103"],"0DbPcL":["Comut\u0103 subtitr\u0103rile"],"z9Cnzv":["Comut\u0103 pe ecranul complet"],"6EjGUv":["Comut\u0103 transcrierea"],"kX3+aM":["Se \xeencarc\u0103 clipul video..."],"c7IRfm":["Clipul este pus pe pauz\u0103 deoarece fereastra nu este focalizat\u0103"],"9St/zK":["Clipul este pus pe pauz\u0103 deoarece fereastra nu este vizibil\u0103"],"VZkd/n":["Transcriere"],"E527vj":["Imagine \xeen miniatur\u0103 pentru clipul video"],"5L6uDs":[[1,"percent"]," la sut\u0103"]}',
-);
+e.exports = {
+    "6/dkHh": ["Închide transcrierea"],
+    XiLvuG: ["Schimbă volumul"],
+    ZwPhbB: ["Viteză de redare"],
+    "dRVF+Z": ["Derulează înapoi 10 secunde"],
+    yV2FLL: ["Sari înainte 10 secunde"],
+    YWbiPw: ["Nu poți ignora secțiunile pe care nu le-ai urmărit încă"],
+    "0DbPcL": ["Comută subtitrările"],
+    z9Cnzv: ["Comută pe ecranul complet"],
+    "6EjGUv": ["Comută transcrierea"],
+    "kX3+aM": ["Se încarcă clipul video..."],
+    c7IRfm: ["Clipul este pus pe pauză deoarece fereastra nu este focalizată"],
+    "9St/zK": ["Clipul este pus pe pauză deoarece fereastra nu este vizibilă"],
+    "VZkd/n": ["Transcriere"],
+    E527vj: ["Imagine în miniatură pentru clipul video"],
+    "5L6uDs": [[1, "percent"], " la sută"],
+};

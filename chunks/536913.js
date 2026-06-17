@@ -1,3 +1,15 @@
-i.exports = JSON.parse(
-    '{"u72Prd":["F\u0103 streaming cu rezolu\u021Bie HD al\u0103turi de Nitro"],"uwMBDo":["Partajeaz\u0103 sunetul aplica\u021Biei"],"3wwZ/Q":["\xcencepe streaming-ul"],"OsS9Ll":["\xcencheie streaming-ul"],"j+eAMQ":["Audio stream"],"/XSr8v":["Mod streaming"],"ibH7vy":["Calitate \u0219i performan\u021B\u0103 echilibrate (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"2qmQ8N":["Implicit"],"q4gYBi":["Pentru video \u0219i gaming (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"nMcXo1":["Calitate ridicat\u0103"],"fN0UQY":["Optimizare pentru dispozitive mai lente (",[1,"resolution"],"p, ",[1,"fps"],"fps)"],"5eO4/m":["Performan\u021B\u0103"],"CrNjqp":["Set\u0103ri stream"]}',
-);
+i.exports = {
+    u72Prd: ["Fă streaming cu rezoluție HD alături de Nitro"],
+    uwMBDo: ["Partajează sunetul aplicației"],
+    "3wwZ/Q": ["Începe streaming-ul"],
+    OsS9Ll: ["Încheie streaming-ul"],
+    "j+eAMQ": ["Audio stream"],
+    "/XSr8v": ["Mod streaming"],
+    ibH7vy: ["Calitate și performanță echilibrate (", [1, "resolution"], "p, ", [1, "fps"], "fps)"],
+    "2qmQ8N": ["Implicit"],
+    q4gYBi: ["Pentru video și gaming (", [1, "resolution"], "p, ", [1, "fps"], "fps)"],
+    nMcXo1: ["Calitate ridicată"],
+    fN0UQY: ["Optimizare pentru dispozitive mai lente (", [1, "resolution"], "p, ", [1, "fps"], "fps)"],
+    "5eO4/m": ["Performanță"],
+    CrNjqp: ["Setări stream"],
+};

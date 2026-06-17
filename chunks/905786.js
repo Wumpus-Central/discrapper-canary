@@ -1,3 +1,20 @@
-a.exports = JSON.parse(
-    '{"o/An3l":[[1,"username"]," \u0111\xe3 y\xeau c\u1EA7u b\u1EA1n stream ",[1,"applicationName"]],"DKHhec":["Y\xeau c\u1EA7u Stream"],"8qq+H7":["Y\xeau c\u1EA7u Stream ",[1,"applicationName"]],"s7bMT0":[[1,"username"]," \u0111ang y\xeau c\u1EA7u b\u1EA1n stream ",[1,"applicationName"]],"7pndSl":["B\u1EA1n \u0111\xe3 y\xeau c\u1EA7u ng\u01B0\u1EDDi kh\xe1c stream ",[1,"applicationName"]],"P0wwmM":["\u0110ang stream r\u1ED3i"],"u4QmWl":["Y\xeau c\u1EA7u \u0111\xe3 h\u1EBFt h\u1EA1n"],"qRXats":["Kh\xf4ng \u1EDF trong k\xeanh tho\u1EA1i"],"43zohO":["Kh\xf4ng \u0111ang ch\u1EA1y tr\xf2 ch\u01A1i"],"fac+eE":["Kh\xf4ng c\xf3 quy\u1EC1n h\u1EA1n"],"mVFTUg":["Y\xeau c\u1EA7u \u0111\u01B0\u1EE3c g\u1EEDi qu\xe1 g\u1EA7n \u0111\xe2y"],"8HU1M2":["\u0110\xe3 g\u1EEDi y\xeau c\u1EA7u"],"5+172e":["Stream"],"nAyuPp":["Y\xeau C\u1EA7u Stream"],"d/qbC0":[[1,"username"]," \u0111\xe3 y\xeau c\u1EA7u b\u1EA1n stream"],"8B3U5O":["B\u1EA1n \u0111\xe3 y\xeau c\u1EA7u ng\u01B0\u1EDDi kh\xe1c stream"],"UGbmBp":["Stream"],"jTbTAF":[[8,"$b",[[1,"username"]]]," mu\u1ED1n xem b\u1EA1n ch\u01A1i ",[8,"$b",[[1,"game"]]],"."]}',
-);
+a.exports = {
+    "o/An3l": [[1, "username"], " đã yêu cầu bạn stream ", [1, "applicationName"]],
+    DKHhec: ["Yêu cầu Stream"],
+    "8qq+H7": ["Yêu cầu Stream ", [1, "applicationName"]],
+    s7bMT0: [[1, "username"], " đang yêu cầu bạn stream ", [1, "applicationName"]],
+    "7pndSl": ["Bạn đã yêu cầu người khác stream ", [1, "applicationName"]],
+    P0wwmM: ["Đang stream rồi"],
+    u4QmWl: ["Yêu cầu đã hết hạn"],
+    qRXats: ["Không ở trong kênh thoại"],
+    "43zohO": ["Không đang chạy trò chơi"],
+    "fac+eE": ["Không có quyền hạn"],
+    mVFTUg: ["Yêu cầu được gửi quá gần đây"],
+    "8HU1M2": ["Đã gửi yêu cầu"],
+    "5+172e": ["Stream"],
+    nAyuPp: ["Yêu Cầu Stream"],
+    "d/qbC0": [[1, "username"], " đã yêu cầu bạn stream"],
+    "8B3U5O": ["Bạn đã yêu cầu người khác stream"],
+    UGbmBp: ["Stream"],
+    jTbTAF: [[8, "$b", [[1, "username"]]], " muốn xem bạn chơi ", [8, "$b", [[1, "game"]]], "."],
+};

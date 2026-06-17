@@ -1,3 +1,21 @@
-i.exports = JSON.parse(
-    '{"QwW8zd":["Kurti \u012Fra\u0161\u0105"],"DxwBMf":["Sukurk erdv\u0119 ir pakviesk kitus."],"7aCPJG":["Jau prid\u0117ta"],"F5YBmi":["Pasirinkti visk\u0105"],"578719":["Pad\u0117k \u017Eaid\u0117jams rasti sesij\u0173, kurios atitinka j\u0173 nuotaik\u0105, parinkdamas (-a) i\u0161 anksto \u012Fvardyt\u0173 \u017Eymi\u0173"],"JWRsCC":["Prid\u0117k rekomenduojam\u0173 \u017Eymi\u0173"],"h/GwWL":["Grup\u0117s paie\u0161kos"],"MKZ+Ky":["Pad\u0117k \u017Eaid\u0117jams rasti sesij\u0173, kurios atitinka j\u0173 nuotaik\u0105, parinkdamas (-a) i\u0161 anksto \u012Fvardyt\u0173 \u017Eymi\u0173"],"5a7Pjb":["Prid\u0117k rekomenduojam\u0173 \u017Eymi\u0173"],"/mEbGf":["Apra\u0161as"],"SU/IAE":["\u0160iek tiek papasakok apie savo \u017Eaidimo sesij\u0105"],"UHF2Zn":["Susiek savo paskyr\u0105, kad \u017Eaid\u0117jai matyt\u0173 tu\u0161\u010Dias komandos vietas ir gal\u0117t\u0173 papra\u0161yti prisijungti."],"EBSaL4":["Susieti paskyr\u0105"],"vznMVa":[[8,"$link",["Susiek savo paskyr\u0105"],[[1,"onClick"]]],", kad \u017Eaid\u0117jai matyt\u0173 tu\u0161\u010Dias komandos vietas!"],"yoIAe/":["Prid\u0117k \u017Eymi\u0173, susijusi\u0173 su aplinka ir su tuo, ko tikiesi"],"tOsHsu":["Kurti \u012Fra\u0161\u0105"],"G91SYQ":["Gali prad\u0117ti skambut\u012F, prie kurio gali prisijungti kiti"],"0s2ICk":["Prid\u0117k \u017Eym\u0119 \u201E",[1,"noMicTagName"],"\u201C prie \u0161io kanalo, kad \u012Fjungtum \u0161i\u0105 funkcij\u0105"],"Xd2NFi":["Pokalbis balsu"]}',
-);
+i.exports = {
+    578719: ["Padėk žaidėjams rasti sesijų, kurios atitinka jų nuotaiką, parinkdamas (-a) iš anksto įvardytų žymių"],
+    QwW8zd: ["Kurti įrašą"],
+    DxwBMf: ["Sukurk erdvę ir pakviesk kitus."],
+    "7aCPJG": ["Jau pridėta"],
+    F5YBmi: ["Pasirinkti viską"],
+    JWRsCC: ["Pridėk rekomenduojamų žymių"],
+    "h/GwWL": ["Grupės paieškos"],
+    "MKZ+Ky": ["Padėk žaidėjams rasti sesijų, kurios atitinka jų nuotaiką, parinkdamas (-a) iš anksto įvardytų žymių"],
+    "5a7Pjb": ["Pridėk rekomenduojamų žymių"],
+    "/mEbGf": ["Aprašas"],
+    "SU/IAE": ["Šiek tiek papasakok apie savo žaidimo sesiją"],
+    UHF2Zn: ["Susiek savo paskyrą, kad žaidėjai matytų tuščias komandos vietas ir galėtų paprašyti prisijungti."],
+    EBSaL4: ["Susieti paskyrą"],
+    vznMVa: [[8, "$link", ["Susiek savo paskyrą"], [[1, "onClick"]]], ", kad žaidėjai matytų tuščias komandos vietas!"],
+    "yoIAe/": ["Pridėk žymių, susijusių su aplinka ir su tuo, ko tikiesi"],
+    tOsHsu: ["Kurti įrašą"],
+    G91SYQ: ["Gali pradėti skambutį, prie kurio gali prisijungti kiti"],
+    "0s2ICk": ["Pridėk žymę „", [1, "noMicTagName"], "“ prie šio kanalo, kad įjungtum šią funkciją"],
+    Xd2NFi: ["Pokalbis balsu"],
+};

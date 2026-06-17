@@ -1,3 +1,50 @@
-i.exports = JSON.parse(
-    '{"5Mi5TE":["Pakeisti, kaip priskiriame tau am\u017Ei\u0173?"],"lG69e1":[[8,"$link",["Su\u017Einoti daugiau"],[[1,"handleOnHelpUrlHook"]]]," apie grupes"],"V822Mp":["Pa\u0161alinti am\u017Eiaus grup\u0119"],"FbTAmI":["Taip tavo am\u017Eiaus grup\u0117 pasikeis i\u0161 suaugusiojo \u012F nepatvirtint\u0105. Nebegal\u0117si pasiekti pagal am\u017Ei\u0173 ribojam\u0173 dalyk\u0173. Jei nor\u0117si pasiekti suaugusiesiems skirt\u0105 turin\u012F, tur\u0117si patvirtinti savo am\u017Eiaus grup\u0119 kitu b\u016Bdu."],"g7/14g":["Pa\u0161alinti priskirt\u0105 am\u017Eiaus grup\u0119?"],"Gn0SAj":["Pakeisti tavo am\u017Eiaus grup\u0119 \u012F nepatvirtint\u0105"],"bD//cU":["Pa\u0161alinti priskirt\u0105 am\u017Eiaus grup\u0119"],"rJiO86":["Pasirink, jei nori patvirtinti savo am\u017Eiaus grup\u0119 kitu b\u016Bdu"],"SH6Tcv":["Patvirtinti am\u017Eiaus grup\u0119"],"1DN29p":["Naudodami technologijas, nustatome naudotoj\u0173 am\u017Eiaus grupes pagal j\u0173 elgsen\u0105 ir kitus signalus, susijusius su Discord naudotoj\u0173 paskyromis. ",[8,"$link",["Su\u017Einoti daugiau"],[[1,"handleOnHelpUrlHook"]]]],"PY4MA0":["Discord tave priskyr\u0117 suaugusi\u0173j\u0173 am\u017Eiaus grupei"],"FTawSP":["Priskyr\u0117 Discord"],"WM5adV":["Priskyr\u0117 Discord. ",[8,"$link",["Su\u017Einoti daugiau"],[[1,"handleOnHelpUrlHook"]]]],"b7Oqdu":["Pasirink kit\u0105 b\u016Bd\u0105"],"ar3a3q":["Tavo pateikiama informacija naudojama tik tavo am\u017Eiaus grupei nustatyti, v\u0117liau ji i\u0161trinama."],"0vTx7j":["\u012Ekelti i\u0161 naujo"],"yBHwMy":["\u0160io veiksmo nepalaiko VR. Atlik j\u012F kitame \u012Frenginyje, ir automati\u0161kai atnaujinsime tavo patirt\u012F \u010Dia."],"gUqXQN":["Patvirtink savo am\u017Ei\u0173 kitame \u012Frenginyje"],"XYYm+1":["Pasirink kit\u0105 b\u016Bd\u0105 patvirtinti tavo am\u017Ei\u0173"],"rVLCwM":["Pasirink kit\u0105 b\u016Bd\u0105"],"RpMIT0":["Pasirink b\u016Bd\u0105 patvirtinti, kad esi suaug\u0119s (-usi). Po patvirtinimo gal\u0117si pasiekti pagal am\u017Ei\u0173 ribojam\u0105 turin\u012F ir nustatymus. ",[8,"$link",["Su\u017Einoti daugiau"],[[1,"handleOnHelpUrlHook"]]],"."],"h7qzoa":["Atkurk prieig\u0105 prie Discord patvirtindamas (-a) savo am\u017Ei\u0173 vienu i\u0161 toliau nurodyt\u0173 b\u016Bd\u0173."],"eJmat5":["Leisk \u012Fvertinti tavo am\u017Ei\u0173 naudojant vaizdo \u012Fra\u0161o asmenuk\u0119. Vaizdo \u012Fra\u0161as liks tavo \u012Frenginyje, biometriniai duomenys nebendrinami."],"2yLvkS":["Vaizdo \u012Fra\u0161o asmenuk\u0117 per k-ID"],"+pwfOA":["Ka\u017Ekas negerai su Google Wallet patvirtinimu. Pabandyk kit\u0105 b\u016Bd\u0105."],"dah4bF":["Naudok ID pas\u0105, pagr\u012Fst\u0105 tavo paso informacija. Tavo ID informacija lieka Google Wallet."],"Y9sLpR":["Google Wallet ID pasas"],"fEUKEv":["Bandyti kit\u0105 b\u016Bd\u0105"],"Pf5xUq":["Tavo dokumentas i\u0161duotas \u0161alyje, kuri dar nepalaikoma. Pabandyk kit\u0105 patvirtinimo b\u016Bd\u0105."],"MlFuBI":["Patvirtinamas tavo am\u017Eius\u2026"],"ZdmRwW":["Nuskaityk savo ID ir pasidaryk asmenuk\u0119, kad b\u016Bt\u0173 patvirtinta, jog tai tu. Viskas i\u0161trinama i\u0161kart po patvirtinimo ir nesusiejama su tavo paskyra."],"dwkwo0":["ID nuskaitymas per k-ID"],"htWh1G":[[8,"$link",["Su\u017Einok daugiau"],[[1,"handleOnHelpUrlHook"]]]," m\u016Bs\u0173 pagalbos centre"],"cR6336":["N\u0117ra pasiekiamas joks am\u017Eiaus patvirtinimo b\u016Bdas. Tai gali b\u016Bti klaida."],"hDvmYP":["\u012Ekelti i\u0161 naujo"]}',
-);
+i.exports = {
+    "5Mi5TE": ["Pakeisti, kaip priskiriame tau amžių?"],
+    lG69e1: [[8, "$link", ["Sužinoti daugiau"], [[1, "handleOnHelpUrlHook"]]], " apie grupes"],
+    V822Mp: ["Pašalinti amžiaus grupę"],
+    FbTAmI: [
+        "Taip tavo amžiaus grupė pasikeis iš suaugusiojo į nepatvirtintą. Nebegalėsi pasiekti pagal amžių ribojamų dalykų. Jei norėsi pasiekti suaugusiesiems skirtą turinį, turėsi patvirtinti savo amžiaus grupę kitu būdu.",
+    ],
+    "g7/14g": ["Pašalinti priskirtą amžiaus grupę?"],
+    Gn0SAj: ["Pakeisti tavo amžiaus grupę į nepatvirtintą"],
+    "bD//cU": ["Pašalinti priskirtą amžiaus grupę"],
+    rJiO86: ["Pasirink, jei nori patvirtinti savo amžiaus grupę kitu būdu"],
+    SH6Tcv: ["Patvirtinti amžiaus grupę"],
+    "1DN29p": [
+        "Naudodami technologijas, nustatome naudotojų amžiaus grupes pagal jų elgseną ir kitus signalus, susijusius su Discord naudotojų paskyromis. ",
+        [8, "$link", ["Sužinoti daugiau"], [[1, "handleOnHelpUrlHook"]]],
+    ],
+    PY4MA0: ["Discord tave priskyrė suaugusiųjų amžiaus grupei"],
+    FTawSP: ["Priskyrė Discord"],
+    WM5adV: ["Priskyrė Discord. ", [8, "$link", ["Sužinoti daugiau"], [[1, "handleOnHelpUrlHook"]]]],
+    b7Oqdu: ["Pasirink kitą būdą"],
+    ar3a3q: ["Tavo pateikiama informacija naudojama tik tavo amžiaus grupei nustatyti, vėliau ji ištrinama."],
+    "0vTx7j": ["Įkelti iš naujo"],
+    yBHwMy: ["Šio veiksmo nepalaiko VR. Atlik jį kitame įrenginyje, ir automatiškai atnaujinsime tavo patirtį čia."],
+    gUqXQN: ["Patvirtink savo amžių kitame įrenginyje"],
+    "XYYm+1": ["Pasirink kitą būdą patvirtinti tavo amžių"],
+    rVLCwM: ["Pasirink kitą būdą"],
+    RpMIT0: [
+        "Pasirink būdą patvirtinti, kad esi suaugęs (-usi). Po patvirtinimo galėsi pasiekti pagal amžių ribojamą turinį ir nustatymus. ",
+        [8, "$link", ["Sužinoti daugiau"], [[1, "handleOnHelpUrlHook"]]],
+        ".",
+    ],
+    h7qzoa: ["Atkurk prieigą prie Discord patvirtindamas (-a) savo amžių vienu iš toliau nurodytų būdų."],
+    eJmat5: [
+        "Leisk įvertinti tavo amžių naudojant vaizdo įrašo asmenukę. Vaizdo įrašas liks tavo įrenginyje, biometriniai duomenys nebendrinami.",
+    ],
+    "2yLvkS": ["Vaizdo įrašo asmenukė per k-ID"],
+    "+pwfOA": ["Kažkas negerai su Google Wallet patvirtinimu. Pabandyk kitą būdą."],
+    dah4bF: ["Naudok ID pasą, pagrįstą tavo paso informacija. Tavo ID informacija lieka Google Wallet."],
+    Y9sLpR: ["Google Wallet ID pasas"],
+    fEUKEv: ["Bandyti kitą būdą"],
+    Pf5xUq: ["Tavo dokumentas išduotas šalyje, kuri dar nepalaikoma. Pabandyk kitą patvirtinimo būdą."],
+    MlFuBI: ["Patvirtinamas tavo amžius…"],
+    ZdmRwW: [
+        "Nuskaityk savo ID ir pasidaryk asmenukę, kad būtų patvirtinta, jog tai tu. Viskas ištrinama iškart po patvirtinimo ir nesusiejama su tavo paskyra.",
+    ],
+    dwkwo0: ["ID nuskaitymas per k-ID"],
+    htWh1G: [[8, "$link", ["Sužinok daugiau"], [[1, "handleOnHelpUrlHook"]]], " mūsų pagalbos centre"],
+    cR6336: ["Nėra pasiekiamas joks amžiaus patvirtinimo būdas. Tai gali būti klaida."],
+    hDvmYP: ["Įkelti iš naujo"],
+};

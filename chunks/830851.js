@@ -1,3 +1,71 @@
-i.exports = JSON.parse(
-    '{"5h8p5P":["Nu se accept\u0103 ",[6,"count",{"one":[[1,"platforms"]],"other":[[1,"platforms"]]},0,"cardinal"],"."],"vyAtfo":["Conecteaz\u0103-\u021Bi conturile ",[1,"applicationName"]," cu Discord pentru a accepta acest cadou. ",[1,"platforms_info"]],"yqAKVO":["Contul este conectat la ",[1,"applicationName"],". Revendic\u0103-\u021Bi cadoul mai jos. ",[1,"platforms_info"]],"Ufm9XX":["D\xe2nd clic pe \u201E",[1,"buyButtonLabel"],"\u201D, e\u0219ti de acord cu ",[8,"$link",["Condi\u021Biile de prestare a serviciilor pl\u0103tite"],[[1,"paidServiceTermURL"]]],". ",[8,"$b",["C\xe2nd cumperi un articol din magazinul de jocuri ",[1,"applicationName"],", ob\u021Bii o licen\u021B\u0103 limitat\u0103 pentru utilizarea acestui articol \xeen jocul indicat."]]," Achizi\u021Bia nu este rambursabil\u0103. Articolul va fi livrat de dezvoltator direct \xeen joc."],"Q0dHYO":["Trebuie s\u0103-\u021Bi asociezi contul pentru a revendica articolul. ",[1,"platforms_info"]],"3ah/a2":[[8,"$b",["C\xe2nd cumperi un articol din magazinul de jocuri ",[1,"applicationName"],", ob\u021Bii o licen\u021B\u0103 limitat\u0103 pentru utilizarea acestui articol \xeen jocul indicat."]]," Achizi\u021Bia nu este rambursabil\u0103. Articolul va fi livrat de dezvoltator direct \xeen joc. ",[1,"platforms_info"]],"fO4b1C":["Conecteaz\u0103-\u021Bi contul ",[1,"applicationName"]," cu Discord pentru a accepta aceast\u0103 achizi\u021Bie. ",[1,"platforms_info"]],"Sy7D+/":["Acest magazin nu are \xeenc\u0103 niciun articol. Revino mai t\xe2rziu!"],"OvBwPV":["Magazinul nu este disponibil"],"BMMo2K":["Pentru a accepta cadoul, conecteaz\u0103-\u021Bi conturile ",[1,"applicationName"]," \u0219i Discord din set\u0103rile Discord de pe desktop."],"eNNnIG":["Pentru a accepta achizi\u021Bia, conecteaz\u0103-\u021Bi conturile ",[1,"applicationName"]," \u0219i Discord din set\u0103rile Discord de pe desktop."],"gndWN7":["Pentru a cump\u0103ra, deschide Discord pe desktop."],"bRPsNX":["Revendic\u0103 achizi\u021Bia"],"BKf0MM":["Vezi detalii"]}',
-);
+i.exports = {
+    "5h8p5P": [
+        "Nu se acceptă ",
+        [6, "count", { one: [[1, "platforms"]], other: [[1, "platforms"]] }, 0, "cardinal"],
+        ".",
+    ],
+    vyAtfo: [
+        "Conectează-ți conturile ",
+        [1, "applicationName"],
+        " cu Discord pentru a accepta acest cadou. ",
+        [1, "platforms_info"],
+    ],
+    yqAKVO: [
+        "Contul este conectat la ",
+        [1, "applicationName"],
+        ". Revendică-ți cadoul mai jos. ",
+        [1, "platforms_info"],
+    ],
+    Ufm9XX: [
+        "Dând clic pe „",
+        [1, "buyButtonLabel"],
+        "”, ești de acord cu ",
+        [8, "$link", ["Condițiile de prestare a serviciilor plătite"], [[1, "paidServiceTermURL"]]],
+        ". ",
+        [
+            8,
+            "$b",
+            [
+                "Când cumperi un articol din magazinul de jocuri ",
+                [1, "applicationName"],
+                ", obții o licență limitată pentru utilizarea acestui articol în jocul indicat.",
+            ],
+        ],
+        " Achiziția nu este rambursabilă. Articolul va fi livrat de dezvoltator direct în joc.",
+    ],
+    Q0dHYO: ["Trebuie să-ți asociezi contul pentru a revendica articolul. ", [1, "platforms_info"]],
+    "3ah/a2": [
+        [
+            8,
+            "$b",
+            [
+                "Când cumperi un articol din magazinul de jocuri ",
+                [1, "applicationName"],
+                ", obții o licență limitată pentru utilizarea acestui articol în jocul indicat.",
+            ],
+        ],
+        " Achiziția nu este rambursabilă. Articolul va fi livrat de dezvoltator direct în joc. ",
+        [1, "platforms_info"],
+    ],
+    fO4b1C: [
+        "Conectează-ți contul ",
+        [1, "applicationName"],
+        " cu Discord pentru a accepta această achiziție. ",
+        [1, "platforms_info"],
+    ],
+    "Sy7D+/": ["Acest magazin nu are încă niciun articol. Revino mai târziu!"],
+    OvBwPV: ["Magazinul nu este disponibil"],
+    BMMo2K: [
+        "Pentru a accepta cadoul, conectează-ți conturile ",
+        [1, "applicationName"],
+        " și Discord din setările Discord de pe desktop.",
+    ],
+    eNNnIG: [
+        "Pentru a accepta achiziția, conectează-ți conturile ",
+        [1, "applicationName"],
+        " și Discord din setările Discord de pe desktop.",
+    ],
+    gndWN7: ["Pentru a cumpăra, deschide Discord pe desktop."],
+    bRPsNX: ["Revendică achiziția"],
+    BKf0MM: ["Vezi detalii"],
+};

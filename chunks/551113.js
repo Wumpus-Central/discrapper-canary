@@ -1,3 +1,27 @@
-e.exports = JSON.parse(
-    '{"0LL6FX":["T\xedm se aktualizuje vzhled serveru pro v\u0161echny u\u017Eivatele. Motiv se p\u0159izp\u016Fsob\xed jejich sv\u011Btl\xe9mu nebo tmav\xe9mu re\u017Eimu."],"H8idcP":["Pou\u017E\xedt motiv serveru?"],"odtr7f":["Vyber si p\u0159ednastaven\xfd motiv nebo si vytvo\u0159 sv\u016Fj vlastn\xed. Ka\u017Ed\xfd \u010Dlen uvid\xed tento motiv, kdy\u017E otev\u0159e server. Motiv se p\u0159izp\u016Fsob\xed sv\u011Btl\xe9mu nebo tmav\xe9mu re\u017Eimu dan\xe9ho \u010Dlena. ",[8,"$link",["Zjistit v\xedce"],[[1,"articleUrl"]]]],"XhiIAu":["T\xedm zm\u011Bn\xed\u0161 vzhled sv\xe9ho serveru pro v\u0161echny u\u017Eivatele."],"aZpFFn":["Povolit motiv serveru"],"jSrqR2":["P\u0159ednastaven\xe9"],"XyrxOp":["Modrofialov\xe1"],"tXRcxU":["D\u017E\xednov\xe1"],"S8/OZA":["Ohe\u0148"],"nCbxEN":["Zlat\xfd prach"],"6ZeQDd":["Jadeit"],"TiGQro":["Mech"],"x3h/OV":["Obsidi\xe1n"],"qn90j5":["Oce\xe1n"],"tTJY6S":["\u0160vestkov\xe1"],"+k8Q/o":["Soumrak"],"HkvkHP":["Ka\u017Ed\xe9mu \u010Dlenovi se zobraz\xed jeho preferovan\xfd sv\u011Btl\xfd nebo tmav\xfd re\u017Eim."],"zry4l5":["N\xe1hled motivu"],"Ck5zxP":["Vyber si motiv"],"/6NbRv":["Motiv serveru"]}',
-);
+e.exports = {
+    "0LL6FX": [
+        "Tím se aktualizuje vzhled serveru pro všechny uživatele. Motiv se přizpůsobí jejich světlému nebo tmavému režimu.",
+    ],
+    H8idcP: ["Použít motiv serveru?"],
+    odtr7f: [
+        "Vyber si přednastavený motiv nebo si vytvoř svůj vlastní. Každý člen uvidí tento motiv, když otevře server. Motiv se přizpůsobí světlému nebo tmavému režimu daného člena. ",
+        [8, "$link", ["Zjistit více"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["Tím změníš vzhled svého serveru pro všechny uživatele."],
+    aZpFFn: ["Povolit motiv serveru"],
+    jSrqR2: ["Přednastavené"],
+    XyrxOp: ["Modrofialová"],
+    tXRcxU: ["Džínová"],
+    "S8/OZA": ["Oheň"],
+    nCbxEN: ["Zlatý prach"],
+    "6ZeQDd": ["Jadeit"],
+    TiGQro: ["Mech"],
+    "x3h/OV": ["Obsidián"],
+    qn90j5: ["Oceán"],
+    tTJY6S: ["Švestková"],
+    "+k8Q/o": ["Soumrak"],
+    HkvkHP: ["Každému členovi se zobrazí jeho preferovaný světlý nebo tmavý režim."],
+    zry4l5: ["Náhled motivu"],
+    Ck5zxP: ["Vyber si motiv"],
+    "/6NbRv": ["Motiv serveru"],
+};

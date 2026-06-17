@@ -1,3 +1,25 @@
-r.exports = JSON.parse(
-    '{"0LL6FX":["\u6B64\u4E3E\u5C06\u4E3A\u6240\u6709\u6210\u5458\u66F4\u65B0\u670D\u52A1\u5668\u5916\u89C2\uFF0C\u4E3B\u9898\u53EF\u81EA\u9002\u5E94\u5404\u81EA\u7684\u6D45\u8272\u6216\u6DF1\u8272\u6A21\u5F0F\u3002"],"H8idcP":["\u8981\u5E94\u7528\u670D\u52A1\u5668\u4E3B\u9898\u5417\uFF1F"],"odtr7f":["\u9009\u62E9\u9884\u8BBE\u4E3B\u9898\u6216\u81EA\u5B9A\u4E49\u521B\u4F5C\u3002\u6240\u6709\u6210\u5458\u8FDB\u5165\u670D\u52A1\u5668\u90FD\u4F1A\u770B\u5230\u8BE5\u4E3B\u9898\uFF0C\u4E14\u4F1A\u81EA\u52A8\u9002\u914D\u5404\u81EA\u7684\u6D45\u8272\u6216\u6DF1\u8272\u6A21\u5F0F\u3002",[8,"$link",["\u4E86\u89E3\u66F4\u591A"],[[1,"articleUrl"]]]],"XhiIAu":["\u6B64\u9879\u4F1A\u66F4\u6539\u6240\u6709\u6210\u5458\u770B\u5230\u7684\u670D\u52A1\u5668\u5916\u89C2\u3002"],"aZpFFn":["\u542F\u7528\u670D\u52A1\u5668\u4E3B\u9898"],"jSrqR2":["\u9884\u8BBE\u989C\u8272"],"XyrxOp":["\u84DD\u7D2B"],"tXRcxU":["\u4E39\u5B81"],"S8/OZA":["\u706B\u7130"],"nCbxEN":["\u91D1\u5C18"],"6ZeQDd":["\u7FE1\u7FE0"],"TiGQro":["\u82D4\u85D3"],"x3h/OV":["\u9ED1\u66DC\u77F3"],"qn90j5":["\u6D77\u6D0B"],"tTJY6S":["\u6DF1\u7D2B"],"+k8Q/o":["\u66AE\u5149"],"HkvkHP":["\u6BCF\u4F4D\u6210\u5458\u7684\u6D45\u8272/\u6DF1\u8272\u6A21\u5F0F\u504F\u597D\u5C06\u72EC\u7ACB\u751F\u6548\u5C55\u793A\u3002"],"zry4l5":["\u9884\u89C8\u4E3B\u9898"],"Ck5zxP":["\u9009\u62E9\u60A8\u7684\u4E3B\u9898"],"/6NbRv":["\u670D\u52A1\u5668\u4E3B\u9898"]}',
-);
+r.exports = {
+    "0LL6FX": ["此举将为所有成员更新服务器外观，主题可自适应各自的浅色或深色模式。"],
+    H8idcP: ["要应用服务器主题吗？"],
+    odtr7f: [
+        "选择预设主题或自定义创作。所有成员进入服务器都会看到该主题，且会自动适配各自的浅色或深色模式。",
+        [8, "$link", ["了解更多"], [[1, "articleUrl"]]],
+    ],
+    XhiIAu: ["此项会更改所有成员看到的服务器外观。"],
+    aZpFFn: ["启用服务器主题"],
+    jSrqR2: ["预设颜色"],
+    XyrxOp: ["蓝紫"],
+    tXRcxU: ["丹宁"],
+    "S8/OZA": ["火焰"],
+    nCbxEN: ["金尘"],
+    "6ZeQDd": ["翡翠"],
+    TiGQro: ["苔藓"],
+    "x3h/OV": ["黑曜石"],
+    qn90j5: ["海洋"],
+    tTJY6S: ["深紫"],
+    "+k8Q/o": ["暮光"],
+    HkvkHP: ["每位成员的浅色/深色模式偏好将独立生效展示。"],
+    zry4l5: ["预览主题"],
+    Ck5zxP: ["选择您的主题"],
+    "/6NbRv": ["服务器主题"],
+};

@@ -1,3 +1,21 @@
-e.exports = JSON.parse(
-    '{"QwW8zd":["Lav opslag"],"DxwBMf":["Skab et rum til at invitere andre."],"7aCPJG":["Allerede tilf\xf8jet"],"F5YBmi":["V\xe6lg alle"],"578719":["Hj\xe6lp spillere med at finde sessioner, der matcher deres hum\xf8r ved at v\xe6lge fra foruddefinerede tags"],"JWRsCC":["Tilf\xf8j anbefalede tags"],"h/GwWL":["LFG"],"MKZ+Ky":["Hj\xe6lp spillere med at finde sessioner, der matcher deres hum\xf8r ved at v\xe6lge fra foruddefinerede tags"],"5a7Pjb":["Tilf\xf8j anbefalede tags"],"/mEbGf":["Beskrivelse"],"SU/IAE":["Tilf\xf8j flere oplysninger om din spilsession"],"UHF2Zn":["Tilknyt din konto, s\xe5 spillere kan se din trups \xe5bne pladser og anmode om at deltage!"],"EBSaL4":["Tilknyt konto"],"vznMVa":[[8,"$link",["Tilknyt din konto"],[[1,"onClick"]]],", s\xe5 spillere kan se dit holds \xe5bne pladser!"],"yoIAe/":["Tilf\xf8j tags til vibes og hvad du leder efter"],"tOsHsu":["Lav opslag"],"G91SYQ":["Du kan starte et opkald, som andre kan deltage i"],"0s2ICk":["Tilf\xf8j et \\"",[1,"noMicTagName"],"\\" tag til denne kanal for at aktivere denne til/fra-knap"],"Xd2NFi":["Talechat"]}',
-);
+e.exports = {
+    578719: ["Hjælp spillere med at finde sessioner, der matcher deres humør ved at vælge fra foruddefinerede tags"],
+    QwW8zd: ["Lav opslag"],
+    DxwBMf: ["Skab et rum til at invitere andre."],
+    "7aCPJG": ["Allerede tilføjet"],
+    F5YBmi: ["Vælg alle"],
+    JWRsCC: ["Tilføj anbefalede tags"],
+    "h/GwWL": ["LFG"],
+    "MKZ+Ky": ["Hjælp spillere med at finde sessioner, der matcher deres humør ved at vælge fra foruddefinerede tags"],
+    "5a7Pjb": ["Tilføj anbefalede tags"],
+    "/mEbGf": ["Beskrivelse"],
+    "SU/IAE": ["Tilføj flere oplysninger om din spilsession"],
+    UHF2Zn: ["Tilknyt din konto, så spillere kan se din trups åbne pladser og anmode om at deltage!"],
+    EBSaL4: ["Tilknyt konto"],
+    vznMVa: [[8, "$link", ["Tilknyt din konto"], [[1, "onClick"]]], ", så spillere kan se dit holds åbne pladser!"],
+    "yoIAe/": ["Tilføj tags til vibes og hvad du leder efter"],
+    tOsHsu: ["Lav opslag"],
+    G91SYQ: ["Du kan starte et opkald, som andre kan deltage i"],
+    "0s2ICk": ['Tilføj et "', [1, "noMicTagName"], '" tag til denne kanal for at aktivere denne til/fra-knap'],
+    Xd2NFi: ["Talechat"],
+};

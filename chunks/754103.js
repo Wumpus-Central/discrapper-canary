@@ -1,3 +1,31 @@
-a.exports = JSON.parse(
-    '{"QwW8zd":["Bejegyz\xe9s l\xe9trehoz\xe1sa"],"DxwBMf":["L\xe9trehozhatsz egy helyet, ahov\xe1 megh\xedvhatsz m\xe1sokat."],"7aCPJG":["M\xe1r hozz\xe1adva"],"F5YBmi":["\xd6sszes kiv\xe1laszt\xe1sa"],"578719":["A j\xe1t\xe9kosok k\xf6nnyebben kiv\xe1laszthatj\xe1k a hangulatuknak megfelel\u0151 j\xe1t\xe9kmeneteket, mivel el\u0151re meghat\xe1rozott c\xedmk\xe9k k\xf6z\xfcl v\xe1laszthatnak"],"JWRsCC":["Aj\xe1nlott c\xedmk\xe9k hozz\xe1ad\xe1sa"],"h/GwWL":["LFG"],"MKZ+Ky":["A j\xe1t\xe9kosok k\xf6nnyebben kiv\xe1laszthatj\xe1k a hangulatuknak megfelel\u0151 j\xe1t\xe9kmeneteket, mivel el\u0151re meghat\xe1rozott c\xedmk\xe9k k\xf6z\xfcl v\xe1laszthatnak"],"5a7Pjb":["Aj\xe1nlott c\xedmk\xe9k hozz\xe1ad\xe1sa"],"/mEbGf":["Le\xedr\xe1s"],"SU/IAE":["Tov\xe1bbi r\xe9szletek megad\xe1sa a j\xe1t\xe9kmenetr\u0151l"],"UHF2Zn":["Ha hozz\xe1kapcsolod a fi\xf3kokat, a j\xe1t\xe9kosok l\xe1tni fogj\xe1k a squadod szabad helyeit, \xe9s csatlakoz\xe1si k\xe9r\xe9st k\xfcldhetnek!"],"EBSaL4":["Fi\xf3k csatlakoztat\xe1sa"],"vznMVa":["Ha ",[8,"$link",["hozz\xe1kapcsolod a fi\xf3kokat"],[[1,"onClick"]]],", a j\xe1t\xe9kosok l\xe1tni fogj\xe1k a squadod szabad helyeit!"],"yoIAe/":["C\xedmk\xe9k hozz\xe1ad\xe1sa a hangulat fokoz\xe1s\xe1hoz \xe9s az \xe1ltalad keresett dolgok jelz\xe9s\xe9hez"],"tOsHsu":["Bejegyz\xe9s l\xe9trehoz\xe1sa"],"G91SYQ":["H\xedv\xe1st ind\xedthatsz, amelyhez m\xe1sok csatlakozhatnak"],"0s2ICk":["Adj \u201E",[1,"noMicTagName"],"\u201D c\xedmk\xe9t ehhez a csatorn\xe1hoz a v\xe1lt\xf3gomb enged\xe9lyez\xe9s\xe9hez"],"Xd2NFi":["Hangcseveg\xe9s"]}',
-);
+a.exports = {
+    578719: [
+        "A játékosok könnyebben kiválaszthatják a hangulatuknak megfelelő játékmeneteket, mivel előre meghatározott címkék közül választhatnak",
+    ],
+    QwW8zd: ["Bejegyzés létrehozása"],
+    DxwBMf: ["Létrehozhatsz egy helyet, ahová meghívhatsz másokat."],
+    "7aCPJG": ["Már hozzáadva"],
+    F5YBmi: ["Összes kiválasztása"],
+    JWRsCC: ["Ajánlott címkék hozzáadása"],
+    "h/GwWL": ["LFG"],
+    "MKZ+Ky": [
+        "A játékosok könnyebben kiválaszthatják a hangulatuknak megfelelő játékmeneteket, mivel előre meghatározott címkék közül választhatnak",
+    ],
+    "5a7Pjb": ["Ajánlott címkék hozzáadása"],
+    "/mEbGf": ["Leírás"],
+    "SU/IAE": ["További részletek megadása a játékmenetről"],
+    UHF2Zn: [
+        "Ha hozzákapcsolod a fiókokat, a játékosok látni fogják a squadod szabad helyeit, és csatlakozási kérést küldhetnek!",
+    ],
+    EBSaL4: ["Fiók csatlakoztatása"],
+    vznMVa: [
+        "Ha ",
+        [8, "$link", ["hozzákapcsolod a fiókokat"], [[1, "onClick"]]],
+        ", a játékosok látni fogják a squadod szabad helyeit!",
+    ],
+    "yoIAe/": ["Címkék hozzáadása a hangulat fokozásához és az általad keresett dolgok jelzéséhez"],
+    tOsHsu: ["Bejegyzés létrehozása"],
+    G91SYQ: ["Hívást indíthatsz, amelyhez mások csatlakozhatnak"],
+    "0s2ICk": ["Adj „", [1, "noMicTagName"], "” címkét ehhez a csatornához a váltógomb engedélyezéséhez"],
+    Xd2NFi: ["Hangcsevegés"],
+};

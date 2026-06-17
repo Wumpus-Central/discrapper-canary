@@ -1,3 +1,24 @@
-s.exports = JSON.parse(
-    '{"QwW8zd":["\uD3EC\uC2A4\uD2B8 \uB9CC\uB4E4\uAE30"],"DxwBMf":["\uB2E4\uB978 \uC0AC\uB78C\uB4E4\uC744 \uCD08\uB300\uD560 \uACF5\uAC04\uC744 \uB9CC\uB4E4\uC5B4 \uBCF4\uC138\uC694."],"7aCPJG":["\uC774\uBBF8 \uCD94\uAC00\uB428"],"F5YBmi":["\uBAA8\uB450 \uC120\uD0DD"],"578719":["\uC0AC\uC804 \uC815\uC758\uB41C \uD0DC\uADF8\uC5D0\uC11C \uC120\uD0DD\uD558\uC5EC \uD50C\uB808\uC774\uC5B4\uAC00 \uC790\uC2E0\uC758 \uBD84\uC704\uAE30\uC5D0 \uB9DE\uB294 \uC138\uC158\uC744 \uCC3E\uC744 \uC218 \uC788\uB3C4\uB85D \uB3C4\uC640\uC8FC\uC138\uC694"],"JWRsCC":["\uCD94\uCC9C \uD0DC\uADF8 \uCD94\uAC00"],"h/GwWL":["\uADF8\uB8F9 \uCC3E\uAE30"],"MKZ+Ky":["\uC0AC\uC804 \uC815\uC758\uB41C \uD0DC\uADF8\uC5D0\uC11C \uC120\uD0DD\uD558\uC5EC \uD50C\uB808\uC774\uC5B4\uAC00 \uC790\uC2E0\uC758 \uBD84\uC704\uAE30\uC5D0 \uB9DE\uB294 \uC138\uC158\uC744 \uCC3E\uC744 \uC218 \uC788\uB3C4\uB85D \uB3C4\uC640\uC8FC\uC138\uC694"],"5a7Pjb":["\uCD94\uCC9C \uD0DC\uADF8 \uCD94\uAC00"],"/mEbGf":["\uC124\uBA85"],"SU/IAE":["\uAC8C\uC784 \uC138\uC158\uC5D0 \uB300\uD55C \uC790\uC138\uD55C \uC815\uBCF4\uB97C \uCD94\uAC00\uD558\uC138\uC694"],"UHF2Zn":["\uACC4\uC815\uC744 \uC5F0\uACB0\uD558\uC5EC \uD50C\uB808\uC774\uC5B4\uAC00 \uC2A4\uCFFC\uB4DC\uC758 \uBE48\uC790\uB9AC\uB97C \uD655\uC778\uD558\uACE0 \uCC38\uAC00 \uC694\uCCAD\uC744 \uBCF4\uB0BC \uC218 \uC788\uAC8C \uC124\uC815\uD558\uC138\uC694!"],"EBSaL4":["\uACC4\uC815 \uC5F0\uACB0\uD558\uAE30"],"vznMVa":[[8,"$link",["\uACC4\uC815\uC744 \uC5F0\uACB0\uD558\uC5EC"],[[1,"onClick"]]]," \uD50C\uB808\uC774\uC5B4\uAC00 \uC2A4\uCFFC\uB4DC\uC758 \uBE48\uC790\uB9AC\uB97C \uD655\uC778\uD560 \uC218 \uC788\uB3C4\uB85D \uC124\uC815\uD558\uC138\uC694!"],"yoIAe/":["\uBD84\uC704\uAE30 \uBC0F \uCC3E\uACE0 \uC788\uB294 \uD56D\uBAA9\uC5D0 \uB300\uD55C \uD0DC\uADF8\uB97C \uCD94\uAC00\uD558\uC138\uC694"],"tOsHsu":["\uD3EC\uC2A4\uD2B8 \uC791\uC131"],"G91SYQ":["\uB2E4\uB978 \uC0AC\uB78C\uC774 \uCC38\uC5EC\uD560 \uC218 \uC788\uB294 \uD1B5\uD654\uB97C \uC2DC\uC791\uD560 \uC218 \uC788\uC5B4\uC694"],"0s2ICk":["\uC774 \uD1A0\uAE00\uC744 \uD65C\uC131\uD654\uD558\uB824\uBA74 \uC774 \uCC44\uB110\uC5D0 \\"",[1,"noMicTagName"],"\\" \uD0DC\uADF8\uB97C \uCD94\uAC00\uD558\uC138\uC694"],"Xd2NFi":["\uC74C\uC131 \uCC44\uD305"]}',
-);
+s.exports = {
+    578719: ["사전 정의된 태그에서 선택하여 플레이어가 자신의 분위기에 맞는 세션을 찾을 수 있도록 도와주세요"],
+    QwW8zd: ["포스트 만들기"],
+    DxwBMf: ["다른 사람들을 초대할 공간을 만들어 보세요."],
+    "7aCPJG": ["이미 추가됨"],
+    F5YBmi: ["모두 선택"],
+    JWRsCC: ["추천 태그 추가"],
+    "h/GwWL": ["그룹 찾기"],
+    "MKZ+Ky": ["사전 정의된 태그에서 선택하여 플레이어가 자신의 분위기에 맞는 세션을 찾을 수 있도록 도와주세요"],
+    "5a7Pjb": ["추천 태그 추가"],
+    "/mEbGf": ["설명"],
+    "SU/IAE": ["게임 세션에 대한 자세한 정보를 추가하세요"],
+    UHF2Zn: ["계정을 연결하여 플레이어가 스쿼드의 빈자리를 확인하고 참가 요청을 보낼 수 있게 설정하세요!"],
+    EBSaL4: ["계정 연결하기"],
+    vznMVa: [
+        [8, "$link", ["계정을 연결하여"], [[1, "onClick"]]],
+        " 플레이어가 스쿼드의 빈자리를 확인할 수 있도록 설정하세요!",
+    ],
+    "yoIAe/": ["분위기 및 찾고 있는 항목에 대한 태그를 추가하세요"],
+    tOsHsu: ["포스트 작성"],
+    G91SYQ: ["다른 사람이 참여할 수 있는 통화를 시작할 수 있어요"],
+    "0s2ICk": ['이 토글을 활성화하려면 이 채널에 "', [1, "noMicTagName"], '" 태그를 추가하세요'],
+    Xd2NFi: ["음성 채팅"],
+};

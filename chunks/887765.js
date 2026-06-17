@@ -1,3 +1,25 @@
-t.exports = JSON.parse(
-    '{"QwW8zd":["Luo viesti"],"DxwBMf":["Luo tila, johon voit kutsua muita."],"7aCPJG":["Lis\xe4tty aiemmin"],"F5YBmi":["Valitse kaikki"],"578719":["Auta pelaajia l\xf6yt\xe4m\xe4\xe4n tunnelmaansa sopiva istunto valitsemalla istunnolle sopivat vaihtoehdot valmiiksi m\xe4\xe4ritetyist\xe4 tunnisteista"],"JWRsCC":["Lis\xe4\xe4 suositellut tunnisteet"],"h/GwWL":["Ryhm\xe4haku"],"MKZ+Ky":["Auta pelaajia l\xf6yt\xe4m\xe4\xe4n tunnelmaansa sopiva istunto valitsemalla istunnolle sopivat vaihtoehdot valmiiksi m\xe4\xe4ritetyist\xe4 tunnisteista"],"5a7Pjb":["Lis\xe4\xe4 suositellut tunnisteet"],"/mEbGf":["Kuvaus"],"SU/IAE":["Lis\xe4\xe4 tarkempia tietoja pelisessiostasi"],"UHF2Zn":["Yhdist\xe4 tilisi, jotta pelaajat n\xe4kev\xe4t ryhm\xe4si avoimet paikat ja voivat pyyt\xe4\xe4 p\xe4\xe4st\xe4 mukaan!"],"EBSaL4":["Yhdist\xe4 tili"],"vznMVa":[[8,"$link",["Yhdist\xe4 tilisi"],[[1,"onClick"]]],", jotta pelaajat n\xe4kev\xe4t ryhm\xe4si avoimet paikat!"],"yoIAe/":["Lis\xe4\xe4 tunnelmistasi ja odotuksistasi kertovia tunnisteita"],"tOsHsu":["Luo viesti"],"G91SYQ":["Voit aloittaa puhelun, johon muut voivat liitty\xe4"],"0s2ICk":["Ota t\xe4m\xe4 tilanvaihdin k\xe4ytt\xf6\xf6n lis\xe4\xe4m\xe4ll\xe4 t\xe4lle kanavalle tunniste ",[1,"noMicTagName"]],"Xd2NFi":["Puhekeskustelu"]}',
-);
+t.exports = {
+    578719: [
+        "Auta pelaajia löytämään tunnelmaansa sopiva istunto valitsemalla istunnolle sopivat vaihtoehdot valmiiksi määritetyistä tunnisteista",
+    ],
+    QwW8zd: ["Luo viesti"],
+    DxwBMf: ["Luo tila, johon voit kutsua muita."],
+    "7aCPJG": ["Lisätty aiemmin"],
+    F5YBmi: ["Valitse kaikki"],
+    JWRsCC: ["Lisää suositellut tunnisteet"],
+    "h/GwWL": ["Ryhmähaku"],
+    "MKZ+Ky": [
+        "Auta pelaajia löytämään tunnelmaansa sopiva istunto valitsemalla istunnolle sopivat vaihtoehdot valmiiksi määritetyistä tunnisteista",
+    ],
+    "5a7Pjb": ["Lisää suositellut tunnisteet"],
+    "/mEbGf": ["Kuvaus"],
+    "SU/IAE": ["Lisää tarkempia tietoja pelisessiostasi"],
+    UHF2Zn: ["Yhdistä tilisi, jotta pelaajat näkevät ryhmäsi avoimet paikat ja voivat pyytää päästä mukaan!"],
+    EBSaL4: ["Yhdistä tili"],
+    vznMVa: [[8, "$link", ["Yhdistä tilisi"], [[1, "onClick"]]], ", jotta pelaajat näkevät ryhmäsi avoimet paikat!"],
+    "yoIAe/": ["Lisää tunnelmistasi ja odotuksistasi kertovia tunnisteita"],
+    tOsHsu: ["Luo viesti"],
+    G91SYQ: ["Voit aloittaa puhelun, johon muut voivat liittyä"],
+    "0s2ICk": ["Ota tämä tilanvaihdin käyttöön lisäämällä tälle kanavalle tunniste ", [1, "noMicTagName"]],
+    Xd2NFi: ["Puhekeskustelu"],
+};

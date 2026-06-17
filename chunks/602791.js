@@ -1,3 +1,23 @@
-p.exports = JSON.parse(
-    '{"q5M7HV":["\u5176\u5B83"],"zRKbpz":["\u670D\u52A1\u5668"],"UzRF+8":["\u793E\u4EA4\u5A92\u4F53"],"NGdNZb":["\u79C1\u4FE1"],"zJlwvV":["Discord \u7CFB\u7EDF\u6D88\u606F"],"40TIqW":["\u6D3B\u52A8\u901A\u77E5"],"HibKoy":["\u8BBA\u575B\u901A\u77E5"],"vcrTV5":["\u597D\u53CB\u52A8\u6001"],"NxgGZA":["\u597D\u53CB\u8BF7\u6C42"],"9EDo+/":["\u6E38\u620F"],"IUH/Oe":["\u6765\u7535"],"4qWUAO":["\u6D88\u606F"],"n0Wp6j":["\u672A\u8BFB\u6D88\u606F"],"T+79Eo":["\u5176\u4ED6"],"kIrLfg":["\u5176\u4ED6\u670D\u52A1\u5668\u901A\u77E5"],"MOjygY":["\u6295\u7968"],"wv4QHR":["\u53CD\u5E94\u901A\u77E5"],"S5cB9e":["\u5B9E\u65F6"],"4n388K":["\u8BB2\u5802\u901A\u77E5"],"Iy9grw":["\u8BED\u97F3\u548C\u76F4\u64AD\u52A8\u6001"],"VeBD1N":["\u8BED\u97F3\u5DF2\u8FDE\u63A5"]}',
-);
+p.exports = {
+    q5M7HV: ["其它"],
+    zRKbpz: ["服务器"],
+    "UzRF+8": ["社交媒体"],
+    NGdNZb: ["私信"],
+    zJlwvV: ["Discord 系统消息"],
+    "40TIqW": ["活动通知"],
+    HibKoy: ["论坛通知"],
+    vcrTV5: ["好友动态"],
+    NxgGZA: ["好友请求"],
+    "9EDo+/": ["游戏"],
+    "IUH/Oe": ["来电"],
+    "4qWUAO": ["消息"],
+    n0Wp6j: ["未读消息"],
+    "T+79Eo": ["其他"],
+    kIrLfg: ["其他服务器通知"],
+    MOjygY: ["投票"],
+    wv4QHR: ["反应通知"],
+    S5cB9e: ["实时"],
+    "4n388K": ["讲堂通知"],
+    Iy9grw: ["语音和直播动态"],
+    VeBD1N: ["语音已连接"],
+};

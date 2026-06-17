@@ -1,3 +1,17 @@
-e.exports = JSON.parse(
-    '{"RPb8Zk":["Feedbackul t\u0103u ne ajut\u0103 s\u0103 \xeembun\u0103t\u0103\u021Bim func\u021Biile Discord Safety."],"cDP3b4":["Feedback trimis"],"KZw6kn":["Ce nu func\u021Bioneaz\u0103 bine?"],"eSP1F9":["M-am r\u0103zg\xe2ndit cu privire la afi\u0219area acestui con\u021Binut"],"bC0QVX":["Instruc\u021Biunile nu au fost suficient de clare"],"8JFGXc":["Am \xeencercat s\u0103 urmez pa\u0219ii, dar nu au func\u021Bionat"],"Dl4A+U":["Nu aveam documentele necesare la mine"],"ZsnNgz":["\xcemi fac griji \xeen privin\u021Ba partaj\u0103rii datelor cu caracter personal"],"ep5SQp":["Alt motiv"],"kkKhVJ":["Ia prea mult timp"],"maxf2S":["Nu mi-e clar de ce a fost necesar procesul"],"Q5cQ46":["Descrie problema ta"],"zApKaR":["Vrei s\u0103 ne spui mai multe?"],"4djgO/":["\xce\u021Bi mul\u021Bumim pentru feedback!"],"RqoA4v":["Cum a fost experien\u021Ba ta de verificare a v\xe2rstei?"]}',
-);
+e.exports = {
+    RPb8Zk: ["Feedbackul tău ne ajută să îmbunătățim funcțiile Discord Safety."],
+    cDP3b4: ["Feedback trimis"],
+    KZw6kn: ["Ce nu funcționează bine?"],
+    eSP1F9: ["M-am răzgândit cu privire la afișarea acestui conținut"],
+    bC0QVX: ["Instrucțiunile nu au fost suficient de clare"],
+    "8JFGXc": ["Am încercat să urmez pașii, dar nu au funcționat"],
+    "Dl4A+U": ["Nu aveam documentele necesare la mine"],
+    ZsnNgz: ["Îmi fac griji în privința partajării datelor cu caracter personal"],
+    ep5SQp: ["Alt motiv"],
+    kkKhVJ: ["Ia prea mult timp"],
+    maxf2S: ["Nu mi-e clar de ce a fost necesar procesul"],
+    Q5cQ46: ["Descrie problema ta"],
+    zApKaR: ["Vrei să ne spui mai multe?"],
+    "4djgO/": ["Îți mulțumim pentru feedback!"],
+    RqoA4v: ["Cum a fost experiența ta de verificare a vârstei?"],
+};

@@ -1,4 +1,10 @@
 e.r(i), e.d(i, { default: () => o });
-let o = JSON.parse(
-    '{"xi8rE8":["\xbfTe gustar\xeda configurar Discord en Espa\xf1ol?"],"09QGGE":["\xbfCambiar idioma?"],"ofazSS":["Entendido"],"yQfLwD":["Discord est\xe1 configurado en Espa\xf1ol. Puedes elegir otro idioma en \\"Ajustes de aplicaci\xf3n\\" > \\"Idioma\\"."],"KUFsLl":["\xa1El cambio fue hecho!"],"jM7sUh":["No"],"QkGMP3":["S\xed"]}',
-);
+let o = {
+    xi8rE8: ["¿Te gustaría configurar Discord en Español?"],
+    "09QGGE": ["¿Cambiar idioma?"],
+    ofazSS: ["Entendido"],
+    yQfLwD: ['Discord está configurado en Español. Puedes elegir otro idioma en "Ajustes de aplicación" > "Idioma".'],
+    KUFsLl: ["¡El cambio fue hecho!"],
+    jM7sUh: ["No"],
+    QkGMP3: ["Sí"],
+};

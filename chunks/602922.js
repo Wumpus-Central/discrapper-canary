@@ -1,3 +1,10 @@
-p.exports = JSON.parse(
-    '{"bGygJZ":["\uD1B5\uD654 \uB0B4\uB0B4 \uC54C\uB9BC\uC774 \uAEBC\uC838 \uC788\uC5C8\uB358 \uAC83 \uAC19\uC544\uC694. \uB2E4\uC2DC \uC54C\uB9BC\uC744 \uB4E3\uAE30 \uC704\uD574 \uC74C\uC18C\uAC70 \uD574\uC81C \uBC29\uBC95\uC744 \uC54C\uC544\uBCF4\uC2DC\uACA0\uC5B4\uC694?"],"8VIRzR":["\uB2E4\uB978 \uC0AC\uB78C\uB4E4\uC774 \uB0B4 \uBAA9\uC18C\uB9AC\uB97C \uB4E4\uC744 \uC218 \uC788\uB3C4\uB85D \uC774 \uBC84\uD2BC\uC744 \uB20C\uB7EC \uB9C8\uC774\uD06C\uC758 \uC74C\uC18C\uAC70\uB97C \uD574\uC81C\uD558\uC138\uC694. \uB2E4\uC2DC \uB204\uB974\uBA74 \uB9C8\uC774\uD06C\uAC00 \uB2E4\uC2DC \uC74C\uC18C\uAC70\uB3FC\uC694."],"VG4zAf":["\uB9C8\uC774\uD06C \uC74C\uC18C\uAC70\uB97C \uD574\uC81C\uD558\uC138\uC694"],"5wYjyW":["\uC74C\uC18C\uAC70 \uD29C\uD1A0\uB9AC\uC5BC"],"01Jl9Z":["\uC0AC\uC591\uD560\uAC8C\uC694"],"DxcYYG":["\uBCF4\uC5EC\uC8FC\uC138\uC694!"]}',
-);
+p.exports = {
+    bGygJZ: ["통화 내내 알림이 꺼져 있었던 것 같아요. 다시 알림을 듣기 위해 음소거 해제 방법을 알아보시겠어요?"],
+    "8VIRzR": [
+        "다른 사람들이 내 목소리를 들을 수 있도록 이 버튼을 눌러 마이크의 음소거를 해제하세요. 다시 누르면 마이크가 다시 음소거돼요.",
+    ],
+    VG4zAf: ["마이크 음소거를 해제하세요"],
+    "5wYjyW": ["음소거 튜토리얼"],
+    "01Jl9Z": ["사양할게요"],
+    DxcYYG: ["보여주세요!"],
+};

@@ -1,3 +1,21 @@
-s.exports = JSON.parse(
-    '{"QwW8zd":["\u5EFA\u7ACB\u8CBC\u6587"],"DxwBMf":["\u6253\u9020\u7A7A\u9593\uFF0C\u9080\u8ACB\u5176\u4ED6\u4EBA\u3002"],"7aCPJG":["\u5DF2\u65B0\u589E"],"F5YBmi":["\u5168\u9078"],"578719":["\u9078\u64C7\u4E8B\u5148\u5B9A\u7FA9\u597D\u7684\u6A19\u7C64\uFF0C\u73A9\u5BB6\u5C31\u80FD\u627E\u5230\u7B26\u5408\u5176\u98A8\u683C\u7684\u904A\u6232"],"JWRsCC":["\u65B0\u589E\u5EFA\u8B70\u6A19\u7C64"],"h/GwWL":["LFG"],"MKZ+Ky":["\u9078\u64C7\u4E8B\u5148\u5B9A\u7FA9\u597D\u7684\u6A19\u7C64\uFF0C\u73A9\u5BB6\u5C31\u80FD\u627E\u5230\u7B26\u5408\u5176\u98A8\u683C\u7684\u904A\u6232"],"5a7Pjb":["\u65B0\u589E\u5EFA\u8B70\u6A19\u7C64"],"/mEbGf":["\u7C21\u4ECB"],"SU/IAE":["\u65B0\u589E\u66F4\u591A\u904A\u6232\u968E\u6BB5\u7684\u76F8\u95DC\u8CC7\u8A0A"],"UHF2Zn":["\u9023\u7D50\u60A8\u7684\u5E33\u865F\uFF0C\u73A9\u5BB6\u770B\u5230\u60A8\u7684\u5C0F\u968A\u7F3A\u4EBA\u6642\u5C31\u80FD\u8ACB\u6C42\u52A0\u5165\u4E86\uFF01"],"EBSaL4":["\u9023\u7D50\u5E33\u865F"],"vznMVa":[[8,"$link",["\u9023\u7D50\u60A8\u7684\u5E33\u865F"],[[1,"onClick"]]],"\uFF0C\u73A9\u5BB6\u770B\u5230\u60A8\u7684\u5C0F\u968A\u7F3A\u4EBA\u4E86\uFF01"],"yoIAe/":["\u70BA\u6C1B\u570D\u548C\u60A8\u8981\u7684\u8CC7\u8A0A\u65B0\u589E\u6A19\u7C64"],"tOsHsu":["\u5EFA\u7ACB\u8CBC\u6587"],"G91SYQ":["\u60A8\u53EF\u4EE5\u958B\u59CB\u901A\u8A71\uFF0C\u8B93\u5176\u4ED6\u4EBA\u52A0\u5165"],"0s2ICk":["\u5728\u6B64\u983B\u9053\u65B0\u589E\u300C",[1,"noMicTagName"],"\u300D\u6A19\u7C64\uFF0C\u555F\u7528\u6B64\u5207\u63DB\u958B\u95DC"],"Xd2NFi":["\u8A9E\u97F3\u804A\u5929"]}',
-);
+s.exports = {
+    578719: ["選擇事先定義好的標籤，玩家就能找到符合其風格的遊戲"],
+    QwW8zd: ["建立貼文"],
+    DxwBMf: ["打造空間，邀請其他人。"],
+    "7aCPJG": ["已新增"],
+    F5YBmi: ["全選"],
+    JWRsCC: ["新增建議標籤"],
+    "h/GwWL": ["LFG"],
+    "MKZ+Ky": ["選擇事先定義好的標籤，玩家就能找到符合其風格的遊戲"],
+    "5a7Pjb": ["新增建議標籤"],
+    "/mEbGf": ["簡介"],
+    "SU/IAE": ["新增更多遊戲階段的相關資訊"],
+    UHF2Zn: ["連結您的帳號，玩家看到您的小隊缺人時就能請求加入了！"],
+    EBSaL4: ["連結帳號"],
+    vznMVa: [[8, "$link", ["連結您的帳號"], [[1, "onClick"]]], "，玩家看到您的小隊缺人了！"],
+    "yoIAe/": ["為氛圍和您要的資訊新增標籤"],
+    tOsHsu: ["建立貼文"],
+    G91SYQ: ["您可以開始通話，讓其他人加入"],
+    "0s2ICk": ["在此頻道新增「", [1, "noMicTagName"], "」標籤，啟用此切換開關"],
+    Xd2NFi: ["語音聊天"],
+};

@@ -1,3 +1,26 @@
-e.exports = JSON.parse(
-    '{"QwW8zd":["Creeaz\u0103 o postare"],"DxwBMf":["Creeaz\u0103 un spa\u021Biu \u0219i cheam\u0103 lumea."],"7aCPJG":["Ad\u0103ugat deja"],"F5YBmi":["Selecteaz\u0103 tot"],"578719":["Ajut\u0103 juc\u0103torii s\u0103 g\u0103seasc\u0103 sesiuni potrivite cu stilul lor. Alege din taguri predefinite"],"JWRsCC":["Adaug\u0103 taguri recomandate"],"h/GwWL":["LFG"],"MKZ+Ky":["Ajut\u0103 juc\u0103torii s\u0103 g\u0103seasc\u0103 sesiuni potrivite cu stilul lor. Alege din taguri predefinite"],"5a7Pjb":["Adaug\u0103 taguri recomandate"],"/mEbGf":["Descriere"],"SU/IAE":["Adaug\u0103 mai multe detalii despre sesiunea de joc"],"UHF2Zn":["Asociaz\u0103-\u021Bi contul pentru ca juc\u0103torii s\u0103 vad\u0103 locurile libere din echipa ta \u0219i s\u0103 poat\u0103 cere s\u0103 se al\u0103ture!"],"EBSaL4":["Asociaz\u0103-\u021Bi contul"],"vznMVa":[[8,"$link",["Asociaz\u0103-\u021Bi contul"],[[1,"onClick"]]]," pentru ca juc\u0103torii s\u0103 poat\u0103 vedea locurile libere din echipa ta!"],"yoIAe/":["Adaug\u0103 taguri despre vibe \u0219i preferin\u021Be"],"tOsHsu":["Creeaz\u0103 o postare"],"G91SYQ":["Po\u021Bi \xeencepe un apel la care s\u0103 se al\u0103ture al\u021Bii"],"0s2ICk":["Adaug\u0103-i canalului un tag \u201E",[1,"noMicTagName"],"\\" pentru a activa acest comutator"],"Xd2NFi":["Chat vocal"]}',
-);
+e.exports = {
+    578719: ["Ajută jucătorii să găsească sesiuni potrivite cu stilul lor. Alege din taguri predefinite"],
+    QwW8zd: ["Creează o postare"],
+    DxwBMf: ["Creează un spațiu și cheamă lumea."],
+    "7aCPJG": ["Adăugat deja"],
+    F5YBmi: ["Selectează tot"],
+    JWRsCC: ["Adaugă taguri recomandate"],
+    "h/GwWL": ["LFG"],
+    "MKZ+Ky": ["Ajută jucătorii să găsească sesiuni potrivite cu stilul lor. Alege din taguri predefinite"],
+    "5a7Pjb": ["Adaugă taguri recomandate"],
+    "/mEbGf": ["Descriere"],
+    "SU/IAE": ["Adaugă mai multe detalii despre sesiunea de joc"],
+    UHF2Zn: [
+        "Asociază-ți contul pentru ca jucătorii să vadă locurile libere din echipa ta și să poată cere să se alăture!",
+    ],
+    EBSaL4: ["Asociază-ți contul"],
+    vznMVa: [
+        [8, "$link", ["Asociază-ți contul"], [[1, "onClick"]]],
+        " pentru ca jucătorii să poată vedea locurile libere din echipa ta!",
+    ],
+    "yoIAe/": ["Adaugă taguri despre vibe și preferințe"],
+    tOsHsu: ["Creează o postare"],
+    G91SYQ: ["Poți începe un apel la care să se alăture alții"],
+    "0s2ICk": ["Adaugă-i canalului un tag „", [1, "noMicTagName"], '" pentru a activa acest comutator'],
+    Xd2NFi: ["Chat vocal"],
+};

@@ -1,3 +1,4 @@
-h.exports = JSON.parse(
-    '{"F3llsQ":["Chia s\u1EBB khi t\xf4i c\u1EADp nh\u1EADt h\u1ED3 s\u01A1"],"6goWcz":["Cho ph\xe9p b\u1EA1n b\xe8 nh\u1EADn th\xf4ng b\xe1o \u0111\u1EA9y khi b\u1EA1n c\u1EADp nh\u1EADt h\u1ED3 s\u01A1 c\u1EE7a m\xecnh."]}',
-);
+h.exports = {
+    F3llsQ: ["Chia sẻ khi tôi cập nhật hồ sơ"],
+    "6goWcz": ["Cho phép bạn bè nhận thông báo đẩy khi bạn cập nhật hồ sơ của mình."],
+};

@@ -1,3 +1,1 @@
-s.exports = JSON.parse(
-    '{"F3llsQ":["\u66F4\u65B0\u500B\u4EBA\u8CC7\u6599\u6642\u5206\u4EAB"],"6goWcz":["\u5141\u8A31\u597D\u53CB\u5728\u60A8\u66F4\u65B0\u500B\u4EBA\u8CC7\u6599\u6642\u6536\u5230\u63A8\u64AD\u901A\u77E5\u3002"]}',
-);
+s.exports = { F3llsQ: ["更新個人資料時分享"], "6goWcz": ["允許好友在您更新個人資料時收到推播通知。"] };

@@ -1,3 +1,75 @@
-a.exports = JSON.parse(
-    '{"5h8p5P":[[6,"count",{"one":[[1,"platforms"]," nem t\xe1mogatott."],"other":[[1,"platforms"]," nem t\xe1mogatott."]},0,"cardinal"]],"vyAtfo":["Az aj\xe1nd\xe9k elfogad\xe1s\xe1hoz kapcsold \xf6ssze a(z) ",[1,"applicationName"],"- \xe9s a Discord-fi\xf3kodat. ",[1,"platforms_info"]],"yqAKVO":["Fi\xf3k \xf6sszekapcsolva a k\xf6vetkez\u0151vel: ",[1,"applicationName"],". Ig\xe9nyeld az aj\xe1nd\xe9kot al\xe1bb. ",[1,"platforms_info"]],"Ufm9XX":["A(z) \u201E",[1,"buyButtonLabel"],"\u201D gombra kattintva elfogadod a ",[8,"$link",["Fizet\u0151s szolg\xe1ltat\xe1sok szerz\u0151d\xe9si felt\xe9teleit"],[[1,"paidServiceTermURL"]]],". ",[8,"$b",["Ha term\xe9ket v\xe1s\xe1rolsz a(z) ",[1,"applicationName"]," j\xe1t\xe9k\xe1ruh\xe1zb\xf3l, azzal limit\xe1lt enged\xe9lyt v\xe1s\xe1rolsz a term\xe9k felhaszn\xe1l\xe1s\xe1ra a megnevezett j\xe1t\xe9kban."]]," Ez a v\xe1s\xe1rl\xe1s nem t\xe9r\xedthet\u0151 vissza. A term\xe9ket k\xf6zvetlen\xfcl a j\xe1t\xe9kban biztos\xedtja a fejleszt\u0151."],"Q0dHYO":["A bev\xe1lt\xe1shoz \xf6ssze kell kapcsolni a fi\xf3kokat. ",[1,"platforms_info"]],"3ah/a2":[[8,"$b",["Ha term\xe9ket v\xe1s\xe1rolsz a(z) ",[1,"applicationName"]," j\xe1t\xe9k\xe1ruh\xe1zb\xf3l, azzal limit\xe1lt enged\xe9lyt v\xe1s\xe1rolsz a term\xe9k felhaszn\xe1l\xe1s\xe1ra a megnevezett j\xe1t\xe9kban."]]," Ez a v\xe1s\xe1rl\xe1s nem t\xe9r\xedthet\u0151 vissza. A term\xe9ket k\xf6zvetlen\xfcl a j\xe1t\xe9kban biztos\xedtja a fejleszt\u0151. ",[1,"platforms_info"]],"fO4b1C":["A v\xe1s\xe1rl\xe1s elfogad\xe1s\xe1hoz kapcsold \xf6ssze a(z) ",[1,"applicationName"],"- \xe9s a Discord-fi\xf3kodat. ",[1,"platforms_info"]],"Sy7D+/":["Ebben az \xe1ruh\xe1zban m\xe9g nincsenek term\xe9kek. T\xe9rj vissza k\xe9s\u0151bb!"],"OvBwPV":["Nem \xe9rhet\u0151 el kirakat"],"BMMo2K":["Az aj\xe1nd\xe9k elfogad\xe1s\xe1hoz kapcsold \xf6ssze asztali g\xe9pen a Discord-be\xe1ll\xedt\xe1sokn\xe1l a(z) ",[1,"applicationName"]," alkalmaz\xe1st \xe9s a Discord-fi\xf3kodat."],"eNNnIG":["A v\xe1s\xe1rl\xe1s elfogad\xe1s\xe1hoz kapcsold \xf6ssze asztali g\xe9pen a Discord-be\xe1ll\xedt\xe1sokn\xe1l a(z) ",[1,"applicationName"]," \xe9s a Discord-fi\xf3kodat."],"gndWN7":["Nyisd meg a Discordot asztali g\xe9pen a v\xe1s\xe1rl\xe1shoz."],"bRPsNX":["A v\xe1s\xe1rl\xe1sod bev\xe1lt\xe1sa"],"BKf0MM":["R\xe9szletek megtekint\xe9se"]}',
-);
+a.exports = {
+    "5h8p5P": [
+        [
+            6,
+            "count",
+            { one: [[1, "platforms"], " nem támogatott."], other: [[1, "platforms"], " nem támogatott."] },
+            0,
+            "cardinal",
+        ],
+    ],
+    vyAtfo: [
+        "Az ajándék elfogadásához kapcsold össze a(z) ",
+        [1, "applicationName"],
+        "- és a Discord-fiókodat. ",
+        [1, "platforms_info"],
+    ],
+    yqAKVO: [
+        "Fiók összekapcsolva a következővel: ",
+        [1, "applicationName"],
+        ". Igényeld az ajándékot alább. ",
+        [1, "platforms_info"],
+    ],
+    Ufm9XX: [
+        "A(z) „",
+        [1, "buyButtonLabel"],
+        "” gombra kattintva elfogadod a ",
+        [8, "$link", ["Fizetős szolgáltatások szerződési feltételeit"], [[1, "paidServiceTermURL"]]],
+        ". ",
+        [
+            8,
+            "$b",
+            [
+                "Ha terméket vásárolsz a(z) ",
+                [1, "applicationName"],
+                " játékáruházból, azzal limitált engedélyt vásárolsz a termék felhasználására a megnevezett játékban.",
+            ],
+        ],
+        " Ez a vásárlás nem téríthető vissza. A terméket közvetlenül a játékban biztosítja a fejlesztő.",
+    ],
+    Q0dHYO: ["A beváltáshoz össze kell kapcsolni a fiókokat. ", [1, "platforms_info"]],
+    "3ah/a2": [
+        [
+            8,
+            "$b",
+            [
+                "Ha terméket vásárolsz a(z) ",
+                [1, "applicationName"],
+                " játékáruházból, azzal limitált engedélyt vásárolsz a termék felhasználására a megnevezett játékban.",
+            ],
+        ],
+        " Ez a vásárlás nem téríthető vissza. A terméket közvetlenül a játékban biztosítja a fejlesztő. ",
+        [1, "platforms_info"],
+    ],
+    fO4b1C: [
+        "A vásárlás elfogadásához kapcsold össze a(z) ",
+        [1, "applicationName"],
+        "- és a Discord-fiókodat. ",
+        [1, "platforms_info"],
+    ],
+    "Sy7D+/": ["Ebben az áruházban még nincsenek termékek. Térj vissza később!"],
+    OvBwPV: ["Nem érhető el kirakat"],
+    BMMo2K: [
+        "Az ajándék elfogadásához kapcsold össze asztali gépen a Discord-beállításoknál a(z) ",
+        [1, "applicationName"],
+        " alkalmazást és a Discord-fiókodat.",
+    ],
+    eNNnIG: [
+        "A vásárlás elfogadásához kapcsold össze asztali gépen a Discord-beállításoknál a(z) ",
+        [1, "applicationName"],
+        " és a Discord-fiókodat.",
+    ],
+    gndWN7: ["Nyisd meg a Discordot asztali gépen a vásárláshoz."],
+    bRPsNX: ["A vásárlásod beváltása"],
+    BKf0MM: ["Részletek megtekintése"],
+};

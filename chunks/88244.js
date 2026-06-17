@@ -1,3 +1,24 @@
-o.exports = JSON.parse(
-    '{"QwW8zd":["Utw\xf3rz post"],"DxwBMf":["Utw\xf3rz przestrze\u0144, do kt\xf3rej mo\u017Cesz zaprosi\u0107 innych."],"7aCPJG":["Ju\u017C dodano"],"F5YBmi":["Wybierz wszystko"],"578719":["Pom\xf3\u017C graczom znale\u017A\u0107 sesje pasuj\u0105ce do ich klimatu, wybieraj\u0105c spo\u015Br\xf3d gotowych tag\xf3w"],"JWRsCC":["Dodaj zalecane tagi"],"h/GwWL":["Szukanie grupy"],"MKZ+Ky":["Pom\xf3\u017C graczom znale\u017A\u0107 sesje pasuj\u0105ce do ich klimatu, wybieraj\u0105c spo\u015Br\xf3d gotowych tag\xf3w"],"5a7Pjb":["Dodaj zalecane tagi"],"/mEbGf":["Opis"],"SU/IAE":["Dodaj wi\u0119cej informacji o swojej sesji gry"],"UHF2Zn":["Po\u0142\u0105cz swoje konto, aby gracze widzieli wolne miejsca w Twojej dru\u017Cynie i mogli poprosi\u0107 o do\u0142\u0105czenie!"],"EBSaL4":["Po\u0142\u0105cz konto"],"vznMVa":[[8,"$link",["Po\u0142\u0105cz swoje konto"],[[1,"onClick"]]],", aby gracze widzieli wolne miejsca w Twojej dru\u017Cynie!"],"yoIAe/":["Dodaj tagi dotycz\u0105ce klimatu i tego, czego szukasz"],"tOsHsu":["Utw\xf3rz post"],"G91SYQ":["Mo\u017Cesz rozpocz\u0105\u0107 rozmow\u0119, do kt\xf3rej inni mog\u0105 do\u0142\u0105czy\u0107"],"0s2ICk":["Dodaj tag \u201E",[1,"noMicTagName"],"\u201D do tego kana\u0142u, aby w\u0142\u0105czy\u0107 ten prze\u0142\u0105cznik"],"Xd2NFi":["Czat g\u0142osowy"]}',
-);
+o.exports = {
+    578719: ["Pomóż graczom znaleźć sesje pasujące do ich klimatu, wybierając spośród gotowych tagów"],
+    QwW8zd: ["Utwórz post"],
+    DxwBMf: ["Utwórz przestrzeń, do której możesz zaprosić innych."],
+    "7aCPJG": ["Już dodano"],
+    F5YBmi: ["Wybierz wszystko"],
+    JWRsCC: ["Dodaj zalecane tagi"],
+    "h/GwWL": ["Szukanie grupy"],
+    "MKZ+Ky": ["Pomóż graczom znaleźć sesje pasujące do ich klimatu, wybierając spośród gotowych tagów"],
+    "5a7Pjb": ["Dodaj zalecane tagi"],
+    "/mEbGf": ["Opis"],
+    "SU/IAE": ["Dodaj więcej informacji o swojej sesji gry"],
+    UHF2Zn: ["Połącz swoje konto, aby gracze widzieli wolne miejsca w Twojej drużynie i mogli poprosić o dołączenie!"],
+    EBSaL4: ["Połącz konto"],
+    vznMVa: [
+        [8, "$link", ["Połącz swoje konto"], [[1, "onClick"]]],
+        ", aby gracze widzieli wolne miejsca w Twojej drużynie!",
+    ],
+    "yoIAe/": ["Dodaj tagi dotyczące klimatu i tego, czego szukasz"],
+    tOsHsu: ["Utwórz post"],
+    G91SYQ: ["Możesz rozpocząć rozmowę, do której inni mogą dołączyć"],
+    "0s2ICk": ["Dodaj tag „", [1, "noMicTagName"], "” do tego kanału, aby włączyć ten przełącznik"],
+    Xd2NFi: ["Czat głosowy"],
+};

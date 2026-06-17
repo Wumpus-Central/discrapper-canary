@@ -1,3 +1,17 @@
-p.exports = JSON.parse(
-    '{"/cp93l":["\uB2E4\uC74C \uB2EC"],"raS6yf":["\uC9C0\uB09C\uB2EC"],"JA5C7L":["\uC9C0\uC6B0\uAE30"],"I8kUqR":["\uCE98\uB9B0\uB354 \uC5F4\uAE30"],"db85vU":["\uD45C\uC2DC\uD560 \uC544\uC774\uD15C \uC5C6\uC74C"],"bPKiId":["\\"",[1,"query"],"\\"\uC5D0 \uB300\uD55C \uACB0\uACFC \uC5C6\uC74C"],"WfH9in":["\uB2EB\uAE30"],"m3Vfcs":["\uB2E4\uC2DC \uBCF4\uC9C0 \uC54A\uAE30"],"cgdAs2":["(\uC0C8 \uD0ED\uC5D0\uC11C \uC5F4\uB9BC)"],"2L/ygS":[[1,"percent"],"% \uC644\uB8CC"],"/Y7vRd":["\uC0AD\uC81C\uD558\uB824\uBA74 \uBC84\uD2BC\uC744 \uB204\uB974\uC138\uC694."],"VMNfsY":["\uC120\uD0DD\uB428"],"A+pfVR":["\uC120\uD0DD..."],"v2YSk/":[[1,"stepCount"],"\uB2E8\uACC4 \uC911 ",[1,"stepNumber"],"\uB2E8\uACC4"],"YpT3kk":["\uD655\uB300\uD558\uACE0 \uC601\uC0C1 \uC7AC\uC0DD"]}',
-);
+p.exports = {
+    "/cp93l": ["다음 달"],
+    raS6yf: ["지난달"],
+    JA5C7L: ["지우기"],
+    I8kUqR: ["캘린더 열기"],
+    db85vU: ["표시할 아이템 없음"],
+    bPKiId: ['"', [1, "query"], '"에 대한 결과 없음'],
+    WfH9in: ["닫기"],
+    m3Vfcs: ["다시 보지 않기"],
+    cgdAs2: ["(새 탭에서 열림)"],
+    "2L/ygS": [[1, "percent"], "% 완료"],
+    "/Y7vRd": ["삭제하려면 버튼을 누르세요."],
+    VMNfsY: ["선택됨"],
+    "A+pfVR": ["선택..."],
+    "v2YSk/": [[1, "stepCount"], "단계 중 ", [1, "stepNumber"], "단계"],
+    YpT3kk: ["확대하고 영상 재생"],
+};

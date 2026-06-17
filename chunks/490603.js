@@ -1,3 +1,60 @@
-e.exports = JSON.parse(
-    '{"5Mi5TE":["Changer la fa\xe7on dont nous attribuons ton \xe2ge\xa0?"],"lG69e1":[[8,"$link",["En savoir plus"],[[1,"handleOnHelpUrlHook"]]]," sur les groupes d\'\xe2ge"],"V822Mp":["Retirer le groupe d\'\xe2ge"],"FbTAmI":["Cela changera ton groupe d\'\xe2ge et le fera passer d\'\xab\xa0adulte\xa0\xbb \xe0 \xab\xa0non confirm\xe9\xa0\xbb, et tu ne pourras pas acc\xe9der \xe0 des exp\xe9riences soumises \xe0 une limite d\'\xe2ge. Pour recouvrer l\'acc\xe8s adulte, tu dois confirmer ton groupe d\'\xe2ge avec une autre m\xe9thode."],"g7/14g":["Retirer le groupe d\'\xe2ge assign\xe9\xa0?"],"Gn0SAj":["D\xe9finis ton groupe d\'\xe2ge sur \xab\xa0non confirm\xe9\xa0\xbb"],"bD//cU":["Retirer le groupe d\'\xe2ge assign\xe9"],"rJiO86":["Choisis de confirmer ton groupe d\'\xe2ge avec une m\xe9thode diff\xe9rente"],"SH6Tcv":["Confirmer le groupe d\'\xe2ge"],"1DN29p":["Nous utilisons des technologies qui \xe9valuent les groupes d\'\xe2ge des utilisateurs en fonction des mod\xe8les de comportement et d\'autres signaux associ\xe9s aux comptes des utilisateurs sur Discord. ",[8,"$link",["En savoir plus"],[[1,"handleOnHelpUrlHook"]]]],"PY4MA0":["Discord t\'a assign\xe9(e) le groupe d\'\xe2ge des adultes"],"FTawSP":["Assign\xe9 par Discord"],"WM5adV":["Assign\xe9 par Discord. ",[8,"$link",["En savoir plus"],[[1,"handleOnHelpUrlHook"]]]],"b7Oqdu":["Choisis une autre m\xe9thode"],"ar3a3q":["Les informations que tu fournis sont uniquement utilis\xe9es pour confirmer ton groupe d\'\xe2ge, puis elles sont supprim\xe9es."],"0vTx7j":["Rafra\xeechir"],"yBHwMy":["Cette \xe9tape n\'est pas prise en charge en VR. Termine-la avec un autre appareil et nous mettrons automatiquement \xe0 jour ton exp\xe9rience ici."],"gUqXQN":["Confirme ton \xe2ge sur un autre appareil"],"XYYm+1":["Choisis une autre m\xe9thode pour v\xe9rifier ton \xe2ge"],"rVLCwM":["Choisis une autre m\xe9thode"],"RpMIT0":["Choisis une m\xe9thode pour confirmer que tu es adulte. Une fois ton \xe2ge confirm\xe9, tu peux acc\xe9der aux param\xe8tres et au contenu soumis \xe0 une limite d\'\xe2ge. ",[8,"$link",["En savoir plus"],[[1,"handleOnHelpUrlHook"]]],"."],"h7qzoa":["Restaure l\'acc\xe8s \xe0 Discord en confirmant ton \xe2ge avec l\'une des options ci-dessous."],"eJmat5":["Estime ton \xe2ge avec un selfie vid\xe9o. La vid\xe9o reste sur l\'appareil, aucune donn\xe9e biom\xe9trique n\'est partag\xe9e."],"2yLvkS":["Selfie vid\xe9o via k-ID"],"+pwfOA":["Une erreur s\'est produite lors de la v\xe9rification de Google Wallet. Merci d\'essayer une autre m\xe9thode."],"dah4bF":["Utilise un pass d\'identit\xe9 bas\xe9 sur les informations de ton passeport. Les donn\xe9es de ta pi\xe8ce d\'identit\xe9 restent dans Google Wallet."],"Y9sLpR":["Pass d\'identit\xe9 Google Wallet"],"fEUKEv":["Essayer une autre m\xe9thode"],"Pf5xUq":["Ta pi\xe8ce d\'identit\xe9 a \xe9t\xe9 d\xe9livr\xe9e dans un pays qui n\'est pas encore pris en charge. Merci d\'essayer une autre m\xe9thode de v\xe9rification."],"MlFuBI":["V\xe9rification de ton \xe2ge\u2026"],"ZdmRwW":["Scanne ta pi\xe8ce d\'identit\xe9 et prends un selfie pour confirmer que c\'est bien toi. Les deux sont supprim\xe9s juste apr\xe8s la confirmation et ne sont jamais li\xe9s \xe0 ton compte."],"dwkwo0":["Scan de pi\xe8ce d\'identit\xe9 via k-ID"],"htWh1G":["Tu peux ",[8,"$link",["en savoir plus"],[[1,"handleOnHelpUrlHook"]]]," sur notre centre d\'aide"],"cR6336":["Aucune m\xe9thode de v\xe9rification d\'\xe2ge n\'est disponible. Il se peut qu\'il s\'agisse d\'une erreur."],"hDvmYP":["Rafra\xeechir"]}',
-);
+e.exports = {
+    "5Mi5TE": ["Changer la façon dont nous attribuons ton âge ?"],
+    lG69e1: [[8, "$link", ["En savoir plus"], [[1, "handleOnHelpUrlHook"]]], " sur les groupes d'âge"],
+    V822Mp: ["Retirer le groupe d'âge"],
+    FbTAmI: [
+        "Cela changera ton groupe d'âge et le fera passer d'« adulte » à « non confirmé », et tu ne pourras pas accéder à des expériences soumises à une limite d'âge. Pour recouvrer l'accès adulte, tu dois confirmer ton groupe d'âge avec une autre méthode.",
+    ],
+    "g7/14g": ["Retirer le groupe d'âge assigné ?"],
+    Gn0SAj: ["Définis ton groupe d'âge sur « non confirmé »"],
+    "bD//cU": ["Retirer le groupe d'âge assigné"],
+    rJiO86: ["Choisis de confirmer ton groupe d'âge avec une méthode différente"],
+    SH6Tcv: ["Confirmer le groupe d'âge"],
+    "1DN29p": [
+        "Nous utilisons des technologies qui évaluent les groupes d'âge des utilisateurs en fonction des modèles de comportement et d'autres signaux associés aux comptes des utilisateurs sur Discord. ",
+        [8, "$link", ["En savoir plus"], [[1, "handleOnHelpUrlHook"]]],
+    ],
+    PY4MA0: ["Discord t'a assigné(e) le groupe d'âge des adultes"],
+    FTawSP: ["Assigné par Discord"],
+    WM5adV: ["Assigné par Discord. ", [8, "$link", ["En savoir plus"], [[1, "handleOnHelpUrlHook"]]]],
+    b7Oqdu: ["Choisis une autre méthode"],
+    ar3a3q: [
+        "Les informations que tu fournis sont uniquement utilisées pour confirmer ton groupe d'âge, puis elles sont supprimées.",
+    ],
+    "0vTx7j": ["Rafraîchir"],
+    yBHwMy: [
+        "Cette étape n'est pas prise en charge en VR. Termine-la avec un autre appareil et nous mettrons automatiquement à jour ton expérience ici.",
+    ],
+    gUqXQN: ["Confirme ton âge sur un autre appareil"],
+    "XYYm+1": ["Choisis une autre méthode pour vérifier ton âge"],
+    rVLCwM: ["Choisis une autre méthode"],
+    RpMIT0: [
+        "Choisis une méthode pour confirmer que tu es adulte. Une fois ton âge confirmé, tu peux accéder aux paramètres et au contenu soumis à une limite d'âge. ",
+        [8, "$link", ["En savoir plus"], [[1, "handleOnHelpUrlHook"]]],
+        ".",
+    ],
+    h7qzoa: ["Restaure l'accès à Discord en confirmant ton âge avec l'une des options ci-dessous."],
+    eJmat5: [
+        "Estime ton âge avec un selfie vidéo. La vidéo reste sur l'appareil, aucune donnée biométrique n'est partagée.",
+    ],
+    "2yLvkS": ["Selfie vidéo via k-ID"],
+    "+pwfOA": [
+        "Une erreur s'est produite lors de la vérification de Google Wallet. Merci d'essayer une autre méthode.",
+    ],
+    dah4bF: [
+        "Utilise un pass d'identité basé sur les informations de ton passeport. Les données de ta pièce d'identité restent dans Google Wallet.",
+    ],
+    Y9sLpR: ["Pass d'identité Google Wallet"],
+    fEUKEv: ["Essayer une autre méthode"],
+    Pf5xUq: [
+        "Ta pièce d'identité a été délivrée dans un pays qui n'est pas encore pris en charge. Merci d'essayer une autre méthode de vérification.",
+    ],
+    MlFuBI: ["Vérification de ton âge…"],
+    ZdmRwW: [
+        "Scanne ta pièce d'identité et prends un selfie pour confirmer que c'est bien toi. Les deux sont supprimés juste après la confirmation et ne sont jamais liés à ton compte.",
+    ],
+    dwkwo0: ["Scan de pièce d'identité via k-ID"],
+    htWh1G: ["Tu peux ", [8, "$link", ["en savoir plus"], [[1, "handleOnHelpUrlHook"]]], " sur notre centre d'aide"],
+    cR6336: ["Aucune méthode de vérification d'âge n'est disponible. Il se peut qu'il s'agisse d'une erreur."],
+    hDvmYP: ["Rafraîchir"],
+};
