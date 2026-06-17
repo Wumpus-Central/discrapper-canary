@@ -24,6 +24,7 @@ var i,
         (((s = {}).MAX_CONCURRENT_SAVES = "max_concurrent_saves"),
         (s.NO_ELIGIBLE_SOURCE = "no_eligible_source"),
         (s.MODULE_NOT_LOADED = "module_not_loaded"),
+        (s.BUFFER_WARMING_UP = "buffer_warming_up"),
         s),
     d = (((a = {}).CLIP = "clip"), (a.SCREENSHOT = "screenshot"), (a.VOICE_CLIP = "voice_clip"), a),
     _ =

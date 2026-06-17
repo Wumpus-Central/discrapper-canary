@@ -487,16 +487,14 @@ async function en(e) {
             D.nx.info(`Clip save succeeded with ${t}ms and thumbnail ${e.thumbnail.length} bytes thumbnail.`),
             { ...e, filepath: _ }
         );
-    } catch (t) {
-        if (!("errorMessage" in t))
-            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...A, ...I.lc("doSaveClip") }), t);
-        let e = I.kY(A, t);
-        throw (
-            ((e.error_at = t.errorAt),
-            (e.error_message = t.errorMessage),
-            g.default.track(u.HAw.CLIP_SAVE_FAILURE, e),
-            t)
-        );
+    } catch (e) {
+        if (!("errorMessage" in e))
+            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...A, ...I.lc("doSaveClip") }), e);
+        if ("buffer_warming_up" !== e.errorAt) {
+            let t = I.kY(A, e);
+            (t.error_at = e.errorAt), (t.error_message = e.errorMessage), g.default.track(u.HAw.CLIP_SAVE_FAILURE, t);
+        }
+        throw e;
     }
 }
 async function ei(e) {
@@ -562,11 +560,16 @@ async function ei(e) {
             return;
         }
         r.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e }), ee(e);
-    } catch (e) {
-        D.nx.error("Clip Failed to Save", e),
-            I?.stop(),
-            a || (0, _.Ak)("clip_error", 0.5),
-            r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", ...et(e) });
+    } catch (i) {
+        let { errorAt: e, errorMessage: n } = et(i);
+        e === y.RC.BUFFER_WARMING_UP
+            ? (D.nx.warn(`Clip save no-op: ${n ?? "buffer warming up"}`),
+              I?.stop(),
+              r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: y.RC.BUFFER_WARMING_UP }))
+            : (D.nx.error("Clip Failed to Save", i),
+              I?.stop(),
+              a || (0, _.Ak)("clip_error", 0.5),
+              r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", errorAt: e, errorMessage: n }));
     } finally {
         clearTimeout(N);
     }

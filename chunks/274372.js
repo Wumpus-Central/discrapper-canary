@@ -305,6 +305,10 @@ let F = new G(o.h, {
         CLIPS_SAVE_CLIP_ERROR: function () {
             N = Math.max(N - 1, 0);
         },
+        CLIPS_SAVE_CLIP_NO_OP: function (e) {
+            let { reason: t } = e;
+            t === f.RC.BUFFER_WARMING_UP && (N = Math.max(N - 1, 0));
+        },
         STREAM_START: function (e) {
             let { sourceName: t, pid: n } = e;
             if (!x.clipsSettings.clipsEnabled) return !1;
