@@ -79,8 +79,6 @@
 }
 
 .container__06b03 {
-    -webkit-backdrop-filter: blur(16px);
-    backdrop-filter: blur(16px);
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -113,4 +111,50 @@
 
 .user-profile-sidebar-redesign .orbsRewardOfferNotice__06b03 {
     margin: 0 calc(var(--space-8)*-1) calc(var(--space-8)*-1)
+}
+
+.row__89036 {
+    align-items: center;
+    border-radius: 4px;
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    font-weight: var(--font-weight-medium);
+    line-height: 30px;
+    margin-block: 1px;
+    margin-inline: 12px 0;
+    padding: 4px
+}
+
+.row__89036:hover {
+    background-color: var(--user-profile-background-hover)
+}
+
+.avatar__89036 {
+    flex-shrink: 0;
+    margin-inline-end: 10px
+}
+
+.details__89036 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden
+}
+
+.tag__89036 {
+    font-size: 16px;
+    line-height: 20px
+}
+
+.displayName__89036 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.discriminator__89036 {
+    font-size: 12px;
+    opacity: .6
 }
