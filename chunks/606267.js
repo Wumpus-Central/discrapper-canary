@@ -163,6 +163,7 @@ function g(e) {
         giftCardCheckboxProps: D,
         walletCoversSubtotal: v,
         walletCoversTotal: R,
+        isWalletBalanceLoaded: O,
     };
 }
 function A(e) {
