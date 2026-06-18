@@ -1292,6 +1292,13 @@ let tk = async (e, t) => {
                       },
         },
         [em.he.PAYMENT_REQUEST]: {
+            submitPaymentElementStepHandler: async (e) => {
+                let { stripe: t, stripeElements: n, remountAddressElement: i, setBillingAddressState: r } = e,
+                    { paymentMethod: s } = await (0, g.YB)(t, n),
+                    { billingAddressInfo: a } = (0, td.uK)(s);
+                r((e) => ({ ...e, info: a })), i();
+            },
+            stepAfterPaymentElement: eR.pn.ADDRESS,
             submitAddressStep: async (e) => {
                 if (e.shouldUsePaymentElement) return await tk(e, em.he.PAYMENT_REQUEST);
                 let {
@@ -1424,7 +1431,7 @@ function tW(e) {
             A(!0);
             let e = p ? d : c.methodType,
                 n = h.current,
-                s = null != e ? tB[e] : null;
+                s = null != e && e in tB ? tB[e] : null;
             if (null == s)
                 throw new tx.v({
                     message: "unknown Add Payment step not handled",
@@ -1511,15 +1518,21 @@ let tK = new ev.A("PaymentElementStepFooter.tsx"),
                 try {
                     if (null == f || !(0, ed.PE)(f)) throw (0, g.ne)("Valid Payment Element source type not found", !0);
                     let { steps: e, methodType: n } = d[f];
-                    if ((o({ steps: e, methodType: n === em.he.UNKNOWN ? f : n }), f === em.he.PAYMENT_REQUEST)) {
-                        let e = p.current,
-                            { paymentMethod: n } = await (0, g.YB)(t, e),
-                            { billingAddressInfo: i } = (0, td.uK)(n);
-                        h((e) => ({ ...e, info: i })), E(), r(eR.pn.ADDRESS);
-                    } else {
-                        let e = (0, ed.eI)(f);
-                        null != e ? r(e) : r(eR.pn.ADDRESS);
+                    o({ steps: e, methodType: n === em.he.UNKNOWN ? f : n });
+                    let i = tB[f];
+                    if (null != i && null != i.submitPaymentElementStepHandler) {
+                        await i.submitPaymentElementStepHandler({
+                            stripe: t,
+                            stripeElements: p.current,
+                            remountAddressElement: E,
+                            setBillingAddressState: h,
+                        }),
+                            r(i.stepAfterPaymentElement ?? eR.pn.ADDRESS);
+                        return;
                     }
+                    let s = (0, ed.eI)(f);
+                    if (null != s) return void r(s);
+                    r(eR.pn.ADDRESS);
                 } catch (e) {
                     tK.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
                 } finally {
