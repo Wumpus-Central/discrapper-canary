@@ -1799,9 +1799,10 @@ eV(
         ["CHANNEL_SYNC"],
         (e) => p.D.loadGuildIds([e.guild_id]),
         (e) => {
-            e.channels.forEach((e) => {
-                eP.add(e);
-            }),
+            e.integrity_check ||
+                e.channels.forEach((e) => {
+                    eP.add(e);
+                }),
                 ej({
                     type: "CHANNEL_SYNC",
                     guild_id: e.guild_id,
