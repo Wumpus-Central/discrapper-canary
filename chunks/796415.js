@@ -10,10 +10,10 @@ var i = e(627968),
     p = e(285286),
     u = e(652215),
     m = e(746080),
-    h = e(76660),
+    h = e(576709),
     x = e(375708),
-    g = e(774469),
-    v = e(562743);
+    g = e(372165),
+    v = e(276791);
 function k(t) {
     let { gameServerGame: a, guildId: e, status: k, ...f } = t,
         S = (0, o.A)(a.gameId, "cover"),

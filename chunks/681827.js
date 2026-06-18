@@ -4,7 +4,7 @@ var i = n(627968);
 n(64700);
 var r = n(503698),
     s = n.n(r),
-    a = n(35122);
+    a = n(540914);
 let o = (e) => {
     let { aspectRatio: t, style: n, className: r, children: o } = e;
     return (0, i.jsx)("div", {

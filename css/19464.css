@@ -1,0 +1,116 @@
+.blockedEdit_b7ab2c,
+.blockedSend_b7ab2c {
+    color: var(--text-default)
+}
+
+.shieldIcon_b7ab2c {
+    color: var(--text-feedback-critical)
+}
+
+.blockedNoticeIcon_b7ab2c {
+    flex: 0
+}
+
+.blockedNotice_b7ab2c {
+    flex: 1
+}
+
+.blockedNoticeContainer_b7ab2c {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 4px;
+    margin-top: 8px
+}
+
+.blockedNoticeContainer_b7ab2c.compact_b7ab2c {
+    margin-inline-start: -8px
+}
+
+.ephemeralAccessories_b7ab2c {
+    margin-top: -4px
+}
+
+.ephemeralAccessories_b7ab2c.compact_b7ab2c {
+    margin-inline-start: -8px
+}
+
+.learnMore_b7ab2c {
+    margin-inline-start: 3px
+}
+
+.popover_f84418.popover_f84418 {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-muted);
+    border-radius: 8px;
+    box-shadow: var(--shadow-low) !important;
+    height: auto;
+    overflow: visible;
+    padding: 2px
+}
+
+.popover_f84418.popover_f84418:hover {
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-medium) !important
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418 {
+    border-radius: 6px;
+    padding: 2px
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418:hover {
+    background: var(--interactive-background-hover);
+    cursor: pointer
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418:hover .icon_f84418 {
+    transform: scale(1.1)
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418:active {
+    background: var(--interactive-background-active);
+    padding: 2px
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418:active .icon_f84418 {
+    transform: scale(1)
+}
+
+.icon_f84418 {
+    display: block;
+    height: 20px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 20px
+}
+
+.full-motion .icon_f84418 {
+    transition: transform .4s cubic-bezier(.16, 1, .3, 1)
+}
+
+.buttonContent_f84418 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.tooltip_f84418 {
+    max-width: 300px
+}
+
+.newBadge_f84418 {
+    padding: 0 4px;
+    pointer-events: none;
+    position: absolute;
+    top: -12px
+}
+
+.separator_f84418 {
+    background: var(--border-subtle);
+    border-radius: 100px;
+    height: 24px;
+    margin: 2px 4px;
+    width: 1px
+}

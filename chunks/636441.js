@@ -5,7 +5,7 @@ n(64700);
 var r = n(772707),
     s = n(834730),
     a = n(375708),
-    o = n(856e3);
+    o = n(561920);
 function l(e) {
     let t,
         { transitionState: n, guild: l, guildBoostQuantity: u, isTransfer: c, graphic: d, onClose: _ } = e,

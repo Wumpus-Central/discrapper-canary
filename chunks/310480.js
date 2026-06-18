@@ -23,7 +23,7 @@ var i = l(627968),
     N = l(688810),
     k = l(139286),
     L = l(429913),
-    E = l(137177),
+    E = l(769015),
     w = l(27620),
     I = l(540999),
     P = l(287809),
@@ -83,9 +83,9 @@ var eg = l(226421),
     ej = l.n(ef),
     ev = l(460905),
     eC = l(713608),
-    eb = l(788077),
+    eb = l(16590),
     ey = l(375708),
-    eA = l(909740);
+    eA = l(788332);
 function eN(e) {
     let { clip: t } = e,
         l = t.decision?.signal;
@@ -146,7 +146,7 @@ function eL(e) {
 var eE = l(665039),
     ew = l(718812),
     eI = l(652215),
-    eP = l(55746);
+    eP = l(798594);
 let eS = function (e) {
     let { clip: t, actionsDisabled: n, isNew: r, onEdit: c, onClick: o, onHoverChange: u } = e,
         m = (0, d.yK)([P.default], () => t.users.map((e) => P.default.getUser(e)).filter(eh.Vq)),
@@ -212,9 +212,9 @@ let eS = function (e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("4615"),
-                            l.e("94267"),
-                            l.e("75518"),
+                            l.e("64379"),
+                            l.e("6619"),
+                            l.e("45554"),
                             l.e("95429"),
                             l.e("91211"),
                             l.e("38601"),
@@ -548,7 +548,7 @@ var eF = l(702841),
     e$ = l(350535),
     eQ = l(572164),
     eY = l(953932),
-    eB = l(713466);
+    eB = l(311162);
 function eX(e) {
     let { header: t, description: l } = e;
     return (0, i.jsxs)("div", {
@@ -625,8 +625,8 @@ let eZ = 16 / 9;
 var eJ = l(621466),
     e0 = l(61491),
     e1 = l(365199),
-    e3 = l(821609),
-    e2 = l(22231),
+    e2 = l(821609),
+    e3 = l(22231),
     e9 = l(549973),
     e5 = l(609174),
     e7 = l(619744),
@@ -634,7 +634,7 @@ var eJ = l(621466),
     e4 = l(585579),
     e8 = l(226870),
     te = l(285072),
-    tt = l(36087);
+    tt = l(742007);
 function tl(e) {
     let { clip: t, actionsDisabled: l, isNew: a, onClick: n, onEdit: s } = e;
     return (0, i.jsx)(e5.Cl, {
@@ -679,9 +679,9 @@ function ti(e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("4615"),
-                            l.e("94267"),
-                            l.e("75518"),
+                            l.e("64379"),
+                            l.e("6619"),
+                            l.e("45554"),
                             l.e("95429"),
                             l.e("91211"),
                             l.e("38601"),
@@ -958,10 +958,10 @@ function tc(e) {
                                 children: [
                                     (0, i.jsx)("div", {
                                         className: tt.lO,
-                                        children: (0, i.jsx)(e3.$, {
+                                        children: (0, i.jsx)(e2.$, {
                                             variant: "secondary",
                                             size: "sm",
-                                            icon: e2.R,
+                                            icon: e3.R,
                                             text: ey.intl.string(ey.t.bt75uw),
                                             onClick: a,
                                             fullWidth: !0,
@@ -1011,8 +1011,8 @@ var tu = l(792852);
 function tm(e) {
     return Math.min(45 * e, 520);
 }
-var th = l(142883),
-    tx = l(434426);
+var th = l(352528),
+    tx = l(32122);
 let tp = [0, 16, 0, 16],
     tg = tp[1] + tp[3];
 function tf(e) {
@@ -1509,7 +1509,7 @@ function tF() {
         i = t_.A.useConfig({ location: "isAutoClipsAvailable" }).enableLeagueEvents;
     return e || t || l || i;
 }
-var tO = l(26049);
+var tO = l(724993);
 function tz(e) {
     let { icon: t, label: l, trailer: a, isSelected: n, isDisabled: r = !1, onClick: c } = e,
         o = r && !n;
@@ -1729,7 +1729,7 @@ function tV(e) {
         ],
     });
 }
-var t$ = l(703814);
+var t$ = l(174726);
 let tQ = a.memo(function (e) {
         let { withHeaderFilters: t, allClips: l } = e,
             n = (0, tu.P)((e) => e.query),
@@ -1780,7 +1780,7 @@ let tQ = a.memo(function (e) {
                                                     ref: h,
                                                     children:
                                                         r > 0
-                                                            ? (0, i.jsx)(e3.$, {
+                                                            ? (0, i.jsx)(e2.$, {
                                                                   size: "sm",
                                                                   variant: "secondary",
                                                                   ...e,
@@ -1996,8 +1996,8 @@ var tq = l(847374),
     tJ = l(441349),
     t0 = l(789645),
     t1 = l(939546),
-    t3 = l(99478);
-function t2(e) {
+    t2 = l(99478);
+function t3(e) {
     return e.setHours(0, 0, 0, 0), e.getTime();
 }
 function t9(e) {
@@ -2006,12 +2006,12 @@ function t9(e) {
 function t5(e, t) {
     if (null == e && null == t) return null;
     let l = (0, t1.Xj)();
-    return { preset: "custom", after: null != e ? t2(e.toDate(l)) : null, before: null != t ? t9(t.toDate(l)) : null };
+    return { preset: "custom", after: null != e ? t3(e.toDate(l)) : null, before: null != t ? t9(t.toDate(l)) : null };
 }
 function t7(e) {
     if (null == e) return null;
     let t = new Date(e);
-    return new t3.ng(t.getFullYear(), t.getMonth() + 1, t.getDate());
+    return new t2.ng(t.getFullYear(), t.getMonth() + 1, t.getDate());
 }
 let t6 = new Intl.DateTimeFormat(void 0, { month: "short", day: "numeric", year: "numeric" });
 function t4(e) {
@@ -2040,7 +2040,7 @@ function t8(e) {
         }
     }
 }
-var le = l(560968);
+var le = l(817480);
 function lt(e) {
     let { closePopout: t } = e,
         l = (0, tu.P)((e) => e.dateFilter),
@@ -2068,17 +2068,17 @@ function lt(e) {
                         let t = new Date();
                         switch (e) {
                             case "today":
-                                return { preset: e, after: t2(new Date(t)), before: t9(new Date(t)) };
+                                return { preset: e, after: t3(new Date(t)), before: t9(new Date(t)) };
                             case "yesterday": {
                                 let l = new Date(t);
                                 return (
                                     l.setDate(l.getDate() - 1),
-                                    { preset: e, after: t2(new Date(l)), before: t9(new Date(l)) }
+                                    { preset: e, after: t3(new Date(l)), before: t9(new Date(l)) }
                                 );
                             }
                             case "last-3-days": {
                                 let l = new Date(t);
-                                return l.setDate(l.getDate() - 2), { preset: e, after: t2(l), before: t9(new Date(t)) };
+                                return l.setDate(l.getDate() - 2), { preset: e, after: t3(l), before: t9(new Date(t)) };
                             }
                             case "this-year": {
                                 let l = t.getFullYear();
@@ -2267,7 +2267,7 @@ function lt(e) {
 }
 var ll = l(103552),
     li = l(914427),
-    la = l(499376);
+    la = l(213424);
 function ln(e) {
     let {
             triggerLabel: t,
@@ -2321,7 +2321,7 @@ function ln(e) {
             });
         },
         children: (e) =>
-            (0, i.jsx)(e3.$, {
+            (0, i.jsx)(e2.$, {
                 ...e,
                 buttonRef: d,
                 size: "sm",
@@ -2332,7 +2332,7 @@ function ln(e) {
             }),
     });
 }
-var ls = l(531454);
+var ls = l(941886);
 function lr(e) {
     let { label: t, icon: l, onRemove: a, removeAriaLabel: n } = e;
     return (0, i.jsxs)("div", {
@@ -2355,7 +2355,7 @@ function lr(e) {
         ],
     });
 }
-var lc = l(915173);
+var lc = l(841765);
 let lo = { all: eb.default.lscwjQ, auto: eb.default.xrOIkz, manual: eb.default.D7HSLJ };
 function ld() {
     let e = (0, tu.P)((e) => e.dateFilter),
@@ -2370,7 +2370,7 @@ function ld() {
             return (0, i.jsx)(lt, { closePopout: t });
         },
         children: (e) =>
-            (0, i.jsx)(e3.$, {
+            (0, i.jsx)(e2.$, {
                 ...e,
                 buttonRef: t,
                 size: "sm",
@@ -2426,7 +2426,7 @@ function lu() {
             });
         },
         children: (e) =>
-            (0, i.jsx)(e3.$, { ...e, buttonRef: l, size: "sm", variant: "secondary", text: s, icon: tW.J }),
+            (0, i.jsx)(e2.$, { ...e, buttonRef: l, size: "sm", variant: "secondary", text: s, icon: tW.J }),
     });
 }
 function lm() {
@@ -2482,7 +2482,7 @@ function lm() {
             });
         },
         children: (e) =>
-            (0, i.jsx)(e3.$, {
+            (0, i.jsx)(e2.$, {
                 ...e,
                 buttonRef: l,
                 size: "sm",
@@ -2779,7 +2779,7 @@ function lC(e) {
         .sort((e, t) => t.createdAt - e.createdAt)
         .slice(0, t);
 }
-var lb = l(509615);
+var lb = l(452143);
 function ly(e) {
     let { clips: t, onEdit: l } = e,
         n = a.useMemo(() => lC(t), [t]),
@@ -2865,7 +2865,7 @@ function ly(e) {
                                   o &&
                                       (0, i.jsx)("div", {
                                           className: lb.BX,
-                                          children: (0, i.jsx)(e3.$, {
+                                          children: (0, i.jsx)(e2.$, {
                                               variant: "overlay-primary",
                                               size: "sm",
                                               onClick: () => d(H.oH.AUTO_CLIPS),
@@ -2923,7 +2923,7 @@ var lA = l(770178),
     lN = l(765548),
     lk = l(569926),
     lL = l(486020),
-    lE = l(545367);
+    lE = l(251287);
 function lw(e) {
     let {
             session: t,
@@ -3079,7 +3079,7 @@ function lw(e) {
             D &&
                 (0, i.jsx)("div", {
                     className: lE.Vc,
-                    children: (0, i.jsx)(e3.$, {
+                    children: (0, i.jsx)(e2.$, {
                         variant: "secondary",
                         size: "sm",
                         text: ey.intl.string(eb.default.pqk9U0),
@@ -3089,7 +3089,7 @@ function lw(e) {
         ],
     });
 }
-var lI = l(471515);
+var lI = l(177435);
 function lP(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: n, onClipClick: s, isLoading: r } = e,
         { enableAutoClipsReview: c } = lp.useConfig({ location: "ClipsGalleryHome" }),
@@ -3165,7 +3165,7 @@ function lP(e) {
                                   ),
                                   (0, i.jsx)("div", {
                                       className: lI.dp,
-                                      children: (0, i.jsx)(e3.$, {
+                                      children: (0, i.jsx)(e2.$, {
                                           variant: "primary",
                                           text: ey.intl.string(eb.default.RQtkop),
                                           onClick: p,
@@ -3182,7 +3182,7 @@ function lP(e) {
 }
 var lS = l(409067),
     lD = l(696016),
-    lM = l(272863);
+    lM = l(847455);
 let lT = a.createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},

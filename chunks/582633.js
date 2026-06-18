@@ -5,7 +5,7 @@ var a = l(627968),
     r = l(939249),
     s = l(256905),
     o = l(372684),
-    u = l(819945);
+    u = l(878185);
 function c() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
@@ -68,8 +68,8 @@ function y() {
     );
 }
 var E = l(696016),
-    C = l(594731),
-    k = l(70585);
+    C = l(97451),
+    k = l(813433);
 function A(e, t) {
     let { applicationAudioEnabled: l, voiceAudioEnabled: a, soundboardAudioEnabled: n, isVoiceClip: i } = t;
     if (!i && l && a && n)
@@ -250,7 +250,7 @@ var $ = l(661531),
     z = l(602853),
     F = l(602674),
     H = l(335416),
-    V = l(944939);
+    V = l(664875);
 let K = new Map(),
     Z = n.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: r, className: s } = e,
@@ -342,9 +342,9 @@ var W = l(343032),
     Q = l(565645),
     Y = l(287809),
     ee = l(562153),
-    et = l(788077),
+    et = l(16590),
     el = l(375708),
-    ea = l(116109);
+    ea = l(995469);
 function en(e) {
     let { icon: t, title: l, body: n, position: i } = e;
     return (0, a.jsx)(J.u, {
@@ -434,7 +434,7 @@ let er = n.memo(function (e) {
             }
         });
 });
-var es = l(818909);
+var es = l(698269);
 let eo = n.memo(function (e) {
     let { videoLength: t, clip: l, onMouseDown: i } = e,
         { timeNotches: r, subNotches: s } = n.useMemo(() => {
@@ -513,8 +513,8 @@ let eo = n.memo(function (e) {
         }),
     });
 });
-var eu = l(639790),
-    ec = l(553887);
+var eu = l(445563),
+    ec = l(541151);
 function ed(e) {
     ((e = Math.round(100 * e) / 100) < 0 || 0.01 > Math.abs(e)) && (e = 0);
     let t = Math.floor(e / 60),

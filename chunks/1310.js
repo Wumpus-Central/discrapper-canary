@@ -185,7 +185,7 @@ var eE = n(842241),
     eN = n(783878),
     ej = n(243721),
     eR = n(375708),
-    ew = n(59005);
+    ew = n(938365);
 let eG = O.Ay.getMaxUsesOptions;
 function eU(e) {
     let {
@@ -388,10 +388,10 @@ function e1(e) {
 }
 var e2 = n(486020),
     e3 = n(240248),
-    e4 = n(427262),
-    e7 = n(806931),
-    e8 = n(898004);
-function e6(e, t) {
+    e7 = n(427262),
+    e4 = n(806931),
+    e6 = n(640852);
+function e8(e, t) {
     if (null != e) return { suggestionData: Y.getSelectedInviteMetadata(e), source: t };
 }
 let e9 = d.memo(
@@ -447,7 +447,7 @@ let e9 = d.memo(
             { voiceChannel: j } = (0, eq.Ay)({ userId: n?.id }),
             R = (0, et.Ay)(j),
             w = (0, x.bG)([ez.A], () => (null != c && null != n ? ez.A.getParticipant(c.id, n.id) : null)),
-            G = o && null != w && w.type === e7.lp.USER && w.ringing,
+            G = o && null != w && w.type === e4.lp.USER && w.ringing,
             U = (0, eP.S3)(F.clD.ONLINE),
             V = d.useCallback(() => {
                 null != l &&
@@ -459,7 +459,7 @@ let e9 = d.memo(
                                   channel: i,
                                   inviteKey: l,
                                   location: a,
-                                  inviteAnalyticsMetadata: e6(s, r),
+                                  inviteAnalyticsMetadata: e8(s, r),
                               },
                               (e) => {
                                   p(!1), m(e);
@@ -473,14 +473,14 @@ let e9 = d.memo(
                                   user: n,
                                   inviteKey: l,
                                   location: a,
-                                  inviteAnalyticsMetadata: e6(s, r),
+                                  inviteAnalyticsMetadata: e8(s, r),
                               },
                               (e) => {
                                   p(!1), m(e);
                               },
                           )));
             }, [l, i, n, a, s, r]),
-            O = e4.Ay.getName(n),
+            O = e7.Ay.getName(n),
             D = null != n ? P.A.getNickname(n.id) : null,
             L = null != i ? (0, et.m1)(i, eA.default, P.A) : null,
             k = null != n ? n.getAvatarURL(i?.guild_id, 32) : null,
@@ -495,7 +495,7 @@ let e9 = d.memo(
             W = null != _ && null == _.icon ? (0, e3.oN)(_.name) : null,
             z = null != q && null != Q;
         null != n && (t = D ?? O);
-        let Y = e4.Ay.getUserTag(n, { decoration: "never" }),
+        let Y = e7.Ay.getUserTag(n, { decoration: "never" }),
             $ = null != t || null != i,
             J = (0, u.jsx)(eB.$, {
                 id: S,
@@ -513,30 +513,30 @@ let e9 = d.memo(
         return (0, u.jsxs)("div", {
             ref: f,
             tabIndex: -1,
-            className: e8.Og,
+            className: e6.Og,
             children: [
                 (0, u.jsxs)("div", {
-                    className: e8.mQ,
+                    className: e6.mQ,
                     children: [
                         z
                             ? G
-                                ? (0, u.jsx)(eY.A, { size: eF._3.SIZE_32, ringing: G, src: q, className: e8.hO })
+                                ? (0, u.jsx)(eY.A, { size: eF._3.SIZE_32, ringing: G, src: q, className: e6.hO })
                                 : (0, u.jsx)(ek.eu, {
                                       src: q,
                                       "aria-label": Q,
                                       size: eF._3.SIZE_32,
-                                      className: e8.hO,
+                                      className: e6.hO,
                                       status: null != n ? K : void 0,
                                       isMobile: null != n ? b : void 0,
                                   })
                             : (0, u.jsx)(y.E, {
                                   variant: "text-md/medium",
-                                  className: e8.q9,
+                                  className: e6.q9,
                                   "aria-hidden": !0,
                                   children: W,
                               }),
                         (0, u.jsxs)("div", {
-                            className: eL()(e8.BT, { [e8.DF]: G }),
+                            className: eL()(e6.BT, { [e6.DF]: G }),
                             children: [
                                 (0, u.jsxs)(y.E, {
                                     id: v,
@@ -547,17 +547,17 @@ let e9 = d.memo(
                                 }),
                                 ee &&
                                     (0, u.jsxs)("div", {
-                                        className: eL()(e8.eq, { [e8.DF]: G }),
+                                        className: eL()(e6.eq, { [e6.DF]: G }),
                                         children: [
                                             X
                                                 ? (0, u.jsx)(eJ.A, {
                                                       size: "custom",
                                                       color: U,
                                                       channel: j,
-                                                      className: e8.j8,
+                                                      className: e6.j8,
                                                   })
                                                 : null != N
-                                                  ? (0, u.jsx)(eQ.A, { icon: N, className: e8.j8 })
+                                                  ? (0, u.jsx)(eQ.A, { icon: N, className: e6.j8 })
                                                   : null,
                                             X
                                                 ? (0, u.jsx)(y.E, {
@@ -592,7 +592,7 @@ let e9 = d.memo(
                     ],
                 }),
                 (0, u.jsxs)("div", {
-                    className: e8.t$,
+                    className: e6.t$,
                     children: [
                         o && null != n && null != c && (0, u.jsx)(e1, { user: n, channel: c, location: "InviteRow" }),
                         J,
@@ -610,7 +610,7 @@ let e9 = d.memo(
         e.ringingEnabled === t.ringingEnabled,
 );
 var e5 = n(746080),
-    te = n(781004);
+    te = n(75596);
 let { INVITE_OPTIONS_FOREVER: tt, INVITE_OPTIONS_7_DAYS: tn, INVITE_OPTIONS_UNLIMITED: ti } = O.Ay;
 class tl extends d.PureComponent {
     _scroller = null;
@@ -744,11 +744,11 @@ class tl extends d.PureComponent {
         let { inviteChannel: e } = this.props;
         return (0, ee.A)(e)
             ? (0, u.jsxs)("div", {
-                  className: e8.UW,
+                  className: e6.UW,
                   children: [
                       (0, u.jsx)(f.E, {
                           size: "custom",
-                          className: e8.QW,
+                          className: e6.QW,
                           color: v.A.unsafe_rawColors.YELLOW_300.css,
                           width: 12,
                       }),
@@ -784,7 +784,7 @@ class tl extends d.PureComponent {
                 t = eR.intl.format(eR.t.MkSwTR, {
                     channelName: n,
                     channelNameHook: (t, n) =>
-                        (0, u.jsxs)("span", { children: [(0, u.jsx)(e, { className: e8.p }), t] }, n),
+                        (0, u.jsxs)("span", { children: [(0, u.jsx)(e, { className: e6.p }), t] }, n),
                 });
             }
         }
@@ -824,7 +824,7 @@ class tl extends d.PureComponent {
                   sectionHeight: 0,
                   renderRow: () =>
                       (0, u.jsx)("div", {
-                          className: e8.Iq,
+                          className: e6.Iq,
                           children: (0, u.jsx)(_.SG, { children: eR.intl.string(eR.t.ojoWgX) }),
                       }),
                   rowHeight: 200,
@@ -835,7 +835,7 @@ class tl extends d.PureComponent {
                     sectionHeight: 0,
                     renderRow: () =>
                         (0, u.jsx)("div", {
-                            className: e8.Iq,
+                            className: e6.Iq,
                             children: (0, u.jsx)(_.SG, { children: eR.intl.string(eR.t.hzPwGG) }),
                         }),
                     rowHeight: 200,
@@ -940,7 +940,7 @@ class tl extends d.PureComponent {
             {
                 bodyContent: (0, u.jsxs)(u.Fragment, {
                     children: [
-                        (0, u.jsx)(y.E, { className: e8.Sv, variant: "text-sm/normal", children: s }),
+                        (0, u.jsx)(y.E, { className: e6.Sv, variant: "text-sm/normal", children: s }),
                         (0, u.jsx)(eO.p, { ...this.props, setInviteFlags: this.handleSetInviteFlags, copyValue: l }),
                     ],
                 }),
@@ -982,7 +982,7 @@ class tl extends d.PureComponent {
         } else
             e ||
                 (o = (0, u.jsxs)("div", {
-                    className: e8.xF,
+                    className: e6.xF,
                     children: [
                         (0, u.jsx)(b.S, {
                             checked: r === tt.value,
@@ -1044,12 +1044,12 @@ function ta(e) {
             "--custom-invite-section-header-gap": 12 * (0 !== t),
             "--custom-icon-collapse-rotate": i ? "0deg" : "-90deg",
         },
-        className: e8.uP,
+        className: e6.uP,
         onClick: () => l(t),
         "aria-expanded": i,
         children: [
             (0, u.jsx)(y.E, { variant: "text-sm/medium", color: "text-muted", children: n }),
-            (0, u.jsx)(N.a, { size: "md", color: "currentColor", className: e8.ep }),
+            (0, u.jsx)(N.a, { size: "md", color: "currentColor", className: e6.ep }),
         ],
     });
 }

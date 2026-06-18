@@ -1,0 +1,18 @@
+e.exports = {
+    kL: "container__4e338",
+    Gt: "gameIcon__4e338",
+    T_: "gameIconImage__4e338",
+    Fz: "extraGamesContainer__4e338",
+    ZS: "extraGameRow__4e338",
+    oL: "extraGameItem__4e338",
+    vk: "clickable__4e338",
+    tJ: "extraGameIconImage__4e338",
+    Fg: "extraGameOverlay__4e338",
+    AZ: "extraGameText__4e338",
+    Sy: "gameActivityLevel__4e338",
+    _8: "gameActivityLevelInner__4e338",
+    E: "favoriteGameContainer__4e338",
+    Xy: "gameCoverArt__4e338",
+    _s: "gameCoverArtImage__4e338",
+    oZ: "gameCoverArtActivityLevelInner__4e338",
+};

@@ -375,7 +375,7 @@ let eu = (e) => {
             ],
         });
     };
-var em = s(69572);
+var em = s(915588);
 let ep = "url(#gradient)",
     ej = (e) => {
         let {
@@ -506,7 +506,7 @@ let ep = "url(#gradient)",
             ],
         });
     };
-var eh = s(388092),
+var eh = s(170236),
     e_ =
         (((l = {})[(l.NITRO_GEM = 0)] = "NITRO_GEM"),
         (l[(l.NITRO_LOGO = 1)] = "NITRO_LOGO"),
@@ -580,7 +580,7 @@ let eg = (e) => {
     };
 var eE = s(375708),
     eC = s(652215),
-    eA = s(9682);
+    eA = s(694354);
 let eR = (e) => {
         let { userRecord: t, placement: s } = e,
             { avatarSrc: l, eventHandlers: r } = (0, el.A)({ userId: t?.id, size: X._3.SIZE_32, animateOnHover: !0 }),
@@ -680,7 +680,7 @@ let eR = (e) => {
                                             }),
                                                 (0, et.openModalLazy)(async () => {
                                                     let { default: e } = await Promise.all([
-                                                        s.e("31987"),
+                                                        s.e("33023"),
                                                         s.e("35432"),
                                                     ]).then(s.bind(s, 121002));
                                                     return (s) => (0, i.jsx)(e, { ...s, sourceAnalyticsLocations: t });
@@ -721,8 +721,8 @@ var ey = s(194509),
     eL = s(860839),
     eP = s(788868),
     ew = s(88001),
-    eS = s(963458),
-    eD = s(735149);
+    eS = s(466919),
+    eD = s(613741);
 let eG = "to_premium_home_button",
     eU = "premium home page",
     eF = "gifting_button",

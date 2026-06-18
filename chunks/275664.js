@@ -14,8 +14,8 @@ var i = n(627968),
     f = n(765548),
     p = n(650583),
     E = n(565164),
-    m = n(242841),
-    g = n(19557);
+    m = n(922139),
+    g = n(6821);
 let A = r.memo(function (e) {
     let { playbackPxSpring: t, isDragging: n, dragX: r } = e;
     return (0, i.jsx)(m.animated.div, {

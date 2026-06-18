@@ -47,7 +47,7 @@ var O = n(355622),
     V = n(138617),
     U = n(294454),
     G = n(375708),
-    B = n(851796);
+    B = n(745812);
 function H(e) {
     let { message: t, canSend: n, selectedDestinations: i, onSend: s, inputValue: r, setInputValue: o } = e,
         u = (0, k.A)(),
@@ -108,8 +108,8 @@ var Q = n(503698),
     es = n(885386),
     er = n(576705),
     eo = n(659674),
-    eu = n(873063),
-    ec = n(808961);
+    eu = n(582068),
+    ec = n(28289);
 function ed(e) {
     let { message: t, forwardOptions: n, channel: s } = e,
         r = es.hH.useSetting(),

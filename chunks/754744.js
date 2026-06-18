@@ -18,7 +18,7 @@ var l,
     G = n(946356),
     O = n(287809),
     S = n(985925),
-    m = n(242841),
+    m = n(922139),
     R = n(66455),
     D = n(844222),
     h = n(866323),
@@ -33,8 +33,8 @@ var l,
     F = n(475358),
     P = n(486974),
     j = n(375708),
-    v = n(369320),
-    X = n(833683);
+    v = n(104168),
+    X = n(645267);
 function b(e) {
     let { onNavigate: t, backPanel: n = P.g.INFO, trailingAction: l } = e;
     return (0, a.jsxs)("div", {
@@ -343,7 +343,7 @@ var eO =
     eD = n(967144),
     eh = n(562153),
     eL = n(881636),
-    eC = n(437874);
+    eC = n(12466);
 function eM(e) {
     let {
         description: t,
@@ -374,7 +374,7 @@ function ex(e) {
     let { children: t, className: n } = e;
     return (0, a.jsx)("div", { className: E()(eC.Fz, n), children: t });
 }
-var eU = n(631234);
+var eU = n(337154);
 function ef(e) {
     var t;
     let n,
@@ -775,13 +775,13 @@ function eZ(e, t, n, l) {
 var e$ = n(452027),
     e0 = n(957485),
     e1 = n(947641),
-    e3 = n(661531),
-    e6 = n(807072),
+    e6 = n(661531),
+    e3 = n(807072),
     e2 = n(622629),
     e7 = n(111159),
     e5 = n(241541),
-    e9 = n(854378),
-    e4 = n(589935),
+    e4 = n(854378),
+    e9 = n(589935),
     e8 = n(309010);
 function te(e) {
     let t,
@@ -845,13 +845,13 @@ function te(e) {
                                         size: "custom",
                                         width: 16,
                                         height: 16,
-                                        color: e3.A.colors.STATUS_POSITIVE,
+                                        color: e6.A.colors.STATUS_POSITIVE,
                                     })
-                                  : (0, a.jsx)(e6.U, {
+                                  : (0, a.jsx)(e3.U, {
                                         size: "custom",
                                         width: 16,
                                         height: 16,
-                                        color: e3.A.colors.ICON_FEEDBACK_CRITICAL,
+                                        color: e6.A.colors.ICON_FEEDBACK_CRITICAL,
                                     }),
                           }),
                       null != c &&
@@ -869,13 +869,13 @@ function te(e) {
                                             size: "custom",
                                             width: 16,
                                             height: 16,
-                                            color: e3.A.colors.STATUS_POSITIVE,
+                                            color: e6.A.colors.STATUS_POSITIVE,
                                         })
-                                      : (0, a.jsx)(e6.U, {
+                                      : (0, a.jsx)(e3.U, {
                                             size: "custom",
                                             width: 16,
                                             height: 16,
-                                            color: e3.A.colors.ICON_FEEDBACK_CRITICAL,
+                                            color: e6.A.colors.ICON_FEEDBACK_CRITICAL,
                                         }),
                           }),
                       (0, a.jsx)(eM, {
@@ -893,9 +893,9 @@ function te(e) {
                       }),
                       null != c &&
                           (0, a.jsx)(eM, {
-                              icon: (0, a.jsx)(e9.$v, {
+                              icon: (0, a.jsx)(e4.$v, {
                                   guild: d,
-                                  size: e9.$v.Sizes.SMOL,
+                                  size: e4.$v.Sizes.SMOL,
                                   animate: !1,
                                   className: X.$f,
                               }),
@@ -921,7 +921,7 @@ function te(e) {
                               description: (0, a.jsx)(eE.E, {
                                   variant: "text-sm/medium",
                                   color: "text-default",
-                                  children: (0, a.jsx)(e4.Ay, {
+                                  children: (0, a.jsx)(e9.Ay, {
                                       userId: c.userId,
                                       guildId: c.guildId,
                                       showJoinMethodContextAsFooter: !0,
@@ -1068,7 +1068,7 @@ function tG(e, t, n) {
         return r;
     }, [l, t, n, e]);
 }
-var tO = n(887645);
+var tO = n(830173);
 function tS(e) {
     let { permission: t, specMap: n } = e,
         l = Q.xBc[t],
@@ -1077,7 +1077,7 @@ function tS(e) {
     return (0, a.jsxs)(f.D, {
         className: E()(tO.t2, { [tO.aE]: i }),
         children: [
-            i && (0, a.jsx)(ti.m, { size: "custom", width: 16, height: 16, color: e3.A.colors.TEXT_BRAND }),
+            i && (0, a.jsx)(ti.m, { size: "custom", width: 16, height: 16, color: e6.A.colors.TEXT_BRAND }),
             (0, a.jsx)(eE.E, { variant: "text-xs/medium", color: "interactive-text-default", children: r }),
         ],
     });
@@ -1517,7 +1517,7 @@ var tP = n(689175),
     ty = n(465364),
     tB = n(187654),
     tV = n(383233),
-    tH = n(517592);
+    tH = n(375256);
 function tw(e) {
     let { userId: t, guildId: n, location: l, className: r, onNavigate: s } = e,
         o = i.useRef(null),
@@ -1700,7 +1700,7 @@ var tW = n(111956),
     tz = n(892547),
     tJ = n(640708),
     tQ = n(468689),
-    tq = n(331987);
+    tq = n(66835);
 function tZ(e) {
     let { permission: t, roleIds: n, guild: l, specMap: r, categoryTitle: s, userId: u } = e,
         o = (0, ei.yK)([tl.A], () => tl.A.getManyRoles(l.id, n)),
@@ -1743,7 +1743,7 @@ function tZ(e) {
                                                         height: 4,
                                                         width: 4,
                                                         "aria-hidden": "true",
-                                                        color: e3.A.colors.ICON_MUTED.css,
+                                                        color: e6.A.colors.ICON_MUTED.css,
                                                     }),
                                                     (0, a.jsx)(es.m, {
                                                         text: j.intl.string(j.t.GZvXuP),
@@ -1754,7 +1754,7 @@ function tZ(e) {
                                                                     size: "custom",
                                                                     width: 12,
                                                                     height: 12,
-                                                                    color: e3.A.colors.TEXT_BRAND,
+                                                                    color: e6.A.colors.TEXT_BRAND,
                                                                 }),
                                                                 (0, a.jsx)(eE.E, {
                                                                     variant: "text-xs/normal",
@@ -1774,7 +1774,7 @@ function tZ(e) {
                                                         height: 4,
                                                         width: 4,
                                                         "aria-hidden": "true",
-                                                        color: e3.A.colors.ICON_MUTED.css,
+                                                        color: e6.A.colors.ICON_MUTED.css,
                                                     }),
                                                     (0, a.jsx)("div", {
                                                         className: tq.Dc,
@@ -1970,7 +1970,7 @@ function t1(e, t) {
         );
     };
 }
-function t3(e) {
+function t6(e) {
     let { userId: t, guildId: n, onClose: l, analyticsLocation: r, className: s } = e,
         E = (0, u.bG)([M.Ay], () => M.Ay.getGuildSidebarState(n), [n]),
         o = E?.details.modViewPanel ?? P.g.INFO,
@@ -2054,12 +2054,12 @@ function t3(e) {
         }),
     });
 }
-var t6 = n(97808),
+var t3 = n(97808),
     t2 = n(778712),
     t7 = n(789645),
     t5 = n(192308),
-    t9 = n(905499),
-    t4 = n(215026),
+    t4 = n(905499),
+    t9 = n(215026),
     t8 = n(473935),
     ne = n(308528),
     nt = n(398590),
@@ -2075,7 +2075,7 @@ var t6 = n(97808),
     n_ = n(957565),
     nc = n(427262),
     nd = n(743981),
-    nA = n(579258);
+    nA = n(637498);
 function ng(e) {
     let { user: t, guildId: n, onClose: l } = e,
         r = t.id,
@@ -2092,7 +2092,7 @@ function ng(e) {
                 children: [
                     (0, a.jsx)("div", {
                         className: nA.Wn,
-                        children: (0, a.jsx)(t6.eu, {
+                        children: (0, a.jsx)(t3.eu, {
                             src: t.getAvatarURL(n, 48),
                             "aria-label": t.username,
                             size: t2._3.SIZE_48,
@@ -2109,7 +2109,7 @@ function ng(e) {
                                         variant: "text-lg/medium",
                                         children: (0, a.jsx)(eu.g, {
                                             name: eh.Ay.getName(n, null, t),
-                                            colorString: e3.A.colors.TEXT_STRONG.css,
+                                            colorString: e6.A.colors.TEXT_STRONG.css,
                                             colorStrings: null,
                                         }),
                                     }),
@@ -2196,17 +2196,17 @@ function nI(e) {
                     text: j.intl.string(j.t["3glT6Z"]),
                     onClick: () => {
                         (0, t5.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e("91740"), n.e("91671"), n.e("40243")]).then(
+                            let { default: e } = await Promise.all([n.e("97660"), n.e("91671"), n.e("40243")]).then(
                                 n.bind(n, 547166),
                             );
                             return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                         });
                     },
-                    children: (0, a.jsx)(t9.N, {
+                    children: (0, a.jsx)(t4.N, {
                         size: "custom",
                         width: 24,
                         height: 24,
-                        color: e3.A.colors.TEXT_DEFAULT.css,
+                        color: e6.A.colors.TEXT_DEFAULT.css,
                     }),
                 }),
             (0, a.jsx)(nT, {
@@ -2214,17 +2214,17 @@ function nI(e) {
                 text: j.intl.string(j.t["5MBJ5M"]),
                 onClick: () => {
                     (0, t5.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("38135"), n.e("91671"), n.e("2504")]).then(
+                        let { default: e } = await Promise.all([n.e("33847"), n.e("91671"), n.e("2504")]).then(
                             n.bind(n, 333179),
                         );
                         return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                     });
                 },
-                children: (0, a.jsx)(t4.w, {
+                children: (0, a.jsx)(t9.w, {
                     size: "custom",
                     width: 24,
                     height: 24,
-                    color: e3.A.colors.TEXT_DEFAULT.css,
+                    color: e6.A.colors.TEXT_DEFAULT.css,
                 }),
             }),
             null != l &&
@@ -2245,7 +2245,7 @@ function nI(e) {
                         size: "custom",
                         width: 24,
                         height: 24,
-                        color: e3.A.colors.TEXT_DEFAULT.css,
+                        color: e6.A.colors.TEXT_DEFAULT.css,
                     }),
                 }),
             (0, a.jsx)(nT, {
@@ -2258,7 +2258,7 @@ function nI(e) {
                     size: "custom",
                     width: 24,
                     height: 24,
-                    color: e3.A.colors.TEXT_DEFAULT.css,
+                    color: e6.A.colors.TEXT_DEFAULT.css,
                 }),
             }),
         ],
@@ -2278,7 +2278,7 @@ function nN(e) {
               ],
           });
 }
-var nG = n(329202);
+var nG = n(271730);
 function nO(e) {
     let { userId: t, guildId: n, onClose: l, className: r, infoPanelClassName: s, style: m, moderatorReportId: R } = e,
         D = (0, S.q)(n),
@@ -2336,7 +2336,7 @@ function nO(e) {
                               className: nG.WH,
                               children: [
                                   (0, a.jsx)(nN, { userId: t, guildId: n, onClose: l, moderatorReportId: R }),
-                                  (0, a.jsx)(t3, { userId: t, guildId: n, onClose: l, className: s }),
+                                  (0, a.jsx)(t6, { userId: t, guildId: n, onClose: l, className: s }),
                               ],
                           }),
                       }),

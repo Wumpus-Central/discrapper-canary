@@ -5,7 +5,7 @@ n(64700);
 var r = n(834730),
     s = n(500380),
     a = n(423764),
-    o = n(706157);
+    o = n(2797);
 function l(e) {
     let { storeCountry: t } = e;
     return (0, i.jsxs)("div", {

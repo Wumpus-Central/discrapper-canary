@@ -14,7 +14,7 @@ var i = n(627968),
     f = n(652215),
     p = n(307731),
     E = n(375708),
-    m = n(913582);
+    m = n(24238);
 let g = { section: f.JJy.VOICE_CHANNEL_EFFECTS_EMOJI_PICKER, openPopoutType: "gift_effect_emoji_picker" },
     A = p.EmojiIntention.GIFT;
 function I(e) {

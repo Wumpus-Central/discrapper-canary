@@ -27,7 +27,7 @@ var f = i(235986),
     _ = i(921853),
     I = i(320448),
     C = i(375708),
-    b = i(516883);
+    b = i(632787);
 let y = s.forwardRef(function (e, t) {
     let { currentPageIndex: i, numPages: s, onChangePage: l, children: r, showPageCount: a = !0, ...o } = e,
         u = i >= s - 1,
@@ -274,7 +274,7 @@ let eA = function (e, t) {
     });
 };
 var eh = i(818348),
-    eE = i(600410);
+    eE = i(12762);
 async function eS(e) {
     try {
         return (
@@ -355,7 +355,7 @@ function eT(e) {
               })
             : null;
 }
-var ex = i(137177),
+var ex = i(769015),
     ep = i(250627),
     ef = i(871109),
     eN = i(571654),
@@ -1107,7 +1107,7 @@ function e6(e) {
         hasLinkedToApplication: h,
     });
 }
-var e4 = i(665644);
+var e4 = i(687788);
 function e7(e) {
     let { payments: t, locale: i, compactMode: l, numPages: a } = e,
         o = s.useRef(null),

@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(815576);
+    o = n(34904);
 class l extends r.PureComponent {
     static defaultProps = { paused: !0 };
     state = { aStreamId: null, aReady: !1, bStreamId: this.props.streamId, bReady: !0 };

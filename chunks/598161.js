@@ -89,7 +89,7 @@ function F(e) {
 var U = i(192308),
     W = i(821609),
     H = i(307301),
-    B = i(392756);
+    B = i(79284);
 function V(e) {
     let { className: t } = e,
         { trackUserProfileEditAction: s } = (0, G.NJ)(),
@@ -97,7 +97,7 @@ function V(e) {
             s({ action: "PRESS_ADD_WIDGET" }),
                 (0, U.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([i.e("4402"), i.e("87591")]).then(i.bind(i, 333114));
+                        let { default: e } = await Promise.all([i.e("8978"), i.e("87591")]).then(i.bind(i, 333114));
                         return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: s });
                     },
                     { stackingBehavior: "stack" },
@@ -171,7 +171,7 @@ var J = i(128988),
     ei = i(841595),
     en = i(725386),
     el = i(527139),
-    es = i(190322);
+    es = i(215538);
 function ea(e) {
     let { userId: t } = e,
         { trackUserProfileAction: i, trackUserProfileEditAction: s } = (0, G.NJ)(),
@@ -222,7 +222,7 @@ function ea(e) {
         })
     );
 }
-var er = i(812868);
+var er = i(117444);
 function ec(e) {
     let { widget: t, ...i } = e;
     return t instanceof f.R

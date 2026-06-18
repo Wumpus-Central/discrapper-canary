@@ -101,7 +101,7 @@ var ea = l(735438),
     ef = l(545442),
     eC = l(316710),
     ej = l(821589),
-    eb = l(262384);
+    eb = l(165808);
 let eN = { XSMALL: eb.xsmall, SMALL: eb.small, MEDIUM: eb.medium, LARGE: eb.large };
 class eE extends i.PureComponent {
     static Sizes = eN;
@@ -133,7 +133,7 @@ class eE extends i.PureComponent {
     }
 }
 var ev = l(967144),
-    ey = l(320011);
+    ey = l(660811);
 function eS(e) {
     let { role: t, guild: s } = e,
         [a, r] = i.useState(!1);
@@ -226,8 +226,8 @@ var eI = l(736653),
     eF = l(508573),
     ez = l.n(eF),
     eZ = l(66834),
-    eW = l(204594),
-    eY = l(729232);
+    eW = l(17586),
+    eY = l(329296);
 let eJ = s.Ay.connectStores([W.A, e_.A], () => {
     let e = e_.A.getChannel();
     return {
@@ -642,7 +642,7 @@ function e0() {
     let i = t[l];
     return (0, n.jsxs)(eR.Ay, { className: eW.kL, children: [(0, n.jsx)(eK, {}), (0, n.jsx)(eX, { overwrite: i })] });
 }
-var e2 = l(369281);
+var e2 = l(311809);
 function e5() {
     let e = (0, s.bG)([W.A], () => W.A.advancedMode);
     return (0, n.jsxs)(n.Fragment, {
@@ -679,43 +679,43 @@ function e5() {
     });
 }
 var e1 = l(243721),
-    e3 = l(235986),
-    e7 = l(804215);
+    e7 = l(235986),
+    e3 = l(60727);
 function e4(e) {
     let { description: t, icon: l, id: i, label: s, onChange: r, value: o } = e;
     return (0, n.jsxs)("div", {
-        className: e7.U,
+        className: e3.U,
         children: [
-            (0, n.jsxs)(e3.A, {
-                justify: e3.A.Justify.BETWEEN,
-                align: e3.A.Align.CENTER,
+            (0, n.jsxs)(e7.A, {
+                justify: e7.A.Justify.BETWEEN,
+                align: e7.A.Align.CENTER,
                 children: [
                     l,
-                    (0, n.jsx)(e3.A.Child, {
+                    (0, n.jsx)(e7.A.Child, {
                         grow: 1,
                         children: (0, n.jsx)(a.E, { variant: "text-md/semibold", children: s }),
                     }),
                     null != r && null != o && (0, n.jsx)(e1.d, { id: i, checked: o, onChange: r }),
                 ],
             }),
-            (0, n.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e7.L, children: t }),
+            (0, n.jsx)(a.E, { variant: "text-xs/normal", color: "text-default", className: e3.L, children: t }),
         ],
     });
 }
 var e6 = l(661531),
-    e8 = l(993077),
-    e9 = l(665877);
+    e9 = l(993077),
+    e8 = l(400725);
 let te = (e) => {
     let { className: t, icon: l, noticeText: i, buttonText: s, onClick: r, canSync: o } = e;
-    return (0, n.jsx)(e8.Z, {
-        className: A()(t, e9.N),
-        children: (0, n.jsxs)(e3.A, {
-            justify: e3.A.Justify.BETWEEN,
-            align: e3.A.Align.CENTER,
+    return (0, n.jsx)(e9.Z, {
+        className: A()(t, e8.N),
+        children: (0, n.jsxs)(e7.A, {
+            justify: e7.A.Justify.BETWEEN,
+            align: e7.A.Align.CENTER,
             children: [
                 (0, n.jsx)(l, { width: 20, height: 20, size: "custom", color: e6.A.unsafe_rawColors.YELLOW_300.css }),
                 (0, n.jsx)("div", {
-                    className: e9.P,
+                    className: e8.P,
                     children: (0, n.jsx)(a.E, { variant: "text-md/normal", children: i }),
                 }),
                 o && (0, n.jsx)(T.$, { size: "sm", variant: "secondary", onClick: r, text: s ?? void 0 }),
@@ -725,7 +725,7 @@ let te = (e) => {
 };
 var tt = l(719366),
     tl = l(818348),
-    tn = l(413807);
+    tn = l(497903);
 function ti(e) {
     let { channel: t, roles: l, members: i, disabledReason: s, getRemoveTooltipHint: r } = e;
     return (0, n.jsx)(v.OZ, {
@@ -894,10 +894,10 @@ function ts(e) {
                                     onClick: function () {
                                         (0, y.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                l.e("13250"),
-                                                l.e("81380"),
-                                                l.e("4158"),
-                                                l.e("66373"),
+                                                l.e("79086"),
+                                                l.e("67696"),
+                                                l.e("37398"),
+                                                l.e("11585"),
                                                 l.e("92513"),
                                                 l.e("89916"),
                                                 l.e("20379"),
@@ -1016,9 +1016,9 @@ function ta(e) {
                                                 onClick: function () {
                                                     (0, y.openModalLazy)(async () => {
                                                         let { default: e } = await Promise.all([
-                                                            l.e("13250"),
-                                                            l.e("81380"),
-                                                            l.e("4158"),
+                                                            l.e("79086"),
+                                                            l.e("67696"),
+                                                            l.e("37398"),
                                                             l.e("92513"),
                                                             l.e("89916"),
                                                             l.e("20379"),
@@ -1245,8 +1245,8 @@ var tS = l(371444),
     t5 = l(807632),
     t1 = l(376310);
 l(253913);
-var t3 = l(245567);
-function t7(e) {
+var t7 = l(231935);
+function t3(e) {
     let { channel: t } = e,
         a = (0, s.bG)([Q.A], () => Q.A.can(eB.xBc.MANAGE_CHANNELS, t), [t]),
         r = t.availableTags.length >= 20,
@@ -1256,7 +1256,7 @@ function t7(e) {
             a &&
                 !e &&
                 (0, y.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([l.e("50513"), l.e("47326")]).then(l.bind(l, 950989));
+                    let { default: e } = await Promise.all([l.e("2225"), l.e("47326")]).then(l.bind(l, 950989));
                     return (l) => (0, n.jsx)(e, { ...l, channelId: t.id, guildId: t.guild_id });
                 });
         }, [t, a]),
@@ -1266,7 +1266,7 @@ function t7(e) {
                 !a ||
                     u(e) ||
                     (0, y.openModalLazy)(async () => {
-                        let { default: i } = await Promise.all([l.e("50513"), l.e("47326")]).then(l.bind(l, 950989));
+                        let { default: i } = await Promise.all([l.e("2225"), l.e("47326")]).then(l.bind(l, 950989));
                         return (l) => (0, n.jsx)(i, { ...l, channelId: t.id, guildId: t.guild_id, tag: e });
                     });
             },
@@ -1280,7 +1280,7 @@ function t7(e) {
             (0, d.fy)({ availableTags: e });
         });
     return (0, n.jsxs)("div", {
-        className: t3._A,
+        className: t7._A,
         children: [
             o
                 ? t.availableTags.map((e) =>
@@ -1303,7 +1303,7 @@ function t7(e) {
             o
                 ? (0, n.jsx)(N.D, {
                       onClick: c,
-                      className: A()(t3.JE, { [t3.r9]: !a || r }),
+                      className: A()(t7.JE, { [t7.r9]: !a || r }),
                       children: (0, n.jsx)(tK.j, {
                           size: "custom",
                           "aria-label": eH.intl.string(eH.t["/jubeD"]),
@@ -1347,7 +1347,7 @@ function t4(e) {
             onDragReset: o,
         });
     return (0, n.jsx)("div", {
-        className: A()(t3.kL, { [t3.A]: null != h && c < h, [t3.Ze]: null != h && c > h }),
+        className: A()(t7.kL, { [t7.A]: null != h && c < h, [t7.Ze]: null != h && c > h }),
         ref: (e) => {
             u(g(e));
         },
@@ -1367,13 +1367,13 @@ function t4(e) {
     });
 }
 var t6 = l(235640),
-    t8 = l(268761),
-    t9 = l(474078),
+    t9 = l(268761),
+    t8 = l(474078),
     le = l(783878),
-    lt = l(101704);
+    lt = l(980296);
 let ll = (e) => {
     let { autoArchiveDuration: t, onChange: l, isDisabled: i, helperText: s } = e,
-        a = (0, t8.Gk)();
+        a = (0, t9.Gk)();
     return (0, n.jsx)("div", {
         className: lt.gy,
         children: (0, n.jsx)(le.Z, {
@@ -1399,7 +1399,7 @@ let lo = (0, l(600975).C)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "Enable spoiler channel setting", config: { enabled: !0 } }],
 });
-var ld = l(373378);
+var ld = l(818050);
 function lc(e) {
     let { label: t, helperText: l, hideLabel: s, disabled: a, value: r, onChange: o } = e,
         [d, c] = i.useState(null),
@@ -1699,7 +1699,7 @@ function lg(e) {
 var lm = l(746080),
     lx = l(307731),
     lp = l(37411),
-    lA = l(867395);
+    lA = l(263107);
 let lf = {
         popoutLocation: {
             page: eB.liQ.CHANNEL_SETTINGS,
@@ -1746,7 +1746,7 @@ let lf = {
                     defaultForumLayout: j,
                     defaultTagSetting: b,
                 } = e;
-                e.isThread() && 0 === (t = (0, t9.A)(t, !0)).length
+                e.isThread() && 0 === (t = (0, t8.A)(t, !0)).length
                     ? o.h.dispatch({
                           type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
                           errors: { name: eH.intl.string(eH.t.uXA573) },
@@ -1932,7 +1932,7 @@ class lE extends i.PureComponent {
                               label: eH.intl.string(eH.t["P/y+sj"]),
                               description: eH.intl.string(eH.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
-                              children: (0, n.jsx)(t7, { channel: e }),
+                              children: (0, n.jsx)(t3, { channel: e }),
                           }),
                           (0, n.jsx)(tw.S, {
                               disabled: !s || x,
@@ -2190,7 +2190,7 @@ class lE extends i.PureComponent {
                       page: eB.liQ.CHANNEL_SETTINGS,
                       children: (0, n.jsx)(ll, {
                           isDisabled: !s,
-                          autoArchiveDuration: (0, t8.Gl)(e, null),
+                          autoArchiveDuration: (0, t9.Gl)(e, null),
                           onChange: this.handleChangeDefaultAutoArchiveDuration,
                           helperText: e.isForumLikeChannel()
                               ? eH.intl.string(eH.t.fyXclY)
@@ -2380,8 +2380,8 @@ class lE extends i.PureComponent {
                     : (0, eu.M)(i)
                       ? l(241306)
                       : l(16474)),
-            (0, n.jsx)(e3.A, {
-                justify: e3.A.Justify.CENTER,
+            (0, n.jsx)(e7.A, {
+                justify: e7.A.Justify.CENTER,
                 className: ld.o9,
                 children: (0, n.jsx)("img", { alt: "", width: 280, height: 165, src: t }),
             })
@@ -2429,7 +2429,7 @@ class lE extends i.PureComponent {
     handleChangeName = (e) => {
         let { channel: t } = this.props;
         if (null == t) return;
-        t.isThread() ? (e = (0, t9.A)(e, !1)) : eB.kvI.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, ls.an)(e));
+        t.isThread() ? (e = (0, t8.A)(e, !1)) : eB.kvI.LIMITED_CHANNEL_NAME.has(t.type) && (e = (0, ls.an)(e));
         let l = this.nameInputRef.current?.selectionStart ?? 0;
         (0, d.fy)({ name: e }),
             setTimeout(() => {
@@ -2442,7 +2442,7 @@ class lE extends i.PureComponent {
             n = t?.length ?? 0,
             i = l?.selectionStart === 0 && l?.selectionEnd === n;
         if (((this.cursorPosition = i ? n : (l?.selectionStart ?? n)), e?.isThread() && null != t)) {
-            let e = (0, t9.A)(t, !0);
+            let e = (0, t8.A)(t, !0);
             e !== t && (0, d.fy)({ name: e });
         }
     };
@@ -2607,7 +2607,7 @@ function lv() {
         showSpoilerChannelSetting: j,
     });
 }
-var ly = l(554412);
+var ly = l(181420);
 function lS(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         l = arguments.length > 2 ? arguments[2] : void 0;

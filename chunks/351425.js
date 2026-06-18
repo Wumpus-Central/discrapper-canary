@@ -41,14 +41,14 @@ function G(e) {
         return 0 === e.length ? [] : (0, P.k)(e);
     }, [t?.entitlements]);
 }
-var O = l(645704),
+var O = l(853513),
     T = l(375708),
     D = l(843095),
     k = l(568065),
     V = l(800007),
-    U = l(76660),
-    M = l(594233),
-    W = l(607204);
+    U = l(576709),
+    M = l(989177),
+    W = l(313124);
 function F(e) {
     let t,
         l,
@@ -247,7 +247,7 @@ function ec(e) {
 var ep = l(867060),
     em = l(652215),
     eg = l(508155),
-    ex = l(736591);
+    ex = l(254204);
 function ef(e) {
     let t,
         { active: l, nextActive: n, position: r } = e;
@@ -371,7 +371,7 @@ function e_(e, t) {
                                   let r = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                                   (0, f.openModalLazy)(
                                       async () => {
-                                          let { default: r } = await Promise.all([l.e("53803"), l.e("75295")]).then(
+                                          let { default: r } = await Promise.all([l.e("7255"), l.e("75295")]).then(
                                               l.bind(l, 289634),
                                           );
                                           return (l) =>
@@ -417,7 +417,7 @@ function e_(e, t) {
         return i;
     }, [e, t, r, a, o]);
 }
-var eS = l(804300);
+var eS = l(401996);
 function ey(e) {
     let { guildId: t, group: l, powerups: r } = e,
         [a, o] = n.useState(!1),
@@ -539,7 +539,7 @@ var eR = l(862482),
     eP = l(403362),
     eG = l(408278),
     eO = l(789645),
-    eT = l(760665);
+    eT = l(818905);
 function eD(e) {
     let { markAsDismissed: t } = e;
     return (0, s.jsxs)("div", {
@@ -573,9 +573,9 @@ function eD(e) {
 }
 var ek = l(972213),
     eV = l(695366),
-    eU = l(990624),
+    eU = l(689568),
     eM = l(859241),
-    eW = l(102316);
+    eW = l(676908);
 function eF(e) {
     let { guildId: t, powerupNames: l, warnings: r } = e,
         {
@@ -630,7 +630,7 @@ function eF(e) {
           })
         : null;
 }
-var eB = l(758437);
+var eB = l(472485);
 function eK(e) {
     let { text: t } = e;
     return (0, s.jsx)("div", {
@@ -703,7 +703,7 @@ function eJ(e) {
           })
         : null;
 }
-var e$ = l(710047);
+var e$ = l(697311);
 function eX(e) {
     let { count: t, type: l } = e,
         n = (function (e, t) {
@@ -740,7 +740,7 @@ function eX(e) {
         ],
     });
 }
-var ez = l(568877);
+var ez = l(685293);
 function eH(e) {
     let { guildId: t } = e,
         l = (0, i.bG)([c.A], () => c.A.getGuild(t)),
@@ -799,35 +799,35 @@ var eQ = l(97808),
     eY = l(730134),
     e0 = l(85829),
     e1 = l(319756),
-    e6 = l(854627),
-    e5 = l(696451),
-    e8 = l(317525),
-    e4 = l(287809),
-    e7 = l(562153),
-    e3 = l(19575),
-    e9 = l(941610);
-let e2 = e3.Ay.getEnableHardwareAcceleration() ? eQ.Js : eY.A;
+    e5 = l(854627),
+    e8 = l(696451),
+    e6 = l(317525),
+    e9 = l(287809),
+    e3 = l(562153),
+    e7 = l(19575),
+    e4 = l(32746);
+let e2 = e7.Ay.getEnableHardwareAcceleration() ? eQ.Js : eY.A;
 function te(e) {
     let { guildId: t } = e,
         l = (0, i.bG)([c.A], () => c.A.getGuild(t)),
-        n = (0, i.bG)([e8.A], () => e8.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
-        r = (0, i.bG)([e4.default], () => e4.default.getCurrentUser()),
+        n = (0, i.bG)([e6.A], () => e6.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
+        r = (0, i.bG)([e9.default], () => e9.default.getCurrentUser()),
         a = r?.id,
-        o = (0, i.bG)([e5.Ay], () => (null != a ? e5.Ay.getMember(t, a) : void 0), [a, t]),
+        o = (0, i.bG)([e8.Ay], () => (null != a ? e8.Ay.getMember(t, a) : void 0), [a, t]),
         u = o?.premiumSince != null,
         d = (0, i.bG)([eI.Ay], () => eI.Ay.useReducedMotion),
         {
             avatarDecorationSrc: p,
             avatarSrc: m,
             eventHandlers: x,
-        } = (0, e6.A)({ userId: r?.id, guildId: t, size: eZ._3.SIZE_40, animateOnHover: !d });
+        } = (0, e5.A)({ userId: r?.id, guildId: t, size: eZ._3.SIZE_40, animateOnHover: !d });
     return null == l || null == o || null == r
         ? null
         : (0, s.jsxs)("div", {
-              className: e9.ft,
+              className: e4.ft,
               children: [
                   (0, s.jsxs)("div", {
-                      className: e9.FS,
+                      className: e4.FS,
                       children: [
                           (0, s.jsx)(I.E, {
                               variant: "text-md/semibold",
@@ -863,20 +863,20 @@ function te(e) {
                           }),
                           username: (0, s.jsx)(eq.g, {
                               variant: "text-md/semibold",
-                              name: e7.Ay.getName(t, null, r),
+                              name: e3.Ay.getName(t, null, r),
                               colorString: n.colorString,
                               colorStrings: n.colorStrings,
                           }),
-                          className: g()(e9.Qs, e9.cX),
+                          className: g()(e4.Qs, e4.cX),
                           message: T.intl.string(T.t["6OSasb"]),
                           decorations: (0, s.jsx)(A._, {
                               color: R.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                              className: e9.$J,
+                              className: e4.$J,
                           }),
                       }),
                   (0, s.jsx)(eL.A, {
                       guild: l,
-                      className: e9.Qs,
+                      className: e4.Qs,
                       analyticsLocation: {
                           page: em.liQ.GUILD_POWERUPS_OVERVIEW,
                           section: em.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
@@ -897,8 +897,8 @@ var tt = l(820739),
     ti = l(606049),
     ta = l(58703),
     to = l(967144),
-    tu = l(226114),
-    td = l(788724);
+    tu = l(168642),
+    td = l(198964);
 function tc(e) {
     let t,
         { boost: l, phase: n, sortKey: r } = e,
@@ -912,11 +912,11 @@ function tc(e) {
                     username: l,
                     roleColor: s,
                     roleColorStrings: n,
-                } = (0, i.cf)([e5.Ay], () => {
-                    let t = e5.Ay.getMember(e.guildId, e.userId);
+                } = (0, i.cf)([e8.Ay], () => {
+                    let t = e8.Ay.getMember(e.guildId, e.userId);
                     return {
                         username:
-                            e5.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? T.intl.string(T.t["30mdIx"]),
+                            e8.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? T.intl.string(T.t["30mdIx"]),
                         roleColor: t?.colorString ?? null,
                         roleColorStrings: t?.colorStrings ?? null,
                     };
@@ -994,7 +994,7 @@ function tc(e) {
         ],
     });
 }
-var tp = l(816564);
+var tp = l(639796);
 function tm(e) {
     let { guildId: t } = e,
         l = (function (e) {
@@ -1030,12 +1030,12 @@ function tm(e) {
                             .slice(0, void 0),
                     [l, void 0, s, t],
                 ),
-                a = (0, i.yK)([e5.Ay], () => {
+                a = (0, i.yK)([e8.Ay], () => {
                     let t = new Set();
                     return (
                         r.forEach((l) => {
                             let { boost: s } = l;
-                            null == e5.Ay.getMember(e, s.userId) && t.add(s.userId);
+                            null == e8.Ay.getMember(e, s.userId) && t.add(s.userId);
                         }),
                         Array.from(t)
                     );
@@ -1071,7 +1071,7 @@ function tm(e) {
               ],
           });
 }
-var tg = l(207293);
+var tg = l(502525);
 function tx(e) {
     let t,
         r,
@@ -1189,7 +1189,7 @@ function tx(e) {
                 modalKey: `dismissible_content_${C}`,
             };
             (0, f.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([l.e("24628"), l.e("86618")]).then(l.bind(l, 442241));
+                let { default: e } = await Promise.all([l.e("98887"), l.e("86618")]).then(l.bind(l, 442241));
                 return (t) => (0, s.jsx)(e, { modalConfig: b, markAsDismissed: N, ...t });
             }, e);
         }

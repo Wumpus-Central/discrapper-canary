@@ -32,7 +32,7 @@ var R = n(186111),
     w = n(652215),
     _ = n(650583),
     v = n(375708),
-    L = n(212064);
+    L = n(326112);
 class E extends l.Component {
     searchBarRef = l.createRef();
     state = { focused: !1 };
@@ -128,7 +128,7 @@ var D = n(657044),
     O = n(976860),
     U = n(174459),
     k = n(144914),
-    V = n(659159);
+    V = n(256855);
 let G = (0, k.S)() || !1,
     H = l.memo(function (t) {
         let { currentRoute: e, renderToolbar: n } = t,
@@ -179,7 +179,7 @@ var K = n(451988),
     Q = n(979604),
     q = n(235986),
     $ = n(596719),
-    Z = n(137177),
+    Z = n(769015),
     tt = n(529433),
     te = n(674378),
     tn = n(240248),
@@ -323,7 +323,7 @@ let tm = y.Ay.connectStores([tr.A], (t) => {
     let { libraryApplication: e } = t;
     return { cloudSyncState: tr.A.getState(e.id, e.branchId) };
 })(tA);
-var tg = n(108117);
+var tg = n(855189);
 let tx = (0, tn.xI)(X.A.GAME_LIST_ROW_MIN_HEIGHT),
     tf = (0, tn.xI)(X.A.GAME_LIST_LINKED_TO_GLOW_DURATION),
     ty = Object.freeze({ [w.DpB.PLATFORM]: "Platform", [w.DpB.LAST_PLAYED]: "Last Played", [w.DpB.NAME]: "Name" });
@@ -716,7 +716,7 @@ var tS = n(735438),
     tX = n(255438),
     tz = n(505806),
     tW = n(998304),
-    tY = n(112145);
+    tY = n(936593);
 class tJ extends l.PureComponent {
     dataChangedAt;
     fillColor;
@@ -801,7 +801,7 @@ class tJ extends l.PureComponent {
         });
     }
 }
-var tQ = n(447187);
+var tQ = n(743827);
 let tq = function (t) {
     let { title: e, className: n, color: l, animate: s, getHistoricalTotalBytes: r } = t;
     return (0, i.jsx)(tz.A, {
@@ -848,7 +848,7 @@ let tq = function (t) {
         },
     });
 };
-var t$ = n(990579);
+var t$ = n(692275);
 function tZ(t) {
     let { className: e, children: n, onContextMenu: l, item: s } = t;
     return (0, i.jsx)("div", { className: e, onContextMenu: (t) => l(t, s), children: n });
@@ -861,7 +861,7 @@ let t0 = [tw.A.unsafe_rawColors.BLUE_345.css, tw.A.colors.INTERACTIVE_TEXT_DEFAU
             children: (0, i.jsx)(tj.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
         });
     };
-function t4(t, e) {
+function t5(t, e) {
     switch (e) {
         case w.OQC.POST_INSTALL_SCRIPTS:
         case w.OQC.PLANNING:
@@ -872,7 +872,7 @@ function t4(t, e) {
             return (0, tX.Xq)(t, { useKibibytes: !0 });
     }
 }
-let t5 = {
+let t4 = {
     [w.WTw.INSTALLING]: {
         [tt.pJ.NONE]: (t, e, n, i) => v.intl.formatToPlainString(v.t.JfJt9d, { percent: t, progress: e, total: n }),
         [tt.pJ.SECONDS]: (t, e, n, i) =>
@@ -902,7 +902,7 @@ let t5 = {
     },
 };
 function t2(t, e, n, i, l) {
-    let s = t5[e],
+    let s = t4[e],
         r = null != s ? Object.keys(s) : [],
         { unit: a, time: o } = (0, tt.$l)(null != t ? t / 60 : null, r);
     if (null != s && null != a) {
@@ -913,8 +913,8 @@ function t2(t, e, n, i, l) {
 }
 function t3(t) {
     let { type: e, stage: n, percent: i, progress: l, total: s, secondsRemaining: r } = t,
-        a = t4(s, n),
-        o = t4(l, n);
+        a = t5(s, n),
+        o = t5(l, n);
     switch (n) {
         case w.OQC.QUEUED:
             if (0 === l) return v.intl.string(v.t.RpfBqd);
@@ -994,8 +994,8 @@ class t6 extends l.PureComponent {
         if (null != n) {
             let { progress: i, total: l, stage: s } = n;
             if (null != i && null != l) {
-                let n = t4(l, s),
-                    r = t4(i, s),
+                let n = t5(l, s),
+                    r = t5(i, s),
                     a = Math.floor((e = te.uA(i, l)));
                 t =
                     s === w.OQC.PAUSING
@@ -1287,7 +1287,7 @@ let el = (0, tU.A)(
     }))((0, tO.A)(en)),
 );
 var es = n(613057),
-    er = n(318742);
+    er = n(20438);
 class ea extends l.PureComponent {
     _scrollerRef = l.createRef();
     _scrollToOnMount;
@@ -1362,7 +1362,7 @@ var eo = n(665260),
     eR = n(452027),
     eS = n(466472),
     eP = n(29160),
-    ej = n(940895);
+    ej = n(834911);
 let ew = Math.ceil(2 * Math.PI * 20),
     e_ = (t) => {
         let e,
@@ -1407,8 +1407,8 @@ let ew = Math.ceil(2 * Math.PI * 20),
 var ev = n(775228),
     eL = n(723702),
     eE = n(19575),
-    eb = n(449600),
-    eD = n(373378);
+    eb = n(744832),
+    eD = n(818050);
 class eM extends l.PureComponent {
     state = { label: void 0, isDefault: null };
     handleStartEditing = () => {
@@ -1639,7 +1639,7 @@ let eO = y.Ay.connectStores([ev.A], () => ({
     installationPathsMetadata: ev.A.installationPathsMetadata,
     defaultInstallationPath: ev.A.defaultInstallationPath,
 }))(eB);
-var eU = n(810947);
+var eU = n(869187);
 function ek(t) {
     let { applicationViewItems: e, restoreApplication: n } = t;
     if (0 === e.length) return null;
@@ -1752,7 +1752,7 @@ function eG() {
     };
     return (0, i.jsx)(eV, { ...t });
 }
-var eH = n(141101);
+var eH = n(536813);
 function eK() {
     return (0, i.jsxs)(s.dO, {
         children: [

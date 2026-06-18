@@ -3,7 +3,7 @@ var i = l(627968),
     s = l(64700),
     n = l(503698),
     a = l.n(n),
-    d = l(242841),
+    d = l(922139),
     r = l(738678),
     c = l(12470),
     o = l(17928),
@@ -82,7 +82,7 @@ var i = l(627968),
     eO = l(31408),
     e_ = l(731854),
     eG = l(375708),
-    eM = l(24908);
+    eM = l(391308);
 let eU = [eC.lp.ACTIVITY],
     eD = s.memo((e) => {
         var t, l, n;
@@ -261,12 +261,12 @@ let eU = [eC.lp.ACTIVITY],
             e1 = (0, o.bG)([ep.A], () => (p.type === eC.lp.USER ? ep.A.getVoiceVolume(p.id) : -1 / 0)),
             e2 = (0, H.v)({ isSpeaking: eR, voiceDb: e1, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
             e5 = (0, eC.Ay)(p) ? m.k : eV ? A.n : h.E,
-            e7 = p.type === eC.lp.STREAM && M;
+            e6 = p.type === eC.lp.STREAM && M;
         return (0, i.jsx)(R.A, {
             section: eb.JJy.VOICE_CHANNEL_TILE,
             children: (0, i.jsx)(J.Ay, {
                 streamKey: p.id,
-                enableZoom: e7,
+                enableZoom: e6,
                 children: (0, i.jsx)("div", {
                     className: a()(eM.iE, { [eM.DF]: eP }, N),
                     style: T,
