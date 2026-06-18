@@ -397,6 +397,7 @@ let er = n.memo(function (e) {
             [t.timeline],
         )
         .map(function (e) {
+            if (e.signal.hiddenFromTimeline) return null;
             let n = (function (e) {
                 if (null == l || l <= 0 || t.decision?.timestamp == null) return null;
                 let a = (e - (t.decision?.timestamp - t.length)) / 1e3;
