@@ -4,7 +4,7 @@ var s = n(17928),
     r = n(800828),
     p = n(652215),
     a = n(375708);
-function h(t) {
+function h(t, i) {
     return (0, s.bG)(
         [r.A, e.A],
         () =>
@@ -12,7 +12,7 @@ function h(t) {
                 ? a.intl.string(a.t.wPI56w)
                 : r.A.getGameRelationshipsForUser(t).length > 0
                   ? a.intl.string(a.t.LAcY7m)
-                  : a.intl.string(a.t.w5uwoI),
-        [t],
+                  : (i ?? a.intl.string(a.t.w5uwoI)),
+        [t, i],
     );
 }
