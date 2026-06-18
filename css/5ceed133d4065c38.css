@@ -94,19 +94,26 @@
     inset-inline-end: 0;
     pointer-events: none;
     position: absolute;
+    scale: 1.2;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-35%) translateX(-20%);
     width: auto;
     z-index: 1
 }
 
-@container (max-width: 768px) {
+@container (max-width: 900px) {
     .content__9b328 {
         width: 100%
     }
 
     .art__9b328 {
-        display: none
+        transform: translateY(-35%) translateX(10%)
+    }
+}
+
+@container (max-width: 768px) {
+    .art__9b328 {
+        transform: translateY(-35%) translateX(40%)
     }
 }
 
@@ -114,6 +121,10 @@
     .ctaRow__9b328 {
         align-self: stretch;
         flex-direction: column
+    }
+
+    .art__9b328 {
+        display: none
     }
 }
 

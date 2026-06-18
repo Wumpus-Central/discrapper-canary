@@ -2,15 +2,15 @@ s.d(t, { default: () => G });
 var n = s(627968),
     a = s(64700),
     r = s(106778),
-    l = s(575593),
-    i = s(772707),
+    i = s(575593),
+    l = s(772707),
     o = s(116833),
     c = s(793574),
     d = s(688810),
     u = s(206835),
     p = s(212739),
-    h = s(428262),
-    m = s(298072),
+    m = s(428262),
+    h = s(298072),
     x = s(993408);
 let E = (0, s(945810).mj)({
     name: "2026-05-orbs-purchase-upsell-banner",
@@ -32,7 +32,7 @@ var f = s(450481),
     O = s(532794),
     y = s(788868),
     I = s(375708),
-    _ = s(939052);
+    _ = s(528812);
 let N = () => {
     let { analyticsLocations: e } = (0, d.Ay)(),
         t = a.useRef(null);
@@ -58,6 +58,7 @@ let N = () => {
             }),
             (0, n.jsx)(T.$, {
                 buttonRef: t,
+                size: "sm",
                 variant: "secondary",
                 icon: k.t,
                 text: I.intl.string(I.t["8x0jKT"]),
@@ -72,7 +73,7 @@ var F = s(14368),
     P = s(213530),
     D = s(184264),
     S = s(758836),
-    w = s(700797);
+    w = s(713533);
 let G = (e) => {
     let {
             transitionState: t,
@@ -86,7 +87,7 @@ let G = (e) => {
             overrideGraphic: y,
             overrideGradientColor: _,
         } = e,
-        G = (0, m.Q)(s),
+        G = (0, h.Q)(s),
         M = (0, A.rb)(s, G),
         { analyticsLocations: V } = (0, d.Ay)([...R, c.A.COLLECTIBLES_COLLECTED_MODAL]),
         { hasRequiredProductItems: B } = ((e) => {
@@ -111,24 +112,24 @@ let G = (e) => {
         {
             environment: q,
             modalRef: Q,
-            confettiCanvas: H,
-            setConfettiCanvas: U,
-            customConfettiDisplayOptions: W,
+            confettiCanvas: z,
+            setConfettiCanvas: H,
+            customConfettiDisplayOptions: U,
         } = (0, D.mO)(M, O),
-        Z = (0, g.VG)(M);
+        W = (0, g.VG)(M);
     (0, D.$V)(M, V);
-    let { handleUseNow: z, isApplying: J, canUseNow: X } = (0, f.p)({ product: M, onSuccess: a, onError: a }),
+    let { handleUseNow: Z, isApplying: J, canUseNow: X } = (0, f.p)({ product: M, onSuccess: a, onError: a }),
         Y = (0, D.$k)({
             product: M,
             overrideTitle: j,
             isVariantsGroupEnabled: !0,
             shouldShowPromotionalExperience: k,
-            productName: Z,
+            productName: W,
         }),
         ee = (0, D.v8)({
             product: M,
             overrideDescription: T,
-            productName: Z,
+            productName: W,
             shouldShowPromotionalExperience: k,
             promotionalRewardCollectedText: $,
         }),
@@ -137,28 +138,28 @@ let G = (e) => {
             onClose: a,
             analyticsLocations: V,
             hasRequiredProductItems: B,
-            handleUseNow: z,
+            handleUseNow: Z,
             isApplying: J,
             canUseNow: X,
             openProfileSettings: K,
         }),
-        es = (0, h.nK)(),
+        es = (0, m.nK)(),
         en = (0, p.O)(),
         ea = E.useConfig({ location: "CollectiblesCollectedModal" }).enabled && O === S.gs.ORB && !es && !en,
         er = "6/4";
     switch (M.type) {
-        case l.R.NAMEPLATE:
-        case l.R.AVATAR_DECORATION:
-        case l.R.BUNDLE:
+        case i.R.NAMEPLATE:
+        case i.R.AVATAR_DECORATION:
+        case i.R.BUNDLE:
             er = "16/9";
             break;
-        case l.R.PROFILE_EFFECT:
-        case l.R.PROFILE_FRAME:
+        case i.R.PROFILE_EFFECT:
+        case i.R.PROFILE_FRAME:
         default:
             er = "6/4";
     }
-    let { confettiColors: el } = (0, v.A)(M.styles),
-        ei = y ?? {
+    let { confettiColors: ei } = (0, v.A)(M.styles),
+        el = y ?? {
             type: "dynamic",
             component: o.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
             aspectRatio: er,
@@ -169,9 +170,9 @@ let G = (e) => {
         children: (0, n.jsxs)("div", {
             ref: Q,
             children: [
-                (0, n.jsx)(r.Fk, { ref: U, className: w.L, environment: q }),
-                (0, n.jsx)(i.k, {
-                    graphic: ei,
+                (0, n.jsx)(r.Fk, { ref: H, className: w.L, environment: q }),
+                (0, n.jsx)(l.k, {
+                    graphic: el,
                     title: Y,
                     subtitle: ee ?? void 0,
                     onClose: a,
@@ -180,13 +181,13 @@ let G = (e) => {
                     gradientColor: _ ?? void 0,
                     children: ea && (0, n.jsx)(N, {}),
                 }),
-                null != W
-                    ? (0, n.jsx)(P.K, { options: W })
+                null != U
+                    ? (0, n.jsx)(P.K, { options: U })
                     : (0, n.jsx)(L.A, {
                           confettiTarget: Q.current,
-                          confettiCanvas: H,
+                          confettiCanvas: z,
                           sprites: (0, F.rA)(M.categorySkuId),
-                          colors: el?.map((e) => e.toHexString()),
+                          colors: ei?.map((e) => e.toHexString()),
                       }),
             ],
         }),
