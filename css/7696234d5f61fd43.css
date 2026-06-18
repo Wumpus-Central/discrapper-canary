@@ -63,6 +63,11 @@
     width: 100%
 }
 
+.effectOverlay_ee133f {
+    inset: 0;
+    position: absolute
+}
+
 .frameContainer_e8605d,
 .profilePreviewContainer_e8605d {
     --custom-preview-size: 60px
