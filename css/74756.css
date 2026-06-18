@@ -69,7 +69,7 @@
 
 :root .custom-user-profile-theme.user-profile-popout.user-profile-sidebar-redesign,
 :root .custom-user-profile-theme.user-profile-sidebar.user-profile-sidebar-redesign {
-    --custom-user-profile-theme-padding: 1px
+    --custom-user-profile-theme-padding: 2px
 }
 
 :root .custom-user-profile-theme.theme-dark {
