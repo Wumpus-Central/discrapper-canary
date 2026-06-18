@@ -119,15 +119,17 @@ function T(e) {
     });
 }
 function S(e) {
-    let { guildId: t, channelId: n, postId: r } = e;
-    function s() {
+    let { guildId: t, channelId: n, postId: r, applicationId: s, voiceChatEnabled: a } = e;
+    function o() {
         i.Ay.trackWithMetadata(h.HAw.FORUM_CHANNEL_POST_CREATED, {
             ...(0, _.$L)({ channelId: r }),
             guild_id: t,
             channel_id: n,
+            application_id: s,
+            voice_chat_enabled: a,
         });
     }
-    c.A.isLoading(r) ? c.A.addConditionalChangeListener(() => !!c.A.isLoading(r) || (s(), !1)) : s();
+    c.A.isLoading(r) ? c.A.addConditionalChangeListener(() => !!c.A.isLoading(r) || (o(), !1)) : o();
 }
 function y(e) {
     let { guildId: t, channelId: n } = e;

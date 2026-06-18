@@ -16,8 +16,8 @@ var i,
     x = n(834730),
     f = n(687966),
     E = n(825860),
-    I = n(141628),
-    C = n(308368),
+    C = n(141628),
+    I = n(308368),
     v = n(780907),
     _ = n(729937),
     j = n(572211),
@@ -31,8 +31,8 @@ var i,
     k = n(456060),
     M = n(723702),
     P = n(850670),
-    D = n(206589),
-    w = n(125017),
+    w = n(206589),
+    D = n(125017),
     O = n(625248),
     U = n(55730),
     G = n(287613),
@@ -262,8 +262,8 @@ function $(e) {
                 isGameLaunchable: o,
             } = e;
             if (l.author.id === i || !(0, V.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
-            let d = (0, w._)(t);
-            if (!(0, G.A)(d) || (0, B.U)(d) || (0, D.w)(n, t) || (0, P.v)(l))
+            let d = (0, D._)(t);
+            if (!(0, G.A)(d) || (0, B.U)(d) || (0, w.w)(n, t) || (0, P.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (r && a) return { canJoin: !0, remoteJoinPlatform: null };
             if (l.activity?.type === H.xL.JOIN && null != t) {
@@ -289,7 +289,7 @@ function $(e) {
             !(0, V.A)(T, t, n.id) ||
             !(0, U.A)(T, H.jUm.SYNC) ||
             !M.isPlatformEmbedded ||
-            (0, D.w)(R, T)
+            (0, w.w)(R, T)
         ),
         ef = (function (e, t, n, i) {
             if (
@@ -299,12 +299,12 @@ function $(e) {
                 !(0, U.A)(e, H.jUm.JOIN)
             )
                 return !1;
-            let l = (0, w._)(e);
+            let l = (0, D._)(e);
             return !(!(0, G.A)(l) || (0, B.U)(l));
         })(T, t, n, d),
-        eE = (0, D.w)(R, T),
-        eI = null != T && (0, U.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
-        eC = (0, u.bG)(
+        eE = (0, w.w)(R, T),
+        eC = null != T && (0, U.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
+        eI = (0, u.bG)(
             [L.A],
             () => null != T && null != T.application_id && L.A.getState(T.application_id, H.xL.JOIN) === H.eAD.LOADING,
         ),
@@ -333,7 +333,7 @@ function $(e) {
                     ? (e = {
                           label: F.intl.string(F.t.VJlc0S),
                           trackingArea: N.kY.JOIN,
-                          submitting: eC,
+                          submitting: eI,
                           onClick: () => {
                               v.Ay.join({
                                   userId: t.author.id,
@@ -360,7 +360,7 @@ function $(e) {
                                   });
                           },
                       })
-                    : eI && ei
+                    : eC && ei
                       ? ((e = {
                             label: F.intl.string(F.t.lw71Nf),
                             trackingArea: N.kY.CONNECT_ACCOUNT,
@@ -384,7 +384,7 @@ function $(e) {
                                 trackingArea: N.kY.INVITE,
                                 onClick: () => {
                                     null != T &&
-                                        C.A.sendActivityInvite({
+                                        I.A.sendActivityInvite({
                                             type: H.xL.JOIN,
                                             channelId: r.id,
                                             activity: T,
@@ -414,14 +414,14 @@ function $(e) {
                             onClick: () => {
                                 el({ analyticsLocations: $ });
                             },
-                            icon: I.A,
+                            icon: C.A,
                             iconButton: !0,
                             buttonRef: es,
                         }),
                         (i = !0))),
                 { actions: l, hasAccountLinkButton: i }
             );
-        }, [ep, et, en, ex, ef, eE, h, t.author.id, t.id, T, r.id, r.guild_id, $, eA, d, eC, ee, el, es, ei, eI]),
+        }, [ep, et, en, ex, ef, eE, h, t.author.id, t.id, T, r.id, r.guild_id, $, eA, d, eI, ee, el, es, ei, eC]),
         ej = ev.some((e) => e.trackingArea === N.kY.CLOUD_PLAY);
     (0, J.A)(ej, $);
     let eN = s.useMemo(
@@ -450,6 +450,7 @@ function $(e) {
                     guildId: r.guild_id,
                     channelId: t.channel_id,
                     messageId: t.id,
+                    appEmbedState: q.f.ACTIVE,
                 },
                 footer: eN,
             }),

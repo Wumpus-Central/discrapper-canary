@@ -2,16 +2,16 @@ n.d(t, { RD: () => h, U9: () => I }), n(321073);
 var l = n(64700),
     a = n(868714),
     i = n(975807),
-    r = n(289919),
-    o = n(174459),
+    r = n(95561),
+    o = n(289919),
     u = n(123917),
     c = n(975460),
     s = n(704824);
 let d = Symbol();
 var p = n(942370),
     A = n(652215);
-let f = "AUTHORIZE_REQUEST",
-    E = [p._M.RPC, p._M.WEB];
+let E = "AUTHORIZE_REQUEST",
+    f = [p._M.RPC, p._M.WEB];
 function h(e) {
     var t, n;
     let a,
@@ -29,10 +29,10 @@ function h(e) {
                 : null),
         d = u?.preferredFlow,
         p = null != d,
-        { token: A, fetched: f } = (0, s.U)(o?.parentId ?? o?.id, { disableFetch: i.disableFetch });
+        { token: A, fetched: E } = (0, s.U)(o?.parentId ?? o?.id, { disableFetch: i.disableFetch });
     return {
-        fetched: f,
-        hasAlreadyLinked: f && null != A,
+        fetched: E,
+        hasAlreadyLinked: E && null != A,
         canStartAuthorization: p,
         startAuthorization: l.useCallback((e) => (null == d ? null : (d.initiate(e), d.type)), [d]),
         connectionApp: o,
@@ -49,16 +49,16 @@ function h(e) {
     };
 }
 function R(e) {
-    return r.A.listenIsSubscribed(e);
+    return o.A.listenIsSubscribed(e);
 }
 function I(e, t) {
     var n;
     let c,
         s,
-        h = (0, a.A)(t?.allowedFlows ?? E),
+        h = (0, a.A)(t?.allowedFlows ?? f),
         I =
             ((n = l.useCallback(
-                () => e.map((e) => ({ application: e, isSubscribedToAuthorizeRequest: r.A.isSubscribed(e.id, f) })),
+                () => e.map((e) => ({ application: e, isSubscribedToAuthorizeRequest: o.A.isSubscribed(e.id, E) })),
                 [e],
             )),
             (c = l.useRef(d)),
@@ -90,9 +90,9 @@ function I(e, t) {
                         t.push({
                             type: p._M.RPC,
                             initiate(t) {
-                                r.A.dispatchToSubscriptions(f, (t) => t.socket.application.id === e.application.id, {}),
+                                o.A.dispatchToSubscriptions(E, (t) => t.socket.application.id === e.application.id, {}),
                                     t.onConfirm?.(),
-                                    o.default.track(A.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
+                                    r.Ay.trackWithMetadata(A.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                         location_stack: t.analyticsLocations,
                                         application_id: e.application.id,
                                         flow_type: p._M.RPC,
@@ -111,7 +111,7 @@ function I(e, t) {
                                     (0, i.A)(n), t?.onConfirm?.();
                                 },
                             }),
-                                o.default.track(A.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
+                                r.Ay.trackWithMetadata(A.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                     location_stack: t.analyticsLocations,
                                     application_id: e.application.id,
                                     flow_type: p._M.WEB,

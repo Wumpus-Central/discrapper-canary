@@ -12,27 +12,27 @@ var l = n(627968),
     h = n(27549);
 function x(e) {
     let t,
-        { application: n, size: x = "md" } = e,
-        { analyticsLocations: g } = (0, r.Ay)(a.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER),
-        { canStartAuthorization: f, hasAlreadyLinked: j, startAuthorization: v, fetched: p } = (0, d.RD)(n),
-        A = (0, o.z)(v, j);
-    if (!p || !f || j) return null;
-    let C = !1;
+        { application: n, size: x = "md", analyticsLocation: g = a.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER } = e,
+        { analyticsLocations: f } = (0, r.Ay)(g),
+        { canStartAuthorization: j, hasAlreadyLinked: v, startAuthorization: p, fetched: A } = (0, d.RD)(n),
+        C = (0, o.z)(p, v);
+    if (!A || !j || v) return null;
+    let N = !1;
     return (
         "sm" === x
-            ? (t = m.intl.format(u.default.vznMVa, { onClick: () => A({ analyticsLocations: g }) }))
-            : ((t = m.intl.string(u.default.UHF2Zn)), (C = !0)),
+            ? (t = m.intl.format(u.default.vznMVa, { onClick: () => C({ analyticsLocations: f }) }))
+            : ((t = m.intl.string(u.default.UHF2Zn)), (N = !0)),
         (0, l.jsxs)("div", {
             className: h._,
             children: [
                 (0, l.jsx)(c.A, { game: n, size: c.M.MEDIUM }),
                 (0, l.jsx)(s.E, { variant: "text-sm/medium", color: "text-default", className: h.d, children: t }),
-                C
+                N
                     ? (0, l.jsx)(i.Q, {
                           variant: "primary",
                           size: "sm",
                           text: m.intl.string(u.default.EBSaL4),
-                          onClick: () => A({ analyticsLocations: g }),
+                          onClick: () => C({ analyticsLocations: f }),
                       })
                     : null,
             ],
