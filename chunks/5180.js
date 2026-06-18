@@ -10,5 +10,5 @@ function o(e) {
     return e === i.Vc || e === r.YYv;
 }
 function l(e, t) {
-    return !e.isThread() || t;
+    return !e.isCategory() && (!e.isThread() || t);
 }
