@@ -15,7 +15,7 @@ let f = [18, 18, 16, 16, 14, 12, 10];
 function p(e, t) {
     return a()({ [h.AN]: !0, [h.CW]: "always" === e, [h._W]: "on-hover" === e && t });
 }
-let E = (e) => {
+function E(e) {
     let t,
         n,
         {
@@ -61,4 +61,4 @@ let E = (e) => {
             null != E ? (0, i.jsx)("div", { className: p(s, !0), children: E }) : null,
         ],
     });
-};
+}

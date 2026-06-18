@@ -284,16 +284,19 @@ class C extends r.Component {
     };
     handleStickyScroll = a()(() => {
         requestAnimationFrame(() => {
-            let e = this.popoutRef.current;
-            null == e ||
+            var e;
+            let t,
+                n,
+                i,
+                r = this.popoutRef.current;
+            null == r ||
                 (this.shouldShowPopout(this.props, this.state) &&
-                    (N(e) || this.close(void 0, "system:viewport_exit"), this.layerRef.current?.updatePosition()));
+                    ((t = (e = r).getBoundingClientRect()),
+                    (n = e.ownerDocument?.defaultView?.innerHeight ?? 0),
+                    (i = e.ownerDocument?.defaultView?.innerWidth ?? 0),
+                    (t.top < n && t.bottom > 0 && t.left < i && t.right > 0) ||
+                        this.close(void 0, "system:viewport_exit"),
+                    this.layerRef.current?.updatePosition()));
         });
     }, 1e3 / 60);
 }
-let N = (e) => {
-    let t = e.getBoundingClientRect(),
-        n = e.ownerDocument?.defaultView?.innerHeight ?? 0,
-        i = e.ownerDocument?.defaultView?.innerWidth ?? 0;
-    return t.top < n && t.bottom > 0 && t.left < i && t.right > 0;
-};

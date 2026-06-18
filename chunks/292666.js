@@ -106,7 +106,7 @@ function R(e) {
     ("boolean" == typeof M ? M && null != E && "" !== E && !Y : M.show)
         ? (W = (0, i.jsx)(v, {
               inputSize: L,
-              onClick: (e) => {
+              onClick: function (e) {
                   null != x.onClear ? x.onClear(e) : x.onChange?.("", u),
                       requestAnimationFrame(() => {
                           B.current?.focus();
@@ -151,7 +151,7 @@ function R(e) {
                         defaultValue: m,
                         "data-mana-component": "text-input",
                         ...x,
-                        onChange: (e) => {
+                        onChange: function (e) {
                             let t = e.currentTarget.value;
                             x.onChange?.(t, u), G(!0), F.setHasValue?.("" !== t);
                         },

@@ -75,13 +75,13 @@ function _(e) {
                     defaultValue: S,
                     ...v,
                     "aria-labelledby": v["aria-labelledby"] ?? b.titleId,
-                    onChange: (e) => {
+                    onChange: function (e) {
                         v.onChange?.(e.currentTarget.value, m), O(!0), b.setHasValue?.("" !== e.currentTarget.value);
                     },
-                    onBlur: (e) => {
+                    onBlur: function (e) {
                         v.onBlur?.(e, m), b.setIsFocused?.(!1);
                     },
-                    onFocus: (e) => {
+                    onFocus: function (e) {
                         v.onFocus?.(e, m), b.setIsFocused?.(!0);
                     },
                     ref: f,

@@ -29,7 +29,7 @@ class E extends s.PureComponent {
         });
     }
 }
-let m = (e) => {
+function m(e) {
     let {
             children: t,
             className: n,
@@ -64,5 +64,5 @@ let m = (e) => {
                 : null,
         ],
     });
-};
+}
 m.ShineSizes = h;

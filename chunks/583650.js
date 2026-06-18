@@ -24,10 +24,10 @@ let l = r.forwardRef(function (e, t) {
         (0, i.jsx)(a.I, {
             size: "sm",
             disabled: u,
-            onChange: (e) => {
+            onChange: function (e) {
                 l(e), _?.(s.Q.SEARCH);
             },
-            onClear: () => {
+            onClear: function () {
                 l(""), _?.(s.Q.SEARCH);
             },
             query: n,

@@ -361,9 +361,9 @@ function X(e) {
         s.useEffect(() => {
             n && p >= 0 && f && h.current?.scrollRowIntoView(p);
         }, [n, f, p]);
-    let m = s.useCallback((e) => a[e], [a]),
-        g = (0, z.D)("MenuSubmenuListItem"),
-        I = () =>
+    let m = s.useCallback((e) => a[e], [a]);
+    function g() {
+        return (
             a.length > 0 &&
             (0, r.jsx)("div", {
                 className: b.submenuPaddingContainer,
@@ -381,8 +381,10 @@ function X(e) {
                         rowHeight: o,
                     }),
                 }),
-            });
-    if (g)
+            })
+        );
+    }
+    if ((0, z.D)("MenuSubmenuListItem"))
         return (0, r.jsx)(A.Ow, {
             spacing: 4,
             placement: "right-start",
@@ -390,13 +392,13 @@ function X(e) {
             portal: !1,
             viewportPadding: 48,
             maxHeight: 360,
-            renderLayer: I,
+            renderLayer: g,
             children: (e) => {
                 let { ref: n, props: i } = e;
                 return (0, r.jsx)("div", { ref: n, ...i, children: t });
             },
         });
-    let T = (0, r.jsx)(q.Q, {
+    let I = (0, r.jsx)(q.Q, {
         targetRef: d,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
@@ -405,9 +407,9 @@ function X(e) {
         position: "right",
         align: "top",
         className: b.submenuLayer,
-        children: I,
+        children: g,
     });
-    return (0, r.jsxs)("div", { ref: c, children: [(0, r.jsx)("div", { ref: d }), t, n ? T : null] });
+    return (0, r.jsxs)("div", { ref: c, children: [(0, r.jsx)("div", { ref: d }), t, n ? I : null] });
 }
 let Q = s.createContext("right-start");
 function J(e) {

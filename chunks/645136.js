@@ -2525,7 +2525,7 @@ function lA(e) {
     return (0, t.jsx)(es.k, {
         placeholder: "Enter your passcode...",
         value: a,
-        onChange: (e) => {
+        onChange: function (e) {
             o(e), l(e.length > 0);
         },
     });
@@ -3796,7 +3796,9 @@ let lJ = {
                                 "experiment. Do not use this in production yet.",
                             ],
                         });
-                    let b = (e) => (null == e ? "None" : (0, eD.default)(e.toDate((0, eM.Xj)()), "MMMM d, yyyy"));
+                    function b(e) {
+                        return null == e ? "None" : (0, eD.default)(e.toDate((0, eM.Xj)()), "MMMM d, yyyy");
+                    }
                     return (0, t.jsxs)(D.B, {
                         direction: "vertical",
                         gap: "md",

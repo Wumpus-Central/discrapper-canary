@@ -326,10 +326,10 @@ let M = r.forwardRef(function (e, l) {
                     let { "aria-expanded": n, "aria-controls": r } = e,
                         { isShown: i } = l,
                         s = i ? k.t : D.a,
-                        { ref: o, onKeyDown: u } = ez.containerProps,
-                        c = (e) => {
-                            ep.onKeyDown?.(e), u(e), eJ(e);
-                        };
+                        { ref: o, onKeyDown: u } = ez.containerProps;
+                    function c(e) {
+                        ep.onKeyDown?.(e), u(e), eJ(e);
+                    }
                     return (0, t.jsx)(m.D, {
                         ...ef,
                         children: (e) => {

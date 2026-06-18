@@ -95,25 +95,25 @@ let y = (e) => {
     },
     C = { scale: 0.95, opacity: 0 },
     N = { scale: 1, opacity: 0 },
-    v = { scale: 1, opacity: 1 },
-    R = (e) => {
-        let { isVisible: t, onAnimationRest: n, targetElementRef: i, ...a } = e,
-            { reducedMotion: o } = s.useContext(_.C);
-        return (0, p.p)(
-            t,
-            {
-                keys: (e) => (e ? "tooltip" : "empty"),
-                config: f.p,
-                from: o.enabled ? N : C,
-                enter: v,
-                leave: o.enabled ? N : C,
-                onRest: n,
-            },
-            "animate-always",
-        )((e, t) =>
-            t ? (0, r.jsx)(y, { "data-migration-pending": !0, animationStyle: e, targetElementRef: i, ...a }) : null,
-        );
-    };
+    v = { scale: 1, opacity: 1 };
+function R(e) {
+    let { isVisible: t, onAnimationRest: n, targetElementRef: i, ...a } = e,
+        { reducedMotion: o } = s.useContext(_.C);
+    return (0, p.p)(
+        t,
+        {
+            keys: (e) => (e ? "tooltip" : "empty"),
+            config: f.p,
+            from: o.enabled ? N : C,
+            enter: v,
+            leave: o.enabled ? N : C,
+            onRest: n,
+        },
+        "animate-always",
+    )((e, t) =>
+        t ? (0, r.jsx)(y, { "data-migration-pending": !0, animationStyle: e, targetElementRef: i, ...a }) : null,
+    );
+}
 class O extends s.Component {
     static Colors = A;
     static defaultProps = {

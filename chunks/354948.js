@@ -83,11 +83,13 @@ class L extends r.PureComponent {
     };
 }
 var O = s(99879);
-let G = () => (0, n.jsx)(w.c, { className: O.yF }),
-    R = (e) => {
-        let { children: t } = e;
-        return (0, n.jsx)("div", { className: O.Fm, children: t });
-    };
+function G() {
+    return (0, n.jsx)(w.c, { className: O.yF });
+}
+function R(e) {
+    let { children: t } = e;
+    return (0, n.jsx)("div", { className: O.Fm, children: t });
+}
 class D extends r.PureComponent {
     static defaultProps = { autoFocus: !0 };
     render() {

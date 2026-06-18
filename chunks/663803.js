@@ -13,14 +13,14 @@ var i = n(627968),
 function h(e) {
     return "" === e || "-" === e;
 }
-let f = (e) => {
+function f(e) {
     let { value: t, onChange: n, className: s, minValue: f, maxValue: p } = e,
         [E, m] = r.useState(t),
         g = h(E) || (null != f && E <= f),
-        A = h(E) || (null != p && E >= p),
-        I = (e) => {
-            n(h(e) ? (f ?? 0) : e), m(e);
-        };
+        A = h(E) || (null != p && E >= p);
+    function I(e) {
+        n(h(e) ? (f ?? 0) : e), m(e);
+    }
     return (0, i.jsxs)("div", {
         className: a()(_.o, s),
         children: [
@@ -57,4 +57,4 @@ let f = (e) => {
             }),
         ],
     });
-};
+}

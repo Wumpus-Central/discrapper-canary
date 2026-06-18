@@ -100,7 +100,7 @@ function C(e) {
                         type: "number",
                         autoFocus: !0,
                         value: null == u ? "" : `${u}`,
-                        onChange: (e) => {
+                        onChange: function (e) {
                             let a = parseInt(e);
                             "" === e || isNaN(a) ? p(null) : p(a);
                         },

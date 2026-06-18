@@ -112,7 +112,7 @@ function y(e) {
         })({
             shouldShow: s,
             caretPosition: (0, f.g)(F),
-            onExitComplete: () => {
+            onExitComplete: function () {
                 G(!1);
             },
         }),

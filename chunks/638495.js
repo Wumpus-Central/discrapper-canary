@@ -94,17 +94,17 @@ function C() {
     }, [t]);
     let a = t.length > 0;
     r.useLayoutEffect(() => {
-        if (!a) return;
-        let e = () => {
+        if (a)
+            return (
+                p._.subscribe(g.jej.MODAL_CLOSE, e),
+                () => {
+                    p._.unsubscribe(g.jej.MODAL_CLOSE, e);
+                }
+            );
+        function e() {
             let e = s.current;
             null != e && null != e.onCloseRequest && !1 !== e.dismissable && e.onCloseRequest();
-        };
-        return (
-            p._.subscribe(g.jej.MODAL_CLOSE, e),
-            () => {
-                p._.unsubscribe(g.jej.MODAL_CLOSE, e);
-            }
-        );
+        }
     }, [a]);
     let o = r.useCallback(() => {
             let e = s.current;

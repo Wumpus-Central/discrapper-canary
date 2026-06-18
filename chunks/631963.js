@@ -7,27 +7,27 @@ var i = e(627968),
     o = e.n(r),
     u = e(187322),
     c = e(297362);
-let d = (t) => {
-        let { data: n, disabled: e } = t,
-            { content: a, className: l, onClick: s, disabled: r } = n;
-        return (0, i.jsx)(u.vN, {
-            children: (0, i.jsx)("button", {
-                type: "button",
-                className: o()(c.A, l),
-                onClick: s,
-                disabled: e || r,
-                children: a,
-            }),
-        });
-    },
-    m = (t) => {
-        let { buttons: n, disabled: e, className: a } = t;
-        return (0, i.jsx)("div", {
-            role: "group",
-            className: o()(c.O, a),
-            children: n.map((t, n) => (0, i.jsx)(d, { data: t, disabled: e }, n)),
-        });
-    };
+function d(t) {
+    let { data: n, disabled: e } = t,
+        { content: a, className: l, onClick: s, disabled: r } = n;
+    return (0, i.jsx)(u.vN, {
+        children: (0, i.jsx)("button", {
+            type: "button",
+            className: o()(c.A, l),
+            onClick: s,
+            disabled: e || r,
+            children: a,
+        }),
+    });
+}
+let m = function (t) {
+    let { buttons: n, disabled: e, className: a } = t;
+    return (0, i.jsx)("div", {
+        role: "group",
+        className: o()(c.O, a),
+        children: n.map((t, n) => (0, i.jsx)(d, { data: t, disabled: e }, n)),
+    });
+};
 var h = e(834730),
     g = e(691540),
     C = e(857250),
@@ -38,8 +38,8 @@ var h = e(834730),
     N = e(260598),
     _ = e(262577),
     x = e(964486),
-    y = e(688810),
-    f = e(504049),
+    f = e(688810),
+    y = e(504049),
     O = e(226698),
     T = e(734057),
     j = e(287809),
@@ -68,7 +68,7 @@ let w = [
 ];
 function P(t) {
     let { guildId: n, userId: e, anaylticsLocations: r, transitionState: o, onClose: u, modReportId: c } = t,
-        { analyticsLocations: d } = (0, y.Ay)(),
+        { analyticsLocations: d } = (0, f.Ay)(),
         M = r?.[0] ?? d?.[0] ?? null,
         P = (0, s.bG)([j.default], () => j.default.getUser(e), [e]),
         [B, G] = a.useState(S.DisableCommunicationDuration.DURATION_60_SEC),
@@ -76,14 +76,14 @@ function P(t) {
         [F, K] = a.useState(!1),
         [W, X] = a.useState(!1),
         Z = (0, s.bG)([T.A], () => T.A.getChannel(c)?.isArchivedThread()),
-        $ = (0, f.$9)(n, { location: M, targetUserId: e }),
+        $ = (0, y.$9)(n, { location: M, targetUserId: e }),
         Y = a.useCallback(async () => {
             if (null != P) {
                 K(!0);
                 try {
                     await _.A.setCommunicationDisabledDuration(n, e, B, H, M, c),
                         W && null != c && O.A.resolveFlag(c),
-                        $(f.Nj.TIMEOUT),
+                        $(y.Nj.TIMEOUT),
                         (0, g.P0)(
                             (0, C.o)(
                                 E.intl.formatToPlainString(E.t.O9C3Nt, { user: I.Ay.getName(n, null, P) }),

@@ -115,10 +115,10 @@ function c(e) {
             return (
                 i.useEffect(() => {
                     if (!I) return;
-                    let e = f.current?.ownerDocument ?? document,
-                        t = (e) => {
-                            ("Escape" === e.key || "Esc" === e.key) && ((g.current = !0), S());
-                        };
+                    let e = f.current?.ownerDocument ?? document;
+                    function t(e) {
+                        ("Escape" === e.key || "Esc" === e.key) && ((g.current = !0), S());
+                    }
                     return (
                         e.addEventListener("keydown", t),
                         () => {
@@ -128,10 +128,10 @@ function c(e) {
                 }, [I, S, f]),
                 i.useEffect(() => {
                     if (!I) return;
-                    let e = f.current?.ownerDocument ?? document,
-                        t = () => {
-                            S();
-                        };
+                    let e = f.current?.ownerDocument ?? document;
+                    function t() {
+                        S();
+                    }
                     return (
                         e.addEventListener("click", t),
                         () => {

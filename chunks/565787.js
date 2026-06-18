@@ -3,7 +3,7 @@ n.d(t, { k: () => s });
 var i = n(627968);
 n(64700);
 var r = n(260612);
-let s = function (e) {
+function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     return function (n) {
         let { color: s, ...a } = n,
@@ -20,4 +20,4 @@ let s = function (e) {
         for (let [e, n] of Object.entries(t)) null != a[e] && (c[n] = a[e]);
         return (0, i.jsx)(e, { ...a, ...c });
     };
-};
+}
