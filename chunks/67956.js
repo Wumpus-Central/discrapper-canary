@@ -258,7 +258,7 @@ var Y = l(488428),
     ei = l(534514),
     er = l(753390),
     eo = l(529427),
-    es = l(249607),
+    es = l(669874),
     eu = l(541689),
     ed = l(944304),
     ec = l(300233),
@@ -1137,8 +1137,8 @@ let e3 = {
         autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
     },
 };
-var e4 = l(930349);
-function e8() {
+var e8 = l(930349);
+function e4() {
     return (0, s.jsx)("div", { style: { width: "100%", height: "100%", borderRadius: "8px", background: "red" } });
 }
 function e9() {
@@ -1164,15 +1164,15 @@ let e7 = {
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
-                            (0, s.jsx)(e4.V, {
+                            (0, s.jsx)(e8.V, {
                                 affordance: "add",
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: l,
                                 accessibleValue: n,
-                                renderPreview: () => (0, s.jsx)(e8, {}),
+                                renderPreview: () => (0, s.jsx)(e4, {}),
                             }),
-                            (0, s.jsx)(e4.V, {
+                            (0, s.jsx)(e8.V, {
                                 affordance: "add",
                                 variant: t,
                                 onClick: () => {},
@@ -1198,15 +1198,15 @@ let e7 = {
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
-                            (0, s.jsx)(e4.V, {
+                            (0, s.jsx)(e8.V, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
                                 accessibleValue: i,
                                 showOverlayOnHover: l,
-                                renderPreview: () => (0, s.jsx)(e8, {}),
+                                renderPreview: () => (0, s.jsx)(e4, {}),
                             }),
-                            (0, s.jsx)(e4.V, {
+                            (0, s.jsx)(e8.V, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
@@ -1241,16 +1241,16 @@ let e7 = {
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
-                            (0, s.jsx)(e4.V, {
+                            (0, s.jsx)(e8.V, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
                                 accessibleValue: u,
                                 showOverlayOnHover: l,
                                 affordance: o,
-                                renderPreview: () => (0, s.jsx)(e8, {}),
+                                renderPreview: () => (0, s.jsx)(e4, {}),
                             }),
-                            (0, s.jsx)(e4.V, {
+                            (0, s.jsx)(e8.V, {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
@@ -1288,8 +1288,8 @@ let e7 = {
     };
 var te = l(687021),
     tt = l(487233),
-    tl = l(849291),
-    ta = l(473219);
+    tl = l(120386),
+    ta = l(374654);
 let tn = { value: "", label: "No Guild (main profile)" };
 var ti = l(99696),
     tr = l(599147),
@@ -1894,7 +1894,7 @@ let tA = { none: void 0, nitroWheel: r.t },
     };
 var tR = l(398590),
     tk = l(920050),
-    tM = l(744064),
+    tM = l(486858),
     tN = l(976860);
 let tD = {
     title: "Perks",
@@ -2104,7 +2104,7 @@ async function t3(e, t) {
         rejectWithError: !0,
     });
 }
-function t4() {
+function t8() {
     let [e, t] = u.useState(!1),
         [l, a] = u.useState(!1),
         [n, i] = u.useState(null),
@@ -2415,7 +2415,7 @@ Error: ${t}`);
         ],
     });
 }
-var t8 = l(405139),
+var t4 = l(405139),
     t9 = l(19311),
     t7 = l(869177);
 function t5(e) {
@@ -2432,8 +2432,8 @@ function t5(e) {
     return e.renderStepBody
         ? (0, s.jsx)(t7.V, { ...l, ...e })
         : "applePay" === e.paymentRequestWallet
-          ? (0, s.jsx)(t8.Mv, { ...l, ...e })
-          : (0, s.jsx)(t8.dP, { ...l, ...e });
+          ? (0, s.jsx)(t4.Mv, { ...l, ...e })
+          : (0, s.jsx)(t4.dP, { ...l, ...e });
 }
 function le(e) {
     let { paymentRequestWallet: t } = e,
@@ -2788,7 +2788,7 @@ let lf = {
                     stepConfigs: [],
                     skuIDs: [],
                     activeSubscription: null,
-                    children: (0, s.jsx)(t4, {}),
+                    children: (0, s.jsx)(t8, {}),
                 });
             },
             id: "order-sku-test",
@@ -3453,7 +3453,7 @@ function l2(e) {
 }
 let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
     l3 = lW.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    l4 = {
+    l8 = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
@@ -3529,7 +3529,7 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    l8 = {
+    l4 = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -3539,8 +3539,8 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
         startDate: new Date(),
     },
     l9 = {
-        [lJ.I0.Subscription]: { type: lJ.I0.Subscription, ...l8 },
-        [lJ.I0.SubscriptionTrial]: { type: lJ.I0.SubscriptionTrial, ...l8 },
+        [lJ.I0.Subscription]: { type: lJ.I0.Subscription, ...l4 },
+        [lJ.I0.SubscriptionTrial]: { type: lJ.I0.SubscriptionTrial, ...l4 },
         [lJ.I0.OrbsRedemption]: { type: lJ.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
         [lJ.I0.Shop]: { type: lJ.I0.Shop, purchaseButtonText: "Purchase" },
         [lJ.I0.GiftNitro]: { type: lJ.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
@@ -3549,12 +3549,13 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
             type: lJ.I0.GiftGameShop,
             purchaseButtonText: "Buy Gift",
             applicationName: "Marvel Rivals",
+            shouldAppendDisclaimer: !1,
         },
     },
     l7 = {
         title: "Unified Checkout",
         stories: [
-            l4,
+            l8,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
