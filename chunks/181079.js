@@ -23,6 +23,7 @@ function f() {
                 id: e,
                 nickname: "" !== t.nickname ? t.nickname : null,
                 type: t.type,
+                channelType: t.channelType?.value,
                 order: t.position,
                 parentId: t.parentId !== u.O8 ? t.parentId : null,
             };

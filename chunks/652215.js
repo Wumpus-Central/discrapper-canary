@@ -1249,6 +1249,7 @@ let nw = "",
         GUILD_PINCODE: (e) => `/guilds/${e}/pincode`,
         GUILD_DELETE: (e) => `/guilds/${e}/delete`,
         CHANNELS: "/channels",
+        THREADS_BULK: "/threads/bulk",
         CHANNEL: (e) => `/channels/${e}`,
         THREAD_MEMBER: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : tj.ME;

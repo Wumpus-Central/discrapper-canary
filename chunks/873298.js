@@ -3330,6 +3330,7 @@ class tr extends D.G {
             { no: 2, name: "type", kind: "enum", T: () => ["discord_protos.discord_users.v1.FavoriteChannelType", ee] },
             { no: 3, name: "position", kind: "scalar", T: 13 },
             { no: 4, name: "parent_id", kind: "scalar", T: 6 },
+            { no: 5, name: "channel_type", kind: "message", T: () => L.ZQ },
         ]);
     }
     create(e) {
@@ -3358,6 +3359,9 @@ class tr extends D.G {
                 case 4:
                     r.parentId = e.fixed64().toString();
                     break;
+                case 5:
+                    r.channelType = L.ZQ.internalBinaryRead(e, e.uint32(), n, r.channelType);
+                    break;
                 default:
                     let s = n.readUnknownField;
                     if ("throw" === s)
@@ -3372,7 +3376,8 @@ class tr extends D.G {
         "" !== e.nickname && t.tag(1, R.O0.LengthDelimited).string(e.nickname),
             0 !== e.type && t.tag(2, R.O0.Varint).int32(e.type),
             0 !== e.position && t.tag(3, R.O0.Varint).uint32(e.position),
-            "0" !== e.parentId && t.tag(4, R.O0.Bit64).fixed64(e.parentId);
+            "0" !== e.parentId && t.tag(4, R.O0.Bit64).fixed64(e.parentId),
+            e.channelType && L.ZQ.internalBinaryWrite(e.channelType, t.tag(5, R.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? R.f$.onWrite : i)(this.typeName, e, t), t;
     }
