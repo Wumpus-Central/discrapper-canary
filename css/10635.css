@@ -61,6 +61,22 @@
     font-size: .92em
 }
 
+.orbitron__89a31 {
+    font-family: Orbitron, gg sans, Arial, sans-serif;
+    font-size: .82em;
+    letter-spacing: .03em
+}
+
+.newRocker__89a31 {
+    font-family: New Rocker, gg sans, Arial, sans-serif;
+    font-size: 1.05em
+}
+
+.kalam__89a31 {
+    font-family: Kalam, gg sans, Arial, sans-serif;
+    font-size: 1.05em
+}
+
 .container_dfb989 {
     display: inline-flex;
     max-width: 100%;

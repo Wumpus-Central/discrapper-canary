@@ -9314,6 +9314,30 @@
     src: url(/assets/f9d0d9a870575ad7.woff2) format("woff2")
 }
 
+@font-face {
+    font-display: swap;
+    font-family: Orbitron;
+    font-style: normal;
+    font-weight: 700;
+    src: url(/assets/04494fa0979b6a98.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: New Rocker;
+    font-style: normal;
+    font-weight: 400;
+    src: url(/assets/3101d68539d10d3f.woff2) format("woff2")
+}
+
+@font-face {
+    font-display: swap;
+    font-family: Kalam;
+    font-style: normal;
+    font-weight: 700;
+    src: url(/assets/e292fbd2a845cd92.woff2) format("woff2")
+}
+
 :root {
     --font-primary: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-display: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;

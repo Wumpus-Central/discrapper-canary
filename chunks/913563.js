@@ -12,6 +12,9 @@ let s = {
     [i.x.SINISTRE]: r.default.jV9DN4,
     [i.x.ZILLA_SLAB]: r.default.KMR8rT,
     [i.x.PLAYPEN_SANS]: r.default["06QnFf"],
+    [i.x.ORBITRON]: r.default.DtNlM9,
+    [i.x.NEW_ROCKER]: r.default.wSMzUj,
+    [i.x.KALAM]: r.default.bdpoA7,
 };
 function a(e) {
     return s[e] ?? r.default.ZEL6mz;

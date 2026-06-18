@@ -9,4 +9,7 @@ n.exports = {
     yH: "sinistre__89a31",
     FR: "zillaSlab__89a31",
     R_: "playpenSans__89a31",
+    yT: "orbitron__89a31",
+    NX: "newRocker__89a31",
+    x4: "kalam__89a31",
 };

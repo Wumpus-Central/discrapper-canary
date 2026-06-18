@@ -1,4 +1,4 @@
-s.d(a, { default: () => eG });
+s.d(a, { default: () => eR });
 var l = s(627968),
     t = s(64700),
     i = s(562708),
@@ -10,21 +10,21 @@ var l = s(627968),
     m = s(534514),
     u = s(793574),
     N = s(688810),
-    f = s(139286),
-    x = s(919395),
+    x = s(139286),
+    f = s(919395),
     A = s(71393),
     g = s(287809),
     S = s(174459),
     p = s(871162),
-    h = s(945810);
-let E = (0, h.mj)({
+    E = s(945810);
+let h = (0, E.mj)({
     kind: "user",
     name: "2026-06-gummy-bears",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
 function C(e) {
-    let a = E.useConfig({ location: e });
+    let a = h.useConfig({ location: e });
     return !!(0, d.bG)([g.default], () => g.default.getCurrentUser()?.isStaff() ?? !1) && a.enabled;
 }
 let L = [
@@ -37,13 +37,13 @@ let L = [
         r.x.PIXELIFY,
         r.x.SINISTRE,
     ],
-    _ = [...L, r.x.PLAYPEN_SANS];
+    _ = [...L, r.x.PLAYPEN_SANS, r.x.ORBITRON, r.x.NEW_ROCKER, r.x.KALAM];
 function j() {
     let e = C("font-order");
     return t.useMemo(() => (e ? _ : L), [e]);
 }
 var I = s(945096);
-let T = (0, h.mj)({
+let T = (0, E.mj)({
     name: "2026-05-dns-surprise-me-weighted-randomizer",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -55,15 +55,15 @@ var v = s(383197),
     b = s(652215),
     k = s(836602),
     M = s(696451),
-    P = s(427262),
-    O = s(403581),
-    G = s(661531),
-    R = s(48736),
+    O = s(427262),
+    P = s(403581),
+    R = s(661531),
+    G = s(48736),
     Y = s(750656),
-    w = s(745699),
+    w = s(864386),
     z = s(375708),
-    U = s(477365),
-    F = s(960530);
+    U = s(250229),
+    F = s(257170);
 function H(e) {
     let { selectedColors: a, setSelectedColors: s, defaultColor: i, selectedEffectId: n, className: r } = e,
         d = (0, I.as)(n) > 1,
@@ -88,10 +88,10 @@ function H(e) {
                 className: F.s,
                 children: [
                     z.intl.string(w.default.JOpi7z),
-                    (0, l.jsx)(O.t, { size: "xs", color: G.A.colors.TEXT_DEFAULT }),
+                    (0, l.jsx)(P.t, { size: "xs", color: R.A.colors.TEXT_DEFAULT }),
                 ],
             }),
-            (0, l.jsx)(R.default, {
+            (0, l.jsx)(G.default, {
                 className: U.Ei,
                 colorContainerClassName: U.rx,
                 defaultColor: i,
@@ -109,14 +109,14 @@ function H(e) {
         ],
     });
 }
-var J = s(503698),
-    B = s.n(J),
+var B = s(503698),
+    J = s.n(B),
     K = s(331322),
     X = s(939249),
     V = s(922301),
     Q = s(660184),
-    $ = s(927226);
-function W(e) {
+    W = s(700090);
+function $(e) {
     let { selectedEffectId: a, setSelectedEffectId: s, className: t } = e,
         i = C("DisplayNameStylesEffectSelection") ? [...Y.re, n.z.PRISM, n.z.GUMMY] : Y.re;
     return (0, l.jsxs)("div", {
@@ -127,7 +127,7 @@ function W(e) {
                 className: F.s,
                 children: [
                     z.intl.string(w.default["1wilM1"]),
-                    (0, l.jsx)(O.t, { size: "xs", color: G.A.colors.TEXT_DEFAULT }),
+                    (0, l.jsx)(P.t, { size: "xs", color: R.A.colors.TEXT_DEFAULT }),
                 ],
             }),
             (0, l.jsx)(K.B, {
@@ -146,13 +146,13 @@ function Z(e) {
     return (0, l.jsx)(
         X.D,
         {
-            className: B()($.Tw, { [$.wH]: s }),
+            className: J()(W.Tw, { [W.wH]: s }),
             onClick: t,
             children: (0, l.jsx)(Q.A, {
                 userName: i.name,
                 effectDisplayType: V.G.STATIC,
                 displayNameStyles: i.previewStyles,
-                textClassName: $.tr,
+                textClassName: W.tr,
                 inProfile: !0,
             }),
         },
@@ -163,7 +163,7 @@ var q = s(834730),
     ee = s(885574),
     ea = s(990078),
     es = s(73392),
-    el = s(984958);
+    el = s(699006);
 function et(e) {
     let { selectedFontId: a, setSelectedFontId: s, displayName: t, className: i } = e,
         n = j(),
@@ -177,7 +177,7 @@ function et(e) {
                 className: F.s,
                 children: [
                     z.intl.string(w.default.nP0ngb),
-                    (0, l.jsx)(O.t, { size: "xs", color: G.A.colors.TEXT_DEFAULT }),
+                    (0, l.jsx)(P.t, { size: "xs", color: R.A.colors.TEXT_DEFAULT }),
                 ],
             }),
             (0, l.jsx)(K.B, {
@@ -193,13 +193,13 @@ function et(e) {
                             text: z.intl.string(t.name),
                             asContainer: !0,
                             children: (0, l.jsx)(X.D, {
-                                className: B()(el.SO, { [el.wH]: i }),
+                                className: J()(el.SO, { [el.wH]: i }),
                                 onClick: () => s(e),
                                 "aria-label": z.intl.string(t.name),
                                 children: (0, l.jsx)(q.E, {
                                     variant: "text-lg/semibold",
                                     color: i ? "text-strong" : "text-default",
-                                    className: B()(el.FH, t.className),
+                                    className: J()(el.FH, t.className),
                                     children: "Gg",
                                 }),
                             }),
@@ -230,7 +230,7 @@ var ei = s(821609),
     ed = s(465794),
     eo = s(757036),
     ec = s(788868),
-    em = s(419377);
+    em = s(277041);
 function eu(e) {
     let { onApply: a, onSurpriseMe: s, onClose: t, canApply: i } = e,
         n = (0, eo.L)(ec.PremiumTypes.TIER_2),
@@ -238,7 +238,7 @@ function eu(e) {
             variant: "secondary",
             size: "md",
             onClick: s,
-            icon: { type: "rive", asset: en.m, riveProps: { dataBinding: { fill: G.A.colors.ICON_STRONG } } },
+            icon: { type: "rive", asset: en.m, riveProps: { dataBinding: { fill: R.A.colors.ICON_STRONG } } },
             text: z.intl.string(w.default.NOGFds),
         }),
         d = (0, l.jsxs)("div", {
@@ -267,7 +267,7 @@ function eu(e) {
                     children: [
                         (0, l.jsx)(ea.m, {
                             text: z.intl.string(z.t["5AFxuK"]),
-                            children: (0, l.jsx)(O.t, { size: "md", color: G.A.colors.ICON_STRONG }),
+                            children: (0, l.jsx)(P.t, { size: "md", color: R.A.colors.ICON_STRONG }),
                         }),
                         (0, l.jsx)(q.E, {
                             variant: "text-md/medium",
@@ -299,14 +299,14 @@ function eu(e) {
     return (0, l.jsx)(c.jl, { "data-migration-pending": !0, className: em.qr, children: n ? d : o });
 }
 var eN = s(366010),
-    ef = s(43990),
-    ex = s(629584),
+    ex = s(43990),
+    ef = s(629584),
     eA = s(943255),
     eg = s(575181),
     eS = s(736653),
     ep = s(780898),
-    eh = s(344346),
-    eE = s(320095),
+    eE = s(344346),
+    eh = s(320095),
     eC = s(963852),
     eL = s(763754),
     e_ = s(20851),
@@ -317,7 +317,7 @@ var eN = s(366010),
     eD = s(946356),
     ey = s(975571),
     eb = s(996988),
-    ek = s(772316);
+    ek = s(471260);
 function eM(e) {
     let {
             user: a,
@@ -330,14 +330,14 @@ function eM(e) {
         } = e,
         u = (0, eS.Ay)(),
         N = (0, eN.M)(u),
-        [f, A] = (0, t.useState)(N),
+        [x, A] = (0, t.useState)(N),
         g = (0, eT.Ay)(a.id, null),
         { bannerSrc: p } = (0, ev.A)({ displayProfile: g, size: 413, canAnimate: !1 }),
-        h = (0, d.cf)([k.A], () => k.A.getPendingChanges(s?.id)),
-        E = (0, eI.V7)({ userId: a.id, image: h.pendingAvatar }),
-        { userNameplate: C, guildNameplate: L, pendingNameplate: _ } = (0, x.rv)(a, s?.id),
+        E = (0, d.cf)([k.A], () => k.A.getPendingChanges(s?.id)),
+        h = (0, eI.V7)({ userId: a.id, image: E.pendingAvatar }),
+        { userNameplate: C, guildNameplate: L, pendingNameplate: _ } = (0, f.rv)(a, s?.id),
         j = (0, ep.WK)(L);
-    f && !N ? (u = b.NJ8.DARK) : !f && N && (u = b.NJ8.LIGHT);
+    x && !N ? (u = b.NJ8.DARK) : !x && N && (u = b.NJ8.LIGHT);
     let I = (0, t.useCallback)(() => {
             S.default.track(b.HAw.DISPLAY_NAME_STYLES_CLOSED), m();
         }, [m]),
@@ -366,18 +366,18 @@ function eM(e) {
                     forceUserTheme: !0,
                     children: (0, l.jsx)("div", { className: ek.b8, style: { backgroundImage: `url(${p})` } }),
                 }),
-            (0, l.jsx)(ef.N, {
+            (0, l.jsx)(ex.N, {
                 theme: u,
                 children: (e) =>
                     (0, l.jsxs)("div", {
-                        className: B()(ek.cq, e),
+                        className: J()(ek.cq, e),
                         inert: !0,
                         children: [
                             (0, l.jsx)(ej.A, {
                                 user: a,
                                 guild: s,
-                                ...h,
-                                pendingAvatar: E,
+                                ...E,
+                                pendingAvatar: h,
                                 pendingGlobalName: i,
                                 pendingDisplayNameStyles: v.displayNameStyles,
                                 canUsePremiumCustomization: !0,
@@ -391,7 +391,7 @@ function eM(e) {
                             }),
                             (0, l.jsx)(e_.A, {
                                 author: v,
-                                message: (0, eE.rh)({
+                                message: (0, eh.rh)({
                                     ...(0, eC.Ay)({ channelId: "1337", content: z.intl.string(w.default.h5Cuej) }),
                                     state: b.cmJ.SENT,
                                     id: "0",
@@ -402,7 +402,7 @@ function eM(e) {
                                 className: ek.OT,
                                 previewGuildId: s?.id,
                             }),
-                            (0, l.jsx)(eh.A, {
+                            (0, l.jsx)(eE.A, {
                                 user: a,
                                 guildId: s?.id,
                                 nameplate: _,
@@ -425,16 +425,16 @@ function eM(e) {
                             helpArticleLink: ey.A.getArticleURL(b.MVz.DISPLAY_NAME_STYLES),
                         }),
                     }),
-                    (0, l.jsx)(eP, { darkPreview: f, onToggleTheme: T }),
+                    (0, l.jsx)(eO, { darkPreview: x, onToggleTheme: T }),
                 ],
             }),
         ],
     });
 }
-function eP(e) {
+function eO(e) {
     let { darkPreview: a, onToggleTheme: s } = e,
         t = a ? b.NJ8.DARK : b.NJ8.LIGHT;
-    return (0, l.jsx)(ex.I, {
+    return (0, l.jsx)(ef.I, {
         className: ek.xr,
         optionClassName: ek.$C,
         options: [
@@ -461,37 +461,37 @@ function eP(e) {
         look: "pill",
     });
 }
-var eO = s(914002);
-function eG(e) {
+var eP = s(511698);
+function eR(e) {
     let a,
-        { transitionState: s, analyticsLocations: h, guildId: E, onClose: C, returnRef: L } = e,
+        { transitionState: s, analyticsLocations: E, guildId: h, onClose: C, returnRef: L } = e,
         _ = (0, d.bG)([g.default], () => g.default.getCurrentUser()),
-        O =
-            ((a = P.Ay.useName(_)),
+        P =
+            ((a = O.Ay.useName(_)),
             (0, d.bG)([k.A, M.Ay], () => {
-                let e = k.A.getPendingChanges(E);
-                return null != E ? (e.pendingNickname ?? M.Ay.getNick(E, _?.id)) : e.pendingGlobalName;
-            }, [E, _]) ??
+                let e = k.A.getPendingChanges(h);
+                return null != h ? (e.pendingNickname ?? M.Ay.getNick(h, _?.id)) : e.pendingGlobalName;
+            }, [h, _]) ??
                 a ??
                 ""),
-        G = (0, d.bG)([A.A], () => A.A.getGuild(E)),
-        { userDisplayNameStyles: R, guildDisplayNameStyles: Y, pendingDisplayNameStyles: U } = (0, x.B0)(_, E),
-        F = void 0 !== U ? U : (Y ?? R),
-        [J, B] = t.useState(F?.fontId ?? r.x.DEFAULT),
+        R = (0, d.bG)([A.A], () => A.A.getGuild(h)),
+        { userDisplayNameStyles: G, guildDisplayNameStyles: Y, pendingDisplayNameStyles: U } = (0, f.B0)(_, h),
+        F = void 0 !== U ? U : (Y ?? G),
+        [B, J] = t.useState(F?.fontId ?? r.x.DEFAULT),
         [K, X] = t.useState(F?.effectId ?? n.z.SOLID),
         V = (0, I.as)(K) > 1,
         Q = (0, v._)(K),
-        $ = (0, v._)(n.z.GRADIENT),
+        W = (0, v._)(n.z.GRADIENT),
         Z = F?.colors ?? [],
         [q, ee] = t.useState(Z.length > 0 && !V ? Z[0] : Q.defaultColors[0]),
-        [ea, es] = t.useState(Z.length > 0 && V ? Z : $.defaultColors);
-    (0, f.A)(
+        [ea, es] = t.useState(Z.length > 0 && V ? Z : W.defaultColors);
+    (0, x.A)(
         { type: i.ImpressionTypes.POPOUT, name: i.ImpressionNames.DISPLAY_NAME_STYLES_MODAL },
         { trackOnInitialLoad: !0 },
     );
-    let { analyticsLocations: el } = (0, N.Ay)(h, u.A.EDIT_DISPLAY_NAME_STYLES_MODAL),
+    let { analyticsLocations: el } = (0, N.Ay)(E, u.A.EDIT_DISPLAY_NAME_STYLES_MODAL),
         ei = t.useMemo(() => (V ? ea : [q]), [V, ea, q]),
-        en = t.useMemo(() => J !== F?.fontId || K !== F?.effectId || !(0, o.v)(ei, F?.colors ?? []), [F, J, K, ei]),
+        en = t.useMemo(() => B !== F?.fontId || K !== F?.effectId || !(0, o.v)(ei, F?.colors ?? []), [F, B, K, ei]),
         { enabled: er } = T.useConfig({ location: "DisplayNameStylesModal" }),
         ed = j(),
         eo = (function (e) {
@@ -521,16 +521,16 @@ function eG(e) {
             }, [a, s, l, i, d, m, o, c]);
         })({
             hasChanges: en,
-            selectedFontId: J,
+            selectedFontId: B,
             selectedEffectId: K,
             selectedColors: ei,
             defaultColor: Q.defaultColors[0],
-            guildId: E,
+            guildId: h,
             onClose: C,
         }),
         ec = t.useCallback(() => {
             let { fontId: e, effectId: a, colors: s } = (0, I.gN)(ed, er);
-            B(e), X(a), (0, I.as)(a) > 1 ? es(s) : ee(s[0]), S.default.track(b.HAw.DISPLAY_NAME_STYLES_SURPRISE_ME);
+            J(e), X(a), (0, I.as)(a) > 1 ? es(s) : ee(s[0]), S.default.track(b.HAw.DISPLAY_NAME_STYLES_SURPRISE_ME);
         }, [ed, er, es, ee]),
         em = t.useCallback(
             (e) => {
@@ -555,51 +555,51 @@ function eG(e) {
                       transitionState: s,
                       size: c.rI.LARGE,
                       parentComponent: "DisplayNameStylesModal",
-                      className: eO.CR,
+                      className: eP.CR,
                       returnRef: L,
                       children: [
                           (0, l.jsxs)(c.$m, {
                               "data-migration-pending": !0,
-                              className: eO.jE,
+                              className: eP.jE,
                               style: { overflow: "hidden auto" },
                               children: [
                                   (0, l.jsxs)("div", {
-                                      className: eO.w1,
+                                      className: eP.w1,
                                       children: [
                                           (0, l.jsx)(c.rQ, {
                                               "data-migration-pending": !0,
                                               separator: !1,
-                                              className: eO.bV,
+                                              className: eP.bV,
                                               children: (0, l.jsx)(m.D, {
                                                   variant: "heading-lg/semibold",
                                                   children: z.intl.string(w.default.ZPMAlX),
                                               }),
                                           }),
                                           (0, l.jsx)(et, {
-                                              selectedFontId: J,
-                                              setSelectedFontId: B,
-                                              displayName: O,
-                                              className: eO._,
+                                              selectedFontId: B,
+                                              setSelectedFontId: J,
+                                              displayName: P,
+                                              className: eP._,
                                           }),
-                                          (0, l.jsx)(W, {
+                                          (0, l.jsx)($, {
                                               selectedEffectId: K,
                                               setSelectedEffectId: em,
-                                              className: eO._,
+                                              className: eP._,
                                           }),
                                           (0, l.jsx)(H, {
                                               selectedColors: ei,
                                               setSelectedColors: eN,
                                               selectedEffectId: K,
-                                              className: eO._,
+                                              className: eP._,
                                               defaultColor: Q.defaultColors[0],
                                           }),
                                       ],
                                   }),
                                   (0, l.jsx)(eM, {
                                       user: _,
-                                      guild: G,
-                                      displayName: O,
-                                      selectedFontId: J,
+                                      guild: R,
+                                      displayName: P,
+                                      selectedFontId: B,
                                       selectedEffectId: K,
                                       selectedColors: K === n.z.SOLID && (0, o.v)(ei, Q.defaultColors) ? [] : ei,
                                       onClose: C,

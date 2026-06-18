@@ -17,6 +17,9 @@ let c = {
     [s.x.SINISTRE]: u.yH,
     [s.x.ZILLA_SLAB]: u.FR,
     [s.x.PLAYPEN_SANS]: u.R_,
+    [s.x.ORBITRON]: u.yT,
+    [s.x.NEW_ROCKER]: u.NX,
+    [s.x.KALAM]: u.x4,
 };
 function d(e) {
     return { name: (0, o.A)(e), className: c[e] ?? "" };
