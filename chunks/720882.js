@@ -629,7 +629,7 @@ function tk(e) {
                       leadingAccessory: { type: "icon", icon: eL.L },
                   })
             : null,
-        ny = (0, K.A)(tV),
+        ny = (0, K.A)(tV, tW),
         nh = (0, D.A)({
             commandType: c.kc.MESSAGE,
             commandTargetId: tV.id,
