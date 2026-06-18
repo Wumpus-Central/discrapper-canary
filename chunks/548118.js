@@ -13,19 +13,19 @@ n(321073);
 var _ = n(113144),
     h = n.n(_),
     f = n(776231);
-let p = /url\(['"](.*)['"]\)/,
-    E = (e) => {
-        if (null == e || "" === e || "none" === e) return null;
-        let t = e.match(p);
-        return null != t ? t[1] : e;
-    };
+let p = /url\(['"](.*)['"]\)/;
+function E(e) {
+    if (null == e || "" === e || "none" === e) return null;
+    let t = e.match(p);
+    return null != t ? t[1] : e;
+}
 var m = n(624793),
     g = n(714991),
     A = n(260509),
     I = n(531685),
     T = n(515718),
     S = n(821589),
-    y = n(645206);
+    y = n(304406);
 let C = {
         SMOL: "Smol",
         MINI: "Mini",

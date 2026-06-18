@@ -16,8 +16,10 @@ var i,
         (i.VOICE_CHANNEL_HISTORY = "VOICE_CHANNEL_HISTORY"),
         i),
     d = (((r = d || {}).START = "START"), (r.END = "END"), (r.TIME = "TIME"), r);
-let _ = (e) => (t, n) => (null == n ? "" : u.intl.format(e(), { time: t, ...n })),
-    h = {
+function _(e) {
+    return (t, n) => (null == n ? "" : u.intl.format(e(), { time: t, ...n }));
+}
+let h = {
         ACTIVITY_FEED: {
             START: {
                 [o.pJ.SECONDS]: () => u.intl.string(u.t["ahzZr+"]),
