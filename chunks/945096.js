@@ -1,10 +1,11 @@
 "use strict";
-n.d(t, { $0: () => l, Xr: () => d, as: () => o, gN: () => c, mT: () => u });
+n.d(t, { $0: () => u, Xr: () => h, as: () => l, gN: () => d, mT: () => c, sx: () => _ });
 var i = n(310784),
     r = n.n(i),
     s = n(508425),
-    a = n(750656);
-function o(e) {
+    a = n(559949),
+    o = n(750656);
+function l(e) {
     switch (e) {
         case s.z.GRADIENT:
             return 2;
@@ -16,7 +17,7 @@ function o(e) {
             return 1;
     }
 }
-function l(e) {
+function u(e) {
     let t = r()(e).alpha(1),
         n = t.get("hsl.l"),
         i = Math.min(1, 1.2 * t.get("hsl.s")),
@@ -31,23 +32,29 @@ function l(e) {
         neonStroke: t.set("hsl.s", i).set("hsl.l", s).hex(),
     };
 }
-function u(e) {
+function c(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
-function c(e) {
+function d(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = a.re[Math.floor(Math.random() * a.re.length)],
+        n = o.re[Math.floor(Math.random() * o.re.length)],
         i = t
             ? (function (e) {
-                  let t = Math.random() * e.reduce((e, t) => e + (a.sO.get(t) ?? 0), 0);
-                  for (let n of e) if ((t -= a.sO.get(n) ?? 0) <= 0) return n;
+                  let t = Math.random() * e.reduce((e, t) => e + (o.sO.get(t) ?? 0), 0);
+                  for (let n of e) if ((t -= o.sO.get(n) ?? 0) <= 0) return n;
                   return e[e.length - 1];
               })(e)
             : e[Math.floor(Math.random() * e.length)],
-        r = (0, a.ii)(n);
+        r = (0, o.ii)(n);
     return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
 }
-function d(e) {
+function _(e, t) {
+    if (t || null == e) return e;
+    let n = o._k.includes(e.fontId) ? a.x.DEFAULT : e.fontId,
+        i = o.gz.includes(e.effectId) ? s.z.SOLID : e.effectId;
+    return n === e.fontId && i === e.effectId ? e : { ...e, fontId: n, effectId: i };
+}
+function h(e) {
     if (null == e) return !1;
     let t = e.replace(/[^\p{L}]/gu, "");
     return /\P{Script=Latin}/u.test(t);

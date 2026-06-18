@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Jl: () => o, ii: () => d, re: () => s, sO: () => a });
+n.d(t, { Jl: () => u, _k: () => o, gz: () => l, ii: () => h, re: () => s, sO: () => a });
 var i = n(508425),
     r = n(559949);
 let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
@@ -13,10 +13,12 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         [r.x.MUSEO_MODERNO, 6.82],
         [r.x.DEFAULT, 4.29],
     ]),
-    o = [
+    o = [r.x.PLAYPEN_SANS, r.x.ORBITRON, r.x.NEW_ROCKER, r.x.KALAM],
+    l = [i.z.GUMMY, i.z.PRISM],
+    u = [
         1628845, 2417517, 1874155, 0xc32aff, 0xfc1965, 0xc6a615, 695675, 1027403, 747943, 0xa913e5, 0xda0149, 0xf93722,
     ],
-    l = [
+    c = [
         [2797222, 16762e3],
         [2535780, 9497343],
         [0xe45eff, 2522592],
@@ -29,7 +31,7 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         let [t, n] = e;
         return { start: t, end: n, name: "" };
     }),
-    u = [
+    d = [
         [7183099, 6082490, 16762e3, 0xe46ce2],
         [0xfc1965, 0xf5983c, 0xc6a615, 2417517],
         [2417517, 1628845, 1874155, 0xa913e5],
@@ -37,7 +39,7 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         [0xf93722, 0xf5983c, 0xc6a615, 1027403],
         [695675, 1628845, 9497343, 747943],
     ],
-    c = [
+    _ = [
         [0xf93722, 0xf5983c, 0xc6a615, 2417517, 1874155],
         [7183099, 6082490, 2417517, 16762e3, 0xfc1965],
         [0xc32aff, 0xa913e5, 6888941, 2522592, 1628845],
@@ -45,16 +47,16 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         [0xda0149, 0xfc1965, 0xf5983c, 0xc6a615, 1027403],
         [747943, 1874155, 1628845, 695675, 2417517],
     ];
-function d(e) {
+function h(e) {
     switch (e) {
         case i.z.GUMMY:
-            return u;
+            return d;
         case i.z.PRISM:
-            return c;
+            return _;
         case i.z.GRADIENT:
         case i.z.GLOW:
-            return l.map((e) => [e.start, e.end]);
+            return c.map((e) => [e.start, e.end]);
         default:
-            return o.map((e) => [e]);
+            return u.map((e) => [e]);
     }
 }
