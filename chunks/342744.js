@@ -1,4 +1,4 @@
-i.d(t, { default: () => C });
+i.d(t, { default: () => v });
 var n = i(627968),
     s = i(64700),
     l = i(284009),
@@ -16,9 +16,11 @@ var n = i(627968),
     S = i(253390),
     T = i(166403),
     x = i(428262),
-    p = i(375708),
-    f = i(366793);
-async function N(e, t, i, n) {
+    p = i(206745),
+    f = i(942606),
+    N = i(375708),
+    _ = i(366793);
+async function I(e, t, i, n) {
     let s = (0, x.aE)(e, t);
     await (0, c.Ey)(i),
         await (0, E.nV)(
@@ -29,49 +31,61 @@ async function N(e, t, i, n) {
             n,
         );
 }
-function _(e) {
+function C(e) {
     let { errorMsg: t } = e;
     return (0, n.jsxs)("div", {
-        className: f.rf,
+        className: _.rf,
         children: [
             null !== t &&
-                (0, n.jsx)("div", { className: f.z3, children: (0, n.jsx)(u.w, { type: "critical", children: t }) }),
-            (0, n.jsx)("div", { children: p.intl.string(p.t.DY2CXs) }),
+                (0, n.jsx)("div", { className: _.z3, children: (0, n.jsx)(u.w, { type: "critical", children: t }) }),
+            (0, n.jsx)("div", { children: N.intl.string(N.t.DY2CXs) }),
         ],
     });
 }
-function I() {
+function b() {
     return (0, n.jsxs)("div", {
-        className: f.rf,
-        children: [(0, n.jsx)("div", { className: f.dk }), (0, n.jsx)("div", { children: p.intl.string(p.t.G27uHe) })],
+        className: _.rf,
+        children: [(0, n.jsx)("div", { className: _.dk }), (0, n.jsx)("div", { children: N.intl.string(N.t.G27uHe) })],
     });
 }
-function C(e) {
+function y(e) {
+    let { step: t, errorMsg: i, premiumSubscription: s } = e;
+    if (null == s) return (0, n.jsx)(d.y, {});
+    switch (t) {
+        case 1:
+            return (0, n.jsx)(C, { errorMsg: i });
+        case 2:
+            return (0, n.jsx)(b, {});
+        default:
+            throw new p.Q({ message: `Unexpected step: ${t}` });
+    }
+}
+function v(e) {
     let { guildBoostSlotId: t, transitionState: i, onClose: l } = e,
         { analyticsLocations: u } = (0, h.Ay)(A.A.GUILD_BOOST_UNCANCELLATION_MODAL);
     s.useEffect(() => {
         T.A.hasFetchedSubscriptions() || (0, E.hP)();
     }, []);
-    let c = (0, o.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
-        [f, C] = s.useState(1),
-        [b, y] = s.useState(!1),
-        [v, j] = s.useState(null),
-        O = s.useCallback(async () => {
-            if (null != c)
+    let d = (0, o.bG)([T.A], () => T.A.getPremiumTypeSubscription()),
+        [c, p] = s.useState(1),
+        [_, C] = s.useState(!1),
+        [b, v] = s.useState(null),
+        j = s.useCallback(async () => {
+            if (null != d)
                 try {
-                    y(!0), j(null);
-                    let e = (0, S.v)(c, 1);
+                    C(!0), v(null);
+                    let e = (0, S.v)(d, 1);
                     r()(
-                        (0, x.bx)(e) <= (0, x.bx)(c.additionalPlans),
+                        (0, x.bx)(e) <= (0, x.bx)(d.additionalPlans),
                         "Uncanceling should not increase the number of guild subscriptions",
                     ),
-                        await N(c, e, t, u),
-                        C(2);
+                        await I(d, e, t, u),
+                        p(2);
                 } catch (t) {
                     let e = t instanceof g.Ey ? t : new g.Ey(t, t.code);
-                    j(p.intl.string(e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? p.t.dq4vq7 : p.t["5mlOCW"])), y(!1);
+                    v(N.intl.string(e.code === m.tG.BILLING_PAUSE_INVALID_UPDATE ? N.t.dq4vq7 : N.t["5mlOCW"])), C(!1);
                 }
-        }, [c, t, u]);
+        }, [d, t, u]);
     return (0, n.jsx)(h.f5, {
         value: u,
         children: (0, n.jsx)(a.Modal, {
@@ -79,39 +93,33 @@ function C(e) {
             onClose: async () => await l(),
             size: "sm",
             title: (() => {
-                switch (f) {
+                switch (c) {
                     case 1:
-                        return p.intl.string(p.t.l52ih2);
+                        return N.intl.string(N.t.l52ih2);
                     case 2:
-                        return p.intl.string(p.t.H9QUAB);
+                        return N.intl.string(N.t.H9QUAB);
                     default:
                         return "";
                 }
             })(),
             actions: (() => {
-                switch (f) {
+                switch (c) {
                     case 1:
                         return [
-                            { variant: "secondary", text: p.intl.string(p.t.oEAioF), disabled: b, onClick: l },
-                            { variant: "primary", text: p.intl.string(p.t.etZP4B), loading: b, onClick: O },
+                            { variant: "secondary", text: N.intl.string(N.t.oEAioF), disabled: _, onClick: l },
+                            { variant: "primary", text: N.intl.string(N.t.etZP4B), loading: _, onClick: j },
                         ];
                     case 2:
-                        return [{ variant: "primary", text: p.intl.string(p.t.BddRzS), onClick: l }];
+                        return [{ variant: "primary", text: N.intl.string(N.t.BddRzS), onClick: l }];
                     default:
                         return [];
                 }
             })(),
-            children: (() => {
-                if (null == c) return (0, n.jsx)(d.y, {});
-                switch (f) {
-                    case 1:
-                        return (0, n.jsx)(_, { errorMsg: v });
-                    case 2:
-                        return (0, n.jsx)(I, {});
-                    default:
-                        throw Error(`Unexpected step: ${f}`);
-                }
-            })(),
+            children: (0, n.jsx)(f.G, {
+                errorHandlingBehavior: "close-and-alert",
+                guildBoostSlotId: t,
+                children: (0, n.jsx)(y, { step: c, errorMsg: b, premiumSubscription: d }),
+            }),
         }),
     });
 }
