@@ -33,6 +33,7 @@ function S() {
         friendsTabBadgeLastDismissedTime: null,
         giftUnreadNotificationLastDismissedTimes: [],
         profilePopoutGiftIntentsDismissMap: {},
+        lastKnownGiftIntentDismissedAtMs: 0,
     };
 }
 let y = S(),
@@ -154,6 +155,7 @@ class G extends s.Ay.PersistedStore {
                       giftUnreadNotificationLastDismissedTimes: e.giftUnreadNotificationLastDismissedTimes ?? [],
                       profilePopoutGiftIntentsDismissMap: {},
                   },
+        (e) => (null == e ? e : { ...e, lastKnownGiftIntentDismissedAtMs: e.lastKnownGiftIntentDismissedAtMs ?? 0 }),
     ];
     initialize(e) {
         (y = S()),
@@ -164,7 +166,8 @@ class G extends s.Ay.PersistedStore {
                 (y.giftUnreadNotificationLastDismissedTimes = Array.from(
                     e.giftUnreadNotificationLastDismissedTimes ?? [],
                 )),
-                (y.profilePopoutGiftIntentsDismissMap = { ...e.profilePopoutGiftIntentsDismissMap })),
+                (y.profilePopoutGiftIntentsDismissMap = { ...e.profilePopoutGiftIntentsDismissMap }),
+                (y.lastKnownGiftIntentDismissedAtMs = e.lastKnownGiftIntentDismissedAtMs ?? 0)),
             this.syncWith([_.A, l.A, d.A, o.A, c.A], M),
             (y.messageGiftIntentLastShownMap = g(y.messageGiftIntentLastShownMap, L(), 12096e5)),
             x(),
@@ -220,6 +223,9 @@ class G extends s.Ay.PersistedStore {
     getMessageGiftIntentLastShownMap() {
         return y.messageGiftIntentLastShownMap;
     }
+    getLastKnownGiftIntentDismissedAtMs() {
+        return y.lastKnownGiftIntentDismissedAtMs;
+    }
     getProfilePopoutGiftIntentsDismissMap() {
         return y.profilePopoutGiftIntentsDismissMap;
     }
@@ -244,6 +250,15 @@ let F = new G(a.h, {
     GIFT_INTENT_FLOW_PURCHASED_GIFT: function (e) {
         let { recipientUserId: t } = e;
         k(t);
+    },
+    GIFT_INTENT_DISMISSALS_FETCH_SUCCESS: function (e) {
+        let { dismissals: t, settingsTimestampMs: n } = e,
+            i = { ...y.messageGiftIntentLastShownMap };
+        for (let { targetId: e, dismissedAtMs: n } of t) {
+            let t = i[e];
+            i[e] = null == t ? n : Math.max(t, n);
+        }
+        (y.messageGiftIntentLastShownMap = g(i, L(), 1296e6)), (y.lastKnownGiftIntentDismissedAtMs = n);
     },
     PROFILE_POPOUT_GIFT_INTENTS_DISMISS: function (e) {
         let { recipientUserId: t } = e;

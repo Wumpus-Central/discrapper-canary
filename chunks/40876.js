@@ -401,9 +401,16 @@ let r = {
     },
     ParticipantFocusManager: { inlineRequire: () => n(585250).A, hasStoreChangeListeners: !0 },
     PremiumGiftingIntentManager: {
-        actions: ["POST_CONNECTION_OPEN", "CHANNEL_SELECT"],
-        inlineRequire: () => n(528153).A,
+        actions: [
+            "POST_CONNECTION_OPEN",
+            "CHANNEL_SELECT",
+            "GIFT_INTENT_DISMISSALS_FETCH_SUCCESS",
+            "GIFT_INTENT_DISMISSALS_FETCH_FAILURE",
+            "LOGOUT",
+        ],
+        inlineRequire: () => n(687649).A,
         neverLoadBeforeConnectionOpen: !0,
+        hasStoreChangeListeners: !0,
     },
     PromotionsManager: {
         actions: [
@@ -577,7 +584,7 @@ let r = {
             "VOICE_CHANNEL_SELECT",
             "RUNNING_GAMES_CHANGE",
         ],
-        inlineRequire: () => n(257290).A,
+        inlineRequire: () => n(849106).A,
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
