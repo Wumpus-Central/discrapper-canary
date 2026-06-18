@@ -34,14 +34,14 @@ var i = n(627968),
     x = n(580745),
     f = n(232835),
     E = n(287809),
-    I = n(174459),
-    C = n(625494),
+    C = n(174459),
+    I = n(625494),
     v = n(723702),
     _ = n(427262),
     j = n(841549),
     N = n(439147),
-    y = n(81437);
-function T(e, t, n) {
+    T = n(81437);
+function y(e, t, n) {
     return l.useCallback(() => {
         n({ [e]: !t });
     }, [e, n, t]);
@@ -54,25 +54,25 @@ function S(e, t, n) {
             if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) return void n();
             let s = `@${_.Ay.getUserTag(l, { decoration: "never" })}`,
                 r = `<@${e}>`;
-            C._.dispatchToLastSubscribed(g.jej.INSERT_TEXT, { plainText: s, rawText: r }), d.A.startTyping(t);
+            I._.dispatchToLastSubscribed(g.jej.INSERT_TEXT, { plainText: s, rawText: r }), d.A.startTyping(t);
         },
         [e, t, n],
     );
 }
 function b(e, t, n, i) {
-    let l = T("usernameProfile", n, i);
+    let l = y("usernameProfile", n, i);
     return S(e.author.id, t.id, l);
 }
 function L(e, t, n, i) {
-    let l = T("referencedUsernameProfile", n, i);
+    let l = y("referencedUsernameProfile", n, i);
     return S(e?.author.id, t.id, l);
 }
 function R(e, t, n, i) {
-    let l = T("interactionUsernameProfile", n, i);
+    let l = y("interactionUsernameProfile", n, i);
     return S(e?.user.id, t.id, l);
 }
 function k(e, t, n, i) {
-    let l = T("referencedUsernameProfile", n, i);
+    let l = y("referencedUsernameProfile", n, i);
     return S(e, t.id, l);
 }
 function M(e) {
@@ -84,13 +84,13 @@ function M(e) {
     );
 }
 function P(e, t) {
-    return M(T("avatarProfile", e, t));
+    return M(y("avatarProfile", e, t));
 }
 function w(e, t) {
-    return M(T("referencedAvatarProfile", e, t));
+    return M(y("referencedAvatarProfile", e, t));
 }
 function D(e, t) {
-    return M(T("interactionAvatarProfile", e, t));
+    return M(y("interactionAvatarProfile", e, t));
 }
 function O(e, t, s, o) {
     let { id: d } = t,
@@ -113,7 +113,7 @@ function O(e, t, s, o) {
             null == l ||
                 null == r ||
                 c ||
-                (I.default.track(g.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                (C.default.track(g.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: u,
                     channel: d,
                     location: "right_click",
@@ -213,7 +213,7 @@ function O(e, t, s, o) {
                             n.e("44912"),
                             n.e("46149"),
                             n.e("36674"),
-                            n.e("859"),
+                            n.e("69968"),
                             n.e("95841"),
                             n.e("96680"),
                             n.e("63874"),
@@ -296,10 +296,10 @@ function H(e) {
         [o, d] = l.useState(i);
     a.current = o || a.current;
     let c = l.useCallback(() => {
-            (0, p.cE)(), o || (C._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !0), d(!0));
+            (0, p.cE)(), o || (I._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !0), d(!0));
         }, [o, r]),
         u = l.useCallback(() => {
-            C._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !1), d(!1);
+            I._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !1), d(!1);
         }, [r]);
     return { hasHovered: a.current, isHovered: o, handleMouseEnter: c, handleMouseLeave: u };
 }
@@ -354,11 +354,11 @@ function Y(e, t, n) {
             replied_message_has_media: a,
             replied_message_length: d,
         }),
-            (null == l || (0, y.A)(l, s)) && s();
+            (null == l || (0, T.A)(l, s)) && s();
     }, [t, e, n]);
 }
 function z(e, t) {
-    let n = T("interactionData", e, t);
+    let n = y("interactionData", e, t);
     return l.useCallback(
         (e) => {
             e.preventDefault(), e.stopPropagation(), n();
