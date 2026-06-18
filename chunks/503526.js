@@ -26168,7 +26168,7 @@ function fq(e) {
         className: k()(t, fz.$O),
         style: r,
         children: (0, A.jsx)("div", {
-            className: fz.zC,
+            className: k()(fz.zC, fY.Nt),
             children: (0, A.jsx)(xO.A, {
                 author: i,
                 message: l,

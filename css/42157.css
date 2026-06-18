@@ -21,13 +21,14 @@
 }
 
 .guildOfficialMessage__5126c {
-    background: transparent;
-    isolation: isolate;
-    position: relative;
     --custom-message-content-color: var(--custom-guild-official-message-text)
 }
 
-.guildOfficialMessage__5126c:after {
+.messageListItem__5126c:has(.guildOfficialMessage__5126c) {
+    isolation: isolate
+}
+
+.messageListItem__5126c:has(.guildOfficialMessage__5126c):after {
     background: hsl(var(--custom-guild-official-message-hsl));
     content: "";
     inset: 0;
@@ -41,6 +42,14 @@
     pointer-events: none;
     position: absolute;
     z-index: -1
+}
+
+.messageListItem__5126c:has(.guildOfficialMessage__5126c.highlighted__5126c):after,
+.messageListItem__5126c:has(.guildOfficialMessage__5126c.mentioned__5126c):after,
+.messageListItem__5126c:has(.guildOfficialMessage__5126c.replying__5126c):after,
+.messageListItem__5126c:has(.guildOfficialMessage__5126c.selected__5126c):after,
+.mouse-mode.full-motion .messageListItem__5126c:has(.guildOfficialMessage__5126c:hover):after {
+    content: none
 }
 
 .message__5126c.guildOfficialMessage__5126c .guildOfficialMessageContent__5126c,
@@ -140,16 +149,9 @@
     background: var(--message-automod-background-hover)
 }
 
-.message__5126c.guildOfficialMessage__5126c.selected__5126c,
-.mouse-mode.full-motion .message__5126c.guildOfficialMessage__5126c:hover {
-    background: hsl(var(--custom-guild-official-message-hsl)/var(--custom-guild-official-message-selected-alpha))
-}
-
-.message__5126c.guildOfficialMessage__5126c.highlighted__5126c:after,
-.message__5126c.guildOfficialMessage__5126c.replying__5126c:after,
-.message__5126c.guildOfficialMessage__5126c.selected__5126c:after,
-.mouse-mode.full-motion .message__5126c.guildOfficialMessage__5126c:hover:after {
-    content: none
+.message__5126c.guildOfficialMessage__5126c:not(.mentioned__5126c):not(.replying__5126c):not(.highlighted__5126c).selected__5126c,
+.mouse-mode.full-motion .message__5126c.guildOfficialMessage__5126c:not(.mentioned__5126c):not(.replying__5126c):not(.highlighted__5126c):hover {
+    background: hsl(var(--custom-guild-official-message-hsl)/var(--custom-guild-official-message-alpha))
 }
 
 .message__5126c.replying__5126c.selected__5126c,

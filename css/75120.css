@@ -81,7 +81,7 @@
     line-height: var(--chat-markup-line-height);
     white-space: break-spaces;
     word-wrap: break-word;
-    color: var(--text-default);
+    color: var(--custom-message-content-color, var(--text-default));
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
@@ -160,6 +160,7 @@
 
 .markup__75297 code.inline {
     border-radius: 4px;
+    color: var(--text-default);
     font-family: var(--font-code);
     font-size: 85%;
     height: auto;
@@ -265,7 +266,7 @@
 .markup__75297 h4,
 .markup__75297 h5,
 .markup__75297 h6 {
-    color: var(--text-strong);
+    color: var(--custom-message-content-color, var(--text-strong));
     font-family: var(--font-display);
     font-weight: var(--font-weight-bold);
     line-height: 1.375em;

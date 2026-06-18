@@ -21,10 +21,9 @@ function f(e) {
             "--custom-guild-official-message": (0, a.$k)(e, !0),
             "--custom-guild-official-message-hsl": (0, a.BK)(e, !0),
             "--custom-guild-official-message-alpha": o ? d.cZ : 0,
-            "--custom-guild-official-message-selected-alpha": o ? d.oe : 0,
             "--custom-guild-official-message-dither-opacity": +!!o,
             "--custom-guild-official-message-text":
-                "no_text_color" !== s ? (0, r.Fy)(e, i, f, o ? d.oe : 0).hex() : "var(--text-default)",
+                "no_text_color" !== s ? (0, r.Fy)(e, i, f, o ? d.cZ : 0).hex() : "var(--text-default)",
         };
     }, [e, i, f, n, t]);
 }

@@ -1832,7 +1832,7 @@ function n5(e) {
     return (0, s.jsx)(H.G, {
         id: `official-messages-page-${t.id}`,
         renderIcon: (e) => (0, s.jsx)(n9.L, { size: "md", color: "currentColor", className: e }),
-        text: z.intl.string(z.t["0C5w9r"]),
+        text: z.intl.string(z.t.xHEzFh),
         selected: n,
         onClick: () => {
             (0, ei.pX)(F.BVt.CHANNEL(t.id, es.VV.GUILD_OFFICIAL_MESSAGES));

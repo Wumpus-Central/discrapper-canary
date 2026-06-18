@@ -1284,7 +1284,7 @@
 
 .grid__8e988 {
     flex-direction: column;
-    gap: var(--space-8);
+    gap: var(--space-16);
     isolation: isolate;
     padding: var(--space-16) var(--space-24) var(--space-24)
 }
@@ -1302,7 +1302,7 @@
     box-sizing: border-box;
     cursor: pointer;
     flex-direction: row;
-    height: 180px;
+    height: 128px;
     overflow: hidden;
     padding: var(--space-16);
     position: relative
@@ -1318,19 +1318,11 @@
 
 .guildOfficialMessage__8e988 {
     --custom-message-content-color: var(--custom-guild-official-message-text);
-    background-image: linear-gradient(color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-alpha)*100%), transparent), color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-alpha)*100%), transparent))
-}
-
-.guildOfficialMessage__8e988:hover {
-    background-image: linear-gradient(color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-selected-alpha)*100%), transparent), color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-selected-alpha)*100%), transparent))
+    background-image: linear-gradient(to right, color-mix(in srgb, var(--custom-guild-official-message) calc(var(--custom-guild-official-message-alpha)*100%), transparent), transparent)
 }
 
 .cardBody__8e988 {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: var(--space-12);
-    overflow: hidden;
+    gap: 10px;
     pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -1338,6 +1330,18 @@
 }
 
 .cardBody__8e988,
+.cardContent__8e988 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.cardContent__8e988 {
+    gap: var(--space-12);
+    overflow: hidden
+}
+
 .filePreview__8e988 {
     min-width: 0
 }
@@ -1350,26 +1354,22 @@
 }
 
 .cardHeaderMeta__8e988 {
+    display: flex;
     flex-direction: column;
+    gap: 2px;
+    min-width: 0;
     overflow: hidden
 }
 
-.cardHeaderMeta__8e988,
+.authorNameGroup__8e988,
 .cardHeaderTop__8e988 {
+    align-items: center;
     display: flex;
     gap: var(--space-4);
     min-width: 0
 }
 
-.authorNameGroup__8e988,
-.cardHeaderTop__8e988 {
-    align-items: center
-}
-
 .authorNameGroup__8e988 {
-    display: flex;
-    gap: var(--space-4);
-    min-width: 0;
     overflow: hidden
 }
 
@@ -1413,72 +1413,32 @@
     white-space: nowrap
 }
 
+.authorName__8e988 a {
+    color: var(--text-strong)
+}
+
 .cardThumbnail__8e988 {
+    aspect-ratio: 1/1;
     background: var(--background-base-lower);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     flex-shrink: 0;
     height: 100%;
     margin-inline-start: var(--space-16);
-    max-width: 280px;
     overflow: hidden
 }
 
 .cardThumbnailImage__8e988 {
     display: block;
     height: 100%;
-    max-width: 100%;
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: auto
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
 }
 
-.pollContent__8e988 {
-    color: var(--text-default);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
+.pollEmbed__8e988 {
+    margin-top: var(--space-8);
     min-width: 0
-}
-
-.guildOfficialMessage__8e988 .pollContent__8e988 {
-    color: var(--custom-message-content-color, var(--text-default))
-}
-
-.pollQuestion__8e988 {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.guildOfficialMessage__8e988 .pollQuestion__8e988 {
-    color: var(--custom-message-content-color, var(--text-default))
-}
-
-.pollOptions__8e988 {
-    display: flex;
-    flex-direction: column;
-    gap: 2px
-}
-
-.pollOption__8e988 {
-    background-color: var(--background-mod-subtle);
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-    padding: 2px var(--space-8);
-    text-overflow: ellipsis;
-    white-space: nowrap
-}
-
-.pollOptionEmoji__8e988 {
-    height: 18px;
-    margin-inline-end: var(--space-4);
-    vertical-align: text-bottom;
-    width: 18px
-}
-
-.pollOptionOverflow__8e988 {
-    padding: 2px 0
 }
 
 .description__8e988 {
@@ -1490,11 +1450,12 @@
     overflow: hidden
 }
 
-.guildOfficialMessage__8e988 .description__8e988 {
+.guildOfficialMessage__8e988 .description__8e988,
+.guildOfficialMessage__8e988 .description__8e988 :is(h1, h2, h3, h4, h5, h6, small:not(.inlineFormat__8e988)) {
     color: var(--custom-message-content-color, var(--text-default))
 }
 
-.cardBodyFaded__8e988 {
+.cardContentFaded__8e988 {
     -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 24px), transparent);
     mask-image: linear-gradient(180deg, #000 calc(100% - 24px), transparent)
 }
