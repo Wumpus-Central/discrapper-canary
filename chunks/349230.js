@@ -1843,7 +1843,7 @@ let nh = c.memo(function (e) {
         return (0, r.jsx)(nd.A, { channel: t, guild: i, size: e, isTyping: a });
     }
 });
-var nm = n(137177);
+var nm = n(769015);
 function ng(e) {
     let { application: t, fallback: n } = e;
     return null == t
@@ -2732,7 +2732,8 @@ let n1 = c.memo(function (e) {
                                 n.e("91994"),
                                 n.e("49145"),
                                 n.e("70314"),
-                                n.e("27435"),
+                                n.e("4524"),
+                                n.e("54148"),
                                 n.e("58980"),
                             ]).then(n.bind(n, 535503));
                             return (n) =>

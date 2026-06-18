@@ -170,7 +170,7 @@ let p = {
         if (null == e || null == n) return [];
         let a = await i.Bo.get({
             url: f.Rsh.GUILD_EVENT_USERS(n, e, t),
-            query: { limit: s, with_member: !0, upgrade_response_type: !0 },
+            query: { limit: s, with_member: !0 },
             rejectWithError: !1,
         });
         return (

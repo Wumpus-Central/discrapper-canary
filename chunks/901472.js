@@ -2,48 +2,48 @@ l.d(t, { z: () => c });
 var n = l(323073),
     r = l(793574),
     u = l(892340),
-    d = l(976860),
-    i = l(138298),
-    E = l(940382),
+    E = l(976860),
+    d = l(138298),
+    i = l(940382),
     a = l(734057),
-    I = l(808728),
-    S = l(309010);
+    _ = l(808728),
+    I = l(309010);
 l(64700);
-var _ = l(95561),
-    N = l(174459),
-    o = l(486974),
-    M = l(652215),
-    A = l(985925),
-    O = l(746080);
+var S = l(95561),
+    A = l(174459),
+    M = l(486974),
+    O = l(652215),
+    N = l(985925),
+    o = l(746080);
 function c(e, t, l) {
     let c,
-        s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: o.g.INFO };
-    if (!(0, A.r)(e)) return Promise.resolve();
-    let g = s.modViewPanel ?? o.g.INFO,
-        f = s.sourceLocation ?? r.A.MEMBER_SAFETY_PAGE,
-        G = S.A.getCurrentlySelectedChannelId(),
-        h = null != G ? a.A.getChannel(G) : null;
-    if (l !== O.VV.MEMBER_SAFETY && (null == h || h.getGuildId() !== e)) {
-        let t = I.Ay.getDefaultChannel(e);
-        null == t || (0, n.qR)(t) || (0, d.pX)(M.BVt.CHANNEL(e, t.id));
+        G = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : { modViewPanel: M.g.INFO };
+    if (!(0, N.r)(e)) return Promise.resolve();
+    let s = G.modViewPanel ?? M.g.INFO,
+        g = G.sourceLocation ?? r.A.MEMBER_SAFETY_PAGE,
+        f = I.A.getCurrentlySelectedChannelId(),
+        R = null != f ? a.A.getChannel(f) : null;
+    if (l !== o.VV.MEMBER_SAFETY && l !== (0, o.Gr)(o.VV.MEMBER_SAFETY, e) && (null == R || R.getGuildId() !== e)) {
+        let t = _.Ay.getDefaultChannel(e);
+        null == t || (0, n.qR)(t) || (0, E.pX)(O.BVt.CHANNEL(e, t.id));
     }
     return (
         (0, u.G9)(l, t) && (c = l),
         !(function (e, t, l) {
             let n = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : r.A.MEMBER_SAFETY_PAGE,
-                u = { guild_id: e, target_user_id: t, subpanel_name: o.n[l], location: n, ...(0, _.H$)(e) };
-            N.default.track(M.HAw.GUILD_MOD_VIEW_OPENED, u);
-        })(e, t, g, f),
-        i.A.openGuildSidebar({
+                u = { guild_id: e, target_user_id: t, subpanel_name: M.n[l], location: n, ...(0, S.H$)(e) };
+            A.default.track(O.HAw.GUILD_MOD_VIEW_OPENED, u);
+        })(e, t, s, g),
+        d.A.openGuildSidebar({
             guildId: e,
             baseChannelId: l,
-            sidebarType: E.QV.GUILD_MEMBER_MOD_VIEW,
+            sidebarType: i.QV.GUILD_MEMBER_MOD_VIEW,
             details: {
-                type: E.LU.GUILD_MEMBER_MOD_VIEW,
+                type: i.LU.GUILD_MEMBER_MOD_VIEW,
                 userId: t,
                 guildId: e,
-                ...s,
-                modViewPanel: s.modViewPanel ?? o.g.INFO,
+                ...G,
+                modViewPanel: G.modViewPanel ?? M.g.INFO,
                 moderatorReportId: c,
             },
         })

@@ -1,5 +1,9 @@
-e.exports = {
+t.exports = {
+    RU: "auditLogSection_b2f52f",
+    d2: "auditLogSectionLabel_b2f52f",
+    kt: "auditLogItemContainer_b2f52f",
     $9: "auditLogItem_b2f52f",
+    kS: "emptyAuditLogItem_b2f52f",
     _6: "auditLogItemTitleContainer_b2f52f",
     lc: "auditLogItemTitle_b2f52f",
     Xh: "username_b2f52f",
