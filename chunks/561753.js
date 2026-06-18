@@ -1776,7 +1776,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 565711, Version Hash: 580d227f48bea6e153e08c355bd8f554cc82cc65`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 565770, Version Hash: 93030a5825969e033db29d1055fc78a01b8a1230`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -4030,7 +4030,7 @@ let sE = (0, iK.Fe)({
                 n.e("93720"),
                 n.e("54658"),
                 n.e("60813"),
-                n.e("76832"),
+                n.e("67904"),
                 n.e("80026"),
                 n.e("4787"),
                 n.e("18307"),
@@ -18051,7 +18051,7 @@ let Sr = "isHideDevBanner",
                     className: t6()(Si.Wz, Si.mr),
                     children: [
                         (0, F.jsx)(Sn, { className: Si.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "565711" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "565770" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -36894,7 +36894,7 @@ let xV = (0, nv.Fe)({
             n.e("71790"),
             n.e("81754"),
             n.e("60813"),
-            n.e("76832"),
+            n.e("67904"),
             n.e("19148"),
             n.e("80026"),
             n.e("33049"),
@@ -39071,15 +39071,17 @@ let kY = (0, iK.Fe)({
         createPromise: () => n.e("38217").then(n.bind(n, 149755)),
         webpackId: 149755,
         name: "ApplicationDirectoryGlobalDiscoveryRoutes",
-    }),
-    Ue = () => (0, F.jsx)(xd, {}),
-    Ut = new Set([
-        eM.BVt.LOGIN,
-        eM.BVt.LOGIN_HANDOFF,
-        eM.BVt.INVITE_LOGIN(":inviteCode"),
-        eM.BVt.GIFT_CODE_LOGIN(":giftCode"),
-        eM.BVt.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
-    ]);
+    });
+function Ue() {
+    return (0, F.jsx)(xd, {});
+}
+let Ut = new Set([
+    eM.BVt.LOGIN,
+    eM.BVt.LOGIN_HANDOFF,
+    eM.BVt.INVITE_LOGIN(":inviteCode"),
+    eM.BVt.GIFT_CODE_LOGIN(":giftCode"),
+    eM.BVt.GUILD_TEMPLATE_LOGIN(":guildTemplateCode"),
+]);
 function Un(e, t) {
     return t ? e.filter((e) => !Ut.has(e)) : e;
 }
@@ -40696,8 +40698,10 @@ let GI = (0, tK.createRoot)(GA),
             let t = e?.get("token");
             return null != t && (LH({ token: t }), !0);
         },
-    },
-    GS = (e) => GI.render((0, F.jsx)(xq.e, { children: (0, F.jsx)(Go, { children: (0, F.jsx)(e, {}) }) }));
+    };
+function GS(e) {
+    return GI.render((0, F.jsx)(xq.e, { children: (0, F.jsx)(Go, { children: (0, F.jsx)(e, {}) }) }));
+}
 if (null != ts.A) {
     ts.A.setUncaughtExceptionHandler?.((e, t) => {
         setImmediate(() => {

@@ -192,8 +192,10 @@ var te = l(284009),
     tv = l(701273),
     t_ = l(71393);
 l(321073);
-let tp = ["a", "b", "c", "d"],
-    tf = (t) => t;
+let tp = ["a", "b", "c", "d"];
+function tf(t) {
+    return t;
+}
 function tb(t, e) {
     let l = {},
         i = Math.min(t.length, tp.length);

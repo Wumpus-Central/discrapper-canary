@@ -103,10 +103,10 @@ let T = I("en-US"),
         formatToPlainString: s.stringFormatter,
         formatToMarkdownString: s.markdownFormatter,
         formatToParts: s.astFormatter,
-    }),
-    C = (e) => {
-        r.useSyncExternalStore(
-            (t) => e.onChange(t),
-            () => e.isLocaleLoaded(y.currentLocale),
-        );
-    };
+    });
+function C(e) {
+    r.useSyncExternalStore(
+        (t) => e.onChange(t),
+        () => e.isLocaleLoaded(y.currentLocale),
+    );
+}

@@ -7,7 +7,7 @@ var i = n(17928),
     o = n(33524),
     l = n(174768),
     u = n(186111);
-let c = () => {
+let c = function () {
     let e = (0, i.bG)([u.A], () => u.A.hasLayers()),
         t = (0, a.xr)((e) => e.fullScreenLayers.length > 0),
         n = (0, o.LL)(),

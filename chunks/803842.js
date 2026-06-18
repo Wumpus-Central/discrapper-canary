@@ -1,25 +1,27 @@
-if ((a.d(s, { $0: () => l, $4: () => r, B0: () => b, FK: () => t, cu: () => _ }), 21552 == a.j)) var e = a(192308);
-var n = a(186111),
-    c = a(625494),
-    o = a(652215);
-let d = () => n.A.hasLayers() || (0, e.hasAnyModalOpen)(),
-    t =
-        21552 == a.j
+if ((n.d(s, { $0: () => l, $4: () => r, B0: () => b, FK: () => d, cu: () => _ }), 21552 == n.j)) var a = n(192308);
+var e = n(186111),
+    c = n(625494),
+    o = n(652215);
+function t() {
+    return e.A.hasLayers() || (0, a.hasAnyModalOpen)();
+}
+let d =
+        21552 == n.j
             ? {
                   binds: ["right"],
                   comboKeysBindGlobal: !0,
                   action() {
-                      if (!d()) return c._.dispatch(o.jej.CAROUSEL_NEXT), !1;
+                      if (!t()) return c._.dispatch(o.jej.CAROUSEL_NEXT), !1;
                   },
               }
             : null,
     b =
-        21552 == a.j
+        21552 == n.j
             ? {
                   binds: ["left"],
                   comboKeysBindGlobal: !0,
                   action() {
-                      if (!d()) return c._.dispatch(o.jej.CAROUSEL_PREV), !1;
+                      if (!t()) return c._.dispatch(o.jej.CAROUSEL_PREV), !1;
                   },
               }
             : null,

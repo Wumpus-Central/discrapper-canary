@@ -42,21 +42,21 @@ let l = (e) => {
             function t(e) {
                 return f(e, a ?? 0, i ?? e);
             }
-            let r = (0, s.throttle)(l, d),
-                I = (i) => {
-                    if (null == n.current) return null;
-                    let s = e(i),
-                        a = t(s),
-                        l = 1 === o(_) ? "width" : "height";
-                    (n.current.style[l] = `${a}px`), g.current || ((g.current = !0), u?.(a)), r(a, s);
-                },
-                T = (n) => {
-                    E(!1);
-                    let i = e(n),
-                        r = t(i);
-                    l(r, i), c?.(r), (g.current = !1);
-                },
-                S = h ? "pointerup" : "mouseup",
+            let r = (0, s.throttle)(l, d);
+            function I(i) {
+                if (null == n.current) return null;
+                let s = e(i),
+                    a = t(s),
+                    l = 1 === o(_) ? "width" : "height";
+                (n.current.style[l] = `${a}px`), g.current || ((g.current = !0), u?.(a)), r(a, s);
+            }
+            function T(n) {
+                E(!1);
+                let i = e(n),
+                    r = t(i);
+                l(r, i), c?.(r), (g.current = !1);
+            }
+            let S = h ? "pointerup" : "mouseup",
                 y = h ? "pointermove" : "mousemove",
                 C = n.current.ownerDocument;
             return (

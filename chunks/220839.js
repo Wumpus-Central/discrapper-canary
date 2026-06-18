@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { A: () => r });
 var i = n(64700);
-let r = (e, t) => {
+let r = function (e, t) {
     let n = (0, i.useRef)(e);
     (0, i.useEffect)(() => {
         n.current = e;

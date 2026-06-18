@@ -1426,7 +1426,7 @@ function nw(e) {
 var nM = n(800471),
     nP = n(683071),
     nx = n(38405);
-let nk = (e, t, n, i, r) => {
+let nk = function (e, t, n, i, r) {
     let a = (0, s.useRef)(!1),
         o = { componentName: e, sentryErrorOptions: r, stateToCapture: i },
         l = (0, s.useRef)(o);

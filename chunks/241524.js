@@ -7,10 +7,10 @@ function s(e) {
         [n, s] = (0, i.useState)(() => t.matchMedia(e)?.matches ?? !1);
     return (
         (0, i.useEffect)(() => {
-            let n = t.matchMedia(e),
-                i = (e) => {
-                    s(e?.matches ?? !1);
-                };
+            let n = t.matchMedia(e);
+            function i(e) {
+                s(e?.matches ?? !1);
+            }
             return i(n), n?.addListener(i), () => n?.removeListener(i);
         }, [e, t]),
         n

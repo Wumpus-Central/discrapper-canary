@@ -149,12 +149,12 @@ let ed = {
         comboKeysBindGlobal: !0,
         action: () =>
             !(v.A.getLayers().length > 0 || (0, S.hasAnyModalOpen)()) &&
-            ((() => {
+            (!(function () {
                 let { notificationCenterVariant: e } = (0, z.GE)({ location: "TOGGLE_INBOX" });
                 if ("sidebar" !== e) return;
                 let t = h.A.getChannelId(),
                     n = _.A.getChannel(t);
-                return window.location.pathname.startsWith(T.BVt.CHANNEL(T.gNP)) && null != n
+                window.location.pathname.startsWith(T.BVt.CHANNEL(T.gNP)) && null != n
                     ? (0, g.i)(n.guild_id, t)
                     : (0, g.a)(T.BVt.CHANNEL(T.gNP, t ?? void 0));
             })(),

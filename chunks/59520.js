@@ -1,33 +1,35 @@
-r.d(t, { I: () => i, J: () => h });
+r.d(e, { I: () => h, J: () => i });
 var n = r(64700),
     u = r(735438);
-let c = (e) => e,
-    h = function (e, t) {
+function c(t) {
+    return t;
+}
+let i = function (t, e) {
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             u = arguments.length > 3 ? arguments[3] : void 0,
-            h = i(c, t, r, u),
-            s = n.useRef(e);
+            i = h(c, e, r, u),
+            o = n.useRef(t);
         return (
             n.useEffect(() => {
-                s.current = h(e);
-            }, [e, h]),
-            0 === t ? e : s.current
+                o.current = i(t);
+            }, [t, i]),
+            0 === e ? t : o.current
         );
     },
-    i = function (e, t) {
+    h = function (t, e) {
         let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
             c = arguments.length > 3 ? arguments[3] : void 0,
-            h = n.useRef((0, u.throttle)(e, t, c));
+            i = n.useRef((0, u.throttle)(t, e, c));
         return (
             n.useEffect(
                 () => (
-                    (h.current = (0, u.throttle)(e, t, c)),
+                    (i.current = (0, u.throttle)(t, e, c)),
                     () => {
-                        h.current?.cancel();
+                        i.current?.cancel();
                     }
                 ),
-                [e, t, c, ...r],
+                [t, e, c, ...r],
             ),
-            h.current
+            i.current
         );
     };
