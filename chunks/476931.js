@@ -1,6 +1,7 @@
 "use strict";
 n.d(t, {
     BC: () => l,
+    It: () => v,
     Qy: () => g,
     U6: () => I,
     XY: () => y,
@@ -12,9 +13,10 @@ n.d(t, {
     iq: () => d,
     kI: () => T,
     oE: () => A,
-    sR: () => v,
+    sR: () => O,
     w3: () => C,
     wS: () => c,
+    z3: () => R,
 });
 var i = n(310784),
     r = n.n(i),
@@ -111,10 +113,11 @@ function I(e, t) {
     return `linear-gradient(${n.angle}deg, ${i})`;
 }
 function T(e, t) {
-    let n = r()(e),
-        i = t === a.NJ.LIGHT ? 0.2 : -0.2,
-        s = Math.max(0, Math.min(1, n.get("hsl.l") + i));
-    return [e, n.set("hsl.l", s).hex()];
+    let n = R(e, t),
+        i = r()(n),
+        s = t === a.NJ.LIGHT ? 0.2 : -0.2,
+        o = Math.max(0, Math.min(1, i.get("hsl.l") + s));
+    return [n, i.set("hsl.l", o).hex()];
 }
 function S(e, t) {
     return Math.floor(Math.random() * (t - e + 1)) + e;
@@ -132,6 +135,15 @@ function N(e, t) {
         .set("hsl.l", Math.max(c / 100, Math.min(d / 100, t / 100)))
         .hex();
 }
-function v(e, t) {
+function v(e) {
+    return e === a.NJ.LIGHT ? { minTone: c + 40, maxTone: d } : { minTone: c, maxTone: d - 40 };
+}
+function R(e, t) {
+    let { minTone: n, maxTone: i } = v(t),
+        s = r()(e),
+        a = Math.max(c, Math.min(d, 100 * s.get("hsl.l")));
+    return s.set("hsl.l", (n + ((a - c) / (d - c)) * (i - n)) / 100).hex();
+}
+function O(e, t) {
     return r()(e).set("hsl.h", t).hex();
 }

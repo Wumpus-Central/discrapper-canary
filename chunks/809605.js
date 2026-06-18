@@ -75,7 +75,7 @@ function K(e) {
 function q(e) {
     return e.body?.message ?? e.message ?? D.intl.string(D.t.fEptJP);
 }
-async function Y(e) {
+async function z(e) {
     await Promise.all([(0, w.AK)(e), (0, w.Xd)(e)]);
     let t = G.A.getStateForGuild(e);
     return {
@@ -85,7 +85,7 @@ async function Y(e) {
         availableBoostCount: (0, j.Z)(e).available,
     };
 }
-function z(e) {
+function Y(e) {
     let t = s()(e).get("hsl.h");
     return Number.isNaN(t) ? 0 : Math.round(t);
 }
@@ -235,50 +235,56 @@ function en() {
             let l = (0, _.Yt)(e?.presetId);
             return null != l ? (0, _.oE)(l).baseMix : _.BC;
         })(k),
-        es = z(er),
+        es = Y(er),
         eu = Z(er),
-        ed = r.useMemo(() => {
-            let e, t, l, a, n, r, i;
-            return (
-                (e = s()(er)),
-                (t = z(er)),
-                (a = Number.isNaN((l = e.get("hsl.s"))) ? 0.82 : l),
-                (n = s()
-                    .hsl(t, a, _.wS / 100)
-                    .hex()),
-                (r = s().hsl(t, a, 0.45).hex()),
-                (i = s()
-                    .hsl(t, a, _.iq / 100)
-                    .hex()),
-                `linear-gradient(90deg, ${i} 0%, ${r} 50%, ${n} 100%)`
-            );
-        }, [er]),
-        { key: eo, handleInternalChange: ec } = ee(es),
-        { key: ef, handleInternalChange: em } = ee(eu),
-        { key: eg, handleInternalChange: eh } = ee(ei),
-        eb = r.useCallback((e, t) => {
+        ed = r.useMemo(() => (0, _.z3)(er, g), [er, g]),
+        eo = r.useMemo(
+            () =>
+                (function (e, t) {
+                    let { minTone: l, maxTone: a } = (0, _.It)(t),
+                        n = s()(e),
+                        r = Y(e),
+                        i = n.get("hsl.s"),
+                        u = Number.isNaN(i) ? 0.82 : i,
+                        d = s()
+                            .hsl(r, u, l / 100)
+                            .hex(),
+                        o = s()
+                            .hsl(r, u, (l + a) / 200)
+                            .hex(),
+                        c = s()
+                            .hsl(r, u, a / 100)
+                            .hex();
+                    return `linear-gradient(90deg, ${c} 0%, ${o} 50%, ${d} 100%)`;
+                })(er, g),
+            [er, g],
+        ),
+        { key: ec, handleInternalChange: ef } = ee(es),
+        { key: em, handleInternalChange: eg } = ee(eu),
+        { key: eh, handleInternalChange: eb } = ee(ei),
+        ex = r.useCallback((e, t) => {
             (0, L.t$)({ colors: [e], gradientAngle: 0, baseMix: t });
         }, []),
-        ex = r.useCallback((e) => {
+        ep = r.useCallback((e) => {
             (0, L.GC)(e.id);
         }, []),
-        ep = r.useCallback(() => {
-            let e = (0, _.XY)();
-            eb(e.color, e.baseMix);
-        }, [eb]),
         ev = r.useCallback(() => {
+            let e = (0, _.XY)();
+            ex(e.color, e.baseMix);
+        }, [ex]),
+        eE = r.useCallback(() => {
             let { guildId: e, original: t, originalEnabled: l, origin: a } = S.Ay;
             null != e &&
                 null != a &&
                 (0, L.tA)({ guildId: e, draft: t, original: t, draftEnabled: l, originalEnabled: l, origin: a });
         }, []),
-        eE = r.useCallback(() => {
+        eN = r.useCallback(() => {
             (e.current = !0), (0, L.WV)(), (0, I.XG)(), (0, C.Jp)();
         }, []),
-        eN = r.useCallback(async () => {
+        ey = r.useCallback(async () => {
             await (0, L.HN)(), (e.current = !0), (0, I.XG)(), (0, C.Jp)();
         }, []),
-        ey = r.useCallback(() => {
+        eC = r.useCallback(() => {
             (0, m.A)({
                 title: D.intl.string(H.default.H8idcP),
                 subtitle: D.intl.string(H.default["0LL6FX"]),
@@ -287,14 +293,14 @@ function en() {
                 variant: "primary",
                 onConfirm: async (e) => {
                     try {
-                        await eN();
+                        await ey();
                     } catch (t) {
                         throw (e(q(t)), t);
                     }
                 },
             });
-        }, [eN]),
-        eC = r.useCallback(
+        }, [ey]),
+        eA = r.useCallback(
             async (e) => {
                 if (!t.current && !l.current) {
                     if (null == M) return void f(D.intl.string(D.t.fEptJP));
@@ -302,7 +308,7 @@ function en() {
                         (l.current = !0), (t.current = !0), d(!0), f(null);
                         try {
                             if ((await (0, w.Qh)(M, e.skuId), await X(M), !K(M))) return;
-                            ey();
+                            eC();
                         } catch (e) {
                             (l.current = !1), f(q(e));
                         } finally {
@@ -311,14 +317,14 @@ function en() {
                     }
                 }
             },
-            [ey, M],
+            [eC, M],
         ),
-        eA = r.useCallback(
+        ek = r.useCallback(
             async (e, t) => {
                 if (null == en) return void f(D.intl.string(D.t.fEptJP));
                 let l = e.cost - t;
                 l <= 0
-                    ? await eC(e)
+                    ? await eA(e)
                     : await (0, A.g)({
                           analyticsLocation: {
                               page: V.liQ.GUILD_POWERUPS_OVERVIEW,
@@ -330,22 +336,22 @@ function en() {
                           intent: U.Pn.PERK,
                           onLoading: d,
                           handleSubscribeModalClose: (t) => {
-                              if (t) return eC(e);
+                              if (t) return eA(e);
                           },
                       });
             },
-            [i, en, eC],
+            [i, en, eA],
         ),
-        ek = r.useCallback(async () => {
+        ew = r.useCallback(async () => {
             if ((f(null), null == M)) return void f(D.intl.string(D.t.fEptJP));
             if (B(M)) {
                 if (!K(M)) return;
-                ey();
+                eC();
                 return;
             }
             d(!0);
             try {
-                let e = await Y(M);
+                let e = await z(M);
                 if (!K(M)) return;
                 let t = (function (e) {
                     let {
@@ -364,19 +370,19 @@ function en() {
                               ? "enable_powerup"
                               : "boost";
                 })(e);
-                if (t === O.CONFIRM) return void ey();
+                if (t === O.CONFIRM) return void eC();
                 if (t === O.WAIT_FOR_FEATURE) {
                     if ((await X(M), !K(M))) return;
-                    ey();
+                    eC();
                     return;
                 }
                 if (null == e.guildThemePowerup) return void f(D.intl.string(D.t.fEptJP));
                 if (t === O.ENABLE_POWERUP) {
-                    d(!1), await eC(e.guildThemePowerup);
+                    d(!1), await eA(e.guildThemePowerup);
                     return;
                 }
                 if (t === O.BOOST) {
-                    d(!1), await eA(e.guildThemePowerup, e.availableBoostCount);
+                    d(!1), await ek(e.guildThemePowerup, e.availableBoostCount);
                     return;
                 }
                 f(D.intl.string(D.t.fEptJP));
@@ -385,12 +391,12 @@ function en() {
             } finally {
                 d(!1);
             }
-        }, [eC, eA, ey, M]),
-        ew = (0, c.bG)([T.A], () => T.A.getGuildId()),
-        eG = null != M && ew !== M;
+        }, [eA, ek, eC, M]),
+        eG = (0, c.bG)([T.A], () => T.A.getGuildId()),
+        ej = null != M && eG !== M;
     r.useEffect(() => {
-        eG && ((e.current = !0), (0, L.WV)(), (0, I.XG)(), (0, C.Jp)());
-    }, [eG]),
+        ej && ((e.current = !0), (0, L.WV)(), (0, I.XG)(), (0, C.Jp)());
+    }, [ej]),
         r.useEffect(() => {
             if (null == M) return;
             let { draft: e, draftEnabled: t } = S.Ay;
@@ -405,9 +411,9 @@ function en() {
             },
             [],
         );
-    let ej = G || u,
-        eI = ej || !j || null == k || null == M,
-        eP = o ?? J;
+    let eI = G || u,
+        eP = eI || !j || null == k || null == M,
+        eR = o ?? J;
     return (0, n.jsxs)("div", {
         className: $.kL,
         "data-app-right-panel": !0,
@@ -452,30 +458,30 @@ function en() {
                                 (0, n.jsx)(et, {
                                     background:
                                         "linear-gradient(90deg, rgb(255 0 0) 0%, rgb(255 255 0) 16.66%, rgb(0 255 0) 33.33%, rgb(0 255 255) 50%, rgb(0 0 255) 66.66%, rgb(255 0 255) 83.33%, rgb(255 0 0) 100%)",
-                                    color: er,
-                                    controlKey: eo,
+                                    color: ed,
+                                    controlKey: ec,
                                     min: 0,
                                     max: 359,
                                     defaultValue: es,
                                     ariaLabel: D.intl.string(F.default.uSL2Gy),
-                                    onValuePreview: ec,
+                                    onValuePreview: ef,
                                     onValueCommit: (e) => {
                                         let t = (0, _.w3)((0, _.sR)(er, e));
-                                        ec(z(t)), eb(t, ei);
+                                        ef(Y(t)), ex(t, ei);
                                     },
                                 }),
                                 (0, n.jsx)(et, {
-                                    background: ed,
-                                    color: er,
-                                    controlKey: ef,
+                                    background: eo,
+                                    color: ed,
+                                    controlKey: em,
                                     min: _.wS,
                                     max: _.iq,
                                     defaultValue: eu,
                                     ariaLabel: D.intl.string(F.default.uSL2Gy),
-                                    onValuePreview: em,
+                                    onValuePreview: eg,
                                     onValueCommit: (e) => {
                                         let t = (0, _.w3)((0, _._k)(er, _.wS + _.iq - e));
-                                        em(Z(t)), eb(t, ei);
+                                        eg(Z(t)), ex(t, ei);
                                     },
                                 }),
                             ],
@@ -515,10 +521,10 @@ function en() {
                                             onValueRender: (e) => `${Math.round(e)}%`,
                                             onValueChange: (e) => {
                                                 let t = Math.round(e);
-                                                (t !== ei || k?.customUserThemeSettings != null) && (eh(t), eb(er, t));
+                                                (t !== ei || k?.customUserThemeSettings != null) && (eb(t), ex(er, t));
                                             },
                                         },
-                                        eg,
+                                        eh,
                                     ),
                                 ],
                             }),
@@ -540,8 +546,8 @@ function en() {
                                             {
                                                 preset: e,
                                                 selected: k?.presetId === e.id,
-                                                disabled: ej,
-                                                onSelect: () => ex(e),
+                                                disabled: eI,
+                                                onSelect: () => ep(e),
                                                 theme: g,
                                             },
                                             e.id,
@@ -557,8 +563,8 @@ function en() {
                                     variant: "secondary",
                                     size: "md",
                                     fullWidth: !0,
-                                    disabled: ej,
-                                    onClick: ep,
+                                    disabled: eI,
+                                    onClick: ev,
                                     text: D.intl.string(F.default.c9MBEH),
                                     icon: E.D,
                                 }),
@@ -566,18 +572,18 @@ function en() {
                                     variant: "secondary",
                                     size: "md",
                                     fullWidth: !0,
-                                    disabled: ej || !j,
-                                    onClick: ev,
+                                    disabled: eI || !j,
+                                    onClick: eE,
                                     text: D.intl.string(D.t.yBZMsQ),
                                 }),
                             ],
                         }),
-                        null != eP &&
+                        null != eR &&
                             (0, n.jsx)(x.E, {
                                 variant: "text-xs/semibold",
                                 color: "text-feedback-critical",
                                 className: $.z3,
-                                children: eP,
+                                children: eR,
                             }),
                     ],
                 }),
@@ -591,8 +597,8 @@ function en() {
                             variant: "secondary",
                             size: "md",
                             fullWidth: !0,
-                            disabled: ej,
-                            onClick: eE,
+                            disabled: eI,
+                            onClick: eN,
                             text: D.intl.string(D.t["13/7kX"]),
                         }),
                         (0, n.jsx)("span", {
@@ -601,9 +607,9 @@ function en() {
                                 variant: "primary",
                                 size: "md",
                                 fullWidth: !0,
-                                loading: ej,
-                                disabled: eI,
-                                onClick: ek,
+                                loading: eI,
+                                disabled: eP,
+                                onClick: ew,
                                 text: D.intl.string(D.t["1Qm822"]),
                             }),
                         }),
