@@ -44,21 +44,12 @@
 
 .video__9b328 {
     height: 100%;
+    inset: 0;
     -o-object-fit: cover;
     object-fit: cover;
-    width: 100%
-}
-
-.gradient__9b328,
-.video__9b328 {
-    inset: 0;
     position: absolute;
+    width: 100%;
     z-index: 0
-}
-
-.gradient__9b328 {
-    background: linear-gradient(105deg, rgba(88, 101, 242, .16) 0, rgba(88, 101, 242, 0) 55%), var(--background-base-lowest);
-    pointer-events: none
 }
 
 .content__9b328 {
