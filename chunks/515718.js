@@ -87,21 +87,23 @@ function E(e, t, n) {
         u = l()(o, t);
     return "boolean" == typeof u ? p : u.palette();
 }
-let m = (e) => ("number" == typeof e ? null : g(e)),
-    g = a().memoize(
-        (e) =>
-            new Promise((t, n) => {
-                let i = new Image();
-                (i.crossOrigin = "Anonymous"),
-                    (i.onerror = (e) => {
-                        n(e), (i.onerror = i.onload = null), (i = null);
-                    }),
-                    (i.onload = () => {
-                        t(E(i, 5, 10)), (i.onerror = i.onload = null), (i = null);
-                    }),
-                    (i.src = e);
-            }),
-    );
+function m(e) {
+    return "number" == typeof e ? null : g(e);
+}
+let g = a().memoize(
+    (e) =>
+        new Promise((t, n) => {
+            let i = new Image();
+            (i.crossOrigin = "Anonymous"),
+                (i.onerror = (e) => {
+                    n(e), (i.onerror = i.onload = null), (i = null);
+                }),
+                (i.onload = () => {
+                    t(E(i, 5, 10)), (i.onerror = i.onload = null), (i = null);
+                }),
+                (i.src = e);
+        }),
+);
 function A(e) {
     return new Promise((t, n) => {
         let i = new FileReader();

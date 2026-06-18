@@ -13,10 +13,10 @@ let _ = new (s())({ maxAge: +u.A.Millis.MINUTE });
 function h(e, t, n) {
     null != i && clearTimeout(i),
         (i = setTimeout(() => {
-            let i = [],
-                r = (e) => {
-                    i.push(e.id);
-                };
+            let i = [];
+            function r(e) {
+                i.push(e.id);
+            }
             if (null == e) i.push(...o.A.getGuildIds());
             else if (Array.isArray(e))
                 e.forEach((e) => {

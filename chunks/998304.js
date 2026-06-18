@@ -105,20 +105,18 @@ function c(e) {
             r: e,
             g: t,
             b: n,
-        } = (function (e, t, n) {
-            var i;
-            let r, s;
-            return o(
-                ((r = (t * Math.min((i = n / 100), 1 - i)) / 100),
-                (s = (t) => {
-                    let n = (t + e / 30) % 12;
-                    return Math.round(255 * (i - r * Math.max(Math.min(n - 3, 9 - n, 1), -1)))
+        } = o(
+            (function (e, t, n) {
+                let i = (t * Math.min((n /= 100), 1 - n)) / 100;
+                function r(t) {
+                    let r = (t + e / 30) % 12;
+                    return Math.round(255 * (n - i * Math.max(Math.min(r - 3, 9 - r, 1), -1)))
                         .toString(16)
                         .padStart(2, "0");
-                }),
-                `#${s(0)}${s(8)}${s(4)}`),
-            );
-        })(p, E, m);
+                }
+                return `#${r(0)}${r(8)}${r(4)}`;
+            })(p, E, m),
+        );
         d.push([e, t, n]);
     }
     return d;
@@ -207,9 +205,13 @@ function p(e) {
                     d = l / 255,
                     _ = u / 255,
                     h = Math.max(c, d, _),
-                    f = h - Math.min(c, d, _),
-                    p = (e) => (h - e) / 6 / f + 0.5,
-                    E = (e) => Math.round(100 * e) / 100;
+                    f = h - Math.min(c, d, _);
+                function p(e) {
+                    return (h - e) / 6 / f + 0.5;
+                }
+                function E(e) {
+                    return Math.round(100 * e) / 100;
+                }
                 return (
                     0 === f
                         ? (r = s = 0)

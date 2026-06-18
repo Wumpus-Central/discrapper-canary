@@ -128,36 +128,36 @@ function y(e) {
 }
 (0, u.isMac)() || (E["223"] = "`"), Object.freeze(E);
 let C = [
-        ["META", "\u2318"],
-        ["CMD", "\u2318"],
-        ["RIGHT META", "RIGHT \u2318"],
-        ["RIGHT CMD", "RIGHT \u2318"],
-        ["SHIFT", "\u21E7"],
-        ["RIGHT SHIFT", "RIGHT \u21E7"],
-        ["ALT", "\u2325"],
-        ["RIGHT ALT", "RIGHT \u2325"],
-        ["CTRL", "\u2303"],
-        ["RIGHT CTRL", "RIGHT \u2303"],
-        ["ENTER", "\u21B5"],
-        ["BACKSPACE", "\u232B"],
-        ["DEL", "\u2326"],
-        ["ESC", "\u238B"],
-        ["PAGEUP", "\u21DE"],
-        ["PAGEDOWN", "\u21DF"],
-        ["UP", "\u2191"],
-        ["DOWN", "\u2193"],
-        ["LEFT", "\u2190"],
-        ["RIGHT", "\u2192"],
-        ["HOME", "\u2196"],
-        ["END", "\u2198"],
-        ["TAB", "\u21E5"],
-        ["SPACE", "\u2423"],
-    ],
-    N = (e) => {
-        for (let [t, n] of C) if (t === e.toUpperCase()) return n;
-        return e;
-    },
-    v = /shift|meta|ctrl|alt$/;
+    ["META", "\u2318"],
+    ["CMD", "\u2318"],
+    ["RIGHT META", "RIGHT \u2318"],
+    ["RIGHT CMD", "RIGHT \u2318"],
+    ["SHIFT", "\u21E7"],
+    ["RIGHT SHIFT", "RIGHT \u21E7"],
+    ["ALT", "\u2325"],
+    ["RIGHT ALT", "RIGHT \u2325"],
+    ["CTRL", "\u2303"],
+    ["RIGHT CTRL", "RIGHT \u2303"],
+    ["ENTER", "\u21B5"],
+    ["BACKSPACE", "\u232B"],
+    ["DEL", "\u2326"],
+    ["ESC", "\u238B"],
+    ["PAGEUP", "\u21DE"],
+    ["PAGEDOWN", "\u21DF"],
+    ["UP", "\u2191"],
+    ["DOWN", "\u2193"],
+    ["LEFT", "\u2190"],
+    ["RIGHT", "\u2192"],
+    ["HOME", "\u2196"],
+    ["END", "\u2198"],
+    ["TAB", "\u21E5"],
+    ["SPACE", "\u2423"],
+];
+function N(e) {
+    for (let [t, n] of C) if (t === e.toUpperCase()) return n;
+    return e;
+}
+let v = /shift|meta|ctrl|alt$/;
 function R(e) {
     let t = { keyCode: 0, key: "", code: "", metaKey: !1, shiftKey: !1, altKey: !1, ctrlKey: !1 };
     return null == e
@@ -185,7 +185,7 @@ function O(e) {
         .map((e) => e.trim().replace("plus", "+"))
         .reduce((e, i) => {
             let r = S(
-                ((e) => {
+                (function (e) {
                     for (let [t, n] of C) if (n === e.toUpperCase()) return t.toLowerCase();
                     return e;
                 })(i),

@@ -77,9 +77,11 @@ var E = n(626584),
     eo = n(746080),
     el = n(282435),
     eu = n(375708);
-let ec = new E.A("AutocompleteUtils"),
-    ed = () => !0,
-    e_ = /(\t|\s)/,
+let ec = new E.A("AutocompleteUtils");
+function ed() {
+    return !0;
+}
+let e_ = /(\t|\s)/,
     eh = [],
     ef = (i = n(966382).A).MENTION_EVERYONE,
     ep = i.MENTION_HERE,
@@ -761,18 +763,18 @@ let eD = (0, X.L_)((e, t, n) => {
                 }
             }
             let y = [];
+            function C(e) {
+                !c ||
+                    null == e ||
+                    ((((I < p || 0 === T.length) && s()(T, e.test)) || T === e.test) &&
+                        (I >= p && (S.length > 0 ? S.pop() : g.length > 0 && g.pop()), y.push(e), (I += 1)));
+            }
             !n.isPrivate() &&
                 i &&
                 u &&
                 (I < p && s()(T, ef().test) && (y.push(ef()), (I += 1)),
                 r && I < p && s()(T, ep().test) && (y.push(ep()), (I += 1)));
-            let C = (e) => {
-                    !c ||
-                        null == e ||
-                        ((((I < p || 0 === T.length) && s()(T, e.test)) || T === e.test) &&
-                            (I >= p && (S.length > 0 ? S.pop() : g.length > 0 && g.pop()), y.push(e), (I += 1)));
-                },
-                N = A.r.getConfig({ location: "mention autocomplete" });
+            let N = A.r.getConfig({ location: "mention autocomplete" });
             return (
                 N.enabled && !N.combineMentionAutocomplete && C(eE?.()), C(em?.()), { users: g, globals: y, roles: S }
             );

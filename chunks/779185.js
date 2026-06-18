@@ -47,9 +47,13 @@ var p = n(495544),
         (i[(i.COMMAND = 2)] = "COMMAND"),
         (i[(i.SEND_ANNOUNCEMENT = 3)] = "SEND_ANNOUNCEMENT"),
         i);
-let C = (e) => 1 === e.type,
-    N = (e) => (0 === e.type || 3 === e.type ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id),
-    v = [+m.A.Millis.MINUTE, 5 * m.A.Millis.MINUTE];
+function C(e) {
+    return 1 === e.type;
+}
+function N(e) {
+    return 0 === e.type || 3 === e.type ? e.message.nonce : C(e) ? e.message.messageId : e.message.data.id;
+}
+let v = [+m.A.Millis.MINUTE, 5 * m.A.Millis.MINUTE];
 class R extends A.A {
     maxSize;
     requests = new Map();

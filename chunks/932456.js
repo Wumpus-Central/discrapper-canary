@@ -307,8 +307,10 @@ class eE {
     }
     getVoiceConnectionSuccessStats() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : (0, A.tB)(),
-            t = this.getStateDurations(e),
-            n = (e) => ed().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
+            t = this.getStateDurations(e);
+        function n(e) {
+            return ed().sumBy(t, (t) => (t.state === e ? t.durationMs : 0));
+        }
         return {
             state_awaiting_endpoint_ms: n(ep.S7L.AWAITING_ENDPOINT),
             state_authenticating_ms: n(ep.S7L.AUTHENTICATING),
@@ -2604,10 +2606,10 @@ class e9 extends m.A {
         return 93.4 - (0.024 * e + (e > 177.3 ? 0.11 * (e - 177.3) : 0)) - (10 + (122 * t) / (t + 10));
     }
 }
-let te = (e, t) => {
+function te(e, t) {
     let { accumulated: n, lastValue: i } = t ?? { accumulated: 0, lastValue: 0 };
     return { accumulated: i > e ? n + e : n + (e - i), lastValue: e };
-};
+}
 var tt = n(788868),
     tn = n(396574),
     ti = n(375708);
@@ -3857,8 +3859,10 @@ class to extends m.A {
             is_camera_enabled: Q.Ay.getMediaEngine().getVideoInputDeviceId() !== B.qe && e.context === B.x.DEFAULT,
             ...this.stateHistory.getVoiceConnectionSuccessStats(),
         });
-        let s = performance.now(),
-            a = (e, t) => (null == e || null == t ? null : e - t);
+        let s = performance.now();
+        function a(e, t) {
+            return null == e || null == t ? null : e - t;
+        }
         ei.default.track(ep.HAw.VOICE_CONNECTION_TTC_COLLECTED, {
             rtc_connection_id: r.rtc_connection_id,
             time_1_creation_to_connect: this._connectStartTime - this._createdTime,
@@ -3927,43 +3931,45 @@ class to extends m.A {
         let t = this._secureFramesTransitionStates.get(e);
         if (null == t) return;
         let n = this._secureFramesTransitionStates.size;
-        this._secureFramesTransitionStates.delete(e);
-        let i = (e, t) => (null != e && null != t ? e - t : void 0);
-        ei.default.track(ep.HAw.SECURE_FRAMES_TRANSITION, {
-            ...this._getAnalyticsProperties(),
-            media_session_id: this.getMediaSessionId(),
-            parent_media_session_id: this.parentMediaSessionId,
-            sender_user_id: this.userId,
-            transition_id: e,
-            protocol_version: t.protocolVersion,
-            start_to_init_duration: i(t.initReceivedTime, this._connectStartTime),
-            init_duration: i(t.initFinishedTime, t.initReceivedTime),
-            first_proposals_duration: i(t.firstProposalsFinishedTime, t.firstProposalsReceivedTime),
-            last_proposals_duration: i(t.lastProposalsFinishedTime, t.lastProposalsReceivedTime),
-            duration_between_proposals: i(t.lastProposalsReceivedTime, t.firstProposalsReceivedTime),
-            total_proposals_size: t.totalProposalsSize,
-            total_commit_welcome_size: t.totalCommitWelcomeSize,
-            welcome_wait_duration: i(t.welcomeReceivedTime, t.initFinishedTime),
-            welcome_duration: i(t.welcomeFinishedTime, t.welcomeReceivedTime),
-            welcome_size: t.welcomeSize,
-            welcome_error: t.welcomeError,
-            commit_wait_duration: i(t.commitReceivedTime, t.lastProposalsFinishedTime),
-            commit_duration: i(t.commitFinishedTime, t.commitReceivedTime),
-            commit_size: t.commitSize,
-            commit_error: t.commitError,
-            prepare_wait_duration: i(t.prepareReceivedTime, this._secureFramesLastBecameAloneTime),
-            prepare_duration: i(t.prepareFinishedTime, t.prepareReceivedTime),
-            execute_wait_duration: i(t.executeReceivedTime, t.readyTime),
-            execute_duration: i(t.executeFinishedTime, t.executeReceivedTime),
-            execute_error: t.executeError,
-            incomplete: t.incomplete,
-            active_transition_count: n,
-            time_since_creation: (0, A.tB)() - t.creationTime,
-            users_added_count: t.usersAdded,
-            users_removed_count: t.usersRemoved,
-            roster_size_after: t.rosterSizeAfter,
-            init_to_finish_duration: i(t.executeFinishedTime, t.initReceivedTime),
-        }),
+        function i(e, t) {
+            return null != e && null != t ? e - t : void 0;
+        }
+        this._secureFramesTransitionStates.delete(e),
+            ei.default.track(ep.HAw.SECURE_FRAMES_TRANSITION, {
+                ...this._getAnalyticsProperties(),
+                media_session_id: this.getMediaSessionId(),
+                parent_media_session_id: this.parentMediaSessionId,
+                sender_user_id: this.userId,
+                transition_id: e,
+                protocol_version: t.protocolVersion,
+                start_to_init_duration: i(t.initReceivedTime, this._connectStartTime),
+                init_duration: i(t.initFinishedTime, t.initReceivedTime),
+                first_proposals_duration: i(t.firstProposalsFinishedTime, t.firstProposalsReceivedTime),
+                last_proposals_duration: i(t.lastProposalsFinishedTime, t.lastProposalsReceivedTime),
+                duration_between_proposals: i(t.lastProposalsReceivedTime, t.firstProposalsReceivedTime),
+                total_proposals_size: t.totalProposalsSize,
+                total_commit_welcome_size: t.totalCommitWelcomeSize,
+                welcome_wait_duration: i(t.welcomeReceivedTime, t.initFinishedTime),
+                welcome_duration: i(t.welcomeFinishedTime, t.welcomeReceivedTime),
+                welcome_size: t.welcomeSize,
+                welcome_error: t.welcomeError,
+                commit_wait_duration: i(t.commitReceivedTime, t.lastProposalsFinishedTime),
+                commit_duration: i(t.commitFinishedTime, t.commitReceivedTime),
+                commit_size: t.commitSize,
+                commit_error: t.commitError,
+                prepare_wait_duration: i(t.prepareReceivedTime, this._secureFramesLastBecameAloneTime),
+                prepare_duration: i(t.prepareFinishedTime, t.prepareReceivedTime),
+                execute_wait_duration: i(t.executeReceivedTime, t.readyTime),
+                execute_duration: i(t.executeFinishedTime, t.executeReceivedTime),
+                execute_error: t.executeError,
+                incomplete: t.incomplete,
+                active_transition_count: n,
+                time_since_creation: (0, A.tB)() - t.creationTime,
+                users_added_count: t.usersAdded,
+                users_removed_count: t.usersRemoved,
+                roster_size_after: t.rosterSizeAfter,
+                init_to_finish_duration: i(t.executeFinishedTime, t.initReceivedTime),
+            }),
             0 === e && this._trackRemainingSecureFrameTransitions();
     }
     _trackRemainingSecureFrameTransitions() {

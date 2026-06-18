@@ -7,4 +7,6 @@ function r() {
 function s() {
     return null != r();
 }
-let a = (e) => (null != e && /^\/developers/.test(e) ? n(844564) : null);
+function a(e) {
+    return null != e && /^\/developers/.test(e) ? n(844564) : null;
+}

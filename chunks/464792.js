@@ -72,12 +72,12 @@ async function H(e, t) {
     a && !o ? l.Ay.transitionToInviteSync(i) : await j(i, e.code, n);
 }
 async function Y(e, t) {
-    let i = () => {
+    function i() {
         {
             let { showInaccessibleLinkModal: e } = n(9588);
             e({ kind: "channel" });
         }
-    };
+    }
     if (null == e || "" === e) return void i();
     let r = I.Ay.getGuildScheduledEvent(t);
     if (null == r)

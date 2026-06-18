@@ -167,19 +167,19 @@ async function b(e) {
     let r;
     if (null == e) throw Error("file is null or undefined");
     h.verbose(`[WebP] Starting conversion for: ${e.name}`);
-    let i = performance.now(),
-        t = function (r) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e.size;
-            return {
-                success: !1,
-                originalFile: e,
-                sizeBefore: e.size,
-                sizeAfter: t,
-                compressionRatio: e.size > 0 ? t / e.size : 1,
-                reason: r,
-                compressTimeMs: Math.round(performance.now() - i),
-            };
+    let i = performance.now();
+    function t(r) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : e.size;
+        return {
+            success: !1,
+            originalFile: e,
+            sizeBefore: e.size,
+            sizeAfter: t,
+            compressionRatio: e.size > 0 ? t / e.size : 1,
+            reason: r,
+            compressTimeMs: Math.round(performance.now() - i),
         };
+    }
     try {
         let n = await m(e);
         if (null != n) return h.verbose(`[WebP] Conversion rejected: ${n}`), t(n);

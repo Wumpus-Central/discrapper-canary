@@ -9,11 +9,11 @@ var n,
     h = s(19575),
     c = s(350535),
     u = s(650583);
-let p = [],
-    m = (e, t, s) => {
-        let n = +!(0, a.isWindows)();
-        (e !== u.zY.MOUSE_BUTTON || s !== n) && p.forEach((n) => n._handleEvent(e, t, s));
-    };
+let p = [];
+function m(e, t, s) {
+    let n = +!(0, a.isWindows)();
+    (e !== u.zY.MOUSE_BUTTON || s !== n) && p.forEach((n) => n._handleEvent(e, t, s));
+}
 class g extends d.EventEmitter {
     combo = [];
     constructor() {

@@ -4,9 +4,9 @@ s.r(t), s.d(t, { default: () => x, renderChangelogMessageMarkup: () => A });
 var l = s(791332),
     n = s.n(l),
     r = s(873879),
-    c = s(683412),
-    o = s(704726),
-    u = s(46054);
+    u = s(683412),
+    c = s(704726),
+    o = s(46054);
 let i = n().defaultRules.lheading,
     p = n().defaultRules.heading,
     d = n().defaultRules.link,
@@ -16,25 +16,25 @@ let i = n().defaultRules.lheading,
     f = n().defaultRules.paragraph,
     k = /\{(.+?)}/,
     R = /^\$(\w+?)\$/;
-a = s(482644);
-let b = (e) => {
-        let { transformUpperCase: t = !1 } = e;
-        return (e, s, a) => {
-            let l = k.exec(e[1]),
-                r = e[1].replace(k, "");
-            return (
-                t && (r = r.toUpperCase()),
-                { className: null != l ? l[1] : null, level: "=" === e[2] ? 1 : 2, content: n().parseInline(s, r, a) }
-            );
-        };
-    },
-    y = (e) => ({
+function b(e) {
+    let { transformUpperCase: t = !1 } = e;
+    return (e, s, a) => {
+        let l = k.exec(e[1]),
+            r = e[1].replace(k, "");
+        return (
+            t && (r = r.toUpperCase()),
+            { className: null != l ? l[1] : null, level: "=" === e[2] ? 1 : 2, content: n().parseInline(s, r, a) }
+        );
+    };
+}
+function y(e) {
+    return {
         ...a.baseRules,
         image: { ...g, ...("function" == typeof a.customRules.image ? a.customRules.image(e) : a.customRules.image) },
         link: { ...d, ...("function" == typeof a.customRules.link ? a.customRules.link(e) : a.customRules.link) },
         list: { ...m, ...("function" == typeof a.customRules.list ? a.customRules.list(e) : a.customRules.list) },
         interpolation: {
-            order: o.Ay.order,
+            order: c.Ay.order,
             match: (e) => R.exec(e),
             parse(e, t, s) {
                 let a = s.interpolations[e[1]];
@@ -59,10 +59,12 @@ let b = (e) => {
             ...f,
             ...("function" == typeof a.customRules.paragraph ? a.customRules.paragraph(e) : a.customRules.paragraph),
         },
-    });
+    };
+}
 function C(e) {
     return { ...y(e) };
 }
+a = s(482644);
 let x = {
     getDefaultRules: C,
     getSpecialRules: (e) => ({
@@ -76,13 +78,13 @@ let x = {
         },
     }),
     getMessageRules: (e) => ({
-        ...{ ...y(e), newline: { ...n().defaultRules.newline }, text: o.Ay, list: r.A, subtext: c.A },
+        ...{ ...y(e), newline: { ...n().defaultRules.newline }, text: c.Ay, list: r.A, subtext: u.A },
     }),
 };
 function A(e, t, s) {
     return {
         hasSpoilerEmbeds: !1,
         hasBailedAst: !1,
-        content: u.A.reactParserFor(C(t))(e.content, !1, null != s ? { changeLog: s } : {}),
+        content: o.A.reactParserFor(C(t))(e.content, !1, null != s ? { changeLog: s } : {}),
     };
 }

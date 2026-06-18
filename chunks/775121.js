@@ -57,7 +57,9 @@ function T(e) {
             let e = i.indexOf("any-character");
             -1 !== e &&
                 (!(function (e, t) {
-                    let n = (e) => t(e, e.key);
+                    function n(e) {
+                        return t(e, e.key);
+                    }
                     document.addEventListener(e, n), g.push(() => document.removeEventListener(e, n));
                 })("keydown", n.keydown),
                 i.splice(e, 1)),

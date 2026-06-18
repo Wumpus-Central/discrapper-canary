@@ -8,13 +8,11 @@ let r = [],
         awaitOnline: () =>
             new Promise((e) => {
                 if (i.isOnline()) return e();
-                {
-                    if ((r.push(e), s)) return;
-                    s = !0;
-                    let t = () => {
-                        r.forEach((e) => e()), (r.length = 0), (s = !1), i.removeOnlineCallback(t);
-                    };
-                    i.addOnlineCallback(t);
-                }
+                r.push(e),
+                    s ||
+                        ((s = !0),
+                        i.addOnlineCallback(function e() {
+                            r.forEach((e) => e()), (r.length = 0), (s = !1), i.removeOnlineCallback(e);
+                        }));
             }),
     };

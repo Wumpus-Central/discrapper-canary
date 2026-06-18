@@ -90,29 +90,26 @@ let p = {
         [c.orn.NULL]: null,
     });
 function m(e, t, n, i, o) {
-    let l = function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                n =
-                    null != t.mute_config && null != t.mute_config.end_time
-                        ? new Date(t.mute_config.end_time).getTime()
-                        : e.guild_muted_until,
-                i =
-                    null != t.message_notifications
-                        ? E[t.message_notifications]
-                        : e.guild_message_notification_settings;
-            return {
-                guild_muted_until: n,
-                guild_flags: t.flags ?? e.guild_flags,
-                guild_is_muted: t.muted ?? e.guild_is_muted,
-                guild_message_notification_settings: i,
-                guild_suppress_roles: t.suppress_roles ?? e.guild_suppress_roles,
-                guild_receive_mobile_push: t.mobile_push ?? e.guild_receive_mobile_push,
-                guild_notify_highlights: t.notify_highlights ?? e.guild_notify_highlights,
-                guild_suppress_everyone: t.suppress_everyone ?? e.guild_suppress_everyone,
-                guild_scheduled_events_muted: t.mute_scheduled_events ?? e.guild_scheduled_events_muted,
-            };
-        },
-        u = l(n),
+    function l(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            n =
+                null != t.mute_config && null != t.mute_config.end_time
+                    ? new Date(t.mute_config.end_time).getTime()
+                    : e.guild_muted_until,
+            i = null != t.message_notifications ? E[t.message_notifications] : e.guild_message_notification_settings;
+        return {
+            guild_muted_until: n,
+            guild_flags: t.flags ?? e.guild_flags,
+            guild_is_muted: t.muted ?? e.guild_is_muted,
+            guild_message_notification_settings: i,
+            guild_suppress_roles: t.suppress_roles ?? e.guild_suppress_roles,
+            guild_receive_mobile_push: t.mobile_push ?? e.guild_receive_mobile_push,
+            guild_notify_highlights: t.notify_highlights ?? e.guild_notify_highlights,
+            guild_suppress_everyone: t.suppress_everyone ?? e.guild_suppress_everyone,
+            guild_scheduled_events_muted: t.mute_scheduled_events ?? e.guild_scheduled_events_muted,
+        };
+    }
+    let u = l(n),
         _ = l(T(e), t),
         f = g(u, _, "RETURN_PREVIOUS_WHEN_CHANGED"),
         p = f("guild_flags") ?? 0,
@@ -146,32 +143,29 @@ function A(e) {
 }
 function I(e) {
     let {
-            updateType: t = d.Y.CHANNEL,
-            guildId: n,
-            channelId: i,
-            applicationId: u,
-            change: _,
-            previous: f,
-            label: p,
-            location: m,
-        } = e,
-        I = function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                i = t.muted ?? e?.channel_is_muted,
-                r =
-                    null != t.message_notifications
-                        ? E[t.message_notifications]
-                        : e?.channel_message_notification_settings,
-                s = null == n ? null : !0 === i || null != r;
-            return {
-                channel_is_muted: i,
-                channel_is_overridden: s,
-                channel_flags: t.flags ?? e?.channel_flags,
-                channel_message_notification_settings: r,
-                channel_muted_until: A(t.mute_config),
-            };
-        },
-        T = I(f),
+        updateType: t = d.Y.CHANNEL,
+        guildId: n,
+        channelId: i,
+        applicationId: u,
+        change: _,
+        previous: f,
+        label: p,
+        location: m,
+    } = e;
+    function I(e) {
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+            i = t.muted ?? e?.channel_is_muted,
+            r = null != t.message_notifications ? E[t.message_notifications] : e?.channel_message_notification_settings,
+            s = null == n ? null : !0 === i || null != r;
+        return {
+            channel_is_muted: i,
+            channel_is_overridden: s,
+            channel_flags: t.flags ?? e?.channel_flags,
+            channel_message_notification_settings: r,
+            channel_muted_until: A(t.mute_config),
+        };
+    }
+    let T = I(f),
         y = I(S(n, i), _),
         C = g(T, y, "RETURN_PREVIOUS_WHEN_CHANGED"),
         N = o.A.getChannel(i),

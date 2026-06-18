@@ -194,14 +194,14 @@ async function Y(e, t, n, i, r) {
     t.includes("\0") && (D.warn("Notification title contains null character, setting to empty string"), (t = "")),
         n.includes("\0") && (D.warn("Notification body contains null character, setting to empty string"), (n = ""));
     let P = r?.tag ?? null,
-        k = h && c?.sound === !0 && c?.authorizationStatus === "authorized",
-        U = (e, t) => {
-            r.onShown?.(),
-                r.omitViewTracking ||
-                    (T.default.track(v.HAw.NOTIFICATION_ACTION, { action: "VIEW", ...t }),
-                    T.default.track(v.HAw.NOTIFICATION_VIEWED, M)),
-                L && setTimeout(() => e.close(), 5e3);
-        };
+        k = h && c?.sound === !0 && c?.authorizationStatus === "authorized";
+    function U(e, t) {
+        r.onShown?.(),
+            r.omitViewTracking ||
+                (T.default.track(v.HAw.NOTIFICATION_ACTION, { action: "VIEW", ...t }),
+                T.default.track(v.HAw.NOTIFICATION_VIEWED, M)),
+            L && setTimeout(() => e.close(), 5e3);
+    }
     if (
         (null == r.sound || k || (H(r.sound, r.volume ?? 1, r.soundpack), (i.ping = !0)),
         r.isUserAvatar &&

@@ -656,7 +656,9 @@ var tv = n(387755),
     tj = n(334738),
     tD = n(400492),
     tR = n(530789);
-let tb = (e) => F(e, tg(), U.t["z8/sgJ"]);
+function tb(e) {
+    return F(e, tg(), U.t["z8/sgJ"]);
+}
 var tL = n(274372),
     tw = n(475358),
     tM = n(176781),
@@ -750,7 +752,9 @@ function t6(e) {
                     icon: i,
                     title: t,
                     body: n,
-                    hint: (e) => F(e, tg(), U.t.Odi54y),
+                    hint: function (e) {
+                        return F(e, tg(), U.t.Odi54y);
+                    },
                     confirmText: U.intl.string(U.t["0D/6Rz"]),
                     cancelText: U.intl.string(U.t.BVN4pL),
                     onNotificationShow: () => {
@@ -1039,7 +1043,9 @@ let t2 = new t8(
                                           icon: o,
                                           title: r,
                                           body: d,
-                                          hint: (e) => F(e, tg(), U.t.aB5xLy),
+                                          hint: function (e) {
+                                              return F(e, tg(), U.t.aB5xLy);
+                                          },
                                           onNotificationShow: () => {
                                               c();
                                           },
@@ -1082,7 +1088,9 @@ let t2 = new t8(
                                           icon: a,
                                           title: s,
                                           body: l,
-                                          hint: (e) => F(e, tg(), U.t.Odi54y),
+                                          hint: function (e) {
+                                              return F(e, tg(), U.t.Odi54y);
+                                          },
                                           confirmText: U.intl.string(U.t["fgP/wX"]),
                                           cancelText: U.intl.string(U.t["tpXzJ+"]),
                                           onNotificationShow: () => {
@@ -1224,7 +1232,7 @@ let t2 = new t8(
                                   icon: s,
                                   title: n,
                                   body: i,
-                                  hint: (e) => {
+                                  hint: function (e) {
                                       let t;
                                       return (
                                           (t = U.intl.string(U.t.WRj1Wn)),

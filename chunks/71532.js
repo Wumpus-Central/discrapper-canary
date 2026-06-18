@@ -7,29 +7,30 @@ var r = n(832081),
     o = n(626584),
     l = n(773669),
     u = n(652215);
-let c = new o.A("StripeUtils"),
-    d = (e) => {
-        let t, n;
-        try {
-            [t, n] = ((e) => {
-                let t = (t) =>
-                        `You passed an invalid expiration date ${e}${t ?? ""}Please pass a string containing a numeric month and year such as \`01-17\` or \`2015 / 05\``,
-                    n = e.split(/[.\-/\s]+/g);
-                2 !== n.length && t();
-                let i = n.map((e) => {
-                        let i = parseInt(e);
-                        return isNaN(i) && t(`${n} is not a number.`), i < 1 && t(`${i} is less than one.`), i;
-                    }),
-                    [r, s] = i[0] > 12 ? [i[1], i[0]] : [i[0], i[1]];
-                return r > 12 && t(`Month must be a number 1-12, not ${r}.`), s < 100 && (s += 2e3), [r, s];
-            })(e);
-        } catch (e) {
-            return !1;
-        }
-        let i = new Date(n, t),
-            r = new Date();
-        return i.setMonth(i.getMonth() - 1), i.setMonth(i.getMonth() + 1, 1), i > r;
-    };
+let c = new o.A("StripeUtils");
+function d(e) {
+    let t, n;
+    try {
+        [t, n] = (function (e) {
+            function t(t) {
+                return `You passed an invalid expiration date ${e}${t ?? ""}Please pass a string containing a numeric month and year such as \`01-17\` or \`2015 / 05\``;
+            }
+            let n = e.split(/[.\-/\s]+/g);
+            2 !== n.length && t();
+            let i = n.map((e) => {
+                    let i = parseInt(e);
+                    return isNaN(i) && t(`${n} is not a number.`), i < 1 && t(`${i} is less than one.`), i;
+                }),
+                [r, s] = i[0] > 12 ? [i[1], i[0]] : [i[0], i[1]];
+            return r > 12 && t(`Month must be a number 1-12, not ${r}.`), s < 100 && (s += 2e3), [r, s];
+        })(e);
+    } catch (e) {
+        return !1;
+    }
+    let i = new Date(n, t),
+        r = new Date();
+    return i.setMonth(i.getMonth() - 1), i.setMonth(i.getMonth() + 1, 1), i > r;
+}
 function _() {
     return null != i ? Promise.resolve(i) : (0, r.loadStripe)(u.Gg3.STRIPE.KEY).then((e) => ((i = e), e));
 }
@@ -95,9 +96,10 @@ async function E(e) {
         return { error: e.message };
     }
 }
-let m = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" },
-    g = () =>
-        (0, s.bG)([l.default], () => {
-            var e;
-            return m[(e = l.default.locale)] ?? e;
-        });
+let m = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
+function g() {
+    return (0, s.bG)([l.default], () => {
+        var e;
+        return m[(e = l.default.locale)] ?? e;
+    });
+}

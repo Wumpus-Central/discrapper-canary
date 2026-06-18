@@ -59,18 +59,23 @@ var I =
     (i[(i.SOUNDBOARD = 13)] = "SOUNDBOARD"),
     i);
 let T = [f.TVA.NONE, f.TVA.TIER_1, f.TVA.TIER_2, f.TVA.TIER_3],
-    S = T.slice().reverse(),
-    y = (e) => (e === f.TVA.NONE ? f.TVA.TIER_1 : k.find((t) => t.tier === e)?.nextTier),
-    C = (e, t) =>
-        null != t && t.features.has(f.GuildFeatures.MORE_STICKERS) && e === f.TVA.TIER_3
-            ? a.K.MAX_STICKER_SLOTS
-            : E.d8[e],
-    N = (e) => E.nk[e],
-    v = (e) => {
-        if (e === f.TVA.NONE) return E.y7[e];
-        let t = T[T.indexOf(e) - 1];
-        return E.y7[e] - E.y7[t];
-    };
+    S = T.slice().reverse();
+function y(e) {
+    return e === f.TVA.NONE ? f.TVA.TIER_1 : k.find((t) => t.tier === e)?.nextTier;
+}
+function C(e, t) {
+    return null != t && t.features.has(f.GuildFeatures.MORE_STICKERS) && e === f.TVA.TIER_3
+        ? a.K.MAX_STICKER_SLOTS
+        : E.d8[e];
+}
+function N(e) {
+    return E.nk[e];
+}
+function v(e) {
+    if (e === f.TVA.NONE) return E.y7[e];
+    let t = T[T.indexOf(e) - 1];
+    return E.y7[e] - E.y7[t];
+}
 function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { useLevels: n = !0 } = t;
@@ -102,28 +107,28 @@ function O(e) {
     }
 }
 let b = s().memoize((e) =>
-        E.TG[f.TVA.TIER_1].features.includes(e)
-            ? f.TVA.TIER_1
-            : E.TG[f.TVA.TIER_2].features.includes(e)
-              ? f.TVA.TIER_2
-              : E.TG[f.TVA.TIER_3].features.includes(e)
-                ? f.TVA.TIER_3
-                : null,
-    ),
-    D = (e) => {
-        switch (e) {
-            case f.TVA.NONE:
-                return f.AnalyticsObjectTypes.NONE;
-            case f.TVA.TIER_1:
-                return f.AnalyticsObjectTypes.TIER_1;
-            case f.TVA.TIER_2:
-                return f.AnalyticsObjectTypes.TIER_2;
-            case f.TVA.TIER_3:
-                return f.AnalyticsObjectTypes.TIER_3;
-            default:
-                return null;
-        }
-    };
+    E.TG[f.TVA.TIER_1].features.includes(e)
+        ? f.TVA.TIER_1
+        : E.TG[f.TVA.TIER_2].features.includes(e)
+          ? f.TVA.TIER_2
+          : E.TG[f.TVA.TIER_3].features.includes(e)
+            ? f.TVA.TIER_3
+            : null,
+);
+function D(e) {
+    switch (e) {
+        case f.TVA.NONE:
+            return f.AnalyticsObjectTypes.NONE;
+        case f.TVA.TIER_1:
+            return f.AnalyticsObjectTypes.TIER_1;
+        case f.TVA.TIER_2:
+            return f.AnalyticsObjectTypes.TIER_2;
+        case f.TVA.TIER_3:
+            return f.AnalyticsObjectTypes.TIER_3;
+        default:
+            return null;
+    }
+}
 function L(e) {
     return u.A.getGuild(e)?.premiumTier ?? f.TVA.NONE;
 }

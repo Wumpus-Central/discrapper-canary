@@ -56,8 +56,12 @@ var v =
     (i[(i.CUSTOM_STYLE = 1)] = "CUSTOM_STYLE"),
     (i[(i.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD = 2)] = "CUSTOM_MESSAGE_EMOJI_SOUNDBOARD"),
     i);
-let R = (e, t) => (s.Fr || s.v1 ? 0 : null != e || t ? 2 : 1),
-    O = (e) => 0 !== R(e);
+function R(e, t) {
+    return s.Fr || s.v1 ? 0 : null != e || t ? 2 : 1;
+}
+function O(e) {
+    return 0 !== R(e);
+}
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0;
@@ -74,15 +78,17 @@ function D(e) {
 function L(e) {
     return e.replace(/[^A-Za-z0-9]/g, "");
 }
-let w = (e) => e?.type === E.lAJ.CUSTOM_GIFT && e?.embeds?.length === 1 && e?.embeds[0].type === E.Auw.GIFT,
-    M = (e) => {
-        let t;
-        if (null == e) return [];
-        let n = new Set();
-        for (; null != (t = I.exec(e)) && n.size < 3; ) n.add(L(t[1]));
-        for (; null != (t = S.exec(e)) && n.size < 3; ) n.add(L(t[t.length - 1]));
-        return Array.from(n);
-    };
+function w(e) {
+    return e?.type === E.lAJ.CUSTOM_GIFT && e?.embeds?.length === 1 && e?.embeds[0].type === E.Auw.GIFT;
+}
+let M = (e) => {
+    let t;
+    if (null == e) return [];
+    let n = new Set();
+    for (; null != (t = I.exec(e)) && n.size < 3; ) n.add(L(t[1]));
+    for (; null != (t = S.exec(e)) && n.size < 3; ) n.add(L(t[t.length - 1]));
+    return Array.from(n);
+};
 function P() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
@@ -223,12 +229,13 @@ function H(e) {
     let [n, i, r] = t;
     return null == r ? null : r.replace(/-/g, "");
 }
-let Y = (e, t) =>
-    (0, a.bG)([u.A], () => {
+function Y(e, t) {
+    return (0, a.bG)([u.A], () => {
         if (null == e || !t) return null;
         let n = u.A.getGiftCode(e);
         return null == n || "" === n ? null : n;
     });
+}
 function W(e, t) {
     switch (e.code) {
         case E.t02.INVALID_GIFT_SELF_REDEMPTION:

@@ -327,18 +327,20 @@ let W = {
         setObservedGamesCallback(e, t, n, i) {
             try {
                 v = {};
-                let r = 0,
-                    s = this.getDiscordUtils(),
-                    a = e.map((e) => {
-                        let t = ++r;
+                let s = 0,
+                    a = this.getDiscordUtils(),
+                    o = e.map((e) => {
+                        let t = ++s;
                         return null != e.id && (v[t] = e.id), { ...e, cmdline: e.cmdLine, id: t };
                     }),
-                    o = v,
-                    l = (e) => n(e.map((e) => j(e, o)));
-                null != i && null != s.setProcessObserverUserId && s.setProcessObserverUserId(i),
-                    t && null != s.setObservedGamesCallback2
-                        ? s.setObservedGamesCallback2(a, l)
-                        : s.setObservedGamesCallback(a, l);
+                    l = v;
+                function r(e) {
+                    return n(e.map((e) => j(e, l)));
+                }
+                null != i && null != a.setProcessObserverUserId && a.setProcessObserverUserId(i),
+                    t && null != a.setObservedGamesCallback2
+                        ? a.setObservedGamesCallback2(o, r)
+                        : a.setObservedGamesCallback(o, r);
             } catch (e) {}
         },
         setProcessObserverCollectExecutableFingerprint(e) {

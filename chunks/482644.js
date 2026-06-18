@@ -4,9 +4,9 @@ var a = s(627968),
     l = s(64700),
     n = s(503698),
     r = s.n(n),
-    c = s(791332),
-    o = s.n(c),
-    u = s(707554),
+    u = s(791332),
+    c = s.n(u),
+    o = s(707554),
     i = s(192308),
     p = s(349288),
     d = s(398590),
@@ -18,16 +18,16 @@ var a = s(627968),
     R = s(652215),
     b = s(559868),
     y = s(198964);
-let C = o().defaultRules.link,
-    x = { section: R.JJy.SETTINGS_CHANGELOG },
-    A = (e) => {
-        let { level: t, children: s, className: a } = e,
-            n = (0, u.$)(),
-            r = parseInt(t, 10),
-            c = isNaN(r) ? 1 : r;
-        return l.createElement(`h${n + c - 1}`, { className: a }, s);
-    },
-    N = null != g.A ? g.A.defaultRules : null,
+let C = c().defaultRules.link,
+    x = { section: R.JJy.SETTINGS_CHANGELOG };
+function A(e) {
+    let { level: t, children: s, className: a } = e,
+        n = (0, o.$)(),
+        r = parseInt(t, 10),
+        u = isNaN(r) ? 1 : r;
+    return l.createElement(`h${n + u - 1}`, { className: a }, s);
+}
+let N = null != g.A ? g.A.defaultRules : null,
     _ = {
         link: {
             parse(e, t, s) {
@@ -69,7 +69,7 @@ let C = o().defaultRules.link,
                 (0, a.jsx)(
                     p.Anchor,
                     {
-                        href: o().sanitizeUrl(e.target),
+                        href: c().sanitizeUrl(e.target),
                         title: e.title,
                         onClick: e.callToAction,
                         target: "_blank",
@@ -110,10 +110,10 @@ let C = o().defaultRules.link,
         list: (e) => ({
             react(t, s, l) {
                 let n = t.ordered ? "ol" : "ul",
-                    c = t.items.map((t, n) =>
+                    u = t.items.map((t, n) =>
                         (0, a.jsx)("li", { className: r()(y["text-md/normal"], e.listItem), children: s(t, l) }, n),
                     );
-                return (0, a.jsx)(n, { className: e.list, start: t.start, children: c }, l.key);
+                return (0, a.jsx)(n, { className: e.list, start: t.start, children: u }, l.key);
             },
         }),
         paragraph: (e) => ({

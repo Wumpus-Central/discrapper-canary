@@ -51,13 +51,13 @@ async function m(e) {
             c.A.ipCountryCodeLoaded || e.push((0, o.xe)()),
             e.push(
                 new Promise(async (e) => {
-                    if (_.A.hasFetchedSubscriptions()) e();
-                    else if (c.A.isSubscriptionFetching) {
-                        let t = () => {
-                            c.A.isSubscriptionFetching ? setTimeout(t, 50) : e();
-                        };
-                        t();
-                    } else await (0, o.hP)(), e();
+                    _.A.hasFetchedSubscriptions()
+                        ? e()
+                        : c.A.isSubscriptionFetching
+                          ? (function t() {
+                                c.A.isSubscriptionFetching ? setTimeout(t, 50) : e();
+                            })()
+                          : (await (0, o.hP)(), e());
                 }),
             ),
             await Promise.race([Promise.allSettled(e), new Promise((e) => setTimeout(e, 1e4))]);
