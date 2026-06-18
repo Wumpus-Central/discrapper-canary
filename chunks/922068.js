@@ -838,7 +838,7 @@ function e8() {
 function e5(e, t) {
     return r.useMemo(() => [...[...e, ...t].sort((e, t) => -1 * k.default.compare(e.id, t.id))], [e, t]);
 }
-function e4() {
+function e6() {
     let { items: e } = J(),
         t = e.length > 0 ? e[0] : null,
         n = e5(
@@ -870,7 +870,7 @@ function e4() {
           })
         : null;
 }
-var e6 = n(815021),
+var e4 = n(815021),
     e9 = n(935063),
     te = n(378939),
     tt = n(964486),
@@ -1202,7 +1202,7 @@ function tX(e) {
                 channel: l,
                 gotoChannel: n,
                 children:
-                    null != s ? (0, i.jsx)(e6.J, { size: "sm", onClick: () => te.A.deleteRecentMention(t.id) }) : null,
+                    null != s ? (0, i.jsx)(e4.J, { size: "sm", onClick: () => te.A.deleteRecentMention(t.id) }) : null,
             }),
             (0, i.jsxs)("div", {
                 className: tH.zC,
@@ -1310,7 +1310,7 @@ function t5(e) {
         ],
     });
 }
-function t4() {
+function t6() {
     let e = r.useRef(null);
     return (0, i.jsx)(eX.Y, {
         targetElementRef: e,
@@ -1337,8 +1337,8 @@ function t4() {
         },
     });
 }
-var t6 = n(481613),
-    t9 = n.n(t6),
+var t4 = n(481613),
+    t9 = n.n(t4),
     ne = n(621466),
     nt = n(775602),
     nn = n(625494),
@@ -1522,7 +1522,7 @@ var nj = n(989349),
     nz = n(467073),
     nJ = n(491182),
     nY = n(860227),
-    nX = n(92197),
+    nX = n(369121),
     nQ = n(375199),
     nV = n(824556),
     nW = n(715628),
@@ -1650,8 +1650,8 @@ function n8(e) {
     });
 }
 var n5 = n(495544),
-    n4 = n(58703),
-    n6 = n(143236),
+    n6 = n(58703),
+    n4 = n(143236),
     n9 = n(493336),
     se = n(181079),
     st = n(567035),
@@ -1679,7 +1679,7 @@ var n5 = n(495544),
         (s[(s.ReallyOldChannel = 8)] = "ReallyOldChannel"),
         s),
     sg = (((l = {}).Loading = "loading"), (l.Loaded = "loaded"), (l.Done = "done"), l);
-class sE extends n6.EventEmitter {
+class sE extends n4.EventEmitter {
     state;
     scrollerRef;
     undoStack = [];
@@ -2066,7 +2066,7 @@ function sT(e) {
             m = t.messages.slice(0, 25);
         m.forEach((t) => {
             if (!c && (null == e || !e.isSame(t.timestamp, "day"))) {
-                let n = (0, n4.i$)(t.timestamp, "LL");
+                let n = (0, n6.i$)(t.timestamp, "LL");
                 u.push((0, i.jsx)(nd.A, { className: sC.yF, children: n }, n)), (e = nO()(t.timestamp));
             }
             let m = null == h || (0, nv.A)(n, h, t);
@@ -2587,11 +2587,11 @@ function sk(e) {
 function sw(e) {
     let { tab: t } = e;
     return t === u.Y2.FOR_YOU
-        ? (0, i.jsx)(e4, {})
+        ? (0, i.jsx)(e6, {})
         : t === u.Y2.UNREADS
           ? (0, i.jsx)(sU, {})
           : t === u.Y2.MENTIONS
-            ? (0, i.jsx)(t4, {})
+            ? (0, i.jsx)(t6, {})
             : null;
 }
 var sP = n(406810),

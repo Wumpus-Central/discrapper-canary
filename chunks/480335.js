@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O, p: () => v });
+n.d(t, { A: () => b, p: () => R });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -72,11 +72,34 @@ let g = 1e3 / 24,
     };
 var I = n(942426),
     T = n(735438);
+let S = (e) => {
+    if (null == e) return e;
+    let t = (0, T.cloneDeep)(e),
+        n = Math.floor(
+            Math.random() *
+                (t.effects.reduce((e, t) => {
+                    let n = t.randomizedSources?.length ?? 0;
+                    return n > 0 && (e = 0 === e ? n : Math.min(e, n)), e;
+                }, 0) -
+                    1 -
+                    0 +
+                    1) +
+                0,
+        );
+    return (
+        (t.effects = t.effects.map(
+            (e) => (
+                null != e.randomizedSources && e.randomizedSources.length > 0 && (e.src = e.randomizedSources[n].src), e
+            ),
+        )),
+        t
+    );
+};
 n(323874), n(14289), n(35956);
-var S = n(676279),
-    y = n(38405),
-    C = n(839827);
-let N = (e) => {
+var y = n(676279),
+    C = n(38405),
+    N = n(839827);
+let v = (e) => {
         let {
                 layerConfig: t,
                 animationType: n,
@@ -94,26 +117,26 @@ let N = (e) => {
             [m, g] = r.useState("reset"),
             A = r.useRef(h?.src ?? t.src),
             [I, T] = r.useState(h?.src ?? t.src),
-            N = r.useRef(null),
-            v = (0, S.gm)() && null != t.loopDelay && t.loopDelay > 0 && h?.src != null;
+            S = r.useRef(null),
+            v = (0, y.gm)() && null != t.loopDelay && t.loopDelay > 0 && h?.src != null;
         r.useEffect(() => {
             if (!v || "layer" === m) return;
             let e = new AbortController();
             return (
                 (async () => {
                     try {
-                        if (null == N.current) {
+                        if (null == S.current) {
                             let t = await fetch(h.src, { signal: e.signal }),
                                 n = await t.blob();
                             if (e.signal.aborted) return;
-                            N.current = n;
+                            S.current = n;
                         }
                         A.current !== h?.src && URL.revokeObjectURL(A.current),
-                            (A.current = URL.createObjectURL(N.current)),
+                            (A.current = URL.createObjectURL(S.current)),
                             T(() => A.current);
                     } catch (e) {
                         if ("AbortError" === e.name) return null;
-                        y.A.captureException(e);
+                        C.A.captureException(e);
                     }
                 })(),
                 () => {
@@ -128,7 +151,7 @@ let N = (e) => {
                 [],
             );
         let R = (e) => {
-            (0, S.gm)() && e !== m && g(e);
+            (0, y.gm)() && e !== m && g(e);
         };
         if (
             (s || (p = !1),
@@ -146,14 +169,14 @@ let N = (e) => {
             ? (R("layer"),
               (0, i.jsx)("img", {
                   src: I,
-                  className: C.QZ,
+                  className: N.QZ,
                   style: { top: (t.position?.y ?? 0) - _, left: t.position?.x ?? 0 },
                   alt: "",
                   "aria-hidden": !0,
               }))
             : (R("reset"), (0, i.jsx)("img", { src: f.Ut, alt: "", "aria-hidden": !0 }));
     },
-    v = (e) => {
+    R = (e) => {
         let {
                 bannerAdjustment: t = 0,
                 maxLoops: n,
@@ -182,7 +205,7 @@ let N = (e) => {
                 );
             }, [g]),
             y = f ? 500 : 0.1,
-            [v, R] = r.useState(-y),
+            [C, R] = r.useState(-y),
             {
                 stop: O,
                 reset: b,
@@ -215,11 +238,11 @@ let N = (e) => {
             }, [l, w, T, s, O, b, D, h.animationType, c, _]),
             (0, i.jsx)("div", {
                 ref: m,
-                className: a()(C.yC, { [C.yo]: l && u }),
+                className: a()(N.yC, { [N.yo]: l && u }),
                 "aria-label": I,
                 role: "img",
                 children: (0, i.jsx)("div", {
-                    className: C.vW,
+                    className: N.vW,
                     children: g.map((e, r) => {
                         if (
                             !D.current &&
@@ -232,7 +255,7 @@ let N = (e) => {
                             return (0, i.jsx)(
                                 "img",
                                 {
-                                    className: C.QZ,
+                                    className: N.QZ,
                                     style: { top: e.position?.y ?? 0 - t, left: e.position?.x ?? 0 },
                                     src: n,
                                     alt: "",
@@ -242,12 +265,12 @@ let N = (e) => {
                             );
                         }
                         return (0, i.jsx)(
-                            N,
+                            v,
                             {
                                 layerConfig: e,
                                 animationType: h.animationType,
                                 ticking: D.current,
-                                time: v,
+                                time: C,
                                 hasPlayedThrough: w,
                                 setHasPlayedThrough: M,
                                 maxLoops: n,
@@ -262,7 +285,7 @@ let N = (e) => {
             })
         );
     },
-    R = (e) => {
+    O = (e) => {
         let {
                 profileEffect: t,
                 useThumbnail: n,
@@ -272,14 +295,14 @@ let N = (e) => {
             } = e,
             { reducedMotionSrc: l, thumbnailPreviewSrc: u, accessibilityLabel: c } = t;
         return (0, i.jsx)("div", {
-            className: a()(C.yC, { [C.yo]: s && o }),
+            className: a()(N.yC, { [N.yo]: s && o }),
             "aria-label": c,
             role: "img",
             children: (0, i.jsx)("div", {
-                className: C.vW,
+                className: N.vW,
                 children: (0, i.jsx)("img", {
                     src: n && !s ? u : l,
-                    className: C.QZ,
+                    className: N.QZ,
                     style: { top: 0 - r },
                     alt: "",
                     "aria-hidden": !0,
@@ -287,37 +310,16 @@ let N = (e) => {
             }),
         });
     },
-    O = (e) => {
+    b = (e) => {
         let t = (0, c.j)(),
             n = (0, l.bG)([u.Ay], () => u.Ay.useReducedMotion),
             s = (0, I.A)(e.skuId),
             a = (0, h.C)(s),
-            d = r.useMemo(() => {
-                if (null == s) return s;
-                let e = (0, T.cloneDeep)(s),
-                    t = Math.floor(
-                        Math.random() *
-                            (e.effects.reduce((e, t) => {
-                                let n = t.randomizedSources?.length ?? 0;
-                                return n > 0 && (e = 0 === e ? n : Math.min(e, n)), e;
-                            }, 0) -
-                                1 -
-                                0 +
-                                1) +
-                            0,
-                    );
-                return (
-                    (e.effects = e.effects.map(
-                        (e) => (
-                            null != e.randomizedSources &&
-                                e.randomizedSources.length > 0 &&
-                                (e.src = e.randomizedSources[t].src),
-                            e
-                        ),
-                    )),
-                    e
-                );
-            }, [s]),
+            d = ((e) => {
+                let [t, n] = r.useState(e),
+                    [i, s] = r.useState(S(e));
+                return (0, T.isEqual)(t, e) || (n(e), s(S(e))), i;
+            })(s),
             f = a ?? d,
             { autoPlay: p = !0, isHovering: E } = e,
             m = !!(
@@ -329,7 +331,7 @@ let N = (e) => {
             { loaded: g, layerData: A } = (0, _.A)({ skuId: s?.skuId, layers: m ? void 0 : s?.effects });
         return null != s && null != f && (t || e.shopPreview || s.animationType !== o.l.ANIMATION_TYPE_INTERMITTENT)
             ? m
-                ? (0, i.jsx)(R, {
+                ? (0, i.jsx)(O, {
                       useThumbnail: e.useThumbnail,
                       profileEffect: f,
                       bannerAdjustment: e.bannerAdjustment,
@@ -337,7 +339,7 @@ let N = (e) => {
                       useOpacityOnHover: e.useOpacityOnHover,
                   })
                 : g
-                  ? (0, i.jsx)(v, { profileEffect: f, layerData: A, ...e })
+                  ? (0, i.jsx)(R, { profileEffect: f, layerData: A, ...e })
                   : null
             : null;
     };
