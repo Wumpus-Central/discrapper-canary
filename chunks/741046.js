@@ -1845,14 +1845,19 @@ let tf = (e) => {
             n = (0, B.NF)({ trialOffer: t }),
             r = (0, B.Tp)(),
             c = (0, o.bG)([L.A], () => L.A.getReminderStateId());
-        return (l.useEffect(() => {
-            !0 === n && (0, B.QG)(), !0 === r && (0, B.ne)(c), (null != t || null != i) && (0, P.u1)(t, i);
-        }, [t, i, n, r, c]),
-        s === eU.Mf.UserSettings)
-            ? (0, a.jsx)(tA, {})
-            : s === eU.Mf.ApplicationStoreHome
-              ? (0, a.jsx)(sG, {})
-              : null;
+        switch (
+            (l.useEffect(() => {
+                !0 === n && (0, B.QG)(), !0 === r && (0, B.ne)(c), (null != t || null != i) && (0, P.u1)(t, i);
+            }, [t, i, n, r, c]),
+            s)
+        ) {
+            case eU.Mf.UserSettings:
+                return (0, a.jsx)(tA, {});
+            case eU.Mf.ApplicationStoreHome:
+                return (0, a.jsx)(sG, {});
+            default:
+                return null;
+        }
     };
 var tb = t(972119);
 let tE = function (e) {

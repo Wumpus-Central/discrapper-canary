@@ -23,7 +23,7 @@ var n,
     C = a(274372),
     S = a(372684),
     N = a(315240),
-    A = a(257290),
+    A = a(849106),
     k = a(227628),
     I = a(468550);
 let D = (0, a(353640).v)(() => ({ enabled: !1, pending: null, lastResult: null }));
@@ -674,7 +674,7 @@ var ek = a(835245),
     eW = a(231723),
     ez = a(900686),
     eH = a(986687),
-    eK = a(600323),
+    eK = a(366439),
     eY = a(735438),
     eq = a.n(eY),
     eJ = a(855915),
@@ -6157,7 +6157,7 @@ function ig() {
     });
 }
 var iv = a(582306),
-    ij = a(528153),
+    ij = a(687649),
     ib = a(44862),
     iy = a(888429);
 function iE(e) {
@@ -14580,40 +14580,43 @@ function ux() {
 }
 function up(e) {
     let { property: t, type: a, value: n, onChange: l, artboards: s } = e;
-    return "string" === a
-        ? (0, r.jsx)(v.k, { label: t, value: n, onChange: (e) => l(e) })
-        : "number" === a
-          ? (0, r.jsx)(v.k, { type: "number", label: t, value: n, onChange: (e) => l(parseInt(e)) })
-          : "boolean" === a
-            ? (0, r.jsx)(c.d, { label: t, checked: n, onChange: (e) => l(e) })
-            : "trigger" === a
-              ? (0, r.jsx)(m.$, { text: `Trigger ${t}`, onClick: () => l(Number.isSafeInteger(n) ? n + 1 : 1) })
-              : "image" === a
-                ? (0, r.jsx)(v.k, { label: t, value: n, onChange: (e) => l(e) })
-                : "color" === a
-                  ? (0, r.jsx)(at.Z, {
-                        selectionMode: "single",
-                        label: t,
-                        value: n,
-                        onSelectionChange: (e) => l(e),
-                        closeOnSelect: !0,
-                        placeholder: "Select a color...",
-                        options: Object.entries(eV.A.colors).map((e) => {
-                            let [t, a] = e;
-                            return { label: t, value: a, id: t };
-                        }),
-                    })
-                  : "artboard" === a
-                    ? (0, r.jsx)(at.Z, {
-                          selectionMode: "single",
-                          label: t,
-                          value: n,
-                          onSelectionChange: (e) => l(e),
-                          closeOnSelect: !0,
-                          placeholder: "Select an artboard...",
-                          options: s.map((e) => ({ label: e, value: e, id: e })),
-                      })
-                    : null;
+    switch (a) {
+        case "string":
+            return (0, r.jsx)(v.k, { label: t, value: n, onChange: (e) => l(e) });
+        case "number":
+            return (0, r.jsx)(v.k, { type: "number", label: t, value: n, onChange: (e) => l(parseInt(e)) });
+        case "boolean":
+            return (0, r.jsx)(c.d, { label: t, checked: n, onChange: (e) => l(e) });
+        case "trigger":
+            return (0, r.jsx)(m.$, { text: `Trigger ${t}`, onClick: () => l(Number.isSafeInteger(n) ? n + 1 : 1) });
+        case "image":
+            return (0, r.jsx)(v.k, { label: t, value: n, onChange: (e) => l(e) });
+        case "color":
+            return (0, r.jsx)(at.Z, {
+                selectionMode: "single",
+                label: t,
+                value: n,
+                onSelectionChange: (e) => l(e),
+                closeOnSelect: !0,
+                placeholder: "Select a color...",
+                options: Object.entries(eV.A.colors).map((e) => {
+                    let [t, a] = e;
+                    return { label: t, value: a, id: t };
+                }),
+            });
+        case "artboard":
+            return (0, r.jsx)(at.Z, {
+                selectionMode: "single",
+                label: t,
+                value: n,
+                onSelectionChange: (e) => l(e),
+                closeOnSelect: !0,
+                placeholder: "Select an artboard...",
+                options: s.map((e) => ({ label: e, value: e, id: e })),
+            });
+        default:
+            return null;
+    }
 }
 function ug(e) {
     let { riveName: t, onRiveLoad: a } = e,

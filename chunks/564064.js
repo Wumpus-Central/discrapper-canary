@@ -196,15 +196,18 @@ class O {
             Object.fromEntries(
                 Object.entries(e?.marketings ?? {}).map((e) => {
                     let [t, n] = e;
-                    return n?.type === y.G.BADGE
-                        ? [t, C.fromServer(n)]
-                        : n?.type === y.G.BANNER
-                          ? [t, N.fromServer(n)]
-                          : n?.type === y.G.COACHMARK
-                            ? [t, v.fromServer(n)]
-                            : n?.type === y.G.TAB_TOOLTIP
-                              ? [t, R.fromServer(n)]
-                              : [t, void 0];
+                    switch (n?.type) {
+                        case y.G.BADGE:
+                            return [t, C.fromServer(n)];
+                        case y.G.BANNER:
+                            return [t, N.fromServer(n)];
+                        case y.G.COACHMARK:
+                            return [t, v.fromServer(n)];
+                        case y.G.TAB_TOOLTIP:
+                            return [t, R.fromServer(n)];
+                        default:
+                            return [t, void 0];
+                    }
                 }),
             ),
         );
@@ -349,7 +352,7 @@ class V {
     subblocks;
     constructor(e) {
         (this.type = k.g.FEATURED),
-            (this.subblocks = e.subblocks.map((e) => (e.type === G.u.CATEGORY ? F.fromServer(e) : e)));
+            (this.subblocks = e.subblocks.map((e) => (e.type === G.u.CATEGORY ? F.fromServer(e) : (e.type, e))));
     }
     static fromServer(e) {
         return new V(e);

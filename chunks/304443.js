@@ -1295,7 +1295,7 @@ let tq = (e) => {
                           },
                           e.categoryStoreListingId,
                       )
-                    : null,
+                    : (e.type, null),
             ),
         });
     },

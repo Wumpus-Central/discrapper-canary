@@ -19,13 +19,15 @@ function c(e, t) {
     return null != t ? `dev://experiment/${e}/${t}` : `dev://experiment/${e}`;
 }
 function d(e, t) {
-    return null == t || null == e
-        ? null
-        : e.system === r.l5.LEGACY
-          ? i.A.getExperimentBucketName(t.bucket)
-          : e.system === r.l5.APEX
-            ? `Variant ${t.variantId}`
-            : null;
+    if (null == t || null == e) return null;
+    switch (e.system) {
+        case r.l5.LEGACY:
+            return i.A.getExperimentBucketName(t.bucket);
+        case r.l5.APEX:
+            return `Variant ${t.variantId}`;
+        default:
+            return e.system, null;
+    }
 }
 function _(e) {
     return (0, s.h)(e).map((e) => ({ id: e.id, label: e.label, value: e.id }));

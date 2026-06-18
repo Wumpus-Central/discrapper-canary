@@ -199,69 +199,78 @@ function X(e) {
                         scrollbarType: "auto",
                         overflow: "auto",
                         children: [
-                            "video" === l.type
-                                ? (0, i.jsx)(H.A, {
-                                      className: O()($.Ki, u),
-                                      autoPlay: !Q,
-                                      loop: !0,
-                                      muted: !0,
-                                      controls: !0,
-                                      controlsList: "nofullscreen nodownload noremoteplayback noplaybackrate",
-                                      src: l.src,
-                                      poster: l.poster,
-                                      onPlay: (e) => {
-                                          I.default.track(y.HAw.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: m }),
-                                              ee(Date.now()),
-                                              ea(!0),
-                                              el(e.currentTarget.muted);
-                                      },
-                                      onEnded: (e) => {
-                                          em(), el(e.currentTarget.muted), ea(!1);
-                                      },
-                                      onVolumeChange: (e) => {
-                                          em(), el(e.currentTarget.muted);
-                                      },
-                                      onPause: (e) => {
-                                          em(), el(e.currentTarget.muted), ea(!1);
-                                      },
-                                      disablePictureInPicture: !0,
-                                      children: ef?.map((e) => {
-                                          let t = (0, N.getLanguages)().find((t) => t.code === e.locale);
-                                          return null == t
-                                              ? null
-                                              : (0, i.jsx)(
-                                                    "track",
-                                                    {
-                                                        label: t.englishName,
-                                                        kind: "captions",
-                                                        srcLang: t.code,
-                                                        src: e.src,
-                                                        default: e.isDefault,
-                                                    },
-                                                    e.locale,
-                                                );
-                                      }),
-                                  })
-                                : "embed" === l.type
-                                  ? (0, i.jsx)(V.rr, {
-                                        className: O()($.Ki, u),
-                                        allowFullScreen: !1,
-                                        href: l.href,
-                                        thumbnail: l.thumbnail,
-                                        video: l.embed,
-                                        provider: B.m.YOUTUBE,
-                                        maxWidth: l.embed.width,
-                                        maxHeight: l.embed.height,
-                                        renderVideoComponent: Y.$o,
-                                        renderImageComponent: Y.LL,
-                                        renderLinkComponent: Y.bU,
-                                        onPlay: () => {
-                                            I.default.track(y.HAw.CHANGE_LOG_VIDEO_INTERACTED, { change_log_id: m });
-                                        },
-                                    })
-                                  : "image" === l.type
-                                    ? (0, i.jsx)("img", { alt: "", className: O()($.Ki, u), src: l.src })
-                                    : null,
+                            (() => {
+                                switch (l.type) {
+                                    case "video":
+                                        return (0, i.jsx)(H.A, {
+                                            className: O()($.Ki, u),
+                                            autoPlay: !Q,
+                                            loop: !0,
+                                            muted: !0,
+                                            controls: !0,
+                                            controlsList: "nofullscreen nodownload noremoteplayback noplaybackrate",
+                                            src: l.src,
+                                            poster: l.poster,
+                                            onPlay: (e) => {
+                                                I.default.track(y.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
+                                                    change_log_id: m,
+                                                }),
+                                                    ee(Date.now()),
+                                                    ea(!0),
+                                                    el(e.currentTarget.muted);
+                                            },
+                                            onEnded: (e) => {
+                                                em(), el(e.currentTarget.muted), ea(!1);
+                                            },
+                                            onVolumeChange: (e) => {
+                                                em(), el(e.currentTarget.muted);
+                                            },
+                                            onPause: (e) => {
+                                                em(), el(e.currentTarget.muted), ea(!1);
+                                            },
+                                            disablePictureInPicture: !0,
+                                            children: ef?.map((e) => {
+                                                let t = (0, N.getLanguages)().find((t) => t.code === e.locale);
+                                                return null == t
+                                                    ? null
+                                                    : (0, i.jsx)(
+                                                          "track",
+                                                          {
+                                                              label: t.englishName,
+                                                              kind: "captions",
+                                                              srcLang: t.code,
+                                                              src: e.src,
+                                                              default: e.isDefault,
+                                                          },
+                                                          e.locale,
+                                                      );
+                                            }),
+                                        });
+                                    case "embed":
+                                        return (0, i.jsx)(V.rr, {
+                                            className: O()($.Ki, u),
+                                            allowFullScreen: !1,
+                                            href: l.href,
+                                            thumbnail: l.thumbnail,
+                                            video: l.embed,
+                                            provider: B.m.YOUTUBE,
+                                            maxWidth: l.embed.width,
+                                            maxHeight: l.embed.height,
+                                            renderVideoComponent: Y.$o,
+                                            renderImageComponent: Y.LL,
+                                            renderLinkComponent: Y.bU,
+                                            onPlay: () => {
+                                                I.default.track(y.HAw.CHANGE_LOG_VIDEO_INTERACTED, {
+                                                    change_log_id: m,
+                                                });
+                                            },
+                                        });
+                                    case "image":
+                                        return (0, i.jsx)("img", { alt: "", className: O()($.Ki, u), src: l.src });
+                                    default:
+                                        return null;
+                                }
+                            })(),
                             null != _ && "" !== _
                                 ? (0, i.jsx)(K.e4, {
                                       text: _,

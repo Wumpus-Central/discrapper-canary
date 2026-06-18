@@ -20,12 +20,12 @@ var n = i(284009),
     N = i(803224),
     S = i(783592),
     C = i(290863),
-    T = i(763827),
-    h = i(994500),
+    h = i(763827),
+    T = i(994500),
     v = i(309010),
     O = i(461213),
-    L = i(351906),
-    b = i(287809),
+    b = i(351906),
+    L = i(287809),
     x = i(977997),
     D = i(90165),
     R = i(530789),
@@ -97,12 +97,12 @@ var tu = i(387755),
     tN = i(145567),
     tS = i(774610),
     tC = i(308368),
-    tT = i(334738),
-    th = i(481484),
+    th = i(334738),
+    tT = i(481484),
     tv = i(258585),
     tO = i(560595),
-    tL = i(929921),
-    tb = i(753070),
+    tb = i(929921),
+    tL = i(753070),
     tx = i(783198),
     tD = i(941971),
     tR = i(465364),
@@ -131,7 +131,7 @@ function t$(t) {
         y = X.useCallback(() => p(!0), []),
         m = X.useCallback(() => p(!1), []);
     (0, tw.Ay)(() => {
-        (0, tT.ack)(
+        (0, th.ack)(
             n.id,
             {
                 section: z.JJy.OVERLAY,
@@ -316,7 +316,7 @@ function eg() {
             n ||
             (function (t, e) {
                 let i, n, l;
-                if (!h.A.isFriend(t)) return !1;
+                if (!T.A.isFriend(t)) return !1;
                 let a = e.gameId;
                 if (null == a) return !1;
                 let r = (function (t) {
@@ -348,7 +348,7 @@ function eg() {
                         ? (null !=
                               (l = (function (t, e, i) {
                                   if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return null;
-                                  let n = b.default.getUser(t);
+                                  let n = L.default.getUser(t);
                                   if (null == n) return null;
                                   let l = v.A.getCurrentlySelectedChannelId(),
                                       a = E.A.getChannel(l),
@@ -482,7 +482,7 @@ function eI(t) {
     null != a && ep(a.id),
         em(
             (function (t) {
-                let e = (0, tA.m1)(t, b.default, h.A),
+                let e = (0, tA.m1)(t, L.default, T.A),
                     i = J.intl.string(J.t.ssrVzG),
                     n = (0, td.Y)(t),
                     l = (0, tf.A)(t),
@@ -545,13 +545,13 @@ class eE extends r.Ay.Store {
             P.A,
             w.A,
             C.A,
-            T.A,
             h.A,
+            T.A,
             A.Ay,
             v.A,
             O.A,
-            L.A,
-            b.default,
+            b.A,
+            L.default,
             x.A,
         ),
             this.syncWith([S.A], eg);
@@ -688,7 +688,7 @@ let e_ = new eE(s.h, {
     MESSAGE_CREATE: function (t) {
         let { channelId: e, message: i } = t,
             n = E.A.getChannel(e),
-            a = b.default.getUser(i.author?.id);
+            a = L.default.getUser(i.author?.id);
         if (null == n || null == a) return !1;
         if ([z.xL.JOIN, z.xL.JOIN_REQUEST, z.xL.STREAM_REQUEST].includes(i.activity?.type)) {
             if (!(0, p.lx)(i, e, !0, !0)) return !1;
@@ -793,13 +793,13 @@ let e_ = new eE(s.h, {
                                         channelId: t.id,
                                         type: z.xL.JOIN,
                                         activity: n,
-                                        location: (0, th.y)() ? z.ThZ.LOCKED_OVERLAY : z.ThZ.UNLOCKED_OVERLAY,
+                                        location: (0, tT.y)() ? z.ThZ.LOCKED_OVERLAY : z.ThZ.UNLOCKED_OVERLAY,
                                     }),
                                         u("join"),
                                         o.A.updateNotificationStatus(i);
                                 },
                                 onCancelClick: (e, i) => {
-                                    (0, tT.ack)(
+                                    (0, th.ack)(
                                         t.id,
                                         {
                                             section: z.JJy.OVERLAY,
@@ -844,19 +844,19 @@ let e_ = new eE(s.h, {
                                     s();
                                 },
                                 onConfirmClick: (t, e) => {
-                                    let i = tL.A.getState().preset;
-                                    if (i === tb.jQ.PRESET_DOCUMENTS) {
+                                    let i = tb.A.getState().preset;
+                                    if (i === tL.jQ.PRESET_DOCUMENTS) {
                                         let { allowAutoQuality: t } = (0, tv.eO)({
                                             location: "requestToStreamNotification",
                                         });
-                                        i = t ? tb.jQ.PRESET_AUTO : tb.jQ.PRESET_VIDEO;
+                                        i = t ? tL.jQ.PRESET_AUTO : tL.jQ.PRESET_VIDEO;
                                     }
                                     (0, tO.A)(w.A.getTargetPID(), { preset: i }),
                                         u("request-to-stream"),
                                         o.A.updateNotificationStatus(e);
                                 },
                                 onCancelClick: (e, i) => {
-                                    (0, tT.ack)(
+                                    (0, th.ack)(
                                         t.id,
                                         {
                                             section: z.JJy.OVERLAY,
@@ -890,7 +890,7 @@ let e_ = new eE(s.h, {
             })(n, i, a);
             if (!1 !== t) return t;
         }
-        if (P.A.isNotificationDisabled(H.KS.TextChat) || L.A.disableNotifications || !(0, p.lx)(i, e)) return !1;
+        if (P.A.isNotificationDisabled(H.KS.TextChat) || b.A.disableNotifications || !(0, p.lx)(i, e)) return !1;
         let r = !N.A.isSoundDisabled(R.cH),
             s = (function (t, e, i, n) {
                 let { hasChat: l } = (0, V.NI)("textChatNotification");
@@ -928,7 +928,7 @@ let e_ = new eE(s.h, {
                     onNotificationClick: (i, n) => {
                         let a = w.A.getTargetPID();
                         if (
-                            ((0, tT.ack)(
+                            ((0, th.ack)(
                                 t.id,
                                 {
                                     section: z.JJy.OVERLAY,
@@ -1034,36 +1034,41 @@ let e_ = new eE(s.h, {
         );
     },
     CLIPS_SAVE_CLIP_START: function (t) {
-        if ("manual" === t.clipMethod) em(to(J.intl.string(J.t.NBMK9m)));
-        else {
-            var e;
-            "auto" === t.clipMethod &&
+        switch (t.clipMethod) {
+            case "manual":
+                em(to(J.intl.string(J.t.NBMK9m)));
+                break;
+            case "auto":
+                var e;
                 null != t.signal &&
-                ta() &&
-                em(
-                    ((e = t.signal),
-                    {
-                        ...tn(H.KS.ClipsDebugAutoSignal),
-                        title: `Auto-clip: ${(function (t) {
-                            switch (t.type) {
-                                case q.Gy.MANUAL:
-                                    return "Manual";
-                                case q.Gy.YELLING:
-                                    return "Yelling detected";
-                                case q.Gy.LAUGHTER:
-                                    return `Laughter detected (${t.label}, ${t.confidence.toFixed(2)})`;
-                                case q.Gy.GAME_EVENT:
-                                    return `Game event: ${t.title ?? t.eventType}`;
-                                case q.Gy.DISTRIBUTED:
-                                    return "Distributed clip from another user";
-                                case q.Gy.SPEAKING:
-                                    return "Speaking detected";
-                                case q.Gy.SOUNDBOARD:
-                                    return `Soundboard: ${t.name}`;
-                            }
-                        })(e)}`,
-                    }),
-                );
+                    ta() &&
+                    em(
+                        ((e = t.signal),
+                        {
+                            ...tn(H.KS.ClipsDebugAutoSignal),
+                            title: `Auto-clip: ${(function (t) {
+                                switch (t.type) {
+                                    case q.Gy.MANUAL:
+                                        return "Manual";
+                                    case q.Gy.YELLING:
+                                        return "Yelling detected";
+                                    case q.Gy.LAUGHTER:
+                                        return `Laughter detected (${t.label}, ${t.confidence.toFixed(2)})`;
+                                    case q.Gy.GAME_EVENT:
+                                        return `Game event: ${t.title ?? t.eventType}`;
+                                    case q.Gy.DISTRIBUTED:
+                                        return "Distributed clip from another user";
+                                    case q.Gy.SPEAKING:
+                                        return "Speaking detected";
+                                    case q.Gy.SOUNDBOARD:
+                                        return `Soundboard: ${t.name}`;
+                                }
+                            })(e)}`,
+                        }),
+                    );
+                break;
+            default:
+                t.clipMethod;
         }
     },
     CLIPS_SAVE_CLIP: function (t) {

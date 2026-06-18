@@ -151,49 +151,52 @@ class f extends a.A {
                                 return {
                                     type: e.type,
                                     item: (function (e) {
-                                        if (null != e) {
-                                            if (e.type === u.R.AVATAR_DECORATION)
-                                                return {
-                                                    id: e.id,
-                                                    type: e.type,
-                                                    asset: e.asset,
-                                                    assets: c(e.assets),
-                                                    label: e.label,
-                                                };
-                                            if (e.type === u.R.NAMEPLATE)
-                                                return {
-                                                    id: e.id,
-                                                    type: e.type,
-                                                    asset: e.asset,
-                                                    assets: c(e.assets),
-                                                    label: e.label,
-                                                    palette: e.palette,
-                                                };
-                                            if (e.type === u.R.PROFILE_EFFECT)
-                                                return {
-                                                    id: e.id,
-                                                    type: e.type,
-                                                    title: e.title,
-                                                    description: e.description,
-                                                    accessibilityLabel: e.accessibilityLabel,
-                                                    animationType: e.animationType,
-                                                    staticFrameSrc: e.staticFrameSrc,
-                                                    thumbnailPreviewSrc: e.thumbnailPreviewSrc,
-                                                    reducedMotionSrc: e.reducedMotionSrc,
-                                                    effects: e.effects?.map(d),
-                                                };
-                                            if (e.type === u.R.PROFILE_FRAME)
-                                                return {
-                                                    id: e.id,
-                                                    type: e.type,
-                                                    label: e.label,
-                                                    layers: e.layers,
-                                                    innerWidth: e.inner_width,
-                                                    overflowTop: e.overflow_top,
-                                                    overflowBottom: e.overflow_bottom,
-                                                    overflowHorizontal: e.overflow_horizontal,
-                                                };
-                                        }
+                                        if (null != e)
+                                            switch (e.type) {
+                                                case u.R.AVATAR_DECORATION:
+                                                    return {
+                                                        id: e.id,
+                                                        type: e.type,
+                                                        asset: e.asset,
+                                                        assets: c(e.assets),
+                                                        label: e.label,
+                                                    };
+                                                case u.R.NAMEPLATE:
+                                                    return {
+                                                        id: e.id,
+                                                        type: e.type,
+                                                        asset: e.asset,
+                                                        assets: c(e.assets),
+                                                        label: e.label,
+                                                        palette: e.palette,
+                                                    };
+                                                case u.R.PROFILE_EFFECT:
+                                                    return {
+                                                        id: e.id,
+                                                        type: e.type,
+                                                        title: e.title,
+                                                        description: e.description,
+                                                        accessibilityLabel: e.accessibilityLabel,
+                                                        animationType: e.animationType,
+                                                        staticFrameSrc: e.staticFrameSrc,
+                                                        thumbnailPreviewSrc: e.thumbnailPreviewSrc,
+                                                        reducedMotionSrc: e.reducedMotionSrc,
+                                                        effects: e.effects?.map(d),
+                                                    };
+                                                case u.R.PROFILE_FRAME:
+                                                    return {
+                                                        id: e.id,
+                                                        type: e.type,
+                                                        label: e.label,
+                                                        layers: e.layers,
+                                                        innerWidth: e.inner_width,
+                                                        overflowTop: e.overflow_top,
+                                                        overflowBottom: e.overflow_bottom,
+                                                        overflowHorizontal: e.overflow_horizontal,
+                                                    };
+                                                default:
+                                                    return;
+                                            }
                                     })(e.item),
                                     categorySkuId: e.category_sku_id,
                                     premiumType: e.premium_type,

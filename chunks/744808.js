@@ -24,25 +24,28 @@ function p(e) {
         [f.gX]: "center" === n.anchor,
         [f.no]: !0 === n.responsive,
     });
-    return "staple" === n.type
-        ? (0, i.jsxs)(i.Fragment, {
-              children: [
-                  (0, i.jsx)("div", { className: a()(f.zu, o) }),
-                  (0, i.jsx)("img", { src: s, alt: "", "aria-hidden": !0, className: a()(o, f.im) }),
-              ],
-          })
-        : "rail" === n.type
-          ? (0, i.jsx)("div", { role: "img", style: { backgroundImage: `url(${s})` }, className: a()(o, f.H$) })
-          : "border" === n.type
-            ? (0, i.jsx)("div", {
-                  role: "img",
-                  "aria-hidden": !0,
-                  className: a()(o, f.PQ),
-                  children: Array.from({ length: 5 }, (e, t) =>
-                      (0, i.jsx)("img", { src: s, alt: "", "aria-hidden": !0 }, t),
-                  ),
-              })
-            : null;
+    switch (n.type) {
+        case "staple":
+            return (0, i.jsxs)(i.Fragment, {
+                children: [
+                    (0, i.jsx)("div", { className: a()(f.zu, o) }),
+                    (0, i.jsx)("img", { src: s, alt: "", "aria-hidden": !0, className: a()(o, f.im) }),
+                ],
+            });
+        case "rail":
+            return (0, i.jsx)("div", { role: "img", style: { backgroundImage: `url(${s})` }, className: a()(o, f.H$) });
+        case "border":
+            return (0, i.jsx)("div", {
+                role: "img",
+                "aria-hidden": !0,
+                className: a()(o, f.PQ),
+                children: Array.from({ length: 5 }, (e, t) =>
+                    (0, i.jsx)("img", { src: s, alt: "", "aria-hidden": !0 }, t),
+                ),
+            });
+        default:
+            return n.type, null;
+    }
 }
 function E(e) {
     let { frame: t, className: n, filterLayer: s } = e,

@@ -15,54 +15,57 @@ n.d(t, {
             }
             let n = t.tenantMetadata?.collectibles,
                 l = n?.item;
-            if (null != l) {
-                if (l.type === i.R.AVATAR_DECORATION)
-                    return {
-                        type: "single",
-                        item: new r.A({ skuId: t.id, type: l.type, asset: l.asset, label: l.label }),
-                    };
-                if (l.type === i.R.NAMEPLATE)
-                    return {
-                        type: "single",
-                        item: new s.A({
-                            skuId: t.id,
-                            type: l.type,
-                            asset: l.asset,
-                            label: l.label,
-                            palette: l.palette,
-                        }),
-                    };
-                if (l.type === i.R.PROFILE_EFFECT)
-                    return {
-                        type: "single",
-                        item: new a.Ay({
-                            skuId: t.id,
-                            type: l.type,
-                            title: l.title,
-                            description: l.description,
-                            thumbnailPreviewSrc: l.thumbnailPreviewSrc,
-                            reducedMotionSrc: l.reducedMotionSrc,
-                            effects: l.effects ?? [],
-                            accessibilityLabel: l.accessibilityLabel,
-                            animationType: l.animationType,
-                            staticFrameSrc: l.staticFrameSrc,
-                        }),
-                    };
-                if (l.type === i.R.PROFILE_FRAME)
-                    return {
-                        type: "single",
-                        item: new o.A({
-                            skuId: t.id,
-                            type: l.type,
-                            label: l.label,
-                            layers: l.layers,
-                            innerWidth: l.innerWidth,
-                            overflowTop: l.overflowTop,
-                            overflowBottom: l.overflowBottom,
-                            overflowHorizontal: l.overflowHorizontal,
-                        }),
-                    };
-            }
+            if (null != l)
+                switch (l.type) {
+                    case i.R.AVATAR_DECORATION:
+                        return {
+                            type: "single",
+                            item: new r.A({ skuId: t.id, type: l.type, asset: l.asset, label: l.label }),
+                        };
+                    case i.R.NAMEPLATE:
+                        return {
+                            type: "single",
+                            item: new s.A({
+                                skuId: t.id,
+                                type: l.type,
+                                asset: l.asset,
+                                label: l.label,
+                                palette: l.palette,
+                            }),
+                        };
+                    case i.R.PROFILE_EFFECT:
+                        return {
+                            type: "single",
+                            item: new a.Ay({
+                                skuId: t.id,
+                                type: l.type,
+                                title: l.title,
+                                description: l.description,
+                                thumbnailPreviewSrc: l.thumbnailPreviewSrc,
+                                reducedMotionSrc: l.reducedMotionSrc,
+                                effects: l.effects ?? [],
+                                accessibilityLabel: l.accessibilityLabel,
+                                animationType: l.animationType,
+                                staticFrameSrc: l.staticFrameSrc,
+                            }),
+                        };
+                    case i.R.PROFILE_FRAME:
+                        return {
+                            type: "single",
+                            item: new o.A({
+                                skuId: t.id,
+                                type: l.type,
+                                label: l.label,
+                                layers: l.layers,
+                                innerWidth: l.innerWidth,
+                                overflowTop: l.overflowTop,
+                                overflowBottom: l.overflowBottom,
+                                overflowHorizontal: l.overflowHorizontal,
+                            }),
+                        };
+                    default:
+                        return;
+                }
         },
 }),
     n(321073);

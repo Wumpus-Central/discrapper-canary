@@ -6,8 +6,8 @@ var l = n(627968),
     o = n(688810),
     s = n(46225),
     c = n(627363),
-    d = n(587895),
-    u = n(137177),
+    u = n(587895),
+    d = n(769015),
     m = n(174459),
     h = n(834730),
     p = n(289873),
@@ -62,20 +62,20 @@ function C(e) {
 var j = n(652215);
 function v(e) {
     let { connection: t, guildId: n, location: h } = e,
-        p = (0, a.bG)([d.A], () => (null != t.application_id ? d.A.getApplication(t.application_id) : null), [
+        p = (0, a.bG)([u.A], () => (null != t.application_id ? u.A.getApplication(t.application_id) : null), [
             t.application_id,
         ]),
         { analyticsLocations: x } = (0, o.Ay)(h);
     i.useEffect(() => {
         null != p ||
             null == t.application_id ||
-            d.A.isFetchingApplication(t.application_id) ||
-            d.A.didFetchingApplicationFail(t.application_id) ||
+            u.A.isFetchingApplication(t.application_id) ||
+            u.A.didFetchingApplicationFail(t.application_id) ||
             (0, c.TA)(t.application_id).catch(() => {});
     }, [p, t.application_id]);
     let g = p?.name ?? A.intl.string(A.t.cgPbaZ),
         { hasAlreadyLinked: f, canStartAuthorization: v, startAuthorization: _, fetched: N } = (0, s.RD)(p),
-        y = (0, l.jsx)(u.A, { game: p, size: u.M.MEDIUM }),
+        y = (0, l.jsx)(d.A, { game: p, size: d.M.MEDIUM }),
         E = i.useCallback(() => {
             m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
                 ...(0, r.H$)(n),
@@ -106,8 +106,8 @@ function I(e) {
         s = (null != t.provider_id ? E.A.get(t.provider_id)?.name : null) ?? A.intl.string(A.t.NzCoRx),
         {
             hasConnection: c,
-            canConnect: d,
-            startConnection: u,
+            canConnect: u,
+            startConnection: d,
             loading: h,
         } = (function (e) {
             let { loading: t, hasConnection: n, canConnect: l, startConnection: a, account: r } = (0, w.X)(e);
@@ -136,8 +136,8 @@ function I(e) {
                 provider_id: t.provider_id ?? void 0,
                 location: a,
             }),
-                await u(a);
-        }, [u, n, t.provider_id, a]),
+                await d(a);
+        }, [d, n, t.provider_id, a]),
         x = i.useMemo(() => {
             if (null != t.provider_id) {
                 let e = E.A.get(t.provider_id),
@@ -152,16 +152,19 @@ function I(e) {
         icon: x,
         isLoading: h,
         isConnected: c,
-        canConnect: d,
+        canConnect: u,
         onConnect: p,
     });
 }
 var M = n(539916);
 function b(e) {
     let { connection: t, guildId: n, location: i } = e;
-    return t.connection_type === M.wZ.APPLICATION
-        ? (0, l.jsx)(v, { connection: t, guildId: n, location: i })
-        : t.connection_type === M.wZ.PROVIDER_CONNECTED_ACCOUNT
-          ? (0, l.jsx)(I, { connection: t, guildId: n, location: i })
-          : null;
+    switch (t.connection_type) {
+        case M.wZ.APPLICATION:
+            return (0, l.jsx)(v, { connection: t, guildId: n, location: i });
+        case M.wZ.PROVIDER_CONNECTED_ACCOUNT:
+            return (0, l.jsx)(I, { connection: t, guildId: n, location: i });
+        default:
+            return t.connection_type, null;
+    }
 }

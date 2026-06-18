@@ -954,96 +954,100 @@ function tQ(e) {
 let tJ = a.memo(function (e) {
     let t,
         i,
-        r,
-        { className: o, emojiGrid: l, guildId: u, pickerIntention: c, channel: d } = e,
-        h = k.Om.useStore((e) => e.inspectedExpressionPosition),
-        f = a.useMemo(() => {
-            let { rowIndex: e, columnIndex: t } = h;
-            return l[e]?.[t];
-        }, [l, h]);
-    switch (f?.type) {
+        { className: r, emojiGrid: o, guildId: l, pickerIntention: u, channel: c } = e,
+        d = k.Om.useStore((e) => e.inspectedExpressionPosition),
+        h = a.useMemo(() => {
+            let { rowIndex: e, columnIndex: t } = d;
+            return o[e]?.[t];
+        }, [o, d]);
+    switch (h?.type) {
         case e3.EMOJI:
-            t = f?.emoji;
+            t = h?.emoji;
             break;
         case e3.EXPAND_OR_COLLAPSE_EMOJIS:
-            t = { type: "EXPAND_OR_COLLAPSE_EMOJI", guildId: f?.guildId, allNamesString: f?.name };
+            t = { type: "EXPAND_OR_COLLAPSE_EMOJI", guildId: h?.guildId, allNamesString: h?.name };
             break;
         case e3.SOUNDMOJI:
         default:
             t = null;
     }
-    let p = (0, _.bG)([Z.A], () => (null !== t && t.type === eQ.i.GUILD ? Z.A.getGuild(t.guildId) : null), [t]),
-        E = (0, _.bG)([ek.A], () => ek.A.isFocused()),
-        m = (0, _.bG)([eT.Ay], () => eT.Ay.useReducedMotion, []),
-        g = es.Sf.useSetting(),
-        A = (0, ed.O7)(u, tQ(t) ? t : null),
-        I = (0, _.bG)([C.Ay], () => C.Ay.expandedSectionsByGuildIds),
-        { newlyAddedEmojis: T } = (0, eE.A)(u, c),
-        S = f?.type === e3.EMOJI ? f.subCategory : ez.tm.NONE;
+    let f = (0, _.bG)([Z.A], () => (null !== t && t.type === eQ.i.GUILD ? Z.A.getGuild(t.guildId) : null), [t]),
+        p = (0, _.bG)([ek.A], () => ek.A.isFocused()),
+        E = (0, _.bG)([eT.Ay], () => eT.Ay.useReducedMotion, []),
+        m = es.Sf.useSetting(),
+        g = (0, ed.O7)(l, tQ(t) ? t : null),
+        A = (0, _.bG)([C.Ay], () => C.Ay.expandedSectionsByGuildIds),
+        { newlyAddedEmojis: I } = (0, eE.A)(l, u),
+        T = h?.type === e3.EMOJI ? h.subCategory : ez.tm.NONE;
     if (
         (a.useEffect(() => {
             let e = Date.now();
             return () => {
                 Date.now() - e >= 250 &&
                     tQ(t) &&
-                    S !== ez.tm.NONE &&
-                    (S === ez.tm.NEWLY_ADDED_EMOJI &&
+                    T !== ez.tm.NONE &&
+                    (T === ez.tm.NEWLY_ADDED_EMOJI &&
                         null !== t &&
                         t.type === eQ.i.GUILD &&
-                        (0, x.mz)(t.guildId, T[0].id),
-                    null != h.source &&
+                        (0, x.mz)(t.guildId, I[0].id),
+                    null != d.source &&
                         (0, ed.yB)({
                             emoji: t,
-                            subCategory: S,
-                            position: f.columnIndex + 1,
-                            newlyAddedHighlight: S === ez.tm.NEWLY_ADDED_EMOJI && P.isNewerThanLastSeen(u, t.id),
+                            subCategory: T,
+                            position: h.columnIndex + 1,
+                            newlyAddedHighlight: T === ez.tm.NEWLY_ADDED_EMOJI && P.isNewerThanLastSeen(l, t.id),
                         }));
             };
         }),
         null == t)
     )
         return null;
-    let y = tq.A.theme;
-    if (tQ(t)) {
-        let e = null != t.id ? tZ.Ay.getEmojiURL({ id: t.id, animated: g && t.animated, size: 28 }) : t.url;
-        i =
-            "" === e
-                ? (0, s.jsx)(K.E, {
-                      variant: "text-md/normal",
-                      className: tX.J_,
-                      children: "surrogates" in t ? t.surrogates : null,
-                  })
-                : (0, s.jsx)("img", { alt: (0, ef.N)(t) ?? "", src: e, className: tX.Zg });
-    } else if ("EXPAND_OR_COLLAPSE_EMOJI" === t.type) {
-        let e = n(619508),
-            r = n(404828),
-            a = n(600003),
-            o = n(318121);
-        i = I.has(t.guildId)
-            ? (0, s.jsx)("img", { className: tX.Kk, src: (0, B.M)(y) ? a : o, alt: "" })
-            : (0, s.jsx)("img", { className: tX.Kk, src: (0, B.M)(y) ? e : r, alt: "" });
-    }
-    let N =
-        null != p ? (0, s.jsx)(eZ.A, { className: tX.__invalid_guildIcon, guild: p, shouldAnimate: !m && E }) : null;
-    r =
+    let S = (function (e, t) {
+            let { allowAnimatedEmoji: i, sectionsExpandedFromThreeRows: r, theme: a } = t;
+            if (tQ(e)) {
+                let t = null != e.id ? tZ.Ay.getEmojiURL({ id: e.id, animated: i && e.animated, size: 28 }) : e.url;
+                return "" === t
+                    ? (0, s.jsx)(K.E, {
+                          variant: "text-md/normal",
+                          className: tX.J_,
+                          children: "surrogates" in e ? e.surrogates : null,
+                      })
+                    : (0, s.jsx)("img", { alt: (0, ef.N)(e) ?? "", src: t, className: tX.Zg });
+            }
+            if ("EXPAND_OR_COLLAPSE_EMOJI" !== e.type) return null;
+            {
+                let t = n(619508),
+                    i = n(404828),
+                    o = n(600003),
+                    l = n(318121);
+                return r.has(e.guildId)
+                    ? (0, s.jsx)("img", { className: tX.Kk, src: (0, B.M)(a) ? o : l, alt: "" })
+                    : (0, s.jsx)("img", { className: tX.Kk, src: (0, B.M)(a) ? t : i, alt: "" });
+            }
+        })(t, { allowAnimatedEmoji: m, sectionsExpandedFromThreeRows: A, theme: tq.A.theme }),
+        y =
+            null != f
+                ? (0, s.jsx)(eZ.A, { className: tX.__invalid_guildIcon, guild: f, shouldAnimate: !E && p })
+                : null;
+    i =
         "EXPAND_OR_COLLAPSE_EMOJI" === t.type
-            ? I.has(t.guildId)
+            ? A.has(t.guildId)
                 ? et.intl.string(et.t["/K2RDH"])
                 : et.intl.string(et.t.NZI2Zk)
             : (0, ef.N)(t);
-    let v = ((e) => {
+    let N = ((e) => {
         let { inspectedEmoji: t, guild: n } = e,
             i = tQ(t);
         return null != n && i ? et.intl.format(et.t.KFW2aY, { guildName: n.name }) : null;
-    })({ inspectedEmoji: t, channel: d, guildId: u, intention: c, guild: p });
+    })({ inspectedEmoji: t, channel: c, guildId: l, intention: u, guild: f });
     return (0, s.jsx)(tz.A, {
-        className: o,
-        graphicPrimary: i,
-        graphicSecondary: N,
-        titlePrimary: r,
-        titleSecondary: v,
-        isFavorite: A,
-        emojiSubCategory: S,
+        className: r,
+        graphicPrimary: S,
+        graphicSecondary: y,
+        titlePrimary: i,
+        titleSecondary: N,
+        isFavorite: g,
+        emojiSubCategory: T,
     });
 });
 var t0 = n(607399),

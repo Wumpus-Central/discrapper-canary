@@ -404,11 +404,11 @@ let eN = { results: [], totalPages: 0, loadId: "" },
                       (0, i.jsx)("div", {
                           className: ef.Qs,
                           children: x?.map((e, t) => {
-                              if (e.type === $.j.APPLICATION) {
+                              if (e.type !== $.j.APPLICATION) return e.type, null;
+                              {
                                   let l = e.data;
                                   return (0, i.jsx)(eE, { application: l, onSelectApplication: (e) => j(e, t) }, l.id);
                               }
-                              return null;
                           }),
                       }),
                       (0, i.jsx)(Q.m, {
@@ -995,13 +995,16 @@ class th extends a.PureComponent {
               });
     }
     getPaginationSrc(e) {
-        return e.type === O.geh.YOUTUBE_VIDEO
-            ? (0, O.PE$)(e.youtubeVideoId)
-            : e.type === O.geh.IMG
-              ? e.src
-              : e.type === O.geh.VIDEO
-                ? e.thumbnailSrc
-                : null;
+        switch (e.type) {
+            case O.geh.YOUTUBE_VIDEO:
+                return (0, O.PE$)(e.youtubeVideoId);
+            case O.geh.IMG:
+                return e.src;
+            case O.geh.VIDEO:
+                return e.thumbnailSrc;
+            default:
+                return null;
+        }
     }
     renderPaginationItem = (e, t) => {
         let { currentIndex: l } = this.state,

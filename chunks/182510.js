@@ -120,7 +120,7 @@ let C = function (e) {
                               onSelectEmoji: async (e) => {
                                   let { emoji: i } = e;
                                   i?.id != null
-                                      ? i?.type === u.i.GUILD && t(await y(i))
+                                      ? i.type === u.i.GUILD && t(await y(i))
                                       : i?.surrogates != null && g(i.defaultDiversityChild?.surrogates ?? i.surrogates),
                                       j();
                               },

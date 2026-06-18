@@ -14,8 +14,8 @@ var l = n(627968),
     k = n(652215);
 n(321073);
 var C = n(411722),
-    m = n(3745),
-    w = n(835245);
+    w = n(3745),
+    m = n(835245);
 let y = {
         110100: "invalid-sitekey",
         110110: "sitekey-not-found",
@@ -194,7 +194,7 @@ let H = new Set([
                 ...y
             } = e,
             b = o.useRef(null),
-            A = (0, w.A)(),
+            A = (0, m.A)(),
             [v, g] = o.useState(!1),
             _ = o.useCallback(
                 (e) => {
@@ -257,36 +257,47 @@ let H = new Set([
                     tags: { captcha_service: L.MS.TURNSTILE, vendor_error_code: e ?? "undefined" },
                 });
             }, []);
-        return ((null == n || "" === n) && (n = k._Ak), r === L.MS.RECAPTCHA)
-            ? (0, l.jsx)(m.A, { ...y, onLoad: R, onRender: O, onVerify: V, onError: I, sitekey: n })
-            : r === L.MS.RECAPTCHA_ENTERPRISE
-              ? (0, l.jsx)(j.d, { ...y, onLoad: R, onRender: O, onVerify: V, onError: I, sitekey: n, action: p })
-              : r === L.MS.HCAPTCHA
-                ? (0, l.jsx)(C.A, {
-                      ref: b,
-                      ...y,
-                      sitekey: n,
-                      onLoad: R,
-                      onError: I,
-                      onVerify: V,
-                      onChalExpired: U,
-                      onOpen: D,
-                      onClose: z,
-                      size: h,
-                      reCaptchaCompat: !1,
-                  })
-                : r === L.MS.TURNSTILE
-                  ? (0, l.jsx)(S, {
-                        sitekey: n,
-                        theme: y.theme,
-                        size: h,
-                        onLoad: R,
-                        onVerify: V,
-                        onError: I,
-                        onExpire: U,
-                        onUnknownVendorErrorCode: $,
-                    })
-                  : (0, l.jsx)(m.A, { ...y, sitekey: n, onLoad: R, onRender: O, onVerify: V, onError: I });
+        switch (((null == n || "" === n) && (n = k._Ak), r)) {
+            case L.MS.RECAPTCHA:
+                return (0, l.jsx)(w.A, { ...y, onLoad: R, onRender: O, onVerify: V, onError: I, sitekey: n });
+            case L.MS.RECAPTCHA_ENTERPRISE:
+                return (0, l.jsx)(j.d, {
+                    ...y,
+                    onLoad: R,
+                    onRender: O,
+                    onVerify: V,
+                    onError: I,
+                    sitekey: n,
+                    action: p,
+                });
+            case L.MS.HCAPTCHA:
+                return (0, l.jsx)(C.A, {
+                    ref: b,
+                    ...y,
+                    sitekey: n,
+                    onLoad: R,
+                    onError: I,
+                    onVerify: V,
+                    onChalExpired: U,
+                    onOpen: D,
+                    onClose: z,
+                    size: h,
+                    reCaptchaCompat: !1,
+                });
+            case L.MS.TURNSTILE:
+                return (0, l.jsx)(S, {
+                    sitekey: n,
+                    theme: y.theme,
+                    size: h,
+                    onLoad: R,
+                    onVerify: V,
+                    onError: I,
+                    onExpire: U,
+                    onUnknownVendorErrorCode: $,
+                });
+            default:
+                return (0, l.jsx)(w.A, { ...y, sitekey: n, onLoad: R, onRender: O, onVerify: V, onError: I });
+        }
     };
 var V = n(375708),
     O = n(846762);
@@ -300,8 +311,8 @@ function z(e) {
             headerText: a,
             bodyText: s,
             rqtoken: C,
-            serveInvisible: m,
-            ...w
+            serveInvisible: w,
+            ...m
         } = e,
         y = (function (e) {
             let { onReject: r, analyticsType: n = "Guild Join Captcha" } = e,
@@ -337,14 +348,14 @@ function z(e) {
     let b = (0, l.jsxs)("div", {
         className: c()(O.GC, O.P),
         children: [
-            m && (0, l.jsx)(d.y, { type: d.y.Type.SPINNING_CIRCLE }),
+            w && (0, l.jsx)(d.y, { type: d.y.Type.SPINNING_CIRCLE }),
             (0, l.jsx)(I, {
-                size: m ? "invisible" : void 0,
+                size: w ? "invisible" : void 0,
                 onVerify: (e) => {
                     y(), n(e, C), r();
                 },
-                onClose: m ? r : void 0,
-                ...w,
+                onClose: w ? r : void 0,
+                ...m,
             }),
         ],
     });

@@ -84,14 +84,18 @@ class p extends i.A {
         let e = this.terminatedCount;
         for (let [t, n] of this.registrations) {
             let i = () => {
-                    if (!(0, o.TD)()) return !1;
-                    if (null == n.isEnabled || n.isEnabled()) {
-                        if ("application" === n.type) {
+                    if (!(0, o.TD)() || (null != n.isEnabled && !n.isEnabled())) return !1;
+                    switch (n.type) {
+                        case "application": {
                             let e = new Set(r.Ay.getRunningGames().map((e) => e.id));
-                            return null == n.applicationId ? e.size > 0 : e.has(n.applicationId);
-                        } else if ("voiceChannel" === n.type) return this.isUserInVoiceChannel();
+                            if (null == n.applicationId) return e.size > 0;
+                            return e.has(n.applicationId);
+                        }
+                        case "voiceChannel":
+                            return this.isUserInVoiceChannel();
+                        default:
+                            return !1;
                     }
-                    return !1;
                 },
                 s = () => this.activeHandlers.has(t),
                 a = i(),

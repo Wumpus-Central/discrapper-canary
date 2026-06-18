@@ -1778,7 +1778,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 565971, Version Hash: bd69435cb0fb93fca9c905733929f27dd91e01c5`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 566008, Version Hash: a3aaf4185853e7b7a5b7a08257baf1b1fcbe210d`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -18123,7 +18123,7 @@ let Sa = "isHideDevBanner",
                     className: t6()(Ss.Wz, Ss.mr),
                     children: [
                         (0, F.jsx)(Sr, { className: Ss.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "565971" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "566008" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -32928,7 +32928,16 @@ function Ma(e) {
         : t.favorites.map((n, i) => {
               let r = Mi.tC.create();
               return (
-                  (r.format = "IMAGE" === n.format ? Mi.TL.IMAGE : "VIDEO" === n.format ? Mi.TL.VIDEO : Mi.TL.NONE),
+                  (r.format = (() => {
+                      switch (n.format) {
+                          case "IMAGE":
+                              return Mi.TL.IMAGE;
+                          case "VIDEO":
+                              return Mi.TL.VIDEO;
+                          default:
+                              return n.format, Mi.TL.NONE;
+                      }
+                  })()),
                   (r.src = n.src),
                   (r.width = n.width),
                   (r.height = n.height),
