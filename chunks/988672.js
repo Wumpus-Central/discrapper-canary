@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { w: () => t6, A: () => t5 });
+n.d(t, { w: () => t4, A: () => t7 });
 var i = n(627968),
     r = n(64700),
     s = n(989349),
@@ -767,7 +767,7 @@ function tG() {
         : (0, i.jsxs)(f.$T, {
               color: f.Hv.DANGER,
               children: [
-                  (0, i.jsx)(f.PM, { noticeType: ei.kqX.SYSTEM_SERVICE_WARNING, onClick: () => t6() }),
+                  (0, i.jsx)(f.PM, { noticeType: ei.kqX.SYSTEM_SERVICE_WARNING, onClick: () => t4() }),
                   ea.intl.string(ea.t["5rPt+j"]),
                   (0, i.jsx)(f.Z_, {
                       onClick: tU,
@@ -858,7 +858,7 @@ let tJ = new F.A("Notice"),
                 (0, i.jsx)(f.PM, {
                     noticeType: t,
                     onClick: () => {
-                        t6();
+                        t4();
                     },
                 }),
                 ea.intl.string(ea.t.o3zuYz),
@@ -870,13 +870,33 @@ let tJ = new F.A("Notice"),
                 }),
             ],
         });
+    },
+    t2 = (e) => {
+        let { noticeType: t } = e;
+        return (0, i.jsxs)(f.$T, {
+            color: f.Hv.DANGER,
+            children: [
+                (0, i.jsx)(f.PM, {
+                    noticeType: t,
+                    onClick: () => {
+                        t4();
+                    },
+                }),
+                ea.intl.string(ea.t.Up0ApK),
+                (0, i.jsx)(t0, { error: eT.iy.VIDEO_BACKGROUND_UNAVAILABLE }),
+                (0, i.jsx)(f.zr, {
+                    onClick: () => (0, Q.openUserSettings)(Z.X.CAMERA_CATEGORY),
+                    children: ea.intl.string(ea.t.kRwxfi),
+                }),
+            ],
+        });
     };
-function t2(e) {
+function t3(e) {
     return (0, tq.isWindows)() && u().satisfies(w.A?.os.release, tZ.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
 }
-function t3(e) {
+function t6(e) {
     let t,
         n,
         { noticeType: r } = e,
@@ -890,10 +910,10 @@ function t3(e) {
     return (
         !0 === o
             ? ((t = ea.intl.string(ea.t.ppW3ri)),
-              (n = (0, i.jsx)(f.eC, { href: t2(a), noticeType: r, children: ea.intl.string(ea.t.QghSIq) })))
+              (n = (0, i.jsx)(f.eC, { href: t3(a), noticeType: r, children: ea.intl.string(ea.t.QghSIq) })))
             : 0 === l
               ? ((t = ea.intl.string(ea.t.j4gGA4)),
-                (n = (0, i.jsx)(f.eC, { href: t2(a), noticeType: r, children: ea.intl.string(ea.t.QghSIq) })))
+                (n = (0, i.jsx)(f.eC, { href: t3(a), noticeType: r, children: ea.intl.string(ea.t.QghSIq) })))
               : tH.Ay.supports(tQ.O5.LOOPBACK)
                 ? ((t = ea.intl.string(ea.t.dNAJ18)),
                   (u = !0),
@@ -915,7 +935,7 @@ function t3(e) {
                 (0, i.jsx)(f.PM, {
                     noticeType: r,
                     onClick: () => {
-                        t6(), (0, m.openModal)((e) => (0, i.jsx)(tj, { ...e }));
+                        t4(), (0, m.openModal)((e) => (0, i.jsx)(tj, { ...e }));
                     },
                 }),
                 t,
@@ -925,10 +945,10 @@ function t3(e) {
         })
     );
 }
-function t6(e) {
+function t4(e) {
     C.A.dismiss(null != e ? { untilAtLeast: a()(e) } : void 0);
 }
-let t4 = r.memo(function () {
+let t5 = r.memo(function () {
     let e = (0, c.bG)([eE.default], () => eE.default.getCurrentUser()),
         t = (0, c.bG)([eD.A], () => eD.A.getGuildId()),
         s = (0, c.bG)([t$.Ay], () => t$.Ay.getNotice()),
@@ -985,13 +1005,13 @@ let t4 = r.memo(function () {
             return (0, i.jsx)(tP, {});
         case ei.kqX.GUILD_RAID_NOTIFICATION:
             let { dismissUntil: F } = s.metadata;
-            return (0, i.jsx)(ek, { onDismiss: () => t6(F) });
+            return (0, i.jsx)(ek, { onDismiss: () => t4(F) });
         case ei.kqX.WIN32_DEPRECATED_MESSAGE:
             let { dismissUntil: V } = s.metadata;
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(V), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(V), noticeType: s.type }),
                     ea.intl.format(ea.t["08KQ1P"], { helpCenterLink: tz.A.getArticleURL(ei.MVz.WIN32_DEPRECATE) }),
                 ],
             });
@@ -1000,7 +1020,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(B), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(B), noticeType: s.type }),
                     ea.intl.format(ea.t["8Je+dX"], { helpCenterLink: tz.A.getArticleURL(ei.MVz.WIN7_8_DEPRECATE) }),
                 ],
             });
@@ -1009,7 +1029,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(j), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(j), noticeType: s.type }),
                     ea.intl.string(ea.t["9DJgOg"]),
                 ],
             });
@@ -1018,7 +1038,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(H), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(H), noticeType: s.type }),
                     ea.intl.format(ea.t.q8VPLo, { helpCenterLink: tz.A.getArticleURL(ei.MVz.MACOS_19_DEPRECATE) }),
                 ],
             });
@@ -1027,7 +1047,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(Y), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(Y), noticeType: s.type }),
                     ea.intl.format(tq.isPlatformEmbedded ? ea.t.J232TI : ea.t.vceuiL, {
                         helpCenterLink: tz.A.getArticleURL(ei.MVz.END_TO_END_ENCRYPTION),
                     }),
@@ -1037,7 +1057,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(), noticeType: s.type }),
                     ea.intl.string(ea.t.iW0fcQ),
                     (0, i.jsx)(f.eC, {
                         href: tz.A.getArticleURL(ei.MVz.WINDOWS_MEDIA_PACK),
@@ -1051,7 +1071,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.DEFAULT,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(), noticeType: s.type }),
                     s.message,
                     null != s.buttonText
                         ? (0, i.jsx)(f.Z_, { onClick: s.callback, noticeType: s.type, children: s.buttonText })
@@ -1062,7 +1082,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.DANGER,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(), noticeType: s.type }),
                     s.message,
                     null != s.buttonText
                         ? (0, i.jsx)(f.Z_, { onClick: s.callback, noticeType: s.type, children: s.buttonText })
@@ -1075,7 +1095,7 @@ let t4 = r.memo(function () {
                 children: [
                     (0, i.jsx)(f.PM, {
                         onClick: () => {
-                            N.clearRemoteDisconnectVoiceChannelId(), t6();
+                            N.clearRemoteDisconnectVoiceChannelId(), t4();
                         },
                         noticeType: s.type,
                     }),
@@ -1096,7 +1116,7 @@ let t4 = r.memo(function () {
                 children: [
                     (0, i.jsx)(f.PM, {
                         onClick: () => {
-                            N.clearLastSessionVoiceChannelId(), t6();
+                            N.clearLastSessionVoiceChannelId(), t4();
                         },
                         noticeType: s.type,
                     }),
@@ -1116,7 +1136,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.DANGER,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(), noticeType: s.type }),
                     (0, i.jsx)("img", {
                         alt: "",
                         className: eo.tV,
@@ -1183,9 +1203,11 @@ let t4 = r.memo(function () {
                 ],
             });
         case ei.kqX.NO_INPUT_DETECTED:
-            return (0, i.jsx)(t3, { noticeType: s.type });
+            return (0, i.jsx)(t6, { noticeType: s.type });
         case ei.kqX.NO_INPUT_DEVICES_DETECTED:
             return (0, i.jsx)(t1, { noticeType: s.type });
+        case ei.kqX.VIDEO_BACKGROUND_UNAVAILABLE:
+            return (0, i.jsx)(t2, { noticeType: s.type });
         case ei.kqX.HARDWARE_MUTE:
             if (null != s.metadata) {
                 let { vendor: e, model: t } = s.metadata;
@@ -1196,7 +1218,7 @@ let t4 = r.memo(function () {
                         (0, i.jsx)(f.PM, {
                             noticeType: s.type,
                             onClick: () => {
-                                I.A.setEnableHardwareMuteNotice(!1), t6();
+                                I.A.setEnableHardwareMuteNotice(!1), t4();
                             },
                         }),
                         (0, i.jsx)(f.eC, {
@@ -1217,7 +1239,7 @@ let t4 = r.memo(function () {
                         (0, i.jsx)(f.PM, {
                             noticeType: s.type,
                             onClick: () => {
-                                I.A.setEnableHardwareMuteNotice(!1), t6();
+                                I.A.setEnableHardwareMuteNotice(!1), t4();
                             },
                         }),
                     ],
@@ -1227,7 +1249,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.STREAMER_MODE,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(), noticeType: ei.kqX.STREAMER_MODE }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(), noticeType: ei.kqX.STREAMER_MODE }),
                     ea.intl.string(ea.t.iEgBXp),
                     (0, i.jsx)(f.Z_, {
                         onClick: () => O.A.setEnabled(!1),
@@ -1290,14 +1312,14 @@ let t4 = r.memo(function () {
                 color: f.Hv.PREMIUM_TIER_1,
                 children: [
                     (0, i.jsx)(f.PM, {
-                        onClick: () => t6(),
+                        onClick: () => t4(),
                         noticeType: ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL,
                     }),
                     (0, i.jsx)(E.t, { size: "md", color: "currentColor", className: eo.PC }),
                     ea.intl.format(ea.t.LquIKC, { applicationName: r.name, skuName: n.name }),
                     (0, i.jsx)(f.zr, {
                         children: (0, i.jsx)(o.N_, {
-                            onClick: () => t6(),
+                            onClick: () => t4(),
                             to: {
                                 pathname: ei.BVt.APPLICATION_STORE_LISTING_SKU(n.id),
                                 state: { scrollRestoration: !1 },
@@ -1349,7 +1371,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(), noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(), noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER }),
                     ea.intl.string(ea.t.wVjKGi),
                     (0, i.jsx)(f.Z_, {
                         noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER,
@@ -1371,7 +1393,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.DANGER,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(), noticeType: ei.kqX.DISPATCH_ERROR }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(), noticeType: ei.kqX.DISPATCH_ERROR }),
                     et?.displayMessage,
                     (0, i.jsx)(f.Z_, {
                         noticeType: ei.kqX.DISPATCH_ERROR,
@@ -1392,7 +1414,7 @@ let t4 = r.memo(function () {
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.DEFAULT,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t6(), noticeType: ei.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS }),
+                    (0, i.jsx)(f.PM, { onClick: () => t4(), noticeType: ei.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS }),
                     (0, i.jsxs)(G.A, {
                         justify: G.A.Justify.CENTER,
                         children: [
@@ -1453,7 +1475,7 @@ let t4 = r.memo(function () {
                     (0, i.jsx)(f.PM, {
                         noticeType: ei.kqX.PREMIUM_UNCANCEL,
                         onClick: () => {
-                            t6(s.metadata?.premiumSubscription?.currentPeriodEnd);
+                            t4(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     (0, i.jsx)(E.t, { size: "md", color: "currentColor", className: eo.PC }),
@@ -1465,7 +1487,7 @@ let t4 = r.memo(function () {
                     (0, i.jsx)(f.Z_, {
                         noticeType: ei.kqX.PREMIUM_UNCANCEL,
                         onClick: () => {
-                            t6(s.metadata?.premiumSubscription?.currentPeriodEnd),
+                            t4(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, m.openModalLazy)(async () => {
                                     let { default: e } = await n.e("14794").then(n.bind(n, 174705));
                                     return (t) =>
@@ -1495,14 +1517,14 @@ let t4 = r.memo(function () {
                     (0, i.jsx)(f.PM, {
                         noticeType: s.type,
                         onClick: () => {
-                            t6(ed);
+                            t4(ed);
                         },
                     }),
                     ea.intl.format(ea.t.zxU0Kp, { daysPastDue: ec }),
                     (0, i.jsx)(f.Z_, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                         onClick: () => {
-                            t6(ed), (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
+                            t4(ed), (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: ea.intl.string(ea.t.q8rxeS),
                     }),
@@ -1515,14 +1537,14 @@ let t4 = r.memo(function () {
                     (0, i.jsx)(f.PM, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                         onClick: () => {
-                            t6(s.metadata?.premiumSubscription?.currentPeriodEnd);
+                            t4(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     ea.intl.string(ea.t.LlZaoX),
                     (0, i.jsx)(f.Z_, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_INVALID_PAYMENT,
                         onClick: () => {
-                            t6(s.metadata?.premiumSubscription?.currentPeriodEnd),
+                            t4(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: ea.intl.string(ea.t["Zpd+Yq"]),
@@ -1536,14 +1558,14 @@ let t4 = r.memo(function () {
                     (0, i.jsx)(f.PM, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                         onClick: () => {
-                            t6(s.metadata?.premiumSubscription?.currentPeriodEnd);
+                            t4(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     ea.intl.string(ea.t["30YfCr"]),
                     (0, i.jsx)(f.Z_, {
                         noticeType: ei.kqX.PREMIUM_PAST_DUE_MISSING_PAYMENT,
                         onClick: () => {
-                            t6(s.metadata?.premiumSubscription?.currentPeriodEnd),
+                            t4(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
                         },
                         children: ea.intl.string(ea.t.U5pKWA),
@@ -1557,7 +1579,7 @@ let t4 = r.memo(function () {
                     (0, i.jsx)(f.PM, {
                         noticeType: ei.kqX.PREMIUM_MISSING_PAYMENT,
                         onClick: () => {
-                            t6(s.metadata?.premiumSubscription?.currentPeriodEnd);
+                            t4(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
                     P === er.PremiumTypes.TIER_1
@@ -1568,7 +1590,7 @@ let t4 = r.memo(function () {
                     (0, i.jsx)(f.Z_, {
                         noticeType: ei.kqX.PREMIUM_MISSING_PAYMENT,
                         onClick: () => {
-                            t6(s.metadata?.premiumSubscription?.currentPeriodEnd),
+                            t4(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
                         },
                         children:
@@ -1584,7 +1606,7 @@ let t4 = r.memo(function () {
             return (0, i.jsx)(te, {
                 buttonText: s.buttonText ?? ea.intl.string(ea.t["/g10LC"]),
                 onGoBack: s.callback,
-                onDismiss: () => t6(),
+                onDismiss: () => t4(),
                 showCloseButton: !0,
             });
         case ei.kqX.AUTOMOD_QUARANTINED_USER_PROFILE:
@@ -1616,7 +1638,7 @@ let t4 = r.memo(function () {
                     (0, i.jsx)(f.PM, {
                         noticeType: ei.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION,
                         onClick: () => {
-                            null != t && (0, eU.wu)(t), t6(e_);
+                            null != t && (0, eU.wu)(t), t4(e_);
                         },
                     }),
                     ea.intl.string(ea.t.B8ruyY),
@@ -1624,7 +1646,7 @@ let t4 = r.memo(function () {
                         onClick: () => {
                             null != t &&
                                 (0, eU.W5)(t, ef, () => {
-                                    t6(e_), (0, eU.wu)(t);
+                                    t4(e_), (0, eU.wu)(t);
                                 });
                         },
                         children: ea.intl.string(ea.t.oX14El),
@@ -1656,7 +1678,7 @@ let t4 = r.memo(function () {
                 children: [
                     (0, i.jsx)(f.PM, {
                         onClick: () => {
-                            t6(s.metadata?.dismissUntil);
+                            t4(s.metadata?.dismissUntil);
                         },
                         noticeType: ei.kqX.BLOCK_USER_FEEDBACK_NAGBAR,
                     }),
@@ -1675,7 +1697,7 @@ let t4 = r.memo(function () {
                                 ]).then(n.bind(n, 307750));
                                 return (t) => (0, i.jsx)(e, { ...t });
                             }),
-                                t6(s.metadata?.dismissUntil);
+                                t4(s.metadata?.dismissUntil);
                         },
                         noticeType: ei.kqX.BLOCK_USER_FEEDBACK_NAGBAR,
                         children: ea.intl.string(ea.t.e4y2VM),
@@ -1694,7 +1716,7 @@ let t4 = r.memo(function () {
             return null;
     }
 });
-function t5() {
+function t7() {
     let { analyticsLocations: e } = (0, x.Ay)(P.A.NOTICE);
-    return (0, i.jsx)(x.f5, { value: e, children: (0, i.jsx)(t4, {}) });
+    return (0, i.jsx)(x.f5, { value: e, children: (0, i.jsx)(t5, {}) });
 }

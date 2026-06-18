@@ -336,6 +336,7 @@ class J extends r.A {
         MEDIA_ENGINE_SOUNDSHARE_FAILED: this.updateActiveErrors,
         MEDIA_ENGINE_NOISE_CANCELLATION_ERROR: this.updateActiveErrors,
         MEDIA_ENGINE_VOICE_ACTIVITY_DETECTION_ERROR: this.updateActiveErrors,
+        MEDIA_ENGINE_VIDEO_FILTER_ERROR: this.updateActiveErrors,
         MEDIA_ENGINE_VIDEO_STATE_CHANGED: this.updateActiveErrors,
         NATIVE_SCREEN_SHARE_PICKER_UPDATE: this.updateActiveErrors,
         NATIVE_SCREEN_SHARE_PICKER_ERROR: this.updateActiveErrors,

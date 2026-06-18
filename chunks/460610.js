@@ -1,1 +1,6 @@
-i.exports = { Jp: "spacingTop24_f22a74", u5: "permissionWarning_f22a74", mB: "filterLoadingIndicator_f22a74" };
+i.exports = {
+    Jp: "spacingTop24_f22a74",
+    u5: "permissionWarning_f22a74",
+    mB: "filterLoadingIndicator_f22a74",
+    AJ: "filterErrorIndicator_f22a74",
+};

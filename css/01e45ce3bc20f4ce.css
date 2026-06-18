@@ -1,0 +1,61 @@
+.spacingTop24_f22a74 {
+    margin-top: 24px
+}
+
+.permissionWarning_f22a74 {
+    margin-top: 8px
+}
+
+.selector_f22a74 {
+    margin-top: 16px;
+    width: 100%
+}
+
+.selector_f22a74.selectorNoHeader_f22a74 {
+    margin-top: 24px
+}
+
+.tooltip_f22a74 {
+    max-width: 244px;
+    text-align: center
+}
+
+.tooltipWrapper_f22a74 {
+    height: 100%
+}
+
+.previewToggle_f22a74 {
+    margin-bottom: 0
+}
+
+.filterLoadingIndicator_f22a74 {
+    bottom: 0;
+    height: 100%;
+    width: 100%
+}
+
+.filterErrorIndicator_f22a74,
+.filterLoadingIndicator_f22a74 {
+    align-items: center;
+    background-color: var(--opacity-black-68);
+    display: flex;
+    justify-content: center;
+    position: absolute
+}
+
+.filterErrorIndicator_f22a74 {
+    flex-direction: column;
+    gap: var(--space-8);
+    inset: 0;
+    padding: var(--space-16);
+    text-align: center
+}
+
+.cameraPreviewTitle_f22a74 {
+    align-items: center;
+    display: flex
+}
+
+.cameraDeeplink_f22a74 {
+    margin-top: var(--space-8)
+}

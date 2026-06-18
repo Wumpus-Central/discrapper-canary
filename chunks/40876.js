@@ -544,6 +544,7 @@ let r = {
         actions: ["MEDIA_ENGINE_NOISE_CANCELLATION_ERROR"],
         inlineRequire: () => n(552143).A,
     },
+    VideoFilterErrorManager: { actions: ["MEDIA_ENGINE_VIDEO_FILTER_ERROR"], inlineRequire: () => n(423091).A },
     GPUWorkaroundManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(73508).A },
     NativeCrashManager: {
         actions: ["RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "MEDIA_SESSION_JOINED"],
@@ -744,6 +745,7 @@ let r = {
             "MEDIA_ENGINE_SOUNDSHARE_FAILED",
             "MEDIA_ENGINE_NOISE_CANCELLATION_ERROR",
             "MEDIA_ENGINE_VOICE_ACTIVITY_DETECTION_ERROR",
+            "MEDIA_ENGINE_VIDEO_FILTER_ERROR",
             "MEDIA_ENGINE_VIDEO_STATE_CHANGED",
             "NATIVE_SCREEN_SHARE_PICKER_UPDATE",
             "NATIVE_SCREEN_SHARE_PICKER_ERROR",

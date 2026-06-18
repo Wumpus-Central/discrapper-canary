@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => I });
 var i = n(17928),
     r = n(459838),
     s = n(228366),
@@ -11,20 +11,22 @@ var i = n(17928),
 let d = !1,
     _ = null,
     h = !1,
-    f = {};
-function p(e) {
+    f = {},
+    p = !1,
+    E = !1;
+function m(e) {
     let t = u.default.getCurrentUser();
     if (null == t) return !1;
     let n = e ?? (0, c.Hk)(a.A.settings.voiceAndVideo?.videoBackgroundFilterDesktop, t.id);
     return null != l.A.getVoiceChannelId() && o.Ay.isVideoEnabled() && null != n;
 }
-function E() {
-    _ !== l.A.getVoiceChannelId() && (h = !1), p() && (h = !0), (_ = l.A.getVoiceChannelId());
+function g() {
+    _ !== l.A.getVoiceChannelId() && ((h = !1), (p = !1), (E = !1)), m() && (h = !0), (_ = l.A.getVoiceChannelId());
 }
-class m extends i.Ay.Store {
+class A extends i.Ay.Store {
     static displayName = "VideoBackgroundStore";
     initialize() {
-        this.waitFor(o.Ay, l.A, a.A, u.default), this.syncWith([l.A, o.Ay], E);
+        this.waitFor(o.Ay, l.A, a.A, u.default), this.syncWith([l.A, o.Ay], g);
     }
     get videoFilterAssets() {
         return f;
@@ -35,8 +37,14 @@ class m extends i.Ay.Store {
     get hasUsedBackgroundInCall() {
         return h;
     }
+    get videoBackgroundUnavailable() {
+        return p;
+    }
+    get videoBackgroundPreviewUnavailable() {
+        return E;
+    }
 }
-let g = new m(s.h, {
+let I = new A(s.h, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
         let { assets: t } = e,
             n = {};
@@ -52,13 +60,17 @@ let g = new m(s.h, {
     },
     VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function (e) {
         let { backgroundOption: t } = e;
-        p(t) && (h = !0);
+        m(t) && (h = !0);
     },
     MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function (e) {
         let { settings: t } = e;
-        r.Tr.CAMERA_BACKGROUND_LIVE in t && (d = !0);
+        r.Tr.CAMERA_BACKGROUND_LIVE in t && ((d = !0), (p = !1)), r.Tr.CAMERA_BACKGROUND_PREVIEW in t && (E = !1);
+    },
+    MEDIA_ENGINE_VIDEO_FILTER_ERROR: function (e) {
+        let { target: t } = e;
+        "live" === t ? (p = !0) : (E = !0);
     },
     LOGOUT: function () {
-        (d = !1), (h = !1), (_ = null), (f = {});
+        (d = !1), (h = !1), (_ = null), (f = {}), (p = !1), (E = !1);
     },
 });

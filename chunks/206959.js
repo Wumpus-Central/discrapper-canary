@@ -1865,6 +1865,7 @@ class er extends l.A {
             ),
             e.setVideoCodecErrorCallback?.(this.handleVideoCodecErrorCallback),
             e.setVoiceProcessingErrorCallback?.(this.handleVoiceProcessingErrorCallback),
+            e.setVideoFilterErrorCallback?.(this.handleVideoFilterErrorCallback),
             e.setSystemMicrophoneModeChangeCallback?.(this.handleSystemMicrophoneModeChangeCallback),
             this.on("removeListener", this.handleRemoveListener),
             this.on("newListener", this.handleNewListener),
@@ -2664,6 +2665,9 @@ class er extends l.A {
     };
     handleVoiceProcessingErrorCallback = (e) => {
         this.emit(c.bg.VoiceProcessingError, e);
+    };
+    handleVideoFilterErrorCallback = (e, t) => {
+        this.emit(c.bg.VideoFilterError, e, t);
     };
     handleSystemMicrophoneModeChangeCallback = (e) => {
         this.emit(c.bg.SystemMicrophoneModeChange, e);

@@ -28,6 +28,7 @@ var o =
     (i.VIDEO_STREAM_RECEIVER_READY_TIMEOUT_NO_STREAM = "video-stream-receiver-ready-timeout-no-stream"),
     (i.CAMERA_SEND_LOW_FPS = "camera-send-low-encode-fps"),
     (i.SCREENSHARE_OS_ERROR = "screenshare-os-error"),
+    (i.VIDEO_BACKGROUND_UNAVAILABLE = "video-background-unavailable"),
     i);
 let l = {
     "stream-soundshare-failed": { errorCode: 1001, severity: "warning", category: "audio", isErrorOutbound: !0 },
@@ -73,6 +74,7 @@ let l = {
         category: "video",
         isErrorOutbound: !1,
     },
+    "video-background-unavailable": { errorCode: 2016, severity: "warning", category: "video", isErrorOutbound: !0 },
     "no-input-devices": { errorCode: 3001, severity: "critical", category: "devices", isErrorOutbound: !0 },
     "no-audio-input-detected": { errorCode: 3002, severity: "critical", category: "devices", isErrorOutbound: !0 },
     "screenshare-min-os-requirement": {
@@ -104,6 +106,8 @@ var u =
     (r.KrispInitErrorWeight16k = "NoiseCancellerError.KRISP_INIT_ERROR_WEIGHT_16K"),
     (r.KrispInitErrorWeight32k = "NoiseCancellerError.KRISP_INIT_ERROR_WEIGHT_32K"),
     (r.KrispInitErrorWeightVad = "NoiseCancellerError.KRISP_INIT_ERROR_WEIGHT_VAD"),
+    (r.VideoBackgroundUnsupported = "VideoBackgroundError.UNSUPPORTED"),
+    (r.VideoBackgroundInitFailed = "VideoBackgroundError.INIT_FAILED"),
     r);
 function c(e) {
     let { type: t, ...n } = e;
