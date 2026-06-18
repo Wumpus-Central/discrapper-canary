@@ -1,38 +1,44 @@
-a.d(i, { A: () => d });
-var t = a(627968),
-    l = a(503698),
-    s = a.n(l),
+a.d(i, { A: () => x });
+var l = a(627968),
+    s = a(503698),
+    t = a.n(s),
     c = a(318254),
+    r = a(834730),
     e = a(657718),
-    r = a(807072),
+    o = a(807072),
     u = a(945942),
-    o = a(910200),
-    p = a(375708),
-    h = a(931048);
-function d(n) {
-    let { location: i, onDismiss: a, className: l } = n,
-        { shouldRender: d, limitedOfferTimeLeft: k } = (0, u.A)({ location: i });
-    return d
-        ? (0, t.jsx)(o.A, {
+    d = a(910200),
+    h = a(375708),
+    p = a(931048);
+function x(n) {
+    let { location: i, onDismiss: a, className: s } = n,
+        { shouldRender: x, limitedOfferTimeLeft: m } = (0, u.A)({ location: i });
+    return x
+        ? (0, l.jsxs)(d.A, {
               Icon: c.C,
-              className: s()(h.U, l),
-              text: p.intl.format(p.t["/bHQ84"], {
-                  numDays: Math.max(k, 1),
-                  applicationName: p.intl.string(p.t.Uu8hke),
-              }),
-              trailing:
+              className: t()(p.U, s),
+              children: [
+                  (0, l.jsx)(r.E, {
+                      variant: "text-xs/semibold",
+                      color: "currentColor",
+                      children: h.intl.format(h.t["/bHQ84"], {
+                          numDays: Math.max(m, 1),
+                          applicationName: h.intl.string(h.t.Uu8hke),
+                      }),
+                  }),
                   null != a
-                      ? (0, t.jsx)("div", {
-                            className: h.c,
-                            children: (0, t.jsx)(e.S, {
+                      ? (0, l.jsx)("div", {
+                            className: p.c,
+                            children: (0, l.jsx)(e.S, {
                                 size: "xs",
                                 variant: "icon-only",
-                                icon: r.U,
-                                "aria-label": p.intl.string(p.t.cpT0Cq),
+                                icon: o.U,
+                                "aria-label": h.intl.string(h.t.cpT0Cq),
                                 onClick: a,
                             }),
                         })
                       : null,
+              ],
           })
         : null;
 }

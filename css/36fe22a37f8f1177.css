@@ -128,13 +128,10 @@
 
 .bannerTextContainer__2fc34,
 .countdownDaysContainer__2fc34 {
+    align-items: center;
     display: flex;
     flex-direction: row;
     gap: var(--space-4)
-}
-
-.countdownDaysContainer__2fc34 {
-    align-items: center
 }
 
 .countdownSecondsContainer__2fc34 {

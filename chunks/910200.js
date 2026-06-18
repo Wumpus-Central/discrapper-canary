@@ -1,50 +1,63 @@
 "use strict";
-n.d(t, { A: () => h, O: () => f });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(278416),
-    o = n(834730),
-    l = n(459192),
-    u = n(990078),
-    c = n(262427),
-    d = n(240248),
-    _ = n(82199);
-function h(e) {
-    let {
-            className: t,
-            Icon: n = a.g,
-            customGraphic: r,
-            gradientColor: d = "green",
-            text: h,
-            trailing: f,
-            tooltip: p,
-            ...E
-        } = e,
-        m = () =>
-            (0, i.jsx)(c.A, {
-                className: s()(_.Xx, t),
-                gradientColor: d,
+n.d(t, { A: () => m, O: () => g });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(989349),
+    l = n.n(o),
+    u = n(278416),
+    c = n(834730),
+    d = n(459192),
+    _ = n(990078),
+    h = n(262427),
+    f = n(396583),
+    p = n(375708),
+    E = n(82199);
+function m(e) {
+    let { className: t, Icon: n = u.g, customGraphic: r, gradientColor: s = "green", tooltip: o, ...l } = e,
+        c = () =>
+            (0, i.jsx)(h.A, {
+                className: a()(E.Xx, t),
+                gradientColor: s,
                 ...(null != r ? { customGraphic: r } : { Icon: n }),
-                ...E,
-                children: (0, i.jsxs)("div", {
-                    className: _.Yu,
-                    children: [(0, i.jsx)(o.E, { variant: "text-xs/semibold", color: "currentColor", children: h }), f],
-                }),
+                ...l,
             });
-    return null != p && "object" == typeof p
-        ? (0, i.jsx)(l.u, { assetSize: 48, ...p, children: m() })
-        : null != p && "string" == typeof p
-          ? (0, i.jsx)(u.m, { text: p, children: m() })
-          : m();
+    return null != o && "object" == typeof o
+        ? (0, i.jsx)(d.u, { assetSize: 48, ...o, children: c() })
+        : null != o && "string" == typeof o
+          ? (0, i.jsx)(_.m, { text: o, children: c() })
+          : c();
 }
-function f(e) {
-    let { timeRemaining: t, ...n } = e;
-    return (0, i.jsx)(h, {
-        ...n,
-        trailing: (0, d.uJ)(t)
-            ? null
-            : (0, i.jsx)(o.E, { className: _.cR, variant: "text-xs/medium", color: "currentColor", children: t }),
-    });
+function g(e) {
+    let { text: t, endDatetime: n, ...s } = e,
+        [a, o] = r.useState(() => A(n));
+    return (
+        (0, f.A)(() => {
+            o(A(n));
+        }, 1e3),
+        (0, i.jsx)(m, {
+            ...s,
+            children: (0, i.jsxs)("div", {
+                className: E.Yu,
+                children: [
+                    (0, i.jsx)(c.E, { variant: "text-xs/semibold", color: "currentColor", children: t }),
+                    null != a
+                        ? (0, i.jsx)(c.E, {
+                              className: E.cR,
+                              variant: "text-xs/medium",
+                              color: "currentColor",
+                              children: a,
+                          })
+                        : null,
+                ],
+            }),
+        })
+    );
+}
+function A(e) {
+    if (null == e) return null;
+    let t = l()(),
+        n = l()(new Date(e)).diff(t, "days");
+    return n <= 0 ? null : p.intl.formatToPlainString(p.t.BXpdIg, { days: Math.max(n, 1) });
 }
