@@ -23,17 +23,29 @@ function c(e, t, n, i) {
     let u = 0,
         c = 0;
     if (("pageX" in e && ((u = e.pageX), (c = e.pageY)), 0 === u && 0 === c)) {
-        let { left: t = 0, top: n = 0, width: i = 0, height: r = 0 } = e.target?.getBoundingClientRect() ?? {};
-        (u = t + i / 2), (c = n + r / 2);
+        let t = e.target,
+            n = t?.ownerDocument.defaultView?.getSelection();
+        if (null != n && n.rangeCount > 0 && null != t) {
+            let e = n.getRangeAt(0);
+            if (t.contains(e.commonAncestorContainer)) {
+                let t = e.getBoundingClientRect();
+                0 !== t.height && ((u = t.left), (c = t.bottom));
+            }
+        }
+        if (0 === u && 0 === c) {
+            let { left: e = 0, top: n = 0, width: i = 0, height: r = 0 } = t?.getBoundingClientRect() ?? {};
+            (u = e + i / 2), (c = n + r / 2);
+        }
     }
     let d = {
-        render: t,
-        renderLazy: i,
-        target: e.target ?? e.currentTarget,
-        rect: new DOMRect(u, c, 0, 0),
-        config: { context: __OVERLAY__ ? o.BRT.OVERLAY : ((0, r.zd)() ?? o.BRT.APP), ...n },
-    };
-    if (n?.enableSpellCheck && (0, s.isDesktop)()) {
+            render: t,
+            renderLazy: i,
+            target: e.target ?? e.currentTarget,
+            rect: new DOMRect(u, c, 0, 0),
+            config: { context: __OVERLAY__ ? o.BRT.OVERLAY : ((0, r.zd)() ?? o.BRT.APP), ...n },
+        },
+        _ = "nativeEvent" in e ? e.nativeEvent : e;
+    if (n?.enableSpellCheck && (0, s.isDesktop)() && _.isTrusted) {
         let e = (0, a.nL)(function () {
             e(), l(d);
         });
