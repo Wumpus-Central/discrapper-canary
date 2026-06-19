@@ -4,8 +4,8 @@ n(64700);
 var s = n(980707),
     d = n(477782),
     t = n(442433),
-    A = n(847767),
-    l = n(358367),
+    l = n(847767),
+    A = n(358367),
     c = n(468389),
     a = n(793574),
     o = n(50268),
@@ -15,7 +15,7 @@ var s = n(980707),
     U = n(29293),
     x = n(509302),
     j = n(497600),
-    N = n(696582),
+    N = n(291247),
     X = n(239211),
     _ = n(373397),
     C = n(399476),
@@ -31,21 +31,21 @@ var s = n(980707),
     m = n(77544),
     v = n(652215),
     w = n(375708);
-let J = (0, l.A)(
-    (0, A.A)(
+let J = (0, A.A)(
+    (0, l.A)(
         function (e) {
             let {
                     user: i,
                     guildId: n,
-                    showModalItems: A = !0,
-                    showMediaItems: l = !1,
+                    showModalItems: l = !0,
+                    showMediaItems: A = !1,
                     showChatItems: a = !0,
                     context: J,
                     onSelect: L,
                 } = e,
                 O = { page: v.liQ.GUILD_CHANNEL, section: v.JJy.CHAT_USERNAME, object: v.ZSU.CONTEXT_MENU_ITEM },
                 Z = (0, S.A)({ userId: i.id, guildId: n }),
-                f = (0, M.A)(i, n, J),
+                f = (0, M.A)(i, n, null, J),
                 D = (0, T.A)(i.id, J),
                 H = (0, m.A)(i.id),
                 R = (0, _.A)({ user: i, context: J }),
@@ -77,10 +77,10 @@ let J = (0, l.A)(
                     !ed &&
                         (0, r.jsxs)(r.Fragment, {
                             children: [
-                                (0, r.jsxs)(d.rX, { children: [A && Z, a && f, D, R, A && q, A && y, H] }),
-                                l && (0, r.jsx)(d.rX, { children: B }),
-                                (0, r.jsx)(d.rX, { children: A && Y }),
-                                (0, r.jsxs)(d.rX, { children: [l && F, A && P, A && W, z, K, V, Q, A && ee, A && $] }),
+                                (0, r.jsxs)(d.rX, { children: [l && Z, a && f, D, R, l && q, l && y, H] }),
+                                A && (0, r.jsx)(d.rX, { children: B }),
+                                (0, r.jsx)(d.rX, { children: l && Y }),
+                                (0, r.jsxs)(d.rX, { children: [A && F, l && P, l && W, z, K, V, Q, l && ee, l && $] }),
                                 (0, r.jsx)(d.rX, { children: er }),
                                 (0, r.jsxs)(d.rX, { children: [en, ei] }),
                             ],

@@ -1,8 +1,8 @@
 n.d(i, { default: () => ei });
 var s = n(627968);
 n(64700);
-var r = n(17928),
-    d = n(980707),
+var d = n(17928),
+    r = n(980707),
     t = n(477782),
     l = n(442433),
     a = n(847767),
@@ -93,16 +93,16 @@ let ei = (0, o.A)(
                     channel: ei,
                     context: en,
                     showChatItems: es = !0,
-                    showMediaItems: er = !1,
-                    showChannelCallItems: ed = !1,
+                    showMediaItems: ed = !1,
+                    showChannelCallItems: er = !1,
                     showModalItems: et = !0,
                     onSelect: el,
                     onHeightUpdate: ea,
                     onInteraction: eo,
                 } = e,
                 ec = (0, V.A)({ userId: ee.id, guildId: null }),
-                eu = (0, F.A)(ee, null, en),
-                eh = (0, r.bG)([_.A, I.A], () => {
+                eu = (0, F.A)(ee, null, ei.id, en),
+                eh = (0, d.bG)([_.A, I.A], () => {
                     let e = _.A.getVoiceChannelId();
                     return I.A.getChannel(e);
                 }),
@@ -117,8 +117,8 @@ let ei = (0, o.A)(
                 eI =
                     ((i = ee.id),
                     (n = ei.id),
-                    (a = (0, r.bG)([z.default], () => z.default.getCurrentUser(), [])),
-                    null == (o = (0, r.bG)([I.A], () => I.A.getChannel(n), [n])) ||
+                    (a = (0, d.bG)([z.default], () => z.default.getCurrentUser(), [])),
+                    null == (o = (0, d.bG)([I.A], () => I.A.getChannel(n), [n])) ||
                     o.isOwner(i) ||
                     null == a ||
                     !o.isOwner(a.id) ||
@@ -155,7 +155,7 @@ let ei = (0, o.A)(
                     onHeightUpdate: ea,
                 }),
                 ey =
-                    null == (h = (0, r.bG)([z.default], () => z.default.getCurrentUser())) ||
+                    null == (h = (0, d.bG)([z.default], () => z.default.getCurrentUser())) ||
                     ei.ownerId !== h.id ||
                     ee.id === h.id
                         ? null
@@ -225,7 +225,7 @@ let ei = (0, o.A)(
                 eB = ee.isNonUserBot(),
                 eL = ei.isManaged(),
                 eP = ei.recipients?.includes(ee.id);
-            return (0, s.jsxs)(d.W, {
+            return (0, s.jsxs)(r.W, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
                 onClose: l.Z_,
@@ -240,16 +240,16 @@ let ei = (0, o.A)(
                                 (0, s.jsxs)(t.rX, {
                                     children: [et && ec, es && eu, ej, eg, !eL && ex, et && ep, et && ev, eG],
                                 }),
-                                er && (0, s.jsx)(t.rX, { children: eC }),
+                                ed && (0, s.jsx)(t.rX, { children: eC }),
                                 eP && (0, s.jsxs)(t.rX, { children: [!eL && eI, ey] }),
                                 (0, s.jsx)(t.rX, { children: et && ew }),
-                                ed && (0, s.jsxs)(t.rX, { children: [eZ, eR, eD] }),
+                                er && (0, s.jsxs)(t.rX, { children: [eZ, eR, eD] }),
                                 (0, s.jsxs)(t.rX, {
                                     children: [
-                                        er && e_,
-                                        er && eM,
-                                        er && eU,
-                                        er && eO,
+                                        ed && e_,
+                                        ed && eM,
+                                        ed && eU,
+                                        ed && eO,
                                         ez,
                                         et && ef,
                                         eE,

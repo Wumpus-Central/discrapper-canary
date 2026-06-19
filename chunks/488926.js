@@ -257,13 +257,15 @@ function x(e) {
     });
 }
 function k(e, t, n, i) {
-    return e.type !== y.rbe.PRIVATE_THREAD || n || i || s.zy(t, y.xBc.MANAGE_THREADS)
-        ? s.zy(t, y.xBc.SEND_MESSAGES_IN_THREADS)
-            ? e.isLockedThread() && !s.zy(t, y.xBc.MANAGE_THREADS)
-                ? s.TF(t, y.xBc.SEND_MESSAGES)
-                : s.kg(t, y.xBc.SEND_MESSAGES)
-            : s.TF(t, y.xBc.SEND_MESSAGES)
-        : C;
+    return e.type === y.rbe.MEDIA_THREAD
+        ? s.kg(y.xBc.READ_MESSAGE_HISTORY, y.xBc.VIEW_CHANNEL)
+        : e.type !== y.rbe.PRIVATE_THREAD || n || i || s.zy(t, y.xBc.MANAGE_THREADS)
+          ? s.zy(t, y.xBc.SEND_MESSAGES_IN_THREADS)
+              ? e.isLockedThread() && !s.zy(t, y.xBc.MANAGE_THREADS)
+                  ? s.TF(t, y.xBc.SEND_MESSAGES)
+                  : s.kg(t, y.xBc.SEND_MESSAGES)
+              : s.TF(t, y.xBc.SEND_MESSAGES)
+          : C;
 }
 function U(e, t) {
     if (_.Le.has(e.type)) return !0;

@@ -17,20 +17,20 @@ function h(t, n) {
         r = `<@${e}>`;
     d._.dispatchToLastSubscribed(A.jej.INSERT_TEXT, { plainText: i, rawText: r }), null != n && s.A.startTyping(n);
 }
-function T(t, n, e) {
-    let [s, d] = (0, r.yK)([u.A, l.A, c.A], () => {
-            let t = u.A.getChannelId(n),
-                e = l.A.getChannel(t);
-            return [t, null != e && (e.isMultiUserDM() || c.A.can(A.xBc.SEND_MESSAGES, e))];
-        }, [n]),
-        o = e === A.BRT.POPOUT;
-    return !d || o
+function T(t, n, e, s) {
+    let [d, o] = (0, r.yK)([u.A, l.A, c.A], () => {
+            let t = e ?? u.A.getChannelId(n),
+                i = l.A.getChannel(t);
+            return [t, null != i && (i.isMultiUserDM() || c.A.can(A.xBc.SEND_MESSAGES, i))];
+        }, [e, n]),
+        T = s === A.BRT.POPOUT;
+    return !o || T
         ? null
         : (0, i.jsx)(a.Dr, {
               id: "mention",
               label: p.intl.string(p.t.P8tvKG),
               action: function () {
-                  h(t, s);
+                  h(t, d);
               },
           });
 }

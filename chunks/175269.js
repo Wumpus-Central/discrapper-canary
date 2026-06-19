@@ -18,8 +18,8 @@ var t = i(627968),
     b = i(734057),
     U = i(309010),
     C = i(803664),
-    j = i(29293),
-    M = i(509302),
+    M = i(29293),
+    j = i(509302),
     p = i(497600),
     N = i(646911),
     S = i(239211),
@@ -57,7 +57,7 @@ let V = (0, u.A)(
                 { user: Y, guildId: $, channel: ee, context: en, onSelect: ei, onHeightUpdate: et } = e,
                 er = ee.id,
                 el = (0, W.A)({ userId: Y.id, guildId: $, channelId: er }),
-                ea = (0, P.A)(Y, $, en),
+                ea = (0, P.A)(Y, $, er, en),
                 ed = (0, X.A)(Y.id, en),
                 es = (0, B.A)(Y.id),
                 eo = (0, _.A)({ user: Y, context: en }),
@@ -69,7 +69,7 @@ let V = (0, u.A)(
                 ec = eA ? eu?.id : null,
                 em = (0, k.A)(Y, ec),
                 eg = (0, p.A)({ user: Y, guildId: $, channelId: er, context: en }),
-                eT = (0, j.A)({ user: Y }),
+                eT = (0, M.A)({ user: Y }),
                 { analyticsLocations: eh } = (0, g.Ay)(m.A.THREAD_USER_MENU),
                 ex = (0, h.A)({
                     guildId: $,
@@ -85,9 +85,9 @@ let V = (0, u.A)(
                 eE = (0, I.A)({ user: Y, guildId: $ }),
                 eb = (0, c.A)(null, Y),
                 eU = (0, C.A)({ user: Y }),
-                eC = (0, M.A)({ user: Y }),
-                ej = (0, G.A)({ user: Y }),
-                eM = (0, S.A)({ user: Y, guildId: $, channelId: er, location: "ThreadUserContextMenu" }),
+                eC = (0, j.A)({ user: Y }),
+                eM = (0, G.A)({ user: Y }),
+                ej = (0, S.A)({ user: Y, guildId: $, channelId: er, location: "ThreadUserContextMenu" }),
                 ep = (0, f.A)({ user: Y, guildId: $, channelId: er, location: "ThreadUserContextMenu" }),
                 eN =
                     ((n = r.useMemo(() => ({ [$]: [Y.id] }), [$, Y.id])),
@@ -98,56 +98,58 @@ let V = (0, u.A)(
                     (V = (0, l.bG)([J.default], () => J.default.getCurrentUser())),
                     (K = (0, R.A)(o, "Context Menu")),
                     (Q = (0, H.qi)(o?.id)),
-                    V?.id === Y.id
-                        ? [K]
-                        : null == u || null == o || null == V
-                          ? []
-                          : [
-                                Q
-                                    ? (0, t.jsx)(d.Dr, {
-                                          id: "remove",
-                                          label: o.isForumPost()
-                                              ? O.intl.formatToPlainString(O.t.v2KNNx, { user: Y.username })
-                                              : O.intl.formatToPlainString(O.t["27xWaT"], { user: Y.username }),
-                                          color: "danger",
-                                          action: () => w.A.removeMember(o.id, Y.id, "Context Menu"),
-                                      })
-                                    : null,
-                                (0, v.L7)(Y, u)
-                                    ? (0, t.jsx)(d.Dr, {
-                                          id: "kick",
-                                          label: Q
-                                              ? O.intl.formatToPlainString(O.t["1Ie87p"], { user: Y.username })
-                                              : O.intl.formatToPlainString(O.t["9l/iTS"], { user: Y.username }),
-                                          color: "danger",
-                                          action: () =>
-                                              (0, D.openModalLazy)(async () => {
-                                                  let { default: e } = await Promise.all([
-                                                      i.e("97660"),
-                                                      i.e("40243"),
-                                                  ]).then(i.bind(i, 547166));
-                                                  return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });
-                                              }),
-                                      })
-                                    : null,
-                                (0, v.EZ)(Y, u)
-                                    ? (0, t.jsx)(d.Dr, {
-                                          id: "ban",
-                                          label: Q
-                                              ? O.intl.formatToPlainString(O.t.i62APf, { user: Y.username })
-                                              : O.intl.formatToPlainString(O.t.WnpUBi, { user: Y.username }),
-                                          color: "danger",
-                                          action: () =>
-                                              (0, D.openModalLazy)(async () => {
-                                                  let { default: e } = await Promise.all([
-                                                      i.e("33847"),
-                                                      i.e("2504"),
-                                                  ]).then(i.bind(i, 333179));
-                                                  return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });
-                                              }),
-                                      })
-                                    : null,
-                            ]),
+                    o?.isMediaThread()
+                        ? []
+                        : V?.id === Y.id
+                          ? [K]
+                          : null == u || null == o || null == V
+                            ? []
+                            : [
+                                  Q
+                                      ? (0, t.jsx)(d.Dr, {
+                                            id: "remove",
+                                            label: o.isForumPost()
+                                                ? O.intl.formatToPlainString(O.t.v2KNNx, { user: Y.username })
+                                                : O.intl.formatToPlainString(O.t["27xWaT"], { user: Y.username }),
+                                            color: "danger",
+                                            action: () => w.A.removeMember(o.id, Y.id, "Context Menu"),
+                                        })
+                                      : null,
+                                  (0, v.L7)(Y, u)
+                                      ? (0, t.jsx)(d.Dr, {
+                                            id: "kick",
+                                            label: Q
+                                                ? O.intl.formatToPlainString(O.t["1Ie87p"], { user: Y.username })
+                                                : O.intl.formatToPlainString(O.t["9l/iTS"], { user: Y.username }),
+                                            color: "danger",
+                                            action: () =>
+                                                (0, D.openModalLazy)(async () => {
+                                                    let { default: e } = await Promise.all([
+                                                        i.e("97660"),
+                                                        i.e("40243"),
+                                                    ]).then(i.bind(i, 547166));
+                                                    return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });
+                                                }),
+                                        })
+                                      : null,
+                                  (0, v.EZ)(Y, u)
+                                      ? (0, t.jsx)(d.Dr, {
+                                            id: "ban",
+                                            label: Q
+                                                ? O.intl.formatToPlainString(O.t.i62APf, { user: Y.username })
+                                                : O.intl.formatToPlainString(O.t.WnpUBi, { user: Y.username }),
+                                            color: "danger",
+                                            action: () =>
+                                                (0, D.openModalLazy)(async () => {
+                                                    let { default: e } = await Promise.all([
+                                                        i.e("33847"),
+                                                        i.e("2504"),
+                                                    ]).then(i.bind(i, 333179));
+                                                    return (n) => (0, t.jsx)(e, { ...n, guildId: u.id, user: Y });
+                                                }),
+                                        })
+                                      : null,
+                              ]),
                 eS = (0, z.A)(Y.id, $),
                 e_ = (0, y.A)(Y, $),
                 ef = (0, T.A)({ id: Y.id, label: O.intl.string(O.t["/AXYnE"]) }),
@@ -173,7 +175,7 @@ let V = (0, u.A)(
                                 (0, t.jsx)(d.rX, { children: eI }),
                                 (0, t.jsxs)(d.rX, { children: [el, ea, ed, eo, em, eg, eT, es] }),
                                 (0, t.jsx)(d.rX, { children: eb }),
-                                (0, t.jsxs)(d.rX, { children: [ex, eP, eE, eU, eC, ej, ep, eM] }),
+                                (0, t.jsxs)(d.rX, { children: [ex, eP, eE, eU, eC, eM, ep, ej] }),
                                 (0, t.jsx)(d.rX, { children: eN }),
                                 (0, t.jsxs)(d.rX, { children: [eS, e_] }),
                             ],
