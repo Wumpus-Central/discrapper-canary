@@ -54,11 +54,14 @@ function N(t) {
     async function J() {
         s()(null != L, "Cannot submit null birthday.");
         try {
-            return V(null), v(!0), await (0, C.n7)(L, r);
+            return V(null), v(!0), await (0, C.n7)(L, r), !0;
         } catch (t) {
-            null != t.body && null != t.body.date_of_birth
-                ? (0, w.MP)(r, t.body.date_of_birth)
-                : (t?.body?.username != null ? V(k.intl.string(k.t["TGg/2k"])) : V(t?.body.message), v(!1));
+            return (
+                null != t.body && null != t.body.date_of_birth
+                    ? (0, w.MP)(r, t.body.date_of_birth)
+                    : (t?.body?.username != null ? V(k.intl.string(k.t["TGg/2k"])) : V(t?.body.message), v(!1)),
+                !1
+            );
         }
     }
     async function $() {
@@ -68,7 +71,7 @@ function N(t) {
         t.preventDefault(), x || null == L || (await $());
     }
     async function te() {
-        null == (await J()) && D(0);
+        (await J()) || D(0);
     }
     l.useEffect(() => {
         N?.nsfwAllowed !== !0 || Y || B || (0, w.Nk)(r);
