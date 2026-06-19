@@ -154,6 +154,7 @@ let a = "@me",
             `/application-directory/${e}/${s.ApplicationDirectoryProfileSections.STORE}/${t}`,
         APPLICATION_DIRECTORY_SEARCH: "/application-directory/search",
         FAMILY_CENTER: "/family-center",
+        FAMILY_CENTER_MY_FAMILY: (e, t) => `/feature/family-center/my-family/${e}/${t}`,
         SERVER_SHOP: (e) => `/channels/${e}/shop`,
         CHANNELS_GAME_SHOP: (e, t, n, i) => {
             let r = `/channels/${e}/game-shop`;

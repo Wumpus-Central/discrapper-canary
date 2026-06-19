@@ -1405,8 +1405,7 @@ let e1 = new e0(_.h, {
         LOAD_MESSAGES_SUCCESS: function (e) {
             let { channelId: t, isAfter: n, messages: i } = e,
                 r = ew.get(t);
-            (r.loadedMessages = !0),
-                i.length > 0 && 1 === j.default.compare(i[0].id, r.lastMessageId) && (r.lastMessageId = i[0].id);
+            (r.loadedMessages = !0), null == r.lastMessageId && i.length > 0 && (r.lastMessageId = i[0].id);
             let s = q.A.getMessages(t);
             null != s &&
                 ((i.length > 0 && 1 === j.default.compare(i[0].id, r.ackMessageId) && 0 === r.unreadCount) ||

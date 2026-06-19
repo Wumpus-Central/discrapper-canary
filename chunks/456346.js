@@ -1778,7 +1778,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 566052, Version Hash: eed22d53f8cf234c1c984f81fa9a7d2b0fec8472`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 566136, Version Hash: 4b5256b4c1685998b057c760c3e4ecd4409892f7`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -17508,7 +17508,7 @@ let TI = (e) => {
         onRequestClose: o,
     });
 };
-var TT = n(922139),
+var TT = n(308186),
     TS = n(717421),
     Ty = n(770178),
     TC = n(87549),
@@ -18124,7 +18124,7 @@ let Sa = "isHideDevBanner",
                     className: t6()(Ss.Wz, Ss.mr),
                     children: [
                         (0, F.jsx)(Sr, { className: Ss.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "566052" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "566136" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -22064,8 +22064,8 @@ let C6 = () => (0, F.jsx)("div", { className: CX.wG, children: (0, F.jsx)(iH.y, 
                 n.e("71530"),
                 n.e("43784"),
                 n.e("25252"),
-            ]).then(n.bind(n, 767060)),
-        webpackId: 767060,
+            ]).then(n.bind(n, 93070)),
+        webpackId: 93070,
         name: "FamilyCenterRouter",
         renderLoader: i$.c5,
     }),
@@ -23680,7 +23680,10 @@ function NB() {
                                                         disableTrack: !0,
                                                     }),
                                                     (0, F.jsx)(iQ.A, {
-                                                        path: eM.BVt.FAMILY_CENTER,
+                                                        path: [
+                                                            eM.BVt.FAMILY_CENTER_MY_FAMILY(":teenId", ":linkCode"),
+                                                            eM.BVt.FAMILY_CENTER,
+                                                        ],
                                                         render: NU,
                                                         disableTrack: !0,
                                                     }),
@@ -26506,7 +26509,7 @@ async function Oq(e) {
             let { default: e } = await Promise.all([
                 n.e("40859"),
                 n.e("95429"),
-                n.e("88905"),
+                n.e("67113"),
                 n.e("48370"),
                 n.e("12539"),
             ]).then(n.bind(n, 214646));
@@ -38270,7 +38273,7 @@ let kK = (0, iK.Fe)({
                 n.e("9351"),
                 n.e("40859"),
                 n.e("95429"),
-                n.e("88905"),
+                n.e("67113"),
                 n.e("98965"),
                 n.e("48370"),
                 n.e("36335"),
@@ -38508,7 +38511,7 @@ let kK = (0, iK.Fe)({
                 n.e("207"),
                 n.e("24199"),
                 n.e("95429"),
-                n.e("88905"),
+                n.e("67113"),
                 n.e("10368"),
                 n.e("54048"),
                 n.e("88941"),
