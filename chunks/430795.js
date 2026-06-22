@@ -130,6 +130,7 @@ async function k(e) {
                                   applicationAudio: t.boolean(),
                                   voiceAudio: t.boolean(),
                                   soundboardAudio: t.boolean(),
+                                  crop: t.object().keys({ preset: t.string().allow("original", "9:16", "16:9") }),
                               }),
                           createdAt: t
                               .number()

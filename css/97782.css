@@ -207,6 +207,28 @@
     overflow: hidden
 }
 
+.croppedPlayer__38295 {
+    aspect-ratio: auto;
+    height: 100%;
+    max-width: 100%;
+    width: 100%
+}
+
+.cropFrameVideo__38295 {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: auto
+}
+
+.full-motion .cropFrameVideo__38295 {
+    transition: aspect-ratio .3s ease
+}
+
 .hidden_b54fe3 {
     display: none
 }

@@ -1,42 +1,55 @@
-n.d(s, { default: () => j });
-var i = n(627968),
-    l = n(64700),
-    t = n(562708),
-    a = n(17928),
-    r = n(521489),
-    o = n(793574),
-    d = n(688810),
-    c = n(274372),
-    p = n(280483),
-    u = n(582633),
-    h = n(309777),
-    C = n(429364),
-    I = n(97451);
-function j(e) {
-    let { clipId: s, onEdit: n, channelId: j, transitionState: m, onClose: A } = e;
-    (0, p.A)();
-    let { analyticsLocations: f } = (0, d.Ay)(o.A.CLIPS_EDITOR),
-        x = l.useRef(null),
-        k = (0, a.bG)([c.Ay], () => c.Ay.getClipById(s));
+s.d(e, { default: () => I });
+var i = s(627968),
+    l = s(64700),
+    t = s(562708),
+    o = s(17928),
+    a = s(521489),
+    r = s(793574),
+    d = s(688810),
+    c = s(553933),
+    p = s(274372),
+    h = s(280483),
+    u = s(247181),
+    C = s(309777),
+    j = s(263356),
+    x = s(564490),
+    m = s(429364),
+    A = s(97451);
+function I(n) {
+    let { clipId: e, onEdit: s, channelId: I, transitionState: f, onClose: E } = n;
+    (0, h.A)();
+    let { analyticsLocations: _ } = (0, d.Ay)(r.A.CLIPS_EDITOR),
+        g = l.useRef(null),
+        k = (0, o.bG)([p.Ay], () => p.Ay.getClipById(e)),
+        { enabled: y } = c._.useConfig({ location: "ClipsEditModal" });
     return null == k
         ? null
         : (0, i.jsx)(d.f5, {
-              value: f,
-              children: (0, i.jsx)(r.N, {
-                  onClose: A,
-                  transitionState: m,
+              value: _,
+              children: (0, i.jsx)(a.N, {
+                  onClose: E,
+                  transitionState: f,
                   trackingProps: { impression: { impressionName: t.ImpressionNames.CLIP_EDITOR_VIEWED } },
                   children: (0, i.jsx)("div", {
-                      className: I.jT,
-                      ref: x,
-                      children: (0, i.jsxs)(C.p, {
+                      className: A.jT,
+                      ref: g,
+                      children: (0, i.jsx)(m.p, {
                           clip: k,
                           editOnly: !0,
-                          modalContainerRef: x,
-                          children: [
-                              (0, i.jsx)(u.A, { transitionState: m, onClose: A }),
-                              (0, i.jsx)(h.A, { onEdit: n, channelId: j, onClose: A }),
-                          ],
+                          modalContainerRef: g,
+                          children: y
+                              ? (0, i.jsxs)(i.Fragment, {
+                                    children: [
+                                        (0, i.jsx)(x.A, { transitionState: f, onClose: E }),
+                                        (0, i.jsx)(j.A, { onEdit: s, channelId: I, onClose: E }),
+                                    ],
+                                })
+                              : (0, i.jsxs)(i.Fragment, {
+                                    children: [
+                                        (0, i.jsx)(u.A, { transitionState: f, onClose: E }),
+                                        (0, i.jsx)(C.A, { onEdit: s, channelId: I, onClose: E }),
+                                    ],
+                                }),
                       }),
                   }),
               }),

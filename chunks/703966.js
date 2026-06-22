@@ -30,8 +30,8 @@ var l,
     R = n(518960),
     D = n(767089),
     L = n(554146),
-    P = n(477782),
-    k = n(177953),
+    k = n(477782),
+    P = n(177953),
     O = n(950305),
     G = n(980707),
     U = n(308368),
@@ -144,7 +144,7 @@ function ef(e) {
                 switch (e.type) {
                     case em.UPLOAD_A_FILE:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "upload-file",
                                 label: e.display,
@@ -157,7 +157,7 @@ function ef(e) {
                     case em.UPLOAD_TEXT_AS_FILE:
                         if ("" === h) return null;
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "upload-text-as-file",
                                 label: e.display,
@@ -169,7 +169,7 @@ function ef(e) {
                         );
                     case em.CLIPS:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "clips",
                                 label: e.display,
@@ -182,7 +182,7 @@ function ef(e) {
                         );
                     case em.POLL:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "poll",
                                 label: e.display,
@@ -194,7 +194,7 @@ function ef(e) {
                         );
                     case em.INVITE_TO_PLAY_GAME:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "play",
                                 label: e.display,
@@ -217,7 +217,7 @@ function ef(e) {
                         );
                     case em.INVITE_TO_LISTEN:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "listen",
                                 label: e.display,
@@ -240,7 +240,7 @@ function ef(e) {
                         );
                     case em.INVITE_TO_WATCH:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "watch",
                                 label: e.display,
@@ -263,7 +263,7 @@ function ef(e) {
                         );
                     case em.CREATE_THREAD:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "THREAD",
                                 label: e.display,
@@ -275,7 +275,7 @@ function ef(e) {
                         );
                     case em.SLASH_COMMAND:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "SLASH_COMMAND",
                                 label: e.display,
@@ -287,7 +287,7 @@ function ef(e) {
                         );
                     case em.APP_LAUNCHER:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "APP_LAUNCHER",
                                 label: e.display,
@@ -299,7 +299,7 @@ function ef(e) {
                         );
                     case em.SCHEDULED_MESSAGE:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "scheduled_message",
                                 label: e.display,
@@ -312,7 +312,7 @@ function ef(e) {
                         );
                     case em.SUMMARIZE_THREAD:
                         return (0, i.jsx)(
-                            P.Dr,
+                            k.Dr,
                             {
                                 id: "summarize_thread",
                                 label: e.display,
@@ -326,18 +326,18 @@ function ef(e) {
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)(
-                                                  P.Dr,
+                                                  k.Dr,
                                                   {
                                                       id: "summarize_thread_for_everyone",
                                                       label: eh.intl.string(eh.t.eCzSdd),
-                                                      iconLeft: k.n,
-                                                      leadingAccessory: { type: "icon", icon: k.n },
+                                                      iconLeft: P.n,
+                                                      leadingAccessory: { type: "icon", icon: P.n },
                                                       action: () => K.A.summarizeThread(t, !1),
                                                   },
                                                   "summarize_thread_for_everyone",
                                               ),
                                               (0, i.jsx)(
-                                                  P.Dr,
+                                                  k.Dr,
                                                   {
                                                       id: "summarize_thread_for_me",
                                                       label: eh.intl.string(eh.t["HOe+Hq"]),
@@ -367,8 +367,8 @@ let ex = s.memo(function (e) {
             channel: l,
             draftType: a,
             editorTextContent: L,
-            setValue: P,
-            canOnlyUseTextCommands: k,
+            setValue: k,
+            canOnlyUseTextCommands: P,
             chatInputType: O,
         } = e,
         G = (0, y.n)("ChannelAttachButton"),
@@ -397,7 +397,7 @@ let ex = s.memo(function (e) {
                     n.e("56762"),
                     n.e("97782"),
                     n.e("16227"),
-                    n.e("88623"),
+                    n.e("93594"),
                     n.e("29280"),
                     n.e("9064"),
                     n.e("31199"),
@@ -418,7 +418,7 @@ let ex = s.memo(function (e) {
                     n.e("69201"),
                     n.e("95008"),
                     n.e("52566"),
-                    n.e("73954"),
+                    n.e("1830"),
                     n.e("89160"),
                     n.e("31782"),
                     n.e("20342"),
@@ -541,7 +541,7 @@ let ex = s.memo(function (e) {
             canStartThreads: ex || eS,
             useSlate: e_,
             hasClips: em,
-            canUseApplicationCommands: !k,
+            canUseApplicationCommands: !P,
             channel: l,
             activities: z,
             newClipsCount: K?.length ?? 0,
@@ -576,7 +576,7 @@ let ex = s.memo(function (e) {
                         onFileUpload: () => F.current?.activateUploadDialogue(),
                         draftType: a,
                         editorTextContent: L,
-                        setValue: P,
+                        setValue: k,
                         openClips: eA,
                         chatInputType: O,
                     });

@@ -7,4 +7,6 @@ _.exports = {
     V_: "displayScreenshot__38295 displayVideo__38295",
     DV: "clipsPlayer__38295",
     xS: "videoSizer__38295",
+    Ln: "croppedPlayer__38295",
+    HU: "cropFrameVideo__38295",
 };

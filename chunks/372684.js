@@ -1,11 +1,12 @@
 "use strict";
-n.d(t, { Gy: () => l, RC: () => c, k9: () => u, nQ: () => d, rb: () => _ });
+n.d(t, { Gy: () => u, RC: () => d, k9: () => c, nQ: () => h, rb: () => f, yz: () => _ });
 var i,
     r,
     s,
     a,
     o,
-    l =
+    l,
+    u =
         (((i = {}).MANUAL = "manual"),
         (i.DISTRIBUTED = "distributed"),
         (i.YELLING = "yelling"),
@@ -14,29 +15,30 @@ var i,
         (i.SPEAKING = "speaking"),
         (i.SOUNDBOARD = "soundboard"),
         i),
-    u =
+    c =
         (((r = {}).UNKNOWN = "unknown"),
         (r.BELOW_MINIMUM = "below_minimum"),
         (r.MEETS_MINIMUM = "meets_minimum"),
         (r.MEETS_AUTO_ENABLE = "meets_auto_enable"),
         r),
-    c =
+    d =
         (((s = {}).MAX_CONCURRENT_SAVES = "max_concurrent_saves"),
         (s.NO_ELIGIBLE_SOURCE = "no_eligible_source"),
         (s.MODULE_NOT_LOADED = "module_not_loaded"),
         (s.BUFFER_WARMING_UP = "buffer_warming_up"),
         s),
-    d = (((a = {}).CLIP = "clip"), (a.SCREENSHOT = "screenshot"), (a.VOICE_CLIP = "voice_clip"), a),
-    _ =
-        (((o = {}).UNCLASSIFIED = "unclassified"),
-        (o.KILL = "kill"),
-        (o.MULTIKILL = "multikill"),
-        (o.DEATH = "death"),
-        (o.ASSIST = "assist"),
-        (o.ITEM = "item"),
-        (o.VICTORY = "victory"),
-        (o.DEFEAT = "defeat"),
-        (o.LEVEL_UP = "level_up"),
-        (o.TREASURE = "treasure"),
-        (o.OBJECTIVE_KILL = "objective_kill"),
-        o);
+    _ = (((a = {}).ORIGINAL = "original"), (a.PORTRAIT_9_16 = "9:16"), (a.LANDSCAPE_16_9 = "16:9"), a),
+    h = (((o = {}).CLIP = "clip"), (o.SCREENSHOT = "screenshot"), (o.VOICE_CLIP = "voice_clip"), o),
+    f =
+        (((l = {}).UNCLASSIFIED = "unclassified"),
+        (l.KILL = "kill"),
+        (l.MULTIKILL = "multikill"),
+        (l.DEATH = "death"),
+        (l.ASSIST = "assist"),
+        (l.ITEM = "item"),
+        (l.VICTORY = "victory"),
+        (l.DEFEAT = "defeat"),
+        (l.LEVEL_UP = "level_up"),
+        (l.TREASURE = "treasure"),
+        (l.OBJECTIVE_KILL = "objective_kill"),
+        l);
