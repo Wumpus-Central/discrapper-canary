@@ -37,7 +37,7 @@ function C(e, t, n, i) {
     let s = y(e),
         a = e.messageSnapshots.length > 0 && y(e.messageSnapshots[0].message);
     if (null != t || s) {
-        if ((0, o.Gc)(t) && !(r && (0, o.Gc)(n))) return { label: T.intl.string(T.t.KgPx1D), lineClamp: 2 };
+        if ((0, o.Gc)(t) && !(r && (0, o.Gc)(n))) return { label: T.intl.string(T.t.KgPx1D) };
         if (r && (0, _.zy)(n.type)) {
             if (
                 (e.attachments.length > 0 || e.messageSnapshots.some((e) => e.message.attachments.length > 0)) &&
