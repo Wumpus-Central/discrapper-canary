@@ -59,6 +59,7 @@
 }
 
 :root .user-profile-sidebar.user-profile-sidebar-redesign {
+    --custom-user-profile-banner-height: 105px;
     --custom-user-profile-footer-height: 72px
 }
 

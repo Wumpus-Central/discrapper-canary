@@ -54,6 +54,16 @@
     top: 72px
 }
 
+.user-profile-sidebar.user-profile-sidebar-redesign :where(.avatar__75742) {
+    inset-inline-start: 16px;
+    top: 57px
+}
+
+.custom-user-profile-theme.user-profile-sidebar.user-profile-sidebar-redesign :where(.avatar__75742) {
+    inset-inline-start: 14px;
+    top: 55px
+}
+
 .clickable__75742 {
     cursor: pointer
 }
