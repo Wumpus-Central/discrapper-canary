@@ -21,4 +21,5 @@ var i,
         (i[(i.GIFTING = 17)] = "GIFTING"),
         (i[(i.ACCOUNT_AGE = 18)] = "ACCOUNT_AGE"),
         (i[(i.STREAMING = 19)] = "STREAMING"),
+        (i[(i.GAME_TIME = 20)] = "GAME_TIME"),
         i);
