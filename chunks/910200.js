@@ -15,19 +15,27 @@ var i = n(627968),
     p = n(375708),
     E = n(82199);
 function m(e) {
-    let { className: t, Icon: n = u.g, customGraphic: r, gradientColor: s = "green", tooltip: o, ...l } = e,
-        c = () =>
+    let {
+            className: t,
+            Icon: n = u.g,
+            iconSize: r,
+            customGraphic: s,
+            gradientColor: o = "green",
+            tooltip: l,
+            ...c
+        } = e,
+        f = () =>
             (0, i.jsx)(h.A, {
                 className: a()(E.Xx, t),
-                gradientColor: s,
-                ...(null != r ? { customGraphic: r } : { Icon: n }),
-                ...l,
+                gradientColor: o,
+                ...(null != s ? { customGraphic: s } : { Icon: n, iconSize: r }),
+                ...c,
             });
-    return null != o && "object" == typeof o
-        ? (0, i.jsx)(d.u, { assetSize: 48, ...o, children: c() })
-        : null != o && "string" == typeof o
-          ? (0, i.jsx)(_.m, { text: o, children: c() })
-          : c();
+    return null != l && "object" == typeof l
+        ? (0, i.jsx)(d.u, { assetSize: 48, ...l, children: f() })
+        : null != l && "string" == typeof l
+          ? (0, i.jsx)(_.m, { text: l, children: f() })
+          : f();
 }
 function g(e) {
     let { text: t, endDatetime: n, ...s } = e,
