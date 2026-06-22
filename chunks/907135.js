@@ -47,6 +47,7 @@ var y = n(837451),
         (((i = {})[(i.REFRESH_APP = -1)] = "REFRESH_APP"),
         (i[(i.EMAIL_VERIFICATION = 3)] = "EMAIL_VERIFICATION"),
         (i[(i.AGE_VERIFICATION = 9)] = "AGE_VERIFICATION"),
+        (i[(i.PARENTAL_CONSENT_CONNECTION = 10)] = "PARENTAL_CONSENT_CONNECTION"),
         i);
 let v = {
         EMAIL_VERIFICATION: "email_verification",
@@ -54,9 +55,10 @@ let v = {
         GENERIC_CALL_TO_ACTION: "generic_call_to_action",
         REFRESH_APP: "refresh_app",
         AGE_VERIFICATION: "age_verification",
+        PARENTAL_CONSENT_CONNECTION: "parental_consent_connection",
     },
     R = new Set(Object.values(v));
-C.intl.string(y.default["Qm6K/s"]), C.intl.string(y.default["dSkE/A"]);
+C.intl.string(y.default["Qm6K/s"]), C.intl.string(y.default["dSkE/A"]), C.intl.string(y.default.dMMSA0);
 var O = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"), r),
     b = n(627575),
     D = n(17928),
@@ -190,6 +192,7 @@ let K = {
         [N.EMAIL_VERIFICATION]: C.intl.string(y.default.HC4IiR),
         [N.REFRESH_APP]: C.intl.string(y.default.SzfxQ3),
         [N.AGE_VERIFICATION]: C.intl.string(y.default["dSkE/A"]),
+        [N.PARENTAL_CONSENT_CONNECTION]: C.intl.string(y.default.dMMSA0),
     },
     $ = function () {
         let { task: e } = S(),
