@@ -22,4 +22,5 @@ var i,
         (i[(i.ACCOUNT_AGE = 18)] = "ACCOUNT_AGE"),
         (i[(i.STREAMING = 19)] = "STREAMING"),
         (i[(i.GAME_TIME = 20)] = "GAME_TIME"),
+        (i[(i.GAME_VARIETY = 21)] = "GAME_VARIETY"),
         i);
