@@ -1,12 +1,20 @@
 "use strict";
 n.d(t, { _z: () => _, dI: () => h, k3: () => d, x0: () => f });
 var i = n(811996),
-    r = n(570597),
+    r = n(773669),
     s = n(832163);
 n(652215);
 var a = n(430825),
     o = n(375708);
-let l = { [i.U.DESKTOP]: "PC", [i.U.XBOX]: "Xbox", [i.U.PLAYSTATION]: "PlayStation" },
+let l = {
+        [i.U.DESKTOP]: "PC",
+        [i.U.XBOX]: "Xbox",
+        [i.U.PLAYSTATION]: "PlayStation",
+        [i.U.SWITCH]: "Switch",
+        [i.U.APPLE_ARCADE]: "Apple Arcade",
+        [i.U.NETFLIX]: "Netflix",
+        [i.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
+    },
     u = [i.U.PLAYSTATION];
 function c(e) {
     let t = (function (e) {
@@ -16,7 +24,10 @@ function c(e) {
     })(e);
     return 0 === t.length
         ? ""
-        : o.intl.formatToPlainString(a.default["5h8p5P"], { platforms: (0, r.X)(t.map((e) => l[e])), count: t.length });
+        : o.intl.formatToPlainString(a.default["5h8p5P"], {
+              platforms: new Intl.ListFormat(r.default.locale).format(t.map((e) => l[e])),
+              count: t.length,
+          });
 }
 function d(e) {
     return o.intl.format(a.default.Q0dHYO, { platforms_info: c(e?.id) });
