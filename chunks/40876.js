@@ -199,6 +199,11 @@ let r = {
         ],
         inlineRequire: () => n(229683).A,
     },
+    GuildRoomManager: {
+        actions: ["VOICE_STATE_UPDATES", "GUILD_ROOM_CONNECT"],
+        inlineRequire: () => n(602350).A,
+        neverLoadBeforeConnectionOpen: !0,
+    },
     GuildScheduledEventManager: {
         actions: [
             "POST_CONNECTION_OPEN",
@@ -585,7 +590,7 @@ let r = {
             "VOICE_CHANNEL_SELECT",
             "RUNNING_GAMES_CHANGE",
         ],
-        inlineRequire: () => n(849106).A,
+        inlineRequire: () => n(452082).A,
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
