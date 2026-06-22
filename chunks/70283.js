@@ -20,4 +20,5 @@ var i,
         (i[(i.ORB_PROFILE = 16)] = "ORB_PROFILE"),
         (i[(i.GIFTING = 17)] = "GIFTING"),
         (i[(i.ACCOUNT_AGE = 18)] = "ACCOUNT_AGE"),
+        (i[(i.STREAMING = 19)] = "STREAMING"),
         i);
