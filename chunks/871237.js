@@ -156,13 +156,19 @@ function w(e) {
 }
 function M(e) {
     if (null == e) return "text";
-    let t = e.isMediaChannel();
-    if (e.type === m.rbe.GUILD_VOICE) return _.A.can(m.xBc.CONNECT, e) ? "voice" : "voice-locked";
+    let t = e.isNSFW(),
+        n = e.isSpoilerChannel(),
+        i = e.isMediaChannel();
+    if (e.type === m.rbe.GUILD_VOICE)
+        return _.A.can(m.xBc.CONNECT, e) ? (t ? "voice-nsfw" : n ? "voice-spoiler" : "voice") : "voice-locked";
     if (e.type === m.rbe.GUILD_STAGE_VOICE) return _.A.can(m.xBc.CONNECT, e) ? "stage" : "stage-locked";
     if (u.Le.has(e.type)) return e.isForumPost() ? "post" : "thread";
-    if (e.type === m.rbe.GUILD_FORUM) return t ? "media" : "forum";
-    if (e.type === m.rbe.GUILD_MEDIA) return "media";
-    else if (u.k3.has(e.type)) return "text";
+    if (e.type === m.rbe.GUILD_FORUM)
+        return i ? (t ? "media-nsfw" : "media") : t ? "forum-nsfw" : n ? "forum-spoiler" : "forum";
+    if (e.type === m.rbe.GUILD_MEDIA) return t ? "media-nsfw" : "media";
+    else if (e.type === m.rbe.GUILD_ANNOUNCEMENT)
+        return t ? "announcement-nsfw" : n ? "announcement-spoiler" : "announcement";
+    else if (u.k3.has(e.type)) return t ? "text-nsfw" : n ? "text-spoiler" : "text";
 }
 function P(e) {
     let t,
