@@ -22070,6 +22070,7 @@
   "vfkjqx": "$[{username}](usernameHook) pinned a message to this channel.",
   "lD5tup": "$[{username}](usernameHook) pinned [a message](a message) to this channel.",
   "yIDvPL": "$[{username}](usernameHook) pinned [a message](a message) to this channel. See all [pinned messages](pinned messages).",
+  "7mvRNF": "[{username}]({username}) pinned [a message](a message) to this channel. See all [pinned messages](pinned messages).",
   "9dPxsm": "[{username}]({username})'s poll [{title}]({title}) has closed! There was no winner $[](sadEmojiHook).",
   "dqftZ2": "[{username}]({username})'s poll [{title}]({title}) has closed! The results were tied ({percentage}).",
   "zFwIxC": "[{username}]({username})'s poll [{title}]({title}) has closed! The winner was $[](answerHook) ({percentage})",
