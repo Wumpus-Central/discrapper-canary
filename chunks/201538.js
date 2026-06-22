@@ -11,6 +11,7 @@ var l = n(626584),
     c = n(572164),
     d = (((i = {}).MISSING = "missing"), (i.DOWNLOADED = "downloaded"), (i.DOWNLOADING = "downloading"), i);
 let _ = [
+        ["laughter_screaming_exp79", "onnx", "32f89b229d95b00ba646c3860df0696d6b1b3b9008511361f3fca7ed1cbcf038"],
         ["laughter_screaming_exp58", "onnx", "f5a655cb76a57561ae84c9a9eb1829433db9ad8f4fd192a40f3277a5a5cfa6ad"],
         [
             "laughter_screaming_krispy_21_may",
