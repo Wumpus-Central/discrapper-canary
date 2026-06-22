@@ -42,6 +42,7 @@ function E() {
     let A = (0, d.h)({
             buttonAction: t.ctaAction,
             deeplinkSection: t.deeplinkSection,
+            applicationId: t.navigableStorefrontApplicationId?.value,
             onClose: () => {
                 E(p.i.TAKE_ACTION);
             },
