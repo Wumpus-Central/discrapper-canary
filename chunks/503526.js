@@ -421,7 +421,7 @@ function eQ(e) {
     );
 }
 var eZ = n(615550),
-    e$ = n(922139),
+    e$ = n(308186),
     e0 = n(717421),
     e1 = n(765671),
     e2 = n(884060);
@@ -18055,8 +18055,7 @@ function hn(e) {
                         )
                     );
                 },
-                secondaryValue:
-                    i === g0.y.GRADIENT && l && t.colors?.secondary_color != null ? t.colors?.secondary_color : void 0,
+                gradientColors: i === g0.y.GRADIENT && l ? [t.color, t.colors?.secondary_color ?? ei.TGz] : void 0,
                 onChangeGradientColors: (e) => {
                     (0, g2.uc)(
                         t.id,

@@ -21,9 +21,9 @@ var l = a(627968),
     k = a(328006),
     y = a(334840),
     w = a(48736),
-    b = a(741561),
-    I = a(319756),
-    _ = a(203656),
+    _ = a(741561),
+    b = a(319756),
+    I = a(203656),
     A = a(525104),
     E = a(176201),
     G = a(178758),
@@ -35,7 +35,7 @@ var l = a(627968),
 function M() {
     let [e, s] = i.useState(() => {
             let e = Math.floor(Math.random() * G.Oz.length);
-            return { primary_color: G.Oz[e].start, secondary_color: G.Oz[e].end, tertiary_color: null };
+            return { primary_color: G.Oz[e].colors[0], secondary_color: G.Oz[e].colors[1], tertiary_color: null };
         }),
         { gradientStyle: a, gradientClassname: r } = (0, f.v5)({
             colorStrings: (0, E.K3)(e),
@@ -48,7 +48,7 @@ function M() {
         children: [
             (0, l.jsx)("div", {
                 className: D.zC,
-                children: (0, l.jsx)(I.V, {
+                children: (0, l.jsx)(b.V, {
                     avatar: k.A,
                     username: "Cherry",
                     usernameStyle: a,
@@ -60,7 +60,7 @@ function M() {
                 defaultColor: P.TGz,
                 colors: G.Oz,
                 value: e.primary_color,
-                secondaryValue: e.secondary_color ?? void 0,
+                gradientColors: null != e.secondary_color ? [e.primary_color, e.secondary_color] : void 0,
                 onChange: (a) => s({ ...e, primary_color: a }),
                 onChangeGradientColors: (e) => s({ primary_color: e[0], secondary_color: e[1], tertiary_color: null }),
                 isGradient: !0,
@@ -78,28 +78,28 @@ function T(e) {
         children: [
             (0, l.jsx)("div", {
                 className: D.zC,
-                children: (0, l.jsx)(I.V, {
+                children: (0, l.jsx)(b.V, {
                     avatar: y.A,
                     username: "Roka",
                     usernameStyle: { color: "var(--brand-400)" },
                     message: S.intl.string(S.t["6OSasb"]),
-                    decorations: (0, l.jsx)(_.M, { guildId: s, tag: "GGEZ", badge: a }),
+                    decorations: (0, l.jsx)(I.M, { guildId: s, tag: "GGEZ", badge: a }),
                 }),
             }),
-            (0, l.jsx)(b.y, { selectedBadge: a, onBadgeClicked: r, badgeCollection: t }),
+            (0, l.jsx)(_.y, { selectedBadge: a, onBadgeClicked: r, badgeCollection: t }),
         ],
     });
 }
 var O = a(975571),
-    V = a(853513),
-    B = a(182184);
+    B = a(853513),
+    V = a(182184);
 function R(e) {
     let { powerup: s } = e;
     return s.skuId === t.FB
         ? (0, l.jsx)(h.E, {
-              className: B.C,
+              className: V.C,
               variant: "text-sm/medium",
-              children: S.intl.format(V.default.fXE30d, { helpDeskArticle: O.A.getArticleURL(P.MVz.GUILD_VANITY_URL) }),
+              children: S.intl.format(B.default.fXE30d, { helpDeskArticle: O.A.getArticleURL(P.MVz.GUILD_VANITY_URL) }),
           })
         : null;
 }
@@ -124,7 +124,7 @@ function Y(e) {
     let j = d || c;
     return r
         ? (0, l.jsx)($.u, {
-              body: S.intl.formatToPlainString(V.default["5HQUzD"], { boostCount: a.cost }),
+              body: S.intl.formatToPlainString(B.default["5HQUzD"], { boostCount: a.cost }),
               shouldShow: null == h,
               children: (0, l.jsx)(H.$, {
                   variant: "secondary",
@@ -279,7 +279,7 @@ function ed() {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 className: et.ed,
-                children: S.intl.string(V.default.u5iNbz),
+                children: S.intl.string(B.default.u5iNbz),
             }),
         ],
     });
@@ -303,11 +303,11 @@ function em(e) {
         }, [a, s]);
     (0, g.Z)(s, a, g.q.DETAIL);
     let w = (0, p.A)(s),
-        b = "refresh_expressive_cta" === (0, N.D)("GuildPowerupPerkModal"),
-        I = eo.wr[a.skuId],
-        _ = null != I ? eo.a8[I] : null,
+        _ = "refresh_expressive_cta" === (0, N.D)("GuildPowerupPerkModal"),
+        b = eo.wr[a.skuId],
+        I = null != b ? eo.a8[b] : null,
         A = (0, d.bG)([v.A], () => v.A.getStateForGuild(s)),
-        E = null != _ ? A?.allPowerups[_] : null;
+        E = null != I ? A?.allPowerups[I] : null;
     return a.skuId === t.d0
         ? (0, l.jsx)(o.EO, {
               "data-migration-pending": !0,
@@ -374,7 +374,7 @@ function em(e) {
                                   className: ec.oe,
                                   guildId: s,
                                   powerup: a,
-                                  expressiveCta: b,
+                                  expressiveCta: _,
                                   onClose: r.onClose,
                                   onError: k,
                               }),
@@ -419,7 +419,7 @@ function em(e) {
                                                       (0, l.jsx)(h.E, {
                                                           variant: "text-sm/medium",
                                                           color: "text-muted",
-                                                          children: S.intl.formatToPlainString(V.default.GMhQcE, {
+                                                          children: S.intl.formatToPlainString(B.default.GMhQcE, {
                                                               cooldownDays: a.deactivationCooldownPeriodDays,
                                                           }),
                                                       }),
@@ -429,7 +429,7 @@ function em(e) {
                                               (0, l.jsx)(h.E, {
                                                   className: ec.h_,
                                                   variant: "text-sm/normal",
-                                                  children: S.intl.formatToPlainString(V.default.NAFGkH, {
+                                                  children: S.intl.formatToPlainString(B.default.NAFGkH, {
                                                       level: E.title,
                                                   }),
                                               }),
@@ -446,7 +446,7 @@ function em(e) {
                                                   className: ec.qr,
                                                   guildId: s,
                                                   powerup: a,
-                                                  expressiveCta: b,
+                                                  expressiveCta: _,
                                                   onClose: r.onClose,
                                                   onError: k,
                                               }),

@@ -124,7 +124,7 @@
 }
 
 .showEffect_dfb989.container_dfb989 .gradient_dfb989 {
-    background: linear-gradient(to bottom right, var(--custom-display-name-styles-gradient-start-color) 10%, var(--custom-display-name-styles-gradient-end-color) 90%);
+    background: linear-gradient(to bottom right, var(--custom-display-name-styles-gradient-stops));
     background-clip: text;
     -webkit-background-clip: text;
     background-size: 100% auto;

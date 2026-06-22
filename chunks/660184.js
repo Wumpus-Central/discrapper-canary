@@ -17,7 +17,7 @@ var i = n(627968),
     m = n(310784),
     g = n.n(m),
     A = n(998304),
-    I = n(383197),
+    I = n(898985),
     T = n(824994),
     S = n(922301);
 let y = "--custom-display-name-styles-main-color";
@@ -95,7 +95,7 @@ let D = [l.x.CHERRY_BOMB, l.x.CHICLE],
                               ),
                     [t, s, a.minContrastRatio, i, n],
                 );
-            })({ displayNameStyles: U ? P : null, backgroundColor: G }).slice(0, 2);
+            })({ displayNameStyles: U ? P : null, backgroundColor: G });
         if (!U || null == P) return (0, i.jsxs)(i.Fragment, { children: [t, " ", w] });
         let H = (function (e, t) {
                 let { shouldWrap: n = !1, fontOpacity: i = 1 } =
@@ -105,13 +105,16 @@ let D = [l.x.CHERRY_BOMB, l.x.CHICLE],
                     case o.z.GRADIENT:
                     case o.z.GLOW:
                     case o.z.PRISM:
+                        var s;
                         r =
-                            0 === t.length
+                            0 === (s = t).length
                                 ? {}
                                 : {
-                                      "--custom-display-name-styles-gradient-start-color": t[0],
-                                      "--custom-display-name-styles-gradient-end-color": t.length > 1 ? t[1] : t[0],
-                                      [y]: t[0],
+                                      "--custom-display-name-styles-gradient-stops":
+                                          1 === s.length
+                                              ? `${s[0]}, ${s[0]}`
+                                              : s.map((e, t) => `${e} ${10 + (80 * t) / (s.length - 1)}%`).join(", "),
+                                      [y]: s[0],
                                   };
                         break;
                     case o.z.GUMMY:
