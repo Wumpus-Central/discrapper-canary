@@ -1,11 +1,13 @@
 "use strict";
 n.d(t, {
+    CN: () => V,
     Fv: () => _,
     GU: () => b,
     LX: () => c,
     Mu: () => v,
     Ot: () => f,
     P4: () => h,
+    SC: () => B,
     T2: () => U,
     U_: () => y,
     V0: () => A,
@@ -14,7 +16,7 @@ n.d(t, {
     YM: () => x,
     cM: () => L,
     dV: () => P,
-    gC: () => V,
+    gC: () => j,
     iJ: () => k,
     kd: () => g,
     l_: () => I,
@@ -73,8 +75,10 @@ let f = "alt+c",
 u.A.Millis.DAY;
 let U = 20,
     G = 1,
-    F = 50;
-var V =
+    F = 50,
+    V = 0x3c0000000,
+    B = ".autoclip-cache";
+var j =
     (((o = {}).ALL = ":all"),
     (o.APPLICATION = ":application"),
     (o.VOICE = ":voice"),
