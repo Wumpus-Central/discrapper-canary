@@ -20,5 +20,6 @@
 
 .offerNoticeTimeRemaining__8d3f5 {
     flex-shrink: 0;
+    margin-inline-start: auto;
     text-align: end
 }

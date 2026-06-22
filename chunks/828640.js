@@ -378,6 +378,7 @@ let j = {
                                             lightThemeLogoAssetId: null,
                                             pages: [{ title: "Shop", skuIds: [f], sections: [], leaderboard: null }],
                                             assets: {},
+                                            promotions: {},
                                         },
                                     });
                             }, []),
@@ -580,6 +581,7 @@ let j = {
                                                         { title: "Shop", skuIds: t, sections: [], leaderboard: null },
                                                     ],
                                                     assets: {},
+                                                    promotions: {},
                                                 },
                                             });
                                     }, [u, a, t]),
