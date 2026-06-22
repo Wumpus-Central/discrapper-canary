@@ -6,6 +6,7 @@ _.exports = {
     x7: "voiceSummaryContainer__71961",
     zc: "iconContainer__71961",
     Gt: "gameIcon__71961",
+    bN: "gameProfileIcon__71961 gameIcon__71961",
     D0: "gameIconSize__71961",
     Kk: "icon__71961",
     UU: "name__71961",

@@ -47,6 +47,7 @@ class N {
     _voiceChannelResults = [];
     _guildResults = [];
     _applicationResults = [];
+    _gameProfileResults = [];
     _linkResults = [];
     _inAppNavigations = [];
     _asyncTimeout;
@@ -79,6 +80,7 @@ class N {
             this._voiceChannelResults.length > this._limit && (this._voiceChannelResults.length = this._limit),
             this._guildResults.length > this._limit && (this._guildResults.length = this._limit),
             this._applicationResults.length > this._limit && (this._applicationResults.length = this._limit),
+            this._gameProfileResults.length > this._limit && (this._gameProfileResults.length = this._limit),
             this._linkResults.length > this._limit && (this._linkResults.length = this._limit),
             this._inAppNavigations.length > this._limit && (this._inAppNavigations.length = this._limit);
     }
@@ -93,6 +95,7 @@ class N {
             (this._voiceChannelResults = this._include(S.rD.VOICE_CHANNEL) ? this._voiceChannelResults : []),
             (this._guildResults = this._include(S.rD.GUILD) ? this._guildResults : []),
             (this._applicationResults = this._include(S.rD.APPLICATION) ? this._applicationResults : []),
+            (this._gameProfileResults = this._include(S.rD.GAME_PROFILE) ? this._gameProfileResults : []),
             (this._linkResults = this._include(S.rD.LINK) ? this._linkResults : []),
             (this._inAppNavigations = this._include(S.rD.IN_APP_NAVIGATION) ? this._inAppNavigations : []);
     }
@@ -125,6 +128,7 @@ class N {
                     this._voiceChannelResults,
                     this._guildResults,
                     this._applicationResults,
+                    this._gameProfileResults,
                     this._linkResults,
                     this._inAppNavigations,
                 ].filter((e) => e.length > 0).length
@@ -146,10 +150,15 @@ class N {
                     ? (this._guildResults = this.queryGuilds(e, this._refetchForSingleCategoryLimit))
                     : this._applicationResults.length > 0
                       ? (this._applicationResults = this.queryApplications(e, this._refetchForSingleCategoryLimit))
-                      : this._linkResults.length > 0
-                        ? (this._linkResults = this.queryLink(e, this._refetchForSingleCategoryLimit))
-                        : this._inAppNavigations.length > 0 &&
-                          (this._inAppNavigations = this.queryInAppNavigations(e, this._refetchForSingleCategoryLimit));
+                      : this._gameProfileResults.length > 0
+                        ? (this._gameProfileResults = this.queryGameProfiles(e, this._refetchForSingleCategoryLimit))
+                        : this._linkResults.length > 0
+                          ? (this._linkResults = this.queryLink(e, this._refetchForSingleCategoryLimit))
+                          : this._inAppNavigations.length > 0 &&
+                            (this._inAppNavigations = this.queryInAppNavigations(
+                                e,
+                                this._refetchForSingleCategoryLimit,
+                            ));
     }
     search(e, t) {
         if (((this.query = e), (this._refetched = !1), "" === e.trim())) {
@@ -163,6 +172,7 @@ class N {
                 (this._voiceChannelResults = this.queryVoiceChannels(e, this._limit)),
                 (this._guildResults = this.queryGuilds(e, this._limit)),
                 (this._applicationResults = this.queryApplications(e, this._limit)),
+                (this._gameProfileResults = this.queryGameProfiles(e, this._limit)),
                 (this._linkResults = this.queryLink(e, this._limit)),
                 (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)),
                 this._isAsyncSearch()
@@ -180,6 +190,7 @@ class N {
             (this._voiceChannelResults = []),
             (this._guildResults = []),
             (this._applicationResults = []),
+            (this._gameProfileResults = []),
             (this._linkResults = []),
             (this._inAppNavigations = []);
     }
@@ -263,6 +274,18 @@ class N {
     queryApplications(e, t) {
         return this._include(S.rD.APPLICATION) ? m.Ay.queryApplications({ query: e, limit: t, fuzzy: !0 }) : [];
     }
+    queryGameProfiles(e, t) {
+        if (!this._include(S.rD.GAME_PROFILE)) return [];
+        let n = m.Ay.queryGames(e, t),
+            i = e.toLocaleLowerCase();
+        return n.map((e, t) => ({
+            type: S.rD.GAME_PROFILE,
+            record: e,
+            score: (0, m.zy)((0, m.XA)(e.name, i, t)),
+            comparator: e.name,
+            sortable: e.name.toLocaleLowerCase(),
+        }));
+    }
     queryLink(e, t) {
         let n;
         if (!this._include(S.rD.LINK)) return [];
@@ -304,6 +327,7 @@ class N {
                 ...this._textChannelResults,
                 ...this._voiceChannelResults,
                 ...this._guildResults,
+                ...this._gameProfileResults,
                 ...this._linkResults,
                 ...this._inAppNavigations,
             ])

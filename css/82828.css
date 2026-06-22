@@ -71,6 +71,10 @@
     flex-shrink: 0
 }
 
+.gameProfileIcon__71961 {
+    --custom-game-icon-border-radius: 2px
+}
+
 .gameIconSize__71961 {
     height: 20px;
     width: 20px

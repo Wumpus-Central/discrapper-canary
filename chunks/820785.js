@@ -1,5 +1,15 @@
 "use strict";
-n.d(t, { KJ: () => j, N_: () => W, vw: () => K, lg: () => H, nG: () => B, c3: () => V, OS: () => F, Y9: () => Y });
+n.d(t, {
+    KJ: () => j,
+    N_: () => K,
+    vw: () => $,
+    lg: () => H,
+    nG: () => B,
+    c3: () => V,
+    OS: () => F,
+    Y9: () => W,
+    IH: () => Y,
+});
 var i = n(627968),
     r = n(64700),
     s = n(939249),
@@ -124,10 +134,13 @@ class F extends r.Component {
         });
     }
     renderName() {
-        let { guild: e } = this.props;
-        return (0, i.jsx)("div", {
+        let { guild: e, inlineLabel: t } = this.props;
+        return (0, i.jsxs)("div", {
             className: U.UU,
-            children: (0, i.jsx)("span", { className: U.YW, children: e.name }),
+            children: [
+                (0, i.jsx)("span", { className: U.YW, children: e.name }),
+                null != t ? (0, i.jsx)("span", { className: U.N4, children: t }) : null,
+            ],
         });
     }
     renderContent() {
@@ -377,7 +390,34 @@ class H extends r.Component {
         });
     }
 }
-class Y extends r.Component {
+function Y(e) {
+    let { game: t, onMouseEnter: n, onClick: r, onFocus: s, focused: a, id: o, inlineLabel: l, children: u } = e;
+    return (0, i.jsx)(G, {
+        id: o,
+        onMouseEnter: n,
+        onClick: r,
+        onFocus: s,
+        focused: a,
+        children: (0, i.jsxs)("div", {
+            className: U.xr,
+            children: [
+                (0, i.jsx)("div", {
+                    className: U.zc,
+                    children: (0, i.jsx)(b.A, { tabIndex: -1, className: U.bN, game: t, size: U.D0 }),
+                }),
+                (0, i.jsxs)("div", {
+                    className: U.UU,
+                    children: [
+                        (0, i.jsx)("span", { className: U.YW, children: t.name }),
+                        null != l ? (0, i.jsx)("span", { className: U.N4, children: l }) : null,
+                    ],
+                }),
+                (0, i.jsx)("div", { className: U.Lr, children: u }),
+            ],
+        }),
+    });
+}
+class W extends r.Component {
     render() {
         return (0, i.jsx)("div", {
             className: U.__invalid_resultDefault,
@@ -388,7 +428,7 @@ class Y extends r.Component {
         });
     }
 }
-class W extends r.Component {
+class K extends r.Component {
     renderContent() {
         let e,
             t,
@@ -426,7 +466,7 @@ class W extends r.Component {
         });
     }
 }
-class K extends r.Component {
+class $ extends r.Component {
     renderContent() {
         let e,
             t,

@@ -85,6 +85,7 @@ var i,
         (r.InAppBrowserReturn = "in_app_browser_return"),
         (r.Deeplink = "deeplink"),
         (r.DmHeaderActivity = "dm_header_activity"),
+        (r.QuickSwitcher = "quick_switcher"),
         r),
     h = (((s = {}).FullProfile = "full_profile"), (s.MiniProfile = "mini_profile"), s);
 let f = () => (0, a.A)(),

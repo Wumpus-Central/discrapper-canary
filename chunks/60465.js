@@ -1,24 +1,25 @@
-n.d(t, { A: () => c });
-var l = n(627968),
-    a = n(284009),
-    i = n.n(a),
-    r = n(192308),
+"use strict";
+n.d(t, { A: () => u });
+var i = n(627968),
+    r = n(284009),
+    s = n.n(r),
+    a = n(192308),
     o = n(228366);
-function u(e) {
+function l(e) {
     o.h.dispatch({ type: "GAME_PROFILE_CLEAR_PENDING_RETURN", gameId: e });
 }
-let c = {
+let u = {
     openGameProfileModal: function (e) {
-        let { gameId: t, gameProfileModalChecks: a, source: o, sourceUserId: u, appContext: c } = e;
-        i()(
-            a.shouldOpenGameProfile,
+        let { gameId: t, gameProfileModalChecks: r, source: o, sourceUserId: l, appContext: u } = e;
+        s()(
+            r.shouldOpenGameProfile,
             "Passed a false value for [gameProfileModalChecks]. Are you using the useShouldOpenGameProfile hook correctly?",
         ),
-            i()(
-                a.gameId === t,
+            s()(
+                r.gameId === t,
                 "Passed an unexpected [gameId]. Are you passing a different one than you passed to useShouldOpenGameProfileModal?",
             ),
-            (0, r.openModalLazy)(
+            (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
                         n.e("56762"),
@@ -232,8 +233,10 @@ let c = {
                         n.e("23353"),
                         n.e("18943"),
                         n.e("7167"),
+                        n.e("62875"),
                         n.e("9233"),
                         n.e("25279"),
+                        n.e("39810"),
                         n.e("87306"),
                         n.e("92789"),
                         n.e("57598"),
@@ -305,8 +308,8 @@ let c = {
                         n.e("88559"),
                         n.e("21132"),
                         n.e("21825"),
-                        n.e("25637"),
                         n.e("60177"),
+                        n.e("25637"),
                         n.e("39665"),
                         n.e("23532"),
                         n.e("18441"),
@@ -384,15 +387,15 @@ let c = {
                         n.e("83295"),
                         n.e("99215"),
                     ]).then(n.bind(n, 252046));
-                    return (n) => (0, l.jsx)(e, { gameId: t, source: o, sourceUserId: u, ...n, appContext: c });
+                    return (n) => (0, i.jsx)(e, { gameId: t, source: o, sourceUserId: l, ...n, appContext: u });
                 },
-                { contextKey: null != c ? (0, r.modalContextFromAppContext)(c) : void 0 },
+                { contextKey: null != u ? (0, a.modalContextFromAppContext)(u) : void 0 },
             );
     },
     returnToGameProfile: function (e) {
-        let { gameId: t, source: a, initialScrollOffset: i } = e;
-        u(t),
-            (0, r.openModalLazy)(async () => {
+        let { gameId: t, source: r, initialScrollOffset: s } = e;
+        l(t),
+            (0, a.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
                     n.e("56762"),
                     n.e("79070"),
@@ -605,8 +608,10 @@ let c = {
                     n.e("23353"),
                     n.e("18943"),
                     n.e("7167"),
+                    n.e("62875"),
                     n.e("9233"),
                     n.e("25279"),
+                    n.e("39810"),
                     n.e("87306"),
                     n.e("92789"),
                     n.e("57598"),
@@ -678,8 +683,8 @@ let c = {
                     n.e("88559"),
                     n.e("21132"),
                     n.e("21825"),
-                    n.e("25637"),
                     n.e("60177"),
+                    n.e("25637"),
                     n.e("39665"),
                     n.e("23532"),
                     n.e("18441"),
@@ -757,12 +762,12 @@ let c = {
                     n.e("83295"),
                     n.e("99215"),
                 ]).then(n.bind(n, 252046));
-                return (n) => (0, l.jsx)(e, { gameId: t, source: a, initialScrollOffset: i, ...n });
+                return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: s, ...n });
             });
     },
     setGameProfilePendingReturn: function (e) {
-        let { gameId: t, channelId: n, initialScrollOffset: l } = e;
-        o.h.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId: t, channelId: n, initialScrollOffset: l });
+        let { gameId: t, channelId: n, initialScrollOffset: i } = e;
+        o.h.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId: t, channelId: n, initialScrollOffset: i });
     },
-    clearGameProfilePendingReturn: u,
+    clearGameProfilePendingReturn: l,
 };
