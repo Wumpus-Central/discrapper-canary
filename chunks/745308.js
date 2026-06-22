@@ -1,4 +1,4 @@
-l.d(t, { A: () => p });
+l.d(t, { A: () => g });
 var r = l(627968),
     n = l(64700),
     a = l(841702),
@@ -7,63 +7,64 @@ var r = l(627968),
     c = l(67480),
     d = l(564064),
     o = l(590180),
-    u = l(652215),
-    h = l(217109);
-let m = (e) => {
+    u = l(758836),
+    h = l(652215),
+    m = l(217109);
+let p = (e) => {
         let t,
             l,
-            m,
+            p,
             {
-                skuIds: p = [],
-                skuBlock: g = "ShopProductCard",
-                skuBlockProps: E,
-                sortPurchased: f = !1,
-                showSkeleton: A = !1,
-                componentMap: v,
-                pagedSkuIds: x,
-                page: T,
-                perPage: S,
-                truncate: y,
+                skuIds: g = [],
+                skuBlock: E = "ShopProductCard",
+                skuBlockProps: f,
+                sortPurchased: A = !1,
+                showSkeleton: v = !1,
+                componentMap: x,
+                pagedSkuIds: T,
+                page: S,
+                perPage: y,
+                truncate: j,
             } = e,
-            j =
-                ((t = (0, i.yK)([c.A], () => p.map((e) => c.A.get(e)))),
-                (l = (0, i.yK)([o.A], () => p.map((e) => o.A.getProduct(e)))),
-                (m = (0, i.yK)([o.A], () => p.map((e) => o.A.getProductFetch(e)))),
+            _ =
+                ((t = (0, i.yK)([c.A], () => g.map((e) => c.A.get(e)))),
+                (l = (0, i.yK)([o.A], () => g.map((e) => o.A.getProduct(e)))),
+                (p = (0, i.yK)([o.A], () => g.map((e) => o.A.getProductFetch(e)))),
                 (0, n.useEffect)(() => {
                     let e = Date.now();
-                    for (let [r, n] of p.entries()) {
+                    for (let [r, n] of g.entries()) {
                         let a = t[r],
                             i = l[r],
-                            c = m[r],
+                            c = p[r],
                             o = i?.type === s.R.BUNDLE && 0 === i.items.length,
-                            h = c?.state === "error" && null != c.endedAt && e - c.endedAt < 36e5;
+                            m = c?.state === "error" && null != c.endedAt && e - c.endedAt < u.Gj;
                         (null == i || o) &&
-                            (null == a || a.productLine === u.EZt.COLLECTIBLES) &&
+                            (null == a || a.productLine === h.EZt.COLLECTIBLES) &&
                             c?.state !== "fetching" &&
-                            !h &&
+                            !m &&
                             (0, d.Jp)(n, { includeBundles: !0 });
                     }
-                }, [p, t, m, l, !0]),
-                l.some((e, t) => m[t]?.state === "fetching" || (null == e && m[t]?.state !== "error"))),
-            { purchases: _, isFetching: C } = (0, a.b5)(),
-            L = (0, n.useMemo)(() => {
-                if (!f) return x;
-                let e = [...p].sort((e, t) => (null != _.get(e)) - (null != _.get(t)));
-                return (0, h.oP)(e, T, S, y);
-            }, [p, x, f, _, T, S, y]),
-            b = v[g],
-            k = v.Skeleton;
-        return null == b
+                }, [g, t, p, l, !0]),
+                l.some((e, t) => p[t]?.state === "fetching" || (null == e && p[t]?.state !== "error"))),
+            { purchases: C, isFetching: L } = (0, a.b5)(),
+            b = (0, n.useMemo)(() => {
+                if (!A) return T;
+                let e = [...g].sort((e, t) => (null != C.get(e)) - (null != C.get(t)));
+                return (0, m.oP)(e, S, y, j);
+            }, [g, T, A, C, S, y, j]),
+            k = x[E],
+            I = x.Skeleton;
+        return null == k
             ? null
-            : (j || (f && C)) && A
-              ? L.map((e, t) =>
-                    null != k
-                        ? (0, r.jsx)(k, { children: (0, r.jsx)(b, { ...E, skuId: e, productId: e }) }, `${e}-${t}`)
+            : (_ || (A && L)) && v
+              ? b.map((e, t) =>
+                    null != I
+                        ? (0, r.jsx)(I, { children: (0, r.jsx)(k, { ...f, skuId: e, productId: e }) }, `${e}-${t}`)
                         : null,
                 )
-              : L.map((e, t) => (0, r.jsx)(b, { ...E, skuId: e, productId: e }, `${e}-${t}`));
+              : b.map((e, t) => (0, r.jsx)(k, { ...f, skuId: e, productId: e }, `${e}-${t}`));
     },
-    p = (e) => {
+    g = (e) => {
         let {
                 skuIds: t = [],
                 skuBlock: l = "ShopProductCard",
@@ -74,8 +75,8 @@ let m = (e) => {
                 componentMap: d,
                 paginationOptions: o,
             } = e,
-            u = (0, h.JZ)(),
-            p = o ?? u,
+            u = (0, m.JZ)(),
+            h = o ?? u,
             g = n.useRef(null),
             {
                 page: E,
@@ -86,12 +87,12 @@ let m = (e) => {
                 truncate: T,
                 perPage: S,
                 setPage: y,
-            } = (0, h.Wk)(t.length, p, g),
-            j = (0, n.useMemo)(() => (0, h.oP)(t, A ? E : void 0, S, T), [t, A, E, S, T]),
+            } = (0, m.Wk)(t.length, h, g),
+            j = (0, n.useMemo)(() => (0, m.oP)(t, A ? E : void 0, S, T), [t, A, E, S, T]),
             _ = v && "top" === x,
             C = v && "bottom" === x,
             L =
-                null != p
+                null != h
                     ? (0, r.jsx)("div", {
                           ref: g,
                           "aria-hidden": "true",
@@ -102,8 +103,8 @@ let m = (e) => {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     L,
-                    _ && (0, r.jsx)(h.hi, { page: E, pages: f, setPage: y }),
-                    (0, r.jsx)(m, {
+                    _ && (0, r.jsx)(m.hi, { page: E, pages: f, setPage: y }),
+                    (0, r.jsx)(p, {
                         skuIds: t,
                         skuBlock: l,
                         skuBlockProps: a,
@@ -115,7 +116,7 @@ let m = (e) => {
                         perPage: A ? S : void 0,
                         truncate: T,
                     }),
-                    C && (0, r.jsx)(h.hi, { page: E, pages: f, setPage: y }),
+                    C && (0, r.jsx)(m.hi, { page: E, pages: f, setPage: y }),
                 ],
             });
         let b = d[l];
@@ -124,9 +125,9 @@ let m = (e) => {
             : (0, r.jsxs)(r.Fragment, {
                   children: [
                       L,
-                      _ && (0, r.jsx)(h.hi, { page: E, pages: f, setPage: y }),
+                      _ && (0, r.jsx)(m.hi, { page: E, pages: f, setPage: y }),
                       j.map((e, t) => (0, r.jsx)(b, { ...a, skuId: e, productId: e }, `${e}-${t}`)),
-                      C && (0, r.jsx)(h.hi, { page: E, pages: f, setPage: y }),
+                      C && (0, r.jsx)(m.hi, { page: E, pages: f, setPage: y }),
                   ],
               });
     };

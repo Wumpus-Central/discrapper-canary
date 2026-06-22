@@ -1036,10 +1036,10 @@ let W = {
         appViewed() {
             (0, E.isDesktop)() && (performance.mark("app_viewed"), this.sendIPC(c.APP_VIEWED));
         },
-        appFirstRenderAfterReadyPayload() {
+        appFirstRenderAfterReadyPayload(e) {
             (0, E.isDesktop)() &&
                 (performance.mark("app_first_render_after_ready_payload"),
-                this.sendIPC(c.APP_FIRST_RENDER_AFTER_READY_PAYLOAD));
+                this.sendIPC(c.APP_FIRST_RENDER_AFTER_READY_PAYLOAD, e));
         },
         appLoaded() {
             Y(c.APP_LOADED);

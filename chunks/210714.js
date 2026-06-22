@@ -1,23 +1,24 @@
 "use strict";
-n.d(t, { D: () => f, d: () => h });
+n.d(t, { D: () => p, d: () => f });
 var i = n(835245),
     r = n(77729),
     s = n(824579),
     a = n(174459),
-    o = n(19575),
-    l = n(464578),
-    u = n(652215);
-function c() {
+    o = n(612181),
+    l = n(19575),
+    u = n(464578),
+    c = n(652215);
+function d() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
-class d {
+class _ {
     loadId = (0, i.A)();
     appUIViewed = !1;
     trackEvent(e) {
         let t = Date.now();
         requestIdleCallback(() => {
             let n, i;
-            a.default.track(u.HAw.APP_UI_VIEWED, {
+            a.default.track(c.HAw.APP_UI_VIEWED, {
                 ...(function () {
                     let e = "--campaign-id=";
                     for (let t of r.A?.processUtils?.getMainArgvSync?.() ?? [])
@@ -65,8 +66,8 @@ class d {
                 n ? i : {}),
                 load_id: this.loadId,
                 screen_name: e,
-                duration_ms_since_app_opened: t - c(),
-                app_hardware_acceleration_enabled: o.Ay.getEnableHardwareAcceleration(),
+                duration_ms_since_app_opened: t - d(),
+                app_hardware_acceleration_enabled: l.Ay.getEnableHardwareAcceleration(),
             });
         });
     }
@@ -76,12 +77,12 @@ class d {
         let e = window.location?.pathname,
             t = e?.startsWith("/channels/@me") ? "channels/@me" : e?.split("/")?.[1];
         requestIdleCallback(() => {
-            let e = c();
-            l.A.firstRenderAfterReadyPayload.record();
-            let n = l.A.serializeWebPerfStartupMetrics(e);
-            a.default.track(u.HAw.APP_WEB_PERF_STARTUP_METRICS, { load_id: this.loadId, url_root_path: t, ...n });
+            let e = d();
+            u.A.firstRenderAfterReadyPayload.record();
+            let n = u.A.serializeWebPerfStartupMetrics(e);
+            a.default.track(c.HAw.APP_WEB_PERF_STARTUP_METRICS, { load_id: this.loadId, url_root_path: t, ...n });
             try {
-                o.Ay.appFirstRenderAfterReadyPayload();
+                l.Ay.appFirstRenderAfterReadyPayload((0, o.wR)());
             } catch (e) {}
             (0, s.K)();
         });
@@ -90,16 +91,16 @@ class d {
         if (!this.appUIViewed) {
             performance.mark(`trackAppUIViewed-${e}`), this.trackEvent(e);
             try {
-                o.Ay.appViewed();
+                l.Ay.appViewed();
             } catch (e) {}
             this.appUIViewed = !0;
         }
     }
 }
-let _ = new d();
-function h(e) {
-    _.trackAppUIViewed(e);
+let h = new _();
+function f(e) {
+    h.trackAppUIViewed(e);
 }
-function f() {
-    _.trackTTI();
+function p() {
+    h.trackTTI();
 }
