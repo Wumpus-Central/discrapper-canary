@@ -22,7 +22,7 @@ let E = (0, p.mj)({
 var m = n(505124),
     g = n(43990);
 n(938796);
-var A = n(922139),
+var A = n(308186),
     I = n(665260),
     T = n(459192),
     S = n(922016),
@@ -268,10 +268,7 @@ function ei(e) {
               inert: u,
               style: {
                   opacity: (0, A.to)(t.to({ range: [0.5, 1], output: [0, 1] }), (e) => (u ? 0 : `${e}`)),
-                  transform: (0, A.to)(
-                      [t.to({ range: [0, 1], output: [96, 0] })],
-                      (e) => `translateY(${e}px) translateX(-50%)`,
-                  ),
+                  transform: (0, A.to)([t.to({ range: [0, 1], output: [96, 0] })], (e) => `translateY(${e}px)`),
               },
               children: h.map((e) => (0, i.jsx)(er, { message: e, durationSeconds: r }, e.id)),
           });
