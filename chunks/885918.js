@@ -1,25 +1,28 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => m });
 var i = n(975975),
     r = n.n(i),
     s = n(762230),
-    a = n(720149),
-    o = n(596720),
-    l = n(451909),
-    u = n(734057),
-    c = n(576705),
-    d = n(513480),
-    _ = n(381941);
-let h = {
+    a = n(665260),
+    o = n(493336),
+    l = n(596720),
+    u = n(451909),
+    c = n(677413),
+    d = n(734057),
+    _ = n(576705),
+    h = n(513480),
+    f = n(652215),
+    p = n(381941);
+let E = {
         async sendForward(e, t, n) {
-            let i = u.A.getChannel(t),
-                r = u.A.getChannel(e.channel_id),
-                h = n?.isICYMIGameContentForwarding ? o.VL : r?.guild_id;
-            if (null == r && null == h) throw Error("Unable to find original channel for message");
+            let i = d.A.getChannel(t),
+                r = d.A.getChannel(e.channel_id),
+                E = n?.isICYMIGameContentForwarding ? l.VL : r?.guild_id;
+            if (null == r && null == E) throw Error("Unable to find original channel for message");
             if (null == i) throw Error("Unable to find destination channel for message");
-            let f = l.Ay.parse(i, ""),
-                p = {
-                    guild_id: h,
+            let m = u.Ay.parse(i, ""),
+                g = {
+                    guild_id: E,
                     channel_id: e.channel_id,
                     message_id: e.id,
                     type: s.S.FORWARD,
@@ -27,12 +30,24 @@ let h = {
                         n?.onlyAttachmentIds != null || n?.onlyEmbedIndices != null
                             ? { attachment_ids: n.onlyAttachmentIds, embed_indices: n.onlyEmbedIndices }
                             : void 0,
-                };
-            await a.A.sendMessage(i.id, f, !1, { messageReference: p, location: _.Hx.FORWARDING, eagerDispatch: !1 }),
-                n?.withMessage == null ||
-                    (0, d.lP)(i, c.A) ||
-                    (await a.A.sendMessage(i.id, l.Ay.parse(i, n.withMessage), !1, { location: _.Hx.FORWARDING }));
+                },
+                A = 0,
+                I = n?.withMessage;
+            if (null != I) {
+                let [e, t] = (0, c.A)(I);
+                e && ((I = t), (A = (0, a.UI)(A, f.pr7.SUPPRESS_NOTIFICATIONS)));
+            }
+            await o.A.sendMessage(i.id, m, !1, {
+                messageReference: g,
+                location: p.Hx.FORWARDING,
+                eagerDispatch: !1,
+                flags: A,
+            }),
+                null == I ||
+                    "" === I ||
+                    (0, h.lP)(i, _.A) ||
+                    (await o.A.sendMessage(i.id, u.Ay.parse(i, I), !1, { location: p.Hx.FORWARDING, flags: A }));
         },
-        sendForwards: (e, t, n) => r()(t.map((t) => h.sendForward(e, t, n))),
+        sendForwards: (e, t, n) => r()(t.map((t) => E.sendForward(e, t, n))),
     },
-    f = h;
+    m = E;
