@@ -1,40 +1,42 @@
-l.d(t, { A: () => B });
+l.d(t, { A: () => q });
 var n = l(627968),
     i = l(64700),
     C = l(111956),
     s = l.n(C),
     a = l(33851),
     r = l.n(a),
-    d = l(136722),
-    o = l(702841),
-    c = l(192308),
-    u = l(534514),
-    m = l(892547),
-    H = l(922016),
-    x = l(821609),
-    h = l(112173),
+    d = l(702841),
+    o = l(192308),
+    c = l(534514),
+    u = l(892547),
+    m = l(922016),
+    H = l(821609),
+    x = l(112173),
+    h = l(71393),
     g = l(576705),
-    f = l(504049),
-    j = l(151781),
-    p = l(221950),
-    V = l(735438),
-    v = l.n(V),
-    M = l(17928),
-    A = l(189213),
-    L = l(773812),
-    b = l(364522),
-    D = l(783878),
-    R = l(834730),
-    E = l(228366),
-    N = l(636537),
-    S = l(652215);
-let Z = {
+    f = l(287809),
+    j = l(504049),
+    p = l(134413),
+    V = l(151781),
+    v = l(221950),
+    A = l(735438),
+    M = l.n(A),
+    L = l(17928),
+    b = l(189213),
+    D = l(773812),
+    R = l(364522),
+    E = l(783878),
+    N = l(834730),
+    S = l(228366),
+    Z = l(636537),
+    I = l(652215);
+let y = {
     async updateEstimate(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
             l = arguments.length > 2 ? arguments[2] : void 0;
         return (
-            await N.Bo.get({
-                url: S.Rsh.GUILD_PRUNE(e),
+            await Z.Bo.get({
+                url: I.Rsh.GUILD_PRUNE(e),
                 query: { days: t, include_roles: l },
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -44,31 +46,31 @@ let Z = {
     async updateEstimateV2(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 7,
             l = arguments.length > 2 ? arguments[2] : void 0;
-        await N.Bo.get({
-            url: S.Rsh.GUILD_PRUNE_V2(e),
+        await Z.Bo.get({
+            url: I.Rsh.GUILD_PRUNE_V2(e),
             query: { days: t, include_roles: l },
             oldFormErrors: !0,
             rejectWithError: !1,
         });
     },
     prune: (e, t, l) =>
-        N.Bo.post({
-            url: S.Rsh.GUILD_PRUNE(e),
+        Z.Bo.post({
+            url: I.Rsh.GUILD_PRUNE(e),
             body: { days: t, compute_prune_count: !1, include_roles: l },
             oldFormErrors: !0,
             rejectWithError: !1,
         }),
 };
-var I = l(34457),
-    y = l(317525);
-function _(e, t, l) {
+var _ = l(34457),
+    w = l(317525);
+function U(e, t, l) {
     let n = [...l].sort().join(",");
     return `${e}:${t}:${n}`;
 }
-let w = (0, l(353640).v)((e) => ({
+let T = (0, l(353640).v)((e) => ({
     entries: {},
     setPreview(t, l, n, i, C) {
-        let s = _(t, l, n);
+        let s = U(t, l, n);
         e((e) => {
             let t = { ...e.entries },
                 l = {},
@@ -86,9 +88,9 @@ let w = (0, l(353640).v)((e) => ({
         e({ entries: {} });
     },
 }));
-var U = l(375708),
-    T = l(104514);
-let k = (e) => {
+var k = l(375708),
+    O = l(104514);
+function F(e) {
     var t;
     let l,
         { guild: C, transitionState: s, onClose: a } = e,
@@ -96,8 +98,8 @@ let k = (e) => {
         [o, c] = i.useState([]),
         { count: u, isLoading: m } =
             ((t = C.id),
-            (l = w((e) => {
-                let l = _(t, r, o),
+            (l = T((e) => {
+                let l = U(t, r, o),
                     n = e.entries[l];
                 return null != n && Date.now() - n.cachedAt < 36e5 ? n : null;
             })),
@@ -109,173 +111,185 @@ let k = (e) => {
             let n = e.prune.days,
                 i = e.prune.includeRoles,
                 s = Number(e.prune.pruneCount);
-            (t = e.guildId), (l = e.prune.isFinished), w.getState().setPreview(t, n, i, s, l);
+            (t = e.guildId), (l = e.prune.isFinished), T.getState().setPreview(t, n, i, s, l);
         };
         return (
-            E.h.subscribe("GUILD_PRUNE_UPDATE", e),
+            S.h.subscribe("GUILD_PRUNE_UPDATE", e),
             () => {
-                E.h.unsubscribe("GUILD_PRUNE_UPDATE", e);
+                S.h.unsubscribe("GUILD_PRUNE_UPDATE", e);
             }
         );
     }, [C.id, r, o]),
         i.useEffect(() => {
-            null == u && Z.updateEstimateV2(C.id, r, o);
+            null == u && y.updateEstimateV2(C.id, r, o);
         }, [C.id, r, o, u]);
     let H = i.useCallback(() => {
-            Z.prune(C.id, r, o), a(), w.getState().clear();
+            y.prune(C.id, r, o), a(), T.getState().clear();
         }, [C.id, r, o, a]),
-        x = (0, M.yK)([g.A, y.A], () => {
+        x = (0, L.yK)([g.A, w.A], () => {
             let e = g.A.getHighestRole(C);
-            return v()(y.A.getSortedRoles(C.id))
-                .filter((t) => !(0, I.Oy)(t) && g.A.isRoleHigher(C, e, t))
+            return M()(w.A.getSortedRoles(C.id))
+                .filter((t) => !(0, _.Oy)(t) && g.A.isRoleHigher(C, e, t))
                 .map((e) => {
                     let { id: t, name: l } = e;
                     return { id: t, label: l, value: t };
                 })
                 .value();
         }, [C]);
-    return (0, n.jsx)(A.Modal, {
-        title: `${U.intl.string(U.t.zbyz7p)}\u{2014}${null != C ? C.name : ""}`,
+    return (0, n.jsx)(b.Modal, {
+        title: `${k.intl.string(k.t.zbyz7p)}\u{2014}${null != C ? C.name : ""}`,
         actions: [
-            { text: U.intl.string(U.t["ETE/oC"]), onClick: a, variant: "secondary" },
-            { text: U.intl.string(U.t["2mIlKQ"]), onClick: H },
+            { text: k.intl.string(k.t["ETE/oC"]), onClick: a, variant: "secondary" },
+            { text: k.intl.string(k.t["2mIlKQ"]), onClick: H },
         ],
         onClose: async () => {
             await a();
         },
         transitionState: s,
         children: (0, n.jsxs)("div", {
-            className: T.Q,
+            className: O.Q,
             children: [
-                (0, n.jsx)(L.z, {
-                    label: U.intl.string(U.t.YccTvK),
+                (0, n.jsx)(D.z, {
+                    label: k.intl.string(k.t.YccTvK),
                     value: String(r),
                     options: [
-                        { name: U.intl.formatToPlainString(U.t.FM1dHS, { days: 7 }), value: "7" },
-                        { name: U.intl.formatToPlainString(U.t.FM1dHS, { days: 30 }), value: "30" },
+                        { name: k.intl.formatToPlainString(k.t.FM1dHS, { days: 7 }), value: "7" },
+                        { name: k.intl.formatToPlainString(k.t.FM1dHS, { days: 30 }), value: "30" },
                     ],
                     onChange: (e) => {
                         d(Number(e));
                     },
                 }),
-                (0, n.jsx)(b.Ip, {
-                    className: T.X,
-                    children: (0, n.jsx)(D.Z, {
+                (0, n.jsx)(R.Ip, {
+                    className: O.X,
+                    children: (0, n.jsx)(E.Z, {
                         selectionMode: "multiple",
-                        label: U.intl.string(U.t.buoe17),
+                        label: k.intl.string(k.t.buoe17),
                         maxOptionsVisible: 10,
                         value: o,
                         onSelectionChange: (e) => c(e),
                         options: x,
                     }),
                 }),
-                (0, n.jsx)(R.E, {
+                (0, n.jsx)(N.E, {
                     variant: "text-sm/normal",
                     children:
                         o.length > 0
-                            ? U.intl.format(m ? U.t.xSDcLk : U.t["5WxHHp"], { members: u ?? -1, days: r })
-                            : U.intl.format(m ? U.t["98cHOp"] : U.t.f13az9, { members: u ?? -1, days: r }),
+                            ? k.intl.format(m ? k.t.xSDcLk : k.t["5WxHHp"], { members: u ?? -1, days: r })
+                            : k.intl.format(m ? k.t["98cHOp"] : k.t.f13az9, { members: u ?? -1, days: r }),
                 }),
             ],
         }),
     });
+}
+let G = function (e) {
+    return (0, L.bG)(
+        [h.A, g.A, f.default],
+        () => (0, p.dQ)(h.A.getGuild(e.guild.id) ?? e.guild, f.default.getCurrentUser(), g.A),
+        [e.guild],
+    )
+        ? (0, n.jsx)(F, { ...e })
+        : null;
 };
-var O = l(779662),
-    F = l(818348),
-    G = l(825706);
-let B = i.forwardRef(function (e, t) {
+var B = l(779662),
+    P = l(825706);
+let q = i.forwardRef(function (e, t) {
     let { guild: l } = e,
         C = i.useRef(null),
-        a = (0, o.bG)([j.A], () => j.A.hasDefaultSearchStateByGuildId(l.id), [l.id]),
-        V = (0, o.bG)([g.A], () => g.A.can(d.kg(F.xB.MANAGE_GUILD, F.xB.KICK_MEMBERS), l)),
-        v = i.useCallback(() => {
-            null != l && V && (0, c.openModalLazy)(async () => (e) => (0, n.jsx)(k, { ...e, guild: l }));
-        }, [l, V]),
-        M = (0, o.bG)([j.A], () => j.A.getSearchStateByGuildId(l.id), [l.id], r()),
-        A = (0, f.Ks)(l.id),
-        [L, b] = i.useState(M.query),
-        D = i.useCallback(
-            (e) => {
-                let t = e.trim();
-                t.length > 0 && A(), (0, p.Ld)(l.id, { query: t });
-            },
-            [l.id, A],
+        a = (0, d.bG)([V.A], () => V.A.hasDefaultSearchStateByGuildId(l.id), [l.id]),
+        A = (0, d.bG)(
+            [h.A, g.A, f.default],
+            () => (0, p.dQ)(h.A.getGuild(l.id) ?? l, f.default.getCurrentUser(), g.A),
+            [l],
         ),
-        R = i.useMemo(() => s()(D, 300), [D]),
+        M = i.useCallback(() => {
+            null != l && A && (0, o.openModalLazy)(async () => (e) => (0, n.jsx)(G, { ...e, guild: l }));
+        }, [l, A]),
+        L = (0, d.bG)([V.A], () => V.A.getSearchStateByGuildId(l.id), [l.id], r()),
+        b = (0, j.Ks)(l.id),
+        [D, R] = i.useState(L.query),
         E = i.useCallback(
             (e) => {
-                b(e), R(e);
+                let t = e.trim();
+                t.length > 0 && b(), (0, v.Ld)(l.id, { query: t });
             },
-            [R],
+            [l.id, b],
         ),
-        N = i.useCallback(() => {
-            b(""), D("");
-        }, [D]);
+        N = i.useMemo(() => s()(E, 300), [E]),
+        S = i.useCallback(
+            (e) => {
+                R(e), N(e);
+            },
+            [N],
+        ),
+        Z = i.useCallback(() => {
+            R(""), E("");
+        }, [E]);
     return (
         i.useImperativeHandle(t, () => ({
             resetSearchText() {
-                b("");
+                R("");
             },
         })),
         (0, n.jsxs)("div", {
-            className: G.db,
+            className: P.db,
             children: [
                 (0, n.jsx)("div", {
-                    className: G.wL,
+                    className: P.wL,
                     children: a
-                        ? (0, n.jsx)(u.D, { variant: "heading-md/medium", children: U.intl.string(U.t.y12ALM) })
-                        : (0, n.jsx)(u.D, { variant: "heading-md/medium", children: U.intl.string(U.t.BUqwK8) }),
+                        ? (0, n.jsx)(c.D, { variant: "heading-md/medium", children: k.intl.string(k.t.y12ALM) })
+                        : (0, n.jsx)(c.D, { variant: "heading-md/medium", children: k.intl.string(k.t.BUqwK8) }),
                 }),
                 (0, n.jsx)("div", {
-                    className: G.Rt,
+                    className: P.Rt,
                     children: (0, n.jsx)("div", {
-                        className: G.wL,
-                        children: (0, n.jsx)(m.I, {
+                        className: P.wL,
+                        children: (0, n.jsx)(u.I, {
                             size: "sm",
-                            query: L,
-                            placeholder: U.intl.string(U.t["NVoAM+"]),
-                            onChange: E,
-                            onClear: N,
+                            query: D,
+                            placeholder: k.intl.string(k.t["NVoAM+"]),
+                            onChange: S,
+                            onClear: Z,
                             autoComplete: "off",
                             inputProps: { autoCapitalize: "none", autoCorrect: "off", spellCheck: "false" },
                         }),
                     }),
                 }),
                 (0, n.jsx)("div", {
-                    children: (0, n.jsx)(H.Y, {
+                    children: (0, n.jsx)(m.Y, {
                         targetElementRef: C,
-                        animation: H.Y.Animation.FADE,
+                        animation: m.Y.Animation.FADE,
                         position: "bottom",
                         spacing: 4,
                         align: "left",
-                        renderPopout: () => (0, n.jsx)(O.default, { guildId: l.id, onClose: void 0 }),
+                        renderPopout: () => (0, n.jsx)(B.default, { guildId: l.id, onClose: void 0 }),
                         children: (e) => {
                             let { onClick: t, ...l } = e;
-                            return (0, n.jsx)(x.$, {
+                            return (0, n.jsx)(H.$, {
                                 ...l,
                                 buttonRef: C,
-                                text: U.intl.string(U.t.XvNMNk),
+                                text: k.intl.string(k.t.XvNMNk),
                                 onClick: t,
                                 size: "sm",
                                 variant: "secondary",
-                                icon: h.J,
+                                icon: x.J,
                             });
                         },
                     }),
                 }),
                 (0, n.jsx)("div", {
-                    className: G.nw,
+                    className: P.nw,
                     children:
-                        V &&
+                        A &&
                         (0, n.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
-                            className: G.__invalid_pruneButton,
-                            children: (0, n.jsx)(x.$, {
+                            className: P.__invalid_pruneButton,
+                            children: (0, n.jsx)(H.$, {
                                 variant: "critical-secondary",
                                 size: "sm",
-                                text: U.intl.string(U.t["2mIlKQ"]),
-                                onClick: v,
-                                "aria-label": U.intl.string(U.t.zbyz7p),
+                                text: k.intl.string(k.t["2mIlKQ"]),
+                                onClick: M,
+                                "aria-label": k.intl.string(k.t.zbyz7p),
                             }),
                         }),
                 }),

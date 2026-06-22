@@ -12299,6 +12299,8 @@
   "NQ4nCp": "This feature is on by default",
   "TG7NYK": "{enabled, number} of {total, number} enabled",
   "BXoNiT": "Permissions",
+  "lkpZYr": "Only administrators and the server owner can prune inactive members when this setting is enabled.",
+  "VWu9RV": "Restrict member prune to admins",
   "Mg843t": "Receive notifications for DM or join activity that exceeds usual numbers for your server. Each notification will contain information about the activity, including time period and approximate number of joins or DMs.",
   "Qp98s9": "Activity Alerts",
   "gOkFfI": "CAPTCHA suspicious accounts before they are able to join",
