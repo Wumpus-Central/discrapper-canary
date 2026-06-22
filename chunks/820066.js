@@ -81,7 +81,7 @@ let m = /^[a-z0-9_+\-.#]+$/i,
         ["subtext", new Set(["start"])],
         ["u", I],
     ]),
-    S = new Set(["*", "_", "\\"]),
+    S = new Set(["*", "_", "~", "|", "\\"]),
     y = {},
     C = {};
 for (let e in h.A.RULES) {
