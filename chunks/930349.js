@@ -1,4 +1,4 @@
-l.d(n, { V: () => x, Y: () => b });
+l.d(n, { V: () => I, Y: () => b });
 var t = l(627968),
     a = l(64700),
     r = l(503698),
@@ -12,22 +12,22 @@ var t = l(627968),
     v = l(990078),
     h = l(713517),
     f = l(375708),
-    p = l(889536);
-function m() {
-    return (0, t.jsx)("div", { className: p.overlay });
+    m = l(889536);
+function p() {
+    return (0, t.jsx)("div", { className: m.overlay });
 }
 let b = a.forwardRef(function (e, n) {
     let { variant: l, disabled: a = !1, isInteracting: r = !1, children: d, deleteButton: c, hasError: g = !1 } = e,
         h = c?.type === "remove" ? f.intl.string(f.t.N86XcP) : f.intl.string(f.t.wgIPss);
     return (0, t.jsxs)("div", {
         ref: n,
-        className: i()(p.tile, p[l], { [p.disabled]: a, [p.isInteracting]: r, [p.hasError]: g }),
+        className: i()(m.tile, m[l], { [m.disabled]: a, [m.isInteracting]: r, [m.hasError]: g }),
         children: [
             d,
             !a &&
                 null != c &&
                 (0, t.jsx)("div", {
-                    className: i()(p.deleteButtonWrapper, { [p.resetButton]: "reset" === c.type }),
+                    className: i()(m.deleteButtonWrapper, { [m.resetButton]: "reset" === c.type }),
                     children: (0, t.jsx)(v.m, {
                         text: h,
                         ariaHidden: !0,
@@ -43,7 +43,7 @@ let b = a.forwardRef(function (e, n) {
         ],
     });
 });
-function x(e) {
+function I(e) {
     let {
             variant: n,
             onClick: l,
@@ -52,23 +52,23 @@ function x(e) {
             renderPreview: o,
             showOverlayOnHover: u = !1,
             disabled: v = !1,
-            buttonRef: x,
-            affordance: I,
-            errorMessageId: C,
-            ...A
+            buttonRef: I,
+            affordance: x,
+            errorMessageId: A,
+            ...C
         } = e,
-        k = "add" === I,
+        k = "add" === x,
         y = a.useRef(null),
         { isHoveringOrFocusing: j } = (0, h.A)(y),
         N = j && !v,
         E = a.useRef(null),
-        w = x ?? E,
+        w = I ?? E,
         S =
-            null != I && "add" !== I
+            null != x && "add" !== x
                 ? {
-                      ...I,
+                      ...x,
                       onClick: () => {
-                          I.onClick(), w.current?.focus();
+                          x.onClick(), w.current?.focus();
                       },
                   }
                 : void 0;
@@ -78,32 +78,32 @@ function x(e) {
         disabled: v,
         isInteracting: N,
         deleteButton: S,
-        hasError: null != C,
+        hasError: null != A,
         children: (0, t.jsxs)(d.D, {
             innerRef: w,
-            className: p.tileButton,
-            "aria-label": null != s ? f.intl.formatToPlainString(f.t["E+mIJ+"], { label: r, value: s }) : r,
+            className: m.tileButton,
+            "aria-label": f.intl.formatToPlainString(f.t["E+mIJ+"], { label: r, value: s }),
             onClick: v ? void 0 : l,
             "aria-disabled": v,
-            "aria-invalid": null != C || void 0,
-            "aria-describedby": C,
-            "aria-errormessage": C,
+            "aria-invalid": null != A || void 0,
+            "aria-describedby": A,
+            "aria-errormessage": A,
             tabIndex: v ? -1 : 0,
-            ...A,
+            ...C,
             children: [
-                (0, t.jsx)("div", { className: p.content, children: o(N) }),
-                u && !v && (0, t.jsx)(m, {}),
+                (0, t.jsx)("div", { className: m.content, children: o(N) }),
+                u && !v && (0, t.jsx)(p, {}),
                 k &&
                     (0, t.jsx)("div", {
-                        className: i()(p.iconContainer, {
-                            [p.iconAlignCenter]: "square" === n || "full-height-bar" === n,
-                            [p.iconAlignRight]: "bar" === n,
+                        className: i()(m.iconContainer, {
+                            [m.iconAlignCenter]: "square" === n || "full-height-bar" === n,
+                            [m.iconAlignRight]: "bar" === n,
                         }),
                         children: (0, t.jsx)(c.U, {
                             size: "md",
                             color: g.A.colors.ICON_STRONG,
                             secondaryColor: g.A.colors.ICON_INVERT,
-                            className: p.overlayIcon,
+                            className: m.overlayIcon,
                         }),
                     }),
             ],

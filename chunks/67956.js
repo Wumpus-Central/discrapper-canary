@@ -1159,8 +1159,7 @@ let e7 = {
             {
                 name: "Add Button",
                 component: function (e) {
-                    let { variant: t, accessibleLabel: l, accessibleValue: a } = e,
-                        n = "" !== a ? a : void 0;
+                    let { variant: t, accessibleLabel: l, accessibleValue: a } = e;
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
@@ -1169,7 +1168,7 @@ let e7 = {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: l,
-                                accessibleValue: n,
+                                accessibleValue: a,
                                 renderPreview: () => (0, s.jsx)(e4, {}),
                             }),
                             (0, s.jsx)(e8.V, {
@@ -1177,7 +1176,7 @@ let e7 = {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: l,
-                                accessibleValue: n,
+                                accessibleValue: a,
                                 renderPreview: () => (0, s.jsx)(e9, {}),
                             }),
                         ],
@@ -1187,14 +1186,13 @@ let e7 = {
                 controls: {
                     variant: e7,
                     accessibleLabel: { label: "Accessible Label", type: "text", defaultValue: "Avatar image" },
-                    accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "" },
+                    accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "me.png" },
                 },
             },
             {
                 name: "Edit Button",
                 component: function (e) {
-                    let { variant: t, showOverlayOnHover: l, accessibleLabel: a, accessibleValue: n } = e,
-                        i = "" !== n ? n : void 0;
+                    let { variant: t, showOverlayOnHover: l, accessibleLabel: a, accessibleValue: n } = e;
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
@@ -1202,7 +1200,7 @@ let e7 = {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
-                                accessibleValue: i,
+                                accessibleValue: n,
                                 showOverlayOnHover: l,
                                 renderPreview: () => (0, s.jsx)(e4, {}),
                             }),
@@ -1210,7 +1208,7 @@ let e7 = {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
-                                accessibleValue: i,
+                                accessibleValue: n,
                                 showOverlayOnHover: l,
                                 renderPreview: () => (0, s.jsx)(e9, {}),
                             }),
@@ -1222,7 +1220,7 @@ let e7 = {
                     variant: e7,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Accessible Label", type: "text", defaultValue: "Avatar image" },
-                    accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "" },
+                    accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "me.png" },
                 },
             },
             {
@@ -1236,8 +1234,7 @@ let e7 = {
                             deleteType: i,
                             deleteAccessibleLabel: r,
                         } = e,
-                        o = { type: i, accessibleLabel: r, onClick: () => {} },
-                        u = "" !== n ? n : void 0;
+                        o = { type: i, accessibleLabel: r, onClick: () => {} };
                     return (0, s.jsxs)("div", {
                         style: { display: "flex", gap: "16px", alignItems: "center" },
                         children: [
@@ -1245,7 +1242,7 @@ let e7 = {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
-                                accessibleValue: u,
+                                accessibleValue: n,
                                 showOverlayOnHover: l,
                                 affordance: o,
                                 renderPreview: () => (0, s.jsx)(e4, {}),
@@ -1254,7 +1251,7 @@ let e7 = {
                                 variant: t,
                                 onClick: () => {},
                                 accessibleLabel: a,
-                                accessibleValue: u,
+                                accessibleValue: n,
                                 showOverlayOnHover: l,
                                 affordance: o,
                                 renderPreview: () => (0, s.jsx)(e9, {}),
@@ -1267,7 +1264,7 @@ let e7 = {
                     variant: e7,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Accessible Label", type: "text", defaultValue: "Avatar image" },
-                    accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "" },
+                    accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "me.png" },
                     deleteType: {
                         label: "Delete Button Type",
                         type: "select",
