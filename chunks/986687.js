@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => es });
+n.d(t, { A: () => er });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -10,46 +10,45 @@ var i = n(627968),
     c = n(480335),
     d = n(361628),
     _ = n(744808),
-    h = n(875741),
-    f = n(999291),
-    p = n(101928),
-    E = n(854627),
-    m = n(946356),
-    g = n(983495),
-    A = n(696451),
-    I = n(919395),
-    T = n(97808),
-    S = n(133171),
-    y = n(939249),
-    C = n(403581),
-    N = n(922016),
-    v = n(22231),
-    R = n(688810),
-    O = n(562819),
-    b = n(290863),
-    D = n(19575),
-    L = n(980707),
-    w = n(477782),
-    M = n(375708);
-let P = (e) => {
+    h = n(999291),
+    f = n(101928),
+    p = n(854627),
+    E = n(946356),
+    m = n(983495),
+    g = n(696451),
+    A = n(919395),
+    I = n(97808),
+    T = n(133171),
+    S = n(939249),
+    y = n(403581),
+    C = n(922016),
+    N = n(22231),
+    v = n(688810),
+    R = n(562819),
+    O = n(290863),
+    b = n(19575),
+    D = n(980707),
+    L = n(477782),
+    w = n(375708);
+let M = (e) => {
     let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: r } = e;
-    return (0, i.jsxs)(L.W, {
+    return (0, i.jsxs)(D.W, {
         "data-menu-migrated": !0,
         onClose: r,
         onSelect: void 0,
         navId: "user-settings-change-avatar",
-        "aria-label": M.intl.string(M.t.ldIeAd),
+        "aria-label": w.intl.string(w.t.ldIeAd),
         children: [
-            (0, i.jsx)(w.Dr, { id: "change-avatar", action: t, label: M.intl.string(M.t["4OynCD"]) }),
-            (0, i.jsx)(w.Dr, { id: "change-avatar-decoration", action: n, label: M.intl.string(M.t.BVcYCx) }),
+            (0, i.jsx)(L.Dr, { id: "change-avatar", action: t, label: w.intl.string(w.t["4OynCD"]) }),
+            (0, i.jsx)(L.Dr, { id: "change-avatar-decoration", action: n, label: w.intl.string(w.t.BVcYCx) }),
         ],
     });
 };
-var x = n(252732),
-    k = n(339984),
-    U = n(430770);
-let G = D.Ay.getEnableHardwareAcceleration() ? T.Js : T.eu;
-function F(e) {
+var P = n(252732),
+    x = n(339984),
+    k = n(430770);
+let U = b.Ay.getEnableHardwareAcceleration() ? I.Js : I.eu;
+function G(e) {
     let {
             user: t,
             guild: n,
@@ -65,61 +64,61 @@ function F(e) {
             onUpsellClick: m,
         } = e,
         g = r.useRef(null),
-        { analyticsLocations: A, newestAnalyticsLocation: I } = (0, R.Ay)(),
-        T = (0, o.bG)([b.A], () => b.A.getStatus(t.id)),
+        { analyticsLocations: A, newestAnalyticsLocation: I } = (0, v.Ay)(),
+        b = (0, o.bG)([O.A], () => O.A.getStatus(t.id)),
         D = null == n || s?.canUsePremiumProfileCustomization || u,
-        L = (0, i.jsx)(G, {
+        L = (0, i.jsx)(U, {
             src: c,
             avatarDecoration: d,
-            imageClassName: a()(f, { [U.Lw]: !p }),
+            imageClassName: a()(f, { [k.Lw]: !p }),
             size: l._3.SIZE_80,
             "aria-label": t.username,
-            status: T,
+            status: b,
             statusTooltip: !1,
-            statusBackdropColor: null != h ? (0, S.C$)(_) : void 0,
+            statusBackdropColor: null != h ? (0, T.C$)(_) : void 0,
         });
     return p
-        ? (0, i.jsx)("div", { className: U.my, children: L })
+        ? (0, i.jsx)("div", { className: k.my, children: L })
         : D
-          ? (0, i.jsx)(N.Y, {
+          ? (0, i.jsx)(C.Y, {
                 targetElementRef: g,
                 renderPopout: (e) => {
                     let { closePopout: t } = e;
-                    return (0, i.jsx)(P, {
+                    return (0, i.jsx)(M, {
                         onClose: t,
                         onChangeAvatar: () =>
-                            (0, x.XD)({ uploadType: k.HL.AVATAR, guildId: n?.id, analyticsSource: I, isTryItOut: E }),
+                            (0, P.XD)({ uploadType: x.HL.AVATAR, guildId: n?.id, analyticsSource: I, isTryItOut: E }),
                         onChangeAvatarDecoration: () => {
-                            (0, O.L)({ guild: null == n ? void 0 : n, analyticsLocations: A });
+                            (0, R.L)({ guild: null == n ? void 0 : n, analyticsLocations: A });
                         },
                     });
                 },
                 children: (e) =>
-                    (0, i.jsxs)(y.D, {
+                    (0, i.jsxs)(S.D, {
                         ...e,
                         innerRef: g,
-                        className: a()(U.my, U.vk),
+                        className: a()(k.my, k.vk),
                         children: [
                             L,
-                            (0, i.jsx)(v.R, { size: "custom", className: U.QY, width: 20, height: 20, color: "white" }),
+                            (0, i.jsx)(N.R, { size: "custom", className: k.QY, width: 20, height: 20, color: "white" }),
                         ],
                     }),
             })
-          : (0, i.jsxs)(y.D, {
+          : (0, i.jsxs)(S.D, {
                 onClick: m,
-                className: a()(U.my, U.vk),
+                className: a()(k.my, k.vk),
                 children: [
                     L,
-                    (0, i.jsx)(C.t, { size: "custom", className: U.QY, width: 20, height: 20, color: "white" }),
+                    (0, i.jsx)(y.t, { size: "custom", className: k.QY, width: 20, height: 20, color: "white" }),
                 ],
             });
 }
-var V = n(534514),
-    B = n(702211),
-    j = n(915614),
-    H = n(996988),
-    Y = n(662177);
-function W(e) {
+var F = n(534514),
+    V = n(702211),
+    B = n(915614),
+    j = n(996988),
+    H = n(662177);
+function Y(e) {
     let {
             user: t,
             displayProfile: n,
@@ -131,46 +130,46 @@ function W(e) {
             disabledInputs: u,
             onUpsellClick: c,
         } = e,
-        { newestAnalyticsLocation: d } = (0, R.Ay)(),
+        { newestAnalyticsLocation: d } = (0, v.Ay)(),
         _ = s || n?.canUsePremiumProfileCustomization || !1,
-        h = _ ? v.R : C.t,
-        f = (0, B.b)(_);
-    return (0, i.jsx)(j.A, {
+        h = _ ? N.R : y.t,
+        f = (0, V.b)(_);
+    return (0, i.jsx)(B.A, {
         user: t,
         displayProfile: n,
         guildId: r,
-        themeType: H.d.POPOUT,
+        themeType: j.d.POPOUT,
         pendingBanner: a,
         pendingAccentColor: o,
         canUsePremiumProfileCustomization: s,
         children:
             !u &&
-            (0, i.jsxs)(y.D, {
+            (0, i.jsxs)(S.D, {
                 onClick: () => {
                     _ || f
-                        ? (0, x.XD)({ uploadType: k.HL.BANNER, analyticsSource: d, guildId: r, isTryItOut: l })
+                        ? (0, P.XD)({ uploadType: x.HL.BANNER, analyticsSource: d, guildId: r, isTryItOut: l })
                         : c?.();
                 },
-                className: Y.v,
+                className: H.v,
                 children: [
                     (0, i.jsx)(h, { size: "xs", color: "white" }),
-                    (0, i.jsx)(V.D, {
+                    (0, i.jsx)(F.D, {
                         variant: "text-sm/medium",
                         color: "always-white",
-                        children: _ || f ? M.intl.string(M.t.N0bC3P) : M.intl.string(M.t.O1sT5v),
+                        children: _ || f ? w.intl.string(w.t.N0bC3P) : w.intl.string(w.t.O1sT5v),
                     }),
                 ],
             }),
     });
 }
-var K = n(685073),
-    $ = n(803362),
-    z = n(878555),
-    q = n(442228),
-    Z = n(192867),
-    X = n(351906),
-    Q = n(656884);
-function J(e) {
+var W = n(685073),
+    K = n(795873),
+    $ = n(878555),
+    z = n(442228),
+    q = n(192867),
+    Z = n(351906),
+    X = n(656884);
+function Q(e) {
     let {
             user: t,
             displayProfile: n,
@@ -187,17 +186,17 @@ function J(e) {
             hideBioSection: p,
             shouldOpenBadgeTooltip: E,
         } = e,
-        m = (0, o.bG)([A.Ay], () => (null == r ? null : A.Ay.getMember(r.id, t.id))),
-        g = (0, o.bG)([X.A], () => X.A.hidePersonalInformation),
+        m = (0, o.bG)([g.Ay], () => (null == r ? null : g.Ay.getMember(r.id, t.id))),
+        A = (0, o.bG)([Z.A], () => Z.A.hidePersonalInformation),
         I = n?.getPreviewBio(u),
         T = c ?? n?.pronouns,
-        S = (0, x.eh)({ pendingNickname: a, pendingGlobalName: l, user: t, guildMember: m }),
-        y = (0, K.gS)(f);
+        S = (0, P.eh)({ pendingNickname: a, pendingGlobalName: l, user: t, guildMember: m }),
+        y = (0, W.gS)(f);
     return (0, i.jsxs)("div", {
-        className: Q.rf,
+        className: X.rf,
         inert: !0,
         children: [
-            (0, i.jsx)(z.Ay, {
+            (0, i.jsx)($.Ay, {
                 user: t,
                 guildId: r?.id,
                 displayName: S,
@@ -205,14 +204,14 @@ function J(e) {
                 usernameIcon: (() => {
                     if (null != m) {
                         if (null !== s && (null != m.avatar || null != s))
-                            return (0, i.jsx)(Z.A, { user: t, nickname: S });
+                            return (0, i.jsx)(q.A, { user: t, nickname: S });
                     }
                 })(),
                 pronouns: T,
                 primaryGuild: y,
-                trailing: (0, i.jsx)($.A, {
+                trailing: (0, i.jsx)(K.A, {
                     displayProfile: n,
-                    themeType: H.d.POPOUT,
+                    themeType: j.d.POPOUT,
                     pendingLegacyUsernameDisabled: d,
                     pendingBadges: _,
                     shouldOpenBadgeTooltip: E,
@@ -221,170 +220,164 @@ function J(e) {
             !p &&
                 null != I &&
                 "" !== I &&
-                (0, i.jsx)(q.A, { userId: t.id, userBio: I, hidePersonalInformation: g, viewFullBioDisabled: !0 }),
+                (0, i.jsx)(z.A, { userId: t.id, userBio: I, hidePersonalInformation: A, viewFullBioDisabled: !0 }),
         ],
     });
 }
-var ee = n(993401),
-    et = n(904290);
-function en(e) {
+var J = n(993401),
+    ee = n(904290);
+function et(e) {
     let { user: t, hideMessageInput: n, hideExampleButton: r } = e;
     return n
         ? r
             ? null
             : (0, i.jsx)("div", {
-                  className: Q.qr,
-                  children: (0, i.jsx)(ee.FD, {
+                  className: X.qr,
+                  children: (0, i.jsx)(J.FD, {
                       variant: "primary",
-                      text: M.intl.string(M.t.hZkfwY),
+                      text: w.intl.string(w.t.hZkfwY),
                       onClick: () => {},
                       fullWidth: !0,
                   }),
               })
-        : (0, i.jsx)("div", { className: Q.qr, inert: !0, children: (0, i.jsx)(et.A, { user: t }) });
+        : (0, i.jsx)("div", { className: X.qr, inert: !0, children: (0, i.jsx)(ee.A, { user: t }) });
 }
-var ei = n(652215),
-    er = n(641651);
-function es(e) {
+var en = n(652215),
+    ei = n(641651);
+function er(e) {
     let {
             user: t,
             guild: n,
             canUsePremiumCustomization: r,
             onUpsellClick: s,
-            pendingBanner: T,
-            pendingAccentColor: S,
-            pendingBio: y,
-            pendingPronouns: C,
-            pendingAvatar: N,
-            pendingAvatarDecoration: v,
-            pendingNickname: R,
-            pendingGlobalName: O,
-            pendingThemeColors: b,
-            pendingProfileEffect: D,
-            profileEffectRestartKey: L,
-            pendingProfileFrame: w,
-            pendingLegacyUsernameDisabled: P,
-            pendingDisplayNameStyles: x,
-            pendingPrimaryGuildId: k,
-            className: U,
-            avatarClassName: G,
-            containerClassName: V,
-            isTryItOut: B = !1,
-            disabledInputs: j = !1,
-            hideCustomStatus: Y = !1,
-            hideBioSection: K = !1,
-            hideMessageInput: $ = !0,
-            hideProfileFrame: z = !1,
-            pendingBadges: q,
-            shouldOpenBadgeTooltip: Z,
-            hideExampleButton: X = !1,
-            interactive: Q = !0,
+            pendingBanner: I,
+            pendingAccentColor: T,
+            pendingBio: S,
+            pendingPronouns: y,
+            pendingAvatar: C,
+            pendingAvatarDecoration: N,
+            pendingNickname: v,
+            pendingGlobalName: R,
+            pendingThemeColors: O,
+            pendingProfileEffect: b,
+            profileEffectRestartKey: D,
+            pendingProfileFrame: L,
+            pendingLegacyUsernameDisabled: M,
+            pendingDisplayNameStyles: P,
+            pendingPrimaryGuildId: x,
+            className: k,
+            avatarClassName: U,
+            containerClassName: F,
+            isTryItOut: V = !1,
+            disabledInputs: B = !1,
+            hideCustomStatus: H = !1,
+            hideBioSection: W = !1,
+            hideMessageInput: K = !0,
+            hideProfileFrame: $ = !1,
+            pendingBadges: z,
+            shouldOpenBadgeTooltip: q,
+            hideExampleButton: Z = !1,
+            interactive: X = !0,
         } = e,
-        ee = (0, f.Ay)(t.id, n?.id),
-        et = (0, o.bG)([A.Ay], () => (null != n ? A.Ay.getMember(n.id, t.id) : null)),
-        es = (0, I.lw)({
-            pendingValue: v,
+        J = (0, h.Ay)(t.id, n?.id),
+        ee = (0, o.bG)([g.Ay], () => (null != n ? g.Ay.getMember(n.id, t.id) : null)),
+        er = (0, A.lw)({
+            pendingValue: N,
             userValue: t?.avatarDecoration,
-            guildValue: et?.avatarDecoration,
+            guildValue: ee?.avatarDecoration,
             guildId: n?.id,
         }),
-        { avatarSrc: ea, avatarDecorationSrc: eo } = (0, E.A)({
+        { avatarSrc: es, avatarDecorationSrc: ea } = (0, p.A)({
             userId: t?.id,
             guildId: n?.id,
-            avatarDecorationOverride: es,
-            avatarOverride: N,
+            avatarDecorationOverride: er,
+            avatarOverride: C,
             size: l._3.SIZE_80,
             showPending: !0,
         }),
-        el = (0, I.lw)({
-            pendingValue: D,
-            userValue: ee?._userProfile?.profileEffect,
-            guildValue: ee?._guildMemberProfile?.profileEffect,
+        eo = (0, A.lw)({
+            pendingValue: b,
+            userValue: J?._userProfile?.profileEffect,
+            guildValue: J?._guildMemberProfile?.profileEffect,
             guildId: n?.id,
         }),
-        eu = z
+        el = $
             ? void 0
-            : (0, I.lw)({
-                  pendingValue: w,
-                  userValue: ee?._userProfile?.profileFrame,
-                  guildValue: ee?._guildMemberProfile?.profileFrame,
+            : (0, A.lw)({
+                  pendingValue: L,
+                  userValue: J?._userProfile?.profileFrame,
+                  guildValue: J?._guildMemberProfile?.profileFrame,
                   guildId: n?.id,
               }),
-        ec = (0, d.A)(eu?.skuId, "UserProfilePreview"),
-        { profileFrameStyle: ed, profileFrameClassName: e_ } = (0, h.A)(eu?.skuId),
-        { theme: eh, primaryColor: ef } = (0, p.A)({
+        eu = (0, d.A)(el?.skuId, "UserProfilePreview"),
+        { theme: ec, primaryColor: ed } = (0, f.A)({ user: t, displayProfile: J, pendingThemeColors: O, isPreview: r }),
+        e_ = (0, i.jsxs)(E.A, {
             user: t,
-            displayProfile: ee,
-            pendingThemeColors: b,
-            isPreview: r,
-        }),
-        ep = (0, i.jsxs)(m.A, {
-            user: t,
-            displayProfile: ee,
-            themeType: H.d.POPOUT,
-            pendingThemeColors: b,
-            className: a()(er.kL, e_, U),
-            style: ed,
+            displayProfile: J,
+            themeType: j.d.POPOUT,
+            pendingThemeColors: O,
+            profileFrameSkuIdOverride: el?.skuId ?? null,
+            className: a()(ei.kL, k),
             forceShowPremium: r,
             children: [
                 (0, i.jsxs)("div", {
-                    className: er.wx,
+                    className: ei.wx,
                     children: [
-                        (0, i.jsx)(W, {
+                        (0, i.jsx)(Y, {
                             user: t,
-                            displayProfile: ee,
+                            displayProfile: J,
                             guildId: n?.id,
                             canUsePremiumCustomization: r,
-                            pendingBanner: T,
-                            pendingAccentColor: S,
-                            isTryItOut: B,
-                            disabledInputs: j,
-                            onUpsellClick: () => s?.({ object: ei.ZSU.EDIT_PROFILE_BANNER }),
+                            pendingBanner: I,
+                            pendingAccentColor: T,
+                            isTryItOut: V,
+                            disabledInputs: B,
+                            onUpsellClick: () => s?.({ object: en.ZSU.EDIT_PROFILE_BANNER }),
                         }),
-                        (0, i.jsx)(F, {
+                        (0, i.jsx)(G, {
                             user: t,
                             guild: n,
-                            displayProfile: ee,
+                            displayProfile: J,
                             canUsePremiumCustomization: r,
-                            previewAvatar: ea,
-                            previewAvatarDecorationSrc: eo,
-                            previewTheme: eh,
-                            previewPrimaryColor: ef,
-                            className: G,
-                            disabledInputs: j,
-                            isTryItOut: B,
-                            onUpsellClick: () => s?.({ object: ei.ZSU.AVATAR }),
+                            previewAvatar: es,
+                            previewAvatarDecorationSrc: ea,
+                            previewTheme: ec,
+                            previewPrimaryColor: ed,
+                            className: U,
+                            disabledInputs: B,
+                            isTryItOut: V,
+                            onUpsellClick: () => s?.({ object: en.ZSU.AVATAR }),
                         }),
-                        !Y && (0, i.jsx)(g.A, { user: t, themeType: H.d.POPOUT, disableToolbar: j }),
+                        !H && (0, i.jsx)(m.A, { user: t, themeType: j.d.POPOUT, disableToolbar: B }),
                     ],
                 }),
-                (0, i.jsx)(J, {
+                (0, i.jsx)(Q, {
                     user: t,
-                    displayProfile: ee,
+                    displayProfile: J,
                     guild: n,
-                    pendingAvatar: N,
-                    pendingNickname: R,
-                    pendingGlobalName: O,
-                    pendingBio: y,
-                    pendingPronouns: C,
-                    pendingLegacyUsernameDisabled: P,
-                    pendingDisplayNameStyles: x,
-                    pendingPrimaryGuildId: k,
-                    hideBioSection: K,
-                    pendingBadges: q,
-                    shouldOpenBadgeTooltip: Z,
+                    pendingAvatar: C,
+                    pendingNickname: v,
+                    pendingGlobalName: R,
+                    pendingBio: S,
+                    pendingPronouns: y,
+                    pendingLegacyUsernameDisabled: M,
+                    pendingDisplayNameStyles: P,
+                    pendingPrimaryGuildId: x,
+                    hideBioSection: W,
+                    pendingBadges: z,
+                    shouldOpenBadgeTooltip: q,
                 }),
-                (0, i.jsx)(en, { user: t, hideMessageInput: $, hideExampleButton: X }),
-                null != el && (0, i.jsx)(c.A, { skuId: el.skuId, restartKey: L }),
-                null != ec && (0, i.jsx)(_.A, { frame: ec, className: er.hH }),
+                (0, i.jsx)(et, { user: t, hideMessageInput: K, hideExampleButton: Z }),
+                null != eo && (0, i.jsx)(c.A, { skuId: eo.skuId, restartKey: D }),
+                null != eu && (0, i.jsx)(_.A, { frame: eu, className: ei.hH }),
             ],
         });
-    return Q
-        ? (0, i.jsx)("div", { className: a()(er.i1, V), children: ep })
+    return X
+        ? (0, i.jsx)("div", { className: a()(ei.i1, F), children: e_ })
         : (0, i.jsx)("div", {
               role: "img",
-              className: a()(er.i1, V),
-              "aria-label": M.intl.string(M.t.ayozFl),
-              children: (0, i.jsx)(u.M, { children: ep }),
+              className: a()(ei.i1, F),
+              "aria-label": w.intl.string(w.t.ayozFl),
+              children: (0, i.jsx)(u.M, { children: e_ }),
           });
 }
