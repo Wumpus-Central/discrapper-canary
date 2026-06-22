@@ -13,34 +13,35 @@ var i = n(627968),
     h = n(875741),
     f = n(325409);
 function p(e) {
-    let { skuId: t, layer: n, data: r } = e,
-        s = r?.src ?? (0, c.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
-    if (null == s) return null;
-    let o = a()(f.S_, {
+    let { skuId: t, layer: n, data: r, fadeIn: s } = e,
+        o = r?.src ?? (0, c.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
+    if (null == o) return null;
+    let l = a()(f.S_, {
         [f.Wm]: "front" === n.order,
         [f.aX]: "back" === n.order,
         [f.Mn]: "top" === n.anchor,
         [f.sQ]: "bottom" === n.anchor,
         [f.gX]: "center" === n.anchor,
         [f.no]: !0 === n.responsive,
+        [f.qG]: !0 === s,
     });
     switch (n.type) {
         case "staple":
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)("div", { className: a()(f.zu, o) }),
-                    (0, i.jsx)("img", { src: s, alt: "", "aria-hidden": !0, className: a()(o, f.im) }),
+                    (0, i.jsx)("div", { className: a()(f.zu, l) }),
+                    (0, i.jsx)("img", { src: o, alt: "", "aria-hidden": !0, className: a()(l, f.im) }),
                 ],
             });
         case "rail":
-            return (0, i.jsx)("div", { role: "img", style: { backgroundImage: `url(${s})` }, className: a()(o, f.H$) });
+            return (0, i.jsx)("div", { role: "img", style: { backgroundImage: `url(${o})` }, className: a()(l, f.H$) });
         case "border":
             return (0, i.jsx)("div", {
                 role: "img",
                 "aria-hidden": !0,
-                className: a()(o, f.PQ),
+                className: a()(l, f.PQ),
                 children: Array.from({ length: 5 }, (e, t) =>
-                    (0, i.jsx)("img", { src: s, alt: "", "aria-hidden": !0 }, t),
+                    (0, i.jsx)("img", { src: o, alt: "", "aria-hidden": !0 }, t),
                 ),
             });
         default:
@@ -48,33 +49,35 @@ function p(e) {
     }
 }
 function E(e) {
-    let { frame: t, className: n, filterLayer: s } = e,
-        c = (0, l.bG)([u.A], () => u.A.theme),
-        E = (0, _.eo)(),
-        m = (0, h.A)(t.skuId),
-        { profileFrameStyle: g, profileFrameClassName: A } = E?.css ?? m,
-        I = E?.layers ?? t.layers,
-        T = null == s ? I : I.filter(s),
-        S = T.map((e) => {
+    let { frame: t, className: n, filterLayer: s, fadeIn: c = !0 } = e,
+        E = (0, l.bG)([u.A], () => u.A.theme),
+        m = (0, _.eo)(),
+        g = (0, h.A)(t.skuId),
+        { profileFrameStyle: A, profileFrameClassName: I } = m?.css ?? g,
+        T = m?.layers ?? t.layers,
+        S = null == s ? T : T.filter(s),
+        y = S.map((e) => {
             let { id: t } = e;
             return t;
         }).join("\0"),
-        y = r.useMemo(() => T, [I, S]),
-        { layerData: C, loaded: N } = (0, d.A)({ skuId: t.skuId, layers: null != E ? void 0 : y }),
-        v = E?.layerData ?? C,
-        R = null != E || N;
-    return 0 !== y.length && R
+        C = r.useMemo(() => S, [T, y]),
+        { layerData: N, loaded: v } = (0, d.A)({ skuId: t.skuId, layers: null != m ? void 0 : C }),
+        R = m?.layerData ?? N,
+        O = null != m || v;
+    return 0 !== C.length && O
         ? (0, i.jsx)(o.N, {
-              theme: c,
+              theme: E,
               children: (e) =>
                   (0, i.jsx)("div", {
-                      className: a()(f.uF, e, A, n),
-                      style: g,
+                      className: a()(f.uF, e, I, n),
+                      style: A,
                       "aria-label": t.label,
                       role: "img",
                       children: (0, i.jsx)("div", {
                           className: f.hH,
-                          children: y.map((e) => (0, i.jsx)(p, { skuId: t.skuId, layer: e, data: v[e.id] }, e.id)),
+                          children: C.map((e) =>
+                              (0, i.jsx)(p, { skuId: t.skuId, layer: e, data: R[e.id], fadeIn: c }, e.id),
+                          ),
                       }),
                   }),
           })

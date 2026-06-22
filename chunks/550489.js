@@ -2349,34 +2349,33 @@ let ng = {
     nj = a.forwardRef(function (e, t) {
         let { deepLinkedQuestId: s, isLoadingQuestHomeHero: n, className: l, withQuestHomeHero: i = !0 } = e,
             { useNewTile: u, useLargeFeaturedTiles: c } = es.aD.useConfig({ location: tS.rE.QUEST_HOME_DESKTOP }),
-            { sections: d, isFetchingCurrentQuests: m } = ((e) => {
-                let { isLoadingQuestHomeHero: t } = e,
-                    s = (0, tz.Gn)(),
-                    n = (0, el.Cv)(),
+            { sections: d, isFetchingCurrentQuests: m } = (() => {
+                let e = (0, tz.Gn)(),
+                    t = (0, el.Cv)(),
                     {
-                        quests: l,
-                        isFetchingCurrentQuests: r,
-                        hasFetched: i,
-                    } = (0, el.Qh)(el.NC.ALL, { sortMethod: tS.kL.SUGGESTED, filters: [], removeExpiredQuests: !s }),
-                    o = (0, nr.A)(
+                        quests: s,
+                        isFetchingCurrentQuests: n,
+                        hasFetched: l,
+                    } = (0, el.Qh)(el.NC.ALL, { sortMethod: tS.kL.SUGGESTED, filters: [], removeExpiredQuests: !e }),
+                    r = (0, nr.A)(
                         () =>
-                            l.map((e) => {
+                            s.map((e) => {
                                 let { id: t } = e;
                                 return t;
                             }),
-                        l.map((e) => {
+                        s.map((e) => {
                             let { id: t } = e;
                             return t;
                         }),
                         nE,
                     ),
-                    u = (0, ea.T2)(),
-                    c = (0, E.bG)([nu], () => nu.getDiscoveredAtByQuestId(), []),
-                    d = a.useMemo(() => (r && 0 === l.length) || t, [r, l.length, t]);
+                    i = (0, ea.T2)(),
+                    o = (0, E.bG)([nu], () => nu.getDiscoveredAtByQuestId(), []),
+                    u = a.useMemo(() => n && 0 === s.length, [n, s.length]);
                 return {
                     sections: a.useMemo(
                         () =>
-                            d
+                            u
                                 ? []
                                 : (function (e) {
                                       let {
@@ -2459,18 +2458,18 @@ let ng = {
                                               })
                                       );
                                   })({
-                                      allQuestIds: o,
-                                      hero: u,
-                                      discoveredAtByQuestId: c,
-                                      isStaff: s,
-                                      isPreviewerOnAnyQuest: n,
+                                      allQuestIds: r,
+                                      hero: i,
+                                      discoveredAtByQuestId: o,
+                                      isStaff: e,
+                                      isPreviewerOnAnyQuest: t,
                                   }),
-                        [o, u, c, d, s, n],
+                        [r, i, o, u, e, t],
                     ),
-                    hasFetched: i,
-                    isFetchingCurrentQuests: d,
+                    hasFetched: l,
+                    isFetchingCurrentQuests: u,
                 };
-            })({ isLoadingQuestHomeHero: n }),
+            })(),
             h = a.useRef(null),
             { showToast: x } = sE(),
             [g, f] = a.useState(null),
@@ -2495,6 +2494,7 @@ let ng = {
                     let t = document.getElementById((0, eJ.sT)(e));
                     return (
                         !m &&
+                        !n &&
                         (null == t
                             ? (x(e), !1)
                             : (f(e),
@@ -2511,7 +2511,7 @@ let ng = {
                               !0))
                     );
                 },
-                [f, _, b, m, x, C],
+                [f, _, b, m, n, x, C],
             );
         a.useImperativeHandle(t, () => ({ scrollToQuest: I }), [I]),
             a.useLayoutEffect(() => {
