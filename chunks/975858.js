@@ -73,7 +73,7 @@ let E = {
         ctaAction: () => (0, a.pX)(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(c.G2.ORBS)),
     },
     [i.$.QUEST_COMPLETED]: {
-        ctaLabel: () => d.intl.string(d.t["0cTvRG"]),
+        ctaLabel: () => d.intl.string(d.t.swICIT),
         ctaAction: () => (0, s.navigateToQuestHome)({ fromContent: r.u.QUEST_BADGE }),
     },
 };
