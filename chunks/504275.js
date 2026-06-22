@@ -1,10 +1,9 @@
 "use strict";
-n.d(t, { p: () => o, r: () => s });
+n.d(t, { p: () => a, r: () => s });
 var i = n(652215),
     r = n(788868);
 let s = {
         skuIds: [],
-        currencySkuIds: [],
         isGift: !1,
         referralTrialOfferId: null,
         activeSubscription: null,
@@ -17,13 +16,12 @@ let s = {
         customCheckoutFlow: void 0,
         unifiedCheckoutFlow: void 0,
     },
-    a = (e, t) => null != e && (e.length !== t.length || e.some((e, n) => e !== t[n])),
-    o = (e, t, n) => ({
+    a = (e, t, n) => ({
         ...n,
         setCheckoutInitParameters: (n) => {
-            let { skuIds: i, currencySkuIds: r, ...s } = n,
-                o = a(i, t().skuIds),
-                l = a(r, t().currencySkuIds);
-            e({ ...s, ...(o ? { skuIds: i } : {}), ...(l ? { currencySkuIds: r } : {}) });
+            var i;
+            let { skuIds: r, ...s } = n,
+                a = ((i = t().skuIds), null != r && (r.length !== i.length || r.some((e, t) => e !== i[t])));
+            e({ ...s, ...(a ? { skuIds: r } : {}) });
         },
     });

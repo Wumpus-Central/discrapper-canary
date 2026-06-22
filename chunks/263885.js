@@ -293,40 +293,38 @@ let $ = () => {
             setCheckoutPriceOptions: e,
             paymentSourceId: t,
             skuIds: n,
-            currencySkuIds: i,
-            isGift: s,
-            excludeSubscriptionPlansBySKU: a,
+            isGift: i,
+            excludeSubscriptionPlansBySKU: s,
         } = (0, d.t4)((e) => ({
             setCheckoutPriceOptions: e.setCheckoutPriceOptions,
             paymentSourceId: e.paymentSourceId,
             skuIds: e.skuIds,
-            currencySkuIds: e.currencySkuIds,
             isGift: e.isGift,
             excludeSubscriptionPlansBySKU: e.excludeSubscriptionPlansBySKU,
         })),
-        o = r.useMemo(() => (0, K.St)(n, i), [n, i]),
-        { subscriptionPlanIdForCurrency: l, hasFetchedRelatedSubscriptionPlans: u } = (0, K.ow)({
-            skuIDs: o,
+        a = r.useMemo(() => (0, K._r)(n), [n]),
+        { subscriptionPlanIdForCurrency: o, hasFetchedRelatedSubscriptionPlans: l } = (0, K.ow)({
+            skuIDs: a,
             paymentSourceId: t,
-            isGift: s,
+            isGift: i,
         }),
-        c = JSON.stringify(o),
-        _ = r.useRef(o);
+        u = JSON.stringify(a),
+        c = r.useRef(a);
     return (
         r.useEffect(() => {
-            _.current = o;
+            c.current = a;
         }),
         r.useEffect(() => {
             (async () => {
-                let { current: n } = _;
+                let { current: n } = c;
                 try {
-                    n.length > 0 && !a && (await (0, W.c_)(t, n));
+                    n.length > 0 && !s && (await (0, W.c_)(t, n));
                 } catch (e) {
                     if (e.code !== W.oy) throw e;
                 }
                 e({ paymentSourceId: t, currency: void 0, loaded: !0 });
             })();
-        }, [t, c, a, e, l, u, s]),
+        }, [t, u, s, e, o, l, i]),
         null
     );
 };
@@ -384,7 +382,6 @@ function Q(e) {
                 initialCurrency: (0, K.el)({
                     activeSubscription: u.activeSubscription,
                     skuIds: u.skuIds,
-                    currencySkuIds: u.currencySkuIds,
                     paymentSourceId: I,
                     isGift: u.isGift,
                 }),

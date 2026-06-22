@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Jn: () => m, St: () => p, el: () => _, ow: () => E });
+n.d(t, { Jn: () => E, _r: () => f, el: () => _, ow: () => p });
 var i = n(64700),
     r = n(17928),
     s = n(160946),
@@ -13,17 +13,16 @@ let d = (e, t, n) => {
     return i.length > 0 ? e.get(i[0]) : null;
 };
 function _(e) {
-    let { activeSubscription: t, skuIds: n, currencySkuIds: i, paymentSourceId: r, isGift: s } = e,
-        o = h({ subscriptionPlan: d(a.A, p(n, i), s), paymentSourceId: r, isGift: s });
-    return null != t && o.includes(t.currency) ? t.currency : o.length > 0 ? o[0] : u.Yri.USD;
+    let { activeSubscription: t, skuIds: n, paymentSourceId: i, isGift: r } = e,
+        s = h({ subscriptionPlan: d(a.A, f(n), r), paymentSourceId: i, isGift: r });
+    return null != t && s.includes(t.currency) ? t.currency : s.length > 0 ? s[0] : u.Yri.USD;
 }
 let h = (e) => {
         let { subscriptionPlan: t, paymentSourceId: n, isGift: i } = e;
         return null == t ? [] : (0, o._w)(t.id, n, i);
     },
     f = (e) => e.filter((e) => e !== c.pe.NONE),
-    p = (e, t) => f(t.length > 0 ? t : e),
-    E = (e) => {
+    p = (e) => {
         let { skuIDs: t, paymentSourceId: n, isGift: o } = e,
             l = i.useMemo(() => f(t), [t]),
             u = (0, r.bG)([a.A], () => d(a.A, l, o)),
@@ -37,18 +36,16 @@ let h = (e) => {
             hasFetchedRelatedSubscriptionPlans: (0, s.Y)(l),
         };
     },
-    m = () => {
+    E = () => {
         let {
                 skuIds: e,
-                currencySkuIds: t,
-                isGift: n,
-                paymentSourceId: r,
-                setCheckoutCurrency: s,
-                checkoutPriceOptions: a,
-                invoiceCurrency: o,
+                isGift: t,
+                paymentSourceId: n,
+                setCheckoutCurrency: r,
+                checkoutPriceOptions: s,
+                invoiceCurrency: a,
             } = (0, l.t4)((e) => ({
                 skuIds: e.skuIds,
-                currencySkuIds: e.currencySkuIds,
                 isGift: e.isGift,
                 paymentSourceId: e.paymentSourceId,
                 setCheckoutCurrency: e.setCheckoutCurrency,
@@ -56,11 +53,11 @@ let h = (e) => {
                 invoiceCurrency: null != e.checkoutInvoicePreview ? e.checkoutInvoicePreview.currency : null,
             })),
             {
-                currenciesFromSubscriptionPlan: u,
-                subscriptionPlanIdForCurrency: c,
-                hasFetchedRelatedSubscriptionPlans: d,
-            } = E({ skuIDs: p(e, t), paymentSourceId: r, isGift: n }),
-            { allowedCurrencies: _ } = (() => {
+                currenciesFromSubscriptionPlan: o,
+                subscriptionPlanIdForCurrency: u,
+                hasFetchedRelatedSubscriptionPlans: c,
+            } = p({ skuIDs: f(e), paymentSourceId: n, isGift: t }),
+            { allowedCurrencies: d } = (() => {
                 let e = (0, l.t4)((e) => e.checkoutInvoicePreview),
                     { allowedCurrencies: t, invoiceCurrency: n } = i.useMemo(
                         () =>
@@ -75,17 +72,17 @@ let h = (e) => {
                     );
                 return { allowedCurrencies: t, invoiceCurrency: n };
             })(),
-            h = i.useMemo(() => (_.length > 0 ? _ : u), [_, u]),
-            f = i.useMemo(() => a.paymentSourceId !== r || !a.loaded || null == c || !d, [a, r, c, d]),
-            m = a.currency,
-            g = i.useMemo(() => (null != m ? m : null != o ? o : h.length > 0 ? h[0] : void 0), [m, o, h]);
+            _ = i.useMemo(() => (d.length > 0 ? d : o), [d, o]),
+            h = i.useMemo(() => s.paymentSourceId !== n || !s.loaded || null == u || !c, [s, n, u, c]),
+            E = s.currency,
+            m = i.useMemo(() => (null != E ? E : null != a ? a : _.length > 0 ? _[0] : void 0), [E, a, _]);
         return {
-            checkoutPriceOptions: a,
-            dropdownCurrencies: h,
-            displayCurrency: g,
-            setCheckoutCurrency: s,
-            subscriptionPlanIdForCurrency: c,
-            subscriptionPriceOptionsLoading: f,
-            hasFetchedRelatedSubscriptionPlans: d,
+            checkoutPriceOptions: s,
+            dropdownCurrencies: _,
+            displayCurrency: m,
+            setCheckoutCurrency: r,
+            subscriptionPlanIdForCurrency: u,
+            subscriptionPriceOptionsLoading: h,
+            hasFetchedRelatedSubscriptionPlans: c,
         };
     };

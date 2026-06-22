@@ -99,7 +99,7 @@ class G extends a.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: P.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(941327).Ay.getHardwareEncoding();
+            let t = n(394459).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {
@@ -189,7 +189,7 @@ class G extends a.Ay.DeviceSettingsStore {
         let e;
         return (
             x.clipsSettings.enableAutoclipping ??
-            (null != (e = _.default.getCurrentUser()) && (0, s.Lt)(e.flags, m.nhx.STAFF))
+            (null != (e = _.default.getCurrentUser()) && (e.isStaff() || e.isStaffPersonal()))
         );
     }
     getLastClipsSession() {

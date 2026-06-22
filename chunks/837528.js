@@ -1,20 +1,20 @@
 n.d(t, {
     U_: () => z,
     G8: () => F,
-    I: () => k,
+    I: () => R,
     H9: () => L,
-    VL: () => O,
-    T0: () => R,
-    UY: () => G,
+    VL: () => U,
+    T0: () => k,
+    UY: () => w,
     yp: () => H,
-    Yq: () => D,
-    r4: () => U,
+    Yq: () => O,
+    r4: () => G,
     Ck: () => Y,
-    Am: () => V,
-    Jo: () => P,
-    ri: () => B,
+    Am: () => B,
+    Jo: () => M,
+    ri: () => V,
     m: () => b,
-    Ge: () => w,
+    Ge: () => D,
 }),
     n(938796);
 var i = n(627968),
@@ -32,14 +32,14 @@ var i = n(627968),
     p = n(594061),
     A = n(734057),
     x = n(580745),
-    f = n(232835),
-    E = n(287809),
-    C = n(174459),
-    I = n(625494),
+    E = n(232835),
+    f = n(287809),
+    I = n(174459),
+    C = n(625494),
     v = n(723702),
     _ = n(427262),
-    j = n(841549),
-    N = n(439147),
+    N = n(841549),
+    j = n(439147),
     T = n(81437);
 function y(e, t, n) {
     return l.useCallback(() => {
@@ -49,12 +49,12 @@ function y(e, t, n) {
 function S(e, t, n) {
     return l.useCallback(
         (i) => {
-            let l = E.default.getUser(e);
+            let l = f.default.getUser(e);
             if (null == l) return;
             if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) return void n();
             let s = `@${_.Ay.getUserTag(l, { decoration: "never" })}`,
                 r = `<@${e}>`;
-            I._.dispatchToLastSubscribed(g.jej.INSERT_TEXT, { plainText: s, rawText: r }), d.A.startTyping(t);
+            C._.dispatchToLastSubscribed(g.jej.INSERT_TEXT, { plainText: s, rawText: r }), d.A.startTyping(t);
         },
         [e, t, n],
     );
@@ -67,15 +67,15 @@ function L(e, t, n, i) {
     let l = y("referencedUsernameProfile", n, i);
     return S(e?.author.id, t.id, l);
 }
-function R(e, t, n, i) {
+function k(e, t, n, i) {
     let l = y("interactionUsernameProfile", n, i);
     return S(e?.user.id, t.id, l);
 }
-function k(e, t, n, i) {
+function R(e, t, n, i) {
     let l = y("referencedUsernameProfile", n, i);
     return S(e, t.id, l);
 }
-function M(e) {
+function P(e) {
     return l.useCallback(
         (t) => {
             t.preventDefault(), t.stopPropagation(), e();
@@ -83,16 +83,16 @@ function M(e) {
         [e],
     );
 }
-function P(e, t) {
-    return M(y("avatarProfile", e, t));
-}
-function w(e, t) {
-    return M(y("referencedAvatarProfile", e, t));
+function M(e, t) {
+    return P(y("avatarProfile", e, t));
 }
 function D(e, t) {
-    return M(y("interactionAvatarProfile", e, t));
+    return P(y("referencedAvatarProfile", e, t));
 }
-function O(e, t, s, o) {
+function O(e, t) {
+    return P(y("interactionAvatarProfile", e, t));
+}
+function U(e, t, s, o) {
     let { id: d } = t,
         { id: u, flags: m } = e,
         h = (0, r.Lt)(m, g.pr7.EPHEMERAL),
@@ -108,12 +108,12 @@ function O(e, t, s, o) {
             }
             if (null != e.currentTarget.contains && !e.currentTarget.contains(e.target)) return;
             let l = A.A.getChannel(d),
-                r = f.A.getMessage(d, u),
+                r = E.A.getMessage(d, u),
                 c = x.A.isEditing(d, u);
             null == l ||
                 null == r ||
                 c ||
-                (C.default.track(g.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
+                (I.default.track(g.HAw.MESSAGE_POPOUT_MENU_OPENED_DESKTOP, {
                     message_id: u,
                     channel: d,
                     location: "right_click",
@@ -167,9 +167,9 @@ function O(e, t, s, o) {
                             n.e("98965"),
                             n.e("35313"),
                             n.e("36564"),
-                            n.e("93438"),
                             n.e("52229"),
                             n.e("3998"),
+                            n.e("93438"),
                             n.e("95340"),
                             n.e("5557"),
                             n.e("62718"),
@@ -246,44 +246,44 @@ function O(e, t, s, o) {
         [h, d, u, s, p, o],
     );
 }
-function U(e, t) {
+function G(e, t) {
     return l.useCallback(
         (n) => {
-            let i = E.default.getUser(e),
+            let i = f.default.getUser(e),
                 l = A.A.getChannel(t);
-            null != i && null != l && (n.stopPropagation(), (0, j.wQ)(n, i, l));
+            null != i && null != l && (n.stopPropagation(), (0, N.wQ)(n, i, l));
         },
         [e, t],
     );
 }
-function G(e, t, n) {
+function w(e, t, n) {
     return l.useCallback(
         (i) => {
-            let l = E.default.getUser(e),
+            let l = f.default.getUser(e),
                 s = A.A.getChannel(t);
             null != l &&
                 null != s &&
-                (i.stopPropagation(), (0, j.B8)(i, { user: l, channel: s, moderationAlertId: n }));
+                (i.stopPropagation(), (0, N.B8)(i, { user: l, channel: s, moderationAlertId: n }));
         },
         [e, t, n],
     );
 }
-function V(e, t) {
+function B(e, t) {
     return l.useCallback(
         (n) => {
-            let i = E.default.getUser(e),
+            let i = f.default.getUser(e),
                 l = A.A.getChannel(t);
-            null != i && null != l && (n.stopPropagation(), (0, j.pB)(n, i, l.guild_id));
+            null != i && null != l && (n.stopPropagation(), (0, N.pB)(n, i, l.guild_id));
         },
         [e, t],
     );
 }
-function B(e, t) {
+function V(e, t) {
     let { id: n } = e,
         { id: i } = t;
     return l.useCallback(
         (e) => {
-            e.altKey && (e.preventDefault(), (0, N.A)(i, n));
+            e.altKey && (e.preventDefault(), (0, j.A)(i, n));
         },
         [i, n],
     );
@@ -296,10 +296,10 @@ function H(e) {
         [o, d] = l.useState(i);
     a.current = o || a.current;
     let c = l.useCallback(() => {
-            (0, p.cE)(), o || (I._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !0), d(!0));
+            (0, p.cE)(), o || (C._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !0), d(!0));
         }, [o, r]),
         u = l.useCallback(() => {
-            I._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !1), d(!1);
+            C._.dispatchKeyed(g.zOV.ANIMATE_CHAT_AVATAR, r, !1), d(!1);
         }, [r]);
     return { hasHovered: a.current, isHovered: o, handleMouseEnter: c, handleMouseLeave: u };
 }
