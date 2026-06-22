@@ -309,16 +309,11 @@ let Y = async (e, t, n) => {
             ).filter((e) => null != e)),
             (r = o.x.INNER_WIDTH),
             (s = j(
-                i
-                    .filter((e) => {
-                        let { layer: t } = e;
-                        return t.type === u.O.BORDER || t.type === u.O.RAIL;
-                    })
-                    .map((e) => {
-                        let { dims: t } = e;
-                        return Math.round(Math.max(0, (t.width - r) / 2));
-                    }),
-                o.x.OVERFLOW_HORIZONTAL,
+                i.map((e) => {
+                    let { dims: t } = e;
+                    return Math.round(Math.max(0, (t.width - r) / 2));
+                }),
+                0,
             )),
             {
                 innerWidth: r,
