@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Y: () => t6, _V: () => t4 });
+n.d(t, { Y: () => t4, _V: () => t5 });
 var i,
     r,
     s = n(627968),
@@ -1231,37 +1231,39 @@ let tP = (e) => {
         ],
     });
 };
-var tx = n(930767);
-let tk = async (e, t) => {
+var tx = n(930767),
+    tk = n(655857);
+let tU = async (e, t) => {
         let {
             stripe: n,
             stripeElements: i,
             billingAddressState: r,
             lastConfirmedSetupIntentRef: s,
             analyticsLocation: a,
+            currency: o,
         } = e;
         return {
             paymentSource: await (0, g.im)(
                 n,
                 i,
-                { billingAddress: r.info, paymentSourceType: t, lastConfirmedSetupIntentRef: s },
+                { billingAddress: r.info, paymentSourceType: t, lastConfirmedSetupIntentRef: s, currency: o },
                 a,
             ),
             responseType: "payment-source",
         };
     },
-    tU = async (e, t) => {
+    tG = async (e, t) => {
         let { stripe: n, billingAddressState: i, analyticsLocation: r } = e;
         return { paymentSource: await (0, g.bw)(n, i.info, t, r), responseType: "payment-source" };
     },
-    tG = async (e) => {
+    tF = async (e) => {
         let { braintreeNonce: t, billingAddressState: n, analyticsLocation: i } = e;
         return (
             u()(null != t, "Missing braintreeNonce"),
             { paymentSource: await (0, g.u1)(t, n.info, i), responseType: "payment-source" }
         );
     },
-    tF = async (e, t, n) => {
+    tV = async (e, t, n) => {
         let { adyenPaymentData: i, billingAddressState: r, analyticsLocation: s } = e;
         if (null != n && n.requireAdyenPaymentData && null == i)
             throw new tx.v({
@@ -1272,15 +1274,15 @@ let tk = async (e, t) => {
             { redirectConfirmation: o, paymentSource: l } = await (0, g.$M)(r.info, t, s, i ?? void 0, a);
         return { hasRedirectURL: o, paymentSource: l };
     },
-    tV = async (e, t) => {
+    tB = async (e, t) => {
         let { billingAddressState: n, analyticsLocation: i } = e;
         return { paymentSource: await (0, g.A8)(n.info, t, i), responseType: "payment-source" };
     },
-    tB = {
+    tj = {
         [em.he.CARD]: {
             submitAddressStep: async (e) =>
                 e.shouldUsePaymentElement
-                    ? await tk(e, em.he.CARD)
+                    ? await tU(e, em.he.CARD)
                     : {
                           paymentSource: await (0, g.u6)(
                               e.stripe,
@@ -1300,7 +1302,7 @@ let tk = async (e, t) => {
             },
             stepAfterPaymentElement: eR.pn.ADDRESS,
             submitAddressStep: async (e) => {
-                if (e.shouldUsePaymentElement) return await tk(e, em.he.PAYMENT_REQUEST);
+                if (e.shouldUsePaymentElement) return await tU(e, em.he.PAYMENT_REQUEST);
                 let {
                     paymentRequestPaymentMethod: t,
                     onPaymentRequestSourceFailed: n,
@@ -1311,11 +1313,11 @@ let tk = async (e, t) => {
                 return { paymentSource: await (0, g.Tv)(t, i.info, r), responseType: "payment-source" };
             },
         },
-        [em.he.PIX]: { submitAddressStep: async (e) => await tk(e, em.he.PIX) },
+        [em.he.PIX]: { submitAddressStep: async (e) => await tU(e, em.he.PIX) },
         [em.he.IDEAL]: {
             submitAddressStep: async (e) =>
                 e.shouldUsePaymentElement
-                    ? await tk(e, em.he.IDEAL)
+                    ? await tU(e, em.he.IDEAL)
                     : {
                           paymentSource: await (0, g.EB)(e.stripe, e.billingAddressState.info, e.analyticsLocation),
                           responseType: "payment-source",
@@ -1334,15 +1336,15 @@ let tk = async (e, t) => {
                 return { paymentSource: await (0, g.Z9)(t, n, i.info, r), responseType: "payment-source" };
             },
         },
-        [em.he.GIROPAY]: { submitAddressStep: async (e) => await tU(e, em.he.GIROPAY) },
-        [em.he.BANCONTACT]: { submitAddressStep: async (e) => await tU(e, em.he.BANCONTACT) },
-        [em.he.PAYPAL]: { submitAddressStep: async (e) => await tG(e) },
-        [em.he.VENMO]: { submitAddressStep: async (e) => await tG(e) },
-        [em.he.PAYSAFE_CARD]: { submitAddressStep: async (e) => await tV(e, em.he.PAYSAFE_CARD) },
-        [em.he.GRABPAY_MY]: { submitAddressStep: async (e) => await tV(e, em.he.GRABPAY_MY) },
+        [em.he.GIROPAY]: { submitAddressStep: async (e) => await tG(e, em.he.GIROPAY) },
+        [em.he.BANCONTACT]: { submitAddressStep: async (e) => await tG(e, em.he.BANCONTACT) },
+        [em.he.PAYPAL]: { submitAddressStep: async (e) => await tF(e) },
+        [em.he.VENMO]: { submitAddressStep: async (e) => await tF(e) },
+        [em.he.PAYSAFE_CARD]: { submitAddressStep: async (e) => await tB(e, em.he.PAYSAFE_CARD) },
+        [em.he.GRABPAY_MY]: { submitAddressStep: async (e) => await tB(e, em.he.GRABPAY_MY) },
         [em.he.CASH_APP]: {
             submitAddressStep: async (e) => {
-                let { paymentSource: t } = await tF(e, em.he.CASH_APP, {
+                let { paymentSource: t } = await tV(e, em.he.CASH_APP, {
                     requireAdyenPaymentData: !0,
                     overwriteSubscriptionPaymentSource: e.overwriteSubscriptionPaymentSource,
                 });
@@ -1359,41 +1361,41 @@ let tk = async (e, t) => {
         },
         [em.he.GCASH]: {
             submitAddressStep: async (e) => {
-                let { hasRedirectURL: t } = await tF(e, em.he.GCASH);
+                let { hasRedirectURL: t } = await tV(e, em.he.GCASH);
                 return { hasRedirectURL: t, responseType: "redirect-url" };
             },
         },
         [em.he.MOMO_WALLET]: {
             submitAddressStep: async (e) => {
-                let { hasRedirectURL: t } = await tF(e, em.he.MOMO_WALLET);
+                let { hasRedirectURL: t } = await tV(e, em.he.MOMO_WALLET);
                 return { hasRedirectURL: t, responseType: "redirect-url" };
             },
         },
         [em.he.KAKAOPAY]: {
             submitAddressStep: async (e) => {
-                let { hasRedirectURL: t } = await tF(e, em.he.KAKAOPAY);
+                let { hasRedirectURL: t } = await tV(e, em.he.KAKAOPAY);
                 return { hasRedirectURL: t, responseType: "redirect-url" };
             },
         },
         [em.he.GOPAY_WALLET]: {
             submitAddressStep: async (e) => {
-                let { hasRedirectURL: t } = await tF(e, em.he.GOPAY_WALLET);
+                let { hasRedirectURL: t } = await tV(e, em.he.GOPAY_WALLET);
                 return { hasRedirectURL: t, responseType: "redirect-url" };
             },
         },
     },
-    tj = new ev.A("AddPaymentAddressStep.tsx");
-function tH(e) {
+    tH = new ev.A("AddPaymentAddressStep.tsx");
+function tY(e) {
     let { billingAddressInfo: t, onBillingAddressChange: n, paymentSourceType: i } = e,
         r = (0, c.bG)([w.A], () => w.A.error);
     return (0, s.jsx)(tP, { billingAddressInfo: t, billingError: r, onBillingAddressChange: n, paymentSourceType: i });
 }
-function tY(e) {
+function tW(e) {
     let { paymentModalArgs: t, shouldUsePaymentElement: n, paymentSourceType: i } = e,
         { billingAddressState: r, setBillingAddressState: a } = t;
     return n
         ? null
-        : (0, s.jsx)(tH, {
+        : (0, s.jsx)(tY, {
               billingAddressInfo: r.info,
               onBillingAddressChange: (e, t) => {
                   a({ info: { ...r.info, ...e }, isValid: t });
@@ -1401,7 +1403,7 @@ function tY(e) {
               paymentSourceType: i,
           });
 }
-function tW(e) {
+function tK(e) {
     let {
             paymentModalArgs: t,
             shouldUseManaModal: n,
@@ -1419,19 +1421,20 @@ function tW(e) {
             shouldUsePaymentElement: p,
         } = e,
         E = (0, eN.S)(),
+        { displayCurrency: m } = (0, tk.Jn)(),
         {
-            isSubmittingCurrentStep: m,
-            billingAddressState: g,
-            setIsSubmittingCurrentStep: A,
-            hasRedirectURL: I,
-            setHasRedirectURL: T,
-            isAuthenticating: S,
+            isSubmittingCurrentStep: g,
+            billingAddressState: A,
+            setIsSubmittingCurrentStep: I,
+            hasRedirectURL: T,
+            setHasRedirectURL: S,
+            isAuthenticating: y,
         } = t,
-        y = async () => {
-            A(!0);
+        C = async () => {
+            I(!0);
             let e = p ? d : c.methodType,
                 n = h.current,
-                s = null != e && e in tB ? tB[e] : null;
+                s = null != e && e in tj ? tj[e] : null;
             if (null == s)
                 throw new tx.v({
                     message: "unknown Add Payment step not handled",
@@ -1446,17 +1449,18 @@ function tW(e) {
                     shouldUsePaymentElement: p,
                     stripeElements: n,
                     lastConfirmedSetupIntentRef: f,
+                    currency: m,
                     onPaymentRequestSourceFailed: o,
                     paymentRequestPaymentMethod: l,
                     overwriteSubscriptionPaymentSource: r,
                 });
-                "redirect-url" === e.responseType ? T(e.hasRedirectURL) : u(e.paymentSource), I || A(!1);
+                "redirect-url" === e.responseType ? S(e.hasRedirectURL) : u(e.paymentSource), T || I(!1);
             } catch (e) {
-                A(!1), tj.warn(`Error confirming submitting Address Step for Payment Source Type: ${C}`, e);
+                I(!1), tH.warn(`Error confirming submitting Address Step for Payment Source Type: ${N}`, e);
             }
         },
-        C = c.methodType,
-        { backStep: N } = p
+        N = c.methodType,
+        { backStep: v } = p
             ? { backStep: eR.pn.PAYMENT_ELEMENT }
             : ((e) => {
                   switch (e) {
@@ -1486,20 +1490,20 @@ function tW(e) {
                       default:
                           return { backStep: eR.pn.PAYMENT_TYPE };
                   }
-              })(C),
-        v = p ? () => _(void 0) : () => a(N);
+              })(N),
+        R = p ? () => _(void 0) : () => a(v);
     return (0, s.jsx)(tv, {
-        onBack: v,
+        onBack: R,
         primaryCTA: eD.Ay.CTAType.CONTINUE,
         primaryText: M.intl.string(M.t.PDTjLN),
-        primarySubmitting: m,
-        primaryDisabled: !g.isValid || S,
-        onPrimary: y,
+        primarySubmitting: g,
+        primaryDisabled: !A.isValid || y,
+        onPrimary: C,
         shouldUseManaModal: n,
     });
 }
-let tK = new ev.A("PaymentElementStepFooter.tsx"),
-    t$ = (e) => {
+let t$ = new ev.A("PaymentElementStepFooter.tsx"),
+    tz = (e) => {
         let t = (0, eN.S)(),
             {
                 shouldUseManaModal: n,
@@ -1519,7 +1523,7 @@ let tK = new ev.A("PaymentElementStepFooter.tsx"),
                     if (null == f || !(0, ed.PE)(f)) throw (0, g.ne)("Valid Payment Element source type not found", !0);
                     let { steps: e, methodType: n } = d[f];
                     o({ steps: e, methodType: n === em.he.UNKNOWN ? f : n });
-                    let i = tB[f];
+                    let i = tj[f];
                     if (null != i && null != i.submitPaymentElementStepHandler) {
                         await i.submitPaymentElementStepHandler({
                             stripe: t,
@@ -1534,7 +1538,7 @@ let tK = new ev.A("PaymentElementStepFooter.tsx"),
                     if (null != s) return void r(s);
                     r(eR.pn.ADDRESS);
                 } catch (e) {
-                    tK.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
+                    t$.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
                 } finally {
                     _(!1);
                 }
@@ -1550,33 +1554,33 @@ let tK = new ev.A("PaymentElementStepFooter.tsx"),
             shouldUseManaModal: n,
         });
     };
-var tz = n(691189);
-let tq = new ev.A("AddPaymentStep.tsx"),
-    tZ = { name: "", cardNumber: "", expirationDate: "", cvc: "" },
-    tX = { email: "", name: "", country: "", line1: "", line2: "", city: "", postalCode: "", state: "" };
-function tQ(e) {
+var tq = n(691189);
+let tZ = new ev.A("AddPaymentStep.tsx"),
+    tX = { name: "", cardNumber: "", expirationDate: "", cvc: "" },
+    tQ = { email: "", name: "", country: "", line1: "", line2: "", city: "", postalCode: "", state: "" };
+function tJ(e) {
     let { onCardInfoChange: t } = e,
         n = (0, c.bG)([w.A], () => w.A.error);
     return (0, s.jsx)(es, { billingError: n, onCardInfoChange: t });
 }
-function tJ() {
+function t0() {
     return (0, s.jsx)(x, {});
 }
-function t0() {
+function t1() {
     return (0, s.jsx)(V, {});
 }
-function t1() {
+function t2() {
     return (0, s.jsx)(ta, {});
 }
-function t2() {
+function t3() {
     let e = (0, c.bG)([eZ.A], () => eZ.A.isBusy),
         t = (0, c.bG)([w.A], () => w.A.stripePaymentMethod);
     return (0, s.jsx)(ea, { stripePaymentMethod: t, submitting: e });
 }
-function t3() {
+function t6() {
     return (0, s.jsx)(B.N, {});
 }
-function t6(e) {
+function t4(e) {
     let t,
         n,
         {
@@ -1805,7 +1809,7 @@ function t6(e) {
             continueSessionToInitialStep: U,
             paymentElementsEnabled: j,
             handleStepChange: eE,
-            logger: tq,
+            logger: tZ,
             shouldLogOnChangeEvents: K || !1,
             onBillingAddressChange: (e, t) => {
                 eH({ info: { ...ej.info, ...e }, isValid: t });
@@ -1885,7 +1889,7 @@ function t6(e) {
         case eR.pn.PAYMENT_ELEMENT:
             if (!j) throw (0, g.ne)("Payment Elements not enabled, invalid step", !0);
             (t = null),
-                (n = (0, s.jsx)(t$, {
+                (n = (0, s.jsx)(tz, {
                     handleStepChange: eE,
                     shouldUseManaModal: F,
                     setPaymentMethodSteps: el,
@@ -1906,12 +1910,12 @@ function t6(e) {
                     let t = await (0, g.YJ)(V, e);
                     eV({ token: t }), eE(eR.pn.ADDRESS);
                 } catch (e) {
-                    tq.error(e.message ?? JSON.stringify(e));
+                    tZ.error(e.message ?? JSON.stringify(e));
                 } finally {
                     eY(!1);
                 }
             };
-            t = (0, s.jsx)(tQ, {
+            t = (0, s.jsx)(tJ, {
                 onCardInfoChange: (e, t) => {
                     eF({ info: e, isValid: t }), eH((t) => ({ ...t, info: { ...t.info, name: e.name } }));
                 },
@@ -2010,7 +2014,7 @@ function t6(e) {
             break;
         case eR.pn.PAYPAL_INFORMATION:
             let tR = 0 !== eW.length && null != eK;
-            (t = (0, s.jsx)(tJ, {})),
+            (t = (0, s.jsx)(t0, {})),
                 (n = (0, s.jsx)(tv, {
                     onBack: () => tE(em.he.PAYPAL),
                     primaryCTA: eD.Ay.CTAType.CONTINUE,
@@ -2028,7 +2032,7 @@ function t6(e) {
             break;
         case eR.pn.VENMO_INFORMATION:
             let tD = 0 !== e$.length && null != eK;
-            (t = (0, s.jsx)(t0, {})),
+            (t = (0, s.jsx)(t1, {})),
                 (n = (0, s.jsx)(tv, {
                     onBack: () => tE(em.he.VENMO),
                     primaryCTA: eD.Ay.CTAType.CONTINUE,
@@ -2038,12 +2042,12 @@ function t6(e) {
                 }));
             break;
         case eR.pn.PAYMENT_REQUEST_INFORMATION:
-            (t = (0, s.jsx)(t2, {})),
+            (t = (0, s.jsx)(t3, {})),
                 (n = (0, s.jsx)(tv, { onBack: () => eE(eR.pn.PAYMENT_TYPE), shouldUseManaModal: F }));
             break;
         case eR.pn.CASH_APP_INFORMATION:
             let tL = null != eZ;
-            (t = (0, s.jsx)(t1, {})),
+            (t = (0, s.jsx)(t2, {})),
                 (n = (0, s.jsx)(tv, {
                     onBack: () => tE(em.he.CASH_APP),
                     primaryCTA: eD.Ay.CTAType.CONTINUE,
@@ -2055,12 +2059,12 @@ function t6(e) {
             break;
         case eR.pn.ADDRESS:
             let tw = j && null != to;
-            (t = (0, s.jsx)(tY, {
+            (t = (0, s.jsx)(tW, {
                 paymentModalArgs: i,
                 paymentSourceType: eo.methodType ?? em.he.CARD,
                 shouldUsePaymentElement: tw,
             })),
-                (n = (0, s.jsx)(tW, {
+                (n = (0, s.jsx)(tK, {
                     paymentModalArgs: i,
                     shouldUseManaModal: F,
                     analyticsLocation: b,
@@ -2075,7 +2079,7 @@ function t6(e) {
                 }));
             break;
         case eR.pn.AWAITING_AUTHENTICATION:
-            t = (0, s.jsx)(t3, {});
+            t = (0, s.jsx)(t6, {});
             break;
         default:
             throw new eT.v({ message: `Unexpected step: ${ei}`, extraSentryInformation: { currentStep: ei } });
@@ -2083,9 +2087,9 @@ function t6(e) {
     let tM = j && ts,
         tP = tM ? "combined_stripe_elements" : void 0,
         tx = (0, s.jsxs)(f.Y, {
-            className: tz.C9,
-            staticClassName: tz.a2,
-            animatedNodeClassName: tz.L2,
+            className: tq.C9,
+            staticClassName: tq.a2,
+            animatedNodeClassName: tq.L2,
             fillParent: !0,
             overrideKey: tP,
             step: ei,
@@ -2140,7 +2144,7 @@ function t6(e) {
               footer: tk,
           });
 }
-function t4(e) {
+function t5(e) {
     let {
             defaultPaymentSourceId: t,
             paymentSources: n,
@@ -2188,8 +2192,8 @@ function t4(e) {
     let [o, l] = a.useState(t),
         u = (0, el.A)(t);
     t !== u && null != t && null == o && l(t);
-    let [d, _] = a.useState(() => ({ info: tZ, isValid: !1 })),
-        [h, f] = a.useState(() => ({ info: tX, isValid: !1 })),
+    let [d, _] = a.useState(() => ({ info: tX, isValid: !1 })),
+        [h, f] = a.useState(() => ({ info: tQ, isValid: !1 })),
         [p, m] = a.useState(""),
         [S, v] = a.useState(""),
         [R, O] = a.useState(() => ({ token: null })),

@@ -299,13 +299,13 @@ let G = (e, t, n) => {
     j = new Set([b.he.CARD, b.he.PAYMENT_REQUEST, b.he.PIX]);
 async function H() {
     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let [i, r, { billingAddress: s, paymentSourceType: o, lastConfirmedSetupIntentRef: l }, u] = t;
+    let [i, r, { billingAddress: s, paymentSourceType: o, lastConfirmedSetupIntentRef: l, currency: u }, c] = t;
     if (null == i) throw M("Stripe not loaded", !0);
     if (null == r) throw M("Stripe Elements not loaded", !0);
     a.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
-    let c = await C(s);
+    let d = await C(s);
     o !== b.he.PAYMENT_REQUEST && (await F(r));
-    let d = null;
+    let _ = null;
     if (j.has(o)) {
         let e,
             t = l.current ?? void 0,
@@ -320,16 +320,16 @@ async function H() {
             ("succeeded" === e.setup_intent.status || "canceled" === e.setup_intent.status) &&
             o !== b.he.PAYMENT_REQUEST
         ) {
-            let { client_secret: e } = await (0, O.w)();
+            let { client_secret: e } = await (0, O.w)(null != u ? { body: { currency: u } } : {});
             await F(r), (n = await i.confirmSetup({ redirect: "if_required", clientSecret: e, elements: r }));
         }
         let { setupIntent: s } = G(n.setupIntent, n.error, (e) => M(e, !0));
-        (l.current = s), (d = s.payment_method);
+        (l.current = s), (_ = s.payment_method);
     } else {
         let { paymentMethod: e } = await V(i, r);
-        d = e.id;
+        _ = e.id;
     }
-    return R(S.kM_.STRIPE, d, s, { billingAddressToken: c, analyticsLocation: u });
+    return R(S.kM_.STRIPE, _, s, { billingAddressToken: d, analyticsLocation: c });
 }
 async function Y(e, t, n, i) {
     if (null == e || null == t) throw N("Stripe or token not loaded");
