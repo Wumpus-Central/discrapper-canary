@@ -33,6 +33,7 @@ async function h(e) {
             content_position: t.content_position,
             row_index: t.row_index,
             ad_content_id: e.adContentId,
+            quest_id: e.relatedQuestId,
         });
         return;
     }
