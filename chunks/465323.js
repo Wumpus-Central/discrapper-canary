@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { $g: () => o, TW: () => d, yR: () => l });
+n.d(t, { $g: () => o, LQ: () => c, TW: () => _, yR: () => l });
 var i = n(737291),
     r = n.n(i),
     s = n(997101),
@@ -200,7 +200,13 @@ let o = function (e, t, n) {
         if (null == n) throw Error(`Unexpected currency ${t}`);
         return new (r())(e).dividedBy(10 ** n).toNumber();
     },
-    c = {
+    c = (e, t) => {
+        let n = l[t];
+        if (null == n) return null;
+        let i = 10 ** n;
+        return Math.floor(e / i) * i;
+    },
+    d = {
         [s.d.AD]: a.Yr.EUR,
         [s.d.AE]: a.Yr.AED,
         [s.d.AF]: a.Yr.AFN,
@@ -445,8 +451,8 @@ let o = function (e, t, n) {
         [s.d.ZA]: a.Yr.ZAR,
         [s.d.ZM]: a.Yr.ZMW,
     },
-    d = (e) => {
+    _ = (e) => {
         let t = a.Yr.USD,
             [n, i] = e.split("-");
-        return void 0 === i ? t : (c[i.toUpperCase()] ?? t);
+        return void 0 === i ? t : (d[i.toUpperCase()] ?? t);
     };

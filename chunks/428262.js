@@ -13,13 +13,14 @@ n.d(t, {
     CC: () => S.CC,
     iv: () => tU,
     RH: () => ez,
+    z_: () => tj,
     FJ: () => eY,
     ee: () => tI,
     $k: () => tr,
     VA: () => tV,
     Dd: () => eq,
     kX: () => te,
-    To: () => tj,
+    To: () => tW,
     _e: () => e9,
     l6: () => ex,
     y8: () => eU,
@@ -29,8 +30,8 @@ n.d(t, {
     Zb: () => e5,
     Pr: () => ek,
     nK: () => tP,
-    mv: () => tO,
     Tm: () => eJ,
+    mv: () => tO,
     J$: () => ti,
     Pg: () => tT,
     D8: () => eH,
@@ -50,12 +51,14 @@ n.d(t, {
     Of: () => tg,
     tW: () => tm,
     mH: () => tw,
-    Ay: () => tH,
+    XN: () => tY,
+    Ay: () => tK,
     EL: () => eM,
     bx: () => e1,
     Zw: () => e$,
     Om: () => ty,
     GX: () => tS,
+    qi: () => tH,
     JM: () => eP,
     UC: () => eV,
     e1: () => tx,
@@ -1393,9 +1396,36 @@ function tB(e) {
     }
 }
 function tj(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        i = tV({ subscriptionPlan: e, isGift: t, priceOptions: n });
+    if (null == i || i <= 0) return null;
+    let r = eU(e.id, !1, t, n),
+        s = i - r.amount;
+    return s <= 0 ? null : { amount: s, currency: r.currency };
+}
+function tH(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    if (e.interval !== C.WT.YEAR) return null;
+    let i = tG({ subscriptionPlan: e, isGift: t, priceOptions: n });
+    if (null == i || 0 === i.amount) return null;
+    let r = tj(e, t, n);
+    if (null == r) return null;
+    let s = Math.floor((r.amount / i.amount) * 2) / 2;
+    return s <= 0 ? null : s;
+}
+function tY(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
+    if (e.interval !== C.WT.YEAR) return null;
+    let i = eU(e.id, !1, t, n);
+    return 0 === i.amount ? null : { amount: Math.round(i.amount / 12), currency: i.currency };
+}
+function tW(e) {
     return null == e ? 0 : Math.max((0, eT.m_)(new Date(), new Date(e)), 0);
 }
-let tH = Object.freeze({
+let tK = Object.freeze({
     isNewUser: tO,
     isPremiumAtLeast: S.CC,
     isPremium: S.ki,
@@ -1615,7 +1645,10 @@ let tH = Object.freeze({
     getUnactivatedFractionalPremiumHours: tk,
     castPremiumSubscriptionAsSkuId: tw,
     calculateDiscountPercentageForYearlyPlan: tB,
-    getDaysSincePremium: tj,
+    calculateYearlyPlanDollarSavingsAmount: tj,
+    calculateYearlyPlanMonthsSaved: tH,
+    calculateYearlyPlanMonthlyRateAmount: tY,
+    getDaysSincePremium: tW,
     getDaysRemainingUntilSubscriptionCurrentPeriodEnds: function (e) {
         return Math.max(1, Math.ceil((0, eT.c_)(new Date(e.currentPeriodEnd), new Date())));
     },
