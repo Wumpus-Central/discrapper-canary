@@ -1149,20 +1149,22 @@ class j extends T.A {
                     enableGlobalFramePoolLock: m,
                     useGraphicsCaptureDirtyRegions: g,
                     videoHookAllowDx12: A,
+                    minCaptureWidth: I,
+                    minCaptureHeight: T,
                 } = e.desktopDescription;
                 this.setSoundshareSource(s, a);
-                let [I, T] = null != r ? r.split(":") : ["", ""];
+                let [S, y] = null != r ? r.split(":") : ["", ""];
                 null != r
                     ? this.logger.info(
-                          `capturing desktop (type: ${I}, handle: ${T}, use-video-hook: ${o.toString()}, use-graphics-capture: ${d?.toString()}, use-graphics-capture-api-level: ${u?.toString()}, use-capture-device-for-encode: ${c?.toString()}).`,
+                          `capturing desktop (type: ${S}, handle: ${y}, use-video-hook: ${o.toString()}, use-graphics-capture: ${d?.toString()}, use-graphics-capture-api-level: ${u?.toString()}, use-capture-device-for-encode: ${c?.toString()}).`,
                       )
                     : this.logger.info("capturing desktop (type: <stop>)."),
                     null != this.conn.setDesktopSourceWithOptions
                         ? null != r
                             ? (this.setDesktopEncodingOptions(i, t, n),
                               this.conn.setDesktopSourceWithOptions({
-                                  type: I,
-                                  sourceId: T,
+                                  type: S,
+                                  sourceId: y,
                                   useVideoHook: o,
                                   useHookFramePacer: l,
                                   useGraphicsCapture: d,
@@ -1176,9 +1178,11 @@ class j extends T.A {
                                   enableGlobalFramePoolLock: m,
                                   useGraphicsCaptureDirtyRegions: g,
                                   videoHookAllowDx12: A,
+                                  minCaptureWidth: I,
+                                  minCaptureHeight: T,
                               }))
                             : this.conn.clearDesktopSource()
-                        : this.conn.setDesktopSource(`wumpus-${T}`, o, I);
+                        : this.conn.setDesktopSource(`wumpus-${y}`, o, S);
             } else if (null != e.cameraDescription) {
                 let { videoDeviceGuid: t, audioDeviceGuid: n } = e.cameraDescription;
                 this.conn.setGoLiveDevices({ videoInputDeviceId: t, audioInputDeviceId: n });
@@ -2148,6 +2152,8 @@ class er extends l.A {
                 allowScreenCaptureKit: _,
                 hdrCaptureMode: h,
                 videoHookAllowDx12: f,
+                minCaptureWidth: p,
+                minCaptureHeight: E,
             } = e.desktopDescription;
         t.setOnClipsRecordingEvent((t, n) => {
             this.logger.info(`Clips recording event: ${F[t]} received for stream ${r} and sound ${s}.`),
@@ -2174,9 +2180,11 @@ class er extends l.A {
                 width: i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
                 height: i,
                 videoEncoderExperiments: e.videoEncoderExperiments,
+                minCaptureWidth: p,
+                minCaptureHeight: E,
             });
-        let [p, E] = null != r ? r.split(":") : ["", ""];
-        t.setClipsSource({ id: E, soundshareId: null != s ? s : 0 });
+        let [m, g] = null != r ? r.split(":") : ["", ""];
+        t.setClipsSource({ id: g, soundshareId: null != s ? s : 0 });
     }
     setClipsQualitySettings(e, t, n) {
         let i = (0, b.lE)();
