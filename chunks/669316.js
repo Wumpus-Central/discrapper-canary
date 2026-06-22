@@ -63,4 +63,9 @@ class a extends i.A {
     getIsMultiIntervalDiscount() {
         return this.getFullIntervalCount() > 1;
     }
+    getApproximateDiscountAmountOff(e) {
+        if (this.discount?.amount == null) return null;
+        let t = parseFloat(this.discount.amount);
+        return Number.isNaN(t) ? null : Math.round(e * (1 - t / 100));
+    }
 }
