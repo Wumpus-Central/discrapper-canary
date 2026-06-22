@@ -190,11 +190,7 @@
 }
 
 .themeContainer__5be3e.custom-user-profile-theme {
-    --custom-profile-frame-layer-scale: calc(308/var(--custom-profile-frame-container-width))
-}
-
-.themeContainer__5be3e.custom-user-profile-theme.user-profile-sidebar-redesign {
-    --custom-profile-frame-layer-scale: calc(302/var(--custom-profile-frame-container-width))
+    --custom-profile-frame-layer-scale: calc(304/var(--custom-profile-frame-container-width))
 }
 
 @media (min-height:481px) {
@@ -211,11 +207,7 @@
 }
 
 .custom-user-profile-theme .header__5be3e {
-    min-height: calc(var(--custom-user-profile-banner-height) + 31px)
-}
-
-.custom-user-profile-theme.user-profile-sidebar-redesign .header__5be3e {
-    min-height: calc(var(--custom-user-profile-banner-height) + 34px)
+    min-height: calc(var(--custom-user-profile-banner-height) + 33px)
 }
 
 .headerTag__5be3e {

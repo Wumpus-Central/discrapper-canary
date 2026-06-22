@@ -63,12 +63,14 @@
     --custom-user-profile-footer-height: 72px
 }
 
-:root .custom-user-profile-theme.user-profile-modal,
 :root .custom-user-profile-theme.user-profile-popout {
+    --custom-user-profile-theme-padding: 2px
+}
+
+:root .custom-user-profile-theme.user-profile-modal {
     --custom-user-profile-theme-padding: 4px
 }
 
-:root .custom-user-profile-theme.user-profile-popout.user-profile-sidebar-redesign,
 :root .custom-user-profile-theme.user-profile-sidebar.user-profile-sidebar-redesign {
     --custom-user-profile-theme-padding: 2px
 }
@@ -199,7 +201,7 @@
     border-radius: var(--radius-sm)
 }
 
-.custom-user-profile-theme.user-profile-popout.user-profile-sidebar-redesign .inner_c0bea0,
+.custom-user-profile-theme.user-profile-popout .inner_c0bea0,
 .custom-user-profile-theme.user-profile-sidebar.user-profile-sidebar-redesign .inner_c0bea0 {
     border-radius: calc(var(--radius-sm) - var(--custom-user-profile-theme-padding))
 }

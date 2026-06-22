@@ -30,13 +30,8 @@
 }
 
 .custom-user-profile-theme.user-profile-popout :where(.avatar__75742) {
-    inset-inline-start: 12px;
-    top: 57px
-}
-
-.custom-user-profile-theme.user-profile-popout.user-profile-sidebar-redesign :where(.avatar__75742) {
-    inset-inline-start: 15px;
-    top: 60px
+    inset-inline-start: 14px;
+    top: 59px
 }
 
 .user-profile-modal :where(.avatar__75742) {

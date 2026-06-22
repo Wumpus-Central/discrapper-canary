@@ -1,105 +1,102 @@
-s.r(i), s.d(i, { default: () => S });
+s.r(i), s.d(i, { default: () => N });
 var d = s(627968),
     l = s(64700),
     r = s(477782),
     t = s(305866),
     a = s(140735),
-    o = s(707554),
-    n = s(364522),
+    n = s(707554),
+    o = s(364522),
     c = s(793574),
     u = s(688810),
     f = s(311016),
     p = s(480335),
-    P = s(915089),
-    h = s(713517),
+    h = s(915089),
+    P = s(713517),
     A = s(267102),
     x = s(562153),
     j = s(183555),
     O = s(47675),
-    m = s(628779),
     y = s(999291),
-    v = s(975732),
+    m = s(975732),
     E = s(718019),
-    I = s(803362),
-    T = s(915614),
-    _ = s(308244),
-    g = s(946356),
-    U = s(878555),
-    k = s(35241),
-    L = s(587168),
-    N = s(652215),
-    b = s(996988),
-    C = s(375708),
-    R = s(656884);
-function S(e) {
+    I = s(795873),
+    v = s(915614),
+    T = s(308244),
+    _ = s(946356),
+    k = s(878555),
+    L = s(35241),
+    U = s(587168),
+    g = s(652215),
+    C = s(996988),
+    R = s(375708),
+    b = s(656884);
+function N(e) {
     let {
             user: i,
             guildId: s,
-            channelId: S,
-            messageId: w,
-            roleId: F,
-            openedAt: V,
-            setPopoutRef: q,
-            closePopout: B,
+            channelId: N,
+            messageId: S,
+            roleId: w,
+            openedAt: F,
+            setPopoutRef: V,
+            closePopout: q,
             disableUserProfileLink: H = __OVERLAY__,
             newAnalyticsLocations: M = [],
             disableAutoFocus: W = !1,
-            onClickContainer: D,
+            onClickContainer: B,
         } = e,
-        G = (0, y.Ay)(i.id, s),
-        K = (0, m.$)("NonUserBotProfilePopout"),
-        X = (0, A.aL)(),
-        { analyticsLocations: Y } = (0, u.Ay)([...M, c.A.USER_PROFILE_POPOUT]),
-        $ = (0, j.pb)({ layout: "POPOUT", userId: i.id, guildId: s, channelId: S, messageId: w, roleId: F }),
-        z = l.useRef(null),
-        J = (0, h.M)(z);
+        D = (0, y.Ay)(i.id, s),
+        G = (0, A.aL)(),
+        { analyticsLocations: K } = (0, u.Ay)([...M, c.A.USER_PROFILE_POPOUT]),
+        X = (0, j.pb)({ layout: "POPOUT", userId: i.id, guildId: s, channelId: N, messageId: S, roleId: w }),
+        Y = l.useRef(null),
+        z = (0, P.M)(Y);
     l.useEffect(() => {
-        q?.(z?.current);
-    }, [z, q]);
-    let Q = () => {
-            B?.(),
-                X.dispatch(N.jej.POPOUT_CLOSE),
-                (0, v.openUserProfileModal)({ sourceAnalyticsLocations: Y, hideRestrictedProfile: !0, ...$ });
+        V?.(Y?.current);
+    }, [Y, V]);
+    let J = () => {
+            q?.(),
+                G.dispatch(g.jej.POPOUT_CLOSE),
+                (0, m.openUserProfileModal)({ sourceAnalyticsLocations: K, hideRestrictedProfile: !0, ...X });
         },
-        Z = !H && (0, f.A)(i.id),
-        ee = W ? "div" : t.l,
-        ei = (0, P.GV)(),
-        es = x.Ay.useName(s, S, i);
+        Q = !H && (0, f.A)(i.id),
+        Z = W ? "div" : t.l,
+        $ = (0, h.GV)(),
+        ee = x.Ay.useName(s, N, i);
     return (0, d.jsx)(u.f5, {
-        value: Y,
+        value: K,
         children: (0, d.jsx)(j.of, {
-            value: $,
-            openedAt: V,
-            fetchStartedAt: G?.fetchStartedAt,
-            fetchEndedAt: G?.fetchEndedAt,
-            isLoaded: G?.isLoaded,
-            children: (0, d.jsxs)(ee, {
-                ref: z,
-                "aria-labelledby": ei,
-                onClick: D,
+            value: X,
+            openedAt: F,
+            fetchStartedAt: D?.fetchStartedAt,
+            fetchEndedAt: D?.fetchEndedAt,
+            isLoaded: D?.isLoaded,
+            children: (0, d.jsxs)(Z, {
+                ref: Y,
+                "aria-labelledby": $,
+                onClick: B,
                 children: [
                     (0, d.jsx)(a.A, {
-                        children: (0, d.jsx)(o.H, { id: ei, children: C.intl.format(C.t.KRe1Fk, { name: es }) }),
+                        children: (0, d.jsx)(n.H, { id: $, children: R.intl.format(R.t.KRe1Fk, { name: ee }) }),
                     }),
-                    (0, d.jsxs)(g.A, {
+                    (0, d.jsxs)(_.A, {
                         user: i,
-                        displayProfile: G,
-                        themeType: b.d.POPOUT,
-                        className: K ? "user-profile-sidebar-redesign" : void 0,
+                        displayProfile: D,
+                        themeType: C.d.POPOUT,
                         children: [
-                            (0, d.jsx)(L.A, {
-                                children: (0, d.jsx)(k.A, {
+                            (0, d.jsx)(U.A, {
+                                children: (0, d.jsx)(L.A, {
                                     user: i,
-                                    viewProfileItem: Z
+                                    viewProfileItem: Q
                                         ? (0, d.jsx)(r.Dr, {
                                               id: "view-profile",
-                                              label: C.intl.string(C.t["+Xp3hq"]),
+                                              label: R.intl.string(R.t["+Xp3hq"]),
                                               action: () => {
-                                                  Q(),
+                                                  J(),
                                                       (0, O.Wn)({
                                                           action: "PRESS_VIEW_PROFILE",
-                                                          analyticsLocations: Y,
-                                                          ...$,
+                                                          analyticsLocations: K,
+                                                          ...X,
                                                       });
                                               },
                                           })
@@ -107,52 +104,46 @@ function S(e) {
                                 }),
                             }),
                             (0, d.jsxs)("div", {
-                                className: R.wx,
+                                className: b.wx,
                                 children: [
-                                    (0, d.jsx)(T.A, {
-                                        user: i,
-                                        displayProfile: G,
-                                        guildId: s,
-                                        themeType: b.d.POPOUT,
-                                        specOverrides: K ? { themePadding: 1 } : void 0,
-                                    }),
+                                    (0, d.jsx)(v.A, { user: i, displayProfile: D, guildId: s, themeType: C.d.POPOUT }),
                                     (0, d.jsx)(E.A, {
                                         user: i,
-                                        displayProfile: G,
+                                        displayProfile: D,
                                         guildId: s,
-                                        channelId: S,
-                                        themeType: b.d.POPOUT,
-                                        onOpenProfile: Z ? Q : void 0,
+                                        channelId: N,
+                                        themeType: C.d.POPOUT,
+                                        onOpenProfile: Q ? J : void 0,
                                     }),
                                 ],
                             }),
-                            (0, d.jsxs)(n.Ip, {
+                            (0, d.jsxs)(o.Ip, {
                                 fade: !0,
-                                className: R.rf,
+                                className: b.rf,
                                 children: [
-                                    (0, d.jsx)(U.Ay, {
+                                    (0, d.jsx)(k.Ay, {
                                         user: i,
                                         guildId: s,
-                                        displayName: x.Ay.getName(s, S, i),
-                                        onClickName: Z ? Q : void 0,
+                                        displayName: x.Ay.getName(s, N, i),
+                                        onClickName: Q ? J : void 0,
                                         trailing: (0, d.jsx)(I.A, {
-                                            displayProfile: G,
-                                            themeType: b.d.POPOUT,
-                                            onClose: B,
+                                            displayProfile: D,
+                                            themeType: C.d.POPOUT,
+                                            onClose: q,
                                         }),
                                     }),
-                                    (0, d.jsx)(_.E, {
+                                    (0, d.jsx)(T.E, {
                                         userId: i.id,
-                                        userBio: G?.bio,
+                                        userBio: D?.bio,
                                         setLineClamp: !1,
                                         textColor: "text-strong",
                                     }),
                                 ],
                             }),
-                            (0, d.jsx)("div", { className: R.qr }),
+                            (0, d.jsx)("div", { className: b.qr }),
                         ],
                     }),
-                    G?.profileEffect != null && (0, d.jsx)(p.A, { skuId: G?.profileEffect?.skuId, isHovering: J }),
+                    D?.profileEffect != null && (0, d.jsx)(p.A, { skuId: D?.profileEffect?.skuId, isHovering: z }),
                 ],
             }),
         }),

@@ -217,7 +217,7 @@
 }
 
 .themeContainer_ce8328.custom-user-profile-theme {
-    --custom-profile-frame-layer-scale: calc(308/var(--custom-profile-frame-container-width))
+    --custom-profile-frame-layer-scale: calc(304/var(--custom-profile-frame-container-width))
 }
 
 @media (min-height:481px) {
