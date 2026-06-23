@@ -1,4 +1,4 @@
-t.r(l), t.d(l, { SocialLayerStorefrontInnerWrapper: () => eH, default: () => eD });
+t.r(l), t.d(l, { SocialLayerStorefrontInnerWrapper: () => eV, default: () => eF });
 var n = t(627968),
     s = t(64700),
     a = t(503698),
@@ -15,17 +15,17 @@ var n = t(627968),
     m = t(435658),
     p = t(561794),
     I = t(495544),
-    j = t(696451),
-    A = t(71393),
+    A = t(696451),
+    j = t(71393),
     S = t(67480),
     _ = t(385648),
     k = t(871123),
     v = t(733391),
     b = t(439303),
-    N = t(353281),
-    E = t(429635),
-    C = t(317560),
-    L = t(696292),
+    E = t(353281),
+    N = t(429635),
+    L = t(317560),
+    C = t(696292),
     y = t(939249),
     R = t(366010),
     M = t(926268),
@@ -35,12 +35,12 @@ var n = t(627968),
     H = t(975732),
     w = t(371446),
     G = t(70926),
-    Y = t(287809),
-    P = t(174459),
+    P = t(287809),
+    Y = t(174459),
     U = t(975571),
     $ = t(371794),
-    V = t(681064),
-    F = t(995393),
+    F = t(681064),
+    V = t(995393),
     B = t(652215),
     J = t(518477),
     W = t(375708),
@@ -51,9 +51,9 @@ function z(e) {
 }
 function K() {
     let { enabled: e } = (0, w.Z)({ location: "slayer_storefront_header" }),
-        l = (0, V.R)({ location: "slayer_storefront_header" }),
+        l = (0, F.R)({ location: "slayer_storefront_header" }),
         t = s.useCallback(() => {
-            (0, D.navigateToQuestHome)({ fromContent: L.u.ORBS_BALANCE_MENU });
+            (0, D.navigateToQuestHome)({ fromContent: C.u.ORBS_BALANCE_MENU });
         }, []);
     return e && l
         ? (0, n.jsx)(G.SS, { cardAlignment: G.SS.CardAlignment.END, ctaText: W.intl.string(W.t.VC4Mq0), ctaOnClick: t })
@@ -62,10 +62,10 @@ function K() {
 function X(e) {
     let { storefront: l, selectedPageIndex: t } = e,
         a = (0, R.M)((0, T.Ay)()),
-        i = (0, o.bG)([Y.default], () => Y.default.getCurrentUser()),
+        i = (0, o.bG)([P.default], () => P.default.getCurrentUser()),
         c = (0, b.jM)(),
         { analyticsLocations: u } = (0, x.Ay)(),
-        { getSocialLayerStorefrontLink: g } = (0, N.H)(),
+        { getSocialLayerStorefrontLink: g } = (0, E.H)(),
         m = s.useCallback(() => {
             i?.id != null &&
                 (0, H.openUserProfileModal)({
@@ -75,9 +75,9 @@ function X(e) {
                 });
         }, [i]),
         p = s.useCallback(() => {
-            P.default.track(B.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
+            Y.default.track(B.HAw.SLAYER_STOREFRONT_PAGE_ELEMENT_CLICKED, {
                 slayer_storefront_session_id: c?.sessionId,
-                cta_type: F.ST.LEARN_MORE,
+                cta_type: V.ST.LEARN_MORE,
                 location_stack: u,
             }),
                 window.open(U.A.getArticleURL(B.MVz.SOCIAL_LAYER_STOREFRONT));
@@ -86,11 +86,11 @@ function X(e) {
             null != g && (0, h.pX)(g(0));
         }, [g]);
     if (null == l) return null;
-    let j = null != l.logoAssetId ? (0, $.YE)(l.applicationId, l.logoAssetId, 128) : null,
-        A = null != l.lightThemeLogoAssetId ? (0, $.YE)(l.applicationId, l.lightThemeLogoAssetId, 128) : null,
+    let A = null != l.logoAssetId ? (0, $.YE)(l.applicationId, l.logoAssetId, 128) : null,
+        j = null != l.lightThemeLogoAssetId ? (0, $.YE)(l.applicationId, l.lightThemeLogoAssetId, 128) : null,
         S = null;
     return (
-        (S = a ? (j ?? A) : (A ?? j)),
+        (S = a ? (A ?? j) : (j ?? A)),
         (0, n.jsxs)(O.A, {
             disableDoubleClick: !0,
             className: Z.N1,
@@ -164,9 +164,25 @@ var el = t(31969),
     eo = t(417098),
     ec = t(396583),
     ed = t(927813),
-    eu = t(818348),
-    eg = t(569901);
-function ef(e) {
+    eu = t(735438),
+    eg = t.n(eu),
+    ef = t(29814),
+    ex = t(46054),
+    eh = t(551965);
+let em = ["heading", "list", "blockQuote"],
+    ep = eg().once(() =>
+        eg().omit(
+            (0, eh.A)([
+                ef.A.EMBED_TITLE_RULES,
+                ex.A.createReactRules({ enableBuildOverrides: !1, enableEmojiClick: !0 }),
+            ]),
+            em,
+        ),
+    ),
+    eI = eg().once(() => ex.A.reactParserFor(ep()));
+var eA = t(818348),
+    ej = t(569901);
+function eS(e) {
     let { className: l, color: t = "default", children: s } = e,
         a = function () {
             let {
@@ -178,7 +194,7 @@ function ef(e) {
         };
     if ("nitro-pink" === t)
         return a({
-            className: r()(eg.cI, eg.p3, l),
+            className: r()(ej.cI, ej.p3, l),
             customStyle: {
                 "--custom-notice-background": "var(--background-surface-highest)",
                 "--custom-notice-text": "var(--text-strong)",
@@ -186,12 +202,12 @@ function ef(e) {
             },
         });
     if ((0, es.qt)(t)) {
-        let e = (0, es.OK)((0, es.LX)(t)) > 0.5 ? eu.NJ.DARK : eu.NJ.LIGHT;
+        let e = (0, es.OK)((0, es.LX)(t)) > 0.5 ? eA.NJ.DARK : eA.NJ.LIGHT;
         return (0, n.jsx)(ea.N, {
             theme: e,
             children: (e) =>
                 a({
-                    className: r()(e, eg.cI, l),
+                    className: r()(e, ej.cI, l),
                     customStyle: {
                         "--custom-notice-background": t,
                         "--custom-notice-text": "var(--text-strong)",
@@ -201,38 +217,42 @@ function ef(e) {
         });
     }
     return (0, n.jsx)(ea.N, {
-        theme: eu.NJ.DARK,
-        children: (e) => a({ className: r()(e, eg.cI, l), noticeColor: eo.Hv.BRAND }),
+        theme: eA.NJ.DARK,
+        children: (e) => a({ className: r()(e, ej.cI, l), noticeColor: eo.Hv.BRAND }),
     });
 }
-function ex(e) {
+function e_(e) {
     let { Icon: l, text: t, endDatetime: a, ...r } = e,
-        [i, o] = s.useState(() => ep(a));
+        [i, o] = s.useState(() => eb(a));
     (0, ec.A)(() => {
-        let e = ep(a);
+        let e = eb(a);
         null != e && o((l) => (null != l && (0, ei.A)(l, e) ? l : e));
     }, 1e3);
     let c = () =>
         (0, n.jsxs)("div", {
-            className: eg.lt,
+            className: ej.lt,
             children: [
                 null != l && (0, n.jsx)(l, { size: "xs", color: "currentColor" }),
-                (0, n.jsx)(d.E, { variant: "text-sm/normal", color: "currentColor", children: t }),
+                (0, n.jsx)(d.E, {
+                    variant: "text-sm/normal",
+                    color: "currentColor",
+                    children: "string" == typeof t ? eI()(t, !0) : t,
+                }),
             ],
         });
     if (null != i)
         switch (i.units) {
             case "days":
-                return (0, n.jsxs)(ef, { ...r, children: [c(), (0, n.jsx)(eh, { days: i.count })] });
+                return (0, n.jsxs)(eS, { ...r, children: [c(), (0, n.jsx)(ek, { days: i.count })] });
             case "seconds":
-                return (0, n.jsxs)(ef, { ...r, children: [c(), (0, n.jsx)(em, { seconds: i.count })] });
+                return (0, n.jsxs)(eS, { ...r, children: [c(), (0, n.jsx)(ev, { seconds: i.count })] });
         }
-    return (0, n.jsx)(ef, { ...r, children: c() });
+    return (0, n.jsx)(eS, { ...r, children: c() });
 }
-function eh(e) {
+function ek(e) {
     let { days: l } = e;
     return (0, n.jsxs)("div", {
-        className: eg.S5,
+        className: ej.S5,
         children: [
             (0, n.jsx)(er.O, { size: "sm", color: "currentColor" }),
             (0, n.jsx)(d.E, {
@@ -243,7 +263,7 @@ function eh(e) {
         ],
     });
 }
-function em(e) {
+function ev(e) {
     let { seconds: l } = e,
         t = Math.floor(l / ed.A.Seconds.DAY),
         s = Math.floor((l % ed.A.Seconds.DAY) / ed.A.Seconds.HOUR),
@@ -257,7 +277,7 @@ function em(e) {
                 (0, n.jsx)(
                     d.E,
                     {
-                        className: r()(eg.g2, { [eg.$2]: l }),
+                        className: r()(ej.g2, { [ej.$2]: l }),
                         variant: "text-sm/bold",
                         color: "currentColor",
                         children: e,
@@ -268,28 +288,28 @@ function em(e) {
         });
     }
     function c() {
-        return (0, n.jsx)(d.E, { className: eg.At, variant: "text-lg/bold", children: ":" });
+        return (0, n.jsx)(d.E, { className: ej.At, variant: "text-lg/bold", children: ":" });
     }
     return (0, n.jsxs)("div", {
-        className: eg.kz,
+        className: ej.kz,
         children: [t > 0 && o(t), t > 0 && c(), o(s), c(), o(a), c(), o(i, !0)],
     });
 }
-function ep(e) {
+function eb(e) {
     if (null == e) return null;
     let l = en()(),
         t = en()(new Date(e)),
         n = t.diff(l, "days");
     return n >= 1 ? { units: "days", count: n } : { units: "seconds", count: Math.max(t.diff(l, "seconds"), 0) };
 }
-function eI(e) {
+function eE(e) {
     let { applicationId: l } = e,
         t = (0, el.F)("storefront_banner", { applicationId: l });
-    return null == t ? null : (0, n.jsx)(ex, { Icon: t.Icon, text: t.text, endDatetime: t.endsAt });
+    return null == t ? null : (0, n.jsx)(e_, { Icon: t.Icon, text: t.text, endDatetime: t.endsAt });
 }
-var ej = t(328100),
-    eA = t(514270);
-function eS(e) {
+var eN = t(328100),
+    eL = t(514270);
+function eC(e) {
     let { leaderboard: l, skuId: t, analyticsLocations: a, analyticsSectionId: r } = e,
         i = s.useMemo(() => ({ pageSection: r }), [r]);
     return null == l
@@ -297,10 +317,10 @@ function eS(e) {
         : (0, n.jsx)(b.E9, {
               newValue: i,
               children: (0, n.jsxs)("div", {
-                  className: eA.kL,
+                  className: eL.kL,
                   children: [
                       (0, n.jsxs)("div", {
-                          className: eA.FS,
+                          className: eL.FS,
                           children: [
                               (0, n.jsx)(c.D, { variant: "display-lg", color: "text-strong", children: l.title }),
                               (0, n.jsx)(d.E, {
@@ -312,11 +332,11 @@ function eS(e) {
                       }),
                       null != t &&
                           (0, n.jsx)("div", {
-                              className: eA.Ui,
-                              children: (0, n.jsx)(ej.A, {
+                              className: eL.Ui,
+                              children: (0, n.jsx)(eN.A, {
                                   positionInSection: 0,
                                   skuId: t,
-                                  variant: ej.s.MEDIUM,
+                                  variant: eN.s.MEDIUM,
                                   analyticsLocations: a,
                               }),
                           }),
@@ -324,37 +344,37 @@ function eS(e) {
               }),
           });
 }
-var e_ = t(500102);
-function ek(e) {
+var ey = t(500102);
+function eR(e) {
     let { applicationId: l, backgroundImageAssetId: t } = e,
         s = null != t ? (0, $.YE)(l, t, 1024, k.pV) : null;
     return (0, n.jsx)("div", {
-        className: e_._,
-        children: null != s ? (0, n.jsx)("div", { className: e_.i, style: { backgroundImage: `url(${s})` } }) : null,
+        className: ey._,
+        children: null != s ? (0, n.jsx)("div", { className: ey.i, style: { backgroundImage: `url(${s})` } }) : null,
     });
 }
-var ev = t(198647);
-function eb(e) {
-    let { skuIds: l, variant: t = ej.s.SMALL, analyticsLocations: s } = e;
+var eM = t(198647);
+function eT(e) {
+    let { skuIds: l, variant: t = eN.s.SMALL, analyticsLocations: s } = e;
     return null == l || 0 === l.length
         ? null
         : (0, n.jsx)("div", {
-              className: r()(ev.kL, ev.$2, { [ev.Wc]: t === ej.s.MEDIUM }),
+              className: r()(eM.kL, eM.$2, { [eM.Wc]: t === eN.s.MEDIUM }),
               children: l.map((e, l) =>
-                  (0, n.jsx)(ej.A, { positionInSection: l, skuId: e, variant: t, analyticsLocations: s }, `${e}-${l}`),
+                  (0, n.jsx)(eN.A, { positionInSection: l, skuId: e, variant: t, analyticsLocations: s }, `${e}-${l}`),
               ),
           });
 }
-var eN = t(259238);
-function eE(e) {
-    let { analyticsSectionId: l, sectionTitle: t, skuIds: a, variant: r = ej.s.SMALL } = e,
+var eO = t(259238);
+function eD(e) {
+    let { analyticsSectionId: l, sectionTitle: t, skuIds: a, variant: r = eN.s.SMALL } = e,
         i = s.useMemo(() => ({ pageSection: l, pageSectionTitle: t }), [l, t]);
     return null == a || 0 === a.length
         ? null
         : (0, n.jsx)(b.E9, {
               newValue: i,
               children: (0, n.jsxs)("div", {
-                  className: eN.h,
+                  className: eO.h,
                   children: [
                       null != t &&
                           t.length > 0 &&
@@ -362,16 +382,16 @@ function eE(e) {
                               variant: "heading-lg/semibold",
                               color: "text-strong",
                               lineClamp: 1,
-                              className: eN.G,
+                              className: eO.G,
                               children: t,
                           }),
-                      (0, n.jsx)(eb, { skuIds: a, variant: r }),
+                      (0, n.jsx)(eT, { skuIds: a, variant: r }),
                   ],
               }),
           });
 }
-var eC = t(59520);
-function eL(e, l, t, n) {
+var eH = t(59520);
+function ew(e, l, t, n) {
     let { scrollTop: s = 0, scrollOffset: a = 0, scrollHeight: r = 0, scrollWidth: i = 0 } = n;
     if (r > 0) {
         let n = (s + a) / r;
@@ -385,7 +405,7 @@ function eL(e, l, t, n) {
                 isUserGuildMember: u,
                 pageHasLeaderboard: g,
             } = l;
-            P.default.track(e, {
+            Y.default.track(e, {
                 slayer_storefront_session_id: s,
                 guild_id: a,
                 application_id: o,
@@ -401,8 +421,8 @@ function eL(e, l, t, n) {
         }
     }
 }
-var ey = t(384274);
-function eR(e) {
+var eG = t(384274);
+function eP(e) {
     let l,
         t,
         { applicationId: a, page: r } = e,
@@ -415,7 +435,7 @@ function eR(e) {
             s.useEffect(() => {
                 l.current = c;
             }, [c]),
-            (t = (0, eC.I)(eL, 5e3, [], { trailing: !0 })),
+            (t = (0, eH.I)(ew, 5e3, [], { trailing: !0 })),
             {
                 handleScroll: s.useCallback(() => {
                     if (null != u.current) {
@@ -449,7 +469,7 @@ function eR(e) {
         p = 1 === h.length && null != o && o >= 834 && !f;
     return (s.useEffect(() => {
         let { sessionId: e, guildId: l, pageIndex: t, pageTitle: n, isUserGuildMember: s, pageHasLeaderboard: r } = c;
-        P.default.track(B.HAw.SLAYER_STOREFRONT_PAGE_VIEWED, {
+        Y.default.track(B.HAw.SLAYER_STOREFRONT_PAGE_VIEWED, {
             slayer_storefront_session_id: e,
             guild_id: l,
             application_id: a,
@@ -466,31 +486,31 @@ function eR(e) {
               ref: u,
               onScroll: g,
               children: [
-                  (0, n.jsx)(eI, { applicationId: a }),
+                  (0, n.jsx)(eE, { applicationId: a }),
                   (0, n.jsxs)("section", {
                       ref: i,
-                      className: ey.k,
+                      className: eG.k,
                       children: [
-                          (0, n.jsx)(ek, {
+                          (0, n.jsx)(eR, {
                               applicationId: a,
                               backgroundImageAssetId: r.leaderboard?.backgroundImageAssetId,
                           }),
                           !f &&
-                              (0, n.jsx)(eS, {
+                              (0, n.jsx)(eC, {
                                   analyticsSectionId: "leaderboard",
                                   leaderboard: r.leaderboard,
                                   skuId: p ? h[0] : void 0,
                                   analyticsLocations: d,
                               }),
-                          (0, n.jsx)(eE, {
+                          (0, n.jsx)(eD, {
                               analyticsSectionId: "featured-top-section",
                               skuIds: p ? void 0 : h,
-                              variant: ej.s.MEDIUM,
+                              variant: eN.s.MEDIUM,
                           }),
-                          (0, n.jsx)(eE, { analyticsSectionId: "non-featured-top-section", skuIds: m }),
+                          (0, n.jsx)(eD, { analyticsSectionId: "non-featured-top-section", skuIds: m }),
                           r.sections?.map((e, l) =>
                               (0, n.jsx)(
-                                  eE,
+                                  eD,
                                   {
                                       analyticsSectionId: `index:${l}`,
                                       sectionTitle: e.title ?? void 0,
@@ -504,12 +524,12 @@ function eR(e) {
               ],
           });
 }
-var eM = t(430825),
-    eT = t(253004);
-function eO(e) {
+var eY = t(430825),
+    eU = t(253004);
+function e$(e) {
     let { storefront: l, guildId: t, selectedPageIndex: a, selectedSku: r } = e,
         i = (0, b.jM)(),
-        { renderHeader: o, getSocialLayerStorefrontLink: c } = (0, N.H)(),
+        { renderHeader: o, getSocialLayerStorefrontLink: c } = (0, E.H)(),
         d = s.useRef(i);
     s.useEffect(() => {
         d.current = i;
@@ -522,7 +542,7 @@ function eO(e) {
         s.useEffect(() => {
             if (null != g)
                 return (
-                    (0, C.R)({
+                    (0, L.R)({
                         customNavigateToSocialLayerStorefront: u,
                         skuId: g,
                         applicationId: l.applicationId,
@@ -535,17 +555,17 @@ function eO(e) {
                         },
                     }),
                     () => {
-                        (0, C.j)();
+                        (0, L.j)();
                     }
                 );
         }, [t, a, g, l.applicationId, c, u]),
         (0, n.jsxs)("div", {
-            className: eT.kL,
-            children: [o?.(a, l), (0, n.jsx)(eR, { applicationId: l.applicationId, page: l.pages[a] })],
+            className: eU.kL,
+            children: [o?.(a, l), (0, n.jsx)(eP, { applicationId: l.applicationId, page: l.pages[a] })],
         })
     );
 }
-function eD(e) {
+function eF(e) {
     let { match: l } = e,
         { guildId: t, gameShopPageIndex: a, gameShopSkuId: r } = l.params,
         i = (0, o.bG)([I.default], () => I.default.getSessionId(), []),
@@ -554,9 +574,9 @@ function eD(e) {
         u = s.useCallback((e, l) => (0, n.jsx)(X, { storefront: l, selectedPageIndex: e }), []);
     return (
         s.useEffect(() => {
-            null == t || null == i || (null == A.A.getGuild(t) && (0, _.Z2)(t, {}, { shouldNavigate: !1 }));
+            null == t || null == i || (null == j.A.getGuild(t) && (0, _.Z2)(t, {}, { shouldNavigate: !1 }));
         }, [t, i]),
-        (0, n.jsx)(eH, {
+        (0, n.jsx)(eV, {
             applicationId: d,
             guildId: t,
             skuId: r,
@@ -566,28 +586,28 @@ function eD(e) {
         })
     );
 }
-function eH(e) {
+function eV(e) {
     let {
             applicationId: l,
             guildId: t,
             skuId: a,
             pageIndex: h = 0,
-            renderHeader: A,
+            renderHeader: j,
             getSocialLayerStorefrontLink: _,
         } = e,
         { analyticsLocations: k } = (0, x.Ay)(f.A.SOCIAL_LAYER_STOREFRONT),
-        C = (0, E.A)({ applicationId: l }),
-        L = (0, o.bG)([S.A], () => S.A.get(a), [a]);
-    (0, p.pE)(), (0, m.x)({ applicationId: C?.storefront?.applicationId });
+        L = (0, N.A)({ applicationId: l }),
+        C = (0, o.bG)([S.A], () => S.A.get(a), [a]);
+    (0, p.pE)(), (0, m.x)({ applicationId: L?.storefront?.applicationId });
     let y = (0, g.A)((0, i.A)()),
-        R = (0, o.bG)([j.Ay, I.default], () => j.Ay.isMember(t, I.default.getId())),
+        R = (0, o.bG)([A.Ay, I.default], () => A.Ay.isMember(t, I.default.getId())),
         M = s.useMemo(
             () =>
-                null == h || isNaN(h) || (null != C && null != C.storefront && h >= C.storefront.pages.length) ? 0 : h,
-            [h, C],
+                null == h || isNaN(h) || (null != L && null != L.storefront && h >= L.storefront.pages.length) ? 0 : h,
+            [h, L],
         ),
-        T = C?.storefront?.pages[M]?.title ?? null,
-        O = C?.storefront?.pages[M]?.leaderboard != null,
+        T = L?.storefront?.pages[M]?.title ?? null,
+        O = L?.storefront?.pages[M]?.leaderboard != null,
         D = s.useMemo(
             () => ({
                 sessionId: y,
@@ -603,36 +623,36 @@ function eH(e) {
     return (s.useEffect(() => {
         null != l && (0, v.SP)(l, M, null != a ? a : null);
     }, [l, M, a]),
-    null == l || C?.storefront == null)
-        ? null != C && "loading" !== C.state
+    null == l || L?.storefront == null)
+        ? null != L && "loading" !== L.state
             ? (0, n.jsxs)("div", {
-                  className: r()(eT.p$, eT.kL),
+                  className: r()(eU.p$, eU.kL),
                   children: [
                       (0, n.jsx)(c.D, {
                           variant: "heading-lg/semibold",
                           color: "text-strong",
-                          children: W.intl.string(eM.default.OvBwPV),
+                          children: W.intl.string(eY.default.OvBwPV),
                       }),
                       (0, n.jsx)(d.E, {
                           variant: "text-md/normal",
                           color: "text-subtle",
-                          children: W.intl.string(eM.default["Sy7D+/"]),
+                          children: W.intl.string(eY.default["Sy7D+/"]),
                       }),
                   ],
               })
-            : (0, n.jsx)("div", { className: r()(eT.u1, eT.kL), children: (0, n.jsx)(u.y, {}) })
+            : (0, n.jsx)("div", { className: r()(eU.u1, eU.kL), children: (0, n.jsx)(u.y, {}) })
         : (0, n.jsx)(x.f5, {
               value: k,
-              children: (0, n.jsx)(N.J, {
-                  renderHeader: A,
+              children: (0, n.jsx)(E.J, {
+                  renderHeader: j,
                   getSocialLayerStorefrontLink: _,
                   children: (0, n.jsx)(b.E9, {
                       newValue: D,
-                      children: (0, n.jsx)(eO, {
-                          storefront: C.storefront,
+                      children: (0, n.jsx)(e$, {
+                          storefront: L.storefront,
                           guildId: t,
                           selectedPageIndex: M,
-                          selectedSku: L,
+                          selectedSku: C,
                       }),
                   }),
               }),

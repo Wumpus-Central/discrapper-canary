@@ -32,9 +32,9 @@ function m(e) {
                 ...c,
             });
     return null != l && "object" == typeof l
-        ? (0, i.jsx)(d.u, { assetSize: 48, ...l, children: f() })
+        ? (0, i.jsx)(d.u, { assetSize: 48, asContainer: !0, element: "div", ...l, children: f() })
         : null != l && "string" == typeof l
-          ? (0, i.jsx)(_.m, { text: l, children: f() })
+          ? (0, i.jsx)(_.m, { text: l, asContainer: !0, tag: "div", children: f() })
           : f();
 }
 function g(e) {

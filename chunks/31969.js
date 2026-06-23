@@ -44,15 +44,22 @@ function f(e, t) {
             case "storefront_banner": {
                 let e = d.storefront?.headerText;
                 if ((0, u.uJ)(e)) return null;
-                return { Icon: h(d.pdp?.icon ?? null), text: e, tooltip: null, endsAt: t };
+                return { Icon: h(d.pdp?.icon ?? null), text: e, tooltip: null, endsAt: t, rewardValue: null };
             }
             case "pdp":
+            case "card":
             case "gift": {
                 if (null == f) return null;
                 let n = "gift" === e ? d.checkout : d.pdp,
                     l = p(n?.label ?? null, f);
                 if ((0, u.uJ)(l)) return null;
-                return { Icon: h(n?.icon ?? null), text: l, tooltip: p(n?.tooltip ?? null, f), endsAt: t };
+                return {
+                    Icon: h(n?.icon ?? null),
+                    text: l,
+                    tooltip: p(n?.tooltip ?? null, f),
+                    endsAt: t,
+                    rewardValue: f,
+                };
             }
             case "wishlist_recommendations":
                 return null;

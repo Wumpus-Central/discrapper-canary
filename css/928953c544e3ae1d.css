@@ -98,6 +98,7 @@
 .bannerContainer__2fc34 {
     align-items: center;
     border: none;
+    border-radius: 0;
     display: flex;
     flex-direction: row;
     gap: var(--space-10);
