@@ -1992,36 +1992,45 @@ class lE extends i.PureComponent {
                       ],
                   })
                 : null,
-            N = e.isForumChannel()
-                ? (0, n.jsxs)(n.Fragment, {
-                      children: [
-                          (0, n.jsx)(L.c, {}),
-                          (0, n.jsxs)("div", {
-                              className: lA.OZ,
-                              children: [
-                                  (0, n.jsx)("div", {
-                                      className: A()(lA.t0, lA.WC),
-                                      children: (0, n.jsx)(tG.l, {
-                                          selectionMode: "single",
-                                          label: eH.intl.string(eH.t["kQvoC/"]),
-                                          description: eH.intl.string(eH.t.mOSViT),
-                                          options: [
-                                              { id: "list", label: eH.intl.string(eH.t["4HXEZG"]), value: tS.C.LIST },
-                                              { id: "grid", label: eH.intl.string(eH.t["8RswJG"]), value: tS.C.GRID },
-                                          ],
-                                          value: e.defaultForumLayout ?? tS.C.LIST,
-                                          onSelectionChange: this.handleChangeDefaultForumLayout,
+            N =
+                e.isForumChannel() && !e.isGameInvitesChannel()
+                    ? (0, n.jsxs)(n.Fragment, {
+                          children: [
+                              (0, n.jsx)(L.c, {}),
+                              (0, n.jsxs)("div", {
+                                  className: lA.OZ,
+                                  children: [
+                                      (0, n.jsx)("div", {
+                                          className: A()(lA.t0, lA.WC),
+                                          children: (0, n.jsx)(tG.l, {
+                                              selectionMode: "single",
+                                              label: eH.intl.string(eH.t["kQvoC/"]),
+                                              description: eH.intl.string(eH.t.mOSViT),
+                                              options: [
+                                                  {
+                                                      id: "list",
+                                                      label: eH.intl.string(eH.t["4HXEZG"]),
+                                                      value: tS.C.LIST,
+                                                  },
+                                                  {
+                                                      id: "grid",
+                                                      label: eH.intl.string(eH.t["8RswJG"]),
+                                                      value: tS.C.GRID,
+                                                  },
+                                              ],
+                                              value: e.defaultForumLayout ?? tS.C.LIST,
+                                              onSelectionChange: this.handleChangeDefaultForumLayout,
+                                          }),
                                       }),
-                                  }),
-                                  e.defaultForumLayout === tS.C.GRID
-                                      ? (0, n.jsx)(lh, { className: lA.Kf })
-                                      : (0, n.jsx)(lg, { className: lA.Kf }),
-                              ],
-                          }),
-                          (0, n.jsx)(L.c, {}),
-                      ],
-                  })
-                : null,
+                                      e.defaultForumLayout === tS.C.GRID
+                                          ? (0, n.jsx)(lh, { className: lA.Kf })
+                                          : (0, n.jsx)(lg, { className: lA.Kf }),
+                                  ],
+                              }),
+                              (0, n.jsx)(L.c, {}),
+                          ],
+                      })
+                    : null,
             E =
                 e.isForumLikeChannel() && !e.isGameInvitesChannel()
                     ? (0, n.jsx)(tG.l, {
