@@ -28,7 +28,7 @@
 
 .seat__80369:focus-visible .graphic__80369,
 .seat__80369:hover .graphic__80369 {
-    border: 2px solid var(--border-strong);
+    border: 2px solid #fff;
     border-radius: 50%
 }
 

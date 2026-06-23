@@ -60,7 +60,7 @@ function f(e) {
         E = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id);
     if (y || null == E) return null;
     let { numericAvatarSize: N } = (0, h.F)(f),
-        j = Math.max(N, 24),
+        j = 1.2 * Math.max(N, 24),
         v = async () => {
             C
                 ? await (0, u.AQ)(E, t, { user_position: { x: n, y: l } })

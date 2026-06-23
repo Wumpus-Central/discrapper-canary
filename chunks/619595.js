@@ -220,18 +220,19 @@ let eA = ["heading", "list", "blockQuote"],
 var e_ = t(818348),
     ek = t(569901);
 function ev(e) {
-    let { className: l, color: t = "default", children: s } = e,
-        a = function () {
+    let { className: l, color: t = "default", sticky: s = !1, children: a } = e,
+        i = s ? ek.qf : void 0,
+        o = function () {
             let {
                 className: e,
                 noticeColor: l,
                 customStyle: t,
             } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return (0, n.jsx)(eu.$T, { className: e, color: l, style: t, children: s });
+            return (0, n.jsx)(eu.$T, { className: e, color: l, style: t, children: a });
         };
     if ("nitro-pink" === t)
-        return a({
-            className: r()(ek.cI, ek.p3, l),
+        return o({
+            className: r()(ek.cI, ek.p3, i, l),
             customStyle: {
                 "--custom-notice-background": "var(--background-surface-highest)",
                 "--custom-notice-text": "var(--text-strong)",
@@ -243,8 +244,8 @@ function ev(e) {
         return (0, n.jsx)(eo.N, {
             theme: e,
             children: (e) =>
-                a({
-                    className: r()(e, ek.cI, l),
+                o({
+                    className: r()(e, ek.cI, i, l),
                     customStyle: {
                         "--custom-notice-background": t,
                         "--custom-notice-text": "var(--text-strong)",
@@ -255,7 +256,7 @@ function ev(e) {
     }
     return (0, n.jsx)(eo.N, {
         theme: e_.NJ.DARK,
-        children: (e) => a({ className: r()(e, ek.cI, l), noticeColor: eu.Hv.BRAND }),
+        children: (e) => o({ className: r()(e, ek.cI, i, l), noticeColor: eu.Hv.BRAND }),
     });
 }
 function eb(e) {
@@ -482,7 +483,7 @@ function eG(e) {
               ref: u,
               onScroll: g,
               children: [
-                  null != x && (0, n.jsx)(eb, { Icon: x.Icon, text: x.text, endDatetime: x.endsAt }),
+                  null != x && (0, n.jsx)(eb, { sticky: !0, Icon: x.Icon, text: x.text, endDatetime: x.endsAt }),
                   (0, n.jsxs)("section", {
                       ref: i,
                       className: ew.k,

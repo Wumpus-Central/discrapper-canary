@@ -529,6 +529,12 @@
     min-width: 246px
 }
 
+.sticky__2fc34 {
+    position: sticky;
+    top: 0;
+    z-index: 2
+}
+
 .bannerContainer__2fc34 {
     align-items: center;
     border: none;
