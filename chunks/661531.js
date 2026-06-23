@@ -7977,7 +7977,7 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 0;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 12;
                         return 0;
                     },
                 },
@@ -8663,24 +8663,25 @@ let { Themes: c } = u.zv,
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return 14;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 9;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 13;
                         return 14;
                     },
                 },
-                VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return 17;
-                        for (let e of t) if ("mobile-visual-refresh" === e) return 12;
-                        return 17;
-                    },
-                },
+                VOICE_MESSAGE_DURATION_LINE_HEIGHT_IOS: { resolve: () => 17 },
                 VOICE_MESSAGE_DURATION_TEXT_STYLE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
                         if (0 === t.length) return "text-sm/semibold";
                         for (let e of t) if ("mobile-visual-refresh" === e) return "text-xs/semibold";
                         return "text-sm/semibold";
+                    },
+                },
+                VOICE_MESSAGE_RECORDING_CONTAINER_PADDING_VERTICAL: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 10;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 6;
+                        return 10;
                     },
                 },
                 VOICE_PANEL_CONTROLS_BORDER_RADIUS: {

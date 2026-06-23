@@ -9580,6 +9580,7 @@
     --mobile-voice-message-duration-line-height-android: 14px;
     --mobile-voice-message-duration-line-height-ios: 17px;
     --mobile-voice-message-duration-text-style: text-sm/semibold;
+    --mobile-voice-message-recording-container-padding-vertical: 10px;
     --mobile-voice-panel-controls-border-radius: 32px;
     --mobile-voice-panel-controls-padding: 16px;
     --mobile-voice-panel-disconnect-button-min-width: 0px;
@@ -9704,9 +9705,9 @@
     --mobile-user-profile-about-me-heading-text-style: text-sm/medium;
     --mobile-user-row-label-line-height-ios: 20px;
     --mobile-voice-channel-user-limit-border-width: 1px;
-    --mobile-voice-message-duration-line-height-android: 9px;
-    --mobile-voice-message-duration-line-height-ios: 12px;
+    --mobile-voice-message-duration-line-height-android: 13px;
     --mobile-voice-message-duration-text-style: text-xs/semibold;
+    --mobile-voice-message-recording-container-padding-vertical: 6px;
     --mobile-voice-panel-controls-border-radius: 16px;
     --mobile-voice-panel-controls-padding: 4px;
     --mobile-voice-panel-disconnect-button-min-width: 64px;
