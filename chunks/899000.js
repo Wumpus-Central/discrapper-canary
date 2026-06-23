@@ -4,7 +4,7 @@ var i = n(17928),
     r = n(459838),
     s = n(228366),
     a = n(540999),
-    o = n(941327);
+    o = n(394459);
 let l = [
         ["codecH264", "H264"],
         ["codecH265", "H265"],
@@ -112,12 +112,13 @@ class m extends i.Ay.DeviceSettingsStore {
     static displayName = "AudioVideoOverridesStore";
     static persistKey = "AudioVideoOverridesStore";
     initialize(e) {
-        if ((this.waitFor(a.A), (_ = null != e ? { ...d, ...e } : { ...d }), E(), !f)) {
-            let e = () => {
-                p() && (E(), o.Ay.removeChangeListener(e));
-            };
-            o.Ay.addChangeListener(e);
-        }
+        this.waitFor(a.A),
+            (_ = null != e ? { ...d, ...e } : { ...d }),
+            E(),
+            f ||
+                o.Ay.addChangeListener(function e() {
+                    p() && (E(), o.Ay.removeChangeListener(e));
+                });
     }
     getUserAgnosticState() {
         return _;

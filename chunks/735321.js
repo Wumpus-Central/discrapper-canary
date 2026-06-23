@@ -34,7 +34,9 @@ var i = n(853811),
     h = n(61881),
     f = n(229231),
     p = n(375708);
-let E = (e) => f.Ok[e.type](e);
+function E(e) {
+    return f.Ok[e.type](e);
+}
 function m(e, t) {
     let { showEditingControls: n } = t,
         i = e.games.length > 0;

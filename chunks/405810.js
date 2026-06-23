@@ -1,28 +1,28 @@
-a.d(s, { A: () => c });
-var i = a(627968),
-    l = a(64700),
-    n = a(821609),
-    r = a(946274),
-    o = a(577749);
+i.d(s, { A: () => c });
+var a = i(627968),
+    n = i(64700),
+    l = i(821609),
+    o = i(946274),
+    r = i(577749);
 function c(e) {
     let {
             onChange: s,
-            onFileSizeError: a,
+            onFileSizeError: i,
             multiple: c = !1,
             disabled: t = !1,
             maxFileSizeBytes: d,
             filters: u,
             ...h
         } = e,
-        m = l.useRef(null);
-    return (0, i.jsxs)("div", {
+        m = n.useRef(null);
+    return (0, a.jsxs)("div", {
         children: [
-            (0, i.jsx)("div", {
-                className: o.l,
-                children: (0, i.jsx)(r.Ay, {
+            (0, a.jsx)("div", {
+                className: r.l,
+                children: (0, a.jsx)(o.Ay, {
                     ref: m,
                     onChange: s,
-                    onFileSizeError: a,
+                    onFileSizeError: i,
                     multiple: c,
                     maxFileSizeBytes: d,
                     filters: u,
@@ -31,10 +31,10 @@ function c(e) {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, i.jsx)(n.$, {
+            (0, a.jsx)(l.$, {
                 ...h,
                 disabled: t,
-                onClick: () => {
+                onClick: function () {
                     m.current?.activateUploadDialogue();
                 },
             }),

@@ -141,8 +141,10 @@ function $(e) {
                 i.includes(e) || (i = [...i, e]), w.A.updateMemberRoles(n.id, l, i, [e], []);
             },
             [n.id, l, o],
-        ),
-        p = (e) => !(0, P.Oy)(e) && !e.managed && _.A.isRoleHigher(n, c, e) && -1 === h.indexOf(e.id);
+        );
+    function p(e) {
+        return !(0, P.Oy)(e) && !e.managed && _.A.isRoleHigher(n, c, e) && -1 === h.indexOf(e.id);
+    }
     return (0, t.jsx)(C.Y, {
         targetElementRef: R,
         position: "bottom",
@@ -240,8 +242,10 @@ function q(e) {
             isRoleRemovable: h,
         } = B({ userId: l, guild: n, roles: i, allowEditing: u, readOnly: d }),
         m = Q(l, n.id, o),
-        f = U(),
-        j = () => (0, t.jsx)($, { userId: l, guild: n, showLabel: 0 === i.length, onAddRole: a });
+        f = U();
+    function j() {
+        return (0, t.jsx)($, { userId: l, guild: n, showLabel: 0 === i.length, onAddRole: a });
+    }
     return 0 === i.length
         ? c
             ? (0, t.jsx)("div", { className: s()(O.MR, r), children: j() })
@@ -322,11 +326,11 @@ function V(e) {
         } = B({ userId: l, guild: n, roles: r, allowEditing: x, readOnly: g }),
         b = Q(l, n.id, d),
         R = U(),
-        C = i.useRef({}),
-        v = (e, l) => {
-            null != l ? (C.current[e] = l) : delete C.current[e];
-        },
-        [A, p] = i.useState(r),
+        C = i.useRef({});
+    function v(e, l) {
+        null != l ? (C.current[e] = l) : delete C.current[e];
+    }
+    let [A, p] = i.useState(r),
         [y, N] = i.useState(268),
         [M, S] = i.useState(!1),
         w = i.useRef(null),
@@ -357,15 +361,18 @@ function V(e) {
             }
             p(n.length !== A.length || n.some((e, l) => e.id !== A[l]?.id) ? n : A), N(t), E.current++;
         }, [r, A, M]);
-    let I = M ? r : A,
-        P = () => {
-            M ? (c?.(), S(!1)) : (u?.(), S(!0));
-        },
-        L = () =>
-            A.length < r.length
-                ? (0, t.jsx)(F, { isExpanded: M, overflowCount: r.length - A.length, onClick: P, buttonRef: w })
-                : null,
-        _ = () => (0, t.jsx)($, { buttonRef: k, userId: l, guild: n, showLabel: 0 === r.length, onAddRole: a });
+    let I = M ? r : A;
+    function P() {
+        M ? (c?.(), S(!1)) : (u?.(), S(!0));
+    }
+    function L() {
+        return A.length < r.length
+            ? (0, t.jsx)(F, { isExpanded: M, overflowCount: r.length - A.length, onClick: P, buttonRef: w })
+            : null;
+    }
+    function _() {
+        return (0, t.jsx)($, { buttonRef: k, userId: l, guild: n, showLabel: 0 === r.length, onAddRole: a });
+    }
     return 0 === r.length
         ? h
             ? (0, t.jsx)("div", { className: s()(O.MR, o), children: _() })

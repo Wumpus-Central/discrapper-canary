@@ -114,10 +114,10 @@ function ex(e) {
 }
 function em(e) {
     let { user: t, guildId: l, joinRequest: s } = e,
-        { analyticsLocations: n } = (0, x.Ay)(),
-        r = () => {
-            (0, el.openUserProfileModal)({ userId: t.id, joinRequestId: s.joinRequestId, sourceAnalyticsLocations: n });
-        };
+        { analyticsLocations: n } = (0, x.Ay)();
+    function r() {
+        (0, el.openUserProfileModal)({ userId: t.id, joinRequestId: s.joinRequestId, sourceAnalyticsLocations: n });
+    }
     return (0, i.jsxs)("div", {
         className: eo.op,
         children: [
@@ -661,7 +661,7 @@ let eU = n.memo(function (e) {
                               (0, i.jsx)(eI.m, {
                                   text: Q.intl.string(Q.t.x8Nn4M),
                                   children: (0, i.jsx)(D.D, {
-                                      onClick: (e) => {
+                                      onClick: function (e) {
                                           (0, ep.L3)(
                                               e,
                                               async () => {
@@ -790,7 +790,7 @@ var eF = l(465917),
     eQ = l(765548),
     eZ = l(736653),
     e0 = l(256177);
-let e7 = (e) => {
+function e7(e) {
     let { tabs: t, selectedTab: l, onTabSelect: s, onClose: n } = e;
     return (0, i.jsx)(eW.W, {
         "data-menu-migrated-auto": !0,
@@ -820,7 +820,7 @@ let e7 = (e) => {
             "applications-overflow-tabs",
         ),
     });
-};
+}
 function e4(e) {
     let { onTabSelect: t, tabs: l, selectedTab: s } = e,
         r = n.useRef(null),
@@ -862,9 +862,9 @@ function e4(e) {
         },
     });
 }
-function e5(e) {
-    let t,
-        { guildId: l, currentTab: s, onTabSelect: r } = e,
+function e6(e) {
+    var t;
+    let { guildId: l, currentTab: s, onTabSelect: r } = e,
         [a, c] = n.useState(0),
         o = n.useRef(null),
         u = n.useRef(a),
@@ -945,15 +945,15 @@ function e5(e) {
         })
     );
 }
-var e6 = l(754744),
-    e2 = l(138298);
-function e8(e) {
+var e8 = l(754744),
+    e5 = l(138298);
+function e2(e) {
     let { guildId: t } = e,
         l = (0, d.bG)([C.A], () => C.A.getGuild(t)),
         { analyticsLocations: s } = (0, x.Ay)(u.A.MEMBER_SAFETY_PAGE),
         r = (0, d.bG)([I.Ay], () => I.Ay.getGuildSidebarState(t), [t]),
         a = n.useCallback(() => {
-            e2.A.closeGuildSidebar(t);
+            e5.A.closeGuildSidebar(t);
         }, [t]),
         c = null != r;
     return null != l && c && null != r
@@ -962,7 +962,7 @@ function e8(e) {
               children: (0, i.jsx)("div", {
                   className: e0.__invalid_sidebarContainer,
                   style: { width: ed.da6 },
-                  children: (0, i.jsx)(e6.default, {
+                  children: (0, i.jsx)(e8.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -972,8 +972,8 @@ function e8(e) {
         : null;
 }
 var e3 = l(856768),
-    e9 = l(922139),
-    e1 = l(702841),
+    e1 = l(308186),
+    e9 = l(702841),
     te = l(717421),
     tt = l(144073),
     tl = l(151781),
@@ -984,16 +984,16 @@ var e3 = l(856768),
 function ta(e) {
     let { guild: t } = e,
         l = (0, tt.Ms)(t.id),
-        s = (0, te.z)({ height: 3 * !!l, config: e9.config.stiff });
+        s = (0, te.z)({ height: 3 * !!l, config: e1.config.stiff });
     return (0, i.jsx)("div", {
         className: ey.NQ,
-        children: (0, i.jsx)(e9.animated.div, { className: ey.b0, style: s }),
+        children: (0, i.jsx)(e1.animated.div, { className: ey.b0, style: s }),
     });
 }
 function td(e) {
     let { guild: t, className: l, onPageChange: s, onMemberSelect: r } = e,
         d = t.id,
-        c = (0, e1.bG)([tl.A], () => tl.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
+        c = (0, e9.bG)([tl.A], () => tl.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
         u = (0, tt.Ms)(d),
         x = (0, tt.Wl)(d),
         m = n.useCallback(
@@ -1041,7 +1041,7 @@ function tu(e) {
             children: [
                 (0, i.jsx)(b.A.Icon, { icon: c.n, "aria-hidden": !0 }),
                 (0, i.jsx)(b.A.Title, { children: a }),
-                n && (0, i.jsx)(e5, { guildId: t.id, currentTab: l, onTabSelect: s }),
+                n && (0, i.jsx)(e6, { guildId: t.id, currentTab: l, onTabSelect: s }),
             ],
         })
     );
@@ -1122,7 +1122,7 @@ function tx(e) {
                   }),
                   D &&
                       (B
-                          ? (0, i.jsx)(e8, { guildId: c.id })
+                          ? (0, i.jsx)(e2, { guildId: c.id })
                           : s === M.ALL_MEMBERS
                             ? null
                             : (0, i.jsx)(eN, { guildId: c.id })),

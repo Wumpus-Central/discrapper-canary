@@ -6,16 +6,16 @@ var n = s(627968),
     r = s(835245),
     o = s(821609),
     c = s(534514),
-    d = s(834730),
-    u = s(274670),
+    u = s(834730),
+    d = s(274670),
     m = s(144779),
     x = s(174459),
     h = s(104886),
     E = s(18437),
     C = s(590202),
     j = s(617986),
-    g = s(770178),
-    f = s(765548),
+    f = s(770178),
+    g = s(765548),
     N = s(652215),
     v = s(375708),
     _ = s(651029);
@@ -26,10 +26,10 @@ function A(e) {
         children: (0, n.jsx)(o.$, {
             fullWidth: i,
             variant: "primary",
-            onClick: () => {
+            onClick: function () {
                 (0, j.navigateToQuestHome)({ fromContent: s }),
                     (0, h.E5)(h.kI.STEP_2_CLICKED_INTERNAL, "fallback_quest_embed")
-                        ? (0, u.r)({
+                        ? (0, d.r)({
                               type: m.F.CLICK_INTERNAL,
                               questContentCTA: C.Cy.VIEW_QUESTS,
                               surfaceId: s,
@@ -51,15 +51,15 @@ function A(e) {
 }
 function S(e) {
     let { questId: t, fallbackReason: s, bodyText: a, questContent: r } = e,
-        { containerRef: o, size: u } = (function () {
+        { containerRef: o, size: d } = (function () {
             let [e, t] = i.useState("lg"),
                 [s, n] = i.useState(void 0),
-                a = (0, f.A)((e) => {
+                a = (0, g.A)((e) => {
                     let s = e.target,
                         i = e.contentRect.width;
                     return (n(s.scrollHeight), null == i || i > 460) ? t("lg") : i > 280 ? t("sm") : t("xs");
                 });
-            return { containerRef: (0, g.w)(a), size: e, height: s };
+            return { containerRef: (0, f.w)(a), size: e, height: s };
         })();
     return (
         (0, E.Ii)(s, t),
@@ -67,23 +67,23 @@ function S(e) {
             ref: (e) => {
                 o.current = e;
             },
-            className: l()(_.kL, { [_.U]: "lg" === u, [_.SP]: "lg" !== u }),
+            className: l()(_.kL, { [_.U]: "lg" === d, [_.SP]: "lg" !== d }),
             children: [
                 (0, n.jsxs)("div", {
                     className: _.hQ,
                     children: [
                         (0, n.jsx)(c.D, {
-                            variant: "lg" === u ? "heading-xl/bold" : "heading-lg/bold",
+                            variant: "lg" === d ? "heading-xl/bold" : "heading-lg/bold",
                             color: "text-strong",
                             children: v.intl.string(v.t.vnP31W),
                         }),
-                        (0, n.jsx)(d.E, {
-                            variant: "lg" === u ? "text-sm/medium" : "text-xs/medium",
+                        (0, n.jsx)(u.E, {
+                            variant: "lg" === d ? "text-sm/medium" : "text-xs/medium",
                             color: "text-default",
                             className: _.__invalid_mobileWebCopy,
                             children: a,
                         }),
-                        (0, n.jsx)(A, { questId: t, questContent: r, fullWidth: "lg" !== u }),
+                        (0, n.jsx)(A, { questId: t, questContent: r, fullWidth: "lg" !== d }),
                     ],
                 }),
                 (0, n.jsx)("div", {

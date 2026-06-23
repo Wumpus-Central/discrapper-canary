@@ -6,17 +6,17 @@ var n = l(627968),
     a = l(194261),
     o = l(403581),
     c = l(590180),
-    d = l(4227),
-    u = l(993408),
+    u = l(4227),
+    d = l(993408),
     m = l(375708),
     x = l(386339);
-let A = (t) => {
+let A = function (t) {
     let { skuId: e, canUsePremiumCollectibles: l, isPurchaseSection: A, isPremiumSection: E } = t,
-        h = (0, u.aT)(e),
-        L = (0, r.bG)([c.A, d.A], () => {
+        h = (0, d.aT)(e),
+        L = (0, r.bG)([c.A, u.A], () => {
             let t = c.A.getProduct(e),
-                l = d.A.getPurchase(e);
-            return null != l ? (0, u.gA)(l) : (0, u.G0)(t);
+                l = u.A.getPurchase(e);
+            return null != l ? (0, d.gA)(l) : (0, d.G0)(t);
         });
     return A || (E && l)
         ? null

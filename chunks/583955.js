@@ -66,7 +66,7 @@ function x(e) {
 }
 var S = n(151054),
     _ = n(305604);
-let k = () => {
+function k() {
     let {
             selectedDestinations: e,
             maxDestinations: t,
@@ -106,10 +106,10 @@ let k = () => {
         disableSelection: d,
         rowClassName: _.q,
     });
-};
+}
 var w = n(892547),
     A = n(375708);
-let j = () => {
+function j() {
     let { searchText: e, updateSearchText: t } = (0, g.Vw)(),
         n = l.useRef(null);
     return (
@@ -119,10 +119,10 @@ let j = () => {
         (0, a.jsx)(w.I, {
             ref: n,
             query: e,
-            onChange: (e) => {
+            onChange: function (e) {
                 t(e);
             },
-            onClear: () => {
+            onClear: function () {
                 t("");
             },
             placeholder: A.intl.string(A.t["5h0QOP"]),
@@ -130,7 +130,7 @@ let j = () => {
             autoFocus: !0,
         })
     );
-};
+}
 var y = n(465532),
     T = n(355622),
     v = n(408018),
@@ -180,7 +180,7 @@ let R = () => {
     });
 };
 var P = n(693227);
-let V = (e) => {
+function V(e) {
     let { transitionState: t, onClose: n } = e,
         { send: l, sending: r, canSend: s } = (0, g.Vw)();
     return (0, a.jsx)(p.Modal, {
@@ -192,7 +192,7 @@ let V = (e) => {
         actionBarInput: (0, a.jsx)(R, {}),
         children: (0, a.jsx)(k, {}),
     });
-};
+}
 var I = n(975975),
     N = n.n(I),
     U = n(493336),

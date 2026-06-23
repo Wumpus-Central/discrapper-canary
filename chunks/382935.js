@@ -10,8 +10,8 @@ var i = l(627968),
     c = l(452027),
     m = l(260598),
     h = l(534514),
-    g = l(834730),
-    f = l(821609),
+    f = l(834730),
+    g = l(821609),
     p = l(964486),
     x = l(475743),
     j = l(235986),
@@ -22,8 +22,8 @@ var i = l(627968),
     A = l(670455),
     O = l(375708),
     y = l(636852);
-let S = (e) =>
-    o().shuffle(
+function S(e) {
+    return o().shuffle(
         e.map((e) => ({
             ...e,
             problemOptions: o()
@@ -31,6 +31,7 @@ let S = (e) =>
                 .concat(e.freeformConfig ?? []),
         })),
     );
+}
 function N(e) {
     let n,
         l,
@@ -155,7 +156,7 @@ function N(e) {
                     className: y.N1,
                     children: [
                         (0, i.jsx)(h.D, { id: w, variant: "heading-xl/extrabold", color: "none", children: D }),
-                        (0, i.jsx)(g.E, { variant: "text-md/normal", color: "none", className: y.sB, children: E }),
+                        (0, i.jsx)(f.E, { variant: "text-md/normal", color: "none", className: y.sB, children: E }),
                     ],
                 }),
                 n,
@@ -165,14 +166,14 @@ function N(e) {
                         className: y.qr,
                         direction: j.A.Direction.HORIZONTAL,
                         children: [
-                            (0, i.jsx)(f.$, {
+                            (0, i.jsx)(g.$, {
                                 variant: "secondary",
                                 size: "sm",
                                 text: O.intl.string(O.t["13/7kX"]),
                                 onClick: l,
                             }),
                             Y &&
-                                (0, i.jsx)(f.$, {
+                                (0, i.jsx)(g.$, {
                                     variant: "primary",
                                     size: "sm",
                                     text: O.intl.string(O.t.geKm7t),

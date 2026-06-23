@@ -42,7 +42,7 @@ let u = new l(s.h, {
     HAVEN_UPDATE: (e) => {
         console.log("HAVEN_UPDATE", e), (o[e.room.roomId] = e.room);
     },
-    HAVEN_GOT_ASSETS: (e) => {
+    HAVEN_GOT_ASSETS: function (e) {
         i = e.assets;
     },
 });

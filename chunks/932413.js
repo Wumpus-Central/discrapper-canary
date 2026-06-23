@@ -6,7 +6,7 @@ var i = n(627968),
     a = n(859703),
     o = n(639214),
     l = n(73473);
-let u = (e) => {
+let u = function (e) {
     let { applicationId: t, children: n, questContent: u } = e,
         c = (0, s.bG)([a.A], () => a.A.quests),
         d = r.useMemo(() => (0, o.jm)(c, t), [c, t]),

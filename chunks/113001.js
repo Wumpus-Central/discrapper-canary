@@ -19,13 +19,13 @@ function h(e, t) {
         (null == s || e.shiftKey === s)
     );
 }
-let f = (e, t) => {
+function f(e, t) {
     let n = o.rL.findDocumentOrShadowRoot(e).getSelection();
     if (null == n || 0 === n.rangeCount) return !1;
     n.modify("move", t, "lineboundary");
     let i = d.VW.toSlateRange(e, n, { exactMatch: !1, suppressThrow: !0 });
     return null != i && c.b.select(e, i), !0;
-};
+}
 function p(e) {
     return (
         (e.onKeyDown = (t) => {
@@ -106,7 +106,7 @@ function p(e) {
                     if (
                         n &&
                         h(t, { ctrl: !0 }) &&
-                        ((e) => {
+                        (function (e) {
                             let t = d.VW.getCurrentBlock(e);
                             if (null != t) {
                                 let n = d.VW.start(e, t[1]);
@@ -121,7 +121,7 @@ function p(e) {
                     if (
                         n &&
                         h(t, { ctrl: !0 }) &&
-                        ((e) => {
+                        (function (e) {
                             let t = d.VW.getCurrentBlock(e);
                             if (null != t) {
                                 let n = d.VW.end(e, t[1]);

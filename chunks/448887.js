@@ -155,7 +155,7 @@ function B(e) {
                 variant: "secondary",
                 size: "sm",
                 text: T.intl.string(T.t.WYchde),
-                onClick: () => {
+                onClick: function () {
                     (0, j.Y)({
                         pageType: v.liQ.GLOBAL_DISCOVERY_QUESTS,
                         sectionType: v.JJy.ORBS_REWARD_MODAL,

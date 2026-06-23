@@ -63,7 +63,7 @@ let g = s.forwardRef(function (e, t) {
             ...v,
             onFocus: R,
             onBlur: O,
-            onClick: (e) => {
+            onClick: function (e) {
                 if (0 === e.detail && null != C.current) {
                     let e = C.current.querySelector('[role="button"], button');
                     e?.click();

@@ -6,12 +6,12 @@ var i = n(627968),
     a = n(104142),
     o = n(194486),
     l = n(628202);
-let u = async (e) => {
+async function u(e) {
     let { animationType: t, animationId: n, url: i, shouldResize: r } = e,
         l = a.Bf[t] ?? a.Bf[o.B.BASIC],
         u = JSON.parse(JSON.stringify(null != n && n < l.length ? l[n] : (0, s.sample)(l)));
     return (u.assets[0].p = r ? await (0, a.tm)(i) : i), u;
-};
+}
 function c(e) {
     let { containerDimensions: t, effect: s, onComplete: a } = e,
         c = r.useRef(null);

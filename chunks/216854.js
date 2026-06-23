@@ -61,7 +61,7 @@ function h(e) {
         onClose: p,
         children: [
             (0, i.jsx)(_.A, {
-                onScheduleChange: (e) => {
+                onScheduleChange: function (e) {
                     let { startDate: t, endDate: n } = e;
                     null != t && null != n && n.isBefore(t) && (n = t.clone().add(1, "hour")),
                         f({ startDate: t, endDate: n });

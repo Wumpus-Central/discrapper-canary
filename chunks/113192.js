@@ -51,7 +51,7 @@ function I(e) {
                             : (0, i.jsx)(f.A, {
                                   className: g.BD,
                                   popoutOpen: !1,
-                                  onOpenPopout: () => {
+                                  onOpenPopout: function () {
                                       (0, u.X)(v, u.O.POPOUT, !0),
                                           (0, a.A)({
                                               onConfirm: async () => {

@@ -25,8 +25,12 @@ var i,
         (r[(r.GIF = 4)] = "GIF"),
         r),
     _ = (((s = {}).PNG = "png"), (s.APNG = "png"), (s.LOTTIE = "json"), (s.WEBP = "webp"), (s.GIF = "gif"), s);
-let h = (e) => e !== d.PNG,
-    f = (e) => e !== c.STANDARD;
+function h(e) {
+    return e !== d.PNG;
+}
+function f(e) {
+    return e !== c.STANDARD;
+}
 var p = (((a = {})[(a.STICKER = 0)] = "STICKER"), (a[(a.CREATE_STICKER = 1)] = "CREATE_STICKER"), a),
     E =
         (((o = {}).PACK = "PACK"),

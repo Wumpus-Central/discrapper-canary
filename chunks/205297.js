@@ -258,7 +258,7 @@ class g extends r.PureComponent {
         );
     }
 }
-let A = r.memo((e) => {
+let A = r.memo(function (e) {
     let {
             selectedPIPWindow: t,
             pipWindows: n,

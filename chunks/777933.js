@@ -5,15 +5,15 @@ var a = e(691540),
     l = e(857250),
     c = e(97483),
     r = e(477782),
-    s = e(173936),
-    o = e(93688),
+    o = e(173936),
+    s = e(93688),
     d = e(509434),
     p = e(803316),
     u = e(207133),
     h = e(885386),
     m = e(155078),
-    g = e(174459),
-    f = e(123917),
+    f = e(174459),
+    g = e(123917),
     v = e(723702),
     y = e(19575),
     b = e(179581),
@@ -43,16 +43,16 @@ function j(t, n, e, j) {
         !(0, p.fW)(t)
     )
         return null;
-    let L = (0, m.E)(t),
-        x = (t) => {
-            g.default.track(w.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: L, ...(0, b.N)() }),
-                y.Ay.copy(t),
-                (0, a.P0)((0, l.o)(C.intl.string(C.t["L/PwZf"]), c.Ck.SUCCESS));
-        },
-        D = (e, i) => {
+    let L = (0, m.E)(t);
+    function x(t) {
+        f.default.track(w.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: L, ...(0, b.N)() }),
+            y.Ay.copy(t),
+            (0, a.P0)((0, l.o)(C.intl.string(C.t["L/PwZf"]), c.Ck.SUCCESS));
+    }
+    let D = (e, i) => {
             let a = !0 === i ? t.replace("tel:", "sms:") : t;
-            g.default.track(w.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: L, ...(0, b.N)() }),
-                (0, f.h)({ href: a, trusted: (0, f.m)(t, n), shouldConfirm: !0 }, e);
+            f.default.track(w.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: L, ...(0, b.N)() }),
+                (0, g.h)({ href: a, trusted: (0, g.m)(t, n), shouldConfirm: !0 }, e);
         },
         P = [],
         U = t.match(_);
@@ -105,7 +105,7 @@ function j(t, n, e, j) {
             {
                 id: "copy-native-link",
                 label: C.intl.string(R),
-                leadingAccessory: { type: "icon", icon: s.q },
+                leadingAccessory: { type: "icon", icon: o.q },
                 action: () => {
                     x(t);
                 },
@@ -118,7 +118,7 @@ function j(t, n, e, j) {
             {
                 id: "open-native-link",
                 label: C.intl.string(S),
-                leadingAccessory: { type: "icon", icon: o.W },
+                leadingAccessory: { type: "icon", icon: s.W },
                 trailingIndicator: { type: "icon", icon: d.I },
                 action: (t) => D(t),
             },

@@ -186,8 +186,8 @@ function I(e) {
                                     n.e("40175"),
                                     n.e("42191"),
                                     n.e("43746"),
-                                    n.e("90554"),
                                     n.e("74021"),
+                                    n.e("90554"),
                                     n.e("13708"),
                                     n.e("36150"),
                                     n.e("99011"),
@@ -208,7 +208,9 @@ function I(e) {
         L = g.Ay.useName(R),
         w = (0, a.bG)([h.A, f.Ay, p.A], () => m.Ay.getNickname(b, I, R));
     if (null == R) return (0, i.jsx)(A, { userId: T, className: t, children: S });
-    let M = (e) => (0, i.jsx)(d.A, { ref: N, className: t, onContextMenu: D, ...e, children: `@${w ?? L}` });
+    function M(e) {
+        return (0, i.jsx)(d.A, { ref: N, className: t, onContextMenu: D, ...e, children: `@${w ?? L}` });
+    }
     return y
         ? (0, i.jsx)(u.f5, { value: v, children: M() })
         : (0, i.jsx)(u.f5, {

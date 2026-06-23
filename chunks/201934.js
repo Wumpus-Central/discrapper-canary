@@ -1,7 +1,7 @@
 i.d(s, { A: () => _ });
-var t = i(627968),
-    a = i(64700),
-    n = i(17928),
+var n = i(627968),
+    t = i(64700),
+    a = i(17928),
     l = i(778712),
     r = i(97808),
     o = i(939249),
@@ -30,8 +30,8 @@ let b = l._3.SIZE_40,
 function _(e) {
     let { user: s, status: l, guildId: x, channelId: _, onSelect: k } = e,
         { theme: y, themeType: E } = (0, M.E)(),
-        F = a.useMemo(() => s.isNonUserBot() || (0, h.c)(s, _), [s, _]),
-        { activities: S, isMobileOnline: w } = (0, n.cf)([v.A], () => ({
+        F = t.useMemo(() => s.isNonUserBot() || (0, h.c)(s, _), [s, _]),
+        { activities: S, isMobileOnline: w } = (0, a.cf)([v.A], () => ({
             activities: v.A.getActivities(s.id),
             isMobileOnline: v.A.isMobileOnline(s.id),
         })),
@@ -47,12 +47,12 @@ function _(e) {
             eventHandlers: R,
         } = (0, C.A)({ userId: s.id, guildId: x, size: b, animateOnHover: !0 }),
         H = N && U ? r.Js : r.eu;
-    return (0, t.jsxs)(o.D, {
+    return (0, n.jsxs)(o.D, {
         ...(U ? R : {}),
         focusProps: E === p.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: I.nM,
         onClick: k,
-        onContextMenu: (e) => {
+        onContextMenu: function (e) {
             (0, u.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     i.e("71406"),
@@ -80,11 +80,11 @@ function _(e) {
                     i.e("42191"),
                     i.e("32418"),
                 ]).then(i.bind(i, 668569));
-                return (i) => (0, t.jsx)(e, { ...i, user: s });
+                return (i) => (0, n.jsx)(e, { ...i, user: s });
             });
         },
         children: [
-            (0, t.jsx)(H, {
+            (0, n.jsx)(H, {
                 src: P,
                 avatarDecoration: U ? z : void 0,
                 "aria-label": s.username,
@@ -94,11 +94,11 @@ function _(e) {
                 isMobile: w,
                 className: I.my,
             }),
-            (0, t.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 className: I.zH,
                 children: [
-                    (0, t.jsx)(c.A, { user: s, className: I.Tc, usernameClass: I.QC, discriminatorClass: I.D2 }),
-                    (0, t.jsx)(A.A, { user: s, activities: S, applicationStream: D, voiceChannel: L }),
+                    (0, n.jsx)(c.A, { user: s, className: I.Tc, usernameClass: I.QC, discriminatorClass: I.D2 }),
+                    (0, n.jsx)(A.A, { user: s, activities: S, applicationStream: D, voiceChannel: L }),
                 ],
             }),
         ],

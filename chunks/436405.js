@@ -56,17 +56,22 @@ function G(e) {
 var U = n(375708),
     z = n(352828),
     H = n(818050);
-let W = (e) => e.stopPropagation(),
-    K = () => (0, l.jsx)("div", { className: z.tR, onClick: W, onMouseEnter: W, onMouseOver: W }),
-    B = () => (0, l.jsx)("div", { className: z.yF }),
-    F = (e, t, n) =>
-        (0, l.jsx)("div", {
-            className: z.qD,
-            children: U.intl.format(n, {
-                keybind: t,
-                keybindHook: (e, n) => (0, l.jsx)(G, { keybind: t, className: z.P }, n),
-            }),
-        });
+function W(e) {
+    return e.stopPropagation();
+}
+let K = () => (0, l.jsx)("div", { className: z.tR, onClick: W, onMouseEnter: W, onMouseOver: W });
+function B() {
+    return (0, l.jsx)("div", { className: z.yF });
+}
+function F(e, t, n) {
+    return (0, l.jsx)("div", {
+        className: z.qD,
+        children: U.intl.format(n, {
+            keybind: t,
+            keybindHook: (e, n) => (0, l.jsx)(G, { keybind: t, className: z.P }, n),
+        }),
+    });
+}
 class Y extends a.PureComponent {
     static defaultProps = { maxBodyLines: void 0, expand: !1, disabled: !1 };
     static getDerivedStateFromProps(e, t) {
@@ -287,7 +292,7 @@ function eu(e, t) {
             }),
                 (n = e),
                 eh ||
-                    (n.setClickZoneCallback((e, t, n) => {
+                    (n.setClickZoneCallback(function (e, t, n) {
                         let i = ec.get(e);
                         null != i && (er || ((eo.x = t), (eo.y = n)), i.instance.click());
                     }),
@@ -344,19 +349,19 @@ var eA = n(133977),
     ey = n(960063);
 let eS = eE.UVF.DEFAULT,
     ex = a.createContext({ type: eS, opacity: 1 }),
-    ev = a.createContext(void 0),
-    eC = (e) => {
-        let { children: t, className: n, ...i } = e;
-        return (0, l.jsx)(ex.Consumer, {
-            children: (e) => {
-                let { type: s } = e;
-                return (0, l.jsx)(ev.Consumer, {
-                    children: (e) =>
-                        (0, l.jsx)("div", { className: x()(ey.bar, ey[eg()(s)], n), style: e, ...i, children: t }),
-                });
-            },
-        });
-    };
+    ev = a.createContext(void 0);
+function eC(e) {
+    let { children: t, className: n, ...i } = e;
+    return (0, l.jsx)(ex.Consumer, {
+        children: (e) => {
+            let { type: s } = e;
+            return (0, l.jsx)(ev.Consumer, {
+                children: (e) =>
+                    (0, l.jsx)("div", { className: x()(ey.bar, ey[eg()(s)], n), style: e, ...i, children: t }),
+            });
+        },
+    });
+}
 class eI extends a.PureComponent {
     static defaultProps = { disableScroll: !1 };
     render() {
@@ -375,24 +380,24 @@ class eI extends a.PureComponent {
     }
 }
 let e_ = (e) => {
-        let { type: t = eS, width: n, height: i, children: s, className: a, opacity: o = 1, onClick: r } = e;
-        return (0, l.jsx)(ex.Provider, {
-            value: { type: t, opacity: o },
-            children: (0, l.jsx)("div", {
-                className: x()(ey.widget, ey[eg()(t)], a),
-                style: { width: n, height: i },
-                onClick: r,
-                children: s,
-            }),
-        });
-    },
-    eN = (e) => {
-        let { children: t, className: n, dynamicSize: i = !1 } = e;
-        return (0, l.jsx)(ev.Consumer, {
-            children: (e) =>
-                (0, l.jsx)("div", { className: x()(ey.content, { [ey.staticSize]: !i }, n), style: e, children: t }),
-        });
-    };
+    let { type: t = eS, width: n, height: i, children: s, className: a, opacity: o = 1, onClick: r } = e;
+    return (0, l.jsx)(ex.Provider, {
+        value: { type: t, opacity: o },
+        children: (0, l.jsx)("div", {
+            className: x()(ey.widget, ey[eg()(t)], a),
+            style: { width: n, height: i },
+            onClick: r,
+            children: s,
+        }),
+    });
+};
+function eN(e) {
+    let { children: t, className: n, dynamicSize: i = !1 } = e;
+    return (0, l.jsx)(ev.Consumer, {
+        children: (e) =>
+            (0, l.jsx)("div", { className: x()(ey.content, { [ey.staticSize]: !i }, n), style: e, children: t }),
+    });
+}
 (e_.Background = (e) => {
     let { children: t, opacityOverride: n } = e;
     if (null == t) return null;
@@ -414,7 +419,7 @@ let e_ = (e) => {
 }),
     (e_.Body = eI),
     (e_.Content = eN),
-    (e_.Icon = (e) => {
+    (e_.Icon = function (e) {
         let {
             ref: t,
             icon: n,
@@ -1233,7 +1238,7 @@ let t9 = new t8(
                                   title: n,
                                   body: i,
                                   hint: function (e) {
-                                      let t;
+                                      var t;
                                       return (
                                           (t = U.intl.string(U.t.WRj1Wn)),
                                           (0, l.jsx)("div", { className: z.g2, children: t })
@@ -1802,22 +1807,22 @@ var nh = n(689035),
     nX = n(428678),
     nJ = n(834730),
     nQ = n(110649);
-let nq = 0,
-    n$ = (e) => {
-        switch (e) {
-            case eE.G6Q.TOP_LEFT:
-                return U.intl.string(U.t.xlchpU);
-            case eE.G6Q.TOP_RIGHT:
-                return U.intl.string(U.t["4uHRHH"]);
-            case eE.G6Q.BOTTOM_LEFT:
-                return U.intl.string(U.t.ovWFnD);
-            case eE.G6Q.BOTTOM_RIGHT:
-                return U.intl.string(U.t["M/9V75"]);
-            default:
-                return U.intl.string(U.t.AlY4Za);
-        }
-    },
-    n0 = [eE.G6Q.DISABLED, eE.G6Q.TOP_LEFT, eE.G6Q.TOP_RIGHT, eE.G6Q.BOTTOM_LEFT, eE.G6Q.BOTTOM_RIGHT];
+let nq = 0;
+function n$(e) {
+    switch (e) {
+        case eE.G6Q.TOP_LEFT:
+            return U.intl.string(U.t.xlchpU);
+        case eE.G6Q.TOP_RIGHT:
+            return U.intl.string(U.t["4uHRHH"]);
+        case eE.G6Q.BOTTOM_LEFT:
+            return U.intl.string(U.t.ovWFnD);
+        case eE.G6Q.BOTTOM_RIGHT:
+            return U.intl.string(U.t["M/9V75"]);
+        default:
+            return U.intl.string(U.t.AlY4Za);
+    }
+}
+let n0 = [eE.G6Q.DISABLED, eE.G6Q.TOP_LEFT, eE.G6Q.TOP_RIGHT, eE.G6Q.BOTTOM_LEFT, eE.G6Q.BOTTOM_RIGHT];
 function n1(e) {
     let { position: t, onChange: n } = e,
         [i] = a.useState(() => `notification-position-selector-${nq++}`),
@@ -2309,34 +2314,36 @@ function is(e) {
 var il = n(58923),
     ia = n(793322),
     io = n(481171);
-let ir = () => (0, ia.WU)("DM_SEARCH"),
-    id = a.memo(function () {
-        let e = (0, r.bG)([tt.default], () => (tt.default.isLocked((0, Q.getPID)()) ? "true" : "false")),
-            t = (0, nI.A)((e) => {
-                let { channelId: t } = e;
-                return t;
-            });
-        return (0, l.jsxs)("div", {
-            className: io.AB,
-            children: [
-                (0, l.jsx)("div", {
-                    className: io.ON,
-                    children: (0, l.jsx)("button", {
-                        type: "button",
-                        className: io.lU,
-                        onClick: ir,
-                        children: U.intl.string(U.t.LzcpeZ),
-                    }),
-                }),
-                (0, l.jsx)(il.A, { padding: 8, theme: eE.NJ8.DARK, version: e, selectedChannelId: t }),
-                (0, l.jsx)("section", {
-                    className: io.C3,
-                    "aria-label": U.intl.string(U.t.StREWK),
-                    children: (0, l.jsx)(nC.A, { guildId: null }),
-                }),
-            ],
+function ir() {
+    return (0, ia.WU)("DM_SEARCH");
+}
+let id = a.memo(function () {
+    let e = (0, r.bG)([tt.default], () => (tt.default.isLocked((0, Q.getPID)()) ? "true" : "false")),
+        t = (0, nI.A)((e) => {
+            let { channelId: t } = e;
+            return t;
         });
+    return (0, l.jsxs)("div", {
+        className: io.AB,
+        children: [
+            (0, l.jsx)("div", {
+                className: io.ON,
+                children: (0, l.jsx)("button", {
+                    type: "button",
+                    className: io.lU,
+                    onClick: ir,
+                    children: U.intl.string(U.t.LzcpeZ),
+                }),
+            }),
+            (0, l.jsx)(il.A, { padding: 8, theme: eE.NJ8.DARK, version: e, selectedChannelId: t }),
+            (0, l.jsx)("section", {
+                className: io.C3,
+                "aria-label": U.intl.string(U.t.StREWK),
+                children: (0, l.jsx)(nC.A, { guildId: null }),
+            }),
+        ],
     });
+});
 var ic = n(929284);
 function iu(e) {
     let { closePopout: t } = e;
@@ -3697,8 +3704,8 @@ class s9 extends a.Component {
         return null;
     }
 }
-let s2 = () =>
-    (0, l.jsxs)(s1.dO, {
+let s2 = function () {
+    return (0, l.jsxs)(s1.dO, {
         children: [
             (0, l.jsx)(s3.A, {
                 path: eE.BVt.CHANNEL(s8.pv.guildId(), s8.pv.channelId({ optional: !0 }), ":messageId?"),
@@ -3707,6 +3714,7 @@ let s2 = () =>
             (0, l.jsx)(s3.A, { component: s9 }),
         ],
     });
+};
 var s7 = n(528772),
     s4 = n(944775),
     s5 = n(317084),
@@ -3749,29 +3757,29 @@ function lo(e) {
         return (t) => (0, l.jsx)(e, { ...t, version: 0 });
     });
 }
+function lr(e) {
+    let { keybind: t, onClick: n, isPreviewingInGame: i, locked: s } = e,
+        a = s ? j.D : "div";
+    return (0, l.jsx)(a, {
+        className: x()(ls.LK, { [ls.Zo]: !s, [ls.vZ]: s, [ls.Az]: !s && i }),
+        onMouseDown: (e) => {
+            let { currentTarget: t, target: i, button: s } = e;
+            s === eE.hE4.PRIMARY && t === i && n();
+        },
+        onContextMenu: lo,
+        children: s
+            ? null
+            : (0, l.jsx)("div", {
+                  className: ls.G3,
+                  children: (0, l.jsx)(eW.A, { variant: eW.A.Variants.BOLD, keybind: t, closeAction: n }),
+              }),
+    });
+}
+function ld(e) {
+    let { keyCode: t, shiftKey: n, metaKey: i, altKey: s, ctrlKey: l } = e;
+    return { keyCode: t, shiftKey: n, metaKey: i, altKey: s, ctrlKey: l };
+}
 ea.isPlatformEmbedded;
-let lr = (e) => {
-        let { keybind: t, onClick: n, isPreviewingInGame: i, locked: s } = e,
-            a = s ? j.D : "div";
-        return (0, l.jsx)(a, {
-            className: x()(ls.LK, { [ls.Zo]: !s, [ls.vZ]: s, [ls.Az]: !s && i }),
-            onMouseDown: (e) => {
-                let { currentTarget: t, target: i, button: s } = e;
-                s === eE.hE4.PRIMARY && t === i && n();
-            },
-            onContextMenu: lo,
-            children: s
-                ? null
-                : (0, l.jsx)("div", {
-                      className: ls.G3,
-                      children: (0, l.jsx)(eW.A, { variant: eW.A.Variants.BOLD, keybind: t, closeAction: n }),
-                  }),
-        });
-    },
-    ld = (e) => {
-        let { keyCode: t, shiftKey: n, metaKey: i, altKey: s, ctrlKey: l } = e;
-        return { keyCode: t, shiftKey: n, metaKey: i, altKey: s, ctrlKey: l };
-    };
 class lc extends a.Component {
     didUpdate = !1;
     constructor(e) {

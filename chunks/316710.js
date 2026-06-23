@@ -1,4 +1,4 @@
-n.d(t, { x: () => f, default: () => j });
+n.d(t, { x: () => b, default: () => j });
 var i = n(627968);
 n(64700);
 var l = n(980707),
@@ -16,40 +16,40 @@ var a = n(17928),
     x = n(576705),
     A = n(292024),
     p = n(375708);
-function b(e, t) {
+function f(e, t) {
     let l = (0, a.bG)([x.A], () => {
             let n = x.A.getHighestRole(e);
             return !x.A.isRoleHigher(e, n, t);
         }),
         s = [],
-        b = (0, A.A)(e, t);
-    null != b && s.push(b);
-    let f = (0, g.A)({ id: t.id, label: p.intl.string(p.t.sMsaLg) });
+        f = (0, A.A)(e, t);
     null != f && s.push(f);
+    let b = (0, g.A)({ id: t.id, label: p.intl.string(p.t.sMsaLg) });
+    null != b && s.push(b);
     let j = t.tags?.guild_connections === null,
         N = e.verificationRoleId === t.id,
         E = t.managed && !j,
         C = null != t && (0, h.Oy)(t);
     if (!l && !E && !C) {
-        let l = async () => {
-                j && (await (0, m.qK)(e.id, t.id, [])), u.A.deleteRole(e.id, t.id);
-            },
-            a = N
-                ? () => {
-                      (0, o.openModalLazy)(async () => {
-                          let { default: e } = await n.e("54915").then(n.bind(n, 360494));
-                          return (n) => (0, i.jsx)(e, { ...n, roleName: t.name, onConfirmDelete: l });
-                      });
-                  }
-                : () => {
-                      (0, r.A)({
-                          title: p.intl.string(p.t.YWISbQ),
-                          subtitle: p.intl.format(p.t["9+nrUS"], { name: t.name }),
-                          confirmText: p.intl.string(p.t.oyYWHE),
-                          cancelText: p.intl.string(p.t["ETE/oC"]),
-                          onConfirm: l,
-                      });
-                  };
+        async function v() {
+            j && (await (0, m.qK)(e.id, t.id, [])), u.A.deleteRole(e.id, t.id);
+        }
+        let l = N
+            ? () => {
+                  (0, o.openModalLazy)(async () => {
+                      let { default: e } = await n.e("54915").then(n.bind(n, 360494));
+                      return (n) => (0, i.jsx)(e, { ...n, roleName: t.name, onConfirmDelete: v });
+                  });
+              }
+            : () => {
+                  (0, r.A)({
+                      title: p.intl.string(p.t.YWISbQ),
+                      subtitle: p.intl.format(p.t["9+nrUS"], { name: t.name }),
+                      confirmText: p.intl.string(p.t.oyYWHE),
+                      cancelText: p.intl.string(p.t["ETE/oC"]),
+                      onConfirm: v,
+                  });
+              };
         s.push(
             (0, i.jsx)(
                 c.rX,
@@ -60,7 +60,7 @@ function b(e, t) {
                         color: "danger",
                         icon: d.u,
                         leadingAccessory: { type: "icon", icon: d.u },
-                        action: a,
+                        action: l,
                     }),
                 },
                 "delete-role",
@@ -69,12 +69,12 @@ function b(e, t) {
     }
     return s;
 }
-function f(e, t) {
-    return b(e, t).length > 0;
+function b(e, t) {
+    return f(e, t).length > 0;
 }
 function j(e) {
     let { role: t, guild: n, onSelect: a } = e,
-        r = b(n, t);
+        r = f(n, t);
     return 0 === r.length
         ? null
         : (0, i.jsx)(l.W, {

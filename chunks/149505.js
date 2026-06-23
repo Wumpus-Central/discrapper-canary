@@ -6,7 +6,7 @@ var i = n(627968),
     a = n(460472);
 let o = [0, 68, 123, 61, 165, 224, 181],
     l = [684, 720, 774, 798, 720, 803, 815],
-    u = () => {
+    u = function () {
         let e = (0, s.A)(),
             t = r.useMemo(() => (null == e ? [] : Object.values(e?.clouds)), [e]);
         return (0, i.jsx)("div", {

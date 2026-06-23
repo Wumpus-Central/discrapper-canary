@@ -1,7 +1,7 @@
 i.d(t, { default: () => O });
 var l = i(627968),
-    a = i(64700),
-    n = i(835245),
+    n = i(64700),
+    a = i(835245),
     s = i(830917),
     r = i(189213),
     u = i(270003),
@@ -9,8 +9,8 @@ var l = i(627968),
     o = i(17928),
     d = i(750943),
     c = i(691540),
-    m = i(857250),
-    f = i(97483),
+    f = i(857250),
+    m = i(97483),
     p = i(292666),
     j = i(260598),
     h = i(834730),
@@ -38,7 +38,7 @@ let U = new Set(["application/json", "image/png", "image/apng", "image/gif", "im
 function G(e, t) {
     _.default.track(L.HAw.STICKER_UPLOAD_COMPLETED, { successful: e, error: t ?? "" });
 }
-let K = (e) => {
+function K(e) {
     let { stickerPreview: t } = e;
     return (0, l.jsxs)("div", {
         className: B.VH,
@@ -57,7 +57,7 @@ let K = (e) => {
             }),
         ],
     });
-};
+}
 async function P(e) {
     let t = await (0, I.We)(e),
         i = new Image();
@@ -69,15 +69,15 @@ function O(e) {
     let { transitionState: t, onClose: i, guildId: s, sticker: d } = e,
         O = (0, o.bG)([x.Ay], () => (d?.tags != null ? x.Ay.getCustomEmojiById(d.tags) : null)),
         M = y.default.getCurrentUser()?.isStaff() ? D.Ny : 524288,
-        [X, H] = a.useState(null),
-        [V, Z] = a.useState(d?.name ?? ""),
-        [q, Y] = a.useState({ file: null, filename: (0, T.sL)(d) ?? "" }),
-        W = a.useRef(null),
-        [J, Q] = a.useState(O?.id),
-        [$, ee] = a.useState(O?.name ?? d?.tags),
-        [et, ei] = a.useState(d?.description ?? ""),
-        [el, ea] = a.useState(!1),
-        [en, es] = a.useState(null),
+        [X, H] = n.useState(null),
+        [V, Z] = n.useState(d?.name ?? ""),
+        [q, Y] = n.useState({ file: null, filename: (0, T.sL)(d) ?? "" }),
+        W = n.useRef(null),
+        [J, Q] = n.useState(O?.id),
+        [$, ee] = n.useState(O?.name ?? d?.tags),
+        [et, ei] = n.useState(d?.description ?? ""),
+        [el, en] = n.useState(!1),
+        [ea, es] = n.useState(null),
         er = (0, o.bG)([k.A], () => k.A.getGuild(s)),
         eu = er?.features.has(L.GuildFeatures.PARTNERED) || er?.features.has(L.GuildFeatures.VERIFIED),
         eg = null != d,
@@ -85,56 +85,56 @@ function O(e) {
         ed = 0 === et.length || (et.length >= 2 && et.length <= 100),
         ec =
             !el &&
-            en?.isBlocking !== !0 &&
+            ea?.isBlocking !== !0 &&
             V.length >= 2 &&
             (null != J || null != $ || (d?.tags != null && d?.tags !== "")) &&
             eo &&
-            ed,
-        em = async (e) => {
-            if (null == e) return;
-            let t = e.type?.split(";")[0];
-            if (!U.has(t)) return void es({ message: N.intl.string(N.t.B2hGAG), isBlocking: !0 });
-            let i = e;
-            if ("image/jpeg" === t || "image/jpg" === t) i = await P(e);
-            else if ("image/png" === t && e.size > M && !(await (0, I.LZ)(e))) {
-                let t = (i = await P(e)).size > M;
-                _.default.track(L.HAw.STICKER_FILE_RESIZED, {
-                    original_file_size_bytes: e.size,
-                    resized_file_size_bytes: i.size,
-                    resized_file_too_big: t,
+            ed;
+    async function ef(e) {
+        if (null == e) return;
+        let t = e.type?.split(";")[0];
+        if (!U.has(t)) return void es({ message: N.intl.string(N.t.B2hGAG), isBlocking: !0 });
+        let i = e;
+        if ("image/jpeg" === t || "image/jpg" === t) i = await P(e);
+        else if ("image/png" === t && e.size > M && !(await (0, I.LZ)(e))) {
+            let t = (i = await P(e)).size > M;
+            _.default.track(L.HAw.STICKER_FILE_RESIZED, {
+                original_file_size_bytes: e.size,
+                resized_file_size_bytes: i.size,
+                resized_file_too_big: t,
+            });
+        }
+        if (i.size > M) {
+            es({
+                message: N.intl.formatToPlainString(N.t["3eK7Ru"], { maxSize: (0, w.up)(M, { useKibibytes: !0 }) }),
+                isBlocking: null == q.file,
+            }),
+                _.default.track(L.HAw.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { size: i.size, filetype: i.type });
+            return;
+        }
+        let l = (0, T.l3)(i.type);
+        if (l === R.TG.LOTTIE) {
+            if (!eu)
+                return void es({
+                    message: N.intl.format(N.t.RNNjy6, { articleURL: C.A.getArticleURL(L.MVz.STICKERS_UPLOAD) }),
+                    isBlocking: !0,
                 });
-            }
-            if (i.size > M) {
-                es({
-                    message: N.intl.formatToPlainString(N.t["3eK7Ru"], { maxSize: (0, w.up)(M, { useKibibytes: !0 }) }),
-                    isBlocking: null == q.file,
-                }),
-                    _.default.track(L.HAw.STICKER_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { size: i.size, filetype: i.type });
-                return;
-            }
-            let l = (0, T.l3)(i.type);
-            if (l === R.TG.LOTTIE) {
-                if (!eu)
-                    return void es({
-                        message: N.intl.format(N.t.RNNjy6, { articleURL: C.A.getArticleURL(L.MVz.STICKERS_UPLOAD) }),
-                        isBlocking: !0,
-                    });
-                let e = new FileReader();
-                e.addEventListener("load", () => {
-                    H({ id: (0, n.A)(), formatType: l, content: e.result }), es(null);
-                }),
-                    e.readAsText(i);
-            } else {
-                let e = await (0, I.We)(i);
-                H({ id: (0, n.A)(), formatType: l, content: e }), es(null);
-            }
-            (W.current = E.A.fromBlob(b.f.STICKER, e)), Y({ file: i, filename: i.name });
-        },
-        ef = async (e) => {
+            let e = new FileReader();
+            e.addEventListener("load", () => {
+                H({ id: (0, a.A)(), formatType: l, content: e.result }), es(null);
+            }),
+                e.readAsText(i);
+        } else {
+            let e = await (0, I.We)(i);
+            H({ id: (0, a.A)(), formatType: l, content: e }), es(null);
+        }
+        (W.current = E.A.fromBlob(b.f.STICKER, e)), Y({ file: i, filename: i.name });
+    }
+    let em = async (e) => {
             e.preventDefault();
             let t = J ?? $ ?? d?.tags ?? "";
             try {
-                if ((ea(!0), eg)) await (0, z.MO)(s, d?.id ?? "", { name: V, tags: t, description: et });
+                if ((en(!0), eg)) await (0, z.MO)(s, d?.id ?? "", { name: V, tags: t, description: et });
                 else {
                     var l;
                     let e = new FormData();
@@ -147,41 +147,41 @@ function O(e) {
                     let i = (await W.current?.getOriginalMd5()) ?? null;
                     await (0, z.p9)({ guildId: s, body: e, platform: "web", originalMd5: i }),
                         G(!0),
-                        (0, c.P0)((0, m.o)(N.intl.string(N.t.QR85gd), f.Ck.SUCCESS));
+                        (0, c.P0)((0, f.o)(N.intl.string(N.t.QR85gd), m.Ck.SUCCESS));
                 }
                 i();
             } catch (e) {
                 es({ message: e.body.message, isBlocking: !1 }), G(!1, e.body.message);
             } finally {
-                ea(!1);
+                en(!1);
             }
         },
         ep = ((e) => {
-            let { sticker: t, previewData: i, onStickerError: a } = e;
+            let { sticker: t, previewData: i, onStickerError: n } = e;
             if (null != t) return (0, l.jsx)(v.A, { size: 160, sticker: t });
             if (null == i) return null;
-            let { id: n, formatType: s, content: r } = i;
+            let { id: a, formatType: s, content: r } = i;
             return (0, l.jsx)(
                 v.A,
                 {
                     assetData: r,
                     fileUri: r,
                     size: 160,
-                    sticker: { name: n, description: "", id: n, pack_id: "", format_type: s },
-                    onError: a,
+                    sticker: { name: a, description: "", id: a, pack_id: "", format_type: s },
+                    onError: n,
                 },
-                n,
+                a,
             );
         })({
             sticker: d,
             previewData: X,
-            onStickerError: a.useCallback(() => {
+            onStickerError: n.useCallback(() => {
                 es({ message: N.intl.string(N.t["/WIYNX"]), isBlocking: !0 });
             }, []),
         }),
         ej = eu ? N.t.alYXBF : N.t.kpcMft;
     return (0, l.jsx)("form", {
-        onSubmit: ef,
+        onSubmit: em,
         className: B.Zd,
         children: (0, l.jsx)(r.Modal, {
             transitionState: t,
@@ -193,7 +193,7 @@ function O(e) {
                 {
                     variant: "primary",
                     text: eg ? N.intl.string(N.t.Arwnev) : N.intl.string(N.t["3UB9ad"]),
-                    onSubmit: ef,
+                    onSubmit: em,
                     disabled: !ec,
                     type: "submit",
                 },
@@ -219,7 +219,7 @@ function O(e) {
                                   filters: F,
                                   filename: q?.filename ?? "",
                                   placeholder: N.intl.string(N.t.rUYLJ4),
-                                  onFileSelect: em,
+                                  onFileSelect: ef,
                               }),
                           }),
                     (0, l.jsx)(S.A, {
@@ -247,12 +247,12 @@ function O(e) {
                         placeholder: N.intl.string(N.t.zwR0fa),
                         maxLength: 100,
                     }),
-                    null != en &&
+                    null != ea &&
                         (0, l.jsx)(h.E, {
                             className: B.kz,
                             variant: "text-sm/normal",
                             color: "text-feedback-critical",
-                            children: en.message,
+                            children: ea.message,
                         }),
                 ],
             }),

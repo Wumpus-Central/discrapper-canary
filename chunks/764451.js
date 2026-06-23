@@ -103,11 +103,11 @@ var w = n(503698),
     F = n(106236),
     V = n(895925);
 function B(e) {
-    let { controls: t, props: n, onPropsChange: r } = e,
-        s = (e, t) => {
-            r({ ...n, [e]: t });
-        },
-        a = Object.entries(t);
+    let { controls: t, props: n, onPropsChange: r } = e;
+    function s(e, t) {
+        r({ ...n, [e]: t });
+    }
+    let a = Object.entries(t);
     return 0 === a.length
         ? null
         : (0, i.jsx)("div", {
@@ -281,7 +281,7 @@ function K(e) {
                             (0, i.jsx)(B, {
                                 controls: t.controls,
                                 props: c,
-                                onPropsChange: (e) => {
+                                onPropsChange: function (e) {
                                     d(e), Z.setState({ currentProps: e });
                                 },
                             }),
@@ -574,7 +574,7 @@ function en(e) {
                                         ? (0, i.jsx)(L, {
                                               groups: _.groups,
                                               selectedStory: s,
-                                              onStorySelect: (e) => {
+                                              onStorySelect: function (e) {
                                                   Z.setState({
                                                       selectedStory: e,
                                                       controlOverrides: null,

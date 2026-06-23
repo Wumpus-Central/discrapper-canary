@@ -1,9 +1,9 @@
-n.d(t, { H2: () => s, J6: () => h, i$: () => S, kT: () => T, ub: () => c, ws: () => M, xG: () => p, yT: () => o }),
+n.d(t, { H2: () => s, J6: () => h, i$: () => S, kT: () => M, ub: () => _, ws: () => p, xG: () => f, yT: () => o }),
     n(938796);
 var r,
     i,
-    a = n(64700),
-    u = n(318729),
+    u = n(64700),
+    a = n(318729),
     l = n(979816),
     E = n(243277),
     A = n(375708),
@@ -74,36 +74,38 @@ let S = {
     },
 };
 var o = (((i = {}).MEMBERS = "members"), (i.CONTENT = "content"), i);
-let _ = {
-        members: [S[E.uh.USER_PROFILE]],
-        content: [
-            S[E.uh.SERVER_POLICY],
-            S[E.uh.MENTION_SPAM],
-            S[E.uh.ML_SPAM],
-            S[E.uh.DEFAULT_KEYWORD_LIST],
-            S[E.uh.KEYWORD],
-        ],
-    },
-    c = (e, t) => S[e].flags.has(t);
+let c = {
+    members: [S[E.uh.USER_PROFILE]],
+    content: [
+        S[E.uh.SERVER_POLICY],
+        S[E.uh.MENTION_SPAM],
+        S[E.uh.ML_SPAM],
+        S[E.uh.DEFAULT_KEYWORD_LIST],
+        S[E.uh.KEYWORD],
+    ],
+};
+function _(e, t) {
+    return S[e].flags.has(t);
+}
 function h(e) {
     return Array.from(S[e].availableActionTypes);
 }
-function p(e, t) {
-    let { id: n, eventType: r, triggerType: i, actions: a } = e,
-        u = S[i];
-    if (t.filter((e) => n !== e.id && e.triggerType === i).length > u.perGuildMaxCount)
+function f(e, t) {
+    let { id: n, eventType: r, triggerType: i, actions: u } = e,
+        a = S[i];
+    if (t.filter((e) => n !== e.id && e.triggerType === i).length > a.perGuildMaxCount)
         throw Error(`You have exceeded the maximum number of rules of type ${i}`);
-    if (a.some((e) => !u.availableActionTypes.has(e.type)))
+    if (u.some((e) => !a.availableActionTypes.has(e.type)))
         throw Error("You have provided an action that is not available for this trigger type");
-    if (r !== u.eventType) throw Error("You have provided an event type that is not available for this trigger type");
+    if (r !== a.eventType) throw Error("You have provided an event type that is not available for this trigger type");
 }
-function M(e) {
+function p(e) {
     let t = (0, l.XO)(e);
-    return a.useMemo(
+    return u.useMemo(
         () =>
-            Object.keys(_).reduce(
+            Object.keys(c).reduce(
                 (e, n) => {
-                    let r = _[n]
+                    let r = c[n]
                         .filter(
                             (e) =>
                                 e.type !== E.uh.SERVER_POLICY &&
@@ -118,8 +120,8 @@ function M(e) {
         [t],
     );
 }
-function T(e, t) {
-    let n = (0, u.p)(t);
+function M(e, t) {
+    let n = (0, a.p)(t);
     switch (e) {
         case E.uh.DEFAULT_KEYWORD_LIST:
             return { allowList: [], presets: [] };

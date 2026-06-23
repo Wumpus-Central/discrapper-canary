@@ -7,28 +7,30 @@ n(64700);
 var a = n(834730),
     o = n(695366),
     l = n(375708);
-let u = (e, t) =>
-        (0, s.jsxs)(
-            a.E,
-            {
-                color: "text-feedback-critical",
-                style: { display: "flex", gap: "4px", margin: "8px 0 4px 0", alignItems: "center" },
-                variant: "text-sm/normal",
-                children: [(0, s.jsx)(o.E, { size: "custom", color: "currentColor", width: 14, height: 14 }), e],
-            },
-            t,
-        ),
-    c = (e, t) =>
-        (0, s.jsxs)(
-            a.E,
-            {
-                color: "text-feedback-critical",
-                style: { display: "flex", gap: "4px", margin: "8px 0 4px 0", alignItems: "center" },
-                variant: "text-sm/normal",
-                children: [(0, s.jsx)(o.E, { size: "custom", color: "currentColor", width: 14, height: 14 }), e],
-            },
-            t,
-        );
+function u(e, t) {
+    return (0, s.jsxs)(
+        a.E,
+        {
+            color: "text-feedback-critical",
+            style: { display: "flex", gap: "4px", margin: "8px 0 4px 0", alignItems: "center" },
+            variant: "text-sm/normal",
+            children: [(0, s.jsx)(o.E, { size: "custom", color: "currentColor", width: 14, height: 14 }), e],
+        },
+        t,
+    );
+}
+function c(e, t) {
+    return (0, s.jsxs)(
+        a.E,
+        {
+            color: "text-feedback-critical",
+            style: { display: "flex", gap: "4px", margin: "8px 0 4px 0", alignItems: "center" },
+            variant: "text-sm/normal",
+            children: [(0, s.jsx)(o.E, { size: "custom", color: "currentColor", width: 14, height: 14 }), e],
+        },
+        t,
+    );
+}
 var d = n(780964),
     _ = n(975571),
     h = n(652215),

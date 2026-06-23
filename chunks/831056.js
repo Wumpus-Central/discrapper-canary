@@ -57,13 +57,13 @@ function A(e) {
 }
 function I(e) {
     let { label: t, icon: n, onClick: s, className: c } = e,
-        [d, h] = r.useState(!1),
-        f = () => {
-            h(!0);
-        },
-        p = () => {
-            h(!1);
-        };
+        [d, h] = r.useState(!1);
+    function f() {
+        h(!0);
+    }
+    function p() {
+        h(!1);
+    }
     return (0, i.jsxs)(l.D, {
         className: a()(_.uU, _.iM, c),
         onMouseEnter: f,
@@ -79,13 +79,13 @@ function I(e) {
 }
 function T(e) {
     let { title: t, subtitle: n, icon: s, onClick: u, className: c, divider: d } = e,
-        [h, f] = r.useState(!1),
-        p = () => {
-            f(!0);
-        },
-        E = () => {
-            f(!1);
-        };
+        [h, f] = r.useState(!1);
+    function p() {
+        f(!0);
+    }
+    function E() {
+        f(!1);
+    }
     return (0, i.jsx)(l.D, {
         className: a()(_.Mr, _.iM, c),
         onMouseEnter: p,

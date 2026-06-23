@@ -219,7 +219,7 @@ let W = (e) => {
 var K = n(534514),
     $ = n(834730),
     z = n(775549);
-let q = (e) => {
+let q = function (e) {
     let { assetComponent: t, tooltipWordmarkComponent: n, children: r } = e;
     return (0, i.jsxs)("div", { className: z.R, children: [t, (0, i.jsx)("div", { className: z.A, children: n }), r] });
 };
@@ -512,7 +512,7 @@ function eI(e) {
                 );
             }
             let G = (0, i.jsx)(m.Anchor, { ...N, children: y }),
-                F = ((e) => {
+                F = (function (e) {
                     let { badge: t, tieredTenureBadge: n } = e;
                     return void 0 !== n && t.id !== eg
                         ? (0, i.jsx)(Q, { profileBadge: t, tenureBadge: n })

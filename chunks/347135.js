@@ -603,49 +603,49 @@ function eL() {
         }, [t]);
     return { fetching: e, xboxAccounts: n, playstationAccounts: i, xboxAndPlaystationAccounts: r };
 }
-let ew = (e) => {
-        let { questId: t, preview: n, beforeRequest: i, afterRequest: r } = e,
-            [s, o] = a.useState([]),
-            [l, u] = a.useState(!1),
-            c = (0, f.bG)([y.A], () => y.A.getAccounts()),
-            _ = (0, k.O)((e) => e.clearErrorHintsByType);
-        return (
-            a.useEffect(() => {
-                o((e) => e.filter((e) => e.type !== d._.EXPIRED_CREDENTIAL)), _(t, d._.EXPIRED_CREDENTIAL);
-            }, [c, _, t]),
-            {
-                startConsoleQuest: a.useCallback(async () => {
-                    if (l) return;
-                    i?.(), u(!0);
-                    let e = null;
-                    try {
-                        (e = await (0, U.vD)(t, n)), o(e.errorHints);
-                    } finally {
-                        u(!1), r?.(e?.errorHints ?? []);
-                    }
-                }, [l, i, r, n, t]),
-                startingConsoleQuest: l,
-                errorHints: s,
-            }
-        );
-    },
-    eM = (e) => {
-        let { quest: t } = e,
-            { xboxAndPlaystationAccounts: n } = eL(),
-            i = eN(t),
-            r = 0 === n.length;
-        return (0, Z.g5)(t) && r && !i;
-    },
-    eP = () => {
-        let { xboxAccounts: e, playstationAccounts: t } = eL(),
-            n = e.length > 0,
-            i = t.length > 0,
-            r = O.A.getArticleURL(x.MVz.QUEST_HOW_TO_PLAYSTATION),
-            s = O.A.getArticleURL(x.MVz.QUEST_HOW_TO_XBOX),
-            a = et.intl.format(et.t.beN4DG, { psHelpdeskArticle: r, xboxHelpdeskArticle: s }),
-            o = et.intl.format(et.t.HVS7nh, { helpdeskArticle: i ? r : s });
-        return { message: (n && !i) || (!n && i) ? o : a, xboxURL: s, playstationURL: r };
-    };
+function ew(e) {
+    let { questId: t, preview: n, beforeRequest: i, afterRequest: r } = e,
+        [s, o] = a.useState([]),
+        [l, u] = a.useState(!1),
+        c = (0, f.bG)([y.A], () => y.A.getAccounts()),
+        _ = (0, k.O)((e) => e.clearErrorHintsByType);
+    return (
+        a.useEffect(() => {
+            o((e) => e.filter((e) => e.type !== d._.EXPIRED_CREDENTIAL)), _(t, d._.EXPIRED_CREDENTIAL);
+        }, [c, _, t]),
+        {
+            startConsoleQuest: a.useCallback(async () => {
+                if (l) return;
+                i?.(), u(!0);
+                let e = null;
+                try {
+                    (e = await (0, U.vD)(t, n)), o(e.errorHints);
+                } finally {
+                    u(!1), r?.(e?.errorHints ?? []);
+                }
+            }, [l, i, r, n, t]),
+            startingConsoleQuest: l,
+            errorHints: s,
+        }
+    );
+}
+function eM(e) {
+    let { quest: t } = e,
+        { xboxAndPlaystationAccounts: n } = eL(),
+        i = eN(t),
+        r = 0 === n.length;
+    return (0, Z.g5)(t) && r && !i;
+}
+function eP() {
+    let { xboxAccounts: e, playstationAccounts: t } = eL(),
+        n = e.length > 0,
+        i = t.length > 0,
+        r = O.A.getArticleURL(x.MVz.QUEST_HOW_TO_PLAYSTATION),
+        s = O.A.getArticleURL(x.MVz.QUEST_HOW_TO_XBOX),
+        a = et.intl.format(et.t.beN4DG, { psHelpdeskArticle: r, xboxHelpdeskArticle: s }),
+        o = et.intl.format(et.t.HVS7nh, { helpdeskArticle: i ? r : s });
+    return { message: (n && !i) || (!n && i) ? o : a, xboxURL: s, playstationURL: r };
+}
 var ex =
     (((s = {})[(s.UNACCEPTED = 0)] = "UNACCEPTED"),
     (s[(s.ACCEPTED = 1)] = "ACCEPTED"),
@@ -802,19 +802,23 @@ function eY(e) {
     let t = (0, Z.TP)(e);
     return { launchInGameActivity: (0, E.A)({ applicationId: t }) };
 }
-let eW = () => (0, f.yK)([G.A], () => [...G.A.quests.values()]).some((e) => e.preview),
-    eK = () => eW(),
-    e$ = (e) => {
-        let t = e?.userStatus != null && (0, P.gO)(e.userStatus, M.uF.ACTIVITY_PANEL),
-            n = eA(e ?? null),
-            i = e?.userStatus?.claimedAt != null,
-            r = (0, f.bG)([G.A], () => null != G.A.questEnrollmentBlockedUntil, []);
-        return !t && !n && !i && !r;
-    },
-    ez = () => {
-        let e = (0, f.yK)([G.A], () => [...G.A.quests.values()]);
-        return a.useMemo(() => e.filter((e) => e.preview), [e]);
-    };
+function eW() {
+    return (0, f.yK)([G.A], () => [...G.A.quests.values()]).some((e) => e.preview);
+}
+function eK() {
+    return eW();
+}
+function e$(e) {
+    let t = e?.userStatus != null && (0, P.gO)(e.userStatus, M.uF.ACTIVITY_PANEL),
+        n = eA(e ?? null),
+        i = e?.userStatus?.claimedAt != null,
+        r = (0, f.bG)([G.A], () => null != G.A.questEnrollmentBlockedUntil, []);
+    return !t && !n && !i && !r;
+}
+function ez() {
+    let e = (0, f.yK)([G.A], () => [...G.A.quests.values()]);
+    return a.useMemo(() => e.filter((e) => e.preview), [e]);
+}
 function eq() {
     let e = J.pc;
     return a.useMemo(
@@ -847,11 +851,13 @@ function eX(e) {
                 (s.current = e);
         }, [n, i]);
 }
-let eQ = (e) => a.useMemo(() => C.default.getCurrentUser()?.isStaff() === !0, []) || e.preview,
-    eJ = (e, t) => {
-        let n = e.userStatus?.completedAt != null;
-        return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
-    };
+function eQ(e) {
+    return a.useMemo(() => C.default.getCurrentUser()?.isStaff() === !0, []) || e.preview;
+}
+function eJ(e, t) {
+    let n = e.userStatus?.completedAt != null;
+    return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
+}
 function e0(e) {
     let t = (0, f.bG)([G.A], () => G.A.quests),
         n = e?.questIds;

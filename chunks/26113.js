@@ -19,7 +19,7 @@ var i = n(627968),
     A = n(683807),
     I = n(161148),
     T = n(604949);
-let S = (e) => {
+let S = function (e) {
     let { channel: t, width: n } = e,
         s = (0, o.bG)([u.A], () => u.A.getFilteredParticipants(t.id)),
         S = (0, m.A)(t.id),

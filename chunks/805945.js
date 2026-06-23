@@ -194,45 +194,42 @@ let X = r.forwardRef(function (e, t) {
             : M || e_(X);
     }
     let ex = (0, i.jsx)("div", {
-            onMouseEnter: eL,
-            onMouseLeave: ew,
-            children: (function (e) {
-                let { sound: t, previewSound: n, disabled: r = !1, tooltipPosition: s = "top" } = e,
-                    a = (0, l.bG)([k.A], () => k.A.getGuildId());
-                return (0, i.jsx)(q, {
-                    tooltipPosition: s,
-                    disabled: r,
-                    onClick: function (e) {
-                        U.default.track(Y.HAw.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, {
-                            sound_id: t.soundId,
-                            sound_name: t.name,
-                            sound_guild_id: t.guildId,
-                            location_guild_id: a,
-                        }),
-                            e.stopPropagation(),
-                            e.currentTarget.blur(),
-                            n();
-                    },
-                    text: $.intl.formatToPlainString($.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
-                    children: (0, i.jsx)(h.H, { size: "md", color: "currentColor", className: z.Wo }),
-                });
-            })({ sound: f, previewSound: eh, disabled: eN && !b }),
-        }),
-        ek = (e) =>
-            M || eN
-                ? eM
-                    ? (0, i.jsx)(m.X, {
-                          size: "xs",
-                          color: "currentColor",
-                          className: a()(z.C4, z.hz, e, { [z.hn]: eC }),
-                      })
-                    : null
-                : (0, i.jsx)(E.u, { size: "xs", color: "currentColor", className: a()(z.C4, e) }),
-        eU = (0, i.jsx)("div", {
-            onMouseEnter: eL,
-            onMouseLeave: ew,
-            children: (0, i.jsx)(Z, { sound: f, disabled: !D && !b }),
-        });
+        onMouseEnter: eL,
+        onMouseLeave: ew,
+        children: (function (e) {
+            let { sound: t, previewSound: n, disabled: r = !1, tooltipPosition: s = "top" } = e,
+                a = (0, l.bG)([k.A], () => k.A.getGuildId());
+            return (0, i.jsx)(q, {
+                tooltipPosition: s,
+                disabled: r,
+                onClick: function (e) {
+                    U.default.track(Y.HAw.EXPRESSION_PICKER_SOUNDBOARD_SOUND_PREVIEWED, {
+                        sound_id: t.soundId,
+                        sound_name: t.name,
+                        sound_guild_id: t.guildId,
+                        location_guild_id: a,
+                    }),
+                        e.stopPropagation(),
+                        e.currentTarget.blur(),
+                        n();
+                },
+                text: $.intl.formatToPlainString($.t["/8fYO5"], { emojiName: t.emojiName, soundName: t.name }),
+                children: (0, i.jsx)(h.H, { size: "md", color: "currentColor", className: z.Wo }),
+            });
+        })({ sound: f, previewSound: eh, disabled: eN && !b }),
+    });
+    function ek(e) {
+        return M || eN
+            ? eM
+                ? (0, i.jsx)(m.X, { size: "xs", color: "currentColor", className: a()(z.C4, z.hz, e, { [z.hn]: eC }) })
+                : null
+            : (0, i.jsx)(E.u, { size: "xs", color: "currentColor", className: a()(z.C4, e) });
+    }
+    let eU = (0, i.jsx)("div", {
+        onMouseEnter: eL,
+        onMouseLeave: ew,
+        children: (0, i.jsx)(Z, { sound: f, disabled: !D && !b }),
+    });
     r.useEffect(() => {
         let e = eI.current;
         return (

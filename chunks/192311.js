@@ -1,4 +1,6 @@
-t.d(e, { W: () => r });
+t.d(e, { W: () => n });
 var a = t(17928),
-    p = t(232835);
-let r = (s) => (0, a.bG)([p.A], () => p.A.getLastNonCurrentUserMessage(s) ?? p.A.getLastMessage(s));
+    r = t(232835);
+function n(s) {
+    return (0, a.bG)([r.A], () => r.A.getLastNonCurrentUserMessage(s) ?? r.A.getLastMessage(s));
+}

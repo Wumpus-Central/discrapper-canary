@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => R, DQ: () => C, Dj: () => j, F5: () => T, Jc: () => E, L6: () => f, ZX: () => _, km: () => v });
+n.d(t, { Ay: () => R, DQ: () => C, Dj: () => j, F5: () => T, Jc: () => E, L6: () => x, ZX: () => _, km: () => v });
 var i = n(627968),
     s = n(64700),
     r = n(503698),
@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(964486),
     g = n(617710),
     p = n(127819),
-    x = n(505206);
-let f = 1e3 / 60,
+    f = n(505206);
+let x = 1e3 / 60,
     A = 1e3 / 30,
     E = 5e3,
     S = (1e3 / 60) * 3,
@@ -73,11 +73,11 @@ function T(e) {
                         r.current < I && (r.current += 1),
                         (l.current = (l.current + 1) % I));
             }, []),
-            (e, t) => {
+            function (e, t) {
                 let n = r.current ?? 1;
                 return Math.abs(e * t - (i.current / n) * n) / t;
             },
-            () => {
+            function () {
                 (i.current = 0), (r.current = 0), t.current.fill(0), (n.current = performance.now()), (l.current = 0);
             },
         ]
@@ -115,19 +115,19 @@ function j(e, t) {
                     (u.current = (u.current + 1) % I),
                     h > S)
                 ) {
-                    let t = 0 === d.current ? f : a.current / d.current,
-                        n = Math.min(2 * f, t),
-                        i = Math.floor(h / (e ? n : f));
+                    let t = 0 === d.current ? x : a.current / d.current,
+                        n = Math.min(2 * x, t),
+                        i = Math.floor(h / (e ? n : x));
                     i > 0 && (c.current = performance.now()), (l.current += i);
                 }
-                let m = 0 === d.current ? f : a.current / d.current;
+                let m = 0 === d.current ? x : a.current / d.current;
                 o.current += h / m;
             },
             [e, t, n],
         ),
         g = 0 === d.current ? 0 : a.current / d.current;
     return {
-        currentFPS: 0 === g ? 0 : (f / g) * 60,
+        currentFPS: 0 === g ? 0 : (x / g) * 60,
         averageFrameTime: g,
         timeSinceLastDrop: (performance.now() - c.current) / 1e3,
         droppedFramesRef: l,
@@ -157,7 +157,7 @@ function y(e) {
             averageFrameTime: c,
             timeSinceLastDrop: h,
             onResetFrameData: g,
-            droppedFramesRef: x,
+            droppedFramesRef: f,
             renderedFrameCount: A,
             bufferFramecountRef: S,
             frameCheckerEffect: I,
@@ -204,14 +204,14 @@ function y(e) {
                         tag: "span",
                         variant: "text-md/bold",
                         color: h < 2 ? "text-feedback-critical" : h < 5 ? "text-feedback-warning" : "text-strong",
-                        children: x.current,
+                        children: f.current,
                     }),
                     (0, i.jsxs)(d.E, {
                         tag: "span",
                         variant: "text-sm/normal",
                         color: "text-muted",
                         className: p.af,
-                        children: ["(Dropped: ", ((x.current / A.current) * 100).toFixed(4), "%)"],
+                        children: ["(Dropped: ", ((f.current / A.current) * 100).toFixed(4), "%)"],
                     }),
                     R &&
                         (0, i.jsx)(o.m, {
@@ -251,7 +251,7 @@ function y(e) {
                     (0, i.jsxs)(d.E, {
                         tag: "span",
                         variant: "text-md/semibold",
-                        color: c > 1.1 * f ? "text-feedback-warning" : "text-subtle",
+                        color: c > 1.1 * x ? "text-feedback-warning" : "text-subtle",
                         children: [c.toFixed(2), "ms"],
                     }),
                 ],
@@ -398,10 +398,10 @@ function N(e) {
     let { socket: t } = e,
         n = t.dispatcher.getSchedulerTelemetry(),
         [r, a] = s.useState(n.isTelemetryEnabled),
-        [o, h] = s.useState(n.isTelemetryEnabled),
-        m = (e) => {
-            h(e), n.toggleTelemetry(e);
-        };
+        [o, h] = s.useState(n.isTelemetryEnabled);
+    function m(e) {
+        h(e), n.toggleTelemetry(e);
+    }
     return (0, i.jsxs)("div", {
         className: p.st,
         children: [
@@ -411,7 +411,7 @@ function N(e) {
                 children: (0, i.jsx)(c.S, {
                     label: "Show Dispatch Scheduler Telemetry",
                     checked: r,
-                    onChange: () => {
+                    onChange: function () {
                         a((e) => {
                             let t = !e;
                             return t && m(!0), t;
@@ -462,7 +462,7 @@ function N(e) {
                                   variant: "primary",
                                   size: "sm",
                                   text: "Reset Scheduler Telemetry",
-                                  onClick: () => {
+                                  onClick: function () {
                                       n.reset();
                                   },
                               }),
@@ -490,7 +490,7 @@ function R() {
     return (
         _(),
         (0, i.jsx)("div", {
-            className: l()(x.nd, p.nd),
+            className: l()(f.nd, p.nd),
             children: (0, i.jsxs)(h.Ip, {
                 className: p.nd,
                 children: [

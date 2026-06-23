@@ -187,11 +187,11 @@ let el = {
     subtext: es.subtext,
 };
 var eu = n(992595);
-let ec = (e) => {
+function ec(e) {
     let { className: t, attributes: n, children: r } = e,
         s = a()(ea.S0, ea.Cj, t);
     return (0, i.jsx)("span", { ...n, className: s, contentEditable: !1, children: r });
-};
+}
 var ed = n(652215),
     e_ = n(422404);
 class eh extends r.PureComponent {

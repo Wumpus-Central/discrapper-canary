@@ -4,7 +4,7 @@ var i = n(403362),
     r = n(513461),
     s = n(260197),
     a = n(652215);
-let o = (e) => {
+function o(e) {
     let { required: t, response: n, field_type: s } = e;
     if (!t) return !0;
     if (null == n) return !1;
@@ -20,7 +20,7 @@ let o = (e) => {
         default:
             return (0, i.xb)(s);
     }
-};
+}
 function l(e) {
     return s.AI.has(e?.field_type);
 }

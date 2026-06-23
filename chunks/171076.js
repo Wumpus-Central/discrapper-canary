@@ -21,8 +21,10 @@ var i = n(684013),
     T = n(897720),
     S = n(145567),
     y = n(652215);
-let C = (e) => (0, m.U5)(e, "OverlayTextChatAutomaticLifecycleManager"),
-    N = new Map(),
+function C(e) {
+    return (0, m.U5)(e, "OverlayTextChatAutomaticLifecycleManager");
+}
+let N = new Map(),
     v = null,
     R = !1;
 async function O() {
@@ -79,7 +81,7 @@ async function O() {
                 n.e("88610"),
                 n.e("33087"),
                 n.e("4189"),
-                n.e("50568"),
+                n.e("21739"),
                 n.e("49623"),
                 n.e("6026"),
                 n.e("1009"),
@@ -298,7 +300,7 @@ async function O() {
                 n.e("24622"),
                 n.e("32551"),
                 n.e("62680"),
-                n.e("64046"),
+                n.e("91565"),
                 n.e("43426"),
                 n.e("96443"),
                 n.e("65743"),
@@ -341,8 +343,8 @@ async function O() {
                 n.e("37977"),
                 n.e("86672"),
                 n.e("18997"),
-                n.e("72877"),
                 n.e("25486"),
+                n.e("72877"),
                 n.e("97069"),
                 n.e("32207"),
                 n.e("71467"),

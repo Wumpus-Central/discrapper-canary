@@ -44,9 +44,9 @@ function f(e) {
             return (
                 l.useEffect(() => {
                     if (e === r.current) return;
-                    let t = () => {
+                    function t() {
                         (u.current = Date.now()), (r.current = e), n(e);
-                    };
+                    }
                     if (null == e || null == r.current) return void t();
                     let l = setTimeout(t, Math.min(d, Math.max(0, E - (Date.now() - u.current))));
                     return () => {

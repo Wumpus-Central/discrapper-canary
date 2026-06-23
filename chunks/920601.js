@@ -51,7 +51,9 @@ function I(e) {
     return {
         profileThemeStyle: (0, i.useMemo)(() => {
             if (null == m || null == I || null == C || null == N) return A;
-            let e = (e, t) => (0, a.$k)(e, S, null, t);
+            function e(e, t) {
+                return (0, a.$k)(e, S, null, t);
+            }
             return {
                 "--profile-gradient-primary-color": e(m),
                 "--profile-gradient-secondary-color": e(I),

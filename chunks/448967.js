@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(922139),
+    o = n(308186),
     l = n(717421),
     u = n(935462),
     c = n(430690),
@@ -34,10 +34,10 @@ function R(e) {
                 I(1),
                 null != p &&
                     A.default.track(y.HAw.QUEST_SURVEY_SUBMITTED, { ...D(p, n), choice: e.text, choice_id: e.key });
-        },
-        L = async (e) => {
-            1 === e && (await R({ width: "100%" }), a());
         };
+    async function L(e) {
+        1 === e && (await R({ width: "100%" }), a());
+    }
     return (
         (0, m.Ay)(() => {
             null != p && A.default.track(y.HAw.QUEST_SURVEY_DISPLAYED, D(p, n));

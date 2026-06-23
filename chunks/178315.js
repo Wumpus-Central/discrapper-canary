@@ -6,7 +6,7 @@ var i = n(64700),
     a = n(627968),
     o = n(95035),
     d = n(702841),
-    c = n(555337),
+    c = n(913758),
     u = n(287809),
     m = n(652215);
 function g() {
@@ -51,7 +51,11 @@ function h(e) {
                     }),
                     checked: e.noRecentViolations,
                     actionLabel: o ? s.intl.string(s.t["xU2fl+"]) : void 0,
-                    actionHandler: o ? () => (0, l.A)(r.A.getSubmitRequestURL()) : void 0,
+                    actionHandler: o
+                        ? function () {
+                              return (0, l.A)(r.A.getSubmitRequestURL());
+                          }
+                        : void 0,
                 },
             ];
         if (

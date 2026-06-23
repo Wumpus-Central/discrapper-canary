@@ -1,34 +1,34 @@
-e.d(t, {
+n.d(t, {
     a: () =>
-        function i(t, e) {
-            let { isGift: o, giftRecipient: u, giftingOrigin: p, additionalUserIds: h } = e,
+        function i(t, n) {
+            let { isGift: r, giftRecipient: u, giftingOrigin: p, additionalUserIds: h } = n,
                 {
                     discoverySessionId: k,
                     analyticsLocations: _,
                     guildId: g,
                     isEligibilityCheckContinuation: C,
-                    checkoutState: I,
+                    checkoutState: f,
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                E = s.A.getSKUEligibilityEntry(t.id),
-                f = E?.state,
-                y = !o && (null == f || "checking" === f || "ineligible" === f);
+                I = s.A.getSKUEligibilityEntry(t.id),
+                E = I?.state,
+                y = !r && (null == E || "checking" === E || "ineligible" === E);
             if (!y && !C) {
                 let i = "none";
-                o ? (i = "gift") : "eligible" === f ? (i = "already_eligible") : "error" === f && (i = "prior_error"),
-                    l.default.track(r.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
+                r ? (i = "gift") : "eligible" === E ? (i = "already_eligible") : "error" === E && (i = "prior_error"),
+                    l.default.track(d.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
                         sku_id: t.id,
                         guild_id: g ?? null,
                         application_id: t.applicationId,
-                        is_gift: o,
-                        eligibility_state: f ?? "none",
+                        is_gift: r,
+                        eligibility_state: E ?? "none",
                         skip_reason: i,
-                        error_http_status: E?.state === "error" ? (E.httpStatus ?? null) : null,
+                        error_http_status: I?.state === "error" ? (I.httpStatus ?? null) : null,
                         location_stack: _,
                     });
             }
-            let L = I ?? { hasFinished: !1 };
+            let L = f ?? { hasFinished: !1 };
             y
-                ? (0, d.L)({
+                ? (0, c.L)({
                       guildId: g,
                       applicationId: t.applicationId,
                       skuId: t.id,
@@ -37,7 +37,7 @@ e.d(t, {
                           if (!L.hasFinished)
                               return i(
                                   t,
-                                  { isGift: o, giftRecipient: u, giftingOrigin: p, additionalUserIds: h },
+                                  { isGift: r, giftRecipient: u, giftingOrigin: p, additionalUserIds: h },
                                   {
                                       discoverySessionId: k,
                                       analyticsLocations: _,
@@ -48,56 +48,55 @@ e.d(t, {
                               );
                       },
                   })
-                : c({
+                : (function (i) {
+                      let {
+                          discoverySessionId: t,
+                          sku: n,
+                          analyticsLocations: e,
+                          isGift: o,
+                          giftRecipient: l,
+                          additionalUserIds: s,
+                          giftingOrigin: c,
+                          onCloseCallback: d,
+                          onComplete: r,
+                          modalKey: u,
+                      } = i;
+                      a.UnifiedCheckoutFlowManagerSingletons[a.CL.SLAYER_STOREFRONT_CHECKOUT]
+                          .get()
+                          .openCheckoutModal({
+                              checkoutConfiguration: {
+                                  discoverySessionId: t,
+                                  applicationId: n.applicationId,
+                                  skuId: n.id,
+                                  skuProductLine: n.productLine,
+                              },
+                              unifiedCheckoutProviderProps: { analyticsLocations: e },
+                              checkoutHandlers: { onComplete: r },
+                              giftContextProps: { isGift: o, giftRecipient: l, giftingOrigin: c, additionalUserIds: s },
+                              modalAPIOptions: { modalKey: u, onCloseCallback: d },
+                          });
+                  })({
                       discoverySessionId: k,
                       sku: t,
                       analyticsLocations: _ ?? [],
-                      isGift: o,
+                      isGift: r,
                       giftRecipient: u,
                       giftingOrigin: p,
                       additionalUserIds: h,
-                      onCloseCallback: () => {
-                          (0, n.ET)(), (0, a.z)(), (0, d.l)(), (L.hasFinished = !0);
+                      onCloseCallback: function () {
+                          (0, e.ET)(), (0, o.z)(), (0, c.l)(), (L.hasFinished = !0);
                       },
-                      onComplete: () => {
+                      onComplete: function () {
                           L.hasFinished = !0;
                       },
                       modalKey: "slayer-payment-modal",
                   });
         },
 });
-var n = e(391048),
-    a = e(636099),
-    o = e(529427),
-    l = e(174459),
-    s = e(832163),
-    d = e(556808),
-    r = e(652215);
-let c = (i) => {
-    let {
-        discoverySessionId: t,
-        sku: e,
-        analyticsLocations: n,
-        isGift: a,
-        giftRecipient: l,
-        additionalUserIds: s,
-        giftingOrigin: d,
-        onCloseCallback: r,
-        onComplete: c,
-        modalKey: u,
-    } = i;
-    return o.UnifiedCheckoutFlowManagerSingletons[o.CL.SLAYER_STOREFRONT_CHECKOUT]
-        .get()
-        .openCheckoutModal({
-            checkoutConfiguration: {
-                discoverySessionId: t,
-                applicationId: e.applicationId,
-                skuId: e.id,
-                skuProductLine: e.productLine,
-            },
-            unifiedCheckoutProviderProps: { analyticsLocations: n },
-            checkoutHandlers: { onComplete: c },
-            giftContextProps: { isGift: a, giftRecipient: l, giftingOrigin: d, additionalUserIds: s },
-            modalAPIOptions: { modalKey: u, onCloseCallback: r },
-        });
-};
+var e = n(391048),
+    o = n(636099),
+    a = n(529427),
+    l = n(174459),
+    s = n(832163),
+    c = n(556808),
+    d = n(652215);

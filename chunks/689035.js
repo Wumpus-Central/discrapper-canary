@@ -1155,7 +1155,7 @@ function t7(e) {
                 (0, r.jsx)(tx, {
                     showPill: !1,
                     id: "create-join-button",
-                    onClick: () => {
+                    onClick: function () {
                         (0, tV.Sn)()
                             ? (0, tB.A)({
                                   analyticsSource: { page: ev.ThZ.CREATE_JOIN_GUILD_MODAL },
@@ -1194,13 +1194,13 @@ function nn(e) {
                 lowerBadge: (0, r.jsx)(tl.fk, { icon: (0, t8.k)(t9.A), disableColor: !0, className: nt._ }),
                 children: (0, r.jsx)(F.j, {
                     name: e.name,
-                    onMouseEnter: () => {
+                    onMouseEnter: function () {
                         i(!0);
                     },
-                    onMouseLeave: () => {
+                    onMouseLeave: function () {
                         i(!1);
                     },
-                    onClick: () => {
+                    onClick: function () {
                         (0, g.openModalLazy)(async () => {
                             let { default: t } = await n.e("42945").then(n.bind(n, 537560));
                             return (n) => (0, r.jsx)(t, { name: e.name, guildId: e.id, ...n });
@@ -1307,10 +1307,10 @@ function nk(e) {
         [h, f] = s.useState(null),
         [p, E] = s.useState(0),
         m = (0, d.Vd)("home"),
-        g = (0, nE.fy)().activePanel === nE.HP.APP_ICON,
-        A = () => {
-            f(null), E(0), clearTimeout(h);
-        };
+        g = (0, nE.fy)().activePanel === nE.HP.APP_ICON;
+    function A() {
+        f(null), E(0), clearTimeout(h);
+    }
     if (null == n) return null;
     let I = eR.intl.string(eR.t.YUU0RF);
     c && (I = nh.w.get(ev.wqg) ? eR.intl.string(eR.t["nkq1l+"]) : eR.intl.string(eR.t.Be8Q5E));
@@ -3376,9 +3376,9 @@ function rl(e) {
         [W],
     ),
         s.useEffect(() => {
-            let e = () => {
+            function e() {
                 L.current?.calculateState(), w.current?.calculateState();
-            };
+            }
             return el.default.addChangeListener(e), () => el.default.removeChangeListener(e);
         }, []);
     let { analyticsLocations: K } = (0, O.Ay)(R.A.GUILDS_LIST),

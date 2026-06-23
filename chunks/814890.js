@@ -30,30 +30,27 @@ let p = new a.A("InteractionComponentUtils"),
         name: e.name,
         animated: e.animated,
         src: t && null != e.id ? u.Ay.getEmojiURL({ id: e.id, animated: e.animated || !1, size: 48 }) : void 0,
-    }),
-    m = (e, t, n) => {
-        let i =
-            e?.data.interactionType === s.G4.MESSAGE_COMPONENT && e?.state === o.m.FAILED ? e.data.componentId : null;
-        if (
-            null !=
-            (null != i
-                ? (function (e, t) {
-                      switch (e.type) {
-                          case s.I5.ACTION_ROW:
-                              return e.components.find((e) => e.id === t) ?? null;
-                          case s.I5.SECTION:
-                              if (e.accessory.id === t) return e.accessory;
-                              return e.components.find((e) => e.id === t) ?? null;
-                          case s.I5.CONTAINER:
-                              return e.components.find((e) => e.id === t) ?? null;
-                      }
-                  })(n, i)
-                : null)
-        )
-            return (
-                t?.interactionError ?? (e?.errorCode === 429 ? f.intl.string(f.t.fitPBS) : f.intl.string(f.t.VCsUJu))
-            );
-    };
+    });
+function m(e, t, n) {
+    let i = e?.data.interactionType === s.G4.MESSAGE_COMPONENT && e?.state === o.m.FAILED ? e.data.componentId : null;
+    if (
+        null !=
+        (null != i
+            ? (function (e, t) {
+                  switch (e.type) {
+                      case s.I5.ACTION_ROW:
+                          return e.components.find((e) => e.id === t) ?? null;
+                      case s.I5.SECTION:
+                          if (e.accessory.id === t) return e.accessory;
+                          return e.components.find((e) => e.id === t) ?? null;
+                      case s.I5.CONTAINER:
+                          return e.components.find((e) => e.id === t) ?? null;
+                  }
+              })(n, i)
+            : null)
+    )
+        return t?.interactionError ?? (e?.errorCode === 429 ? f.intl.string(f.t.fitPBS) : f.intl.string(f.t.VCsUJu));
+}
 function g(e) {
     return e.placeholder ?? f.intl.string(f.t.Otr6W2);
 }
@@ -171,7 +168,7 @@ function R(e) {
         .map((e, t) =>
             (function e(t, n) {
                 if (
-                    !((e) => {
+                    !(function (e) {
                         switch (e) {
                             case s.I5.ACTION_ROW:
                             case s.I5.BUTTON:

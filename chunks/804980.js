@@ -44,7 +44,7 @@ function G(e) {
         guildId: n,
         users: s,
         max: 4,
-        renderUser: (e) => {
+        renderUser: function (e) {
             if (null == e || e === S.mt) return null;
             let t = P.Ay.getName(n, r, e);
             return (0, i.jsx)(

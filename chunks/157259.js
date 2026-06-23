@@ -34,7 +34,7 @@ function A(e) {
                 (0, l.jsx)(o.$, {
                     size: "sm",
                     variant: "primary",
-                    onClick: () => {
+                    onClick: function () {
                         u.default.track(m.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                             ...(0, d.H$)(t.getGuildId()),
                             ...(0, d.dI)(t),

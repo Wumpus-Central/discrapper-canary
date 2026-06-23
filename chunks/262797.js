@@ -142,7 +142,7 @@ function M(t) {
         (0, e.jsx)(m.a, {
             confirmText: A.intl.string(A.t.l4Emac),
             cancelText: A.intl.string(A.t["ETE/oC"]),
-            onCancel: () => {
+            onCancel: function () {
                 C.default.track(v.HAw.USER_REMEDIATION_ACTION, { action: p.p.CANCEL_BLOCK, location: c }), l?.();
             },
             onConfirm: () => {

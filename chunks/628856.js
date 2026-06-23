@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { V: () => i, t: () => r });
-let i = (e) =>
-    "string" == typeof e.skuId || "number" == typeof e.skuId
+function i(e) {
+    return "string" == typeof e.skuId || "number" == typeof e.skuId
         ? String(e.skuId)
         : "string" == typeof e.sku_id || "number" == typeof e.sku_id
           ? String(e.sku_id)
           : null;
+}
 function r(e) {
     return "object" == typeof e && null != e && "nameplate" in e && "object" == typeof e.nameplate
         ? {
@@ -31,3 +31,4 @@ function r(e) {
           }
         : null;
 }
+n.d(t, { V: () => i, t: () => r });

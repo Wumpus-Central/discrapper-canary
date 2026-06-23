@@ -4,7 +4,7 @@ var n,
     s = i(64700),
     a = i(503698),
     o = i.n(a),
-    r = i(922139),
+    r = i(308186),
     d = i(17928),
     c = i(289873),
     u = i(789645),
@@ -271,7 +271,7 @@ var L = i(793574),
     H = i(164891),
     W = i(260509),
     $ = i(71393),
-    K = i(941327),
+    K = i(394459),
     J = i(287809),
     Q = i(531685),
     Z = i(174459),
@@ -442,9 +442,9 @@ function eT(e) {
                 j.default.selectVoiceChannel(a.id);
         }, [a, u]);
     s.useEffect(() => {
-        let e = (e) => {
+        function e(e) {
             e.key === eO.dh.ESCAPE && x.A.stopRinging(a.id);
-        };
+        }
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [a]),
         s.useEffect(
@@ -743,9 +743,9 @@ function eY(e) {
         }, []),
         P = (0, m.z)({ value: +!!u, config: { ...r.config.stiff, clamp: !0 } }, "animate-always");
     s.useEffect(() => {
-        let e = (e) => {
+        function e(e) {
             e.key === eO.dh.ESCAPE && x.A.stopRinging(a.id);
-        };
+        }
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [a]);
     let V = O === C._Of.VIDEO && b && y > 0,

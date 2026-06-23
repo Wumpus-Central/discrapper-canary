@@ -12,5 +12,7 @@ function s(e) {
         })
         .join(", ")})`;
 }
+function a(e) {
+    return r.dP[e];
+}
 n(818348);
-let a = (e) => r.dP[e];

@@ -117,7 +117,7 @@ function P(e) {
         ],
     });
 }
-let x = (e) => {
+let x = function (e) {
     let { loading: t = !1, currentOverrides: n, linkMeta: s, url: a, applyBuildOverride: o, clearBuildOverride: l } = e,
         [u, d] = r.useState(!1),
         h = r.useCallback(() => {

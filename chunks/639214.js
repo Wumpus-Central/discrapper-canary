@@ -12,14 +12,15 @@ function c(e, t) {
     if (
         e.application_id === u.$W ||
         e.platform === l.yTV.XBOX ||
-        e.platform === l.yTV.PS4 ||
-        e.platform === l.yTV.PS5
+        (n = e).platform === l.yTV.PS4 ||
+        n.platform === l.yTV.PS5
     ) {
-        var n = e.name.toLowerCase();
-        let r = (0, s.F9)(t);
-        if (null == r) return !1;
-        let a = i.A.getApplication(r);
-        return null != a && n === a.name.toLowerCase();
+        var n,
+            r = e.name.toLowerCase();
+        let a = (0, s.F9)(t);
+        if (null == a) return !1;
+        let o = i.A.getApplication(a);
+        return null != o && r === o.name.toLowerCase();
     }
     return (
         (null != t && t.id === o.gB && e.application_id === o.hK) ||

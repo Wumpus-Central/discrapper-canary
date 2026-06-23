@@ -68,25 +68,25 @@ var O = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"),
     P = n(430993),
     x = n(825484),
     k = n(214437);
-let U = (e) => {
-        let { actions: t, footerInput: n } = e;
-        return 0 === t.length && null == n
-            ? null
-            : (0, s.jsxs)("footer", {
-                  className: k.q,
-                  children: [
-                      null != n && (0, s.jsx)("div", { children: n }),
-                      (0, s.jsx)(x.e, {
-                          className: k.G,
-                          justify: "end",
-                          children: t.map((e, t) => (0, s.jsx)(d.$, { ...e }, t)),
-                      }),
-                  ],
-              });
-    },
-    G = { bottom: 40, left: 32, right: 32, top: 32 };
+function U(e) {
+    let { actions: t, footerInput: n } = e;
+    return 0 === t.length && null == n
+        ? null
+        : (0, s.jsxs)("footer", {
+              className: k.q,
+              children: [
+                  null != n && (0, s.jsx)("div", { children: n }),
+                  (0, s.jsx)(x.e, {
+                      className: k.G,
+                      justify: "end",
+                      children: t.map((e, t) => (0, s.jsx)(d.$, { ...e }, t)),
+                  }),
+              ],
+          });
+}
+let G = { bottom: 40, left: 32, right: 32, top: 32 };
 var F = n(831067);
-let V = (e) => {
+function V(e) {
     let { children: t, actions: n, footerInput: i, title: r } = e;
     return (0, s.jsxs)(l.B, {
         direction: "vertical",
@@ -100,7 +100,7 @@ let V = (e) => {
             (0, s.jsx)(U, { actions: n, footerInput: i }),
         ],
     });
-};
+}
 var B = n(242235);
 let j = {
         refresh_app: (e) => {
@@ -144,7 +144,7 @@ let j = {
                     {
                         text: "Consectetur adipiscing",
                         variant: "primary",
-                        onClick: () => {
+                        onClick: function () {
                             n?.ageVerificationStatus === L.Tk.UNVERIFIED
                                 ? w.A.showAgeVerificationGetStartedModal({
                                       entryPoint: h.q1.SAFETY_FLOWS,

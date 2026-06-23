@@ -12,17 +12,17 @@ var i = n(735438),
 let _ = { pendingUsages: [] };
 u.A.Millis.DAY;
 let h = new o.A({
-        computeBonus: () => 100,
-        lookupKey: (e) => c.A.getStickerById(e),
-        afterCompute: () => {},
-        numFrequentlyItems: 20,
-    }),
-    f = () => {
-        c.A.isLoaded && h.compute();
-    },
-    p = () => {
-        f();
-    };
+    computeBonus: () => 100,
+    lookupKey: (e) => c.A.getStickerById(e),
+    afterCompute: () => {},
+    numFrequentlyItems: 20,
+});
+function f() {
+    c.A.isLoaded && h.compute();
+}
+function p() {
+    f();
+}
 function E() {
     let e = l.A.frecencyWithoutFetchingLatest.stickerFrecency?.stickers;
     if (null == e) return !1;
@@ -48,7 +48,7 @@ class m extends s.Ay.PersistedStore {
     }
 }
 let g = new m(a.h, {
-    STICKER_TRACK_USAGE: (e) => {
+    STICKER_TRACK_USAGE: function (e) {
         let { stickerIds: t } = e;
         t?.forEach((e) => {
             h.track(e), _.pendingUsages.push({ key: e, timestamp: Date.now() });

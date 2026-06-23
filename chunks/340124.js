@@ -189,33 +189,35 @@ class x {
             a = this.pendingRequests.get(e);
         if (null != a) {
             let t,
-                u,
-                { enableNewRequestBehavior: c } = M.A.getConfig({ location: "recordQuestRequestApiResponse" });
-            if (c) {
-                var o, l;
-                let e, n, c;
-                (o = a.previousAdDecision),
-                    (l =
-                        null !== s
-                            ? {
-                                  questId: r,
-                                  adCreativeId: r,
-                                  fetchedAt: s,
-                                  ttlMillis: 0,
-                                  adDecisionData: null != i ? { decision_id: i } : void 0,
-                              }
-                            : null),
-                    (n = (e = (e) => (null == e ? "null" : null == e.questId ? "no_serve" : "quest"))(o)),
-                    (c = e(l)),
-                    (t =
-                        "quest" !== n || "quest" !== c
-                            ? `${n}_to_${c}`
-                            : o?.questId === l?.questId
-                              ? "same_quest"
-                              : "different_quest"),
-                    (u = s);
-            } else (t = "legacy"), (u = null);
-            P({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: i }, t, u),
+                o,
+                { enableNewRequestBehavior: l } = M.A.getConfig({ location: "recordQuestRequestApiResponse" });
+            l
+                ? ((t = (function (e, t) {
+                      function n(e) {
+                          return null == e ? "null" : null == e.questId ? "no_serve" : "quest";
+                      }
+                      let i = n(e),
+                          r = n(t);
+                      return "quest" !== i || "quest" !== r
+                          ? `${i}_to_${r}`
+                          : e?.questId === t?.questId
+                            ? "same_quest"
+                            : "different_quest";
+                  })(
+                      a.previousAdDecision,
+                      null !== s
+                          ? {
+                                questId: r,
+                                adCreativeId: r,
+                                fetchedAt: s,
+                                ttlMillis: 0,
+                                adDecisionData: null != i ? { decision_id: i } : void 0,
+                            }
+                          : null,
+                  )),
+                  (o = s))
+                : ((t = "legacy"), (o = null)),
+                P({ ...a, apiResponseTimestamp: Date.now(), wasSuccessful: n, adRequestId: i }, t, o),
                 this.pendingRequests.delete(e);
         }
     }

@@ -14,8 +14,8 @@ var n = e(627968),
     m = e(696986),
     C = e(243721),
     p = e(783878),
-    h = e(871682),
-    f = e(628284),
+    f = e(871682),
+    h = e(628284),
     U = e(192308),
     V = e(935462),
     v = e(534514),
@@ -69,13 +69,13 @@ function E(A) {
             enableThemedBackground: m = !1,
             parentModalKey: C,
             label: p,
-            errorMessage: h,
+            errorMessage: f,
         } = A,
-        f = (0, W.xW)(),
+        h = (0, W.xW)(),
         [U, V] = r.useState(() => (0, Q.x7)(c)),
         v = r.useRef(!0 === i),
-        x = t ?? f?.titleId,
-        b = f?.errorId ?? B;
+        x = t ?? h?.titleId,
+        b = h?.errorId ?? B;
     function F(A, t, e) {
         o(t), V(e);
     }
@@ -93,7 +93,7 @@ function E(A) {
     );
     return (0, n.jsx)(K.D, {
         label: p,
-        errorMessage: h,
+        errorMessage: f,
         id: l,
         required: q,
         children: (A) =>
@@ -127,7 +127,7 @@ function E(A) {
                 children: [
                     !0 === u &&
                         (0, n.jsx)(Y, {
-                            hasError: null != f.error || (null != s && c.length > s),
+                            hasError: null != h.error || (null != s && c.length > s),
                             text: c,
                             maxLength: s,
                         }),
@@ -268,7 +268,7 @@ function Ap() {
     if (null == A) throw Error("No GuildProductAttachmentManagerContextProvider found");
     return A;
 }
-function Ah(A) {
+function Af(A) {
     let { children: t, guildId: e, ...l } = A,
         a = (function (A, t) {
             let { editSkuId: e, onFileSizeError: n } = t,
@@ -288,13 +288,13 @@ function Ah(A) {
                     },
                     [s],
                 ),
-                h = r.useCallback(
+                f = r.useCallback(
                     (A) => {
                         s.addAttachment(A, u), g({});
                     },
                     [s],
                 ),
-                f = r.useCallback(
+                h = r.useCallback(
                     async (A) => {
                         try {
                             c(A), C(void 0);
@@ -320,12 +320,12 @@ function Ah(A) {
             let { uploads: V } = s,
                 v = !V.every((A) => s.existingAttachmentIds.has(A.id)) || V.length !== s.existingAttachmentIds.size;
             return {
-                addAttachment: h,
+                addAttachment: f,
                 cancelUnusedUploads: U,
                 deleteAttachment: p,
                 fileUploadProgresses: d,
                 uploads: V,
-                saveProductWithAttachments: f,
+                saveProductWithAttachments: h,
                 isSaving: null != q,
                 changesSaving: q,
                 saveError: m,
@@ -336,7 +336,7 @@ function Ah(A) {
         })(e, l);
     return (0, n.jsx)(AC.Provider, { value: a, children: t });
 }
-let Af = [
+let Ah = [
     {
         name: "cool-frog",
         alt: "A cool frog",
@@ -551,8 +551,8 @@ function AY(A) {
         g = l === Ay,
         [q, m] = r.useState(g ? e : null),
         [C, p] = r.useState(null),
-        h = r.useRef(null),
-        f = r.useRef(null);
+        f = r.useRef(null),
+        h = r.useRef(null);
     r.useEffect(() => {
         i !== Ay && (m(null), p(null));
     }, [i]);
@@ -560,7 +560,7 @@ function AY(A) {
         { ref: V, ...v } = (0, AZ._u)({ orientation: "horizontal", isDisabled: u });
     return (
         r.useEffect(() => {
-            g && null != C && f.current?.ref?.focus();
+            g && null != C && h.current?.ref?.focus();
         }, [g, C]),
         (0, n.jsxs)("div", {
             className: AB.fE,
@@ -579,7 +579,7 @@ function AY(A) {
                                 children: o,
                             }),
                             (0, n.jsx)(AR.Ay, {
-                                ref: h,
+                                ref: f,
                                 tabIndex: 0,
                                 onChange: (A, t) => {
                                     null != t && (p(t.name), m(A), s(A, Ay));
@@ -598,7 +598,9 @@ function AY(A) {
                                 text: G.intl.string(G.t.AQYXMO),
                                 children: (0, n.jsx)(Ab.D, {
                                     className: AB.xA,
-                                    onClick: () => h.current?.activateUploadDialogue(),
+                                    onClick: function () {
+                                        return f.current?.activateUploadDialogue();
+                                    },
                                     "aria-label": G.intl.formatToPlainString(G.t.Qc9Lg6, { filename: C }),
                                     children: (0, n.jsx)(AG.R, { size: "xs", color: "currentColor", className: AB.IZ }),
                                 }),
@@ -625,7 +627,7 @@ function AY(A) {
                     children: [
                         null != q &&
                             (0, n.jsx)(Ak, {
-                                ref: f,
+                                ref: h,
                                 selectedImageName: l,
                                 onChange: s,
                                 disabled: u,
@@ -707,15 +709,19 @@ let A8 = (0, N.Ld)();
 function A4(A) {
     let { newRoleParams: t, setNewRoleParams: e } = A,
         l = r.useRef(null),
-        { name: a, color: i } = t,
-        o = (A) => e((t) => (s()(null != t, "newRoleParams should be defined"), { ...t, color: A }));
+        { name: a, color: i } = t;
+    function o(A) {
+        return e((t) => (s()(null != t, "newRoleParams should be defined"), { ...t, color: A }));
+    }
     return (0, n.jsxs)("div", {
         className: A5.CJ,
         children: [
             (0, n.jsx)(b.k, {
                 autoFocus: !0,
                 value: a,
-                onChange: (A) => e((t) => (s()(null != t, "newRoleParams should be defined"), { ...t, name: A })),
+                onChange: function (A) {
+                    return e((t) => (s()(null != t, "newRoleParams should be defined"), { ...t, name: A }));
+                },
                 id: A8,
                 placeholder: G.intl.string(G.t.oNauug),
                 maxLength: S.fHV,
@@ -766,13 +772,14 @@ function tn(A) {
                 color: "text-muted",
                 children: G.intl.format(G.t.i2x5aY, {
                     roleName: t,
-                    emphasisHook: (A) =>
-                        (0, n.jsx)(c.E, {
+                    emphasisHook: function (A) {
+                        return (0, n.jsx)(c.E, {
                             tag: "span",
                             variant: "text-md/semibold",
                             color: "text-default",
                             children: A,
-                        }),
+                        });
+                    },
                 }),
             }),
             (0, n.jsxs)(v.D, {
@@ -815,7 +822,7 @@ function tr(A) {
                           icon: A1.e,
                           iconPosition: "end",
                           variant: "secondary",
-                          onClick: () => {
+                          onClick: function () {
                               r(void 0);
                           },
                       }),
@@ -916,7 +923,7 @@ function tc(A) {
         X = (0, o.bG)([Ag.A], () => Ag.A.getGuildProductsForGuild(t, { publishedOnly: !0 }).length, [t]),
         T = N?.published === !0,
         { application: W } = (0, I.A)(t, ta.S7.GUILD_ROLE_SUBSCRIPTIONS),
-        P = Af["0"],
+        P = Ah["0"],
         Q = w.kt.useSetting(),
         z = (0, $.j)(),
         Z = r.useCallback(
@@ -946,7 +953,7 @@ function tc(A) {
             hasUnsavedAttachmentChanges: Am,
             cancelUnusedUploads: AC,
         } = Ap(),
-        Ah = N?.attachments != null && N?.attachments.length > 0,
+        Af = N?.attachments != null && N?.attachments.length > 0,
         AV = Au ?? Al,
         Av = null != Ad && "published" in Ad,
         Ax = null != Ad && !Av,
@@ -955,15 +962,15 @@ function tc(A) {
         Aj = null != AK || null != Ab,
         AI = (0, o.bG)([M.A], () => (null != Ab && null !== AK ? M.A.getRole(t, Ab) : (AK ?? void 0)), [AK, Ab, t]),
         AN = "";
+    function AX() {
+        Ao(!1), AC();
+    }
     Aj && As
         ? (AN = G.intl.string(G.t.ih4QMU))
         : Aj
           ? (AN = G.intl.string(G.t.o9xphc))
           : As && (AN = G.intl.string(G.t.DWYJua));
-    let AX = () => {
-            Ao(!1), AC();
-        },
-        [AT, AW] = r.useState(),
+    let [AT, AW] = r.useState(),
         {
             changes: AZ,
             hasUnsavedChanges: AL,
@@ -981,22 +988,22 @@ function tc(A) {
                     imageName: At,
                     isImageChanged: An,
                     newRoleParams: AK,
-                    hasSavedAttachments: Ah,
+                    hasSavedAttachments: Af,
                     hasUnsavedAttachmentChanges: Am,
                 }),
-            [N, O, k, B, H, At, An, AK, Ah, Am],
+            [N, O, k, B, H, At, An, AK, Af, Am],
         ),
         AR = r.useMemo(
             () =>
                 AL || null == AT || "publish" === AT || null != AV
                     ? null
-                    : (0, n.jsx)(h.F, {
+                    : (0, n.jsx)(f.F, {
                           className: ti.Er,
                           children: (0, n.jsx)(g.A, {
                               message: (0, n.jsxs)("div", {
                                   className: ti.Lk,
                                   children: [
-                                      (0, n.jsx)(f.y, {
+                                      (0, n.jsx)(h.y, {
                                           size: "md",
                                           color: d.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT.css,
                                           secondaryColor: d.A.colors.WHITE.css,
@@ -1172,7 +1179,7 @@ function tc(A) {
                                     errorMessage: AV?.getFirstFieldErrorMessage("image") ?? void 0,
                                     description: G.intl.string(G.t.yOU4Vm),
                                     children: (0, n.jsx)(AY, {
-                                        presetImages: Af,
+                                        presetImages: Ah,
                                         radioGroupAriaLabel: G.intl.string(G.t.fKzQj0),
                                         image: H,
                                         imageName: At,
@@ -1190,7 +1197,7 @@ function tc(A) {
                                           label: G.intl.string(G.t.zLrtkN),
                                           errorMessage: AV?.getFirstFieldErrorMessage("attachments") ?? void 0,
                                           children: (0, n.jsx)(AP, {
-                                              onFileAdded: () => {
+                                              onFileAdded: function () {
                                                   Ak.current?.scrollIntoView({ behavior: "smooth", block: "end" });
                                               },
                                           }),
@@ -1222,7 +1229,7 @@ function tc(A) {
                                           ? G.intl.format(G.t.IqWPVt, { maxProducts: 50 })
                                           : G.intl.string(G.t["Ax89/c"]),
                                     published: T,
-                                    onClick: () => {
+                                    onClick: function () {
                                         s()(AO, "Attempting to publish/unpublish when not allowed"),
                                             AW(T ? "unpublish" : "publish"),
                                             Ay({ ...AZ, published: !T });
@@ -1270,7 +1277,7 @@ function tc(A) {
                                 (0, n.jsx)(tu, {
                                     text: G.intl.string(G.t.YzGIVF),
                                     value: Aj,
-                                    onChange: (A) => {
+                                    onChange: function (A) {
                                         A ? AF({ name: "", color: S.TGz }) : AF(void 0);
                                     },
                                     warning: null === AK ? (0, n.jsx)(te, {}) : void 0,
@@ -1279,7 +1286,7 @@ function tc(A) {
                                 (0, n.jsx)(tu, {
                                     text: G.intl.string(G.t.C6wP2Q),
                                     value: As,
-                                    onChange: (A) => {
+                                    onChange: function (A) {
                                         A
                                             ? Ao(!0)
                                             : Am
@@ -1291,7 +1298,7 @@ function tc(A) {
                                                 })
                                               : AX();
                                     },
-                                    disabled: Ah,
+                                    disabled: Af,
                                 }),
                             ],
                         }),
@@ -1303,7 +1310,7 @@ function tc(A) {
                                       text: G.intl.string(G.t.XYBEaV),
                                       disabled: !AG,
                                       loading: Ax,
-                                      onClick: () => {
+                                      onClick: function () {
                                           s()(
                                               AG,
                                               "cannot save changes for published product without adding all fields",
@@ -1317,7 +1324,7 @@ function tc(A) {
                                       text: G.intl.string(G.t.ZCjwob),
                                       disabled: !AS,
                                       loading: Ax,
-                                      onClick: () => {
+                                      onClick: function () {
                                           s()(AS, "cannot save changes without name or price tier"),
                                               AW("draft"),
                                               Ay(AZ);
@@ -1332,7 +1339,7 @@ function tc(A) {
     });
 }
 function tm(A) {
-    return (0, n.jsx)(Ah, {
+    return (0, n.jsx)(Af, {
         guildId: A.guildId,
         editSkuId: A.productId ?? void 0,
         onFileSizeError: () => (0, H.A)(tl.vN),

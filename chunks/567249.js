@@ -22,9 +22,11 @@ let g = new c.A("PopoutWindowStore"),
     S = {},
     y = {},
     C = new Set(),
-    N = "app-mount",
-    v = () => x.emitChange(),
-    R = a().debounce(v, 150);
+    N = "app-mount";
+function v() {
+    return x.emitChange();
+}
+let R = a().debounce(v, 150);
 function O(e) {
     let t = T[e];
     null == t ||

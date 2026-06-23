@@ -6,8 +6,10 @@ var i,
     a = n(17928),
     o = n(228366),
     l = (((i = {}).VOICE_MESSAGE = "voice_message"), i);
-let u = (e, t) => `${e}-${t}`,
-    c = { rates: { voice_message: 1 }, positions: new (s())({ max: 25 }) },
+function u(e, t) {
+    return `${e}-${t}`;
+}
+let c = { rates: { voice_message: 1 }, positions: new (s())({ max: 25 }) },
     d = { ...c };
 class _ extends a.Ay.DeviceSettingsStore {
     static displayName = "MediaPlaybackStore";

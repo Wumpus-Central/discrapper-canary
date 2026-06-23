@@ -15,7 +15,7 @@ function d(e) {
         h = (0, i.jsx)(o.A, { guildId: n, emojiId: t.emoji_id, emojiName: t.emoji_name });
     return (0, i.jsxs)(r.D, {
         className: c.kL,
-        onClick: () => {
+        onClick: function () {
             _?.navigateToChannel(), d();
         },
         "aria-label": _?.ariaLabel,

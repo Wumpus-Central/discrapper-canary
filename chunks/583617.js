@@ -5,8 +5,8 @@ var l = n(627968),
     a = n.n(s),
     r = n(189213),
     o = n(452027),
-    d = n(17928),
-    c = n(123292),
+    c = n(17928),
+    d = n(123292),
     u = n(331322),
     m = n(292666),
     h = n(404778),
@@ -15,8 +15,8 @@ var l = n(627968),
     x = n(834730),
     p = n(508595),
     v = n(57222),
-    C = n(808728),
-    f = n(317525),
+    f = n(808728),
+    C = n(317525),
     I = n(957545),
     b = n(107795),
     E = n(655943),
@@ -30,32 +30,32 @@ var l = n(627968),
     T = n(288446);
 function M(e) {
     let { hasSetEmoji: t, onClick: n, children: s, className: a, buttonClassName: r } = e,
-        [o, d] = i.useState(!1),
-        c = i.useCallback(() => {
-            n(), d(!1);
-        }, [n, d]);
+        [o, c] = i.useState(!1),
+        d = i.useCallback(() => {
+            n(), c(!1);
+        }, [n, c]);
     return (0, l.jsxs)("div", {
         className: P()(T.k, a),
-        onMouseEnter: () => {
-            t ? d(!0) : d(!1);
+        onMouseEnter: function () {
+            t ? c(!0) : c(!1);
         },
-        onMouseLeave: () => {
-            d(!1);
+        onMouseLeave: function () {
+            c(!1);
         },
-        children: [s, t && o ? (0, l.jsx)(R.A, { onClick: c, className: P()(T.D, r) }) : null],
+        children: [s, t && o ? (0, l.jsx)(R.A, { onClick: d, className: P()(T.D, r) }) : null],
     });
 }
 var w = n(307731);
 function B(e) {
     let { className: t, emojiClassName: n, emoji: s, setEmoji: a, channel: r } = e,
         o = i.useRef(null),
-        d =
+        c =
             null == s || null == s.name
                 ? null
                 : () => (0, l.jsx)(S.A, { className: n, animated: s.animated ?? !1, emojiId: s.id, emojiName: s.name });
     return (0, l.jsx)(M, {
         hasSetEmoji: null != s && null != s.name,
-        onClick: () => {
+        onClick: function () {
             a(null);
         },
         children: (0, l.jsx)(k.Y, {
@@ -79,7 +79,7 @@ function B(e) {
             },
             children: (e, n) => {
                 let { isShown: i } = n;
-                return (0, l.jsx)(A.A, { ...e, ref: o, tabIndex: 0, active: i, className: t, renderButtonContents: d });
+                return (0, l.jsx)(A.A, { ...e, ref: o, tabIndex: 0, active: i, className: t, renderButtonContents: c });
             },
         }),
     });
@@ -88,8 +88,8 @@ var D = n(539916),
     L = n(375708),
     O = n(588383);
 function z(e) {
-    let { transitionState: t, onClose: n, onSave: s, onDelete: g, option: x, guild: f, prompt: I, index: k } = e,
-        S = (0, d.bG)([C.Ay], () => C.Ay.getDefaultChannel(f.id)),
+    let { transitionState: t, onClose: n, onSave: s, onDelete: g, option: x, guild: C, prompt: I, index: k } = e,
+        S = (0, c.bG)([f.Ay], () => f.Ay.getDefaultChannel(C.id)),
         [A, N] = i.useState(() => x?.emoji ?? null),
         [y, P] = i.useState(() => x?.title ?? ""),
         [R, T] = i.useState(() => x?.description ?? ""),
@@ -102,7 +102,7 @@ function z(e) {
             var e, t, l, i;
             let r,
                 o,
-                d = {
+                c = {
                     id: x?.id ?? `${Date.now()}`,
                     title: y,
                     description: R,
@@ -110,16 +110,16 @@ function z(e) {
                     roleIds: Array.from(z).sort(),
                     emoji: null == A ? void 0 : A,
                 },
-                c =
-                    ((e = f),
+                d =
+                    ((e = C),
                     (t = E.A.editedOnboardingPrompts),
                     (l = I),
                     (r = {}),
-                    (i = d).title.length <= 0 && (r.title = L.intl.string(L.t.p3PKzA)),
+                    (i = c).title.length <= 0 && (r.title = L.intl.string(L.t.p3PKzA)),
                     null != (o = (0, b.fO)(e, t, l, i)) && (r.roles = o),
                     r);
-            G(c), a().isEmpty(c) && (s(d), n());
-        }, [M, R, A, f, n, s, x?.id, I, z, y]),
+            G(d), a().isEmpty(d) && (s(c), n());
+        }, [M, R, A, C, n, s, x?.id, I, z, y]),
         U = i.useMemo(
             () => [
                 { text: L.intl.string(L.t["ETE/oC"]), onClick: n, variant: "secondary" },
@@ -133,9 +133,9 @@ function z(e) {
         transitionState: t,
         onClose: n,
         actions: U,
-        actionBarInput: (0, l.jsx)(c.Q, {
+        actionBarInput: (0, l.jsx)(d.Q, {
             text: L.intl.string(L.t.N86XcP),
-            onClick: () => {
+            onClick: function () {
                 g(), n();
             },
             variant: "critical",
@@ -173,14 +173,14 @@ function z(e) {
                             gap: 8,
                             children: [
                                 (0, l.jsx)(p.A, {
-                                    guildId: f.id,
+                                    guildId: C.id,
                                     selectedChannelIds: M,
                                     placeholder: L.intl.string(L.t.vephiL),
                                     onChange: w,
                                     helperText: L.intl.string(L.t.SoT6we),
                                 }),
                                 (0, l.jsx)(v.A, {
-                                    guildId: f.id,
+                                    guildId: C.id,
                                     selectedRoleIds: z,
                                     disableEveryoneRole: !0,
                                     placeholder: L.intl.string(L.t.aFO1I6),
@@ -191,7 +191,7 @@ function z(e) {
                             ],
                         }),
                         null == F.roles ? null : (0, l.jsx)(j.U, { error: F.roles }),
-                        (0, l.jsx)(Y, { guild: f, roleIds: z }),
+                        (0, l.jsx)(Y, { guild: C, roleIds: z }),
                     ],
                 }),
                 (0, l.jsx)(h.c, {}),
@@ -209,7 +209,7 @@ function z(e) {
 }
 function Y(e) {
     let { guild: t, roleIds: n } = e,
-        i = (0, d.bG)([f.A], () => f.A.getManyRoles(t.id, n).find(I.J));
+        i = (0, c.bG)([C.A], () => C.A.getManyRoles(t.id, n).find(I.J));
     return null == i
         ? null
         : (0, l.jsx)("div", {

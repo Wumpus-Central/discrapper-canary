@@ -84,14 +84,14 @@ class P extends r.Component {
         });
     }
 }
-let x = (e) => {
+function x(e) {
     let { columns: t } = e;
     return (0, i.jsx)("div", {
         className: L.fi,
         style: { width: `${100 / t}%` },
         children: [, , , ,].fill(null).map((e, t) => (0, i.jsx)("div", { className: L.c8 }, t)),
     });
-};
+}
 class k extends r.PureComponent {
     render() {
         let { columns: e, renderColumn: t } = this.props;
@@ -107,7 +107,9 @@ var U = n(285961),
     G = n(652215),
     F = n(375708),
     V = n(736212);
-let B = (e, t) => (0, i.jsx)(x, { columns: e }, t);
+function B(e, t) {
+    return (0, i.jsx)(x, { columns: e }, t);
+}
 class j extends r.PureComponent {
     _masonryRef = r.createRef();
     state = {
@@ -234,7 +236,9 @@ function H(e) {
 var Y = n(732139),
     W = n(650583),
     K = n(874926);
-let $ = (e) => e.stopPropagation();
+function $(e) {
+    return e.stopPropagation();
+}
 class z extends r.PureComponent {
     state = { resultType: null };
     componentDidMount() {

@@ -1,9 +1,9 @@
 s.r(t), s.d(t, { safetyPlaygroundConfig: () => c });
 var r = s(627968),
     a = s(64700),
-    d = s(534514),
+    n = s(534514),
     i = s(834730),
-    n = s(821609),
+    d = s(821609),
     o = s(570962);
 let c = {
     collections: [
@@ -18,7 +18,7 @@ let c = {
                             name: "ObscuredSurface",
                             id: "obscured-surface",
                             docs: "Conceals an entire surface behind a blur and scrim with a centered warning. Content is inert and hidden from assistive technology while obscured.",
-                            component: (e) => {
+                            component: function (e) {
                                 let { obscured: t } = e,
                                     [s, c] = a.useState(0);
                                 return (0, r.jsx)("div", {
@@ -35,7 +35,7 @@ let c = {
                                                         height: 120,
                                                     },
                                                 }),
-                                                (0, r.jsx)(d.D, {
+                                                (0, r.jsx)(n.D, {
                                                     variant: "heading-lg/bold",
                                                     color: "text-strong",
                                                     children: "Extremely Mature Game",
@@ -46,7 +46,7 @@ let c = {
                                                     children:
                                                         "A description of an age-restricted game that should be unreadable while the surface is obscured. The content below is also made inert, so the button cannot be focused or clicked.",
                                                 }),
-                                                (0, r.jsx)(n.$, {
+                                                (0, r.jsx)(d.$, {
                                                     text: `Should not be clickable while obscured (clicks: ${s})`,
                                                     onClick: () => c((e) => e + 1),
                                                 }),

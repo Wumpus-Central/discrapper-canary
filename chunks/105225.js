@@ -5,7 +5,7 @@ var l = t(627968),
     a = t.n(s),
     r = t(284009),
     o = t.n(r),
-    c = t(922139),
+    c = t(308186),
     u = t(17928),
     d = t(554146),
     A = t(922016),
@@ -51,7 +51,7 @@ var l = t(627968),
     Q = t(970636),
     Z = t(616356),
     ee = t(470710),
-    en = t(941327),
+    en = t(394459),
     et = t(309010),
     el = t(287809),
     ei = t(151476),
@@ -70,9 +70,10 @@ var l = t(627968),
     ep = t(49999),
     eg = t(56640);
 function ex(e, n) {
-    if (en.Ay.isVideoEnabled() === e) return;
-    let t = () => C.A.setVideoEnabled(e);
-    (0, O.X)(f.A.VOICE_CONTROL_TRAY, O.O.CAMERA, e), e ? (0, em.A)(t, n) : t();
+    en.Ay.isVideoEnabled() !== e && ((0, O.X)(f.A.VOICE_CONTROL_TRAY, O.O.CAMERA, e), e ? (0, em.A)(t, n) : t());
+    function t() {
+        return C.A.setVideoEnabled(e);
+    }
 }
 function eI(e) {
     let { channel: n, currentUser: t, exitFullScreen: s, canGoLive: a, hasPermission: r, disabled: o } = e,
@@ -88,16 +89,16 @@ function eI(e) {
             (0, eh.A)(x, n.id, h);
         }, [x, n.id, a, s, h]),
         f = (0, V.k0)(),
-        [v, _] = i.useState(!1),
-        j = () => {
-            ((0, O.X)(c, O.O.STREAM, !0), a) ? I() : (0, eA.A)();
-        },
-        N = () => {
-            (0, O.X)(c, O.O.STREAM, !1), (0, D.A)(E);
-        };
+        [v, _] = i.useState(!1);
+    function j() {
+        ((0, O.X)(c, O.O.STREAM, !0), a) ? I() : (0, eA.A)();
+    }
+    function N() {
+        (0, O.X)(c, O.O.STREAM, !1), (0, D.A)(E);
+    }
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (() => {
+            (function () {
                 if (f && 0 === C.length)
                     return (0, l.jsx)(b.Ay, {
                         contentTypes: [d.M.TRIAL_NUX_STREAM_COACH_MARK],
@@ -144,7 +145,7 @@ function eI(e) {
                             { isShown: i } = n;
                         return (0, l.jsx)("div", {
                             ref: g,
-                            children: ((e, n) => {
+                            children: (function (e, n) {
                                 let { onClick: t, ...i } = e ?? { onClick: void 0 },
                                     s = null != E;
                                 return (0, l.jsx)($.h, {
@@ -306,7 +307,10 @@ function ev(e) {
         { parentAnalyticsLocation: o } = (0, T.Ay)(),
         { reachedLimit: c, limit: d } = (0, es.A)(n),
         A = i.useCallback(() => {
-            (0, O.X)(o, O.O.JOIN_VIDEO_CALL), (0, em.A)(() => E.default.selectVoiceChannel(n.id, !0), r);
+            (0, O.X)(o, O.O.JOIN_VIDEO_CALL),
+                (0, em.A)(function () {
+                    return E.default.selectVoiceChannel(n.id, !0);
+                }, r);
         }, [n.id, r, o]),
         h = i.useCallback(() => {
             t ? (0, ed.A)() : A();

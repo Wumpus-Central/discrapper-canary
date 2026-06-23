@@ -10,7 +10,7 @@ var r = n(503698),
     u = n(705751),
     c = n(375708),
     d = n(763697);
-let _ = (e) => {
+function _(e) {
     let {
             invertColor: t = !1,
             type: n = u.nu.BOT,
@@ -76,6 +76,6 @@ let _ = (e) => {
     return n === u.nu.ORIGINAL_POSTER
         ? (0, i.jsx)(a.m, { text: c.intl.string(c.t.uN6Emt), position: "top", asContainer: !0, children: S() })
         : S();
-};
+}
 _.Types = u.nu;
 let h = _;

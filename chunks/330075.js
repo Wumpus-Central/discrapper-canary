@@ -32,74 +32,74 @@ function I(e) {
             showOpaqueBackground: b = !1,
         } = e,
         L = (0, l.bG)([c.A], () => c.A.getGuild(I), [I]),
-        R = (0, l.bG)([d.A], () => d.A.getRole(I, t?.role_id ?? E.dJq)),
-        k = (0, r.R)(t, 600),
-        M = (0, A.z)(t),
-        P = (0, m.BB)(L),
+        k = (0, l.bG)([d.A], () => d.A.getRole(I, t?.role_id ?? E.dJq)),
+        R = (0, r.R)(t, 600),
+        P = (0, A.z)(t),
+        M = (0, m.BB)(L),
         { shouldHideGuildPurchaseEntryPoints: D } = (0, o.MH)(I),
-        w = (0, A.X)(t),
-        O = (0, f.A)({ guildId: I, guildProductListingId: t.id, sourceAnalyticsLocations: C });
+        O = (0, A.X)(t),
+        U = (0, f.A)({ guildId: I, guildProductListingId: t.id, sourceAnalyticsLocations: C });
     if (null == L || D) return null;
-    let U = () => {
-            var e;
-            return (
-                (e = { guildId: I, guildProductListingId: t.id, analyticsLocation: C }),
-                void (0, a.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([
-                        n.e("57034"),
-                        n.e("35778"),
-                        n.e("47812"),
-                        n.e("13583"),
-                        n.e("51234"),
-                    ]).then(n.bind(n, 516889));
-                    return (n) => (0, i.jsx)(t, { ...e, ...n });
-                })
-            );
+    function G() {
+        var e;
+        return (
+            (e = { guildId: I, guildProductListingId: t.id, analyticsLocation: C }),
+            void (0, a.openModalLazy)(async () => {
+                let { default: t } = await Promise.all([
+                    n.e("57034"),
+                    n.e("35778"),
+                    n.e("47812"),
+                    n.e("13583"),
+                    n.e("51234"),
+                ]).then(n.bind(n, 516889));
+                return (n) => (0, i.jsx)(t, { ...e, ...n });
+            })
+        );
+    }
+    let w = (0, i.jsx)(x.i, {
+        product: t,
+        guildId: I,
+        showEditProduct: M,
+        showUnpublishProduct: !1,
+        showCopyLink: !0,
+        showTestDownload: !1,
+        showDeleteProduct: !1,
+        showReportProduct: !0,
+        onEditProduct: M
+            ? () => {
+                  g.q(L.id, t.id);
+              }
+            : () => {},
+        onUnpublishProduct: () => {},
+        onDeleteProduct: () => {},
+        onReportProduct: function () {
+            !(function (e) {
+                let { listing: t } = e;
+                (0, a.openModalLazy)(async () => {
+                    let { default: e } = await n.e("74624").then(n.bind(n, 144835));
+                    return (n) => (0, i.jsx)(e, { listing: t, ...n });
+                });
+            })({ listing: t });
         },
-        G = (0, i.jsx)(x.i, {
-            product: t,
-            guildId: I,
-            showEditProduct: P,
-            showUnpublishProduct: !1,
-            showCopyLink: !0,
-            showTestDownload: !1,
-            showDeleteProduct: !1,
-            showReportProduct: !0,
-            onEditProduct: P
-                ? () => {
-                      g.q(L.id, t.id);
-                  }
-                : () => {},
-            onUnpublishProduct: () => {},
-            onDeleteProduct: () => {},
-            onReportProduct: () => {
-                !(function (e) {
-                    let { listing: t } = e;
-                    (0, a.openModalLazy)(async () => {
-                        let { default: e } = await n.e("74624").then(n.bind(n, 144835));
-                        return (n) => (0, i.jsx)(e, { listing: t, ...n });
-                    });
-                })({ listing: t });
-            },
-            onCopyProductLink: () => {
-                (0, u.C)((0, h.KW)(I, t.id));
-            },
-            onTestDownload: () => {},
-        });
+        onCopyProductLink: function () {
+            (0, u.C)((0, h.KW)(I, t.id));
+        },
+        onTestDownload: () => {},
+    });
     return (0, i.jsx)(
         p.A,
         {
-            imageUrl: k,
+            imageUrl: R,
             name: t.name,
             description: t.description,
-            formattedPrice: w,
-            role: R,
-            ctaComponent: (0, i.jsx)(s.$, { ...O }),
-            productType: M,
+            formattedPrice: O,
+            role: k,
+            ctaComponent: (0, i.jsx)(s.$, { ...U }),
+            productType: P,
             shouldShowFullDescriptionButton: v,
-            onShowFullDescription: U,
-            onTapCard: U,
-            actionMenu: G,
+            onShowFullDescription: G,
+            onTapCard: G,
+            actionMenu: w,
             showOpaqueBackground: b,
             hideRoleTag: _,
             lineClamp: j,

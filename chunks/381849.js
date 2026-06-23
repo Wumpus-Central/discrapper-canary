@@ -3,14 +3,12 @@ n.d(t, { Ay: () => u, WR: () => l, _e: () => o, i: () => a });
 var i = n(989349),
     r = n.n(i),
     s = n(375708);
-let a = () => ({ minutes: s.t["XIGt+W"], hours: s.t.rhY1Rs, days: s.t.GBLpQ8, months: s.t.XzBNbS, years: s.t.I1E8p6 }),
-    o = () => ({
-        minutes: s.t["GqQ/Y9"],
-        hours: s.t.c5zfWZ,
-        days: s.t.amjnaI,
-        months: s.t.SoON3V,
-        years: s.t["12B3Re"],
-    });
+function a() {
+    return { minutes: s.t["XIGt+W"], hours: s.t.rhY1Rs, days: s.t.GBLpQ8, months: s.t.XzBNbS, years: s.t.I1E8p6 };
+}
+function o() {
+    return { minutes: s.t["GqQ/Y9"], hours: s.t.c5zfWZ, days: s.t.amjnaI, months: s.t.SoON3V, years: s.t["12B3Re"] };
+}
 function l(e) {
     let { seconds: t, getFormatter: n } = e,
         i = n();

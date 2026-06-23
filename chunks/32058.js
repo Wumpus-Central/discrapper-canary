@@ -1,4 +1,4 @@
-i.d(t, { e: () => o });
+i.d(t, { e: () => u });
 var n = i(627968);
 i(64700);
 var l = i(503698),
@@ -6,11 +6,11 @@ var l = i(503698),
     a = i(935462),
     r = i(375708),
     c = i(76488),
-    u = i(889277);
-let o = (e) => {
+    o = i(889277);
+function u(e) {
     let { children: t, footer: i, className: l } = e;
     return (0, n.jsx)("div", {
-        className: s()(u.zr, u.Gg, u.EX, u.vl, c.yl, l),
+        className: s()(o.zr, o.Gg, o.EX, o.vl, c.yl, l),
         "aria-label": r.intl.string(r.t.eQ2bLp),
         children: (0, n.jsxs)("form", {
             className: c.Zd,
@@ -20,4 +20,4 @@ let o = (e) => {
             children: [(0, n.jsx)(a.$m, { "data-migration-pending": !0, className: c.gT, children: t }), i],
         }),
     });
-};
+}

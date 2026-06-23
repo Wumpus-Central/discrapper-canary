@@ -8,8 +8,8 @@ var r = n(17928),
     s = n(401843),
     u = n(616356),
     o = n(495544),
-    A = n(513963),
-    c = n(951829),
+    c = n(513963),
+    A = n(951829),
     f = n(375708);
 function p(e, t) {
     let n,
@@ -23,7 +23,7 @@ function p(e, t) {
             [
                 (null == t || t === n) && p,
                 (0, r.bG)([u.A], () => u.A.isSelfStreamHidden(e), [e]),
-                (t) => {
+                function (t) {
                     (0, s.Ho)(e, t);
                 },
             ]),
@@ -35,7 +35,7 @@ function p(e, t) {
               checked: !h,
               action: () => {
                   if (S || h) return m(!h);
-                  (0, l.openModal)((e) => (0, i.jsx)(A.A, { ...e, type: c.f.STREAM, onConfirm: () => m(!h) }));
+                  (0, l.openModal)((e) => (0, i.jsx)(c.A, { ...e, type: A.f.STREAM, onConfirm: () => m(!h) }));
               },
           })
         : null;

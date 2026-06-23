@@ -1,22 +1,22 @@
-l.d(e, { default: () => tm });
-var n = l(627968),
-    r = l(64700),
-    i = l(503698),
-    a = l.n(i),
-    s = l(189213),
-    o = l(17928),
-    u = l(843282);
-l(321073);
-var d = l(835245),
-    h = l(187322),
-    c = l(140735),
-    m = l(504345),
-    g = l(834730),
-    p = l(826745),
-    f = l(375708),
-    x = l(792034),
-    T = l(482188),
-    y = l(429128);
+n.d(e, { default: () => tm });
+var l = n(627968),
+    r = n(64700),
+    i = n(503698),
+    a = n.n(i),
+    s = n(189213),
+    o = n(17928),
+    u = n(843282);
+n(321073);
+var d = n(835245),
+    h = n(187322),
+    c = n(140735),
+    m = n(504345),
+    g = n(834730),
+    p = n(826745),
+    f = n(375708),
+    x = n(792034),
+    T = n(482188),
+    y = n(429128);
 let A = (0, d.A)(),
     j = (0, d.A)(),
     v = (0, d.A)();
@@ -37,20 +37,20 @@ class S extends r.Component {
         super(t), (this.state = { dirty: t.defaultDirty ?? !1 });
     }
     getAriaDescribedBy = () => {
-        let { maxLength: t, minLength: e, error: l } = this.props,
-            n = [],
+        let { maxLength: t, minLength: e, error: n } = this.props,
+            l = [],
             r = this.context?.errorId;
         return (
-            null != r && n.push(r),
-            null != l ? n.push(A) : (null != t && n.push(v), null != e && n.push(j)),
-            n.length > 0 ? n.join(" ") : void 0
+            null != r && l.push(r),
+            null != n ? l.push(A) : (null != t && l.push(v), null != e && l.push(j)),
+            l.length > 0 ? l.join(" ") : void 0
         );
     };
     getPaddingRight() {
         let { maxLength: t, showCharacterCountFullPadding: e } = this.props;
         if (null == t) return 10;
-        let l = `${t}`.length;
-        return e && (l += `${t} / `.length), 7.23 * l + 10;
+        let n = `${t}`.length;
+        return e && (n += `${t} / `.length), 7.23 * n + 10;
     }
     getCharsLeftLength() {
         let { maxLength: t, value: e } = this.props;
@@ -67,7 +67,7 @@ class S extends r.Component {
     renderCharacterCount() {
         if (this.props.showCharacterCount) {
             let { value: t, maxLength: e } = this.props;
-            return (0, n.jsxs)("div", {
+            return (0, l.jsxs)("div", {
                 className: a()(x.Ru, { [x.hz]: this.hasError() }),
                 "aria-hidden": "true",
                 children: [t?.length ?? 0, " ", null != e && `/ ${e}`],
@@ -80,7 +80,7 @@ class S extends r.Component {
         let t = this.getCharsLeftLength();
         return null == t
             ? null
-            : (0, n.jsx)("div", { className: a()(x.Ru, { [x.hz]: t < 0 }), "aria-hidden": "true", children: t });
+            : (0, l.jsx)("div", { className: a()(x.Ru, { [x.hz]: t < 0 }), "aria-hidden": "true", children: t });
     }
     hasError() {
         return (
@@ -90,22 +90,22 @@ class S extends r.Component {
         );
     }
     getErrorMessage() {
-        let { error: t, maxLength: e, minLength: l } = this.props,
-            n = this.getIsOverflowing() ? f.intl.formatToPlainString(f.t.ICT5S6, { maxLength: e }) : null,
-            r = this.getIsUnderflowing() ? f.intl.formatToPlainString(f.t["62rk1K"], { minLength: l }) : null;
+        let { error: t, maxLength: e, minLength: n } = this.props,
+            l = this.getIsOverflowing() ? f.intl.formatToPlainString(f.t.ICT5S6, { maxLength: e }) : null,
+            r = this.getIsUnderflowing() ? f.intl.formatToPlainString(f.t["62rk1K"], { minLength: n }) : null;
         return (null != t && "" === t) || null === t
             ? null
             : void 0 !== t
               ? t
               : !1 === this.state.dirty
                 ? null
-                : (n ?? r);
+                : (l ?? r);
     }
     renderErrorMessage() {
         let t = this.getErrorMessage();
         return null == t
             ? null
-            : (0, n.jsx)(g.E, {
+            : (0, l.jsx)(g.E, {
                   id: A,
                   variant: "text-xs/normal",
                   color: "text-feedback-critical",
@@ -117,7 +117,7 @@ class S extends r.Component {
         let {
                 disabled: t,
                 value: e,
-                placeholder: l,
+                placeholder: n,
                 autoFocus: r,
                 minLength: i,
                 maxLength: s,
@@ -137,14 +137,14 @@ class S extends r.Component {
             P = this.hasError(),
             E = this.props["aria-labelledby"] ?? this.context?.titleId,
             b = this.getAriaDescribedBy();
-        return (0, n.jsxs)("div", {
+        return (0, l.jsxs)("div", {
             className: a()(T.I6, { [x.Uu]: S }),
             children: [
-                (0, n.jsxs)("div", {
+                (0, l.jsxs)("div", {
                     className: a()(x.b4, { [x.Uu]: S }),
                     children: [
-                        (0, n.jsx)(h.vN, {
-                            children: (0, n.jsx)(C, {
+                        (0, l.jsx)(h.vN, {
+                            children: (0, l.jsx)(C, {
                                 type: "text",
                                 className: a()(T.hF, x.Tg, y.qD, m, { [T.z3]: P, [T.r9]: t, [x.Xl]: d }),
                                 "aria-labelledby": E,
@@ -153,7 +153,7 @@ class S extends r.Component {
                                 style: { paddingRight: this.getPaddingRight() },
                                 id: g,
                                 disabled: t,
-                                placeholder: l,
+                                placeholder: n,
                                 value: e,
                                 autoFocus: r,
                                 minLength: i,
@@ -170,9 +170,9 @@ class S extends r.Component {
                             }),
                         }),
                         null != i &&
-                            (0, n.jsx)(c.A, { id: j, children: f.intl.format(f.t["bmQU//"], { minLength: i }) }),
+                            (0, l.jsx)(c.A, { id: j, children: f.intl.format(f.t["bmQU//"], { minLength: i }) }),
                         null != s &&
-                            (0, n.jsx)(c.A, { id: v, children: f.intl.format(f.t["+DFxLc"], { maxLength: s }) }),
+                            (0, l.jsx)(c.A, { id: v, children: f.intl.format(f.t["+DFxLc"], { maxLength: s }) }),
                         this.renderCharacterCount(),
                         this.renderMaxLength(),
                     ],
@@ -182,51 +182,51 @@ class S extends r.Component {
         });
     }
     onChange = (t) => {
-        let { onChange: e, name: l } = this.props;
-        e?.(t.currentTarget.value, l), this.setState({ dirty: !0 });
+        let { onChange: e, name: n } = this.props;
+        e?.(t.currentTarget.value, n), this.setState({ dirty: !0 });
     };
     onFocus = (t) => {
-        let { onFocus: e, name: l } = this.props;
-        e?.(t, l);
+        let { onFocus: e, name: n } = this.props;
+        e?.(t, n);
     };
     onBlur = (t) => {
-        let { onBlur: e, name: l } = this.props;
-        e?.(t, l);
+        let { onBlur: e, name: n } = this.props;
+        e?.(t, n);
     };
     onKeyDown = (t) => {
         let { onKeyDown: e } = this.props;
         e?.(t);
     };
 }
-var w = l(922016),
-    N = l(939249),
-    D = l(285796),
-    O = l(565645),
-    C = l(765671),
-    P = l(964486),
-    E = l(793574),
-    b = l(688810),
-    R = l(375499),
-    U = l(267889),
-    M = l(287809),
-    _ = l(174459),
-    I = l(989349),
-    L = l.n(I),
-    k = l(885386),
-    H = l(284009),
-    F = l.n(H),
-    Y = l(927813),
-    $ = l(403918),
-    B = l(652215);
+var w = n(922016),
+    N = n(939249),
+    D = n(285796),
+    O = n(565645),
+    C = n(765671),
+    P = n(964486),
+    E = n(793574),
+    b = n(688810),
+    R = n(375499),
+    U = n(267889),
+    M = n(287809),
+    _ = n(174459),
+    I = n(989349),
+    L = n.n(I),
+    k = n(885386),
+    H = n(284009),
+    F = n.n(H),
+    Y = n(927813),
+    $ = n(403918),
+    B = n(652215);
 let K = [$.yt.MINUTES_30, $.yt.HOURS_1, $.yt.HOURS_4];
-var z = l(58703),
-    q = l(403362);
-let G = (t) => {
+var z = n(58703),
+    q = n(403362);
+function G(t) {
     let e = Date.now() + t;
     return (0, z.ro)(new Date(), new Date(e))
         ? f.intl.formatToPlainString(f.t["+3jw2j"], { time: f.intl.data.formatTime(e, { format: "short" }) })
         : f.intl.formatToPlainString(f.t["/Avy4C"], { time: f.intl.data.formatTime(e, { format: "short" }) });
-};
+}
 function J(t) {
     switch (t) {
         case $.yt.TODAY:
@@ -243,48 +243,48 @@ function J(t) {
             (0, q.xb)(t);
     }
 }
-let Q = (t) => {
+function Q(t) {
     let e = Date.now() + t;
     return (0, z.ro)(new Date(), new Date(e))
         ? f.intl.data.formatTime(e, { format: "short" })
         : f.intl.formatToPlainString(f.t.DN91Jz, { time: f.intl.data.formatTime(e, { format: "short" }) });
-};
-var V = l(685396),
-    X = l(231723),
-    Z = l(480335),
-    W = l(999291),
-    tt = l(718019),
-    te = l(803362),
-    tl = l(915614),
-    tn = l(946356),
-    tr = l(878555),
-    ti = l(983495),
-    ta = l(562153),
-    ts = l(996988),
-    to = l(823788);
+}
+var V = n(685396),
+    X = n(231723),
+    Z = n(480335),
+    W = n(999291),
+    tt = n(718019),
+    te = n(795873),
+    tn = n(915614),
+    tl = n(946356),
+    tr = n(878555),
+    ti = n(983495),
+    ta = n(562153),
+    ts = n(996988),
+    to = n(823788);
 function tu(t) {
-    let { user: e, previewText: l, previewEmoji: r, previewStatus: i, placeHolderText: a, transitionState: s } = t,
+    let { user: e, previewText: n, previewEmoji: r, previewStatus: i, placeHolderText: a, transitionState: s } = t,
         o = (0, W.Ay)(e.id),
         u =
-            (null != l && "" !== l) || null != r
-                ? f.intl.formatToPlainString(f.t.UpF5Qa, { emoji: r?.name ?? "", status: l })
+            (null != n && "" !== n) || null != r
+                ? f.intl.formatToPlainString(f.t.UpF5Qa, { emoji: r?.name ?? "", status: n })
                 : f.intl.formatToPlainString(f.t.IKBvFl, { placeholder: a ?? "" });
-    return (0, n.jsx)("div", {
+    return (0, l.jsx)("div", {
         role: "img",
         "aria-label": u,
-        children: (0, n.jsxs)(tn.A, {
+        children: (0, l.jsxs)(tl.A, {
             user: e,
             displayProfile: o,
             themeType: ts.d.POPOUT,
             className: to.ti,
             "aria-hidden": "true",
             children: [
-                (0, n.jsxs)("header", {
+                (0, l.jsxs)("header", {
                     children: [
-                        (0, n.jsx)(tl.A, { user: e, displayProfile: o, themeType: ts.d.POPOUT }),
-                        (0, n.jsx)("div", {
+                        (0, l.jsx)(tn.A, { user: e, displayProfile: o, themeType: ts.d.POPOUT }),
+                        (0, l.jsx)("div", {
                             inert: !0,
-                            children: (0, n.jsx)(tt.A, {
+                            children: (0, l.jsx)(tt.A, {
                                 user: e,
                                 displayProfile: o,
                                 themeType: ts.d.POPOUT,
@@ -292,36 +292,36 @@ function tu(t) {
                                 className: to.my,
                             }),
                         }),
-                        (0, n.jsx)(ti.A, {
+                        (0, l.jsx)(ti.A, {
                             user: e,
                             themeType: ts.d.POPOUT,
-                            previewText: l,
+                            previewText: n,
                             previewEmoji: r,
                             placeholderText: a,
                             hasEntered: s === X.ip.ENTERED,
                         }),
                     ],
                 }),
-                o?.profileEffect != null && (0, n.jsx)(Z.A, { skuId: o.profileEffect.skuId }),
-                (0, n.jsx)("div", {
+                o?.profileEffect != null && (0, l.jsx)(Z.A, { skuId: o.profileEffect.skuId }),
+                (0, l.jsx)("div", {
                     className: to.QV,
                     inert: !0,
-                    children: (0, n.jsx)(tr.Ay, {
+                    children: (0, l.jsx)(tr.Ay, {
                         user: e,
                         displayName: ta.Ay.getName(null, null, e),
                         pronouns: o?.pronouns,
-                        trailing: (0, n.jsx)(te.A, { displayProfile: o, themeType: ts.d.POPOUT }),
+                        trailing: (0, l.jsx)(te.A, { displayProfile: o, themeType: ts.d.POPOUT }),
                     }),
                 }),
             ],
         }),
     });
 }
-var td = l(307731),
-    th = l(320523);
+var td = n(307731),
+    th = n(320523);
 let tc = "CLEAR_AFTER";
 function tm(t) {
-    let { transitionState: e, onClose: l, sourceAnalyticsLocations: i = [], prompt: d = null } = t,
+    let { transitionState: e, onClose: n, sourceAnalyticsLocations: i = [], prompt: d = null } = t,
         { analyticsLocations: h } = (0, b.Ay)(i, E.A.CUSTOM_STATUS_MODAL),
         m = (0, o.bG)([M.default], () => M.default.getCurrentUser() ?? null),
         p = (0, V.K)(),
@@ -334,9 +334,9 @@ function tm(t) {
                 let e = Number(t.expiresAtMs);
                 if (isNaN(e)) return $.yt.TODAY;
                 if (0 === e) return $.yt.DONT_CLEAR;
-                let l = new Date(),
-                    n = new Date(e);
-                if (l.getFullYear() !== n.getFullYear() || l.getMonth() !== n.getMonth() || l.getDate() !== n.getDate())
+                let n = new Date(),
+                    l = new Date(e);
+                if (n.getFullYear() !== l.getFullYear() || n.getMonth() !== l.getMonth() || n.getDate() !== l.getDate())
                     return $.yt.TODAY;
                 let r = Number(e) - Date.now();
                 return K.find((t) => r <= t) ?? $.yt.TODAY;
@@ -353,12 +353,12 @@ function tm(t) {
         if (null == tt || null == t) return;
         let e = tt - 78;
         t.textContent = G;
-        let l = t.getBoundingClientRect().width;
-        if (l <= e) Z(G);
+        let n = t.getBoundingClientRect().width;
+        if (n <= e) Z(G);
         else {
-            let t = l / G.length,
-                n = Math.floor((e - 3 * t) / t);
-            Z(`${G.substring(0, n)}...`);
+            let t = n / G.length,
+                l = Math.floor((e - 3 * t) / t);
+            Z(`${G.substring(0, l)}...`);
         }
     }, [tt, G]),
         r.useEffect(() => {
@@ -372,54 +372,54 @@ function tm(t) {
                 (!(function (t) {
                     let {
                             text: e,
-                            emojiInfo: l,
-                            clearAfter: n,
+                            emojiInfo: n,
+                            clearAfter: l,
                             analyticsContext: r,
                             createdAtMs: i,
                             prompt: a,
                             analyticsLocations: s,
                         } = t,
                         o = e.trim();
-                    if (!(o.length > 0) && null == l) return k.G2.updateSetting(void 0);
+                    if (!(o.length > 0) && null == n) return k.G2.updateSetting(void 0);
                     k.G2.updateSetting({
                         text: o.length > 0 ? o : "",
                         expiresAtMs:
-                            null != n && n !== $.yt.DONT_CLEAR
+                            null != l && l !== $.yt.DONT_CLEAR
                                 ? String(
                                       L()()
                                           .add(
-                                              n === $.yt.TODAY
+                                              l === $.yt.TODAY
                                                   ? Y.A.Millis.DAY
-                                                  : (F()("number" == typeof n, "Invalid custom status clear timeout"),
-                                                    n),
+                                                  : (F()("number" == typeof l, "Invalid custom status clear timeout"),
+                                                    l),
                                               "ms",
                                           )
                                           .toDate()
                                           .getTime(),
                                   )
                                 : "0",
-                        emojiId: null != l && null != l.id ? l.id : "0",
-                        emojiName: null != l ? l.name : "",
+                        emojiId: null != n && null != n.id ? n.id : "0",
+                        emojiName: null != n ? n.name : "",
                         createdAtMs: String(i ?? L()().toDate().getTime()),
                     }),
                         _.default.track(B.HAw.CUSTOM_STATUS_UPDATED, {
                             location: null != r ? r.location : null,
-                            emoji_type: null == l ? null : null != l.id ? "custom" : "unicode",
+                            emoji_type: null == n ? null : null != n.id ? "custom" : "unicode",
                             text_len: o.length,
-                            clear_after: null != n ? `${n}` : null,
+                            clear_after: null != l ? `${l}` : null,
                             prompt_type: a?.value,
                             location_stack: s,
                         });
                 })({ text: x, emojiInfo: y, clearAfter: j, prompt: d, analyticsLocations: h }),
-                l());
+                n());
         },
-        tl = f.intl.string(f.t.rp0ahn),
-        tn = "custom-status-input";
-    return (0, n.jsxs)(s.Modal, {
+        tn = f.intl.string(f.t.rp0ahn),
+        tl = "custom-status-input";
+    return (0, l.jsxs)(s.Modal, {
         title: f.intl.string(f.t.Zx4jzN),
-        actionBarInput: (0, n.jsx)("div", {
+        actionBarInput: (0, l.jsx)("div", {
             className: th.l3,
-            children: (0, n.jsx)(u.Te, {
+            children: (0, l.jsx)(u.Te, {
                 "aria-label": f.intl.formatToPlainString(f.t.NFJUPa, {
                     value: j === tc ? f.intl.string(f.t.E45wvP) : J(j),
                 }),
@@ -432,12 +432,12 @@ function tm(t) {
                 onChange: (t) => v(t),
                 optionClassName: th.Pl,
                 renderOptionLabel: (t) => {
-                    let { value: e, label: l, disabled: r } = t;
-                    return (0, n.jsx)("span", {
+                    let { value: e, label: n, disabled: r } = t;
+                    return (0, l.jsx)("span", {
                         className: a()(th.j3, r ? th.r9 : void 0),
                         children:
                             e === tc
-                                ? l
+                                ? n
                                 : (function (t) {
                                       switch (t) {
                                           case $.yt.TODAY:
@@ -463,15 +463,15 @@ function tm(t) {
             }),
         }),
         onClose: async () => {
-            await l();
+            await n();
         },
         transitionState: e,
         actions: [{ text: f.intl.string(f.t["R3BPH+"]), variant: "primary", onClick: te }],
         children: [
             null != m &&
-                (0, n.jsx)("div", {
+                (0, l.jsx)("div", {
                     className: th.q5,
-                    children: (0, n.jsx)(tu, {
+                    children: (0, l.jsx)(tu, {
                         user: m,
                         previewText: x,
                         previewEmoji: y,
@@ -479,56 +479,56 @@ function tm(t) {
                         transitionState: e,
                     }),
                 }),
-            (0, n.jsxs)("div", {
+            (0, l.jsxs)("div", {
                 className: th.eH,
                 children: [
-                    (0, n.jsx)(g.E, {
+                    (0, l.jsx)(g.E, {
                         tag: "label",
-                        htmlFor: tn,
+                        htmlFor: tl,
                         variant: "heading-md/semibold",
                         className: th.wW,
-                        children: tl,
+                        children: tn,
                     }),
-                    (0, n.jsxs)("div", {
+                    (0, l.jsxs)("div", {
                         className: th.Kf,
                         ref: W,
                         children: [
-                            (0, n.jsx)("span", { ref: z, className: th._D, "aria-hidden": "true" }),
-                            (0, n.jsx)("div", {
+                            (0, l.jsx)("span", { ref: z, className: th._D, "aria-hidden": "true" }),
+                            (0, l.jsx)("div", {
                                 className: th.S0,
-                                children: (0, n.jsx)(w.Y, {
+                                children: (0, l.jsx)(w.Y, {
                                     targetElementRef: H,
-                                    renderPopout: (t) => {
+                                    renderPopout: function (t) {
                                         let { closePopout: e } = t;
-                                        return (0, n.jsx)(U.A, {
+                                        return (0, l.jsx)(U.A, {
                                             closePopout: e,
                                             onSelectEmoji: (t) => {
-                                                let { emoji: l, willClose: n } = t;
-                                                null == l ||
+                                                let { emoji: n, willClose: l } = t;
+                                                null == n ||
                                                     A(
-                                                        null != l.id
-                                                            ? { id: l.id, name: l.name, animated: l.animated }
+                                                        null != n.id
+                                                            ? { id: n.id, name: n.name, animated: n.animated }
                                                             : {
                                                                   id: null,
-                                                                  name: l.optionallyDiverseSequence,
+                                                                  name: n.optionallyDiverseSequence,
                                                                   animated: !1,
                                                               },
                                                     ),
-                                                    n && e();
+                                                    l && e();
                                             },
                                             pickerIntention: td.EmojiIntention.STATUS,
-                                            onNavigateAway: l,
+                                            onNavigateAway: n,
                                         });
                                     },
                                     position: "left",
                                     animation: w.Y.Animation.NONE,
                                     align: "top",
                                     children: (t, e) => {
-                                        let { isShown: l } = e;
-                                        return (0, n.jsx)(R.A, {
+                                        let { isShown: n } = e;
+                                        return (0, l.jsx)(R.A, {
                                             ...t,
                                             ref: H,
-                                            active: l,
+                                            active: n,
                                             "aria-label":
                                                 null != y
                                                     ? f.intl.formatToPlainString(f.t["urEr+I"], {
@@ -542,7 +542,7 @@ function tm(t) {
                                                 null == y
                                                     ? null
                                                     : () =>
-                                                          (0, n.jsx)(O.A, {
+                                                          (0, l.jsx)(O.A, {
                                                               className: th.Zg,
                                                               emojiId: y.id,
                                                               emojiName: y.name,
@@ -552,35 +552,35 @@ function tm(t) {
                                     },
                                 }),
                             }),
-                            (0, n.jsx)(S, {
+                            (0, l.jsx)(S, {
                                 autosize: !0,
                                 value: x,
                                 maxLength: $.hp,
                                 rows: 1,
                                 showRemainingCharacterCount: !1,
                                 placeholder: X,
-                                onChange: (t) => {
+                                onChange: function (t) {
                                     T(t);
                                 },
-                                onKeyDown: (t) => {
+                                onKeyDown: function (t) {
                                     "Enter" === t.key && (t.preventDefault(), t.shiftKey || te());
                                 },
                                 className: th.hF,
                                 inputRef: I,
-                                id: tn,
+                                id: tl,
                             }),
                             (x.length > 0 || null != y) &&
-                                (0, n.jsx)(N.D, {
+                                (0, l.jsx)(N.D, {
                                     "aria-label": f.intl.string(f.t.wfYTHe),
                                     className: th.mt,
-                                    onClick: () => {
+                                    onClick: function () {
                                         T(""), A(null);
                                     },
-                                    children: (0, n.jsx)(D.a, { size: "md", color: "currentColor", className: th.hj }),
+                                    children: (0, l.jsx)(D.a, { size: "md", color: "currentColor", className: th.hj }),
                                 }),
                         ],
                     }),
-                    (0, n.jsx)(c.A, { children: f.intl.formatToPlainString(f.t.IKBvFl, { placeholder: G ?? "" }) }),
+                    (0, l.jsx)(c.A, { children: f.intl.formatToPlainString(f.t.IKBvFl, { placeholder: G ?? "" }) }),
                 ],
             }),
         ],

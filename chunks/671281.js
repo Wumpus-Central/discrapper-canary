@@ -1,86 +1,88 @@
-l.d(t, { A: () => x });
-var r = l(17928),
-    n = l(228366),
-    a = l(403362),
-    s = l(817934);
+n.d(t, { A: () => x });
+var r = n(17928),
+    l = n(228366),
+    a = n(403362),
+    s = n(817934);
 let i = (0, a.m6)() ? { [s.C8]: { "dummy-shop-home": s.uG, "dummy-orb-shelf": s.oP, "dummy-sku-list": s.Ej } } : {},
     c = (0, a.m6)() ? ["dummy-skeleton"] : [],
-    d = (0, a.m6)() ? { [s.C8]: { "dummy-popular-picks": s.Ot } } : {},
-    o = (0, a.m6)() ? ["dummy-skeleton-template"] : [],
-    u = (e, t) => `${e}/${t}`,
-    h = i,
+    o = (0, a.m6)() ? { [s.C8]: { "dummy-popular-picks": s.Ot } } : {},
+    u = (0, a.m6)() ? ["dummy-skeleton-template"] : [];
+function d(e, t) {
+    return `${e}/${t}`;
+}
+let h = i,
     m = new Set(c),
     p = {},
-    g = d,
-    E = new Set(o),
-    f = {},
-    A = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            l = Object.entries(t)
-                .sort((e, t) => {
-                    let [l] = e,
-                        [r] = t;
-                    return l.localeCompare(r);
-                })
-                .map((e) => {
-                    let [t, l] = e;
-                    return `${t}:${l}`;
-                })
-                .join("-");
-        return "" !== l ? `${e}-${l}` : e;
-    };
+    f = o,
+    g = new Set(u),
+    E = {};
+function A(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+        n = Object.entries(t)
+            .sort((e, t) => {
+                let [n] = e,
+                    [r] = t;
+                return n.localeCompare(r);
+            })
+            .map((e) => {
+                let [t, n] = e;
+                return `${t}:${n}`;
+            })
+            .join("-");
+    return "" !== n ? `${e}-${n}` : e;
+}
 class v extends r.Ay.Store {
     static displayName = "LayoutSystemStore";
     getLayout(e, t) {
         return null == e || null == t ? null : (h[e]?.[t] ?? null);
     }
     isFetchingLayout(e, t) {
-        return null != e && null != t && m.has(u(e, t));
+        return null != e && null != t && m.has(d(e, t));
     }
     getFetchError(e, t) {
-        return null == e || null == t ? null : (p[u(e, t)] ?? null);
+        return null == e || null == t ? null : (p[d(e, t)] ?? null);
     }
-    getTemplateLayout(e, t, l) {
+    getTemplateLayout(e, t, n) {
         if (null == e || null == t) return null;
-        let r = A(t, l);
-        return g[e]?.[r] ?? null;
+        let r = A(t, n);
+        return f[e]?.[r] ?? null;
     }
-    isFetchingTemplate(e, t, l) {
-        let r = A(t ?? "", l);
-        return null != e && null != t && E.has(u(e, r));
+    isFetchingTemplate(e, t, n) {
+        let r = A(t ?? "", n);
+        return null != e && null != t && g.has(d(e, r));
     }
-    getTemplateFetchError(e, t, l) {
-        return null == e || null == t ? null : (f[u(e, A(t ?? "", l))] ?? null);
+    getTemplateFetchError(e, t, n) {
+        return null == e || null == t ? null : (E[d(e, A(t ?? "", n))] ?? null);
     }
 }
-let x = new v(n.h, {
-    LAYOUT_SYSTEM_FETCH: (e) => {
-        let { tenantId: t, layoutId: l } = e;
-        m.add(u(t, l));
+let x = new v(l.h, {
+    LAYOUT_SYSTEM_FETCH: function (e) {
+        let { tenantId: t, layoutId: n } = e;
+        m.add(d(t, n));
     },
-    LAYOUT_SYSTEM_FETCH_SUCCESS: (e) => {
-        let { tenantId: t, layout: l } = e;
-        ((h[t] ??= {})[l.id] = l), delete p[u(t, l.id)], m.delete(u(t, l.id));
+    LAYOUT_SYSTEM_FETCH_SUCCESS: function (e) {
+        let { tenantId: t, layout: n } = e;
+        ((h[t] ??= {})[n.id] = n), delete p[d(t, n.id)], m.delete(d(t, n.id));
     },
-    LAYOUT_SYSTEM_FETCH_FAILURE: (e) => {
-        let { tenantId: t, layoutId: l, apiError: r } = e;
-        (p[u(t, l)] = r), m.delete(u(t, l));
+    LAYOUT_SYSTEM_FETCH_FAILURE: function (e) {
+        let { tenantId: t, layoutId: n, apiError: r } = e;
+        (p[d(t, n)] = r), m.delete(d(t, n));
     },
-    LAYOUT_SYSTEM_TEMPLATE_FETCH: (e) => {
-        let { tenantId: t, templateId: l, requestParams: r } = e;
-        E.add(u(t, A(l, r)));
+    LAYOUT_SYSTEM_TEMPLATE_FETCH: function (e) {
+        let { tenantId: t, templateId: n, requestParams: r } = e;
+        g.add(d(t, A(n, r)));
     },
-    LAYOUT_SYSTEM_TEMPLATE_FETCH_SUCCESS: (e) => {
-        let { tenantId: t, templateId: l, requestParams: r, layout: n } = e,
-            a = A(l, r);
-        ((g[t] ??= {})[a] = n), delete f[u(t, a)], E.delete(u(t, a));
+    LAYOUT_SYSTEM_TEMPLATE_FETCH_SUCCESS: function (e) {
+        let { tenantId: t, templateId: n, requestParams: r, layout: l } = e,
+            a = A(n, r);
+        ((f[t] ??= {})[a] = l), delete E[d(t, a)], g.delete(d(t, a));
     },
-    LAYOUT_SYSTEM_TEMPLATE_FETCH_FAILURE: (e) => {
-        let { tenantId: t, templateId: l, requestParams: r, apiError: n } = e,
-            a = A(l, r);
-        (f[u(t, a)] = n), E.delete(u(t, a));
+    LAYOUT_SYSTEM_TEMPLATE_FETCH_FAILURE: function (e) {
+        let { tenantId: t, templateId: n, requestParams: r, apiError: l } = e,
+            a = A(n, r);
+        (E[d(t, a)] = l), g.delete(d(t, a));
     },
     LOGOUT: function () {
-        (h = {}), (m = new Set()), (p = {}), (g = {}), (E = new Set()), (f = {});
+        (h = {}), (m = new Set()), (p = {}), (f = {}), (g = new Set()), (E = {});
     },
 });

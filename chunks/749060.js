@@ -20,8 +20,8 @@ function h(e) {
         p = (0, c.Ms)(t),
         V = i.useMemo(() => o.MO.map((e) => ({ id: e.toString(), value: e, label: Number(e).toLocaleString() })), []),
         v = new Intl.NumberFormat(H.intl.currentLocale).format(f),
-        M = H.intl.formatToPlainString(H.t["RNDnQ/"], { count: p ? "..." : v }),
-        A = f > j.pageSize || p,
+        A = H.intl.formatToPlainString(H.t["RNDnQ/"], { count: p ? "..." : v }),
+        M = f > j.pageSize || p,
         L = f > o.MO["0"];
     return (0, n.jsxs)("div", {
         className: x.Ej,
@@ -38,11 +38,11 @@ function h(e) {
                               }),
                               (0, n.jsx)(r.l, {
                                   selectionMode: "single",
-                                  label: M,
+                                  label: A,
                                   hideLabel: !0,
                                   options: V,
                                   value: j.pageSize,
-                                  onSelectionChange: (e) => {
+                                  onSelectionChange: function (e) {
                                       g(() => {
                                           (0, m.Cw)(t, { ...j, pageSize: e });
                                       });
@@ -55,7 +55,7 @@ function h(e) {
                                       variant: "text-md/normal",
                                       color: "text-muted",
                                       className: x.Qh,
-                                      children: M,
+                                      children: A,
                                   }),
                               }),
                           ],
@@ -69,7 +69,7 @@ function h(e) {
             (0, n.jsx)("div", {
                 className: x.X$,
                 children:
-                    A &&
+                    M &&
                     (0, n.jsx)(d.m, {
                         className: x.JV,
                         totalCount: f,
@@ -77,7 +77,7 @@ function h(e) {
                         disablePaginationGap: !0,
                         hideMaxPage: !0,
                         currentPage: j.currentPage,
-                        onPageChange: (e) => {
+                        onPageChange: function (e) {
                             l?.(e),
                                 requestIdleCallback(() => {
                                     g(() => {

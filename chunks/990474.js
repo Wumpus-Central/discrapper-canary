@@ -95,7 +95,7 @@ function N(e) {
         children: (0, i.jsx)(l.$, {
             size: "sm",
             variant: "secondary",
-            onClick: (e) => {
+            onClick: function (e) {
                 e?.stopPropagation(), y(c, n, t, d.Oh.POPULAR_COMMANDS, a), u?.(t);
             },
             text: `/${n}`,

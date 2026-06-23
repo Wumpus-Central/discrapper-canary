@@ -356,7 +356,7 @@ function ea(e) {
         children: et.t.map((e) => (0, i.jsx)(es, { guild: t, definition: e }, e.tier)),
     });
 }
-var eo = n(922139),
+var eo = n(308186),
     el = n(172218),
     eu = n(717421),
     ec = n(289704),
@@ -849,36 +849,36 @@ function eB(e) {
         })
     );
 }
-let ej = "BoostedGuildPerksModalConnected",
-    eH = (e) => {
-        let { guildId: t, close: n, location: u, registerDismissModalHandler: h, scrollToPowerupCards: f } = e,
-            p = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
-            E = (0, s.bG)([c.A], () => c.A.getGuild(t), [t]),
-            m = (0, a.A)(() => Date.now()),
-            { analyticsLocations: g } = (0, l.Ay)(o.A.BOOSTED_GUILD_PERKS_MODAL),
-            A = E?.id,
-            I = r.useCallback(() => {
-                n(),
-                    null != A &&
-                        _.default.track(F.HAw.MODAL_DISMISSED, {
-                            type: F.liQ.PREMIUM_GUILD_USER_MODAL,
-                            location_stack: g,
-                            location_section: u.section,
-                            location_object: u.object,
-                            guild_id: A,
-                            duration_open_ms: Date.now() - m,
-                        });
-            }, [g, m, u.object, u.section, n, A]);
-        return (r.useLayoutEffect(() => {
-            h?.(I);
-        }, [I, h]),
-        null == p || null == E)
-            ? null
-            : (0, i.jsx)(l.f5, {
-                  value: g,
-                  children: (0, i.jsx)(eB, { analyticsLocation: u, onClose: I, guild: E, scrollToPowerupCards: f }),
-              });
-    };
+let ej = "BoostedGuildPerksModalConnected";
+function eH(e) {
+    let { guildId: t, close: n, location: u, registerDismissModalHandler: h, scrollToPowerupCards: f } = e,
+        p = (0, s.bG)([d.default], () => d.default.getCurrentUser()),
+        E = (0, s.bG)([c.A], () => c.A.getGuild(t), [t]),
+        m = (0, a.A)(() => Date.now()),
+        { analyticsLocations: g } = (0, l.Ay)(o.A.BOOSTED_GUILD_PERKS_MODAL),
+        A = E?.id,
+        I = r.useCallback(() => {
+            n(),
+                null != A &&
+                    _.default.track(F.HAw.MODAL_DISMISSED, {
+                        type: F.liQ.PREMIUM_GUILD_USER_MODAL,
+                        location_stack: g,
+                        location_section: u.section,
+                        location_object: u.object,
+                        guild_id: A,
+                        duration_open_ms: Date.now() - m,
+                    });
+        }, [g, m, u.object, u.section, n, A]);
+    return (r.useLayoutEffect(() => {
+        h?.(I);
+    }, [I, h]),
+    null == p || null == E)
+        ? null
+        : (0, i.jsx)(l.f5, {
+              value: g,
+              children: (0, i.jsx)(eB, { analyticsLocation: u, onClose: I, guild: E, scrollToPowerupCards: f }),
+          });
+}
 function eY(e) {
     let { guildId: t, location: n, scrollToPowerupCards: r } = e,
         s = { current: null };

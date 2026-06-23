@@ -330,7 +330,7 @@ function z(e) {
                     ),
                     [n],
                 ),
-                () => {
+                function () {
                     t.current = !1;
                 }
             );
@@ -351,7 +351,7 @@ function z(e) {
             w && (0, l.jsx)(d.y, { type: d.y.Type.SPINNING_CIRCLE }),
             (0, l.jsx)(I, {
                 size: w ? "invisible" : void 0,
-                onVerify: (e) => {
+                onVerify: function (e) {
                     y(), n(e, C), r();
                 },
                 onClose: w ? r : void 0,

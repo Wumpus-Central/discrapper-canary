@@ -3,7 +3,7 @@ n.d(t, { VZ: () => C, Ay: () => N, FX: () => y }), n(938796);
 var i = n(627968),
     r = n(64700),
     s = n(665260),
-    a = n(551011),
+    a = n(348833),
     o = n(731068),
     l = n(619517),
     u = n(248643),
@@ -13,7 +13,7 @@ var i = n(627968),
     h = n(587481),
     f = n(998218),
     p = n(454290),
-    E = n(922139),
+    E = n(308186),
     m = n(765671),
     g = n(700331);
 function A(e) {
@@ -43,19 +43,14 @@ let I = r.memo(function (e) {
         { ref: c, width: d, height: _ } = (0, m.Ay)(),
         [h, f] = [d ?? 0, _ ?? 0],
         I = r.useRef(!1),
-        [T, S] = r.useState({ x: 0, y: 0 }),
-        y = (e, t) => {
-            let i = A({
-                width: h * n.goal,
-                height: f * n.goal,
-                offset: { x: s.goal, y: a.goal },
-                delta: { x: e, y: t },
-            });
-            o(i.x, i.y, { immediate: !0 });
-        };
+        [T, S] = r.useState({ x: 0, y: 0 });
+    function y(e, t) {
+        let i = A({ width: h * n.goal, height: f * n.goal, offset: { x: s.goal, y: a.goal }, delta: { x: e, y: t } });
+        o(i.x, i.y, { immediate: !0 });
+    }
     return (0, i.jsx)(E.animated.div, {
         ref: c,
-        onMouseDown: (e) => {
+        onMouseDown: function (e) {
             l && 0 === e.button && (e.preventDefault(), (I.current = !0), S({ x: e.clientX, y: e.clientY }));
         },
         onMouseUp: (e) => {

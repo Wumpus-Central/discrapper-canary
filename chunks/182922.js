@@ -27,62 +27,60 @@ var c = n(771104),
     d = n(732139),
     _ = n(375708),
     h = n(759627);
-let f = (e) => {
-        let { emojiSubCategory: t } = e;
-        return (0, i.jsxs)("div", {
-            className: s()(h.KT, t === d.tm.TOP_GUILD_EMOJI ? h.S7 : h.lD),
-            children: [
-                t === d.tm.TOP_GUILD_EMOJI
-                    ? (0, i.jsx)(u, { foreground: h.Gb })
-                    : (0, i.jsx)(c.A, { foreground: h.Gb }),
-                (0, i.jsx)(a.E, {
-                    variant: "text-sm/semibold",
-                    color: "always-white",
-                    children: t === d.tm.TOP_GUILD_EMOJI ? _.intl.string(_.t.TR2B4T) : _.intl.string(_.t["1aZ4V6"]),
-                }),
-            ],
-        });
-    },
-    p = (e) => {
-        let {
-            className: t,
-            graphicPrimary: n,
-            graphicSecondary: r,
-            titlePrimary: l,
-            titleSecondary: u,
-            isFavorite: c = !1,
-            emojiSubCategory: p = d.tm.NONE,
-        } = e;
-        return (0, i.jsxs)("div", {
-            className: s()(h.qV, t),
-            children: [
-                (0, i.jsx)("div", { className: h.FZ, "aria-hidden": !0, children: n }),
-                (0, i.jsxs)("div", {
-                    className: h.tC,
-                    children: [
-                        (0, i.jsxs)(a.E, {
-                            className: h.jn,
-                            variant: "text-md/semibold",
-                            children: [
-                                c
-                                    ? (0, i.jsx)(o.G, {
-                                          size: "custom",
-                                          color: "currentColor",
-                                          "aria-label": _.intl.formatToPlainString(_.t["+fdUkf"], { names: l }),
-                                          width: 15,
-                                          height: 15,
-                                          className: h.BI,
-                                      })
-                                    : null,
-                                l,
-                            ],
-                        }),
-                        null != u && (0, i.jsx)(a.E, { className: h.Fm, variant: "text-xs/normal", children: u }),
-                    ],
-                }),
-                p === d.tm.NONE
-                    ? null != r && (0, i.jsx)("div", { className: h.vK, "aria-hidden": !0, children: r })
-                    : (0, i.jsx)(f, { emojiSubCategory: p }),
-            ],
-        });
-    };
+function f(e) {
+    let { emojiSubCategory: t } = e;
+    return (0, i.jsxs)("div", {
+        className: s()(h.KT, t === d.tm.TOP_GUILD_EMOJI ? h.S7 : h.lD),
+        children: [
+            t === d.tm.TOP_GUILD_EMOJI ? (0, i.jsx)(u, { foreground: h.Gb }) : (0, i.jsx)(c.A, { foreground: h.Gb }),
+            (0, i.jsx)(a.E, {
+                variant: "text-sm/semibold",
+                color: "always-white",
+                children: t === d.tm.TOP_GUILD_EMOJI ? _.intl.string(_.t.TR2B4T) : _.intl.string(_.t["1aZ4V6"]),
+            }),
+        ],
+    });
+}
+let p = function (e) {
+    let {
+        className: t,
+        graphicPrimary: n,
+        graphicSecondary: r,
+        titlePrimary: l,
+        titleSecondary: u,
+        isFavorite: c = !1,
+        emojiSubCategory: p = d.tm.NONE,
+    } = e;
+    return (0, i.jsxs)("div", {
+        className: s()(h.qV, t),
+        children: [
+            (0, i.jsx)("div", { className: h.FZ, "aria-hidden": !0, children: n }),
+            (0, i.jsxs)("div", {
+                className: h.tC,
+                children: [
+                    (0, i.jsxs)(a.E, {
+                        className: h.jn,
+                        variant: "text-md/semibold",
+                        children: [
+                            c
+                                ? (0, i.jsx)(o.G, {
+                                      size: "custom",
+                                      color: "currentColor",
+                                      "aria-label": _.intl.formatToPlainString(_.t["+fdUkf"], { names: l }),
+                                      width: 15,
+                                      height: 15,
+                                      className: h.BI,
+                                  })
+                                : null,
+                            l,
+                        ],
+                    }),
+                    null != u && (0, i.jsx)(a.E, { className: h.Fm, variant: "text-xs/normal", children: u }),
+                ],
+            }),
+            p === d.tm.NONE
+                ? null != r && (0, i.jsx)("div", { className: h.vK, "aria-hidden": !0, children: r })
+                : (0, i.jsx)(f, { emojiSubCategory: p }),
+        ],
+    });
+};

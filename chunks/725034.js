@@ -4,8 +4,8 @@ var l = n(627968),
     r = n(189213),
     a = n(702841),
     o = n(964486),
-    s = n(793574),
-    u = n(688810),
+    u = n(793574),
+    s = n(688810),
     A = n(495544),
     d = n(696451),
     _ = n(71393),
@@ -23,7 +23,7 @@ function k(t) {
         T = (0, a.bG)([_.A], () => _.A.getGuild(k), [k]),
         b = T?.name ?? "",
         I = (0, f.wj)(M),
-        { analyticsLocations: C } = (0, u.Ay)(s.A.AUTOMOD_PROFILE_QUARANTINE_ALERT),
+        { analyticsLocations: C } = (0, s.Ay)(u.A.AUTOMOD_PROFILE_QUARANTINE_ALERT),
         [D, P] = (0, g.j8)({ guildId: k, analyticsLocations: C }),
         R = I.has(N.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME)
             ? O.intl.formatToPlainString(O.t.Oh20JS, { guildName: b })
@@ -46,7 +46,7 @@ function k(t) {
               actions: [
                   {
                       text: S,
-                      onClick: () => {
+                      onClick: function () {
                           D(), i();
                       },
                   },

@@ -30,7 +30,7 @@ var i = n(627968),
     D = n(980707),
     L = n(477782),
     w = n(375708);
-let M = (e) => {
+let M = function (e) {
     let { onChangeAvatar: t, onChangeAvatarDecoration: n, onClose: r } = e;
     return (0, i.jsxs)(D.W, {
         "data-menu-migrated": !0,

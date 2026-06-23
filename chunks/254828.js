@@ -9,7 +9,7 @@ function u(t) {
     let { userId: i, onClick: s } = t;
     return (0, e.bG)([c.A], () => c.A.isIgnored(i))
         ? (0, a.jsx)(r.Q, {
-              onClick: () => {
+              onClick: function () {
                   n.j0.updateSetting(!0), s();
               },
               variant: "primary",

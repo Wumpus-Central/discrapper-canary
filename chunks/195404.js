@@ -71,7 +71,11 @@ function h(e) {
 }
 function b(e) {
     let { message: t, label: a } = e,
-        n = h({ createReminder: (e) => (0, u.Y)({ channelId: t.channel_id, messageId: t.id, dueAt: e }) });
+        n = h({
+            createReminder: function (e) {
+                return (0, u.Y)({ channelId: t.channel_id, messageId: t.id, dueAt: e });
+            },
+        });
     return (0, r.jsx)(l.W, {
         "data-menu-migrated-auto": !0,
         navId: "message-reminder-create",

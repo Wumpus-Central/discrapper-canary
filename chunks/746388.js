@@ -6,7 +6,7 @@ var i = n(627968),
     a = n.n(s),
     o = n(664929),
     l = n(707712);
-let u = (e) => {
+let u = function (e) {
     let { showImage: t } = e,
         {
             usageWidth: n,

@@ -2,9 +2,11 @@
 n.d(t, { A: () => p }), n(321073);
 var i = n(17928),
     r = n(228366);
-let s = 3 * n(927813).A.Millis.DAY,
-    a = () => ({ itemImpressions: [], hidden: !1 }),
-    o = a(),
+let s = 3 * n(927813).A.Millis.DAY;
+function a() {
+    return { itemImpressions: [], hidden: !1 };
+}
+let o = a(),
     l = new Set(),
     u = new Set(),
     c = 0,

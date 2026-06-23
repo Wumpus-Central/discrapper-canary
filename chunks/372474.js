@@ -3,138 +3,140 @@ var l = a(627968),
     n = a(64700),
     r = a(834730),
     s = a(534514),
-    d = a(498381),
-    o = a(217109),
-    i = a(735353),
+    o = a(498381),
+    i = a(217109),
+    d = a(735353),
     c = a(364801),
-    h = a(975117);
-let u = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 120, minWidth: 120 } });
+    u = a(975117);
+function h() {
+    return (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 120, minWidth: 120 } });
+}
 var x = a(450117),
     m = a(488757);
-let b = () =>
-        (0, l.jsx)("div", {
-            style: { display: "flex", justifyContent: "center", alignItems: "center" },
-            children: (0, l.jsx)("div", { style: { height: 96, width: 96, borderRadius: 48, background: "grey" } }),
-        }),
-    p = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 240 } });
+function b() {
+    return (0, l.jsx)("div", {
+        style: { display: "flex", justifyContent: "center", alignItems: "center" },
+        children: (0, l.jsx)("div", { style: { height: 96, width: 96, borderRadius: 48, background: "grey" } }),
+    });
+}
+function p() {
+    return (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 240 } });
+}
 var g = a(70613),
     j = a(152858),
     f = a(273340);
-let v = (e) => {
-        let { color: t, children: a } = e;
-        return (0, l.jsx)("div", {
-            style: {
-                background: t,
-                minHeight: 120,
-                height: "100%",
-                borderRadius: 8,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "white",
-                fontWeight: "bold",
-            },
-            children: a,
+function v(e) {
+    let { color: t, children: a } = e;
+    return (0, l.jsx)("div", {
+        style: {
+            background: t,
+            minHeight: 120,
+            height: "100%",
+            borderRadius: 8,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "white",
+            fontWeight: "bold",
+        },
+        children: a,
+    });
+}
+let y = {
+    name: "Grid",
+    id: "grid",
+    component: function (e) {
+        let {
+            columns: t,
+            paginationStrategy: a,
+            perPage: n,
+            paginationPosition: s,
+            gridItemColumns: o,
+            gridItemRows: d,
+        } = e;
+        return (0, l.jsxs)(l.Fragment, {
+            children: [
+                (0, l.jsx)(r.E, {
+                    variant: "text-lg/semibold",
+                    children:
+                        "Grid is used to create a responsive grid layout. It takes a columns prop to define the number of columns (1-6). The grid automatically becomes responsive on smaller screens.",
+                }),
+                (0, l.jsx)("br", {}),
+                (0, l.jsx)(r.E, {
+                    variant: "text-lg/semibold",
+                    children: "GridItem is (optionally) used to set the size of a grid itme in the grid.",
+                }),
+                (0, l.jsx)("div", {
+                    style: { marginTop: 24 },
+                    children: (0, l.jsxs)(i.Ay, {
+                        columns: t,
+                        paginationOptions: { paginationStrategy: a, perPage: n, paginationPosition: s },
+                        children: [
+                            (0, l.jsx)(v, { color: "red" }),
+                            (0, l.jsx)(f.A, {
+                                columns: o,
+                                rows: d,
+                                children: (0, l.jsx)(v, {
+                                    color: "orange",
+                                    children: (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "GridItem" }),
+                                }),
+                            }),
+                            (0, l.jsx)(v, { color: "yellow" }),
+                            (0, l.jsx)(v, { color: "green" }),
+                            (0, l.jsx)(v, { color: "blue" }),
+                            (0, l.jsx)(v, { color: "violet" }),
+                            (0, l.jsx)(v, { color: "red" }),
+                            (0, l.jsx)(v, { color: "orange" }),
+                            (0, l.jsx)(v, { color: "yellow" }),
+                            (0, l.jsx)(v, { color: "green" }),
+                            (0, l.jsx)(v, { color: "blue" }),
+                            (0, l.jsx)(v, { color: "violet" }),
+                            (0, l.jsx)(v, { color: "red" }),
+                            (0, l.jsx)(v, { color: "orange" }),
+                            (0, l.jsx)(v, { color: "yellow" }),
+                            (0, l.jsx)(v, { color: "green" }),
+                            (0, l.jsx)(v, { color: "blue" }),
+                            (0, l.jsx)(v, { color: "violet" }),
+                            (0, l.jsx)(v, { color: "red" }),
+                            (0, l.jsx)(v, { color: "orange" }),
+                            (0, l.jsx)(v, { color: "yellow" }),
+                            (0, l.jsx)(v, { color: "green" }),
+                            (0, l.jsx)(v, { color: "blue" }),
+                            (0, l.jsx)(v, {
+                                color: "violet",
+                                children: (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Last Child" }),
+                            }),
+                        ],
+                    }),
+                }),
+            ],
         });
     },
-    y = {
-        name: "Grid",
-        id: "grid",
-        component: (e) => {
-            let {
-                columns: t,
-                paginationStrategy: a,
-                perPage: n,
-                paginationPosition: s,
-                gridItemColumns: d,
-                gridItemRows: i,
-            } = e;
-            return (0, l.jsxs)(l.Fragment, {
-                children: [
-                    (0, l.jsx)(r.E, {
-                        variant: "text-lg/semibold",
-                        children:
-                            "Grid is used to create a responsive grid layout. It takes a columns prop to define the number of columns (1-6). The grid automatically becomes responsive on smaller screens.",
-                    }),
-                    (0, l.jsx)("br", {}),
-                    (0, l.jsx)(r.E, {
-                        variant: "text-lg/semibold",
-                        children: "GridItem is (optionally) used to set the size of a grid itme in the grid.",
-                    }),
-                    (0, l.jsx)("div", {
-                        style: { marginTop: 24 },
-                        children: (0, l.jsxs)(o.Ay, {
-                            columns: t,
-                            paginationOptions: { paginationStrategy: a, perPage: n, paginationPosition: s },
-                            children: [
-                                (0, l.jsx)(v, { color: "red" }),
-                                (0, l.jsx)(f.A, {
-                                    columns: d,
-                                    rows: i,
-                                    children: (0, l.jsx)(v, {
-                                        color: "orange",
-                                        children: (0, l.jsx)(r.E, {
-                                            variant: "text-lg/semibold",
-                                            children: "GridItem",
-                                        }),
-                                    }),
-                                }),
-                                (0, l.jsx)(v, { color: "yellow" }),
-                                (0, l.jsx)(v, { color: "green" }),
-                                (0, l.jsx)(v, { color: "blue" }),
-                                (0, l.jsx)(v, { color: "violet" }),
-                                (0, l.jsx)(v, { color: "red" }),
-                                (0, l.jsx)(v, { color: "orange" }),
-                                (0, l.jsx)(v, { color: "yellow" }),
-                                (0, l.jsx)(v, { color: "green" }),
-                                (0, l.jsx)(v, { color: "blue" }),
-                                (0, l.jsx)(v, { color: "violet" }),
-                                (0, l.jsx)(v, { color: "red" }),
-                                (0, l.jsx)(v, { color: "orange" }),
-                                (0, l.jsx)(v, { color: "yellow" }),
-                                (0, l.jsx)(v, { color: "green" }),
-                                (0, l.jsx)(v, { color: "blue" }),
-                                (0, l.jsx)(v, { color: "violet" }),
-                                (0, l.jsx)(v, { color: "red" }),
-                                (0, l.jsx)(v, { color: "orange" }),
-                                (0, l.jsx)(v, { color: "yellow" }),
-                                (0, l.jsx)(v, { color: "green" }),
-                                (0, l.jsx)(v, { color: "blue" }),
-                                (0, l.jsx)(v, {
-                                    color: "violet",
-                                    children: (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Last Child" }),
-                                }),
-                            ],
-                        }),
-                    }),
-                ],
-            });
+    controls: {
+        columns: { label: "Columns", type: "number", defaultValue: 3 },
+        paginationStrategy: {
+            label: "Pagination Strategy",
+            type: "select",
+            defaultValue: j.oV.PAGINATE,
+            options: [
+                { label: "Paginate", value: j.oV.PAGINATE },
+                { label: "Truncate", value: j.oV.TRUNCATE },
+            ],
         },
-        controls: {
-            columns: { label: "Columns", type: "number", defaultValue: 3 },
-            paginationStrategy: {
-                label: "Pagination Strategy",
-                type: "select",
-                defaultValue: j.oV.PAGINATE,
-                options: [
-                    { label: "Paginate", value: j.oV.PAGINATE },
-                    { label: "Truncate", value: j.oV.TRUNCATE },
-                ],
-            },
-            perPage: { label: "Grid Items per Page (default, all)", type: "number", defaultValue: 3 },
-            paginationPosition: {
-                label: "Pagination Position",
-                type: "select",
-                defaultValue: "bottom",
-                options: [
-                    { label: "Top", value: "top" },
-                    { label: "Bottom", value: "bottom" },
-                ],
-            },
-            gridItemColumns: { label: "Grid Item Columns", type: "number", defaultValue: 1 },
-            gridItemRows: { label: "Grid Item Rows", type: "number", defaultValue: 1 },
+        perPage: { label: "Grid Items per Page (default, all)", type: "number", defaultValue: 3 },
+        paginationPosition: {
+            label: "Pagination Position",
+            type: "select",
+            defaultValue: "bottom",
+            options: [
+                { label: "Top", value: "top" },
+                { label: "Bottom", value: "bottom" },
+            ],
         },
-    };
+        gridItemColumns: { label: "Grid Item Columns", type: "number", defaultValue: 1 },
+        gridItemRows: { label: "Grid Item Rows", type: "number", defaultValue: 1 },
+    },
+};
 var k = a(735438),
     A = a(939249),
     S = a(331322),
@@ -146,25 +148,27 @@ var k = a(735438),
     T = a(449543),
     L = a(808302);
 let P = [
-        { id: "xxs", label: "xxs", value: "xxs" },
-        { id: "xs", label: "xs", value: "xs" },
-        { id: "sm", label: "sm", value: "sm" },
-        { id: "md", label: "md", value: "md" },
-        { id: "lg", label: "lg", value: "lg" },
-        { id: "xl", label: "xl", value: "xl" },
-        { id: "xxl", label: "xxl", value: "xxl" },
-        { id: "none", label: "0px", value: 0 },
-        { id: "4px", label: "4px", value: 4 },
-        { id: "6px", label: "6px", value: 6 },
-        { id: "8px", label: "8px", value: 8 },
-        { id: "12px", label: "12px", value: 12 },
-        { id: "16px", label: "16px", value: 16 },
-        { id: "20px", label: "20px", value: 20 },
-        { id: "24px", label: "24px", value: 24 },
-        { id: "32px", label: "32px", value: 32 },
-        { id: "40px", label: "40px", value: 40 },
-    ],
-    B = () => (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 120 } });
+    { id: "xxs", label: "xxs", value: "xxs" },
+    { id: "xs", label: "xs", value: "xs" },
+    { id: "sm", label: "sm", value: "sm" },
+    { id: "md", label: "md", value: "md" },
+    { id: "lg", label: "lg", value: "lg" },
+    { id: "xl", label: "xl", value: "xl" },
+    { id: "xxl", label: "xxl", value: "xxl" },
+    { id: "none", label: "0px", value: 0 },
+    { id: "4px", label: "4px", value: 4 },
+    { id: "6px", label: "6px", value: 6 },
+    { id: "8px", label: "8px", value: 8 },
+    { id: "12px", label: "12px", value: 12 },
+    { id: "16px", label: "16px", value: 16 },
+    { id: "20px", label: "20px", value: 20 },
+    { id: "24px", label: "24px", value: 24 },
+    { id: "32px", label: "32px", value: 32 },
+    { id: "40px", label: "40px", value: 40 },
+];
+function B() {
+    return (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 120 } });
+}
 var F = a(303720),
     H = a(560275);
 let R = {
@@ -174,8 +178,8 @@ let R = {
         {
             name: "Card",
             id: "card",
-            component: () =>
-                (0, l.jsxs)(l.Fragment, {
+            component: function () {
+                return (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(r.E, {
                             variant: "text-lg/semibold",
@@ -187,89 +191,89 @@ let R = {
                             children:
                                 "It will take up the full width of the parent, and the minimum height for its children",
                         }),
-                        (0, l.jsxs)(i.A, {
+                        (0, l.jsxs)(d.A, {
                             children: [
-                                (0, l.jsx)(h.A, {
+                                (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "red" },
-                                        children: (0, l.jsx)(u, {}),
+                                        children: (0, l.jsx)(h, {}),
                                     }),
                                 }),
-                                (0, l.jsx)(h.A, {
+                                (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "orange" },
-                                        children: (0, l.jsx)(u, {}),
+                                        children: (0, l.jsx)(h, {}),
                                     }),
                                 }),
-                                (0, l.jsx)(h.A, {
+                                (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "yellow" },
-                                        children: (0, l.jsx)(u, {}),
+                                        children: (0, l.jsx)(h, {}),
                                     }),
                                 }),
-                                (0, l.jsx)(h.A, {
+                                (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "green" },
-                                        children: (0, l.jsx)(u, {}),
+                                        children: (0, l.jsx)(h, {}),
                                     }),
                                 }),
-                                (0, l.jsx)(h.A, {
+                                (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "blue" },
-                                        children: (0, l.jsx)(u, {}),
+                                        children: (0, l.jsx)(h, {}),
                                     }),
                                 }),
-                                (0, l.jsx)(h.A, {
+                                (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "violet" },
-                                        children: (0, l.jsx)(u, {}),
+                                        children: (0, l.jsx)(h, {}),
                                     }),
                                 }),
                             ],
                         }),
-                        (0, l.jsxs)(i.A, {
+                        (0, l.jsxs)(d.A, {
                             children: [
                                 (0, l.jsx)(r.E, {
                                     variant: "text-md/normal",
                                     children: "Cards inside of a horizontal stack with a min-width of 120px",
                                 }),
-                                (0, l.jsxs)(d.Ym, {
+                                (0, l.jsxs)(o.Ym, {
                                     direction: "horizontal",
                                     children: [
-                                        (0, l.jsx)(h.A, {
+                                        (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "red" },
-                                                children: (0, l.jsx)(u, {}),
+                                                children: (0, l.jsx)(h, {}),
                                             }),
                                         }),
-                                        (0, l.jsx)(h.A, {
+                                        (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "orange" },
-                                                children: (0, l.jsx)(u, {}),
+                                                children: (0, l.jsx)(h, {}),
                                             }),
                                         }),
-                                        (0, l.jsx)(h.A, {
+                                        (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "yellow" },
-                                                children: (0, l.jsx)(u, {}),
+                                                children: (0, l.jsx)(h, {}),
                                             }),
                                         }),
-                                        (0, l.jsx)(h.A, {
+                                        (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "green" },
-                                                children: (0, l.jsx)(u, {}),
+                                                children: (0, l.jsx)(h, {}),
                                             }),
                                         }),
-                                        (0, l.jsx)(h.A, {
+                                        (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "blue" },
-                                                children: (0, l.jsx)(u, {}),
+                                                children: (0, l.jsx)(h, {}),
                                             }),
                                         }),
-                                        (0, l.jsx)(h.A, {
+                                        (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "violet" },
-                                                children: (0, l.jsx)(u, {}),
+                                                children: (0, l.jsx)(h, {}),
                                             }),
                                         }),
                                     ],
@@ -277,13 +281,14 @@ let R = {
                             ],
                         }),
                     ],
-                }),
+                });
+            },
             controls: {},
         },
         {
             name: "Section",
             id: "section",
-            component: (e) => {
+            component: function (e) {
                 let { verticalMargin: t, padding: a } = e;
                 return (0, l.jsxs)(l.Fragment, {
                     children: [
@@ -296,7 +301,7 @@ let R = {
                             children: [
                                 (0, l.jsx)("div", {
                                     style: { background: "red" },
-                                    children: (0, l.jsx)(i.A, {
+                                    children: (0, l.jsx)(d.A, {
                                         verticalMargin: t,
                                         padding: a,
                                         children: (0, l.jsx)(B, {}),
@@ -304,7 +309,7 @@ let R = {
                                 }),
                                 (0, l.jsx)("div", {
                                     style: { background: "orange" },
-                                    children: (0, l.jsx)(i.A, {
+                                    children: (0, l.jsx)(d.A, {
                                         verticalMargin: t,
                                         padding: a,
                                         children: (0, l.jsx)(B, {}),
@@ -312,7 +317,7 @@ let R = {
                                 }),
                                 (0, l.jsx)("div", {
                                     style: { background: "yellow" },
-                                    children: (0, l.jsx)(i.A, {
+                                    children: (0, l.jsx)(d.A, {
                                         verticalMargin: t,
                                         padding: a,
                                         children: (0, l.jsx)(B, {}),
@@ -320,7 +325,7 @@ let R = {
                                 }),
                                 (0, l.jsx)("div", {
                                     style: { background: "green" },
-                                    children: (0, l.jsx)(i.A, {
+                                    children: (0, l.jsx)(d.A, {
                                         verticalMargin: t,
                                         padding: a,
                                         children: (0, l.jsx)(B, {}),
@@ -328,7 +333,7 @@ let R = {
                                 }),
                                 (0, l.jsx)("div", {
                                     style: { background: "blue" },
-                                    children: (0, l.jsx)(i.A, {
+                                    children: (0, l.jsx)(d.A, {
                                         verticalMargin: t,
                                         padding: a,
                                         children: (0, l.jsx)(B, {}),
@@ -336,7 +341,7 @@ let R = {
                                 }),
                                 (0, l.jsx)("div", {
                                     style: { background: "violet" },
-                                    children: (0, l.jsx)(i.A, {
+                                    children: (0, l.jsx)(d.A, {
                                         verticalMargin: t,
                                         padding: a,
                                         children: (0, l.jsx)(B, {}),
@@ -355,7 +360,7 @@ let R = {
         {
             name: "BackgroundImage",
             id: "background-image",
-            component: (e) => {
+            component: function (e) {
                 let { backgroundImage: t, secondBackgroundImage: a } = e;
                 return (0, l.jsxs)("div", {
                     children: [
@@ -366,10 +371,10 @@ let R = {
                         }),
                         (0, l.jsx)(c.A, {
                             backgroundImage: { src: t },
-                            children: (0, l.jsx)(i.A, {
-                                children: (0, l.jsx)(o.Ay, {
+                            children: (0, l.jsx)(d.A, {
+                                children: (0, l.jsx)(i.Ay, {
                                     columns: 2,
-                                    children: (0, l.jsxs)(d.Ym, {
+                                    children: (0, l.jsxs)(o.Ym, {
                                         direction: "vertical",
                                         children: [
                                             (0, l.jsx)(s.D, {
@@ -386,7 +391,7 @@ let R = {
                                 }),
                             }),
                         }),
-                        (0, l.jsx)(i.A, {
+                        (0, l.jsx)(d.A, {
                             children: (0, l.jsx)(r.E, {
                                 variant: "text-lg/semibold",
                                 children: "It also automatically handles animated asset urls",
@@ -394,10 +399,10 @@ let R = {
                         }),
                         (0, l.jsx)(c.A, {
                             backgroundImage: { src: a },
-                            children: (0, l.jsx)(i.A, {
-                                children: (0, l.jsx)(o.Ay, {
+                            children: (0, l.jsx)(d.A, {
+                                children: (0, l.jsx)(i.Ay, {
                                     columns: 2,
-                                    children: (0, l.jsxs)(d.Ym, {
+                                    children: (0, l.jsxs)(o.Ym, {
                                         direction: "vertical",
                                         children: [
                                             (0, l.jsx)(s.D, {
@@ -435,9 +440,9 @@ let R = {
         {
             name: "GradientBackground",
             id: "gradient-background",
-            component: (e) => {
+            component: function (e) {
                 let { color1: t, color2: a, color3: n, angle: c } = e,
-                    h = [t, a, n].filter((e) => null != e && "" !== e);
+                    u = [t, a, n].filter((e) => null != e && "" !== e);
                 return (0, l.jsxs)("div", {
                     children: [
                         (0, l.jsx)(r.E, {
@@ -446,12 +451,12 @@ let R = {
                                 "GradientBackground takes a `colors` array and renders a linear gradient behind its children at the given angle.",
                         }),
                         (0, l.jsx)(g.A, {
-                            colors: h,
+                            colors: u,
                             angle: c,
-                            children: (0, l.jsx)(i.A, {
-                                children: (0, l.jsx)(o.Ay, {
+                            children: (0, l.jsx)(d.A, {
+                                children: (0, l.jsx)(i.Ay, {
                                     columns: 2,
-                                    children: (0, l.jsxs)(d.Ym, {
+                                    children: (0, l.jsxs)(o.Ym, {
                                         direction: "vertical",
                                         children: [
                                             (0, l.jsx)(s.D, {
@@ -481,11 +486,11 @@ let R = {
         {
             name: "Interactive H Scroll",
             id: "interactive-h-scroll",
-            component: () => {
+            component: function () {
                 let [e, t] = n.useState(15),
                     [a, r] = n.useState(8),
-                    [s, d] = n.useState("xl"),
-                    [o, i] = n.useState(!0),
+                    [s, o] = n.useState("xl"),
+                    [i, d] = n.useState(!0),
                     c = n.useMemo(
                         () =>
                             [...Array(e)].map((e, t) =>
@@ -515,13 +520,13 @@ let R = {
                     );
                 return (0, l.jsxs)("div", {
                     children: [
-                        (0, l.jsx)(T.A, { gap: a, edgeFade: s, hideActionsWhenDisabled: o, children: c }),
+                        (0, l.jsx)(T.A, { gap: a, edgeFade: s, hideActionsWhenDisabled: i, children: c }),
                         (0, l.jsx)(C.nB, {}),
                         (0, l.jsxs)(C.MG, {
                             children: [
                                 (0, l.jsx)(V.S, {
-                                    checked: o,
-                                    onChange: () => i(!o),
+                                    checked: i,
+                                    onChange: () => d(!i),
                                     label: "Hide Actions When Disabled",
                                 }),
                                 (0, l.jsx)(w.k, {
@@ -549,7 +554,7 @@ let R = {
                             children: (0, l.jsx)(E.l, {
                                 value: s,
                                 options: P,
-                                onSelectionChange: d,
+                                onSelectionChange: o,
                                 label: "Edge Fade Space",
                                 selectionMode: "single",
                                 fullWidth: !0,
@@ -563,8 +568,8 @@ let R = {
         {
             name: "Carousel",
             id: "carousel",
-            component: (e) =>
-                (0, l.jsxs)(l.Fragment, {
+            component: function (e) {
+                return (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(r.E, {
                             variant: "text-lg/normal",
@@ -580,7 +585,7 @@ let R = {
                             children:
                                 "The carousel will pause slidding when the mouse hovers it, and resume on mouse leave.",
                         }),
-                        (0, l.jsx)(i.A, {
+                        (0, l.jsx)(d.A, {
                             children: (0, l.jsxs)(m.A, {
                                 ...e,
                                 children: [
@@ -593,7 +598,7 @@ let R = {
                                 ],
                             }),
                         }),
-                        (0, l.jsxs)(i.A, {
+                        (0, l.jsxs)(d.A, {
                             children: [
                                 (0, l.jsx)(r.E, {
                                     variant: "text-md/normal",
@@ -601,7 +606,7 @@ let R = {
                                         "Here is an example of what a carousel inside of a card might look like for showing off different products",
                                 }),
                                 (0, l.jsx)("br", {}),
-                                (0, l.jsx)(h.A, {
+                                (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: {
                                             background: "white",
@@ -626,7 +631,7 @@ let R = {
                                 }),
                             ],
                         }),
-                        (0, l.jsxs)(i.A, {
+                        (0, l.jsxs)(d.A, {
                             children: [
                                 (0, l.jsx)(r.E, {
                                     variant: "text-md/normal",
@@ -693,7 +698,8 @@ let R = {
                             ],
                         }),
                     ],
-                }),
+                });
+            },
             controls: {
                 slideDuration: {
                     label: "Slide Duration (production default is 5000)",
@@ -706,8 +712,8 @@ let R = {
         {
             name: "Skeleton",
             id: "skeleton",
-            component: () =>
-                (0, l.jsxs)(l.Fragment, {
+            component: function () {
+                return (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(r.E, {
                             variant: "text-lg/semibold",
@@ -724,7 +730,7 @@ let R = {
                             children:
                                 "Skeleton always puts a border radius on the shimmer. It might not match the child's radius.",
                         }),
-                        (0, l.jsxs)(i.A, {
+                        (0, l.jsxs)(d.A, {
                             children: [
                                 (0, l.jsx)(r.E, { variant: "text-md/normal", children: "Basic rectangular skeleton" }),
                                 (0, l.jsx)(H.A, {
@@ -739,8 +745,8 @@ let R = {
                             children:
                                 "Here we have a Grid with three Skeleton children that are wrapping three ShopProductCard to simulate a shop loading state",
                         }),
-                        (0, l.jsx)(i.A, {
-                            children: (0, l.jsxs)(o.Ay, {
+                        (0, l.jsx)(d.A, {
+                            children: (0, l.jsxs)(i.Ay, {
                                 columns: 3,
                                 children: [
                                     (0, l.jsx)(H.A, { children: (0, l.jsx)(F.A, { skuId: "1458472704192811088" }) }),
@@ -754,8 +760,8 @@ let R = {
                             children:
                                 "Here we have a Grid with two Skeleton children that are wrapping two FeaturedCollection to simulate a shop loading state",
                         }),
-                        (0, l.jsx)(i.A, {
-                            children: (0, l.jsxs)(o.Ay, {
+                        (0, l.jsx)(d.A, {
+                            children: (0, l.jsxs)(i.Ay, {
                                 columns: 2,
                                 children: [
                                     (0, l.jsx)(H.A, {
@@ -792,7 +798,8 @@ let R = {
                             }),
                         }),
                     ],
-                }),
+                });
+            },
             controls: {},
         },
     ],
@@ -802,7 +809,7 @@ var O = a(436476),
     G = a(650993),
     M = a(801966),
     W = a(200328);
-let N = (e) => {
+let N = function (e) {
     let { backgroundImage: t, href: a, ctaText: n } = e,
         s = (0, M.W)(n ?? "");
     return (0, l.jsx)("div", {
@@ -818,139 +825,144 @@ let N = (e) => {
     });
 };
 var z = a(834805);
-let K = () => (0, l.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } });
+function K() {
+    return (0, l.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } });
+}
 var U = a(74871);
-let _ = () => (0, l.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } }),
-    Y = {
-        title: "Heroes",
-        stories: [
-            {
-                name: "ContainedHero",
-                id: "contained-hero",
-                component: (e) => {
-                    let {
-                            containerHeight: t,
-                            showChildren: a,
-                            bannerSrc: n,
-                            animatedBannerSrc: r,
-                            logoSrc: s,
-                            href: d,
-                            backgroundColor: o,
-                        } = e,
-                        i = () =>
-                            a
-                                ? (0, l.jsxs)(T.A, {
-                                      children: [
-                                          (0, l.jsx)(K, {}),
-                                          (0, l.jsx)(K, {}),
-                                          (0, l.jsx)(K, {}),
-                                          (0, l.jsx)(K, {}),
-                                          (0, l.jsx)(K, {}),
-                                          (0, l.jsx)(K, {}),
-                                          (0, l.jsx)(K, {}),
-                                          (0, l.jsx)(K, {}),
-                                          (0, l.jsx)(K, {}),
-                                          (0, l.jsx)(K, {}),
-                                      ],
-                                  })
-                                : null;
-                    return (0, l.jsxs)(l.Fragment, {
-                        children: [
-                            (0, l.jsx)("div", {
-                                style: { height: a ? void 0 : t },
-                                children: (0, l.jsx)(z.A, {
-                                    bannerSrc: { src: n },
-                                    logoSrc: { src: s },
-                                    href: d,
-                                    backgroundColor: o,
-                                    children: i(),
-                                }),
+function _() {
+    return (0, l.jsx)("div", { style: { height: 250, width: 250, background: "pink", borderRadius: 6 } });
+}
+let Y = {
+    title: "Heroes",
+    stories: [
+        {
+            name: "ContainedHero",
+            id: "contained-hero",
+            component: function (e) {
+                let {
+                    containerHeight: t,
+                    showChildren: a,
+                    bannerSrc: n,
+                    animatedBannerSrc: r,
+                    logoSrc: s,
+                    href: o,
+                    backgroundColor: i,
+                } = e;
+                function d() {
+                    return a
+                        ? (0, l.jsxs)(T.A, {
+                              children: [
+                                  (0, l.jsx)(K, {}),
+                                  (0, l.jsx)(K, {}),
+                                  (0, l.jsx)(K, {}),
+                                  (0, l.jsx)(K, {}),
+                                  (0, l.jsx)(K, {}),
+                                  (0, l.jsx)(K, {}),
+                                  (0, l.jsx)(K, {}),
+                                  (0, l.jsx)(K, {}),
+                                  (0, l.jsx)(K, {}),
+                                  (0, l.jsx)(K, {}),
+                              ],
+                          })
+                        : null;
+                }
+                return (0, l.jsxs)(l.Fragment, {
+                    children: [
+                        (0, l.jsx)("div", {
+                            style: { height: a ? void 0 : t },
+                            children: (0, l.jsx)(z.A, {
+                                bannerSrc: { src: n },
+                                logoSrc: { src: s },
+                                href: o,
+                                backgroundColor: i,
+                                children: d(),
                             }),
-                            (0, l.jsx)("br", {}),
-                            (0, l.jsx)("div", {
-                                style: { height: a ? void 0 : t },
-                                children: (0, l.jsx)(z.A, {
-                                    bannerSrc: { src: r },
-                                    logoSrc: { src: s },
-                                    href: d,
-                                    backgroundColor: o,
-                                    children: i(),
-                                }),
-                            }),
-                        ],
-                    });
-                },
-                controls: {
-                    bannerSrc: {
-                        label: "Banner Source",
-                        type: "text",
-                        defaultValue:
-                            "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
-                    },
-                    animatedBannerSrc: {
-                        label: "Animated Banner Source (GIF/WebP)",
-                        type: "text",
-                        defaultValue:
-                            "https://cdn.discordapp.com/assets/content/5029a9a78bdc28cef510f1bfdac9addb8b88664ecd81902baccba38d3e1104b0",
-                    },
-                    logoSrc: {
-                        label: "Logo Source",
-                        type: "text",
-                        defaultValue:
-                            "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
-                    },
-                    backgroundColor: { label: "Background Color", type: "text", defaultValue: "#171D55" },
-                    href: { label: "Href", type: "text", defaultValue: "/shop?tab=catalog" },
-                    containerHeight: { label: "Container Height", type: "number", defaultValue: 150 },
-                    showChildren: { label: "Show Children", type: "boolean", defaultValue: !1 },
-                },
-            },
-            {
-                name: "FullHero",
-                id: "full-hero",
-                component: (e) => {
-                    let { bannerSrc: t, animatedBannerSrc: a, logoSrc: n, backgroundColor: r, href: s } = e;
-                    return (0, l.jsx)(U.A, {
-                        bannerSrc: "" !== a ? [{ src: a }, { src: t }] : { src: t },
-                        logoSrc: "" !== n ? { src: n } : void 0,
-                        backgroundColor: r,
-                        href: "" !== s ? s : void 0,
-                        children: (0, l.jsxs)(T.A, {
-                            children: [
-                                (0, l.jsx)(_, {}),
-                                (0, l.jsx)(_, {}),
-                                (0, l.jsx)(_, {}),
-                                (0, l.jsx)(_, {}),
-                                (0, l.jsx)(_, {}),
-                                (0, l.jsx)(_, {}),
-                                (0, l.jsx)(_, {}),
-                                (0, l.jsx)(_, {}),
-                                (0, l.jsx)(_, {}),
-                                (0, l.jsx)(_, {}),
-                            ],
                         }),
-                    });
-                },
-                controls: {
-                    bannerSrc: {
-                        label: "Banner Source",
-                        type: "text",
-                        defaultValue:
-                            "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
-                    },
-                    animatedBannerSrc: { label: "Animated Banner Source (GIF/WebP)", type: "text", defaultValue: "" },
-                    logoSrc: {
-                        label: "Logo Source",
-                        type: "text",
-                        defaultValue:
-                            "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
-                    },
-                    backgroundColor: { label: "Background Color", type: "text", defaultValue: "#171D55" },
-                    href: { label: "Href", type: "text", defaultValue: "/shop?tab=catalog" },
-                },
+                        (0, l.jsx)("br", {}),
+                        (0, l.jsx)("div", {
+                            style: { height: a ? void 0 : t },
+                            children: (0, l.jsx)(z.A, {
+                                bannerSrc: { src: r },
+                                logoSrc: { src: s },
+                                href: o,
+                                backgroundColor: i,
+                                children: d(),
+                            }),
+                        }),
+                    ],
+                });
             },
-        ],
-    };
+            controls: {
+                bannerSrc: {
+                    label: "Banner Source",
+                    type: "text",
+                    defaultValue:
+                        "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
+                },
+                animatedBannerSrc: {
+                    label: "Animated Banner Source (GIF/WebP)",
+                    type: "text",
+                    defaultValue:
+                        "https://cdn.discordapp.com/assets/content/5029a9a78bdc28cef510f1bfdac9addb8b88664ecd81902baccba38d3e1104b0",
+                },
+                logoSrc: {
+                    label: "Logo Source",
+                    type: "text",
+                    defaultValue:
+                        "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
+                },
+                backgroundColor: { label: "Background Color", type: "text", defaultValue: "#171D55" },
+                href: { label: "Href", type: "text", defaultValue: "/shop?tab=catalog" },
+                containerHeight: { label: "Container Height", type: "number", defaultValue: 150 },
+                showChildren: { label: "Show Children", type: "boolean", defaultValue: !1 },
+            },
+        },
+        {
+            name: "FullHero",
+            id: "full-hero",
+            component: function (e) {
+                let { bannerSrc: t, animatedBannerSrc: a, logoSrc: n, backgroundColor: r, href: s } = e;
+                return (0, l.jsx)(U.A, {
+                    bannerSrc: "" !== a ? [{ src: a }, { src: t }] : { src: t },
+                    logoSrc: "" !== n ? { src: n } : void 0,
+                    backgroundColor: r,
+                    href: "" !== s ? s : void 0,
+                    children: (0, l.jsxs)(T.A, {
+                        children: [
+                            (0, l.jsx)(_, {}),
+                            (0, l.jsx)(_, {}),
+                            (0, l.jsx)(_, {}),
+                            (0, l.jsx)(_, {}),
+                            (0, l.jsx)(_, {}),
+                            (0, l.jsx)(_, {}),
+                            (0, l.jsx)(_, {}),
+                            (0, l.jsx)(_, {}),
+                            (0, l.jsx)(_, {}),
+                            (0, l.jsx)(_, {}),
+                        ],
+                    }),
+                });
+            },
+            controls: {
+                bannerSrc: {
+                    label: "Banner Source",
+                    type: "text",
+                    defaultValue:
+                        "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
+                },
+                animatedBannerSrc: { label: "Animated Banner Source (GIF/WebP)", type: "text", defaultValue: "" },
+                logoSrc: {
+                    label: "Logo Source",
+                    type: "text",
+                    defaultValue:
+                        "https://cdn.discordapp.com/assets/content/272efe50874c7fc6e788078e6f8b5fdfc40a7de7358fe3672f1b5e3659047bda",
+                },
+                backgroundColor: { label: "Background Color", type: "text", defaultValue: "#171D55" },
+                href: { label: "Href", type: "text", defaultValue: "/shop?tab=catalog" },
+            },
+        },
+    ],
+};
 var J = a(619835),
     Q = a(561769),
     $ = a(817934),
@@ -961,8 +973,8 @@ var J = a(619835),
 function et(e) {
     let { value: t, onChange: r } = e,
         s = "json",
-        d = n.useRef(null),
-        [o, i] = n.useState("");
+        o = n.useRef(null),
+        [i, d] = n.useState("");
     return (
         n.useEffect(() => {
             let e = !1,
@@ -975,12 +987,12 @@ function et(e) {
                         let n = a.default;
                         if (null != t && n.hasLanguage(s)) {
                             let e = n.highlight(s, t, !0);
-                            if (null != e) return void i(e.value + "\n");
+                            if (null != e) return void d(e.value + "\n");
                         }
-                        i(l);
+                        d(l);
                     })
                     .catch(() => {
-                        e || i(l);
+                        e || d(l);
                     }),
                 () => {
                     e = !0;
@@ -1000,23 +1012,23 @@ function et(e) {
                         className: "hljs",
                         children: (0, l.jsx)("code", {
                             className: Z()("hljs", s),
-                            dangerouslySetInnerHTML: { __html: o ?? "" },
+                            dangerouslySetInnerHTML: { __html: i ?? "" },
                         }),
                     }),
                 }),
                 (0, l.jsx)("textarea", {
-                    ref: d,
+                    ref: o,
                     className: ee.mW,
                     value: t,
-                    onChange: (e) => {
+                    onChange: function (e) {
                         r(e.target.value);
                     },
-                    onScroll: (e) => {
+                    onScroll: function (e) {
                         let t = e.target,
                             a = t.previousElementSibling;
                         null != a && ((a.scrollTop = t.scrollTop), (a.scrollLeft = t.scrollLeft));
                     },
-                    onKeyDown: (e) => {
+                    onKeyDown: function (e) {
                         if ("Tab" === e.key) {
                             e.preventDefault();
                             let a = e.target,
@@ -1033,16 +1045,16 @@ function et(e) {
                                 s > 0 &&
                                     (r(t.substring(0, e) + t.substring(e + s)),
                                     setTimeout(() => {
-                                        if (null != d.current) {
+                                        if (null != o.current) {
                                             let t = Math.max(e, l - s);
-                                            d.current.selectionStart = d.current.selectionEnd = t;
+                                            o.current.selectionStart = o.current.selectionEnd = t;
                                         }
                                     }, 0));
                             } else
                                 r(t.substring(0, l) + "  " + t.substring(n)),
                                     setTimeout(() => {
-                                        null != d.current &&
-                                            (d.current.selectionStart = d.current.selectionEnd = l + 2);
+                                        null != o.current &&
+                                            (o.current.selectionStart = o.current.selectionEnd = l + 2);
                                     }, 0);
                         }
                     },
@@ -1063,7 +1075,7 @@ var ea = a(356118),
 let es = {
         name: "Remote Layouts",
         id: "remote-layouts",
-        component: (e) => {
+        component: function (e) {
             let { layoutId: t, tenantId: a } = e;
             return (0, l.jsx)(ea.Qs, { layoutId: t, tenantId: a });
         },
@@ -1072,10 +1084,10 @@ let es = {
             tenantId: { label: "Tenant Id", type: "text", defaultValue: el.FYj },
         },
     },
-    ed = {
+    eo = {
         name: "Remote Templates",
         id: "remote-templates",
-        component: (e) => {
+        component: function (e) {
             let { templateId: t, tenantId: a } = e;
             return (0, l.jsx)(ea.Z_, { templateId: t, tenantId: a });
         },
@@ -1084,17 +1096,17 @@ let es = {
             tenantId: { label: "Tenant Id", type: "text", defaultValue: el.FYj },
         },
     };
-var eo = a(3830),
-    ei = a(338124),
+var ei = a(3830),
+    ed = a(338124),
     ec = a(993077),
-    eh = a(824388);
-let eu = (e) => {
+    eu = a(824388);
+function eh(e) {
     let { color: t, children: a } = e;
     return (0, l.jsx)(ec.Z, {
         style: { backgroundColor: t, padding: "16px", minWidth: "100px", minHeight: "100px" },
         children: (0, l.jsx)(r.E, { variant: "text-md/semibold", children: a }),
     });
-};
+}
 var ex = a(32236),
     em = a(572204);
 let eb = {
@@ -1103,8 +1115,8 @@ let eb = {
         {
             name: "Button",
             id: "layout-system-button",
-            component: (e) =>
-                (0, l.jsxs)(l.Fragment, {
+            component: function (e) {
+                return (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(r.E, {
                             variant: "text-lg/semibold",
@@ -1113,36 +1125,36 @@ let eb = {
                         (0, l.jsxs)(S.B, {
                             direction: "vertical",
                             children: [
-                                (0, l.jsx)(eo.A, { ...e }),
+                                (0, l.jsx)(ei.A, { ...e }),
                                 (0, l.jsx)("hr", {}),
-                                (0, l.jsx)(eo.A, { href: e.href, ctaText: "Variant = primary", variant: "primary" }),
-                                (0, l.jsx)(eo.A, {
+                                (0, l.jsx)(ei.A, { href: e.href, ctaText: "Variant = primary", variant: "primary" }),
+                                (0, l.jsx)(ei.A, {
                                     href: e.href,
                                     ctaText: "Variant = secondary",
                                     variant: "secondary",
                                 }),
-                                (0, l.jsx)(eo.A, {
+                                (0, l.jsx)(ei.A, {
                                     href: e.href,
                                     ctaText: "Variant = critical-primary",
                                     variant: "critical-primary",
                                 }),
-                                (0, l.jsx)(eo.A, {
+                                (0, l.jsx)(ei.A, {
                                     href: e.href,
                                     ctaText: "Variant = critical-secondary",
                                     variant: "critical-secondary",
                                 }),
-                                (0, l.jsx)(eo.A, { href: e.href, ctaText: "Variant = active", variant: "active" }),
-                                (0, l.jsx)(eo.A, {
+                                (0, l.jsx)(ei.A, { href: e.href, ctaText: "Variant = active", variant: "active" }),
+                                (0, l.jsx)(ei.A, {
                                     href: e.href,
                                     ctaText: "Variant = overlay-primary",
                                     variant: "overlay-primary",
                                 }),
-                                (0, l.jsx)(eo.A, {
+                                (0, l.jsx)(ei.A, {
                                     href: e.href,
                                     ctaText: "Variant = overlay-secondary",
                                     variant: "overlay-secondary",
                                 }),
-                                (0, l.jsx)(eo.A, {
+                                (0, l.jsx)(ei.A, {
                                     href: e.href,
                                     ctaText: "Variant = expressive",
                                     variant: "expressive",
@@ -1150,7 +1162,8 @@ let eb = {
                             ],
                         }),
                     ],
-                }),
+                });
+            },
             controls: {
                 href: { type: "text", label: "URL", defaultValue: "https://discord.com" },
                 ctaText: { type: "text", label: "Button Text", defaultValue: "Click Me" },
@@ -1174,26 +1187,27 @@ let eb = {
         {
             name: "Heading",
             id: "layout-system-heading",
-            component: (e) =>
-                (0, l.jsxs)(l.Fragment, {
+            component: function (e) {
+                return (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(r.E, {
                             variant: "text-lg/semibold",
                             children: "Heading component for Layout System content.",
                         }),
-                        (0, l.jsx)(ei.A, { ...e }),
+                        (0, l.jsx)(ed.A, { ...e }),
                         (0, l.jsx)("hr", {}),
-                        (0, l.jsx)(ei.A, { content: "Variant = heading-sm/normal", variant: "heading-sm/normal" }),
-                        (0, l.jsx)(ei.A, { content: "Variant = heading-sm/medium", variant: "heading-sm/medium" }),
-                        (0, l.jsx)(ei.A, { content: "Variant = heading-sm/semibold", variant: "heading-sm/semibold" }),
-                        (0, l.jsx)(ei.A, { content: "Variant = heading-md/normal", variant: "heading-md/normal" }),
-                        (0, l.jsx)(ei.A, { content: "Variant = heading-md/medium", variant: "heading-md/medium" }),
-                        (0, l.jsx)(ei.A, { content: "Variant = heading-md/semibold", variant: "heading-md/semibold" }),
-                        (0, l.jsx)(ei.A, { content: "Variant = heading-lg/normal", variant: "heading-lg/normal" }),
-                        (0, l.jsx)(ei.A, { content: "Variant = heading-lg/medium", variant: "heading-lg/medium" }),
-                        (0, l.jsx)(ei.A, { content: "Variant = heading-lg/semibold", variant: "heading-lg/semibold" }),
+                        (0, l.jsx)(ed.A, { content: "Variant = heading-sm/normal", variant: "heading-sm/normal" }),
+                        (0, l.jsx)(ed.A, { content: "Variant = heading-sm/medium", variant: "heading-sm/medium" }),
+                        (0, l.jsx)(ed.A, { content: "Variant = heading-sm/semibold", variant: "heading-sm/semibold" }),
+                        (0, l.jsx)(ed.A, { content: "Variant = heading-md/normal", variant: "heading-md/normal" }),
+                        (0, l.jsx)(ed.A, { content: "Variant = heading-md/medium", variant: "heading-md/medium" }),
+                        (0, l.jsx)(ed.A, { content: "Variant = heading-md/semibold", variant: "heading-md/semibold" }),
+                        (0, l.jsx)(ed.A, { content: "Variant = heading-lg/normal", variant: "heading-lg/normal" }),
+                        (0, l.jsx)(ed.A, { content: "Variant = heading-lg/medium", variant: "heading-lg/medium" }),
+                        (0, l.jsx)(ed.A, { content: "Variant = heading-lg/semibold", variant: "heading-lg/semibold" }),
                     ],
-                }),
+                });
+            },
             controls: {
                 content: { type: "text", label: "Content", defaultValue: "Hello, world!" },
                 variant: {
@@ -1217,8 +1231,8 @@ let eb = {
         {
             name: "Stack",
             id: "layout-system-stack",
-            component: (e) =>
-                (0, l.jsxs)(l.Fragment, {
+            component: function (e) {
+                return (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(r.E, {
                             variant: "text-lg/semibold",
@@ -1226,12 +1240,12 @@ let eb = {
                         }),
                         (0, l.jsx)("div", {
                             style: { border: "1px dashed #ccc", padding: "16px" },
-                            children: (0, l.jsxs)(eh.A, {
+                            children: (0, l.jsxs)(eu.A, {
                                 ...e,
                                 children: [
-                                    (0, l.jsx)(eu, { color: "#5865F2", children: "Item 1" }),
-                                    (0, l.jsx)(eu, { color: "#57F287", children: "Item 2" }),
-                                    (0, l.jsx)(eu, { color: "#FEE75C", children: "Item 3" }),
+                                    (0, l.jsx)(eh, { color: "#5865F2", children: "Item 1" }),
+                                    (0, l.jsx)(eh, { color: "#57F287", children: "Item 2" }),
+                                    (0, l.jsx)(eh, { color: "#FEE75C", children: "Item 3" }),
                                 ],
                             }),
                         }),
@@ -1239,31 +1253,32 @@ let eb = {
                         (0, l.jsx)(r.E, { variant: "text-md/semibold", children: "Horizontal Stack" }),
                         (0, l.jsx)("div", {
                             style: { border: "1px dashed #ccc", padding: "16px" },
-                            children: (0, l.jsxs)(eh.A, {
+                            children: (0, l.jsxs)(eu.A, {
                                 ...e,
                                 direction: "horizontal",
                                 children: [
-                                    (0, l.jsx)(eu, { color: "#5865F2", children: "Item 1" }),
-                                    (0, l.jsx)(eu, { color: "#57F287", children: "Item 2" }),
-                                    (0, l.jsx)(eu, { color: "#FEE75C", children: "Item 3" }),
+                                    (0, l.jsx)(eh, { color: "#5865F2", children: "Item 1" }),
+                                    (0, l.jsx)(eh, { color: "#57F287", children: "Item 2" }),
+                                    (0, l.jsx)(eh, { color: "#FEE75C", children: "Item 3" }),
                                 ],
                             }),
                         }),
                         (0, l.jsx)(r.E, { variant: "text-md/semibold", children: "Vertical Stack" }),
                         (0, l.jsx)("div", {
                             style: { border: "1px dashed #ccc", padding: "16px" },
-                            children: (0, l.jsxs)(eh.A, {
+                            children: (0, l.jsxs)(eu.A, {
                                 ...e,
                                 direction: "vertical",
                                 children: [
-                                    (0, l.jsx)(eu, { color: "#5865F2", children: "Item 1" }),
-                                    (0, l.jsx)(eu, { color: "#57F287", children: "Item 2" }),
-                                    (0, l.jsx)(eu, { color: "#FEE75C", children: "Item 3" }),
+                                    (0, l.jsx)(eh, { color: "#5865F2", children: "Item 1" }),
+                                    (0, l.jsx)(eh, { color: "#57F287", children: "Item 2" }),
+                                    (0, l.jsx)(eh, { color: "#FEE75C", children: "Item 3" }),
                                 ],
                             }),
                         }),
                     ],
-                }),
+                });
+            },
             controls: {
                 direction: {
                     type: "select",
@@ -1302,8 +1317,8 @@ let eb = {
         {
             name: "Text",
             id: "layout-system-text",
-            component: (e) =>
-                (0, l.jsxs)(l.Fragment, {
+            component: function (e) {
+                return (0, l.jsxs)(l.Fragment, {
                     children: [
                         (0, l.jsx)(r.E, {
                             variant: "text-lg/semibold",
@@ -1322,7 +1337,8 @@ let eb = {
                         (0, l.jsx)(ex.A, { content: "Variant = text-lg/medium", variant: "text-lg/medium" }),
                         (0, l.jsx)(ex.A, { content: "Variant = text-lg/semibold", variant: "text-lg/semibold" }),
                     ],
-                }),
+                });
+            },
             controls: {
                 content: { type: "text", label: "Content", defaultValue: "Hello, world!" },
                 variant: {
@@ -1347,14 +1363,15 @@ let eb = {
         {
             name: "Tooltip",
             id: "layout-system-tooltip",
-            component: (e) =>
-                (0, l.jsx)(em.A, {
+            component: function (e) {
+                return (0, l.jsx)(em.A, {
                     ...e,
                     children: (0, l.jsx)("div", {
                         style: { width: 300, background: "pink", borderRadius: 8, padding: 12 },
                         children: (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Hover me." }),
                     }),
-                }),
+                });
+            },
             controls: {
                 text: { type: "text", label: "Content", defaultValue: "Hello, world!" },
                 position: {
@@ -1442,9 +1459,9 @@ let ef = {
             {
                 name: "SkuList",
                 id: "skulist",
-                component: (e) => {
-                    let { skuIds: t, sortPurchased: a, eagerLoad: n, showSkeleton: d } = e,
-                        i = (0, eg.e)();
+                component: function (e) {
+                    let { skuIds: t, sortPurchased: a, eagerLoad: n, showSkeleton: o } = e,
+                        d = (0, eg.e)();
                     return (0, l.jsxs)("div", {
                         children: [
                             (0, l.jsx)(s.D, {
@@ -1462,15 +1479,15 @@ let ef = {
                                     "This will be useful when wanting to get a dynamic list of sku ids from the server (like popular picks) and push them into a product grid",
                             }),
                             (0, l.jsx)("br", {}),
-                            (0, l.jsx)(o.Ay, {
+                            (0, l.jsx)(i.Ay, {
                                 columns: 3,
                                 children: (0, l.jsx)(ej.A, {
                                     skuIds: t?.split(","),
                                     skuBlock: "ShopProductCard",
                                     sortPurchased: a,
                                     eagerLoad: n,
-                                    showSkeleton: d,
-                                    componentMap: i,
+                                    showSkeleton: o,
+                                    componentMap: d,
                                 }),
                             }),
                             (0, l.jsx)("hr", {}),
@@ -1555,8 +1572,8 @@ let ef = {
             {
                 name: "SubLayout",
                 id: "sub-layout-basic",
-                component: () =>
-                    (0, l.jsxs)("div", {
+                component: function () {
+                    return (0, l.jsxs)("div", {
                         children: [
                             (0, l.jsx)(s.D, {
                                 variant: "heading-lg/bold",
@@ -1577,14 +1594,15 @@ let ef = {
                             (0, l.jsx)("br", {}),
                             (0, l.jsx)(ea.Ay, { layout: $.uG }),
                         ],
-                    }),
+                    });
+                },
                 controls: {},
             },
             {
                 name: "SubLayout - Loading State",
                 id: "sub-layout-skeleton",
-                component: () =>
-                    (0, l.jsxs)("div", {
+                component: function () {
+                    return (0, l.jsxs)("div", {
                         children: [
                             (0, l.jsx)(s.D, {
                                 variant: "heading-lg/bold",
@@ -1601,7 +1619,8 @@ let ef = {
                             (0, l.jsx)("br", {}),
                             (0, l.jsx)(ea.Ay, { layout: ef }),
                         ],
-                    }),
+                    });
+                },
                 controls: {},
             },
         ],
@@ -1612,7 +1631,7 @@ var ey = a(575593),
     eS = a(780898),
     eI = a(174755),
     eV = a(486020);
-let ew = (e) => {
+let ew = function (e) {
     let { skuId: t, size: a = 128, animated: n = !1 } = e,
         { product: r } = (0, ek.q)(t, !0),
         s = r?.items[0];
@@ -1666,7 +1685,7 @@ let eT = {
                     {
                         name: "Orb Home (sample)",
                         id: "orb-home",
-                        component: () => {
+                        component: function () {
                             let e = {
                                 id: "orb-home",
                                 children: [
@@ -1811,11 +1830,11 @@ let eT = {
                         controls: {},
                     },
                     es,
-                    ed,
+                    eo,
                     {
                         name: "Themed Images",
                         id: "themed-images",
-                        component: (e) => {
+                        component: function (e) {
                             let { lightAsset: t, darkAsset: a } = e,
                                 n = {
                                     id: "themed-images",
@@ -1870,7 +1889,7 @@ let eT = {
                     {
                         name: "Layout System String",
                         id: "layout-system-string",
-                        component: (e) => {
+                        component: function (e) {
                             let { text: t } = e;
                             (0, en.useSyncMessages)(er.c);
                             let a = (0, M.W)(t);
@@ -1909,7 +1928,7 @@ let eT = {
                     {
                         name: "NarrowContent",
                         id: "narrow-content",
-                        component: (e) => {
+                        component: function (e) {
                             let { padding: t } = e;
                             return (0, l.jsx)("div", {
                                 style: { background: "#5865f2", width: "100%" },
@@ -1927,7 +1946,7 @@ let eT = {
                     {
                         name: "FullBleedContent",
                         id: "full-bleed-content",
-                        component: (e) => {
+                        component: function (e) {
                             let { padding: t } = e;
                             return (0, l.jsx)("div", {
                                 style: { background: "#5865f2", width: "100%" },
@@ -1950,7 +1969,7 @@ let eT = {
                     {
                         name: "FeaturedChip",
                         id: "featured-chip",
-                        component: (e) => {
+                        component: function (e) {
                             let { backgroundImage: t, ...a } = e,
                                 n = { backgroundImage: { src: t }, ...a };
                             return (0, l.jsxs)("div", {
@@ -1960,11 +1979,11 @@ let eT = {
                                         children:
                                             "Featured Chip will take up the full width of the parent, so it is best suited for LayoutSystemStack or Grid parents",
                                     }),
-                                    (0, l.jsx)(i.A, { children: (0, l.jsx)(G.A, { ...n }) }),
-                                    (0, l.jsxs)(i.A, {
+                                    (0, l.jsx)(d.A, { children: (0, l.jsx)(G.A, { ...n }) }),
+                                    (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Grid (3):" }),
-                                            (0, l.jsxs)(o.Ay, {
+                                            (0, l.jsxs)(i.Ay, {
                                                 columns: 3,
                                                 children: [
                                                     (0, l.jsx)(G.A, { ...n }),
@@ -1977,10 +1996,10 @@ let eT = {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsxs)(i.A, {
+                                    (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Stack:" }),
-                                            (0, l.jsxs)(d.Ym, {
+                                            (0, l.jsxs)(o.Ym, {
                                                 direction: "horizontal",
                                                 children: [
                                                     (0, l.jsx)(G.A, { ...n }),
@@ -2008,21 +2027,21 @@ let eT = {
                     {
                         name: "FeaturedCollection",
                         id: "featured-collection",
-                        component: (e) => {
+                        component: function (e) {
                             let {
                                     columns: t,
                                     backgroundImage: a,
                                     logoSrc: n,
                                     supplementalImage: s,
                                     ctaText: c,
-                                    href: h,
+                                    href: u,
                                 } = e,
-                                u = {
+                                h = {
                                     backgroundImage: { src: a },
                                     logoSrc: { src: n },
                                     supplementalImage: { src: s },
                                     ctaText: c,
-                                    href: h,
+                                    href: u,
                                 };
                             return (0, l.jsxs)("div", {
                                 children: [
@@ -2031,29 +2050,29 @@ let eT = {
                                         children:
                                             "Featured Collection will take up the full width of the parent, so it is best suited for LayoutSystemStack or Grid parents",
                                     }),
-                                    (0, l.jsx)(i.A, { children: (0, l.jsx)(x.A, { ...u }) }),
-                                    (0, l.jsxs)(i.A, {
+                                    (0, l.jsx)(d.A, { children: (0, l.jsx)(x.A, { ...h }) }),
+                                    (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsxs)(r.E, {
                                                 variant: "text-lg/semibold",
                                                 children: ["Grid (", t, "):"],
                                             }),
-                                            (0, l.jsxs)(o.Ay, {
+                                            (0, l.jsxs)(i.Ay, {
                                                 columns: t,
-                                                children: [(0, l.jsx)(x.A, { ...u }), (0, l.jsx)(x.A, { ...u })],
+                                                children: [(0, l.jsx)(x.A, { ...h }), (0, l.jsx)(x.A, { ...h })],
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsxs)(i.A, {
+                                    (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Stack:" }),
-                                            (0, l.jsxs)(d.Ym, {
+                                            (0, l.jsxs)(o.Ym, {
                                                 direction: "horizontal",
                                                 children: [
-                                                    (0, l.jsx)(x.A, { ...u }),
-                                                    (0, l.jsx)(x.A, { ...u }),
-                                                    (0, l.jsx)(x.A, { ...u }),
-                                                    (0, l.jsx)(x.A, { ...u }),
+                                                    (0, l.jsx)(x.A, { ...h }),
+                                                    (0, l.jsx)(x.A, { ...h }),
+                                                    (0, l.jsx)(x.A, { ...h }),
+                                                    (0, l.jsx)(x.A, { ...h }),
                                                 ],
                                             }),
                                         ],
@@ -2088,17 +2107,17 @@ let eT = {
                     {
                         name: "FeaturedProduct",
                         id: "featured-product",
-                        component: (e) => {
+                        component: function (e) {
                             let { backgroundImage: t, ...a } = e,
                                 n = { backgroundImage: { src: t }, ...a };
                             return (0, l.jsxs)("div", {
                                 children: [
                                     (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "PLACEHOLDER" }),
-                                    (0, l.jsx)(i.A, { children: (0, l.jsx)(N, { ...n }) }),
-                                    (0, l.jsxs)(i.A, {
+                                    (0, l.jsx)(d.A, { children: (0, l.jsx)(N, { ...n }) }),
+                                    (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Grid (3):" }),
-                                            (0, l.jsxs)(o.Ay, {
+                                            (0, l.jsxs)(i.Ay, {
                                                 columns: 3,
                                                 children: [
                                                     (0, l.jsx)(N, { ...n }),
@@ -2111,10 +2130,10 @@ let eT = {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsxs)(i.A, {
+                                    (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Stack:" }),
-                                            (0, l.jsxs)(d.Ym, {
+                                            (0, l.jsxs)(o.Ym, {
                                                 direction: "horizontal",
                                                 children: [
                                                     (0, l.jsx)(N, { ...n }),
@@ -2150,7 +2169,7 @@ let eT = {
                     {
                         name: "ShopProductCard",
                         id: "shopProduct-card",
-                        component: (e) => {
+                        component: function (e) {
                             let { skuId: t } = e;
                             return (0, l.jsx)("div", { children: (0, l.jsx)(F.A, { skuId: t }) });
                         },
@@ -2159,7 +2178,7 @@ let eT = {
                     {
                         name: "SkuPreview",
                         id: "skupreview",
-                        component: (e) => {
+                        component: function (e) {
                             let { skuId: t } = e;
                             return (0, l.jsxs)("div", {
                                 children: [
@@ -2242,8 +2261,8 @@ let eT = {
                     {
                         name: "The Any Block",
                         id: "any",
-                        component: () =>
-                            (0, l.jsxs)("div", {
+                        component: function () {
+                            return (0, l.jsxs)("div", {
                                 children: [
                                     (0, l.jsx)(r.E, {
                                         variant: "text-md/semibold",
@@ -2255,19 +2274,20 @@ let eT = {
                                         children:
                                             "It's ONLY use is to be overriden by another block in `useComponentRegistry`",
                                     }),
-                                    (0, l.jsx)(i.A, { children: (0, l.jsx)(eE.A, {}) }),
+                                    (0, l.jsx)(d.A, { children: (0, l.jsx)(eE.A, {}) }),
                                 ],
-                            }),
+                            });
+                        },
                         controls: {},
                     },
                     {
                         name: "Image",
                         id: "layout-system-image",
-                        component: (e) => {
+                        component: function (e) {
                             let { imageSrc: t, videoSrc: a } = e;
                             return (0, l.jsxs)("div", {
                                 children: [
-                                    (0, l.jsxs)(i.A, {
+                                    (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Static image" }),
                                             (0, l.jsx)("div", {
@@ -2276,7 +2296,7 @@ let eT = {
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsxs)(i.A, {
+                                    (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsx)(r.E, { variant: "text-lg/semibold", children: "Video asset" }),
                                             (0, l.jsx)("div", {

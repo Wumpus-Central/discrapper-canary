@@ -58,28 +58,30 @@ function V(e, t) {
         u = O.A.isEmail(r),
         c = O.A.isPhoneNumber(r),
         d = O.A.isUserTagLike(r),
-        h = null != o && (0, w.jq)(o),
-        f = (e) => (null == e ? null : e.type === _.rD.IN_APP_NAVIGATION ? e.type + "_" + e.record.type : e.type),
-        p = {
-            current_channel_id: h ? void 0 : o,
-            current_channel_static_route: h ? o : void 0,
-            current_guild_id: a,
-            query_mode: i ?? "GENERAL",
-            query_length: r.length,
-            max_query_length: s,
-            is_email_like: u,
-            is_phone_like: c,
-            is_username_like: d,
-            query: u || c || d ? null : r,
-            top_result_type: f(l),
-            top_result_score: null != l ? l.score : null,
-            num_results_total: D.A.getResultTotals(),
-            num_results_users: D.A.getResultTotals(_.rD.USER),
-            num_results_text_channels: D.A.getResultTotals(_.rD.TEXT_CHANNEL),
-            num_results_voice_channels: D.A.getResultTotals(_.rD.VOICE_CHANNEL),
-            num_results_guilds: D.A.getResultTotals(_.rD.GUILD),
-            num_results_group_dms: D.A.getResultTotals(_.rD.GROUP_DM),
-        };
+        h = null != o && (0, w.jq)(o);
+    function f(e) {
+        return null == e ? null : e.type === _.rD.IN_APP_NAVIGATION ? e.type + "_" + e.record.type : e.type;
+    }
+    let p = {
+        current_channel_id: h ? void 0 : o,
+        current_channel_static_route: h ? o : void 0,
+        current_guild_id: a,
+        query_mode: i ?? "GENERAL",
+        query_length: r.length,
+        max_query_length: s,
+        is_email_like: u,
+        is_phone_like: c,
+        is_username_like: d,
+        query: u || c || d ? null : r,
+        top_result_type: f(l),
+        top_result_score: null != l ? l.score : null,
+        num_results_total: D.A.getResultTotals(),
+        num_results_users: D.A.getResultTotals(_.rD.USER),
+        num_results_text_channels: D.A.getResultTotals(_.rD.TEXT_CHANNEL),
+        num_results_voice_channels: D.A.getResultTotals(_.rD.VOICE_CHANNEL),
+        num_results_guilds: D.A.getResultTotals(_.rD.GUILD),
+        num_results_group_dms: D.A.getResultTotals(_.rD.GROUP_DM),
+    };
     if (null != o) {
         let e = y.A.getChannel(o);
         p.current_channel_type = null != e ? e.type : null;

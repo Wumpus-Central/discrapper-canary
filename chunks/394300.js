@@ -3,7 +3,9 @@ n.d(t, { A: () => o, P: () => a });
 var i = n(32731),
     r = n(520606),
     s = n(652215);
-let a = (e) => e instanceof o;
+function a(e) {
+    return e instanceof o;
+}
 class o extends r.A {
     sku;
     constructor(e) {

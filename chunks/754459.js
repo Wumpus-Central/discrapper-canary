@@ -25,10 +25,10 @@ function a(e, t) {
         }, []);
     return (
         i.useEffect(() => {
-            let t = (e) => {
+            function t(e) {
                 let { emojiPicker: t, emojiBurstPicker: n } = e;
                 return m({ emojiPicker: t, emojiBurstPicker: n });
-            };
+            }
             return (
                 l._.subscribeKeyed(s.zOV.TOGGLE_REACTION_POPOUT, e, t),
                 () => void l._.unsubscribeKeyed(s.zOV.TOGGLE_REACTION_POPOUT, e, t)

@@ -47,7 +47,7 @@ function g(e) {
     let b = T >= m.length - 1,
         D = y ? o.oM.GREEN : o.oM.PRIMARY;
     return (0, i.jsx)(o.ST, {
-        text: (() => {
+        text: (function () {
             if (!y) return t;
             let e = (0, s.clamp)(T - 1, 0, m.length - 1),
                 n = m[e] ?? m[0];
@@ -58,7 +58,7 @@ function g(e) {
         dataMeticulousIgnore: I,
         color: D,
         forceOpen: N,
-        onAnimationRest: (e, t) => {
+        onAnimationRest: function (e, t) {
             !N && y && t.phase === _.lLE.LEAVE && C(!1);
         },
         children: (e) => {

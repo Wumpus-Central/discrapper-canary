@@ -79,7 +79,7 @@ function P(e, t) {
     }
     return !1;
 }
-let x = (e, t) => {
+function x(e, t) {
     if (0 !== e.length) {
         if (t) return void (0, S.jd)(e);
         (0, S.j1)(
@@ -87,7 +87,7 @@ let x = (e, t) => {
             e.map((e) => e.id),
         );
     }
-};
+}
 function k(e) {
     return null == L[w(e)];
 }

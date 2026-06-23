@@ -182,15 +182,19 @@ function q(e) {
         D = (0, o.bG)([p.A], () => p.A.getGuild(s.guild_id)),
         L = (0, E.A)(s),
         M = (0, f.Ay)(s),
-        P = r.useId(),
-        x = () =>
-            (0, i.jsx)("div", { className: z.o1, children: (0, i.jsx)(K.Ay, { channel: s, onAction: R, onClose: C }) }),
-        k =
-            s.isDM() || s.isGroupDM()
-                ? H.intl.string(H.t["9FaEzi"])
-                : s.isGuildStageVoice()
-                  ? H.intl.string(H.t.QygGCN)
-                  : H.intl.string(H.t.msxteM);
+        P = r.useId();
+    function x() {
+        return (0, i.jsx)("div", {
+            className: z.o1,
+            children: (0, i.jsx)(K.Ay, { channel: s, onAction: R, onClose: C }),
+        });
+    }
+    let k =
+        s.isDM() || s.isGroupDM()
+            ? H.intl.string(H.t["9FaEzi"])
+            : s.isGuildStageVoice()
+              ? H.intl.string(H.t.QygGCN)
+              : H.intl.string(H.t.msxteM);
     return (0, i.jsx)(h.f5, {
         value: v,
         children: (0, i.jsxs)(I.A, {

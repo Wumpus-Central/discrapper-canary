@@ -2,7 +2,7 @@
 n.d(t, { _: () => s });
 var i = n(627968),
     r = n(192308);
-let s = function () {
+function s() {
     let {
         initialBadgeId: e,
         targetUserId: t,
@@ -24,4 +24,4 @@ let s = function () {
         },
         { stackingBehavior: o ?? "stack" },
     );
-};
+}

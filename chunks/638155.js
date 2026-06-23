@@ -77,15 +77,15 @@ function v(t) {
                 monthlySpend: a,
                 save: E,
             };
-        })(v),
-        I = async () => {
-            try {
-                await G(), (0, d.P0)((0, c.o)(S.intl.string(b.default["2WKfG1"]), g.Ck.SUCCESS)), n();
-            } catch {
-                (0, d.P0)((0, c.o)(S.intl.string(b.default.Wu8BK2), g.Ck.FAILURE));
-            }
-        },
-        R = [
+        })(v);
+    async function I() {
+        try {
+            await G(), (0, d.P0)((0, c.o)(S.intl.string(b.default["2WKfG1"]), g.Ck.SUCCESS)), n();
+        } catch {
+            (0, d.P0)((0, c.o)(S.intl.string(b.default.Wu8BK2), g.Ck.FAILURE));
+        }
+    }
+    let R = [
             { variant: "secondary", text: S.intl.string(S.t["ETE/oC"]), onClick: n, disabled: w },
             B
                 ? {

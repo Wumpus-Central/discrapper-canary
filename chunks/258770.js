@@ -27,13 +27,13 @@ function m(t) {
 }
 function h(t) {
     let { guildId: s, demonetized: r, transitionState: a, onClose: x } = t,
-        [h, { loading: u, error: p }] = (0, c.A)(r ? o.Y7 : o.KW),
-        j = async () => {
-            try {
-                let t = await h(s);
-                null != t && x?.();
-            } catch (t) {}
-        };
+        [h, { loading: u, error: p }] = (0, c.A)(r ? o.Y7 : o.KW);
+    async function j() {
+        try {
+            let t = await h(s);
+            null != t && x?.();
+        } catch (t) {}
+    }
     return (0, e.jsx)(i.Modal, {
         size: "md",
         transitionState: a,

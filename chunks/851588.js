@@ -129,15 +129,15 @@ function Z(e) {
         H = (0, n.bG)([P.A], () => (null != U ? P.A.getGuild(U) : null)),
         q = d.useRef(null),
         { isHoveringOrFocusing: B } = (0, p.A)(q);
+    function K(e) {
+        k?.(),
+            V.dispatch(Q.jej.POPOUT_CLOSE),
+            (0, m.openUserProfileModal)({ sourceAnalyticsLocations: F, hideRestrictedProfile: !0, ...W, ...e });
+    }
     d.useEffect(() => {
         N?.(q?.current);
     }, [q, N]);
-    let K = (e) => {
-            k?.(),
-                V.dispatch(Q.jej.POPOUT_CLOSE),
-                (0, m.openUserProfileModal)({ sourceAnalyticsLocations: F, hideRestrictedProfile: !0, ...W, ...e });
-        },
-        Z = S ? "div" : o.l,
+    let Z = S ? "div" : o.l,
         $ = (0, A.GV)(),
         ee = f.Ay.useName(U, v, i);
     return (0, s.jsx)(c.f5, {

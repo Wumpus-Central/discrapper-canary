@@ -6,7 +6,7 @@ var i = n(64700),
     a = n(317097),
     o = n(17928),
     l = n(775602);
-let u = (e) => {
+let u = function (e) {
     let t = (0, o.bG)([l.Ay], () => (l.Ay.desaturateUserColors ? l.Ay.saturation : 1));
     return (0, i.useMemo)(() => {
         let { h: n, s: i, l: r } = s()((0, a.Hl)(e)).toHsl(),

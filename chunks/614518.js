@@ -9,11 +9,11 @@ var i = n(735438),
 n(806931);
 let c = [],
     d = {},
-    m = [],
-    p = (e) => {
-        null != e && a.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
-    },
-    g = [],
+    m = [];
+function p(e) {
+    null != e && a.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
+}
+let g = [],
     h = 10 * o.A.Millis.SECOND,
     f = (0, i.debounce)(() => {
         let e = (0, u.fr)(m);
@@ -35,15 +35,15 @@ class A extends s.Ay.Store {
     }
 }
 let x = new A(a.h, {
-    VOICE_CHANNEL_EFFECT_CLEAR: (e) => {
+    VOICE_CHANNEL_EFFECT_CLEAR: function (e) {
         let { userId: t } = e;
         null != d[t] && delete d[t];
     },
-    VOICE_CHANNEL_EFFECT_RECENT_EMOJI: (e) => {
+    VOICE_CHANNEL_EFFECT_RECENT_EMOJI: function (e) {
         let { emoji: t } = e;
         null != t && (c.unshift(t), (c = (0, i.uniqBy)(c, "name")).length > 9 && c.pop());
     },
-    VOICE_CHANNEL_EFFECT_SEND: (e) => {
+    VOICE_CHANNEL_EFFECT_SEND: function (e) {
         let { emoji: t, userId: n, animationType: l } = e;
         null != t &&
             null != l &&
@@ -59,7 +59,7 @@ let x = new A(a.h, {
             n < h && (l = new Date(e.getTime() + h - n));
         }
     },
-    VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: (e) => {
+    VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: function (e) {
         let { cooldownEndsAtMs: t } = e;
         l = new Date(Date.now() + t);
     },

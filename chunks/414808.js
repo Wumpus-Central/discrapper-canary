@@ -24,29 +24,29 @@ function g(e) {
         { analyticsLocations: y } = (0, u.Ay)(l.A.FAVORITES_GUILD_MENU_ITEM),
         C = (0, s.bG)([d.A], () => d.A.hasStoredFavorites());
     r.useLayoutEffect(() => {
-        if (null == t.current) return;
-        let e = () => {
+        if (null != t.current)
+            return (
+                e(),
+                window.addEventListener("resize", e),
+                window.addEventListener("scroll", e, !0),
+                () => {
+                    null != T.current && (window.cancelAnimationFrame(T.current), (T.current = null)),
+                        window.removeEventListener("resize", e),
+                        window.removeEventListener("scroll", e, !0);
+                }
+            );
+        function e() {
             null == T.current &&
                 (T.current = window.requestAnimationFrame(() => {
                     (T.current = null),
-                        (() => {
+                        (function () {
                             let e = t.current?.getBoundingClientRect();
                             if (null == e) return;
                             let n = I.current?.getBoundingClientRect().height ?? 0;
                             A(window.innerHeight - e.top < n ? "bottom" : "top");
                         })();
                 }));
-        };
-        return (
-            e(),
-            window.addEventListener("resize", e),
-            window.addEventListener("scroll", e, !0),
-            () => {
-                null != T.current && (window.cancelAnimationFrame(T.current), (T.current = null)),
-                    window.removeEventListener("resize", e),
-                    window.removeEventListener("scroll", e, !0);
-            }
-        );
+        }
     }, [t]);
     let N = r.useCallback(() => {
             n?.(h.i.TAKE_ACTION), S || (0, c.A)({ subscriptionTier: f.pe.TIER_2, analyticsLocations: y });

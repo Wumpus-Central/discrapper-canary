@@ -20,8 +20,8 @@ function u(t) {
             onPasswordChange: x,
             variant: C = "primary",
         } = t,
-        [k, v] = l.useState(""),
-        [w, f] = l.useState(null),
+        [f, k] = l.useState(""),
+        [v, w] = l.useState(null),
         [g, j] = l.useState(!1),
         N = l.useCallback(async () => {
             await b();
@@ -35,10 +35,10 @@ function u(t) {
                   })
                 : null;
     return (0, s.jsx)("form", {
-        onSubmit: (t) => {
+        onSubmit: function (t) {
             t.preventDefault(),
                 j(!0),
-                h(k)
+                h(f)
                     .then(
                         (t) => b(t ?? void 0),
                         (t) => {
@@ -48,8 +48,8 @@ function u(t) {
                                 (e = t.body),
                                 (null == y || e?.code !== y) &&
                                     (t.body.password
-                                        ? (f(t.body.password), j(!1))
-                                        : t.body.message && (f(t.body.message), j(!1))));
+                                        ? (w(t.body.password), j(!1))
+                                        : t.body.message && (w(t.body.message), j(!1))));
                         },
                     )
                     .finally(() => j(!1));
@@ -58,7 +58,7 @@ function u(t) {
             title: e,
             actions: [
                 { text: d.intl.string(d.t["ETE/oC"]), onClick: N, variant: "secondary" },
-                { text: a ?? d.intl.string(d.t["cY+Oob"]), type: "submit", variant: C, disabled: g || 0 === k.length },
+                { text: a ?? d.intl.string(d.t["cY+Oob"]), type: "submit", variant: C, disabled: g || 0 === f.length },
             ],
             onClose: N,
             transitionState: p,
@@ -72,18 +72,18 @@ function u(t) {
                             label: d.intl.string(d.t["CIGa+7"]),
                             autoComplete: "current-password",
                             autoFocus: !0,
-                            value: k,
-                            onChange: (t) => {
-                                x?.(t), v(t);
+                            value: f,
+                            onChange: function (t) {
+                                x?.(t), k(t);
                             },
                             required: !0,
                         }),
-                        null != w && "" !== w
+                        null != v && "" !== v
                             ? (0, s.jsxs)(r.E, {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-critical",
                                   className: c.z3,
-                                  children: [" ", w, " "],
+                                  children: [" ", v, " "],
                               })
                             : null,
                     ],

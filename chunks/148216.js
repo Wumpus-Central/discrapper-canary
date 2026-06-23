@@ -14,10 +14,10 @@ function p(t) {
         [h, m] = a.useState(() => l()()),
         C = a.useCallback(() => {
             e(s.toDate());
-        }, [e, s]),
-        b = (t) => {
-            t.isValid() && p(t);
-        };
+        }, [e, s]);
+    function b(t) {
+        t.isValid() && p(t);
+    }
     return (0, n.jsx)(r.ConfirmModal, {
         title: d.intl.string(d.t.VKsXpY),
         confirmText: d.intl.string(d.t["R3BPH+"]),

@@ -1,23 +1,23 @@
 "use strict";
-let i;
 n.d(t, { A: () => h });
-var r = n(440745),
+var i,
+    r = n(440745),
     s = n.n(r),
     a = n(661531),
     o = n(702841),
     l = n(775602),
     u = n(543699);
 let c = (e, t) => {
-        let n = e.toRgb(),
-            i = t.toRgb(),
-            [r, a, o] = (0, u.tJ)([n.r, n.g, n.b], [i.r, i.g, i.b], 50);
-        return s()({ r, g: a, b: o });
-    },
-    d = (e, t) => {
-        let { h: n, s: i, l: r } = e.toHsl();
-        return s()({ h: n, s: i * t, l: r });
-    },
-    _ = s()(a.A.unsafe_rawColors.WHITE.resolve({ saturation: 1 }).hex()),
+    let n = e.toRgb(),
+        i = t.toRgb(),
+        [r, a, o] = (0, u.tJ)([n.r, n.g, n.b], [i.r, i.g, i.b], 50);
+    return s()({ r, g: a, b: o });
+};
+function d(e, t) {
+    let { h: n, s: i, l: r } = e.toHsl();
+    return s()({ h: n, s: i * t, l: r });
+}
+let _ = s()(a.A.unsafe_rawColors.WHITE.resolve({ saturation: 1 }).hex()),
     h =
         ((i = { dark: s()(a.A.unsafe_rawColors.BLACK.resolve({ saturation: 1 }).hex()), light: _ }),
         (e) => {
@@ -41,7 +41,7 @@ let c = (e, t) => {
                                   label: c(t[0], t[1]).isLight() ? e.dark : e.light,
                               };
                 })(i, e.backgroundColors),
-                buttonColors: ((e, t) => {
+                buttonColors: (function (e, t) {
                     if (0 !== t.length)
                         return 1 === t.length
                             ? { primary: t[0], secondary: t[0], text: t[0].isLight() ? e.dark : e.light }

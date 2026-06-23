@@ -159,9 +159,9 @@ function P(e) {
         R = r.useMemo(() => C?.filter((e) => e.type === _.n4.ATTACHMENT && v?.[e.name]?.hasValue) ?? [], [C, v]),
         [O, P] = r.useState([]);
     r.useEffect(() => {
-        let e = () => {
+        function e() {
             d.A.clearAll(t, n.drafts.type);
-        };
+        }
         return (
             c.h.subscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e),
             () => c.h.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)

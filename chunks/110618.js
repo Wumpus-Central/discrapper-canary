@@ -43,8 +43,10 @@ function h(e) {
     };
 }
 function f(e, t) {
-    let n = (t) => r.Ay.getName(e.getGuildId(), e.id, t.user),
-        i = new Set(),
+    function n(t) {
+        return r.Ay.getName(e.getGuildId(), e.id, t.user);
+    }
+    let i = new Set(),
         s = t.filter((e) => {
             let t = e.user.id;
             return !i.has(t) && (i.add(t), !0);

@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(922139),
+    o = n(308186),
     l = n(17928),
     u = n(554146),
     c = n(459192),
@@ -122,22 +122,23 @@ function v(e) {
         D = T && O === u.M.TRIAL_NUX_EMOJI_BUTTON,
         L = !o && D,
         w = r.useRef(null),
-        M = m ?? w,
-        P = () =>
-            (0, i.jsx)(N, {
-                ref: M,
-                onMouseLeave: () => {
-                    D && b(I.i.USER_DISMISS);
-                },
-                onClick: (e) => {
-                    _?.(e);
-                },
-                "aria-label": t,
-                "aria-controls": h,
-                active: o,
-                spriteClassName: D ? y.spritePremiumColored : void 0,
-                ...C,
-            });
+        M = m ?? w;
+    function P() {
+        return (0, i.jsx)(N, {
+            ref: M,
+            onMouseLeave: () => {
+                D && b(I.i.USER_DISMISS);
+            },
+            onClick: (e) => {
+                _?.(e);
+            },
+            "aria-label": t,
+            "aria-controls": h,
+            active: o,
+            spriteClassName: D ? y.spritePremiumColored : void 0,
+            ...C,
+        });
+    }
     return null == s
         ? P()
         : L

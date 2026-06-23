@@ -1,41 +1,41 @@
 l.d(t, { default: () => g });
-var i = l(627968),
-    n = l(64700),
+var n = l(627968),
+    i = l(64700),
     r = l(296489),
-    s = l.n(r),
-    u = l(820284),
+    u = l.n(r),
+    s = l(820284),
     a = l(913122),
     d = l(513461),
     c = l(241499),
     p = l(242273),
-    h = l(652215),
-    o = l(375708);
+    o = l(652215),
+    h = l(375708);
 let g = function (e) {
     let { field: t, onSave: l, onClose: r, guild: g } = e,
-        [v, _] = n.useState(
-            t?.values != null ? t?.values.map((e) => ({ id: s()(), value: e })) : [{ id: s()(), value: "" }],
+        [v, f] = i.useState(
+            t?.values != null ? t?.values.map((e) => ({ id: u()(), value: e })) : [{ id: u()(), value: "" }],
         ),
-        [f, A] = n.useState(null),
-        C = async () => {
-            null != f && A(null);
-            let e = v.map((e) => e.value.trim()).filter((e) => "" !== e);
-            if (0 === e.length) return void A(o.intl.string(o.t.TCHkcd));
-            let t = { field_type: d.rX.TERMS, label: o.intl.string(o.t["9suSIA"]), values: e, required: !0 };
-            try {
-                await l(t), r();
-            } catch (e) {
-                A(new a.LG(e).getAnyErrorMessage());
-            }
-        };
-    return (0, i.jsx)(u.A, {
-        page: h.liQ.GUILD_RULES_CREATE_MODAL,
-        children: (0, i.jsx)(p.A, {
+        [_, A] = i.useState(null);
+    async function C() {
+        null != _ && A(null);
+        let e = v.map((e) => e.value.trim()).filter((e) => "" !== e);
+        if (0 === e.length) return void A(h.intl.string(h.t.TCHkcd));
+        let t = { field_type: d.rX.TERMS, label: h.intl.string(h.t["9suSIA"]), values: e, required: !0 };
+        try {
+            await l(t), r();
+        } catch (e) {
+            A(new a.LG(e).getAnyErrorMessage());
+        }
+    }
+    return (0, n.jsx)(s.A, {
+        page: o.liQ.GUILD_RULES_CREATE_MODAL,
+        children: (0, n.jsx)(p.A, {
             ...e,
-            errorText: f,
-            title: o.intl.string(o.t["3pz9t3"]),
+            errorText: _,
+            title: h.intl.string(h.t["3pz9t3"]),
             onCancel: r,
             onConfirm: C,
-            children: (0, i.jsx)(c._, { guild: g, rules: v, setRules: _ }),
+            children: (0, n.jsx)(c._, { guild: g, rules: v, setRules: f }),
         }),
     });
 };

@@ -12,9 +12,9 @@ var i = n(627968),
     _ = n(559868),
     h = n(652215),
     f = n(375708);
-let p = () => {
+function p() {
     d.default.track(h.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: _.Do });
-};
+}
 function E() {
     return (0, i.jsxs)(i.Fragment, {
         children: [

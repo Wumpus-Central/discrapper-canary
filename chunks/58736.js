@@ -124,60 +124,57 @@ let I = r.forwardRef(function (e, t) {
     T = r.forwardRef(function (e, t) {
         let { className: n, ...r } = e;
         return (0, i.jsx)(I, { ...r, className: a()(A.p, n), ref: t });
-    }),
-    S = (e) => {
-        let { className: t } = e;
-        return (0, i.jsx)(g.A, { className: a()(A.Om, t) });
-    },
-    y = (e) => {
-        let {
-                className: t,
-                innerClassName: n,
-                toolbarClassName: s,
-                children: u,
-                childrenBottom: c,
-                toolbar: d,
-                onDoubleClick: _,
-                "aria-label": h,
-                "aria-labelledby": f,
-                role: m,
-                scrollable: g,
-                transparent: I = !1,
-                hidden: T = !1,
-            } = e,
-            S = r.useRef(null),
-            y = r.useContext(E.A);
-        return (0, i.jsx)("section", {
-            className: a()(t, A.kL, { [A.Sp]: !I, [A.JO]: I, [A.GY]: l.Fr, [A.R]: T }),
+    });
+function S(e) {
+    let { className: t } = e;
+    return (0, i.jsx)(g.A, { className: a()(A.Om, t) });
+}
+function y(e) {
+    let {
+            className: t,
+            innerClassName: n,
+            toolbarClassName: s,
+            children: u,
+            childrenBottom: c,
+            toolbar: d,
+            onDoubleClick: _,
             "aria-label": h,
             "aria-labelledby": f,
             role: m,
-            ref: S,
-            children: (0, i.jsxs)(p.xp, {
-                containerRef: S,
-                children: [
-                    (0, i.jsxs)("div", {
-                        className: A.cM,
-                        children: [
-                            (0, i.jsxs)("div", {
-                                className: a()(A.Y_, n, { [A.E1]: g }),
-                                onDoubleClick: _,
-                                children: [
-                                    l.Fr && null != y ? (0, i.jsx)(o._, { onClick: y, className: A.cz }) : null,
-                                    u,
-                                ],
-                            }),
-                            null != d ? (0, i.jsx)("div", { className: a()(A.KE, s), children: d }) : null,
-                        ],
-                    }),
-                    c,
-                ],
-            }),
-        });
-    };
+            scrollable: g,
+            transparent: I = !1,
+            hidden: T = !1,
+        } = e,
+        S = r.useRef(null),
+        y = r.useContext(E.A);
+    return (0, i.jsx)("section", {
+        className: a()(t, A.kL, { [A.Sp]: !I, [A.JO]: I, [A.GY]: l.Fr, [A.R]: T }),
+        "aria-label": h,
+        "aria-labelledby": f,
+        role: m,
+        ref: S,
+        children: (0, i.jsxs)(p.xp, {
+            containerRef: S,
+            children: [
+                (0, i.jsxs)("div", {
+                    className: A.cM,
+                    children: [
+                        (0, i.jsxs)("div", {
+                            className: a()(A.Y_, n, { [A.E1]: g }),
+                            onDoubleClick: _,
+                            children: [l.Fr && null != y ? (0, i.jsx)(o._, { onClick: y, className: A.cz }) : null, u],
+                        }),
+                        null != d ? (0, i.jsx)("div", { className: a()(A.KE, s), children: d }) : null,
+                    ],
+                }),
+                c,
+            ],
+        }),
+    });
+}
 (y.Icon = I),
     (y.ChannelIcon = T),
-    (y.Title = (e) => {
+    (y.Title = function (e) {
         let {
                 className: t,
                 wrapperClassName: n,

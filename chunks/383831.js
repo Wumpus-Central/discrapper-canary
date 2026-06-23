@@ -15,7 +15,7 @@ function c(e) {
     return (0, i.jsx)(h, {
         ...d,
         isTrayButton: !1,
-        onClick: () => {
+        onClick: function () {
             (0, o.X)(_, o.O.LEAVE_ACTIVITY), s.A.leaveActivity({ location: t, applicationId: n, showFeedback: !0 });
         },
         iconComponent: r.o,

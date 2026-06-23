@@ -1,42 +1,42 @@
 n.d(t, { A: () => m }), n(321073);
 var i = n(228366),
     l = n(272355),
-    r = n(400492),
-    s = n(312671),
-    o = n(495544),
-    a = n(763827),
+    s = n(400492),
+    r = n(312671),
+    a = n(495544),
+    o = n(763827),
     d = n(309010),
     c = n(741961),
     u = n(3137),
     h = n(559908),
     A = n(652215);
-let E = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
+let E = (0, s.aN)("poggermode_applause", r.A.getSoundpack()),
     g = !1,
     C = !1,
     _ = [],
-    I = null,
-    T = () => {
-        E.stop(), (g = !1);
-    },
-    p = () => {
-        let e = u.A.isEnabled(),
-            t = u.A.comboSoundsEnabled;
-        return !!e && !!t && null != d.A.getChannelId();
-    },
-    S = () => {
-        if (0 === _.length || !p() || C) return;
-        C = !0;
-        let [e, t] = _[_.length - 1];
-        (0, r.Ak)(e, t), (I = setTimeout(N, 1e3));
-    },
-    N = () => {
-        _.pop(), (C = !1), S();
-    },
-    L = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-            n = a.A.isConnected();
-        _.push([e, t * (n ? 0.1 : 1)]), S();
-    };
+    I = null;
+function T() {
+    E.stop(), (g = !1);
+}
+function p() {
+    let e = u.A.isEnabled(),
+        t = u.A.comboSoundsEnabled;
+    return !!e && !!t && null != d.A.getChannelId();
+}
+let S = () => {
+    if (0 === _.length || !p() || C) return;
+    C = !0;
+    let [e, t] = _[_.length - 1];
+    (0, s.Ak)(e, t), (I = setTimeout(N, 1e3));
+};
+function N() {
+    _.pop(), (C = !1), S();
+}
+let L = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+        n = o.A.isConnected();
+    _.push([e, t * (n ? 0.1 : 1)]), S();
+};
 class O extends l.A {
     _initialize() {
         h.Ay.addChangeListener(this.startAudio),
@@ -61,7 +61,7 @@ class O extends l.A {
     }
     handleTypingStop(e) {
         let { userId: t } = e;
-        o.default.getId() === t && T();
+        a.default.getId() === t && T();
     }
     stopAudio() {
         T();
@@ -70,7 +70,7 @@ class O extends l.A {
         if (!p()) return;
         let e = d.A.getChannelId();
         if (null == e) return;
-        let t = o.default.getId(),
+        let t = a.default.getId(),
             n = c.A.isTyping(e, t),
             i = h.Ay.getUserCombo(t, e),
             l = i?.multiplier ?? 1;

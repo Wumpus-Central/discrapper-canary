@@ -29,12 +29,12 @@ class h extends a.A {
                           n.e("80890"),
                       ]).then(n.bind(n, 398177));
                       return function (t) {
-                          let n = async () => {
+                          async function n() {
                               await t.onClose(), s.A.logout("login_required_account_manager", d.BVt.LOGIN);
-                          };
+                          }
                           return (0, i.jsx)(e, {
                               ...t,
-                              onSuccess: () => {
+                              onSuccess: function () {
                                   l.default.track(d.HAw.FORCED_UPDATE_PASSWORD_SUCCEEDED), t.onClose();
                               },
                               onClose: n,

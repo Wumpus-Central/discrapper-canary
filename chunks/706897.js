@@ -153,7 +153,9 @@ function K(e) {
     });
 }
 var $ = t(650583);
-let V = (e) => e.stopPropagation();
+function V(e) {
+    return e.stopPropagation();
+}
 function X(e) {
     let { className: l, onSelectGIF: t, onSelectCategory: r } = e,
         {
@@ -193,11 +195,11 @@ function X(e) {
         [],
     ),
         s.useEffect(() => {
-            if (null == o) return;
-            let e = (e) => {
+            if (null != o)
+                return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
+            function e(e) {
                 e.key === $.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), e.stopImmediatePropagation(), x());
-            };
-            return document.addEventListener("keydown", e), () => document.removeEventListener("keydown", e);
+            }
         }, [o, x]);
     let j = s.useCallback(
             (e) => {

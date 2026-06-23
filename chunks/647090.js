@@ -2503,12 +2503,12 @@ function tn(e) {
         r
     );
 }
-let ti = () => {
-        let e = o()().add(1, "hour"),
-            t = e.hour();
-        return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
-    },
-    tr = (e, t) => (0, eq.i$)(e, e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT");
+function ti() {
+    let e = o()().add(1, "hour"),
+        t = e.hour();
+    return e.minutes() >= 30 && (t += 1), e.hour(t).minutes(0).seconds(0);
+}
+let tr = (e, t) => (0, eq.i$)(e, e.get("years") === t.get("years") ? "ddd MMM Do \xb7 LT" : "ddd MMM Do, YYYY \xb7 LT");
 function ts(e, t, n) {
     var i;
     let r;

@@ -35,62 +35,62 @@ let u = s.createContext(null),
             }, [d]),
             (0, r.jsx)(u.Provider, { value: t, children: n })
         );
-    },
-    d = (e) => {
-        let {
-                layout: t,
-                userId: r,
-                guildId: o,
-                channelId: l,
-                messageId: c,
-                roleId: d,
-                sourceSessionId: _,
-                showGuildProfile: h = !0,
-            } = e,
-            f = (i || (i = n.t(s, 2))).useContext(u)?.sessionId;
-        return s.useMemo(
-            () => ({
-                sessionId: (0, a.A)(),
-                sourceSessionId: _ ?? f,
-                layout: t,
-                userId: r,
-                guildId: o,
-                channelId: l,
-                messageId: c,
-                roleId: d,
-                showGuildProfile: h,
-            }),
-            [f, t, r, o, l, c, d, _, h],
-        );
-    },
-    _ = () => {
-        let e = s.useContext(u),
-            { analyticsLocations: t } = (0, o.Ay)();
-        return {
-            context: e,
-            trackUserProfileAction: s.useCallback(
-                (n) => {
-                    null != e && (0, l.Wn)({ analyticsLocations: t, ...e, ...n });
-                },
-                [e, t],
-            ),
-            trackUserProfileEditAction: s.useCallback(
-                (n) => {
-                    null != e && (0, l.un)({ analyticsLocations: t, ...e, ...n });
-                },
-                [e, t],
-            ),
-            trackUserProfileEditSaved: s.useCallback(
-                (n) => {
-                    null != e && (0, l.pT)({ analyticsLocations: t, ...e, ...n });
-                },
-                [e, t],
-            ),
-            trackUserProfileWishlistAction: s.useCallback(
-                (n) => {
-                    null != e && (0, l.nR)({ analyticsLocations: t, ...e, ...n });
-                },
-                [e, t],
-            ),
-        };
     };
+function d(e) {
+    let {
+            layout: t,
+            userId: r,
+            guildId: o,
+            channelId: l,
+            messageId: c,
+            roleId: d,
+            sourceSessionId: _,
+            showGuildProfile: h = !0,
+        } = e,
+        f = (i || (i = n.t(s, 2))).useContext(u)?.sessionId;
+    return s.useMemo(
+        () => ({
+            sessionId: (0, a.A)(),
+            sourceSessionId: _ ?? f,
+            layout: t,
+            userId: r,
+            guildId: o,
+            channelId: l,
+            messageId: c,
+            roleId: d,
+            showGuildProfile: h,
+        }),
+        [f, t, r, o, l, c, d, _, h],
+    );
+}
+function _() {
+    let e = s.useContext(u),
+        { analyticsLocations: t } = (0, o.Ay)();
+    return {
+        context: e,
+        trackUserProfileAction: s.useCallback(
+            (n) => {
+                null != e && (0, l.Wn)({ analyticsLocations: t, ...e, ...n });
+            },
+            [e, t],
+        ),
+        trackUserProfileEditAction: s.useCallback(
+            (n) => {
+                null != e && (0, l.un)({ analyticsLocations: t, ...e, ...n });
+            },
+            [e, t],
+        ),
+        trackUserProfileEditSaved: s.useCallback(
+            (n) => {
+                null != e && (0, l.pT)({ analyticsLocations: t, ...e, ...n });
+            },
+            [e, t],
+        ),
+        trackUserProfileWishlistAction: s.useCallback(
+            (n) => {
+                null != e && (0, l.nR)({ analyticsLocations: t, ...e, ...n });
+            },
+            [e, t],
+        ),
+    };
+}

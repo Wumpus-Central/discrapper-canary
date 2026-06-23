@@ -24,17 +24,17 @@ function f() {
     }
     return new Promise((e, n) => {
         let i = setTimeout(() => {
-                u.A.removeChangeListener(r), n(Error("timeout launching spotify"));
-            }, _),
-            r = () => {
-                for (let { socket: n, device: s } of u.A.getPlayableComputerDevices())
-                    null == t.find((e) => e.device.id === s.id) &&
-                        (clearTimeout(i),
-                        u.A.removeChangeListener(r),
-                        setImmediate(() => {
-                            (0, o.VR)(n.accountId, s.id), e({ socket: n, device: s });
-                        }));
-            };
+            u.A.removeChangeListener(r), n(Error("timeout launching spotify"));
+        }, _);
+        function r() {
+            for (let { socket: n, device: s } of u.A.getPlayableComputerDevices())
+                null == t.find((e) => e.device.id === s.id) &&
+                    (clearTimeout(i),
+                    u.A.removeChangeListener(r),
+                    setImmediate(() => {
+                        (0, o.VR)(n.accountId, s.id), e({ socket: n, device: s });
+                    }));
+        }
         u.A.addChangeListener(r), window.open(`${c.gY}:`);
     });
 }

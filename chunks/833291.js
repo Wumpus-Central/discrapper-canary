@@ -106,27 +106,27 @@ function Z(e) {
     if (null == (i = (i ?? []).concat(r ?? [])) || 0 === i.length) return [];
     for (let e of i) {
         if (n.length >= 10) break;
-        let { url: i, inviteHostRemainingPath: r, templateHostRemainingPath: a, primaryHostRemainingPath: o } = z(e);
+        let { url: i, inviteHostRemainingPath: r, templateHostRemainingPath: o, primaryHostRemainingPath: l } = z(e);
         if (null == i || null == i.pathname) continue;
-        let l = (i, r) => {
+        function a(i, r) {
             t.has(r) || (t.add(r), n.push({ type: i, code: r, url: e }));
-        };
+        }
         if (r?.match(A) != null && ("https:" === i.protocol || "http:" === i.protocol)) {
             let t = (0, d.fB)(r.substring(1), i.search);
             if ((h.A.getInvite(t), e.includes("\\"))) continue;
-            l(E.I.INVITE, t);
+            a(E.I.INVITE, t);
         }
-        a?.match(A) != null && l(E.I.TEMPLATE, a.substring(1));
-        let f = o?.match(T);
+        o?.match(A) != null && a(E.I.TEMPLATE, o.substring(1));
+        let f = l?.match(T);
         if (null != f) {
             let t = f[1].toUpperCase();
             if (t === E.I.INVITE) {
                 if (e.includes("\\")) continue;
                 let t = (0, d.fB)(f[2], i.search);
-                l(E.I.INVITE, t);
-            } else l(t, f[2]);
+                a(E.I.INVITE, t);
+            } else a(t, f[2]);
         }
-        o?.match(I) != null && l(E.I.CHANNEL_LINK, o.replace("/channels/", ""));
+        l?.match(I) != null && a(E.I.CHANNEL_LINK, l.replace("/channels/", ""));
         let p = (function (e) {
             if (null == e) return null;
             let t = e.match(S);
@@ -134,52 +134,52 @@ function Z(e) {
         })(i.pathname);
         if (
             (null != p &&
-                l(E.I.EVENT, `${p.guildId}-${p.guildEventId}` + (null != p.recurrenceId ? `-${p.recurrenceId}` : "")),
-            null != o?.match(D) && null != i.query)
+                a(E.I.EVENT, `${p.guildId}-${p.guildEventId}` + (null != p.recurrenceId ? `-${p.recurrenceId}` : "")),
+            null != l?.match(D) && null != i.query)
         ) {
             let e = (0, _._)(i.query),
                 t = e.clientId;
             null == t ||
                 "" === t ||
                 e.scopes?.some((e) => e !== u.F.APPLICATIONS_COMMANDS) ||
-                l(E.I.APP_OAUTH2_LINK, t);
+                a(E.I.APP_OAUTH2_LINK, t);
         }
-        let m = o?.match(y);
+        let m = l?.match(y);
         if (null != m) {
             let e = m[2];
-            l(E.I.APP_DIRECTORY_PROFILE, e);
+            a(E.I.APP_DIRECTORY_PROFILE, e);
         }
-        let b = o?.match(C);
+        let b = l?.match(C);
         if (null != b) {
             let e = b[2],
                 t = b[3];
             if (null != t) {
                 let n = (0, c.L)(e, t);
-                l(E.I.APP_DIRECTORY_STOREFRONT_SKU, n);
-            } else l(E.I.APP_DIRECTORY_STOREFRONT, e);
+                a(E.I.APP_DIRECTORY_STOREFRONT_SKU, n);
+            } else a(E.I.APP_DIRECTORY_STOREFRONT, e);
         }
-        let w = o?.match(N);
+        let w = l?.match(N);
         if (null != w) {
             let e = w[1];
-            l(E.I.ACTIVITY_BOOKMARK, e);
+            a(E.I.ACTIVITY_BOOKMARK, e);
         }
-        let M = o?.match(v);
-        null != M && l(E.I.GUILD_PRODUCT, `${M[1]}-${M[2]}`);
-        let P = o?.match(O);
-        null != P && l(E.I.SERVER_SHOP, P[1]);
-        let x = o?.match(R);
-        null != x && l(E.I.SOCIAL_LAYER_STOREFRONT, `${x[3]}-${x[1] ?? x[2]}`);
+        let M = l?.match(v);
+        null != M && a(E.I.GUILD_PRODUCT, `${M[1]}-${M[2]}`);
+        let P = l?.match(O);
+        null != P && a(E.I.SERVER_SHOP, P[1]);
+        let x = l?.match(R);
+        null != x && a(E.I.SOCIAL_LAYER_STOREFRONT, `${x[3]}-${x[1] ?? x[2]}`);
         let k = X(e);
-        if ((null != k && l(E.I.QUESTS_EMBED, k), "/shop" === o)) {
+        if ((null != k && a(E.I.QUESTS_EMBED, k), "/shop" === l)) {
             let e = null != i.query ? (0, s.parse)(i.query) : null,
                 t = e?.tab;
             if (t === g.G2.GAME_SHOPS && e?.applicationId != null && e?.skuId != null) {
                 let t = e.applicationId,
                     n = e.skuId;
-                "string" == typeof t && "string" == typeof n && l(E.I.SOCIAL_LAYER_STOREFRONT_APP, `${n}-${t}`);
+                "string" == typeof t && "string" == typeof n && a(E.I.SOCIAL_LAYER_STOREFRONT_APP, `${n}-${t}`);
             } else {
                 let e = i.hash?.match(L);
-                l(E.I.COLLECTIBLES_SHOP, `${t ?? ""}-${e?.[1] ?? ""}`);
+                a(E.I.COLLECTIBLES_SHOP, `${t ?? ""}-${e?.[1] ?? ""}`);
             }
         }
     }

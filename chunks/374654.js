@@ -4,8 +4,8 @@ var t = l(627968),
     r = l(503698),
     i = l.n(r),
     s = l(688810),
-    o = l(674658),
-    u = l(344346),
+    u = l(674658),
+    o = l(344346),
     d = l(637193),
     c = l(536572),
     g = l(919395),
@@ -16,10 +16,10 @@ var t = l(627968),
     p = l(746002),
     b = l(515718),
     I = l(195292);
-let x = (e) => {
+function x(e) {
     let n = (0, p.getCollectiblesItemAssetUrl)({ skuId: e.skuId, assetFormat: p.CollectiblesItemAssetFormat.STATIC });
     null != n && (0, b.NN)(n).catch(() => {});
-};
+}
 var A = l(375708),
     C = l(535592),
     k = l(970389);
@@ -29,7 +29,7 @@ function y(e) {
             guildId: l,
             nameplatePreview: r,
             isEmpty: s,
-            hasMainProfileFallback: o,
+            hasMainProfileFallback: u,
             isInteracting: d,
             disabled: c,
         } = e,
@@ -39,12 +39,12 @@ function y(e) {
                 i = a.useMemo(() => (0, f.zd)(r, t), [r, t]),
                 s = (0, I.A)({ enabled: n, isInteracting: l, items: i, preload: x });
             return null != s ? { skuId: s.skuId, asset: s.asset, label: s.label, palette: s.palette } : null;
-        })({ enabled: s && !o && !c, isInteracting: d }),
+        })({ enabled: s && !u && !c, isInteracting: d }),
         v = null != g;
     return (0, t.jsx)("div", {
         className: i()(C.M, { [k.O]: v }),
         "aria-hidden": !0,
-        children: (0, t.jsx)(u.A, {
+        children: (0, t.jsx)(o.A, {
             user: n,
             guildId: l ?? void 0,
             nameplate: v ? g : r,
@@ -55,7 +55,7 @@ function y(e) {
 }
 function j(e) {
     let { user: n, guildId: l, disabled: r, errorMessageId: i } = e,
-        { analyticsLocations: u } = (0, s.Ay)(),
+        { analyticsLocations: o } = (0, s.Ay)(),
         f = null != l,
         { guildNameplate: m, pendingNameplate: p } = (0, g.rv)(n, l ?? void 0),
         b = n.collectibles?.nameplate,
@@ -64,7 +64,7 @@ function j(e) {
         C = null === p || (!x && null == I),
         k = f && null != b,
         j = (0, g.lw)({ pendingValue: p, userValue: b, guildValue: m, guildId: l ?? void 0 }),
-        { product: N } = (0, o.q)(j?.skuId),
+        { product: N } = (0, u.q)(j?.skuId),
         E = x ? null != p : null != I,
         w =
             null != j && E
@@ -75,8 +75,8 @@ function j(e) {
                   }
                 : void 0,
         S = a.useCallback(() => {
-            (0, d.p)({ analyticsLocations: u, guildId: l ?? void 0, stackingBehavior: "stack" });
-        }, [u, l]);
+            (0, d.p)({ analyticsLocations: o, guildId: l ?? void 0, stackingBehavior: "stack" });
+        }, [o, l]);
     return (0, t.jsx)(h.V, {
         affordance: C && !k ? "add" : w,
         variant: "bar",

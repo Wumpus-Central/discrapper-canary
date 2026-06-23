@@ -228,103 +228,105 @@ class P extends s.Ay.Store {
         return N.get(e);
     }
 }
-let x = (e) => (0, A.v$)(e, "FriendsWidgetFriendsStore"),
-    k = new P(
-        o.h,
-        __OVERLAY__
-            ? {}
-            : {
-                  POST_CONNECTION_OPEN: x(M),
-                  OVERLAY_INITIALIZE: x(M),
-                  CACHE_LOADED: x(M),
-                  CACHE_LOADED_LAZY: x(M),
-                  FRIENDS_LIST_POPOUT_MOUNTED: x(M),
-                  OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: x(function (e) {
-                      return e.tab === g.x.FRIENDS && w(e.targetId);
-                  }),
-                  PRESENCE_UPDATES: x(function (e) {
-                      let t = !1;
-                      for (let n of e.updates) {
-                          let e = n.user?.id;
-                          null != e && (t = w(e) || t);
-                      }
-                      return t;
-                  }),
-                  PRESENCES_REPLACE: x(function (e) {
-                      let t = !1;
-                      for (let n of e.presences) {
-                          let e = n.user?.id;
-                          null != e && (t = w(e) || t);
-                      }
-                      return t;
-                  }),
-                  ACTIVITY_METADATA_UPDATE: x(function (e) {
-                      return w(e.userId);
-                  }),
-                  VOICE_STATE_UPDATES: x(function (e) {
-                      let t = !1;
-                      for (let n of e.voiceStates) t = w(n.userId) || t;
-                      return t;
-                  }),
-                  VOICE_CHANNEL_SELECT: x(function (e) {
-                      D();
-                      let t = !1;
-                      for (let e of _.A.getFriendIDs()) t = w(e) || t;
-                      return t;
-                  }),
-                  RELATIONSHIP_ADD: x(function (e) {
-                      return w(e.relationship.id);
-                  }),
-                  RELATIONSHIP_REMOVE: x(function (e) {
-                      return w(e.relationship.id);
-                  }),
-                  RELATIONSHIP_UPDATE: x(function (e) {
-                      return w(e.relationship.id);
-                  }),
-                  RELATIONSHIP_PENDING_INCOMING_REMOVED: x(function (e) {
-                      let t = !1;
-                      for (let e of N.values("FRIEND_REQUESTS", !0))
-                          e.relationshipType === y.eA$.PENDING_INCOMING && (t = w(e.userId) || t);
-                      return t;
-                  }),
-                  CREATE_FRIEND_GROUP: x(function (e) {
-                      return b(), !1;
-                  }),
-                  DELETE_FRIEND_GROUP: x(function (e) {
-                      b();
-                      let t = !1;
-                      for (let e of _.A.getFriendIDs()) t = w(e) || t;
-                      return t;
-                  }),
-                  ADD_USERS_TO_GROUP: x(function (e) {
-                      b();
-                      let t = !1;
-                      for (let n of e.userIds) t = w(n) || t;
-                      return t;
-                  }),
-                  REMOVE_USERS_FROM_GROUP: x(function (e) {
-                      b();
-                      let t = !1;
-                      for (let n of e.userIds) t = w(n) || t;
-                      return t;
-                  }),
-                  LOAD_USER_AFFINITIES_V2_SUCCESS: x(function (e) {
-                      let t = !1;
-                      for (let e of u.A.getUserAffinitiesMap().keys()) t = w(e) || t;
-                      return t;
-                  }),
-                  USER_UPDATE: x(function (e) {
-                      return w(e.user.id);
-                  }),
-                  CURRENT_USER_UPDATE: x(function (e) {
-                      D();
-                      let t = !1;
-                      for (let e of _.A.getFriendIDs()) t = w(e) || t;
-                      return t;
-                  }),
-                  LOGOUT: x(function () {
-                      let e = N.size() > 0;
-                      return N.clear(), (i = void 0), (O = new Map()), e;
-                  }),
-              },
-    );
+function x(e) {
+    return (0, A.v$)(e, "FriendsWidgetFriendsStore");
+}
+let k = new P(
+    o.h,
+    __OVERLAY__
+        ? {}
+        : {
+              POST_CONNECTION_OPEN: x(M),
+              OVERLAY_INITIALIZE: x(M),
+              CACHE_LOADED: x(M),
+              CACHE_LOADED_LAZY: x(M),
+              FRIENDS_LIST_POPOUT_MOUNTED: x(M),
+              OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: x(function (e) {
+                  return e.tab === g.x.FRIENDS && w(e.targetId);
+              }),
+              PRESENCE_UPDATES: x(function (e) {
+                  let t = !1;
+                  for (let n of e.updates) {
+                      let e = n.user?.id;
+                      null != e && (t = w(e) || t);
+                  }
+                  return t;
+              }),
+              PRESENCES_REPLACE: x(function (e) {
+                  let t = !1;
+                  for (let n of e.presences) {
+                      let e = n.user?.id;
+                      null != e && (t = w(e) || t);
+                  }
+                  return t;
+              }),
+              ACTIVITY_METADATA_UPDATE: x(function (e) {
+                  return w(e.userId);
+              }),
+              VOICE_STATE_UPDATES: x(function (e) {
+                  let t = !1;
+                  for (let n of e.voiceStates) t = w(n.userId) || t;
+                  return t;
+              }),
+              VOICE_CHANNEL_SELECT: x(function (e) {
+                  D();
+                  let t = !1;
+                  for (let e of _.A.getFriendIDs()) t = w(e) || t;
+                  return t;
+              }),
+              RELATIONSHIP_ADD: x(function (e) {
+                  return w(e.relationship.id);
+              }),
+              RELATIONSHIP_REMOVE: x(function (e) {
+                  return w(e.relationship.id);
+              }),
+              RELATIONSHIP_UPDATE: x(function (e) {
+                  return w(e.relationship.id);
+              }),
+              RELATIONSHIP_PENDING_INCOMING_REMOVED: x(function (e) {
+                  let t = !1;
+                  for (let e of N.values("FRIEND_REQUESTS", !0))
+                      e.relationshipType === y.eA$.PENDING_INCOMING && (t = w(e.userId) || t);
+                  return t;
+              }),
+              CREATE_FRIEND_GROUP: x(function (e) {
+                  return b(), !1;
+              }),
+              DELETE_FRIEND_GROUP: x(function (e) {
+                  b();
+                  let t = !1;
+                  for (let e of _.A.getFriendIDs()) t = w(e) || t;
+                  return t;
+              }),
+              ADD_USERS_TO_GROUP: x(function (e) {
+                  b();
+                  let t = !1;
+                  for (let n of e.userIds) t = w(n) || t;
+                  return t;
+              }),
+              REMOVE_USERS_FROM_GROUP: x(function (e) {
+                  b();
+                  let t = !1;
+                  for (let n of e.userIds) t = w(n) || t;
+                  return t;
+              }),
+              LOAD_USER_AFFINITIES_V2_SUCCESS: x(function (e) {
+                  let t = !1;
+                  for (let e of u.A.getUserAffinitiesMap().keys()) t = w(e) || t;
+                  return t;
+              }),
+              USER_UPDATE: x(function (e) {
+                  return w(e.user.id);
+              }),
+              CURRENT_USER_UPDATE: x(function (e) {
+                  D();
+                  let t = !1;
+                  for (let e of _.A.getFriendIDs()) t = w(e) || t;
+                  return t;
+              }),
+              LOGOUT: x(function () {
+                  let e = N.size() > 0;
+                  return N.clear(), (i = void 0), (O = new Map()), e;
+              }),
+          },
+);

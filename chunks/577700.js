@@ -54,37 +54,37 @@ async function u(e, t) {
                           f({ error: !0 }),
                           r.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_FETCH_FAILURE", target: e }));
                 },
-            ),
-        f = (i) => {
-            let { error: r } = i,
-                a = performance.now() - u;
-            s.default.track(l.HAw.APPLICATION_COMMAND_PERFORMANCE, {
-                duration_ms: a,
-                error: r,
-                aborted: t.signal.aborted,
-                include_applications: !0,
-                retries: Math.max(c - 1, 0),
-                kind: null,
-                command_type: null,
-                url: n,
-                target_type: e.type,
-                target_id: (function (e) {
-                    switch (e.type) {
-                        case "channel":
-                            return e.channelId;
-                        case "guild":
-                            return e.guildId;
-                        case "user":
-                            return null;
-                        case "application":
-                            return e.applicationId;
-                        default:
-                            (0, o.xb)(e);
-                    }
-                })(e),
-                failure_statuses: d,
-            });
-        };
+            );
+    function f(i) {
+        let { error: r } = i,
+            a = performance.now() - u;
+        s.default.track(l.HAw.APPLICATION_COMMAND_PERFORMANCE, {
+            duration_ms: a,
+            error: r,
+            aborted: t.signal.aborted,
+            include_applications: !0,
+            retries: Math.max(c - 1, 0),
+            kind: null,
+            command_type: null,
+            url: n,
+            target_type: e.type,
+            target_id: (function (e) {
+                switch (e.type) {
+                    case "channel":
+                        return e.channelId;
+                    case "guild":
+                        return e.guildId;
+                    case "user":
+                        return null;
+                    case "application":
+                        return e.applicationId;
+                    default:
+                        (0, o.xb)(e);
+                }
+            })(e),
+            failure_statuses: d,
+        });
+    }
     await h();
 }
 function c(e) {

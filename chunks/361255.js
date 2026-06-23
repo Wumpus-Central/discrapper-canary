@@ -16,7 +16,7 @@ function p(e) {
         [v, b] = n.useState(i.verificationRoleId ?? void 0),
         [R, C] = n.useState(null),
         k = (0, o.bG)([u.A], () => {
-            let e = (e) => {
+            function e(e) {
                 var i;
                 let t;
                 return {
@@ -29,7 +29,7 @@ function p(e) {
                             style: { width: 12, height: 12, borderRadius: "50%", backgroundColor: t, flexShrink: 0 },
                         })),
                 };
-            };
+            }
             if (!p) {
                 if (null != i.verificationRoleId) {
                     let t = u.A.getRole(i.id, i.verificationRoleId);

@@ -4,8 +4,10 @@ var i = n(17928),
     r = n(228366),
     s = n(38405),
     a = n(855052);
-let o = {},
-    l = () => ({ data: null, status: "not_loaded" });
+let o = {};
+function l() {
+    return { data: null, status: "not_loaded" };
+}
 function u(e) {
     return (o[e] ??= l());
 }

@@ -44,7 +44,9 @@ function d(e) {
                       {
                           title: h,
                           href: t.target,
-                          trusted: () => c(t),
+                          trusted: function () {
+                              return c(t);
+                          },
                           onClick: f,
                           messageId: d.messageId,
                           channelId: d.channelId,

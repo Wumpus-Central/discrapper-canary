@@ -35,7 +35,7 @@ var w = n(503698),
     S = n(616356),
     R = n(734057),
     P = n(71393),
-    G = n(941327),
+    G = n(394459),
     U = n(532624),
     V = n(184809),
     Y = n(625494),
@@ -524,27 +524,27 @@ function e$() {
                 h.current = [];
                 return;
             }
-            let e = (e) => {
-                    let t = eD(e),
-                        n = h.current,
-                        l = n.some((e) => eb(e, t)),
-                        r = (function (e) {
-                            let t = e.key.toLowerCase();
-                            for (let e of eN) if (t.includes(e)) return !0;
-                            return !1;
-                        })(e);
-                    l || r || n.push(t),
-                        0 !== y.length &&
-                            n.length === y.length &&
-                            y.every((e) => n.some((t) => eb(e, t))) &&
-                            (e.preventDefault(), e.stopPropagation());
-                },
-                t = (e) => {
-                    let t = eD(e),
-                        n = h.current,
-                        l = n.findIndex((e) => eb(e, t));
-                    l > -1 && n.splice(l, 1);
-                };
+            function e(e) {
+                let t = eD(e),
+                    n = h.current,
+                    l = n.some((e) => eb(e, t)),
+                    r = (function (e) {
+                        let t = e.key.toLowerCase();
+                        for (let e of eN) if (t.includes(e)) return !0;
+                        return !1;
+                    })(e);
+                l || r || n.push(t),
+                    0 !== y.length &&
+                        n.length === y.length &&
+                        y.every((e) => n.some((t) => eb(e, t))) &&
+                        (e.preventDefault(), e.stopPropagation());
+            }
+            function t(e) {
+                let t = eD(e),
+                    n = h.current,
+                    l = n.findIndex((e) => eb(e, t));
+                l > -1 && n.splice(l, 1);
+            }
             return (
                 n.addEventListener("keydown", e, !0),
                 n.addEventListener("keyup", t, !0),
@@ -665,7 +665,7 @@ function e8(e, t) {
         }, 200);
     });
 }
-async function e6(e, t) {
+async function e5(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 1e3,
         l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 3;
     if (y.isPlatformEmbedded) {
@@ -688,7 +688,7 @@ async function e6(e, t) {
             }
     }
 }
-function e5() {
+function e6() {
     a.A.setFocusedPID(m.DEV_PID, null);
 }
 function e7() {
@@ -703,10 +703,10 @@ let e9 = r.memo(function (e) {
                 return (
                     e2 &&
                         (t.document.hasFocus() && a.A.setFocusedPID(m.DEV_PID, null),
-                        t.addEventListener("focus", e5),
+                        t.addEventListener("focus", e6),
                         t.addEventListener("blur", e7)),
                     () => {
-                        e2 && (t.removeEventListener("focus", e5), t.removeEventListener("blur", e7));
+                        e2 && (t.removeEventListener("focus", e6), t.removeEventListener("blur", e7));
                     }
                 );
         });
@@ -744,7 +744,7 @@ let e9 = r.memo(function (e) {
                             return;
                         }
                         try {
-                            if ((await e6(e, t), _.current)) return;
+                            if ((await e5(e, t), _.current)) return;
                             (0, e0.Mq)();
                         } catch (e) {
                             a.A.setOverlayCrashed(eO.A.getTargetPID(), e), e3("errorMessage", "showInactive failed");

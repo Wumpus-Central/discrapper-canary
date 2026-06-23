@@ -61,7 +61,9 @@ let x = {
         codeBlock: {
             ...c().defaultRules.codeBlock,
             react(e, l, n) {
-                let a = () => (0, r.jsx)("code", { className: s()(k.kw, "hljs"), children: j(e) });
+                function a() {
+                    return (0, r.jsx)("code", { className: s()(k.kw, "hljs"), children: j(e) });
+                }
                 return (0, r.jsx)(
                     "pre",
                     {

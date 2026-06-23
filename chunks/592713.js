@@ -5,24 +5,24 @@ var i = n(228366),
     s = n(696451),
     a = n(287809),
     o = n(316031);
-let l = null,
-    u = (e, t) => {
-        let n = s.Ay.getMember(e, t),
-            r = a.default.getUser(t);
-        if (null == n || null == r || (0, o.Z)(n)) return;
-        let l = {
-            ...n,
-            guildId: e,
-            nick: n.nick ?? r.username,
-            avatar: n.avatar ?? void 0,
-            avatarDecoration: null != n.avatarDecoration ? { ...n.avatarDecoration } : void 0,
-            premiumSince: n.premiumSince ?? void 0,
-            isPending: n.isPending ?? !1,
-            user: { ...r, email: r.email ?? void 0, phone: r.phone ?? void 0 },
-            communicationDisabledUntil: null,
-        };
-        i.h.dispatch({ type: "GUILD_MEMBER_UPDATE", ...l });
+let l = null;
+function u(e, t) {
+    let n = s.Ay.getMember(e, t),
+        r = a.default.getUser(t);
+    if (null == n || null == r || (0, o.Z)(n)) return;
+    let l = {
+        ...n,
+        guildId: e,
+        nick: n.nick ?? r.username,
+        avatar: n.avatar ?? void 0,
+        avatarDecoration: null != n.avatarDecoration ? { ...n.avatarDecoration } : void 0,
+        premiumSince: n.premiumSince ?? void 0,
+        isPending: n.isPending ?? !1,
+        user: { ...r, email: r.email ?? void 0, phone: r.phone ?? void 0 },
+        communicationDisabledUntil: null,
     };
+    i.h.dispatch({ type: "GUILD_MEMBER_UPDATE", ...l });
+}
 class c extends r.A {
     _initialize() {
         l = setInterval(() => {

@@ -86,10 +86,10 @@ self.addEventListener("message", async (e) => {
                         l = 0,
                         s = [],
                         c = 0,
-                        f = !1,
-                        u = (e) => {
-                            f || ((f = !0), r(e));
-                        };
+                        f = !1;
+                    function u(e) {
+                        f || ((f = !0), r(e));
+                    }
                     (o.onError = (e) => u(Error(`mp4box error: ${e}`))),
                         (o.onReady = (e) => {
                             let r = e.videoTracks[0];

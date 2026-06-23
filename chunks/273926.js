@@ -44,7 +44,7 @@ function j(e) {
     let { formField: s } = e;
     return (0, r.jsx)(d.fu, { icon: o.B, text: u.intl.string(u.t["2xbmoG"]), meetsRequirement: !!s.response });
 }
-let v = (e) => {
+function v(e) {
     let { channelId: s, formField: n, onChange: t } = e;
     return (0, r.jsxs)(d.cS, {
         title: u.intl.string(u.t["Q8OFN+"]),
@@ -53,4 +53,4 @@ let v = (e) => {
             (0, r.jsx)(h, { onChange: t, checked: n.response }),
         ],
     });
-};
+}

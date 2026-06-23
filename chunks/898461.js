@@ -2,7 +2,9 @@
 n.d(t, { A: () => a, T: () => s });
 var i = n(575593),
     r = n(149807);
-let s = (e) => e instanceof a;
+function s(e) {
+    return e instanceof a;
+}
 class a extends r.A {
     asset;
     label;

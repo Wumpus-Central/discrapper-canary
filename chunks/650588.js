@@ -23,8 +23,8 @@ function g(e) {
     function T(e) {
         g(!1), t?.(e);
     }
-    let S = (e) =>
-        (0, i.jsxs)("div", {
+    function S(e) {
+        return (0, i.jsxs)("div", {
             className: E.Ry,
             children: [
                 (0, i.jsxs)("div", {
@@ -37,6 +37,7 @@ function g(e) {
                 (0, i.jsx)("div", { className: E.$H, children: e }),
             ],
         });
+    }
     return (0, i.jsx)(u.Y, {
         targetElementRef: A,
         shouldShow: s,

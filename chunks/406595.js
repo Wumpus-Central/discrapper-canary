@@ -9,7 +9,7 @@ var i = n(17928),
     u = n(776096),
     c = n(576705),
     d = n(290863),
-    _ = n(222823),
+    _ = n(568548),
     h = n(994500),
     f = n(287809),
     p = n(914853),
@@ -17,8 +17,12 @@ var i = n(17928),
     m = n(652215);
 let g = Number.MAX_SAFE_INTEGER,
     A = new r.J(
-        (e) => [e.tab],
-        (e) => e.sortKey,
+        function (e) {
+            return [e.tab];
+        },
+        function (e) {
+            return e.sortKey;
+        },
     ),
     I = new Set(Object.values(p.x)),
     T = new Map(),
@@ -317,153 +321,145 @@ class H extends i.Ay.PersistedStore {
         return [O(e).has(t), A.version];
     }
 }
-let Y = (e) => (0, E.v$)(e, "OverlayFriendsWidgetFavoritesStore"),
-    W = new H(
-        s.h,
-        __OVERLAY__
-            ? {}
-            : {
-                  OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: Y(function (e) {
-                      let t = R(e.tab, e.targetId);
-                      if (!e.isFavorite) {
-                          let n = O(e.tab).delete(e.targetId),
-                              i = A.delete(t);
-                          return n || i;
+function Y(e) {
+    return (0, E.v$)(e, "OverlayFriendsWidgetFavoritesStore");
+}
+let W = new H(
+    s.h,
+    __OVERLAY__
+        ? {}
+        : {
+              OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: Y(function (e) {
+                  let t = R(e.tab, e.targetId);
+                  if (!e.isFavorite) {
+                      let n = O(e.tab).delete(e.targetId),
+                          i = A.delete(t);
+                      return n || i;
+                  }
+                  let n = N(e.addedTimestampMs ?? O(e.tab).get(e.targetId)?.addedTimestampMs ?? Date.now()),
+                      i = O(e.tab);
+                  i.set(e.targetId, { targetId: e.targetId, addedTimestampMs: n });
+                  let r = D(),
+                      s = P({
+                          tab: e.tab,
+                          targetId: e.targetId,
+                          addedTimestampMs: n,
+                          guildAffinityNormalizationMax: r,
+                          pruneInvalid: S,
+                      });
+                  switch (s.kind) {
+                      case "BUILT": {
+                          let e = s.row,
+                              t = A.get(e.rowId);
+                          (null == t || x(t, e)) && A.set(e.rowId, e);
+                          break;
                       }
-                      let n = N(e.addedTimestampMs ?? O(e.tab).get(e.targetId)?.addedTimestampMs ?? Date.now()),
-                          i = O(e.tab);
-                      i.set(e.targetId, { targetId: e.targetId, addedTimestampMs: n });
-                      let r = D(),
-                          s = P({
-                              tab: e.tab,
-                              targetId: e.targetId,
-                              addedTimestampMs: n,
-                              guildAffinityNormalizationMax: r,
-                              pruneInvalid: S,
-                          });
-                      switch (s.kind) {
-                          case "BUILT": {
-                              let e = s.row,
-                                  t = A.get(e.rowId);
-                              (null == t || x(t, e)) && A.set(e.rowId, e);
-                              break;
-                          }
-                          case "NOT_READY_YET":
-                              A.delete(t);
-                              break;
-                          case "INVALID":
-                              i.delete(e.targetId), A.delete(t);
-                              break;
-                          default:
-                              return s;
-                      }
-                      return !0;
-                  }),
-                  POST_CONNECTION_OPEN: Y(j),
-                  OVERLAY_INITIALIZE: Y(j),
-                  CACHE_LOADED: Y(j),
-                  CACHE_LOADED_LAZY: Y(j),
-                  FRIENDS_LIST_POPOUT_MOUNTED: Y(j),
-                  PRESENCE_UPDATES: Y(function (e) {
-                      let t = O(p.x.FRIENDS);
-                      if (0 === t.size) return !1;
-                      let n = D(),
-                          i = !1;
-                      for (let r of e.updates) {
-                          let e = r.user?.id;
-                          null != e &&
-                              t.has(e) &&
+                      case "NOT_READY_YET":
+                          A.delete(t);
+                          break;
+                      case "INVALID":
+                          i.delete(e.targetId), A.delete(t);
+                          break;
+                      default:
+                          return s;
+                  }
+                  return !0;
+              }),
+              POST_CONNECTION_OPEN: Y(j),
+              OVERLAY_INITIALIZE: Y(j),
+              CACHE_LOADED: Y(j),
+              CACHE_LOADED_LAZY: Y(j),
+              FRIENDS_LIST_POPOUT_MOUNTED: Y(j),
+              PRESENCE_UPDATES: Y(function (e) {
+                  let t = O(p.x.FRIENDS);
+                  if (0 === t.size) return !1;
+                  let n = D(),
+                      i = !1;
+                  for (let r of e.updates) {
+                      let e = r.user?.id;
+                      null != e &&
+                          t.has(e) &&
+                          (i =
+                              G({ tab: p.x.FRIENDS, targetId: e, pruneInvalid: S, guildAffinityNormalizationMax: n }) ||
+                              i);
+                  }
+                  return i;
+              }),
+              PRESENCES_REPLACE: Y(function (e) {
+                  let t = O(p.x.FRIENDS);
+                  if (0 === t.size) return !1;
+                  let n = D(),
+                      i = !1;
+                  for (let r of e.presences) {
+                      let e = r.user?.id;
+                      null != e &&
+                          t.has(e) &&
+                          (i =
+                              G({ tab: p.x.FRIENDS, targetId: e, pruneInvalid: S, guildAffinityNormalizationMax: n }) ||
+                              i);
+                  }
+                  return i;
+              }),
+              LOAD_USER_AFFINITIES_V2_SUCCESS: Y(function () {
+                  return F(p.x.FRIENDS, { pruneInvalid: S });
+              }),
+              LOAD_GUILD_AFFINITIES_SUCCESS: Y(function () {
+                  let e = S;
+                  return F(p.x.MESSAGES, { pruneInvalid: e }) || F(p.x.VOICE, { pruneInvalid: e });
+              }),
+              MESSAGE_CREATE: Y((e) => B(e.channelId)),
+              MESSAGE_ACK: Y((e) => B(e.channelId)),
+              CHANNEL_ACK: Y((e) => B(e.channelId)),
+              CHANNEL_UPDATES: Y(function (e) {
+                  let t = S,
+                      n = D(),
+                      i = !1,
+                      r = O(p.x.MESSAGES),
+                      s = O(p.x.VOICE);
+                  for (let a of e.channels) {
+                      let e = a?.id;
+                      null != e &&
+                          (r.has(e) &&
                               (i =
                                   G({
-                                      tab: p.x.FRIENDS,
+                                      tab: p.x.MESSAGES,
                                       targetId: e,
-                                      pruneInvalid: S,
+                                      pruneInvalid: t,
                                       guildAffinityNormalizationMax: n,
-                                  }) || i);
-                      }
-                      return i;
-                  }),
-                  PRESENCES_REPLACE: Y(function (e) {
-                      let t = O(p.x.FRIENDS);
-                      if (0 === t.size) return !1;
-                      let n = D(),
-                          i = !1;
-                      for (let r of e.presences) {
-                          let e = r.user?.id;
-                          null != e &&
-                              t.has(e) &&
+                                  }) || i),
+                          s.has(e) &&
                               (i =
                                   G({
-                                      tab: p.x.FRIENDS,
+                                      tab: p.x.VOICE,
                                       targetId: e,
-                                      pruneInvalid: S,
+                                      pruneInvalid: t,
                                       guildAffinityNormalizationMax: n,
-                                  }) || i);
-                      }
-                      return i;
-                  }),
-                  LOAD_USER_AFFINITIES_V2_SUCCESS: Y(function () {
-                      return F(p.x.FRIENDS, { pruneInvalid: S });
-                  }),
-                  LOAD_GUILD_AFFINITIES_SUCCESS: Y(function () {
-                      let e = S;
-                      return F(p.x.MESSAGES, { pruneInvalid: e }) || F(p.x.VOICE, { pruneInvalid: e });
-                  }),
-                  MESSAGE_CREATE: Y((e) => B(e.channelId)),
-                  MESSAGE_ACK: Y((e) => B(e.channelId)),
-                  CHANNEL_ACK: Y((e) => B(e.channelId)),
-                  CHANNEL_UPDATES: Y(function (e) {
-                      let t = S,
-                          n = D(),
-                          i = !1,
-                          r = O(p.x.MESSAGES),
-                          s = O(p.x.VOICE);
-                      for (let a of e.channels) {
-                          let e = a?.id;
-                          null != e &&
-                              (r.has(e) &&
-                                  (i =
-                                      G({
-                                          tab: p.x.MESSAGES,
-                                          targetId: e,
-                                          pruneInvalid: t,
-                                          guildAffinityNormalizationMax: n,
-                                      }) || i),
-                              s.has(e) &&
-                                  (i =
-                                      G({
-                                          tab: p.x.VOICE,
-                                          targetId: e,
-                                          pruneInvalid: t,
-                                          guildAffinityNormalizationMax: n,
-                                      }) || i),
-                              (i = V(e, { pruneInvalid: t }) || i));
-                      }
-                      return i;
-                  }),
-                  CHANNEL_DELETE: Y(function (e) {
-                      let t = e.channel?.id;
-                      if (null == t) return !1;
-                      let n = !1;
-                      return (
-                          (n = U(p.x.MESSAGES, t) || n),
-                          (n = U(p.x.VOICE, t) || n),
-                          (n = V(t, { pruneInvalid: S }) || n)
-                      );
-                  }),
-                  RELATIONSHIP_ADD: Y(function (e) {
-                      let t = e.relationship?.id;
-                      if (null == t || !O(p.x.FRIENDS).has(t)) return !1;
-                      let n = D();
-                      return G({ tab: p.x.FRIENDS, targetId: t, pruneInvalid: S, guildAffinityNormalizationMax: n });
-                  }),
-                  RELATIONSHIP_REMOVE: Y(function (e) {
-                      let t = e.relationship?.id;
-                      return null != t && U(p.x.FRIENDS, t);
-                  }),
-                  LOGOUT: Y(function () {
-                      let e = A.size() > 0 || T.size > 0;
-                      return A.clear(), (T = new Map()), (S = !1), e;
-                  }),
-              },
-    );
+                                  }) || i),
+                          (i = V(e, { pruneInvalid: t }) || i));
+                  }
+                  return i;
+              }),
+              CHANNEL_DELETE: Y(function (e) {
+                  let t = e.channel?.id;
+                  if (null == t) return !1;
+                  let n = !1;
+                  return (
+                      (n = U(p.x.MESSAGES, t) || n), (n = U(p.x.VOICE, t) || n), (n = V(t, { pruneInvalid: S }) || n)
+                  );
+              }),
+              RELATIONSHIP_ADD: Y(function (e) {
+                  let t = e.relationship?.id;
+                  if (null == t || !O(p.x.FRIENDS).has(t)) return !1;
+                  let n = D();
+                  return G({ tab: p.x.FRIENDS, targetId: t, pruneInvalid: S, guildAffinityNormalizationMax: n });
+              }),
+              RELATIONSHIP_REMOVE: Y(function (e) {
+                  let t = e.relationship?.id;
+                  return null != t && U(p.x.FRIENDS, t);
+              }),
+              LOGOUT: Y(function () {
+                  let e = A.size() > 0 || T.size > 0;
+                  return A.clear(), (T = new Map()), (S = !1), e;
+              }),
+          },
+);

@@ -28,8 +28,8 @@ var n = i(627968),
     L = i(902916),
     O = i(339984),
     G = i(652215),
-    S = i(577718),
-    H = i(375708),
+    H = i(577718),
+    S = i(375708),
     b = i(506263);
 let B = { x: 0, y: 0 };
 function M(e) {
@@ -37,7 +37,7 @@ function M(e) {
         case O.HL.BANNER:
             return { height: O.yZ, width: O.nI };
         case O.HL.VIDEO_BACKGROUND:
-            return S.Im;
+            return H.Im;
         case O.HL.AVATAR:
         case O.HL.AVATAR_DECORATION:
         case O.HL.GUILD_ICON:
@@ -134,7 +134,7 @@ function z(e) {
             imageUri: i,
             originalAsset: a,
             transitionState: y,
-            onCrop: S,
+            onCrop: H,
             onClose: k,
             uploadType: z = O.HL.AVATAR,
             showUpsellHeader: V = !1,
@@ -147,9 +147,9 @@ function z(e) {
         {
             cropDimensions: K,
             dragBoundaries: Y,
-            imageDimensions: Z,
-            imageRotation: J,
-            zoomRatio: W,
+            imageDimensions: J,
+            imageRotation: W,
+            zoomRatio: Z,
             startingCoordinates: q,
             isDragging: ee,
             hasImageEdits: et,
@@ -179,7 +179,7 @@ function z(e) {
             [$],
         ),
         eh = r.useCallback(() => {
-            if (null == $.current || W > 1) return;
+            if (null == $.current || Z > 1) return;
             let { width: e, height: t } = $.current.getBoundingClientRect(),
                 { width: i, height: n } = (0, N.Qx)(z, e, t),
                 r = (0, N.Qp)(z, i, n, t),
@@ -190,7 +190,7 @@ function z(e) {
                 cropDimensions: r,
                 dragBoundaries: a,
             });
-        }, [z, W]),
+        }, [z, Z]),
         eE = r.useCallback((e) => {
             X({
                 type: "START_DRAGGING_IMAGE",
@@ -200,20 +200,20 @@ function z(e) {
         eA = r.useCallback(
             (e) => {
                 let { x: t, y: i } = U.current;
-                ee && (e.clientX !== t || e.clientY !== i) && eg(e.clientX - q.x, e.clientY - q.y, Y, J);
+                ee && (e.clientX !== t || e.clientY !== i) && eg(e.clientX - q.x, e.clientY - q.y, Y, W);
             },
-            [Y, J, ee, q.x, q.y, eg],
+            [Y, W, ee, q.x, q.y, eg],
         ),
         eR = r.useCallback(() => {
             X({ type: "STOP_DRAGGING_IMAGE", imageTransformCoordinates: U.current });
         }, []),
         eC = r.useCallback(
             (e) => {
-                if (null == Z) return;
-                let { width: t, height: i } = Z,
+                if (null == J) return;
+                let { width: t, height: i } = J,
                     n = (0, N.l$)(t * e, i * e, K),
                     { x: r, y: a } = U.current;
-                ((0, o.inRange)(r, n.right, n.left) && (0, o.inRange)(a, n.top, n.bottom)) || eg(r, a, n, J),
+                ((0, o.inRange)(r, n.right, n.left) && (0, o.inRange)(a, n.top, n.bottom)) || eg(r, a, n, W),
                     X({
                         type: "SET_IMAGE_ZOOM_RATIO",
                         zoomRatio: e,
@@ -221,7 +221,7 @@ function z(e) {
                         imageTransformCoordinates: U.current,
                     });
             },
-            [K, Z, J, eg],
+            [K, J, W, eg],
         ),
         eD = r.useCallback(
             (e, t) => {
@@ -235,12 +235,12 @@ function z(e) {
         ),
         ef = r.useCallback(() => {
             var e;
-            if (null == $.current || null == Z) return;
-            let t = (J + 90) % 360;
-            d.O.announce(H.intl.formatToPlainString(H.t.uYhsHT, { degrees: t }));
+            if (null == $.current || null == J) return;
+            let t = (W + 90) % 360;
+            d.O.announce(S.intl.formatToPlainString(S.t.uYhsHT, { degrees: t }));
             let { x: i, y: n } = ((e = U.current.x), { x: -U.current.y, y: e });
-            if (Z.width !== Z.height) {
-                let { newImageDimensions: e, newCropDimensions: r, newDragBoundaries: a } = eD(Z, W);
+            if (J.width !== J.height) {
+                let { newImageDimensions: e, newCropDimensions: r, newDragBoundaries: a } = eD(J, Z);
                 eg(i, n, a, t),
                     X({
                         type: "ROTATE_IMAGE",
@@ -251,33 +251,33 @@ function z(e) {
                         dragBoundaries: a,
                     });
             } else eg(i, n, Y, t), X({ type: "ROTATE_IMAGE", imageTransformCoordinates: U.current, imageRotation: t });
-        }, [Y, eD, Z, J, eg, W]),
+        }, [Y, eD, J, W, eg, Z]),
         eT = r.useCallback(() => {
-            if (null != $.current && null != Z) {
-                if (Z.width !== Z.height && (J - 0) % 180 != 0) {
-                    let { newImageDimensions: e, newCropDimensions: t, newDragBoundaries: i } = eD(Z, 1);
+            if (null != $.current && null != J) {
+                if (J.width !== J.height && (W - 0) % 180 != 0) {
+                    let { newImageDimensions: e, newCropDimensions: t, newDragBoundaries: i } = eD(J, 1);
                     X({ type: "RESET", imageDimensions: e, cropDimensions: t, dragBoundaries: i }), eg(0, 0, i, 0);
                 } else {
-                    let e = (0, N.l$)(+Z.width, +Z.height, K);
+                    let e = (0, N.l$)(+J.width, +J.height, K);
                     X({ type: "RESET", dragBoundaries: e }), eg(0, 0, e, 0);
                 }
                 eo((e) => e + 1);
             }
-        }, [K, eD, Z, J, eg]),
+        }, [K, eD, J, W, eg]),
         ep = r.useCallback(() => {
             let e = M(z);
             return e.width !== e.height;
         }, [z]),
         ex = r.useCallback(() => {
-            if (null == Z) return {};
-            let e = Z.width / Z.height,
-                t = ep() && e > O.wL ? K.height / Z.height : 1,
-                { width: i, height: n } = ((e, t) => {
+            if (null == J) return {};
+            let e = J.width / J.height,
+                t = ep() && e > O.wL ? K.height / J.height : 1,
+                { width: i, height: n } = (function (e, t) {
                     let { width: i, height: n } = e;
                     return t % 180 != 0 ? { width: n, height: i } : { width: i, height: n };
-                })(Z, J);
-            return { width: i * W * t, minWidth: i * W * t, height: n * W * t, minHeight: n * W * t };
-        }, [K.height, Z, J, ep, W]),
+                })(J, W);
+            return { width: i * Z * t, minWidth: i * Z * t, height: n * Z * t, minHeight: n * Z * t };
+        }, [K.height, J, W, ep, Z]),
         e_ = r.useCallback(async () => {
             let e;
             if (null == $.current) return;
@@ -292,7 +292,7 @@ function z(e) {
                         cropDimensions: K,
                         cropOriginCoordinates: U.current,
                         maxDimensions: n,
-                        imageRotation: J,
+                        imageRotation: W,
                     });
                     (F.current = a), (e = await r), (F.current = null);
                 } catch (e) {
@@ -308,9 +308,9 @@ function z(e) {
                     cropDimensions: K,
                     cropOriginCoordinates: U.current,
                     maxDimensions: n,
-                    imageRotation: J,
+                    imageRotation: W,
                 });
-            await S({
+            await H({
                 assetOrigin: (function (e) {
                     let { hasImageEdits: t, hasOriginalAsset: i } = e;
                     return i ? (t ? I.E.EDITED_ARCHIVED_ASSET : I.E.ARCHIVED_ASSET) : I.E.NEW_ASSET;
@@ -321,7 +321,7 @@ function z(e) {
             }),
                 ea(!1),
                 await k();
-        }, [K, t, et, J, ed, k, S, a, z]),
+        }, [K, t, et, W, ed, k, H, a, z]),
         eI = r.useCallback(async () => {
             if (null != F.current) {
                 F.current(), (F.current = null), ea(!1);
@@ -350,17 +350,17 @@ function z(e) {
     return (0, n.jsx)(T.f5, {
         value: el,
         children: (0, n.jsxs)(c.Modal, {
-            title: H.intl.string(H.t.DxAYCF),
+            title: S.intl.string(S.t.DxAYCF),
             size: "md",
             actionBarInput: (0, n.jsx)(m.Q, {
-                text: H.intl.string(H.t.yBZMsQ),
+                text: S.intl.string(S.t.yBZMsQ),
                 textVariant: "text-md/medium",
                 onClick: eT,
                 disabled: !et,
             }),
             actions: [
-                { text: H.intl.string(H.t["9TG40l"]), onClick: eI, variant: "secondary" },
-                { text: H.intl.string(H.t.ZSHmKD), onClick: e_, variant: "primary", loading: er, disabled: em },
+                { text: S.intl.string(S.t["9TG40l"]), onClick: eI, variant: "secondary" },
+                { text: S.intl.string(S.t.ZSHmKD), onClick: e_, variant: "primary", loading: er, disabled: em },
             ],
             transitionState: y,
             onClose: k,
@@ -387,7 +387,7 @@ function z(e) {
                                           (0, n.jsx)(E.E, {
                                               variant: "text-md/normal",
                                               color: "text-feedback-critical",
-                                              children: H.intl.string(H.t["+ITMYX"]),
+                                              children: S.intl.string(S.t["+ITMYX"]),
                                           }),
                                       ],
                                   })
@@ -397,14 +397,14 @@ function z(e) {
                                               onLoad: eh,
                                               onError: () => en(!0),
                                               style: {
-                                                  opacity: +(null != Z),
-                                                  transform: `translate3d(${U.current.x}px, ${U.current.y}px, 0) rotate(${J}deg)`,
+                                                  opacity: +(null != J),
+                                                  transform: `translate3d(${U.current.x}px, ${U.current.y}px, 0) rotate(${W}deg)`,
                                                   ...ex(),
                                               },
                                               className: s()(er ? b.As : b.nu, b.hh),
                                               src: i,
                                               crossOrigin: "anonymous",
-                                              alt: H.intl.string(H.t.SJNNgO),
+                                              alt: S.intl.string(S.t.SJNNgO),
                                               ref: $,
                                               onMouseDown: eE,
                                               draggable: !1,
@@ -425,7 +425,7 @@ function z(e) {
                                                           return b._h;
                                                   }
                                               })(z),
-                                              style: { opacity: +(null != Z), width: K.width, height: K.height },
+                                              style: { opacity: +(null != J), width: K.width, height: K.height },
                                           }),
                                       ],
                                   }),
@@ -449,9 +449,9 @@ function z(e) {
                                                 disabled: em,
                                                 equidistant: !0,
                                                 hideBubble: !0,
-                                                "aria-label": H.intl.string(H.t.dnvZSg),
+                                                "aria-label": S.intl.string(S.t.EqiCcq),
                                                 getAriaValueText: (e) =>
-                                                    H.intl.formatToPlainString(H.t.GHwBy5, {
+                                                    S.intl.formatToPlainString(S.t.GHwBy5, {
                                                         percent: Math.round(100 * e),
                                                     }),
                                             },
@@ -461,12 +461,12 @@ function z(e) {
                                     ],
                                 }),
                                 (0, n.jsx)(u.m, {
-                                    text: H.intl.string(H.t.E36Wd4),
+                                    text: S.intl.string(S.t.E36Wd4),
                                     ariaHidden: !0,
                                     children: (0, n.jsx)(C.D, {
                                         className: s()(b.On, { [b.r9]: em }),
                                         onClick: em ? void 0 : ef,
-                                        "aria-label": H.intl.string(H.t.LzFiKG),
+                                        "aria-label": S.intl.string(S.t.LzFiKG),
                                         "aria-disabled": em,
                                         children: (0, n.jsx)(D.H, { size: "md", color: "currentColor" }),
                                     }),

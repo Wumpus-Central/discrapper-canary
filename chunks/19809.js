@@ -922,7 +922,9 @@ function eP(e) {
           });
 }
 var ez = s(474491);
-let eH = async () => await s.e("40119").then(s.t.bind(s, 718698, 19));
+async function eH() {
+    return await s.e("40119").then(s.t.bind(s, 718698, 19));
+}
 function eF(e) {
     let {
             quest: t,

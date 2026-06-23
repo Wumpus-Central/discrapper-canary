@@ -11,7 +11,7 @@ var u = n(736653),
     c = n(63947),
     d = (((i = {}).UNSET = "unset"), (i.BLUE = "blue"), (i.ORANGE = "orange"), i),
     _ = (((r = {}).LIGHT = "light"), (r.MEDIUM = "medium"), r);
-let h = (e) => {
+let h = function (e) {
     let {
             progress: t,
             minimum: n = 0,

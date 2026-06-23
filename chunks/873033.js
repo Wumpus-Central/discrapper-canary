@@ -12,8 +12,8 @@ var n = l(627968),
     h = l(834730),
     x = l(260598),
     m = l(939249),
-    S = l(658675),
-    f = l(964486),
+    f = l(658675),
+    S = l(964486),
     A = l(47167),
     C = l(232246),
     j = l(647090),
@@ -130,12 +130,12 @@ function V(e) {
         [eo, eg] = a.useState(null),
         eh = (0, y.D3)(i.id),
         ex = (0, y.Xk)(i.id),
-        [em, eS] = a.useState(!1),
-        ef = (0, A.Ay)(i),
+        [em, ef] = a.useState(!1),
+        eS = (0, A.Ay)(i),
         eA = (0, C.A)(d),
         eC = null != v,
         ej = eA.length > 1;
-    (0, f.Ay)(() => {
+    (0, S.Ay)(() => {
         b.default.track(q.HAw.START_STAGE_OPENED, {
             stage_instance_id: V?.id,
             can_start_public_stage: !1,
@@ -144,7 +144,7 @@ function V(e) {
     });
     let ep = (e) => {
             (e.preventDefault(), ed === Q.dD.PUBLIC && X.length < 20 && !em)
-                ? eS(!0)
+                ? ef(!0)
                 : $ || J?.({ topic: X, privacyLevel: ed, sendStartNotification: er });
         },
         ev = a.useRef(null);
@@ -181,7 +181,7 @@ function V(e) {
                                     (0, n.jsx)(p.A, {
                                         className: z.kz,
                                         onScheduleChange: et,
-                                        onRecurrenceChange: (e) => {
+                                        onRecurrenceChange: function (e) {
                                             let t = ee.startDate;
                                             null == t || eg((0, j.nG)(e, t));
                                         },
@@ -217,8 +217,10 @@ function V(e) {
                                   variant: "text-xs/normal",
                                   className: z.Qw,
                                   children: Y.intl.format(Y.t["S+9O7g"], {
-                                      stageName: ef,
-                                      stageHook: (e, t) => (0, n.jsx)("span", { className: z.HA, children: ef }, t),
+                                      stageName: eS,
+                                      stageHook: function (e, t) {
+                                          return (0, n.jsx)("span", { className: z.HA, children: eS }, t);
+                                      },
                                   }),
                               })
                             : null,
@@ -251,7 +253,7 @@ function V(e) {
                       onClick: () => eu(!er),
                       className: z.Qy,
                       children: [
-                          (0, n.jsx)(S.P, { checked: er }),
+                          (0, n.jsx)(f.P, { checked: er }),
                           (0, n.jsx)(h.E, {
                               color: "text-default",
                               variant: "text-sm/normal",

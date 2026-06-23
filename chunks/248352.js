@@ -3,10 +3,10 @@ n.d(t, { A: () => u });
 var i = n(17928),
     r = n(228366);
 let s = [],
-    a = s,
-    o = (e) => {
-        a = null != e && e.length > 0 ? e : s;
-    };
+    a = s;
+function o(e) {
+    a = null != e && e.length > 0 ? e : s;
+}
 class l extends i.Ay.Store {
     static displayName = "CollectiblesUserDiscountStore";
     getUserDiscounts() {
@@ -17,13 +17,13 @@ class l extends i.Ay.Store {
     }
 }
 let u = new l(r.h, {
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: (e) => {
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: function (e) {
         o(e.shopHome.userDiscounts);
     },
-    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: (e) => {
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: function (e) {
         o(e.categories.userDiscounts);
     },
-    SKU_PURCHASE_SUCCESS: (e) => {
+    SKU_PURCHASE_SUCCESS: function (e) {
         let t = e.appliedUserDiscounts;
         if (null != t && t.length > 0) {
             let e = a.filter((e) => !t.some((t) => t.discount.id === e.discountId));
@@ -31,7 +31,7 @@ let u = new l(r.h, {
         }
         return !1;
     },
-    COLLECTIBLES_USER_DISCOUNTS_EXPIRED: (e) => {
+    COLLECTIBLES_USER_DISCOUNTS_EXPIRED: function (e) {
         let t = e.discountIds;
         if (t.length > 0) {
             let e = a.filter((e) => !t.includes(e.discountId));
@@ -39,11 +39,11 @@ let u = new l(r.h, {
         }
         return !1;
     },
-    WISHLIST_USER_DISCOUNTS_RESPONSE_SUCCESS: (e) => {
+    WISHLIST_USER_DISCOUNTS_RESPONSE_SUCCESS: function (e) {
         let { userDiscounts: t } = e;
         o(t);
     },
-    LOGOUT: () => {
+    LOGOUT: function () {
         a = s;
     },
 });

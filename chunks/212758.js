@@ -1,48 +1,50 @@
-s.d(t, { A: () => u });
-var r = s(627968),
-    a = s(64700),
-    n = s(503698),
-    i = s.n(n),
-    o = s(772707),
-    l = s(834730),
-    m = s(922529),
-    c = s(529505),
-    d = s(117816);
-function u(e) {
+n.d(t, { A: () => d });
+var r = n(627968),
+    s = n(64700),
+    a = n(503698),
+    i = n.n(a),
+    o = n(772707),
+    l = n(834730),
+    c = n(922529),
+    u = n(529505),
+    m = n(117816);
+function d(e) {
     let {
         headerText: t,
-        descriptionText: s,
-        infoRows: n,
-        onDismissAndStay: u,
+        descriptionText: n,
+        infoRows: a,
+        onDismissAndStay: d,
         onDismissAndLeave: h,
         leaveButtonText: k,
         stayButtonText: x,
-        transitionState: p,
-        impression: g,
+        transitionState: f,
+        impression: p,
     } = e;
     return (0, r.jsx)(o.k, {
-        transitionState: p,
-        onClose: () => (u(), Promise.resolve()),
-        trackingProps: { impression: g },
-        graphic: { type: "image", src: d.A },
+        transitionState: f,
+        onClose: function () {
+            return d(), Promise.resolve();
+        },
+        trackingProps: { impression: p },
+        graphic: { type: "image", src: m.A },
         title: t,
-        subtitle: s ?? void 0,
+        subtitle: n ?? void 0,
         actions: [
-            { text: x, onClick: u, variant: "secondary" },
+            { text: x, onClick: d, variant: "secondary" },
             { text: k, onClick: h },
         ],
         children: (0, r.jsx)("div", {
-            className: c.Cu,
-            children: n.map((e, t) =>
+            className: u.Cu,
+            children: a.map((e, t) =>
                 (0, r.jsxs)(
-                    a.Fragment,
+                    s.Fragment,
                     {
                         children: [
                             (0, r.jsxs)("div", {
-                                className: i()(c.lj, e.className),
+                                className: i()(u.lj, e.className),
                                 children: [e.icon, (0, r.jsx)(l.E, { variant: "text-md/medium", children: e.text })],
                             }),
-                            t < n.length - 1 && (0, r.jsx)(m.A, {}),
+                            t < a.length - 1 && (0, r.jsx)(c.A, {}),
                         ],
                     },
                     t,

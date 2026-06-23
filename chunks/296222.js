@@ -22,7 +22,7 @@ function c(t) {
             () =>
                 u.map((t) => ({
                     label: String(
-                        ((t) => {
+                        (function (t) {
                             switch (t) {
                                 case "DM_SPAM":
                                     return S.intl.string(S.t["9CYNmS"]);

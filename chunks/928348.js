@@ -1,39 +1,39 @@
-n.d(t, { H6: () => h, p3: () => c, qv: () => p, wP: () => M }), n(321073);
+n.d(t, { H6: () => h, p3: () => _, qv: () => f, wP: () => p }), n(321073);
 var r = n(64700),
     i = n(942381),
-    a = n(265690),
-    u = n(121894),
+    u = n(265690),
+    a = n(121894),
     l = n(913122),
     E = n(995786),
     A = n(904813),
     s = n(243277),
     S = n(652215);
 let o = {},
-    _ = (0, a.h)((e, t) => ({
+    c = (0, u.h)((e, t) => ({
         rules: {},
         fetching: !1,
         error: null,
         updateRule: (n) => {
-            let { guildId: r, id: i, triggerType: a } = n,
+            let { guildId: r, id: i, triggerType: u } = n,
                 { rules: l } = t(),
                 E = l[r] ?? {},
-                s = E[a] ?? [],
+                s = E[u] ?? [],
                 S = s.some((e) => e.id === i),
-                o = s.filter((e) => !(0, A.R)(e.id) || e.triggerType !== a),
-                _ = S ? o.map((e) => (e.id === i ? n : e)) : [...o, n];
-            (0, u.r)(() => {
-                e({ rules: { ...l, [r]: { ...E, [a]: _ } }, error: null });
+                o = s.filter((e) => !(0, A.R)(e.id) || e.triggerType !== u),
+                c = S ? o.map((e) => (e.id === i ? n : e)) : [...o, n];
+            (0, a.r)(() => {
+                e({ rules: { ...l, [r]: { ...E, [u]: c } }, error: null });
             });
         },
         removeRule: (n, r) => {
             let { rules: i } = t(),
-                a = i[r],
-                l = Object.keys(a).reduce((e, t) => {
+                u = i[r],
+                l = Object.keys(u).reduce((e, t) => {
                     let r = Number(t),
-                        i = a[r] ?? [];
+                        i = u[r] ?? [];
                     return (e[r] = i.filter((e) => e.id !== n)), e;
                 }, {});
-            (0, u.r)(() => {
+            (0, a.r)(() => {
                 e({ rules: { ...i, [r]: l }, error: null });
             });
         },
@@ -44,7 +44,7 @@ let o = {},
                 o[n] = Date.now();
                 try {
                     let i,
-                        a =
+                        u =
                             ((r = await (0, E.H0)(n)),
                             (i = {
                                 [s.uh.KEYWORD]: [],
@@ -60,38 +60,38 @@ let o = {},
                             }),
                             i),
                         l = t().rules;
-                    (0, u.r)(() => {
-                        e({ rules: { ...l, [n]: a }, error: null });
+                    (0, a.r)(() => {
+                        e({ rules: { ...l, [n]: u }, error: null });
                     });
                 } catch (n) {
                     let t = new l.LG(n);
-                    (0, u.r)(() => {
+                    (0, a.r)(() => {
                         e({ error: t });
                     });
                 }
             }
         },
-    })),
-    c = (e, t) => {
-        let n = _.getState().rules;
-        return (n[e]?.[t] ?? []).length;
-    };
+    }));
+function _(e, t) {
+    let n = c.getState().rules;
+    return (n[e]?.[t] ?? []).length;
+}
 function h(e) {
     let [t, n] = r.useState(!1),
-        [a, u] = _((e) => [e.syncRules, e.fetching], i.x);
+        [u, a] = c((e) => [e.syncRules, e.fetching], i.x);
     return [
         t,
         r.useCallback(async () => {
-            if (!u && null != e)
+            if (!a && null != e)
                 try {
-                    n(!0), await a(e);
+                    n(!0), await u(e);
                 } finally {
                     n(!1);
                 }
-        }, [e, u, a]),
+        }, [e, a, u]),
     ];
 }
-function p(e) {
+function f(e) {
     let [t, n] = h(e);
     return (
         r.useEffect(() => {
@@ -102,8 +102,8 @@ function p(e) {
         [t, n]
     );
 }
-function M(e) {
-    return _(
+function p(e) {
+    return c(
         (t) => ({ rulesByTriggerType: t.rules[e ?? S.dJq] ?? {}, updateRule: t.updateRule, removeRule: t.removeRule }),
         i.x,
     );

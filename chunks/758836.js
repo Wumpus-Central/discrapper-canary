@@ -64,10 +64,14 @@ var A =
         (s.COLLECTION_INDEX = "collection-index"),
         (s.GAME_SHOPS = "game-shops"),
         s);
-let T = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"],
-    S = (e) => T.includes(e),
-    y = (e) => null != e && "home" !== e && "catalog" !== e && "game-shops" !== e,
-    C = 800,
+let T = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"];
+function S(e) {
+    return T.includes(e);
+}
+function y(e) {
+    return null != e && "home" !== e && "catalog" !== e && "game-shops" !== e;
+}
+let C = 800,
     N = [
         "1212569433839636530",
         "1144308439720394944",
@@ -420,10 +424,14 @@ let D = {
         FRACTIONAL_PREMIUM: d.j.PREMIUM_TIER_2_3_DAY,
         FRACTIONAL_PREMIUM_1_DAY: d.j.PREMIUM_TIER_2_1_DAY,
     },
-    L = new Set(Object.values(D)),
-    w = (e) => d.I.ALL.has(e),
-    M = (e) => L.has(e),
-    P = [l.q.AVATAR_DECORATION, l.q.NAMEPLATE, l.q.PROFILE_EFFECT, l.q.PROFILE_FRAME, l.q.BUNDLE],
+    L = new Set(Object.values(D));
+function w(e) {
+    return d.I.ALL.has(e);
+}
+function M(e) {
+    return L.has(e);
+}
+let P = [l.q.AVATAR_DECORATION, l.q.NAMEPLATE, l.q.PROFILE_EFFECT, l.q.PROFILE_FRAME, l.q.BUNDLE],
     x = [
         { sortType: c.$.RELEVANCE, sortDirection: u.A.DESC },
         { sortType: c.$.RECENCY, sortDirection: u.A.DESC },

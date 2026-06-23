@@ -14,8 +14,8 @@ var g = s(451988),
     c = s(292666),
     C = s(652215),
     m = s(650583),
-    E = s(375708),
-    f = s(31008);
+    f = s(375708),
+    E = s(31008);
 class k extends i.PureComponent {
     static defaultProps = {
         canResend: !1,
@@ -36,16 +36,16 @@ class k extends i.PureComponent {
         if (!t)
             return [
                 {
-                    text: E.intl.string(E.t.v740sh),
+                    text: f.intl.string(f.t.v740sh),
                     variant: "primary",
                     onClick: this.handleVerify,
                     loading: s,
                     disabled: 0 === n.length || 0 === i.length,
                 },
             ];
-        let a = [{ variant: "secondary", text: E.intl.string(E.t.WnX4J2), onClick: this.handleResendEmail }];
+        let a = [{ variant: "secondary", text: f.intl.string(f.t.WnX4J2), onClick: this.handleResendEmail }];
         return (
-            e && a.push({ text: E.intl.string(E.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
+            e && a.push({ text: f.intl.string(f.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
             a
         );
     }
@@ -59,7 +59,7 @@ class k extends i.PureComponent {
                 gap: 20,
                 children: [
                     (0, n.jsx)(c.k, {
-                        label: E.intl.string(E.t.dI4d4S),
+                        label: f.intl.string(f.t.dI4d4S),
                         value: s,
                         error: t,
                         onChange: this.handleEmailChange,
@@ -67,7 +67,7 @@ class k extends i.PureComponent {
                         autoFocus: !0,
                     }),
                     (0, n.jsx)(c.k, {
-                        label: E.intl.string(E.t["CIGa+7"]),
+                        label: f.intl.string(f.t["CIGa+7"]),
                         type: "password",
                         value: i,
                         error: e,
@@ -85,15 +85,15 @@ class k extends i.PureComponent {
         return (
             (t =
                 e && null != s
-                    ? E.intl.format(E.t.JqLgQL, { email: s })
+                    ? f.intl.format(f.t.JqLgQL, { email: s })
                     : i
-                      ? E.intl.string(E.t.tSXg8O)
-                      : E.intl.string(E.t.KW5DEh)),
+                      ? f.intl.string(f.t.tSXg8O)
+                      : f.intl.string(f.t.KW5DEh)),
             (0, n.jsx)(p.k, {
                 transitionState: a,
-                title: E.intl.string(E.t["1MPz27"]),
+                title: f.intl.string(f.t["1MPz27"]),
                 subtitle: t,
-                graphic: { type: "image", src: f.A },
+                graphic: { type: "image", src: E.A },
                 onClose: this.props.onClose,
                 actions: this.getActions(),
                 children: !i && this.renderInputs(),
@@ -133,7 +133,7 @@ var y = s(836602),
     v = s(870570),
     A = s(287809),
     S = s(446868);
-let b = (t) => {
+let b = function (t) {
     let { transitionState: e, onClose: s } = t,
         { formState: g, errors: p } = (0, a.cf)([y.A], () => ({
             formState: y.A.getFormState(),
@@ -142,7 +142,7 @@ let b = (t) => {
         u = (0, a.bG)([A.default], () => A.default.getCurrentUser()),
         c = (0, a.bG)([v.A], () => v.A.getAction()),
         m = !S.A.isEmailReverification(c),
-        [f, b] = i.useState(!0),
+        [E, b] = i.useState(!0),
         P = g === C.XlH.SUBMITTING;
     function w(t) {
         return p?.[t]?.[0] ?? "";
@@ -155,7 +155,7 @@ let b = (t) => {
         emailError: x,
         passwordError: I,
         submitting: P,
-        canResend: f && !P && u?.email != null && 0 === x.length && 0 === I.length,
+        canResend: E && !P && u?.email != null && 0 === x.length && 0 === I.length,
         canChange: m,
         onChangeEmailClick: function () {
             b(!1);
@@ -167,7 +167,7 @@ let b = (t) => {
                         ? (0, R.E)()
                         : 0 === I.length &&
                           0 === x.length &&
-                          (0, r.P0)((0, l.o)(E.intl.string(E.t.R0RpRX), o.Ck.FAILURE)));
+                          (0, r.P0)((0, l.o)(f.intl.string(f.t.R0RpRX), o.Ck.FAILURE)));
             }),
                 b(!0);
         },

@@ -44,38 +44,42 @@ let _ = "__DEBUG_PROFILE_EFFECTS_STORE",
             (0, a.r)(() => {
                 e(() => (o.w.remove(_), { profileEffects: {} }));
             }),
-    })),
-    E = () =>
-        p((e) => {
-            let { profileEffects: t } = e;
-            return Object.values(t);
-        }, r.x),
-    m = (e) => {
-        let t = p((t) => (null != e ? t.profileEffects[e] : null)),
-            n = i.useRef([]);
-        return (
-            i.useEffect(
-                () => () => {
-                    n.current.forEach((e) => {
-                        URL.revokeObjectURL(e);
-                    }),
-                        (n.current = []);
-                },
-                [],
-            ),
-            i.useMemo(() => {
-                if (null == t) return null;
-                let e = (e) => {
-                        let t = (0, d.fB)(e);
-                        return n.current.push(t), t;
-                    },
-                    i = t.stillFrames,
-                    r = null != i ? { ...i } : {};
-                for (let t in r) {
-                    let n = r[t];
-                    null != n && (r[t] = { ...n, src: e(n.base64) });
-                }
-                return { ...t, stillFrames: r };
-            }, [t])
-        );
-    };
+    }));
+function E() {
+    return p((e) => {
+        let { profileEffects: t } = e;
+        return Object.values(t);
+    }, r.x);
+}
+let m = (e) => {
+    let t = p((t) => (null != e ? t.profileEffects[e] : null)),
+        n = i.useRef([]);
+    return (
+        i.useEffect(
+            () => () => {
+                n.current.forEach((e) => {
+                    URL.revokeObjectURL(e);
+                }),
+                    (n.current = []);
+            },
+            [],
+        ),
+        i.useMemo(() => {
+            if (null == t) return null;
+            let e = t.stillFrames,
+                i = null != e ? { ...e } : {};
+            for (let e in i) {
+                let t = i[e];
+                null != t &&
+                    (i[e] = {
+                        ...t,
+                        src: (function (e) {
+                            let t = (0, d.fB)(e);
+                            return n.current.push(t), t;
+                        })(t.base64),
+                    });
+            }
+            return { ...t, stillFrames: i };
+        }, [t])
+    );
+};

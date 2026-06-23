@@ -119,16 +119,17 @@ class v extends i.Ay.PersistedStore {
     static persistKey = "NotificationCenterItemsStore_v2";
     initialize(e) {
         if ((this.waitFor(c.default, u.A, s.A), null != e)) {
-            let t = e.notifCenterItems.map((e) => ({
-                ...e,
-                message: null != e.message ? new l.Ay(e.message) : void 0,
-            }));
+            let t = e.notifCenterItems.map(function (e) {
+                return { ...e, message: null != e.message ? new l.Ay(e.message) : void 0 };
+            });
             t.length > 0 &&
                 (p = { ...p, initialized: !0, isDataStale: !0, notifCenterItems: [], staleNotifCenterItems: t });
         }
     }
     getState() {
-        let e = (e) => ({ ...e, message: null != e.message ? e.message.toJS() : void 0 });
+        function e(e) {
+            return { ...e, message: null != e.message ? e.message.toJS() : void 0 };
+        }
         return {
             ...p,
             notifCenterItems: p.notifCenterItems.map(e),

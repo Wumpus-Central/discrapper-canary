@@ -15,9 +15,9 @@ var i = n(627968),
     E = n(404778),
     j = n(534514),
     N = n(475825),
-    p = n(39255),
-    A = n(47167),
-    f = n(713654),
+    f = n(39255),
+    p = n(47167),
+    A = n(713654),
     I = n(915089),
     S = n(201275),
     C = n(967144),
@@ -39,11 +39,11 @@ function k(e) {
 }
 function U(e) {
     let t = `${!e.name.includes(_.QP) ? "@" : ""}${e.name}`;
-    return { tag: { type: p._.ROLE, label: t }, row: { id: e.id, display: t, type: 1, record: e } };
+    return { tag: { type: f._.ROLE, label: t }, row: { id: e.id, display: t, type: 1, record: e } };
 }
 function P(e) {
-    let t = (0, A.m1)(e, R.default, y.A);
-    return { tag: { type: p._.CHANNEL, label: t }, row: { id: e.id, display: t, type: 0, record: e } };
+    let t = (0, p.m1)(e, R.default, y.A);
+    return { tag: { type: f._.CHANNEL, label: t }, row: { id: e.id, display: t, type: 0, record: e } };
 }
 let w = l.memo(function (e) {
     let { row: t, guildId: n, className: l } = e,
@@ -66,7 +66,7 @@ let w = l.memo(function (e) {
 function F(e) {
     let { channel: t, row: n, className: l } = e,
         s = null != t.parent_id,
-        a = (0, f.gU)(t);
+        a = (0, A.gU)(t);
     return (0, i.jsxs)("div", {
         className: r()(G.xZ, G.sM, { [G.p7]: s }, l),
         children: [
@@ -91,8 +91,8 @@ function H(e) {
             selectedRoleIds: u = new Set(),
             onChange: m,
             placeholder: g,
-            helperText: A,
-            className: f,
+            helperText: p,
+            className: A,
         } = e,
         S = (0, I.GV)(),
         C = (0, c.bG)([b.A], () => b.A.getRolesSnapshot(t)),
@@ -146,10 +146,13 @@ function H(e) {
                 m(new Set(n), new Set(i));
             },
             [m],
-        ),
-        Q = () => {
-            w(!1), H(!1);
-        };
+        );
+    function Q() {
+        w(!1), H(!1);
+    }
+    function Z(e, t, n) {
+        n.stopPropagation(), n.preventDefault(), 2 === t ? w(e) : (1 === t || w(e), H(e));
+    }
     l.useEffect(() => {
         let e = setTimeout(() => {
             z(O || F);
@@ -158,10 +161,7 @@ function H(e) {
             clearTimeout(e);
         };
     }, [O, F]);
-    let Z = (e, t, n) => {
-            n.stopPropagation(), n.preventDefault(), 2 === t ? w(e) : (1 === t || w(e), H(e));
-        },
-        $ = l.useCallback(
+    let $ = l.useCallback(
             (e) => {
                 let t = { ...v };
                 k(e) ? (t[e.id] = P(e.record)) : M(e) && (t[e.id] = U(e.record)),
@@ -203,16 +203,16 @@ function H(e) {
             [v, _, t],
         );
     return (0, i.jsxs)("div", {
-        className: r()(G.MT, f),
+        className: r()(G.MT, A),
         children: [
             (0, i.jsxs)("div", {
                 className: G.M6,
                 ref: W.setReference,
                 children: [
-                    (0, i.jsx)(p.A, {
+                    (0, i.jsx)(f.A, {
                         tags: et,
                         maxHeight: 98,
-                        size: p.A.Sizes.MEDIUM,
+                        size: f.A.Sizes.MEDIUM,
                         query: y,
                         ref: Y,
                         onRemoveTag: (e) => {
@@ -220,14 +220,14 @@ function H(e) {
                                 { [t]: n, ...i } = v;
                             J(i), R(""), Q();
                         },
-                        onQueryChange: (e) => {
+                        onQueryChange: function (e) {
                             R(e.trim().toLocaleLowerCase());
                         },
                         placeholder: g ?? L.intl.string(L.t.uqHLzW),
                         sections: [_.length],
                         inputProps: {
                             "aria-controls": D,
-                            "aria-describedby": null != A ? S : void 0,
+                            "aria-describedby": null != p ? S : void 0,
                             "aria-expanded": V,
                             onFocus: (e) => Z(!0, 2, e),
                             onBlur: (e) => Z(!1, 2, e),
@@ -289,13 +289,13 @@ function H(e) {
                         }),
                 ],
             }),
-            null != A &&
+            null != p &&
                 (0, i.jsx)(x.E, {
                     id: S,
                     variant: "text-xs/normal",
                     color: "text-muted",
                     className: G.cy,
-                    children: A,
+                    children: p,
                 }),
         ],
     });

@@ -22,62 +22,62 @@ var i,
     S = n(375708),
     y = n(766184),
     C = (((i = C || {}).TEXT = "text"), (i.ATTACHMENT = "attachment"), (i.EMBED = "embed"), i);
-let N = (e) => {
-        let { className: t } = e;
-        return (0, r.jsx)("div", { className: o()(y.pR, t), children: S.intl.string(S.t["F+x38C"]) });
-    },
-    v = (e) => {
-        let { className: t, isSingleMosaicItem: n, obscureOnly: i } = e;
-        return (0, r.jsx)("div", {
-            className: o()(y.W5, t),
-            children: i
-                ? null
-                : (0, r.jsxs)(r.Fragment, {
-                      children: [
-                          (0, r.jsx)(c.D, { size: "lg", color: l.A.colors.WHITE }),
-                          n &&
-                              (0, r.jsx)(d.E, {
-                                  variant: "text-sm/normal",
-                                  color: "always-white",
-                                  className: y.Vs,
-                                  children: S.intl.string(S.t.SpxcUR),
-                              }),
-                      ],
-                  }),
-        });
-    },
-    R = (e) => {
-        let { reason: t = I.Oc.SPOILER, className: n, isSingleMosaicItem: i = !1 } = e;
-        switch (t) {
-            case I.Oc.SPOILER:
-                return (0, r.jsx)(N, { className: n });
-            case I.Oc.EXPLICIT_CONTENT:
-            case I.Oc.GORE_CONTENT:
-            case I.Oc.SELF_HARM_CONTENT:
-                return (0, r.jsx)(v, { isSingleMosaicItem: i, className: n });
-            case I.Oc.POTENTIAL_EXPLICIT_CONTENT:
-                return (0, r.jsx)(v, { isSingleMosaicItem: i, className: n, obscureOnly: !0 });
-            default:
-                return (0, T.xb)(t);
-        }
-    },
-    O = (e) => {
-        let { obscureReason: t, isVisible: n, handleToggleObscurity: i, obscurityControlClassName: s } = e;
-        return t !== I.Oc.EXPLICIT_CONTENT && t !== I.Oc.GORE_CONTENT && t !== I.Oc.SELF_HARM_CONTENT
+function N(e) {
+    let { className: t } = e;
+    return (0, r.jsx)("div", { className: o()(y.pR, t), children: S.intl.string(S.t["F+x38C"]) });
+}
+function v(e) {
+    let { className: t, isSingleMosaicItem: n, obscureOnly: i } = e;
+    return (0, r.jsx)("div", {
+        className: o()(y.W5, t),
+        children: i
             ? null
-            : (0, r.jsx)("div", {
-                  className: o()(y.fA, s),
-                  children: (0, r.jsx)(_.D, {
-                      className: y.kw,
-                      onClick: i,
-                      "aria-label": S.intl.string(S.t.ex5G9m),
-                      children: n
-                          ? (0, r.jsx)(f.b, { size: "md", color: "currentColor" })
-                          : (0, r.jsx)(h.G, { size: "md", color: "currentColor" }),
-                  }),
-              });
-    },
-    b = s.createContext(!1);
+            : (0, r.jsxs)(r.Fragment, {
+                  children: [
+                      (0, r.jsx)(c.D, { size: "lg", color: l.A.colors.WHITE }),
+                      n &&
+                          (0, r.jsx)(d.E, {
+                              variant: "text-sm/normal",
+                              color: "always-white",
+                              className: y.Vs,
+                              children: S.intl.string(S.t.SpxcUR),
+                          }),
+                  ],
+              }),
+    });
+}
+function R(e) {
+    let { reason: t = I.Oc.SPOILER, className: n, isSingleMosaicItem: i = !1 } = e;
+    switch (t) {
+        case I.Oc.SPOILER:
+            return (0, r.jsx)(N, { className: n });
+        case I.Oc.EXPLICIT_CONTENT:
+        case I.Oc.GORE_CONTENT:
+        case I.Oc.SELF_HARM_CONTENT:
+            return (0, r.jsx)(v, { isSingleMosaicItem: i, className: n });
+        case I.Oc.POTENTIAL_EXPLICIT_CONTENT:
+            return (0, r.jsx)(v, { isSingleMosaicItem: i, className: n, obscureOnly: !0 });
+        default:
+            return (0, T.xb)(t);
+    }
+}
+function O(e) {
+    let { obscureReason: t, isVisible: n, handleToggleObscurity: i, obscurityControlClassName: s } = e;
+    return t !== I.Oc.EXPLICIT_CONTENT && t !== I.Oc.GORE_CONTENT && t !== I.Oc.SELF_HARM_CONTENT
+        ? null
+        : (0, r.jsx)("div", {
+              className: o()(y.fA, s),
+              children: (0, r.jsx)(_.D, {
+                  className: y.kw,
+                  onClick: i,
+                  "aria-label": S.intl.string(S.t.ex5G9m),
+                  children: n
+                      ? (0, r.jsx)(f.b, { size: "md", color: "currentColor" })
+                      : (0, r.jsx)(h.G, { size: "md", color: "currentColor" }),
+              }),
+          });
+}
+let b = s.createContext(!1);
 class D extends s.PureComponent {
     state = { visible: !1 };
     removeObscurity = (e) => {
@@ -282,10 +282,10 @@ class D extends s.PureComponent {
         }
     }
 }
-let L = (e) => {
+function L(e) {
     let t = (0, A._R)() && null != e.reason && I.tY.has(e.reason),
         n = (0, g.yM)();
     return (0, r.jsx)(D, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
-};
+}
 (L.Types = C), (L.Reasons = I.Oc);
 let w = L;

@@ -14,7 +14,7 @@ let _ = [u.Xr],
 function f(e) {
     return null != e && h.includes(e);
 }
-let p = r.memo((e) => {
+let p = r.memo(function (e) {
     let { entry: t, channel: n, selected: r } = e,
         { largeImage: s } = (0, a.nO)({
             entry: t,

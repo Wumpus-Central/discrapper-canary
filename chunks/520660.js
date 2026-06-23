@@ -3,17 +3,17 @@ var t = n(627968),
     i = n(64700),
     s = n(503698),
     r = n.n(s),
-    a = n(312742),
-    c = n(295868),
+    c = n(312742),
+    a = n(295868),
     o = n(661531),
     u = n(292666),
     d = n(408278),
     h = n(285796),
     m = n(772838),
-    x = n(939249),
-    g = n(245604),
-    p = n(834730),
-    f = n(913122),
+    f = n(939249),
+    x = n(245604),
+    g = n(834730),
+    p = n(913122),
     C = n(44234),
     j = n(513461),
     v = n(242273),
@@ -22,36 +22,36 @@ var t = n(627968),
     b = n(423396);
 let k = "MULTIPLE_CHOICE",
     E = (e) => {
-        let { choice: l, index: n, onChange: s, onClear: o, onReorder: x, isDropHovered: g } = e,
+        let { choice: l, index: n, onChange: s, onClear: o, onReorder: f, isDropHovered: x } = e,
+            g = i.useRef(null),
             p = i.useRef(null),
-            f = i.useRef(null),
-            [, j, v] = (0, a.i)({
+            [, j, v] = (0, c.i)({
                 type: k,
                 item: { choice: l, index: n },
                 end: (e, l) => {
-                    null == e || l.didDrop() || x(e.choice, null, !0);
+                    null == e || l.didDrop() || f(e.choice, null, !0);
                 },
             }),
-            [, y] = (0, c.H)({
+            [, y] = (0, a.H)({
                 accept: k,
                 hover: (e, l) => {
                     let { index: t } = e,
-                        i = p.current?.getBoundingClientRect(),
+                        i = g.current?.getBoundingClientRect(),
                         s = l.getClientOffset();
                     if (null == i || null == s) return;
                     let r = (i.bottom - i.top) / 2,
-                        a = s.y - i.top;
-                    (t < n && a < r) || (t > n && a > r) || x(e.choice, n, !1);
+                        c = s.y - i.top;
+                    (t < n && c < r) || (t > n && c > r) || f(e.choice, n, !1);
                 },
                 drop: (e) => {
-                    x(e.choice, n, !0);
+                    f(e.choice, n, !0);
                 },
             });
         return (
             i.useLayoutEffect(
                 () => (
-                    j(f),
-                    v(y(p)),
+                    j(p),
+                    v(y(g)),
                     () => {
                         j(null), y(null);
                     }
@@ -59,8 +59,8 @@ let k = "MULTIPLE_CHOICE",
                 [j, y, v],
             ),
             (0, t.jsxs)("div", {
-                ref: p,
-                className: r()(b.XQ, { [b.cB]: g }),
+                ref: g,
+                className: r()(b.XQ, { [b.cB]: x }),
                 "data-dnd-name": l,
                 children: [
                     (0, t.jsx)("div", {
@@ -89,7 +89,7 @@ let k = "MULTIPLE_CHOICE",
                         ],
                     }),
                     (0, t.jsx)("div", {
-                        ref: f,
+                        ref: p,
                         className: b.cK,
                         "data-dnd-name": l,
                         children: (0, t.jsx)(m.W, { size: "xs", color: "currentColor", className: b.co }),
@@ -100,31 +100,30 @@ let k = "MULTIPLE_CHOICE",
     },
     H = function (e) {
         let { field: l, onSave: n, onClose: s } = e,
-            [r, a] = i.useState(l?.label ?? ""),
-            [c, d] = i.useState(l?.choices ?? [""]),
+            [r, c] = i.useState(l?.label ?? ""),
+            [a, d] = i.useState(l?.choices ?? [""]),
             [h, m] = i.useState(null),
-            [C, k] = i.useState(null),
-            H = (e, l, n) => {
-                if (null == c) return;
-                null != h && m(null);
-                let t = c.indexOf(e),
-                    i = [...c];
-                null != l && l !== t && (i.splice(t, 1), i.splice(l, 0, e), d(i)),
-                    n ? null !== l && k(null) : l !== C && k(l);
-            },
-            I = async () => {
-                null != h && m(null);
-                let e = r.trim();
-                if ("" === e) return void m(N.intl.string(N.t["G+TI44"]));
-                if (0 === c.map((e) => e.trim()).filter((e) => "" !== e).length)
-                    return void m(N.intl.string(N.t.jZoHgI));
-                let l = { field_type: j.rX.MULTIPLE_CHOICE, label: e, choices: c, required: !0 };
-                try {
-                    await n(l), s();
-                } catch (e) {
-                    m(new f.LG(e).getAnyErrorMessage());
-                }
-            };
+            [C, k] = i.useState(null);
+        function H(e, l, n) {
+            if (null == a) return;
+            null != h && m(null);
+            let t = a.indexOf(e),
+                i = [...a];
+            null != l && l !== t && (i.splice(t, 1), i.splice(l, 0, e), d(i)),
+                n ? null !== l && k(null) : l !== C && k(l);
+        }
+        async function I() {
+            null != h && m(null);
+            let e = r.trim();
+            if ("" === e) return void m(N.intl.string(N.t["G+TI44"]));
+            if (0 === a.map((e) => e.trim()).filter((e) => "" !== e).length) return void m(N.intl.string(N.t.jZoHgI));
+            let l = { field_type: j.rX.MULTIPLE_CHOICE, label: e, choices: a, required: !0 };
+            try {
+                await n(l), s();
+            } catch (e) {
+                m(new p.LG(e).getAnyErrorMessage());
+            }
+        }
         return (0, t.jsxs)(v.A, {
             ...e,
             errorText: h,
@@ -136,17 +135,17 @@ let k = "MULTIPLE_CHOICE",
                     className: b.Ef,
                     children: (0, t.jsx)(u.k, {
                         autoFocus: !0,
-                        onChange: (e) => {
+                        onChange: function (e) {
                             null != h && m(null);
                             let l = e.replace(/(\r\n|\n|\r)/g, " ");
-                            l.length > y.Ty && (l = e.slice(0, y.Ty)), a(l);
+                            l.length > y.Ty && (l = e.slice(0, y.Ty)), c(l);
                         },
                         placeholder: N.intl.string(N.t.fqVmbL),
                         value: r,
                     }),
                 }),
                 (0, t.jsx)("div", { className: b.yF }),
-                c.map((e, l) =>
+                a.map((e, l) =>
                     (0, t.jsx)(
                         E,
                         {
@@ -157,14 +156,14 @@ let k = "MULTIPLE_CHOICE",
                                 return (
                                     null != h && m(null),
                                     (n = e.replace(/(\r\n|\n|\r)/g, " ")).length > y.yR && (n = n.slice(0, y.yR)),
-                                    void (((t = [...c])[l] = n), d(t))
+                                    void (((t = [...a])[l] = n), d(t))
                                 );
                             },
                             onClear: () => {
                                 let e;
                                 return (
                                     null != h && m(null),
-                                    void d(0 === (e = [...c.slice(0, l), ...c.slice(l + 1)]).length ? [""] : e)
+                                    void d(0 === (e = [...a.slice(0, l), ...a.slice(l + 1)]).length ? [""] : e)
                                 );
                             },
                             onReorder: H,
@@ -173,22 +172,22 @@ let k = "MULTIPLE_CHOICE",
                         `choice-${l}`,
                     ),
                 ),
-                c.length !== y.Hz &&
+                a.length !== y.Hz &&
                     (0, t.jsx)("div", {
                         className: b.C5,
-                        children: (0, t.jsxs)(x.D, {
+                        children: (0, t.jsxs)(f.D, {
                             className: b.bK,
-                            onClick: () => {
-                                null != h && m(null), c.length !== y.Hz && d([...c, ""]);
+                            onClick: function () {
+                                null != h && m(null), a.length !== y.Hz && d([...a, ""]);
                             },
                             children: [
-                                (0, t.jsx)(g.U, {
+                                (0, t.jsx)(x.U, {
                                     size: "custom",
                                     height: 17,
                                     width: 17,
                                     color: o.A.unsafe_rawColors.BLUE_345.css,
                                 }),
-                                (0, t.jsx)(p.E, {
+                                (0, t.jsx)(g.E, {
                                     color: "text-link",
                                     variant: "text-md/normal",
                                     children: N.intl.string(N.t.sVfx9r),

@@ -1,7 +1,7 @@
 e.d(n, { default: () => N });
 var r = e(627968),
-    s = e(64700),
-    i = e(636537),
+    i = e(64700),
+    s = e(636537),
     l = e(109802),
     a = e(452027),
     o = e(292666),
@@ -13,14 +13,14 @@ var r = e(627968),
     g = e(652215),
     m = e(375708),
     h = e(577796);
-function j(t) {
+function f(t) {
     let { name: n, value: e } = t,
-        [i, o] = s.useState(l.q.DEFAULT);
+        [s, o] = i.useState(l.q.DEFAULT);
     return (0, r.jsx)(a.D, {
         label: n,
         children: (0, r.jsx)(l.e, {
             value: e,
-            mode: i,
+            mode: s,
             supportsCopy: x.p5,
             onCopy: () => {
                 (0, x.C)(
@@ -32,20 +32,20 @@ function j(t) {
         }),
     });
 }
-function y(t) {
-    let { domain: n, error: e, disabled: s, onDomainChange: i } = t;
+function j(t) {
+    let { domain: n, error: e, disabled: i, onDomainChange: s } = t;
     return (0, r.jsx)(o.k, {
         label: m.intl.string(m.t["4jIAa+"]),
         error: e,
-        onChange: i,
+        onChange: s,
         placeholder: "example.com",
         maxLength: 253,
         value: n,
-        disabled: s,
+        disabled: i,
         required: !0,
     });
 }
-function f(t) {
+function y(t) {
     let { domain: n, proof: e } = t;
     return (0, r.jsxs)(u.B, {
         gap: 16,
@@ -72,9 +72,9 @@ function f(t) {
                                 fullWidth: !1,
                                 className: h.r,
                                 children: [
-                                    (0, r.jsx)(j, { name: m.intl.string(m.t.GL3q7k), value: `_discord.${n}` }),
-                                    (0, r.jsx)(j, { name: m.intl.string(m.t.Ccmixu), value: "TXT" }),
-                                    (0, r.jsx)(j, { name: m.intl.string(m.t.PVLriT), value: e }),
+                                    (0, r.jsx)(f, { name: m.intl.string(m.t.GL3q7k), value: `_discord.${n}` }),
+                                    (0, r.jsx)(f, { name: m.intl.string(m.t.Ccmixu), value: "TXT" }),
+                                    (0, r.jsx)(f, { name: m.intl.string(m.t.PVLriT), value: e }),
                                 ],
                             }),
                         ],
@@ -94,8 +94,8 @@ function S(t) {
             (0, r.jsxs)(u.B, {
                 gap: 12,
                 children: [
-                    (0, r.jsx)(j, { name: m.intl.string(m.t.GL3q7k), value: `https://${n}/.well-known/discord` }),
-                    (0, r.jsx)(j, { name: m.intl.string(m.t.PVLriT), value: e }),
+                    (0, r.jsx)(f, { name: m.intl.string(m.t.GL3q7k), value: `https://${n}/.well-known/discord` }),
+                    (0, r.jsx)(f, { name: m.intl.string(m.t.PVLriT), value: e }),
                 ],
             }),
         ],
@@ -103,78 +103,82 @@ function S(t) {
 }
 function N(t) {
     let { onClose: n, transitionState: e } = t,
-        [l, a] = s.useState(""),
-        [o, u] = s.useState(""),
-        [d, c] = s.useState(null),
-        [x, h] = s.useState(!1),
-        [j, N] = s.useState("DOMAIN"),
-        [b, C] = s.useState("DNS"),
-        D = s.useId(),
-        v = (t) => t.body?.errors?.domain?._errors?.[0]?.message ?? t.body?.message ?? t.message,
-        P = () => i.Bo.post({ url: g.Rsh.CONNECTION(g.fg2.DOMAIN, l), body: {}, rejectWithError: !1 }),
-        k = async () => {
-            if ("" === l) return c(m.intl.string(m.t.eJEUvD)), !1;
-            h(!0), c(null);
-            try {
-                return await P(), n(), !1;
-            } catch (t) {
-                if (t.body?.proof != null) return u(t.body.proof), !0;
-                return c(v(t)), !1;
-            } finally {
-                h(!1);
-            }
-        },
-        B = async () => {
-            h(!0), c(null);
-            try {
-                return await P(), !0;
-            } catch (t) {
-                return c(v(t)), !1;
-            } finally {
-                h(!1);
-            }
-        },
-        O = [
-            {
-                stepKey: "DOMAIN",
-                modalProps: { title: m.intl.string(m.t["7lo8+e"]), subtitle: m.intl.string(m.t.NxPUqY) },
-                body: (0, r.jsx)("form", {
-                    id: D,
-                    onSubmit: (t) => t.preventDefault(),
-                    noValidate: !0,
-                    children: (0, r.jsx)(y, {
-                        domain: l,
-                        error: "DOMAIN" === j ? d : null,
-                        disabled: x,
-                        onDomainChange: a,
-                    }),
+        [l, a] = i.useState(""),
+        [o, u] = i.useState(""),
+        [d, c] = i.useState(null),
+        [x, h] = i.useState(!1),
+        [f, N] = i.useState("DOMAIN"),
+        [b, C] = i.useState("DNS"),
+        D = i.useId();
+    function v(t) {
+        return t.body?.errors?.domain?._errors?.[0]?.message ?? t.body?.message ?? t.message;
+    }
+    function P() {
+        return s.Bo.post({ url: g.Rsh.CONNECTION(g.fg2.DOMAIN, l), body: {}, rejectWithError: !1 });
+    }
+    async function k() {
+        if ("" === l) return c(m.intl.string(m.t.eJEUvD)), !1;
+        h(!0), c(null);
+        try {
+            return await P(), n(), !1;
+        } catch (t) {
+            if (t.body?.proof != null) return u(t.body.proof), !0;
+            return c(v(t)), !1;
+        } finally {
+            h(!1);
+        }
+    }
+    async function B() {
+        h(!0), c(null);
+        try {
+            return await P(), !0;
+        } catch (t) {
+            return c(v(t)), !1;
+        } finally {
+            h(!1);
+        }
+    }
+    let O = [
+        {
+            stepKey: "DOMAIN",
+            modalProps: { title: m.intl.string(m.t["7lo8+e"]), subtitle: m.intl.string(m.t.NxPUqY) },
+            body: (0, r.jsx)("form", {
+                id: D,
+                onSubmit: (t) => t.preventDefault(),
+                noValidate: !0,
+                children: (0, r.jsx)(j, {
+                    domain: l,
+                    error: "DOMAIN" === f ? d : null,
+                    disabled: x,
+                    onDomainChange: a,
                 }),
-                nextButtonProps: { type: "submit", text: m.intl.string(m.t.PDTjLN), form: D, loading: x },
-                onNext: k,
+            }),
+            nextButtonProps: { type: "submit", text: m.intl.string(m.t.PDTjLN), form: D, loading: x },
+            onNext: k,
+        },
+        {
+            stepKey: "PROOF",
+            modalProps: {
+                title: m.intl.string(m.t["7lo8+e"]),
+                notice: null != d ? { message: d, type: "critical" } : void 0,
             },
-            {
-                stepKey: "PROOF",
-                modalProps: {
-                    title: m.intl.string(m.t["7lo8+e"]),
-                    notice: null != d ? { message: d, type: "critical" } : void 0,
+            body: "DNS" === b ? (0, r.jsx)(y, { domain: l, proof: o }) : (0, r.jsx)(S, { domain: l, proof: o }),
+            secondaryActionButtonProps: {
+                text: "DNS" === b ? m.intl.string(m.t.CkfdNx) : m.intl.string(m.t.RhJMVQ),
+                onClick: () => {
+                    C("DNS" === b ? "HTTP" : "DNS"), c(null);
                 },
-                body: "DNS" === b ? (0, r.jsx)(f, { domain: l, proof: o }) : (0, r.jsx)(S, { domain: l, proof: o }),
-                secondaryActionButtonProps: {
-                    text: "DNS" === b ? m.intl.string(m.t.CkfdNx) : m.intl.string(m.t.RhJMVQ),
-                    onClick: () => {
-                        C("DNS" === b ? "HTTP" : "DNS"), c(null);
-                    },
-                },
-                nextButtonProps: { text: m.intl.string(m.t["13ofGu"]) },
-                onNext: B,
             },
-        ];
+            nextButtonProps: { text: m.intl.string(m.t["13ofGu"]) },
+            onNext: B,
+        },
+    ];
     return (0, r.jsx)(p.t, {
         onClose: n,
         transitionState: e,
         steps: O,
-        currentStepKey: j,
-        onStepChange: (t) => {
+        currentStepKey: f,
+        onStepChange: function (t) {
             c(null), N(t);
         },
     });

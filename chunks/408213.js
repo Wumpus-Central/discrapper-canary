@@ -17,7 +17,7 @@ var i = n(636537),
     m = n(652215),
     g = n(375708);
 let A = {
-    fetchVerificationForm: async (e, t) => {
+    fetchVerificationForm: async function e(e, t) {
         let n = t ?? h.A.getInviteKeyForGuildId(e),
             s = f.default.getCurrentUser(),
             a = !_.Ay.isMember(e, s?.id);
@@ -48,7 +48,7 @@ let A = {
             r.h.dispatch({ type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: e });
         }
     },
-    updateVerificationForm: async (e, t, n, s) => {
+    updateVerificationForm: async function e(e, t, n, s) {
         let { body: a } = await i.Bo.patch({
             url: m.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { form_fields: t, enabled: n, bulk_action: s },
@@ -61,7 +61,7 @@ let A = {
             form: { version: a.version, description: a.description, formFields: a.form_fields },
         });
     },
-    updateVerificationFormFieldsLocal: (e, t) => {
+    updateVerificationFormFieldsLocal: function (e, t) {
         r.h.dispatch({
             type: "MEMBER_VERIFICATION_FORM_UPDATE",
             guildId: e,
@@ -69,7 +69,7 @@ let A = {
             isLocalUpdate: !0,
         });
     },
-    updateVerificationFormDescription: async (e, t) => {
+    updateVerificationFormDescription: async function e(e, t) {
         let { body: n } = await i.Bo.patch({
             url: m.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { description: t },
@@ -82,7 +82,7 @@ let A = {
             form: { version: n.version, description: n.description, formFields: n.form_fields },
         });
     },
-    updateVerificationFormDescriptionLocal: (e, t) => {
+    updateVerificationFormDescriptionLocal: function (e, t) {
         r.h.dispatch({
             type: "MEMBER_VERIFICATION_FORM_UPDATE",
             guildId: e,
@@ -90,7 +90,7 @@ let A = {
             isLocalUpdate: !0,
         });
     },
-    enableVerificationForm: async (e, t) => {
+    enableVerificationForm: async function e(e, t) {
         await i.Bo.patch({
             url: m.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { enabled: t },

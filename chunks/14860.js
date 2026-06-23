@@ -83,13 +83,7 @@ function N(e) {
         D = (0, r.bG)([m.default], () => m.default.getAwaitingRemoteSessionInfo()?.deviceId),
         [R, y] = n.useState(!1),
         [E, M] = n.useState(() => N[D ?? ""]?.id ?? null);
-    n.useEffect(() => {
-        v.Uc(h);
-    }, [h]),
-        n.useEffect(() => {
-            1 === I.length ? M(I[0].id) : null != w && M(w);
-        }, [I, w]);
-    let A = async () => {
+    async function A() {
         let e = N[E ?? ""];
         d()(null != e, "Cannot transfer without selected device");
         try {
@@ -101,8 +95,14 @@ function N(e) {
                     body: p.intl.formatToPlainString(p.t["6ZyNH/"], { deviceName: e.name }),
                 });
         }
-    };
+    }
     return (
+        n.useEffect(() => {
+            v.Uc(h);
+        }, [h]),
+        n.useEffect(() => {
+            1 === I.length ? M(I[0].id) : null != w && M(w);
+        }, [I, w]),
         k
             ? ((i = p.intl.string(p.t["+d9SH8"])),
               (t = (0, l.jsx)("div", { className: j.dc, children: (0, l.jsx)(C.y, {}) })))
@@ -114,7 +114,7 @@ function N(e) {
                 (t = (0, l.jsx)(b, {
                     devices: I,
                     selectedDeviceId: E,
-                    onSelectDeviceId: (e) => {
+                    onSelectDeviceId: function (e) {
                         M(e), (0, v.Jm)(h, e);
                     },
                 }))),

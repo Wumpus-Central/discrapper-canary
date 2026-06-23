@@ -30,8 +30,8 @@ var l = n(503698),
     b = n(625494),
     D = n(652215),
     L = n(868347);
-let w = () =>
-    (0, i.jsxs)(
+function w() {
+    return (0, i.jsxs)(
         "div",
         {
             className: L.HR,
@@ -39,6 +39,7 @@ let w = () =>
         },
         "symbol",
     );
+}
 class M extends r.PureComponent {
     _renderSecondaryTimeout = null;
     _doneTimeout = null;

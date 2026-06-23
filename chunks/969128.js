@@ -11,10 +11,10 @@ var l = n(17928),
 function u(i) {
     let t = (0, r.jN)(i.guild_id),
         n = (0, l.bG)([s.Ay], () => s.Ay.isChannelOptedIn(i.guild_id, i.id)),
-        u = (0, l.bG)([s.Ay], () => null != i.parent_id && s.Ay.isChannelOptedIn(i.guild_id, i.parent_id)),
-        c = () => {
-            (0, e.AC)(i.guild_id, i.id, !n, { section: o.JJy.CONTEXT_MENU });
-        };
+        u = (0, l.bG)([s.Ay], () => null != i.parent_id && s.Ay.isChannelOptedIn(i.guild_id, i.parent_id));
+    function c() {
+        (0, e.AC)(i.guild_id, i.id, !n, { section: o.JJy.CONTEXT_MENU });
+    }
     return !t || i.isThread()
         ? null
         : i.isCategory()

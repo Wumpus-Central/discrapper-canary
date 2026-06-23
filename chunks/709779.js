@@ -12,8 +12,8 @@ var n = i(627968),
     g = i(150934),
     x = i(347704),
     S = i(47167),
-    m = i(468689),
-    f = i(555337),
+    f = i(468689),
+    m = i(913758),
     E = i(636042),
     h = i(376092),
     j = i(808728),
@@ -165,20 +165,20 @@ function T(t) {
     );
 }
 function Y(t) {
-    let { permissions: e } = t,
-        i = (t) => {
-            switch (t.toString()) {
-                case M.xBc.MENTION_EVERYONE.toString():
-                    return L.intl.string(L.t.yCpsQw);
-                case M.xBc.CREATE_GUILD_EXPRESSIONS.toString():
-                    return L.intl.string(L.t.vo2LdY);
-                case M.xBc.MANAGE_GUILD_EXPRESSIONS.toString():
-                    return L.intl.string(L.t.cmp2W6);
-                default:
-                    return (0, h.hx)(t);
-            }
-        },
-        { enabledPermissions: s, disabledPermissions: l } = e;
+    let { permissions: e } = t;
+    function i(t) {
+        switch (t.toString()) {
+            case M.xBc.MENTION_EVERYONE.toString():
+                return L.intl.string(L.t.yCpsQw);
+            case M.xBc.CREATE_GUILD_EXPRESSIONS.toString():
+                return L.intl.string(L.t.vo2LdY);
+            case M.xBc.MANAGE_GUILD_EXPRESSIONS.toString():
+                return L.intl.string(L.t.cmp2W6);
+            default:
+                return (0, h.hx)(t);
+        }
+    }
+    let { enabledPermissions: s, disabledPermissions: l } = e;
     return (0, n.jsxs)("div", {
         className: O.tp,
         children: [
@@ -240,7 +240,7 @@ function w(t) {
     s.useEffect(() => {
         b.default.track(M.HAw.OPEN_MODAL, { type: P.bK });
     }, []);
-    let { guild: i } = (0, r.cf)([f.A], () => f.A.getProps()),
+    let { guild: i } = (0, r.cf)([m.A], () => m.A.getProps()),
         [a, o] = s.useState("intro"),
         [d] = s.useState(() => i?.verificationLevel),
         [c] = s.useState(() => i?.explicitContentFilter),
@@ -257,26 +257,26 @@ function w(t) {
         [T, Y] = s.useState(!1);
     if (null == i) return null;
     let w = async () => {
-            if (null == R || !T) return;
-            let t = N ? null : l.TF(R.permissions, P.e$);
-            if (null != t && t !== R.permissions) {
-                let e = { ...R, permissions: t };
-                await (0, E.JY)(i.id, [e], void 0, void 0, void 0, { throwErr: !0 });
-            }
-            let e = {
-                features: new Set([...i.features, M.GuildFeatures.COMMUNITY]),
-                rulesChannelId: S,
-                publicUpdatesChannelId: j,
-                ...(!u && { verificationLevel: M.PvD.LOW }),
-                ...(!p && { explicitContentFilter: M.gh6.ALL_MEMBERS }),
-                ...(!O && { defaultMessageNotifications: M.orn.ONLY_MENTIONS }),
-            };
-            m.A.updateGuild(e), await m.A.saveGuild(i.id, e, { throwErr: !0 });
-        },
-        K = async () => {
-            b.default.track(M.HAw.MODAL_DISMISSED, { type: P.bK }), await e.onClose();
-        },
-        U = [
+        if (null == R || !T) return;
+        let t = N ? null : l.TF(R.permissions, P.e$);
+        if (null != t && t !== R.permissions) {
+            let e = { ...R, permissions: t };
+            await (0, E.JY)(i.id, [e], void 0, void 0, void 0, { throwErr: !0 });
+        }
+        let e = {
+            features: new Set([...i.features, M.GuildFeatures.COMMUNITY]),
+            rulesChannelId: S,
+            publicUpdatesChannelId: j,
+            ...(!u && { verificationLevel: M.PvD.LOW }),
+            ...(!p && { explicitContentFilter: M.gh6.ALL_MEMBERS }),
+            ...(!O && { defaultMessageNotifications: M.orn.ONLY_MENTIONS }),
+        };
+        f.A.updateGuild(e), await f.A.saveGuild(i.id, e, { throwErr: !0 });
+    };
+    async function K() {
+        b.default.track(M.HAw.MODAL_DISMISSED, { type: P.bK }), await e.onClose();
+    }
+    let U = [
             {
                 stepKey: P.pj.INTRO,
                 modalProps: {

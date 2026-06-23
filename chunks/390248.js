@@ -196,7 +196,9 @@ function O(e) {
         embeds: e.embeds.map((e) => ((e.contentScanVersion = -1), e)),
     };
 }
-let b = (e, t) => null != e && null != t && (e <= E._L || t <= E.jd);
+function b(e, t) {
+    return null != e && null != t && (e <= E._L || t <= E.jd);
+}
 function D() {
     let e = (0, c.d6)(a.t.SENSITIVE_CONTENT_SHOW_SETTING),
         t = (0, l.p9)();

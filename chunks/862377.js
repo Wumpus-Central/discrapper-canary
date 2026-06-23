@@ -1,37 +1,37 @@
-n.d(i, { default: () => o });
+n.d(i, { default: () => e });
 var r = n(627968);
 n(64700);
 var a = n(478437),
     s = n(189213),
     l = n(47167),
-    e = n(375708);
-let o = (t) => {
+    o = n(375708);
+let e = function (t) {
     let i,
-        { channel: n, onClose: o, onConfirm: c, transitionState: p } = t,
+        { channel: n, onClose: e, onConfirm: c, transitionState: p } = t,
         {
             title: d,
-            body: h,
-            confirm: u,
+            body: u,
+            confirm: h,
         } = ((i = (0, l.Ay)(n, !0)),
         n.type === a.r.GUILD_CATEGORY
             ? {
-                  title: e.intl.string(e.t["4VpUw8"]),
-                  body: e.intl.format(e.t.GuhMa5, { channelName: i }),
-                  confirm: e.intl.string(e.t.xOscRh),
+                  title: o.intl.string(o.t["4VpUw8"]),
+                  body: o.intl.format(o.t.GuhMa5, { channelName: i }),
+                  confirm: o.intl.string(o.t.xOscRh),
               }
             : {
-                  title: e.intl.string(e.t["4VpUw8"]),
-                  body: e.intl.format(e.t["2z/hBg"], { channelName: i }),
-                  confirm: e.intl.string(e.t.gGs6TT),
+                  title: o.intl.string(o.t["4VpUw8"]),
+                  body: o.intl.format(o.t["2z/hBg"], { channelName: i }),
+                  confirm: o.intl.string(o.t.gGs6TT),
               });
     return (0, r.jsx)(s.Modal, {
         title: d,
-        subtitle: h,
+        subtitle: u,
         actions: [
-            { text: e.intl.string(e.t["ETE/oC"]), onClick: o, variant: "secondary" },
-            { text: u, onClick: c, variant: "critical-primary" },
+            { text: o.intl.string(o.t["ETE/oC"]), onClick: e, variant: "secondary" },
+            { text: h, onClick: c, variant: "critical-primary" },
         ],
-        onClose: o,
+        onClose: e,
         transitionState: p,
     });
 };

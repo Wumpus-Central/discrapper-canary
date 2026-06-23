@@ -1,21 +1,25 @@
-s.d(i, {
-    CL: () => l,
-    Ht: () => p,
-    RU: () => d,
-    Rx: () => r,
-    V: () => c,
+n.d(i, {
+    CL: () => c,
+    Ht: () => l,
+    RU: () => u,
+    Rx: () => s,
+    V: () => p,
     cb: () => a,
     eT: () => h,
     jR: () => o,
     x7: () => e,
 });
-var n = s(375708);
-let r = "SAFETY_WARNING_BANNER_WEB",
+var r = n(375708);
+let s = "SAFETY_WARNING_BANNER_WEB",
     e = "https://www.crisistextline.org/",
     o = "https://nofiltr.org/resources-hub/",
-    l = "https://discord.findahelpline.com/",
-    p = "InappropriateConversationModal-web",
-    c = "PRIVATE_DM_SAFETY_TOOLS_MODAL",
-    a = "SafetyToolsActionSheet-web",
-    h = () => [n.intl.string(n.t["26fDv4"]), n.intl.string(n.t.togDfk), n.intl.string(n.t.O4Ljca)],
-    d = () => [n.intl.string(n.t.bCWw8l), n.intl.string(n.t.mzSucz), n.intl.string(n.t.ZkmC7s)];
+    c = "https://discord.findahelpline.com/",
+    l = "InappropriateConversationModal-web",
+    p = "PRIVATE_DM_SAFETY_TOOLS_MODAL",
+    a = "SafetyToolsActionSheet-web";
+function h() {
+    return [r.intl.string(r.t["26fDv4"]), r.intl.string(r.t.togDfk), r.intl.string(r.t.O4Ljca)];
+}
+function u() {
+    return [r.intl.string(r.t.bCWw8l), r.intl.string(r.t.mzSucz), r.intl.string(r.t.ZkmC7s)];
+}

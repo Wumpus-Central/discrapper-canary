@@ -14,9 +14,9 @@ var n = a(627968),
     p = a(84540),
     A = a(836602),
     v = a(287809),
-    x = a(38405),
-    C = a(340124),
-    f = a(507107),
+    f = a(38405),
+    x = a(340124),
+    C = a(507107),
     j = a(347135),
     k = a(551875),
     R = a(801365),
@@ -80,7 +80,7 @@ function O(e) {
                 ),
                 l = async () => {
                     if (null == n)
-                        return x.A.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
+                        return f.A.addBreadcrumb({ message: "Error saving avatar decoration; it is null" }), !1;
                     (0, p.p)({ avatarDecoration: n });
                     let e = A.A.getPendingChanges(),
                         t = (0, h.Sk)(e),
@@ -94,17 +94,17 @@ function O(e) {
         [N, y] = r.useState(L ? "loading" : "claimed");
     r.useEffect(() => {
         L &&
-            (0, C.Oq)(m.id, f.pY.CROSS_PLATFORM, u)
+            (0, x.Oq)(m.id, C.pY.CROSS_PLATFORM, u)
                 .then(() => y("claimed"))
                 .catch(() => y("error"));
     }, [m.id, u, L]);
     let Y = !0 === d && null === I && k?.skuId !== "",
         q = null == _,
         M = q || (null == I && !0 !== d) || Y || "loading" === N,
-        T = "error" === N || null == k,
-        W = async () => {
-            y("applying"), y((await O()) ? "applied" : "claimed");
-        };
+        T = "error" === N || null == k;
+    async function W() {
+        y("applying"), y((await O()) ? "applied" : "claimed");
+    }
     return (0, n.jsx)(E.A, {
         onClose: a,
         transitionState: i,

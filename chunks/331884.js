@@ -1,10 +1,12 @@
-e.d(a, { i: () => i, o: () => o });
-var n = e(284009),
-    r = e.n(n),
-    s = e(17928),
-    l = e(287809);
-let i = () => {
-        let t = (0, s.bG)([l.default], () => l.default.getCurrentUser());
-        return r()(null != t, "user has to be signed in before accessing shop"), t;
-    },
-    o = () => (0, s.bG)([l.default], () => l.default.getCurrentUser());
+n.d(t, { i: () => s, o: () => o });
+var r = n(284009),
+    i = n.n(r),
+    a = n(17928),
+    l = n(287809);
+function s() {
+    let e = (0, a.bG)([l.default], () => l.default.getCurrentUser());
+    return i()(null != e, "user has to be signed in before accessing shop"), e;
+}
+function o() {
+    return (0, a.bG)([l.default], () => l.default.getCurrentUser());
+}

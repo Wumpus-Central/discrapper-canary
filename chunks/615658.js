@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var i = n(627968),
     l = n(64700),
     a = n(17928),
@@ -8,12 +8,12 @@ var i = n(627968),
     c = n(38050),
     d = n(998740),
     u = n(572808),
-    h = n(241080);
-let p = () => {
+    p = n(241080);
+let h = function () {
     let e = (0, a.bG)([r.A], () => r.A.getChannelId()),
         t = (0, a.bG)([d.A], () => null != e && d.A.isUserConnected(e)),
         n = (0, c.n)((e) => e.genre),
-        p = (0, c.n)((e) => e.songIndex),
+        h = (0, c.n)((e) => e.songIndex),
         m = (0, c.n)((e) => e.playRadio),
         A = (0, c.n)((e) => e.globalMute),
         x = (0, c.n)((e) => e.playNextSong),
@@ -21,7 +21,7 @@ let p = () => {
         f = l.useRef(null),
         C = l.useRef(null),
         y = l.useRef(null),
-        E = (0, h.A)(n, p),
+        E = (0, p.A)(n, h),
         N = (0, a.bG)([d.A], () => d.A.assets);
     return (l.useEffect(() => {
         let e = f.current;

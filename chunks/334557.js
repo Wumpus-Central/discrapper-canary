@@ -8,7 +8,7 @@ var i = n(627968),
     l = n(97808),
     u = n(654107),
     c = n(977132);
-let d = (e) => {
+let d = function (e) {
         let { children: t, shouldAnimate: n } = e;
         return n
             ? (0, i.jsx)("div", { className: c.nw, children: (0, i.jsx)("div", { className: c.WH, children: t }) })

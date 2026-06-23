@@ -68,33 +68,33 @@ class S {
                 let t = { in_proper_game: !1, in_game_guess: !1, spectating: !1, bomb_planted: !1 },
                     n = [{ ...t, timestamp_ms: 0 }],
                     i = null,
-                    r = null,
-                    s = (e, i) => {
-                        let r = { ...t, ...e };
-                        (r.in_proper_game !== t.in_proper_game ||
-                            r.in_game_guess !== t.in_game_guess ||
-                            r.spectating !== t.spectating ||
-                            r.bomb_planted !== t.bomb_planted) &&
-                            (Object.assign(t, r), n.push({ ...r, timestamp_ms: i }));
-                    },
-                    a = (e) => {
-                        for (;;) {
-                            let n = 1 / 0,
-                                a = null;
-                            if (t.in_proper_game && null != i) {
-                                let e = i + 175e3;
-                                e < n && ((n = e), (a = "round"));
-                            }
-                            if (t.in_game_guess && null != r) {
-                                let e = r + 135e3;
-                                e <= n && ((n = e), (a = "out_of_game"));
-                            }
-                            if (null == a || n > e) break;
-                            "round" === a
-                                ? s({ in_proper_game: !1, bomb_planted: !1, spectating: !1 }, n)
-                                : s({ in_proper_game: !1, in_game_guess: !1, bomb_planted: !1, spectating: !1 }, n);
+                    r = null;
+                function s(e, i) {
+                    let r = { ...t, ...e };
+                    (r.in_proper_game !== t.in_proper_game ||
+                        r.in_game_guess !== t.in_game_guess ||
+                        r.spectating !== t.spectating ||
+                        r.bomb_planted !== t.bomb_planted) &&
+                        (Object.assign(t, r), n.push({ ...r, timestamp_ms: i }));
+                }
+                let a = (e) => {
+                    for (;;) {
+                        let n = 1 / 0,
+                            a = null;
+                        if (t.in_proper_game && null != i) {
+                            let e = i + 175e3;
+                            e < n && ((n = e), (a = "round"));
                         }
-                    };
+                        if (t.in_game_guess && null != r) {
+                            let e = r + 135e3;
+                            e <= n && ((n = e), (a = "out_of_game"));
+                        }
+                        if (null == a || n > e) break;
+                        "round" === a
+                            ? s({ in_proper_game: !1, bomb_planted: !1, spectating: !1 }, n)
+                            : s({ in_proper_game: !1, in_game_guess: !1, bomb_planted: !1, spectating: !1 }, n);
+                    }
+                };
                 for (let n of [...e].sort((e, t) => e.timestamp_ms - t.timestamp_ms)) {
                     var o;
                     switch (
@@ -176,12 +176,12 @@ class v {
         (this.gameEvents = e),
             (this.gameStateTimeline = (function (e) {
                 let t = { in_game: !1, is_dead: !1 },
-                    n = [{ ...t, timestamp_ms: 0 }],
-                    i = (e, i) => {
-                        let r = { ...t, ...e };
-                        (r.in_game !== t.in_game || r.is_dead !== t.is_dead) &&
-                            (Object.assign(t, r), n.push({ ...r, timestamp_ms: i }));
-                    };
+                    n = [{ ...t, timestamp_ms: 0 }];
+                function i(e, i) {
+                    let r = { ...t, ...e };
+                    (r.in_game !== t.in_game || r.is_dead !== t.is_dead) &&
+                        (Object.assign(t, r), n.push({ ...r, timestamp_ms: i }));
+                }
                 for (let t of [...e].sort((e, t) => e.timestamp_ms - t.timestamp_ms))
                     switch (
                         (function (e) {
@@ -190,7 +190,7 @@ class v {
                                     return "game_start";
                                 case N.oy:
                                     return "game_end";
-                                case N.mJ:
+                                case N.Wi:
                                     return "death";
                                 case N.Ou:
                                     return "respawn";
@@ -373,11 +373,13 @@ function U(e, t, n, i) {
     }
     null != f && p <= E && (s = f.calculateModifiers?.(p, E));
     let m = (function (e) {
-            if (null == e) return () => 1;
-            let t = new Map(e.map((e) => [e.timestamp_ms, e.modifier]));
-            return (e) => t.get(1e3 * Math.floor(e / 1e3)) ?? 1;
-        })(s),
-        g = (e) => f?.eventScoreMultiplier?.(e) ?? 1;
+        if (null == e) return () => 1;
+        let t = new Map(e.map((e) => [e.timestamp_ms, e.modifier]));
+        return (e) => t.get(1e3 * Math.floor(e / 1e3)) ?? 1;
+    })(s);
+    function g(e) {
+        return f?.eventScoreMultiplier?.(e) ?? 1;
+    }
     for (let i of e) {
         let e, s;
         r()(null != i.decision, "candidate clip missing .decision");
@@ -389,19 +391,20 @@ function U(e, t, n, i) {
                 ((e = { audioModelDataPerUser: null != n ? n.audioModelDataPerUser : {}, gameEventData: [] }),
                 null != n)
             ) {
-                let t = 1e3 * Math.floor(a / 1e3),
-                    i = (e) =>
-                        G(
-                            e.map((e) => ({ ...e, timestamp_ms: e.timestamp_ms + t })),
-                            o,
-                            f,
-                        );
+                let t = 1e3 * Math.floor(a / 1e3);
+                function A(e) {
+                    return G(
+                        e.map((e) => ({ ...e, timestamp_ms: e.timestamp_ms + t })),
+                        o,
+                        f,
+                    );
+                }
                 for (let t in ((e.audioModelDataPerUser = {}), n.audioModelDataPerUser)) {
-                    let r = n.audioModelDataPerUser[t];
+                    let i = n.audioModelDataPerUser[t];
                     e.audioModelDataPerUser[t] = {
-                        laughterData: i(r.laughterData),
-                        shoutingData: i(r.shoutingData),
-                        rmsData: i(r.rmsData),
+                        laughterData: A(i.laughterData),
+                        shoutingData: A(i.shoutingData),
+                        rmsData: A(i.rmsData),
                     };
                 }
             } else
@@ -454,23 +457,23 @@ function U(e, t, n, i) {
         }
         let p = Object.keys(e.audioModelDataPerUser),
             E = [],
-            A = [],
-            T = [];
+            T = [],
+            S = [];
         for (let t of p) {
             let n = e.audioModelDataPerUser[t];
             E.push(n.laughterData.map((e) => e.value)),
-                A.push(n.shoutingData.map((e) => e.value)),
-                T.push(n.rmsData.map((e) => e.value));
+                T.push(n.shoutingData.map((e) => e.value)),
+                S.push(n.rmsData.map((e) => e.value));
         }
-        let S = p.indexOf(n),
-            y = p.length > 0 ? e.audioModelDataPerUser[p[0]] : void 0,
-            C = y?.laughterData[0]?.timestamp_ms,
-            N = y?.laughterData.length ?? 0;
-        null != C &&
-            N > 0 &&
+        let y = p.indexOf(n),
+            C = p.length > 0 ? e.audioModelDataPerUser[p[0]] : void 0,
+            N = C?.laughterData[0]?.timestamp_ms,
+            v = C?.laughterData.length ?? 0;
+        null != N &&
+            v > 0 &&
             e.gameEventData.length > 0 &&
-            (s = e.gameEventData.map((e) => Math.max(0, Math.min(N - 1, Math.round((e.timestamp_ms - C) / 1e3)))));
-        let v = (function (e, t) {
+            (s = e.gameEventData.map((e) => Math.max(0, Math.min(v - 1, Math.round((e.timestamp_ms - N) / 1e3)))));
+        let R = (function (e, t) {
                 let n,
                     { pLaugh: i, pShout: r, rms: s, main: a, gameEventChunks: o } = e,
                     l = e.participantCount ?? i.length;
@@ -640,8 +643,8 @@ function U(e, t, n, i) {
                         coContribPerChunk: N,
                     },
                 };
-            })({ pLaugh: E, pShout: A, rms: T, main: S, gameEventChunks: s, participantCount: _ }, c),
-            R = (function (e, t, n) {
+            })({ pLaugh: E, pShout: T, rms: S, main: y, gameEventChunks: s, participantCount: _ }, c),
+            x = (function (e, t, n) {
                 let i = 0;
                 for (let r of e) {
                     let e = t(r.timestamp_ms),
@@ -650,32 +653,34 @@ function U(e, t, n, i) {
                 }
                 return i;
             })(e.gameEventData, m, g),
-            x = {
+            U = {
                 clip: i,
-                score: (0.5 + 1 / (1 + Math.exp(-v.audioScore))) * (1 + Math.tanh(R / c.gameSquashScale)) - 0.5,
-                audioScore: v.audioScore,
-                gameEventsScore: R,
+                score: (0.5 + 1 / (1 + Math.exp(-R.audioScore))) * (1 + Math.tanh(x / c.gameSquashScale)) - 0.5,
+                audioScore: R.audioScore,
+                gameEventsScore: x,
                 hasAudio: E.length > 0,
                 hasGameEvents: e.gameEventData.length > 0,
             };
         if (u) {
-            x.components = { ...v.components, gameEventsScore: R };
-            let e = null != C ? (C - o) / 1e3 : 0;
-            x.debug = {
-                ...v.debug,
+            U.components = { ...R.components, gameEventsScore: x };
+            let e = null != N ? (N - o) / 1e3 : 0;
+            U.debug = {
+                ...R.debug,
                 userIds: p,
-                tsSec: Array.from({ length: N }, (t, n) => e + n),
+                tsSec: Array.from({ length: v }, (t, n) => e + n),
                 pLaugh: E,
-                pShout: A,
-                rms: T,
+                pShout: T,
+                rms: S,
             };
         }
-        d.push(x);
+        d.push(U);
     }
     d.sort((e, t) => t.score - e.score);
-    let A = (function (e, t, n, i) {
-        let r = (t) => [...e].sort((e, n) => t(n) - t(e)),
-            s = [
+    let T = (function (e, t, n, i) {
+        function r(t) {
+            return [...e].sort((e, n) => t(n) - t(e));
+        }
+        let s = [
                 {
                     axis: "mixed",
                     ranked: r((e) => e.score),
@@ -709,12 +714,12 @@ function U(e, t, n, i) {
             }
         return a;
     })(d, c, o, f?.gameAxisScoreThreshold);
-    return { allClipsRanked: d, selected: A };
+    return { allClipsRanked: d, selected: T };
 }
 function G(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
-var F = n(315240),
+var F = n(430795),
     V = n(696016);
 class B extends o.A {
     timeline;
@@ -823,17 +828,16 @@ class B extends o.A {
                 let e = a.get(i.timestamp_ms) ?? 0;
                 a.set(i.timestamp_ms, e + i.value);
             }
-        let o = (e, t, n) => {
-                let i = null,
-                    r = Number.MAX_VALUE;
-                for (let s = e; s <= t; s += 1e3) {
-                    let e = a.get(s) ?? 0;
-                    ((n && e < r) || (!n && e <= r)) &&
-                        ((r = e), (i = s), !n && e < 0.001 && (i = Math.min(i + 2e3, t)));
-                }
-                return i;
-            },
-            l = I(this.decisionSignals.gameEventData, i, s);
+        function o(e, t, n) {
+            let i = null,
+                r = Number.MAX_VALUE;
+            for (let s = e; s <= t; s += 1e3) {
+                let e = a.get(s) ?? 0;
+                ((n && e < r) || (!n && e <= r)) && ((r = e), (i = s), !n && e < 0.001 && (i = Math.min(i + 2e3, t)));
+            }
+            return i;
+        }
+        let l = I(this.decisionSignals.gameEventData, i, s);
         {
             let e = l.length > 0 ? Math.min(...l.map((e) => e.timestamp_ms)) : null,
                 t = i + 5e3;

@@ -49,7 +49,7 @@ let d = new c(r.h, {
     SAVED_CUSTOM_THEMES_FETCH_START: function () {
         l = 1;
     },
-    SAVED_CUSTOM_THEMES_FETCH_SUCCESS: (e) => {
+    SAVED_CUSTOM_THEMES_FETCH_SUCCESS: function (e) {
         let { themes: t } = e;
         (l = 2),
             (o = t.filter(u).map((e) => {
@@ -62,7 +62,7 @@ let d = new c(r.h, {
                 };
             }));
     },
-    SAVED_CUSTOM_THEMES_FETCH_FAILURE: (e) => {
+    SAVED_CUSTOM_THEMES_FETCH_FAILURE: function (e) {
         let { error: t } = e;
         (l = 3), s.A.captureException(t, { tags: { app_context: "SavedCustomThemeStore" } });
     },

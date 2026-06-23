@@ -421,65 +421,51 @@ function eZ(e) {
             application: s,
             entry: j,
             onClose: k,
-        }),
-        J = () =>
-            (0, f.A)(r) && null != P
-                ? (0, i.jsxs)("div", {
-                      className: ea.FH,
-                      children: [
-                          (0, i.jsx)(l.H, { size: "xxs", color: u.A.colors.TEXT_DEFAULT, className: ea.Ow }),
-                          (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: W, id: G }),
-                      ],
-                  })
-                : (0, h.A)(r) || (0, N.Cy)(r)
-                  ? (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: r.name, id: G })
-                  : null != r.details
-                    ? (0, i.jsx)(A.O, {
-                          href: r.details_url,
-                          children: (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: r.details, id: G }),
-                      })
-                    : (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: r.name, id: G }),
-        ee = () =>
-            r.type === eT.$pd.HANG_STATUS
-                ? null
-                : (0, f.A)(r) && null != M
-                  ? (0, i.jsx)(ej.A, {
-                        variant: "text-xs/normal",
-                        text: q.intl.formatToPlainString(q.t["hq/Qze"], { guildName: M.name }),
-                        onClick: () => {
-                            (0, C.u)(M.id), H({ action: "OPEN_VOICE_GUILD" }), k?.();
-                        },
-                    })
-                  : (0, h.A)(r)
-                    ? (0, i.jsx)(A.O, {
-                          href: r.details_url,
-                          children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.details }),
-                      })
-                    : (0, N.Cy)(r)
-                      ? (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r?.assets?.small_text })
-                      : (0, i.jsx)(A.O, {
-                            href: r.state_url,
-                            children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.state }),
-                        }),
-        et = () => {
-            if (r.type === eT.$pd.WATCHING) return null;
-            if ((0, h.A)(r)) return en();
-            if ((0, N.Cy)(r) && r.party?.size != null && r.party?.size.length >= 2) {
-                let e = q.intl.formatToPlainString(q.t["JC/3xw"], {
-                    numSpeakers: r.party?.size[0],
-                    numListeners: r.party?.size[1] - r.party?.size[0],
-                });
-                return (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: e });
-            }
-            return r.assets?.large_text != null
+        });
+    function J() {
+        return (0, f.A)(r) && null != P
+            ? (0, i.jsxs)("div", {
+                  className: ea.FH,
+                  children: [
+                      (0, i.jsx)(l.H, { size: "xxs", color: u.A.colors.TEXT_DEFAULT, className: ea.Ow }),
+                      (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: W, id: G }),
+                  ],
+              })
+            : (0, h.A)(r) || (0, N.Cy)(r)
+              ? (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: r.name, id: G })
+              : null != r.details
                 ? (0, i.jsx)(A.O, {
-                      href: r.assets?.large_url,
-                      children: (0, i.jsx)(ej.A, { text: r.assets?.large_text, variant: "text-xs/normal" }),
+                      href: r.details_url,
+                      children: (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: r.details, id: G }),
                   })
-                : null;
-        },
-        en = () =>
-            r.party?.size == null && r.application_id === eq.I4
+                : (0, i.jsx)(ej.Q, { variant: "heading-sm/semibold", text: r.name, id: G });
+    }
+    let ee = () =>
+        r.type === eT.$pd.HANG_STATUS
+            ? null
+            : (0, f.A)(r) && null != M
+              ? (0, i.jsx)(ej.A, {
+                    variant: "text-xs/normal",
+                    text: q.intl.formatToPlainString(q.t["hq/Qze"], { guildName: M.name }),
+                    onClick: () => {
+                        (0, C.u)(M.id), H({ action: "OPEN_VOICE_GUILD" }), k?.();
+                    },
+                })
+              : (0, h.A)(r)
+                ? (0, i.jsx)(A.O, {
+                      href: r.details_url,
+                      children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.details }),
+                  })
+                : (0, N.Cy)(r)
+                  ? (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r?.assets?.small_text })
+                  : (0, i.jsx)(A.O, {
+                        href: r.state_url,
+                        children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.state }),
+                    });
+    function et() {
+        if (r.type === eT.$pd.WATCHING) return null;
+        if ((0, h.A)(r))
+            return r.party?.size == null && r.application_id === eq.I4
                 ? (0, i.jsxs)("div", {
                       className: ea.CI,
                       children: [
@@ -521,16 +507,31 @@ function eZ(e) {
                           href: r.state_url,
                           children: (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: r.state }),
                       })
-                    : null,
-        ei = () =>
-            (0, i.jsx)(eU, {
-                containerClassName: ea.o1,
-                activity: r,
-                user: t,
-                onAction: H,
-                onClose: k,
-                application: s,
+                    : null;
+        if ((0, N.Cy)(r) && r.party?.size != null && r.party?.size.length >= 2) {
+            let e = q.intl.formatToPlainString(q.t["JC/3xw"], {
+                numSpeakers: r.party?.size[0],
+                numListeners: r.party?.size[1] - r.party?.size[0],
             });
+            return (0, i.jsx)(ej.A, { variant: "text-xs/normal", text: e });
+        }
+        return r.assets?.large_text != null
+            ? (0, i.jsx)(A.O, {
+                  href: r.assets?.large_url,
+                  children: (0, i.jsx)(ej.A, { text: r.assets?.large_text, variant: "text-xs/normal" }),
+              })
+            : null;
+    }
+    function en() {
+        return (0, i.jsx)(eU, {
+            containerClassName: ea.o1,
+            activity: r,
+            user: t,
+            onAction: H,
+            onClose: k,
+            application: s,
+        });
+    }
     return (0, i.jsx)(E.f5, {
         value: V,
         children: (0, i.jsxs)(eV.A, {
@@ -603,10 +604,10 @@ function eZ(e) {
                                                     let { start: e, end: t } = r.timestamps;
                                                     return (0, i.jsx)(eY.A, { start: e, end: t });
                                                 })(),
-                                                B === es.d.MODAL_V2 && ei(),
+                                                B === es.d.MODAL_V2 && en(),
                                             ],
                                         }),
-                                        B === es.d.MODAL && ei(),
+                                        B === es.d.MODAL && en(),
                                     ],
                                 }),
                                 null == M || null == P
@@ -620,7 +621,7 @@ function eZ(e) {
                     B !== es.d.MODAL_V2 &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            ei(),
+                            en(),
                             (0, i.jsx)(w.A, {
                                 className: ea.AB,
                                 userId: t.id,

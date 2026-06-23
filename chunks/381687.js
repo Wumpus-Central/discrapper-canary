@@ -96,7 +96,7 @@ function eE(e) {
     let { icon: t, label: r, sublabel: l, onSelect: s, navId: a, index: i, selected: u } = e;
     return (0, n.jsx)(X.D, {
         className: ep.DB,
-        onClick: () => {
+        onClick: function () {
             s({ searchAutocompleteSelectAction: ef.oi.CLICK, selectedIndex: i });
         },
         ...(function (e) {
@@ -462,7 +462,7 @@ let eG = s.forwardRef(function (e, t) {
                                         icon: (0, n.jsx)(a, { size: "sm", color: "currentColor", className: ep.Fx }),
                                         label: (0, n.jsx)(eg, { label: i }),
                                         sublabel: (0, n.jsx)(eS, { searchTokenType: u }),
-                                        onSelect: (n) => {
+                                        onSelect: function (n) {
                                             let { selectedIndex: s, searchAutocompleteSelectAction: a } = n,
                                                 i = O.Ay[u]?.key ?? "",
                                                 o = (0, C.bS)(r);
@@ -502,40 +502,40 @@ let eG = s.forwardRef(function (e, t) {
                             }),
                             n
                         );
-                    }),
-                    f = (e) => {
-                        let {
-                                autocompleteCount: t,
-                                selectedIndex: l,
-                                searchAutocompleteSelectAction: n,
-                                selectedAutocomplete: s,
-                                selectedAutocompleteGroup: a,
-                            } = e,
-                            i = u.type,
-                            o = u.filter,
-                            { token: c, group: h } = s,
-                            d = null != h && (0, O.If)(h) ? h : null,
-                            f = c ?? o ?? d,
-                            p = s.channel,
-                            E = f === eu.LWr.FILTER_IN && null != p && p.id === y.A.getChannelId(),
-                            g = (0, C.bS)(r);
-                        (0, D.kc)({
-                            searchContext: r,
-                            searchQuery: P.A.getSearchResultsQuery(g),
-                            searchQueryString: k.A.getSearchInputText(r),
-                            searchTokenType: f,
-                            searchAutocompleteGroup: a,
-                            searchAutocompleteMode: u,
-                            searchAutocompleteResultIndex: l,
-                            searchAutocompleteTotalResults: t,
-                            isSearchFilterPrefix: i === eu.o$q.EMPTY,
-                            isSearchFilterAnswer: i === eu.o$q.FILTER,
-                            isSearchFilterComplete: i === eu.o$q.FILTER_ALL,
-                            isInFilterForSelectedChannel: E,
+                    });
+                function f(e) {
+                    let {
+                            autocompleteCount: t,
+                            selectedIndex: l,
                             searchAutocompleteSelectAction: n,
-                        });
-                    },
-                    p = s.useCallback(
+                            selectedAutocomplete: s,
+                            selectedAutocompleteGroup: a,
+                        } = e,
+                        i = u.type,
+                        o = u.filter,
+                        { token: c, group: h } = s,
+                        d = null != h && (0, O.If)(h) ? h : null,
+                        f = c ?? o ?? d,
+                        p = s.channel,
+                        E = f === eu.LWr.FILTER_IN && null != p && p.id === y.A.getChannelId(),
+                        g = (0, C.bS)(r);
+                    (0, D.kc)({
+                        searchContext: r,
+                        searchQuery: P.A.getSearchResultsQuery(g),
+                        searchQueryString: k.A.getSearchInputText(r),
+                        searchTokenType: f,
+                        searchAutocompleteGroup: a,
+                        searchAutocompleteMode: u,
+                        searchAutocompleteResultIndex: l,
+                        searchAutocompleteTotalResults: t,
+                        isSearchFilterPrefix: i === eu.o$q.EMPTY,
+                        isSearchFilterAnswer: i === eu.o$q.FILTER,
+                        isSearchFilterComplete: i === eu.o$q.FILTER_ALL,
+                        isInFilterForSelectedChannel: E,
+                        searchAutocompleteSelectAction: n,
+                    });
+                }
+                let p = s.useCallback(
                         (e) => {
                             let { hasOtherSearchFiltersVisible: t } = e,
                                 l = t ? eo.intl.string(eo.t.diOL4i) : eo.intl.string(eo.t["M1tf+7"]);
@@ -638,7 +638,7 @@ let eG = s.forwardRef(function (e, t) {
                                         }),
                                         ariaLabel: eo.intl.formatToPlainString(eo.t.rCnaoo, { value: t.query }),
                                         onSelect: () =>
-                                            ((e) => {
+                                            (function (e) {
                                                 let { searchEverywhere: t } = e;
                                                 T._.dispatch(eu.jej.PERFORM_SEARCH, {
                                                     searchEverywhere: t,
@@ -729,7 +729,7 @@ let eG = s.forwardRef(function (e, t) {
                                         sublabel: h,
                                         ariaLabel: c,
                                         resultText: i,
-                                        onSelect: (e) => {
+                                        onSelect: function (e) {
                                             let { selectedIndex: l, searchAutocompleteSelectAction: n } = e;
                                             f({
                                                 selectedIndex: l,
@@ -815,7 +815,7 @@ let eG = s.forwardRef(function (e, t) {
                                         label: o,
                                         ariaLabel: c,
                                         resultText: i,
-                                        onSelect: (t) => {
+                                        onSelect: function (t) {
                                             let { selectedIndex: l, searchAutocompleteSelectAction: n } = t;
                                             f({
                                                 selectedIndex: l,
@@ -853,22 +853,22 @@ let eG = s.forwardRef(function (e, t) {
                         );
                     }, [E]);
                 return { items: E, itemsData: g };
-            })({ resultsState: a, searchContext: r, selectedChannel: u, setSearchQuery: p }),
-            S = (e) => {
-                let { newSelectedIndex: t, searchAutocompleteSelectAction: r } = e,
-                    l = t;
-                return (
-                    null == l && (l = o),
-                    !(l < 0) &&
-                        !(l > g.length - 1) &&
-                        (g[l].data.onSelect({ searchAutocompleteSelectAction: r, selectedIndex: l }), !0)
-                );
-            },
-            m = (e) => {
-                let t;
-                (t = o + e) > g.length - 1 ? (t = 0) : t < 0 && (t = g.length - 1), f(t);
-            },
-            R = s.useRef({ itemsData: [], selectedIndex: -1, modeType: a.mode.type, query: a.query });
+            })({ resultsState: a, searchContext: r, selectedChannel: u, setSearchQuery: p });
+        function S(e) {
+            let { newSelectedIndex: t, searchAutocompleteSelectAction: r } = e,
+                l = t;
+            return (
+                null == l && (l = o),
+                !(l < 0) &&
+                    !(l > g.length - 1) &&
+                    (g[l].data.onSelect({ searchAutocompleteSelectAction: r, selectedIndex: l }), !0)
+            );
+        }
+        function m(e) {
+            let t;
+            (t = o + e) > g.length - 1 ? (t = 0) : t < 0 && (t = g.length - 1), f(t);
+        }
+        let R = s.useRef({ itemsData: [], selectedIndex: -1, modeType: a.mode.type, query: a.query });
         s.useEffect(() => {
             let { itemsData: e, selectedIndex: t, modeType: r, query: l } = R.current,
                 n = a.mode.type,
@@ -909,7 +909,7 @@ let eG = s.forwardRef(function (e, t) {
                 selectOption: S,
             })),
             (0, n.jsx)(w.d_, {
-                onMouseDown: (e) => {
+                onMouseDown: function (e) {
                     e.stopPropagation(), e.preventDefault();
                 },
                 role: "listbox",
@@ -931,7 +931,7 @@ let eG = s.forwardRef(function (e, t) {
                 selectOption: () => {},
             })),
             (0, n.jsx)(w.d_, {
-                onMouseDown: (e) => {
+                onMouseDown: function (e) {
                     e.stopPropagation(), e.preventDefault();
                 },
                 role: "listbox",
@@ -940,7 +940,7 @@ let eG = s.forwardRef(function (e, t) {
                 "aria-activedescendant": `${r}--1`,
                 className: i()(ez.kL, ez.Wl),
                 children: (0, n.jsx)(z.CalendarPicker, {
-                    onSelect: (e) => {
+                    onSelect: function (e) {
                         let t = (0, C.bS)(a);
                         (0, D.kc)({
                             searchContext: a,

@@ -39,7 +39,12 @@ function b(e) {
         otherKey: d.w$.SOMETHING_ELSE,
         hideHelpDeskLink: !0,
         hideDontShowAgainCheckbox: !0,
-        freeformDescription: (e) =>
-            null == e ? null : e.value === d.w$.SOMETHING_ELSE ? p.intl.string(p.t.h95hcn) : p.intl.string(p.t.wRGel3),
+        freeformDescription: function (e) {
+            return null == e
+                ? null
+                : e.value === d.w$.SOMETHING_ELSE
+                  ? p.intl.string(p.t.h95hcn)
+                  : p.intl.string(p.t.wRGel3);
+        },
     });
 }

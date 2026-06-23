@@ -37,8 +37,10 @@ function f(e) {
 }
 let p = Symbol("version"),
     E = Object.freeze({}),
-    m = new s.A("LibdiscoreStore"),
-    g = (e) => e;
+    m = new s.A("LibdiscoreStore");
+function g(e) {
+    return e;
+}
 class A {
     type;
     kkvDatabase;

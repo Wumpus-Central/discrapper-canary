@@ -8,7 +8,7 @@ var i = n(627968),
     l = n(868065),
     u = n(352760);
 let c = [o.zi, o.Rq],
-    d = r.memo((e) => {
+    d = r.memo(function (e) {
         let { entry: t, channel: n, selected: r } = e,
             { largeImage: d } = (0, s.nO)({ entry: t, trackingSource: "memberlist_watch_content_row" });
         return (0, i.jsxs)(l.Zp, {

@@ -10,12 +10,16 @@ var r = n(503698),
     u = n(375708),
     c = n(744053),
     d = n(423393);
-let _ = (e) => {
-        let { responsive: t } = e;
-        return !0 !== t;
-    },
-    h = (e) => e.order === a.u.BACK && !0 !== e.responsive,
-    f = (e) => e.order === a.u.FRONT && !0 !== e.responsive;
+function _(e) {
+    let { responsive: t } = e;
+    return !0 !== t;
+}
+function h(e) {
+    return e.order === a.u.BACK && !0 !== e.responsive;
+}
+function f(e) {
+    return e.order === a.u.FRONT && !0 !== e.responsive;
+}
 function p(e) {
     let { frame: t, transparentBackground: n = !1, ...r } = e,
         { profileFrameStyle: a, profileFrameClassName: p } = (0, l.A)(t.skuId);

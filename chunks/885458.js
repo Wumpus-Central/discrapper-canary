@@ -43,15 +43,15 @@ let A = new Map(),
                 l = A.get(e);
             if (null != l) return void f(l.waveform);
             let n = o.current,
-                a = !1,
-                s = (t) => {
-                    if (a) return;
-                    let { waveform: l, error: n } = t.data;
-                    null != n ? y.nx.error("Failed to load waveform:", n) : (A.set(e, { waveform: l }), f(l));
-                };
+                a = !1;
+            function s(t) {
+                if (a) return;
+                let { waveform: l, error: n } = t.data;
+                null != n ? y.nx.error("Failed to load waveform:", n) : (A.set(e, { waveform: l }), f(l));
+            }
             return (
                 n.addEventListener("message", s),
-                (async () => {
+                (async function () {
                     try {
                         let e = (0, b.v)();
                         if (null == e) throw Error("Failed to create audio context");
@@ -106,7 +106,7 @@ let A = new Map(),
               });
     });
 var k = l(584794),
-    w = l(429364),
+    w = l(362081),
     R = l(343032),
     T = l(713608),
     L = l(17928),

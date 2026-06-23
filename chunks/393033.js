@@ -45,23 +45,27 @@ function p(e) {
 function E(e) {
     return e.type !== l.Xo.MESSAGE || ("" === e.content && 0 === e.attachments.length);
 }
-let m = (e) =>
-        ({
-            [u.Iv.DIDNT_VIOLATE_POLICY]: _.intl.string(_.t.mZffAi),
-            [u.Iv.TOO_STRICT_UNFAIR]: _.intl.string(_.t.wgZVAn),
-            [u.Iv.DONT_AGREE_PENALTY]: _.intl.string(_.t.eu8G4k),
-            [u.Iv.SOMETHING_ELSE]: _.intl.string(_.t.XU3s6r),
-        })[e],
-    g = (e) =>
-        null == e || 0 === e.length
-            ? ""
-            : 1 === e.length
-              ? e.toUpperCase()
-              : `${e.charAt(0).toUpperCase()}${e.slice(1)}`;
+function m(e) {
+    return {
+        [u.Iv.DIDNT_VIOLATE_POLICY]: _.intl.string(_.t.mZffAi),
+        [u.Iv.TOO_STRICT_UNFAIR]: _.intl.string(_.t.wgZVAn),
+        [u.Iv.DONT_AGREE_PENALTY]: _.intl.string(_.t.eu8G4k),
+        [u.Iv.SOMETHING_ELSE]: _.intl.string(_.t.XU3s6r),
+    }[e];
+}
+function g(e) {
+    return null == e || 0 === e.length
+        ? ""
+        : 1 === e.length
+          ? e.toUpperCase()
+          : `${e.charAt(0).toUpperCase()}${e.slice(1)}`;
+}
 function A(e) {
     return null != e && null != e.guild_metadata;
 }
-let I = (e) => (e === c.t02.DSA_APPEAL_REQUEST_DEFLECTION ? _.intl.string(_.t["0qyXXH"]) : _.intl.string(_.t.aPmsx3));
+function I(e) {
+    return e === c.t02.DSA_APPEAL_REQUEST_DEFLECTION ? _.intl.string(_.t["0qyXXH"]) : _.intl.string(_.t.aPmsx3);
+}
 function T(e) {
     let t = e.max_expiration_time;
     if (null == t) return null;
@@ -71,7 +75,9 @@ function T(e) {
         return null;
     }
 }
-let S = () => null != (0, s.bG)([o.default], () => o.default.getSuspendedUserToken());
+function S() {
+    return null != (0, s.bG)([o.default], () => o.default.getSuspendedUserToken());
+}
 function y() {
     return null != o.default.getSuspendedUserToken();
 }

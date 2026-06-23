@@ -69,7 +69,7 @@ function I(t) {
         };
     return (0, l.jsxs)(E.s, {
         className: r()(w.kL, { [w.aD]: g, [w.vk]: null != a, [w.vu]: u }),
-        onClick: (t) => {
+        onClick: function (t) {
             t.stopPropagation(), g || a?.(e);
         },
         onContextMenu: X,
@@ -186,7 +186,7 @@ function X(t) {
                         (0, l.jsx)("div", {
                             className: T.UD,
                             children: (0, l.jsx)(c.Q, {
-                                onClick: (t) => {
+                                onClick: function (t) {
                                     t.stopPropagation(), y();
                                 },
                                 text: S.intl.string(S.t["8O7Hpy"]),

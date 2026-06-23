@@ -182,18 +182,18 @@ class v {
         );
     }
     pruneSignals(e) {
-        this._textualScore.pruneSignals(e);
-        let t = (t) => {
+        function t(t) {
             if (0 === t.size) return t;
             let n = new Map();
             for (let [i, r] of t.entries()) e - r <= 12e4 && n.set(i, r);
             return n;
-        };
-        this.signals = {
-            ...this.signals,
-            lastUnmuteActivityAtMs: t(this.signals.lastUnmuteActivityAtMs),
-            lastUndeafenActivityAtMs: t(this.signals.lastUndeafenActivityAtMs),
-        };
+        }
+        this._textualScore.pruneSignals(e),
+            (this.signals = {
+                ...this.signals,
+                lastUnmuteActivityAtMs: t(this.signals.lastUnmuteActivityAtMs),
+                lastUndeafenActivityAtMs: t(this.signals.lastUndeafenActivityAtMs),
+            });
     }
     updateSignals(e, t) {
         this._textualScore.updateSignals(e, t), (this.signals = e), (this.lastActivityAtMs = t);
@@ -585,155 +585,160 @@ class es extends s.Ay.Store {
         };
     }
 }
-let ea = (e) => (0, T.v$)(e, "OverlayActiveNowStore"),
-    eo = new es(
-        a.h,
-        __OVERLAY__
-            ? {}
-            : {
-                  OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: ea(function (e) {
-                      if (e.tab !== A.x.MESSAGES) return !1;
-                      let t = e.targetId;
-                      if (e.isFavorite) {
-                          let e = null != j.getChannel(t),
-                              n = null != H.getChannel(t);
-                          return e && j.delete(t), n && H.delete(t), e || n;
-                      }
+function ea(e) {
+    return (0, T.v$)(e, "OverlayActiveNowStore");
+}
+let eo = new es(
+    a.h,
+    __OVERLAY__
+        ? {}
+        : {
+              OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: ea(function (e) {
+                  if (e.tab !== A.x.MESSAGES) return !1;
+                  let t = e.targetId;
+                  if (e.isFavorite) {
+                      let e = null != j.getChannel(t),
+                          n = null != H.getChannel(t);
+                      return e && j.delete(t), n && H.delete(t), e || n;
+                  }
+                  return !1;
+              }),
+              OVERLAY_MOUNTED: ea(function (e) {
+                  return W(!0), ei(), !0;
+              }),
+              OVERLAY_UPDATE_OVERLAY_METHOD: ea(function (e) {
+                  let { overlayMethod: t } = e;
+                  return t === I.Ue.OutOfProcess || t === I.Ue.OutOfProcessLimitedInteraction
+                      ? (W(!0), Z(), !0)
+                      : !Y() && W(!1);
+              }),
+              OVERLAY_CRASHED: ea(function (e) {
+                  return !Y() && W(!1);
+              }),
+              OVERLAY_SET_INPUT_LOCKED: ea(function (e) {
+                  return !e.locked && (W(!0), Z(), !0);
+              }),
+              FRIENDS_LIST_POPOUT_MOUNTED: ea(function () {
+                  return (B = !0), W(!0), ei(), !0;
+              }),
+              MESSAGE_CREATE: ea(function (e) {
+                  if (!F || e.optimistic) return !1;
+                  let t = p.default.getCurrentUser()?.id ?? null,
+                      n = e.message?.author?.id ?? null;
+                  if (null == t || null == n || n === t) return !1;
+                  let i = u.A.getChannel(e.channelId);
+                  if (null == i || i.isPrivate() || !(0, l.ke)(i.type)) return !1;
+                  let r = (function (e) {
+                          let t = e.timestamp;
+                          if (null == t) return Date.now();
+                          let n = new Date(t).getTime();
+                          return Number.isFinite(n) ? n : Date.now();
+                      })(e.message),
+                      s = z({ includeVcProbability: !1 }),
+                      a = i.getGuildId?.() ?? null;
+                  if (
+                      !$({
+                          isAlreadyTracked: null != j.getChannel(e.channelId),
+                          guildId: a,
+                          updatingUserId: n,
+                          providers: s,
+                      })
+                  )
                       return !1;
-                  }),
-                  OVERLAY_MOUNTED: ea(function (e) {
-                      return W(!0), ei(), !0;
-                  }),
-                  OVERLAY_UPDATE_OVERLAY_METHOD: ea(function (e) {
-                      let { overlayMethod: t } = e;
-                      return t === I.Ue.OutOfProcess || t === I.Ue.OutOfProcessLimitedInteraction
-                          ? (W(!0), Z(), !0)
-                          : !Y() && W(!1);
-                  }),
-                  OVERLAY_CRASHED: ea(function (e) {
-                      return !Y() && W(!1);
-                  }),
-                  OVERLAY_SET_INPUT_LOCKED: ea(function (e) {
-                      return !e.locked && (W(!0), Z(), !0);
-                  }),
-                  FRIENDS_LIST_POPOUT_MOUNTED: ea(function () {
-                      return (B = !0), W(!0), ei(), !0;
-                  }),
-                  MESSAGE_CREATE: ea(function (e) {
-                      if (!F || e.optimistic) return !1;
-                      let t = p.default.getCurrentUser()?.id ?? null,
-                          n = e.message?.author?.id ?? null;
-                      if (null == t || null == n || n === t) return !1;
-                      let i = u.A.getChannel(e.channelId);
-                      if (null == i || i.isPrivate() || !(0, l.ke)(i.type)) return !1;
-                      let r = (function (e) {
-                              let t = e.timestamp;
-                              if (null == t) return Date.now();
-                              let n = new Date(t).getTime();
-                              return Number.isFinite(n) ? n : Date.now();
-                          })(e.message),
-                          s = z({ includeVcProbability: !1 }),
-                          a = i.getGuildId?.() ?? null;
-                      if (
-                          !$({
-                              isAlreadyTracked: null != j.getChannel(e.channelId),
-                              guildId: a,
-                              updatingUserId: n,
-                              providers: s,
-                          })
-                      )
-                          return !1;
-                      let o = ee(e.channelId, X(), s);
-                      if (null == o) return !1;
-                      let c = (e.message?.mentions ?? []).some((e) => e?.id === t),
-                          d = e.message?.mention_roles,
-                          _ = Array.isArray(d) && d.length > 0,
-                          h = o.prepareForUpdate(r),
-                          f = new Map(h.recentMessageAuthorIds);
-                      f.set(n, r);
-                      let E = {
-                          lastMessageAtMs: r,
-                          unread: !0,
-                          lastUnreadAtMs: r,
-                          recentMessageAuthorId: n,
-                          recentMessageAuthorIds: f,
-                      };
-                      return (
-                          (c || _) &&
-                              ((E.mentionCount = Math.max(h.mentionCount, +!!c + +!!_)),
-                              c && (E.lastDirectMentionAtMs = r),
-                              _ && (E.lastRoleMentionAtMs = r)),
-                          o.updateSignalsAndRescore(E, r),
-                          o.prunable && j.delete(e.channelId),
-                          Z(),
-                          !0
-                      );
-                  }),
-                  MESSAGE_ACK: ea(function (e) {
-                      if (!F) return !1;
-                      let t = j.getChannel(e.channelId);
-                      if (null == t) return !1;
-                      let n = Date.now(),
-                          i = { unread: !1, lastUnreadAtMs: null };
-                      return (
-                          null != e.newMentionCount &&
-                              (e.newMentionCount > 0
-                                  ? ((i.mentionCount = e.newMentionCount),
-                                    null == t.signals.lastDirectMentionAtMs && (i.lastDirectMentionAtMs = n))
-                                  : ((i.mentionCount = 0),
-                                    (i.lastDirectMentionAtMs = null),
-                                    (i.lastRoleMentionAtMs = null))),
-                          t.updateSignalsAndRescore(i, n),
-                          t.prunable && j.delete(e.channelId),
-                          Z(),
-                          !0
-                      );
-                  }),
-                  TYPING_START: ea(function (e) {
-                      if (!F) return !1;
-                      let t = p.default.getCurrentUser()?.id ?? null;
-                      if (null == t || e.userId === t) return !1;
-                      let n = u.A.getChannel(e.channelId);
-                      if (null == n || n.isPrivate() || !(0, l.ke)(n.type)) return !1;
-                      let i = Date.now(),
-                          r = z({ includeVcProbability: !1 }),
-                          s = n.getGuildId?.() ?? null;
-                      if (
-                          !$({
-                              isAlreadyTracked: null != j.getChannel(e.channelId),
-                              guildId: s,
-                              updatingUserId: e.userId,
-                              providers: r,
-                          })
-                      )
-                          return !1;
-                      let a = ee(e.channelId, X(), r);
-                      if (null == a) return !1;
-                      let o = new Map(a.prepareForUpdate(i).typingUserIdsWithTimestampMs);
-                      o.set(e.userId, i);
-                      let c = Array.from(o.keys());
-                      return (
-                          a.updateSignalsAndRescore(
-                              { typingUserIdsWithTimestampMs: o, typingUserIds: c, isTyping: c.length > 0 },
-                              i,
-                          ),
-                          a.prunable && j.delete(e.channelId),
-                          Z(),
-                          !0
-                      );
-                  }),
-                  VOICE_STATE_UPDATES: ea(function (e) {
-                      if (!F) return !1;
-                      let t = Date.now(),
-                          n = z({ includeVcProbability: !0 }),
-                          i = !1;
-                      return (
-                          H.applyBatch(() => {
-                              for (let r of e.voiceStates) {
-                                  let e = r.userId,
-                                      s = r.channelId ?? null,
-                                      a = r.oldChannelId ?? null,
-                                      o = (n) => {
+                  let o = ee(e.channelId, X(), s);
+                  if (null == o) return !1;
+                  let c = (e.message?.mentions ?? []).some((e) => e?.id === t),
+                      d = e.message?.mention_roles,
+                      _ = Array.isArray(d) && d.length > 0,
+                      h = o.prepareForUpdate(r),
+                      f = new Map(h.recentMessageAuthorIds);
+                  f.set(n, r);
+                  let E = {
+                      lastMessageAtMs: r,
+                      unread: !0,
+                      lastUnreadAtMs: r,
+                      recentMessageAuthorId: n,
+                      recentMessageAuthorIds: f,
+                  };
+                  return (
+                      (c || _) &&
+                          ((E.mentionCount = Math.max(h.mentionCount, +!!c + +!!_)),
+                          c && (E.lastDirectMentionAtMs = r),
+                          _ && (E.lastRoleMentionAtMs = r)),
+                      o.updateSignalsAndRescore(E, r),
+                      o.prunable && j.delete(e.channelId),
+                      Z(),
+                      !0
+                  );
+              }),
+              MESSAGE_ACK: ea(function (e) {
+                  if (!F) return !1;
+                  let t = j.getChannel(e.channelId);
+                  if (null == t) return !1;
+                  let n = Date.now(),
+                      i = { unread: !1, lastUnreadAtMs: null };
+                  return (
+                      null != e.newMentionCount &&
+                          (e.newMentionCount > 0
+                              ? ((i.mentionCount = e.newMentionCount),
+                                null == t.signals.lastDirectMentionAtMs && (i.lastDirectMentionAtMs = n))
+                              : ((i.mentionCount = 0),
+                                (i.lastDirectMentionAtMs = null),
+                                (i.lastRoleMentionAtMs = null))),
+                      t.updateSignalsAndRescore(i, n),
+                      t.prunable && j.delete(e.channelId),
+                      Z(),
+                      !0
+                  );
+              }),
+              TYPING_START: ea(function (e) {
+                  if (!F) return !1;
+                  let t = p.default.getCurrentUser()?.id ?? null;
+                  if (null == t || e.userId === t) return !1;
+                  let n = u.A.getChannel(e.channelId);
+                  if (null == n || n.isPrivate() || !(0, l.ke)(n.type)) return !1;
+                  let i = Date.now(),
+                      r = z({ includeVcProbability: !1 }),
+                      s = n.getGuildId?.() ?? null;
+                  if (
+                      !$({
+                          isAlreadyTracked: null != j.getChannel(e.channelId),
+                          guildId: s,
+                          updatingUserId: e.userId,
+                          providers: r,
+                      })
+                  )
+                      return !1;
+                  let a = ee(e.channelId, X(), r);
+                  if (null == a) return !1;
+                  let o = new Map(a.prepareForUpdate(i).typingUserIdsWithTimestampMs);
+                  o.set(e.userId, i);
+                  let c = Array.from(o.keys());
+                  return (
+                      a.updateSignalsAndRescore(
+                          { typingUserIdsWithTimestampMs: o, typingUserIds: c, isTyping: c.length > 0 },
+                          i,
+                      ),
+                      a.prunable && j.delete(e.channelId),
+                      Z(),
+                      !0
+                  );
+              }),
+              VOICE_STATE_UPDATES: ea(function (e) {
+                  if (!F) return !1;
+                  let t = Date.now(),
+                      n = z({ includeVcProbability: !0 }),
+                      i = !1;
+                  return (
+                      H.applyBatch(() => {
+                          for (let r of e.voiceStates) {
+                              let e = r.userId,
+                                  s = r.channelId ?? null,
+                                  a = r.oldChannelId ?? null;
+                              if (
+                                  (null != a &&
+                                      a !== s &&
+                                      (function (n) {
                                           let r = H.getChannel(n);
                                           if (null == r) return;
                                           let s = r.signals,
@@ -759,95 +764,96 @@ let ea = (e) => (0, T.v$)(e, "OverlayActiveNowStore"),
                                               ),
                                               r.prunable && H.delete(n),
                                               (i = !0);
-                                      };
-                                  if ((null != a && a !== s && o(a), null != s)) {
-                                      let o = u.A.getChannel(s),
-                                          l = o?.getGuildId?.() ?? null;
-                                      if (
-                                          !$({
-                                              isAlreadyTracked: null != H.getChannel(s),
-                                              guildId: l,
-                                              updatingUserId: e,
-                                              providers: n,
-                                          })
-                                      )
-                                          continue;
-                                      let c = et(s, Q(), n);
-                                      if (null == c) continue;
-                                      let d = c.prepareForUpdate(t),
-                                          _ = null == a || a !== s,
-                                          h = new Map(d.voiceUsersWithJoinTimestampMs);
-                                      _ && !h.has(e) && h.set(e, t);
-                                      let f = new Map(d.streamUsersWithTimestampMs);
-                                      r.selfStream ? f.has(e) || f.set(e, t) : f.delete(e);
-                                      let p = new Map(d.videoUsersWithTimestampMs);
-                                      r.selfVideo ? p.has(e) || p.set(e, t) : p.delete(e);
-                                      let E = new Map(d.lastUnmuteActivityAtMs);
-                                      if (!r.selfMute && !r.mute) {
-                                          let n = E.get(e) ?? null;
-                                          (null == n || t - n >= 15e3) && E.set(e, t);
-                                      }
-                                      let m = new Map(d.lastUndeafenActivityAtMs);
-                                      if (!r.selfDeaf && !r.deaf) {
-                                          let n = m.get(e) ?? null;
-                                          (null == n || t - n >= 15e3) && m.set(e, t);
-                                      }
-                                      c.updateSignalsAndRescore(
-                                          {
-                                              voiceUsersWithJoinTimestampMs: h,
-                                              lastVoiceJoinAtMs: _ ? t : d.lastVoiceJoinAtMs,
-                                              streamUsersWithTimestampMs: f,
-                                              videoUsersWithTimestampMs: p,
-                                              lastUnmuteActivityAtMs: E,
-                                              lastUndeafenActivityAtMs: m,
-                                          },
-                                          t,
-                                      ),
-                                          c.prunable && H.delete(s),
-                                          (i = !0);
+                                      })(a),
+                                  null != s)
+                              ) {
+                                  let o = u.A.getChannel(s),
+                                      l = o?.getGuildId?.() ?? null;
+                                  if (
+                                      !$({
+                                          isAlreadyTracked: null != H.getChannel(s),
+                                          guildId: l,
+                                          updatingUserId: e,
+                                          providers: n,
+                                      })
+                                  )
+                                      continue;
+                                  let c = et(s, Q(), n);
+                                  if (null == c) continue;
+                                  let d = c.prepareForUpdate(t),
+                                      _ = null == a || a !== s,
+                                      h = new Map(d.voiceUsersWithJoinTimestampMs);
+                                  _ && !h.has(e) && h.set(e, t);
+                                  let f = new Map(d.streamUsersWithTimestampMs);
+                                  r.selfStream ? f.has(e) || f.set(e, t) : f.delete(e);
+                                  let p = new Map(d.videoUsersWithTimestampMs);
+                                  r.selfVideo ? p.has(e) || p.set(e, t) : p.delete(e);
+                                  let E = new Map(d.lastUnmuteActivityAtMs);
+                                  if (!r.selfMute && !r.mute) {
+                                      let n = E.get(e) ?? null;
+                                      (null == n || t - n >= 15e3) && E.set(e, t);
                                   }
+                                  let m = new Map(d.lastUndeafenActivityAtMs);
+                                  if (!r.selfDeaf && !r.deaf) {
+                                      let n = m.get(e) ?? null;
+                                      (null == n || t - n >= 15e3) && m.set(e, t);
+                                  }
+                                  c.updateSignalsAndRescore(
+                                      {
+                                          voiceUsersWithJoinTimestampMs: h,
+                                          lastVoiceJoinAtMs: _ ? t : d.lastVoiceJoinAtMs,
+                                          streamUsersWithTimestampMs: f,
+                                          videoUsersWithTimestampMs: p,
+                                          lastUnmuteActivityAtMs: E,
+                                          lastUndeafenActivityAtMs: m,
+                                      },
+                                      t,
+                                  ),
+                                      c.prunable && H.delete(s),
+                                      (i = !0);
                               }
-                          }),
-                          i && Z(),
-                          i
-                      );
-                  }),
-                  VOICE_CHANNEL_SELECT: ea(function (e) {
-                      return Z(), !0;
-                  }),
-                  RTC_CONNECTION_STATE: ea(function (e) {
-                      return Z(), !0;
-                  }),
-                  CHANNEL_SELECT: ea(function (e) {
-                      let { channelId: t } = e;
-                      if (null == t) return !1;
-                      let n = u.A.getChannel(t);
-                      return !(null == n || n.isPrivate()) && ((V = n.getGuildId?.() ?? null), Z(), !0);
-                  }),
-                  USER_GUILD_SETTINGS_CHANNEL_UPDATE: ea(function (e) {
-                      return er(e.channelId);
-                  }),
-                  USER_GUILD_SETTINGS_GUILD_UPDATE: ea(function (e) {
-                      let t = e.guildId,
-                          n = !1;
-                      for (let e of j.getSortedChannels())
-                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
-                      for (let e of H.getSortedChannels())
-                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
-                      return n;
-                  }),
-                  USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: ea(function (e) {
-                      let t = e.guildId,
-                          n = !1;
-                      for (let e of j.getSortedChannels())
-                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
-                      for (let e of H.getSortedChannels())
-                          e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
-                      return n;
-                  }),
-                  LOGOUT: ea(function () {
-                      let e = j.size > 0 || H.size > 0;
-                      return j.clear(), H.clear(), (F = !1), (B = !1), (V = null), e;
-                  }),
-              },
-    );
+                          }
+                      }),
+                      i && Z(),
+                      i
+                  );
+              }),
+              VOICE_CHANNEL_SELECT: ea(function (e) {
+                  return Z(), !0;
+              }),
+              RTC_CONNECTION_STATE: ea(function (e) {
+                  return Z(), !0;
+              }),
+              CHANNEL_SELECT: ea(function (e) {
+                  let { channelId: t } = e;
+                  if (null == t) return !1;
+                  let n = u.A.getChannel(t);
+                  return !(null == n || n.isPrivate()) && ((V = n.getGuildId?.() ?? null), Z(), !0);
+              }),
+              USER_GUILD_SETTINGS_CHANNEL_UPDATE: ea(function (e) {
+                  return er(e.channelId);
+              }),
+              USER_GUILD_SETTINGS_GUILD_UPDATE: ea(function (e) {
+                  let t = e.guildId,
+                      n = !1;
+                  for (let e of j.getSortedChannels())
+                      e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                  for (let e of H.getSortedChannels())
+                      e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                  return n;
+              }),
+              USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: ea(function (e) {
+                  let t = e.guildId,
+                      n = !1;
+                  for (let e of j.getSortedChannels())
+                      e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                  for (let e of H.getSortedChannels())
+                      e.candidate.guildId === t && (n = er(e.candidate.channelId) || n);
+                  return n;
+              }),
+              LOGOUT: ea(function () {
+                  let e = j.size > 0 || H.size > 0;
+                  return j.clear(), H.clear(), (F = !1), (B = !1), (V = null), e;
+              }),
+          },
+);

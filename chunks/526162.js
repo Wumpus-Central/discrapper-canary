@@ -11,19 +11,19 @@ var i = n(17928),
     d = n(49999),
     _ = n(788868);
 let h = { client: { desktop: u.LW.DEFAULT, coachmarkImpressions: 0 } },
-    f = !0,
-    p = () => {
-        (f = !l.Ay.canUsePremiumAppIcons(a.default.getCurrentUser())) && E(u.LW.DEFAULT);
-    },
-    E = (e) => {
-        (h.client.desktop = e),
-            f ||
-                o.default.track(c.HAw.APP_ICON_UPDATED, {
-                    icon_id: e,
-                    user_premium_tier: a.default.getCurrentUser()?.premiumType,
-                    icon_premium_tier: e !== u.LW.DEFAULT ? _.PremiumTypes.TIER_2 : null,
-                });
-    };
+    f = !0;
+function p() {
+    (f = !l.Ay.canUsePremiumAppIcons(a.default.getCurrentUser())) && E(u.LW.DEFAULT);
+}
+function E(e) {
+    (h.client.desktop = e),
+        f ||
+            o.default.track(c.HAw.APP_ICON_UPDATED, {
+                icon_id: e,
+                user_premium_tier: a.default.getCurrentUser()?.premiumType,
+                icon_premium_tier: e !== u.LW.DEFAULT ? _.PremiumTypes.TIER_2 : null,
+            });
+}
 function m() {
     f && (h.client = { desktop: u.LW.DEFAULT, coachmarkImpressions: 2 });
 }

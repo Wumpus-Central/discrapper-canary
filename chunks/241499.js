@@ -3,8 +3,8 @@ var n = t(627968),
     i = t(64700),
     s = t(503698),
     a = t.n(s),
-    r = t(296489),
-    u = t.n(r),
+    u = t(296489),
+    r = t.n(u),
     o = t(312742),
     d = t(295868),
     c = t(17928),
@@ -12,10 +12,10 @@ var n = t(627968),
     h = t(408278),
     p = t(285796),
     g = t(772838),
-    m = t(534514),
-    v = t(355622),
-    C = t(408018),
-    f = t(138617),
+    f = t(534514),
+    m = t(355622),
+    v = t(408018),
+    C = t(138617),
     b = t(734057),
     j = t(808728),
     k = t(557420),
@@ -30,10 +30,10 @@ function A(e) {
             rule: l,
             rulesChannel: t,
             index: s,
-            onChange: r,
-            onKeyDown: u,
+            onChange: u,
+            onKeyDown: r,
             onClear: c,
-            onRuleReorder: m,
+            onRuleReorder: f,
             isDropHovered: b,
             focused: j,
             onFocus: k,
@@ -43,12 +43,12 @@ function A(e) {
         } = e,
         S = i.useRef(null),
         I = i.useRef(null),
-        [{ textValue: _, richValue: w }, K] = i.useState((0, C.ur)(l.value)),
+        [{ textValue: _, richValue: w }, K] = i.useState((0, v.ur)(l.value)),
         [, L, M] = (0, o.i)({
             type: T,
             item: { rule: l, index: s },
             end: (e, l) => {
-                null == e || l.didDrop() || m(e.rule, null, !0);
+                null == e || l.didDrop() || f(e.rule, null, !0);
             },
         }),
         [, P] = (0, d.H)({
@@ -59,11 +59,11 @@ function A(e) {
                     i = l.getClientOffset();
                 if (null == n || null == i) return;
                 let a = (n.bottom - n.top) / 2,
-                    r = i.y - n.top;
-                (t < s && r < a) || (t > s && r > a) || m(e.rule, s, !1);
+                    u = i.y - n.top;
+                (t < s && u < a) || (t > s && u > a) || f(e.rule, s, !1);
             },
             drop: (e) => {
-                m(e.rule, s, !0);
+                f(e.rule, s, !0);
             },
         });
     if (
@@ -78,7 +78,7 @@ function A(e) {
             [L, P, M],
         ),
         i.useEffect(() => {
-            "" !== l.value && "" === _ && K((0, C.ur)(l.value));
+            "" !== l.value && "" === _ && K((0, v.ur)(l.value));
         }, [l.value, _]),
         null == t)
     )
@@ -93,22 +93,22 @@ function A(e) {
             children: [
                 (0, n.jsx)(x.D, {
                     onMouseDown: () => k(s),
-                    children: (0, n.jsx)(f.Ay, {
+                    children: (0, n.jsx)(C.Ay, {
                         innerClassName: E.oQ,
-                        type: v.oU.RULES_INPUT,
+                        type: m.oU.RULES_INPUT,
                         textValue: _,
                         richValue: w,
                         channel: t,
                         placeholder: y.intl.string(y.t.BRkD41),
                         focused: j,
-                        onChange: (e, t, n) => {
+                        onChange: function (e, t, n) {
                             let i = A ? l.value : t;
                             i.length > D.pc && (i = i.slice(0, D.pc)),
-                                t !== i && ((t = i), (n = (0, C.x7)(i))),
-                                r(t),
+                                t !== i && ((t = i), (n = (0, v.x7)(i))),
+                                u(t),
                                 K({ textValue: t, richValue: n });
                         },
-                        onKeyDown: u,
+                        onKeyDown: r,
                         canMentionChannels: N,
                         canMentionRoles: N,
                         maxCharacterCount: D.pc,
@@ -137,25 +137,25 @@ function A(e) {
 }
 function S(e) {
     let { rules: l, setRules: t, guild: s, disabled: a } = e,
-        r = s.rulesChannelId,
+        u = s.rulesChannelId,
         o = s.features.has(R.GuildFeatures.PREVIEW_ENABLED),
-        d = (0, c.bG)([b.A], () => (null != r ? b.A.getChannel(r) : null)),
+        d = (0, c.bG)([b.A], () => (null != u ? b.A.getChannel(u) : null)),
         x = (0, c.bG)([j.Ay], () => j.Ay.getDefaultChannel(s.id)),
         [h, p] = i.useState(null),
-        [g, v] = i.useState(null),
-        C = i.useCallback(
+        [g, m] = i.useState(null),
+        v = i.useCallback(
             (e) => {
                 if (!a && l.length !== D.yN)
                     if (null != e && "" === l[l.length - 1].value) {
                         let n = [...l];
-                        (n[l.length - 1] = { ...n[l.length - 1], value: e }), t(n), v(n.length - 1);
-                    } else t([...l, { id: u()(), value: e ?? "" }]), v(l.length);
+                        (n[l.length - 1] = { ...n[l.length - 1], value: e }), t(n), m(n.length - 1);
+                    } else t([...l, { id: r()(), value: e ?? "" }]), m(l.length);
             },
             [a, l, t],
         ),
-        f = i.useCallback(() => {
-            a || C(void 0);
-        }, [C, a]),
+        C = i.useCallback(() => {
+            a || v(void 0);
+        }, [v, a]),
         T = i.useCallback(
             (e, n) => {
                 if (a) return;
@@ -182,30 +182,30 @@ function S(e) {
             return [
                 {
                     text: y.intl.string(y.t.DXq2od),
-                    onClick: () => C(y.intl.string(y.t.XudkSq)),
+                    onClick: () => v(y.intl.string(y.t.XudkSq)),
                     disabled: I || a,
                     tooltipText: e,
                 },
                 {
                     text: y.intl.string(y.t.nSqTjM),
-                    onClick: () => C(y.intl.string(y.t.np91jA)),
+                    onClick: () => v(y.intl.string(y.t.np91jA)),
                     disabled: I || a,
                     tooltipText: e,
                 },
                 {
                     text: y.intl.string(y.t.AtRxsO),
-                    onClick: () => C(y.intl.string(y.t.PNIDDJ)),
+                    onClick: () => v(y.intl.string(y.t.PNIDDJ)),
                     disabled: I || a,
                     tooltipText: e,
                 },
                 {
                     text: y.intl.string(y.t["0K5NJt"]),
-                    onClick: () => C(y.intl.string(y.t.HolIDy)),
+                    onClick: () => v(y.intl.string(y.t.HolIDy)),
                     disabled: I || a,
                     tooltipText: e,
                 },
             ];
-        }, [C, a, I]);
+        }, [v, a, I]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)("div", {
@@ -219,15 +219,15 @@ function S(e) {
                             index: i,
                             onChange: (e) => T(e, i),
                             onClear: () =>
-                                ((e) => {
+                                (function (e) {
                                     if (a) return;
                                     let n = [...l.slice(0, e), ...l.slice(e + 1)];
-                                    t(0 === n.length ? [{ id: u()(), value: "" }] : n);
+                                    t(0 === n.length ? [{ id: r()(), value: "" }] : n);
                                 })(i),
                             onRuleReorder: S,
                             isDropHovered: i === h,
                             focused: i === g,
-                            onFocus: v,
+                            onFocus: m,
                             previewEnabled: o ?? !0,
                             isDragEnabled: !a && l.length > 1,
                             disabled: a,
@@ -236,8 +236,8 @@ function S(e) {
                     ),
                 ),
             }),
-            !I && (0, n.jsx)(k.d, { text: y.intl.string(y.t.Cq5JuR), onClick: f, disabled: a }),
-            (0, n.jsx)(m.D, {
+            !I && (0, n.jsx)(k.d, { text: y.intl.string(y.t.Cq5JuR), onClick: C, disabled: a }),
+            (0, n.jsx)(f.D, {
                 variant: "text-xs/bold",
                 color: "text-muted",
                 className: E.V7,

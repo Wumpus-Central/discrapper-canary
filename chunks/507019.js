@@ -10,7 +10,7 @@ function a(e) {
         confirmText: s.intl.string(s.t["cY+Oob"]),
         confirmVariant: "critical-primary",
         cancelText: s.intl.string(s.t["ETE/oC"]),
-        onConfirm: () => {
+        onConfirm: function () {
             r.A.clearPendingRelationships();
         },
     });

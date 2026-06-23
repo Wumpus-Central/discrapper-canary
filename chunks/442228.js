@@ -42,7 +42,7 @@ let p = r.memo(function (e) {
                                   e.getBoundingClientRect().height > 57.75 && v(!0));
                       },
                       className: a()(f.mA, N && f.Em),
-                      onBlur: (e) => {
+                      onBlur: function (e) {
                           null == R.current || R.current.contains(e.relatedTarget) || (R.current.scrollTop = 0);
                       },
                       children: (0, i.jsx)(d.A, {
@@ -62,7 +62,7 @@ let p = r.memo(function (e) {
                               size: "sm",
                               variant: "secondary",
                               text: h.intl.string(h.t.YDiPq8),
-                              onClick: () => {
+                              onClick: function () {
                                   p?.(),
                                       (0, c.openUserProfileModal)({
                                           ...T,

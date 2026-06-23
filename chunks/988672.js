@@ -492,7 +492,7 @@ var eq = n(503698),
     e6 = n(212455),
     e4 = n(182430),
     e5 = n(580537);
-let e7 = () => {
+let e7 = function () {
     let e = (0, c.bG)([eD.A], () => eD.A.getGuildId(), []),
         t = (0, c.bG)([eO.A], () => eO.A.getGuild(e), [e]),
         r = (0, c.bG)([e6.A], () => (null != e ? e6.A.getRequest(e) : null), [e]),
@@ -562,7 +562,7 @@ var tt = n(468689),
     tr = n(66834),
     ts = n(385648),
     ta = n(484154);
-let to = () => {
+let to = function () {
     let e = (0, c.bG)([eD.A], () => eD.A.getGuildId(), []),
         t = (0, c.bG)([eO.A], () => eO.A.getGuild(e), [e]),
         [n, s] = r.useState(!1);
@@ -584,7 +584,7 @@ let to = () => {
                 size: ti.$n.Sizes.NONE,
                 className: eZ()(ta.x6, ta.aX),
                 innerClassName: ta.gb,
-                onClick: () => {
+                onClick: function () {
                     (0, q.JK)().goBack();
                 },
                 children: [
@@ -818,7 +818,7 @@ function tj(e) {
         ...e,
     });
 }
-var tH = n(941327),
+var tH = n(394459),
     tY = n(763827),
     tW = n(67480),
     tK = n(147964),
@@ -828,69 +828,69 @@ var tH = n(941327),
     tZ = n(325278),
     tX = n(831502),
     tQ = n(731854);
-let tJ = new F.A("Notice"),
-    t0 = (e) => {
-        let { error: t, allowClick: n = !1 } = e,
-            r = (0, eT.B1)(t)?.errorCode,
-            s = ea.intl.formatToPlainString(ea.t.ejOT95, { errorCode: r }),
-            a = (0, i.jsx)(_.E, {
-                variant: "text-sm/bold",
-                color: "currentColor",
-                tag: "span",
-                className: eo.fU,
-                selectable: !0,
-                children: s,
-            });
-        return n
-            ? (0, i.jsx)(h.D, {
-                  tag: "span",
-                  className: eo.wz,
-                  onClick: () => open(tz.A.getArticleURL(ei.MVz.AV_ERROR_CODES)),
-                  children: a,
-              })
-            : a;
-    },
-    t1 = (e) => {
-        let { noticeType: t } = e;
-        return (0, i.jsxs)(f.$T, {
-            color: f.Hv.DANGER,
-            children: [
-                (0, i.jsx)(f.PM, {
-                    noticeType: t,
-                    onClick: () => {
-                        t4();
-                    },
-                }),
-                ea.intl.string(ea.t.o3zuYz),
-                (0, i.jsx)(t0, { error: eT.iy.NO_INPUT_DEVICES }),
-                (0, i.jsx)(f.eC, {
-                    href: tz.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
-                    noticeType: t,
-                    children: ea.intl.string(ea.t.RYKKox),
-                }),
-            ],
+let tJ = new F.A("Notice");
+function t0(e) {
+    let { error: t, allowClick: n = !1 } = e,
+        r = (0, eT.B1)(t)?.errorCode,
+        s = ea.intl.formatToPlainString(ea.t.ejOT95, { errorCode: r }),
+        a = (0, i.jsx)(_.E, {
+            variant: "text-sm/bold",
+            color: "currentColor",
+            tag: "span",
+            className: eo.fU,
+            selectable: !0,
+            children: s,
         });
-    },
-    t2 = (e) => {
-        let { noticeType: t } = e;
-        return (0, i.jsxs)(f.$T, {
-            color: f.Hv.DANGER,
-            children: [
-                (0, i.jsx)(f.PM, {
-                    noticeType: t,
-                    onClick: () => {
-                        t4();
-                    },
-                }),
-                ea.intl.string(ea.t.Up0ApK),
-                (0, i.jsx)(t0, { error: eT.iy.VIDEO_BACKGROUND_UNAVAILABLE }),
-                (0, i.jsx)(f.zr, {
-                    onClick: () => (0, Q.openUserSettings)(Z.X.CAMERA_CATEGORY),
-                    children: ea.intl.string(ea.t.kRwxfi),
-                }),
-            ],
-        });
-    };
+    return n
+        ? (0, i.jsx)(h.D, {
+              tag: "span",
+              className: eo.wz,
+              onClick: () => open(tz.A.getArticleURL(ei.MVz.AV_ERROR_CODES)),
+              children: a,
+          })
+        : a;
+}
+function t1(e) {
+    let { noticeType: t } = e;
+    return (0, i.jsxs)(f.$T, {
+        color: f.Hv.DANGER,
+        children: [
+            (0, i.jsx)(f.PM, {
+                noticeType: t,
+                onClick: () => {
+                    t4();
+                },
+            }),
+            ea.intl.string(ea.t.o3zuYz),
+            (0, i.jsx)(t0, { error: eT.iy.NO_INPUT_DEVICES }),
+            (0, i.jsx)(f.eC, {
+                href: tz.A.getArticleURL(ei.MVz.NO_INPUT_DETECTED),
+                noticeType: t,
+                children: ea.intl.string(ea.t.RYKKox),
+            }),
+        ],
+    });
+}
+function t2(e) {
+    let { noticeType: t } = e;
+    return (0, i.jsxs)(f.$T, {
+        color: f.Hv.DANGER,
+        children: [
+            (0, i.jsx)(f.PM, {
+                noticeType: t,
+                onClick: () => {
+                    t4();
+                },
+            }),
+            ea.intl.string(ea.t.Up0ApK),
+            (0, i.jsx)(t0, { error: eT.iy.VIDEO_BACKGROUND_UNAVAILABLE }),
+            (0, i.jsx)(f.zr, {
+                onClick: () => (0, Q.openUserSettings)(Z.X.CAMERA_CATEGORY),
+                children: ea.intl.string(ea.t.kRwxfi),
+            }),
+        ],
+    });
+}
 function t3(e) {
     return (0, tq.isWindows)() && u().satisfies(w.A?.os.release, tZ.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`

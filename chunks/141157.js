@@ -344,14 +344,14 @@ let $ = i.memo(function (e) {
                 scrollable: o = !0,
                 showVoiceAvatars: d = !0,
             } = e,
-            [c, h] = i.useState(null),
-            I = (e) => {
-                h(e);
-            },
-            E = () => {
-                h(null);
-            },
-            A = o ? m.Ip : "div";
+            [c, h] = i.useState(null);
+        function I(e) {
+            h(e);
+        }
+        function E() {
+            h(null);
+        }
+        let A = o ? m.Ip : "div";
         return (0, l.jsxs)("div", {
             children: [
                 (0, l.jsx)("div", {
@@ -462,11 +462,11 @@ function en(e) {
                     autoFocus: !0,
                     query: a,
                     placeholder: P.intl.string(P.t.UyA6ST),
-                    onClear: () => {
+                    onClear: function () {
                         u("");
                     },
                     onKeyDown: c,
-                    onChange: (e) => {
+                    onChange: function (e) {
                         u(e);
                     },
                     inputProps: { "aria-label": P.intl.string(P.t.UyA6ST) },

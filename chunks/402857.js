@@ -117,10 +117,11 @@ function W(e) {
         k = (0, C.A)({ display: "live", user: n, activity: a, entry: h, analyticsLocations: x }),
         U = (0, N.A)({ userId: n.id, onAction: k });
     if (!(0, o.A)(a)) return null;
-    let G = () =>
-        n.id === s.id
+    function G() {
+        return n.id === s.id
             ? null
             : (0, i.jsx)("div", { className: j.o1, children: (0, i.jsx)(H, { user: n, activity: a, onAction: k }) });
+    }
     return (0, i.jsx)(g.f5, {
         value: x,
         children: (0, i.jsxs)(b.A, {
@@ -193,7 +194,7 @@ function W(e) {
                                         ],
                                     }),
                                     (0, i.jsx)(O.A, { user: n, activity: a, className: j.jp }),
-                                    (() => {
+                                    (function () {
                                         let { timestamps: e } = a;
                                         if (null == e) return null;
                                         let { start: t, end: n } = e;

@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(922139),
+    o = n(308186),
     l = n(17928),
     u = n(451988),
     c = n(192308),
@@ -60,9 +60,9 @@ function H(e) {
         u?.(m?.current);
     }, [m, u]),
         r.useEffect(() => {
-            let e = (e) => {
+            function e(e) {
                 e.key === V.dh.ESCAPE && (e.stopPropagation(), _());
-            };
+            }
             return (
                 document.addEventListener("keydown", e),
                 () => {
@@ -77,7 +77,7 @@ function H(e) {
             : a === U.dS.STATUS
               ? c({ action: "SEND_REACT_CUSTOM_STATUS" })
               : c({ action: "SEND_REACT_ACTIVITY" });
-        let n = ((e) => {
+        let n = (function (e) {
             let { emoji: t, username: n, sourceType: i, sourceDetails: r } = e,
                 s = `:${t.name}:`;
             switch (i) {
@@ -175,7 +175,7 @@ function J(e) {
                 : o === U.dS.STATUS
                   ? d({ action: "SEND_REPLY_CUSTOM_STATUS" })
                   : d({ action: "SEND_REPLY_ACTIVITY" });
-            let n = ((e) => {
+            let n = (function (e) {
                 let { input: t, username: n, sourceType: i, sourceDetails: r } = e;
                 switch (i) {
                     case U.dS.ACTIVITY:
@@ -231,7 +231,7 @@ ${t}`;
                 editorClassName: X.EN,
                 type: K.oU.USER_PROFILE_REPLY,
                 placeholder: B.intl.formatToPlainString(
-                    ((e) => {
+                    (function (e) {
                         switch (e) {
                             case U.dS.ACTIVITY:
                                 return B.t.Qn081O;
@@ -342,11 +342,11 @@ function el(e) {
                     className: a()(eo.x6, eo.kb),
                     "aria-label": B.intl.string(B.t.QdHxos),
                     "aria-haspopup": "dialog",
-                    onClick: () => {
+                    onClick: function () {
                         d({ action: "PRESS_EDIT_CUSTOM_STATUS" }),
-                            ((e) => {
+                            (function (e) {
                                 let { analyticsLocations: t, stackingBehavior: r } = e;
-                                return (0, c.openModalLazy)(
+                                (0, c.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
                                             n.e("33973"),
@@ -379,7 +379,7 @@ function el(e) {
                     ref: h,
                     className: a()(eo.x6, eo.pG),
                     "aria-label": B.intl.string(B.t.wfYTHe),
-                    onClick: () => {
+                    onClick: function () {
                         d({ action: "PRESS_CLEAR_CUSTOM_STATUS" }), ea.G2.updateSetting(void 0);
                     },
                     children: (0, i.jsx)(er.u, { size: "xs", colorClass: eo.Kk }),
@@ -427,7 +427,7 @@ let ed = r.forwardRef(function (e, t) {
                         className: eu.A7,
                         "aria-label": B.intl.string(B.t["zrpF/b"]),
                         "aria-describedby": o,
-                        onClick: () => {
+                        onClick: function () {
                             u({ action: "PRESS_ADD_CUSTOM_STATUS" }),
                                 r?.(),
                                 (0, c.openModalLazy)(
@@ -501,6 +501,17 @@ let ed = r.forwardRef(function (e, t) {
                 T?.onInteractionPopoutTargetRefChange(O);
             }, [T]);
         let [W, K] = (0, p.z)(() => ({ maxHeight: `${L.current}px`, config: { clamp: !0, duration: 150 } }));
+        function $(e) {
+            F &&
+                (e
+                    ? K({
+                          maxHeight: `${Math.min(w.current, R)}px`,
+                          delay: 300 * !H,
+                          config: { clamp: !0, duration: 150 * !H },
+                      })
+                    : K({ maxHeight: `${Math.min(L.current, C)}px`, delay: 0 }),
+                H ? G(!e) : Y.start(e ? 300 : 150, () => G(!e)));
+        }
         r.useLayoutEffect(() => {
             if ((x(!0), null == b.current || null == D.current || !j)) return;
             let e = b.current.getBoundingClientRect().height,
@@ -510,18 +521,7 @@ let ed = r.forwardRef(function (e, t) {
                 (w.current = t),
                 K({ maxHeight: `${Math.min(k ? L.current : w.current, k ? C : R)}px` });
         }, [j, s, n, K, k, C, R]);
-        let $ = (e) => {
-                F &&
-                    (e
-                        ? K({
-                              maxHeight: `${Math.min(w.current, R)}px`,
-                              delay: 300 * !H,
-                              config: { clamp: !0, duration: 150 * !H },
-                          })
-                        : K({ maxHeight: `${Math.min(L.current, C)}px`, delay: 0 }),
-                    H ? G(!e) : Y.start(e ? 300 : 150, () => G(!e)));
-            },
-            z =
+        let z =
                 null != n
                     ? (0, i.jsx)(g.A, { emoji: n, animate: c, hideTooltip: !1, tooltipDelay: U.In, className: eu.H0 })
                     : null,

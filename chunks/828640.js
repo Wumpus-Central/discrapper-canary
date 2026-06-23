@@ -303,12 +303,12 @@ var O = t(263911),
     k = t(873297),
     M = t(758836),
     B = t(375708);
-let G = () => {},
-    F = {
-        storefront: "linear-gradient(90deg, rgba(88, 101, 242, 0.4) 0%, rgba(157, 60, 178, 0.4) 100%)",
-        nitro: "linear-gradient(90deg, rgba(179, 38, 156, 0.4) 0%, rgba(20, 20, 203, 0.4) 100%)",
-        none: void 0,
-    };
+function G() {}
+let F = {
+    storefront: "linear-gradient(90deg, rgba(88, 101, 242, 0.4) 0%, rgba(157, 60, 178, 0.4) 100%)",
+    nitro: "linear-gradient(90deg, rgba(179, 38, 156, 0.4) 0%, rgba(20, 20, 203, 0.4) 100%)",
+    none: void 0,
+};
 var Y = t(971146);
 let j = {
         id: "slayer-storefront",

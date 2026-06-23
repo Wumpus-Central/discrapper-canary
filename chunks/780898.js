@@ -27,7 +27,9 @@ function c(e) {
 function d(e) {
     return /^#([0-9a-fA-F]{6})$/.test(e);
 }
-let _ = (e) => a.fc[e] ?? a.Wj;
+function _(e) {
+    return a.fc[e] ?? a.Wj;
+}
 function h(e) {
     let t = r().decode(e),
         n = r().toRGBA8(t)[0],

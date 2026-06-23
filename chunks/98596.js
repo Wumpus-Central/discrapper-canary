@@ -46,7 +46,7 @@ function I(e) {
                 children: (0, o.jsx)(g.$, {
                     variant: "primary",
                     text: r.intl.string(r.t.uw9zI7),
-                    onClick: () => {
+                    onClick: function () {
                         (0, p.b0)(p.G8.APPEARANCE_SETTINGS),
                             (0, S.nf)(S.HP.CUSTOM_THEME, { from: S.xv.SETTING }),
                             (0, x.default)();

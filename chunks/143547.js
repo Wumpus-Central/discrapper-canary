@@ -51,7 +51,7 @@ function v(t) {
             onConfirm: () => {
                 c?.(), N.A.ignoreUser(i.id, v, a ?? void 0), j.default.track(R.HAw.IGNORE_USER_CONFIRMED);
             },
-            onCancel: () => {
+            onCancel: function () {
                 j.default.track(R.HAw.USER_REMEDIATION_ACTION, { action: C.p.CANCEL_IGNORE, location: v });
             },
             impression: { impressionName: r.ImpressionNames.IGNORE_USER_CONFIRMATION },

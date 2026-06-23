@@ -322,16 +322,16 @@ function ei(e) {
         } = e,
         [P, x] = r.useState(A),
         k = null != u && null == u.proxyURL,
-        U = r.useCallback(() => x(!1), [x]),
-        G = (e) => {
-            e.preventDefault(),
-                e.stopPropagation(),
-                S?.(!1),
-                x(!0),
-                k &&
-                    (j._.dispatch(_.jej.VIDEO_EMBED_PLAYBACK_STARTED),
-                    j._.subscribeOnce(_.jej.VIDEO_EMBED_PLAYBACK_STARTED, U));
-        };
+        U = r.useCallback(() => x(!1), [x]);
+    function G(e) {
+        e.preventDefault(),
+            e.stopPropagation(),
+            S?.(!1),
+            x(!0),
+            k &&
+                (j._.dispatch(_.jej.VIDEO_EMBED_PLAYBACK_STARTED),
+                j._.subscribeOnce(_.jej.VIDEO_EMBED_PLAYBACK_STARTED, U));
+    }
     r.useEffect(
         () => () => {
             k && j._.unsubscribe(_.jej.VIDEO_EMBED_PLAYBACK_STARTED, U);

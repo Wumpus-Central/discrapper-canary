@@ -2,7 +2,7 @@
 n.d(t, { A: () => z });
 var i = n(627968),
     r = n(64700),
-    s = n(922139),
+    s = n(308186),
     a = n(837381),
     o = n(323889),
     l = n(17928),
@@ -99,32 +99,32 @@ function $(e) {
             config: { tension: 450, friction: 45 },
             onRest: () => ec(!0),
         }),
-        ef = (0, _.p)(eu, { from: { opacity: 0, scale: 0 }, enter: { opacity: 1, scale: 1 } }),
-        ep = () => {
-            ed.dispatch(j.jej.POPOUT_CLOSE);
-        },
-        eE = "top" === z ? "8px 8px 0 0" : "0 0 8px 8px",
-        em = () => {
-            (0, b.E5)(b.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
-                ? (0, y.r)({
-                      type: C.F.CLICK_INTERNAL,
-                      adCreativeType: o.p.QUEST,
-                      adCreativeId: t.id,
-                      questContentCTA: M.Cy.LEARN_MORE,
-                      surfaceId: O.uF.MEMBERS_LIST,
-                      sourceQuestContent: O.uF.MEMBERS_LIST,
-                      trackGuildAndChannelMetadata: !0,
-                  })
-                : (0, w.Y5)({
-                      questId: t.id,
-                      questContent: O.uF.MEMBERS_LIST,
-                      questContentCTA: M.Cy.LEARN_MORE,
-                      trackGuildAndChannelMetadata: !0,
-                      sourceQuestContent: O.uF.MEMBERS_LIST,
-                  }),
-                (0, F.navigateToQuestHome)({ fromContent: O.uF.MEMBERS_LIST, questId: t.id });
-        },
-        eg = () => {
+        ef = (0, _.p)(eu, { from: { opacity: 0, scale: 0 }, enter: { opacity: 1, scale: 1 } });
+    function ep() {
+        ed.dispatch(j.jej.POPOUT_CLOSE);
+    }
+    let eE = "top" === z ? "8px 8px 0 0" : "0 0 8px 8px";
+    function em() {
+        (0, b.E5)(b.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
+            ? (0, y.r)({
+                  type: C.F.CLICK_INTERNAL,
+                  adCreativeType: o.p.QUEST,
+                  adCreativeId: t.id,
+                  questContentCTA: M.Cy.LEARN_MORE,
+                  surfaceId: O.uF.MEMBERS_LIST,
+                  sourceQuestContent: O.uF.MEMBERS_LIST,
+                  trackGuildAndChannelMetadata: !0,
+              })
+            : (0, w.Y5)({
+                  questId: t.id,
+                  questContent: O.uF.MEMBERS_LIST,
+                  questContentCTA: M.Cy.LEARN_MORE,
+                  trackGuildAndChannelMetadata: !0,
+                  sourceQuestContent: O.uF.MEMBERS_LIST,
+              }),
+            (0, F.navigateToQuestHome)({ fromContent: O.uF.MEMBERS_LIST, questId: t.id });
+    }
+    let eg = () => {
             (0, x.Ll)($, J) && null != J
                 ? ((0, b.E5)(b.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
                       ? (0, y.r)({
@@ -175,7 +175,7 @@ function $(e) {
                 : em();
         },
         eA = (0, D.NA)({ quest: t }),
-        eI = (() => {
+        eI = (function () {
             if (ei && !et)
                 return {
                     headerText: Y.intl.string(Y.t.gHerLS),

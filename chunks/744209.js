@@ -27,9 +27,9 @@ var N = s(575593),
     T = s(40474),
     _ = s(534514),
     k = s(449543),
-    y = s(287809),
-    B = s(174459),
-    f = s(161918),
+    f = s(287809),
+    y = s(174459),
+    B = s(161918),
     S = s(993408),
     G = s(940980),
     P = s(511265),
@@ -47,7 +47,7 @@ var N = s(575593),
     $ = s(339202);
 let z = (e) => {
         let { category: l } = e,
-            s = (0, o.bG)([y.default], () => y.default.getCurrentUser()),
+            s = (0, o.bG)([f.default], () => f.default.getCurrentUser()),
             r = (0, R.X)(l.products),
             a = (0, P.p)()(r),
             i = (0, G.W)("CollectionIndexPage");
@@ -160,7 +160,7 @@ let z = (e) => {
             c = r.useCallback(
                 (e) => {
                     "shop_all" === e.id &&
-                        (B.default.track(W.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                        (y.default.track(W.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                             collectibles_shop_session_id: a?.sessionId,
                             sku_id: l,
                             page_type: w.G2.COLLECTION_INDEX,
@@ -235,7 +235,7 @@ let z = (e) => {
             );
         if (null == a) return null;
         let u = null != a.heroBannerUrl || null != a.heroRiveUrl;
-        return (0, n.jsx)(f.iM, {
+        return (0, n.jsx)(B.iM, {
             tab: w.G2.COLLECTION_INDEX,
             children: (0, n.jsx)("div", {
                 className: $.kL,
@@ -268,7 +268,7 @@ let z = (e) => {
     };
 var Y = s(146919),
     ee = s(647685);
-let el = (e) => {
+let el = function (e) {
     let { collectionId: l } = e,
         s = r.useRef(null),
         a = r.useRef(null);
@@ -278,25 +278,25 @@ let el = (e) => {
     let { selectedTab: O, transitionToTab: T, transitionState: _ } = (0, E.o)(w.G2.COLLECTION_INDEX);
     (0, C.pE)(), (0, b.Ay)({ stalePurchasesOK: !0 });
     let k = (0, h.A)((0, d.A)()),
-        y = (0, m.a)("CollectiblesShopIndexPage"),
-        B = (0, o.bG)([L.A], () => (null != l ? L.A.getCategory(l) : void 0)),
-        f = (0, o.bG)([L.A], () => L.A.isFetchingCategories),
+        f = (0, m.a)("CollectiblesShopIndexPage"),
+        y = (0, o.bG)([L.A], () => (null != l ? L.A.getCategory(l) : void 0)),
+        B = (0, o.bG)([L.A], () => L.A.isFetchingCategories),
         S = (0, o.bG)([L.A], () => null != L.A.lastSuccessfulFetch),
         G = (0, o.bG)([L.A], () => L.A.error),
         { analyticsLocations: P } = (0, p.lC)(w.G2.COLLECTION_INDEX);
-    (0, p.uS)(k, O, B?.name, _),
+    (0, p.uS)(k, O, y?.name, _),
         r.useEffect(() => {
             a.current?.scrollTo({ top: 0 });
         }, [l]),
         r.useEffect(() => {
             (0, u.I)(W.BVt.COLLECTIBLES_SHOP);
         }, []);
-    let R = !f && (S || null != G) && null == B;
-    return null == l || !y || R
+    let R = !B && (S || null != G) && null == y;
+    return null == l || !f || R
         ? (0, n.jsx)(t.rd, { to: W.BVt.COLLECTIBLES_SHOP })
-        : B?.isOrbsExclusive === !0
+        : y?.isOrbsExclusive === !0
           ? (0, n.jsx)(t.rd, { to: W.BVt.COLLECTIBLES_SHOP_WITH_TAB(w.G2.ORBS) })
-          : null == B
+          : null == y
             ? (0, n.jsxs)("div", {
                   className: i()(ee.bx, { [Y.jP]: N }),
                   ref: s,

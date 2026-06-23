@@ -1,19 +1,19 @@
-d.d(a, { default: () => _ });
-var t = d(627968);
-d(64700);
-var n = d(980707),
-    i = d(477782),
-    r = d(442433),
-    s = d(734057),
-    l = d(174459),
-    c = d(863922),
-    u = d(652215),
-    o = d(375708);
+n.d(a, { default: () => _ });
+var t = n(627968);
+n(64700);
+var d = n(980707),
+    i = n(477782),
+    r = n(442433),
+    s = n(734057),
+    l = n(174459),
+    c = n(863922),
+    u = n(652215),
+    o = n(375708);
 function _(e) {
-    let { summary: a, onSelect: d } = e;
-    return (0, t.jsx)(n.W, {
+    let { summary: a, onSelect: n } = e;
+    return (0, t.jsx)(d.W, {
         "data-menu-migrated-auto": !0,
-        onSelect: d,
+        onSelect: n,
         navId: "channel-summaries-context-menu",
         "aria-label": o.intl.string(o.t.ogxXGq),
         onClose: r.Z_,
@@ -22,7 +22,7 @@ function _(e) {
                 id: "delete-summary",
                 color: "danger",
                 label: o.intl.string(o.t["5AwUIg"]),
-                action: () => {
+                action: function () {
                     (0, c.O$)(a);
                     let e = s.A.getChannel(a.channelId);
                     l.default.track(u.HAw.SUMMARY_DELETED, {

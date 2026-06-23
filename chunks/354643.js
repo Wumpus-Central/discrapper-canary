@@ -1,23 +1,23 @@
 i.d(n, { default: () => l });
 var e = i(627968),
-    r = i(64700),
-    a = i(732159),
-    o = i(72152),
-    s = i(770376),
-    c = i(375708);
+    o = i(64700),
+    r = i(732159),
+    a = i(72152),
+    c = i(770376),
+    s = i(375708);
 function l(t) {
-    let [n, i] = r.useState(!1);
-    return (0, e.jsx)(a.ConfirmModal, {
+    let [n, i] = o.useState(!1);
+    return (0, e.jsx)(r.ConfirmModal, {
         ...t,
-        title: c.intl.string(c.t["pjYu0/"]),
-        subtitle: c.intl.format(c.t["0eydyj"], {}),
-        confirmText: c.intl.string(c.t.zVZXRU),
-        cancelText: c.intl.string(c.t["ETE/oC"]),
-        onConfirm: () => {
-            (0, o.Z)(!0);
+        title: s.intl.string(s.t["pjYu0/"]),
+        subtitle: s.intl.format(s.t["0eydyj"], {}),
+        confirmText: s.intl.string(s.t.zVZXRU),
+        cancelText: s.intl.string(s.t["ETE/oC"]),
+        onConfirm: function () {
+            (0, a.Z)(!0);
         },
-        onCloseCallback: () => {
-            n && (0, s.f)();
+        onCloseCallback: function () {
+            n && (0, c.f)();
         },
         variant: "primary",
         checkboxProps: { checked: n, onChange: (t) => i(t) },

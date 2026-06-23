@@ -19,4 +19,6 @@ function l(e) {
         );
     return (0, i.jsx)(o.Provider, { value: c, children: u });
 }
-let u = () => r.useContext(o);
+function u() {
+    return r.useContext(o);
+}

@@ -7,7 +7,7 @@ function i(t) {
     return (0, r.jsx)(l.k, {
         leading: `${s.mu}/`,
         value: e,
-        onChange: (t) => {
+        onChange: function (t) {
             n(t.replace(/ /g, "-"));
         },
         maxLength: 25,

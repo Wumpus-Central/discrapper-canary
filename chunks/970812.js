@@ -217,55 +217,55 @@ function w(e) {
             let e = null,
                 i = !1;
             n.current = { now: Date.now(), stateEnterTime: Date.now(), stateEndTime: 0 };
-            let a = n.current,
-                r = (e) => {
-                    a.stateEnterTime = a.now;
-                    let t = e.getStateDuration();
-                    a.stateEndTime = t > 0 ? a.now + t : 0;
+            let a = n.current;
+            function r(e) {
+                a.stateEnterTime = a.now;
+                let t = e.getStateDuration();
+                a.stateEndTime = t > 0 ? a.now + t : 0;
+            }
+            let s = () => {
+                    null != e && (clearTimeout(e), (e = null));
                 },
-                s = (t) => {
-                    u(),
+                u = M.states[t.current];
+            return (
+                null != u && r(u),
+                (function n(l) {
+                    s(),
                         i ||
                             (e = setTimeout(
                                 () => {
-                                    (e = null), i || o();
+                                    (e = null),
+                                        i ||
+                                            (function () {
+                                                if (i) return;
+                                                (e = null), (a.now = Date.now());
+                                                let l = t.current,
+                                                    s = M.states[l];
+                                                if (null == s) {
+                                                    (t.current = M.firstState), n(0);
+                                                    return;
+                                                }
+                                                try {
+                                                    let e = s.getHeights(T.current);
+                                                    k(e);
+                                                } catch (e) {
+                                                    i = !0;
+                                                    return;
+                                                }
+                                                if (0 === a.stateEndTime || a.now >= a.stateEndTime) {
+                                                    let e = s.getNextState();
+                                                    t.current = e;
+                                                    let n = M.states[e];
+                                                    null != n && r(n);
+                                                }
+                                                n(s.getAnimationDelay());
+                                            })();
                                 },
-                                Math.max(0, t),
+                                Math.max(0, l),
                             ));
-                },
-                u = () => {
-                    null != e && (clearTimeout(e), (e = null));
-                },
-                o = () => {
-                    if (i) return;
-                    (e = null), (a.now = Date.now());
-                    let n = t.current,
-                        l = M.states[n];
-                    if (null == l) {
-                        (t.current = M.firstState), s(0);
-                        return;
-                    }
-                    try {
-                        let e = l.getHeights(T.current);
-                        k(e);
-                    } catch (e) {
-                        i = !0;
-                        return;
-                    }
-                    if (0 === a.stateEndTime || a.now >= a.stateEndTime) {
-                        let e = l.getNextState();
-                        t.current = e;
-                        let n = M.states[e];
-                        null != n && r(n);
-                    }
-                    s(l.getAnimationDelay());
-                },
-                c = M.states[t.current];
-            return (
-                null != c && r(c),
-                s(0),
+                })(0),
                 () => {
-                    (i = !0), u();
+                    (i = !0), s();
                 }
             );
         }, [k, l, M, T]);

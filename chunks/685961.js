@@ -674,7 +674,7 @@ let e$ = (e) => {
         ? (0, n.jsxs)(ed.D, {
               role: "link",
               className: er()(ez.$J, ec.lD),
-              onClick: () => {
+              onClick: function () {
                   (0, eF.A)(t);
               },
               children: [
@@ -1498,7 +1498,7 @@ function t8(e) {
                                       variant: "secondary",
                                       size: "sm",
                                       text: r ? T.intl.string(T.t.t5VZ88) : T.intl.string(T.t.OpuAlK),
-                                      onClick: () => {
+                                      onClick: function () {
                                           (0, t1.C)(i, () => d(!0));
                                       },
                                   }),
@@ -1964,36 +1964,36 @@ let ld = (e) => {
         (0, m.VE)();
     });
     let P = (e) => {
-            let { destination: l } = e,
-                [, n] = l,
-                a = A[n];
-            if (void 0 === a) return void c.A.increment({ name: i.K.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE });
-            if (a.elements.some((e) => "skip" === e.type) && a.button?.type === "next")
-                return P({ ...e, destination: ["", a.button.target] });
-            if (
-                (D([...M, e]),
-                null != a.key && _?.(a.key),
-                y(void 0),
-                I(void 0),
-                t.name === x.t0.MESSAGE || t.name === x.t0.FIRST_DM)
-            ) {
-                let e = t.record.id;
-                u.Ay.trackWithMetadata(et.HAw.IAR_NAVIGATE, {
-                    message_id: e,
-                    content_type: t.name,
-                    report_sub_type: a.report_type,
-                    current_node: A[E].id,
-                    next_node: a.id,
-                });
-            }
-            T(n);
-        },
-        B = async (e) => {
-            let n = j ? await (0, h.zC)(l, t, [...M, e]) : await (0, h.bo)(l, t, [...M, e], v),
-                a = n?.body?.report_id;
-            null != a && O(a), L(A[e.nodeRef].report_type), p?.(a);
-        },
-        V = () => {
+        let { destination: l } = e,
+            [, n] = l,
+            a = A[n];
+        if (void 0 === a) return void c.A.increment({ name: i.K.IN_APP_REPORT_NAVIGATE_TO_NONEXISTENT_NODE });
+        if (a.elements.some((e) => "skip" === e.type) && a.button?.type === "next")
+            return P({ ...e, destination: ["", a.button.target] });
+        if (
+            (D([...M, e]),
+            null != a.key && _?.(a.key),
+            y(void 0),
+            I(void 0),
+            t.name === x.t0.MESSAGE || t.name === x.t0.FIRST_DM)
+        ) {
+            let e = t.record.id;
+            u.Ay.trackWithMetadata(et.HAw.IAR_NAVIGATE, {
+                message_id: e,
+                content_type: t.name,
+                report_sub_type: a.report_type,
+                current_node: A[E].id,
+                next_node: a.id,
+            });
+        }
+        T(n);
+    };
+    async function B(e) {
+        let n = j ? await (0, h.zC)(l, t, [...M, e]) : await (0, h.bo)(l, t, [...M, e], v),
+            a = n?.body?.report_id;
+        null != a && O(a), L(A[e.nodeRef].report_type), p?.(a);
+    }
+    let V = () => {
             if (M.length < 1) return;
             let e = [...M],
                 l = e.pop(),

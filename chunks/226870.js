@@ -97,13 +97,13 @@ let h = r.forwardRef((e, t) => {
                         r = p.editMetadata?.end ?? e.duration,
                         s = ((e.currentTime - i) / (r - i)) * 100;
                     h(isNaN(s) ? 0 : Math.max(0, Math.min(100, s))), (t = requestAnimationFrame(n));
-                },
-                i = () => {
-                    null == t && (t = requestAnimationFrame(n));
-                },
-                r = () => {
-                    null != t && (cancelAnimationFrame(t), (t = null), h(0));
                 };
+            function i() {
+                null == t && (t = requestAnimationFrame(n));
+            }
+            let r = () => {
+                null != t && (cancelAnimationFrame(t), (t = null), h(0));
+            };
             return (
                 e.addEventListener("play", i),
                 e.addEventListener("pause", r),

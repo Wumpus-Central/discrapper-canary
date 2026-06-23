@@ -4,7 +4,9 @@ var i = n(392054),
     r = n(213404),
     s = n(834968),
     a = n(73510);
-let o = (e) => (e.type === i.Hf.BUILT_IN ? s.A : r.A);
+function o(e) {
+    return e.type === i.Hf.BUILT_IN ? s.A : r.A;
+}
 function l(e) {
     return `${e / 16}rem`;
 }

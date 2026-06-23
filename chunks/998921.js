@@ -23,6 +23,9 @@ function g(e) {
     return new Promise((t, n) => {
         "string" == typeof e && (e = h.net.createConnection(e));
         let i = new I(e, "json");
+        function r() {
+            i.close(_.YI$.CLOSE_NORMAL, "test client going away");
+        }
         e.on("data", (e) => {
             try {
                 i.read(e);
@@ -30,25 +33,22 @@ function g(e) {
                 i.close(_.YI$.CLOSE_UNSUPPORTED, e.message);
             }
         });
-        let r = () => {
-                i.close(_.YI$.CLOSE_NORMAL, "test client going away");
+        let s = Promise.race([
+            new Promise((t) => e.on("error", () => t())),
+            new Promise((t, n) => {
+                e.on("pong", () => n(Error("socket responded with pong")));
+            }),
+            new Promise((e, t) => {
+                setTimeout(() => t(Error("socket alive timeout")), 1e3);
+            }),
+        ]).then(
+            () => {
+                r();
             },
-            s = Promise.race([
-                new Promise((t) => e.on("error", () => t())),
-                new Promise((t, n) => {
-                    e.on("pong", () => n(Error("socket responded with pong")));
-                }),
-                new Promise((e, t) => {
-                    setTimeout(() => t(Error("socket alive timeout")), 1e3);
-                }),
-            ]).then(
-                () => {
-                    r();
-                },
-                (e) => {
-                    throw (r(), e);
-                },
-            );
+            (e) => {
+                throw (r(), e);
+            },
+        );
         return e.write(A(p.PING, a().uniqueId())), s.then(t, n);
     });
 }

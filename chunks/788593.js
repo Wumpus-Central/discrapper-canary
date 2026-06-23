@@ -5,8 +5,8 @@ var n = i(627968),
     a = i.n(s),
     r = i(990078),
     c = i(834730),
-    u = i(187322),
-    o = i(939249),
+    o = i(187322),
+    u = i(939249),
     d = i(409626),
     g = i(692969),
     m = i(207803),
@@ -49,11 +49,13 @@ function E(e) {
                 v?.(e);
             },
             [T, v],
-        ),
-        C = (e) => (h ? e : (0, n.jsx)(r.m, { text: _, ariaHidden: !0, children: e }));
+        );
+    function C(e) {
+        return h ? e : (0, n.jsx)(r.m, { text: _, ariaHidden: !0, children: e });
+    }
     return C(
         null == v
-            ? (0, n.jsx)(u.vN, {
+            ? (0, n.jsx)(o.vN, {
                   children: (0, n.jsx)("div", {
                       ref: j,
                       className: E,
@@ -61,7 +63,7 @@ function E(e) {
                       children: (0, n.jsx)(A, { imageSrc: t, gameName: i }),
                   }),
               })
-            : (0, n.jsx)(o.D, {
+            : (0, n.jsx)(u.D, {
                   innerRef: j,
                   onClick: O,
                   "aria-label": S,
@@ -78,12 +80,12 @@ function h(e) {
             disableInteraction: s = !1,
             hideTooltip: r,
             coverRef: c,
-            ...o
+            ...u
         } = e,
         d = a()(I.PY, l);
     return s
-        ? (0, n.jsx)(u.vN, {
-              children: (0, n.jsx)("div", { ref: c, className: d, tabIndex: -1, children: (0, n.jsx)(A, { ...o }) }),
+        ? (0, n.jsx)(o.vN, {
+              children: (0, n.jsx)("div", { ref: c, className: d, tabIndex: -1, children: (0, n.jsx)(A, { ...u }) }),
           })
-        : (0, n.jsx)(E, { className: d, applicationId: t, userId: i, hideTooltip: r, coverRef: c, ...o });
+        : (0, n.jsx)(E, { className: d, applicationId: t, userId: i, hideTooltip: r, coverRef: c, ...u });
 }

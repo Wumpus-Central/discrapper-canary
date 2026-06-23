@@ -30,8 +30,10 @@ var s = n(39623),
 function c(e) {
     let t,
         { message: n, onDeleteMessage: i, children: c } = e,
-        u = n.interactionMetadata?.ephemerality_reason,
-        m = () => i(n, !0);
+        u = n.interactionMetadata?.ephemerality_reason;
+    function m() {
+        return i(n, !0);
+    }
     if (null != u) {
         let e = (function (e) {
             switch (e) {

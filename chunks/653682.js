@@ -429,7 +429,7 @@ function M(t) {
         b.push({
             variant: "primary",
             text: p.intl.string(p.t["1X8SK/"]),
-            onClick: () => {
+            onClick: function () {
                 (0, d.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
                         e.e("79086"),
@@ -472,7 +472,7 @@ function M(t) {
                     (0, n.jsx)(m.V, {
                         selectedItem: C,
                         type: "top",
-                        onItemSelect: (t) => {
+                        onItemSelect: function (t) {
                             P(t), (0, x.Bd)({ forumDemoId: t });
                         },
                         className: H._,

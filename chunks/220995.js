@@ -13,8 +13,8 @@ var n = t(627968),
     g = t(939249),
     h = t(283973),
     p = t(834730),
-    I = t(789645),
-    f = t(320448),
+    f = t(789645),
+    I = t(320448),
     v = t(775602),
     x = t(793574),
     S = t(688810),
@@ -27,9 +27,11 @@ var n = t(627968),
     j = t(652215);
 t(281405);
 var T = t(375708),
-    O = t(89682),
-    G = t(80442);
-let P = (e) => 1 - Math.pow(1 - e, 4);
+    G = t(89682),
+    O = t(80442);
+function P(e) {
+    return 1 - Math.pow(1 - e, 4);
+}
 function k(e) {
     let { channel: i, onClose: s } = e,
         k = l.useRef(null),
@@ -137,11 +139,11 @@ function k(e) {
               children: (e) => {
                   let { onClick: i, ...t } = e;
                   return (0, n.jsx)(r.animated.div, {
-                      className: O.lY,
+                      className: G.lY,
                       style: ei,
                       children: (0, n.jsx)(g.D, {
                           innerRef: k,
-                          className: a()({ [O.vk]: !K }, G.q7, G.L9, G.vk),
+                          className: a()({ [G.vk]: !K }, O.q7, O.L9, O.vk),
                           focusProps: { offset: { right: 4 } },
                           "aria-disabled": K,
                           "aria-label": T.intl.string(T.t.F3qiJr),
@@ -149,10 +151,10 @@ function k(e) {
                           ignoreKeyPress: W,
                           ...t,
                           children: (0, n.jsxs)("div", {
-                              className: a()(O.Qs, G.Qs),
+                              className: a()(G.Qs, O.Qs),
                               children: [
                                   (0, n.jsxs)("div", {
-                                      className: O.R4,
+                                      className: G.R4,
                                       style: { "--custom-voice-invite-suggestions-timer-size": 24 },
                                       children: [
                                           z
@@ -160,14 +162,14 @@ function k(e) {
                                               : (0, n.jsxs)(
                                                     "svg",
                                                     {
-                                                        className: a()(O.O1, { [O.Ft]: X }),
+                                                        className: a()(G.O1, { [G.Ft]: X }),
                                                         viewBox: "0 0 24 24",
                                                         style: {
                                                             "--custom-voice-invite-suggestions-timer-duration": 1e4,
                                                         },
                                                         children: [
-                                                            (0, n.jsx)("circle", { className: O.qB }),
-                                                            (0, n.jsx)("circle", { className: O.hN }),
+                                                            (0, n.jsx)("circle", { className: G.qB }),
+                                                            (0, n.jsx)("circle", { className: G.hN }),
                                                         ],
                                                     },
                                                     `voice-invite-suggestions-timer-${R}`,
@@ -177,7 +179,7 @@ function k(e) {
                                               width: 14,
                                               height: 14,
                                               color: "currentColor",
-                                              className: a()(O.Hk, O.Kk),
+                                              className: a()(G.Hk, G.Kk),
                                           }),
                                       ],
                                   }),
@@ -186,7 +188,7 @@ function k(e) {
                                       overflowOnly: !0,
                                       children: (0, n.jsx)(p.E, {
                                           variant: "text-sm/medium",
-                                          className: O.Pf,
+                                          className: G.Pf,
                                           lineClamp: 1,
                                           children: T.intl.string(T.t["EE+P0H"]),
                                       }),
@@ -195,25 +197,25 @@ function k(e) {
                                       ref: V,
                                       children: q
                                           ? (0, n.jsx)(g.D, {
-                                                className: O.VN,
+                                                className: G.VN,
                                                 onClick: (e) => {
                                                     e.stopPropagation(), en("user_explicit");
                                                 },
                                                 "aria-label": T.intl.string(T.t.cpT0Cq),
-                                                children: (0, n.jsx)(I.P, {
+                                                children: (0, n.jsx)(f.P, {
                                                     size: "xs",
                                                     color: "currentColor",
-                                                    className: O.Kk,
+                                                    className: G.Kk,
                                                 }),
                                             })
                                           : (0, n.jsx)(g.D, {
                                                 onClick: (e) => {
                                                     e.stopPropagation(), J(!0);
                                                 },
-                                                children: (0, n.jsx)(f._, {
+                                                children: (0, n.jsx)(I._, {
                                                     size: "xs",
                                                     color: "currentColor",
-                                                    className: O.Kk,
+                                                    className: G.Kk,
                                                 }),
                                             }),
                                   }),

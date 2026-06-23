@@ -3,7 +3,7 @@ n.d(t, { A: () => a });
 var i = n(778712),
     r = n(486020),
     s = n(562819);
-let a = (e) => {
+let a = function (e) {
     let { legacyAssetId: t, skuId: n, size: a = i._3.SIZE_80, canAnimate: o } = e;
     return (0, r.F_)({ avatarDecoration: { asset: t, skuId: n }, size: (0, s.Te)(a), canAnimate: o });
 };

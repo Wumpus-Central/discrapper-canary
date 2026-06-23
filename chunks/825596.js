@@ -1,4 +1,4 @@
-n.d(t, { A: () => P, i: () => M });
+n.d(t, { A: () => M, i: () => P });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -55,8 +55,8 @@ function b() {
     });
 }
 var L = n(818348),
-    R = n(559046);
-function k(e) {
+    k = n(559046);
+function R(e) {
     let {
         showEditProduct: t,
         showUnpublishProduct: n,
@@ -74,7 +74,7 @@ function k(e) {
         onSelect: I,
     } = e;
     return (0, i.jsx)("div", {
-        className: R.li,
+        className: k.li,
         children: (0, i.jsxs)(a.W, {
             "data-menu-migrated": !0,
             navId: "guild-product-context",
@@ -141,7 +141,7 @@ function k(e) {
         }),
     });
 }
-function M(e) {
+function P(e) {
     let {
             product: t,
             guildId: n,
@@ -160,7 +160,7 @@ function M(e) {
         } = e,
         I = l.useRef(null);
     return (0, i.jsx)("div", {
-        onClick: (e) => {
+        onClick: function (e) {
             e.stopPropagation();
         },
         children: (0, i.jsx)(m.Y, {
@@ -170,7 +170,7 @@ function M(e) {
             spacing: -8,
             animation: m.Y.Animation.FADE,
             renderPopout: (e) =>
-                (0, i.jsx)(k, {
+                (0, i.jsx)(R, {
                     ...e,
                     guildId: n,
                     productId: t.id,
@@ -195,11 +195,11 @@ function M(e) {
                     "aria-label": N.intl.formatToPlainString(N.t.RtqjeB, { productName: t.name }),
                     "aria-haspopup": "listbox",
                     "aria-expanded": l,
-                    className: R.hC,
+                    className: k.hC,
                     children: (0, i.jsx)(g.F, {
                         size: "md",
                         color: "currentColor",
-                        className: R.Su,
+                        className: k.Su,
                         "aria-hidden": !0,
                     }),
                 });
@@ -207,7 +207,7 @@ function M(e) {
         }),
     });
 }
-function P(e) {
+function M(e) {
     let {
             product: t,
             guildId: n,
@@ -223,12 +223,12 @@ function P(e) {
         h = (0, v.z)(t);
     return (0, i.jsxs)(p.s, {
         tag: "article",
-        className: r()(R.gc, R.Um, { [R.r9]: c }),
+        className: r()(k.gc, k.Um, { [k.r9]: c }),
         onClick: c ? void 0 : l,
         onContextMenu: function (e) {
             (0, E.L3)(e, () =>
                 Promise.resolve((e) =>
-                    (0, i.jsx)(k, {
+                    (0, i.jsx)(R, {
                         ...e,
                         closePopout: E.Z_,
                         guildId: n,
@@ -251,28 +251,28 @@ function P(e) {
         },
         "aria-label": N.intl.formatToPlainString(N.t["X/yAKs"], { productName: t.name }),
         children: [
-            (0, i.jsx)("img", { alt: "", src: u, className: R.K_ }),
+            (0, i.jsx)("img", { alt: "", src: u, className: k.K_ }),
             (0, i.jsxs)("div", {
-                className: R.aG,
+                className: k.aG,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: R.jb,
+                        className: k.jb,
                         children: [
                             (0, i.jsx)(A.D, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
-                                className: R.tZ,
+                                className: k.tZ,
                                 children: t.name,
                             }),
                             (0, i.jsx)(x.h, { size: 8 }),
                             (0, i.jsxs)("div", {
-                                className: R.MS,
+                                className: k.MS,
                                 children: [
                                     (0, i.jsx)(f.E, { variant: "text-md/normal", color: "text-default", children: m }),
                                     null != h
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, i.jsx)("div", { className: R.zk }),
+                                                  (0, i.jsx)("div", { className: k.zk }),
                                                   (0, i.jsx)(f.E, {
                                                       variant: "text-md/normal",
                                                       color: "text-default",
@@ -288,7 +288,7 @@ function P(e) {
                         ],
                     }),
                     !c &&
-                        (0, i.jsx)(M, {
+                        (0, i.jsx)(P, {
                             product: t,
                             guildId: n,
                             showEditProduct: !0,

@@ -518,7 +518,7 @@ function ew(e) {
                                   }),
                               }),
                               (() => {
-                                  let e = (() => {
+                                  let e = (function () {
                                       switch (t.data.kind) {
                                           case "message":
                                               if (t.channelType === ef.rbe.GUILD_ANNOUNCEMENT)
@@ -1071,15 +1071,15 @@ let eL = (0, h.A)(function (e) {
     (0, p.HU)({ location: F.intl.string(F.t["jnXV/V"]) });
     let [b, k] = i.useState(!1);
     i.useEffect(() => {
-        let e = (e) => {
-                e.metaKey && k(!0);
-            },
-            t = (e) => {
-                "Meta" === e.key && k(!1);
-            },
-            n = () => {
-                k(!1);
-            };
+        function e(e) {
+            e.metaKey && k(!0);
+        }
+        function t(e) {
+            "Meta" === e.key && k(!1);
+        }
+        function n() {
+            k(!1);
+        }
         return (
             window.addEventListener("keydown", e),
             window.addEventListener("keyup", t),

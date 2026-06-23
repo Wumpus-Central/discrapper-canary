@@ -25,7 +25,7 @@ var i = n(567243),
     r = n(179771),
     s = n(636537),
     a = n(898467),
-    o = n(720149),
+    o = n(493336),
     l = n(956518),
     u = n(587895),
     c = n(46054),
@@ -35,7 +35,7 @@ var i = n(567243),
     f = n(889227),
     p = n(734057),
     E = n(71393),
-    m = n(941327),
+    m = n(394459),
     g = n(232835),
     A = n(290863),
     I = n(287809),
@@ -223,12 +223,13 @@ function Z(e, t) {
     null == t && (e.authorization.scopes = [O.hj]);
 }
 function X(e) {
-    let t = m.Ay.getSettings(),
-        n = (e) =>
-            Object.values(e)
-                .sort((e, t) => e.index - t.index)
-                .map((e) => ({ id: e.id, name: e.name })),
-        i = e(t);
+    let t = m.Ay.getSettings();
+    function n(e) {
+        return Object.values(e)
+            .sort((e, t) => e.index - t.index)
+            .map((e) => ({ id: e.id, name: e.name }));
+    }
+    let i = e(t);
     return {
         input: { available_devices: n(m.Ay.getInputDevices()), device_id: t.inputDeviceId, volume: t.inputVolume },
         output: { available_devices: n(m.Ay.getOutputDevices()), device_id: t.outputDeviceId, volume: t.outputVolume },

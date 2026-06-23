@@ -301,21 +301,21 @@ function g(e) {
     }),
         a.useEffect(() => {
             if (null == ei) return;
-            let e = () => {
-                    ee(!0), en.current.forEach((e) => e.onPlay?.());
-                },
-                t = () => {
-                    ee(!1), en.current.forEach((e) => e.onPause?.());
-                },
-                l = () => {
+            function e() {
+                ee(!0), en.current.forEach((e) => e.onPlay?.());
+            }
+            function t() {
+                ee(!1), en.current.forEach((e) => e.onPause?.());
+            }
+            let l = () => {
                     Q(ei.duration);
                 },
                 n = () => {
                     el(!0), Q(ei.duration), Z?.current?.seek(M);
-                },
-                a = () => {
-                    ea.current = !0;
                 };
+            function a() {
+                ea.current = !0;
+            }
             return (
                 ei.addEventListener("play", e),
                 ei.addEventListener("pause", t),

@@ -13,8 +13,8 @@ var i = n(17928),
     A = n(519480),
     g = n(370876),
     m = n(568548),
-    p = n(935208),
-    f = n(652215),
+    f = n(935208),
+    p = n(652215),
     C = n(375708);
 let E = [
         {
@@ -65,11 +65,11 @@ let E = [
                         n.e("16084"),
                         n.e("22547"),
                     ]).then(n.bind(n, 1310));
-                    return (n) => (0, l.jsx)(i, { ...n, guild: e, channel: t, source: f.PE1.HUB_SIDEBAR });
+                    return (n) => (0, l.jsx)(i, { ...n, guild: e, channel: t, source: p.PE1.HUB_SIDEBAR });
                 }),
         },
     ],
-    x = (e) => {
+    x = function (e) {
         let { guild: t, channel: n } = e,
             s = (0, i.bG)([h.A], () => null != n && h.A.getChannelId() === n.id),
             r = (0, i.bG)([A.A, m.Ay], () => {
@@ -77,7 +77,7 @@ let E = [
                 let e = m.Ay.ackMessageId(n.id);
                 if (null == e) return 0;
                 let t = Object.values(A.A.getDirectoryEntries(n.id) ?? {}).filter(
-                    (t) => new Date(t.createdAt).getTime() > p.default.extractTimestamp(e),
+                    (t) => new Date(t.createdAt).getTime() > f.default.extractTimestamp(e),
                 );
                 return Math.min(g.zP, t.length);
             }, [n]);

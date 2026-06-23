@@ -5,7 +5,7 @@ var i = n(64700),
     s = n(736056),
     a = n(564064),
     o = n(4227),
-    l = n(579151);
+    l = n(315949);
 function u() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = (0, r.bG)([s.A], () => s.A.hasLoadedExperiments),
@@ -36,12 +36,14 @@ function u() {
         { isClaiming: l, fetchPurchasesError: u, claimError: c, isFetching: n, purchases: d, hasPreviouslyFetched: _ }
     );
 }
-let c = () => u(!0),
-    d = function (e) {
-        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            { purchases: n } = u(t);
-        return null != e ? n.get(e) : void 0;
-    };
+function c() {
+    return u(!0);
+}
+function d(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        { purchases: n } = u(t);
+    return null != e ? n.get(e) : void 0;
+}
 function _(e, t) {
     let n = e?.paymentGateway,
         {
@@ -72,4 +74,6 @@ function _(e, t) {
         hasPreviouslyFetched: f,
     };
 }
-let h = (e) => _({ ...(e ?? {}), stalePurchasesOK: !0 });
+function h(e) {
+    return _({ ...(e ?? {}), stalePurchasesOK: !0 });
+}

@@ -43,15 +43,15 @@ var d = n(976860),
     _ = n(773669),
     h = n(590180);
 let f = (0, n(353640).v)((e) => ({
-        logs: [],
-        addLog: (t) => e((e) => ({ logs: [...e.logs, `[${new Date().toISOString().split("T")[0]}] ${t}`] })),
-        clearLogs: () => e({ logs: [] }),
-    })),
-    p = (e) => {
-        let t = new Date().toLocaleTimeString("en-US", { hour12: !1 }),
-            n = `[${t}] ${e}`;
-        f.getState().addLog(n);
-    };
+    logs: [],
+    addLog: (t) => e((e) => ({ logs: [...e.logs, `[${new Date().toISOString().split("T")[0]}] ${t}`] })),
+    clearLogs: () => e({ logs: [] }),
+}));
+function p(e) {
+    let t = new Date().toLocaleTimeString("en-US", { hour12: !1 }),
+        n = `[${t}] ${e}`;
+    f.getState().addLog(n);
+}
 var E = n(4227),
     m = n(870216),
     g = n(993408),
@@ -601,22 +601,23 @@ class Z {
 var X = n(100057),
     Q = n(181774),
     J = n(18572);
+function ee(e) {
+    let { tab: t, ...i } = e;
+    {
+        let { default: e } = n(830543),
+            { default: r } = n(408166);
+        et(i), e(), r(), (0, d.pX)(null != t ? P.BVt.COLLECTIBLES_SHOP_WITH_TAB(t) : P.BVt.COLLECTIBLES_SHOP);
+    }
+}
+function et(e) {
+    l.h.dispatch({ type: "COLLECTIBLES_SHOP_OPEN", ...e });
+}
+function en(e) {
+    l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId: e });
+}
 n(457421), n(295811);
-let ee = (e) => {
-        let { tab: t, ...i } = e;
-        {
-            let { default: e } = n(830543),
-                { default: r } = n(408166);
-            et(i), e(), r(), (0, d.pX)(null != t ? P.BVt.COLLECTIBLES_SHOP_WITH_TAB(t) : P.BVt.COLLECTIBLES_SHOP);
-        }
-    },
-    et = (e) => {
-        l.h.dispatch({ type: "COLLECTIBLES_SHOP_OPEN", ...e });
-    },
-    en = (e) => {
-        l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_DETAILS_OPEN", skuId: e });
-    },
-    ei = (e, t) =>
+function ei(e, t) {
+    return (
         !!e?.noCache == !!t?.noCache &&
         !!e?.includeUnpublished == !!t?.includeUnpublished &&
         !!e?.includeBundles == !!t?.includeBundles &&
@@ -624,197 +625,191 @@ let ee = (e) => {
         e?.countryCode === t?.countryCode &&
         e?.paymentGateway === t?.paymentGateway &&
         e?.shopHomeConfig === t?.shopHomeConfig &&
-        e?.skipNumCategories === t?.skipNumCategories,
-    er = async (e, t, n) => {
-        l.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options: e ?? {} });
-        let i = (0, Q.ao)(e),
-            r = c.Ay.get("shop_show_debug_overlay");
+        e?.skipNumCategories === t?.skipNumCategories
+    );
+}
+async function er(e, t, n) {
+    l.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH", options: e ?? {} });
+    let i = (0, Q.ao)(e),
+        r = c.Ay.get("shop_show_debug_overlay");
+    e?.logPerf &&
+        (0, X.z)({
+            sessionId: n?.sessionId,
+            checkpoint: X.t.CATEGORIES_FETCH_STARTED,
+            tab: n?.tab,
+            unpublishedCategoriesShown: e?.includeUnpublished,
+            cacheDisabled: e?.noCache,
+        }),
+        r && p(`fetchCollectiblesCategories started: ${JSON.stringify(i, null, 2)}`);
+    try {
+        let s = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_CATEGORIES_V2, query: i, rejectWithError: !0 });
         e?.logPerf &&
             (0, X.z)({
                 sessionId: n?.sessionId,
-                checkpoint: X.t.CATEGORIES_FETCH_STARTED,
+                checkpoint: X.t.CATEGORIES_FETCH_COMPLETED,
                 tab: n?.tab,
                 unpublishedCategoriesShown: e?.includeUnpublished,
                 cacheDisabled: e?.noCache,
             }),
-            r && p(`fetchCollectiblesCategories started: ${JSON.stringify(i, null, 2)}`);
-        try {
-            let s = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_CATEGORIES_V2, query: i, rejectWithError: !0 });
-            e?.logPerf &&
-                (0, X.z)({
-                    sessionId: n?.sessionId,
-                    checkpoint: X.t.CATEGORIES_FETCH_COMPLETED,
-                    tab: n?.tab,
-                    unpublishedCategoriesShown: e?.includeUnpublished,
-                    cacheDisabled: e?.noCache,
-                }),
-                r && p(`fetchCollectiblesCategories completed ${s.body.categories.length} categories`),
-                l.h.dispatch({
-                    type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS",
-                    categories: S.fromServer(s.body),
-                    noOp: t,
-                });
-        } catch (t) {
-            let e = new u.LG(t);
-            (0, J.o)(e),
-                l.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: e }),
-                r && p(`fetchCollectiblesCategories failed: ${e.message}`);
-        }
-    },
-    es = async () => {
-        if (E.A.isFetching) return;
-        l.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
-        let e = c.Ay.get("shop_show_debug_overlay");
-        e && p("fetchCollectiblesPurchases started");
-        try {
-            let t = {
-                url: P.Rsh.COLLECTIBLES_PURCHASES,
+            r && p(`fetchCollectiblesCategories completed ${s.body.categories.length} categories`),
+            l.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: S.fromServer(s.body), noOp: t });
+    } catch (t) {
+        let e = new u.LG(t);
+        (0, J.o)(e),
+            l.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: e }),
+            r && p(`fetchCollectiblesCategories failed: ${e.message}`);
+    }
+}
+async function es() {
+    if (E.A.isFetching) return;
+    l.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
+    let e = c.Ay.get("shop_show_debug_overlay");
+    e && p("fetchCollectiblesPurchases started");
+    try {
+        let t = {
+            url: P.Rsh.COLLECTIBLES_PURCHASES,
+            rejectWithError: !0,
+            query: { variants_return_style: a.g.VARIANTS_GROUP },
+        };
+        e && p(`fetchCollectiblesPurchases request: ${JSON.stringify(t, null, 2)}`);
+        let n = await o.Bo.get(t);
+        e && p(`fetchCollectiblesPurchases completed with ${n.body.length} purchases`),
+            l.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: n.body.map(x.fromServer) });
+    } catch (n) {
+        let t = new u.LG(n);
+        throw (
+            ((0, J.o)(t),
+            e && p(`fetchCollectiblesPurchases failed: ${t.message}`),
+            l.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE", error: t }),
+            t)
+        );
+    }
+}
+async function ea(e, t) {
+    l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId: e, startedAt: Date.now() });
+    try {
+        let n = { locale: _.default.locale };
+        t?.countryCode !== null && (n.country_code = t?.countryCode),
+            t?.paymentGateway !== null && (n.payment_gateway = t?.paymentGateway),
+            t?.includeBundles !== null && (n.include_bundles = t?.includeBundles);
+        let i = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_PRODUCTS(e), rejectWithError: !0, query: n });
+        l.h.dispatch({
+            type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
+            skuId: e,
+            product: b.A.fromServer(i.body),
+            endedAt: Date.now(),
+        });
+    } catch (n) {
+        let t = new u.LG(n);
+        (0, J.o)(t),
+            l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: e, error: t, endedAt: Date.now() });
+    }
+}
+async function eo(e, t) {
+    h.A.isFetchingProduct(e) || (await ea(e, t));
+}
+function el(e) {
+    let t = Date.now();
+    for (let n of (0, g.XS)([e]))
+        null == h.A.getProduct(n.skuId) &&
+            l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
+}
+async function eu(e) {
+    l.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: e });
+    try {
+        let t = await o.Bo.put({ url: P.Rsh.COLLECTIBLES_CLAIM, body: { sku_id: e }, rejectWithError: !0 });
+        l.h.dispatch({ type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: e, purchases: t.body?.map(x.fromServer) });
+    } catch (n) {
+        let t = new u.LG(n);
+        throw (l.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: e, error: t }), t);
+    }
+}
+async function ec(e, t) {
+    try {
+        return (
+            await o.Bo.get({
+                url: P.Rsh.COLLECTIBLES_VALID_GIFT_RECIPIENT,
+                query: { sku_id: t, recipient_id: e },
                 rejectWithError: !0,
-                query: { variants_return_style: a.g.VARIANTS_GROUP },
-            };
-            e && p(`fetchCollectiblesPurchases request: ${JSON.stringify(t, null, 2)}`);
-            let n = await o.Bo.get(t);
-            e && p(`fetchCollectiblesPurchases completed with ${n.body.length} purchases`),
-                l.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: n.body.map(x.fromServer) });
-        } catch (n) {
-            let t = new u.LG(n);
-            throw (
-                ((0, J.o)(t),
-                e && p(`fetchCollectiblesPurchases failed: ${t.message}`),
-                l.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE", error: t }),
-                t)
-            );
-        }
-    },
-    ea = async (e, t) => {
-        l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH", skuId: e, startedAt: Date.now() });
-        try {
-            let n = { locale: _.default.locale };
-            t?.countryCode !== null && (n.country_code = t?.countryCode),
-                t?.paymentGateway !== null && (n.payment_gateway = t?.paymentGateway),
-                t?.includeBundles !== null && (n.include_bundles = t?.includeBundles);
-            let i = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_PRODUCTS(e), rejectWithError: !0, query: n });
-            l.h.dispatch({
-                type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS",
-                skuId: e,
-                product: b.A.fromServer(i.body),
-                endedAt: Date.now(),
-            });
-        } catch (n) {
-            let t = new u.LG(n);
-            (0, J.o)(t),
-                l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_FAILURE", skuId: e, error: t, endedAt: Date.now() });
-        }
-    },
-    eo = async (e, t) => {
-        h.A.isFetchingProduct(e) || (await ea(e, t));
-    },
-    el = (e) => {
-        let t = Date.now();
-        for (let n of (0, g.XS)([e]))
-            null == h.A.getProduct(n.skuId) &&
-                l.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
-    },
-    eu = async (e) => {
-        l.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: e });
-        try {
-            let t = await o.Bo.put({ url: P.Rsh.COLLECTIBLES_CLAIM, body: { sku_id: e }, rejectWithError: !0 });
-            l.h.dispatch({ type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: e, purchases: t.body?.map(x.fromServer) });
-        } catch (n) {
-            let t = new u.LG(n);
-            throw (l.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: e, error: t }), t);
-        }
-    },
-    ec = async (e, t) => {
-        try {
-            return (
-                await o.Bo.get({
-                    url: P.Rsh.COLLECTIBLES_VALID_GIFT_RECIPIENT,
-                    query: { sku_id: t, recipient_id: e },
-                    rejectWithError: !0,
-                })
-            ).body.valid;
-        } catch (e) {
-            return (0, J.o)(new u.LG(e)), !1;
-        }
-    },
-    ed = async (e) => {
-        let { release: t = s.P.PROD } = e;
-        l.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
-        let n = { platform: r.DESKTOP };
-        t !== s.P.PROD && (n.release = t);
-        try {
-            let e = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_MARKETING, query: n, rejectWithError: !0 });
-            l.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: O.fromServer(e.body) });
-        } catch (e) {
-            (0, J.o)(new u.LG(e)), l.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
-        }
-    },
-    e_ = async (e, t, n) => {
-        l.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: e, options: t ?? {} });
-        let i = (0, Q.ao)(t, e);
+            })
+        ).body.valid;
+    } catch (e) {
+        return (0, J.o)(new u.LG(e)), !1;
+    }
+}
+async function ed(e) {
+    let { release: t = s.P.PROD } = e;
+    l.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH" });
+    let n = { platform: r.DESKTOP };
+    t !== s.P.PROD && (n.release = t);
+    try {
+        let e = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_MARKETING, query: n, rejectWithError: !0 });
+        l.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: O.fromServer(e.body) });
+    } catch (e) {
+        (0, J.o)(new u.LG(e)), l.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
+    }
+}
+async function e_(e, t, n) {
+    l.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH", tab: e, options: t ?? {} });
+    let i = (0, Q.ao)(t, e);
+    t?.logPerf &&
+        (0, X.z)({
+            sessionId: n?.sessionId,
+            checkpoint: X.t.SHOP_HOME_FETCH_STARTED,
+            tab: n?.tab,
+            unpublishedCategoriesShown: t?.includeUnpublished,
+            cacheDisabled: t?.noCache,
+        });
+    try {
+        let r = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_SHOP, query: i, rejectWithError: !0 });
         t?.logPerf &&
             (0, X.z)({
                 sessionId: n?.sessionId,
-                checkpoint: X.t.SHOP_HOME_FETCH_STARTED,
+                checkpoint: X.t.SHOP_HOME_FETCH_COMPLETED,
                 tab: n?.tab,
                 unpublishedCategoriesShown: t?.includeUnpublished,
                 cacheDisabled: t?.noCache,
-            });
+            }),
+            l.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: Z.fromServer(r.body) });
+    } catch (n) {
+        let t = new u.LG(n);
+        (0, J.o)(t), l.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: e, error: t });
+    }
+}
+function eh(e) {
+    l.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride: e });
+}
+function ef(e) {
+    l.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride: e });
+}
+function ep(e) {
+    l.h.dispatch({ type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories: e });
+}
+async function eE(e, t) {
+    l.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: t });
+    try {
+        let n = await o.Bo.put({
+            url: P.Rsh.COLLECTIBLES_CLAIM_CATEGORY_REWARD,
+            body: { category_id: e },
+            rejectWithError: !0,
+        });
+        l.h.dispatch({ type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: t, purchases: n.body?.map(x.fromServer) });
+    } catch (n) {
+        let e = new u.LG(n);
+        throw (l.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: t, error: e }), e);
+    }
+}
+async function em(e) {
+    let { tab: t, abortSignal: n } = e;
+    if (m.A.isFetchingLayout(t)) return;
+    let i = m.A.getLayoutFetchError(t);
+    if (i?.status !== 404 && i?.status !== 429)
         try {
-            let r = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_SHOP, query: i, rejectWithError: !0 });
-            t?.logPerf &&
-                (0, X.z)({
-                    sessionId: n?.sessionId,
-                    checkpoint: X.t.SHOP_HOME_FETCH_COMPLETED,
-                    tab: n?.tab,
-                    unpublishedCategoriesShown: t?.includeUnpublished,
-                    cacheDisabled: t?.noCache,
-                }),
-                l.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS", tab: e, shopHome: Z.fromServer(r.body) });
-        } catch (n) {
-            let t = new u.LG(n);
-            (0, J.o)(t), l.h.dispatch({ type: "COLLECTIBLES_SHOP_HOME_FETCH_FAILURE", tab: e, error: t });
-        }
-    },
-    eh = (e) => {
-        l.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_HOME_CONFIG_OVERRIDE", shopHomeConfigOverride: e });
-    },
-    ef = (e) => {
-        l.h.dispatch({ type: "COLLECTIBLES_SET_SHOP_LAYOUT_URL_OVERRIDE", shopLayoutUrlOverride: e });
-    },
-    ep = (e) => {
-        l.h.dispatch({ type: "COLLECTIBLES_SKIP_NUM_CATEGORIES", skipNumCategories: e });
-    },
-    eE = async (e, t) => {
-        l.h.dispatch({ type: "COLLECTIBLES_CLAIM", skuId: t });
-        try {
-            let n = await o.Bo.put({
-                url: P.Rsh.COLLECTIBLES_CLAIM_CATEGORY_REWARD,
-                body: { category_id: e },
-                rejectWithError: !0,
-            });
-            l.h.dispatch({ type: "COLLECTIBLES_CLAIM_SUCCESS", skuId: t, purchases: n.body?.map(x.fromServer) });
+            l.h.dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: t });
+            let e = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_SHOP_TAB_LAYOUT(t), rejectWithError: !0, signal: n });
+            l.h.dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS", tab: t, layoutId: e.body.layout_id });
         } catch (n) {
             let e = new u.LG(n);
-            throw (l.h.dispatch({ type: "COLLECTIBLES_CLAIM_FAILURE", skuId: t, error: e }), e);
+            throw (l.h.dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: t, apiError: e }), e);
         }
-    },
-    em = async (e) => {
-        let { tab: t, abortSignal: n } = e;
-        if (m.A.isFetchingLayout(t)) return;
-        let i = m.A.getLayoutFetchError(t);
-        if (i?.status !== 404 && i?.status !== 429)
-            try {
-                l.h.dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH", tab: t });
-                let e = await o.Bo.get({ url: P.Rsh.COLLECTIBLES_SHOP_TAB_LAYOUT(t), rejectWithError: !0, signal: n });
-                l.h.dispatch({
-                    type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS",
-                    tab: t,
-                    layoutId: e.body.layout_id,
-                });
-            } catch (n) {
-                let e = new u.LG(n);
-                throw (l.h.dispatch({ type: "COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE", tab: t, apiError: e }), e);
-            }
-    };
+}

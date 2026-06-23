@@ -26,11 +26,11 @@ let d = function (e) {
             renderSection: T,
         } = e,
         S = d.useStore((e) => e.activeCategoryIndex);
-    ((e) => {
+    !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
             s = r.useRef(u.An1),
             a = r.useRef(t);
-        return r.useEffect(() => {
+        r.useEffect(() => {
             null != t &&
                 t !== a.current &&
                 (s.current !== u.An1 && window.cancelAnimationFrame(s.current),

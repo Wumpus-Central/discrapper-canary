@@ -1,16 +1,16 @@
-a.d(t, { default: () => j });
+a.d(s, { default: () => f });
 var e = a(627968);
 a(64700);
 var i = a(735438),
-    l = a.n(i),
-    n = a(976634),
+    n = a.n(i),
+    l = a(976634),
     r = a(462887),
     d = a(935462),
     c = a(534514),
     g = a(834730),
     m = a(821609),
-    v = a(736653),
-    o = a(915089),
+    o = a(736653),
+    v = a(915089),
     b = a(375708),
     p = a(602195);
 let h = ["/assets/36668e0a5832822f.svg", "/assets/3a31d989497ba4f1.svg", "/assets/f959ee6e6a8d2d0b.svg"],
@@ -27,24 +27,24 @@ let h = ["/assets/36668e0a5832822f.svg", "/assets/3a31d989497ba4f1.svg", "/asset
         () => b.intl.string(b.t.hedHel),
         () => b.intl.string(b.t.jgC65t),
     ],
-    j = (s) => {
-        let { transitionState: t, onClose: a } = s,
-            i = (0, v.Ay)(),
-            j = (0, o.GV)(),
-            f = (0, r.M)(i) ? x : h,
-            k = (0, n.A)(() => l().sample(f), [f]),
-            N = (0, n.A)(() => l().sample(u), []);
+    f = function (t) {
+        let { transitionState: s, onClose: a } = t,
+            i = (0, o.Ay)(),
+            f = (0, v.GV)(),
+            j = (0, r.M)(i) ? x : h,
+            k = (0, l.A)(() => n().sample(j), [j]),
+            N = (0, l.A)(() => n().sample(u), []);
         return (0, e.jsxs)(d.EO, {
-            transitionState: t,
+            transitionState: s,
             className: p.zr,
-            "aria-labelledby": j,
+            "aria-labelledby": f,
             parentComponent: "FollowSuccessModal",
             children: [
                 (0, e.jsx)("img", { alt: "", src: k, className: p.Sl }),
                 (0, e.jsxs)(d.$m, {
                     className: p.yl,
                     children: [
-                        (0, e.jsx)(c.D, { variant: "heading-xl/semibold", className: p._J, id: j, children: N() }),
+                        (0, e.jsx)(c.D, { variant: "heading-xl/semibold", className: p._J, id: f, children: N() }),
                         (0, e.jsx)(g.E, {
                             color: "text-muted",
                             variant: "text-md/medium",

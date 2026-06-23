@@ -9,8 +9,8 @@ a.d(t, { A: () => g, h: () => S }),
     a(323874),
     a(14289),
     a(35956);
-var r = a(627968),
-    n = a(64700),
+var n = a(627968),
+    r = a(64700),
     i = a(139033),
     l = a(224640),
     s = a(20742),
@@ -30,13 +30,13 @@ let m = [
     y = [117, 117, 105, 100];
 async function A(e) {
     let { default: t } = await a.e("25777").then(a.t.bind(a, 293384, 19)),
-        r = t.createFile(!1),
-        n = new Promise((e, t) => {
-            (r.onReady = e), (r.onError = (e) => t(Error(e)));
+        n = t.createFile(!1),
+        r = new Promise((e, t) => {
+            (n.onReady = e), (n.onError = (e) => t(Error(e)));
         }),
         i = e.slice(0);
-    if (((i.fileStart = 0), r.appendBuffer(i), r.flush(), await n, null == r.boxes)) return null;
-    for (let e of r.boxes) {
+    if (((i.fileStart = 0), n.appendBuffer(i), n.flush(), await r, null == n.boxes)) return null;
+    for (let e of n.boxes) {
         if ("uuid" !== e.type || "a1c8529933464db888f083f57a75a5ef" !== e.uuid) continue;
         let t = e.data;
         if (null == t) break;
@@ -60,25 +60,25 @@ function E(e) {
             transitionState: A,
             onClose: E,
         } = e,
-        v = n.useRef(null),
-        [w, S] = n.useState("view"),
-        [g, C] = n.useState(() => JSON.parse(a)),
-        [N, T] = n.useState(!1),
-        [j, O] = n.useState(null);
-    return (0, r.jsxs)(l.d, {
+        v = r.useRef(null),
+        [w, S] = r.useState("view"),
+        [g, C] = r.useState(() => JSON.parse(a)),
+        [N, T] = r.useState(!1),
+        [j, O] = r.useState(null);
+    return (0, n.jsxs)(l.d, {
         transitionState: A,
         onClose: E,
         size: "xl",
         "aria-label": "Clip metadata",
         children: [
-            (0, r.jsx)(s.rQ, { title: "Clip metadata", subtitle: t }),
-            (0, r.jsxs)(o.c, {
-                controls: (0, r.jsx)(u.I, {
+            (0, n.jsx)(s.rQ, { title: "Clip metadata", subtitle: t }),
+            (0, n.jsxs)(o.c, {
+                controls: (0, n.jsx)(u.I, {
                     className: x.Ei,
                     options: m,
                     value: w,
                     onChange: (e) =>
-                        ((e) => {
+                        (function (e) {
                             if ("view" === e) {
                                 let e = v.current?.value ?? a;
                                 try {
@@ -92,7 +92,7 @@ function E(e) {
                         })(e.value),
                 }),
                 children: [
-                    (0, r.jsx)("textarea", {
+                    (0, n.jsx)("textarea", {
                         autoCorrect: "off",
                         autoCapitalize: "off",
                         autoComplete: "off",
@@ -106,12 +106,12 @@ function E(e) {
                         "aria-hidden": "edit" !== w,
                         className: "edit" === w ? x.jX : x.R,
                     }),
-                    "view" === w && (0, r.jsx)(b.A, { data: g }),
+                    "view" === w && (0, n.jsx)(b.A, { data: g }),
                     null != j &&
-                        (0, r.jsx)(d.E, { variant: "text-sm/medium", color: "text-feedback-critical", children: j }),
+                        (0, n.jsx)(d.E, { variant: "text-sm/medium", color: "text-feedback-critical", children: j }),
                 ],
             }),
-            (0, r.jsx)(c.H, {
+            (0, n.jsx)(c.H, {
                 actionsFullWidth: !0,
                 actions:
                     "view" === w
@@ -120,7 +120,7 @@ function E(e) {
                               { text: "Cancel", onClick: E, variant: "secondary" },
                               {
                                   text: "Save as...",
-                                  onClick: () => {
+                                  onClick: function () {
                                       let e,
                                           a = v.current?.value ?? "";
                                       try {
@@ -130,13 +130,13 @@ function E(e) {
                                           return;
                                       }
                                       try {
-                                          var r;
+                                          var n;
                                           let a,
-                                              n,
+                                              r,
                                               l = JSON.stringify(e),
                                               s = new TextEncoder().encode(l),
-                                              o = (function (e, t, a, r, n) {
-                                                  let i = r + n.length;
+                                              o = (function (e, t, a, n, r) {
+                                                  let i = n + r.length;
                                                   if (i > 0xffffffff)
                                                       throw Error(
                                                           "New uuid box exceeds 32-bit size; extended size encoding not implemented",
@@ -144,8 +144,8 @@ function E(e) {
                                                   let l = new Uint8Array(i);
                                                   new DataView(l.buffer).setUint32(0, i, !1),
                                                       l.set(y, 4),
-                                                      l.set(new Uint8Array(e, t + 8, r - 8), 8),
-                                                      l.set(n, r);
+                                                      l.set(new Uint8Array(e, t + 8, n - 8), 8),
+                                                      l.set(r, n);
                                                   let s = new Uint8Array(e, 0, t),
                                                       o = new Uint8Array(e, t + a),
                                                       c = new Uint8Array(s.length + l.length + o.length);
@@ -156,11 +156,11 @@ function E(e) {
                                                       c.buffer
                                                   );
                                               })(i, f, h, p, s);
-                                          (r = new Blob([o], { type: "video/mp4" })),
-                                              (a = URL.createObjectURL(r)),
-                                              ((n = document.createElement("a")).href = a),
-                                              (n.download = t),
-                                              n.click(),
+                                          (n = new Blob([o], { type: "video/mp4" })),
+                                              (a = URL.createObjectURL(n)),
+                                              ((r = document.createElement("a")).href = a),
+                                              (r.download = t),
+                                              r.click(),
                                               URL.revokeObjectURL(a),
                                               E();
                                       } catch (e) {
@@ -180,12 +180,12 @@ async function v(e, t) {
         let a = await A(e);
         if (null == a)
             return void (0, i.A)({ title: "No metadata found", subtitle: `No clip metadata UUID box found in ${t}` });
-        let n = JSON.stringify(a.metadata, null, 2);
+        let r = JSON.stringify(a.metadata, null, 2);
         (0, f.openModal)((i) =>
-            (0, r.jsx)(E, {
+            (0, n.jsx)(E, {
                 ...i,
                 filename: t,
-                initialJson: n,
+                initialJson: r,
                 fileBuffer: e,
                 boxStart: a.boxStart,
                 boxSize: a.boxSize,
@@ -203,27 +203,27 @@ async function w(e) {
 async function S(e) {
     try {
         let { data: t, filename: a } = await p.A.clips.loadClip(e),
-            r = t.buffer.slice(t.byteOffset, t.byteOffset + t.byteLength);
-        await v(r, a);
+            n = t.buffer.slice(t.byteOffset, t.byteOffset + t.byteLength);
+        await v(n, a);
     } catch (e) {
         (0, i.A)({ title: "Failed to load clip", subtitle: e instanceof Error ? e.message : String(e) });
     }
 }
 function g() {
-    let e = n.useRef(null);
-    return (0, r.jsxs)(r.Fragment, {
+    let e = r.useRef(null);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, r.jsx)("input", {
+            (0, n.jsx)("input", {
                 ref: e,
                 type: "file",
                 accept: "video/mp4,.mp4",
-                onChange: (e) => {
+                onChange: function (e) {
                     let t = e.target.files?.[0];
                     (e.target.value = ""), null != t && w(t);
                 },
                 className: x.Z_,
             }),
-            (0, r.jsx)(h.$, { text: "Open File", onClick: () => e.current?.click() }),
+            (0, n.jsx)(h.$, { text: "Open File", onClick: () => e.current?.click() }),
         ],
     });
 }

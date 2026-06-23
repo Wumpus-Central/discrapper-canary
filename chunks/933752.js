@@ -12,7 +12,7 @@ function e(t) {
         subtitle: s.intl.format(s.t.K82phZ, {}),
         confirmText: s.intl.string(s.t.H8ZQbo),
         cancelText: s.intl.string(s.t["ETE/oC"]),
-        onConfirm: () => {
+        onConfirm: function () {
             (0, o.jA)(i, n, !1);
         },
         variant: "primary",

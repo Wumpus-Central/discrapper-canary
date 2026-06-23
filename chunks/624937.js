@@ -5,8 +5,8 @@ var i = n(627968),
     r = n(347135),
     a = n(717200),
     o = n(323889),
-    c = n(412703),
-    u = n(928264),
+    u = n(412703),
+    c = n(928264),
     d = n(802516),
     C = n(22363),
     T = n(17928),
@@ -39,7 +39,7 @@ function R(t) {
 function v(t) {
     let { quest: e, questContent: n, sourceQuestContent: l, errorHints: r } = t,
         a = (0, N.go)(),
-        { header: o, renderBody: c } = s.useMemo(() => {
+        { header: o, renderBody: u } = s.useMemo(() => {
             let t = r.length > 0,
                 s = e.config.messages.gameTitle;
             return {
@@ -49,13 +49,13 @@ function v(t) {
                       ? X.intl.string(X.t.YstzGO)
                       : X.intl.formatToPlainString(X.t.gX0Qcx, { gameTitle: s }),
                 renderBody: t
-                    ? () =>
-                          (0, i.jsx)(i.Fragment, {
+                    ? function () {
+                          return (0, i.jsx)(i.Fragment, {
                               children: r.map((t, s) => {
                                   if (t.type === U._.EXPIRED_CREDENTIAL) {
                                       let r = j.A.getAccount(t.connected_account_id, t.connected_account_type),
                                           o = (0, f.IG)(t),
-                                          c = (0, f.$J)(t);
+                                          u = (0, f.$J)(t);
                                       return (0, i.jsx)(
                                           R,
                                           {
@@ -63,7 +63,7 @@ function v(t) {
                                                   account_name: r?.name,
                                                   onClick: () => {
                                                       (0, f.v0)(
-                                                          { quest: e, platformType: c },
+                                                          { quest: e, platformType: u },
                                                           {
                                                               content: n,
                                                               ctaContent: S.Cy.DEFIBRILLATOR_RECONNECT_CONSOLE,
@@ -79,7 +79,8 @@ function v(t) {
                                   }
                                   return (0, i.jsx)(R, { children: t.message }, s);
                               }),
-                          })
+                          });
+                      }
                     : () =>
                           (0, i.jsx)(D.E, {
                               className: Y.rf,
@@ -103,7 +104,7 @@ function v(t) {
                     (0, i.jsx)(D.E, { variant: "text-xs/semibold", children: o }),
                 ],
             }),
-            c(),
+            u(),
         ],
     });
 }
@@ -114,8 +115,8 @@ function F(t) {
             sourceQuestContent: n,
             selectedPlatform: a,
             supportedPlatforms: o,
-            isConnected: c,
-            noConsoleProgress: u,
+            isConnected: u,
+            noConsoleProgress: c,
             errorHints: d,
         } = t,
         C = (0, N.go)(),
@@ -175,14 +176,14 @@ function F(t) {
                                     }),
                             ],
                         }),
-                    isComplete: c || _,
+                    isComplete: u || _,
                 },
                 A,
             ],
-            [A, _, c, m],
+            [A, _, u, m],
         ),
         U = a === f.WU.DESKTOP ? L : I,
-        p = c && (u || d.length > 0) && !_;
+        p = u && (c || d.length > 0) && !_;
     return (0, i.jsx)(x.Ay, {
         heading: X.intl.string(X.t.dc9w4N),
         steps: U,
@@ -195,11 +196,11 @@ var Q = n(190107),
     K = n(652215);
 function b(t) {
     switch (t) {
-        case c.n.PLAY_ON_XBOX:
+        case u.n.PLAY_ON_XBOX:
             return f.WU.XBOX;
-        case c.n.PLAY_ON_PLAYSTATION:
+        case u.n.PLAY_ON_PLAYSTATION:
             return f.WU.PLAYSTATION;
-        case c.n.PLAY_ON_DESKTOP:
+        case u.n.PLAY_ON_DESKTOP:
         default:
             return f.WU.DESKTOP;
     }
@@ -207,7 +208,7 @@ function b(t) {
 function k(t) {
     let { quest: e, sourceQuestContent: n } = t,
         a = (0, N.go)(),
-        c = (0, m.Ut)(),
+        u = (0, m.Ut)(),
         h = (0, T.bG)([E.default], () => E.default.getCurrentUser()),
         x = s.useCallback(() => {
             (0, f.pu)(e, {
@@ -229,7 +230,7 @@ function k(t) {
         q = !1;
     Y && (q = (j === f.WU.XBOX ? R : v).length > 0);
     let k = [
-            ...[{ id: Q.fO.DESKTOP, value: f.WU.DESKTOP, label: X.intl.string(X.t.g6Dr44), leading: u.I }].filter((t) =>
+            ...[{ id: Q.fO.DESKTOP, value: f.WU.DESKTOP, label: X.intl.string(X.t.g6Dr44), leading: c.I }].filter((t) =>
                 p.includes(t.id),
             ),
             ...[
@@ -256,7 +257,7 @@ function k(t) {
                                   sourceQuestContent: n,
                                   impressionId: a,
                               })
-                            : c({
+                            : u({
                                   questId: e.id,
                                   questContent: l.uF.PLAY_QUEST_MODAL,
                                   questContentCTA: i,
@@ -281,7 +282,7 @@ function k(t) {
                           sourceQuestContent: n,
                           impressionId: a,
                       })
-                    : c({
+                    : u({
                           questId: e.id,
                           questContent: l.uF.PLAY_QUEST_MODAL,
                           questContentCTA: S.Cy.DEFIBRILLATOR,
@@ -354,9 +355,9 @@ function k(t) {
 }
 let B = function (t) {
     let { initialQuest: e, sourceQuestContent: n, transitionState: s, onClose: o } = t,
-        c = (0, r.C5)(e.id) ?? e;
+        u = (0, r.C5)(e.id) ?? e;
     return (0, i.jsx)(a.A, {
-        quest: c,
+        quest: u,
         questContent: l.uF.PLAY_QUEST_MODAL,
         sourceQuestContent: n,
         ariaLabel: X.intl.string(X.t.SHZo2x),
@@ -364,7 +365,7 @@ let B = function (t) {
         onClose: o,
         isContentLoading: !1,
         contentHasError: !1,
-        leftContent: (0, i.jsx)(k, { quest: c, sourceQuestContent: n }),
+        leftContent: (0, i.jsx)(k, { quest: u, sourceQuestContent: n }),
         location: Q.rE.PLAY_QUEST_CONNECTION_MODAL,
     });
 };

@@ -2,8 +2,8 @@ t.d(n, { A: () => M, P: () => _ });
 var l = t(627968),
     r = t(64700),
     a = t(17928),
-    s = t(192308),
-    i = t(442433),
+    i = t(192308),
+    s = t(442433),
     c = t(47167),
     d = t(499211),
     u = t(376943),
@@ -83,12 +83,12 @@ function M(e) {
             })),
         (0, l.jsxs)(g.A, {
             role: "link",
-            onClick: (e) => {
-                e?.stopPropagation(), (0, o.o)(r, n, h), (0, s.closeAllModals)();
+            onClick: function (e) {
+                e?.stopPropagation(), (0, o.o)(r, n, h), (0, i.closeAllModals)();
             },
-            onContextMenu: (e) => {
+            onContextMenu: function (e) {
                 let r = A.A.getChannel(n);
-                (0, i.L3)(e, async () => {
+                (0, s.L3)(e, async () => {
                     let { default: e } = await Promise.all([t.e("43266"), t.e("4391")]).then(t.bind(t, 254106));
                     return (t) =>
                         (0, l.jsx)(e, { ...t, channel: r, channelId: r?.id ?? n, originalLink: null, messageId: h });
@@ -120,8 +120,8 @@ function z(e) {
     let { id: n } = e,
         t = (0, v.p)(),
         r = t?.guildId,
-        s = (0, a.bG)([y.A], () => (null != r ? y.A.getRole(r, n)?.name : null) ?? $.intl.string($.t.sKdZ6U), [r, n]);
-    return (0, l.jsx)(p.A, { roleId: n, channelId: t?.channelId, guildId: t?.guildId, children: `@${s}` });
+        i = (0, a.bG)([y.A], () => (null != r ? y.A.getRole(r, n)?.name : null) ?? $.intl.string($.t.sKdZ6U), [r, n]);
+    return (0, l.jsx)(p.A, { roleId: n, channelId: t?.channelId, guildId: t?.guildId, children: `@${i}` });
 }
 function T(e) {
     let { id: n } = e,
@@ -136,13 +136,13 @@ function L(e) {
 function G(e) {
     let { id: n, name: t } = e,
         a = (0, v.p)(),
-        s = r.useMemo(() => {
+        i = r.useMemo(() => {
             let [, ...e] = t.split(" ");
             return `${n}${[...e].map((e) => `${S.v4}${e}`).join("")}`;
         }, [n, t]),
-        i = r.useMemo(
-            () => ({ type: "commandMention", channelId: a?.channelId, commandId: n, commandName: t, commandKey: s }),
-            [a?.channelId, s, n, t],
+        s = r.useMemo(
+            () => ({ type: "commandMention", channelId: a?.channelId, commandId: n, commandName: t, commandKey: i }),
+            [a?.channelId, i, n, t],
         );
-    return (0, l.jsx)(h.gn, { node: i, children: t });
+    return (0, l.jsx)(h.gn, { node: s, children: t });
 }

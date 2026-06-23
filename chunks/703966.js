@@ -1,4 +1,4 @@
-n.d(t, { A: () => ex });
+n.d(t, { A: () => eE });
 var l,
     i = n(627968),
     s = n(64700),
@@ -15,17 +15,17 @@ var l,
     A = n(274372),
     f = n(572164),
     C = n(111994),
-    E = n(352527),
-    x = n(267102),
+    x = n(352527),
+    E = n(267102),
     S = n(969632),
     _ = n(910425),
     I = n(406704),
     j = n(885386),
     y = n(951260),
     b = n(629016),
-    T = n(576705),
-    N = n(461213),
-    v = n(625494),
+    N = n(576705),
+    v = n(461213),
+    T = n(625494),
     M = n(723702),
     R = n(518960),
     D = n(767089),
@@ -98,10 +98,10 @@ function ef(e) {
         { analyticsLocations: A } = (0, w.Ay)(),
         f = (0, V.s)({ channel: t }),
         C = (0, o.bG)([z.A], () => z.A.isInProgress());
-    function E() {
+    function x() {
         (0, W.Tv)(t, void 0, "Plus Button");
     }
-    function x() {
+    function E() {
         q.default.track(eu.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, J.x7)("/"));
     }
     function S() {
@@ -127,8 +127,8 @@ function ef(e) {
             i = h.match(eA);
         null != i && ((l = i[1]), (n = i[2]), (e = i[3]), (l += i[4])),
             (0, R.R)([(0, $.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
-            v._.dispatchToLastSubscribed(eu.jej.CLEAR_TEXT),
-            "" !== l && v._.dispatchToLastSubscribed(eu.jej.INSERT_TEXT, { plainText: l });
+            T._.dispatchToLastSubscribed(eu.jej.CLEAR_TEXT),
+            "" !== l && T._.dispatchToLastSubscribed(eu.jej.INSERT_TEXT, { plainText: l });
     }
     return (
         s.useEffect(() => {
@@ -269,7 +269,7 @@ function ef(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: E,
+                                action: x,
                             },
                             "THREAD",
                         );
@@ -281,7 +281,7 @@ function ef(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: x,
+                                action: E,
                             },
                             "SLASH_COMMAND",
                         );
@@ -360,8 +360,8 @@ function ef(e) {
     );
 }
 var eC = n(696016),
-    eE = n(644268);
-let ex = s.memo(function (e) {
+    ex = n(644268);
+let eE = s.memo(function (e) {
     let {
             className: t,
             channel: l,
@@ -373,10 +373,10 @@ let ex = s.memo(function (e) {
         } = e,
         G = (0, y.n)("ChannelAttachButton"),
         U = (0, o.bG)([m.Ay], () => m.Ay.isAppsButtonEnabled),
-        w = (0, x.Us)(),
+        w = (0, E.Us)(),
         F = s.useRef(null),
         H = s.useRef(null),
-        B = (0, o.bG)([N.A], () => N.A.getActivities()),
+        B = (0, o.bG)([v.A], () => v.A.getActivities()),
         V = (0, f.Et)(),
         K = (0, o.yK)([A.Ay], () => A.Ay.getNewClipIds()),
         z = (0, o.yK)(
@@ -384,12 +384,12 @@ let ex = s.memo(function (e) {
             () => (l.type === eu.rbe.DM ? B.filter((e) => !b.A.getParty(e.party?.id)?.has(l.getRecipientId())) : B),
             [B, l],
         ),
-        { onShareClick: W } = (0, E.A)(l.id),
+        { onShareClick: W } = (0, x.A)(l.id),
         q = (0, o.bG)([A.Ay], () => A.Ay.hasClips()),
         [$, J] = s.useState(null),
         em = (0, p.sw)() && (V || q),
         eg = l.isPrivate(),
-        ep = (0, o.bG)([T.A], () => eg || (T.A.can(eu.xBc.ATTACH_FILES, l) && T.A.can(eu.xBc.SEND_MESSAGES, l)));
+        ep = (0, o.bG)([N.A], () => eg || (N.A.can(eu.xBc.ATTACH_FILES, l) && N.A.can(eu.xBc.SEND_MESSAGES, l)));
     function eA() {
         (0, c.openModalLazy)(
             async () => {
@@ -443,13 +443,13 @@ let ex = s.memo(function (e) {
             t === l.id && F.current?.activateUploadDialogue();
         };
         return (
-            v._.subscribe(eu.jej.UPLOAD_FILE, e),
+            T._.subscribe(eu.jej.UPLOAD_FILE, e),
             () => {
-                v._.unsubscribe(eu.jej.UPLOAD_FILE, e);
+                T._.unsubscribe(eu.jej.UPLOAD_FILE, e);
             }
         );
     });
-    let ex = (0, I.n)(l),
+    let eE = (0, I.n)(l),
         eS = (0, I.Tb)(l),
         e_ = !j.D_.useSetting() && !(0, M.isAndroidWeb)() && null != window.ResizeObserver,
         eI = (0, S.I7)(l ?? void 0),
@@ -538,7 +538,7 @@ let ex = s.memo(function (e) {
             );
         })({
             canAttachFiles: ep,
-            canStartThreads: ex || eS,
+            canStartThreads: eE || eS,
             useSlate: e_,
             hasClips: em,
             canUseApplicationCommands: !P,
@@ -552,8 +552,8 @@ let ex = s.memo(function (e) {
             isAppsButtonEnabled: !G || U,
         });
     if (0 === eb.length) return null;
-    let eT = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: eE.dW }),
-        eN = (0, i.jsx)(u.Y, {
+    let eN = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: ex.dW }),
+        ev = (0, i.jsx)(u.Y, {
             targetElementRef: H,
             shouldShow: null != $,
             animation: u.Y.Animation.NONE,
@@ -585,29 +585,29 @@ let ex = s.memo(function (e) {
             children: (e) =>
                 (0, i.jsx)(D.A, {
                     ref: H,
-                    className: r()(eE.g$, t),
-                    childClassName: eE.wh,
+                    className: r()(ex.g$, t),
+                    childClassName: ex.wh,
                     isActive: !1,
                     "aria-label": eh.intl.string(eh.t.d56gCa),
                     onDoubleClick: ep ? () => F.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
-                    children: eT,
+                    children: eN,
                 }),
         });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
-                className: eE.EJ,
+                className: ex.EJ,
                 children: (0, i.jsx)(h.A, {
                     ref: F,
-                    onChange: (e) => {
+                    onChange: function (e) {
                         var t, n;
                         (t = e.currentTarget.files),
                             null != (n = e.currentTarget.err) && "ETOOLARGE" === n.code
                                 ? (0, R.V)(l, [])
                                 : (0, R.R)(t, l, a, { requireConfirm: !0, origin: "file_picker" }),
-                            v._.dispatchToLastSubscribed(eu.jej.TEXTAREA_FOCUS),
+                            T._.dispatchToLastSubscribed(eu.jej.TEXTAREA_FOCUS),
                             (e.currentTarget.value = "");
                     },
                     multiple: l.rateLimitPerUser <= 0,
@@ -615,7 +615,7 @@ let ex = s.memo(function (e) {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, i.jsx)("div", { className: eE.Jd, children: eN }),
+            (0, i.jsx)("div", { className: ex.Jd, children: ev }),
         ],
     });
 });

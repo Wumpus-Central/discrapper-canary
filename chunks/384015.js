@@ -8,7 +8,7 @@ var i = n(627968),
     l = n(174459),
     u = n(652215),
     c = n(375708);
-let d = (e) => {
+let d = function (e) {
     let {
             href: t,
             className: n,

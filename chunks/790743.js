@@ -1,24 +1,24 @@
-i.d(a, { default: () => l }), i(321073);
-var n = i(627968),
-    s = i(64700),
-    e = i(189213),
-    r = i(375708);
-function l(t) {
-    let { transitionState: a, onClose: i, title: l, body: c, cta: o, closeLabel: u, onConfirm: d } = t,
-        [p, h] = s.useState(!1),
-        k = async () => {
-            h(!0);
-            try {
-                await d(), i();
-            } finally {
-                h(!1);
-            }
-        },
-        y = l ?? r.intl.string(r.t.D94rwS),
+n.d(i, { default: () => r }), n(321073);
+var a = n(627968),
+    e = n(64700),
+    s = n(189213),
+    l = n(375708);
+function r(t) {
+    let { transitionState: i, onClose: n, title: r, body: c, cta: o, closeLabel: u, onConfirm: d } = t,
+        [p, h] = e.useState(!1);
+    async function k() {
+        h(!0);
+        try {
+            await d(), n();
+        } finally {
+            h(!1);
+        }
+    }
+    let y = r ?? l.intl.string(l.t.D94rwS),
         C = [];
     return (
-        null != u && C.push({ variant: "secondary", text: u, onClick: i }),
+        null != u && C.push({ variant: "secondary", text: u, onClick: n }),
         C.push({ variant: "primary", text: o, onClick: k, loading: p }),
-        (0, n.jsx)(e.Modal, { title: y, actions: C, transitionState: a, onClose: i, children: c })
+        (0, a.jsx)(s.Modal, { title: y, actions: C, transitionState: i, onClose: n, children: c })
     );
 }

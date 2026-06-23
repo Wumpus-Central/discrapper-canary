@@ -7,7 +7,9 @@ var i = n(77729),
 function o() {
     return (0, r.isDesktop)() && i.A.features.supports("clips_storage_size");
 }
-let l = () => (0, s.Fp)() && o();
+function l() {
+    return (0, s.Fp)() && o();
+}
 function u() {
     return (0, s.As)() && o();
 }

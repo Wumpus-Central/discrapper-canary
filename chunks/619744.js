@@ -8,14 +8,14 @@ var i = n(627968),
     l = n(609174),
     u = n(192308),
     c = n(375708);
-let d = (e) => {
+function d(e) {
     let { onBeforeDelete: t, onAfterDelete: d, variant: _ = "overlay-secondary" } = e,
         h = (0, l.Y_)(),
         f = r.useCallback(
             (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
-                    ((e) => {
+                    (function (e) {
                         let { clips: t, onBeforeDelete: r, onAfterDelete: s } = e;
                         (0, u.openModalLazy)(
                             async () => {
@@ -47,4 +47,4 @@ let d = (e) => {
             size: "sm",
         }),
     });
-};
+}

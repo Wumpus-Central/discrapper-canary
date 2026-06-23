@@ -1,8 +1,8 @@
 i.d(n, { default: () => k });
 var e = i(627968),
-    l = i(64700),
-    r = i(284009),
-    s = i.n(r),
+    r = i(64700),
+    l = i(284009),
+    s = i.n(l),
     a = i(732159),
     o = i(702841),
     d = i(534514),
@@ -17,8 +17,8 @@ var e = i(627968),
     p = i(557976);
 function b(t) {
     let { guildProductListing: n, guildId: i } = t,
-        l = (0, o.bG)([g.A], () => g.A.getRole(i, n?.role_id ?? j.dJq));
-    return null == l
+        r = (0, o.bG)([g.A], () => g.A.getRole(i, n?.role_id ?? j.dJq));
+    return null == r
         ? null
         : (0, e.jsxs)(e.Fragment, {
               children: [
@@ -34,36 +34,38 @@ function b(t) {
                   }),
                   (0, e.jsx)(m.E, {
                       variant: "text-md/normal",
-                      children: f.intl.format(f.t["4kglOW"], { roleName: l.name }),
+                      children: f.intl.format(f.t["4kglOW"], { roleName: r.name }),
                   }),
               ],
           });
 }
 function k(t) {
-    let { guildId: n, productId: i, ...r } = t,
-        [o] = l.useState(() => x.A.getGuildProduct(i));
-    s()(null != o, "guildProductListing cannot be null");
-    let d = async (t) => {
+    let { guildId: n, productId: i, ...l } = t,
+        [o] = r.useState(() => x.A.getGuildProduct(i));
+    async function d(t) {
         try {
             await h.Oo(n, i);
         } catch (n) {
             throw (t(n.message ?? f.intl.string(f.t.OzgkxM)), n);
         }
-    };
-    return (0, e.jsx)(a.ConfirmModal, {
-        ...r,
-        title: f.intl.string(f.t["/gaTp6"]),
-        confirmText: f.intl.string(f.t.E4nVWA),
-        onConfirm: d,
-        children: (0, e.jsxs)("div", {
-            className: p.j,
-            children: [
-                (0, e.jsx)(m.E, {
-                    variant: "text-md/normal",
-                    children: f.intl.format(f.t.CPQsjo, { productName: o.name }),
-                }),
-                (0, e.jsx)(b, { guildProductListing: o, guildId: n }),
-            ],
-        }),
-    });
+    }
+    return (
+        s()(null != o, "guildProductListing cannot be null"),
+        (0, e.jsx)(a.ConfirmModal, {
+            ...l,
+            title: f.intl.string(f.t["/gaTp6"]),
+            confirmText: f.intl.string(f.t.E4nVWA),
+            onConfirm: d,
+            children: (0, e.jsxs)("div", {
+                className: p.j,
+                children: [
+                    (0, e.jsx)(m.E, {
+                        variant: "text-md/normal",
+                        children: f.intl.format(f.t.CPQsjo, { productName: o.name }),
+                    }),
+                    (0, e.jsx)(b, { guildProductListing: o, guildId: n }),
+                ],
+            }),
+        })
+    );
 }

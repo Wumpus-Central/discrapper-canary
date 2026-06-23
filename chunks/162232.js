@@ -8,7 +8,7 @@ var r = n(97808),
     o = n(19575),
     l = n(375708);
 let u = o.Ay.getEnableHardwareAcceleration() ? r.Js : r.eu,
-    c = (e) => {
+    c = function (e) {
         let {
                 user: t,
                 guildId: n,

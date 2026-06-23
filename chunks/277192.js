@@ -515,7 +515,7 @@ function ex(e) {
                 return (0, i.jsx)(eP, {
                     category: e,
                     categoryIndex: t,
-                    onClick: () => {
+                    onClick: function () {
                         ea.default.track(eR.HAw.EXPRESSION_PICKER_CATEGORY_SELECTED, {
                             location: { page: eR.liQ.SOUNDBOARD_POPOUT },
                             guild_id: l ?? null,
@@ -579,19 +579,16 @@ function eQ(e) {
             titleSecondary: o?.name,
             isFavorite: a,
         });
-    let h = () => {
-            r(),
-                (0, eG.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([
-                        n.e("14144"),
-                        n.e("72425"),
-                        n.e("46327"),
-                        n.e("12618"),
-                    ]).then(n.bind(n, 29681));
-                    return (t) => (0, i.jsx)(e, { ...t });
-                });
-        },
-        f = (0, eW.k8)(ek.M.SOUNDBOARD_KEYBIND_TIP),
+    function h() {
+        r(),
+            (0, eG.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([n.e("14144"), n.e("72425"), n.e("46327"), n.e("12618")]).then(
+                    n.bind(n, 29681),
+                );
+                return (t) => (0, i.jsx)(e, { ...t });
+            });
+    }
+    let f = (0, eW.k8)(ek.M.SOUNDBOARD_KEYBIND_TIP),
         E =
             null != c && (0, eq.isWindows)() && !f
                 ? eb.intl.format(eb.t.udMTth, {
@@ -608,7 +605,9 @@ function eQ(e) {
                   (0, i.jsx)(eB.E, { variant: "text-sm/medium", color: "text-default", className: eX.L5, children: E }),
                   (0, i.jsx)(T.D, {
                       className: eX.b,
-                      onClick: () => (0, eW.Dr)(ek.M.SOUNDBOARD_KEYBIND_TIP),
+                      onClick: function () {
+                          return (0, eW.Dr)(ek.M.SOUNDBOARD_KEYBIND_TIP);
+                      },
                       children: (0, i.jsx)(ej.P, { size: "xs", color: "currentColor" }),
                   }),
               ],
@@ -629,8 +628,8 @@ function e3(e) {
                 n.e("33973"),
                 n.e("7792"),
                 n.e("8555"),
-                n.e("20287"),
                 n.e("83952"),
+                n.e("20287"),
                 n.e("66580"),
                 n.e("8979"),
                 n.e("20643"),
@@ -1106,7 +1105,7 @@ function ts(e) {
                     tn,
                     {
                         categoryInfo: e.categoryInfo,
-                        toggleCollapsed: () => {
+                        toggleCollapsed: function () {
                             ea.default.track(eR.HAw.EXPRESSION_PICKER_CATEGORY_COLLAPSE_TOGGLED, {
                                 location: { page: eR.liQ.SOUNDBOARD_POPOUT },
                                 tab: eO.kx.SOUNDBOARD,

@@ -111,11 +111,12 @@ async function p(e) {
         t.readAsDataURL(e);
     }),
     new Promise((e, n) => {
-        let a = new FileReader(),
-            r = () => {
-                a.removeEventListener("load", r), a.removeEventListener("error", n), e(a.result);
-            };
-        a.addEventListener("load", r), a.addEventListener("error", n), t(a);
+        let a = new FileReader();
+        a.addEventListener("load", function t() {
+            a.removeEventListener("load", t), a.removeEventListener("error", n), e(a.result);
+        }),
+            a.addEventListener("error", n),
+            t(a);
     }));
     if ("string" != typeof n) throw Error("Unexpected file type");
     return n;

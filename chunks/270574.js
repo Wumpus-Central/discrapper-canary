@@ -7,7 +7,7 @@ var r = n(503698),
     a = n(709066),
     o = n(705751),
     l = n(786627);
-let u = (e) => {
+let u = function (e) {
     let {
         name: t,
         discriminator: n,

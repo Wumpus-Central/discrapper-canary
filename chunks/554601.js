@@ -62,10 +62,7 @@ var z = n(56494),
     et = n(375708),
     en = n(436806);
 function el(e) {
-    let { sortOrder: t, onSortOptionClick: n, closePopout: l } = e,
-        i = (e) => {
-            n(e), l();
-        };
+    let { sortOrder: t, onSortOptionClick: n, closePopout: l } = e;
     return (0, r.jsx)("div", {
         className: v()(q.Wx, en.k),
         children: (0, r.jsx)(J.W, {
@@ -82,14 +79,18 @@ function el(e) {
                         id: "sort-by-popular",
                         group: "sort-by",
                         label: et.intl.string(et.t.SzxiqK),
-                        action: () => i(q.Ug.POPULAR),
+                        action: () => {
+                            n(q.Ug.POPULAR), l();
+                        },
                         checked: t === q.Ug.POPULAR,
                     }),
                     (0, r.jsx)(ee.iD, {
                         id: "sort-by-alphabetical",
                         group: "sort-by",
                         label: et.intl.string(et.t.m8xsti),
-                        action: () => i(q.Ug.ALPHABETICAL),
+                        action: () => {
+                            n(q.Ug.ALPHABETICAL), l();
+                        },
                         checked: t === q.Ug.ALPHABETICAL,
                     }),
                 ],
@@ -462,7 +463,7 @@ function eK(e) {
     return (0, eX.A)({
         application: t,
         guildId: n,
-        onItemClick: () => {
+        onItemClick: function () {
             (0, eO.closeModal)(q.gS), (0, B.k)(_.Se.DISMISSED);
         },
     });
@@ -692,10 +693,10 @@ function e8(e) {
             E();
         }, [E, c]),
         o.useEffect(() => {
-            let e = s.current,
-                t = () => {
-                    E();
-                };
+            let e = s.current;
+            function t() {
+                E();
+            }
             return (
                 e?.addEventListener("scroll", t),
                 () => {
@@ -2032,7 +2033,7 @@ function ln(e) {
         s = (0, A.bG)([p.A], () => p.A.entrypoint());
     return {
         trackSearchResultsItemImpressionRef: (0, lt.A)({
-            onVisible: () => {
+            onVisible: function () {
                 (0, le.x)({
                     type: n3.ImpressionTypes.VIEW,
                     name: n3.ImpressionNames.APP_LAUNCHER_SEARCH_RESULTS_ITEM,
@@ -2890,16 +2891,16 @@ function ly(e) {
     return (
         o.useEffect(() => {
             let e = i.current;
-            if (null == e) return;
-            let t = () => {
+            if (null != e)
+                return (
+                    e.addEventListener("click", t),
+                    () => {
+                        e.removeEventListener("click", t);
+                    }
+                );
+            function t() {
                 s || m();
-            };
-            return (
-                e.addEventListener("click", t),
-                () => {
-                    e.removeEventListener("click", t);
-                }
-            );
+            }
         }, [s, m]),
         (0, r.jsx)("div", {
             className: lN.PP,
@@ -2950,7 +2951,9 @@ function lv(e) {
                         u = t6(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
-                        let e = (e) => !(!1 === m && (0, t3.A)(e.id));
+                        function e(e) {
+                            return !(!1 === m && (0, t3.A)(e.id));
+                        }
                         return l
                             ? u
                                   .filter(

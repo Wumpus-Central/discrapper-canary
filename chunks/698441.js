@@ -21,7 +21,7 @@ let _ = {
         CHANNEL_EVENT_UPCOMING: (e) => `${e}-${_.EVENT_UPCOMING}`,
     },
     h = new a.J(
-        (e) => {
+        function (e) {
             let { guild_id: t, entity_id: n, channel_id: i } = e,
                 r = [t];
             return (

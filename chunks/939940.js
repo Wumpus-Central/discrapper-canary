@@ -1,66 +1,66 @@
-n.d(i, { default: () => x });
+n.d(i, { default: () => p });
 var e = n(627968),
     l = n(64700),
     a = n(189213),
     o = n(825484),
     s = n(922016),
-    r = n(821609),
-    c = n(834730),
+    c = n(821609),
+    r = n(834730),
     u = n(435183),
     d = n(267889),
     m = n(235640),
     j = n(307731),
-    g = n(375708),
-    p = n(532067);
-let x = (t) => {
-    let { channel: i, onClose: n, transitionState: x } = t,
-        [E, h] = l.useState(i.defaultReactionEmoji ?? null),
-        [k, f] = l.useState(!1),
+    f = n(375708),
+    g = n(532067);
+let p = function (t) {
+    let { channel: i, onClose: n, transitionState: p } = t,
+        [x, E] = l.useState(i.defaultReactionEmoji ?? null),
+        [h, k] = l.useState(!1),
         [C, N] = l.useState(!1),
         R = l.useRef(null),
-        v = (i.defaultReactionEmoji?.emojiId ?? null) !== (E?.emojiId ?? null),
-        y = (i.defaultReactionEmoji?.emojiName ?? null) !== (E?.emojiName ?? null),
-        I = v || y,
-        b = (t) => {
-            h(null == t ? null : t?.id != null ? { emojiId: t.id } : { emojiName: t.optionallyDiverseSequence });
-        },
-        S = async () => {
-            if (I) {
-                f(!0), N(!1);
-                try {
-                    await (0, u.RT)(i.id, { defaultReactionEmoji: E }), n();
-                } catch (t) {
-                    N(!0);
-                } finally {
-                    f(!1);
-                }
+        v = (i.defaultReactionEmoji?.emojiId ?? null) !== (x?.emojiId ?? null),
+        y = (i.defaultReactionEmoji?.emojiName ?? null) !== (x?.emojiName ?? null),
+        I = v || y;
+    function b(t) {
+        E(null == t ? null : t?.id != null ? { emojiId: t.id } : { emojiName: t.optionallyDiverseSequence });
+    }
+    async function S() {
+        if (I) {
+            k(!0), N(!1);
+            try {
+                await (0, u.RT)(i.id, { defaultReactionEmoji: x }), n();
+            } catch (t) {
+                N(!0);
+            } finally {
+                k(!1);
             }
-        };
+        }
+    }
     return (0, e.jsxs)(a.Modal, {
-        title: g.intl.string(g.t.XlDE3k),
-        subtitle: g.intl.string(g.t.lVqhdd),
-        transitionState: x,
+        title: f.intl.string(f.t.XlDE3k),
+        subtitle: f.intl.string(f.t.lVqhdd),
+        transitionState: p,
         onClose: n,
         actions: [
-            { variant: "secondary", text: g.intl.string(g.t["ETE/oC"]), onClick: n },
+            { variant: "secondary", text: f.intl.string(f.t["ETE/oC"]), onClick: n },
             {
                 variant: "primary",
-                text: g.intl.string(g.t["R3BPH+"]),
-                loading: k,
+                text: f.intl.string(f.t["R3BPH+"]),
+                loading: h,
                 disabled: !I,
                 onClick: S,
                 autoFocus: !0,
             },
         ],
         children: [
-            (0, e.jsx)(m.A, { reactionEmoji: E }),
+            (0, e.jsx)(m.A, { reactionEmoji: x }),
             (0, e.jsxs)(o.e, {
                 size: "sm",
-                className: p.v,
+                className: g.v,
                 children: [
                     (0, e.jsx)(s.Y, {
                         targetElementRef: R,
-                        renderPopout: (t) => {
+                        renderPopout: function (t) {
                             let { closePopout: n } = t;
                             return (0, e.jsx)(d.A, {
                                 guildId: i?.guild_id,
@@ -77,29 +77,29 @@ let x = (t) => {
                         animation: s.Y.Animation.NONE,
                         align: "center",
                         children: (t) =>
-                            (0, e.jsx)(r.$, {
+                            (0, e.jsx)(c.$, {
                                 ...t,
                                 buttonRef: R,
-                                text: g.intl.string(g.t["59QgaD"]),
+                                text: f.intl.string(f.t["59QgaD"]),
                                 variant: "primary",
                                 onClick: (i) => {
                                     t.onClick?.(i);
                                 },
                             }),
                     }),
-                    null != E &&
-                        (0, e.jsx)(r.$, {
-                            text: g.intl.string(g.t.N86XcP),
+                    null != x &&
+                        (0, e.jsx)(c.$, {
+                            text: f.intl.string(f.t.N86XcP),
                             variant: "critical-secondary",
                             onClick: () => b(null),
                         }),
                 ],
             }),
             C
-                ? (0, e.jsx)(c.E, {
+                ? (0, e.jsx)(r.E, {
                       variant: "text-sm/normal",
                       color: "text-feedback-critical",
-                      children: g.intl.string(g.t.F75nNl),
+                      children: f.intl.string(f.t.F75nNl),
                   })
                 : null,
         ],

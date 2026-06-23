@@ -6,8 +6,8 @@ var i = n(627968),
     r = n(975807),
     o = n(95035),
     d = n(400492),
-    p = n(375708),
-    c = n(872244);
+    c = n(375708),
+    p = n(872244);
 let u = [
     { preBold: "That's pretty...", bold: "fly!" },
     { preBold: "On Point will make sure to", bold: " tick ", postBold: "a look at it!" },
@@ -27,25 +27,25 @@ function m(e) {
     let g = a.useRef(u[Math.floor(Math.random() * u.length)]).current;
     return (0, i.jsx)(l.EO, {
         "data-migration-pending": !0,
-        className: c.Nk,
+        className: p.Nk,
         transitionState: t,
-        "aria-label": p.intl.string(p.t.mCCdwi),
+        "aria-label": c.intl.string(c.t.mCCdwi),
         parentComponent: "BugReporterSubmitModal",
         children: (0, i.jsxs)(l.$m, {
             "data-migration-pending": !0,
             style: { overflow: "hidden", paddingRight: "0px" },
-            className: c.jE,
+            className: p.jE,
             paddingFix: !1,
             children: [
                 (0, i.jsx)(l.s_, {
                     "data-migration-pending": !0,
-                    onClick: () => {
+                    onClick: function () {
                         n?.();
                     },
-                    className: c.b,
+                    className: p.b,
                 }),
                 (0, i.jsxs)(s.E, {
-                    className: c.KP,
+                    className: p.KP,
                     variant: "text-sm/normal",
                     children: [
                         "Thanks for submitting a ",

@@ -13,7 +13,7 @@ var r = n(503698),
     _ = n(822768),
     h = n(683807);
 let f = { width: 2180, height: 1536 },
-    p = (e) => {
+    p = function (e) {
         let {
                 roomSeats: t,
                 roomParticipants: n,

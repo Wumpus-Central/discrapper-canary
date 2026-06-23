@@ -24,7 +24,7 @@ var i = n(627968),
     C = n(383374),
     N = n(352760);
 let v = [A.iq, A.Zc, A.Xy, A.$X, A.tR, A.K7, A.fg, A.sp, A.MK],
-    R = r.memo((e) => {
+    R = r.memo(function (e) {
         let {
                 entry: t,
                 channel: n,

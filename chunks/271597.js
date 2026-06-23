@@ -5,7 +5,7 @@ n(64700);
 var r = n(192308),
     s = n(792852),
     a = n(696016);
-let o = function () {
+function o() {
     let { initialEditingClipId: e, selectedGameId: t } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { resetAll: o, setGameFacet: l } = s.P.getState();
@@ -43,4 +43,4 @@ let o = function () {
             },
             { modalKey: a.nm },
         );
-};
+}

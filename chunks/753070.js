@@ -99,9 +99,11 @@ function p(e, t, n) {
         },
     };
 }
+function E(e) {
+    return 0 === e ? l.intl.string(l.t.XjXqzh) : l.intl.formatToPlainString(l.t.TEOC0I, { resolution: e });
+}
 p(720), p(1080), p(1440), p(0, () => l.intl.string(l.t.XjXqzh)), p(720), p(1080), p(1440);
-let E = (e) => (0 === e ? l.intl.string(l.t.XjXqzh) : l.intl.formatToPlainString(l.t.TEOC0I, { resolution: e })),
-    m = [p(480, () => E(480)), p(720, () => E(720)), p(1080, () => E(1080)), p(1440, () => E(1440)), p(0, () => E(0))];
+let m = [p(480, () => E(480)), p(720, () => E(720)), p(1080, () => E(1080)), p(1440, () => E(1440)), p(0, () => E(0))];
 p(15), p(30), p(60);
 let g = [
     p(15, () => l.intl.formatToPlainString(l.t["bW+JCW"], { value: 15 })),

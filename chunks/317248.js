@@ -139,8 +139,8 @@ function F(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "ca7cb477e5f46133bb3f0eba97731ee2d4b4b463" !== e.body.hash) {
-                let e = new Date("1781640804075"),
+            if (null != e.body && "e3fa20d43236bd9b21da0ff08797ab5b0c10f933" !== e.body.hash) {
+                let e = new Date("1782255435001"),
                     t = new Date(),
                     n = (0, P.Tf)(t, e);
                 n.hours > 6 && eA(n.hours);
@@ -486,7 +486,7 @@ function F(e) {
                             (0, i.jsx)(j.$, {
                                 variant: "secondary",
                                 text: $.intl.string($.t.HVxmOD),
-                                onClick: () => {
+                                onClick: function () {
                                     D.current?.activateUploadDialogue();
                                 },
                                 fullWidth: !0,
@@ -495,7 +495,7 @@ function F(e) {
                                 className: G.Fg,
                                 children: (0, i.jsx)(k.A, {
                                     ref: D,
-                                    onChange: (e) => {
+                                    onChange: function (e) {
                                         e.currentTarget?.files?.[0] != null &&
                                             ei([
                                                 ...en,

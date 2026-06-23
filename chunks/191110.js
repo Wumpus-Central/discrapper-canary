@@ -1,15 +1,15 @@
 t.d(l, { default: () => eO });
 var n = t(627968),
     a = t(64700),
-    s = t(284009),
-    i = t.n(s),
+    i = t(284009),
+    s = t.n(i),
     r = t(189213),
     u = t(270003),
     o = t(683071),
     d = t(452027),
     c = t(532446),
-    m = t(691540),
-    f = t(857250),
+    f = t(691540),
+    m = t(857250),
     h = t(97483),
     g = t(292666),
     x = t(106236),
@@ -33,22 +33,28 @@ var n = t(627968),
 t(323874), t(14289), t(35956);
 var O = t(335416),
     R = t(375708);
-let P = (e, l, t) => (-1 === e ? 0 : e - (l * e) / t);
+function P(e, l, t) {
+    return -1 === e ? 0 : e - (l * e) / t;
+}
 function _(e) {
     return e / 1e3;
 }
-let L = (e, l, t) => (-1 === e ? t : e + (l * (t - e)) / t),
-    J = (e, l, t, n) => (l >= 0 && t > 0 ? ((e - (l - (t * l) / n)) * 100) / t : (100 * e) / n).toFixed(4);
+function L(e, l, t) {
+    return -1 === e ? t : e + (l * (t - e)) / t;
+}
+function J(e, l, t, n) {
+    return (l >= 0 && t > 0 ? ((e - (l - (t * l) / n)) * 100) / t : (100 * e) / n).toFixed(4);
+}
 async function U(e) {
     if (!(e.type.startsWith("audio") || e.type.startsWith("video")) || !O.VM.has(e.type))
         throw Error(R.intl.formatToPlainString(R.t["2y3xGU"], { fileType: e.type }));
     let l = new Audio(URL.createObjectURL(e));
     return (
         await new Promise((e) => {
-            let t = () => {
+            l.addEventListener("canplaythrough", function t() {
                 e(), l.removeEventListener("canplaythrough", t);
-            };
-            l.addEventListener("canplaythrough", t), l.load();
+            }),
+                l.load();
         }),
         l
     );
@@ -102,28 +108,28 @@ async function ee(e) {
 let el = { ...O.Jh };
 var et = t(455141);
 let en = a.memo(function (e) {
-        let { file: l, audio: t, className: s, waveformSettings: i } = e,
+        let { file: l, audio: t, className: i, waveformSettings: s } = e,
             [r, u] = a.useState({ width: 0, height: 0 }),
             o = a.useRef(null),
             d = a.useMemo(() => {
                 let e = t?.duration ?? 1;
-                return { fineTuning: -1, fineTuningResolution: e / O.Jh.fineTuningScale, duration: e, ...(i ?? {}) };
-            }, [t, i]),
+                return { fineTuning: -1, fineTuningResolution: e / O.Jh.fineTuningScale, duration: e, ...(s ?? {}) };
+            }, [t, s]),
             c = (function (e) {
                 let [l, t] = a.useState(null),
-                    [n, s] = a.useState(null);
+                    [n, i] = a.useState(null);
                 return (
                     a.useEffect(() => {
                         if (null == e) return;
                         let l = (0, O.Ux)(e);
-                        l !== n && (s(l), t(null), ee(e).then(t));
+                        l !== n && (i(l), t(null), ee(e).then(t));
                     }, [n, e]),
                     l
                 );
             })(l),
-            m = (function (e, l, t) {
-                let [n, s] = a.useState(null),
-                    [i, r] = a.useState(null),
+            f = (function (e, l, t) {
+                let [n, i] = a.useState(null),
+                    [s, r] = a.useState(null),
                     [u, o] = a.useState(1),
                     { setMaxVolume: d } = z(),
                     c = a.useCallback(
@@ -132,14 +138,13 @@ let en = a.memo(function (e) {
                             r(null),
                                 ((n = l.offsetWidth),
                                 new Promise((l) => {
-                                    let a = (0, X.A)(),
-                                        s = (e) => {
-                                            let {
-                                                data: { waveform: t, id: n, normalizedVolumeMultipler: i },
-                                            } = e;
-                                            a === n && (l(t), o(i)), Z?.removeEventListener("message", s);
-                                        };
-                                    Z?.addEventListener("message", s),
+                                    let a = (0, X.A)();
+                                    Z?.addEventListener("message", function e(t) {
+                                        let {
+                                            data: { waveform: n, id: i, normalizedVolumeMultipler: s },
+                                        } = t;
+                                        a === i && (l(n), o(s)), Z?.removeEventListener("message", e);
+                                    }),
                                         Z?.postMessage({ id: a, options: t, config: el, width: n, rawBufferData: e });
                                 })).then(r);
                         },
@@ -149,17 +154,17 @@ let en = a.memo(function (e) {
                     a.useEffect(() => {
                         if (null == e || null == l) return;
                         let a = (0, O.HL)(e, t);
-                        n !== a && (s(a), c(e, l));
+                        n !== a && (i(a), c(e, l));
                     }, [e, c, l, t, n]),
                     a.useEffect(() => {
                         d(u);
                     }, [u, d]),
-                    i
+                    s
                 );
             })(c, o.current, d),
-            f = (0, Q.Ay)(),
+            m = (0, Q.Ay)(),
             h = (0, W.r)(q.A.colors.ICON_STRONG).hex(),
-            g = null == c || null == m,
+            g = null == c || null == f,
             x = (0 === r.width || 0 === r.height || g) && null != l,
             v = a.useCallback(() => {
                 null != o.current && u({ width: o.current.offsetWidth, height: o.current.offsetHeight });
@@ -182,20 +187,20 @@ let en = a.memo(function (e) {
                     l = e.getContext("2d");
                 if (null == l) return;
                 let { width: t, height: n } = e;
-                if (0 !== r.width && 0 !== r.height && null != m && m.length > 0) {
-                    let e = t / m.length,
+                if (0 !== r.width && 0 !== r.height && null != f && f.length > 0) {
+                    let e = t / f.length,
                         a = -(e * (O.Jh.waveformBarWidth - 1));
                     l.clearRect(0, 0, t, n), (l.fillStyle = h);
-                    for (let t = 0; t < m.length; t++) {
-                        let s = m[t] * n,
-                            i = t * e + a,
-                            r = n / 2 - s / 2;
-                        l.fillRect(i, r, e - a, s);
+                    for (let t = 0; t < f.length; t++) {
+                        let i = f[t] * n,
+                            s = t * e + a,
+                            r = n / 2 - i / 2;
+                        l.fillRect(s, r, e - a, i);
                     }
                 }
-            }, [h, r, f, m]),
+            }, [h, r, m, f]),
             (0, n.jsxs)("div", {
-                className: N()(et.kL, s),
+                className: N()(et.kL, i),
                 children: [
                     (0, n.jsx)("canvas", { className: et.s4, ref: o, width: 4 * r.width, height: 4 * r.height }),
                     x &&
@@ -209,22 +214,22 @@ let en = a.memo(function (e) {
     }),
     ea = a.memo(function (e) {
         let { fineTuning: l, fineTuningResolution: t, duration: a } = e,
-            { file: s, audio: i } = z();
+            { file: i, audio: s } = z();
         return (0, n.jsx)(en, {
-            file: s,
-            audio: i,
+            file: i,
+            audio: s,
             waveformSettings: { fineTuning: l, fineTuningResolution: t, duration: a },
         });
     });
-var es = t(346973);
-let ei = a.memo(function (e) {
-    let { playing: l, onPausePlayback: t, onPlaybackChange: s, onChangePosition: i, disabled: r = !1 } = e,
+var ei = t(346973);
+let es = a.memo(function (e) {
+    let { playing: l, onPausePlayback: t, onPlaybackChange: i, onChangePosition: s, disabled: r = !1 } = e,
         u = { ...O.Jh },
         { audio: o } = z(),
         d = null != o,
         c = a.useRef(null),
-        m = a.useRef(null),
         f = a.useRef(null),
+        m = a.useRef(null),
         [h, g] = a.useState(0),
         [x, v] = a.useState(0),
         [j, b] = a.useState(0),
@@ -273,31 +278,31 @@ let ei = a.memo(function (e) {
                 if (null == o || !p) return;
                 let l = parseInt(e.target.value),
                     t = l > j ? j : l;
-                s(_(t)), g(t), v(t);
+                i(_(t)), g(t), v(t);
             },
-            [o, s, j, p],
+            [o, i, j, p],
         ),
         G = a.useCallback(
             (e) => {
                 if (null == o || !w) return;
                 let l = parseInt(e.target.value);
-                l < h ? (s(_(h)), v(h)) : l > j ? (s(_(j)), v(j)) : (s(_(l)), v(l));
+                l < h ? (i(_(h)), v(h)) : l > j ? (i(_(j)), v(j)) : (i(_(l)), v(l));
             },
-            [o, s, j, w, h],
+            [o, i, j, w, h],
         ),
         V = a.useCallback(
             (e) => {
                 if (null == o || !S) return;
                 let l = parseInt(e.target.value),
                     t = l > h ? l : h;
-                s(_(h)), v(h), b(t);
+                i(_(h)), v(h), b(t);
             },
-            [o, s, S, h],
+            [o, i, S, h],
         );
     return (
         a.useEffect(() => {
-            null != i && d && i({ startPositionMs: h, endPositionMs: j, playheadPositionMs: x });
-        }, [h, j, i, d, x]),
+            null != s && d && s({ startPositionMs: h, endPositionMs: j, playheadPositionMs: x });
+        }, [h, j, s, d, x]),
         a.useEffect(() => {
             let e;
             if (null != o)
@@ -323,17 +328,17 @@ let ei = a.memo(function (e) {
             };
         }, [u.fineTuningDelay, S, j, T, w, x, p, h]),
         (0, n.jsxs)("div", {
-            className: N()(es.IO, { [es.J_]: d }),
+            className: N()(ei.IO, { [ei.J_]: d }),
             children: [
                 (0, n.jsxs)("div", {
-                    className: es.Rn,
+                    className: ei.Rn,
                     children: [
                         (0, n.jsxs)("div", {
-                            className: es.Dn,
+                            className: ei.Dn,
                             children: [
                                 (0, n.jsx)("input", {
                                     ref: c,
-                                    className: N()(es.Os, es.YT),
+                                    className: N()(ei.Os, ei.YT),
                                     type: "range",
                                     min: P(T, I, E),
                                     max: L(T, I, E),
@@ -344,8 +349,8 @@ let ei = a.memo(function (e) {
                                     disabled: !d || r,
                                 }),
                                 (0, n.jsx)("input", {
-                                    ref: f,
-                                    className: N()(es.Os, es.BC),
+                                    ref: m,
+                                    className: N()(ei.Os, ei.BC),
                                     type: "range",
                                     min: P(T, I, E),
                                     max: L(T, I, E),
@@ -358,10 +363,10 @@ let ei = a.memo(function (e) {
                             ],
                         }),
                         (0, n.jsx)("div", {
-                            className: es.__invalid_handlePlayheadTrack,
+                            className: ei.__invalid_handlePlayheadTrack,
                             children: (0, n.jsx)("input", {
-                                ref: m,
-                                className: N()(es.Os, es.GO),
+                                ref: f,
+                                className: N()(ei.Os, ei.GO),
                                 type: "range",
                                 min: P(T, I, E),
                                 max: L(T, I, E),
@@ -375,34 +380,34 @@ let ei = a.memo(function (e) {
                     ],
                 }),
                 (0, n.jsxs)("div", {
-                    className: es.wo,
+                    className: ei.wo,
                     children: [
                         (0, n.jsxs)("div", {
-                            className: N()(es.Wm, { [es.Em]: p, [es.z6]: S }),
+                            className: N()(ei.Wm, { [ei.Em]: p, [ei.z6]: S }),
                             style: {
                                 left: `${J(h, T, I, E)}%`,
                                 right: `${(T >= 0 && I > 0 ? -((j - (T + (I * (E - T)) / E)) * 100) / I : -(100 * j * 1) / E + 100).toFixed(4)}%`,
                             },
                             children: [
                                 (0, n.jsx)("div", {
-                                    className: N()(es.P, es.RC),
+                                    className: N()(ei.P, ei.RC),
                                     children: (0, n.jsx)("div", {
-                                        className: N()(es.Xd, es.__invalid_start),
+                                        className: N()(ei.Xd, ei.__invalid_start),
                                         children: (0, n.jsx)(B.A, {
                                             direction: B.A.Directions.RIGHT,
-                                            className: es.OD,
+                                            className: ei.OD,
                                             width: 16,
                                             height: 16,
                                         }),
                                     }),
                                 }),
                                 (0, n.jsx)("div", {
-                                    className: N()(es.P, es.SE),
+                                    className: N()(ei.P, ei.SE),
                                     children: (0, n.jsx)("div", {
-                                        className: N()(es.Xd, es.__invalid_end),
+                                        className: N()(ei.Xd, ei.__invalid_end),
                                         children: (0, n.jsx)(B.A, {
                                             direction: B.A.Directions.LEFT,
-                                            className: es.OD,
+                                            className: ei.OD,
                                             width: 16,
                                             height: 16,
                                         }),
@@ -411,16 +416,16 @@ let ei = a.memo(function (e) {
                             ],
                         }),
                         (0, n.jsx)("div", {
-                            className: es.i0,
+                            className: ei.i0,
                             children: (0, n.jsx)("div", {
-                                className: N()(es.lG, { [es.cB]: w || p || S || l }),
+                                className: N()(ei.lG, { [ei.cB]: w || p || S || l }),
                                 style: { left: `${J(x, T, I, E)}%` },
                             }),
                         }),
                     ],
                 }),
                 (0, n.jsx)("div", {
-                    className: es.FU,
+                    className: ei.FU,
                     children: (0, n.jsx)(ea, { fineTuning: T, fineTuningResolution: I, duration: E }),
                 }),
             ],
@@ -431,13 +436,13 @@ var er = t(980504),
     eu = t(418230);
 let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), playheadPositionMs: 0 },
     ed = a.memo(function (e) {
-        let { className: l, volume: t, disabled: s = !1, onChange: i } = e,
+        let { className: l, volume: t, disabled: i = !1, onChange: s } = e,
             { audio: r } = z(),
             [u, o] = a.useState(!1),
             [d, c] = a.useState(eo),
-            { playheadPositionMs: m, endPositionMs: f, startPositionMs: h } = d,
+            { playheadPositionMs: f, endPositionMs: m, startPositionMs: h } = d,
             g = null != r,
-            x = f - h,
+            x = m - h,
             v = x > 5 * A.A.Millis.SECOND;
         a.useEffect(() => {
             if (null != r)
@@ -457,14 +462,14 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
             b = a.useCallback(() => {
                 if (null != r) {
                     if (u) return void j();
-                    m >= f ? (r.currentTime = _(h)) : (r.currentTime = _(m)), (r.volume = (0, T.A)(t)), r.play(), o(!0);
+                    f >= m ? (r.currentTime = _(h)) : (r.currentTime = _(f)), (r.volume = (0, T.A)(t)), r.play(), o(!0);
                 }
-            }, [r, f, j, m, u, h, t]),
+            }, [r, m, j, f, u, h, t]),
             p = a.useCallback(
                 (e) => {
-                    c(e), i?.({ startMs: e.startPositionMs, endMs: e.endPositionMs });
+                    c(e), s?.({ startMs: e.startPositionMs, endMs: e.endPositionMs });
                 },
-                [i],
+                [s],
             ),
             C = a.useCallback(
                 (e) => {
@@ -473,7 +478,7 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
                 [r],
             );
         return (0, n.jsxs)("div", {
-            className: N()(eu.kL, { [eu.J_]: g, [eu.r9]: !g || s }, l),
+            className: N()(eu.kL, { [eu.J_]: g, [eu.r9]: !g || i }, l),
             children: [
                 (0, n.jsxs)("div", {
                     className: eu.k0,
@@ -496,33 +501,33 @@ let eo = { startPositionMs: 0, endPositionMs: 2 * (10 * A.A.Millis.SECOND), play
                         }),
                     ],
                 }),
-                (0, n.jsx)(ei, {
+                (0, n.jsx)(es, {
                     playing: u,
                     onPlaybackChange: C,
                     onPausePlayback: j,
                     onChangePosition: p,
-                    disabled: s,
+                    disabled: i,
                 }),
             ],
         });
     });
 var ec = t(102597),
-    em = t(919195);
-let ef = a.memo(function (e) {
-    let { sound: l, volume: t, disabled: s } = e,
-        [i, r] = a.useState(!1),
+    ef = t(919195);
+let em = a.memo(function (e) {
+    let { sound: l, volume: t, disabled: i } = e,
+        [s, r] = a.useState(!1),
         u = a.useRef(null),
         { file: o, audio: d, loadAudioFromFile: c } = z(),
-        m = a.useMemo(() => (0, ec.A)(l.soundId), [l]);
+        f = a.useMemo(() => (0, ec.A)(l.soundId), [l]);
     return (
         a.useEffect(() => {
-            null == u.current && (u.current = G(m, l.name).then(c));
-        }, [m, c, l.name]),
+            null == u.current && (u.current = G(f, l.name).then(c));
+        }, [f, c, l.name]),
         (0, n.jsxs)("div", {
-            className: em.i1,
+            className: ef.i1,
             children: [
                 (0, n.jsx)(S.D, {
-                    onClick: s
+                    onClick: i
                         ? void 0
                         : function () {
                               null != d &&
@@ -534,15 +539,15 @@ let ef = a.memo(function (e) {
                                         d.addEventListener("ended", () => r(!1), { once: !0 }))
                                       : (d.pause(), r(!1)));
                           },
-                    className: em.Rr,
-                    "aria-label": i ? R.intl.string(R.t.hHBkuG) : R.intl.string(R.t.RscU7I),
-                    children: i
-                        ? (0, n.jsx)(M.w, { size: "xs", color: "currentColor", className: em.uZ })
-                        : (0, n.jsx)(E.u, { size: "xs", color: "currentColor", className: em.uZ }),
+                    className: ef.Rr,
+                    "aria-label": s ? R.intl.string(R.t.hHBkuG) : R.intl.string(R.t.RscU7I),
+                    children: s
+                        ? (0, n.jsx)(M.w, { size: "xs", color: "currentColor", className: ef.uZ })
+                        : (0, n.jsx)(E.u, { size: "xs", color: "currentColor", className: ef.uZ }),
                 }),
                 (0, n.jsx)("div", {
-                    className: em.FU,
-                    children: (0, n.jsx)(en, { className: em.ou, file: o, audio: d }),
+                    className: ef.FU,
+                    children: (0, n.jsx)(en, { className: ef.ou, file: o, audio: d }),
                 }),
             ],
         })
@@ -550,15 +555,15 @@ let ef = a.memo(function (e) {
 });
 var eh = t(252642);
 let eg = a.memo(function (e) {
-    let { sound: l, volume: t, disabled: a = !1, onChange: s } = e,
-        { file: i } = z();
+    let { sound: l, volume: t, disabled: a = !1, onChange: i } = e,
+        { file: s } = z();
     return (0, n.jsx)(d.D, {
         label: R.intl.string(R.t.CCRKNz),
         children: (0, n.jsxs)("div", {
             className: eh.UV,
             children: [
-                null != l && (0, n.jsx)(ef, { sound: l, volume: t, disabled: a }),
-                null == l && null != i && (0, n.jsx)(ed, { className: eh.lF, volume: t, disabled: a, onChange: s }),
+                null != l && (0, n.jsx)(em, { sound: l, volume: t, disabled: a }),
+                null == l && null != s && (0, n.jsx)(ed, { className: eh.lF, volume: t, disabled: a, onChange: i }),
             ],
         }),
     });
@@ -592,7 +597,7 @@ function eF(e) {
 }
 function eI(e) {
     let l,
-        { label: t, value: s, className: i, onChange: r } = e,
+        { label: t, value: i, className: s, onChange: r } = e,
         u = (0, ev.cf)([eN.Ay, ey.A, eS.default, ew.A], () => {
             let e = {};
             for (let l of eN.Ay.getFlattenedGuildIds()) {
@@ -632,7 +637,7 @@ function eI(e) {
                       }),
             [u],
         ),
-        m = a.useCallback(
+        f = a.useCallback(
             (e) => {
                 let l = e?.value;
                 return null == l || "" === l
@@ -641,35 +646,35 @@ function eI(e) {
             },
             [o],
         ),
-        f = a.useCallback((e) => (0, n.jsx)("div", { className: N()({ [eT.QJ]: e.disabled }), children: e.label }), []),
+        m = a.useCallback((e) => (0, n.jsx)("div", { className: N()({ [eT.QJ]: e.disabled }), children: e.label }), []),
         h = a.useCallback(
             (e) => {
                 o[e] <= 0 || r(e);
             },
             [o, r],
         ),
-        g = null == (l = o[s ?? eA.dJq]) || l > 0 ? s : void 0;
+        g = null == (l = o[i ?? eA.dJq]) || l > 0 ? i : void 0;
     return (0, n.jsx)(ej.p, {
         label: t,
-        className: i,
+        className: s,
         onChange: h,
         value: g,
         multi: !1,
         options: d,
         renderOptionPrefix: c,
-        renderOptionSuffix: m,
-        renderOptionLabel: f,
+        renderOptionSuffix: f,
+        renderOptionLabel: m,
         placeholder: 0 === d.length ? R.intl.string(R.t.O3i2gV) : R.intl.string(R.t.CunCMN),
         "data-migration-pending": !0,
     });
 }
 let eD = [{ name: "audio", extensions: ["mp3", "wav", "ogg", "opus", "x-wav", "mp4"] }];
 function eO(e) {
-    let { guildId: l, sourceFile: t, existingSound: s, onClose: y, transitionState: N, showGuildPicker: S = !1 } = e,
-        [M, E] = a.useState(t?.name ?? s?.name ?? ""),
-        [k, A] = a.useState(s?.volume ?? 1),
-        [T, F] = a.useState(s?.emojiId),
-        [I, D] = a.useState(s?.emojiName),
+    let { guildId: l, sourceFile: t, existingSound: i, onClose: y, transitionState: N, showGuildPicker: S = !1 } = e,
+        [M, E] = a.useState(t?.name ?? i?.name ?? ""),
+        [k, A] = a.useState(i?.volume ?? 1),
+        [T, F] = a.useState(i?.emojiId),
+        [I, D] = a.useState(i?.emojiName),
         { file: O, loadAudioFromFile: P, maxVolume: _, setMaxVolume: L } = z(),
         [J, U] = a.useState(!1),
         [G, V] = a.useState(null),
@@ -712,7 +717,7 @@ function eO(e) {
             return null;
         })(q),
         $ = "uploading" === q || "encoding" === q,
-        ee = null != s,
+        ee = null != i,
         el =
             M.length >= 2 &&
             (ee || null != O) &&
@@ -733,7 +738,7 @@ function eO(e) {
         }, []),
         en = a.useCallback(async () => {
             if (null == O) return;
-            i()(null != Y, "Cannot submit soundboard sound with no guildId");
+            s()(null != Y, "Cannot submit soundboard sound with no guildId");
             let e = O;
             if (null != B) {
                 let l = await et(O, B);
@@ -750,32 +755,32 @@ function eO(e) {
             }
         }, [O, Y, M, et, B, k, T, I]),
         ea = a.useCallback(async () => {
-            i()(null != Y, "Cannot submit soundboard sound with no guildId"), U(!0), V(null);
+            s()(null != Y, "Cannot submit soundboard sound with no guildId"), U(!0), V(null);
             try {
                 ee
                     ? await (0, w.xV)({
                           guildId: Y,
-                          soundId: s.soundId,
+                          soundId: i.soundId,
                           name: M,
                           volume: k,
                           emojiId: T ?? null,
                           emojiName: I ?? null,
                       })
-                    : (await en(), (0, m.P0)((0, f.o)(R.intl.string(R.t.T7dhBL), h.Ck.SUCCESS))),
+                    : (await en(), (0, f.P0)((0, m.o)(R.intl.string(R.t.T7dhBL), h.Ck.SUCCESS))),
                     y();
             } catch (e) {
                 K(e);
             } finally {
                 W("ready"), U(!1), A(1), L(1);
             }
-        }, [ee, y, Y, s, M, k, T, I, en, L]);
+        }, [ee, y, Y, i, M, k, T, I, en, L]);
     (0, j.Ay)(() => {
         P(null), C.default.track(eA.HAw.OPEN_MODAL, { type: "Soundboard Upload Sound", guild_id: Y });
     }),
         a.useEffect(() => {
             A(Math.min(k, _));
         }, [k, A, _]);
-    let es = (0, n.jsx)(b.A, {
+    let ei = (0, n.jsx)(b.A, {
             guildId: Y,
             emojiId: T,
             emojiName: I,
@@ -784,7 +789,7 @@ function eO(e) {
             error: G?.getFirstFieldErrorMessage("emoji"),
             isRequiredField: !1,
         }),
-        ei = a.useMemo(
+        es = a.useMemo(
             () => [
                 { variant: "secondary", text: R.intl.string(R.t.Khpixd), onClick: y, disabled: J },
                 {
@@ -801,12 +806,12 @@ function eO(e) {
         onClose: y,
         transitionState: N,
         title: ee ? R.intl.string(R.t.HmsZGS) : R.intl.string(R.t["ioD/9I"]),
-        actions: ei,
+        actions: es,
         children: (0, n.jsxs)(u.n, {
             children: [
                 null != G && !G.hasFieldErrors() && (0, n.jsx)(o.w, { type: "critical", children: G.message }),
                 S ? (0, n.jsx)(eI, { label: R.intl.string(R.t.UYt7iQ), value: Y, onChange: Q }) : null,
-                (ee || null != O) && (0, n.jsx)(eg, { sound: s, volume: k, disabled: $, onChange: H }),
+                (ee || null != O) && (0, n.jsx)(eg, { sound: i, volume: k, disabled: $, onChange: H }),
                 ee || null != t
                     ? null
                     : (0, n.jsx)(d.D, {
@@ -832,7 +837,7 @@ function eO(e) {
                             onChange: E,
                             maxLength: 32,
                         }),
-                        es,
+                        ei,
                     ],
                 }),
                 (0, n.jsx)(x.A, {

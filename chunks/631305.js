@@ -18,11 +18,11 @@ function c(e, t) {
     let f = h ? r.KX : r.SY;
     (0, s.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("52041"), n.e("45210")]).then(n.bind(n, 553998));
+            let { default: e } = await Promise.all([n.e("52041"), n.e("45210")]).then(n.bind(n, 331617));
             return (t) => (0, i.jsx)(e, { ..._, ...t });
         },
         {
-            onCloseCallback: () => {
+            onCloseCallback: function () {
                 l.default.track(u.HAw.MODAL_DISMISSED, { type: c, location: e.analyticsSourceLocation });
             },
             contextKey: f,

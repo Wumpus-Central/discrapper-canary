@@ -57,11 +57,10 @@ function g(e) {
                     return () => clearInterval(e);
                 }, [t, n]),
                 r.useEffect(() => {
-                    _.set(n, l);
-                    let e = () => {
+                    function e() {
                         _.delete(n);
-                    };
-                    return t.addEventListener("unload", e), () => t.removeEventListener("unload", e);
+                    }
+                    return _.set(n, l), t.addEventListener("unload", e), () => t.removeEventListener("unload", e);
                 }, [l, t, n]),
                 l
             );

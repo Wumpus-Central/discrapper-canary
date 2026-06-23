@@ -13,19 +13,19 @@ function r(e) {
             if (!n) return;
             let e = t.current;
             if (null == e) return;
-            let i = () => {
-                    l.current || a.current();
-                },
-                r = () => {
-                    document.pictureInPictureElement === e
-                        ? a.current()
-                        : "hidden" === document.visibilityState
-                          ? o.current()
-                          : (l.current = !1);
-                },
-                s = () => {
-                    l.current = !0;
-                };
+            function i() {
+                l.current || a.current();
+            }
+            let r = () => {
+                document.pictureInPictureElement === e
+                    ? a.current()
+                    : "hidden" === document.visibilityState
+                      ? o.current()
+                      : (l.current = !1);
+            };
+            function s() {
+                l.current = !0;
+            }
             return (
                 e.addEventListener("enterpictureinpicture", i),
                 e.addEventListener("play", r),

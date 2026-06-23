@@ -166,7 +166,7 @@ function el(e) {
             t.restoreContext();
 }
 var eu = n(375708);
-let ec = async (e) => {
+async function ec(e) {
     let { applicationImageSrc: t, entry: n, avatarSrcs: i, description: r, timestamp: s, colors: a, channelId: o } = e,
         l = n.extra.activity_name,
         u = {
@@ -178,7 +178,7 @@ let ec = async (e) => {
     return await z({
         assetsToLoad: u,
         drawImage: (e) =>
-            ((e, t) => {
+            (function (e, t) {
                 let { timestamp: n, colors: i, description: r, entry: s, numAvatars: a } = t,
                     o = i.map((e, t) => ({ color: e, stop: t }));
                 e.setSize({ w: 400, h: 120 }, 4),
@@ -197,7 +197,7 @@ let ec = async (e) => {
                     e.drawText(r, { x: 120, y: 64, h: 32, w: 260 }, !0),
                     eo({
                         canvas: e,
-                        badges: ((e, t) => {
+                        badges: (function (e, t) {
                             let n = [{ iconPath: Q, text: t }],
                                 i = Z.default.extractTimestamp(e.extra.application_id);
                             if (
@@ -241,7 +241,7 @@ let ec = async (e) => {
             channelId: o,
         },
     });
-};
+}
 var ed = n(506326),
     e_ = n(503698),
     eh = n.n(e_);
@@ -322,7 +322,7 @@ function e$(e) {
         disableThemedBackground: !0,
         emojiPickerCloseOnModalOuterClick: !0,
         disabled: !1,
-        autoCompletePosition: (() => {
+        autoCompletePosition: (function () {
             if (null == m.current) return "top";
             let e = m.current.getBoundingClientRect(),
                 t = window.innerHeight;
@@ -331,7 +331,7 @@ function e$(e) {
         renderAttachButton: o,
     });
 }
-let ez = (e) => {
+function ez(e) {
     var t;
     let { onSelectEmoji: n, onClick: s } = e,
         a = (0, eU.Ay)(),
@@ -341,12 +341,12 @@ let ez = (e) => {
     return (
         (t = () => l(!1)),
         r.useEffect(() => {
-            let e = (e) => {
-                    "Escape" === e.key && t();
-                },
-                n = (e) => {
-                    null != e.target && (u?.current?.contains(e?.target) || t());
-                };
+            function e(e) {
+                "Escape" === e.key && t();
+            }
+            function n(e) {
+                null != e.target && (u?.current?.contains(e?.target) || t());
+            }
             return (
                 document.addEventListener("keydown", e),
                 document.addEventListener("mousedown", n),
@@ -398,7 +398,7 @@ let ez = (e) => {
                 }),
         })
     );
-};
+}
 var eq = n(47167),
     eZ = n(262763),
     eX = n(402216),
@@ -485,7 +485,7 @@ var tc = n(636585),
     tR = n(131607),
     tO = n(49999),
     tb = n(345394);
-let tD = (e) => {
+let tD = function (e) {
     let { children: t } = e,
         [n, s] = (0, tR.kn)([ef.M.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP]),
         [a, o] = r.useState(!1),
@@ -523,55 +523,56 @@ var tL = n(315246),
     tx = n(289873),
     tk = n(401871),
     tU = n(861173);
-let tG = () =>
-        (0, i.jsxs)("div", {
-            className: tU.oR,
-            children: [
-                (0, i.jsx)(tx.y, { type: tx.t.SPINNING_CIRCLE_SIMPLE, className: tk.S }),
-                (0, i.jsx)(ev.E, {
-                    color: "text-strong",
-                    variant: "text-md/normal",
-                    children: eu.intl.string(eu.t["5z/hlE"]),
+function tG() {
+    return (0, i.jsxs)("div", {
+        className: tU.oR,
+        children: [
+            (0, i.jsx)(tx.y, { type: tx.t.SPINNING_CIRCLE_SIMPLE, className: tk.S }),
+            (0, i.jsx)(ev.E, {
+                color: "text-strong",
+                variant: "text-md/normal",
+                children: eu.intl.string(eu.t["5z/hlE"]),
+            }),
+        ],
+    });
+}
+let tF = (e) => {
+    let { shown: t, sent: n, className: r } = e,
+        s = (0, u.bG)([h.Ay], () => h.Ay.useReducedMotion),
+        a = (0, tw.p)(
+            t,
+            {
+                from: { transform: s ? "translateY(0)" : "translateY(16px)", opacity: 0 },
+                enter: { transform: "translateY(0)", opacity: 1 },
+                leave: { transform: s ? "translateY(0)" : "translateY(16px)", opacity: 0 },
+                config: { mass: 1, tension: 500, friction: 18, clamp: !0 },
+                delay: 200,
+            },
+            "animate-always",
+        );
+    return (0, i.jsx)(i.Fragment, {
+        children: a(
+            (e, t) =>
+                t &&
+                (0, i.jsx)(tn.animated.div, {
+                    className: r,
+                    style: e,
+                    children: n
+                        ? (0, i.jsx)(tM.y, {
+                              message: eu.intl.string(eu.t.fjcCk5),
+                              type: tP.Ck.SUCCESS,
+                              id: "success_message_toast",
+                          })
+                        : (0, i.jsx)(tM.y, {
+                              message: "",
+                              type: tP.Ck.CUSTOM,
+                              id: "custom_loading_message_toast",
+                              options: { component: (0, i.jsx)(tG, {}) },
+                          }),
                 }),
-            ],
-        }),
-    tF = (e) => {
-        let { shown: t, sent: n, className: r } = e,
-            s = (0, u.bG)([h.Ay], () => h.Ay.useReducedMotion),
-            a = (0, tw.p)(
-                t,
-                {
-                    from: { transform: s ? "translateY(0)" : "translateY(16px)", opacity: 0 },
-                    enter: { transform: "translateY(0)", opacity: 1 },
-                    leave: { transform: s ? "translateY(0)" : "translateY(16px)", opacity: 0 },
-                    config: { mass: 1, tension: 500, friction: 18, clamp: !0 },
-                    delay: 200,
-                },
-                "animate-always",
-            );
-        return (0, i.jsx)(i.Fragment, {
-            children: a(
-                (e, t) =>
-                    t &&
-                    (0, i.jsx)(tn.animated.div, {
-                        className: r,
-                        style: e,
-                        children: n
-                            ? (0, i.jsx)(tM.y, {
-                                  message: eu.intl.string(eu.t.fjcCk5),
-                                  type: tP.Ck.SUCCESS,
-                                  id: "success_message_toast",
-                              })
-                            : (0, i.jsx)(tM.y, {
-                                  message: "",
-                                  type: tP.Ck.CUSTOM,
-                                  id: "custom_loading_message_toast",
-                                  options: { component: (0, i.jsx)(tG, {}) },
-                              }),
-                    }),
-            ),
-        });
-    };
+        ),
+    });
+};
 var tV = n(424994),
     tB = n(381941),
     tj = n(699976),
@@ -671,28 +672,28 @@ function tq(e) {
                     return !1;
                 }, [h]);
             if (null == o || null == _) return { voiceBar: void 0, joinVoiceButton: void 0 };
-            let E = null != a,
-                m = (e) => {
-                    let { children: t, text: n, hasRestrictedOrMutedVCParticipant: r } = e,
-                        s = r
-                            ? (0, i.jsxs)(i.Fragment, {
-                                  children: [
-                                      (0, i.jsx)(eb.i, { size: "custom", width: 13, height: 13, className: tH.vb }),
-                                      eu.intl.string(eu.t.d6DpXI),
-                                  ],
-                              })
-                            : n;
-                    return (0, i.jsx)(
-                        em.m,
-                        {
-                            "aria-label": r ? eu.intl.string(eu.t.d6DpXI) : (n ?? !1),
-                            __unsupportedReactNodeAsText: s,
-                            shouldShow: !0,
-                            children: t,
-                        },
-                        "voice-preview",
-                    );
-                };
+            let E = null != a;
+            function m(e) {
+                let { children: t, text: n, hasRestrictedOrMutedVCParticipant: r } = e,
+                    s = r
+                        ? (0, i.jsxs)(i.Fragment, {
+                              children: [
+                                  (0, i.jsx)(eb.i, { size: "custom", width: 13, height: 13, className: tH.vb }),
+                                  eu.intl.string(eu.t.d6DpXI),
+                              ],
+                          })
+                        : n;
+                return (0, i.jsx)(
+                    em.m,
+                    {
+                        "aria-label": r ? eu.intl.string(eu.t.d6DpXI) : (n ?? !1),
+                        __unsupportedReactNodeAsText: s,
+                        shouldShow: !0,
+                        children: t,
+                    },
+                    "voice-preview",
+                );
+            }
             return {
                 voiceBar: (0, i.jsxs)(i.Fragment, {
                     children: [
@@ -900,27 +901,27 @@ function tq(e) {
             }
             let n = t.type === eY.rbe.DM ? tV.PA.DM_REACTION_MESSAGE_SENT : tV.PA.CHANNEL_REACTION_MESSAGE_SENT;
             return W({ reply: e, sendToChannel: t, interactionType: n, onComplete: _, requiresChannelReadiness: !0 });
-        },
-        W = async (e) => {
-            let { reply: t, sendToChannel: n, onComplete: i, interactionType: r, requiresChannelReadiness: s } = e;
-            T?.focus(),
-                await (0, ty.d)({
-                    channel: n,
-                    content: t,
-                    entry: h,
-                    whenReady: s,
-                    doNotNotifyOnError: !1,
-                    location: tB.Hx.CONTENT_INVENTORY_MEMBERLIST,
-                }),
-                i?.(r, n);
-        },
-        K = p ?? O ?? L,
-        $ = () => {
-            A((e) => !e), k && T?.focus();
-        },
-        z = (e) => {
-            G(e), e && T?.focus();
         };
+    async function W(e) {
+        let { reply: t, sendToChannel: n, onComplete: i, interactionType: r, requiresChannelReadiness: s } = e;
+        T?.focus(),
+            await (0, ty.d)({
+                channel: n,
+                content: t,
+                entry: h,
+                whenReady: s,
+                doNotNotifyOnError: !1,
+                location: tB.Hx.CONTENT_INVENTORY_MEMBERLIST,
+            }),
+            i?.(r, n);
+    }
+    let K = p ?? O ?? L;
+    function $() {
+        A((e) => !e), k && T?.focus();
+    }
+    function z(e) {
+        G(e), e && T?.focus();
+    }
     return (0, i.jsxs)("div", {
         style: { pointerEvents: C ? "none" : "all" },
         children: [
@@ -1348,7 +1349,7 @@ function t0(e) {
     });
 }
 var t1 = n(299846);
-let t2 = (e) => {
+let t2 = function (e) {
     let { channel: t, entry: n, onReaction: s, onVoiceChannelPreview: a, disableActivityProfileLinks: o } = e,
         { largeImage: l } = (0, M.nO)({
             entry: n,
@@ -1358,17 +1359,17 @@ let t2 = (e) => {
         { user: c, details: d, activity: _, embeddedActivity: h } = (0, t1.u)(n),
         { primaryColor: f, secondaryColor: p } = (0, X.A)(l?.src),
         E = (0, u.bG)([D.default], () => D.default.locale),
-        { displayParticipants: m, participant1: g, participant2: k, numOtherParticipants: U } = (0, P.A)(n, 3),
-        G = () => {
-            (0, O.hg)(n.extra.application_id);
-        },
-        F = r.useCallback(
+        { displayParticipants: m, participant1: g, participant2: k, numOtherParticipants: U } = (0, P.A)(n, 3);
+    function G() {
+        (0, O.hg)(n.extra.application_id);
+    }
+    let F = r.useCallback(
             (e) => {
                 let i, r, s;
                 if (l?.src == null || null == t || null == c) return;
                 let a =
                     U > 0
-                        ? ((e) => {
+                        ? (function (e) {
                               let { entry: t, channel: n, users: i, countOthers: r } = e,
                                   s = eu.t["7j/5mg"];
                               return eu.intl
@@ -1500,7 +1501,7 @@ var ni = n(601007),
     ns = n(308335),
     na = n(790381),
     no = n(266080);
-let nl = async (e) => {
+async function nl(e) {
     let { applicationImageSrc: t, entry: n, avatarSrcs: i, description: r, timestamp: s, colors: a, channelId: o } = e,
         l = n.extra.game_name,
         u = {
@@ -1512,7 +1513,7 @@ let nl = async (e) => {
     return await z({
         assetsToLoad: u,
         drawImage: (e) =>
-            ((e, t) => {
+            (function (e, t) {
                 let { timestamp: n, colors: i, description: r, entry: s, numAvatars: a } = t,
                     o = i.map((e, t) => ({ color: e, stop: t }));
                 e.setSize({ w: 400, h: 120 }, 4),
@@ -1531,7 +1532,7 @@ let nl = async (e) => {
                     e.drawText(r, { x: 120, y: 64, h: 32, w: 260 }, !0),
                     eo({
                         canvas: e,
-                        badges: ((e, t) => {
+                        badges: (function (e, t) {
                             let n = [{ iconPath: Q, text: t }],
                                 i = Z.default.extractTimestamp(e.extra.application_id);
                             if (
@@ -1575,7 +1576,7 @@ let nl = async (e) => {
             channelId: o,
         },
     });
-};
+}
 var nu = n(968309),
     nc = n(30370);
 function nd(e) {
@@ -1598,7 +1599,7 @@ let nh = [...t3.n, ed.Yq],
         [t6.Y.XBOX]: no.A,
         [t6.Y.PLAYSTATION]: na.A,
     },
-    np = (e) => {
+    np = function (e) {
         let {
                 channel: t,
                 entry: n,
@@ -1629,7 +1630,7 @@ let nh = [...t3.n, ed.Yq],
                     if (d?.src == null || null == t || null == _) return;
                     let o =
                         U > 0
-                            ? ((e) => {
+                            ? (function (e) {
                                   let { entry: t, channel: n, users: i, countOthers: r } = e,
                                       s = (0, x.JM)(t) ? eu.t.QaUWPd : eu.t["7j/5mg"];
                                   return eu.intl
@@ -1757,73 +1758,73 @@ let nh = [...t3.n, ed.Yq],
             ],
         });
     },
-    nE = (0, n(353640).v)((e) => ({ activeEntryId: null, setActiveEntryId: (t) => e({ activeEntryId: t }) })),
-    nm = (e) => {
-        let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: s } = e,
-            { data: a } = (0, b.YY)(t.extra.application_id),
-            { analyticsLocations: o } = (0, ne.Ay)(R.A.CLOUD_PLAY_POPOVER),
-            l = (0, N.A)({ application: a, analyticsLocations: o }),
-            u = (0, eJ.JZ)(ef.M.CLOUD_PLAY_NEW_BADGE),
-            c = null != l && !u && n,
-            { activeEntryId: d, setActiveEntryId: _ } = nE(),
-            h = d === t.id,
-            f = c && h ? [ef.M.CLOUD_PLAY_POPOVER] : [],
-            [p, E] = (0, tR.kn)(f),
-            m = p === ef.M.CLOUD_PLAY_POPOVER;
-        r.useEffect(() => {
-            c && null === d && _(t.id);
-        }, [d, c, t.id, _]),
-            r.useEffect(
-                () => () => {
-                    m && (E(tO.i.USER_DISMISS), _(null));
-                },
-                [m, E, _],
-            );
-        let [g, A] = r.useState(!1);
-        return (
-            r.useEffect(() => {
-                m && !g && A(!0);
-            }, [m, g]),
-            (0, nt.A)(
-                {
-                    name: t9.ImpressionNames.CLOUD_PLAY_CTA,
-                    type: t9.ImpressionTypes.VIEW,
-                    properties: { location_stack: o },
-                },
-                { disableTrack: !g },
-                [g],
-            ),
-            (0, i.jsx)(tv.A, {
-                title: eu.intl.string(eu.t["+WNDtV"]),
-                body: eu.intl.string(eu.t["5QKxGI"]),
-                targetElementRef: s,
-                shouldShow: m,
-                position: "left",
-                caretConfig: { align: "center" },
-                gradientColor: "pink",
-                graphic: {
-                    type: "image",
-                    src: "https://cdn.discordapp.com/assets/content/89fae27b507d71982d8ba38286e78d3ca4b35e6c3e5e7a78263552a656f6f5a6.svg",
-                },
-                actions: [
-                    {
-                        icon: T.h,
-                        text: eu.intl.string(eu.t["jaYS/h"]),
-                        onClick: () => {
-                            l?.();
-                        },
-                    },
-                ],
-                onRequestClose: () => {
-                    E(tO.i.USER_DISMISS), _(null);
-                },
-            })
+    nE = (0, n(353640).v)((e) => ({ activeEntryId: null, setActiveEntryId: (t) => e({ activeEntryId: t }) }));
+function nm(e) {
+    let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: s } = e,
+        { data: a } = (0, b.YY)(t.extra.application_id),
+        { analyticsLocations: o } = (0, ne.Ay)(R.A.CLOUD_PLAY_POPOVER),
+        l = (0, N.A)({ application: a, analyticsLocations: o }),
+        u = (0, eJ.JZ)(ef.M.CLOUD_PLAY_NEW_BADGE),
+        c = null != l && !u && n,
+        { activeEntryId: d, setActiveEntryId: _ } = nE(),
+        h = d === t.id,
+        f = c && h ? [ef.M.CLOUD_PLAY_POPOVER] : [],
+        [p, E] = (0, tR.kn)(f),
+        m = p === ef.M.CLOUD_PLAY_POPOVER;
+    r.useEffect(() => {
+        c && null === d && _(t.id);
+    }, [d, c, t.id, _]),
+        r.useEffect(
+            () => () => {
+                m && (E(tO.i.USER_DISMISS), _(null));
+            },
+            [m, E, _],
         );
-    },
-    ng = (e) => {
-        let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: r } = e;
-        return (0, i.jsx)(nm, { entry: t, targetElementRef: r, isFirstApplicationOccurrence: n });
-    };
+    let [g, A] = r.useState(!1);
+    return (
+        r.useEffect(() => {
+            m && !g && A(!0);
+        }, [m, g]),
+        (0, nt.A)(
+            {
+                name: t9.ImpressionNames.CLOUD_PLAY_CTA,
+                type: t9.ImpressionTypes.VIEW,
+                properties: { location_stack: o },
+            },
+            { disableTrack: !g },
+            [g],
+        ),
+        (0, i.jsx)(tv.A, {
+            title: eu.intl.string(eu.t["+WNDtV"]),
+            body: eu.intl.string(eu.t["5QKxGI"]),
+            targetElementRef: s,
+            shouldShow: m,
+            position: "left",
+            caretConfig: { align: "center" },
+            gradientColor: "pink",
+            graphic: {
+                type: "image",
+                src: "https://cdn.discordapp.com/assets/content/89fae27b507d71982d8ba38286e78d3ca4b35e6c3e5e7a78263552a656f6f5a6.svg",
+            },
+            actions: [
+                {
+                    icon: T.h,
+                    text: eu.intl.string(eu.t["jaYS/h"]),
+                    onClick: function () {
+                        l?.();
+                    },
+                },
+            ],
+            onRequestClose: function () {
+                E(tO.i.USER_DISMISS), _(null);
+            },
+        })
+    );
+}
+let ng = function (e) {
+    let { entry: t, isFirstApplicationOccurrence: n, targetElementRef: r } = e;
+    return (0, i.jsx)(nm, { entry: t, targetElementRef: r, isFirstApplicationOccurrence: n });
+};
 var nA = n(363670),
     nI = n(205327),
     nT = n(52133),
@@ -1836,9 +1837,9 @@ var nA = n(363670),
     nO = n(495544),
     nb = n(121090),
     nD = n(974690);
-let nL = async (e) => {
+async function nL(e) {
     let { user: t, channel: n, mediaImageSrc: i, artist: r, description: s, colors: a, badges: o } = e,
-        l = ((e) => {
+        l = (function (e) {
             let { avatarSrc: t, mediaImageSrc: n } = e;
             return { AvatarImage: t, ...(null != n && { MediaImage: n }) };
         })({ avatarSrc: t.getAvatarURL(n.guild_id, 128), mediaImageSrc: i }),
@@ -1871,7 +1872,7 @@ let nL = async (e) => {
             channelId: n.id,
         },
     });
-};
+}
 var nw = n(693879),
     nM = n(809854),
     nP = n(272984),
@@ -1929,14 +1930,14 @@ function nU(e) {
                 channel: a,
                 mediaImageSrc: _?.src,
                 artist: p,
-                description: ((e, t, n) => {
+                description: (function (e, t, n) {
                     let { artist: i, media: r } = e,
                         s = eu.t["6iNxrl"],
                         a = w.Ay.getName(t.guild_id, t.id, n);
                     return eu.intl.formatToMarkdownString(s, { artist: i, userName: a, media: r }).replaceAll("*", "");
                 })({ artist: p, media: E }, a, m),
                 colors: [g, A],
-                badges: ((e) => {
+                badges: (function (e) {
                     let { timestamp: t } = e;
                     return [
                         {
@@ -2028,7 +2029,7 @@ var nG = n(56121),
     nB = n(352760);
 let nj = [ed.Y8],
     nH = [nG.j.WEEK],
-    nY = r.memo((e) => {
+    nY = r.memo(function (e) {
         let { entry: t, channel: n, selected: r } = e,
             { largeImage: s } = (0, M.nO)({ entry: t, trackingSource: "memberlist_top_artist_content_row" }),
             a = (0, x.TQ)(t);
@@ -2052,10 +2053,9 @@ let nj = [ed.Y8],
             : null;
     });
 var nW = n(210528);
-let nK = (e) => {
-    let t,
-        n,
-        { channel: s, entry: a, onReaction: o, onVoiceChannelPreview: l } = e,
+let nK = function (e) {
+    var t, n;
+    let { channel: s, entry: a, onReaction: o, onVoiceChannelPreview: l } = e,
         { parent_title: c, provider: d, image_url: _ } = a.extra.media,
         h = a.extra.artist.name,
         f = (0, u.bG)([E.default], () => E.default.getUser(a.author_id)),
@@ -2090,18 +2090,18 @@ let nK = (e) => {
         }, [_, h, s, a, p, g, m, f]),
         I = nd(eY.fg2.SPOTIFY);
     if (null == f || !(0, L.S1)(g, nH)) return null;
-    let T = () => {
+    function T() {
         let e = nP.M0.ALBUM,
             t = nW.A.isProtocolRegistered()
                 ? nP.RQ.PLAYER_OPEN(e, a.extra.media.external_parent_id)
                 : nP.RQ.WEB_OPEN(e, a.extra.media.external_parent_id);
         window.open(t);
-    };
+    }
     return (0, i.jsxs)(tK, {
         children: [
             (0, i.jsx)(tJ, {
                 onClickTitle: T,
-                onClickSubtitle: () => {
+                onClickSubtitle: function () {
                     let e = nP.M0.ARTIST,
                         t = nW.A.isProtocolRegistered()
                             ? nP.RQ.PLAYER_OPEN(e, a.extra.artist.external_id)
@@ -2144,10 +2144,9 @@ let nK = (e) => {
     });
 };
 var n$ = n(977001);
-let nz = (e) => {
-    let t,
-        n,
-        { channel: s, entry: a, disableGameProfileLinks: o, onReaction: l, onVoiceChannelPreview: u } = e,
+let nz = function (e) {
+    var t, n;
+    let { channel: s, entry: a, disableGameProfileLinks: o, onReaction: l, onVoiceChannelPreview: u } = e,
         { largeImage: c } = (0, M.nO)({ entry: a, trackingSource: "memberlist_top_game_content_popout" }),
         { user: d, details: _, appName: h } = (0, t1.u)(a),
         { primaryColor: f, secondaryColor: p } = (0, X.A)(c?.src),
@@ -2224,71 +2223,66 @@ var nq = n(514243),
     nZ = n(347306),
     nX = n(123917),
     nQ = n(998218);
-let nJ = async (e) => {
-        let t,
-            {
-                mediaImageSrc: n,
-                entry: i,
-                avatarSrc: r,
-                description: s,
-                timestamp: a,
-                episodeDescription: o,
-                colors: l,
-                channelId: u,
-            } = e,
-            c = i.extra.media_title,
-            d = { AvatarImage: r, ...(null != n && { MediaImage: n }), ...(null != t && { ApplicationImage: t }) };
-        return await z({
-            assetsToLoad: d,
-            drawImage: (e) => {
-                let t,
-                    n = l.map((e, t) => ({ color: e, stop: t }));
-                e.setSize({ w: 400, h: 120 }, 4),
-                    e.drawRoundedGradientRect(n, { x: 0, y: 120 }, { x: 400, y: 0 }, { x: 0, y: 0, h: 120, w: 400 }, 8),
-                    e.setColor("white");
-                let i = e.drawRoundedImage("MediaImage", { x: 12, y: 12 }, { w: 96, h: 96 }, 8, {
-                    fillMode: j.VZ.Contain,
+async function nJ(e) {
+    let {
+            mediaImageSrc: t,
+            entry: n,
+            avatarSrc: i,
+            description: r,
+            timestamp: s,
+            episodeDescription: a,
+            colors: o,
+            channelId: l,
+        } = e,
+        u = n.extra.media_title,
+        c = { AvatarImage: i, ...(null != t && { MediaImage: t }), ...!1 };
+    return await z({
+        assetsToLoad: c,
+        drawImage: function (e) {
+            let t,
+                n = o.map((e, t) => ({ color: e, stop: t }));
+            e.setSize({ w: 400, h: 120 }, 4),
+                e.drawRoundedGradientRect(n, { x: 0, y: 120 }, { x: 400, y: 0 }, { x: 0, y: 0, h: 120, w: 400 }, 8),
+                e.setColor("white");
+            let i = e.drawRoundedImage("MediaImage", { x: 12, y: 12 }, { w: 96, h: 96 }, 8, { fillMode: j.VZ.Contain });
+            i === j.uS.Failure && (i = e.drawRoundedImage("ApplicationImage", { x: 12, y: 12 }, { w: 96, h: 96 }, 8)),
+                i === j.uS.Failure && e.drawPath(B, { x: 12, y: 12 }, !0, 2 + 2 / 3),
+                e.drawRoundedImage("AvatarImage", { x: 120, y: 12 }, { w: 32, h: 32 }, 50),
+                e.setFont({ size: 16, family: ea, weight: 500, truncate: j.Kq.Wrap }),
+                e.drawText(r, { x: 120, y: 64, h: 32, w: 260 }, !0),
+                eo({
+                    canvas: e,
+                    badges:
+                        ((t = [
+                            {
+                                iconPath:
+                                    "M 4 1 C 2.3431 1 1 2.3431 1 4 V 13 C 1 14.6569 2.3431 16 4 16 H 20 C 21.6568 16 23 14.6569 23 13 V 4 C 23 2.3431 21.6568 1 20 1 H 4 Z M 6 18 C 5.4477 18 5 18.4477 5 19 C 5 19.5523 5.4477 20 6 20 H 18 C 18.5523 20 19 19.5523 19 19 C 19 18.4477 18.5523 18 18 18 H 6 Z",
+                                text: s,
+                            },
+                        ]),
+                        null != a &&
+                            t.push({
+                                iconPath:
+                                    "M3.11 8H6v10.82c0 .86.37 1.68 1 2.27.46.43 1.02.71 1.63.84A1 1 0 0 0 9 22h10a4 4 0 0 0 4-4v-1a2 2 0 0 0-2-2h-1V5a3 3 0 0 0-3-3H4.67c-.87 0-1.7.32-2.34.9-.63.6-1 1.42-1 2.28 0 .71.3 1.35.52 1.75a5.35 5.35 0 0 0 .48.7l.01.01h.01L3.11 7l-.76.65a1 1 0 0 0 .76.35Zm1.56-4c-.38 0-.72.14-.97.37-.24.23-.37.52-.37.81a1.69 1.69 0 0 0 .3.82H6v-.83c0-.29-.13-.58-.37-.8C5.4 4.14 5.04 4 4.67 4Zm5 13a3.58 3.58 0 0 1 0 3H19a2 2 0 0 0 2-2v-1H9.66ZM3.86 6.35ZM11 8a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2h-5Zm-1 5a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2h-5a1 1 0 0 1-1-1Z",
+                                text: a,
+                            }),
+                        t),
+                    startPosition: 120,
+                    maxWidth: 260,
                 });
-                i === j.uS.Failure &&
-                    (i = e.drawRoundedImage("ApplicationImage", { x: 12, y: 12 }, { w: 96, h: 96 }, 8)),
-                    i === j.uS.Failure && e.drawPath(B, { x: 12, y: 12 }, !0, 2 + 2 / 3),
-                    e.drawRoundedImage("AvatarImage", { x: 120, y: 12 }, { w: 32, h: 32 }, 50),
-                    e.setFont({ size: 16, family: ea, weight: 500, truncate: j.Kq.Wrap }),
-                    e.drawText(s, { x: 120, y: 64, h: 32, w: 260 }, !0),
-                    eo({
-                        canvas: e,
-                        badges:
-                            ((t = [
-                                {
-                                    iconPath:
-                                        "M 4 1 C 2.3431 1 1 2.3431 1 4 V 13 C 1 14.6569 2.3431 16 4 16 H 20 C 21.6568 16 23 14.6569 23 13 V 4 C 23 2.3431 21.6568 1 20 1 H 4 Z M 6 18 C 5.4477 18 5 18.4477 5 19 C 5 19.5523 5.4477 20 6 20 H 18 C 18.5523 20 19 19.5523 19 19 C 19 18.4477 18.5523 18 18 18 H 6 Z",
-                                    text: a,
-                                },
-                            ]),
-                            null != o &&
-                                t.push({
-                                    iconPath:
-                                        "M3.11 8H6v10.82c0 .86.37 1.68 1 2.27.46.43 1.02.71 1.63.84A1 1 0 0 0 9 22h10a4 4 0 0 0 4-4v-1a2 2 0 0 0-2-2h-1V5a3 3 0 0 0-3-3H4.67c-.87 0-1.7.32-2.34.9-.63.6-1 1.42-1 2.28 0 .71.3 1.35.52 1.75a5.35 5.35 0 0 0 .48.7l.01.01h.01L3.11 7l-.76.65a1 1 0 0 0 .76.35Zm1.56-4c-.38 0-.72.14-.97.37-.24.23-.37.52-.37.81a1.69 1.69 0 0 0 .3.82H6v-.83c0-.29-.13-.58-.37-.8C5.4 4.14 5.04 4 4.67 4Zm5 13a3.58 3.58 0 0 1 0 3H19a2 2 0 0 0 2-2v-1H9.66ZM3.86 6.35ZM11 8a1 1 0 1 0 0 2h5a1 1 0 1 0 0-2h-5Zm-1 5a1 1 0 0 1 1-1h5a1 1 0 1 1 0 2h-5a1 1 0 0 1-1-1Z",
-                                    text: o,
-                                }),
-                            t),
-                        startPosition: 120,
-                        maxWidth: 260,
-                    });
-            },
-            exportConfigs: {
-                format: j.z5.CloudUpload,
-                quality: 1,
-                fileName: `user-reacting-to-${c}.png`.toLowerCase(),
-                fileType: "png",
-                channelId: u,
-            },
-        });
-    },
-    n0 = (e) => {
-        let t,
-            n,
-            { channel: s, entry: a, onReaction: o, onVoiceChannelPreview: l } = e,
+        },
+        exportConfigs: {
+            format: j.z5.CloudUpload,
+            quality: 1,
+            fileName: `user-reacting-to-${u}.png`.toLowerCase(),
+            fileType: "png",
+            channelId: l,
+        },
+    });
+}
+let n0 = function (e) {
+        var t, n;
+        let { channel: s, entry: a, onReaction: o, onVoiceChannelPreview: l } = e,
             c = (0, u.bG)([E.default], () => E.default.getUser(a.author_id)),
             { largeImage: d } = (0, M.nO)({ entry: a, trackingSource: "memberlist_watch_content_popout" }),
             { primaryColor: _, secondaryColor: h } = (0, X.A)(d?.src),
@@ -2326,15 +2320,12 @@ let nJ = async (e) => {
                     }
                 },
                 [s, a, m, f, d?.src, _, h, c],
-            ),
-            A = () => {
-                if (null == a.extra.url) return;
-                let e = nQ.A.safeParseWithQuery(a.extra.url);
-                null != e &&
-                    null != e.protocol &&
-                    null != e.hostname &&
-                    (0, nX.h)({ href: nQ.A.format(e), trusted: !1 });
-            };
+            );
+        function A() {
+            if (null == a.extra.url) return;
+            let e = nQ.A.safeParseWithQuery(a.extra.url);
+            null != e && null != e.protocol && null != e.hostname && (0, nX.h)({ href: nQ.A.format(e), trusted: !1 });
+        }
         return null == c
             ? null
             : (0, i.jsxs)(tK, {
@@ -2385,72 +2376,72 @@ function n2(e) {
             : n1
         : 0;
 }
-let n3 = (e) => {
-        let { entry: t, ...n } = e;
-        switch (t.content_type) {
-            case l.ContentInventoryEntryType.PLAYED_GAME:
-                return (0, i.jsx)(t3.A, { ...n, entry: t });
-            case l.ContentInventoryEntryType.WATCHED_MEDIA:
-                return (0, i.jsx)(nq.A, { ...n, entry: t });
-            case l.ContentInventoryEntryType.TOP_GAME:
-                return (0, i.jsx)(n$.Ay, { ...n, entry: t });
-            case l.ContentInventoryEntryType.TOP_ARTIST:
-                return (0, i.jsx)(nY, { ...n, entry: t });
-            case l.ContentInventoryEntryType.LISTENED_SESSION:
-                return (0, i.jsx)(nA.Ay, { ...n, entry: t });
-            case l.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
-                return (0, i.jsx)(g.A, { ...n, entry: t });
-            default:
-                return null;
-        }
-    },
-    n6 = (e) => {
-        let { entry: t, targetElementRef: n, ...r } = e;
-        return t.content_type === l.ContentInventoryEntryType.PLAYED_GAME
-            ? (0, i.jsx)(ng, {
-                  entry: t,
-                  targetElementRef: n,
-                  isFirstApplicationOccurrence: r.isFirstApplicationOccurrence ?? !1,
-              })
-            : null;
-    },
-    n4 = (e) => {
-        let { closePopout: t, ...n } = e;
-        return (0, i.jsx)(n5, {
-            onReaction: (e, i) => {
-                n.trackRankingItemInteraction(e, { destinationChannelId: i.id, destinationGuildId: i.guild_id }), t();
-            },
-            closePopout: t,
-            onVoiceChannelPreview: (e) => {
-                n.trackRankingItemInteraction(tV.PA.VOICE_CHANNEL_PREVIEWED, {
-                    destinationChannelId: e.id,
-                    destinationGuildId: e.guild_id,
-                });
-            },
-            ...n,
-        });
-    },
-    n5 = (e) => {
-        let { entry: t, ...n } = e;
-        switch (t.content_type) {
-            case l.ContentInventoryEntryType.PLAYED_GAME:
-                return (0, i.jsx)(np, { ...n, entry: t });
-            case l.ContentInventoryEntryType.WATCHED_MEDIA:
-                return (0, i.jsx)(n0, { ...n, entry: t });
-            case l.ContentInventoryEntryType.TOP_GAME:
-                return (0, i.jsx)(nz, { ...n, entry: t });
-            case l.ContentInventoryEntryType.TOP_ARTIST:
-                return (0, i.jsx)(nK, { ...n, entry: t });
-            case l.ContentInventoryEntryType.LISTENED_SESSION:
-                return (0, i.jsx)(nU, { ...n, entry: t });
-            case l.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
-                return (0, i.jsx)(t2, { ...n, entry: t });
-            default:
-                return null;
-        }
-    },
-    n7 = r.createContext(void 0),
-    n8 = r.memo((e) => {
+function n3(e) {
+    let { entry: t, ...n } = e;
+    switch (t.content_type) {
+        case l.ContentInventoryEntryType.PLAYED_GAME:
+            return (0, i.jsx)(t3.A, { ...n, entry: t });
+        case l.ContentInventoryEntryType.WATCHED_MEDIA:
+            return (0, i.jsx)(nq.A, { ...n, entry: t });
+        case l.ContentInventoryEntryType.TOP_GAME:
+            return (0, i.jsx)(n$.Ay, { ...n, entry: t });
+        case l.ContentInventoryEntryType.TOP_ARTIST:
+            return (0, i.jsx)(nY, { ...n, entry: t });
+        case l.ContentInventoryEntryType.LISTENED_SESSION:
+            return (0, i.jsx)(nA.Ay, { ...n, entry: t });
+        case l.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
+            return (0, i.jsx)(g.A, { ...n, entry: t });
+        default:
+            return null;
+    }
+}
+function n6(e) {
+    let { entry: t, targetElementRef: n, ...r } = e;
+    return t.content_type === l.ContentInventoryEntryType.PLAYED_GAME
+        ? (0, i.jsx)(ng, {
+              entry: t,
+              targetElementRef: n,
+              isFirstApplicationOccurrence: r.isFirstApplicationOccurrence ?? !1,
+          })
+        : null;
+}
+function n4(e) {
+    let { closePopout: t, ...n } = e;
+    return (0, i.jsx)(n5, {
+        onReaction: (e, i) => {
+            n.trackRankingItemInteraction(e, { destinationChannelId: i.id, destinationGuildId: i.guild_id }), t();
+        },
+        closePopout: t,
+        onVoiceChannelPreview: (e) => {
+            n.trackRankingItemInteraction(tV.PA.VOICE_CHANNEL_PREVIEWED, {
+                destinationChannelId: e.id,
+                destinationGuildId: e.guild_id,
+            });
+        },
+        ...n,
+    });
+}
+function n5(e) {
+    let { entry: t, ...n } = e;
+    switch (t.content_type) {
+        case l.ContentInventoryEntryType.PLAYED_GAME:
+            return (0, i.jsx)(np, { ...n, entry: t });
+        case l.ContentInventoryEntryType.WATCHED_MEDIA:
+            return (0, i.jsx)(n0, { ...n, entry: t });
+        case l.ContentInventoryEntryType.TOP_GAME:
+            return (0, i.jsx)(nz, { ...n, entry: t });
+        case l.ContentInventoryEntryType.TOP_ARTIST:
+            return (0, i.jsx)(nK, { ...n, entry: t });
+        case l.ContentInventoryEntryType.LISTENED_SESSION:
+            return (0, i.jsx)(nU, { ...n, entry: t });
+        case l.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
+            return (0, i.jsx)(t2, { ...n, entry: t });
+        default:
+            return null;
+    }
+}
+let n7 = r.createContext(void 0),
+    n8 = r.memo(function (e) {
         let { index: t, ref: s, ...l } = e,
             p = r.useRef(null),
             [g, A] = r.useState("default"),
@@ -2511,13 +2502,13 @@ let n3 = (e) => {
                         { leading: !0, trailing: !1 },
                     ),
                 [],
-            ),
-            U = () => {
-                (R.current = !1),
-                    setTimeout(() => {
-                        R.current || (b(!1), L(w));
-                    }, 100);
-            };
+            );
+        function U() {
+            (R.current = !1),
+                setTimeout(() => {
+                    R.current || (b(!1), L(w));
+                }, 100);
+        }
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 I && (0, i.jsx)(n6, { ...l, targetElementRef: p }),

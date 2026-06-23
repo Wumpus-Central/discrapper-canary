@@ -1,3 +1,5 @@
 "use strict";
+function i(e) {
+    return null != e.text;
+}
 n.d(t, { C: () => i });
-let i = (e) => null != e.text;

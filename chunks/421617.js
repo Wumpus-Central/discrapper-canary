@@ -9,8 +9,8 @@ var a = t(627968),
     m = t(462887),
     o = t(939249),
     x = t(534514),
-    h = t(628284),
-    u = t(289873),
+    u = t(628284),
+    h = t(289873),
     j = t(683071),
     p = t(231723),
     g = t(935462),
@@ -21,9 +21,9 @@ var a = t(627968),
     T = t(22231),
     C = t(608461),
     I = t(95561),
-    S = t(139286),
-    L = t(363195),
-    f = t(174459),
+    f = t(139286),
+    S = t(363195),
+    L = t(174459),
     y = t(636537),
     A = t(228366),
     D = t(652215);
@@ -171,7 +171,7 @@ function V(e) {
         onClick: l,
         children: [
             t
-                ? (0, a.jsx)(h.y, {
+                ? (0, a.jsx)(u.y, {
                       size: "custom",
                       width: 20,
                       height: 20,
@@ -219,7 +219,7 @@ function q(e) {
             (0, a.jsx)(v.$, {
                 variant: "primary",
                 text: B.intl.string(B.t["1W7mCt"]),
-                onClick: () => {
+                onClick: function () {
                     t({ ...s, listings: [{ ...s.listings[0], price_tier: i[r] }] });
                 },
             }),
@@ -239,7 +239,7 @@ function ee(e) {
                 children: [
                     (0, a.jsx)(x.D, { variant: "heading-md/normal", className: r()({ [J.kE]: !l }), children: s }),
                     l &&
-                        (0, a.jsx)(h.y, {
+                        (0, a.jsx)(u.y, {
                             size: "md",
                             secondaryColor: d.A.unsafe_rawColors.WHITE.css,
                             color: d.A.unsafe_rawColors.BRAND_500.css,
@@ -251,9 +251,9 @@ function ee(e) {
 }
 function es(e) {
     let { loading: s, error: t, templates: l, selectedTemplateIndex: i, handleTapTemplate: r } = e,
-        n = (0, c.bG)([L.A], () => L.A.theme);
+        n = (0, c.bG)([S.A], () => S.A.theme);
     return s
-        ? (0, a.jsx)(u.y, {})
+        ? (0, a.jsx)(h.y, {})
         : null != t
           ? (0, a.jsx)(j.w, { type: "critical", children: t.message })
           : null == l || 0 === l.length
@@ -312,15 +312,15 @@ function ea(e) {
             addNewEditStateFromScratch: d,
             priceTiers: m,
         } = e,
-        h = (0, c.bG)([b.A], () => b.A.getTemplates(i)),
-        [u, { loading: j, error: L }] = (0, C.A)(R),
+        u = (0, c.bG)([b.A], () => b.A.getTemplates(i)),
+        [h, { loading: j, error: S }] = (0, C.A)(R),
         y = l.useRef("voluntarily_exit");
     l.useEffect(() => {
-        (null == h || 0 === h.length) && u(i);
-    }, [u, i, h]),
+        (null == u || 0 === u.length) && h(i);
+    }, [h, i, u]),
         l.useEffect(() => {
             s === p.ip.EXITING &&
-                f.default.track(D.HAw.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
+                L.default.track(D.HAw.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
                     exit_reason: y.current,
                     ...(0, I.H$)(i),
                 });
@@ -344,7 +344,7 @@ function ea(e) {
             O ? G(!1) : t();
         }, [O, t]);
     return (
-        (0, S.A)({
+        (0, f.A)({
             type: n.ImpressionTypes.MODAL,
             name: n.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
             properties: { guild_id: i },
@@ -400,10 +400,10 @@ function ea(e) {
                                             className: J.QX,
                                             children: (0, a.jsx)(es, {
                                                 loading: j,
-                                                error: L,
-                                                templates: h,
+                                                error: S,
+                                                templates: u,
                                                 selectedTemplateIndex: U,
-                                                handleTapTemplate: (e) => {
+                                                handleTapTemplate: function (e) {
                                                     k(e);
                                                 },
                                             }),
@@ -412,7 +412,7 @@ function ea(e) {
                                 }),
                                 (0, a.jsx)(E.E, { variant: "text-sm/normal", children: B.intl.string(B.t.jymUTC) }),
                                 (0, a.jsx)(v.$, {
-                                    onClick: () => {
+                                    onClick: function () {
                                         (y.current = "create_from_scratch"), d(), t();
                                     },
                                     variant: "secondary",
@@ -423,7 +423,7 @@ function ea(e) {
                         }),
                         (0, a.jsx)(et, {
                             guildId: i,
-                            templates: h,
+                            templates: u,
                             selectedTemplateIndex: U,
                             priceTiers: m,
                             showPriceReselection: O,

@@ -154,15 +154,15 @@ function w(e) {
 }
 function S(e) {
     let { applicationRoleConnection: l, className: n, locale: t, onApplicationClicked: i, selectedGuildId: r } = e,
-        c = (0, A.VW)(l, t),
-        o = () => {
-            i?.(),
-                (0, N.transitionToGlobalDiscovery)({
-                    tab: k.GlobalDiscoveryTab.APPS,
-                    applicationId: l.application.id,
-                    newSessionState: { entrypoint: { name: _.sW.APPLICATION_DIRECTORY_URL }, guildId: r },
-                });
-        };
+        c = (0, A.VW)(l, t);
+    function o() {
+        i?.(),
+            (0, N.transitionToGlobalDiscovery)({
+                tab: k.GlobalDiscoveryTab.APPS,
+                applicationId: l.application.id,
+                newSessionState: { entrypoint: { name: _.sW.APPLICATION_DIRECTORY_URL }, guildId: r },
+            });
+    }
     return (0, a.jsxs)("li", {
         className: s()(R.WD, null != c && c.length > 0 ? R.l1 : null, n),
         children: [

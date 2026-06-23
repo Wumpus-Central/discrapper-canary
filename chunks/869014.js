@@ -22,28 +22,28 @@ function m(e) {
 let g = null,
     A = !1,
     I = !1,
-    T = {},
-    S = (e) => {
-        try {
-            let t = s.A.getWindow(_.f);
-            if (null == t || "function" != typeof t.requestAnimationFrame) return (g = "OverlayNotAvailable"), f(e);
-            if (!I) return (g = "MainWindowFocused"), f(e);
-            if (!m(!0)) return (g = "NoOverlayRendering"), f(e);
-            let n = null !== d.A.getFocusedRunningGame(),
-                i = a.A.isFocused((0, o.Q2)(t));
-            if ((a.A.isFocused() && h.error("Main window is reported as focused when it should not be!"), n || i)) {
-                g = n ? "OverlayGameFocused" : "OverlayWindowFocused";
-                let i = t.requestAnimationFrame((t) => {
-                    delete T[i], e(t);
-                });
-                return (T[i] = e), i;
-            }
-        } catch (e) {
-            h.error("RAF redirect failed, falling back to original. Cause:", e),
-                (0, l.pj)(e, c.default.getOverlayMethod(d.A.getTargetPID()));
+    T = {};
+function S(e) {
+    try {
+        let t = s.A.getWindow(_.f);
+        if (null == t || "function" != typeof t.requestAnimationFrame) return (g = "OverlayNotAvailable"), f(e);
+        if (!I) return (g = "MainWindowFocused"), f(e);
+        if (!m(!0)) return (g = "NoOverlayRendering"), f(e);
+        let n = null !== d.A.getFocusedRunningGame(),
+            i = a.A.isFocused((0, o.Q2)(t));
+        if ((a.A.isFocused() && h.error("Main window is reported as focused when it should not be!"), n || i)) {
+            g = n ? "OverlayGameFocused" : "OverlayWindowFocused";
+            let i = t.requestAnimationFrame((t) => {
+                delete T[i], e(t);
+            });
+            return (T[i] = e), i;
         }
-        return (g = "None"), f(e);
-    };
+    } catch (e) {
+        h.error("RAF redirect failed, falling back to original. Cause:", e),
+            (0, l.pj)(e, c.default.getOverlayMethod(d.A.getTargetPID()));
+    }
+    return (g = "None"), f(e);
+}
 function y() {
     return !a.A.isFocused() || !a.A.isVisible();
 }

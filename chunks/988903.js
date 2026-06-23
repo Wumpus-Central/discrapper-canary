@@ -52,30 +52,30 @@ var m = n(14594),
     g = n(652215);
 let A = 3 * o.A.Millis.DAY,
     I = o.A.Millis.WEEK,
-    T = o.A.Millis.DAYS_30,
-    S = () => {
-        if (!u.getConfig({ location: "block_user_feedback_utils" }).enabled) return !1;
-        let e = s.A.getSinces();
-        return Object.keys(e).some((t) => {
-            let n = Date.now() - Date.parse(e[t]);
-            return s.A.isBlocked(t) && n > I && n < T;
-        });
-    },
-    y = (e, t, n, i) => {
-        a.default.track(g.HAw.BLOCK_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
-    },
-    C = () => {
-        let { enabled: e, shouldGetShorterIgnoreDuration: t } = E.getConfig({ location: "ignore_user_feedback_utils" });
-        if (!e) return !1;
-        let { isDismissed: n } = (0, r.FZ)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: m.aH });
-        if (n) return !1;
-        let a = t ? A : I,
-            o = p.getIgnoreTimestamps();
-        return Object.keys(o).some((e) => {
-            let t = Date.now() - Number(o[e]);
-            return s.A.isIgnored(e) && t > a && t < T;
-        });
-    },
-    N = (e, t, n, i) => {
-        a.default.track(g.HAw.IGNORE_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
-    };
+    T = o.A.Millis.DAYS_30;
+function S() {
+    if (!u.getConfig({ location: "block_user_feedback_utils" }).enabled) return !1;
+    let e = s.A.getSinces();
+    return Object.keys(e).some((t) => {
+        let n = Date.now() - Date.parse(e[t]);
+        return s.A.isBlocked(t) && n > I && n < T;
+    });
+}
+function y(e, t, n, i) {
+    a.default.track(g.HAw.BLOCK_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
+}
+function C() {
+    let { enabled: e, shouldGetShorterIgnoreDuration: t } = E.getConfig({ location: "ignore_user_feedback_utils" });
+    if (!e) return !1;
+    let { isDismissed: n } = (0, r.FZ)(i.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: m.aH });
+    if (n) return !1;
+    let a = t ? A : I,
+        o = p.getIgnoreTimestamps();
+    return Object.keys(o).some((e) => {
+        let t = Date.now() - Number(o[e]);
+        return s.A.isIgnored(e) && t > a && t < T;
+    });
+}
+function N(e, t, n, i) {
+    a.default.track(g.HAw.IGNORE_USER_FEEDBACK_SUBMITTED, { rating: e, feedback: t, reason: n, skipped: i });
+}

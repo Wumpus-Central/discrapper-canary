@@ -1,10 +1,10 @@
 t.d(a, { p: () => s });
 var i = t(627968);
 t(64700);
-var l = t(192308);
-let s = (e) => {
-    let { analyticsLocations: a, guildId: s, initialSelectedNameplate: d, stackingBehavior: n } = e;
-    (0, l.openModalLazy)(
+var n = t(192308);
+function s(e) {
+    let { analyticsLocations: a, guildId: s, initialSelectedNameplate: d, stackingBehavior: l } = e;
+    (0, n.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 t.e("34663"),
@@ -38,6 +38,6 @@ let s = (e) => {
             ]).then(t.bind(t, 818743));
             return (t) => (0, i.jsx)(e, { ...t, guildId: s, analyticsLocations: a, initialSelectedNameplate: d });
         },
-        { stackingBehavior: n },
+        { stackingBehavior: l },
     );
-};
+}

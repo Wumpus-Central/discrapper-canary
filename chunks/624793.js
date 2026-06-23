@@ -8,7 +8,7 @@ var i,
     l = n(860689),
     u = n(652215),
     c = (((i = {}).GUILD = "GUILD"), (i.APPLICATION = "APPLICATION"), i);
-let d = async (e) => {
+async function d(e) {
     let t = null;
     try {
         let n = (
@@ -19,7 +19,7 @@ let d = async (e) => {
             : n?.type === "APPLICATION" && (t = { application: h.createFromServer(n.application), type: n.type });
     } catch {}
     return t;
-};
+}
 class _ extends a.A {
     id;
     name;

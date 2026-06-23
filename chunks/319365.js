@@ -8,4 +8,6 @@ function a(e) {
         r = i.useMemo(() => ({ isFocused: n, setIsFocused: a }), [n, a]);
     return (0, l.jsx)(s.Provider, { value: r, children: t });
 }
-let r = () => i.useContext(s);
+function r() {
+    return i.useContext(s);
+}

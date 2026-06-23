@@ -99,7 +99,7 @@ let v = (e) => {
                             }),
                         ],
                     }),
-                (() => {
+                (function () {
                     if (0 === l.length) return null;
                     let e = l[0];
                     return (0, i.jsxs)(i.Fragment, {

@@ -1,98 +1,93 @@
-l.d(t, { A: () => p });
-var n = l(627968);
-l(64700);
-var i = l(503698),
-    s = l.n(i),
-    a = l(534890),
-    r = l(138134),
-    d = l(625903),
-    c = l(834730),
-    u = l(214947),
-    o = l(661531),
-    x = l(704333),
-    m = l(978940),
-    h = l(360669),
-    j = l(789645),
-    g = l(294433),
-    f = l(602339),
-    v = l(375708),
-    A = l(118619),
-    E = l(818050);
-let N = (e) => {
-        let { header: t, description: l, icon: i, inModal: a } = e;
-        return (0, n.jsxs)("div", {
-            className: s()(A.nM, E.QB, { [A.zE]: a }),
-            children: [
-                (0, n.jsx)("div", { className: A.zc, children: i }),
-                (0, n.jsxs)("div", {
-                    children: [
-                        (0, n.jsx)(c.E, {
-                            className: A.wx,
-                            variant: "text-sm/bold",
-                            color: "text-strong",
-                            children: t,
-                        }),
-                        (0, n.jsx)(c.E, { variant: "text-xs/medium", color: "text-default", children: l }),
-                    ],
-                }),
-            ],
-        });
-    },
-    p = (e) => {
-        let { inModal: t } = e,
-            l = (0, g.y)(v.intl.string(f.default["TCzk/e"]), v.intl.string(f.default["2OqtJJ"])),
-            i = (0, g.y)(v.intl.string(f.default.ASf7XN), v.intl.string(f.default["82y87X"])),
-            s = (0, g.y)(v.intl.string(f.default["0QDVFN"]), v.intl.string(f.default["1xBHHV"])),
-            E = v.intl.string(f.default["JvJ3P/"]),
-            p = (0, g.y)(v.intl.string(f.default.l0ChgF), v.intl.string(f.default.S2ss5X)),
-            T = (0, g.y)(v.intl.string(f.default.LDu4Uk), v.intl.string(f.default.fEgtLV)),
-            y = v.intl.string(f.default["4SCALu"]),
-            S = v.intl.string(f.default.oYf9P7),
-            I = (0, g.y)(v.intl.string(f.default["dES/2r"]), v.intl.string(f.default.ep6mdN)),
-            b = (0, g.y)(v.intl.string(f.default["30+sih"]), v.intl.string(f.default["0cuLn1"])),
-            _ = (0, g.y)(v.intl.string(f.default.tHTyRh), v.intl.string(f.default.TeNlMb)),
-            C = (0, g.y)(v.intl.string(f.default.wZejZr), v.intl.string(f.default.tdgcf1));
-        return (0, n.jsxs)("div", {
-            children: [
-                (0, n.jsx)(N, {
-                    header: E,
-                    description: p,
-                    icon: (0, n.jsx)(u.$, { size: "custom", width: 20, height: 20, color: o.A.colors.TEXT_STRONG.css }),
-                    inModal: t,
-                }),
-                (0, n.jsx)(N, {
-                    header: v.intl.string(f.default["44NEx6"]),
-                    description: T,
-                    icon: (0, n.jsx)(x.B, { size: "custom", width: 20, height: 20, color: o.A.colors.TEXT_STRONG.css }),
-                    inModal: t,
-                }),
-                (0, n.jsx)(N, { header: y, description: S, icon: (0, n.jsx)(a.o, { size: "md" }), inModal: t }),
-                (0, n.jsx)(N, {
-                    header: v.intl.string(f.default.GNs2ZH),
-                    description: v.intl.string(f.default.Ief2xc),
-                    icon: (0, n.jsx)(m._, { size: "md" }),
-                    inModal: t,
-                }),
-                (0, n.jsx)(N, {
-                    header: v.intl.string(f.default.PjM3r5),
-                    description: I,
-                    icon: (0, n.jsx)(h.B, { size: "md" }),
-                    inModal: t,
-                }),
-                (0, n.jsx)(N, { header: b, description: _, icon: (0, n.jsx)(r.i, { size: "md" }), inModal: t }),
-                (0, n.jsx)(N, {
-                    header: v.intl.string(f.default.UCuHM8),
-                    description: C,
-                    icon: (0, n.jsx)(d.Z, { size: "md" }),
-                    inModal: t,
-                }),
-                (0, n.jsx)(c.E, { className: A.x_, variant: "text-xxs/bold", color: "text-default", children: l }),
-                (0, n.jsx)(N, {
-                    header: i,
-                    description: s,
-                    icon: (0, n.jsx)(j.P, { size: "custom", width: 20, height: 20, color: o.A.colors.TEXT_STRONG.css }),
-                    inModal: t,
-                }),
-            ],
-        });
-    };
+n.d(t, { A: () => p });
+var l = n(627968);
+n(64700);
+var i = n(503698),
+    s = n.n(i),
+    r = n(534890),
+    a = n(138134),
+    d = n(625903),
+    c = n(834730),
+    u = n(214947),
+    o = n(661531),
+    x = n(704333),
+    m = n(978940),
+    h = n(360669),
+    f = n(789645),
+    j = n(294433),
+    g = n(602339),
+    v = n(375708),
+    A = n(118619),
+    E = n(818050);
+function N(e) {
+    let { header: t, description: n, icon: i, inModal: r } = e;
+    return (0, l.jsxs)("div", {
+        className: s()(A.nM, E.QB, { [A.zE]: r }),
+        children: [
+            (0, l.jsx)("div", { className: A.zc, children: i }),
+            (0, l.jsxs)("div", {
+                children: [
+                    (0, l.jsx)(c.E, { className: A.wx, variant: "text-sm/bold", color: "text-strong", children: t }),
+                    (0, l.jsx)(c.E, { variant: "text-xs/medium", color: "text-default", children: n }),
+                ],
+            }),
+        ],
+    });
+}
+let p = function (e) {
+    let { inModal: t } = e,
+        n = (0, j.y)(v.intl.string(g.default["TCzk/e"]), v.intl.string(g.default["2OqtJJ"])),
+        i = (0, j.y)(v.intl.string(g.default.ASf7XN), v.intl.string(g.default["82y87X"])),
+        s = (0, j.y)(v.intl.string(g.default["0QDVFN"]), v.intl.string(g.default["1xBHHV"])),
+        E = v.intl.string(g.default["JvJ3P/"]),
+        p = (0, j.y)(v.intl.string(g.default.l0ChgF), v.intl.string(g.default.S2ss5X)),
+        T = (0, j.y)(v.intl.string(g.default.LDu4Uk), v.intl.string(g.default.fEgtLV)),
+        y = v.intl.string(g.default["4SCALu"]),
+        S = v.intl.string(g.default.oYf9P7),
+        I = (0, j.y)(v.intl.string(g.default["dES/2r"]), v.intl.string(g.default.ep6mdN)),
+        b = (0, j.y)(v.intl.string(g.default["30+sih"]), v.intl.string(g.default["0cuLn1"])),
+        _ = (0, j.y)(v.intl.string(g.default.tHTyRh), v.intl.string(g.default.TeNlMb)),
+        C = (0, j.y)(v.intl.string(g.default.wZejZr), v.intl.string(g.default.tdgcf1));
+    return (0, l.jsxs)("div", {
+        children: [
+            (0, l.jsx)(N, {
+                header: E,
+                description: p,
+                icon: (0, l.jsx)(u.$, { size: "custom", width: 20, height: 20, color: o.A.colors.TEXT_STRONG.css }),
+                inModal: t,
+            }),
+            (0, l.jsx)(N, {
+                header: v.intl.string(g.default["44NEx6"]),
+                description: T,
+                icon: (0, l.jsx)(x.B, { size: "custom", width: 20, height: 20, color: o.A.colors.TEXT_STRONG.css }),
+                inModal: t,
+            }),
+            (0, l.jsx)(N, { header: y, description: S, icon: (0, l.jsx)(r.o, { size: "md" }), inModal: t }),
+            (0, l.jsx)(N, {
+                header: v.intl.string(g.default.GNs2ZH),
+                description: v.intl.string(g.default.Ief2xc),
+                icon: (0, l.jsx)(m._, { size: "md" }),
+                inModal: t,
+            }),
+            (0, l.jsx)(N, {
+                header: v.intl.string(g.default.PjM3r5),
+                description: I,
+                icon: (0, l.jsx)(h.B, { size: "md" }),
+                inModal: t,
+            }),
+            (0, l.jsx)(N, { header: b, description: _, icon: (0, l.jsx)(a.i, { size: "md" }), inModal: t }),
+            (0, l.jsx)(N, {
+                header: v.intl.string(g.default.UCuHM8),
+                description: C,
+                icon: (0, l.jsx)(d.Z, { size: "md" }),
+                inModal: t,
+            }),
+            (0, l.jsx)(c.E, { className: A.x_, variant: "text-xxs/bold", color: "text-default", children: n }),
+            (0, l.jsx)(N, {
+                header: i,
+                description: s,
+                icon: (0, l.jsx)(f.P, { size: "custom", width: 20, height: 20, color: o.A.colors.TEXT_STRONG.css }),
+                inModal: t,
+            }),
+        ],
+    });
+};

@@ -4,11 +4,13 @@ var i = n(885386),
     r = n(935208),
     s = n(322387),
     a = n(381849);
-let o = function (e) {
-        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        return (0, a.Ay)({ since: e, getFormatter: t ? a.i : a._e });
-    },
-    l = (e, t) => e.acked || (t !== i.xM && r.default.compare(t, e.id) >= 0);
+function o(e) {
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
+    return (0, a.Ay)({ since: e, getFormatter: t ? a.i : a._e });
+}
+function l(e, t) {
+    return e.acked || (t !== i.xM && r.default.compare(t, e.id) >= 0);
+}
 function u(e, t, n) {
     let i = r.default.fromTimestamp(new Date(t).getTime());
     return {
@@ -48,4 +50,6 @@ function d(e) {
         deeplink: e.urls.install.toString(),
     };
 }
-let _ = (e) => e.type === s.hW.RECENT_MENTION || e.type === s.hW.REPLY_MENTION;
+function _(e) {
+    return e.type === s.hW.RECENT_MENTION || e.type === s.hW.REPLY_MENTION;
+}

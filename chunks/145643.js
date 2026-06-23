@@ -14,7 +14,7 @@ class o extends i.Ay.Store {
     }
 }
 let l = new o(r.h, {
-    GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: (e) => {
+    GUILD_ROLE_CONNECTIONS_CONFIGURATIONS_FETCH_SUCCESS: function (e) {
         let { roleId: t, roleConnectionConfigurations: n } = e;
         a.set(t, n);
     },

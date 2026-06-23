@@ -95,15 +95,15 @@ let P = { start: 10, end: 15 },
                         }
                     });
             }),
-    ),
-    U = (e, t) => {
-        let n = x[e];
-        if (null != t && e === w.B.PREMIUM) {
-            let e = t.end + 1;
-            return Math.floor(Math.random() * (t.start - e) + e);
-        }
-        return Math.floor(Math.random() * n.length);
-    };
+    );
+function U(e, t) {
+    let n = x[e];
+    if (null != t && e === w.B.PREMIUM) {
+        let e = t.end + 1;
+        return Math.floor(Math.random() * (t.start - e) + e);
+    }
+    return Math.floor(Math.random() * n.length);
+}
 function G(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 32;
     if (null != e.id) return D.Ay.getEmojiURL({ id: e.id, animated: e.animated ?? !1, size: t });

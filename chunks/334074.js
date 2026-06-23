@@ -71,15 +71,16 @@ function h(e) {
                               )),
                 };
             }),
-            n = 0,
-            i = () => {
-                let t = Date.now();
+            n = 0;
+        return (
+            !(function t() {
+                let i = Date.now();
                 E(
                     new Set(
                         e
                             .filter((e) => {
-                                let { nextTime: n } = e;
-                                return t >= n;
+                                let { nextTime: t } = e;
+                                return i >= t;
                             })
                             .map((e) => {
                                 let { id: t } = e;
@@ -92,10 +93,11 @@ function h(e) {
                         let { nextTime: t } = e;
                         return t;
                     })
-                    .filter((e) => e > t);
-                r.length > 0 && (n = setTimeout(i, Math.min(Math.min(...r) - t, u.mnr)));
-            };
-        return i(), () => clearTimeout(n);
+                    .filter((e) => e > i);
+                r.length > 0 && (n = setTimeout(t, Math.min(Math.min(...r) - i, u.mnr)));
+            })(),
+            () => clearTimeout(n)
+        );
     }, [t, f, h]);
     let m = n ? [] : t.filter((e) => p.has(e.id)).map((e) => e.id),
         [g, A] = (0, s.Wl)(m.length > 0 ? c : null, { cooldownDurationMs: h.globalCooldownMs }, d, _),
@@ -126,7 +128,7 @@ function h(e) {
         }, [T, S, c, n, p, g]),
         {
             eligibleToShow: I,
-            markAsDismissed: (e, t) => {
+            markAsDismissed: function (e, t) {
                 (0, a.M)(e, c), A(t);
             },
         }

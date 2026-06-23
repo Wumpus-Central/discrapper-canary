@@ -17,7 +17,7 @@ var i = n(627968),
     E = n(114166),
     N = n(95561),
     v = n(106778),
-    x = n(922139),
+    x = n(308186),
     j = n(615300),
     I = n(717421),
     T = n(21161),
@@ -218,22 +218,21 @@ function ep(e) {
         });
     if (
         (l.useEffect(() => {
-            !s ||
-                x ||
-                (async () => {
-                    v(!0);
-                    let e = null != n ? await (0, ea.g_)(n) : null;
-                    if (null != e)
-                        switch ((E(e.type), e.type)) {
-                            case ea.rV.APPLICATION:
-                                f(e.application);
-                                break;
-                            case ea.rV.GUILD:
-                                h(e.guild);
-                        }
-                    else h(null);
-                    v(!1), j(!0);
-                })();
+            s && !x && e();
+            async function e() {
+                v(!0);
+                let e = null != n ? await (0, ea.g_)(n) : null;
+                if (null != e)
+                    switch ((E(e.type), e.type)) {
+                        case ea.rV.APPLICATION:
+                            f(e.application);
+                            break;
+                        case ea.rV.GUILD:
+                            h(e.guild);
+                    }
+                else h(null);
+                v(!1), j(!0);
+            }
         }, [n, s, x]),
         I)
     )
@@ -256,7 +255,7 @@ function ep(e) {
                   })
                 : ((t = em.intl.string(em.t["Igv+LS"])),
                   (0, i.jsxs)(g.D, {
-                      onClick: () => {
+                      onClick: function () {
                           u(!s);
                       },
                       className: eh.s4,
@@ -289,37 +288,40 @@ var ef = n(191226),
     eE = n(307217);
 function eN(e) {
     let {
-            emoji: t,
-            message: n,
-            type: l,
-            meBurst: a,
-            isBurstReaction: o = !1,
-            tooltipText: s,
-            tooltipTextAria: u,
-            onMouseEnter: c,
-            onMouseLeave: d,
-            onReactionClick: h,
-            isKeyboardNavigation: f,
-            emojiSizeTooltip: A,
-            nonce: E,
-            showingMoreEmojis: N,
-            setShowingMoreEmojis: v,
-        } = e,
-        x = () => {
-            d();
-            let e = o ? K.v.BURST : K.v.NORMAL;
-            (0, ef.$)(n, { emoji: t, reactionType: e });
-        },
-        j = "string" == typeof s ? "" === s.trim() : null == s,
+        emoji: t,
+        message: n,
+        type: l,
+        meBurst: a,
+        isBurstReaction: o = !1,
+        tooltipText: s,
+        tooltipTextAria: u,
+        onMouseEnter: c,
+        onMouseLeave: d,
+        onReactionClick: h,
+        isKeyboardNavigation: f,
+        emojiSizeTooltip: A,
+        nonce: E,
+        showingMoreEmojis: N,
+        setShowingMoreEmojis: v,
+    } = e;
+    function x() {
+        d();
+        let e = o ? K.v.BURST : K.v.NORMAL;
+        (0, ef.$)(n, { emoji: t, reactionType: e });
+    }
+    let j = "string" == typeof s ? "" === s.trim() : null == s,
         I = () =>
             j || null == s || null == u
                 ? null
                 : (0, i.jsx)(Y.E, { variant: "text-sm/normal", className: eE.Of, "aria-label": u, children: s }),
         T = (0, m.bG)([ee.default], () => ee.default.getCurrentUser()),
-        R = (0, et.TW)(T),
-        b = () =>
+        R = (0, et.TW)(T);
+    function b() {
+        return (
             null != t.id &&
-            (0, i.jsx)(ep, { emojiId: t.id, onClose: d, nonce: E, showingMoreEmojis: N, setShowingMoreEmojis: v });
+            (0, i.jsx)(ep, { emojiId: t.id, onClose: d, nonce: E, showingMoreEmojis: N, setShowingMoreEmojis: v })
+        );
+    }
     return l === K.v.BURST
         ? (0, i.jsxs)("div", {
               className: eE.xQ,
@@ -515,12 +517,12 @@ let eP = l.memo(function (e) {
             eO.h.dispatch({ type: "BURST_REACTION_EFFECT_CLEAR", channelId: t, messageId: n, emoji: a });
         }, [a, t, n]);
     return (l.useEffect(() => {
-        let e = () => {
+        function e() {
             if (h) return;
             let e = (0, e_.H)(`${Date.now()}${t}${n}${a.name}`) % 10;
             (e += s > 4 ? 4 : s - 1) > 7 &&
                 (g(!0), (0, J.on)({ channelId: t, messageId: n, emoji: a, key: eT.W.RANDOM }));
-        };
+        }
         if (h || (p && !f) || !f) return;
         e();
         let i = setInterval(e, 5e3);

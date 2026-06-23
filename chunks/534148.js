@@ -1,4 +1,4 @@
-n.d(t, { A: () => ef });
+n.d(t, { A: () => eb });
 var i,
     l = n(627968),
     s = n(64700),
@@ -14,8 +14,8 @@ var i,
     x = n(392054),
     A = n(168186),
     p = n(495273),
-    b = n(696451),
-    f = n(317525),
+    f = n(696451),
+    b = n(317525),
     j = n(71393),
     N = n(576705),
     E = n(542580),
@@ -39,11 +39,11 @@ function P(e) {
     let t = [e.username];
     return e?.nick != null && t.push(e.nick), { id: e.id, names: t };
 }
-function W(e) {
+function G(e) {
     return { id: e.id, names: [e.name] };
 }
 n(172879);
-var G = n(43105),
+var W = n(43105),
     D = n(990078),
     U = n(834730),
     B = n(939249),
@@ -55,10 +55,10 @@ var G = n(43105),
     Y = n(495544),
     q = n(174459),
     Z = n(562153),
-    Q = n(935208),
-    J = n(53656),
-    X = n(200662),
-    $ = n(739174),
+    J = n(935208),
+    Q = n(53656),
+    $ = n(200662),
+    X = n(739174),
     ee = n(503698),
     et = n.n(ee),
     en = n(785007),
@@ -109,7 +109,7 @@ function ed(e) {
         } = e,
         d = (0, c.bG)([j.A], () => j.A.getGuild(i));
     R()(null != d, "");
-    let u = (0, c.bG)([f.A], () => f.A.getSortedRoles(i)),
+    let u = (0, c.bG)([b.A], () => b.A.getSortedRoles(i)),
         [m, g] = s.useState(new Set()),
         h = s.useMemo(() => {
             let e = (0, A.Ap)(i),
@@ -131,7 +131,7 @@ function ed(e) {
                                         t = Z.Ay.getName(n, void 0, s);
                                     return e?.localeCompare(t);
                                 }
-                                return Q.default.compare(e.id, t.id);
+                                return J.default.compare(e.id, t.id);
                             })(n, l, i);
                         case x.RA.ROLE:
                             if (n.id === i) return -1;
@@ -141,19 +141,19 @@ function ed(e) {
                             if (n.id === e) return -1;
                             if (l.id === e) return 1;
                             let a = Number(n.canWrite) - Number(l.canWrite);
-                            return 0 !== a ? a : Q.default.compare(n.id, l.id);
+                            return 0 !== a ? a : J.default.compare(n.id, l.id);
                     }
                 });
         }, [i, r, u]),
         p = s.useCallback(
             (e, t) => {
-                n({}, [(0, X.Eu)(e, t)]);
+                n({}, [(0, $.Eu)(e, t)]);
             },
             [n],
         ),
-        b = s.useCallback(
+        f = s.useCallback(
             (e, t, i) => {
-                let l = (0, X.Eu)(e, t);
+                let l = (0, $.Eu)(e, t);
                 null != r[l] && n({ [l]: { id: e, permission: i, type: t } }, []);
             },
             [n, r],
@@ -165,8 +165,8 @@ function ed(e) {
         0 !== e.length && (z.A.requestMembersById(i, e, !1), g((t) => new Set([...t, ...e])));
     }, [i, r, m, g]);
     let N = (0, c.bG)([C.A], () => C.A.getApplicationId()),
-        E = (0, c.bG)([J.default], () =>
-            null == N ? void 0 : J.default.integrations.find((e) => e.application?.id === N),
+        E = (0, c.bG)([Q.default], () =>
+            null == N ? void 0 : Q.default.integrations.find((e) => e.application?.id === N),
         ),
         v = (0, c.bG)([F.A], () => void 0 !== E && F.A.canShowToggleTooltip(E.id));
     return h.length > 0
@@ -176,7 +176,7 @@ function ed(e) {
                   {
                       guild: d,
                       commandId: t,
-                      onChange: (t) => b(e.id, e.type, t),
+                      onChange: (t) => f(e.id, e.type, t),
                       onRemove: () => p(e.id, e.type),
                       overwrite: e,
                       integration: E,
@@ -213,26 +213,26 @@ function eu(e) {
               ? (t = o.id === p ? k.intl.string(k.t["1VF/0x"]) : k.intl.string(k.t.P1GnEd))
               : o.type === x.RA.ROLE && (t = k.intl.string(k.t.mcAijf)))
         : (t = null != i ? k.intl.string(k.t.tybdas) : k.intl.string(k.t["z2hjk/"]));
-    let b = d && null != c && o.id === n.id && void 0 !== g && !o.permission;
+    let f = d && null != c && o.id === n.id && void 0 !== g && !o.permission;
     s.useEffect(() => {
-        b &&
+        f &&
             q.default.track(O.HAw.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
                 ...(0, V.H$)(n.id),
                 application_id: c?.application?.id,
                 location: "toggle",
             });
-    }, [n.id, c?.application?.id, b]);
-    let f = s.useRef(null),
+    }, [n.id, c?.application?.id, f]);
+    let b = s.useRef(null),
         j = (0, l.jsx)(D.m, {
             text: t,
             shouldShow: h,
             position: "left",
             children: (0, l.jsx)("div", {
-                ref: f,
+                ref: b,
                 children: (0, l.jsx)(er, {
                     isDisabled: h,
                     currentValue: o.permission,
-                    onChange: b
+                    onChange: f
                         ? (e) => {
                               K.A.dismissToggleTooltip(n.id, c), a(e);
                           }
@@ -240,8 +240,8 @@ function eu(e) {
                 }),
             }),
         }),
-        N = (0, l.jsx)(G.A, {
-            targetElementRef: f,
+        N = (0, l.jsx)(W.A, {
+            targetElementRef: b,
             title: k.intl.string(k.t.ufFDiC),
             body: k.intl.format(k.t.pW4Crz, {
                 botName: g,
@@ -260,11 +260,11 @@ function eu(e) {
             children: [
                 (0, l.jsx)("div", {
                     className: ec.MB,
-                    children: (0, l.jsx)($.A, { guild: n, id: o.id, type: o.type, isLocked: h, lockTooltipText: t }),
+                    children: (0, l.jsx)(X.A, { guild: n, id: o.id, type: o.type, isLocked: h, lockTooltipText: t }),
                 }),
                 (0, l.jsxs)("div", {
                     className: ec.ev,
-                    children: [(0, l.jsx)(em, { commandId: i, isSentinel: m, isDisabled: !u, onRemove: r }), j, b && N],
+                    children: [(0, l.jsx)(em, { commandId: i, isSentinel: m, isDisabled: !u, onRemove: r }), j, f && N],
                 }),
             ],
         },
@@ -296,8 +296,8 @@ var eg = n(157559),
         i),
     eA = n(636547),
     ep = n(73510),
-    eb = n(996024);
-function ef(e) {
+    ef = n(996024);
+function eb(e) {
     let {
             applicationId: t,
             commandId: i,
@@ -310,9 +310,9 @@ function ef(e) {
         } = e,
         L = (0, c.bG)([C.A], () => (null == i ? null : C.A.getCommand(i)), [i]),
         w = L?.defaultMemberPermissions != null,
-        R = (0, c.bG)([j.A, b.Ay, N.A], () => {
+        R = (0, c.bG)([j.A, f.Ay, N.A], () => {
             let e = j.A.getGuild(a),
-                t = b.Ay.getSelfMember(a);
+                t = f.Ay.getSelfMember(a);
             return (
                 null != e &&
                 null != t &&
@@ -333,10 +333,10 @@ function ef(e) {
             for (let [n, i] of Object.entries(T)) i.type === x.RA.CHANNEL ? (e[n] = i) : (t[n] = i);
             return [e, t];
         }, [T]),
-        W = s.useCallback(
+        G = s.useCallback(
             (e) => {
                 let t = j.A.getGuild(a),
-                    n = b.Ay.getSelfMember(a);
+                    n = f.Ay.getSelfMember(a);
                 return (
                     null != t &&
                     null != n &&
@@ -354,7 +354,7 @@ function ef(e) {
             },
             [a, L, i, I],
         ),
-        G = s.useCallback(
+        W = s.useCallback(
             (e, t) => {
                 let n,
                     i,
@@ -366,7 +366,7 @@ function ef(e) {
                         let t = e.id;
                         if (((i = ex.REMOVE_ROLE), (0, p.N8)(a, t))) l = "@everyone";
                         else {
-                            let e = f.A.getRole(a, t);
+                            let e = b.A.getRole(a, t);
                             l = null != e ? e.name : "role";
                         }
                     }
@@ -374,7 +374,7 @@ function ef(e) {
                     let t = Object.values(e)[0].id;
                     if (((i = ex.DENY_ROLE), (0, p.N8)(a, t))) l = "@everyone";
                     else {
-                        let e = f.A.getRole(a, t);
+                        let e = b.A.getRole(a, t);
                         l = null != e ? e.name : "role";
                     }
                 }
@@ -404,9 +404,9 @@ function ef(e) {
             (e, n) => {
                 let i = {};
                 for (let [e, t] of Object.entries(T)) i[e] = { id: t.id, permission: t.permission, type: t.type };
-                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), W(i)) ? E.T0(t, M, i) : G(e, n);
+                ((i = Object.assign(i, e)), n.length > 0 && (i = r().omit(i, n)), G(i)) ? E.T0(t, M, i) : W(e, n);
             },
-            [t, T, M, W, G],
+            [t, T, M, G, W],
         ),
         U = s.useCallback(() => {
             let e = Object.keys(_);
@@ -488,10 +488,10 @@ function ef(e) {
                 : null,
             w
                 ? (0, l.jsxs)("div", {
-                      className: eb.Yg,
+                      className: ef.Yg,
                       children: [
-                          (0, l.jsx)(m.m, { size: "sm", color: "currentColor", className: eb.Kk }),
-                          (0, l.jsx)("span", { className: eb.iU, children: k.intl.format(k.t["2889Gq"], {}) }),
+                          (0, l.jsx)(m.m, { size: "sm", color: "currentColor", className: ef.Kk }),
+                          (0, l.jsx)("span", { className: ef.iU, children: k.intl.format(k.t["2889Gq"], {}) }),
                           (0, l.jsx)(g.$, {
                               variant: "secondary",
                               size: "sm",
@@ -511,7 +511,7 @@ function ef(e) {
                         eA.A,
                         {
                             bar: (0, l.jsx)(h.ST, {
-                                tooltipClassName: eb.YL,
+                                tooltipClassName: ef.YL,
                                 text: n,
                                 shouldShow: null != n,
                                 children: (t) =>
@@ -527,7 +527,7 @@ function ef(e) {
                             inModal: v,
                             title: e.title,
                             children: (0, l.jsx)("div", {
-                                className: v ? void 0 : eb.qI,
+                                className: v ? void 0 : ef.qI,
                                 children: (0, l.jsx)(ed, {
                                     guildId: a,
                                     commandId: i,
@@ -573,9 +573,9 @@ function eN(e) {
         let t = (0, c.bG)([j.A], () => j.A.getGuild(e));
         R()(null != t, "guild must be present to be editing its integration settings");
         let n = (0, c.bG)([N.A], () => N.A.getHighestRole(t)),
-            i = (0, c.yK)([b.Ay], () => b.Ay.getMembers(e), [e]),
+            i = (0, c.yK)([f.Ay], () => f.Ay.getMembers(e), [e]),
             l = (0, c.cf)([S.default], () => S.default.getUsers()),
-            a = (0, c.bG)([f.A], () => f.A.getSortedRoles(e), [e]),
+            a = (0, c.bG)([b.A], () => b.A.getSortedRoles(e), [e]),
             r = s.useMemo(() => {
                 let e = [];
                 for (let n of i) {
@@ -589,25 +589,24 @@ function eN(e) {
                 }
                 return e;
             }, [t, i, l]),
-            o = (e) => e.managed && e.tags?.bot_id != null,
-            d = s.useMemo(() => {
+            o = s.useMemo(() => {
                 let e = [];
                 for (let i of a) {
-                    if (o(i)) continue;
+                    if (i.managed && i.tags?.bot_id != null) continue;
                     let l = !(0, M._m)(i, O.xBc.ADMINISTRATOR) && N.A.isRoleHigher(t, n, i),
                         s = { id: i.id, name: i.name, canManage: l };
                     (0, M.Oy)(i) ? e.unshift(s) : e.push(s);
                 }
                 return e;
             }, [a, t, n]),
-            [u, m] = s.useState(""),
-            g = s.useMemo(() => {
+            [d, u] = s.useState(""),
+            m = s.useMemo(() => {
                 var t;
-                let n = (t = u).startsWith("@") ? t.substr(1) : t,
-                    i = u.startsWith("@") ? d.filter((t) => t.id === e) : d;
-                return { members: (0, y.I)(r, P, n), roles: (0, y.I)(i, W, n) };
-            }, [e, r, u, d]);
-        return { query: u, results: g, setQuery: m, unfilteredCount: g.members.length + g.roles.length };
+                let n = (t = d).startsWith("@") ? t.substr(1) : t,
+                    i = d.startsWith("@") ? o.filter((t) => t.id === e) : o;
+                return { members: (0, y.I)(r, P, n), roles: (0, y.I)(i, G, n) };
+            }, [e, r, d, o]);
+        return { query: d, results: m, setQuery: u, unfilteredCount: m.members.length + m.roles.length };
     })(e);
     return {
         ...t,

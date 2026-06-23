@@ -38,23 +38,25 @@ function A(e) {
         b = (0, o.bG)([f.Ay], () => null != t && f.Ay.isLocalMute(t)),
         D = (0, p.A)(t),
         L = (0, E.v)({ isSpeaking: i, voiceDb: D }),
-        w = (0, l.Kj)(n),
-        M = () => {
-            let e = b ? u.O : g ? c.c : d.z;
-            return s || g || b
-                ? (0, r.jsx)("div", {
-                      className: m.II,
-                      style: { width: w.status + 2 * w.offset, height: w.status + 2 * w.offset },
-                      children: (0, r.jsx)(
-                          e,
-                          { color: _.A.colors.WHITE.css, style: { width: w.status, height: w.status } },
-                          "status",
-                      ),
-                  })
-                : null;
-        },
-        P = () => (0, r.jsx)("div", { className: m.PQ, style: L }, "border"),
-        x = a()(
+        w = (0, l.Kj)(n);
+    function M() {
+        let e = b ? u.O : g ? c.c : d.z;
+        return s || g || b
+            ? (0, r.jsx)("div", {
+                  className: m.II,
+                  style: { width: w.status + 2 * w.offset, height: w.status + 2 * w.offset },
+                  children: (0, r.jsx)(
+                      e,
+                      { color: _.A.colors.WHITE.css, style: { width: w.status, height: w.status } },
+                      "status",
+                  ),
+              })
+            : null;
+    }
+    function P() {
+        return (0, r.jsx)("div", { className: m.PQ, style: L }, "border");
+    }
+    let x = a()(
             m.iE,
             {
                 [m.vk]: null != v,
@@ -70,7 +72,7 @@ function A(e) {
         style: U,
         onContextMenu: R,
         className: x,
-        children: (() => {
+        children: (function () {
             let e = (0, l.FT)(n),
                 t = (0, r.jsx)("img", { src: A, alt: " ", className: a()(m.sb, y, { [m.tb]: T && 0 === S }) });
             if (I) return t;

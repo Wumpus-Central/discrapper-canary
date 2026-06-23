@@ -5,7 +5,9 @@ var i = n(665260),
 function s(e, t) {
     return i.UI(i.iE(e, r.n3.UNREADS_ALL_MESSAGES, r.n3.UNREADS_ONLY_MENTIONS), t);
 }
-let a = (e) => i.iE(e, r.vv.UNREADS_ALL_MESSAGES, r.vv.UNREADS_ONLY_MENTIONS);
+function a(e) {
+    return i.iE(e, r.vv.UNREADS_ALL_MESSAGES, r.vv.UNREADS_ONLY_MENTIONS);
+}
 function o(e, t) {
     return i.UI(a(e), t);
 }

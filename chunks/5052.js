@@ -1,4 +1,4 @@
-i.d(t, { i: () => d });
+i.d(t, { i: () => E });
 var n = i(64700),
     s = i(735438),
     r = i(702841),
@@ -9,50 +9,52 @@ var u = i(889137),
     l = i(546727),
     g = i(375708);
 let E = function (e) {
-        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            E = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-            d = (0, r.bG)([o.A], () => o.A.validate(e), [e]),
-            S = (0, r.bG)([o.A], () => o.A.isRateLimited()),
-            m = n.useMemo(
-                () => (0, s.debounce)((e) => a.A.attemptUsername(e, i ? "registration" : "modal", i, E), 800),
-                [i, E],
+    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        E = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : void 0,
+        d = (function (e) {
+            let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+                i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                E = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+                d = (0, r.bG)([o.A], () => o.A.validate(e), [e]),
+                S = (0, r.bG)([o.A], () => o.A.isRateLimited()),
+                m = n.useMemo(
+                    () => (0, s.debounce)((e) => a.A.attemptUsername(e, i ? "registration" : "modal", i, E), 800),
+                    [i, E],
+                );
+            return (
+                n.useEffect(() => {
+                    t && !S && null == d && "" !== e && m(e);
+                }, [t, S, d, e, m]),
+                n.useMemo(
+                    () =>
+                        null != d
+                            ? (0, u.YW)(d)
+                                  .with({ rateLimited: !0 }, () => ({
+                                      type: l.q.RATE_LIMIT,
+                                      message: g.intl.string(g.t.T15lqn),
+                                  }))
+                                  .with({ error: u.P.not(u.P.nullish) }, (e) => {
+                                      let { error: t } = e;
+                                      return { type: l.q.ERROR, message: t };
+                                  })
+                                  .with({ taken: !1 }, () => ({
+                                      type: l.q.AVAILABLE,
+                                      message: g.intl.string(g.t.PgfBSx),
+                                  }))
+                                  .with({ taken: !0 }, () => ({ type: l.q.ERROR, message: g.intl.string(g.t.mCrAUb) }))
+                                  .with({ error: u.P.nullish }, () => ({ type: l.q.INTERNAL_ERROR, message: "" }))
+                                  .otherwise(() => void 0)
+                            : void 0,
+                    [d],
+                )
             );
-        return (
-            n.useEffect(() => {
-                t && !S && null == d && "" !== e && m(e);
-            }, [t, S, d, e, m]),
-            n.useMemo(
-                () =>
-                    null != d
-                        ? (0, u.YW)(d)
-                              .with({ rateLimited: !0 }, () => ({
-                                  type: l.q.RATE_LIMIT,
-                                  message: g.intl.string(g.t.T15lqn),
-                              }))
-                              .with({ error: u.P.not(u.P.nullish) }, (e) => {
-                                  let { error: t } = e;
-                                  return { type: l.q.ERROR, message: t };
-                              })
-                              .with({ taken: !1 }, () => ({ type: l.q.AVAILABLE, message: g.intl.string(g.t.PgfBSx) }))
-                              .with({ taken: !0 }, () => ({ type: l.q.ERROR, message: g.intl.string(g.t.mCrAUb) }))
-                              .with({ error: u.P.nullish }, () => ({ type: l.q.INTERNAL_ERROR, message: "" }))
-                              .otherwise(() => void 0)
-                        : void 0,
-                [d],
-            )
-        );
-    },
-    d = function (e) {
-        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-            s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : void 0,
-            r = E(e, t, i),
-            [a, o] = n.useState(void 0);
-        return (
-            n.useEffect(() => {
-                "" === e || e === s ? o(void 0) : null != r && o(r);
-            }, [r, e, s]),
-            a
-        );
-    };
+        })(e, t, i),
+        [S, m] = n.useState(void 0);
+    return (
+        n.useEffect(() => {
+            "" === e || e === E ? m(void 0) : null != d && m(d);
+        }, [d, e, E]),
+        S
+    );
+};

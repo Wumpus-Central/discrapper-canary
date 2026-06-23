@@ -90,7 +90,9 @@ function D(e) {
         });
     return (
         i.useEffect(() => {
-            let e = () => r.onChange();
+            function e() {
+                return r.onChange();
+            }
             return (
                 o.A.addChangeListener(e),
                 a.Ay.addChangeListener(e),
@@ -138,7 +140,7 @@ function L(e) {
         L.events.emit("onChange"), w();
     }),
         ((M = L =
-            ((e, t) => {
+            (function (e, t) {
                 let {
                     addMark: n,
                     removeMark: i,

@@ -18,14 +18,17 @@ let r = (0, i.mj)({
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-    }),
-    o = (e) => {
-        let t = a.useConfig({ location: e }).enabled,
-            n = r.useConfig({ location: e }).enabled,
-            i = s.useConfig({ location: e }).enabled;
-        return t || n || i;
-    },
-    l = (e) =>
+    });
+function o(e) {
+    let t = a.useConfig({ location: e }).enabled,
+        n = r.useConfig({ location: e }).enabled,
+        i = s.useConfig({ location: e }).enabled;
+    return t || n || i;
+}
+function l(e) {
+    return (
         a.getConfig({ location: e }).enabled ||
         r.getConfig({ location: e }).enabled ||
-        s.getConfig({ location: e }).enabled;
+        s.getConfig({ location: e }).enabled
+    );
+}

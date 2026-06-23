@@ -36,48 +36,48 @@ var E =
     (i[(i.MANUAL_MEMBER_VERIFICATION = 7)] = "MANUAL_MEMBER_VERIFICATION"),
     (i[(i.SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL = 8)] = "SOCIAL_LAYER_INTEGRATION_LINKED_CHANNEL"),
     i);
-let m = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
-            n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        switch (e) {
-            case 1:
-                return c.intl.string(c.t.HumZAi);
-            case 2:
-                return c.intl.string(c.t.gmCUFw);
-            case 3:
-                return c.intl.string(c.t["Ql/e9Y"]);
-            case 4:
-                return c.intl.string(c.t.Op8B3O);
-            case 5:
-                return c.intl.string(c.t["/3vIRd"]);
-            case 6:
-                if (null != t && !n) return c.intl.formatToPlainString(c.t.EIUjRy, { vanityUrl: t });
-                return c.intl.string(c.t.dGiD1O);
-            case 7:
-                return c.intl.string(c.t.vdu7oS);
-            case 8:
-                return c.intl.string(c.t["9/ZreX"]);
-            default:
-                return c.intl.string(c.t.DvMBkS);
-        }
-    },
-    g = (e) => {
-        switch (e) {
-            case "twitch":
-                return c.intl.string(c.t.AVGAkw);
-            case "youtube":
-                return c.intl.string(c.t.PHSAsn);
-            default:
-                return c.intl.string(c.t.gmCUFw);
-        }
-    },
-    A = (e) => {
-        let t = o.A.get((0, l.ML)(e)),
-            n = (0, a.Ay)();
-        return null != t && ["twitch", "youtube"].includes(e)
-            ? `url('${((0, s.M))(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
-            : null;
-    };
+function m(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
+        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    switch (e) {
+        case 1:
+            return c.intl.string(c.t.HumZAi);
+        case 2:
+            return c.intl.string(c.t.gmCUFw);
+        case 3:
+            return c.intl.string(c.t["Ql/e9Y"]);
+        case 4:
+            return c.intl.string(c.t.Op8B3O);
+        case 5:
+            return c.intl.string(c.t["/3vIRd"]);
+        case 6:
+            if (null != t && !n) return c.intl.formatToPlainString(c.t.EIUjRy, { vanityUrl: t });
+            return c.intl.string(c.t.dGiD1O);
+        case 7:
+            return c.intl.string(c.t.vdu7oS);
+        case 8:
+            return c.intl.string(c.t["9/ZreX"]);
+        default:
+            return c.intl.string(c.t.DvMBkS);
+    }
+}
+function g(e) {
+    switch (e) {
+        case "twitch":
+            return c.intl.string(c.t.AVGAkw);
+        case "youtube":
+            return c.intl.string(c.t.PHSAsn);
+        default:
+            return c.intl.string(c.t.gmCUFw);
+    }
+}
+function A(e) {
+    let t = o.A.get((0, l.ML)(e)),
+        n = (0, a.Ay)();
+    return null != t && ["twitch", "youtube"].includes(e)
+        ? `url('${((0, s.M))(n) ? t.icon.darkSVG : t.icon.lightSVG}')`
+        : null;
+}
 function I(e) {
     return {
         userId: e.user_id,

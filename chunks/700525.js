@@ -71,11 +71,11 @@ function d(e) {
         (0, i.jsx)(o.y, {})
     );
 }
-let _ = (e) => {
+function _(e) {
     let { theme: t, ...n } = e,
         r = (0, a.M)(t) ? "dark" : "light";
     return (0, i.jsx)(s.A, { sitekey: c._Ak, ...n, theme: r });
-};
+}
 (_.Themes = { LIGHT: "light", DARK: "dark" }),
     (_.Sizes = { COMPACT: "compact", NORMAL: "normal", INVISIBLE: "invisible" });
 let h = _;

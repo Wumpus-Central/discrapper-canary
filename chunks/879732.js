@@ -15,7 +15,7 @@ var e = t(627968),
     g = t(504049),
     C = t(696451),
     G = t(977997),
-    M = t(696582),
+    M = t(291247),
     T = t(239211),
     U = t(399476),
     _ = t(301541),
@@ -27,10 +27,10 @@ var e = t(627968),
     y = t(232835),
     O = t(576705),
     S = t(652215),
-    I = t(375708),
-    L = t(192308),
-    P = t(260509),
-    f = t(71393),
+    f = t(375708),
+    I = t(192308),
+    L = t(260509),
+    P = t(71393),
     k = t(287809),
     D = t(243949),
     X = t(180798);
@@ -86,7 +86,7 @@ let w = (0, u.A)(
                             null != d && d.actions.hasOwnProperty(p.G.SET_COMPLETED)
                                 ? p.G.UNSET_COMPLETED
                                 : p.G.SET_COMPLETED,
-                        u = o === p.G.SET_COMPLETED ? I.intl.string(I.t.VWNyUu) : I.intl.string(I.t.l9GqxI);
+                        u = o === p.G.SET_COMPLETED ? f.intl.string(f.t.VWNyUu) : f.intl.string(f.t.l9GqxI);
                     return t && null != n
                         ? (0, e.jsx)(
                               s.Dr,
@@ -103,18 +103,18 @@ let w = (0, u.A)(
                 })(Z, q),
                 ls =
                     ((n = (0, r.bG)([k.default], () => k.default.getCurrentUser())),
-                    null == (o = (0, r.bG)([f.A], () => f.A.getGuild(w))) ||
+                    null == (o = (0, r.bG)([P.A], () => P.A.getGuild(w))) ||
                     null == n ||
                     u.id === o.ownerId ||
                     u.bot ||
-                    !(0, P.ok)(o, n)
+                    !(0, L.ok)(o, n)
                         ? null
                         : (0, e.jsx)(s.Dr, {
                               id: "transfer-ownership",
                               color: "danger",
-                              label: I.intl.string(I.t.Z5s7PM),
+                              label: f.intl.string(f.t.Z5s7PM),
                               action: () =>
-                                  (0, L.openModalLazy)(async () => {
+                                  (0, I.openModalLazy)(async () => {
                                       let { default: l } = await Promise.all([t.e("74920"), t.e("78410")]).then(
                                           t.bind(t, 753031),
                                       );
@@ -122,16 +122,16 @@ let w = (0, u.A)(
                                   }),
                           })),
                 ld = (0, X.A)(u.id, w, !1, J),
-                lo = (0, b.A)({ id: u.id, label: I.intl.string(I.t["/AXYnE"]), onSuccess: K }),
+                lo = (0, b.A)({ id: u.id, label: f.intl.string(f.t["/AXYnE"]), onSuccess: K }),
                 lu = (0, x.A)(u, w),
                 lc = !!u?.isNonUserBot();
             return (0, e.jsxs)(a.W, {
                 "data-menu-migrated": !0,
                 navId: "user-context",
-                onClose: () => {
+                onClose: function () {
                     (0, d.Z_)(), V?.();
                 },
-                "aria-label": I.intl.string(I.t.liqwPJ),
+                "aria-label": f.intl.string(f.t.liqwPJ),
                 onSelect: W,
                 children: [
                     !lc &&

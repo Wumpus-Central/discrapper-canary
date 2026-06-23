@@ -36,10 +36,10 @@ class h extends o.Ay.Store {
     }
 }
 let f = new h(l.h, {
-    COLLECTIBLES_PURCHASES_FETCH: (e) => {
+    COLLECTIBLES_PURCHASES_FETCH: function (e) {
         (d = !0), (r = void 0);
     },
-    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: (e) => {
+    COLLECTIBLES_PURCHASES_FETCH_SUCCESS: function (e) {
         0 === e.purchases.length
             ? (c = u)
             : (0, a.isEqual)([...c.values()], e.purchases) || (c = new Map(e.purchases.map((e) => [e.skuId, e]))),
@@ -47,25 +47,25 @@ let f = new h(l.h, {
             (d = !1),
             (r = void 0);
     },
-    COLLECTIBLES_PURCHASES_FETCH_FAILURE: (e) => {
+    COLLECTIBLES_PURCHASES_FETCH_FAILURE: function (e) {
         let { error: t } = e;
         (c = u), (d = !1), (r = t), (_ = !0);
     },
-    COLLECTIBLES_CLAIM: (e) => {
+    COLLECTIBLES_CLAIM: function (e) {
         (i = e.skuId), (s = void 0);
     },
-    COLLECTIBLES_CLAIM_SUCCESS: (e) => {
+    COLLECTIBLES_CLAIM_SUCCESS: function (e) {
         null == e.purchases || 0 === e.purchases.length
             ? (c = u)
             : (0, a.isEqual)([...c.values()], e.purchases) || (c = new Map(e.purchases.map((e) => [e.skuId, e]))),
             (i = void 0),
             (s = void 0);
     },
-    COLLECTIBLES_CLAIM_FAILURE: (e) => {
+    COLLECTIBLES_CLAIM_FAILURE: function (e) {
         let { error: t, skuId: n } = e;
         (i = n), (s = t);
     },
-    LOGOUT: (e) => {
+    LOGOUT: function (e) {
         (c = u), (d = !1), (i = void 0), (r = void 0), (s = void 0), (_ = !1);
     },
 });

@@ -8,7 +8,7 @@ var i,
     d = e(544231),
     o = e(665909),
     x = e(117816);
-function m(t) {
+function u(t) {
     let { alt: n, ariaLabel: e, ariaHidden: i, role: a, width: r = 288, height: l = 162 } = t;
     return (0, s.jsx)("img", {
         style: { width: r, height: l },
@@ -19,7 +19,7 @@ function m(t) {
         role: a ?? "img",
     });
 }
-var u = e(821609),
+var m = e(821609),
     A = e(17928),
     h = e(287809),
     E = e(427262),
@@ -64,11 +64,11 @@ function O(t) {
     return (0, s.jsx)(S, {
         header: j.intl.string(j.t.sSMgC6),
         description: j.intl.formatToPlainString(j.t.q2QrTY, { username: a }),
-        heroImage: (0, s.jsx)(m, { alt: j.intl.string(j.t["3QhxXJ"]) }),
+        heroImage: (0, s.jsx)(u, { alt: j.intl.string(j.t["3QhxXJ"]) }),
         children: (0, s.jsxs)("div", {
             className: T.UD,
             children: [
-                (0, s.jsx)(u.$, {
+                (0, s.jsx)(m.$, {
                     text: j.intl.string(j.t["+o4Q7e"]),
                     variant: "primary",
                     fullWidth: !0,
@@ -76,7 +76,7 @@ function O(t) {
                         i(V.TAKE_ACTION), e(o.Wm.USER_TAKEOVER_MODAL_TAKE_ACTION);
                     },
                 }),
-                (0, s.jsx)(u.$, {
+                (0, s.jsx)(m.$, {
                     text: j.intl.string(j.t.xLkGzP),
                     variant: "secondary",
                     fullWidth: !0,
@@ -128,43 +128,43 @@ function D(t) {
     let { senderId: n, channelId: e, hasReported: i, onReport: r, trackAnalyticsEvent: l } = t,
         c = (0, A.bG)([M.A], () => M.A.isBlocked(n)),
         [d, x] = a.useState(c),
-        m = (0, U.N)(),
+        u = (0, U.N)(),
         h = (0, U.z)(),
         [E, g] = a.useState(!1),
         _ = (0, w.W)(e),
-        O = a.useMemo(() => (m ? 0 : h ? 2 : 1), [m, h]),
-        v = async () => {
-            null != _ &&
-                (g(!0),
-                await (0, y.LF)(
-                    _,
-                    () => {
-                        W.A.showReportSuccessToast(n, e), r();
-                    },
-                    () => {
-                        W.A.showFailedToast();
-                    },
-                ),
-                g(!1),
-                l(o.Wm.USER_TAKEOVER_MODAL_REPORT));
-        },
-        R = a.useMemo(() => {
-            switch (O) {
-                case 0:
-                    return j.intl.string(j.t.sZf6cz);
-                case 2:
-                    return j.intl.string(j.t.HQ2nKl);
-                default:
-                    return j.intl.string(j.t["65XQar"]);
-            }
-        }, [O]);
+        O = a.useMemo(() => (u ? 0 : h ? 2 : 1), [u, h]);
+    async function v() {
+        null != _ &&
+            (g(!0),
+            await (0, y.LF)(
+                _,
+                () => {
+                    W.A.showReportSuccessToast(n, e), r();
+                },
+                () => {
+                    W.A.showFailedToast();
+                },
+            ),
+            g(!1),
+            l(o.Wm.USER_TAKEOVER_MODAL_REPORT));
+    }
+    let R = a.useMemo(() => {
+        switch (O) {
+            case 0:
+                return j.intl.string(j.t.sZf6cz);
+            case 2:
+                return j.intl.string(j.t.HQ2nKl);
+            default:
+                return j.intl.string(j.t["65XQar"]);
+        }
+    }, [O]);
     return (0, s.jsx)(S, {
         header: j.intl.string(j.t["mWO+ys"]),
         description: j.intl.string(j.t.S0XtKF),
         children: (0, s.jsxs)("div", {
             className: T.UD,
             children: [
-                (0, s.jsx)(u.$, {
+                (0, s.jsx)(m.$, {
                     text: d ? j.intl.string(j.t.XyHpKH) : j.intl.string(j.t.l4Emac),
                     variant: "primary",
                     fullWidth: !0,
@@ -182,7 +182,7 @@ function D(t) {
                               }));
                     },
                 }),
-                (0, s.jsx)(u.$, {
+                (0, s.jsx)(m.$, {
                     text: i ? j.intl.string(j.t.QvwOJ6) : j.intl.string(j.t["7fHyE6"]),
                     variant: "secondary",
                     fullWidth: !0,
@@ -191,7 +191,7 @@ function D(t) {
                     loading: E,
                     disabled: i,
                 }),
-                (0, s.jsx)(u.$, {
+                (0, s.jsx)(m.$, {
                     text: R,
                     variant: "secondary",
                     fullWidth: !0,
@@ -215,11 +215,11 @@ var b = e(16459),
         (i[(i.TAKE_ACTION = 2)] = "TAKE_ACTION"),
         i);
 let F = (t) => {
-    let { warningId: n, warningType: e, senderId: i, modalProps: x, channelId: m } = t,
-        [u, A] = a.useState(0),
+    let { warningId: n, warningType: e, senderId: i, modalProps: x, channelId: u } = t,
+        [m, A] = a.useState(0),
         h = a.useMemo(
-            () => ({ channelId: m, senderId: i, warningId: n, warningType: e, isNudgeWarning: !1 }),
-            [m, i, n, e],
+            () => ({ channelId: u, senderId: i, warningId: n, warningType: e, isNudgeWarning: !1 }),
+            [u, i, n, e],
         );
     a.useEffect(() => {
         (0, o.QF)({ ...h, viewName: o.gN.SAFETY_TAKEOVER_MODAL });
@@ -243,7 +243,7 @@ let F = (t) => {
                 className: b.kL,
                 children: (0, s.jsxs)(l.t, {
                     width: 440,
-                    activeSlide: u,
+                    activeSlide: m,
                     centered: !1,
                     overflow: "visible",
                     contentDisplay: "flex",
@@ -267,7 +267,7 @@ let F = (t) => {
                                 warningId: n,
                                 senderId: i,
                                 trackAnalyticsEvent: E,
-                                channelId: m,
+                                channelId: u,
                                 hasReported: g,
                                 onReport: function () {
                                     _(!0);
@@ -286,11 +286,11 @@ let F = (t) => {
                         size: "sm",
                         text: j.intl.string(j.t.cpT0Cq),
                         onClick: function () {
-                            x.onClose(), (0, d.xi)(m, [n]), E(o.Wm.USER_TAKEOVER_MODAL_DISMISS);
+                            x.onClose(), (0, d.xi)(u, [n]), E(o.Wm.USER_TAKEOVER_MODAL_DISMISS);
                         },
                         textVariant: "text-sm/normal",
                     }),
-                    0 !== u &&
+                    0 !== m &&
                         (0, s.jsx)(c.Q, {
                             variant: "secondary",
                             size: "sm",

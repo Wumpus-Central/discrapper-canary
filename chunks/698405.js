@@ -16,7 +16,7 @@ var i,
     A = n(375708),
     E = n(35787),
     N = (((i = {})[(i.CHAT = 0)] = "CHAT"), (i[(i.REACTIONS = 1)] = "REACTIONS"), i);
-let v = (e) => {
+let v = function (e) {
     let { type: t, guild: i, closePopout: N, ctaRef: v } = e,
         x = (0, h.GV)(),
         [j, I] = a.useState(!1),
@@ -37,14 +37,14 @@ let v = (e) => {
             return (0, g.xb)(t);
     }
     if (null == R) return null;
-    let S = async () => {
+    async function S() {
         I(!0);
         try {
             await m.A.joinGuild(i.id, { source: f.Q4z.CHAT_INPUT_BLOCKER }), N();
         } catch {
             I(!1);
         }
-    };
+    }
     return (0, l.jsxs)(s.l, {
         className: E.kL,
         "aria-labelledby": x,

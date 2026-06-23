@@ -76,8 +76,8 @@ var i = n(575593),
     o = n(892118),
     l = n(166590),
     u = n(652215);
-let c = (e) =>
-    null == e
+function c(e) {
+    return null == e
         ? []
         : e.reduce((e, t) => {
               switch (t.type) {
@@ -98,3 +98,4 @@ let c = (e) =>
               }
               return e;
           }, []);
+}

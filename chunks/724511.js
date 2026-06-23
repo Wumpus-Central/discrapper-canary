@@ -8,7 +8,7 @@ var i = n(627968),
     l = n(573435),
     u = n(260509),
     c = n(428930);
-let d = (e) => {
+let d = function (e) {
     let {
             className: t,
             guild: n,
@@ -19,9 +19,13 @@ let d = (e) => {
             isLocked: f = !1,
         } = e,
         [p, E] = r.useState(!1),
-        m = (0, u.Iv)(n, 32, h && s),
-        g = () => E(!0),
-        A = () => E(!1);
+        m = (0, u.Iv)(n, 32, h && s);
+    function g() {
+        return E(!0);
+    }
+    function A() {
+        return E(!1);
+    }
     return (0, i.jsxs)("div", {
         onFocus: g,
         onBlur: A,

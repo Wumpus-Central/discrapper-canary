@@ -22,8 +22,8 @@ function p(e) {
 var A = n(832712),
     f = n(543465),
     C = n(477427),
-    E = n(393432),
-    x = n(652215),
+    x = n(393432),
+    E = n(652215),
     S = n(790782),
     _ = n(355097),
     I = n(375708),
@@ -51,9 +51,9 @@ function y(e) {
                         A.A.updateChannelOverrideSettings(
                             e,
                             l,
-                            { flags: (0, E.mD)(f.Ay.getChannelIdFlags(e, l), i) },
+                            { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
                             C.G_.unreads(i === _.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
-                            { object: x.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
+                            { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
                         ),
                         n();
                 },
@@ -62,30 +62,30 @@ function y(e) {
     });
 }
 var b = n(228098),
-    T = n(157259),
-    N = n(503698),
-    v = n.n(N),
+    N = n(157259),
+    v = n(503698),
+    T = n.n(v),
     M = n(95561),
     R = n(174459),
     D = n(867455),
     L = n(406704),
-    P = n(916168);
-function k(e) {
+    k = n(916168);
+function P(e) {
     let { channel: t, narrow: n } = e,
         s = (0, L.lK)(t);
     return (
         i.useEffect(() => {
-            R.default.track(x.HAw.CHANNEL_BANNER_VIEWED, {
+            R.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
                 ...(0, M.H$)(t.getGuildId()),
                 ...(0, M.dI)(t),
                 banner_type: "thread",
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: v()(P.JD, { [P.sc]: n }),
+            className: T()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
-                    className: P.E5,
+                    className: k.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: t.isForumPost() ? I.intl.string(I.t["833FDn"]) : I.intl.string(I.t.rEeodK),
@@ -94,8 +94,8 @@ function k(e) {
                     ? (0, l.jsx)(u.$, {
                           variant: "secondary",
                           text: I.intl.string(I.t["0dvvEi"]),
-                          onClick: () => {
-                              R.default.track(x.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                          onClick: function () {
+                              R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, M.H$)(t.getGuildId()),
                                   ...(0, M.dI)(t),
                                   banner_type: "thread",
@@ -115,17 +115,17 @@ function O(e) {
         s = (0, L.H_)(t);
     return (
         i.useEffect(() => {
-            R.default.track(x.HAw.CHANNEL_BANNER_VIEWED, {
+            R.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
                 ...(0, M.H$)(t.getGuildId()),
                 ...(0, M.dI)(t),
                 banner_type: "thread",
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: v()(P.JD, { [P.sc]: n }),
+            className: T()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
-                    className: P.E5,
+                    className: k.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: t.isForumPost() ? I.intl.string(I.t.E7oO8u) : I.intl.string(I.t["V/JF2N"]),
@@ -134,8 +134,8 @@ function O(e) {
                     ? (0, l.jsx)(u.$, {
                           variant: "secondary",
                           text: I.intl.string(I.t.zA9d1J),
-                          onClick: () => {
-                              R.default.track(x.HAw.CHANNEL_BANNER_CTA_CLICKED, {
+                          onClick: function () {
+                              R.default.track(E.HAw.CHANNEL_BANNER_CTA_CLICKED, {
                                   ...(0, M.H$)(t.getGuildId()),
                                   ...(0, M.dI)(t),
                                   banner_type: "thread",
@@ -171,12 +171,12 @@ let U = i.memo(function (e) {
     return t.isMediaThread()
         ? null
         : t.isArchivedLockedThread()
-          ? (0, l.jsx)(k, { channel: t, narrow: n })
+          ? (0, l.jsx)(P, { channel: t, narrow: n })
           : t.isLockedThread()
             ? (0, l.jsx)(O, { channel: t, narrow: n })
             : h
               ? (0, l.jsx)(y, { channel: t, clearUnreadsNotice: m })
               : d && u.includes(G.i.OPT_IN_CHANNEL)
-                ? (0, l.jsx)(T.A, { channel: t, narrow: n })
+                ? (0, l.jsx)(N.A, { channel: t, narrow: n })
                 : null;
 });

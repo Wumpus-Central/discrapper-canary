@@ -35,11 +35,13 @@ let l = {
             }, [t]),
             {
                 animationState: t,
-                updateAnimationState: (e) => (e === t ? t : l[e].includes(t) ? (n(e), e) : t),
+                updateAnimationState: function (e) {
+                    return e === t ? t : l[e].includes(t) ? (n(e), e) : t;
+                },
                 asset: i,
                 setAsset: o,
                 sampleAsset: d,
-                findAnimationTree: () => {
+                findAnimationTree: function () {
                     let e = 0,
                         n = new Set([t]);
                     for (; e < 10; ) e += 1;

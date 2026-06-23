@@ -306,12 +306,11 @@ class e_ {
             s = (e) => {
                 this.emoticonsByName.has(e.name) || (n.push(F.A.escape(e.name)), this.emoticonsByName.set(e.name, e));
             };
-        Y.Ay.forEach(i);
-        const o = (e) => {
+        function o(e) {
             let t = es[null == e ? O.eGj : e];
             null != t && (l().each(t.usableEmojis, r), l().each(t.emoticons, s));
-        };
-        for (const e of (o(this.guildId), this.newlyAddedEmoji.keys())) {
+        }
+        for (const e of (Y.Ay.forEach(i), o(this.guildId), this.newlyAddedEmoji.keys())) {
             const t = this.newlyAddedEmoji.get(e);
             if (null == t) {
                 this.newlyAddedEmoji.set(e, []);
@@ -648,7 +647,7 @@ class eS extends _.Ay.PersistedStore {
                 e,
                 [
                     (e) =>
-                        ((e) => {
+                        (function (e) {
                             let n = null != e.uniqueName,
                                 a = n ? e.names[0] : c ? e.name.split("~")[0] : e.name,
                                 l = n ? a : e.id;

@@ -7,7 +7,7 @@ var i = n(636537),
     o = n(692744),
     l = n(652215);
 let u = {
-    connect: async (e) => {
+    connect: async function (e) {
         try {
             let t = await i.Bo.post({ url: l.Rsh.HAVEN_CONNECT(e), rejectWithError: !0 });
             return r.h.dispatch({ type: "HAVEN_CONNECT", room: (0, o.xf)(t.body) }), t;
@@ -15,7 +15,7 @@ let u = {
             a.A.captureException(e);
         }
     },
-    disconnect: async (e) => {
+    disconnect: async function (e) {
         try {
             await i.Bo.post({ url: l.Rsh.HAVEN_DISCONNECT(e), rejectWithError: !0 });
         } catch (t) {
@@ -26,7 +26,7 @@ let u = {
             a.A.captureException(t);
         }
     },
-    update: async (e, t) => {
+    update: async function (e, t) {
         let { position: n, avatar: r, seat: s } = t;
         try {
             await i.Bo.post({
@@ -38,7 +38,7 @@ let u = {
             a.A.captureException(e);
         }
     },
-    getAssets: async () => {
+    getAssets: async function () {
         try {
             return await i.Bo.get({ url: l.Rsh.HAVEN_GET_ASSETS, rejectWithError: !0 });
         } catch (e) {

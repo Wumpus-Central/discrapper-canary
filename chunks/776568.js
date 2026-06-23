@@ -12,10 +12,10 @@ var i = t(627968),
     j = t(375499),
     p = t(267889),
     h = t(808728),
-    A = t(284009),
-    N = t.n(A),
-    x = t(159273),
-    f = t(7584),
+    f = t(284009),
+    A = t.n(f),
+    N = t(159273),
+    x = t(7584),
     E = t(307731),
     g = t(375708),
     v = t(809052);
@@ -23,7 +23,7 @@ function C(e) {
     let {
             className: n,
             guildId: t,
-            error: A,
+            error: f,
             emojiId: C,
             emojiName: y,
             isRequiredField: I = !0,
@@ -33,25 +33,25 @@ function C(e) {
         } = e,
         B = (function (e) {
             let { emojiId: n, emojiName: t } = e,
-                i = (0, o.bG)([x.Ay], () => (null != n ? x.Ay.getCustomEmojiById(n) : null));
+                i = (0, o.bG)([N.Ay], () => (null != n ? N.Ay.getCustomEmojiById(n) : null));
             if (null != i || null != t)
                 if (null == n)
                     return (
-                        N()(null != t, "emojiName must be defined if emojiId is not defined"),
-                        f.Ay.convertSurrogateToName(t, !1)
+                        A()(null != t, "emojiName must be defined if emojiId is not defined"),
+                        x.Ay.convertSurrogateToName(t, !1)
                     );
                 else return i?.name;
         })({ emojiId: C, emojiName: y }),
         S = (0, o.bG)([h.Ay], () => (null != t ? h.Ay.getDefaultChannel(t) : null)),
         w = l.useRef(null),
-        { isHoveringOrFocusing: M } = (0, c.A)(w),
-        O = () => {
-            k(void 0), D(void 0);
-        },
-        P = (e) => {
-            e.stopPropagation(), O();
-        },
-        R = l.useMemo(() => {
+        { isHoveringOrFocusing: M } = (0, c.A)(w);
+    function O() {
+        k(void 0), D(void 0);
+    }
+    function P(e) {
+        e.stopPropagation(), O();
+    }
+    let R = l.useMemo(() => {
             let e = null != C && "" !== C,
                 n = null != y && "" !== y,
                 t = null != B && "" !== B,
@@ -64,7 +64,7 @@ function C(e) {
         children: (0, i.jsx)(s.D, {
             required: I,
             label: g.intl.string(g.t["3BQmiC"]),
-            errorMessage: A ?? void 0,
+            errorMessage: f ?? void 0,
             children: (0, i.jsx)(a.Y, {
                 targetElementRef: w,
                 animation: a.Y.Animation.NONE,

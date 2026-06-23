@@ -3,7 +3,7 @@ n.d(t, { U1: () => c, mf: () => h, yg: () => d, yr: () => p, yz: () => f });
 var i = n(602137),
     r = n(734057),
     s = n(71393),
-    a = n(222823),
+    a = n(568548),
     o = n(253913),
     l = n(746080),
     u = n(375708);
@@ -21,7 +21,9 @@ function d(e) {
     let l = n.getGuild(o.guild_id);
     return null == l ? null : c(o, l, [i]);
 }
-let _ = () => ({ minutes: u.t.nFt9ck, hours: u.t.jzCewe, days: u.t.U4I0sw, month: u.intl.string(u.t["nBNJ/L"]) });
+function _() {
+    return { minutes: u.t.nFt9ck, hours: u.t.jzCewe, days: u.t.U4I0sw, month: u.intl.string(u.t["nBNJ/L"]) };
+}
 function h(e, t) {
     if (t === o.EG.POSTED_DURATION_AGO && e === i.T.CREATION_DATE) return _;
 }

@@ -105,14 +105,14 @@ function F(e) {
             })),
             { count: l?.count, isLoading: l?.isFinished === !1 });
     i.useEffect(() => {
-        let e = (e) => {
+        function e(e) {
             var t, l;
             if (e.guildId !== C.id || !e.prune.isPreview) return;
             let n = e.prune.days,
                 i = e.prune.includeRoles,
                 s = Number(e.prune.pruneCount);
             (t = e.guildId), (l = e.prune.isFinished), T.getState().setPreview(t, n, i, s, l);
-        };
+        }
         return (
             S.h.subscribe("GUILD_PRUNE_UPDATE", e),
             () => {
@@ -156,7 +156,7 @@ function F(e) {
                         { name: k.intl.formatToPlainString(k.t.FM1dHS, { days: 7 }), value: "7" },
                         { name: k.intl.formatToPlainString(k.t.FM1dHS, { days: 30 }), value: "30" },
                     ],
-                    onChange: (e) => {
+                    onChange: function (e) {
                         d(Number(e));
                     },
                 }),

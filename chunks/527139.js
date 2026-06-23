@@ -5,8 +5,8 @@ var n = i(627968),
     a = i.n(s),
     r = i(540185),
     c = i(173936),
-    u = i(245604),
-    o = i(939249),
+    o = i(245604),
+    u = i(939249),
     d = i(508770),
     g = i(834730),
     m = i(793574),
@@ -31,12 +31,12 @@ var I = i(587895),
     O = i(17928),
     C = i(369374),
     R = i(531913),
-    b = i(287809),
-    k = i(183555),
+    k = i(287809),
+    b = i(183555),
     D = i(841595),
     G = i(375708),
     L = i(923608);
-function P(e) {
+function w(e) {
     let { applicationId: t, size: i = "default" } = e,
         l = (0, O.bG)([D.A], () => D.A.getApplicationWidgetConfig(t));
     return (0, n.jsxs)("div", {
@@ -70,7 +70,7 @@ function P(e) {
         ],
     });
 }
-function w(e) {
+function P(e) {
     let { applicationId: t, size: i = "default", userId: l } = e,
         s = (0, R.A)(l, t),
         r = s.surfaceConfigs[_.m.ADD_WIDGET_PREVIEW];
@@ -87,21 +87,21 @@ function w(e) {
           });
 }
 function y(e) {
-    let t = (0, O.bG)([b.default], () => b.default.getCurrentUser()),
+    let t = (0, O.bG)([k.default], () => k.default.getCurrentUser()),
         { enabled: i } = C.A.useConfig({ location: "PlaceholderApplicationWidget" });
-    return i ? (null == t ? null : (0, n.jsx)(w, { ...e, userId: t.id })) : (0, n.jsx)(P, { ...e });
+    return i ? (null == t ? null : (0, n.jsx)(P, { ...e, userId: t.id })) : (0, n.jsx)(w, { ...e });
 }
 function M(e) {
     let { applicationId: t, size: i = "default" } = e,
-        { trackUserProfileAction: s } = (0, k.NJ)(),
+        { trackUserProfileAction: s } = (0, b.NJ)(),
         a = (0, A.h)(t),
-        { hasAlreadyLinked: r, canStartAuthorization: c, startAuthorization: u, fetched: o } = (0, x.RD)(a),
+        { hasAlreadyLinked: r, canStartAuthorization: c, startAuthorization: o, fetched: u } = (0, x.RD)(a),
         { analyticsLocations: d } = (0, f.Ay)(m.A.USER_PROFILE_APPLICATION_WIDGET),
         p = l.useCallback(() => {
             c &&
                 (s({ action: "PRESS_APPLICATION_WIDGET_PLACEHOLDER_CONNECT", applicationId: t }),
-                u({ analyticsLocations: d }));
-        }, [c, s, t, u, d]);
+                o({ analyticsLocations: d }));
+        }, [c, s, t, o, d]);
     return "default" !== i || null == a
         ? null
         : (0, n.jsxs)("div", {
@@ -111,7 +111,7 @@ function M(e) {
                   (0, n.jsx)(g.E, {
                       variant: "text-sm/medium",
                       color: "text-subtle",
-                      children: o
+                      children: u
                           ? r
                               ? G.intl.format(G.t.wiyuG9, { applicationName: a.name })
                               : c
@@ -184,11 +184,11 @@ function B(e) {
         } = e,
         { placeholder: S, getAriaLabel: O, icon: C } = H[i.type],
         R = p.useConfig({ location: m.A.USER_PROFILE_APPLICATION_WIDGET }).enabled,
-        b = i.type === r.x.APPLICATION,
-        k = b ? i.applicationId : void 0,
-        D = (0, A.h)(k),
-        { hasAlreadyLinked: L, canStartAuthorization: P, startAuthorization: w } = (0, x.RD)(D),
-        B = b && !L && P,
+        k = i.type === r.x.APPLICATION,
+        b = k ? i.applicationId : void 0,
+        D = (0, A.h)(b),
+        { hasAlreadyLinked: L, canStartAuthorization: w, startAuthorization: P } = (0, x.RD)(D),
+        B = k && !L && w,
         { analyticsLocations: V } = (0, f.Ay)(m.A.USER_PROFILE_APPLICATION_WIDGET),
         X = l.useCallback(() => {
             !h &&
@@ -196,22 +196,22 @@ function B(e) {
                 v({ action: "WIDGET_ADDED", ...i.getProfileEditAnalyticsOptions() }),
                 (0, N.XA)(U.jM.WIDGET_ADDED),
                 s?.(),
-                B && w({ analyticsLocations: V }));
-        }, [h, B, i, v, s, w, V]),
-        z = l.useMemo(() => S(i), [i, S]),
-        K = C?.(i),
-        Y = B && !R ? c.q : u.U;
+                B && P({ analyticsLocations: V }));
+        }, [h, B, i, v, s, P, V]),
+        K = l.useMemo(() => S(i), [i, S]),
+        z = C?.(i),
+        Y = B && !R ? c.q : o.U;
     return (0, n.jsxs)("div", {
         className: W.LG,
         children: [
-            (0, n.jsxs)(o.D, {
+            (0, n.jsxs)(u.D, {
                 className: a()(W.PH, "small" === I && W.PG, h && W.Lq),
                 onClick: X,
                 "aria-label":
                     B && null != D ? G.intl.formatToPlainString(G.t.ATS0FK, { applicationName: D.name }) : O(i),
                 "aria-busy": h,
                 children: [
-                    (() => {
+                    (function () {
                         let e = S(i);
                         switch (e.variant) {
                             case "details":
@@ -245,8 +245,8 @@ function B(e) {
                             (0, n.jsxs)("div", {
                                 className: W.DD,
                                 children: [
-                                    null != K
-                                        ? (0, n.jsx)("img", { src: K, alt: "", width: 16, height: 16, className: W.Kk })
+                                    null != z
+                                        ? (0, n.jsx)("img", { src: z, alt: "", width: 16, height: 16, className: W.Kk })
                                         : null,
                                     (0, n.jsx)(g.E, {
                                         variant: "text-md/medium",
@@ -257,8 +257,8 @@ function B(e) {
                                 ],
                             }),
                             R &&
-                                "application-widget" === z.variant &&
-                                (0, n.jsx)(F, { applicationId: z.applicationId }),
+                                "application-widget" === K.variant &&
+                                (0, n.jsx)(F, { applicationId: K.applicationId }),
                         ],
                     }),
                 ],

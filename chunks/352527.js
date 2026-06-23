@@ -2,10 +2,10 @@
 n.d(t, { A: () => l });
 var i = n(64700),
     r = n(688810),
-    s = n(315240),
+    s = n(430795),
     a = n(74847),
     o = n(602902);
-let l = (e) => {
+let l = function (e) {
     let { analyticsLocations: t } = (0, r.Ay)();
     return {
         onShareClick: i.useCallback(

@@ -14,7 +14,7 @@ var i = n(627968),
     f = n(64585),
     p = n(906688),
     E = n(60828);
-let m = (e) => {
+function m(e) {
     let { color: t } = e;
     return (0, i.jsxs)("svg", {
         width: "48",
@@ -69,7 +69,7 @@ let m = (e) => {
             }),
         ],
     });
-};
+}
 function g(e) {
     let { achievement: t, unlocked: n } = e,
         { name: s, description: a, rarity: o, hideDescriptionUntilUnlock: l, onAction: c } = t,

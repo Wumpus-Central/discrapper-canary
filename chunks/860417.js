@@ -55,7 +55,7 @@ var v = t(585510),
     z = t(576705),
     Z = t(887501),
     K = t(684407),
-    q = t(330015),
+    q = t(158304),
     $ = t(267102),
     ee = t(488995),
     ei = t(153594),
@@ -217,9 +217,9 @@ function en(e) {
                     return i || t || n || s || l || a || d || o;
                 })(e);
             if (__OVERLAY__ || !l) return null;
-            let d = (i) => {
+            function d(i) {
                 Q.A.open(e.id, i), s.dispatch(R.jej.POPOUT_CLOSE), (0, a.closeAllModals)();
-            };
+            }
             return (0, n.jsx)(o.Dr, {
                 id: "guild-settings",
                 label: f.intl.string(f.t["154/bL"]),
@@ -300,7 +300,7 @@ function en(e) {
             (0, n.jsxs)(o.Dr, {
                 id: "notification",
                 label: f.intl.string(f.t.HcoRu0),
-                action: () => {
+                action: function () {
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
                             t.e("26543"),
@@ -327,60 +327,58 @@ function en(e) {
                                     a !== C.e.ALL_MESSAGES &&
                                     (t.flags = (0, k.md)(O.Ay.getGuildFlags(e), H.n3.UNREADS_ALL_MESSAGES)),
                                     D.A.updateGuildNotificationSettings(e, t, I.G_.notifications(i));
-                            },
-                            g = (i) => {
-                                l(!1);
-                                let t = O.Ay.getGuildFlags(e);
-                                D.A.updateGuildNotificationSettings(
-                                    e,
-                                    {
-                                        flags: (0, k.md)(
-                                            t,
-                                            i === C.e.ALL_MESSAGES
-                                                ? H.n3.UNREADS_ALL_MESSAGES
-                                                : H.n3.UNREADS_ONLY_MENTIONS,
-                                        ),
-                                    },
-                                    I.G_.unreads(i),
-                                );
-                            },
-                            h = (function (e) {
-                                let i = (0, v._g)(e),
-                                    t = (0, r.bG)([U.A], () => U.A.getGuildAlertSettings()[e]);
-                                if (i && null != t)
-                                    return (0, n.jsxs)(o.Dr, {
-                                        id: "activity_alerts",
-                                        label: f.intl.string(f.t.D9yVAH),
-                                        children: [
-                                            (0, n.jsx)(o.sL, {
-                                                id: "activity_alerts_in_app",
-                                                label: f.intl.string(f.t.u6dc5B),
-                                                checked: !t.disableRaidAlertNag,
-                                                action: () =>
-                                                    (0, X.TG)(
-                                                        e,
-                                                        (e) => {
-                                                            e.disableRaidAlertNag = !e.disableRaidAlertNag;
-                                                        },
-                                                        H.Sb.INFREQUENT_USER_ACTION,
-                                                    ),
-                                            }),
-                                            (0, n.jsx)(o.sL, {
-                                                id: "activity_alerts_push",
-                                                label: f.intl.string(f.t.P8MG6q),
-                                                checked: !t.disableRaidAlertPush,
-                                                action: () =>
-                                                    (0, X.TG)(
-                                                        e,
-                                                        (e) => {
-                                                            e.disableRaidAlertPush = !e.disableRaidAlertPush;
-                                                        },
-                                                        H.Sb.INFREQUENT_USER_ACTION,
-                                                    ),
-                                            }),
-                                        ],
-                                    });
-                            })(e);
+                            };
+                        function g(i) {
+                            l(!1);
+                            let t = O.Ay.getGuildFlags(e);
+                            D.A.updateGuildNotificationSettings(
+                                e,
+                                {
+                                    flags: (0, k.md)(
+                                        t,
+                                        i === C.e.ALL_MESSAGES ? H.n3.UNREADS_ALL_MESSAGES : H.n3.UNREADS_ONLY_MENTIONS,
+                                    ),
+                                },
+                                I.G_.unreads(i),
+                            );
+                        }
+                        let h = (function (e) {
+                            let i = (0, v._g)(e),
+                                t = (0, r.bG)([U.A], () => U.A.getGuildAlertSettings()[e]);
+                            if (i && null != t)
+                                return (0, n.jsxs)(o.Dr, {
+                                    id: "activity_alerts",
+                                    label: f.intl.string(f.t.D9yVAH),
+                                    children: [
+                                        (0, n.jsx)(o.sL, {
+                                            id: "activity_alerts_in_app",
+                                            label: f.intl.string(f.t.u6dc5B),
+                                            checked: !t.disableRaidAlertNag,
+                                            action: () =>
+                                                (0, X.TG)(
+                                                    e,
+                                                    (e) => {
+                                                        e.disableRaidAlertNag = !e.disableRaidAlertNag;
+                                                    },
+                                                    H.Sb.INFREQUENT_USER_ACTION,
+                                                ),
+                                        }),
+                                        (0, n.jsx)(o.sL, {
+                                            id: "activity_alerts_push",
+                                            label: f.intl.string(f.t.P8MG6q),
+                                            checked: !t.disableRaidAlertPush,
+                                            action: () =>
+                                                (0, X.TG)(
+                                                    e,
+                                                    (e) => {
+                                                        e.disableRaidAlertPush = !e.disableRaidAlertPush;
+                                                    },
+                                                    H.Sb.INFREQUENT_USER_ACTION,
+                                                ),
+                                        }),
+                                    ],
+                                });
+                        })(e);
                         return (0, n.jsxs)(n.Fragment, {
                             children: [
                                 (0, n.jsxs)(o.rX, {

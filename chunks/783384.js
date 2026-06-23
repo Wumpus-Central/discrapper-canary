@@ -20,38 +20,38 @@ var i = n(627968),
     I = n(922016),
     T = n(433781);
 let S = r.lazy(() =>
-        Promise.all([n.e("17179"), n.e("46054")])
-            .then(n.bind(n, 680901))
-            .then((e) => ({ default: e.ClipParticipantsList })),
-    ),
-    y = (e) => {
-        let { participants: t, maxVisibleParticipants: n, guildId: s } = e,
-            a = r.useRef(null),
-            o = (0, r.useCallback)(
-                () => (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(S, { users: t, guildId: s }) }),
-                [t, s],
-            );
-        return (0, i.jsx)(I.Y, {
-            renderPopout: o,
-            targetElementRef: a,
-            position: "right",
-            children: (e) =>
-                (0, i.jsx)(_.D, {
-                    ...e,
-                    innerRef: a,
-                    className: T.x,
-                    onClick: (t) => {
-                        t.stopPropagation(), e.onClick?.(t);
-                    },
-                    children: (0, i.jsxs)(d.E, {
-                        className: T.s,
-                        variant: "text-xs/medium",
-                        color: "interactive-text-default",
-                        children: ["+", t.length - n],
-                    }),
+    Promise.all([n.e("17179"), n.e("46054")])
+        .then(n.bind(n, 680901))
+        .then((e) => ({ default: e.ClipParticipantsList })),
+);
+function y(e) {
+    let { participants: t, maxVisibleParticipants: n, guildId: s } = e,
+        a = r.useRef(null),
+        o = (0, r.useCallback)(
+            () => (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(S, { users: t, guildId: s }) }),
+            [t, s],
+        );
+    return (0, i.jsx)(I.Y, {
+        renderPopout: o,
+        targetElementRef: a,
+        position: "right",
+        children: (e) =>
+            (0, i.jsx)(_.D, {
+                ...e,
+                innerRef: a,
+                className: T.x,
+                onClick: (t) => {
+                    t.stopPropagation(), e.onClick?.(t);
+                },
+                children: (0, i.jsxs)(d.E, {
+                    className: T.s,
+                    variant: "text-xs/medium",
+                    color: "interactive-text-default",
+                    children: ["+", t.length - n],
                 }),
-        });
-    };
+            }),
+    });
+}
 var C = n(97808),
     N = n(778712),
     v = n(342296),

@@ -52,7 +52,7 @@ function h(t) {
 var b = n(682348),
     I = n(429913),
     v = n(834730),
-    _ = n(137177),
+    _ = n(769015),
     C = n(945691);
 function y(t) {
     let { applications: e } = t;
@@ -244,7 +244,7 @@ function F(t) {
                       buttonRef: E,
                       ...t,
                       ...g,
-                      onMouseEnter: () => {
+                      onMouseEnter: function () {
                           d?.(), t.onMouseEnter?.();
                       },
                   }),
@@ -280,7 +280,7 @@ function Q(t) {
                       tooltipAlign: "top",
                       ...t,
                       ...g,
-                      onMouseEnter: () => {
+                      onMouseEnter: function () {
                           d?.(), t.onMouseEnter?.();
                       },
                   }),

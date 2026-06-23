@@ -33,7 +33,7 @@ var A = n(46054),
     I = n(453771),
     T = n(375708),
     S = n(490563);
-let y = (e) => {
+function y(e) {
     let { filename: t } = e,
         r = (0, I.GD)(t),
         s = n(714694)(`./icon-file-${r}.svg`);
@@ -43,7 +43,7 @@ let y = (e) => {
         alt: T.intl.formatToPlainString(T.t.g6KdFv, { fileType: r }),
         title: r,
     });
-};
+}
 function C(e) {
     let { channelId: t, file: n } = e,
         s = (0, u.bG)([m.A], () => m.A.getMessageForFile(n.id)?.content),
@@ -105,7 +105,7 @@ function C(e) {
         ],
     });
 }
-let N = (e) => {
+let N = function (e) {
     let { className: t, url: n, fileName: r, fileSize: s, onClick: o, onContextMenu: u, renderAdjacentContent: c } = e;
     return (0, i.jsxs)("div", {
         className: a()(S.Ig, t),

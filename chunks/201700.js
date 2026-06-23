@@ -5,49 +5,49 @@ var n = i(627968),
     r = i(260598),
     s = i(691885),
     o = i(181658),
-    d = i(208882),
-    c = i(946116),
-    g = i(375708),
-    u = i(907891);
+    c = i(208882),
+    d = i(946116),
+    u = i(375708),
+    g = i(907891);
 function p(t) {
     let { transitionState: e, onClose: i, entry: p } = t,
         [h, m] = a.useState(p.description ?? ""),
-        [C, b] = a.useState(p.primaryCategoryId ?? c.mU.UNCATEGORIZED),
-        [y, k] = a.useState(!1),
-        [x, I] = a.useState(null),
-        S = async () => {
-            if ((I(null), h !== p.description || C !== p.primaryCategoryId)) {
-                k(!0);
-                try {
-                    await (0, d.FA)(p.channelId, p.guildId, h, C), k(!1), i();
-                } catch (t) {
-                    k(!1), I(new o.A(t));
-                }
+        [C, b] = a.useState(p.primaryCategoryId ?? d.mU.UNCATEGORIZED),
+        [y, f] = a.useState(!1),
+        [k, x] = a.useState(null);
+    async function I() {
+        if ((x(null), h !== p.description || C !== p.primaryCategoryId)) {
+            f(!0);
+            try {
+                await (0, c.FA)(p.channelId, p.guildId, h, C), f(!1), i();
+            } catch (t) {
+                f(!1), x(new o.A(t));
             }
-        };
+        }
+    }
     return (0, n.jsx)(l.Modal, {
         transitionState: e,
-        "aria-label": g.intl.string(g.t.eQ2bLp),
+        "aria-label": u.intl.string(u.t.eQ2bLp),
         onClose: i,
-        title: g.intl.formatToPlainString(g.t.w9tsNk, { guildName: p.name }),
-        subtitle: g.intl.string(g.t["vEkX/8"]),
-        actions: [{ variant: "primary", text: g.intl.string(g.t["R3BPH+"]), onClick: S, loading: y }],
+        title: u.intl.formatToPlainString(u.t.w9tsNk, { guildName: p.name }),
+        subtitle: u.intl.string(u.t["vEkX/8"]),
+        actions: [{ variant: "primary", text: u.intl.string(u.t["R3BPH+"]), onClick: I, loading: y }],
         children: (0, n.jsxs)("div", {
-            className: u.iW,
+            className: g.iW,
             children: [
                 (0, n.jsx)(r.f, {
-                    label: g.intl.string(g.t.FFFAGt),
+                    label: u.intl.string(u.t.FFFAGt),
                     value: h,
                     maxLength: 200,
-                    placeholder: g.intl.string(g.t.VzuITC),
+                    placeholder: u.intl.string(u.t.VzuITC),
                     onChange: m,
-                    error: x?.getAnyErrorMessage(),
+                    error: k?.getAnyErrorMessage(),
                 }),
                 (0, n.jsx)(s.l, {
                     selectionMode: "single",
-                    label: g.intl.string(g.t.Olo8FB),
-                    placeholder: g.intl.string(g.t.XqMe3N),
-                    options: (0, c.g2)(p.channelId),
+                    label: u.intl.string(u.t.Olo8FB),
+                    placeholder: u.intl.string(u.t.XqMe3N),
+                    options: (0, d.g2)(p.channelId),
                     clearable: !1,
                     value: C,
                     onSelectionChange: b,

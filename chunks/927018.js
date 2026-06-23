@@ -194,7 +194,7 @@ let u = {
 function c(e) {
     return u[e];
 }
-let d = (e) => {
+function d(e) {
     switch (e) {
         case 0:
             return { color: "#1ABC9C" };
@@ -207,4 +207,4 @@ let d = (e) => {
         case 4:
             return { color: "#E67E22" };
     }
-};
+}

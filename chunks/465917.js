@@ -103,7 +103,7 @@ function v(e) {
         ],
     });
 }
-function M(e) {
+function A(e) {
     let { onHandleEnableLockdown: t, onHandleReportFalseAlarm: l, incidentData: i, guildName: C } = e;
     return (0, n.jsxs)("div", {
         className: j.hD,
@@ -136,7 +136,7 @@ function M(e) {
         ],
     });
 }
-function A(e) {
+function M(e) {
     let { guild: t, incidentData: l, isUnderLockdown: C, isRaidDetected: a } = e,
         r = i.useCallback(() => {
             (0, u.openModalLazy)(async () => {
@@ -148,7 +148,7 @@ function A(e) {
             let e = g.A.getLastIncidentAlertMessage(t.id);
             (0, h.is)(e, t.id);
         }, [t.id]),
-        o = (() => {
+        o = (function () {
             switch (!0) {
                 case a && C:
                     return 3;
@@ -167,7 +167,7 @@ function A(e) {
         case 2:
             return (0, n.jsx)(v, { onHandleEnableLockdown: r, incidentData: l, guildName: t.name });
         case 3:
-            return (0, n.jsx)(M, {
+            return (0, n.jsx)(A, {
                 onHandleEnableLockdown: r,
                 onHandleReportFalseAlarm: d,
                 incidentData: l,
@@ -182,6 +182,6 @@ function L(e) {
         { shouldShowIncidentActions: l, incidentData: i, isUnderLockdown: a } = (0, C.Li)(t.id),
         r = !1;
     return (null != i && (r = (0, s.k$)(i) && l), r || a)
-        ? (0, n.jsx)(A, { guild: t, incidentData: i, isUnderLockdown: a, isRaidDetected: r })
+        ? (0, n.jsx)(M, { guild: t, incidentData: i, isUnderLockdown: a, isRaidDetected: r })
         : null;
 }

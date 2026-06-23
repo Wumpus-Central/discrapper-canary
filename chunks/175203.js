@@ -3,7 +3,7 @@ var i = l(627968),
     s = l(64700),
     n = l(503698),
     a = l.n(n),
-    d = l(922139),
+    d = l(308186),
     r = l(738678),
     c = l(12470),
     o = l(17928),
@@ -59,7 +59,7 @@ var i = l(627968),
     ea = l(706787),
     ed = l(495544),
     er = l(111162),
-    ec = l(941327),
+    ec = l(394459),
     eo = l(290863),
     ep = l(485296),
     eu = l(977997),
@@ -259,8 +259,8 @@ let eU = [eC.lp.ACTIVITY],
         }
         let e0 = s.useRef(null),
             e1 = (0, o.bG)([ep.A], () => (p.type === eC.lp.USER ? ep.A.getVoiceVolume(p.id) : -1 / 0)),
-            e2 = (0, H.v)({ isSpeaking: eR, voiceDb: e1, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
-            e5 = (0, eC.Ay)(p) ? m.k : eV ? A.n : h.E,
+            e5 = (0, H.v)({ isSpeaking: eR, voiceDb: e1, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
+            e2 = (0, eC.Ay)(p) ? m.k : eV ? A.n : h.E,
             e6 = p.type === eC.lp.STREAM && M;
         return (0, i.jsx)(R.A, {
             section: eb.JJy.VOICE_CHANNEL_TILE,
@@ -270,10 +270,10 @@ let eU = [eC.lp.ACTIVITY],
                 children: (0, i.jsx)("div", {
                     className: a()(eM.iE, { [eM.DF]: eP }, N),
                     style: T,
-                    onMouseEnter: () => {
+                    onMouseEnter: function () {
                         em(!0);
                     },
-                    onMouseLeave: () => {
+                    onMouseLeave: function () {
                         em(!1);
                     },
                     children: (0, i.jsxs)(q.A, {
@@ -323,7 +323,7 @@ let eU = [eC.lp.ACTIVITY],
                                         O
                                             ? (0, i.jsx)("div", {
                                                   className: eM._Q,
-                                                  children: (0, i.jsx)(e5, {
+                                                  children: (0, i.jsx)(e2, {
                                                       size: "md",
                                                       color: "currentColor",
                                                       className: eM.Dt,
@@ -362,7 +362,7 @@ let eU = [eC.lp.ACTIVITY],
                                         C && !_
                                             ? (0, i.jsx)("div", {
                                                   className: a()(eM.PQ, { [eM.pU]: !M && (eL || null != eW) }),
-                                                  style: M || eL ? void 0 : e2,
+                                                  style: M || eL ? void 0 : e5,
                                               })
                                             : null,
                                     ],
@@ -473,10 +473,10 @@ let ek = s.memo((e) => {
         ev = (0, eS.DO)(n),
         [ej, eg] = s.useState(!1);
     s.useEffect(() => {
-        let e = !1,
-            t = () => {
-                e !== em.A.isOpen() && ((e = em.A.isOpen()) || eg(!1));
-            };
+        let e = !1;
+        function t() {
+            e !== em.A.isOpen() && ((e = em.A.isOpen()) || eg(!1));
+        }
         return em.A.addChangeListener(t), () => em.A.removeChangeListener(t);
     }, []);
     let ey = !q && v === eC.lp.STREAM && B && (!ex || H),
@@ -523,7 +523,7 @@ let ek = s.memo((e) => {
                   (0, i.jsx)(
                       eP,
                       {
-                          onClick: (e) => {
+                          onClick: function (e) {
                               e.stopPropagation(), eg(!0), R(e, !0, eC.GK.THREE_DOT);
                           },
                           tooltipText: eG.intl.string(eG.t["+1H47t"]),

@@ -257,13 +257,13 @@ function k(e) {
         v = (0, a.bG)([I.A], () => I.A.theme),
         b = (0, O.Jp)(r),
         P = (0, R.K)(b),
-        k = b.premium && N && !f,
-        U = (e) => {
-            k &&
-                (e.stopPropagation(),
-                e.preventDefault(),
-                (0, g.K4)({ guildId: r.id, location: { section: L.JJy.GUILD_HEADER, object: L.ZSU.BOOST_GEM_ICON } }));
-        };
+        k = b.premium && N && !f;
+    function U(e) {
+        k &&
+            (e.stopPropagation(),
+            e.preventDefault(),
+            (0, g.K4)({ guildId: r.id, location: { section: L.JJy.GUILD_HEADER, object: L.ZSU.BOOST_GEM_ICON } }));
+    }
     if (P === R._.NONE) return null;
     let {
         IconComponent: G,

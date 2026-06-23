@@ -261,8 +261,9 @@ function Z(e) {
         (!r && d(n.id))
     );
 }
-let X = (e, t, n) =>
-    `${(0, o.az)(e)} (${(0, o.az)((0, _.m1)(t, P.default, L.A, !0))}${null != n ? `, ${(0, o.az)((0, _.m1)(n, P.default, L.A))}` : ""})`;
+function X(e, t, n) {
+    return `${(0, o.az)(e)} (${(0, o.az)((0, _.m1)(t, P.default, L.A, !0))}${null != n ? `, ${(0, o.az)((0, _.m1)(n, P.default, L.A))}` : ""})`;
+}
 function Q(e, t, n, i) {
     switch (e.type) {
         case H.rbe.GUILD_ANNOUNCEMENT:

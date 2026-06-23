@@ -262,8 +262,12 @@ function z(e) {
             null != y &&
                 L &&
                 (0, i.jsx)(v, {
-                    onDismiss: () => C(W.i.USER_DISMISS),
-                    onCTAClick: () => C(W.i.TAKE_ACTION),
+                    onDismiss: function () {
+                        return C(W.i.USER_DISMISS);
+                    },
+                    onCTAClick: function () {
+                        return C(W.i.TAKE_ACTION);
+                    },
                     targetElementRef: m,
                 }),
         ],

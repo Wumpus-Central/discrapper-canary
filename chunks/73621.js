@@ -2,8 +2,8 @@
 n.d(t, { A: () => A, o: () => E });
 var l,
     i = n(627968),
-    r = n(661531),
-    s = n(990078),
+    s = n(661531),
+    r = n(990078),
     a = n(860430),
     o = n(519396),
     u = n(268791),
@@ -13,9 +13,9 @@ var l,
 n(64700);
 var h = n(953727);
 function p(e) {
-    let { width: t = 18, height: n = 22, color: l = "currentColor", ...r } = e;
+    let { width: t = 18, height: n = 22, color: l = "currentColor", ...s } = e;
     return (0, i.jsx)("svg", {
-        ...(0, h.A)(r),
+        ...(0, h.A)(s),
         width: t,
         height: n,
         viewBox: "0 0 18 22",
@@ -38,7 +38,7 @@ var f = n(375708),
         (l[(l.WRONG_TYPE = 4)] = "WRONG_TYPE"),
         (l[(l.RESIZE_ANIMATED = 5)] = "RESIZE_ANIMATED"),
         l);
-let A = (e) => {
+let A = function (e) {
     let { error: t } = e,
         { type: n, filename: l } = t,
         {
@@ -50,44 +50,44 @@ let A = (e) => {
             0: {
                 icon: a.m,
                 description: f.intl.string(f.t.YbdEFK),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: s.A.unsafe_rawColors.RED_400.css,
                 tooltip: f.intl.string(f.t.PanA4J),
             },
             4: {
                 icon: o.u,
                 description: f.intl.string(f.t["01Papm"]),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: s.A.unsafe_rawColors.RED_400.css,
                 tooltip: f.intl.string(f.t.PanA4J),
             },
             5: {
                 icon: p,
                 description: f.intl.string(f.t["6WN/qk"]),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: s.A.unsafe_rawColors.RED_400.css,
                 tooltip: f.intl.string(f.t.PanA4J),
             },
             1: {
                 icon: u.$,
                 description: f.intl.string(f.t["4rjikl"]),
-                color: r.A.unsafe_rawColors.ORANGE_345.css,
+                color: s.A.unsafe_rawColors.ORANGE_345.css,
                 tooltip: f.intl.string(f.t.dq9aTi),
             },
             2: {
                 icon: c.m,
                 description: f.intl.string(f.t["5VmbbF"]),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: s.A.unsafe_rawColors.RED_400.css,
                 tooltip: f.intl.string(f.t.PanA4J),
             },
             3: {
                 icon: c.m,
                 description: f.intl.string(f.t.rjFOZ2),
-                color: r.A.unsafe_rawColors.RED_400.css,
+                color: s.A.unsafe_rawColors.RED_400.css,
                 tooltip: f.intl.string(f.t.PanA4J),
             },
         }[n];
     return (0, i.jsxs)("div", {
         className: g._Z,
         children: [
-            (0, i.jsx)(h, { className: g.Yg, color: r.A.unsafe_rawColors.PRIMARY_300.css }),
+            (0, i.jsx)(h, { className: g.Yg, color: s.A.unsafe_rawColors.PRIMARY_300.css }),
             (0, i.jsxs)("div", {
                 className: g.XE,
                 children: [
@@ -95,7 +95,7 @@ let A = (e) => {
                     (0, i.jsx)(d.E, { variant: "text-sm/normal", color: "text-subtle", children: E }),
                 ],
             }),
-            (0, i.jsx)(s.m, {
+            (0, i.jsx)(r.m, {
                 asContainer: !0,
                 position: "right",
                 text: C,

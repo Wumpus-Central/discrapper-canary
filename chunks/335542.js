@@ -9,7 +9,7 @@ var i,
     s = n(873298),
     a = n(38405),
     o = n(185928);
-let l = (e) => {
+function l(e) {
     let t = Object.entries(o.dP).find((t) => {
         let [n, i] = t;
         return i === e;
@@ -17,4 +17,4 @@ let l = (e) => {
     return void 0 === t
         ? (a.A.captureException(Error(`No ProtoTheme found for base theme: ${e}`)), s.Sx.UNSET)
         : parseInt(t[0]);
-};
+}

@@ -19,7 +19,7 @@ var n = i(627968),
     p = i(753390),
     f = i(531260),
     N = i(725836),
-    _ = i(480642),
+    _ = i(169797),
     I = i(235986),
     C = i(543767),
     b = i(253390),
@@ -34,8 +34,8 @@ var n = i(627968),
     G = i(473145),
     M = i(428262),
     U = i(580630),
-    V = i(206745),
-    k = i(942606),
+    V = i(682502),
+    k = i(816571),
     w = i(802790),
     B = i(788868),
     F = i(818348),
@@ -188,17 +188,17 @@ function K(e) {
         ee = J || $ ? Q.total - W.total : -W.total,
         { interval: et, intervalCount: ei } = F,
         en = z.intl.format(z.t["0W23cu"], { endDate: Q.subscriptionPeriodStart });
-    t.isPausedForFractionalPremium &&
-        l.fetched &&
-        (en = z.intl.format(z.t.eb0xgS, { expirationDate: l.endsAt.toDate() }));
-    let es = async () => {
+    async function es() {
         try {
             v(!0), P(null), await H(t, G, K, i), p();
         } catch (e) {
             P(z.intl.string(z.t["5mlOCW"])), v(!1);
         }
-    };
-    return a
+    }
+    return (t.isPausedForFractionalPremium &&
+        l.fetched &&
+        (en = z.intl.format(z.t.eb0xgS, { expirationDate: l.endsAt.toDate() })),
+    a)
         ? (0, n.jsxs)(u.d, {
               transitionState: r,
               onClose: f,
@@ -328,7 +328,7 @@ function W(e) {
 }
 function Z(e) {
     let { step: t } = e;
-    throw new V.Q({ message: `Unexpected step: ${t}`, extraSentryInformation: { step: t } });
+    throw new V.f({ message: `Unexpected step: ${t}`, extraSentryInformation: { step: t } });
 }
 function Q(e) {
     let t,
@@ -413,6 +413,6 @@ function Q(e) {
         }
     return (0, n.jsx)(x.f5, {
         value: b,
-        children: (0, n.jsx)(k.G, { errorHandlingBehavior: "close-and-alert", guildBoostSlot: i, children: t }),
+        children: (0, n.jsx)(k.d, { errorHandlingBehavior: "close-and-alert", guildBoostSlot: i, children: t }),
     });
 }

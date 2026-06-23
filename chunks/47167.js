@@ -31,16 +31,16 @@ function f(e) {
 function p(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        s = e.name,
-        a = (e) => (i ? `@${e}` : e);
+        s = e.name;
     if (e.isObfuscated()) return c.intl.string(c.t["/YzI63"]);
     switch (e.type) {
         case u.rbe.DM:
-            if ("" !== s) return a(s);
+            var a;
+            if ("" !== s) return i ? `@${s}` : s;
             let [d] = e.recipients.map(t.getUser).filter(o.Vq);
             if (null == d) return "???";
             if (d.isProvisional && null != d.globalName) return d.globalName;
-            return a(n.getNickname(d.id) ?? l.Ay.getName(d) ?? "???");
+            return (a = n.getNickname(d.id) ?? l.Ay.getName(d) ?? "???"), i ? `@${a}` : a;
         case u.rbe.GROUP_DM:
             if ("" !== s) return s;
             return _(e, t, n);

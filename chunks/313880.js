@@ -8,7 +8,7 @@ var l = n(503698),
     c = n(435470),
     o = n(375708),
     d = n(273259);
-let u = (e) => {
+let u = function (e) {
     let { message: t, channel: n, renderColon: l, hasUnreads: u } = e,
         { user: m, author: h } = (0, c.kn)(n),
         x = h?.nick ?? m?.username ?? "",

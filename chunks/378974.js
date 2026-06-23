@@ -80,7 +80,7 @@ function S(e) {
         children: [
             (0, i.jsxs)(m.D, {
                 className: T.d,
-                onClick: () => {
+                onClick: function () {
                     s(t);
                 },
                 role: a,
@@ -107,7 +107,7 @@ function S(e) {
                     className: T.Vi,
                     children: (0, i.jsx)(I.k, {
                         value: o ?? "",
-                        onChange: (e) => {
+                        onChange: function (e) {
                             r || s(t), u?.(t, e);
                         },
                         disabled: !r,
@@ -120,24 +120,24 @@ var y = n(880652),
     C = n(225460);
 function N(e) {
     let { question: t, questionId: n, value: r, onValueChange: s } = e,
-        { selectedChoice: a, textInputs: o } = ((e) => {
+        { selectedChoice: a, textInputs: o } = (function (e) {
             if (null == e || "" === e) return { selectedChoice: null, textInputs: {} };
             let t = e.split(":TEXT:", 2),
                 n = t[0],
                 i = {};
             return t.length > 1 && (i[n] = t[1]), { selectedChoice: n, textInputs: i };
-        })(r),
-        u = (e) => {
-            let i = o[e];
-            null == i || "" === i
-                ? s(n, e)
-                : null != t.Choices && t.Choices[e]?.TextEntry === "true"
-                  ? s(n, `${e}:TEXT:${i}`)
-                  : s(n, e);
-        },
-        c = (e, t) => {
-            s(n, null != t && "" !== t ? `${e}:TEXT:${t}` : e);
-        };
+        })(r);
+    function u(e) {
+        let i = o[e];
+        null == i || "" === i
+            ? s(n, e)
+            : null != t.Choices && t.Choices[e]?.TextEntry === "true"
+              ? s(n, `${e}:TEXT:${i}`)
+              : s(n, e);
+    }
+    function c(e, t) {
+        s(n, null != t && "" !== t ? `${e}:TEXT:${t}` : e);
+    }
     return null == t.Choices
         ? (0, i.jsx)("div", {
               className: C.kL,
@@ -172,7 +172,7 @@ function N(e) {
 }
 function v(e) {
     let { question: t, questionId: n, value: r, onValueChange: s } = e,
-        { selectedChoices: a, textInputs: o } = ((e) => {
+        { selectedChoices: a, textInputs: o } = (function (e) {
             if (null == e || "" === e) return { selectedChoices: [], textInputs: {} };
             let t = e.split(","),
                 n = [],
@@ -185,22 +185,23 @@ function v(e) {
                 }),
                 { selectedChoices: n, textInputs: i }
             );
-        })(r),
-        u = (e, t) =>
-            e
-                .map((e) => {
-                    let n = t[e];
-                    return null != n && "" !== n ? `${e}:TEXT:${n}` : e;
-                })
-                .join(","),
-        c = (e) => {
-            let t = a.includes(e) ? a.filter((t) => t !== e) : [...a, e],
-                i = { ...o };
-            t.includes(e) || delete i[e], s(n, u(t, i));
-        },
-        d = (e, t) => {
-            s(n, u(a, { ...o, [e]: t }));
-        };
+        })(r);
+    function u(e, t) {
+        return e
+            .map((e) => {
+                let n = t[e];
+                return null != n && "" !== n ? `${e}:TEXT:${n}` : e;
+            })
+            .join(",");
+    }
+    function c(e) {
+        let t = a.includes(e) ? a.filter((t) => t !== e) : [...a, e],
+            i = { ...o };
+        t.includes(e) || delete i[e], s(n, u(t, i));
+    }
+    function d(e, t) {
+        s(n, u(a, { ...o, [e]: t }));
+    }
     return null == t.Choices || 0 === Object.keys(t.Choices).length
         ? (0, i.jsx)("div", {
               className: C.kL,
@@ -255,7 +256,7 @@ var L = n(724368),
     w = n(992595);
 function M(e) {
     let { question: t, questionId: n, responses: r, onResponseChange: s } = e,
-        a = (() => {
+        a = (function () {
             switch (t.QuestionType) {
                 case y.SQ.TEXT_ENTRY:
                     return (0, i.jsx)(D, { question: t, questionId: n, value: r[n] ?? "", onValueChange: s });
@@ -297,11 +298,11 @@ function k(e) {
         })(n),
         [I, T] = r.useState(A.blockId),
         [S, y] = r.useState(A.pageIndex),
-        [C, N] = r.useState(!1),
-        v = (e, n) => {
-            E(t, e, n);
-        },
-        R = r.useCallback(
+        [C, N] = r.useState(!1);
+    function v(e, n) {
+        E(t, e, n);
+    }
+    let R = r.useCallback(
             () => (
                 C
                     ? a()

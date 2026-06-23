@@ -4,8 +4,8 @@ var i,
     r = n(624793),
     s = n(375708),
     a = (((i = {}).GET_PREMIUM = "GET_PREMIUM"), (i.JOIN_GUILD = "JOIN_GUILD"), (i.UNAVAILABLE = "UNAVAILABLE"), i);
-let o = (e) => {
-    let t = ((e) => {
+function o(e) {
+    let t = (function (e) {
             let {
                 sourceType: t,
                 expressionSourceApplication: n,
@@ -51,7 +51,7 @@ let o = (e) => {
                       ? s.intl.string(s.t.FJ6Z01)
                       : s.intl.format(s.t.U6vLcA, { openPremiumSettings: h });
         })(e),
-        n = ((e) => {
+        n = (function (e) {
             let {
                     isPremium: t,
                     hasJoinedEmojiSourceGuild: n,
@@ -76,7 +76,7 @@ let o = (e) => {
             );
         })(e);
     return {
-        ...((e) => {
+        ...(function (e) {
             let {
                     isPremium: t,
                     hasJoinedEmojiSourceGuild: n,
@@ -93,4 +93,4 @@ let o = (e) => {
         emojiDescription: t,
         analyticsType: n,
     };
-};
+}

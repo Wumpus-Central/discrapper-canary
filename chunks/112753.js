@@ -34,7 +34,7 @@ var n = s(627968),
     k = s(299072),
     B = s(60317),
     L = s(406704),
-    H = s(454719),
+    H = s(148411),
     D = s(975732),
     z = s(363195),
     O = s(495544),
@@ -337,18 +337,18 @@ function em(e) {
             transitionState: a,
             "aria-label": r = en.intl.string(en.t.gHp0C4),
         } = e,
-        o = (0, c.bG)([P.A], () => P.A.getChannel(t.getChannelId())),
-        d = o?.getGuildId(),
-        u = (0, c.bG)([V.A, G.A], () => {
+        d = (0, c.bG)([P.A], () => P.A.getChannel(t.getChannelId())),
+        u = d?.getGuildId(),
+        m = (0, c.bG)([V.A, G.A], () => {
             let e =
                 V.A.getMessage(t.getChannelId(), t.id) ??
                 G.A.getMessage(J.default.castMessageIdAsChannelId(t.id))?.firstMessage;
             return null != e ? e.reactions : [];
         }, [t]),
-        m = l.useMemo(() => {
+        j = l.useMemo(() => {
             let e = [];
             return (
-                u.forEach((t) => {
+                m.forEach((t) => {
                     t.burst_count > 0 && e.push({ ...t, count: 0 }), t.count > 0 && e.push({ ...t, burst_count: 0 });
                 }),
                 e.sort((e, t) => {
@@ -357,9 +357,9 @@ function em(e) {
                 }),
                 e
             );
-        }, [u]),
-        j = m[0],
-        [A, x] = (function (e, t, s) {
+        }, [m]),
+        A = j[0],
+        [x, f] = (function (e, t, s) {
             let [n, i] = l.useState(e ?? t);
             return (
                 l.useEffect(() => {
@@ -375,20 +375,20 @@ function em(e) {
                 }, [n, i, s, t]),
                 [n, i]
             );
-        })(s, null != j ? { emoji: j.emoji, reactionType: j.burst_count > 0 ? w.v.BURST : w.v.NORMAL } : null, m),
-        f = l.useMemo(() => (null == A ? null : (u.find((e) => (0, et.i6)(e.emoji, A.emoji)) ?? null)), [u, A]),
-        S = (0, c.bG)([R.Ay], () => R.Ay.saturation),
-        b = (0, c.bG)([z.A], () => (0, p.M)(z.A.theme));
+        })(s, null != A ? { emoji: A.emoji, reactionType: A.burst_count > 0 ? w.v.BURST : w.v.NORMAL } : null, j),
+        S = l.useMemo(() => (null == x ? null : (m.find((e) => (0, et.i6)(e.emoji, x.emoji)) ?? null)), [m, x]),
+        b = (0, c.bG)([R.Ay], () => R.Ay.saturation),
+        N = (0, c.bG)([z.A], () => (0, p.M)(z.A.theme));
     if (
         (l.useEffect(() => {
-            (0 === u.length || (null == A && null == f)) && setImmediate(i);
-        }, [i, u.length, f, A]),
-        null == A || null == f)
+            (0 === m.length || (null == x && null == S)) && setImmediate(i);
+        }, [i, m.length, S, x]),
+        null == x || null == S)
     )
         return (0, n.jsx)(M.y, {});
-    if (null == o) throw Error("MessageReactions.render: Message does not have a channelId");
+    if (null == d) throw Error("MessageReactions.render: Message does not have a channelId");
     return (0, n.jsx)(U.A.Provider, {
-        value: d ?? void 0,
+        value: u ?? void 0,
         children: (0, n.jsxs)(h.d, {
             transitionState: a,
             size: "md",
@@ -403,28 +403,33 @@ function em(e) {
                         (0, n.jsx)(v.Ip, {
                             className: el.XG,
                             fade: !0,
-                            children: m.map((e) => {
-                                let t = e.burst_count > 0;
+                            children: j.map((e) => {
+                                var t, s, l;
+                                let i = e.burst_count > 0;
                                 return (0, n.jsx)(
                                     eo,
                                     {
-                                        isSelected: eh(A, e, t ? w.v.BURST : w.v.NORMAL),
-                                        setSelected: x,
-                                        reactionType: t ? w.v.BURST : w.v.NORMAL,
+                                        isSelected:
+                                            ((t = x),
+                                            (s = e),
+                                            (l = i ? w.v.BURST : w.v.NORMAL),
+                                            o().isEqual(t.emoji, s.emoji) && t.reactionType === l),
+                                        setSelected: f,
+                                        reactionType: i ? w.v.BURST : w.v.NORMAL,
                                         emoji: e.emoji,
-                                        count: t ? e.burst_count : e.count,
-                                        colors: null != e.burst_colors ? (0, T.V)(e.burst_colors, S, b) : void 0,
+                                        count: i ? e.burst_count : e.count,
+                                        colors: null != e.burst_colors ? (0, T.V)(e.burst_colors, b, N) : void 0,
                                     },
-                                    `${t ? "burst-" : "normal-"}${e.emoji.id ?? ""}:${e.emoji.name}`,
+                                    `${i ? "burst-" : "normal-"}${e.emoji.id ?? ""}:${e.emoji.name}`,
                                 );
                             }),
                         }),
                         (0, n.jsx)(eu, {
                             message: t,
-                            reaction: f,
-                            guildId: d,
-                            channel: o,
-                            reactionType: A.reactionType,
+                            reaction: S,
+                            guildId: u,
+                            channel: d,
+                            reactionType: x.reactionType,
                         }),
                     ],
                 }),
@@ -432,4 +437,3 @@ function em(e) {
         }),
     });
 }
-let eh = (e, t, s) => o().isEqual(e.emoji, t.emoji) && e.reactionType === s;

@@ -14,7 +14,7 @@ var i = n(627968),
     f = n(765548),
     p = n(650583),
     E = n(565164),
-    m = n(922139),
+    m = n(308186),
     g = n(6821);
 let A = r.memo(function (e) {
     let { playbackPxSpring: t, isDragging: n, dragX: r } = e;
@@ -245,13 +245,13 @@ function y(e) {
                 {
                     contRef: w,
                     boundingRect: E,
-                    handleMouseEnter: (e) => {
+                    handleMouseEnter: function (e) {
                         s && (T(!0), M(e));
                     },
-                    handleMouseLeave: (e) => {
+                    handleMouseLeave: function (e) {
                         s && !P.current && (T(!1), A(null), R(!1));
                     },
-                    handleMouseMove: (e) => {
+                    handleMouseMove: function (e) {
                         s && I && M(e);
                     },
                     handleMouseDown: (e) => {
@@ -266,27 +266,26 @@ function y(e) {
                             N(Math.max(0, Math.min(e.clientX - t.left, t.width))),
                             k(e.clientX, t);
                         let r = (e) => {
-                                if (null != w.current) {
-                                    let t = w.current.getBoundingClientRect(),
-                                        n = Math.max(0, Math.min(e.clientX - t.left, t.width)),
-                                        r = null != i ? (i / a) * t.width : null,
-                                        s = null != r ? Math.min(n, r) : n;
-                                    R(null != r && n > r), A(n), N(s), k(e.clientX, t);
-                                } else k(e.clientX, t);
-                            },
-                            u = (e) => {
-                                (P.current = !1),
-                                    (x.current = null),
-                                    y(!1),
-                                    N(null),
-                                    c?.(!1),
-                                    R(!1),
-                                    null != w.current &&
-                                        (((0, d.vq)(e.target, Node) && w.current.contains(e.target)) ||
-                                            (T(!1), A(null))),
-                                    window.removeEventListener("mousemove", r),
-                                    window.removeEventListener("mouseup", u);
-                            };
+                            if (null != w.current) {
+                                let t = w.current.getBoundingClientRect(),
+                                    n = Math.max(0, Math.min(e.clientX - t.left, t.width)),
+                                    r = null != i ? (i / a) * t.width : null,
+                                    s = null != r ? Math.min(n, r) : n;
+                                R(null != r && n > r), A(n), N(s), k(e.clientX, t);
+                            } else k(e.clientX, t);
+                        };
+                        function u(e) {
+                            (P.current = !1),
+                                (x.current = null),
+                                y(!1),
+                                N(null),
+                                c?.(!1),
+                                R(!1),
+                                null != w.current &&
+                                    (((0, d.vq)(e.target, Node) && w.current.contains(e.target)) || (T(!1), A(null))),
+                                window.removeEventListener("mousemove", r),
+                                window.removeEventListener("mouseup", u);
+                        }
                         window.addEventListener("mousemove", r),
                             window.addEventListener("mouseup", u),
                             (x.current = () => {
@@ -300,7 +299,7 @@ function y(e) {
                     isDragging: S,
                     dragX: C,
                     isHoverBeyondMax: v,
-                    handleClick: () => {},
+                    handleClick: function () {},
                     ariaProps: b,
                 }
             );
@@ -393,7 +392,7 @@ function y(e) {
         }, [eE, N, H, ep]),
         eg = r.useMemo(
             () =>
-                ((e, t) => {
+                (function (e, t) {
                     let n = [{ startPx: 0, endPx: e, leftIndicatorIndex: null, rightIndicatorIndex: null }];
                     if (null == t || 0 === t.length) return n;
                     for (let i = 0; i < t.length; i++) {

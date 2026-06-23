@@ -9,10 +9,10 @@ function a() {
             let [e, t] = i.useState("cozy");
             return (
                 i.useEffect(() => {
-                    let e = window.matchMedia("(min-width: 1024px) and (min-height: 820px)"),
-                        n = (e) => {
-                            t(e.matches ? "cozy" : "compact");
-                        };
+                    let e = window.matchMedia("(min-width: 1024px) and (min-height: 820px)");
+                    function n(e) {
+                        t(e.matches ? "cozy" : "compact");
+                    }
                     return (
                         e.addEventListener("change", n),
                         () => {

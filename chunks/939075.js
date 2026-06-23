@@ -16,7 +16,9 @@ var r = n(17928),
     p = n(287809),
     E = n(301736),
     m = n(375708);
-let g = () => (0, f.openUserSettings)(h.X.CONNECTIONS_PANEL);
+function g() {
+    return (0, f.openUserSettings)(h.X.CONNECTIONS_PANEL);
+}
 function A(e) {
     let { entry: t, onOpenGameSettings: n } = e;
     return (0, d.aj)(t) || (0, d.Lf)(t) || (0, d.Tq)(t) ? g : (0, d.zD)(t) ? n : null;

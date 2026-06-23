@@ -16,8 +16,8 @@ var n = l(627968),
     j = l(473145);
 l(321073);
 var p = l(503698),
-    v = l.n(p),
-    f = l(683071),
+    f = l.n(p),
+    v = l(683071),
     S = l(224640),
     N = l(20742),
     E = l(430993),
@@ -71,7 +71,7 @@ function O(t) {
             r || (0, _.Xd)(e.id);
         }, [r, e.id]),
         (0, n.jsxs)("div", {
-            className: v()(L.gP, l),
+            className: f()(L.gP, l),
             children: [
                 (0, n.jsx)(w.Ay, { guild: e, size: w.Ay.Sizes.LARGE }),
                 (0, n.jsxs)("div", {
@@ -100,21 +100,21 @@ function Z(t) {
     return (0, n.jsxs)("div", {
         className: V.Qs,
         children: [
-            (0, n.jsx)("div", { className: v()(V.Sl, e) }),
+            (0, n.jsx)("div", { className: f()(V.Sl, e) }),
             l,
             (0, n.jsx)(A.F, {
                 children:
                     null != i
                         ? (0, n.jsx)(y.F, {
                               className: V.z3,
-                              children: (0, n.jsx)(f.w, { type: "critical", children: i.message }),
+                              children: (0, n.jsx)(v.w, { type: "critical", children: i.message }),
                           })
                         : null,
             }),
         ],
     });
 }
-let Q = (t) => {
+function Q(t) {
     let { canceledCount: e } = t,
         l = (0, o.bG)([z.A], () => z.A.getPremiumTypeSubscription());
     return null == l
@@ -130,7 +130,7 @@ let Q = (t) => {
                   }),
               ],
           });
-};
+}
 function $(t) {
     let { imageClass: e, blurb: l, guild: i, warning: s, error: r, slotCount: a = 1, canceledCount: o = 0 } = t;
     return (0, n.jsxs)(Z, {
@@ -198,9 +198,9 @@ let J = (t) => {
             isModifyingSubscription: C,
             onConfirm: j,
             onCancel: p,
-            error: v,
+            error: f,
         } = t,
-        f = [
+        v = [
             { variant: "secondary", text: K.intl.string(K.t["ETE/oC"]), onClick: p, disabled: C },
             { variant: "primary", text: h, onClick: j, loading: C, "aria-label": g },
         ];
@@ -219,7 +219,7 @@ let J = (t) => {
                               blurb: s,
                               fromGuilds: m,
                               toGuild: x,
-                              error: v,
+                              error: f,
                               slotCount: d,
                               canceledCount: c,
                           })
@@ -229,13 +229,13 @@ let J = (t) => {
                                 blurb: s,
                                 guild: a,
                                 warning: o,
-                                error: v,
+                                error: f,
                                 slotCount: d,
                                 canceledCount: c,
                             })
                           : null,
             }),
-            (0, n.jsx)(b.H, { actions: f, actionsFullWidth: !1 }),
+            (0, n.jsx)(b.H, { actions: v, actionsFullWidth: !1 }),
         ],
     });
 };
@@ -315,7 +315,7 @@ function ti(t) {
             r || (0, _.Xd)(e.id);
         }, [r, e.id]),
         (0, n.jsxs)("div", {
-            className: v()(tt.gt, s),
+            className: f()(tt.gt, s),
             children: [
                 (0, n.jsx)(w.Ay, { className: tt.$f, guild: e, size: w.Ay.Sizes.LARGE, active: !0 }),
                 (0, n.jsxs)("div", {
@@ -446,8 +446,8 @@ function tx(t) {
 var th = l(285753),
     tg = l(568065),
     tC = l(37739);
-let tj = (t) => {
-    let { guildBoostSlots: e, selectedGuild: l, locationSection: s, intent: p, transitionState: v, onClose: f } = t,
+let tj = function (t) {
+    let { guildBoostSlots: e, selectedGuild: l, locationSection: s, intent: p, transitionState: f, onClose: v } = t,
         S = (0, m.D)("ApplyGuildBoostModal"),
         N = (0, j.D$)(g.A.boostSlots);
     r()(null != e || null != l, "Must either provide slots or an initial selected guild"),
@@ -475,15 +475,17 @@ let tj = (t) => {
         ),
         R = i.useMemo(() => U?.[0]?.premiumGuildSubscription != null, [U]),
         G = "control" !== S && ("CONFIRM" === y || "SUCCESS" === y),
-        L = (0, th.A)(G),
-        F = () => (
-            f("SUCCESS" === y),
+        L = (0, th.A)(G);
+    function F() {
+        return (
+            v("SUCCESS" === y),
             C.default.track(ts.HAw.MODAL_DISMISSED, {
                 type: ts.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL,
                 location_section: s,
             }),
             Promise.resolve()
         );
+    }
     i.useEffect(() => {
         C.default.track(ts.HAw.OPEN_MODAL, { type: ts.JJy.PREMIUM_GUILD_SUBSCRIBE_MODAL, location_section: s });
     }, [s]);
@@ -491,7 +493,7 @@ let tj = (t) => {
         UNUSED_QUANTITY_SELECT: () => (
             r()(null != e || 0 !== N.length, "Cannot provide no slots if there are no other available slots"),
             (0, n.jsx)(a.Modal, {
-                transitionState: v,
+                transitionState: f,
                 onClose: F,
                 size: "md",
                 title: K.intl.string(K.t["9FFrrT"]),
@@ -533,7 +535,7 @@ let tj = (t) => {
                 onSelectGuild: (t) => {
                     I(t), P("CONFIRM");
                 },
-                transitionState: v,
+                transitionState: f,
                 isTransfer: R,
                 selectedSlotGuilds: _,
             }),
@@ -574,7 +576,7 @@ let tj = (t) => {
             return R || "control" === S
                 ? R && "control" !== S
                     ? (0, n.jsx)(tx, {
-                          transitionState: v,
+                          transitionState: f,
                           toGuild: w,
                           fromGuilds: _,
                           slotCount: e,
@@ -585,7 +587,7 @@ let tj = (t) => {
                           onClose: F,
                       })
                     : (0, n.jsx)(a.Modal, {
-                          transitionState: v,
+                          transitionState: f,
                           onClose: F,
                           size: "md",
                           title: o,
@@ -622,7 +624,7 @@ let tj = (t) => {
                                 }),
                       })
                 : (0, n.jsx)(to, {
-                      transitionState: v,
+                      transitionState: f,
                       guild: w,
                       slotCount: e,
                       canceledCount: t,
@@ -638,11 +640,11 @@ let tj = (t) => {
                 return (0, n.jsx)(tc.A, {
                     mediaUrls: L.mediaUrls,
                     isSuccess: L.isSuccess,
-                    transitionState: v,
+                    transitionState: f,
                     onClose: F,
                     children: (t, e) =>
                         (0, n.jsx)(td.A, {
-                            transitionState: v,
+                            transitionState: f,
                             guild: w,
                             guildBoostQuantity: U.length,
                             isTransfer: R,
@@ -652,7 +654,7 @@ let tj = (t) => {
                 });
             let t = R ? K.intl.string(K.t["PR0n//"]) : K.intl.string(K.t["7KP/fI"]);
             return (0, n.jsx)(a.Modal, {
-                transitionState: v,
+                transitionState: f,
                 onClose: F,
                 size: "md",
                 title: t,

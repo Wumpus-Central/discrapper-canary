@@ -24,26 +24,26 @@ function c(e, t) {
         r = i.useRef(null);
     return (
         i.useLayoutEffect(() => {
-            let i = r.current,
-                s = () => {
-                    requestAnimationFrame(() => {
-                        var i;
-                        (i = {
-                            name: t,
-                            guildId: e,
-                            disabled: n,
-                            boundingRect: r.current?.getBoundingClientRect() ?? null ?? null,
-                        }),
-                            (0, a.r)(() => {
-                                o.setState((e) => ({
-                                    upsellsByGuildId: {
-                                        ...(e.upsellsByGuildId ?? {}),
-                                        [i.guildId]: { ...(e.upsellsByGuildId[i.guildId] ?? {}), [i.name]: i },
-                                    },
-                                }));
-                            });
-                    });
-                };
+            let i = r.current;
+            function s() {
+                requestAnimationFrame(() => {
+                    var i;
+                    (i = {
+                        name: t,
+                        guildId: e,
+                        disabled: n,
+                        boundingRect: r.current?.getBoundingClientRect() ?? null ?? null,
+                    }),
+                        (0, a.r)(() => {
+                            o.setState((e) => ({
+                                upsellsByGuildId: {
+                                    ...(e.upsellsByGuildId ?? {}),
+                                    [i.guildId]: { ...(e.upsellsByGuildId[i.guildId] ?? {}), [i.name]: i },
+                                },
+                            }));
+                        });
+                });
+            }
             if (null == i) return s(), () => {};
             let l = (function (e) {
                 let t = e.parentNode;

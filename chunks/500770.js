@@ -80,17 +80,17 @@ function v(e) {
             lineClamp: S = 1,
             cardWidth: b = 332,
             cardHeight: L,
-            thumbnailHeight: R = 187,
-            descriptionTextVariant: k = "text-sm/normal",
-            isDraft: M = !1,
+            thumbnailHeight: k = 187,
+            descriptionTextVariant: R = "text-sm/normal",
+            isDraft: P = !1,
         } = e,
-        P = (0, g.Ld)(),
+        M = (0, g.Ld)(),
         D = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(I, {
-                    showDraftBadge: M,
+                    showDraftBadge: P,
                     hidePurchaseToUnlockBadge: !0,
-                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: R } }),
+                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: k } }),
                 }),
                 (0, i.jsxs)("div", {
                     className: E.MS,
@@ -102,18 +102,18 @@ function v(e) {
                                     variant: "text-md/medium",
                                     color: "text-strong",
                                     className: E.tZ,
-                                    id: P,
+                                    id: M,
                                     children: n,
                                 }),
                                 (0, i.jsx)(u.M, {
                                     children: (0, i.jsx)(p.A, {
-                                        variant: k,
+                                        variant: R,
                                         color: "text-muted",
                                         lineClamp: S,
                                         text: l,
                                     }),
                                 }),
-                                A && (0, i.jsx)(C, { onShowFullDescription: v, variant: k }),
+                                A && (0, i.jsx)(C, { onShowFullDescription: v, variant: R }),
                                 y || null == o || "" === o.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
@@ -141,7 +141,7 @@ function v(e) {
                         }),
                         (0, i.jsx)("div", {
                             className: E.QW,
-                            onClick: (e) => {
+                            onClick: function (e) {
                                 e.stopPropagation();
                             },
                             children: d,
@@ -151,7 +151,7 @@ function v(e) {
             ],
         });
     return null == j
-        ? (0, i.jsx)("article", { className: s()(E.Um, T ? E.sG : E.Wi), "aria-labelledby": P, children: D })
+        ? (0, i.jsx)("article", { className: s()(E.Um, T ? E.sG : E.Wi), "aria-labelledby": M, children: D })
         : (0, i.jsx)("div", {
               style: { width: b, height: L },
               children: (0, i.jsx)(h.s, {

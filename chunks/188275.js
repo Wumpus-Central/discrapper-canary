@@ -7,5 +7,7 @@ let r = window.GLOBAL_ENV.RELEASE_CHANNEL === i.B.STAGING ? "1438570979889512448
     o = "Social Layer Gift Code Claim Modal",
     l = "Social Layer Storefront Product Details Modal",
     u = 3,
-    c = 14,
-    d = (e) => `/channels/${e}/game-shop`;
+    c = 14;
+function d(e) {
+    return `/channels/${e}/game-shop`;
+}

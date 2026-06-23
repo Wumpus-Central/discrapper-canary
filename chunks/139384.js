@@ -5,7 +5,7 @@ var i = n(64700),
     s = n(17928),
     a = n(531685),
     o = n(192444);
-let l = (e, t) => {
+let l = function (e, t) {
     let n = i.useRef(!1),
         { enabled: l } = o.m8.useConfig({ location: t }),
         u = (0, s.bG)([a.A], () => a.A.isVisible());

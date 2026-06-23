@@ -9,7 +9,7 @@ var i = n(575593),
     u = n(32731),
     c = n(520606),
     d = n(652215);
-let _ = (e) => {
+function _(e) {
     switch (e.type) {
         case i.R.AVATAR_DECORATION:
             return r.A.fromServer(e);
@@ -22,7 +22,7 @@ let _ = (e) => {
         default:
             return null;
     }
-};
+}
 class h extends c.A {
     collectiblesItem;
     bundleItems;

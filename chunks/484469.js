@@ -1,17 +1,17 @@
-s.d(t, { A: () => o });
-var l = s(627968);
-s(64700);
-var r = s(503698),
-    n = s.n(r),
-    a = s(496569),
-    i = s(835090);
-let o = (e) => {
+n.d(t, { A: () => o });
+var s = n(627968);
+n(64700);
+var l = n(503698),
+    r = n.n(l),
+    a = n(496569),
+    i = n(835090);
+let o = function (e) {
     let { skipPulseAnimation: t = !1 } = e;
-    return (0, l.jsx)("div", {
-        className: n()(a.ty, i.SQ, { [i.aE]: !t }),
-        children: (0, l.jsxs)("div", {
-            className: n()(a.qt, i.yw),
-            children: [(0, l.jsx)("div", { className: i.Jr }), (0, l.jsx)("div", { className: i.N9 })],
+    return (0, s.jsx)("div", {
+        className: r()(a.ty, i.SQ, { [i.aE]: !t }),
+        children: (0, s.jsxs)("div", {
+            className: r()(a.qt, i.yw),
+            children: [(0, s.jsx)("div", { className: i.Jr }), (0, s.jsx)("div", { className: i.N9 })],
         }),
     });
 };

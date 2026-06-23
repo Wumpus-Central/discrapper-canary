@@ -49,7 +49,7 @@ function v(e) {
             channel: y,
             guildScheduledEvent: N,
             isMember: S,
-            onAcceptInstantInvite: () => {
+            onAcceptInstantInvite: function () {
                 if ((0, c.g)({ guild: T, isMember: S, analyticsLocations: j }) === c.W.PROCEED) {
                     if ((0, d.V)(n)) return void (0, o.Ze)(n);
                     r.A.joinGuild(n, { source: C.Q4z.GUILD_EVENT_EMBED }).catch((e) => {

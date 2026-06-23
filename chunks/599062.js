@@ -15,7 +15,7 @@ var s = n(17928),
     f = n(626768),
     p = n(464896),
     E = (((i = {})[(i.SHOP_PAGE = 0)] = "SHOP_PAGE"), (i[(i.GIFT_MODAL = 1)] = "GIFT_MODAL"), i);
-let m = (e) => {
+let m = function (e) {
     let { onRetry: t, errorOrigin: n, errorMessage: i } = e,
         E = (0, c.Ay)(),
         m = (0, s.bG)([d.default], () => {

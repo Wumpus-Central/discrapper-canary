@@ -22,94 +22,94 @@ var i = n(627968),
     S = n(38357),
     y = n(180171),
     C = n(989099);
-let N = (e) => {
-        let { avatarDecoration: t, avatarSize: n } = e,
-            r = (0, d.Ay)(),
-            s = (0, u.q)(r);
-        return (0, i.jsx)(T.i, {
-            item: t,
-            avatarSize: n,
-            isHighlighted: !1,
-            avatarPlaceholderSrc: s ? C : y,
-            className: S.M,
-        });
-    },
-    v = (e) => {
-        let { item: t } = e,
-            n = (0, m.A)(t.skuId),
-            { accessibilityLabel: s, thumbnailPreviewSrc: a, title: o } = n ?? {},
-            l = r.useMemo(() => (0, A.Rc)(a), [a]);
-        return null == n
-            ? null
-            : (0, i.jsxs)("div", {
-                  className: S.ti,
-                  children: [
-                      (0, i.jsx)("img", {
-                          src: "https://cdn.discordapp.com/assets/content/12b31ddb6470a59ecf9103c1aee866f9fdb3331727949eb88029160c02be9e0e.png",
-                          alt: s,
-                          className: S.Zp,
-                      }),
-                      (0, i.jsx)("img", { className: S.Hm, src: l, alt: o }),
-                  ],
-              });
-    },
-    R = (e) => {
-        let { item: t } = e;
-        return (0, i.jsx)("div", { className: S.uF, children: (0, i.jsx)(g.A, { frame: t }) });
-    },
-    O = (e) => {
-        let { nameplate: t } = e,
-            [n, s] = r.useState(!1),
-            a = r.useCallback(() => s(!0), []),
-            o = r.useCallback(() => s(!1), []);
-        return null == t
-            ? null
-            : (0, i.jsx)("div", {
-                  className: S.rz,
-                  onMouseEnter: a,
-                  onMouseLeave: o,
-                  children: (0, i.jsx)(E.A, { nameplate: (0, p.WK)(t), hovered: n, placement: f.u.MINI_PREVIEW }),
-              });
-    },
-    b = (e) => {
-        let { product: t, staticPreviewClassName: n } = e,
-            { firstAvatarDecoration: r, firstProfileEffect: s, firstNameplate: o } = (0, h.f5)(t),
-            l = t.previewAssets?.fgStatic;
-        return null != l
-            ? (0, i.jsx)("img", { src: l, alt: t.name, className: a()(S.C0, n) })
-            : null == r && null == s && null == o
-              ? null
-              : (0, i.jsxs)("div", {
-                    className: S.WJ,
-                    children: [
-                        null != s && (0, i.jsx)("div", { className: S.zh, children: (0, i.jsx)(v, { item: s }) }),
-                        null != o && (0, i.jsx)("div", { className: S.sY, children: (0, i.jsx)(O, { nameplate: o }) }),
-                        null != r &&
-                            (0, i.jsx)("div", {
-                                className: S.kf,
-                                children: (0, i.jsx)(N, { avatarDecoration: r, avatarSize: c._3.SIZE_24 }),
-                            }),
-                    ],
-                });
-    },
-    D = (e) => {
-        let { product: t, sku: n } = e,
-            r = n?.id,
-            s = (0, l.bG)([_.A], () => _.A.getProduct(n?.id)),
-            a = t ?? s;
-        if (a?.type === o.R.BUNDLE) return (0, i.jsx)(b, { product: a });
-        let [u] = a?.items ?? [];
-        if (void 0 !== r && r in I.m) return I.m[r].render({ animationState: "on_hover", className: S.Vr });
-        switch (u?.type) {
-            case o.R.AVATAR_DECORATION:
-                return (0, i.jsx)(N, { avatarDecoration: u, avatarSize: c._3.SIZE_40 });
-            case o.R.PROFILE_EFFECT:
-                return (0, i.jsx)(v, { item: u });
-            case o.R.PROFILE_FRAME:
-                return (0, i.jsx)(R, { item: u });
-            case o.R.NAMEPLATE:
-                return (0, i.jsx)(O, { nameplate: u });
-            default:
-                return null;
-        }
-    };
+function N(e) {
+    let { avatarDecoration: t, avatarSize: n } = e,
+        r = (0, d.Ay)(),
+        s = (0, u.q)(r);
+    return (0, i.jsx)(T.i, {
+        item: t,
+        avatarSize: n,
+        isHighlighted: !1,
+        avatarPlaceholderSrc: s ? C : y,
+        className: S.M,
+    });
+}
+function v(e) {
+    let { item: t } = e,
+        n = (0, m.A)(t.skuId),
+        { accessibilityLabel: s, thumbnailPreviewSrc: a, title: o } = n ?? {},
+        l = r.useMemo(() => (0, A.Rc)(a), [a]);
+    return null == n
+        ? null
+        : (0, i.jsxs)("div", {
+              className: S.ti,
+              children: [
+                  (0, i.jsx)("img", {
+                      src: "https://cdn.discordapp.com/assets/content/12b31ddb6470a59ecf9103c1aee866f9fdb3331727949eb88029160c02be9e0e.png",
+                      alt: s,
+                      className: S.Zp,
+                  }),
+                  (0, i.jsx)("img", { className: S.Hm, src: l, alt: o }),
+              ],
+          });
+}
+function R(e) {
+    let { item: t } = e;
+    return (0, i.jsx)("div", { className: S.uF, children: (0, i.jsx)(g.A, { frame: t }) });
+}
+function O(e) {
+    let { nameplate: t } = e,
+        [n, s] = r.useState(!1),
+        a = r.useCallback(() => s(!0), []),
+        o = r.useCallback(() => s(!1), []);
+    return null == t
+        ? null
+        : (0, i.jsx)("div", {
+              className: S.rz,
+              onMouseEnter: a,
+              onMouseLeave: o,
+              children: (0, i.jsx)(E.A, { nameplate: (0, p.WK)(t), hovered: n, placement: f.u.MINI_PREVIEW }),
+          });
+}
+function b(e) {
+    let { product: t, staticPreviewClassName: n } = e,
+        { firstAvatarDecoration: r, firstProfileEffect: s, firstNameplate: o } = (0, h.f5)(t),
+        l = t.previewAssets?.fgStatic;
+    return null != l
+        ? (0, i.jsx)("img", { src: l, alt: t.name, className: a()(S.C0, n) })
+        : null == r && null == s && null == o
+          ? null
+          : (0, i.jsxs)("div", {
+                className: S.WJ,
+                children: [
+                    null != s && (0, i.jsx)("div", { className: S.zh, children: (0, i.jsx)(v, { item: s }) }),
+                    null != o && (0, i.jsx)("div", { className: S.sY, children: (0, i.jsx)(O, { nameplate: o }) }),
+                    null != r &&
+                        (0, i.jsx)("div", {
+                            className: S.kf,
+                            children: (0, i.jsx)(N, { avatarDecoration: r, avatarSize: c._3.SIZE_24 }),
+                        }),
+                ],
+            });
+}
+function D(e) {
+    let { product: t, sku: n } = e,
+        r = n?.id,
+        s = (0, l.bG)([_.A], () => _.A.getProduct(n?.id)),
+        a = t ?? s;
+    if (a?.type === o.R.BUNDLE) return (0, i.jsx)(b, { product: a });
+    let [u] = a?.items ?? [];
+    if (void 0 !== r && r in I.m) return I.m[r].render({ animationState: "on_hover", className: S.Vr });
+    switch (u?.type) {
+        case o.R.AVATAR_DECORATION:
+            return (0, i.jsx)(N, { avatarDecoration: u, avatarSize: c._3.SIZE_40 });
+        case o.R.PROFILE_EFFECT:
+            return (0, i.jsx)(v, { item: u });
+        case o.R.PROFILE_FRAME:
+            return (0, i.jsx)(R, { item: u });
+        case o.R.NAMEPLATE:
+            return (0, i.jsx)(O, { nameplate: u });
+        default:
+            return null;
+    }
+}

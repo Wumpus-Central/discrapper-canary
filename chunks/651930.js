@@ -11,14 +11,14 @@ var a = n(627968),
     d = n(587895),
     g = n(429913),
     p = n(952818),
-    h = n(137177),
+    h = n(769015),
     x = n(409626),
     _ = n(379078),
     v = n(704554),
     A = n(760751),
     b = n(174459),
-    j = n(486020),
-    f = n(21241),
+    f = n(486020),
+    j = n(21241),
     C = n(652215),
     k = n(375708),
     S = n(247947);
@@ -116,51 +116,41 @@ function y(e) {
         D = i.useMemo(() => (0, x.u9)(), []),
         I = (0, r.bG)([A.A], () => A.A.games),
         O = null != g,
-        R = (0, r.bG)([d.A], () => (g?.application_id != null ? d.A.getApplication(g.application_id) : null)),
-        Z = () => {
-            (0, x.K6)({
-                viewId: D,
-                applicationId: g?.application_id ?? "",
-                suggestedGameName: "" !== G.trim() ? G.trim() : void 0,
-                suggestedGameApplicationId: E?.id ?? null,
-                feedback: "" !== T.trim() ? T.trim() : void 0,
-                submitted: !0,
-            }),
-                o?.(E ?? null),
-                t();
-        },
-        K = (() => {
-            switch (h) {
-                case "issue_selection":
-                    return { title: k.intl.string(k.t["6tnjbD"]), actions: [] };
-                case "game_search":
-                    return {
-                        title: O ? k.intl.string(k.t.TZgkxY) : k.intl.string(k.t["+ie+wX"]),
-                        actions: [
-                            {
-                                text: k.intl.string(k.t.geKm7t),
-                                onClick: Z,
-                                variant: "primary",
-                                disabled: "" === G.trim(),
-                            },
-                        ],
-                    };
-                case "other_feedback":
-                    return {
-                        title: k.intl.string(k.t.tdDpJj),
-                        actions: [
-                            {
-                                text: k.intl.string(k.t.geKm7t),
-                                onClick: Z,
-                                variant: "primary",
-                                disabled: "" === T.trim(),
-                            },
-                        ],
-                    };
-                default:
-                    return { title: "", actions: [] };
-            }
-        })();
+        R = (0, r.bG)([d.A], () => (g?.application_id != null ? d.A.getApplication(g.application_id) : null));
+    function Z() {
+        (0, x.K6)({
+            viewId: D,
+            applicationId: g?.application_id ?? "",
+            suggestedGameName: "" !== G.trim() ? G.trim() : void 0,
+            suggestedGameApplicationId: E?.id ?? null,
+            feedback: "" !== T.trim() ? T.trim() : void 0,
+            submitted: !0,
+        }),
+            o?.(E ?? null),
+            t();
+    }
+    let K = (function () {
+        switch (h) {
+            case "issue_selection":
+                return { title: k.intl.string(k.t["6tnjbD"]), actions: [] };
+            case "game_search":
+                return {
+                    title: O ? k.intl.string(k.t.TZgkxY) : k.intl.string(k.t["+ie+wX"]),
+                    actions: [
+                        { text: k.intl.string(k.t.geKm7t), onClick: Z, variant: "primary", disabled: "" === G.trim() },
+                    ],
+                };
+            case "other_feedback":
+                return {
+                    title: k.intl.string(k.t.tdDpJj),
+                    actions: [
+                        { text: k.intl.string(k.t.geKm7t), onClick: Z, variant: "primary", disabled: "" === T.trim() },
+                    ],
+                };
+            default:
+                return { title: "", actions: [] };
+        }
+    })();
     return (0, a.jsx)(s.Modal, {
         ...K,
         transitionState: n,
@@ -223,7 +213,7 @@ function y(e) {
                                             className: S.Gr,
                                             children: [
                                                 null !=
-                                                (e = j.Ay.getApplicationIconURL({
+                                                (e = f.Ay.getApplicationIconURL({
                                                     id: g.application_id ?? "",
                                                     icon: R?.icon ?? null,
                                                 }))
@@ -254,7 +244,7 @@ function y(e) {
                                                 }),
                                             ],
                                         }),
-                                        (0, a.jsx)(f.A, {}),
+                                        (0, a.jsx)(j.A, {}),
                                     ],
                                 }),
                             (0, a.jsx)(N, {

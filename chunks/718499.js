@@ -50,15 +50,15 @@ function c(e, t) {
                     ),
                 });
             (f.current = i), m.current?.(i);
-            let a = 0,
-                c = () => {
-                    i.mainForwardBufferInfo?.len === 0 &&
-                        i.trigger(r.Ay.Events.BUFFER_FLUSHING, {
-                            startOffset: t.currentTime,
-                            endOffset: 1 / 0,
-                            type: "video",
-                        });
-                };
+            let a = 0;
+            function c() {
+                i.mainForwardBufferInfo?.len === 0 &&
+                    i.trigger(r.Ay.Events.BUFFER_FLUSHING, {
+                        startOffset: t.currentTime,
+                        endOffset: 1 / 0,
+                        type: "video",
+                    });
+            }
             return (
                 i.on(r.Ay.Events.FRAG_LOADING, () => {
                     i.config.minAutoBitrate !== o && (i.config.minAutoBitrate = o);

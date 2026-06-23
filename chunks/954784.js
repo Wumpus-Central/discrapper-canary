@@ -75,7 +75,7 @@ let L = (e) => {
               })
             : null;
     },
-    P = (e) => {
+    P = function (e) {
         let { onClose: l, transitionState: i, guildId: r, isPreview: o } = e,
             h = (0, t.bG)([y.A], () => y.A.getGuild(r)),
             {

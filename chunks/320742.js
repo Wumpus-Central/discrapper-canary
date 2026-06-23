@@ -1,8 +1,8 @@
 s.d(e, { default: () => T });
 var l = s(627968),
     a = s(64700),
-    i = s(503698),
-    n = s.n(i),
+    n = s(503698),
+    i = s.n(n),
     r = s(284009),
     o = s.n(r),
     c = s(224640),
@@ -10,9 +10,9 @@ var l = s(627968),
     u = s(885574),
     x = s(430993),
     m = s(834730),
-    h = s(939249),
-    C = s(696208),
-    f = s(964486),
+    f = s(939249),
+    h = s(696208),
+    C = s(964486),
     p = s(414121),
     N = s(174459),
     g = s(10005),
@@ -24,16 +24,15 @@ var l = s(627968),
     y = s(375708),
     R = s(890863),
     b = s(818050);
-let T = (t) => {
+let T = function (t) {
     let { transitionState: e, onClose: s } = t,
-        i = (0, j.A)(),
+        n = (0, j.A)(),
         [r, T] = a.useState(!1),
         { getLinkCode: z, isGetLinkCodeLoading: _ } = (0, g.A)({}),
         w = (0, v.VE)(),
         H = (0, v.VT)(),
         Q = a.useRef(H);
-    o()(!i, "FamilyCenterQRCodeModal should only be rendered for teens.");
-    let S = () => {
+    function S() {
         T(
             (t) => (
                 N.default.track(E.HAw.FAMILY_CENTER_ACTION, { action: r ? A.qb.HideQRCode : A.qb.RevealQRCode }), !t
@@ -43,10 +42,11 @@ let T = (t) => {
                 setTimeout(() => {
                     s();
                 }, A.nz);
-    };
-    (0, f.Ay)(() => {
-        z();
-    }),
+    }
+    o()(!n, "FamilyCenterQRCodeModal should only be rendered for teens."),
+        (0, C.Ay)(() => {
+            z();
+        }),
         a.useEffect(() => {
             H > Q.current && s();
         }, [Q, H, s]);
@@ -78,8 +78,8 @@ let T = (t) => {
                     }),
                     (0, l.jsx)("div", {
                         className: R.Ac,
-                        children: (0, l.jsx)(h.D, {
-                            className: n()(R.u3, { [R.RK]: I }),
+                        children: (0, l.jsx)(f.D, {
+                            className: i()(R.u3, { [R.RK]: I }),
                             onClick: S,
                             children: (0, l.jsx)(p.Lx, {
                                 size: 272,
@@ -97,7 +97,7 @@ let T = (t) => {
                     }),
                 ],
             }),
-            (0, l.jsx)(C.H, {
+            (0, l.jsx)(h.H, {
                 actionsFullWidth: !0,
                 actions: [
                     { variant: "secondary", text: y.intl.string(y.t.cpT0Cq), onClick: s },

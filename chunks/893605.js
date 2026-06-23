@@ -19,8 +19,8 @@ var i = n(627968),
     v = n(773812),
     p = n(611677),
     b = n(349288),
-    E = n(834730),
-    f = n(602853),
+    f = n(834730),
+    E = n(602853),
     _ = n(534514),
     C = n(832712),
     G = n(544743),
@@ -138,12 +138,12 @@ class ee extends l.PureComponent {
                 (0, i.jsxs)("div", {
                     className: $.aT,
                     children: [
-                        (0, i.jsx)(E.E, {
+                        (0, i.jsx)(f.E, {
                             variant: "text-md/semibold",
                             className: $.HA,
                             children: (0, M.m1)(n, H.default, P.A),
                         }),
-                        (0, i.jsx)(E.E, { variant: "text-xs/normal", className: $.uM, children: t }),
+                        (0, i.jsx)(f.E, { variant: "text-xs/normal", className: $.uM, children: t }),
                     ],
                 }),
             ],
@@ -281,12 +281,12 @@ var el = n(150934),
     ed = n(887560),
     eo = n(393432),
     ec = n(24873);
-let eu = (e) => {
+function eu(e) {
     let {
         channel: { type: t },
     } = e;
     return (0, k.tr)(t) || t === K.rbe.GUILD_CATEGORY;
-};
+}
 function eh(e) {
     let { guildId: t, onSelected: n } = e,
         { channels: l, categories: s } = (0, u.cf)([w.A], () => {
@@ -308,7 +308,7 @@ function eh(e) {
         value: K.dJq,
         onChange: n,
         options: a,
-        renderOptionLabel: (e) => {
+        renderOptionLabel: function (e) {
             let t = R.A.getChannel(e.value);
             if (null == t) return e.label;
             let n = R.A.getChannel(t.parent_id),
@@ -350,7 +350,7 @@ let em = l.forwardRef(function (e, t) {
         children: [
             (0, i.jsx)(eh, {
                 guildId: n,
-                onSelected: (e) => {
+                onSelected: function (e) {
                     if (null != a.find((t) => t.id === e)) return;
                     let t = R.A.getChannel(e);
                     null != t &&
@@ -383,7 +383,7 @@ let em = l.forwardRef(function (e, t) {
                                 (0, i.jsx)("div", {
                                     className: eg._k,
                                     role: "columnheader",
-                                    children: (0, i.jsx)(E.E, {
+                                    children: (0, i.jsx)(f.E, {
                                         variant: "text-xs/bold",
                                         color: "text-muted",
                                         children: X.intl.string(X.t.uShwWv),
@@ -392,7 +392,7 @@ let em = l.forwardRef(function (e, t) {
                                 (0, i.jsx)("div", {
                                     className: eg.km,
                                     role: "columnheader",
-                                    children: (0, i.jsx)(E.E, {
+                                    children: (0, i.jsx)(f.E, {
                                         variant: "text-xs/bold",
                                         color: "text-muted",
                                         children: X.intl.string(X.t.hZrr6k),
@@ -401,7 +401,7 @@ let em = l.forwardRef(function (e, t) {
                                 (0, i.jsx)("div", {
                                     className: eg.km,
                                     role: "columnheader",
-                                    children: (0, i.jsx)(E.E, {
+                                    children: (0, i.jsx)(f.E, {
                                         variant: "text-xs/bold",
                                         color: "text-muted",
                                         children: X.intl.string(X.t.y59NJm),
@@ -410,7 +410,7 @@ let em = l.forwardRef(function (e, t) {
                                 (0, i.jsx)("div", {
                                     className: eg.km,
                                     role: "columnheader",
-                                    children: (0, i.jsx)(E.E, {
+                                    children: (0, i.jsx)(f.E, {
                                         variant: "text-xs/bold",
                                         color: "text-muted",
                                         children: X.intl.string(X.t["pGn/bJ"]),
@@ -419,7 +419,7 @@ let em = l.forwardRef(function (e, t) {
                                 (0, i.jsx)("div", {
                                     className: eg.km,
                                     role: "columnheader",
-                                    children: (0, i.jsx)(E.E, {
+                                    children: (0, i.jsx)(f.E, {
                                         variant: "text-xs/bold",
                                         color: "text-muted",
                                         children: X.intl.string(X.t["32yow9"]),
@@ -473,12 +473,12 @@ function ex(e) {
                         : null,
                     (0, i.jsxs)("div", {
                         children: [
-                            (0, i.jsx)(E.E, {
+                            (0, i.jsx)(f.E, {
                                 variant: "text-md/semibold",
                                 className: eg.cU,
                                 children: (0, M.m1)(t, H.default, P.A),
                             }),
-                            (0, i.jsx)(E.E, { variant: "text-xs/medium", className: eg.cU, children: g }),
+                            (0, i.jsx)(f.E, { variant: "text-xs/medium", className: eg.cU, children: g }),
                         ],
                     }),
                 ],
@@ -621,7 +621,7 @@ function ev(e) {
                       label: X.intl.format(X.t["J+7D9E"], { name: l.name }),
                       description: X.intl.string(X.t.IngcUv),
                       checked: s,
-                      onChange: (e) => {
+                      onChange: function (e) {
                           C.A.updateGuildNotificationSettings(n, { muted: e }, F.G_.muted(e));
                       },
                   }),
@@ -639,7 +639,7 @@ function ev(e) {
                                             minute: "2-digit",
                                         }),
                                     }),
-                          onSelectionChange: (e) => {
+                          onSelectionChange: function (e) {
                               let t = e > 0 ? d()().add(e, "second").toISOString() : null;
                               C.A.updateGuildNotificationSettings(
                                   n,
@@ -658,16 +658,16 @@ function ev(e) {
 n(938796);
 var ep = n(843282),
     eb = n(629584),
-    eE = n(428678),
-    ef = n(885574),
+    ef = n(428678),
+    eE = n(885574),
     e_ = n(276293),
     eC = n(812993),
     eG = n(910323),
     eL = n(790782),
     eM = n(629357);
 function eO(e) {
-    let t,
-        { guildId: n } = e,
+    var t;
+    let { guildId: n } = e,
         s = (0, eN.bG)([Y.Ay], () => Y.Ay.getGuildFlags(n)),
         r = (0, eN.bG)([Y.Ay], () => {
             let e = Y.Ay.getGuildUnreadSetting(n),
@@ -710,12 +710,12 @@ function eO(e) {
                         children: [
                             (0, i.jsxs)("div", {
                                 children: [
-                                    (0, i.jsx)(E.E, {
+                                    (0, i.jsx)(f.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
                                         children: X.intl.string(X.t.Tqd1Af),
                                     }),
-                                    (0, i.jsx)(E.E, {
+                                    (0, i.jsx)(f.E, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
                                         children: X.intl.string(X.t.RpQgm5),
@@ -724,12 +724,12 @@ function eO(e) {
                             }),
                             (0, i.jsxs)("div", {
                                 children: [
-                                    (0, i.jsx)(E.E, {
+                                    (0, i.jsx)(f.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-strong",
                                         children: X.intl.string(X.t["1m22ZB"]),
                                     }),
-                                    (0, i.jsx)(E.E, {
+                                    (0, i.jsx)(f.E, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
                                         children: X.intl.string(X.t["4bP2ZZ"]),
@@ -744,7 +744,7 @@ function eO(e) {
                             (0, i.jsx)(ep.Te, {
                                 value: r,
                                 className: eM.hF,
-                                onChange: (e) => {
+                                onChange: function (e) {
                                     o(!1),
                                         C.A.updateGuildNotificationSettings(
                                             n,
@@ -774,7 +774,7 @@ function eO(e) {
                                     return (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)("div", {
-                                                children: (0, i.jsx)(E.E, {
+                                                children: (0, i.jsx)(f.E, {
                                                     variant: "text-md/normal",
                                                     color: e.disabled ? "text-muted" : void 0,
                                                     children: e.label,
@@ -783,7 +783,7 @@ function eO(e) {
                                             t &&
                                                 (0, i.jsx)(x.m, {
                                                     text: X.intl.string(X.t.eP8yWU),
-                                                    children: (0, i.jsx)(eE.K, {
+                                                    children: (0, i.jsx)(ef.K, {
                                                         size: "custom",
                                                         width: 20,
                                                         height: 20,
@@ -818,11 +818,11 @@ function eO(e) {
                                         a !== K.orn.ALL_MESSAGES;
                                     return (0, i.jsxs)(i.Fragment, {
                                         children: [
-                                            (0, i.jsx)(E.E, { variant: "text-md/normal", children: e.label }),
+                                            (0, i.jsx)(f.E, { variant: "text-md/normal", children: e.label }),
                                             t &&
                                                 (0, i.jsx)(x.m, {
                                                     text: X.intl.string(X.t.idXSbI),
-                                                    children: (0, i.jsx)(ef.m, {
+                                                    children: (0, i.jsx)(eE.m, {
                                                         size: "custom",
                                                         width: 20,
                                                         height: 20,
@@ -869,7 +869,7 @@ function ey(e) {
                                         color: "currentColor",
                                         className: en()(eM.Uk, { [eM.SU]: e.muted }),
                                     }),
-                                    (0, i.jsx)(E.E, {
+                                    (0, i.jsx)(f.E, {
                                         variant: "text-xs/normal",
                                         color: e.muted ? "text-muted" : void 0,
                                         children: e.name,
@@ -898,9 +898,9 @@ function eT(e) {
             }),
             (0, i.jsxs)("div", {
                 children: [
-                    (0, i.jsx)(E.E, { variant: "text-xs/medium", children: X.intl.string(X.t.qSq0tD) }),
+                    (0, i.jsx)(f.E, { variant: "text-xs/medium", children: X.intl.string(X.t.qSq0tD) }),
                     e.notificationSetting === K.orn.ALL_MESSAGES &&
-                        (0, i.jsx)(E.E, {
+                        (0, i.jsx)(f.E, {
                             variant: "text-xs/normal",
                             color: "text-muted",
                             children: X.intl.string(X.t.WYyzI5),
@@ -908,13 +908,13 @@ function eT(e) {
                     e.notificationSetting !== K.orn.ALL_MESSAGES &&
                         (0, i.jsxs)(i.Fragment, {
                             children: [
-                                (0, i.jsxs)(E.E, {
+                                (0, i.jsxs)(f.E, {
                                     variant: "text-xs/normal",
                                     color: "text-link",
                                     tag: "span",
                                     children: ["@Roka", " "],
                                 }),
-                                (0, i.jsx)(E.E, {
+                                (0, i.jsx)(f.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     tag: "span",
@@ -942,7 +942,7 @@ function ek(e) {
 function eR(e) {
     return (0, i.jsx)("div", {
         className: eI.yV,
-        children: (0, i.jsx)(E.E, { variant: "text-sm/normal", color: "text-subtle", children: e.description }),
+        children: (0, i.jsx)(f.E, { variant: "text-sm/normal", color: "text-subtle", children: e.description }),
     });
 }
 function ew(e) {
@@ -1151,7 +1151,7 @@ function eB(e) {
                     }),
                     (0, i.jsx)(b.Anchor, {
                         href: V.A.getArticleURL(K.MVz.HIGHLIGHTS),
-                        children: (0, i.jsx)(E.E, {
+                        children: (0, i.jsx)(f.E, {
                             variant: "text-sm/normal",
                             color: "text-link",
                             children: X.intl.string(X.t.PRBn9K),
@@ -1194,9 +1194,11 @@ function eV(e) {
             description: X.intl.string(X.t["2Y9ZfA"]),
             value: K.dJq,
             placeholder: X.intl.string(X.t["Z+oF8h"]),
-            renderOptionLabel: (e) => (0, i.jsx)(eU, { label: e.label, channelId: e.value }),
+            renderOptionLabel: function (e) {
+                return (0, i.jsx)(eU, { label: e.label, channelId: e.value });
+            },
             options: d,
-            onChange: (e) => {
+            onChange: function (e) {
                 if (null == e) return;
                 let i = new Set(n);
                 i.add(e), t(i), l(e);
@@ -1217,32 +1219,32 @@ function eF(e) {
             messageNotifications: c,
         } = e,
         u = l.useMemo(() => new Set([...t, ...(0, W.ct)(n)]), [n, t]),
-        g = (0, f.r)(h.A.unsafe_rawColors.GREEN_360).hex(),
-        m = (e) => {
-            let n = new Set(t);
-            n.delete(e), d(n);
-        },
-        j = s
-            .map((e) => {
-                let { channel: t } = e;
-                if (!u.has(t.id) || (null != r[t.id] && 0 === r[t.id].length)) return null;
-                let l = n[t.id];
-                return (0, i.jsx)(
-                    ee,
-                    {
-                        channel: t,
-                        guildMuted: a,
-                        muted: null != l && (0, G.tG)(l),
-                        messageNotifications: null != l ? l.message_notifications : null,
-                        guildMessageNotifications: c,
-                        onDelete: m,
-                        checkboxColor: g,
-                        autoFocus: t.id === o,
-                    },
-                    t.id,
-                );
-            })
-            .filter(B.Vq);
+        g = (0, E.r)(h.A.unsafe_rawColors.GREEN_360).hex();
+    function m(e) {
+        let n = new Set(t);
+        n.delete(e), d(n);
+    }
+    let j = s
+        .map((e) => {
+            let { channel: t } = e;
+            if (!u.has(t.id) || (null != r[t.id] && 0 === r[t.id].length)) return null;
+            let l = n[t.id];
+            return (0, i.jsx)(
+                ee,
+                {
+                    channel: t,
+                    guildMuted: a,
+                    muted: null != l && (0, G.tG)(l),
+                    messageNotifications: null != l ? l.message_notifications : null,
+                    guildMessageNotifications: c,
+                    onDelete: m,
+                    checkboxColor: g,
+                    autoFocus: t.id === o,
+                },
+                t.id,
+            );
+        })
+        .filter(B.Vq);
     return (
         (0 === u.size || 0 === j.length) &&
             j.push(
@@ -1253,7 +1255,7 @@ function eF(e) {
                         role: "row",
                         children: (0, i.jsx)("div", {
                             role: "cell",
-                            children: (0, i.jsx)(E.E, {
+                            children: (0, i.jsx)(f.E, {
                                 className: $.sr,
                                 variant: "text-sm/semibold",
                                 children: X.intl.string(X.t["2Y9ZfA"]),
@@ -1354,8 +1356,8 @@ function eW(e) {
             notifyHighlights: Y.Ay.getNotifyHighlights(t),
         })),
         [v, p] = l.useState(new Set()),
-        [b, E] = l.useState(null),
-        f = l.useMemo(
+        [b, f] = l.useState(null),
+        E = l.useMemo(
             () =>
                 (0, L.A)(r._categories, r, (e) => {
                     let {
@@ -1364,10 +1366,10 @@ function eW(e) {
                     return (0, k.tr)(t) || t === K.rbe.GUILD_CATEGORY;
                 }),
             [r],
-        ),
-        _ = (e, n, i) => {
-            C.A.updateGuildNotificationSettings(t, { [e]: n }, i);
-        };
+        );
+    function _(e, n, i) {
+        C.A.updateGuildNotificationSettings(t, { [e]: n }, i);
+    }
     return (0, i.jsxs)(c.Modal, {
         title: X.intl.string(X.t.h850Ss),
         actions: [{ text: X.intl.string(X.t.i4jeWR), onClick: n }],
@@ -1379,7 +1381,7 @@ function eW(e) {
                 muted: x,
                 messageNotifications: N,
                 memberCount: d,
-                handleRadioChange: (e, n, i) => {
+                handleRadioChange: function (e, n, i) {
                     C.A.updateGuildNotificationSettings(t, { [e]: n }, i);
                 },
             }),
@@ -1397,14 +1399,14 @@ function eW(e) {
             (0, i.jsx)(eV, {
                 setNewChannelOverrides: p,
                 newChannelOverrides: v,
-                setLatestOverrideId: E,
-                channels: f,
+                setLatestOverrideId: f,
+                channels: E,
                 categories: r,
             }),
             (0, i.jsx)(eF, {
                 newChannelOverrides: v,
                 channelOverrides: S,
-                channels: f,
+                channels: E,
                 categories: r,
                 muted: x,
                 setNewChannelOverrides: p,

@@ -101,8 +101,10 @@ function B(e) {
 }
 function j(e) {
     let t,
-        n = e.getMatch(1),
-        i = (e) => (null != e ? e?.id : null);
+        n = e.getMatch(1);
+    function i(e) {
+        return null != e ? e?.id : null;
+    }
     return (
         null !=
             (t = b.Ut1.test(n)
@@ -263,20 +265,20 @@ function et(e) {
         case b.I4_.THREAD:
             if (0 === t.length) {
                 let e = [],
-                    t = new Set(),
-                    r = (n) => {
-                        null == n ||
-                            t.has(n.id) ||
-                            f.A.isBlockedOrIgnored(n.id) ||
-                            (e.push({ user: n, text: A.Ay.getUserTag(n) }), t.add(n.id));
-                    },
-                    s = p.A.getCurrentlySelectedChannelId(n.guildId);
+                    t = new Set();
+                function o(n) {
+                    null == n ||
+                        t.has(n.id) ||
+                        f.A.isBlockedOrIgnored(n.id) ||
+                        (e.push({ user: n, text: A.Ay.getUserTag(n) }), t.add(n.id));
+                }
+                let r = p.A.getCurrentlySelectedChannelId(n.guildId);
                 return (
-                    g.Ay.getRecentlyTalked(s, i).forEach((e) => {
+                    g.Ay.getRecentlyTalked(r, i).forEach((e) => {
                         let { record: t } = e;
-                        return r(t);
+                        return o(t);
                     }),
-                    T.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => r(m.default.getUser(e))),
+                    T.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => o(m.default.getUser(e))),
                     e.slice(0, i)
                 );
             }
@@ -286,18 +288,18 @@ function et(e) {
             a = g.Ay.queryChannelUsers({ ...s, channelId: n.channelId });
             break;
         case b.I4_.DMS:
-            let o = (function (e) {
+            let l = (function (e) {
                 if (null == e) return [];
                 let t = new Set(),
                     n = [];
+                function i(e) {
+                    null == e || t.has(e.id) || (r.push(e), t.add(e.id));
+                }
                 e.forEach((e) => {
                     let t = e.getData("channelIds");
                     null != t && t.forEach((e) => n.push(e));
                 });
-                let i = (e) => {
-                        null == e || t.has(e.id) || (r.push(e), t.add(e.id));
-                    },
-                    r = [];
+                let r = [];
                 return (
                     n.forEach((e) => {
                         let t = _.A.getChannel(e);
@@ -314,27 +316,27 @@ function et(e) {
                     r
                 );
             })(r ?? []);
-            if (null != o && o.length > 0) {
+            if (null != l && l.length > 0) {
                 let e = m.default.getCurrentUser();
-                null != e && o.push(e), (a = g.Ay.queryUsers({ ...s, users: o }));
+                null != e && l.push(e), (a = g.Ay.queryUsers({ ...s, users: l }));
             } else a = g.Ay.queryAllUsers({ ...s });
             break;
         default:
             return [];
     }
-    let l = m.default.getCurrentUser(),
-        u = t.toLowerCase().replace(/^@/, ""),
-        d = null != l && t.length > 0 && (D.intl.string(D.t.Qf3ptv).startsWith(u) || b.ME.substr(1).startsWith(u)),
-        h = a
+    let u = m.default.getCurrentUser(),
+        d = t.toLowerCase().replace(/^@/, ""),
+        h = null != u && t.length > 0 && (D.intl.string(D.t.Qf3ptv).startsWith(d) || b.ME.substr(1).startsWith(d)),
+        E = a
             .filter((e) => {
                 let { record: t } = e;
-                return !f.A.isBlockedOrIgnored(t.id) && (!d || t.id !== l?.id);
+                return !f.A.isBlockedOrIgnored(t.id) && (!h || t.id !== u?.id);
             })
             .map((e) => {
                 let { record: t } = e;
                 return { text: A.Ay.getUserTag(t), user: t };
             });
-    return d && h.unshift({ text: b.ME, user: l }), h;
+    return h && E.unshift({ text: b.ME, user: u }), E;
 }
 function en(e) {
     let { query: t, searchContext: n, maxResults: i } = e;

@@ -15,8 +15,8 @@ var t = n(627968),
     h = n(825484),
     j = n(821609),
     A = n(228366),
-    E = n(235986),
-    u = n(207913),
+    u = n(235986),
+    E = n(207913),
     _ = n(393033),
     C = n(239093),
     I = n(375708),
@@ -25,18 +25,18 @@ var t = n(627968),
 function v(i) {
     let { className: e, isDsaEligible: n = !1, onClose: s, onNext: r, onBack: d } = i,
         v = (0, c.y5)(),
-        L = (0, x.bG)([u.A], () => u.A.getFreeTextAppealReason()),
+        L = (0, x.bG)([E.A], () => E.A.getFreeTextAppealReason()),
         [T, b] = a.useState(""),
-        [P, f] = a.useState(!1);
+        [f, P] = a.useState(!1);
     a.useEffect(() => {
-        b(L ?? ""), f(v === C.Iv.SOMETHING_ELSE);
+        b(L ?? ""), P(v === C.Iv.SOMETHING_ELSE);
     }, [L, v, n]);
     let D = C.Qv.map((i) => ({ value: i, name: (0, _.l0)(i) }));
     return (0, t.jsxs)(t.Fragment, {
         children: [
             (0, t.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
-                direction: E.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 className: k.wx,
                 separator: !1,
                 children: [
@@ -63,7 +63,7 @@ function v(i) {
                         value: v,
                         options: D,
                         onChange: (i) => {
-                            f(i === C.Iv.SOMETHING_ELSE),
+                            P(i === C.Iv.SOMETHING_ELSE),
                                 i !== C.Iv.SOMETHING_ELSE &&
                                     (b(""),
                                     A.h.dispatch({
@@ -74,7 +74,7 @@ function v(i) {
                         },
                     }),
                     n &&
-                        P &&
+                        f &&
                         (0, t.jsxs)(t.Fragment, {
                             children: [
                                 (0, t.jsx)(N.f, {
@@ -107,7 +107,7 @@ function v(i) {
                         (0, t.jsx)(j.$, {
                             variant: "primary",
                             text: I.intl.string(I.t.PDTjLN),
-                            onClick: () => {
+                            onClick: function () {
                                 A.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: T }),
                                     r?.();
                             },
@@ -115,7 +115,7 @@ function v(i) {
                         (0, t.jsx)(j.$, {
                             variant: "secondary",
                             text: I.intl.string(I.t["13/7kX"]),
-                            onClick: () => {
+                            onClick: function () {
                                 A.h.dispatch({ type: "SAFETY_HUB_APPEAL_SIGNAL_CUSTOM_INPUT_CHANGE", userInput: T }),
                                     d?.();
                             },
@@ -129,15 +129,15 @@ function v(i) {
 var L = n(349288),
     T = n(308645),
     b = n(652215),
-    P = n(745327);
-function f(i) {
+    f = n(745327);
+function P(i) {
     let { className: e, isDsaEligible: n, onClose: s, onNext: r, onBack: d } = i,
-        o = (0, x.bG)([u.A], () => u.A.getAppealClassificationId()),
+        o = (0, x.bG)([E.A], () => E.A.getAppealClassificationId()),
         { classification: p } = (0, c.LJ)(o ?? b.dJq),
         C = (0, _.eu)(p?.description),
-        S = (0, x.bG)([u.A], () => u.A.getIsSubmitting()),
-        v = (0, x.bG)([u.A], () => u.A.getAppealSignal()),
-        f = (0, x.bG)([u.A], () => u.A.getFreeTextAppealReason()),
+        S = (0, x.bG)([E.A], () => E.A.getIsSubmitting()),
+        v = (0, x.bG)([E.A], () => E.A.getAppealSignal()),
+        P = (0, x.bG)([E.A], () => E.A.getFreeTextAppealReason()),
         [D, U] = a.useState(!1),
         [G, y] = a.useState(""),
         M = a.useCallback((i) => {
@@ -146,16 +146,16 @@ function f(i) {
         F = a.useCallback(async () => {
             if (null !== o)
                 try {
-                    y(""), await T.Gf(o, v, f), r?.();
+                    y(""), await T.Gf(o, v, P), r?.();
                 } catch (i) {
                     y((0, _.Tk)(i.body?.code));
                 }
-        }, [o, v, f, r]);
+        }, [o, v, P, r]);
     return (0, t.jsxs)(t.Fragment, {
         children: [
             (0, t.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
-                direction: E.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 className: k.wx,
                 separator: !1,
                 children: [
@@ -179,14 +179,14 @@ function f(i) {
                 paddingFix: !1,
                 children: [
                     (0, t.jsx)("ul", {
-                        className: P.qI,
-                        children: [(0, _.l0)(v), f]
+                        className: f.qI,
+                        children: [(0, _.l0)(v), P]
                             .filter((i) => i.length > 0)
                             .map((i, e) =>
                                 (0, t.jsx)(
                                     "li",
                                     {
-                                        className: P.Aw,
+                                        className: f.Aw,
                                         children: (0, t.jsx)(g.E, {
                                             tag: "span",
                                             variant: "text-md/normal",
@@ -199,19 +199,19 @@ function f(i) {
                     }),
                     n &&
                         (0, t.jsx)("div", {
-                            className: P.DE,
+                            className: f.DE,
                             children: (0, t.jsx)(L.Anchor, {
                                 onClick: () => U((i) => !i),
                                 children: (0, t.jsx)(m.D, {
                                     variant: "heading-md/normal",
                                     color: "text-link",
-                                    children: f.length > 0 ? I.intl.string(I.t.tnE3bZ) : I.intl.string(I.t.uoQFIp),
+                                    children: P.length > 0 ? I.intl.string(I.t.tnE3bZ) : I.intl.string(I.t.uoQFIp),
                                 }),
                             }),
                         }),
                     D &&
                         n &&
-                        (0, t.jsx)("div", { className: P.Kf, children: (0, t.jsx)(N.f, { value: f, onChange: M }) }),
+                        (0, t.jsx)("div", { className: f.Kf, children: (0, t.jsx)(N.f, { value: P, onChange: M }) }),
                     (0, t.jsx)("div", {
                         className: k.kU,
                         children: (0, t.jsx)(g.E, { variant: "text-md/semibold", children: C }),
@@ -219,24 +219,24 @@ function f(i) {
                     (0, t.jsx)(g.E, {
                         variant: "text-xs/medium",
                         color: "text-default",
-                        className: P.PJ,
+                        className: f.PJ,
                         children: I.intl.string(I.t["d6qgY/"]),
                     }),
                 ],
             }),
             (0, t.jsxs)(l.jl, {
                 "data-migration-pending": !0,
-                direction: E.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 children: [
                     "" !== G &&
                         (0, t.jsx)(g.E, {
-                            className: P.kc,
+                            className: f.kc,
                             variant: "text-lg/normal",
                             color: "text-feedback-critical",
                             children: G,
                         }),
                     (0, t.jsx)("div", {
-                        className: P.UD,
+                        className: f.UD,
                         children: (0, t.jsxs)(h.e, {
                             direction: "horizontal-reverse",
                             children: [
@@ -263,11 +263,11 @@ function f(i) {
 var D = n(26095),
     U = n(174459),
     G = n(335891);
-let y = () => {
-    let i = (0, x.bG)([u.A], () => u.A.getAppealClassificationId()),
+function y() {
+    let i = (0, x.bG)([E.A], () => E.A.getAppealClassificationId()),
         e = (0, c.LJ)(i ?? b.dJq),
         n = (0, G.K)(),
-        t = (0, x.bG)([u.A], () => u.A.getIsDsaEligible());
+        t = (0, x.bG)([E.A], () => E.A.getIsDsaEligible());
     return a.useCallback(
         (a) => {
             U.default.track(b.HAw.SAFETY_HUB_ACTION, {
@@ -281,7 +281,7 @@ let y = () => {
         },
         [n.state, i, e, t],
     );
-};
+}
 var M = n(939249),
     F = n(147925),
     O = n(797982);
@@ -308,7 +308,7 @@ function B(i) {
         children: [
             (0, t.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
-                direction: E.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 className: k.wx,
                 separator: !1,
                 children: [
@@ -377,13 +377,13 @@ function $(i) {
         N = e?.explainer_link ?? "",
         h = null != e && null != e.flagged_content && e.flagged_content.length > 0,
         A = (0, _.eu)(e?.description),
-        u = !a && !s && (null == r || r === Y.Il.IN_APP),
+        E = !a && !s && (null == r || r === Y.Il.IN_APP),
         S = null != e && ((0, _._g)(e) || h);
     return (0, t.jsxs)(t.Fragment, {
         children: [
             (0, t.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
-                direction: E.A.Direction.VERTICAL,
+                direction: u.A.Direction.VERTICAL,
                 className: k.wx,
                 separator: !1,
                 children: [
@@ -436,7 +436,7 @@ function $(i) {
                             url: N,
                             onClick: () => p(C.ZU.ClickLearnMoreLink),
                         }),
-                    u &&
+                    E &&
                         n &&
                         (0, t.jsx)(g.E, {
                             className: k.C2,
@@ -445,7 +445,7 @@ function $(i) {
                         }),
                 ],
             }),
-            u &&
+            E &&
                 (0, t.jsx)(l.jl, {
                     "data-migration-pending": !0,
                     children: (0, t.jsx)(j.$, { variant: "primary", text: I.intl.string(I.t.PDTjLN), onClick: x }),
@@ -467,11 +467,11 @@ function w(i) {
     let A = a.useCallback(() => {
             D.A.close(), o();
         }, [o]),
-        E = a.useCallback(() => {
+        u = a.useCallback(() => {
             let i = C.A8[x]?.next;
             null != i ? m(i) : A();
         }, [x, A]),
-        u = a.useCallback(() => {
+        E = a.useCallback(() => {
             let i = C.A8[x]?.prev;
             null != i ? m(i) : A();
         }, [x, A]);
@@ -494,7 +494,7 @@ function w(i) {
                         children: (0, t.jsx)($, {
                             classification: g,
                             onClose: A,
-                            onNext: E,
+                            onNext: u,
                             isSpam: N,
                             isCoppa: h,
                             appealIngestionType: j,
@@ -505,19 +505,19 @@ function w(i) {
                         id: C.yN.COLLECT_SIGNAL,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_COLLECT_SIGNAL,
                         impressionProperties: C.nY,
-                        children: (0, t.jsx)(v, { isDsaEligible: p, onClose: A, onNext: E, onBack: u }),
+                        children: (0, t.jsx)(v, { isDsaEligible: p, onClose: A, onNext: u, onBack: E }),
                     }),
                     (0, t.jsx)(r.q, {
                         id: C.yN.CONFIRM_SUBMISSION,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_CONFIRM_SUBMISSION,
                         impressionProperties: C.nY,
-                        children: (0, t.jsx)(f, { isDsaEligible: p, onClose: A, onNext: E, onBack: u }),
+                        children: (0, t.jsx)(P, { isDsaEligible: p, onClose: A, onNext: u, onBack: E }),
                     }),
                     (0, t.jsx)(r.q, {
                         id: C.yN.REQUEST_SENT,
                         impressionName: s.ImpressionNames.APPEAL_INGESTION_REQUEST_SENT,
                         impressionProperties: C.nY,
-                        children: (0, t.jsx)(B, { onNext: E }),
+                        children: (0, t.jsx)(B, { onNext: u }),
                     }),
                 ],
             }),

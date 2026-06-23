@@ -124,7 +124,7 @@ function y(e) {
                     : null,
             ],
         }),
-        handleSubmit: () => {
+        handleSubmit: function () {
             U(e.code, i, a)
                 .then(() => {
                     (0, u.closeAllModals)(), (0, x.bz)();

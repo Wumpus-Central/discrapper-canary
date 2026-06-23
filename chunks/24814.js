@@ -1,33 +1,33 @@
-e.d(n, { default: () => p });
-var a = e(627968),
-    i = e(64700),
-    l = e(189213),
-    s = e(150934),
-    c = e(817281),
-    o = e(964486),
-    r = e(47167),
-    d = e(174459),
-    u = e(652215),
-    h = e(375708);
-let p = (t) => {
-    let { onConfirm: n, channel: e, onClose: p, transitionState: C, ...g } = t,
-        k = (0, r.Ay)(e),
-        [y, A] = i.useState(!1);
+i.d(n, { default: () => p });
+var e = i(627968),
+    a = i(64700),
+    l = i(189213),
+    c = i(150934),
+    s = i(817281),
+    o = i(964486),
+    r = i(47167),
+    u = i(174459),
+    d = i(652215),
+    h = i(375708);
+let p = function (t) {
+    let { onConfirm: n, channel: i, onClose: p, transitionState: C, ...g } = t,
+        k = (0, r.Ay)(i),
+        [f, y] = a.useState(!1);
     return ((0, o.Ay)(() => {
-        d.default.track(u.HAw.OPEN_MODAL, { type: "Voice channel change confirmation", channel_id: e.id });
+        u.default.track(d.HAw.OPEN_MODAL, { type: "Voice channel change confirmation", channel_id: i.id });
     }),
     null == k)
         ? null
-        : (0, a.jsx)(l.Modal, {
+        : (0, e.jsx)(l.Modal, {
               title: h.intl.string(h.t["0LZN5F"]),
               subtitle: h.intl.format(h.t["vA+uEs"], { channel: k }),
               transitionState: C,
               size: "md",
               onClose: p,
-              actionBarInput: (0, a.jsx)(s.S, {
-                  checked: y,
-                  onChange: (t) => {
-                      c.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: t }), A(t);
+              actionBarInput: (0, e.jsx)(c.S, {
+                  checked: f,
+                  onChange: function (t) {
+                      s.Ay.updatedUnsyncedSettings({ disableVoiceChannelChangeAlert: t }), y(t);
                   },
                   label: h.intl.string(h.t["JdIQ/Y"]),
               }),
@@ -36,7 +36,7 @@ let p = (t) => {
                   {
                       variant: "primary",
                       text: h.intl.string(h.t["cY+Oob"]),
-                      onClick: () => {
+                      onClick: function () {
                           n(), p();
                       },
                       autoFocus: !1,

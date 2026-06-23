@@ -3,8 +3,8 @@ var a = i(627968),
     n = i(64700),
     s = i(224640),
     l = i(20742),
-    r = i(430993),
-    o = i(834730),
+    o = i(430993),
+    r = i(834730),
     c = i(696208),
     u = i(141628),
     d = i(811893),
@@ -31,7 +31,7 @@ var a = i(627968),
     b = i(403362),
     D = i(427262),
     M = i(690493),
-    v = i(578942),
+    v = i(118982),
     U = i(383089),
     w = i(41032),
     G = i(188275),
@@ -44,8 +44,8 @@ function B(t) {
             sku: i,
             onClose: s,
             giftCode: l,
-            channelContext: r,
-            customGiftMessage: o,
+            channelContext: o,
+            customGiftMessage: r,
             emojiName: c,
             soundId: u,
             analyticsLocations: d,
@@ -63,8 +63,8 @@ function B(t) {
     let T = n.useRef({
         analyticsLocations: R,
         giftCode: l,
-        hasCustomMessage: null != o && "" !== o,
-        customGiftMessage: o,
+        hasCustomMessage: null != r && "" !== r,
+        customGiftMessage: r,
         skuProductLine: i.productLine,
         emojiName: c,
         soundId: u,
@@ -117,13 +117,13 @@ function B(t) {
             sound_id: s,
         });
         try {
-            I(!0), await A.A.redeemGiftCode({ code: l.code, options: { channelId: r } }), m({ state: "SUCCESS" });
+            I(!0), await A.A.redeemGiftCode({ code: l.code, options: { channelId: o } }), m({ state: "SUCCESS" });
         } catch (t) {
             m({ state: "ERROR", error: t });
         } finally {
             I(!1);
         }
-    }, [l, m, r, L?.id]);
+    }, [l, m, o, L?.id]);
     if (null == L) return null;
     switch (_.state) {
         case "LINK":
@@ -144,7 +144,7 @@ function B(t) {
                 application: L,
                 sku: i,
                 giftCode: l,
-                customGiftMessage: o,
+                customGiftMessage: r,
                 onClose: s,
                 analyticsLocations: R,
                 emojiName: c,
@@ -162,7 +162,7 @@ function B(t) {
             (0, b.xb)(_);
     }
 }
-let K = (t) => {
+function K(t) {
     let e,
         i,
         { transitionState: n, onClose: u, error: d, application: _, hasAlreadyLinked: p } = t,
@@ -180,8 +180,8 @@ let K = (t) => {
             "aria-label": e,
             children: [
                 (0, a.jsx)(l.rQ, { title: e, alignCenter: !0 }),
-                (0, a.jsx)(r.c, {
-                    children: (0, a.jsx)(o.E, { variant: "text-md/normal", color: "text-subtle", children: i }),
+                (0, a.jsx)(o.c, {
+                    children: (0, a.jsx)(r.E, { variant: "text-md/normal", color: "text-subtle", children: i }),
                 }),
                 (0, a.jsx)(c.H, {
                     actions: [{ variant: "primary", text: F.intl.string(F.t.WAI6xu), onClick: u }],
@@ -190,13 +190,13 @@ let K = (t) => {
             ],
         })
     );
-};
+}
 function W(t) {
     let {
             sku: e,
             application: i,
             transitionState: l,
-            onClose: o,
+            onClose: r,
             successStateButtonText: c,
             onSuccessButtonClick: d,
             isSuccessButtonLoading: _,
@@ -234,8 +234,8 @@ function W(t) {
     if (!g)
         return (0, a.jsx)(s.d, {
             transitionState: l,
-            onClose: o,
-            children: (0, a.jsx)(r.c, {
+            onClose: r,
+            children: (0, a.jsx)(o.c, {
                 children: (0, a.jsx)("div", { className: H.g4, children: (0, a.jsx)(m.y, {}) }),
             }),
         });
@@ -246,7 +246,7 @@ function W(t) {
         sku: e,
         application: i,
         transitionState: l,
-        onClose: o,
+        onClose: r,
         hasAlreadyLinked: A,
         canStartAuthorization: C,
         primaryCTAButtonProps: I,
@@ -287,7 +287,7 @@ function z(t) {
         return (0, a.jsx)(s.d, {
             transitionState: e,
             onClose: i,
-            children: (0, a.jsx)(r.c, { children: (0, a.jsx)(m.y, {}) }),
+            children: (0, a.jsx)(o.c, { children: (0, a.jsx)(m.y, {}) }),
         });
     let b =
         k && !E
@@ -326,9 +326,9 @@ function z(t) {
         children: [
             (0, a.jsx)("div", { style: { position: "absolute", top: "-100px" }, ref: (t) => h(t) }),
             (0, a.jsx)(w.z, { sku: l }),
-            (0, a.jsxs)(r.c, {
+            (0, a.jsxs)(o.c, {
                 children: [
-                    (0, a.jsx)(o.E, {
+                    (0, a.jsx)(r.E, {
                         variant: "text-md/normal",
                         color: "text-subtle",
                         className: H.j7,
@@ -336,7 +336,7 @@ function z(t) {
                     }),
                     null != A &&
                         "" !== A &&
-                        (0, a.jsx)(o.E, {
+                        (0, a.jsx)(r.E, {
                             variant: "text-lg/semibold",
                             color: "text-subtle",
                             className: H.pt,
@@ -360,26 +360,26 @@ function z(t) {
         ],
     });
 }
-let V = (t) => {
-        let { soundId: e } = t;
-        return (
-            n.useEffect(() => {
-                let t = R.A.getSoundById(e);
-                (0, h.playGiftSound)(e, t?.volume ?? 1);
-            }, [e]),
-            null
-        );
-    },
-    Y = { xMin: -120, xMax: 120, yMin: -80, yMax: -200 },
+function V(t) {
+    let { soundId: e } = t;
+    return (
+        n.useEffect(() => {
+            let t = R.A.getSoundById(e);
+            (0, h.playGiftSound)(e, t?.volume ?? 1);
+        }, [e]),
+        null
+    );
+}
+let Y = { xMin: -120, xMax: 120, yMin: -80, yMax: -200 },
     J = (t) => {
         let { confettiTarget: e, emojiName: i } = t,
             s = (0, p.bG)([x.Ay], () => x.Ay.useReducedMotion),
             l = n.useRef(e),
-            [r, o] = n.useState(!0),
+            [o, r] = n.useState(!0),
             c = n.useCallback(() => {
-                o(!1);
+                r(!1);
             }, []);
-        if (s || !r) return null;
+        if (s || !o) return null;
         let u = null != i ? N.Ay.getURL(i) : void 0;
         return (0, a.jsx)(I.A, {
             confettiTarget: l.current,

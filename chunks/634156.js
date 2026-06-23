@@ -5,7 +5,7 @@ n(64700);
 var r = n(661531),
     s = n(260612),
     a = n(953727);
-let o = (e) => {
+function o(e) {
     let { size: t = "md", width: n, height: o, color: l = r.A.colors.INTERACTIVE_TEXT_DEFAULT, ...u } = e,
         c = (0, s.J)(t),
         d = c?.width ?? n,
@@ -35,4 +35,4 @@ let o = (e) => {
             }),
         ],
     });
-};
+}

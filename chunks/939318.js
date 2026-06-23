@@ -366,31 +366,32 @@ function es(e) {
         { coverImageUrl: c, gameName: u, isLoading: g } = (0, J.A)(t.applicationId),
         { registerDragHandleRef: m } = (0, M.r)(),
         h = s && !a,
-        { isDragging: x } = (0, $.V)((e) => ({ isDragging: e.isDragging() })),
-        p = () =>
-            (0, n.jsxs)(n.Fragment, {
-                children: [
-                    (0, n.jsx)(ee.A, {
-                        imageSrc: c,
-                        gameName: u,
-                        applicationId: t.applicationId,
-                        userId: i,
-                        disableInteraction: a,
-                        className: null == c || a ? void 0 : ei.iL,
-                        hideTooltip: x,
-                        coverRef: o,
+        { isDragging: x } = (0, $.V)((e) => ({ isDragging: e.isDragging() }));
+    function p() {
+        return (0, n.jsxs)(n.Fragment, {
+            children: [
+                (0, n.jsx)(ee.A, {
+                    imageSrc: c,
+                    gameName: u,
+                    applicationId: t.applicationId,
+                    userId: i,
+                    disableInteraction: a,
+                    className: null == c || a ? void 0 : ei.iL,
+                    hideTooltip: x,
+                    coverRef: o,
+                }),
+                h && (0, n.jsx)(Z.jV, { buttonRef: m(t.applicationId), className: en.BU }),
+                h &&
+                    (0, n.jsx)(et.A, {
+                        game: t,
+                        widgetType: l,
+                        className: en.vS,
+                        iconSize: "xs",
+                        onRemove: () => d?.(t.applicationId),
                     }),
-                    h && (0, n.jsx)(Z.jV, { buttonRef: m(t.applicationId), className: en.BU }),
-                    h &&
-                        (0, n.jsx)(et.A, {
-                            game: t,
-                            widgetType: l,
-                            className: en.vS,
-                            iconSize: "xs",
-                            onRemove: () => d?.(t.applicationId),
-                        }),
-                ],
-            });
+            ],
+        });
+    }
     return g
         ? (0, n.jsx)("div", { className: ei.mD })
         : h

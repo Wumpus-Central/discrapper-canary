@@ -32,7 +32,7 @@ var s = r(735438),
     k = r(761508),
     B = r(684339),
     w = r(51092),
-    T = r(941327);
+    T = r(394459);
 r(134528), r(947204);
 var G = r(796873),
     L = r.n(G),
@@ -348,16 +348,18 @@ let er = {
         audioLevel: function (e) {
             return Math.max(Z(e), -100) + 100;
         },
-    },
-    ea = (e) => e,
-    es = (e) => {
-        let [t] = i.useState([]);
-        return (
-            t.push({ value: e.value, time: Date.now() }),
-            t.length > 600 && t.shift(),
-            (0, n.jsx)(M.A, { converter: e.converter, dataPoints: t, width: e.width, height: e.height })
-        );
     };
+function ea(e) {
+    return e;
+}
+let es = (e) => {
+    let [t] = i.useState([]);
+    return (
+        t.push({ value: e.value, time: Date.now() }),
+        t.length > 600 && t.shift(),
+        (0, n.jsx)(M.A, { converter: e.converter, dataPoints: t, width: e.width, height: e.height })
+    );
+};
 function el(e) {
     let { label: t, value: r, section: i } = e,
         a = en[t] ?? ea,
@@ -811,8 +813,8 @@ function ek(e, t, r, i, a) {
     ) {
         let t = [];
         Object.keys(c).forEach((s) => {
-            let l,
-                o = x.default.getUser(s),
+            var l;
+            let o = x.default.getUser(s),
                 p = b.Ay.getNick(a, s),
                 h = (0, C.Xi)(e, s, r);
             null != c[s] &&

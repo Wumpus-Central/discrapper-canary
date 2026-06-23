@@ -12,8 +12,8 @@ var i = n(627968),
     m = n(31300),
     g = n(788120),
     p = n(391973),
-    x = n(684013),
-    f = n(964486),
+    f = n(684013),
+    x = n(964486),
     A = n(38502),
     E = n(810412),
     S = n(302614),
@@ -52,7 +52,7 @@ function _(e, t) {
                     r(!1);
                 }, t)));
         }, [t, e?.showExtrasHintTimestamp]),
-        (0, f.Ay)(() => {
+        (0, x.Ay)(() => {
             let n = e?.showExtrasHintTimestamp;
             return (
                 null != n &&
@@ -82,7 +82,7 @@ function O(e) {
                           className: y.SM,
                           onClick: () => {
                               null != s &&
-                                  (x.A.setInputLocked(!1, I.A.getTargetPID()),
+                                  (f.A.setInputLocked(!1, I.A.getTargetPID()),
                                   (0, E.YX)(s.type, { type: E.Z5.KEYBIND_HINT, value: E.IP.OVERLAY_UNLOCKED }));
                           },
                           children: (0, i.jsx)(u.E, {
@@ -128,7 +128,7 @@ function k(e) {
               "aria-label": s,
               children: (0, i.jsx)(c.D, {
                   className: l()(y.x6, n && y.vu),
-                  onClick: () => {
+                  onClick: function () {
                       (0, p.cC)(t, { showAllStreams: !n });
                   },
                   children: (0, i.jsx)(m.k, {

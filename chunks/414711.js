@@ -49,29 +49,29 @@ class p extends r.PureComponent {
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
-                            n.e("71406"),
-                            n.e("94881"),
-                            n.e("26132"),
-                            n.e("46652"),
-                            n.e("93190"),
-                            n.e("34552"),
-                            n.e("8757"),
-                            n.e("23625"),
-                            n.e("54037"),
-                            n.e("89673"),
-                            n.e("68403"),
-                            n.e("29787"),
-                            n.e("82073"),
-                            n.e("97558"),
-                            n.e("91994"),
-                            n.e("76665"),
-                            n.e("76273"),
-                            n.e("24198"),
-                            n.e("32418"),
-                        ]).then(n.bind(n, 668569)),
-                        s = () => {
-                            (0, h.Jo)({ targetUserId: t.id, tab: _.Ay.getState().section });
-                        };
+                        n.e("71406"),
+                        n.e("94881"),
+                        n.e("26132"),
+                        n.e("46652"),
+                        n.e("93190"),
+                        n.e("34552"),
+                        n.e("8757"),
+                        n.e("23625"),
+                        n.e("54037"),
+                        n.e("89673"),
+                        n.e("68403"),
+                        n.e("29787"),
+                        n.e("82073"),
+                        n.e("97558"),
+                        n.e("91994"),
+                        n.e("76665"),
+                        n.e("76273"),
+                        n.e("24198"),
+                        n.e("32418"),
+                    ]).then(n.bind(n, 668569));
+                    function s() {
+                        (0, h.Jo)({ targetUserId: t.id, tab: _.Ay.getState().section });
+                    }
                     return (n) => {
                         let a = (0, i.jsx)(e, { ...n, user: t, onInteraction: s });
                         return null == r ? a : (0, i.jsx)(d.f5, { value: r, children: a });

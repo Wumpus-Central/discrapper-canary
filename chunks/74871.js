@@ -1,10 +1,10 @@
-l.d(t, { A: () => i });
-var r = l(627968),
-    n = l(498381),
-    a = l(891167),
-    s = l(93610);
-let i = (e) => {
-    let { bannerSrc: t, logoSrc: l, backgroundColor: i, href: c, children: d } = e;
+n.d(t, { A: () => i });
+var r = n(627968),
+    l = n(498381),
+    a = n(891167),
+    s = n(93610);
+let i = function (e) {
+    let { bannerSrc: t, logoSrc: n, backgroundColor: i, href: c, children: o } = e;
     return (0, r.jsxs)("div", {
         className: s.ZK,
         children: [
@@ -19,16 +19,16 @@ let i = (e) => {
                     (0, r.jsxs)("div", {
                         className: s.wx,
                         children: [
-                            null != l && (0, r.jsx)("div", { className: s.wm, children: (0, r.jsx)(a.A, { src: l }) }),
+                            null != n && (0, r.jsx)("div", { className: s.wm, children: (0, r.jsx)(a.A, { src: n }) }),
                             null != c &&
-                                (0, r.jsx)(n.aF, {
+                                (0, r.jsx)(l.aF, {
                                     variant: "overlay-primary",
                                     href: c,
                                     ctaText: "COLLECTIBLES_SHOP_THE_COLLECTION",
                                 }),
                         ],
                     }),
-                    null != d && (0, r.jsx)("div", { className: s.Y_, children: d }),
+                    null != o && (0, r.jsx)("div", { className: s.Y_, children: o }),
                 ],
             }),
         ],

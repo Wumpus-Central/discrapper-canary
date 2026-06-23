@@ -14,13 +14,13 @@ class o extends i.Ay.Store {
     }
 }
 let l = new o(r.h, {
-    COLLECTIBLES_MARKETING_FETCH: () => {
+    COLLECTIBLES_MARKETING_FETCH: function () {
         a = "FETCHING";
     },
-    COLLECTIBLES_MARKETING_FETCH_SUCCESS: (e) => {
+    COLLECTIBLES_MARKETING_FETCH_SUCCESS: function (e) {
         (s = e.marketings.marketingsBySurfaces), (a = "FETCHED");
     },
-    LOGOUT: () => {
+    LOGOUT: function () {
         (s = {}), (a = "NOT_FETCHED");
     },
 });

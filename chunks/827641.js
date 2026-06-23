@@ -13,8 +13,8 @@ var s = t(627968),
     x = t(581925),
     g = t(689175),
     j = t(289873),
-    A = t(47167),
-    f = t(713654),
+    f = t(47167),
+    A = t(713654),
     p = t(564771),
     v = t(607470),
     I = t(640708),
@@ -117,7 +117,7 @@ function es(e) {
         a,
         { message: c, guildId: x, officialMessageColor: g } = e,
         j = (0, r.bG)([G.A], () => G.A.getChannel(c.channel_id)),
-        v = (0, A.Ay)(j),
+        v = (0, f.Ay)(j),
         N = (0, X.A)(g),
         _ = (0, V.Ay)(c),
         L = (0, Z.P)({ user: c.author, channelId: c.channel_id, guildId: x, messageId: c.id, stopPropagation: !0 }),
@@ -161,8 +161,10 @@ function es(e) {
         });
     return (0, s.jsxs)(o.s, {
         className: i()(Q.Nr, { [Q.Sg]: null != N }),
-        onClick: () => {
-            let e = () => (0, F.pX)(z.BVt.CHANNEL(x, c.channel_id, c.id));
+        onClick: function () {
+            function e() {
+                return (0, F.pX)(z.BVt.CHANNEL(x, c.channel_id, c.id));
+            }
             (0, B.A)(c, e) && e();
         },
         style: N,
@@ -204,7 +206,7 @@ function es(e) {
                                     (0, s.jsxs)("div", {
                                         className: Q.e5,
                                         children: [
-                                            null == (l = (0, f.gU)(j))
+                                            null == (l = (0, A.gU)(j))
                                                 ? null
                                                 : (0, s.jsx)(l, { size: "xxs", className: Q.Jv }),
                                             (0, s.jsx)(h.E, {

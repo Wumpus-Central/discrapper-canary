@@ -7,7 +7,7 @@ var i = n(33851),
     o = n(696451),
     l = n(287809),
     u = n(841595);
-let c = (e) => {
+function c(e) {
     let { guildId: t, ...n } = e,
         i = l.default.getCurrentUser();
     if (null == i) return;
@@ -78,4 +78,4 @@ let c = (e) => {
     }
     "legacyUsernameDisabled" in n && (h.pendingLegacyUsernameDisabled = n.legacyUsernameDisabled),
         s.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_PENDING_CHANGES", guildId: t, ...h });
-};
+}

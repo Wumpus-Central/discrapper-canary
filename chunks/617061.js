@@ -1,10 +1,10 @@
-t.d(a, { W: () => n });
+t.d(a, { W: () => l });
 var i = t(627968);
 t(64700);
-var l = t(192308);
-let n = (e) => {
-    let { initialSelectedEffect: a, analyticsLocations: n, guild: s, stackingBehavior: d } = e;
-    (0, l.openModalLazy)(
+var n = t(192308);
+function l(e) {
+    let { initialSelectedEffect: a, analyticsLocations: l, guild: s, stackingBehavior: c } = e;
+    (0, n.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 t.e("34663"),
@@ -23,7 +23,7 @@ let n = (e) => {
                 t.e("88610"),
                 t.e("33087"),
                 t.e("4189"),
-                t.e("50568"),
+                t.e("21739"),
                 t.e("49623"),
                 t.e("6026"),
                 t.e("1009"),
@@ -267,7 +267,7 @@ let n = (e) => {
                 t.e("58038"),
                 t.e("24622"),
                 t.e("32551"),
-                t.e("64046"),
+                t.e("91565"),
                 t.e("43426"),
                 t.e("96443"),
                 t.e("87079"),
@@ -308,8 +308,8 @@ let n = (e) => {
                 t.e("28545"),
                 t.e("60264"),
             ]).then(t.bind(t, 937563));
-            return (t) => (0, i.jsx)(e, { ...t, guild: s, initialSelectedEffect: a, analyticsLocations: n });
+            return (t) => (0, i.jsx)(e, { ...t, guild: s, initialSelectedEffect: a, analyticsLocations: l });
         },
-        { stackingBehavior: d },
+        { stackingBehavior: c },
     );
-};
+}

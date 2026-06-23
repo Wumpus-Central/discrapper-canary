@@ -11,18 +11,18 @@ var c = n(626584),
     d = n(287809),
     _ = n(903209);
 let h = (0, i.FT)(i._3.SIZE_120),
-    f = new c.A("UserProfileModalActionCreators"),
-    p = async (e) => {
-        try {
-            await (function (e) {
-                if (l.A.isFetchingUserOutbox(e)) return;
-                let t = l.A.getUserOutbox(e)?.lastFetched ?? 0;
-                if (!(Date.now() - t < u)) return (0, o.r7)(e, void 0);
-            })(e);
-        } catch (t) {
-            f.log(`Failed to fetch content inventory outbox for ${e}:`, t);
-        }
-    };
+    f = new c.A("UserProfileModalActionCreators");
+async function p(e) {
+    try {
+        await (function (e) {
+            if (l.A.isFetchingUserOutbox(e)) return;
+            let t = l.A.getUserOutbox(e)?.lastFetched ?? 0;
+            if (!(Date.now() - t < u)) return (0, o.r7)(e, void 0);
+        })(e);
+    } catch (t) {
+        f.log(`Failed to fetch content inventory outbox for ${e}:`, t);
+    }
+}
 async function E(e) {
     let {
             userId: t,

@@ -32,17 +32,19 @@ function d(e) {
         [t, e],
     );
 }
-let _ = (e) => {
+function _(e) {
     let t = d(e);
     return (0, r.yK)([s.default], () => t.map((e) => s.default.getUser(e))).filter((e) => null != e);
-};
+}
 function h() {
     return d(c.Ef.ACTIVE);
 }
 function f() {
     return _(c.Ef.ACTIVE);
 }
-let p = () => h().length > 0;
+function p() {
+    return h().length > 0;
+}
 function E() {
     let e = (0, r.bG)([a.A], () => a.A.getLinkedUsers());
     return i.useMemo(

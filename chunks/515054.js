@@ -5,8 +5,8 @@ var n = i(627968),
     a = i.n(s),
     r = i(364522),
     c = i(761508),
-    u = i(707554),
-    o = i(140735),
+    o = i(707554),
+    u = i(140735),
     d = i(207803),
     g = i(183555),
     m = i(61881),
@@ -65,7 +65,7 @@ function T(e) {
                     type: "top",
                     look: "custom",
                     selectedItem: j,
-                    onItemSelect: (e) => {
+                    onItemSelect: function (e) {
                         m.A.hasUnsavedChanges() && j === E.RP.WIDGETS
                             ? (0, d.VQ)()
                             : (A({ action: "PRESS_SECTION", section: e }),
@@ -84,8 +84,8 @@ function T(e) {
                 id: j,
                 "aria-label": T,
                 className: h.NM,
-                children: (0, n.jsx)(u.F, {
-                    component: (0, n.jsx)(o.A, { children: (0, n.jsx)(u.H, { children: T }) }),
+                children: (0, n.jsx)(o.F, {
+                    component: (0, n.jsx)(u.A, { children: (0, n.jsx)(o.H, { children: T }) }),
                     children: (0, n.jsx)(N, {
                         user: t,
                         currentUser: i,

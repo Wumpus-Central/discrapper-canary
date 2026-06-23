@@ -18,7 +18,7 @@ n.d(t, {
 var i = n(627968),
     r = n(64700),
     s = n(873263),
-    a = n(922139),
+    a = n(308186),
     o = n(323889),
     l = n(17928),
     u = n(717421),
@@ -113,53 +113,52 @@ function $(e) {
                   : (0, H.E)());
     }, [t, _, h, n, i, s, c, d, a]);
 }
-let z = (e) => {
-        let { useReducedMotion: t, className: n } = e,
-            [s, o] = (0, u.z)(() => ({})),
-            l = r.useRef(!1),
-            d = (0, a.animated)(c.f);
-        return {
-            render: () => (0, i.jsx)(d, { className: n, style: t ? void 0 : s, color: "currentColor", size: "xs" }),
-            startAnimation: (e) => {
-                (l.current = !0),
-                    o({
-                        from: { rotate: "0deg" },
-                        to: { rotate: "360deg" },
-                        config: { tension: 750, mass: 5, friction: 100 },
-                        loop: () => e ?? l.current,
-                        immediate: t,
-                    });
-            },
-            stopAnimation: () => {
-                l.current = !1;
-            },
-        };
-    },
-    q = (e, t, n) => {
-        let { message: r, xboxURL: s } = (0, R.UX)(),
-            a = (0, b.Ut)(),
-            l = (0, L.go)();
-        return (0, i.jsx)("span", {
-            onClick: (i) => {
-                let r = i.target;
-                if (r?.tagName?.toLowerCase() !== "a") return;
-                let u =
-                    r.getAttribute("href") === s ? D.Cy.HOW_TO_HELP_ARTICLE_XBOX : D.Cy.HOW_TO_HELP_ARTICLE_PLAYSTATION;
-                (0, N.E5)(N.kI.STEP_2_CLICKED_INTERNAL, "quest_how_to_help_article")
-                    ? (0, p.r)({
-                          type: E.F.CLICK_INTERNAL,
-                          adCreativeType: o.p.QUEST,
-                          adCreativeId: e,
-                          questContentCTA: u,
-                          surfaceId: t,
-                          sourceQuestContent: n,
-                          impressionId: l,
-                      })
-                    : a({ questId: e, questContent: t, questContentCTA: u, sourceQuestContent: n });
-            },
-            children: r,
-        });
+function z(e) {
+    let { useReducedMotion: t, className: n } = e,
+        [s, o] = (0, u.z)(() => ({})),
+        l = r.useRef(!1),
+        d = (0, a.animated)(c.f);
+    return {
+        render: () => (0, i.jsx)(d, { className: n, style: t ? void 0 : s, color: "currentColor", size: "xs" }),
+        startAnimation: function (e) {
+            (l.current = !0),
+                o({
+                    from: { rotate: "0deg" },
+                    to: { rotate: "360deg" },
+                    config: { tension: 750, mass: 5, friction: 100 },
+                    loop: () => e ?? l.current,
+                    immediate: t,
+                });
+        },
+        stopAnimation: () => {
+            l.current = !1;
+        },
     };
+}
+let q = (e, t, n) => {
+    let { message: r, xboxURL: s } = (0, R.UX)(),
+        a = (0, b.Ut)(),
+        l = (0, L.go)();
+    return (0, i.jsx)("span", {
+        onClick: function (i) {
+            let r = i.target;
+            if (r?.tagName?.toLowerCase() !== "a") return;
+            let u = r.getAttribute("href") === s ? D.Cy.HOW_TO_HELP_ARTICLE_XBOX : D.Cy.HOW_TO_HELP_ARTICLE_PLAYSTATION;
+            (0, N.E5)(N.kI.STEP_2_CLICKED_INTERNAL, "quest_how_to_help_article")
+                ? (0, p.r)({
+                      type: E.F.CLICK_INTERNAL,
+                      adCreativeType: o.p.QUEST,
+                      adCreativeId: e,
+                      questContentCTA: u,
+                      surfaceId: t,
+                      sourceQuestContent: n,
+                      impressionId: l,
+                  })
+                : a({ questId: e, questContent: t, questContentCTA: u, sourceQuestContent: n });
+        },
+        children: r,
+    });
+};
 function Z(e) {
     return (0, V.vl)(e)
         ? e.config.features.includes(W.Li.CLOUD_GAMING_ACTIVITY)

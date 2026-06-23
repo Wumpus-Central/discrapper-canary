@@ -134,7 +134,7 @@ function I(e) {
                         n.e("61312"),
                         n.e("82314"),
                         n.e("80339"),
-                        n.e("65629"),
+                        n.e("35198"),
                         n.e("59957"),
                         n.e("28136"),
                         n.e("97073"),
@@ -165,7 +165,7 @@ function I(e) {
                                   title: D.intl.string(D.t.qaYzPA),
                                   subtitle: D.intl.string(D.t.bnDQ7E),
                                   confirmText: D.intl.string(D.t.mjB9pd),
-                                  onConfirm: () => {
+                                  onConfirm: function () {
                                       _.default.endEvent(T, M), (0, a.closeAllModals)();
                                   },
                               });

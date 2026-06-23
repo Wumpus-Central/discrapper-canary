@@ -1,29 +1,29 @@
 i.d(a, { default: () => m });
-var e = i(627968),
-    n = i(64700),
+var n = i(627968),
+    e = i(64700),
     s = i(189213),
     l = i(192308),
     r = i(834730),
     c = i(47167),
-    d = i(137177),
+    d = i(769015),
     o = i(514810),
     x = i(375708),
     h = i(748386);
-let m = (t) => {
+let m = function (t) {
     let { channel: a, application: m, onClose: u, transitionState: p } = t,
         j = (0, o.N)(a),
-        v = n.useCallback(
+        v = e.useCallback(
             () => (
                 u(),
                 (0, l.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([i.e("21060"), i.e("93154")]).then(i.bind(i, 428185));
-                    return (i) => (0, e.jsx)(t, { ...i, channelId: a.id, application: m });
+                    return (i) => (0, n.jsx)(t, { ...i, channelId: a.id, application: m });
                 })
             ),
             [m, a.id, u],
         ),
         k = (0, c.Ay)(a, !0);
-    return (0, e.jsx)(s.Modal, {
+    return (0, n.jsx)(s.Modal, {
         transitionState: p,
         "aria-label": x.intl.string(x.t.OJknhi),
         onClose: u,
@@ -32,22 +32,22 @@ let m = (t) => {
             { text: x.intl.string(x.t["ETE/oC"]), onClick: u, variant: "secondary" },
             { text: x.intl.string(x.t.LLWaxQ), onClick: v, variant: "critical-primary" },
         ],
-        children: (0, e.jsxs)("div", {
+        children: (0, n.jsxs)("div", {
             className: h.Qs,
             children: [
-                (0, e.jsx)(d.A, { game: m, size: d.M.XLARGE }),
-                (0, e.jsxs)("div", {
+                (0, n.jsx)(d.A, { game: m, size: d.M.XLARGE }),
+                (0, n.jsxs)("div", {
                     className: h.yu,
                     children: [
-                        (0, e.jsxs)("div", {
+                        (0, n.jsxs)("div", {
                             className: h.py,
                             children: [
-                                (0, e.jsx)(r.E, {
+                                (0, n.jsx)(r.E, {
                                     variant: "text-md/semibold",
                                     color: "text-strong",
                                     children: m.name,
                                 }),
-                                (0, e.jsx)(r.E, {
+                                (0, n.jsx)(r.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children: x.intl.format(x.t["0NJZAU"], { channelName: k }),
@@ -55,10 +55,10 @@ let m = (t) => {
                             ],
                         }),
                         null != j &&
-                            (0, e.jsxs)(e.Fragment, {
+                            (0, n.jsxs)(n.Fragment, {
                                 children: [
-                                    (0, e.jsx)("div", { className: h.yF }),
-                                    (0, e.jsx)(r.E, { variant: "text-xs/normal", color: "text-muted", children: j }),
+                                    (0, n.jsx)("div", { className: h.yF }),
+                                    (0, n.jsx)(r.E, { variant: "text-xs/normal", color: "text-muted", children: j }),
                                 ],
                             }),
                     ],

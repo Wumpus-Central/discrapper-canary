@@ -12,10 +12,10 @@ var i = n(735438),
     _ = n(626584),
     h = n(390248),
     f = n(508602);
-let p = (e) => {
+function p(e) {
     let { type: t } = e;
     return t !== f.A.AUTO_MODERATION_MESSAGE && t !== f.A.AUTO_MODERATION_NOTIFICATION;
-};
+}
 var E = n(164956),
     m = n(931480),
     g = n(320095),

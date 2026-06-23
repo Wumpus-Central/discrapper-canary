@@ -16,7 +16,7 @@ var i,
     y = n(777933),
     h = n(826308),
     E = n(337358),
-    _ = n(962514);
+    _ = n(180662);
 n(321073);
 var S = n(17928),
     x = n(495544),
@@ -166,8 +166,8 @@ var eK = n(110384),
     e6 = n(715757),
     e1 = n(967198),
     e2 = n(287809),
-    e9 = n(628691),
-    e3 = n(49999),
+    e3 = n(628691),
+    e9 = n(49999),
     e5 = n(221314),
     e4 = n(663417),
     te = n(965407),
@@ -303,8 +303,8 @@ function tk(e) {
             itemSafeSrc: t6,
             itemTextContent: t1,
             canReport: t2,
-            onHeightUpdate: t9,
-            onSelect: t3,
+            onHeightUpdate: t3,
+            onSelect: t9,
             onClose: t5,
             navId: t4,
             ariaLabel: ne,
@@ -338,8 +338,8 @@ function tk(e) {
                     message_id: tV.id,
                 });
             }
-            t3?.();
-        }, [t3, tW, tV]),
+            t9?.();
+        }, [t9, tW, tV]),
         { tidaWebformEnabled: nl } = m.A.useExperiment({ location: "MessageContextMenu" }, { autoTrackExposure: !1 }),
         na =
             ((i = (0, Y.D6)(tW.guild_id).filter(
@@ -635,7 +635,7 @@ function tk(e) {
             commandTargetId: tV.id,
             channel: tW,
             guildId: void 0,
-            onHeightUpdate: t9,
+            onHeightUpdate: t3,
             showIcon: !0,
         }),
         nE =
@@ -869,7 +869,7 @@ function tk(e) {
         nC =
             ((tP = (0, S.bG)([e1.A], () => e1.A.getGuildId())),
             (tB = (0, e6.Qo)(tP)),
-            (0, e9.ul)(tV)
+            (0, e3.ul)(tV)
                 ? (0, l.jsx)(r.Dr, {
                       id: "report",
                       label: tB ? I.intl.string(I.t.n5EBAJ) : I.intl.string(I.t.GwbdGe),
@@ -882,7 +882,7 @@ function tk(e) {
         nL =
             ((tX = (0, S.bG)([eY.Ay], () => eY.Ay.get("iar_testing"))),
             (tF = (0, S.bG)([e2.default], () => e2.default.getCurrentUser())),
-            (0, e9.ul)(tV) && null != tF && tF.isStaff() && tX
+            (0, e3.ul)(tV) && null != tF && tF.isStaff() && tX
                 ? (0, l.jsx)(r.Dr, {
                       id: "staff-test-message-report",
                       label: "[STAFF] Test Message Report",
@@ -898,14 +898,14 @@ function tk(e) {
                 i = n ? [eV.M.REPORT_TO_MOD_NEW_TAG] : [],
                 [a, s] = (0, eQ.kn)(i);
             return ((0, e$.l0)(() => {
-                n && s(e3.i.AUTO_DISMISS);
+                n && s(e9.i.AUTO_DISMISS);
             }),
             n)
                 ? (0, l.jsx)(r.Dr, {
                       id: "report-to-mod",
                       label: t ? I.intl.string(e5.default["8wsdng"]) : I.intl.string(e5.default["1D+vqy"]),
                       action: () => {
-                          s(e3.i.USER_DISMISS), (0, e0.dy)(e);
+                          s(e9.i.USER_DISMISS), (0, e0.dy)(e);
                       },
                       icon: eZ.i,
                       disabled: t,
@@ -1016,7 +1016,7 @@ function tk(e) {
                     id: "guild-automod-add-selection",
                     label: I.intl.formatToPlainString(I.t.Kkjv1m, { keywordCount: S }),
                     leadingAccessory: { type: "icon", icon: O.l },
-                    onFocus: () => {
+                    onFocus: function () {
                         u || (g(!0), m());
                     },
                     children: j,

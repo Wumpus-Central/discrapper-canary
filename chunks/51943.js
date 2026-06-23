@@ -1,8 +1,8 @@
 i.d(s, { A: () => M });
-var t = i(627968);
+var n = i(627968);
 i(64700);
-var a = i(661531),
-    n = i(780645),
+var t = i(661531),
+    a = i(780645),
     l = i(462887),
     r = i(778712),
     o = i(939249),
@@ -21,11 +21,11 @@ function M(e) {
     let { user: s, guild: M, nick: j, onSelect: p } = e,
         { theme: I, themeType: b } = (0, m.E)(),
         N = s.hasAvatarForGuild(M.id);
-    return (0, t.jsxs)(o.D, {
+    return (0, n.jsxs)(o.D, {
         focusProps: b === x.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: g.nM,
         onClick: p,
-        onContextMenu: (e) => {
+        onContextMenu: function (e) {
             (0, f.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     i.e("71455"),
@@ -387,8 +387,8 @@ function M(e) {
                     i.e("61058"),
                     i.e("50342"),
                     i.e("93993"),
-                    i.e("38042"),
                     i.e("74021"),
+                    i.e("38042"),
                     i.e("33097"),
                     i.e("3710"),
                     i.e("27779"),
@@ -550,38 +550,38 @@ function M(e) {
                     i.e("15046"),
                     i.e("65011"),
                 ]).then(i.bind(i, 860417));
-                return (s) => (0, t.jsx)(e, { ...s, guild: M });
+                return (s) => (0, n.jsx)(e, { ...s, guild: M });
             });
         },
         children: [
-            (0, t.jsx)(A.Ay, {
+            (0, n.jsx)(A.Ay, {
                 tabIndex: -1,
                 guild: M,
                 showBadge: !0,
                 className: null != M.icon ? g.Kk : g.lN,
-                badgeStrokeColor: (0, l.M)(I) ? a.A.unsafe_rawColors.PRIMARY_600.css : a.A.unsafe_rawColors.WHITE.css,
+                badgeStrokeColor: (0, l.M)(I) ? t.A.unsafe_rawColors.PRIMARY_600.css : t.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: d.oM.PRIMARY,
                 badgeTooltipDelay: v.In,
                 size: A.Ay.Sizes.MEDIUM,
                 active: !0,
             }),
-            (0, t.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 className: g.zH,
                 children: [
-                    (0, t.jsx)("div", { className: g.UU, children: M.name }),
+                    (0, n.jsx)("div", { className: g.UU, children: M.name }),
                     N &&
-                        (0, t.jsxs)("div", {
+                        (0, n.jsxs)("div", {
                             className: g.C9,
                             children: [
-                                (0, t.jsx)(u.eu, {
+                                (0, n.jsx)(u.eu, {
                                     src: s.getAvatarURL(M.id, C),
                                     size: r._3.SIZE_16,
                                     className: g.my,
                                     "aria-hidden": !0,
                                 }),
-                                (0, t.jsx)(c.E, {
+                                (0, n.jsx)(c.E, {
                                     variant: "text-xs/medium",
-                                    children: (0, t.jsx)(n.A, {
+                                    children: (0, n.jsx)(a.A, {
                                         delay: v.In,
                                         children: j ?? h.Ay.getName(M.id, void 0, s),
                                     }),
@@ -590,9 +590,9 @@ function M(e) {
                         }),
                     !N &&
                         null != j &&
-                        (0, t.jsx)(c.E, {
+                        (0, n.jsx)(c.E, {
                             variant: "text-xs/medium",
-                            children: (0, t.jsx)(n.A, { delay: v.In, children: j }),
+                            children: (0, n.jsx)(a.A, { delay: v.In, children: j }),
                         }),
                 ],
             }),

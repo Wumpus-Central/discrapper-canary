@@ -8,15 +8,15 @@ var a = l(627968),
     u = l(834730),
     d = l(914410),
     c = l(52822);
-let p = () => {
+let p = function () {
     let [e, t] = n.useState(0),
         [l, p] = n.useState(4),
         [m, b] = n.useState(2),
         [h, x] = n.useState(d.fh.LIGHT),
         [y, f] = n.useState(d.qP.BLUE),
-        [g, v] = n.useState("darkslategray"),
+        [v, g] = n.useState("darkslategray"),
         [E, S] = n.useState("blanchedalmond"),
-        [j, C] = n.useState("pink"),
+        [C, j] = n.useState("pink"),
         [T, P] = n.useState(!0),
         I = n.useMemo(
             () =>
@@ -42,7 +42,7 @@ let p = () => {
                 maximum: l,
                 weight: h,
                 variant: y,
-                override: { default: { background: g, gradientStart: E, gradientEnd: j } },
+                override: { default: { background: v, gradientStart: E, gradientEnd: C } },
                 glowing: T,
             }),
             (0, a.jsx)(c.nB, {}),
@@ -124,9 +124,9 @@ let p = () => {
             }),
             (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: g,
+                    value: v,
                     onChange: (e) => {
-                        v(e);
+                        g(e);
                     },
                     label: "Background (optional)",
                 }),
@@ -142,9 +142,9 @@ let p = () => {
             }),
             (0, a.jsx)(c.MG, {
                 children: (0, a.jsx)(r.k, {
-                    value: j,
+                    value: C,
                     onChange: (e) => {
-                        C(e);
+                        j(e);
                     },
                     label: "Gradient End",
                 }),

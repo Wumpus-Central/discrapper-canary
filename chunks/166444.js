@@ -238,7 +238,7 @@ let F = a.memo(function (e) {
                           className: r()(
                               y,
                               eo ? k.iE : k.IA,
-                              (() => {
+                              (function () {
                                   if (d) return r()(U.rM, H.SELECTED);
                                   if (g) return r()(U.rM, H.CONNECTED);
                                   if (A) return H.LOCKED;

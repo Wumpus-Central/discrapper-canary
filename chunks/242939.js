@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(922139),
+    o = n(308186),
     l = n(17928),
     u = n(475743),
     c = n(840251),
@@ -250,13 +250,13 @@ function q(e) {
 var Z = n(775602),
     X = n(646764),
     Q = n(717421);
-let J = () => {
+function J() {
     let e = document.body.style.getPropertyValue("--custom-guild-sidebar-width").slice(0, -2);
     return parseInt("" !== e ? e : "375");
-};
+}
 var ee = n(375708),
     et = n(173399);
-let en = (e) => {
+let en = function (e) {
     let { isFullyExpanded: t, partnerBranding: n } = e,
         s = {
             label: !(function () {
@@ -330,7 +330,7 @@ let en = (e) => {
 };
 var ei = n(173839);
 let er = (0, o.animated)(M.Ay),
-    es = () => {
+    es = function () {
         let e = (0, D.go)(),
             { expansionSpring: t } = r.useContext(F),
             {
@@ -437,7 +437,7 @@ function eE(e) {
     return (0, i.jsx)(ea.$, {
         variant: "primary",
         fullWidth: !0,
-        onClick: () => {
+        onClick: function () {
             let e = t.userStatus?.enrolledAt == null ? b.Cy.ACCEPT_QUEST : b.Cy.WATCH_VIDEO;
             (0, y.d5)({ quest: t, questContent: p.uF.QUEST_BAR_V2, sourceQuestContent: n, sourceQuestContentCTA: e });
         },
@@ -445,147 +445,140 @@ function eE(e) {
         text: (0, ec.WM)(r),
     });
 }
-let em = (e) => {
-        let { quest: t, sourceQuestContent: n } = e,
-            r = (0, D.go)(),
-            s = (0, el.wr)(t);
-        return (0, i.jsx)(ea.$, {
-            size: "sm",
-            fullWidth: !0,
-            onClick: () =>
-                (0, L.pu)(t, {
+function em(e) {
+    let { quest: t, sourceQuestContent: n } = e,
+        r = (0, D.go)(),
+        s = (0, el.wr)(t);
+    return (0, i.jsx)(ea.$, {
+        size: "sm",
+        fullWidth: !0,
+        onClick: () =>
+            (0, L.pu)(t, {
+                content: p.uF.QUEST_BAR_V2,
+                ctaContent: b.Cy.OPEN_GAME_LINK,
+                impressionId: r,
+                sourceQuestContent: n,
+            }),
+        text: s,
+    });
+}
+function eg(e) {
+    let { quest: t, sourceQuestContent: n } = e,
+        r = (0, D.vU)()?.getId();
+    return (0, i.jsx)(ea.$, {
+        fullWidth: !0,
+        onClick: () =>
+            (0, L.se)(
+                { quest: t },
+                {
                     content: p.uF.QUEST_BAR_V2,
-                    ctaContent: b.Cy.OPEN_GAME_LINK,
+                    ctaContent: b.Cy.CONNECT_CONSOLE,
                     impressionId: r,
                     sourceQuestContent: n,
-                }),
-            text: s,
-        });
-    },
-    eg = (e) => {
-        let { quest: t, sourceQuestContent: n } = e,
-            r = (0, D.vU)()?.getId();
-        return (0, i.jsx)(ea.$, {
-            fullWidth: !0,
-            onClick: () =>
-                (0, L.se)(
-                    { quest: t },
-                    {
-                        content: p.uF.QUEST_BAR_V2,
-                        ctaContent: b.Cy.CONNECT_CONSOLE,
-                        impressionId: r,
-                        sourceQuestContent: n,
-                    },
-                ),
-            size: "sm",
-            text: ee.intl.string(ee.t.csptqV),
-        });
-    },
-    eA = (e) => {
-        let { quest: t } = e,
-            n = (0, eo.NA)({ quest: t }),
-            { launchInGameActivity: r } = (0, E.zW)(t);
-        return (0, eu.vA)(t)
-            ? (0, i.jsx)(ea.$, {
-                  fullWidth: !0,
-                  variant: "primary",
-                  icon: (0, y.Oz)(t),
-                  onClick: r,
-                  size: "sm",
-                  text: n,
-              })
-            : null;
-    },
-    eI = (e) => {
-        let {
-                quest: t,
-                sourceQuestContent: n,
-                taskDetails: r,
-                popoutTargetElementRef: s,
-                onGameSheetOpened: a,
-                onGameSheetClosed: o,
-            } = e,
-            { applications: l } = r;
-        return (0, i.jsx)(eh.A, {
+                },
+            ),
+        size: "sm",
+        text: ee.intl.string(ee.t.csptqV),
+    });
+}
+function eA(e) {
+    let { quest: t } = e,
+        n = (0, eo.NA)({ quest: t }),
+        { launchInGameActivity: r } = (0, E.zW)(t);
+    return (0, eu.vA)(t)
+        ? (0, i.jsx)(ea.$, { fullWidth: !0, variant: "primary", icon: (0, y.Oz)(t), onClick: r, size: "sm", text: n })
+        : null;
+}
+function eI(e) {
+    let {
             quest: t,
             sourceQuestContent: n,
-            applications: l ?? [],
-            targetElementRef: s,
+            taskDetails: r,
+            popoutTargetElementRef: s,
             onGameSheetOpened: a,
             onGameSheetClosed: o,
-            children: (e) =>
-                (0, i.jsx)(ea.$, {
-                    variant: "secondary",
-                    fullWidth: !0,
+        } = e,
+        { applications: l } = r;
+    return (0, i.jsx)(eh.A, {
+        quest: t,
+        sourceQuestContent: n,
+        applications: l ?? [],
+        targetElementRef: s,
+        onGameSheetOpened: a,
+        onGameSheetClosed: o,
+        children: (e) =>
+            (0, i.jsx)(ea.$, {
+                variant: "secondary",
+                fullWidth: !0,
+                size: "sm",
+                text: ee.intl.string(ee.t["93PTEs"]),
+                ...e,
+            }),
+    });
+}
+function eT(e) {
+    let { quest: t, ctaLabel: n, onClick: r, questContent: s = p.uF.QUEST_BAR_V2, sourceQuestContent: a } = e,
+        o = (0, ef.D)({
+            quest: t,
+            questContent: s,
+            sourceQuestContent: a,
+            experimentLocation: W.rE.QUESTS_BAR,
+            onBeforeClaim: r,
+        });
+    return (0, i.jsx)(ea.$, {
+        fullWidth: !0,
+        onClick: o,
+        text: n ?? ee.intl.string(ee.t.cfY4PE),
+        "data-testid": "quest-bar-claim-reward-button",
+        variant: "primary",
+        size: "sm",
+    });
+}
+function eS(e) {
+    let {
+            sourceQuestContent: t,
+            awaitingConsoleConnections: n,
+            hasMadeProgress: s,
+            isProgressing: a,
+            popoutTargetElementRef: o,
+        } = e,
+        { quest: l, onGameSheetOpen: u, onGameSheetClose: c, taskDetails: d } = r.useContext(K),
+        [_] = (0, E.Qo)(l, d),
+        h = l.userStatus?.completedAt != null,
+        f = (0, A.vv)(l),
+        m = (0, A.I6)(l),
+        g = _ !== p.X0.SELECT && !s && !a,
+        I = null;
+    return (
+        h
+            ? (I = (0, i.jsx)(eT, { quest: l, sourceQuestContent: t }))
+            : m
+              ? (I = (0, i.jsx)(ed.A, {
+                    quest: l,
+                    surface: e_.V3.QUEST_BAR_FOOTER,
                     size: "sm",
-                    text: ee.intl.string(ee.t["93PTEs"]),
-                    ...e,
-                }),
-        });
-    },
-    eT = (e) => {
-        let { quest: t, ctaLabel: n, onClick: r, questContent: s = p.uF.QUEST_BAR_V2, sourceQuestContent: a } = e,
-            o = (0, ef.D)({
-                quest: t,
-                questContent: s,
-                sourceQuestContent: a,
-                experimentLocation: W.rE.QUESTS_BAR,
-                onBeforeClaim: r,
-            });
-        return (0, i.jsx)(ea.$, {
-            fullWidth: !0,
-            onClick: o,
-            text: n ?? ee.intl.string(ee.t.cfY4PE),
-            "data-testid": "quest-bar-claim-reward-button",
-            variant: "primary",
-            size: "sm",
-        });
-    },
-    eS = (e) => {
-        let {
-                sourceQuestContent: t,
-                awaitingConsoleConnections: n,
-                hasMadeProgress: s,
-                isProgressing: a,
-                popoutTargetElementRef: o,
-            } = e,
-            { quest: l, onGameSheetOpen: u, onGameSheetClose: c, taskDetails: d } = r.useContext(K),
-            [_] = (0, E.Qo)(l, d),
-            h = l.userStatus?.completedAt != null,
-            f = (0, A.vv)(l),
-            m = (0, A.I6)(l),
-            g = _ !== p.X0.SELECT && !s && !a,
-            I = null;
-        return (
-            h
-                ? (I = (0, i.jsx)(eT, { quest: l, sourceQuestContent: t }))
-                : m
-                  ? (I = (0, i.jsx)(ed.A, {
-                        quest: l,
-                        surface: e_.V3.QUEST_BAR_FOOTER,
-                        size: "sm",
-                        analyticsCtxQuestContent: p.uF.QUEST_BAR_V2,
-                        analyticsCtxSourceQuestContent: t,
-                    }))
-                  : f
-                    ? (I = (0, i.jsx)(eE, { quest: l, sourceQuestContent: t, taskDetails: d }))
-                    : (0, eu.vA)(l)
-                      ? (I = (0, i.jsx)(eA, { quest: l }))
-                      : _ === p.X0.CONSOLE && n
-                        ? (I = (0, i.jsx)(eg, { quest: l, sourceQuestContent: t }))
-                        : g && (0, eu.ui)(l)
-                          ? (I = (0, i.jsx)(eI, {
-                                quest: l,
-                                sourceQuestContent: t,
-                                taskDetails: d,
-                                popoutTargetElementRef: o,
-                                onGameSheetOpened: u,
-                                onGameSheetClosed: c,
-                            }))
-                          : g && (I = (0, i.jsx)(em, { quest: l, sourceQuestContent: t })),
-            null == I ? null : (0, i.jsx)("div", { className: ep.lO, children: I })
-        );
-    };
+                    analyticsCtxQuestContent: p.uF.QUEST_BAR_V2,
+                    analyticsCtxSourceQuestContent: t,
+                }))
+              : f
+                ? (I = (0, i.jsx)(eE, { quest: l, sourceQuestContent: t, taskDetails: d }))
+                : (0, eu.vA)(l)
+                  ? (I = (0, i.jsx)(eA, { quest: l }))
+                  : _ === p.X0.CONSOLE && n
+                    ? (I = (0, i.jsx)(eg, { quest: l, sourceQuestContent: t }))
+                    : g && (0, eu.ui)(l)
+                      ? (I = (0, i.jsx)(eI, {
+                            quest: l,
+                            sourceQuestContent: t,
+                            taskDetails: d,
+                            popoutTargetElementRef: o,
+                            onGameSheetOpened: u,
+                            onGameSheetClosed: c,
+                        }))
+                      : g && (I = (0, i.jsx)(em, { quest: l, sourceQuestContent: t })),
+        null == I ? null : (0, i.jsx)("div", { className: ep.lO, children: I })
+    );
+}
 function ey(e) {
     return (0, i.jsx)(eS, { ...e, popoutTargetElementRef: e.parentContainerRef });
 }
@@ -695,7 +688,7 @@ let eR = (e) => {
 };
 var eO = n(453384),
     eb = n(460131);
-let eD = (e) => {
+let eD = function (e) {
     let { isExpanded: t, contentLocation: n, progressBarRef: s, percentComplete: a, popoutTargetElementRef: o } = e,
         { quest: l, onGameSheetOpen: u, onGameSheetClose: c, taskDetails: d } = r.useContext(K),
         { hasAlreadyLinked: _, onClickGameTitle: h } = r.useContext($),
@@ -976,8 +969,8 @@ function ta(e) {
                       ? ee.intl.string(ee.t.YstzGO)
                       : ee.intl.formatToPlainString(ee.t.gX0Qcx, { gameTitle: n }),
                 renderBody: e
-                    ? () =>
-                          (0, i.jsx)(i.Fragment, {
+                    ? function () {
+                          return (0, i.jsx)(i.Fragment, {
                               children: c.map((e, n) => {
                                   if (e.type === e0._.EXPIRED_CREDENTIAL) {
                                       let r = e6.A.getAccount(e.connected_account_id, e.connected_account_type),
@@ -1006,7 +999,8 @@ function ta(e) {
                                   }
                                   return (0, i.jsx)(ts, { children: e.message }, n);
                               }),
-                          })
+                          });
+                      }
                     : () =>
                           (0, i.jsx)(N.E, {
                               className: tr.eW,
@@ -1222,10 +1216,10 @@ function tI(e) {
     return (0, i.jsxs)(C.D, {
         className: tg.QO,
         onClick: t,
-        onMouseEnter: () => {
+        onMouseEnter: function () {
             s && !o && u(!0);
         },
-        onMouseLeave: () => {
+        onMouseLeave: function () {
             s && o && u(!1);
         },
         children: [

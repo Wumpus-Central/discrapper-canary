@@ -6,7 +6,7 @@ var i = n(989349),
     a = n(17928),
     o = n(95561),
     l = n(332456),
-    u = n(222823),
+    u = n(568548),
     c = n(543465),
     d = n(174459),
     _ = n(477427),
@@ -30,16 +30,17 @@ function T(e, t) {
     if (null == n) return;
     let i = e.getGuildId(),
         r = e.parent_id,
-        a = (0, _.ME)(i, r),
-        o = (e) =>
-            (0, s.Lt)(e, E.CP.ALL_MESSAGES)
-                ? _.Qe[m.orn.ALL_MESSAGES]
-                : (0, s.Lt)(e, E.CP.ONLY_MENTIONS)
-                  ? _.Qe[m.orn.ONLY_MENTIONS]
-                  : (0, s.Lt)(e, E.CP.NO_MESSAGES)
-                    ? _.Qe[m.orn.NO_MESSAGES]
-                    : _.Qe[m.orn.NULL],
-        u = f.A.flags(e.id) ?? 0,
+        a = (0, _.ME)(i, r);
+    function o(e) {
+        return (0, s.Lt)(e, E.CP.ALL_MESSAGES)
+            ? _.Qe[m.orn.ALL_MESSAGES]
+            : (0, s.Lt)(e, E.CP.ONLY_MENTIONS)
+              ? _.Qe[m.orn.ONLY_MENTIONS]
+              : (0, s.Lt)(e, E.CP.NO_MESSAGES)
+                ? _.Qe[m.orn.NO_MESSAGES]
+                : _.Qe[m.orn.NULL];
+    }
+    let u = f.A.flags(e.id) ?? 0,
         h = o(u),
         p = f.A.isMuted(e.id),
         g = (0, _.DZ)(f.A.getMuteConfig(e.id)),
@@ -62,11 +63,11 @@ function T(e, t) {
         };
     d.default.track(m.HAw.THREAD_NOTIFICATION_SETTINGS_UPDATED, S);
 }
-n(375708);
-let S = (e) => {
+function S(e) {
     let t = (0, a.bG)([u.Ay], () => u.Ay.lastMessageId(e.id)),
         n = null != t ? h.default.extractTimestamp(t) : null,
         i = e.threadMetadata?.createTimestamp,
         s = null != i ? r()(i).valueOf() : null;
     return n ?? s ?? h.default.extractTimestamp(e.id);
-};
+}
+n(375708);

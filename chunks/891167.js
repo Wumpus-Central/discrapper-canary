@@ -1,14 +1,14 @@
-l.d(t, { A: () => i });
-var r = l(627968),
-    n = l(607470),
-    a = l(847608),
-    s = l(686216);
-let i = (e) => {
+n.d(t, { A: () => i });
+var r = n(627968),
+    l = n(607470),
+    a = n(847608),
+    s = n(686216);
+let i = function (e) {
     let { src: t } = e,
-        l = (0, a.A)(t);
-    return null == l
+        n = (0, a.A)(t);
+    return null == n
         ? null
-        : (0, a.c)(l.mimeType)
-          ? (0, r.jsx)(n.A, { className: s.S, src: l.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 })
-          : (0, r.jsx)("img", { className: s.S, src: l.src, alt: l.alt ?? "" });
+        : (0, a.c)(n.mimeType)
+          ? (0, r.jsx)(l.A, { className: s.S, src: n.src, autoPlay: !0, loop: !0, muted: !0, playsInline: !0 })
+          : (0, r.jsx)("img", { className: s.S, src: n.src, alt: n.alt ?? "" });
 };

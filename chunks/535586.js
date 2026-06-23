@@ -33,7 +33,9 @@ class m extends i.Ay.Store {
         this.waitFor(s.Ay, a.Ay, o.default);
     }
     getGlobalStats() {
-        let e = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1e3));
+        function e(e) {
+            return null == e ? null : Math.floor((Date.now() - e) / 1e3);
+        }
         return {
             approx_seconds_since_last_notification: e(u),
             approx_seconds_since_last_mention: e(c),
@@ -42,7 +44,9 @@ class m extends i.Ay.Store {
         };
     }
     getStats(e) {
-        let t = (e) => (null == e ? null : Math.floor((Date.now() - e) / 1e3));
+        function t(e) {
+            return null == e ? null : Math.floor((Date.now() - e) / 1e3);
+        }
         return {
             approx_seconds_since_last_notification: t(u),
             approx_seconds_since_last_mention: t(c),
@@ -57,7 +61,9 @@ class m extends i.Ay.Store {
 }
 let g = new m(r.h, {
     CONNECTION_OPEN: function () {
-        let e = (e) => null != e && Date.now() - e < 6e4;
+        function e(e) {
+            return null != e && Date.now() - e < 6e4;
+        }
         for (let t in (e(u) || (u = null), e(c) || (c = null), e(d) || (d = null), e(_) || (_ = null), h))
             e(h[t]) || delete h[t];
         for (let t in f) e(f[t]) || delete f[t];

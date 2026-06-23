@@ -31,8 +31,8 @@ class s {
         }, new Map());
     }
 }
-let a = (e) =>
-    i.useMemo(() => {
+function a(e) {
+    return i.useMemo(() => {
         let t = new s(e.items);
         return {
             firstProfileEffect: t.firstProfileEffect,
@@ -41,3 +41,4 @@ let a = (e) =>
             firstProfileFrame: t.firstProfileFrame,
         };
     }, [e]);
+}

@@ -5,8 +5,8 @@ var l = n(627968),
     d = n.n(a),
     s = n(650809),
     o = n(17928),
-    r = n(873298),
-    c = n(22231),
+    c = n(873298),
+    r = n(22231),
     u = n(192308),
     g = n(980707),
     y = n(477782),
@@ -16,8 +16,8 @@ var l = n(627968),
     x = n(104510),
     h = n(555704),
     j = n(245604),
-    D = n(234020),
-    f = n(782603),
+    f = n(234020),
+    D = n(782603),
     I = n(952270),
     G = n(686449),
     L = n(293260),
@@ -64,8 +64,8 @@ var X = n(664967),
     ed = n(287809),
     es = n(174459),
     eo = n(652215),
-    er = n(349828),
-    ec = n(661023);
+    ec = n(349828),
+    er = n(661023);
 let eu = t.memo(function (e) {
     var i, a;
     let m,
@@ -91,8 +91,8 @@ let eu = t.memo(function (e) {
             }),
             [eg],
         ),
-        eD = (0, W.ic)(eg),
-        ef = (0, en.bM)(eg, eA),
+        ef = (0, W.ic)(eg),
+        eD = (0, en.bM)(eg, eA),
         eI = (0, o.bG)([Z.A], () => Z.A.isLurking(eg.id), [eg.id]),
         eG = (0, o.bG)([el.Ay], () => el.Ay.isCurrentUserGuest(eg.id)),
         eL = (0, R.A)(eg.id, !0),
@@ -102,10 +102,10 @@ let eu = t.memo(function (e) {
             guildId: eg.id,
             userId: eA.id,
             analyticsLocation: { page: eo.liQ.GUILD_CHANNEL, section: eo.JJy.GUILD_DROPDOWN_MENU },
-            icon: c.R,
+            icon: r.R,
         }),
         eE = eg.features.has(eo.GuildFeatures.HUB),
-        eC = eg.id === er.Vc,
+        eC = eg.id === ec.Vc,
         eP = eg.id === eo.gNP,
         eT = (0, K.A)(eg.id, !0),
         e_ =
@@ -117,7 +117,7 @@ let eu = t.memo(function (e) {
                       label: T.intl.string(T.t.TM6err),
                       icon: E.o,
                       leadingAccessory: { type: "icon", icon: E.o },
-                      action: () => {
+                      action: function () {
                           (0, u.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
                                   n.e("44667"),
@@ -148,7 +148,7 @@ let eu = t.memo(function (e) {
             label: T.intl.string(T.t.AKcFUj),
             icon: _.k,
             leadingAccessory: { type: "icon", icon: _.k },
-            action: () => {
+            action: function () {
                 (0, M.transitionToGlobalDiscovery)({
                     tab: k.GlobalDiscoveryTab.APPS,
                     newSessionState: { entrypoint: { name: w.sW.GUILD_HEADER_POPOUT }, guildId: eg.id },
@@ -164,7 +164,7 @@ let eu = t.memo(function (e) {
                       label: T.intl.string(T.t.kYxEcH),
                       icon: O.$,
                       leadingAccessory: { type: "icon", icon: O.$ },
-                      action: () => {
+                      action: function () {
                           (0, u.openModalLazy)(async () => {
                               let { default: i } = await Promise.all([n.e("23077"), n.e("42048")]).then(
                                   n.bind(n, 151203),
@@ -179,7 +179,7 @@ let eu = t.memo(function (e) {
         eH = ((i = eg.id), (a = "GuildHeaderPopout"), (0, q.DD)(i ?? void 0, a), null != (0, $.Kb)(i, a)),
         eO = (0, o.bG)([ei.A], () => ei.A.resolveGuildThemeSourcePreference(eg.id), [eg.id]),
         eS = t.useCallback(() => {
-            let e = eO === r.tI.GUILD ? r.tI.PERSONAL : r.tI.GUILD;
+            let e = eO === c.tI.GUILD ? c.tI.PERSONAL : c.tI.GUILD;
             (0, ee.XW)(eg.id, e);
         }, [eg.id, eO]),
         eX = (0, H.A)(eg, { showIcons: !0 }),
@@ -265,7 +265,7 @@ let eu = t.memo(function (e) {
                               eU,
                           ],
                       }),
-                      ef
+                      eD
                           ? null
                           : (0, l.jsx)(y.rX, {
                                 children: (0, l.jsx)(y.Dr, {
@@ -308,14 +308,14 @@ let eu = t.memo(function (e) {
                                           id: "use-server-theme",
                                           label: T.intl.string(T.t.CFzDOG),
                                           leadingAccessory: { type: "icon", icon: s.B },
-                                          checked: eO === r.tI.GUILD,
+                                          checked: eO === c.tI.GUILD,
                                           action: eS,
                                       })
                                     : null,
                                 eB &&
                                     (0, l.jsx)(y.Dr, {
                                         id: "guild-tag",
-                                        label: T.intl.string(ec.default.mf2OwH),
+                                        label: T.intl.string(er.default.mf2OwH),
                                         leadingAccessory: {
                                             type: "guildTag",
                                             element: (0, l.jsx)(V.o9, {
@@ -414,8 +414,8 @@ let eu = t.memo(function (e) {
                                               (0, l.jsx)(y.Dr, {
                                                   id: "create-category",
                                                   label: T.intl.string(T.t["ISN+NM"]),
-                                                  icon: D.Y,
-                                                  leadingAccessory: { type: "icon", icon: D.Y },
+                                                  icon: f.Y,
+                                                  leadingAccessory: { type: "icon", icon: f.Y },
                                                   action: () =>
                                                       (0, u.openModalLazy)(async () => {
                                                           let { default: e } = await Promise.all([
@@ -459,8 +459,8 @@ let eu = t.memo(function (e) {
                                 (0, l.jsx)(y.Dr, {
                                     id: "notifications",
                                     label: T.intl.string(T.t.h850Ss),
-                                    icon: f.X,
-                                    leadingAccessory: { type: "icon", icon: f.X },
+                                    icon: D.X,
+                                    leadingAccessory: { type: "icon", icon: D.X },
                                     action: () =>
                                         (0, u.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
@@ -519,7 +519,7 @@ let eu = t.memo(function (e) {
                         (0, l.jsxs)(y.rX, {
                             children: [
                                 ew,
-                                eD && eg.features.has(eo.GuildFeatures.COMMUNITY)
+                                ef && eg.features.has(eo.GuildFeatures.COMMUNITY)
                                     ? (0, l.jsx)(y.Dr, {
                                           id: "report-raid",
                                           label: T.intl.string(T.t.cswId3),
@@ -529,7 +529,7 @@ let eu = t.memo(function (e) {
                                           action: () => (0, F.M)(eg.id),
                                       })
                                     : null,
-                                ef
+                                eD
                                     ? null
                                     : (0, l.jsx)(y.Dr, {
                                           id: "leave",

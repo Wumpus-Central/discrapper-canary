@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, { p: () => d });
 var i = n(308528),
-    r = n(720149),
+    r = n(493336),
     s = n(355622),
     a = n(428249),
     o = n(451909),
     l = n(734057),
     u = n(806150),
     c = n(381941);
-let d = async (e) => {
+async function d(e) {
     let { userId: t, content: n, location: d, openChannel: _ = !0, whenReady: h = !1, entry: f, nonce: p } = e,
         { valid: E, failureReason: m } = await (0, u.i)({ type: s.oU.NORMAL, content: n, channel: null });
     if (!E) throw Error(m);
@@ -28,4 +28,4 @@ let d = async (e) => {
         let e = o.Ay.parse(A, n);
         return r.A.sendMessage(A.id, e, h, { location: c.Hx.USER_PROFILE, nonce: p });
     }
-};
+}

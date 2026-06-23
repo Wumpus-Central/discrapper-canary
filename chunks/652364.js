@@ -36,13 +36,13 @@ class d extends i.A {
                 null != e &&
                     0 !== e.length &&
                     new Promise((t) => {
-                        let n = (i) => {
+                        c?.addEventListener("message", function n(i) {
                             let {
                                 data: { url: r },
                             } = i;
                             c?.removeEventListener("message", n), e === r && t();
-                        };
-                        c?.addEventListener("message", n), c?.postMessage({ url: e });
+                        }),
+                            c?.postMessage({ url: e });
                     });
             });
         }

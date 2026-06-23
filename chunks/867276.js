@@ -1,27 +1,27 @@
-n.d(e, { default: () => d });
-var i = n(627968),
-    a = n(64700),
-    s = n(732159),
-    r = n(260598),
-    c = n(624458),
-    l = n(513461),
-    u = n(375708);
-let d = (t) => {
-    let { guildId: e, userId: n, guildJoinRequestId: d, onConfirm: h, onError: o, modalProps: p } = t,
-        [C, f] = a.useState(),
-        g = async () => {
-            try {
-                await c.A.updateGuildJoinRequest(e, n, d, l.B5.REJECTED, C), h?.();
-            } catch (t) {
-                o?.();
-            }
-        };
+e.d(n, { default: () => o });
+var i = e(627968),
+    a = e(64700),
+    s = e(732159),
+    c = e(260598),
+    r = e(624458),
+    u = e(513461),
+    l = e(375708);
+let o = function (t) {
+    let { guildId: n, userId: e, guildJoinRequestId: o, onConfirm: d, onError: h, modalProps: p } = t,
+        [f, C] = a.useState();
+    async function g() {
+        try {
+            await r.A.updateGuildJoinRequest(n, e, o, u.B5.REJECTED, f), d?.();
+        } catch (t) {
+            h?.();
+        }
+    }
     return (0, i.jsx)(s.ConfirmModal, {
-        title: u.intl.string(u.t["mFP/qw"]),
-        cancelText: u.intl.string(u.t["ETE/oC"]),
-        confirmText: u.intl.string(u.t.hDtbsz),
+        title: l.intl.string(l.t["mFP/qw"]),
+        cancelText: l.intl.string(l.t["ETE/oC"]),
+        confirmText: l.intl.string(l.t.hDtbsz),
         onConfirm: g,
         ...p,
-        children: (0, i.jsx)(r.f, { value: C, onChange: f, maxLength: 160 }),
+        children: (0, i.jsx)(c.f, { value: f, onChange: C, maxLength: 160 }),
     });
 };

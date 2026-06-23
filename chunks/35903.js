@@ -171,7 +171,7 @@ function Q(e) {
             icon: q.L,
             text: d,
             fullWidth: r,
-            onClick: () => {
+            onClick: function () {
                 c?.(), p();
             },
             disabled: A,
@@ -208,7 +208,7 @@ function en(e) {
             icon: et.J,
             size: r,
             variant: c,
-            onClick: () => {
+            onClick: function () {
                 o?.(), p();
             },
             disabled: A,

@@ -26,7 +26,7 @@ var i = n(627968),
     v = n(230451),
     R = n(375708),
     O = n(448759);
-let b = (e) => {
+let b = function (e) {
     let { markAsDismissed: t, applicationName: s } = e,
         a = [C.fg2.LEAGUE_OF_LEGENDS, C.fg2.RIOT_GAMES],
         l = (0, c.bG)([T.A], () => T.A.getAccounts().find((e) => a.includes(e.type))?.type),

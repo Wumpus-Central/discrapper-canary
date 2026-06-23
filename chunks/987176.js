@@ -1,32 +1,34 @@
-n.d(i, { default: () => l });
-var a = n(627968),
-    s = n(64700),
-    e = n(189213),
-    c = n(375708);
-function l(t) {
-    let { transitionState: i, onConfirm: n, onClose: l, onDismiss: o } = t,
-        [r, u] = s.useState(!1),
-        d = async () => {
-            if (!r) {
-                u(!0);
-                try {
-                    await n();
-                } catch (t) {
-                } finally {
-                    u(!1);
-                }
-                l();
+i.d(n, { default: () => o });
+var a = i(627968),
+    s = i(64700),
+    c = i(189213),
+    e = i(375708);
+function o(t) {
+    let { transitionState: n, onConfirm: i, onClose: o, onDismiss: r } = t,
+        [l, u] = s.useState(!1);
+    async function d() {
+        if (!l) {
+            u(!0);
+            try {
+                await i();
+            } catch (t) {
+            } finally {
+                u(!1);
             }
-        },
-        k = () => (o(), l());
-    return (0, a.jsx)(e.Modal, {
-        transitionState: i,
+            o();
+        }
+    }
+    function k() {
+        return r(), o();
+    }
+    return (0, a.jsx)(c.Modal, {
+        transitionState: n,
         onClose: k,
-        title: c.intl.string(c.t["66tnno"]),
-        subtitle: c.intl.string(c.t["c/k4SW"]),
+        title: e.intl.string(e.t["66tnno"]),
+        subtitle: e.intl.string(e.t["c/k4SW"]),
         actions: [
-            { text: c.intl.string(c.t["ETE/oC"]), onClick: k, variant: "secondary" },
-            { text: c.intl.string(c.t["cY+Oob"]), onClick: d, loading: r },
+            { text: e.intl.string(e.t["ETE/oC"]), onClick: k, variant: "secondary" },
+            { text: e.intl.string(e.t["cY+Oob"]), onClick: d, loading: l },
         ],
     });
 }

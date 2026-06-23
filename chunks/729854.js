@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(192308),
     l = n(968309),
     u = n(826673),
-    c = n(941327),
+    c = n(394459),
     d = n(174459),
     _ = n(17928),
     h = n(643501),
@@ -39,16 +39,16 @@ let A = "game_console_alert_modal",
             return null == t
                 ? Promise.resolve()
                 : new Promise((e) => {
-                      let n = () => {
-                              (0, u.Dr)(a.M.CONSOLE_PTT_DISABLE_ALERT), e();
-                          },
-                          r = (e) =>
-                              (0, i.jsx)(s.Modal, {
-                                  ...e,
-                                  title: t,
-                                  subtitle: g.intl.string(g.t.bL21zs),
-                                  actions: [{ text: g.intl.string(g.t.BddRzS), onClick: n }],
-                              });
+                      function n() {
+                          (0, u.Dr)(a.M.CONSOLE_PTT_DISABLE_ALERT), e();
+                      }
+                      let r = (e) =>
+                          (0, i.jsx)(s.Modal, {
+                              ...e,
+                              title: t,
+                              subtitle: g.intl.string(g.t.bL21zs),
+                              actions: [{ text: g.intl.string(g.t.BddRzS), onClick: n }],
+                          });
                       (0, o.hasModalOpen)(I)
                           ? (0, o.updateModal)(I, (e) => r(e))
                           : (0, o.openModalLazy)(async () => (e) => r(e), { modalKey: I });
@@ -66,13 +66,14 @@ let A = "game_console_alert_modal",
                         platform_type: a,
                     }));
             }
-            let _ = (e) =>
-                (0, i.jsx)(s.Modal, {
+            function _(e) {
+                return (0, i.jsx)(s.Modal, {
                     ...e,
                     title: t,
                     actions: [{ text: g.intl.string(g.t.BddRzS), onClick: c }],
                     children: u,
                 });
+            }
             (0, o.hasModalOpen)(A)
                 ? (0, o.updateModal)(A, (e) => _(e))
                 : (0, o.openModalLazy)(async () => (e) => _(e), { modalKey: A });

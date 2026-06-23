@@ -1,4 +1,4 @@
-a.d(e, { default: () => w });
+a.d(e, { default: () => f });
 var n = a(627968),
     i = a(64700),
     r = a(189213),
@@ -18,8 +18,8 @@ var n = a(627968),
     b = a(652215),
     v = a(375708),
     k = a(85987);
-function w(t) {
-    let { onClose: e, transitionState: a, clientSettingType: w, gameId: f } = t,
+function f(t) {
+    let { onClose: e, transitionState: a, clientSettingType: f, gameId: w } = t,
         [C, A] = i.useState("unreported"),
         [S, j] = i.useState(""),
         [E, M] = i.useState(!1),
@@ -27,7 +27,7 @@ function w(t) {
         [D, F] = i.useState(!1),
         [L, N] = i.useState(!1),
         O = (0, s.bG)([y.A, h.Ay], () => {
-            let t = f ?? h.Ay.getCurrentGameForAnalytics()?.id;
+            let t = w ?? h.Ay.getCurrentGameForAnalytics()?.id;
             return null == t ? null : y.A.getDetectableGame(t);
         }),
         P = (0, s.bG)([x.default], () => {
@@ -56,7 +56,7 @@ function w(t) {
                 await g.default.track(b.HAw.OVERLAY_DISABLED_SURVEY, {
                     reason: C,
                     comment: S,
-                    client_setting_type: w,
+                    client_setting_type: f,
                     application_id: O?.id,
                     application_name: O?.name,
                     most_recent_overlay_render_method: P,
@@ -67,7 +67,7 @@ function w(t) {
                 z(!0),
                 await (0, l.yy)(1500),
                 e();
-        }, [C, S, w, O?.id, O?.name, P, e]);
+        }, [C, S, f, O?.id, O?.name, P, e]);
     (0, m.Ay)(() => {
         g.default.track(b.HAw.OPEN_MODAL, { type: "overlay_disabled_questionnaire_modal" });
     });
@@ -107,7 +107,7 @@ function w(t) {
                     (0, n.jsx)(c.z, {
                         value: "unreported" === C ? void 0 : C,
                         options: U,
-                        onChange: (t) => {
+                        onChange: function (t) {
                             A(t), N(!1), F(!1);
                         },
                     }),

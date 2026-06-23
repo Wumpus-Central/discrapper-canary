@@ -12,9 +12,9 @@ var i = n(627968),
     x = n(939249),
     h = n(323384),
     g = n(320448),
-    _ = n(155718),
-    A = n(811024),
-    f = n(795816),
+    f = n(155718),
+    _ = n(811024),
+    A = n(795816),
     E = n(793574),
     C = n(688810),
     p = n(735991),
@@ -68,7 +68,7 @@ let W = s.memo(function (e) {
         h = (0, u.bG)([V.A], () => V.A.getGuild(r.guild_id), [r.guild_id]);
     if (
         (s.useEffect(() => {
-            (null == c || (c.type === _.kc.CHAT && void 0 === c.application_command)) && P.S7(r.id, o);
+            (null == c || (c.type === f.kc.CHAT && void 0 === c.application_command)) && P.S7(r.id, o);
         }, [r.id, o, c]),
         null == c)
     )
@@ -90,7 +90,7 @@ let W = s.memo(function (e) {
                             sourceAnalyticsLocations: u,
                         } = t,
                         m = null != c ? c + " " + l.name : l.name;
-                    if (l.type === _.n4.SUB_COMMAND || l.type === _.n4.SUB_COMMAND_GROUP) {
+                    if (l.type === f.n4.SUB_COMMAND || l.type === f.n4.SUB_COMMAND_GROUP) {
                         let t = [
                                 (0, i.jsxs)(
                                     s.Fragment,
@@ -121,7 +121,7 @@ let W = s.memo(function (e) {
                     let x = l.value;
                     if (null != l.value)
                         switch (l.type) {
-                            case _.n4.USER: {
+                            case f.n4.USER: {
                                 let e = l.value.toString(),
                                     t = S.default.getUser(e);
                                 if (null != t) {
@@ -141,20 +141,20 @@ let W = s.memo(function (e) {
                                 }
                                 break;
                             }
-                            case _.n4.CHANNEL: {
+                            case f.n4.CHANNEL: {
                                 let e = l.value.toString(),
                                     t = w.A.getChannel(e);
                                 null != t &&
                                     (n = (0, i.jsxs)(G.A, { ...K, children: ["#", (0, k.m1)(t, S.default, B.A)] }));
                                 break;
                             }
-                            case _.n4.ROLE: {
+                            case f.n4.ROLE: {
                                 let e = l.value.toString(),
                                     t = null != r ? F.A.getRole(r.id, e) : void 0;
                                 null != t && (n = (0, i.jsxs)(G.A, { ...K, children: ["@", t.name] }));
                                 break;
                             }
-                            case _.n4.MENTIONABLE: {
+                            case f.n4.MENTIONABLE: {
                                 let e = l.value.toString(),
                                     t = null != r ? F.A.getRole(r.id, e) : void 0;
                                 if (null != t) n = (0, i.jsxs)(G.A, { children: ["@", t.name] });
@@ -176,7 +176,7 @@ let W = s.memo(function (e) {
                                 }
                                 break;
                             }
-                            case _.n4.ATTACHMENT:
+                            case f.n4.ATTACHMENT:
                                 n = X(J.intl.string(J.t.nONJVc));
                                 break;
                             default: {
@@ -215,7 +215,7 @@ let W = s.memo(function (e) {
     }
     return (0, i.jsxs)("div", {
         className: z.kL,
-        onCopy: (e) => {
+        onCopy: function (e) {
             let t = window?.getSelection()?.toString() ?? "";
             t.startsWith("/") && t.endsWith("\n") && m(e, c);
         },
@@ -250,9 +250,9 @@ function ee(e, t, n, s, l, r) {
         isInteractionUserIgnored: x,
         showAvatarPopout: h,
         showTargetAvatarPopout: g,
-        onClickAvatar: _,
-        onUserContextMenu: A,
-        onClickTargetAvatar: f,
+        onClickAvatar: f,
+        onUserContextMenu: _,
+        onClickTargetAvatar: A,
         onTargetUserContextMenu: E,
         onPopoutRequestClose: C,
     } = e;
@@ -260,32 +260,33 @@ function ee(e, t, n, s, l, r) {
     if ((c && null == o.activityInstance) || u || x)
         return (0, i.jsx)("div", { className: q.Cz, children: (0, i.jsx)($, { className: q.Jx }) });
     let p =
-            O.Ay.getGuildMemberAvatarURL({
-                avatar: s.guildMemberAvatar ?? void 0,
-                userId: t.id,
-                guildId: d?.guild_id ?? "",
-            }) ?? void 0,
-        I = () =>
-            (function (e) {
-                let { user: t, guildId: n, guildAvatar: s, onClick: l, onContextMenu: r, onMouseDown: o, ref: c } = e;
-                return (0, i.jsx)("img", {
-                    alt: "",
-                    src: s ?? t.getAvatarURL(n, 16),
-                    onClick: l,
-                    onContextMenu: r,
-                    onMouseDown: o,
-                    className: a()({ [q.WU]: !0, [q.vk]: null != l }),
-                    ref: c,
-                });
-            })({
-                user: t,
-                guildId: d.guild_id,
-                guildAvatar: p,
-                onClick: 1 === n ? f : _,
-                onContextMenu: 1 === n ? E : A,
-                ref: r,
-            }),
-        N = 1 === n ? g : h;
+        O.Ay.getGuildMemberAvatarURL({
+            avatar: s.guildMemberAvatar ?? void 0,
+            userId: t.id,
+            guildId: d?.guild_id ?? "",
+        }) ?? void 0;
+    function I() {
+        return (function (e) {
+            let { user: t, guildId: n, guildAvatar: s, onClick: l, onContextMenu: r, onMouseDown: o, ref: c } = e;
+            return (0, i.jsx)("img", {
+                alt: "",
+                src: s ?? t.getAvatarURL(n, 16),
+                onClick: l,
+                onContextMenu: r,
+                onMouseDown: o,
+                className: a()({ [q.WU]: !0, [q.vk]: null != l }),
+                ref: c,
+            });
+        })({
+            user: t,
+            guildId: d.guild_id,
+            guildAvatar: p,
+            onClick: 1 === n ? A : f,
+            onContextMenu: 1 === n ? E : _,
+            ref: r,
+        });
+    }
+    let N = 1 === n ? g : h;
     return null != l && null != N && null != r
         ? (0, i.jsx)(m.Y, {
               targetElementRef: r,
@@ -323,7 +324,9 @@ function et(e, t, n, s, l) {
         onPopoutRequestClose: h,
     });
 }
-let en = () => (0, i.jsx)(g._, { size: "xxs", color: "currentColor", className: q.M5 });
+function en() {
+    return (0, i.jsx)(g._, { size: "xxs", color: "currentColor", className: q.M5 });
+}
 function ei(e) {
     let t,
         { message: n, channel: l } = e,
@@ -356,12 +359,12 @@ function ei(e) {
             [l, n.id, n.interactionData],
         ),
         k = (0, N.Am)(n),
-        b = k?.type === _.G4.APPLICATION_COMMAND && null != k.target_user ? new v.A(k.target_user) : null,
-        P = k?.type === _.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
+        b = k?.type === f.G4.APPLICATION_COMMAND && null != k.target_user ? new v.A(k.target_user) : null,
+        P = k?.type === f.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
         G = (0, L.d8)(n.interaction?.user, l),
         H = (0, L.d8)(b, l),
         w = s.useMemo(() => (e.compact ? (0, Q.A)((0, M.i$)(d()(), "LT")) : null), [e.compact]),
-        F = (0, A.Gp)(l.id),
+        F = (0, _.Gp)(l.id),
         V = n.interaction;
     if (null == V || null == G) return null;
     let B = () => {
@@ -372,7 +375,7 @@ function ei(e) {
     if (n?.activityInstance === null || (0, j.V)(n))
         (t = J.intl.format(J.t["rg7U+C"], {
             userHook: B,
-            commandHook: () => {
+            commandHook: function () {
                 let t = (function (e, t, n) {
                     let { showDataPopout: s, message: l, onClickCommand: r, onPopoutRequestClose: o } = e,
                         c = l.interaction.displayName;
@@ -413,7 +416,7 @@ function ei(e) {
                                 return (0, i.jsx)(x.D, {
                                     ...s,
                                     tag: "span",
-                                    onClick: () => {
+                                    onClick: function () {
                                         R._.dispatchToLastSubscribed(Y.jej.OPEN_APP_LAUNCHER, {
                                             applicationId: l.applicationId,
                                         });
@@ -456,26 +459,27 @@ function ei(e) {
                       ],
                   }));
     else {
-        let e = () => {
+        function z() {
             (0, I.A)({
                 context: null != l ? { type: "channel", channel: l } : { type: "contextless" },
                 openInPopout: !1,
                 analyticsLocation: c,
             }),
-                (0, f.LV)({ guildId: l.guild_id });
-        };
+                (0, A.LV)({ guildId: l.guild_id });
+        }
         t = F
             ? J.intl.format(J.t.kfV8WM, {
                   userHook: B,
-                  activityHook: () =>
-                      (0, i.jsx)(x.D, {
+                  activityHook: function () {
+                      return (0, i.jsx)(x.D, {
                           tag: "span",
-                          onClick: e,
+                          onClick: z,
                           children: (0, i.jsx)("div", {
                               className: a()(q.p6, q.vk),
                               children: J.intl.string(J.t.YTgRvn),
                           }),
-                      }),
+                      });
+                  },
               })
             : J.intl.format(J.t["6FeSyT"], { userHook: B });
     }

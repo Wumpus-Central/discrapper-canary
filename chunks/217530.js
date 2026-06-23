@@ -1,71 +1,77 @@
-t.d(l, { A: () => x });
-var s = t(627968),
-    a = t(64700),
-    n = t(503698),
-    r = t.n(n),
-    i = t(607399),
-    c = t(689175),
-    d = t(834730),
-    o = t(375708),
-    h = t(883154);
-function u(e) {
-    let { text: l, hasScrolled: t } = e;
-    return (0, s.jsxs)("div", {
-        className: r()(h.kL, { [h.sz]: t }),
+l.d(t, { A: () => f });
+var n = l(627968),
+    s = l(64700),
+    r = l(503698),
+    i = l.n(r),
+    a = l(607399),
+    c = l(689175),
+    d = l(834730),
+    o = l(375708),
+    u = l(883154);
+function h(e) {
+    let { text: t, hasScrolled: l } = e;
+    return (0, n.jsxs)("div", {
+        className: i()(u.kL, { [u.sz]: l }),
         children: [
-            (0, s.jsx)("div", {
-                className: h.lm,
-                children: (0, s.jsx)(d.E, {
-                    className: h.__invalid_label,
+            (0, n.jsx)("div", {
+                className: u.lm,
+                children: (0, n.jsx)(d.E, {
+                    className: u.__invalid_label,
                     variant: "text-md/medium",
                     color: "text-strong",
-                    children: l,
+                    children: t,
                 }),
             }),
-            (0, s.jsx)("div", { className: h._p }),
+            (0, n.jsx)("div", { className: u._p }),
         ],
     });
 }
-var m = t(760967);
-function x(e) {
-    let { children: l, className: t } = e,
+var m = l(760967);
+function f(e) {
+    let { children: t, className: l } = e,
         {
-            horizontalScrollNotice: n,
+            horizontalScrollNotice: r,
             handleScroll: d,
-            handleSetScrollerRef: h,
-            handleSetContainerRef: x,
+            handleSetScrollerRef: u,
+            handleSetContainerRef: f,
         } = (function () {
-            let [e, l] = a.useState(),
-                [t, n] = a.useState(),
-                [r, i] = a.useState(!1),
-                [c, d] = a.useState(!1);
+            let [e, t] = s.useState(),
+                [l, r] = s.useState(),
+                [i, a] = s.useState(!1),
+                [c, d] = s.useState(!1);
             return (
-                a.useEffect(() => {
-                    null == e || null == t ? i(!1) : i(e < t);
-                }, [e, t]),
+                s.useEffect(() => {
+                    null == e || null == l ? a(!1) : a(e < l);
+                }, [e, l]),
                 {
-                    horizontalScrollNotice: a.useMemo(
-                        () => (r ? (0, s.jsx)(u, { text: o.intl.string(o.t.RfAAH9), hasScrolled: c }) : null),
-                        [r, c],
+                    horizontalScrollNotice: s.useMemo(
+                        () => (i ? (0, n.jsx)(h, { text: o.intl.string(o.t.RfAAH9), hasScrolled: c }) : null),
+                        [i, c],
                     ),
-                    handleScroll: () => d(!0),
-                    handleSetScrollerRef: (e) => n(e?.getScrollerState()?.scrollWidth),
-                    handleSetContainerRef: (e) => l(e?.clientWidth),
+                    handleScroll: function () {
+                        return d(!0);
+                    },
+                    handleSetScrollerRef: function (e) {
+                        return r(e?.getScrollerState()?.scrollWidth);
+                    },
+                    handleSetContainerRef: function (e) {
+                        return t(e?.clientWidth);
+                    },
                 }
             );
         })(),
-        S = (0, s.jsx)("div", {
+        x = (0, n.jsx)("div", {
             className: m.vi,
-            children: (0, s.jsx)("div", { className: r()(m._s, t), children: l }),
+            children: (0, n.jsx)("div", { className: i()(m._s, l), children: t }),
         });
     return (
-        i.Fr ||
-            (S = (0, s.jsxs)(s.Fragment, {
+        a.Fr ||
+            (x = (0, n.jsxs)(n.Fragment, {
                 children: [
-                    n,
-                    (0, s.jsx)(c.Ch, { className: m.XG, orientation: "horizontal", ref: h, onScroll: d, children: S }),
+                    r,
+                    (0, n.jsx)(c.Ch, { className: m.XG, orientation: "horizontal", ref: u, onScroll: d, children: x }),
                 ],
             })),
-        (0, s.jsx)("div", { className: m.Rc, ref: x, children: S })
+        (0, n.jsx)("div", { className: m.Rc, ref: f, children: x })
     );
 }

@@ -35,9 +35,9 @@ let b = r.forwardRef(function (e, t) {
             { Component: l, events: u, play: c } = (0, I.c)(),
             d = r.useContext(N.Ay);
         r.useEffect(() => {
-            let e = () => {
+            function e() {
                 u.onMouseEnter();
-            };
+            }
             return (
                 d.on("command-sentinel-typed", e),
                 () => {

@@ -11,7 +11,7 @@ var i,
         (i.SHOP_HOME_FETCH_COMPLETED = "shop_home_fetch_completed"),
         (i.SHOP_RENDERED = "shop_rendered"),
         i);
-let o = (e) => {
+function o(e) {
     let { sessionId: t, checkpoint: n, tab: i, unpublishedCategoriesShown: a, cacheDisabled: o } = e;
     r.default.track(s.HAw.COLLECTIBLES_SHOP_PERF_TRACKED, {
         page_session_id: t,
@@ -20,4 +20,4 @@ let o = (e) => {
         unpublished_categories_shown: a,
         cache_disabled: o,
     });
-};
+}

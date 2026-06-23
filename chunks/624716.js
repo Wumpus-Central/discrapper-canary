@@ -3,7 +3,7 @@ var a = l(627968),
     n = l(834730),
     i = l(486164),
     r = l(557464);
-let o = () => {
+let o = function () {
     let e = {
         title: "Sample Tooltip",
         body: "This is only to be for navigation items inside of the DM view",

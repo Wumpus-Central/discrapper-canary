@@ -180,8 +180,10 @@ var eI = n(266645),
     eS = n(746080),
     ey = n(992595),
     eC = n(429128);
-let eN = { display: "inline" },
-    ev = (e) => e.stopPropagation();
+let eN = { display: "inline" };
+function ev(e) {
+    return e.stopPropagation();
+}
 function eR(e) {
     return {
         ...e,
@@ -192,7 +194,7 @@ function eO(e) {
     let { text: t } = e,
         [n, s] = r.useState(!1);
     return (0, i.jsx)(l.D, {
-        onClick: () => {
+        onClick: function () {
             (0, w.C)(
                 t,
                 () => s(!0),
@@ -225,7 +227,9 @@ let eb = {
     inlineCode: { react: (e, t, n) => (0, i.jsx)("code", { className: "inline", children: (0, M.t)(e, t, n) }, n.key) },
     codeBlock: {
         react(e, t, r) {
-            let s = () => (0, i.jsx)("code", { className: a()(eC.kw, "hljs"), children: (0, M.t)(e, t, r) });
+            function s() {
+                return (0, i.jsx)("code", { className: a()(eC.kw, "hljs"), children: (0, M.t)(e, t, r) });
+            }
             return (0, i.jsx)(
                 "pre",
                 {
@@ -303,7 +307,7 @@ let eb = {
                       g.A,
                       {
                           role: "link",
-                          onClick: () => {
+                          onClick: function () {
                               !(function (e, t, n) {
                                   let i = L.A.getGuild(e);
                                   if (null == e || null == i) return;
@@ -405,8 +409,10 @@ let eb = {
     },
 };
 function eD(e) {
-    let { shouldStopPropagation: t } = e,
-        s = (e) => (!0 === t ? eR(e) : e);
+    let { shouldStopPropagation: t } = e;
+    function s(e) {
+        return !0 === t ? eR(e) : e;
+    }
     return {
         ...eb,
         link: (0, eT.A)(e),

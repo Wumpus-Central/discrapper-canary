@@ -152,86 +152,88 @@ class Y extends s.Ay.Store {
         return L;
     }
 }
-let W = (e) => (0, T.U5)(e, "OverlayTextChatStore"),
-    K = new Y(
-        o.h,
-        __OVERLAY__ || (!A.O && !A.e)
-            ? {}
-            : {
-                  OVERLAY_MOUNTED: W(function (e) {
-                      return null == D && (U(), !0);
-                  }),
-                  OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: W(function () {
-                      return k(), !0;
-                  }),
-                  MESSAGE_ACK: W(function (e) {
-                      let { channelId: t } = e;
-                      return j(t);
-                  }),
-                  CHANNEL_ACK: W(H),
-                  CHANNEL_LOCAL_ACK: W(H),
-                  BULK_ACK: W(function (e) {
-                      let { channels: t } = e,
-                          n = !1;
-                      for (let { channelId: e } of t) j(e) && (n = !0);
-                      return n;
-                  }),
-                  VOICE_STATE_UPDATES: W(B),
-                  VOICE_CHANNEL_SELECT: W(B),
-                  OVERLAY_TEXT_CHAT_SELECT_CHANNEL: W(function (e) {
-                      let { channelId: t, source: n } = e;
-                      return (function (e, t) {
-                          if (null == e) return !1;
-                          null == D && (D = Date.now()), b !== e && (b = e);
-                          let n = G();
-                          if ((null != n && e === n && L && (L = !1), null != b && !O.has(b))) {
-                              let e = Date.now(),
-                                  n = P(b),
-                                  i = c.A.getChannel(b)?.lastMessageId ?? void 0,
-                                  r = x(b, t, e, n, i);
-                              O.set(b, r);
-                          }
-                          return !0;
-                      })(t ?? null, n);
-                  }),
-                  OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: W(function (e) {
-                      let t = (function (e) {
-                              let { channelId: t, source: n, lastActivityAtMs: i, lastMessageId: r } = e,
-                                  s = O.get(t) ?? null,
-                                  a = null == s ? i : Math.max(s.lastActivityAtMs, i),
-                                  o = r ?? s?.lastMessageId,
-                                  l = x(t, n, s?.addedOnMs ?? i, a, o);
-                              return O.set(t, l);
-                          })({
-                              channelId: e.channelId,
-                              source: e.source,
-                              lastActivityAtMs: e.lastActivityAtMs,
-                              lastMessageId: e.lastMessageId,
-                          }),
-                          n = !1;
-                      return null == b && ((b = e.channelId), (n = !0)), t || n;
-                  }),
-                  OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: W(function (e) {
-                      let t = O.delete(e.channelId),
-                          n = !1;
-                      if (b === e.channelId) {
-                          let e = G();
-                          (b = F(e) ?? (L || null == e ? null : e)), (n = !0);
-                      }
-                      return t || n;
-                  }),
-                  OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: W(function () {
-                      let e = O.size() > 0;
-                      O.clear();
-                      let t = G();
-                      return (b = L || null == t ? null : t), e;
-                  }),
-                  OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: W(function (e) {
-                      let { minimized: t } = e;
-                      if (L === t) return !1;
-                      if (((L = t), !t)) return V(), !0;
+function W(e) {
+    return (0, T.U5)(e, "OverlayTextChatStore");
+}
+let K = new Y(
+    o.h,
+    __OVERLAY__ || (!A.O && !A.e)
+        ? {}
+        : {
+              OVERLAY_MOUNTED: W(function (e) {
+                  return null == D && (U(), !0);
+              }),
+              OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: W(function () {
+                  return k(), !0;
+              }),
+              MESSAGE_ACK: W(function (e) {
+                  let { channelId: t } = e;
+                  return j(t);
+              }),
+              CHANNEL_ACK: W(H),
+              CHANNEL_LOCAL_ACK: W(H),
+              BULK_ACK: W(function (e) {
+                  let { channels: t } = e,
+                      n = !1;
+                  for (let { channelId: e } of t) j(e) && (n = !0);
+                  return n;
+              }),
+              VOICE_STATE_UPDATES: W(B),
+              VOICE_CHANNEL_SELECT: W(B),
+              OVERLAY_TEXT_CHAT_SELECT_CHANNEL: W(function (e) {
+                  let { channelId: t, source: n } = e;
+                  return (function (e, t) {
+                      if (null == e) return !1;
+                      null == D && (D = Date.now()), b !== e && (b = e);
                       let n = G();
-                      return null != n && b === n && (b = F(n)), !0;
-                  }),
-              },
-    );
+                      if ((null != n && e === n && L && (L = !1), null != b && !O.has(b))) {
+                          let e = Date.now(),
+                              n = P(b),
+                              i = c.A.getChannel(b)?.lastMessageId ?? void 0,
+                              r = x(b, t, e, n, i);
+                          O.set(b, r);
+                      }
+                      return !0;
+                  })(t ?? null, n);
+              }),
+              OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: W(function (e) {
+                  let t = (function (e) {
+                          let { channelId: t, source: n, lastActivityAtMs: i, lastMessageId: r } = e,
+                              s = O.get(t) ?? null,
+                              a = null == s ? i : Math.max(s.lastActivityAtMs, i),
+                              o = r ?? s?.lastMessageId,
+                              l = x(t, n, s?.addedOnMs ?? i, a, o);
+                          return O.set(t, l);
+                      })({
+                          channelId: e.channelId,
+                          source: e.source,
+                          lastActivityAtMs: e.lastActivityAtMs,
+                          lastMessageId: e.lastMessageId,
+                      }),
+                      n = !1;
+                  return null == b && ((b = e.channelId), (n = !0)), t || n;
+              }),
+              OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: W(function (e) {
+                  let t = O.delete(e.channelId),
+                      n = !1;
+                  if (b === e.channelId) {
+                      let e = G();
+                      (b = F(e) ?? (L || null == e ? null : e)), (n = !0);
+                  }
+                  return t || n;
+              }),
+              OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: W(function () {
+                  let e = O.size() > 0;
+                  O.clear();
+                  let t = G();
+                  return (b = L || null == t ? null : t), e;
+              }),
+              OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: W(function (e) {
+                  let { minimized: t } = e;
+                  if (L === t) return !1;
+                  if (((L = t), !t)) return V(), !0;
+                  let n = G();
+                  return null != n && b === n && (b = F(n)), !0;
+              }),
+          },
+);

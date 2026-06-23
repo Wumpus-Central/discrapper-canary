@@ -1,4 +1,4 @@
-n.d(e, { default: () => _ });
+n.d(e, { default: () => j });
 var s = n(627968),
     i = n(64700),
     r = n(284009),
@@ -8,8 +8,8 @@ var s = n(627968),
     d = n(314116),
     c = n(534514),
     h = n(834730),
-    p = n(821609),
-    u = n(404778),
+    u = n(821609),
+    p = n(404778),
     C = n(228366),
     m = n(900686),
     x = n(976910),
@@ -20,7 +20,7 @@ var s = n(627968),
     b = n(652215),
     M = n(375708),
     S = n(893709);
-let T = (t) => {
+function T(t) {
     let { label: e, text: n, children: i, ...r } = t;
     return (0, s.jsxs)("div", {
         className: S.jx,
@@ -31,8 +31,8 @@ let T = (t) => {
             (0, s.jsx)("div", { children: i }),
         ],
     });
-};
-class j extends i.PureComponent {
+}
+class f extends i.PureComponent {
     handleCloseModal = async (t) => {
         let { onClose: e, hasSeenBackupPrompt: n } = this.props;
         n
@@ -56,7 +56,7 @@ class j extends i.PureComponent {
                 contentType: "text/plain",
                 fileName: "discord_backup_codes.txt",
                 onDownload: () => C.h.dispatch({ type: "MFA_SEEN_BACKUP_CODE_PROMPT" }),
-                children: (0, s.jsx)(p.$, { variant: "active", size: "sm", text: M.intl.string(M.t.qZZUy6) }),
+                children: (0, s.jsx)(u.$, { variant: "active", size: "sm", text: M.intl.string(M.t.qZZUy6) }),
             }),
         });
     }
@@ -77,7 +77,7 @@ class j extends i.PureComponent {
                               learnMoreLink: P.A.getArticleURL(b.MVz.SETTING_UP_TWO_FACTOR),
                           }),
                       }),
-                      (0, s.jsx)(p.$, {
+                      (0, s.jsx)(u.$, {
                           variant: "active",
                           size: "sm",
                           text: M.intl.string(M.t.NIFmCJ),
@@ -100,7 +100,7 @@ class j extends i.PureComponent {
             actions: [],
             children: [
                 this.renderPasskeyCTASection(),
-                (0, s.jsx)(u.c, { className: S.yF }),
+                (0, s.jsx)(p.c, { className: S.yF }),
                 this.renderBackupCodesSection(M.intl.format(M.t.M0Dogh, {})),
             ],
         });
@@ -129,10 +129,10 @@ class j extends i.PureComponent {
 ${t}`;
     };
 }
-let _ = o.Ay.connectStores([k.default, A.A], () => {
+let j = o.Ay.connectStores([k.default, A.A], () => {
     let t = k.default.getCurrentUser();
     return (
         l()(null != t, "MFAEnableSuccess: currentUser cannot be undefined"),
         { currentUser: t, backupCodes: A.A.getBackupCodes(), hasSeenBackupPrompt: A.A.hasSeenBackupPrompt }
     );
-})(j);
+})(f);

@@ -139,7 +139,9 @@ var Y = s(604121),
     ee = s(646764),
     et = s(795965),
     es = s(693086);
-let en = async () => await s.e("40119").then(s.t.bind(s, 718698, 19));
+async function en() {
+    return await s.e("40119").then(s.t.bind(s, 718698, 19));
+}
 function el() {
     let { quest: e, sourceQuestContent: t, onClose: s, maxProgressSec: i, targetSec: o } = l.useContext(D.a),
         [a, r] = l.useState(!1),
@@ -173,10 +175,10 @@ function el() {
             (0, n.jsx)(I.m, {
                 position: "top",
                 text: N,
-                onTooltipShow: () => {
+                onTooltipShow: function () {
                     r(!0);
                 },
-                onTooltipHide: () => {
+                onTooltipHide: function () {
                     r(!1);
                 },
                 children: (0, n.jsx)(R.D, {

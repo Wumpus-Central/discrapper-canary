@@ -8,7 +8,7 @@ var i = n(627968),
     l = n(607470),
     u = n(363195),
     c = n(475437);
-let d = (e) => {
+function d(e) {
     let { className: t, options: n } = e,
         r = (0, a.bG)([u.A], () => (0, o.M)(u.A.theme));
     return null == n
@@ -31,4 +31,4 @@ let d = (e) => {
                     "aria-hidden": "true",
                 })
           : null;
-};
+}

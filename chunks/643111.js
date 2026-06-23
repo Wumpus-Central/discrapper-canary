@@ -33,7 +33,7 @@ function C(i) {
     return (0, a.jsx)(l.Dr, {
         id: "pin-channel",
         label: v,
-        action: () => {
+        action: function () {
             E && A(g.i.TAKE_ACTION), (0, s.jA)(i.guild_id, i.id, !n, { section: _.JJy.CONTEXT_MENU });
         },
         badge: E ? "new" : void 0,

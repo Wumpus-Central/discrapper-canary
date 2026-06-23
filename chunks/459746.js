@@ -38,10 +38,10 @@ function _(e) {
               className: i,
               src: f,
               alt: u.intl.formatToPlainString(u.t["3ev90U"], { game: _ }),
-              onError: () => {
+              onError: function () {
                   d(!0);
               },
-              onLoad: () => {
+              onLoad: function () {
                   d(!1);
               },
               draggable: !1,

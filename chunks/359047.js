@@ -17,7 +17,7 @@ function d(e) {
               label: s.intl.string(s.t["60lJ0C"]),
               icon: n ? a.U : void 0,
               leadingAccessory: n ? { type: "icon", icon: a.U } : void 0,
-              action: () => {
+              action: function () {
                   (0, t.openModalLazy)(async () => {
                       let { default: n } = await Promise.all([
                           i.e("85948"),

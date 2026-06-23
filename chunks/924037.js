@@ -3,7 +3,7 @@ var n = i(627968);
 i(64700);
 var r = i(189213),
     s = i(834730);
-let a = (t) => {
+let a = function (t) {
     let { entry: e, transitionState: i, requestId: a, onClose: d } = t;
     return (0, n.jsx)(r.Modal, {
         title: `Debugging entry: ${e.id}`,

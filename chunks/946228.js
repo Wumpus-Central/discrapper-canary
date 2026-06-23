@@ -89,7 +89,9 @@ let B = r.memo(function (e) {
             ],
         });
     }),
-    j = () => null;
+    j = function () {
+        return null;
+    };
 var H = n(742424),
     Y = n(228366),
     W = n(963307),
@@ -744,7 +746,7 @@ function eF(e) {
                         count: e.length,
                         index: n.length,
                         title: G.intl.string(G.t["6gwSFY"]),
-                        onToggleExpand: () => {
+                        onToggleExpand: function () {
                             l((e) => {
                                 let t = !e;
                                 return (

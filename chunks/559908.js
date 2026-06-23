@@ -39,11 +39,11 @@ let f = new Set(),
             } = e;
             return `${n}-${i}-${t}`;
         },
-    ),
-    m = (e) => {
-        let { userId: t, channelId: n } = e;
-        return `${t}-${n}`;
-    };
+    );
+function m(e) {
+    let { userId: t, channelId: n } = e;
+    return `${t}-${n}`;
+}
 function g(e, t, n, i) {
     return !(e !== t || null == n || i.has(n)) && (i.add(n), !0);
 }

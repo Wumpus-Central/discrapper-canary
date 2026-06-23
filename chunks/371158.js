@@ -1,50 +1,50 @@
-n.d(e, { default: () => C });
-var i = n(627968),
-    a = n(64700),
-    l = n(189213),
-    r = n(349288),
-    s = n(834730),
-    c = n(181658),
-    o = n(976860),
-    d = n(885386),
-    u = n(780964),
-    p = n(830543),
-    h = n(766075),
-    f = n(652215),
-    k = n(602339),
-    x = n(375708);
+e.d(n, { default: () => C });
+var i = e(627968),
+    a = e(64700),
+    l = e(189213),
+    r = e(349288),
+    c = e(834730),
+    s = e(181658),
+    o = e(976860),
+    d = e(885386),
+    u = e(780964),
+    p = e(830543),
+    f = e(766075),
+    h = e(652215),
+    k = e(602339),
+    x = e(375708);
 function C(t) {
-    let { transitionState: e, onClose: n } = t,
+    let { transitionState: n, onClose: e } = t,
         [C, g] = a.useState(!1),
-        [E, S] = a.useState(null),
-        y = async () => {
-            S(null), g(!0);
-            try {
-                await d.dm.updateSetting(!1), (0, o.pX)(f.BVt.FRIENDS), (0, p.default)(), n();
-            } catch (t) {
-                S(new c.A(t).getAnyErrorMessage());
-            } finally {
-                g(!1);
-            }
-        },
-        b = () => {
-            (0, h.openUserSettings)(u.X.FAMILY_CENTER_PANEL), n();
-        };
+        [E, S] = a.useState(null);
+    async function y() {
+        S(null), g(!0);
+        try {
+            await d.dm.updateSetting(!1), (0, o.pX)(h.BVt.FRIENDS), (0, p.default)(), e();
+        } catch (t) {
+            S(new s.A(t).getAnyErrorMessage());
+        } finally {
+            g(!1);
+        }
+    }
+    function b() {
+        (0, f.openUserSettings)(u.X.FAMILY_CENTER_PANEL), e();
+    }
     return (0, i.jsx)(l.Modal, {
-        transitionState: e,
-        onClose: n,
+        transitionState: n,
+        onClose: e,
         title: x.intl.string(k.default.VGB30H),
         subtitle: x.intl.format(k.default["CrZZ+p"], {
-            openSettingsHook: (t, e) => (0, i.jsx)(r.Anchor, { onClick: b, children: t }, e),
+            openSettingsHook: (t, n) => (0, i.jsx)(r.Anchor, { onClick: b, children: t }, n),
         }),
         actions: [
-            { variant: "secondary", text: x.intl.string(x.t["ETE/oC"]), onClick: n },
+            { variant: "secondary", text: x.intl.string(x.t["ETE/oC"]), onClick: e },
             { text: x.intl.string(k.default.cSb7U0), onClick: y, loading: C, variant: "critical-primary" },
         ],
         children: (0, i.jsx)("div", {
             children:
                 null != E &&
-                (0, i.jsx)(s.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: E }),
+                (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-feedback-critical", children: E }),
         }),
     });
 }

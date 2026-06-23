@@ -59,147 +59,142 @@ function G(e) {
             }),
     });
 }
-let X = (e) => {
-        let { children: t } = e,
-            n = (0, E.bG)([C.Ay], () => C.Ay.keyboardModeEnabled),
-            { isDragging: a } = (0, f.V)((e) => ({ isDragging: e.isDragging() }));
-        return (0, i.jsx)(T.m, {
-            __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
-                className: O.HE,
-                children: [
-                    (0, i.jsx)(v.E, {
-                        variant: "text-sm/normal",
-                        color: "none",
-                        children: S.intl.format(n ? S.t["zvln/l"] : S.t["7cdwhg"], {
-                            emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
-                        }),
+function X(e) {
+    let { children: t } = e,
+        n = (0, E.bG)([C.Ay], () => C.Ay.keyboardModeEnabled),
+        { isDragging: a } = (0, f.V)((e) => ({ isDragging: e.isDragging() }));
+    return (0, i.jsx)(T.m, {
+        __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
+            className: O.HE,
+            children: [
+                (0, i.jsx)(v.E, {
+                    variant: "text-sm/normal",
+                    color: "none",
+                    children: S.intl.format(n ? S.t["zvln/l"] : S.t["7cdwhg"], {
+                        emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
-                    (0, i.jsx)(v.E, {
-                        variant: "text-sm/normal",
-                        color: "none",
-                        children: S.intl.format(S.t["4e0rM4"], {
-                            emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
-                        }),
+                }),
+                (0, i.jsx)(v.E, {
+                    variant: "text-sm/normal",
+                    color: "none",
+                    children: S.intl.format(S.t["4e0rM4"], {
+                        emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
-                ],
-            }),
-            position: "top",
-            shouldShow: !0 !== a,
-            ariaHidden: !0,
-            children: t,
-        });
-    },
-    W = (e) => {
-        let { children: t, widget: a, targetRef: l, additionalMenuItems: r } = e,
-            { trackUserProfileEditAction: s } = (0, c.NJ)(),
-            o = (e) => {
-                if (e.shiftKey) {
-                    (0, d.qA)(a),
-                        s({ action: "WIDGET_REMOVED", ...a.getProfileEditAnalyticsOptions() }),
-                        (0, w.XA)(L.jM.WIDGET_REMOVED);
-                    return;
-                }
-                (0, A.openModalLazy)(
-                    async () => {
-                        let { default: e } = await Promise.all([
-                            n.e("25781"),
-                            n.e("86047"),
-                            n.e("15590"),
-                            n.e("15166"),
-                            n.e("88634"),
-                            n.e("81483"),
-                            n.e("36252"),
-                            n.e("28041"),
-                            n.e("79249"),
-                            n.e("47401"),
-                            n.e("14831"),
-                            n.e("86122"),
-                            n.e("25821"),
-                            n.e("85319"),
-                            n.e("90645"),
-                            n.e("14211"),
-                            n.e("25711"),
-                            n.e("44671"),
-                            n.e("53417"),
-                            n.e("12375"),
-                            n.e("73553"),
-                            n.e("72963"),
-                            n.e("36877"),
-                            n.e("21930"),
-                            n.e("27323"),
-                            n.e("93993"),
-                            n.e("54241"),
-                            n.e("41786"),
-                            n.e("22067"),
-                            n.e("24303"),
-                            n.e("55266"),
-                            n.e("94138"),
-                            n.e("96574"),
-                            n.e("86262"),
-                            n.e("27752"),
-                            n.e("58262"),
-                            n.e("55895"),
-                            n.e("20491"),
-                            n.e("19119"),
-                            n.e("87791"),
-                            n.e("78377"),
-                            n.e("53683"),
-                            n.e("47339"),
-                            n.e("9598"),
-                            n.e("74857"),
-                            n.e("45879"),
-                            n.e("97150"),
-                            n.e("21351"),
-                            n.e("78"),
-                            n.e("40042"),
-                            n.e("787"),
-                            n.e("53600"),
-                        ]).then(n.bind(n, 380035));
-                        return (t) =>
-                            (0, i.jsx)(e, {
-                                ...t,
-                                userId: P.default.getId(),
-                                widget: a,
-                                trackUserProfileEditAction: s,
-                            });
-                    },
-                    { stackingBehavior: "stack" },
-                );
-            };
-        return (0, i.jsx)(_.Y, {
-            targetElementRef: l,
-            align: "top",
-            position: "right",
-            disablePointerEvents: !1,
-            renderPopout: (e) => {
-                let { closePopout: t } = e;
-                return (0, i.jsx)(R.W, {
-                    "data-menu-migrated": !0,
-                    navId: "user-profile-widget-context-menu",
-                    onClose: () => {
-                        (0, N.Z_)(), t();
-                    },
-                    onSelect: () => {},
-                    "aria-label": S.intl.string(S.t.xpSHSk),
-                    className: O.MK,
-                    children: (0, i.jsxs)(b.rX, {
-                        children: [
-                            r,
-                            (0, i.jsx)(b.Dr, {
-                                id: "remove-widget",
-                                label: S.intl.string(S.t.Mm07Yc),
-                                action: o,
-                                color: "danger",
-                                icon: D.u,
-                                leadingAccessory: { type: "icon", icon: D.u },
-                            }),
-                        ],
-                    }),
-                });
+                }),
+            ],
+        }),
+        position: "top",
+        shouldShow: !0 !== a,
+        ariaHidden: !0,
+        children: t,
+    });
+}
+function W(e) {
+    let { children: t, widget: a, targetRef: l, additionalMenuItems: r } = e,
+        { trackUserProfileEditAction: s } = (0, c.NJ)();
+    function o(e) {
+        if (e.shiftKey) {
+            (0, d.qA)(a),
+                s({ action: "WIDGET_REMOVED", ...a.getProfileEditAnalyticsOptions() }),
+                (0, w.XA)(L.jM.WIDGET_REMOVED);
+            return;
+        }
+        (0, A.openModalLazy)(
+            async () => {
+                let { default: e } = await Promise.all([
+                    n.e("25781"),
+                    n.e("86047"),
+                    n.e("15590"),
+                    n.e("15166"),
+                    n.e("88634"),
+                    n.e("81483"),
+                    n.e("36252"),
+                    n.e("28041"),
+                    n.e("79249"),
+                    n.e("47401"),
+                    n.e("14831"),
+                    n.e("86122"),
+                    n.e("25821"),
+                    n.e("85319"),
+                    n.e("90645"),
+                    n.e("14211"),
+                    n.e("25711"),
+                    n.e("44671"),
+                    n.e("53417"),
+                    n.e("12375"),
+                    n.e("73553"),
+                    n.e("72963"),
+                    n.e("36877"),
+                    n.e("21930"),
+                    n.e("27323"),
+                    n.e("93993"),
+                    n.e("54241"),
+                    n.e("41786"),
+                    n.e("22067"),
+                    n.e("24303"),
+                    n.e("55266"),
+                    n.e("94138"),
+                    n.e("96574"),
+                    n.e("86262"),
+                    n.e("27752"),
+                    n.e("58262"),
+                    n.e("55895"),
+                    n.e("20491"),
+                    n.e("19119"),
+                    n.e("79549"),
+                    n.e("78377"),
+                    n.e("53683"),
+                    n.e("47339"),
+                    n.e("9598"),
+                    n.e("74857"),
+                    n.e("45879"),
+                    n.e("97150"),
+                    n.e("21351"),
+                    n.e("78"),
+                    n.e("40042"),
+                    n.e("787"),
+                    n.e("53600"),
+                ]).then(n.bind(n, 380035));
+                return (t) =>
+                    (0, i.jsx)(e, { ...t, userId: P.default.getId(), widget: a, trackUserProfileEditAction: s });
             },
-            children: t,
-        });
-    };
+            { stackingBehavior: "stack" },
+        );
+    }
+    return (0, i.jsx)(_.Y, {
+        targetElementRef: l,
+        align: "top",
+        position: "right",
+        disablePointerEvents: !1,
+        renderPopout: (e) => {
+            let { closePopout: t } = e;
+            return (0, i.jsx)(R.W, {
+                "data-menu-migrated": !0,
+                navId: "user-profile-widget-context-menu",
+                onClose: () => {
+                    (0, N.Z_)(), t();
+                },
+                onSelect: () => {},
+                "aria-label": S.intl.string(S.t.xpSHSk),
+                className: O.MK,
+                children: (0, i.jsxs)(b.rX, {
+                    children: [
+                        r,
+                        (0, i.jsx)(b.Dr, {
+                            id: "remove-widget",
+                            label: S.intl.string(S.t.Mm07Yc),
+                            action: o,
+                            color: "danger",
+                            icon: D.u,
+                            leadingAccessory: { type: "icon", icon: D.u },
+                        }),
+                    ],
+                }),
+            });
+        },
+        children: t,
+    });
+}
 var k = n(534514),
     M = n(138134),
     F = n(365199),
@@ -207,10 +202,10 @@ var k = n(534514),
     U = n(620266);
 function Y(e) {
     let { widget: t, userId: n, className: l, menuItems: s } = e,
-        o = a.useRef(null),
-        c = () => {
-            (0, H.GJ)(n, t);
-        };
+        o = a.useRef(null);
+    function c() {
+        (0, H.GJ)(n, t);
+    }
     return (0, i.jsx)(_.Y, {
         targetElementRef: o,
         align: "top",
@@ -360,25 +355,26 @@ function J(e) {
         })({ widget: n, onAction: D }),
         C = b === n.type;
     (0, u.A)(N, C);
-    let P = d && null != E && !g,
-        w = () =>
-            (0, i.jsxs)("div", {
-                ref: R,
-                className: r()(q.kL, f),
-                children: [
-                    (0, i.jsx)(V, {
-                        userId: t,
-                        headingId: _,
-                        title: y,
-                        subtitle: j,
-                        actionButtons: I,
-                        widget: n,
-                        disableInteraction: g,
-                        className: v,
-                    }),
-                    (0, i.jsxs)(s.F, { children: [l, T] }),
-                ],
-            });
+    let P = d && null != E && !g;
+    function w() {
+        return (0, i.jsxs)("div", {
+            ref: R,
+            className: r()(q.kL, f),
+            children: [
+                (0, i.jsx)(V, {
+                    userId: t,
+                    headingId: _,
+                    title: y,
+                    subtitle: j,
+                    actionButtons: I,
+                    widget: n,
+                    disableInteraction: g,
+                    className: v,
+                }),
+                (0, i.jsxs)(s.F, { children: [l, T] }),
+            ],
+        });
+    }
     return (0, i.jsx)("section", {
         ref: N,
         "aria-labelledby": _,

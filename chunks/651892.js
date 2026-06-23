@@ -91,7 +91,7 @@ function _(e) {
 function h(e) {
     return e.ctaConfig.link;
 }
-let f = (e, t) => {
+function f(e, t) {
     (0, r.Y5)({
         questId: e,
         questContent: t.content,
@@ -101,7 +101,7 @@ let f = (e, t) => {
         sourceQuestContent: t.sourceQuestContent,
     }),
         (0, i.C)(`${location.protocol}//${location.host}/quests/${e}`);
-};
+}
 function p(e) {
     if (0 === e.rewardsConfig.rewards.length) throw Error(`Quest ${e.id} has no rewards configured`);
     return e.rewardsConfig.rewards[0];

@@ -34,28 +34,28 @@ class _ extends r.Ay.Store {
     }
 }
 let h = new _(s.h, {
-    COLLECTIBLES_SHOP_OPEN: (e) => {
+    COLLECTIBLES_SHOP_OPEN: function (e) {
         (o = e.analyticsLocations ?? a), (l = e.analyticsSource ?? null), (i = e.initialProductSkuId);
     },
-    COLLECTIBLES_SHOP_CLOSE: (e) => {
+    COLLECTIBLES_SHOP_CLOSE: function (e) {
         (o = a), (l = null), (i = void 0);
     },
-    COLLECTIBLES_PRODUCT_DETAILS_OPEN: (e) => {
+    COLLECTIBLES_PRODUCT_DETAILS_OPEN: function (e) {
         e.skuId === i && (i = void 0);
     },
-    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH: (e) => {
+    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH: function (e) {
         let { tab: t } = e;
         c.add(t);
     },
-    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS: (e) => {
+    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_SUCCESS: function (e) {
         let { tab: t, layoutId: n } = e;
         (u[t] = n), delete d[t], c.delete(t);
     },
-    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE: (e) => {
+    COLLECTIBLES_SHOP_TAB_LAYOUT_FETCH_FAILURE: function (e) {
         let { tab: t, apiError: n } = e;
         (d[t] = n), c.delete(t);
     },
-    LOGOUT: (e) => {
+    LOGOUT: function (e) {
         (o = a), (l = null), (i = void 0), (u = {}), (c = new Set()), (d = {});
     },
 });

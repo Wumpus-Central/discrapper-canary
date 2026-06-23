@@ -15,29 +15,29 @@ var l = n(64700),
     A = n(652215),
     f = n(166643);
 function C(e) {
-    let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: E } = e,
-        x = (0, f.A)(),
+    let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: x } = e,
+        E = (0, f.A)(),
         [S, _] = l.useState(!1),
         [I, j] = l.useState(!1),
         [y, b] = l.useState(!1),
-        [T, N] = l.useState(!1),
-        [v, M] = l.useState(!1),
+        [N, v] = l.useState(!1),
+        [T, M] = l.useState(!1),
         R = S || I || y,
         D = l.useCallback(
             async (e) => {
                 if (!R) {
                     _(!0);
                     try {
-                        await (0, h.RK)(e), N(!0), i?.();
+                        await (0, h.RK)(e), v(!0), i?.();
                     } catch (t) {
                         let e = new a.LG(t);
-                        E?.(e);
+                        x?.(e);
                     } finally {
                         _(!1);
                     }
                 }
             },
-            [R, i, E],
+            [R, i, x],
         ),
         L = l.useCallback(
             async (e) => {
@@ -47,15 +47,15 @@ function C(e) {
                         await (0, h.UK)(e), M(!0), C?.();
                     } catch (t) {
                         let e = new a.LG(t);
-                        E?.(e);
+                        x?.(e);
                     } finally {
                         j(!1);
                     }
                 }
             },
-            [R, C, E],
+            [R, C, x],
         ),
-        P = l.useCallback(
+        k = l.useCallback(
             async (e) => {
                 if (R) return;
                 j(!0);
@@ -65,14 +65,14 @@ function C(e) {
                     M(!0), C?.();
                 } catch (t) {
                     let e = new a.LG(t);
-                    E?.(e);
+                    x?.(e);
                 } finally {
                     j(!1);
                 }
             },
-            [R, C, E],
+            [R, C, x],
         ),
-        k = l.useCallback(
+        P = l.useCallback(
             async (e) => {
                 if (R) return;
                 if (null != t && null == o.A.getMutualGuilds(t.id)) {
@@ -145,7 +145,7 @@ function C(e) {
                       })({
                           channel: e,
                           onConfirm: i,
-                          onCancel: () => {
+                          onCancel: function () {
                               u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
                                   action: p.LD.DISMISS_HAM_CONFIRMATION_PROMPT,
                                   channel_id: e.id,
@@ -157,14 +157,14 @@ function C(e) {
             [D],
         );
     return {
-        acceptMessageRequest: x ? k : D,
+        acceptMessageRequest: E ? P : D,
         rejectMessageRequest: L,
-        rejectAll: P,
+        rejectAll: k,
         markAsNotSpam: O,
         isAcceptLoading: S,
         isRejectLoading: I,
         isUserProfileLoading: y,
-        isOptimisticAccepted: T,
-        isOptimisticRejected: v,
+        isOptimisticAccepted: N,
+        isOptimisticRejected: T,
     };
 }

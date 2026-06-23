@@ -72,7 +72,7 @@ let g = 1e3 / 24,
     };
 var I = n(942426),
     T = n(735438);
-let S = (e) => {
+function S(e) {
     if (null == e) return e;
     let t = (0, T.cloneDeep)(e),
         n = Math.floor(
@@ -94,7 +94,7 @@ let S = (e) => {
         )),
         t
     );
-};
+}
 n(323874), n(14289), n(35956);
 var y = n(676279),
     C = n(38405),
@@ -119,42 +119,42 @@ let v = (e) => {
             [I, T] = r.useState(h?.src ?? t.src),
             S = r.useRef(null),
             v = (0, y.gm)() && null != t.loopDelay && t.loopDelay > 0 && h?.src != null;
-        r.useEffect(() => {
-            if (!v || "layer" === m) return;
-            let e = new AbortController();
-            return (
-                (async () => {
-                    try {
-                        if (null == S.current) {
-                            let t = await fetch(h.src, { signal: e.signal }),
-                                n = await t.blob();
-                            if (e.signal.aborted) return;
-                            S.current = n;
+        function R(e) {
+            (0, y.gm)() && e !== m && g(e);
+        }
+        if (
+            (r.useEffect(() => {
+                if (!v || "layer" === m) return;
+                let e = new AbortController();
+                return (
+                    (async () => {
+                        try {
+                            if (null == S.current) {
+                                let t = await fetch(h.src, { signal: e.signal }),
+                                    n = await t.blob();
+                                if (e.signal.aborted) return;
+                                S.current = n;
+                            }
+                            A.current !== h?.src && URL.revokeObjectURL(A.current),
+                                (A.current = URL.createObjectURL(S.current)),
+                                T(() => A.current);
+                        } catch (e) {
+                            if ("AbortError" === e.name) return null;
+                            C.A.captureException(e);
                         }
-                        A.current !== h?.src && URL.revokeObjectURL(A.current),
-                            (A.current = URL.createObjectURL(S.current)),
-                            T(() => A.current);
-                    } catch (e) {
-                        if ("AbortError" === e.name) return null;
-                        C.A.captureException(e);
+                    })(),
+                    () => {
+                        e.abort();
                     }
-                })(),
-                () => {
-                    e.abort();
-                }
-            );
-        }, [m, v, T, h?.src]),
+                );
+            }, [m, v, T, h?.src]),
             r.useEffect(
                 () => () => {
                     A.current !== h?.src && URL.revokeObjectURL(A.current);
                 },
                 [],
-            );
-        let R = (e) => {
-            (0, y.gm)() && e !== m && g(e);
-        };
-        if (
-            (s || (p = !1),
+            ),
+            s || (p = !1),
             a < t.start && (p = !1),
             !t.loop && a > t.duration + t.start && (p = !1),
             n === o.l.ANIMATION_TYPE_PERSISTENT && !l && null != c && a >= d && u(!0),
@@ -284,62 +284,62 @@ let v = (e) => {
                 }),
             })
         );
-    },
-    O = (e) => {
-        let {
-                profileEffect: t,
-                useThumbnail: n,
-                bannerAdjustment: r = 0,
-                isHovering: s = !1,
-                useOpacityOnHover: o = !0,
-            } = e,
-            { reducedMotionSrc: l, thumbnailPreviewSrc: u, accessibilityLabel: c } = t;
-        return (0, i.jsx)("div", {
-            className: a()(N.yC, { [N.yo]: s && o }),
-            "aria-label": c,
-            role: "img",
-            children: (0, i.jsx)("div", {
-                className: N.vW,
-                children: (0, i.jsx)("img", {
-                    src: n && !s ? u : l,
-                    className: N.QZ,
-                    style: { top: 0 - r },
-                    alt: "",
-                    "aria-hidden": !0,
-                }),
-            }),
-        });
-    },
-    b = (e) => {
-        let t = (0, c.j)(),
-            n = (0, l.bG)([u.Ay], () => u.Ay.useReducedMotion),
-            s = (0, I.A)(e.skuId),
-            a = (0, h.C)(s),
-            d = ((e) => {
-                let [t, n] = r.useState(e),
-                    [i, s] = r.useState(S(e));
-                return (0, T.isEqual)(t, e) || (n(e), s(S(e))), i;
-            })(s),
-            f = a ?? d,
-            { autoPlay: p = !0, isHovering: E } = e,
-            m = !!(
-                (!t && e.shopPreview) ||
-                (!t && s?.animationType === o.l.ANIMATION_TYPE_PERSISTENT) ||
-                n ||
-                (!1 === p && !1 === E)
-            ),
-            { loaded: g, layerData: A } = (0, _.A)({ skuId: s?.skuId, layers: m ? void 0 : s?.effects });
-        return null != s && null != f && (t || e.shopPreview || s.animationType !== o.l.ANIMATION_TYPE_INTERMITTENT)
-            ? m
-                ? (0, i.jsx)(O, {
-                      useThumbnail: e.useThumbnail,
-                      profileEffect: f,
-                      bannerAdjustment: e.bannerAdjustment,
-                      isHovering: e.isHovering,
-                      useOpacityOnHover: e.useOpacityOnHover,
-                  })
-                : g
-                  ? (0, i.jsx)(R, { profileEffect: f, layerData: A, ...e })
-                  : null
-            : null;
     };
+function O(e) {
+    let {
+            profileEffect: t,
+            useThumbnail: n,
+            bannerAdjustment: r = 0,
+            isHovering: s = !1,
+            useOpacityOnHover: o = !0,
+        } = e,
+        { reducedMotionSrc: l, thumbnailPreviewSrc: u, accessibilityLabel: c } = t;
+    return (0, i.jsx)("div", {
+        className: a()(N.yC, { [N.yo]: s && o }),
+        "aria-label": c,
+        role: "img",
+        children: (0, i.jsx)("div", {
+            className: N.vW,
+            children: (0, i.jsx)("img", {
+                src: n && !s ? u : l,
+                className: N.QZ,
+                style: { top: 0 - r },
+                alt: "",
+                "aria-hidden": !0,
+            }),
+        }),
+    });
+}
+let b = function (e) {
+    let t = (0, c.j)(),
+        n = (0, l.bG)([u.Ay], () => u.Ay.useReducedMotion),
+        s = (0, I.A)(e.skuId),
+        a = (0, h.C)(s),
+        d = (function (e) {
+            let [t, n] = r.useState(e),
+                [i, s] = r.useState(S(e));
+            return (0, T.isEqual)(t, e) || (n(e), s(S(e))), i;
+        })(s),
+        f = a ?? d,
+        { autoPlay: p = !0, isHovering: E } = e,
+        m = !!(
+            (!t && e.shopPreview) ||
+            (!t && s?.animationType === o.l.ANIMATION_TYPE_PERSISTENT) ||
+            n ||
+            (!1 === p && !1 === E)
+        ),
+        { loaded: g, layerData: A } = (0, _.A)({ skuId: s?.skuId, layers: m ? void 0 : s?.effects });
+    return null != s && null != f && (t || e.shopPreview || s.animationType !== o.l.ANIMATION_TYPE_INTERMITTENT)
+        ? m
+            ? (0, i.jsx)(O, {
+                  useThumbnail: e.useThumbnail,
+                  profileEffect: f,
+                  bannerAdjustment: e.bannerAdjustment,
+                  isHovering: e.isHovering,
+                  useOpacityOnHover: e.useOpacityOnHover,
+              })
+            : g
+              ? (0, i.jsx)(R, { profileEffect: f, layerData: A, ...e })
+              : null
+        : null;
+};

@@ -140,16 +140,7 @@ function k() {
         I = A.A.getVerificationTypes(e),
         [T, S] = r.useState(0),
         y = (0, _.A)(I);
-    (0, f.A)(
-        {
-            type: s.ImpressionTypes.MODAL,
-            name: s.ImpressionNames.USER_ACTION_REQUIRED,
-            properties: { verification_type: I[0], verification_types: I },
-        },
-        {},
-        [I.toString()],
-    );
-    let C = () => {
+    function C() {
         (0, d.Cw)(),
             (0, l.openModalLazy)(
                 async () => {
@@ -160,8 +151,17 @@ function k() {
                 },
                 { modalKey: P.H1, Layer: p.Ay },
             );
-    };
+    }
     return (
+        (0, f.A)(
+            {
+                type: s.ImpressionTypes.MODAL,
+                name: s.ImpressionNames.USER_ACTION_REQUIRED,
+                properties: { verification_type: I[0], verification_types: I },
+            },
+            {},
+            [I.toString()],
+        ),
         r.useEffect(
             () => (
                 h.A.disable(),
@@ -191,7 +191,7 @@ function k() {
         (0, i.jsx)(M, {
             types: I,
             captchaKey: T,
-            onCaptchaVerify: (e) => {
+            onCaptchaVerify: function (e) {
                 o.Bo.post({
                     url: b.Rsh.CAPTCHA,
                     body: { captcha_key: e },
@@ -221,7 +221,7 @@ function k() {
                           { modalKey: x.V, Layer: p.Ay },
                       );
             },
-            onLogout: () => {
+            onLogout: function () {
                 (0, l.openModalLazy)(
                     async () => {
                         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 732159));

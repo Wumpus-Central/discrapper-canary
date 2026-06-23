@@ -320,7 +320,7 @@ function td(e) {
             guildBoostingAdjustment: s,
             checkoutInvoicePreview: a,
         } = e,
-        o = ((e) => {
+        o = (function (e) {
             let {
                 addedQuantity: t,
                 guildBoostingSubscriptionPlan: n,
@@ -518,9 +518,11 @@ function th(e) {
                 } = e,
                 { guildBoostingSubscriptionPlan: o, isPrepaid: l, isReverseTrial: u } = a,
                 c = n.interval,
-                d = n.intervalCount,
-                _ = (e) => (0, ti.Z)(i.invoiceItems).find((t) => er.pW.has(t.subscriptionPlanId) && e(t)),
-                h = _((e) => e.amount >= 0);
+                d = n.intervalCount;
+            function _(e) {
+                return (0, ti.Z)(i.invoiceItems).find((t) => er.pW.has(t.subscriptionPlanId) && e(t));
+            }
+            let h = _((e) => e.amount >= 0);
             ep()(null != h, "Missing guild boosting invoice item");
             let f = _((e) => e.amount < 0),
                 p = null != f ? h.quantity - f.quantity : h.quantity,
@@ -621,10 +623,10 @@ function tE(e) {
     s.useEffect(() => {
         u(t);
     }, [t]);
-    let c = "number" == typeof l,
-        d = (e) => {
-            u(e), tp(e) || n(e);
-        };
+    let c = "number" == typeof l;
+    function d(e) {
+        u(e), tp(e) || n(e);
+    }
     return (0, r.jsxs)("div", {
         className: tf.U$,
         children: [
@@ -646,7 +648,7 @@ function tE(e) {
                     inputMode: "numeric",
                     value: `${l}`,
                     onChange: (e) =>
-                        ((e) => {
+                        (function (e) {
                             if (tp(e)) return void d(e);
                             let t = parseInt(e, 10);
                             if (!isNaN(t)) {
@@ -655,7 +657,7 @@ function tE(e) {
                                 d(t);
                             }
                         })(e.currentTarget.value),
-                    onBlur: () => {
+                    onBlur: function () {
                         tp(l) && u(t);
                     },
                 }),
@@ -1796,7 +1798,7 @@ let tY = [u.pn.PLAN_SELECT],
             },
             tenantAnalyticsLocation: T.A.GUILD_BOOST_PURCHASE_MODAL,
         },
-        CustomHeaderComponent: (e) => {
+        CustomHeaderComponent: function (e) {
             let { plan: t, onClose: n, step: i } = e,
                 s = (0, L.n)("GuildBoostUnifiedCheckout"),
                 a = (0, v.t4)((e) => e.purchaseState);
@@ -2172,7 +2174,7 @@ function nB(e) {
 var nj = n(783878),
     nH = n(966327),
     nY = n(427262);
-let nW = (e) => {
+let nW = function (e) {
     let { selectedSkuId: t, validateSelectedGift: n, className: i, recipients: s } = e,
         { giftRecipient: a, setGiftRecipient: o } = (0, ne.Pv)();
     return null == t
@@ -2793,7 +2795,7 @@ var ib = n(73825),
     iV = n(929283),
     iB = n(761365),
     ij = n(267861);
-let iH = (e) => {
+function iH(e) {
     let t,
         n,
         { skuId: i, user: a, claimed: o, onSelect: l, selectedSkuId: u } = e,
@@ -2819,7 +2821,7 @@ let iH = (e) => {
               children: (0, r.jsxs)(iU.s, {
                   ref: _,
                   "aria-label": E.name ?? "",
-                  onClick: () => {
+                  onClick: function () {
                       null == i || null == l || o || l(i);
                   },
                   className: eC()(ij._x, { [ij.Vp]: !o, [ij.mr]: p, [ij.md]: u === i }),
@@ -2859,7 +2861,7 @@ let iH = (e) => {
                   ],
               }),
           }));
-};
+}
 var iY = n(696208),
     iW = n(683433);
 function iK(e) {
@@ -3537,7 +3539,7 @@ var rN = n(241524),
     rR = n(163437),
     rO = n(701273),
     rb = n(425013);
-let rD = (e) => {
+function rD(e) {
     let { onConfirm: t, onCancel: n, title: i, subtitle: s, confirmCta: a, showOpenDiscord: o = !0 } = e;
     return (0, r.jsxs)("div", {
         className: rb.RP,
@@ -3568,7 +3570,7 @@ let rD = (e) => {
             }),
         ],
     });
-};
+}
 function rL(e) {
     let { onConfirm: t, tierName: n, subscription: i } = e;
     return (0, r.jsxs)("div", {
@@ -4149,7 +4151,7 @@ let sc = {
     CHECKOUT_STEPS: {
         [u.pn.GIFT_CUSTOMIZATION]: (e) => {
             let { handleStepChange: t, handleClose: n } = e,
-                { renderStepBody: i, disabled: a } = ((e) => {
+                { renderStepBody: i, disabled: a } = (function (e) {
                     var t;
                     let n,
                         i,
@@ -4210,9 +4212,9 @@ let sc = {
                         { userPrice: C } = (0, r9.CD)({ sku: y, priceSetAssignmentPurchaseType: ea.lid.GIFT }),
                         N = (0, sr.F)("gift_customization", { applicationId: I?.id, skuId: y?.id }),
                         R = (0, sn.fq)(y),
-                        O = (0, sn.xf)(y),
-                        b = async (e, t) => {},
-                        D = (e) => {
+                        O = (0, sn.xf)(y);
+                    async function b(e, t) {}
+                    let D = (e) => {
                             null != p && p(null == e ? void 0 : e);
                         },
                         L = () =>
@@ -4311,7 +4313,9 @@ let sc = {
                                 ],
                             });
                     return {
-                        renderStepBody: () => (0, r.jsxs)("div", { className: sl.Du, children: [L(), w()] }),
+                        renderStepBody: function () {
+                            return (0, r.jsxs)("div", { className: sl.Du, children: [L(), w()] });
+                        },
                         getLeftColumnComponent: L,
                         getRightColumnComponent: w,
                         onStepChange: o,
@@ -4335,7 +4339,7 @@ let sc = {
         CustomTenantProvider: (e) => {
             let { children: t, discoverySessionId: n, loadId: i, applicationId: a, isGift: o, skuId: l, ...u } = e;
             return (
-                ((e) => {
+                !(function (e) {
                     let { applicationId: t, skuId: n } = e,
                         i = (0, rq.h)(t);
                     s.useEffect(() => {

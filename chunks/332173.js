@@ -9,7 +9,7 @@ var i = n(627968),
     u = n(939249),
     c = n(232042),
     d = n(160694);
-let _ = (e) => {
+let _ = function (e) {
     let {
             ref: t,
             children: n,

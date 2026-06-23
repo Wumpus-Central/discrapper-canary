@@ -1,57 +1,57 @@
-t.d(r, { A: () => m });
-var s = t(627968);
-t(64700);
-var n = t(935462),
-    a = t(534514),
-    l = t(834730),
-    i = t(283900),
-    d = t(475833),
-    c = t(602339),
-    o = t(375708),
-    h = t(903310);
-let x = (e) => {
-    let { children: r, className: t, ...a } = e;
-    return (0, s.jsx)(n.EO, {
+n.d(t, { A: () => x });
+var r = n(627968);
+n(64700);
+var s = n(935462),
+    i = n(534514),
+    a = n(834730),
+    l = n(283900),
+    c = n(475833),
+    d = n(602339),
+    o = n(375708),
+    u = n(903310);
+function h(e) {
+    let { children: t, className: n, ...i } = e;
+    return (0, r.jsx)(s.EO, {
         "data-migration-pending": !0,
-        className: t,
-        ...a,
+        className: n,
+        ...i,
         parentComponent: "FamilyCenterCommonModal",
-        children: r,
+        children: t,
     });
-};
-(x.ButtonFooter = (e) => {
-    let { children: r } = e;
-    return (0, s.jsx)("div", { className: h.qr, children: r });
+}
+(h.ButtonFooter = function (e) {
+    let { children: t } = e;
+    return (0, r.jsx)("div", { className: u.qr, children: t });
 }),
-    (x.Header = (e) => {
-        let { icon: r, currentUser: t, otherUser: n, header: l } = e;
-        return (0, s.jsxs)("div", {
-            className: h.wx,
+    (h.Header = function (e) {
+        let { icon: t, currentUser: n, otherUser: s, header: a } = e;
+        return (0, r.jsxs)("div", {
+            className: u.wx,
             children: [
-                (0, s.jsx)(i.A, { currentUser: t, otherUser: n, children: r }),
-                (0, s.jsxs)("div", {
-                    className: h.R_,
-                    children: [(0, s.jsx)(a.D, { variant: "text-lg/bold", children: l }), (0, s.jsx)(d.A, { user: n })],
+                (0, r.jsx)(l.A, { currentUser: n, otherUser: s, children: t }),
+                (0, r.jsxs)("div", {
+                    className: u.R_,
+                    children: [(0, r.jsx)(i.D, { variant: "text-lg/bold", children: a }), (0, r.jsx)(c.A, { user: s })],
                 }),
             ],
         });
     }),
-    (x.Content = (e) => {
-        let { children: r } = e;
-        return (0, s.jsx)("div", { className: h.Qs, children: r });
+    (h.Content = function (e) {
+        let { children: t } = e;
+        return (0, r.jsx)("div", { className: u.Qs, children: t });
     }),
-    (x.Notice = (e) => {
-        let { notice: r } = e;
-        return (0, s.jsxs)("div", {
-            className: h.lm,
+    (h.Notice = function (e) {
+        let { notice: t } = e;
+        return (0, r.jsxs)("div", {
+            className: u.lm,
             children: [
-                (0, s.jsx)(l.E, {
+                (0, r.jsx)(a.E, {
                     variant: "eyebrow",
                     color: "text-strong",
-                    children: o.intl.string(c.default.cXgKMD),
+                    children: o.intl.string(d.default.cXgKMD),
                 }),
-                (0, s.jsx)(l.E, { variant: "text-sm/normal", color: "text-default", children: r }),
+                (0, r.jsx)(a.E, { variant: "text-sm/normal", color: "text-default", children: t }),
             ],
         });
     });
-let m = x;
+let x = h;

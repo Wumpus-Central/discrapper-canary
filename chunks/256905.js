@@ -280,7 +280,7 @@ function l(e, t) {
                     n.e("24622"),
                     n.e("32551"),
                     n.e("62680"),
-                    n.e("64046"),
+                    n.e("91565"),
                     n.e("43426"),
                     n.e("96443"),
                     n.e("65743"),
@@ -338,7 +338,7 @@ function l(e, t) {
                     return (0, i.jsx)(e, {
                         ...t,
                         ...d,
-                        onClose: () => {
+                        onClose: function () {
                             c?.(), t.onClose();
                         },
                     });

@@ -1,29 +1,30 @@
-t.d(a, { default: () => r });
-var n = t(627968);
+t.d(n, { default: () => r });
+var a = t(627968);
 t(64700);
-var d = t(980707),
-    i = t(477782),
-    s = t(192308),
-    l = t(346411),
-    o = t(442433),
-    c = t(818348);
-let r = (e) =>
-    (0, n.jsx)(d.W, {
+var i = t(980707),
+    d = t(477782),
+    o = t(192308),
+    s = t(346411),
+    c = t(442433),
+    l = t(818348);
+let r = function (e) {
+    return (0, a.jsx)(i.W, {
         "data-menu-migrated": !0,
-        onClose: o.Z_,
+        onClose: c.Z_,
         navId: "staff-only-entry-debug",
         "aria-label": "staff only content inventory debug",
-        onSelect: c.tE,
-        children: (0, n.jsx)(i.Dr, {
+        onSelect: l.tE,
+        children: (0, a.jsx)(d.Dr, {
             id: "test",
             label: "Debug (Staff-Only)",
             action: () => {
-                (0, s.openModalLazy)(async () => {
-                    let { default: a } = await t.e("94022").then(t.bind(t, 924037));
-                    return (t) => (0, n.jsx)(a, { ...t, ...e });
+                (0, o.openModalLazy)(async () => {
+                    let { default: n } = await t.e("94022").then(t.bind(t, 924037));
+                    return (t) => (0, a.jsx)(n, { ...t, ...e });
                 });
             },
-            icon: l.P,
-            leadingAccessory: { type: "icon", icon: l.P },
+            icon: s.P,
+            leadingAccessory: { type: "icon", icon: s.P },
         }),
     });
+};

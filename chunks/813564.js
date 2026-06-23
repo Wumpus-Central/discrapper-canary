@@ -73,7 +73,7 @@ class O extends N.Ay.PersistedStore {
     }
 }
 let b = new O(v.h, {
-    VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: () => {
+    VOICE_CHANNEL_EFFECT_TOGGLE_ANIMATION_TYPE: function () {
         i = i === R.B.BASIC ? R.B.PREMIUM : R.B.BASIC;
     },
 });

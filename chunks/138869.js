@@ -10,7 +10,7 @@ var s = n(503698),
     u = n(512038),
     c = (((i = {})[(i.SMALL = 40)] = "SMALL"), (i[(i.MEDIUM = 66)] = "MEDIUM"), (i[(i.LARGE = 128)] = "LARGE"), i);
 let d = { 40: u.EX, 66: u.Y, 128: u.as },
-    _ = (e) => {
+    _ = function (e) {
         let t,
             { application: n, size: i, asset: s, className: c } = e;
         return (

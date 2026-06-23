@@ -105,12 +105,12 @@ function S(e, t) {
         enabled: o,
     };
 }
-let y = (e) => {
+function y(e) {
     if (null == e) return null;
     let t = {};
     for (let n in e.channel_actions) t[n] = e.channel_actions[n].completed;
     return t;
-};
+}
 function C(e) {
     return (
         null == e ||

@@ -11,8 +11,8 @@ var l = n(284009),
     u = n(235986),
     m = n(375708),
     h = n(882020);
-let g = () =>
-    (0, i.jsxs)(u.A, {
+let g = function () {
+    return (0, i.jsxs)(u.A, {
         align: u.A.Align.CENTER,
         justify: u.A.Justify.CENTER,
         direction: u.A.Direction.VERTICAL,
@@ -49,6 +49,7 @@ let g = () =>
             }),
         ],
     });
+};
 var p = n(589022),
     A = n(734057),
     x = n(287809),

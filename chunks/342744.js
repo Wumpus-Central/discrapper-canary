@@ -16,8 +16,8 @@ var n = i(627968),
     S = i(253390),
     T = i(166403),
     x = i(428262),
-    p = i(206745),
-    f = i(942606),
+    p = i(682502),
+    f = i(816571),
     N = i(375708),
     _ = i(366793);
 async function I(e, t, i, n) {
@@ -57,7 +57,7 @@ function y(e) {
         case 2:
             return (0, n.jsx)(b, {});
         default:
-            throw new p.Q({ message: `Unexpected step: ${t}` });
+            throw new p.f({ message: `Unexpected step: ${t}` });
     }
 }
 function v(e) {
@@ -92,7 +92,7 @@ function v(e) {
             transitionState: i,
             onClose: async () => await l(),
             size: "sm",
-            title: (() => {
+            title: (function () {
                 switch (c) {
                     case 1:
                         return N.intl.string(N.t.l52ih2);
@@ -102,7 +102,7 @@ function v(e) {
                         return "";
                 }
             })(),
-            actions: (() => {
+            actions: (function () {
                 switch (c) {
                     case 1:
                         return [
@@ -115,7 +115,7 @@ function v(e) {
                         return [];
                 }
             })(),
-            children: (0, n.jsx)(f.G, {
+            children: (0, n.jsx)(f.d, {
                 errorHandlingBehavior: "close-and-alert",
                 guildBoostSlotId: t,
                 children: (0, n.jsx)(y, { step: c, errorMsg: b, premiumSubscription: d }),

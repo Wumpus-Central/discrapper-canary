@@ -3,7 +3,9 @@ n.d(t, { A: () => o, s: () => a });
 var i = n(575593),
     r = n(820391),
     s = n(149807);
-let a = (e) => e instanceof o;
+function a(e) {
+    return e instanceof o;
+}
 class o extends s.A {
     label;
     layers;

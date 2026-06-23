@@ -8,7 +8,7 @@ var i = n(627968),
     l = n(868065),
     u = n(352760);
 let c = [o.iq, o.Zc, o.Xy, o.$X, o.fg, o.MK],
-    d = r.memo((e) => {
+    d = r.memo(function (e) {
         let { entry: t, channel: n, selected: r, hovered: d } = e,
             { largeImage: _ } = (0, s.nO)({
                 entry: t,

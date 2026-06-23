@@ -1,10 +1,10 @@
-t.d(a, { w: () => n });
+t.d(a, { w: () => l });
 var i = t(627968);
 t(64700);
-var l = t(192308);
-let n = (e) => {
-    let { analyticsLocations: a, guild: n, initialSelectedProfileFrame: s, stackingBehavior: d } = e;
-    (0, l.openModalLazy)(
+var n = t(192308);
+function l(e) {
+    let { analyticsLocations: a, guild: l, initialSelectedProfileFrame: s, stackingBehavior: c } = e;
+    (0, n.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 t.e("34663"),
@@ -23,7 +23,7 @@ let n = (e) => {
                 t.e("88610"),
                 t.e("33087"),
                 t.e("4189"),
-                t.e("50568"),
+                t.e("21739"),
                 t.e("49623"),
                 t.e("6026"),
                 t.e("1009"),
@@ -267,7 +267,7 @@ let n = (e) => {
                 t.e("58038"),
                 t.e("24622"),
                 t.e("32551"),
-                t.e("64046"),
+                t.e("91565"),
                 t.e("43426"),
                 t.e("96443"),
                 t.e("87079"),
@@ -308,8 +308,8 @@ let n = (e) => {
                 t.e("28545"),
                 t.e("90165"),
             ]).then(t.bind(t, 974964));
-            return (t) => (0, i.jsx)(e, { ...t, guild: n, analyticsLocations: a, initialSelectedProfileFrame: s });
+            return (t) => (0, i.jsx)(e, { ...t, guild: l, analyticsLocations: a, initialSelectedProfileFrame: s });
         },
-        { stackingBehavior: d },
+        { stackingBehavior: c },
     );
-};
+}

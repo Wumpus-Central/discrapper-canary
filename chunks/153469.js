@@ -85,8 +85,8 @@ function d(e, t) {
       ${u}
     }`;
 }
-let _ = function (e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
         n = e.slice();
     return 1 === e.length && n.push(e[0]), `linear-gradient(${t}deg, ${n.join(", ")})`;
-};
+}

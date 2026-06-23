@@ -47,90 +47,87 @@ let M = [
         { getOs: () => L.intl.string(L.t.wCVyNT), icon: w.s4, url: () => D.AMi.IOS, platformKey: 3 },
         { getOs: () => L.intl.string(L.t.wuQpJD), icon: w.yA, url: () => D.AMi.ANDROID, platformKey: 4 },
     ],
-    x = { getOs: () => L.intl.string(L.t.OPUqI3), icon: w.yX, url: () => D.AMi.META_QUEST, platformKey: 5 },
-    k = (e) => {
-        let { os: t, url: n, onClick: s } = e,
-            a = r.useRef(null),
-            [o, l] = r.useState(!1),
-            u = r.useCallback(
-                (e) => {
-                    let { closePopout: r } = e;
-                    return Array.isArray(n)
-                        ? (0, i.jsx)(A.W, {
-                              "data-menu-migrated": !0,
-                              navId: "download-app-menu",
-                              "aria-label": L.intl.string(L.t["+1H47t"]),
-                              onClose: r,
-                              onSelect: void 0,
-                              children: n.map((e) =>
-                                  (0, i.jsx)(
-                                      I.Dr,
-                                      { id: e.url(), label: e.getText(), action: () => s(t, e.url()) },
-                                      e.url(),
-                                  ),
+    x = { getOs: () => L.intl.string(L.t.OPUqI3), icon: w.yX, url: () => D.AMi.META_QUEST, platformKey: 5 };
+function k(e) {
+    let { os: t, url: n, onClick: s } = e,
+        a = r.useRef(null),
+        [o, l] = r.useState(!1),
+        u = r.useCallback(
+            (e) => {
+                let { closePopout: r } = e;
+                return Array.isArray(n)
+                    ? (0, i.jsx)(A.W, {
+                          "data-menu-migrated": !0,
+                          navId: "download-app-menu",
+                          "aria-label": L.intl.string(L.t["+1H47t"]),
+                          onClose: r,
+                          onSelect: void 0,
+                          children: n.map((e) =>
+                              (0, i.jsx)(
+                                  I.Dr,
+                                  { id: e.url(), label: e.getText(), action: () => s(t, e.url()) },
+                                  e.url(),
                               ),
-                          })
-                        : null;
-                },
-                [t, n, s],
-            );
-        return Array.isArray(n)
-            ? (0, i.jsx)(T.Y, {
-                  renderPopout: u,
-                  targetElementRef: a,
-                  align: "left",
-                  position: "bottom",
-                  onRequestOpen: () => l(!0),
-                  onRequestClose: () => l(!1),
-                  children: (e) =>
-                      (0, i.jsx)(_.$, {
-                          ...e,
-                          buttonRef: a,
-                          text: L.intl.string(L.t["1WjMbC"]),
-                          variant: "primary",
-                          size: "sm",
-                          fullWidth: !0,
-                          icon: o ? h.j : f.g,
-                          iconPosition: "end",
-                      }),
-              })
-            : (0, i.jsx)(_.$, {
-                  text: L.intl.string(L.t["1WjMbC"]),
-                  onClick: () => s(t, n()),
-                  variant: "primary",
-                  size: "sm",
-                  fullWidth: !0,
-                  role: "link",
-              });
-    },
-    U = (e) => {
-        let { platform: t, onClick: n, onMouseEnter: r, isActive: s } = e,
-            { getOs: o, icon: l, url: u, platformKey: c } = t,
-            d = o(),
-            _ = a()(w.Kk, l);
-        return (0, i.jsx)("li", {
-            className: a()(w.iD, { [w.vu]: s }),
-            onMouseEnter: () => r(c),
-            children: (0, i.jsxs)("div", {
-                className: w.FG,
-                children: [
-                    (0, i.jsxs)("div", {
-                        className: w.aA,
-                        children: [(0, i.jsx)("div", { className: _ }), (0, i.jsx)("div", { className: a()(w.vu, _) })],
-                    }),
-                    (0, i.jsxs)("div", {
-                        children: [
-                            (0, i.jsx)(S.D, { className: w.$r, variant: "heading-lg/semibold", children: d }),
-                            (0, i.jsx)("div", {
-                                className: w.l6,
-                                children: (0, i.jsx)(k, { os: d, url: u, onClick: n }),
-                            }),
-                        ],
-                    }),
-                ],
-            }),
-        });
-    };
+                          ),
+                      })
+                    : null;
+            },
+            [t, n, s],
+        );
+    return Array.isArray(n)
+        ? (0, i.jsx)(T.Y, {
+              renderPopout: u,
+              targetElementRef: a,
+              align: "left",
+              position: "bottom",
+              onRequestOpen: () => l(!0),
+              onRequestClose: () => l(!1),
+              children: (e) =>
+                  (0, i.jsx)(_.$, {
+                      ...e,
+                      buttonRef: a,
+                      text: L.intl.string(L.t["1WjMbC"]),
+                      variant: "primary",
+                      size: "sm",
+                      fullWidth: !0,
+                      icon: o ? h.j : f.g,
+                      iconPosition: "end",
+                  }),
+          })
+        : (0, i.jsx)(_.$, {
+              text: L.intl.string(L.t["1WjMbC"]),
+              onClick: () => s(t, n()),
+              variant: "primary",
+              size: "sm",
+              fullWidth: !0,
+              role: "link",
+          });
+}
+function U(e) {
+    let { platform: t, onClick: n, onMouseEnter: r, isActive: s } = e,
+        { getOs: o, icon: l, url: u, platformKey: c } = t,
+        d = o(),
+        _ = a()(w.Kk, l);
+    return (0, i.jsx)("li", {
+        className: a()(w.iD, { [w.vu]: s }),
+        onMouseEnter: () => r(c),
+        children: (0, i.jsxs)("div", {
+            className: w.FG,
+            children: [
+                (0, i.jsxs)("div", {
+                    className: w.aA,
+                    children: [(0, i.jsx)("div", { className: _ }), (0, i.jsx)("div", { className: a()(w.vu, _) })],
+                }),
+                (0, i.jsxs)("div", {
+                    children: [
+                        (0, i.jsx)(S.D, { className: w.$r, variant: "heading-lg/semibold", children: d }),
+                        (0, i.jsx)("div", { className: w.l6, children: (0, i.jsx)(k, { os: d, url: u, onClick: n }) }),
+                    ],
+                }),
+            ],
+        }),
+    });
+}
 function G(e) {
     let { source: t, onClose: n, transitionState: s } = e,
         o = (0, d.bG)([R.default], () => R.default.getCurrentUser()),

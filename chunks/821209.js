@@ -25,7 +25,7 @@ function c(e) {
 }
 var d = n(375708),
     _ = n(755761);
-let h = (e) => {
+let h = function (e) {
     let {
         onPlay: t,
         externalURL: n,

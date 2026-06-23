@@ -53,10 +53,10 @@ async function E(e) {
         c.A.hasFetched || (w.push(l.hP()), w.push((0, a.CD)())),
         w.length > 0 && (I?.(!0), await Promise.allSettled(w), I?.(!1));
     let M = (0, _.D$)(c.A.boostSlots),
-        P = M.length,
-        x = (e) => {
-            A?.(), N?.(e);
-        };
+        P = M.length;
+    function x(e) {
+        A?.(), N?.(e);
+    }
     if (P > 0 && (null == g || P >= g)) {
         let e;
         1 === P ? (e = M.slice(0, 1)) : null != g && (e = M.slice(0, g)),
@@ -102,7 +102,7 @@ async function E(e) {
             analyticsLocation: E,
             analyticsSourceLocation: m,
             guildId: C.id,
-            closeLayer: () => {
+            closeLayer: function () {
                 A?.(), T?.();
             },
             totalNumberOfSlotsToAssign: g ?? 1,

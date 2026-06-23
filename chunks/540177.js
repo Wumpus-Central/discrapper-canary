@@ -5,15 +5,15 @@ var n = i(627968),
     a = i(477782),
     r = i(922016),
     c = i(306471),
-    u = i(189252),
-    o = i(538064),
+    o = i(189252),
+    u = i(538064),
     d = i(786574),
-    g = i(228477),
+    g = i(105289),
     m = i(949091);
 function f(e) {
     let { onClose: t } = e,
         i = (0, g.x)(),
-        l = (0, d.N)(i, o.Ft),
+        l = (0, d.N)(i, u.Ft),
         r = (0, m.A)();
     return (0, n.jsxs)(s.W, {
         "data-menu-migrated": !0,
@@ -29,15 +29,15 @@ function x(e) {
     let { focusSectionProps: t } = e,
         [i, s] = l.useState(!1),
         [a, d] = l.useState(0),
-        g = l.useRef(null),
-        m = (e) => {
-            clearTimeout(a),
-                d(
-                    setTimeout(() => {
-                        s(e);
-                    }, 100),
-                );
-        };
+        g = l.useRef(null);
+    function m(e) {
+        clearTimeout(a),
+            d(
+                setTimeout(() => {
+                    s(e);
+                }, 100),
+            );
+    }
     return (0, n.jsx)("div", {
         onMouseEnter: () => m(!0),
         onMouseLeave: () => m(!1),
@@ -53,9 +53,9 @@ function x(e) {
             renderPopout: () => (0, n.jsx)(f, { onClose: () => s(!1) }),
             children: (e, i) => {
                 let { isShown: l } = i;
-                return (0, n.jsx)(u.A, {
+                return (0, n.jsx)(o.A, {
                     ref: g,
-                    onClick: () => (0, o.Ft)(),
+                    onClick: () => (0, u.Ft)(),
                     icon: c.V,
                     "aria-label": "DevTools",
                     selected: l,

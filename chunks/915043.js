@@ -32,7 +32,7 @@ var i,
         (i[(i.LOADED = 2)] = "LOADED"),
         (i[(i.ERROR = 3)] = "ERROR"),
         i);
-let D = (t) => {
+function D(t) {
     let { guildId: e, canFetch: n = !0, forceRefetch: i = !1 } = t,
         r = (0, u.bG)([m.A], () => (null != e ? m.A.getEntitlementsForGuildFetchState(e) : null), [e]);
     return (
@@ -43,7 +43,7 @@ let D = (t) => {
         }, [e, n, i]),
         { entitlementsLoaded: r === m.e.FETCHED }
     );
-};
+}
 function I(t) {
     let e = t?.id ?? S.dJq,
         { entitlementsLoaded: n } = D({
@@ -105,11 +105,15 @@ function g(t, e) {
         { guilds: (0, u.yK)([s.A], () => i.map((t) => s.A.getGuild(t)).filter((t) => null != t), [i]), isFetching: a }
     );
 }
-let T = (t) => t.items;
+function T(t) {
+    return t.items;
+}
 function G(t, e) {
     return w(t, e, T);
 }
-let _ = (t) => t.renewalMutations?.items ?? [];
+function _(t) {
+    return t.renewalMutations?.items ?? [];
+}
 function b(t, e) {
     return w(t, e, _);
 }

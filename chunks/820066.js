@@ -711,57 +711,57 @@ let $ = {
                 [s] = $.node(e, i.path);
             return Z.isText(r) && Z.isText(s) && n.offset <= r.text.length && i.offset <= s.text.length;
         },
-    },
-    et = (e, t) => {
-        let n = (t.top + t.bottom) / 2;
-        return e.top <= n && e.bottom >= n;
-    },
-    en = (e, t, n) => {
-        let i = $.toDOMRange(e, t).getBoundingClientRect(),
-            r = $.toDOMRange(e, n).getBoundingClientRect();
-        return et(i, r) && et(r, i);
-    },
-    ei = (e, t, n, i) => {
-        let r = { anchor: t, focus: t },
-            s = 0,
-            a = n.length,
-            o = Math.floor((s + a) / 2);
-        for (; o !== s; )
-            if (
-                (en(e, { anchor: n[o], focus: n[o] }, r) ? (i ? (a = o) : (s = o)) : i ? (s = o) : (a = o),
-                (o = Math.floor((s + a) / 2)),
-                !i && o === n.length - 2 && a === n.length - 1)
-            ) {
-                let t = n[n.length - 1];
-                en(e, { anchor: t, focus: t }, r) && (o = a);
-            }
-        return n[o];
-    },
-    er = {
-        getLineStart(e, t, n) {
-            let i = $.getParentElement(e, t);
-            if (null == i) return null;
-            let r = $.start(e, i[1]),
-                s = Array.from($.positions(e, { at: { anchor: r, focus: t } })),
-                a = ei(e, t, s, !0);
-            if (n && Q.equals(t, a) && !Q.isAtEnd(t, i)) {
-                let n = $.after(e, t);
-                if (null == n) return a;
-                a = ei(e, n, s, !0);
-            }
-            return a;
-        },
-        getLineEnd(e, t, n) {
-            let i = $.getParentElement(e, t);
-            if (null == i) return null;
-            let r = $.end(e, i[1]),
-                s = Array.from($.positions(e, { at: { anchor: t, focus: r } })),
-                a = ei(e, t, s, !1);
-            if (n && Q.equals(t, a) && !Q.isAtEnd(t, i)) {
-                let n = $.after(e, t);
-                if (null == n) return a;
-                a = ei(e, n, s, !1);
-            }
-            return a;
-        },
     };
+function et(e, t) {
+    let n = (t.top + t.bottom) / 2;
+    return e.top <= n && e.bottom >= n;
+}
+function en(e, t, n) {
+    let i = $.toDOMRange(e, t).getBoundingClientRect(),
+        r = $.toDOMRange(e, n).getBoundingClientRect();
+    return et(i, r) && et(r, i);
+}
+function ei(e, t, n, i) {
+    let r = { anchor: t, focus: t },
+        s = 0,
+        a = n.length,
+        o = Math.floor((s + a) / 2);
+    for (; o !== s; )
+        if (
+            (en(e, { anchor: n[o], focus: n[o] }, r) ? (i ? (a = o) : (s = o)) : i ? (s = o) : (a = o),
+            (o = Math.floor((s + a) / 2)),
+            !i && o === n.length - 2 && a === n.length - 1)
+        ) {
+            let t = n[n.length - 1];
+            en(e, { anchor: t, focus: t }, r) && (o = a);
+        }
+    return n[o];
+}
+let er = {
+    getLineStart(e, t, n) {
+        let i = $.getParentElement(e, t);
+        if (null == i) return null;
+        let r = $.start(e, i[1]),
+            s = Array.from($.positions(e, { at: { anchor: r, focus: t } })),
+            a = ei(e, t, s, !0);
+        if (n && Q.equals(t, a) && !Q.isAtEnd(t, i)) {
+            let n = $.after(e, t);
+            if (null == n) return a;
+            a = ei(e, n, s, !0);
+        }
+        return a;
+    },
+    getLineEnd(e, t, n) {
+        let i = $.getParentElement(e, t);
+        if (null == i) return null;
+        let r = $.end(e, i[1]),
+            s = Array.from($.positions(e, { at: { anchor: t, focus: r } })),
+            a = ei(e, t, s, !1);
+        if (n && Q.equals(t, a) && !Q.isAtEnd(t, i)) {
+            let n = $.after(e, t);
+            if (null == n) return a;
+            a = ei(e, n, s, !1);
+        }
+        return a;
+    },
+};

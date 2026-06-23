@@ -31,7 +31,9 @@ function o(e) {
         }, []);
     return (
         i.useEffect(() => {
-            let e = () => E(A, o, x);
+            function e() {
+                return E(A, o, x);
+            }
             e();
             let t = setInterval(e, 1e3);
             return () => clearInterval(t);

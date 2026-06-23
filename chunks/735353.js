@@ -1,10 +1,10 @@
-l.d(t, { A: () => n });
-var r = l(627968);
-l(64700);
-let n = (e) => {
-    let { verticalMargin: t = 16, padding: l = 0, children: n } = e;
+n.d(t, { A: () => l });
+var r = n(627968);
+n(64700);
+let l = function (e) {
+    let { verticalMargin: t = 16, padding: n = 0, children: l } = e;
     return (0, r.jsx)("section", {
-        style: { alignSelf: "start", width: "100%", marginTop: t, marginBottom: t, padding: l },
-        children: n,
+        style: { alignSelf: "start", width: "100%", marginTop: t, marginBottom: t, padding: n },
+        children: l,
     });
 };

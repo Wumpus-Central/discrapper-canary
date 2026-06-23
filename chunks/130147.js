@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(97808),
     l = n(652215),
     u = n(124882);
-let c = (e) => {
+function c(e) {
     let { showStatus: t, width: n, opacity: r, size: c = "default" } = e,
         d = "small" === c ? a._3.SIZE_24 : a._3.SIZE_32;
     return (0, i.jsxs)("div", {
@@ -28,4 +28,4 @@ let c = (e) => {
             }),
         ],
     });
-};
+}

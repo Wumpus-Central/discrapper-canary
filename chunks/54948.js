@@ -10,9 +10,9 @@ var i = t(627968),
     u = t(295868),
     x = t(834730),
     m = t(661531),
-    j = t(916099),
-    h = t(673185),
-    f = t(565787),
+    f = t(916099),
+    j = t(673185),
+    h = t(565787),
     v = t(622629),
     p = t(772838),
     g = t(939249),
@@ -26,11 +26,11 @@ function b(e) {
         t = l.useMemo(() => {
             switch (n) {
                 case s.rX.MULTIPLE_CHOICE:
-                    return { icon: j.j, text: w.intl.string(w.t.ooKh3m) };
+                    return { icon: f.j, text: w.intl.string(w.t.ooKh3m) };
                 case s.rX.PARAGRAPH:
-                    return { icon: h.$, text: w.intl.string(w.t.gG0JBN) };
+                    return { icon: j.$, text: w.intl.string(w.t.gG0JBN) };
                 case s.rX.TEXT_INPUT:
-                    return { icon: (0, f.k)(P.A), text: w.intl.string(w.t.w6Q9wz) };
+                    return { icon: (0, h.k)(P.A), text: w.intl.string(w.t.w6Q9wz) };
                 case s.rX.TERMS:
                     return { icon: v.B, text: w.intl.string(w.t["3pz9t3"]) };
                 default:
@@ -67,14 +67,14 @@ function C(e) {
             await s(e, n, t);
         }),
         x = l.useRef(null),
-        [, j] = (0, d.i)({
+        [, f] = (0, d.i)({
             type: A,
             item: { index: n, field: t },
             end: (e, n) => {
                 null == e || n.didDrop() || o(e.field, null, !0);
             },
         }),
-        [, h] = (0, u.H)({
+        [, j] = (0, u.H)({
             accept: A,
             hover: (e, t) => {
                 let { index: i } = e,
@@ -92,12 +92,12 @@ function C(e) {
     return (
         l.useLayoutEffect(
             () => (
-                j(h(x)),
+                f(j(x)),
                 () => {
-                    h(null), j(null);
+                    j(null), f(null);
                 }
             ),
-            [j, h],
+            [f, j],
         ),
         (0, i.jsxs)("div", {
             ref: x,
@@ -250,35 +250,35 @@ let X = function (e) {
     };
 function I(e) {
     let {
-            dropHoveredIndex: n,
-            formField: l,
-            guild: o,
-            index: c,
-            isDragEnabled: d,
-            submittedGuildJoinRequestsCount: u,
-            removeFormField: x,
-            updateFormField: m,
-            updateFormFieldOrder: j,
-            canRemove: h,
-            actionsLocation: f,
-        } = e,
-        v = async () => {
-            await x(c);
-        },
-        p = async (e) => {
-            await m(c, e);
-        },
-        g = async (e, n, t) => {
-            await j(e, n, t);
-        },
-        E = (0, r.uniqueId)(),
+        dropHoveredIndex: n,
+        formField: l,
+        guild: o,
+        index: c,
+        isDragEnabled: d,
+        submittedGuildJoinRequestsCount: u,
+        removeFormField: x,
+        updateFormField: m,
+        updateFormFieldOrder: f,
+        canRemove: j,
+        actionsLocation: h,
+    } = e;
+    async function v() {
+        await x(c);
+    }
+    async function p(e) {
+        await m(c, e);
+    }
+    async function g(e, n, t) {
+        await f(e, n, t);
+    }
+    let E = (0, r.uniqueId)(),
         y = n === c,
         P = {
             key: E,
             index: c,
             isDragEnabled: d,
             isDropHovered: y,
-            onEdit: () => {
+            onEdit: function () {
                 0 === u
                     ? z(l, p, o)
                     : (0, a.openModalLazy)(async () => {
@@ -294,8 +294,8 @@ function I(e) {
             },
             onRemove: v,
             onDrop: g,
-            canRemove: h,
-            actionsLocation: f,
+            canRemove: j,
+            actionsLocation: h,
         };
     switch (l.field_type) {
         case s.rX.TERMS:

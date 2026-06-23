@@ -18,7 +18,7 @@ let d = {
         [r.R.VARIANTS_GROUP]: void 0,
         [r.R.EXTERNAL_SKU]: void 0,
     },
-    _ = (e) => {
+    _ = function (e) {
         let t = (0, s.bG)([o.A], () => o.A.products);
         return (0, i.useCallback)(
             (n) => {

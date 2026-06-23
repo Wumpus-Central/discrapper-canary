@@ -22,7 +22,9 @@ class u {
             id: this.id,
             data: {
                 type: this.type,
-                games: this.games.map((e) => ({ game_id: e.applicationId, comment: e.comment, tags: e.tags })),
+                games: this.games.map(function (e) {
+                    return { game_id: e.applicationId, comment: e.comment, tags: e.tags };
+                }),
             },
         };
     }

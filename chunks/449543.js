@@ -49,11 +49,11 @@ let g = (e) => {
         ),
         [P, x] = r.useState(!1),
         [k, U] = r.useState(!1),
-        [G, F] = r.useState(!0),
-        V = () => {
-            x(N.current > C.current);
-        },
-        B = r.useCallback(() => {
+        [G, F] = r.useState(!0);
+    function V() {
+        x(N.current > C.current);
+    }
+    let B = r.useCallback(() => {
             let e;
             if (O.current) return null;
             let t = W.current;

@@ -1,26 +1,26 @@
-i.d(s, { default: () => u });
-var a = i(627968),
-    e = i(64700),
-    n = i(189213),
-    l = i(231723),
-    r = i(289873),
-    c = i(375708),
-    d = i(812560);
-let u = (t) => {
-    let { transitionState: s, processFiles: i, onClose: u } = t;
+s.d(i, { default: () => d });
+var n = s(627968),
+    a = s(64700),
+    e = s(189213),
+    c = s(231723),
+    l = s(289873),
+    r = s(375708),
+    u = s(812560);
+let d = function (t) {
+    let { transitionState: i, processFiles: s, onClose: d } = t;
     return (
-        e.useEffect(() => {
-            (async () => {
-                s === l.ip.ENTERED && (await i(), u());
+        a.useEffect(() => {
+            !(async function () {
+                i === c.ip.ENTERED && (await s(), d());
             })();
-        }, [u, i, s]),
-        (0, a.jsx)(n.Modal, {
-            title: c.intl.string(c.t["B/HSDd"]),
-            subtitle: c.intl.string(c.t.k7OALr),
+        }, [d, s, i]),
+        (0, n.jsx)(e.Modal, {
+            title: r.intl.string(r.t["B/HSDd"]),
+            subtitle: r.intl.string(r.t.k7OALr),
             actions: void 0,
-            onClose: u,
-            transitionState: s,
-            children: (0, a.jsx)(r.y, { className: d.u }),
+            onClose: d,
+            transitionState: i,
+            children: (0, n.jsx)(l.y, { className: u.u }),
         })
     );
 };

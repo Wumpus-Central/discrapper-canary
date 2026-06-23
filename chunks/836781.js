@@ -29,7 +29,9 @@ let C = r.memo(function (e) {
         [c, d] = r.useState(0);
     return (
         r.useEffect(() => {
-            let e = () => d((e) => e + 1);
+            function e() {
+                return d((e) => e + 1);
+            }
             return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }),
         r.useEffect(() => {
@@ -196,8 +198,12 @@ function Y(e) {
             [n, t, I],
         );
     r.useEffect(() => {
-        let e = () => T(E.current + 1),
-            t = () => T(E.current - 1);
+        function e() {
+            return T(E.current + 1);
+        }
+        function t() {
+            return T(E.current - 1);
+        }
         return (
             p._.subscribe(V.jej.MODAL_CAROUSEL_NEXT, e),
             p._.subscribe(V.jej.MODAL_CAROUSEL_PREV, t),

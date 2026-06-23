@@ -305,97 +305,97 @@ var el = n(870748),
     ed = n(375708),
     e_ = n(494715);
 let eh = (e) => {
-        let t,
-            { channelId: n, element: s, attributes: o, children: l } = e,
-            u = (0, X.f7)(),
-            c = (0, X.zL)(),
-            d = (0, X.RV)(),
-            { optionType: _, errored: f } = (0, eu.cf)(
-                [p.A],
-                () => ({
-                    optionType: p.A.getOption(n, s.optionName)?.type,
-                    errored: p.A.getOptionState(n, s.optionName)?.lastValidationResult?.success !== !0,
-                }),
-                [n, s.optionName],
-            ),
-            E = (0, eu.bG)([m.A], () => m.A.getUpload(n, s.optionName, ec.C.SlashCommand), [n, s.optionName]),
-            g = s.children[s.children.length - 1],
-            A = null != g && W.l5.isText(g) && g.text.endsWith("\n"),
-            I = a()(e_.S0, e_.xP, { [e_.t$]: c && u, [e_.$2]: (!c || !u) && f }),
-            T = r.useCallback(() => {
-                W.VW.isVoid(d, s) || Y.b.selectCommandOption(d, s.optionName, !0);
-            }, [d, s]);
-        return (
-            (t =
-                _ === h.n4.ATTACHMENT
-                    ? E?.filename != null
-                        ? (0, i.jsxs)("span", {
-                              className: a()(e_._K, e_.dU),
-                              contentEditable: !1,
-                              children: [E.filename, l],
-                          })
-                        : (0, i.jsxs)("span", {
-                              className: a()(e_._K, e_.ZI),
-                              contentEditable: !1,
-                              children: [ed.intl.string(ed.t.GRdFni), l],
-                          })
+    let t,
+        { channelId: n, element: s, attributes: o, children: l } = e,
+        u = (0, X.f7)(),
+        c = (0, X.zL)(),
+        d = (0, X.RV)(),
+        { optionType: _, errored: f } = (0, eu.cf)(
+            [p.A],
+            () => ({
+                optionType: p.A.getOption(n, s.optionName)?.type,
+                errored: p.A.getOptionState(n, s.optionName)?.lastValidationResult?.success !== !0,
+            }),
+            [n, s.optionName],
+        ),
+        E = (0, eu.bG)([m.A], () => m.A.getUpload(n, s.optionName, ec.C.SlashCommand), [n, s.optionName]),
+        g = s.children[s.children.length - 1],
+        A = null != g && W.l5.isText(g) && g.text.endsWith("\n"),
+        I = a()(e_.S0, e_.xP, { [e_.t$]: c && u, [e_.$2]: (!c || !u) && f }),
+        T = r.useCallback(() => {
+            W.VW.isVoid(d, s) || Y.b.selectCommandOption(d, s.optionName, !0);
+        }, [d, s]);
+    return (
+        (t =
+            _ === h.n4.ATTACHMENT
+                ? E?.filename != null
+                    ? (0, i.jsxs)("span", {
+                          className: a()(e_._K, e_.dU),
+                          contentEditable: !1,
+                          children: [E.filename, l],
+                      })
                     : (0, i.jsxs)("span", {
-                          className: e_._K,
-                          children: [l, A ? (0, i.jsx)("span", { className: e_.Nx, contentEditable: !1 }) : null],
-                      })),
-            (0, i.jsxs)("span", {
-                ...o,
-                className: I,
-                children: [
-                    (0, i.jsxs)("span", {
-                        className: e_.gA,
-                        contentEditable: !1,
-                        onClick: T,
-                        children: [s.optionDisplayName, "\u200B"],
-                    }),
-                    t,
-                    (0, i.jsx)("span", { contentEditable: !1, children: "\u200B" }),
-                ],
-            })
-        );
-    },
-    ef = (e) => {
-        let { element: t, attributes: n, children: r } = e,
-            s = (0, X.f7)(),
-            o = (0, X.zL)(),
-            l = a()(e_.S0, e_.xP, e_.Bz, { [e_.t$]: o && s, [e_.$2]: t.error }),
-            u = (0, i.jsx)("span", { className: e_._K, children: r });
-        return (0, i.jsxs)("span", {
-            ...n,
-            className: l,
+                          className: a()(e_._K, e_.ZI),
+                          contentEditable: !1,
+                          children: [ed.intl.string(ed.t.GRdFni), l],
+                      })
+                : (0, i.jsxs)("span", {
+                      className: e_._K,
+                      children: [l, A ? (0, i.jsx)("span", { className: e_.Nx, contentEditable: !1 }) : null],
+                  })),
+        (0, i.jsxs)("span", {
+            ...o,
+            className: I,
             children: [
-                (0, i.jsxs)("span", { className: e_.gA, contentEditable: !1, children: ["@game", "\u200B"] }),
-                u,
+                (0, i.jsxs)("span", {
+                    className: e_.gA,
+                    contentEditable: !1,
+                    onClick: T,
+                    children: [s.optionDisplayName, "\u200B"],
+                }),
+                t,
                 (0, i.jsx)("span", { contentEditable: !1, children: "\u200B" }),
             ],
+        })
+    );
+};
+function ef(e) {
+    let { element: t, attributes: n, children: r } = e,
+        s = (0, X.f7)(),
+        o = (0, X.zL)(),
+        l = a()(e_.S0, e_.xP, e_.Bz, { [e_.t$]: o && s, [e_.$2]: t.error }),
+        u = (0, i.jsx)("span", { className: e_._K, children: r });
+    return (0, i.jsxs)("span", {
+        ...n,
+        className: l,
+        children: [
+            (0, i.jsxs)("span", { className: e_.gA, contentEditable: !1, children: ["@game", "\u200B"] }),
+            u,
+            (0, i.jsx)("span", { contentEditable: !1, children: "\u200B" }),
+        ],
+    });
+}
+function ep(e) {
+    let { element: t, attributes: n, children: r } = e,
+        s = (0, X.f7)(),
+        o = (0, X.zL)(),
+        l = a()(e_.S0, e_.xP, e_.Bz, { [e_.t$]: o && s, [e_.$2]: t.error }),
+        u = t.children[t.children.length - 1],
+        c = null != u && W.l5.isText(u) && u.text.endsWith("\n"),
+        d = (0, i.jsxs)("span", {
+            className: e_._K,
+            children: [r, c ? (0, i.jsx)("span", { className: e_.Nx, contentEditable: !1 }) : null],
         });
-    },
-    ep = (e) => {
-        let { element: t, attributes: n, children: r } = e,
-            s = (0, X.f7)(),
-            o = (0, X.zL)(),
-            l = a()(e_.S0, e_.xP, e_.Bz, { [e_.t$]: o && s, [e_.$2]: t.error }),
-            u = t.children[t.children.length - 1],
-            c = null != u && W.l5.isText(u) && u.text.endsWith("\n"),
-            d = (0, i.jsxs)("span", {
-                className: e_._K,
-                children: [r, c ? (0, i.jsx)("span", { className: e_.Nx, contentEditable: !1 }) : null],
-            });
-        return (0, i.jsxs)("span", {
-            ...n,
-            className: l,
-            children: [
-                (0, i.jsxs)("span", { className: e_.gA, contentEditable: !1, children: ["@time", "\u200B"] }),
-                d,
-                (0, i.jsx)("span", { contentEditable: !1, children: "\u200B" }),
-            ],
-        });
-    };
+    return (0, i.jsxs)("span", {
+        ...n,
+        className: l,
+        children: [
+            (0, i.jsxs)("span", { className: e_.gA, contentEditable: !1, children: ["@time", "\u200B"] }),
+            d,
+            (0, i.jsx)("span", { contentEditable: !1, children: "\u200B" }),
+        ],
+    });
+}
 var eE = n(471910);
 let em = r.forwardRef(function (e, t) {
     let n,
@@ -837,10 +837,10 @@ let em = r.forwardRef(function (e, t) {
         eP.current && ((eM.current = d), eU(eV, "parent", { value: d }));
     }, [eV, d, eU]),
         r.useEffect(() => {
-            let e = () => {
+            function e() {
                 let e = p.A.getActiveCommand(f.id) ?? null;
                 null !== e && null != e.options && eB(e, !0);
-            };
+            }
             return m.A.addChangeListener(e), () => m.A.removeChangeListener(e);
         }, [f, eV, eB]);
     let eq = r.useCallback(

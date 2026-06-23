@@ -1,26 +1,26 @@
 a.d(t, { default: () => x });
 var e = a(627968);
 a(64700);
-var r = a(503698),
-    n = a.n(r),
+var n = a(503698),
+    r = a.n(n),
     i = a(862482),
     l = a(935462),
     c = a(834730),
     d = a(939249),
-    m = a(386406),
-    o = a(235986),
+    o = a(386406),
+    m = a(235986),
     p = a(375708),
     u = a(495284);
-let x = (s) => {
-    let { onClose: t, transitionState: a, showHideSuppressWarning: r = !1 } = s;
+let x = function (s) {
+    let { onClose: t, transitionState: a, showHideSuppressWarning: n = !1 } = s;
     return (0, e.jsx)(l.EO, {
         transitionState: a,
         className: u.kL,
         "aria-label": p.intl.string(p.t["4Y2AS7"]),
         parentComponent: "HubStudyRoomSuppressModal",
         children: (0, e.jsxs)("form", {
-            onSubmit: (s) => {
-                s?.preventDefault(), m.A.clearSuppressWarning(), t?.();
+            onSubmit: function (s) {
+                s?.preventDefault(), o.A.clearSuppressWarning(), t?.();
             },
             className: u.Zd,
             children: [
@@ -43,19 +43,19 @@ let x = (s) => {
                     ],
                 }),
                 (0, e.jsxs)(l.jl, {
-                    justify: o.A.Justify.BETWEEN,
-                    wrap: o.A.Wrap.WRAP,
+                    justify: m.A.Justify.BETWEEN,
+                    wrap: m.A.Wrap.WRAP,
                     children: [
                         (0, e.jsx)(i.$n, {
                             type: "submit",
                             size: i.$n.Sizes.LARGE,
-                            className: n()(u.FS, u.cU),
+                            className: r()(u.FS, u.cU),
                             autoFocus: !0,
                             children: p.intl.string(p.t["NX+WJN"]),
                         }),
-                        r &&
+                        n &&
                             (0, e.jsx)(d.D, {
-                                onClick: () => m.A.clearSuppressWarning(!0),
+                                onClick: () => o.A.clearSuppressWarning(!0),
                                 className: u.ZM,
                                 children: (0, e.jsx)(c.E, {
                                     className: u.WI,

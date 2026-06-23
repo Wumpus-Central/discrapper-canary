@@ -6,15 +6,15 @@ var i = n(439372),
     a = n(496092);
 let o = {},
     l = new Set(),
-    u = new Set(),
-    c = async (e) => {
-        if (!(0 === s.Ay.getGuildScheduledEventsForGuild(e).length || l.has(e)) && !u.has(e))
-            try {
-                l.add(e), await a.default.getGuildEventsForCurrentUser(e), u.add(e);
-            } catch (t) {
-                l.delete(e);
-            }
-    };
+    u = new Set();
+async function c(e) {
+    if (!(0 === s.Ay.getGuildScheduledEventsForGuild(e).length || l.has(e)) && !u.has(e))
+        try {
+            l.add(e), await a.default.getGuildEventsForCurrentUser(e), u.add(e);
+        } catch (t) {
+            l.delete(e);
+        }
+}
 class d extends i.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.handleConnectionOpen(),

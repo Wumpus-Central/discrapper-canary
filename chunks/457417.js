@@ -1,8 +1,8 @@
-n.d(t, { E3: () => o, KH: () => c, Vw: () => u, dJ: () => i });
+n.d(t, { E3: () => o, KH: () => u, Vw: () => c, dJ: () => a });
 var s = n(64700),
     l = n(870844),
-    a = n(353640);
-let i = "custom-themes-share-modal",
+    i = n(353640);
+let a = "custom-themes-share-modal",
     r = {
         searchText: "",
         selectedDestinations: [],
@@ -13,18 +13,21 @@ let i = "custom-themes-share-modal",
         send: async () => {},
         sending: !1,
         canSend: () => !1,
-    },
-    o = () =>
-        (0, l.y)()((e, t) => ({
-            ...r,
-            canSend: () => !t().sending && t().selectedDestinations.length > 0,
-            updateSearchText: (t) => e({ searchText: t }),
-            updateSelectShareDestinations: (t) => e({ selectedDestinations: t }),
-            updateMessage: (t) => e({ message: t }),
-            updateChannel: (t) => e({ channel: t }),
-            updateSending: (t) => e({ sending: t }),
-            updateMessageText: (t) => e({ messageText: t }),
-            setSend: (t) => e({ send: t }),
-        })),
-    c = (0, s.createContext)(null),
-    u = () => (0, a.P)((0, s.useContext)(c));
+    };
+function o() {
+    return (0, l.y)()((e, t) => ({
+        ...r,
+        canSend: () => !t().sending && t().selectedDestinations.length > 0,
+        updateSearchText: (t) => e({ searchText: t }),
+        updateSelectShareDestinations: (t) => e({ selectedDestinations: t }),
+        updateMessage: (t) => e({ message: t }),
+        updateChannel: (t) => e({ channel: t }),
+        updateSending: (t) => e({ sending: t }),
+        updateMessageText: (t) => e({ messageText: t }),
+        setSend: (t) => e({ send: t }),
+    }));
+}
+let u = (0, s.createContext)(null);
+function c() {
+    return (0, i.P)((0, s.useContext)(u));
+}

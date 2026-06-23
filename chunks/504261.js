@@ -1,6 +1,6 @@
 n.d(t, { A: () => l });
 var s = n(64700);
-let l = (e) => {
+let l = function (e) {
     let [t, n] = s.useState(!1);
     return {
         isFocused: t,
@@ -10,7 +10,7 @@ let l = (e) => {
             },
             [e, n],
         ),
-        handleBlur: () => {
+        handleBlur: function () {
             n(!1);
         },
     };

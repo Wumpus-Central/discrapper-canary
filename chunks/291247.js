@@ -100,29 +100,29 @@ function v(e, t, v, P, T) {
                             )
                           : null,
                   ]
-                : [],
-        J = async (t, i, n) => {
-            if (t.ctrlKey || t.metaKey)
-                try {
-                    await A.A.setCommunicationDisabledDuration(
-                        i,
-                        n,
-                        N.DisableCommunicationDuration.DURATION_60_SEC,
-                        null,
-                        P,
-                    ),
-                        Q(b.Nj.TIMEOUT),
-                        (0, d.P0)(
-                            (0, o.o)(
-                                U.intl.formatToPlainString(U.t.O9C3Nt, { user: D.Ay.getName(i, null, e) ?? "" }),
-                                u.Ck.SUCCESS,
-                            ),
-                        );
-                } catch (e) {
-                    (0, d.P0)((0, o.o)(U.intl.string(U.t.epyCuh), u.Ck.FAILURE));
-                }
-        },
-        X = null,
+                : [];
+    async function J(t, i, n) {
+        if (t.ctrlKey || t.metaKey)
+            try {
+                await A.A.setCommunicationDisabledDuration(
+                    i,
+                    n,
+                    N.DisableCommunicationDuration.DURATION_60_SEC,
+                    null,
+                    P,
+                ),
+                    Q(b.Nj.TIMEOUT),
+                    (0, d.P0)(
+                        (0, o.o)(
+                            U.intl.formatToPlainString(U.t.O9C3Nt, { user: D.Ay.getName(i, null, e) ?? "" }),
+                            u.Ck.SUCCESS,
+                        ),
+                    );
+            } catch (e) {
+                (0, d.P0)((0, o.o)(U.intl.string(U.t.epyCuh), u.Ck.FAILURE));
+            }
+    }
+    let X = null,
         ee =
             null != O &&
             C.A.canManageUser(G.xBc.MODERATE_MEMBERS, e, O) &&
@@ -202,8 +202,8 @@ function v(e, t, v, P, T) {
                                     action: () =>
                                         (0, c.openModalLazy)(async () => {
                                             let { default: a } = await Promise.all([
-                                                i.e("79877"),
-                                                i.e("91740"),
+                                                i.e("30593"),
+                                                i.e("97660"),
                                                 i.e("8891"),
                                                 i.e("91671"),
                                                 i.e("40243"),
@@ -224,8 +224,8 @@ function v(e, t, v, P, T) {
                                     action: () =>
                                         (0, c.openModalLazy)(async () => {
                                             let { default: a } = await Promise.all([
-                                                i.e("79877"),
-                                                i.e("38135"),
+                                                i.e("30593"),
+                                                i.e("33847"),
                                                 i.e("8891"),
                                                 i.e("91671"),
                                                 i.e("2504"),

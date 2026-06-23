@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { oS: () => g, Ay: () => A }), n(321073);
+n.d(t, { oS: () => m, Ay: () => g }), n(321073);
 var i,
     r,
     s = n(64700),
@@ -34,40 +34,44 @@ var i,
     _ = n(174459),
     h = n(738250),
     f = n(652215);
-let p = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            i = arguments.length > 3 ? arguments[3] : void 0;
-        _.default.track(f.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
-            game_profile_available: e,
-            application_id: t,
-            rejection_reason: n,
-            source: i,
-        });
-    },
-    E = (e) => {
-        if (null == e) return ["no match"];
-        let t = [];
-        return (
-            c.Lt(e.gameFlags, l.GAME_PROFILE_DISABLED) && t.push("profile disabled"),
-            e.themes.includes(u.EROTIC) && t.push("nsfw"),
-            t
-        );
-    },
-    m = (e) => 0 === E(e).length,
-    g = (e) => m(d.A.getGame(e)),
-    A = (e) => {
-        let { applicationId: t = "", gameId: n, source: i, trackEntryPointImpression: r = !0 } = e,
-            a = s.useRef(!1),
-            { gameId: l, gameRecord: u, isLoading: c } = (0, h.A)({ applicationId: t, gameId: n }),
-            d = m(u);
-        return (
-            s.useEffect(() => {
-                if (!a.current && r && !c && null != u) {
-                    o()(null != i, "Cannot track a Game Profile Entry Point Impressions without a source.");
-                    let e = E(u);
-                    p(d, u.id, e, i), (a.current = !0);
-                }
-            }, [u, d, c, i, r]),
-            { shouldOpenGameProfile: d, gameId: l }
-        );
-    };
+function p(e) {
+    if (null == e) return ["no match"];
+    let t = [];
+    return (
+        c.Lt(e.gameFlags, l.GAME_PROFILE_DISABLED) && t.push("profile disabled"),
+        e.themes.includes(u.EROTIC) && t.push("nsfw"),
+        t
+    );
+}
+function E(e) {
+    return 0 === p(e).length;
+}
+function m(e) {
+    return E(d.A.getGame(e));
+}
+let g = function (e) {
+    let { applicationId: t = "", gameId: n, source: i, trackEntryPointImpression: r = !0 } = e,
+        a = s.useRef(!1),
+        { gameId: l, gameRecord: u, isLoading: c } = (0, h.A)({ applicationId: t, gameId: n }),
+        d = E(u);
+    return (
+        s.useEffect(() => {
+            if (!a.current && r && !c && null != u) {
+                o()(null != i, "Cannot track a Game Profile Entry Point Impressions without a source.");
+                let e = p(u);
+                !(function (e, t) {
+                    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+                        i = arguments.length > 3 ? arguments[3] : void 0;
+                    _.default.track(f.HAw.GAME_PROFILE_ENTRY_POINT_AVAILABLE, {
+                        game_profile_available: e,
+                        application_id: t,
+                        rejection_reason: n,
+                        source: i,
+                    });
+                })(d, u.id, e, i),
+                    (a.current = !0);
+            }
+        }, [u, d, c, i, r]),
+        { shouldOpenGameProfile: d, gameId: l }
+    );
+};

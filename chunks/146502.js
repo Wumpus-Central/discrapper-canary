@@ -1,20 +1,20 @@
-n.d(i, { default: () => a });
-var r = n(627968);
-n(64700);
-var l = n(732159),
-    s = n(268749),
-    e = n(375708);
-function a(t) {
-    let { ruleName: i, onConfirm: n, ...a } = t,
-        { setEditingRule: f } = (0, s.U)(),
-        o = i ?? e.intl.string(e.t.ffR2cM);
+i.d(n, { default: () => f });
+var r = i(627968);
+i(64700);
+var l = i(732159),
+    s = i(268749),
+    e = i(375708);
+function f(t) {
+    let { ruleName: n, onConfirm: i, ...f } = t,
+        { setEditingRule: o } = (0, s.U)(),
+        u = n ?? e.intl.string(e.t.ffR2cM);
     return (0, r.jsx)(l.ConfirmModal, {
-        ...a,
+        ...f,
         title: e.intl.string(e.t.kknTmH),
-        subtitle: e.intl.format(e.t["ff/gx7"], { ruleName: o }),
+        subtitle: e.intl.format(e.t["ff/gx7"], { ruleName: u }),
         confirmText: e.intl.string(e.t["cY+Oob"]),
-        onConfirm: () => {
-            f(null), n?.();
+        onConfirm: function () {
+            o(null), i?.();
         },
     });
 }

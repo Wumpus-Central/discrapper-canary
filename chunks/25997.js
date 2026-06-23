@@ -5,7 +5,7 @@ var r = n(189213),
     s = n(730852),
     e = n(849736),
     l = n(375708);
-let c = (t) => {
+let c = function (t) {
     let { channel: i, transitionState: n, onClose: c } = t;
     return (0, a.jsx)(r.Modal, {
         transitionState: n,
@@ -16,7 +16,7 @@ let c = (t) => {
             { text: l.intl.string(l.t["ETE/oC"]), onClick: c, variant: "secondary" },
             {
                 text: l.intl.string(l.t.saZaRb),
-                onClick: () => {
+                onClick: function () {
                     (0, e.OE)(i), s.default.disconnect(), c();
                 },
                 variant: "critical-primary",

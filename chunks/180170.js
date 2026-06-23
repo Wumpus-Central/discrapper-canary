@@ -8,14 +8,14 @@ n(287809);
 var a = n(174459),
     o = n(435738),
     l = n(652215);
-let u = () => {
+function u() {
     i.h.dispatch({ type: "CONTENT_INVENTORY_TOGGLE_FEED_HIDDEN" }),
         a.default.track(l.HAw.MEMBERLIST_CONTENT_FEED_HIDDEN, {
             channel_id: r.A.getChannelId(),
             guild_id: s.A.getGuildId(),
             hidden: o.A.hidden,
         });
-};
+}
 function c() {
     i.h.dispatch({ type: "GAME_PROFILE_OPEN" });
 }

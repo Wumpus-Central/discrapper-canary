@@ -1,83 +1,85 @@
-e.d(i, { default: () => q }), e(321073);
-var n = e(627968),
-    t = e(64700),
-    l = e(136722),
-    r = e(825484),
-    a = e(821609),
-    d = e(935462),
-    c = e(97808),
-    o = e(778712),
-    x = e(534514),
-    m = e(834730),
-    u = e(376092),
-    j = e(260509),
-    h = e(317525),
-    p = e(486020),
-    g = e(488926),
-    v = e(636042),
-    N = e(652215),
-    E = e(124759),
-    f = e(375708),
-    b = e(626241);
+n.d(i, { default: () => q }), n(321073);
+var e = n(627968),
+    t = n(64700),
+    l = n(136722),
+    r = n(825484),
+    a = n(821609),
+    d = n(935462),
+    c = n(97808),
+    o = n(778712),
+    x = n(534514),
+    m = n(834730),
+    u = n(376092),
+    j = n(260509),
+    h = n(317525),
+    p = n(486020),
+    g = n(488926),
+    v = n(636042),
+    N = n(652215),
+    f = n(124759),
+    E = n(375708),
+    b = n(626241);
 function C(s) {
     let { guild: i } = s,
-        e = p.Ay.getGuildIconURL({ id: i.id, icon: i.icon, size: 120 });
-    return (0, n.jsxs)(d.rQ, {
+        n = p.Ay.getGuildIconURL({ id: i.id, icon: i.icon, size: 120 });
+    return (0, e.jsxs)(d.rQ, {
         className: b.wx,
         "data-migration-pending": !0,
         children: [
-            (0, n.jsx)("div", {
+            (0, e.jsx)("div", {
                 className: b.O_,
                 children:
-                    null != e
-                        ? (0, n.jsx)(c.eu, {
-                              src: e,
+                    null != n
+                        ? (0, e.jsx)(c.eu, {
+                              src: n,
                               "aria-label": i.name,
                               size: o._3.SIZE_120,
                               className: b.__invalid_guildIcon,
                           })
-                        : (0, n.jsx)("div", { className: b.q9, children: (0, j.Rb)(i) }),
+                        : (0, e.jsx)("div", { className: b.q9, children: (0, j.Rb)(i) }),
             }),
-            (0, n.jsxs)("div", {
+            (0, e.jsxs)("div", {
                 className: b.TK,
                 children: [
-                    (0, n.jsx)(x.D, {
+                    (0, e.jsx)(x.D, {
                         variant: "heading-lg/extrabold",
                         color: "text-strong",
-                        children: f.intl.string(f.t.MatO7M),
+                        children: E.intl.string(E.t.MatO7M),
                     }),
-                    (0, n.jsx)(m.E, {
+                    (0, e.jsx)(m.E, {
                         variant: "text-md/normal",
                         color: "text-strong",
-                        children: f.intl.string(f.t.VyPIeu),
+                        children: E.intl.string(E.t.VyPIeu),
                     }),
                 ],
             }),
         ],
     });
 }
-let _ = (s) => (s.toString() === N.xBc.MENTION_EVERYONE.toString() ? f.intl.string(f.t.yCpsQw) : (0, u.hx)(s));
+function _(s) {
+    return s.toString() === N.xBc.MENTION_EVERYONE.toString() ? E.intl.string(E.t.yCpsQw) : (0, u.hx)(s);
+}
 function y(s) {
     let { permissions: i } = s;
-    return (0, n.jsxs)("div", {
+    return (0, e.jsxs)("div", {
         className: b.CZ,
         children: [
-            (0, n.jsx)(m.E, {
+            (0, e.jsx)(m.E, {
                 className: b.qd,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: f.intl.string(f.t["0WZKI4"]),
+                children: E.intl.string(E.t["0WZKI4"]),
             }),
-            (0, n.jsx)("div", {
+            (0, e.jsx)("div", {
                 className: b.lM,
                 children: i.map((s, i) =>
-                    (0, n.jsxs)(
+                    (0, e.jsxs)(
                         "div",
                         {
                             className: b.ce,
                             children: [
-                                (0, n.jsx)("div", { className: b.dT }),
-                                (0, n.jsx)(m.E, { variant: "text-sm/normal", color: "text-default", children: _(s) }),
+                                (0, e.jsx)("div", { className: b.dT }),
+                                (0, e.jsx)(m.E, { variant: "text-sm/normal", color: "text-default", children: _(s) }),
                             ],
                         },
                         i,
@@ -89,25 +91,25 @@ function y(s) {
 }
 function I(s) {
     let { permissions: i } = s;
-    return (0, n.jsxs)("div", {
+    return (0, e.jsxs)("div", {
         className: b.CZ,
         children: [
-            (0, n.jsx)(m.E, {
+            (0, e.jsx)(m.E, {
                 className: b.qd,
                 variant: "text-xs/semibold",
                 color: "text-muted",
-                children: f.intl.string(f.t.Yo5qlq),
+                children: E.intl.string(E.t.Yo5qlq),
             }),
-            (0, n.jsx)("div", {
+            (0, e.jsx)("div", {
                 className: b.lM,
                 children: i.map((s, i) =>
-                    (0, n.jsxs)(
+                    (0, e.jsxs)(
                         "div",
                         {
                             className: b.ce,
                             children: [
-                                (0, n.jsx)("div", { className: b.xE }),
-                                (0, n.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: _(s) }),
+                                (0, e.jsx)("div", { className: b.xE }),
+                                (0, e.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: _(s) }),
                             ],
                         },
                         i,
@@ -119,60 +121,60 @@ function I(s) {
 }
 function M(s) {
     let { permissions: i } = s,
-        { enabledPermissions: e, disabledPermissions: t } = i;
-    return (0, n.jsx)(d.$m, {
+        { enabledPermissions: n, disabledPermissions: t } = i;
+    return (0, e.jsx)(d.$m, {
         "data-migration-pending": !0,
-        children: (0, n.jsxs)("div", {
+        children: (0, e.jsxs)("div", {
             className: b.tp,
-            children: [(0, n.jsx)(y, { permissions: e }), (0, n.jsx)(I, { permissions: t })],
+            children: [(0, e.jsx)(y, { permissions: n }), (0, e.jsx)(I, { permissions: t })],
         }),
     });
 }
 function k(s) {
-    let { onConfirm: i, onDismiss: e } = s;
-    return (0, n.jsx)(d.jl, {
+    let { onConfirm: i, onDismiss: n } = s;
+    return (0, e.jsx)(d.jl, {
         className: b.qr,
         "data-migration-pending": !0,
-        children: (0, n.jsxs)(r.e, {
+        children: (0, e.jsxs)(r.e, {
             fullWidth: !0,
             children: [
-                (0, n.jsx)(a.$, { variant: "secondary", text: f.intl.string(f.t.gWQZvr), onClick: e }),
-                (0, n.jsx)(a.$, { text: f.intl.string(f.t.iOSdAW), onClick: i }),
+                (0, e.jsx)(a.$, { variant: "secondary", text: E.intl.string(E.t.gWQZvr), onClick: n }),
+                (0, e.jsx)(a.$, { text: E.intl.string(E.t.iOSdAW), onClick: i }),
             ],
         }),
     });
 }
 function q(s) {
-    let { guild: i, transitionState: e, onClose: r } = s,
+    let { guild: i, transitionState: n, onClose: r } = s,
         a = t.useMemo(() => {
             let s = [],
-                e = [];
+                n = [];
             return (
-                E.dR.map((n) => {
-                    g.Ib(n, i) ? s.push(n) : e.push(n);
+                f.dR.map((e) => {
+                    g.Ib(e, i) ? s.push(e) : n.push(e);
                 }),
-                { enabledPermissions: s, disabledPermissions: e }
+                { enabledPermissions: s, disabledPermissions: n }
             );
         }, [i]);
     if (null == i) return null;
     let c = async () => {
         let s = null != i ? h.A.getEveryoneRole(i) : void 0;
         if (null == s) return;
-        let e = l.TF(s.permissions, E.e$);
-        await (0, v.JY)(i.id, [{ ...s, permissions: e }]), r();
+        let n = l.TF(s.permissions, f.e$);
+        await (0, v.JY)(i.id, [{ ...s, permissions: n }]), r();
     };
-    return (0, n.jsxs)(d.EO, {
-        transitionState: e,
+    return (0, e.jsxs)(d.EO, {
+        transitionState: n,
         size: d.rI.SMALL,
         className: b.yl,
         parentComponent: "DisableRiskyPermsModal",
         "data-migration-pending": !0,
         children: [
-            (0, n.jsx)(C, { guild: i }),
-            (0, n.jsx)(M, { permissions: a }),
-            (0, n.jsx)(k, {
+            (0, e.jsx)(C, { guild: i }),
+            (0, e.jsx)(M, { permissions: a }),
+            (0, e.jsx)(k, {
                 onConfirm: c,
-                onDismiss: () => {
+                onDismiss: function () {
                     r();
                 },
             }),

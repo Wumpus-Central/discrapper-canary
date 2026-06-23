@@ -3,11 +3,11 @@ var l = n(627968),
     i = n(64700),
     a = n(503698),
     r = n.n(a),
-    o = n(922139),
+    o = n(308186),
     s = n(702841),
     c = n(661531),
-    d = n(462887),
-    u = n(844222),
+    u = n(462887),
+    d = n(844222),
     m = n(717421),
     h = n(602853),
     p = n(866323),
@@ -23,11 +23,11 @@ var l = n(627968),
     y = n(895023);
 function E(e) {
     let { guildId: t, option: n, selected: a, onSelect: E, hideMemberCount: w, canBeNew: I } = e,
-        M = (0, d.M)((0, j.Ay)()),
+        M = (0, u.M)((0, j.Ay)()),
         [b, k] = i.useState(!1),
         R = b && !w,
         D = i.useRef(null),
-        { reducedMotion: O } = i.useContext(u.C),
+        { reducedMotion: O } = i.useContext(d.C),
         K = (0, s.bG)([v.Ay], () => n.emoji?.id != null && (v.Ay.getCustomEmojiById(n.emoji?.id)?.animated ?? !1)),
         L = (0, _.A)(t, 1e3),
         H = null == L || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => L[e])),
@@ -77,7 +77,7 @@ function E(e) {
         className: W,
         children: (0, l.jsxs)(x.D, {
             className: y.AP,
-            onClick: () => {
+            onClick: function () {
                 k(!a), E(!a);
             },
             onMouseDown: () => Z(!0),

@@ -15,7 +15,7 @@ var i = n(735438),
     p = n(495544),
     E = n(734057),
     m = n(232835),
-    g = n(222823),
+    g = n(568548),
     A = n(994500),
     I = n(967198),
     T = n(543465),
@@ -123,9 +123,11 @@ function G(e) {
 }
 function F(e) {
     let t = { ...b };
+    function n(e, n) {
+        return t[e] !== b[e] && b[e] === n;
+    }
     (b = r().defaults(r().pick(e, ["guildFilter", "roleFilter", "everyoneFilter"]), b)), a.w.set(y, b);
-    let n = (e, n) => t[e] !== b[e] && b[e] === n,
-        i = n("guildFilter", h.KE7.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
+    let i = n("guildFilter", h.KE7.THIS_SERVER) || n("everyoneFilter", !1) || n("roleFilter", !1);
     v = {};
     let s = [];
     i &&

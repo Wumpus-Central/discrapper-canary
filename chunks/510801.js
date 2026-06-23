@@ -5,7 +5,9 @@ var i = n(575593),
     s = n(623373),
     a = n(986630),
     o = n(931772);
-let l = (e) => e === i.R.VARIANTS_GROUP || e === i.R.EXTERNAL_SKU;
+function l(e) {
+    return e === i.R.VARIANTS_GROUP || e === i.R.EXTERNAL_SKU;
+}
 class u extends o.A {
     products;
     heroRanking;

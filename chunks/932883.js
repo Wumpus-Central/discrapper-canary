@@ -12,13 +12,15 @@ var i,
     _ = n(394953),
     h = n(849077),
     f = n(652215);
-let p = s.createContext(""),
-    E = (e) => {
-        let { children: t } = e,
-            [n] = s.useState(() => (0, a.A)());
-        return (0, r.jsx)(p.Provider, { value: n, children: t });
-    },
-    m = () => s.useContext(p);
+let p = s.createContext("");
+function E(e) {
+    let { children: t } = e,
+        [n] = s.useState(() => (0, a.A)());
+    return (0, r.jsx)(p.Provider, { value: n, children: t });
+}
+function m() {
+    return s.useContext(p);
+}
 var g =
     (((i = {}).CLICK = "click"),
     (i.CONTEXT_MENU = "context_menu"),

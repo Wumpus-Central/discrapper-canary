@@ -13,7 +13,7 @@ var r = n(793574),
     _ = n(307731),
     h = n(788868),
     f = n(375708);
-let p = (e) => {
+let p = function (e) {
     let t,
         {
             onClose: n,

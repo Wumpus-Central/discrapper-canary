@@ -20,15 +20,15 @@ function m() {
 function g(e) {
     E.setState((t) => ({ ...t, ...e }), !0), a.w.set(f, E.getState());
 }
-let A = () => {
-        g({ isNewOverlayUser: void 0 });
-    },
-    I = () => {
-        g({ isUsingDefaultOverlayKeybind: void 0 });
-    },
-    T = (e) => {
-        g({ overrideIsNewOverlayUser: e });
-    };
+function A() {
+    g({ isNewOverlayUser: void 0 });
+}
+function I() {
+    g({ isUsingDefaultOverlayKeybind: void 0 });
+}
+function T(e) {
+    g({ overrideIsNewOverlayUser: e });
+}
 function S(e) {
     g({ overrideIsUsingDefaultOverlayKeybind: e });
 }

@@ -13,13 +13,17 @@ let a = -1,
         analyticsId: null,
     });
 function l() {
-    let e = (0, r.h)()((0, i.eh)((e) => o)),
-        t = () => e.getState();
+    let e = (0, r.h)()((0, i.eh)((e) => o));
+    function t() {
+        return e.getState();
+    }
     return {
         useStore: e,
         getState: t,
-        subscribe: (t, n) => e.subscribe(t, n),
-        setInspectedExpressionPosition: (t, n, i) => {
+        subscribe: function (t, n) {
+            return e.subscribe(t, n);
+        },
+        setInspectedExpressionPosition: function (t, n, i) {
             (0, s.r)(() =>
                 e.setState({
                     inspectedExpressionPosition: { rowIndex: n, columnIndex: t, source: i },
@@ -27,22 +31,24 @@ function l() {
                 }),
             );
         },
-        setActiveCategoryIndex: (t) => {
+        setActiveCategoryIndex: function (t) {
             (0, s.r)(() => e.setState({ activeCategoryIndex: t }));
         },
-        setSearchPlaceholder: (t) => {
+        setSearchPlaceholder: function (t) {
             (0, s.r)(() => e.setState({ searchPlaceholder: t }));
         },
-        resetStoreState: () => {
+        resetStoreState: function () {
             (0, s.r)(() => e.setState(o));
         },
-        setBottomPosition: (t) => {
+        setBottomPosition: function (t) {
             (0, s.r)(() => e.setState({ bottomPosition: t }));
         },
-        setAnalyticsId: (t) => {
+        setAnalyticsId: function (t) {
             (0, s.r)(() => e.setState({ analyticsId: t }));
         },
-        getAnalyticsId: () => t().analyticsId,
+        getAnalyticsId: function () {
+            return t().analyticsId;
+        },
     };
 }
 let u = l(),

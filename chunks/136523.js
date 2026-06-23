@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(702841),
     l = n(319400),
     u = n(435183),
-    c = n(720149),
+    c = n(493336),
     d = n(47167),
     _ = n(882840),
     h = n(355622),
@@ -32,6 +32,42 @@ function N(e) {
         x = (0, o.bG)([g.default], () => g.default.getCurrentUser()),
         k = (0, d.Ay)(t),
         U = b.length > 500;
+    function G(e) {
+        P(new l.LG(e, e.status).getAnyErrorMessage());
+    }
+    async function F(e) {
+        b === R && v(), e?.preventDefault(), P(null), w(!0);
+        let n = b.length,
+            i = b.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
+            r = E.Ay.parse(t, b),
+            { hasErrors: s } = (function (e) {
+                let { invalidEmojis: n } = e;
+                if (null != n && n.length > 0) {
+                    let { errorMessage: e } = c.A.validateMessage(n, x, t.id);
+                    return P(e), w(!1), { hasErrors: !0 };
+                }
+                return { hasErrors: !1 };
+            })(r);
+        if (!s) {
+            try {
+                let e = await u.Ay.updateVoiceChannelStatus(t.id, r.content);
+                204 === e.status
+                    ? (A.default.track(I.HAw.VOICE_CHANNEL_TOPIC_SET, {
+                          guild_id: t.guild_id,
+                          channel_id: t.id,
+                          media_session_id: O,
+                          raw_length: n,
+                          text_length: i,
+                          location_stack: N,
+                      }),
+                      v())
+                    : G(e);
+            } catch (e) {
+                G(e);
+            }
+            w(!1);
+        }
+    }
     r.useEffect(() => {
         A.default.track(I.HAw.OPEN_MODAL, {
             type: "Voice Channel Topic Modal",
@@ -39,68 +75,34 @@ function N(e) {
             location_stack: N,
         });
     }, [t.guild_id, N]);
-    let G = (e) => {
-            P(new l.LG(e, e.status).getAnyErrorMessage());
-        },
-        F = async (e) => {
-            b === R && v(), e?.preventDefault(), P(null), w(!0);
-            let n = b.length,
-                i = b.replace(/<(a)?:[^:]+:[0-9]+>/g, "--").length,
-                r = E.Ay.parse(t, b),
-                { hasErrors: s } = ((e) => {
-                    let { invalidEmojis: n } = e;
-                    if (null != n && n.length > 0) {
-                        let { errorMessage: e } = c.A.validateMessage(n, x, t.id);
-                        return P(e), w(!1), { hasErrors: !0 };
-                    }
-                    return { hasErrors: !1 };
-                })(r);
-            if (!s) {
-                try {
-                    let e = await u.Ay.updateVoiceChannelStatus(t.id, r.content);
-                    204 === e.status
-                        ? (A.default.track(I.HAw.VOICE_CHANNEL_TOPIC_SET, {
-                              guild_id: t.guild_id,
-                              channel_id: t.id,
-                              media_session_id: O,
-                              raw_length: n,
-                              text_length: i,
-                              location_stack: N,
-                          }),
-                          v())
-                        : G(e);
-                } catch (e) {
-                    G(e);
-                }
-                w(!1);
-            }
-        },
-        [V, B] = r.useState((0, f.x7)(b)),
-        j = async () => (U || L || (await F()), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
-        H = (0, i.jsx)(s.D, {
-            label: T.intl.string(T.t.Fq5lwN),
-            errorMessage: M,
-            children: (0, i.jsx)(p.Ay, {
-                innerClassName: S.Tg,
-                textValue: b,
-                richValue: V,
-                placeholder: T.intl.formatToPlainString(T.t.DUXxBh, { channelName: k }),
-                focused: !0,
-                channel: t,
-                onChange: (e, t, n) => {
-                    D(t), B(n);
-                },
-                onSubmit: j,
-                type: h.oU.VOICE_CHANNEL_STATUS,
-                canMentionRoles: !1,
-                canMentionChannels: !1,
-                allowNewLines: !1,
-                parentModalKey: C,
-                maxCharacterCount: 500,
-                showRemainingCharsAfterCount: 250,
-                emojiPickerCloseOnModalOuterClick: !0,
-            }),
-        });
+    let [V, B] = r.useState((0, f.x7)(b));
+    async function j() {
+        return U || L || (await F()), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 });
+    }
+    let H = (0, i.jsx)(s.D, {
+        label: T.intl.string(T.t.Fq5lwN),
+        errorMessage: M,
+        children: (0, i.jsx)(p.Ay, {
+            innerClassName: S.Tg,
+            textValue: b,
+            richValue: V,
+            placeholder: T.intl.formatToPlainString(T.t.DUXxBh, { channelName: k }),
+            focused: !0,
+            channel: t,
+            onChange: function (e, t, n) {
+                D(t), B(n);
+            },
+            onSubmit: j,
+            type: h.oU.VOICE_CHANNEL_STATUS,
+            canMentionRoles: !1,
+            canMentionChannels: !1,
+            allowNewLines: !1,
+            parentModalKey: C,
+            maxCharacterCount: 500,
+            showRemainingCharsAfterCount: 250,
+            emojiPickerCloseOnModalOuterClick: !0,
+        }),
+    });
     return (0, i.jsx)(a.k, {
         transitionState: n,
         onClose: v,

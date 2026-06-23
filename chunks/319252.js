@@ -12,7 +12,7 @@ function a(e) {
     }
     return t;
 }
-let o = (e) => {
+function o(e) {
     switch (e.type) {
         case r.l.REWARD_CODE:
             return {
@@ -81,7 +81,7 @@ let o = (e) => {
                 },
             };
     }
-};
+}
 var l = n(412703),
     u = n(668824);
 function c(e) {
@@ -116,8 +116,7 @@ function _(e) {
 function h(e) {
     return (0, i.YW)(e)
         .with({ config_version: 2 }, (e) => {
-            var t;
-            let n;
+            var t, n;
             return {
                 id: e.id,
                 configVersion: 2,
@@ -144,14 +143,14 @@ function h(e) {
                     gameTitle: e.messages.game_title,
                     gamePublisher: e.messages.game_publisher,
                 },
-                taskConfigV2: ((e) => {
+                taskConfigV2: (function (e) {
                     try {
                         let t = Object.entries(e.tasks)
                             .map((e) => {
                                 let [t, n] = e;
                                 return [
                                     t,
-                                    ((e) => {
+                                    (function (e) {
                                         var t, n;
                                         switch (e.type) {
                                             case l.n.WATCH_VIDEO:
@@ -249,19 +248,19 @@ function h(e) {
                     }
                 })(e.task_config_v2),
                 rewardsConfig: {
-                    assignmentMethod: (n = e.rewards_config).assignment_method,
-                    rewards: n.rewards.map(o),
-                    rewardsExpireAt: n.rewards_expire_at,
-                    platforms: n.platforms,
+                    assignmentMethod: (t = e.rewards_config).assignment_method,
+                    rewards: t.rewards.map(o),
+                    rewardsExpireAt: t.rewards_expire_at,
+                    platforms: t.platforms,
                 },
                 cosponsorMetadata: d(e.cosponsor_metadata),
                 sharePolicy: e.share_policy,
                 ctaConfig: {
-                    android: null != (t = e.cta_config).android ? { androidAppId: t.android.android_app_id } : void 0,
-                    ios: null != t.ios ? { iosAppId: t.ios.ios_app_id } : void 0,
-                    link: t.link,
-                    buttonLabel: t.button_label,
-                    subtitle: t.subtitle,
+                    android: null != (n = e.cta_config).android ? { androidAppId: n.android.android_app_id } : void 0,
+                    ios: null != n.ios ? { iosAppId: n.ios.ios_app_id } : void 0,
+                    link: n.link,
+                    buttonLabel: n.button_label,
+                    subtitle: n.subtitle,
                 },
             };
         })

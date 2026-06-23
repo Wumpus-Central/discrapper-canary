@@ -79,7 +79,7 @@ var M = n(503698),
     J = n(95701),
     V = n(576705),
     W = n(290863),
-    X = n(222823),
+    X = n(568548),
     K = n(994500),
     Y = n(287809),
     $ = n(58703),
@@ -270,10 +270,10 @@ function eo(e) {
 }
 var eu = n(293588),
     ed = n(119390);
-let em = [x.kc.CHAT],
-    ex = () => {
-        (0, s.closeModal)(eu.C);
-    };
+let em = [x.kc.CHAT];
+function ex() {
+    (0, s.closeModal)(eu.C);
+}
 function eh(e) {
     var t;
     let {

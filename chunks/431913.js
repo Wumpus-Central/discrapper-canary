@@ -1,37 +1,37 @@
-a.d(i, { default: () => c });
-var n = a(627968),
-    e = a(64700),
-    s = a(189213),
-    l = a(27192),
-    r = a(493540),
-    o = a(980406),
-    d = a(375708);
-function c(t) {
-    let { guildId: i, transitionState: a, onClose: c } = t,
+n.d(i, { default: () => d });
+var a = n(627968),
+    e = n(64700),
+    s = n(189213),
+    l = n(27192),
+    r = n(493540),
+    o = n(980406),
+    c = n(375708);
+function d(t) {
+    let { guildId: i, transitionState: n, onClose: d } = t,
         [u, h] = e.useState(!1),
-        [p, C] = e.useState(!1),
-        b = async () => {
-            h(!0);
-            try {
-                await (0, r.Bo)(i), c();
-            } finally {
-                h(!1);
-            }
-        },
-        k = d.intl.string(d.t["22itmo"]);
-    return (0, n.jsx)(s.Modal, {
+        [p, C] = e.useState(!1);
+    async function b() {
+        h(!0);
+        try {
+            await (0, r.Bo)(i), d();
+        } finally {
+            h(!1);
+        }
+    }
+    let k = c.intl.string(c.t["22itmo"]);
+    return (0, a.jsx)(s.Modal, {
         size: "md",
-        transitionState: a,
-        onClose: c,
+        transitionState: n,
+        onClose: d,
         "aria-label": k,
         title: k,
-        subtitle: d.intl.string(d.t.kdbm9C),
+        subtitle: c.intl.string(c.t.kdbm9C),
         actions: [
-            { variant: "secondary", onClick: c, text: d.intl.string(d.t["ETE/oC"]) },
-            { variant: "primary", text: d.intl.string(d.t["cY+Oob"]), disabled: !p, onClick: b, loading: u },
+            { variant: "secondary", onClick: d, text: c.intl.string(c.t["ETE/oC"]) },
+            { variant: "primary", text: c.intl.string(c.t["cY+Oob"]), disabled: !p, onClick: b, loading: u },
         ],
-        children: (0, n.jsx)(l.Kj, {
-            onChange: () => {
+        children: (0, a.jsx)(l.Kj, {
+            onChange: function () {
                 C((t) => !t);
             },
             value: p,

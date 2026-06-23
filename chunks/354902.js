@@ -10,8 +10,8 @@ var i = n(627968),
     E = n(289873),
     d = n(155718),
     R = n(475743),
-    C = n(765548),
-    f = n(139716),
+    f = n(765548),
+    C = n(139716),
     I = n(847599),
     N = n(36149),
     _ = n(287809),
@@ -93,7 +93,7 @@ function D(t) {
         r.useEffect(() => {
             let t = !1;
             return (
-                (async () => {
+                (async function () {
                     let i = await T(e, n);
                     t || (i.section === g.ERROR ? a(i.section, i.params.failureCode) : a(i.section));
                 })(),
@@ -109,7 +109,7 @@ function b(t) {
     let { transitionState: e, onPending: n, onClose: a } = t;
     j(n);
     let s = r.useCallback(() => {
-        f.A.showAgeVerificationGetStartedModal({ entryPoint: I.q1.FAMILY_CENTER_CONNECTION });
+        C.A.showAgeVerificationGetStartedModal({ entryPoint: I.q1.FAMILY_CENTER_CONNECTION });
     }, []);
     return (0, i.jsx)(u.k, {
         transitionState: e,
@@ -130,7 +130,7 @@ function U(t) {
     let { transitionState: e, onPending: n, onClose: a } = t;
     j(n);
     let s = r.useCallback(() => {
-        f.A.showAgeVerificationGetStartedModal({ entryPoint: I.q1.FAMILY_CENTER_CONNECTION });
+        C.A.showAgeVerificationGetStartedModal({ entryPoint: I.q1.FAMILY_CENTER_CONNECTION });
     }, []);
     return (0, i.jsx)(G, {
         transitionState: e,
@@ -182,8 +182,8 @@ function L(t) {
         l = (0, N.b8)(),
         u = (0, a.bG)([_.default], () => _.default.getCurrentUser()?.ageVerificationStatus),
         c = r.useRef(!1),
-        E = (0, C.A)(n),
-        R = (0, C.A)(s);
+        E = (0, f.A)(n),
+        R = (0, f.A)(s);
     return (
         r.useEffect(() => {
             if (!c.current) {
@@ -220,17 +220,17 @@ function M(t) {
         R = r.useCallback(() => {
             l(g.VERIFYING);
         }, []),
-        C = r.useCallback(() => {
+        f = r.useCallback(() => {
             l(g.PREREQ_LOADING);
         }, []),
-        f = r.useCallback(() => {
+        C = r.useCallback(() => {
             E();
         }, [E]);
     switch (o) {
         case g.CONFIRM_AGE:
             return (0, i.jsx)(b, { transitionState: a, onPending: R, onClose: s });
         case g.VERIFYING:
-            return (0, i.jsx)(L, { transitionState: a, onVerified: C, onFailed: f, onClose: s });
+            return (0, i.jsx)(L, { transitionState: a, onVerified: f, onFailed: C, onClose: s });
         case g.MUST_BE_ADULT:
             return (0, i.jsx)(U, { transitionState: a, onPending: R, onClose: s });
         case g.INVALID_CODE:

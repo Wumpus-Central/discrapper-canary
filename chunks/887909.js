@@ -151,7 +151,7 @@ function eA(e) {
             null != l
                 ? l.map((e) => {
                       let t = (0, x.wI)(e),
-                          n = ((e) => {
+                          n = (function (e) {
                               switch (e) {
                                   case x.yW.IP_LOCATION:
                                       return el.L;
@@ -616,7 +616,7 @@ let e1 = (0, F.Fe)({
             n.e("88610"),
             n.e("33087"),
             n.e("4189"),
-            n.e("50568"),
+            n.e("21739"),
             n.e("49623"),
             n.e("6026"),
             n.e("1009"),
@@ -842,7 +842,7 @@ let e1 = (0, F.Fe)({
             n.e("24622"),
             n.e("32551"),
             n.e("62680"),
-            n.e("64046"),
+            n.e("91565"),
             n.e("43426"),
             n.e("96443"),
             n.e("65743"),
@@ -1216,8 +1216,11 @@ function e7(e) {
             : (0, O.rQ)({ withAnalyticsToken: !0 }).catch(et.tEg);
     }),
         r.useEffect(() => {
-            if (e7.current) return;
-            let e = async () => {
+            if (!e7.current && null == eu) {
+                if (!$.default.isAuthenticated()) return void (0, er.Vh)(ef, "oauth2_error_not_authenticated");
+                e();
+            }
+            async function e() {
                 e7.current = !0;
                 try {
                     let { disclosures: e, allAcked: t } = await (0, x.vG)(f);
@@ -1229,10 +1232,6 @@ function e7(e) {
                 } finally {
                     e7.current = !1;
                 }
-            };
-            if (null == eu) {
-                if (!$.default.isAuthenticated()) return void (0, er.Vh)(ef, "oauth2_error_not_authenticated");
-                e();
             }
         }, [f, ef, eu, e9, eS, tt, eI]);
     let tn = ei(eE?.application.content_classification ?? e$?.contentClassification, eV),
@@ -1420,7 +1419,7 @@ function e7(e) {
             if (null == e$) return { label: en.intl.string(en.t.ZTNur7), body: (0, i.jsx)(e5, {}) };
             (t = (0, i.jsx)(e1, {
                 application: e$,
-                onSelect: (e) => {
+                onSelect: function (e) {
                     eW(e), em(null), eI("AUTHORIZE_SCOPES");
                 },
             })),
@@ -1488,7 +1487,7 @@ function e7(e) {
                 application: eE.application,
                 permissions: e3,
                 deniedPermissions: eM,
-                onPermissionsChange: (e, t) => {
+                onPermissionsChange: function (e, t) {
                     ex((n) => (e ? h.TF(n, t) : h.WQ(n, t)));
                 },
                 guild: eH,

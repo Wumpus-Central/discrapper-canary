@@ -1,74 +1,74 @@
-i.d(e, { default: () => _ });
-var n = i(627968),
-    s = i(64700),
-    l = i(731738),
-    r = i(189213),
-    a = i(17928),
-    d = i(691540),
-    c = i(857250),
-    o = i(97483),
-    u = i(331322),
-    m = i(834730),
-    S = i(548118),
-    x = i(807393),
-    D = i(885386),
-    h = i(71393),
-    p = i(115063),
-    A = i(510264),
-    E = i(386936),
-    g = i(375708),
-    v = i(759656);
-function _(t) {
-    let { transitionState: e, guildId: i, onClose: _ } = t,
-        b = (0, a.bG)([h.A], () => h.A.getGuild(i));
+n.d(i, { default: () => v });
+var e = n(627968),
+    s = n(64700),
+    l = n(731738),
+    r = n(189213),
+    a = n(17928),
+    d = n(691540),
+    c = n(857250),
+    o = n(97483),
+    u = n(331322),
+    m = n(834730),
+    S = n(548118),
+    x = n(807393),
+    D = n(885386),
+    h = n(71393),
+    p = n(115063),
+    A = n(510264),
+    f = n(386936),
+    E = n(375708),
+    g = n(759656);
+function v(t) {
+    let { transitionState: i, guildId: n, onClose: v } = t,
+        _ = (0, a.bG)([h.A], () => h.A.getGuild(n));
     if (
         (s.useEffect(() => {
-            (0, A.Q)(i), (0, E.$)(E.s.MODAL_VIEWED, i), x.A.increment({ name: l.K.DM_SETTINGS_UPSELL_VIEW });
-        }, [i]),
-        null == b)
+            (0, A.Q)(n), (0, f.$)(f.s.MODAL_VIEWED, n), x.A.increment({ name: l.K.DM_SETTINGS_UPSELL_VIEW });
+        }, [n]),
+        null == _)
     )
         return null;
-    let f = (t) => {
+    function b(t) {
         t.preventDefault();
-        let e = (0, p.Tb)();
-        e.add(i),
-            D.$s.updateSetting(Array.from(e)).then(() => (0, d.P0)((0, c.o)(g.intl.string(g.t.rlYD1W), o.Ck.SUCCESS))),
-            _(),
-            (0, E.$)(E.s.MODAL_DISABLED_DMS, i);
-    };
-    return (0, n.jsx)("form", {
-        onSubmit: f,
-        children: (0, n.jsx)(r.Modal, {
-            transitionState: e,
-            onClose: _,
-            title: g.intl.string(g.t.w2BvnL),
-            subtitle: g.intl.format(g.t.Depjkv, { guild_name: b.name }),
+        let i = (0, p.Tb)();
+        i.add(n),
+            D.$s.updateSetting(Array.from(i)).then(() => (0, d.P0)((0, c.o)(E.intl.string(E.t.rlYD1W), o.Ck.SUCCESS))),
+            v(),
+            (0, f.$)(f.s.MODAL_DISABLED_DMS, n);
+    }
+    return (0, e.jsx)("form", {
+        onSubmit: b,
+        children: (0, e.jsx)(r.Modal, {
+            transitionState: i,
+            onClose: v,
+            title: E.intl.string(E.t.w2BvnL),
+            subtitle: E.intl.format(E.t.Depjkv, { guild_name: _.name }),
             actions: [
                 {
-                    text: g.intl.string(g.t.PsWbcp),
-                    onClick: () => {
-                        _(), (0, E.$)(E.s.MODAL_DISMISSED, i);
+                    text: E.intl.string(E.t.PsWbcp),
+                    onClick: function () {
+                        v(), (0, f.$)(f.s.MODAL_DISMISSED, n);
                     },
                     variant: "secondary",
                 },
-                { text: g.intl.string(g.t.TD7iUx), onClick: f },
+                { text: E.intl.string(E.t.TD7iUx), onClick: b },
             ],
-            children: (0, n.jsxs)(u.B, {
+            children: (0, e.jsxs)(u.B, {
                 direction: "vertical",
                 gap: 8,
                 children: [
-                    (0, n.jsx)(m.E, {
+                    (0, e.jsx)(m.E, {
                         variant: "text-md/medium",
                         color: "text-muted",
-                        children: g.intl.string(g.t.KPB2iw),
+                        children: E.intl.string(E.t.KPB2iw),
                     }),
-                    (0, n.jsx)("div", {
-                        className: v.bo,
-                        children: (0, n.jsxs)("div", {
-                            className: v.OA,
+                    (0, e.jsx)("div", {
+                        className: g.bo,
+                        children: (0, e.jsxs)("div", {
+                            className: g.OA,
                             children: [
-                                (0, n.jsx)(S.Ay, { guild: b, size: S.Ay.Sizes.SMALL }),
-                                (0, n.jsx)(m.E, { className: v.J5, variant: "text-md/semibold", children: b.name }),
+                                (0, e.jsx)(S.Ay, { guild: _, size: S.Ay.Sizes.SMALL }),
+                                (0, e.jsx)(m.E, { className: g.J5, variant: "text-md/semibold", children: _.name }),
                             ],
                         }),
                     }),

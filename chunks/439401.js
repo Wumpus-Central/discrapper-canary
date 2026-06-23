@@ -21,14 +21,7 @@ let g = r.memo(function (e) {
         C = (0, _.km)((0, d.xo)(A)),
         N = C ? E.intl.string(E.t["5/NS74"]) : E.intl.string(E.t.nIH0v8),
         v = C ? l.G : u.y;
-    r.useEffect(() => {
-        if (!S) return;
-        let e = setTimeout(() => {
-            y(!1);
-        }, 500);
-        return () => clearTimeout(e);
-    }, [S]);
-    let R = (e) => {
+    function R(e) {
         e.preventDefault(),
             e.stopPropagation(),
             y(!0),
@@ -36,20 +29,35 @@ let g = r.memo(function (e) {
                 ? (0, d.Tr)(A)
                 : ((0, d.wg)({ url: A, src: s, gifSrc: g, width: t, height: n, format: I }),
                   h._.dispatch(f.jej.FAVORITE_GIF));
-    };
-    return (0, i.jsx)(o.m, {
-        text: N,
-        children: (0, i.jsx)(c.D, {
-            "aria-label": N,
-            ignoreKeyPress: !0,
-            className: a()(T, m.jj, { [m.wH]: C, [m.TV]: S }),
-            onMouseDown: (e) => e.preventDefault(),
-            onClick: R,
-            onKeyDown: (e) => {
-                (e.key === p.dh.ENTER || e.key === p.dh.SPACE) && R(e);
-            },
-            onDoubleClick: (e) => e.preventDefault(),
-            children: (0, i.jsx)(v, { color: "currentColor", className: m.Kk, size: "custom", width: 20, height: 20 }),
-        }),
-    });
+    }
+    return (
+        r.useEffect(() => {
+            if (!S) return;
+            let e = setTimeout(() => {
+                y(!1);
+            }, 500);
+            return () => clearTimeout(e);
+        }, [S]),
+        (0, i.jsx)(o.m, {
+            text: N,
+            children: (0, i.jsx)(c.D, {
+                "aria-label": N,
+                ignoreKeyPress: !0,
+                className: a()(T, m.jj, { [m.wH]: C, [m.TV]: S }),
+                onMouseDown: (e) => e.preventDefault(),
+                onClick: R,
+                onKeyDown: function (e) {
+                    (e.key === p.dh.ENTER || e.key === p.dh.SPACE) && R(e);
+                },
+                onDoubleClick: (e) => e.preventDefault(),
+                children: (0, i.jsx)(v, {
+                    color: "currentColor",
+                    className: m.Kk,
+                    size: "custom",
+                    width: 20,
+                    height: 20,
+                }),
+            }),
+        })
+    );
 });

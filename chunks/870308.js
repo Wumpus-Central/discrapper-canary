@@ -11,14 +11,14 @@ var i = n(64700),
     d = n(212407),
     _ = n(966971),
     h = n(49999);
-let f = () => {
+let f = function () {
     let e = (0, a.bG)([c.A], () => c.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
         t = !(0, l.hasAnyModalOpen)(),
         [n, f] = (0, u.RF)(t ? o.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
         p = (0, d.bv)(e),
         E =
             null != n
-                ? ((e, t) => {
+                ? (function (e, t) {
                       if (t?.type === s.G.BADGE)
                           return {
                               type: _.FF.BADGE,

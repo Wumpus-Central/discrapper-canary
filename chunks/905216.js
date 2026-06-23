@@ -13,7 +13,7 @@ function l(e) {
     return (0, i.jsx)(d, {
         ...c,
         isTrayButton: !1,
-        onClick: () => {
+        onClick: function () {
             n?.(), s.default.disconnect();
         },
         iconComponent: _,

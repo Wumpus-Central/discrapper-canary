@@ -4,8 +4,8 @@ var t = l(627968),
     r = l.n(a),
     i = l(17928),
     s = l(778712),
-    o = l(97808),
-    u = l(688810),
+    u = l(97808),
+    o = l(688810),
     d = l(601255),
     c = l(562819),
     g = l(674658),
@@ -22,12 +22,14 @@ var t = l(627968),
     k = l(486020),
     y = l(515718),
     j = l(195292);
-let N = (e) => null != e.asset && "" !== e.asset;
+function N(e) {
+    return null != e.asset && "" !== e.asset;
+}
 var E = l(375708),
     w = l(209150),
     S = l(970389);
 let P = s._3.SIZE_72,
-    R = m.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu;
+    R = m.Ay.getEnableHardwareAcceleration() ? u.Js : u.eu;
 function M(e) {
     let {
             user: n,
@@ -35,8 +37,8 @@ function M(e) {
             isEmpty: a,
             isPreviewingMainProfileFallback: i,
             hasPendingChange: s,
-            avatarDecorationPreview: o,
-            isInteracting: u,
+            avatarDecorationPreview: u,
+            isInteracting: o,
             disabled: d,
         } = e,
         g = (function (e) {
@@ -54,9 +56,9 @@ function M(e) {
                     },
                     [n],
                 ),
-                o = (0, j.A)({ enabled: l, isInteracting: t, items: i, preload: s });
-            return null != o ? { asset: o.asset, skuId: o.skuId } : null;
-        })({ size: P, enabled: a && !i && !d, isInteracting: u }),
+                u = (0, j.A)({ enabled: l, isInteracting: t, items: i, preload: s });
+            return null != u ? { asset: u.asset, skuId: u.skuId } : null;
+        })({ size: P, enabled: a && !i && !d, isInteracting: o }),
         v = null != g,
         h = v ? "placeholder" : i ? "fallback" : "default",
         {
@@ -68,10 +70,10 @@ function M(e) {
             guildId: l,
             size: P,
             showPending: !0,
-            avatarDecorationOverride: v ? g : s ? o : void 0,
-            animateOnHover: !u,
+            avatarDecorationOverride: v ? g : s ? u : void 0,
+            animateOnHover: !o,
         }),
-        I = "default" === h && null != f && u;
+        I = "default" === h && null != f && o;
     return (0, t.jsx)(R, {
         className: r()({ [w.yT]: null == f, [S.O]: "placeholder" === h }),
         src: I ? m : p,
@@ -83,8 +85,8 @@ function M(e) {
 }
 function D(e) {
     let { user: n, guildId: l, disabled: a, errorMessageId: r } = e,
-        { analyticsLocations: s } = (0, u.Ay)(),
-        o = (0, i.bG)([f.A], () => (null != l ? f.A.getGuild(l) : null)),
+        { analyticsLocations: s } = (0, o.Ay)(),
+        u = (0, i.bG)([f.A], () => (null != l ? f.A.getGuild(l) : null)),
         m = null != l,
         b = (0, h.a4)({ user: n }),
         x = (0, h.a4)({ user: n, guildId: l ?? void 0 }),
@@ -107,7 +109,9 @@ function D(e) {
     return (0, t.jsx)(I.V, {
         affordance: k && !y ? "add" : P,
         variant: "square",
-        onClick: () => (0, c.L)({ analyticsLocations: s, guild: o ?? void 0, stackingBehavior: "stack" }),
+        onClick: function () {
+            return (0, c.L)({ analyticsLocations: s, guild: u ?? void 0, stackingBehavior: "stack" });
+        },
         accessibleLabel: E.intl.string(E.t["7v0T9P"]),
         accessibleValue: (function (e) {
             let { avatarDecorationPreview: n, productName: l, hasPendingSelection: t } = e;

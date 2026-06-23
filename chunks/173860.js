@@ -91,6 +91,9 @@ class p extends r.PureComponent {
             o = null,
             l = null,
             u = [];
+        function c(e) {
+            null == o && r(e, s, u) && (o = e), null == l && i(e, s, u) && (l = e);
+        }
         e.forEach((e) => {
             "string" == typeof e
                 ? u.push(e)
@@ -100,10 +103,7 @@ class p extends r.PureComponent {
                       : u.push(e.guildIds)
                   : u.push(e.guildIds[0]);
         });
-        let c = (e) => {
-                null == o && r(e, s, u) && (o = e), null == l && i(e, s, u) && (l = e);
-            },
-            d = s ? u.length - 1 : 0,
+        let d = s ? u.length - 1 : 0,
             _ = u[d];
         for (; null != _; ) {
             if ("string" == typeof _) {

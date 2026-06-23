@@ -1,4 +1,4 @@
-n.d(i, { default: () => E }), n(667532);
+n.d(e, { default: () => E }), n(667532);
 var t = n(627968);
 n(64700);
 var s = n(562708),
@@ -13,70 +13,70 @@ var s = n(562708),
     g = n(90386),
     m = n(64175),
     N = n(652215),
-    A = n(375708),
-    f = n(131678);
-function E(e) {
-    var i, n;
+    f = n(375708),
+    A = n(131678);
+function E(i) {
+    var e, n;
     let E,
         h,
-        { channelId: p, blockedUserIds: C, ignoredUserIds: I, transitionState: O, onClose: L, onJoin: x } = e,
+        { channelId: p, blockedUserIds: C, ignoredUserIds: I, transitionState: O, onClose: L, onJoin: x } = i,
         k = Array.from(C)
-            .map((e) => d.default.getUser(e))
-            .filter((e) => null !== e),
+            .map((i) => d.default.getUser(i))
+            .filter((i) => null !== i),
         T = Array.from(I)
-            .map((e) => d.default.getUser(e))
-            .filter((e) => null !== e);
+            .map((i) => d.default.getUser(i))
+            .filter((i) => null !== i);
     return 0 === k.length && 0 === T.length
         ? null
         : (0, t.jsx)(u.A, {
-              headerText: A.intl.string(A.t.zPUmzZ),
+              headerText: f.intl.string(f.t.zPUmzZ),
               descriptionText:
-                  ((i = C.size),
+                  ((e = C.size),
                   (n = I.size),
-                  (E = i > 0),
+                  (E = e > 0),
                   (h = n > 0),
                   E && h
-                      ? A.intl.string(A.t["X/iIjg"])
+                      ? f.intl.string(f.t["X/iIjg"])
                       : E
-                        ? A.intl.formatToPlainString(A.t.WgQ12s, { n: i })
+                        ? f.intl.formatToPlainString(f.t.WgQ12s, { n: e })
                         : h
-                          ? A.intl.formatToPlainString(A.t.bwibp1, { n: n })
+                          ? f.intl.formatToPlainString(f.t.bwibp1, { n: n })
                           : null),
-              infoRows: ((e) => {
-                  let { channelId: i, blockedUsers: n, ignoredUsers: s } = e,
-                      d = _.A.getChannel(i),
+              infoRows: (function (i) {
+                  let { channelId: e, blockedUsers: n, ignoredUsers: s } = i,
+                      d = _.A.getChannel(e),
                       o = n.length > 0,
                       c = s.length > 0,
                       u = [
                           {
-                              icon: (0, t.jsx)("div", { className: f.Kk, children: (0, t.jsx)(r.i, {}) }),
-                              text: A.intl.string(A.t["7jN3FC"]),
-                              className: f.nM,
+                              icon: (0, t.jsx)("div", { className: A.Kk, children: (0, t.jsx)(r.i, {}) }),
+                              text: f.intl.string(f.t["7jN3FC"]),
+                              className: A.nM,
                           },
                       ];
                   if (o && c) {
-                      let e = [...n, ...s],
-                          r = e.slice(0, 2).map((e) => e.id);
+                      let i = [...n, ...s],
+                          r = i.slice(0, 2).map((i) => i.id);
                       u.unshift({
                           icon: (0, t.jsx)("div", {
-                              className: f.Kk,
+                              className: A.Kk,
                               children: (0, t.jsx)(l.A, { recipients: r, size: a._3.SIZE_32 }),
                           }),
-                          text: (0, g.T)(r, e.length, d?.guild_id, i),
-                          className: f.nM,
+                          text: (0, g.T)(r, i.length, d?.guild_id, e),
+                          className: A.nM,
                       });
                   } else {
-                      let e = o ? n.slice(0, 2).map((e) => e.id) : s.slice(0, 2).map((e) => e.id),
+                      let i = o ? n.slice(0, 2).map((i) => i.id) : s.slice(0, 2).map((i) => i.id),
                           r = o ? n.length : s.length;
                       u.unshift({
-                          icon: (0, t.jsx)("div", { className: f.Kk, children: (0, g.I)(e, d?.guild_id) }),
-                          text: (0, g.T)(e, r, d?.guild_id, i),
-                          className: f.nM,
+                          icon: (0, t.jsx)("div", { className: A.Kk, children: (0, g.I)(i, d?.guild_id) }),
+                          text: (0, g.T)(i, r, d?.guild_id, e),
+                          className: A.nM,
                       });
                   }
                   return u;
               })({ channelId: p, blockedUsers: k, ignoredUsers: T }),
-              onDismissAndStay: () => {
+              onDismissAndStay: function () {
                   x(),
                       L(),
                       (0, c.Cs)(new Set([...C, ...I])),
@@ -88,7 +88,7 @@ function E(e) {
                           warning_surface: m.gD.PRE_JOIN_MODAL,
                       });
               },
-              onDismissAndLeave: () => {
+              onDismissAndLeave: function () {
                   L(),
                       o.default.track(N.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                           action: m.Qi.CLICK_TO_LEAVE,
@@ -98,8 +98,8 @@ function E(e) {
                           warning_surface: m.gD.PRE_JOIN_MODAL,
                       });
               },
-              leaveButtonText: A.intl.string(A.t.rOXspL),
-              stayButtonText: A.intl.string(A.t.VJlc0S),
+              leaveButtonText: f.intl.string(f.t.rOXspL),
+              stayButtonText: f.intl.string(f.t.VJlc0S),
               transitionState: O,
               onClose: L,
               impression: {

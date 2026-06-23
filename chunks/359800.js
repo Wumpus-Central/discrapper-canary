@@ -38,22 +38,22 @@ function h(e, t) {
     return (
         r.useEffect(() => {
             if (p && !1 === g && !0 === t) {
-                if (((0, s.closeModal)(_), E(!1), !f)) return;
-                let e = () => {
+                function e() {
                     (0, a.P0)({
                         id: "account-linked-toast",
                         message: d.intl.string(c.default.uG6teD),
                         type: o.Ck.SUCCESS,
                     });
-                };
-                if ("visible" === document.visibilityState) e();
-                else {
-                    let t = () => {
-                        "visible" === document.visibilityState &&
-                            (e(), document.removeEventListener("visibilitychange", t));
-                    };
-                    document.addEventListener("visibilitychange", t);
                 }
+                (0, s.closeModal)(_),
+                    E(!1),
+                    f &&
+                        ("visible" === document.visibilityState
+                            ? e()
+                            : document.addEventListener("visibilitychange", function t() {
+                                  "visible" === document.visibilityState &&
+                                      (e(), document.removeEventListener("visibilitychange", t));
+                              }));
             }
         }, [p, t, g, f]),
         m

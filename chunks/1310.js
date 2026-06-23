@@ -288,7 +288,7 @@ function eU(e) {
         ],
     });
 }
-let eV = (e) => {
+function eV(e) {
     let {
             handleDone: t,
             modalState: n,
@@ -338,7 +338,7 @@ let eV = (e) => {
             onToggleRole: A,
         }),
     });
-};
+}
 var eO = n(747007),
     eD = n(503698),
     eL = n.n(eD),

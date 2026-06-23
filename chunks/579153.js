@@ -11,7 +11,7 @@ var l = t(627968),
     A = t(204651),
     h = t(806931),
     m = t(375708);
-let C = (e) => {
+let C = function (e) {
     let { channel: n, remoteMode: t = !1 } = e,
         { parentAnalyticsLocation: C } = (0, r.Ay)(),
         E = i.useRef(null);

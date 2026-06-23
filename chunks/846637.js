@@ -1,22 +1,22 @@
-i.d(e, { default: () => d });
-var s = i(627968);
-i(64700);
-var l = i(189213),
-    n = i(71393);
+e.d(i, { default: () => c });
+var s = e(627968);
+e(64700);
+var l = e(189213),
+    n = e(71393);
 let a = "https://support.discord.com/hc/en-us/articles/6461420677527-Limited-Access-FAQ";
-var r = i(375708);
-let d = (t) => {
-    let { onClose: e, guildId: i } = t,
-        d = r.intl.format(r.t.ZqkXsC, { helpdeskArticle: a }),
-        c = n.A.getGuild(i);
+var r = e(375708);
+let c = function (t) {
+    let { onClose: i, guildId: e } = t,
+        c = r.intl.format(r.t.ZqkXsC, { helpdeskArticle: a }),
+        d = n.A.getGuild(e);
     return (
-        null != c && (d = r.intl.format(r.t.jn0Xyx, { guildName: c.name, helpdeskArticle: a })),
+        null != d && (c = r.intl.format(r.t.jn0Xyx, { guildName: d.name, helpdeskArticle: a })),
         (0, s.jsx)(l.Modal, {
             transitionState: t.transitionState,
-            onClose: e,
+            onClose: i,
             title: r.intl.string(r.t.kJwpBW),
-            subtitle: d,
-            actions: [{ text: r.intl.string(r.t.BddRzS), onClick: e }],
+            subtitle: c,
+            actions: [{ text: r.intl.string(r.t.BddRzS), onClick: i }],
         })
     );
 };

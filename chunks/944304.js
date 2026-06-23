@@ -24,7 +24,7 @@ var i = n(627968),
     C = n(788868),
     N = n(375708),
     v = n(703870);
-let R = (e) => {
+let R = function (e) {
     let {
             analyticsLocation: t,
             analyticsSourceLocation: n,
@@ -52,25 +52,25 @@ let R = (e) => {
     }, [Y]);
     let W = (0, T.D$)(A.A.boostSlots),
         K = null != O ? Math.max((0, T.Os)(s, O), 1) : 1,
-        $ = (0, T.Nc)({ fractionalState: H }),
-        z = async () => {
-            j(!0),
-                await (0, S.g)({
-                    analyticsLocations: F,
-                    analyticsLocation: t,
-                    analyticsSourceLocation: n,
-                    guild: s,
-                    numberOfBoostsToAdd: K,
-                    onClose: b,
-                    closeLayer: D,
-                    inPopout: V,
-                    applicationId: w,
-                    handleSubscribeModalClose: M,
-                    intent: k,
-                }),
-                j(!1);
-        },
-        q = I.A.getPremiumTypeSubscription(),
+        $ = (0, T.Nc)({ fractionalState: H });
+    async function z() {
+        j(!0),
+            await (0, S.g)({
+                analyticsLocations: F,
+                analyticsLocation: t,
+                analyticsSourceLocation: n,
+                guild: s,
+                numberOfBoostsToAdd: K,
+                onClose: b,
+                closeLayer: D,
+                inPopout: V,
+                applicationId: w,
+                handleSubscribeModalClose: M,
+                intent: k,
+            }),
+            j(!1);
+    }
+    let q = I.A.getPremiumTypeSubscription(),
         Z = (0, i.jsxs)("div", { className: v.x6, children: [x, R ?? N.intl.string(N.t.gKmQ1G)] }),
         X = !1;
     return ((X = null !== q && !(W.length > 0) && q?.isPausedOrPausePending && H === C.xc.NONE) &&

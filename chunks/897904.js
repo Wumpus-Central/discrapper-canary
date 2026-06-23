@@ -18,58 +18,50 @@ var r = n(503698),
     m = n(702361),
     g = n(575650),
     A = n(938430);
-let I = (e) => {
-        let { step: t, onClose: n } = e,
-            r = (0, c.A)(p.T);
-        return t === d.pn.CONFIRM || t === d.pn.BENEFITS
-            ? (0, i.jsx)("div", {})
-            : (0, i.jsxs)("div", {
-                  className: s()(m.N1, g.GI),
-                  children: [
-                      !r &&
-                          (0, i.jsx)("div", {
-                              className: m.oZ,
-                              "aria-hidden": "true",
-                              children: (0, i.jsx)("img", {
-                                  src: "/assets/6a6a49ffafe96618.svg",
-                                  alt: "",
-                                  className: m.F0,
-                              }),
+function I(e) {
+    let { step: t, onClose: n } = e,
+        r = (0, c.A)(p.T);
+    return t === d.pn.CONFIRM || t === d.pn.BENEFITS
+        ? (0, i.jsx)("div", {})
+        : (0, i.jsxs)("div", {
+              className: s()(m.N1, g.GI),
+              children: [
+                  !r &&
+                      (0, i.jsx)("div", {
+                          className: m.oZ,
+                          "aria-hidden": "true",
+                          children: (0, i.jsx)("img", {
+                              src: "/assets/6a6a49ffafe96618.svg",
+                              alt: "",
+                              className: m.F0,
                           }),
-                      (0, i.jsx)(a.D, {
-                          className: m.G3,
-                          onClick: () => n(),
-                          "aria-label": E.intl.string(E.t.cpT0Cq),
-                          children: (0, i.jsx)(o.P, { size: "md", color: "currentColor", className: m.ut }),
                       }),
-                  ],
-              });
-    },
-    T = (e) => {
-        let {
-            icon: t,
-            storeListingBenefits: n,
-            skuBenefits: r,
-            application: s,
-            title: a,
-            subtitle: o,
-            description: l,
-        } = e;
-        return null == s
-            ? null
-            : (0, i.jsx)("div", {
-                  className: m.RP,
-                  children: (0, i.jsxs)(f.$K, {
-                      children: [
-                          (0, i.jsx)(f.KF, { application: s, asset: t }),
-                          (0, i.jsx)(f.kj, { children: a }),
-                          (0, i.jsx)(f.ri, {}),
-                          (0, i.jsx)(f.Mx, { title: o, description: l }),
-                          (0, i.jsx)(f.iH, { applicationId: s.id, storeListingBenefits: n, skuBenefits: r }),
-                      ],
+                  (0, i.jsx)(a.D, {
+                      className: m.G3,
+                      onClick: () => n(),
+                      "aria-label": E.intl.string(E.t.cpT0Cq),
+                      children: (0, i.jsx)(o.P, { size: "md", color: "currentColor", className: m.ut }),
                   }),
-              });
-    };
+              ],
+          });
+}
+function T(e) {
+    let { icon: t, storeListingBenefits: n, skuBenefits: r, application: s, title: a, subtitle: o, description: l } = e;
+    return null == s
+        ? null
+        : (0, i.jsx)("div", {
+              className: m.RP,
+              children: (0, i.jsxs)(f.$K, {
+                  children: [
+                      (0, i.jsx)(f.KF, { application: s, asset: t }),
+                      (0, i.jsx)(f.kj, { children: a }),
+                      (0, i.jsx)(f.ri, {}),
+                      (0, i.jsx)(f.Mx, { title: o, description: l }),
+                      (0, i.jsx)(f.iH, { applicationId: s.id, storeListingBenefits: n, skuBenefits: r }),
+                  ],
+              }),
+          });
+}
 function S(e) {
     let { tierName: t, onConfirm: n, subscription: r } = e;
     return (0, i.jsxs)("div", {

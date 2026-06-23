@@ -19,19 +19,19 @@ let _ = new Map(),
     T = p,
     S = !1,
     y = {},
-    C = 0,
-    N = (e) => {
-        T = new Map([...(I = e).values()].map((e) => [e.storeListingId, e]));
-        let t = new Map((0, c.P_)(I, !0).map((e) => [e.skuId, e]));
-        E.forEach((e) => {
-            t.has(e.skuId) || t.set(e.skuId, e);
-        }),
-            (E = t),
-            (g = [...(m = new Map((0, c.P_)(I, !1).map((e) => [e.storeListingId, e]))).values()]);
-    },
-    v = () => {
-        (I = _), (E = h), (r = void 0), (S = !1), (A = {}), (i = void 0), (s = void 0), (y = {}), (C = 0);
-    };
+    C = 0;
+function N(e) {
+    T = new Map([...(I = e).values()].map((e) => [e.storeListingId, e]));
+    let t = new Map((0, c.P_)(I, !0).map((e) => [e.skuId, e]));
+    E.forEach((e) => {
+        t.has(e.skuId) || t.set(e.skuId, e);
+    }),
+        (E = t),
+        (g = [...(m = new Map((0, c.P_)(I, !1).map((e) => [e.storeListingId, e]))).values()]);
+}
+function v() {
+    (I = _), (E = h), (r = void 0), (S = !1), (A = {}), (i = void 0), (s = void 0), (y = {}), (C = 0);
+}
 class R extends o.Ay.Store {
     static displayName = "CollectiblesCategoryStore";
     initialize() {
@@ -91,10 +91,10 @@ class R extends o.Ay.Store {
     }
 }
 let O = new R(l.h, {
-    COLLECTIBLES_CATEGORIES_FETCH: (e) => {
+    COLLECTIBLES_CATEGORIES_FETCH: function (e) {
         (S = !0), (i = void 0), (s = void 0), (y = e.options);
     },
-    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: (e) => {
+    COLLECTIBLES_CATEGORIES_FETCH_SUCCESS: function (e) {
         let t =
             e.categories.collections.length > 0
                 ? e.categories.collections.map(d.A.fromStorefrontCollectionRecord)
@@ -110,15 +110,15 @@ let O = new R(l.h, {
         }
         (r = Date.now()), (S = !1), (i = void 0), (s = void 0);
     },
-    COLLECTIBLES_CATEGORIES_FETCH_FAILURE: (e) => {
+    COLLECTIBLES_CATEGORIES_FETCH_FAILURE: function (e) {
         let { error: t } = e;
         (I = _), (E = h), (S = !1), (A = {}), (i = t), (s = Date.now());
     },
-    COLLECTIBLES_PRODUCT_FETCH: (e) => {
+    COLLECTIBLES_PRODUCT_FETCH: function (e) {
         let { skuId: t, startedAt: n } = e;
         A[t] = { state: "fetching", startedAt: n };
     },
-    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: (e) => {
+    COLLECTIBLES_PRODUCT_FETCH_SUCCESS: function (e) {
         let { skuId: t, product: n, endedAt: i } = e,
             r = E.get(t);
         if (
@@ -134,16 +134,16 @@ let O = new R(l.h, {
         }
         E.set(t, n), (A[t] = { state: "success", startedAt: A[t]?.startedAt, endedAt: i });
     },
-    COLLECTIBLES_PRODUCT_FETCH_FAILURE: (e) => {
+    COLLECTIBLES_PRODUCT_FETCH_FAILURE: function (e) {
         let { skuId: t, error: n, endedAt: i } = e;
         A[t] = { state: "error", startedAt: A[t]?.startedAt, endedAt: i, error: n };
     },
-    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: (e) => {
+    COLLECTIBLES_SHOP_HOME_FETCH_SUCCESS: function (e) {
         if (0 === e.shopHome.categories.length) return;
         let t = new Map(e.shopHome.categories.map((e) => [e.skuId, e]));
         N(new Map([...I, ...t]));
     },
-    COLLECTIBLES_SKIP_NUM_CATEGORIES: (e) => {
+    COLLECTIBLES_SKIP_NUM_CATEGORIES: function (e) {
         C = e.skipNumCategories;
     },
     LOGOUT: v,

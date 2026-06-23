@@ -334,13 +334,13 @@ function w(e) {
             let [t, n] = (0, a.yK)([f.A], () => [f.A.getSounds(), f.A.getFavorites()]);
             return r.useMemo(() => {
                 let i = [],
-                    r = [...e, "0"],
-                    s = (e, r) => {
-                        for (let s of t.get(e)?.sort((e, t) => _.default.compare(e.soundId, t.soundId)) ?? []) {
-                            let e = n.has(s.soundId);
-                            ((e && r) || (!e && !r)) && s.available && i.push(s);
-                        }
-                    };
+                    r = [...e, "0"];
+                function s(e, r) {
+                    for (let s of t.get(e)?.sort((e, t) => _.default.compare(e.soundId, t.soundId)) ?? []) {
+                        let e = n.has(s.soundId);
+                        ((e && r) || (!e && !r)) && s.available && i.push(s);
+                    }
+                }
                 return r.forEach((e) => s(e, !0)), r.forEach((e) => s(e, !1)), i;
             }, [t, n, e]);
         })((0, m.Y)(n, !0)),

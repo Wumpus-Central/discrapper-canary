@@ -13,10 +13,10 @@ var i = n(17928),
 let h = {},
     f = 0,
     p = {},
-    E = {},
-    m = (e) => {
-        null != h[e] && delete h[e], f++;
-    };
+    E = {};
+function m(e) {
+    null != h[e] && delete h[e], f++;
+}
 function g(e) {
     let t,
         n,

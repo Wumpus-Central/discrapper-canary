@@ -159,7 +159,7 @@ var er = n(279208),
     e_ = n(958590),
     eh = n(584777),
     ef = n(763827),
-    ep = n(222823),
+    ep = n(568548),
     eE = n(994500),
     em = n(351906),
     eg = n(174459),
@@ -202,10 +202,10 @@ function eG(e) {
     return (0, i.jsx)(p.D, {
         id: `user-row-${n}`,
         className: eR()(eU.Se, { [eU.r9]: c }),
-        onClick: () => {
+        onClick: function () {
             d?.(t.id, n);
         },
-        onMouseEnter: () => {
+        onMouseEnter: function () {
             _?.(n);
         },
         ...m,
@@ -323,56 +323,52 @@ function ez(e) {
 function eq() {
     (0, _.P0)((0, h.o)(en.intl.string(en.t.fEptJP), f.Ck.FAILURE));
 }
-let eZ = (e) => {
-        let { channel: t, onClose: n } = e,
-            r = (0, K.Ay)(t) ?? "",
-            s = (0, u.bG)([ep.Ay], () => ep.Ay.lastMessageId(t.id) ?? t.id);
-        return (0, i.jsx)(p.D, {
-            onClick: () => {
-                (0, ea.uh)(et.ME, t.id), n();
-            },
-            children: (0, i.jsxs)("div", {
-                className: eH.us,
-                children: [
-                    (0, i.jsx)(E.eu, { src: (0, W.Y)(t), size: m._3.SIZE_24, "aria-label": r }),
-                    (0, i.jsx)("span", { className: eH.J2, children: r }),
-                    (0, i.jsx)("span", { className: eH.Pd, children: o()(eS.default.extractTimestamp(s)).fromNow() }),
-                ],
-            }),
-        });
-    },
-    eX = (e) => {
-        let { onConfirm: t, channelIds: n, ...r } = e,
-            s = (0, u.yK)([ec.A], () => Array.from(n).map(ec.A.getChannel), [n]);
-        return (0, i.jsx)(l.Modal, {
-            title: en.intl.string(en.t.uFHxNd),
-            subtitle: en.intl.string(en.t.rIsSqE),
-            actions: [
-                { variant: "secondary", text: en.intl.string(en.t["ETE/oC"]), onClick: r.onClose },
-                {
-                    variant: "primary",
-                    text: en.intl.string(en.t.KCNNJu),
-                    onClick: () => {
-                        t(), r.onClose();
-                    },
-                },
+function eZ(e) {
+    let { channel: t, onClose: n } = e,
+        r = (0, K.Ay)(t) ?? "",
+        s = (0, u.bG)([ep.Ay], () => ep.Ay.lastMessageId(t.id) ?? t.id);
+    return (0, i.jsx)(p.D, {
+        onClick: () => {
+            (0, ea.uh)(et.ME, t.id), n();
+        },
+        children: (0, i.jsxs)("div", {
+            className: eH.us,
+            children: [
+                (0, i.jsx)(E.eu, { src: (0, W.Y)(t), size: m._3.SIZE_24, "aria-label": r }),
+                (0, i.jsx)("span", { className: eH.J2, children: r }),
+                (0, i.jsx)("span", { className: eH.Pd, children: o()(eS.default.extractTimestamp(s)).fromNow() }),
             ],
-            input: (0, i.jsx)(g.E, {
-                variant: "text-md/normal",
-                className: eH.Jv,
-                children: en.intl.string(en.t.cjE7wH),
-            }),
-            ...r,
-            children: s
-                .filter(eT.Vq)
-                .sort((e, t) => {
-                    let n = e.lastMessageId ?? e.id,
-                        i = t.lastMessageId ?? t.id;
-                    return eS.default.compare(i, n);
-                })
-                .map((e) => (0, i.jsx)(eZ, { onClose: r.onClose, channel: e }, e.id)),
-        });
-    };
+        }),
+    });
+}
+function eX(e) {
+    let { onConfirm: t, channelIds: n, ...r } = e,
+        s = (0, u.yK)([ec.A], () => Array.from(n).map(ec.A.getChannel), [n]);
+    return (0, i.jsx)(l.Modal, {
+        title: en.intl.string(en.t.uFHxNd),
+        subtitle: en.intl.string(en.t.rIsSqE),
+        actions: [
+            { variant: "secondary", text: en.intl.string(en.t["ETE/oC"]), onClick: r.onClose },
+            {
+                variant: "primary",
+                text: en.intl.string(en.t.KCNNJu),
+                onClick: () => {
+                    t(), r.onClose();
+                },
+            },
+        ],
+        input: (0, i.jsx)(g.E, { variant: "text-md/normal", className: eH.Jv, children: en.intl.string(en.t.cjE7wH) }),
+        ...r,
+        children: s
+            .filter(eT.Vq)
+            .sort((e, t) => {
+                let n = e.lastMessageId ?? e.id,
+                    i = t.lastMessageId ?? t.id;
+                return eS.default.compare(i, n);
+            })
+            .map((e) => (0, i.jsx)(eZ, { onClose: r.onClose, channel: e }, e.id)),
+    });
+}
 function eQ(e) {
     let { targetElementRef: t } = e,
         [n, r] = (0, z.kn)([c.M.INVITE_NONFRIENDS_TO_GDM_COACHMARK]);

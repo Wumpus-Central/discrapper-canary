@@ -171,7 +171,7 @@ function D(e) {
     return (0, i.jsx)(C.W, {
         "data-menu-needs-migration": !0,
         navId: "members-table-join-method-menu",
-        onClose: () => {
+        onClose: function () {
             o();
         },
         "aria-label": P.intl.string(P.t["u/7Rdc"]),

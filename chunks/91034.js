@@ -5,7 +5,7 @@ n(64700);
 var r = n(661531),
     s = n(260612),
     a = n(953727);
-let o = (e) => {
+function o(e) {
     let {
             size: t = "md",
             width: n,
@@ -31,4 +31,4 @@ let o = (e) => {
             className: u,
         }),
     });
-};
+}

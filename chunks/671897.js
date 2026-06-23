@@ -215,43 +215,43 @@ function J(e) {
                     let e = 0 === k ? 0.3 : k;
                     eR(e), ec(!1), eu(e);
                 } else eu(ef), eR(0), ec(!0);
-        }, [t, ef, eR, k, ec, eu]),
-        eb = () => {
-            em(!0), ed(!0);
+        }, [t, ef, eR, k, ec, eu]);
+    function eb() {
+        em(!0), ed(!0);
+    }
+    function eD() {
+        em(!1), ed(!1);
+    }
+    let eL = r.useCallback(
+        (e) => {
+            if (!(e.metaKey || ((0, l.vq)(e.target) && (0, l.Cw)(e.target))))
+                switch (e.key) {
+                    case d.TJ.PLAYBACK:
+                        e.stopPropagation(), Q();
+                        break;
+                    case d.TJ.SPACE:
+                        e.stopPropagation(), eh || (e.preventDefault(), Q());
+                        break;
+                    case d.TJ.SEEK_BACK:
+                    case d.TJ.SEEK_BACK_ALT:
+                        e.stopPropagation(), er();
+                        break;
+                    case d.TJ.SEEK_FORWARD:
+                    case d.TJ.SEEK_FORWARD_ALT:
+                        e.stopPropagation(), es();
+                        break;
+                    case d.TJ.CAPTION:
+                        e.stopPropagation(), y || et();
+                        break;
+                    case d.TJ.FULLSCREEN:
+                        e.stopPropagation(), v || ei();
+                        break;
+                    case d.TJ.MUTE:
+                        e.stopPropagation(), eO();
+                }
         },
-        eD = () => {
-            em(!1), ed(!1);
-        },
-        eL = r.useCallback(
-            (e) => {
-                if (!(e.metaKey || ((0, l.vq)(e.target) && (0, l.Cw)(e.target))))
-                    switch (e.key) {
-                        case d.TJ.PLAYBACK:
-                            e.stopPropagation(), Q();
-                            break;
-                        case d.TJ.SPACE:
-                            e.stopPropagation(), eh || (e.preventDefault(), Q());
-                            break;
-                        case d.TJ.SEEK_BACK:
-                        case d.TJ.SEEK_BACK_ALT:
-                            e.stopPropagation(), er();
-                            break;
-                        case d.TJ.SEEK_FORWARD:
-                        case d.TJ.SEEK_FORWARD_ALT:
-                            e.stopPropagation(), es();
-                            break;
-                        case d.TJ.CAPTION:
-                            e.stopPropagation(), y || et();
-                            break;
-                        case d.TJ.FULLSCREEN:
-                            e.stopPropagation(), v || ei();
-                            break;
-                        case d.TJ.MUTE:
-                            e.stopPropagation(), eO();
-                    }
-            },
-            [et, ei, Q, er, es, eO, y, v, eh],
-        );
+        [et, ei, Q, er, es, eO, y, v, eh],
+    );
     r.useEffect(() => {
         P && null != eS.current && eS.current.focus();
     }, [P]),
@@ -364,13 +364,13 @@ function J(e) {
                                     keyboardStep: 0.1,
                                     minValue: 0,
                                     maxValue: 1,
-                                    onValueChange: (e) => {
+                                    onValueChange: function (e) {
                                         eR(e),
                                             eu(e),
                                             eg && (eA(!1), el(!1)),
                                             F && e > 0 ? ec(!1) : F || 0 !== e || ec(!0);
                                     },
-                                    asValueChanges: (e) => {
+                                    asValueChanges: function (e) {
                                         eR(e), eg || (eA(!0), el(!0));
                                     },
                                     fillStyles: { backgroundColor: c.A.colors.WHITE.css },

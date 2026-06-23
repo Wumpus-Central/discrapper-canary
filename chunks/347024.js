@@ -44,29 +44,27 @@ function v(e) {
     let { onChange: t } = e,
         i = null,
         r = !1,
-        s = !1,
-        a = (e) => {
-            d(e)
-                .then((e) => {
-                    null != e && o();
-                })
-                .catch(() => {});
-        },
-        o = () => {
-            s ||
-                ((s = !0),
-                queueMicrotask(() => {
-                    s = !1;
-                    try {
-                        p.o.withoutSaving(e, () => {
-                            g.VW.withoutNormalizing(e, () => R(e, a));
-                        }),
-                            (i = g.VW.richValue(e));
-                    } catch (e) {
-                        T.warn("error applying arborium highlighting to editor", e);
-                    }
-                }));
-        };
+        s = !1;
+    function a(t) {
+        d(t)
+            .then((t) => {
+                null != t &&
+                    (s ||
+                        ((s = !0),
+                        queueMicrotask(() => {
+                            s = !1;
+                            try {
+                                p.o.withoutSaving(e, () => {
+                                    g.VW.withoutNormalizing(e, () => R(e, a));
+                                }),
+                                    (i = g.VW.richValue(e));
+                            } catch (e) {
+                                T.warn("error applying arborium highlighting to editor", e);
+                            }
+                        })));
+            })
+            .catch(() => {});
+    }
     return (
         (e.onChange = () => {
             g.VW.richValue(e) !== i &&

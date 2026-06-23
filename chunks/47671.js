@@ -24,34 +24,34 @@ let y = !0,
 function N() {
     y && (i = void 0), (C = !1);
 }
-let v = () => {
-        let e = !g.Ay.canUseClientThemes(m.default.getCurrentUser());
-        if (e === y) return !1;
-        y = e;
-    },
-    R = () => {
-        if (!u.A.shouldSync("appearance")) return !1;
-        let e = h.eh.getSetting().backgroundGradientPresetId;
-        if (null == e) {
-            if (null == i) return !1;
-            i = void 0;
-        } else {
-            let t = T.ag[e];
-            if (t === i) return !1;
-            i = t;
-        }
-    },
-    O = () => {
-        if (!u.A.shouldSync("appearance")) return !1;
-        let e = h.eh.getSetting().backgroundGradientPresetId;
-        if ((_.Ay.useSystemTheme === S.Q_.ON && null != e && (0, c.k7)(S.Q_.OFF), null == e)) {
-            null != i && (i = void 0);
-            return;
-        }
-        let t = T.ag[e],
-            n = i?.id === t?.id;
-        null == t || n || (i = t);
-    };
+function v() {
+    let e = !g.Ay.canUseClientThemes(m.default.getCurrentUser());
+    if (e === y) return !1;
+    y = e;
+}
+function R() {
+    if (!u.A.shouldSync("appearance")) return !1;
+    let e = h.eh.getSetting().backgroundGradientPresetId;
+    if (null == e) {
+        if (null == i) return !1;
+        i = void 0;
+    } else {
+        let t = T.ag[e];
+        if (t === i) return !1;
+        i = t;
+    }
+}
+function O() {
+    if (!u.A.shouldSync("appearance")) return !1;
+    let e = h.eh.getSetting().backgroundGradientPresetId;
+    if ((_.Ay.useSystemTheme === S.Q_.ON && null != e && (0, c.k7)(S.Q_.OFF), null == e)) {
+        null != i && (i = void 0);
+        return;
+    }
+    let t = T.ag[e],
+        n = i?.id === t?.id;
+    null == t || n || (i = t);
+}
 class b extends s.Ay.PersistedStore {
     static displayName = "ClientThemesBackgroundStore";
     static persistKey = "ClientThemesBackgroundStore";
@@ -82,7 +82,7 @@ class b extends s.Ay.PersistedStore {
     }
 }
 let D = new b(o.h, {
-    UPDATE_BACKGROUND_GRADIENT_PRESET: (e) => {
+    UPDATE_BACKGROUND_GRADIENT_PRESET: function (e) {
         let { presetId: t } = e;
         if (null == t) {
             i = void 0;
@@ -90,7 +90,7 @@ let D = new b(o.h, {
         }
         i = T.ag[t];
     },
-    UPDATE_MOBILE_PENDING_THEME_INDEX: (e) => {
+    UPDATE_MOBILE_PENDING_THEME_INDEX: function (e) {
         let { mobileThemesIndex: t } = e;
         if (null == t) {
             r = void 0;
@@ -98,11 +98,11 @@ let D = new b(o.h, {
         }
         r = t;
     },
-    RESET_PREVIEW_CLIENT_THEME: (e) => {
+    RESET_PREVIEW_CLIENT_THEME: function (e) {
         i = void 0;
     },
     CLIENT_THEMES_EDITOR_CLOSE: N,
-    CHANNEL_SELECT: (e) => {
+    CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e,
             i = m.default.getCurrentUser();
         if (null == t || null == n || (0, l.k8)(a.M.CLIENT_THEMES_COACHMARK) || !(0, A.G2)(i)) return;

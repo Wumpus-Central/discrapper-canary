@@ -263,9 +263,9 @@ function K() {
                             e.add(t.id), d.A.getGame(t.id)?.linkedApplications?.forEach((t) => e.add(t.id));
                         })),
                     e),
-                g = l.A.getUnfilteredActivities(!0).filter(
-                    (e) => e.type === u.$pd.PLAYING && null != e.application_id && E.has(e.application_id),
-                );
+                g = l.A.getUnfilteredActivities(!0).filter(function (e) {
+                    return e.type === u.$pd.PLAYING && null != e.application_id && E.has(e.application_id);
+                });
             return {
                 sourceName: a,
                 sourceApplicationId: s,
@@ -278,8 +278,9 @@ function K() {
                             party: null != e.party ? { id: e.party.id, size: e.party.size } : void 0,
                         };
                 })(
-                    g.find((e) => (null != e.state && "" !== e.state) || (null != e.details && "" !== e.details)) ??
-                        g[0],
+                    g.find(function (e) {
+                        return (null != e.state && "" !== e.state) || (null != e.details && "" !== e.details);
+                    }) ?? g[0],
                 ),
                 isVoiceOnly: f,
             };

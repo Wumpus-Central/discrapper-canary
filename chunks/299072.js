@@ -36,12 +36,12 @@ var h = n(60317),
     g = n(652215),
     p = n(272625),
     f = (((i = {})[(i.NORMAL = 20)] = "NORMAL"), (i[(i.LARGE = 32)] = "LARGE"), i);
-let A = async (e) => {
+async function A(e) {
     let { effect: t } = e,
         n = await m(t.channelId, t.messageId ?? g.dJq, t.emoji.name),
         i = await (0, h.fz)(`${t.channelId}:${t.messageId}:${t.emoji.name}`, t.url, n, t.color);
     return (i.assets[0].p = t.url), i;
-};
+}
 function E(e) {
     let { className: t, effect: i, onComplete: r, emojiSize: c = 20 } = e,
         d = a.useRef(null),

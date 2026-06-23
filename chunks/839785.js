@@ -1,61 +1,61 @@
-i.d(e, { default: () => R });
-var s = i(627968),
-    n = i(64700),
-    r = i(189213),
-    l = i(17928),
-    o = i(349288),
-    a = i(285796),
-    c = i(661531),
-    d = i(834730),
-    u = i(180170),
-    E = i(86070),
-    C = i(517164),
-    A = i(780964),
-    h = i(766075),
-    x = i(495544),
-    _ = i(591179),
-    m = i(975732),
-    p = i(353394),
-    y = i(754495),
-    I = i(939075),
-    f = i(375708),
-    k = i(568802);
+e.d(i, { default: () => R });
+var n = e(627968),
+    s = e(64700),
+    r = e(189213),
+    l = e(17928),
+    o = e(349288),
+    a = e(285796),
+    c = e(661531),
+    d = e(834730),
+    u = e(180170),
+    E = e(86070),
+    C = e(517164),
+    A = e(780964),
+    f = e(766075),
+    h = e(495544),
+    x = e(591179),
+    _ = e(975732),
+    m = e(353394),
+    p = e(754495),
+    y = e(939075),
+    I = e(375708),
+    k = e(568802);
 function R(t) {
-    let { user: e, entry: i, transitionState: R, onAction: S, onClose: b, onOpenGameSettings: g } = t,
+    let { user: i, entry: e, transitionState: R, onAction: S, onClose: b, onOpenGameSettings: g } = t,
         [L, O] = (0, l.yK)([C.A], () => [C.A.isDeletingEntryHistory, C.A.deleteOutboxEntryError]),
-        j = (0, _.X)("UserProfileActivityDeleteHistoryModal");
+        j = (0, x.X)("UserProfileActivityDeleteHistoryModal");
     return (
-        n.useEffect(() => u.fq, []),
-        (0, s.jsxs)(r.Modal, {
-            title: (0, y.W)(i),
-            subtitle: f.intl.format(f.t.KV72oe, {
-                settingsHook: (t, e) => {
-                    let n = (0, I.y)({ entry: i, onOpenGameSettings: g });
-                    return (0, s.jsx)(
+        s.useEffect(() => u.fq, []),
+        (0, n.jsxs)(r.Modal, {
+            title: (0, p.W)(e),
+            subtitle: I.intl.format(I.t.KV72oe, {
+                settingsHook: function (t, i) {
+                    let s = (0, y.y)({ entry: e, onOpenGameSettings: g });
+                    return (0, n.jsx)(
                         o.Anchor,
                         {
                             onClick: () => {
                                 S?.({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
-                                    null != n
-                                        ? n()
+                                    null != s
+                                        ? s()
                                         : j
-                                          ? (0, m.openUserProfileModal)({ userId: x.default.getId() })
-                                          : (0, h.openUserSettings)(A.X.PROFILE_PANEL),
+                                          ? (0, _.openUserProfileModal)({ userId: h.default.getId() })
+                                          : (0, f.openUserSettings)(A.X.PROFILE_PANEL),
                                     b();
                             },
                             children: t,
                         },
-                        e,
+                        i,
                     );
                 },
             }),
             size: "sm",
             actions: [
-                { text: f.intl.string(f.t["ETE/oC"]), onClick: b, variant: "secondary", size: "sm" },
+                { text: I.intl.string(I.t["ETE/oC"]), onClick: b, variant: "secondary", size: "sm" },
                 {
-                    text: null != O ? f.intl.string(f.t["5911Lb"]) : f.intl.string(f.t.VkKicb),
-                    onClick: () => {
-                        S?.({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, E.FO)(i, e.id, b);
+                    text: null != O ? I.intl.string(I.t["5911Lb"]) : I.intl.string(I.t.VkKicb),
+                    onClick: function () {
+                        S?.({ action: "PRESS_CLEAR_HISTORY_BUTTON" }), (0, E.FO)(e, i.id, b);
                     },
                     disabled: L,
                     variant: "critical-primary",
@@ -66,15 +66,15 @@ function R(t) {
             transitionState: R,
             children: [
                 null != O
-                    ? (0, s.jsxs)("div", {
+                    ? (0, n.jsxs)("div", {
                           className: k.z3,
                           children: [
-                              (0, s.jsx)(a.a, { color: c.A.colors.ICON_FEEDBACK_CRITICAL }),
-                              (0, s.jsx)(d.E, { variant: "text-sm/medium", children: f.intl.string(f.t.FMbL3s) }),
+                              (0, n.jsx)(a.a, { color: c.A.colors.ICON_FEEDBACK_CRITICAL }),
+                              (0, n.jsx)(d.E, { variant: "text-sm/medium", children: I.intl.string(I.t.FMbL3s) }),
                           ],
                       })
                     : null,
-                (0, s.jsx)(p.A, { user: e, entry: i, className: k.Nr, hideContextMenu: !0 }),
+                (0, n.jsx)(m.A, { user: i, entry: e, className: k.Nr, hideContextMenu: !0 }),
             ],
         })
     );

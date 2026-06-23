@@ -1,38 +1,38 @@
-n.d(e, { ParagraphFormFieldModal: () => g, TextInputFormFieldModal: () => p });
-var r = n(627968),
-    i = n(64700),
-    l = n(292666),
-    s = n(913122),
-    a = n(513461),
-    o = n(242273),
-    u = n(260197),
-    c = n(375708);
+e.d(n, { ParagraphFormFieldModal: () => g, TextInputFormFieldModal: () => p });
+var r = e(627968),
+    i = e(64700),
+    l = e(292666),
+    s = e(913122),
+    a = e(513461),
+    o = e(242273),
+    u = e(260197),
+    c = e(375708);
 function d(t) {
-    let { type: e, title: n, description: a, field: d, onSave: p, onClose: g } = t,
+    let { type: n, title: e, description: a, field: d, onSave: p, onClose: g } = t,
         [h, y] = i.useState(d?.label ?? ""),
-        [T, f] = i.useState(null),
-        w = async () => {
-            null != T && f(null);
-            let t = h.trim();
-            if ("" === t) return void f(c.intl.string(c.t["G+TI44"]));
-            try {
-                await p({ field_type: e, label: t, required: !0 }), g();
-            } catch (t) {
-                f(new s.LG(t).getAnyErrorMessage());
-            }
-        };
+        [f, T] = i.useState(null);
+    async function w() {
+        null != f && T(null);
+        let t = h.trim();
+        if ("" === t) return void T(c.intl.string(c.t["G+TI44"]));
+        try {
+            await p({ field_type: n, label: t, required: !0 }), g();
+        } catch (t) {
+            T(new s.LG(t).getAnyErrorMessage());
+        }
+    }
     return (0, r.jsx)(o.A, {
         ...t,
-        errorText: T,
-        title: n,
+        errorText: f,
+        title: e,
         description: a,
         onConfirm: w,
         onCancel: g,
         children: (0, r.jsx)(l.k, {
-            onChange: (t) => {
-                null != T && f(null);
-                let e = t.replace(/(\r\n|\n|\r)/g, " ");
-                e.length > u.Ty && (e = e.slice(0, u.Ty)), y(e);
+            onChange: function (t) {
+                null != f && T(null);
+                let n = t.replace(/(\r\n|\n|\r)/g, " ");
+                n.length > u.Ty && (n = n.slice(0, u.Ty)), y(n);
             },
             placeholder: c.intl.string(c.t.fqVmbL),
             value: h,

@@ -1,4 +1,4 @@
-n.d(t, { $s: () => p, J_: () => x, P9: () => g, cM: () => f, dX: () => m, nK: () => E, pZ: () => N, z6: () => C });
+n.d(t, { $s: () => f, J_: () => x, P9: () => g, cM: () => p, dX: () => m, nK: () => E, pZ: () => N, z6: () => C });
 var l,
     i = n(64700),
     s = n(562708),
@@ -68,47 +68,43 @@ function m(e) {
         u
     );
 }
-let p = (e) => {
+function f(e) {
     let { guildId: t, channelId: n, contentExists: l } = e;
     (0, a.A)({
         name: s.ImpressionNames.GUILD_HANGOUT_WINDOW_MODAL,
         type: s.ImpressionTypes.MODAL,
         properties: { guild_id: t, channel_id: n, num_voice_users: A(n), content_exists: l },
     });
-};
-var f =
+}
+var p =
     (((l = {}).GIF_CATEGORY = "gif-category"),
     (l.GIF_CUSTOM_SEARCH = "gif-custom-search"),
     (l.RECENT_IMAGE = "recent-image"),
     (l.PRESET_GIF = "preset-gif"),
     l);
-let C = (e) => {
-        let { guildId: t, channelId: n, contentType: l, gifCategoryType: i } = e,
-            s = "gif-category" === l ? (0, u.Er)(i) : null;
-        c.default.track(h.HAw.HANGOUT_WINDOW_CONTENT_SET, {
-            guild_id: t,
-            channel_id: n,
-            content_type: l,
-            num_voice_users: A(n),
-            media_session_id: o.A.getMediaSessionId(),
-            gif_category_type: s,
-        });
-    },
-    E = (e) => {
-        let { guildId: t, channelId: n } = e;
-        c.default.track(h.HAw.HANGOUT_WINDOW_CONTENT_CLEARED, { guild_id: t, channel_id: n });
-    },
-    x = (e) => {
-        let { guildId: t, channelId: n } = e;
-        c.default.track(h.HAw.HANGOUT_WINDOW_CLICKED, { guild_id: t, channel_id: n });
-    },
-    N = (e) => {
-        let { guildId: t, channelId: n, categoryType: l } = e,
-            i = (0, u.Er)(l);
-        null != i &&
-            c.default.track(h.HAw.HANGOUT_WINDOW_GIF_CATEGORY_CLICKED, {
-                guild_id: t,
-                channel_id: n,
-                category_type: i,
-            });
-    };
+function C(e) {
+    let { guildId: t, channelId: n, contentType: l, gifCategoryType: i } = e,
+        s = "gif-category" === l ? (0, u.Er)(i) : null;
+    c.default.track(h.HAw.HANGOUT_WINDOW_CONTENT_SET, {
+        guild_id: t,
+        channel_id: n,
+        content_type: l,
+        num_voice_users: A(n),
+        media_session_id: o.A.getMediaSessionId(),
+        gif_category_type: s,
+    });
+}
+function E(e) {
+    let { guildId: t, channelId: n } = e;
+    c.default.track(h.HAw.HANGOUT_WINDOW_CONTENT_CLEARED, { guild_id: t, channel_id: n });
+}
+function x(e) {
+    let { guildId: t, channelId: n } = e;
+    c.default.track(h.HAw.HANGOUT_WINDOW_CLICKED, { guild_id: t, channel_id: n });
+}
+function N(e) {
+    let { guildId: t, channelId: n, categoryType: l } = e,
+        i = (0, u.Er)(l);
+    null != i &&
+        c.default.track(h.HAw.HANGOUT_WINDOW_GIF_CATEGORY_CLICKED, { guild_id: t, channel_id: n, category_type: i });
+}

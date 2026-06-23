@@ -54,7 +54,7 @@ function f(e) {
             modalAPIOptions: {
                 modalKey: "guild-boost-purchase-modal",
                 contextKey: N,
-                onCloseCallback: () => {
+                onCloseCallback: function () {
                     u.default.track(d.HAw.MODAL_DISMISSED, { type: d.JJy.PREMIUM_GUILD_PURCHASE_MODAL, location: n });
                 },
             },

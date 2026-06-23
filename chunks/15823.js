@@ -1,49 +1,49 @@
-n.d(t, { default: () => en });
-var i = n(627968),
-    a = n(64700),
-    l = n(735438),
-    r = n.n(l),
-    s = n(17928),
-    d = n(192308),
-    c = n(935462),
-    u = n(81466),
-    o = n(534514),
-    g = n(821609),
-    A = n(939249),
-    m = n(789645),
-    h = n(334738),
-    p = n(964486),
-    x = n(915089),
-    E = n(860071),
-    v = n(71393),
-    C = n(568548),
-    G = n(174459),
-    b = n(403362);
-n(422653);
-var f = n(935208),
-    N = n(285059),
-    j = n(770666),
-    k = n(508654),
-    y = n(857071),
-    I = n(518769),
-    _ = n(446600),
-    S = n(734057),
-    D = n(576705),
-    L = n(763827),
-    M = n(287809),
-    w = n(707592),
-    T = n(698441),
-    B = n(485394),
-    P = n(113783),
-    U = n(794782),
-    z = n(9448),
-    O = n(647090),
-    R = n(691012),
-    V = n(779519),
-    q = n(482857),
-    F = n(652215);
+t.d(n, { default: () => et });
+var i = t(627968),
+    a = t(64700),
+    l = t(735438),
+    r = t.n(l),
+    s = t(17928),
+    d = t(192308),
+    c = t(935462),
+    u = t(81466),
+    o = t(534514),
+    g = t(821609),
+    A = t(939249),
+    m = t(789645),
+    h = t(334738),
+    p = t(964486),
+    x = t(915089),
+    E = t(860071),
+    v = t(71393),
+    C = t(568548),
+    f = t(174459),
+    G = t(403362);
+t(422653);
+var b = t(935208),
+    N = t(285059),
+    j = t(770666),
+    k = t(508654),
+    y = t(857071),
+    I = t(518769),
+    _ = t(446600),
+    S = t(734057),
+    D = t(576705),
+    L = t(763827),
+    M = t(287809),
+    w = t(707592),
+    T = t(698441),
+    B = t(485394),
+    P = t(113783),
+    U = t(794782),
+    z = t(9448),
+    O = t(647090),
+    R = t(691012),
+    V = t(779519),
+    q = t(482857),
+    F = t(652215);
 function K(e) {
-    let { guildEvent: t, truncate: n, onActionTaken: a, className: l, isNew: r } = e,
+    let { guildEvent: n, truncate: t, onActionTaken: a, className: l, isNew: r } = e,
         {
             id: d,
             guild_id: c,
@@ -54,51 +54,51 @@ function K(e) {
             entity_type: m,
             image: h,
             recurrence_rule: p,
-        } = t,
-        x = (0, O.G3)(t),
+        } = n,
+        x = (0, O.G3)(n),
         E = (0, s.bG)([T.Ay], () => T.Ay.isInterestedInEventRecurrence(d, x), [d, x]),
         C = (0, s.bG)([y.A], () => y.A.isLurking(c), [c]),
-        G = (0, s.bG)([_.A], () => _.A.getStageInstanceByChannel(u), [u]),
-        b = (0, s.bG)([v.A], () => v.A.getGuild(c), [c]),
-        f = (0, s.bG)([S.A], () => S.A.getChannel(u), [u]),
+        f = (0, s.bG)([_.A], () => _.A.getStageInstanceByChannel(u), [u]),
+        G = (0, s.bG)([v.A], () => v.A.getGuild(c), [c]),
+        b = (0, s.bG)([S.A], () => S.A.getChannel(u), [u]),
         N = (0, s.bG)([M.default], () => M.default.getUser(o), [o]),
         { speakers: j } = (function (e) {
             let {
-                    id: t,
-                    data: { guild: n, instance: i, speakers: a, participantCount: l },
+                    id: n,
+                    data: { guild: t, instance: i, speakers: a, participantCount: l },
                     context: r,
                 } = e,
-                d = (0, s.bG)([v.A, S.A], () => v.A.getGuild(S.A.getChannel(t)?.getGuildId()), [t]),
-                c = (0, s.bG)([_.A], () => _.A.getStageInstanceByChannel(t), [t]),
-                u = (0, P.E5)(t, I.ip.SPEAKER),
-                o = (0, P.zy)(t),
+                d = (0, s.bG)([v.A, S.A], () => v.A.getGuild(S.A.getChannel(n)?.getGuildId()), [n]),
+                c = (0, s.bG)([_.A], () => _.A.getStageInstanceByChannel(n), [n]),
+                u = (0, P.E5)(n, I.ip.SPEAKER),
+                o = (0, P.zy)(n),
                 g = null != c ? u : a,
                 A = (null != c ? o : l) - g.length;
-            return { channelId: t, guild: d ?? n, stage: c ?? i, speakers: g, audienceCount: A, context: r };
+            return { channelId: n, guild: d ?? t, stage: c ?? i, speakers: g, audienceCount: A, context: r };
         })({
             id: u,
-            data: { guild: null, instance: G, speakers: [], participantCount: 0 },
-            context: { guildId: c, instance: G },
+            data: { guild: null, instance: f, speakers: [], participantCount: 0 },
+            context: { guildId: c, instance: f },
         }),
         k = (0, s.bG)([L.A], () => L.A.getChannelId()),
-        K = (0, T.Fd)(t),
+        K = (0, T.Fd)(n),
         H = k === u && null != k && K,
         J = j.filter((e) => e.type === I.wY.VOICE),
         Q = J.length,
-        $ = (0, s.bG)([D.A], () => D.A.can(F.xBc.CONNECT, f), [f]),
-        W = (0, B.Ay)(t),
-        X = null != b,
-        Y = (0, q.A)({ guild: b, channel: f, guildScheduledEvent: t, isActive: K, recurrenceId: x, onActionTaken: a }),
+        $ = (0, s.bG)([D.A], () => D.A.can(F.xBc.CONNECT, b), [b]),
+        W = (0, B.Ay)(n),
+        X = null != G,
+        Y = (0, q.A)({ guild: G, channel: b, guildScheduledEvent: n, isActive: K, recurrenceId: x, onActionTaken: a }),
         Z = C ? void 0 : (e) => (0, w.uR)({ eventId: d, recurrenceId: e });
     return (0, i.jsx)(V.A, {
-        guild: b,
-        channel: f,
+        guild: G,
+        channel: b,
         creator: N,
         name: g,
         entityType: m,
         description: A ?? void 0,
-        location: (0, z.oF)(t) ?? void 0,
-        imageSource: null != h ? (0, R.A)(t) : void 0,
+        location: (0, z.oF)(n) ?? void 0,
+        imageSource: null != h ? (0, R.A)(n) : void 0,
         imageLocation: V.c.THUMBNAIL,
         isActive: K,
         isUserLurking: C,
@@ -112,24 +112,24 @@ function K(e) {
         ...Y,
         className: l,
         onClick: Z,
-        truncate: n,
+        truncate: t,
         isNew: r,
-        guildEvent: t,
+        guildEvent: n,
         recurrenceRule: (0, U.Sn)(p),
         recurrenceId: x,
     });
 }
-var H = n(834730),
-    J = n(468689),
-    Q = n(710358),
-    $ = n(375708),
-    W = n(553434);
+var H = t(834730),
+    J = t(468689),
+    Q = t(710358),
+    $ = t(375708),
+    W = t(553434);
 function X(e) {
-    let { guildId: t, onClose: n } = e,
+    let { guildId: n, onClose: t } = e,
         a = (0, s.bG)([v.A, D.A], () => {
-            let e = v.A.getGuild(t);
+            let e = v.A.getGuild(n);
             return D.A.can(F.xBc.MANAGE_ROLES, e);
-        }, [t]);
+        }, [n]);
     return (0, i.jsxs)("div", {
         className: W.kL,
         children: [
@@ -165,19 +165,19 @@ function X(e) {
                     className: W.Ec,
                     children: $.intl.format($.t["K+DH2o"], {
                         onClick: () => {
-                            J.A.open(t, F.BEX.ROLES), n();
+                            J.A.open(n, F.BEX.ROLES), t();
                         },
                     }),
                 }),
         ],
     });
 }
-var Y = n(823508),
-    Z = n(988794),
-    ee = n(790782),
-    et = n(420183);
-function en(e) {
-    let { transitionState: t, onClose: l, guildId: y } = e,
+var Y = t(823508),
+    Z = t(988794),
+    ee = t(790782),
+    en = t(420183);
+function et(e) {
+    let { transitionState: n, onClose: l, guildId: y } = e,
         I = (0, x.GV)(),
         _ = (0, s.bG)([v.A], () => v.A.getGuild(y)),
         S = (0, j.A)(_?.id),
@@ -189,12 +189,12 @@ function en(e) {
             D.forEach((e) => N.A.getGuildEventUserCounts(y, e.id, [])), N.A.getGuildEventsForCurrentUser(y);
         }, [D, y]),
         (0, p.Ay)(() => {
-            G.default.track(F.HAw.OPEN_MODAL, { type: Z.BV, guild_id: y, guild_events_count: D.length });
+            f.default.track(F.HAw.OPEN_MODAL, { type: Z.BV, guild_id: y, guild_events_count: D.length });
         }),
         a.useEffect(() => {
             r()(D)
                 .map((e) => e.creator_id)
-                .filter(b.Vq)
+                .filter(G.Vq)
                 .uniq()
                 .forEach((e) => {
                     E.A.requestMember(y, e);
@@ -205,16 +205,16 @@ function en(e) {
         }, [y]),
         (0, i.jsxs)(c.EO, {
             size: c.rI.MEDIUM,
-            transitionState: t,
+            transitionState: n,
             "aria-labelledby": I,
             parentComponent: "GuildEventsModal",
             "data-migration-pending": !0,
             children: [
                 (0, i.jsxs)(c.rQ, {
-                    className: et.wx,
+                    className: en.wx,
                     "data-migration-pending": !0,
                     children: [
-                        (0, i.jsx)(u.C, { size: "md", color: "currentColor", className: et.Kk }),
+                        (0, i.jsx)(u.C, { size: "md", color: "currentColor", className: en.Kk }),
                         (0, i.jsx)(o.D, {
                             id: I,
                             variant: "heading-md/semibold",
@@ -226,38 +226,38 @@ function en(e) {
                         S &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
-                                    (0, i.jsx)("div", { className: et.yF, children: "|" }),
+                                    (0, i.jsx)("div", { className: en.yF, children: "|" }),
                                     (0, i.jsx)(g.$, {
                                         variant: "primary",
                                         size: "sm",
-                                        onClick: () => {
+                                        onClick: function () {
                                             (0, d.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("85948"),
-                                                    n.e("36510"),
-                                                    n.e("6212"),
-                                                    n.e("79465"),
-                                                    n.e("8886"),
-                                                    n.e("8676"),
-                                                    n.e("79093"),
-                                                    n.e("6129"),
-                                                    n.e("84769"),
-                                                    n.e("80339"),
-                                                    n.e("78704"),
-                                                    n.e("61156"),
-                                                    n.e("16767"),
-                                                    n.e("59957"),
-                                                    n.e("6841"),
-                                                    n.e("28136"),
-                                                    n.e("16084"),
-                                                    n.e("10262"),
-                                                    n.e("71329"),
-                                                    n.e("70089"),
-                                                    n.e("70160"),
-                                                    n.e("54450"),
-                                                    n.e("60423"),
-                                                ]).then(n.bind(n, 729398));
-                                                return (t) => (0, i.jsx)(e, { ...t, guildId: y });
+                                                    t.e("85948"),
+                                                    t.e("36510"),
+                                                    t.e("6212"),
+                                                    t.e("79465"),
+                                                    t.e("8886"),
+                                                    t.e("8676"),
+                                                    t.e("79093"),
+                                                    t.e("6129"),
+                                                    t.e("84769"),
+                                                    t.e("80339"),
+                                                    t.e("78704"),
+                                                    t.e("61156"),
+                                                    t.e("16767"),
+                                                    t.e("59957"),
+                                                    t.e("6841"),
+                                                    t.e("28136"),
+                                                    t.e("16084"),
+                                                    t.e("10262"),
+                                                    t.e("71329"),
+                                                    t.e("70089"),
+                                                    t.e("70160"),
+                                                    t.e("54450"),
+                                                    t.e("60423"),
+                                                ]).then(t.bind(t, 729398));
+                                                return (n) => (0, i.jsx)(e, { ...n, guildId: y });
                                             }, M);
                                         },
                                         text: $.intl.string($.t["60lJ0C"]),
@@ -266,14 +266,14 @@ function en(e) {
                             }),
                         (0, i.jsx)(A.D, {
                             onClick: l,
-                            className: et.gb,
+                            className: en.gb,
                             "aria-label": $.intl.string($.t.cpT0Cq),
-                            children: (0, i.jsx)(m.P, { size: "md", color: "currentColor", className: et.Kk }),
+                            children: (0, i.jsx)(m.P, { size: "md", color: "currentColor", className: en.Kk }),
                         }),
                     ],
                 }),
                 (0, i.jsx)(c.$m, {
-                    className: et.Qs,
+                    className: en.Qs,
                     "data-migration-pending": !0,
                     children:
                         D.length > 0
@@ -283,7 +283,7 @@ function en(e) {
                                       {
                                           guildEvent: e,
                                           onActionTaken: l,
-                                          isNew: null != L.current && f.default.compare(e.id, L.current) > 0,
+                                          isNew: null != L.current && b.default.compare(e.id, L.current) > 0,
                                       },
                                       e.id,
                                   ),

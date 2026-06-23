@@ -10,7 +10,7 @@ var r = n(503698),
     u = n(824527);
 function c(e) {
     let { section: t, className: n, width: r, height: c, padding: d, isSelected: _, selectable: h = !1, ...f } = e,
-        p = ((e) => {
+        p = (function (e) {
             switch (e.id) {
                 case l.Ik.BUILT_IN:
                     return a.k;

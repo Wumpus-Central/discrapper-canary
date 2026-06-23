@@ -5,20 +5,20 @@ n.d(t, {
     GL: () => b,
     I6: () => I,
     IO: () => v,
-    JC: () => j,
+    JC: () => B,
     K$: () => L,
     Ki: () => D,
     Ov: () => A,
     TP: () => p,
-    Xi: () => V,
+    Xi: () => F,
     YL: () => P,
-    Yh: () => B,
+    Yh: () => V,
     _3: () => c,
     a2: () => E,
     fE: () => g,
     g5: () => w,
     hL: () => x,
-    lG: () => H,
+    lG: () => j,
     pU: () => d,
     t: () => m,
     uD: () => N,
@@ -27,7 +27,7 @@ n.d(t, {
     vv: () => O,
     xZ: () => S,
     xc: () => f,
-    xm: () => Y,
+    xm: () => H,
 });
 var i = n(735438),
     r = n(412703),
@@ -93,7 +93,9 @@ function T(e) {
 function S(e) {
     return null != e && m({ quest: e });
 }
-let y = (e) => (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
+function y(e) {
+    return (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
+}
 function C(e) {
     return Array.from(r.o.IN_GAME).some((t) => null != e.config.taskConfigV2.tasks[t]);
 }
@@ -108,17 +110,19 @@ let N = y([r.n.PLAY_ON_XBOX, r.n.PLAY_ON_PLAYSTATION]),
         r.n.PLAY_ON_XBOX,
         r.n.ACHIEVEMENT_IN_GAME,
     ]),
-    D = y([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]),
-    L = (e) => R(e) && !v(e);
+    D = y([r.n.ACHIEVEMENT_IN_ACTIVITY, r.n.PLAY_ACTIVITY]);
+function L(e) {
+    return R(e) && !v(e);
+}
 function w(e) {
     return N(e);
 }
-let M = (e, t) => {
+function M(e, t) {
     let n = e?.progress[t]?.heartbeat?.expiresAt;
     if (null == n) return !1;
     let i = new Date(n).valueOf();
     return !isNaN(i) && i > Date.now();
-};
+}
 function P(e) {
     return null != e.userStatus && (M(e.userStatus, r.n.PLAY_ON_XBOX) || M(e.userStatus, r.n.PLAY_ON_PLAYSTATION));
 }
@@ -128,64 +132,65 @@ function x(e) {
 function k(e) {
     return e?.type === r.n.PLAY_ON_DESKTOP;
 }
-let U = (e, t) => (e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0),
-    G = (e) => {
-        let { quest: t, taskType: n, includeTaskTypes: a = r.o.ALL } = e,
-            u = t.config.taskConfigV2,
-            c = n ?? Object.values(u.tasks).filter((e) => a.has(e.type))[0]?.type,
-            d = u.tasks[c] ?? u.tasks[r.n.STREAM_ON_DESKTOP];
-        if (null == d)
-            return (
-                (0, l.RF)(Error(`Quest ${t.id} has no task matching the include filters`), {
-                    tags: { source: "_getTaskDetailsForType" },
-                    extra: { questId: t.id, taskType: n, includeTaskTypes: Array.from(a ?? []) },
-                }),
-                null
+function U(e, t) {
+    return e > 0 ? (0, i.floor)(Math.min(t / e, 1), 4) : 0;
+}
+function G(e) {
+    let { quest: t, taskType: n, includeTaskTypes: a = r.o.ALL } = e,
+        u = t.config.taskConfigV2,
+        c = n ?? Object.values(u.tasks).filter((e) => a.has(e.type))[0]?.type,
+        d = u.tasks[c] ?? u.tasks[r.n.STREAM_ON_DESKTOP];
+    if (null == d)
+        return (
+            (0, l.RF)(Error(`Quest ${t.id} has no task matching the include filters`), {
+                tags: { source: "_getTaskDetailsForType" },
+                extra: { questId: t.id, taskType: n, includeTaskTypes: Array.from(a ?? []) },
+            }),
+            null
+        );
+    let _ = d.target,
+        h = ((e, t) => {
+            let n = t.target;
+            if (e.userStatus?.completedAt != null) return n;
+            let r = Math.min(
+                0.99 * n,
+                (function (e, t) {
+                    let n = e.userStatus?.progress?.[t.type],
+                        r = n?.value ?? e.userStatus?.streamProgressSeconds ?? 0;
+                    if (O(e)) {
+                        let n = o.A.getOptimisticProgress(e.id, t.type);
+                        return null == n || n < r ? r : n;
+                    }
+                    return (
+                        r +
+                        (function (e, t) {
+                            let n = e.userStatus?.progress?.[t.type]?.heartbeat?.lastBeatAt;
+                            if (null == n || !(P(e) || o.A.isProgressingOnDesktop(e.id))) return 0;
+                            let r = Date.now() - new Date(n).valueOf();
+                            return (0, i.floor)(r / s.A.Millis.SECOND, 2);
+                        })(e, t)
+                    );
+                })(e, t),
             );
-        let _ = d.target,
-            h = ((e, t) => {
-                let n = t.target;
-                if (e.userStatus?.completedAt != null) return n;
-                let r = Math.min(
-                    0.99 * n,
-                    ((e, t) => {
-                        let n = e.userStatus?.progress?.[t.type],
-                            r = n?.value ?? e.userStatus?.streamProgressSeconds ?? 0;
-                        if (O(e)) {
-                            let n = o.A.getOptimisticProgress(e.id, t.type);
-                            return null == n || n < r ? r : n;
-                        }
-                        return (
-                            r +
-                            ((e, t) => {
-                                let n = e.userStatus?.progress?.[t.type]?.heartbeat?.lastBeatAt;
-                                if (null == n || !(P(e) || o.A.isProgressingOnDesktop(e.id))) return 0;
-                                let r = Date.now() - new Date(n).valueOf();
-                                return (0, i.floor)(r / s.A.Millis.SECOND, 2);
-                            })(e, t)
-                        );
-                    })(e, t),
-                );
-                return Math.max((0, i.floor)(r, 2), 0);
-            })(t, d),
-            f = Object.values(u.tasks).find(k),
-            p = f?.applications?.map((e) => e.id);
-        return {
-            progressSeconds: h,
-            targetSeconds: _,
-            targetMinutes: Math.ceil(_ / s.A.Seconds.MINUTE),
-            percentComplete: U(_, h),
-            taskType: c,
-            applications: p,
-        };
-    },
-    F = (e) => (r.o.ALL.has(e) ? e : null);
-function V(e) {
+            return Math.max((0, i.floor)(r, 2), 0);
+        })(t, d),
+        f = Object.values(u.tasks).find(k),
+        p = f?.applications?.map((e) => e.id);
+    return {
+        progressSeconds: h,
+        targetSeconds: _,
+        targetMinutes: Math.ceil(_ / s.A.Seconds.MINUTE),
+        percentComplete: U(_, h),
+        taskType: c,
+        applications: p,
+    };
+}
+function F(e) {
     let t = e.taskConfigV2.tasks[r.n.WATCH_VIDEO],
         n = e.taskConfigV2.tasks[r.n.WATCH_VIDEO_ON_MOBILE];
     return null != t && null != n ? t : (n ?? t ?? null);
 }
-let B = (e, t) => {
+function V(e, t) {
     var n, i;
     let s =
         ((n = e),
@@ -199,7 +204,7 @@ let B = (e, t) => {
                   taskType: r.n.STREAM_ON_DESKTOP,
               }
             : N(n)
-              ? ((e) => {
+              ? (function (e) {
                     let { quest: t, includeTaskTypes: n = r.o.ALL } = e;
                     for (let e of Object.values(t.userStatus?.progress ?? {})
                         .sort((e, t) => {
@@ -218,15 +223,16 @@ let B = (e, t) => {
                                     : 1;
                         })
                         .filter(a.Vq)) {
-                        let i = F(e.eventName);
-                        if (null == i || !n?.has(i)) continue;
-                        let r = G({ quest: t, taskType: i, includeTaskTypes: n });
-                        if (null != r) return r;
+                        var i;
+                        let s = ((i = e.eventName), r.o.ALL.has(i) ? i : null);
+                        if (null == s || !n?.has(s)) continue;
+                        let a = G({ quest: t, taskType: s, includeTaskTypes: n });
+                        if (null != a) return a;
                     }
                     return G({ quest: t, includeTaskTypes: n });
                 })({ quest: n, includeTaskTypes: i ?? (P(n) ? r.o.CONSOLE : r.o.ALL) })
               : O(n)
-                ? G({ quest: n, taskType: V(n.config)?.type })
+                ? G({ quest: n, taskType: F(n.config)?.type })
                 : S(n)
                   ? G({ quest: n, taskType: r.n.PLAY_ON_DESKTOP })
                   : T(n)
@@ -243,8 +249,8 @@ let B = (e, t) => {
               percentComplete: 0,
               taskType: r.n.STREAM_ON_DESKTOP,
           };
-};
-function j(e) {
+}
+function B(e) {
     let t,
         n,
         i,
@@ -263,15 +269,15 @@ function j(e) {
         percentComplete: o,
     };
 }
-function H(e) {
+function j(e) {
     var t;
     return {
         minutes: Math.max(0, Math.floor((t = e.targetSeconds - e.progressSeconds) / 60)),
         seconds: Math.max(0, Math.floor(t % 60)),
     };
 }
-function Y(e) {
+function H(e) {
     var t, n;
-    let i = H(e);
+    let i = j(e);
     return (t = i.minutes), (n = i.seconds), `${String(t).padStart(2, "0")}:${String(n).padStart(2, "0")}`;
 }

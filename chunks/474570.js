@@ -4,11 +4,11 @@ let i = [],
     r = !1;
 function s() {
     if (r) return;
+    function e(e) {
+        for (let t in e) e[t] instanceof WebAssembly.Memory && i.push(new WeakRef(e[t]));
+    }
     r = !0;
-    let e = (e) => {
-            for (let t in e) e[t] instanceof WebAssembly.Memory && i.push(new WeakRef(e[t]));
-        },
-        t = WebAssembly.instantiate;
+    let t = WebAssembly.instantiate;
     if (
         ((WebAssembly.instantiate = async function () {
             for (var n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];

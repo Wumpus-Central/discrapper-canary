@@ -3,8 +3,8 @@ var i = l(627968),
     n = l(64700),
     r = l(189213),
     a = l(695366),
-    s = l(17928),
-    o = l(843282),
+    o = l(17928),
+    s = l(843282),
     c = l(687966),
     d = l(834730),
     p = l(321471),
@@ -14,39 +14,39 @@ var i = l(627968),
     g = l(627363),
     I = l(587895),
     _ = l(240248),
-    S = l(555337),
+    S = l(913758),
     L = l(636537),
     x = l(228366);
-let C = null,
-    N = null,
-    f = !1;
-class E extends s.Ay.Store {
+let f = null,
+    C = null,
+    N = !1;
+class E extends o.Ay.Store {
     static displayName = "GuildSettingsOnboardingAllowedApplicationsStore";
     getAllowedApplicationIds(t) {
-        return C === t ? N : null;
+        return f === t ? C : null;
     }
     isFetching(t) {
-        return C === t && f;
+        return f === t && N;
     }
     hasCachedData(t) {
-        return C === t && null !== N;
+        return f === t && null !== C;
     }
 }
 let O = new E(x.h, {
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START: function (t) {
         let { guildId: e } = t;
-        (C = e), (f = !0), (N = []);
+        (f = e), (N = !0), (C = []);
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS: function (t) {
         let { guildId: e, applicationIds: l } = t;
-        C === e && ((N = l), (f = !1));
+        f === e && ((C = l), (N = !1));
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE: function (t) {
         let { guildId: e } = t;
-        C === e && ((N = []), (f = !1));
+        f === e && ((C = []), (N = !1));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (C = null), (N = null), (f = !1);
+        (f = null), (C = null), (N = !1);
     },
 });
 var T = l(652215);
@@ -55,11 +55,10 @@ async function m(t) {
     if (null !== e) return Promise.resolve(e);
     if (O.isFetching(t))
         return new Promise((e) => {
-            let l = () => {
+            O.addChangeListener(function l() {
                 let i = O.getAllowedApplicationIds(t);
                 null !== i && (O.removeChangeListener(l), e(i));
-            };
-            O.addChangeListener(l);
+            });
         });
     x.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START", guildId: t });
     try {
@@ -93,18 +92,18 @@ var v = l(923121),
     D = l(886106);
 function j(t) {
     let { transitionState: e, onClose: l, connection: L, index: x } = t,
-        C = (0, h.Ay)(),
-        N = null != L && null != x,
-        f = S.A.getGuildId(),
-        E = (0, s.bG)([O], () => O.getAllowedApplicationIds(f) ?? [], [f]);
+        f = (0, h.Ay)(),
+        C = null != L && null != x,
+        N = S.A.getGuildId(),
+        E = (0, o.bG)([O], () => O.getAllowedApplicationIds(N) ?? [], [N]);
     n.useEffect(() => {
-        null != f && m(f);
-    }, [f]),
+        null != N && m(N);
+    }, [N]),
         n.useEffect(() => {
             for (let t of E)
                 null != I.A.getApplication(t) || I.A.isFetchingApplication(t) || (0, g.TA)(t).catch(() => {});
         }, [E]);
-    let T = (0, s.yK)([I.A], () => {
+    let T = (0, o.yK)([I.A], () => {
             let t = [];
             for (let e of E) {
                 let l = I.A.getApplication(e);
@@ -118,7 +117,7 @@ function j(t) {
         w = n.useMemo(() => {
             let t = [];
             for (let e of A.A.filter((t) => t.enabled && !G.tb.has(t.type))) {
-                let l = "light" === C ? e.icon?.lightPNG : e.icon?.darkPNG;
+                let l = "light" === f ? e.icon?.lightPNG : e.icon?.darkPNG;
                 t.push({ label: e.name, value: `provider:${e.type}`, icon: l });
             }
             for (let e of T) t.push({ label: e.name, value: `app:${e.id}`, icon: e.getIconURL(128) });
@@ -127,7 +126,7 @@ function j(t) {
                     I.A.isFetchingApplication(e) &&
                     t.push({ label: "Loading...", value: `app:${e}`, icon: void 0 });
             return t.sort((t, e) => t.label.localeCompare(e.label)), t;
-        }, [T, E, C]),
+        }, [T, E, f]),
         k = n.useCallback(() => {
             if (null == j || "" === j) return void R(["Please select a connection"]);
             let t = (0, G.vK)(j);
@@ -140,8 +139,8 @@ function j(t) {
                     ...(null != t.providerId && { provider_id: t.providerId }),
                 },
                 n = (0, G.Ii)(i);
-            n.length > 0 ? R(n) : (N ? (0, v.yM)(x, i) : (0, v.sF)(i), l());
-        }, [j, P, N, x, l]),
+            n.length > 0 ? R(n) : (C ? (0, v.yM)(x, i) : (0, v.sF)(i), l());
+        }, [j, P, C, x, l]),
         B = n.useCallback(
             (t) =>
                 (0, i.jsxs)("div", {
@@ -172,16 +171,16 @@ function j(t) {
         }, []);
     return (0, i.jsx)(r.Modal, {
         transitionState: e,
-        title: N ? y.intl.string(y.t.yqegs1) : y.intl.string(y.t.B6qOe2),
+        title: C ? y.intl.string(y.t.yqegs1) : y.intl.string(y.t.B6qOe2),
         onClose: l,
         actions: [
             { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: l },
-            { variant: "primary", text: N ? y.intl.string(y.t["R3BPH+"]) : y.intl.string(y.t.qMOnJu), onClick: k },
+            { variant: "primary", text: C ? y.intl.string(y.t["R3BPH+"]) : y.intl.string(y.t.qMOnJu), onClick: k },
         ],
         children: (0, i.jsxs)("div", {
             className: D.Qs,
             children: [
-                !N &&
+                !C &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(d.E, {
@@ -191,7 +190,7 @@ function j(t) {
                             }),
                             (0, i.jsx)(p.e, {
                                 title: y.intl.string(y.t.joNLrt),
-                                children: (0, i.jsx)(o.Te, {
+                                children: (0, i.jsx)(s.Te, {
                                     value: j ?? "",
                                     onChange: (t) => {
                                         b(t), R([]);

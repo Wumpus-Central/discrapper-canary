@@ -1,16 +1,16 @@
 n.d(t, { A: () => k });
 var r = n(627968),
     l = n(64700),
-    s = n(942381),
-    a = n(876230),
-    i = n(645577),
+    i = n(942381),
+    s = n(876230),
+    a = n(645577),
     u = n(408278),
     o = n(789645),
     c = n(613373),
     d = n(931853),
     E = n(544180),
-    _ = n(723702),
-    f = n(340124),
+    f = n(723702),
+    _ = n(340124),
     m = n(507107),
     p = n(405670),
     S = n(551875),
@@ -52,29 +52,29 @@ function k(e) {
         G = B.userStatus?.completedAt != null,
         $ = !G,
         q = l.useMemo(() => B.config.features.includes(O.Li.FULL_EPISODE_VIDEO_QUEST), [B.config.features]),
-        W = (0, p.Kr)((e) => e.videoProgress[B.id] ?? p.yc, s.x),
+        W = (0, p.Kr)((e) => e.videoProgress[B.id] ?? p.yc, i.x),
         z = (0, p.Kr)((e) => e.setVideoProgress),
         X = (0, p.Kr)((e) => e.volume),
         Z = (0, p.Kr)((e) => e.muted),
         J = (0, p.Kr)((e) => e.setVolume),
         ee = (0, p.Kr)((e) => e.setMuted),
-        et = (0, i.g)(G, W, K.progressSeconds),
+        et = (0, a.g)(G, W, K.progressSeconds),
         [en] = l.useState(() => E.A.getEffectiveConnectionSpeed()),
         er = Math.max(W.maxTimestampSec, K.progressSeconds),
         el = G ? void 0 : (0, A.vd)(er, W.duration),
-        { videoAsset: es, videoAssetType: ea } = (0, D.A)(H, en, et, w, !1),
-        ei = l.useCallback(
+        { videoAsset: ei, videoAssetType: es } = (0, D.A)(H, en, et, w, !1),
+        ea = l.useCallback(
             (e) => {
                 let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
-                return t || null != ea
-                    ? n === a.Q6.PAUSED && (r === a.KB.FOCUS || r === a.KB.PICTURE_IN_PICTURE)
+                return t || null != es
+                    ? n === s.Q6.PAUSED && (r === s.KB.FOCUS || r === s.KB.PICTURE_IN_PICTURE)
                         ? L.intl.string(L.t.w6PeBF)
                         : (0, d.u)({ hasVideoAsset: t, playerState: n, pauseReason: r })
-                    : (0, _.isWeb)()
+                    : (0, f.isWeb)()
                       ? L.intl.string(L.t["E1du/q"])
                       : L.intl.string(L.t["rStN/7"]);
             },
-            [ea],
+            [es],
         ),
         eu = (0, l.useRef)(null),
         eo = l.useCallback((e) => {
@@ -84,8 +84,8 @@ function k(e) {
         ed = (0, l.useRef)(0),
         eE = (0, l.useRef)(!1),
         {
-            trackQuestVideoLoadingStarted: e_,
-            trackQuestVideoLoadingEnded: ef,
+            trackQuestVideoLoadingStarted: ef,
+            trackQuestVideoLoadingEnded: e_,
             trackQuestVideoResumed: em,
             trackQuestVideoPaused: ep,
             trackQuestVideoFocusChange: eS,
@@ -104,13 +104,13 @@ function k(e) {
             videoRef: H,
             hlsRef: eu,
             videoSessionId: F,
-            videoAssetId: ea,
+            videoAssetId: es,
             sourceQuestContent: M,
             logger: ec,
             isFullEpisodeVideoQuest: q,
             listenForHlsErrors: !1,
         });
-    (0, R.A)({ videoAssetUrl: es?.url, videoRef: H, hlsRef: eu, videoAssetType: ea });
+    (0, R.A)({ videoAssetUrl: ei?.url, videoRef: H, hlsRef: eu, videoAssetType: es });
     let ex =
             ((t = (0, p.Kr)((e) => e.transcript)),
             (l.useEffect(() => {
@@ -119,7 +119,7 @@ function k(e) {
                     t.questId !== B.id ||
                     t.fetchStatus === p.Lx.NONE ||
                     (t.fetchStatus === p.Lx.SUCCESS && e?.url !== t.url)) &&
-                    (0, f.qY)(B);
+                    (0, _.qY)(B);
             }, [t, B]),
             t?.questId === B.id && t?.fetchStatus === p.Lx.SUCCESS)
                 ? (t.text ?? null)
@@ -136,19 +136,19 @@ function k(e) {
         eV = l.useCallback(
             (e, t) => {
                 switch ((eP(e, t), e)) {
-                    case a.Q6.PLAYING:
+                    case s.Q6.PLAYING:
                         H.current?.paused === !0 && em(ey.current), (ey.current = null);
                         break;
-                    case a.Q6.PAUSED: {
+                    case s.Q6.PAUSED: {
                         let e = (function (e) {
                             switch (e) {
-                                case a.KB.USER:
+                                case s.KB.USER:
                                     return m.Yg.PAUSE_BUTTON;
-                                case a.KB.FOCUS:
+                                case s.KB.FOCUS:
                                     return m.Yg.LOST_FOCUS;
-                                case a.KB.VISIBILITY:
+                                case s.KB.VISIBILITY:
                                     return m.Yg.MODAL_CLOSED;
-                                case a.KB.PICTURE_IN_PICTURE:
+                                case s.KB.PICTURE_IN_PICTURE:
                                     return m.Yg.PICTURE_IN_PICTURE;
                                 default:
                                     return null;
@@ -156,19 +156,19 @@ function k(e) {
                         })(t);
                         null != e && ((ey.current = e), ep(e));
                     }
-                    case a.Q6.ENDED:
+                    case s.Q6.ENDED:
                 }
             },
             [eP, em, ep],
         ),
         eU = l.useCallback(() => {
-            e_(en);
-        }, [e_, en]),
+            ef(en);
+        }, [ef, en]),
         eQ = l.useCallback(
             (e) => {
-                eb(e), ef(e);
+                eb(e), e_(e);
             },
-            [eb, ef],
+            [eb, e_],
         ),
         ew = l.useCallback(
             (e) => {
@@ -191,7 +191,7 @@ function k(e) {
         ),
         eF = l.useCallback(
             (e, t) => {
-                z(B.id, e, t), (0, f.Gn)(B.id, K.taskType, e), k(e);
+                z(B.id, e, t), (0, _.Gn)(B.id, K.taskType, e), k(e);
                 let r = q && e >= n && !eE.current;
                 (e >= ed.current || r) &&
                     (r && (eE.current = !0),
@@ -253,10 +253,10 @@ function k(e) {
         persistPlayhead: !1,
         pauseOnLostVisibility: !G,
         autoFocus: y,
-        getPlaybackBlockedMessage: ei,
+        getPlaybackBlockedMessage: ea,
         orientation: Q,
         videoUrlOverride: w,
-        src: es?.url,
+        src: ei?.url,
         poster: void 0,
         initialTimeSec: et,
         maxSeekableTimeSec: el,
@@ -272,7 +272,7 @@ function k(e) {
         initialVolume: X,
         initialMuted: Z,
         onVolumeChange: eB,
-        onMutedChange: (e) => {
+        onMutedChange: function (e) {
             ee(e);
         },
         onProgressUpdate: eF,

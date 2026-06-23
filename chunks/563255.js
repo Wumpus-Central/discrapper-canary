@@ -6,9 +6,9 @@ var a,
     A = l(189213),
     c = l(691885),
     o = l(150934),
-    r = l(511274),
-    C = l(636537),
-    u = l(652215),
+    u = l(511274),
+    r = l(636537),
+    C = l(652215),
     T =
         (((a = {}).HCAPTCHA_RQDATA = "hCaptchaRqdata"),
         (a.SMITE_RQDATA = "SmiteRqdata"),
@@ -16,7 +16,7 @@ var a,
         (a.RECAPTCHA_ENTERPRISE = "RecaptchaEnterprise"),
         a);
 async function d(e, t) {
-    await C.Bo.post({ url: u.Rsh.CAPTCHA_TEST, body: { decider: e, options: t }, rejectWithError: !1 });
+    await r.Bo.post({ url: C.Rsh.CAPTCHA_TEST, body: { decider: e, options: t }, rejectWithError: !1 });
 }
 let h = Object.entries(
         (((i = {})[(i.EASY = 1)] = "EASY"),
@@ -39,19 +39,19 @@ let h = Object.entries(
     R = function (e) {
         let { onClose: t, transitionState: l } = e,
             [a, i] = s.useState(null),
-            [C, u] = s.useState(null),
+            [r, C] = s.useState(null),
             [R, E] = s.useState(null),
             [S, D] = s.useState(""),
             _ = s.useCallback(async () => {
                 if (null != a) {
                     D("");
                     try {
-                        await d(a, { difficulty: C ?? void 0, should_serve_invisible: R ?? void 0 });
+                        await d(a, { difficulty: r ?? void 0, should_serve_invisible: R ?? void 0 });
                     } catch (e) {
                         D(e.message);
                     }
                 }
-            }, [a, C, R]);
+            }, [a, r, R]);
         return (0, n.jsxs)(A.Modal, {
             title: "Captcha Test Tool",
             actions: [{ text: "Trigger Captcha", onClick: _, disabled: null == a }],
@@ -63,9 +63,9 @@ let h = Object.entries(
                     hideLabel: !0,
                     value: a,
                     options: p,
-                    onSelectionChange: (e) => {
+                    onSelectionChange: function (e) {
                         e !== T.HCAPTCHA_RQDATA && e !== T.SMITE_RQDATA && E(null),
-                            e !== T.HCAPTCHA_RQDATA && u(null),
+                            e !== T.HCAPTCHA_RQDATA && C(null),
                             i(e),
                             D("");
                     },
@@ -76,17 +76,17 @@ let h = Object.entries(
                     (0, n.jsx)(c.l, {
                         label: "HCaptcha Difficulty",
                         hideLabel: !0,
-                        value: C,
+                        value: r,
                         options: h,
-                        onSelectionChange: (e) => {
-                            a === T.HCAPTCHA_RQDATA && u(e);
+                        onSelectionChange: function (e) {
+                            a === T.HCAPTCHA_RQDATA && C(e);
                         },
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
                 (a === T.HCAPTCHA_RQDATA || a === T.SMITE_RQDATA) &&
                     (0, n.jsx)(o.S, { checked: R ?? !1, onChange: (e) => E(e), label: "Should serve invisible?" }),
-                "" !== S && (0, n.jsx)(r.U, { error: S }),
+                "" !== S && (0, n.jsx)(u.U, { error: S }),
             ],
         });
     };

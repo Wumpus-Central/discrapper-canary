@@ -14,12 +14,12 @@ let a = function (e, t) {
             days: s.t.gjK5av,
             months: s.t.kHo4Or,
             years: s.t.KjKr2P,
-        },
-        l = (e, t) => {
-            var i;
-            let r = ((i = n ? o : void 0), null != a && null != a[e] ? (a[e] ?? i?.[e] ?? null) : (i?.[e] ?? null));
-            return null == r ? null : "string" == typeof r ? r : s.intl.formatToPlainString(r, { count: t });
         };
+    function l(e, t) {
+        var i;
+        let r = ((i = n ? o : void 0), null != a && null != a[e] ? (a[e] ?? i?.[e] ?? null) : (i?.[e] ?? null));
+        return null == r ? null : "string" == typeof r ? r : s.intl.formatToPlainString(r, { count: t });
+    }
     if (i < 60) {
         let e = a?.seconds != null ? l("seconds", i) : l("minutes", 1);
         if (null != e) return e;

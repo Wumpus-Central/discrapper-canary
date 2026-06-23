@@ -116,75 +116,77 @@ class O extends r.Ay.Store {
         return I.get(e);
     }
 }
-let b = (e) => (0, p.v$)(e, "FriendsWidgetMessagesStore"),
-    D = new O(
-        a.h,
-        __OVERLAY__
-            ? {}
-            : {
-                  OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: b(function (e) {
-                      return e.tab === f.x.MESSAGES && C(e.targetId);
-                  }),
-                  CHANNEL_SELECT: b(function (e) {
-                      let t = e.channelId ?? null,
-                          n = T;
-                      T = t;
-                      let i = !1;
-                      null != n && (i = C(n) || i), null != t && (i = C(t) || i);
-                      let r = N();
-                      return i || r;
-                  }),
-                  MESSAGE_CREATE: b(function (e) {
-                      if (e.optimistic) return !1;
-                      let t = C(e.channelId),
-                          n = N();
-                      return t || n;
-                  }),
-                  MESSAGE_ACK: b(function (e) {
-                      return C(e.channelId);
-                  }),
-                  TYPING_START: b(function (e) {
-                      var t = e.channelId;
-                      let n = new Set(m.A.getActiveNowChannelIds({ kind: m.u.Text })),
-                          i = !1;
-                      for (let e of ((i = C(t) || i), n)) S.has(e) || (i = C(e) || i);
-                      for (let e of S) n.has(e) || (i = C(e) || i);
-                      return (S = n), i;
-                  }),
-                  RTC_CONNECTION_STATE: b(function () {
-                      return N();
-                  }),
-                  VOICE_CHANNEL_SELECT: b(function () {
-                      return N();
-                  }),
-                  USER_GUILD_SETTINGS_CHANNEL_UPDATE: b(N),
-                  USER_GUILD_SETTINGS_GUILD_UPDATE: b(N),
-                  USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: b(N),
-                  RELATIONSHIP_ADD: b(function (e) {
-                      return R(e.relationship.id);
-                  }),
-                  RELATIONSHIP_REMOVE: b(function (e) {
-                      return R(e.relationship.id);
-                  }),
-                  RELATIONSHIP_UPDATE: b(function (e) {
-                      return R(e.relationship.id);
-                  }),
-                  RELATIONSHIP_PENDING_INCOMING_REMOVED: b(function (e) {
-                      let t = !1;
-                      for (let e of _.A.getPrivateChannelIds()) {
-                          let n = u.A.getChannel(e);
-                          null != n && n.isDM() && (t = C(e) || t);
-                      }
-                      return t;
-                  }),
-                  OVERLAY_INITIALIZE: b(v),
-                  POST_CONNECTION_OPEN: b(v),
-                  CACHE_LOADED: b(v),
-                  CACHE_LOADED_LAZY: b(v),
-                  FRIENDS_LIST_POPOUT_MOUNTED: b(v),
-                  LOGOUT: b(function () {
-                      let e = I.size() > 0;
-                      return I.clear(), (T = null), (S = new Set()), e;
-                  }),
-              },
-    );
+function b(e) {
+    return (0, p.v$)(e, "FriendsWidgetMessagesStore");
+}
+let D = new O(
+    a.h,
+    __OVERLAY__
+        ? {}
+        : {
+              OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: b(function (e) {
+                  return e.tab === f.x.MESSAGES && C(e.targetId);
+              }),
+              CHANNEL_SELECT: b(function (e) {
+                  let t = e.channelId ?? null,
+                      n = T;
+                  T = t;
+                  let i = !1;
+                  null != n && (i = C(n) || i), null != t && (i = C(t) || i);
+                  let r = N();
+                  return i || r;
+              }),
+              MESSAGE_CREATE: b(function (e) {
+                  if (e.optimistic) return !1;
+                  let t = C(e.channelId),
+                      n = N();
+                  return t || n;
+              }),
+              MESSAGE_ACK: b(function (e) {
+                  return C(e.channelId);
+              }),
+              TYPING_START: b(function (e) {
+                  var t = e.channelId;
+                  let n = new Set(m.A.getActiveNowChannelIds({ kind: m.u.Text })),
+                      i = !1;
+                  for (let e of ((i = C(t) || i), n)) S.has(e) || (i = C(e) || i);
+                  for (let e of S) n.has(e) || (i = C(e) || i);
+                  return (S = n), i;
+              }),
+              RTC_CONNECTION_STATE: b(function () {
+                  return N();
+              }),
+              VOICE_CHANNEL_SELECT: b(function () {
+                  return N();
+              }),
+              USER_GUILD_SETTINGS_CHANNEL_UPDATE: b(N),
+              USER_GUILD_SETTINGS_GUILD_UPDATE: b(N),
+              USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: b(N),
+              RELATIONSHIP_ADD: b(function (e) {
+                  return R(e.relationship.id);
+              }),
+              RELATIONSHIP_REMOVE: b(function (e) {
+                  return R(e.relationship.id);
+              }),
+              RELATIONSHIP_UPDATE: b(function (e) {
+                  return R(e.relationship.id);
+              }),
+              RELATIONSHIP_PENDING_INCOMING_REMOVED: b(function (e) {
+                  let t = !1;
+                  for (let e of _.A.getPrivateChannelIds()) {
+                      let n = u.A.getChannel(e);
+                      null != n && n.isDM() && (t = C(e) || t);
+                  }
+                  return t;
+              }),
+              OVERLAY_INITIALIZE: b(v),
+              POST_CONNECTION_OPEN: b(v),
+              CACHE_LOADED: b(v),
+              CACHE_LOADED_LAZY: b(v),
+              FRIENDS_LIST_POPOUT_MOUNTED: b(v),
+              LOGOUT: b(function () {
+                  let e = I.size() > 0;
+                  return I.clear(), (T = null), (S = new Set()), e;
+              }),
+          },
+);

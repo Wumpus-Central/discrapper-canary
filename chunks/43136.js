@@ -1,4 +1,4 @@
-n.d(t, { A: () => R, C: () => L });
+n.d(t, { A: () => k, C: () => L });
 var i = n(627968),
     l = n(64700),
     s = n(284009),
@@ -62,7 +62,7 @@ function L(e) {
         children: null == a || n ? o : (0, i.jsx)("img", { src: a, alt: "", className: S.N4 }),
     });
 }
-function R(e) {
+function k(e) {
     let { guild: t, subscriptionsSettings: n } = e,
         s = t.id,
         { nickname: o, nickcolor: g } = (0, a.cf)([f.Ay, E.default], () => {
@@ -73,15 +73,15 @@ function R(e) {
         }, [s]),
         { isTruncated: A, ExpandableTextContainer: x } = (0, _.e)(),
         I = (n?.description?.trim().length ?? 0) > 0,
-        [v, R] = l.useState(1),
-        k = (0, m.A)("(max-width: 1439px)"),
-        { selectedTab: M, isPhantomPreview: P } = (0, j.k)(),
-        D = M === N.B.GUILD_PRODUCTS_PREVIEW ? y.intl.string(y.t["LvXy/H"]) : y.intl.string(y.t.XyqKh8),
-        w = I
+        [v, k] = l.useState(1),
+        R = (0, m.A)("(max-width: 1439px)"),
+        { selectedTab: P, isPhantomPreview: M } = (0, j.k)(),
+        D = P === N.B.GUILD_PRODUCTS_PREVIEW ? y.intl.string(y.t["LvXy/H"]) : y.intl.string(y.t.XyqKh8),
+        O = I
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)(x, {
-                          lineClamp: k || 2 === v ? 2 : 3,
+                          lineClamp: R || 2 === v ? 2 : 3,
                           children: (0, i.jsx)(d.E, {
                               variant: "text-sm/normal",
                               color: "text-default",
@@ -92,7 +92,11 @@ function R(e) {
                           (0, i.jsxs)(i.Fragment, {
                               children: [
                                   (0, i.jsx)(c.h, { size: 4 }),
-                                  (0, i.jsx)(b, { onClick: () => (0, T.A)({ guildId: s }) }),
+                                  (0, i.jsx)(b, {
+                                      onClick: function () {
+                                          return (0, T.A)({ guildId: s });
+                                      },
+                                  }),
                               ],
                           }),
                   ],
@@ -100,7 +104,7 @@ function R(e) {
             : (0, i.jsx)(d.E, {
                   variant: "text-sm/normal",
                   color: "text-default",
-                  children: P ? D : y.intl.string(y.t["NY/FIW"]),
+                  children: M ? D : y.intl.string(y.t["NY/FIW"]),
               });
     return (0, i.jsxs)("div", {
         className: S.kL,
@@ -113,7 +117,7 @@ function R(e) {
                             guild: t,
                             size: p.Ay.Sizes.LARGER,
                             iconSrc:
-                                null == t.icon || P
+                                null == t.icon || M
                                     ? (0, h.n)("server_products/storefront/default-guild-icon.jpg")
                                     : void 0,
                         }),
@@ -123,13 +127,13 @@ function R(e) {
                         children: [
                             (0, i.jsx)("div", {
                                 ref: (e) => {
-                                    null != e && e.clientHeight > 30 && R(2);
+                                    null != e && e.clientHeight > 30 && k(2);
                                 },
                                 children: (0, i.jsx)(u.D, {
                                     variant: "heading-xl/semibold",
                                     color: "text-strong",
                                     lineClamp: 2,
-                                    children: P
+                                    children: M
                                         ? y.intl.string(y.t.rtgp7q)
                                         : y.intl.formatToPlainString(y.t.NZeik9, { guildName: t.name }),
                                 }),
@@ -146,12 +150,12 @@ function R(e) {
                                 }),
                             }),
                             (0, i.jsx)(c.h, { size: 9 }),
-                            w,
+                            O,
                         ],
                     }),
                 ],
             }),
-            (0, i.jsx)(L, { coverImageAsset: n?.cover_image_asset, isPreview: P }),
+            (0, i.jsx)(L, { coverImageAsset: n?.cover_image_asset, isPreview: M }),
         ],
     });
 }

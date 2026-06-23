@@ -513,56 +513,53 @@ function tC(e) {
         return (t) => (0, r.jsx)(e, { ...t });
     });
 }
-let tN = (e) => {
-        let { keybindString: t, targetElementRef: n } = e,
-            [i, a] = s.useState(!1),
-            o = s.useCallback(() => a(!1), []);
-        return (0, r.jsx)(p.A, {
-            shouldShow: i,
-            targetElementRef: n,
-            position: "top",
-            title: z.intl.format(z.t["o+srEw"], {
-                keybind: t,
-                keybindHook: () =>
-                    (0, r.jsx)("span", {
-                        className: ty.E,
-                        children: (0, r.jsx)(th.e, { className: ty.d, shortcut: t }),
-                    }),
+function tN(e) {
+    let { keybindString: t, targetElementRef: n } = e,
+        [i, a] = s.useState(!1),
+        o = s.useCallback(() => a(!1), []);
+    return (0, r.jsx)(p.A, {
+        shouldShow: i,
+        targetElementRef: n,
+        position: "top",
+        title: z.intl.format(z.t["o+srEw"], {
+            keybind: t,
+            keybindHook: () =>
+                (0, r.jsx)("span", { className: ty.E, children: (0, r.jsx)(th.e, { className: ty.d, shortcut: t }) }),
+        }),
+        body: z.intl.format(z.t.DWeRm1, { keybindHook: () => t, keybind: t }),
+        graphic: { type: "image", src: "/assets/451ad77ebce44152.svg" },
+        caretConfig: { align: "center" },
+        onRequestClose: o,
+    });
+}
+let tv = function () {
+    let e = s.useRef(null),
+        { parentAnalyticsLocation: t } = (0, ea.Ay)(),
+        n = (0, t_.bG)([tm.A], () => tm.A.hasLayers()),
+        i = (0, tT.Et)(),
+        a = (0, t_.bG)([tI.Ay], () => tI.Ay.getIsAtMaxSaveClipOperations()),
+        o = (0, t_.bG)([tg.Ay], () => tg.Ay.getKeybindForAction(k.hCu.SAVE_CLIP));
+    if (!i || null == o || n) return null;
+    let l = tA.dI(o.shortcut, !0);
+    return (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(tN, { keybindString: l, targetElementRef: e }),
+            (0, r.jsx)(tE.A, {
+                ref: e,
+                disabled: a,
+                tooltipText:
+                    null != o
+                        ? z.intl.formatToPlainString(z.t.HIMcv1, { hotkey: tA.dI(o?.shortcut, !0) })
+                        : z.intl.string(z.t.s52pju),
+                onClick: () => {
+                    (0, tS.l0)(), (0, eE.X)(t, eE.O.CLIP);
+                },
+                onContextMenu: tC,
+                icon: tf.x,
             }),
-            body: z.intl.format(z.t.DWeRm1, { keybindHook: () => t, keybind: t }),
-            graphic: { type: "image", src: "/assets/451ad77ebce44152.svg" },
-            caretConfig: { align: "center" },
-            onRequestClose: o,
-        });
-    },
-    tv = () => {
-        let e = s.useRef(null),
-            { parentAnalyticsLocation: t } = (0, ea.Ay)(),
-            n = (0, t_.bG)([tm.A], () => tm.A.hasLayers()),
-            i = (0, tT.Et)(),
-            a = (0, t_.bG)([tI.Ay], () => tI.Ay.getIsAtMaxSaveClipOperations()),
-            o = (0, t_.bG)([tg.Ay], () => tg.Ay.getKeybindForAction(k.hCu.SAVE_CLIP));
-        if (!i || null == o || n) return null;
-        let l = tA.dI(o.shortcut, !0);
-        return (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsx)(tN, { keybindString: l, targetElementRef: e }),
-                (0, r.jsx)(tE.A, {
-                    ref: e,
-                    disabled: a,
-                    tooltipText:
-                        null != o
-                            ? z.intl.formatToPlainString(z.t.HIMcv1, { hotkey: tA.dI(o?.shortcut, !0) })
-                            : z.intl.string(z.t.s52pju),
-                    onClick: () => {
-                        (0, tS.l0)(), (0, eE.X)(t, eE.O.CLIP);
-                    },
-                    onContextMenu: tC,
-                    icon: tf.x,
-                }),
-            ],
-        });
-    };
+        ],
+    });
+};
 var tR = n(338771),
     tO = n(212637),
     tb = n(397400),
@@ -846,7 +843,7 @@ let tY = s.memo(function (e) {
                     ? null
                     : (0, r.jsx)(tW, {
                           runningGame: d,
-                          startAuthorization: () => {
+                          startAuthorization: function () {
                               S({ analyticsLocations: O }) === tB._M.RPC &&
                                   (Q(!0),
                                   null != Z.current && clearTimeout(Z.current),
@@ -1368,7 +1365,7 @@ function na(e) {
                         children: [
                             (0, r.jsx)(eF.A, {
                                 href: t,
-                                onClick: () => {
+                                onClick: function () {
                                     E(), h && g.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
                                 },
                                 children: (0, r.jsx)(e9.A, { className: t8._W, children: n.name }),
@@ -1397,7 +1394,7 @@ function no(e) {
                     className: t8.pq,
                     children: [
                         (0, r.jsx)(E.D, {
-                            onClick: () => {
+                            onClick: function () {
                                 a
                                     ? g.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })
                                     : eI.A.updateFrameLayoutMode({

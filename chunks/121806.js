@@ -317,8 +317,8 @@ function G(e) {
         );
     return { options: i, query: r, setQuery: l, handleClearFilter: u, getApplyQueryString: o, handleFocusFilter: a };
 }
-let B = () =>
-    n.useMemo(() => {
+function B() {
+    return n.useMemo(() => {
         let e = O.Ay[P.LWr.FILTER_BEFORE],
             t = O.Ay[P.LWr.FILTER_AFTER],
             r = O.Ay[P.LWr.FILTER_ON];
@@ -328,6 +328,7 @@ let B = () =>
             duringFilter: r?.key ?? `${D.intl.string(D.t.h2NzSd)}:`,
         };
     }, []);
+}
 function Q() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : [],
         [t, r] = n.useState(e),

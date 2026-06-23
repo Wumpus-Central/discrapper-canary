@@ -73,7 +73,7 @@ function y() {
     o.A.show({
         title: m.intl.string(m.t.iufib1),
         body: m.intl.string(m.t.eAn6z2),
-        onCloseCallback: () => {
+        onCloseCallback: function () {
             window.location.reload();
         },
     });

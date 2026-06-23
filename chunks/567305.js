@@ -4,11 +4,13 @@ var i = n(702841),
     r = n(71393),
     s = n(652215);
 let a = [
-        s.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED,
-        s.GuildFeatures.CREATOR_MONETIZABLE,
-        s.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL,
-    ],
-    o = (e) => null != e && a.some((t) => e.features.has(t));
+    s.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED,
+    s.GuildFeatures.CREATOR_MONETIZABLE,
+    s.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL,
+];
+function o(e) {
+    return null != e && a.some((t) => e.features.has(t));
+}
 function l(e) {
     let t = r.A.getGuild(e);
     return t?.features.has(s.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED) ?? !1;

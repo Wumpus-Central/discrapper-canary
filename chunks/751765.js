@@ -78,86 +78,81 @@ var E = n(721441),
     S = n(927813),
     y = n(935208),
     C = n(375708);
-let N = (e, t) => {
-        let n = Math.max(e - t, 0) / S.A.Millis.SECOND,
-            i = Math.floor(n) % S.A.Seconds.MINUTE,
-            r = Math.floor(n / S.A.Seconds.MINUTE) % S.A.Seconds.MINUTE;
-        return {
-            seconds: i,
-            minutes: r,
-            hours: Math.floor(n / S.A.Seconds.HOUR),
-            days: Math.floor(n / S.A.Seconds.DAY),
-        };
-    },
-    v = (e, t) => {
-        let n = "end" in e ? e.end : void 0,
-            i = "isCountDown" in e && null != e.isCountDown && e.isCountDown;
-        return i && null != n && n > t
-            ? N(n, t)
-            : N(null == n || i ? t : Math.min(n, t), "id" in e ? y.default.extractTimestamp(e.id) : e.start);
-    },
-    R = (e, t) => {
-        let { seconds: n, minutes: i, hours: r } = v(e, t);
-        function s(e) {
-            return String(e).padStart(2, "0");
-        }
-        let a = r > 0 ? s(i) : i,
-            o = s(n);
-        return r > 0 ? `${r}:${a}:${o}` : `${a}:${o}`;
-    },
-    O = (e) => {
-        let { hours: t, minutes: n, seconds: i } = e,
-            r = [];
-        return (
-            t > 0 && r.push(C.intl.formatToPlainString(C.t.xCjYxK, { hours: t })),
-            r.push(C.intl.formatToPlainString(C.t.iXLF9W, { minutes: n })),
-            r.push(C.intl.formatToPlainString(C.t.geSp4K, { seconds: i })),
-            r.join(", ")
-        );
-    },
-    b = (e, t) => {
-        let { seconds: n, minutes: i, hours: r } = v(e, t);
-        return O({ hours: r, minutes: i, seconds: n });
-    },
-    D = {
-        secondsAgo: (e) => C.intl.formatToPlainString(C.t.EOrEJl, { count: e }),
-        minutesAgo: (e) => C.intl.formatToPlainString(C.t.LRNgHp, { count: e }),
-        hoursAgo: (e) => C.intl.formatToPlainString(C.t.raJpz3, { count: e }),
-        daysAgo: (e) => C.intl.formatToPlainString(C.t.KkvKhi, { count: e }),
-        weeksAgo: (e) => C.intl.formatToPlainString(C.t.sDtO6D, { count: e }),
-        monthsAgo: (e) => C.intl.formatToPlainString(C.t.ITymou, { count: e }),
-    },
-    L = function (e, t, n) {
-        let { formatSet: i = D } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
-            r = A()(n),
-            s = A()(y.default.extractTimestamp(e.id)),
-            a = r.diff(s, "s"),
-            o = Math.abs(a);
-        if (o < S.A.Seconds.MINUTE) return i.secondsAgo(a);
-        if (o < S.A.Seconds.HOUR) {
-            let e = Math.round(a / S.A.Seconds.MINUTE);
-            return i.minutesAgo(e);
-        }
-        if (o < 12 * S.A.Seconds.HOUR) {
-            let e = Math.round(a / S.A.Seconds.HOUR);
-            return i.hoursAgo(e);
-        }
-        if (o < 9 * S.A.Seconds.DAY) {
-            let e = Math.round(a / S.A.Seconds.DAY);
-            return i.daysAgo(e);
-        }
-        if (o < 4 * S.A.Seconds.WEEK) {
-            let e = Math.round(a / (7 * S.A.Seconds.DAY));
-            return i.weeksAgo(e);
-        }
-        let l = Math.round(a / S.A.Seconds.DAYS_30);
-        return i.monthsAgo(l);
-    },
-    w = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
-            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-        return P(e) ? R(e, n) : L(e, t, n, i);
-    };
+function N(e, t) {
+    let n = Math.max(e - t, 0) / S.A.Millis.SECOND,
+        i = Math.floor(n) % S.A.Seconds.MINUTE,
+        r = Math.floor(n / S.A.Seconds.MINUTE) % S.A.Seconds.MINUTE;
+    return { seconds: i, minutes: r, hours: Math.floor(n / S.A.Seconds.HOUR), days: Math.floor(n / S.A.Seconds.DAY) };
+}
+function v(e, t) {
+    let n = "end" in e ? e.end : void 0,
+        i = "isCountDown" in e && null != e.isCountDown && e.isCountDown;
+    return i && null != n && n > t
+        ? N(n, t)
+        : N(null == n || i ? t : Math.min(n, t), "id" in e ? y.default.extractTimestamp(e.id) : e.start);
+}
+function R(e, t) {
+    let { seconds: n, minutes: i, hours: r } = v(e, t);
+    function s(e) {
+        return String(e).padStart(2, "0");
+    }
+    let a = r > 0 ? s(i) : i,
+        o = s(n);
+    return r > 0 ? `${r}:${a}:${o}` : `${a}:${o}`;
+}
+function O(e) {
+    let { hours: t, minutes: n, seconds: i } = e,
+        r = [];
+    return (
+        t > 0 && r.push(C.intl.formatToPlainString(C.t.xCjYxK, { hours: t })),
+        r.push(C.intl.formatToPlainString(C.t.iXLF9W, { minutes: n })),
+        r.push(C.intl.formatToPlainString(C.t.geSp4K, { seconds: i })),
+        r.join(", ")
+    );
+}
+function b(e, t) {
+    let { seconds: n, minutes: i, hours: r } = v(e, t);
+    return O({ hours: r, minutes: i, seconds: n });
+}
+let D = {
+    secondsAgo: (e) => C.intl.formatToPlainString(C.t.EOrEJl, { count: e }),
+    minutesAgo: (e) => C.intl.formatToPlainString(C.t.LRNgHp, { count: e }),
+    hoursAgo: (e) => C.intl.formatToPlainString(C.t.raJpz3, { count: e }),
+    daysAgo: (e) => C.intl.formatToPlainString(C.t.KkvKhi, { count: e }),
+    weeksAgo: (e) => C.intl.formatToPlainString(C.t.sDtO6D, { count: e }),
+    monthsAgo: (e) => C.intl.formatToPlainString(C.t.ITymou, { count: e }),
+};
+function L(e, t, n) {
+    let { formatSet: i = D } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
+        r = A()(n),
+        s = A()(y.default.extractTimestamp(e.id)),
+        a = r.diff(s, "s"),
+        o = Math.abs(a);
+    if (o < S.A.Seconds.MINUTE) return i.secondsAgo(a);
+    if (o < S.A.Seconds.HOUR) {
+        let e = Math.round(a / S.A.Seconds.MINUTE);
+        return i.minutesAgo(e);
+    }
+    if (o < 12 * S.A.Seconds.HOUR) {
+        let e = Math.round(a / S.A.Seconds.HOUR);
+        return i.hoursAgo(e);
+    }
+    if (o < 9 * S.A.Seconds.DAY) {
+        let e = Math.round(a / S.A.Seconds.DAY);
+        return i.daysAgo(e);
+    }
+    if (o < 4 * S.A.Seconds.WEEK) {
+        let e = Math.round(a / (7 * S.A.Seconds.DAY));
+        return i.weeksAgo(e);
+    }
+    let l = Math.round(a / S.A.Seconds.DAYS_30);
+    return i.monthsAgo(l);
+}
+function w(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : Date.now(),
+        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    return P(e) ? R(e, n) : L(e, t, n, i);
+}
 function M(e, t) {
     return e.traits.find((e) => e.type === t);
 }

@@ -6,8 +6,8 @@ var l = i(503698),
     a = i(990078),
     r = i(765178),
     c = i(939249),
-    u = i(241326),
-    o = i(661531),
+    o = i(241326),
+    u = i(661531),
     d = i(183555),
     g = i(735321),
     m = i(375708),
@@ -20,7 +20,7 @@ function x(e) {
         ariaHidden: !0,
         children: (0, n.jsx)(c.D, {
             innerRef: p,
-            onClick: () => {
+            onClick: function () {
                 (0, g.ef)(i, t.applicationId),
                     r.O.announce(m.intl.string(m.t["08HmMj"])),
                     A({ action: "GAME_REMOVED", gameId: t.applicationId, widgetEdited: i }),
@@ -28,7 +28,7 @@ function x(e) {
             },
             "aria-label": m.intl.string(m.t.HUvyDc),
             className: s()(x, f.v),
-            children: (0, n.jsx)(u.u, { size: l, className: f.K, color: o.A.colors.ICON_FEEDBACK_CRITICAL }),
+            children: (0, n.jsx)(o.u, { size: l, className: f.K, color: u.A.colors.ICON_FEEDBACK_CRITICAL }),
         }),
     });
 }

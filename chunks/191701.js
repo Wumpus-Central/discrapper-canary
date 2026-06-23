@@ -187,9 +187,9 @@ function t$(t) {
 }
 var tX = i(119191),
     tW = i(499214);
-let tq = (t) => {
+function tq(t) {
     t && (0, tU.Ak)(R.cH, R.pD, void 0, void 0, { trackNotificationFailure: !0 });
-};
+}
 var tQ = i(554146),
     tZ = i(298990),
     t0 = i(429913),
@@ -602,30 +602,26 @@ let e_ = new eE(s.h, {
                         break;
                     }
                     case H.Jr.GO_LIVE_VOICE:
-                    case H.Jr.GO_LIVE_NON_VOICE: {
-                        let t = J.intl.string(J.t.U76Ft2),
-                            e = (t) => {
-                                let e = () => {
-                                        l("go-live-modal"), o.A.setInputLocked(!1, w.A.getTargetPID());
-                                    },
-                                    i = () => {
-                                        l("one-click-go-live");
-                                    };
-                                (0, t9.H)({
-                                    pid: w.A.getTargetPID(),
-                                    analyticsLocation: z.ThZ.OVERLAY_NUDGE,
-                                    allowOneClickGoLive: !0,
-                                    onBeforeShowModal: e,
-                                    onOneClickGoLive: i,
-                                    appContext: z.BRT.POPOUT,
-                                });
-                            };
-                        (a.confirmText = t),
-                            (a.onConfirmClick = (t, i) => {
-                                o.A.updateNotificationStatus(i), e(t);
+                    case H.Jr.GO_LIVE_NON_VOICE:
+                        (a.confirmText = J.intl.string(J.t.U76Ft2)),
+                            (a.onConfirmClick = (t, e) => {
+                                function i() {
+                                    l("go-live-modal"), o.A.setInputLocked(!1, w.A.getTargetPID());
+                                }
+                                function n() {
+                                    l("one-click-go-live");
+                                }
+                                o.A.updateNotificationStatus(e),
+                                    (0, t9.H)({
+                                        pid: w.A.getTargetPID(),
+                                        analyticsLocation: z.ThZ.OVERLAY_NUDGE,
+                                        allowOneClickGoLive: !0,
+                                        onBeforeShowModal: i,
+                                        onOneClickGoLive: n,
+                                        appContext: z.BRT.POPOUT,
+                                    });
                             });
                         break;
-                    }
                     case H.Jr.CONTENT_INVENTORY:
                         (a.onNotificationShow = () => {
                             o.A.track(z.HAw.OVERLAY_GAME_INVITE_NOTIFICATION_SHOWN, {

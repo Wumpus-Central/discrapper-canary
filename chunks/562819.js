@@ -9,7 +9,7 @@ var a = n(190460);
 function o(e) {
     return "number" != typeof e ? (0, r.FT)(e) * a.Xq : e * a.Xq;
 }
-let l = (e) => {
+function l(e) {
     let { analyticsLocations: t, initialSelectedDecoration: r, guild: a, onClose: o, stackingBehavior: l } = e;
     (0, s.openModalLazy)(
         async () => {
@@ -50,4 +50,4 @@ let l = (e) => {
         },
         { stackingBehavior: l },
     );
-};
+}

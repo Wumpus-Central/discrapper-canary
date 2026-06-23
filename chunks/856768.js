@@ -19,18 +19,18 @@ var n = l(627968),
     p = l(504049),
     V = l(587426),
     v = l(134413),
-    M = l(652215),
-    A = l(375708),
+    A = l(652215),
+    M = l(375708),
     L = l(983475);
 function b(e) {
     let { guildId: t } = e,
         b = (0, v.vA)(t),
         { selectedUserIds: D, clearSelection: R } = (0, V.A)(t),
-        E = D.size > 0,
-        N = (e, t, l, n) => {
-            h.A.startBulkBan(e, t, l, n);
-        },
-        S = i.useCallback(() => {
+        E = D.size > 0;
+    function N(e, t, l, n) {
+        h.A.startBulkBan(e, t, l, n);
+    }
+    let S = i.useCallback(() => {
             R();
         }, [R]),
         Z = (0, n.jsxs)("span", {
@@ -45,9 +45,9 @@ function b(e) {
                 (0, n.jsx)(u.E, {
                     variant: "heading-md/bold",
                     color: "text-default",
-                    children: A.intl.format(A.t.TstoSZ, { count: D.size }),
+                    children: M.intl.format(M.t.TstoSZ, { count: D.size }),
                 }),
-                (0, n.jsx)(m.Q, { text: A.intl.string(A.t.yW6ZdE), onClick: S }),
+                (0, n.jsx)(m.Q, { text: M.intl.string(M.t.yW6ZdE), onClick: S }),
             ],
         }),
         I = (0, n.jsxs)("span", {
@@ -57,7 +57,7 @@ function b(e) {
                 (0, n.jsx)(u.E, {
                     variant: "text-sm/semibold",
                     color: "currentColor",
-                    children: A.intl.string(A.t["2a50fF"]),
+                    children: M.intl.string(M.t["2a50fF"]),
                 }),
             ],
         });
@@ -69,8 +69,8 @@ function b(e) {
                   E &&
                   (0, n.jsx)(x.F, {
                       children: (0, n.jsx)(a.A, {
-                          onSave: () => {
-                              j.default.track(M.HAw.BULK_MODERATION_ACTION_STARTED, {
+                          onSave: function () {
+                              j.default.track(A.HAw.BULK_MODERATION_ACTION_STARTED, {
                                   ...(0, g.H$)(t),
                                   action_type: p.Nj.BAN,
                                   target_user_ids: [...D],

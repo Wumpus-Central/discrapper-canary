@@ -45,10 +45,10 @@ var T = n(717125),
     D = n(704726),
     L = n(652215),
     w = n(375708);
-let M = (e) => {
+function M(e) {
     let t = d.A.getChannel(e);
     return t?.getGuildId();
-};
+}
 function P(e) {
     return {
         type: "guild",
@@ -312,13 +312,14 @@ function el(e) {
     let { displayTarget: n, target: i } = t;
     return { type: "link", content: [{ type: "text", content: n }], target: i, title: void 0 };
 }
-let eu = (e) => {
-        let t = d.A.getChannel(e);
-        return t?.getGuildId();
-    },
-    ec = (e) =>
-        null != e.guildId ? f.A.getGuild(e.guildId) : null != e.channelId ? f.A.getGuild(eu(e.channelId)) : null,
-    ed = {
+function eu(e) {
+    let t = d.A.getChannel(e);
+    return t?.getGuildId();
+}
+function ec(e) {
+    return null != e.guildId ? f.A.getGuild(e.guildId) : null != e.channelId ? f.A.getGuild(eu(e.channelId)) : null;
+}
+let ed = {
         newline: a().defaultRules.newline,
         paragraph: a().defaultRules.paragraph,
         escape: {

@@ -6,7 +6,9 @@ var e = s(627968),
     l = s(615300),
     d = s(576394);
 function c(t) {
-    let o = (t) => t.interpolate({ inputRange: [0, 1], outputRange: ["0px", "1px"] });
+    function o(t) {
+        return t.interpolate({ inputRange: [0, 1], outputRange: ["0px", "1px"] });
+    }
     return { transform: [{ translateX: o(t.x) }, { translateY: o(t.y) }] };
 }
 class h extends r.Component {

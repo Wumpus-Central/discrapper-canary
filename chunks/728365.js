@@ -19,8 +19,8 @@ var n,
     p = l(151781),
     V = l(221950),
     v = l(470348),
-    M = l(834730),
-    A = l(159083),
+    A = l(834730),
+    M = l(159083),
     L = l(189552),
     b = l(636670),
     D = l(375708),
@@ -30,7 +30,7 @@ function E(e) {
         l = C.useMemo(
             () => ({
                 [L.IY.LOADING]: null,
-                [L.IY.SUCCESS_STILL_INDEXING]: { icon: (0, i.jsx)(A.A, {}), message: D.intl.string(D.t.AXPbZr) },
+                [L.IY.SUCCESS_STILL_INDEXING]: { icon: (0, i.jsx)(M.A, {}), message: D.intl.string(D.t.AXPbZr) },
                 [L.IY.SUCCESS_EMPTY]: { icon: (0, i.jsx)(b.A, {}), message: D.intl.string(D.t.wdyR52) },
                 [L.IY.SUCCESS_FULL]: null,
             }),
@@ -42,7 +42,7 @@ function E(e) {
               className: R.p,
               children: [
                   (0, i.jsx)("div", { className: R.__invalid_noResultsIconContainer, children: l.icon }),
-                  (0, i.jsx)(M.E, { variant: "text-md/normal", color: "text-muted", children: l.message }),
+                  (0, i.jsx)(A.E, { variant: "text-md/normal", color: "text-muted", children: l.message }),
               ],
           });
 }
@@ -135,7 +135,7 @@ function en(e) {
             },
             [x],
         ),
-        A = C.useCallback(() => {
+        M = C.useCallback(() => {
             null == s && null == n && u(0, null), f(!1);
         }, [n, s, u]);
     return (0, i.jsx)(z.W, {
@@ -150,7 +150,7 @@ function en(e) {
                       children: [
                           (0, i.jsx)(Y.Dr, {
                               id: "back",
-                              action: A,
+                              action: M,
                               render: (e) =>
                                   (0, i.jsxs)("span", {
                                       ...e,
@@ -162,7 +162,7 @@ function en(e) {
                                               width: 16,
                                               height: 16,
                                           }),
-                                          (0, i.jsx)(M.E, {
+                                          (0, i.jsx)(A.E, {
                                               variant: "eyebrow",
                                               color: "text-strong",
                                               children: D.intl.string(D.t.BTfN6g),
@@ -235,13 +235,13 @@ function en(e) {
                                           (0, i.jsxs)("div", {
                                               className: W.jA,
                                               children: [
-                                                  (0, i.jsx)(M.E, {
+                                                  (0, i.jsx)(A.E, {
                                                       className: a()(W.ty, { [W.in]: e.isFocused }),
                                                       variant: "text-sm/medium",
                                                       children: D.intl.string(D.t.BTfN6g),
                                                   }),
                                                   null != j &&
-                                                      (0, i.jsx)(M.E, {
+                                                      (0, i.jsx)(A.E, {
                                                           className: a()(W.ty, { [W.in]: e.isFocused }),
                                                           color: "text-muted",
                                                           variant: "text-xxs/medium",
@@ -460,7 +460,7 @@ var eH = l(316173),
     ep = l(676608),
     eV = l(34457),
     ev = l(317525);
-function eM(e) {
+function eA(e) {
     let { guildId: t, onClose: l } = e,
         n = (0, j.hs)(t),
         [s, a] = C.useState(""),
@@ -524,7 +524,7 @@ function eM(e) {
         }),
     });
 }
-var eA = l(301050),
+var eM = l(301050),
     eL = l(62255);
 let eb = C.forwardRef(function (e, t) {
     let { label: l, onFilter: n, isFiltered: C, isSorted: s, className: r, ...d } = e,
@@ -532,20 +532,20 @@ let eb = C.forwardRef(function (e, t) {
     return (
         s && (o = "text-brand"),
         (0, i.jsx)("th", {
-            className: a()(eA.P1, r),
+            className: a()(eM.P1, r),
             children: (0, i.jsxs)(I.D, {
                 ...d,
                 innerRef: t,
                 onClick: n,
-                className: a()(eA.WV, { [eA.o1]: null != n }),
+                className: a()(eM.WV, { [eM.o1]: null != n }),
                 children: [
-                    (0, i.jsx)(M.E, { variant: "eyebrow", color: o, children: l }),
+                    (0, i.jsx)(A.E, { variant: "eyebrow", color: o, children: l }),
                     null != n &&
                         (0, i.jsx)("div", {
-                            className: eA.IO,
+                            className: eM.IO,
                             children: (0, i.jsx)(y.R, {
                                 size: "custom",
-                                className: eA.Sj,
+                                className: eM.Sj,
                                 color: C ? _.A.colors.CONTROL_BRAND_FOREGROUND.css : _.A.colors.TEXT_MUTED.css,
                                 width: 16,
                                 height: 16,
@@ -575,10 +575,10 @@ function eD(e) {
         j = null != u.selectedJoinDateOption.afterDate,
         V = u.selectedSort === O.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
         v = null != u.selectedAccountAgeOption.afterDate,
-        M = u.selectedSort === O.mF.ORDER_BY_USER_ID_ASC || u.selectedSort === O.mF.ORDER_BY_USER_ID_DESC,
-        A = null != u.selectedSourceInviteCode && "" !== u.selectedSourceInviteCode,
+        A = u.selectedSort === O.mF.ORDER_BY_USER_ID_ASC || u.selectedSort === O.mF.ORDER_BY_USER_ID_DESC,
+        M = null != u.selectedSourceInviteCode && "" !== u.selectedSourceInviteCode,
         L = null != u.selectedJoinSourceType,
-        b = A || L,
+        b = M || L,
         R = (0, G.vA)(t),
         E = C.useMemo(() => l.filter((e) => (0, G.Ph)(t, R, e)), [R, l, t]),
         N = E.length > 0,
@@ -588,17 +588,17 @@ function eD(e) {
         }, [N, y, h, x, E]);
     return (0, i.jsx)("thead", {
         children: (0, i.jsxs)("tr", {
-            className: eA.Yk,
+            className: eM.Yk,
             children: [
                 R &&
                     (0, i.jsx)("th", {
-                        className: a()(eA.P1, eL.y2),
+                        className: a()(eM.P1, eL.y2),
                         children: (0, i.jsx)(Z.m, {
                             shouldShow: !N,
                             text: D.intl.string(D.t.tJEY0G),
                             children: (0, i.jsx)(I.D, {
                                 onClick: _,
-                                className: eA.WV,
+                                className: eM.WV,
                                 children: (0, i.jsx)(w.P, { checked: y, disabled: !N }),
                             }),
                         }),
@@ -641,7 +641,7 @@ function eD(e) {
                                           label: D.intl.string(D.t.sPph4O),
                                           onFilter: t,
                                           isFiltered: v,
-                                          isSorted: M,
+                                          isSorted: A,
                                           className: eL.qp,
                                           ...l,
                                       });
@@ -684,7 +684,7 @@ function eD(e) {
                     align: "left",
                     renderPopout: (e) => {
                         let { closePopout: l } = e;
-                        return (0, i.jsx)(eM, { guildId: t, onClose: l });
+                        return (0, i.jsx)(eA, { guildId: t, onClose: l });
                     },
                     children: (e) => {
                         let { onClick: t, ...l } = e;
@@ -760,7 +760,7 @@ var eR = l(735438),
     eY = l(935208),
     eK = l(427262),
     e$ = l(157347),
-    eQ = l(922139),
+    eQ = l(308186),
     eX = l(615300),
     eW = l(717421),
     eJ = l(475743);
@@ -865,7 +865,7 @@ let e7 = C.memo(function (e) {
                               onClick: (e) => c(e),
                               children: (0, i.jsx)(Z.m, {
                                   text: D.intl.string(D.t.DY6n4q),
-                                  children: (0, i.jsxs)(M.E, {
+                                  children: (0, i.jsxs)(A.E, {
                                       variant: "text-xs/medium",
                                       color: "text-strong",
                                       children: ["+", r],
@@ -901,7 +901,7 @@ let e7 = C.memo(function (e) {
                       (0, i.jsx)("div", { className: eL.Wn, children: (0, i.jsx)(eI.A, { user: l }) }),
                       (0, i.jsx)("div", {
                           className: eL.eg,
-                          children: (0, i.jsx)(M.E, {
+                          children: (0, i.jsx)(A.E, {
                               variant: "text-sm/medium",
                               children: (0, i.jsxs)("div", {
                                   className: eL.VW,
@@ -924,7 +924,7 @@ let e7 = C.memo(function (e) {
                       }),
                       (0, i.jsx)("div", {
                           className: eL.Br,
-                          children: (0, i.jsx)(M.E, {
+                          children: (0, i.jsx)(A.E, {
                               variant: "text-xs/normal",
                               color: "text-default",
                               tag: "span",
@@ -955,14 +955,14 @@ function tt(e) {
         : l
           ? (0, i.jsx)("div", {
                 className: eL.__invalid_joinedAtContainer,
-                children: (0, i.jsx)(M.E, { variant: "text-sm/medium", color: r, children: s.long }),
+                children: (0, i.jsx)(A.E, { variant: "text-sm/medium", color: r, children: s.long }),
             })
           : (0, i.jsx)("div", {
                 className: eL.__invalid_joinedAtContainer,
                 children: (0, i.jsx)(Z.m, {
                     align: "left",
                     __unsupportedReactNodeAsText: s.long,
-                    children: (0, i.jsx)(M.E, { variant: "text-sm/medium", color: r, children: s.short }),
+                    children: (0, i.jsx)(A.E, { variant: "text-sm/medium", color: r, children: s.short }),
                 }),
             });
 }
@@ -977,11 +977,11 @@ let tl = C.memo(function (e) {
             }, [t.userId]),
             r = n ? "text-brand" : "text-default";
         return l
-            ? (0, i.jsx)(M.E, { variant: "text-sm/medium", color: r, children: a })
+            ? (0, i.jsx)(A.E, { variant: "text-sm/medium", color: r, children: a })
             : (0, i.jsx)(Z.m, {
                   align: "left",
                   __unsupportedReactNodeAsText: a,
-                  children: (0, i.jsx)(M.E, { variant: "text-sm/medium", color: r, children: s }),
+                  children: (0, i.jsx)(A.E, { variant: "text-sm/medium", color: r, children: s }),
               });
     }),
     tn = C.memo(function (e) {
@@ -1014,7 +1014,7 @@ let tl = C.memo(function (e) {
                 [x, f, t, h, H],
             ),
             v = j === O.mF.ORDER_BY_GUILD_JOINED_AT_ASC,
-            M = j === O.mF.ORDER_BY_USER_ID_ASC || j === O.mF.ORDER_BY_USER_ID_DESC;
+            A = j === O.mF.ORDER_BY_USER_ID_ASC || j === O.mF.ORDER_BY_USER_ID_DESC;
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 g &&
@@ -1039,7 +1039,7 @@ let tl = C.memo(function (e) {
                 }),
                 (0, i.jsx)("td", {
                     className: a()(eL.qp, { [eL.oE]: c }),
-                    children: (0, i.jsx)(tl, { showLongDate: s, member: t, isSortedBy: M }),
+                    children: (0, i.jsx)(tl, { showLongDate: s, member: t, isSortedBy: A }),
                 }),
                 m &&
                     (0, i.jsx)("td", {
@@ -1118,13 +1118,13 @@ let tl = C.memo(function (e) {
                 },
                 [V],
             ),
-            M = C.useCallback(
+            A = C.useCallback(
                 (e) => {
                     e.stopPropagation(), e.preventDefault(), null != h && (0, L.Ko)(h, u);
                 },
                 [h, u],
             ),
-            A = C.useCallback(
+            M = C.useCallback(
                 (e) => {
                     e.stopPropagation(),
                         e.preventDefault(),
@@ -1144,7 +1144,7 @@ let tl = C.memo(function (e) {
                   style: n,
                   className: a()(eL.yF, eL.iA, s && eL.wH, H && eL.qb, r && eL.Lq),
                   equalityFn: b,
-                  onClick: M,
+                  onClick: A,
                   onContextMenu: v,
                   children: (0, i.jsx)(tn, {
                       member: h,
@@ -1152,7 +1152,7 @@ let tl = C.memo(function (e) {
                       highestRole: g,
                       isHoldingAdvancedInfoKey: d,
                       onOpenModerationMenu: v,
-                      onOpenMemberView: A,
+                      onOpenMemberView: M,
                       compact: c,
                       hasModViewPanelAccess: j,
                   }),
@@ -1191,7 +1191,7 @@ function td(e) {
               children: [
                   (0, i.jsx)("td", {
                       colSpan: 3,
-                      children: (0, i.jsx)(M.E, {
+                      children: (0, i.jsx)(A.E, {
                           variant: "text-sm/normal",
                           color: "always-white",
                           children: D.intl.format(D.t["/i5uJ1"], { count: m, date: a }),
@@ -1205,7 +1205,7 @@ function td(e) {
                           children: (0, i.jsx)(I.D, {
                               onClick: u,
                               className: tr.Fu,
-                              children: (0, i.jsxs)(M.E, {
+                              children: (0, i.jsxs)(A.E, {
                                   variant: "text-sm/normal",
                                   color: "always-white",
                                   className: tr.Lb,
@@ -1231,10 +1231,14 @@ var to = l(650583),
 let tu = { transform: "translate3d(15%, 0, 0)", opacity: 0.3 },
     tm = { transform: "translate3d(5%, 0, 0)", opacity: 0.5 },
     tH = { transform: "translate3d(0, 0, 0)", opacity: 1 },
-    tx = { mass: 1.1, friction: 24, tension: 260 },
-    th = (e) => e.shiftKey || e.key === to.dh.SHIFT,
-    tg = (e) => e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key),
-    tf = C.memo(
+    tx = { mass: 1.1, friction: 24, tension: 260 };
+function th(e) {
+    return e.shiftKey || e.key === to.dh.SHIFT;
+}
+function tg(e) {
+    return e.metaKey || e.ctrlKey || ["Meta", "Control"].includes(e.key);
+}
+let tf = C.memo(
         function (e) {
             let {
                     members: t,
@@ -1247,8 +1251,8 @@ let tu = { transform: "translate3d(15%, 0, 0)", opacity: 0.3 },
                 } = e,
                 h = (0, o.bG)([H.Ay], () => H.Ay.useReducedMotion),
                 { usePubSub: j } = (0, v.r)({ location: "MembersTable" }),
-                M = (0, o.bG)([f.A], () => f.A.hasPendingBulkBan(l.id), [l.id]),
-                A = j && M,
+                A = (0, o.bG)([f.A], () => f.A.hasPendingBulkBan(l.id), [l.id]),
+                M = j && A,
                 b = (0, c.useHasAnyModalOpen)(),
                 R = (0, g.j)(),
                 [N, S] = C.useState(!1),
@@ -1258,12 +1262,12 @@ let tu = { transform: "translate3d(15%, 0, 0)", opacity: 0.3 },
                 R || (S(!1), I(!1));
             }, [R]),
                 C.useLayoutEffect(() => {
-                    let e = (e) => {
-                            th(e) && S(!0), tg(e) && I(!0);
-                        },
-                        t = (e) => {
-                            th(e) && S(!1), tg(e) && I(!1);
-                        };
+                    function e(e) {
+                        th(e) && S(!0), tg(e) && I(!0);
+                    }
+                    function t(e) {
+                        th(e) && S(!1), tg(e) && I(!1);
+                    }
                     return (
                         window.addEventListener("keydown", e),
                         window.addEventListener("keyup", t),
@@ -1294,7 +1298,7 @@ let tu = { transform: "translate3d(15%, 0, 0)", opacity: 0.3 },
                 className: a()(tc.tp, n),
                 children: [
                     (0, i.jsx)(eD, { guildId: l.id, currentPagedMembers: t }),
-                    A &&
+                    M &&
                         (0, i.jsx)("tbody", {
                             children: (0, i.jsx)("tr", {
                                 children: (0, i.jsx)("td", {
@@ -1314,7 +1318,7 @@ let tu = { transform: "translate3d(15%, 0, 0)", opacity: 0.3 },
                             }),
                         }),
                     (0, i.jsx)("tbody", {
-                        className: a()({ [tc.u6]: A }),
+                        className: a()({ [tc.u6]: M }),
                         children:
                             s === L.IY.SUCCESS_FULL || s === L.IY.LOADING
                                 ? (0, i.jsxs)(i.Fragment, {

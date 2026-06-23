@@ -1,71 +1,71 @@
-a.d(t, { default: () => b });
-var l = a(627968),
-    n = a(64700),
-    r = a(284009),
-    s = a.n(r),
-    i = a(224640),
-    d = a(683071),
-    c = a(430993),
-    o = a(173936),
-    u = a(834730),
-    h = a(696208),
-    x = a(427262),
-    p = a(10005),
-    C = a(534654),
-    j = a(208993),
-    f = a(299628),
-    g = a(602339),
-    k = a(375708),
-    m = a(605409);
-let b = (e) => {
-    let { currentUser: t, otherUser: a, transitionState: r, onClose: b } = e,
-        A = n.useCallback(() => {
+n.d(t, { default: () => b });
+var a = n(627968),
+    l = n(64700),
+    r = n(284009),
+    s = n.n(r),
+    i = n(224640),
+    d = n(683071),
+    c = n(430993),
+    o = n(173936),
+    u = n(834730),
+    h = n(696208),
+    x = n(427262),
+    p = n(10005),
+    f = n(534654),
+    C = n(208993),
+    j = n(299628),
+    g = n(602339),
+    k = n(375708),
+    m = n(605409);
+let b = function (e) {
+    let { currentUser: t, otherUser: n, transitionState: r, onClose: b } = e,
+        A = l.useCallback(() => {
             b();
         }, [b]),
-        w = (0, C.A)(),
-        [y, N] = n.useState(!1),
-        v = n.useCallback(() => {
+        w = (0, f.A)(),
+        [y, N] = l.useState(!1),
+        v = l.useCallback(() => {
             N(!0);
         }, []),
         { acceptLinkRequest: E, isAcceptLoading: S } = (0, p.A)({ onError: v, onSuccess: A });
     return (
         s()(w, "FamilyCenterAcceptLinkModal should only be rendered for teens."),
-        (0, l.jsxs)(i.d, {
+        (0, a.jsxs)(i.d, {
             transitionState: r,
             onClose: b,
             "aria-label": k.intl.string(g.default.rlNJwZ),
             children: [
-                y && (0, l.jsx)(d.w, { type: "critical", children: k.intl.string(g.default.pegSM5) }),
-                (0, l.jsxs)(c.c, {
+                y && (0, a.jsx)(d.w, { type: "critical", children: k.intl.string(g.default.pegSM5) }),
+                (0, a.jsxs)(c.c, {
                     children: [
-                        (0, l.jsx)(j.A.Header, {
+                        (0, a.jsx)(C.A.Header, {
                             currentUser: t,
-                            otherUser: a,
+                            otherUser: n,
                             header: k.intl.string(g.default.rlNJwZ),
-                            icon: (0, l.jsx)(o.q, { size: "md", color: "currentColor", className: m.wP }),
+                            icon: (0, a.jsx)(o.q, { size: "md", color: "currentColor", className: m.wP }),
                         }),
-                        (0, l.jsxs)(j.A.Content, {
+                        (0, a.jsxs)(C.A.Content, {
                             children: [
-                                (0, l.jsx)(f.A, { inModal: !0 }),
-                                (0, l.jsx)(u.E, {
+                                (0, a.jsx)(j.A, { inModal: !0 }),
+                                (0, a.jsx)(u.E, {
                                     className: m.ed,
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    children: k.intl.format(g.default.snlFqR, { username: x.Ay.getName(a) }),
+                                    children: k.intl.format(g.default.snlFqR, { username: x.Ay.getName(n) }),
                                 }),
                             ],
                         }),
                     ],
                 }),
-                (0, l.jsx)(h.H, {
+                (0, a.jsx)(h.H, {
                     actionsFullWidth: !0,
                     actions: [
                         { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: b, disabled: S },
                         {
                             variant: "primary",
                             text: k.intl.string(g.default["wI/jo3"]),
-                            onClick: () => {
-                                N(!1), E(a.id);
+                            onClick: function () {
+                                N(!1), E(n.id);
                             },
                             disabled: S,
                             loading: S,

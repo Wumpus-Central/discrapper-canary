@@ -29,7 +29,7 @@ function f(e) {
             let t = e.proxy_url ?? e.url;
             return { type: o.geh.IMG, width: 0, height: 0, src: t };
         case r.LZ.YOUTUBE:
-            let n = ((e) => {
+            let n = (function (e) {
                 if (null == e) return null;
                 let t = e.match(/.*(?:youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/);
                 return null != t ? t[1] : null;

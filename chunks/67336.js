@@ -2,8 +2,8 @@ l.r(a), l.d(a, { mfaPlaygroundConfig: () => u }), l(321073);
 var t = l(627968);
 l(64700);
 var o = l(331322),
-    s = l(834730),
-    n = l(821609),
+    n = l(834730),
+    s = l(821609),
     r = l(192308);
 let i = new (l(626584).A)("MFAPlayground"),
     u = {
@@ -50,28 +50,29 @@ let i = new (l(626584).A)("MFAPlayground"),
                                         align: "center",
                                         children: [
                                             d &&
-                                                (0, t.jsx)(s.E, {
+                                                (0, t.jsx)(n.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
                                                     children: "Note: WebAuthn UI will appear but will always error",
                                                 }),
-                                            (0, t.jsx)(n.$, {
+                                            (0, t.jsx)(s.$, {
                                                 variant: "primary",
                                                 text: "Open MFA Modal",
                                                 onClick: () => {
                                                     let e = {
-                                                            ticket: `mock-ticket-${Math.random().toString(36).substring(7)}`,
-                                                            methods: m,
-                                                        },
-                                                        a = (e) =>
-                                                            new Promise((a, l) => {
-                                                                (i.info(`Type: ${e.mfaType}`),
-                                                                i.info(`Data: ${e.data}`),
-                                                                i.info(`Ticket: ${e.ticket}`),
-                                                                h)
-                                                                    ? l(Error("simulated error"))
-                                                                    : a();
-                                                            });
+                                                        ticket: `mock-ticket-${Math.random().toString(36).substring(7)}`,
+                                                        methods: m,
+                                                    };
+                                                    function a(e) {
+                                                        return new Promise((a, l) => {
+                                                            (i.info(`Type: ${e.mfaType}`),
+                                                            i.info(`Data: ${e.data}`),
+                                                            i.info(`Ticket: ${e.ticket}`),
+                                                            h)
+                                                                ? l(Error("simulated error"))
+                                                                : a();
+                                                        });
+                                                    }
                                                     (0, r.openModalLazy)(
                                                         async () => {
                                                             let { MFAModal: o } = await Promise.all([

@@ -429,15 +429,15 @@ function eb(e) {
     }, [I, k]),
         I === c.ip.HIDDEN && j && (N(!1), k.x.set(0), k.y.set(0), k.scale.set(1)),
         l.useEffect(() => {
+            function e() {
+                E.A.disable(), I === c.ip.ENTERED ? E.A.enableTemp(p) : E.A.enableTemp(f);
+            }
+            function t() {
+                E.A.disableTemp();
+            }
             I === c.ip.ENTERED && (E.A.disable(), E.A.enableTemp(p)),
                 I === c.ip.HIDDEN && (E.A.disable(), E.A.enableTemp(f));
-            let e = () => {
-                    E.A.disable(), I === c.ip.ENTERED ? E.A.enableTemp(p) : E.A.enableTemp(f);
-                },
-                t = () => {
-                    E.A.disableTemp();
-                },
-                n = v.current?.ownerDocument?.defaultView;
+            let n = v.current?.ownerDocument?.defaultView;
             return (
                 n?.addEventListener("focus", e),
                 n?.addEventListener("blur", t),

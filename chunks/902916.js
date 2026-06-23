@@ -92,7 +92,7 @@ function u(e) {
             t
                 ? (r.e("47580").then(r.bind(r, 844183)), o(!1), u(e))
                 : n
-                  ? (async () => {
+                  ? (async function () {
                         try {
                             let t = await e.arrayBuffer(),
                                 r = new Uint8Array(t),

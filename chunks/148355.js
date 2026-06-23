@@ -6,7 +6,7 @@ var i = n(627968),
     a = n.n(s),
     o = n(284009),
     l = n.n(o),
-    u = n(922139),
+    u = n(308186),
     c = n(17928),
     d = n(269115),
     _ = n(395899),
@@ -22,8 +22,10 @@ var i = n(627968),
     S = n(68935),
     y = n(375708),
     C = n(554896);
-let N = (e) => e.preventDefault(),
-    v = { tension: 1100, friction: 40 },
+function N(e) {
+    return e.preventDefault();
+}
+let v = { tension: 1100, friction: 40 },
     R = { tension: 1600, friction: 60 };
 function O(e, t) {
     return r.cloneElement(e, {
@@ -38,109 +40,109 @@ function b(e) {
     return y.intl.formatToPlainString(y.t.rk6pOw, { stickerName: t });
 }
 let D = (e) => {
-        let { children: t, hasError: n, isLoading: r, maskAsset: s, size: o, withLoadingIndicator: l = !0 } = e,
-            u = o >= 33;
-        return (0, i.jsxs)("div", {
-            className: a()(C.c6, { [C.v2]: n || s }),
-            style: { height: o, width: o },
-            children: [
-                n
-                    ? (0, i.jsxs)("div", {
-                          className: C.z3,
-                          children: [
-                              (0, i.jsx)(_.d, {
-                                  size: "custom",
-                                  width: 20,
-                                  height: 20,
-                                  color: "currentColor",
-                                  className: C.ik,
+    let { children: t, hasError: n, isLoading: r, maskAsset: s, size: o, withLoadingIndicator: l = !0 } = e,
+        u = o >= 33;
+    return (0, i.jsxs)("div", {
+        className: a()(C.c6, { [C.v2]: n || s }),
+        style: { height: o, width: o },
+        children: [
+            n
+                ? (0, i.jsxs)("div", {
+                      className: C.z3,
+                      children: [
+                          (0, i.jsx)(_.d, {
+                              size: "custom",
+                              width: 20,
+                              height: 20,
+                              color: "currentColor",
+                              className: C.ik,
+                          }),
+                          u &&
+                              (0, i.jsx)(h.E, {
+                                  className: C.kc,
+                                  color: "text-default",
+                                  variant: "text-sm/normal",
+                                  children: y.intl.string(y.t["tWYWJ+"]),
                               }),
-                              u &&
-                                  (0, i.jsx)(h.E, {
-                                      className: C.kc,
-                                      color: "text-default",
-                                      variant: "text-sm/normal",
-                                      children: y.intl.string(y.t["tWYWJ+"]),
-                                  }),
-                          ],
-                      })
-                    : t,
-                l && r && (0, i.jsx)("div", { className: C.Mz }),
-            ],
-        });
-    },
-    L = (e) => {
-        let {
-                shouldAnimate: t,
-                size: s,
-                sticker: a,
-                fileUri: o,
-                assetData: u,
-                isFocused: c,
-                className: d,
-                maskAsset: _,
-                positionRef: h,
-                withLoadingIndicator: f,
-                onError: p,
-            } = e,
-            E = r.useRef(null),
-            g = r.useRef(null),
-            [A, I] = r.useState(!0),
-            [T, N] = r.useState(!1),
-            v = r.useRef(!1);
-        v.current = t && c;
-        let R = null == o ? (0, S.zg)(a) : o;
-        return (l()(null != R, `Unable to determine sticker asset URL. Sticker ID: ${a.id}`),
-        r.useEffect(() => {
-            if (null == E.current || null == R) return;
-            let e = Math.min(2, (0, m.mZ)());
-            (E.current.width = s * e), (E.current.height = s * e);
-            let t = !1;
-            return (
-                (async () => {
-                    let { default: e } = await Promise.all([n.e("70716"), n.e("9330")]).then(n.bind(n, 140521));
-                    null != E.current &&
-                        ((g.current = new e({
-                            canvas: E.current,
-                            animationId: a.id,
-                            assetUrl: R,
-                            assetData: u,
-                            onInitialDraw: () => {
-                                t || I(!1);
-                            },
-                            onError: () => {
-                                t || (I(!1), N(!0), p?.());
-                            },
-                        })),
-                        v.current && g.current.setState(!0));
-                })(),
-                () => {
-                    g.current?.drop(), (g.current = null), (t = !0);
-                }
-            );
-        }, [R, s, a.id, u, p]),
-        r.useEffect(() => {
-            let e;
-            t || (e = 0), g.current?.setState(t && c, e);
-        }, [a, t, c]),
-        null == R)
-            ? null
-            : (0, i.jsx)("div", {
-                  role: "img",
-                  className: d,
-                  "aria-label": T ? y.intl.string(y.t.yEvsK9) : b(a),
-                  ref: h,
-                  children: (0, i.jsx)(D, {
-                      hasError: T,
-                      isLoading: A,
-                      maskAsset: _,
-                      size: s,
-                      withLoadingIndicator: f,
-                      children: O((0, i.jsx)("canvas", { className: C.ex, ref: E }), a),
-                  }),
-              });
-    },
-    w = (e) => {
+                      ],
+                  })
+                : t,
+            l && r && (0, i.jsx)("div", { className: C.Mz }),
+        ],
+    });
+};
+function L(e) {
+    let {
+            shouldAnimate: t,
+            size: s,
+            sticker: a,
+            fileUri: o,
+            assetData: u,
+            isFocused: c,
+            className: d,
+            maskAsset: _,
+            positionRef: h,
+            withLoadingIndicator: f,
+            onError: p,
+        } = e,
+        E = r.useRef(null),
+        g = r.useRef(null),
+        [A, I] = r.useState(!0),
+        [T, N] = r.useState(!1),
+        v = r.useRef(!1);
+    v.current = t && c;
+    let R = null == o ? (0, S.zg)(a) : o;
+    return (l()(null != R, `Unable to determine sticker asset URL. Sticker ID: ${a.id}`),
+    r.useEffect(() => {
+        if (null == E.current || null == R) return;
+        let e = Math.min(2, (0, m.mZ)());
+        (E.current.width = s * e), (E.current.height = s * e);
+        let t = !1;
+        return (
+            (async () => {
+                let { default: e } = await Promise.all([n.e("70716"), n.e("9330")]).then(n.bind(n, 140521));
+                null != E.current &&
+                    ((g.current = new e({
+                        canvas: E.current,
+                        animationId: a.id,
+                        assetUrl: R,
+                        assetData: u,
+                        onInitialDraw: () => {
+                            t || I(!1);
+                        },
+                        onError: () => {
+                            t || (I(!1), N(!0), p?.());
+                        },
+                    })),
+                    v.current && g.current.setState(!0));
+            })(),
+            () => {
+                g.current?.drop(), (g.current = null), (t = !0);
+            }
+        );
+    }, [R, s, a.id, u, p]),
+    r.useEffect(() => {
+        let e;
+        t || (e = 0), g.current?.setState(t && c, e);
+    }, [a, t, c]),
+    null == R)
+        ? null
+        : (0, i.jsx)("div", {
+              role: "img",
+              className: d,
+              "aria-label": T ? y.intl.string(y.t.yEvsK9) : b(a),
+              ref: h,
+              children: (0, i.jsx)(D, {
+                  hasError: T,
+                  isLoading: A,
+                  maskAsset: _,
+                  size: s,
+                  withLoadingIndicator: f,
+                  children: O((0, i.jsx)("canvas", { className: C.ex, ref: E }), a),
+              }),
+          });
+}
+let w = (e) => {
         let {
                 shouldAnimate: t,
                 sticker: n,

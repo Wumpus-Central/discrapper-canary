@@ -17,14 +17,14 @@ function l(e) {
     return new Promise((t, n) => {
         if (r.A.getGuildId() === e) return void t();
         let i = setTimeout(() => {
-                a(), n();
-            }, 3e3),
-            s = () => {
-                r.A.getGuildId() === e && (a(), t());
-            },
-            a = () => {
-                r.A.removeChangeListener(s), clearTimeout(i);
-            };
+            a(), n();
+        }, 3e3);
+        function s() {
+            r.A.getGuildId() === e && (a(), t());
+        }
+        function a() {
+            r.A.removeChangeListener(s), clearTimeout(i);
+        }
         r.A.addChangeListener(s);
     });
 }

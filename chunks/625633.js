@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { DU: () => O, QR: () => v, q5: () => D, $_: () => N, Lp: () => b, Pf: () => R });
+n.d(t, { DU: () => v, QR: () => C, q5: () => O, $_: () => y, Lp: () => R, Pf: () => N });
 var i = n(661531),
     r = n(477262),
     s = n(391242),
@@ -33,107 +33,104 @@ function f(e) {
 var p = n(652215),
     E = n(788868),
     m = n(375708);
-let g = function () {
-        let e =
-            arguments.length > 0 && void 0 !== arguments[0]
-                ? arguments[0]
-                : i.A.unsafe_rawColors.PREMIUM_PERK_ORANGE.css;
-        return { color: e, icon: s.O, description: m.intl.string(m.t["94l3Ul"]) };
-    },
-    A = () => ({
-        color: i.A.unsafe_rawColors.PREMIUM_PERK_ORANGE.css,
-        icon: a.i,
-        description: m.intl.string(m.t.zZe94m),
-    }),
-    I = function () {
-        let e =
-            arguments.length > 0 && void 0 !== arguments[0]
-                ? arguments[0]
-                : i.A.unsafe_rawColors.PREMIUM_PERK_PURPLE.css;
-        return { color: e, icon: o.t, description: m.intl.string(m.t.ZwOSdn) };
-    },
-    T = function (e) {
-        let t =
-                arguments.length > 1 && void 0 !== arguments[1]
-                    ? arguments[1]
-                    : i.A.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
-            n = 0,
-            r = 0;
-        switch (e) {
-            case p.TVA.TIER_1:
-                (n = 15), (r = 100);
-                break;
-            case p.TVA.TIER_2:
-                (n = 30), (r = 150);
-                break;
-            case p.TVA.TIER_3:
-                (n = 60), (r = 250);
-        }
-        return {
-            color: t,
-            icon: o.t,
-            description: m.intl.formatToPlainString(m.t["12vFYK"], { numStickers: n, numEmojis: r }),
-        };
-    },
-    S = () => ({
-        color: i.A.unsafe_rawColors.PREMIUM_PERK_GOLD.css,
-        icon: l.G,
-        description: m.intl.string(m.t["ThRK/u"]),
-    }),
-    y = function () {
-        let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.intl.string(m.t.SQV8g6);
-        return { color: i.A.unsafe_rawColors.PREMIUM_PERK_BLUE.css, icon: u.n, description: e };
-    },
-    C = function () {
-        let e =
-                arguments.length > 0 && void 0 !== arguments[0]
-                    ? arguments[0]
-                    : i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
-            t = (0, d.eT)("GuildBoostingConstants"),
-            n =
-                t === d.fj
-                    ? m.intl.string(m.t.oIKhwT)
-                    : m.intl.formatToPlainString(m.t["7y2ina"], {
-                          resolution: t,
-                          framerate: E.TG[p.TVA.TIER_2].limits.screenShareQualityFramerate,
-                      });
-        return { color: e, icon: c.F, description: n };
+function g() {
+    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_ORANGE.css, icon: a.i, description: m.intl.string(m.t.zZe94m) };
+}
+function A() {
+    let e =
+        arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : i.A.unsafe_rawColors.PREMIUM_PERK_PURPLE.css;
+    return { color: e, icon: o.t, description: m.intl.string(m.t.ZwOSdn) };
+}
+function I(e) {
+    let t =
+            arguments.length > 1 && void 0 !== arguments[1]
+                ? arguments[1]
+                : i.A.unsafe_rawColors.PREMIUM_PERK_PURPLE.css,
+        n = 0,
+        r = 0;
+    switch (e) {
+        case p.TVA.TIER_1:
+            (n = 15), (r = 100);
+            break;
+        case p.TVA.TIER_2:
+            (n = 30), (r = 150);
+            break;
+        case p.TVA.TIER_3:
+            (n = 60), (r = 250);
+    }
+    return {
+        color: t,
+        icon: o.t,
+        description: m.intl.formatToPlainString(m.t["12vFYK"], { numStickers: n, numEmojis: r }),
     };
+}
+function T() {
+    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_GOLD.css, icon: l.G, description: m.intl.string(m.t["ThRK/u"]) };
+}
+function S() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.intl.string(m.t.SQV8g6);
+    return { color: i.A.unsafe_rawColors.PREMIUM_PERK_BLUE.css, icon: u.n, description: e };
+}
+function y() {
+    return [
+        g(),
+        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: r.s, description: m.intl.string(m.t["n/HqCh"]) },
+        A(),
+        S(),
+    ];
+}
+function C() {
+    return [
+        g(),
+        I(p.TVA.TIER_2),
+        (function () {
+            let e =
+                    arguments.length > 0 && void 0 !== arguments[0]
+                        ? arguments[0]
+                        : i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css,
+                t = (0, d.eT)("GuildBoostingConstants"),
+                n =
+                    t === d.fj
+                        ? m.intl.string(m.t.oIKhwT)
+                        : m.intl.formatToPlainString(m.t["7y2ina"], {
+                              resolution: t,
+                              framerate: E.TG[p.TVA.TIER_2].limits.screenShareQualityFramerate,
+                          });
+            return { color: e, icon: c.F, description: n };
+        })(),
+        S(),
+    ];
+}
 function N() {
     return [
-        A(),
-        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: r.s, description: m.intl.string(m.t["n/HqCh"]) },
-        I(),
-        y(),
+        I(p.TVA.TIER_3, i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css),
+        { color: i.A.unsafe_rawColors.PREMIUM_PERK_PURPLE.css, icon: f, description: m.intl.string(m.t.Tm40TZ) },
+        T(),
+        S(),
     ];
 }
 function v() {
-    return [A(), T(p.TVA.TIER_2), C(), y()];
+    return [
+        T(),
+        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: s.O, description: m.intl.string(m.t.AU0zcQ) },
+        I(p.TVA.TIER_3),
+        S(),
+    ];
 }
 function R() {
     return [
-        T(p.TVA.TIER_3, i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css),
-        { color: i.A.unsafe_rawColors.PREMIUM_PERK_PURPLE.css, icon: f, description: m.intl.string(m.t.Tm40TZ) },
+        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: r.s, description: m.intl.string(m.t.iGuEFe) },
+        A(),
+        (function () {
+            let e =
+                arguments.length > 0 && void 0 !== arguments[0]
+                    ? arguments[0]
+                    : i.A.unsafe_rawColors.PREMIUM_PERK_ORANGE.css;
+            return { color: e, icon: s.O, description: m.intl.string(m.t["94l3Ul"]) };
+        })(),
         S(),
-        y(),
     ];
 }
 function O() {
-    return [
-        S(),
-        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: s.O, description: m.intl.string(m.t.AU0zcQ) },
-        T(p.TVA.TIER_3),
-        y(),
-    ];
-}
-function b() {
-    return [
-        { color: i.A.unsafe_rawColors.PREMIUM_PERK_GREEN.css, icon: r.s, description: m.intl.string(m.t.iGuEFe) },
-        I(),
-        g(),
-        y(),
-    ];
-}
-function D() {
-    return [I(), y()];
+    return [A(), S()];
 }

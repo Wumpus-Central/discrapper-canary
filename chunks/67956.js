@@ -35,96 +35,97 @@ var a,
     A = l(67480),
     _ = l(26279);
 let R = (e) => {
-        let { skuId: t, isGift: l, applicationId: a } = e,
-            { analyticsLocations: n } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
-            i = u.useRef(null),
-            r = u.useRef(null),
-            [o, s] = u.useState(() => (0, d.A)());
+    let { skuId: t, isGift: l, applicationId: a } = e,
+        { analyticsLocations: n } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
+        i = u.useRef(null),
+        r = u.useRef(null),
+        [o, s] = u.useState(() => (0, d.A)());
+    u.useEffect(() => {
+        (i.current !== t || r.current !== l) && (s((0, d.A)()), (i.current = t), (r.current = l));
+    }, [t, l]);
+    let [m, b] = (0, x.yK)([A.A], () => [A.A.isFetching(t), A.A.get(t)]);
+    return (
         u.useEffect(() => {
-            (i.current !== t || r.current !== l) && (s((0, d.A)()), (i.current = t), (r.current = l));
-        }, [t, l]);
-        let [m, b] = (0, x.yK)([A.A], () => [A.A.isFetching(t), A.A.get(t)]);
-        return (
-            u.useEffect(() => {
-                null != b || m || (0, E.EX)(a, t, h.g.VARIANTS_GROUP).catch((e) => {});
-            }, [a, t, b, m]),
-            {
-                loadId: o,
-                analyticsLocations: n,
-                handleClose: u.useCallback((e) => {}, []),
-                handleComplete: u.useCallback(() => {}, []),
-                isFetching: m,
-                sku: b,
-                skuId: t,
-                isGift: l,
-            }
-        );
-    },
-    k = (e) =>
-        (0, s.jsxs)("div", {
-            style: { padding: 20 },
-            children: [
-                (0, s.jsx)(y.E, { variant: "text-md/normal", children: e.text }),
-                (0, s.jsx)("div", {
-                    style: { marginTop: 16 },
-                    children: (0, s.jsx)(f.Anchor, {
-                        onClick: () => e.handleStepChange(e.originStep),
-                        children: "\u2190 Go Back",
-                    }),
+            null != b || m || (0, E.EX)(a, t, h.g.VARIANTS_GROUP).catch((e) => {});
+        }, [a, t, b, m]),
+        {
+            loadId: o,
+            analyticsLocations: n,
+            handleClose: u.useCallback((e) => {}, []),
+            handleComplete: u.useCallback(() => {}, []),
+            isFetching: m,
+            sku: b,
+            skuId: t,
+            isGift: l,
+        }
+    );
+};
+function k(e) {
+    return (0, s.jsxs)("div", {
+        style: { padding: 20 },
+        children: [
+            (0, s.jsx)(y.E, { variant: "text-md/normal", children: e.text }),
+            (0, s.jsx)("div", {
+                style: { marginTop: 16 },
+                children: (0, s.jsx)(f.Anchor, {
+                    onClick: () => e.handleStepChange(e.originStep),
+                    children: "\u2190 Go Back",
                 }),
-            ],
-        }),
-    M = (e) => {
-        let {
-                analyticsLocations: t,
-                applicationId: l,
-                skuId: a,
-                isGift: n,
-                onClose: i,
-                onComplete: r,
-                initialPlanId: o,
-                purchaseType: u,
-                stepConfigs: d,
-                loadId: c,
-                excludeSubscriptionPlansBySKU: p,
-                renderHeader: m,
-                disablePurchases: b,
-            } = e,
-            h = `${a}-${n}-${c}`;
-        return (0, s.jsx)(
-            C.M,
-            {
-                stepConfigs: d,
-                applicationId: l,
-                skuIDs: null != a ? [a] : [],
-                isGift: n,
-                activeSubscription: null,
-                purchaseType: u,
-                excludeSubscriptionPlansBySKU: p,
-                overrideCustomCheckoutFlow: b ? _.uH.DEV_STORYBOOK_CHECKOUT : void 0,
-                children: (0, s.jsx)(T.Qt, {
-                    children: (0, s.jsx)(j.dX, {
-                        isGift: n,
-                        children: (0, s.jsx)(
-                            P.q,
-                            {
-                                transitionState: v.ip.ENTERED,
-                                onClose: i,
-                                onComplete: r,
-                                applicationId: l,
-                                skuId: a,
-                                initialPlanId: o,
-                                analyticsLocations: t,
-                                renderHeader: m,
-                            },
-                            h,
-                        ),
-                    }),
+            }),
+        ],
+    });
+}
+function M(e) {
+    let {
+            analyticsLocations: t,
+            applicationId: l,
+            skuId: a,
+            isGift: n,
+            onClose: i,
+            onComplete: r,
+            initialPlanId: o,
+            purchaseType: u,
+            stepConfigs: d,
+            loadId: c,
+            excludeSubscriptionPlansBySKU: p,
+            renderHeader: m,
+            disablePurchases: b,
+        } = e,
+        h = `${a}-${n}-${c}`;
+    return (0, s.jsx)(
+        C.M,
+        {
+            stepConfigs: d,
+            applicationId: l,
+            skuIDs: null != a ? [a] : [],
+            isGift: n,
+            activeSubscription: null,
+            purchaseType: u,
+            excludeSubscriptionPlansBySKU: p,
+            overrideCustomCheckoutFlow: b ? _.uH.DEV_STORYBOOK_CHECKOUT : void 0,
+            children: (0, s.jsx)(T.Qt, {
+                children: (0, s.jsx)(j.dX, {
+                    isGift: n,
+                    children: (0, s.jsx)(
+                        P.q,
+                        {
+                            transitionState: v.ip.ENTERED,
+                            onClose: i,
+                            onComplete: r,
+                            applicationId: l,
+                            skuId: a,
+                            initialPlanId: o,
+                            analyticsLocations: t,
+                            renderHeader: m,
+                        },
+                        h,
+                    ),
                 }),
-            },
-            h,
-        );
-    };
+            }),
+        },
+        h,
+    );
+}
 var N = l(652215);
 let D = [
     {
@@ -146,7 +147,7 @@ var V = l(162097),
 let B = {
     name: "Balance Widget Menu",
     id: "balance-widget-menu",
-    component: (e) => {
+    component: function (e) {
         let { ctaText: t, linkText: l, showNotificationBadge: a, cardAlignment: n } = e;
         return (0, s.jsx)("div", {
             className: U.tH,
@@ -288,29 +289,25 @@ function eI(e) {
           })
         : null;
 }
-let eA = "checkout-error-boundary-test-modal",
-    e_ = () => {
-        let { setStep: e } = (0, ex.Ay)();
-        return (0, s.jsx)(eh.dZ, {
-            children: (0, s.jsxs)(Q.B, {
-                direction: "vertical",
-                gap: 8,
-                fullWidth: !1,
-                children: [
-                    (0, s.jsx)(y.E, {
-                        variant: "text-sm/normal",
-                        children:
-                            "PaymentModal Step within CheckoutRootProvider loaded. Click below to navigate to a mock error step that will throw \u2014 the CheckoutErrorBoundary baked into CheckoutRootProvider will catch it.",
-                    }),
-                    (0, s.jsx)(G.$, {
-                        variant: "primary",
-                        text: "Navigate to Error Step",
-                        onClick: () => e(m.pn.REVIEW),
-                    }),
-                ],
-            }),
-        });
-    };
+let eA = "checkout-error-boundary-test-modal";
+function e_() {
+    let { setStep: e } = (0, ex.Ay)();
+    return (0, s.jsx)(eh.dZ, {
+        children: (0, s.jsxs)(Q.B, {
+            direction: "vertical",
+            gap: 8,
+            fullWidth: !1,
+            children: [
+                (0, s.jsx)(y.E, {
+                    variant: "text-sm/normal",
+                    children:
+                        "PaymentModal Step within CheckoutRootProvider loaded. Click below to navigate to a mock error step that will throw \u2014 the CheckoutErrorBoundary baked into CheckoutRootProvider will catch it.",
+                }),
+                (0, s.jsx)(G.$, { variant: "primary", text: "Navigate to Error Step", onClick: () => e(m.pn.REVIEW) }),
+            ],
+        }),
+    });
+}
 function eR(e) {
     let { errorType: t = "mock-error", errorHandlingBehavior: l } = e;
     switch (t) {
@@ -346,7 +343,7 @@ let ek = {
         {
             name: "Checkout Test Panel",
             id: "checkout-test-panel",
-            component: () => {
+            component: function () {
                 let [e, t] = u.useState(eT.pe.TIER_2),
                     [l, a] = u.useState(null),
                     n = (0, q.yK)([eC.A], () => eC.A.getGuildsArray()),
@@ -859,7 +856,8 @@ var eM = l(630303),
     eD = l(428262),
     eV = l(492518),
     eL = l(758836);
-let eO = () => ({
+function eO() {
+    return {
         options: [
             { value: eL.ck["0"], label: `${eL.ck["0"]} (Cat Ears)` },
             { value: eL.ck["1"], label: `${eL.ck["1"]} (Angry)` },
@@ -873,8 +871,9 @@ let eO = () => ({
             { value: eL.ck["9"], label: `${eL.ck["9"]} (Aurora)` },
         ],
         defaultValue: eL.ck["0"],
-    }),
-    ew = [
+    };
+}
+let ew = [
         {
             key: m.pn.ADD_PAYMENT_STEPS,
             renderStep: (e) => (0, s.jsx)(k, { ...e, originStep: m.pn.REVIEW, text: "Add Payment Steps Placeholder" }),
@@ -898,14 +897,16 @@ let eO = () => ({
         },
     ],
     eU = [{ key: m.pn.REVIEW, renderStep: (e) => (0, s.jsx)(eM.p, { ...e }) }, ...ew],
-    eB = [{ key: m.pn.REVIEW, renderStep: (e) => (0, s.jsx)(eN.E, { ...e }) }, ...ew],
-    eG = () => (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Purchase button is disabled for this story" }),
-    eH = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
+    eB = [{ key: m.pn.REVIEW, renderStep: (e) => (0, s.jsx)(eN.E, { ...e }) }, ...ew];
+function eG() {
+    return (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Purchase button is disabled for this story" });
+}
+let eH = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
     e$ = eO(),
     eW = {
         name: "Collectibles Review Step",
         id: "collectibles-checkout-review-step",
-        component: (e) => {
+        component: function (e) {
             let { skuId: t, isGift: l } = e,
                 {
                     analyticsLocations: a,
@@ -964,7 +965,7 @@ let eO = () => ({
             u.useEffect(() => {
                 h.current || null == p || ((h.current = !0), b(p));
             }, [p, m]);
-            let { isLoadedForPremiumSKUs: y, selectedPlan: f } = ((e) => {
+            let { isLoadedForPremiumSKUs: y, selectedPlan: f } = (function (e) {
                 let { subscriptionPlanId: t } = e;
                 u.useEffect(() => {
                     I.A.isLoadedForPremiumSKUs() || g.h.wait(() => (0, S.zS)());
@@ -1138,13 +1139,13 @@ let e3 = {
     },
 };
 var e8 = l(930349);
-function e4() {
+function e7() {
     return (0, s.jsx)("div", { style: { width: "100%", height: "100%", borderRadius: "8px", background: "red" } });
 }
 function e9() {
     return (0, s.jsx)("div", { style: { width: "60%", height: "60%", borderRadius: "50%", background: "red" } });
 }
-let e7 = {
+let e4 = {
         label: "Variant",
         type: "select",
         defaultValue: "square",
@@ -1169,7 +1170,7 @@ let e7 = {
                                 onClick: () => {},
                                 accessibleLabel: l,
                                 accessibleValue: a,
-                                renderPreview: () => (0, s.jsx)(e4, {}),
+                                renderPreview: () => (0, s.jsx)(e7, {}),
                             }),
                             (0, s.jsx)(e8.V, {
                                 affordance: "add",
@@ -1184,7 +1185,7 @@ let e7 = {
                 },
                 id: "add-tile-button",
                 controls: {
-                    variant: e7,
+                    variant: e4,
                     accessibleLabel: { label: "Accessible Label", type: "text", defaultValue: "Avatar image" },
                     accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "me.png" },
                 },
@@ -1202,7 +1203,7 @@ let e7 = {
                                 accessibleLabel: a,
                                 accessibleValue: n,
                                 showOverlayOnHover: l,
-                                renderPreview: () => (0, s.jsx)(e4, {}),
+                                renderPreview: () => (0, s.jsx)(e7, {}),
                             }),
                             (0, s.jsx)(e8.V, {
                                 variant: t,
@@ -1217,7 +1218,7 @@ let e7 = {
                 },
                 id: "edit-tile-button",
                 controls: {
-                    variant: e7,
+                    variant: e4,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Accessible Label", type: "text", defaultValue: "Avatar image" },
                     accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "me.png" },
@@ -1245,7 +1246,7 @@ let e7 = {
                                 accessibleValue: n,
                                 showOverlayOnHover: l,
                                 affordance: o,
-                                renderPreview: () => (0, s.jsx)(e4, {}),
+                                renderPreview: () => (0, s.jsx)(e7, {}),
                             }),
                             (0, s.jsx)(e8.V, {
                                 variant: t,
@@ -1261,7 +1262,7 @@ let e7 = {
                 },
                 id: "deletable-edit-tile-button",
                 controls: {
-                    variant: e7,
+                    variant: e4,
                     showOverlayOnHover: { label: "Show Overlay", type: "boolean", defaultValue: !1 },
                     accessibleLabel: { label: "Accessible Label", type: "text", defaultValue: "Avatar image" },
                     accessibleValue: { label: "Accessible Value", type: "text", defaultValue: "me.png" },
@@ -1445,11 +1446,18 @@ let tf = { name: "Expressive Progress", component: to.A, id: "expressive-progres
                     },
                 },
             },
-            { name: "Cancellation Flow", component: () => (0, s.jsx)(tr.o, {}), id: "cancellation-flow", controls: {} },
+            {
+                name: "Cancellation Flow",
+                component: function () {
+                    return (0, s.jsx)(tr.o, {});
+                },
+                id: "cancellation-flow",
+                controls: {},
+            },
             tf,
             {
                 name: "Mini Premium Tooltip",
-                component: (e) => {
+                component: function (e) {
                     let { badgeId: t, earnedOnText: l, variant: a } = e,
                         n = u.useRef(null),
                         i = u.useRef(null),
@@ -1554,7 +1562,7 @@ let tf = { name: "Expressive Progress", component: to.A, id: "expressive-progres
             },
             {
                 name: "Premium Tooltip",
-                component: (e) => {
+                component: function (e) {
                     let {
                             title: t,
                             body: l,
@@ -1742,25 +1750,27 @@ let tA = { none: void 0, nitroWheel: r.t },
         name: "Bento Box",
         component: function (e) {
             let {
-                    title: t,
-                    description: l,
-                    ctaMode: a,
-                    descriptionCtaText: n,
-                    action1Text: i,
-                    action1Variant: r,
-                    action2Text: o,
-                    action2Variant: u,
-                    icon: d,
-                    iconPosition: c,
-                    index: p,
-                    size: m,
-                    badgeText: b,
-                    badgeVariant: h,
-                    isReducedMotion: x,
-                    previewImageStyle: y,
-                } = e,
-                f = () => (0, tE.P0)((0, tS.o)("CTA clicked!", tC.Ck.SUCCESS)),
-                v = tA[d],
+                title: t,
+                description: l,
+                ctaMode: a,
+                descriptionCtaText: n,
+                action1Text: i,
+                action1Variant: r,
+                action2Text: o,
+                action2Variant: u,
+                icon: d,
+                iconPosition: c,
+                index: p,
+                size: m,
+                badgeText: b,
+                badgeVariant: h,
+                isReducedMotion: x,
+                previewImageStyle: y,
+            } = e;
+            function f() {
+                return (0, tE.P0)((0, tS.o)("CTA clicked!", tC.Ck.SUCCESS));
+            }
+            let v = tA[d],
                 g =
                     "descriptionCta" === a
                         ? { descriptionCta: n, onClick: f }
@@ -1891,7 +1901,7 @@ let tA = { none: void 0, nitroWheel: r.t },
     };
 var tR = l(398590),
     tk = l(920050),
-    tM = l(486858),
+    tM = l(744064),
     tN = l(976860);
 let tD = {
     title: "Perks",
@@ -1998,7 +2008,7 @@ let t$ = "1271174907081789524",
     tW = {
         name: "Orb Checkout Modals",
         id: "orb-checkout-modal",
-        component: (e) => {
+        component: function (e) {
             let { skuId: t } = e;
             return (0, s.jsx)("div", {
                 className: U.YG,
@@ -2063,7 +2073,7 @@ let tJ = {
                             variant: "primary",
                             size: "sm",
                             text: "Test Deeplink",
-                            onClick: () => {
+                            onClick: function () {
                                 console.log("Opening deep link... ", t),
                                     tK.A.launch(t, (e) => {
                                         console.log("onDone response: ", e);
@@ -2412,9 +2422,9 @@ Error: ${t}`);
         ],
     });
 }
-var t4 = l(405139),
+var t7 = l(405139),
     t9 = l(19311),
-    t7 = l(869177);
+    t4 = l(869177);
 function t5(e) {
     let t = u.useRef(null),
         l = {
@@ -2427,10 +2437,10 @@ function t5(e) {
             loadingComponent: (0, s.jsx)(ea.y, { style: { marginTop: 16 }, type: ea.t.PULSING_ELLIPSIS }),
         };
     return e.renderStepBody
-        ? (0, s.jsx)(t7.V, { ...l, ...e })
+        ? (0, s.jsx)(t4.V, { ...l, ...e })
         : "applePay" === e.paymentRequestWallet
-          ? (0, s.jsx)(t4.Mv, { ...l, ...e })
-          : (0, s.jsx)(t4.dP, { ...l, ...e });
+          ? (0, s.jsx)(t7.Mv, { ...l, ...e })
+          : (0, s.jsx)(t7.dP, { ...l, ...e });
 }
 function le(e) {
     let { paymentRequestWallet: t } = e,
@@ -2591,8 +2601,10 @@ let lp = {
         buttonType: { googlePay: "pay", applePay: "book" },
         buttonTheme: { applePay: "black", googlePay: "white" },
         buttonHeight: 40,
-    },
-    lx = (e) => (void 0 !== e ? JSON.stringify(e, null, 2) : "undefined");
+    };
+function lx(e) {
+    return void 0 !== e ? JSON.stringify(e, null, 2) : "undefined";
+}
 function ly() {
     let [e, t] = u.useState(lx(lb)),
         [l, a] = u.useState(lb),
@@ -2677,7 +2689,7 @@ function ly() {
                     variant: "primary",
                     size: "sm",
                     text: "Apply Changes",
-                    onClick: () => {
+                    onClick: function () {
                         try {
                             let t = JSON.parse(e),
                                 l = JSON.parse(n);
@@ -2955,158 +2967,157 @@ var lv = l(503698),
     lI = l(408278),
     lA = l(957565),
     l_ = l(534472);
-let lR = (e) => {
-        let { label: t, value: l } = e;
-        return (0, s.jsxs)("div", {
-            className: l_.I,
-            children: [
-                (0, s.jsxs)(y.E, { variant: "text-sm/medium", children: [t, ":"] }),
-                (0, s.jsx)(y.E, { variant: "text-sm/normal", children: l }),
-                (0, s.jsx)(lI.K, {
-                    size: "sm",
-                    "aria-label": "Copy Link",
-                    variant: "icon-only",
-                    icon: lP.T,
-                    onClick: () => (0, lA.C)(l),
-                }),
-            ],
-        });
-    },
-    lk = (e) => {
-        let { children: t, stepConfigs: l, bodyClassName: a } = e;
-        return (0, s.jsx)(C.M, {
-            stepConfigs: l,
-            skuIDs: [],
-            activeSubscription: null,
-            children: (0, s.jsx)("div", { className: a, children: t }),
-        });
-    };
+function lR(e) {
+    let { label: t, value: l } = e;
+    return (0, s.jsxs)("div", {
+        className: l_.I,
+        children: [
+            (0, s.jsxs)(y.E, { variant: "text-sm/medium", children: [t, ":"] }),
+            (0, s.jsx)(y.E, { variant: "text-sm/normal", children: l }),
+            (0, s.jsx)(lI.K, {
+                size: "sm",
+                "aria-label": "Copy Link",
+                variant: "icon-only",
+                icon: lP.T,
+                onClick: () => (0, lA.C)(l),
+            }),
+        ],
+    });
+}
+function lk(e) {
+    let { children: t, stepConfigs: l, bodyClassName: a } = e;
+    return (0, s.jsx)(C.M, {
+        stepConfigs: l,
+        skuIDs: [],
+        activeSubscription: null,
+        children: (0, s.jsx)("div", { className: a, children: t }),
+    });
+}
 var lM = l(935377);
 let lN = new lj.A("PaymentElement.web.stories"),
     lD = {
         key: m.pn.ADD_PAYMENT_STEPS,
         renderStep: () => (0, s.jsx)("div", {}),
         options: { renderHeader: !1, hideDefaultModalBody: !0 },
-    },
-    lV = () => {
-        let { elementsAppearanceOptions: e } = (0, lS.E)();
-        return (0, s.jsxs)("div", {
-            children: [
-                (0, s.jsx)(ei.D, {
-                    variant: "heading-lg/semibold",
-                    className: U.tm,
-                    children: "Defaults for Current Theme",
+    };
+function lV() {
+    let { elementsAppearanceOptions: e } = (0, lS.E)();
+    return (0, s.jsxs)("div", {
+        children: [
+            (0, s.jsx)(ei.D, {
+                variant: "heading-lg/semibold",
+                className: U.tm,
+                children: "Defaults for Current Theme",
+            }),
+            (0, s.jsx)("div", {
+                children: Object.entries(e).map((e) => {
+                    let [t, l] = e;
+                    return (0, s.jsx)(lR, { label: t, value: l }, t);
                 }),
-                (0, s.jsx)("div", {
-                    children: Object.entries(e).map((e) => {
-                        let [t, l] = e;
-                        return (0, s.jsx)(lR, { label: t, value: l }, t);
-                    }),
-                }),
-            ],
-        });
-    },
-    lL = (e) => {
-        let {
+            }),
+        ],
+    });
+}
+function lL(e) {
+    let {
+            theme: t,
+            colorText: l,
+            colorBackground: a,
+            inputBackgroundColor: n,
+            tabBackgroundColor: i,
+            tabSelectedBackgroundColor: r,
+            storyType: o,
+        } = e,
+        u = (0, lT.A)(),
+        { stripePaymentElementProps: d, stripeAddressElementProps: c } = (0, lC.wD)({
+            step: m.pn.PAYMENT_ELEMENT,
+            handleStepChange: N.tEg,
+            onBillingAddressChange: N.tEg,
+            paymentElementsEnabled: !0,
+            logger: lN,
+            shouldLogOnChangeEvents: !0,
+            continueSessionToInitialStep: void 0,
+        }),
+        {
+            elementsOptions: p,
+            isLoading: b,
+            setupError: h,
+            customPaymentMethodIdsToSourceTypes: x,
+        } = (0, lS.p)({
+            onSetupError: (e) => {
+                lN.info("Stripe Payment Element options setup error: ", e);
+            },
+            elementsAppearanceOptions: {
                 theme: t,
                 colorText: l,
                 colorBackground: a,
                 inputBackgroundColor: n,
                 tabBackgroundColor: i,
                 tabSelectedBackgroundColor: r,
-                storyType: o,
-            } = e,
-            u = (0, lT.A)(),
-            { stripePaymentElementProps: d, stripeAddressElementProps: c } = (0, lC.wD)({
-                step: m.pn.PAYMENT_ELEMENT,
-                handleStepChange: N.tEg,
-                onBillingAddressChange: N.tEg,
-                paymentElementsEnabled: !0,
-                logger: lN,
-                shouldLogOnChangeEvents: !0,
-                continueSessionToInitialStep: void 0,
-            }),
-            {
-                elementsOptions: p,
-                isLoading: b,
-                setupError: h,
-                customPaymentMethodIdsToSourceTypes: x,
-            } = (0, lS.p)({
-                onSetupError: (e) => {
-                    lN.info("Stripe Payment Element options setup error: ", e);
-                },
-                elementsAppearanceOptions: {
-                    theme: t,
-                    colorText: l,
-                    colorBackground: a,
-                    inputBackgroundColor: n,
-                    tabBackgroundColor: i,
-                    tabSelectedBackgroundColor: r,
-                },
-            });
-        return b || null != h || null == u
-            ? (0, s.jsx)(lC.eR, {})
-            : (0, s.jsxs)("div", {
-                  children: [
-                      (0, s.jsx)("div", {
-                          style: { marginBottom: 16 },
-                          children: (0, s.jsx)(lE.w, {
-                              type: "info",
-                              children:
-                                  "If you don't see the Payment Element components, that means you must be added to the correct experiment to see this story. Reach out to a Payments Engineer to get access.",
-                          }),
+            },
+        });
+    return b || null != h || null == u
+        ? (0, s.jsx)(lC.eR, {})
+        : (0, s.jsxs)("div", {
+              children: [
+                  (0, s.jsx)("div", {
+                      style: { marginBottom: 16 },
+                      children: (0, s.jsx)(lE.w, {
+                          type: "info",
+                          children:
+                              "If you don't see the Payment Element components, that means you must be added to the correct experiment to see this story. Reach out to a Payments Engineer to get access.",
                       }),
-                      (0, s.jsxs)("div", {
-                          className: lM.ny,
-                          children: [
-                              (0, s.jsx)(lV, {}),
-                              (0, s.jsx)(lk, {
-                                  stepConfigs: [lD],
-                                  children: (0, s.jsx)("div", {
-                                      className: lg()(lM.o6, "joined-payment-address-elements" === o ? lM.fF : lM.u1),
-                                      children: (0, s.jsxs)(lu.Elements, {
-                                          stripe: u,
-                                          options: p,
-                                          children: [
-                                              "stripe-address-element" === o
-                                                  ? (0, s.jsx)("div", {
-                                                        className: U.R,
-                                                        children: (0, s.jsx)(lC.Wf, {
-                                                            ...d,
-                                                            customPaymentMethodIdsToSourceTypes: x,
-                                                            step: m.pn.PAYMENT_ELEMENT,
-                                                        }),
-                                                    })
-                                                  : (0, s.jsx)(lC.Wf, {
+                  }),
+                  (0, s.jsxs)("div", {
+                      className: lM.ny,
+                      children: [
+                          (0, s.jsx)(lV, {}),
+                          (0, s.jsx)(lk, {
+                              stepConfigs: [lD],
+                              children: (0, s.jsx)("div", {
+                                  className: lg()(lM.o6, "joined-payment-address-elements" === o ? lM.fF : lM.u1),
+                                  children: (0, s.jsxs)(lu.Elements, {
+                                      stripe: u,
+                                      options: p,
+                                      children: [
+                                          "stripe-address-element" === o
+                                              ? (0, s.jsx)("div", {
+                                                    className: U.R,
+                                                    children: (0, s.jsx)(lC.Wf, {
                                                         ...d,
                                                         customPaymentMethodIdsToSourceTypes: x,
                                                         step: m.pn.PAYMENT_ELEMENT,
                                                     }),
-                                              ("joined-payment-address-elements" === o ||
-                                                  "stripe-address-element" === o) &&
-                                                  (0, s.jsx)(lC.KS, {
-                                                      ...c,
-                                                      billingAddressInfo: {
-                                                          email: "",
-                                                          name: "",
-                                                          country: "",
-                                                          line1: "",
-                                                          line2: "",
-                                                          city: "",
-                                                          postalCode: "",
-                                                          state: "",
-                                                      },
-                                                  }),
-                                          ],
-                                      }),
+                                                })
+                                              : (0, s.jsx)(lC.Wf, {
+                                                    ...d,
+                                                    customPaymentMethodIdsToSourceTypes: x,
+                                                    step: m.pn.PAYMENT_ELEMENT,
+                                                }),
+                                          ("joined-payment-address-elements" === o || "stripe-address-element" === o) &&
+                                              (0, s.jsx)(lC.KS, {
+                                                  ...c,
+                                                  billingAddressInfo: {
+                                                      email: "",
+                                                      name: "",
+                                                      country: "",
+                                                      line1: "",
+                                                      line2: "",
+                                                      city: "",
+                                                      postalCode: "",
+                                                      state: "",
+                                                  },
+                                              }),
+                                      ],
                                   }),
                               }),
-                          ],
-                      }),
-                  ],
-              });
-    },
-    lO = {
+                          }),
+                      ],
+                  }),
+              ],
+          });
+}
+let lO = {
         theme: {
             label: "Theme",
             type: "select",
@@ -3122,19 +3133,25 @@ let lN = new lj.A("PaymentElement.web.stories"),
     lw = {
         name: "Joined Payment + Address",
         id: "joined-payment-address-elements",
-        component: (e) => (0, s.jsx)(lL, { ...e, storyType: "joined-payment-address-elements" }),
+        component: function (e) {
+            return (0, s.jsx)(lL, { ...e, storyType: "joined-payment-address-elements" });
+        },
         controls: { ...lO },
     },
     lU = {
         name: "Stripe Payment Element",
         id: "stripe-payment-element",
-        component: (e) => (0, s.jsx)(lL, { ...e, storyType: "stripe-payment-element" }),
+        component: function (e) {
+            return (0, s.jsx)(lL, { ...e, storyType: "stripe-payment-element" });
+        },
         controls: { ...lO },
     },
     lB = {
         name: "Stripe Address Element",
         id: "stripe-address-element",
-        component: (e) => (0, s.jsx)(lL, { ...e, storyType: "stripe-address-element" }),
+        component: function (e) {
+            return (0, s.jsx)(lL, { ...e, storyType: "stripe-address-element" });
+        },
         controls: { ...lO },
     };
 var lG = l(786826);
@@ -3212,7 +3229,7 @@ var l$ = l(735438),
     lY = l(597770),
     lz = l(278416),
     lq = l(606267),
-    lK = l(480642),
+    lK = l(169797),
     lJ = l(944355),
     lX = l(263885),
     lQ = l(826469),
@@ -3220,7 +3237,7 @@ var l$ = l(735438),
 let l0 = {
         name: "Primitive: Nitro Plan Select",
         id: "unified-checkout-nitro-plan-select",
-        component: (e) => {
+        component: function (e) {
             let {
                     variant: t,
                     leftTitleDescriber: l,
@@ -3291,7 +3308,7 @@ let l0 = {
     l1 = {
         name: "Primitive: Subscription Details Accordion",
         id: "unified-checkout-subscription-details",
-        component: (e) => {
+        component: function (e) {
             let {
                     label: t,
                     totalLineItemLabel: l,
@@ -3526,7 +3543,7 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    l4 = {
+    l7 = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -3536,8 +3553,8 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
         startDate: new Date(),
     },
     l9 = {
-        [lJ.I0.Subscription]: { type: lJ.I0.Subscription, ...l4 },
-        [lJ.I0.SubscriptionTrial]: { type: lJ.I0.SubscriptionTrial, ...l4 },
+        [lJ.I0.Subscription]: { type: lJ.I0.Subscription, ...l7 },
+        [lJ.I0.SubscriptionTrial]: { type: lJ.I0.SubscriptionTrial, ...l7 },
         [lJ.I0.OrbsRedemption]: { type: lJ.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
         [lJ.I0.Shop]: { type: lJ.I0.Shop, purchaseButtonText: "Purchase" },
         [lJ.I0.GiftNitro]: { type: lJ.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
@@ -3549,14 +3566,14 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
             shouldAppendDisclaimer: !1,
         },
     },
-    l7 = {
+    l4 = {
         title: "Unified Checkout",
         stories: [
             l8,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
-                component: (e) => {
+                component: function (e) {
                     let { label: t, hasDiscount: l, hasLineItems: a } = e,
                         n = a
                             ? [
@@ -3583,7 +3600,7 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
             {
                 name: "Primitive: Purchase Item",
                 id: "unified-checkout-purchase-item",
-                component: (e) => {
+                component: function (e) {
                     let {
                         header: t,
                         showHeader: l,
@@ -3651,7 +3668,7 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
             {
                 name: "Primitive: Payment Select",
                 id: "unified-checkout-payment-select",
-                component: (e) => {
+                component: function (e) {
                     let { disabled: t, error: l, errorMessage: a } = e,
                         n = [
                             { id: "visa-1234", label: "Visa ending in 1234", icon: lZ.Be.VISA },
@@ -3690,11 +3707,12 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
             {
                 name: "Primitive: Payment Source Selector",
                 id: "unified-checkout-payment-source-selector",
-                component: (e) =>
-                    (0, s.jsx)(ex.mz, {
+                component: function (e) {
+                    return (0, s.jsx)(ex.mz, {
                         stepConfigs: [],
                         children: (0, s.jsx)(lX.P, { children: (0, s.jsx)(l2, { ...e }) }),
-                    }),
+                    });
+                },
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Payment Method" },
                     giftCardsEnabled: { label: "Gift Cards Enabled", type: "boolean", defaultValue: !0 },
@@ -3773,7 +3791,7 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
             {
                 name: "Primitive: Store Country Row",
                 id: "checkout-store-country-row",
-                component: (e) => {
+                component: function (e) {
                     let { storeCountry: t } = e;
                     return (0, s.jsx)(lJ.s7, { storeCountry: t });
                 },
@@ -3784,7 +3802,7 @@ let l6 = { "nitro-wheel": r.t, gift: lY.o, orbs: i.C },
             {
                 name: "Primitive: Store Relocation Notice",
                 id: "checkout-store-relocation-notice",
-                component: (e) => {
+                component: function (e) {
                     let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: a } = e;
                     return (0, s.jsx)(lJ.ch, {
                         relocationCountry: t,
@@ -3821,7 +3839,7 @@ let ae = ["Revenue Storybook", "Revenue Playground"],
         name: "Payments",
         groups: [
             ek,
-            l7,
+            l4,
             {
                 title: "Gift Card",
                 stories: [
@@ -3886,7 +3904,7 @@ let ae = ["Revenue Storybook", "Revenue Playground"],
                     {
                         name: "Add Payment Step",
                         id: "add-payment-step",
-                        component: () => {
+                        component: function () {
                             let { analyticsLocations: e } = (0, p.Ay)(c.A.PAYMENT_FLOW_TEST_PAGE),
                                 t = u.useMemo(() => (0, d.A)(), []),
                                 l = u.useCallback(() => {}, []);
@@ -3931,7 +3949,7 @@ let ae = ["Revenue Storybook", "Revenue Playground"],
                     {
                         name: "Balance Widget Card",
                         id: "balance-widget-card",
-                        component: (e) => {
+                        component: function (e) {
                             let { ctaText: t, linkText: l, linkPreText: a } = e;
                             return (0, s.jsx)(V.b, {
                                 ctaText: (0, O.uJ)(t) ? w.intl.string(w.t.H57f41) : t,
@@ -4394,7 +4412,7 @@ let ae = ["Revenue Storybook", "Revenue Playground"],
                                       children: [
                                           (0, s.jsx)(te.v, {
                                               guildId: t,
-                                              onChange: (e) => {
+                                              onChange: function (e) {
                                                   l(e?.id ?? "");
                                               },
                                               globalOption: tn,
@@ -4422,7 +4440,7 @@ let ae = ["Revenue Storybook", "Revenue Playground"],
                                       children: [
                                           (0, s.jsx)(te.v, {
                                               guildId: t,
-                                              onChange: (e) => {
+                                              onChange: function (e) {
                                                   l(e?.id ?? "");
                                               },
                                               globalOption: tn,
@@ -4450,7 +4468,7 @@ let ae = ["Revenue Storybook", "Revenue Playground"],
                                       children: [
                                           (0, s.jsx)(te.v, {
                                               guildId: t,
-                                              onChange: (e) => {
+                                              onChange: function (e) {
                                                   l(e?.id ?? "");
                                               },
                                               globalOption: tn,

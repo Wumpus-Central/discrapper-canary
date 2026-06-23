@@ -296,7 +296,7 @@ function er(e) {
     let l = (0, i.jsx)(N.D, {
         className: en.xL,
         style: { left: s },
-        onClick: (e) => {
+        onClick: function (e) {
             e.stopPropagation();
             let n = t.messageReference?.channel_id,
                 i = t.messageReference?.message_id;

@@ -317,14 +317,13 @@ let ee = s.memo(function (e) {
         { offset: b, totalResults: k, isSearching: y, showBlockedResults: R } = t,
         U = s.useCallback(
             (e, t) => {
-                C?.(e, t);
-                let n = () => {
+                function n() {
                     let t = M.A.getChannel(e.channel_id),
                         n = null != t ? t.getGuildId() : null;
                     A.A.trackJump(e.channel_id, e.id, "Search Results", { search_id: D }),
                         (0, j.pX)(q.BVt.CHANNEL(n, e.channel_id, e.id));
-                };
-                (0, S.A)(e, n) && n();
+                }
+                C?.(e, t), (0, S.A)(e, n) && n();
             },
             [C, D],
         ),
@@ -611,7 +610,7 @@ let ee = s.memo(function (e) {
                 ? (0, l.jsxs)(p.D, {
                       tag: "div",
                       className: Q.P,
-                      onClick: () => {
+                      onClick: function () {
                           I?.(!R);
                       },
                       children: [

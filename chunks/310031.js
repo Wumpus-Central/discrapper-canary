@@ -145,40 +145,40 @@ function z() {
 function q() {
     let { notifyingChannelIds: e, staleChannelIds: t } = (function () {
         let e = I.Ay.getFlattenedGuildIds().flatMap((e) => E.Ay.getSelectableChannelIds(e)),
-            t = c.A.getAllActiveJoinedThreads(),
-            n = (e) => {
-                if (L.kvI.ALL_DMS.has(e.type)) {
-                    if (T.Ay.isGuildOrCategoryOrChannelMuted(null, e.id)) return !1;
-                    if (e.type === L.rbe.DM) {
-                        let t = p.A.getChannel(e.id),
-                            n = t?.isDM() === !0 ? t.getRecipientId() : void 0;
-                        if (null != n && A.A.isBlocked(n)) return !1;
-                    }
-                    return !0;
+            t = c.A.getAllActiveJoinedThreads();
+        function n(e) {
+            if (L.kvI.ALL_DMS.has(e.type)) {
+                if (T.Ay.isGuildOrCategoryOrChannelMuted(null, e.id)) return !1;
+                if (e.type === L.rbe.DM) {
+                    let t = p.A.getChannel(e.id),
+                        n = t?.isDM() === !0 ? t.getRecipientId() : void 0;
+                    if (null != n && A.A.isBlocked(n)) return !1;
                 }
-                if (
-                    !L.kvI.GUILD_TEXTUAL.has(e.type) ||
-                    (0, o.UK)(e.id) ||
-                    T.Ay.resolveUnreadSetting(e) === w.e.ONLY_MENTIONS
-                )
-                    return !1;
-                if ((0, h.fT)(e.type)) {
-                    let t = (0, _.l)(e);
-                    if (t === M.CP.NO_MESSAGES || t === M.CP.ONLY_MENTIONS) return !1;
-                    let n = d.A.flags(e.id);
-                    if (null == n || (n & M.CP.ALL_MESSAGES) == 0) {
-                        let t = p.A.getBasicChannel(e.parent_id);
-                        if (null != t && T.Ay.resolveUnreadSetting(t) === w.e.ONLY_MENTIONS) return !1;
-                    }
-                    return !d.A.isMuted(e.id);
+                return !0;
+            }
+            if (
+                !L.kvI.GUILD_TEXTUAL.has(e.type) ||
+                (0, o.UK)(e.id) ||
+                T.Ay.resolveUnreadSetting(e) === w.e.ONLY_MENTIONS
+            )
+                return !1;
+            if ((0, h.fT)(e.type)) {
+                let t = (0, _.l)(e);
+                if (t === M.CP.NO_MESSAGES || t === M.CP.ONLY_MENTIONS) return !1;
+                let n = d.A.flags(e.id);
+                if (null == n || (n & M.CP.ALL_MESSAGES) == 0) {
+                    let t = p.A.getBasicChannel(e.parent_id);
+                    if (null != t && T.Ay.resolveUnreadSetting(t) === w.e.ONLY_MENTIONS) return !1;
                 }
-                return T.Ay.useNewNotifications
-                    ? !T.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) &&
-                          T.Ay.resolvedMessageNotifications(e) !== L.orn.NO_MESSAGES &&
-                          (!T.Ay.isOptInEnabled(e.guild_id) || T.Ay.isChannelRecordOrParentOptedIn(e))
-                    : T.Ay.allowAllMessages(e);
-            },
-            i = [];
+                return !d.A.isMuted(e.id);
+            }
+            return T.Ay.useNewNotifications
+                ? !T.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) &&
+                      T.Ay.resolvedMessageNotifications(e) !== L.orn.NO_MESSAGES &&
+                      (!T.Ay.isOptInEnabled(e.guild_id) || T.Ay.isChannelRecordOrParentOptedIn(e))
+                : T.Ay.allowAllMessages(e);
+        }
+        let i = [];
         for (let t of e) {
             let e = p.A.getBasicChannel(t);
             null != e && n(e) && i.push(e);

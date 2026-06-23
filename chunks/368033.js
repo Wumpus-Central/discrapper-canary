@@ -5,16 +5,16 @@ var s = n(627968),
     o = n(17928),
     l = n(184809),
     r = n(531685),
-    d = n(723702),
-    u = n(19575),
-    c = n(9302),
+    u = n(723702),
+    c = n(19575),
+    d = n(9302),
     f = n(652215),
     p = n(375708);
 function k(t) {
     let { transitionState: i, onClose: n, contextKey: k, ...b } = t,
         g = (0, o.bG)([r.A], () => r.A.isFocused()),
         h = k === f.BRT.APP,
-        C = (0, c.getPID)(),
+        C = (0, d.getPID)(),
         E = (0, o.bG)([l.default], () => l.default.isLocked(C));
     return (e.useEffect(() => {
         (g || h || E) && n?.();
@@ -30,8 +30,8 @@ function k(t) {
                   {
                       variant: "primary",
                       text: p.intl.string(p.t.ELRJQu),
-                      onClick: () => {
-                          d.isPlatformEmbedded ? u.Ay.focus() : window.focus(), n();
+                      onClick: function () {
+                          u.isPlatformEmbedded ? c.Ay.focus() : window.focus(), n();
                       },
                   },
               ],

@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(430795),
     d = n(16590),
     _ = n(375708);
-let h = () => {
+function h() {
     let e = (0, u.Y_)(),
         t = r.useCallback(
             (t) => {
@@ -33,4 +33,4 @@ let h = () => {
         },
         `${e.id}:favorite:${e.isFavorite}`,
     );
-};
+}

@@ -43,7 +43,7 @@ function I(e) {
             children: (0, i.jsx)(u.$, {
                 variant: "secondary",
                 fullWidth: !0,
-                icon: ((e, t) => {
+                icon: (function (e, t) {
                     if (e.userStatus?.claimedAt == null)
                         return {
                             type: "rive",

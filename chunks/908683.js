@@ -20,8 +20,8 @@ var c = i(534514),
     h = i(562153),
     j = i(183555),
     N = i(735321),
-    v = i(451395),
-    T = i(823016),
+    T = i(451395),
+    v = i(823016),
     _ = i(788593),
     S = i(492280),
     O = i(990078),
@@ -38,25 +38,25 @@ var k = i(477782),
     y = i(214947),
     M = i(375708);
 let F = {
-        [G.X.BETTER_THAN_YOU]: { getText: () => M.intl.string(M.t.jbIRBE), icon: L.q },
-        [G.X.CASUAL]: { getText: () => M.intl.string(M.t.xcFFv6), icon: L.q },
-        [G.X.INTERMEDIATE]: { getText: () => M.intl.string(M.t["A/mIs/"]), icon: L.q },
-        [G.X.EXPERT]: { getText: () => M.intl.string(M.t.RIOFc2), icon: L.q },
-        [G.X.OBSESSED]: { getText: () => M.intl.string(M.t.isPJDu), icon: w.G },
-        [G.X.LOVE_IT]: { getText: () => M.intl.string(M.t["1rN7BF"]), icon: w.G },
-        [G.X.KIND_OF_LOVE_IT]: { getText: () => M.intl.string(M.t.bCBpVg), icon: w.G },
-        [G.X.KIND_OF_HATE_IT]: { getText: () => M.intl.string(M.t["/WcmcP"]), icon: P.d },
-        [G.X.RAGE_QUITTING]: { getText: () => M.intl.string(M.t["NXZ/MZ"]), icon: P.d },
-        [G.X.OPEN_TO_PLAY]: { getText: () => M.intl.string(M.t.q30PoH), icon: y.$ },
-        [G.X.LOOKING_FOR_GROUP]: { getText: () => M.intl.string(M.t.DWWAAQ), icon: y.$ },
-        [G.X.LOOKING_FOR_TIPS]: { getText: () => M.intl.string(M.t.KQDVvH), icon: y.$ },
-        [G.X.OPEN_TO_TEACH]: { getText: () => M.intl.string(M.t["5HhQo+"]), icon: y.$ },
-        [G.X.LOOKING_TO_DISCUSS]: { getText: () => M.intl.string(M.t.GipOCq), icon: y.$ },
-    },
-    U = (e) => {
-        let t = F[e];
-        return null != t ? t : null;
-    };
+    [G.X.BETTER_THAN_YOU]: { getText: () => M.intl.string(M.t.jbIRBE), icon: L.q },
+    [G.X.CASUAL]: { getText: () => M.intl.string(M.t.xcFFv6), icon: L.q },
+    [G.X.INTERMEDIATE]: { getText: () => M.intl.string(M.t["A/mIs/"]), icon: L.q },
+    [G.X.EXPERT]: { getText: () => M.intl.string(M.t.RIOFc2), icon: L.q },
+    [G.X.OBSESSED]: { getText: () => M.intl.string(M.t.isPJDu), icon: w.G },
+    [G.X.LOVE_IT]: { getText: () => M.intl.string(M.t["1rN7BF"]), icon: w.G },
+    [G.X.KIND_OF_LOVE_IT]: { getText: () => M.intl.string(M.t.bCBpVg), icon: w.G },
+    [G.X.KIND_OF_HATE_IT]: { getText: () => M.intl.string(M.t["/WcmcP"]), icon: P.d },
+    [G.X.RAGE_QUITTING]: { getText: () => M.intl.string(M.t["NXZ/MZ"]), icon: P.d },
+    [G.X.OPEN_TO_PLAY]: { getText: () => M.intl.string(M.t.q30PoH), icon: y.$ },
+    [G.X.LOOKING_FOR_GROUP]: { getText: () => M.intl.string(M.t.DWWAAQ), icon: y.$ },
+    [G.X.LOOKING_FOR_TIPS]: { getText: () => M.intl.string(M.t.KQDVvH), icon: y.$ },
+    [G.X.OPEN_TO_TEACH]: { getText: () => M.intl.string(M.t["5HhQo+"]), icon: y.$ },
+    [G.X.LOOKING_TO_DISCUSS]: { getText: () => M.intl.string(M.t.GipOCq), icon: y.$ },
+};
+function U(e) {
+    let t = F[e];
+    return null != t ? t : null;
+}
 var W = (((n = {}).RADIO = "radio"), (n.CHECKBOX = "checkbox"), n);
 let H = {
     skill_level: {
@@ -219,18 +219,18 @@ function K(e) {
         p = (0, s.useRef)(null),
         I = (0, s.useRef)(null),
         [A, E] = (0, s.useState)(0),
-        [h, v] = (0, s.useState)(!1),
-        T = Q(p, I, d, x, E);
+        [h, T] = (0, s.useState)(!1),
+        v = J(p, I, d, x, E);
     if (
         ((0, s.useEffect)(
             () => (
-                T(),
-                window.addEventListener("resize", T),
+                v(),
+                window.addEventListener("resize", v),
                 () => {
-                    window.removeEventListener("resize", T);
+                    window.removeEventListener("resize", v);
                 }
             ),
-            [T, d?.join("")],
+            [v, d?.join("")],
         ),
         !g && !m)
     )
@@ -262,15 +262,15 @@ function K(e) {
                             ),
                         }),
                         A > 0 &&
-                            (0, l.jsx)(J, {
+                            (0, l.jsx)(Q, {
                                 buttonRef: p,
                                 isExpanded: h,
                                 numberOfOverflowingTags: A,
                                 onExpandTags: () => {
-                                    v(!0), f({ action: "EXPAND_GAME_TAGS" });
+                                    T(!0), f({ action: "EXPAND_GAME_TAGS" });
                                 },
                                 onCollapseTags: () => {
-                                    v(!1), f({ action: "COLLAPSE_GAME_TAGS" });
+                                    T(!1), f({ action: "COLLAPSE_GAME_TAGS" });
                                 },
                                 disableInteraction: o,
                             }),
@@ -315,7 +315,7 @@ function Y(e) {
 function q() {
     return (0, l.jsx)(R.A, { direction: R.A.Directions.LEFT, width: 12, height: 12, className: B.OW });
 }
-function J(e) {
+function Q(e) {
     let {
             isExpanded: t,
             numberOfOverflowingTags: i,
@@ -344,7 +344,7 @@ function J(e) {
               }),
           });
 }
-let Q = (e, t, i, n, l) =>
+let J = (e, t, i, n, l) =>
     (0, s.useCallback)(() => {
         if (null == i) return void l(0);
         let s = e.current?.getBoundingClientRect().width ?? 0,
@@ -375,8 +375,8 @@ var Z = i(858808),
     ee = i(529459);
 function et(e) {
     let { index: t, widgetType: i, game: n, children: s, getWidth: a } = e,
-        { manageFocusOnReorder: r } = (0, T.r)();
-    return (0, l.jsx)(v.mG, {
+        { manageFocusOnReorder: r } = (0, v.r)();
+    return (0, l.jsx)(T.mG, {
         index: t,
         itemId: n.applicationId,
         listType: i,
@@ -434,7 +434,7 @@ function ea(e) {
         I = (0, p.GV)(),
         { trackUserProfileEditAction: A } = (0, j.NJ)(),
         [E, h] = s.useState("idle"),
-        [v, T] = s.useState(t ?? ""),
+        [T, v] = s.useState(t ?? ""),
         _ = s.useRef(null),
         S = s.useRef(null),
         O = M.intl.string(M.t.xKSfBT),
@@ -443,18 +443,18 @@ function ea(e) {
             A({ action: "PRESS_ADD_COMMENTARY", widgetEdited: c }), h("editing");
         }, [c, A]),
         k = s.useCallback(() => {
-            let e = v.trim(),
+            let e = T.trim(),
                 i = e !== (t ?? "").trim();
             (0, N.oc)(c, d, "" !== e ? e : void 0),
                 h("completed"),
                 i && A({ action: "COMMENTARY_EDITED", widgetEdited: c, gameId: d });
-        }, [c, d, v, t, A]),
+        }, [c, d, T, t, A]),
         b = s.useCallback((e) => {
-            T(e);
+            v(e);
         }, []);
     return (
         s.useEffect(() => {
-            "editing" === E && T(t ?? "");
+            "editing" === E && v(t ?? "");
         }, [t, E]),
         s.useEffect(() => {
             "completed" === E && _.current?.focus();
@@ -466,7 +466,7 @@ function ea(e) {
                       (0, l.jsx)(u.A, { tag: "label", htmlFor: g, children: M.intl.string(M.t.JxKXeT) }),
                       (0, l.jsx)(f.f, {
                           id: g,
-                          value: v,
+                          value: T,
                           placeholder: O,
                           onChange: b,
                           onBlur: k,
@@ -523,7 +523,7 @@ function er(e) {
         b = 1 === (0, N.cv)(o),
         D = k && (0, N.y9)(o),
         G = k && !b,
-        { registerDragHandleRef: L } = (0, T.r)();
+        { registerDragHandleRef: L } = (0, v.r)();
     if (C) return (0, l.jsx)(S.E, {});
     let w = () =>
             (0, l.jsx)(_.A, {
@@ -544,7 +544,7 @@ function er(e) {
                     G
                         ? (0, l.jsxs)("div", {
                               className: ee.An,
-                              children: [w(), (0, l.jsx)(v.jV, { buttonRef: L(a.applicationId), className: ee.BU })],
+                              children: [w(), (0, l.jsx)(T.jV, { buttonRef: L(a.applicationId), className: ee.BU })],
                           })
                         : w(),
                     (0, l.jsxs)("div", {

@@ -18,7 +18,7 @@ var i = s(627968),
 function S(t) {
     let { transitionState: e, onClose: s, questContent: a, quest: c, returnRef: u } = t,
         o = d.H1.useSetting(),
-        S = ((t) => {
+        S = (function (t) {
             switch (t) {
                 case g.uF.QUEST_BAR:
                 case g.uF.QUEST_BAR_V2:

@@ -27,13 +27,13 @@ function v() {
     let [e, t] = r.useState(!1);
     if (null == (0, h.bG)([p.A], () => ((0, E.kK)() ? p.A.getCurrentBuildOverride().overrides?.discord_web : null)))
         return null;
-    let n = async () => {
+    async function n() {
         try {
             t(!0), await (0, f.iD)(), window.location.reload(!0);
         } catch (e) {
             t(!1);
         }
-    };
+    }
     return (0, i.jsx)(d.$, {
         variant: "primary",
         size: "md",

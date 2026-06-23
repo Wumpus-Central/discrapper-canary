@@ -10,9 +10,9 @@ function u(t) {
     let { channel: i, transitionState: n, onClose: u } = t,
         c = (0, s.Qs)(i.id);
     if (null == c) return null;
-    let o = () => {
+    function o() {
         a.default.selectVoiceChannel(null), u();
-    };
+    }
     return (0, l.jsx)(e.Modal, {
         transitionState: n,
         title: d.intl.string(d.t["4Ao8LC"]),

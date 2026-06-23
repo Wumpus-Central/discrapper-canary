@@ -1,16 +1,16 @@
-a.d(e, { R: () => p, p: () => A });
-var n = a(284009),
-    s = a.n(n),
-    l = a(353640),
-    r = a(371444),
-    h = a(392421),
-    g = a(602137),
-    i = a(121894),
-    S = a(17928),
-    u = a(734057),
-    o = a(679804);
+n.d(e, { R: () => p, p: () => A });
+var a = n(284009),
+    s = n.n(a),
+    l = n(353640),
+    r = n(371444),
+    h = n(392421),
+    i = n(602137),
+    g = n(121894),
+    u = n(17928),
+    S = n(734057),
+    o = n(679804);
 let C = new Set(),
-    T = { layoutType: r.C.LIST, sortOrder: g.T.CREATION_DATE, tagFilter: C, tagSetting: h.n.MATCH_SOME };
+    T = { layoutType: r.C.LIST, sortOrder: i.T.CREATION_DATE, tagFilter: C, tagSetting: h.n.MATCH_SOME };
 class d {
     set;
     get;
@@ -19,30 +19,30 @@ class d {
         (this.set = t), (this.get = e);
     }
     setChannelState = (t, e) => {
-        let a = this.get(),
-            n = this.getChannelState(t),
-            s = { ...a.channelStates };
-        (s[t] = { ...n, ...e }), (0, i.r)(() => this.set({ channelStates: s }));
+        let n = this.get(),
+            a = this.getChannelState(t),
+            s = { ...n.channelStates };
+        (s[t] = { ...a, ...e }), (0, g.r)(() => this.set({ channelStates: s }));
     };
     getChannelState = (t) => {
         if (null == t) return T;
         let { channelStates: e } = this.get(),
-            a = e[t];
-        if (null == a) {
-            let e = u.A.getChannel(t);
+            n = e[t];
+        if (null == n) {
+            let e = S.A.getChannel(t);
             s()(null != e, "[Forum Channel Store] The channel should not be missing."),
-                (a = {
+                (n = {
                     layoutType: e.getDefaultLayout(),
                     sortOrder: e.getDefaultSortOrder(),
                     tagFilter: C,
                     tagSetting: e.getDefaultTagSetting(),
                 });
         }
-        return a;
+        return n;
     };
     toggleTagFilter = (t, e) => {
-        let a = new Set(this.getChannelState(t).tagFilter);
-        a.has(e) ? a.delete(e) : a.add(e), this.setTagFilter(t, a);
+        let n = new Set(this.getChannelState(t).tagFilter);
+        n.has(e) ? n.delete(e) : n.add(e), this.setTagFilter(t, n);
     };
     setTagFilter = (t, e) => {
         this.setChannelState(t, { tagFilter: e }), o.A.setFilterTagIds(e);
@@ -57,9 +57,11 @@ class d {
         this.setChannelState(t, { tagSetting: e }), o.A.setTagSetting(e);
     };
 }
-let c = (0, l.v)((t, e) => new d(t, e)),
-    p = (t) => {
-        let e = c();
-        return null == (0, S.bG)([u.A], () => u.A.getChannel(t)) ? T : e.getChannelState(t);
-    },
-    A = () => c;
+let c = (0, l.v)((t, e) => new d(t, e));
+function p(t) {
+    let e = c();
+    return null == (0, u.bG)([S.A], () => S.A.getChannel(t)) ? T : e.getChannelState(t);
+}
+function A() {
+    return c;
+}

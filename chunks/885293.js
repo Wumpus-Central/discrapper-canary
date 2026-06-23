@@ -1,19 +1,19 @@
 a.d(e, { default: () => _ });
 var n = a(627968);
 a(64700);
-var s = a(562708),
-    i = a(189213),
+var i = a(562708),
+    s = a(189213),
     l = a(364522),
     r = a(834730),
     o = a(150934),
     c = a(139286),
     d = a(174459),
     m = a(60888),
-    p = a(652215),
-    u = a(375708),
+    u = a(652215),
+    p = a(375708),
     x = a(526826);
 function _(t) {
-    let { url: e, trustUrl: a, isProtocol: _, onConfirm: h, onCancel: C, onClose: f, transitionState: g } = t,
+    let { url: e, trustUrl: a, isProtocol: _, onConfirm: h, onCancel: f, onClose: C, transitionState: g } = t,
         {
             protocol: k,
             authorityPrefix: A,
@@ -23,21 +23,21 @@ function _(t) {
             setShouldTrustUrl: I,
             handleConfirm: y,
             handleCancel: E,
-        } = (0, m.u)({ url: e, trustUrl: a, onConfirm: h, onCancel: C, onClose: f });
+        } = (0, m.u)({ url: e, trustUrl: a, onConfirm: h, onCancel: f, onClose: C });
     return (
-        (0, c.A)({ type: s.ImpressionTypes.MODAL, name: s.ImpressionNames.MASKED_LINK_MODAL }),
-        (0, n.jsxs)(i.Modal, {
+        (0, c.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.MASKED_LINK_MODAL }),
+        (0, n.jsxs)(s.Modal, {
             size: "md",
             transitionState: g,
-            onClose: f,
-            title: u.intl.string(u.t["3w1QGl"]),
-            subtitle: _ ? u.intl.format(u.t.aCYv1z, {}) : u.intl.string(u.t.soRxRe),
+            onClose: C,
+            title: p.intl.string(p.t["3w1QGl"]),
+            subtitle: _ ? p.intl.format(p.t.aCYv1z, {}) : p.intl.string(p.t.soRxRe),
             actions: [
                 {
-                    text: u.intl.string(u.t["/g10LC"]),
-                    onClick: () => {
+                    text: p.intl.string(p.t["/g10LC"]),
+                    onClick: function () {
                         E(),
-                            d.default.track(p.HAw.MASKED_LINK_MODAL_CLICKED, {
+                            d.default.track(u.HAw.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: v,
                                 action_type: "cancel",
                             });
@@ -45,10 +45,10 @@ function _(t) {
                     variant: "secondary",
                 },
                 {
-                    text: _ ? u.intl.string(u.t.COq6kk) : u.intl.string(u.t.NcJfJG),
-                    onClick: () => {
+                    text: _ ? p.intl.string(p.t.COq6kk) : p.intl.string(p.t.NcJfJG),
+                    onClick: function () {
                         y(),
-                            d.default.track(p.HAw.MASKED_LINK_MODAL_CLICKED, {
+                            d.default.track(u.HAw.MASKED_LINK_MODAL_CLICKED, {
                                 is_trust_url_selected: v,
                                 action_type: "confirm",
                             });
@@ -81,8 +81,8 @@ function _(t) {
                         checked: v,
                         onChange: (t) => I(t),
                         label: _
-                            ? u.intl.format(u.t["haA+Xw"], { protocol: k.replace(":", "") })
-                            : u.intl.format(u.t.ZgXDsI, { domain: D }),
+                            ? p.intl.format(p.t["haA+Xw"], { protocol: k.replace(":", "") })
+                            : p.intl.format(p.t.ZgXDsI, { domain: D }),
                         labelType: "secondary",
                     }),
                 }),

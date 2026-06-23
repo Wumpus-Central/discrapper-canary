@@ -42,7 +42,7 @@ function g(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: r } = e,
         s = (0, a.bG)([h.A], () => h.A.getPricesForSkuId(t?.id ?? null));
     return i.useMemo(() => {
-        let e = ((e) => {
+        let e = (function (e) {
             if (null == e) return f.QK.SELF_PURCHASE;
             switch (e) {
                 case u.lid.DEFAULT:

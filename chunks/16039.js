@@ -1,61 +1,61 @@
-e.d(n, { default: () => c });
-var i = e(627968),
-    a = e(64700),
-    l = e(189213),
-    o = e(783878),
-    u = e(239705),
-    r = e(200700),
-    s = e(375708);
-let d = (t) => {
-    let { duration: n, onSelectDuration: e } = t,
+i.d(n, { default: () => d });
+var e = i(627968),
+    a = i(64700),
+    o = i(189213),
+    l = i(783878),
+    u = i(239705),
+    r = i(200700),
+    s = i(375708);
+function c(t) {
+    let { duration: n, onSelectDuration: i } = t,
         a = (0, r.ny)(),
-        l = a.find((t) => t.value === n);
-    return (0, i.jsx)(o.Z, {
+        o = a.find((t) => t.value === n);
+    return (0, e.jsx)(l.Z, {
         required: !0,
-        value: l?.value ?? r.DisableCommunicationDuration.DURATION_60_SEC,
+        value: o?.value ?? r.DisableCommunicationDuration.DURATION_60_SEC,
         options: a,
-        onSelectionChange: (t) => {
+        onSelectionChange: function (t) {
             let n = a.find((n) => n.value === t);
-            null != n && e(n.value);
+            null != n && i(n.value);
         },
         placeholder: s.intl.string(s.t.k7yo6p),
         selectionMode: "single",
     });
-};
-function c(t) {
-    let { action: n, triggerType: e, isEdit: o, onUpdateDuration: c, onClose: p, transitionState: C } = t,
-        [h, S] = a.useState(() =>
+}
+function d(t) {
+    let { action: n, triggerType: i, isEdit: l, onUpdateDuration: d, onClose: p, transitionState: C } = t,
+        [f, h] = a.useState(() =>
             null != n.metadata.durationSeconds && n.metadata.durationSeconds > 0
                 ? n.metadata.durationSeconds
                 : r.DisableCommunicationDuration.DURATION_60_SEC,
         ),
-        D = (0, u.x)(n.type, n, e);
-    if (null == D) return null;
-    let { headerText: g } = D;
-    return (0, i.jsx)(l.Modal, {
+        S = (0, u.x)(n.type, n, i);
+    if (null == S) return null;
+    let { headerText: D } = S;
+    return (0, e.jsx)(o.Modal, {
         onClose: p,
         transitionState: C,
-        title: g,
+        title: D,
         subtitle: s.intl.string(s.t.DWGBAh),
         actions: [
             {
                 text: s.intl.string(s.t["ETE/oC"]),
-                onClick: () => {
+                onClick: function () {
                     p();
                 },
                 variant: "secondary",
             },
             {
-                text: o ? s.intl.string(s.t.bt75uw) : s.intl.string(s.t["R3BPH+"]),
-                onClick: () => {
-                    c(h);
+                text: l ? s.intl.string(s.t.bt75uw) : s.intl.string(s.t["R3BPH+"]),
+                onClick: function () {
+                    d(f);
                 },
             },
         ],
-        children: (0, i.jsx)(d, {
-            duration: h,
-            onSelectDuration: (t) => {
-                S(t);
+        children: (0, e.jsx)(c, {
+            duration: f,
+            onSelectDuration: function (t) {
+                h(t);
             },
         }),
     });

@@ -35,16 +35,16 @@ var i = n(627968),
     v = n(652215),
     R = n(375708),
     O = n(456508);
-let b = (e) => {
+let b = function (e) {
     let { onClose: t } = e,
-        { analyticsLocations: n } = (0, T.Ay)(),
-        r = () => {
-            t(),
-                (0, C.pX)(v.BVt.COLLECTIBLES_SHOP),
-                (0, N.Cz)({ analyticsSource: I.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
-                (0, A.jH)(),
-                (0, y.dF)(S.Zt);
-        };
+        { analyticsLocations: n } = (0, T.Ay)();
+    function r() {
+        t(),
+            (0, C.pX)(v.BVt.COLLECTIBLES_SHOP),
+            (0, N.Cz)({ analyticsSource: I.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
+            (0, A.jH)(),
+            (0, y.dF)(S.Zt);
+    }
     return (0, i.jsxs)("div", {
         className: O.kL,
         children: [

@@ -3,7 +3,7 @@ var n = a(627968);
 a(64700);
 var l = a(189213);
 let s = "UPLOAD_ERROR_MODAL_KEY",
-    i = (e) => {
+    i = function (e) {
         let { title: t, help: a, transitionState: s, onClose: i } = e;
         return (0, n.jsx)(l.Modal, {
             title: t,

@@ -1,21 +1,21 @@
-n.d(e, { $P: () => v, rc: () => g, wF: () => f });
+e.d(n, { $P: () => v, rc: () => g, wF: () => m });
 var i,
-    l = n(627968);
-n(64700);
-var r = n(323125),
-    s = n(821609),
-    a = n(793574),
-    u = n(688810),
-    o = n(75304),
-    d = n(897100),
-    c = n(638643),
-    A = n(976860),
-    p = n(174459),
-    I = n(580630),
-    S = n(56754),
-    h = n(652215),
-    m = n(375708),
-    f =
+    l = e(627968);
+e(64700);
+var r = e(323125),
+    s = e(821609),
+    a = e(793574),
+    u = e(688810),
+    o = e(75304),
+    d = e(897100),
+    c = e(638643),
+    A = e(976860),
+    p = e(174459),
+    I = e(580630),
+    S = e(56754),
+    f = e(652215),
+    h = e(375708),
+    m =
         (((i = {})[(i.AVAILABLE = 0)] = "AVAILABLE"),
         (i[(i.LOADING = 1)] = "LOADING"),
         (i[(i.UPCOMING_PLAN = 2)] = "UPCOMING_PLAN"),
@@ -23,73 +23,73 @@ var r = n(323125),
         (i[(i.UNAVAILABLE = 4)] = "UNAVAILABLE"),
         i);
 function g(t) {
-    let { appId: e, onClick: n, onHasClicked: i, skuId: r, subscriptionPlan: s, icon: a, state: u = 0 } = t,
+    let { appId: n, onClick: e, onHasClicked: i, skuId: r, subscriptionPlan: s, icon: a, state: u = 0 } = t,
         o = null != s ? (0, I._J)(s) : null,
         d = 1 === u;
     return 0 === u || d
         ? (0, l.jsx)(x, {
-              appId: e,
+              appId: n,
               skuId: r,
-              onClick: (t) => {
-                  n(t), i?.();
+              onClick: function (t) {
+                  e(t), i?.();
               },
               loading: d,
               icon: a,
-              text: null != o ? m.intl.formatToPlainString(m.t.i4T8vz, { rate: o }) : m.intl.string(m.t.uuzaAK),
+              text: null != o ? h.intl.formatToPlainString(h.t.i4T8vz, { rate: o }) : h.intl.string(h.t.uuzaAK),
           })
         : (0, l.jsx)(P, {
-              text: (function (t, e) {
+              text: (function (t, n) {
                   switch (t) {
                       case 2:
-                          return m.intl.formatToPlainString(m.t.k1ew5N, { rate: e });
+                          return h.intl.formatToPlainString(h.t.k1ew5N, { rate: n });
                       case 3:
-                          return m.intl.formatToPlainString(m.t["Hs3Y+I"], { rate: e });
+                          return h.intl.formatToPlainString(h.t["Hs3Y+I"], { rate: n });
                       case 4:
-                          return m.intl.string(m.t.DLAKbi);
+                          return h.intl.string(h.t.DLAKbi);
                   }
               })(u, o ?? ""),
           });
 }
 function v(t) {
-    let { appId: e, onClick: n, onHasClicked: i, sku: r, icon: s } = t,
+    let { appId: n, onClick: e, onHasClicked: i, sku: r, icon: s } = t,
         { analyticsLocations: d } = (0, u.Ay)(a.A.APP_STOREFRONT),
         A = (0, S.L)(r.id),
-        p = r.type === h.Puh.DURABLE && A,
-        { price: f } = r;
-    return null == f
+        p = r.type === f.Puh.DURABLE && A,
+        { price: m } = r;
+    return null == m
         ? null
         : p
-          ? (0, l.jsx)(P, { text: m.intl.string(m.t["6cfuDj"]) })
+          ? (0, l.jsx)(P, { text: h.intl.string(h.t["6cfuDj"]) })
           : (0, l.jsx)(x, {
-                appId: e,
+                appId: n,
                 skuId: r.id,
-                onClick: (t) => {
+                onClick: function (t) {
                     (
-                        n ??
-                        (() => {
+                        e ??
+                        function () {
                             (0, c.k)({
-                                appId: e,
+                                appId: n,
                                 skuId: r.id,
                                 analyticsLocations: d,
                                 checkoutFlow: o.C.PREMIUM_APPS_OTP_CHECKOUT,
                             });
-                        })
+                        }
                     )(t),
                         i?.();
                 },
-                text: m.intl.format(m.t.Xp5WTn, { price: (0, I.$g)(f.amount, f.currency) }),
+                text: h.intl.format(h.t.Xp5WTn, { price: (0, I.$g)(m.amount, m.currency) }),
                 icon: s,
             });
 }
 function x(t) {
-    let { appId: e, skuId: n, onClick: i, ...a } = t,
+    let { appId: n, skuId: e, onClick: i, ...a } = t,
         u = (0, d.A)();
     return (0, l.jsx)(s.$, {
         ...a,
-        onClick: (t) => {
-            if ((p.default.track(h.HAw.STOREFRONT_PURCHASE_CLICKED, { application_id: e, sku_id: n }), !u)) {
+        onClick: function (t) {
+            if ((p.default.track(f.HAw.STOREFRONT_PURCHASE_CLICKED, { application_id: n, sku_id: e }), !u)) {
                 t.preventDefault(), t.stopPropagation();
-                let i = h.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(e, n),
+                let i = f.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, e),
                     l = (0, r.T2)(i, !1);
                 (0, A.pX)(l);
                 return;
@@ -99,6 +99,6 @@ function x(t) {
     });
 }
 function P(t) {
-    let { text: e } = t;
-    return (0, l.jsx)(s.$, { text: e, disabled: !0, variant: "primary" });
+    let { text: n } = t;
+    return (0, l.jsx)(s.$, { text: n, disabled: !0, variant: "primary" });
 }

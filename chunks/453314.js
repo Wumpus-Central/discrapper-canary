@@ -134,8 +134,8 @@ class Y extends r.PureComponent {
     }
 }
 var W = n(781303);
-let K = () =>
-    (0, i.jsxs)("div", {
+function K() {
+    return (0, i.jsxs)("div", {
         className: W.p$,
         children: [
             (0, i.jsx)("div", { className: W.lv, children: B.intl.string(B.t.bpbATE) }),
@@ -148,6 +148,7 @@ let K = () =>
             }),
         ],
     });
+}
 class $ extends r.Component {
     static defaultProps = { unread: !1 };
     render() {

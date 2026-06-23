@@ -1,9 +1,11 @@
 i.d(n, { A: () => s });
 var e = i(627968),
     r = i(64700);
-let l = (t) => (n) => {
-    n?.stopPropagation(), t();
-};
+function l(t) {
+    return (n) => {
+        n?.stopPropagation(), t();
+    };
+}
 function s(t) {
     let { onClick: n, className: i, children: s } = t,
         a = r.useRef(null);

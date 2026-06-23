@@ -1,17 +1,17 @@
-l.d(t, { A: () => u });
-var r = l(627968),
-    n = l(939249),
-    a = l(976860),
-    s = l(364801),
-    i = l(975117),
-    c = l(498381),
-    d = l(891167),
-    o = l(829028);
-let u = (e) => {
-    let { backgroundImage: t, logoSrc: l, supplementalImage: u, href: h, ctaText: m } = e,
+n.d(t, { A: () => d });
+var r = n(627968),
+    l = n(939249),
+    a = n(976860),
+    s = n(364801),
+    i = n(975117),
+    c = n(498381),
+    o = n(891167),
+    u = n(829028);
+let d = function (e) {
+    let { backgroundImage: t, logoSrc: n, supplementalImage: d, href: h, ctaText: m } = e,
         p = null != h;
-    return (0, r.jsxs)(n.D, {
-        className: o.rJ,
+    return (0, r.jsxs)(l.D, {
+        className: u.rJ,
         onClick: p
             ? (e) => {
                   e.preventDefault(), (0, a.pX)(h);
@@ -25,20 +25,20 @@ let u = (e) => {
                     backgroundPosition: "left",
                     padding: 24,
                     children: (0, r.jsx)("div", {
-                        className: o.rf,
+                        className: u.rf,
                         children: (0, r.jsxs)("div", {
-                            className: o.kb,
+                            className: u.kb,
                             children: [
                                 (0, r.jsx)("div", {}),
-                                null != l &&
-                                    (0, r.jsx)("div", { className: o.wm, children: (0, r.jsx)(d.A, { src: l }) }),
+                                null != n &&
+                                    (0, r.jsx)("div", { className: u.wm, children: (0, r.jsx)(o.A, { src: n }) }),
                                 null != m && (0, r.jsx)(c.aF, { ctaText: m, variant: "overlay-primary", href: h }),
                             ],
                         }),
                     }),
                 }),
             }),
-            null != u && (0, r.jsx)("div", { className: o.hP, children: (0, r.jsx)(d.A, { src: u }) }),
+            null != d && (0, r.jsx)("div", { className: u.hP, children: (0, r.jsx)(o.A, { src: d }) }),
         ],
     });
 };

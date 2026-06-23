@@ -51,7 +51,7 @@ function P(e) {
         "aria-label": D.intl.string(D.t.Z1RnTk),
         isActive: !1,
         noHover: !0,
-        onClick: () => {
+        onClick: function () {
             r(), e.onClick?.();
         },
         ...n,
@@ -115,15 +115,15 @@ let x = S.A.Millis.DAYS_30,
                 location: "gift-promotion-button",
             });
         if (t) return null;
-        let q = () => {
-                d(!1), Y(b.i.TAKE_ACTION), z();
-            },
-            Z =
-                F && D?.boxAnimationUrl != null
-                    ? (0, i.jsx)(M, { boxAnimationUrl: D.boxAnimationUrl, hovered: K, onClick: q })
-                    : V && D?.trinketAnimationUrl != null
-                      ? (0, i.jsx)(P, { trinketAnimationUrl: D.trinketAnimationUrl, hovered: K, onClick: q })
-                      : (0, i.jsx)(v.A, { disabled: t, channel: n });
+        function q() {
+            d(!1), Y(b.i.TAKE_ACTION), z();
+        }
+        let Z =
+            F && D?.boxAnimationUrl != null
+                ? (0, i.jsx)(M, { boxAnimationUrl: D.boxAnimationUrl, hovered: K, onClick: q })
+                : V && D?.trinketAnimationUrl != null
+                  ? (0, i.jsx)(P, { trinketAnimationUrl: D.trinketAnimationUrl, hovered: K, onClick: q })
+                  : (0, i.jsx)(v.A, { disabled: t, channel: n });
         return (0, i.jsx)("div", {
             className: a()(L.kL, { [L.DM]: K }),
             style: G,

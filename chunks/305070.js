@@ -73,30 +73,30 @@ let B = r.forwardRef(function (e, t) {
                 ),
                 E = (function (e) {
                     let { navId: t, scrollerRef: n, state: i, onFocus: s } = e,
-                        { renderWindow: a } = r.useContext(x.Ay),
-                        o = (e, t, r) => {
-                            if ((n.current?.scrollToTop(), e && null != i.query)) {
-                                let e = i.query.typeInfo.focusMode,
-                                    n =
-                                        e !== T.e.MANUAL &&
-                                        (e !== T.e.AUTO_WHEN_FILTERED || 0 !== i.query.queryText.length);
-                                i.isVisible && (!0 !== t || !1 !== n) && !0 !== r
-                                    ? (u.setFocus("0"), s?.(0))
-                                    : (u.setFocus(null), s?.(null));
-                            }
-                        },
-                        l = (e) => {
-                            if ((n.current?.scrollToBottom(), e && null != i.query && i.query.resultCount > 0)) {
-                                let e = i.query.resultCount - 1;
-                                u.setFocus(e.toString()), s?.(e);
-                            }
-                        },
-                        u = (0, M.Ay)({
+                        { renderWindow: a } = r.useContext(x.Ay);
+                    function o(e, t, r) {
+                        if ((n.current?.scrollToTop(), e && null != i.query)) {
+                            let e = i.query.typeInfo.focusMode,
+                                n =
+                                    e !== T.e.MANUAL &&
+                                    (e !== T.e.AUTO_WHEN_FILTERED || 0 !== i.query.queryText.length);
+                            i.isVisible && (!0 !== t || !1 !== n) && !0 !== r
+                                ? (u.setFocus("0"), s?.(0))
+                                : (u.setFocus(null), s?.(null));
+                        }
+                    }
+                    function l(e) {
+                        if ((n.current?.scrollToBottom(), e && null != i.query && i.query.resultCount > 0)) {
+                            let e = i.query.resultCount - 1;
+                            u.setFocus(e.toString()), s?.(e);
+                        }
+                    }
+                    let u = (0, M.Ay)({
                             id: t,
                             isEnabled: i.isVisible,
                             orientation: P.Gl.VERTICAL,
                             useVirtualFocus: !0,
-                            setFocus: (e, t) => {
+                            setFocus: function (e, t) {
                                 let i = a.document.querySelector(e);
                                 null != i && n.current?.scrollIntoViewNode({ node: i }), s?.(+t);
                             },
@@ -153,7 +153,9 @@ let B = r.forwardRef(function (e, t) {
                 }),
                 r.useImperativeHandle(t, () => S, [S]),
                 r.useEffect(() => {
-                    let e = (e) => o(e);
+                    function e(e) {
+                        return o(e);
+                    }
                     return (
                         S.on("change", e),
                         S.on("update", u),
@@ -165,7 +167,9 @@ let B = r.forwardRef(function (e, t) {
                 r.useEffect(() => {
                     let e = a.query?.typeInfo.stores;
                     if (null != e) {
-                        let t = () => S.queryResults();
+                        function t() {
+                            return S.queryResults();
+                        }
                         for (let n of e) n.addChangeListener(t);
                         return () => {
                             for (let n of e) n.removeChangeListener(t);

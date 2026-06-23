@@ -13,7 +13,7 @@ r(134528), r(947204);
 var h = r(111159),
     m = r(661531),
     f = r(602853),
-    p = r(137177);
+    p = r(769015);
 r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
 var x = r(938800);
 let w = 1e3 / 30;
@@ -451,8 +451,10 @@ function E(e) {
             (0, f.r)(m.A.unsafe_rawColors.GREEN_400).hsl(),
             (0, f.r)(m.A.unsafe_rawColors.TEAL_400).hsl(),
             (0, f.r)(m.A.unsafe_rawColors.BLUE_400).hsl(),
-        ],
-        i = (e) => (e.isDiscord || e.colorIndex < 0 ? n : a[e.colorIndex % a.length]);
+        ];
+    function i(e) {
+        return e.isDiscord || e.colorIndex < 0 ? n : a[e.colorIndex % a.length];
+    }
     return t && 0 !== r.length
         ? (0, s.jsx)(s.Fragment, { children: r.map((e) => (0, s.jsx)(R, { view: e, colorFor: i }, e.adapterName)) })
         : null;

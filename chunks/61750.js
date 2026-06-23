@@ -4,7 +4,7 @@ var i = n(627968);
 n(64700);
 var r = n(192308),
     s = n(758836);
-let a = (e) => {
+let a = function (e) {
     let {
         product: t,
         analyticsLocations: a,

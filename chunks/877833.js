@@ -1,38 +1,38 @@
 i.d(t, { default: () => C });
-var l,
-    n = i(627968),
+var n,
+    l = i(627968),
     s = i(64700),
     c = i(189213),
     d = i(150934),
     a = i(375708),
-    r = i(95561),
-    o = i(174459),
+    o = i(95561),
+    r = i(174459),
     u = i(975571),
     _ = i(652215),
     h =
-        (((l = {}).DESCRIPTION = "description"),
-        (l.CATEGORIES = "categories"),
-        (l.TAGS = "tags"),
-        (l.AGREE_TO_RULES = "agree_to_rules"),
-        l);
-let k = (e) => {
-    let { articleId: t, guildId: i, modalStep: l = null, pageView: n = null } = e;
+        (((n = {}).DESCRIPTION = "description"),
+        (n.CATEGORIES = "categories"),
+        (n.TAGS = "tags"),
+        (n.AGREE_TO_RULES = "agree_to_rules"),
+        n);
+function k(e) {
+    let { articleId: t, guildId: i, modalStep: n = null, pageView: l = null } = e;
     open(u.A.getArticleURL(t)),
-        o.default.track(_.HAw.DISCOVERY_SETUP_CTA_CLICKED, {
+        r.default.track(_.HAw.DISCOVERY_SETUP_CTA_CLICKED, {
             cta_name: _.Mmu,
-            discovery_settings_view: n,
+            discovery_settings_view: l,
             help_center_article_id: t,
-            modal_step: l,
-            ...(0, r.H$)(i),
+            modal_step: n,
+            ...(0, o.H$)(i),
         });
-};
+}
 var E = i(710825);
 function C(e) {
-    let { guildId: t, transitionState: i, onClose: l, onConfirm: r } = e,
-        { rules: o, rulesAccepted: u } = (function () {
+    let { guildId: t, transitionState: i, onClose: n, onConfirm: o } = e,
+        { rules: r, rulesAccepted: u } = (function () {
             let [e, t] = s.useState(!1),
-                [i, l] = s.useState(!1),
-                [n, c] = s.useState(!1);
+                [i, n] = s.useState(!1),
+                [l, c] = s.useState(!1);
             return {
                 rules: s.useMemo(
                     () => [
@@ -47,26 +47,26 @@ function C(e) {
                             key: "nonNSFW",
                             title: a.intl.string(a.t["iwnCh+"]),
                             body: a.intl.string(a.t.UKFzEY),
-                            onCheck: () => l(!i),
+                            onCheck: () => n(!i),
                             checked: i,
                         },
                         {
                             key: "guidelines",
                             title: a.intl.string(a.t.cZwlWn),
                             body: a.intl.string(a.t.u0Go2s),
-                            onCheck: () => c(!n),
-                            checked: n,
+                            onCheck: () => c(!l),
+                            checked: l,
                         },
                     ],
-                    [n, e, i],
+                    [l, e, i],
                 ),
-                rulesAccepted: e && i && n,
+                rulesAccepted: e && i && l,
             };
         })(),
         C = s.useCallback(() => {
-            l(), r();
-        }, [l, r]);
-    return (0, n.jsx)(c.Modal, {
+            n(), o();
+        }, [n, o]);
+    return (0, l.jsx)(c.Modal, {
         title: a.intl.string(a.t["Q8OFN+"]),
         subtitle: a.intl.format(a.t.JLUVfo, {
             onCommunityGuidelinesClick: () =>
@@ -76,15 +76,15 @@ function C(e) {
         }),
         actions: [{ disabled: !u, text: a.intl.string(a.t["qjtt/p"]), onClick: C }],
         transitionState: i,
-        onClose: l,
-        children: (0, n.jsx)("div", {
+        onClose: n,
+        children: (0, l.jsx)("div", {
             className: E.H,
-            children: o.map((e) =>
-                (0, n.jsx)(
+            children: r.map((e) =>
+                (0, l.jsx)(
                     "div",
                     {
                         className: E.k,
-                        children: (0, n.jsx)(d.S, {
+                        children: (0, l.jsx)(d.S, {
                             checked: e.checked,
                             onChange: e.onCheck,
                             label: e.title,

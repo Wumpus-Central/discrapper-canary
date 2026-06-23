@@ -21,15 +21,15 @@ var n = i(627968),
     v = i(576705),
     j = i(567305),
     I = i(652215),
-    E = i(375708),
-    M = i(469993),
-    f = i(836039),
+    f = i(375708),
+    E = i(469993),
+    M = i(836039),
     N = i(260509),
     R = i(555325);
 let T = {
         "server-subscriptions-onboarding": {
-            title: () => E.intl.string(E.t["KzCF/6"]),
-            description: () => E.intl.string(E.t.xMW8FH),
+            title: () => f.intl.string(f.t["KzCF/6"]),
+            description: () => f.intl.string(f.t.xMW8FH),
             canCreateGuild: !1,
             useIsGuildSupported: () =>
                 (0, S.bG)(
@@ -40,16 +40,16 @@ let T = {
                             guild: e,
                             isOwner: !0,
                             canManageGuildRoleSubscriptions: !0,
-                            isUserInCreatorMonetizationEligibleCountry: (0, M.Z1)(),
-                            shouldRestrictUpdatingRoleSubscriptionSettings: (0, f.mk)(e.id),
+                            isUserInCreatorMonetizationEligibleCountry: (0, E.Z1)(),
+                            shouldRestrictUpdatingRoleSubscriptionSettings: (0, M.mk)(e.id),
                         }),
                     [],
                     S.My,
                 ),
         },
         "server-subscriptions-create-tier-from-template": {
-            title: () => E.intl.string(E.t.aTFQKh),
-            description: () => E.intl.string(E.t.oTbFQg),
+            title: () => f.intl.string(f.t.aTFQKh),
+            description: () => f.intl.string(f.t.oTbFQg),
             canCreateGuild: !1,
             useIsGuildSupported: () =>
                 (0, S.bG)(
@@ -64,11 +64,11 @@ let T = {
         },
     },
     k = {
-        title: () => E.intl.string(E.t.V42OaH),
-        description: () => E.intl.string(E.t["7dJ16X"]),
-        selectGuildCta: () => E.intl.string(E.t.LhlgY9),
-        createGuildDescription: () => E.intl.string(E.t.anOisx),
-        createGuildCta: () => E.intl.string(E.t.B44MTm),
+        title: () => f.intl.string(f.t.V42OaH),
+        description: () => f.intl.string(f.t["7dJ16X"]),
+        selectGuildCta: () => f.intl.string(f.t.LhlgY9),
+        createGuildDescription: () => f.intl.string(f.t.anOisx),
+        createGuildCta: () => f.intl.string(f.t.B44MTm),
         canCreateGuild: !0,
         useIsGuildSupported: () => (0, S.bG)([v.A], () => (e) => v.A.canAccessGuildSettings(e), [], S.My),
     };
@@ -110,7 +110,7 @@ function F(e) {
             onSelectionChange: s,
             value: i,
             options: u,
-            placeholder: E.intl.string(E.t.etZ9tX),
+            placeholder: f.intl.string(f.t.etZ9tX),
             selectionMode: "single",
         }),
     });
@@ -122,9 +122,9 @@ function w(e) {
             canCreateGuild: v,
             createGuildCta: j,
             createGuildDescription: I,
-            selectGuildCta: E,
-            title: M,
-            description: f,
+            selectGuildCta: f,
+            title: E,
+            description: M,
             isGuildSupported: N,
         } = (function (e) {
             let [t] = l.useState(null == e ? void 0 : T[e]),
@@ -142,20 +142,20 @@ function w(e) {
             };
         })(s),
         [R, O] = l.useState(),
-        [y, w] = l.useState(!1),
-        B = async () => {
-            w(!0);
-            let e = await new Promise((e) => {
-                h.A.openCreateGuildModal({ onSuccess: e });
+        [y, w] = l.useState(!1);
+    async function B() {
+        w(!0);
+        let e = await new Promise((e) => {
+            h.A.openCreateGuildModal({ onSuccess: e });
+        });
+        await new Promise((t) => {
+            A.A.addChangeListener(function i() {
+                null != A.A.getGuild(e) && (A.A.removeChangeListener(i), t());
             });
-            await new Promise((t) => {
-                A.A.addChangeListener(function i() {
-                    null != A.A.getGuild(e) && (A.A.removeChangeListener(i), t());
-                });
-            }),
-                b.A.open(e, d, void 0, S),
-                i?.();
-        };
+        }),
+            b.A.open(e, d, void 0, S),
+            i?.();
+    }
     return (0, n.jsxs)(u.EO, {
         transitionState: t,
         "aria-labelledby": x,
@@ -165,7 +165,7 @@ function w(e) {
                 className: D.Hc,
                 separator: !1,
                 children: [
-                    (0, n.jsx)(c.D, { id: x, variant: "heading-lg/medium", children: M }),
+                    (0, n.jsx)(c.D, { id: x, variant: "heading-lg/medium", children: E }),
                     (0, n.jsx)(u.s_, { onClick: i }),
                 ],
             }),
@@ -176,7 +176,7 @@ function w(e) {
                         direction: "vertical",
                         gap: 8,
                         children: [
-                            (0, n.jsx)(p.E, { variant: "text-md/medium", children: f }),
+                            (0, n.jsx)(p.E, { variant: "text-md/medium", children: M }),
                             (0, n.jsxs)("div", {
                                 className: D.ce,
                                 children: [
@@ -186,7 +186,7 @@ function w(e) {
                                     }),
                                     (0, n.jsx)(G.$, {
                                         variant: "primary",
-                                        text: E,
+                                        text: f,
                                         onClick: () => {
                                             r()(null != R, "Guild ID must not be null on click"),
                                                 m.A.hasSeenCreatorOnboardingForGuild(R) || (0, C.G)(R),

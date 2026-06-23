@@ -75,10 +75,14 @@ function B(e) {
                 }),
                 [e.questContent, e.questContentPosition, e.sourceQuestContent, Y],
             ),
-        }),
-        ee = (e) => (0, o.P0)((0, l.o)(new m.A(e, e.status).message, u.Ck.FAILURE)),
-        et = () => (0, y.CV)(e.quest.id).catch(ee),
-        en = (0, R.Ns)(e.quest),
+        });
+    function ee(e) {
+        return (0, o.P0)((0, l.o)(new m.A(e, e.status).message, u.Ck.FAILURE));
+    }
+    function et() {
+        return (0, y.CV)(e.quest.id).catch(ee);
+    }
+    let en = (0, R.Ns)(e.quest),
         ei = r.useMemo(
             () =>
                 (0, i.jsx)(c.sL, {
@@ -126,7 +130,7 @@ function B(e) {
     return (0, i.jsxs)(d.W, {
         "data-menu-migrated": !0,
         variant: "fixed",
-        onSelect: () => {
+        onSelect: function () {
             null != e.onSelect ? e.onSelect() : (0, E.Z_)();
         },
         navId: "quests-entry",
@@ -168,7 +172,7 @@ function B(e) {
                             (0, i.jsx)(c.Dr, {
                                 id: "learn-more",
                                 label: V.intl.string(V.t["Ws2Bl+"]),
-                                action: () => {
+                                action: function () {
                                     (0, v.E5)(v.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
                                         ? (0, g.r)({
                                               type: A.F.CLICK_INTERNAL,
@@ -199,7 +203,7 @@ function B(e) {
                             (0, i.jsx)(c.Dr, {
                                 id: "display-disclosure",
                                 label: V.intl.string(V.t.GcsZKJ),
-                                action: () => {
+                                action: function () {
                                     (0, k.Zc)(
                                         e.quest,
                                         {
@@ -217,7 +221,7 @@ function B(e) {
                             (0, i.jsx)(c.Dr, {
                                 id: "hide-entrypoint",
                                 label: V.intl.string(V.t.NN79E9),
-                                action: () => {
+                                action: function () {
                                     (0, v.E5)(v.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu")
                                         ? (0, g.r)({
                                               type: A.F.CLICK_INTERNAL,
@@ -255,14 +259,14 @@ function B(e) {
                             (0, i.jsx)(c.Dr, {
                                 id: "enrollment",
                                 label: V.intl.string(V.t.taqkwK),
-                                action: () => {
+                                action: function () {
                                     Z(), et();
                                 },
                             }),
                             (0, i.jsx)(c.Dr, {
                                 id: "progress",
                                 label: V.intl.string(V.t.cKSLr4),
-                                action: () => {
+                                action: function () {
                                     z(0.9 * Math.random() + 0.03);
                                 },
                             }),
@@ -280,7 +284,9 @@ function B(e) {
                                         (0, i.jsx)(c.Dr, {
                                             id: "start",
                                             label: "Start heartbeat (cheatmode)",
-                                            action: () => (0, y.vD)(e.quest.id, !0).catch(ee),
+                                            action: function () {
+                                                return (0, y.vD)(e.quest.id, !0).catch(ee);
+                                            },
                                         }),
                                         (0, i.jsx)(c.Dr, { id: "stop", label: "Stop heartbeat", action: et }),
                                     ],

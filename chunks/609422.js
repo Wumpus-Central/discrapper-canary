@@ -1,31 +1,31 @@
-e.d(n, { default: () => p });
-var i = e(627968),
-    a = e(64700),
-    l = e(189213),
-    s = e(331322),
-    r = e(292666),
-    u = e(123292),
-    o = e(717398),
-    c = e(427262),
-    d = e(375708);
+i.d(n, { default: () => p });
+var e = i(627968),
+    a = i(64700),
+    l = i(189213),
+    s = i(331322),
+    r = i(292666),
+    u = i(123292),
+    o = i(717398),
+    c = i(427262),
+    d = i(375708);
 function p(t) {
-    let { user: n, nickname: e, transitionState: p, onClose: h } = t,
+    let { user: n, nickname: i, transitionState: p, onClose: h } = t,
         [g, x] = a.useState(!1),
-        [m, b] = a.useState(e),
-        f = a.useRef(null),
-        k = async (t) => {
-            t.preventDefault(), x(!0);
-            try {
-                await o.A.updateRelationship(n.id, m), h();
-            } catch (t) {
-            } finally {
-                x(!1);
-            }
-        },
-        y = null == e ? d.intl.string(d.t.BGYkaH) : d.intl.string(d.t["8pOYUE"]);
-    return (0, i.jsx)("form", {
+        [f, m] = a.useState(i),
+        b = a.useRef(null);
+    async function k(t) {
+        t.preventDefault(), x(!0);
+        try {
+            await o.A.updateRelationship(n.id, f), h();
+        } catch (t) {
+        } finally {
+            x(!1);
+        }
+    }
+    let y = null == i ? d.intl.string(d.t.BGYkaH) : d.intl.string(d.t["8pOYUE"]);
+    return (0, e.jsx)("form", {
         onSubmit: k,
-        children: (0, i.jsx)(l.Modal, {
+        children: (0, e.jsx)(l.Modal, {
             title: y,
             transitionState: p,
             subtitle: d.intl.string(d.t["NdQ+lP"]),
@@ -34,21 +34,21 @@ function p(t) {
                 { text: d.intl.string(d.t["ETE/oC"]), onClick: h, variant: "secondary" },
                 { text: d.intl.string(d.t["R3BPH+"]), onSubmit: k, variant: "primary", disabled: g, type: "submit" },
             ],
-            children: (0, i.jsxs)(s.B, {
+            children: (0, e.jsxs)(s.B, {
                 gap: 8,
                 children: [
-                    (0, i.jsx)(r.k, {
+                    (0, e.jsx)(r.k, {
                         label: d.intl.string(d.t.pqG6GS),
-                        inputRef: f,
-                        value: m ?? "",
+                        inputRef: b,
+                        value: f ?? "",
                         placeholder: c.Ay.getName(n),
-                        onChange: b,
+                        onChange: m,
                         maxLength: 32,
                         autoFocus: !0,
                     }),
-                    (0, i.jsx)(u.Q, {
-                        onClick: () => {
-                            b(null), f.current?.focus();
+                    (0, e.jsx)(u.Q, {
+                        onClick: function () {
+                            m(null), b.current?.focus();
                         },
                         text: d.intl.string(d.t["9qSBvB"]),
                         textVariant: "text-sm/medium",

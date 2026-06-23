@@ -1,8 +1,8 @@
 s.d(e, { default: () => v });
 var i = s(627968),
     a = s(64700),
-    l = s(189213),
-    n = s(534514),
+    n = s(189213),
+    l = s(534514),
     r = s(834730),
     c = s(292666),
     h = s(821609),
@@ -13,8 +13,8 @@ var i = s(627968),
     x = s(464477),
     u = s(375708),
     p = s(876096);
-let j = (t) => {
-    let { image: e, label: s, text: a, children: l } = t;
+function j(t) {
+    let { image: e, label: s, text: a, children: n } = t;
     return (0, i.jsxs)("div", {
         className: p.uW,
         children: [
@@ -23,15 +23,15 @@ let j = (t) => {
                 className: p.f5,
                 children: (0, i.jsxs)("div", {
                     children: [
-                        (0, i.jsx)(n.D, { variant: "heading-sm/semibold", className: p.p_, children: s }),
+                        (0, i.jsx)(l.D, { variant: "heading-sm/semibold", className: p.p_, children: s }),
                         (0, i.jsx)(r.E, { variant: "text-md/normal", children: a }),
-                        l,
+                        n,
                     ],
                 }),
             }),
         ],
     });
-};
+}
 class b extends a.PureComponent {
     state = { code: "", totpSecret: (0, x.tn)(), error: null, isVerifying: !1 };
     render() {
@@ -65,7 +65,7 @@ class b extends a.PureComponent {
                     ],
                 }),
             });
-        return (0, i.jsxs)(l.Modal, {
+        return (0, i.jsxs)(n.Modal, {
             title: u.intl.string(u.t.cDgKte),
             subtitle: u.intl.string(u.t["7NGwtH"]),
             transitionState: t,
@@ -88,7 +88,7 @@ class b extends a.PureComponent {
                     children: (0, i.jsxs)("div", {
                         className: p.h8,
                         children: [
-                            (0, i.jsx)(n.D, {
+                            (0, i.jsx)(l.D, {
                                 variant: "heading-sm/semibold",
                                 className: p.p_,
                                 children: u.intl.string(u.t["76IPwr"]),

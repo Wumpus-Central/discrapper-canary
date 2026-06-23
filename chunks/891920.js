@@ -1,11 +1,11 @@
-i.r(t), i.d(t, { default: () => u });
-var n = i(626584),
-    a = i(719129),
-    s = i(572009),
-    r = i(287809),
-    l = i(723702),
-    o = i(19575);
-let c = new n.A("SteamEventsManager"),
+n.r(t), n.d(t, { default: () => u });
+var i = n(626584),
+    a = n(719129),
+    s = n(572009),
+    r = n(287809),
+    l = n(723702),
+    o = n(19575);
+let c = new i.A("SteamEventsManager"),
     m = { pollingIntervalMs: 1e4, enabled: !0 };
 class d {
     config;
@@ -105,8 +105,8 @@ class d {
     }
     getTrackedProcesses() {
         return Array.from(this.trackedProcesses).map((e) => {
-            let [t, i] = e;
-            return { pid: t, discovered: i };
+            let [t, n] = e;
+            return { pid: t, discovered: n };
         });
     }
     isTrackingProcess(e) {
@@ -125,94 +125,94 @@ class d {
     }
 }
 let h = new d();
-var g = i(372684),
-    v = i(717247);
-let p = new n.A("SteamSignalHandler");
+var g = n(372684),
+    v = n(717247);
+let p = new i.A("SteamSignalHandler");
 function u(e) {
-    let t = !1,
-        i = (i) => {
-            if (!t) return;
-            p.info("Steam timeline event arrived at handler", {
-                gameId: i.gameId,
-                gameIdType: typeof i.gameId,
-                icon: i.icon,
-                iconType: typeof i.icon,
-                iconLength: i.icon?.length,
-                title: i.title,
-                isUserMarker: i.isUserMarker,
-                timestamp: i.timestamp,
+    let t = !1;
+    function n(n) {
+        if (!t) return;
+        p.info("Steam timeline event arrived at handler", {
+            gameId: n.gameId,
+            gameIdType: typeof n.gameId,
+            icon: n.icon,
+            iconType: typeof n.icon,
+            iconLength: n.icon?.length,
+            title: n.title,
+            isUserMarker: n.isUserMarker,
+            timestamp: n.timestamp,
+        });
+        let i = 1 === n.isUserMarker,
+            a = (function (e) {
+                if (e.gameId === v.VG) {
+                    var t;
+                    let n;
+                    if ((0, v.MK)(e.icon)) return { match: v.Xb, eventName: e.icon };
+                    let i =
+                            e.icon === v.oe
+                                ? ((t = e.description),
+                                  (n = Math.min(5, Math.max(t?.match(/,/g)?.length ?? 0, 1) + 2)),
+                                  v.$c[n] ?? v.WX)
+                                : e.icon,
+                        a = v.hz[i];
+                    return null != a ? { match: a, eventName: i } : null;
+                }
+                return null;
+            })(n);
+        if (null == a && !i) {
+            let e = n.gameId === v.VG ? "cs2" : n.gameId === v.o ? "dota2" : "unknown";
+            p.info("Unrecognized Steam timeline event; ignoring", {
+                gameId: n.gameId,
+                knownGame: e,
+                icon: n.icon,
+                title: n.title,
+                reason:
+                    "unknown" === e
+                        ? "gameId not in CS2_APP_ID/DOTA_2_APP_ID"
+                        : `icon "${n.icon}" not in ${e.toUpperCase()} icon table`,
             });
-            let n = 1 === i.isUserMarker,
-                a = (function (e) {
-                    if (e.gameId === v.VG) {
-                        var t;
-                        let i;
-                        if ((0, v.MK)(e.icon)) return { match: v.Xb, eventName: e.icon };
-                        let n =
-                                e.icon === v.oe
-                                    ? ((t = e.description),
-                                      (i = Math.min(5, Math.max(t?.match(/,/g)?.length ?? 0, 1) + 2)),
-                                      v.$c[i] ?? v.WX)
-                                    : e.icon,
-                            a = v.hz[n];
-                        return null != a ? { match: a, eventName: n } : null;
-                    }
-                    return null;
-                })(i);
-            if (null == a && !n) {
-                let e = i.gameId === v.VG ? "cs2" : i.gameId === v.o ? "dota2" : "unknown";
-                p.info("Unrecognized Steam timeline event; ignoring", {
-                    gameId: i.gameId,
-                    knownGame: e,
-                    icon: i.icon,
-                    title: i.title,
-                    reason:
-                        "unknown" === e
-                            ? "gameId not in CS2_APP_ID/DOTA_2_APP_ID"
-                            : `icon "${i.icon}" not in ${e.toUpperCase()} icon table`,
-                });
-                return;
-            }
-            let s = a?.match.eventType ?? g.rb.UNCLASSIFIED,
-                r = (function (e, t) {
-                    if (1 === e.isUserMarker || t?.match.triggerClipCandidate) return 1;
-                    switch (e.possibleClipPriority) {
-                        case 3:
-                            return 1;
-                        case 2:
-                            return 0.5;
-                        default:
-                            return 0;
-                    }
-                })(i, a),
-                l = {
-                    type: g.Gy.GAME_EVENT,
-                    eventType: s,
-                    title: i.title,
-                    description: i.description,
-                    eventIconTag: i.icon,
-                    eventName: a?.eventName ?? i.icon,
-                    score: a?.match.scoreBoost ?? +!!n,
-                    importance: r,
-                };
-            p.info("Converting Steam timeline event to clip signal", {
-                gameId: i.gameId?.toString(),
-                icon: i.icon,
-                eventName: l.eventName,
+            return;
+        }
+        let s = a?.match.eventType ?? g.rb.UNCLASSIFIED,
+            r = (function (e, t) {
+                if (1 === e.isUserMarker || t?.match.triggerClipCandidate) return 1;
+                switch (e.possibleClipPriority) {
+                    case 3:
+                        return 1;
+                    case 2:
+                        return 0.5;
+                    default:
+                        return 0;
+                }
+            })(n, a),
+            l = {
+                type: g.Gy.GAME_EVENT,
                 eventType: s,
-                scoreBoost: a?.match.scoreBoost,
+                title: n.title,
+                description: n.description,
+                eventIconTag: n.icon,
+                eventName: a?.eventName ?? n.icon,
+                score: a?.match.scoreBoost ?? +!!i,
                 importance: r,
-                isUserMarker: n,
-                timestamp: i.timestamp,
-            }),
-                e(l, i.timestamp);
-        };
+            };
+        p.info("Converting Steam timeline event to clip signal", {
+            gameId: n.gameId?.toString(),
+            icon: n.icon,
+            eventName: l.eventName,
+            eventType: s,
+            scoreBoost: a?.match.scoreBoost,
+            importance: r,
+            isUserMarker: i,
+            timestamp: n.timestamp,
+        }),
+            e(l, n.timestamp);
+    }
     return {
         start() {
-            t || ((0, l.isWindows)() && ((t = !0), h.initialize(), h.addTimelineEventCallback(i)));
+            t || ((0, l.isWindows)() && ((t = !0), h.initialize(), h.addTimelineEventCallback(n)));
         },
         stop() {
-            t && (p.info("Stopping Steam signal handler"), (t = !1), h.removeTimelineEventCallback(i));
+            t && (p.info("Stopping Steam signal handler"), (t = !1), h.removeTimelineEventCallback(n));
         },
         getState() {
             let e = (0, l.isWindows)();

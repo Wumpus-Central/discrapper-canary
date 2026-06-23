@@ -15,7 +15,7 @@ function u(e) {
         id: "call-grid-view",
         label: c.intl.string(c.t["3jrUBj"]),
         checked: null == n,
-        action: () => {
+        action: function () {
             null != n ? a.A.selectParticipant(e, null) : a.A.selectParticipant(e, o.jd.AUTO);
         },
     });

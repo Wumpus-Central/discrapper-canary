@@ -39,7 +39,7 @@ function h(e) {
             },
             {
                 backdropStyle: c.F.BLUR,
-                onCloseCallback: () => {
+                onCloseCallback: function () {
                     (0, d.xi)(t, [i]),
                         (0, _._$)({
                             channelId: t,

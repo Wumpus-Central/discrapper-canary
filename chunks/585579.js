@@ -8,7 +8,7 @@ var i = n(627968),
     l = n(609174),
     u = n(602902),
     c = n(375708);
-let d = (e) => {
+function d(e) {
     let { variant: t = "primary" } = e,
         n = (0, l.Y_)(),
         { analyticsLocations: d } = (0, o.Ay)(),
@@ -26,4 +26,4 @@ let d = (e) => {
         text: c.intl.string(c.t.RDE0Sc),
         fullWidth: !0,
     });
-};
+}

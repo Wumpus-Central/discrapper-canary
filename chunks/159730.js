@@ -388,18 +388,19 @@ var x = n(241541),
     k = n(967198),
     U = n(375708),
     G = n(724509);
-let F = () =>
-        (0, i.jsx)(i.Fragment, {
-            children: U.intl.format(U.t.ymkBti, {
-                shareIcon: U.intl.string(U.t.VINpSK),
-                shareIconHook: () => (0, i.jsx)(x.D, { className: G.Kk }, "icon"),
-            }),
+function F() {
+    return (0, i.jsx)(i.Fragment, {
+        children: U.intl.format(U.t.ymkBti, {
+            shareIcon: U.intl.string(U.t.VINpSK),
+            shareIconHook: () => (0, i.jsx)(x.D, { className: G.Kk }, "icon"),
         }),
-    V = () => {
-        let e = (0, c.bG)([b.A, k.A], () => b.A.getGuild(k.A.getGuildId()), []),
-            t = e?.name;
-        return (0, i.jsx)(i.Fragment, { children: U.intl.format(U.t.oQuG3K, { serverName: t }) });
-    };
+    });
+}
+function V() {
+    let e = (0, c.bG)([b.A, k.A], () => b.A.getGuild(k.A.getGuildId()), []),
+        t = e?.name;
+    return (0, i.jsx)(i.Fragment, { children: U.intl.format(U.t.oQuG3K, { serverName: t }) });
+}
 var B = n(79858),
     j = n(234645);
 class H extends r.PureComponent {
@@ -497,12 +498,12 @@ class H extends r.PureComponent {
                 popoutPosition: f,
             } = s,
             { offsetX: E, offsetY: m } = this.state,
-            g = { left: null != E ? r.x + E : void 0, top: null != m ? r.y + m : void 0 },
-            A = (e) => {
-                let t = n && !e;
-                return { [j.bW]: t, [j.EO]: !t, [j.TX]: c };
-            },
-            I = this.getTutorialPopoutText();
+            g = { left: null != E ? r.x + E : void 0, top: null != m ? r.y + m : void 0 };
+        function A(e) {
+            let t = n && !e;
+            return { [j.bW]: t, [j.EO]: !t, [j.TX]: c };
+        }
+        let I = this.getTutorialPopoutText();
         return (0, i.jsx)(p.Ay, {
             innerRef: this.contentRef,
             position: f,

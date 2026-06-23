@@ -2,7 +2,9 @@
 n.d(t, { $: () => s, A: () => a });
 var i = n(32731),
     r = n(520606);
-let s = (e) => e instanceof a;
+function s(e) {
+    return e instanceof a;
+}
 class a extends r.A {
     sku;
     constructor(e) {

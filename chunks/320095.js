@@ -203,7 +203,9 @@ function L(e) {
               return new _.vF({ message: y(t), moderator_report: n });
           });
 }
-let w = (e) => 0 === (0, l.o6)(e).length || "" !== e.content;
+function w(e) {
+    return 0 === (0, l.o6)(e).length || "" !== e.content;
+}
 function M(e) {
     return e.hasFlag(T.pr7.EPHEMERAL) && e.type !== T.lAJ.IN_GAME_MESSAGE_NUX;
 }

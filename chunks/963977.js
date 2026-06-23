@@ -10,7 +10,7 @@ var i = n(64700),
     c = n(940622),
     d = n(601255),
     _ = n(476324);
-let h = (e) => {
+let h = function (e) {
     let { user: t, guildId: n, size: h, avatarDecorationOverride: f, onlyAnimateOnHoverOrFocus: p = !1 } = e,
         [E, m] = i.useState(!1),
         { canAnimate: g } = ((e, t) => {

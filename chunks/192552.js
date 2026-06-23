@@ -2,6 +2,6 @@
 n.d(t, { i: () => s });
 var i = n(157559),
     r = n(375708);
-let s = () => {
+function s() {
     i.A.show({ title: r.intl.string(r.t.otsg2R), body: r.intl.string(r.t["/Yx5qX"]), hideActionSheet: !1 });
-};
+}

@@ -53,7 +53,7 @@ function y(e) {
         H = t.getAvatarURL(s, (0, c.FT)(N)),
         Y = (0, o.LX)((0, _.Ay)(H, j, !1)),
         W = (0, h.A)(L ?? n?.primaryColor ?? Y).hex,
-        K = ((e) => {
+        K = (function (e) {
             let { size: t, stroke: n } = (0, c.Kj)(e);
             return t / 2 + n;
         })(N),

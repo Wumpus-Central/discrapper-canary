@@ -24,8 +24,8 @@ var l,
     b = e(599941),
     T = e(915869),
     S = e(700206),
-    G = e(950344),
-    f = e(815332),
+    f = e(950344),
+    G = e(815332),
     O = e(456540),
     R = e(217530),
     B = e(162093),
@@ -59,10 +59,10 @@ function P(i) {
 var z = e(652215),
     w = e(375708),
     X = e(607876);
-let H = (i) => {
+let H = function (i) {
     let { guild: s } = i,
         e = (0, b.uk)(s.id)[0];
-    (0, G.A)({
+    (0, f.A)({
         guildId: s.id,
         groupListingId: e?.id,
         location: z.ThZ.ROLE_SUBSCRIPTIONS_TAB,
@@ -80,7 +80,7 @@ let H = (i) => {
                 coverImageAsset: n?.cover_image_asset ?? null,
                 guild: s,
                 children: [
-                    null != e ? (0, t.jsx)(f.A, { className: X.Ds, groupListingId: e.id, subscription: l }) : null,
+                    null != e ? (0, t.jsx)(G.A, { className: X.Ds, groupListingId: e.id, subscription: l }) : null,
                     (0, t.jsx)(O.A, { subscription: l }),
                 ],
             }),
@@ -107,7 +107,7 @@ var W = e(562708),
     Z = e(139286),
     K = e(640509),
     Q = (((l = {}).GUILD_NOT_ELIGIBLE = "guild_not_eligible"), (l.NOT_GUILD_MEMBER = "not_guild_member"), l);
-let V = (i) => {
+function V(i) {
     let { errorType: s } = i;
     return (
         (0, Z.A)({
@@ -135,7 +135,7 @@ let V = (i) => {
             }),
         })
     );
-};
+}
 var q = e(696986),
     J = e(109335),
     Y = e(330766);
@@ -172,11 +172,11 @@ function ie(i) {
         b = (0, p.A)(s),
         T = (0, a.bG)([A.A], () => A.A.isSubscriptionFetching),
         S = (0, I.X)(),
-        { shouldHideGuildPurchaseEntryPoints: G, restrictionsLoading: f } = (0, h.MH)(s),
-        O = null == e || !S || T || f;
+        { shouldHideGuildPurchaseEntryPoints: f, restrictionsLoading: G } = (0, h.MH)(s),
+        O = null == e || !S || T || G;
     (0, x.HU)({ subsection: w.intl.string(w.t["KzCF/6"]), location: e?.name }),
         (0, g.A)(r.Fr ? "role-subscriptions-overview" : void 0);
-    let R = l && (null == e || !(E || b) || (G && !f));
+    let R = l && (null == e || !(E || b) || (f && !G));
     if (
         (n.useEffect(() => {
             u.hP();

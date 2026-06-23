@@ -4,8 +4,10 @@ var i = n(636537),
     r = n(927813),
     s = n(998218),
     a = n(652215);
-let o = (e) => e?.split(":")[0],
-    l = new Set(["/attachments/", "/ephemeral-attachments/"]),
+function o(e) {
+    return e?.split(":")[0];
+}
+let l = new Set(["/attachments/", "/ephemeral-attachments/"]),
     u = new Set(["/external/"]),
     c = +r.A.Millis.HOUR,
     d = new Set(

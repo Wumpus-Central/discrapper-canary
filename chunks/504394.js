@@ -12,12 +12,12 @@ var n = t(627968),
     g = t(854378),
     x = t(47167),
     h = t(573435),
-    j = t(137177),
+    j = t(769015),
     p = t(714991),
     A = t(625903),
-    v = t(292666),
-    N = t(539895),
-    f = t(844330),
+    f = t(292666),
+    v = t(539895),
+    N = t(844330),
     _ = t(885386),
     E = t(750994),
     y = t(174459),
@@ -25,7 +25,9 @@ var n = t(627968),
     b = t(652215),
     C = t(375708),
     L = t(353442);
-let T = () => (0, n.jsx)("div", { className: L.m });
+function T() {
+    return (0, n.jsx)("div", { className: L.m });
+}
 function R(e) {
     let { label: l, children: t } = e;
     return (0, n.jsxs)(m.B, {
@@ -46,7 +48,7 @@ function k(e) {
         ],
     });
 }
-let I = () => {
+function I() {
     let e = _.tz.useSetting(),
         {
             nickname: l,
@@ -58,11 +60,11 @@ let I = () => {
             guildId: c,
             inviteCode: d,
         } = (0, S.lD)(),
-        o = N.A.getProps().invite?.is_nickname_changeable,
+        o = v.A.getProps().invite?.is_nickname_changeable,
         m = i.useCallback(() => {
             y.default.track(b.HAw.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, { guild_id: c, invite_code: d });
         }, [c, d]);
-    return (0, n.jsxs)(f.A, {
+    return (0, n.jsxs)(N.A, {
         icon: (0, n.jsx)(A.Z, { size: "refresh_sm" }),
         title: C.intl.string(C.t["A5wHQ/"]),
         subtitle: C.intl.string(C.t.UKCSEd),
@@ -74,7 +76,7 @@ let I = () => {
                     children: [
                         (0, n.jsx)(R, {
                             label: C.intl.string(C.t.me1lRk),
-                            children: (0, n.jsx)(v.k, {
+                            children: (0, n.jsx)(f.k, {
                                 placeholder: C.intl.string(C.t["09Q8yp"]),
                                 maxLength: b.d0r,
                                 value: l,
@@ -89,7 +91,7 @@ let I = () => {
             e && (0, n.jsx)(k, { label: C.intl.string(C.t.bN4m1G), checked: a, onChange: u }),
         ],
     });
-};
+}
 var z = t(897288),
     F = t(395671),
     P = t(95701),
@@ -138,9 +140,9 @@ let H = function (e) {
             disableUser: h = !1,
             error: j,
             flatActivityCount: A = !1,
-            isRegister: v = !1,
-            inUnclaimedFlow: N = !1,
-            showInvitedByHeader: f = !0,
+            isRegister: f = !1,
+            inUnclaimedFlow: v = !1,
+            showInvitedByHeader: N = !0,
             className: _,
         } = e,
         { currentUser: E } = (0, c.cf)([M.default], () => ({ currentUser: M.default.getCurrentUser() })),
@@ -159,7 +161,7 @@ let H = function (e) {
         H = (0, u.Lt)(a.flags ?? 0, r.Q.IS_GUEST_INVITE),
         K = !1;
     if (null != L)
-        f &&
+        N &&
             ((B =
                 null == R
                     ? C.intl.string(C.t["3rE1P8"])
@@ -212,7 +214,7 @@ let H = function (e) {
                     ? null
                     : (0, n.jsx)(g.tK, {
                           className: Q.b$,
-                          children: v
+                          children: f
                               ? C.intl.format(C.t["6r4JiR"], { username: e })
                               : C.intl.format(C.t.Quj7HX, { username: e }),
                       }));
@@ -265,7 +267,7 @@ let H = function (e) {
                                   }),
                     }),
                     (0, n.jsx)(z.A, { guild: L, roles: a.roles, className: Q.Ei }),
-                    N || H || null == E ? (0, n.jsx)(g.xt, { user: E }) : (0, n.jsx)(I, {}),
+                    v || H || null == E ? (0, n.jsx)(g.xt, { user: E }) : (0, n.jsx)(I, {}),
                 ],
             }),
         ],

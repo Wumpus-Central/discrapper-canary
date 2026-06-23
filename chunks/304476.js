@@ -629,36 +629,40 @@ var e3 = n(765671),
     tr = n(172799),
     ta = n(330936),
     to = n(82210);
-let tu = (e) => {
-        let t = { onlineCount: e.approximate_presence_count ?? 0, memberCount: e.approximate_member_count ?? 0 };
-        return 0 === t.memberCount ? null : t;
-    },
-    tc = (e) => e.target_type === tr.yV.STREAM && null != e.target_user,
-    td = (e) => e.channel?.type === b.rbe.GROUP_DM,
-    tm = (e) => null == e.channel && null == e.guild && null != e.inviter,
-    th = (e) => e.state === b.elq.ACCEPTED,
-    tg = (e) => {
-        let { guild_scheduled_event: t } = e;
-        return null != t;
-    },
-    tf = (e) => {
-        let t;
-        return !tg(e) && (!!tm(e) || (null != e.inviter && !th(e) && ((t = tu(e)), !((t?.memberCount ?? 0) > 100))));
-    },
-    tx = (e) => {
-        let { guild: t, user: n, application: l } = e;
-        return null != l
-            ? (0, a.jsx)(tl.A, { className: to.Z2, game: l, size: to.q6 })
-            : null != n
-              ? (0, a.jsx)(P.eu, {
-                    src: n.getAvatarURL(void 0, 100),
-                    size: tt._3.DEPRECATED_SIZE_100,
-                    className: to.my,
-                })
-              : null != t
-                ? (0, a.jsx)(P.$v, { guild: t, size: P.$v.Sizes.LARGER, className: to.$f, animate: !0 })
-                : null;
-    };
+function tu(e) {
+    let t = { onlineCount: e.approximate_presence_count ?? 0, memberCount: e.approximate_member_count ?? 0 };
+    return 0 === t.memberCount ? null : t;
+}
+function tc(e) {
+    return e.target_type === tr.yV.STREAM && null != e.target_user;
+}
+function td(e) {
+    return e.channel?.type === b.rbe.GROUP_DM;
+}
+function tm(e) {
+    return null == e.channel && null == e.guild && null != e.inviter;
+}
+function th(e) {
+    return e.state === b.elq.ACCEPTED;
+}
+function tg(e) {
+    let { guild_scheduled_event: t } = e;
+    return null != t;
+}
+function tf(e) {
+    let t;
+    return !tg(e) && (!!tm(e) || (null != e.inviter && !th(e) && ((t = tu(e)), !((t?.memberCount ?? 0) > 100))));
+}
+function tx(e) {
+    let { guild: t, user: n, application: l } = e;
+    return null != l
+        ? (0, a.jsx)(tl.A, { className: to.Z2, game: l, size: to.q6 })
+        : null != n
+          ? (0, a.jsx)(P.eu, { src: n.getAvatarURL(void 0, 100), size: tt._3.DEPRECATED_SIZE_100, className: to.my })
+          : null != t
+            ? (0, a.jsx)(P.$v, { guild: t, size: P.$v.Sizes.LARGER, className: to.$f, animate: !0 })
+            : null;
+}
 function tp(e) {
     let { invite: t, textClassName: n, className: l } = e,
         i = tu(t);
@@ -866,7 +870,7 @@ function tO(e) {
             ) &&
             null != o &&
             td(t),
-        c = ((e) => {
+        c = (function (e) {
             let { state: t } = e;
             switch (t) {
                 case b.elq.ACCEPTING:
@@ -1221,7 +1225,7 @@ function tJ(e) {
           });
 }
 var t0 = n(613057);
-let t1 = (e) => {
+function t1(e) {
     let { title: t, subtitle: n, buttonText: l, buttonOnClick: i } = e;
     return (0, a.jsx)(P.Ay, {
         children: (0, a.jsxs)(eR.B, {
@@ -1235,7 +1239,7 @@ let t1 = (e) => {
             ],
         }),
     });
-};
+}
 var t2 = n(463347),
     t7 = n(189213),
     t8 = n(192308),
@@ -1255,72 +1259,78 @@ async function nt(e, t) {
     }
 }
 function nn(e, t) {
-    let l = !1,
-        i = () => {
-            l || t?.();
-        },
-        s = (s) => {
+    let l = !1;
+    function i() {
+        l || t?.();
+    }
+    let s = (s) => {
+        function r() {
+            return nt(e, s);
+        }
+        async function o(t) {
+            return await (0, t5.G_)(e, s, t);
+        }
+        (l = !0),
+            setTimeout(() => {
+                l = !1;
+            }, 0);
+        let u = (n) => {
             (l = !0),
                 setTimeout(() => {
                     l = !1;
                 }, 0);
-            let r = () => nt(e, s),
-                o = async (t) => await (0, t5.G_)(e, s, t),
-                u = (n) => {
-                    (l = !0),
-                        setTimeout(() => {
-                            l = !1;
-                        }, 0);
-                    let i = n?.token;
-                    switch (e) {
-                        case t6.tY.MESSAGE:
-                            (0, ne.bM)(i, t);
-                            break;
-                        case t6.tY.USER:
-                            (0, ne.nQ)(i, t);
-                            break;
-                        case t6.tY.GUILD:
-                            (0, ne.V3)(i, t);
-                            break;
-                        case t6.tY.MEDIA_TAKEDOWN:
-                            (0, ne._Y)(i, t);
-                    }
-                };
-            (0, t8.openModalLazy)(
-                async () => {
-                    let { default: e } = await n.e("19840").then(n.bind(n, 79779));
-                    return (t) =>
-                        (0, a.jsx)(e, {
-                            ...t,
-                            onFormSubmit: o,
-                            onResend: r,
-                            onSuccess: u,
-                            headerText: K.intl.string(K.t.H3Q7U8),
-                            confirmButtonText: K.intl.string(K.t["13ofGu"]),
-                            impression: { impressionName: c.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
-                        });
-                },
-                { onCloseCallback: i, dismissable: !1 },
-            );
+            let i = n?.token;
+            switch (e) {
+                case t6.tY.MESSAGE:
+                    (0, ne.bM)(i, t);
+                    break;
+                case t6.tY.USER:
+                    (0, ne.nQ)(i, t);
+                    break;
+                case t6.tY.GUILD:
+                    (0, ne.V3)(i, t);
+                    break;
+                case t6.tY.MEDIA_TAKEDOWN:
+                    (0, ne._Y)(i, t);
+            }
         };
-    return () => {
-        (0, t8.closeAllModals)();
-        let t = (t) => nt(e, t);
         (0, t8.openModalLazy)(
             async () => {
-                let { default: l } = await n.e("29232").then(n.bind(n, 180275));
-                return (n) =>
-                    (0, a.jsx)(l, {
-                        ...n,
-                        onFormSubmit: t,
-                        onSuccess: s,
-                        headerText: K.intl.string(K.t.ZLRYGU),
-                        confirmButtonText: K.intl.string(K.t.PDTjLN),
-                        subtitle: e === t6.tY.MEDIA_TAKEDOWN ? K.intl.string(K.t.jt3z8f) : void 0,
+                let { default: e } = await n.e("19840").then(n.bind(n, 79779));
+                return (t) =>
+                    (0, a.jsx)(e, {
+                        ...t,
+                        onFormSubmit: o,
+                        onResend: r,
+                        onSuccess: u,
+                        headerText: K.intl.string(K.t.H3Q7U8),
+                        confirmButtonText: K.intl.string(K.t["13ofGu"]),
+                        impression: { impressionName: c.ImpressionNames.URF_CONFIRM_EMAIL_CODE },
                     });
             },
             { onCloseCallback: i, dismissable: !1 },
         );
+    };
+    return function () {
+        function t(t) {
+            return nt(e, t);
+        }
+        (0, t8.closeAllModals)(),
+            (0, t8.openModalLazy)(
+                async () => {
+                    let { default: l } = await n.e("29232").then(n.bind(n, 180275));
+                    return (n) =>
+                        (0, a.jsx)(l, {
+                            ...n,
+                            onFormSubmit: t,
+                            onSuccess: s,
+                            headerText: K.intl.string(K.t.ZLRYGU),
+                            confirmButtonText: K.intl.string(K.t.PDTjLN),
+                            subtitle: e === t6.tY.MEDIA_TAKEDOWN ? K.intl.string(K.t.jt3z8f) : void 0,
+                        });
+                },
+                { onCloseCallback: i, dismissable: !1 },
+            );
     };
 }
 var nl = n(939249),
@@ -1522,7 +1532,7 @@ let nx = (e) => {
                 : g();
         }, [d, g]),
             o.useEffect(() => {
-                (async () => {
+                !(async function () {
                     m || (await f.A.getLocationMetadata(), f.A.getExperiments());
                 })();
             }, [m]);
@@ -2272,7 +2282,9 @@ function lN(e) {
         k = o.useRef(null),
         w = (0, n7.A)(g);
     o.useEffect(() => {
-        let e = (e) => null != g[e];
+        function e(e) {
+            return null != g[e];
+        }
         null != w && w !== g && (e("password") ? k.current?.focus() : (e("email") || e("login")) && D.current?.focus());
     }, [g, D, k, w]),
         (t =
@@ -2870,7 +2882,7 @@ var lK = n(493527),
 let lY = window.ResizeObserver ?? lQ.t;
 function lX(e) {
     let { show: t, children: n, top: l = 0, bottom: i = 0 } = e,
-        { ref: s, height: r } = (() => {
+        { ref: s, height: r } = (function () {
             let e = o.useRef(null),
                 [t, n] = o.useState(0),
                 l = o.useMemo(
@@ -2894,7 +2906,16 @@ function lX(e) {
         c = (0, eZ.z)({
             from: { opacity: 0 },
             to: { opacity: +!!t },
-            config: { duration: 200, easing: t ? (e) => e ** 4 : (e) => e * (2 - e) },
+            config: {
+                duration: 200,
+                easing: t
+                    ? function (e) {
+                          return e ** 4;
+                      }
+                    : function (e) {
+                          return e * (2 - e);
+                      },
+            },
         });
     return (0, a.jsx)(eq.animated.div, {
         style: { overflow: "hidden", height: u.height, paddingBottom: u.paddingBottom, marginTop: u.marginTop },
@@ -3010,14 +3031,15 @@ function l3() {
           })
         : null;
 }
-let l4 = /\.$/,
-    l6 = (e) =>
-        Array.isArray(e)
-            ? e
-                  .map((e) => e.replace(l4, ""))
-                  .join(". ")
-                  .trim()
-            : e;
+let l4 = /\.$/;
+function l6(e) {
+    return Array.isArray(e)
+        ? e
+              .map((e) => e.replace(l4, ""))
+              .join(". ")
+              .trim()
+        : e;
+}
 function l5(e) {
     let [t, n] = o.useState(() => null != e && !e),
         [l, i] = o.useState(e);
@@ -3116,17 +3138,17 @@ function ia(e) {
             onRegister: c,
         } = e,
         [d, m] = o.useState(!1),
-        [g, f] = o.useState(!1),
-        x = async () => {
-            y.length > 0 && !lz.A.wasRegistrationSuggestionFetched(y) && (await lK.A.fetchSuggestionsRegistration(y));
-        },
-        p = (e) => {
-            T.default.track(b.HAw.REGISTER_INPUT_FOCUS, { field: e });
-        },
-        A = (e) => {
-            T.default.track(b.HAw.REGISTER_INPUT_BLUR, { field: e });
-        },
-        E = (0, h.bG)([lq.A], () => lq.A.getAuthenticationConsentRequired()),
+        [g, f] = o.useState(!1);
+    async function x() {
+        y.length > 0 && !lz.A.wasRegistrationSuggestionFetched(y) && (await lK.A.fetchSuggestionsRegistration(y));
+    }
+    function p(e) {
+        T.default.track(b.HAw.REGISTER_INPUT_FOCUS, { field: e });
+    }
+    function A(e) {
+        T.default.track(b.HAw.REGISTER_INPUT_BLUR, { field: e });
+    }
+    let E = (0, h.bG)([lq.A], () => lq.A.getAuthenticationConsentRequired()),
         _ = (0, h.bG)([lz.A], () => lz.A.registrationUsernameSuggestion()),
         N = o.useRef(null),
         j = o.useRef(null),
@@ -3371,7 +3393,7 @@ function im(e) {
 }
 var ih = n(573435),
     ig = n(831985);
-let ix = (e) => {
+function ix(e) {
     let { guild: t, onlineCount: n } = e;
     if (null == t) return null;
     let l = em.DY(t),
@@ -3418,7 +3440,7 @@ let ix = (e) => {
                 (0, a.jsx)(M.E, { color: "text-default", className: ig.CT, variant: "text-sm/normal", children: s }),
         ],
     });
-};
+}
 function ip(e) {
     let { authBoxClassName: t, name: n, onNameChange: l } = e;
     return (0, a.jsxs)(P.Ay, {
@@ -4557,7 +4579,7 @@ let i7 = nL(lL),
             }, []),
             (0, a.jsx)(tY, {
                 invite: l,
-                onAcceptInvite: (e) => {
+                onAcceptInvite: function (e) {
                     let n, i, s, r;
                     e?.preventDefault(),
                         T.default.track(
@@ -4712,7 +4734,7 @@ let i7 = nL(lL),
                     loading: !0,
                 });
     }),
-    sl = nL(() => {
+    sl = nL(function () {
         let [e, t] = o.useState(""),
             [l, i] = o.useState(""),
             [s, r] = o.useState(!1),
@@ -4720,37 +4742,37 @@ let i7 = nL(lL),
             [d, m] = o.useState(null),
             [g, f] = o.useState(null),
             x = (0, h.bG)([eE.A], () => eE.A.getCountryCode()),
-            p = x.code.split(" ")[0],
-            A = async () => {
-                try {
-                    await ep.A.resendCode(e);
-                } catch (e) {
-                    f(e.body.message);
-                }
-            },
-            E = async () => {
-                r(!0);
-                try {
-                    let { token: t } = await ep.A.verifyPhone(p + e, l);
-                    m(null), f(null), c(!0), ep.A.validatePhoneForSupport(t);
-                } catch (e) {
-                    e.body.message ? (m(null), f(e.body.message)) : (m(e.body.phone), f(e.body.code));
-                } finally {
-                    r(!1);
-                }
-            },
-            _ = (0, a.jsxs)(P.Ay, {
-                children: [
-                    (0, a.jsx)(P._V, { src: n(142041) }),
-                    (0, a.jsxs)(P.hE, {
-                        className: U()(Q.QX, eN.Uu, eN.wq, eN.Hu),
-                        children: [
-                            K.intl.string(K.t.WWzQta),
-                            (0, a.jsx)(ex.y, { size: "md", color: "currentColor", className: Q.oY }),
-                        ],
-                    }),
-                ],
-            });
+            p = x.code.split(" ")[0];
+        async function A() {
+            try {
+                await ep.A.resendCode(e);
+            } catch (e) {
+                f(e.body.message);
+            }
+        }
+        async function E() {
+            r(!0);
+            try {
+                let { token: t } = await ep.A.verifyPhone(p + e, l);
+                m(null), f(null), c(!0), ep.A.validatePhoneForSupport(t);
+            } catch (e) {
+                e.body.message ? (m(null), f(e.body.message)) : (m(e.body.phone), f(e.body.code));
+            } finally {
+                r(!1);
+            }
+        }
+        let _ = (0, a.jsxs)(P.Ay, {
+            children: [
+                (0, a.jsx)(P._V, { src: n(142041) }),
+                (0, a.jsxs)(P.hE, {
+                    className: U()(Q.QX, eN.Uu, eN.wq, eN.Hu),
+                    children: [
+                        K.intl.string(K.t.WWzQta),
+                        (0, a.jsx)(ex.y, { size: "md", color: "currentColor", className: Q.oY }),
+                    ],
+                }),
+            ],
+        });
         return u
             ? _
             : (0, a.jsxs)(P.Ay, {
@@ -4801,11 +4823,7 @@ let i7 = nL(lL),
         let { location: t } = e,
             [n, l] = o.useState(!1),
             { verifySuccess: i, verifyErrors: s, redirectGuildId: r } = (0, h.bG)([eM], () => eM.getState());
-        o.useEffect(() => {
-            let e = (0, eh.A)(t);
-            eb.A.verify(e), (0, k.d)("verify_hub_email");
-        }, [t]);
-        let u = () => {
+        function u() {
             let e, t;
             (e = (function (e) {
                 let t = eW().os?.family;
@@ -4829,8 +4847,12 @@ let i7 = nL(lL),
                     e || (0, D.bG)(ed.A.fallbackRoute);
                 }),
                 l(!0);
-        };
-        return n
+        }
+        return (o.useEffect(() => {
+            let e = (0, eh.A)(t);
+            eb.A.verify(e), (0, k.d)("verify_hub_email");
+        }, [t]),
+        n)
             ? (0, a.jsx)(eD, {
                   title: K.intl.string(K.t.csrAMJ),
                   subtitle: K.intl.string(K.t["m1+IBn"]),

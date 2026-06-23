@@ -7,8 +7,8 @@ var s = i(627968),
     c = i(192308),
     o = i(935462),
     d = i(289873),
-    m = i(507107),
-    u = i(73473),
+    u = i(507107),
+    m = i(73473),
     x = i(617986),
     f = i(731355),
     h = i(366010),
@@ -39,17 +39,17 @@ function q(t) {
         c = (0, y.Ay)(),
         o = (0, h.M)(c) ? P.NJ.DARK : P.NJ.LIGHT,
         d = (0, L.go)(),
-        u = (0, T.E0)(e.config),
-        x = async () => {
-            await l?.(),
-                (0, _.pu)(e, {
-                    content: m.uF.REWARD_MODAL,
-                    ctaContent: k.Cy.OPEN_GAME_LINK,
-                    impressionId: d,
-                    sourceQuestContent: i,
-                });
-        },
-        q = n.useMemo(() => {
+        m = (0, T.E0)(e.config);
+    async function x() {
+        await l?.(),
+            (0, _.pu)(e, {
+                content: u.uF.REWARD_MODAL,
+                ctaContent: k.Cy.OPEN_GAME_LINK,
+                impressionId: d,
+                sourceQuestContent: i,
+            });
+    }
+    let q = n.useMemo(() => {
             let t = e.config.ctaConfig?.subtitle;
             return null != t
                 ? t
@@ -72,11 +72,11 @@ function q(t) {
         G || a();
     }, [G, a]);
     let Y = (0, W.Lk)({
-        isShareable: u,
+        isShareable: m,
         questId: e.id,
         trackingCtx: n.useMemo(
             () => ({
-                content: m.uF.REWARD_MODAL,
+                content: u.uF.REWARD_MODAL,
                 ctaContent: k.Cy.REWARD_MODAL_COPY_LINK,
                 impressionId: d,
                 sourceQuestContent: i,
@@ -146,7 +146,7 @@ function q(t) {
                     fullWidth: !0,
                     fullWidthContainer: !0,
                     children: [
-                        u &&
+                        m &&
                             (0, s.jsx)(p.m, {
                                 text: R.intl.string(R.t.WmfZHZ),
                                 children: (0, s.jsx)(N.K, {
@@ -201,7 +201,7 @@ function z(t) {
             rewardContentHasError: g,
             location: j,
         } = t,
-        N = m.uF.REWARD_MODAL,
+        N = u.uF.REWARD_MODAL,
         [v, C] = n.useState(!0),
         A = e.config.features.some((t) => D.Tz.has(t)),
         p = n.useCallback(async () => {
@@ -213,7 +213,7 @@ function z(t) {
         }, [e.config.ctaConfig?.link, r, A]);
     if (g) return (0, s.jsx)(Y, { onClose: r, transitionState: a });
     let y = h || v;
-    return (0, s.jsx)(u.R, {
+    return (0, s.jsx)(m.R, {
         questOrQuests: e,
         questContent: N,
         sourceQuestContent: i,

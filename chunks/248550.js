@@ -226,16 +226,16 @@ function en(e) {
     }, [f]),
         l.useEffect(() => {
             let e = v.current;
-            if (null == e) return;
-            let t = () => {
+            if (null != e)
+                return (
+                    e.addEventListener("focusin", t),
+                    () => {
+                        e.removeEventListener("focusin", t);
+                    }
+                );
+            function t() {
                 _.current(!1);
-            };
-            return (
-                e.addEventListener("focusin", t),
-                () => {
-                    e.removeEventListener("focusin", t);
-                }
-            );
+            }
         }, []);
     let { trackUserProfileWishlistAction: S } = (0, A.NJ)(),
         O = l.useCallback(() => {

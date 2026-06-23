@@ -5,7 +5,7 @@ n(64700);
 var r = n(503698),
     s = n.n(r),
     a = n(460410);
-let o = (e) => {
+let o = function (e) {
     let { visible: t, glow: n, className: r } = e;
     return t
         ? (0, i.jsx)("div", {

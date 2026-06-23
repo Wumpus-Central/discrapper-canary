@@ -106,16 +106,16 @@ async function N(e, t, n) {
 }
 function v(e, t, n) {
     let r = a.A.getGuild(e);
-    null != r &&
-        o.A.can(p.xBc.MANAGE_GUILD, r) &&
-        (0, f.rI)(() => {
-            (0, s.zV)(p.HAw.GUILD_AUTOMOD_FEEDBACK, {
-                feedback_type: c.Gb.MENTION_RAID_REMOVE_RESTRICTION,
-                decision_id: t,
-            }),
-                i.Bo.post({ url: p.Rsh.GUILD_AUTOMOD_CLEAR_MENTION_RAID(e), rejectWithError: !0 }),
-                n();
-        });
+    null == r ||
+        (o.A.can(p.xBc.MANAGE_GUILD, r) &&
+            (0, f.rI)(function () {
+                (0, s.zV)(p.HAw.GUILD_AUTOMOD_FEEDBACK, {
+                    feedback_type: c.Gb.MENTION_RAID_REMOVE_RESTRICTION,
+                    decision_id: t,
+                }),
+                    i.Bo.post({ url: p.Rsh.GUILD_AUTOMOD_CLEAR_MENTION_RAID(e), rejectWithError: !0 }),
+                    n();
+            }));
 }
 function R(e) {
     r.h.dispatch({ type: "AUTO_MODERATION_MENTION_RAID_NOTICE_DISMISS", guildId: e });

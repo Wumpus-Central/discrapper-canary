@@ -1,8 +1,8 @@
 t.d(s, { A: () => m });
-var l = t(627968);
+var n = t(627968);
 t(64700);
-var n = t(503698),
-    a = t.n(n),
+var l = t(503698),
+    a = t.n(l),
     i = t(349288),
     r = t(606049),
     o = t(632194);
@@ -10,7 +10,7 @@ function c(e) {
     let {
         icon: s,
         iconNode: t,
-        timestamp: n,
+        timestamp: l,
         timestampFormat: i,
         className: c,
         children: m,
@@ -21,24 +21,24 @@ function c(e) {
         compact: N = !1,
         additionalContent: C,
     } = e;
-    return (0, l.jsxs)("div", {
+    return (0, n.jsxs)("div", {
         className: a()(c, { [o.kL]: !0, [o.oE]: N, [o.E]: !N }),
         children: [
-            null != t && (0, l.jsx)("div", { className: a()(o.zc, h), children: t }),
+            null != t && (0, n.jsx)("div", { className: a()(o.zc, h), children: t }),
             null != s &&
-                (0, l.jsx)("div", {
+                (0, n.jsx)("div", {
                     className: o.zc,
-                    children: (0, l.jsx)("div", {
+                    children: (0, n.jsx)("div", {
                         "data-accessibility": "desaturate",
                         className: a()(o.Kk, o.RK, d),
                         style: { backgroundImage: `url('${s}')` },
                     }),
                 }),
-            (0, l.jsxs)("div", {
+            (0, n.jsxs)("div", {
                 className: a()(u, o.Qs),
                 children: [
-                    (0, l.jsxs)("div", {
-                        children: [m, null != n && (0, l.jsx)(r.A, { timestamp: n, timestampFormat: i, className: x })],
+                    (0, n.jsxs)("div", {
+                        children: [m, null != l && (0, n.jsx)(r.A, { timestamp: l, timestampFormat: i, className: x })],
                     }),
                     C,
                 ],
@@ -46,11 +46,11 @@ function c(e) {
         ],
     });
 }
-c.Action = (e) => {
+c.Action = function (e) {
     let { onClick: s, children: t } = e;
-    return (0, l.jsxs)("span", {
+    return (0, n.jsxs)("span", {
         className: o.XI,
-        children: ["\u2014", (0, l.jsx)(i.Anchor, { onClick: s, className: o.si, children: t })],
+        children: ["\u2014", (0, n.jsx)(i.Anchor, { onClick: s, className: o.si, children: t })],
     });
 };
 let m = c;

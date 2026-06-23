@@ -139,8 +139,10 @@ let v = {
         return u().defaultRules.link.match(e, t, n);
     },
     parse(e, t, n) {
-        let [i, r, a, o] = e,
-            l = () => ({ type: h.TEXT, content: i });
+        let [i, r, a, o] = e;
+        function l() {
+            return { type: h.TEXT, content: i };
+        }
         if (C(a)) return l();
         let _ = E(a),
             f = E(r),

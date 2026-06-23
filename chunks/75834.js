@@ -1,4 +1,4 @@
-n.d(e, { default: () => f });
+n.d(e, { default: () => E });
 var i = n(627968),
     l = n(64700),
     a = n(189213),
@@ -13,7 +13,7 @@ var i = n(627968),
     p = n(269927),
     g = n(375708),
     x = n(979277);
-function E(t) {
+function f(t) {
     let { selectedTeamId: e, onSetSelectedTeamId: n, teamOptions: l } = t;
     return (0, i.jsx)("div", {
         className: x.d,
@@ -34,22 +34,22 @@ function E(t) {
             }),
     });
 }
-function f(t) {
+function E(t) {
     let { guildId: e, requireTeamSetup: n, onClose: r, transitionState: x } = t,
-        [f, j] = l.useState(),
+        [E, j] = l.useState(),
         [v, C] = l.useState(!1),
         { teams: b } = (0, m.A)(),
         y = b.filter((t) => t.payout_account_status === p.y.ACTIVE),
-        S = l.useMemo(() => y.map((t) => ({ label: t.name, value: t.id })), [y]),
-        k = () => {
-            C((t) => !t);
-        },
-        A = () => {
-            r(), (0, c.im)(e, f);
-        },
-        O = l.useCallback(() => {
-            (0, d.A)(h.X7G.DEVELOPER_PORTAL_TEAMS);
-        }, []);
+        S = l.useMemo(() => y.map((t) => ({ label: t.name, value: t.id })), [y]);
+    function k() {
+        C((t) => !t);
+    }
+    function A() {
+        r(), (0, c.im)(e, E);
+    }
+    let O = l.useCallback(() => {
+        (0, d.A)(h.X7G.DEVELOPER_PORTAL_TEAMS);
+    }, []);
     if (!n)
         return (0, i.jsx)(a.Modal, {
             title: g.intl.string(g.t.GfObDE),
@@ -81,7 +81,7 @@ function f(t) {
             transitionState: x,
             size: "md",
             children: [
-                !t && (0, i.jsx)(E, { selectedTeamId: f, onSetSelectedTeamId: j, teamOptions: S }),
+                !t && (0, i.jsx)(f, { selectedTeamId: E, onSetSelectedTeamId: j, teamOptions: S }),
                 (0, i.jsx)(s.Kj, {
                     onChange: k,
                     size: 20,

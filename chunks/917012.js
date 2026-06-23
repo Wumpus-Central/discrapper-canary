@@ -8,7 +8,7 @@ var i = n(284009),
     l = n(715943),
     u = n(308528),
     c = n(66834),
-    d = n(720149),
+    d = n(493336),
     _ = n(155718),
     h = n(121197);
 let f = (0, n(945810).mj)({
@@ -36,9 +36,11 @@ var p = n(838111),
     L = n(200700),
     w = n(381941),
     M = n(375708);
-let P = n(743361).A,
-    x = (e, t) => e.find((e) => e.name === t)?.value,
-    k = {
+let P = n(743361).A;
+function x(e, t) {
+    return e.find((e) => e.name === t)?.value;
+}
+let k = {
         [O.Ik.BUILT_IN]: {
             id: O.Ik.BUILT_IN,
             type: R.Hf.BUILT_IN,
@@ -648,7 +650,7 @@ let P = n(743361).A,
                 if (null == n) return;
                 let i = x(e, "user"),
                     s = x(e, "message") ?? "";
-                (async () => {
+                (async function () {
                     await u.A.openPrivateChannel({ recipientIds: i }).then((e) => {
                         let t = S.A.getChannel(e);
                         r()(null != t, "Newly created PrivateChannel is null"),
@@ -710,14 +712,14 @@ let P = n(743361).A,
     ],
     G = U.filter((e) =>
         ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.untranslatedName),
-    ),
-    F = (e, t, n) => {
-        let i = t ? U : G,
-            r = f.getConfig({ location: "getBuiltInCommands" }).enabled;
-        return i.filter(
-            (t) =>
-                e.includes(t.type) &&
-                (!n || t.inputType === R.y$.BUILT_IN_TEXT || t.inputType === R.y$.BUILT_IN_INTEGRATION) &&
-                (r || "roll-dice" !== t.untranslatedName),
-        );
-    };
+    );
+function F(e, t, n) {
+    let i = t ? U : G,
+        r = f.getConfig({ location: "getBuiltInCommands" }).enabled;
+    return i.filter(
+        (t) =>
+            e.includes(t.type) &&
+            (!n || t.inputType === R.y$.BUILT_IN_TEXT || t.inputType === R.y$.BUILT_IN_INTEGRATION) &&
+            (r || "roll-dice" !== t.untranslatedName),
+    );
+}

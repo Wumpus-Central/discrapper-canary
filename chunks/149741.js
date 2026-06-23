@@ -416,7 +416,7 @@ function e9(e) {
                     (0, i.jsx)(p.E, { variant: l, color: "currentColor", lineClamp: 1, className: ex.Qo, children: h }),
                 ],
             })),
-            (() => {
+            (function () {
                 if (null == N) return null;
                 let { text: e } = (0, z.A)(N, !1),
                     t = (0, $.f)(N);
@@ -957,32 +957,34 @@ class tI extends s.Ay.Store {
         return tg(e, t);
     }
 }
-let tE = (e) => (0, to.v$)(e, "FriendsWidgetCollapsibleStore"),
-    tA = new tI(
-        tu.h,
-        __OVERLAY__
-            ? {}
-            : {
-                  OVERLAY_FRIENDS_WIDGET_TOGGLE_SECTION_COLLAPSED: tE(function (e) {
-                      let t = e.tab;
-                      if (!td.has(t)) return !1;
-                      let n = (function (e) {
-                          if ("string" != typeof e) return null;
-                          let t = e.trim();
-                          return "" === t ? null : t;
-                      })(e.sectionKey);
-                      if (null == n) return !1;
-                      let l = th[t] ?? {},
-                          i = l[n],
-                          r = tg(t, n),
-                          s = { ...l, [n]: !(i ?? r) };
-                      return (th = { ...th, [t]: s }), !0;
-                  }),
-                  FRIENDS_LIST_POPOUT_MOUNTED: tE(tm),
-                  OVERLAY_INITIALIZE: tE(tm),
-                  LOGOUT: tE(tm),
-              },
-    );
+function tE(e) {
+    return (0, to.v$)(e, "FriendsWidgetCollapsibleStore");
+}
+let tA = new tI(
+    tu.h,
+    __OVERLAY__
+        ? {}
+        : {
+              OVERLAY_FRIENDS_WIDGET_TOGGLE_SECTION_COLLAPSED: tE(function (e) {
+                  let t = e.tab;
+                  if (!td.has(t)) return !1;
+                  let n = (function (e) {
+                      if ("string" != typeof e) return null;
+                      let t = e.trim();
+                      return "" === t ? null : t;
+                  })(e.sectionKey);
+                  if (null == n) return !1;
+                  let l = th[t] ?? {},
+                      i = l[n],
+                      r = tg(t, n),
+                      s = { ...l, [n]: !(i ?? r) };
+                  return (th = { ...th, [t]: s }), !0;
+              }),
+              FRIENDS_LIST_POPOUT_MOUNTED: tE(tm),
+              OVERLAY_INITIALIZE: tE(tm),
+              LOGOUT: tE(tm),
+          },
+);
 function tf(e) {
     let { tab: t, sectionKey: n } = e;
     return tu.h.dispatch({ type: "OVERLAY_FRIENDS_WIDGET_TOGGLE_SECTION_COLLAPSED", tab: t, sectionKey: n });
@@ -1401,10 +1403,10 @@ function tU(e) {
             F(), er(), ee.current?.scrollToTop();
         }, [F, er]),
         eu = r.useMemo(() => {
-            let e = (e) => {
+            function e(e) {
                 let t = R.A.getStatus(e);
                 return t !== ez.clD.ONLINE && t !== ez.clD.IDLE && t !== ez.clD.DND;
-            };
+            }
             if (q) return [{ kind: "EMPTY_STATE", key: "EMPTY_STATE", title: "", count: 0, length: 1, rows: [] }];
             let t = [];
             if (Q) {
@@ -1909,15 +1911,19 @@ function t4(e) {
             let e = a.default.getCurrentUser()?.id ?? null,
                 [t] = tS.A.getFavoriteTargetIdsForTab(o.x.FRIENDS),
                 [n] = tS.A.getFavoriteTargetIdsForTab(o.x.MESSAGES),
-                [l] = tS.A.getFavoriteTargetIdsForTab(o.x.VOICE),
-                i = (e) => eE.Ay.hasUnread(e) || eE.Ay.getMentionCount(e) > 0,
-                r = (t) => {
-                    let n = tW.A.getTypingUsers(t);
-                    for (let t in n) if (t !== e) return !0;
-                    return !1;
-                },
-                s = (e) => em.A.getDMFromUserId(e) ?? null,
-                u = t.some((e) => {
+                [l] = tS.A.getFavoriteTargetIdsForTab(o.x.VOICE);
+            function i(e) {
+                return eE.Ay.hasUnread(e) || eE.Ay.getMentionCount(e) > 0;
+            }
+            function r(t) {
+                let n = tW.A.getTypingUsers(t);
+                for (let t in n) if (t !== e) return !0;
+                return !1;
+            }
+            function s(e) {
+                return em.A.getDMFromUserId(e) ?? null;
+            }
+            let u = t.some((e) => {
                     let t = s(e);
                     return null != t && i(t);
                 }),
@@ -2939,9 +2945,13 @@ function n0() {
             return { unreadOrMentionChannels: e };
         }, [R]),
         b = r.useMemo(() => {
-            let e = (e) => !0 === v[e],
-                t = (e) => D.has(e),
-                n = [];
+            function e(e) {
+                return !0 === v[e];
+            }
+            function t(e) {
+                return D.has(e);
+            }
+            let n = [];
             if (0 === _) return [];
             if ("" !== d)
                 return (
@@ -3406,22 +3416,22 @@ function ll(e) {
         {
             Component: H,
             events: { onMouseEnter: Y, onMouseLeave: K },
-        } = (0, n2.O)(),
-        z = () => {
-            let e = f ? eX.intl.string(eX.t["6vrfgt"]) : eX.intl.string(eX.t.S0W8Z5),
-                t = f ? G.hex() : L.hex(),
-                n = f ? H : nN._;
-            return (0, i.jsx)("div", {
-                onDoubleClick: lt,
-                children: (0, i.jsx)(n6.S, {
-                    tooltipText: e,
-                    onClick: f ? b : D,
-                    onMouseEnter: Y,
-                    onMouseLeave: K,
-                    children: (0, i.jsx)(n, { size: "sm", color: t }),
-                }),
-            });
-        };
+        } = (0, n2.O)();
+    function z() {
+        let e = f ? eX.intl.string(eX.t["6vrfgt"]) : eX.intl.string(eX.t.S0W8Z5),
+            t = f ? G.hex() : L.hex(),
+            n = f ? H : nN._;
+        return (0, i.jsx)("div", {
+            onDoubleClick: lt,
+            children: (0, i.jsx)(n6.S, {
+                tooltipText: e,
+                onClick: f ? b : D,
+                onMouseEnter: Y,
+                onMouseLeave: K,
+                children: (0, i.jsx)(n, { size: "sm", color: t }),
+            }),
+        });
+    }
     return (0, i.jsxs)("div", {
         onDoubleClick: O,
         children: [
@@ -3582,10 +3592,10 @@ function lu() {
         z = r.useMemo(() => G.filter((e) => !V.has(e) && !K.has(e) && S.has(e)), [G, V, K, S]),
         X = r.useMemo(() => {
             let e = [],
-                t = new Set(),
-                n = (n) => {
-                    null == n || !S.has(n) || V.has(n) || t.has(n) || (t.add(n), e.push(n));
-                };
+                t = new Set();
+            function n(n) {
+                null == n || !S.has(n) || V.has(n) || t.has(n) || (t.add(n), e.push(n));
+            }
             for (let t of (null != L && em.A.getChannel(L)?.isVocal() && n(L), Y)) {
                 if (e.length >= 8) break;
                 n(t);
@@ -3620,9 +3630,13 @@ function lu() {
             return e;
         }, [g, S, L, V, H, Y, P, U]),
         B = r.useMemo(() => {
-            let e = (e) => !0 === h[e],
-                t = (e) => (e.voiceStates?.length ?? 0) > 0,
-                n = [];
+            function e(e) {
+                return !0 === h[e];
+            }
+            function t(e) {
+                return (e.voiceStates?.length ?? 0) > 0;
+            }
+            let n = [];
             if ("" !== a)
                 return (
                     n.push({
@@ -4136,7 +4150,7 @@ let l_ = r.memo(function (e) {
                         let t = e.tab;
                         (0, u.YX)(ez.uss.FRIENDS, {
                             type: u.Z5.FRIEND_LIST,
-                            value: ((e) => {
+                            value: (function (e) {
                                 switch (e) {
                                     case o.x.FRIENDS:
                                         return u.IP.FRIEND_TAB_SELECTED;

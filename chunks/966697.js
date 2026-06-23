@@ -33,14 +33,14 @@ function _(e) {
                     return (
                         i &&
                             new Promise((t) => {
-                                let n = (0, l.A)(),
-                                    i = (e) => {
-                                        let {
-                                            data: { id: r, png: s },
-                                        } = e;
-                                        n === r && (t(s), u.removeEventListener("message", i));
-                                    };
-                                u.addEventListener("message", i), u.postMessage({ id: n, placeholderData: e });
+                                let n = (0, l.A)();
+                                u.addEventListener("message", function e(i) {
+                                    let {
+                                        data: { id: r, png: s },
+                                    } = i;
+                                    n === r && (t(s), u.removeEventListener("message", e));
+                                }),
+                                    u.postMessage({ id: n, placeholderData: e });
                             }).then((e) => {
                                 t || a(e);
                             }),

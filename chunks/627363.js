@@ -63,13 +63,14 @@ let d = {
                 n = e;
             if (
                 (t ||
-                    (n = e.filter(
-                        (e) =>
+                    (n = e.filter(function (e) {
+                        return (
                             !(null != l.A.getApplication(e) && l.A.isHydrated(e)) &&
                             !l.A.isFetchingApplication(e) &&
                             !l.A.didFetchingApplicationFail(e) &&
-                            e.length > 0,
-                    )),
+                            e.length > 0
+                        );
+                    })),
                 n.length > 0)
             ) {
                 let e;

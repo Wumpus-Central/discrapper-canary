@@ -1,8 +1,8 @@
 s.r(i), s.d(i, { default: () => N });
 var d = s(627968),
     l = s(64700),
-    r = s(477782),
-    t = s(305866),
+    t = s(477782),
+    r = s(305866),
     a = s(140735),
     n = s(707554),
     o = s(364522),
@@ -51,16 +51,16 @@ function N(e) {
         X = (0, j.pb)({ layout: "POPOUT", userId: i.id, guildId: s, channelId: N, messageId: S, roleId: w }),
         Y = l.useRef(null),
         z = (0, P.M)(Y);
+    function J() {
+        q?.(),
+            G.dispatch(g.jej.POPOUT_CLOSE),
+            (0, m.openUserProfileModal)({ sourceAnalyticsLocations: K, hideRestrictedProfile: !0, ...X });
+    }
     l.useEffect(() => {
         V?.(Y?.current);
     }, [Y, V]);
-    let J = () => {
-            q?.(),
-                G.dispatch(g.jej.POPOUT_CLOSE),
-                (0, m.openUserProfileModal)({ sourceAnalyticsLocations: K, hideRestrictedProfile: !0, ...X });
-        },
-        Q = !H && (0, f.A)(i.id),
-        Z = W ? "div" : t.l,
+    let Q = !H && (0, f.A)(i.id),
+        Z = W ? "div" : r.l,
         $ = (0, h.GV)(),
         ee = x.Ay.useName(s, N, i);
     return (0, d.jsx)(u.f5, {
@@ -88,7 +88,7 @@ function N(e) {
                                 children: (0, d.jsx)(L.A, {
                                     user: i,
                                     viewProfileItem: Q
-                                        ? (0, d.jsx)(r.Dr, {
+                                        ? (0, d.jsx)(t.Dr, {
                                               id: "view-profile",
                                               label: R.intl.string(R.t["+Xp3hq"]),
                                               action: () => {
