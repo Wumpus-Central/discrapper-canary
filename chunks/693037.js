@@ -27,7 +27,7 @@ function h() {
         f = t && (null != n ? n.state === o.gR.CANCELLATION_PENDING : h === o.db.NOT_FETCHED);
     return (
         i.useEffect(() => {
-            e === c.s.NITRO && f && (0, s.x6)(o.n9.XGPP);
+            e === c.s.HAS_ACCESS && f && (0, s.x6)(o.n9.XGPP);
         }, [e, f]),
         (function (e) {
             let { activationStatus: t, activationRequestState: n } = e,

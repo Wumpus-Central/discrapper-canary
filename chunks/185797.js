@@ -19,7 +19,7 @@ function p() {
         { status: n, requestInProgress: i, redirect: f } = (0, c.r)(),
         p = (0, u.A)(f),
         E = (0, a.M)("xbox");
-    if (t === d.s.FREE_FRACTIONAL_NITRO) return { kind: "subscribe", text: h.intl.string(h.t.sEAnVH) };
+    if (t === d.s.NO_ACCESS) return { kind: "subscribe", text: h.intl.string(h.t.sEAnVH) };
     let m = (function (e) {
         switch (e) {
             case l.p.NOT_CLAIMED:

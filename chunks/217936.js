@@ -178,14 +178,16 @@ function X(e) {
             }),
     });
 }
-var Q = n(486858);
+var Q = n(744064);
 function J(e) {
     let { className: t, containerClassName: n } = e,
         i = (0, Y.F)(),
-        r =
+        r = { isThirdPartyPerk: !0 },
+        a =
             i.kind === Y.L.SUBSCRIBE
-                ? { subscriptionRequired: !0 }
+                ? { ...r, subscriptionRequired: !0 }
                 : {
+                      ...r,
                       ctaText: i.text,
                       ctaIcon: i.icon,
                       ctaIconPosition: i.iconPosition,
@@ -197,7 +199,7 @@ function J(e) {
         id: B.XBOX_PREMIUM_PERK_CARD_ID,
         title: z.intl.string($.default.UVL9tD),
         description: z.intl.string($.default["I+IXr0"]),
-        ...r,
+        ...a,
         className: t,
         containerClassName: n,
         backgroundAssetUrl:

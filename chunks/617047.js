@@ -14061,9 +14061,9 @@ function SM() {
             (t = (0, SR.GM)("connectedAccountsBannerFooter")),
             (n = (0, Sj.O)()),
             (l = null != (s = (0, g.bG)([SO.A], () => SO.A.getAccount(null, U.fg2.XBOX))) && !s.revoked),
-            e === SD.s.NONE || e === SD.s.FREE_FRACTIONAL_NITRO || n
+            e === SD.s.NONE || n
                 ? { variant: SD.s.NONE, showFooter: !1 }
-                : { variant: e, showFooter: t && e === SD.s.NON_NITRO && !l }),
+                : { variant: e, showFooter: t && e === SD.s.NO_ACCESS && !l }),
         { analyticsLocations: o } = (0, nZ.Ay)(e1.A.XBOX_CONNECTED_ACCOUNTS_BANNER),
         u = (0, Sv.yW)(o),
         d = (0, Sy.A)("(max-width: 485px)");
@@ -14072,7 +14072,7 @@ function SM() {
         m = "",
         A = null;
     switch (r) {
-        case SD.s.NITRO:
+        case SD.s.HAS_ACCESS:
             (m = j.intl.string(SL.default["+QAvQz"])),
                 (A = (0, E.jsx)(eG.$, {
                     variant: "overlay-primary",
@@ -14089,8 +14089,7 @@ function SM() {
                     },
                 }));
             break;
-        case SD.s.NON_NITRO:
-        case SD.s.FREE_FRACTIONAL_NITRO:
+        case SD.s.NO_ACCESS:
             (m = j.intl.string(SL.default.NwkRTZ)),
                 (A = (0, E.jsx)(sY.A, {
                     defaultTextOverride: j.intl.string(SL.default["0vY+ie"]),
