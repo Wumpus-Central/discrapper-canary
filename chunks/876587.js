@@ -25,8 +25,7 @@ let E = (e) => {
               body: n,
               graphic: { type: "image", src: p.A },
               size: "video",
-              alignmentStrategy: "edge",
-              align: "right",
+              alignmentStrategy: "trigger-center",
               position: "bottom",
               caretConfig: { align: "end" },
               actions: [
