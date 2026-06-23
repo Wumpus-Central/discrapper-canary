@@ -72,7 +72,7 @@ function w() {
 function M() {
     if (null != O) return void U(O);
     if ((P(), !d.A.hasConsented(A.YAq.PERSONALIZATION))) return;
-    let { enabled: e } = h.u.getConfig({ location: "PremiumGiftingIntentStore updateFriendAnniversaries" });
+    let { enabled: e } = h.u.getConfig({ location: "updateFriendAnniversaries" });
     if (e && u.oz.getSetting()) {
         for (let e of _.A.getFriendIDs()) {
             let t = _.A.getSince(e),
@@ -107,7 +107,7 @@ function k(e) {
 }
 function U(e) {
     P();
-    let { enabled: t } = h.u.getConfig({ location: "PremiumGiftingIntentStore generateFriendAnniversaries" });
+    let { enabled: t } = h.u.getConfig({ location: "generateFriendAnniversaries" });
     if (!t || !u.oz.getSetting()) return;
     O = e;
     let n = _.A.getFriendIDs().filter((e) => !_.A.isIgnored(e)),

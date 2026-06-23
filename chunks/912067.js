@@ -5132,7 +5132,7 @@ let s5 = { key: null, renderStep: (e) => (0, r.jsx)(sz, { ...e }), options: { mo
         [h.C.GUILD_ROLE_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
     },
     at = (0, s.lazy)(() =>
-        Promise.all([n.e("11005"), n.e("93438"), n.e("54791"), n.e("25246"), n.e("33319"), n.e("8430")])
+        Promise.all([n.e("11005"), n.e("54791"), n.e("25246"), n.e("33319"), n.e("8430")])
             .then(n.bind(n, 427325))
             .then((e) => {
                 let { UnifiedCheckoutInstance: t } = e;
@@ -5323,7 +5323,6 @@ class ai {
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.all([
                         n.e("11005"),
-                        n.e("93438"),
                         n.e("54791"),
                         n.e("25246"),
                         n.e("33319"),

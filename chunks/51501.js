@@ -1,20 +1,24 @@
-I.d(A, { $u: () => T, WO: () => t });
-var R = I(788868),
-    _ = I(652215);
-let E = new Set([
-    _.ThZ.FRIEND_ANNIVERSARIES_CHAT,
-    _.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
-    _.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
+"use strict";
+n.d(t, { $u: () => a, Mi: () => l, NE: () => o });
+var i = n(788868),
+    r = n(652215);
+let s = new Map([
+    [r.ThZ.FRIEND_ANNIVERSARIES_CHAT, i.np.FRIEND_ANNIVERSARY],
+    [r.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON, i.np.FRIEND_ANNIVERSARY],
+    [r.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK, i.np.FRIEND_ANNIVERSARY],
 ]);
-function T(N) {
-    return N === R.np.FRIEND_ANNIVERSARY
+function a(e) {
+    return e === i.np.FRIEND_ANNIVERSARY
         ? {
-              chat: _.ThZ.FRIEND_ANNIVERSARIES_CHAT,
-              actionButton: _.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
-              actionButtonCoachmark: _.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
+              chat: r.ThZ.FRIEND_ANNIVERSARIES_CHAT,
+              actionButton: r.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
+              actionButtonCoachmark: r.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON_COACHMARK,
           }
         : {};
 }
-function t(N) {
-    return E.has(N);
+function o(e) {
+    return s.get(e) ?? null;
+}
+function l(e) {
+    return i.dr[e] ?? null;
 }
