@@ -988,7 +988,7 @@ var ni = n(913563),
     no = n(259065),
     nd = n(864386),
     nu = n(283607);
-let nc = "heading-lg/bold";
+let nc = "heading-xl/semibold";
 function ng(e) {
     let { displayName: l, stylesPreview: n, shouldAnimate: i = !1 } = e;
     return (0, t.jsx)("div", {
@@ -1002,7 +1002,6 @@ function ng(e) {
                           userName: l,
                           displayNameStyles: n,
                           effectDisplayType: i ? na.G.ANIMATED : na.G.STATIC,
-                          textClassName: nu.W,
                           shouldWrap: !1,
                           inProfile: !0,
                           loop: !0,

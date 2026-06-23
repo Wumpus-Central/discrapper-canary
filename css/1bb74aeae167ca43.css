@@ -12,7 +12,7 @@
 .displayNamePreview__2818b {
     display: flex;
     justify-content: center;
-    overflow: hidden;
+    min-width: 0;
     padding: 0 var(--space-8);
     width: 100%
 }
