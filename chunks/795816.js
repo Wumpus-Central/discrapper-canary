@@ -25,7 +25,7 @@ var i = n(562708),
     u = n(308528),
     c = n(367513),
     d = n(376728),
-    _ = n(720149),
+    _ = n(493336),
     h = n(181658),
     f = n(155718),
     p = n(264322),
@@ -432,10 +432,10 @@ async function e_(e, t, n) {
         return o.h.dispatch({ type: "UPLOAD_ACTIVITY_IMAGE_ATTACHMENT_FAIL" }), new h.A(e);
     }
 }
-let eh = (e, t, n) => {
+function eh(e, t, n) {
     let { guildId: i } = n;
     (i === e || (null == i && null == e)) && t();
-};
+}
 async function ef(e) {
     let { guildId: t, force: n = !1 } = e,
         r = j.Ay.getShelfActivities(t),

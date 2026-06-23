@@ -10,10 +10,10 @@ var r = n(189213),
     u = n(272355),
     c = n(652215),
     d = n(375708);
-let _ = "ActivityInviteManager",
-    h = () => {
-        l.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
-    };
+let _ = "ActivityInviteManager";
+function h() {
+    l.h.dispatch({ type: "ACTIVITY_INVITE_MODAL_CLOSE" });
+}
 class f extends u.A {
     _initialize() {
         l.h.subscribe("ACTIVITY_INVITE_MODAL_OPEN", this.handleModalOpen),

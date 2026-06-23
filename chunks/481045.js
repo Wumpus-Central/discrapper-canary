@@ -16,9 +16,9 @@ var i = n(627968),
     E = n(395277),
     m = n(375708),
     g = n(141710);
-let A = () => {
+function A() {
     (0, d.openUserSettings)(c.X.ACTIVITY_PRIVACY_PANEL);
-};
+}
 function I(e) {
     let { children: t, onClick: n } = e;
     return (0, i.jsxs)(s.D, {

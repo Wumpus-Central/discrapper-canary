@@ -120,10 +120,10 @@ function N(e) {
             [O],
         ),
         r.useEffect(() => {
-            let e = (e) => {
+            function e(e) {
                 let { resizing: t } = e;
                 M(t);
-            };
+            }
             return (
                 d._.subscribe(A.jej.MANUAL_IFRAME_RESIZING, e),
                 () => {

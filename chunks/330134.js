@@ -126,21 +126,21 @@ let V = (0, a.zD)(u.X.ACTIVITY_PRIVACY_NOTIFY_FRIENDS_ONLINE_SETTING, {
 var w = i(945810),
     B = i(106531);
 let F = (0, w.mj)({
-        name: "2026-02-activity-privacy-matching",
-        kind: "user",
-        defaultConfig: { copyChanges: !1, upsell: !1 },
-        variations: {
-            0: { copyChanges: !1, upsell: !1 },
-            1: { copyChanges: !0, upsell: !1 },
-            2: { copyChanges: !0, upsell: !0 },
-        },
-    }),
-    z = (e) => {
-        let t = (0, B.lX)(e),
-            i = F.useConfig({ location: e });
-        return t || i.copyChanges;
+    name: "2026-02-activity-privacy-matching",
+    kind: "user",
+    defaultConfig: { copyChanges: !1, upsell: !1 },
+    variations: {
+        0: { copyChanges: !1, upsell: !1 },
+        1: { copyChanges: !0, upsell: !1 },
+        2: { copyChanges: !0, upsell: !0 },
     },
-    X = (0, a.AK)(u.X.ACTIVITY_PRIVACY_TO_PROFILE_PRIVACY_NAVIGATOR, {
+});
+function z(e) {
+    let t = (0, B.lX)(e),
+        i = F.useConfig({ location: e });
+    return t || i.copyChanges;
+}
+let X = (0, a.AK)(u.X.ACTIVITY_PRIVACY_TO_PROFILE_PRIVACY_NAVIGATOR, {
         useSubtitle: () => j.intl.string(j.t.J0SFL2),
         destinationKey: u.X.DATA_AND_PRIVACY_PANEL,
     }),
@@ -197,8 +197,8 @@ let Z = (0, a.Qx)(u.X.ACTIVITY_PRIVACY_PER_GUILD_DEFAULT_SETTING, {
     },
     useValue: D._Z.useSetting,
     setValue: function (e) {
-        let t,
-            n = D._Z.getSetting();
+        var t;
+        let n = D._Z.getSetting();
         if (
             (D._Z.updateSetting(e),
             (t = "GuildActivitySharingDefaultSetting"),
@@ -312,18 +312,18 @@ let eS = function (e) {
                 r = s.map((e) => l[e]).filter(Boolean),
                 a = D.Pw.useSetting(),
                 [o, u] = (0, S.useState)(a);
+            async function d(e) {
+                u(e);
+                try {
+                    await D.Pw.updateSetting(e);
+                } catch (e) {
+                    u(a);
+                }
+            }
             (0, S.useEffect)(() => {
                 u(a);
             }, [a]);
-            let d = async (e) => {
-                    u(e);
-                    try {
-                        await D.Pw.updateSetting(e);
-                    } catch (e) {
-                        u(a);
-                    }
-                },
-                c = 0 !== o.length,
+            let c = 0 !== o.length,
                 [m, A] = (0, S.useState)(() => eA[i](r, a)),
                 h = m.map((e) => l[e.id]).filter(Boolean);
             return {
@@ -334,14 +334,16 @@ let eS = function (e) {
                     A(eA[e](r, a)), n(e);
                 },
                 setSearchQuery: t,
-                onToggleActivityRestrictedGuild: (e) => {
+                onToggleActivityRestrictedGuild: function (e) {
                     let { checked: t, guildId: i } = e,
                         n = new Set(o);
                     t ? n.delete(i) : n.add(i), d([...n]);
                 },
-                isActivityRestricted: (e) => o.includes(e),
+                isActivityRestricted: function (e) {
+                    return o.includes(e);
+                },
                 hasActivityRestrictedGuilds: c,
-                onToggleAllActivityRestrictedGuilds: () => {
+                onToggleAllActivityRestrictedGuilds: function () {
                     c ? d([]) : d(s);
                 },
                 numTotalGuilds: s.length,
@@ -374,7 +376,7 @@ let eS = function (e) {
                     (0, E.jsx)($.I, {
                         query: n,
                         onChange: s,
-                        onClear: () => {
+                        onClear: function () {
                             G.default.track(U.HAw.ACTIVITY_SHARING_SETTINGS_INTERACTED, {
                                 interaction: "search_cleared",
                                 sort_order: l,
@@ -7803,21 +7805,21 @@ var cR = i(725807),
     cL = i(469778),
     cP = i(109802),
     cG = i(503787);
-let cM = (e) => {
-        let { children: t, className: i, splashArtURL: n } = e;
-        return (0, E.jsxs)(rn.A, {
-            className: e6()(cG.wx, i),
-            align: rn.A.Align.CENTER,
-            children: [
-                (0, E.jsx)("div", { className: cG.Bn, style: null != n ? { backgroundImage: `url(${n})` } : void 0 }),
-                t,
-            ],
-        });
-    },
-    cU = (e) => {
-        let { children: t, className: i } = e;
-        return (0, E.jsx)("div", { className: e6()(cG.rf, i), children: t });
-    };
+function cM(e) {
+    let { children: t, className: i, splashArtURL: n } = e;
+    return (0, E.jsxs)(rn.A, {
+        className: e6()(cG.wx, i),
+        align: rn.A.Align.CENTER,
+        children: [
+            (0, E.jsx)("div", { className: cG.Bn, style: null != n ? { backgroundImage: `url(${n})` } : void 0 }),
+            t,
+        ],
+    });
+}
+function cU(e) {
+    let { children: t, className: i } = e;
+    return (0, E.jsx)("div", { className: e6()(cG.rf, i), children: t });
+}
 class cV extends S.PureComponent {
     static Header = cM;
     static Body = cU;

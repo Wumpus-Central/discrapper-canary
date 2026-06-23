@@ -13,7 +13,7 @@ var r = n(451394),
     _ = n(864436),
     h = n(200041),
     f = n(652215);
-let p = function (e) {
+function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (0, c.Cy)(e)
         ? r.q
@@ -30,7 +30,7 @@ let p = function (e) {
                 : e.type === f.$pd.COMPETING
                   ? s._
                   : null;
-};
+}
 function E(e) {
     let {
             activity: t,

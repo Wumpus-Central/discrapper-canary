@@ -13,11 +13,11 @@ var i = n(627968),
     h = n(902439),
     f = n(5867),
     p = n(652215);
-let E = (e, t) => {
+function E(e, t) {
     a.h.wait(() => {
         (0, o.I_)(e, t);
     });
-};
+}
 function m(e) {
     let t,
         { embedId: n, className: a, style: o } = e,

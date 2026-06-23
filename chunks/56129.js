@@ -26,7 +26,7 @@ var r = n(503698),
     N = n(128286),
     v = n(80051),
     R = n(970636),
-    O = n(941327),
+    O = n(394459),
     b = n(646865),
     D = n(795816),
     L = n(104171),
@@ -64,10 +64,10 @@ function F(e) {
         V = (0, _.A)([n])[0],
         B = (0, p.Ay)(t),
         j = (0, A.A)(t),
-        { parentAnalyticsLocation: H } = (0, d.Ay)(),
-        Y = (e) => {
-            (0, f.X)(H, f.O.CAMERA, e), c.A.setVideoEnabled(e);
-        };
+        { parentAnalyticsLocation: H } = (0, d.Ay)();
+    function Y(e) {
+        (0, f.X)(H, f.O.CAMERA, e), c.A.setVideoEnabled(e);
+    }
     return (0, i.jsxs)("div", {
         className: U._v,
         onMouseMove: s,
@@ -98,7 +98,7 @@ function F(e) {
                                 cameraUnavailable: !F,
                                 hasPermission: j,
                                 onChange: Y,
-                                onCameraUnavailable: () => {
+                                onCameraUnavailable: function () {
                                     F ? Y(!0) : (0, I.A)();
                                 },
                             }),

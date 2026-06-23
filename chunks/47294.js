@@ -24,14 +24,14 @@ function _(e) {
             actions: [
                 {
                     text: d.intl.string(d.t.B8pz37),
-                    onClick: () => {
+                    onClick: function () {
                         n?.(), o.onClose();
                     },
                     variant: "secondary",
                 },
                 {
                     text: d.intl.string(d.t.makWn9),
-                    onClick: () => {
+                    onClick: function () {
                         t(), o.onClose();
                     },
                     variant: "primary",

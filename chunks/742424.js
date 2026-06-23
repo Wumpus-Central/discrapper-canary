@@ -416,7 +416,7 @@ var eq = n(47167),
     e9 = n(832163),
     te = n(565688),
     tt = n(533562),
-    tn = n(922139),
+    tn = n(308186),
     ti = n(805901),
     tr = n(565645);
 n(915089);
@@ -590,10 +590,10 @@ let tY = (0, eQ.Fe)({
                 n.e("69279"),
                 n.e("9233"),
                 n.e("69747"),
-                n.e("77467"),
                 n.e("88889"),
                 n.e("11133"),
                 n.e("49013"),
+                n.e("77467"),
                 n.e("42324"),
                 n.e("93461"),
                 n.e("46430"),
@@ -1491,7 +1491,7 @@ function nn(e) {
                 size: "md",
                 icon: T.h,
                 text: eu.intl.string(eu.t["jaYS/h"]),
-                onClick: () => {
+                onClick: function () {
                     s?.();
                 },
                 fullWidth: !0,

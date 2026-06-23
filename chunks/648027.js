@@ -114,7 +114,7 @@ function g(e) {
                     l
                 );
             }, [t])),
-        M = (() => {
+        M = (function () {
             let { isEnabled: e, lastUsedObject: t } = (0, n.cf)(
                     [a.A],
                     () => ({ isEnabled: a.A.getIsEnabled(), lastUsedObject: a.A.getLastUsedObject() }),

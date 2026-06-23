@@ -1,4 +1,4 @@
-n.d(t, { V: () => Q, A: () => $ }), n(321073);
+n.d(t, { V: () => $, A: () => Q }), n(321073);
 var i,
     l = n(627968),
     s = n(64700),
@@ -14,30 +14,30 @@ var i,
     p = n(802516),
     A = n(31300),
     x = n(834730),
-    f = n(687966),
-    E = n(825860),
-    C = n(141628),
-    I = n(308368),
+    E = n(687966),
+    f = n(825860),
+    I = n(141628),
+    C = n(308368),
     v = n(780907),
     _ = n(729937),
-    j = n(572211),
-    N = n(354287),
+    N = n(572211),
+    j = n(354287),
     T = n(693879),
     y = n(751765),
     S = n(207371),
     b = n(205184),
     L = n(689168),
-    R = n(403362),
-    k = n(456060),
-    M = n(723702),
-    P = n(850670),
-    w = n(206589),
-    D = n(125017),
-    O = n(625248),
-    U = n(55730),
-    G = n(287613),
-    V = n(659051),
-    B = n(702631),
+    k = n(403362),
+    R = n(456060),
+    P = n(723702),
+    M = n(850670),
+    D = n(206589),
+    O = n(125017),
+    U = n(625248),
+    G = n(55730),
+    w = n(287613),
+    B = n(659051),
+    V = n(702631),
     H = n(652215),
     F = n(375708),
     Y = n(946255),
@@ -59,31 +59,31 @@ H.yTV.DESKTOP,
     H.yTV.SAMSUNG,
     H.yTV.EMBEDDED,
     H.yTV.META_QUEST;
-let W = [],
-    K = (e) => {
-        let { width: t, height: n, color: i } = e;
-        return (0, l.jsxs)("svg", {
-            xmlns: "http://www.w3.org/2000/svg",
-            width: t,
-            height: n,
-            viewBox: "0 0 15 9",
-            fill: "none",
-            children: [
-                (0, l.jsx)("path", {
-                    fill: i,
-                    d: "M14.41 7.85a6.97 6.97 0 0 0-1.983-3.898 7.003 7.003 0 0 0-1.234-.98l.008-.013.421-.727.412-.71.295-.51a.64.64 0 0 0-1.105-.643l-.296.51-.411.71-.422.728-.046.08-.063-.025a6.969 6.969 0 0 0-2.562-.457 6.972 6.972 0 0 0-2.47.477l-.042-.075-.421-.727-.412-.71-.296-.51a.638.638 0 1 0-1.105.642l.295.51.412.71.421.728.003.006a7.027 7.027 0 0 0-2.52 2.718 6.972 6.972 0 0 0-.748 2.473h13.908a7.015 7.015 0 0 0-.04-.307Z",
-                }),
-                (0, l.jsx)("path", {
-                    fill: "#202124",
-                    d: "M11.113 6.232c.278-.185.319-.614.09-.958-.228-.344-.639-.472-.917-.286-.278.185-.319.614-.09.957.228.344.639.472.917.287Zm-6.306-.286c.228-.343.188-.772-.09-.957-.279-.186-.69-.057-.918.286-.228.344-.188.773.09.958.279.185.69.057.918-.287Z",
-                }),
-            ],
-        });
-    };
+let K = [];
+function W(e) {
+    let { width: t, height: n, color: i } = e;
+    return (0, l.jsxs)("svg", {
+        xmlns: "http://www.w3.org/2000/svg",
+        width: t,
+        height: n,
+        viewBox: "0 0 15 9",
+        fill: "none",
+        children: [
+            (0, l.jsx)("path", {
+                fill: i,
+                d: "M14.41 7.85a6.97 6.97 0 0 0-1.983-3.898 7.003 7.003 0 0 0-1.234-.98l.008-.013.421-.727.412-.71.295-.51a.64.64 0 0 0-1.105-.643l-.296.51-.411.71-.422.728-.046.08-.063-.025a6.969 6.969 0 0 0-2.562-.457 6.972 6.972 0 0 0-2.47.477l-.042-.075-.421-.727-.412-.71-.296-.51a.638.638 0 1 0-1.105.642l.295.51.412.71.421.728.003.006a7.027 7.027 0 0 0-2.52 2.718 6.972 6.972 0 0 0-.748 2.473h13.908a7.015 7.015 0 0 0-.04-.307Z",
+            }),
+            (0, l.jsx)("path", {
+                fill: "#202124",
+                d: "M11.113 6.232c.278-.185.319-.614.09-.958-.228-.344-.639-.472-.917-.286-.278.185-.319.614-.09.957.228.344.639.472.917.287Zm-6.306-.286c.228-.343.188-.772-.09-.957-.279-.186-.69-.057-.918.286-.228.344-.188.773.09.958.279.185.69.057.918-.287Z",
+            }),
+        ],
+    });
+}
 var J = n(878831),
     q = n(768349),
-    Z = n(193018);
-function X(e) {
+    X = n(193018);
+function Z(e) {
     let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: i } = e,
         r = (function (e) {
             let { platforms: t, currentPlatform: n, isGameLaunchable: i } = e;
@@ -94,7 +94,7 @@ function X(e) {
                             l = new Set(t),
                             s = [];
                         return null == t || 0 === t.length || (null != n && l.has(n) && i)
-                            ? W
+                            ? K
                             : (l.has(H.yTV.ANDROID) && l.has(H.yTV.IOS)
                                   ? s.push("mobile")
                                   : l.has(H.yTV.ANDROID)
@@ -117,7 +117,7 @@ function X(e) {
                             case z.MOBILE:
                                 return (0, l.jsx)(m.u, { size: "xxs", color: "currentColor" });
                             case z.ANDROID:
-                                return (0, l.jsx)(K, { width: c.E.xxs, height: c.E.xxs, color: "currentColor" });
+                                return (0, l.jsx)(W, { width: c.E.xxs, height: c.E.xxs, color: "currentColor" });
                             case z.IOS:
                                 return (0, l.jsx)(h.z, { size: "xxs", color: "currentColor" });
                             case z.PLAYSTATION:
@@ -132,7 +132,7 @@ function X(e) {
                                 return null;
                         }
                     })
-                    .filter(R.Vq),
+                    .filter(k.Vq),
             [r],
         );
     if (!(null != n || a.length > 0)) return null;
@@ -157,25 +157,25 @@ function X(e) {
               })(n)
             : F.intl.string(F.t["4dGUP0"]);
     return (0, l.jsxs)("div", {
-        className: Z.qr,
+        className: X.qr,
         children: [
             (0, l.jsx)("div", {
-                className: Z.E6,
-                children: a.map((e, t) => (0, l.jsx)("div", { className: Z.F2, children: e }, t)),
+                className: X.E6,
+                children: a.map((e, t) => (0, l.jsx)("div", { className: X.F2, children: e }, t)),
             }),
-            (0, l.jsx)(x.E, { variant: "text-sm/medium", color: "currentColor", className: Z.kB, children: o }),
+            (0, l.jsx)(x.E, { variant: "text-sm/medium", color: "currentColor", className: X.kB, children: o }),
         ],
     });
 }
-function Q(e) {
+function $(e) {
     let { activity: t, className: n } = e,
         i = t?.timestamps?.start ?? t?.created_at;
     return null == i
         ? null
         : (0, l.jsxs)("div", {
-              className: a()(Z.Ym, n),
+              className: a()(X.Ym, n),
               children: [
-                  (0, l.jsx)(f._, { size: "xxs", color: "currentColor" }),
+                  (0, l.jsx)(E._, { size: "xxs", color: "currentColor" }),
                   (0, l.jsx)(T.z, {
                       entry: { start: i, end: t?.timestamps?.end },
                       textColor: "currentColor",
@@ -184,7 +184,7 @@ function Q(e) {
               ],
           });
 }
-function $(e) {
+function Q(e) {
     let {
             message: t,
             application: n,
@@ -198,13 +198,13 @@ function $(e) {
             staticBannerSrc: g,
             onClickContent: p,
             iconSrc: A,
-            onView: f,
+            onView: E,
             presenceActivity: T,
-            currentUserPresenceActivity: R,
+            currentUserPresenceActivity: k,
             hideParty: z,
-            hideBanner: W = !1,
-            partyStatusElement: K,
-            analyticsLocations: $,
+            hideBanner: K = !1,
+            partyStatusElement: W,
+            analyticsLocations: Q,
             showAuthButton: ee,
             requireAccountLink: et,
             requireGameLaunch: en,
@@ -213,14 +213,14 @@ function $(e) {
             accountLinkButtonRef: es,
             renderAccountLinkUpsell: er,
         } = e,
-        ea = (0, P.v)(t),
+        ea = (0, M.v)(t),
         eo = (0, b.s)(n.id),
         ed = s.useMemo(
             () =>
                 eo.some((e) => (0, y.CZ)(e) === o.m.GLOBAL)
                     ? (0, l.jsxs)(l.Fragment, {
                           children: [
-                              (0, l.jsx)(E.Y, { size: "xxs", color: "currentColor" }),
+                              (0, l.jsx)(f.Y, { size: "xxs", color: "currentColor" }),
                               F.intl.string(F.t.TsWCdW),
                           ],
                       })
@@ -231,10 +231,10 @@ function $(e) {
             () =>
                 (0, l.jsxs)(x.E, {
                     variant: "text-xs/normal",
-                    className: Z.dS,
+                    className: X.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [ea ? (0, k.YC)(t, i, r, d, !1) : (0, l.jsx)(Q, { activity: T }), ea ? null : ed],
+                    children: [ea ? (0, R.YC)(t, i, r, d, !1) : (0, l.jsx)($, { activity: T }), ea ? null : ed],
                 }),
             [ea, t, i, r, d, T, ed],
         ),
@@ -245,8 +245,8 @@ function $(e) {
                 : (0, l.jsx)(x.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [T?.details]),
         em = s.useMemo(
-            () => (0, l.jsxs)("div", { className: Z.pq, children: [eu, ec, z || ea ? null : K] }),
-            [ec, z, ea, K, eu],
+            () => (0, l.jsxs)("div", { className: X.pq, children: [eu, ec, z || ea ? null : W] }),
+            [ec, z, ea, W, eu],
         ),
         eh = !!c,
         eg = (0, S.x)(n),
@@ -261,22 +261,22 @@ function $(e) {
                 isFrameApplication: a,
                 isGameLaunchable: o,
             } = e;
-            if (l.author.id === i || !(0, V.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
-            let d = (0, D._)(t);
-            if (!(0, G.A)(d) || (0, B.U)(d) || (0, w.w)(n, t) || (0, P.v)(l))
+            if (l.author.id === i || !(0, B.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
+            let d = (0, O._)(t);
+            if (!(0, w.A)(d) || (0, V.U)(d) || (0, D.w)(n, t) || (0, M.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (r && a) return { canJoin: !0, remoteJoinPlatform: null };
             if (l.activity?.type === H.xL.JOIN && null != t) {
-                let e = (0, O.l)(t);
+                let e = (0, U.l)(t);
                 if (null != e) return { canJoin: !0, remoteJoinPlatform: e };
-                if ((0, U.A)(t, H.jUm.SUPPORTS_JOIN_URL)) return { canJoin: !0, remoteJoinPlatform: null };
+                if ((0, G.A)(t, H.jUm.SUPPORTS_JOIN_URL)) return { canJoin: !0, remoteJoinPlatform: null };
             }
-            return (0, M.platformSupportsActivityJoin)() && o
+            return (0, P.platformSupportsActivityJoin)() && o
                 ? { canJoin: !0, remoteJoinPlatform: null }
                 : { canJoin: !1, remoteJoinPlatform: null };
         })({
             presenceActivity: T,
-            currentUserPresenceActivity: R,
+            currentUserPresenceActivity: k,
             currentUserId: d,
             message: t,
             application: n,
@@ -286,25 +286,25 @@ function $(e) {
         }),
         ex = !(
             null == T ||
-            !(0, V.A)(T, t, n.id) ||
-            !(0, U.A)(T, H.jUm.SYNC) ||
-            !M.isPlatformEmbedded ||
-            (0, w.w)(R, T)
+            !(0, B.A)(T, t, n.id) ||
+            !(0, G.A)(T, H.jUm.SYNC) ||
+            !P.isPlatformEmbedded ||
+            (0, D.w)(k, T)
         ),
-        ef = (function (e, t, n, i) {
+        eE = (function (e, t, n, i) {
             if (
                 t.author.id === i ||
-                !(0, V.A)(e, t, n.id) ||
+                !(0, B.A)(e, t, n.id) ||
                 t.activity?.type !== H.xL.JOIN_REQUEST ||
-                !(0, U.A)(e, H.jUm.JOIN)
+                !(0, G.A)(e, H.jUm.JOIN)
             )
                 return !1;
-            let l = (0, D._)(e);
-            return !(!(0, G.A)(l) || (0, B.U)(l));
+            let l = (0, O._)(e);
+            return !(!(0, w.A)(l) || (0, V.U)(l));
         })(T, t, n, d),
-        eE = (0, w.w)(R, T),
-        eC = null != T && (0, U.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
-        eI = (0, u.bG)(
+        ef = (0, D.w)(k, T),
+        eI = null != T && (0, G.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
+        eC = (0, u.bG)(
             [L.A],
             () => null != T && null != T.application_id && L.A.getState(T.application_id, H.xL.JOIN) === H.eAD.LOADING,
         ),
@@ -315,16 +315,16 @@ function $(e) {
             ep && et
                 ? ((e = {
                       label: F.intl.string(F.t.lw71Nf),
-                      trackingArea: N.kY.CONNECT_ACCOUNT,
+                      trackingArea: j.kY.CONNECT_ACCOUNT,
                       onClick: () => {
-                          el({ analyticsLocations: $ });
+                          el({ analyticsLocations: Q });
                       },
                   }),
                   (n = !1))
                 : ep && en
                   ? ((e = {
                         label: F.intl.string(F.t["nIG+xx"]),
-                        trackingArea: N.kY.PLAY,
+                        trackingArea: j.kY.PLAY,
                         onClick: () => {},
                         disabled: !0,
                     }),
@@ -332,8 +332,8 @@ function $(e) {
                   : ep
                     ? (e = {
                           label: F.intl.string(F.t.VJlc0S),
-                          trackingArea: N.kY.JOIN,
-                          submitting: eI,
+                          trackingArea: j.kY.JOIN,
+                          submitting: eC,
                           onClick: () => {
                               v.Ay.join({
                                   userId: t.author.id,
@@ -342,8 +342,8 @@ function $(e) {
                                   channelId: r.id,
                                   messageId: t.id,
                                   source: H.ThZ.MESSAGE_EMBED,
-                                  analyticsLocations: $,
-                                  embedded: (0, U.A)(T, H.jUm.EMBEDDED),
+                                  analyticsLocations: Q,
+                                  embedded: (0, G.A)(T, H.jUm.EMBEDDED),
                                   remotePartyId: null != eA ? T.party?.id : void 0,
                               }),
                                   (0, Y.A)({
@@ -355,36 +355,36 @@ function $(e) {
                                       applicationId: T.application_id,
                                       partyId: T.party?.id,
                                       messageId: t.id,
-                                      analyticsLocations: $,
+                                      analyticsLocations: Q,
                                       remoteJoinPlatform: eA,
                                   });
                           },
                       })
-                    : eC && ei
+                    : eI && ei
                       ? ((e = {
                             label: F.intl.string(F.t.lw71Nf),
-                            trackingArea: N.kY.CONNECT_ACCOUNT,
+                            trackingArea: j.kY.CONNECT_ACCOUNT,
                             onClick: () => {
-                                el({ analyticsLocations: $ });
+                                el({ analyticsLocations: Q });
                             },
                         }),
                         (n = !1))
                       : ex
                         ? ((e = {
                               label: F.intl.string(F.t.VJlc0S),
-                              trackingArea: N.kY.SYNC,
+                              trackingArea: j.kY.SYNC,
                               onClick: () => {
                                   null != T && _.OH(T, t.author.id);
                               },
                           }),
                           (n = !1))
-                        : ef
+                        : eE
                           ? (e = {
                                 label: F.intl.string(F.t["hC/Zey"]),
-                                trackingArea: N.kY.INVITE,
+                                trackingArea: j.kY.INVITE,
                                 onClick: () => {
                                     null != T &&
-                                        I.A.sendActivityInvite({
+                                        C.A.sendActivityInvite({
                                             type: H.xL.JOIN,
                                             channelId: r.id,
                                             activity: T,
@@ -394,10 +394,10 @@ function $(e) {
                                 disabled: t.author.id === d,
                                 disabledReason: t.author.id === d ? F.intl.string(F.t.IBl8ID) : void 0,
                             })
-                          : eE
+                          : ef
                             ? (e = {
                                   label: F.intl.string(F.t.KC26NR),
-                                  trackingArea: N.kY.PLAY,
+                                  trackingArea: j.kY.PLAY,
                                   onClick: () => {},
                                   disabled: !0,
                               })
@@ -410,33 +410,33 @@ function $(e) {
                         n &&
                         (l.push({
                             label: F.intl.string(F.t.lw71Nf),
-                            trackingArea: N.kY.CONNECT_ACCOUNT,
+                            trackingArea: j.kY.CONNECT_ACCOUNT,
                             onClick: () => {
-                                el({ analyticsLocations: $ });
+                                el({ analyticsLocations: Q });
                             },
-                            icon: C.A,
+                            icon: I.A,
                             iconButton: !0,
                             buttonRef: es,
                         }),
                         (i = !0))),
                 { actions: l, hasAccountLinkButton: i }
             );
-        }, [ep, et, en, ex, ef, eE, h, t.author.id, t.id, T, r.id, r.guild_id, $, eA, d, eI, ee, el, es, ei, eC]),
-        ej = ev.some((e) => e.trackingArea === N.kY.CLOUD_PLAY);
-    (0, J.A)(ej, $);
-    let eN = s.useMemo(
-        () => (eE ? null : (0, l.jsx)(X, { presenceActivity: T, remoteJoinPlatform: eA, isGameLaunchable: eh })),
-        [eE, T, eA, eh],
+        }, [ep, et, en, ex, eE, ef, h, t.author.id, t.id, T, r.id, r.guild_id, Q, eA, d, eC, ee, el, es, ei, eI]),
+        eN = ev.some((e) => e.trackingArea === j.kY.CLOUD_PLAY);
+    (0, J.A)(eN, Q);
+    let ej = s.useMemo(
+        () => (ef ? null : (0, l.jsx)(Z, { presenceActivity: T, remoteJoinPlatform: eA, isGameLaunchable: eh })),
+        [ef, T, eA, eh],
     );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(j.h, {
+            (0, l.jsx)(N.h, {
                 header: a,
                 title: i,
                 staticBannerSrc: g,
-                hideBanner: W,
+                hideBanner: K,
                 onClickBanner: p,
-                bannerAspectRatio: j.u.ACTIVITY,
+                bannerAspectRatio: N.u.ACTIVITY,
                 iconSrc: A ?? void 0,
                 info: em,
                 actions: ev,
@@ -445,14 +445,14 @@ function $(e) {
                 trackingConfig: {
                     id: n.id,
                     linkType: q.J.RICH_PRESENCE_INVITE,
-                    onView: f,
+                    onView: E,
                     referrerId: t.author.id,
                     guildId: r.guild_id,
                     channelId: t.channel_id,
                     messageId: t.id,
                     appEmbedState: q.f.ACTIVE,
                 },
-                footer: eN,
+                footer: ej,
             }),
             e_ ? er() : null,
         ],

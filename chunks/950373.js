@@ -298,7 +298,7 @@ function ei(e) {
     });
 }
 var er = n(49999);
-let es = (e) => {
+function es(e) {
     let {
             children: t,
             isForceShowSharingPopout: n,
@@ -332,7 +332,7 @@ let es = (e) => {
             return (0, r.jsx)(ei, {
                 showPopout: u,
                 popoutState: l,
-                handleClose: () => {
+                handleClose: function () {
                     o(er.i.USER_DISMISS), i(!1);
                 },
                 popoutTargetRef: a,
@@ -340,7 +340,7 @@ let es = (e) => {
             });
         },
     });
-};
+}
 var ea = n(688810),
     eo = n(139286),
     el = n(151073),
@@ -466,7 +466,7 @@ var eK = n(95701),
     eq = n(734057),
     eZ = n(184989),
     eX = n(71393),
-    eQ = n(941327),
+    eQ = n(394459),
     eJ = n(576705),
     e0 = n(290863),
     e1 = n(994500),
@@ -505,7 +505,7 @@ var e8 = n(994314),
     tA = n(350535),
     tI = n(274372),
     tT = n(572164),
-    tS = n(315240),
+    tS = n(430795),
     ty = n(646693);
 function tC(e) {
     (0, tp.L3)(e, async () => {

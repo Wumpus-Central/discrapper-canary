@@ -5,7 +5,7 @@ var i = n(64700),
     s = n(476370),
     a = n(795816),
     o = n(933958);
-let l = (e) => {
+function l(e) {
     let { surface: t, skipFetchingShelf: n = !0 } = e,
         l = (0, r.bG)([o.Ay], () => o.Ay.getState());
     return (
@@ -17,4 +17,4 @@ let l = (e) => {
         }, [l.lastCheckedForBadgeableActivities, n]),
         (0, i.useMemo)(() => (0, s.C)({ storeState: l, surface: t }), [l, t])
     );
-};
+}

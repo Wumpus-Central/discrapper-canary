@@ -1,28 +1,28 @@
-n.d(i, { default: () => d });
-var a = n(627968),
-    r = n(189213),
-    s = n(331322),
-    e = n(834730),
-    l = n(349288),
-    c = n(360469),
-    o = n(375708);
+i.d(n, { default: () => d });
+var a = i(627968),
+    r = i(189213),
+    s = i(331322),
+    e = i(834730),
+    l = i(349288),
+    c = i(360469),
+    o = i(375708);
 function d(t) {
-    let { application: i, onCancel: n, onClose: d, onConfirm: h, ...x } = t;
+    let { application: n, onCancel: i, onClose: d, onConfirm: h, ...u } = t;
     return (0, a.jsx)(r.Modal, {
-        transitionState: x.transitionState,
+        transitionState: u.transitionState,
         onClose: d,
         title: o.intl.string(o.t["06YebE"]),
         actions: [
             {
                 text: o.intl.string(o.t["ETE/oC"]),
-                onClick: () => {
-                    n(), d();
+                onClick: function () {
+                    i(), d();
                 },
                 variant: "secondary",
             },
             {
                 text: o.intl.string(o.t["3PatSz"]),
-                onClick: () => {
+                onClick: function () {
                     h(), d();
                 },
                 variant: "primary",
@@ -32,7 +32,7 @@ function d(t) {
             children: [
                 (0, a.jsxs)(e.E, {
                     variant: "text-sm/normal",
-                    children: [o.intl.format(o.t["s+WDGz"], { activityName: i.name }), " "],
+                    children: [o.intl.format(o.t["s+WDGz"], { activityName: n.name }), " "],
                 }),
                 (0, a.jsx)(e.E, {
                     variant: "text-sm/normal",

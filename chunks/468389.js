@@ -10,8 +10,8 @@ var l = t(17928),
     p = t(688810),
     c = t(429913),
     r = t(655116),
-    I = t(160768),
-    u = t(341335),
+    u = t(160768),
+    I = t(341335),
     N = t(286617),
     y = t(533207),
     E = t(881335),
@@ -19,10 +19,10 @@ var l = t(17928),
     b = t(734057),
     C = t(629016),
     S = t(498642),
-    h = t(71393),
-    T = t(480595),
-    m = t(576705),
-    f = t(290863),
+    f = t(71393),
+    h = t(480595),
+    T = t(576705),
+    m = t(290863),
     g = t(994500),
     v = t(309010),
     O = t(461213),
@@ -51,7 +51,7 @@ function w(i, e) {
         F = (0, l.yK)([O.A], () =>
             O.A.getActivities().filter((i) => null == i.application_id || !H?.has(i.application_id)),
         ),
-        Z = (0, l.yK)([f.A], () => (null != e ? f.A.getActivities(e.id, i?.getGuildId()) : []), [e, i]),
+        Z = (0, l.yK)([m.A], () => (null != e ? m.A.getActivities(e.id, i?.getGuildId()) : []), [e, i]),
         z = (0, l.yK)([G.Ay], () => {
             let t = i?.id != null ? G.Ay.getEmbeddedActivitiesForChannel(i.id) : G.Am;
             return null != e
@@ -61,7 +61,7 @@ function w(i, e) {
                   })
                 : t;
         }, [e, i]),
-        W = (0, l.bG)([m.A], () => null == i || i.isPrivate() || m.A.can(Q.xBc.SEND_MESSAGES, i), [i]),
+        W = (0, l.bG)([T.A], () => null == i || i.isPrivate() || T.A.can(Q.xBc.SEND_MESSAGES, i), [i]),
         ii = (0, l.yK)(
             [j.A],
             () => [
@@ -78,7 +78,7 @@ function w(i, e) {
         ]),
         it = i?.id,
         il = (0, l.yK)(
-            [b.A, h.A, S.A, g.A, v.A, L.A, m.A, T.A, O.A, G.Ay],
+            [b.A, f.A, S.A, g.A, v.A, L.A, T.A, h.A, O.A, G.Ay],
             () => [
                 ...Z.map((i) =>
                     (0, J.A)({
@@ -89,13 +89,13 @@ function w(i, e) {
                         currentUser: B,
                         isEmbedded: (0, R.A)(i),
                         ChannelStore: b.A,
-                        GuildStore: h.A,
+                        GuildStore: f.A,
                         GuildMemberCountStore: S.A,
                         RelationshipStore: g.A,
                         SelectedChannelStore: v.A,
                         VoiceStateStore: L.A,
-                        PermissionStore: m.A,
-                        LocalActivityStore: T.A,
+                        PermissionStore: T.A,
+                        LocalActivityStore: h.A,
                         SelfPresenceStore: O.A,
                         EmbeddedActivitiesStore: G.Ay,
                     }),
@@ -111,9 +111,9 @@ function w(i, e) {
                                 currentUser: B,
                                 isActivitiesEnabledForCurrentPlatform: (0, V.A)(),
                                 ChannelStore: b.A,
-                                GuildStore: h.A,
+                                GuildStore: f.A,
                                 VoiceStateStore: L.A,
-                                PermissionStore: m.A,
+                                PermissionStore: T.A,
                             }) === $.Gy.CAN_JOIN
                           ? J.o.CAN_JOIN
                           : J.o.CANNOT_JOIN;
@@ -130,53 +130,53 @@ function w(i, e) {
         io = (0, A.p)();
     if (!W && i?.type !== Q.rbe.GUILD_VOICE) return null;
     let is = (t, n) => {
-            null != i
-                ? o.A.sendActivityInvite({ type: t, channelId: i.id, activity: n, location: Q.ThZ.CONTEXT_MENU })
-                : null != e &&
-                  o.A.sendActivityInviteUser({ type: t, userId: e.id, activity: n, location: Q.ThZ.CONTEXT_MENU });
-        },
-        iA = async (i) => {
-            let t = (0, M.A)(i, Q.jUm.EMBEDDED),
-                n = v.A.getVoiceChannelId(),
-                l = b.A.getChannel(n);
-            await s.Ay.join({
-                userId: e.id,
-                sessionId: i.session_id,
-                applicationId: i.application_id,
-                channelId: n,
-                messageId: null,
-                intent: k.W9.PLAY,
-                embedded: t,
-                locationObject: io.location,
-                analyticsLocations: w,
-            }),
-                t ||
-                    (0, K.A)({
-                        type: Q.UqL.JOIN,
-                        userId: e.id,
-                        guildId: l?.guild_id,
-                        channelId: n,
-                        channelType: l?.type,
-                        applicationId: i.application_id,
-                        partyId: i.party?.id,
-                        locationObject: io.location,
-                        analyticsLocations: w,
-                    });
-        },
-        ip = async (e) => {
-            await (0, P.A)({
-                applicationId: e.applicationId,
-                activityChannelId: i?.id,
-                locationObject: io.location,
-                analyticsLocations: w,
-            });
-        },
-        ic = [];
+        null != i
+            ? o.A.sendActivityInvite({ type: t, channelId: i.id, activity: n, location: Q.ThZ.CONTEXT_MENU })
+            : null != e &&
+              o.A.sendActivityInviteUser({ type: t, userId: e.id, activity: n, location: Q.ThZ.CONTEXT_MENU });
+    };
+    async function iA(i) {
+        let t = (0, M.A)(i, Q.jUm.EMBEDDED),
+            n = v.A.getVoiceChannelId(),
+            l = b.A.getChannel(n);
+        await s.Ay.join({
+            userId: e.id,
+            sessionId: i.session_id,
+            applicationId: i.application_id,
+            channelId: n,
+            messageId: null,
+            intent: k.W9.PLAY,
+            embedded: t,
+            locationObject: io.location,
+            analyticsLocations: w,
+        }),
+            t ||
+                (0, K.A)({
+                    type: Q.UqL.JOIN,
+                    userId: e.id,
+                    guildId: l?.guild_id,
+                    channelId: n,
+                    channelType: l?.type,
+                    applicationId: i.application_id,
+                    partyId: i.party?.id,
+                    locationObject: io.location,
+                    analyticsLocations: w,
+                });
+    }
+    async function ip(e) {
+        await (0, P.A)({
+            applicationId: e.applicationId,
+            activityChannelId: i?.id,
+            locationObject: io.location,
+            analyticsLocations: w,
+        });
+    }
+    let ic = [];
     return (
         (null != e && null != B && e?.id === B.id) ||
             (H?.forEach((l) => {
                 let o = e?.id != null && l.userIds.has(e?.id),
-                    s = m.A.can(Q.xBc.CREATE_INSTANT_INVITE, i),
+                    s = T.A.can(Q.xBc.CREATE_INSTANT_INVITE, i),
                     A = ie.find((i) => i?.id === l.applicationId);
                 null != l.launchId &&
                     !o &&
@@ -192,7 +192,7 @@ function w(i, e) {
                                 action: () => {
                                     ((l, d) => {
                                         let o = b.A.getChannel(l),
-                                            s = null == o ? void 0 : h.A.getGuild(o.guild_id);
+                                            s = null == o ? void 0 : f.A.getGuild(o.guild_id);
                                         if (null != o && null != s) {
                                             if (null != e)
                                                 return U.Ue({
@@ -211,7 +211,7 @@ function w(i, e) {
                                                             t.e("80339"),
                                                             t.e("36761"),
                                                             t.e("63867"),
-                                                            t.e("65629"),
+                                                            t.e("35198"),
                                                             t.e("25568"),
                                                             t.e("31390"),
                                                             t.e("37687"),
@@ -351,9 +351,9 @@ function w(i, e) {
                             {
                                 id: `spotify-play-${t.session_id}`,
                                 action: () => (0, E.A)(a, X.Qp.USER_ACTIVITY_PLAY),
-                                label: (0, I.A)(a, X.Qp.USER_ACTIVITY_PLAY),
+                                label: (0, u.A)(a, X.Qp.USER_ACTIVITY_PLAY),
                                 subtext: o
-                                    ? (0, u.A)(
+                                    ? (0, I.A)(
                                           a,
                                           X.Qp.USER_ACTIVITY_PLAY,
                                           null != i ? x.Ay.getNickname(i.guild_id, i.id, e) : void 0,
@@ -370,7 +370,7 @@ function w(i, e) {
                                 action: () => (0, y.A)(a, X.Qp.USER_ACTIVITY_SYNC),
                                 label: q.intl.string(q.t.gXYoq2),
                                 subtext: s
-                                    ? (0, u.A)(
+                                    ? (0, I.A)(
                                           a,
                                           X.Qp.USER_ACTIVITY_SYNC,
                                           null != i ? x.Ay.getNickname(i.guild_id, i.id, e) : void 0,

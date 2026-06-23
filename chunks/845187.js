@@ -21,16 +21,16 @@ function p(e) {
         c.default.track(_.HAw.OPEN_MODAL, { type: f });
     }, []);
     let I = async () => {
-            let e = "temporary";
-            E && ((e = "permanent"), l.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
-                c.default.track(_.HAw.MODAL_DISMISSED, { type: f, dismiss_type: e }),
-                await p();
-        },
-        T = async () => {
-            c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
-                d.Ay.setEnableHardwareAcceleration(!0),
-                await I();
-        };
+        let e = "temporary";
+        E && ((e = "permanent"), l.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+            c.default.track(_.HAw.MODAL_DISMISSED, { type: f, dismiss_type: e }),
+            await p();
+    };
+    async function T() {
+        c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
+            d.Ay.setEnableHardwareAcceleration(!0),
+            await I();
+    }
     return (0, i.jsx)(s.Modal, {
         size: "md",
         transitionState: n,

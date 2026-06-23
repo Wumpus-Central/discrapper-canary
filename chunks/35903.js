@@ -65,7 +65,7 @@ function M(e) {
     return (0, c.bG)([z.A], () => z.A.getAccounts().some((e) => e.type === t.type))
         ? null
         : (0, n.jsx)(y.$, {
-              onClick: () => {
+              onClick: function () {
                   a?.(), (0, k.A)({ platformType: t.type, location: "Activity Action" });
               },
               variant: l,
@@ -115,7 +115,7 @@ function W(e) {
 var U = l(284525),
     R = l(790535),
     $ = l(977997);
-let H = (e) => {
+let H = function (e) {
     let { guildId: t, channelId: l, variant: i = "active", size: a = "sm", onAction: s, ...r } = e,
         o = (0, c.bG)([$.A], () => $.A.isInChannel(l), [l]);
     return (0, n.jsx)(y.$, {
@@ -123,7 +123,7 @@ let H = (e) => {
         size: a,
         text: S.intl.string(S.t.ZYO5OK),
         disabled: o,
-        onClick: () => {
+        onClick: function () {
             s?.(), R.CH(t, l);
         },
         fullWidth: !0,
@@ -140,7 +140,7 @@ function X(e) {
               text: S.intl.string(S.t.vwl1PK),
               variant: i,
               size: "sm",
-              onClick: () => {
+              onClick: function () {
                   a?.(), new Y.A("UserActivityActions").log("notify", l.id, t);
               },
               fullWidth: !0,

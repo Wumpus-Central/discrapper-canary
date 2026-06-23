@@ -13,7 +13,7 @@ function l(e) {
               variant: l,
               size: u,
               text: o.intl.string(o.t.I6JG46),
-              onClick: () => {
+              onClick: function () {
                   n?.();
                   let e = (0, s.A)(t);
                   return window.open(null != e ? e : void 0);

@@ -23,7 +23,7 @@ var n,
     S = l(47167),
     I = l(235986),
     C = l(573435),
-    P = l(137177),
+    P = l(769015),
     E = l(409626),
     b = l(692969),
     _ = l(548118),
@@ -532,7 +532,7 @@ class ei extends a.PureComponent {
         o()(null != e, "Spotify activity was null"), t?.(e, l.id);
     };
 }
-let ea = (e) => {
+function ea(e) {
     let t = (0, b.A)({
         location: "UserActivity",
         applicationId: e.application?.id ?? e.activity?.application_id,
@@ -541,6 +541,6 @@ let ea = (e) => {
         trackEntryPointImpression: !0,
     });
     return (0, i.jsx)(ei, { ...e, onOpenGameProfileModal: t });
-};
+}
 ea.Types = Z;
 let es = ea;

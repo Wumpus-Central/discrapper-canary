@@ -252,84 +252,81 @@ function V(e) {
         $ = O?.state != null && "xs" === m;
     if (B) return null;
     let z = function () {
-            let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-                t = !0 === e || N;
-            if (null != v)
-                return (0, i.jsx)(D, {
-                    stream: v,
-                    game: k,
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
+            t = !0 === e || N;
+        if (null != v)
+            return (0, i.jsx)(D, {
+                stream: v,
+                game: k,
+                textVariant: `text-${m}/medium`,
+                textClassName: p,
+                iconClassName: E,
+                hideText: $,
+                hideIcon: V,
+                hideTooltip: t,
+            });
+        let n = P?.[0];
+        return null != n
+            ? (0, i.jsx)(M.A, {
+                  activity: n,
+                  textVariant: `text-${m}/medium`,
+                  textClassName: p,
+                  iconClassName: E,
+                  hideText: $,
+                  hideIcon: V,
+                  hideTooltip: t,
+              })
+            : null != l
+              ? (0, i.jsx)(U, {
+                    channel: l,
                     textVariant: `text-${m}/medium`,
                     textClassName: p,
                     iconClassName: E,
                     hideText: $,
-                    hideIcon: V,
                     hideTooltip: t,
-                });
-            let n = P?.[0];
-            return null != n
-                ? (0, i.jsx)(M.A, {
-                      activity: n,
-                      textVariant: `text-${m}/medium`,
-                      textClassName: p,
-                      iconClassName: E,
-                      hideText: $,
-                      hideIcon: V,
-                      hideTooltip: t,
-                  })
-                : null != l
-                  ? (0, i.jsx)(U, {
-                        channel: l,
-                        textVariant: `text-${m}/medium`,
-                        textClassName: p,
-                        iconClassName: E,
-                        hideText: $,
-                        hideTooltip: t,
-                    })
-                  : null;
-        },
-        q = () =>
-            (0, i.jsx)(G, {
-                textVariant: `text-${m}/medium`,
-                className: p,
-                hasCustomStatusText: j,
-                totalActivityCount: W,
-            }),
-        Z = () => {
-            if (0 === W) return null;
-            if (K && !V) {
-                let e, t;
-                return N
-                    ? (0, i.jsxs)("div", { className: a()(g.ht, $ && g.e7), children: [z(), q()] })
-                    : (0, i.jsx)(c.m, {
-                          delay: 150,
-                          __unsupportedReactNodeAsText:
-                              ((e = []),
-                              (t = {
-                                  textVariant: "text-sm/medium",
-                                  hideTooltip: !0,
-                                  hideIcon: !1,
-                                  hideText: !1,
-                                  canTruncate: !1,
-                              }),
-                              null != v &&
-                                  e.push(
-                                      (0, i.jsx)(
-                                          D,
-                                          { stream: v, game: n?.find(d.A), ...t, showChannelName: !0 },
-                                          "stream",
-                                      ),
-                                  ),
-                              P.forEach((n, r) => {
-                                  e.push((0, i.jsx)(M.A, { activity: n, ...t }, `activity-${r}`));
-                              }),
-                              Y && e.push((0, i.jsx)(U, { channel: l, ...t, showChannelName: !0 }, "voice")),
-                              e),
-                          children: (0, i.jsxs)("div", { className: a()(g.ht, $ && g.e7), children: [z(!0), q()] }),
-                      });
-            }
-            return z();
-        },
-        X = a()(g.kL, { [g.Dk]: "xs" === m, [g.WV]: "sm" === m });
+                })
+              : null;
+    };
+    function q() {
+        return (0, i.jsx)(G, {
+            textVariant: `text-${m}/medium`,
+            className: p,
+            hasCustomStatusText: j,
+            totalActivityCount: W,
+        });
+    }
+    function Z() {
+        if (0 === W) return null;
+        if (K && !V) {
+            let e, t;
+            return N
+                ? (0, i.jsxs)("div", { className: a()(g.ht, $ && g.e7), children: [z(), q()] })
+                : (0, i.jsx)(c.m, {
+                      delay: 150,
+                      __unsupportedReactNodeAsText:
+                          ((e = []),
+                          (t = {
+                              textVariant: "text-sm/medium",
+                              hideTooltip: !0,
+                              hideIcon: !1,
+                              hideText: !1,
+                              canTruncate: !1,
+                          }),
+                          null != v &&
+                              e.push(
+                                  (0, i.jsx)(D, { stream: v, game: n?.find(d.A), ...t, showChannelName: !0 }, "stream"),
+                              ),
+                          P.forEach((n, r) => {
+                              e.push((0, i.jsx)(M.A, { activity: n, ...t }, `activity-${r}`));
+                          }),
+                          Y && e.push((0, i.jsx)(U, { channel: l, ...t, showChannelName: !0 }, "voice")),
+                          e),
+                      children: (0, i.jsxs)("div", { className: a()(g.ht, $ && g.e7), children: [z(!0), q()] }),
+                  });
+        }
+        return z();
+    }
+    let X = a()(g.kL, { [g.Dk]: "xs" === m, [g.WV]: "sm" === m });
     return null != L
         ? (0, i.jsxs)("div", {
               className: X,

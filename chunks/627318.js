@@ -14,14 +14,14 @@ var s,
     p = a(495544),
     N = a(475743),
     g = a(174459),
-    j = a(333748),
-    f = a(652215);
+    f = a(333748),
+    j = a(652215);
 function v(e) {
     let t = null;
     return (
-        e === j.i.PLAYSTATION_APPLICATION_ID
-            ? (t = f.fg2.PLAYSTATION)
-            : e === j.i.PLAYSTATION_STAGING_APPLICATION_ID && (t = f.fg2.PLAYSTATION_STAGING),
+        e === f.i.PLAYSTATION_APPLICATION_ID
+            ? (t = j.fg2.PLAYSTATION)
+            : e === f.i.PLAYSTATION_STAGING_APPLICATION_ID && (t = j.fg2.PLAYSTATION_STAGING),
         t
     );
 }
@@ -108,7 +108,7 @@ var L = a(534514),
     G = a(375708),
     z = a(313338),
     R = a(332633);
-let W = (e) => {
+function W(e) {
     let { onTryAgain: t } = e;
     return (0, l.jsxs)("div", {
         className: z.Qs,
@@ -132,14 +132,14 @@ let W = (e) => {
             }),
         ],
     });
-};
+}
 var U = a(289873),
     B = a(414121),
     H = a(981355),
     V = a(403404);
 let $ = a(196390),
     Y = a(906118),
-    F = `${window.GLOBAL_ENV.WEBAPP_ENDPOINT.split("//")[1]}${f.BVt.ACTIVATE}`,
+    F = `${window.GLOBAL_ENV.WEBAPP_ENDPOINT.split("//")[1]}${j.BVt.ACTIVATE}`,
     Q = `${location.protocol}//${F}`;
 function X(e) {
     let { text: t = "" } = e,
@@ -159,7 +159,7 @@ function X(e) {
             : (0, l.jsx)("div", { className: V.Yp, children: (0, l.jsx)(U.y, { type: U.y.Type.WANDERING_CUBES }) })
     );
 }
-let M = (e) => {
+function M(e) {
     let { code: t } = e,
         { width: a, height: s } = (0, H.A)();
     return null == t || 0 === t.length
@@ -263,16 +263,16 @@ let M = (e) => {
                   }),
               ],
           });
-};
+}
 var J = a(647053);
-let q = (e) => {
+function q(e) {
     let { onComplete: t, data: a } = e,
         s = (0, r.useId)(),
         n = null,
         i = null,
         c = a.scopes.some((e) => (0, J.RM)(e));
     return (
-        a.clientId === j.i.PLAYSTATION_APPLICATION_ID || a.clientId === j.i.PLAYSTATION_STAGING_APPLICATION_ID
+        a.clientId === f.i.PLAYSTATION_APPLICATION_ID || a.clientId === f.i.PLAYSTATION_STAGING_APPLICATION_ID
             ? (n =
                   "https://cdn.discordapp.com/assets/content/c155b6ac1aeaf22db13c1195d742154bbf6bc02b787c5cfeeadc7b580501eb2f.png")
             : c &&
@@ -304,7 +304,7 @@ let q = (e) => {
             ],
         })
     );
-};
+}
 var K = a(331322),
     Z = a(292666),
     ee = (((s = {})[(s.USER_CODE_LENGTH = 8)] = "USER_CODE_LENGTH"), s),
@@ -412,23 +412,23 @@ function er() {
         t,
         a = (0, i.zy)(),
         [s, u] = r.useState(() => {
-            if (a.pathname === f.BVt.ACTIVATE_HANDOFF) {
+            if (a.pathname === j.BVt.ACTIVATE_HANDOFF) {
                 let { user_code: e } = n.parse(window.location.search);
                 return { type: "handoff", code: e };
             }
             return { type: "user-code-input", usePrefilledCode: !0 };
         }),
-        j = (0, c.bG)([x.A], () => x.A.hasLoadedExperiments);
+        f = (0, c.bG)([x.A], () => x.A.hasLoadedExperiments);
     r.useEffect(() => {
-        p.default.isAuthenticated() && !j && d.A.getExperiments();
-    }, [j]),
+        p.default.isAuthenticated() && !f && d.A.getExperiments();
+    }, [f]),
         (0, o.A)(),
         (t = (0, N.A)(s)),
         r.useEffect(() => {
             if (s === t) return;
             let e = null;
             "user-code-input" !== s.type && "handoff" !== s.type && (e = v(s.userCodeData.clientId)),
-                g.default.track(f.HAw.DEVICE_LINK_STEP, {
+                g.default.track(j.HAw.DEVICE_LINK_STEP, {
                     previous_step: t?.type,
                     current_step: s.type,
                     platform_type: e,
@@ -467,7 +467,7 @@ function er() {
             (e = (0, l.jsx)(P, { data: s.userCodeData, onDenied: b, onError: A, onSuccess: C })), (E = !1);
             break;
         case "success":
-            e = (0, l.jsx)(q, { onComplete: () => (0, m.pX)(f.BVt.ME), data: s.userCodeData });
+            e = (0, l.jsx)(q, { onComplete: () => (0, m.pX)(j.BVt.ME), data: s.userCodeData });
             break;
         case "error":
             e = (0, l.jsx)(W, { onTryAgain: b });
@@ -486,5 +486,5 @@ function er() {
 }
 let en = (0, u.C)(er),
     ei = function () {
-        return (0, i.zy)().pathname !== f.BVt.ACTIVATE_HANDOFF ? (0, l.jsx)(en, {}) : (0, l.jsx)(er, {});
+        return (0, i.zy)().pathname !== j.BVt.ACTIVATE_HANDOFF ? (0, l.jsx)(en, {}) : (0, l.jsx)(er, {});
     };

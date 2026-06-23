@@ -568,11 +568,7 @@ function e7(e) {
         k = (0, ez.G)();
     if (null == a) return null;
     let G = [];
-    null != R &&
-        (G = Array.from(R.embeddedActivity.userIds)
-            .map((e) => J.default.getUser(e))
-            .filter((e) => null != e && void 0 !== e));
-    let w = (e) => {
+    function w(e) {
         if (null == e || void 0 === e || e === eV.mt) return null;
         let n = D.get(e.id),
             t = n?.nick ?? el.Ay.getName(e);
@@ -586,113 +582,119 @@ function e7(e) {
             },
             e.id,
         );
-    };
-    return (0, l.jsx)(f.N, {
-        theme: er.NJ8.DARK,
-        children: (e) =>
-            (0, l.jsxs)("div", {
-                className: r()(e1.iE, e3[x], e),
-                ref: m,
-                style: P,
-                children: [
-                    i?.(),
-                    (0, l.jsx)(eO.A, { applicationId: a.id }),
-                    (0, l.jsxs)("div", {
-                        className: e1.lq,
-                        children: [
-                            p
-                                ? null
-                                : (0, l.jsx)("div", {
-                                      className: e1.wx,
-                                      children: (0, l.jsx)(y.E, {
-                                          color: "text-strong",
-                                          variant: "text-md/semibold",
-                                          className: e1.qd,
-                                          children: a?.name,
+    }
+    return (
+        null != R &&
+            (G = Array.from(R.embeddedActivity.userIds)
+                .map((e) => J.default.getUser(e))
+                .filter((e) => null != e && void 0 !== e)),
+        (0, l.jsx)(f.N, {
+            theme: er.NJ8.DARK,
+            children: (e) =>
+                (0, l.jsxs)("div", {
+                    className: r()(e1.iE, e3[x], e),
+                    ref: m,
+                    style: P,
+                    children: [
+                        i?.(),
+                        (0, l.jsx)(eO.A, { applicationId: a.id }),
+                        (0, l.jsxs)("div", {
+                            className: e1.lq,
+                            children: [
+                                p
+                                    ? null
+                                    : (0, l.jsx)("div", {
+                                          className: e1.wx,
+                                          children: (0, l.jsx)(y.E, {
+                                              color: "text-strong",
+                                              variant: "text-md/semibold",
+                                              className: e1.qd,
+                                              children: a?.name,
+                                          }),
                                       }),
-                                  }),
-                            (0, l.jsx)("div", {
-                                className: r()(e1.ht, { [e1.kK]: S }),
-                                style: { paddingLeft: _, paddingRight: _, paddingTop: T, paddingBottom: T },
-                                ref: C,
-                                children: (0, l.jsx)(eB.A, { className: e1.pU, embedId: (0, eY.A)(t.id, a.id) }),
-                            }),
-                            null != L
-                                ? (0, l.jsxs)("div", {
-                                      className: e1.qr,
-                                      children: [
-                                          (0, l.jsx)(eV.Ay, {
-                                              renderIcon: !1,
-                                              users: G,
-                                              size: e2,
-                                              max: 6,
-                                              renderUser: w,
-                                          }),
-                                          (0, l.jsxs)("div", {
-                                              className: e1.Hq,
-                                              children: [
-                                                  (0, l.jsxs)("div", {
-                                                      className: e1.qi,
-                                                      children: [
-                                                          (0, l.jsx)(e0, { channelId: L }),
-                                                          (0, l.jsx)(eM.l, {
-                                                              isTrayButton: !0,
-                                                              label: Y.intl.string(Y.t.brPQ5U),
-                                                              onClick: g,
-                                                              iconComponent: e_.g,
-                                                              themeable: !0,
-                                                          }),
-                                                      ],
-                                                  }),
-                                                  (0, l.jsx)("div", {
-                                                      className: e1.pt,
-                                                      children: (0, l.jsx)(eD.A, {
-                                                          applicationId: a.id,
-                                                          location: t,
-                                                          centerButton: !0,
-                                                          color: "disconnect",
+                                (0, l.jsx)("div", {
+                                    className: r()(e1.ht, { [e1.kK]: S }),
+                                    style: { paddingLeft: _, paddingRight: _, paddingTop: T, paddingBottom: T },
+                                    ref: C,
+                                    children: (0, l.jsx)(eB.A, { className: e1.pU, embedId: (0, eY.A)(t.id, a.id) }),
+                                }),
+                                null != L
+                                    ? (0, l.jsxs)("div", {
+                                          className: e1.qr,
+                                          children: [
+                                              (0, l.jsx)(eV.Ay, {
+                                                  renderIcon: !1,
+                                                  users: G,
+                                                  size: e2,
+                                                  max: 6,
+                                                  renderUser: w,
+                                              }),
+                                              (0, l.jsxs)("div", {
+                                                  className: e1.Hq,
+                                                  children: [
+                                                      (0, l.jsxs)("div", {
+                                                          className: e1.qi,
+                                                          children: [
+                                                              (0, l.jsx)(e0, { channelId: L }),
+                                                              (0, l.jsx)(eM.l, {
+                                                                  isTrayButton: !0,
+                                                                  label: Y.intl.string(Y.t.brPQ5U),
+                                                                  onClick: g,
+                                                                  iconComponent: e_.g,
+                                                                  themeable: !0,
+                                                              }),
+                                                          ],
                                                       }),
-                                                  }),
-                                              ],
-                                          }),
-                                          k
-                                              ? (0, l.jsx)(eP.A, {
-                                                    popoutOpen: !1,
-                                                    onOpenPopout: () => {
-                                                        (0, eS.zV)(er.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
-                                                            (0, eW.A)({
-                                                                onConfirm: async () => {
-                                                                    a?.id != null &&
-                                                                        null != o &&
-                                                                        (await (0, ew.od)(a.id, o)),
-                                                                        (0, ew.jp)();
-                                                                },
-                                                            });
-                                                    },
-                                                    onClosePopout: () => {},
-                                                })
-                                              : null,
-                                      ],
-                                  })
-                                : null,
-                        ],
-                    }),
-                    p && null != n
-                        ? (0, l.jsx)(eR.A, {
-                              minHeight: 480,
-                              maxHeight: n,
-                              resizableNode: m,
-                              onResize: (e) => {
-                                  et._.dispatch(er.jej.MANUAL_IFRAME_RESIZING, { resizing: !0 }), I(e);
-                              },
-                              onResizeEnd: (e) => {
-                                  et._.dispatch(er.jej.MANUAL_IFRAME_RESIZING, { resizing: !1 }), b(e);
-                              },
-                          })
-                        : null,
-                ],
-            }),
-    });
+                                                      (0, l.jsx)("div", {
+                                                          className: e1.pt,
+                                                          children: (0, l.jsx)(eD.A, {
+                                                              applicationId: a.id,
+                                                              location: t,
+                                                              centerButton: !0,
+                                                              color: "disconnect",
+                                                          }),
+                                                      }),
+                                                  ],
+                                              }),
+                                              k
+                                                  ? (0, l.jsx)(eP.A, {
+                                                        popoutOpen: !1,
+                                                        onOpenPopout: () => {
+                                                            (0, eS.zV)(er.HAw.ACTIVITY_POPOUT_POP_OUT_BUTTON_CLICKED),
+                                                                (0, eW.A)({
+                                                                    onConfirm: async () => {
+                                                                        a?.id != null &&
+                                                                            null != o &&
+                                                                            (await (0, ew.od)(a.id, o)),
+                                                                            (0, ew.jp)();
+                                                                    },
+                                                                });
+                                                        },
+                                                        onClosePopout: () => {},
+                                                    })
+                                                  : null,
+                                          ],
+                                      })
+                                    : null,
+                            ],
+                        }),
+                        p && null != n
+                            ? (0, l.jsx)(eR.A, {
+                                  minHeight: 480,
+                                  maxHeight: n,
+                                  resizableNode: m,
+                                  onResize: (e) => {
+                                      et._.dispatch(er.jej.MANUAL_IFRAME_RESIZING, { resizing: !0 }), I(e);
+                                  },
+                                  onResizeEnd: (e) => {
+                                      et._.dispatch(er.jej.MANUAL_IFRAME_RESIZING, { resizing: !1 }), b(e);
+                                  },
+                              })
+                            : null,
+                    ],
+                }),
+        })
+    );
 }
 function e9(e) {
     let { maxHeight: n, renderExternalHeader: t } = e,

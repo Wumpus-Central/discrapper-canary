@@ -13,7 +13,7 @@ var a = n(627968),
     A = n(892547),
     h = n(331322),
     g = n(308528),
-    y = n(720149),
+    y = n(493336),
     C = n(608299),
     f = n(565150),
     _ = n(928039),
@@ -85,7 +85,7 @@ function q(e) {
             [er],
         );
     i.useEffect(() => {
-        (async () => {
+        !(async function () {
             let e = N.A.toURLSafe(n);
             if (null == e) return;
             let t = (0, j.uk)(e.pathname),

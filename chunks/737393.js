@@ -76,10 +76,10 @@ function y(e) {
         _ = c?.id;
     return i.useMemo(() => {
         if (!a || null == t) return null;
-        let e = () => {
+        function e() {
             (0, u.Dr)(r.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: m.i.TAKE_ACTION }),
                 (0, u.Dr)(r.M.CLOUD_PLAY_POPOVER, { dismissAction: m.i.TAKE_ACTION });
-        };
+        }
         return A(t) && null != o
             ? () => {
                   e(),

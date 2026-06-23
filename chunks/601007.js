@@ -53,7 +53,7 @@ function A(e) {
         0 === t.length)
     )
         return null;
-    let O = (e, t, r, s) => {
+    function O(e, t, r, s) {
         !(function (e) {
             let { analyticsLocations: t, distributor: n, gameId: i, level: r } = e;
             f.default.track(p.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: i, level: r });
@@ -61,7 +61,7 @@ function A(e) {
             S?.({ action: r }),
             y?.(),
             C(e);
-    };
+    }
     if (1 === t.length) {
         let { ctaConfig: e, skuId: n } = t[0];
         return (0, r.jsx)(a.$, {
@@ -99,7 +99,7 @@ function A(e) {
     return (0, r.jsx)(l.Y, {
         targetElementRef: N,
         position: "bottom",
-        onRequestOpen: () => {
+        onRequestOpen: function () {
             for (let { ctaConfig: e } of (R(!0), t))
                 m({ analyticsLocations: i, distributor: e.distributor, gameId: n, level: E.SECONDARY });
         },
