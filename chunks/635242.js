@@ -1,9 +1,9 @@
-s.d(t, { A: () => w }), s(321073);
+s.d(t, { A: () => x }), s(321073);
 var n,
     i = s(627968),
-    r = s(64700),
-    o = s(695497),
-    l = s.n(o),
+    o = s(64700),
+    r = s(695497),
+    l = s.n(r),
     d = s(143236),
     a = s(723702),
     h = s(19575),
@@ -14,7 +14,7 @@ function m(e, t, s) {
     let n = +!(0, a.isWindows)();
     (e !== u.zY.MOUSE_BUTTON || s !== n) && p.forEach((n) => n._handleEvent(e, t, s));
 }
-class g extends d.EventEmitter {
+class R extends d.EventEmitter {
     combo = [];
     constructor() {
         super(), p.push(this), 1 === p.length && h.Ay.setOnInputEventCallback(m);
@@ -34,25 +34,25 @@ class g extends d.EventEmitter {
             : (this.combo.push([e, s, (0, c._$)()]), this.emit("change", this));
     }
 }
-var R = s(503698),
-    C = s.n(R),
+var g = s(503698),
+    C = s.n(g),
     E = s(507392),
     f = s.n(E),
-    _ = s(735438),
-    D = s.n(_),
-    b = s(187322),
-    v = s(821609),
+    D = s(735438),
+    _ = s.n(D),
+    v = s(187322),
+    b = s(821609),
     N = s(235986),
     O = s(375708),
     I = s(598723),
-    U = (((n = {}).DEFAULT = "DEFAULT"), (n.RECORDING = "RECORDING"), n);
+    y = (((n = {}).DEFAULT = "DEFAULT"), (n.RECORDING = "RECORDING"), n);
 let A = { DEFAULT: I.__invalid_default, RECORDING: I.oz };
-class y extends r.PureComponent {
-    _inputId = D().uniqueId("key-recorder-");
+class U extends o.PureComponent {
+    _inputId = _().uniqueId("key-recorder-");
     _unregisterNativeRecorder = null;
     _mousedownMode = null;
-    _inputRef = r.createRef();
-    _containerRef = r.createRef();
+    _inputRef = o.createRef();
+    _containerRef = o.createRef();
     componentWillUnmount() {
         null != this._unregisterNativeRecorder && this._unregisterNativeRecorder();
     }
@@ -85,10 +85,15 @@ class y extends r.PureComponent {
     handleMouseDown = () => {
         this._mousedownMode = this.props.mode;
     };
+    handleKeyDown = (e) => {
+        "RECORDING" === this.props.mode &&
+            e.key === u.dh.ESCAPE &&
+            (e.preventDefault(), e.stopPropagation(), this.props.onClick());
+    };
     render() {
         let e,
-            { mode: t, value: s, disabled: n, trailingActions: r } = this.props,
-            o = (0, c.dI)(s, !0);
+            { mode: t, value: s, disabled: n, trailingActions: o } = this.props,
+            r = (0, c.dI)(s, !0);
         return (
             (e =
                 "RECORDING" === t
@@ -96,7 +101,7 @@ class y extends r.PureComponent {
                     : 0 === s.length
                       ? O.intl.string(O.t.co3wt9)
                       : O.intl.string(O.t.idFMvH)),
-            (0, i.jsx)(b.vN, {
+            (0, i.jsx)(v.vN, {
                 focusTarget: this._inputRef,
                 ringTarget: this._containerRef,
                 children: (0, i.jsx)("div", {
@@ -114,20 +119,21 @@ class y extends r.PureComponent {
                                     placeholder: O.intl.string(O.t.nWRdnl),
                                     type: "text",
                                     ref: this.setInputRef,
+                                    onKeyDown: this.handleKeyDown,
                                     readOnly: !0,
-                                    value: o,
+                                    value: r,
                                     disabled: "RECORDING" !== this.props.mode || n,
                                 }),
                             }),
-                            null != r && !1 !== r
+                            null != o && !1 !== o
                                 ? (0, i.jsx)("div", {
                                       className: I.Sq,
                                       onClick: (e) => e.stopPropagation(),
-                                      children: r,
+                                      children: o,
                                   })
                                 : (0, i.jsx)("div", {
                                       className: I.UD,
-                                      children: (0, i.jsx)(v.$, {
+                                      children: (0, i.jsx)(b.$, {
                                           size: "sm",
                                           variant: "RECORDING" === this.props.mode ? "critical-secondary" : "secondary",
                                           text: e,
@@ -145,14 +151,14 @@ class y extends r.PureComponent {
     }
 }
 let k = a.isPlatformEmbedded && null != h.Ay.getDiscordUtils().inputCaptureRegisterElement;
-class x extends r.PureComponent {
+class w extends o.PureComponent {
     _input;
     gs;
     _mounted = !1;
     constructor(e) {
         super(e);
         const { defaultValue: t } = e;
-        this.state = { codes: t, mode: U.DEFAULT };
+        this.state = { codes: t, mode: y.DEFAULT };
     }
     componentDidMount() {
         this._mounted = !0;
@@ -162,7 +168,7 @@ class x extends r.PureComponent {
     }
     componentDidUpdate(e) {
         this.props.defaultValue !== e.defaultValue && this.setState({ codes: this.props.defaultValue }),
-            !0 === this.props.disabled && !0 !== e.disabled && this.state.mode === U.RECORDING && this.recordEnd();
+            !0 === this.props.disabled && !0 !== e.disabled && this.state.mode === y.RECORDING && this.recordEnd();
     }
     cleanUp() {
         a.isPlatformEmbedded && null != this.gs && (this.gs.destroy(), (this.gs = null));
@@ -170,18 +176,21 @@ class x extends r.PureComponent {
     handleComboChange(e) {
         let { mode: t } = this.state,
             { disabled: s, onChange: n } = this.props;
-        !0 !== s && t === U.RECORDING && (null != n && n(e), this.setState({ codes: e }));
+        if (!0 !== s && t === y.RECORDING) {
+            if (e.some((e) => "esc" === (0, c.dI)([e]).toLowerCase())) return void this.recordEnd();
+            null != n && n(e), this.setState({ codes: e });
+        }
     }
     recordStart = () => {
         !0 !== this.props.disabled &&
-            (a.isPlatformEmbedded && !k && ((this.gs = new g()), this.gs.on("change", this.handleGSChange)),
-            this.setState({ mode: U.RECORDING }));
+            (a.isPlatformEmbedded && !k && ((this.gs = new R()), this.gs.on("change", this.handleGSChange)),
+            this.setState({ mode: y.RECORDING }));
     };
     recordEnd = () => {
-        this.cleanUp(), this.setState({ mode: U.DEFAULT });
+        this.cleanUp(), this.setState({ mode: y.DEFAULT });
     };
     toggleRecordMode = () => {
-        this.state.mode === U.DEFAULT ? this.recordStart() : this.recordEnd();
+        this.state.mode === y.DEFAULT ? this.recordStart() : this.recordEnd();
     };
     handleComboKeys = (e, t, s) => {
         if ((s.preventDefault(), "keydown" === s.type)) {
@@ -207,22 +216,22 @@ class x extends r.PureComponent {
         let e,
             t,
             { codes: s, mode: n } = this.state,
-            { disabled: r, trailingActions: o } = this.props;
+            { disabled: o, trailingActions: r } = this.props;
         return (
             k
                 ? ((t = h.Ay.getDiscordUtils().inputCaptureRegisterElement), (e = this.handleNativeChange))
                 : a.isPlatformEmbedded || (e = this.handleComboKeys),
-            (0, i.jsx)(y, {
-                disabled: r,
+            (0, i.jsx)(U, {
+                disabled: o,
                 value: s,
                 mode: n,
                 onClick: this.toggleRecordMode,
                 onChange: e,
                 registerNativeRecorder: t,
                 disableOnClickWhileRecording: k,
-                trailingActions: o,
+                trailingActions: r,
             })
         );
     }
 }
-let w = x;
+let x = w;
