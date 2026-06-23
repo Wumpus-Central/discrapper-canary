@@ -6,7 +6,7 @@ var l = e(980707),
     a = e(442433),
     o = e(253799),
     c = e(663341),
-    s = e(315240),
+    s = e(430795),
     d = e(375708),
     u = e(17928),
     p = e(192308),
@@ -27,8 +27,8 @@ var l = e(980707),
     w = e(589553),
     I = e(696016),
     Z = e(264572).Buffer,
-    v = e(7807),
-    R = e(931991),
+    R = e(7807),
+    v = e(931991),
     S = e(71393),
     T = e(576705),
     F = e(711014),
@@ -36,8 +36,8 @@ var l = e(980707),
     P = e(105009),
     k = e(505930),
     B = e(807072),
-    G = e(346411),
-    N = e(781710),
+    N = e(346411),
+    G = e(781710),
     L = e(405433),
     X = e(688810),
     M = e(274372),
@@ -126,7 +126,7 @@ function U(n) {
                 l = (0, u.bG)([F.Ay, T.A, H.default, S.A], () =>
                     F.Ay.getFlattenedGuildIds().some((n) => {
                         let i = S.A.getGuild(n);
-                        return null != i && (0, R.ie)(i, T.A, H.default).canCreateExpressions;
+                        return null != i && (0, v.ie)(i, T.A, H.default).canCreateExpressions;
                     }),
                 ),
                 o = i[0];
@@ -137,7 +137,7 @@ function U(n) {
             return (0, t.jsx)(r.Dr, {
                 id: "clips-export-soundboard",
                 label: d.intl.string(x.default.HH4Tjj),
-                leadingAccessory: { type: "icon", icon: v.J },
+                leadingAccessory: { type: "icon", icon: R.J },
                 action: c,
             });
         })({ clips: i, channelId: U }),
@@ -240,26 +240,24 @@ function U(n) {
         })({ clips: i, onBeforeDelete: q, onAfterDelete: z, actionsDisabled: J }),
         ns = (function (n) {
             let { clips: i } = n;
-            return (0, u.bG)([y.A], () => y.A.isDeveloper)
-                ? (0, t.jsx)(r.Dr, {
-                      leadingAccessory: { type: "icon", icon: V.s },
-                      id: "show-in-folder",
-                      label: "Show in Folder",
-                      action: function () {
-                          (0, a.Z_)(), _.A.fileManager.showItemInFolder(i[0].filepath);
-                      },
-                  })
-                : null;
+            return (0, t.jsx)(r.Dr, {
+                leadingAccessory: { type: "icon", icon: V.s },
+                id: "show-in-folder",
+                label: "Show in Folder",
+                action: function () {
+                    (0, a.Z_)(), _.A.fileManager.showItemInFolder(i[0].filepath);
+                },
+            });
         })({ clips: i }),
         nd = (function (n) {
             let { clips: i } = n;
             return (0, u.bG)([y.A], () => y.A.isDeveloper)
                 ? (0, t.jsx)(r.Dr, {
-                      leadingAccessory: { type: "icon", icon: G.P },
+                      leadingAccessory: { type: "icon", icon: N.P },
                       id: "open-in-inspector",
                       label: "Open in Inspector",
                       action: function () {
-                          (0, a.Z_)(), (0, p.closeAllModals)(), (0, N.h)(i[0].filepath);
+                          (0, a.Z_)(), (0, p.closeAllModals)(), (0, G.h)(i[0].filepath);
                       },
                   })
                 : null;

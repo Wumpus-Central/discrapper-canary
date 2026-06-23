@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => N });
 var i = n(627968),
     l = n(64700),
     a = n(17928),
@@ -16,7 +16,8 @@ var i = n(627968),
     g = n(408822),
     f = n(806931),
     C = n(125730);
-function y(e) {
+let y = [];
+function E(e) {
     let { channelId: t, participant: n, popoutType: l } = e,
         A = (0, a.bG)([p.A], () => p.A.getChannel(t)),
         y = (0, a.bG)([o.A], () => o.A.getSelectedParticipant(t)),
@@ -37,14 +38,14 @@ function y(e) {
               },
           });
 }
-function E(e) {
+function N(e) {
     let { channelId: t, popoutType: n, aspectRatio: s } = e,
         r = (0, l.useRef)(null),
         [c, d] = (0, l.useState)(0),
         u = (0, a.bG)([A.A], () => A.A.getVoiceChannelId()),
         { streamParticipants: p, videoParticipants: h } = (0, a.cf)([o.A], () => ({
             streamParticipants: o.A.getStreamParticipants(t),
-            videoParticipants: u === t ? o.A.getVideoParticipants(t) : [],
+            videoParticipants: u === t ? o.A.getVideoParticipants(t) : y,
         }));
     return (
         (0, l.useEffect)(() => {
@@ -58,8 +59,8 @@ function E(e) {
             style: { aspectRatio: s, paddingTop: 82 > c + 16 ? 82 - c : 16 },
             ref: r,
             children: [
-                p.map((e) => (0, i.jsx)(y, { participant: e, channelId: t, popoutType: n }, e.id)),
-                h.map((e) => (0, i.jsx)(y, { participant: e, channelId: t, popoutType: n }, e.id)),
+                p.map((e) => (0, i.jsx)(E, { participant: e, channelId: t, popoutType: n }, e.id)),
+                h.map((e) => (0, i.jsx)(E, { participant: e, channelId: t, popoutType: n }, e.id)),
             ],
         })
     );
