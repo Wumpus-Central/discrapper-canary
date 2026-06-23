@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { E: () => x, T: () => T });
+n.d(t, { E: () => C, T: () => v });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -10,24 +10,23 @@ n(321073);
 var u = n(525723),
     c = n(901930),
     d = n(211159),
-    m = n(546605),
-    h = n(900730),
-    p = n(426398),
-    f = n(375708),
-    g = n(480642),
-    E = n(848584),
-    A = n(327105),
-    C = n(312867);
-let x = (e) => {
+    m = n(900730),
+    h = n(426398),
+    p = n(375708),
+    f = n(169797),
+    g = n(270537),
+    E = n(327105),
+    A = n(312867);
+let C = (e) => {
         let { className: t } = e;
-        return (0, l.jsx)(g.DJ, { className: r()(C.g4, t) });
+        return (0, l.jsx)(f.DJ, { className: r()(A.g4, t) });
     },
-    I = (e) =>
+    x = (e) =>
         null != e && "object" == typeof e && "message" in e && "type" in e
             ? (0, l.jsx)(a.w, { type: e.type, hidden: e.hidden, children: e.message }, e.key)
             : (0, l.jsx)(i.Fragment, { children: e.directContent }, e.key),
-    _ = (e) => null == e || "" === e,
-    S = (e) => {
+    I = (e) => null == e || "" === e,
+    _ = (e) => {
         let { children: t } = e,
             {
                 errorMessage: n,
@@ -38,36 +37,35 @@ let x = (e) => {
                     { errorMessage: t } = (0, c.j)({}),
                     n =
                         ((e = (0, d.t4)((e) => e.selectedSkuId)),
-                        (0, u.vw)({ skuId: e }) ? f.intl.format(f.t.fsOXXO, {}) : null),
+                        (0, u.vw)({ skuId: e }) ? p.intl.format(p.t.fsOXXO, {}) : null),
                     s = (function () {
-                        let e = (0, m.vg)("StatefulCheckoutStoreRelocationNotice"),
-                            t = (0, d.t4)((e) => e.paymentSourceId),
-                            n = (0, p.kc)(),
+                        let e = (0, d.t4)((e) => e.paymentSourceId),
+                            t = (0, h.kc)(),
                             {
-                                relocationCountry: s,
-                                relocationCurrencyCode: r,
-                                willForfeitGiftCardBalance: a,
+                                relocationCountry: n,
+                                relocationCurrencyCode: s,
+                                willForfeitGiftCardBalance: r,
                             } = i.useMemo(() => {
-                                let e = null != t ? n.find((e) => e.id === t) : null;
+                                let n = null != e ? t.find((t) => t.id === e) : null;
                                 return {
-                                    relocationCountry: e?.relocationCountry ?? null,
-                                    relocationCurrencyCode: e?.relocationCurrencyCode ?? null,
-                                    willForfeitGiftCardBalance: e?.willForfeitGiftCardBalance ?? !1,
+                                    relocationCountry: n?.relocationCountry ?? null,
+                                    relocationCurrencyCode: n?.relocationCurrencyCode ?? null,
+                                    willForfeitGiftCardBalance: n?.willForfeitGiftCardBalance ?? !1,
                                 };
-                            }, [n, t]);
+                            }, [t, e]);
                         return i.useMemo(
                             () =>
-                                e && null != s
-                                    ? {
-                                          directContent: (0, l.jsx)(h.c, {
-                                              relocationCountry: s,
-                                              relocationCurrencyCode: r,
-                                              willForfeitGiftCardBalance: a,
+                                null == n
+                                    ? null
+                                    : {
+                                          directContent: (0, l.jsx)(m.c, {
+                                              relocationCountry: n,
+                                              relocationCurrencyCode: s,
+                                              willForfeitGiftCardBalance: r,
                                           }),
                                           key: "store-relocation-notice",
-                                      }
-                                    : null,
-                            [e, s, r, a],
+                                      },
+                            [n, s, r],
                         );
                     })();
                 return {
@@ -82,19 +80,19 @@ let x = (e) => {
             o = i.useRef(null);
         return (
             i.useEffect(() => {
-                _(n) || null == o.current || o.current.scrollIntoView({ behavior: "smooth" });
+                I(n) || null == o.current || o.current.scrollIntoView({ behavior: "smooth" });
             }, [n]),
             i.useMemo(
                 () =>
-                    _(n) && _(s) && !(r.length > 0) && null == t
+                    I(n) && I(s) && !(r.length > 0) && null == t
                         ? null
                         : (0, l.jsxs)("div", {
                               ref: o,
-                              className: C.dD,
+                              className: A.dD,
                               children: [
-                                  _(n) ? null : (0, l.jsx)(a.w, { type: "critical", children: n }),
-                                  _(s) ? null : (0, l.jsx)(a.w, { type: "warning", children: s }),
-                                  r.map(I),
+                                  I(n) ? null : (0, l.jsx)(a.w, { type: "critical", children: n }),
+                                  I(s) ? null : (0, l.jsx)(a.w, { type: "warning", children: s }),
+                                  r.map(x),
                                   t,
                               ],
                           }),
@@ -102,7 +100,7 @@ let x = (e) => {
             )
         );
     },
-    y = (e) =>
+    S = (e) =>
         i.useMemo(
             () =>
                 null == e
@@ -110,28 +108,28 @@ let x = (e) => {
                     : Array.isArray(e)
                       ? 0 === e.length
                           ? null
-                          : (0, l.jsx)(l.Fragment, { children: e.map((e) => I(e)) })
+                          : (0, l.jsx)(l.Fragment, { children: e.map((e) => x(e)) })
                       : null != e
-                        ? I(e)
+                        ? x(e)
                         : null,
             [e],
         ),
-    v = (e) => {
+    y = (e) => {
         let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n } = e,
-            s = y(t);
+            s = S(t);
         return i.useMemo(
             () =>
                 null != s || n
                     ? n
                         ? null != s
-                            ? (0, l.jsx)(S, { children: s })
-                            : (0, l.jsx)(S, {})
-                        : (0, l.jsx)("div", { className: C.dD, children: s })
+                            ? (0, l.jsx)(_, { children: s })
+                            : (0, l.jsx)(_, {})
+                        : (0, l.jsx)("div", { className: A.dD, children: s })
                     : null,
             [n, s],
         );
     },
-    T = (e) => {
+    v = (e) => {
         let {
                 upperInlineNoticeProps: t,
                 planSelectContent: n,
@@ -142,35 +140,35 @@ let x = (e) => {
                 invoiceSummaryContent: c,
                 promotionalNoticeContent: d,
                 legalContent: m,
-                invoiceTotalDueLabel: h = f.intl.string(A.default.R0cZsM),
-                invoiceTotalDueValue: p,
-                shouldShowGlobalNotices: g,
+                invoiceTotalDueLabel: h = p.intl.string(E.default.R0cZsM),
+                invoiceTotalDueValue: f,
+                shouldShowGlobalNotices: x,
                 footerInlineNoticeProps: I,
                 className: _,
             } = e,
-            S = y(I);
+            v = S(I);
         return a
-            ? (0, l.jsx)(x, { className: _ })
+            ? (0, l.jsx)(C, { className: _ })
             : (0, l.jsxs)(l.Fragment, {
                   children: [
                       (0, l.jsxs)("div", {
-                          className: r()(_, { [C.pg]: null == c }),
+                          className: r()(_, { [A.pg]: null == c }),
                           children: [
-                              (0, l.jsx)(v, { upperInlineNoticeProps: t, shouldShowGlobalNotices: g }),
+                              (0, l.jsx)(y, { upperInlineNoticeProps: t, shouldShowGlobalNotices: x }),
                               n,
-                              null != n && null != i && (0, l.jsx)("div", { className: C.ls }),
+                              null != n && null != i && (0, l.jsx)("div", { className: A.ls }),
                               i,
-                              null != s && (0, l.jsx)("div", { className: C.P3, children: s }),
-                              (0, l.jsx)("div", { className: C.Jv, children: u }),
-                              null != c && (0, l.jsx)("div", { className: C.ZF, children: c }),
+                              null != s && (0, l.jsx)("div", { className: A.P3, children: s }),
+                              (0, l.jsx)("div", { className: A.Jv, children: u }),
+                              null != c && (0, l.jsx)("div", { className: A.ZF, children: c }),
                           ],
                       }),
                       (0, l.jsxs)(o.bx, {
                           children: [
-                              null != h && null != p && (0, l.jsx)(E.Qf, { className: C.NR, label: h, value: p }),
-                              null != d ? (0, l.jsx)("div", { className: C.uh, children: d }) : null,
+                              null != h && null != f && (0, l.jsx)(g.Qf, { className: A.NR, label: h, value: f }),
+                              null != d ? (0, l.jsx)("div", { className: A.uh, children: d }) : null,
                               m,
-                              null != S ? (0, l.jsx)("div", { className: C.Uu, children: S }) : null,
+                              null != v ? (0, l.jsx)("div", { className: A.Uu, children: v }) : null,
                           ],
                       }),
                   ],

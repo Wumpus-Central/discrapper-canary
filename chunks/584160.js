@@ -7,8 +7,8 @@ var i = n(997101),
     o = n(327105),
     l = n(375708);
 let u = [s.pn.PLAN_SELECT, s.pn.REVIEW, s.pn.ADD_PAYMENT_STEPS],
-    c = (e, t) => {
-        if (t && null != e) return null != i.d[e] ? e : void 0;
+    c = (e) => {
+        if (null != e) return null != i.d[e] ? e : void 0;
     },
     d = (e) => {
         let {
@@ -19,28 +19,27 @@ let u = [s.pn.PLAN_SELECT, s.pn.REVIEW, s.pn.ADD_PAYMENT_STEPS],
                 showBetaBadge: d,
                 premiumDiscountPercent: _,
                 storeCountryFromCheckoutContext: h,
-                isStoreCountryEnabled: f,
-                relocationCountry: p,
+                relocationCountry: f,
             } = e,
-            E = l.intl.string(l.t.q9EGps);
-        n === s.pn.ADD_PAYMENT_STEPS && (E = l.intl.string(l.t.CpOiEO));
-        let m = { headerBadgeText: void 0, headerBadgeIcon: void 0 };
+            p = l.intl.string(l.t.q9EGps);
+        n === s.pn.ADD_PAYMENT_STEPS && (p = l.intl.string(l.t.CpOiEO));
+        let E = { headerBadgeText: void 0, headerBadgeIcon: void 0 };
         d
-            ? ((m.headerBadgeText = l.intl.string(l.t.oW0eUd)), (m.headerBadgeVariant = "default"))
+            ? ((E.headerBadgeText = l.intl.string(l.t.oW0eUd)), (E.headerBadgeVariant = "default"))
             : i
-              ? ((m.headerBadgeText = l.intl.string(o.default["mWL08+"])), (m.headerBadgeIcon = r.g))
+              ? ((E.headerBadgeText = l.intl.string(o.default["mWL08+"])), (E.headerBadgeIcon = r.g))
               : u &&
-                (m.headerBadgeText =
+                (E.headerBadgeText =
                     null != _
                         ? l.intl.formatToPlainString(l.t.iiLbvu, { percent: _ })
                         : l.intl.string(o.default.Fjpyfj));
-        let g = c(h, f),
-            A = c(p, f);
+        let m = c(h),
+            g = c(f);
         return null == t
-            ? { title: E, gradientColor: void 0, countryCode: g, relocationCountryCode: A, ...m }
+            ? { title: p, gradientColor: void 0, countryCode: m, relocationCountryCode: g, ...E }
             : t === a.pe.TIER_0 || t === a.pe.TIER_1
-              ? { title: E, gradientColor: "nitro-green", countryCode: g, relocationCountryCode: A, ...m }
+              ? { title: p, gradientColor: "nitro-green", countryCode: m, relocationCountryCode: g, ...E }
               : t === a.pe.TIER_2
-                ? { title: E, gradientColor: "nitro-pink", countryCode: g, relocationCountryCode: A, ...m }
-                : { title: E, countryCode: g, relocationCountryCode: A, ...m };
+                ? { title: p, gradientColor: "nitro-pink", countryCode: m, relocationCountryCode: g, ...E }
+                : { title: p, countryCode: m, relocationCountryCode: g, ...E };
     };
