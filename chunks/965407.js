@@ -13,6 +13,6 @@ let o = new r(l.h, {
     MESSAGE_CREATE: function (e) {
         let { message: t, sendMessageOptions: n } = e;
         null != n && (s[t.id] = { ...n, location: n.location ?? a.Hx.OTHER }),
-            null != t.nonce && t.nonce in s && delete s[t.nonce];
+            null != t.nonce && t.nonce !== t.id && t.nonce in s && delete s[t.nonce];
     },
 });

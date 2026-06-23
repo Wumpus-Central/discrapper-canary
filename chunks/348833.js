@@ -113,6 +113,7 @@ function $(e) {
                           : e.name;
                 R.A.sendMessage(E.id, k.Ay.parse(E, t), !1, {
                     location: j.Hx.MEDIA_MENTION,
+                    doNotScroll: !0,
                     messageReference: { channel_id: E.id, guild_id: E.getGuildId() ?? void 0, message_id: l },
                     mediaMention: K(_, c),
                 });
@@ -168,8 +169,8 @@ function $(e) {
                         messageId: l,
                         pickerIntention: B.EmojiIntention.CHAT,
                         onSelectEmoji: (e) => {
-                            let { emoji: t } = e;
-                            null != t && q(void 0, t);
+                            let { emoji: n } = e;
+                            null != n && (q(void 0, n), t());
                         },
                     });
                 },
