@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => p, Be: () => d, Nj: () => _, y3: () => h });
+n.d(t, { Ay: () => E, Be: () => _, Nj: () => h, y3: () => f });
 var i,
     r = n(627968),
     s = n(64700),
@@ -7,8 +7,9 @@ var i,
     o = n.n(a),
     l = n(355522),
     u = n(37766),
-    c = n(34382),
-    d =
+    c = n(637956),
+    d = n(34382),
+    _ =
         (((i = {}).UNKNOWN = "unknown"),
         (i.VISA = "visa"),
         (i.DISCOVER = "discover"),
@@ -38,8 +39,9 @@ var i,
         (i.APPLE_LIGHT = "apple_light"),
         (i.BANK = "bank"),
         (i.GIFT_CARD = "gift_card"),
+        (i.PIX = "pix"),
         i);
-function _(e) {
+function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
         if ("apple" === e) return n(685430);
@@ -96,21 +98,23 @@ function _(e) {
             return n(511403);
     }
 }
-let h = { SMALL: c.cardIconSmall, MEDIUM: c.cardIconMedium, LARGE: c.cardIconLarge, XLARGE: c.cardIconXLarge };
-class f extends s.PureComponent {
-    static Types = d;
-    static Sizes = h;
+let f = { SMALL: d.cardIconSmall, MEDIUM: d.cardIconMedium, LARGE: d.cardIconLarge, XLARGE: d.cardIconXLarge };
+class p extends s.PureComponent {
+    static Types = _;
+    static Sizes = f;
     static getType(e) {
-        return null == e ? "unknown" : d[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
+        return null == e ? "unknown" : _[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
     }
-    static defaultProps = { size: h.SMALL, flipped: !1 };
+    static defaultProps = { size: f.SMALL, flipped: !1 };
     render() {
         let { flipped: e, type: t, className: n, size: i } = this.props;
         return "bank" === t
             ? (0, r.jsx)(l.M, { className: n })
             : "gift_card" === t
               ? (0, r.jsx)(u._, { className: n, size: "lg" })
-              : (0, r.jsx)("div", { "aria-hidden": !0, className: o()(i, c[t], n, { [c.flipped]: e }), children: t });
+              : "pix" === t
+                ? (0, r.jsx)(c.W, { className: n, size: "lg" })
+                : (0, r.jsx)("div", { "aria-hidden": !0, className: o()(i, d[t], n, { [d.flipped]: e }), children: t });
     }
 }
-let p = f;
+let E = p;

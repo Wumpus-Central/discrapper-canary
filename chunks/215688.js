@@ -4,4 +4,5 @@ e.exports = {
     tr: "animationAsset__3f82e",
     ze: "catalogBannerImage__3f82e",
     v0: "limitedTimeBadge__3f82e",
+    IG: "arrowButton__3f82e",
 };

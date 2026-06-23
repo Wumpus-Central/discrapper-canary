@@ -265,7 +265,8 @@ let o = "collectibles shop product details modal",
                     r.e("90213"),
                     r.e("77298"),
                     r.e("35874"),
-                    r.e("37377"),
+                    r.e("60870"),
+                    r.e("55227"),
                     r.e("55878"),
                 ]).then(r.bind(r, 571047));
                 return (r) =>

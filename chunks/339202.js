@@ -1,0 +1,15 @@
+e.exports = {
+    kL: "container__0f179",
+    tK: "breadcrumbBar__0f179",
+    AW: "catalogFallback__0f179",
+    $T: "catalogBannerWrapper__0f179",
+    hd: "sectionContainer__0f179",
+    fr: "productsGrid__0f179",
+    t3: "relatedSection__0f179",
+    bb: "relatedHeader__0f179",
+    EU: "relatedDropItem__0f179",
+    DO: "skeletonPulse__0f179",
+    M$: "skeletonHeading__0f179",
+    A9: "skeletonFeaturedRow__0f179",
+    nl: "skeletonFeaturedBlock__0f179",
+};
