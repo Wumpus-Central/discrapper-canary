@@ -429,6 +429,7 @@ let r = {
             "VIRTUAL_CURRENCY_REDEEM_SUCCESS",
         ],
         inlineRequire: () => n(463398).A,
+        hasStoreChangeListeners: !0,
     },
     ProgramRewardsManager: {
         actions: [

@@ -1,11 +1,16 @@
 .profileEffects__0dd08 {
     border-radius: inherit;
-    inset: var(--custom-user-profile-theme-padding, 0);
+    inset: 0;
     overflow: hidden;
     pointer-events: none;
     position: absolute;
     transition: opacity .6s ease-in-out;
     z-index: var(--custom-user-profile-middle-layer-z-index, 2)
+}
+
+.custom-user-profile-theme.user-profile-popout .profileEffects__0dd08,
+.custom-user-profile-theme.user-profile-sidebar.user-profile-sidebar-redesign .profileEffects__0dd08 {
+    inset: var(--custom-user-profile-theme-padding)
 }
 
 .hovered__0dd08 {
@@ -27,6 +32,11 @@
 
 .user-profile-modal-v2 .inner__0dd08 {
     border-radius: var(--radius-lg) var(--radius-lg) 0 0
+}
+
+.custom-user-profile-theme.user-profile-popout .inner__0dd08,
+.custom-user-profile-theme.user-profile-sidebar.user-profile-sidebar-redesign .inner__0dd08 {
+    border-radius: 0
 }
 
 .effect__0dd08 {

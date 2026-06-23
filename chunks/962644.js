@@ -22,20 +22,21 @@ function m() {
 }
 async function g() {
     try {
-        o.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH" });
-        let e = r.DESKTOP,
-            t = await s.Bo.get({
+        let e = u.default.locale;
+        o.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH", locale: e });
+        let t = r.DESKTOP,
+            n = await s.Bo.get({
                 url: p.Rsh.PROMOTIONS,
-                query: { locale: u.default.locale, platform: e },
+                query: { locale: e, platform: t },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             }),
-            n = h.A.consumedInboundPromotionId;
+            i = h.A.consumedInboundPromotionId;
         if (!h.A.hasFetchedConsumedInboundPromotionId) {
             let e = (await (0, l.LM)(f.tv, !1)).find((e) => null != e.promotion_id && !0 === e.consumed);
-            n = e?.promotion_id ?? null;
+            i = e?.promotion_id ?? null;
         }
-        o.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH_SUCCESS", promotions: t.body, consumedInboundPromotionId: n });
+        o.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH_SUCCESS", promotions: n.body, consumedInboundPromotionId: i });
     } catch (e) {
         o.h.dispatch({ type: "ACTIVE_PROMOTIONS_FETCH_FAIL" });
     }
