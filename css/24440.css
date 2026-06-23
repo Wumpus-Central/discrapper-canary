@@ -159,8 +159,8 @@ button {
 
 code {
     font-family: var(--font-code);
-    font-size: .875rem;
-    line-height: 1rem
+    font-size: 14px;
+    line-height: 16px
 }
 
 :root {

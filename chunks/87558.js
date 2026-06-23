@@ -1,4 +1,5 @@
-n.d(r, { Ay: () => i, GT: () => s, Mz: () => u, fB: () => p, qH: () => o, rs: () => c }),
+"use strict";
+n.d(t, { Ay: () => a, GT: () => l, Mz: () => u, fB: () => d, qH: () => o, rs: () => c }),
     n(323874),
     n(14289),
     n(35956),
@@ -10,34 +11,34 @@ n.d(r, { Ay: () => i, GT: () => s, Mz: () => u, fB: () => p, qH: () => o, rs: ()
     n(949626),
     n(767709),
     n(65162);
-var a,
-    t = n(115943),
-    l = n.n(t);
-async function i(e, r, n) {
-    var a;
+var i,
+    r = n(115943),
+    s = n.n(r);
+async function a(e, t, n) {
+    var i;
     return {
         src: e,
         base64: e,
         loop: !1,
         loopDelay: 0,
-        duration: Math.round(((a = await r.arrayBuffer()), l().decode(a)).frames.reduce((e, r) => e + r.delay, 0)),
+        duration: Math.round(((i = await t.arrayBuffer()), s().decode(i)).frames.reduce((e, t) => e + t.delay, 0)),
         start: 0,
         position: { x: 0, y: 0 },
         zIndex: 100 + n,
         height: 880,
         width: 450,
-        name: r.name,
+        name: t.name,
     };
 }
-var o = (((a = {}).THUMBNAIL = "Thumbnail"), (a.STATIC = "Static"), (a.REDUCED_MOTION = "Reduced Motion"), a);
-function s(e, r) {
-    return { name: r.name, src: URL.createObjectURL(r), base64: e };
+var o = (((i = {}).THUMBNAIL = "Thumbnail"), (i.STATIC = "Static"), (i.REDUCED_MOTION = "Reduced Motion"), i);
+function l(e, t) {
+    return { name: t.name, src: URL.createObjectURL(t), base64: e };
 }
-function u(e, r) {
+function u(e, t) {
     if (null == e) return;
     let n = new FileReader();
     (n.onload = (e) => {
-        null == e.target || ("string" == typeof e.target.result && r?.(e.target.result));
+        null == e.target || ("string" == typeof e.target.result && t?.(e.target.result));
     }),
         n.readAsDataURL(e);
 }
@@ -49,8 +50,8 @@ let c = (e) =>
                 {
                     path: (function (e) {
                         if (null == e) return "";
-                        let r = e.split("/").pop() ?? e;
-                        return r.endsWith(".png.png") ? r.replace(/\.png\.png$/, ".png") : r;
+                        let t = e.split("/").pop() ?? e;
+                        return t.endsWith(".png.png") ? t.replace(/\.png\.png$/, ".png") : t;
                     })(e.name),
                     loop: e.loop,
                     start: e.start,
@@ -68,14 +69,14 @@ let c = (e) =>
         )
         .join(",\n") +
     "\n]";
-function p(e) {
-    let r = (function (e) {
-        let [r, n] = e.split(","),
-            a = atob(n),
-            t = r.split(";")[0],
-            l = new Uint8Array(a.length);
-        for (let e = 0; e < a.length; e++) l[e] = a.charCodeAt(e);
-        return new Blob([l], { type: t });
+function d(e) {
+    let t = (function (e) {
+        let [t, n] = e.split(","),
+            i = atob(n),
+            r = t.split(";")[0],
+            s = new Uint8Array(i.length);
+        for (let e = 0; e < i.length; e++) s[e] = i.charCodeAt(e);
+        return new Blob([s], { type: r });
     })(e);
-    return URL.createObjectURL(r);
+    return URL.createObjectURL(t);
 }
