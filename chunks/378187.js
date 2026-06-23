@@ -35,11 +35,10 @@ function M(e) {
 }
 function P(e) {
     let t = T.A.getState().autoEnroll,
-        { enabled: n } = S.Ym.getConfig({ location: b.rE.QUEST_ACTIVITY_HEADER }),
-        i = A.A.quests;
-    for (let s of (0, v.jm)(i, e))
-        if ((s.config.features.includes(r.L.ACTIVITY_QUEST_AUTO_ENROLLMENT) && !n) || (t && 1))
-            return (0, g.Oy)(s.id, {
+        n = A.A.quests;
+    for (let i of (0, v.jm)(n, e))
+        if (t && 1)
+            return (0, g.Oy)(i.id, {
                 questContent: I.uF.RUNNING_ACTIVITY,
                 questContentCTA: y.Cy.START_QUEST,
                 sourceQuestContent: I.uF.RUNNING_ACTIVITY,
