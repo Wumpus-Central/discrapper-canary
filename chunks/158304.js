@@ -20820,10 +20820,8 @@ var jE = n(509434),
     jp = n(875317),
     jA = n(979523);
 function jf(e) {
-    let t = ji.A.draftThemeSettings,
-        n = ji.A.draftEnabled;
-    if (null == t || !n || !(0, jp.Om)(t)) {
-        let t = (function () {
+    (0, E8.tA)({
+        ...(function () {
             let e = ji.A.draftThemeSettings,
                 t = ji.A.draftEnabled;
             if (null == e || !t || !(0, jp.Om)(e)) {
@@ -20836,10 +20834,12 @@ function jf(e) {
                 original: ji.A.originalThemeSettings,
                 originalEnabled: ji.A.originalEnabled,
             };
-        })();
-        (0, E8.tA)({ ...t, guildId: e, origin: je.v5.GUILD_SETTINGS, owner: je.AY.GUILD_SETTINGS });
-    }
-    (0, E8.Jt)(je.AY.PREVIEW_PANEL),
+        })(),
+        guildId: e,
+        origin: je.v5.GUILD_SETTINGS,
+        owner: je.AY.GUILD_SETTINGS,
+    }),
+        (0, E8.Jt)(je.AY.PREVIEW_PANEL),
         (0, jN.nf)(jN.HP.GUILD_THEME_PREVIEW, { guildId: e, from: jN.dJ.GUILD_SETTINGS }),
         et.A.close(),
         (0, iM.uh)(e, (0, jA.q)(e));

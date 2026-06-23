@@ -1,91 +1,96 @@
-n.d(t, { A: () => I });
-var u = n(64700),
-    l = n(17928),
-    r = n(192308),
-    i = n(688810),
-    o = n(987144),
+n.d(t, { A: () => f });
+var l = n(64700),
+    u = n(17928),
+    i = n(192308),
+    o = n(688810),
+    r = n(987144),
     s = n(71393),
-    E = n(403362),
-    _ = n(645619),
-    A = n(864310),
-    a = n(568065),
-    d = n(181940),
-    G = n(627968),
-    R = n(652215);
-function P(e, t, u) {
-    u && (0, r.closeAllModals)(),
+    a = n(403362),
+    c = n(645619),
+    d = n(864310),
+    p = n(568065),
+    A = n(181940),
+    b = n(627968),
+    E = n(652215);
+function h(e, t, l) {
+    l && (0, i.closeAllModals)(),
         null != t &&
-            (0, r.openModalLazy)(async () => {
-                let { default: u } = await Promise.all([
+            (0, i.openModalLazy)(async () => {
+                let { default: l } = await Promise.all([
                     n.e("97158"),
+                    n.e("98508"),
                     n.e("49526"),
                     n.e("22455"),
                     n.e("48317"),
+                    n.e("6350"),
                     n.e("69149"),
                     n.e("49379"),
+                    n.e("45046"),
                     n.e("35016"),
+                    n.e("80565"),
                     n.e("957"),
                     n.e("50186"),
-                    n.e("2211"),
+                    n.e("42592"),
                 ]).then(n.bind(n, 843214));
-                return (n) => (0, G.jsx)(u, { guildId: e, powerup: t, ...n });
+                return (n) => (0, b.jsx)(l, { guildId: e, powerup: t, ...n });
             });
 }
-function I(e, t) {
-    let { analyticsLocations: n } = (0, i.Ay)(),
-        { onToggle: r, isLoading: G, error: I } = (0, d.A)(e, t),
-        S = (0, l.bG)([s.A], () => s.A.getGuild(e)),
-        c = (function (e, t) {
-            let n = (0, l.bG)([s.A], () => s.A.getGuild(e)),
-                r = (0, l.bG)([_.A], () => _.A.getStateForGuild(e)),
-                { spent: i } = (0, A.A)(e),
-                o = u.useMemo(() => {
-                    if (null == t || t.type !== a.o9.LEVEL || null == r) return [];
-                    let e = a.y7[t.skuId];
+function f(e, t) {
+    let { skipActivateModal: n } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { analyticsLocations: i } = (0, o.Ay)(),
+        { onToggle: b, isLoading: f, error: L } = (0, A.A)(e, t),
+        P = (0, u.bG)([s.A], () => s.A.getGuild(e)),
+        g = (function (e, t) {
+            let n = (0, u.bG)([s.A], () => s.A.getGuild(e)),
+                i = (0, u.bG)([c.A], () => c.A.getStateForGuild(e)),
+                { spent: o } = (0, d.A)(e),
+                r = l.useMemo(() => {
+                    if (null == t || t.type !== p.o9.LEVEL || null == i) return [];
+                    let e = p.y7[t.skuId];
                     return null == e
                         ? []
-                        : Object.entries(a.wr)
+                        : Object.entries(p.wr)
                               .filter((t) => {
-                                  let [n, u] = t;
-                                  return u === e && null != r.unlockedPowerups[n];
+                                  let [n, l] = t;
+                                  return l === e && null != i.unlockedPowerups[n];
                               })
                               .map((e) => {
                                   let [t] = e;
-                                  return r.allPowerups[t];
+                                  return i.allPowerups[t];
                               })
-                              .filter(E.Vq);
-                }, [t, r]),
-                d = o?.reduce((e, t) => e + t.cost, 0);
-            return Math.max((n?.premiumSubscriberCount ?? 0) - i + (d ?? 0), 0);
+                              .filter(a.Vq);
+                }, [t, i]),
+                A = r?.reduce((e, t) => e + t.cost, 0);
+            return Math.max((n?.premiumSubscriberCount ?? 0) - o + (A ?? 0), 0);
         })(e, t);
     return {
-        onActivate: u.useCallback(
+        onActivate: l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                    { shouldCloseAllModals: u = !0 } = e;
-                if (null != S && null != t)
-                    return c < t.cost
-                        ? void (0, o.g)({
+                    { shouldCloseAllModals: l = !0 } = e;
+                if (null != P && null != t)
+                    return g < t.cost
+                        ? void (0, r.g)({
                               analyticsLocation: {
-                                  page: R.liQ.GUILD_POWERUPS_OVERVIEW,
-                                  section: R.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
+                                  page: E.liQ.GUILD_POWERUPS_OVERVIEW,
+                                  section: E.JJy.GUILD_POWERUPS_OVERVIEW_CARD,
                               },
-                              numberOfBoostsToAdd: t.cost - c,
-                              analyticsLocations: n,
-                              guild: S,
-                              intent: t.type === a.o9.LEVEL ? a.Pn.LEVEL : a.Pn.PERK,
+                              numberOfBoostsToAdd: t.cost - g,
+                              analyticsLocations: i,
+                              guild: P,
+                              intent: t.type === p.o9.LEVEL ? p.Pn.LEVEL : p.Pn.PERK,
                               onSubscribeComplete: () =>
-                                  r(!0)?.then(() => {
-                                      P(S.id, t, u);
+                                  b(!0)?.then(() => {
+                                      n || h(P.id, t, l);
                                   }),
                           })
-                        : r(!0)?.then(() => {
-                              P(S.id, t, u);
+                        : b(!0)?.then(() => {
+                              n || h(P.id, t, l);
                           });
             },
-            [r, t, c, n, S],
+            [b, t, g, i, P, n],
         ),
-        isLoading: G,
-        error: I,
+        isLoading: f,
+        error: L,
     };
 }

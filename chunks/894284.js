@@ -23,5 +23,6 @@ e.exports = {
     qr: "footer_b1a1c5",
     zt: "footerActions_b1a1c5",
     _l: "applyButtonWrapper_b1a1c5",
+    Wz: "footerActionsStacked_b1a1c5",
     z3: "error_b1a1c5",
 };

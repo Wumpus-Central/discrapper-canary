@@ -879,6 +879,14 @@ html.disable-forced-colors * {
     min-width: 0
 }
 
+.footerActionsStacked_b1a1c5 {
+    align-items: stretch;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
 .error_b1a1c5 {
     color: var(--status-danger);
     margin: 0

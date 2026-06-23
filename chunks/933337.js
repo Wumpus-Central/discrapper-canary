@@ -1,19 +1,21 @@
-n.d(t, { A: () => a });
-var l = n(627968),
-    i = n(64700),
-    r = n(192308);
-function a(e, t) {
-    return i.useCallback(() => {
-        (0, r.openModalLazy)(async () => {
-            let { default: i } = await Promise.all([
-                n.e("11002"),
-                n.e("36723"),
-                n.e("31203"),
-                n.e("69149"),
-                n.e("34598"),
-                n.e("86794"),
-            ]).then(n.bind(n, 922545));
-            return (n) => (0, l.jsx)(i, { guildId: e, powerup: t, ...n });
+d.d(n, { A: () => i });
+var t = d(627968),
+    u = d(64700),
+    l = d(192308);
+function i(e, n) {
+    return u.useCallback(() => {
+        (0, l.openModalLazy)(async () => {
+            let { default: u } = await Promise.all([
+                d.e("98508"),
+                d.e("11002"),
+                d.e("63412"),
+                d.e("31203"),
+                d.e("6350"),
+                d.e("69149"),
+                d.e("34598"),
+                d.e("86794"),
+            ]).then(d.bind(d, 922545));
+            return (d) => (0, t.jsx)(u, { guildId: e, powerup: n, ...d });
         });
-    }, [e, t]);
+    }, [e, n]);
 }
