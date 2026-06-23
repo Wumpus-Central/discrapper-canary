@@ -1,11 +1,33 @@
 "use strict";
-n.d(t, { So: () => l, fh: () => u, uA: () => o });
+n.d(t, { AR: () => _, So: () => f, fh: () => p, uA: () => h });
 var i = n(95561),
-    r = n(194004),
-    s = n(174459),
-    a = n(652215);
-function o(e, t, n) {
-    s.default.track(a.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {
+    r = n(597184),
+    s = n(352505),
+    a = n(194004),
+    o = n(174459),
+    l = n(652215);
+let u = new Map(),
+    c = null;
+function d() {
+    c = null;
+    for (let [e, t] of u)
+        o.default.track(l.HAw.DETECTABLE_GAME_SEARCHED_BATCHED, { surface: e, search_count: t, interval: 1 });
+    u.clear();
+}
+function _(e, t) {
+    let n,
+        i = s.r.getConfig({ location: "autocomplete_analytics" });
+    if (i.enabled) {
+        if (e === r.DB.GAME) n = "game_mention_autocomplete";
+        else {
+            if (e !== r.DB.MENTIONS || !i.combineMentionAutocomplete || !t.mentions.otherGlobals) return;
+            n = "mention_autocomplete";
+        }
+        u.set(n, (u.get(n) ?? 0) + 1), null == c && (c = setTimeout(d, 1e3));
+    }
+}
+function h(e, t, n) {
+    o.default.track(l.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {
         ...(0, i.dI)(t),
         ...(0, i.H$)(t.guild_id),
         autocomplete_type: e,
@@ -15,8 +37,8 @@ function o(e, t, n) {
         game_mentions_available: n?.gameMentionsAvailable,
     });
 }
-function l(e, t, n, r) {
-    s.default.track(a.HAw.CHANNEL_AUTOCOMPLETE_SELECTED, {
+function f(e, t, n, r) {
+    o.default.track(l.HAw.CHANNEL_AUTOCOMPLETE_SELECTED, {
         ...(0, i.dI)(n),
         ...(0, i.H$)(n.guild_id),
         autocomplete_type: e,
@@ -31,23 +53,23 @@ function l(e, t, n, r) {
         application_id: r?.gameId,
     });
 }
-function u(e) {
-    let { sticker: t, stickerSelectLocation: n, isReplacement: i, analyticsLocations: o } = e;
-    s.default.track(a.HAw.STICKER_ATTACHED, {
+function p(e) {
+    let { sticker: t, stickerSelectLocation: n, isReplacement: i, analyticsLocations: r } = e;
+    o.default.track(l.HAw.STICKER_ATTACHED, {
         replaced: i,
         source: (function (e) {
             switch (e) {
-                case r.D6.AUTOCOMPLETE:
+                case a.D6.AUTOCOMPLETE:
                     return "autocomplete";
-                case r.D6.STICKER_PICKER:
+                case a.D6.STICKER_PICKER:
                     return "picker";
-                case r.D6.BUILT_IN_INTEGRATION:
+                case a.D6.BUILT_IN_INTEGRATION:
                     return "built_in_integration";
                 default:
                     return null;
             }
         })(n),
         sticker_id: t.id,
-        location_stack: o,
+        location_stack: r,
     });
 }

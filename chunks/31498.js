@@ -152,6 +152,7 @@ class m extends l.EventEmitter {
         let { results: S, metadata: y } = A.queryResults(this.props.channel, this.props.guild, C, h, x),
             v = 0;
         for (let e of Object.values(S)) Array.isArray(e) && (v += e.length);
+        l && C.length > 0 && C !== this.state.query?.queryText && (0, s.AR)(E, h);
         let T = !0 === S.isLoading,
             N = this.shouldShow(v, T, A),
             j = this.state.selectedIndex;

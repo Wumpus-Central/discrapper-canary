@@ -4873,6 +4873,7 @@ var rD =
         (ex.USER_PROFILE_EDIT_SAVED = "user_profile_edit_saved"),
         (ex.USER_PROFILE_REPORT_GAME_DETECTION = "user_profile_report_game_detection"),
         (ex.GAME_DETECTION_FEEDBACK_MODAL = "game_detection_feedback_modal"),
+        (ex.DETECTABLE_GAME_SEARCHED_BATCHED = "detectable_game_searched_batched"),
         (ex.DM_PROFILE_TOGGLED = "dm_profile_toggled"),
         (ex.USER_PROFILE_WISHLIST_ACTION = "user_profile_wishlist_action"),
         (ex.WISHLIST_UPDATED = "wishlist_updated"),
