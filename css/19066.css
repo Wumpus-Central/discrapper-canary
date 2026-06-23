@@ -46,7 +46,7 @@
     margin-inline-start: 32px
 }
 
-@media (max-width:900px) {
+@container premium-marketing-page-container (max-width: 960px) {
     .container__7137c {
         align-items: center;
         flex-direction: column;
@@ -59,7 +59,7 @@
 
     .assetImage__7137c {
         height: auto;
-        width: 100%
+        width: auto
     }
 
     .bannerContent__7137c {
