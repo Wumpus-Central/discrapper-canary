@@ -652,11 +652,14 @@ async function eu(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = y.Ay.getClipById(e) ?? y.Ay.getClipCandidateById(e);
     if (null == i) return;
-    let s = { ...i, ...t };
-    null != (await k(s)) &&
-        (await E.Ay.getMediaEngine().updateClipMetadata(s.filepath, D(s)),
-        n && g.default.track(u.HAw.CLIP_EDITED, { clip_uuid: s.id, ...I.lc("updateClipMetadata") }),
-        r.h.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: s }));
+    let a = { ...i, ...t };
+    if (null == (await k(a))) return;
+    let o = s.A.clips.updateClipMetadata;
+    (0, N.qi)("updateClipMetadata") && a.type === C.nQ.CLIP && null != o
+        ? await o(a.filepath, D(a))
+        : await E.Ay.getMediaEngine().updateClipMetadata(a.filepath, D(a)),
+        n && g.default.track(u.HAw.CLIP_EDITED, { clip_uuid: a.id, ...I.lc("updateClipMetadata") }),
+        r.h.dispatch({ type: "CLIPS_UPDATE_METADATA", clip: a });
 }
 async function ec(e) {
     await eu(e.id, { isFavorite: !e.isFavorite }, !0);
