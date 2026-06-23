@@ -1780,7 +1780,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 567014, Version Hash: 4db0c3ee59531e6b371c6f248b3ef32300a81b7a`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 567016, Version Hash: 59b8ef86c5bb515431b1c5a622d891377713a88f`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -17301,72 +17301,7 @@ let Tp = new Set([aU.M.PREMIUM_WISHLIST_COACHMARK]),
         let eO = eo === aU.M.PREMIUM_GROUP_POPOVER || eo === aU.M.PREMIUM_GROUP_POPOVER_UPSELL_V2,
             eb = S && eO,
             eD = (0, oR.u$)(aU.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, eu?.promotionId ?? "").isDismissed;
-        if (null == eu || "premiumTab" !== eu.properties.properties.oneofKind || eD)
-            if (O)
-                (t = (0, F.jsx)(Ac.E, { type: { text: nl.intl.string(nl.t.RDE0Sc) }, variant: "expressive" })),
-                    (eR = () => {
-                        eP.default.track(eM.HAw.NITRO_TAB_VISITED, { badge_decorator: n, has_premium: h }),
-                            (0, Ib.ne)(b);
-                    }),
-                    (n = 6);
-            else if (eb) (t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 11);
-            else if (I) (t = (0, F.jsx)(IC.A, {})), (n = 0);
-            else if (T) {
-                let e = (0, Ib.ZR)();
-                (t = (0, F.jsx)(IT.MA, {
-                    isTabSelected: s,
-                    badgeCopy: nl.intl.string(nl.t.OS9KPu),
-                    offerExpiresAt: !0 === e ? E?.expires_at : null,
-                })),
-                    (n = 4);
-            } else
-                eN
-                    ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 12))
-                    : A
-                      ? ((t = (0, F.jsx)(IT.MA, {
-                            isTabSelected: s,
-                            badgeCopy: nl.intl.string(nl.t.raP9dM),
-                            offerExpiresAt: null,
-                            unackedBadgeStyle: q,
-                        })),
-                        (n = 4))
-                      : null != y
-                        ? ((t = (0, F.jsx)(Ac.E, { type: { text: y }, variant: "expressive" })), (n = 1))
-                        : null != m && m.discountId === uG.xH
-                          ? ((t = (0, F.jsx)(Iy, { userDiscount: m, isTabSelected: s })), (n = 9))
-                          : null != m
-                            ? ((t = (0, F.jsx)(IT.fY, {
-                                  userDiscount: m,
-                                  isTabSelected: s,
-                                  includesAmountOff: !1,
-                                  badgeStyle: q,
-                              })),
-                              (n = 3),
-                              (eS = z === Ii.F.POPOVER && eI === aU.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
-                              (ey = z === Ii.F.TOOLTIP && !m.hasAcknowledged()))
-                            : null == E || en
-                              ? H
-                                  ? ((t = (0, F.jsx)(IL, { isSelected: s, discountOffer: g })), (n = 8))
-                                  : (k && eo === aU.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
-                                      (j && eo === aU.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
-                                      (B && eE === aU.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
-                                    ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 2))
-                                    : Y && eo === aU.M.PREMIUM_WISHLIST_COACHMARK
-                                      ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 13))
-                                      : N
-                                        ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 14))
-                                        : K && eo === aU.M.CROISSANT_REHEAT_MOMENT
-                                          ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 2))
-                                          : $ &&
-                                            es === aU.M.PROFILE_FRAMES_NITRO_TAB_NEW_BADGE &&
-                                            ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })),
-                                            (n = 15),
-                                            (r = Iw.PROFILE_FRAMES_CARD_ID))
-                              : ((t = (0, F.jsx)(IT.Ag, { trialOffer: E, isTabSelected: s, badgeStyle: q })),
-                                (n = 4),
-                                (eS = z === Ii.F.POPOVER && eI === aU.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
-                                (ey = z === Ii.F.TOOLTIP && null == E.expires_at));
-        else
+        if (null != eu && "premiumTab" === eu.properties.properties.oneofKind)
             (t = (0, F.jsx)(IN.A, {
                 componentId: eu.id,
                 badgeCopy: eu.properties.properties.premiumTab.badgeLabel,
@@ -17376,6 +17311,69 @@ let Tp = new Set([aU.M.PREMIUM_WISHLIST_COACHMARK]),
                 (n = 10),
                 (u = eu.properties.properties.premiumTab.showHoverGradient),
                 (i = eu.properties.properties.premiumTab.deeplinkSection);
+        else if (O)
+            (t = (0, F.jsx)(Ac.E, { type: { text: nl.intl.string(nl.t.RDE0Sc) }, variant: "expressive" })),
+                (eR = () => {
+                    eP.default.track(eM.HAw.NITRO_TAB_VISITED, { badge_decorator: n, has_premium: h }), (0, Ib.ne)(b);
+                }),
+                (n = 6);
+        else if (eb) (t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 11);
+        else if (I) (t = (0, F.jsx)(IC.A, {})), (n = 0);
+        else if (T) {
+            let e = (0, Ib.ZR)();
+            (t = (0, F.jsx)(IT.MA, {
+                isTabSelected: s,
+                badgeCopy: nl.intl.string(nl.t.OS9KPu),
+                offerExpiresAt: !0 === e ? E?.expires_at : null,
+            })),
+                (n = 4);
+        } else
+            eN
+                ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 12))
+                : A
+                  ? ((t = (0, F.jsx)(IT.MA, {
+                        isTabSelected: s,
+                        badgeCopy: nl.intl.string(nl.t.raP9dM),
+                        offerExpiresAt: null,
+                        unackedBadgeStyle: q,
+                    })),
+                    (n = 4))
+                  : null != y
+                    ? ((t = (0, F.jsx)(Ac.E, { type: { text: y }, variant: "expressive" })), (n = 1))
+                    : null != m && m.discountId === uG.xH
+                      ? ((t = (0, F.jsx)(Iy, { userDiscount: m, isTabSelected: s })), (n = 9))
+                      : null != m
+                        ? ((t = (0, F.jsx)(IT.fY, {
+                              userDiscount: m,
+                              isTabSelected: s,
+                              includesAmountOff: !1,
+                              badgeStyle: q,
+                          })),
+                          (n = 3),
+                          (eS = z === Ii.F.POPOVER && eI === aU.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
+                          (ey = z === Ii.F.TOOLTIP && !m.hasAcknowledged()))
+                        : null == E || en
+                          ? H
+                              ? ((t = (0, F.jsx)(IL, { isSelected: s, discountOffer: g })), (n = 8))
+                              : (k && eo === aU.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
+                                  (j && eo === aU.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
+                                  (B && eE === aU.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
+                                ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 2))
+                                : Y && eo === aU.M.PREMIUM_WISHLIST_COACHMARK
+                                  ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 13))
+                                  : N
+                                    ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 14))
+                                    : K && eo === aU.M.CROISSANT_REHEAT_MOMENT
+                                      ? ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })), (n = 2))
+                                      : $ &&
+                                        es === aU.M.PROFILE_FRAMES_NITRO_TAB_NEW_BADGE &&
+                                        ((t = (0, F.jsx)(Ac.E, { type: "new", variant: "expressive" })),
+                                        (n = 15),
+                                        (r = Iw.PROFILE_FRAMES_CARD_ID))
+                          : ((t = (0, F.jsx)(IT.Ag, { trialOffer: E, isTabSelected: s, badgeStyle: q })),
+                            (n = 4),
+                            (eS = z === Ii.F.POPOVER && eI === aU.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
+                            (ey = z === Ii.F.TOOLTIP && null == E.expires_at));
         let eL = Th.NONE;
         ef === aU.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL
             ? (eL = Th.MARKETING_MOMENT_POPOVER)
@@ -18109,7 +18107,7 @@ let Ss = "isHideDevBanner",
                     className: t6()(Sr.Wz, Sr.mr),
                     children: [
                         (0, F.jsx)(Si, { className: Sr.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "567014" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "567016" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
