@@ -1099,9 +1099,8 @@ function nt(e) {
             accountLinkButtonRef: _,
         } = e,
         h = e7.useConfig({ location: "ActivityPanelGameCard" }),
-        E = (0, ed.useRiotSocialSDKMigrationDefaultBody)({ location: "ActivityPanelGameCard" }),
-        m = a ? o : i,
-        g = null == m;
+        E = a ? o : i,
+        m = null == E;
     if (
         ((0, eo.A)(
             {
@@ -1113,18 +1112,18 @@ function nt(e) {
                     type: a ? "incentivized" : "default",
                 },
             },
-            { disableTrack: g },
+            { disableTrack: m },
         ),
-        g)
+        m)
     )
         return null;
-    let A = z.intl.formatToPlainString(h.altTitle ? z.t.hUbQT2 : z.t["lo6H6+"], { gameName: m.name }),
-        I = z.intl.string(E ?? (h.altBody ? z.t["JKqu+4"] : z.t.qYAzOp)),
-        T = z.intl.string(h.altCta ? z.t.jynBQ5 : z.t.lw71Nf);
-    a && (T = z.intl.string(t7.default["2cOIOr"]));
-    let S = [
+    let g = z.intl.formatToPlainString(h.altTitle ? z.t.hUbQT2 : z.t["lo6H6+"], { gameName: E.name }),
+        A = z.intl.string(z.t["2lfjU+"]),
+        I = z.intl.string(h.altCta ? z.t.jynBQ5 : z.t.lw71Nf);
+    a && (I = z.intl.string(t7.default["2cOIOr"]));
+    let T = [
         {
-            text: T,
+            text: I,
             onClick: () => {
                 l(er.i.TAKE_ACTION), u({ analyticsLocations: d });
             },
@@ -1133,8 +1132,8 @@ function nt(e) {
     return (
         a &&
             ((t = "beta"),
-            (A = z.intl.formatToPlainString(t7.default.dPuaZE, { applicationName: m.name })),
-            (I = z.intl.string(t7.default.jR3bbS)),
+            (g = z.intl.formatToPlainString(t7.default.dPuaZE, { applicationName: E.name })),
+            (A = z.intl.string(t7.default.jR3bbS)),
             (n = {
                 text: z.intl.string(z.t.hvVgAZ),
                 link: "https://www.riotgames.com/integrating-with-discord",
@@ -1145,11 +1144,11 @@ function nt(e) {
             graphic: {
                 type: "dynamic",
                 component: f.DynamicGraphicComponent.ACCOUNT_LINK_DISPLAY,
-                props: { application: m, isIncentivizedAccountLinking: a },
+                props: { application: E, isIncentivizedAccountLinking: a },
             },
             badge: t,
-            title: A,
-            body: I,
+            title: g,
+            body: A,
             textLink: n,
             targetElementRef: _,
             align: "right",
@@ -1157,7 +1156,7 @@ function nt(e) {
             gradientColor: "purple",
             onRequestClose: () => l(er.i.USER_DISMISS),
             caretConfig: { align: "end" },
-            actions: S,
+            actions: T,
         })
     );
 }

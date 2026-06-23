@@ -17,3 +17,5 @@ function o(e) {
         rounded: !0,
     });
 }
+rounded: !0;
+})}

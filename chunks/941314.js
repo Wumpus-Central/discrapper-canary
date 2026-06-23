@@ -1,13 +1,8 @@
 "use strict";
-n.r(t),
-    n.d(t, {
-        getIsRiotSocialSDKMigrationEnabled: () => c,
-        useIsRiotSocialSDKMigrationEnabled: () => u,
-        useRiotSocialSDKMigrationDefaultBody: () => d,
-    });
+n.r(t), n.d(t, { getIsRiotSocialSDKMigrationEnabled: () => c, useIsRiotSocialSDKMigrationEnabled: () => u });
 var i = n(945810);
-let r = { 0: { enabled: !1, defaultBody: n(375708).t["2lfjU+"] }, 1: { enabled: !0, defaultBody: null } },
-    s = { enabled: !1, defaultBody: null },
+let r = { 0: { enabled: !1 }, 1: { enabled: !0 } },
+    s = { enabled: !1 },
     a = (0, i.mj)({ name: "2026-04-riot-social-sdk-migration", kind: "user", defaultConfig: s, variations: r }),
     o = (0, i.mj)({
         name: "2026-05-riot-social-sdk-migration-us--canada",
@@ -32,10 +27,4 @@ function c(e) {
         n = o.getConfig(e),
         i = l.getConfig(e);
     return t.enabled || n.enabled || i.enabled;
-}
-function d(e) {
-    let t = a.useConfig(e),
-        n = o.useConfig(e),
-        i = l.useConfig(e);
-    return t.enabled || n.enabled || i.enabled ? null : (t.defaultBody ?? n.defaultBody ?? i.defaultBody);
 }
