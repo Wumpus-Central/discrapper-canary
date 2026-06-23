@@ -16,7 +16,8 @@
     cursor: pointer
 }
 
-.interactive_f88cfd:focus-within,
+.interactive_f88cfd:focus-visible,
+.interactive_f88cfd:has(:focus-visible),
 .interactive_f88cfd:hover {
     background: var(--interactive-background-hover);
     color: var(--interactive-text-hover)
@@ -45,7 +46,8 @@
     forced-color-adjust: none
 }
 
-.enable-forced-colors .interactive_f88cfd:focus-within,
+.enable-forced-colors .interactive_f88cfd:focus-visible,
+.enable-forced-colors .interactive_f88cfd:has(:focus-visible),
 .enable-forced-colors .interactive_f88cfd:hover {
     background-color: ButtonFace;
     border-color: ButtonText;
@@ -53,7 +55,8 @@
 }
 
 .enable-forced-colors .interactive_f88cfd.selected_f88cfd,
-.enable-forced-colors .interactive_f88cfd.selected_f88cfd:focus-within,
+.enable-forced-colors .interactive_f88cfd.selected_f88cfd:focus-visible,
+.enable-forced-colors .interactive_f88cfd.selected_f88cfd:has(:focus-visible),
 .enable-forced-colors .interactive_f88cfd.selected_f88cfd:hover {
     background-color: Highlight;
     border-color: HighlightText;
