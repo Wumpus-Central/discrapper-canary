@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { F: () => g });
+n.d(t, { F: () => E });
 var l = n(64700),
     i = n(17928),
     s = n(318254),
@@ -8,27 +8,28 @@ var l = n(64700),
     o = n(288106),
     u = n(240248),
     c = n(429635),
-    d = n(375708);
-let m = "{value}",
-    h = { ORBS: s.C, TAG: r.g };
-function p(e) {
-    return null != e ? h[e] : void 0;
-}
-function f(e, t) {
-    return null == e ? null : e.includes(m) ? (null == t ? null : e.replaceAll(m, String(t))) : e;
+    d = n(430825),
+    m = n(375708);
+let h = "{value}",
+    p = { ORBS: s.C, TAG: r.g };
+function f(e) {
+    return null != e ? p[e] : void 0;
 }
 function g(e, t) {
+    return null == e ? null : e.includes(h) ? (null == t ? null : e.replaceAll(h, String(t))) : e;
+}
+function E(e, t) {
     let { applicationId: n, skuId: s } = t,
         r = (0, c.A)({ applicationId: n }),
-        m = l.useMemo(() => {
+        h = l.useMemo(() => {
             let e = r?.storefront?.promotions;
             return null == e ? null : (Object.values(e)[0] ?? null);
         }, [r]),
-        h =
+        p =
             "gift_customization" === e || "sku_gift_badge" === e || "vc_gift_recommendations" === e
                 ? o.QK.GIFT
                 : o.QK.SELF_PURCHASE,
-        g = (0, i.bG)(
+        E = (0, i.bG)(
             [a.A],
             () =>
                 (function (e, t) {
@@ -38,26 +39,26 @@ function g(e, t) {
                         if (e?.amount != null) return e.amount;
                     }
                     return null;
-                })(a.A.getRewardsForSkuId(s), h),
-            [s, h],
+                })(a.A.getRewardsForSkuId(s), p),
+            [s, p],
         );
     return l.useMemo(() => {
-        if (null == m) return null;
-        let t = null != m.endsAt ? new Date(m.endsAt) : null;
+        if (null == h) return null;
+        let t = null != h.endsAt ? new Date(h.endsAt) : null;
         switch (e) {
             case "storefront_banner":
             case "vc_purchase_recommendations":
             case "vc_gift_recommendations": {
-                let e = m.storefront?.headerText;
+                let e = h.storefront?.headerText;
                 if ((0, u.uJ)(e)) return null;
-                return { Icon: p(m.pdp?.icon ?? null), text: e, tooltip: null, endsAt: t, rewardValue: null };
+                return { Icon: f(h.pdp?.icon ?? null), text: e, tooltip: null, endsAt: t, rewardValue: null };
             }
             case "storefront_badge": {
-                let e = m.storefront?.headerText;
+                let e = h.storefront?.headerText;
                 if ((0, u.uJ)(e)) return null;
                 return {
-                    Icon: p(m.pdp?.icon ?? "TAG"),
-                    text: d.intl.string(d.t.cZCqGn),
+                    Icon: f(h.pdp?.icon ?? "TAG"),
+                    text: m.intl.string(d.default.hriMCc),
                     tooltip: e,
                     endsAt: t,
                     rewardValue: null,
@@ -66,32 +67,32 @@ function g(e, t) {
             case "pdp":
             case "card":
             case "gift_customization": {
-                if (null == g) return null;
-                let n = "gift_customization" === e ? m.checkout : m.pdp,
-                    l = f(n?.label ?? null, g);
+                if (null == E) return null;
+                let n = "gift_customization" === e ? h.checkout : h.pdp,
+                    l = g(n?.label ?? null, E);
                 if ((0, u.uJ)(l)) return null;
                 return {
-                    Icon: p(n?.icon ?? null),
+                    Icon: f(n?.icon ?? null),
                     text: l,
-                    tooltip: f(n?.tooltip ?? null, g),
+                    tooltip: g(n?.tooltip ?? null, E),
                     endsAt: t,
-                    rewardValue: g,
+                    rewardValue: E,
                 };
             }
             case "sku_purchase_badge":
             case "sku_gift_badge": {
-                if (null == g) return null;
-                let n = "sku_gift_badge" === e ? m.checkout : m.pdp,
-                    l = f(n?.label ?? null, g);
+                if (null == E) return null;
+                let n = "sku_gift_badge" === e ? h.checkout : h.pdp,
+                    l = g(n?.label ?? null, E);
                 if ((0, u.uJ)(l)) return null;
                 return {
-                    Icon: p(n?.icon ?? null),
-                    text: d.intl.string(d.t.cZCqGn),
-                    tooltip: f(n?.tooltip ?? null, g),
+                    Icon: f(n?.icon ?? null),
+                    text: m.intl.string(d.default.hriMCc),
+                    tooltip: g(n?.tooltip ?? null, E),
                     endsAt: t,
-                    rewardValue: g,
+                    rewardValue: E,
                 };
             }
         }
-    }, [e, m, g]);
+    }, [e, h, E]);
 }
