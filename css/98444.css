@@ -64,11 +64,6 @@
     background-color: var(--background-surface-high)
 }
 
-.rewardOfferNotice_f7398d {
-    margin: var(--space-16) -16px -16px;
-    width: calc(100% + 32px)
-}
-
 .ctaContainer_f7398d {
     align-items: center;
     background-color: var(--background-surface-highest);

@@ -6,7 +6,7 @@ var i = n(627968),
     a = n(188275),
     o = n(652215);
 let l = (e) => {
-    let { sku: t, application: l, analyticsLocations: u, orbsReward: c } = e;
+    let { sku: t, application: l, analyticsLocations: u, entitlement: c } = e;
     (0, r.openModalLazy)(
         async () => {
             let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await Promise.all([
@@ -16,7 +16,7 @@ let l = (e) => {
                 n.e("20310"),
                 n.e("80307"),
             ]).then(n.bind(n, 472734));
-            return (n) => (0, i.jsx)(e, { ...n, sku: t, application: l, analyticsLocations: u, orbsReward: c });
+            return (n) => (0, i.jsx)(e, { ...n, sku: t, application: l, analyticsLocations: u, entitlement: c });
         },
         {
             modalKey: "social-layer-storefront-item-claimed-successfully-modal",

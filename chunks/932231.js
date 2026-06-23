@@ -8,7 +8,6 @@ i.exports = {
     HV: "wishlistItems4Wide_f7398d",
     Zp: "loadingApplicationWidgetPanel_f7398d",
     kc: "loadingFeaturePanelRecomendations_f7398d",
-    Ij: "rewardOfferNotice_f7398d",
     OQ: "ctaContainer_f7398d",
     bC: "ctaFiller_f7398d",
     Ku: "ctaIcon_f7398d",

@@ -1,7 +1,6 @@
-e.exports = {
+d.exports = {
     kL: "container_d7bc5d " + a(824078).popover,
     L: "voiceChannelGiftingBreadcrumb_d7bc5d",
-    Nh: "voiceChannelRewardOfferNotice_d7bc5d",
     Db: "experimentContainer_d7bc5d " + a(824078).popover,
     XG: "scroller_d7bc5d " + a(824078).popover,
     aq: "durationContainer_d7bc5d",

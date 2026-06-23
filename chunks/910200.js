@@ -1,58 +1,56 @@
 "use strict";
-n.d(t, { A: () => m, O: () => g });
+n.d(t, { O: () => E });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(989349),
-    l = n.n(o),
-    u = n(278416),
-    c = n(834730),
-    d = n(459192),
-    _ = n(990078),
-    h = n(262427),
-    f = n(396583),
-    p = n(375708),
-    E = n(82199);
-function m(e) {
+    o = n(278416),
+    l = n(834730),
+    u = n(459192),
+    c = n(990078),
+    d = n(262427),
+    _ = n(396583),
+    h = n(421108),
+    f = n(82199);
+function p(e) {
     let {
             className: t,
-            Icon: n = u.g,
+            Icon: n = o.g,
             iconSize: r,
             customGraphic: s,
-            gradientColor: o = "green",
-            tooltip: l,
-            ...c
+            gradientColor: l = "green",
+            tooltip: _,
+            ...h
         } = e,
-        f = () =>
-            (0, i.jsx)(h.A, {
-                className: a()(E.Xx, t),
-                gradientColor: o,
+        p = () =>
+            (0, i.jsx)(d.A, {
+                className: a()(f.Xx, t),
+                gradientColor: l,
                 ...(null != s ? { customGraphic: s } : { Icon: n, iconSize: r }),
-                ...c,
+                ...h,
             });
-    return null != l && "object" == typeof l
-        ? (0, i.jsx)(d.u, { assetSize: 48, asContainer: !0, element: "div", ...l, children: f() })
-        : null != l && "string" == typeof l
-          ? (0, i.jsx)(_.m, { text: l, asContainer: !0, tag: "div", children: f() })
-          : f();
+    return null != _ && "object" == typeof _
+        ? (0, i.jsx)(u.u, { assetSize: 48, asContainer: !0, element: "div", ..._, children: p() })
+        : null != _ && "string" == typeof _
+          ? (0, i.jsx)(c.m, { text: _, asContainer: !0, tag: "div", children: p() })
+          : p();
 }
-function g(e) {
+function E(e) {
     let { text: t, endDatetime: n, ...s } = e,
-        [a, o] = r.useState(() => A(n));
+        [a, o] = r.useState(() => (0, h.u)(n));
     return (
-        (0, f.A)(() => {
-            o(A(n));
+        (0, _.A)(() => {
+            o((0, h.u)(n));
         }, 1e3),
-        (0, i.jsx)(m, {
+        (0, i.jsx)(p, {
             ...s,
             children: (0, i.jsxs)("div", {
-                className: E.Yu,
+                className: f.Yu,
                 children: [
-                    (0, i.jsx)(c.E, { variant: "text-xs/semibold", color: "currentColor", children: t }),
+                    (0, i.jsx)(l.E, { variant: "text-xs/semibold", color: "currentColor", children: t }),
                     null != a
-                        ? (0, i.jsx)(c.E, {
-                              className: E.cR,
+                        ? (0, i.jsx)(l.E, {
+                              className: f.cR,
                               variant: "text-xs/medium",
                               color: "currentColor",
                               children: a,
@@ -62,10 +60,4 @@ function g(e) {
             }),
         })
     );
-}
-function A(e) {
-    if (null == e) return null;
-    let t = l()(),
-        n = l()(new Date(e)).diff(t, "days");
-    return n <= 0 ? null : p.intl.formatToPlainString(p.t.BXpdIg, { days: Math.max(n, 1) });
 }
