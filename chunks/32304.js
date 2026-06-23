@@ -3,4 +3,5 @@ e.exports = {
     Sy: "containerWithoutHero__343c1",
     p9: "sectionWrapper__343c1",
     Gf: "sectionTitle__343c1",
+    y7: "emptyStateContainer__343c1",
 };
