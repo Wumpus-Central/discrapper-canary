@@ -4,9 +4,9 @@ var n = i(627968),
     s = i(688807),
     a = i(17928),
     r = i(425763),
-    c = i(248550),
-    u = i(287809),
-    o = i(788593),
+    c = i(519182),
+    o = i(287809),
+    u = i(788593),
     d = i(908683),
     g = i(598161),
     m = i(524063);
@@ -21,7 +21,7 @@ function f(e) {
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        p = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
+        p = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
         I = (0, r.VU)(),
         A = l.useMemo(
             () =>
@@ -35,7 +35,12 @@ function f(e) {
                               return (0, n.jsx)("div", {
                                   className: m.dt,
                                   style: { width: l },
-                                  children: (0, n.jsx)(g.u, { widget: e, user: t, disableInteraction: !0 }),
+                                  children: (0, n.jsx)(g.u, {
+                                      widget: e,
+                                      user: t,
+                                      allowEditing: !1,
+                                      disableInteraction: !0,
+                                  }),
                               });
                           }
                           if ("GAME_COVER" === l && s?.gameName != null) {
@@ -43,7 +48,7 @@ function f(e) {
                                   r = a?.() ?? 90;
                               return (0, n.jsx)("div", {
                                   style: { width: r },
-                                  children: (0, n.jsx)(o.A, {
+                                  children: (0, n.jsx)(u.A, {
                                       className: m.XJ,
                                       imageSrc: e,
                                       gameName: l,
@@ -63,6 +68,7 @@ function f(e) {
                                       user: t,
                                       widgetType: i,
                                       game: e,
+                                      allowEditing: !1,
                                       disableInteraction: !0,
                                   }),
                               });
@@ -102,7 +108,7 @@ function f(e) {
         return null;
     null == E.current && h();
     let { x: j, y: N } = E.current ?? { x: 0, y: 0 },
-        T = x.x - j - 60 * !!I,
-        v = x.y - N;
-    return (0, n.jsx)("div", { className: m.kL, style: { transform: `translate3d(${T}px, ${v}px, 0)` }, children: A });
+        v = x.x - j - 60 * !!I,
+        T = x.y - N;
+    return (0, n.jsx)("div", { className: m.kL, style: { transform: `translate3d(${v}px, ${T}px, 0)` }, children: A });
 }

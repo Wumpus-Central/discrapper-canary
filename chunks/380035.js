@@ -1,49 +1,49 @@
-e.d(i, { default: () => g });
-var n = e(627968),
-    l = e(64700),
-    s = e(189213),
-    a = e(17928),
-    r = e(834730),
-    c = e(287809),
-    d = e(975571),
-    o = e(735321),
-    u = e(598161),
-    x = e(606758),
-    h = e(518477),
-    p = e(375708),
-    E = e(708584);
-function b(t) {
-    let { widget: i, user: e } = t;
-    return (0, n.jsx)(u.u, { widget: i, user: e, disableInteraction: !0 });
-}
+n.d(i, { default: () => b });
+var e = n(627968),
+    l = n(64700),
+    s = n(189213),
+    a = n(17928),
+    r = n(834730),
+    c = n(287809),
+    d = n(975571),
+    o = n(735321),
+    u = n(598161),
+    x = n(606758),
+    E = n(518477),
+    h = n(375708),
+    p = n(708584);
 function g(t) {
-    let { transitionState: i, widget: e, userId: u, onClose: g, trackUserProfileEditAction: j } = t,
+    let { widget: i, user: n } = t;
+    return (0, e.jsx)(u.u, { widget: i, user: n, allowEditing: !1, disableInteraction: !0 });
+}
+function b(t) {
+    let { transitionState: i, widget: n, userId: u, onClose: b, trackUserProfileEditAction: j } = t,
         m = l.useCallback(() => {
-            (0, o.qA)(e),
-                j({ action: "WIDGET_REMOVED", ...e.getProfileEditAnalyticsOptions() }),
-                g(),
-                (0, x.XA)(h.jM.WIDGET_REMOVED);
-        }, [e, g, j]),
+            (0, o.qA)(n),
+                j({ action: "WIDGET_REMOVED", ...n.getProfileEditAnalyticsOptions() }),
+                b(),
+                (0, x.XA)(E.jM.WIDGET_REMOVED);
+        }, [n, b, j]),
         C = (0, a.bG)([c.default], () => c.default.getUser(u));
     return null == C
         ? null
-        : (0, n.jsxs)(s.Modal, {
+        : (0, e.jsxs)(s.Modal, {
               transitionState: i,
-              onClose: g,
-              title: p.intl.string(p.t.Mm07Yc),
-              subtitle: p.intl.format(p.t["x+djI4"], { helpUrl: d.C }),
+              onClose: b,
+              title: h.intl.string(h.t.Mm07Yc),
+              subtitle: h.intl.format(h.t["x+djI4"], { helpUrl: d.C }),
               actions: [
-                  { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: g },
-                  { variant: "critical-primary", text: p.intl.string(p.t.Mm07Yc), onClick: m },
+                  { variant: "secondary", text: h.intl.string(h.t["ETE/oC"]), onClick: b },
+                  { variant: "critical-primary", text: h.intl.string(h.t.Mm07Yc), onClick: m },
               ],
               children: [
-                  (0, n.jsx)("div", { className: E.w, children: (0, n.jsx)(b, { widget: e, user: C }) }),
-                  (0, n.jsx)("div", {
-                      className: E.d,
-                      children: (0, n.jsx)(r.E, {
+                  (0, e.jsx)("div", { className: p.w, children: (0, e.jsx)(g, { widget: n, user: C }) }),
+                  (0, e.jsx)("div", {
+                      className: p.d,
+                      children: (0, e.jsx)(r.E, {
                           color: "text-subtle",
                           variant: "text-sm/normal",
-                          children: p.intl.string(p.t.bQNGeT),
+                          children: h.intl.string(h.t.bQNGeT),
                       }),
                   }),
               ],

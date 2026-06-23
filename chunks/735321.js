@@ -36,7 +36,7 @@ var i = n(853811),
     p = n(375708);
 let E = (e) => f.Ok[e.type](e);
 function m(e, t) {
-    let { isCurrentUser: n } = t,
+    let { showEditingControls: n } = t,
         i = e.games.length > 0;
     if (n && i)
         return 1 === s.u[e.type] ? p.intl.string(p.t.wiXdEa) : p.intl.format(p.t["zR1+0/"], { numGames: s.u[e.type] });

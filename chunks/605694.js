@@ -18,8 +18,8 @@ var i = n(627968),
     T = n(477782),
     y = n(687966),
     j = n(404778),
-    v = n(155718),
-    I = n(793574),
+    I = n(155718),
+    v = n(793574),
     A = n(688810),
     _ = n(46225),
     R = n(369374),
@@ -64,7 +64,7 @@ function q(e) {
             trackEntryPointImpression: !0,
         }),
         { fetched: f, hasAlreadyLinked: E, canStartAuthorization: T, startAuthorization: y, token: j } = (0, _.RD)(c),
-        { analyticsLocations: v } = (0, A.Ay)(I.A.USER_PROFILE_APPLICATION_WIDGET),
+        { analyticsLocations: I } = (0, A.Ay)(v.A.USER_PROFILE_APPLICATION_WIDGET),
         R = a.useCallback(() => {
             T &&
                 (t({
@@ -73,8 +73,8 @@ function q(e) {
                         : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                     applicationId: l.applicationId,
                 }),
-                y({ analyticsLocations: v }));
-        }, [T, E, y, t, l.applicationId, v]),
+                y({ analyticsLocations: I }));
+        }, [T, E, y, t, l.applicationId, I]),
         b = null == s && f && !E && T,
         D =
             null == s &&
@@ -383,7 +383,7 @@ function er(e) {
         n = a.useId(),
         l = (0, G.X)();
     return null != t
-        ? (0, i.jsx)(W.A, { type: v.I5.TEXT_DISPLAY, id: n, content: t, className: B.Qq })
+        ? (0, i.jsx)(W.A, { type: I.I5.TEXT_DISPLAY, id: n, content: t, className: B.Qq })
         : (0, i.jsx)("div", { className: r()(B.jC, l.className) });
 }
 function es(e) {
@@ -417,10 +417,10 @@ function eo(e) {
     let { size: t = "small", divider: n = !1 } = e,
         l = a.useId();
     return (0, i.jsx)(X.A, {
-        type: v.I5.SEPARATOR,
+        type: I.I5.SEPARATOR,
         id: l,
         divider: n,
-        spacing: "large" === t ? v.C8.LARGE : v.C8.SMALL,
+        spacing: "large" === t ? I.C8.LARGE : I.C8.SMALL,
     });
 }
 function ec(e, t) {
@@ -479,12 +479,23 @@ function em(e) {
         o,
         c,
         d,
-        { user: p, widget: h, disableCTA: g, cta: x, subtle: f = !1, embedded: E = !1 } = e,
-        j = q(e),
         {
-            isLoading: v,
-            hasData: I,
-            components: A,
+            user: p,
+            widget: h,
+            disableCTA: g,
+            cta: x,
+            subtle: f = !1,
+            embedded: E = !1,
+            allowEditing: j,
+            disableInteraction: I,
+            index: v,
+            trailingContent: A,
+        } = e,
+        _ = q(e),
+        {
+            isLoading: R,
+            hasData: b,
+            components: N,
         } = ((t = p.id),
         (n = h.applicationId),
         (l = (0, D.A)()),
@@ -561,33 +572,36 @@ function em(e) {
             });
         }, [o, s, l])),
         { isLoading: c, hasData: null != s, components: d });
-    return null == A
+    return null == N
         ? null
         : (0, i.jsxs)(V.A, {
-              ...e,
               userId: p.id,
               widget: h,
+              allowEditing: j,
+              disableInteraction: I,
+              index: v,
+              trailingContent: A,
               className: r()(B.Y5, { [B.aK]: f, [B.F9]: E }),
-              headerTitle: j.headerTitle,
+              headerTitle: _.headerTitle,
               headerClassName: B.wx,
               additionalManageWidgetMenuItems:
-                  null != j.game
+                  null != _.game
                       ? (0, i.jsx)(T.Dr, {
                             id: "view-game-profile",
                             label: "View Game Profile",
                             icon: y._,
-                            action: j.openGameProfileModal,
+                            action: _.openGameProfileModal,
                         })
                       : null,
               children: [
-                  (0, i.jsx)(eu, { widget: h, children: (0, i.jsx)(ee, { component: A }) }),
+                  (0, i.jsx)(eu, { widget: h, children: (0, i.jsx)(ee, { component: N }) }),
                   (0, i.jsx)(Z, {
-                      isCurrentUser: j.isCurrentUser,
-                      isLoading: v,
-                      hasData: I,
-                      showConnectCta: j.showConnectCta,
-                      showReconnectCta: j.showReconnectCta,
-                      handleConnect: j.handleConnect,
+                      isCurrentUser: _.isCurrentUser,
+                      isLoading: R,
+                      hasData: b,
+                      showConnectCta: _.showConnectCta,
+                      showReconnectCta: _.showReconnectCta,
+                      handleConnect: _.handleConnect,
                       disableCTA: g,
                       cta: x,
                   }),
@@ -595,39 +609,53 @@ function em(e) {
           });
 }
 function ep(e) {
-    let { user: t, widget: n, disableCTA: a, cta: l, subtle: c = !1, embedded: d = !1 } = e,
-        u = q(e),
-        m = (0, b.A)(t.id, n.applicationId),
-        p = m.surfaceConfigs[o.m.WIDGET_TOP],
-        h = m.surfaceConfigs[o.m.WIDGET_BOTTOM];
-    return null == p || null == h
+    let {
+            user: t,
+            widget: n,
+            disableCTA: a,
+            cta: l,
+            subtle: c = !1,
+            embedded: d = !1,
+            allowEditing: u,
+            disableInteraction: m,
+            index: p,
+            trailingContent: h,
+        } = e,
+        g = q(e),
+        x = (0, b.A)(t.id, n.applicationId),
+        f = x.surfaceConfigs[o.m.WIDGET_TOP],
+        E = x.surfaceConfigs[o.m.WIDGET_BOTTOM];
+    return null == f || null == E
         ? null
         : (0, i.jsxs)(V.A, {
-              ...e,
               userId: t.id,
               widget: n,
+              allowEditing: u,
+              disableInteraction: m,
+              index: p,
+              trailingContent: h,
               className: r()(B.Y5, B.v2, { [B.aK]: c, [B.F9]: d }),
               headerClassName: B.vX,
               additionalManageWidgetMenuItems:
-                  null != u.game
+                  null != g.game
                       ? (0, i.jsx)(T.Dr, {
                             id: "view-game-profile",
                             label: "View Game Profile",
                             icon: y._,
-                            action: u.openGameProfileModal,
+                            action: g.openGameProfileModal,
                         })
                       : null,
               children: [
-                  (0, i.jsx)(s.kH, { ...m, surface: o.m.WIDGET_TOP, surfaceConfig: p, header: u.headerTitle }),
+                  (0, i.jsx)(s.kH, { ...x, surface: o.m.WIDGET_TOP, surfaceConfig: f, header: g.headerTitle }),
                   (0, i.jsx)(j.c, {}),
-                  (0, i.jsx)(s.kH, { ...m, surface: o.m.WIDGET_BOTTOM, surfaceConfig: h }),
+                  (0, i.jsx)(s.kH, { ...x, surface: o.m.WIDGET_BOTTOM, surfaceConfig: E }),
                   (0, i.jsx)(Z, {
-                      isCurrentUser: u.isCurrentUser,
-                      isLoading: m.isLoading,
-                      hasData: m.hasIdentity,
-                      showConnectCta: u.showConnectCta,
-                      showReconnectCta: u.showReconnectCta,
-                      handleConnect: u.handleConnect,
+                      isCurrentUser: g.isCurrentUser,
+                      isLoading: x.isLoading,
+                      hasData: x.hasIdentity,
+                      showConnectCta: g.showConnectCta,
+                      showReconnectCta: g.showReconnectCta,
+                      handleConnect: g.handleConnect,
                       disableCTA: a,
                       cta: l,
                       v2: !0,

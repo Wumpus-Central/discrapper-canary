@@ -1,59 +1,59 @@
 n.d(t, { A: () => J });
 var i = n(627968),
-    l = n(64700),
-    a = n(503698),
-    r = n.n(a),
+    a = n(64700),
+    l = n(503698),
+    r = n.n(l),
     s = n(707554),
-    o = n(17928),
-    c = n(915089),
-    d = n(495544),
-    u = n(183555),
-    m = n(735321),
-    p = n(94343),
-    h = n(172218),
-    g = n(704824);
+    o = n(915089),
+    c = n(183555),
+    d = n(735321),
+    u = n(94343),
+    m = n(172218),
+    p = n(704824);
 n(456647);
-var x = n(633075),
-    f = n(451395),
-    E = n(716804),
-    y = n(688807),
+var h = n(633075),
+    g = n(451395),
+    x = n(716804),
+    f = n(688807),
+    E = n(17928),
     T = n(990078),
-    j = n(939249),
-    v = n(772838),
+    y = n(939249),
+    j = n(772838),
     I = n(140735),
-    A = n(834730),
-    _ = n(192308),
-    R = n(922016),
-    D = n(980707),
-    N = n(477782),
-    b = n(241326),
-    C = n(442433),
-    P = n(775602),
-    L = n(606758),
-    w = n(518477),
+    v = n(834730),
+    A = n(192308),
+    _ = n(922016),
+    R = n(980707),
+    b = n(477782),
+    D = n(241326),
+    N = n(442433),
+    C = n(775602),
+    P = n(495544),
+    w = n(606758),
+    L = n(518477),
     S = n(375708),
     O = n(184390);
 function G(e) {
-    let { widget: t, className: n, buttonRef: l, additionalMenuItems: a } = e,
-        s = (0, m.L)(t),
-        o = (0, c.GV)();
+    let { widget: t, className: n, buttonRef: a, additionalMenuItems: l } = e,
+        s = (0, d.L)(t),
+        c = (0, o.GV)();
     return (0, i.jsx)(W, {
-        targetRef: l,
+        targetRef: a,
         widget: t,
-        additionalMenuItems: a,
+        additionalMenuItems: l,
         children: (e) =>
             (0, i.jsx)(X, {
-                children: (0, i.jsxs)(j.D, {
-                    innerRef: l,
+                children: (0, i.jsxs)(y.D, {
+                    innerRef: a,
                     className: r()(O.x6, n),
                     "data-dnd-name": s,
                     "aria-label": S.intl.formatToPlainString(S.t.HWNJJN, { widgetTitle: s }),
-                    "aria-describedby": o,
+                    "aria-describedby": c,
                     "aria-keyshortcuts": "Control+D, Meta+D",
                     ...e,
                     children: [
-                        (0, i.jsx)(v.W, { size: "sm" }),
-                        (0, i.jsx)(I.A, { id: o, children: S.intl.string(S.t.bsuqFn) }),
+                        (0, i.jsx)(j.W, { size: "sm" }),
+                        (0, i.jsx)(I.A, { id: c, children: S.intl.string(S.t.bsuqFn) }),
                     ],
                 }),
             }),
@@ -61,20 +61,20 @@ function G(e) {
 }
 let X = (e) => {
         let { children: t } = e,
-            n = (0, o.bG)([P.Ay], () => P.Ay.keyboardModeEnabled),
-            { isDragging: l } = (0, y.V)((e) => ({ isDragging: e.isDragging() }));
+            n = (0, E.bG)([C.Ay], () => C.Ay.keyboardModeEnabled),
+            { isDragging: a } = (0, f.V)((e) => ({ isDragging: e.isDragging() }));
         return (0, i.jsx)(T.m, {
             __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
                 className: O.HE,
                 children: [
-                    (0, i.jsx)(A.E, {
+                    (0, i.jsx)(v.E, {
                         variant: "text-sm/normal",
                         color: "none",
                         children: S.intl.format(n ? S.t["zvln/l"] : S.t["7cdwhg"], {
                             emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                         }),
                     }),
-                    (0, i.jsx)(A.E, {
+                    (0, i.jsx)(v.E, {
                         variant: "text-sm/normal",
                         color: "none",
                         children: S.intl.format(S.t["4e0rM4"], {
@@ -84,26 +84,26 @@ let X = (e) => {
                 ],
             }),
             position: "top",
-            shouldShow: !0 !== l,
+            shouldShow: !0 !== a,
             ariaHidden: !0,
             children: t,
         });
     },
     W = (e) => {
-        let { children: t, widget: l, targetRef: a, additionalMenuItems: r } = e,
-            { trackUserProfileEditAction: s } = (0, u.NJ)(),
+        let { children: t, widget: a, targetRef: l, additionalMenuItems: r } = e,
+            { trackUserProfileEditAction: s } = (0, c.NJ)(),
             o = (e) => {
                 if (e.shiftKey) {
-                    (0, m.qA)(l),
-                        s({ action: "WIDGET_REMOVED", ...l.getProfileEditAnalyticsOptions() }),
-                        (0, L.XA)(w.jM.WIDGET_REMOVED);
+                    (0, d.qA)(a),
+                        s({ action: "WIDGET_REMOVED", ...a.getProfileEditAnalyticsOptions() }),
+                        (0, w.XA)(L.jM.WIDGET_REMOVED);
                     return;
                 }
-                (0, _.openModalLazy)(
+                (0, A.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
                             n.e("25781"),
-                            n.e("62646"),
+                            n.e("86047"),
                             n.e("15590"),
                             n.e("15166"),
                             n.e("88634"),
@@ -158,40 +158,40 @@ let X = (e) => {
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                userId: d.default.getId(),
-                                widget: l,
+                                userId: P.default.getId(),
+                                widget: a,
                                 trackUserProfileEditAction: s,
                             });
                     },
                     { stackingBehavior: "stack" },
                 );
             };
-        return (0, i.jsx)(R.Y, {
-            targetElementRef: a,
+        return (0, i.jsx)(_.Y, {
+            targetElementRef: l,
             align: "top",
             position: "right",
             disablePointerEvents: !1,
             renderPopout: (e) => {
                 let { closePopout: t } = e;
-                return (0, i.jsx)(D.W, {
+                return (0, i.jsx)(R.W, {
                     "data-menu-migrated": !0,
                     navId: "user-profile-widget-context-menu",
                     onClose: () => {
-                        (0, C.Z_)(), t();
+                        (0, N.Z_)(), t();
                     },
                     onSelect: () => {},
                     "aria-label": S.intl.string(S.t.xpSHSk),
                     className: O.MK,
-                    children: (0, i.jsxs)(N.rX, {
+                    children: (0, i.jsxs)(b.rX, {
                         children: [
                             r,
-                            (0, i.jsx)(N.Dr, {
+                            (0, i.jsx)(b.Dr, {
                                 id: "remove-widget",
                                 label: S.intl.string(S.t.Mm07Yc),
                                 action: o,
                                 color: "danger",
-                                icon: b.u,
-                                leadingAccessory: { type: "icon", icon: b.u },
+                                icon: D.u,
+                                leadingAccessory: { type: "icon", icon: D.u },
                             }),
                         ],
                     }),
@@ -206,31 +206,31 @@ var k = n(534514),
     H = n(928658),
     U = n(620266);
 function Y(e) {
-    let { widget: t, userId: n, className: a, menuItems: s } = e,
-        o = l.useRef(null),
+    let { widget: t, userId: n, className: l, menuItems: s } = e,
+        o = a.useRef(null),
         c = () => {
             (0, H.GJ)(n, t);
         };
-    return (0, i.jsx)(R.Y, {
+    return (0, i.jsx)(_.Y, {
         targetElementRef: o,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(D.W, {
+            return (0, i.jsx)(R.W, {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
-                    (0, C.Z_)(), t();
+                    (0, N.Z_)(), t();
                 },
                 onSelect: () => {},
                 "aria-label": S.intl.string(S.t.xpSHSk),
-                children: (0, i.jsxs)(N.rX, {
+                children: (0, i.jsxs)(b.rX, {
                     children: [
                         s,
                         (0, i.jsx)(
-                            N.Dr,
+                            b.Dr,
                             {
                                 id: "flag-widget",
                                 label: S.intl.string(S.t.D4GvHE),
@@ -246,11 +246,11 @@ function Y(e) {
             });
         },
         children: (e) =>
-            (0, i.jsx)(j.D, {
+            (0, i.jsx)(y.D, {
                 ...e,
                 innerRef: o,
                 "aria-label": S.intl.string(S.t.xpSHSk),
-                className: r()(U.x, a),
+                className: r()(U.x, l),
                 children: (0, i.jsx)(F.j, { size: "sm", color: "currentColor" }),
             }),
     });
@@ -260,8 +260,8 @@ function V(e) {
     let {
         userId: t,
         headingId: n,
-        widget: l,
-        disableInteraction: a = !1,
+        widget: a,
+        disableInteraction: l = !1,
         title: s,
         subtitle: o,
         actionButtons: c = [],
@@ -274,122 +274,122 @@ function V(e) {
                 className: z.DD,
                 children: [
                     (0, i.jsx)(k.D, { variant: "heading-sm/medium", color: "text-default", id: n, children: s }),
-                    null != o && (0, i.jsx)(A.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
+                    null != o && (0, i.jsx)(v.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
                 ],
             }),
-            (0, i.jsx)(K, { widget: l, actionButtons: c, disabledInteraction: a, userId: t }),
+            (0, i.jsx)(K, { widget: a, actionButtons: c, disabledInteraction: l, userId: t }),
         ],
     });
 }
 function K(e) {
-    let { widget: t, actionButtons: n, disabledInteraction: l, userId: a } = e,
-        r = (0, o.bG)([d.default], () => d.default.getId());
-    return l
+    let { widget: t, actionButtons: n, disabledInteraction: a, userId: l } = e,
+        r = (0, E.bG)([P.default], () => P.default.getId());
+    return a
         ? null
         : null != n && n.length > 0
           ? (0, i.jsx)("div", { className: z.o1, children: n })
-          : r !== a
-            ? (0, i.jsx)("div", { className: z.o1, children: (0, i.jsx)(Y, { widget: t, userId: a, className: z.AQ }) })
+          : r !== l
+            ? (0, i.jsx)("div", { className: z.o1, children: (0, i.jsx)(Y, { widget: t, userId: l, className: z.AQ }) })
             : null;
 }
 var B = n(192),
     q = n(686186);
 function Z(e) {
-    let { index: t, widget: n, additionalManageWidgetMenuItems: a, children: s, getWidth: o } = e,
-        d = l.useRef(null),
-        u = l.useRef(null),
+    let { index: t, widget: n, additionalManageWidgetMenuItems: l, children: s, getWidth: c } = e,
+        u = a.useRef(null),
+        m = a.useRef(null),
         { registerManageWidgetButtonRef: p, manageFocusOnReorder: h } = (0, B.r)();
-    l.useLayoutEffect(() => {
+    a.useLayoutEffect(() => {
         let e = p(n.type);
-        return e(d.current), () => e(null);
+        return e(u.current), () => e(null);
     }, [p, n.type]);
-    let g = l.useMemo(() => n.id ?? (0, c.Ld)(), [n.id]),
-        { isDragging: x, dragSourcePosition: E } = (0, f.gY)({
-            dragRef: d,
-            dropRef: u,
+    let x = a.useMemo(() => n.id ?? (0, o.Ld)(), [n.id]),
+        { isDragging: f, dragSourcePosition: E } = (0, g.gY)({
+            dragRef: u,
+            dropRef: m,
             index: t,
             listType: "WIDGETS",
             itemType: "WIDGET",
-            itemId: g,
-            itemPreviewProps: { widget: n, getWidth: o },
-            onReorder: m.R_,
+            itemId: x,
+            itemPreviewProps: { widget: n, getWidth: c },
+            onReorder: d.R_,
             onEnd: () => h(n.type),
         }),
-        y = null != E,
-        T = y && t < E,
-        j = y && t > E;
+        T = null != E,
+        y = T && t < E,
+        j = T && t > E;
     return (0, i.jsxs)("div", {
-        ref: u,
-        className: r()(q.wX, { [q.A]: T, [q.Ze]: j, [q.Id]: x }),
+        ref: m,
+        className: r()(q.wX, { [q.A]: y, [q.Ze]: j, [q.Id]: f }),
         "aria-label": S.intl.formatToPlainString(S.t.YLczh4, { positionNumber: t + 1 }),
-        children: [(0, i.jsx)(G, { buttonRef: d, widget: n, className: q.vn, additionalMenuItems: a }), s],
+        children: [(0, i.jsx)(G, { buttonRef: u, widget: n, className: q.vn, additionalMenuItems: l }), s],
     });
 }
 function J(e) {
     let {
             userId: t,
             widget: n,
-            children: a,
-            disableInteraction: m,
+            children: l,
+            allowEditing: d,
+            disableInteraction: g,
             className: f,
-            index: y,
+            index: E,
             trailingContent: T,
-            headerTitle: j,
-            headerSubtitle: v,
+            headerTitle: y,
+            headerSubtitle: j,
             headerActionButtons: I,
-            headerClassName: A,
-            additionalManageWidgetMenuItems: _,
+            headerClassName: v,
+            additionalManageWidgetMenuItems: A,
         } = e,
-        R = (0, c.GV)(),
-        D = l.useRef(null),
-        N = (0, o.bG)([d.default], () => d.default.getId() === t),
-        b = (0, E.g)(),
-        { trackUserProfileAction: C } = (0, u.NJ)(),
-        P = (function (e) {
+        _ = (0, o.GV)(),
+        R = a.useRef(null),
+        b = (0, x.g)(),
+        { trackUserProfileAction: D } = (0, c.NJ)(),
+        N = (function (e) {
             let { widget: t, onAction: n } = e,
-                [i, a] = (0, l.useState)(!1),
-                r = t instanceof x.R ? t.applicationId : null,
-                { fetched: s } = (0, g.U)(r),
-                o = (0, l.useCallback)(
+                [i, l] = (0, a.useState)(!1),
+                r = t instanceof h.R ? t.applicationId : null,
+                { fetched: s } = (0, p.U)(r),
+                o = (0, a.useCallback)(
                     (e) => {
-                        e && (n({ action: "VIEW_WIDGET", ...t.getProfileAnalyticsOptions() }), a(!0));
+                        e && (n({ action: "VIEW_WIDGET", ...t.getProfileAnalyticsOptions() }), l(!0));
                     },
                     [n, t],
                 );
-            return (0, h.K)(o, void 0, !i && (null == r || s));
-        })({ widget: n, onAction: C }),
-        L = b === n.type;
-    (0, p.A)(P, L);
-    let w = N && null != y && !m,
-        S = () =>
+            return (0, m.K)(o, void 0, !i && (null == r || s));
+        })({ widget: n, onAction: D }),
+        C = b === n.type;
+    (0, u.A)(N, C);
+    let P = d && null != E && !g,
+        w = () =>
             (0, i.jsxs)("div", {
-                ref: D,
+                ref: R,
                 className: r()(q.kL, f),
                 children: [
                     (0, i.jsx)(V, {
                         userId: t,
-                        headingId: R,
-                        title: j,
-                        subtitle: v,
+                        headingId: _,
+                        title: y,
+                        subtitle: j,
                         actionButtons: I,
                         widget: n,
-                        disableInteraction: m,
-                        className: A,
+                        disableInteraction: g,
+                        className: v,
                     }),
-                    (0, i.jsxs)(s.F, { children: [a, T] }),
+                    (0, i.jsxs)(s.F, { children: [l, T] }),
                 ],
             });
     return (0, i.jsx)("section", {
-        ref: P,
-        "aria-labelledby": R,
-        children: w
+        ref: N,
+        "aria-labelledby": _,
+        children: P
             ? (0, i.jsx)(Z, {
-                  index: y ?? 0,
+                  index: E ?? 0,
                   widget: n,
-                  getWidth: () => D.current?.offsetWidth,
-                  additionalManageWidgetMenuItems: _,
-                  children: S(),
+                  getWidth: () => R.current?.offsetWidth,
+                  additionalManageWidgetMenuItems: A,
+                  children: w(),
               })
-            : S(),
+            : w(),
     });
 }

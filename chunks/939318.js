@@ -1,10 +1,10 @@
-i.d(t, { A: () => ey });
+i.d(t, { A: () => eE });
 var n = i(627968),
     l = i(64700),
     s = i(540185),
-    a = i(17928),
-    r = i(495544),
-    d = i(735321),
+    a = i(735321),
+    r = i(17928),
+    d = i(495544),
     o = i(841595),
     c = i(896170),
     u = i(990078),
@@ -19,25 +19,25 @@ var n = i(627968),
     I = i(383329),
     S = i(183555),
     v = i(373842),
-    b = i(375708),
+    E = i(375708),
     y = i(804981);
-function E(e) {
-    let { widgetType: t, widget: i, onAddGame: s, children: a, ...r } = e,
+function b(e) {
+    let { widgetType: t, widget: i, onAddGame: s, children: r, ...d } = e,
         o = l.useMemo(() => new Set(i.games.map((e) => e.applicationId)), [i.games]),
         { trackUserProfileEditAction: u } = (0, S.NJ)(),
         [p, j] = l.useState(""),
         f = l.useRef(""),
-        { options: A, matchSorterOptions: E, isServerSearchActive: C } = (0, I.R)({ query: p }),
-        { applicationIds: w, onAddGame: N } = (0, v.S)(t),
-        T = l.useCallback(
+        { options: A, matchSorterOptions: b, isServerSearchActive: w } = (0, I.R)({ query: p }),
+        { applicationIds: C, onAddGame: T } = (0, v.S)(t),
+        N = l.useCallback(
             (e) => {
-                (0, d.ew)({ widgetType: t, game: { applicationId: e } }),
-                    g.O.announce(b.intl.string(b.t.q0U3DE)),
+                (0, a.ew)({ widgetType: t, game: { applicationId: e } }),
+                    g.O.announce(E.intl.string(E.t.q0U3DE)),
                     u({ action: "GAME_ADDED", gameId: e, widgetEdited: t }),
-                    w.includes(e) && N(e),
+                    C.includes(e) && T(e),
                     s?.();
             },
-            [t, u, s, w, N],
+            [t, u, s, C, T],
         ),
         R = l.useMemo(() => {
             let e = new Map(
@@ -46,14 +46,14 @@ function E(e) {
                     { id: String(e.value), value: String(e.value), label: e.label, disabled: o.has(e.value) },
                 ]),
             );
-            if (C) return [...e.values()];
-            let t = w.map((t) => e.get(t)).filter((e) => null != e && !e.disabled),
+            if (w) return [...e.values()];
+            let t = C.map((t) => e.get(t)).filter((e) => null != e && !e.disabled),
                 i = [...e.values()].filter((e) => !t.includes(e));
             return [...t, ...i];
-        }, [A, o, w, C]),
+        }, [A, o, C, w]),
         k = l.useCallback((e) => e, []),
-        O = l.useMemo(() => ({ ...E, threshold: c.Ht.rankings.CONTAINS, keys: ["label"] }), [E]),
-        L = l.useCallback((e) => (C || "" === e.trim() ? R.length : (0, c.Ht)(R, e, O).length), [C, R, O]),
+        O = l.useMemo(() => ({ ...b, threshold: c.Ht.rankings.CONTAINS, keys: ["label"] }), [b]),
+        L = l.useCallback((e) => (w || "" === e.trim() ? R.length : (0, c.Ht)(R, e, O).length), [w, R, O]),
         P = l.useCallback(
             (e) => {
                 let i = e.target.value;
@@ -71,7 +71,7 @@ function E(e) {
             [p, u, t, L],
         );
     return (0, n.jsx)(m.Y, {
-        ...r,
+        ...d,
         onRequestOpen: () => {
             u({ action: "PRESS_ADD_GAME", widgetEdited: t }), j(""), (f.current = "");
         },
@@ -87,21 +87,21 @@ function E(e) {
             let { closePopout: t } = e;
             return (0, n.jsx)(h.l, {
                 className: y.C,
-                "aria-label": b.intl.string(b.t.uqw8wK),
+                "aria-label": E.intl.string(E.t.uqw8wK),
                 children: (0, n.jsxs)(x.iS, {
                     selectionMode: "single",
                     value: null,
                     onSelectionChange: (e) => {
-                        null != e && (T(e), t());
+                        null != e && (N(e), t());
                     },
                     options: R,
                     matchSorterOptions: O,
-                    customMatchSorter: C ? k : void 0,
+                    customMatchSorter: w ? k : void 0,
                     children: [
                         (0, n.jsx)(x.a3, {
-                            label: b.intl.string(b.t["5h0QOP"]),
+                            label: E.intl.string(E.t["5h0QOP"]),
                             hideLabel: !0,
-                            placeholder: b.intl.string(b.t["5h0QOP"]),
+                            placeholder: E.intl.string(E.t["5h0QOP"]),
                             autoFocus: !0,
                             onQueryChange: P,
                         }),
@@ -110,20 +110,20 @@ function E(e) {
                 }),
             });
         },
-        children: (e) => a(e),
+        children: (e) => r(e),
     });
 }
-function C(e) {
+function w(e) {
     let { disabled: t, ...i } = e,
         s = l.useRef(null);
-    return (0, n.jsx)(E, {
+    return (0, n.jsx)(b, {
         targetElementRef: s,
         position: "bottom",
         align: "center",
         ...i,
         children: (e) =>
             (0, n.jsx)(u.m, {
-                text: b.intl.string(b.t.SgTOtX),
+                text: E.intl.string(E.t.SgTOtX),
                 asContainer: !0,
                 ariaHidden: !0,
                 children: (0, n.jsx)(p.K, {
@@ -131,16 +131,16 @@ function C(e) {
                     variant: "secondary",
                     size: "sm",
                     icon: j.T,
-                    "aria-label": b.intl.string(b.t.SgTOtX),
+                    "aria-label": E.intl.string(E.t.SgTOtX),
                     disabled: t,
                     ...e,
                 }),
             }),
     });
 }
-function w(e) {
+function C(e) {
     let t = l.useRef(null);
-    return (0, n.jsx)(E, {
+    return (0, n.jsx)(b, {
         targetElementRef: t,
         position: "right",
         align: "top",
@@ -149,29 +149,29 @@ function w(e) {
             (0, n.jsx)(f.D, {
                 innerRef: t,
                 className: y.c,
-                "aria-label": b.intl.string(b.t.SgTOtX),
+                "aria-label": E.intl.string(E.t.SgTOtX),
                 ...e,
                 children: (0, n.jsx)(A.p, { color: "currentColor" }),
             }),
     });
 }
-var N = i(61881);
-let T = l.createContext(null);
+var T = i(61881);
+let N = l.createContext(null);
 function R(e) {
     let { widgetType: t, children: i } = e,
-        s = (0, a.bG)([N.A], () => {
-            let e = N.A.getPendingWidgets();
+        s = (0, r.bG)([T.A], () => {
+            let e = T.A.getPendingWidgets();
             if (null == e) return !1;
             let i = e.find((e) => e.type === t);
             if (null == i) return !1;
-            let n = (0, d.cv)(t);
+            let n = (0, a.cv)(t);
             return i.games.length > n;
         }),
-        [r, o] = l.useState(s);
-    return (0, n.jsx)(T.Provider, { value: { expanded: r, setExpanded: o }, children: i });
+        [d, o] = l.useState(s);
+    return (0, n.jsx)(N.Provider, { value: { expanded: d, setExpanded: o }, children: i });
 }
 function k() {
-    let e = l.useContext(T);
+    let e = l.useContext(N);
     if (null == e)
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
@@ -180,13 +180,13 @@ var O = i(834730),
     L = i(300517);
 function P(e) {
     let { widget: t } = e,
-        i = (0, d.cv)(t.type),
+        i = (0, a.cv)(t.type),
         l = 1 === i,
-        s = l ? b.intl.string(b.t["3FdPBT"]) : b.intl.format(b.t.W8K2GH, { maxGames: i });
+        s = l ? E.intl.string(E.t["3FdPBT"]) : E.intl.format(E.t.W8K2GH, { maxGames: i });
     return (0, n.jsxs)("div", {
         className: l ? L.O : L.k,
         children: [
-            l && (0, n.jsx)(w, { widget: t, widgetType: t.type }),
+            l && (0, n.jsx)(C, { widget: t, widgetType: t.type }),
             (0, n.jsx)(O.E, { variant: "text-xs/normal", color: "text-subtle", children: s }),
         ],
     });
@@ -197,7 +197,7 @@ var G = i(623280),
     U = i(529523);
 function D(e) {
     let { widgetType: t, gameCount: i } = e,
-        l = (0, d.cv)(t);
+        l = (0, a.cv)(t);
     return i <= l
         ? null
         : (0, n.jsx)("div", {
@@ -205,7 +205,7 @@ function D(e) {
               className: U.l,
               children: (0, n.jsx)(_.w, {
                   type: "warning",
-                  children: b.intl.formatToPlainString(b.t.Rv3wYq, { maxGames: l }),
+                  children: E.intl.formatToPlainString(E.t.Rv3wYq, { maxGames: l }),
               }),
           });
 }
@@ -219,14 +219,14 @@ function F(e) {
         children: (0, n.jsx)(O.E, {
             variant: "text-sm/medium",
             color: "none",
-            children: i ? b.intl.string(b.t["6MwJo/"]) : b.intl.string(b.t.lBeKY2),
+            children: i ? E.intl.string(E.t["6MwJo/"]) : E.intl.string(E.t.lBeKY2),
         }),
     });
 }
 var H = i(908683),
     V = i(192),
     B = i(714813);
-function z(e) {
+function Y(e) {
     let { games: t, user: i, widgetType: l, ...s } = e,
         { registerItemRef: a, manageFocusOnDelete: r } = (0, M.r)();
     return (0, n.jsx)("ul", {
@@ -250,66 +250,69 @@ function z(e) {
         ),
     });
 }
-function X(e) {
-    let { user: t, widgetType: i, disableInteraction: l, games: s } = e,
-        d = (0, a.bG)([r.default], () => r.default.getId() === t.id),
-        { getManageButtonForWidget: o } = (0, V.r)(),
-        c = o(i),
-        { expanded: u, setExpanded: g } = k(),
-        m = u ? s : s.slice(0, 2),
-        h = s.length > 2,
-        x = (0, n.jsxs)(n.Fragment, {
+function z(e) {
+    let { widgetType: t, allowEditing: i, disableInteraction: l = !1, games: s } = e,
+        { getManageButtonForWidget: a } = (0, V.r)(),
+        r = a(t),
+        { expanded: d, setExpanded: o } = k(),
+        c = d ? s : s.slice(0, 2),
+        u = s.length > 2,
+        g = (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(z, { ...e, games: m }),
-                h && (0, n.jsx)(F, { expanded: u, onClick: () => g((e) => !e) }),
+                (0, n.jsx)(Y, { ...e, games: c }),
+                u && (0, n.jsx)(F, { expanded: d, onClick: () => o((e) => !e) }),
             ],
         });
-    return d && !l
+    return i && !l
         ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsx)(D, { widgetType: i, gameCount: s.length }),
-                  (0, n.jsx)(M.B, { emptyListFallbackRef: c, children: x }),
+                  (0, n.jsx)(D, { widgetType: t, gameCount: s.length }),
+                  (0, n.jsx)(M.B, { emptyListFallbackRef: r, children: g }),
               ],
           })
-        : x;
+        : g;
 }
-function Y(e) {
-    let { user: t, widget: i, guildId: l, channelId: s, disableInteraction: a, ...r } = e;
+function X(e) {
+    let { user: t, widget: i, guildId: l, channelId: s, allowEditing: a, disableInteraction: r, ...d } = e;
     return (0, n.jsx)(G.A, {
         userId: t.id,
         widget: i,
-        disableInteraction: a,
-        ...r,
+        allowEditing: a,
+        disableInteraction: r,
+        ...d,
         children:
             i.games.length > 0
-                ? (0, n.jsx)(X, {
+                ? (0, n.jsx)(z, {
                       user: t,
                       widgetType: i.type,
                       games: i.games,
                       guildId: l,
                       channelId: s,
-                      disableInteraction: a,
+                      allowEditing: a,
+                      disableInteraction: r,
                   })
                 : (0, n.jsx)(P, { widget: i }),
     });
 }
 function q(e) {
-    let { user: t, widget: i, guildId: l, channelId: s, disableInteraction: a, ...r } = e,
-        d = i.games[0];
+    let { user: t, widget: i, guildId: l, channelId: s, allowEditing: a, disableInteraction: r, ...d } = e,
+        o = i.games[0];
     return (0, n.jsx)(G.A, {
         userId: t.id,
         widget: i,
-        disableInteraction: a,
-        ...r,
+        allowEditing: a,
+        disableInteraction: r,
+        ...d,
         children:
-            null != d
+            null != o
                 ? (0, n.jsx)(H.A, {
                       user: t,
                       widgetType: i.type,
-                      game: d,
+                      game: o,
                       guildId: l,
                       channelId: s,
-                      disableInteraction: a,
+                      allowEditing: a,
+                      disableInteraction: r,
                   })
                 : (0, n.jsx)(P, { widget: i }),
     });
@@ -324,208 +327,226 @@ function K(e) {
 }
 var $ = i(688807),
     J = i(201438),
-    Z = i(287809),
-    ee = i(451395),
-    et = i(788593),
-    ei = i(858808),
-    en = i(442356),
-    el = i(163391);
-function es(e) {
-    let { index: t, widgetType: i, game: s, coverImageUrl: a, gameName: r, children: o } = e,
+    Z = i(451395),
+    ee = i(788593),
+    et = i(858808),
+    ei = i(442356),
+    en = i(163391);
+function el(e) {
+    let { index: t, widgetType: i, game: s, coverImageUrl: r, gameName: d, children: o } = e,
         { manageFocusOnReorder: c } = (0, M.r)(),
         u = l.useRef(null);
-    return (0, n.jsx)(ee.mG, {
+    return (0, n.jsx)(Z.mG, {
         index: t,
         itemId: s.applicationId,
         listType: i,
         itemType: "GAME_COVER",
-        itemPreviewProps: { imageSrc: a, gameName: r, getWidth: () => u.current?.offsetWidth },
-        "aria-label": b.intl.formatToPlainString(b.t["0dR3gw"], { positionNumber: t + 1 }),
-        onReorder: (e, t) => (0, d.Un)(i, e, t),
+        itemPreviewProps: { imageSrc: r, gameName: d, getWidth: () => u.current?.offsetWidth },
+        "aria-label": E.intl.formatToPlainString(E.t["0dR3gw"], { positionNumber: t + 1 }),
+        onReorder: (e, t) => (0, a.Un)(i, e, t),
         onEnd: () => c(s.applicationId),
-        className: el.kL,
-        dropBeforeClassName: el.A,
-        dropAfterClassName: el.Ze,
-        draggingClassName: el.Id,
-        children: (0, n.jsx)("div", { ref: u, className: el.An, children: o }),
+        className: en.kL,
+        dropBeforeClassName: en.A,
+        dropAfterClassName: en.Ze,
+        draggingClassName: en.Id,
+        children: (0, n.jsx)("div", { ref: u, className: en.An, children: o }),
     });
 }
-function ea(e) {
-    let { game: t, userId: i, widgetType: l, disableInteraction: s = !1, index: a, onRemoveGame: r, coverRef: d } = e,
-        { coverImageUrl: o, gameName: c, isLoading: u } = (0, J.A)(t.applicationId),
-        { registerDragHandleRef: g } = (0, M.r)(),
-        m = Z.default.getCurrentUser(),
-        h = m?.id === i,
-        x = !s && h,
-        { isDragging: p } = (0, $.V)((e) => ({ isDragging: e.isDragging() })),
-        j = () =>
+function es(e) {
+    let {
+            game: t,
+            userId: i,
+            widgetType: l,
+            allowEditing: s,
+            disableInteraction: a = !1,
+            index: r,
+            onRemoveGame: d,
+            coverRef: o,
+        } = e,
+        { coverImageUrl: c, gameName: u, isLoading: g } = (0, J.A)(t.applicationId),
+        { registerDragHandleRef: m } = (0, M.r)(),
+        h = s && !a,
+        { isDragging: x } = (0, $.V)((e) => ({ isDragging: e.isDragging() })),
+        p = () =>
             (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsx)(et.A, {
-                        imageSrc: o,
-                        gameName: c,
+                    (0, n.jsx)(ee.A, {
+                        imageSrc: c,
+                        gameName: u,
                         applicationId: t.applicationId,
                         userId: i,
-                        disableInteraction: s,
-                        className: null == o || s ? void 0 : en.iL,
-                        hideTooltip: p,
-                        coverRef: d,
+                        disableInteraction: a,
+                        className: null == c || a ? void 0 : ei.iL,
+                        hideTooltip: x,
+                        coverRef: o,
                     }),
-                    x && (0, n.jsx)(ee.jV, { buttonRef: g(t.applicationId), className: el.BU }),
-                    x &&
-                        (0, n.jsx)(ei.A, {
+                    h && (0, n.jsx)(Z.jV, { buttonRef: m(t.applicationId), className: en.BU }),
+                    h &&
+                        (0, n.jsx)(et.A, {
                             game: t,
                             widgetType: l,
-                            className: el.vS,
+                            className: en.vS,
                             iconSize: "xs",
-                            onRemove: () => r?.(t.applicationId),
+                            onRemove: () => d?.(t.applicationId),
                         }),
                 ],
             });
-    return u
-        ? (0, n.jsx)("div", { className: en.mD })
-        : x
-          ? (0, n.jsx)(es, { widgetType: l, index: a ?? 0, game: t, coverImageUrl: o, gameName: c, children: j() })
-          : (0, n.jsx)("div", { className: el.kL, children: j() });
+    return g
+        ? (0, n.jsx)("div", { className: ei.mD })
+        : h
+          ? (0, n.jsx)(el, { widgetType: l, index: r ?? 0, game: t, coverImageUrl: c, gameName: u, children: p() })
+          : (0, n.jsx)("div", { className: en.kL, children: p() });
 }
-function er(e) {
-    let { games: t, ...i } = e,
-        { registerItemRef: l, manageFocusOnDelete: s } = (0, M.r)();
+function ea(e) {
+    let { games: t, userId: i, widgetType: l, allowEditing: s, disableInteraction: a } = e,
+        { registerItemRef: r, manageFocusOnDelete: d } = (0, M.r)();
     return (0, n.jsx)(K, {
         games: t,
         renderGame: (e, t) =>
-            (0, n.jsx)(ea, { index: t, game: e, coverRef: l(e.applicationId), onRemoveGame: s, ...i }),
+            (0, n.jsx)(es, {
+                index: t,
+                game: e,
+                userId: i,
+                widgetType: l,
+                allowEditing: s,
+                disableInteraction: a,
+                coverRef: r(e.applicationId),
+                onRemoveGame: d,
+            }),
     });
 }
-function ed(e) {
-    let { userId: t, widgetType: i, disableInteraction: l, games: s } = e,
-        d = (0, a.bG)([r.default], () => r.default.getId() === t),
-        { getManageButtonForWidget: o } = (0, V.r)(),
-        c = o(i),
-        { expanded: u, setExpanded: g } = k(),
-        m = u ? s : s.slice(0, 8),
-        h = s.length > 8,
-        x = (0, n.jsxs)(n.Fragment, {
+function er(e) {
+    let { widgetType: t, allowEditing: i, disableInteraction: l = !1, games: s } = e,
+        { getManageButtonForWidget: a } = (0, V.r)(),
+        r = a(t),
+        { expanded: d, setExpanded: o } = k(),
+        c = d ? s : s.slice(0, 8),
+        u = s.length > 8,
+        g = (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, n.jsx)(er, { ...e, games: m }),
-                h && (0, n.jsx)(F, { expanded: u, onClick: () => g((e) => !e) }),
+                (0, n.jsx)(ea, { ...e, games: c }),
+                u && (0, n.jsx)(F, { expanded: d, onClick: () => o((e) => !e) }),
             ],
         });
-    return d && !l
+    return i && !l
         ? (0, n.jsxs)(n.Fragment, {
               children: [
-                  (0, n.jsx)(D, { widgetType: i, gameCount: s.length }),
-                  (0, n.jsx)(M.B, { emptyListFallbackRef: c, children: x }),
+                  (0, n.jsx)(D, { widgetType: t, gameCount: s.length }),
+                  (0, n.jsx)(M.B, { emptyListFallbackRef: r, children: g }),
               ],
           })
-        : x;
+        : g;
+}
+function ed(e) {
+    let { user: t, widget: i, guildId: l, channelId: s, allowEditing: a, disableInteraction: r, ...d } = e;
+    return (0, n.jsx)(G.A, {
+        userId: t.id,
+        widget: i,
+        allowEditing: a,
+        disableInteraction: r,
+        ...d,
+        children:
+            i.games.length > 0
+                ? (0, n.jsx)(er, {
+                      userId: t.id,
+                      widgetType: i.type,
+                      games: i.games,
+                      guildId: l,
+                      channelId: s,
+                      allowEditing: a,
+                      disableInteraction: r,
+                  })
+                : (0, n.jsx)(P, { widget: i }),
+    });
 }
 function eo(e) {
-    let { user: t, widget: i, guildId: l, channelId: s, disableInteraction: a, ...r } = e;
+    let { user: t, widget: i, guildId: l, channelId: s, allowEditing: a, disableInteraction: r, ...d } = e;
     return (0, n.jsx)(G.A, {
         userId: t.id,
         widget: i,
-        disableInteraction: a,
-        ...r,
+        allowEditing: a,
+        disableInteraction: r,
+        ...d,
         children:
             i.games.length > 0
-                ? (0, n.jsx)(ed, {
+                ? (0, n.jsx)(er, {
                       userId: t.id,
                       widgetType: i.type,
                       games: i.games,
                       guildId: l,
                       channelId: s,
-                      disableInteraction: a,
+                      allowEditing: a,
+                      disableInteraction: r,
                   })
                 : (0, n.jsx)(P, { widget: i }),
     });
 }
-function ec(e) {
-    let { user: t, widget: i, guildId: l, channelId: s, disableInteraction: a, ...r } = e;
-    return (0, n.jsx)(G.A, {
-        userId: t.id,
-        widget: i,
-        disableInteraction: a,
-        ...r,
-        children:
-            i.games.length > 0
-                ? (0, n.jsx)(ed, {
-                      userId: t.id,
-                      widgetType: i.type,
-                      games: i.games,
-                      guildId: l,
-                      channelId: s,
-                      disableInteraction: a,
-                  })
-                : (0, n.jsx)(P, { widget: i }),
-    });
-}
-var eu = i(503698),
-    eg = i.n(eu),
-    em = i(661531),
-    eh = i(789645),
-    ex = i(534514),
-    ep = i(915089),
-    ej = i(5477);
-function ef(e) {
+var ec = i(503698),
+    eu = i.n(ec),
+    eg = i(661531),
+    em = i(789645),
+    eh = i(534514),
+    ex = i(915089),
+    ep = i(5477);
+function ej(e) {
     let { applicationId: t, userId: i, onClick: l } = e,
-        { coverImageUrl: s, gameName: r, isLoading: d } = (0, J.A)(t),
-        o = (0, a.bG)([N.A], () => N.A.suggestedFetchIsLoading),
-        c = b.intl.formatToPlainString(b.t["3mb1s5"], { game: r });
+        { coverImageUrl: s, gameName: a, isLoading: d } = (0, J.A)(t),
+        o = (0, r.bG)([T.A], () => T.A.suggestedFetchIsLoading),
+        c = E.intl.formatToPlainString(E.t["3mb1s5"], { game: a });
     return d || o
-        ? (0, n.jsx)("div", { className: en.mD })
+        ? (0, n.jsx)("div", { className: ei.mD })
         : (0, n.jsx)(u.m, {
               text: c,
               ariaHidden: !0,
               children: (0, n.jsxs)(f.D, {
-                  className: ej.c9,
+                  className: ep.c9,
                   onClick: l,
                   "aria-label": c,
                   children: [
-                      (0, n.jsx)(et.A, {
-                          className: ej.Iv,
+                      (0, n.jsx)(ee.A, {
+                          className: ep.Iv,
                           imageSrc: s,
-                          gameName: r,
+                          gameName: a,
                           applicationId: t,
                           userId: i,
                           disableInteraction: !0,
                       }),
-                      (0, n.jsx)(A.p, { size: "md", className: ej.Xv, color: em.A.colors.WHITE }),
+                      (0, n.jsx)(A.p, { size: "md", className: ep.Xv, color: eg.A.colors.WHITE }),
                   ],
               }),
           });
 }
-function eA(e) {
+function ef(e) {
     let { userId: t, games: i, onDismiss: l, onClick: s, className: a } = e,
-        r = (0, ep.GV)();
+        r = (0, ex.GV)();
     return (0, n.jsxs)("aside", {
-        className: eg()(ej.kL, a),
+        className: eu()(ep.kL, a),
         "aria-labelledby": r,
         children: [
             (0, n.jsxs)("div", {
-                className: ej.wx,
+                className: ep.wx,
                 children: [
                     (0, n.jsx)(f.D, {
-                        className: ej.r,
-                        "aria-label": b.intl.string(b.t["pUR+3g"]),
+                        className: ep.r,
+                        "aria-label": E.intl.string(E.t["pUR+3g"]),
                         onClick: l,
-                        children: (0, n.jsx)(eh.P, { size: "sm", color: "currentColor" }),
+                        children: (0, n.jsx)(em.P, { size: "sm", color: "currentColor" }),
                     }),
-                    (0, n.jsx)(ex.D, {
+                    (0, n.jsx)(eh.D, {
                         id: r,
                         variant: "text-xs/medium",
                         color: "text-subtle",
-                        children: b.intl.string(b.t.zMUr6Z),
+                        children: E.intl.string(E.t.zMUr6Z),
                     }),
                 ],
             }),
             (0, n.jsx)("ul", {
-                className: ej.Vg,
+                className: ep.Vg,
                 children: i.map((e) => {
                     let { applicationId: i } = e;
                     return (0, n.jsx)(
                         "li",
-                        { children: (0, n.jsx)(ef, { onClick: () => s(i), userId: t, applicationId: i }) },
+                        { children: (0, n.jsx)(ej, { onClick: () => s(i), userId: t, applicationId: i }) },
                         i,
                     );
                 }),
@@ -533,51 +554,51 @@ function eA(e) {
         ],
     });
 }
-function eI(e) {
+function eA(e) {
     let { widgetType: t, ...i } = e,
-        { games: s, onAddGame: a } = (0, v.S)(t),
-        { setExpanded: r } = k(),
+        { games: s, onAddGame: r } = (0, v.S)(t),
+        { setExpanded: d } = k(),
         { trackUserProfileEditAction: o } = (0, S.NJ)(),
         c = l.useCallback(
             (e) => {
-                a(e),
-                    r(!0),
-                    (0, d.ew)({ widgetType: t, game: { applicationId: e } }),
+                r(e),
+                    d(!0),
+                    (0, a.ew)({ widgetType: t, game: { applicationId: e } }),
                     o({ action: "GAME_ADDED", gameId: e, widgetEdited: t });
             },
-            [a, t, o, r],
+            [r, t, o, d],
         );
-    return (0, n.jsx)(eA, { games: s, onClick: c, ...i });
+    return (0, n.jsx)(ef, { games: s, onClick: c, ...i });
 }
-var eS = i(465380);
-function ev(e) {
+var eI = i(465380);
+function eS(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
         case s.x.FAVORITE_GAMES:
             return (0, n.jsx)(q, { widget: t, ...i });
         case s.x.CURRENT_GAMES:
-            return (0, n.jsx)(Y, { widget: t, ...i });
+            return (0, n.jsx)(X, { widget: t, ...i });
         case s.x.WANT_TO_PLAY_GAMES:
-            return (0, n.jsx)(ec, { widget: t, ...i });
-        case s.x.PLAYED_GAMES:
             return (0, n.jsx)(eo, { widget: t, ...i });
+        case s.x.PLAYED_GAMES:
+            return (0, n.jsx)(ed, { widget: t, ...i });
         default:
             return null;
     }
 }
-function eb(e) {
-    let { widget: t, user: i, disableInteraction: s, ...c } = e,
-        { setExpanded: u } = k(),
-        { shouldShowSuggestions: g, handleDismissSuggestions: m } = (function (e) {
+function ev(e) {
+    let { widget: t, user: i, allowEditing: s, disableInteraction: c, ...u } = e,
+        { setExpanded: g } = k(),
+        { shouldShowSuggestions: m, handleDismissSuggestions: h } = (function (e) {
             let [t, i] = l.useState(!1),
                 n = e.type,
-                s = (0, a.bG)([r.default, o.A], () => {
-                    let e = r.default.getId();
+                s = (0, r.bG)([d.default, o.A], () => {
+                    let e = d.default.getId();
                     if (null == e) return !1;
                     let t = o.A.getUserProfile(e);
                     return (t?.widgets ?? []).some((e) => e.type === n);
                 }),
-                c = (0, d.uA)(e);
+                c = (0, a.uA)(e);
             return {
                 shouldShowSuggestions: !s && !t && !c,
                 handleDismissSuggestions: l.useCallback(() => {
@@ -585,33 +606,34 @@ function eb(e) {
                 }, []),
             };
         })(t),
-        h = (0, a.bG)([r.default], () => r.default.getId() === i.id),
-        x = h && !s && g,
-        p = (0, d.L)(t),
-        j = (0, d.FM)(t, { isCurrentUser: h }),
-        f = (0, d.uA)(t),
-        A = 1 === (0, d.cv)(t.type);
-    return (0, n.jsx)(ev, {
+        x = s && !c,
+        p = x && m,
+        j = (0, a.L)(t),
+        f = (0, a.FM)(t, { showEditingControls: x }),
+        A = (0, a.uA)(t),
+        I = 1 === (0, a.cv)(t.type);
+    return (0, n.jsx)(eS, {
         widget: t,
         user: i,
-        disableInteraction: s,
-        headerTitle: p,
-        headerSubtitle: j,
+        allowEditing: s,
+        disableInteraction: c,
+        headerTitle: j,
+        headerSubtitle: f,
         headerActionButtons:
-            h && !A
+            x && !I
                 ? [
                       (0, n.jsx)(
-                          C,
-                          { disabled: f, widgetType: t.type, widget: t, onAddGame: () => u(!0) },
+                          w,
+                          { disabled: A, widgetType: t.type, widget: t, onAddGame: () => g(!0) },
                           `${t.type}-browse-games-popout`,
                       ),
                   ]
                 : void 0,
-        trailingContent: x && (0, n.jsx)(eI, { userId: i.id, widgetType: t.type, onDismiss: m, className: eS.r }),
-        ...c,
+        trailingContent: p && (0, n.jsx)(eA, { userId: i.id, widgetType: t.type, onDismiss: h, className: eI.r }),
+        ...u,
     });
 }
-function ey(e) {
+function eE(e) {
     let { widget: t, ...i } = e;
-    return (0, n.jsx)(R, { widgetType: t.type, children: (0, n.jsx)(eb, { widget: t, ...i }) });
+    return (0, n.jsx)(R, { widgetType: t.type, children: (0, n.jsx)(ev, { widget: t, ...i }) });
 }

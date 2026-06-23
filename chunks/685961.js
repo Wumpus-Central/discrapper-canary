@@ -1562,7 +1562,7 @@ let lt = (e) => {
                           variant: "heading-sm/semibold",
                           children: T.intl.string(T.t.SpsnDY),
                       }),
-                      (0, n.jsx)(t7.u, { widget: t, user: a, disableInteraction: !0 }),
+                      (0, n.jsx)(t7.u, { widget: t, user: a, allowEditing: !1, disableInteraction: !0 }),
                   ],
               });
     },
