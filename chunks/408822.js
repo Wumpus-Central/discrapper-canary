@@ -13,14 +13,21 @@ async function l(e, t, n) {
 }
 async function u(e, t) {
     try {
-        await i.Bo.post({ url: o.Rsh.GUILD_ROOM_DISCONNECT(e, t), rejectWithError: !0 }),
-            r.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: s.default.getId(), roomId: t });
+        r.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: s.default.getId(), roomId: t }),
+            await i.Bo.post({ url: o.Rsh.GUILD_ROOM_DISCONNECT(e, t), rejectWithError: !0 });
     } catch (e) {}
 }
 async function c(e, t, n) {
     try {
-        let s = await i.Bo.post({ url: o.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 });
-        r.h.dispatch({ type: "GUILD_ROOM_UPDATE", room: (0, a.S)(s.body) });
+        r.h.dispatch({
+            type: "GUILD_ROOM_LOCAL_UPDATE",
+            roomId: t,
+            background: n.background,
+            position: n.user_position,
+            statusId: n.user_status_id,
+            statusText: n.user_status_text,
+        }),
+            await i.Bo.post({ url: o.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 });
     } catch (e) {}
 }
 function d(e) {

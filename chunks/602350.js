@@ -29,10 +29,10 @@ class d extends i.A {
                         a.A.getPendingPosition() ??
                         (function (e) {
                             let { seats: t } = l.iX[l.I3.DEFAULT],
-                                n = a.A.getRoom(e),
+                                n = a.A.getRoomUsers(e),
                                 i = t.findIndex(
                                     (e) =>
-                                        !n?.users.some(
+                                        ![...n.values()].some(
                                             (t) => t.position.x === e.position.x && t.position.y === e.position.y,
                                         ),
                                 );
@@ -50,7 +50,7 @@ class d extends i.A {
         let { room: t, guildId: n, pendingPosition: i } = e;
         if (null == i || null == n) return;
         let a = r.default.getId(),
-            o = t.users.find((e) => e.userId === a)?.position;
+            o = t.users.get(a)?.position;
         (null == o || (0 === o.x && 0 === o.y)) && (0, s.AQ)(n, t.roomId, { user_position: i });
     }
 }

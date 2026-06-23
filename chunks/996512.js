@@ -2,12 +2,18 @@
 function i(e) {
     return {
         roomId: e.room_id,
-        users: e.users.map((e) => ({
-            userId: e.user_id,
-            position: e.position,
-            statusId: e.status_id,
-            statusText: e.status_text,
-        })),
+        users: e.users.reduce(
+            (e, t) => (
+                e.set(t.user_id, {
+                    userId: t.user_id,
+                    position: t.position,
+                    statusId: t.status_id,
+                    statusText: t.status_text,
+                }),
+                e
+            ),
+            new Map(),
+        ),
         background: e.background,
     };
 }

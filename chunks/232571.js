@@ -53,26 +53,26 @@ function g() {
 function f(e) {
     let { channelId: t, x: n, y: l, roomWidth: f } = e,
         C = (0, s.bG)([d.A], () => d.A.getVoiceChannelId() === t),
-        y = (0, s.bG)([p.A], () => {
-            let e = p.A.getRoom(t);
-            return null != e && e.users.some((e) => e.position?.x === n && e.position?.y === l);
-        }),
+        y = (0, s.bG)([p.A], () =>
+            p.A.getRoomUsers(t)
+                .values()
+                .some((e) => e.position?.x === n && e.position?.y === l),
+        ),
         E = (0, s.bG)([c.A], () => c.A.getChannel(t)?.guild_id);
     if (y || null == E) return null;
     let { numericAvatarSize: N } = (0, h.F)(f),
-        j = 1.2 * Math.max(N, 24),
-        v = async () => {
-            C
-                ? await (0, u.AQ)(E, t, { user_position: { x: n, y: l } })
-                : ((0, u.TJ)({ x: n, y: l }), await (0, o.A)({ channelId: t }));
-        };
+        j = 1.2 * Math.max(N, 24);
     return (0, i.jsx)(r.m, {
         text: C ? null : A.intl.string(A.t["96ANUN"]),
         children: (0, i.jsx)(a.D, {
             "aria-label": A.intl.string(m.default.Vm2OFQ),
             className: x.am,
             style: { width: j, height: j, left: `calc(${n}% - ${j / 2}px)`, top: `calc(${l}% - ${j / 2}px)` },
-            onClick: v,
+            onClick: () => {
+                C
+                    ? (0, u.AQ)(E, t, { user_position: { x: n, y: l } })
+                    : ((0, u.TJ)({ x: n, y: l }), (0, o.A)({ channelId: t }));
+            },
             children: (0, i.jsx)(g, {}),
         }),
     });

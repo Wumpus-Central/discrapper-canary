@@ -1,49 +1,77 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => p });
 var i = n(17928),
     r = n(228366),
-    s = n(309010);
-let a = {},
-    o = null,
-    l = {};
-function u() {
-    let e = s.A.getVoiceChannelId();
-    null != e && (l[e] = l[e] ?? !0);
+    s = n(495544),
+    a = n(309010);
+let o = new Map(),
+    l = {},
+    u = {},
+    c = {},
+    d = null,
+    _ = {};
+function h() {
+    let e = a.A.getVoiceChannelId();
+    null != e && (_[e] = _[e] ?? !0);
 }
-class c extends i.Ay.Store {
+class f extends i.Ay.Store {
     initialize() {
-        this.waitFor(s.A), this.syncWith([s.A], u);
+        this.waitFor(s.default, a.A), this.syncWith([a.A], h);
     }
     getRoom(e) {
-        return a[e];
+        return u[e] ?? l;
+    }
+    getRoomUsers(e) {
+        return c[e] ?? o;
     }
     getPendingPosition() {
-        return o;
+        return d;
     }
     isVisible(e) {
-        return l[e] ?? !0;
+        return _[e] ?? !0;
     }
 }
-let d = new c(r.h, {
+let p = new f(r.h, {
     GUILD_ROOM_CONNECT: function (e) {
-        let { room: t, guildId: n } = e;
-        (a[t.roomId] = t), null != n && null != o && (o = null);
+        let { room: t, guildId: n } = e,
+            { users: i, ...r } = t;
+        (u[t.roomId] = r), (c[t.roomId] = i), null != n && null != d && (d = null);
     },
     GUILD_ROOM_DISCONNECT: function (e) {
-        let { userId: t, roomId: n } = e,
-            i = a[n].users.filter((e) => e.userId !== t);
-        a[n] = { ...a[n], users: i };
+        let { userId: t, roomId: n } = e;
+        if (null == u[n]) return !1;
+        let i = new Map(c[n]);
+        i.delete(t), (c[n] = i);
     },
     GUILD_ROOM_UPDATE: function (e) {
-        let { room: t } = e;
-        a[t.roomId] = t;
+        let { room: t } = e,
+            { users: n, ...i } = t;
+        (u[t.roomId] = i), (c[t.roomId] = n);
     },
     GUILD_ROOM_LOCAL_POSITION_REQUESTED: function (e) {
         let { position: t } = e;
-        o = t;
+        d = t;
     },
     GUILD_ROOM_TOGGLE_LAYOUT: function (e) {
         let { roomId: t } = e;
-        l[t] = !l[t];
+        _[t] = !_[t];
+    },
+    GUILD_ROOM_LOCAL_UPDATE: function (e) {
+        let { roomId: t, background: n, position: i, statusId: r, statusText: a } = e;
+        if (null == u[t]) return !1;
+        let o = s.default.getId();
+        if ((null != n && (u[t] = { ...u[t], background: n }), null != i || null != r || null != a)) {
+            let e = c[t].get(o);
+            if (null != e) {
+                let n = new Map(c[t]);
+                n.set(o, {
+                    userId: o,
+                    position: i ?? e.position,
+                    statusId: r ?? e.statusId,
+                    statusText: a ?? e.statusText,
+                }),
+                    (c[t] = n);
+            }
+        }
     },
 });

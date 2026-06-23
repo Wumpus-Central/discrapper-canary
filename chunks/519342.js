@@ -53,16 +53,23 @@ function f(e) {
 }
 function C(e) {
     let { channelId: t, roomWidth: n } = e,
-        l = (0, a.yK)([A.A], () => A.A.getRoom(t)?.users ?? []),
+        l = (0, a.bG)([A.A], () => A.A.getRoomUsers(t)),
         { numericAvatarSize: s, avatarSize: r } = g(n);
-    return 0 === l.length
+    return 0 === l.size
         ? null
         : (0, i.jsx)(i.Fragment, {
-              children: l.map((e) => {
-                  let { userId: n, position: l } = e;
+              children: l.entries().map((e) => {
+                  let [n, l] = e;
                   return (0, i.jsx)(
                       f,
-                      { userId: n, channelId: t, x: l.x, y: l.y, numericAvatarSize: s, avatarSize: r },
+                      {
+                          userId: n,
+                          channelId: t,
+                          x: l.position?.x ?? 0,
+                          y: l.position?.y ?? 0,
+                          numericAvatarSize: s,
+                          avatarSize: r,
+                      },
                       `${n}`,
                   );
               }),
