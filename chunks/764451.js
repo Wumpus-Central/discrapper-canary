@@ -264,7 +264,7 @@ function K(e) {
             Z.setState({ currentProps: c, currentDefaults: a, controlOverrides: null });
         }, [_]);
     let h = t.component,
-        f = "hidden" !== n && null != t.controls;
+        f = "hidden" !== n && (null != t.controls || null != t.ControlsExtension);
     return (0, i.jsxs)("div", {
         className: M()(V.iW, { [V.vT]: "bottom" === n, [V.Ix]: "right" === n }),
         children: [
@@ -273,16 +273,19 @@ function K(e) {
                 children: (0, i.jsx)("div", { className: V.Dw, children: (0, i.jsx)(h, { ...c }, t.id) }),
             }),
             f &&
-                null != t.controls &&
-                (0, i.jsx)("div", {
+                (0, i.jsxs)("div", {
                     className: M()(V.ne, { [V.WK]: "bottom" === n, [V.BT]: "right" === n }),
-                    children: (0, i.jsx)(B, {
-                        controls: t.controls,
-                        props: c,
-                        onPropsChange: (e) => {
-                            d(e), Z.setState({ currentProps: e });
-                        },
-                    }),
+                    children: [
+                        null != t.ControlsExtension && (0, i.jsx)(t.ControlsExtension, {}),
+                        null != t.controls &&
+                            (0, i.jsx)(B, {
+                                controls: t.controls,
+                                props: c,
+                                onPropsChange: (e) => {
+                                    d(e), Z.setState({ currentProps: e });
+                                },
+                            }),
+                    ],
                 }),
         ],
     });
