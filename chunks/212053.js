@@ -34,7 +34,7 @@ function E(e) {
               onClick: () => {
                   (0, f.Ay)(n) && E && (0, r.A9)(n.stream, { forceMultiple: !0 }),
                       y?.id === n.id ? s.A.selectParticipant(A.id, null) : s.A.selectParticipant(A.id, n.id),
-                      (0, g.zD)(t);
+                      (0, g.zD)(t, !0);
               },
           });
 }

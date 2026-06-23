@@ -33,6 +33,6 @@ async function c(e, t, n) {
 function d(e) {
     r.h.dispatch({ type: "GUILD_ROOM_LOCAL_POSITION_REQUESTED", position: e });
 }
-function _(e) {
-    r.h.dispatch({ type: "GUILD_ROOM_TOGGLE_LAYOUT", roomId: e });
+function _(e, t) {
+    r.h.dispatch({ type: "GUILD_ROOM_TOGGLE_LAYOUT", roomId: e, clearLayout: t });
 }
