@@ -2072,9 +2072,12 @@
 }
 
 .newBadge__9a337 {
+    align-items: center;
     border-radius: var(--radius-md);
     color: var(--brand-560);
-    font-size: 10px
+    display: flex;
+    font-size: 10px;
+    justify-content: center
 }
 
 .textContentUnread__9a337 {
