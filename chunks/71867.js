@@ -1,36 +1,36 @@
 "use strict";
-n.d(t, { P: () => P });
-var l = n(627968);
-n(64700);
-var i = n(877624),
+n.d(t, { P: () => M, i: () => L });
+var l = n(627968),
+    i = n(64700),
+    s = n(877624),
     r = n(211159),
-    s = n(234419),
-    a = n(549996),
-    o = n(562708),
-    u = n(144165),
-    c = n(262427),
-    d = n(139286),
-    m = n(432029);
-let h = (e) => {
+    a = n(234419),
+    o = n(549996),
+    u = n(562708),
+    c = n(144165),
+    d = n(262427),
+    m = n(139286),
+    h = n(432029);
+let p = (e) => {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e;
-    (0, d.A)({
-        type: o.ImpressionTypes.VIEW,
-        name: o.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: i.C.PAYMENT_MODAL_BANNER, component_id: t },
+    (0, m.A)({
+        type: u.ImpressionTypes.VIEW,
+        name: u.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: s.C.PAYMENT_MODAL_BANNER, component_id: t },
     });
-    let r = (0, l.jsx)(u._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
-    return (0, l.jsx)(c.J, { className: m.No, customGraphic: r, text: n.body });
+    let i = (0, l.jsx)(c._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
+    return (0, l.jsx)(d.J, { className: h.No, customGraphic: i, text: n.body });
 };
-var p = n(503698),
-    f = n.n(p),
-    g = n(462887),
-    E = n(97808),
-    A = n(834730),
-    C = n(736653),
-    x = n(854627),
-    I = n(427262),
-    _ = n(236834);
-let S = (e) => {
+var f = n(503698),
+    g = n.n(f),
+    E = n(462887),
+    A = n(97808),
+    C = n(834730),
+    x = n(736653),
+    I = n(854627),
+    _ = n(427262),
+    S = n(236834);
+let y = (e) => {
         let { className: t, width: n = 83, height: i = 45 } = e;
         return (0, l.jsxs)("svg", {
             width: n,
@@ -300,7 +300,7 @@ let S = (e) => {
             ],
         });
     },
-    y = (e) => {
+    v = (e) => {
         let { className: t, width: n = 83, height: i = 45 } = e;
         return (0, l.jsxs)("svg", {
             width: n,
@@ -570,50 +570,57 @@ let S = (e) => {
             ],
         });
     };
-var v = n(778712),
-    T = n(375708),
-    N = n(577454);
-let j = (e) => {
+var T = n(778712),
+    N = n(375708),
+    j = n(577454);
+let b = (e) => {
     let { className: t } = e,
-        n = (0, _.A)(),
-        { avatarSrc: i, eventHandlers: r } = (0, x.A)({ userId: n?.id, size: v._3.SIZE_32, animateOnHover: !0 }),
-        s = (0, C.DP)(),
-        a = (0, g.q)(s),
-        o = I.Ay.getName(n);
+        n = (0, S.A)(),
+        { avatarSrc: i, eventHandlers: s } = (0, I.A)({ userId: n?.id, size: T._3.SIZE_32, animateOnHover: !0 }),
+        r = (0, x.DP)(),
+        a = (0, E.q)(r),
+        o = _.Ay.getName(n);
     return null == n
         ? null
         : (0, l.jsxs)("div", {
-              className: f()(N.$6, t),
+              className: g()(j.$6, t),
               children: [
                   (0, l.jsx)("div", {
-                      className: N.H,
-                      children: (0, l.jsx)(E.eu, { src: i, "aria-label": n.username, size: v._3.SIZE_32, ...r }),
+                      className: j.H,
+                      children: (0, l.jsx)(A.eu, { src: i, "aria-label": n.username, size: T._3.SIZE_32, ...s }),
                   }),
-                  (0, l.jsx)(A.E, {
+                  (0, l.jsx)(C.E, {
                       variant: "text-xs/bold",
-                      className: N.U_,
-                      children: T.intl.format(T.t.oxhCOl, { userName: o }),
+                      className: j.U_,
+                      children: N.intl.format(N.t.oxhCOl, { userName: o }),
                   }),
-                  (0, l.jsx)(a ? S : y, { className: N.q3 }),
+                  (0, l.jsx)(a ? y : v, { className: j.q3 }),
               ],
           });
 };
-var b = n(937008),
-    R = n(788868);
-function P(e) {
+var R = n(937008),
+    P = n(788868);
+function L(e) {
     let { planSkuId: t, className: n } = e,
-        { isGift: o } = (0, b.Pv)(),
-        u = (0, r.t4)((e) => e.referralTrialOfferId ?? void 0),
-        c = (0, s.V)(u),
-        d = (0, a.c)(i.C.PAYMENT_MODAL_BANNER);
-    return o || t !== R.pe.TIER_2
-        ? null
-        : null != d && "paymentModalBanner" === d.properties.properties.oneofKind
-          ? (0, l.jsx)(h, {
-                componentId: d.id,
-                promotionBannerMarketingComponentFields: d.properties.properties.paymentModalBanner,
-            })
-          : c?.referrer_id != null
-            ? (0, l.jsx)(j, { className: n })
-            : null;
+        { isGift: u } = (0, R.Pv)(),
+        c = (0, r.t4)((e) => e.referralTrialOfferId ?? void 0),
+        d = (0, a.V)(c),
+        m = (0, o.c)(s.C.PAYMENT_MODAL_BANNER);
+    return i.useMemo(
+        () =>
+            u || t !== P.pe.TIER_2
+                ? null
+                : null != m && "paymentModalBanner" === m.properties.properties.oneofKind
+                  ? (0, l.jsx)(p, {
+                        componentId: m.id,
+                        promotionBannerMarketingComponentFields: m.properties.properties.paymentModalBanner,
+                    })
+                  : d?.referrer_id != null
+                    ? (0, l.jsx)(b, { className: n })
+                    : null,
+        [u, t, m, d, n],
+    );
+}
+function M(e) {
+    return L(e);
 }
