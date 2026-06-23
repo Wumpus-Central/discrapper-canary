@@ -15,12 +15,12 @@ var i = n(284009),
     p = n(734057),
     E = n(808728),
     m = n(232835),
-    g = n(222823),
+    g = n(568548),
     A = n(994500),
     I = n(711014),
     T = n(543465),
     S = n(287809),
-    y = n(567761),
+    y = n(645959),
     C = n(935208),
     N = n(851109),
     v = n(394953),
@@ -189,7 +189,7 @@ function q() {
                     let e = p.A.getBasicChannel(s);
                     null != e && n(e) && i.push(e);
                 }
-        for (let e of y.default.getPrivateChannelIds()) {
+        for (let e of y.A.getPrivateChannelIds()) {
             let t = p.A.getBasicChannel(e);
             null != t && n(t) && i.push(t);
         }
@@ -294,7 +294,7 @@ function ee(e) {
 class et extends s.Ay.Store {
     static displayName = "NotificationsInboxStore";
     initialize() {
-        this.waitFor(c.A, p.A, E.Ay, d.A, m.A, y.default, g.Ay, u.Ay, A.A, I.Ay, T.Ay, S.default);
+        this.waitFor(c.A, p.A, E.Ay, d.A, m.A, y.A, g.Ay, u.Ay, A.A, I.Ay, T.Ay, S.default);
     }
     canLoadMore(e) {
         let { preload: t } = e;

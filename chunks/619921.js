@@ -6,7 +6,7 @@ var i = n(17928),
     a = n(650048),
     o = n(71393),
     l = n(309010),
-    u = n(567761),
+    u = n(645959),
     c = n(652215);
 let d = (window?.location?.pathname ?? "").startsWith(c.BVt.ACTIVITIES) ? c.BVt.ACTIVITIES : null;
 function _(e) {
@@ -17,7 +17,7 @@ function _(e) {
 class h extends i.Ay.Store {
     static displayName = "AppViewStore";
     initialize() {
-        this.waitFor(a.A, u.default, l.A, o.A, s.A);
+        this.waitFor(a.A, u.A, l.A, o.A, s.A);
     }
     getHomeLink() {
         return d ?? a.A.fallbackRoute;
@@ -25,7 +25,7 @@ class h extends i.Ay.Store {
 }
 let f = new h(r.h, {
     OVERLAY_INITIALIZE: function () {
-        let e = u.default.getPrivateChannelIds(),
+        let e = u.A.getPrivateChannelIds(),
             t = l.A.getChannelId(c.ME);
         (null != t || null != e[0]) && (d = c.BVt.CHANNEL(c.ME, t ?? e[0]));
     },

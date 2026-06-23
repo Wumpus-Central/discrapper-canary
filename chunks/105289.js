@@ -8412,7 +8412,7 @@ var rL = a(253506),
     rV = a(963852),
     rW = a(704844),
     rz = a(309010),
-    rH = a(567761),
+    rH = a(645959),
     rK = a(716371),
     rY = a(825801);
 let rq = [
@@ -8485,7 +8485,7 @@ function rJ() {
     });
 }
 function rQ() {
-    let e = (0, z.yK)([rH.default], () => rH.default.getSortedChannels()[1]),
+    let e = (0, z.yK)([rH.A], () => rH.A.getSortedChannels()[1]),
         [t, a] = o.useState(e.length > 0 ? e[0].channelId : void 0),
         { selectedChannel: n, options: l } = (0, z.cf)([ay.A, ea.default, aE.A], () => ({
             selectedChannel: ay.A.getChannel(t),

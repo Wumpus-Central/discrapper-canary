@@ -9,7 +9,7 @@ var i = n(310953),
     u = n(885386),
     c = n(189081),
     d = n(839067),
-    _ = n(567761),
+    _ = n(645959),
     h = n(403362),
     f = n(265422),
     p = n(652215),
@@ -34,7 +34,7 @@ function g() {
         !(function (e) {
             var t, n;
             let { channelId: i, path: r, basePath: s } = l.A.getState(),
-                a = _.default.getPrivateChannelIds(),
+                a = _.A.getPrivateChannelIds(),
                 o = __OVERLAY__ ? a : [...m(), ...a],
                 u =
                     (null == i ? ((t = r ?? s), m().findIndex((e) => t.startsWith(e))) : null != i ? o.indexOf(i) : 0) +

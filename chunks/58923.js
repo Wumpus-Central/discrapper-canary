@@ -32,7 +32,7 @@ var R = n(611924),
     w = n(97469),
     M = n(734057),
     P = n(290863),
-    x = n(567761),
+    x = n(645959),
     k = n(724029),
     U = n(652215),
     G = n(375708),
@@ -238,8 +238,8 @@ let j = function (e) {
         d = r.Children.count(a),
         _ = M.A.getMutablePrivateChannels(),
         h = (0, D.uX)(_),
-        p = (0, u.yK)([x.default, b.A, L.A], () => {
-            let e = x.default.getPrivateChannelIds();
+        p = (0, u.yK)([x.A, b.A, L.A], () => {
+            let e = x.A.getPrivateChannelIds();
             return (0, D.eh)(e, [b.A, L.A]);
         });
     (0, R.P)(v);

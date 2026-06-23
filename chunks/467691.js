@@ -10,7 +10,7 @@ var r = n(735438),
     u = n(808728),
     c = n(967198),
     d = n(711014),
-    _ = n(567761),
+    _ = n(645959),
     h = n(625494),
     f = n(265422),
     p = n(652215),
@@ -19,7 +19,7 @@ function m(e, t) {
     return [
         { resourceId: e, type: E.P.GUILD_EVENT },
         ...(e === p.ME
-            ? _.default.getPrivateChannelIds()
+            ? _.A.getPrivateChannelIds()
             : (0, o.A)(e, { withVoiceChannels: t, withCurrentVoiceChannel: !0 }).map((e) => e.id)),
     ];
 }

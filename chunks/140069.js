@@ -10,10 +10,10 @@ var i,
     c = n(734057),
     d = n(232835),
     _ = n(763827),
-    h = n(222823),
+    h = n(568548),
     f = n(309010),
     p = n(543465),
-    E = n(567761),
+    E = n(645959),
     m = n(927813),
     g = n(935208),
     A = n(206885),
@@ -83,7 +83,7 @@ function U() {
             }
         })(e),
         (function (e) {
-            let t = E.default.getPrivateChannelIds(),
+            let t = E.A.getPrivateChannelIds(),
                 n = 0;
             for (let i of t) {
                 if (n >= 3) return;
@@ -137,7 +137,7 @@ function H(e) {
 class Y extends s.Ay.Store {
     static displayName = "Overlay-v3-Text-Chat-Store";
     initialize() {
-        this.waitFor(C.A, y.A, S.A, u.A, c.A, d.A, l.A, _.A, E.default, h.Ay, f.A, p.Ay), U();
+        this.waitFor(C.A, y.A, S.A, u.A, c.A, d.A, l.A, _.A, E.A, h.Ay, f.A, p.Ay), U();
     }
     isChannelTracked(e) {
         return O.has(e);

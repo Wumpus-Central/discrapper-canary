@@ -12,7 +12,7 @@ var r = n(17928),
     _ = n(290863),
     h = n(994500),
     f = n(287809),
-    p = n(567761),
+    p = n(645959),
     E = n(652215);
 let m = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     g = null,
@@ -32,7 +32,7 @@ function C() {
 class N extends r.Ay.Store {
     static displayName = "ActivityInviteModalStore";
     initialize() {
-        this.waitFor(u.A, c.A, d.A, _.A, p.default, f.default);
+        this.waitFor(u.A, c.A, d.A, _.A, p.A, f.default);
     }
     getActivity() {
         return g;
@@ -56,7 +56,7 @@ let v = new N(s.h, {
                             (T = (
                                 "" === t.trim()
                                     ? ((n = []),
-                                      p.default.getPrivateChannelIds().forEach((e) => {
+                                      p.A.getPrivateChannelIds().forEach((e) => {
                                           let t = u.A.getChannel(e);
                                           if (null != t)
                                               if (t.type === E.rbe.DM) {

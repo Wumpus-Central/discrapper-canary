@@ -9,7 +9,7 @@ var i,
     u = n(734057),
     c = n(568548),
     d = n(994500),
-    _ = n(567761),
+    _ = n(645959),
     h = n(935208),
     f = n(914853),
     p = n(956753),
@@ -93,7 +93,7 @@ function N() {
 function v() {
     I.clear(), (S = new Set());
     let e = !1;
-    for (let t of _.default.getPrivateChannelIds()) e = C(t) || e;
+    for (let t of _.A.getPrivateChannelIds()) e = C(t) || e;
     for (let t of o.A.getChannelHistory()) e = C(t) || e;
     for (let t of E.A.getTextChannelHistory()) e = C(t) || e;
     let t = m.A.getActiveNowChannelIds({ kind: m.u.Text });
@@ -107,7 +107,7 @@ function R(e) {
 class O extends r.Ay.Store {
     static displayName = "FriendsWidgetMessagesStore";
     initialize() {
-        this.waitFor(u.A, m.A, o.A, c.Ay, d.A, _.default, E.A), v();
+        this.waitFor(u.A, m.A, o.A, c.Ay, d.A, _.A, E.A), v();
     }
     getRows(e) {
         return [I.values(e), I.version];
@@ -171,7 +171,7 @@ let b = (e) => (0, p.v$)(e, "FriendsWidgetMessagesStore"),
                   }),
                   RELATIONSHIP_PENDING_INCOMING_REMOVED: b(function (e) {
                       let t = !1;
-                      for (let e of _.default.getPrivateChannelIds()) {
+                      for (let e of _.A.getPrivateChannelIds()) {
                           let n = u.A.getChannel(e);
                           null != n && n.isDM() && (t = C(e) || t);
                       }
