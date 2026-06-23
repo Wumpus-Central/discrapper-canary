@@ -1,61 +1,60 @@
-e.d(l, { QA: () => I, Rq: () => N, cy: () => T });
-var n = e(627968);
-e(64700);
-var r = e(339350),
-    a = e(687966),
-    s = e(323384),
-    i = e(432017),
-    u = e(748562),
-    c = e(661531),
-    o = e(177953),
-    p = e(306788),
-    d = e(765379),
-    f = e(471107),
-    A = e(506326),
-    h = e(693879),
-    v = e(751765),
-    g = e(53257),
-    m = e(652215);
-let x = function (t) {
-    let l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        e = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    return l
+"use strict";
+n.d(t, { QA: () => I, Rq: () => S, cy: () => T });
+var i = n(627968);
+n(64700);
+var r = n(339350),
+    s = n(687966),
+    a = n(323384),
+    o = n(432017),
+    l = n(748562),
+    u = n(661531),
+    c = n(177953),
+    d = n(306788),
+    _ = n(765379),
+    h = n(471107),
+    f = n(506326),
+    p = n(693879),
+    E = n(751765),
+    m = n(53257),
+    g = n(652215);
+let A = function (e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    return t
         ? r.Q
-        : (0, d.A)(t)
-          ? e
-              ? a._
-              : s.k
-          : t.type === m.$pd.LISTENING
-            ? i.T
-            : t.type === m.$pd.WATCHING
-              ? u.U
-              : a._;
+        : (0, _.A)(e)
+          ? n
+              ? s._
+              : a.k
+          : e.type === g.$pd.LISTENING
+            ? o.T
+            : e.type === g.$pd.WATCHING
+              ? l.U
+              : s._;
 };
-function I(t) {
-    let { activity: l } = t,
-        e = l.timestamps?.start ?? l.created_at,
-        { now: r } = (0, f.G)();
-    if (null == e || (0, g.A)(l)) return null;
-    let a = l.timestamps?.end,
-        s = l.timestamps?.isCountDown ?? !1,
-        i = x(l, s && null != a && a > r);
-    return (0, n.jsxs)(A.er, {
+function I(e) {
+    let { activity: t } = e,
+        n = t.timestamps?.start ?? t.created_at,
+        { now: r } = (0, h.G)();
+    if (null == n || (0, m.A)(t)) return null;
+    let s = t.timestamps?.end,
+        a = t.timestamps?.isCountDown ?? !1,
+        o = A(t, a && null != s && s > r);
+    return (0, i.jsxs)(f.er, {
         children: [
-            (0, n.jsx)(i, { size: "xxs", color: c.A.colors.TEXT_FEEDBACK_POSITIVE }),
-            (0, n.jsx)(h.z, { entry: { start: e, end: a, isCountDown: s }, textColor: "text-feedback-positive" }),
+            (0, i.jsx)(o, { size: "xxs", color: u.A.colors.TEXT_FEEDBACK_POSITIVE }),
+            (0, i.jsx)(p.z, { entry: { start: n, end: s, isCountDown: a }, textColor: "text-feedback-positive" }),
         ],
     });
 }
-function T(t) {
-    let { activity: l } = t;
-    if ((0, d.A)(l) || null == l.party) return null;
-    let e = (0, v.gF)(l.state, l.party);
-    return null == e ? null : (0, n.jsx)(A.fM, { Icon: o.n, text: e });
+function T(e) {
+    let { activity: t } = e;
+    if ((0, _.A)(t) || null == t.party) return null;
+    let n = (0, E.gF)(t.state, t.party);
+    return null == n ? null : (0, i.jsx)(f.fM, { Icon: c.n, text: n });
 }
-function N(t) {
-    let { activity: l } = t,
-        e = (0, v.kR)(l.assets?.large_text);
-    return null == e ? null : (0, n.jsx)(A.fM, { Icon: p.K, text: e });
+function S(e) {
+    let { activity: t } = e,
+        n = (0, E.kR)(t.assets?.large_text);
+    return null == n ? null : (0, i.jsx)(f.fM, { Icon: d.K, text: n });
 }
-d.K, text;
-:n})}
