@@ -446,7 +446,7 @@ async function es(e) {
         v = n.trimStartMs;
     try {
         let e;
-        await s.A.fileManager.createDirectoryIfNotExists(d, c);
+        null != s.A.fileManager.createDirectoryIfNotExists && (await s.A.fileManager.createDirectoryIfNotExists(d, c));
         let {
                 duration: t,
                 clipStats: i,
