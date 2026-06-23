@@ -73,7 +73,9 @@ function g(e) {
                       ? { ...i, minValue: t.min_value, maxValue: t.max_value }
                       : t.type === c.n4.STRING && ("min_length" in t || "max_length" in t)
                         ? { ...i, minLength: t.min_length, maxLength: t.max_length }
-                        : i;
+                        : t.type === c.n4.ATTACHMENT && "file_types" in t
+                          ? { ...i, fileTypes: t.file_types }
+                          : i;
             });
         })(i.options),
         rootCommand: n,

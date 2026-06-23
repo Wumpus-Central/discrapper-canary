@@ -1778,7 +1778,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 566817, Version Hash: bec1187a6081acdeb36db9ec43753e629ace2847`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 566840, Version Hash: 4800184f71a55e707d69fd2af1b2c9ce1c59bc43`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -16471,9 +16471,8 @@ let IC = (0, ex.mj)({
 var IN = n(398523),
     Iv = n(881373),
     IR = n(727949),
-    IO = n(410516),
-    Ib = n(961773);
-let ID = (e) => {
+    IO = n(961773);
+let Ib = (e) => {
     let { isSelected: t, discountOffer: n } = e,
         [i, r] = (0, i1.kn)([aU.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
     return (te.useEffect(() => {
@@ -16486,9 +16485,9 @@ let ID = (e) => {
               offerExpiresAt: null,
           })
         : (0, F.jsxs)("div", {
-              className: t6()(Ib.bv, Ib.Hf),
+              className: t6()(IO.bv, IO.Hf),
               children: [
-                  (0, F.jsx)(_O.O, { size: "custom", width: 14, height: 14, color: "currentColor", className: Ib.aW }),
+                  (0, F.jsx)(_O.O, { size: "custom", width: 14, height: 14, color: "currentColor", className: IO.aW }),
                   (0, F.jsx)(rJ.E, {
                       variant: "eyebrow",
                       color: "text-subtle",
@@ -16497,13 +16496,13 @@ let ID = (e) => {
               ],
           });
 };
-var IL = n(920050),
-    Iw = n(217936),
-    IM = n(989349),
-    IP = n.n(IM),
-    Ix = n(983060),
-    Ik = n(237146);
-function IU(e) {
+var ID = n(920050),
+    IL = n(217936),
+    Iw = n(989349),
+    IM = n.n(Iw),
+    IP = n(983060),
+    Ix = n(237146);
+function Ik(e) {
     let { targetElementRef: t, dismissPopover: n, children: i } = e;
     return (0, F.jsxs)(F.Fragment, {
         children: [
@@ -16517,8 +16516,8 @@ function IU(e) {
                 targetElementRef: t,
                 onRequestClose: () => n(i3.i.USER_DISMISS),
                 badge: { type: "new", variant: "expressive" },
-                title: nl.intl.string(Ik.default.pdaUSE),
-                body: nl.intl.format(Ik.default.bsMVNi, { termsLink: (0, Ix.xA)() }),
+                title: nl.intl.string(Ix.default.pdaUSE),
+                body: nl.intl.format(Ix.default.bsMVNi, { termsLink: (0, IP.xA)() }),
                 graphic: {
                     type: "image",
                     src: "https://cdn.discordapp.com/assets/content/a626e89f21174d458db77a7934048a601ec3147f0d79fbe3d0f33b76d066c155.png",
@@ -16538,12 +16537,12 @@ function IU(e) {
         ],
     });
 }
-var IG = n(646917),
-    IF = n(576761);
-let IV = (e) => {
+var IU = n(646917),
+    IG = n(576761);
+let IF = (e) => {
     let { children: t, multiplier: n } = e,
         i =
-            (0, IG.z)() === IF.MA.NITRO
+            (0, IU.z)() === IG.MA.NITRO
                 ? nl.intl.format(nl.t.NpUfej, { bonusOrbMultiplier: n })
                 : nl.intl.format(nl.t["G5k+lZ"], { bonusOrbMultiplier: n });
     return (0, F.jsx)(cO.u, {
@@ -16561,16 +16560,17 @@ let IV = (e) => {
         children: t,
     });
 };
-var IB = n(580630),
+var IV = n(580630),
+    IB = n(410516),
     Ij = n(576243),
     IH = n(88001);
 function IY(e) {
     let { children: t } = e,
         n = (0, Ip.p)(),
         i = n?.hasAcknowledged() === !0,
-        r = (0, IO.PT)(i ? null : (n ?? null), uG.gD.PREMIUM_GROUP_MONTH);
+        r = (0, IB.PT)(i ? null : (n ?? null), uG.gD.PREMIUM_GROUP_MONTH);
     if (null == n || i || null == r) return t;
-    let s = (0, IB.$g)(Math.round(r.discountedAmount / IH.aw), r.currency);
+    let s = (0, IV.$g)(Math.round(r.discountedAmount / IH.aw), r.currency);
     return (0, F.jsx)(cO.u, {
         title: nl.intl.string(II.default.luFmt7),
         body: nl.intl.formatToPlainString(II.default.QnXCe6, { pricePerPerson: s }),
@@ -16661,14 +16661,14 @@ let I0 = (e) => {
         u = !0 === a ? nl.intl.string(nl.t.YfTxzY) : nl.intl.string(nl.t.K0dyhm),
         c = te.useCallback(() => {
             n(i3.i.TAKE_ACTION),
-                (0, IZ.A)(eM.BVt.NITRO_HOME, { search: (0, nN.stringify)({ [Iw.x6]: IX.NI.THREE_P_PROMOTIONS }) }),
+                (0, IZ.A)(eM.BVt.NITRO_HOME, { search: (0, nN.stringify)({ [IL.x6]: IX.NI.THREE_P_PROMOTIONS }) }),
                 (0, IJ.u)({ analyticsLocations: r });
         }, [n, r]),
         d = te.useCallback(() => {
             n(i3.i.TAKE_ACTION),
                 (0, IZ.A)(eM.BVt.NITRO_HOME, {
                     search: (0, nN.stringify)({
-                        [Iw.WU]: l ? IL.LOGITECH_3PP_CARD_ID : IL.RECURRING_3P_PROMOTIONS_CARD_ID,
+                        [IL.WU]: l ? ID.LOGITECH_3PP_CARD_ID : ID.RECURRING_3P_PROMOTIONS_CARD_ID,
                     }),
                 });
         }, [n, l]),
@@ -16706,7 +16706,7 @@ function I6(e) {
         s = (0, I2.l)("PremiumOrbRewardsIntroductionPopover"),
         a = te.useCallback(() => {
             n(i3.i.TAKE_ACTION),
-                (0, us.pX)(eM.BVt.NITRO_HOME, { search: (0, nN.stringify)({ perk: IL.NITRO_ORBS_REWARDS_CARD_ID }) });
+                (0, us.pX)(eM.BVt.NITRO_HOME, { search: (0, nN.stringify)({ perk: ID.NITRO_ORBS_REWARDS_CARD_ID }) });
         }, [n]),
         o = (0, F.jsx)(Am.A, {
             targetElementRef: t,
@@ -16730,7 +16730,7 @@ function I4(e) {
         s = (0, I2.l)("PremiumOrbRewardsOrbDropPopover"),
         a = te.useCallback(() => {
             n(i3.i.TAKE_ACTION),
-                (0, us.pX)(eM.BVt.NITRO_HOME, { search: (0, nN.stringify)({ perk: IL.NITRO_ORBS_REWARDS_CARD_ID }) });
+                (0, us.pX)(eM.BVt.NITRO_HOME, { search: (0, nN.stringify)({ perk: ID.NITRO_ORBS_REWARDS_CARD_ID }) });
         }, [n]),
         o = (0, F.jsx)(Am.A, {
             targetElementRef: t,
@@ -16775,9 +16775,9 @@ function I7(e) {
 }
 function I8(e) {
     let { targetElementRef: t, discountOffer: n, children: i } = e,
-        r = (0, IO.YJ)(n) ?? uG.gD.PREMIUM_YEAR_TIER_2,
-        s = (0, IO.PT)(n, r),
-        a = null != s ? (0, IB.$g)(s.discountedAmount, s.currency) : null,
+        r = (0, IB.YJ)(n) ?? uG.gD.PREMIUM_YEAR_TIER_2,
+        s = (0, IB.PT)(n, r),
+        a = null != s ? (0, IV.$g)(s.discountedAmount, s.currency) : null,
         o = nl.intl.format(nl.t["4FUWIL"], { percent: n.discount.amount }),
         l = nl.intl.format(nl.t.XTzCoo, { discountedPrice: a }),
         u = (0, F.jsx)(Ij.A, { size: 48, iconSize: 27, color: rI.A.colors.WHITE });
@@ -16797,7 +16797,7 @@ var I9 = n(473702),
 let Tt = (e) => {
     let { targetElementRef: t, discountOffer: i, premiumSubscription: r, dismissCoachmark: s, children: a } = e,
         { analyticsLocations: o } = (0, aV.Ay)(is.A.CHURN_DISCOUNT_POPOVER),
-        l = (0, IO.iU)(uG.gD.PREMIUM_MONTH_TIER_2, i, r),
+        l = (0, IB.iU)(uG.gD.PREMIUM_MONTH_TIER_2, i, r),
         u = (0, F.jsx)(Am.h, {
             targetElementRef: t,
             position: "right",
@@ -16911,7 +16911,7 @@ function Tu(e) {
 function Tc(e) {
     let { children: t, endsAt: n, variant: i = "initial" } = e,
         r = (0, In.Zb)(n),
-        s = (0, IB.$g)(0, (0, A8.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
+        s = (0, IV.$g)(0, (0, A8.Rr)(), { minimumFractionDigits: 0, maximumFractionDigits: 0 }),
         a = "followup" === i,
         o = a ? nl.intl.string(nl.t.gzhz8w) : nl.intl.string(nl.t.aopiS6),
         l = a ? nl.intl.format(nl.t["3iUE+U"], { price: s }) : nl.intl.format(nl.t.AQd9tZ, { days: r });
@@ -16997,7 +16997,7 @@ function T_(e) {
             break;
         case "reverse_trial": {
             let e = p?.trial_id === uG.Tt,
-                n = f ?? (p?.expires_at != null ? IP()(p?.expires_at) : null);
+                n = f ?? (p?.expires_at != null ? IM()(p?.expires_at) : null);
             if (null != n) return (0, F.jsx)(Tc, { endsAt: n, variant: e ? "followup" : "initial", children: t });
             break;
         }
@@ -17011,9 +17011,9 @@ function T_(e) {
         case "ss_logitech_reheat":
             return (0, F.jsx)(I0, { targetElementRef: i, dismissPopover: l, children: t });
         case "orbs_multiplier":
-            return (0, F.jsx)(IV, { multiplier: _, children: t });
+            return (0, F.jsx)(IF, { multiplier: _, children: t });
         case "croissant_reheat_moment":
-            return (0, F.jsx)(IU, { targetElementRef: i, dismissPopover: l, children: t });
+            return (0, F.jsx)(Ik, { targetElementRef: i, dismissPopover: l, children: t });
         case "offer_tab_badge":
             return (0, F.jsx)(Ts, { targetElementRef: i, dismissPopover: d, children: t });
         case "offer_tab_badge_tooltip":
@@ -17233,48 +17233,53 @@ let Th = new Set([aU.M.PREMIUM_WISHLIST_COACHMARK]),
                     offerExpiresAt: !0 === e ? E?.expires_at : null,
                 })),
                     (n = 4);
-            } else if (eN) (t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 12);
-            else if (A)
-                (t = (0, F.jsx)(IA.MA, {
-                    isTabSelected: s,
-                    badgeCopy: nl.intl.string(nl.t.raP9dM),
-                    offerExpiresAt: null,
-                    unackedBadgeStyle: q,
-                })),
-                    (n = 4);
-            else if (null != y) (t = (0, F.jsx)(Al.E, { type: { text: y }, variant: "expressive" })), (n = 1);
-            else if (null != m && m.discountId === uG.xH)
-                (t = (0, F.jsx)(IT, { userDiscount: m, isTabSelected: s })), (n = 9);
-            else if (null != m) {
-                (t = (0, F.jsx)(IA.fY, { userDiscount: m, isTabSelected: s, includesAmountOff: !1, badgeStyle: q })),
-                    (n = 3);
-                let e = (0, IO.hm)(m);
-                (eS = z === It.F.POPOVER && eI === aU.M.PREMIUM_OFFER_TAB_BADGE_POPOVER && !e),
-                    (ey = z === It.F.TOOLTIP && !m.hasAcknowledged() && !e);
-            } else if (null == E || en)
-                H
-                    ? ((t = (0, F.jsx)(ID, { isSelected: s, discountOffer: g })), (n = 8))
-                    : (k && eo === aU.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
-                        (j && eo === aU.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
-                        (B && eE === aU.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
-                      ? ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 2))
-                      : Y && eo === aU.M.PREMIUM_WISHLIST_COACHMARK
-                        ? ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 13))
-                        : N
-                          ? ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 14))
-                          : K && eo === aU.M.CROISSANT_REHEAT_MOMENT
-                            ? ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 2))
-                            : $ &&
-                              es === aU.M.PROFILE_FRAMES_NITRO_TAB_NEW_BADGE &&
-                              ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })),
-                              (n = 15),
-                              (r = IL.PROFILE_FRAMES_CARD_ID));
-            else {
-                (t = (0, F.jsx)(IA.Ag, { trialOffer: E, isTabSelected: s, badgeStyle: q })), (n = 4);
-                let e = E.subscription_trial?.interval === uG.WT.YEAR;
-                (eS = z === It.F.POPOVER && eI === aU.M.PREMIUM_OFFER_TAB_BADGE_POPOVER && !e),
-                    (ey = z === It.F.TOOLTIP && null == E.expires_at && !e);
-            }
+            } else
+                eN
+                    ? ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 12))
+                    : A
+                      ? ((t = (0, F.jsx)(IA.MA, {
+                            isTabSelected: s,
+                            badgeCopy: nl.intl.string(nl.t.raP9dM),
+                            offerExpiresAt: null,
+                            unackedBadgeStyle: q,
+                        })),
+                        (n = 4))
+                      : null != y
+                        ? ((t = (0, F.jsx)(Al.E, { type: { text: y }, variant: "expressive" })), (n = 1))
+                        : null != m && m.discountId === uG.xH
+                          ? ((t = (0, F.jsx)(IT, { userDiscount: m, isTabSelected: s })), (n = 9))
+                          : null != m
+                            ? ((t = (0, F.jsx)(IA.fY, {
+                                  userDiscount: m,
+                                  isTabSelected: s,
+                                  includesAmountOff: !1,
+                                  badgeStyle: q,
+                              })),
+                              (n = 3),
+                              (eS = z === It.F.POPOVER && eI === aU.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
+                              (ey = z === It.F.TOOLTIP && !m.hasAcknowledged()))
+                            : null == E || en
+                              ? H
+                                  ? ((t = (0, F.jsx)(Ib, { isSelected: s, discountOffer: g })), (n = 8))
+                                  : (k && eo === aU.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
+                                      (j && eo === aU.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
+                                      (B && eE === aU.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
+                                    ? ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 2))
+                                    : Y && eo === aU.M.PREMIUM_WISHLIST_COACHMARK
+                                      ? ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 13))
+                                      : N
+                                        ? ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 14))
+                                        : K && eo === aU.M.CROISSANT_REHEAT_MOMENT
+                                          ? ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })), (n = 2))
+                                          : $ &&
+                                            es === aU.M.PROFILE_FRAMES_NITRO_TAB_NEW_BADGE &&
+                                            ((t = (0, F.jsx)(Al.E, { type: "new", variant: "expressive" })),
+                                            (n = 15),
+                                            (r = ID.PROFILE_FRAMES_CARD_ID))
+                              : ((t = (0, F.jsx)(IA.Ag, { trialOffer: E, isTabSelected: s, badgeStyle: q })),
+                                (n = 4),
+                                (eS = z === It.F.POPOVER && eI === aU.M.PREMIUM_OFFER_TAB_BADGE_POPOVER),
+                                (ey = z === It.F.TOOLTIP && null == E.expires_at));
         else
             (t = (0, F.jsx)(Iy.A, {
                 componentId: eu.id,
@@ -17329,10 +17334,10 @@ let Th = new Set([aU.M.PREMIUM_WISHLIST_COACHMARK]),
             onClick: () => {
                 if (null != i && "" !== i) {
                     let e = new URL(o, window.location.origin);
-                    e.searchParams.set(Iw.x6, i), (0, us.pX)(`${e.pathname}?${e.searchParams.toString()}`);
+                    e.searchParams.set(IL.x6, i), (0, us.pX)(`${e.pathname}?${e.searchParams.toString()}`);
                 } else if (null != r) {
                     let e = new URL(o, window.location.origin);
-                    e.searchParams.set(Iw.WU, r), (0, us.pX)(`${e.pathname}?${e.searchParams.toString()}`);
+                    e.searchParams.set(IL.WU, r), (0, us.pX)(`${e.pathname}?${e.searchParams.toString()}`);
                 }
                 eR();
             },
@@ -18018,7 +18023,7 @@ let Si = "isHideDevBanner",
                     className: t6()(Sn.Wz, Sn.mr),
                     children: [
                         (0, F.jsx)(St, { className: Sn.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "566817" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "566840" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -32657,7 +32662,7 @@ function wj(e, t, n, i) {
             .replace(/<t:(\d+):([A-Z]|[a-z])>/g, (e, t, n) => {
                 let i = ww.kx[n],
                     r = 1e3 * parseInt(t, 10),
-                    s = IP()(r);
+                    s = IM()(r);
                 return null != i ? i(s) : s.format();
             });
     return null == i

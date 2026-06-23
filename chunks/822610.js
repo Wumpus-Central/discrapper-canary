@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => P }), n(321073);
+n.d(t, { A: () => x }), n(321073);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -20,51 +20,67 @@ var i = n(627968),
     I = n(939249),
     T = n(780777),
     S = n(565150),
-    y = n(31717),
-    C = n(914905),
-    N = n(650583),
-    v = n(375708),
-    R = n(402913);
-function O(e) {
+    y = n(424170),
+    C = n(31717),
+    N = n(914905),
+    v = n(650583),
+    R = n(375708),
+    O = n(402913);
+function b(e) {
     let { channelId: t, option: n, keyboardModeEnabled: s } = e,
         o = r.useRef(null),
         [l, u] = r.useState(!1),
-        c = E.A.getUpload(t, n.name, y.C.SlashCommand),
-        _ = r.useRef(null),
-        h = r.useCallback(() => {
+        c = E.A.getUpload(t, n.name, C.C.SlashCommand),
+        h = r.useRef(null),
+        f = n.type === _.n4.ATTACHMENT ? n.fileTypes : void 0,
+        {
+            allowedExtensions: p,
+            typesFormattedString: m,
+            validateFilenames: b,
+            showInvalidFileTypeAlert: D,
+        } = (0, y.M1)(f),
+        L = r.useCallback(() => {
             u(!0);
         }, []),
-        f = r.useCallback(() => {
+        w = r.useCallback(() => {
             u(!1);
         }, []),
-        p = r.useCallback(
+        M = r.useCallback(
+            (e, i) => {
+                if (p.length > 0 && !b([e.name])) return D();
+                let r = { id: n.name, file: e, platform: S.xz.WEB, origin: i };
+                d.A.setFile({ channelId: t, id: n.name, file: r, draftType: C.C.SlashCommand, allowOptimization: !1 });
+            },
+            [p.length, b, n.name, t, D],
+        ),
+        P = r.useCallback(
             (e) => {
                 u(!1);
-                let i = { id: n.name, file: e.dataTransfer?.files[0], platform: S.xz.WEB, origin: "drag_drop" };
-                d.A.setFile({ channelId: t, id: n.name, file: i, draftType: y.C.SlashCommand, allowOptimization: !1 });
+                let t = e.dataTransfer?.files[0];
+                null != t && M(t, "drag_drop");
             },
-            [t, n],
+            [M],
         );
     return (r.useEffect(() => {
-        let e = _.current;
+        let e = h.current;
         return (
             null == c &&
-                (e?.addEventListener("dragover", h, !1),
-                e?.addEventListener("dragleave", f, !1),
-                e?.addEventListener("drop", p, !1)),
+                (e?.addEventListener("dragover", L, !1),
+                e?.addEventListener("dragleave", w, !1),
+                e?.addEventListener("drop", P, !1)),
             () => {
-                e?.removeEventListener("dragover", h, !1),
-                    e?.removeEventListener("dragleave", f, !1),
-                    e?.removeEventListener("drop", p, !1);
+                e?.removeEventListener("dragover", L, !1),
+                    e?.removeEventListener("dragleave", w, !1),
+                    e?.removeEventListener("drop", P, !1);
             }
         );
-    }, [c, h, f, p]),
+    }, [c, L, w, P]),
     null != c)
-        ? (0, i.jsx)(C.A, {
+        ? (0, i.jsx)(N.A, {
               channelId: t,
               upload: c,
               keyboardModeEnabled: s,
-              draftType: y.C.SlashCommand,
+              draftType: C.C.SlashCommand,
               label: (0, i.jsxs)(r.Fragment, {
                   children: [
                       (0, i.jsxs)(A.E, { tag: "span", variant: "text-md/normal", children: [n.displayName, ": "] }),
@@ -83,49 +99,37 @@ function O(e) {
               channelId: t,
               keyboardModeEnabled: s,
               onKeyDown: (e) => {
-                  e.key === N.dh.ENTER && (e.preventDefault(), o.current?.activateUploadDialogue());
+                  e.key === v.dh.ENTER && (e.preventDefault(), o.current?.activateUploadDialogue());
               },
-              className: a()(R.xd, { [R.LB]: l }),
-              draftType: y.C.SlashCommand,
-              ref: _,
+              className: a()(O.xd, { [O.LB]: l }),
+              draftType: C.C.SlashCommand,
+              ref: h,
               children: [
-                  (0, i.jsx)("span", { className: a()(R.fS, { [R.Vg]: l }), children: n.displayName }),
+                  (0, i.jsx)("span", { className: a()(O.fS, { [O.Vg]: l }), children: n.displayName }),
                   (0, i.jsx)(I.D, {
-                      className: R.uN,
+                      className: O.uN,
                       onClick: () => o.current?.activateUploadDialogue(),
                       children: (0, i.jsxs)("div", {
-                          className: R.wi,
+                          className: O.wi,
                           children: [
-                              (0, i.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: R.H9, alt: "" }),
+                              (0, i.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: O.H9, alt: "" }),
                               (0, i.jsx)(A.E, {
-                                  className: R.L,
+                                  className: O.L,
                                   variant: "text-sm/normal",
-                                  children: v.intl.string(v.t.IJyOUf),
+                                  children:
+                                      null != m ? R.intl.format(R.t.JJzx48, { types: m }) : R.intl.string(R.t.IJyOUf),
                               }),
                               (0, i.jsx)(T.A, {
                                   ref: o,
                                   onChange: (e) => {
-                                      if (null != t && e.currentTarget?.files?.[0] != null) {
-                                          let i = {
-                                              id: n.name,
-                                              file: e.currentTarget.files[0],
-                                              platform: S.xz.WEB,
-                                              origin: "file_picker",
-                                          };
-                                          d.A.setFile({
-                                              channelId: t,
-                                              id: n.name,
-                                              file: i,
-                                              draftType: y.C.SlashCommand,
-                                              allowOptimization: !1,
-                                          }),
-                                              (e.currentTarget.value = "");
-                                      }
+                                      let n = e.currentTarget?.files?.[0];
+                                      null != t && null != n && (M(n, "file_picker"), (e.currentTarget.value = ""));
                                   },
                                   multiple: !1,
+                                  filters: p.length > 0 ? [{ name: "", extensions: p }] : void 0,
                                   tabIndex: -1,
                                   "aria-hidden": !0,
-                                  className: R.Fg,
+                                  className: O.Fg,
                               }),
                           ],
                       }),
@@ -133,27 +137,27 @@ function O(e) {
               ],
           });
 }
-var b = n(652215),
-    D = n(386016),
-    L = n(429128);
-let w = [];
-function M(e) {
+var D = n(652215),
+    L = n(386016),
+    w = n(429128);
+let M = [];
+function P(e) {
     let { channelId: t, type: n, ignoreFile: s, smallAttachments: A = !1 } = e,
         I = (0, u.bG)([h.Ay], () => h.Ay.keyboardModeEnabled),
         T = (0, f.A)("attachments", l.Gl.HORIZONTAL),
         S = (0, u.bG)([E.A], () => E.A.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: y,
-            commandOptions: N,
+            commandOptions: C,
             commandOptionStates: v,
         } = (0, u.cf)([p.A], () => {
             let e = p.A.getActiveCommand(t);
-            if (null == e) return { isApplicationCommand: !1, commandOptions: w, commandOptionStates: null };
+            if (null == e) return { isApplicationCommand: !1, commandOptions: M, commandOptionStates: null };
             let n = p.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
-        R = r.useMemo(() => N?.filter((e) => e.type === _.n4.ATTACHMENT && v?.[e.name]?.hasValue) ?? [], [N, v]),
-        [M, P] = r.useState([]);
+        R = r.useMemo(() => C?.filter((e) => e.type === _.n4.ATTACHMENT && v?.[e.name]?.hasValue) ?? [], [C, v]),
+        [O, P] = r.useState([]);
     r.useEffect(() => {
         let e = () => {
             d.A.clearAll(t, n.drafts.type);
@@ -166,8 +170,8 @@ function M(e) {
     let x = r.useCallback(() => {
         T.focusFirstVisibleItem();
     }, [T]);
-    (0, m.Vo)({ event: b.jej.FOCUS_ATTACHMENT_AREA, handler: x });
-    let k = { isApplicationCommand: y, previousUploadOptions: M, uploadOptions: R },
+    (0, m.Vo)({ event: D.jej.FOCUS_ATTACHMENT_AREA, handler: x });
+    let k = { isApplicationCommand: y, previousUploadOptions: O, uploadOptions: R },
         U = r.useRef(k);
     r.useEffect(() => {
         U.current = k;
@@ -196,12 +200,12 @@ function M(e) {
                       return (0, i.jsx)("ul", {
                           ref: r,
                           ...s,
-                          className: a()(D.I, L.KK),
+                          className: a()(L.I, w.KK),
                           children: y
-                              ? R.map((e) => (0, i.jsx)(O, { channelId: t, keyboardModeEnabled: I, option: e }, e.name))
+                              ? R.map((e) => (0, i.jsx)(b, { channelId: t, keyboardModeEnabled: I, option: e }, e.name))
                               : G.map((e) =>
                                     (0, i.jsx)(
-                                        C.A,
+                                        N.A,
                                         {
                                             channelId: t,
                                             draftType: n.drafts.type,
@@ -218,7 +222,7 @@ function M(e) {
               }),
           });
 }
-let P = r.memo(function (e) {
+let x = r.memo(function (e) {
     let { channelId: t, type: n, canAttachFiles: r, ignoreFile: s, smallAttachments: a = !1 } = e;
-    return r ? (0, i.jsx)(M, { channelId: t, type: n, ignoreFile: s, smallAttachments: a }) : null;
+    return r ? (0, i.jsx)(P, { channelId: t, type: n, ignoreFile: s, smallAttachments: a }) : null;
 });
