@@ -26,23 +26,24 @@ var i = n(284009),
 function v(e, t, n) {
     if (!(0, f.C$)(e.id)) return void (0, _.showInaccessibleReportPostModal)();
     h.Uw.dispatch(C.jej.POPOUT_CLOSE);
-    let i = !a().isEmpty(T.A.getVoiceStatesForChannel(e.id));
+    let i = !a().isEmpty(T.A.getVoiceStatesForChannel(e.id)),
+        s = { state: { hideThreadCallUI: !0 } };
     if (t || !m.SY.getSetting() || __OVERLAY__ || i) {
         o.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e.parent_id }),
-            null != n ? (0, E.N9)(e, { source: n }) : (0, E.iN)(e.id);
+            null != n ? (0, E.N9)(e, { ...s, source: n }) : (0, E.iN)(e.id, s);
         return;
     }
     r()(null != e.parent_id, "all threads must have parents");
-    let s = e.getGuildId();
-    if (null != s && null != g.Ay.getGuildSidebarState(s)) {
+    let l = e.getGuildId();
+    if (null != l && null != g.Ay.getGuildSidebarState(l)) {
         o.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: e.parent_id }),
-            null != n ? (0, E.N9)(e, { source: n }) : (0, E.iN)(e.id);
+            null != n ? (0, E.N9)(e, { ...s, source: n }) : (0, E.iN)(e.id, s);
         return;
     }
-    let l = I.A.getChannelId();
-    e.parent_id === l || (0, N.mP)(l) || (0, E.iN)(e.parent_id),
+    let u = I.A.getChannelId();
+    e.parent_id === u || (0, N.mP)(u) || (0, E.iN)(e.parent_id),
         (0, p.pX)(
-            C.BVt.CHANNEL_THREAD_VIEW((0, d.j)(e), (0, N.mP)(l) ? N.VV.GUILD_HOME : e.parent_id, e.id),
+            C.BVt.CHANNEL_THREAD_VIEW((0, d.j)(e), (0, N.mP)(u) ? N.VV.GUILD_HOME : e.parent_id, e.id),
             e.isForumPost() ? { source: y.H9.FORUM } : void 0,
         ),
         setTimeout(() => {
