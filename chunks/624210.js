@@ -4,20 +4,21 @@ var i = n(636537),
     r = n(26279),
     s = n(652215);
 async function a(e) {
-    let { skuId: t, paymentSourceId: n, paymentGateway: a, loadId: o } = e,
-        l = {};
-    null != n && (l.payment_source_id = n), null != a && (l.payment_gateway = a);
-    let u = { order_line_items: [{ sku_id: t, quantity: 1, purchase_type: r.BM.ONE_TIME }], billing_facet: l },
-        c = (
-            await i.Bo.post({
-                url: s.Rsh.ORDER_CREATE,
-                body: u,
-                context: null != o && "" !== o ? { load_id: o } : void 0,
-                rejectWithError: !0,
-            })
-        ).body;
-    if (null == c || null == c.id || "" === c.id) throw Error("Invalid order response");
-    return c;
+    let { skuId: t, paymentSourceId: n, paymentGateway: a, loadId: o, testMode: l } = e,
+        u = {};
+    null != n && (u.payment_source_id = n), null != a && (u.payment_gateway = a);
+    let c = { order_line_items: [{ sku_id: t, quantity: 1, purchase_type: r.BM.ONE_TIME }], billing_facet: u };
+    l && (c.application_facet = { test_mode: !0 });
+    let d = (
+        await i.Bo.post({
+            url: s.Rsh.ORDER_CREATE,
+            body: c,
+            context: null != o && "" !== o ? { load_id: o } : void 0,
+            rejectWithError: !0,
+        })
+    ).body;
+    if (null == d || null == d.id || "" === d.id) throw Error("Invalid order response");
+    return d;
 }
 async function o(e) {
     let { orderId: t, updates: n } = e,

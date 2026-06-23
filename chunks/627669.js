@@ -520,7 +520,7 @@ let tg = function (e) {
 };
 var tf = n(853742);
 n(321073);
-var tj = n(922139),
+var tj = n(308186),
     tv = n(136722),
     tp = n(192308),
     tA = n(866323),
@@ -3699,19 +3699,21 @@ function i0(e) {
                 children: [
                     null != f ? (0, i.jsx)(iZ, { message: f, channel: n, containerWidth: a.width }) : null,
                     T ? (0, i.jsx)("div", { className: iJ.GA, children: (0, i.jsx)(eC.Ay, { channel: n }) }) : null,
-                    (0, i.jsxs)("div", {
-                        className: iJ.oO,
-                        children: [
-                            (0, i.jsx)(iX, { channel: n }),
-                            L &&
-                                null != M &&
-                                (0, i.jsx)(i$.A, {
-                                    application: M,
-                                    size: "sm",
-                                    analyticsLocation: tP.A.GAME_INVITE_CHANNEL_POST,
-                                }),
-                        ],
-                    }),
+                    n.isArchivedThread()
+                        ? null
+                        : (0, i.jsxs)("div", {
+                              className: iJ.oO,
+                              children: [
+                                  (0, i.jsx)(iX, { channel: n }),
+                                  L &&
+                                      null != M &&
+                                      (0, i.jsx)(i$.A, {
+                                          application: M,
+                                          size: "sm",
+                                          analyticsLocation: tP.A.GAME_INVITE_CHANNEL_POST,
+                                      }),
+                              ],
+                          }),
                 ],
             }),
             (0, i.jsx)(J.M, {
