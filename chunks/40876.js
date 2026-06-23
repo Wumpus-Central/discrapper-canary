@@ -290,7 +290,7 @@ let r = {
         inlineRequire: () => n(753189).A,
         neverLoadBeforeConnectionOpen: !0,
     },
-    MultiAccountManager: {
+    MultiAccountManagerWeb: {
         actions: ["LOGOUT", "MULTI_ACCOUNT_SWITCH_START"],
         inlineRequire: () => n(81009).A,
         loadAfterConnectionOpen: !0,

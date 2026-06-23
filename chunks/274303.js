@@ -1,6 +1,6 @@
 "use strict";
 let i, r;
-n.d(t, { A: () => m, U: () => d }), n(321073);
+n.d(t, { A: () => E, U: () => d }), n(321073);
 var s,
     a = n(247775),
     o = n(17928),
@@ -10,16 +10,15 @@ var s,
 n(573879);
 var d =
     (((s = {})[(s.INVALID = 0)] = "INVALID"), (s[(s.VALIDATING = 1)] = "VALIDATING"), (s[(s.VALID = 2)] = "VALID"), s);
-let _ = [],
-    h = !1;
-function f(e) {
+let _ = [];
+function h(e) {
     (_ = _.filter((t) => {
         let { id: n } = t;
         return n !== e;
     })),
         a.removeToken(e);
 }
-function p(e, t) {
+function f(e, t) {
     let n = _.slice(),
         i = n.find((t) => {
             let { id: n } = t;
@@ -27,7 +26,7 @@ function p(e, t) {
         });
     null != i && ((i.tokenStatus = t), (_ = n));
 }
-class E extends o.Ay.PersistedStore {
+class p extends o.Ay.PersistedStore {
     static displayName = "MultiAccountStore";
     static persistKey = "MultiAccountStore";
     static migrations = [
@@ -66,14 +65,11 @@ class E extends o.Ay.PersistedStore {
     get canUseMultiAccountNotifications() {
         return this.getCanUseMultiAccountMobile();
     }
-    get isSwitchingAccount() {
-        return h;
-    }
 }
-let m = new E(l.h, {
+let E = new p(l.h, {
     CONNECTION_OPEN: function (e) {
         let { user: t } = e;
-        (i = t.id), (h = !1), !r && (0, u.A)(t) && (r = !0);
+        (i = t.id), !r && (0, u.A)(t) && (r = !0);
         let n = _.slice(),
             s = n.findIndex((e) => {
                 let { id: n } = e;
@@ -95,22 +91,21 @@ let m = new E(l.h, {
             (_ = n).length > 5 &&
                 _.splice(5).forEach((e) => {
                     let { id: t } = e;
-                    f(t);
+                    h(t);
                 });
     },
     LOGOUT: function (e) {
-        (h = !!e.isSwitchingAccount),
-            e.isSwitchingAccount ||
-                (_ = _.filter((e) => {
-                    let { id: t } = e;
-                    return t !== i;
-                })),
+        e.isSwitchingAccount ||
+            (_ = _.filter((e) => {
+                let { id: t } = e;
+                return t !== i;
+            })),
             (i = null);
     },
-    MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => p(e.userId, 1),
-    MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => p(e.userId, 2),
-    MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => p(e.userId, 0),
-    MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => f(e.userId),
+    MULTI_ACCOUNT_VALIDATE_TOKEN_REQUEST: (e) => f(e.userId, 1),
+    MULTI_ACCOUNT_VALIDATE_TOKEN_SUCCESS: (e) => f(e.userId, 2),
+    MULTI_ACCOUNT_VALIDATE_TOKEN_FAILURE: (e) => f(e.userId, 0),
+    MULTI_ACCOUNT_REMOVE_ACCOUNT: (e) => h(e.userId),
     MULTI_ACCOUNT_MOVE_ACCOUNT: function (e) {
         let { from: t, to: n } = e;
         _ = (0, c.E8)(_, t, n);
