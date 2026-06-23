@@ -358,11 +358,11 @@
 
 .slateBlockquoteContainer__75297 .blockquoteDivider__75297,
 .slateBlockquoteContainer__75297 blockquote {
-    border-radius: 0;
     margin: 0
 }
 
 .slateBlockquoteContainer__75297 blockquote {
+    border-radius: 0;
     -webkit-user-select: text;
     -moz-user-select: text;
     user-select: text
