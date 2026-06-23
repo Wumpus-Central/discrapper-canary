@@ -27,18 +27,19 @@ function f(e, n) {
             allowDevLinks: v = !1,
             previewLinkTarget: x = !1,
             viewingChannelId: y,
+            postProcessor: E,
         } = n,
-        E = (function (e) {
+        j = (function (e) {
             let { location: n } = e;
             return u.useConfig({ location: n });
         })({ location: "useMessageRenderedContent" }),
-        [j, G] = s.useState(!1),
-        I = s.useCallback((e) => {
-            e && G(!0);
+        [G, I] = s.useState(!1),
+        S = s.useCallback((e) => {
+            e && I(!0);
         }, []);
     return (
         s.useEffect(() => {
-            G(!1);
+            I(!1);
         }, [e.content]),
         s.useMemo(() => {
             if (null != e.customRenderedContent) return e.customRenderedContent;
@@ -53,7 +54,7 @@ function f(e, n) {
                     },
                 });
             }
-            return E.enabled
+            return j.enabled && null == E
                 ? {
                       content: (0, a.jsx)(s.Suspense, {
                           children: (0, a.jsx)(o.O.Provider, {
@@ -63,12 +64,12 @@ function f(e, n) {
                                   viewingChannelId: y,
                                   guildId: (0, r.U)(e),
                                   authorId: e.author?.id,
-                                  setHasSpoilerEmbeds: I,
+                                  setHasSpoilerEmbeds: S,
                               },
                               children: (0, a.jsx)(p, { content: e.content }),
                           }),
                       }),
-                      hasSpoilerEmbeds: j,
+                      hasSpoilerEmbeds: G,
                       hasBailedAst: !1,
                   }
                 : (0, i.Ay)(e, {
@@ -82,6 +83,7 @@ function f(e, n) {
                       previewLinkTarget: x,
                       viewingChannelId: y,
                       allowGameMentions: !0,
+                      postProcessor: E,
                   });
         }, [
             e.content,
@@ -100,8 +102,9 @@ function f(e, n) {
             x,
             v,
             y,
-            E.enabled,
-            j,
+            E,
+            j.enabled,
+            G,
         ])
     );
 }
