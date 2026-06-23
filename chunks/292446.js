@@ -137,7 +137,7 @@ class m {
     channelId;
     ready = !1;
     cached = !1;
-    jumpType = s.US.ANIMATED;
+    jumpType = s.vx.ANIMATED;
     jumpTargetId = null;
     jumpTargetOffset = 0;
     jumpSequenceId = 1;
@@ -145,6 +145,7 @@ class m {
     jumpedToPresent = !1;
     jumpFlash = !0;
     jumpReturnTargetId = null;
+    onJumpComplete = null;
     focusTargetId = null;
     focusSequenceId = 1;
     initialScrollSequenceId = 0;
@@ -205,6 +206,7 @@ class m {
                   (n.jumpedToPresent = this.jumpedToPresent),
                   (n.jumpFlash = this.jumpFlash),
                   (n.jumpReturnTargetId = this.jumpReturnTargetId),
+                  (n.onJumpComplete = this.onJumpComplete),
                   (n.focusTargetId = this.focusTargetId),
                   (n.focusSequenceId = this.focusSequenceId),
                   (n.hasMoreBefore = this.hasMoreBefore),
@@ -237,6 +239,7 @@ class m {
                   (n.cached = void 0 !== e.cached ? e.cached : this.cached),
                   (n.hasFetched = void 0 !== e.hasFetched ? e.hasFetched : this.hasFetched),
                   (n.error = void 0 !== e.error ? e.error : this.error),
+                  (n.onJumpComplete = void 0 !== e.onJumpComplete ? e.onJumpComplete : this.onJumpComplete),
                   (n.initialScrollSequenceId =
                       void 0 !== e.initialScrollSequenceId ? e.initialScrollSequenceId : this.initialScrollSequenceId),
                   (n.suppressRowAnimationSequenceId =
@@ -485,26 +488,25 @@ class m {
                 (t.jumpFlash = !1),
                 (t.jumpReturnTargetId = null),
                 (t.jumpSequenceId = t.jumpSequenceId + 1),
+                (t.onJumpComplete = null),
                 (t.ready = !0),
                 (t.loadingMore = !1);
         }, !0);
     }
     jumpToMessage(e) {
-        let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = arguments.length > 2 ? arguments[2] : void 0,
-            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-            r = arguments.length > 4 ? arguments[4] : void 0;
-        return this.mutate((a) => {
-            (a.jumped = !0),
-                (a.jumpedToPresent = !1),
-                (a.jumpType = r ?? s.US.ANIMATED),
-                (a.jumpTargetId = e),
-                (a.jumpTargetOffset = null != e && null != n ? n : 0),
-                (a.jumpSequenceId = a.jumpSequenceId + 1),
-                (a.jumpFlash = t),
-                (a.jumpReturnTargetId = i),
-                (a.ready = !0),
-                (a.loadingMore = !1);
+        let { messageId: t, flash: n = !0, offset: i, returnTargetId: r = null, jumpType: a, onJumpComplete: o } = e;
+        return this.mutate((e) => {
+            (e.jumped = !0),
+                (e.jumpedToPresent = !1),
+                (e.jumpType = a ?? s.vx.ANIMATED),
+                (e.jumpTargetId = t),
+                (e.jumpTargetOffset = null != t && null != i ? i : 0),
+                (e.jumpSequenceId = e.jumpSequenceId + 1),
+                (e.onJumpComplete = o ?? null),
+                (e.jumpFlash = n),
+                (e.jumpReturnTargetId = r),
+                (e.ready = !0),
+                (e.loadingMore = !1);
         }, !1);
     }
     focusOnMessage(e) {
@@ -576,6 +578,7 @@ class m {
             jumpTargetId: e?.messageId ?? null,
             jumpTargetOffset: e?.offset ?? 0,
             jumpReturnTargetId: e?.returnMessageId ?? null,
+            onJumpComplete: e?.onJumpComplete ?? null,
             ready: null == e && this.ready,
         });
     }
@@ -614,7 +617,7 @@ class m {
         return p.mutate({
             ready: !0,
             loadingMore: !1,
-            jumpType: a?.jumpType ?? s.US.ANIMATED,
+            jumpType: a?.jumpType ?? s.vx.ANIMATED,
             jumpFlash: a?.flash ?? !1,
             jumped: null != a,
             jumpedToPresent: a?.present ?? !1,
@@ -622,6 +625,7 @@ class m {
             jumpTargetOffset: null != a && null != a.messageId && null != a.offset ? a.offset : 0,
             jumpSequenceId: null == a || c ? p.jumpSequenceId : p.jumpSequenceId + 1,
             jumpReturnTargetId: a?.returnMessageId ?? null,
+            onJumpComplete: a?.onJumpComplete ?? null,
             hasMoreBefore: null == a && i ? p.hasMoreBefore : o,
             hasMoreAfter: null == a && n ? p.hasMoreAfter : u,
             cached: d,

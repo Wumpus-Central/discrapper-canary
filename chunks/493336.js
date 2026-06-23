@@ -496,13 +496,14 @@ let eK = {
                 skipLocalFetch: u,
                 jumpType: c,
                 avoidInitialScroll: d,
+                onJumpComplete: _,
             } = e;
             return (
                 "string" == typeof s && e$.trackJump(t, n, s, a),
                 e$.fetchMessages({
                     channelId: t,
                     limit: D.d7Q,
-                    jump: { messageId: n, flash: i, offset: r, returnMessageId: l, jumpType: c },
+                    jump: { messageId: n, flash: i, offset: r, returnMessageId: l, jumpType: c, onJumpComplete: _ },
                     isPreload: o,
                     skipLocalFetch: u,
                     avoidInitialScroll: d,

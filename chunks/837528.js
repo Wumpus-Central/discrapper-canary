@@ -328,11 +328,20 @@ function Y(e, t, n) {
         let { messageReference: i } = e,
             l = t.message,
             s = () => {
+                let t = e.mediaMention;
                 o.A.jumpToMessage({
                     channelId: i.channel_id,
                     messageId: i.message_id,
                     flash: !0,
                     returnMessageId: e.id,
+                    onJumpComplete:
+                        null != t
+                            ? () => {
+                                  C._.dispatchKeyed(g.zOV.CLIP_SEEK_VIDEO, t.attachment_id, {
+                                      timestampMs: t.timestamp,
+                                  });
+                              }
+                            : void 0,
                 });
             },
             r = e.messageReference?.message_id,

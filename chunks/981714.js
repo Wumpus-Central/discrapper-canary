@@ -3018,7 +3018,12 @@ class ii {
                     e.messages.last() !== t.last() &&
                     e.messages.first() !== t.first() &&
                     (l = ee.default.extractTimestamp(i.id)),
-                    this.scrollToMessage({ jumpTargetId: n, animate: !0, fromTimestamp: l });
+                    this.scrollToMessage({
+                        jumpTargetId: n,
+                        animate: !0,
+                        fromTimestamp: l,
+                        onJumpComplete: e.messages.onJumpComplete,
+                    });
                 return;
             }
         }
@@ -3316,7 +3321,7 @@ class ii {
         this.initialScrollTop = void 0;
         let t = it(this.props.messages);
         null != t
-            ? this.scrollToMessage({ jumpTargetId: t, animate: !1 })
+            ? this.scrollToMessage({ jumpTargetId: t, animate: !1, onJumpComplete: this.props.messages.onJumpComplete })
             : this.props.hasUnreads &&
                 this.props.channel.type !== ec.rbe.GUILD_VOICE &&
                 this.props.channel.type !== ec.rbe.GUILD_STAGE_VOICE
@@ -3393,10 +3398,10 @@ class ii {
         this.ref.current?.scrollPageDown({ animate: e });
     }
     scrollToMessage(e) {
-        let { jumpTargetId: t, animate: n = !1, fromTimestamp: l } = e;
+        let { jumpTargetId: t, animate: n = !1, fromTimestamp: l, onJumpComplete: i } = e;
         if (null == this.ref.current) return;
         if (t === this.props.channel.id) return void this.scrollTo(0);
-        let i = this.getElementFromMessageId(t);
+        let s = this.getElementFromMessageId(t);
         this.isJumping() ||
             !n ||
             null == l ||
@@ -3404,24 +3409,25 @@ class ii {
             (ee.default.extractTimestamp(t) > l ? this.scrollTo(0) : this.scrollTo(Number.MAX_SAFE_INTEGER)),
             (this.pinned = !1),
             (this.jumping = !0);
-        let s = () => {
+        let a = () => {
             (this.jumping = !1),
-                (0, l4.vq)(i) && ((i.tabIndex = -1), i.focus({ preventScroll: !0 })),
+                (0, l4.vq)(s) && ((s.tabIndex = -1), s.focus({ preventScroll: !0 })),
                 (this.scrollCounter = 0),
                 this.handleScroll(),
+                i?.(),
                 this._scrollCompleteCallbacks.forEach((e) => e());
         };
-        (0, l4.vq)(i)
+        (0, l4.vq)(s)
             ? this.scrollTo(
                   this.getOffsetOrientationFromNode(
-                      i,
+                      s,
                       "middle",
                       this.props.hasUnreads ? this.newMessageBarBuffer() : nq.mZ,
                   ),
                   n,
-                  s,
+                  a,
               )
-            : this.scrollToNewMessages(n, "middle", s);
+            : this.scrollToNewMessages(n, "middle", a);
     }
     getOffsetToTriggerLoading(e, t) {
         let { scrollHeight: n, offsetHeight: l } = t,

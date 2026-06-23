@@ -276,7 +276,14 @@ let z = new $(o.h, {
                 : i?.messageId != null
                   ? (l = l.focusOnMessage(i.messageId))
                   : n?.messageId != null
-                    ? (l = l.jumpToMessage(n.messageId, n.flash, n.offset, n.returnMessageId, n.jumpType))
+                    ? (l = l.jumpToMessage({
+                          messageId: n.messageId,
+                          flash: n.flash,
+                          offset: n.offset,
+                          returnTargetId: n.returnMessageId,
+                          jumpType: n.jumpType,
+                          onJumpComplete: n.onJumpComplete,
+                      }))
                     : (null != r || null != s) && (l = l.loadFromCache(null != r, a)),
                 null != o &&
                     (null != r || null != s) &&
