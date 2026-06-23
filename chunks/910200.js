@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { O: () => E });
+n.d(t, { O: () => m });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -11,8 +11,9 @@ var i = n(627968),
     d = n(262427),
     _ = n(396583),
     h = n(421108),
-    f = n(82199);
-function p(e) {
+    f = n(920948),
+    p = n(82199);
+function E(e) {
     let {
             className: t,
             Icon: n = o.g,
@@ -22,35 +23,39 @@ function p(e) {
             tooltip: _,
             ...h
         } = e,
-        p = () =>
+        f = () =>
             (0, i.jsx)(d.A, {
-                className: a()(f.Xx, t),
+                className: a()(p.Xx, t),
                 gradientColor: l,
                 ...(null != s ? { customGraphic: s } : { Icon: n, iconSize: r }),
                 ...h,
             });
     return null != _ && "object" == typeof _
-        ? (0, i.jsx)(u.u, { assetSize: 48, asContainer: !0, element: "div", ..._, children: p() })
+        ? (0, i.jsx)(u.u, { assetSize: 48, asContainer: !0, element: "div", ..._, children: f() })
         : null != _ && "string" == typeof _
-          ? (0, i.jsx)(c.m, { text: _, asContainer: !0, tag: "div", children: p() })
-          : p();
+          ? (0, i.jsx)(c.m, { text: _, asContainer: !0, tag: "div", children: f() })
+          : f();
 }
-function E(e) {
+function m(e) {
     let { text: t, endDatetime: n, ...s } = e,
         [a, o] = r.useState(() => (0, h.u)(n));
     return (
         (0, _.A)(() => {
             o((0, h.u)(n));
         }, 1e3),
-        (0, i.jsx)(p, {
+        (0, i.jsx)(E, {
             ...s,
             children: (0, i.jsxs)("div", {
-                className: f.Yu,
+                className: p.Yu,
                 children: [
-                    (0, i.jsx)(l.E, { variant: "text-xs/semibold", color: "currentColor", children: t }),
+                    (0, i.jsx)(l.E, {
+                        variant: "text-xs/semibold",
+                        color: "currentColor",
+                        children: "string" == typeof t ? (0, f.U)(t) : t,
+                    }),
                     null != a
                         ? (0, i.jsx)(l.E, {
-                              className: f.cR,
+                              className: p.cR,
                               variant: "text-xs/medium",
                               color: "currentColor",
                               children: a,
