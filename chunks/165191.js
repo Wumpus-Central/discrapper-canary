@@ -178,7 +178,7 @@ let c = (e, t) => {
                     i = () =>
                         n
                             .e("12250")
-                            .then(n.t.bind(n, 331617, 19))
+                            .then(n.t.bind(n, 553998, 19))
                             .then((e) => {
                                 let { default: t } = e;
                                 return t;
@@ -344,57 +344,56 @@ let c = (e, t) => {
 };
 function d(e) {
     let { giftStyle: t, className: n, shouldAnimate: l = !0, defaultAnimationState: d, idleAnimationState: _ } = e,
-        h = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        [f, p] = r.useState(d),
-        E = r.useRef(c(t, f)),
-        [m, g] = r.useState(null == _),
-        [A, I] = r.useState(!1),
-        [T, S] = r.useState(-1);
+        h = u.o2.hasOwnProperty(t) ? t : u.o2.STANDARD_BOX,
+        f = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        [p, E] = r.useState(d),
+        m = r.useRef(c(h, p)),
+        [g, A] = r.useState(null == _),
+        [I, T] = r.useState(!1),
+        [S, y] = r.useState(-1);
     r.useEffect(() => {
-        null == _ && p(d);
+        null == _ && E(d);
     }, [_, d]);
-    let y = {
+    let C = {
             applyAnimation: () => {
-                (E.current = c(t, f)), S((e) => e + 1);
+                (m.current = c(h, p)), y((e) => e + 1);
             },
             idleAnimationState: _,
-            isChanging: A,
+            isChanging: I,
             resetAnimation: () => {
-                g(!1), I(!0), S(-1), p(d);
+                A(!1), T(!0), y(-1), E(d);
             },
-            versionKey: T,
+            versionKey: S,
         },
-        C = r.useRef(y);
-    if (
-        (r.useEffect(() => {
-            C.current = y;
+        N = r.useRef(C);
+    return (
+        r.useEffect(() => {
+            N.current = C;
         }),
         r.useEffect(() => {
-            let { resetAnimation: e, versionKey: t, applyAnimation: n } = C.current;
+            let { resetAnimation: e, versionKey: t, applyAnimation: n } = N.current;
             null != _ && t >= 0 ? e() : n();
-        }, [t, _]),
+        }, [h, _]),
         r.useEffect(() => {
-            let { applyAnimation: e, isChanging: t, idleAnimationState: n } = C.current;
+            let { applyAnimation: e, isChanging: t, idleAnimationState: n } = N.current;
             (t && null != n) || e();
-        }, [f]),
+        }, [p]),
         r.useEffect(() => {
-            let { applyAnimation: e, idleAnimationState: t } = C.current;
-            A && (g(null == t), I(!1), e());
-        }, [A]),
-        !u.o2.hasOwnProperty(t))
-    )
-        throw Error(`Unexpected giftStyle ${t}`);
-    return (0, i.jsx)(a.a, {
-        importData: E.current,
-        shouldAnimate: !h && l,
-        className: n,
-        versionKey: T,
-        onComplete:
-            null != _
-                ? () => {
-                      null != _ && (p(_), g(!0));
-                  }
-                : void 0,
-        loop: m,
-    });
+            let { applyAnimation: e, idleAnimationState: t } = N.current;
+            I && (A(null == t), T(!1), e());
+        }, [I]),
+        (0, i.jsx)(a.a, {
+            importData: m.current,
+            shouldAnimate: !f && l,
+            className: n,
+            versionKey: S,
+            onComplete:
+                null != _
+                    ? () => {
+                          null != _ && (E(_), A(!0));
+                      }
+                    : void 0,
+            loop: g,
+        })
+    );
 }
