@@ -468,6 +468,8 @@ var G =
         (s[(s.StoppedByGoLive = 5)] = "StoppedByGoLive"),
         (s[(s.BlockedByGoLive = 6)] = "BlockedByGoLive"),
         (s[(s.GoLiveEnded = 7)] = "GoLiveEnded"),
+        (s[(s.IdleShutdown = 8)] = "IdleShutdown"),
+        (s[(s.RecordingHealthy = 9)] = "RecordingHealthy"),
         s);
 let V = 0;
 function B(e) {
@@ -2165,7 +2167,11 @@ class er extends l.A {
                             null != n && "" !== n ? n : "Failed to set clips source in media engine",
                             e.applicationName,
                         )
-                      : (t === F.Ended || t === F.StoppedByGoLive) && this.emit(c.bg.ClipsRecordingEnded, r, s);
+                      : t === F.IdleShutdown
+                        ? this.emit(c.bg.ClipsBridgeIdleShutdown)
+                        : t === F.RecordingHealthy
+                          ? this.emit(c.bg.ClipsRecordingHealthy)
+                          : (t === F.Ended || t === F.StoppedByGoLive) && this.emit(c.bg.ClipsRecordingEnded, r, s);
         }),
             t.applyClipsSettings?.({
                 useVideoHook: o,

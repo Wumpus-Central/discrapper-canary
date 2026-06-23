@@ -11,7 +11,7 @@ var i = n(691540),
     d = n(652896),
     _ = n(616356),
     h = n(495544),
-    f = n(941327),
+    f = n(394459),
     p = n(741394),
     E = n(459838),
     m = n(439372),
@@ -43,7 +43,7 @@ class M extends m.A {
         STREAM_CLOSE: (e) => this.handleStreamEnded(e),
         RUNNING_GAME_TOGGLE_DETECTION: (e) => this.handleClipsInitOnToggleDetection(e),
         RUNNING_GAMES_CHANGE: (e) => this.handleClipsInitOnGamesChange(e),
-        CLIPS_RESTART: () => this.fireClipsInitEvent(),
+        CLIPS_RESTART: () => this.fireClipsInitEvent(!0),
         RTC_CONNECTION_VIDEO: (e) => this.handleRTCConnectionVideo(e),
         RTC_CONNECTION_STATE: (e) => this.handleRTCConnectionState(e),
     };
@@ -184,8 +184,8 @@ class M extends m.A {
     }
 }
 var P = n(334686),
-    x = n(315240);
-n(257290);
+    x = n(430795);
+n(452082);
 var k = n(201538),
     U = n(409067),
     G = n(227628),
@@ -279,19 +279,20 @@ class B extends M {
         t !== h.default.getId() || ((0, R.qi)("handleStreamEnded") && this.fireClipsInitEvent());
     }
     fireClipsInitEvent() {
-        if (!(0, b.TD)() || null != _.A.getCurrentUserActiveStream()) return;
-        let e = u.Ay.getVisibleGame();
-        if (e?.pid == null || e?.windowHandle == null || null == e.name || "" === e.name) return;
+        let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+        if (!(0, b.TD)() || (!e && null != _.A.getCurrentUserActiveStream())) return;
+        let t = u.Ay.getVisibleGame();
+        if (t?.pid == null || t?.windowHandle == null || null == t.name || "" === t.name) return;
         if ((0, R.qi)("fireClipsInitEvent") && !(0, k.t_)())
             return void (0, k.so)().then(() => {
-                (0, k.t_)() && this.fireClipsInitEvent();
+                (0, k.t_)() && this.fireClipsInitEvent(e);
             });
-        let t = N.Ay.getSettings();
+        let n = N.Ay.getSettings();
         s.h.dispatch({
             type: "CLIPS_INIT",
-            sourceId: `window:${e?.windowHandle}`,
-            applicationName: e.name,
-            quality: t.clipsQuality,
+            sourceId: `window:${t?.windowHandle}`,
+            applicationName: t.name,
+            quality: n.clipsQuality,
         });
     }
     loadClipsFromStorage() {
