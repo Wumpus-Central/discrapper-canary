@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(922139),
+    o = n(308186),
     l = n(621466),
     u = n(17928),
     c = n(661531),
@@ -233,9 +233,11 @@ function J(e) {
                             e.stopPropagation(), eh || (e.preventDefault(), Q());
                             break;
                         case d.TJ.SEEK_BACK:
+                        case d.TJ.SEEK_BACK_ALT:
                             e.stopPropagation(), er();
                             break;
                         case d.TJ.SEEK_FORWARD:
+                        case d.TJ.SEEK_FORWARD_ALT:
                             e.stopPropagation(), es();
                             break;
                         case d.TJ.CAPTION:

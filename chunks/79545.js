@@ -47,5 +47,3 @@ function E(t) {
             return null;
     }
 }
-return null
-}}
