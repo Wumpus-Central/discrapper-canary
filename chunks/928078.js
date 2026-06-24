@@ -1400,8 +1400,8 @@ class n$ extends i.PureComponent {
             openWarningPopout: (e) => this.setState({ contentWarningProps: e }),
             type: this.props.chatInputType,
             content: t,
-            stickers: l,
-            uploads: n,
+            hasStickers: null != l && l.length > 0,
+            hasAttachments: null != n && n.length > 0,
             channel: h,
         }).then(async (e) => {
             let { valid: s, failureReason: f } = e;

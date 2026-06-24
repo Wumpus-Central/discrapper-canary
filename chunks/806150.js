@@ -79,64 +79,61 @@ function S(e) {
             openWarningPopout: t,
             type: n,
             content: u,
-            stickers: c,
-            uploads: d,
-            channel: _,
-            restrictMentions: h = !0,
-            respectCooldown: p = !0,
+            channel: c,
+            restrictMentions: d = !0,
+            respectCooldown: _ = !0,
+            hasStickers: h = !1,
+            hasAttachments: p = !1,
+            hasComponents: E = !1,
         } = e,
-        E = T.Ay.canUseIncreasedMessageLength(o.default.getCurrentUser());
+        m = T.Ay.canUseIncreasedMessageLength(o.default.getCurrentUser());
     return new Promise((e) =>
         (function (e) {
             let {
                 openWarningPopout: t,
                 type: n,
                 content: o,
-                stickers: u,
-                uploads: c,
-                channel: d,
-                restrictMentions: _,
-                respectCooldown: h,
-                userCanUsePremiumMessageLength: p,
-                resolve: E,
+                channel: u,
+                restrictMentions: c,
+                respectCooldown: d,
+                userCanUsePremiumMessageLength: _,
+                hasStickers: h,
+                hasAttachments: p,
+                hasComponents: E,
+                resolve: m,
             } = e;
-            if (
-                0 === o.length &&
-                !n.submit?.allowEmptyMessage &&
-                (null == u || 0 === u.length) &&
-                (null == c || 0 === c.length)
-            )
-                return void E({ valid: !1, failureReason: f.X8x.EMPTY_MESSAGE });
-            let m = p ? f.CS1 : f.uvi;
-            if (o.length > m) {
-                if (p || null == d) {
-                    var g;
-                    (g = o.length),
+            if (0 === o.length && !n.submit?.allowEmptyMessage && !h && !p && !E)
+                return void m({ valid: !1, failureReason: f.X8x.EMPTY_MESSAGE });
+            let g = _ ? f.CS1 : f.uvi;
+            if (o.length > g) {
+                if (_ || null == u) {
+                    var T;
+                    (T = o.length),
                         r.A.show({
                             title: A.intl.string(A.t.l8rYLt),
-                            body: A.intl.formatToPlainString(A.t.FfjF15, { currentLength: g, maxLength: m }),
+                            body: A.intl.formatToPlainString(A.t.FfjF15, { currentLength: T, maxLength: g }),
                             confirmText: A.intl.string(A.t.BddRzS),
                         }),
                         l.default.track(f.HAw.OPEN_MODAL, {
                             type: "Message Too Long Alert",
-                            message_content_length: g,
+                            message_content_length: T,
                         });
-                } else i.h.dispatch({ type: "MESSAGE_LENGTH_UPSELL", channel: d, content: o });
-                E({ valid: !1, failureReason: f.X8x.MESSAGE_TOO_LONG });
+                } else i.h.dispatch({ type: "MESSAGE_LENGTH_UPSELL", channel: u, content: o });
+                m({ valid: !1, failureReason: f.X8x.MESSAGE_TOO_LONG });
                 return;
             }
-            if (null != d) {
-                if (null != d.getGuildId() && h && a.A.getSlowmodeCooldownGuess(d.id) > 0)
-                    return void E({ valid: !1, failureReason: f.X8x.SLOWMODE_COOLDOWN });
+            if (null != u) {
+                if (null != u.getGuildId() && d && a.A.getSlowmodeCooldownGuess(u.id) > 0)
+                    return void m({ valid: !1, failureReason: f.X8x.SLOWMODE_COOLDOWN });
                 if (null != t)
                     for (let { check: e, analyticsType: n, animation: i } of I) {
-                        let r = e(o, d, _);
+                        let r = e(o, u, c);
                         if (!1 !== r)
                             return void t({
                                 analyticsType: n,
-                                channel: d,
-                                onCancel: () => E({ valid: !1, failureReason: f.X8x.SHOUTING_CANCELLED }),
-                                onConfirm: () => E({ valid: !0 }),
+                                channel: u,
+                                onCancel: () => m({ valid: !1, failureReason: f.X8x.SHOUTING_CANCELLED }),
+                                onConfirm: () => m({ valid: !0 }),
                                 popoutText: r,
                                 animation: i,
                             });
@@ -148,20 +145,21 @@ function S(e) {
                     body: A.intl.string(A.t.gi6XHp),
                     confirmText: A.intl.string(A.t["Z4U1g/"]),
                 }),
-                    E({ valid: !1, failureReason: f.X8x.RATE_LIMITED });
+                    m({ valid: !1, failureReason: f.X8x.RATE_LIMITED });
                 return;
             }
-            E({ valid: !0 });
+            m({ valid: !0 });
         })({
             openWarningPopout: t,
             type: n,
             content: u,
-            stickers: c,
-            uploads: d,
-            channel: _,
-            restrictMentions: h,
-            respectCooldown: p,
-            userCanUsePremiumMessageLength: E,
+            channel: c,
+            restrictMentions: d,
+            respectCooldown: _,
+            userCanUsePremiumMessageLength: m,
+            hasStickers: h,
+            hasAttachments: p,
+            hasComponents: E,
             resolve: e,
         }),
     );

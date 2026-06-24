@@ -1211,19 +1211,21 @@ function e7(e) {
         _ = null != l ? l.slice(1) : [],
         [I, C] = s.useState(0);
     s.useEffect(() => {
-        if (!g) return;
-        let e = (e) => {
+        if (g)
+            return (
+                T.h.subscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e),
+                () => {
+                    T.h.unsubscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e);
+                }
+            );
+        function e(e) {
             e.subscription.id === i.id && C((e) => e + 1);
-        };
-        return (
-            T.h.subscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e),
-            () => {
-                T.h.unsubscribe("BILLING_SUBSCRIPTION_UPDATE_SUCCESS", e);
-            }
-        );
+        }
     }, [i.id, g]),
         (0, x.Ay)(() => {
-            let e = () => C((e) => e + 1);
+            function e() {
+                return C((e) => e + 1);
+            }
             return (
                 T.h.subscribe("BILLING_USER_OFFER_REDEEMED", e),
                 () => {

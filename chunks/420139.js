@@ -47,36 +47,36 @@ function D(e) {
             let t = new Set(e.payment_sources.filter((e) => e.enabled).map((e) => e.id));
             return Object.values(M).filter((e) => !e.invalid && t.has(e.id));
         }, [M, D.checkoutContext]),
-        [F, B] = s.useState(!1),
-        [z, X] = s.useState(t.currency),
-        Y = async (e, i, n) => {
-            if (null == t) throw Error("missing subscription and paymentSource");
-            null == e ? await h.r6(t, i, n, k, a) : await h.uK(t, e, n, k, a), B(!1), X(i);
-        },
-        H = async (e, i, n) => {
-            B(!0);
-            let s = await (0, y.OQ)({
-                    subscriptionId: t.id,
-                    paymentSourceId: e?.id,
-                    renewal: !0,
-                    currency: null != e ? void 0 : i,
-                    analyticsLocations: k,
-                    analyticsLocation: a,
-                }),
-                l = { amount: s.subtotal, currency: s.currency };
-            D.currency !== s.currency || (D.currency === s.currency && D.total !== s.total)
-                ? await L(
-                      s,
-                      () => {
-                          n(e, s.currency, l);
-                      },
-                      () => {
-                          B(!1);
-                      },
-                  )
-                : n(e, s.currency, l);
-        },
-        K = (e) => {
+        [B, F] = s.useState(!1),
+        [z, X] = s.useState(t.currency);
+    async function Y(e, i, n) {
+        if (null == t) throw Error("missing subscription and paymentSource");
+        null == e ? await h.r6(t, i, n, k, a) : await h.uK(t, e, n, k, a), F(!1), X(i);
+    }
+    async function H(e, i, n) {
+        F(!0);
+        let s = await (0, y.OQ)({
+                subscriptionId: t.id,
+                paymentSourceId: e?.id,
+                renewal: !0,
+                currency: null != e ? void 0 : i,
+                analyticsLocations: k,
+                analyticsLocation: a,
+            }),
+            l = { amount: s.subtotal, currency: s.currency };
+        D.currency !== s.currency || (D.currency === s.currency && D.total !== s.total)
+            ? await L(
+                  s,
+                  () => {
+                      n(e, s.currency, l);
+                  },
+                  () => {
+                      F(!1);
+                  },
+              )
+            : n(e, s.currency, l);
+    }
+    let K = (e) => {
             (0, C.c_)(e.id, (0, b.MP)(t)).then(() => {
                 H(e, void 0, Y);
             }),
@@ -130,11 +130,11 @@ function D(e) {
                     paymentSources: w,
                     hidePersonalInformation: G,
                     selectedPaymentSourceId: e,
-                    onChange: (e) => {
+                    onChange: function (e) {
                         null != e && H(e, void 0, Y);
                     },
                     onPaymentSourceAdd: W,
-                    dropdownLoading: F,
+                    dropdownLoading: B,
                     disabled: P,
                     paymentGatewayRestrictions: t.eligiblePaymentGateways,
                 })),
@@ -158,7 +158,7 @@ function D(e) {
         });
     }
 }
-let L = async (e, t, s) => {
+async function L(e, t, s) {
     let l = await (0, d.openModalLazy)(
         async () => {
             let { default: l } = await i.e("49297").then(i.bind(i, 760941));
@@ -170,4 +170,4 @@ let L = async (e, t, s) => {
             },
         },
     );
-};
+}

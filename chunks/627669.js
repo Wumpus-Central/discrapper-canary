@@ -2844,8 +2844,8 @@ function id(e) {
                         c(!0);
                         let { valid: t } = await (0, lK.i)({
                             content: j,
-                            stickers: v,
-                            uploads: p,
+                            hasStickers: null != v && v.length > 0,
+                            hasAttachments: null != p && p.length > 0,
                             type: ic,
                             channel: e,
                         });

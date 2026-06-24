@@ -3,7 +3,7 @@ var l = n(627968),
     i = n(64700),
     s = n(665260),
     a = n(17928),
-    r = n(720149),
+    r = n(493336),
     o = n(155718),
     c = n(355622),
     d = n(138617),
@@ -15,8 +15,8 @@ var l = n(627968),
     A = n(806150),
     f = n(145530),
     C = n(438729),
-    E = n(751258),
-    x = n(451909),
+    x = n(751258),
+    E = n(451909),
     S = n(652215),
     _ = n(650583),
     I = n(375708),
@@ -32,24 +32,28 @@ class b extends i.PureComponent {
     };
     onSubmit = (e) => {
         let { message: t, channel: n, onConfirmDelete: l, onCancel: i, saveMessage: s, validateEdit: a } = this.props;
-        return 0 === e.length
+        return 0 === e.length &&
+            0 === t.attachments.length &&
+            0 === t.components.length &&
+            0 === t.stickerItems.length &&
+            0 === t.stickers.length
             ? (l(n, t), i(n.id), Promise.resolve({ shouldClear: !1, shouldRefocus: !1 }))
-            : a({ value: e, channel: n }).then((l) => {
+            : a({ value: e, channel: n, message: t }).then((l) => {
                   let { valid: a } = l;
                   if (!a) return Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
-                  let r = (0, E.S)(e, { channel: n, isEdit: !0 });
+                  let r = (0, x.S)(e, { channel: n, isEdit: !0 });
                   if (
                       (r?.content != null && (e = r.content),
                       t.hasFlag(S.pr7.IS_COMPONENTS_V2) && this.props.channel.type === S.rbe.GUILD_ANNOUNCEMENT)
                   ) {
-                      let t = x.Ay.parse(this.props.channel, e),
+                      let t = E.Ay.parse(this.props.channel, e),
                           n = this.props.message.components.filter((e) => e.type === o.I5.TEXT_DISPLAY);
                       if (1 === n.length) {
                           let l = n[0];
                           e !== l.content && s(this.props.channel.id, this.props.message.id, t);
                       }
                   } else {
-                      let t = x.Ay.parse(this.props.channel, e);
+                      let t = E.Ay.parse(this.props.channel, e);
                       t.content !== this.props.message.content && s(this.props.channel.id, this.props.message.id, t);
                   }
                   return i(n.id), Promise.resolve({ shouldClear: !0, shouldRefocus: !0 });
@@ -92,20 +96,29 @@ class b extends i.PureComponent {
     }
 }
 n(294920);
-var T = n(701628);
-function N(e) {
-    let { value: t, channel: n } = e;
-    return (0, A.i)({ type: c.oU.EDIT, content: t, channel: n, restrictMentions: !1, respectCooldown: !1 });
-}
+var N = n(701628);
 function v(e) {
+    let { value: t, channel: n, message: l } = e;
+    return (0, A.i)({
+        type: c.oU.EDIT,
+        content: t,
+        channel: n,
+        hasStickers: l.stickerItems.length > 0 || l.stickers.length > 0,
+        hasAttachments: l.attachments.length > 0,
+        hasComponents: l.components.length > 0,
+        restrictMentions: !1,
+        respectCooldown: !1,
+    });
+}
+function T(e) {
     let { channel: t, message: n } = e,
         { id: c } = t,
         { id: d } = n,
         p = t.getGuildId(),
         A = (0, a.bG)([m.A], () => m.A.getGuild(p), [p]),
         C = t.type === S.rbe.GUILD_ANNOUNCEMENT,
-        E = null != A && A.features.has(S.GuildFeatures.NEWS),
-        x = C && E,
+        x = null != A && A.features.has(S.GuildFeatures.NEWS),
+        E = C && x,
         {
             editingMessage: _,
             editingTextValue: I,
@@ -120,12 +133,12 @@ function v(e) {
             [c],
         ),
         y = (0, a.bG)([u.default], () => u.default.getId()),
-        v = i.useCallback(
+        T = i.useCallback(
             (e, l, i) => {
                 let { content: a } = i,
                     c = g.A.can(S.xBc.MANAGE_MESSAGES, t),
                     d = null != _ && null != _.author ? _.author.id : null,
-                    u = x && (d === y || c),
+                    u = E && (d === y || c),
                     h = { content: a, components: void 0 };
                 if (n.hasFlag(S.pr7.IS_COMPONENTS_V2)) {
                     let e = n.components[0]?.type === o.I5.MEDIA_GALLERY,
@@ -141,9 +154,9 @@ function v(e) {
                     Promise.resolve()
                 );
             },
-            [_, x, y, t, n],
+            [_, E, y, t, n],
         ),
-        R = i.useCallback((e) => (0, i.createElement)(M, { ...e, className: T.gM, key: d }), [d]);
+        R = i.useCallback((e) => (0, i.createElement)(M, { ...e, className: N.gM, key: d }), [d]);
     return null != I && null != j
         ? (0, l.jsx)(b, {
               ref: void 0,
@@ -154,8 +167,8 @@ function v(e) {
               onCancel: r.A.endEditMessage,
               onChange: r.A.updateEditMessage,
               onConfirmDelete: f.A.confirmDelete,
-              saveMessage: v,
-              validateEdit: N,
+              saveMessage: T,
+              validateEdit: v,
               children: R,
           })
         : null;
@@ -188,7 +201,7 @@ function M(e) {
         (0, l.jsx)(
             d.Ay,
             {
-                className: T.gM,
+                className: N.gM,
                 textValue: t,
                 richValue: n,
                 channel: a,
@@ -211,6 +224,6 @@ function M(e) {
 function R(e, t, n) {
     let { message: i, channel: s, compact: a } = e;
     return n
-        ? (0, l.jsx)(v, { channel: s, message: i })
+        ? (0, l.jsx)(T, { channel: s, message: i })
         : (0, l.jsx)(C.Ay, { message: i, content: t, compact: a ?? !1 });
 }

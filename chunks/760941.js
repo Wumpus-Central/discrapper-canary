@@ -1,25 +1,25 @@
-n.d(e, { default: () => o });
-var r = n(627968);
-n(64700);
-var i = n(732159),
-    a = n(975571),
-    l = n(580630),
-    c = n(652215),
-    s = n(375708);
-let o = (t) => {
-    let { modalProps: e, onConfirm: n, onCancel: o, newInvoice: u } = t,
+e.d(n, { default: () => s });
+var r = e(627968);
+e(64700);
+var i = e(732159),
+    a = e(975571),
+    c = e(580630),
+    l = e(652215),
+    o = e(375708);
+let s = function (t) {
+    let { modalProps: n, onConfirm: e, onCancel: s, newInvoice: u } = t,
         p = {
-            newCurrencyAndPrice: (0, l.$g)(u.total, u.currency),
-            helpCenterLink: a.A.getArticleURL(c.MVz.LOCALIZED_PRICING),
+            newCurrencyAndPrice: (0, c.$g)(u.total, u.currency),
+            helpCenterLink: a.A.getArticleURL(l.MVz.LOCALIZED_PRICING),
         };
     return (0, r.jsx)(i.ConfirmModal, {
-        title: s.intl.string(s.t.eZFTbu),
-        subtitle: s.intl.format(s.t.oZBduD, p),
+        title: o.intl.string(o.t.eZFTbu),
+        subtitle: o.intl.format(o.t.oZBduD, p),
         variant: "primary",
-        confirmText: s.intl.string(s.t.p89ACt),
-        cancelText: s.intl.string(s.t.gm1Vej),
-        onConfirm: n,
-        onCancel: o,
-        ...e,
+        confirmText: o.intl.string(o.t.p89ACt),
+        cancelText: o.intl.string(o.t.gm1Vej),
+        onConfirm: e,
+        onCancel: s,
+        ...n,
     });
 };
