@@ -16,7 +16,7 @@ var i = n(64700),
     E = n(428262),
     m = n(652215),
     g = n(788868);
-let A = (e) => {
+function A(e) {
     let {
             isFetching: t = !1,
             entitlements: n,
@@ -64,7 +64,7 @@ let A = (e) => {
         unactivatedUnits: i,
         fetched: o,
     };
-};
+}
 function I(e, t) {
     return null != t && !f.A.fetchingAllEntitlements && (!f.A.fetchedAllEntitlements || e);
 }

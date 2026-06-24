@@ -263,73 +263,72 @@ async function U(e, t, n, i) {
     if (null == p) throw N("paymentMethod not available with successful stripe call");
     return R(S.kM_.STRIPE, p.id, n, { billingAddressToken: h, analyticsLocation: i, bank: f });
 }
-let G = (e, t, n) => {
-        if (null != t) throw n(t);
-        if (null == e) throw n("SetupIntent not created");
-        if (null == e.payment_method) throw n("setupIntent.payment_method not available with successful stripe call");
-        return (
-            g()("string" == typeof e.payment_method, "setupIntent.payment_method expanded not supported"),
-            { setupIntent: e, error: t }
+function G(e, t, n) {
+    if (null != t) throw n(t);
+    if (null == e) throw n("SetupIntent not created");
+    if (null == e.payment_method) throw n("setupIntent.payment_method not available with successful stripe call");
+    return (
+        g()("string" == typeof e.payment_method, "setupIntent.payment_method expanded not supported"),
+        { setupIntent: e, error: t }
+    );
+}
+async function F(e) {
+    if (null == e) throw M("Stripe Elements not loaded", !0);
+    let t = await e.submit();
+    if ((D.info("Stripe Elements submit response: ", t), null != t.error))
+        throw (D.error("Stripe Elements submit error: ", t.error), M(t.error, !0));
+    return t;
+}
+async function V(e, t) {
+    let { paymentMethod: n, error: i } = await e.createPaymentMethod({ elements: t });
+    if (null != i) throw (D.error("Stripe createPaymentMethod error: ", i), M(i, !0));
+    if (null == n)
+        throw (
+            (D.warn("Stripe createPaymentMethod failed to return payment method: ", { paymentMethod: n, error: i }),
+            M("paymentMethod not available with successful stripe call", !0))
         );
-    },
-    F = async (e) => {
-        if (null == e) throw M("Stripe Elements not loaded", !0);
-        let t = await e.submit();
-        if ((D.info("Stripe Elements submit response: ", t), null != t.error))
-            throw (D.error("Stripe Elements submit error: ", t.error), M(t.error, !0));
-        return t;
-    },
-    V = async (e, t) => {
-        let { paymentMethod: n, error: i } = await e.createPaymentMethod({ elements: t });
-        if (null != i) throw (D.error("Stripe createPaymentMethod error: ", i), M(i, !0));
-        if (null == n)
-            throw (
-                (D.warn("Stripe createPaymentMethod failed to return payment method: ", { paymentMethod: n, error: i }),
-                M("paymentMethod not available with successful stripe call", !0))
-            );
-        return { paymentMethod: n, error: i };
-    },
-    B = async (e, t) => {
-        if (null == e) throw M("Stripe not loaded", !0);
-        if (null == t) throw M("Stripe Elements not loaded", !0);
-        await F(t);
-        let { paymentMethod: n, error: i } = await V(e, t);
-        return { paymentMethod: n, error: i };
-    },
-    j = new Set([b.he.CARD, b.he.PAYMENT_REQUEST, b.he.PIX]);
+    return { paymentMethod: n, error: i };
+}
+async function B(e, t) {
+    if (null == e) throw M("Stripe not loaded", !0);
+    if (null == t) throw M("Stripe Elements not loaded", !0);
+    await F(t);
+    let { paymentMethod: n, error: i } = await V(e, t);
+    return { paymentMethod: n, error: i };
+}
+let j = new Set([b.he.CARD, b.he.PAYMENT_REQUEST, b.he.PIX]);
 async function H() {
-    for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-    let [i, r, { billingAddress: s, paymentSourceType: o, lastConfirmedSetupIntentRef: l, currency: u }, c] = t;
-    if (null == i) throw M("Stripe not loaded", !0);
-    if (null == r) throw M("Stripe Elements not loaded", !0);
+    for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
+    let [r, s, { billingAddress: o, paymentSourceType: l, lastConfirmedSetupIntentRef: u, currency: c }, d] = n;
+    if (null == r) throw M("Stripe not loaded", !0);
+    if (null == s) throw M("Stripe Elements not loaded", !0);
     a.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
-    let d = await C(s);
-    o !== b.he.PAYMENT_REQUEST && (await F(r));
-    let _ = null;
-    if (j.has(o)) {
-        let e,
-            t = l.current ?? void 0,
+    let _ = await C(o);
+    l !== b.he.PAYMENT_REQUEST && (await F(s));
+    let h = null;
+    if (j.has(l)) {
+        let t = u.current ?? void 0,
             n =
-                null != t && o === b.he.PAYMENT_REQUEST
+                null != t && l === b.he.PAYMENT_REQUEST
                     ? { setupIntent: t ?? void 0, error: void 0 }
-                    : await i.confirmSetup({ redirect: "if_required", elements: r });
+                    : await r.confirmSetup({ redirect: "if_required", elements: s });
         if (
             null != (e = n.error) &&
             "setup_intent_unexpected_state" === e.code &&
             null != e.setup_intent &&
             ("succeeded" === e.setup_intent.status || "canceled" === e.setup_intent.status) &&
-            o !== b.he.PAYMENT_REQUEST
+            l !== b.he.PAYMENT_REQUEST
         ) {
-            let { client_secret: e } = await (0, O.w)(null != u ? { body: { currency: u } } : {});
-            await F(r), (n = await i.confirmSetup({ redirect: "if_required", clientSecret: e, elements: r }));
+            let { client_secret: e } = await (0, O.w)(null != c ? { body: { currency: c } } : {});
+            await F(s), (n = await r.confirmSetup({ redirect: "if_required", clientSecret: e, elements: s }));
         }
-        let { setupIntent: s } = G(n.setupIntent, n.error, (e) => M(e, !0));
-        (l.current = s), (_ = s.payment_method);
+        let { setupIntent: i } = G(n.setupIntent, n.error, (e) => M(e, !0));
+        (u.current = i), (h = i.payment_method);
     } else {
-        let { paymentMethod: e } = await V(i, r);
-        _ = e.id;
+        let { paymentMethod: e } = await V(r, s);
+        h = e.id;
     }
-    return R(S.kM_.STRIPE, _, s, { billingAddressToken: d, analyticsLocation: c });
+    return R(S.kM_.STRIPE, h, o, { billingAddressToken: _, analyticsLocation: d });
 }
 async function Y(e, t, n, i) {
     if (null == e || null == t) throw N("Stripe or token not loaded");

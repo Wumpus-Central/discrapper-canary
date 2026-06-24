@@ -8,7 +8,7 @@ async function s() {
         await i.Bo.post({ url: r.Rsh.BILLING_STRIPE_SETUP_INTENT_SECRET, oldFormErrors: !0, rejectWithError: !0, ...e })
     ).body;
 }
-let a = async function () {
+async function a() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (
         await i.Bo.post({
@@ -19,4 +19,4 @@ let a = async function () {
             ...e,
         })
     ).body;
-};
+}

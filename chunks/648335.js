@@ -85,49 +85,48 @@ let o = new Set([
             isRegionalPaymentMethod: !0,
             toStep: i.pn.EPS_INFORMATION,
         },
-    },
-    c = (e) =>
-        e.map((e) => ({
-            id: e.custom_payment_method_id,
-            options: {
-                type: "static",
-                subtitle:
-                    e.payment_source_type in u
-                        ? a.intl.string(u[e.payment_source_type].subtitleTranslationKey)
-                        : void 0,
-            },
-        })),
-    d = {
-        [s.he.CARD]: "card",
-        [s.he.IDEAL]: "ideal",
-        [s.he.BANCONTACT]: "bancontact",
-        [s.he.PAYPAL]: "paypal",
-        [s.he.VENMO]: "venmo",
-        [s.he.CASH_APP]: "cashapp",
-        [s.he.GOPAY_WALLET]: "gopay",
-        [s.he.KAKAOPAY]: "kakaopay",
-        [s.he.GCASH]: "gcash",
-        [s.he.PAYSAFE_CARD]: "paysafecard",
-        [s.he.GRABPAY_MY]: "grabpay",
-        [s.he.MOMO_WALLET]: "momo",
-        [s.he.PRZELEWY24]: "p24",
-        [s.he.EPS]: "eps",
-        [s.he.PIX]: "pix",
     };
+function c(e) {
+    return e.map((e) => ({
+        id: e.custom_payment_method_id,
+        options: {
+            type: "static",
+            subtitle:
+                e.payment_source_type in u ? a.intl.string(u[e.payment_source_type].subtitleTranslationKey) : void 0,
+        },
+    }));
+}
+let d = {
+    [s.he.CARD]: "card",
+    [s.he.IDEAL]: "ideal",
+    [s.he.BANCONTACT]: "bancontact",
+    [s.he.PAYPAL]: "paypal",
+    [s.he.VENMO]: "venmo",
+    [s.he.CASH_APP]: "cashapp",
+    [s.he.GOPAY_WALLET]: "gopay",
+    [s.he.KAKAOPAY]: "kakaopay",
+    [s.he.GCASH]: "gcash",
+    [s.he.PAYSAFE_CARD]: "paysafecard",
+    [s.he.GRABPAY_MY]: "grabpay",
+    [s.he.MOMO_WALLET]: "momo",
+    [s.he.PRZELEWY24]: "p24",
+    [s.he.EPS]: "eps",
+    [s.he.PIX]: "pix",
+};
 function _(e) {
     return e in u;
 }
 function h(e) {
     return _(e) ? (u[e].toStep ?? null) : null;
 }
-let f = (e, t) => {
+function f(e, t) {
     if ("card" === e || "link_card_brand" === e) return s.he.CARD;
     if ("ideal" === e) return s.he.IDEAL;
     if ("bancontact" === e) return s.he.BANCONTACT;
     if ("pix" === e) return s.he.PIX;
     if ("google_pay" === e || "apple_pay" === e) return s.he.PAYMENT_REQUEST;
     return e in t ? t[e] : null;
-};
+}
 function p(e) {
     return l.size > 0 && l.has(e) ? "test" === (0, r.ux)() : o.has(e);
 }

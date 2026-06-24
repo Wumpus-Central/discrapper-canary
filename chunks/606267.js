@@ -99,7 +99,7 @@ function g(e) {
                 null != n &&
                 y.current &&
                 (t.some((e) =>
-                    ((e) => {
+                    (function (e) {
                         let { paymentSource: t, paymentSourceId: n, giftCardsEnabled: i } = e;
                         return (t.type !== d.hes.TDS_WALLET || !!i) && null != n && t.id === n && t.enabled;
                     })({ paymentSource: e, paymentSourceId: n, giftCardsEnabled: u }),

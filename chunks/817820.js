@@ -206,13 +206,13 @@ class V extends R.A {
 }
 let k = [],
     w = !1;
-function F(e) {
+function B(e) {
     let { payment: t } = e,
         i = V.createFromServer(t),
         n = k.findIndex((e) => e.id === t.id);
     -1 === n ? (k.push(i), k.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (k[n] = i), (k = [...k]);
 }
-class B extends d.Ay.Store {
+class F extends d.Ay.Store {
     static displayName = "PaymentStore";
     getPayment(e) {
         return k.find((t) => t.id === e);
@@ -224,7 +224,7 @@ class B extends d.Ay.Store {
         return w;
     }
 }
-let z = new B(h.h, {
+let z = new F(h.h, {
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e;
         for (let e of ((w = !0), t)) {
@@ -237,8 +237,8 @@ let z = new B(h.h, {
     BILLING_PAYMENTS_FETCH_FAIL: function () {
         w = !0;
     },
-    PAYMENT_UPDATE: F,
-    BILLING_PAYMENT_FETCH_SUCCESS: F,
+    PAYMENT_UPDATE: B,
+    BILLING_PAYMENT_FETCH_SUCCESS: B,
     LOGOUT: function () {
         (k = []), (w = !1);
     },
@@ -292,18 +292,18 @@ async function eS(e) {
 function eT(e) {
     let { payment: t } = e,
         [i, l] = s.useState(null),
-        [r, a] = s.useState(null),
-        o = async (e) => {
-            try {
-                let i = await eS(t.id);
-                l(i);
-                let n = e ? i.refundInvoiceLinks[0] : i.invoiceLink;
-                window.open(n, "_blank"), a(null);
-            } catch (e) {
-                a(e.body?.message);
-            }
-        },
-        u = null != t.paymentSource && t.status === eh.__.COMPLETED,
+        [r, a] = s.useState(null);
+    async function o(e) {
+        try {
+            let i = await eS(t.id);
+            l(i);
+            let n = e ? i.refundInvoiceLinks[0] : i.invoiceLink;
+            window.open(n, "_blank"), a(null);
+        } catch (e) {
+            a(e.body?.message);
+        }
+    }
+    let u = null != t.paymentSource && t.status === eh.__.COMPLETED,
         d = i?.invoiceLink,
         c = i?.refundInvoiceLinks;
     return t.hasInvoiceURL && null == i
@@ -377,8 +377,8 @@ var ex = i(769015),
     eV = i(287809),
     ek = i(295405),
     ew = i(90165),
-    eF = i(147925),
-    eB = i(174459),
+    eB = i(147925),
+    eF = i(174459),
     ez = i(957565),
     eX = i(58703),
     eY = i(580630),
@@ -796,7 +796,7 @@ class e3 extends s.PureComponent {
                                         onClick: () => {
                                             null != t.sku &&
                                                 null != l &&
-                                                (eB.default.track(
+                                                (eF.default.track(
                                                     M.HAw.PAYMENT_HISTORY_CONNECT_ACCOUNT_BUTTON_CLICKED,
                                                     { sku_id: t.sku.id, application_id: l.id, location_stack: a },
                                                 ),
@@ -1050,9 +1050,9 @@ class e3 extends s.PureComponent {
                                     className: eE.vj,
                                     children: [this.renderStatus(), this.renderPrice()],
                                 }),
-                                (0, n.jsx)(eF.A, {
+                                (0, n.jsx)(eB.A, {
                                     className: eE.fT,
-                                    direction: s ? eF.A.Directions.UP : eF.A.Directions.DOWN,
+                                    direction: s ? eB.A.Directions.UP : eB.A.Directions.DOWN,
                                 }),
                             ],
                         }),
@@ -1239,8 +1239,8 @@ function e8(e) {
     return !(null == t || null == i || Object.values(U.pe).includes(t) || (0, H.ys)(i));
 }
 function e9(e) {
-    let t,
-        i = (0, d.bG)([z], () => z.getPayments()),
+    var t;
+    let i = (0, d.bG)([z], () => z.getPayments()),
         l = (0, d.bG)([Y.A], () => Y.A.getPremiumTypeSubscription()),
         r = s.useMemo(
             () =>
