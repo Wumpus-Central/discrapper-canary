@@ -4,18 +4,17 @@ n.d(t, {
     Ig: () => g,
     jS: () => f,
     zY: () => y,
-    Mk: () => P,
+    Mk: () => M,
     A8: () => C,
     m8: () => E,
-    d: () => M,
+    d: () => w,
     OO: () => p,
     MV: () => v,
-    Qj: () => w,
+    Qj: () => L,
     ev: () => S,
     aD: () => N,
     uK: () => h,
     lk: () => I,
-    jm: () => R,
     sy: () => m,
 });
 var i,
@@ -139,12 +138,6 @@ let C = (0, u.mj)({
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-    }),
-    R = (0, u.mj)({
-        name: "2026-05-quest-home-remove-expired-quests",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
 (0, u.mj)({
     name: "2026-05-bounty-stale-refresh-quest-home",
@@ -152,34 +145,34 @@ let C = (0, u.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-let O = (0, u.mj)({
+let R = (0, u.mj)({
         name: "2026-06-remove-quest-home-hero",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    b = new Date("2026-06-20T10:00:00-07:00"),
-    D = new Date("2026-06-23T10:00:00-07:00"),
-    L = 5 * c.A.Millis.MINUTE;
-function w() {
+    O = new Date("2026-06-20T10:00:00-07:00"),
+    b = new Date("2026-06-23T10:00:00-07:00"),
+    D = 5 * c.A.Millis.MINUTE;
+function L() {
     let [e, t] = o.useState(() => new Date());
     o.useEffect(() => {
-        let e = setInterval(() => t(new Date()), L);
+        let e = setInterval(() => t(new Date()), D);
         return () => clearInterval(e);
     }, []);
-    let n = e >= b && e < D,
-        { enabled: i } = O.useConfig({
+    let n = e >= O && e < b,
+        { enabled: i } = R.useConfig({
             location: n ? "remove-quest-home-hero-eligible" : "remove-quest-home-hero-ineligible",
         });
     return !!n && i;
 }
-var M =
+var w =
     (((a = {})[(a.CONTROL = 0)] = "CONTROL"),
     (a[(a.LARGE_MASK_MARGIN = 1)] = "LARGE_MASK_MARGIN"),
     (a[(a.REMOVE_QUEST_TITLE_SUFFIX = 2)] = "REMOVE_QUEST_TITLE_SUFFIX"),
     (a[(a.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER = 3)] = "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER"),
     a);
-let P = (0, u.mj)({
+let M = (0, u.mj)({
     name: "2026-06-quest-home-layout-visual-tweaks",
     kind: "user",
     defaultConfig: { enabled: !1, variant: 0 },
