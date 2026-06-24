@@ -170,7 +170,7 @@ function W(e) {
             return { cooldownDurationMs: 1 / 0 };
     }
 }
-let K = (e) => {
+function K(e) {
     let { dismissibleContent: t, noticeType: n } = e,
         s = r.useMemo(() => W(n), [n]),
         l = a()().add(5, "days").toDate(),
@@ -198,4 +198,4 @@ let K = (e) => {
         case o.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
             return (0, i.jsx)(D.A, { markAsDismissed: () => c(N.i.USER_DISMISS) });
     }
-};
+}

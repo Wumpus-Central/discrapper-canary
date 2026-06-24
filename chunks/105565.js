@@ -8,10 +8,10 @@ var i,
         (i[(i.DC_SHOW_REQUEST = 1)] = "DC_SHOW_REQUEST"),
         (i[(i.DC_DISMISSED = 2)] = "DC_DISMISSED"),
         i);
-let o = [],
-    l = (e) => {
-        let { eventType: t, dismissibleContent: n } = e;
-    };
+let o = [];
+function l(e) {
+    let { eventType: t, dismissibleContent: n } = e;
+}
 class u extends r.Ay.Store {
     static displayName = "DCFEventStore";
     getDCFEvents() {
@@ -19,18 +19,18 @@ class u extends r.Ay.Store {
     }
 }
 let c = new u(s.h, {
-    LOGOUT: () => {
+    LOGOUT: function () {
         o = [];
     },
-    DCF_EVENT_LOGGED: (e) => {
+    DCF_EVENT_LOGGED: function (e) {
         let { eventType: t, dismissibleContent: n } = e;
         l({ eventType: t, dismissibleContent: n });
     },
-    DCF_HANDLE_DC_DISMISSED: (e) => {
+    DCF_HANDLE_DC_DISMISSED: function (e) {
         let { dismissibleContent: t } = e;
         l({ eventType: 2, dismissibleContent: t });
     },
-    DCF_HANDLE_DC_SHOWN: (e) => {
+    DCF_HANDLE_DC_SHOWN: function (e) {
         let { dismissibleContent: t } = e;
         l({ eventType: 0, dismissibleContent: t });
     },

@@ -12,7 +12,7 @@ var i = n(627968),
     _ = n(652215),
     h = n(375708),
     f = n(448759);
-let p = (e) => {
+function p(e) {
     let { markAsDismissed: t, className: n } = e,
         { analyticsLocations: p } = (0, l.Ay)(),
         E = (0, s.bG)([c.A], () => {
@@ -48,4 +48,4 @@ let p = (e) => {
                   }),
               ],
           });
-};
+}
