@@ -143,7 +143,7 @@ let U = function (e) {
             return !E || t || n;
         })).find((e) => e.id === F),
         W = H?.sectionHeaderText?.() ?? H?.label,
-        K = !(null != F && d.M.includes(F)) && null != W && null != F,
+        K = !(null != F && d.MU.includes(F)) && null != W && null != F,
         Y = N && K && F === h.pn.REVIEW,
         z = v ? "nitro-pink" : "nitro-green",
         Z = I ? (0, b.DP)() : v ? A.intl.string(A.t.lG6a5x) : A.intl.string(A.t["t9uG/o"]),

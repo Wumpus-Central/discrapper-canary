@@ -41,7 +41,7 @@ let v = (e) => {
                       : (0, i.jsx)("img", { src: e, alt: "", className: C.F0 });
             })();
         return (0, i.jsxs)("div", {
-            className: s()(C.N1, { [N.GI]: null != d, [C.TP]: c || null == d }),
+            className: s()(C.N1, { [N.G]: null != d, [C.TP]: c || null == d }),
             children: [
                 d,
                 (() => {

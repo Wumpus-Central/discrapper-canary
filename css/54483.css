@@ -37,29 +37,6 @@
     top: 16px
 }
 
-.seasonalGiftBoxHeaderIcon_ae16b8 {
-    align-self: center;
-    bottom: -11px;
-    position: absolute;
-    width: 260px;
-    z-index: 1
-}
-
-.container_ae16b8 {
-    align-items: center;
-    background-image: unset;
-    background-size: unset;
-    border-radius: 4px 4px 0 0;
-    display: flex;
-    justify-content: center;
-    position: relative
-}
-
-.closeButton_ae16b8 {
-    margin: var(--modal-vertical-padding) var(--modal-horizontal-padding);
-    margin-inline-start: auto
-}
-
 .fullWidthGraphicHeaderForManaModal_ae16b8.fullWidthGraphicHeaderForManaModal_ae16b8 {
     margin-top: calc(var(--custom-modal-padding-top, 24px)*-1 - 2px);
     margin-inline-start: -1px;
