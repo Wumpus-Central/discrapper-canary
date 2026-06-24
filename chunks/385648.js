@@ -1,75 +1,74 @@
 "use strict";
 n.d(t, {
-    Z2: () => h,
-    gp: () => E,
-    jb: () => A,
-    PU: () => p,
-    Cf: () => T,
-    br: () => g,
-    fd: () => m,
-    uf: () => I,
-    cf: () => S,
-    jm: () => y,
-    jE: () => f,
+    gp: () => p,
+    Z2: () => _,
+    jb: () => g,
+    PU: () => f,
+    Cf: () => I,
+    br: () => m,
+    fd: () => E,
+    uf: () => A,
+    cf: () => T,
+    jE: () => h,
 }),
-    n(488428);
-var i = n(636537),
-    r = n(66834),
-    s = n(741231),
-    a = n(174459),
-    o = n(857071),
-    l = n(652215);
+    n(488428),
+    n(636537);
+var i = n(66834),
+    r = n(741231),
+    s = n(174459),
+    a = n(857071),
+    o = n(652215);
 n(742872);
-var u = n(976860),
-    c = n(345942),
-    d = n(498642),
-    _ = n(71393);
-async function h(e, t) {
+var l = n(976860),
+    u = n(345942),
+    c = n(498642),
+    d = n(71393);
+async function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        i = arguments.length > 3 ? arguments[3] : void 0,
-        { channelId: a, onSuccess: d, joinSource: h, loadId: f, shouldNavigate: p = !0 } = n,
-        E = (0, u.JK)(),
-        m = _.A.getGuild(e),
-        g = { sourceLocationStack: i, state: { analyticsSource: t } };
+        s = arguments.length > 3 ? arguments[3] : void 0,
+        { channelId: c, onSuccess: _, joinSource: h, loadId: f, shouldNavigate: p = !0 } = n,
+        E = (0, l.JK)(),
+        m = d.A.getGuild(e),
+        g = { sourceLocationStack: s, state: { analyticsSource: t } };
     if (null != m && null != m.joinedAt)
         p &&
-            (null == a
-                ? (0, c.u)(e, g)
-                : (0, s.A)(l.BVt.CHANNEL(e, a, n.messageId), { ...g, navigationReplace: !0, openChannel: !0 }));
-    else if (null != m && o.A.isLurking(e))
+            (null == c
+                ? (0, u.u)(e, g)
+                : (0, r.A)(o.BVt.CHANNEL(e, c, n.messageId), { ...g, navigationReplace: !0, openChannel: !0 }));
+    else if (null != m && a.A.isLurking(e))
         p &&
-            (await r.A.transitionToGuildSync(
+            (await i.A.transitionToGuildSync(
                 e,
                 {
                     ...g,
-                    welcomeModalChannelId: a,
-                    navigationReplace: null != a,
-                    openChannel: null != a,
+                    welcomeModalChannelId: c,
+                    navigationReplace: null != c,
+                    openChannel: null != c,
                     search: E.location.search,
                 },
-                a,
+                c,
                 n.messageId,
             ));
     else {
-        let s = i?.[i.length - 1] ?? t?.page;
-        await r.A.joinGuild(e, { lurker: !0, source: h, loadId: f, lurkLocation: s }),
+        let r = s?.[s.length - 1] ?? t?.page;
+        await i.A.joinGuild(e, { lurker: !0, source: h, loadId: f, lurkLocation: r }),
             p &&
-                (await r.A.transitionToGuildSync(
+                (await i.A.transitionToGuildSync(
                     e,
                     {
                         ...g,
-                        welcomeModalChannelId: a,
-                        navigationReplace: null != a,
-                        openChannel: null != a,
+                        welcomeModalChannelId: c,
+                        navigationReplace: null != c,
+                        openChannel: null != c,
                         search: E.location.search,
                     },
-                    a,
+                    c,
                     n.messageId,
                 ));
     }
-    d?.();
+    _?.();
 }
-function f(e) {
+function h(e) {
     return {
         id: e.id,
         name: e.name,
@@ -90,29 +89,29 @@ function f(e) {
         keywords: e.keywords,
     };
 }
-function p(e, t) {
+function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
-    a.default.track(l.HAw.GUILD_DISCOVERY_EXITED, { load_id: e, guild_ids_viewed: t, recommendations_source: n });
+    s.default.track(o.HAw.GUILD_DISCOVERY_EXITED, { load_id: e, guild_ids_viewed: t, recommendations_source: n });
 }
-function E(e) {
-    a.default.track(l.HAw.SEARCH_CLOSED, { load_id: e });
+function p(e) {
+    s.default.track(o.HAw.SEARCH_CLOSED, { load_id: e });
 }
-function m(e, t) {
+function E(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-    a.default.track(l.HAw.SEARCH_STARTED, {
-        search_type: l.I4_.GUILD_DISCOVERY,
+    s.default.track(o.HAw.SEARCH_STARTED, {
+        search_type: o.I4_.GUILD_DISCOVERY,
         load_id: e,
         location: n.location,
         category_id: t,
     });
 }
-function g(e) {
+function m(e) {
     let { withCounts: t, offset: n } = e;
-    a.default.track(l.HAw.GUILD_DISCOVERY_SEARCH_START, { with_counts: t, offset: n });
+    s.default.track(o.HAw.GUILD_DISCOVERY_SEARCH_START, { with_counts: t, offset: n });
 }
-function A(e) {
+function g(e) {
     let { categoryId: t, error: n, willRequestRetry: i, isRequestRetry: r } = e;
-    a.default.track(l.HAw.GUILD_DISCOVERY_SEARCH_FAILED, {
+    s.default.track(o.HAw.GUILD_DISCOVERY_SEARCH_FAILED, {
         category_id: t,
         request_status: n.status,
         request_error_code: n.code,
@@ -120,38 +119,28 @@ function A(e) {
         is_request_retry: r,
     });
 }
-function I(e) {
+function A(e) {
     let { categoryId: t } = e;
-    a.default.track(l.HAw.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
+    s.default.track(o.HAw.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function T(e) {
-    let { loadId: t, searchId: n, query: i, guildResults: r, analyticsContext: s, categoryId: o, isTagSearch: u } = e;
-    a.default.track(l.HAw.SEARCH_RESULT_VIEWED, {
-        search_type: u ? l.I4_.GUILD_DISCOVERY_TAG : l.I4_.GUILD_DISCOVERY,
+function I(e) {
+    let { loadId: t, searchId: n, query: i, guildResults: r, analyticsContext: a, categoryId: l, isTagSearch: u } = e;
+    s.default.track(o.HAw.SEARCH_RESULT_VIEWED, {
+        search_type: u ? o.I4_.GUILD_DISCOVERY_TAG : o.I4_.GUILD_DISCOVERY,
         load_id: t,
         search_id: n,
         total_results: void 0 !== r ? r.length : null,
         guild_ids: void 0 !== r ? r.map((e) => e.id) : null,
         query: i,
-        location: s.location,
-        category_id: o,
+        location: a.location,
+        category_id: l,
     });
 }
-function S(e) {
-    let t = o.A.getLoadId(e);
-    a.default.track(l.HAw.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
+function T(e) {
+    let t = a.A.getLoadId(e);
+    s.default.track(o.HAw.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,
         load_id: t,
-        guild_size: d.A.getMemberCount(e),
+        guild_size: c.A.getMemberCount(e),
     });
-}
-async function y(e) {
-    try {
-        let t = (await i.Bo.get({ url: l.Rsh.GUILD_DISCOVERY_SLUG(String(e)), oldFormErrors: !0, rejectWithError: !0 }))
-            .body;
-        if (t?.guild == null || t?.slug == null) return null;
-        return { guild: t.guild, slug: t.slug };
-    } catch {
-        return null;
-    }
 }

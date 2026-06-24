@@ -1,0 +1,119 @@
+.container__4e338 {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    width: 100%
+}
+
+.gameIcon__4e338 {
+    flex-shrink: 0;
+    height: 26px;
+    position: relative;
+    width: 26px
+}
+
+.gameIconImage__4e338 {
+    border: 1px solid var(--border-muted);
+    border-radius: 4px;
+    max-height: 100%;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.extraGamesContainer__4e338 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px 0
+}
+
+.extraGameRow__4e338 {
+    gap: 8px
+}
+
+.extraGameItem__4e338,
+.extraGameRow__4e338 {
+    align-items: center;
+    display: flex
+}
+
+.extraGameItem__4e338 {
+    justify-content: center;
+    position: relative
+}
+
+.extraGameItem__4e338.clickable__4e338 {
+    cursor: pointer
+}
+
+.extraGameIconImage__4e338 {
+    position: absolute;
+    z-index: 1
+}
+
+.extraGameOverlay__4e338 {
+    background: var(--background-scrim);
+    border-radius: 4px;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0;
+    z-index: 10
+}
+
+.extraGameText__4e338 {
+    z-index: 20
+}
+
+.gameActivityLevel__4e338 {
+    background-color: var(--background-surface-highest);
+    border-radius: 50%;
+    inset-inline-end: -4px;
+    position: absolute;
+    top: -4px
+}
+
+.gameActivityLevel__4e338,
+.gameActivityLevelInner__4e338 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center
+}
+
+.gameActivityLevelInner__4e338 {
+    height: 14px;
+    padding: 2px;
+    width: 14px
+}
+
+.favoriteGameContainer__4e338 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.gameCoverArt__4e338 {
+    flex-shrink: 0;
+    height: 76px;
+    position: relative;
+    width: 56px
+}
+
+.gameCoverArtImage__4e338 {
+    border: 1px solid var(--border-muted);
+    border-radius: 4px;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.gameCoverArtActivityLevelInner__4e338 {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    padding: 2px
+}

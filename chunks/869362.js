@@ -719,8 +719,8 @@ var eq = l(619517),
     e0 = l(615300),
     e1 = l(456412),
     e7 = l(133296),
-    e3 = l(689175),
-    e9 = l(532197),
+    e9 = l(689175),
+    e3 = l(532197),
     e6 = l(937751);
 let e8 = { CENTER: e6.Hu, LEFT: e6.Vl };
 class e2 extends a.PureComponent {
@@ -748,7 +748,7 @@ class e2 extends a.PureComponent {
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: i, align: n } = this.props,
             o = l ? e6.XA : e6.BU;
-        return (0, s.jsx)(e3.Gt, {
+        return (0, s.jsx)(e9.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: r()(o, i, n),
             ref: this.handleSetScrollerRef,
@@ -764,7 +764,7 @@ class e2 extends a.PureComponent {
         });
     }
 }
-class e5 extends a.PureComponent {
+class e4 extends a.PureComponent {
     handlePrevClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -775,11 +775,11 @@ class e5 extends a.PureComponent {
         return (0, s.jsx)(ek.D, {
             className: r()(e6.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, s.jsx)(e9.A, { className: e6.UE, direction: e9.A.Directions.LEFT }),
+            children: (0, s.jsx)(e3.A, { className: e6.UE, direction: e3.A.Directions.LEFT }),
         });
     }
 }
-class e4 extends a.PureComponent {
+class e5 extends a.PureComponent {
     handleNextClick = (e) => {
         e.stopPropagation(), e.preventDefault();
         let { onClick: t } = this.props;
@@ -790,7 +790,7 @@ class e4 extends a.PureComponent {
         return (0, s.jsx)(ek.D, {
             className: r()(e6.XS, e),
             onClick: this.handleNextClick,
-            children: (0, s.jsx)(e9.A, { className: e6.UE, direction: e9.A.Directions.RIGHT }),
+            children: (0, s.jsx)(e3.A, { className: e6.UE, direction: e3.A.Directions.RIGHT }),
         });
     }
 }
@@ -991,8 +991,8 @@ class th extends a.PureComponent {
                   className: tl.HY,
                   children: [
                       n,
-                      (0, s.jsx)(e5, { onClick: this.manualPrevious, className: r()(tl.UE, { [tl.h_]: i }) }),
-                      (0, s.jsx)(e4, { onClick: this.manualNext, className: r()(tl.UE, { [tl.h_]: a }) }),
+                      (0, s.jsx)(e4, { onClick: this.manualPrevious, className: r()(tl.UE, { [tl.h_]: i }) }),
+                      (0, s.jsx)(e5, { onClick: this.manualNext, className: r()(tl.UE, { [tl.h_]: a }) }),
                   ],
               });
     }
@@ -1595,8 +1595,8 @@ var tQ = l(462887),
     t0 = l(194261),
     t1 = l(173936),
     t7 = l(9578),
-    t3 = l(736653),
-    t9 = l(573648),
+    t9 = l(736653),
+    t3 = l(573648),
     t6 = l(355584);
 function t8(e) {
     let { application: t, className: l, innerClassName: i } = e,
@@ -1615,14 +1615,14 @@ function t8(e) {
                       children: [
                           a.map((e, t) => (0, s.jsx)(t2, { url: e.url, children: e.name }, t)),
                           null != t.terms_of_service_url
-                              ? (0, s.jsx)(t5, {
+                              ? (0, s.jsx)(t4, {
                                     icon: tJ.o,
                                     url: t.terms_of_service_url,
                                     children: w.intl.string(w.t.s7STcY),
                                 })
                               : null,
                           null != t.privacy_policy_url
-                              ? (0, s.jsx)(t5, {
+                              ? (0, s.jsx)(t4, {
                                     icon: t0.X,
                                     url: t.privacy_policy_url,
                                     children: w.intl.string(w.t.kH3JR5),
@@ -1636,12 +1636,12 @@ function t8(e) {
 }
 function t2(e) {
     let { url: t, children: l } = e,
-        i = (0, t3.Ay)(),
-        a = t9.A.getByUrl(t),
+        i = (0, t9.Ay)(),
+        a = t3.A.getByUrl(t),
         n = (0, tQ.M)(i) ? a?.icon?.darkSVG : a?.icon?.lightSVG;
-    return (0, s.jsx)(t5, { icon: void 0 === n ? t1.q : void 0, imageSrc: n, url: t, children: l });
+    return (0, s.jsx)(t4, { icon: void 0 === n ? t1.q : void 0, imageSrc: n, url: t, children: l });
 }
-function t5(e) {
+function t4(e) {
     let { icon: t, imageSrc: l, iconColor: i, url: a, children: n } = e,
         o = G(),
         c = null;
@@ -1659,7 +1659,7 @@ function t5(e) {
         children: d,
     });
 }
-var t4 = l(385648),
+var t5 = l(385648),
     le = l(781696),
     lt = l(950305),
     ll = l(548118),
@@ -1671,7 +1671,7 @@ var t4 = l(385648),
     lo = l(517061);
 function lc(e) {
     let { guild: t, className: l, onClick: i } = e,
-        a = (0, t3.Ay)(),
+        a = (0, t9.Ay)(),
         n = (0, la.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
         o = eo.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, ls.mZ)() }),
         c =
@@ -1767,7 +1767,7 @@ function lu(e) {
                     if (null != e) {
                         k(O.HAw.APP_DIRECTORY_SUPPORT_SERVER_JOINED, { application_id: t.id, support_guild_id: e });
                         let l = { page: O.liQ.APPLICATION_DIRECTORY };
-                        await (0, t4.Z2)(e, l);
+                        await (0, t5.Z2)(e, l);
                     }
                 } catch {}
             }, [t])),
@@ -2101,13 +2101,13 @@ var lH = l(607399),
     l0 = l(782134),
     l1 = l(787389),
     l7 = l(688810),
-    l3 = l(361926),
-    l9 = l(204776),
+    l9 = l(361926),
+    l3 = l(204776),
     l6 = l(50268),
     l8 = l(207371),
     l2 = l(928658),
-    l5 = l(395671),
-    l4 = l(957565),
+    l4 = l(395671),
+    l5 = l(957565),
     ie = l(692848),
     it = l(440970);
 let il = "start_application_install",
@@ -2191,7 +2191,7 @@ function ia(e) {
                 }, [t, i, l]),
                 canInstall: a.useMemo(
                     () =>
-                        (0, l9.Ie)({
+                        (0, l3.Ie)({
                             customInstallUrl: t.custom_install_url,
                             installParams: t.install_params,
                             integrationTypesConfig: t.integration_types_config,
@@ -2235,13 +2235,13 @@ let io = a.forwardRef(function (e, t) {
         o = a.useCallback(() => {
             var e;
             k(O.HAw.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: l.id }),
-                (0, l4.C)(
+                (0, l5.C)(
                     ((e = l.id), `${location.protocol}//${location.host}${O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE(e)}`),
                     () => (0, lY.P0)((0, lz.o)(w.intl.string(w.t["L/PwZf"]), lX.Ck.SUCCESS)),
                 );
         }, [l.id]),
         c = a.useCallback(() => {
-            let e = l5.Ay.createFromServer(l);
+            let e = l4.Ay.createFromServer(l);
             (0, l2.r3)({ application: e, entrypoint: "app_directory" });
         }, [l]),
         u = (0, l6.A)({
@@ -2287,7 +2287,7 @@ let io = a.forwardRef(function (e, t) {
             let l = e.id,
                 i = e?.bot?.id,
                 s = (0, l8.x)(e),
-                n = (0, l3.Vr)({ context: { type: "contextless" }, applicationId: l, botUserId: i }),
+                n = (0, l9.Vr)({ context: { type: "contextless" }, applicationId: l, botUserId: i }),
                 r = null != i && (0, en.$B)(e) && (0, en.Ag)(e) && (s || n),
                 [o, c] = a.useState(!1),
                 u = G(),
@@ -2326,7 +2326,7 @@ let io = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(ir, { size: i, contentWidth: "normal", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(ia, { application: l, size: i, contentWidth: "normal", variant: x }),
-                    l4.p5
+                    l5.p5
                         ? (0, s.jsx)(ew.K, {
                               variant: "secondary",
                               size: i,
@@ -2343,7 +2343,7 @@ let io = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(ir, { size: i, contentWidth: "small", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(ia, { application: l, size: i, contentWidth: "small", variant: x }),
-                    (0, s.jsx)(is, { renderDropdown: (e) => h(l4.p5, e), size: i }),
+                    (0, s.jsx)(is, { renderDropdown: (e) => h(l5.p5, e), size: i }),
                 ],
             }),
             (0, s.jsxs)("div", {
@@ -2351,7 +2351,7 @@ let io = a.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(ir, { size: i, contentWidth: "icon", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(ia, { application: l, size: i, contentWidth: "icon", variant: x }),
-                    (0, s.jsx)(is, { renderDropdown: (e) => h(l4.p5, e), size: i }),
+                    (0, s.jsx)(is, { renderDropdown: (e) => h(l5.p5, e), size: i }),
                 ],
             }),
         ],
@@ -2658,8 +2658,7 @@ function iS(e) {
                                 l.e("45976"),
                                 l.e("60654"),
                                 l.e("70179"),
-                                l.e("53917"),
-                                l.e("15186"),
+                                l.e("17989"),
                                 l.e("80830"),
                                 l.e("70104"),
                             ]).then(l.bind(l, 963179));
@@ -2688,8 +2687,7 @@ function iS(e) {
                                     l.e("45976"),
                                     l.e("60654"),
                                     l.e("70179"),
-                                    l.e("53917"),
-                                    l.e("15186"),
+                                    l.e("17989"),
                                     l.e("80830"),
                                     l.e("64850"),
                                 ]).then(l.bind(l, 168393));
@@ -3234,7 +3232,7 @@ function i1(e) {
     });
 }
 var i7 = l(386607);
-function i3(e) {
+function i9(e) {
     let { applicationId: t, hideDetailHeaderButtons: l, onClickBack: i } = e,
         n = (0, d.bG)([R.A], () => R.A.getApplication(t)),
         [o, c] = a.useState(l),
@@ -3260,7 +3258,7 @@ function i3(e) {
         ],
     });
 }
-function i9() {
+function i3() {
     let e = a.useCallback(() => {
             let e, t;
             (e = new URL(location.href)),
@@ -3459,7 +3457,7 @@ let i6 = function () {
     return (0, s.jsxs)("div", {
         className: r()(i7.nw, { [i7.Yz]: g }),
         children: [
-            g ? (0, s.jsx)(i9, {}) : null,
+            g ? (0, s.jsx)(i3, {}) : null,
             (0, s.jsxs)("div", {
                 className: i7.WH,
                 children: [
@@ -3468,7 +3466,7 @@ let i6 = function () {
                         children: [
                             !ev && (0, s.jsx)(j.ns, { scrollPosition: R }),
                             ea
-                                ? (0, s.jsx)(i3, { applicationId: Y, hideDetailHeaderButtons: ee, onClickBack: ej })
+                                ? (0, s.jsx)(i9, { applicationId: Y, hideDetailHeaderButtons: ee, onClickBack: ej })
                                 : (0, s.jsxs)(s.Fragment, {
                                       children: [
                                           en
