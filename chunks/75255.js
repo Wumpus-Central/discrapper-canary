@@ -28,4 +28,3 @@ let o = Object.freeze({}),
             }
         },
     };
-),c?.(e),e}}}
