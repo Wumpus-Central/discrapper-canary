@@ -1780,7 +1780,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 568170, Version Hash: 14ec6e1f339cd1e234db6160b8344788850cc0a1`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 568291, Version Hash: 1793f4483ad85a5780d4c96d81bba6a605ffd19c`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -15970,7 +15970,7 @@ var A_ = n(80500),
     Am = n(7584),
     Ag = n(486164),
     AA = n(821589),
-    AI = n(564064),
+    AI = n(662388),
     AT = n(755172),
     AS = n(43105);
 let Ay = (e) => {
@@ -18077,7 +18077,7 @@ let Sl = "isHideDevBanner",
                     className: t6()(So.Wz, So.mr),
                     children: [
                         (0, F.jsx)(Sa, { className: So.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "568170" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "568291" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -36982,7 +36982,7 @@ let xK = (0, nO.Fe)({
             n.e("10413"),
             n.e("3370"),
             n.e("24805"),
-            n.e("67876"),
+            n.e("63363"),
             n.e("99487"),
             n.e("98279"),
             n.e("6286"),
@@ -37897,8 +37897,8 @@ let kO = (0, iz.Fe)({
             E = s === ro.HP.GUILD_THEME_PREVIEW,
             m = s === ro.HP.APPLICATION_TEST_MODE_DEBUG;
         if (!(h || f || p || E || m)) return null;
-        let g = () =>
-            (0, F.jsxs)(F.Fragment, {
+        function g() {
+            return (0, F.jsxs)(F.Fragment, {
                 children: [
                     h &&
                         (0, F.jsx)(kO, {
@@ -37918,6 +37918,7 @@ let kO = (0, iz.Fe)({
                     m && (0, F.jsx)(kL, {}),
                 ],
             });
+        }
         return t ? (0, F.jsx)("div", { className: kC.A, children: g() }) : g();
     };
 var kM = n(404374),
