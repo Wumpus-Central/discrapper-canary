@@ -10,7 +10,8 @@
     line-height: 20px;
     margin-inline: 14px 10px;
     overflow: hidden;
-    padding: 16px 10px
+    padding: 16px 10px;
+    position: relative
 }
 
 .peopleListItem_cc6179.active_cc6179+.divider_cc6179,
@@ -35,6 +36,27 @@
 
 .full-motion .peopleListItem_cc6179 {
     transition: background-color .2s ease
+}
+
+.rowButton_cc6179 {
+    border-radius: 8px;
+    inset: 0;
+    position: absolute
+}
+
+.rowContent_cc6179 {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    pointer-events: none;
+    position: relative;
+    z-index: 1
+}
+
+.rowContent_cc6179 [role=button],
+.rowContent_cc6179 a,
+.rowContent_cc6179 button {
+    pointer-events: auto
 }
 
 .divider_cc6179 {

@@ -1780,7 +1780,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 568314, Version Hash: bd445039cad904c97b90d0a03b6e61d6923d780d`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 568415, Version Hash: b01709281d922c8ab93783d1d7ebaeed4d9da2c7`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -2718,8 +2718,8 @@ let re = (0, iz.Fe)({
                 n.e("72963"),
                 n.e("93766"),
                 n.e("42724"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("50117"),
                 n.e("92128"),
                 n.e("99549"),
@@ -3285,8 +3285,8 @@ let sA = (0, iz.Fe)({
                 n.e("42724"),
                 n.e("66495"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -3743,8 +3743,8 @@ let sA = (0, iz.Fe)({
                 n.e("71210"),
                 n.e("68403"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -6507,8 +6507,8 @@ let lz = 15 * ie.A.Millis.MINUTE,
                             n.e("66495"),
                             n.e("71210"),
                             n.e("8555"),
-                            n.e("86127"),
                             n.e("28095"),
+                            n.e("86127"),
                             n.e("88599"),
                             n.e("75842"),
                             n.e("36863"),
@@ -7229,13 +7229,14 @@ function uU(e) {
             recipientUser: h,
             analyticsLocations: f,
             giftIntentType: p,
+            ariaLabel: E,
         } = e,
-        { analyticsLocations: E } = (0, aH.Ay)(io.A.PREMIUM_GIFT_INTENT_FRIEND_ROW),
-        { Component: m } = (0, uN.V)(),
-        g = (0, e5.bG)([uS.Ay], () => uS.Ay.getFriendAnniversaryYears(h.id)),
-        { openGiftModal: A } = (0, ux.$)({
+        { analyticsLocations: m } = (0, aH.Ay)(io.A.PREMIUM_GIFT_INTENT_FRIEND_ROW),
+        { Component: g } = (0, uN.V)(),
+        A = (0, e5.bG)([uS.Ay], () => uS.Ay.getFriendAnniversaryYears(h.id)),
+        { openGiftModal: I } = (0, ux.$)({
             giftRecipient: h,
-            analyticsLocations: E,
+            analyticsLocations: m,
             analyticsLocation: eM.ThZ.FRIEND_ANNIVERSARIES_ACTION_BUTTON,
             analyticsObject: {
                 page: eM.liQ.FRIENDS_LIST,
@@ -7245,15 +7246,15 @@ function uU(e) {
             },
             location: "gift-intent-friend-row",
         });
-    function I(e) {
+    function T(e) {
         e.stopPropagation();
         let t = a7.A.getUserAffinity(h.id);
         eP.default.track(eM.HAw.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
             gift_intent_type: p,
             affinity: t?.dmProbability,
-            location_stack: E,
+            location_stack: m,
         }),
-            A();
+            I();
     }
     return (
         te.useEffect(() => {
@@ -7272,6 +7273,7 @@ function uU(e) {
             analyticsLocations: f,
             onOtherHover: d,
             onClick: _,
+            ariaLabel: E,
             height: 72,
             children: (e) =>
                 (0, F.jsxs)("div", {
@@ -7301,7 +7303,7 @@ function uU(e) {
                                                 variant: "text-xs/normal",
                                                 color: "text-subtle",
                                                 children: nl.intl.formatToPlainString(nl.t.S3fdq7, {
-                                                    numberOfYears: g,
+                                                    numberOfYears: A,
                                                 }),
                                             }),
                                         ],
@@ -7317,13 +7319,13 @@ function uU(e) {
                                 (0, F.jsx)(uv.K, {
                                     size: "sm",
                                     variant: "secondary",
-                                    icon: m,
+                                    icon: g,
                                     "aria-label": nl.intl.string(nl.t.I61IsE),
                                     onClick: () => {
                                         eP.default.track(eM.HAw.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
                                             gift_intent_type: p,
                                             cta_type: "send_message",
-                                            location_stack: E,
+                                            location_stack: m,
                                         }),
                                             (0, uT.xs)(h.id),
                                             (0, nb.openModalLazy)(async () => {
@@ -7335,7 +7337,7 @@ function uU(e) {
                                                     (0, F.jsx)(e, {
                                                         ...t,
                                                         giftIntentType: p ?? void 0,
-                                                        analyticsLocationHistory: E,
+                                                        analyticsLocationHistory: m,
                                                     });
                                             });
                                     },
@@ -7345,7 +7347,7 @@ function uU(e) {
                                     text: nl.intl.string(nl.t.PEjaCx),
                                     icon: uR.o,
                                     "aria-label": nl.intl.string(nl.t.PEjaCx),
-                                    onClick: I,
+                                    onClick: T,
                                 }),
                             ],
                         }),
@@ -7466,6 +7468,9 @@ class uH extends te.PureComponent {
                   isMobile: a,
                   isVR: o,
                   isGameRelationship: l,
+                  ariaLabel: nl.intl.formatToPlainString(nl.t.Qb5Km1, {
+                      name: iw.A.getNickname(e.id) ?? rN.Ay.getName(e),
+                  }),
               })
             : (0, F.jsx)(uO.A, {
                   ref: this.peopleListItemRef,
@@ -7475,6 +7480,9 @@ class uH extends te.PureComponent {
                   analyticsLocations: n,
                   onOtherHover: () => (_ ? null : (0, lW.Z_)()),
                   onClick: this.handleRowClick,
+                  ariaLabel: nl.intl.formatToPlainString(nl.t.Qb5Km1, {
+                      name: iw.A.getNickname(e.id) ?? rN.Ay.getName(e),
+                  }),
                   children: (t, n) =>
                       (0, F.jsxs)("div", {
                           className: uk.a4,
@@ -7776,6 +7784,9 @@ function u9(e) {
         user: t,
         analyticsLocations: o,
         onClick: u,
+        ariaLabel: nl.intl.formatToPlainString(n === eM.eA$.PENDING_INCOMING ? nl.t.M8NKGR : nl.t["31bBi7"], {
+            name: iw.A.getNickname(t.id) ?? rN.Ay.getName(t),
+        }),
         children: (e, i) =>
             (0, F.jsxs)("div", {
                 className: u6.a4,
@@ -8047,6 +8058,7 @@ function cm(e) {
         user: t,
         analyticsLocations: s,
         onClick: () => (0, lb.openUserProfileModal)({ userId: t.id, sourceAnalyticsLocations: s }),
+        ariaLabel: nl.intl.formatToPlainString(nl.t["9dglzB"], { name: rN.Ay.getName(t) }),
         children: (e, i) => {
             let r = (0, F.jsxs)(F.Fragment, {
                 children: [
@@ -18078,7 +18090,7 @@ let Sl = "isHideDevBanner",
                     className: t6()(So.Wz, So.mr),
                     children: [
                         (0, F.jsx)(Sa, { className: So.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "568314" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "568415" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -20679,8 +20691,8 @@ let C7 = (0, nO.Fe)({
                 n.e("42724"),
                 n.e("66495"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -20966,8 +20978,8 @@ let C7 = (0, nO.Fe)({
                 n.e("71210"),
                 n.e("68403"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -21266,8 +21278,8 @@ let C7 = (0, nO.Fe)({
                 n.e("42724"),
                 n.e("66495"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -21527,8 +21539,8 @@ let C7 = (0, nO.Fe)({
                 n.e("71210"),
                 n.e("68403"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -22146,8 +22158,8 @@ let C7 = (0, nO.Fe)({
                 n.e("42724"),
                 n.e("66495"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -22365,8 +22377,8 @@ let C7 = (0, nO.Fe)({
                 n.e("71210"),
                 n.e("68403"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -22689,8 +22701,8 @@ let C7 = (0, nO.Fe)({
                 n.e("71210"),
                 n.e("68403"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -23035,8 +23047,8 @@ let C7 = (0, nO.Fe)({
                 n.e("42724"),
                 n.e("66495"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -24693,8 +24705,8 @@ let vx = (0, iz.Fe)({
                 n.e("72963"),
                 n.e("93766"),
                 n.e("42724"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("50117"),
                 n.e("92128"),
                 n.e("99549"),
@@ -24907,8 +24919,8 @@ let vx = (0, iz.Fe)({
                 n.e("66495"),
                 n.e("71210"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -26861,8 +26873,8 @@ let bs = (0, iz.Fe)({
                 n.e("71210"),
                 n.e("68403"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -27259,8 +27271,8 @@ let bs = (0, iz.Fe)({
                 n.e("71210"),
                 n.e("68403"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -27620,8 +27632,8 @@ let bs = (0, iz.Fe)({
                 n.e("71210"),
                 n.e("68403"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
@@ -36471,8 +36483,8 @@ let xK = (0, nO.Fe)({
             n.e("7962"),
             n.e("8555"),
             n.e("64325"),
-            n.e("86127"),
             n.e("28095"),
+            n.e("86127"),
             n.e("88599"),
             n.e("75842"),
             n.e("1555"),
@@ -38829,8 +38841,8 @@ let kZ = (0, iz.Fe)({
                 n.e("71210"),
                 n.e("68403"),
                 n.e("8555"),
-                n.e("86127"),
                 n.e("28095"),
+                n.e("86127"),
                 n.e("88599"),
                 n.e("75842"),
                 n.e("36863"),
