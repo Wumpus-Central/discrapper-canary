@@ -1,4 +1,4 @@
-n.exports = {
+_.exports = {
     kL: "container_dfb989",
     $E: "inProfile_dfb989",
     Tn: "hasAppendedInlineContent_dfb989",
@@ -7,9 +7,13 @@ n.exports = {
     _W: "underlineOnHover_dfb989",
     uY: "pop_dfb989",
     Zg: "emoji_dfb989",
+    M4: "gummyLetter_dfb989",
+    _j: "shouldWrap_dfb989",
+    qf: "gummyWord_dfb989",
     rD: "showEffect_dfb989",
     QJ: "solid_dfb989",
     D7: "gradient_dfb989",
+    Wj: "prism_dfb989",
     lw: "neon_dfb989",
     lQ: "toon_dfb989",
     CS: "animated_dfb989",
@@ -18,4 +22,7 @@ n.exports = {
     uj: "toon-animation_dfb989",
     Di: "pop-animation-main_dfb989",
     en: "pop-animation-shadow_dfb989",
+    kt: "prism-scroll_dfb989",
+    Y0: "gummy_dfb989",
+    Sc: "gummy-squish_dfb989",
 };

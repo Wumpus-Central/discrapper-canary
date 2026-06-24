@@ -7,6 +7,3 @@ function r(t) {
     let e = (t.__SENTRY__ = t.__SENTRY__ || {});
     return (e.version = e.version || "8.55.0"), (e["8.55.0"] = e["8.55.0"] || {});
 }
-8.55;
-0.0;
-"]||{}}

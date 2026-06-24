@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Jl: () => u, _k: () => o, gz: () => l, ii: () => h, re: () => s, sO: () => a });
+n.d(t, { Jl: () => u, LP: () => _, _k: () => o, gz: () => l, ii: () => f, re: () => s, sO: () => a });
 var i = n(508425),
     r = n(559949);
 let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
@@ -42,7 +42,8 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         [0xa87aff, 0xe86bd0, 0xff7a8a, 0xffb07a],
         [7052031, 5230806, 8051066, 0xffe066],
     ],
-    _ = [
+    _ = 100,
+    h = [
         [0xff3b3b, 0xff9e2c, 0xffe92c, 3528283, 2924287],
         [0xff2c8d, 0xb02cff, 5975295, 2924287, 2938592],
         [2949038, 2938592, 2924287, 7035903, 0xb02cff],
@@ -56,12 +57,12 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         [0xc6fff0, 7074006, 2938560, 1618121, 2915030],
         [0xffd02c, 0xff8a3b, 0xff5b6b, 0xff3b9e, 0xd62cd6],
     ];
-function h(e) {
+function f(e) {
     switch (e) {
         case i.z.GUMMY:
             return d;
         case i.z.PRISM:
-            return _;
+            return h;
         case i.z.GRADIENT:
         case i.z.GLOW:
             return c.map((e) => e.colors);

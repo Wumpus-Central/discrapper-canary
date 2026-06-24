@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => L });
+n.d(t, { A: () => M });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -19,64 +19,80 @@ var i = n(627968),
     A = n(998304),
     I = n(898985),
     T = n(824994),
-    S = n(922301);
-let y = "--custom-display-name-styles-main-color";
-var C = n(308050),
-    N = n(912051),
-    v = n(564039);
-function R(e) {
-    let { name: t, emojiClassName: n, colors: s } = e,
-        a = r.useMemo(() => {
-            let e = (0, C.A)(),
-                r = 0;
-            return (0, N.p)(t).map((t, a) => {
-                e.lastIndex = 0;
-                let o = e.test(t),
-                    l = !o && t.trim().length > 0,
-                    u = null != s && s.length > 0 && l ? s[r % s.length] : void 0;
-                return (
-                    l && r++,
-                    (0, i.jsx)(
-                        "span",
-                        { className: o ? n : void 0, style: null != u ? { color: u } : void 0, children: t },
-                        a,
-                    )
-                );
-            });
-        }, [t, s, n]);
+    S = n(922301),
+    y = n(750656);
+let C = "--custom-display-name-styles-main-color";
+n(321073);
+var N = n(308050),
+    v = n(912051),
+    R = n(564039);
+let O = (0, N.A)();
+function b(e) {
+    let { name: t, emojiClassName: n, letterClassName: s, wordClassName: a, colors: o } = e,
+        l = r.useMemo(() => {
+            let e = 0,
+                r = 0,
+                l = [],
+                u = [],
+                c = () => {
+                    if (0 === u.length) return;
+                    let e = u;
+                    (u = []),
+                        null != a
+                            ? l.push((0, i.jsx)("span", { className: a, children: e }, `word-${l.length}`))
+                            : l.push(...e);
+                };
+            return (
+                (0, v.p)(t).forEach((t, a) => {
+                    O.lastIndex = 0;
+                    let d = O.test(t);
+                    if (0 === t.trim().length) {
+                        c(), l.push((0, i.jsx)("span", { children: t }, `space-${a}`));
+                        return;
+                    }
+                    let _ = null != o && o.length > 0 && !d ? o[e % o.length] : void 0,
+                        h = null != _ ? { color: _ } : void 0;
+                    null == s || d || (h = { ...h, "--custom-letter-index": r }),
+                        u.push((0, i.jsx)("span", { className: d ? n : s, style: h, children: t }, a)),
+                        !d && (e++, r++);
+                }),
+                c(),
+                l
+            );
+        }, [t, o, n, s, a]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("span", { className: v.Q, children: t }),
-            (0, i.jsx)("span", { "aria-hidden": !0, children: a }),
+            (0, i.jsx)("span", { className: R.Q, children: t }),
+            (0, i.jsx)("span", { "aria-hidden": !0, children: l }),
         ],
     });
 }
-var O = n(73392),
-    b = n(875358);
-let D = [l.x.CHERRY_BOMB, l.x.CHICLE],
-    L = r.memo(function (e) {
+var D = n(73392),
+    L = n(875358);
+let w = [l.x.CHERRY_BOMB, l.x.CHICLE],
+    M = r.memo(function (e) {
         let {
                 userName: t,
                 displayNameStyles: n,
                 effectDisplayType: s = S.G.STATIC,
                 inProfile: l = !1,
                 textClassName: m,
-                loop: C = !1,
-                shouldWrap: N = !1,
-                boldFontOpacity: v = 1,
-                shouldUnderlineOnHover: L = !1,
-                appendedInlineContent: w,
+                loop: N = !1,
+                shouldWrap: v = !1,
+                boldFontOpacity: R = 1,
+                shouldUnderlineOnHover: O = !1,
+                appendedInlineContent: M,
             } = e,
-            M = (0, p.DW)("UserNameWithEffects"),
-            P = (0, E.sx)(n, M),
-            x = (0, O.a)({ displayNameStyles: P }),
-            { useReducedMotion: k } = (0, u.cf)([f.Ay], () => ({ useReducedMotion: f.Ay.useReducedMotion })),
-            U = (0, T.W)({ location: "UserNameWithEffects" }),
-            G = (0, d.r)(_.A.colors.BACKGROUND_BASE_LOW).hex(),
-            F = P?.effectId ?? o.z.SOLID,
-            V = (0, h.O)(t),
-            B = (0, c.CR)(V, F === o.z.TOON ? b.Zg : void 0),
-            j = (function (e) {
+            P = (0, p.DW)("UserNameWithEffects"),
+            x = (0, E.sx)(n, P),
+            k = (0, D.a)({ displayNameStyles: x }),
+            { useReducedMotion: U } = (0, u.cf)([f.Ay], () => ({ useReducedMotion: f.Ay.useReducedMotion })),
+            G = (0, T.W)({ location: "UserNameWithEffects" }),
+            F = (0, d.r)(_.A.colors.BACKGROUND_BASE_LOW).hex(),
+            V = x?.effectId ?? o.z.SOLID,
+            B = (0, h.O)(t),
+            j = (0, c.CR)(B, V === o.z.TOON ? L.Zg : void 0),
+            H = (function (e) {
                 let { displayNameStyles: t, backgroundColor: n } = e,
                     i = (0, u.bG)([f.Ay], () => (f.Ay.desaturateUserColors ? f.Ay.saturation : 1)),
                     s = t?.effectId ?? o.z.SOLID,
@@ -95,27 +111,44 @@ let D = [l.x.CHERRY_BOMB, l.x.CHICLE],
                               ),
                     [t, s, a.minContrastRatio, i, n],
                 );
-            })({ displayNameStyles: U ? P : null, backgroundColor: G });
-        if (!U || null == P) return (0, i.jsxs)(i.Fragment, { children: [t, " ", w] });
-        let H = (function (e, t) {
-                let { shouldWrap: n = !1, fontOpacity: i = 1 } =
-                        arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                    r = {};
+            })({ displayNameStyles: G ? x : null, backgroundColor: F });
+        if (!G || null == x) return (0, i.jsxs)(i.Fragment, { children: [t, " ", M] });
+        let Y = (function (e, t) {
+                var n, i, r;
+                let {
+                        shouldWrap: s = !1,
+                        fontOpacity: a = 1,
+                        nameLength: l = 0,
+                    } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                    u = {};
                 switch (e) {
                     case o.z.GRADIENT:
                     case o.z.GLOW:
-                    case o.z.PRISM:
-                        var s;
-                        r =
-                            0 === (s = t).length
+                        u =
+                            0 === (n = t).length
                                 ? {}
                                 : {
                                       "--custom-display-name-styles-gradient-stops":
-                                          1 === s.length
-                                              ? `${s[0]}, ${s[0]}`
-                                              : s.map((e, t) => `${e} ${10 + (80 * t) / (s.length - 1)}%`).join(", "),
-                                      [y]: s[0],
+                                          1 === n.length
+                                              ? `${n[0]}, ${n[0]}`
+                                              : n.map((e, t) => `${e} ${10 + (80 * t) / (n.length - 1)}%`).join(", "),
+                                      [C]: n[0],
                                   };
+                        break;
+                    case o.z.PRISM:
+                        (i = t),
+                            (r = l),
+                            (u =
+                                0 === i.length
+                                    ? {}
+                                    : {
+                                          "--custom-display-name-styles-prism-stops": Array.from(
+                                              { length: i.length + 1 },
+                                              (e, t) => `${i[t % i.length]} ${((100 * t) / i.length).toFixed(3)}%`,
+                                          ).join(", "),
+                                          "--custom-display-name-styles-prism-cycle": `max(${r}ch, ${y.LP}px)`,
+                                          [C]: i[0],
+                                      });
                         break;
                     case o.z.GUMMY:
                     case o.z.NEON:
@@ -124,7 +157,7 @@ let D = [l.x.CHERRY_BOMB, l.x.CHICLE],
                     case o.z.SOLID:
                     default:
                         t.length > 0 &&
-                            (r = (function (e) {
+                            (u = (function (e) {
                                 let {
                                     main: t,
                                     light1: n,
@@ -135,7 +168,7 @@ let D = [l.x.CHERRY_BOMB, l.x.CHICLE],
                                     neonStroke: o,
                                 } = (0, E.$0)(e);
                                 return {
-                                    [y]: t,
+                                    [C]: t,
                                     "--custom-display-name-styles-light-1-color": n,
                                     "--custom-display-name-styles-light-2-color": i,
                                     "--custom-display-name-styles-dark-1-color": r,
@@ -146,48 +179,57 @@ let D = [l.x.CHERRY_BOMB, l.x.CHICLE],
                             })(t[0]));
                 }
                 return {
-                    ...r,
-                    "--custom-display-name-styles-wrap": n ? "wrap" : "nowrap",
-                    "--custom-display-name-styles-font-opacity": i,
+                    ...u,
+                    "--custom-display-name-styles-wrap": s ? "wrap" : "nowrap",
+                    "--custom-display-name-styles-font-opacity": a,
                 };
-            })(F, j, { shouldWrap: N, fontOpacity: D.includes(P.fontId) ? v : 1 }),
-            Y = (function (e) {
+            })(V, H, { shouldWrap: v, fontOpacity: w.includes(x.fontId) ? R : 1, nameLength: B?.length ?? 0 }),
+            W = (function (e) {
                 switch (e) {
                     case o.z.GRADIENT:
                     case o.z.GLOW:
+                        return L.D7;
                     case o.z.PRISM:
-                        return b.D7;
+                        return L.Wj;
                     case o.z.NEON:
-                        return b.lw;
+                        return L.lw;
                     case o.z.TOON:
-                        return b.lQ;
+                        return L.lQ;
                     case o.z.POP:
-                        return b.uY;
+                        return L.uY;
                     case o.z.GUMMY:
-                        return;
+                        return L.Y0;
                     case o.z.SOLID:
                     default:
-                        return b.QJ;
+                        return L.QJ;
                 }
-            })(F),
-            W = s !== S.G.PLAIN,
-            K = (0, i.jsx)("div", {
-                className: a()(b.kL, x, m, {
-                    [b.rD]: W,
-                    [b.CS]: s === S.G.ANIMATED && !k,
-                    [b.HW]: C,
-                    [b.$E]: l,
-                    [b.Tn]: null != w,
+            })(V),
+            K = s !== S.G.PLAIN,
+            $ = s === S.G.ANIMATED && !U,
+            z = (0, i.jsx)("div", {
+                className: a()(L.kL, k, m, {
+                    [L.rD]: K,
+                    [L.CS]: $,
+                    [L.HW]: N,
+                    [L.$E]: l,
+                    [L.Tn]: null != M,
+                    [L._j]: v,
                 }),
-                style: H,
+                style: Y,
                 children: (0, i.jsx)("span", {
-                    "data-username-with-effects": V,
-                    className: a()(b.WH, Y, { [b._W]: L }),
+                    "data-username-with-effects": B,
+                    className: a()(L.WH, W, { [L._W]: O }),
                     children:
-                        F === o.z.GUMMY
-                            ? (0, i.jsx)(R, { name: V ?? "", emojiClassName: b.Zg, colors: W ? j : void 0 })
-                            : B,
+                        V === o.z.GUMMY && K
+                            ? (0, i.jsx)(b, {
+                                  name: B ?? "",
+                                  emojiClassName: L.Zg,
+                                  letterClassName: $ ? L.M4 : void 0,
+                                  wordClassName: L.qf,
+                                  colors: H,
+                              })
+                            : j,
                 }),
             });
-        return null != w ? (0, i.jsxs)("div", { className: b.g8, children: [K, w] }) : K;
+        return null != M ? (0, i.jsxs)("div", { className: L.g8, children: [z, M] }) : z;
     });
