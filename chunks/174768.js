@@ -149,7 +149,14 @@ function $(e, t) {
                                   let { channelId: i } = n;
                                   if (e(i)) return;
                                   let r = W(i);
-                                  null != r && t.push({ record: r, channelId: i });
+                                  if (null != r) {
+                                      if (
+                                          (r.type === u.rD.TEXT_CHANNEL || r.type === u.rD.VOICE_CHANNEL) &&
+                                          !S.A.can(D.xBc.SEND_MESSAGES, r.record)
+                                      )
+                                          return;
+                                      t.push({ record: r, channelId: i });
+                                  }
                               }),
                               t);
                           if (o.length > 0)
