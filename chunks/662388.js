@@ -28,17 +28,7 @@ var i,
 n(398590);
 var u = n(913122),
     c = n(865116);
-n(250953),
-    (0, n(240921).Ay)({
-        name: "2026-01-you-bar",
-        kind: "user",
-        defaultConfig: { enabled: !1, animateBetweenServers: !1, questDockEnabled: !1, largeAvatarEnabled: !1 },
-        variations: {
-            1: { enabled: !0, animateBetweenServers: !1, questDockEnabled: !0, largeAvatarEnabled: !1 },
-            2: { enabled: !0, animateBetweenServers: !1, questDockEnabled: !0, largeAvatarEnabled: !0 },
-            3: { enabled: !0, animateBetweenServers: !1, questDockEnabled: !1, largeAvatarEnabled: !0 },
-        },
-    });
+n(250953);
 var d = n(976860),
     _ = n(773669),
     h = n(590180);
