@@ -486,7 +486,7 @@ function eu(e) {
                       });
               })(W)
             : void 0,
-        ea = ((l = null == (t = m.tiers[0]?.key) || P?.key === t), G.intl.string(l ? G.t.WDhIz2 : G.t.wYaDmz)),
+        ea = ((l = null == (t = m.tiers?.[0]?.key) || P?.key === t), G.intl.string(l ? G.t.WDhIz2 : G.t.wYaDmz)),
         eu = S && null != en,
         eg = null != H,
         em = null;
