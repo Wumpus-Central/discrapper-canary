@@ -70,7 +70,7 @@ function G(e) {
         children: n
             ? i
             : (0, l.jsx)(_.D, {
-                  onClick: () => {
+                  onClick: function () {
                       D.A.navigate(t.key);
                   },
                   className: O.vk,
@@ -943,8 +943,8 @@ var eK = n(495544),
 function eJ() {
     let e = (0, eH.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "567840",
-        r = "23c07640a03bf370c62744ae351d37d080f30fdc".substring(0, 7),
+        n = "567863",
+        r = "42e15b564a257439fdf91c19d7dc4d1827335b2f".substring(0, 7),
         s = eW.A?.app.getVersion(),
         i = eW.A?.app.getBuildNumber(),
         u = eW.A?.app.getAppArch(),
@@ -1055,7 +1055,7 @@ function e1(e) {
         }),
     });
 }
-function e7() {
+function e2() {
     let e = r.useRef(null);
     return (0, l.jsxs)("div", {
         children: [
@@ -1112,7 +1112,7 @@ function e7() {
         ],
     });
 }
-var e2 = n(402651),
+var e7 = n(402651),
     e5 = n(669067),
     e9 = n(830543),
     e3 = n(466745);
@@ -1135,7 +1135,7 @@ function e6(e) {
         return (
             eK.default.addChangeListener(e),
             () => {
-                eK.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+                eK.default.removeChangeListener(e), e7.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
             }
         );
     }, []),
@@ -1145,7 +1145,7 @@ function e6(e) {
               partialRoot: e_.D,
               searchBar: te,
               emptyState: tt,
-              sidebarFooter: e7,
+              sidebarFooter: e2,
               onViewChange: function (e) {
                   e4.has(e) || (0, e5._)(e);
                   let t = e8.get(e);
@@ -1153,9 +1153,9 @@ function e6(e) {
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e2.A.getField("source") },
+                          properties: { source: e7.A.getField("source") },
                       }),
-                      e2.A.setState({ source: void 0 });
+                      e7.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: eP.X.ACCOUNT_PANEL,

@@ -113,7 +113,7 @@ function S(e) {
                 children: [
                     null != I && (0, r.jsx)(k, { trailingContent: I }),
                     (0, r.jsx)(g.$, {
-                        onClick: () => {
+                        onClick: function () {
                             m();
                             let e = j();
                             e instanceof Promise && (v(!0), e.finally(() => v(!1)));
@@ -216,7 +216,7 @@ function G(e) {
             className: F.M,
             children: [null != a && (0, r.jsx)(P, { decoration: a }), (0, r.jsx)(C.u, {})],
         }),
-        onClick: () => {
+        onClick: function () {
             A.A.navigate(t, { animateSidebarScroll: !1 }), h();
         },
     });
@@ -380,7 +380,7 @@ function W(e) {
             defaultValue: I,
             onValueRender: j,
             asValueChanges: m,
-            onValueChange: (e) => {
+            onValueChange: function (e) {
                 B(), t?.(e);
             },
             orientation: "horizontal",
@@ -430,7 +430,7 @@ function J(e) {
                 badge: p,
                 checked: m,
                 hasIcon: u,
-                onChange: (e) => {
+                onChange: function (e) {
                     y(), l(e);
                 },
                 disabled: f,
@@ -540,7 +540,7 @@ let ec = l.memo(function (e) {
         title: g,
         collapsedSubtitle: p,
         isExpanded: u,
-        onExpandedChange: (e) => {
+        onExpandedChange: function (e) {
             (j.current = "user"), y(), d(e);
         },
         animate: a,
@@ -742,15 +742,15 @@ var eN = t(683071),
 function eC(e) {
     let { button: n } = e,
         [t, s] = l.useState(!1),
-        i = n.useText(),
-        a = async () => {
-            s(!0);
-            try {
-                await n.onClick();
-            } finally {
-                s(!1);
-            }
-        };
+        i = n.useText();
+    async function a() {
+        s(!0);
+        try {
+            await n.onClick();
+        } finally {
+            s(!1);
+        }
+    }
     return (0, r.jsx)(g.$, {
         variant: n.variant ?? "secondary",
         size: n.size,
@@ -893,8 +893,8 @@ var eZ = t(404778),
     eP = t(375708),
     eF = t(339102);
 function eG(e) {
-    let n,
-        { node: t } = e,
+    var n;
+    let { node: t } = e,
         [s, i] = l.useState(!1),
         { layout: a, collapseAfter: o, useCollapsibleTitle: c, useCollapsedSubtitle: u } = t,
         d = null != o ? a.slice(0, o) : a,
@@ -1104,7 +1104,7 @@ function e3(e) {
                 (0, r.jsx)(eH.V, {
                     className: eQ.$H,
                     selectedItem: o,
-                    onItemSelect: (e) => {
+                    onItemSelect: function (e) {
                         A.A.navigate(e, {
                             onTransitionStart: () => {
                                 let n = t.find((n) => n.key === e);
