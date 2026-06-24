@@ -19,8 +19,8 @@ var i = n(627968),
     y = n(228366),
     E = n(367513),
     N = n(442433),
-    j = n(730852),
-    v = n(401843),
+    v = n(730852),
+    j = n(401843),
     I = n(817281),
     T = n(820284),
     _ = n(765671),
@@ -73,8 +73,8 @@ var i = n(627968),
     ey = n(71393),
     eE = n(576705),
     eN = n(309010),
-    ej = n(287809),
-    ev = n(977997),
+    ev = n(287809),
+    ej = n(977997),
     eI = n(174459),
     eT = n(871237),
     e_ = n(625494),
@@ -326,7 +326,7 @@ class eX extends l.PureComponent {
                 return;
             case eB.lp.USER:
                 this.trackCallTileContextMenuImpression(e, eB.qs.USER);
-                let u = ej.default.getUser(e.id);
+                let u = ev.default.getUser(e.id);
                 if (null != u) {
                     if (l)
                         return (0, ee.r)(t, u, s, d, (e, t) =>
@@ -352,8 +352,7 @@ class eX extends l.PureComponent {
                                         n.e("93190"),
                                         n.e("91763"),
                                         n.e("8757"),
-                                        n.e("23625"),
-                                        n.e("54037"),
+                                        n.e("85968"),
                                         n.e("89673"),
                                         n.e("38730"),
                                         n.e("29787"),
@@ -406,8 +405,7 @@ class eX extends l.PureComponent {
                                         n.e("46652"),
                                         n.e("93190"),
                                         n.e("8757"),
-                                        n.e("23625"),
-                                        n.e("54037"),
+                                        n.e("85968"),
                                         n.e("89673"),
                                         n.e("29787"),
                                         n.e("82073"),
@@ -456,8 +454,7 @@ class eX extends l.PureComponent {
                                             n.e("46652"),
                                             n.e("93190"),
                                             n.e("8757"),
-                                            n.e("23625"),
-                                            n.e("54037"),
+                                            n.e("85968"),
                                             n.e("89673"),
                                             n.e("29787"),
                                             n.e("82073"),
@@ -509,10 +506,10 @@ class eX extends l.PureComponent {
     handleSelectParticipant = (e, t) => {
         let { channel: n, selectedParticipant: i, allActiveStreams: l, inCall: a, mode: s } = this.props;
         (0, eB.Ay)(e) &&
-            (0, z.eo)(n, ev.A, ey.A, eE.A, H.default)[0] &&
-            (j.default.selectVoiceChannel(n.id),
+            (0, z.eo)(n, ej.A, ey.A, eE.A, H.default)[0] &&
+            (v.default.selectVoiceChannel(n.id),
             0 === l.filter((t) => (0, F._z)(t) === e.id && t.state !== eH.XYD.ENDED).length &&
-                (0, v.A9)((0, F.Iy)(e.id), { forceMultiple: t.shiftKey })),
+                (0, j.A9)((0, F.Iy)(e.id), { forceMultiple: t.shiftKey })),
             a &&
                 s === eH._Of.VIDEO &&
                 (i?.id === e.id ? E.A.selectParticipant(n.id, null) : E.A.selectParticipant(n.id, e.id));
@@ -696,8 +693,8 @@ class eX extends l.PureComponent {
             E = l && s === eH._Of.VIDEO,
             N = (x?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
-        let j = !l || !(this.popoutOpen && !this.inPopout),
-            v = f
+        let v = !l || !(this.popoutOpen && !this.inPopout),
+            j = f
                 ? (0, i.jsx)(K.A, { channelId: u.id, popoutType: t })
                 : (0, i.jsx)(ei.A, {
                       ref: this._contentRef,
@@ -730,7 +727,7 @@ class eX extends l.PureComponent {
             screenMessage: this.screenMessage,
             disableGradients: !l || C,
             idle: !m && l && !C && e.idle,
-            children: j && v,
+            children: v && j,
         });
     }
     render() {
@@ -802,8 +799,8 @@ let eZ = function (e) {
         E = (0, G.A)(),
         N = (0, d.bG)([eN.A], () => (E?.channelId ?? eN.A.getVoiceChannelId()) === t.id),
         {
-            participants: j,
-            filteredParticipants: v,
+            participants: v,
+            filteredParticipants: j,
             participantsVersion: R,
             mode: b,
             layout: L,
@@ -896,8 +893,8 @@ let eZ = function (e) {
                             selectedStream: F,
                             mode: b,
                             inCall: N,
-                            participants: j,
-                            filteredParticipants: v,
+                            participants: v,
+                            filteredParticipants: j,
                             participantsVersion: R,
                             layout: L,
                             chatOpen: U,
