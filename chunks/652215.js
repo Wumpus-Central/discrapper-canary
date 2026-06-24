@@ -5316,6 +5316,7 @@ var rD =
         (ex.REPLY_NUDGES_SHOWN = "reply_nudges_shown"),
         (ex.APP_TRANSACTION_ID_SYNCED = "app_transaction_id_synced"),
         (ex.PARENTAL_CONSENT_CHECKED = "parental_consent_checked"),
+        (ex.PARENTAL_CONSENT_WARNING_BANNER_TAPPED = "parental_consent_warning_banner_tapped"),
         (ex.SEO_PAGE_CWV_MEASURED = "seo_page_cwv_measured"),
         (ex.UI_SETTING_INTERACTED = "ui_setting_interacted"),
         (ex.FAVORITES_GUILD_VIEWED = "favorites_guild_viewed"),
