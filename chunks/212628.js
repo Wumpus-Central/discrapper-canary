@@ -1780,7 +1780,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 567975, Version Hash: 2f2faca7462ace1df4d68cb2ed0f317afbf9f22c`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 567991, Version Hash: 1ba1989bbcf1396fd617622e5708f1a40e9bfc6b`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -18056,7 +18056,7 @@ let Sl = "isHideDevBanner",
                     className: t6()(So.Wz, So.mr),
                     children: [
                         (0, F.jsx)(Sa, { className: So.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "567975" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "567991" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -25635,11 +25635,12 @@ class RR extends te.PureComponent {
                 tabHook: (e, t) => (0, F.jsx)(RA.e, { shortcut: "tab", className: Rv.P }, t),
             }),
             nl.intl.string(nl.t["il/GZt"]),
-            nl.intl.string(nl.t["5qAKlq"]),
             nl.intl.format(nl.t.FVVp79, {
                 F6Hook: (e, t) => (0, F.jsx)(RA.e, { shortcut: "f6", className: Rv.P }, t),
                 tabHook: (e, t) => (0, F.jsx)(RA.e, { shortcut: "tab", className: Rv.P }, t),
             }),
+            nl.intl.string(nl.t["5qAKlq"]),
+            nl.intl.string(nl.t.XpshBc),
             nl.intl.string(nl.t["7Y1hFH"]),
             nl.intl.string(nl.t.UcCW71),
             nl.intl.string(nl.t.E5Ghfc),
