@@ -16,7 +16,7 @@ let f = {
         churning: { start: o.A.unsafe_rawColors.OPACITY_RED_80.css, end: o.A.unsafe_rawColors.RED_NEW_30.css },
         active: { start: o.A.unsafe_rawColors.OPACITY_GREEN_80.css, end: o.A.unsafe_rawColors.GREEN_NEW_30.css },
     },
-    p = (e) => {
+    p = function (e) {
         let { className: t } = e,
             { passesProgressBarInvariant: n, programReward: r, totalDays: o } = (0, _.F)();
         if (!n || null == r || null == o) return null;

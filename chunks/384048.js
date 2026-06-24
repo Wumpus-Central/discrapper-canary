@@ -22,18 +22,18 @@ var i = s(503698),
     A = s(652215),
     _ = s(375708),
     I = s(651535);
-let D = (a) => {
+let D = function (a) {
     let { transitionState: t, onClose: s, displayProfile: i } = a,
         { analyticsLocations: D } = (0, o.Ay)(m.A.TIERED_TENURE_BADGES_MODAL),
         C = (0, x.GV)(),
         R = Object.values(v.VD),
         S = (0, N.p3)(i?.userId),
         b = (0, N.$F)(),
-        k = (0, j.t)(),
-        y = E.default.getCurrentUser(),
-        O = (0, N.rG)(i?.userId ?? y?.id) ?? new Date(),
-        L = (0, h.CC)(y?.premiumType, v.PremiumTypes.TIER_2),
-        P = R.map((a) => {
+        f = (0, j.t)(),
+        k = E.default.getCurrentUser(),
+        y = (0, N.rG)(i?.userId ?? k?.id) ?? new Date(),
+        O = (0, h.CC)(k?.premiumType, v.PremiumTypes.TIER_2),
+        L = R.map((a) => {
             let { id: t, nameUnformatted: s, tenureReqNumMonths: r } = a,
                 d = _.intl.string(s),
                 c = (0, T.I)(t).standard,
@@ -60,15 +60,15 @@ let D = (a) => {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         className: I.h8,
-                                        children: _.intl.formatToPlainString(_.t.Hu4jfi, { date: O }),
+                                        children: _.intl.formatToPlainString(_.t.Hu4jfi, { date: y }),
                                     }),
                                 h &&
-                                    null != k &&
+                                    null != f &&
                                     (0, e.jsx)(l.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         className: I.h8,
-                                        children: _.intl.formatToPlainString(_.t.PPL1Il, { days: k.days }),
+                                        children: _.intl.formatToPlainString(_.t.PPL1Il, { days: f.days }),
                                     }),
                             ],
                         }),
@@ -76,11 +76,10 @@ let D = (a) => {
                 },
                 t,
             );
-        }),
-        f = () => {
-            (0, u.pX)(A.BVt.APPLICATION_STORE, { source: m.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: D }),
-                s?.();
-        };
+        });
+    function P() {
+        (0, u.pX)(A.BVt.APPLICATION_STORE, { source: m.A.TIERED_TENURE_BADGES_MODAL, sourceLocationStack: D }), s?.();
+    }
     return (0, e.jsxs)(d.EO, {
         "data-migration-pending": !0,
         transitionState: t,
@@ -92,7 +91,7 @@ let D = (a) => {
             (0, e.jsx)(d.$m, {
                 "data-migration-pending": !0,
                 className: I.Qs,
-                children: L
+                children: O
                     ? (0, e.jsxs)(e.Fragment, {
                           children: [
                               (0, e.jsx)(l.E, {
@@ -105,13 +104,13 @@ let D = (a) => {
                                   className: I.uI,
                                   children: _.intl.string(_.t.IdAP91),
                               }),
-                              (0, e.jsx)("div", { className: I.C_, children: P }),
+                              (0, e.jsx)("div", { className: I.C_, children: L }),
                               null != i &&
-                                  i.userId !== y?.id &&
+                                  i.userId !== k?.id &&
                                   (0, e.jsx)(c.wL, {
                                       "data-migration-pending": !0,
                                       className: I.AJ,
-                                      onClick: f,
+                                      onClick: P,
                                       children: _.intl.string(_.t.hvVgAZ),
                                   }),
                           ],
@@ -126,9 +125,9 @@ let D = (a) => {
                               (0, e.jsx)(l.E, {
                                   variant: "text-md/medium",
                                   className: I.uI,
-                                  children: _.intl.format(_.t.ffatnT, { onClick: f }),
+                                  children: _.intl.format(_.t.ffatnT, { onClick: P }),
                               }),
-                              (0, e.jsx)("div", { className: I.C_, children: P }),
+                              (0, e.jsx)("div", { className: I.C_, children: L }),
                               (0, e.jsx)(p.A, {
                                   className: I.xF,
                                   premiumModalAnalyticsLocation: { page: A.liQ.TIERED_TENURE_BADGES_MODAL },

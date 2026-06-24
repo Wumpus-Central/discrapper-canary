@@ -11,7 +11,7 @@ var i = n(627968),
     d = n(466919),
     _ = n(375708),
     h = n(408373);
-let f = (e) => {
+let f = function (e) {
     let { alwaysWhite: t = !1 } = e,
         n = (0, u.DP)(),
         r = (0, o.q)(n);

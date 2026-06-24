@@ -1,14 +1,14 @@
-l.d(t, { A: () => c });
-var n = l(627968),
-    i = l(64700),
-    s = l(503698),
-    a = l.n(s),
-    r = l(761508),
-    d = l(417255);
+n.d(t, { A: () => c });
+var l = n(627968),
+    i = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(761508),
+    d = n(417255);
 let c = function (e) {
     let {
             tabs: t,
-            panelClassName: l,
+            panelClassName: n,
             tabsClassName: s,
             defaultTab: c,
             onTabChange: u,
@@ -19,27 +19,27 @@ let c = function (e) {
     i.useEffect(() => {
         h(x);
     }, [x]);
-    let j = i.useMemo(() => {
+    let f = i.useMemo(() => {
         let e = m.component;
-        return (0, n.jsx)(e, {});
+        return (0, l.jsx)(e, {});
     }, [m]);
-    return (0, n.jsxs)("div", {
-        className: a()(d.P5, { [d.Vd]: "vertical" === o }),
+    return (0, l.jsxs)("div", {
+        className: r()(d.P5, { [d.Vd]: "vertical" === o }),
         children: [
-            (0, n.jsx)(r.V, {
-                className: a()(d.$H, { [d.Vd]: "vertical" === o }, s),
+            (0, l.jsx)(a.V, {
+                className: r()(d.$H, { [d.Vd]: "vertical" === o }, s),
                 selectedItem: m.id,
-                onItemSelect: (e) => {
+                onItemSelect: function (e) {
                     h(t.find((t) => t.id === e) ?? t[0]), u?.(e);
                 },
                 orientation: o,
                 type: "vertical" === o ? "side" : "top",
                 look: "brand",
                 children: t.map((e) =>
-                    (0, n.jsx)(
-                        r.V.Item,
+                    (0, l.jsx)(
+                        a.V.Item,
                         {
-                            className: a()(d.Mf, { [d.Vd]: "vertical" === o, [d.wH]: e.id === m.id }),
+                            className: r()(d.Mf, { [d.Vd]: "vertical" === o, [d.wH]: e.id === m.id }),
                             id: e.id,
                             "aria-label": e.title,
                             children: e.title,
@@ -48,11 +48,11 @@ let c = function (e) {
                     ),
                 ),
             }),
-            (0, n.jsx)(r.V.Panel, {
+            (0, l.jsx)(a.V.Panel, {
                 id: m.id,
                 "aria-labelledby": m.title,
-                className: a()(d.NM, l, { [d.Vd]: "vertical" === o }),
-                children: j,
+                className: r()(d.NM, n, { [d.Vd]: "vertical" === o }),
+                children: f,
             }),
         ],
     });

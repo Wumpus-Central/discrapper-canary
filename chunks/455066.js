@@ -206,15 +206,15 @@ var ea = t(989349),
     em = t(569901);
 function ep(e) {
     let { className: l, color: t = "default", sticky: s = !1, children: a } = e,
-        i = s ? em.qf : void 0,
-        o = function () {
-            let {
-                className: e,
-                noticeColor: l,
-                customStyle: t,
-            } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-            return (0, n.jsx)(eu.$T, { className: e, color: l, style: t, children: a });
-        };
+        i = s ? em.qf : void 0;
+    function o() {
+        let {
+            className: e,
+            noticeColor: l,
+            customStyle: t,
+        } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
+        return (0, n.jsx)(eu.$T, { className: e, color: l, style: t, children: a });
+    }
     if ("nitro-pink" === t)
         return o({
             className: r()(em.cI, em.p3, i, l),

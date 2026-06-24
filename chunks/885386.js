@@ -144,19 +144,21 @@ function g(e, t, n) {
                 }) ?? i
             );
         },
-        updateSetting: T(i, (i) =>
-            h.A.shouldSync(t)
+        updateSetting: T(i, function (i) {
+            return h.A.shouldSync(t)
                 ? e.updateSetting(i)
                 : (_.h.dispatch({
                       type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE",
                       changes: { [t]: { settings: { [n]: i } } },
                   }),
-                  Promise.resolve()),
-        ),
+                  Promise.resolve());
+        }),
     };
 }
 function A(e, t, n, i) {
-    let r = () => n() ?? e.getSetting();
+    function r() {
+        return n() ?? e.getSetting();
+    }
     return {
         getSetting: r,
         useSetting: () => {
@@ -885,41 +887,37 @@ let e0 = I({
         "alwaysDeliver",
         (e) => e ?? !1,
         (e) => e,
-    ),
-    e5 = (e) => {
-        let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: i } = e ?? {};
-        return {
-            explicitContentGuilds: t ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            explicitContentFriendDm: n ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            explicitContentNonFriendDm: i ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-        };
-    },
-    e7 = (e) => {
-        let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: i } = e;
-        return {
-            explicitContentGuilds: t ?? void 0,
-            explicitContentFriendDm: n ?? void 0,
-            explicitContentNonFriendDm: i ?? void 0,
-        };
-    },
-    e8 = m("textAndImages", "explicitContentSettings", e5, e7),
-    e9 = (e) => {
-        let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: i } = e ?? {};
-        return {
-            goreContentGuilds: t ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            goreContentFriendDm: n ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-            goreContentNonFriendDm: i ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
-        };
-    },
-    te = (e) => {
-        let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: i } = e;
-        return {
-            goreContentGuilds: t ?? void 0,
-            goreContentFriendDm: n ?? void 0,
-            goreContentNonFriendDm: i ?? void 0,
-        };
-    },
-    tt = m("textAndImages", "goreContentSettings", e9, te);
+    );
+function e5(e) {
+    let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: i } = e ?? {};
+    return {
+        explicitContentGuilds: t ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+        explicitContentFriendDm: n ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+        explicitContentNonFriendDm: i ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+    };
+}
+function e7(e) {
+    let { explicitContentGuilds: t, explicitContentFriendDm: n, explicitContentNonFriendDm: i } = e;
+    return {
+        explicitContentGuilds: t ?? void 0,
+        explicitContentFriendDm: n ?? void 0,
+        explicitContentNonFriendDm: i ?? void 0,
+    };
+}
+let e8 = m("textAndImages", "explicitContentSettings", e5, e7);
+function e9(e) {
+    let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: i } = e ?? {};
+    return {
+        goreContentGuilds: t ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+        goreContentFriendDm: n ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+        goreContentNonFriendDm: i ?? a.TO.UNSET_EXPLICIT_CONTENT_REDACTION,
+    };
+}
+function te(e) {
+    let { goreContentGuilds: t, goreContentFriendDm: n, goreContentNonFriendDm: i } = e;
+    return { goreContentGuilds: t ?? void 0, goreContentFriendDm: n ?? void 0, goreContentNonFriendDm: i ?? void 0 };
+}
+let tt = m("textAndImages", "goreContentSettings", e9, te);
 m(
     "appearance",
     "searchResultExactCountEnabled",

@@ -5,7 +5,7 @@ n(64700);
 var r = n(503698),
     s = n.n(r),
     a = n(540914);
-let o = (e) => {
+let o = function (e) {
     let { aspectRatio: t, style: n, className: r, children: o } = e;
     return (0, i.jsx)("div", {
         className: s()(a.A, r),

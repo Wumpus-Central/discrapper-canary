@@ -188,12 +188,12 @@ function ee(e) {
                     try {
                         if (
                             (await new Promise((l, n) => {
-                                let r = () => {
-                                        e.readyState === WebSocket.OPEN && e.close();
-                                    },
-                                    i = setTimeout(() => {
-                                        s || ((s = !0), r(), n(Error("WebSocket timeout")));
-                                    }, 5e3);
+                                function r() {
+                                    e.readyState === WebSocket.OPEN && e.close();
+                                }
+                                let i = setTimeout(() => {
+                                    s || ((s = !0), r(), n(Error("WebSocket timeout")));
+                                }, 5e3);
                                 (e.onopen = () => {
                                     if (e.readyState === WebSocket.OPEN)
                                         for (let l = 0; l < 3; l++) {

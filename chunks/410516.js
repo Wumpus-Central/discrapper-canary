@@ -80,82 +80,82 @@ function v(e, t) {
         i = n?.discounts.find((e) => e.type === a.iS.SUBSCRIPTION_PLAN);
     return i?.amount ?? null;
 }
-let R = (e, t, n, i) => {
-        let s = (function () {
-                let { defaultPaymentSourceId: e, hasFetchedPaymentSources: t } = (0, r.cf)([u.A], () => ({
-                    defaultPaymentSourceId: u.A.defaultPaymentSourceId,
-                    hasFetchedPaymentSources: u.A.hasFetchedPaymentSources,
-                }));
-                return (
-                    o.useEffect(() => {
-                        t || (0, l.$o)();
-                    }, [t]),
-                    e
-                );
-            })(),
-            a = null != e ? g.hd[e] : void 0,
-            d = (0, _.mH)(a?.skuId ?? g.pe.TIER_2),
-            h = (0, p.zz)(e),
-            { priceOptions: f } = (0, c.A)({ activeSubscription: null, skuIDs: [d], paymentSourceId: s, isGift: !1 }),
-            m = null != t && null != h,
-            [A, I] = (0, E.YV)({
-                subscriptionId: n?.id,
-                items: null != e ? [{ planId: e, quantity: 1 }] : [],
-                renewal: null != n,
-                preventFetch: !m || i || !f.loaded,
-                paymentSourceId: s,
-                userDiscountOfferId: t?.id,
-            });
-        return { priceOptions: f, discountAmountOff: null != e ? v(A, e) : null };
-    },
-    O = (e) => {
-        let t = (0, m.O)(),
-            n = (0, m.p)(),
-            { priceOptions: i, discountAmountOff: s } = R(e, t ?? n),
-            a = (0, r.bG)([d.A], () => null != e && d.A.isLoadedForSKU((0, _.mH)(g.hd[e].skuId)), [e]);
-        if (null == e || (null == t && null == n)) return null;
-        try {
-            let t = (0, _.y8)(e, !1, !1, i, a);
-            return (0, h.$g)(t.amount - (s ?? 0), t.currency);
-        } catch {
-            return null;
-        }
-    },
-    b = (e, t) => {
-        let n,
-            a = (0, _.mH)(g.hd[t].skuId),
-            { plan: o, isFetching: l } = (0, r.cf)([d.A], () => ({
-                plan: d.A.get(t),
-                isFetching: d.A.isFetchingForSKU(a),
+function R(e, t, n, i) {
+    let s = (function () {
+            let { defaultPaymentSourceId: e, hasFetchedPaymentSources: t } = (0, r.cf)([u.A], () => ({
+                defaultPaymentSourceId: u.A.defaultPaymentSourceId,
+                hasFetchedPaymentSources: u.A.hasFetchedPaymentSources,
             }));
-        if (
-            ((0, i.Ay)(() => {
-                null == e || null != o || l || (0, s.ur)(a);
-            }),
-            null == e || null == o)
-        )
-            return null;
-        try {
-            n = (0, _.JM)(t);
-        } catch {
-            return null;
-        }
-        let u = e.getApproximateDiscountAmountOff(n.amount);
-        return null == u ? null : { discountedAmount: u, currency: n.currency };
-    },
-    D = (e, t, n) => {
-        let { priceOptions: i, discountAmountOff: r } = R(t, n, e),
-            s = (0, _.y8)(t, !1, !1, i);
-        return (0, h.$g)(s.amount - (r ?? 0), s.currency);
-    },
-    L = (e, t, n) => {
-        let i = (0, r.bG)([d.A], () => d.A.get(e), [e]),
-            { priceOptions: s, discountAmountOff: a } = R(e, t, n, null == i);
-        if (null == i || null == a) return null;
-        try {
-            let t = (0, _.y8)(e, !1, !1, s);
-            return (0, h.$g)(t.amount - (a ?? 0), t.currency);
-        } catch (e) {
-            return null;
-        }
-    };
+            return (
+                o.useEffect(() => {
+                    t || (0, l.$o)();
+                }, [t]),
+                e
+            );
+        })(),
+        a = null != e ? g.hd[e] : void 0,
+        d = (0, _.mH)(a?.skuId ?? g.pe.TIER_2),
+        h = (0, p.zz)(e),
+        { priceOptions: f } = (0, c.A)({ activeSubscription: null, skuIDs: [d], paymentSourceId: s, isGift: !1 }),
+        m = null != t && null != h,
+        [A, I] = (0, E.YV)({
+            subscriptionId: n?.id,
+            items: null != e ? [{ planId: e, quantity: 1 }] : [],
+            renewal: null != n,
+            preventFetch: !m || i || !f.loaded,
+            paymentSourceId: s,
+            userDiscountOfferId: t?.id,
+        });
+    return { priceOptions: f, discountAmountOff: null != e ? v(A, e) : null };
+}
+function O(e) {
+    let t = (0, m.O)(),
+        n = (0, m.p)(),
+        { priceOptions: i, discountAmountOff: s } = R(e, t ?? n),
+        a = (0, r.bG)([d.A], () => null != e && d.A.isLoadedForSKU((0, _.mH)(g.hd[e].skuId)), [e]);
+    if (null == e || (null == t && null == n)) return null;
+    try {
+        let t = (0, _.y8)(e, !1, !1, i, a);
+        return (0, h.$g)(t.amount - (s ?? 0), t.currency);
+    } catch {
+        return null;
+    }
+}
+function b(e, t) {
+    let n,
+        a = (0, _.mH)(g.hd[t].skuId),
+        { plan: o, isFetching: l } = (0, r.cf)([d.A], () => ({
+            plan: d.A.get(t),
+            isFetching: d.A.isFetchingForSKU(a),
+        }));
+    if (
+        ((0, i.Ay)(() => {
+            null == e || null != o || l || (0, s.ur)(a);
+        }),
+        null == e || null == o)
+    )
+        return null;
+    try {
+        n = (0, _.JM)(t);
+    } catch {
+        return null;
+    }
+    let u = e.getApproximateDiscountAmountOff(n.amount);
+    return null == u ? null : { discountedAmount: u, currency: n.currency };
+}
+function D(e, t, n) {
+    let { priceOptions: i, discountAmountOff: r } = R(t, n, e),
+        s = (0, _.y8)(t, !1, !1, i);
+    return (0, h.$g)(s.amount - (r ?? 0), s.currency);
+}
+function L(e, t, n) {
+    let i = (0, r.bG)([d.A], () => d.A.get(e), [e]),
+        { priceOptions: s, discountAmountOff: a } = R(e, t, n, null == i);
+    if (null == i || null == a) return null;
+    try {
+        let t = (0, _.y8)(e, !1, !1, s);
+        return (0, h.$g)(t.amount - (a ?? 0), t.currency);
+    } catch (e) {
+        return null;
+    }
+}

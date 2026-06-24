@@ -2,8 +2,8 @@
 n.d(t, { A: () => L });
 var l = n(627968),
     i = n(64700),
-    r = n(503698),
-    s = n.n(r),
+    s = n(503698),
+    r = n.n(s),
     a = n(508770),
     o = n(462824),
     u = n(315629),
@@ -33,7 +33,7 @@ function L(e) {
     let t,
         {
             title: n,
-            description: r,
+            description: s,
             analyticsLocationSection: L,
             upsellViewedTrackingData: M,
             onClose: O,
@@ -76,7 +76,7 @@ function L(e) {
                                         }),
                                         null != F && (0, l.jsx)(a.E, { type: { text: F }, variant: "brand" }),
                                         (0, l.jsx)(m.D, {
-                                            className: s()(R.DD, { [R.GU]: null != F }),
+                                            className: r()(R.DD, { [R.GU]: null != F }),
                                             variant: "heading-xl/bold",
                                             color: "text-strong",
                                             children: n,
@@ -85,7 +85,7 @@ function L(e) {
                                             variant: "text-md/medium",
                                             color: "text-subtle",
                                             className: R.rf,
-                                            children: r,
+                                            children: s,
                                         }),
                                     ],
                                 }),
@@ -104,7 +104,7 @@ function L(e) {
                                 children: [
                                     (0, l.jsx)(p.$, {
                                         variant: "secondary",
-                                        onClick: () => {
+                                        onClick: function () {
                                             A.default.track(N.HAw.PREMIUM_PROMOTION_OPENED, {
                                                 location_section: L,
                                                 location_object: N.ZSU.NAVIGATION_LINK,

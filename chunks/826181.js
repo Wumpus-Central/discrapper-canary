@@ -10,8 +10,8 @@ var i = a(627968),
     _ = a(772707),
     u = a(403581),
     I = a(189213),
-    S = a(17928),
-    f = a(821609),
+    f = a(17928),
+    S = a(821609),
     m = a(964486),
     P = a(975807),
     p = a(344346),
@@ -93,7 +93,7 @@ function B(t) {
                     }),
                     (0, i.jsx)("div", {
                         className: G.qr,
-                        children: (0, i.jsx)(f.$, {
+                        children: (0, i.jsx)(S.$, {
                             variant: "primary",
                             fullWidth: !0,
                             text: h.intl.string(L.default.EL9m2H),
@@ -119,16 +119,9 @@ function y(t) {
             setError: d,
             ...I
         } = t,
-        S = (0, C.DP)(),
-        [f, p] = (0, n.useState)(!1);
-    (0, m.Ay)(() => {
-        R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_MODAL_VIEWED, {
-            invite_id: s,
-            subscription_id: r,
-            is_existing_sub: l,
-        });
-    });
-    let N = async () => {
+        f = (0, C.DP)(),
+        [S, p] = (0, n.useState)(!1);
+    async function N() {
         R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_CTA_CLICKED, {
             invite_id: s,
             subscription_id: r,
@@ -180,33 +173,44 @@ function y(t) {
                 d(i),
                 e(2);
         }
-    };
-    return (0, i.jsx)(_.k, {
-        ...I,
-        onClose: a,
-        gradientColor: "nitro-pink",
-        badge: { type: "beta", variant: "expressive" },
-        graphic: {
-            src: "https://cdn.discordapp.com/assets/content/e73f685093cfc29d516c588ba27f23a1e03e9dbe02edcbe92a7ac79170c1931d.png",
-            type: "image",
-        },
-        title: h.intl.formatToPlainString(l ? L.default["0Yxz12"] : L.default.UjA5k8, { premiumGroupProductName: S }),
-        subtitle: h.intl.format(l ? L.default.YjSsdH : L.default.qkFeBP, {
-            premiumGroupProductName: S,
-            cooldownMonths: C.wl,
-            primaryName: o,
+    }
+    return (
+        (0, m.Ay)(() => {
+            R.default.track(E.HAw.PREMIUM_GROUP_ACCEPT_INVITE_MODAL_VIEWED, {
+                invite_id: s,
+                subscription_id: r,
+                is_existing_sub: l,
+            });
         }),
-        actions: [
-            {
-                text: h.intl.string(L.default["IO+nlU"]),
-                onClick: () => {
-                    (0, P.A)(C.TE);
-                },
-                variant: "secondary",
+        (0, i.jsx)(_.k, {
+            ...I,
+            onClose: a,
+            gradientColor: "nitro-pink",
+            badge: { type: "beta", variant: "expressive" },
+            graphic: {
+                src: "https://cdn.discordapp.com/assets/content/e73f685093cfc29d516c588ba27f23a1e03e9dbe02edcbe92a7ac79170c1931d.png",
+                type: "image",
             },
-            { text: h.intl.string(L.default.odQeh3), onClick: N, variant: "expressive", icon: u.t, loading: f },
-        ],
-    });
+            title: h.intl.formatToPlainString(l ? L.default["0Yxz12"] : L.default.UjA5k8, {
+                premiumGroupProductName: f,
+            }),
+            subtitle: h.intl.format(l ? L.default.YjSsdH : L.default.qkFeBP, {
+                premiumGroupProductName: f,
+                cooldownMonths: C.wl,
+                primaryName: o,
+            }),
+            actions: [
+                {
+                    text: h.intl.string(L.default["IO+nlU"]),
+                    onClick: () => {
+                        (0, P.A)(C.TE);
+                    },
+                    variant: "secondary",
+                },
+                { text: h.intl.string(L.default.odQeh3), onClick: N, variant: "expressive", icon: u.t, loading: S },
+            ],
+        })
+    );
 }
 function A(t) {
     let e,
@@ -279,12 +283,12 @@ function k(t) {
         } = t,
         [c, d] = (0, n.useState)(0),
         [_, u] = (0, n.useState)(null),
-        I = (0, S.bG)([O.default], () => O.default.getCurrentUser());
+        I = (0, f.bG)([O.default], () => O.default.getCurrentUser());
     s()(null != I, "UserSettingsProfileCustomization: user cannot be undefined");
-    let f = null;
+    let S = null;
     switch (c) {
         case 0:
-            f = (0, i.jsx)(y, {
+            S = (0, i.jsx)(y, {
                 setModalState: d,
                 premiumGroupSubscriptionId: e,
                 premiumGroupInviteId: a,
@@ -296,15 +300,15 @@ function k(t) {
             });
             break;
         case 1:
-            f = (0, i.jsx)(B, { ...o, isExistingSub: r, premiumGroupPrimaryName: l, currentUser: I });
+            S = (0, i.jsx)(B, { ...o, isExistingSub: r, premiumGroupPrimaryName: l, currentUser: I });
             break;
         case 2:
-            f = (0, i.jsx)(A, { error: _, ...o });
+            S = (0, i.jsx)(A, { error: _, ...o });
     }
     return (0, i.jsx)(U.A, {
         isConfirmationStep: 1 === c,
         isEligibleForWowMoment: !0,
         shouldPrefetchWowMoment: !0,
-        children: f,
+        children: S,
     });
 }

@@ -8,21 +8,21 @@ var i = n(627968),
 function c(e) {
     let { onComplete: t, onCheckItOutClick: n, markAsDismissed: c, coachmarkConfig: u, children: d } = e,
         m = (0, a.T)(u?.asset),
-        g = r.useRef(null),
         f = r.useRef(null),
+        g = r.useRef(null),
         [p, h] = r.useState(0);
     r.useEffect(() => {
-        let e = () => {
-                let e = g.current,
-                    t = f.current;
-                if (null == e || null == t) return;
-                let n = e.getBoundingClientRect(),
-                    i = t.getBoundingClientRect();
-                h(n.left + n.width / 2 - (i.left + i.width / 2));
-            },
-            t = new ResizeObserver(e),
-            n = g.current,
-            i = f.current;
+        function e() {
+            let e = f.current,
+                t = g.current;
+            if (null == e || null == t) return;
+            let n = e.getBoundingClientRect(),
+                i = t.getBoundingClientRect();
+            h(n.left + n.width / 2 - (i.left + i.width / 2));
+        }
+        let t = new ResizeObserver(e),
+            n = f.current,
+            i = g.current;
         return null != n && t.observe(n), null != i && (t.observe(i), e()), () => t.disconnect();
     }, []);
     let T = {
@@ -33,9 +33,9 @@ function c(e) {
     };
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)("div", { ref: g, children: d }),
+            (0, i.jsx)("div", { ref: f, children: d }),
             (0, i.jsx)(l.H, {
-                targetElementRef: g,
+                targetElementRef: f,
                 shouldShow: !0,
                 position: "top",
                 align: "center",
@@ -44,10 +44,10 @@ function c(e) {
                 assetUrl: m ?? "",
                 action: T,
                 caretConfig: { align: "custom", customOffset: p },
-                onRequestClose: () => {
+                onRequestClose: function () {
                     t(), c(s.i.USER_DISMISS);
                 },
-                popoverRef: f,
+                popoverRef: g,
             }),
         ],
     });

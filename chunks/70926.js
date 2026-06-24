@@ -33,8 +33,12 @@ var a = n(627968),
     L = n(268920),
     w = n(633217),
     P = n(909340);
-let B = () =>
-    (0, a.jsx)("div", { className: _.s, children: (0, a.jsx)(v.A, { src: w.A, fallbackImage: L.A, className: _.Cb }) });
+function B() {
+    return (0, a.jsx)("div", {
+        className: _.s,
+        children: (0, a.jsx)(v.A, { src: w.A, fallbackImage: L.A, className: _.Cb }),
+    });
+}
 function F() {
     (0, S.RQ)(), (0, C.pX)(D.BV.NITRO_HOME, { search: (0, o.stringify)({ perk: k.NITRO_ORBS_REWARDS_CARD_ID }) });
 }

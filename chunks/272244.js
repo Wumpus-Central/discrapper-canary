@@ -943,8 +943,8 @@ var eK = n(495544),
 function eJ() {
     let e = (0, eH.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "567379",
-        r = "5bb4745abb44c9d8275ed45814678a206fcf3ba3".substring(0, 7),
+        n = "567840",
+        r = "23c07640a03bf370c62744ae351d37d080f30fdc".substring(0, 7),
         s = eW.A?.app.getVersion(),
         i = eW.A?.app.getBuildNumber(),
         u = eW.A?.app.getAppArch(),
@@ -1129,9 +1129,9 @@ function e6(e) {
         }, []),
         [m, g] = r.useState(!1);
     return (r.useLayoutEffect(() => {
-        let e = () => {
+        function e() {
             null == eB.default.getCurrentUser() && (g(!0), (0, e9.default)());
-        };
+        }
         return (
             eK.default.addChangeListener(e),
             () => {
@@ -1146,7 +1146,7 @@ function e6(e) {
               searchBar: te,
               emptyState: tt,
               sidebarFooter: e7,
-              onViewChange: (e) => {
+              onViewChange: function (e) {
                   e4.has(e) || (0, e5._)(e);
                   let t = e8.get(e);
                   null != t &&

@@ -19,7 +19,7 @@ let h = {
         ButtonFillDarkmode: {},
     },
     f = {},
-    p = (e) => {
+    p = function (e) {
         let {
                 children: t,
                 id: n,

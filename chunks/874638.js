@@ -3,26 +3,26 @@ n.d(t, { Z: () => s, c: () => a }), n(321073);
 var i = n(735438),
     r = n.n(i);
 function s(e) {
-    let t = (e, t) =>
-            e.subscriptionPlanId === t.subscriptionPlanId &&
-            e.subscriptionPlanPrice === t.subscriptionPlanPrice &&
-            e.amount === t.amount &&
-            r().isEqual(e.discounts, t.discounts),
-        n = [],
-        i = new Set();
+    let t = [],
+        n = new Set();
     return (
         e.map((e) => {
-            for (let r of n)
-                if (t(r, e)) {
-                    i.add(r.subscriptionPlanId), (r.quantity += e.quantity);
+            for (let i of t)
+                if (
+                    i.subscriptionPlanId === e.subscriptionPlanId &&
+                    i.subscriptionPlanPrice === e.subscriptionPlanPrice &&
+                    i.amount === e.amount &&
+                    r().isEqual(i.discounts, e.discounts)
+                ) {
+                    n.add(i.subscriptionPlanId), (i.quantity += e.quantity);
                     return;
                 }
-            n.push({ ...e });
+            t.push({ ...e });
         }),
-        n.map((e) => {
+        t.map((e) => {
             let t = { ...e };
             return (
-                i.has(e.subscriptionPlanId) &&
+                n.has(e.subscriptionPlanId) &&
                     ((t.amount = t.amount * t.quantity),
                     (t.discounts = t.discounts.map((e) => ({ ...e, amount: e.amount * t.quantity }))),
                     null != t.tax && (t.tax = t.tax * t.quantity)),

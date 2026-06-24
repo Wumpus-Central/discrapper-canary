@@ -2,7 +2,7 @@
 n.d(t, { T: () => s }), n(439174), n(878784);
 var i = n(788868),
     r = n(375708);
-let s = (e, t) => {
+function s(e, t) {
     switch (e) {
         case i.Ac.PREMIUM_TENURE_1_MONTH:
         case i.Ac.PREMIUM_TENURE_3_MONTH:
@@ -17,4 +17,4 @@ let s = (e, t) => {
         default:
             return null;
     }
-};
+}

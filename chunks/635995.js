@@ -13,14 +13,14 @@ var r = n(503698),
     _ = n(818348),
     h = n(375708),
     f = n(192842);
-let p = (e) => {
-        let { children: t } = e;
-        return (0, i.jsx)(o.D, { variant: "heading-sm/medium", color: "text-strong", className: f.ut, children: t });
-    },
-    E = (e) => {
-        let { text: t, onClick: n } = e;
-        return (0, i.jsx)(a.$, { onClick: n, text: t, size: "sm", icon: l.t, variant: "overlay-primary" });
-    };
+function p(e) {
+    let { children: t } = e;
+    return (0, i.jsx)(o.D, { variant: "heading-sm/medium", color: "text-strong", className: f.ut, children: t });
+}
+function E(e) {
+    let { text: t, onClick: n } = e;
+    return (0, i.jsx)(a.$, { onClick: n, text: t, size: "sm", icon: l.t, variant: "overlay-primary" });
+}
 function m(e) {
     let { className: t, ref: n, children: r, onClick: a } = e;
     return (0, i.jsx)(u.N, {

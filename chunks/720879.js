@@ -102,16 +102,16 @@ function c(e) {
                 );
         }, [I, L]),
         r.useEffect(() => {
-            if (!v) return;
-            let e = (e) => {
+            if (v)
+                return (
+                    document.addEventListener("keydown", e, !0),
+                    () => {
+                        document.removeEventListener("keydown", e, !0);
+                    }
+                );
+            function e(e) {
                 e.key === u.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), w(!0));
-            };
-            return (
-                document.addEventListener("keydown", e, !0),
-                () => {
-                    document.removeEventListener("keydown", e, !0);
-                }
-            );
+            }
         }, [v, w]);
     let U = r.useMemo(
             () =>

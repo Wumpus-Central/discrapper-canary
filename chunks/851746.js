@@ -21,8 +21,10 @@ let u = null,
     T = !1,
     S = !1,
     y = null,
-    C = null,
-    N = () => !0;
+    C = null;
+function N() {
+    return !0;
+}
 function v(e) {
     let { messages: t } = e;
     t.forEach((e) => R(e));

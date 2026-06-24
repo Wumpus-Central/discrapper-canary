@@ -182,7 +182,9 @@ let K = {
                       }));
             };
         if (null == D || (!t && W === K)) return null;
-        let er = () => (t || B ? null : (0, s.jsx)(_.$, { variant: "overlay-primary", onClick: el, text: es }));
+        function er() {
+            return t || B ? null : (0, s.jsx)(_.$, { variant: "overlay-primary", onClick: el, text: es });
+        }
         return (0, s.jsx)(S.f5, {
             value: V,
             children: (0, s.jsxs)("div", {

@@ -15,7 +15,7 @@ var r = n(562708),
     f = n(498470),
     p = n(637706),
     E = n(975841);
-let m = (e) => {
+function m(e) {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e,
         { analyticsLocations: m } = (0, _.Ay)(),
         g = (0, d.p)();
@@ -75,4 +75,4 @@ let m = (e) => {
                 }),
         ],
     });
-};
+}

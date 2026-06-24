@@ -9,29 +9,29 @@ var i = n(627968),
 let u = { VERTICAL: l.Vd, HORIZONTAL: o.xM, HORIZONTAL_REVERSE: o.XB },
     c = { START: l.LF, END: l.Ub, CENTER: l.wq, BETWEEN: l.LT, AROUND: l.aD },
     d = { START: l.CT, END: l.ZT, CENTER: l.Hu, STRETCH: l.hx, BASELINE: l.Ju },
-    _ = { NO_WRAP: l.oA, WRAP: l.LV, WRAP_REVERSE: l.Tt },
-    h = (e) => {
-        let {
-            children: t,
-            className: n,
-            direction: r = u.HORIZONTAL,
-            justify: s = c.START,
-            align: l = d.STRETCH,
-            wrap: h = _.NO_WRAP,
-            shrink: f = 1,
-            grow: p = 1,
-            basis: E = "auto",
-            style: m,
-            ...g
-        } = e;
-        return (0, i.jsx)("div", {
-            style: { flexShrink: f, flexGrow: p, flexBasis: E, ...m },
-            className: a()(o.Uu, r, s, l, h, n),
-            ...g,
-            children: t,
-        });
-    };
-(h.Child = (e) => {
+    _ = { NO_WRAP: l.oA, WRAP: l.LV, WRAP_REVERSE: l.Tt };
+function h(e) {
+    let {
+        children: t,
+        className: n,
+        direction: r = u.HORIZONTAL,
+        justify: s = c.START,
+        align: l = d.STRETCH,
+        wrap: h = _.NO_WRAP,
+        shrink: f = 1,
+        grow: p = 1,
+        basis: E = "auto",
+        style: m,
+        ...g
+    } = e;
+    return (0, i.jsx)("div", {
+        style: { flexShrink: f, flexGrow: p, flexBasis: E, ...m },
+        className: a()(o.Uu, r, s, l, h, n),
+        ...g,
+        children: t,
+    });
+}
+(h.Child = function (e) {
     let { children: t, className: n, shrink: s = 1, grow: l = 1, basis: u = "auto", style: c, wrap: d = !1, ..._ } = e,
         h = { className: (n = n ?? o.Gu), style: { flexGrow: l, flexShrink: s, flexBasis: u, ...c }, ..._ };
     if (!d && "string" != typeof t && 1 === r.Children.count(t)) {

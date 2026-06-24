@@ -256,7 +256,7 @@ let eo = function () {
                 description: K.intl.string(K.t["/aAIqV"]),
                 descriptionCta: K.intl.string(K.t.jVcuVY),
                 previewImage: eu.yourSpace.thumbnail,
-                onClick: () => {
+                onClick: function () {
                     {
                         let { openUserSettings: e } = n(766075);
                         e(S.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: t });
@@ -326,13 +326,13 @@ let eo = function () {
                 previewImage: eu.combinedOrbs.thumbnail,
                 videoUrl: eu.combinedOrbs.assetUrl,
             },
-        },
-        ed = (e) => {
-            let t = ec[e];
-            if (null == t) throw Error(`useBentoBoxes: missing bento config for ${e}`);
-            return t;
-        },
-        e_ = (function (e) {
+        };
+    function ed(e) {
+        let t = ec[e];
+        if (null == t) throw Error(`useBentoBoxes: missing bento config for ${e}`);
+        return t;
+    }
+    let e_ = (function (e) {
             let t = (0, k.YS)({ location: "bento_box" }).functionalityEnabled,
                 { enabled: n } = x.Ay.useConfig({ location: "bento_box" }),
                 i = (0, U.O9)(),

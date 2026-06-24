@@ -28,7 +28,7 @@ function A(e) {
         asContainer: !0,
         children: (0, i.jsxs)(f.D, {
             className: d()(g.kL, { [g.vk]: !a }),
-            onClick: () => {
+            onClick: function () {
                 a || s(t, !n);
             },
             children: [

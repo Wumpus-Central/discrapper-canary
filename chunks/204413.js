@@ -3,7 +3,7 @@ n.d(t, { $: () => a });
 var i = n(145310),
     r = n(938973),
     s = n(788868);
-let a = (e) => {
+function a(e) {
     let {
             subscriptionTier: t = null,
             hasActivePromotion: n = !1,
@@ -20,4 +20,4 @@ let a = (e) => {
         }),
         { subscribeButtonProps: _ } = (0, r.B)({ ...u, subscriptionTier: d, buttonTextOverride: l ?? c });
     return { subscribeButtonProps: _, subscriptionTier: d === s.pe.NONE ? null : d };
-};
+}

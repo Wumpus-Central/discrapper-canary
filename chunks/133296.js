@@ -2,7 +2,7 @@ s.d(t, { A: () => o });
 var i = s(627968),
     r = s(64700),
     a = s(451988);
-class h extends r.Component {
+class n extends r.Component {
     timer = new a.IX();
     state = { hovered: !1 };
     static defaultProps = { disable: !1, pauseOnHover: !1 };
@@ -18,9 +18,11 @@ class h extends r.Component {
         this.stopTimer();
     }
     componentDidUpdate(e, t) {
-        let { props: s } = this,
-            i = (e, t) => !e.disable && !(t.hovered && e.pauseOnHover),
-            r = i(s, this.state),
+        let { props: s } = this;
+        function i(e, t) {
+            return !e.disable && !(t.hovered && e.pauseOnHover);
+        }
+        let r = i(s, this.state),
             a = i(e, t);
         (r && !a) || e.interval !== s.interval ? this.startTimer() : !r && a && this.stopTimer();
     }
@@ -53,4 +55,4 @@ class h extends r.Component {
         return (0, i.jsx)("div", { ...r, className: t, children: e });
     }
 }
-let o = h;
+let o = n;

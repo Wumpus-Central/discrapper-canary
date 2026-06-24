@@ -1,4 +1,4 @@
-t.d(s, { default: () => er });
+t.d(s, { default: () => en });
 var i = t(627968),
     l = t(64700),
     a = t(935462),
@@ -27,27 +27,42 @@ var o = t(503698),
     E = t(427262),
     N = t(851746),
     F = t(972007),
-    M = t(375708),
-    U = t(778712),
-    O = t(97808),
-    R = t(150934),
-    B = t(854627),
-    k = t(919563);
-function G(e) {
+    M = t(375708);
+let U = function (e) {
+    let { numNewSelected: s, anySelected: t } = e,
+        i = (0, j.bG)([N.A], () => N.A.getReferralsRemaining());
+    h()(null != i, "Referrals remaining should not be null");
+    let l = i - s;
+    return 0 === i
+        ? M.intl.string(M.t.mPmPri)
+        : 0 !== s || t
+          ? 1 === l
+              ? M.intl.string(M.t.UfPk1t)
+              : l > 0
+                ? M.intl.formatToPlainString(M.t.hZnIz4, { numFriends: l })
+                : M.intl.formatToPlainString(M.t["3PJw6c"], { numReferrals: i })
+          : M.intl.formatToPlainString(M.t.GcKM5Z, { numReferrals: i });
+};
+var O = t(778712),
+    R = t(97808),
+    B = t(150934),
+    k = t(854627),
+    G = t(919563);
+function D(e) {
     let { user: s, checked: t, onChange: l, disabled: a } = e,
-        { avatarSrc: r, eventHandlers: n } = (0, B.A)({ userId: s?.id, size: U._3.SIZE_32 }),
+        { avatarSrc: r, eventHandlers: n } = (0, k.A)({ userId: s?.id, size: O._3.SIZE_32 }),
         C = s.globalName ?? s.username;
     return (0, i.jsxs)("div", {
-        className: k.kL,
+        className: G.kL,
         children: [
             (0, i.jsxs)("div", {
-                className: k.kQ,
+                className: G.kQ,
                 children: [
-                    (0, i.jsx)(O.eu, {
-                        className: c()({ [k.SU]: a }),
+                    (0, i.jsx)(R.eu, {
+                        className: c()({ [G.SU]: a }),
                         src: r,
                         "aria-label": C,
-                        size: U._3.SIZE_32,
+                        size: O._3.SIZE_32,
                         ...n,
                     }),
                     (0, i.jsx)(g.E, {
@@ -58,52 +73,38 @@ function G(e) {
                 ],
             }),
             (0, i.jsx)("div", {
-                className: k.kv,
-                children: (0, i.jsx)(R.S, { disabled: a, checked: t, onChange: (e) => l(s, e), label: "" }),
+                className: G.kv,
+                children: (0, i.jsx)(B.S, { disabled: a, checked: t, onChange: (e) => l(s, e), label: "" }),
             }),
         ],
     });
 }
-var D = t(287491);
-function Z(e) {
+var Z = t(287491);
+function I(e) {
     let { numOfSelectedUsers: s, anySelected: t } = e,
-        l = ((e) => {
-            let { numNewSelected: s, anySelected: t } = e,
-                i = (0, j.bG)([N.A], () => N.A.getReferralsRemaining());
-            h()(null != i, "Referrals remaining should not be null");
-            let l = i - s;
-            return 0 === i
-                ? M.intl.string(M.t.mPmPri)
-                : 0 !== s || t
-                  ? 1 === l
-                      ? M.intl.string(M.t.UfPk1t)
-                      : l > 0
-                        ? M.intl.formatToPlainString(M.t.hZnIz4, { numFriends: l })
-                        : M.intl.formatToPlainString(M.t["3PJw6c"], { numReferrals: i })
-                  : M.intl.formatToPlainString(M.t.GcKM5Z, { numReferrals: i });
-        })({ numNewSelected: s, anySelected: t });
+        l = U({ numNewSelected: s, anySelected: t });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: D.DD,
+                className: Z.DD,
                 children: [
-                    (0, i.jsx)(z, { className: D.oc }),
+                    (0, i.jsx)(W, { className: Z.oc }),
                     (0, i.jsx)(L.D, { variant: "heading-xl/bold", children: M.intl.string(M.t.Lm2nFc) }),
                 ],
             }),
-            (0, i.jsx)(g.E, { className: D.h_, variant: "text-md/medium", color: "text-default", children: l }),
+            (0, i.jsx)(g.E, { className: Z.h_, variant: "text-md/medium", color: "text-default", children: l }),
         ],
     });
 }
-function I() {
+function b() {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
-                className: D.DD,
+                className: Z.DD,
                 children: (0, i.jsx)(L.D, { variant: "heading-xl/bold", children: M.intl.string(M.t["PFp+aJ"]) }),
             }),
             (0, i.jsx)(g.E, {
-                className: D.h_,
+                className: Z.h_,
                 variant: "text-md/medium",
                 color: "text-default",
                 children: M.intl.string(M.t.eBIGB4),
@@ -111,26 +112,26 @@ function I() {
         ],
     });
 }
-function b() {
+function P() {
     return (0, i.jsx)("div", {
-        className: D.JM,
+        className: Z.JM,
         children: (0, i.jsx)(y._, { src: "/assets/de3f688a6018abe0.png", width: 225, height: 160 }),
     });
 }
-function P(e) {
+function H(e) {
     let { onClose: s } = e;
     return (0, i.jsxs)("div", {
-        className: D.LK,
+        className: Z.LK,
         children: [
             (0, i.jsxs)("div", {
-                className: c()(D.tU, D.HE),
+                className: c()(Z.tU, Z.HE),
                 children: [
                     (0, i.jsx)("div", {
-                        className: D.DD,
+                        className: Z.DD,
                         children: (0, i.jsx)(L.D, { variant: "heading-xl/bold", children: M.intl.string(M.t.a9HOKg) }),
                     }),
                     (0, i.jsx)(g.E, {
-                        className: D.h_,
+                        className: Z.h_,
                         variant: "text-md/medium",
                         color: "text-default",
                         children: M.intl.string(M.t.JjjeZb),
@@ -138,13 +139,13 @@ function P(e) {
                 ],
             }),
             (0, i.jsx)("div", {
-                className: D.JM,
+                className: Z.JM,
                 children: (0, i.jsx)(y._, { src: "/assets/4fd2d8c74e3ca2c8.png", width: 178, height: 190 }),
             }),
             (0, i.jsx)("div", {
-                className: c()(D.qr, D.h0),
+                className: c()(Z.qr, Z.h0),
                 children: (0, i.jsx)("div", {
-                    className: D.tA,
+                    className: Z.tA,
                     children: (0, i.jsx)(u.$, {
                         variant: "primary",
                         fullWidth: !0,
@@ -156,7 +157,7 @@ function P(e) {
         ],
     });
 }
-function H(e) {
+function z(e) {
     let { onShare: s } = e,
         t = (0, j.bG)([N.A], () => N.A.getRecipientStatus()),
         [a, r] = l.useState([]),
@@ -164,7 +165,7 @@ function H(e) {
         [o, x] = l.useState(!1);
     return (
         l.useEffect(() => {
-            (async () => {
+            !(async function () {
                 let e = [];
                 for (let [s, i] of t)
                     if (!w.A.isBlockedOrIgnored(s) && i === d.aK.PENDING) {
@@ -175,20 +176,20 @@ function H(e) {
             })();
         }, [t]),
         (0, i.jsxs)("div", {
-            className: D.Dy,
+            className: Z.Dy,
             children: [
                 (0, i.jsxs)("div", {
-                    className: c()(D.hi, D.HE),
+                    className: c()(Z.hi, Z.HE),
                     children: [
                         (0, i.jsxs)("div", {
-                            className: D.DD,
+                            className: Z.DD,
                             children: [
-                                (0, i.jsx)(z, { className: D.oc }),
+                                (0, i.jsx)(W, { className: Z.oc }),
                                 (0, i.jsx)(L.D, { variant: "heading-xl/bold", children: M.intl.string(M.t.SY9tyI) }),
                             ],
                         }),
                         (0, i.jsx)(g.E, {
-                            className: D.h_,
+                            className: Z.h_,
                             variant: "text-md/medium",
                             color: "text-default",
                             children: M.intl.string(M.t.mPmPri),
@@ -196,10 +197,10 @@ function H(e) {
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: D.p_,
+                    className: Z.p_,
                     children: a.map((e) =>
                         (0, i.jsx)(
-                            G,
+                            D,
                             {
                                 user: e,
                                 checked: n.has(e),
@@ -215,9 +216,9 @@ function H(e) {
                     ),
                 }),
                 (0, i.jsx)("div", {
-                    className: c()(D.qr, D.h0),
+                    className: c()(Z.qr, Z.h0),
                     children: (0, i.jsx)("div", {
-                        className: D.tA,
+                        className: Z.tA,
                         children: (0, i.jsx)(u.$, {
                             text: M.intl.string(M.t.ItpQxk),
                             fullWidth: !0,
@@ -233,13 +234,13 @@ function H(e) {
         })
     );
 }
-function z(e) {
+function W(e) {
     let { className: s } = e;
     return "light" === (0, j.bG)([A.A], () => A.A.theme)
         ? (0, i.jsx)(y._, { className: s, src: "/assets/3f3a0ae3e28a2aa9.png", width: 55, height: 38 })
         : (0, i.jsx)(y._, { className: s, src: "/assets/f83f74320795976d.png", width: 55, height: 38 });
 }
-let W = function (e) {
+let K = function (e) {
     let { onClose: s, onShare: t } = e,
         a = (0, j.bG)([N.A], () => N.A.getReferralsRemaining()),
         [r, n] = l.useState(""),
@@ -258,15 +259,15 @@ let W = function (e) {
     let O = (0, p.K)((e) => {
         e && !A && y();
     });
-    if (v) return (0, i.jsx)(P, { onClose: s });
-    if (0 === a) return (0, i.jsx)(H, { onShare: t });
+    if (v) return (0, i.jsx)(H, { onClose: s });
+    if (0 === a) return (0, i.jsx)(z, { onShare: t });
     let R = C.length > 0 && 0 === g.length;
     return (0, i.jsxs)("div", {
         children: [
             (0, i.jsxs)("div", {
-                className: c()(D.wx, D.HE),
+                className: c()(Z.wx, Z.HE),
                 children: [
-                    R ? (0, i.jsx)(I, {}) : (0, i.jsx)(Z, { numOfSelectedUsers: U.length, anySelected: d.size > 0 }),
+                    R ? (0, i.jsx)(b, {}) : (0, i.jsx)(I, { numOfSelectedUsers: U.length, anySelected: d.size > 0 }),
                     (0, i.jsx)(_.iS, {
                         selectionMode: "multiple",
                         value: Array.from(d.values()),
@@ -281,7 +282,7 @@ let W = function (e) {
                                 o(t);
                         },
                         children: (0, i.jsx)("div", {
-                            className: D.c,
+                            className: Z.c,
                             children: (0, i.jsx)(_.a3, {
                                 placeholder: 0 === d.size ? M.intl.string(M.t.Kd5RaI) : "",
                                 onQueryChange: (e) => {
@@ -293,13 +294,13 @@ let W = function (e) {
                 ],
             }),
             R
-                ? (0, i.jsx)(b, {})
+                ? (0, i.jsx)(P, {})
                 : (0, i.jsxs)(f.Ar, {
-                      className: D.p_,
+                      className: Z.p_,
                       children: [
                           g.map((e) =>
                               (0, i.jsx)(
-                                  G,
+                                  D,
                                   {
                                       disabled:
                                           [...d.values()].filter((e) => !w.has(e.id)).length >= a &&
@@ -322,9 +323,9 @@ let W = function (e) {
                       ],
                   }),
             (0, i.jsx)("div", {
-                className: c()(D.qr, D.h0),
+                className: c()(Z.qr, Z.h0),
                 children: (0, i.jsx)("div", {
-                    className: D.tA,
+                    className: Z.tA,
                     children: (0, i.jsx)(u.$, {
                         variant: "primary",
                         fullWidth: !0,
@@ -339,16 +340,16 @@ let W = function (e) {
         ],
     });
 };
-var K = t(990078),
-    T = t(462887),
-    Q = t(939249),
-    q = t(789645),
-    J = t(308528),
-    V = t(398590),
-    $ = t(736653),
-    Y = t(186111),
-    X = t(975571);
-let ee = (e) => {
+var T = t(990078),
+    Q = t(462887),
+    q = t(939249),
+    J = t(789645),
+    V = t(308528),
+    $ = t(398590),
+    Y = t(736653),
+    X = t(186111),
+    ee = t(975571);
+let es = (e) => {
         let { className: s, width: t = 214, height: l = 165 } = e;
         return (0, i.jsxs)("svg", {
             width: t,
@@ -563,7 +564,7 @@ let ee = (e) => {
             ],
         });
     },
-    es = (e) => {
+    et = (e) => {
         let { className: s, width: t = 214, height: l = 165 } = e;
         return (0, i.jsxs)("svg", {
             className: s,
@@ -843,101 +844,101 @@ let ee = (e) => {
             ],
         });
     };
-var et = t(652215),
-    ei = t(745842);
-let el = (e) => {
-        let { user: s, trialCreationResult: t, onClose: l } = e,
-            { avatarSrc: a, eventHandlers: r } = (0, B.A)({ userId: s?.id, size: U._3.SIZE_56 }),
-            n = E.Ay.getName(s),
-            C = s.username !== n && t === d.o.SUCCESS,
-            o = t === d.o.FAIL;
-        return (0, i.jsxs)("div", {
-            className: ei.El,
-            children: [
-                (0, i.jsx)(O.eu, {
-                    imageClassName: c()({ [ei.jN]: o }),
-                    src: a,
-                    "aria-label": n,
-                    size: U._3.SIZE_56,
-                    ...r,
-                }),
-                (0, i.jsxs)("div", {
-                    className: ei.Dp,
-                    children: [
-                        o
-                            ? (0, i.jsxs)(i.Fragment, {
-                                  children: [
-                                      (0, i.jsx)(g.E, { className: ei.E0, variant: "text-md/medium", children: n }),
-                                      (0, i.jsx)(g.E, {
-                                          variant: "text-md/medium",
-                                          className: ei.nT,
-                                          children: M.intl.format(M.t.RO3T4B, { userName: n }),
-                                      }),
-                                  ],
-                              })
-                            : (0, i.jsx)(K.m, {
-                                  asContainer: !0,
-                                  text: M.intl.string(M.t.xkVQPN),
-                                  position: "right",
-                                  children: (0, i.jsx)(Q.D, {
-                                      onClick: () => {
-                                          var e;
-                                          return (
-                                              (e = s.id),
-                                              void (Y.A.hasLayers() && (0, V.jH)(),
-                                              J.A.openPrivateChannel({ recipientIds: e }),
-                                              l())
-                                          );
-                                      },
-                                      className: ei.t0,
-                                      children: (0, i.jsx)(g.E, {
-                                          variant: "text-md/medium",
-                                          className: ei.QC,
-                                          children: n,
-                                      }),
+var ei = t(652215),
+    el = t(745842);
+function ea(e) {
+    let { user: s, trialCreationResult: t, onClose: l } = e,
+        { avatarSrc: a, eventHandlers: r } = (0, k.A)({ userId: s?.id, size: O._3.SIZE_56 }),
+        n = E.Ay.getName(s),
+        C = s.username !== n && t === d.o.SUCCESS,
+        o = t === d.o.FAIL;
+    return (0, i.jsxs)("div", {
+        className: el.El,
+        children: [
+            (0, i.jsx)(R.eu, {
+                imageClassName: c()({ [el.jN]: o }),
+                src: a,
+                "aria-label": n,
+                size: O._3.SIZE_56,
+                ...r,
+            }),
+            (0, i.jsxs)("div", {
+                className: el.Dp,
+                children: [
+                    o
+                        ? (0, i.jsxs)(i.Fragment, {
+                              children: [
+                                  (0, i.jsx)(g.E, { className: el.E0, variant: "text-md/medium", children: n }),
+                                  (0, i.jsx)(g.E, {
+                                      variant: "text-md/medium",
+                                      className: el.nT,
+                                      children: M.intl.format(M.t.RO3T4B, { userName: n }),
+                                  }),
+                              ],
+                          })
+                        : (0, i.jsx)(T.m, {
+                              asContainer: !0,
+                              text: M.intl.string(M.t.xkVQPN),
+                              position: "right",
+                              children: (0, i.jsx)(q.D, {
+                                  onClick: () => {
+                                      var e;
+                                      return (
+                                          (e = s.id),
+                                          void (X.A.hasLayers() && (0, $.jH)(),
+                                          V.A.openPrivateChannel({ recipientIds: e }),
+                                          l())
+                                      );
+                                  },
+                                  className: el.t0,
+                                  children: (0, i.jsx)(g.E, {
+                                      variant: "text-md/medium",
+                                      className: el.QC,
+                                      children: n,
                                   }),
                               }),
-                        C && (0, i.jsx)(g.E, { variant: "text-md/medium", className: ei.nT, children: s.username }),
-                    ],
-                }),
-            ],
-        });
-    },
-    ea = (e) => {
+                          }),
+                    C && (0, i.jsx)(g.E, { variant: "text-md/medium", className: el.nT, children: s.username }),
+                ],
+            }),
+        ],
+    });
+}
+let er = function (e) {
         let { selectedUsers: s, trialCreationResult: t, onClose: l } = e,
-            a = [...s].map((e) => (0, i.jsx)(el, { user: e, trialCreationResult: t.get(e.id), onClose: l }, e.id)),
+            a = [...s].map((e) => (0, i.jsx)(ea, { user: e, trialCreationResult: t.get(e.id), onClose: l }, e.id)),
             r = (0, j.bG)([N.A], () => N.A.getReferralsRemaining());
         h()(null !== r, "Referrals remaining should not be null");
-        let n = (0, $.DP)(),
-            C = (0, T.q)(n),
+        let n = (0, Y.DP)(),
+            C = (0, Q.q)(n),
             o = M.intl.string(M.t.Pcb7KF),
             c = [...t.values()].filter((e) => e === d.o.SUCCESS).length;
         return (
             r > 0 && (o = M.intl.formatToPlainString(M.t.iWtOfC, { numReferrals: c })),
             0 === c && (o = M.intl.string(M.t["7VBEue"])),
             (0, i.jsxs)("div", {
-                className: ei.Jc,
+                className: el.Jc,
                 children: [
-                    (0, i.jsx)(Q.D, {
+                    (0, i.jsx)(q.D, {
                         onClick: l,
-                        className: ei.cG,
-                        children: (0, i.jsx)(q.P, { size: "custom", width: 20, height: 20 }),
+                        className: el.cG,
+                        children: (0, i.jsx)(J.P, { size: "custom", width: 20, height: 20 }),
                     }),
-                    (0, i.jsx)(C ? es : ee, { className: ei.nr }),
-                    (0, i.jsx)(L.D, { variant: "heading-lg/bold", className: ei.R_, children: o }),
-                    (0, i.jsx)("div", { className: ei.wj, children: a }),
+                    (0, i.jsx)(C ? et : es, { className: el.nr }),
+                    (0, i.jsx)(L.D, { variant: "heading-lg/bold", className: el.R_, children: o }),
+                    (0, i.jsx)("div", { className: el.wj, children: a }),
                     (0, i.jsx)(g.E, {
                         variant: "text-md/medium",
                         children: M.intl.format(M.t.CZaMHn, {
                             days: 10,
-                            helpdeskArticle: X.A.getArticleURL(et.MVz.REFERRAL_PROGRAM),
+                            helpdeskArticle: ee.A.getArticleURL(ei.MVz.REFERRAL_PROGRAM),
                         }),
                     }),
                 ],
             })
         );
     },
-    er = (e) => {
+    en = function (e) {
         let s,
             { transitionState: t, onClose: o, sourceAnalyticsLocations: c } = e,
             [x, h] = l.useState(1),
@@ -946,10 +947,10 @@ let el = (e) => {
             { analyticsLocations: _ } = (0, n.Ay)([...c, r.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
         switch (x) {
             case 1:
-                s = (0, i.jsx)(W, {
+                s = (0, i.jsx)(K, {
                     onShare: async (e) => {
                         try {
-                            C.default.track(et.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: _ });
+                            C.default.track(ei.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: _ });
                             let s = await (0, d.xm)(e.map((e) => e.id));
                             h(2), f(new Set(e)), j(s);
                         } catch {}
@@ -958,7 +959,7 @@ let el = (e) => {
                 });
                 break;
             case 2:
-                s = (0, i.jsx)(ea, { selectedUsers: p, trialCreationResult: u, onClose: o });
+                s = (0, i.jsx)(er, { selectedUsers: p, trialCreationResult: u, onClose: o });
                 break;
             default:
                 o();

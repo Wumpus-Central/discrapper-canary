@@ -27,23 +27,23 @@ function m(e) {
 function g(e, t, r) {
     if ((0, a.hasAnyModalOpen)()) return;
     let { isDismissed: s } = (0, u.u$)(t, r);
-    if (s) return;
-    let o = (e) => {
+    function o(e) {
         (0, c.qr)(t, r, { dismissAction: e, forceTrack: !0 });
-    };
-    (0, a.openModalLazy)(
-        async () => {
-            if ("followup" === e) {
-                let { default: e } = await Promise.all([n.e("77535"), n.e("94161"), n.e("24580")]).then(
-                    n.bind(n, 34255),
-                );
-                return (n) => (0, i.jsx)(e, { renderModalProps: n, dismissibleContent: t, markAsDismissed: o });
-            }
-            let { default: r } = await Promise.all([n.e("77535"), n.e("47948")]).then(n.bind(n, 166247));
-            return (e) => (0, i.jsx)(r, { renderModalProps: e, dismissibleContent: t, markAsDismissed: o });
-        },
-        { modalKey: "ReverseTrialUpsellModal" },
-    );
+    }
+    s ||
+        (0, a.openModalLazy)(
+            async () => {
+                if ("followup" === e) {
+                    let { default: e } = await Promise.all([n.e("77535"), n.e("94161"), n.e("24580")]).then(
+                        n.bind(n, 34255),
+                    );
+                    return (n) => (0, i.jsx)(e, { renderModalProps: n, dismissibleContent: t, markAsDismissed: o });
+                }
+                let { default: r } = await Promise.all([n.e("77535"), n.e("47948")]).then(n.bind(n, 166247));
+                return (e) => (0, i.jsx)(r, { renderModalProps: e, dismissibleContent: t, markAsDismissed: o });
+            },
+            { modalKey: "ReverseTrialUpsellModal" },
+        );
 }
 function A() {
     let e = d.default.getCurrentUser();

@@ -7,7 +7,7 @@ var i = n(64700),
     o = n(803306),
     l = n(326084),
     u = n(851746);
-let c = (e) => {
+function c(e) {
     let { searchQuery: t, selectedUsers: n, limit: r } = e,
         c = (0, a.bG)([u.A], () => u.A.getRecipientStatus()),
         d = (0, a.bG)([u.A], () => u.A.getReferralsRemaining()),
@@ -49,7 +49,7 @@ let c = (e) => {
         y = {
             limit: r,
             getNextRows: S,
-            getLocalReferrals: async () => {
+            getLocalReferrals: async function () {
                 let e = new Map();
                 for (let [t, n] of c)
                     if (n === l.aK.PENDING && !I.has(t)) {
@@ -70,4 +70,4 @@ let c = (e) => {
         }, [t, d]),
         { eligibleUsers: f, fetchUsers: () => S(_, r), hasError: g, isFetching: E, resendUsers: I }
     );
-};
+}

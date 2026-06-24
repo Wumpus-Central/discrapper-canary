@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(775602),
     l = n(242874),
     u = n(788868);
-let c = (e, t) => {
+function c(e, t) {
     let i;
     switch (e) {
         case u.o2.SNOWGLOBE:
@@ -341,7 +341,7 @@ let c = (e, t) => {
             i = () => Promise.resolve("Error: Invalid giftStyle");
     }
     return i;
-};
+}
 function d(e) {
     let { giftStyle: t, className: n, shouldAnimate: l = !0, defaultAnimationState: d, idleAnimationState: _ } = e,
         h = u.o2.hasOwnProperty(t) ? t : u.o2.STANDARD_BOX,

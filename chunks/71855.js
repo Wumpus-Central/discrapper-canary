@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { LI: () => g, cq: () => T, m2: () => m, v5: () => S });
+n.d(t, { LI: () => g, cq: () => S, m2: () => m, v5: () => y });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -23,9 +23,12 @@ function g(e) {
     return t ? 16 : 24;
 }
 function A(e) {
-    e.stopPropagation();
+    return f.Ay.maximize(e);
 }
 function I(e) {
+    e.stopPropagation();
+}
+function T(e) {
     let { windowKey: t, showDivider: n } = e,
         r = (0, i.jsx)(o.D, {
             className: a()(E.R6, E.d1),
@@ -36,7 +39,7 @@ function I(e) {
         }),
         s = (0, i.jsx)(o.D, {
             className: a()(E.R6, E.T0),
-            onClick: () => f.Ay.maximize(t),
+            onClick: () => A(t),
             "aria-label": p.intl.string(p.t.G1u0hK),
             tabIndex: -1,
             children: (0, i.jsx)(d.A, {}),
@@ -50,27 +53,27 @@ function I(e) {
         });
     return (0, i.jsxs)("div", { className: a()(E.kU, { [E.Fx]: n }), children: [l, s, r] });
 }
-function T(e) {
+function S(e) {
     let { leading: t, title: n, trailing: s, windowKey: o, className: l } = e,
         u = (0, h.getPlatform)(),
-        c = r.useCallback(() => f.Ay.maximize(o), [o]),
+        c = r.useCallback(() => A(o), [o]),
         d = u === h.PlatformTypes.WINDOWS || u === h.PlatformTypes.LINUX;
     return (0, i.jsxs)("div", {
         className: a()(E.M0, l),
         onDoubleClick: c,
         "data-window-chrome": "true",
         children: [
-            (0, i.jsx)("div", { className: E.R4, onDoubleClick: A, children: t }),
+            (0, i.jsx)("div", { className: E.R4, onDoubleClick: I, children: t }),
             (0, i.jsx)("div", { className: E.DD, children: n }),
             (0, i.jsxs)("div", {
                 className: E.ZY,
-                onDoubleClick: A,
-                children: [s, d && (0, i.jsx)(I, { windowKey: o, showDivider: null != s })],
+                onDoubleClick: I,
+                children: [s, d && (0, i.jsx)(T, { windowKey: o, showDivider: null != s })],
             }),
         ],
     });
 }
-function S(e) {
+function y(e) {
     let { fixed: t = !1, show: n, windowKey: s, isLayerOpen: o } = e,
         c = (0, h.getPlatform)(),
         d = r.useCallback(() => {
@@ -78,16 +81,16 @@ function S(e) {
         }, []),
         _ = r.useCallback(() => {
             let e = u.A.getLastShowTimestamp();
-            (null != e && Date.now() - e < 1e3) || f.Ay.maximize(s);
+            (null != e && Date.now() - e < 1e3) || A(s);
         }, [s]),
-        p = c === h.PlatformTypes.WINDOWS;
+        f = c === h.PlatformTypes.WINDOWS;
     if (c === h.PlatformTypes.WEB) return null;
-    let m = p || c === h.PlatformTypes.LINUX;
+    let p = f || c === h.PlatformTypes.LINUX;
     return (0, i.jsx)("div", {
         className: a()(E.M0, E.bN, { [E.Zu]: t, [E.WU]: n, [E.dS]: o }),
         onClick: d,
         onDoubleClick: _,
         children:
-            m && (0, i.jsx)("div", { className: E.ZY, onDoubleClick: A, children: (0, i.jsx)(I, { windowKey: s }) }),
+            p && (0, i.jsx)("div", { className: E.ZY, onDoubleClick: I, children: (0, i.jsx)(T, { windowKey: s }) }),
     });
 }

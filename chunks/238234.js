@@ -423,7 +423,7 @@ function ej() {
                             n.e("90241"),
                             n.e("37271"),
                             n.e("49993"),
-                            n.e("65813"),
+                            n.e("80731"),
                             n.e("68268"),
                             n.e("6788"),
                             n.e("57016"),
@@ -722,7 +722,7 @@ function eD(e) {
                             type: "text",
                             value: o,
                             onChange: (e) =>
-                                ((e) => {
+                                (function (e) {
                                     let t = e.replace(/\xb0/g, "").trim();
                                     if ("" === t) return void u("");
                                     let s = parseInt(t, 10);
@@ -794,7 +794,7 @@ function eU(e) {
                             type: "text",
                             value: r,
                             onChange: (e) =>
-                                ((e) => {
+                                (function (e) {
                                     let t = e.replace(/%/g, "").trim();
                                     if ("" === t) return void o("");
                                     let s = parseInt(t, 10);
@@ -862,24 +862,25 @@ function eL(e) {
         f = i.useCallback(() => {
             a(!1);
         }, []),
-        T = s && !o,
-        A = () =>
-            (0, l.jsx)(h.$, {
-                buttonRef: m,
-                variant: "secondary",
-                onClick: x,
-                onMouseEnter: () => u(!0),
-                onMouseLeave: () => u(!1),
-                icon: n
-                    ? { type: "icon", asset: E.j }
-                    : {
-                          type: "rive",
-                          asset: j.m,
-                          riveProps: { dataBinding: { fill: S.A.colors.ICON_STRONG }, eventTargetRef: m },
-                      },
-                text: ec.intl.string(eu.default.c9MBEH),
-                fullWidth: !0,
-            });
+        T = s && !o;
+    function A() {
+        return (0, l.jsx)(h.$, {
+            buttonRef: m,
+            variant: "secondary",
+            onClick: x,
+            onMouseEnter: () => u(!0),
+            onMouseLeave: () => u(!1),
+            icon: n
+                ? { type: "icon", asset: E.j }
+                : {
+                      type: "rive",
+                      asset: j.m,
+                      riveProps: { dataBinding: { fill: S.A.colors.ICON_STRONG }, eventTargetRef: m },
+                  },
+            text: ec.intl.string(eu.default.c9MBEH),
+            fullWidth: !0,
+        });
+    }
     return n
         ? A()
         : (0, l.jsx)(c.u, {
@@ -934,18 +935,18 @@ function eV(e) {
         i = (0, k.L)(ek.PremiumTypes.TIER_2),
         a = (0, J.St)("custom_themes_editor_footer"),
         o = s?.from === M.xv.SHARE_MESSAGE;
+    function c() {
+        (0, L.S8)(),
+            (0, B.uk)(),
+            (0, _.Dr)(u.M.CUSTOM_THEME_COACHMARK),
+            s?.from === M.xv.SETTING
+                ? ((0, H.openUserSettings)(I.X.APPEARANCE_THEME_CATEGORY), (0, M.Jp)())
+                : s?.from === M.xv.CLIENT_THEMES_EDITOR
+                  ? (0, M.nf)(M.HP.CLIENT_THEMES)
+                  : (0, M.Jp)();
+    }
     (0, B.wb)(i, v.A.CUSTOM_THEMES_EDITOR);
-    let c = () => {
-            (0, L.S8)(),
-                (0, B.uk)(),
-                (0, _.Dr)(u.M.CUSTOM_THEME_COACHMARK),
-                s?.from === M.xv.SETTING
-                    ? ((0, H.openUserSettings)(I.X.APPEARANCE_THEME_CATEGORY), (0, M.Jp)())
-                    : s?.from === M.xv.CLIENT_THEMES_EDITOR
-                      ? (0, M.nf)(M.HP.CLIENT_THEMES)
-                      : (0, M.Jp)();
-        },
-        d = r()(ey.xQ, { [ey.NI]: !i }),
+    let d = r()(ey.xQ, { [ey.NI]: !i }),
         m = (0, l.jsx)(b.A, {
             subscriptionTier: ek.pe.TIER_2,
             defaultTextOverride: ec.intl.string(ec.t.pj0XBN),
@@ -1040,20 +1041,20 @@ function e$(e) {
         k = (0, o.bG)([O.A], () => O.A.theme),
         y = (0, _.JZ)(u.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         { analyticsLocations: I } = (0, N.Ay)(v.A.CUSTOM_THEMES_EDITOR),
-        H = (0, o.bG)([$.A], () => $.A.getSavedCustomTheme()),
-        J = async () => {
-            (d.current = !0),
-                await (0, C.u_)({
-                    theme: k,
-                    customUserThemeSettings: { colors: m, gradientColorStops: [], gradientAngle: f, baseMix: g },
-                }),
-                (0, B.Yl)(m, g, f, k, I),
-                n?.(eb.i.TAKE_ACTION),
-                y || (0, _.Dr)(u.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
-                (0, M.Jp)(),
-                (0, R.XG)();
-        },
-        D = m.length > 0;
+        H = (0, o.bG)([$.A], () => $.A.getSavedCustomTheme());
+    async function J() {
+        (d.current = !0),
+            await (0, C.u_)({
+                theme: k,
+                customUserThemeSettings: { colors: m, gradientColorStops: [], gradientAngle: f, baseMix: g },
+            }),
+            (0, B.Yl)(m, g, f, k, I),
+            n?.(eb.i.TAKE_ACTION),
+            y || (0, _.Dr)(u.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
+            (0, M.Jp)(),
+            (0, R.XG)();
+    }
+    let D = m.length > 0;
     return (
         i.useEffect(
             () => () => {
@@ -1134,7 +1135,7 @@ function e$(e) {
                                     (0, l.jsx)(eL, { isCoachmark: s, isMobile: a }),
                                     (0, l.jsx)(h.$, {
                                         variant: "secondary",
-                                        onClick: () => {
+                                        onClick: function () {
                                             r(W.RESET_BUTTON), (0, B.G_)();
                                         },
                                         disabled: c,

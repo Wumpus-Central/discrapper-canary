@@ -63,7 +63,7 @@ function E() {
             "" !== t.ctaLabel &&
                 (0, i.jsx)(h.fY, {
                     text: t.ctaLabel,
-                    onClick: () => {
+                    onClick: function () {
                         u.default.track(f.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                             notice_type: f.kqX.PREMIUM_MARKETING_NAGBAR,
                         }),

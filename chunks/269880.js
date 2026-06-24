@@ -23,19 +23,20 @@ function p() {
             theme: c.A.theme,
             useSystemTheme: d.Ay.useSystemTheme,
             useForcedColors: o.Ay.useForcedColors,
-        })),
-        E = (r, o) =>
-            (0, i.jsx)(s.iD, {
-                id: r,
-                group: "input-modes",
-                label: o,
-                disabled: p,
-                checked: n === _.Q_.ON ? "system" === r : r === t,
-                action: () => {
-                    (0, u.X8)({ isPersisted: !0, analyticsLocations: e, themeName: `default ${r}` }),
-                        (0, a.u_)({ theme: r });
-                },
-            });
+        }));
+    function E(r, o) {
+        return (0, i.jsx)(s.iD, {
+            id: r,
+            group: "input-modes",
+            label: o,
+            disabled: p,
+            checked: n === _.Q_.ON ? "system" === r : r === t,
+            action: () => {
+                (0, u.X8)({ isPersisted: !0, analyticsLocations: e, themeName: `default ${r}` }),
+                    (0, a.u_)({ theme: r });
+            },
+        });
+    }
     return [
         (0, i.jsxs)(
             s.rX,

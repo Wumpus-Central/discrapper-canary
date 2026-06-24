@@ -9,7 +9,7 @@ var r = n(462887),
     l = n(725807),
     u = n(145310),
     c = n(943386);
-let d = (e) => {
+let d = function (e) {
     let {
             textOptions: t,
             subscriptionTier: n,

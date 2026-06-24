@@ -25,9 +25,13 @@ let c = 5,
     h = s.A.Millis.DAY,
     f = 12,
     p = a.A.getArticleURL(o.MVz.PREMIUM_GROUP_ABOUT),
-    E = [o.Dmq.CANCELED, o.Dmq.PAUSED, o.Dmq.PAST_DUE, o.Dmq.ACCOUNT_HOLD, o.Dmq.BILLING_RETRY],
-    m = () => u.intl.string(l.default.aFBQ3d),
-    g = () => u.intl.string(u.t.jI66M4);
+    E = [o.Dmq.CANCELED, o.Dmq.PAUSED, o.Dmq.PAST_DUE, o.Dmq.ACCOUNT_HOLD, o.Dmq.BILLING_RETRY];
+function m() {
+    return u.intl.string(l.default.aFBQ3d);
+}
+function g() {
+    return u.intl.string(u.t.jI66M4);
+}
 var A =
         (((i = {}).UNKNOWN = "UNKNOWN"),
         (i.FETCHING = "FETCHING"),

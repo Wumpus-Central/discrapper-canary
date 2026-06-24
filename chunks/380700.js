@@ -60,40 +60,40 @@ var G = n(873263),
     et = n(59520),
     en = n(174459),
     es = n(652215);
-let el = (e, t, n, s) => {
-        let { scrollTop: l = 0, scrollOffset: a = 0, scrollHeight: i = 0, scrollWidth: r = 0 } = s;
-        if (i > 0) {
-            let s = (l + a) / i;
-            s > 0 &&
-                en.default.track(e, {
-                    scroll_visible_percent: s,
-                    source: n,
-                    page_height: Math.round(i),
-                    page_width: Math.round(r),
-                    page_session_id: t,
-                });
-        }
-    },
-    ea = (e, t) => {
-        let { analyticsSource: n } = (0, O.lC)(t),
-            s = (0, et.I)(el, 5e3, [], { trailing: !0 }),
-            l = (0, v.uM)(),
-            a = l?.sessionId;
-        return {
-            handleScroll: d.useCallback(() => {
-                if (null != e.current) {
-                    let t = e.current.getScrollerNode();
-                    null != t &&
-                        s(es.HAw.COLLECTIBLES_SHOP_SCROLLED, null != a ? a : "", n, {
-                            scrollTop: t.scrollTop,
-                            scrollOffset: t.offsetHeight,
-                            scrollHeight: t.scrollHeight,
-                            scrollWidth: t.scrollWidth,
-                        });
-                }
-            }, [s, n, a, e]),
-        };
+function el(e, t, n, s) {
+    let { scrollTop: l = 0, scrollOffset: a = 0, scrollHeight: i = 0, scrollWidth: r = 0 } = s;
+    if (i > 0) {
+        let s = (l + a) / i;
+        s > 0 &&
+            en.default.track(e, {
+                scroll_visible_percent: s,
+                source: n,
+                page_height: Math.round(i),
+                page_width: Math.round(r),
+                page_session_id: t,
+            });
+    }
+}
+let ea = (e, t) => {
+    let { analyticsSource: n } = (0, O.lC)(t),
+        s = (0, et.I)(el, 5e3, [], { trailing: !0 }),
+        l = (0, v.uM)(),
+        a = l?.sessionId;
+    return {
+        handleScroll: d.useCallback(() => {
+            if (null != e.current) {
+                let t = e.current.getScrollerNode();
+                null != t &&
+                    s(es.HAw.COLLECTIBLES_SHOP_SCROLLED, null != a ? a : "", n, {
+                        scrollTop: t.scrollTop,
+                        scrollOffset: t.offsetHeight,
+                        scrollHeight: t.scrollHeight,
+                        scrollWidth: t.scrollWidth,
+                    });
+            }
+        }, [s, n, a, e]),
     };
+};
 var ei = n(354328),
     er = n(356118),
     eo = n(619835),

@@ -1,21 +1,27 @@
-l.d(r, { A: () => S });
-var s = l(627968),
-    t = l(64700),
-    a = l(503698),
-    n = l.n(a),
-    i = l(900797),
-    o = l(847374),
-    d = l(939249),
-    c = l(652215),
-    m = l(445740);
-let u = (e) => (0, s.jsx)("div", { className: e.className, children: e.children }),
-    h = (e) => (0, s.jsx)("div", { className: e.className, children: e.children }),
-    N = (e) => (0, s.jsx)("div", { className: e.className, children: e.children });
-class p extends t.PureComponent {
-    static SortDirection = c.tSW;
+t.d(r, { A: () => S });
+var l = t(627968),
+    s = t(64700),
+    a = t(503698),
+    n = t.n(a),
+    i = t(900797),
+    o = t(847374),
+    c = t(939249),
+    d = t(652215),
+    u = t(445740);
+function m(e) {
+    return (0, l.jsx)("div", { className: e.className, children: e.children });
+}
+function h(e) {
+    return (0, l.jsx)("div", { className: e.className, children: e.children });
+}
+function N(e) {
+    return (0, l.jsx)("div", { className: e.className, children: e.children });
+}
+class p extends s.PureComponent {
+    static SortDirection = d.tSW;
     static defaultProps = {
-        initialSortDirection: c.tSW.ASCENDING,
-        rowHeaderComponent: u,
+        initialSortDirection: d.tSW.ASCENDING,
+        rowHeaderComponent: m,
         rowComponent: h,
         cellComponent: N,
         hasHeader: !0,
@@ -26,95 +32,95 @@ class p extends t.PureComponent {
         return null != e.sort && !1 !== e.sort;
     }
     getDefaultSort(e) {
-        return (r, l) => {
-            let s = r[e],
-                t = l[e];
-            return null != s && null != t ? (s === t ? 0 : s < t ? -1 : 1) : 0;
+        return (r, t) => {
+            let l = r[e],
+                s = t[e];
+            return null != l && null != s ? (l === s ? 0 : l < s ? -1 : 1) : 0;
         };
     }
     handleSort = (e) => {
-        let { sortKey: r, sortDirection: l, onSort: s } = this.props;
-        null != s && s(e, r === e && l === c.tSW.ASCENDING ? c.tSW.DESCENDING : c.tSW.ASCENDING);
+        let { sortKey: r, sortDirection: t, onSort: l } = this.props;
+        null != l && l(e, r === e && t === d.tSW.ASCENDING ? d.tSW.DESCENDING : d.tSW.ASCENDING);
     };
     renderHeader() {
         let {
                 columns: e,
                 data: r,
-                sortDirection: l,
-                sortKey: t,
+                sortDirection: t,
+                sortKey: s,
                 headerCellClassName: a,
                 headerClassName: h,
                 sortedHeaderCellClassName: N,
                 stickyHeader: p,
             } = this.props,
             S = e.map((e) => {
-                let u = null != e.renderHeader ? e.renderHeader(e, r) : e.key,
-                    h = l === c.tSW.ASCENDING ? i.t : o.a;
-                return (0, s.jsx)(
-                    d.D,
+                let m = null != e.renderHeader ? e.renderHeader(e, r) : e.key,
+                    h = t === d.tSW.ASCENDING ? i.t : o.a;
+                return (0, l.jsx)(
+                    c.D,
                     {
-                        className: n()(m.e4, a, e.headerCellClassName, e.cellClassName, t === e.key && N, {
-                            [m.vk]: this.isSortable(e),
+                        className: n()(u.e4, a, e.headerCellClassName, e.cellClassName, s === e.key && N, {
+                            [u.vk]: this.isSortable(e),
                         }),
                         onClick: this.isSortable(e) ? () => this.handleSort(e.key) : void 0,
-                        children: (0, s.jsxs)("div", {
-                            className: m.PZ,
+                        children: (0, l.jsxs)("div", {
+                            className: u.PZ,
                             children: [
-                                u,
-                                this.isSortable(e) && t === e.key ? (0, s.jsx)(h, { className: m.GM }) : null,
+                                m,
+                                this.isSortable(e) && s === e.key ? (0, l.jsx)(h, { className: u.GM }) : null,
                             ],
                         }),
                     },
                     e.key,
                 );
             });
-        return (0, s.jsx)(u, { className: n()(h, m.nM, { [m.ln]: p }), children: S });
+        return (0, l.jsx)(m, { className: n()(h, u.nM, { [u.ln]: p }), children: S });
     }
     renderBody() {
         let {
                 columns: e,
                 data: r,
-                sortData: l,
-                sortKey: s,
+                sortData: t,
+                sortKey: l,
                 sortDirection: a,
                 bodyCellClassName: i,
                 rowClassName: o,
-                cellProps: d,
-                rowProps: u,
+                cellProps: c,
+                rowProps: m,
                 rowComponent: h,
                 cellComponent: N,
             } = this.props,
             p = r;
-        if (l) {
-            let l =
-                    null != s
+        if (t) {
+            let t =
+                    null != l
                         ? e.find((e) => {
                               let { key: r } = e;
-                              return r === s;
+                              return r === l;
                           })
                         : null,
-                t = [...r],
-                n = null != l && l.sort,
+                s = [...r],
+                n = null != t && t.sort,
                 i =
-                    null != l && null != s && this.isSortable(l)
-                        ? t.sort("function" == typeof n ? (e, r) => n(e, r, a) : this.getDefaultSort(s))
-                        : t;
-            p = null != l && a === c.tSW.DESCENDING ? i.reverse() : i;
+                    null != t && null != l && this.isSortable(t)
+                        ? s.sort("function" == typeof n ? (e, r) => n(e, r, a) : this.getDefaultSort(l))
+                        : s;
+            p = null != t && a === d.tSW.DESCENDING ? i.reverse() : i;
         }
-        return p.map((r, l) => {
-            let s = e.map((e) =>
-                (0, t.createElement)(
+        return p.map((r, t) => {
+            let l = e.map((e) =>
+                (0, s.createElement)(
                     N,
-                    { ...d, key: e.key, item: r, className: n()(i, e.bodyCellClassName, e.cellClassName) },
-                    null != e.render ? e.render(r, d, l) : r[e.key],
+                    { ...c, key: e.key, item: r, className: n()(i, e.bodyCellClassName, e.cellClassName) },
+                    null != e.render ? e.render(r, c, t) : r[e.key],
                 ),
             );
-            return (0, t.createElement)(h, { ...u, key: r.key, item: r, className: n()(m.nM, o) }, s);
+            return (0, s.createElement)(h, { ...m, key: r.key, item: r, className: n()(u.nM, o) }, l);
         });
     }
     render() {
         let { className: e, hasHeader: r } = this.props;
-        return (0, s.jsxs)("div", { className: e, children: [r ? this.renderHeader() : null, this.renderBody()] });
+        return (0, l.jsxs)("div", { className: e, children: [r ? this.renderHeader() : null, this.renderBody()] });
     }
 }
 let S = p;

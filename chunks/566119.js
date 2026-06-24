@@ -5,12 +5,12 @@ var i = n(174459),
 function s(e, t) {
     i.default.track(r.HAw.PREMIUM_TENURE_REWARDS_ORBS_CTA_CLICKED, { cta_type: e, program_state: t });
 }
-let a = () => {
-        s("balance_popover_upsell");
-    },
-    o = () => {
-        s("balance_popover_next_drop");
-    },
-    l = () => {
-        s("balance_popover_helpdesk");
-    };
+function a() {
+    s("balance_popover_upsell");
+}
+function o() {
+    s("balance_popover_next_drop");
+}
+function l() {
+    s("balance_popover_helpdesk");
+}

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { l: () => eM, A: () => eP }), n(321073);
+n.d(t, { l: () => ew, A: () => eM }), n(321073);
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -159,19 +159,19 @@ function eS() {
     return (0, f.M)(e) ? eT : eI;
 }
 function ey(e) {
-    let { description: t, onLearnMore: n, renderVisual: r } = e,
-        s = ew();
+    let { description: t, onLearnMore: n, renderVisual: s } = e,
+        o = r.useContext(eL).isPremiumRebrand;
     return (0, i.jsxs)("div", {
-        className: a()(ep.Kw, { [ep.u0]: s }),
+        className: a()(ep.Kw, { [ep.u0]: o }),
         children: [
             (0, i.jsxs)("div", {
-                className: a()(ep.p3, { [ep.u0]: s }),
+                className: a()(ep.p3, { [ep.u0]: o }),
                 children: [
                     (0, i.jsx)(E.E, { variant: "text-md/normal", children: t }),
                     (0, i.jsx)(m.Q, { onClick: n, text: eu.intl.string(eu.t.hvVgAZ) }),
                 ],
             }),
-            (0, i.jsx)("div", { className: a()(ep.aS, { [ep.u0]: s }), children: r() }),
+            (0, i.jsx)("div", { className: a()(ep.aS, { [ep.u0]: o }), children: s() }),
         ],
     });
 }
@@ -243,7 +243,7 @@ function eN(e) {
                   })),
         (0, i.jsx)(ey, {
             description: u ? eu.intl.format(eu.t.xCaYwE, {}) : eu.intl.format(eu.t["gpqr+n"], {}),
-            onLearnMore: () => {
+            onLearnMore: function () {
                 s(),
                     l ? (0, B.openUserProfileModal)({ userId: n.id }) : (0, K.openUserSettings)(W.X.PROFILE_PANEL),
                     Z.default.track(ef.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, {
@@ -276,7 +276,7 @@ function ev(e) {
     }
     return (0, i.jsx)(ey, {
         description: eu.intl.format(E, { time: p }),
-        onLearnMore: () => {
+        onLearnMore: function () {
             n(),
                 (0, es.D)({ analyticsLocations: s, displayProfile: null }),
                 Z.default.track(ef.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "badges" });
@@ -300,7 +300,7 @@ function eR(e) {
         o = t === eh.PremiumTypes.TIER_1;
     return (0, i.jsx)(ey, {
         description: o ? eu.intl.format(eu.t.couiKJ, {}) : eu.intl.format(eu.t["0hUHi6"], {}),
-        onLearnMore: () => {
+        onLearnMore: function () {
             window.open(Q.A.getArticleURL(ef.MVz.PREMIUM_DETAILS)),
                 Z.default.track(ef.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "emojis_stickers" });
         },
@@ -361,7 +361,7 @@ function eO(e) {
         _ = eS().boostItemVisual;
     return (0, i.jsx)(ey, {
         description: t === eh.PremiumTypes.TIER_1 ? eu.intl.format(eu.t.K4Hv69, {}) : eu.intl.format(eu.t.wRxEDW, {}),
-        onLearnMore: () => {
+        onLearnMore: function () {
             n(),
                 (0, K.openUserSettings)(W.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
                 Z.default.track(ef.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "boosts" });
@@ -404,32 +404,31 @@ function eO(e) {
                 : (0, i.jsx)("img", { alt: "", src: _ }),
     });
 }
-let eb = () => {
+function eb() {
     let e = eS().screenShareItemVisual;
     return (0, i.jsx)(ey, {
         description: eu.intl.format(eu.t.wK04T1, {}),
-        onLearnMore: () => {
+        onLearnMore: function () {
             window.open(Q.A.getArticleURL(ef.MVz.STREAM_QUALITY_SETTINGS)),
                 Z.default.track(ef.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "screen_share" });
         },
         renderVisual: () => (0, i.jsx)("img", { alt: "", src: e }),
     });
-};
+}
 function eD(e) {
     let { premiumType: t } = e,
         n = eS().uploadsMessagesItemVisual;
     return (0, i.jsx)(ey, {
         description: t === eh.PremiumTypes.TIER_2 ? eu.intl.format(eu.t.GsOFRJ, {}) : eu.intl.format(eu.t.wFWO6D, {}),
-        onLearnMore: () => {
+        onLearnMore: function () {
             window.open(Q.A.getArticleURL(ef.MVz.PREMIUM_DETAILS)),
                 Z.default.track(ef.HAw.PREMIUM_UNCANCEL_WINBACK_CTA_CLICKED, { action: "msgs_uploads" });
         },
         renderVisual: () => (0, i.jsx)("img", { alt: "", src: n }),
     });
 }
-let eL = r.createContext({ isPremiumRebrand: !1 }),
-    ew = () => r.useContext(eL).isPremiumRebrand;
-function eM(e) {
+let eL = r.createContext({ isPremiumRebrand: !1 });
+function ew(e) {
     let { currentUser: t, premiumType: n, onClose: s, isDowngrade: o = !1, isPremiumRebrand: l = !1 } = e,
         u = r.useMemo(() => {
             let e = [];
@@ -478,7 +477,7 @@ function eM(e) {
         }),
     });
 }
-let eP = function (e) {
+let eM = function (e) {
     let {
             premiumType: t,
             titleText: n,
@@ -538,7 +537,7 @@ let eP = function (e) {
                                   className: I,
                                   children: [A, (0, i.jsx)(E.E, { variant: "text-md/normal", children: s })],
                               }),
-                              (0, i.jsx)(eM, { currentUser: T, premiumType: t, onClose: o, isDowngrade: g }),
+                              (0, i.jsx)(ew, { currentUser: T, premiumType: t, onClose: o, isDowngrade: g }),
                           ],
                       }),
                   }),

@@ -1,41 +1,38 @@
 i.d(a, { A: () => A }), i(321073);
 var l,
     s = i(627968),
-    E = i(64700),
-    n = i(189213),
+    n = i(64700),
+    E = i(189213),
     c = i(82002),
-    r =
-        (((l = r || {}).UPGRADE = "UPGRADE"),
+    t =
+        (((l = t || {}).UPGRADE = "UPGRADE"),
         (l.CANCEL = "CANCEL"),
         (l.UNVERIFIED = "UNVERIFIED"),
         (l.UNCLAIMED = "UNCLAIMED"),
         (l.GRANDFATHERED = "GRANDFATHERED"),
         l);
-let t = {
-        UPGRADE: "imageUpgrade",
-        CANCEL: "imageCancel",
-        UNVERIFIED: "imageUnverified",
-        UNCLAIMED: "imageUnclaimed",
-        GRANDFATHERED: "imageCancel",
-    },
-    C = (e) => {
-        let { children: a, premiumModalType: i, primary: l, secondary: r, ...C } = e,
-            A = E.useMemo(() => {
-                let e = [];
-                return (
-                    null != r && e.push({ variant: "secondary", text: r.label, onClick: r.onClick }),
-                    null != l && e.push({ variant: "primary", text: l.label, onClick: l.onClick }),
-                    e
-                );
-            }, [l, r]);
-        return (0, s.jsxs)(n.Modal, {
-            ...C,
-            actions: A,
-            children: [
-                (0, s.jsx)("div", { className: c[t[i]] }),
-                (0, s.jsx)("div", { className: c.message, children: a }),
-            ],
-        });
-    };
-C.Types = r;
+let r = {
+    UPGRADE: "imageUpgrade",
+    CANCEL: "imageCancel",
+    UNVERIFIED: "imageUnverified",
+    UNCLAIMED: "imageUnclaimed",
+    GRANDFATHERED: "imageCancel",
+};
+function C(e) {
+    let { children: a, premiumModalType: i, primary: l, secondary: t, ...C } = e,
+        A = n.useMemo(() => {
+            let e = [];
+            return (
+                null != t && e.push({ variant: "secondary", text: t.label, onClick: t.onClick }),
+                null != l && e.push({ variant: "primary", text: l.label, onClick: l.onClick }),
+                e
+            );
+        }, [l, t]);
+    return (0, s.jsxs)(E.Modal, {
+        ...C,
+        actions: A,
+        children: [(0, s.jsx)("div", { className: c[r[i]] }), (0, s.jsx)("div", { className: c.message, children: a })],
+    });
+}
+C.Types = t;
 let A = C;

@@ -280,7 +280,7 @@ function K(e) {
         ],
     });
 }
-let z = (e) => {
+function z(e) {
     let { tag: t, applicationId: i, widgetType: n, showEditingControls: s = !1, ref: a } = e,
         { trackUserProfileEditAction: r } = (0, j.NJ)(),
         c = U(t);
@@ -297,7 +297,7 @@ let z = (e) => {
                     text: M.intl.string(M.t.Otv9fP),
                     ariaHidden: !0,
                     children: (0, l.jsx)(o.D, {
-                        onClick: () => {
+                        onClick: function () {
                             (0, N.tg)(n, i, t), r({ action: "TAG_REMOVED", widgetEdited: n, gameId: i });
                         },
                         className: B.DT,
@@ -307,7 +307,7 @@ let z = (e) => {
                 }),
         ],
     });
-};
+}
 function Y(e) {
     let { numberOfOverflowingTags: t } = e;
     return (0, l.jsx)(d.E, { variant: "text-xxs/medium", color: "none", children: `+${t}` });
@@ -525,63 +525,60 @@ function er(e) {
         G = k && !b,
         { registerDragHandleRef: L } = (0, v.r)();
     if (C) return (0, l.jsx)(S.E, {});
-    let w = () =>
-            (0, l.jsx)(_.A, {
-                coverRef: f,
-                className: null == j || d ? void 0 : $.iL,
-                imageSrc: j,
-                gameName: O,
-                applicationId: I,
-                userId: t.id,
-                disableInteraction: d,
-                hideTooltip: !0,
-            }),
-        P = () =>
-            (0, l.jsxs)("div", {
-                ref: p,
-                className: r()(ee.Nr, x),
-                children: [
-                    G
-                        ? (0, l.jsxs)("div", {
-                              className: ee.An,
-                              children: [w(), (0, l.jsx)(T.jV, { buttonRef: L(a.applicationId), className: ee.BU })],
-                          })
-                        : w(),
-                    (0, l.jsxs)("div", {
-                        className: ee.zH,
-                        children: [
-                            d
-                                ? (0, l.jsx)(c.D, { ...R, children: O })
-                                : (0, l.jsx)(ei, { applicationId: I, userId: t.id, gameName: O, ...R }),
-                            D
-                                ? (0, l.jsx)(ea, {
-                                      text: A,
-                                      user: t,
-                                      guildId: i,
-                                      channelId: n,
-                                      widgetType: o,
-                                      applicationId: I,
-                                  })
-                                : (0, l.jsx)(es, { text: A, user: t, guildId: i, channelId: n }),
-                            (0, l.jsx)(K, {
-                                tags: h,
-                                allowEditing: u,
-                                widgetType: o,
-                                applicationId: I,
-                                disableInteraction: d,
-                                className: ee._A,
-                            }),
-                        ],
-                    }),
-                    k &&
-                        (0, l.jsx)(Z.A, {
-                            game: a,
+    function w() {
+        return (0, l.jsx)(_.A, {
+            coverRef: f,
+            className: null == j || d ? void 0 : $.iL,
+            imageSrc: j,
+            gameName: O,
+            applicationId: I,
+            userId: t.id,
+            disableInteraction: d,
+            hideTooltip: !0,
+        });
+    }
+    function P() {
+        return (0, l.jsxs)("div", {
+            ref: p,
+            className: r()(ee.Nr, x),
+            children: [
+                G
+                    ? (0, l.jsxs)("div", {
+                          className: ee.An,
+                          children: [w(), (0, l.jsx)(T.jV, { buttonRef: L(a.applicationId), className: ee.BU })],
+                      })
+                    : w(),
+                (0, l.jsxs)("div", {
+                    className: ee.zH,
+                    children: [
+                        d
+                            ? (0, l.jsx)(c.D, { ...R, children: O })
+                            : (0, l.jsx)(ei, { applicationId: I, userId: t.id, gameName: O, ...R }),
+                        D
+                            ? (0, l.jsx)(ea, {
+                                  text: A,
+                                  user: t,
+                                  guildId: i,
+                                  channelId: n,
+                                  widgetType: o,
+                                  applicationId: I,
+                              })
+                            : (0, l.jsx)(es, { text: A, user: t, guildId: i, channelId: n }),
+                        (0, l.jsx)(K, {
+                            tags: h,
+                            allowEditing: u,
                             widgetType: o,
-                            className: ee.vS,
-                            onRemove: () => m?.(a.applicationId),
+                            applicationId: I,
+                            disableInteraction: d,
+                            className: ee._A,
                         }),
-                ],
-            });
+                    ],
+                }),
+                k &&
+                    (0, l.jsx)(Z.A, { game: a, widgetType: o, className: ee.vS, onRemove: () => m?.(a.applicationId) }),
+            ],
+        });
+    }
     return G
         ? (0, l.jsx)(et, {
               index: g ?? 0,

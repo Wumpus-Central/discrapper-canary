@@ -14,7 +14,7 @@ var r = n(554146),
     h = n(49999),
     f = n(375708),
     p = n(201682);
-let E = (e) => {
+function E(e) {
     let { targetElementRef: t, body: n = f.intl.string(f.t.IqPvOn) } = e,
         [E, m] = (0, c.kn)([r.M.PREMIUM_WISHLIST_COACHMARK]);
     return E !== r.M.PREMIUM_WISHLIST_COACHMARK
@@ -43,4 +43,4 @@ let E = (e) => {
               ],
               onRequestClose: () => m(h.i.USER_DISMISS),
           });
-};
+}

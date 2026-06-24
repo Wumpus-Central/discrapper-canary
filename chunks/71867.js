@@ -11,7 +11,7 @@ var l = n(627968),
     d = n(262427),
     m = n(139286),
     h = n(432029);
-let p = (e) => {
+function p(e) {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e;
     (0, m.A)({
         type: u.ImpressionTypes.VIEW,
@@ -20,7 +20,7 @@ let p = (e) => {
     });
     let i = (0, l.jsx)(c._, { src: n.assetUrl, width: 48, height: 48, zoomable: !1 });
     return (0, l.jsx)(d.J, { className: h.No, customGraphic: i, text: n.body });
-};
+}
 var f = n(503698),
     g = n.n(f),
     E = n(462887),
@@ -573,7 +573,7 @@ let y = (e) => {
 var T = n(778712),
     N = n(375708),
     j = n(577454);
-let b = (e) => {
+let b = function (e) {
     let { className: t } = e,
         n = (0, S.A)(),
         { avatarSrc: i, eventHandlers: s } = (0, I.A)({ userId: n?.id, size: T._3.SIZE_32, animateOnHover: !0 }),

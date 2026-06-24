@@ -3,7 +3,7 @@ var i = n(627968),
     r = n(192308),
     l = n(174459),
     a = n(652215);
-let s = (e) => {
+function s(e) {
     let { analyticsLocations: t, displayProfile: s, location: o } = e;
     null == o && (o = t[t.length - 1]),
         l.default.track(a.HAw.OPEN_MODAL, {
@@ -18,4 +18,4 @@ let s = (e) => {
             );
             return (t) => (0, i.jsx)(e, { ...t, displayProfile: s });
         });
-};
+}

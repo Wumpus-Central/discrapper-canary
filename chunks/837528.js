@@ -32,8 +32,8 @@ var i = n(627968),
     p = n(594061),
     A = n(734057),
     x = n(580745),
-    E = n(232835),
-    f = n(287809),
+    f = n(232835),
+    E = n(287809),
     I = n(174459),
     C = n(625494),
     v = n(723702),
@@ -49,7 +49,7 @@ function y(e, t, n) {
 function S(e, t, n) {
     return l.useCallback(
         (i) => {
-            let l = f.default.getUser(e);
+            let l = E.default.getUser(e);
             if (null == l) return;
             if ((i.preventDefault(), i.stopPropagation(), !i.shiftKey)) return void n();
             let s = `@${_.Ay.getUserTag(l, { decoration: "never" })}`,
@@ -108,7 +108,7 @@ function U(e, t, s, o) {
             }
             if (null != e.currentTarget.contains && !e.currentTarget.contains(e.target)) return;
             let l = A.A.getChannel(d),
-                r = E.A.getMessage(d, u),
+                r = f.A.getMessage(d, u),
                 c = x.A.isEditing(d, u);
             null == l ||
                 null == r ||
@@ -247,7 +247,7 @@ function U(e, t, s, o) {
 function G(e, t) {
     return l.useCallback(
         (n) => {
-            let i = f.default.getUser(e),
+            let i = E.default.getUser(e),
                 l = A.A.getChannel(t);
             null != i && null != l && (n.stopPropagation(), (0, j.wQ)(n, i, l));
         },
@@ -257,7 +257,7 @@ function G(e, t) {
 function w(e, t, n) {
     return l.useCallback(
         (i) => {
-            let l = f.default.getUser(e),
+            let l = E.default.getUser(e),
                 s = A.A.getChannel(t);
             null != l &&
                 null != s &&
@@ -269,7 +269,7 @@ function w(e, t, n) {
 function B(e, t) {
     return l.useCallback(
         (n) => {
-            let i = f.default.getUser(e),
+            let i = E.default.getUser(e),
                 l = A.A.getChannel(t);
             null != i && null != l && (n.stopPropagation(), (0, j.pB)(n, i, l.guild_id));
         },
@@ -326,25 +326,23 @@ function F(e, t) {
 function Y(e, t, n) {
     return l.useCallback(() => {
         let { messageReference: i } = e,
-            l = t.message,
-            s = () => {
-                let t = e.mediaMention;
-                o.A.jumpToMessage({
-                    channelId: i.channel_id,
-                    messageId: i.message_id,
-                    flash: !0,
-                    returnMessageId: e.id,
-                    onJumpComplete:
-                        null != t
-                            ? () => {
-                                  C._.dispatchKeyed(g.zOV.CLIP_SEEK_VIDEO, t.attachment_id, {
-                                      timestampMs: t.timestamp,
-                                  });
-                              }
-                            : void 0,
-                });
-            },
-            r = e.messageReference?.message_id,
+            l = t.message;
+        function s() {
+            let t = e.mediaMention;
+            o.A.jumpToMessage({
+                channelId: i.channel_id,
+                messageId: i.message_id,
+                flash: !0,
+                returnMessageId: e.id,
+                onJumpComplete:
+                    null != t
+                        ? () => {
+                              C._.dispatchKeyed(g.zOV.CLIP_SEEK_VIDEO, t.attachment_id, { timestampMs: t.timestamp });
+                          }
+                        : void 0,
+            });
+        }
+        let r = e.messageReference?.message_id,
             a = null,
             d = null;
         if (t.state === h.a.LOADED) {

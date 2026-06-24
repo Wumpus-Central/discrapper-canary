@@ -525,169 +525,169 @@ var eS = n(735438),
     eF = n(466919),
     eV = n(539550),
     eB = n(421438);
-let eJ = (e) => {
-        let { disabled: t, invite: i, isExistingSub: s } = e;
-        return (0, l.jsx)(u.$, {
-            variant: "expressive",
-            size: "md",
-            text: R.intl.string(eF.default.rjuKse),
-            icon: eO.t,
-            onClick: () => {
-                if (null == i) return;
-                let e = i.subscription,
-                    t = i.id,
-                    a = S.default.getUser(i.primary_user);
-                if (null == a) return;
-                let r = (0, eb.$3)(a);
-                W.default.track(P.HAw.PREMIUM_GROUP_INVITE_EMBED_ACCEPT_CLICKED, { invite_id: t, subscription_id: e });
-                let o = (0, eS.uniqueId)("premium-group-accept-invite-modal"),
-                    c = !1;
-                (0, d.openModalLazy)(
-                    async () => {
-                        let { default: i } = await Promise.all([n.e("65243"), n.e("99910")]).then(n.bind(n, 826181));
-                        return (n) =>
-                            (0, l.jsx)(i, {
-                                ...n,
-                                premiumGroupSubscriptionId: e,
-                                premiumGroupInviteId: t,
-                                premiumGroupPrimaryName: r,
-                                isExistingSub: s,
-                                onClose: async () => {
-                                    c ||
-                                        ((c = !0),
-                                        eU._.dispatch(P.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
-                                        eP.A.isDisplayingWowMomentConfirmation && eP.A.isAnimated
-                                            ? setTimeout(() => {
-                                                  n.onClose();
-                                              }, ey.K)
-                                            : await n.onClose());
-                                },
-                            });
+function eJ(e) {
+    let { disabled: t, invite: i, isExistingSub: s } = e;
+    return (0, l.jsx)(u.$, {
+        variant: "expressive",
+        size: "md",
+        text: R.intl.string(eF.default.rjuKse),
+        icon: eO.t,
+        onClick: () => {
+            if (null == i) return;
+            let e = i.subscription,
+                t = i.id,
+                a = S.default.getUser(i.primary_user);
+            if (null == a) return;
+            let r = (0, eb.$3)(a);
+            W.default.track(P.HAw.PREMIUM_GROUP_INVITE_EMBED_ACCEPT_CLICKED, { invite_id: t, subscription_id: e });
+            let o = (0, eS.uniqueId)("premium-group-accept-invite-modal"),
+                c = !1;
+            (0, d.openModalLazy)(
+                async () => {
+                    let { default: i } = await Promise.all([n.e("65243"), n.e("99910")]).then(n.bind(n, 826181));
+                    return (n) =>
+                        (0, l.jsx)(i, {
+                            ...n,
+                            premiumGroupSubscriptionId: e,
+                            premiumGroupInviteId: t,
+                            premiumGroupPrimaryName: r,
+                            isExistingSub: s,
+                            onClose: async () => {
+                                c ||
+                                    ((c = !0),
+                                    eU._.dispatch(P.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                                    eP.A.isDisplayingWowMomentConfirmation && eP.A.isAnimated
+                                        ? setTimeout(() => {
+                                              n.onClose();
+                                          }, ey.K)
+                                        : await n.onClose());
+                            },
+                        });
+                },
+                {
+                    onCloseRequest: () => {
+                        c ||
+                            ((c = !0),
+                            eU._.dispatch(P.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                            eP.A.isDisplayingWowMomentConfirmation && eP.A.isAnimated
+                                ? setTimeout(() => {
+                                      (0, d.closeModal)(o);
+                                  }, ey.K)
+                                : (0, d.closeModal)(o));
                     },
-                    {
-                        onCloseRequest: () => {
-                            c ||
-                                ((c = !0),
-                                eU._.dispatch(P.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
-                                eP.A.isDisplayingWowMomentConfirmation && eP.A.isAnimated
-                                    ? setTimeout(() => {
-                                          (0, d.closeModal)(o);
-                                      }, ey.K)
-                                    : (0, d.closeModal)(o));
-                        },
-                        modalKey: o,
-                    },
-                );
-            },
-            disabled: t,
-        });
-    },
-    ez = (e) => {
-        let { disabled: t, invite: i, channel: s } = e;
-        return (0, l.jsx)(u.$, {
-            variant: "secondary",
-            size: "md",
-            text: R.intl.string(eF.default["eYHh+z"]),
-            onClick: () => {
-                if (null == i || !s.isDM())
-                    return void ek.A.captureMessage("CancelInviteButton onClick: unexpected state", {
-                        extra: {
-                            inviteIsNull: null == i,
-                            channelIsDM: s.isDM(),
-                            channelId: s.id,
-                            subscriptionGroupMemberId: i?.id,
-                            subscriptionId: i?.subscription,
-                            primaryUserId: i?.primary_user,
-                        },
-                    });
-                let e = s.getRecipientId(),
-                    t = S.default.getUser(e);
-                null != t &&
-                    (W.default.track(P.HAw.PREMIUM_GROUP_INVITE_EMBED_CANCEL_CLICKED, {
-                        invite_id: i.id,
-                        subscription_id: i.subscription,
-                        invited_user_id: e,
-                    }),
-                    (0, d.openModalLazy)(async () => {
-                        let { default: e } = await n.e("15554").then(n.bind(n, 115225));
-                        return (n) =>
-                            (0, l.jsx)(e, {
-                                ...n,
-                                subscriptionId: i.subscription,
-                                invitedUser: t,
-                                subscriptionGroupMemberId: i.id,
-                            });
-                    }));
-            },
-            disabled: t,
-        });
-    },
-    eZ = (e) => {
-        let { message: t, header: n, body: i, compact: s, actionButton: a } = e;
-        return (0, l.jsxs)(N.A, {
-            className: eV.og,
-            compact: s,
-            iconNode: (0, l.jsx)(eO.t, { size: "md", color: e_.A.colors.ICON_STRONG }),
-            children: [
-                (0, l.jsx)(y.E, { variant: "text-md/medium", color: "text-strong", children: t }),
-                (0, l.jsxs)(eR.B, {
-                    direction: "horizontal",
-                    className: eV.x,
-                    children: [
-                        (0, l.jsx)("img", { src: eB, alt: "", className: eV.Sl }),
-                        (0, l.jsxs)("div", {
-                            className: eV.Qs,
-                            children: [
-                                (0, l.jsx)(eM.E, { type: "beta", variant: "expressive" }),
-                                (0, l.jsx)("h2", { className: eV.DD, children: n }),
-                                (0, l.jsx)(y.E, { variant: "text-md/medium", color: "text-subtle", children: i }),
-                                null != a && (0, l.jsx)("div", { className: eV.UD, children: a }),
-                            ],
-                        }),
-                    ],
-                }),
-            ],
-        });
-    },
-    eK = (e) => {
-        let { message: t, channel: n, compact: i } = e,
-            s = t.premiumGroupInviteId,
-            {
-                inviteState: a,
-                isFetching: r,
-                invite: o,
-                currentUser: d,
-                premiumSubscription: u,
-            } = (0, c.cf)(
-                [eG.A, S.default, eD.A],
-                () => ({
-                    inviteState: null != s ? eG.A.getInviteState(s) : ew.xI.NOT_FOUND,
-                    isFetching: null != s && eG.A.isFetching(s),
-                    invite: null != s ? eG.A.getInvite(s)?.invite : null,
-                    currentUser: S.default.getCurrentUser(),
-                    premiumSubscription: eD.A.getPremiumSubscription(),
-                }),
-                [s],
+                    modalKey: o,
+                },
             );
-        if (null == d) return null;
-        let m = t.author,
-            x = d.id === m.id;
-        if (r || a === ew.xI.FETCHING || a === ew.xI.UNKNOWN) return (0, l.jsx)(eL.Wb, { isHorizontal: !0 });
-        let h = (0, eH.o1)({ sender: m, channel: n, isSender: x, inviteState: a });
-        if (null == h) return null;
-        let g = a === ew.xI.PENDING,
-            f = null;
-        return (
-            (f = x
-                ? g
-                    ? (0, l.jsx)(ez, { disabled: !1, invite: o, channel: n })
-                    : a === ew.xI.REMOVED
-                      ? (0, l.jsx)(ez, { disabled: !0, invite: o, channel: n })
-                      : null
-                : (0, l.jsx)(eJ, { disabled: !g, invite: o, isExistingSub: null != u })),
-            (0, l.jsx)(eZ, { message: h.message, header: h.header, body: h.body, compact: i, actionButton: f })
+        },
+        disabled: t,
+    });
+}
+function ez(e) {
+    let { disabled: t, invite: i, channel: s } = e;
+    return (0, l.jsx)(u.$, {
+        variant: "secondary",
+        size: "md",
+        text: R.intl.string(eF.default["eYHh+z"]),
+        onClick: () => {
+            if (null == i || !s.isDM())
+                return void ek.A.captureMessage("CancelInviteButton onClick: unexpected state", {
+                    extra: {
+                        inviteIsNull: null == i,
+                        channelIsDM: s.isDM(),
+                        channelId: s.id,
+                        subscriptionGroupMemberId: i?.id,
+                        subscriptionId: i?.subscription,
+                        primaryUserId: i?.primary_user,
+                    },
+                });
+            let e = s.getRecipientId(),
+                t = S.default.getUser(e);
+            null != t &&
+                (W.default.track(P.HAw.PREMIUM_GROUP_INVITE_EMBED_CANCEL_CLICKED, {
+                    invite_id: i.id,
+                    subscription_id: i.subscription,
+                    invited_user_id: e,
+                }),
+                (0, d.openModalLazy)(async () => {
+                    let { default: e } = await n.e("15554").then(n.bind(n, 115225));
+                    return (n) =>
+                        (0, l.jsx)(e, {
+                            ...n,
+                            subscriptionId: i.subscription,
+                            invitedUser: t,
+                            subscriptionGroupMemberId: i.id,
+                        });
+                }));
+        },
+        disabled: t,
+    });
+}
+function eZ(e) {
+    let { message: t, header: n, body: i, compact: s, actionButton: a } = e;
+    return (0, l.jsxs)(N.A, {
+        className: eV.og,
+        compact: s,
+        iconNode: (0, l.jsx)(eO.t, { size: "md", color: e_.A.colors.ICON_STRONG }),
+        children: [
+            (0, l.jsx)(y.E, { variant: "text-md/medium", color: "text-strong", children: t }),
+            (0, l.jsxs)(eR.B, {
+                direction: "horizontal",
+                className: eV.x,
+                children: [
+                    (0, l.jsx)("img", { src: eB, alt: "", className: eV.Sl }),
+                    (0, l.jsxs)("div", {
+                        className: eV.Qs,
+                        children: [
+                            (0, l.jsx)(eM.E, { type: "beta", variant: "expressive" }),
+                            (0, l.jsx)("h2", { className: eV.DD, children: n }),
+                            (0, l.jsx)(y.E, { variant: "text-md/medium", color: "text-subtle", children: i }),
+                            null != a && (0, l.jsx)("div", { className: eV.UD, children: a }),
+                        ],
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+let eK = function (e) {
+    let { message: t, channel: n, compact: i } = e,
+        s = t.premiumGroupInviteId,
+        {
+            inviteState: a,
+            isFetching: r,
+            invite: o,
+            currentUser: d,
+            premiumSubscription: u,
+        } = (0, c.cf)(
+            [eG.A, S.default, eD.A],
+            () => ({
+                inviteState: null != s ? eG.A.getInviteState(s) : ew.xI.NOT_FOUND,
+                isFetching: null != s && eG.A.isFetching(s),
+                invite: null != s ? eG.A.getInvite(s)?.invite : null,
+                currentUser: S.default.getCurrentUser(),
+                premiumSubscription: eD.A.getPremiumSubscription(),
+            }),
+            [s],
         );
-    };
+    if (null == d) return null;
+    let m = t.author,
+        x = d.id === m.id;
+    if (r || a === ew.xI.FETCHING || a === ew.xI.UNKNOWN) return (0, l.jsx)(eL.Wb, { isHorizontal: !0 });
+    let h = (0, eH.o1)({ sender: m, channel: n, isSender: x, inviteState: a });
+    if (null == h) return null;
+    let g = a === ew.xI.PENDING,
+        f = null;
+    return (
+        (f = x
+            ? g
+                ? (0, l.jsx)(ez, { disabled: !1, invite: o, channel: n })
+                : a === ew.xI.REMOVED
+                  ? (0, l.jsx)(ez, { disabled: !0, invite: o, channel: n })
+                  : null
+            : (0, l.jsx)(eJ, { disabled: !g, invite: o, isExistingSub: null != u })),
+        (0, l.jsx)(eZ, { message: h.message, header: h.header, body: h.body, compact: i, actionButton: f })
+    );
+};
 var eX = n(989349),
     eW = n.n(eX),
     eQ = n(607399),
@@ -848,7 +848,7 @@ class tn extends a.Component {
                 disabled: !1,
                 size: "md",
                 onClick: () =>
-                    ((e) => {
+                    (function (e) {
                         let { analyticsLocations: t, startingScreen: i } = e;
                         W.default.track(P.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: t }),
                             (0, d.openModalLazy)(async () => {
@@ -1287,7 +1287,7 @@ function t2(e) {
                             text: _(),
                             icon: tJ.o,
                             "aria-label": _(),
-                            onClick: (e) => {
+                            onClick: function (e) {
                                 e.stopPropagation();
                                 let n = tK.A.getUserAffinity(i.id);
                                 W.default.track(P.HAw.GIFT_INTENT_ACTION_BUTTON_CLICKED, {

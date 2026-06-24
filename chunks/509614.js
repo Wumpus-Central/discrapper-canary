@@ -5,7 +5,7 @@ var i,
     a = n(284009),
     l = n.n(a),
     o = n(688810),
-    c = n(197510),
+    c = n(171835),
     u = n(937008),
     d = n(811656),
     m = n(428262),
@@ -19,10 +19,10 @@ var i,
     I = n(469778),
     E = n(174459),
     b = n(580630),
-    j = n(501957),
-    A = (((i = {})[(i.CONFIRM = 1)] = "CONFIRM"), (i[(i.SUCCESS = 2)] = "SUCCESS"), i),
-    T = n(788868),
-    f = n(652215),
+    f = n(501957),
+    j = (((i = {})[(i.CONFIRM = 1)] = "CONFIRM"), (i[(i.SUCCESS = 2)] = "SUCCESS"), i),
+    A = n(788868),
+    T = n(652215),
     M = n(375708),
     v = n(977544);
 let P = (t) => {
@@ -39,24 +39,24 @@ let P = (t) => {
         d = (0, C.bG)([x.default], () => x.default.locale),
         P = new Date(o.subscriptionPeriodStart);
     a.isBoostOnly || (P = m.Ay.extendDateWithUnconsumedFractionalPremium(P, c.unactivatedUnits));
-    let R = (0, C.bG)([I.A], () => I.A.getForApplication(T.tv)),
+    let R = (0, C.bG)([I.A], () => I.A.getForApplication(A.tv)),
         k = (0, b.$g)(l.total, l.currency),
         [U, _] = (0, s.useState)(!1),
         [F, w] = (0, s.useState)(!1),
         O = P.toLocaleDateString(d, { month: "long", day: "numeric", year: "numeric" }),
         N = s.useMemo(() => (0, h.A)(), []);
+    async function D() {
+        _(!0), w(!1);
+        try {
+            await y.Ir(a, e), u(j.SUCCESS);
+        } catch (t) {
+            w(!0), _(!1);
+        }
+    }
     s.useEffect(() => {
-        E.default.track(f.HAw.PREMIUM_RESUBSCRIBE_FLOW_STARTED, { location_stack: e, load_id: N, ...(0, j.j)(a) });
+        E.default.track(T.HAw.PREMIUM_RESUBSCRIBE_FLOW_STARTED, { location_stack: e, load_id: N, ...(0, f.j)(a) });
     }, [e, a, N]);
-    let D = async () => {
-            _(!0), w(!1);
-            try {
-                await y.Ir(a, e), u(A.SUCCESS);
-            } catch (t) {
-                w(!0), _(!1);
-            }
-        },
-        G = [{ text: M.intl.string(M.t["cY+Oob"]), onClick: () => D(), variant: "primary", loading: U, disabled: U }],
+    let G = [{ text: M.intl.string(M.t["cY+Oob"]), onClick: () => D(), variant: "primary", loading: U, disabled: U }],
         W = M.intl.format(M.t.dbGGui, { price: k, date: O }),
         L = a.premiumPlanIdFromItems;
     if (m.Ay.hasUnconsumedGiftForSubscriptionPlan(R, L)) {
@@ -106,55 +106,55 @@ function O(t) {
 }
 function N(t) {
     let { onClose: e } = t;
-    return (0, r.jsx)(F.Ay, { planId: T.gD.PREMIUM_MONTH_TIER_0, onClose: e });
+    return (0, r.jsx)(F.Ay, { planId: A.gD.PREMIUM_MONTH_TIER_0, onClose: e });
 }
-let D = (t) => {
-        let { transitionState: e, onClose: n, premiumType: i } = t,
-            s = i === T.PremiumTypes.TIER_0;
-        return (0, r.jsxs)(R.EO, {
-            "data-migration-pending": !0,
-            className: w.z,
-            transitionState: e,
-            parentComponent: "ResubscribeSuccessStep",
-            children: [
-                (0, r.jsx)(k.A, { onClose: n, upgradeToPremiumType: i }),
-                (0, r.jsx)(R.$m, { "data-migration-pending": !0, children: (0, r.jsx)(s ? N : O, { onClose: n }) }),
-            ],
-        });
-    },
-    G = [],
-    W = [],
-    L = (t) => {
-        let { analyticsLocations: e, premiumSubscription: n } = t,
-            i = (0, m.EL)(n)?.planId,
-            a = null != i ? (0, m.m6)(i) : null;
-        l()(null != a, "Should not be resubscribing Nitro without premiumType");
-        let p = a === T.PremiumTypes.TIER_0,
-            [S, C] = s.useState(A.CONFIRM),
-            g = s.useCallback(() => {
-                switch (S) {
-                    case A.CONFIRM:
-                        return (0, r.jsx)(P, { ...t, setStep: C });
-                    case A.SUCCESS:
-                        return (0, r.jsx)(D, { ...t, premiumType: a });
-                    default:
-                        return (0, r.jsx)(P, { ...t, setStep: C });
-                }
-            }, [S, t, a]);
-        return (0, r.jsx)(o.f5, {
-            value: e,
-            children: (0, r.jsx)(c.M, {
-                activeSubscription: n,
-                stepConfigs: G,
-                skuIDs: W,
-                children: (0, r.jsx)(u.Mq, {
-                    children: (0, r.jsx)(d.A, {
-                        isConfirmationStep: S === A.SUCCESS,
-                        isEligibleForWowMoment: !p,
-                        shouldPrefetchWowMoment: !p,
-                        children: g(),
-                    }),
+function D(t) {
+    let { transitionState: e, onClose: n, premiumType: i } = t,
+        s = i === A.PremiumTypes.TIER_0;
+    return (0, r.jsxs)(R.EO, {
+        "data-migration-pending": !0,
+        className: w.z,
+        transitionState: e,
+        parentComponent: "ResubscribeSuccessStep",
+        children: [
+            (0, r.jsx)(k.A, { onClose: n, upgradeToPremiumType: i }),
+            (0, r.jsx)(R.$m, { "data-migration-pending": !0, children: (0, r.jsx)(s ? N : O, { onClose: n }) }),
+        ],
+    });
+}
+let G = [],
+    W = [];
+function L(t) {
+    let { analyticsLocations: e, premiumSubscription: n } = t,
+        i = (0, m.EL)(n)?.planId,
+        a = null != i ? (0, m.m6)(i) : null;
+    l()(null != a, "Should not be resubscribing Nitro without premiumType");
+    let p = a === A.PremiumTypes.TIER_0,
+        [S, C] = s.useState(j.CONFIRM),
+        g = s.useCallback(() => {
+            switch (S) {
+                case j.CONFIRM:
+                    return (0, r.jsx)(P, { ...t, setStep: C });
+                case j.SUCCESS:
+                    return (0, r.jsx)(D, { ...t, premiumType: a });
+                default:
+                    return (0, r.jsx)(P, { ...t, setStep: C });
+            }
+        }, [S, t, a]);
+    return (0, r.jsx)(o.f5, {
+        value: e,
+        children: (0, r.jsx)(c.M, {
+            activeSubscription: n,
+            stepConfigs: G,
+            skuIDs: W,
+            children: (0, r.jsx)(u.Mq, {
+                children: (0, r.jsx)(d.A, {
+                    isConfirmationStep: S === j.SUCCESS,
+                    isEligibleForWowMoment: !p,
+                    shouldPrefetchWowMoment: !p,
+                    children: g(),
                 }),
             }),
-        });
-    };
+        }),
+    });
+}

@@ -44,20 +44,20 @@ function A(e) {
                 : { disableTrack: !1, trackOnInitialLoad: !1 },
         n = arguments.length > 2 ? arguments[2] : void 0,
         r = i.useRef(void 0),
-        a = i.useRef(void 0),
-        l = () => {
-            let i = !s()(r.current, e);
-            i && (r.current = e);
-            let l = !s()(a.current, n);
-            if ((l && (a.current = n), !i && !l)) return;
-            let u = { ...e, sequenceId: o()("impression_") };
-            return (
-                g(u, t.disableTrack),
-                () => {
-                    null != u && (0, E.u5)(u);
-                }
-            );
-        };
+        a = i.useRef(void 0);
+    function l() {
+        let i = !s()(r.current, e);
+        i && (r.current = e);
+        let l = !s()(a.current, n);
+        if ((l && (a.current = n), !i && !l)) return;
+        let u = { ...e, sequenceId: o()("impression_") };
+        return (
+            g(u, t.disableTrack),
+            () => {
+                null != u && (0, E.u5)(u);
+            }
+        );
+    }
     (0, c.Ay)(() => {
         if (t.trackOnInitialLoad) return l();
     }),

@@ -135,7 +135,7 @@ let V = function (e) {
               children: [
                   (0, i.jsx)(U.In, { children: (0, G.rn)(a, Number(s.discount.amount), (0, k.hm)(s)) }),
                   (0, i.jsx)(U.fY, {
-                      onClick: () => {
+                      onClick: function () {
                           (0, M.A)({
                               subscriptionTier: n,
                               analyticsLocations: r,

@@ -5,8 +5,8 @@ var a = l(627968),
     n = l(17928),
     d = l(990078),
     c = l(939249),
-    r = l(834730),
-    o = l(885574),
+    o = l(834730),
+    r = l(885574),
     u = l(364522),
     m = l(793574),
     x = l(548118),
@@ -33,14 +33,14 @@ function v(t) {
             (0, a.jsxs)("div", {
                 className: _.OA,
                 children: [
-                    (0, a.jsx)(r.E, {
+                    (0, a.jsx)(o.E, {
                         className: _.J5,
                         variant: "text-md/medium",
                         color: "text-subtle",
                         children: i.name,
                     }),
                     null != e &&
-                        (0, a.jsx)(r.E, {
+                        (0, a.jsx)(o.E, {
                             variant: "text-sm/normal",
                             color: "text-subtle",
                             children: C.intl.formatToPlainString(C.t.zRl6XR, { count: e }),
@@ -74,10 +74,10 @@ function I(t) {
                 });
             },
             [n, l],
-        ),
-        I = async () => {
-            await n();
-        };
+        );
+    async function I() {
+        await n();
+    }
     return (0, a.jsxs)(s.Modal, {
         transitionState: c,
         onClose: I,
@@ -88,11 +88,11 @@ function I(t) {
             (0, a.jsxs)("div", {
                 className: _.fA,
                 children: [
-                    (0, a.jsx)(r.E, { variant: "text-sm/semibold", children: C.intl.string(b.default["4MInNs"]) }),
+                    (0, a.jsx)(o.E, { variant: "text-sm/semibold", children: C.intl.string(b.default["4MInNs"]) }),
                     (0, a.jsx)(d.m, {
                         position: "top",
                         text: C.intl.string(b.default.OdTfpx),
-                        children: (0, a.jsx)(o.m, { size: "xs", className: _.G }),
+                        children: (0, a.jsx)(r.m, { size: "xs", className: _.G }),
                     }),
                 ],
             }),

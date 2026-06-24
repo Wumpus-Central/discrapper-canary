@@ -340,7 +340,7 @@ function ep(e) {
 var eE = n(315629),
     em = n(65470),
     eg = n(797221);
-let eA = (e) => {
+let eA = function (e) {
     let { className: t, location: n, analyticsLocation: i } = e,
         { analyticsLocations: r } = (0, E.Ay)(n);
     return (0, s.jsx)(E.f5, {
@@ -442,99 +442,96 @@ function eQ() {
 }
 var eJ = n(212737),
     e0 = n(849812);
-let e1 = (e) => {
-        let { startingScreen: t, analyticsLocations: i } = e;
-        C.default.track(W.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: i }),
-            (0, M.openModalLazy)(async () => {
-                let { default: e } = await Promise.resolve().then(n.bind(n, 212737));
-                return (n) => (0, s.jsx)(e, { ...n, startingScreen: t });
-            });
-    },
-    e2 = (e) => {
-        let { user: t } = e,
-            { avatarSrc: n, eventHandlers: i } = (0, e$.A)({ userId: t.id, size: eH._3.SIZE_24 });
-        return (0, s.jsx)(
-            eY.eu,
-            { className: e0.bj, src: n, "aria-label": (0, ez.mG)(t), size: eH._3.SIZE_24, ...i },
-            t.id,
-        );
-    },
-    e3 = (e) => {
-        let { slotIndex: t } = e;
-        return (0, s.jsx)("div", { className: e0.p, children: t });
-    },
-    e6 = (e) => {
-        let { referralSentUsers: t, className: n } = e;
-        return (0, s.jsx)("div", {
-            className: l()(e0.L$, n),
-            children: (() => {
-                let e = [];
-                for (let n = 0; n < eX.Z; n++)
-                    if (t?.[n] !== void 0) {
-                        let i = (0, s.jsx)(e2, { user: t[n] }, t[n].id);
-                        e.push(i);
-                    } else {
-                        let t = (0, s.jsx)(e3, { slotIndex: n + 1 }, n);
-                        e.push(t);
-                    }
-                return e;
-            })(),
+function e1(e) {
+    let { startingScreen: t, analyticsLocations: i } = e;
+    C.default.track(W.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: i }),
+        (0, M.openModalLazy)(async () => {
+            let { default: e } = await Promise.resolve().then(n.bind(n, 212737));
+            return (n) => (0, s.jsx)(e, { ...n, startingScreen: t });
         });
-    },
-    e4 = (e) => {
-        let { nReferralsSent: t, imageSize: n = 93, backgroundClassName: i, ringClassName: r } = e;
-        return (0, s.jsx)(eW.a, {
-            percent: 33.3 * t,
-            colorOverride: "#53ac66",
-            background: i ?? e0.cq,
-            strokeSize: 0.8,
-            ringColorOverrideClassName: r ?? e0.e0,
-            overlayClassName: t === eX.Z ? e0.ys : void 0,
-            children: (0, s.jsx)(eK._, {
-                src: "https://cdn.discordapp.com/assets/content/f55a25cc26b81c0d72e110bb7fd978e6aff78e847f53b34011ba4600be592975.svg",
-                height: n,
-                width: n,
-                zoomable: !1,
+}
+function e2(e) {
+    let { user: t } = e,
+        { avatarSrc: n, eventHandlers: i } = (0, e$.A)({ userId: t.id, size: eH._3.SIZE_24 });
+    return (0, s.jsx)(
+        eY.eu,
+        { className: e0.bj, src: n, "aria-label": (0, ez.mG)(t), size: eH._3.SIZE_24, ...i },
+        t.id,
+    );
+}
+function e3(e) {
+    let { slotIndex: t } = e;
+    return (0, s.jsx)("div", { className: e0.p, children: t });
+}
+function e6(e) {
+    let { referralSentUsers: t, className: n } = e;
+    return (0, s.jsx)("div", {
+        className: l()(e0.L$, n),
+        children: (function () {
+            let e = [];
+            for (let n = 0; n < eX.Z; n++)
+                if (t?.[n] !== void 0) {
+                    let i = (0, s.jsx)(e2, { user: t[n] }, t[n].id);
+                    e.push(i);
+                } else {
+                    let t = (0, s.jsx)(e3, { slotIndex: n + 1 }, n);
+                    e.push(t);
+                }
+            return e;
+        })(),
+    });
+}
+function e4(e) {
+    let { nReferralsSent: t, imageSize: n = 93, backgroundClassName: i, ringClassName: r } = e;
+    return (0, s.jsx)(eW.a, {
+        percent: 33.3 * t,
+        colorOverride: "#53ac66",
+        background: i ?? e0.cq,
+        strokeSize: 0.8,
+        ringColorOverrideClassName: r ?? e0.e0,
+        overlayClassName: t === eX.Z ? e0.ys : void 0,
+        children: (0, s.jsx)(eK._, {
+            src: "https://cdn.discordapp.com/assets/content/f55a25cc26b81c0d72e110bb7fd978e6aff78e847f53b34011ba4600be592975.svg",
+            height: n,
+            width: n,
+            zoomable: !1,
+        }),
+    });
+}
+function e5(e) {
+    let { className: t } = e,
+        { referralSentUsers: n, nReferralsSent: i, hasEligibleFriends: r, allSent: a, bodyText: o } = eQ();
+    return (0, s.jsxs)("div", {
+        className: l()(e0.kL, t),
+        children: [
+            (0, s.jsx)("div", { className: e0.G3, children: (0, s.jsx)(e4, { nReferralsSent: i }) }),
+            (0, s.jsxs)("div", {
+                className: e0.IH,
+                children: [
+                    (0, s.jsx)(e6, { referralSentUsers: n, className: e0.GV }),
+                    (0, s.jsxs)("div", {
+                        className: e0.n4,
+                        children: [
+                            (0, s.jsx)(D.D, {
+                                variant: "heading-lg/semibold",
+                                color: "text-strong",
+                                children: z.intl.string(z.t.USo4s7),
+                            }),
+                            (0, s.jsx)(k.E, { variant: "text-md/medium", color: "text-subtle", children: o }),
+                        ],
+                    }),
+                    (0, s.jsx)(P.$, {
+                        variant: "primary",
+                        disabled: !1 === r || !0 === a,
+                        text: z.intl.string(z.t.Lm2nFc),
+                        onClick: () =>
+                            e1({ startingScreen: eJ.SelectFriendsModalScreens.SELECT_FRIENDS, analyticsLocations: [] }),
+                    }),
+                ],
             }),
-        });
-    },
-    e5 = (e) => {
-        let { className: t } = e,
-            { referralSentUsers: n, nReferralsSent: i, hasEligibleFriends: r, allSent: a, bodyText: o } = eQ();
-        return (0, s.jsxs)("div", {
-            className: l()(e0.kL, t),
-            children: [
-                (0, s.jsx)("div", { className: e0.G3, children: (0, s.jsx)(e4, { nReferralsSent: i }) }),
-                (0, s.jsxs)("div", {
-                    className: e0.IH,
-                    children: [
-                        (0, s.jsx)(e6, { referralSentUsers: n, className: e0.GV }),
-                        (0, s.jsxs)("div", {
-                            className: e0.n4,
-                            children: [
-                                (0, s.jsx)(D.D, {
-                                    variant: "heading-lg/semibold",
-                                    color: "text-strong",
-                                    children: z.intl.string(z.t.USo4s7),
-                                }),
-                                (0, s.jsx)(k.E, { variant: "text-md/medium", color: "text-subtle", children: o }),
-                            ],
-                        }),
-                        (0, s.jsx)(P.$, {
-                            variant: "primary",
-                            disabled: !1 === r || !0 === a,
-                            text: z.intl.string(z.t.Lm2nFc),
-                            onClick: () =>
-                                e1({
-                                    startingScreen: eJ.SelectFriendsModalScreens.SELECT_FRIENDS,
-                                    analyticsLocations: [],
-                                }),
-                        }),
-                    ],
-                }),
-            ],
-        });
-    };
+        ],
+    });
+}
 var e7 = n(989349),
     e8 = n.n(e7),
     e9 = n(496431),
@@ -659,7 +656,7 @@ function to() {
 }
 var tl = n(707554),
     tu = n(218199);
-let tc = (e) => {
+let tc = function (e) {
     let { className: t, color: n = "text-strong", responsive: i = !0, children: r } = e;
     return (0, s.jsx)(tl.F, {
         forceLevel: 1,
@@ -713,7 +710,7 @@ var th = n(702841),
     tf = n(676279),
     tp = n(20458),
     tE = n(141502);
-let tm = (e) => {
+let tm = function (e) {
     let {
             containerVisibilityPercentage: t,
             flyingWumpusContainerClassName: n,
@@ -761,7 +758,7 @@ let tm = (e) => {
     });
 };
 var tg = n(43588);
-let tA = (e) => {
+let tA = function (e) {
     let { containerVisibilityPercentage: t, compact: n } = e;
     return (0, s.jsx)(tm, {
         containerVisibilityPercentage: t,
@@ -788,7 +785,7 @@ function tT() {
 }
 var tS = n(97584),
     ty = n(202241);
-let tC = (e) => {
+let tC = function (e) {
         let { containerVisibilityPercentage: t, compact: n } = e;
         return (0, s.jsx)(tm, {
             containerVisibilityPercentage: t,
@@ -806,7 +803,7 @@ let tC = (e) => {
         });
     },
     tN = {
-        [v.CL.TREATMENT_A]: (e) => {
+        [v.CL.TREATMENT_A]: function (e) {
             let {
                     className: t,
                     headingTop: n,
@@ -854,7 +851,7 @@ let tC = (e) => {
                 }),
             });
         },
-        [v.CL.TREATMENT_B]: (e) => {
+        [v.CL.TREATMENT_B]: function (e) {
             let {
                     className: t,
                     headingTop: n,
@@ -898,7 +895,7 @@ let tC = (e) => {
                 }),
             });
         },
-        [v.CL.TREATMENT_C]: (e) => {
+        [v.CL.TREATMENT_C]: function (e) {
             let {
                     className: t,
                     headingTop: n,
@@ -948,7 +945,7 @@ function tv(e) {
 var tR = n(652533),
     tO = n(447764),
     tb = n(180894);
-let tD = (e) => {
+let tD = function (e) {
     let { containerVisibilityPercentage: t } = e,
         n = (0, th.bG)([ev.Ay], () => ev.Ay.useReducedMotion);
     return (0, s.jsxs)(s.Fragment, {
@@ -987,7 +984,7 @@ let tD = (e) => {
 var tL = n(725807),
     tw = n(774774),
     tM = n(975916);
-let tP = () => {
+let tP = function () {
     let e = { section: W.JJy.REVERSE_TRIAL_BANNER };
     return (0, s.jsxs)("div", {
         className: tM.vK,
@@ -1018,467 +1015,467 @@ let tP = () => {
     });
 };
 var tx = n(18671);
-let tk = () => {
-        let e = (0, th.bG)([ev.Ay], () => ev.Ay.useReducedMotion);
-        return (0, s.jsx)(tp.A, {
-            isMotionReduced: e,
-            blurScale: 0.4,
-            starContainerClassName: tx.cI,
-            hammerContainerClassName: tx.qg,
-            keyContainerClassName: tx.h2,
-            boltContainerClassName: tx.Bz,
-            starAssetClassName: tx.ks,
-            hammerAssetClassName: tx.GY,
-            keyAssetClassName: tx.p4,
-            boltAssetClassName: tx.vy,
-        });
-    },
-    tU = (e) => {
-        let { fpEndsAt: t, className: n, buttonVisibilityRef: i } = e,
-            r = (0, N.Zb)(t);
-        return (0, s.jsx)("div", {
-            className: l()(tS.kL, n),
-            ref: i,
-            children: (0, s.jsxs)("div", {
-                className: tS.ap,
-                children: [
-                    (0, s.jsxs)(eC.B, {
-                        align: "start",
-                        gap: 32,
-                        children: [
-                            (0, s.jsx)(eF.A, { text: z.intl.string(z.t.yhldRB) }),
-                            (0, s.jsxs)(eC.B, {
-                                align: "start",
-                                gap: 12,
-                                className: tS.rG,
-                                children: [
-                                    (0, s.jsx)(tc, { children: z.intl.format(z.t.FwjP6W, { days: r }) }),
-                                    (0, s.jsx)(k.E, {
-                                        variant: "text-md/medium",
-                                        color: "text-subtle",
-                                        children: z.intl.string(z.t.Jf8KrT),
-                                    }),
-                                ],
-                            }),
-                            (0, s.jsxs)(eC.B, {
-                                direction: "horizontal",
-                                align: "center",
-                                gap: 12,
-                                children: [
-                                    (0, s.jsx)(j.A, {
-                                        size: "md",
-                                        buttonTextOverride: z.intl.string(z.t["2+luBl"]),
-                                        iconOverride: eN.t,
-                                        variantOverride: "expressive",
-                                    }),
-                                    (0, s.jsx)(P.$, {
-                                        variant: "secondary",
-                                        size: "md",
-                                        text: z.intl.string(z.t.Af7ye6),
-                                        onClick: () => (0, eD.openUserSettings)(eb.X.SUBSCRIPTIONS_PANEL),
-                                    }),
-                                ],
-                            }),
-                        ],
-                    }),
-                    (0, s.jsxs)("div", {
-                        className: tS.Hk,
-                        children: [(0, s.jsx)(eS, { alt: "", width: "100%", height: "auto" }), (0, s.jsx)(tk, {})],
-                    }),
-                ],
-            }),
-        });
-    },
-    tG = (e) => {
-        let { className: t, isEligibleForBogoPromotion: i, isInReverseTrial: r, shouldShowReferralProgressBar: a } = e,
-            {
-                headingText: o,
+let tk = function () {
+    let e = (0, th.bG)([ev.Ay], () => ev.Ay.useReducedMotion);
+    return (0, s.jsx)(tp.A, {
+        isMotionReduced: e,
+        blurScale: 0.4,
+        starContainerClassName: tx.cI,
+        hammerContainerClassName: tx.qg,
+        keyContainerClassName: tx.h2,
+        boltContainerClassName: tx.Bz,
+        starAssetClassName: tx.ks,
+        hammerAssetClassName: tx.GY,
+        keyAssetClassName: tx.p4,
+        boltAssetClassName: tx.vy,
+    });
+};
+function tU(e) {
+    let { fpEndsAt: t, className: n, buttonVisibilityRef: i } = e,
+        r = (0, N.Zb)(t);
+    return (0, s.jsx)("div", {
+        className: l()(tS.kL, n),
+        ref: i,
+        children: (0, s.jsxs)("div", {
+            className: tS.ap,
+            children: [
+                (0, s.jsxs)(eC.B, {
+                    align: "start",
+                    gap: 32,
+                    children: [
+                        (0, s.jsx)(eF.A, { text: z.intl.string(z.t.yhldRB) }),
+                        (0, s.jsxs)(eC.B, {
+                            align: "start",
+                            gap: 12,
+                            className: tS.rG,
+                            children: [
+                                (0, s.jsx)(tc, { children: z.intl.format(z.t.FwjP6W, { days: r }) }),
+                                (0, s.jsx)(k.E, {
+                                    variant: "text-md/medium",
+                                    color: "text-subtle",
+                                    children: z.intl.string(z.t.Jf8KrT),
+                                }),
+                            ],
+                        }),
+                        (0, s.jsxs)(eC.B, {
+                            direction: "horizontal",
+                            align: "center",
+                            gap: 12,
+                            children: [
+                                (0, s.jsx)(j.A, {
+                                    size: "md",
+                                    buttonTextOverride: z.intl.string(z.t["2+luBl"]),
+                                    iconOverride: eN.t,
+                                    variantOverride: "expressive",
+                                }),
+                                (0, s.jsx)(P.$, {
+                                    variant: "secondary",
+                                    size: "md",
+                                    text: z.intl.string(z.t.Af7ye6),
+                                    onClick: () => (0, eD.openUserSettings)(eb.X.SUBSCRIPTIONS_PANEL),
+                                }),
+                            ],
+                        }),
+                    ],
+                }),
+                (0, s.jsxs)("div", {
+                    className: tS.Hk,
+                    children: [(0, s.jsx)(eS, { alt: "", width: "100%", height: "auto" }), (0, s.jsx)(tk, {})],
+                }),
+            ],
+        }),
+    });
+}
+function tG(e) {
+    let { className: t, isEligibleForBogoPromotion: i, isInReverseTrial: r, shouldShowReferralProgressBar: a } = e,
+        {
+            headingText: o,
+            headingTop: u,
+            showPill: d,
+            shouldShowChurnVariant: _,
+            premiumSubscription: h,
+            userDiscountOffer: f,
+            discountedPrice: m,
+            buttonVisibilityRef: g,
+        } = tV(),
+        { treatment: A, isInNitroHomeHeaderTreatment: I } = (0, v.jy)("subscriber_home_hero"),
+        { analyticsLocations: T } = (0, E.Ay)(p.A.PREMIUM_MARKETING_HERO_CTA),
+        S = (0, eU.c)(eI.C.MARKETING_PAGE_BANNER),
+        y = null != h && h.status === W.Dmq.CANCELED,
+        C = I && !y,
+        N = null;
+    null != S && "marketingPageBanner" === S.properties.properties.oneofKind
+        ? (N = (0, s.jsx)(eV.x, {
+              componentId: S.id,
+              promotionBannerMarketingComponentFields: S.properties.properties.marketingPageBanner,
+          }))
+        : i
+          ? (N = (0, s.jsx)(eB.A, { variant: eB.c.SUBSCRIBER_HOME }))
+          : r
+            ? (N = (0, s.jsx)(tP, {}))
+            : a && !C && (N = (0, s.jsx)(e5, {}));
+    let R = (0, ek.V)(),
+        O = (0, ex.O)(),
+        D = (0, b.U9)(O, K.pe.TIER_2) ? K.pe.TIER_2 : void 0,
+        L = null != h && h.status !== W.Dmq.ACCOUNT_HOLD && h.hasAnyPremiumNitro,
+        w = (0, eO.A)(),
+        x = w.isFractionalPremiumActive && !L && null == N && !_,
+        U = (0, c.bG)([ev.Ay], () => ev.Ay.useReducedMotion),
+        { visibilityPercentageRef: G, visibilityPercentage: F } = (0, eG.U)(!U);
+    return r
+        ? (0, s.jsx)(tU, { fpEndsAt: w.currentEntitlementEndsAt, className: t, buttonVisibilityRef: g })
+        : C
+          ? (0, s.jsx)(tv, {
+                treatment: A,
+                className: t,
                 headingTop: u,
                 showPill: d,
-                shouldShowChurnVariant: _,
-                premiumSubscription: h,
-                userDiscountOffer: f,
-                discountedPrice: m,
                 buttonVisibilityRef: g,
-            } = tV(),
-            { treatment: A, isInNitroHomeHeaderTreatment: I } = (0, v.jy)("subscriber_home_hero"),
-            { analyticsLocations: T } = (0, E.Ay)(p.A.PREMIUM_MARKETING_HERO_CTA),
-            S = (0, eU.c)(eI.C.MARKETING_PAGE_BANNER),
-            y = null != h && h.status === W.Dmq.CANCELED,
-            C = I && !y,
-            N = null;
-        null != S && "marketingPageBanner" === S.properties.properties.oneofKind
-            ? (N = (0, s.jsx)(eV.x, {
-                  componentId: S.id,
-                  promotionBannerMarketingComponentFields: S.properties.properties.marketingPageBanner,
-              }))
-            : i
-              ? (N = (0, s.jsx)(eB.A, { variant: eB.c.SUBSCRIBER_HOME }))
-              : r
-                ? (N = (0, s.jsx)(tP, {}))
-                : a && !C && (N = (0, s.jsx)(e5, {}));
-        let R = (0, ek.V)(),
-            O = (0, ex.O)(),
-            D = (0, b.U9)(O, K.pe.TIER_2) ? K.pe.TIER_2 : void 0,
-            L = null != h && h.status !== W.Dmq.ACCOUNT_HOLD && h.hasAnyPremiumNitro,
-            w = (0, eO.A)(),
-            x = w.isFractionalPremiumActive && !L && null == N && !_,
-            U = (0, c.bG)([ev.Ay], () => ev.Ay.useReducedMotion),
-            { visibilityPercentageRef: G, visibilityPercentage: F } = (0, eG.U)(!U);
-        return r
-            ? (0, s.jsx)(tU, { fpEndsAt: w.currentEntitlementEndsAt, className: t, buttonVisibilityRef: g })
-            : C
-              ? (0, s.jsx)(tv, {
-                    treatment: A,
-                    className: t,
-                    headingTop: u,
-                    showPill: d,
-                    buttonVisibilityRef: g,
-                    shouldShowReferralProgressBar: a,
-                })
-              : (0, s.jsx)("div", {
-                    className: l()(tS.kL, t),
-                    "data-testid": "subscriber-nitro-home-hero-header",
-                    ref: g,
-                    children: (0, s.jsxs)("div", {
-                        className: tS.Qs,
-                        ref: G,
-                        children: [
-                            d && u,
-                            (0, s.jsxs)("div", {
-                                className: tS.N1,
-                                children: [
-                                    (0, s.jsx)(tD, { containerVisibilityPercentage: F }),
-                                    _ &&
-                                        f?.expiresAt != null &&
-                                        (0, s.jsx)(tt, { expiresAt: f.expiresAt.toISOString(), className: tS.IZ }),
-                                    (0, s.jsx)(tc, {
-                                        children:
-                                            _ && null != f
-                                                ? z.intl.format(z.t["3yZP0G"], { percent: f.discount.amount })
-                                                : o,
+                shouldShowReferralProgressBar: a,
+            })
+          : (0, s.jsx)("div", {
+                className: l()(tS.kL, t),
+                "data-testid": "subscriber-nitro-home-hero-header",
+                ref: g,
+                children: (0, s.jsxs)("div", {
+                    className: tS.Qs,
+                    ref: G,
+                    children: [
+                        d && u,
+                        (0, s.jsxs)("div", {
+                            className: tS.N1,
+                            children: [
+                                (0, s.jsx)(tD, { containerVisibilityPercentage: F }),
+                                _ &&
+                                    f?.expiresAt != null &&
+                                    (0, s.jsx)(tt, { expiresAt: f.expiresAt.toISOString(), className: tS.IZ }),
+                                (0, s.jsx)(tc, {
+                                    children:
+                                        _ && null != f
+                                            ? z.intl.format(z.t["3yZP0G"], { percent: f.discount.amount })
+                                            : o,
+                                }),
+                                _ &&
+                                    null != f &&
+                                    null != m &&
+                                    (0, s.jsx)(k.E, {
+                                        className: tS.jG,
+                                        variant: "text-sm/medium",
+                                        color: "text-strong",
+                                        children: z.intl.format(z.t["3Q4wCy"], {
+                                            discountedPrice: m,
+                                            billingPeriod: (0, ew.Ke)(f.discount.userUsageLimitInterval),
+                                            numMonths: f.discount.userUsageLimit,
+                                        }),
                                     }),
-                                    _ &&
-                                        null != f &&
-                                        null != m &&
-                                        (0, s.jsx)(k.E, {
-                                            className: tS.jG,
-                                            variant: "text-sm/medium",
-                                            color: "text-strong",
-                                            children: z.intl.format(z.t["3Q4wCy"], {
-                                                discountedPrice: m,
-                                                billingPeriod: (0, ew.Ke)(f.discount.userUsageLimitInterval),
-                                                numMonths: f.discount.userUsageLimit,
-                                            }),
-                                        }),
-                                ],
-                            }),
-                            (0, s.jsxs)("div", {
-                                className: x || _ ? tS.UJ : void 0,
-                                children: [
-                                    x &&
-                                        (0, s.jsx)(j.A, {
-                                            size: "md",
-                                            hasActivePromotion: !!i,
-                                            subscriptionTier: R?.subscription_trial?.sku_id ?? D,
-                                        }),
-                                    _ &&
-                                        null != h &&
-                                        (0, s.jsx)(P.$, {
-                                            variant: "expressive",
-                                            icon: eN.t,
-                                            size: "md",
-                                            text: z.intl.string(z.t.zrCzVB),
-                                            onClick: () => {
-                                                var e;
-                                                return (
-                                                    (e = tn.g.CONFIRM_DISCOUNT),
-                                                    void (0, M.openModalLazy)(async () => {
-                                                        let { PremiumBrandRefreshSubscriptionCancellationModal: t } =
-                                                            await Promise.all([
-                                                                n.e("23866"),
-                                                                n.e("33730"),
-                                                                n.e("90862"),
-                                                                n.e("29877"),
-                                                                n.e("90266"),
-                                                                n.e("32890"),
-                                                                n.e("16918"),
-                                                                n.e("91483"),
-                                                                n.e("66434"),
-                                                                n.e("74414"),
-                                                                n.e("4394"),
-                                                                n.e("85566"),
-                                                                n.e("4207"),
-                                                                n.e("16192"),
-                                                                n.e("71413"),
-                                                                n.e("59914"),
-                                                                n.e("82655"),
-                                                                n.e("76821"),
-                                                                n.e("67687"),
-                                                                n.e("55642"),
-                                                                n.e("59760"),
-                                                                n.e("67865"),
-                                                                n.e("75029"),
-                                                                n.e("56405"),
-                                                                n.e("22513"),
-                                                                n.e("75120"),
-                                                                n.e("25508"),
-                                                                n.e("22256"),
-                                                                n.e("17303"),
-                                                                n.e("45554"),
-                                                                n.e("36761"),
-                                                                n.e("69292"),
-                                                                n.e("32993"),
-                                                                n.e("98488"),
-                                                                n.e("31591"),
-                                                                n.e("9399"),
-                                                                n.e("4704"),
-                                                                n.e("85497"),
-                                                                n.e("91024"),
-                                                                n.e("33865"),
-                                                                n.e("42309"),
-                                                                n.e("29351"),
-                                                                n.e("43233"),
-                                                                n.e("85184"),
-                                                                n.e("22796"),
-                                                                n.e("4276"),
-                                                                n.e("50180"),
-                                                                n.e("37497"),
-                                                                n.e("60193"),
-                                                                n.e("53684"),
-                                                                n.e("89050"),
-                                                                n.e("88610"),
-                                                                n.e("33087"),
-                                                                n.e("4189"),
-                                                                n.e("6026"),
-                                                                n.e("1009"),
-                                                                n.e("33287"),
-                                                                n.e("19709"),
-                                                                n.e("67458"),
-                                                                n.e("58427"),
-                                                                n.e("20642"),
-                                                                n.e("29161"),
-                                                                n.e("98180"),
-                                                                n.e("41625"),
-                                                                n.e("7959"),
-                                                                n.e("63051"),
-                                                                n.e("60717"),
-                                                                n.e("70278"),
-                                                                n.e("59494"),
-                                                                n.e("55552"),
-                                                                n.e("16860"),
-                                                                n.e("8478"),
-                                                                n.e("47704"),
-                                                                n.e("26128"),
-                                                                n.e("11262"),
-                                                                n.e("54483"),
-                                                                n.e("33460"),
-                                                                n.e("82314"),
-                                                                n.e("41686"),
-                                                                n.e("25677"),
-                                                                n.e("85411"),
-                                                                n.e("88804"),
-                                                                n.e("13233"),
-                                                                n.e("89001"),
-                                                                n.e("54558"),
-                                                                n.e("55990"),
-                                                                n.e("73679"),
-                                                                n.e("35538"),
-                                                                n.e("73178"),
-                                                                n.e("61274"),
-                                                                n.e("41229"),
-                                                                n.e("31592"),
-                                                                n.e("28339"),
-                                                                n.e("97638"),
-                                                                n.e("22995"),
-                                                                n.e("70141"),
-                                                                n.e("1055"),
-                                                                n.e("23036"),
-                                                                n.e("3951"),
-                                                                n.e("39865"),
-                                                                n.e("50870"),
-                                                                n.e("43608"),
-                                                                n.e("29944"),
-                                                                n.e("59731"),
-                                                                n.e("40690"),
-                                                                n.e("98275"),
-                                                                n.e("72651"),
-                                                                n.e("29363"),
-                                                                n.e("88016"),
-                                                                n.e("38886"),
-                                                                n.e("84133"),
-                                                                n.e("30240"),
-                                                                n.e("510"),
-                                                                n.e("90241"),
-                                                                n.e("37271"),
-                                                                n.e("49993"),
-                                                                n.e("65813"),
-                                                                n.e("68268"),
-                                                                n.e("6788"),
-                                                                n.e("57016"),
-                                                                n.e("45826"),
-                                                                n.e("9396"),
-                                                                n.e("53075"),
-                                                                n.e("26564"),
-                                                                n.e("77529"),
-                                                                n.e("10061"),
-                                                                n.e("57766"),
-                                                                n.e("91552"),
-                                                                n.e("69213"),
-                                                                n.e("86650"),
-                                                                n.e("52196"),
-                                                                n.e("85899"),
-                                                                n.e("61322"),
-                                                                n.e("43031"),
-                                                                n.e("22656"),
-                                                                n.e("28379"),
-                                                                n.e("41737"),
-                                                                n.e("92330"),
-                                                                n.e("53233"),
-                                                                n.e("96901"),
-                                                                n.e("49645"),
-                                                                n.e("25339"),
-                                                                n.e("84454"),
-                                                                n.e("62426"),
-                                                                n.e("1887"),
-                                                                n.e("39995"),
-                                                                n.e("25568"),
-                                                                n.e("29272"),
-                                                                n.e("97391"),
-                                                                n.e("67332"),
-                                                                n.e("57114"),
-                                                                n.e("90059"),
-                                                                n.e("53552"),
-                                                                n.e("58127"),
-                                                                n.e("816"),
-                                                                n.e("43683"),
-                                                                n.e("59303"),
-                                                                n.e("31610"),
-                                                                n.e("83893"),
-                                                                n.e("56359"),
-                                                                n.e("99501"),
-                                                                n.e("85484"),
-                                                                n.e("69425"),
-                                                                n.e("16581"),
-                                                                n.e("91680"),
-                                                                n.e("57036"),
-                                                                n.e("57174"),
-                                                                n.e("86847"),
-                                                                n.e("48226"),
-                                                                n.e("88941"),
-                                                                n.e("61379"),
-                                                                n.e("25693"),
-                                                                n.e("32606"),
-                                                                n.e("28154"),
-                                                                n.e("4369"),
-                                                                n.e("34236"),
-                                                                n.e("11523"),
-                                                                n.e("10004"),
-                                                                n.e("77473"),
-                                                                n.e("53930"),
-                                                                n.e("23353"),
-                                                                n.e("18943"),
-                                                                n.e("7167"),
-                                                                n.e("62875"),
-                                                                n.e("25279"),
-                                                                n.e("39810"),
-                                                                n.e("92789"),
-                                                                n.e("57598"),
-                                                                n.e("31390"),
-                                                                n.e("37687"),
-                                                                n.e("43039"),
-                                                                n.e("26780"),
-                                                                n.e("44265"),
-                                                                n.e("48804"),
-                                                                n.e("8304"),
-                                                                n.e("84103"),
-                                                                n.e("17225"),
-                                                                n.e("30920"),
-                                                                n.e("63095"),
-                                                                n.e("70653"),
-                                                                n.e("52266"),
-                                                                n.e("53039"),
-                                                                n.e("96123"),
-                                                                n.e("92583"),
-                                                                n.e("64615"),
-                                                                n.e("31825"),
-                                                                n.e("36320"),
-                                                                n.e("97526"),
-                                                                n.e("79525"),
-                                                                n.e("82069"),
-                                                                n.e("75134"),
-                                                                n.e("1462"),
-                                                                n.e("55184"),
-                                                                n.e("74926"),
-                                                                n.e("28866"),
-                                                                n.e("50015"),
-                                                                n.e("72442"),
-                                                                n.e("54282"),
-                                                                n.e("21574"),
-                                                                n.e("90889"),
-                                                                n.e("62931"),
-                                                                n.e("18181"),
-                                                                n.e("59880"),
-                                                                n.e("14805"),
-                                                                n.e("73547"),
-                                                                n.e("99593"),
-                                                                n.e("60658"),
-                                                                n.e("55314"),
-                                                                n.e("89094"),
-                                                                n.e("6338"),
-                                                                n.e("47834"),
-                                                                n.e("47555"),
-                                                                n.e("18573"),
-                                                                n.e("29177"),
-                                                                n.e("21435"),
-                                                                n.e("61935"),
-                                                                n.e("88990"),
-                                                                n.e("21856"),
-                                                                n.e("58038"),
-                                                                n.e("32551"),
-                                                                n.e("64046"),
-                                                                n.e("43426"),
-                                                                n.e("96443"),
-                                                                n.e("65743"),
-                                                                n.e("87079"),
-                                                                n.e("88559"),
-                                                                n.e("60177"),
-                                                                n.e("25637"),
-                                                                n.e("39665"),
-                                                                n.e("23532"),
-                                                                n.e("31644"),
-                                                                n.e("89790"),
-                                                                n.e("94161"),
-                                                                n.e("13051"),
-                                                                n.e("80347"),
-                                                                n.e("10741"),
-                                                                n.e("80166"),
-                                                            ]).then(n.bind(n, 293061));
-                                                        return (n) =>
-                                                            (0, s.jsx)(t, {
-                                                                ...n,
-                                                                analyticsLocations: T,
-                                                                initialStep: e,
-                                                                premiumSubscription: h,
-                                                            });
-                                                    })
-                                                );
-                                            },
-                                        }),
-                                    (0, s.jsx)(em.A, {
-                                        variant: x || _ ? "secondary" : "expressive",
+                            ],
+                        }),
+                        (0, s.jsxs)("div", {
+                            className: x || _ ? tS.UJ : void 0,
+                            children: [
+                                x &&
+                                    (0, s.jsx)(j.A, {
                                         size: "md",
-                                        buttonTextOverride: z.intl.string(z.t["3KomGa"]),
+                                        hasActivePromotion: !!i,
+                                        subscriptionTier: R?.subscription_trial?.sku_id ?? D,
                                     }),
-                                ],
-                            }),
-                            N,
-                        ],
-                    }),
-                });
-    },
-    [tF, tV] = (0, eL.A)(),
-    tB = (e) => {
+                                _ &&
+                                    null != h &&
+                                    (0, s.jsx)(P.$, {
+                                        variant: "expressive",
+                                        icon: eN.t,
+                                        size: "md",
+                                        text: z.intl.string(z.t.zrCzVB),
+                                        onClick: () => {
+                                            var e;
+                                            return (
+                                                (e = tn.g.CONFIRM_DISCOUNT),
+                                                void (0, M.openModalLazy)(async () => {
+                                                    let { PremiumBrandRefreshSubscriptionCancellationModal: t } =
+                                                        await Promise.all([
+                                                            n.e("23866"),
+                                                            n.e("33730"),
+                                                            n.e("90862"),
+                                                            n.e("29877"),
+                                                            n.e("90266"),
+                                                            n.e("32890"),
+                                                            n.e("16918"),
+                                                            n.e("91483"),
+                                                            n.e("66434"),
+                                                            n.e("74414"),
+                                                            n.e("4394"),
+                                                            n.e("85566"),
+                                                            n.e("4207"),
+                                                            n.e("16192"),
+                                                            n.e("71413"),
+                                                            n.e("59914"),
+                                                            n.e("82655"),
+                                                            n.e("76821"),
+                                                            n.e("67687"),
+                                                            n.e("55642"),
+                                                            n.e("59760"),
+                                                            n.e("67865"),
+                                                            n.e("75029"),
+                                                            n.e("56405"),
+                                                            n.e("22513"),
+                                                            n.e("75120"),
+                                                            n.e("25508"),
+                                                            n.e("22256"),
+                                                            n.e("17303"),
+                                                            n.e("45554"),
+                                                            n.e("36761"),
+                                                            n.e("69292"),
+                                                            n.e("32993"),
+                                                            n.e("98488"),
+                                                            n.e("31591"),
+                                                            n.e("9399"),
+                                                            n.e("4704"),
+                                                            n.e("85497"),
+                                                            n.e("91024"),
+                                                            n.e("33865"),
+                                                            n.e("42309"),
+                                                            n.e("29351"),
+                                                            n.e("43233"),
+                                                            n.e("85184"),
+                                                            n.e("22796"),
+                                                            n.e("4276"),
+                                                            n.e("50180"),
+                                                            n.e("37497"),
+                                                            n.e("60193"),
+                                                            n.e("53684"),
+                                                            n.e("89050"),
+                                                            n.e("88610"),
+                                                            n.e("33087"),
+                                                            n.e("4189"),
+                                                            n.e("6026"),
+                                                            n.e("1009"),
+                                                            n.e("33287"),
+                                                            n.e("19709"),
+                                                            n.e("67458"),
+                                                            n.e("58427"),
+                                                            n.e("20642"),
+                                                            n.e("29161"),
+                                                            n.e("98180"),
+                                                            n.e("41625"),
+                                                            n.e("7959"),
+                                                            n.e("63051"),
+                                                            n.e("60717"),
+                                                            n.e("70278"),
+                                                            n.e("59494"),
+                                                            n.e("55552"),
+                                                            n.e("16860"),
+                                                            n.e("8478"),
+                                                            n.e("47704"),
+                                                            n.e("26128"),
+                                                            n.e("11262"),
+                                                            n.e("54483"),
+                                                            n.e("33460"),
+                                                            n.e("82314"),
+                                                            n.e("41686"),
+                                                            n.e("25677"),
+                                                            n.e("85411"),
+                                                            n.e("88804"),
+                                                            n.e("13233"),
+                                                            n.e("89001"),
+                                                            n.e("54558"),
+                                                            n.e("55990"),
+                                                            n.e("73679"),
+                                                            n.e("35538"),
+                                                            n.e("73178"),
+                                                            n.e("61274"),
+                                                            n.e("41229"),
+                                                            n.e("31592"),
+                                                            n.e("28339"),
+                                                            n.e("97638"),
+                                                            n.e("22995"),
+                                                            n.e("70141"),
+                                                            n.e("1055"),
+                                                            n.e("23036"),
+                                                            n.e("3951"),
+                                                            n.e("39865"),
+                                                            n.e("50870"),
+                                                            n.e("43608"),
+                                                            n.e("29944"),
+                                                            n.e("59731"),
+                                                            n.e("40690"),
+                                                            n.e("98275"),
+                                                            n.e("72651"),
+                                                            n.e("29363"),
+                                                            n.e("88016"),
+                                                            n.e("38886"),
+                                                            n.e("84133"),
+                                                            n.e("30240"),
+                                                            n.e("510"),
+                                                            n.e("90241"),
+                                                            n.e("37271"),
+                                                            n.e("49993"),
+                                                            n.e("80731"),
+                                                            n.e("68268"),
+                                                            n.e("6788"),
+                                                            n.e("57016"),
+                                                            n.e("45826"),
+                                                            n.e("9396"),
+                                                            n.e("53075"),
+                                                            n.e("26564"),
+                                                            n.e("77529"),
+                                                            n.e("10061"),
+                                                            n.e("57766"),
+                                                            n.e("91552"),
+                                                            n.e("69213"),
+                                                            n.e("86650"),
+                                                            n.e("52196"),
+                                                            n.e("85899"),
+                                                            n.e("61322"),
+                                                            n.e("43031"),
+                                                            n.e("22656"),
+                                                            n.e("28379"),
+                                                            n.e("41737"),
+                                                            n.e("92330"),
+                                                            n.e("53233"),
+                                                            n.e("96901"),
+                                                            n.e("49645"),
+                                                            n.e("25339"),
+                                                            n.e("84454"),
+                                                            n.e("62426"),
+                                                            n.e("1887"),
+                                                            n.e("39995"),
+                                                            n.e("25568"),
+                                                            n.e("29272"),
+                                                            n.e("97391"),
+                                                            n.e("67332"),
+                                                            n.e("57114"),
+                                                            n.e("90059"),
+                                                            n.e("53552"),
+                                                            n.e("58127"),
+                                                            n.e("816"),
+                                                            n.e("43683"),
+                                                            n.e("59303"),
+                                                            n.e("31610"),
+                                                            n.e("83893"),
+                                                            n.e("56359"),
+                                                            n.e("99501"),
+                                                            n.e("85484"),
+                                                            n.e("69425"),
+                                                            n.e("16581"),
+                                                            n.e("91680"),
+                                                            n.e("57036"),
+                                                            n.e("57174"),
+                                                            n.e("86847"),
+                                                            n.e("48226"),
+                                                            n.e("88941"),
+                                                            n.e("61379"),
+                                                            n.e("25693"),
+                                                            n.e("32606"),
+                                                            n.e("28154"),
+                                                            n.e("4369"),
+                                                            n.e("34236"),
+                                                            n.e("11523"),
+                                                            n.e("10004"),
+                                                            n.e("77473"),
+                                                            n.e("53930"),
+                                                            n.e("23353"),
+                                                            n.e("18943"),
+                                                            n.e("7167"),
+                                                            n.e("62875"),
+                                                            n.e("25279"),
+                                                            n.e("39810"),
+                                                            n.e("92789"),
+                                                            n.e("57598"),
+                                                            n.e("31390"),
+                                                            n.e("37687"),
+                                                            n.e("43039"),
+                                                            n.e("26780"),
+                                                            n.e("44265"),
+                                                            n.e("48804"),
+                                                            n.e("8304"),
+                                                            n.e("84103"),
+                                                            n.e("17225"),
+                                                            n.e("30920"),
+                                                            n.e("63095"),
+                                                            n.e("70653"),
+                                                            n.e("52266"),
+                                                            n.e("53039"),
+                                                            n.e("96123"),
+                                                            n.e("92583"),
+                                                            n.e("64615"),
+                                                            n.e("31825"),
+                                                            n.e("36320"),
+                                                            n.e("97526"),
+                                                            n.e("79525"),
+                                                            n.e("82069"),
+                                                            n.e("75134"),
+                                                            n.e("1462"),
+                                                            n.e("55184"),
+                                                            n.e("74926"),
+                                                            n.e("28866"),
+                                                            n.e("50015"),
+                                                            n.e("72442"),
+                                                            n.e("54282"),
+                                                            n.e("21574"),
+                                                            n.e("90889"),
+                                                            n.e("62931"),
+                                                            n.e("18181"),
+                                                            n.e("59880"),
+                                                            n.e("14805"),
+                                                            n.e("73547"),
+                                                            n.e("99593"),
+                                                            n.e("60658"),
+                                                            n.e("55314"),
+                                                            n.e("89094"),
+                                                            n.e("6338"),
+                                                            n.e("47834"),
+                                                            n.e("47555"),
+                                                            n.e("18573"),
+                                                            n.e("29177"),
+                                                            n.e("21435"),
+                                                            n.e("61935"),
+                                                            n.e("88990"),
+                                                            n.e("21856"),
+                                                            n.e("58038"),
+                                                            n.e("32551"),
+                                                            n.e("91565"),
+                                                            n.e("43426"),
+                                                            n.e("96443"),
+                                                            n.e("65743"),
+                                                            n.e("87079"),
+                                                            n.e("88559"),
+                                                            n.e("60177"),
+                                                            n.e("25637"),
+                                                            n.e("39665"),
+                                                            n.e("23532"),
+                                                            n.e("31644"),
+                                                            n.e("89790"),
+                                                            n.e("94161"),
+                                                            n.e("13051"),
+                                                            n.e("80347"),
+                                                            n.e("10741"),
+                                                            n.e("80166"),
+                                                        ]).then(n.bind(n, 293061));
+                                                    return (n) =>
+                                                        (0, s.jsx)(t, {
+                                                            ...n,
+                                                            analyticsLocations: T,
+                                                            initialStep: e,
+                                                            premiumSubscription: h,
+                                                        });
+                                                })
+                                            );
+                                        },
+                                    }),
+                                (0, s.jsx)(em.A, {
+                                    variant: x || _ ? "secondary" : "expressive",
+                                    size: "md",
+                                    buttonTextOverride: z.intl.string(z.t["3KomGa"]),
+                                }),
+                            ],
+                        }),
+                        N,
+                    ],
+                }),
+            });
+}
+let [tF, tV] = (0, eL.A)(),
+    tB = function (e) {
         let { className: t, buttonVisibilityRef: n, userDiscountOffer: i, discountedPrice: r } = e,
             { analyticsLocations: a } = (0, E.Ay)(p.A.PREMIUM_MARKETING_HERO_CTA),
             o = (0, N.ds)(),
@@ -1542,7 +1539,7 @@ var tj = n(820284),
     t$ = n(400669),
     tz = n(503255),
     tq = n(525311);
-let tZ = () => {
+let tZ = function () {
     let e = (0, tY.Gh)("nitro_home_header"),
         t = a.useRef(null);
     return (0, s.jsxs)(tj.A, {
@@ -1748,7 +1745,7 @@ let t1 = function (e) {
                                 n.e("90241"),
                                 n.e("37271"),
                                 n.e("49993"),
-                                n.e("65813"),
+                                n.e("80731"),
                                 n.e("68268"),
                                 n.e("6788"),
                                 n.e("57016"),
@@ -1872,7 +1869,7 @@ let t1 = function (e) {
                                 n.e("21856"),
                                 n.e("58038"),
                                 n.e("32551"),
-                                n.e("64046"),
+                                n.e("91565"),
                                 n.e("43426"),
                                 n.e("96443"),
                                 n.e("65743"),
@@ -2086,7 +2083,7 @@ var nc = n(462887),
     nL = n(318254),
     nw = n(490285),
     nM = n(875679);
-let nP = () => {
+let nP = function () {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, I.F)({ location: "NitroOrbsWhatsNewCardFooter" });
     if (!e || null == t) return null;
     let n =
@@ -2184,11 +2181,11 @@ function nZ() {
         }, [e]),
         A = (0, a.useCallback)(() => {
             (0, eD.openUserSettings)(eb.X.APPEARANCE_IN_APP_ICON_CATEGORY);
-        }, []),
-        T = () => {
-            (0, nI.A)(nB.TE);
-        },
-        S = (0, a.useCallback)(() => {
+        }, []);
+    function T() {
+        (0, nI.A)(nB.TE);
+    }
+    let S = (0, a.useCallback)(() => {
             h
                 ? (0, M.openModalLazy)(async () => {
                       let { default: e } = await n.e("99709").then(n.bind(n, 516044));
@@ -2398,9 +2395,9 @@ let n1 = [
     { id: "vip", label: () => z.intl.string(z.t.DjEAcv) },
 ];
 var n2 = n(758495);
-let n3 = (e) => {
+function n3(e) {
     e.stopPropagation();
-};
+}
 function n6(e) {
     let { glowingPerkId: t = null } = e,
         n = (function () {
@@ -2620,7 +2617,7 @@ function n6(e) {
     });
 }
 var n4 = n(948562);
-let n5 = (e) => {
+let n5 = function (e) {
     let { className: t } = e,
         n = (0, nd.DP)();
     return (0, s.jsx)("img", {
@@ -2630,7 +2627,7 @@ let n5 = (e) => {
     });
 };
 var n7 = n(946062);
-let n8 = (e) => {
+let n8 = function (e) {
     let { shouldRenderNitroHomeHeaderExperiment: t, gradientOffsetBottom: n, children: i } = e;
     return t
         ? (0, s.jsxs)("div", {

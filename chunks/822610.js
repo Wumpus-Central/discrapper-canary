@@ -98,7 +98,7 @@ function b(e) {
               id: n.name,
               channelId: t,
               keyboardModeEnabled: s,
-              onKeyDown: (e) => {
+              onKeyDown: function (e) {
                   e.key === v.dh.ENTER && (e.preventDefault(), o.current?.activateUploadDialogue());
               },
               className: a()(O.xd, { [O.LB]: l }),
@@ -121,7 +121,7 @@ function b(e) {
                               }),
                               (0, i.jsx)(T.A, {
                                   ref: o,
-                                  onChange: (e) => {
+                                  onChange: function (e) {
                                       let n = e.currentTarget?.files?.[0];
                                       null != t && null != n && (M(n, "file_picker"), (e.currentTarget.value = ""));
                                   },

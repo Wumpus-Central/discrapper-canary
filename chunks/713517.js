@@ -10,13 +10,19 @@ function a(e) {
     i.useEffect(() => {
         let t = e.current;
         if (null == t) return;
+        function i() {
+            return n(!0);
+        }
+        function r() {
+            return n(!1);
+        }
+        function s() {
+            return o(!0);
+        }
         n(!1), o(!1);
-        let i = () => n(!0),
-            r = () => n(!1),
-            s = () => o(!0),
-            a = (e) => {
-                t.contains(e.relatedTarget) || o(!1);
-            };
+        let a = (e) => {
+            t.contains(e.relatedTarget) || o(!1);
+        };
         return (
             t.addEventListener("mouseenter", i),
             t.addEventListener("mouseleave", r),
@@ -38,16 +44,20 @@ function o(e) {
     return (
         i.useEffect(() => {
             let t = e.current;
-            if (null == t) return;
-            let i = () => n(!0),
-                r = () => n(!1);
-            return (
-                t.addEventListener("mouseenter", i),
-                t.addEventListener("mouseleave", r),
-                () => {
-                    t.removeEventListener("mouseenter", i), t.removeEventListener("mouseleave", r);
-                }
-            );
+            if (null != t)
+                return (
+                    t.addEventListener("mouseenter", i),
+                    t.addEventListener("mouseleave", r),
+                    () => {
+                        t.removeEventListener("mouseenter", i), t.removeEventListener("mouseleave", r);
+                    }
+                );
+            function i() {
+                return n(!0);
+            }
+            function r() {
+                return n(!1);
+            }
         }, [e]),
         t
     );

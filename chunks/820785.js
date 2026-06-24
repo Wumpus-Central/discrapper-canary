@@ -64,7 +64,7 @@ function C(e) {
 var N = n(503698),
     v = n.n(N),
     R = n(702923);
-let O = (e) => {
+let O = function (e) {
     let { value: t = 0, text: n, className: r, lowImportance: s, ...a } = e;
     return null != n
         ? (0, i.jsx)("div", { className: v()(R.i, r, s && R.H), ...a, children: n })

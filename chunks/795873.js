@@ -140,7 +140,7 @@ var U = n(116833),
     j = n(788868),
     H = n(49999),
     Y = n(518477);
-let W = (e) => {
+let W = function (e) {
     let {
             badgeId: t = j.Ac.PREMIUM_TENURE_1_MONTH,
             markAsDismissed: n,
@@ -225,7 +225,7 @@ let q = function (e) {
 };
 var Z = n(224016),
     X = n(74824);
-let Q = (e) => {
+let Q = function (e) {
     let { profileBadge: t, tenureBadge: n } = e,
         r = (0, F.I)(n.id).standard;
     return (0, i.jsxs)(q, {

@@ -19,33 +19,35 @@ function f(e) {
           ? h.intl.formatToPlainString(h.t.k9v33y, { numHours: Math.floor(t) })
           : h.intl.formatToPlainString(h.t["/d0GmT"], { numMinutes: Math.floor(60 * t) });
 }
-let p = () => (0, s.k8)(r.M.REFERRAL_PROGRAM_NITRO_TAB_BADGE),
-    E = () => {
-        (0, s.Dr)(r.M.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
-    },
-    m = (e) => {
-        let { trialOffer: t } = e;
-        if (null == t) return !1;
-        let n = void 0 !== t.referrer_id,
-            i = void 0 === t.redeemed_at,
-            r = new Date(l.default.extractTimestamp(t.id)),
-            s = new Date();
-        return n && i && s >= r;
-    },
-    g = (e) => {
-        null != e
-            ? (0, a.qr)(r.M.REFERRAL_PROGRAM_POPOVER_V2, e, { dismissAction: _.i.INDIRECT_ACTION })
-            : (0, s.Dr)(r.M.REFERRAL_PROGRAM_POPOVER);
-    },
-    A = () => {
-        let e,
-            t = (0, d.m)(!1),
-            n = (0, i.bG)([u.A], () => u.A.getReferralsRemaining()),
-            a = (0, i.bG)([u.A], () => u.A.getReminderStateId());
-        return (
-            (e = (0, c.A)({ location: "ReferralProgramUtils" })
-                ? null != a && !(0, s.u$)(r.M.REFERRAL_PROGRAM_POPOVER_V2, a).isDismissed
-                : !(0, s.k8)(r.M.REFERRAL_PROGRAM_POPOVER)),
-            t && e && null != n && n > 0
-        );
-    };
+function p() {
+    return (0, s.k8)(r.M.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
+}
+function E() {
+    (0, s.Dr)(r.M.REFERRAL_PROGRAM_NITRO_TAB_BADGE);
+}
+function m(e) {
+    let { trialOffer: t } = e;
+    if (null == t) return !1;
+    let n = void 0 !== t.referrer_id,
+        i = void 0 === t.redeemed_at,
+        r = new Date(l.default.extractTimestamp(t.id)),
+        s = new Date();
+    return n && i && s >= r;
+}
+function g(e) {
+    null != e
+        ? (0, a.qr)(r.M.REFERRAL_PROGRAM_POPOVER_V2, e, { dismissAction: _.i.INDIRECT_ACTION })
+        : (0, s.Dr)(r.M.REFERRAL_PROGRAM_POPOVER);
+}
+let A = () => {
+    let e,
+        t = (0, d.m)(!1),
+        n = (0, i.bG)([u.A], () => u.A.getReferralsRemaining()),
+        a = (0, i.bG)([u.A], () => u.A.getReminderStateId());
+    return (
+        (e = (0, c.A)({ location: "ReferralProgramUtils" })
+            ? null != a && !(0, s.u$)(r.M.REFERRAL_PROGRAM_POPOVER_V2, a).isDismissed
+            : !(0, s.k8)(r.M.REFERRAL_PROGRAM_POPOVER)),
+        t && e && null != n && n > 0
+    );
+};

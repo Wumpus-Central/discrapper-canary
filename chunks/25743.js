@@ -64,7 +64,7 @@ var _ = n(573359),
     v = n(795269),
     T = n(788868),
     N = n(503110);
-let j = (e) => {
+let j = function (e) {
     let { discountAmount: t } = e,
         n = (0, y.V)(),
         i = null != n && n.trial_id === T.Dw,

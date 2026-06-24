@@ -72,94 +72,87 @@ var A = n(428262),
     y = n(788868),
     C = n(375708),
     N = n(778167);
-let v = (e) => {
-        let { isTier0: t, discountAmount: n } = e,
-            r = (0, S.V)(),
-            a = null != r && r.trial_id === y.Dw,
-            o = C.intl.string(C.t.IBYG5U);
-        return (
-            void 0 !== n
-                ? (o = C.intl.formatToPlainString(C.t.iiLbvu, { percent: n }))
-                : a && (o = C.intl.string(C.t.gtNqJQ)),
-            (0, i.jsx)("div", {
-                className: N.TX,
-                children: (0, i.jsx)(d.E, {
-                    variant: "text-xs/bold",
-                    className: s()(N.El, { [N.LD]: t }),
-                    children: o,
-                }),
-            })
-        );
-    },
-    R = function (e) {
-        let t,
-            {
-                hideCloseButton: n = !1,
-                hideCloseOnFullScreen: r,
-                shouldShowPrice: a,
-                plan: o,
-                renderAnimation: l,
-                onClose: u,
-                isGift: c,
-                upgradeToPremiumType: d,
-                className: E,
-                showTrialBadge: S = !1,
-                showDiscountBadge: R = !1,
-            } = e,
-            O = d === y.PremiumTypes.TIER_2;
-        t = d === y.PremiumTypes.TIER_0 ? p.A : d === y.PremiumTypes.TIER_1 ? m : f.A;
-        let b = (0, T.O)(),
-            D = b?.discount?.amount;
-        return (0, i.jsxs)("div", {
-            "aria-hidden": !0,
-            className: s()({ [N.y2]: !O, [N.qG]: O }, E),
-            children: [
-                (S || R) && (0, i.jsx)(g, { className: N.N8 }),
-                l(),
-                (0, i.jsxs)(h.A, {
-                    align: h.A.Align.START,
-                    justify: h.A.Justify.BETWEEN,
-                    className: N.LI,
-                    children: [
-                        (0, i.jsxs)("div", {
-                            children: [
-                                (0, i.jsx)(t, { className: s()(N.nr, { [N.w6]: !O }) }),
-                                (S || R) &&
-                                    (0, i.jsx)(v, {
-                                        isTier0: d === y.PremiumTypes.TIER_0,
-                                        discountAmount: R ? D : void 0,
-                                    }),
-                            ],
+function v(e) {
+    let { isTier0: t, discountAmount: n } = e,
+        r = (0, S.V)(),
+        a = null != r && r.trial_id === y.Dw,
+        o = C.intl.string(C.t.IBYG5U);
+    return (
+        void 0 !== n
+            ? (o = C.intl.formatToPlainString(C.t.iiLbvu, { percent: n }))
+            : a && (o = C.intl.string(C.t.gtNqJQ)),
+        (0, i.jsx)("div", {
+            className: N.TX,
+            children: (0, i.jsx)(d.E, { variant: "text-xs/bold", className: s()(N.El, { [N.LD]: t }), children: o }),
+        })
+    );
+}
+let R = function (e) {
+    let t,
+        {
+            hideCloseButton: n = !1,
+            hideCloseOnFullScreen: r,
+            shouldShowPrice: a,
+            plan: o,
+            renderAnimation: l,
+            onClose: u,
+            isGift: c,
+            upgradeToPremiumType: d,
+            className: E,
+            showTrialBadge: S = !1,
+            showDiscountBadge: R = !1,
+        } = e,
+        O = d === y.PremiumTypes.TIER_2;
+    t = d === y.PremiumTypes.TIER_0 ? p.A : d === y.PremiumTypes.TIER_1 ? m : f.A;
+    let b = (0, T.O)(),
+        D = b?.discount?.amount;
+    return (0, i.jsxs)("div", {
+        "aria-hidden": !0,
+        className: s()({ [N.y2]: !O, [N.qG]: O }, E),
+        children: [
+            (S || R) && (0, i.jsx)(g, { className: N.N8 }),
+            l(),
+            (0, i.jsxs)(h.A, {
+                align: h.A.Align.START,
+                justify: h.A.Justify.BETWEEN,
+                className: N.LI,
+                children: [
+                    (0, i.jsxs)("div", {
+                        children: [
+                            (0, i.jsx)(t, { className: s()(N.nr, { [N.w6]: !O }) }),
+                            (S || R) &&
+                                (0, i.jsx)(v, { isTier0: d === y.PremiumTypes.TIER_0, discountAmount: R ? D : void 0 }),
+                        ],
+                    }),
+                    !n &&
+                        (0, i.jsx)(_.s_, {
+                            "data-migration-pending": !0,
+                            hideOnFullscreen: r,
+                            onClick: u,
+                            className: N.b,
                         }),
-                        !n &&
-                            (0, i.jsx)(_.s_, {
-                                "data-migration-pending": !0,
-                                hideOnFullscreen: r,
-                                onClick: u,
-                                className: N.b,
-                            }),
-                    ],
-                }),
-                a && null != o
-                    ? (0, i.jsx)("div", {
-                          className: N.q9,
-                          children: (function (e, t) {
-                              let n = A.Ay.getDefaultPrice(e),
-                                  { intervalType: i } = A.Ay.getInterval(e),
-                                  r = (0, I.$g)(n.amount, n.currency);
-                              if (t) return r;
-                              switch (i) {
-                                  case y.WT.MONTH:
-                                      return C.intl.formatToPlainString(C.t.AbOLNu, { price: r });
-                                  case y.WT.YEAR:
-                                      return C.intl.formatToPlainString(C.t["rS8FA+"], { price: r });
-                              }
-                          })(o, c),
-                      })
-                    : null,
-            ],
-        });
-    };
+                ],
+            }),
+            a && null != o
+                ? (0, i.jsx)("div", {
+                      className: N.q9,
+                      children: (function (e, t) {
+                          let n = A.Ay.getDefaultPrice(e),
+                              { intervalType: i } = A.Ay.getInterval(e),
+                              r = (0, I.$g)(n.amount, n.currency);
+                          if (t) return r;
+                          switch (i) {
+                              case y.WT.MONTH:
+                                  return C.intl.formatToPlainString(C.t.AbOLNu, { price: r });
+                              case y.WT.YEAR:
+                                  return C.intl.formatToPlainString(C.t["rS8FA+"], { price: r });
+                          }
+                      })(o, c),
+                  })
+                : null,
+        ],
+    });
+};
 var O = n(25743),
     b = n(899343),
     D = n(997330);

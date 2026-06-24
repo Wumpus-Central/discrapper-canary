@@ -115,8 +115,12 @@ function k(e) {
             let [n, i] = s.useState(0),
                 r = (0, I.aL)();
             s.useEffect(() => {
-                let e = () => i((e) => e + 1),
-                    t = () => i((e) => Math.max(0, e - 1));
+                function e() {
+                    return i((e) => e + 1);
+                }
+                function t() {
+                    return i((e) => Math.max(0, e - 1));
+                }
                 return (
                     r.subscribe(T.jej.POPOUT_SHOW, e),
                     r.subscribe(T.jej.POPOUT_HIDE, t),
@@ -128,15 +132,15 @@ function k(e) {
             let [a, o] = s.useState(!1);
             return (
                 s.useLayoutEffect(() => {
-                    let i = (e) => {
-                            (!t || n > 0) && a
-                                ? o(!1)
-                                : (!a && n > 0) ||
-                                  (e instanceof KeyboardEvent &&
-                                      (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || S.indexOf(e.key) >= 0)) ||
-                                  o((e) => !e);
-                        },
-                        r = a ? "keyup" : "mousemove";
+                    function i(e) {
+                        (!t || n > 0) && a
+                            ? o(!1)
+                            : (!a && n > 0) ||
+                              (e instanceof KeyboardEvent &&
+                                  (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || S.indexOf(e.key) >= 0)) ||
+                              o((e) => !e);
+                    }
+                    let r = a ? "keyup" : "mousemove";
                     return t && e.addEventListener(r, i), () => e?.removeEventListener(r, i);
                 }, [e, a, n, t]),
                 t && 0 === n && a

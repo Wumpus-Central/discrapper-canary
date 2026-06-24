@@ -6,7 +6,7 @@ var i = n(428262),
     a = n(410516),
     o = n(788868),
     l = n(375708);
-let u = (e) => {
+function u(e) {
     var t;
     let { subscriptionTier: n, hasActivePromotion: u = !1, useShorterCTA: c = !1, isPersistentCTA: d = !1 } = e,
         _ = (0, s.V)(),
@@ -28,7 +28,7 @@ let u = (e) => {
                     : m === o.pe.TIER_2
                       ? l.intl.formatToPlainString(I ? l.t.ZhPpOu : l.t.bkQ4bH, { percent: t })
                       : void 0)
-              : ((e) => {
+              : (function (e) {
                     let {
                         showTrialCTA: t,
                         subscriptionTier: n,
@@ -54,4 +54,4 @@ let u = (e) => {
                 }),
         marketingSubscriptionTierSkuId: m,
     };
-};
+}

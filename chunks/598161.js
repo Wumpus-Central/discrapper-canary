@@ -19,8 +19,8 @@ var n = i(627968),
     h = i(379848),
     j = i(840387),
     N = i(201718),
-    v = i(615405),
-    T = i(289173),
+    T = i(615405),
+    v = i(289173),
     _ = i(373842),
     S = i(600761),
     O = i(579950),
@@ -123,7 +123,7 @@ var X = i(192),
     z = i(382483),
     Y = i(385113),
     q = i(334074);
-function J() {
+function Q() {
     let {
         isLoading: e,
         currentUser: t,
@@ -164,7 +164,7 @@ function J() {
     let a = i[0];
     return null == a ? null : (0, n.jsx)(F, { user: t, application: a, onDismiss: (e) => s([a.id], e) }, a.id);
 }
-var Q = i(128988),
+var J = i(128988),
     Z = i(939318),
     $ = i(982599),
     ee = i(515054),
@@ -228,7 +228,7 @@ function ec(e) {
     let { widget: t, ...i } = e;
     return t instanceof f.R
         ? (0, n.jsx)(C.A, { widget: t, ...i })
-        : (0, T.fu)(t)
+        : (0, v.fu)(t)
           ? (0, n.jsx)(Z.A, { widget: t, ...i })
           : null;
 }
@@ -300,8 +300,8 @@ function ed(e) {
     let { user: t, guildId: i, channelId: s } = e,
         a = (0, x.A)(t.id),
         c = (0, O.A)(t.id),
-        o = (() => {
-            let [e, t] = (0, r.yK)([v.A], () => [v.A.ipCountryCode, v.A.ipCountryCodeRequest]),
+        o = (function () {
+            let [e, t] = (0, r.yK)([T.A], () => [T.A.ipCountryCode, T.A.ipCountryCodeRequest]),
                 i = (0, j.Z)();
             return (
                 l.useEffect(() => {
@@ -313,27 +313,17 @@ function ed(e) {
         g = (0, d.QR)({ location: "UserProfileModalV2Widgets" }),
         p = u.A.useConfig({ location: "UserProfileModalV2Widgets" }).enabled,
         I = 0 === a.length && c,
-        A = l.useMemo(() => a.filter(T.fu), [a]),
+        A = l.useMemo(() => a.filter(v.fu), [a]),
         h = l.useMemo(() => a.filter((e) => e instanceof f.R), [a]);
-    (0, _.Y)(c, A),
-        ((e, t) => {
-            let i = l.useMemo(() => t.map((e) => e.applicationId), [t]);
-            (0, m.A)(i);
-            let { data: n, refetch: s } = (0, N.P)(e),
-                a = l.useRef(null !== n);
-            l.useEffect(() => {
-                a.current && ((a.current = !1), s());
-            }, [s]);
-        })(t.id, h);
-    let S = () =>
-        (0, n.jsxs)(n.Fragment, {
+    function S() {
+        return (0, n.jsxs)(n.Fragment, {
             children: [
                 c &&
                     (0, n.jsxs)(n.Fragment, {
                         children: [
                             (0, n.jsx)(V, { className: er.cG }),
                             o && (0, n.jsx)(eo, {}),
-                            p ? (0, n.jsx)(J, {}) : g && (0, n.jsx)(eu, {}),
+                            p ? (0, n.jsx)(Q, {}) : g && (0, n.jsx)(eu, {}),
                         ],
                     }),
                 a.map((e, l) =>
@@ -345,7 +335,22 @@ function ed(e) {
                 ),
             ],
         });
-    return I ? (0, n.jsx)(ea, { userId: t.id }) : c ? (0, n.jsx)(X.D, { children: S() }) : S();
+    }
+    return ((0, _.Y)(c, A),
+    !(function (e, t) {
+        let i = l.useMemo(() => t.map((e) => e.applicationId), [t]);
+        (0, m.A)(i);
+        let { data: n, refetch: s } = (0, N.P)(e),
+            a = l.useRef(null !== n);
+        l.useEffect(() => {
+            a.current && ((a.current = !1), s());
+        }, [s]);
+    })(t.id, h),
+    I)
+        ? (0, n.jsx)(ea, { userId: t.id })
+        : c
+          ? (0, n.jsx)(X.D, { children: S() })
+          : S();
 }
 function eg(e) {
     let { user: t, ...i } = e,
@@ -357,6 +362,6 @@ function eg(e) {
         scrollerRef: s,
         className: a()(er.XG, { [er.az]: r }),
         fade: !0,
-        children: [(0, n.jsx)(Q.A, { scrollerRef: s }), (0, n.jsx)(ed, { user: t, ...i })],
+        children: [(0, n.jsx)(J.A, { scrollerRef: s }), (0, n.jsx)(ed, { user: t, ...i })],
     });
 }

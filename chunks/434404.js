@@ -66,10 +66,12 @@ let p = (0, n.Qx)(s.X.TIME_FORMAT_SETTING, {
         useTitle: () => m.intl.string(m.t.dyamEI),
         useValue: () => x.PZ.useSetting(),
         setValue: (e) => x.PZ.updateSetting(e),
-        useOptions: () => [
-            { name: m.intl.string(m.t.FMWYvb), value: T.PZ.AUTO },
-            { name: m.intl.string(m.t.p8NOwi), value: T.PZ.H12 },
-            { name: m.intl.string(m.t["+o/sOo"]), value: T.PZ.H23 },
-        ],
+        useOptions: function () {
+            return [
+                { name: m.intl.string(m.t.FMWYvb), value: T.PZ.AUTO },
+                { name: m.intl.string(m.t.p8NOwi), value: T.PZ.H12 },
+                { name: m.intl.string(m.t["+o/sOo"]), value: T.PZ.H23 },
+            ];
+        },
     }),
     f = (0, n.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [S, p] });

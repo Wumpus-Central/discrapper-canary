@@ -4,7 +4,7 @@ var i,
     r,
     s = n(636537),
     a = n(228366);
-n(720149);
+n(493336);
 var o = n(889227);
 n(309010);
 var l = n(38405),
@@ -48,32 +48,34 @@ async function h(e, t, n) {
         l = { users: r.map((e) => new o.A(e)), nextIndex: a };
     return _.set(i, l), l;
 }
-let f = () => (
-    a.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
-    s.Bo.get({ url: u.Rsh.GET_REFERRALS_REMAINING, oldFormErrors: !0, rejectWithError: !1 }).then(
-        (e) => {
-            let t = new Map();
-            if (null != e.body && null != e.body.recipient_status)
-                for (let n in e.body.recipient_status) {
-                    let i = e.body.recipient_status[n];
-                    t.set(n, i);
-                }
-            a.h.dispatch({
-                type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
-                referrals_remaining:
-                    null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
-                sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
-                refresh_at: e.body?.refresh_at ?? null,
-                recipient_status: t,
-                has_eligible_friends: e.body?.has_eligible_friends ?? !1,
-                reminder_state_id: e.body?.reminder_state_id ?? null,
-            });
-        },
-        (e) => {
-            e?.status !== 404 && a.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
-        },
-    )
-);
+function f() {
+    return (
+        a.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_START" }),
+        s.Bo.get({ url: u.Rsh.GET_REFERRALS_REMAINING, oldFormErrors: !0, rejectWithError: !1 }).then(
+            (e) => {
+                let t = new Map();
+                if (null != e.body && null != e.body.recipient_status)
+                    for (let n in e.body.recipient_status) {
+                        let i = e.body.recipient_status[n];
+                        t.set(n, i);
+                    }
+                a.h.dispatch({
+                    type: "BILLING_REFERRALS_REMAINING_FETCH_SUCCESS",
+                    referrals_remaining:
+                        null != e.body && null != e.body.referrals_remaining ? e.body.referrals_remaining : 0,
+                    sent_user_ids: null != e.body && null != e.body.sent_user_ids ? e.body.sent_user_ids : [],
+                    refresh_at: e.body?.refresh_at ?? null,
+                    recipient_status: t,
+                    has_eligible_friends: e.body?.has_eligible_friends ?? !1,
+                    reminder_state_id: e.body?.reminder_state_id ?? null,
+                });
+            },
+            (e) => {
+                e?.status !== 404 && a.h.dispatch({ type: "BILLING_REFERRALS_REMAINING_FETCH_FAIL" });
+            },
+        )
+    );
+}
 async function p(e) {
     let t = [],
         n = new Map();

@@ -1,27 +1,27 @@
-i.d(e, { M: () => E });
-var n = i(627968),
-    r = i(64700),
-    l = i(772707),
-    a = i(683071),
-    s = i(289873),
-    o = i(403581),
-    u = i(834730),
-    c = i(975571),
-    d = i(428262),
-    m = i(816252),
-    f = i(473702),
-    g = i(916974),
-    p = i(788868),
-    h = i(652215),
-    x = i(375708),
-    P = i(476791),
-    C = i(303930),
-    y = i(398932);
+n.d(e, { M: () => E });
+var i = n(627968),
+    r = n(64700),
+    l = n(772707),
+    a = n(683071),
+    s = n(289873),
+    o = n(403581),
+    u = n(834730),
+    c = n(975571),
+    d = n(428262),
+    m = n(816252),
+    f = n(473702),
+    g = n(916974),
+    p = n(788868),
+    h = n(652215),
+    x = n(375708),
+    P = n(476791),
+    C = n(303930),
+    y = n(398932);
 let E = () => {
     let {
             transitionState: t,
             onClose: e,
-            premiumType: i,
+            premiumType: n,
             premiumSubscription: E,
             setStep: v,
             applyOffer: D,
@@ -30,18 +30,18 @@ let E = () => {
             fullPrice: A,
         } = (0, g.X)(),
         [N, L] = (0, r.useState)(!1),
-        [T, b] = (0, r.useState)(!1),
-        M = async () => {
-            if (null === j) return void b(!0);
-            L(!0), b(!1);
-            try {
-                await D(), v(f.g.DISCOUNT_APPLIED);
-            } catch (t) {
-                b(!0), L(!1);
-            }
-        };
-    if (null === j || null === S) return (0, n.jsx)("div", { className: P.dc, children: (0, n.jsx)(s.y, {}) });
-    let I = i === p.PremiumTypes.TIER_2,
+        [T, b] = (0, r.useState)(!1);
+    async function M() {
+        if (null === j) return void b(!0);
+        L(!0), b(!1);
+        try {
+            await D(), v(f.g.DISCOUNT_APPLIED);
+        } catch (t) {
+            b(!0), L(!1);
+        }
+    }
+    if (null === j || null === S) return (0, i.jsx)("div", { className: P.dc, children: (0, i.jsx)(s.y, {}) });
+    let I = n === p.PremiumTypes.TIER_2,
         U = [
             { text: x.intl.string(x.t.zl7LZp), onClick: () => e(), variant: "secondary", disabled: N },
             {
@@ -53,7 +53,7 @@ let E = () => {
                 disabled: N,
             },
         ];
-    return (0, n.jsxs)(l.k, {
+    return (0, i.jsxs)(l.k, {
         graphic: { type: "image", src: I ? y.A : C },
         gradientColor: I ? "nitro-pink" : "nitro-green",
         transitionState: t,
@@ -64,13 +64,13 @@ let E = () => {
         actions: U,
         onClose: async () => e(),
         children: [
-            (0, n.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: P.TA,
-                children: (0, n.jsx)(m._, { userDiscountOffer: j, offerState: m.b.CONFIRMING }),
+                children: (0, i.jsx)(m._, { userDiscountOffer: j, offerState: m.b.CONFIRMING }),
             }),
-            (0, n.jsx)("div", {
+            (0, i.jsx)("div", {
                 className: P.V6,
-                children: (0, n.jsx)(u.E, {
+                children: (0, i.jsx)(u.E, {
                     variant: "text-xs/medium",
                     color: "text-subtle",
                     children:
@@ -91,7 +91,7 @@ let E = () => {
                               }),
                 }),
             }),
-            T ? (0, n.jsx)(a.w, { type: "critical", children: x.intl.string(x.t["5mlOCW"]) }) : null,
+            T ? (0, i.jsx)(a.w, { type: "critical", children: x.intl.string(x.t["5mlOCW"]) }) : null,
         ],
     });
 };

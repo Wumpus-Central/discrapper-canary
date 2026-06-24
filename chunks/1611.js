@@ -1,30 +1,31 @@
-d.d(i, { A: () => u });
-var e = d(627968);
-d(64700);
-var s = d(17928),
-    n = d(477782),
-    r = d(827343),
-    o = d(941327),
-    c = d(723702),
-    a = d(652215),
-    p = d(375708);
-function u(t) {
+e.d(i, { A: () => p });
+var n = e(627968);
+e(64700);
+var d = e(17928),
+    r = e(477782),
+    s = e(827343),
+    o = e(472444),
+    c = e(723702),
+    u = e(652215),
+    a = e(375708);
+function p(t) {
     let i = !c.isPlatformEmbedded,
-        d = (0, s.bG)([o.Ay], () => o.Ay.getMode()),
-        u = (i, s) =>
-            (0, e.jsx)(
-                n.iD,
-                {
-                    id: i,
-                    group: "input-modes",
-                    label: s,
-                    checked: d === i,
-                    action: () => r.A.setMode(i, void 0, void 0, { analyticsLocations: t }),
-                },
-                i,
-            );
+        e = (0, d.bG)([o.Ay], () => o.Ay.getMode());
+    function p(i, d) {
+        return (0, n.jsx)(
+            r.iD,
+            {
+                id: i,
+                group: "input-modes",
+                label: d,
+                checked: e === i,
+                action: () => s.A.setMode(i, void 0, void 0, { analyticsLocations: t }),
+            },
+            i,
+        );
+    }
     return [
-        u(a.TBI.VOICE_ACTIVITY, p.intl.string(p.t.cHCEOJ)),
-        u(a.TBI.PUSH_TO_TALK, i ? p.intl.string(p.t["1AINrB"]) : p.intl.string(p.t.Q8gkVL)),
+        p(u.TBI.VOICE_ACTIVITY, a.intl.string(a.t.cHCEOJ)),
+        p(u.TBI.PUSH_TO_TALK, i ? a.intl.string(a.t["1AINrB"]) : a.intl.string(a.t.Q8gkVL)),
     ];
 }

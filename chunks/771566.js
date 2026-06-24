@@ -68,13 +68,13 @@ function R(e) {
     });
 }
 var O = n(776043);
-let b = (e) => {
+let b = function (e) {
     let { type: t, theme: n } = e;
     return (0, r.jsx)("div", {
         className: O.Eq,
         children: (0, r.jsx)("div", {
             className: O.v9,
-            children: ((e, t) => {
+            children: (function (e, t) {
                 let n = (0, y.M)(t) ? "white" : "black";
                 switch (e) {
                     case C.Or.PREMIUM_UPDATED:

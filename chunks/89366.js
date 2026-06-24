@@ -6,10 +6,10 @@ var i = n(17928),
     a = n(354670),
     o = n(378135),
     l = n(788868);
-let u = () => {
+function u() {
     let e = (0, i.bG)([s.A], () => s.A.getPremiumTypeSubscription());
     return !!e?.hasActiveTrial;
-};
+}
 function c() {
     let e = (0, i.bG)([s.A], () => s.A.getPremiumTypeSubscription()),
         t = (0, i.bG)([r.default], () => r.default.getCurrentUser());

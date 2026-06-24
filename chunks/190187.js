@@ -9,7 +9,7 @@ var i = n(64700),
     u = n(89366),
     c = n(851746),
     d = n(788868);
-let _ = function () {
+function _() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
         n = (0, l.k5)(),
@@ -25,4 +25,4 @@ let _ = function () {
     i.useEffect(() => {
         f && !e && c.A.checkAndFetchReferralsRemaining();
     }, [f, e]);
-};
+}

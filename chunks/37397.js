@@ -37,8 +37,8 @@ var n = i(627968),
     V = i(192308),
     k = i(315629),
     w = i(821609),
-    F = i(158032),
-    B = i(580630),
+    B = i(158032),
+    F = i(580630),
     z = i(427262),
     X = i(795269),
     Y = i(59784),
@@ -53,486 +53,481 @@ var n = i(627968),
     ee = i(466919),
     et = i(375708),
     ei = i(339446);
-let en = (e) => {
-        let { user: t, isOwnUser: i, label: l, removeButton: a, isFaded: o } = e,
-            { avatarSrc: u, eventHandlers: d } = (0, $.A)({ userId: t?.id, size: Z._3.SIZE_24 }),
-            c = (0, z.$3)(t),
-            [m, A] = s.useState(!1);
-        return (0, n.jsxs)("div", {
-            className: r()(ei.kL, { [ei.RE]: null != a }),
-            onMouseEnter: () => A(!0),
-            onMouseLeave: () => A(!1),
-            children: [
-                (0, n.jsxs)("div", {
-                    className: r()(ei.TT, { [ei.zj]: o }),
-                    children: [
-                        (0, n.jsx)(Q.eu, { className: ei.my, src: u, "aria-label": c, size: Z._3.SIZE_24, ...d }),
+function en(e) {
+    let { user: t, isOwnUser: i, label: l, removeButton: a, isFaded: o } = e,
+        { avatarSrc: u, eventHandlers: d } = (0, $.A)({ userId: t?.id, size: Z._3.SIZE_24 }),
+        c = (0, z.$3)(t),
+        [m, A] = s.useState(!1);
+    return (0, n.jsxs)("div", {
+        className: r()(ei.kL, { [ei.RE]: null != a }),
+        onMouseEnter: () => A(!0),
+        onMouseLeave: () => A(!1),
+        children: [
+            (0, n.jsxs)("div", {
+                className: r()(ei.TT, { [ei.zj]: o }),
+                children: [
+                    (0, n.jsx)(Q.eu, { className: ei.my, src: u, "aria-label": c, size: Z._3.SIZE_24, ...d }),
+                    (0, n.jsxs)(g.E, {
+                        className: ei.Xh,
+                        variant: "text-sm/medium",
+                        color: "text-strong",
+                        children: [c, !!i && ` (${et.intl.string(et.t.LuZzxn)})`],
+                    }),
+                    null != l &&
                         (0, n.jsxs)(g.E, {
-                            className: ei.Xh,
+                            className: ei.Pf,
                             variant: "text-sm/medium",
-                            color: "text-strong",
-                            children: [c, !!i && ` (${et.intl.string(et.t.LuZzxn)})`],
+                            color: "text-subtle",
+                            children: [(0, n.jsx)("span", { className: ei.me, children: "\xb7" }), l],
                         }),
-                        null != l &&
-                            (0, n.jsxs)(g.E, {
-                                className: ei.Pf,
-                                variant: "text-sm/medium",
-                                color: "text-subtle",
-                                children: [(0, n.jsx)("span", { className: ei.me, children: "\xb7" }), l],
-                            }),
-                    ],
-                }),
-                null != a &&
-                    m &&
-                    (0, n.jsx)("div", {
-                        className: ei.dM,
-                        children: (0, n.jsx)(q.Q, {
-                            textVariant: "text-sm/medium",
-                            variant: "secondary",
-                            text: a.label,
-                            onClick: a.onRemove,
-                        }),
+                ],
+            }),
+            null != a &&
+                m &&
+                (0, n.jsx)("div", {
+                    className: ei.dM,
+                    children: (0, n.jsx)(q.Q, {
+                        textVariant: "text-sm/medium",
+                        variant: "secondary",
+                        text: a.label,
+                        onClick: a.onRemove,
                     }),
-            ],
-        });
-    },
-    es = (e) => {
-        let { user: t, isOwnUser: i } = e;
-        return (0, n.jsx)(en, { user: t, isOwnUser: i, label: et.intl.string(ee.default.vc2xys) });
-    },
-    el = (e) => {
-        let { user: t, onRemove: i } = e;
-        return (0, n.jsx)(en, {
-            user: t,
-            label: et.intl.string(ee.default.mnt50A),
-            removeButton: { onRemove: i, label: et.intl.string(et.t.N86XcP) },
-        });
-    },
-    er = (e) => {
-        let { user: t, isOwnUser: i } = e;
-        return (0, n.jsx)(en, { user: t, isOwnUser: i, label: et.intl.string(ee.default.mnt50A) });
-    },
-    ea = (e) => {
-        let { user: t, onRemove: i } = e;
-        return (0, n.jsx)(en, {
-            user: t,
-            label: et.intl.string(ee.default["1RH5t9"]),
-            isFaded: !0,
-            removeButton: { onRemove: i, label: et.intl.string(ee.default["2blqtw"]) },
-        });
-    },
-    eo = (e) => {
-        let { onInvite: t, canInvite: i } = e,
-            [l, a] = s.useState(!1);
-        return (0, n.jsxs)("div", {
-            className: r()(ei.kL, { [ei.RE]: i }),
-            onMouseEnter: () => a(!0),
-            onMouseLeave: () => a(!1),
-            children: [
-                (0, n.jsxs)("div", {
-                    className: ei.TT,
-                    children: [
-                        (0, n.jsx)("div", {
-                            className: r()(ei.vG, ei.my),
-                            children: (0, n.jsx)(J.n, { size: "xxs", color: d.A.colors.ICON_SUBTLE }),
-                        }),
-                        (0, n.jsx)(g.E, {
-                            className: ei.Xh,
-                            variant: "text-sm/medium",
-                            color: "text-strong",
-                            children: et.intl.string(ee.default["/x7DVG"]),
-                        }),
-                    ],
                 }),
-                l &&
-                    i &&
+        ],
+    });
+}
+function es(e) {
+    let { user: t, isOwnUser: i } = e;
+    return (0, n.jsx)(en, { user: t, isOwnUser: i, label: et.intl.string(ee.default.vc2xys) });
+}
+function el(e) {
+    let { user: t, onRemove: i } = e;
+    return (0, n.jsx)(en, {
+        user: t,
+        label: et.intl.string(ee.default.mnt50A),
+        removeButton: { onRemove: i, label: et.intl.string(et.t.N86XcP) },
+    });
+}
+function er(e) {
+    let { user: t, isOwnUser: i } = e;
+    return (0, n.jsx)(en, { user: t, isOwnUser: i, label: et.intl.string(ee.default.mnt50A) });
+}
+function ea(e) {
+    let { user: t, onRemove: i } = e;
+    return (0, n.jsx)(en, {
+        user: t,
+        label: et.intl.string(ee.default["1RH5t9"]),
+        isFaded: !0,
+        removeButton: { onRemove: i, label: et.intl.string(ee.default["2blqtw"]) },
+    });
+}
+function eo(e) {
+    let { onInvite: t, canInvite: i } = e,
+        [l, a] = s.useState(!1);
+    return (0, n.jsxs)("div", {
+        className: r()(ei.kL, { [ei.RE]: i }),
+        onMouseEnter: () => a(!0),
+        onMouseLeave: () => a(!1),
+        children: [
+            (0, n.jsxs)("div", {
+                className: ei.TT,
+                children: [
                     (0, n.jsx)("div", {
-                        className: ei.dM,
-                        children: (0, n.jsx)(q.Q, {
-                            textVariant: "text-sm/medium",
-                            variant: "secondary",
-                            text: et.intl.string(ee.default.O15JWp),
-                            onClick: t,
-                        }),
+                        className: r()(ei.vG, ei.my),
+                        children: (0, n.jsx)(J.n, { size: "xxs", color: d.A.colors.ICON_SUBTLE }),
                     }),
-            ],
-        });
-    };
+                    (0, n.jsx)(g.E, {
+                        className: ei.Xh,
+                        variant: "text-sm/medium",
+                        color: "text-strong",
+                        children: et.intl.string(ee.default["/x7DVG"]),
+                    }),
+                ],
+            }),
+            l &&
+                i &&
+                (0, n.jsx)("div", {
+                    className: ei.dM,
+                    children: (0, n.jsx)(q.Q, {
+                        textVariant: "text-sm/medium",
+                        variant: "secondary",
+                        text: et.intl.string(ee.default.O15JWp),
+                        onClick: t,
+                    }),
+                }),
+        ],
+    });
+}
 var eu = i(788868),
     ed = i(88001),
     ec = i(652215),
     eg = i(666240);
-let em = (e) => {
-        let { discountApplied: t = !1 } = e;
-        return (0, n.jsxs)(M.B, {
-            direction: "horizontal",
-            align: "center",
-            justify: "space-between",
-            gap: 10,
-            padding: { top: 12, bottom: 12 },
-            className: eg.wx,
-            children: [
-                (0, n.jsxs)(M.B, {
-                    direction: "horizontal",
-                    align: "center",
-                    gap: 10,
-                    children: [
-                        (0, n.jsx)(m.D, { variant: "display-md", className: eg.Nd, children: (0, ed.DP)() }),
-                        (0, n.jsx)(U.E, { type: "beta", variant: "expressive" }),
-                    ],
-                }),
-                t && (0, n.jsx)(X.R, { text: et.intl.string(et.t.EyjDRE) }),
-            ],
-        });
-    },
-    eA = (e) => {
-        let { title: t, discountDescription: i, description: s, button: l } = e;
-        return (0, n.jsxs)("div", {
-            className: eg.bh,
-            children: [
-                (0, n.jsxs)(M.B, {
-                    direction: "vertical",
-                    gap: 8,
-                    className: eg.iQ,
-                    children: [
-                        (0, n.jsx)(m.D, { variant: "heading-xl/semibold", children: t }),
-                        null != i
-                            ? (0, n.jsx)(g.E, {
-                                  variant: "text-sm/medium",
-                                  color: "text-muted",
-                                  className: eg.eY,
-                                  children: i,
-                              })
-                            : null,
-                        (0, n.jsx)(g.E, { variant: "text-sm/medium", color: "text-muted", children: s }),
-                    ],
-                }),
-                (0, n.jsx)("div", { className: eg.UD, children: l }),
-            ],
-        });
-    },
-    eh = (e) => {
-        let { currentUser: t } = e,
-            { premiumGroupMembership: s, isLoading: l } = (0, W.A)(),
-            { premiumGroupMembers: r, isLoading: a } = (0, K.A)(s?.subscriptionId ?? null);
-        if (a || null == r || l || null == s) return (0, n.jsx)(h.y, {});
-        let o = s.subscriptionId,
-            u = s.currentPeriodEnd,
-            { primary: d, members: c } = r,
-            { title: g, description: A } = (() => {
-                switch (s.subscriptionStatus) {
-                    case ec.Dmq.CANCELED:
-                        return {
-                            title: et.intl.string(ee.default.mCwdPj),
-                            description: et.intl.format(ee.default.wH9NYG, { endDate: u }),
-                        };
-                    case ec.Dmq.PAUSED:
-                        return {
-                            title: et.intl.string(ee.default.IDyd1e),
-                            description: et.intl.format(ee.default["8MfYhr"], {
-                                premiumGroupProductName: (0, ed.DP)(),
-                                helpCenterLink: ed.TE,
-                            }),
-                        };
-                    case ec.Dmq.PAST_DUE:
-                    case ec.Dmq.ACCOUNT_HOLD:
-                    case ec.Dmq.BILLING_RETRY:
-                        return {
-                            title: et.intl.string(ee.default.Duq8zp),
-                            description: et.intl.format(ee.default["MHn/D6"], {
-                                endDate: u,
-                                premiumGroupProductName: (0, ed.DP)(),
-                            }),
-                        };
-                    default:
-                        return {
-                            title: et.intl.formatToPlainString(ee.default.xiUjMF, {
-                                premiumGroupProductName: (0, ed.DP)(),
-                            }),
-                            description: et.intl.format(ee.default["2HEyqG"], {
-                                primaryName: (0, z.$3)(d),
-                                premiumGroupProductName: (0, ed.DP)(),
-                                helpCenterLink: ed.TE,
-                            }),
-                        };
-                }
-            })();
-        return (0, n.jsxs)(k.h, {
-            className: eg.kL,
-            color: "nitro-pink",
-            children: [
-                (0, n.jsx)(em, {}),
-                (0, n.jsxs)("div", {
-                    className: eg.wS,
-                    children: [
-                        (0, n.jsx)(eA, {
-                            title: g,
-                            description: A,
-                            button: (0, n.jsx)(w.$, {
-                                variant: "secondary",
-                                text: et.intl.string(ee.default.NCu2JD),
-                                onClick: () => {
-                                    (0, V.openModalLazy)(async () => {
-                                        let { default: e } = await i.e("92796").then(i.bind(i, 205463));
-                                        return (i) =>
-                                            (0, n.jsx)(e, { ...i, premiumGroupSubscriptionId: o, currentUser: t });
-                                    });
-                                },
-                            }),
+function em(e) {
+    let { discountApplied: t = !1 } = e;
+    return (0, n.jsxs)(M.B, {
+        direction: "horizontal",
+        align: "center",
+        justify: "space-between",
+        gap: 10,
+        padding: { top: 12, bottom: 12 },
+        className: eg.wx,
+        children: [
+            (0, n.jsxs)(M.B, {
+                direction: "horizontal",
+                align: "center",
+                gap: 10,
+                children: [
+                    (0, n.jsx)(m.D, { variant: "display-md", className: eg.Nd, children: (0, ed.DP)() }),
+                    (0, n.jsx)(U.E, { type: "beta", variant: "expressive" }),
+                ],
+            }),
+            t && (0, n.jsx)(X.R, { text: et.intl.string(et.t.EyjDRE) }),
+        ],
+    });
+}
+function eA(e) {
+    let { title: t, discountDescription: i, description: s, button: l } = e;
+    return (0, n.jsxs)("div", {
+        className: eg.bh,
+        children: [
+            (0, n.jsxs)(M.B, {
+                direction: "vertical",
+                gap: 8,
+                className: eg.iQ,
+                children: [
+                    (0, n.jsx)(m.D, { variant: "heading-xl/semibold", children: t }),
+                    null != i
+                        ? (0, n.jsx)(g.E, {
+                              variant: "text-sm/medium",
+                              color: "text-muted",
+                              className: eg.eY,
+                              children: i,
+                          })
+                        : null,
+                    (0, n.jsx)(g.E, { variant: "text-sm/medium", color: "text-muted", children: s }),
+                ],
+            }),
+            (0, n.jsx)("div", { className: eg.UD, children: l }),
+        ],
+    });
+}
+function eh(e) {
+    let { currentUser: t } = e,
+        { premiumGroupMembership: s, isLoading: l } = (0, W.A)(),
+        { premiumGroupMembers: r, isLoading: a } = (0, K.A)(s?.subscriptionId ?? null);
+    if (a || null == r || l || null == s) return (0, n.jsx)(h.y, {});
+    let o = s.subscriptionId,
+        u = s.currentPeriodEnd,
+        { primary: d, members: c } = r,
+        { title: g, description: A } = (() => {
+            switch (s.subscriptionStatus) {
+                case ec.Dmq.CANCELED:
+                    return {
+                        title: et.intl.string(ee.default.mCwdPj),
+                        description: et.intl.format(ee.default.wH9NYG, { endDate: u }),
+                    };
+                case ec.Dmq.PAUSED:
+                    return {
+                        title: et.intl.string(ee.default.IDyd1e),
+                        description: et.intl.format(ee.default["8MfYhr"], {
+                            premiumGroupProductName: (0, ed.DP)(),
+                            helpCenterLink: ed.TE,
                         }),
-                        (0, n.jsxs)(M.B, {
-                            direction: "vertical",
-                            padding: { left: 32, bottom: 12 },
-                            gap: 0,
-                            children: [
-                                (0, n.jsx)(m.D, {
-                                    variant: "heading-sm/medium",
-                                    color: "text-strong",
-                                    className: eg.Or,
-                                    children: et.intl.string(ee.default["oqw/KW"]),
-                                }),
-                                (0, n.jsx)(es, { user: d, isOwnUser: !1 }),
-                                c.map((e) => (0, n.jsx)(er, { user: e, isOwnUser: e.id === t?.id }, e.id)),
-                            ],
+                    };
+                case ec.Dmq.PAST_DUE:
+                case ec.Dmq.ACCOUNT_HOLD:
+                case ec.Dmq.BILLING_RETRY:
+                    return {
+                        title: et.intl.string(ee.default.Duq8zp),
+                        description: et.intl.format(ee.default["MHn/D6"], {
+                            endDate: u,
+                            premiumGroupProductName: (0, ed.DP)(),
                         }),
-                    ],
-                }),
-            ],
-        });
-    },
-    eE = (e) => {
-        let {
-            premiumGroupMembers: t,
-            isLoadingPremiumGroupMembers: i,
-            canInvite: s,
-            onInvite: l,
-            onRemoveMember: r,
-            onRemoveInvitedUser: a,
-            numTotalSeats: o,
-            numUsedSeats: u,
-            numAvailableInvites: d,
-        } = e;
-        if (i || null == t) return (0, n.jsx)(h.y, {});
-        let { primary: c, members: A, invitedUsers: E } = t;
-        return (0, n.jsxs)(M.B, {
-            direction: "vertical",
-            padding: { left: 32, bottom: 12 },
-            gap: 0,
-            children: [
-                (0, n.jsxs)(M.B, {
-                    direction: "vertical",
-                    gap: 4,
-                    padding: { top: 12, left: 4, right: 4, bottom: 10 },
-                    children: [
-                        (0, n.jsx)(m.D, {
-                            variant: "heading-sm/medium",
-                            color: "text-strong",
-                            children: et.intl.string(ee.default["oqw/KW"]),
+                    };
+                default:
+                    return {
+                        title: et.intl.formatToPlainString(ee.default.xiUjMF, {
+                            premiumGroupProductName: (0, ed.DP)(),
                         }),
-                        (0, n.jsx)(g.E, {
-                            variant: "text-xs/medium",
-                            color: "text-subtle",
-                            children: et.intl.format(ee.default["/a/UoP"], { usedSeats: u, totalSeats: o }),
+                        description: et.intl.format(ee.default["2HEyqG"], {
+                            primaryName: (0, z.$3)(d),
+                            premiumGroupProductName: (0, ed.DP)(),
+                            helpCenterLink: ed.TE,
                         }),
-                    ],
-                }),
-                (0, n.jsx)(es, { user: c, isOwnUser: !0 }),
-                A.map((e) => (0, n.jsx)(el, { user: e, onRemove: () => r(e) }, e.id)),
-                E.map((e) => (0, n.jsx)(ea, { user: e, onRemove: () => a(e) }, e.id)),
-                Array.from({ length: d }).map((e, t) =>
-                    (0, n.jsx)(eo, { onInvite: l, canInvite: s }, `seat-available-${t}`),
-                ),
-            ],
-        });
-    },
-    eS = (e) => {
-        let { subscription: t, analyticsLocations: l } = e,
-            { premiumGroupMembers: r, isLoading: a } = (0, K.A)(t.id),
-            {
-                numAvailableInvites: o,
-                numTotalSeats: d,
-                numUsedSeats: c,
-            } = (0, u.cf)([H.A], () => ({
-                numAvailableInvites: H.A.getNumAvailableInvites(),
-                numTotalSeats: H.A.getNumTotalSeats(),
-                numUsedSeats: H.A.getNumUsedSeats(),
-            })),
-            [g, m] = s.useState(!1),
-            { status: A } = t,
-            h = (0, L.nf)(),
-            E = (0, L.k5)() && h?.discountId === eu.xH,
-            S = s.useCallback(() => {
-                (0, V.openModalLazy)(async () => {
-                    let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
-                        i.e("23866"),
-                        i.e("69425"),
-                        i.e("16581"),
-                        i.e("84820"),
-                        i.e("94161"),
-                        i.e("13051"),
-                        i.e("80347"),
-                        i.e("80166"),
-                    ]).then(i.bind(i, 293061));
-                    return (i) => (0, n.jsx)(e, { ...i, premiumSubscription: t, analyticsLocations: l });
-                });
-            }, [t, l]),
-            T = s.useCallback(async () => {
-                m(!0), await (0, F.Ir)(t, l), m(!1);
-            }, [t, l]),
-            x = () => {
-                v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED, { subscription_id: t.id }),
-                    (0, V.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([
-                            i.e("17494"),
-                            i.e("44616"),
-                            i.e("96680"),
-                            i.e("85579"),
-                        ]).then(i.bind(i, 785606));
-                        return (i) => (0, n.jsx)(e, { ...i, subscription: t });
-                    });
-            },
-            p = s.useMemo(() => !ed.BE.includes(t.status) && o > 0, [t.status, o]),
-            {
-                title: f,
-                description: N,
-                discountDescription: _,
-            } = (() => {
-                switch (A) {
-                    case ec.Dmq.CANCELED:
-                        return {
-                            title: et.intl.string(ee.default.KME8Q6),
-                            description: et.intl.format(ee.default["1sNA+Y"], {
-                                endDate: t.currentPeriodEnd,
-                                premiumGroupProductName: (0, ed.DP)(),
-                            }),
-                        };
-                    case ec.Dmq.PAUSED:
-                        return {
-                            title: et.intl.string(ee.default["4flKoC"]),
-                            description: et.intl.format(ee.default["Q++BmO"], {
-                                premiumGroupProductName: (0, ed.DP)(),
-                            }),
-                        };
-                    case ec.Dmq.PAST_DUE:
-                    case ec.Dmq.ACCOUNT_HOLD:
-                    case ec.Dmq.BILLING_RETRY:
-                        return {
-                            title: et.intl.string(ee.default.cfeFEt),
-                            description: et.intl.format(ee.default["5+LPUW"], {
-                                endDate: t.currentPeriodEnd,
-                                helpCenterLink: ed.TE,
-                            }),
-                        };
-                    default: {
-                        let e = null;
-                        if (E && t.metadata?.active_discount_expires_at != null) {
-                            let i = (0, O.y8)(eu.gD.PREMIUM_GROUP_MONTH, !1, !1, {
-                                currency: t.currency,
-                                paymentSourceId: t.paymentSourceId ?? void 0,
-                            });
-                            e = et.intl.format(ee.default.FwjZzr, {
-                                percent: h?.percentage ?? 0,
-                                discountEndDate: new Date(t.metadata.active_discount_expires_at),
-                                regularPrice: (0, B.$g)(i.amount, i.currency),
-                            });
-                        }
-                        return {
-                            title: et.intl.formatToPlainString(ee.default.NRCfnQ, {
-                                premiumGroupProductName: (0, ed.DP)(),
-                            }),
-                            description: et.intl.format(ee.default.lvnrnb, {
-                                totalSeats: ed.LM,
-                                premiumGroupProductName: (0, ed.DP)(),
-                                helpCenterLink: ed.TE,
-                            }),
-                            ...(null != e ? { discountDescription: e } : null),
-                        };
-                    }
-                }
-            })();
-        return (0, n.jsxs)(k.h, {
-            className: eg.kL,
-            color: "nitro-pink",
-            children: [
-                (0, n.jsx)(em, { discountApplied: E }),
-                (0, n.jsxs)("div", {
-                    className: eg.wS,
-                    children: [
-                        (0, n.jsx)(eA, {
-                            title: f,
-                            description: N,
-                            discountDescription: _,
-                            button: (0, O.ki)(t)
-                                ? (0, n.jsx)(w.$, {
-                                      variant: "expressive",
-                                      size: "md",
-                                      text: et.intl.string(ee.default.EFTJMQ),
-                                      onClick: T,
-                                      loading: g,
-                                  })
-                                : (0, n.jsxs)(M.B, {
-                                      direction: "vertical",
-                                      gap: 12,
-                                      children: [
-                                          (0, n.jsx)(w.$, {
-                                              variant: "primary",
-                                              size: "md",
-                                              fullWidth: !0,
-                                              text: et.intl.string(ee.default.Tcmclj),
-                                              onClick: x,
-                                              disabled: !p,
-                                          }),
-                                          (0, n.jsx)(w.$, {
-                                              variant: "secondary",
-                                              size: "md",
-                                              fullWidth: !0,
-                                              text: et.intl.string(ee.default.oO0EYw),
-                                              onClick: S,
-                                          }),
-                                      ],
-                                  }),
-                        }),
-                        (0, n.jsx)(eE, {
-                            premiumGroupMembers: r,
-                            isLoadingPremiumGroupMembers: a,
-                            canInvite: p,
-                            onInvite: x,
-                            onRemoveMember: (e) => {
-                                v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_REMOVE_MEMBER_CLICKED, {
-                                    subscription_id: t.id,
-                                    member_user_id: e.id,
-                                }),
-                                    (0, V.openModalLazy)(async () => {
-                                        let { default: s } = await i.e("21305").then(i.bind(i, 391040));
-                                        return (i) => (0, n.jsx)(s, { ...i, subscriptionId: t.id, member: e });
-                                    });
-                            },
-                            onRemoveInvitedUser: (e) => {
-                                v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_CANCEL_INVITE_CLICKED, {
-                                    subscription_id: t.id,
-                                    invited_user_id: e.id,
-                                });
-                                let s = Y.A.getInviteByUserId(e.id)?.invite;
+                    };
+            }
+        })();
+    return (0, n.jsxs)(k.h, {
+        className: eg.kL,
+        color: "nitro-pink",
+        children: [
+            (0, n.jsx)(em, {}),
+            (0, n.jsxs)("div", {
+                className: eg.wS,
+                children: [
+                    (0, n.jsx)(eA, {
+                        title: g,
+                        description: A,
+                        button: (0, n.jsx)(w.$, {
+                            variant: "secondary",
+                            text: et.intl.string(ee.default.NCu2JD),
+                            onClick: function () {
                                 (0, V.openModalLazy)(async () => {
-                                    let { default: l } = await i.e("15554").then(i.bind(i, 115225));
+                                    let { default: e } = await i.e("92796").then(i.bind(i, 205463));
                                     return (i) =>
-                                        (0, n.jsx)(l, {
-                                            ...i,
-                                            subscriptionId: t.id,
-                                            invitedUser: e,
-                                            subscriptionGroupMemberId: s?.id,
-                                        });
+                                        (0, n.jsx)(e, { ...i, premiumGroupSubscriptionId: o, currentUser: t });
                                 });
                             },
-                            numTotalSeats: d,
-                            numUsedSeats: c,
-                            numAvailableInvites: o,
                         }),
-                    ],
-                }),
-            ],
-        });
-    };
+                    }),
+                    (0, n.jsxs)(M.B, {
+                        direction: "vertical",
+                        padding: { left: 32, bottom: 12 },
+                        gap: 0,
+                        children: [
+                            (0, n.jsx)(m.D, {
+                                variant: "heading-sm/medium",
+                                color: "text-strong",
+                                className: eg.Or,
+                                children: et.intl.string(ee.default["oqw/KW"]),
+                            }),
+                            (0, n.jsx)(es, { user: d, isOwnUser: !1 }),
+                            c.map((e) => (0, n.jsx)(er, { user: e, isOwnUser: e.id === t?.id }, e.id)),
+                        ],
+                    }),
+                ],
+            }),
+        ],
+    });
+}
+function eE(e) {
+    let {
+        premiumGroupMembers: t,
+        isLoadingPremiumGroupMembers: i,
+        canInvite: s,
+        onInvite: l,
+        onRemoveMember: r,
+        onRemoveInvitedUser: a,
+        numTotalSeats: o,
+        numUsedSeats: u,
+        numAvailableInvites: d,
+    } = e;
+    if (i || null == t) return (0, n.jsx)(h.y, {});
+    let { primary: c, members: A, invitedUsers: E } = t;
+    return (0, n.jsxs)(M.B, {
+        direction: "vertical",
+        padding: { left: 32, bottom: 12 },
+        gap: 0,
+        children: [
+            (0, n.jsxs)(M.B, {
+                direction: "vertical",
+                gap: 4,
+                padding: { top: 12, left: 4, right: 4, bottom: 10 },
+                children: [
+                    (0, n.jsx)(m.D, {
+                        variant: "heading-sm/medium",
+                        color: "text-strong",
+                        children: et.intl.string(ee.default["oqw/KW"]),
+                    }),
+                    (0, n.jsx)(g.E, {
+                        variant: "text-xs/medium",
+                        color: "text-subtle",
+                        children: et.intl.format(ee.default["/a/UoP"], { usedSeats: u, totalSeats: o }),
+                    }),
+                ],
+            }),
+            (0, n.jsx)(es, { user: c, isOwnUser: !0 }),
+            A.map((e) => (0, n.jsx)(el, { user: e, onRemove: () => r(e) }, e.id)),
+            E.map((e) => (0, n.jsx)(ea, { user: e, onRemove: () => a(e) }, e.id)),
+            Array.from({ length: d }).map((e, t) =>
+                (0, n.jsx)(eo, { onInvite: l, canInvite: s }, `seat-available-${t}`),
+            ),
+        ],
+    });
+}
+function eS(e) {
+    let { subscription: t, analyticsLocations: l } = e,
+        { premiumGroupMembers: r, isLoading: a } = (0, K.A)(t.id),
+        {
+            numAvailableInvites: o,
+            numTotalSeats: d,
+            numUsedSeats: c,
+        } = (0, u.cf)([H.A], () => ({
+            numAvailableInvites: H.A.getNumAvailableInvites(),
+            numTotalSeats: H.A.getNumTotalSeats(),
+            numUsedSeats: H.A.getNumUsedSeats(),
+        })),
+        [g, m] = s.useState(!1),
+        { status: A } = t,
+        h = (0, L.nf)(),
+        E = (0, L.k5)() && h?.discountId === eu.xH,
+        S = s.useCallback(() => {
+            (0, V.openModalLazy)(async () => {
+                let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
+                    i.e("23866"),
+                    i.e("69425"),
+                    i.e("16581"),
+                    i.e("84820"),
+                    i.e("94161"),
+                    i.e("13051"),
+                    i.e("80347"),
+                    i.e("80166"),
+                ]).then(i.bind(i, 293061));
+                return (i) => (0, n.jsx)(e, { ...i, premiumSubscription: t, analyticsLocations: l });
+            });
+        }, [t, l]),
+        T = s.useCallback(async () => {
+            m(!0), await (0, B.Ir)(t, l), m(!1);
+        }, [t, l]);
+    function x() {
+        v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED, { subscription_id: t.id }),
+            (0, V.openModalLazy)(async () => {
+                let { default: e } = await Promise.all([i.e("17494"), i.e("44616"), i.e("96680"), i.e("85579")]).then(
+                    i.bind(i, 785606),
+                );
+                return (i) => (0, n.jsx)(e, { ...i, subscription: t });
+            });
+    }
+    let p = s.useMemo(() => !ed.BE.includes(t.status) && o > 0, [t.status, o]),
+        {
+            title: f,
+            description: N,
+            discountDescription: _,
+        } = (() => {
+            switch (A) {
+                case ec.Dmq.CANCELED:
+                    return {
+                        title: et.intl.string(ee.default.KME8Q6),
+                        description: et.intl.format(ee.default["1sNA+Y"], {
+                            endDate: t.currentPeriodEnd,
+                            premiumGroupProductName: (0, ed.DP)(),
+                        }),
+                    };
+                case ec.Dmq.PAUSED:
+                    return {
+                        title: et.intl.string(ee.default["4flKoC"]),
+                        description: et.intl.format(ee.default["Q++BmO"], { premiumGroupProductName: (0, ed.DP)() }),
+                    };
+                case ec.Dmq.PAST_DUE:
+                case ec.Dmq.ACCOUNT_HOLD:
+                case ec.Dmq.BILLING_RETRY:
+                    return {
+                        title: et.intl.string(ee.default.cfeFEt),
+                        description: et.intl.format(ee.default["5+LPUW"], {
+                            endDate: t.currentPeriodEnd,
+                            helpCenterLink: ed.TE,
+                        }),
+                    };
+                default: {
+                    let e = null;
+                    if (E && t.metadata?.active_discount_expires_at != null) {
+                        let i = (0, O.y8)(eu.gD.PREMIUM_GROUP_MONTH, !1, !1, {
+                            currency: t.currency,
+                            paymentSourceId: t.paymentSourceId ?? void 0,
+                        });
+                        e = et.intl.format(ee.default.FwjZzr, {
+                            percent: h?.percentage ?? 0,
+                            discountEndDate: new Date(t.metadata.active_discount_expires_at),
+                            regularPrice: (0, F.$g)(i.amount, i.currency),
+                        });
+                    }
+                    return {
+                        title: et.intl.formatToPlainString(ee.default.NRCfnQ, {
+                            premiumGroupProductName: (0, ed.DP)(),
+                        }),
+                        description: et.intl.format(ee.default.lvnrnb, {
+                            totalSeats: ed.LM,
+                            premiumGroupProductName: (0, ed.DP)(),
+                            helpCenterLink: ed.TE,
+                        }),
+                        ...(null != e ? { discountDescription: e } : null),
+                    };
+                }
+            }
+        })();
+    return (0, n.jsxs)(k.h, {
+        className: eg.kL,
+        color: "nitro-pink",
+        children: [
+            (0, n.jsx)(em, { discountApplied: E }),
+            (0, n.jsxs)("div", {
+                className: eg.wS,
+                children: [
+                    (0, n.jsx)(eA, {
+                        title: f,
+                        description: N,
+                        discountDescription: _,
+                        button: (0, O.ki)(t)
+                            ? (0, n.jsx)(w.$, {
+                                  variant: "expressive",
+                                  size: "md",
+                                  text: et.intl.string(ee.default.EFTJMQ),
+                                  onClick: T,
+                                  loading: g,
+                              })
+                            : (0, n.jsxs)(M.B, {
+                                  direction: "vertical",
+                                  gap: 12,
+                                  children: [
+                                      (0, n.jsx)(w.$, {
+                                          variant: "primary",
+                                          size: "md",
+                                          fullWidth: !0,
+                                          text: et.intl.string(ee.default.Tcmclj),
+                                          onClick: x,
+                                          disabled: !p,
+                                      }),
+                                      (0, n.jsx)(w.$, {
+                                          variant: "secondary",
+                                          size: "md",
+                                          fullWidth: !0,
+                                          text: et.intl.string(ee.default.oO0EYw),
+                                          onClick: S,
+                                      }),
+                                  ],
+                              }),
+                    }),
+                    (0, n.jsx)(eE, {
+                        premiumGroupMembers: r,
+                        isLoadingPremiumGroupMembers: a,
+                        canInvite: p,
+                        onInvite: x,
+                        onRemoveMember: function (e) {
+                            v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_REMOVE_MEMBER_CLICKED, {
+                                subscription_id: t.id,
+                                member_user_id: e.id,
+                            }),
+                                (0, V.openModalLazy)(async () => {
+                                    let { default: s } = await i.e("21305").then(i.bind(i, 391040));
+                                    return (i) => (0, n.jsx)(s, { ...i, subscriptionId: t.id, member: e });
+                                });
+                        },
+                        onRemoveInvitedUser: function (e) {
+                            v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_CANCEL_INVITE_CLICKED, {
+                                subscription_id: t.id,
+                                invited_user_id: e.id,
+                            });
+                            let s = Y.A.getInviteByUserId(e.id)?.invite;
+                            (0, V.openModalLazy)(async () => {
+                                let { default: l } = await i.e("15554").then(i.bind(i, 115225));
+                                return (i) =>
+                                    (0, n.jsx)(l, {
+                                        ...i,
+                                        subscriptionId: t.id,
+                                        invitedUser: e,
+                                        subscriptionGroupMemberId: s?.id,
+                                    });
+                            });
+                        },
+                        numTotalSeats: d,
+                        numUsedSeats: c,
+                        numAvailableInvites: o,
+                    }),
+                ],
+            }),
+        ],
+    });
+}
 var eT = i(97352),
     ex = i(990078),
     ep = i(403581),
@@ -553,9 +548,9 @@ function ev(e) {
         return t === a.id;
     });
     if (null == o) return null;
-    let u = (0, B.$g)(o.amount, s.currency),
+    let u = (0, F.$g)(o.amount, s.currency),
         d = (0, O.y8)(eu.gD.PREMIUM_MONTH_TIER_2, !1, !1, { currency: t.currency, paymentSourceId: t.paymentSourceId }),
-        c = (0, B.$g)(d.amount, d.currency);
+        c = (0, F.$g)(d.amount, d.currency);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(m.D, {
@@ -610,33 +605,33 @@ let eO = function (e) {
             renewalChurnDiscountInfo: o,
             discountOffer: u,
         } = e,
-        { analyticsLocations: d } = (0, f.Ay)(p.A.CHURN_DISCOUNT_SUBSCRIPTION_HEADER),
-        c = () => {
-            t.status !== ec.Dmq.CANCELED && m();
-        },
-        m = (e) => {
-            (0, V.openModalLazy)(async () => {
-                let { PremiumBrandRefreshSubscriptionCancellationModal: s } = await Promise.all([
-                    i.e("23866"),
-                    i.e("69425"),
-                    i.e("16581"),
-                    i.e("84820"),
-                    i.e("94161"),
-                    i.e("13051"),
-                    i.e("80347"),
-                    i.e("80166"),
-                ]).then(i.bind(i, 293061));
-                return (i) =>
-                    (0, n.jsx)(s, {
-                        ...i,
-                        premiumSubscription: t,
-                        analyticsLocation: r,
-                        analyticsLocations: d,
-                        initialStep: e,
-                    });
-            });
-        },
-        A = O.Ay.getPlanIdFromInvoice(t, s),
+        { analyticsLocations: d } = (0, f.Ay)(p.A.CHURN_DISCOUNT_SUBSCRIPTION_HEADER);
+    function c() {
+        t.status !== ec.Dmq.CANCELED && m();
+    }
+    function m(e) {
+        (0, V.openModalLazy)(async () => {
+            let { PremiumBrandRefreshSubscriptionCancellationModal: s } = await Promise.all([
+                i.e("23866"),
+                i.e("69425"),
+                i.e("16581"),
+                i.e("84820"),
+                i.e("94161"),
+                i.e("13051"),
+                i.e("80347"),
+                i.e("80166"),
+            ]).then(i.bind(i, 293061));
+            return (i) =>
+                (0, n.jsx)(s, {
+                    ...i,
+                    premiumSubscription: t,
+                    analyticsLocation: r,
+                    analyticsLocations: d,
+                    initialStep: e,
+                });
+        });
+    }
+    let A = O.Ay.getPlanIdFromInvoice(t, s),
         h = (0, e_.ux)(u?.expiresAt?.toISOString());
     return (0, b.m1)(A)
         ? null
@@ -754,43 +749,43 @@ var eR = i(284009),
     eV = i(780964),
     ek = i(766075),
     ew = i(327479),
-    eF = i(601107),
-    eB = i(428797);
+    eB = i(601107),
+    eF = i(428797);
 let ez = [ec.Dmq.PAST_DUE, ec.Dmq.ACCOUNT_HOLD, ec.Dmq.BILLING_RETRY],
     eX = (e) => {
         let { transitionState: t, onClose: i, subscription: l, analyticsLocations: r, analyticsLocation: a } = e,
             [o, u] = s.useState(!1),
             [d, c] = s.useState(!1);
+        async function g() {
+            u(!0), c(!1);
+            try {
+                await (0, eU.M2)(l.id, r, a),
+                    v.default.track(ec.HAw.GUILD_BOOST_PAST_DUE_CANCELLATION_FLOW_COMPLETED, {
+                        subscription_id: l.id,
+                        location_stack: r,
+                    }),
+                    (0, eU.hP)(),
+                    i();
+            } catch (e) {
+                c(!0), u(!1);
+            }
+        }
         s.useEffect(() => {
             v.default.track(ec.HAw.GUILD_BOOST_PAST_DUE_CANCEL_MODAL_VIEWED, {
                 subscription_id: l.id,
                 location_stack: r,
             });
         }, []);
-        let g = async () => {
-                u(!0), c(!1);
-                try {
-                    await (0, eU.M2)(l.id, r, a),
-                        v.default.track(ec.HAw.GUILD_BOOST_PAST_DUE_CANCELLATION_FLOW_COMPLETED, {
-                            subscription_id: l.id,
-                            location_stack: r,
-                        }),
-                        (0, eU.hP)(),
-                        i();
-                } catch (e) {
-                    c(!0), u(!1);
-                }
+        let m = [
+            { text: et.intl.string(et.t.oEAioF), onClick: () => i(), variant: "secondary" },
+            {
+                text: et.intl.string(et.t["cY+Oob"]),
+                onClick: () => g(),
+                disabled: o,
+                variant: "critical-primary",
+                loading: o,
             },
-            m = [
-                { text: et.intl.string(et.t.oEAioF), onClick: () => i(), variant: "secondary" },
-                {
-                    text: et.intl.string(et.t["cY+Oob"]),
-                    onClick: () => g(),
-                    disabled: o,
-                    variant: "critical-primary",
-                    loading: o,
-                },
-            ];
+        ];
         return (0, n.jsx)(eP.Modal, {
             size: "md",
             transitionState: t,
@@ -819,32 +814,32 @@ function eY(e) {
     let { status: m } = i,
         A = (0, O.$k)(i),
         h = !A && i.isBoostOnly && ez.includes(i.status);
-    if (A) t = eB.v2;
+    if (A) t = eF.v2;
     else
         switch (m) {
             case ec.Dmq.PAST_DUE:
             case ec.Dmq.ACCOUNT_HOLD:
             case ec.Dmq.BILLING_RETRY:
-                t = eB.P7;
+                t = eF.P7;
                 break;
             case ec.Dmq.PAUSE_PENDING:
             case ec.Dmq.PAUSED:
-                t = i.pauseReason !== eF.qf.FRACTIONAL_PREMIUM ? eB.C7 : eB.wG;
+                t = i.pauseReason !== eB.qf.FRACTIONAL_PREMIUM ? eF.C7 : eF.wG;
                 break;
             default:
-                t = eB.wG;
+                t = eF.wG;
         }
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)("div", {
-                className: r()(t, eB.Qn),
+                className: r()(t, eF.Qn),
                 children: [
-                    (0, n.jsx)("div", { className: eB.Kq }),
-                    (0, n.jsx)("div", { className: eB.OL }),
+                    (0, n.jsx)("div", { className: eF.Kq }),
+                    (0, n.jsx)("div", { className: eF.OL }),
                     (0, n.jsxs)("div", {
-                        className: eB.eC,
+                        className: eF.eC,
                         children: [
-                            (0, n.jsx)("div", { className: r()(eB.Ab, { [eB.aD]: A }) }),
+                            (0, n.jsx)("div", { className: r()(eF.Ab, { [eF.aD]: A }) }),
                             (0, n.jsx)("div", {
                                 children: (0, O.Uf)({
                                     subscription: i,
@@ -857,14 +852,14 @@ function eY(e) {
                     }),
                     a &&
                         (0, n.jsxs)("div", {
-                            className: eB.BQ,
+                            className: eF.BQ,
                             children: [
                                 h &&
                                     (0, n.jsx)("div", {
-                                        className: eB.x7,
+                                        className: eF.x7,
                                         children: (0, n.jsx)(q.Q, {
                                             variant: "always-white",
-                                            onClick: () => {
+                                            onClick: function () {
                                                 ez.includes(i.status) &&
                                                     (0, V.openModalLazy)(
                                                         async () => (e) =>
@@ -890,7 +885,7 @@ function eY(e) {
             }),
             !a &&
                 (0, n.jsx)(g.E, {
-                    className: eB.yW,
+                    className: eF.yW,
                     variant: "text-sm/normal",
                     children: et.intl.format(eL.Fr ? et.t.uxYBEa : et.t.k6haR9, {
                         openAppHook: () => (0, eM.A)("app"),
@@ -1265,12 +1260,12 @@ function e7(e) {
             !i.isPurchasedExternally,
         k = O && i.status === ec.Dmq.PAST_DUE && !R && !i.isPurchasedExternally,
         w = (0, P.l)(),
-        F = !R && w,
-        B = i?.status === ec.Dmq.PAST_DUE,
-        z = B ? o()().diff(o()(i.currentPeriodStart), "days") : 0,
+        B = !R && w,
+        F = i?.status === ec.Dmq.PAST_DUE,
+        z = F ? o()().diff(o()(i.currentPeriodStart), "days") : 0,
         X = null != A && A.isPremiumGroupPrimary(),
         Y = i.hasAnyPremiumGroup,
-        [H] = (0, D.C8)({ subscriptionId: i.id, preventFetch: !(F || B) });
+        [H] = (0, D.C8)({ subscriptionId: i.id, preventFetch: !(B || F) });
     return null == v || null == j
         ? (0, n.jsx)(h.y, {})
         : (null != i.renewalMutations &&
@@ -1288,7 +1283,7 @@ function e7(e) {
               children: [
                   V ? (0, n.jsx)(eJ, {}) : null,
                   k ? (0, n.jsx)(e$, {}) : null,
-                  F && null != H ? (0, n.jsx)(e0, { daysPastDue: z, subscription: i, openInvoiceId: H.id }) : null,
+                  B && null != H ? (0, n.jsx)(e0, { daysPastDue: z, subscription: i, openInvoiceId: H.id }) : null,
                   X && Y && (0, n.jsx)(eS, { subscription: i, analyticsLocations: S }),
                   t,
                   (0, n.jsxs)("div", {

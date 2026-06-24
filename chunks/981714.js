@@ -4573,7 +4573,7 @@ function an(e) {
     return (0, r.jsx)(eT.$, {
         size: "sm",
         variant: "secondary",
-        onClick: () => {
+        onClick: function () {
             s6.A.blockUser(t, { location: ec.liQ.DM_CHANNEL });
         },
         text: eR.intl.string(eR.t.l4Emac),
@@ -4594,7 +4594,7 @@ function al(e) {
         ? null
         : (0, r.jsx)(eT.$, {
               variant: l,
-              onClick: () => {
+              onClick: function () {
                   a === ec.eA$.PENDING_INCOMING
                       ? c()
                       : s6.A.addRelationship({ userId: t, context: { location: ec.liQ.DM_CHANNEL } });
@@ -4606,7 +4606,7 @@ function ai(e) {
     let { userId: t } = e;
     return (0, r.jsx)(eT.$, {
         variant: "secondary",
-        onClick: () => {
+        onClick: function () {
             s6.A.removeFriend(t, { location: ec.liQ.DM_CHANNEL });
         },
         text: eR.intl.string(eR.t.cvSt1J),
@@ -4616,7 +4616,7 @@ function as(e) {
     let { userId: t } = e;
     return (0, r.jsx)(eT.$, {
         variant: "secondary",
-        onClick: () => {
+        onClick: function () {
             s6.A.unblockUser(t, { location: ec.liQ.DM_CHANNEL });
         },
         text: eR.intl.string(eR.t.XyHpKH),
@@ -4645,7 +4645,7 @@ function aa(e) {
                     (0, r.jsx)(eT.$, { variant: "primary", onClick: s, text: eR.intl.string(eR.t["+WbSn5"]) }),
                     (0, r.jsx)(eT.$, {
                         variant: "secondary",
-                        onClick: () => {
+                        onClick: function () {
                             s6.A.cancelFriendRequest(n.id, { location: ec.liQ.DM_CHANNEL });
                         },
                         text: eR.intl.string(eR.t.rQSndv),

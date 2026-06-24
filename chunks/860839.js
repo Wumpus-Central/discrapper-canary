@@ -78,17 +78,19 @@ var M = n(286320),
 function Y() {
     let e = (0, M.b)().slice(0, 3),
         t = e[0],
-        { avatarSrc: n, eventHandlers: i } = (0, B.A)({ userId: t?.id, size: v._3.SIZE_24, animateOnHover: !0 }),
-        a = (e) => (null != e.globalName ? e.globalName : e.username),
-        o = s.useMemo(
-            () =>
-                e.length >= 2
-                    ? j.intl.formatToPlainString(j.t.c7ETJH, { username: a(e[0]) })
-                    : 1 === e.length
-                      ? j.intl.formatToPlainString(j.t.dpjXPL, { username: a(e[0]) })
-                      : "",
-            [e],
-        );
+        { avatarSrc: n, eventHandlers: i } = (0, B.A)({ userId: t?.id, size: v._3.SIZE_24, animateOnHover: !0 });
+    function a(e) {
+        return null != e.globalName ? e.globalName : e.username;
+    }
+    let o = s.useMemo(
+        () =>
+            e.length >= 2
+                ? j.intl.formatToPlainString(j.t.c7ETJH, { username: a(e[0]) })
+                : 1 === e.length
+                  ? j.intl.formatToPlainString(j.t.dpjXPL, { username: a(e[0]) })
+                  : "",
+        [e],
+    );
     return 0 === e.length
         ? null
         : (0, r.jsxs)("div", {
@@ -392,7 +394,7 @@ function eC(e) {
         _ = (0, M.b)(),
         h = !s && n && !i && _.length > 0,
         f = 3 === t || (0 === t && s && a),
-        p = (() => {
+        p = (function () {
             switch (t) {
                 case 3:
                     return eu;
@@ -530,9 +532,11 @@ function eN(e) {
         ],
     });
 }
-let ev = (e) => (t) => {
-    null != e && ("function" == typeof e ? e(t) : e.hasOwnProperty("current") && (e.current = t));
-};
+function ev(e) {
+    return (t) => {
+        null != e && ("function" == typeof e ? e(t) : e.hasOwnProperty("current") && (e.current = t));
+    };
+}
 function eR(e) {
     let { innerRef: t, className: n, tier0CTAButton: i, tier2CTAButton: s } = e,
         { analyticsLocations: a } = (0, E.Ay)(p.A.PREMIUM_MARKETING_TIER_CARD),

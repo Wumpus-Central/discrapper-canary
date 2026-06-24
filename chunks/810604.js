@@ -338,38 +338,32 @@ function eu(e) {
                 g &&
                     !V &&
                     !Y &&
-                    (0, r.jsx)(
-                        () =>
-                            (0, r.jsxs)(r.Fragment, {
-                                children: [
-                                    !B &&
-                                        (0, r.jsxs)(r.Fragment, {
-                                            children: [
-                                                (0, r.jsx)("img", {
-                                                    src: ei,
-                                                    alt: "",
-                                                    className: o()(et.bigCloud, et[p]),
-                                                }),
-                                                (0, r.jsx)("img", {
-                                                    src: en,
-                                                    alt: "",
-                                                    className: o()(et.smallCloud, et[p]),
-                                                }),
-                                            ],
-                                        }),
-                                    (!B || null != t) &&
-                                        (0, r.jsx)("img", {
-                                            src: er,
-                                            alt: "",
-                                            className: o()(et.wumpus, et[p], {
-                                                [et.withAnnualDiscountBanner]: B,
-                                                [et.noGiftPrice]: a && !z,
+                    (0, r.jsx)(function () {
+                        return (0, r.jsxs)(r.Fragment, {
+                            children: [
+                                !B &&
+                                    (0, r.jsxs)(r.Fragment, {
+                                        children: [
+                                            (0, r.jsx)("img", { src: ei, alt: "", className: o()(et.bigCloud, et[p]) }),
+                                            (0, r.jsx)("img", {
+                                                src: en,
+                                                alt: "",
+                                                className: o()(et.smallCloud, et[p]),
                                             }),
+                                        ],
+                                    }),
+                                (!B || null != t) &&
+                                    (0, r.jsx)("img", {
+                                        src: er,
+                                        alt: "",
+                                        className: o()(et.wumpus, et[p], {
+                                            [et.withAnnualDiscountBanner]: B,
+                                            [et.noGiftPrice]: a && !z,
                                         }),
-                                ],
-                            }),
-                        {},
-                    ),
+                                    }),
+                            ],
+                        });
+                    }, {}),
                 A && !B && (0, r.jsx)(K.R, { text: W ?? P.intl.string(P.t["6bEcYr"]), className: et.pill }),
                 (0, r.jsx)(l.D, {
                     variant: "display-md",
@@ -440,84 +434,84 @@ function ec(e) {
         ? (0, r.jsx)(h.h, { color: "nitro-pink", className: o()(et.card, t), children: c })
         : (0, r.jsx)("div", { className: o()(et.card, et.borderGradient, t), children: c });
 }
-let ed = (e) => {
-        let { subscriptionTier: t, isReducedMotion: n, tierCardProps: i, className: s, narrowLayout: a } = e,
-            l = t === $.pe.TIER_2,
-            u = (0, U.p)(),
-            { subscribeButtonProps: _, subscriptionTier: h } = (0, B.$)({
-                subscriptionTier: t,
-                variantOverride: l && null == u ? "expressive" : "secondary",
-            }),
-            { disabled: f } = _,
-            E = (0, r.jsx)(d.$, { size: "md", fullWidth: !0, ..._, disabled: f }),
-            m = (0, r.jsx)(c.B, {
-                direction: "vertical",
-                gap: 0,
-                className: o()(et.tierCardStack, { [et.premiumCardHover]: !n }),
-                children: (0, r.jsx)(l ? eu : ea, {
-                    className: o()(et.applicationHomeCard, { [et.narrow]: a }),
-                    ctaButton: E,
-                    showYearlyPrice: !0,
-                    isApplicationHome: !0,
-                    ...i,
-                }),
-            });
-        return (0, r.jsx)(c.B, {
+function ed(e) {
+    let { subscriptionTier: t, isReducedMotion: n, tierCardProps: i, className: s, narrowLayout: a } = e,
+        l = t === $.pe.TIER_2,
+        u = (0, U.p)(),
+        { subscribeButtonProps: _, subscriptionTier: h } = (0, B.$)({
+            subscriptionTier: t,
+            variantOverride: l && null == u ? "expressive" : "secondary",
+        }),
+        { disabled: f } = _,
+        E = (0, r.jsx)(d.$, { size: "md", fullWidth: !0, ..._, disabled: f }),
+        m = (0, r.jsx)(c.B, {
             direction: "vertical",
             gap: 0,
-            className: o()(et.tierCardStack, s),
-            children: f
-                ? m
-                : (0, r.jsx)(V.A, {
-                      subscriptionTier: h,
-                      children: (e) => {
-                          let { onClick: t } = e;
-                          return (0, r.jsx)(p.D, { onClick: t, className: et.tierCardStack, children: m });
-                      },
-                  }),
-        });
-    },
-    e_ = (e) => {
-        let { isReducedMotion: t, className: n } = e,
-            i = (0, U.p)(),
-            s =
-                null != i
-                    ? P.intl.format(z.default["7j70dP"], {
-                          percent: i.discount?.amount,
-                          premiumGroupProductName: (0, ee.DP)(),
-                      })
-                    : P.intl.string(P.t["2pG5Ga"]),
-            a = (0, r.jsx)(d.$, {
-                size: "md",
-                fullWidth: !0,
-                icon: E.t,
-                text: s,
-                variant: null != i ? "expressive" : "secondary",
+            className: o()(et.tierCardStack, { [et.premiumCardHover]: !n }),
+            children: (0, r.jsx)(l ? eu : ea, {
+                className: o()(et.applicationHomeCard, { [et.narrow]: a }),
+                ctaButton: E,
+                showYearlyPrice: !0,
+                isApplicationHome: !0,
+                ...i,
             }),
-            l = (0, r.jsx)(c.B, {
+        });
+    return (0, r.jsx)(c.B, {
+        direction: "vertical",
+        gap: 0,
+        className: o()(et.tierCardStack, s),
+        children: f
+            ? m
+            : (0, r.jsx)(V.A, {
+                  subscriptionTier: h,
+                  children: (e) => {
+                      let { onClick: t } = e;
+                      return (0, r.jsx)(p.D, { onClick: t, className: et.tierCardStack, children: m });
+                  },
+              }),
+    });
+}
+function e_(e) {
+    let { isReducedMotion: t, className: n } = e,
+        i = (0, U.p)(),
+        s =
+            null != i
+                ? P.intl.format(z.default["7j70dP"], {
+                      percent: i.discount?.amount,
+                      premiumGroupProductName: (0, ee.DP)(),
+                  })
+                : P.intl.string(P.t["2pG5Ga"]),
+        a = (0, r.jsx)(d.$, {
+            size: "md",
+            fullWidth: !0,
+            icon: E.t,
+            text: s,
+            variant: null != i ? "expressive" : "secondary",
+        }),
+        l = (0, r.jsx)(c.B, {
+            direction: "vertical",
+            gap: 0,
+            className: o()(et.tierCardStack, { [et.premiumCardHover]: !t }),
+            children: (0, r.jsx)(ec, {
+                className: o()(et.applicationHomeCard, et.narrow),
+                ctaButton: a,
+                isApplicationHome: !0,
+            }),
+        });
+    return (0, r.jsx)(V.A, {
+        subscriptionTier: $.pe.TIER_2,
+        initialPlanId: $.gD.PREMIUM_GROUP_MONTH,
+        children: (e) => {
+            let { onClick: t } = e;
+            return (0, r.jsx)(c.B, {
                 direction: "vertical",
                 gap: 0,
-                className: o()(et.tierCardStack, { [et.premiumCardHover]: !t }),
-                children: (0, r.jsx)(ec, {
-                    className: o()(et.applicationHomeCard, et.narrow),
-                    ctaButton: a,
-                    isApplicationHome: !0,
-                }),
+                className: o()(et.tierCardStack, n),
+                children: (0, r.jsx)(p.D, { onClick: t, className: et.tierCardStack, children: l }),
             });
-        return (0, r.jsx)(V.A, {
-            subscriptionTier: $.pe.TIER_2,
-            initialPlanId: $.gD.PREMIUM_GROUP_MONTH,
-            children: (e) => {
-                let { onClick: t } = e;
-                return (0, r.jsx)(c.B, {
-                    direction: "vertical",
-                    gap: 0,
-                    className: o()(et.tierCardStack, n),
-                    children: (0, r.jsx)(p.D, { onClick: t, className: et.tierCardStack, children: l }),
-                });
-            },
-        });
-    };
+        },
+    });
+}
 function eh(e) {
     let { innerRef: t, className: n } = e,
         { analyticsLocations: i } = (0, I.Ay)(A.A.PREMIUM_MARKETING_TIER_CARD),

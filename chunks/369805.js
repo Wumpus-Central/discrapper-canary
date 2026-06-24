@@ -7,7 +7,7 @@ var i = n(422936),
     o = n(88001),
     l = n(466919),
     u = n(375708);
-let c = (e, t) => {
+let c = function (e, t) {
     let n = t?.includesPremiumGroup ?? !1,
         c = (0, r.V)(),
         d = (0, i.O)(),

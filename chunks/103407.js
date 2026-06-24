@@ -45,28 +45,28 @@ var v = n(503698),
     Y = n(186111),
     W = n(774774),
     K = n(777135);
-let $ = [],
-    z = (e) => {
-        let { tagText: t, className: n } = e;
-        return (0, i.jsx)(w.Lp, { className: R()(K.Tc, n), text: t });
-    },
-    q = (e) => {
-        let { header: t, subHeader: n, subHeaderExtra: r, imageSrc: s, tagText: a, wideStyle: o } = e;
-        return (0, i.jsxs)("div", {
-            className: R()(K.Vr, { [K.tF]: o }),
-            children: [
-                null != a ? (0, i.jsx)(z, { tagText: a, className: K.bX }) : null,
-                (0, i.jsx)("img", { alt: "", className: R()(K._n, { [K.tF]: o }), src: s }),
-                (0, i.jsxs)("div", {
-                    className: R()(K.Zz, { [K.tF]: o }),
-                    children: [
-                        (0, i.jsx)(M.D, { variant: "heading-md/bold", className: K.Hf, children: t }),
-                        (0, i.jsxs)(P.E, { variant: "text-md/medium", color: "text-subtle", children: [n, r?.()] }),
-                    ],
-                }),
-            ],
-        });
-    };
+let $ = [];
+function z(e) {
+    let { tagText: t, className: n } = e;
+    return (0, i.jsx)(w.Lp, { className: R()(K.Tc, n), text: t });
+}
+function q(e) {
+    let { header: t, subHeader: n, subHeaderExtra: r, imageSrc: s, tagText: a, wideStyle: o } = e;
+    return (0, i.jsxs)("div", {
+        className: R()(K.Vr, { [K.tF]: o }),
+        children: [
+            null != a ? (0, i.jsx)(z, { tagText: a, className: K.bX }) : null,
+            (0, i.jsx)("img", { alt: "", className: R()(K._n, { [K.tF]: o }), src: s }),
+            (0, i.jsxs)("div", {
+                className: R()(K.Zz, { [K.tF]: o }),
+                children: [
+                    (0, i.jsx)(M.D, { variant: "heading-md/bold", className: K.Hf, children: t }),
+                    (0, i.jsxs)(P.E, { variant: "text-md/medium", color: "text-subtle", children: [n, r?.()] }),
+                ],
+            }),
+        ],
+    });
+}
 function Z(e) {
     let {
             componentId: t,

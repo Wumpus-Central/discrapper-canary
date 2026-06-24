@@ -30,7 +30,7 @@ var i = n(627968),
     D = n(652215),
     L = n(375708),
     w = n(555599);
-let M = (e) => {
+function M(e) {
     let {
             id: t,
             title: n,
@@ -237,7 +237,7 @@ let M = (e) => {
                 ],
             }),
     });
-};
+}
 function P(e) {
     let { asset: t, className: n } = e;
     return null == t || "" === t

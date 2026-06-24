@@ -17,19 +17,21 @@ function p(e) {
         p = (0, d.b)().slice(0, 3).reverse(),
         m = p.map((e, t) =>
             (0, i.jsx)(E, { affinity: e, applyMask: t !== p.length - 1, size: c ? _._3.SIZE_24 : _._3.SIZE_32 }, e.id),
-        ),
-        g = (e) => (null != e.globalName ? e.globalName : e.username),
-        A = r.useMemo(
-            () =>
-                3 === p.length
-                    ? h.intl.formatToPlainString(h.t.c7ETJH, { username: g(p[2]) })
-                    : 2 === p.length
-                      ? h.intl.formatToPlainString(h.t["st8Rh/"], { username: g(p[1]), otherUsername: g(p[0]) })
-                      : 1 === p.length
-                        ? h.intl.formatToPlainString(h.t.dpjXPL, { username: g(p[0]) })
-                        : "",
-            [p],
         );
+    function g(e) {
+        return null != e.globalName ? e.globalName : e.username;
+    }
+    let A = r.useMemo(
+        () =>
+            3 === p.length
+                ? h.intl.formatToPlainString(h.t.c7ETJH, { username: g(p[2]) })
+                : 2 === p.length
+                  ? h.intl.formatToPlainString(h.t["st8Rh/"], { username: g(p[1]), otherUsername: g(p[0]) })
+                  : 1 === p.length
+                    ? h.intl.formatToPlainString(h.t.dpjXPL, { username: g(p[0]) })
+                    : "",
+        [p],
+    );
     return 0 === p.length
         ? null
         : (0, i.jsxs)("div", {

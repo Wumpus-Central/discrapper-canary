@@ -98,70 +98,72 @@ function T(t) {
         [S, k] = r.useState(!1),
         m = (0, i.bG)([O.A], () => O.A.getErrors()),
         I = r.useRef(null);
-    r.useEffect(() => {
-        I.current?.focus();
-    }, []);
-    let M = async (t) => {
-            t.preventDefault(), s(null), A(!0);
+    async function M(t) {
+        t.preventDefault(), s(null), A(!0);
+        try {
+            let { token: t } = await L(C);
+            n(t), l();
+        } catch (t) {
+            s(new y.A(t).getAnyErrorMessage());
+        } finally {
+            A(!1);
+        }
+    }
+    async function T() {
+        if (!S) {
+            k(!0);
             try {
-                let { token: t } = await L(C);
-                n(t), l();
-            } catch (t) {
-                s(new y.A(t).getAnyErrorMessage());
-            } finally {
-                A(!1);
-            }
-        },
-        T = async () => {
-            if (!S) {
-                k(!0);
-                try {
-                    await v(!0), (0, d.P0)((0, h.o)(_.intl.string(_.t["84yeoz"]), x.Ck.SUCCESS));
-                } catch (e) {
-                    let t = new y.A(e).getAnyErrorMessage();
-                    null != t && (0, d.P0)((0, h.o)(t, x.Ck.FAILURE));
-                } finally {
-                    k(!1);
-                }
-            }
-        };
-    return (0, a.jsx)(c.k, {
-        title: _.intl.string(_.t.jMGc4J),
-        subtitle: _.intl.string(_.t.SZJowy),
-        graphic: { type: "image", src: g },
-        transitionState: E,
-        onClose: o,
-        actions: [{ variant: "primary", text: _.intl.string(_.t.PDTjLN), loading: u, onClick: M }],
-        children: (0, a.jsxs)(f.B, {
-            gap: 8,
-            children: [
-                (0, a.jsx)(p.k, {
-                    label: _.intl.string(_.t["8mZX6M"]),
-                    error: e ?? m?.email_token?.[0],
-                    value: C,
-                    onChange: N,
-                    inputRef: I,
-                }),
-                (0, a.jsx)(R.Q, { textVariant: "text-sm/normal", text: _.intl.string(_.t.K0NPQ6), onClick: T }),
-            ],
-        }),
-    });
-}
-function j(t) {
-    let { onNext: e, onClose: n, transitionState: s } = t,
-        [o, E] = r.useState(!1),
-        u = (0, i.bG)([l.default], () => l.default.getCurrentUser()),
-        A = async (t) => {
-            t.preventDefault(), E(!0);
-            try {
-                await v(), e();
+                await v(!0), (0, d.P0)((0, h.o)(_.intl.string(_.t["84yeoz"]), x.Ck.SUCCESS));
             } catch (e) {
                 let t = new y.A(e).getAnyErrorMessage();
                 null != t && (0, d.P0)((0, h.o)(t, x.Ck.FAILURE));
             } finally {
-                E(!1);
+                k(!1);
             }
-        };
+        }
+    }
+    return (
+        r.useEffect(() => {
+            I.current?.focus();
+        }, []),
+        (0, a.jsx)(c.k, {
+            title: _.intl.string(_.t.jMGc4J),
+            subtitle: _.intl.string(_.t.SZJowy),
+            graphic: { type: "image", src: g },
+            transitionState: E,
+            onClose: o,
+            actions: [{ variant: "primary", text: _.intl.string(_.t.PDTjLN), loading: u, onClick: M }],
+            children: (0, a.jsxs)(f.B, {
+                gap: 8,
+                children: [
+                    (0, a.jsx)(p.k, {
+                        label: _.intl.string(_.t["8mZX6M"]),
+                        error: e ?? m?.email_token?.[0],
+                        value: C,
+                        onChange: N,
+                        inputRef: I,
+                    }),
+                    (0, a.jsx)(R.Q, { textVariant: "text-sm/normal", text: _.intl.string(_.t.K0NPQ6), onClick: T }),
+                ],
+            }),
+        })
+    );
+}
+function j(t) {
+    let { onNext: e, onClose: n, transitionState: s } = t,
+        [o, E] = r.useState(!1),
+        u = (0, i.bG)([l.default], () => l.default.getCurrentUser());
+    async function A(t) {
+        t.preventDefault(), E(!0);
+        try {
+            await v(), e();
+        } catch (e) {
+            let t = new y.A(e).getAnyErrorMessage();
+            null != t && (0, d.P0)((0, h.o)(t, x.Ck.FAILURE));
+        } finally {
+            E(!1);
+        }
+    }
     return (0, a.jsx)(c.k, {
         graphic: { type: "image", src: g },
         title: _.intl.string(_.t.uFxYq0),

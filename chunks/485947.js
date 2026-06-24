@@ -6,7 +6,7 @@ var r = n(503698),
     s = n.n(r),
     a = n(707554),
     o = n(320388);
-let l = (e) => {
+let l = function (e) {
     let { className: t, children: n, "aria-label": r, id: l } = e;
     return (0, i.jsx)(a.H, { className: s()(t, o.kL, o.wx), "aria-label": r, id: l, children: n });
 };

@@ -4,7 +4,7 @@ var i = n(627968);
 n(64700);
 var r = n(834730),
     s = n(382996);
-let a = (e) => {
+let a = function (e) {
     let { text: t } = e;
     return (0, i.jsx)("div", {
         className: s.i,

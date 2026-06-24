@@ -24,11 +24,11 @@ var n = i(627968),
     C = i(788868),
     b = i(375708),
     y = i(220982);
-let v = () => {
+function v() {
     (0, A.Dr)(r.M.CLIENT_THEMES_SPARKLE_PREVIEW, { dismissAction: I.i.PRIMARY, forceTrack: !0 }),
         (0, m.nf)(m.HP.CLIENT_THEMES),
         (0, f.default)();
-};
+}
 function j() {
     let e = (0, h.O)(),
         t = (0, T.U9)(e, C.pe.TIER_2)

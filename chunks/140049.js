@@ -65,40 +65,36 @@ let c = (e) => {
     });
 };
 var d = n(255041);
-let _ = (e) => {
-        let {
-                src: t,
-                alt: n,
-                progressCircleText: r,
-                progressCirclePercent: u,
-                progressCircleUrgency: _,
-                compact: h = !1,
-            } = e,
-            f = (0, l.Ay)();
-        return (0, i.jsxs)("div", {
-            className: s()(d.mI, { [d.oE]: h }),
-            children: [
-                (0, i.jsx)("img", { alt: n, src: t, className: d.pq }),
-                null != r &&
-                    null != u &&
-                    null != _ &&
-                    (0, i.jsx)("div", {
-                        className: d.$t,
-                        children: (0, i.jsx)(c, {
-                            innerRingPercent: u,
-                            outerRingColor: "critical" === _ ? "var(--red-new-74)" : "var(--opacity-orange-36)",
-                            innerRingColor: "critical" === _ ? "var(--red-new-43)" : "var(--opacity-orange-96)",
-                            strokeWidth: 7,
-                            backgroundCircleColor: (0, a.M)(f) ? "var(--opacity-black-72)" : "var(--opacity-white-72)",
-                            backgroundCircleBlurAmount: 2,
-                            children: (0, i.jsx)(o.E, {
-                                variant: "text-sm/semibold",
-                                color: "text-subtle",
-                                children: r,
-                            }),
-                        }),
+function _(e) {
+    let {
+            src: t,
+            alt: n,
+            progressCircleText: r,
+            progressCirclePercent: u,
+            progressCircleUrgency: _,
+            compact: h = !1,
+        } = e,
+        f = (0, l.Ay)();
+    return (0, i.jsxs)("div", {
+        className: s()(d.mI, { [d.oE]: h }),
+        children: [
+            (0, i.jsx)("img", { alt: n, src: t, className: d.pq }),
+            null != r &&
+                null != u &&
+                null != _ &&
+                (0, i.jsx)("div", {
+                    className: d.$t,
+                    children: (0, i.jsx)(c, {
+                        innerRingPercent: u,
+                        outerRingColor: "critical" === _ ? "var(--red-new-74)" : "var(--opacity-orange-36)",
+                        innerRingColor: "critical" === _ ? "var(--red-new-43)" : "var(--opacity-orange-96)",
+                        strokeWidth: 7,
+                        backgroundCircleColor: (0, a.M)(f) ? "var(--opacity-black-72)" : "var(--opacity-white-72)",
+                        backgroundCircleBlurAmount: 2,
+                        children: (0, i.jsx)(o.E, { variant: "text-sm/semibold", color: "text-subtle", children: r }),
                     }),
-            ],
-        });
-    },
-    h = _;
+                }),
+        ],
+    });
+}
+let h = _;

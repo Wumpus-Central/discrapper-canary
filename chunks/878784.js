@@ -29,12 +29,13 @@ function p() {
     let e = (0, a.bG)([u.default], () => u.default.getCurrentUser());
     return _(e?.id) ?? null;
 }
-let E = (e) =>
-    (0, a.bG)([l.A], () => {
+function E(e) {
+    return (0, a.bG)([l.A], () => {
         if (null == e) return null;
         let t = l.A.getUserProfile(e);
         return t?.premiumSince;
     });
+}
 function m() {
     let e = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
         t = (0, d.YE)(e, h.PremiumTypes.TIER_2),
@@ -45,36 +46,36 @@ function m() {
         i = E(e?.id);
     return n ?? i;
 }
-let g = () => {
-        let e = Object.values(h.VD),
-            t = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
-            n = (0, a.bG)([c.A], () => c.A.getPremiumTypeSubscription());
-        if (!(0, d.YE)(t, h.PremiumTypes.TIER_2) || null == n || null == n.premiumSince) return null;
-        let i = s()(),
-            r = s()(n.premiumSince).add(1, "day"),
-            o = i.diff(r, "months");
-        return e.reduce((e, t) => {
-            let { id: n, tenureReqNumMonths: i } = t;
-            return o >= i ? n : e;
-        }, null);
-    },
-    A = () => {
-        let e,
-            t,
-            n = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
-            i = I(n?.id),
-            r =
-                ((e = p()),
-                (t = (0, a.bG)([c.A], () => c.A.getPremiumTypeSubscription())),
-                null == e || null == t || null == t.premiumSince ? null : (0, o.Xr)(e, t.premiumSince)),
-            s = m();
-        return null != i
-            ? { ...i, earnedOnDate: r, status: "earned" }
-            : null != s
-              ? { ...Object.values(h.VD)[0], status: "upcoming" }
-              : null;
-    },
-    I = (e) => {
-        let t = _(e);
-        return null == t ? null : h.VD[t];
-    };
+function g() {
+    let e = Object.values(h.VD),
+        t = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
+        n = (0, a.bG)([c.A], () => c.A.getPremiumTypeSubscription());
+    if (!(0, d.YE)(t, h.PremiumTypes.TIER_2) || null == n || null == n.premiumSince) return null;
+    let i = s()(),
+        r = s()(n.premiumSince).add(1, "day"),
+        o = i.diff(r, "months");
+    return e.reduce((e, t) => {
+        let { id: n, tenureReqNumMonths: i } = t;
+        return o >= i ? n : e;
+    }, null);
+}
+function A() {
+    let e,
+        t,
+        n = (0, a.bG)([u.default], () => u.default.getCurrentUser()),
+        i = I(n?.id),
+        r =
+            ((e = p()),
+            (t = (0, a.bG)([c.A], () => c.A.getPremiumTypeSubscription())),
+            null == e || null == t || null == t.premiumSince ? null : (0, o.Xr)(e, t.premiumSince)),
+        s = m();
+    return null != i
+        ? { ...i, earnedOnDate: r, status: "earned" }
+        : null != s
+          ? { ...Object.values(h.VD)[0], status: "upcoming" }
+          : null;
+}
+function I(e) {
+    let t = _(e);
+    return null == t ? null : h.VD[t];
+}

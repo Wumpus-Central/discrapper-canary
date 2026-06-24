@@ -32,4 +32,6 @@ function _() {
         }
     );
 }
-let h = () => r.useContext(u) ?? [];
+function h() {
+    return r.useContext(u) ?? [];
+}

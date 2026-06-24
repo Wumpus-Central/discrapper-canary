@@ -2486,7 +2486,7 @@ var rd = n(935399),
     rf = n(88001),
     rp = n(466919),
     rE = n(438705);
-let rm = (e) => {
+function rm(e) {
     let { targetElementRef: t, shouldShow: n, onDismiss: s } = e,
         a = r.useCallback(() => {
             s(), (0, er.openUserSettings)(ei.X.SUBSCRIPTIONS_PANEL);
@@ -2503,7 +2503,7 @@ let rm = (e) => {
         onRequestClose: s,
         actions: [{ text: eh.intl.string(rp.default.DD26QR), onClick: a }],
     });
-};
+}
 var rg = n(873298),
     rA = n(840387);
 function rI(e) {
