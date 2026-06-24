@@ -9,8 +9,8 @@ var n = l(17928),
     r = l(576705),
     c = l(977997),
     A = l(939496),
-    h = l(993401),
-    u = l(652215),
+    u = l(993401),
+    h = l(652215),
     x = l(996988),
     g = l(375708);
 function m(i) {
@@ -21,12 +21,12 @@ function m(i) {
     if (
         !(0, n.bG)([r.A], () => {
             let i = (0, a.r9)() && (0, a.UK)(t.id);
-            return (t.isPrivate() || r.A.can(u.xBc.CONNECT, t)) && !i;
+            return (t.isPrivate() || r.A.can(h.xBc.CONNECT, t)) && !i;
         })
     )
         return null;
     let _ = p === x.d.MODAL || p === x.d.MODAL_V2;
-    return (0, e.jsx)(h.FD, {
+    return (0, e.jsx)(u.FD, {
         text: C
             ? (function (i) {
                   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -57,3 +57,5 @@ function m(i) {
         },
     });
 }
+d;
+)),E?.()}})}
