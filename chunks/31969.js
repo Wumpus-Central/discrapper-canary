@@ -46,9 +46,7 @@ function E(e, t) {
         if (null == h) return null;
         let t = null != h.endsAt ? new Date(h.endsAt) : null;
         switch (e) {
-            case "storefront_banner":
-            case "vc_purchase_recommendations":
-            case "vc_gift_recommendations": {
+            case "storefront_banner": {
                 let e = h.storefront?.headerText;
                 if ((0, u.uJ)(e)) return null;
                 return { Icon: f(h.pdp?.icon ?? null), text: e, tooltip: null, endsAt: t, rewardValue: null };
@@ -77,6 +75,18 @@ function E(e, t) {
                     tooltip: g(n?.tooltip ?? null, E),
                     endsAt: t,
                     rewardValue: E,
+                };
+            }
+            case "vc_purchase_recommendations":
+            case "vc_gift_recommendations": {
+                let e = h.vcStream?.label;
+                if ((0, u.uJ)(e)) return null;
+                return {
+                    Icon: f(h.vcStream?.icon ?? null),
+                    text: e,
+                    tooltip: h.vcStream?.tooltip ?? null,
+                    endsAt: t,
+                    rewardValue: null,
                 };
             }
             case "sku_purchase_badge":

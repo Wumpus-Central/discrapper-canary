@@ -96,6 +96,7 @@ function D(e) {
         pdp: b(e.pdp),
         storefront: null != e.storefront ? { headerText: e.storefront.header_text } : null,
         checkout: b(e.checkout),
+        vcStream: b(e.vc_stream),
     };
 }
 function L(e) {
