@@ -57,7 +57,7 @@ function E(e, t) {
                 let e = h.storefront?.headerText;
                 if ((0, u.uJ)(e)) return null;
                 return {
-                    Icon: f(h.pdp?.icon ?? "TAG"),
+                    Icon: f("TAG"),
                     text: m.intl.string(d.default.hriMCc),
                     tooltip: e,
                     endsAt: t,
@@ -86,7 +86,7 @@ function E(e, t) {
                     l = g(n?.label ?? null, E);
                 if ((0, u.uJ)(l)) return null;
                 return {
-                    Icon: f(n?.icon ?? null),
+                    Icon: f("TAG"),
                     text: m.intl.string(d.default.hriMCc),
                     tooltip: g(n?.tooltip ?? null, E),
                     endsAt: t,

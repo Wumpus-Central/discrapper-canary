@@ -329,7 +329,7 @@ function el(e) {
         onPurchaseClick: g,
         analyticsLocations: r,
         currentUser: a,
-        promotion: null != o ? (0, n.jsx)(z.c, { spec: ei, icon: o.Icon, type: { text: o.text } }) : null,
+        promotion: null != o && (0, n.jsx)(z.s, { spec: ei, icon: o.Icon, tooltipText: o.tooltip }),
         ...c,
     });
 }
