@@ -12,8 +12,8 @@ var n = i(284009),
     f = i(320095),
     p = i(944043),
     y = i(885386),
-    m = i(164891),
-    g = i(616356),
+    g = i(164891),
+    m = i(616356),
     I = i(495544),
     E = i(734057),
     S = i(232835),
@@ -89,8 +89,8 @@ var tu = i(387755),
     tf = i(621436),
     tp = i(778712),
     ty = i(834730),
-    tm = i(966327),
-    tg = i(769015),
+    tg = i(966327),
+    tm = i(769015),
     tI = i(562153),
     tE = i(41984),
     tS = i(222506),
@@ -129,7 +129,7 @@ function t$(t) {
         { textValue: d, richValue: A } = u,
         [f, p] = X.useState(!1),
         y = X.useCallback(() => p(!0), []),
-        m = X.useCallback(() => p(!1), []);
+        g = X.useCallback(() => p(!1), []);
     (0, tw.Ay)(() => {
         (0, th.ack)(
             n.id,
@@ -143,7 +143,7 @@ function t$(t) {
             i,
         );
     });
-    let g = X.useCallback((t, e, i) => {
+    let m = X.useCallback((t, e, i) => {
             c({ textValue: e, richValue: i });
         }, []),
         I = X.useCallback(
@@ -167,7 +167,7 @@ function t$(t) {
         className: tz.k,
         children: (0, $.jsx)(tY.Ay, {
             innerClassName: tz.T,
-            onChange: g,
+            onChange: m,
             placeholder: r,
             accessibilityLabel: s,
             channel: n,
@@ -175,7 +175,7 @@ function t$(t) {
             richValue: A,
             type: tG.oU.OVERLAY_INLINE_REPLY,
             allowNewLines: !1,
-            onBlur: m,
+            onBlur: g,
             onFocus: y,
             focused: f,
             onSubmit: E,
@@ -263,7 +263,7 @@ function ey(t) {
     let e = el.find((e) => e.type === K.zb.INCOMING_CALL && e.channelId === t);
     return null != e ? e.id : null;
 }
-function em(t, e) {
+function eg(t, e) {
     let i = { ...en, timestamp: Date.now(), ...e },
         n = (0, a.A)(),
         l = !1,
@@ -301,7 +301,7 @@ function em(t, e) {
     }
     return ea || ((el = s), r.timer.start()), n;
 }
-function eg() {
+function em() {
     if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return !1;
     let t = N.A.usersPlaying,
         e = new Set(),
@@ -362,7 +362,7 @@ function eg() {
                                           children: [
                                               (0, $.jsx)("div", {
                                                   className: tN.bf,
-                                                  children: (0, $.jsx)(tm.A, {
+                                                  children: (0, $.jsx)(tg.A, {
                                                       user: n,
                                                       "aria-hidden": !0,
                                                       size: tp._3.SIZE_24,
@@ -379,10 +379,10 @@ function eg() {
                                                           gameName: c,
                                                           gameIcon: () =>
                                                               null != r || null != s
-                                                                  ? (0, $.jsx)(tg.A, {
+                                                                  ? (0, $.jsx)(tm.A, {
                                                                         game: r,
                                                                         pid: s?.pid,
-                                                                        size: tg.M.XSMALL,
+                                                                        size: tm.M.XSMALL,
                                                                         className: tN.Gt,
                                                                     })
                                                                   : null,
@@ -397,7 +397,7 @@ function eg() {
                                           activity_type: i.type,
                                           activity_name: c,
                                       }),
-                                      { hasChat: m } = (0, V.NI)("nowPlayingNotification");
+                                      { hasChat: g } = (0, V.NI)("nowPlayingNotification");
                                   return {
                                       body: f,
                                       className: tN.dn,
@@ -405,12 +405,12 @@ function eg() {
                                       animationWrapperClassName: tN.VG,
                                       clickZoneClassName: tN.EO,
                                       maxBodyLines: 1,
-                                      disableClickableRegions: !m,
+                                      disableClickableRegions: !g,
                                       onNotificationShow: () => {
                                           p();
                                       },
                                       onNotificationClick: (t, e) => {
-                                          m &&
+                                          g &&
                                               (async () => {
                                                   try {
                                                       await (0, t_.D$)({
@@ -436,7 +436,7 @@ function eg() {
                                   };
                               })(t, a, r)) &&
                               (eo(a, t, { userId: t, gameId: a, lastSentTimestamp: Date.now() }),
-                              em(l, { type: K.zb.GENERIC, priority: K.In.NORMAL })),
+                              eg(l, { type: K.zb.GENERIC, priority: K.In.NORMAL })),
                           !0)
                         : (eo(a, t, { userId: t, gameId: a, lastSentTimestamp: Date.now() }), !1))
                 );
@@ -473,14 +473,14 @@ function eI(t) {
         null == l ||
         !l.isRingable() ||
         ("GUILD_RING_START" === t.type &&
-            !m.A.getCurrentConfig({ guildId: t.guildId, location: "OverlayV3StartRinging" }).enabled) ||
+            !g.A.getCurrentConfig({ guildId: t.guildId, location: "OverlayV3StartRinging" }).enabled) ||
         O.A.getStatus() === z.clD.DND ||
         y.NO.getSetting()
     )
         return !1;
     let a = el.find((t) => t.type === K.zb.TEXT && t.channelId === e && t.messageType === z.lAJ.CALL);
     null != a && ep(a.id),
-        em(
+        eg(
             (function (t) {
                 let e = (0, tA.m1)(t, L.default, T.A),
                     i = J.intl.string(J.t.ssrVzG),
@@ -532,7 +532,7 @@ class eE extends r.Ay.Store {
     initialize() {
         this.waitFor(
             u.A,
-            g.A,
+            m.A,
             I.default,
             c.A,
             E.A,
@@ -554,7 +554,7 @@ class eE extends r.Ay.Store {
             L.default,
             x.A,
         ),
-            this.syncWith([N.A], eg);
+            this.syncWith([N.A], em);
     }
     getNotifications() {
         return el;
@@ -661,7 +661,7 @@ let eS = new eE(s.h, {
                 },
             };
         })((0, G.qv)(), e);
-        null != l && em(l, { priority: K.In.URGENT, type: K.zb.NUDGE, duration: et });
+        null != l && eg(l, { priority: K.In.URGENT, type: K.zb.NUDGE, duration: et });
     },
     OVERLAY_SET_INPUT_LOCKED: function (t) {
         let { locked: e } = t;
@@ -818,7 +818,7 @@ let eS = new eE(s.h, {
                         c = (function (t, e, i, n) {
                             if (
                                 P.A.isNotificationDisabled(H.KS.RequestToStream) ||
-                                null != g.A.getCurrentUserActiveStream()
+                                null != m.A.getCurrentUserActiveStream()
                             )
                                 return null;
                             let l = e.username,
@@ -873,7 +873,7 @@ let eS = new eE(s.h, {
                 }
                 return (
                     null != c &&
-                    (em(c, {
+                    (eg(c, {
                         priority: K.In.URGENT,
                         expirationExternallyManaged: !0,
                         channelId: t.id,
@@ -966,7 +966,7 @@ let eS = new eE(s.h, {
                 };
             })(n, S.A.getMessage(e, i.id) ?? (0, f.rh)(i), a, r);
         if (null == s) return !1;
-        em(s, { type: K.zb.TEXT, channelId: n.id, expirationExternallyManaged: !0, messageType: i.type }), eA();
+        eg(s, { type: K.zb.TEXT, channelId: n.id, expirationExternallyManaged: !0, messageType: i.type }), eA();
     },
     CHANNEL_SELECT: function (t) {
         let e,
@@ -989,7 +989,7 @@ let eS = new eE(s.h, {
     GUILD_RING_START: eI,
     GUILD_RING_STOP: function (t) {
         let { channelId: e, guildId: i, ringing: n } = t;
-        if (!m.A.getCurrentConfig({ guildId: i, location: "OverlayV3StopRinging" }).enabled) return !1;
+        if (!g.A.getCurrentConfig({ guildId: i, location: "OverlayV3StopRinging" }).enabled) return !1;
         n.includes(I.default.getId()) && ep(ey(e));
     },
     ACTIVITY_USER_ACTION: function (t) {
@@ -1026,19 +1026,19 @@ let eS = new eE(s.h, {
                         },
                     };
                 })(n, a)),
-            null != e && void em(e, { priority: K.In.URGENT, type: K.zb.GENERIC }))
+            null != e && void eg(e, { priority: K.In.URGENT, type: K.zb.GENERIC }))
         );
     },
     CLIPS_SAVE_CLIP_START: function (t) {
         switch (t.clipMethod) {
             case "manual":
-                em(to(J.intl.string(J.t.NBMK9m)));
+                eg(to(J.intl.string(J.t.NBMK9m)));
                 break;
             case "auto":
                 var e;
                 null != t.signal &&
                     ta() &&
-                    em(
+                    eg(
                         ((e = t.signal),
                         {
                             ...tn(H.KS.ClipsDebugAutoSignal),
@@ -1071,7 +1071,7 @@ let eS = new eE(s.h, {
         if (ta()) {
             var e;
             let i;
-            em(
+            eg(
                 ((i = (e = t.clip).type === q.nQ.SCREENSHOT ? "screenshot" : "clip"),
                 {
                     ...tn(H.KS.ClipsDebugSaveSuccess),
@@ -1084,10 +1084,10 @@ let eS = new eE(s.h, {
     CLIPS_SAVE_CLIP_ERROR: function (t) {
         var e, i;
         let n;
-        em(to(J.intl.string(J.t["1ZbZuh"]))),
+        eg(to(J.intl.string(J.t["1ZbZuh"]))),
             ta() &&
                 null != t.errorMessage &&
-                em(
+                eg(
                     ((e = t.errorMessage),
                     (i = t.errorAt),
                     (n = (() => {
@@ -1100,7 +1100,7 @@ let eS = new eE(s.h, {
         if ("manual" === t.clipMethod && ta()) {
             var e, i;
             let n;
-            em(
+            eg(
                 ((e = t.reason),
                 (i = t.sourceChecks),
                 (n = (() => {
@@ -1126,6 +1126,8 @@ let eS = new eE(s.h, {
                             return "discord_clips is still downloading. Try again once the module finishes installing.";
                         case q.RC.BUFFER_WARMING_UP:
                             return "No encoded video frames yet \u2014 the capture pipeline just started or reset. Try again in a couple of seconds.";
+                        case q.RC.BRIDGE_SHUTDOWN:
+                            return "Clips bridge shut down before the save completed (process exited or v3 was disabled). Try again once clips is back up.";
                     }
                 })()),
                 { ...tn(H.KS.ClipsDebugSaveNoOp), title: "Clip hotkey ignored", body: n, maxBodyLines: 8 }),
@@ -1135,7 +1137,7 @@ let eS = new eE(s.h, {
     CLIPS_SAVE_CLIP_TIMEOUT: function (t) {
         if ("manual" === t.clipMethod && ta()) {
             var e;
-            em(
+            eg(
                 ((e = t.elapsedMs),
                 {
                     ...tn(H.KS.ClipsDebugSaveTimeout),
@@ -1171,7 +1173,7 @@ let eS = new eE(s.h, {
                       maxBodyLines: 8,
                   };
         null != i &&
-            (em(i, { uniqueKey: `clips-debug-features-${t.sourceId}`, duration: 10 * k.A.Millis.SECOND }), ef());
+            (eg(i, { uniqueKey: `clips-debug-features-${t.sourceId}`, duration: 10 * k.A.Millis.SECOND }), ef());
     },
     STREAM_START: function (t) {
         let e = (function () {
@@ -1197,6 +1199,6 @@ let eS = new eE(s.h, {
                 },
             };
         })();
-        null != e && em(e);
+        null != e && eg(e);
     },
 });

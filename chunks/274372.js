@@ -99,7 +99,7 @@ class G extends a.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: P.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(394459).Ay.getHardwareEncoding();
+            let t = n(472444).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {
@@ -307,7 +307,7 @@ let F = new G(o.h, {
         },
         CLIPS_SAVE_CLIP_NO_OP: function (e) {
             let { reason: t } = e;
-            t === f.RC.BUFFER_WARMING_UP && (N = Math.max(N - 1, 0));
+            (t === f.RC.BUFFER_WARMING_UP || t === f.RC.BRIDGE_SHUTDOWN) && (N = Math.max(N - 1, 0));
         },
         STREAM_START: function (e) {
             let { sourceName: t, pid: n } = e;

@@ -2448,6 +2448,9 @@ function nV(e) {
             videoEncoderExperiments: i.getVideoEncoderExperiments(eQ.x.STREAM, "streamer"),
         });
     },
+    CLIPS_RESTART: function () {
+        a = null;
+    },
     CLIPS_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
         !1 === t.decoupledClipsEnabled && ((a = null), ti.setClipsSource(null));

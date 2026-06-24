@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { t_: () => N, UW: () => y, so: () => C });
 var i,
-    r = n(941327),
+    r = n(472444),
     s = n(19575),
     a = n(274372),
     o = n(974293);
@@ -142,26 +142,30 @@ let m = !1,
     T = null,
     S = null;
 function y() {
-    let e = (0, o.qi)("pushClipsV3RuntimeFlagsToNative"),
-        t = (0, o.$i)("pushClipsV3RuntimeFlagsToNative"),
-        n = a.Ay.getEnableAutoclipping(),
-        i = A !== e,
-        s = I !== t,
-        l = T !== n;
-    if (!i && !s && !l) return;
-    let u = r.Ay.getMediaEngine();
-    i && u.setClipsV3Enabled(e),
+    let e = (0, c.TD)(),
+        t = e && (0, o.qi)("pushClipsV3RuntimeFlagsToNative"),
+        n = e && (0, o.$i)("pushClipsV3RuntimeFlagsToNative"),
+        i = a.Ay.getEnableAutoclipping(),
+        s = null !== A,
+        l = A !== t,
+        u = I !== n,
+        d = T !== i;
+    if (!l && !u && !d) return { midSessionV3Flip: !1 };
+    let _ = r.Ay.getMediaEngine();
+    return (
+        l && _.setClipsV3Enabled(t),
         E.nx.info(
-            `clips v3 runtime flags pushed: v3=${e} (was ${A}), ml=${t} (was ${I}), autoclipping=${n} (was ${T})`,
+            `clips v3 runtime flags pushed: v3=${t} (was ${A}), ml=${n} (was ${I}), autoclipping=${i} (was ${T})`,
         ),
-        (A = e),
-        (I = t),
-        (T = n),
-        e &&
-            (t
+        (A = t),
+        (I = n),
+        (T = i),
+        (0, o.ak)(t ? "v3" : "v1"),
+        t &&
+            (n
                 ? (null === S &&
                       (E.nx.info("clips v3 ml flag set ml=false until download complete"),
-                      u.setClipsV3MLEnabled(!1),
+                      _.setClipsV3MLEnabled(!1),
                       (S = !1)),
                   (async () => {
                       let { allAssetsDownloaded: e } = await p.start(),
@@ -170,11 +174,13 @@ function y() {
                           (E.nx.info(
                               `clips v3 ml flag set ml=${t} (was ${S}). allAssetsDownloaded=${e}, autoclipping=${T}`,
                           ),
-                          u.setClipsV3MLEnabled(t),
+                          _.setClipsV3MLEnabled(t),
                           (S = t));
                   })())
                 : !1 !== S &&
-                  (E.nx.info(`clips v3 ml flag set ml=false (was ${S})`), u.setClipsV3MLEnabled(!1), (S = !1)));
+                  (E.nx.info(`clips v3 ml flag set ml=false (was ${S})`), _.setClipsV3MLEnabled(!1), (S = !1))),
+        { midSessionV3Flip: s && l }
+    );
 }
 function C() {
     return null != g

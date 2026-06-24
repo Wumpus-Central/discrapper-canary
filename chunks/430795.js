@@ -509,8 +509,8 @@ async function es(e) {
         );
     } catch (e) {
         if (!("errorMessage" in e))
-            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...N, ...I.lc("doSaveClip") }), e);
-        if ("buffer_warming_up" !== e.errorAt) {
+            throw (g.default.track(u.HAw.CLIP_SAVE_FAILURE, { ...I.lc("doSaveClip"), ...N }), e);
+        if (e.errorAt !== C.RC.BUFFER_WARMING_UP && e.errorAt !== C.RC.BRIDGE_SHUTDOWN) {
             let t = I.kY(N, e);
             (t.error_at = e.errorAt), (t.error_message = e.errorMessage), g.default.track(u.HAw.CLIP_SAVE_FAILURE, t);
         }
@@ -590,13 +590,19 @@ async function eo(e) {
             return;
         }
         r.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e }), (0, S.C5)(t) && (await ea(e.id)), ei(e);
-    } catch (i) {
-        let { errorAt: e, errorMessage: n } = er(i);
-        e === C.RC.BUFFER_WARMING_UP
-            ? (M.nx.warn(`Clip save no-op: ${n ?? "buffer warming up"}`),
+    } catch (s) {
+        let { errorAt: e, errorMessage: n } = er(s),
+            i =
+                e === C.RC.BUFFER_WARMING_UP
+                    ? C.RC.BUFFER_WARMING_UP
+                    : e === C.RC.BRIDGE_SHUTDOWN
+                      ? C.RC.BRIDGE_SHUTDOWN
+                      : null;
+        null != i
+            ? (M.nx.warn(`Clip save no-op (${i}): ${n ?? i}`),
               I?.stop(),
-              r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: C.RC.BUFFER_WARMING_UP }))
-            : (M.nx.error("Clip Failed to Save", i),
+              r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: i }))
+            : (M.nx.error("Clip Failed to Save", s),
               I?.stop(),
               a || (0, _.Ak)("clip_error", 0.5),
               r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR", errorAt: e, errorMessage: n }));

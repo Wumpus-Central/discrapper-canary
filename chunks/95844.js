@@ -11,7 +11,7 @@ var i = n(691540),
     d = n(652896),
     _ = n(616356),
     h = n(495544),
-    f = n(394459),
+    f = n(472444),
     p = n(741394),
     E = n(459838),
     m = n(439372),
@@ -233,24 +233,26 @@ class B extends M {
     }
     applyNativeClipsSettings(e) {
         if (!(0, O.A)(f.Ay)) return;
-        let t = f.Ay.getMediaEngine(),
-            n = () => {
-                let n = N.Ay.getSettings(),
-                    i = (0, b.TD)();
+        let { midSessionV3Flip: t } = (0, k.UW)(),
+            n = f.Ay.getMediaEngine(),
+            i = () => {
+                let i = N.Ay.getSettings(),
+                    r = (0, b.TD)();
                 if (
-                    (t.setClipBufferLength(i ? n.clipsLength / 1e3 : 0),
+                    (n.setClipBufferLength(r ? i.clipsLength / 1e3 : 0),
                     e?.settings.decoupledClipsEnabled === !0 && this.fireClipsInitEvent(),
                     null == e || e?.settings.clipsQuality != null)
                 ) {
-                    let { frameRate: i, resolution: r } = n.clipsQuality;
-                    t.setClipsQualitySettings(r <= 480 ? (r / 3) * 4 : (r / 9) * 16, r, i) ||
+                    let { frameRate: t, resolution: r } = i.clipsQuality;
+                    n.setClipsQualitySettings(r <= 480 ? (r / 3) * 4 : (r / 9) * 16, r, t) ||
                         null == e ||
                         this.fireClipsInitEvent();
                 }
+                t &&
+                    (D.nx.info("clips v3 effective state flipped; dispatching CLIPS_RESTART"),
+                    s.h.dispatch({ type: "CLIPS_RESTART" }));
             };
-        (0, b.TD)()
-            ? ((0, k.UW)(), (0, R.qi)("applyNativeClipsSettings") && !(0, k.t_)() ? (0, k.so)().then(n) : n())
-            : n();
+        (0, b.TD)() && (0, R.qi)("applyNativeClipsSettings") && !(0, k.t_)() ? (0, k.so)().then(i) : i();
     }
     handleClipsInitOnToggleDetection(e) {
         let t = u.Ay.getVisibleGame();
