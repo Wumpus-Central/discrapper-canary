@@ -1,0 +1,18 @@
+.container__6bf2f {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.description__6bf2f {
+    padding-inline: 24px;
+    text-align: center
+}
+
+.loading__6bf2f {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-block: 40px
+}

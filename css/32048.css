@@ -1,0 +1,185 @@
+.qrLogin_e16417 {
+    overflow: hidden;
+    position: relative;
+    width: 240px
+}
+
+.qrLogin_e16417,
+.qrLoginInner_e16417 {
+    align-items: center;
+    display: flex
+}
+
+.qrLoginInner_e16417 {
+    flex-direction: column;
+    height: 100%;
+    justify-content: center
+}
+
+.qrCode_e16417 {
+    image-rendering: pixelated;
+    position: absolute
+}
+
+.qrCodeContainer_e16417 {
+    display: flex;
+    height: 176px;
+    margin-bottom: 32px;
+    position: relative;
+    width: 176px
+}
+
+.qrCodeContainer_e16417:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
+.qrCodeOverlay_e16417 {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%
+}
+
+.qrCodeOverlay_e16417 img {
+    display: flex;
+    height: 50px;
+    image-rendering: crisp-edges;
+    width: 50px
+}
+
+.qrAvatar_e16417 {
+    margin-bottom: 32px
+}
+
+.startOverButton_e16417 {
+    color: var(--brand-500);
+    margin-top: 16px
+}
+
+.authCaptcha_e16417 {
+    background-color: var(--primary-630);
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding: 24px 16px;
+    width: 480px
+}
+
+@media (max-width:830px) {
+    .qrLogin_e16417 {
+        display: none
+    }
+}
+
+.enable-forced-colors .qrCodeContainer_e16417 {
+    forced-color-adjust: none
+}
+
+.column__1e128 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: var(--custom-auth-box-auth-box-padding)
+}
+
+.column__1e128:nth-child(odd) {
+    background-color: var(--background-base-lower)
+}
+
+.column__1e128:nth-child(2n) {
+    background-color: var(--background-base-low)
+}
+
+.column__1e128:first-child {
+    padding-inline-start: 32px
+}
+
+.column__1e128:last-child {
+    padding-inline-end: 32px
+}
+
+.container__1e128 {
+    overflow: hidden;
+    padding: 0
+}
+
+.content__1e128 {
+    display: flex
+}
+
+.avatar__8d70a,
+.guildIcon__8d70a {
+    margin-bottom: 20px
+}
+
+.container__8d70a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.title__8d70a {
+    color: var(--text-strong);
+    font-size: 24px;
+    font-weight: var(--font-weight-semibold);
+    line-height: 30px;
+    margin-top: 2px
+}
+
+.subtitle__8d70a {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center
+}
+
+.subtitle__8d70a strong {
+    color: var(--text-strong)
+}
+
+.userText__8d70a {
+    word-break: break-word
+}
+
+.templateIcon__8d70a {
+    vertical-align: middle
+}
+
+.templateIcon__8d70a,
+.usagePill__8d70a {
+    color: var(--text-default)
+}
+
+.usagePill__8d70a {
+    background-color: var(--background-base-lower);
+    border-radius: 16px;
+    font-size: 14px;
+    margin-top: 16px;
+    padding: 8px 16px
+}
+
+.verifiedIcon__8d70a,
+.verifiedNameContainer__8d70a {
+    display: inline-block
+}
+
+.verifiedIcon__8d70a {
+    color: var(--green-360);
+    margin-block: -8px 0;
+    margin-inline: 2px 4px;
+    top: 3px
+}
+
+.verifiedCheckContainer__8d70a {
+    position: relative;
+    top: 1px
+}
+
+.verifiedCheck__8d70a {
+    color: var(--white)
+}

@@ -7544,7 +7544,7 @@ function rf() {
 }
 var rb = a(663066),
     ry = a(80556),
-    rE = a(907135),
+    rE = a(567888),
     r_ = a(665095),
     rC = a(87404);
 function rS() {
@@ -9530,9 +9530,7 @@ let r9 = {
         return (a) => (0, r.jsx)(n, { ...a, currentUser: e, otherUser: t });
     },
     FamilyCenterQRCodeModal: async () => {
-        let { default: e } = await Promise.all([a.e("40859"), a.e("67113"), a.e("48370"), a.e("72875")]).then(
-            a.bind(a, 320742),
-        );
+        let { default: e } = await Promise.all([a.e("30244"), a.e("72875")]).then(a.bind(a, 320742));
         return (t) => (0, r.jsx)(e, { ...t });
     },
     PremiumGroupFriendsSelectorModal: async () => {
