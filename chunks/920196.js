@@ -614,8 +614,8 @@ function tf(e) {
 }
 var tp = n(480335),
     tE = n(577390),
-    tm = n(31956),
-    tg = n(361628),
+    tm = n(474257),
+    tg = n(31956),
     tA = n(744808),
     tI = n(645507),
     tT = n(970931),
@@ -746,7 +746,7 @@ var tU = n(206835),
     tF = n(999291),
     tV = n(975732),
     tB = n(718019),
-    tj = n(795873),
+    tj = n(413492),
     tH = n(915614),
     tY = n(744753),
     tW = n(559506),
@@ -1570,9 +1570,9 @@ function n3(e) {
         L = (0, tR.TW)(t),
         P = r.useRef(null),
         x = r.useRef(null),
-        k = (0, tg.A)(_?.profileFrame?.skuId, "UserProfileAccountPopout"),
+        k = (0, tm.A)(_?.profileFrame?.skuId, "UserProfileAccountPopout"),
         U = (0, tE.A)(_?.profileFrame?.skuId);
-    (0, tm.A)({ skuId: _?.profileFrame?.skuId, openedAt: l, context: E, analyticsLocations: p });
+    (0, tg.A)({ skuId: _?.profileFrame?.skuId, openedAt: l, context: E, analyticsLocations: p });
     let G = r.useRef((0, ty.A)((e) => e.shouldRenderTenureLevelUp)),
         F = r.useMemo(() => (0, tI.A)(), []),
         [V, B] = r.useState(() => ty.A.getState().shouldRenderTenureLevelUp);

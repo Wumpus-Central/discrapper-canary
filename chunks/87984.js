@@ -13,8 +13,8 @@ var s = l(627968),
     f = l(688810),
     x = l(480335),
     h = l(577390),
-    I = l(31956),
-    j = l(361628),
+    I = l(474257),
+    j = l(31956),
     P = l(744808),
     O = l(915089),
     m = l(713517),
@@ -80,7 +80,7 @@ var Q = l(700174),
     ed = l(994500),
     er = l(351906),
     eo = l(428262),
-    et = l(795873),
+    et = l(413492),
     ea = l(744753),
     eu = l(559506),
     ec = l(931481),
@@ -201,9 +201,9 @@ function eE(e) {
         eo = (0, U.Ay)(i.id, L),
         { isHoveringOrFocusing: et, isHovering: ea } = (0, m.A)(er),
         eu = (0, N.fC)(),
-        ec = (0, j.A)(eo?.profileFrame?.skuId, "UserProfilePopout"),
+        ec = (0, I.A)(eo?.profileFrame?.skuId, "UserProfilePopout"),
         ep = (0, h.A)(eo?.profileFrame?.skuId);
-    (0, I.A)({ skuId: eo?.profileFrame?.skuId, openedAt: z, context: es, analyticsLocations: ei });
+    (0, j.A)({ skuId: eo?.profileFrame?.skuId, openedAt: z, context: es, analyticsLocations: ei });
     let eA = (0, o.z)({ opacity: +(null != eu.interactionType), config: { duration: 150 } });
     n.useEffect(() => {
         H?.(er?.current);

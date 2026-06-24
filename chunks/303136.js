@@ -5,7 +5,7 @@ n(64700);
 var r = n(17928),
     s = n(775602),
     a = n(607470);
-let o = (e) => {
+let o = function (e) {
     let { src: t, children: n, fallbackImage: o, className: l, preload: u, forceReducedMotion: c } = e,
         d = (0, r.bG)([s.Ay], () => s.Ay.useReducedMotion) || c;
     return d && null != o
