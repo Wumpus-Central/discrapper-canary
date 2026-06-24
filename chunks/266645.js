@@ -8,8 +8,8 @@ var i = n(627968),
     l = n(442433),
     u = n(60465),
     c = n(409626),
-    d = n(734057),
-    _ = n(973664),
+    d = n(106191),
+    _ = n(734057),
     h = n(332173),
     f = n(936755),
     p = n(827669);
@@ -111,7 +111,7 @@ var S = n(679621),
     y = n(412460);
 let C = function (e) {
     let { gameId: t, channelId: p, authorId: m, gameName: g, gameIconHash: A } = e,
-        I = (0, s.bG)([d.A], () => d.A.getChannel(p)),
+        I = (0, s.bG)([_.A], () => _.A.getChannel(p)),
         C = null != I ? I.getGuildId() : null,
         { name: N, hasName: v } = (0, S.V)({ gameName: g, gameId: t });
     r.useEffect(
@@ -170,7 +170,7 @@ let C = function (e) {
                     children: (0, i.jsx)("span", {
                         "aria-hidden": "true",
                         className: y.P0,
-                        children: (0, i.jsx)(_.A, { gameId: t, gameIconHash: A, iconClassName: y.Kk }),
+                        children: (0, i.jsx)(d.A, { game: { id: t, icon_hash: A }, iconClassName: y.Kk }),
                     }),
                 }),
                 (0, i.jsx)("span", { className: y.UU, children: N }),

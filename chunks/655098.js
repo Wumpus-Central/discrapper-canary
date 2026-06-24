@@ -25,12 +25,12 @@ var i = n(627968),
     N = n(730134),
     v = n(775602),
     R = n(47167),
-    O = n(545868),
-    b = n(376943),
-    D = n(465365),
-    L = n(78390),
-    w = n(785562),
-    M = n(973664),
+    O = n(106191),
+    b = n(545868),
+    D = n(376943),
+    L = n(465365),
+    w = n(78390),
+    M = n(785562),
     P = n(332173),
     x = n(37632),
     k = n(679621),
@@ -122,7 +122,7 @@ function J(e) {
         : (0, i.jsx)(y.Y, {
               targetElementRef: u,
               preload: async () => {
-                  await (0, O.a)(n, t);
+                  await (0, b.a)(n, t);
               },
               renderPopout: (e) => (0, i.jsx)(U.Y, { guildId: n, channelId: s, roleId: t, popoutProps: e }),
               position: "top",
@@ -136,17 +136,17 @@ function ee(e) {
         s = "text",
         a = !0;
     return (null != n &&
-        ((r = (0, b.nc)(n) ? (0, R.m1)(n, H.default, B.A) : $.intl.string($.t["/YzI63"])),
-        (s = (0, b.nc)(n) ? ((0, Y.QG)(n) ?? "text") : "locked"),
-        (a = (0, D.Y)(n.type))),
+        ((r = (0, D.nc)(n) ? (0, R.m1)(n, H.default, B.A) : $.intl.string($.t["/YzI63"])),
+        (s = (0, D.nc)(n) ? ((0, Y.QG)(n) ?? "text") : "locked"),
+        (a = (0, L.Y)(n.type))),
     a)
         ? (0, i.jsx)(P.A, { iconType: s, children: r })
         : (0, i.jsx)("span", { children: "#" + r });
 }
 function et(e) {
     let { id: t, itemId: n, guildId: r } = e,
-        s = (0, L.Q)(t),
-        a = (0, L.f)(t, n, r);
+        s = (0, w.Q)(t),
+        a = (0, w.f)(t, n, r);
     return (0, i.jsxs)(P.A, { iconType: t, children: [s, null != a && (0, i.jsx)(x.A, {}), a] });
 }
 function en(e) {
@@ -155,13 +155,13 @@ function en(e) {
 }
 function ei(e) {
     let { timestamp: t } = e;
-    return (0, i.jsx)(w.A, { node: t, className: "R" === t.format ? z.gS : null });
+    return (0, i.jsx)(M.A, { node: t, className: "R" === t.format ? z.gS : null });
 }
 function er(e) {
     let { id: t, gameName: n, gameIconHash: r } = e,
         { name: s, hasName: a } = (0, k.V)({ gameName: n, gameId: t });
     return a
-        ? (0, i.jsxs)(P.A, { children: [(0, i.jsx)(M.A, { gameId: t, gameIconHash: r, iconClassName: z.Kk }), s] })
+        ? (0, i.jsxs)(P.A, { children: [(0, i.jsx)(O.A, { game: { id: t, icon_hash: r }, iconClassName: z.Kk }), s] })
         : (0, i.jsxs)("span", { children: ["@", $.intl.string($.t["11pdXZ"])] });
 }
 var es = n(571898),

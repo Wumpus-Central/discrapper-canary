@@ -233,8 +233,8 @@ let Z = (e) => {
         ],
     });
 };
-var X = n(785562),
-    Q = n(973664),
+var X = n(106191),
+    Q = n(785562),
     J = n(967144),
     ee = n(565645),
     et = n(71393);
@@ -429,7 +429,7 @@ class eA extends e_ {
         let { timestamp: e, description: t } = this.props;
         return (0, i.jsxs)(C, {
             children: [
-                (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: (0, i.jsx)(X.A, { node: e, showTooltip: !1 }) }) }),
+                (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: (0, i.jsx)(Q.A, { node: e, showTooltip: !1 }) }) }),
                 null != t ? (0, i.jsx)(b, { children: t }) : null,
             ],
         });
@@ -558,13 +558,7 @@ class eO extends e_ {
     renderContent() {
         return (0, i.jsxs)(C, {
             children: [
-                (0, i.jsx)(v, {
-                    children: (0, i.jsx)(Q.A, {
-                        gameId: this.props.game.id,
-                        gameIconHash: this.props.game.icon_hash,
-                        iconClassName: y.Kk,
-                    }),
-                }),
+                (0, i.jsx)(v, { children: (0, i.jsx)(X.A, { game: this.props.game, iconClassName: y.Kk }) }),
                 (0, i.jsx)(N, { children: (0, i.jsx)(R, { children: this.props.game.name }) }),
             ],
         });

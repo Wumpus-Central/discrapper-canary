@@ -1,45 +1,48 @@
 "use strict";
-n.d(t, { A: () => N }), n(321073), n(323874), n(14289), n(35956);
+n.d(t, { A: () => O }), n(321073), n(323874), n(14289), n(35956);
 var i = n(735438),
     r = n.n(i),
     s = n(791332),
     a = n.n(s),
     o = n(167189),
     l = n(833291),
-    u = n(219065),
-    c = n(594061),
-    d = n(315069),
-    _ = n(652215);
-class h extends d.A {
+    u = n(929396),
+    c = n(439864),
+    d = n(219065),
+    _ = n(594061),
+    h = n(315069),
+    f = n(652215);
+class p extends h.A {
     id;
     path;
     inviteCode;
     static fromPath(e) {
-        return new h({ id: e, path: e });
+        return new p({ id: e, path: e });
     }
     static fromInviteCode(e) {
-        return new h({ id: `invite:${e}`, path: _.BVt.INVITE(e), inviteCode: e });
+        return new p({ id: `invite:${e}`, path: f.BVt.INVITE(e), inviteCode: e });
     }
     constructor(e) {
         super(), (this.id = e.id), (this.path = e.path), (this.inviteCode = e.inviteCode);
     }
 }
-var f = n(808728),
-    p = n(994500),
-    E = n(287809),
-    m = n(768038),
-    g = n(695184),
-    A = n(998218),
-    I = n(450827),
-    T = n(989133),
-    S = n(926140);
-let y = Object.freeze({});
-function C(e, t) {
-    return t.frecencyBoosters ? (0, m.X3)(e) : {};
+var E = n(808728),
+    m = n(994500),
+    g = n(287809),
+    A = n(768038),
+    I = n(695184),
+    T = n(240248),
+    S = n(998218),
+    y = n(450827),
+    C = n(989133),
+    N = n(926140);
+let v = Object.freeze({});
+function R(e, t) {
+    return t.frecencyBoosters ? (0, A.X3)(e) : {};
 }
-class N {
+class O {
     query = "";
-    options = y;
+    options = v;
     results = [];
     _userResults = [];
     _groupDMResults = [];
@@ -58,7 +61,7 @@ class N {
     _limit;
     _refetchForSingleCategoryLimit;
     _refetched = !1;
-    constructor(e, t, n = 100, i = y, r = 0) {
+    constructor(e, t, n = 100, i = v, r = 0) {
         (this.onResultsChange = e),
             this.setOptions(i, !0),
             (this._limit = n),
@@ -68,7 +71,7 @@ class N {
     }
     createSearchContext() {
         null == this.userSearchContext &&
-            (this.userSearchContext = I.A.getUserSearchContext(this.parseUserResults, this._limit));
+            (this.userSearchContext = y.A.getUserSearchContext(this.parseUserResults, this._limit));
     }
     setLimit(e) {
         let { userSearchContext: t } = this;
@@ -89,21 +92,21 @@ class N {
     }
     setResultTypes(e) {
         (this.resultTypes = null != e ? new Set(e) : null),
-            (this._userResults = this._include(S.rD.USER) ? this._userResults : []),
-            (this._groupDMResults = this._include(S.rD.GROUP_DM) ? this._groupDMResults : []),
-            (this._textChannelResults = this._include(S.rD.TEXT_CHANNEL) ? this._textChannelResults : []),
-            (this._voiceChannelResults = this._include(S.rD.VOICE_CHANNEL) ? this._voiceChannelResults : []),
-            (this._guildResults = this._include(S.rD.GUILD) ? this._guildResults : []),
-            (this._applicationResults = this._include(S.rD.APPLICATION) ? this._applicationResults : []),
-            (this._gameProfileResults = this._include(S.rD.GAME_PROFILE) ? this._gameProfileResults : []),
-            (this._linkResults = this._include(S.rD.LINK) ? this._linkResults : []),
-            (this._inAppNavigations = this._include(S.rD.IN_APP_NAVIGATION) ? this._inAppNavigations : []);
+            (this._userResults = this._include(N.rD.USER) ? this._userResults : []),
+            (this._groupDMResults = this._include(N.rD.GROUP_DM) ? this._groupDMResults : []),
+            (this._textChannelResults = this._include(N.rD.TEXT_CHANNEL) ? this._textChannelResults : []),
+            (this._voiceChannelResults = this._include(N.rD.VOICE_CHANNEL) ? this._voiceChannelResults : []),
+            (this._guildResults = this._include(N.rD.GUILD) ? this._guildResults : []),
+            (this._applicationResults = this._include(N.rD.APPLICATION) ? this._applicationResults : []),
+            (this._gameProfileResults = this._include(N.rD.GAME_PROFILE) ? this._gameProfileResults : []),
+            (this._linkResults = this._include(N.rD.LINK) ? this._linkResults : []),
+            (this._inAppNavigations = this._include(N.rD.IN_APP_NAVIGATION) ? this._inAppNavigations : []);
     }
     _include(e) {
         return null == this.resultTypes || this.resultTypes.has(e);
     }
     _isAsyncSearch() {
-        return this._include(S.rD.USER) && this.options?.userFilters?.thread != null;
+        return this._include(N.rD.USER) && this.options?.userFilters?.thread != null;
     }
     setOptions(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
@@ -165,7 +168,7 @@ class N {
             this.clear(), this.updateAllResults();
             return;
         }
-        (this.options.frecencyBoosters ? c.bW.loadIfNecessary() : Promise.resolve()).finally(() => {
+        (this.options.frecencyBoosters ? _.bW.loadIfNecessary() : Promise.resolve()).finally(() => {
             this.queryUsers(e, t, this._limit),
                 (this._groupDMResults = this.queryGroupDMs(e, this._limit)),
                 (this._textChannelResults = this.queryTextChannels(e, this._limit)),
@@ -177,7 +180,7 @@ class N {
                 (this._inAppNavigations = this.queryInAppNavigations(e, this._limit)),
                 this._isAsyncSearch()
                     ? (clearTimeout(this._asyncTimeout), (this._asyncTimeout = setTimeout(this.updateAllResults, 300)))
-                    : this._include(S.rD.USER) || this.updateAllResults();
+                    : this._include(N.rD.USER) || this.updateAllResults();
         });
     }
     clear() {
@@ -208,11 +211,11 @@ class N {
         null != e && (e.destroy(), (this.userSearchContext = null));
     }
     queryTextChannels(e, t) {
-        if (!this._include(S.rD.TEXT_CHANNEL)) return [];
-        let n = C(S.rD.TEXT_CHANNEL, this.options),
+        if (!this._include(N.rD.TEXT_CHANNEL)) return [];
+        let n = R(N.rD.TEXT_CHANNEL, this.options),
             { allowSnowflake: i, blacklist: r } = this.options,
             s = null != r ? (e) => !r.has(`channel:${e.id}`) : void 0;
-        return m.Ay.queryChannels({
+        return A.Ay.queryChannels({
             query: e,
             guildId: null,
             limit: t,
@@ -223,74 +226,81 @@ class N {
         });
     }
     queryVoiceChannels(e, t) {
-        if (!this._include(S.rD.VOICE_CHANNEL)) return [];
+        if (!this._include(N.rD.VOICE_CHANNEL)) return [];
         let { allowSnowflake: n, voiceChannelGuildFilter: i } = this.options,
-            r = C(S.rD.VOICE_CHANNEL, this.options);
-        return m.Ay.queryChannels({
+            r = R(N.rD.VOICE_CHANNEL, this.options);
+        return A.Ay.queryChannels({
             query: e,
             guildId: i,
             limit: t,
             fuzzy: !0,
-            type: f.vM,
+            type: E.vM,
             allowSnowflake: n,
             boosters: r,
         });
     }
     queryGuilds(e, t) {
-        if (!this._include(S.rD.GUILD)) return [];
-        let n = C(S.rD.GUILD, this.options),
+        if (!this._include(N.rD.GUILD)) return [];
+        let n = R(N.rD.GUILD, this.options),
             { allowSnowflake: i, blacklist: r } = this.options,
             s = null != r ? (e) => !r.has(`guild:${e.id}`) : void 0;
-        return m.Ay.queryGuilds({ query: e, limit: t, fuzzy: !0, filter: s, boosters: n, allowSnowflake: i });
+        return A.Ay.queryGuilds({ query: e, limit: t, fuzzy: !0, filter: s, boosters: n, allowSnowflake: i });
     }
     queryUsers(e, t, n) {
         let { userSearchContext: i } = this;
-        if (null == i || !this._include(S.rD.USER)) return;
+        if (null == i || !this._include(N.rD.USER)) return;
         let { allowSnowflake: r, userFilters: s } = this.options,
-            a = C(S.rD.USER, this.options);
+            a = R(N.rD.USER, this.options);
         if (s?.thread != null) {
-            let t = u.A.getMemberListSections(s.thread),
+            let t = d.A.getMemberListSections(s.thread),
                 i = [];
             for (let e in t) {
                 let n = t[e];
                 for (let e of n.userIds)
-                    (!s?.friends || p.A.isFriend(e)) &&
+                    (!s?.friends || m.A.isFriend(e)) &&
                         (this._userBlacklist?.includes(e) || i.push({ userId: e, nick: n.usersById[e]?.displayName }));
             }
-            this._userResults = m.Ay.queryUsers({ query: e, users: i, limit: n, boosters: a, allowSnowflake: r });
+            this._userResults = A.Ay.queryUsers({ query: e, users: i, limit: n, boosters: a, allowSnowflake: r });
             return;
         }
-        void 0 !== t && g.A.requestMembers(t, e, 100),
+        void 0 !== t && I.A.requestMembers(t, e, 100),
             i.setLimit(n),
             i.setQuery({ query: e, filters: s, blacklist: this._userBlacklist, boosters: a });
     }
     queryGroupDMs(e, t) {
-        if (!this._include(S.rD.GROUP_DM)) return [];
+        if (!this._include(N.rD.GROUP_DM)) return [];
         let { blacklist: n } = this.options,
-            i = C(S.rD.GROUP_DM, this.options),
+            i = R(N.rD.GROUP_DM, this.options),
             r = null != n ? (e) => !n.has(`channel:${e.id}`) : void 0;
-        return m.Ay.queryGroupDMs({ query: e, limit: t, fuzzy: !0, filter: r, boosters: i });
+        return A.Ay.queryGroupDMs({ query: e, limit: t, fuzzy: !0, filter: r, boosters: i });
     }
     queryApplications(e, t) {
-        return this._include(S.rD.APPLICATION) ? m.Ay.queryApplications({ query: e, limit: t, fuzzy: !0 }) : [];
+        return this._include(N.rD.APPLICATION) ? A.Ay.queryApplications({ query: e, limit: t, fuzzy: !0 }) : [];
     }
     queryGameProfiles(e, t) {
-        if (!this._include(S.rD.GAME_PROFILE)) return [];
-        let n = m.Ay.queryGames(e, t),
+        if (!this._include(N.rD.GAME_PROFILE)) return [];
+        let n = (0, c.q)(e, "Autocompleter.queryGameProfiles") ?? A.Ay.queryGames(e, t).map(u.Sj),
             i = e.toLocaleLowerCase();
-        return n.map((e, t) => ({
-            type: S.rD.GAME_PROFILE,
-            record: e,
-            score: (0, m.zy)((0, m.XA)(e.name, i, t)),
-            comparator: e.name,
-            sortable: e.name.toLocaleLowerCase(),
-        }));
+        return n
+            .slice(0, t)
+            .map((e, t) => ({
+                type: N.rD.GAME_PROFILE,
+                record: e,
+                score: (0, A.zy)((0, A.XA)(e.name, i, t)),
+                comparator: e.name,
+                sortable: e.name.toLocaleLowerCase(),
+            }));
+    }
+    refreshGameProfiles() {
+        !(0, T.uJ)(this.query.trim()) &&
+            this._include(N.rD.GAME_PROFILE) &&
+            ((this._gameProfileResults = this.queryGameProfiles(this.query, this._limit)), this.updateAllResults());
     }
     queryLink(e, t) {
         let n;
-        if (!this._include(S.rD.LINK)) return [];
+        if (!this._include(N.rD.LINK)) return [];
         let i = (0, l.br)(e);
-        if (i?.type === o.I.INVITE) return [{ type: S.rD.LINK, record: h.fromInviteCode(i.code), score: 1 }];
+        if (i?.type === o.I.INVITE) return [{ type: N.rD.LINK, record: p.fromInviteCode(i.code), score: 1 }];
         let r = a().sanitizeUrl(e);
         try {
             n = new URL(r);
@@ -298,21 +308,21 @@ class N {
             return [];
         }
         let { pathname: s, hostname: u = "", host: c } = n,
-            d = A.A.isDiscordHostname(u) || window.location.host === c;
-        return null !== s && d && A.A.isAppRoute(s) ? [{ type: S.rD.LINK, record: h.fromPath(s), score: 1 }] : [];
+            d = S.A.isDiscordHostname(u) || window.location.host === c;
+        return null !== s && d && S.A.isAppRoute(s) ? [{ type: N.rD.LINK, record: p.fromPath(s), score: 1 }] : [];
     }
     queryInAppNavigations(e, t) {
-        return this._include(S.rD.IN_APP_NAVIGATION)
-            ? m.Ay.queryInAppNavigations({ query: e, limit: t, fuzzy: !0 })
+        return this._include(N.rD.IN_APP_NAVIGATION)
+            ? A.Ay.queryInAppNavigations({ query: e, limit: t, fuzzy: !0 })
             : [];
     }
     parseUserResults = (e) => {
         let { results: t } = e;
-        if (!this._include(S.rD.USER)) return;
+        if (!this._include(N.rD.USER)) return;
         for (let { id: e, score: n, comparator: i } of ((this._userResults = []), t)) {
-            let t = E.default.getUser(e);
+            let t = g.default.getUser(e);
             null != t &&
-                this._userResults.push({ type: S.rD.USER, record: t, score: (0, m.zy)(n), comparator: i ?? void 0 });
+                this._userResults.push({ type: N.rD.USER, record: t, score: (0, A.zy)(n), comparator: i ?? void 0 });
         }
         let n = this._willRefetchIfSingleCategoryResults();
         !n && this._userResults.length > this._limit && (this._userResults.length = this._limit),
@@ -332,7 +342,7 @@ class N {
                 ...this._inAppNavigations,
             ])
                 .uniqBy((e) => `${e.type}-${e.record.id}`)
-                .sort(T.A)
+                .sort(C.A)
                 .value()),
             this.onResultsChange(this.results, this.query);
     };
