@@ -728,6 +728,7 @@ class B extends o.A {
     sessionEndTimeout = new a.Ep();
     currentSessionGameKey = null;
     pendingSessionGameKey = null;
+    sessionTransition = Promise.resolve();
     constructor() {
         super(), (this.timeline = new E(Math.max(p.Ay.getSettings().clipsLength, 6e4)));
     }
@@ -897,15 +898,24 @@ class B extends o.A {
         }
     }
     clear() {
+        this.enqueueSessionTransition("clear", () => this.clearAsync());
+    }
+    enqueueSessionTransition(e, t) {
+        this.sessionTransition = this.sessionTransition
+            .catch(() => {})
+            .then(t)
+            .catch((t) => V.nx.error(`decider: ${e} failed`, t));
+    }
+    async clearAsync() {
         V.nx.info(
             `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${p.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} candidates=${p.Ay.getClipCandidates().length}`,
         ),
             this.unscheduleClip(),
             this.sessionEndTimeout.stop(),
-            this.processClipCandidates(),
+            await this.processClipCandidates(),
             (this.currentSessionGameKey = null),
             (this.pendingSessionGameKey = null),
-            (0, F.YV)(),
+            await (0, F.YV)(),
             this.timeline.clear();
     }
     unscheduleClip() {
@@ -959,7 +969,10 @@ class B extends o.A {
             });
     }
     handleVoiceChannelSelect() {
-        this.clear();
+        this.enqueueSessionTransition("handleVoiceChannelSelect", () => this.handleVoiceChannelSelectAsync());
+    }
+    async handleVoiceChannelSelectAsync() {
+        await this.clearAsync();
         let e = c.Ay.getVisibleGame();
         if (null == e) return;
         this.currentSessionGameKey = (0, c.Es)(e);
@@ -970,6 +983,9 @@ class B extends o.A {
             );
     }
     handleRunningGamesChange() {
+        this.enqueueSessionTransition("handleRunningGamesChange", () => this.handleRunningGamesChangeAsync());
+    }
+    async handleRunningGamesChangeAsync() {
         let e = c.Ay.getVisibleGame(),
             t = null != e ? (0, c.Es)(e) : null;
         if (
@@ -997,9 +1013,10 @@ class B extends o.A {
                 "decider: handleRunningGamesChange \u2014 visible game became null, finalizing session immediately",
             ),
                 this.sessionEndTimeout.stop(),
-                this.processClipCandidates(),
+                this.unscheduleClip(),
+                await this.processClipCandidates(),
                 (this.currentSessionGameKey = null),
-                (0, F.YV)(),
+                await (0, F.YV)(),
                 (this.pendingSessionGameKey = null);
             return;
         }
@@ -1010,13 +1027,15 @@ class B extends o.A {
               ),
               (this.pendingSessionGameKey = t),
               this.sessionEndTimeout.start(3e4, () => {
-                  this.processClipCandidates(), (this.currentSessionGameKey = t);
-                  let n = crypto.randomUUID();
-                  (0, F.mN)(n, e?.id ?? null),
-                      (this.pendingSessionGameKey = null),
-                      V.nx.info(
-                          `decider: sessionEndTimeout fired after debounce \u{2014} finalizing previous session, started new session (newPrimaryKey=${t}, id=${n})`,
-                      );
+                  this.enqueueSessionTransition("sessionEndTimeout", async () => {
+                      this.unscheduleClip(), await this.processClipCandidates(), (this.currentSessionGameKey = t);
+                      let n = crypto.randomUUID();
+                      (0, F.mN)(n, e?.id ?? null),
+                          (this.pendingSessionGameKey = null),
+                          V.nx.info(
+                              `decider: sessionEndTimeout fired after debounce \u{2014} finalizing previous session, started new session (newPrimaryKey=${t}, id=${n})`,
+                          );
+                  });
               }));
     }
     async debugStashDeciderData() {
@@ -1040,14 +1059,35 @@ class B extends o.A {
                 V.nx.info(`Clip ${t + 1} score ${e.score}, ${l.A.fileManager.basename(e.clip.filepath)}`);
             });
     }
-    processClipCandidates() {
-        let e = p.Ay.getClipCandidates(),
-            t = U(e, this.decisionSignals, _.default.getId(), p.Ay.getCurrentClipsSession()?.gameId ?? void 0);
-        V.nx.info("ranked clips:", t);
-        let n = new Set();
-        for (let e of t.selected) (0, F.K7)(e.clip, e.score), n.add(e.clip.id);
-        for (let t of e) n.has(t.id) || (0, F.oH)(t, !1);
+    async processClipCandidates() {
+        let e = p.Ay.getCurrentClipsSession(),
+            t = p.Ay.getClipCandidates(),
+            n = null == e ? [] : t.filter((t) => t.gameSessionId === e.id),
+            i = null == e ? t : t.filter((t) => t.gameSessionId !== e.id),
+            r = this.decisionSignals;
         this.decisionSignals = A();
+        let s = U(n, r, _.default.getId(), e?.gameId ?? void 0);
+        V.nx.info("ranked clips:", s);
+        let a = new Set(s.selected.map((e) => e.clip.id));
+        await Promise.all(
+            s.selected.map(async (e) => {
+                try {
+                    await (0, F.K7)(e.clip, e.score);
+                } catch (e) {
+                    V.nx.error("decider: failed to promote clip candidate", e);
+                }
+            }),
+        ),
+            await Promise.all(
+                [...n, ...i].map(async (e) => {
+                    if (!a.has(e.id))
+                        try {
+                            await (0, F.oH)(e, !1);
+                        } catch (e) {
+                            V.nx.error("decider: failed to delete unpromoted clip candidate", e);
+                        }
+                }),
+            );
     }
     handleSettingsUpdate() {
         this.timeline.updateLength(Math.max(p.Ay.getSettings().clipsLength, 6e4));

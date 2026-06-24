@@ -733,14 +733,18 @@ async function eA(e, t) {
             M.nx.error("Clip promotion failed: failed to move the clip out of transient storage", e);
             return;
         }
-    eu(n.id, { isCandidate: !1, filepath: n.filepath }),
-        r.h.dispatch({ type: "CLIPS_PROMOTE_CLIP_CANDIDATE", clip: { ...n, isCandidate: !1 } }),
-        g.default.track(u.HAw.CLIP_PROMOTED, {
-            ...I.lc("promoteClipCandidate"),
-            ...I.Zy(e),
-            clip_uuid: e.id,
-            clip_auto_clip_score: t,
-        });
+    r.h.dispatch({ type: "CLIPS_PROMOTE_CLIP_CANDIDATE", clip: { ...n, isCandidate: !1 } });
+    try {
+        await eu(n.id, { isCandidate: !1, filepath: n.filepath });
+    } catch (e) {
+        M.nx.error("Clip promotion failed: failed to update clip metadata", e);
+    }
+    g.default.track(u.HAw.CLIP_PROMOTED, {
+        ...I.lc("promoteClipCandidate"),
+        ...I.Zy(e),
+        clip_uuid: e.id,
+        clip_auto_clip_score: t,
+    });
 }
 async function eI(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
