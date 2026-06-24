@@ -43,7 +43,8 @@ function h() {
     r.h.dispatch({ type: "FRIENDS_LIST_GIFT_INTENTS_SHOWN" });
 }
 function f(e) {
-    r.h.dispatch({ type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId: e });
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.np.FRIEND_ANNIVERSARY;
+    r.h.dispatch({ type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId: e }), _(t, e);
 }
 function p(e, t) {
     let n = a.A.getMessage(e, t)?.giftingPrompt;
