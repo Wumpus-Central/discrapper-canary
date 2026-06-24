@@ -51,13 +51,14 @@ function h(e) {
             return u.intl.string(u.t.cfY4PE);
     }
 }
-function f(e, t) {
-    let n = new Date(e.startsAt).getTime(),
-        i = Date.now(),
-        s = n <= i && i - n < 2 * r.A.Millis.DAY;
+function f(e, t, n) {
+    let i = new Date(e.startsAt).getTime(),
+        s = Date.now(),
+        a = i <= s && s - i < 2 * r.A.Millis.DAY;
+    if (n) return null;
     switch (t) {
         case o.UA.UNENROLLED:
-            if (s) return u.intl.string(u.t.X6ziWN);
+            if (a) return u.intl.string(u.t.X6ziWN);
             return null;
         case o.UA.COMPLETED:
         case o.UA.EXPIRED_CLAIMABLE:
@@ -70,9 +71,10 @@ function f(e, t) {
             return null;
     }
 }
-function p(e, t, n) {
+function p(e, t, n, i) {
     switch (e) {
         case o.UA.UNENROLLED:
+            if (i) return u.intl.string(u.t.G6np6x);
         case o.UA.ENROLLED:
         case o.UA.INCOMPLETE:
             if (null != n) return `${n.progress}/${n.target}`;

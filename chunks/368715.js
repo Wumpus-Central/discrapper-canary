@@ -510,9 +510,9 @@ let ee = function (e) {
                 questContentRowIndex: T,
             },
             N = n.id,
-            { isEnrolling: v } = (0, S.cf)([y.A], () => ({ isEnrolling: y.A.isEnrolling(N) }), [N]),
-            R = d === l.V3.QUEST_HOME_TILE_V2_FOOTER,
-            O = R ? (0, p.Q_)(n) : (0, p.Oz)(n),
+            v = d === l.V3.QUEST_HOME_TILE_V2_FOOTER,
+            { isEnrolling: R } = (0, S.cf)([y.A], () => ({ isEnrolling: y.A.isEnrolling(N) }), [N]),
+            O = v ? (0, p.Q_)(n) : (0, p.Oz)(n),
             b = (function (e, t, n, i) {
                 let { launchInGameActivity: r } = (0, c.zW)(t),
                     s = i === l.V3.QUEST_HOME_TILE_V2_FOOTER;
@@ -544,7 +544,7 @@ let ee = function (e) {
                         return null;
                 }
             })(s, n, A, d),
-            D = R
+            D = v
                 ? (0, a.C0)(n)
                 : (function (e, t) {
                       let { features: n } = t.config;
@@ -585,7 +585,7 @@ let ee = function (e) {
                       });
         return (0, i.jsx)(r.$, {
             size: o,
-            loading: v,
+            loading: R,
             variant: (0, l.wX)(d, "primary"),
             onClick: () => {
                 h?.(), L();
