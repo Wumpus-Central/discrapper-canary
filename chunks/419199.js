@@ -1780,7 +1780,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 568291, Version Hash: 1793f4483ad85a5780d4c96d81bba6a605ffd19c`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 568314, Version Hash: bd445039cad904c97b90d0a03b6e61d6923d780d`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -4068,32 +4068,33 @@ let sA = (0, iz.Fe)({
                 n.e("8878"),
             ]).then(n.bind(n, 540177)),
         webpackId: 540177,
-    }),
-    sS = () =>
-        Promise.all([
-            n.e("23549"),
-            n.e("72376"),
-            n.e("32802"),
-            n.e("32317"),
-            n.e("84209"),
-            n.e("25610"),
-            n.e("42548"),
-            n.e("40706"),
-            n.e("48115"),
-            n.e("75842"),
-            n.e("95752"),
-            n.e("44780"),
-            n.e("5557"),
-            n.e("59797"),
-            n.e("60989"),
-            n.e("33771"),
-            n.e("46039"),
-            n.e("10147"),
-            n.e("30313"),
-            n.e("37886"),
-            n.e("91803"),
-        ]).then(n.bind(n, 496879)),
-    sy = (0, iz.Fe)({ createPromise: sS, webpackId: 496879 }),
+    });
+function sS() {
+    return Promise.all([
+        n.e("23549"),
+        n.e("72376"),
+        n.e("32802"),
+        n.e("32317"),
+        n.e("84209"),
+        n.e("25610"),
+        n.e("42548"),
+        n.e("40706"),
+        n.e("48115"),
+        n.e("75842"),
+        n.e("95752"),
+        n.e("44780"),
+        n.e("5557"),
+        n.e("59797"),
+        n.e("60989"),
+        n.e("33771"),
+        n.e("46039"),
+        n.e("10147"),
+        n.e("30313"),
+        n.e("37886"),
+        n.e("91803"),
+    ]).then(n.bind(n, 496879));
+}
+let sy = (0, iz.Fe)({ createPromise: sS, webpackId: 496879 }),
     sC = (0, ri.v)(() => ({ isOpen: !0, width: 375 })),
     sN = te.memo(function () {
         te.useLayoutEffect(() => {
@@ -18077,7 +18078,7 @@ let Sl = "isHideDevBanner",
                     className: t6()(So.Wz, So.mr),
                     children: [
                         (0, F.jsx)(Sa, { className: So.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "568291" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "568314" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
