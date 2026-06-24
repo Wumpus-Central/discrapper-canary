@@ -11,47 +11,47 @@ var a = i(627968),
 async function h(e) {
     return (await d.Bo.post({ url: u.Rsh.AGE_ASSURANCE_TEST, body: { method: e }, rejectWithError: !1 })).body;
 }
-var b = i(40449);
-let f = Object.values(b.VF)
+var f = i(40449);
+let b = Object.values(f.VF)
     .filter((e) => "number" != typeof e)
-    .map((e) => ({ id: e, value: b.VF[e], label: b.VF[b.VF[e]] }));
-f.push({ id: "undefined", value: void 0, label: "undefined" });
+    .map((e) => ({ id: e, value: f.VF[e], label: f.VF[f.VF[e]] }));
+b.push({ id: "undefined", value: void 0, label: "undefined" });
 let p = function (e) {
     let { onClose: t, transitionState: i } = e,
         [d, u] = l.useState(""),
-        [b, p] = l.useState(!1),
+        [f, p] = l.useState(!1),
         [v, S] = l.useState(void 0),
         g = l.useCallback(() => {
             console.log("Scan complete");
-        }, []),
-        w = async () => {
-            p(!0), u("");
-            try {
-                let e = await h(v);
-                r.A.showAgeVerification({
-                    webviewUrl: e.verification_webview_url,
-                    onComplete: g,
-                    onClose: t,
-                    entryPoint: c.q1.DEV_TOOLS_QUICK_ACTIONS,
-                });
-            } catch (e) {
-                u(e.message);
-            } finally {
-                p(!1);
-            }
-        };
+        }, []);
+    async function w() {
+        p(!0), u("");
+        try {
+            let e = await h(v);
+            r.A.showAgeVerification({
+                webviewUrl: e.verification_webview_url,
+                onComplete: g,
+                onClose: t,
+                entryPoint: c.q1.DEV_TOOLS_QUICK_ACTIONS,
+            });
+        } catch (e) {
+            u(e.message);
+        } finally {
+            p(!1);
+        }
+    }
     return (0, a.jsxs)(o.Modal, {
         transitionState: i,
         onClose: t,
         title: "Age Verification Test Tool",
-        actions: [{ text: "Trigger Age Verification Test", onClick: w, loading: b }],
+        actions: [{ text: "Trigger Age Verification Test", onClick: w, loading: f }],
         children: [
             (0, a.jsx)(n.l, {
                 label: "Method",
                 hideLabel: !0,
                 onSelectionChange: (e) => S(e ?? void 0),
                 value: v,
-                options: f,
+                options: b,
                 selectionMode: "single",
                 fullWidth: !0,
             }),

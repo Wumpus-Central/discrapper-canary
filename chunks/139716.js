@@ -7,19 +7,21 @@ var r = n(892491),
     a = n(80556),
     o = n(207560);
 let l = (0, n(945810).mj)({
-        kind: "user",
-        name: "2025-11-age-verification-expressive-everywhere",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    }),
-    u = (e) => l.getConfig({ location: e }).enabled;
+    kind: "user",
+    name: "2025-11-age-verification-expressive-everywhere",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+function u(e) {
+    return l.getConfig({ location: e }).enabled;
+}
 var c = n(36149),
     d = n(40449);
 function _(e) {
     if (null != e) return (0, c.Sr)(e) ? r.F.LIGHTBOX : void 0;
 }
 let h = {
-    showAgeVerification: (e) => {
+    showAgeVerification: function (e) {
         let { onClose: t, entryPoint: r, shouldShowExpressiveModal: o = !1, webviewUrl: l, ...c } = e;
         if (null == l) return;
         let h = { modalKey: d.SW, onCloseCallback: t, backdropStyle: _(r), Layer: a.Ay };
@@ -37,7 +39,7 @@ let h = {
                   return (t) => (0, i.jsx)(e, { webviewUrl: l, ...c, ...t });
               }, h);
     },
-    showAgeVerificationGetStartedModal: (e) => {
+    showAgeVerificationGetStartedModal: function (e) {
         let { onClose: t, entryPoint: r } = e;
         (0, c.Q9)() && (0, o.u0)()
             ? (0, s.openModalLazy)(
@@ -87,7 +89,7 @@ let h = {
                     { modalKey: d.NC, backdropStyle: _(r), Layer: a.Ay, onCloseCallback: t },
                 );
     },
-    openUrl: (e) => {
+    openUrl: function (e) {
         window.open(e, "_blank");
     },
 };

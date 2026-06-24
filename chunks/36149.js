@@ -55,8 +55,10 @@ let O = new Set([g.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, g.q1.START_STAGE_PR
         C.w_.LARGE_GUILD,
         C.w_.JOIN_LARGE_GUILD_UNDERAGE,
         C.w_.ACCESS_LARGE_GUILD_UNDERAGE,
-    ]),
-    D = (e) => b.has(e);
+    ]);
+function D(e) {
+    return b.has(e);
+}
 function L() {
     return d.A.isFeatureAgeGated(a.t.REACTIVE_CHECK);
 }

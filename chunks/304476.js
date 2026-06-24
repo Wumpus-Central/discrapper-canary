@@ -2853,8 +2853,8 @@ let lU = new lG(g.h, {
 });
 var lM = n(509434),
     lB = n(153801);
-let lV = () =>
-    (0, a.jsx)(P.Ay, {
+let lV = function () {
+    return (0, a.jsx)(P.Ay, {
         children: (0, a.jsxs)("div", {
             className: lB.hQ,
             children: [
@@ -2872,6 +2872,7 @@ let lV = () =>
             ],
         }),
     });
+};
 var lF = n(990078),
     lW = n(913122),
     lH = n(201505);

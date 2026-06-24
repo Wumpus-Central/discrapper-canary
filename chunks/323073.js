@@ -132,18 +132,22 @@ function O(e) {
                   verifyTitle: i ? A.intl.string(A.t.xi46lg) : A.intl.string(A.t.ZmwvDc),
               };
 }
-let b = () => {
-        let e = h.default.getCurrentUser();
-        if (null == e) return !1;
-        let t = N();
-        return !0 !== e.nsfwAllowed || t;
-    },
-    D = (e) => !!b() && null != e && k(c.A.getChannel(e)),
-    L = (e) => !!(N() && D(e)) && ((0, E.yO)(m.w_.NSFW_VOICE_CHANNEL), !0);
+function b() {
+    let e = h.default.getCurrentUser();
+    if (null == e) return !1;
+    let t = N();
+    return !0 !== e.nsfwAllowed || t;
+}
+function D(e) {
+    return !!b() && null != e && k(c.A.getChannel(e));
+}
+function L(e) {
+    return !!(N() && D(e)) && ((0, E.yO)(m.w_.NSFW_VOICE_CHANNEL), !0);
+}
 function w(e, t, n) {
     let i;
     if (
-        ((e) => {
+        (function (e) {
             if (!b() || null == e) return !1;
             let t = _.A.getGuild(e);
             return null != t && (0, u.wh)(t);
@@ -156,17 +160,19 @@ function w(e, t, n) {
     if (null != (i = h.default.getCurrentUser()) && null == i.nsfwAllowed && D(t))
         return void (0, E.yO)(n ?? m.w_.NSFW_CHANNEL);
 }
-let M = (e) => null != e && (e.isNSFW() || (0, u.wh)(_.A.getGuild(e.guild_id))),
-    P = (e) => {
-        if (null == e) return !1;
-        let t = (0, a.p9)();
-        return M(e) && t;
-    },
-    x = (e) => {
-        if (null == e) return !1;
-        let t = h.default.getCurrentUser()?.nsfwAllowed === !0;
-        return M(e) && !t;
-    };
+function M(e) {
+    return null != e && (e.isNSFW() || (0, u.wh)(_.A.getGuild(e.guild_id)));
+}
+function P(e) {
+    if (null == e) return !1;
+    let t = (0, a.p9)();
+    return M(e) && t;
+}
+function x(e) {
+    if (null == e) return !1;
+    let t = h.default.getCurrentUser()?.nsfwAllowed === !0;
+    return M(e) && !t;
+}
 function k(e) {
     if (null == e) return !1;
     let t = d.A.didAgree(e.guild_id),

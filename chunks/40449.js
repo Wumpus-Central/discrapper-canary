@@ -7,8 +7,9 @@ var i,
     o = n(652215),
     l = n(516761),
     u = n(375708);
-let c = new Set([a.q1.NSFW_GUILD]),
-    d = (e) => [
+let c = new Set([a.q1.NSFW_GUILD]);
+function d(e) {
+    return [
         { title: u.intl.string(u.t.HphYKp), description: u.intl.string(u.t["GCZC+9"]) },
         { title: u.intl.string(u.t.nkO4L3), description: u.intl.string(u.t.rHZFsH) },
         {
@@ -20,8 +21,9 @@ let c = new Set([a.q1.NSFW_GUILD]),
                 },
             }),
         },
-    ],
-    _ = "AGE_VERIFICATION_MODAL_KEY",
+    ];
+}
+let _ = "AGE_VERIFICATION_MODAL_KEY",
     h = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY";
 var f =
     (((i = {})[(i.FACIAL_AGE_ESTIMATION = 1)] = "FACIAL_AGE_ESTIMATION"),
