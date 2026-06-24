@@ -17,6 +17,3 @@ function l(e) {
         c = (0, p.Y)(e).length > 0;
     if (!(!R && _) && !n && !l && !c) return d;
 }
-&!p)
-return _
-}
